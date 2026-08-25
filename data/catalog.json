@@ -1,0 +1,543 @@
+{
+  "version": 1,
+  "levels": [
+    {
+      "id": "A1",
+      "title": {
+        "tr": "Başlangıç",
+        "de": "Anfänger",
+        "en": "Beginner"
+      },
+      "description": {
+        "tr": "Temel cümleler, günlük ifadeler ve ilk gramer yapıları.",
+        "de": "Grundlegende Sätze, Alltagssprache und erste Grammatik.",
+        "en": "Basic sentences, everyday expressions and first grammar structures."
+      },
+      "topics": [
+        {
+          "id": "artikel",
+          "title": {
+            "tr": "Artikel: der · die · das",
+            "de": "Artikel: der · die · das",
+            "en": "Articles: der · die · das"
+          },
+          "description": {
+            "tr": "İsimlerin gramatik cinsiyeti ve temel artikeller.",
+            "de": "Genus der Nomen und bestimmte Artikel.",
+            "en": "Noun gender and basic definite articles."
+          },
+          "status": "ready",
+          "path": "data/a1/artikel.json"
+        },
+        {
+          "id": "personalpronomen",
+          "title": {
+            "tr": "Personalpronomen",
+            "de": "Personalpronomen",
+            "en": "Personal pronouns"
+          },
+          "description": {
+            "tr": "ich, du, er, sie, es, wir, ihr, Sie.",
+            "de": "ich, du, er, sie, es, wir, ihr, Sie.",
+            "en": "ich, du, er, sie, es, wir, ihr, Sie."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "sein-haben",
+          "title": {
+            "tr": "sein & haben",
+            "de": "sein & haben",
+            "en": "sein & haben"
+          },
+          "description": {
+            "tr": "sein ve haben fiillerinin Präsens çekimi ve günlük kullanımı.",
+            "de": "Präsensformen und Alltagsgebrauch von sein und haben.",
+            "en": "Present-tense forms and everyday use of sein and haben."
+          },
+          "status": "ready",
+          "path": "data/a1/sein-haben.json"
+        },
+        {
+          "id": "praesens",
+          "title": {
+            "tr": "Präsens",
+            "de": "Präsens",
+            "en": "Present tense"
+          },
+          "description": {
+            "tr": "Düzenli ve temel düzensiz fiil çekimleri.",
+            "de": "Regelmäßige und wichtige unregelmäßige Verben.",
+            "en": "Regular and key irregular verb conjugation."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "w-fragen",
+          "title": {
+            "tr": "W-Fragen",
+            "de": "W-Fragen",
+            "en": "W-questions"
+          },
+          "description": {
+            "tr": "wer, was, wo, wann, wie, warum.",
+            "de": "wer, was, wo, wann, wie, warum.",
+            "en": "wer, was, wo, wann, wie, warum."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "akkusativ",
+          "title": {
+            "tr": "Akkusativ",
+            "de": "Akkusativ",
+            "en": "Accusative"
+          },
+          "description": {
+            "tr": "Akkusativ artikel ve temel kullanım.",
+            "de": "Akkusativartikel und Grundgebrauch.",
+            "en": "Accusative articles and basic use."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "modalverben",
+          "title": {
+            "tr": "Modalverben",
+            "de": "Modalverben",
+            "en": "Modal verbs"
+          },
+          "description": {
+            "tr": "können, müssen, wollen ve diğerleri.",
+            "de": "können, müssen, wollen und weitere.",
+            "en": "können, müssen, wollen and more."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "trennbare-verben",
+          "title": {
+            "tr": "Trennbare Verben",
+            "de": "Trennbare Verben",
+            "en": "Separable verbs"
+          },
+          "description": {
+            "tr": "aufstehen, einkaufen gibi ayrılabilen fiiller.",
+            "de": "Verben wie aufstehen und einkaufen.",
+            "en": "Verbs such as aufstehen and einkaufen."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "possessivartikel",
+          "title": {
+            "tr": "Possessivartikel",
+            "de": "Possessivartikel",
+            "en": "Possessive articles"
+          },
+          "description": {
+            "tr": "mein, dein, sein, ihr...",
+            "de": "mein, dein, sein, ihr...",
+            "en": "mein, dein, sein, ihr..."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "perfekt",
+          "title": {
+            "tr": "Perfekt'e giriş",
+            "de": "Einführung ins Perfekt",
+            "en": "Introduction to Perfekt"
+          },
+          "description": {
+            "tr": "haben/sein + Partizip II.",
+            "de": "haben/sein + Partizip II.",
+            "en": "haben/sein + Partizip II."
+          },
+          "status": "soon"
+        }
+      ]
+    },
+    {
+      "id": "A2",
+      "title": {
+        "tr": "Temel",
+        "de": "Grundstufe",
+        "en": "Elementary"
+      },
+      "description": {
+        "tr": "Günlük iletişimde daha ayrıntılı gramer ve cümle yapıları.",
+        "de": "Mehr Grammatik und Satzbau für die Alltagskommunikation.",
+        "en": "More grammar and sentence structure for everyday communication."
+      },
+      "topics": [
+        {
+          "id": "dativ",
+          "title": {
+            "tr": "Dativ",
+            "de": "Dativ",
+            "en": "Dative"
+          },
+          "description": {
+            "tr": "Dativ artikel ve kullanım.",
+            "de": "Dativartikel und Gebrauch.",
+            "en": "Dative articles and use."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "wechselpraepositionen",
+          "title": {
+            "tr": "Wechselpräpositionen",
+            "de": "Wechselpräpositionen",
+            "en": "Two-way prepositions"
+          },
+          "description": {
+            "tr": "Akkusativ veya Dativ alan edatlar.",
+            "de": "Präpositionen mit Akkusativ oder Dativ.",
+            "en": "Prepositions taking accusative or dative."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "reflexive-verben",
+          "title": {
+            "tr": "Reflexive Verben",
+            "de": "Reflexive Verben",
+            "en": "Reflexive verbs"
+          },
+          "description": {
+            "tr": "sich freuen, sich interessieren...",
+            "de": "sich freuen, sich interessieren...",
+            "en": "sich freuen, sich interessieren..."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "konjunktiv-ii",
+          "title": {
+            "tr": "Konjunktiv II",
+            "de": "Konjunktiv II",
+            "en": "Konjunktiv II"
+          },
+          "description": {
+            "tr": "Kibar istekler ve varsayımlar.",
+            "de": "Höfliche Bitten und Wünsche.",
+            "en": "Polite requests and hypothetical situations."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "nebensaetze",
+          "title": {
+            "tr": "Nebensätze",
+            "de": "Nebensätze",
+            "en": "Subordinate clauses"
+          },
+          "description": {
+            "tr": "weil, dass, wenn gibi bağlaçlar.",
+            "de": "weil, dass, wenn und weitere.",
+            "en": "weil, dass, wenn and more."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "adjektivdeklination",
+          "title": {
+            "tr": "Adjektivdeklination",
+            "de": "Adjektivdeklination",
+            "en": "Adjective endings"
+          },
+          "description": {
+            "tr": "Sıfatların temel çekimi.",
+            "de": "Grundlagen der Adjektivdeklination.",
+            "en": "Basics of adjective endings."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "verben-praepositionen",
+          "title": {
+            "tr": "Verben mit Präpositionen",
+            "de": "Verben mit Präpositionen",
+            "en": "Verbs with prepositions"
+          },
+          "description": {
+            "tr": "Fiil + edat kalıpları.",
+            "de": "Feste Verb-Präposition-Verbindungen.",
+            "en": "Verb-preposition combinations."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "praeteritum",
+          "title": {
+            "tr": "Präteritum",
+            "de": "Präteritum",
+            "en": "Simple past"
+          },
+          "description": {
+            "tr": "Özellikle sein, haben ve modal fiiller.",
+            "de": "Besonders sein, haben und Modalverben.",
+            "en": "Especially sein, haben and modal verbs."
+          },
+          "status": "soon"
+        }
+      ]
+    },
+    {
+      "id": "B1",
+      "title": {
+        "tr": "Orta",
+        "de": "Mittelstufe",
+        "en": "Intermediate"
+      },
+      "description": {
+        "tr": "Bağlaçlar, yan cümleler ve daha bağımsız dil kullanımı.",
+        "de": "Nebensätze, Konnektoren und selbstständigere Sprachverwendung.",
+        "en": "Subordinate clauses, connectors and more independent language use."
+      },
+      "topics": [
+        {
+          "id": "konnektoren",
+          "title": {
+            "tr": "Konnektoren",
+            "de": "Konnektoren",
+            "en": "Connectors"
+          },
+          "description": {
+            "tr": "obwohl, trotzdem, deshalb, während...",
+            "de": "obwohl, trotzdem, deshalb, während...",
+            "en": "obwohl, trotzdem, deshalb, während..."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "relativsaetze",
+          "title": {
+            "tr": "Relativsätze",
+            "de": "Relativsätze",
+            "en": "Relative clauses"
+          },
+          "description": {
+            "tr": "der, die, das ile relatif cümleler.",
+            "de": "Relativsätze mit der, die, das.",
+            "en": "Relative clauses with der, die, das."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "passiv",
+          "title": {
+            "tr": "Passiv",
+            "de": "Passiv",
+            "en": "Passive voice"
+          },
+          "description": {
+            "tr": "werden + Partizip II.",
+            "de": "werden + Partizip II.",
+            "en": "werden + Partizip II."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "konjunktiv-ii-b1",
+          "title": {
+            "tr": "Konjunktiv II",
+            "de": "Konjunktiv II",
+            "en": "Konjunktiv II"
+          },
+          "description": {
+            "tr": "Tavsiye, dilek ve gerçek dışı durumlar.",
+            "de": "Ratschläge, Wünsche und irreale Situationen.",
+            "en": "Advice, wishes and unreal situations."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "genitiv",
+          "title": {
+            "tr": "Genitiv",
+            "de": "Genitiv",
+            "en": "Genitive"
+          },
+          "description": {
+            "tr": "İyelik ve Genitiv edatları.",
+            "de": "Besitz und Genitivpräpositionen.",
+            "en": "Possession and genitive prepositions."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "n-deklination",
+          "title": {
+            "tr": "N-Deklination",
+            "de": "N-Deklination",
+            "en": "N-declension"
+          },
+          "description": {
+            "tr": "der Student → den Studenten.",
+            "de": "der Student → den Studenten.",
+            "en": "der Student → den Studenten."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "infinitiv-zu",
+          "title": {
+            "tr": "Infinitiv mit zu",
+            "de": "Infinitiv mit zu",
+            "en": "Infinitive with zu"
+          },
+          "description": {
+            "tr": "zu + Infinitiv yapıları.",
+            "de": "Konstruktionen mit zu + Infinitiv.",
+            "en": "Structures with zu + infinitive."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "praeteritum-b1",
+          "title": {
+            "tr": "Präteritum vertieft",
+            "de": "Präteritum vertieft",
+            "en": "Past tense in depth"
+          },
+          "description": {
+            "tr": "Anlatım ve yazılı dilde kullanım.",
+            "de": "Gebrauch in Erzählungen und Schriftsprache.",
+            "en": "Use in narratives and written language."
+          },
+          "status": "soon"
+        }
+      ]
+    },
+    {
+      "id": "B2",
+      "title": {
+        "tr": "Orta-İleri",
+        "de": "Obere Mittelstufe",
+        "en": "Upper intermediate"
+      },
+      "description": {
+        "tr": "Akademik ve profesyonel kullanım için ileri gramer yapıları.",
+        "de": "Fortgeschrittene Grammatik für akademische und berufliche Kontexte.",
+        "en": "Advanced grammar for academic and professional contexts."
+      },
+      "topics": [
+        {
+          "id": "konjunktiv-i",
+          "title": {
+            "tr": "Konjunktiv I",
+            "de": "Konjunktiv I",
+            "en": "Konjunktiv I"
+          },
+          "description": {
+            "tr": "Dolaylı anlatım.",
+            "de": "Indirekte Rede.",
+            "en": "Reported speech."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "passiv-varianten",
+          "title": {
+            "tr": "Passiv Varianten",
+            "de": "Passivvarianten",
+            "en": "Passive variants"
+          },
+          "description": {
+            "tr": "İleri pasif yapılar ve alternatifler.",
+            "de": "Erweiterte Passivformen und Alternativen.",
+            "en": "Advanced passive forms and alternatives."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "nominalisierung",
+          "title": {
+            "tr": "Nominalisierung",
+            "de": "Nominalisierung",
+            "en": "Nominalisation"
+          },
+          "description": {
+            "tr": "Fiil ve sıfatlardan isimleştirme.",
+            "de": "Nominalisierung von Verben und Adjektiven.",
+            "en": "Nominalising verbs and adjectives."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "partizipialattribute",
+          "title": {
+            "tr": "Partizipialattribute",
+            "de": "Partizipialattribute",
+            "en": "Participial attributes"
+          },
+          "description": {
+            "tr": "Partizip I/II ile sıfat yapıları.",
+            "de": "Adjektivische Strukturen mit Partizip I/II.",
+            "en": "Adjectival structures using participles."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "konnektoren-b2",
+          "title": {
+            "tr": "İleri Konnektoren",
+            "de": "Fortgeschrittene Konnektoren",
+            "en": "Advanced connectors"
+          },
+          "description": {
+            "tr": "insofern, wohingegen, demgegenüber...",
+            "de": "insofern, wohingegen, demgegenüber...",
+            "en": "insofern, wohingegen, demgegenüber..."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "funktionsverbgefuege",
+          "title": {
+            "tr": "Funktionsverbgefüge",
+            "de": "Funktionsverbgefüge",
+            "en": "Light-verb constructions"
+          },
+          "description": {
+            "tr": "eine Entscheidung treffen gibi yapılar.",
+            "de": "Verbindungen wie eine Entscheidung treffen.",
+            "en": "Constructions such as eine Entscheidung treffen."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "genitivpraepositionen",
+          "title": {
+            "tr": "Genitivpräpositionen",
+            "de": "Genitivpräpositionen",
+            "en": "Genitive prepositions"
+          },
+          "description": {
+            "tr": "angesichts, hinsichtlich, trotz...",
+            "de": "angesichts, hinsichtlich, trotz...",
+            "en": "angesichts, hinsichtlich, trotz..."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "adjektivdeklination-b2",
+          "title": {
+            "tr": "Adjektivdeklination vertieft",
+            "de": "Adjektivdeklination vertieft",
+            "en": "Advanced adjective endings"
+          },
+          "description": {
+            "tr": "Karmaşık isim gruplarında sıfat çekimi.",
+            "de": "Adjektivdeklination in komplexeren Nominalgruppen.",
+            "en": "Adjective endings in more complex noun phrases."
+          },
+          "status": "soon"
+        }
+      ]
+    }
+  ]
+}

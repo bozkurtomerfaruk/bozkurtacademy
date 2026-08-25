@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bozkurt Academy | Almanca Dersleri</title>
+  <meta name="description" content="Bozkurt Academy ile Almanca dersleri, gramer konuları, seviye bazlı alıştırmalar ve sınav hazırlığı. Bireysel ders, grup dersi ve akademik danışmanlık." />
+  <meta name="keywords" content="Almanca ders, Almanca özel ders, Almanca gramer, Almanca alıştırmalar, Goethe sınavı, telc, ÖSD, A1 Almanca, A2 Almanca, B1 Almanca, B2 Almanca" />
+  <meta name="author" content="Bozkurt Academy" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <nav class="nav">
+        <button class="brand" data-page="home" aria-label="Bozkurt Academy ana sayfa">
+          <div class="ba-logo"><span>BA</span></div>
+          <div><div class="brand-title">Bozkurt Academy</div><div class="brand-sub" data-i18n="brandSub">Almanca öğreniminde net yol haritası</div></div>
+        </button>
+        <div class="nav-links" aria-label="Site menüsü">
+          <button class="nav-link active" data-page="home" data-i18n="navHome">Ana Sayfa</button>
+          <button class="nav-link" data-page="lessons" data-i18n="navLessons">Almanca Ders</button>
+          <button class="nav-link" data-page="grammar" data-i18n="navGrammar">Gramer Konuları</button>
+          <button class="nav-link" data-page="exercises" data-i18n="navExercises">Alıştırmalar</button>
+          <button class="nav-link" data-page="exams" data-i18n="navExams">Sınav Hazırlığı</button>
+          <button class="nav-link" data-page="about" data-i18n="navAbout">Hakkımda</button>
+          <button class="nav-link" data-page="contact" data-i18n="navContact">İletişim</button>
+        </div>
+        <div class="lang" aria-label="Dil seçimi">
+          <button data-lang="tr" class="active">TR</button>
+          <button data-lang="de">DE</button>
+          <button data-lang="en">EN</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page active" id="page-home">
+        <div class="hero">
+          <div class="photo-frame">
+            <img src="images/omer-faruk.jpg" alt="Ömer Faruk Bozkurt - Bozkurt Academy Kurucu ve Eğitmen" />
+            <div class="photo-badge"><strong>Ömer Faruk Bozkurt</strong><span data-i18n="founderRole">Kurucu & Eğitmen</span></div>
+          </div>
+          <div class="hero-copy">
+            <span class="tag" data-i18n="heroTag">A1’den B2’ye Almanca desteği</span>
+            <h1 data-i18n="heroTitle">Almanca hedefin için planlı, anlaşılır ve kişisel eğitim.</h1>
+            <p class="lead" data-i18n="heroSub">Bozkurt Academy; bireysel ders, grup dersi, akademik danışmanlık, gramer konuları, seviye bazlı alıştırmalar ve sınav hazırlığı ile Almanca öğrenme sürecini net bir plana dönüştürür.</p>
+            <div class="founder-line"><div class="mini-logo">BA</div><div><strong>Ömer Faruk Bozkurt</strong><small data-i18n="founderRole2">Kurucu & Eğitmen</small></div></div>
+            <div class="cta-row"><button class="btn gold" data-page="contact" data-i18n="ctaContact">İlk görüşme için yaz</button><button class="btn ghost" data-page="exercises" data-i18n="ctaExercises">Alıştırmaları incele</button></div>
+            <div class="stats">
+              <div class="stat"><strong>A1-B2</strong><span data-i18n="stat1">Seviye bazlı eğitim</span></div>
+              <div class="stat"><strong>3</strong><span data-i18n="stat2">Ders seçeneği</span></div>
+              <div class="stat"><strong>TR/DE/EN</strong><span data-i18n="stat3">Dil desteği</span></div>
+            </div>
+          </div>
+        </div>
+
+        <section class="block">
+          <div class="section-head center">
+            <span class="tag" data-i18n="servicesTag">Ders ve Danışmanlık</span>
+            <h2 data-i18n="servicesTitle">İhtiyacına göre üç farklı çalışma modeli.</h2>
+            <p class="sub" data-i18n="servicesSub">Almanca öğreniminde hedef, seviye ve zaman planı kişiye göre değişir. Bu yüzden ders modeli öğrenciye göre belirlenir.</p>
+          </div>
+          <div class="cards">
+            <article class="card white"><div class="icon">👤</div><h3 data-i18n="service1Title">Bireysel ders</h3><p data-i18n="service1Text">Kişiye özel plan, birebir takip, seviyeye uygun materyal ve düzenli geri bildirim.</p><div class="pill-row"><span class="pill">Online</span><span class="pill" data-i18n="pillPersonal">Kişisel plan</span><span class="pill" data-i18n="pillFast">Hızlı ilerleme</span></div></article>
+            <article class="card white"><div class="icon">👥</div><h3 data-i18n="service2Title">Grup dersi</h3><p data-i18n="service2Text">Benzer seviyedeki öğrencilerle etkileşimli, konuşma destekli ve düzenli Almanca dersleri.</p><div class="pill-row"><span class="pill" data-i18n="pillSpeaking">Konuşma</span><span class="pill" data-i18n="pillGroup">Grup takibi</span><span class="pill" data-i18n="pillRoutine">Düzen</span></div></article>
+            <article class="card white"><div class="icon">🎓</div><h3 data-i18n="service3Title">Akademik danışmanlık</h3><p data-i18n="service3Text">Almanya’da eğitim, iş, günlük yaşam, sınav süreci ve akademik Almanca için yol haritası desteği.</p><div class="pill-row"><span class="pill" data-i18n="pillGermany">Almanya</span><span class="pill" data-i18n="pillExam">Sınav</span><span class="pill" data-i18n="pillAcademic">Akademik</span></div></article>
+          </div>
+        </section>
+
+        <section class="block">
+          <div class="section-head center">
+            <span class="tag" data-i18n="commentsTag">Öğrenci Yorumları</span>
+            <h2 data-i18n="commentsTitle">Öğrencilerden Yorumlar</h2>
+            <p class="sub" data-i18n="commentsSub">Derslerin anlaşılır, düzenli ve motive edici olması öğrencilerin Almanca öğrenme sürecini kolaylaştırır.</p>
+          </div>
+          <div class="testimonials">
+            <article class="quote"><p data-i18n="quote1">Almancaya sıfırdan başladım. Konular çok net anlatıldı; artık kendi cümlelerimi kurabiliyorum.</p><strong>Elif K.</strong><small>A1 öğrencisi</small></article>
+            <article class="quote"><p data-i18n="quote2">Grameri ilk defa ezber gibi değil, mantığıyla öğrendim. Ders sonrası alıştırmalar konuyu kalıcı hale getiriyor.</p><strong>Mert A.</strong><small>B1 hazırlık</small></article>
+            <article class="quote"><p data-i18n="quote3">Sınav için özellikle yazma ve konuşmada çok zorlanıyordum. Planlı ilerleyince özgüvenim ciddi şekilde arttı.</p><strong>Deniz S.</strong><small>Goethe sınav hazırlığı</small></article>
+          </div>
+        </section>
+      </section>
+
+      <section class="page" id="page-lessons">
+        <div class="page-hero"><div class="page-hero-inner"><span class="tag" data-i18n="lessonsTag">Almanca Ders</span><h1 data-i18n="lessonsTitle">Seviyene ve hedeflerine göre planlanan Almanca dersleri.</h1><p data-i18n="lessonsSub">A1’den B2’ye kadar dersler; kelime, gramer, konuşma, yazma ve dinleme becerilerini birlikte geliştirir.</p></div></div>
+        <section class="block"><div class="grid-4">
+          <article class="level-card"><span class="level">A1</span><h3 data-i18n="a1Title">Başlangıç</h3><p data-i18n="a1Text">Tanışma, temel cümleler, artikeller, Präsens ve günlük ifadeler.</p></article>
+          <article class="level-card"><span class="level">A2</span><h3 data-i18n="a2Title">Temel</h3><p data-i18n="a2Text">Perfekt, Dativ-Akkusativ, yön tarifleri ve günlük konuşmalar.</p></article>
+          <article class="level-card"><span class="level">B1</span><h3 data-i18n="b1Title">Orta</h3><p data-i18n="b1Text">Yan cümleler, bağlaçlar, mektup yazma ve görüş bildirme.</p></article>
+          <article class="level-card"><span class="level">B2</span><h3 data-i18n="b2Title">İleri</h3><p data-i18n="b2Text">Akademik metinler, tartışma, detaylı gramer ve sınav odaklı çalışma.</p></article>
+        </div></section>
+        <section class="block"><div class="cards"><article class="card"><h3 data-i18n="lessonModel1">Ders öncesi hedef</h3><p data-i18n="lessonModel1Text">Öğrencinin seviyesi, zorlandığı noktalar ve hedefi belirlenir.</p></article><article class="card"><h3 data-i18n="lessonModel2">Ders içinde uygulama</h3><p data-i18n="lessonModel2Text">Konu anlatımı, örnek cümle, kısa diyalog ve kontrollü alıştırma yapılır.</p></article><article class="card"><h3 data-i18n="lessonModel3">Ders sonrası takip</h3><p data-i18n="lessonModel3Text">Eksikler not edilir, sonraki ders için çalışma planı netleştirilir.</p></article></div></section>
+      </section>
+
+      <section class="page" id="page-grammar">
+        <div class="page-hero"><div class="page-hero-inner"><span class="tag" data-i18n="grammarTag">Gramer Konuları</span><h1 data-i18n="grammarTitle">Almanca grameri sade, düzenli ve örnekli öğren.</h1><p data-i18n="grammarSub">Gramer konuları seviyelere ayrılır. Öğrenci önce temel mantığı anlar, sonra örnek cümlelerle kullanmayı öğrenir.</p></div></div>
+        <section class="block"><div class="grid-2">
+          <div class="topic-list">
+            <div class="topic"><b>A1</b><div><h3>Artikel & Nomen</h3><p>der, die, das; çoğul yapıları; temel isimler.</p></div></div>
+            <div class="topic"><b>A1</b><div><h3>Präsens</h3><p>sein, haben ve düzenli fiillerin şimdiki zaman çekimi.</p></div></div>
+            <div class="topic"><b>A2</b><div><h3>Akkusativ & Dativ</h3><p>Wen? Wem? soruları ve günlük cümlelerde kullanım.</p></div></div>
+            <div class="topic"><b>A2</b><div><h3>Perfekt</h3><p>haben/sein + Partizip II ile geçmiş zaman anlatımı.</p></div></div>
+          </div>
+          <div class="topic-list">
+            <div class="topic"><b>B1</b><div><h3>Nebensätze</h3><p>weil, dass, wenn, obwohl gibi bağlaçlarla yan cümle kurma.</p></div></div>
+            <div class="topic"><b>B1</b><div><h3>Relativsätze</h3><p>İsimleri açıklayan daha uzun ve doğru cümleler kurma.</p></div></div>
+            <div class="topic"><b>B2</b><div><h3>Konjunktiv II</h3><p>Rica, tavsiye, varsayım ve kibar ifade yapıları.</p></div></div>
+            <div class="topic"><b>B2</b><div><h3>Passiv</h3><p>İş, akademik metin ve sınavlarda sık kullanılan edilgen yapı.</p></div></div>
+          </div>
+        </div></section>
+      </section>
+
+      <section class="page" id="page-exercises">
+        <div class="page-hero">
+          <div class="page-hero-inner">
+            <span class="tag" data-i18n="exerciseHubTag">Alıştırma Merkezi</span>
+            <h1 data-i18n="exerciseHubTitle">Seviyeni seç, konuyu aç ve çalışmaya başla.</h1>
+            <p data-i18n="exerciseHubSub">A1, A2, B1 ve B2 seviyelerinde konu bazlı alıştırma setleri. Yeni materyaller geldikçe bu bölüm otomatik olarak büyüyecek.</p>
+          </div>
+        </div>
+
+        <section class="block exercise-hub">
+          <div class="exercise-breadcrumb" id="exerciseBreadcrumb" aria-label="Alıştırma yolu"></div>
+
+          <div id="exerciseLevelView">
+            <div class="section-head">
+              <div>
+                <span class="tag" data-i18n="stepOne">1. Adım</span>
+                <h2 data-i18n="chooseLevel">Seviye seç</h2>
+                <p class="sub" data-i18n="chooseLevelSub">Çalışmak istediğin Almanca seviyesini seç.</p>
+              </div>
+            </div>
+            <div class="level-choice-grid" id="levelChoiceGrid"></div>
+          </div>
+
+          <div id="exerciseTopicView" style="display:none">
+            <div class="hub-toolbar">
+              <button class="btn ghost hub-back" type="button" id="backToLevelsBtn">← <span data-i18n="backToLevels">Seviyelere dön</span></button>
+            </div>
+            <div class="section-head">
+              <div>
+                <span class="tag" data-i18n="stepTwo">2. Adım</span>
+                <h2 id="topicViewTitle">A1 Konuları</h2>
+                <p class="sub" data-i18n="chooseTopicSub">Bir konu seç. İçeriği hazır olan konularda alıştırmaları hemen açabilirsin.</p>
+              </div>
+            </div>
+            <div class="topic-choice-grid" id="topicChoiceGrid"></div>
+          </div>
+
+          <div id="exerciseSetView" style="display:none">
+            <div class="hub-toolbar">
+              <button class="btn ghost hub-back" type="button" id="backToTopicsBtn">← <span data-i18n="backToTopics">Konulara dön</span></button>
+            </div>
+            <div class="topic-overview" id="topicOverview"></div>
+            <div class="section-head">
+              <div>
+                <span class="tag" data-i18n="stepThree">3. Adım</span>
+                <h2 data-i18n="chooseExercise">Alıştırma seç</h2>
+                <p class="sub" data-i18n="chooseExerciseSub">Çözmek istediğin alıştırma setini aç.</p>
+              </div>
+            </div>
+            <div class="exercise-set-grid" id="exerciseSetGrid"></div>
+          </div>
+
+          <div id="exerciseQuizView" style="display:none">
+            <div class="hub-toolbar">
+              <button class="btn ghost hub-back" type="button" id="backToSetsBtn">← <span data-i18n="backToExercises">Alıştırmalara dön</span></button>
+            </div>
+
+            <div class="learn-layout">
+              <aside class="lesson-panel" id="dynamicLessonPanel"></aside>
+
+              <div class="quiz-panel" id="quizPanel">
+                <div id="quizView">
+                  <div class="quiz-meta">
+                    <span class="quiz-counter" id="quizCounter"></span>
+                    <span class="best-score" id="bestScore"></span>
+                  </div>
+                  <div class="progress-track" aria-label="İlerleme"><div class="progress-bar" id="progressBar"></div></div>
+                  <div class="quiz-word" id="quizWord"></div>
+                  <h3 class="quiz-question" id="quizQuestion"></h3>
+                  <div class="option-grid" id="quizOptions"></div>
+                  <div class="quiz-feedback" id="quizFeedback" aria-live="polite"></div>
+                  <div class="quiz-actions">
+                    <button class="btn primary" type="button" id="checkAnswerBtn" data-i18n="checkAnswer">Cevabı Kontrol Et</button>
+                    <button class="btn gold" type="button" id="nextQuestionBtn" style="display:none" data-i18n="nextQuestion">Sonraki Soru →</button>
+                  </div>
+                </div>
+                <div id="quizResult" style="display:none"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="exercise-load-error" id="exerciseLoadError" style="display:none"></div>
+        </section>
+      </section>
+
+      <section class="page" id="page-exams">
+        <div class="page-hero"><div class="page-hero-inner"><span class="tag" data-i18n="examTag">Sınav Hazırlığı</span><h1 data-i18n="examTitle">Goethe, telc, ÖSD ve okul sınavlarına hazırlık.</h1><p data-i18n="examSub">Sınav hazırlığı; okuma, dinleme, yazma ve konuşma becerilerini hedef sınava göre birlikte geliştirir.</p></div></div>
+        <section class="block"><div class="cards"><article class="card"><div class="icon">📖</div><h3>Lesen</h3><p data-i18n="examRead">Metin anlama, ana fikir bulma, doğru-yanlış ve eşleştirme soruları.</p></article><article class="card"><div class="icon">✍️</div><h3>Schreiben</h3><p data-i18n="examWrite">E-posta, mektup, görüş yazısı ve sınav formatına uygun yazma pratiği.</p></article><article class="card"><div class="icon">💬</div><h3>Sprechen</h3><p data-i18n="examSpeak">Kendini tanıtma, görsel anlatma, fikir belirtme ve karşılıklı konuşma çalışmaları.</p></article></div></section>
+      </section>
+
+      <section class="page" id="page-about">
+        <div class="page-hero"><div class="page-hero-inner"><span class="tag" data-i18n="aboutTag">Hakkımda</span><h1 data-i18n="aboutTitle">Almanca öğrenmeyi daha anlaşılır hale getiren bir eğitim yaklaşımı.</h1><p data-i18n="aboutSub">Bozkurt Academy, öğrencinin zorlandığı noktaları sadeleştirerek Almanca öğrenme sürecini düzenli, takip edilebilir ve motive edici hale getirir.</p></div></div>
+        <section class="block">
+          <div class="about-box">
+            <div class="about-photo"><img src="images/omer-faruk.jpg" alt="Ömer Faruk Bozkurt" /></div>
+            <div class="about-text">
+              <span class="tag" data-i18n="founderRole3">Kurucu & Eğitmen</span>
+              <h2>Ömer Faruk Bozkurt</h2>
+              <p class="founder-bio" data-i18n="founderBio">Mühendislik dünyasının teknik disiplinini eğitim süreçlerine entegre eden Ömer Faruk Bozkurt, öğrencilerine sadece dil bilgisi değil, Almanya’da eğitim, iş, günlük yaşam ve sınav süreçlerinde işinize yarayacak Almanca üzerine eğitim veriyor.</p>
+              <div class="grid-2" style="margin-top:24px">
+                <article class="level-card"><h3 data-i18n="method1Title">Sistemli ilerleme</h3><p data-i18n="method1Text">Her öğrencinin seviyesi, hedefi ve eksikleri belirlenir; dersler buna göre planlanır.</p></article>
+                <article class="level-card"><h3 data-i18n="method2Title">Gerçek kullanım</h3><p data-i18n="method2Text">Amaç yalnızca kural bilmek değil; Almancayı eğitim, iş ve günlük yaşamda kullanabilmektir.</p></article>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="page" id="page-contact">
+        <div class="page-hero"><div class="page-hero-inner"><span class="tag" data-i18n="contactTag">İletişim</span><h1 data-i18n="contactTitle">Almanca hedefini birlikte planlayalım.</h1><p data-i18n="contactSub">İlk mesajında seviyeni, hedefini, sınav tarihin varsa sınavını ve ders tercihini yazman yeterli.</p></div></div>
+        <section class="block"><div class="contact-grid">
+          <div class="contact-card"><h3 data-i18n="contactInfoTitle">İletişim bilgileri</h3><div class="contact-line">📧 <a href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a></div><div class="contact-line">💬 <span data-i18n="whatsappText">WhatsApp numaranı buraya ekleyebilirsin.</span></div><div class="contact-line">🌍 <span data-i18n="lessonOptionsText">Bireysel ders · Grup dersi · Akademik danışmanlık</span></div></div>
+          <form class="contact-card" id="contactForm"><h3 data-i18n="formTitle">İlk görüşme mesajı</h3><div class="field"><label data-i18n="nameLabel">Ad Soyad</label><input id="name" required /></div><div class="field"><label data-i18n="emailLabel">E-posta</label><input id="email" type="email" required /></div><div class="field"><label data-i18n="messageLabel">Mesaj</label><textarea id="message" placeholder="Seviyem A2, Goethe B1 için hazırlanmak istiyorum..." required></textarea></div><button class="btn gold block" type="submit" data-i18n="sendMessage">Mesajı e-posta olarak hazırla</button></form>
+        </div></section>
+      </section>
+    </main>
+
+    <footer><div><strong>Bozkurt Academy</strong><br><span data-i18n="footerText">Almanca dersleri, gramer, alıştırmalar ve sınav hazırlığı.</span></div><div>© 2026 Bozkurt Academy</div></footer>
+  </div>
+  <script src="js/app.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

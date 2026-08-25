@@ -1,0 +1,234 @@
+{
+  "id": "artikel",
+  "level": "A1",
+  "title": {
+    "tr": "Artikel: der · die · das",
+    "de": "Artikel: der · die · das",
+    "en": "Articles: der · die · das"
+  },
+  "description": {
+    "tr": "İsimlerin gramatik cinsiyetini artikellerle birlikte çalış.",
+    "de": "Lerne das Genus der Nomen zusammen mit ihren Artikeln.",
+    "en": "Practise noun gender together with the correct articles."
+  },
+  "lesson": {
+    "title": {
+      "tr": "der · die · das nasıl kullanılır?",
+      "de": "Wie verwendet man der · die · das?",
+      "en": "How do der · die · das work?"
+    },
+    "intro": {
+      "tr": "Almancada isimlerin bir gramatik cinsiyeti vardır. Bu yüzden isimleri mümkün olduğunca artikeliyle birlikte öğrenmek gerekir.",
+      "de": "Im Deutschen haben Nomen ein grammatisches Geschlecht. Deshalb sollte man Nomen möglichst zusammen mit ihrem Artikel lernen.",
+      "en": "German nouns have grammatical gender, so it is best to learn each noun together with its article."
+    },
+    "rules": [
+      {
+        "label": "der",
+        "text": {
+          "tr": "Maskulin",
+          "de": "Maskulin",
+          "en": "Masculine"
+        }
+      },
+      {
+        "label": "die",
+        "text": {
+          "tr": "Feminin",
+          "de": "Feminin",
+          "en": "Feminine"
+        }
+      },
+      {
+        "label": "das",
+        "text": {
+          "tr": "Nötr",
+          "de": "Neutral",
+          "en": "Neuter"
+        }
+      }
+    ],
+    "examples": [
+      "der Tisch — masa",
+      "die Lampe — lamba",
+      "das Buch — kitap"
+    ],
+    "tip": {
+      "tr": "Artikel her zaman tahmin edilemez. “Buch” değil, “das Buch” şeklinde ezberlemek daha etkilidir.",
+      "de": "Der Artikel lässt sich nicht immer erraten. Lerne besser „das Buch“ statt nur „Buch“.",
+      "en": "The article cannot always be guessed. Learn “das Buch” rather than only “Buch”."
+    }
+  },
+  "exercises": [
+    {
+      "id": "grundlagen-1",
+      "title": {
+        "tr": "Übung 1 – Temel Artikel",
+        "de": "Übung 1 – Grundlagen",
+        "en": "Exercise 1 – Basic Articles"
+      },
+      "description": {
+        "tr": "der, die ve das arasından doğru artikeli seç.",
+        "de": "Wähle den richtigen Artikel: der, die oder das.",
+        "en": "Choose the correct article: der, die or das."
+      },
+      "difficulty": {
+        "tr": "Temel",
+        "de": "Grundlage",
+        "en": "Basic"
+      },
+      "questions": [
+        {
+          "word": "Tisch",
+          "sentence": "___ Tisch ist groß.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "der",
+          "explanations": {
+            "tr": "“Tisch” maskulin bir isimdir: der Tisch.",
+            "de": "„Tisch“ ist maskulin: der Tisch.",
+            "en": "“Tisch” is masculine: der Tisch."
+          }
+        },
+        {
+          "word": "Lampe",
+          "sentence": "___ Lampe ist neu.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "“Lampe” feminin bir isimdir: die Lampe.",
+            "de": "„Lampe“ ist feminin: die Lampe.",
+            "en": "“Lampe” is feminine: die Lampe."
+          }
+        },
+        {
+          "word": "Buch",
+          "sentence": "___ Buch ist interessant.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "“Buch” nötr bir isimdir: das Buch.",
+            "de": "„Buch“ ist neutral: das Buch.",
+            "en": "“Buch” is neuter: das Buch."
+          }
+        },
+        {
+          "word": "Auto",
+          "sentence": "___ Auto ist schnell.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "“Auto” nötr bir isimdir: das Auto.",
+            "de": "„Auto“ ist neutral: das Auto.",
+            "en": "“Auto” is neuter: das Auto."
+          }
+        },
+        {
+          "word": "Schule",
+          "sentence": "___ Schule ist heute geschlossen.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "“Schule” feminin bir isimdir: die Schule.",
+            "de": "„Schule“ ist feminin: die Schule.",
+            "en": "“Schule” is feminine: die Schule."
+          }
+        },
+        {
+          "word": "Computer",
+          "sentence": "___ Computer funktioniert gut.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "der",
+          "explanations": {
+            "tr": "“Computer” maskulin bir isimdir: der Computer.",
+            "de": "„Computer“ ist maskulin: der Computer.",
+            "en": "“Computer” is masculine: der Computer."
+          }
+        },
+        {
+          "word": "Fenster",
+          "sentence": "___ Fenster ist offen.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "“Fenster” nötr bir isimdir: das Fenster.",
+            "de": "„Fenster“ ist neutral: das Fenster.",
+            "en": "“Fenster” is neuter: das Fenster."
+          }
+        },
+        {
+          "word": "Zeitung",
+          "sentence": "___ Zeitung liegt auf dem Tisch.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "“Zeitung” feminin bir isimdir: die Zeitung.",
+            "de": "„Zeitung“ ist feminin: die Zeitung.",
+            "en": "“Zeitung” is feminine: die Zeitung."
+          }
+        },
+        {
+          "word": "Kaffee",
+          "sentence": "___ Kaffee ist heiß.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "der",
+          "explanations": {
+            "tr": "“Kaffee” maskulin bir isimdir: der Kaffee.",
+            "de": "„Kaffee“ ist maskulin: der Kaffee.",
+            "en": "“Kaffee” is masculine: der Kaffee."
+          }
+        },
+        {
+          "word": "Kind",
+          "sentence": "___ Kind spielt im Garten.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "“Kind” nötr bir isimdir: das Kind.",
+            "de": "„Kind“ ist neutral: das Kind.",
+            "en": "“Kind” is neuter: das Kind."
+          }
+        }
+      ]
+    }
+  ]
+}

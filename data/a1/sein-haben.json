@@ -1,0 +1,1109 @@
+{
+  "id": "sein-haben",
+  "level": "A1",
+  "title": {
+    "tr": "sein & haben",
+    "de": "sein & haben",
+    "en": "sein & haben"
+  },
+  "description": {
+    "tr": "sein ve haben fiillerinin Präsens çekimini; günlük cümlelerde, soru cümlelerinde ve karışık kullanımlarda çalış.",
+    "de": "Übe die Präsensformen von sein und haben in Alltagssätzen, Fragen und gemischten Aufgaben.",
+    "en": "Practise the present-tense forms of sein and haben in everyday sentences, questions and mixed tasks."
+  },
+  "lesson": {
+    "title": {
+      "tr": "sein ve haben – Präsens",
+      "de": "sein und haben – Präsens",
+      "en": "sein and haben – present tense"
+    },
+    "intro": {
+      "tr": "sein ve haben Almancanın en temel ve düzensiz fiillerindendir. Çekimleri ezberlenmelidir. Düz cümlede çekimli fiil genellikle ikinci sırada, evet/hayır sorusunda ise ilk sıradadır.",
+      "de": "sein und haben gehören zu den wichtigsten unregelmäßigen Verben. Ihre Formen sollte man auswendig lernen. Im Aussagesatz steht das konjugierte Verb meist an Position 2, in Ja/Nein-Fragen an Position 1.",
+      "en": "sein and haben are two of the most important irregular German verbs. Their forms should be memorised. In statements the conjugated verb is usually in position 2; in yes/no questions it comes first."
+    },
+    "rules": [
+      {
+        "label": "ich",
+        "text": {
+          "tr": "bin · habe",
+          "de": "bin · habe",
+          "en": "bin · habe"
+        }
+      },
+      {
+        "label": "du",
+        "text": {
+          "tr": "bist · hast",
+          "de": "bist · hast",
+          "en": "bist · hast"
+        }
+      },
+      {
+        "label": "er/sie/es",
+        "text": {
+          "tr": "ist · hat",
+          "de": "ist · hat",
+          "en": "ist · hat"
+        }
+      },
+      {
+        "label": "wir",
+        "text": {
+          "tr": "sind · haben",
+          "de": "sind · haben",
+          "en": "sind · haben"
+        }
+      },
+      {
+        "label": "ihr",
+        "text": {
+          "tr": "seid · habt",
+          "de": "seid · habt",
+          "en": "seid · habt"
+        }
+      },
+      {
+        "label": "sie/Sie",
+        "text": {
+          "tr": "sind · haben",
+          "de": "sind · haben",
+          "en": "sind · haben"
+        }
+      }
+    ],
+    "examples": [
+      "Ich bin heute zu Hause. — Bugün evdeyim.",
+      "Du hast einen Termin. — Bir randevun var.",
+      "Wir sind im Kurs. — Kurstayız.",
+      "Habt ihr Zeit? — Vaktiniz var mı?"
+    ],
+    "tip": {
+      "tr": "A1 için önce çekimleri otomatik hâle getir: ich bin / ich habe, du bist / du hast, er ist / er hat, wir sind / wir haben, ihr seid / ihr habt, sie/Sie sind / haben.",
+      "de": "Automatisiere zuerst die Formen: ich bin / habe, du bist / hast, er ist / hat, wir sind / haben, ihr seid / habt, sie/Sie sind / haben.",
+      "en": "First make the forms automatic: ich bin / habe, du bist / hast, er ist / hat, wir sind / haben, ihr seid / habt, sie/Sie sind / haben."
+    }
+  },
+  "exercises": [
+    {
+      "id": "sein-formen-1",
+      "title": {
+        "tr": "Übung 1 – sein çekimi",
+        "de": "Übung 1 – sein: Formen",
+        "en": "Exercise 1 – sein forms"
+      },
+      "description": {
+        "tr": "bin, bist, ist, sind ve seid formlarını seç.",
+        "de": "Wähle die richtige Form von sein.",
+        "en": "Choose the correct form of sein."
+      },
+      "difficulty": {
+        "tr": "Temel",
+        "de": "Grundlage",
+        "en": "Basic"
+      },
+      "questions": [
+        {
+          "word": "ich · sein",
+          "sentence": "Ich ___ heute müde.",
+          "options": [
+            "bin",
+            "bist",
+            "ist"
+          ],
+          "correct": "bin",
+          "explanations": {
+            "tr": "“ich” ile sein → bin.",
+            "de": "sein mit „ich“ → bin.",
+            "en": "sein with “ich” → bin."
+          }
+        },
+        {
+          "word": "du · sein",
+          "sentence": "Du ___ heute sehr früh hier.",
+          "options": [
+            "bist",
+            "bin",
+            "seid"
+          ],
+          "correct": "bist",
+          "explanations": {
+            "tr": "“du” ile sein → bist.",
+            "de": "sein mit „du“ → bist.",
+            "en": "sein with “du” → bist."
+          }
+        },
+        {
+          "word": "Mia · sein",
+          "sentence": "Mia ___ aus Berlin.",
+          "options": [
+            "ist",
+            "sind",
+            "bist"
+          ],
+          "correct": "ist",
+          "explanations": {
+            "tr": "Mia = sie. “sie” tekil ile sein → ist.",
+            "de": "Mia = sie. sein mit „sie“ Singular → ist.",
+            "en": "Mia = she. sein with singular “sie” → ist."
+          }
+        },
+        {
+          "word": "das Kind · sein",
+          "sentence": "Das Kind ___ sechs Jahre alt.",
+          "options": [
+            "ist",
+            "seid",
+            "sind"
+          ],
+          "correct": "ist",
+          "explanations": {
+            "tr": "“das Kind” = es. “es” ile sein → ist.",
+            "de": "„das Kind“ = es. sein mit „es“ → ist.",
+            "en": "“das Kind” = it. sein with “es” → ist."
+          }
+        },
+        {
+          "word": "wir · sein",
+          "sentence": "Wir ___ im Deutschkurs.",
+          "options": [
+            "sind",
+            "seid",
+            "ist"
+          ],
+          "correct": "sind",
+          "explanations": {
+            "tr": "“wir” ile sein → sind.",
+            "de": "sein mit „wir“ → sind.",
+            "en": "sein with “wir” → sind."
+          }
+        },
+        {
+          "word": "ihr · sein",
+          "sentence": "Ihr ___ sehr freundlich.",
+          "options": [
+            "seid",
+            "sind",
+            "bist"
+          ],
+          "correct": "seid",
+          "explanations": {
+            "tr": "“ihr” ile sein → seid.",
+            "de": "sein mit „ihr“ → seid.",
+            "en": "sein with “ihr” → seid."
+          }
+        },
+        {
+          "word": "Lena und Tom · sein",
+          "sentence": "Lena und Tom ___ Geschwister.",
+          "options": [
+            "sind",
+            "ist",
+            "seid"
+          ],
+          "correct": "sind",
+          "explanations": {
+            "tr": "İki kişi çoğuldur; “sie” çoğul ile sein → sind.",
+            "de": "Zwei Personen sind Plural; sein mit „sie“ Plural → sind.",
+            "en": "Two people are plural; sein with plural “sie” → sind."
+          }
+        },
+        {
+          "word": "Sie · sein",
+          "sentence": "Herr Weber, Sie ___ sehr pünktlich.",
+          "options": [
+            "sind",
+            "seid",
+            "ist"
+          ],
+          "correct": "sind",
+          "explanations": {
+            "tr": "Resmî “Sie” ile sein → sind.",
+            "de": "sein mit höflichem „Sie“ → sind.",
+            "en": "sein with formal “Sie” → sind."
+          }
+        },
+        {
+          "word": "die Tasche · sein",
+          "sentence": "Meine Tasche ___ ziemlich schwer.",
+          "options": [
+            "ist",
+            "sind",
+            "bin"
+          ],
+          "correct": "ist",
+          "explanations": {
+            "tr": "“die Tasche” tekildir; sein → ist.",
+            "de": "„die Tasche“ ist Singular; sein → ist.",
+            "en": "“die Tasche” is singular; sein → ist."
+          }
+        },
+        {
+          "word": "die Bücher · sein",
+          "sentence": "Die Bücher ___ ganz neu.",
+          "options": [
+            "sind",
+            "ist",
+            "seid"
+          ],
+          "correct": "sind",
+          "explanations": {
+            "tr": "“die Bücher” çoğuldur; sein → sind.",
+            "de": "„die Bücher“ ist Plural; sein → sind.",
+            "en": "“die Bücher” is plural; sein → sind."
+          }
+        }
+      ]
+    },
+    {
+      "id": "haben-formen-2",
+      "title": {
+        "tr": "Übung 2 – haben çekimi",
+        "de": "Übung 2 – haben: Formen",
+        "en": "Exercise 2 – haben forms"
+      },
+      "description": {
+        "tr": "habe, hast, hat, haben ve habt formlarını seç.",
+        "de": "Wähle die richtige Form von haben.",
+        "en": "Choose the correct form of haben."
+      },
+      "difficulty": {
+        "tr": "Temel",
+        "de": "Grundlage",
+        "en": "Basic"
+      },
+      "questions": [
+        {
+          "word": "ich · haben",
+          "sentence": "Ich ___ heute einen Termin.",
+          "options": [
+            "habe",
+            "hast",
+            "hat"
+          ],
+          "correct": "habe",
+          "explanations": {
+            "tr": "“ich” ile haben → habe.",
+            "de": "haben mit „ich“ → habe.",
+            "en": "haben with “ich” → habe."
+          }
+        },
+        {
+          "word": "du · haben",
+          "sentence": "Du ___ heute viel Zeit.",
+          "options": [
+            "hast",
+            "habe",
+            "habt"
+          ],
+          "correct": "hast",
+          "explanations": {
+            "tr": "“du” ile haben → hast.",
+            "de": "haben mit „du“ → hast.",
+            "en": "haben with “du” → hast."
+          }
+        },
+        {
+          "word": "er · haben",
+          "sentence": "Er ___ einen kleinen Hund.",
+          "options": [
+            "hat",
+            "hast",
+            "haben"
+          ],
+          "correct": "hat",
+          "explanations": {
+            "tr": "“er” ile haben → hat.",
+            "de": "haben mit „er“ → hat.",
+            "en": "haben with “er” → hat."
+          }
+        },
+        {
+          "word": "Anna · haben",
+          "sentence": "Anna ___ eine Frage.",
+          "options": [
+            "hat",
+            "habt",
+            "habe"
+          ],
+          "correct": "hat",
+          "explanations": {
+            "tr": "Anna = sie. “sie” tekil ile haben → hat.",
+            "de": "Anna = sie. haben mit „sie“ Singular → hat.",
+            "en": "Anna = she. haben with singular “sie” → hat."
+          }
+        },
+        {
+          "word": "wir · haben",
+          "sentence": "Wir ___ heute Deutschunterricht.",
+          "options": [
+            "haben",
+            "habt",
+            "hat"
+          ],
+          "correct": "haben",
+          "explanations": {
+            "tr": "“wir” ile haben → haben.",
+            "de": "haben mit „wir“ → haben.",
+            "en": "haben with “wir” → haben."
+          }
+        },
+        {
+          "word": "ihr · haben",
+          "sentence": "Ihr ___ zwei Fahrräder.",
+          "options": [
+            "habt",
+            "haben",
+            "hast"
+          ],
+          "correct": "habt",
+          "explanations": {
+            "tr": "“ihr” ile haben → habt.",
+            "de": "haben mit „ihr“ → habt.",
+            "en": "haben with “ihr” → habt."
+          }
+        },
+        {
+          "word": "die Kinder · haben",
+          "sentence": "Die Kinder ___ Hunger.",
+          "options": [
+            "haben",
+            "hat",
+            "habt"
+          ],
+          "correct": "haben",
+          "explanations": {
+            "tr": "“die Kinder” çoğuldur; haben → haben.",
+            "de": "„die Kinder“ ist Plural; haben → haben.",
+            "en": "“die Kinder” is plural; haben → haben."
+          }
+        },
+        {
+          "word": "Sie · haben",
+          "sentence": "Frau König, Sie ___ eine neue E-Mail.",
+          "options": [
+            "haben",
+            "hat",
+            "habt"
+          ],
+          "correct": "haben",
+          "explanations": {
+            "tr": "Resmî “Sie” ile haben → haben.",
+            "de": "haben mit höflichem „Sie“ → haben.",
+            "en": "haben with formal “Sie” → haben."
+          }
+        },
+        {
+          "word": "das Hotel · haben",
+          "sentence": "Das Hotel ___ einen großen Garten.",
+          "options": [
+            "hat",
+            "haben",
+            "hast"
+          ],
+          "correct": "hat",
+          "explanations": {
+            "tr": "“das Hotel” = es. “es” ile haben → hat.",
+            "de": "„das Hotel“ = es. haben mit „es“ → hat.",
+            "en": "“das Hotel” = it. haben with “es” → hat."
+          }
+        },
+        {
+          "word": "meine Freunde · haben",
+          "sentence": "Meine Freunde ___ morgen frei.",
+          "options": [
+            "haben",
+            "hat",
+            "habt"
+          ],
+          "correct": "haben",
+          "explanations": {
+            "tr": "“meine Freunde” çoğuldur; haben → haben.",
+            "de": "„meine Freunde“ ist Plural; haben → haben.",
+            "en": "“meine Freunde” is plural; haben → haben."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sein-oder-haben-3",
+      "title": {
+        "tr": "Übung 3 – sein oder haben?",
+        "de": "Übung 3 – sein oder haben?",
+        "en": "Exercise 3 – sein or haben?"
+      },
+      "description": {
+        "tr": "Anlama göre doğru fiili ve doğru çekimi seç.",
+        "de": "Wähle je nach Bedeutung das richtige Verb und die richtige Form.",
+        "en": "Choose the correct verb and form based on meaning."
+      },
+      "difficulty": {
+        "tr": "Kolay-Orta",
+        "de": "Leicht–Mittel",
+        "en": "Easy–Intermediate"
+      },
+      "questions": [
+        {
+          "word": "Alter",
+          "sentence": "Ich ___ 23 Jahre alt.",
+          "options": [
+            "bin",
+            "habe",
+            "bist"
+          ],
+          "correct": "bin",
+          "explanations": {
+            "tr": "Yaş söylerken Almancada sein kullanılır: Ich bin 23 Jahre alt.",
+            "de": "Beim Alter verwendet man sein: Ich bin 23 Jahre alt.",
+            "en": "German uses sein for age: Ich bin 23 Jahre alt."
+          }
+        },
+        {
+          "word": "Hausaufgaben",
+          "sentence": "Wir ___ heute keine Hausaufgaben.",
+          "options": [
+            "haben",
+            "sind",
+            "habt"
+          ],
+          "correct": "haben",
+          "explanations": {
+            "tr": "Bir şeye sahip olmak/var olmak anlamında haben kullanılır: wir haben.",
+            "de": "Für Besitz bzw. „etwas haben“ verwendet man haben: wir haben.",
+            "en": "Use haben for possession: wir haben."
+          }
+        },
+        {
+          "word": "Bruder",
+          "sentence": "Du ___ einen Bruder.",
+          "options": [
+            "hast",
+            "bist",
+            "hat"
+          ],
+          "correct": "hast",
+          "explanations": {
+            "tr": "“du” + haben → hast.",
+            "de": "„du“ + haben → hast.",
+            "en": "“du” + haben → hast."
+          }
+        },
+        {
+          "word": "Wetter",
+          "sentence": "Das Wetter ___ heute schön.",
+          "options": [
+            "ist",
+            "hat",
+            "sind"
+          ],
+          "correct": "ist",
+          "explanations": {
+            "tr": "Bir durumu/özelliği anlatırken sein kullanılır: Das Wetter ist schön.",
+            "de": "Für einen Zustand/eine Eigenschaft verwendet man sein: Das Wetter ist schön.",
+            "en": "Use sein for a state or quality: Das Wetter ist schön."
+          }
+        },
+        {
+          "word": "Ort",
+          "sentence": "Ihr ___ schon im Büro.",
+          "options": [
+            "seid",
+            "habt",
+            "sind"
+          ],
+          "correct": "seid",
+          "explanations": {
+            "tr": "Bulunulan yeri ifade ederken sein kullanılır; “ihr” → seid.",
+            "de": "Für den Ort verwendet man sein; „ihr“ → seid.",
+            "en": "Use sein for location; “ihr” → seid."
+          }
+        },
+        {
+          "word": "Kopfschmerzen",
+          "sentence": "Paul ___ Kopfschmerzen.",
+          "options": [
+            "hat",
+            "ist",
+            "haben"
+          ],
+          "correct": "hat",
+          "explanations": {
+            "tr": "Almancada “Kopfschmerzen haben” denir: Paul hat Kopfschmerzen.",
+            "de": "Man sagt „Kopfschmerzen haben“: Paul hat Kopfschmerzen.",
+            "en": "German says “Kopfschmerzen haben”: Paul hat Kopfschmerzen."
+          }
+        },
+        {
+          "word": "Wohnort",
+          "sentence": "Meine Eltern ___ in Köln.",
+          "options": [
+            "sind",
+            "haben",
+            "ist"
+          ],
+          "correct": "sind",
+          "explanations": {
+            "tr": "Konum için sein; çoğul özne ile → sind.",
+            "de": "Für den Ort verwendet man sein; im Plural → sind.",
+            "en": "Use sein for location; plural subject → sind."
+          }
+        },
+        {
+          "word": "Wohnung",
+          "sentence": "Sie ___ eine neue Wohnung.",
+          "options": [
+            "haben",
+            "sind",
+            "hat"
+          ],
+          "correct": "haben",
+          "explanations": {
+            "tr": "Bir şeye sahip olmayı anlatırken haben kullanılır: sie haben.",
+            "de": "Für Besitz verwendet man haben: sie haben.",
+            "en": "Use haben for possession: sie haben."
+          }
+        },
+        {
+          "word": "Kaffee",
+          "sentence": "Der Kaffee ___ schon kalt.",
+          "options": [
+            "ist",
+            "hat",
+            "sind"
+          ],
+          "correct": "ist",
+          "explanations": {
+            "tr": "“kalt” bir özelliktir; sein kullanılır: Der Kaffee ist kalt.",
+            "de": "„kalt“ beschreibt einen Zustand; daher sein: Der Kaffee ist kalt.",
+            "en": "“kalt” describes a state; use sein: Der Kaffee ist kalt."
+          }
+        },
+        {
+          "word": "Durst",
+          "sentence": "Ich ___ Durst.",
+          "options": [
+            "habe",
+            "bin",
+            "hat"
+          ],
+          "correct": "habe",
+          "explanations": {
+            "tr": "Almancada “Durst haben” denir: Ich habe Durst.",
+            "de": "Man sagt „Durst haben“: Ich habe Durst.",
+            "en": "German says “Durst haben”: Ich habe Durst."
+          }
+        }
+      ]
+    },
+    {
+      "id": "alltag-4",
+      "title": {
+        "tr": "Übung 4 – Günlük hayat",
+        "de": "Übung 4 – Alltag",
+        "en": "Exercise 4 – Everyday German"
+      },
+      "description": {
+        "tr": "Günlük durumlarda sein ve haben kullan.",
+        "de": "Verwende sein und haben in Alltagssituationen.",
+        "en": "Use sein and haben in everyday situations."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Intermediate"
+      },
+      "questions": [
+        {
+          "word": "Laura",
+          "sentence": "A: Wo ist Laura? B: Sie ___ in der Küche.",
+          "options": [
+            "ist",
+            "hat",
+            "sind"
+          ],
+          "correct": "ist",
+          "explanations": {
+            "tr": "Konum bildiriliyor; “sie” tekil + sein → ist.",
+            "de": "Es geht um den Ort; „sie“ Singular + sein → ist.",
+            "en": "This is about location; singular “sie” + sein → ist."
+          }
+        },
+        {
+          "word": "Zeit",
+          "sentence": "A: Hast du Zeit? B: Ja, ich ___ zehn Minuten.",
+          "options": [
+            "habe",
+            "bin",
+            "hast"
+          ],
+          "correct": "habe",
+          "explanations": {
+            "tr": "“ich” + haben → habe.",
+            "de": "„ich“ + haben → habe.",
+            "en": "“ich” + haben → habe."
+          }
+        },
+        {
+          "word": "Park",
+          "sentence": "A: Seid ihr zu Hause? B: Nein, wir ___ im Park.",
+          "options": [
+            "sind",
+            "haben",
+            "seid"
+          ],
+          "correct": "sind",
+          "explanations": {
+            "tr": "“wir” ile konum bildirirken sein → sind.",
+            "de": "Mit „wir“ und einer Ortsangabe: sein → sind.",
+            "en": "With “wir” and a location: sein → sind."
+          }
+        },
+        {
+          "word": "Auto",
+          "sentence": "A: Hat Tim ein Auto? B: Ja, er ___ einen kleinen Wagen.",
+          "options": [
+            "hat",
+            "ist",
+            "hast"
+          ],
+          "correct": "hat",
+          "explanations": {
+            "tr": "“er” + haben → hat.",
+            "de": "„er“ + haben → hat.",
+            "en": "“er” + haben → hat."
+          }
+        },
+        {
+          "word": "müde",
+          "sentence": "Heute ___ ich sehr müde.",
+          "options": [
+            "bin",
+            "habe",
+            "ist"
+          ],
+          "correct": "bin",
+          "explanations": {
+            "tr": "“müde” bir durumdur; “ich” + sein → bin.",
+            "de": "„müde“ ist ein Zustand; „ich“ + sein → bin.",
+            "en": "“müde” is a state; “ich” + sein → bin."
+          }
+        },
+        {
+          "word": "Prüfung",
+          "sentence": "Am Montag ___ wir eine Prüfung.",
+          "options": [
+            "haben",
+            "sind",
+            "hat"
+          ],
+          "correct": "haben",
+          "explanations": {
+            "tr": "“eine Prüfung haben” kullanılır; “wir” → haben.",
+            "de": "Man sagt „eine Prüfung haben“; „wir“ → haben.",
+            "en": "Use “eine Prüfung haben”; “wir” → haben."
+          }
+        },
+        {
+          "word": "Alter",
+          "sentence": "Meine Schwester ___ 18 Jahre alt.",
+          "options": [
+            "ist",
+            "hat",
+            "sind"
+          ],
+          "correct": "ist",
+          "explanations": {
+            "tr": "Yaş için sein kullanılır: sie ist 18 Jahre alt.",
+            "de": "Beim Alter verwendet man sein: sie ist 18 Jahre alt.",
+            "en": "Use sein for age: sie ist 18 Jahre alt."
+          }
+        },
+        {
+          "word": "Gäste",
+          "sentence": "Ihr ___ heute viele Gäste.",
+          "options": [
+            "habt",
+            "seid",
+            "haben"
+          ],
+          "correct": "habt",
+          "explanations": {
+            "tr": "“ihr” + haben → habt.",
+            "de": "„ihr“ + haben → habt.",
+            "en": "“ihr” + haben → habt."
+          }
+        },
+        {
+          "word": "offen",
+          "sentence": "Der Supermarkt ___ noch offen.",
+          "options": [
+            "ist",
+            "hat",
+            "sind"
+          ],
+          "correct": "ist",
+          "explanations": {
+            "tr": "“offen” bir durumdur; tekil özne + sein → ist.",
+            "de": "„offen“ beschreibt einen Zustand; Singular + sein → ist.",
+            "en": "“offen” describes a state; singular + sein → ist."
+          }
+        },
+        {
+          "word": "Pause",
+          "sentence": "Die Schüler ___ jetzt Pause.",
+          "options": [
+            "haben",
+            "sind",
+            "hat"
+          ],
+          "correct": "haben",
+          "explanations": {
+            "tr": "Almancada “Pause haben” denir; çoğul → haben.",
+            "de": "Man sagt „Pause haben“; Plural → haben.",
+            "en": "German says “Pause haben”; plural → haben."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fragen-5",
+      "title": {
+        "tr": "Übung 5 – Sorular",
+        "de": "Übung 5 – Fragen",
+        "en": "Exercise 5 – Questions"
+      },
+      "description": {
+        "tr": "Evet/hayır sorularında doğru sein/haben formunu başa getir.",
+        "de": "Setze in Ja/Nein-Fragen die richtige Form von sein/haben an Position 1.",
+        "en": "Choose the correct sein/haben form at the start of yes/no questions."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Intermediate"
+      },
+      "questions": [
+        {
+          "word": "Frage · sein",
+          "sentence": "___ du aus der Türkei?",
+          "options": [
+            "Bist",
+            "Hast",
+            "Ist"
+          ],
+          "correct": "Bist",
+          "explanations": {
+            "tr": "Evet/hayır sorusunda çekimli fiil başa gelir: Bist du ...?",
+            "de": "In der Ja/Nein-Frage steht das Verb zuerst: Bist du ...?",
+            "en": "In a yes/no question, the conjugated verb comes first: Bist du ...?"
+          }
+        },
+        {
+          "word": "Frage · haben",
+          "sentence": "___ ihr heute Unterricht?",
+          "options": [
+            "Habt",
+            "Seid",
+            "Haben"
+          ],
+          "correct": "Habt",
+          "explanations": {
+            "tr": "“ihr” + haben → habt; soruda başa gelir: Habt ihr ...?",
+            "de": "„ihr“ + haben → habt; in der Frage zuerst: Habt ihr ...?",
+            "en": "“ihr” + haben → habt; in a question it comes first: Habt ihr ...?"
+          }
+        },
+        {
+          "word": "Frage · sein",
+          "sentence": "___ Frau Stein Lehrerin?",
+          "options": [
+            "Ist",
+            "Hat",
+            "Sind"
+          ],
+          "correct": "Ist",
+          "explanations": {
+            "tr": "“Frau Stein” = sie tekil; sein → ist.",
+            "de": "„Frau Stein“ = sie Singular; sein → ist.",
+            "en": "“Frau Stein” = singular “sie”; sein → ist."
+          }
+        },
+        {
+          "word": "Frage · haben",
+          "sentence": "___ Sie einen Moment Zeit?",
+          "options": [
+            "Haben",
+            "Sind",
+            "Habt"
+          ],
+          "correct": "Haben",
+          "explanations": {
+            "tr": "Resmî “Sie” + haben → haben.",
+            "de": "Höfliches „Sie“ + haben → haben.",
+            "en": "Formal “Sie” + haben → haben."
+          }
+        },
+        {
+          "word": "Frage · sein",
+          "sentence": "___ deine Eltern zu Hause?",
+          "options": [
+            "Sind",
+            "Haben",
+            "Ist"
+          ],
+          "correct": "Sind",
+          "explanations": {
+            "tr": "“deine Eltern” çoğul; sein → sind.",
+            "de": "„deine Eltern“ ist Plural; sein → sind.",
+            "en": "“deine Eltern” is plural; sein → sind."
+          }
+        },
+        {
+          "word": "Frage · haben",
+          "sentence": "___ du einen Laptop?",
+          "options": [
+            "Hast",
+            "Bist",
+            "Hat"
+          ],
+          "correct": "Hast",
+          "explanations": {
+            "tr": "“du” + haben → hast.",
+            "de": "„du“ + haben → hast.",
+            "en": "“du” + haben → hast."
+          }
+        },
+        {
+          "word": "Frage · sein",
+          "sentence": "___ wir zu spät?",
+          "options": [
+            "Sind",
+            "Haben",
+            "Seid"
+          ],
+          "correct": "Sind",
+          "explanations": {
+            "tr": "“wir” + sein → sind.",
+            "de": "„wir“ + sein → sind.",
+            "en": "“wir” + sein → sind."
+          }
+        },
+        {
+          "word": "Frage · haben",
+          "sentence": "___ Max eine Schwester?",
+          "options": [
+            "Hat",
+            "Ist",
+            "Hast"
+          ],
+          "correct": "Hat",
+          "explanations": {
+            "tr": "Max = er; haben → hat.",
+            "de": "Max = er; haben → hat.",
+            "en": "Max = he; haben → hat."
+          }
+        },
+        {
+          "word": "Frage · sein",
+          "sentence": "___ das Museum heute geöffnet?",
+          "options": [
+            "Ist",
+            "Hat",
+            "Sind"
+          ],
+          "correct": "Ist",
+          "explanations": {
+            "tr": "“das Museum” = es; sein → ist.",
+            "de": "„das Museum“ = es; sein → ist.",
+            "en": "“das Museum” = it; sein → ist."
+          }
+        },
+        {
+          "word": "Frage · haben",
+          "sentence": "___ die Kinder Hunger?",
+          "options": [
+            "Haben",
+            "Sind",
+            "Hat"
+          ],
+          "correct": "Haben",
+          "explanations": {
+            "tr": "“die Kinder” çoğul; haben → haben.",
+            "de": "„die Kinder“ ist Plural; haben → haben.",
+            "en": "“die Kinder” is plural; haben → haben."
+          }
+        }
+      ]
+    },
+    {
+      "id": "gemischt-6",
+      "title": {
+        "tr": "Übung 6 – Karışık test",
+        "de": "Übung 6 – Gemischter Test",
+        "en": "Exercise 6 – Mixed Test"
+      },
+      "description": {
+        "tr": "sein ve haben konusunu karışık sorularla kontrol et.",
+        "de": "Teste sein und haben mit gemischten Aufgaben.",
+        "en": "Test sein and haben with mixed questions."
+      },
+      "difficulty": {
+        "tr": "Karışık",
+        "de": "Gemischt",
+        "en": "Mixed"
+      },
+      "questions": [
+        {
+          "word": "gemischt",
+          "sentence": "Heute ___ Sonntag.",
+          "options": [
+            "ist",
+            "hat",
+            "sind"
+          ],
+          "correct": "ist",
+          "explanations": {
+            "tr": "Gün/tarih gibi tanımlamalarda sein kullanılır: Heute ist Sonntag.",
+            "de": "Bei solchen Angaben verwendet man sein: Heute ist Sonntag.",
+            "en": "Use sein for this kind of statement: Heute ist Sonntag."
+          }
+        },
+        {
+          "word": "gemischt",
+          "sentence": "Ich ___ keine Geschwister.",
+          "options": [
+            "habe",
+            "bin",
+            "hat"
+          ],
+          "correct": "habe",
+          "explanations": {
+            "tr": "“ich” + haben → habe.",
+            "de": "„ich“ + haben → habe.",
+            "en": "“ich” + haben → habe."
+          }
+        },
+        {
+          "word": "gemischt",
+          "sentence": "Warum ___ du so müde?",
+          "options": [
+            "bist",
+            "hast",
+            "ist"
+          ],
+          "correct": "bist",
+          "explanations": {
+            "tr": "“müde sein”; “du” → bist.",
+            "de": "„müde sein“; „du“ → bist.",
+            "en": "Use “müde sein”; “du” → bist."
+          }
+        },
+        {
+          "word": "gemischt",
+          "sentence": "Wir ___ zwei Katzen.",
+          "options": [
+            "haben",
+            "sind",
+            "habt"
+          ],
+          "correct": "haben",
+          "explanations": {
+            "tr": "Sahiplik için haben; “wir” → haben.",
+            "de": "Für Besitz: haben; „wir“ → haben.",
+            "en": "For possession use haben; “wir” → haben."
+          }
+        },
+        {
+          "word": "gemischt",
+          "sentence": "Wo ___ eure Lehrerin?",
+          "options": [
+            "ist",
+            "hat",
+            "sind"
+          ],
+          "correct": "ist",
+          "explanations": {
+            "tr": "Konum soruluyor; “eure Lehrerin” tekil → ist.",
+            "de": "Es geht um den Ort; „eure Lehrerin“ ist Singular → ist.",
+            "en": "This asks for a location; “eure Lehrerin” is singular → ist."
+          }
+        },
+        {
+          "word": "gemischt",
+          "sentence": "Ihr ___ sehr gute Ideen.",
+          "options": [
+            "habt",
+            "seid",
+            "haben"
+          ],
+          "correct": "habt",
+          "explanations": {
+            "tr": "“ihr” + haben → habt.",
+            "de": "„ihr“ + haben → habt.",
+            "en": "“ihr” + haben → habt."
+          }
+        },
+        {
+          "word": "gemischt",
+          "sentence": "Meine Großeltern ___ in Izmir.",
+          "options": [
+            "sind",
+            "haben",
+            "ist"
+          ],
+          "correct": "sind",
+          "explanations": {
+            "tr": "Konum için sein; çoğul → sind.",
+            "de": "Für den Ort: sein; Plural → sind.",
+            "en": "Use sein for location; plural → sind."
+          }
+        },
+        {
+          "word": "gemischt",
+          "sentence": "Frau Bauer ___ drei Kinder.",
+          "options": [
+            "hat",
+            "ist",
+            "haben"
+          ],
+          "correct": "hat",
+          "explanations": {
+            "tr": "Frau Bauer = sie tekil; haben → hat.",
+            "de": "Frau Bauer = sie Singular; haben → hat.",
+            "en": "Frau Bauer = singular “sie”; haben → hat."
+          }
+        },
+        {
+          "word": "gemischt",
+          "sentence": "___ Sie neu in der Stadt?",
+          "options": [
+            "Sind",
+            "Haben",
+            "Seid"
+          ],
+          "correct": "Sind",
+          "explanations": {
+            "tr": "Resmî “Sie” + sein → sind; soruda “Sind Sie ...?”",
+            "de": "Höfliches „Sie“ + sein → sind; in der Frage: „Sind Sie ...?“",
+            "en": "Formal “Sie” + sein → sind; in a question: “Sind Sie ...?”"
+          }
+        },
+        {
+          "word": "gemischt",
+          "sentence": "___ du morgen Zeit?",
+          "options": [
+            "Hast",
+            "Bist",
+            "Hat"
+          ],
+          "correct": "Hast",
+          "explanations": {
+            "tr": "“Zeit haben”; “du” → hast.",
+            "de": "„Zeit haben“; „du“ → hast.",
+            "en": "Use “Zeit haben”; “du” → hast."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,614 @@
+{
+  "id": "personalpronomen-akkusativ",
+  "level": "A1",
+  "title": {
+    "tr": "Personalpronomen im Akkusativ",
+    "de": "Personalpronomen im Akkusativ",
+    "en": "Personal pronouns in the accusative"
+  },
+  "description": {
+    "tr": "Nesne olan kişi ve şeyleri mich, dich, ihn, sie, es, uns, euch, sie/Sie ile ifade et.",
+    "de": "Ersetze Akkusativobjekte durch mich, dich, ihn, sie, es, uns, euch, sie/Sie.",
+    "en": "Replace accusative objects with mich, dich, ihn, sie, es, uns, euch, sie/Sie."
+  },
+  "lesson": {
+    "title": {
+      "tr": "Akkusativ personal zamirleri",
+      "de": "Personalpronomen im Akkusativ",
+      "en": "Accusative personal pronouns"
+    },
+    "intro": {
+      "tr": "Bir kişi veya şey cümlede doğrudan nesneyse çoğu zaman Akkusativ kullanılır. İsmi tekrar etmek yerine uygun personal zamirini kullanabilirsin.",
+      "de": "Steht eine Person oder Sache als direktes Objekt, verwendet man häufig den Akkusativ. Statt das Nomen zu wiederholen, kann ein Personalpronomen stehen.",
+      "en": "When a person or thing is the direct object, German often uses the accusative. A personal pronoun can replace the repeated noun."
+    },
+    "rules": [
+      {
+        "label": "ich → mich",
+        "text": {
+          "tr": "beni",
+          "de": "mich",
+          "en": "me"
+        }
+      },
+      {
+        "label": "du → dich",
+        "text": {
+          "tr": "seni",
+          "de": "dich",
+          "en": "you"
+        }
+      },
+      {
+        "label": "er → ihn",
+        "text": {
+          "tr": "onu (eril)",
+          "de": "ihn",
+          "en": "him"
+        }
+      },
+      {
+        "label": "sie → sie",
+        "text": {
+          "tr": "onu (dişil)",
+          "de": "sie",
+          "en": "her"
+        }
+      },
+      {
+        "label": "es → es",
+        "text": {
+          "tr": "onu (nötr)",
+          "de": "es",
+          "en": "it"
+        }
+      },
+      {
+        "label": "wir → uns",
+        "text": {
+          "tr": "bizi",
+          "de": "uns",
+          "en": "us"
+        }
+      },
+      {
+        "label": "ihr → euch",
+        "text": {
+          "tr": "sizi",
+          "de": "euch",
+          "en": "you (plural)"
+        }
+      },
+      {
+        "label": "sie/Sie → sie/Sie",
+        "text": {
+          "tr": "onları / sizi",
+          "de": "sie / Sie",
+          "en": "them / you (formal)"
+        }
+      }
+    ],
+    "examples": [
+      "Ich sehe Jonas. → Ich sehe ihn.",
+      "Mara ruft Anna an. → Mara ruft sie an.",
+      "Der Lehrer fragt uns. → Wir antworten ihm später."
+    ],
+    "tip": {
+      "tr": "Önce nesnenin hangi ismin yerini tuttuğunu bul. Sonra o ismin cinsiyetine ve tekil/çoğul olmasına göre zamiri seç.",
+      "de": "Finde zuerst heraus, welches Nomen ersetzt wird. Wähle dann das passende Pronomen nach Genus und Numerus.",
+      "en": "First identify the noun being replaced, then choose the pronoun according to gender and number."
+    }
+  },
+  "exercises": [
+    {
+      "id": "akk-ersetzen-1",
+      "title": {
+        "tr": "Übung 1 – İsmi zamirle değiştir",
+        "de": "Übung 1 – Nomen ersetzen",
+        "en": "Exercise 1 – Replace the noun"
+      },
+      "description": {
+        "tr": "Kalın düşün: Nesnenin yerine hangi Akkusativ zamiri gelir?",
+        "de": "Welches Akkusativpronomen ersetzt das Objekt?",
+        "en": "Which accusative pronoun replaces the object?"
+      },
+      "difficulty": {
+        "tr": "Temel",
+        "de": "Grundlage",
+        "en": "Basic"
+      },
+      "questions": [
+        {
+          "word": "Leo",
+          "sentence": "Ich treffe Leo nach der Arbeit. → Ich treffe ___ nach der Arbeit.",
+          "options": [
+            "ihn",
+            "ihm",
+            "er"
+          ],
+          "correct": "ihn",
+          "explanations": {
+            "tr": "Leo erildir ve doğrudan nesnedir: ihn.",
+            "de": "Leo ist maskulin und Akkusativobjekt: ihn.",
+            "en": "Leo is masculine and the direct object: ihn."
+          }
+        },
+        {
+          "word": "Nina",
+          "sentence": "Kennst du Nina aus dem Sprachkurs? – Ja, ich kenne ___.",
+          "options": [
+            "sie",
+            "ihr",
+            "ihn"
+          ],
+          "correct": "sie",
+          "explanations": {
+            "tr": "Nina feminin: sie.",
+            "de": "Nina ist feminin: sie.",
+            "en": "Nina is feminine: sie."
+          }
+        },
+        {
+          "word": "das Handy",
+          "sentence": "Wo ist mein Handy? – Ich habe ___ auf dem Sofa gesehen.",
+          "options": [
+            "es",
+            "ihn",
+            "ihm"
+          ],
+          "correct": "es",
+          "explanations": {
+            "tr": "das Handy nötrdür: es.",
+            "de": "das Handy ist neutral: es.",
+            "en": "das Handy is neuter: es."
+          }
+        },
+        {
+          "word": "meine Eltern",
+          "sentence": "Besuchst du deine Eltern am Sonntag? – Ja, ich besuche ___.",
+          "options": [
+            "sie",
+            "ihnen",
+            "euch"
+          ],
+          "correct": "sie",
+          "explanations": {
+            "tr": "Çoğul nesneler Akkusativde sie olur.",
+            "de": "Plural im Akkusativ: sie.",
+            "en": "Plural objects use sie in the accusative."
+          }
+        },
+        {
+          "word": "wir",
+          "sentence": "Der Trainer sieht ___ jeden Montag.",
+          "options": [
+            "uns",
+            "wir",
+            "euch"
+          ],
+          "correct": "uns",
+          "explanations": {
+            "tr": "wir zamirinin Akkusativ biçimi uns olur.",
+            "de": "Akkusativ von wir: uns.",
+            "en": "Accusative of wir is uns."
+          }
+        },
+        {
+          "word": "ihr",
+          "sentence": "Ich höre ___ sehr gut.",
+          "options": [
+            "euch",
+            "ihr",
+            "sie"
+          ],
+          "correct": "euch",
+          "explanations": {
+            "tr": "ihr zamirinin Akkusativ biçimi euch olur.",
+            "de": "Akkusativ von ihr: euch.",
+            "en": "Accusative of ihr is euch."
+          }
+        },
+        {
+          "word": "du",
+          "sentence": "Kannst du ___ auf dem Foto erkennen?",
+          "options": [
+            "mich",
+            "mir",
+            "ich"
+          ],
+          "correct": "mich",
+          "explanations": {
+            "tr": "ich → mich.",
+            "de": "ich wird im Akkusativ zu mich.",
+            "en": "ich becomes mich in the accusative."
+          }
+        },
+        {
+          "word": "du",
+          "sentence": "Ich suche ___ schon seit zehn Minuten!",
+          "options": [
+            "dich",
+            "dir",
+            "du"
+          ],
+          "correct": "dich",
+          "explanations": {
+            "tr": "du → dich.",
+            "de": "du wird im Akkusativ zu dich.",
+            "en": "du becomes dich in the accusative."
+          }
+        },
+        {
+          "word": "Frau Keller",
+          "sentence": "Wir rufen Frau Keller später an. → Wir rufen ___ später an.",
+          "options": [
+            "sie",
+            "ihr",
+            "ihnen"
+          ],
+          "correct": "sie",
+          "explanations": {
+            "tr": "Frau Keller feminin ve doğrudan nesnedir: sie.",
+            "de": "Frau Keller ist feminin und Akkusativobjekt: sie.",
+            "en": "Frau Keller is feminine and the direct object: sie."
+          }
+        },
+        {
+          "word": "Herr und Frau Braun",
+          "sentence": "Der Arzt untersucht Herr und Frau Braun. → Er untersucht ___.",
+          "options": [
+            "sie",
+            "ihnen",
+            "euch"
+          ],
+          "correct": "sie",
+          "explanations": {
+            "tr": "Birden fazla üçüncü kişi Akkusativde sie olur.",
+            "de": "Mehrere Personen in der 3. Person: sie.",
+            "en": "Several third-person people use sie in the accusative."
+          }
+        }
+      ]
+    },
+    {
+      "id": "akk-alltag-2",
+      "title": {
+        "tr": "Übung 2 – Günlük diyaloglar",
+        "de": "Übung 2 – Alltagssituationen",
+        "en": "Exercise 2 – Everyday situations"
+      },
+      "description": {
+        "tr": "Kısa günlük diyaloglarda doğru nesne zamirini seç.",
+        "de": "Wähle in kurzen Dialogen das passende Objektpronomen.",
+        "en": "Choose the correct object pronoun in short everyday dialogues."
+      },
+      "difficulty": {
+        "tr": "Kolay-Orta",
+        "de": "Leicht–Mittel",
+        "en": "Easy–Medium"
+      },
+      "questions": [
+        {
+          "word": "der Schlüssel",
+          "sentence": "A: Hast du meinen Schlüssel? B: Ja, ich habe ___ in meiner Tasche.",
+          "options": [
+            "ihn",
+            "ihm",
+            "er"
+          ],
+          "correct": "ihn",
+          "explanations": {
+            "tr": "der Schlüssel → ihn.",
+            "de": "der Schlüssel → ihn.",
+            "en": "der Schlüssel → ihn."
+          }
+        },
+        {
+          "word": "die Rechnung",
+          "sentence": "A: Kannst du die Rechnung bezahlen? B: Ja, ich bezahle ___ gleich.",
+          "options": [
+            "sie",
+            "ihr",
+            "es"
+          ],
+          "correct": "sie",
+          "explanations": {
+            "tr": "die Rechnung → sie.",
+            "de": "die Rechnung → sie.",
+            "en": "die Rechnung → sie."
+          }
+        },
+        {
+          "word": "das Paket",
+          "sentence": "A: Nimmst du das Paket mit? B: Natürlich, ich nehme ___ mit.",
+          "options": [
+            "es",
+            "ihn",
+            "sie"
+          ],
+          "correct": "es",
+          "explanations": {
+            "tr": "das Paket → es.",
+            "de": "das Paket → es.",
+            "en": "das Paket → es."
+          }
+        },
+        {
+          "word": "Tom und Ben",
+          "sentence": "A: Siehst du Tom und Ben heute? B: Nein, ich sehe ___ erst morgen.",
+          "options": [
+            "sie",
+            "ihnen",
+            "euch"
+          ],
+          "correct": "sie",
+          "explanations": {
+            "tr": "Tom und Ben çoğuldur: sie.",
+            "de": "Tom und Ben stehen im Plural: sie.",
+            "en": "Tom and Ben are plural: sie."
+          }
+        },
+        {
+          "word": "ich",
+          "sentence": "A: Rufst du ___ später an? B: Ja, gegen acht Uhr.",
+          "options": [
+            "mich",
+            "mir",
+            "ich"
+          ],
+          "correct": "mich",
+          "explanations": {
+            "tr": "anrufen doğrudan nesne alır: mich.",
+            "de": "anrufen hat ein Akkusativobjekt: mich.",
+            "en": "anrufen takes a direct object: mich."
+          }
+        },
+        {
+          "word": "du",
+          "sentence": "A: Der Chef braucht ___. B: Wirklich? Dann gehe ich zu ihm.",
+          "options": [
+            "dich",
+            "dir",
+            "du"
+          ],
+          "correct": "dich",
+          "explanations": {
+            "tr": "brauchen Akkusativ ister: dich.",
+            "de": "brauchen verlangt den Akkusativ: dich.",
+            "en": "brauchen takes the accusative: dich."
+          }
+        },
+        {
+          "word": "wir",
+          "sentence": "A: Versteht die Lehrerin ___? B: Ja, ganz gut.",
+          "options": [
+            "uns",
+            "wir",
+            "euch"
+          ],
+          "correct": "uns",
+          "explanations": {
+            "tr": "wir → uns.",
+            "de": "wir → uns.",
+            "en": "wir → uns."
+          }
+        },
+        {
+          "word": "ihr",
+          "sentence": "A: Ich lade ___ am Samstag ein. B: Super, wir kommen gern.",
+          "options": [
+            "euch",
+            "ihr",
+            "sie"
+          ],
+          "correct": "euch",
+          "explanations": {
+            "tr": "ihr → euch.",
+            "de": "ihr → euch.",
+            "en": "ihr → euch."
+          }
+        },
+        {
+          "word": "die Musik",
+          "sentence": "A: Magst du die Musik? B: Ja, ich mag ___.",
+          "options": [
+            "sie",
+            "ihr",
+            "es"
+          ],
+          "correct": "sie",
+          "explanations": {
+            "tr": "die Musik → sie.",
+            "de": "die Musik → sie.",
+            "en": "die Musik → sie."
+          }
+        },
+        {
+          "word": "Herr Meier",
+          "sentence": "A: Suchen Sie Herrn Meier? B: Ja, ich suche ___.",
+          "options": [
+            "ihn",
+            "ihm",
+            "er"
+          ],
+          "correct": "ihn",
+          "explanations": {
+            "tr": "Herr Meier erildir: ihn.",
+            "de": "Herr Meier ist maskulin: ihn.",
+            "en": "Herr Meier is masculine: ihn."
+          }
+        }
+      ]
+    },
+    {
+      "id": "akk-gemischt-3",
+      "title": {
+        "tr": "Übung 3 – Karışık Akkusativ",
+        "de": "Übung 3 – Gemischter Akkusativ",
+        "en": "Exercise 3 – Mixed accusative"
+      },
+      "description": {
+        "tr": "Özne ile nesneyi ayır ve doğru zamiri seç.",
+        "de": "Unterscheide Subjekt und Objekt und wähle das richtige Pronomen.",
+        "en": "Distinguish subject and object and choose the correct pronoun."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Medium"
+      },
+      "questions": [
+        {
+          "word": "Mia",
+          "sentence": "Mia kommt später. Ich warte auf ___.",
+          "options": [
+            "sie",
+            "ihr",
+            "es"
+          ],
+          "correct": "sie",
+          "explanations": {
+            "tr": "auf + kişi burada Akkusativ: sie.",
+            "de": "auf + Person steht hier im Akkusativ: sie.",
+            "en": "auf + person is accusative here: sie."
+          }
+        },
+        {
+          "word": "der Film",
+          "sentence": "Der Film ist neu. Hast du ___ schon gesehen?",
+          "options": [
+            "ihn",
+            "ihm",
+            "er"
+          ],
+          "correct": "ihn",
+          "explanations": {
+            "tr": "der Film → ihn.",
+            "de": "der Film → ihn.",
+            "en": "der Film → ihn."
+          }
+        },
+        {
+          "word": "die Kinder",
+          "sentence": "Die Kinder spielen draußen. Ich rufe ___ jetzt.",
+          "options": [
+            "sie",
+            "ihnen",
+            "euch"
+          ],
+          "correct": "sie",
+          "explanations": {
+            "tr": "die Kinder çoğul Akkusativ: sie.",
+            "de": "die Kinder im Akkusativ: sie.",
+            "en": "die Kinder in the accusative: sie."
+          }
+        },
+        {
+          "word": "du",
+          "sentence": "___ sehe ich jeden Morgen im Bus.",
+          "options": [
+            "Dich",
+            "Dir",
+            "Du"
+          ],
+          "correct": "Dich",
+          "explanations": {
+            "tr": "Cümlenin nesnesi du olduğunda Akkusativ dich olur.",
+            "de": "du als Objekt wird zu dich.",
+            "en": "du as an object becomes dich."
+          }
+        },
+        {
+          "word": "ich",
+          "sentence": "Kannst du ___ bitte fotografieren?",
+          "options": [
+            "mich",
+            "mir",
+            "ich"
+          ],
+          "correct": "mich",
+          "explanations": {
+            "tr": "fotografieren Akkusativ nesne alır: mich.",
+            "de": "fotografieren hat ein Akkusativobjekt: mich.",
+            "en": "fotografieren takes a direct object: mich."
+          }
+        },
+        {
+          "word": "das Brot",
+          "sentence": "Das Brot ist frisch. Wir kaufen ___ heute.",
+          "options": [
+            "es",
+            "ihm",
+            "ihn"
+          ],
+          "correct": "es",
+          "explanations": {
+            "tr": "das Brot → es.",
+            "de": "das Brot → es.",
+            "en": "das Brot → es."
+          }
+        },
+        {
+          "word": "Anna und ich",
+          "sentence": "Der Lehrer fragt Anna und mich. Er fragt ___.",
+          "options": [
+            "uns",
+            "wir",
+            "euch"
+          ],
+          "correct": "uns",
+          "explanations": {
+            "tr": "Anna + ich = wir; Akkusativ: uns.",
+            "de": "Anna + ich = wir; Akkusativ: uns.",
+            "en": "Anna + I = wir; accusative: uns."
+          }
+        },
+        {
+          "word": "Sie (formal)",
+          "sentence": "Entschuldigung, kann ich ___ kurz sprechen?",
+          "options": [
+            "Sie",
+            "Ihnen",
+            "sie"
+          ],
+          "correct": "Sie",
+          "explanations": {
+            "tr": "Resmî Sie Akkusativde de Sie olarak kalır.",
+            "de": "Das formelle Sie bleibt im Akkusativ Sie.",
+            "en": "Formal Sie remains Sie in the accusative."
+          }
+        },
+        {
+          "word": "die Jacke",
+          "sentence": "Die Jacke gefällt mir. Ich nehme ___.",
+          "options": [
+            "sie",
+            "ihr",
+            "es"
+          ],
+          "correct": "sie",
+          "explanations": {
+            "tr": "die Jacke doğrudan nesne: sie.",
+            "de": "die Jacke als Akkusativobjekt: sie.",
+            "en": "die Jacke as direct object: sie."
+          }
+        },
+        {
+          "word": "mein Bruder",
+          "sentence": "Mein Bruder wohnt in Köln. Ich besuche ___ nächsten Monat.",
+          "options": [
+            "ihn",
+            "ihm",
+            "er"
+          ],
+          "correct": "ihn",
+          "explanations": {
+            "tr": "mein Bruder → ihn.",
+            "de": "mein Bruder → ihn.",
+            "en": "mein Bruder → ihn."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -7,7 +7,7 @@
   <meta name="description" content="Bozkurt Academy ile Almanca dersleri, gramer konuları, seviye bazlı alıştırmalar ve sınav hazırlığı. Bireysel ders, grup dersi ve akademik danışmanlık." />
   <meta name="keywords" content="Almanca ders, Almanca özel ders, Almanca gramer, Almanca alıştırmalar, Goethe sınavı, telc, ÖSD, A1 Almanca, A2 Almanca, B1 Almanca, B2 Almanca" />
   <meta name="author" content="Bozkurt Academy" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=7" />
 </head>
 <body>
   <div class="shell">
@@ -15,7 +15,7 @@
       <nav class="nav">
         <button class="brand" data-page="home" aria-label="Bozkurt Academy ana sayfa">
           <div class="ba-logo"><span>BA</span></div>
-          <div><div class="brand-title">Bozkurt Academy</div><div class="brand-sub" data-i18n="brandSub">Almancayı Kolay Öğren</div></div>
+          <div><div class="brand-title">Bozkurt Academy</div><div class="brand-sub" data-i18n="brandSub">Almancada net ilerleme</div></div>
         </button>
         <div class="nav-links" aria-label="Site menüsü">
           <button class="nav-link active" data-page="home" data-i18n="navHome">Ana Sayfa</button>
@@ -220,17 +220,71 @@
       </section>
 
       <section class="page" id="page-contact">
-        <div class="page-hero"><div class="page-hero-inner"><span class="tag" data-i18n="contactTag">İletişim</span><h1 data-i18n="contactTitle">Almanca hedefini birlikte planlayalım.</h1><p data-i18n="contactSub">İlk mesajında seviyeni, hedefini, sınav tarihin varsa sınavını ve ders tercihini yazman yeterli.</p></div></div>
-        <section class="block"><div class="contact-grid">
-          <div class="contact-card"><h3 data-i18n="contactInfoTitle">İletişim bilgileri</h3><div class="contact-line">📧 <a href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a></div><div class="contact-line">💬 <span data-i18n="whatsappText">WhatsApp numaranı buraya ekleyebilirsin.</span></div><div class="contact-line">🌍 <span data-i18n="lessonOptionsText">Bireysel ders · Grup dersi · Akademik danışmanlık</span></div></div>
-          <form class="contact-card" id="contactForm"><h3 data-i18n="formTitle">İlk görüşme mesajı</h3><div class="field"><label data-i18n="nameLabel">Ad Soyad</label><input id="name" required /></div><div class="field"><label data-i18n="emailLabel">E-posta</label><input id="email" type="email" required /></div><div class="field"><label data-i18n="messageLabel">Mesaj</label><textarea id="message" placeholder="Seviyem A2, Goethe B1 için hazırlanmak istiyorum..." required></textarea></div><button class="btn gold block" type="submit" data-i18n="sendMessage">Mesajı e-posta olarak hazırla</button></form>
-        </div></section>
+        <div class="page-hero">
+          <div class="page-hero-inner">
+            <span class="tag" data-i18n="contactTag">İletişim</span>
+            <h1 data-i18n="contactTitle">Almanca hedefini birlikte planlayalım.</h1>
+            <p data-i18n="contactSub">Kısa bir mesaj bırak; seviyene ve hedefine göre sana dönüş yapayım.</p>
+          </div>
+        </div>
+
+        <section class="block">
+          <div class="contact-form-shell">
+            <article class="contact-main-card">
+              <div class="contact-mail-row">
+                <span class="contact-mail-icon" aria-hidden="true">✉</span>
+                <div>
+                  <small data-i18n="contactMailLabel">E-posta</small>
+                  <a href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-heading-row">
+                <span class="contact-heading-line" aria-hidden="true"></span>
+                <h2 data-i18n="formTitle">İlk görüşme için yaz</h2>
+              </div>
+
+              <p class="contact-guide-title" data-i18n="contactGuideTitle">İlk mesajında şu bilgileri paylaşabilirsin:</p>
+              <ul class="contact-guide-list">
+                <li data-i18n="contactGuide1">Almanca seviyen (biliyorsan A1–B2)</li>
+                <li data-i18n="contactGuide2">Hedefin: günlük Almanca, sınav, iş veya okul</li>
+                <li data-i18n="contactGuide3">Zorlandığın konu veya beceri</li>
+                <li data-i18n="contactGuide4">Sınavın varsa sınav adı ve tarihi</li>
+                <li data-i18n="contactGuide5">Bireysel / grup ders tercihin</li>
+                <li data-i18n="contactGuide6">Varsa eklemek istediğin özel bir not</li>
+              </ul>
+
+              <form id="contactForm" class="contact-message-form" novalidate>
+                <div class="contact-form-grid">
+                  <div class="field">
+                    <label for="name" data-i18n="nameLabel">Ad Soyad</label>
+                    <input id="name" name="name" autocomplete="name" required data-i18n-placeholder="namePlaceholder" placeholder="Adınız" />
+                  </div>
+                  <div class="field">
+                    <label for="email" data-i18n="emailLabel">E-posta</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required data-i18n-placeholder="emailPlaceholder" placeholder="ornek@email.com" />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="message" data-i18n="messageLabel">Mesaj</label>
+                  <textarea id="message" name="message" required data-i18n-placeholder="messagePlaceholder" placeholder="Seviyem A2. B1 sınavına hazırlanıyorum ve özellikle konuşmada zorlanıyorum."></textarea>
+                </div>
+
+                <input class="contact-honey" type="text" id="companyWebsite" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+                <button id="contactSubmitBtn" class="btn primary block contact-submit" type="submit" data-i18n="sendMessage">Mesaj Gönder</button>
+                <div id="formStatus" class="contact-form-status" role="status" aria-live="polite"></div>
+              </form>
+            </article>
+          </div>
+        </section>
       </section>
     </main>
 
     <footer><div><strong>Bozkurt Academy</strong><br><span data-i18n="footerText">Almanca dersleri, gramer, alıştırmalar ve sınav hazırlığı.</span></div><div>© 2026 Bozkurt Academy</div></footer>
   </div>
-  <script src="js/app.js?v=6"></script>
+  <script src="js/app.js?v=7"></script>
   <script src="js/quiz.js?v=5"></script>
 </body>
 </html>

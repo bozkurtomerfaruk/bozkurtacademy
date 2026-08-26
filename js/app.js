@@ -1,6 +1,6 @@
 const translations = {
       tr: {
-        brandSub:'Almancayı Kolay Öğren', navHome:'Ana Sayfa', navLessons:'Almanca Ders', navGrammar:'Gramer Konuları', navExercises:'Alıştırmalar', navExams:'Sınav Hazırlığı', navAbout:'Hakkımda', navContact:'İletişim',
+        brandSub:'Almancada net ilerleme', navHome:'Ana Sayfa', navLessons:'Almanca Ders', navGrammar:'Gramer Konuları', navExercises:'Alıştırmalar', navExams:'Sınav Hazırlığı', navAbout:'Hakkımda', navContact:'İletişim',
         founderRole:'Kurucu & Eğitmen', founderRole2:'Kurucu & Eğitmen', founderRole3:'Kurucu & Eğitmen', heroTag:'A1’den B2’ye Almanca desteği', heroTitle:'Almanca hedefin için planlı, anlaşılır ve kişisel eğitim.', heroSub:'Bozkurt Academy; bireysel ders, grup dersi, akademik danışmanlık, gramer konuları, seviye bazlı alıştırmalar ve sınav hazırlığı ile Almanca öğrenme sürecini net bir plana dönüştürür.', ctaContact:'İlk görüşme için yaz', ctaExercises:'Alıştırmaları incele', stat1:'Seviye bazlı eğitim', stat2:'Ders seçeneği', stat3:'Dil desteği',
         servicesTag:'Ders ve Danışmanlık', servicesTitle:'İhtiyacına göre üç farklı çalışma modeli.', servicesSub:'Almanca öğreniminde hedef, seviye ve zaman planı kişiye göre değişir. Bu yüzden ders modeli öğrenciye göre belirlenir.', service1Title:'Bireysel ders', service1Text:'Kişiye özel plan, birebir takip, seviyeye uygun materyal ve düzenli geri bildirim.', service2Title:'Grup dersi', service2Text:'Benzer seviyedeki öğrencilerle etkileşimli, konuşma destekli ve düzenli Almanca dersleri.', service3Title:'Akademik danışmanlık', service3Text:'Almanya’da eğitim, iş, günlük yaşam, sınav süreci ve akademik Almanca için yol haritası desteği.', pillPersonal:'Kişisel plan', pillFast:'Hızlı ilerleme', pillSpeaking:'Konuşma', pillGroup:'Grup takibi', pillRoutine:'Düzen', pillGermany:'Almanya', pillExam:'Sınav', pillAcademic:'Akademik',
         commentsTag:'Öğrenci Yorumları', commentsTitle:'Öğrencilerden Yorumlar', commentsSub:'Derslerin anlaşılır, düzenli ve motive edici olması öğrencilerin Almanca öğrenme sürecini kolaylaştırır.', quote1:'Almancaya sıfırdan başladım. Konular çok net anlatıldı; artık kendi cümlelerimi kurabiliyorum.', quote2:'Grameri ilk defa ezber gibi değil, mantığıyla öğrendim. Ders sonrası alıştırmalar konuyu kalıcı hale getiriyor.', quote3:'Sınav için özellikle yazma ve konuşmada çok zorlanıyordum. Planlı ilerleyince özgüvenim ciddi şekilde arttı.',
@@ -89,6 +89,68 @@ Object.assign(translations.en, {
   lessonExamples:'Examples', lessonTip:'Tip'
 });
 
+
+Object.assign(translations.tr, {
+  contactSub:'Kısa bir mesaj bırak; seviyene ve hedefine göre sana dönüş yapayım.',
+  contactMailLabel:'E-posta',
+  formTitle:'İlk görüşme için yaz',
+  contactGuideTitle:'İlk mesajında şu bilgileri paylaşabilirsin:',
+  contactGuide1:'Almanca seviyen (biliyorsan A1–B2)',
+  contactGuide2:'Hedefin: günlük Almanca, sınav, iş veya okul',
+  contactGuide3:'Zorlandığın konu veya beceri',
+  contactGuide4:'Sınavın varsa sınav adı ve tarihi',
+  contactGuide5:'Bireysel / grup ders tercihin',
+  contactGuide6:'Varsa eklemek istediğin özel bir not',
+  namePlaceholder:'Adınız',
+  emailPlaceholder:'ornek@email.com',
+  messagePlaceholder:'Seviyem A2. B1 sınavına hazırlanıyorum ve özellikle konuşmada zorlanıyorum.',
+  sendMessage:'Mesaj Gönder',
+  sendingMessage:'Gönderiliyor…',
+  sentMessage:'Mesajın gönderildi. En kısa sürede sana e-posta üzerinden dönüş yapacağım.',
+  sendError:'Mesaj gönderilemedi. Lütfen tekrar dene veya doğrudan e-posta adresime yaz.',
+  invalidForm:'Lütfen ad, geçerli e-posta ve mesaj alanlarını doldur.'
+});
+Object.assign(translations.de, {
+  contactSub:'Hinterlasse eine kurze Nachricht; ich melde mich passend zu deinem Niveau und Ziel zurück.',
+  contactMailLabel:'E-Mail',
+  formTitle:'Schreib mir für ein Erstgespräch',
+  contactGuideTitle:'Diese Angaben helfen mir bei deiner ersten Nachricht:',
+  contactGuide1:'Dein Deutschniveau (wenn bekannt: A1–B2)',
+  contactGuide2:'Dein Ziel: Alltag, Prüfung, Beruf oder Schule',
+  contactGuide3:'Themen oder Fertigkeiten, die dir schwerfallen',
+  contactGuide4:'Prüfungsname und Datum, falls vorhanden',
+  contactGuide5:'Einzel- oder Gruppenunterricht',
+  contactGuide6:'Weitere wichtige Hinweise',
+  namePlaceholder:'Dein Name',
+  emailPlaceholder:'beispiel@email.com',
+  messagePlaceholder:'Ich bin auf A2-Niveau und bereite mich auf die B1-Prüfung vor. Besonders beim Sprechen brauche ich Unterstützung.',
+  sendMessage:'Nachricht senden',
+  sendingMessage:'Wird gesendet…',
+  sentMessage:'Deine Nachricht wurde gesendet. Ich antworte dir per E-Mail.',
+  sendError:'Die Nachricht konnte nicht gesendet werden. Bitte versuche es erneut oder schreibe direkt per E-Mail.',
+  invalidForm:'Bitte Name, gültige E-Mail-Adresse und Nachricht ausfüllen.'
+});
+Object.assign(translations.en, {
+  contactSub:'Leave a short message and I’ll get back to you based on your level and goal.',
+  contactMailLabel:'Email',
+  formTitle:'Write for a first consultation',
+  contactGuideTitle:'It helps if your first message includes:',
+  contactGuide1:'Your German level (A1–B2 if known)',
+  contactGuide2:'Your goal: everyday German, exam, work or school',
+  contactGuide3:'Topics or skills you find difficult',
+  contactGuide4:'Exam name and date, if applicable',
+  contactGuide5:'Private or group lesson preference',
+  contactGuide6:'Any other important note',
+  namePlaceholder:'Your name',
+  emailPlaceholder:'example@email.com',
+  messagePlaceholder:'I am at A2 level and preparing for a B1 exam. I especially need help with speaking.',
+  sendMessage:'Send Message',
+  sendingMessage:'Sending…',
+  sentMessage:'Your message was sent. I will reply by email.',
+  sendError:'The message could not be sent. Please try again or email me directly.',
+  invalidForm:'Please enter your name, a valid email address and a message.'
+});
+
 let currentLang = localStorage.getItem('baLang') || 'tr';
 
 function t(key){
@@ -102,6 +164,10 @@ function applyLanguage(lang){
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const key = el.getAttribute('data-i18n');
     if(translations[lang] && translations[lang][key]) el.textContent = translations[lang][key];
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{
+    const key = el.getAttribute('data-i18n-placeholder');
+    if(translations[lang] && translations[lang][key]) el.setAttribute('placeholder', translations[lang][key]);
   });
   document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
   window.dispatchEvent(new CustomEvent('ba:languagechange', {detail:{lang}}));
@@ -150,14 +216,72 @@ document.addEventListener('DOMContentLoaded', ()=>{
   document.querySelectorAll('.lang button').forEach(btn=>btn.addEventListener('click',()=>applyLanguage(btn.dataset.lang)));
 
   const form = document.getElementById('contactForm');
-  form?.addEventListener('submit', e=>{
+  const formStatus = document.getElementById('formStatus');
+  const submitBtn = document.getElementById('contactSubmitBtn');
+
+  function setFormStatus(type, message){
+    if(!formStatus) return;
+    formStatus.className = `contact-form-status show ${type}`;
+    formStatus.textContent = message;
+  }
+
+  form?.addEventListener('submit', async e=>{
     e.preventDefault();
-    const name = document.getElementById('name')?.value || '';
-    const email = document.getElementById('email')?.value || '';
-    const message = document.getElementById('message')?.value || '';
-    const subject = encodeURIComponent('Bozkurt Academy ilk görüşme talebi');
-    const body = encodeURIComponent(`Ad Soyad: ${name}\nE-posta: ${email}\n\nMesaj:\n${message}`);
-    window.location.href=`mailto:bozkurtt.omerfaruk@gmail.com?subject=${subject}&body=${body}`;
+
+    const name = document.getElementById('name')?.value.trim() || '';
+    const email = document.getElementById('email')?.value.trim() || '';
+    const message = document.getElementById('message')?.value.trim() || '';
+    const honey = document.getElementById('companyWebsite')?.value || '';
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    if(honey) return;
+    if(!name || !emailOk || !message){
+      setFormStatus('error', t('invalidForm'));
+      return;
+    }
+
+    const originalLabel = t('sendMessage');
+    if(submitBtn){
+      submitBtn.disabled = true;
+      submitBtn.textContent = t('sendingMessage');
+    }
+    if(formStatus) formStatus.className = 'contact-form-status';
+
+    try{
+      const response = await fetch('https://formsubmit.co/ajax/bozkurtt.omerfaruk@gmail.com', {
+        method:'POST',
+        headers:{
+          'Content-Type':'application/json',
+          'Accept':'application/json'
+        },
+        body:JSON.stringify({
+          name,
+          email,
+          message,
+          _subject:'Bozkurt Academy - Yeni iletişim mesajı',
+          _replyto:email,
+          _template:'table',
+          _url:'https://bozkurtacademy.com/#contact'
+        })
+      });
+
+      const result = await response.json().catch(()=>({}));
+      if(!response.ok || result.success === false || result.success === 'false'){
+        throw new Error(result.message || 'Form submit failed');
+      }
+
+      form.reset();
+      applyLanguage(currentLang);
+      setFormStatus('success', t('sentMessage'));
+    }catch(error){
+      console.error('İletişim formu gönderim hatası:', error);
+      setFormStatus('error', t('sendError'));
+    }finally{
+      if(submitBtn){
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+      }
+    }
   });
 
   const startPage=pageFromHash();

@@ -151,6 +151,83 @@ Object.assign(translations.en, {
   invalidForm:'Please enter your name, a valid email address and a message.'
 });
 
+Object.assign(translations.tr, {
+  lessonsTag:'Online Almanca Özel Ders',
+  lessonFreeBadge:'İlk ders ücretsiz',
+  lessonsTitle:'Almancayı hedefin için öğren: eğitim, iş, sınav ve günlük yaşam.',
+  lessonsSub:'Almanya’da Makina Mühendisliği öğrencisi olarak; yalnızca dil bilgisi değil, Almanya’da gerçekten işine yarayacak Almanca üzerine çalışıyorum.',
+  lessonContactCta:'Ücretsiz ilk ders için iletişime geç', lessonExplore:'Ders içeriğini incele ↓',
+  lessonStatLevels:'Seviye aralığı', lessonStatDuration:'Ders süresi', lessonStatOnline:'Zoom / Google Meet',
+  lessonFirstKicker:'İlk ders', lessonFirstTitle:'Önce seviyeni ve hedefini birlikte netleştiriyoruz.', lessonFirstText:'İlk derste seviye tespiti yapıyor, seni tanıyor, hangi noktada olduğunu belirliyor ve sana özel bir ders planı oluşturuyorum.',
+  lessonPlanTitle:'Kişiye özel plan', lessonPlanText:'Ders akışı; seviyene, öğrenme hızına, zorlandığın alanlara ve ulaşmak istediğin hedefe göre şekillenir.',
+  lessonPracticalTitle:'Gerçek kullanım odaklı', lessonPracticalText:'Gramer bilgisini konuşma, yazma, eğitim, iş ve günlük yaşamda kullanabileceğin yapılarla birleştiriyoruz.',
+  lessonOfferTag:'Neler sunuyorum?', lessonOfferTitle:'Tek bir hedefe değil, Almanca yolculuğunun tamamına destek.',
+  offer1Title:'A1’den B2’ye bireysel Almanca', offer1Text:'Temelden başlayıp düzenli ilerlemek veya mevcut seviyendeki eksikleri kapatmak için birebir dersler.',
+  offer2Title:'Teknik Almanca', offer2Text:'Mühendislik, sanayi ve iş dünyasında kullanılan teknik kelime ve ifade yapılarına yönelik çalışma.',
+  offer3Title:'Dil bilgisi, konuşma ve yazma', offer3Text:'Grameri tek başına ezberlemek yerine konuşma ve yazma pratiğiyle birlikte kullanma.',
+  offer4Title:'Sınav hazırlığı', offer4Text:'TELC, Goethe, TestDaF ve benzeri sınavlara hedef odaklı hazırlık.',
+  offer5Title:'Almanya’da eğitim ve iş', offer5Text:'Üniversite, Ausbildung, iş başvurusu ve profesyonel hayat için gerekli dil desteği.',
+  offer6Title:'Günlük yaşam ve vize süreçleri', offer6Text:'Almanya’ya taşınma, günlük iletişim, aile birleşimi ve vize süreçlerinde ihtiyaç duyulan Almanca.',
+  lessonAudienceTag:'Kimler için uygun?', lessonAudienceTitle:'Hedefin Almanya ise, ders planını hedefine göre kurabiliriz.', lessonAudienceSub:'Farklı amaçlarla Almanca öğrenen öğrenciler için ders içerikleri hedefe göre özelleştirilir.',
+  aud1:'Almanya’ya taşınmak isteyenler', aud2:'Almanya’da üniversite okumayı hedefleyen öğrenciler', aud3:'Almanya’da Ausbildung yapmayı hedefleyenler', aud4:'Doktor veya hemşire olarak çalışmak isteyenler', aud5:'Aile birleşimi sınavlarına hazırlananlar', aud6:'Mühendislik / teknik alanlarda Almanca geliştirmek isteyenler', aud7:'Goethe, TELC ve benzeri sınavlara hazırlananlar', aud8:'Konuşma pratiği yapmak isteyenler', aud9:'A1’den B2’ye düzenli ilerlemek isteyenler', aud10:'Vize, iş başvurusu ve günlük yaşam için dil desteği arayanlar',
+  lessonWhyTag:'Neden benimle?', lessonWhyTitle:'Teknik disiplin, kişisel plan ve pratik Almanca.',
+  why1Title:'Teknik altyapı', why1Text:'Mühendislik eğitimim sayesinde teknik Almanca ve profesyonel dil kullanımına güçlü bir bakış açısı sunuyorum.',
+  why2Title:'Sabırlı ve düzenli ders yapısı', why2Text:'Derslerde acele etmek yerine konuyu anlayarak, tekrar ederek ve düzenli ilerleyerek öğrenmeye odaklanıyoruz.',
+  why3Title:'Kişiye özel materyal', why3Text:'Ders materyalleri öğrencinin seviyesine, hedeflerine ve eksiklerine göre hazırlanır.',
+  why4Title:'Tamamen online', why4Text:'Dersler Zoom veya Google Meet üzerinden online olarak gerçekleştirilir.',
+  lessonCtaTag:'Başlamak ister misin?', lessonCtaTitle:'İlk ders ücretsiz. Seviyeni ve hedefini birlikte belirleyelim.', lessonCtaText:'İletişim sayfasından kısa bir mesaj bırakman yeterli. Seviyeni, hedefini ve özellikle çalışmak istediğin konuyu yazabilirsin.', lessonCtaButton:'İletişim sayfasına git →'
+});
+Object.assign(translations.de, {
+  lessonsTag:'Online Deutschunterricht', lessonFreeBadge:'Erste Stunde kostenlos',
+  lessonsTitle:'Lerne Deutsch für dein Ziel: Studium, Beruf, Prüfung und Alltag.',
+  lessonsSub:'Als Maschinenbaustudent in Deutschland verbinde ich Grammatik mit dem Deutsch, das du für Studium, Beruf und Alltag wirklich brauchst.',
+  lessonContactCta:'Kostenlose erste Stunde anfragen', lessonExplore:'Unterricht ansehen ↓',
+  lessonStatLevels:'Niveaus', lessonStatDuration:'Unterrichtsdauer', lessonStatOnline:'Zoom / Google Meet',
+  lessonFirstKicker:'Erste Stunde', lessonFirstTitle:'Zuerst klären wir gemeinsam dein Niveau und dein Ziel.', lessonFirstText:'In der ersten Stunde bestimme ich deinen Stand, lerne deine Ziele kennen und erstelle einen individuellen Lernplan.',
+  lessonPlanTitle:'Individueller Plan', lessonPlanText:'Der Unterricht richtet sich nach deinem Niveau, Lerntempo, deinen Schwierigkeiten und deinem Ziel.',
+  lessonPracticalTitle:'Praxisorientiert', lessonPracticalText:'Wir verbinden Grammatik mit Sprechen, Schreiben sowie Deutsch für Studium, Beruf und Alltag.',
+  lessonOfferTag:'Was biete ich?', lessonOfferTitle:'Unterstützung für deinen gesamten Deutschweg.',
+  offer1Title:'Einzelunterricht A1–B2', offer1Text:'Individueller Unterricht vom Einstieg bis zum gezielten Schließen von Lücken.',
+  offer2Title:'Technisches Deutsch', offer2Text:'Fachsprache für Technik, Industrie und Berufsleben.',
+  offer3Title:'Grammatik, Sprechen und Schreiben', offer3Text:'Regeln verstehen und direkt in Sprache und Text anwenden.',
+  offer4Title:'Prüfungsvorbereitung', offer4Text:'Gezielte Vorbereitung auf TELC, Goethe, TestDaF und ähnliche Prüfungen.',
+  offer5Title:'Studium und Beruf in Deutschland', offer5Text:'Sprachliche Unterstützung für Universität, Ausbildung, Bewerbung und Arbeitsalltag.',
+  offer6Title:'Alltag und Visum', offer6Text:'Deutsch für Umzug, Alltag, Familiennachzug und Visumsprozesse.',
+  lessonAudienceTag:'Für wen?', lessonAudienceTitle:'Wenn dein Ziel Deutschland ist, planen wir den Unterricht passend dazu.', lessonAudienceSub:'Die Inhalte werden an unterschiedliche Lernziele angepasst.',
+  aud1:'Für Menschen, die nach Deutschland ziehen möchten', aud2:'Für Studierende mit Ziel Universität in Deutschland', aud3:'Für Interessierte an einer Ausbildung in Deutschland', aud4:'Für Ärzte oder Pflegekräfte mit Berufsziel Deutschland', aud5:'Für die Vorbereitung auf Familiennachzugsprüfungen', aud6:'Für technisches Deutsch in Ingenieur- und Fachbereichen', aud7:'Für Goethe-, TELC- und ähnliche Prüfungen', aud8:'Für mehr Sprechpraxis', aud9:'Für einen strukturierten Weg von A1 bis B2', aud10:'Für Sprache rund um Visum, Bewerbung und Alltag',
+  lessonWhyTag:'Warum mit mir?', lessonWhyTitle:'Technische Disziplin, individueller Plan und praktisches Deutsch.',
+  why1Title:'Technischer Hintergrund', why1Text:'Durch mein Maschinenbaustudium bringe ich eine starke Grundlage für technisches und berufliches Deutsch mit.',
+  why2Title:'Geduldige, strukturierte Stunden', why2Text:'Wir lernen Schritt für Schritt, mit Wiederholung und klarer Struktur.',
+  why3Title:'Eigene Materialien', why3Text:'Materialien werden an Niveau, Ziel und Lücken angepasst.',
+  why4Title:'100 % online', why4Text:'Der Unterricht findet über Zoom oder Google Meet statt.',
+  lessonCtaTag:'Möchtest du starten?', lessonCtaTitle:'Die erste Stunde ist kostenlos. Lass uns dein Niveau und dein Ziel bestimmen.', lessonCtaText:'Schreib mir über die Kontaktseite kurz dein Niveau, dein Ziel und dein wichtigstes Thema.', lessonCtaButton:'Zur Kontaktseite →'
+});
+Object.assign(translations.en, {
+  lessonsTag:'Online Private German Lessons', lessonFreeBadge:'First lesson free',
+  lessonsTitle:'Learn German for your goal: study, work, exams and everyday life.',
+  lessonsSub:'As a Mechanical Engineering student in Germany, I combine grammar with the German you actually need for education, work and daily life.',
+  lessonContactCta:'Ask for your free first lesson', lessonExplore:'Explore the lessons ↓',
+  lessonStatLevels:'Levels', lessonStatDuration:'Lesson length', lessonStatOnline:'Zoom / Google Meet',
+  lessonFirstKicker:'First lesson', lessonFirstTitle:'We first identify your level and define your goal together.', lessonFirstText:'In the first lesson I assess your level, learn about your goals and create a personalised lesson plan.',
+  lessonPlanTitle:'Personalised plan', lessonPlanText:'Lessons are shaped around your level, pace, difficulties and target.',
+  lessonPracticalTitle:'Practical German', lessonPracticalText:'We connect grammar with speaking, writing, education, work and everyday situations.',
+  lessonOfferTag:'What I offer', lessonOfferTitle:'Support for your complete German-learning journey.',
+  offer1Title:'Private German from A1 to B2', offer1Text:'One-to-one lessons from the basics to closing specific gaps at your current level.',
+  offer2Title:'Technical German', offer2Text:'Vocabulary and language for engineering, industry and professional settings.',
+  offer3Title:'Grammar, speaking and writing', offer3Text:'Understand grammar and actively use it in speech and writing.',
+  offer4Title:'Exam preparation', offer4Text:'Goal-focused preparation for TELC, Goethe, TestDaF and similar exams.',
+  offer5Title:'Study and work in Germany', offer5Text:'Language support for university, Ausbildung, applications and professional life.',
+  offer6Title:'Everyday life and visa processes', offer6Text:'German for relocation, daily communication, family reunification and visa-related needs.',
+  lessonAudienceTag:'Who is it for?', lessonAudienceTitle:'If Germany is your goal, we can build the lesson plan around it.', lessonAudienceSub:'Lesson content is adapted to different learning goals.',
+  aud1:'People planning to move to Germany', aud2:'Students aiming to study at a German university', aud3:'People aiming for an Ausbildung in Germany', aud4:'Doctors or nurses planning to work in Germany', aud5:'Learners preparing for family reunification exams', aud6:'Engineers and technical professionals improving their German', aud7:'Learners preparing for Goethe, TELC and similar exams', aud8:'Learners wanting more speaking practice', aud9:'Learners progressing consistently from A1 to B2', aud10:'People needing German for visas, applications and daily life',
+  lessonWhyTag:'Why learn with me?', lessonWhyTitle:'Technical discipline, a personal plan and practical German.',
+  why1Title:'Technical background', why1Text:'My engineering studies give me a strong foundation for technical and professional German.',
+  why2Title:'Patient, structured lessons', why2Text:'We focus on understanding, repetition and consistent progress rather than rushing.',
+  why3Title:'Custom materials', why3Text:'Materials are prepared around your level, goals and gaps.',
+  why4Title:'100% online', why4Text:'Lessons take place online via Zoom or Google Meet.',
+  lessonCtaTag:'Ready to start?', lessonCtaTitle:'The first lesson is free. Let’s identify your level and goal together.', lessonCtaText:'Send a short message through the contact page with your level, goal and the topic you want to focus on.', lessonCtaButton:'Go to contact page →'
+});
+
 let currentLang = localStorage.getItem('baLang') || 'tr';
 
 function t(key){

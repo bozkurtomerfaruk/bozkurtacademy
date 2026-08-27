@@ -352,23 +352,41 @@
   .contact-mail-row{width:100%}
   .contact-heading-row{align-items:flex-start}
 }
-/* Masaüstünde header menüsünü tek satırda tut */
-@media (min-width: 900px) {
-  .header-inner {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: 22px;
-  }
+/* HEADER - masaüstünde tüm menü tek satır */
+@media (min-width: 1021px) {
 
   .nav {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 8px;
-    min-width: 0;
+    justify-content: space-between;
+    gap: 10px;
   }
+
+  .brand {
+    flex: 0 0 auto;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap !important;
+    flex: 1;
+    min-width: 0;
+    gap: 2px;
+  }
+
+  .nav-link {
+    white-space: nowrap;
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+
+  .lang {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+}
 
   .nav-link {
     white-space: nowrap;

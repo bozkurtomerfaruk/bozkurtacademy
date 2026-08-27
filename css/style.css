@@ -391,3 +391,23 @@
     white-space: nowrap;
   }
 }
+/* GRAMER SAYFASI - HERO GENISLIK DUZELTMESI */
+#page-grammar .page-hero {
+  width: 100% !important;
+}
+
+#page-grammar .page-hero-inner,
+#page-grammar .grammar-hero-copy {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: block !important;
+  box-sizing: border-box;
+}
+
+#page-grammar .grammar-hero-copy h1 {
+  max-width: 900px;
+}
+
+#page-grammar .grammar-hero-copy p {
+  max-width: 800px;
+}

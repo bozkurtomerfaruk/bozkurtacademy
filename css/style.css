@@ -385,3 +385,11 @@
     white-space: nowrap;
   }
 }
+.nav {
+  gap: 5px;
+}
+
+.nav-link {
+  padding: 10px 10px;
+  font-size: 13px;
+}

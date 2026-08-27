@@ -352,3 +352,36 @@
   .contact-mail-row{width:100%}
   .contact-heading-row{align-items:flex-start}
 }
+/* Masaüstünde header menüsünü tek satırda tut */
+@media (min-width: 900px) {
+  .header-inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 22px;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .nav-link {
+    white-space: nowrap;
+    padding: 11px 13px;
+    font-size: 14px;
+  }
+
+  .brand {
+    flex-shrink: 0;
+  }
+
+  .lang {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+}

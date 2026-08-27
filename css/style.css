@@ -379,12 +379,12 @@
     gap: 0;
   }
 
-  .topbar .nav-link {
-    flex: 0 0 auto;
-    white-space: nowrap !important;
-    padding: 9px 7px;
-    font-size: 12px;
-  }
+.topbar .nav-link {
+  flex: 0 0 auto;
+  white-space: nowrap !important;
+  padding: 10px 9px;
+  font-size: 13px;
+}
 
   .topbar .lang {
     flex: 0 0 auto;

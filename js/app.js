@@ -175,7 +175,7 @@ Object.assign(translations.tr, {
   why2Title:'Sabırlı ve düzenli ders yapısı', why2Text:'Derslerde acele etmek yerine konuyu anlayarak, tekrar ederek ve düzenli ilerleyerek öğrenmeye odaklanıyoruz.',
   why3Title:'Kişiye özel materyal', why3Text:'Ders materyalleri öğrencinin seviyesine, hedeflerine ve eksiklerine göre hazırlanır.',
   why4Title:'Tamamen online', why4Text:'Dersler Zoom veya Google Meet üzerinden online olarak gerçekleştirilir.',
-  lessonCtaTag:'Başlamak ister misin?', lessonCtaTitle:'İlk ders ücretsiz. Seviyeni ve hedefini birlikte belirleyelim.', lessonCtaText:'İletişim sayfasından kısa bir mesaj bırakman yeterli. Seviyeni, hedefini ve özellikle çalışmak istediğin konuyu yazabilirsin.', lessonCtaButton:'İletişim sayfasına git →'
+  lessonCtaTag:'Başlamak ister misin?', lessonCtaTitle:'İlk ders ücretsiz. Seviyeni ve hedefini birlikte belirleyelim.', lessonCtaText:'İletişim sayfasından kısa bir mesaj bırakman yeterli. Seviyeni, hedefini ve özellikle çalışmak istediğin konuyu yazabilirsin.', lessonCtaButton:'İlk Dersi Planla →'
 });
 Object.assign(translations.de, {
   lessonsTag:'Online Deutschunterricht', lessonFreeBadge:'Erste Stunde kostenlos',
@@ -200,7 +200,7 @@ Object.assign(translations.de, {
   why2Title:'Geduldige, strukturierte Stunden', why2Text:'Wir lernen Schritt für Schritt, mit Wiederholung und klarer Struktur.',
   why3Title:'Eigene Materialien', why3Text:'Materialien werden an Niveau, Ziel und Lücken angepasst.',
   why4Title:'100 % online', why4Text:'Der Unterricht findet über Zoom oder Google Meet statt.',
-  lessonCtaTag:'Möchtest du starten?', lessonCtaTitle:'Die erste Stunde ist kostenlos. Lass uns dein Niveau und dein Ziel bestimmen.', lessonCtaText:'Schreib mir über die Kontaktseite kurz dein Niveau, dein Ziel und dein wichtigstes Thema.', lessonCtaButton:'Zur Kontaktseite →'
+  lessonCtaTag:'Möchtest du starten?', lessonCtaTitle:'Die erste Stunde ist kostenlos. Lass uns dein Niveau und dein Ziel bestimmen.', lessonCtaText:'Schreib mir über die Kontaktseite kurz dein Niveau, dein Ziel und dein wichtigstes Thema.', lessonCtaButton:'Erste Stunde Planen →'
 });
 Object.assign(translations.en, {
   lessonsTag:'Online Private German Lessons', lessonFreeBadge:'First lesson free',
@@ -225,7 +225,7 @@ Object.assign(translations.en, {
   why2Title:'Patient, structured lessons', why2Text:'We focus on understanding, repetition and consistent progress rather than rushing.',
   why3Title:'Custom materials', why3Text:'Materials are prepared around your level, goals and gaps.',
   why4Title:'100% online', why4Text:'Lessons take place online via Zoom or Google Meet.',
-  lessonCtaTag:'Ready to start?', lessonCtaTitle:'The first lesson is free. Let’s identify your level and goal together.', lessonCtaText:'Send a short message through the contact page with your level, goal and the topic you want to focus on.', lessonCtaButton:'Go to contact page →'
+  lessonCtaTag:'Ready to start?', lessonCtaTitle:'The first lesson is free. Let’s identify your level and goal together.', lessonCtaText:'Send a short message through the contact page with your level, goal and the topic you want to focus on.', lessonCtaButton:'Plan First Lesson →'
 });
 
 let currentLang = localStorage.getItem('baLang') || 'tr';

@@ -142,7 +142,7 @@
     const link = document.createElement('link');
     link.id = 'grammarHubCss';
     link.rel = 'stylesheet';
-    link.href = 'css/grammar.css?v=1';
+    link.href = 'css/grammar.css?v=2';
     document.head.appendChild(link);
   }
 

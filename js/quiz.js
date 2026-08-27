@@ -12,7 +12,8 @@
     selected:'',
     checked:false,
     score:0,
-    wrong:[]
+    wrong:[],
+    hubSearch:''
   };
 
   const lang = () => window.BA?.lang || 'tr';
@@ -22,6 +23,74 @@
     if(typeof value === 'string') return value;
     return value[lang()] || value.tr || value.de || value.en || '';
   };
+
+
+  const HUB_I18N = {
+    tr:{
+      heroSub:'Seviyeni seç, gramer konunu bul ve öğrendiklerini interaktif alıştırmalarla hemen pekiştir.',
+      title:'Alıştırma konunu bul',
+      subtitle:'Bir seviye seç veya arama kutusundan çalışmak istediğin gramer konusuna ulaş.',
+      search:'Gramer konusu ara...',
+      allLevels:'Arama tüm seviyelerde yapılıyor.',
+      result:'konu',
+      ready:'hazır',
+      total:'konu',
+      open:'Alıştırmaları Aç',
+      soon:'Hazırlanıyor',
+      emptyTitle:'Eşleşen konu bulunamadı',
+      emptySub:'Farklı bir kelime dene veya seviyeler arasında geçiş yap.',
+      levelHeading:(level)=>`${level} Alıştırmaları`,
+      levelSub:(level)=>`${level} seviyesindeki gramer konularını seç ve hemen pratik yapmaya başla.`
+    },
+    de:{
+      heroSub:'Wähle dein Niveau, finde ein Grammatikthema und festige dein Wissen direkt mit interaktiven Übungen.',
+      title:'Finde deine Übung',
+      subtitle:'Wähle ein Niveau oder suche direkt nach einem Grammatikthema.',
+      search:'Grammatikthema suchen...',
+      allLevels:'Die Suche läuft über alle Niveaus.',
+      result:'Themen',
+      ready:'bereit',
+      total:'Themen',
+      open:'Übungen öffnen',
+      soon:'In Vorbereitung',
+      emptyTitle:'Kein passendes Thema gefunden',
+      emptySub:'Versuche einen anderen Suchbegriff oder wechsle das Niveau.',
+      levelHeading:(level)=>`${level} Übungen`,
+      levelSub:(level)=>`Wähle ein Grammatikthema auf Niveau ${level} und starte direkt mit dem Üben.`
+    },
+    en:{
+      heroSub:'Choose your level, find a grammar topic and reinforce what you know with interactive exercises.',
+      title:'Find an exercise topic',
+      subtitle:'Choose a level or search directly for the grammar topic you want to practise.',
+      search:'Search grammar topics...',
+      allLevels:'Search is running across all levels.',
+      result:'topics',
+      ready:'ready',
+      total:'topics',
+      open:'Open Exercises',
+      soon:'Coming soon',
+      emptyTitle:'No matching topic found',
+      emptySub:'Try another search term or switch levels.',
+      levelHeading:(level)=>`${level} Exercises`,
+      levelSub:(level)=>`Choose a grammar topic at ${level} level and start practising right away.`
+    }
+  };
+
+  const ht = (key) => HUB_I18N[lang()]?.[key] ?? HUB_I18N.tr[key] ?? key;
+
+  function injectHubCss(){
+    if(document.getElementById('exerciseHubCss')) return;
+    const link=document.createElement('link');
+    link.id='exerciseHubCss';
+    link.rel='stylesheet';
+    link.href='css/exercises-hub.css?v=1';
+    document.head.appendChild(link);
+  }
+
+  function updateExerciseHero(){
+    const sub=document.querySelector('#page-exercises [data-i18n="exerciseHubSub"]');
+    if(sub) sub.textContent=ht('heroSub');
+  }
 
   async function loadJSON(path){
     const response = await fetch(path, {cache:'no-store'});
@@ -49,6 +118,12 @@
   function updateBreadcrumb(){
     const el = $('exerciseBreadcrumb');
     if(!el) return;
+
+    if(!state.topicMeta && !state.exercise){
+      el.innerHTML='';
+      return;
+    }
+
     const parts = [];
     parts.push(`<button type="button" data-crumb="levels">${t('navExercises')}</button>`);
     if(state.level){
@@ -63,9 +138,9 @@
     el.innerHTML = parts.join('');
     el.querySelectorAll('[data-crumb]').forEach(btn=>btn.addEventListener('click',()=>{
       const target=btn.dataset.crumb;
-      if(target==='levels') goBackToDepth(0, ()=>goLevels(false));
-      if(target==='topics') goBackToDepth(1, ()=>goTopics(false));
-      if(target==='sets') goBackToDepth(2, ()=>goSets(false));
+      if(target==='levels') goLevels(false);
+      if(target==='topics') goTopics(false);
+      if(target==='sets') goSets(false);
     }));
   }
 
@@ -108,51 +183,148 @@
 
   function renderLevels(){
     if(!state.catalog) return;
-    const grid = $('levelChoiceGrid');
-    if(!grid) return;
-    grid.innerHTML = state.catalog.levels.map(level=>{
-      const ready = level.topics.filter(topic=>topic.status==='ready').length;
-      return `<button class="level-choice-card" type="button" data-level="${level.id}">
-        <span class="level">${level.id}</span>
-        <h3>${escapeHtml(localize(level.title))}</h3>
-        <p>${escapeHtml(localize(level.description))}</p>
-        <div class="level-choice-meta">
-          <span class="ready-count">${ready} ${t('readyTopics')}</span>
-          <span class="total-count">${level.topics.length} ${t('topics')}</span>
-        </div>
+
+    const view=$('exerciseLevelView');
+    if(!view) return;
+
+    if(!state.level){
+      state.level=state.catalog.levels[0] || null;
+    }
+
+    const query=(state.hubSearch || '').trim().toLocaleLowerCase('de-DE');
+    const rows=[];
+
+    if(query){
+      state.catalog.levels.forEach(level=>{
+        level.topics.forEach(topic=>{
+          const haystack=[
+            level.id,
+            localize(topic.title),
+            localize(topic.description)
+          ].join(' ').toLocaleLowerCase('de-DE');
+          if(haystack.includes(query)) rows.push({level,topic});
+        });
+      });
+    }else if(state.level){
+      state.level.topics.forEach(topic=>rows.push({level:state.level,topic}));
+    }
+
+    const levelTabs=state.catalog.levels.map(level=>{
+      const ready=level.topics.filter(topic=>topic.status==='ready').length;
+      return `<button class="exercise-discovery-level ${state.level?.id===level.id && !query?'active':''}" type="button" data-hub-level="${level.id}">
+        <span class="exercise-discovery-level-code">${level.id}</span>
+        <span class="exercise-discovery-level-name">${escapeHtml(localize(level.title))}</span>
+        <span class="exercise-discovery-level-meta">${ready} ${escapeHtml(ht('ready'))} · ${level.topics.length} ${escapeHtml(ht('total'))}</span>
       </button>`;
     }).join('');
-    grid.querySelectorAll('[data-level]').forEach(btn=>btn.addEventListener('click',()=>openLevel(btn.dataset.level)));
+
+    const cards=rows.length ? rows.map(({level,topic})=>{
+      const ready=topic.status==='ready';
+      return `<button class="exercise-discovery-topic ${ready?'ready':'soon'}" type="button"
+        data-hub-topic="${topic.id}" data-hub-topic-level="${level.id}" ${ready?'':'disabled'}>
+        <div class="exercise-discovery-topic-top">
+          <span class="exercise-discovery-topic-level">${level.id}</span>
+          <span class="exercise-discovery-status ${ready?'ready':'soon'}">${ready?escapeHtml(ht('ready')):escapeHtml(ht('soon'))}</span>
+        </div>
+        <h3>${escapeHtml(localize(topic.title))}</h3>
+        <p>${escapeHtml(localize(topic.description))}</p>
+        <div class="exercise-discovery-topic-action">${ready?escapeHtml(ht('open'))+' →':escapeHtml(ht('soon'))}</div>
+      </button>`;
+    }).join('') : `<div class="exercise-discovery-empty">
+      <strong>${escapeHtml(ht('emptyTitle'))}</strong>
+      <p>${escapeHtml(ht('emptySub'))}</p>
+    </div>`;
+
+    const levelForHeading=state.level?.id || 'A1';
+    view.innerHTML=`
+      <div class="exercise-discovery-toolbar">
+        <div>
+          <h2>${escapeHtml(ht('title'))}</h2>
+          <p>${escapeHtml(ht('subtitle'))}</p>
+        </div>
+        <div class="exercise-discovery-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m20 20-3.5-3.5"></path>
+          </svg>
+          <input id="exerciseHubSearch" type="search" autocomplete="off"
+            placeholder="${escapeHtml(ht('search'))}" value="${escapeHtml(state.hubSearch || '')}">
+          <button id="exerciseHubSearchClear" class="${state.hubSearch?'visible':''}" type="button" aria-label="Clear">×</button>
+        </div>
+      </div>
+
+      <div class="exercise-discovery-levels">${levelTabs}</div>
+      ${query?`<div class="exercise-discovery-search-note">${escapeHtml(ht('allLevels'))}</div>`:''}
+
+      <div class="exercise-discovery-heading">
+        <div>
+          <h3>${escapeHtml(query ? ht('title') : ht('levelHeading')(levelForHeading))}</h3>
+          <p>${escapeHtml(query ? ht('allLevels') : ht('levelSub')(levelForHeading))}</p>
+        </div>
+        <span>${rows.length} ${escapeHtml(ht('result'))}</span>
+      </div>
+
+      <div class="exercise-discovery-grid">${cards}</div>
+    `;
+
+    view.querySelectorAll('[data-hub-level]').forEach(btn=>btn.addEventListener('click',()=>{
+      const level=state.catalog.levels.find(item=>item.id===btn.dataset.hubLevel);
+      if(!level) return;
+      state.level=level;
+      state.hubSearch='';
+      renderLevels();
+      updateBreadcrumb();
+    }));
+
+    const search=view.querySelector('#exerciseHubSearch');
+    const clear=view.querySelector('#exerciseHubSearchClear');
+
+    search?.addEventListener('input',()=>{
+      state.hubSearch=search.value;
+      renderLevels();
+      const next=$('exerciseHubSearch');
+      if(next){
+        next.focus();
+        next.setSelectionRange(next.value.length,next.value.length);
+      }
+    });
+
+    clear?.addEventListener('click',()=>{
+      state.hubSearch='';
+      renderLevels();
+      $('exerciseHubSearch')?.focus();
+    });
+
+    view.querySelectorAll('.exercise-discovery-topic.ready').forEach(btn=>btn.addEventListener('click',()=>{
+      const level=state.catalog.levels.find(item=>item.id===btn.dataset.hubTopicLevel);
+      if(!level) return;
+      state.level=level;
+      state.hubSearch='';
+      openTopic(btn.dataset.hubTopic);
+    }));
   }
 
   function openLevel(levelId, writeHistory=true){
-    state.level = state.catalog.levels.find(l=>l.id===levelId);
-    state.topicMeta=null; state.topicData=null; state.exercise=null;
-    renderTopics();
-    showOnly('exerciseTopicView');
+    state.level = state.catalog.levels.find(l=>l.id===levelId) || state.catalog.levels[0] || null;
+    state.topicMeta=null; state.topicData=null; state.exercise=null; state.hubSearch='';
+    renderLevels();
+    showOnly('exerciseLevelView');
     updateBreadcrumb();
-    if(writeHistory) pushExerciseHistory('topics');
+    if(writeHistory && history.replaceState){
+      history.replaceState({
+        ...(history.state || {}),
+        baPage:'exercises',
+        baExerciseView:'topics',
+        level:state.level?.id || null,
+        topic:null,
+        exercise:null
+      }, '', '#exercises');
+    }
     window.scrollTo({top:document.getElementById('page-exercises')?.offsetTop || 0, behavior:'smooth'});
   }
 
   function renderTopics(){
-    if(!state.level) return;
-    const title=$('topicViewTitle');
-    if(title) title.textContent=`${state.level.id} · ${localize(state.level.title)}`;
-    const grid=$('topicChoiceGrid');
-    if(!grid) return;
-    grid.innerHTML=state.level.topics.map(topic=>{
-      const ready=topic.status==='ready';
-      return `<button class="topic-choice-card ${ready?'ready':'soon'}" type="button" data-topic="${topic.id}" ${ready?'':'disabled'}>
-        <div class="topic-card-top">
-          <span class="${ready?'status-ready':'status-soon'}">${ready?t('ready'):t('soon')}</span>
-          ${ready?'<span class="topic-arrow">→</span>':''}
-        </div>
-        <h3>${escapeHtml(localize(topic.title))}</h3>
-        <p>${escapeHtml(localize(topic.description))}</p>
-      </button>`;
-    }).join('');
-    grid.querySelectorAll('.topic-choice-card.ready').forEach(btn=>btn.addEventListener('click',()=>openTopic(btn.dataset.topic)));
+    renderLevels();
   }
 
   async function openTopic(topicId, writeHistory=true){
@@ -165,7 +337,19 @@
       renderSets();
       showOnly('exerciseSetView');
       updateBreadcrumb();
-      if(writeHistory) pushExerciseHistory('sets');
+      if(writeHistory){
+        if(history.replaceState){
+          history.replaceState({
+            ...(history.state || {}),
+            baPage:'exercises',
+            baExerciseView:'topics',
+            level:state.level?.id || null,
+            topic:null,
+            exercise:null
+          }, '', '#exercises');
+        }
+        pushExerciseHistory('sets');
+      }
       window.scrollTo({top:document.getElementById('page-exercises')?.offsetTop || 0, behavior:'smooth'});
     }catch(error){ showError(error); }
   }
@@ -345,17 +529,18 @@
   }
 
   function goLevels(writeHistory=false){
-    state.level=null; state.topicMeta=null; state.topicData=null; state.exercise=null;
+    state.level=state.catalog?.levels?.[0] || null;
+    state.topicMeta=null; state.topicData=null; state.exercise=null; state.hubSearch='';
     showOnly('exerciseLevelView');
     renderLevels();
     updateBreadcrumb();
     if(writeHistory) pushExerciseHistory('levels');
   }
   function goTopics(writeHistory=false){
-    if(!state.level){ goLevels(); return; }
-    state.topicMeta=null; state.topicData=null; state.exercise=null;
-    renderTopics();
-    showOnly('exerciseTopicView');
+    if(!state.level) state.level=state.catalog?.levels?.[0] || null;
+    state.topicMeta=null; state.topicData=null; state.exercise=null; state.hubSearch='';
+    renderLevels();
+    showOnly('exerciseLevelView');
     updateBreadcrumb();
     if(writeHistory) pushExerciseHistory('topics');
   }
@@ -375,7 +560,9 @@
 
     const view=histState?.baExerciseView || 'levels';
     if(view==='levels'){
-      goLevels(false);
+      const requested=state.catalog.levels.find(l=>l.id===histState?.level);
+      state.level=requested || state.catalog.levels[0] || null;
+      goTopics(false);
       return;
     }
 
@@ -387,9 +574,9 @@
     state.level=level;
 
     if(view==='topics'){
-      state.topicMeta=null; state.topicData=null; state.exercise=null;
-      renderTopics();
-      showOnly('exerciseTopicView');
+      state.topicMeta=null; state.topicData=null; state.exercise=null; state.hubSearch='';
+      renderLevels();
+      showOnly('exerciseLevelView');
       updateBreadcrumb();
       return;
     }
@@ -432,8 +619,9 @@
 
   function rerenderForLanguage(){
     if(!state.catalog) return;
+    updateExerciseHero();
     if($('exerciseLevelView')?.style.display!=='none') renderLevels();
-    if($('exerciseTopicView')?.style.display!=='none') renderTopics();
+    if($('exerciseTopicView')?.style.display!=='none') renderLevels();
     if($('exerciseSetView')?.style.display!=='none') renderSets();
     if($('exerciseQuizView')?.style.display!=='none'){
       renderLesson();
@@ -445,7 +633,10 @@
 
   async function init(){
     try{
+      injectHubCss();
+      updateExerciseHero();
       state.catalog=await loadJSON('data/catalog.json');
+      state.level=state.catalog.levels[0] || null;
       renderLevels();
       updateBreadcrumb();
       $('backToLevelsBtn')?.addEventListener('click',()=>goBackToDepth(0, ()=>goLevels(false)));

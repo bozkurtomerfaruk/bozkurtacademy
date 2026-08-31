@@ -1,0 +1,584 @@
+{
+  "id": "w-fragen",
+  "level": "A1",
+  "title": {
+    "tr": "W-Fragen",
+    "de": "W-Fragen",
+    "en": "W-questions"
+  },
+  "description": {
+    "tr": "Wer, was, wo, woher, wohin, wann, wie ve warum gibi temel soru kelimelerini günlük bağlamlarda kullan.",
+    "de": "Übe wichtige W-Fragen wie wer, was, wo, woher, wohin, wann, wie und warum.",
+    "en": "Practise core W-questions such as wer, was, wo, woher, wohin, wann, wie and warum."
+  },
+  "lesson": {
+    "title": {
+      "tr": "W-Fragen – temel soru kelimeleri",
+      "de": "W-Fragen – wichtige Fragewörter",
+      "en": "W-questions – core question words"
+    },
+    "intro": {
+      "tr": "W-Fragen bilgi almak için kullanılır. Soru kelimesinden sonra çekimli fiil gelir, ardından özne gelir.",
+      "de": "W-Fragen benutzt man, wenn man Informationen braucht. Nach dem Fragewort kommt das konjugierte Verb.",
+      "en": "W-questions are used to ask for information. The conjugated verb usually comes directly after the question word."
+    },
+    "rules": [
+      {
+        "label": "Wer?",
+        "text": {
+          "tr": "kim? – kişi sorar",
+          "de": "wer? – Person",
+          "en": "who? – asks about a person"
+        }
+      },
+      {
+        "label": "Was?",
+        "text": {
+          "tr": "ne? – şey / eylem sorar",
+          "de": "was? – Sache / Handlung",
+          "en": "what? – asks about a thing/action"
+        }
+      },
+      {
+        "label": "Wo / Woher / Wohin?",
+        "text": {
+          "tr": "nerede / nereden / nereye?",
+          "de": "wo / woher / wohin?",
+          "en": "where / where from / where to?"
+        }
+      },
+      {
+        "label": "Wann / Wie / Warum?",
+        "text": {
+          "tr": "ne zaman / nasıl / neden?",
+          "de": "wann / wie / warum?",
+          "en": "when / how / why?"
+        }
+      }
+    ],
+    "examples": [
+      "Wo wohnst du? — Nerede oturuyorsun?",
+      "Woher kommst du? — Nereden geliyorsun?",
+      "Wohin fährst du morgen? — Yarın nereye gidiyorsun?",
+      "Warum lernst du Deutsch? — Neden Almanca öğreniyorsun?"
+    ],
+    "tip": {
+      "tr": "Sorunun cevabına bakarak hangi soru kelimesinin gerektiğini düşün.",
+      "de": "Überlege zuerst, welche Information die Antwort gibt.",
+      "en": "Look at the type of information in the answer to choose the right question word."
+    }
+  },
+  "exercises": [
+    {
+      "id": "basis-1",
+      "title": {
+        "tr": "Übung 1 – Temel W-Fragen",
+        "de": "Übung 1 – W-Fragen Grundlagen",
+        "en": "Exercise 1 – Core W-questions"
+      },
+      "description": {
+        "tr": "Wer, was, wo, woher ve wohin arasında doğru soru kelimesini seç.",
+        "de": "Wähle zwischen wer, was, wo, woher und wohin.",
+        "en": "Choose between wer, was, wo, woher and wohin."
+      },
+      "difficulty": {
+        "tr": "Kolay-Orta",
+        "de": "Leicht–Mittel",
+        "en": "Easy–Intermediate"
+      },
+      "questions": [
+        {
+          "word": "Person",
+          "sentence": "___ ist dein Deutschlehrer? – Herr Becker.",
+          "options": [
+            "Wer",
+            "Was",
+            "Wo"
+          ],
+          "correct": "Wer",
+          "explanations": {
+            "tr": "Cevap bir kişi olduğu için Wer kullanılır.",
+            "de": "Cevap bir kişi olduğu için Wer kullanılır.",
+            "en": "Cevap bir kişi olduğu için Wer kullanılır."
+          }
+        },
+        {
+          "word": "Ort",
+          "sentence": "___ wohnst du? – In Köln.",
+          "options": [
+            "Wo",
+            "Woher",
+            "Wohin"
+          ],
+          "correct": "Wo",
+          "explanations": {
+            "tr": "Bir konum soruluyor: Wo?",
+            "de": "Bir konum soruluyor: Wo?",
+            "en": "Bir konum soruluyor: Wo?"
+          }
+        },
+        {
+          "word": "Herkunft",
+          "sentence": "___ kommst du? – Aus der Türkei.",
+          "options": [
+            "Woher",
+            "Wo",
+            "Wohin"
+          ],
+          "correct": "Woher",
+          "explanations": {
+            "tr": "Bir yerden geliş soruluyor: Woher?",
+            "de": "Bir yerden geliş soruluyor: Woher?",
+            "en": "Bir yerden geliş soruluyor: Woher?"
+          }
+        },
+        {
+          "word": "Richtung",
+          "sentence": "___ fährst du am Wochenende? – Nach Berlin.",
+          "options": [
+            "Wohin",
+            "Wo",
+            "Woher"
+          ],
+          "correct": "Wohin",
+          "explanations": {
+            "tr": "Bir yöne hareket var: Wohin?",
+            "de": "Bir yöne hareket var: Wohin?",
+            "en": "Bir yöne hareket var: Wohin?"
+          }
+        },
+        {
+          "word": "Sache",
+          "sentence": "___ machst du heute Abend? – Ich lerne Deutsch.",
+          "options": [
+            "Was",
+            "Wer",
+            "Wo"
+          ],
+          "correct": "Was",
+          "explanations": {
+            "tr": "Bir eylem soruluyor: Was?",
+            "de": "Bir eylem soruluyor: Was?",
+            "en": "Bir eylem soruluyor: Was?"
+          }
+        },
+        {
+          "word": "Person",
+          "sentence": "___ arbeitet heute mit dir? – Anna.",
+          "options": [
+            "Wer",
+            "Was",
+            "Wo"
+          ],
+          "correct": "Wer",
+          "explanations": {
+            "tr": "Cevap kişi: Wer?",
+            "de": "Cevap kişi: Wer?",
+            "en": "Cevap kişi: Wer?"
+          }
+        },
+        {
+          "word": "Ort",
+          "sentence": "___ ist dein Handy? – Auf dem Tisch.",
+          "options": [
+            "Wo",
+            "Wohin",
+            "Woher"
+          ],
+          "correct": "Wo",
+          "explanations": {
+            "tr": "Sabit konum: Wo?",
+            "de": "Sabit konum: Wo?",
+            "en": "Sabit konum: Wo?"
+          }
+        },
+        {
+          "word": "Richtung",
+          "sentence": "___ gehst du nach dem Kurs? – Nach Hause.",
+          "options": [
+            "Wohin",
+            "Wo",
+            "Was"
+          ],
+          "correct": "Wohin",
+          "explanations": {
+            "tr": "Hedef yön soruluyor: Wohin?",
+            "de": "Hedef yön soruluyor: Wohin?",
+            "en": "Hedef yön soruluyor: Wohin?"
+          }
+        },
+        {
+          "word": "Herkunft",
+          "sentence": "___ kommt dieser Bus? – Aus Bonn.",
+          "options": [
+            "Woher",
+            "Wohin",
+            "Wo"
+          ],
+          "correct": "Woher",
+          "explanations": {
+            "tr": "Nereden geliyor? → Woher.",
+            "de": "Nereden geliyor? → Woher.",
+            "en": "Nereden geliyor? → Woher."
+          }
+        },
+        {
+          "word": "Sache",
+          "sentence": "___ brauchst du für den Unterricht? – Ein Heft und einen Stift.",
+          "options": [
+            "Was",
+            "Wer",
+            "Wo"
+          ],
+          "correct": "Was",
+          "explanations": {
+            "tr": "Bir nesne/şey soruluyor: Was?",
+            "de": "Bir nesne/şey soruluyor: Was?",
+            "en": "Bir nesne/şey soruluyor: Was?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "alltag-2",
+      "title": {
+        "tr": "Übung 2 – Günlük hayatta W-Fragen",
+        "de": "Übung 2 – W-Fragen im Alltag",
+        "en": "Exercise 2 – W-questions in daily life"
+      },
+      "description": {
+        "tr": "Wann, wie, warum, wie oft ve wie lange gibi soru ifadelerini günlük diyaloglarda kullan.",
+        "de": "Übe wann, wie, warum, wie oft und wie lange in Alltagssituationen.",
+        "en": "Practise wann, wie, warum, wie oft and wie lange in everyday situations."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Intermediate"
+      },
+      "questions": [
+        {
+          "word": "Zeit",
+          "sentence": "___ beginnt dein Deutschkurs? – Um 18 Uhr.",
+          "options": [
+            "Wann",
+            "Wie",
+            "Warum"
+          ],
+          "correct": "Wann",
+          "explanations": {
+            "tr": "Saat/zaman sorulduğu için Wann.",
+            "de": "Saat/zaman sorulduğu için Wann.",
+            "en": "Saat/zaman sorulduğu için Wann."
+          }
+        },
+        {
+          "word": "Art und Weise",
+          "sentence": "___ kommst du zur Arbeit? – Mit dem Bus.",
+          "options": [
+            "Wie",
+            "Wann",
+            "Wo"
+          ],
+          "correct": "Wie",
+          "explanations": {
+            "tr": "Nasıl geldiği soruluyor: Wie?",
+            "de": "Nasıl geldiği soruluyor: Wie?",
+            "en": "Nasıl geldiği soruluyor: Wie?"
+          }
+        },
+        {
+          "word": "Grund",
+          "sentence": "___ lernst du Deutsch? – Weil ich in Deutschland studieren möchte.",
+          "options": [
+            "Warum",
+            "Wann",
+            "Wie"
+          ],
+          "correct": "Warum",
+          "explanations": {
+            "tr": "Sebep sorusu: Warum?",
+            "de": "Sebep sorusu: Warum?",
+            "en": "Sebep sorusu: Warum?"
+          }
+        },
+        {
+          "word": "Häufigkeit",
+          "sentence": "___ gehst du ins Fitnessstudio? – Dreimal pro Woche.",
+          "options": [
+            "Wie oft",
+            "Wie lange",
+            "Wann"
+          ],
+          "correct": "Wie oft",
+          "explanations": {
+            "tr": "Sıklık soruluyor: Wie oft?",
+            "de": "Sıklık soruluyor: Wie oft?",
+            "en": "Sıklık soruluyor: Wie oft?"
+          }
+        },
+        {
+          "word": "Dauer",
+          "sentence": "___ dauert der Kurs? – 90 Minuten.",
+          "options": [
+            "Wie lange",
+            "Wie oft",
+            "Wann"
+          ],
+          "correct": "Wie lange",
+          "explanations": {
+            "tr": "Süre soruluyor: Wie lange?",
+            "de": "Süre soruluyor: Wie lange?",
+            "en": "Süre soruluyor: Wie lange?"
+          }
+        },
+        {
+          "word": "Zeit",
+          "sentence": "___ hast du Urlaub? – Im August.",
+          "options": [
+            "Wann",
+            "Warum",
+            "Wie"
+          ],
+          "correct": "Wann",
+          "explanations": {
+            "tr": "Zaman sorusu: Wann?",
+            "de": "Zaman sorusu: Wann?",
+            "en": "Zaman sorusu: Wann?"
+          }
+        },
+        {
+          "word": "Art und Weise",
+          "sentence": "___ schreibt man deinen Nachnamen? – B-O-Z-K-U-R-T.",
+          "options": [
+            "Wie",
+            "Was",
+            "Wer"
+          ],
+          "correct": "Wie",
+          "explanations": {
+            "tr": "Nasıl yazıldığı soruluyor: Wie?",
+            "de": "Nasıl yazıldığı soruluyor: Wie?",
+            "en": "Nasıl yazıldığı soruluyor: Wie?"
+          }
+        },
+        {
+          "word": "Grund",
+          "sentence": "___ bist du heute so müde? – Ich habe schlecht geschlafen.",
+          "options": [
+            "Warum",
+            "Wann",
+            "Wo"
+          ],
+          "correct": "Warum",
+          "explanations": {
+            "tr": "Neden? → Warum.",
+            "de": "Neden? → Warum.",
+            "en": "Neden? → Warum."
+          }
+        },
+        {
+          "word": "Häufigkeit",
+          "sentence": "___ rufst du deine Eltern an? – Fast jeden Tag.",
+          "options": [
+            "Wie oft",
+            "Wie lange",
+            "Wo"
+          ],
+          "correct": "Wie oft",
+          "explanations": {
+            "tr": "Ne sıklıkla? → Wie oft.",
+            "de": "Ne sıklıkla? → Wie oft.",
+            "en": "Ne sıklıkla? → Wie oft."
+          }
+        },
+        {
+          "word": "Dauer",
+          "sentence": "___ lernst du schon Deutsch? – Seit sechs Monaten.",
+          "options": [
+            "Wie lange",
+            "Wann",
+            "Wie oft"
+          ],
+          "correct": "Wie lange",
+          "explanations": {
+            "tr": "Ne kadar süredir? → Wie lange.",
+            "de": "Ne kadar süredir? → Wie lange.",
+            "en": "Ne kadar süredir? → Wie lange."
+          }
+        }
+      ]
+    },
+    {
+      "id": "schreiben-3",
+      "title": {
+        "tr": "Übung 3 – Soruyu kendin kur",
+        "de": "Übung 3 – Fragen selbst bilden",
+        "en": "Exercise 3 – Build the question"
+      },
+      "description": {
+        "tr": "Verilen cevaba uygun W-Frage'yi kendin yaz. Yardım tablosu yok.",
+        "de": "Bilde selbst die passende W-Frage. Ohne Hilfstabelle.",
+        "en": "Write the matching W-question yourself. No helper table."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel–Schwer",
+        "en": "Intermediate–Hard"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "type": "text",
+          "word": "Ort",
+          "sentence": "Antwort: Ich wohne in Düsseldorf. – Schreibe die passende Frage.",
+          "correct": "Wo wohnst du?",
+          "answers": [
+            "wo wohnst du",
+            "wo wohnst du?"
+          ],
+          "explanations": {
+            "tr": "Konum cevabı verildiği için: Wo wohnst du?",
+            "de": "Konum cevabı verildiği için: Wo wohnst du?",
+            "en": "Konum cevabı verildiği için: Wo wohnst du?"
+          }
+        },
+        {
+          "type": "text",
+          "word": "Herkunft",
+          "sentence": "Antwort: Ich komme aus Ankara. – Schreibe die passende Frage.",
+          "correct": "Woher kommst du?",
+          "answers": [
+            "woher kommst du",
+            "woher kommst du?"
+          ],
+          "explanations": {
+            "tr": "Köken/nereden sorusu: Woher kommst du?",
+            "de": "Köken/nereden sorusu: Woher kommst du?",
+            "en": "Köken/nereden sorusu: Woher kommst du?"
+          }
+        },
+        {
+          "type": "text",
+          "word": "Zeit",
+          "sentence": "Antwort: Der Kurs beginnt um 17 Uhr. – Schreibe die passende Frage.",
+          "correct": "Wann beginnt der Kurs?",
+          "answers": [
+            "wann beginnt der kurs",
+            "wann beginnt der kurs?"
+          ],
+          "explanations": {
+            "tr": "Saat bilgisi → Wann beginnt der Kurs?",
+            "de": "Saat bilgisi → Wann beginnt der Kurs?",
+            "en": "Saat bilgisi → Wann beginnt der Kurs?"
+          }
+        },
+        {
+          "type": "text",
+          "word": "Grund",
+          "sentence": "Antwort: Ich lerne Deutsch für mein Studium. – Schreibe die passende Frage.",
+          "correct": "Warum lernst du Deutsch?",
+          "answers": [
+            "warum lernst du deutsch",
+            "warum lernst du deutsch?"
+          ],
+          "explanations": {
+            "tr": "Sebep soruluyor: Warum lernst du Deutsch?",
+            "de": "Sebep soruluyor: Warum lernst du Deutsch?",
+            "en": "Sebep soruluyor: Warum lernst du Deutsch?"
+          }
+        },
+        {
+          "type": "text",
+          "word": "Richtung",
+          "sentence": "Antwort: Ich fahre morgen nach Hamburg. – Schreibe die passende Frage.",
+          "correct": "Wohin fährst du morgen?",
+          "answers": [
+            "wohin fährst du morgen",
+            "wohin fahrst du morgen"
+          ],
+          "explanations": {
+            "tr": "Hedef yön → Wohin fährst du morgen?",
+            "de": "Hedef yön → Wohin fährst du morgen?",
+            "en": "Hedef yön → Wohin fährst du morgen?"
+          }
+        },
+        {
+          "type": "text",
+          "word": "Person",
+          "sentence": "Antwort: Meine Schwester kommt heute mit. – Schreibe die passende Frage.",
+          "correct": "Wer kommt heute mit?",
+          "answers": [
+            "wer kommt heute mit",
+            "wer kommt heute mit?"
+          ],
+          "explanations": {
+            "tr": "Cevap kişi olduğu için Wer.",
+            "de": "Cevap kişi olduğu için Wer.",
+            "en": "Cevap kişi olduğu için Wer."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Art und Weise",
+          "sentence": "Antwort: Ich fahre mit der Straßenbahn zur Uni. – Schreibe die passende Frage.",
+          "correct": "Wie fährst du zur Uni?",
+          "answers": [
+            "wie fährst du zur uni",
+            "wie fahrst du zur uni"
+          ],
+          "explanations": {
+            "tr": "Nasıl? → Wie fährst du zur Uni?",
+            "de": "Nasıl? → Wie fährst du zur Uni?",
+            "en": "Nasıl? → Wie fährst du zur Uni?"
+          }
+        },
+        {
+          "type": "text",
+          "word": "Häufigkeit",
+          "sentence": "Antwort: Ich trainiere zweimal pro Woche. – Schreibe die passende Frage.",
+          "correct": "Wie oft trainierst du?",
+          "answers": [
+            "wie oft trainierst du",
+            "wie oft trainierst du?"
+          ],
+          "explanations": {
+            "tr": "Sıklık → Wie oft trainierst du?",
+            "de": "Sıklık → Wie oft trainierst du?",
+            "en": "Sıklık → Wie oft trainierst du?"
+          }
+        },
+        {
+          "type": "text",
+          "word": "Dauer",
+          "sentence": "Antwort: Der Film dauert zwei Stunden. – Schreibe die passende Frage.",
+          "correct": "Wie lange dauert der Film?",
+          "answers": [
+            "wie lange dauert der film",
+            "wie lange dauert der film?"
+          ],
+          "explanations": {
+            "tr": "Süre → Wie lange dauert der Film?",
+            "de": "Süre → Wie lange dauert der Film?",
+            "en": "Süre → Wie lange dauert der Film?"
+          }
+        },
+        {
+          "type": "text",
+          "word": "Sache",
+          "sentence": "Antwort: Ich brauche einen Laptop für den Kurs. – Schreibe die passende Frage.",
+          "correct": "Was brauchst du für den Kurs?",
+          "answers": [
+            "was brauchst du für den kurs",
+            "was brauchst du für den kurs?"
+          ],
+          "explanations": {
+            "tr": "Şey/nesne sorusu → Was brauchst du für den Kurs?",
+            "de": "Şey/nesne sorusu → Was brauchst du für den Kurs?",
+            "en": "Şey/nesne sorusu → Was brauchst du für den Kurs?"
+          }
+        }
+      ]
+    }
+  ]
+}

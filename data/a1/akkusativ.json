@@ -1,0 +1,1260 @@
+{
+  "id": "akkusativ",
+  "level": "A1",
+  "title": {
+    "tr": "Akkusativ",
+    "de": "Akkusativ",
+    "en": "Accusative"
+  },
+  "description": {
+    "tr": "Wen? Was? soruları, Akkusativ artikelleri ve günlük hayatta sık kullanılan Akkusativ fiilleri.",
+    "de": "Wen? Was? sowie Akkusativartikel und häufige Verben mit Akkusativ im Alltag.",
+    "en": "Wen? Was?, accusative articles and common accusative verbs in everyday German."
+  },
+  "lesson": {
+    "title": {
+      "tr": "Akkusativ – Wen? Was?",
+      "de": "Akkusativ – Wen? Was?",
+      "en": "Accusative – Wen? Was?"
+    },
+    "intro": {
+      "tr": "Akkusativ çoğu zaman cümlede eylemden doğrudan etkilenen kişiyi veya şeyi gösterir. Onu genellikle Wen? veya Was? sorusuyla bulabilirsin.",
+      "de": "Der Akkusativ bezeichnet oft die Person oder Sache, die direkt von einer Handlung betroffen ist. Man fragt meistens mit Wen? oder Was?.",
+      "en": "The accusative often marks the person or thing directly affected by an action. You usually identify it with Wen? or Was?."
+    },
+    "rules": [
+      {
+        "label": "Bestimmter Artikel",
+        "text": {
+          "tr": "Maskulin değişir: der → den. Feminin, nötr ve çoğul aynı kalır: die → die, das → das, die → die.",
+          "de": "Nur Maskulin ändert sich: der → den. Feminin, Neutrum und Plural bleiben gleich.",
+          "en": "Only masculine changes: der → den. Feminine, neuter and plural stay the same."
+        }
+      },
+      {
+        "label": "Unbestimmter Artikel",
+        "text": {
+          "tr": "Maskulin: ein → einen. Feminin: eine → eine. Nötr: ein → ein.",
+          "de": "Maskulin: ein → einen. Feminin: eine → eine. Neutrum: ein → ein.",
+          "en": "Masculine: ein → einen. Feminine: eine → eine. Neuter: ein → ein."
+        }
+      },
+      {
+        "label": "Negativartikel",
+        "text": {
+          "tr": "Maskulin: kein → keinen. Feminin: keine, nötr: kein, çoğul: keine.",
+          "de": "Maskulin: kein → keinen. Feminin: keine, Neutrum: kein, Plural: keine.",
+          "en": "Masculine: kein → keinen. Feminine: keine, neuter: kein, plural: keine."
+        }
+      },
+      {
+        "label": "Sık fiiller",
+        "text": {
+          "tr": "haben, brauchen, kaufen, sehen, finden, suchen, essen, trinken, lesen, besuchen gibi birçok fiil Akkusativ nesne alır.",
+          "de": "Viele Verben wie haben, brauchen, kaufen, sehen, finden, suchen, essen, trinken, lesen und besuchen haben ein Akkusativobjekt.",
+          "en": "Many verbs such as haben, brauchen, kaufen, sehen, finden, suchen, essen, trinken, lesen and besuchen take an accusative object."
+        }
+      }
+    ],
+    "examples": [
+      "Der Mann kauft den Mantel. — Adam paltoyu satın alıyor.",
+      "Ich brauche einen Termin. — Bir randevuya ihtiyacım var.",
+      "Sie liest die Zeitung. — Gazeteyi okuyor.",
+      "Wir haben kein Auto. — Arabamız yok."
+    ],
+    "tip": {
+      "tr": "En görünür değişiklik maskulinde olur: der/ein/kein → den/einen/keinen. Önce ismin artikelini düşün, sonra cümledeki görevini kontrol et.",
+      "de": "Die sichtbarste Änderung ist beim Maskulinum: der/ein/kein → den/einen/keinen. Bestimme zuerst das Genus und dann die Funktion im Satz.",
+      "en": "The clearest change is masculine: der/ein/kein → den/einen/keinen. First identify the noun's gender, then its role in the sentence."
+    }
+  },
+  "exercises": [
+    {
+      "id": "artikel-1",
+      "title": {
+        "tr": "Übung 1 – Akkusativ Artikeller",
+        "de": "Übung 1 – Akkusativartikel",
+        "en": "Exercise 1 – Accusative articles"
+      },
+      "description": {
+        "tr": "der/ein/kein değişimlerini ve diğer cinsiyetlerde değişmeyen biçimleri çalış.",
+        "de": "Übe der/ein/kein im Akkusativ und die unveränderten Formen.",
+        "en": "Practise der/ein/kein in the accusative and the unchanged forms."
+      },
+      "difficulty": {
+        "tr": "Kolay-Orta",
+        "de": "Leicht–Mittel",
+        "en": "Easy–Intermediate"
+      },
+      "questions": [
+        {
+          "word": "der Mantel",
+          "sentence": "Ich kaufe ___ Mantel im Angebot.",
+          "options": [
+            "den",
+            "der",
+            "dem"
+          ],
+          "correct": "den",
+          "explanations": {
+            "tr": "Mantel maskulindir ve nesnedir: der → den.",
+            "de": "Mantel ist maskulin und Akkusativobjekt: der → den.",
+            "en": "Mantel is masculine and the object: der → den."
+          }
+        },
+        {
+          "word": "ein Kaffee",
+          "sentence": "Paul bestellt ___ Kaffee ohne Zucker.",
+          "options": [
+            "einen",
+            "ein",
+            "einem"
+          ],
+          "correct": "einen",
+          "explanations": {
+            "tr": "Kaffee maskulin: ein → einen.",
+            "de": "Kaffee ist maskulin: ein → einen.",
+            "en": "Kaffee is masculine: ein → einen."
+          }
+        },
+        {
+          "word": "die Tasche",
+          "sentence": "Mara sucht ___ Tasche schon seit zehn Minuten.",
+          "options": [
+            "die",
+            "den",
+            "der"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Feminin Akkusativda die değişmez.",
+            "de": "Beim Femininum bleibt die im Akkusativ unverändert.",
+            "en": "Feminine die stays unchanged in the accusative."
+          }
+        },
+        {
+          "word": "das Ticket",
+          "sentence": "Wir brauchen ___ Ticket für die Rückfahrt.",
+          "options": [
+            "das",
+            "den",
+            "dem"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "Nötr das Akkusativda değişmez.",
+            "de": "Neutrum das bleibt im Akkusativ gleich.",
+            "en": "Neuter das stays the same in the accusative."
+          }
+        },
+        {
+          "word": "ein Termin",
+          "sentence": "Ich habe morgen ___ Termin beim Zahnarzt.",
+          "options": [
+            "einen",
+            "ein",
+            "einer"
+          ],
+          "correct": "einen",
+          "explanations": {
+            "tr": "Termin maskulin: einen Termin.",
+            "de": "Termin ist maskulin: einen Termin.",
+            "en": "Termin is masculine: einen Termin."
+          }
+        },
+        {
+          "word": "eine Wohnung",
+          "sentence": "Sie sucht ___ kleine Wohnung in der Innenstadt.",
+          "options": [
+            "eine",
+            "einen",
+            "einem"
+          ],
+          "correct": "eine",
+          "explanations": {
+            "tr": "Wohnung feminindir; eine değişmez.",
+            "de": "Wohnung ist feminin; eine bleibt gleich.",
+            "en": "Wohnung is feminine; eine stays the same."
+          }
+        },
+        {
+          "word": "kein Schlüssel",
+          "sentence": "Tom findet ___ Schlüssel in seiner Tasche.",
+          "options": [
+            "keinen",
+            "kein",
+            "keinem"
+          ],
+          "correct": "keinen",
+          "explanations": {
+            "tr": "Schlüssel maskulin: kein → keinen.",
+            "de": "Schlüssel ist maskulin: kein → keinen.",
+            "en": "Schlüssel is masculine: kein → keinen."
+          }
+        },
+        {
+          "word": "kein Geld",
+          "sentence": "Wir haben heute ___ Bargeld dabei.",
+          "options": [
+            "kein",
+            "keinen",
+            "keine"
+          ],
+          "correct": "kein",
+          "explanations": {
+            "tr": "Geld nötrdür: kein Geld.",
+            "de": "Geld ist Neutrum: kein Geld.",
+            "en": "Geld is neuter: kein Geld."
+          }
+        },
+        {
+          "word": "die Bücher",
+          "sentence": "Die Studentin kauft ___ Bücher für das neue Semester.",
+          "options": [
+            "die",
+            "den",
+            "der"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Çoğul Akkusativda belirli artikel die olarak kalır.",
+            "de": "Im Akkusativ Plural bleibt der bestimmte Artikel die.",
+            "en": "In the accusative plural, the definite article remains die."
+          }
+        },
+        {
+          "word": "keine Äpfel",
+          "sentence": "Im Kühlschrank haben wir ___ Äpfel mehr.",
+          "options": [
+            "keine",
+            "keinen",
+            "kein"
+          ],
+          "correct": "keine",
+          "explanations": {
+            "tr": "Çoğulda Negativartikel keine olur.",
+            "de": "Im Plural lautet der Negativartikel keine.",
+            "en": "In the plural, the negative article is keine."
+          }
+        }
+      ]
+    },
+    {
+      "id": "verben-2",
+      "title": {
+        "tr": "Übung 2 – Akkusativ alan fiiller",
+        "de": "Übung 2 – Verben mit Akkusativ",
+        "en": "Exercise 2 – Accusative verbs"
+      },
+      "description": {
+        "tr": "Günlük hayatta sık geçen fiillerle doğru Akkusativ nesneyi kullan.",
+        "de": "Übe häufige Alltagsverben mit dem richtigen Akkusativobjekt.",
+        "en": "Practise common everyday verbs with the correct accusative object."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Intermediate"
+      },
+      "questions": [
+        {
+          "word": "brauchen",
+          "sentence": "Für die Anmeldung brauche ich ___ Pass.",
+          "options": [
+            "meinen",
+            "mein",
+            "meinem"
+          ],
+          "correct": "meinen",
+          "explanations": {
+            "tr": "brauchen Akkusativ alır; Pass maskulin: meinen Pass.",
+            "de": "brauchen verlangt Akkusativ; Pass ist maskulin: meinen Pass.",
+            "en": "brauchen takes accusative; Pass is masculine: meinen Pass."
+          }
+        },
+        {
+          "word": "sehen",
+          "sentence": "Siehst du ___ neuen Nachbarn dort?",
+          "options": [
+            "den",
+            "der",
+            "dem"
+          ],
+          "correct": "den",
+          "explanations": {
+            "tr": "sehen + Akkusativ; Nachbar maskulin: den Nachbarn.",
+            "de": "sehen + Akkusativ; Nachbar ist maskulin: den Nachbarn.",
+            "en": "sehen + accusative; Nachbar is masculine: den Nachbarn."
+          }
+        },
+        {
+          "word": "kaufen",
+          "sentence": "Wir kaufen heute ___ neue Lampe fürs Wohnzimmer.",
+          "options": [
+            "eine",
+            "einen",
+            "einer"
+          ],
+          "correct": "eine",
+          "explanations": {
+            "tr": "kaufen + Akkusativ; Lampe feminin: eine Lampe.",
+            "de": "kaufen + Akkusativ; Lampe ist feminin: eine Lampe.",
+            "en": "kaufen + accusative; Lampe is feminine: eine Lampe."
+          }
+        },
+        {
+          "word": "essen",
+          "sentence": "Mein Bruder isst morgens immer ___ Apfel.",
+          "options": [
+            "einen",
+            "ein",
+            "einem"
+          ],
+          "correct": "einen",
+          "explanations": {
+            "tr": "essen + Akkusativ; Apfel maskulin: einen Apfel.",
+            "de": "essen + Akkusativ; Apfel ist maskulin: einen Apfel.",
+            "en": "essen + accusative; Apfel is masculine: einen Apfel."
+          }
+        },
+        {
+          "word": "trinken",
+          "sentence": "Nach dem Sport trinke ich ___ Wasser sehr schnell.",
+          "options": [
+            "das",
+            "den",
+            "der"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "Wasser nötrdür; Akkusativda das değişmez.",
+            "de": "Wasser ist Neutrum; das bleibt im Akkusativ gleich.",
+            "en": "Wasser is neuter; das stays unchanged in the accusative."
+          }
+        },
+        {
+          "word": "lesen",
+          "sentence": "Im Zug liest Eva ___ Zeitung.",
+          "options": [
+            "die",
+            "den",
+            "dem"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Zeitung feminin; Akkusativda die.",
+            "de": "Zeitung ist feminin; im Akkusativ die.",
+            "en": "Zeitung is feminine; accusative die."
+          }
+        },
+        {
+          "word": "besuchen",
+          "sentence": "Am Wochenende besuchen wir ___ Großvater.",
+          "options": [
+            "unseren",
+            "unser",
+            "unserem"
+          ],
+          "correct": "unseren",
+          "explanations": {
+            "tr": "besuchen Akkusativ alır; Großvater maskulin: unseren.",
+            "de": "besuchen verlangt Akkusativ; Großvater ist maskulin: unseren.",
+            "en": "besuchen takes accusative; Großvater is masculine: unseren."
+          }
+        },
+        {
+          "word": "suchen",
+          "sentence": "Die Touristen suchen ___ Bahnhof.",
+          "options": [
+            "den",
+            "der",
+            "dem"
+          ],
+          "correct": "den",
+          "explanations": {
+            "tr": "suchen + Akkusativ; Bahnhof maskulin: den Bahnhof.",
+            "de": "suchen + Akkusativ; Bahnhof ist maskulin: den Bahnhof.",
+            "en": "suchen + accusative; Bahnhof is masculine: den Bahnhof."
+          }
+        },
+        {
+          "word": "finden",
+          "sentence": "Wie findest du ___ neue Kurs?",
+          "options": [
+            "den",
+            "der",
+            "dem"
+          ],
+          "correct": "den",
+          "explanations": {
+            "tr": "finden burada Akkusativ nesne alır; Kurs maskulin.",
+            "de": "finden hat hier ein Akkusativobjekt; Kurs ist maskulin.",
+            "en": "finden takes an accusative object here; Kurs is masculine."
+          }
+        },
+        {
+          "word": "haben",
+          "sentence": "Unsere Wohnung hat ___ kleinen Balkon.",
+          "options": [
+            "einen",
+            "ein",
+            "einem"
+          ],
+          "correct": "einen",
+          "explanations": {
+            "tr": "haben + Akkusativ; Balkon maskulin: einen Balkon.",
+            "de": "haben + Akkusativ; Balkon ist maskulin: einen Balkon.",
+            "en": "haben + accusative; Balkon is masculine: einen Balkon."
+          }
+        }
+      ]
+    },
+    {
+      "id": "nominativ-akkusativ-3",
+      "title": {
+        "tr": "Übung 3 – Nominativ mi Akkusativ mi?",
+        "de": "Übung 3 – Nominativ oder Akkusativ?",
+        "en": "Exercise 3 – Nominative or accusative?"
+      },
+      "description": {
+        "tr": "Cümlede yapan kişiyi ve eylemden etkilenen nesneyi ayır; Wer? / Wen? / Was? sorularını kullan.",
+        "de": "Unterscheide Subjekt und Objekt mit Wer? / Wen? / Was?.",
+        "en": "Distinguish subject and object using Wer? / Wen? / Was?."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel–Schwer",
+        "en": "Intermediate–Hard"
+      },
+      "questions": [
+        {
+          "word": "Subjekt / Objekt",
+          "sentence": "___ Student kauft ___ Laptop.",
+          "options": [
+            "Der / einen",
+            "Den / ein",
+            "Einen / der"
+          ],
+          "correct": "Der / einen",
+          "explanations": {
+            "tr": "Student özne → der; Laptop nesne → einen.",
+            "de": "Student ist Subjekt → der; Laptop ist Objekt → einen.",
+            "en": "Student is the subject → der; Laptop is the object → einen."
+          }
+        },
+        {
+          "word": "Subjekt / Objekt",
+          "sentence": "___ Hund sieht ___ Katze im Garten.",
+          "options": [
+            "Der / die",
+            "Den / der",
+            "Die / den"
+          ],
+          "correct": "Der / die",
+          "explanations": {
+            "tr": "Hund özne (der), Katze Akkusativ nesne (die).",
+            "de": "Hund ist Subjekt (der), Katze Akkusativobjekt (die).",
+            "en": "Hund is the subject (der), Katze is the accusative object (die)."
+          }
+        },
+        {
+          "word": "W-Frage",
+          "sentence": "___ besucht Anna heute? – Ihren Onkel.",
+          "options": [
+            "Wen",
+            "Wer",
+            "Was"
+          ],
+          "correct": "Wen",
+          "explanations": {
+            "tr": "Cevap bir kişi ve Akkusativ nesne olduğu için Wen?",
+            "de": "Die Antwort ist eine Person im Akkusativ, deshalb Wen?",
+            "en": "The answer is a person in the accusative, so Wen?"
+          }
+        },
+        {
+          "word": "W-Frage",
+          "sentence": "___ besucht ihren Onkel heute? – Anna.",
+          "options": [
+            "Wer",
+            "Wen",
+            "Was"
+          ],
+          "correct": "Wer",
+          "explanations": {
+            "tr": "Anna eylemi yapan özne; bu nedenle Wer?",
+            "de": "Anna ist das Subjekt; deshalb Wer?",
+            "en": "Anna is the subject, so Wer?"
+          }
+        },
+        {
+          "word": "W-Frage",
+          "sentence": "___ kauft der Mann? – Ein neues Handy.",
+          "options": [
+            "Was",
+            "Wer",
+            "Wen"
+          ],
+          "correct": "Was",
+          "explanations": {
+            "tr": "Bir şey/nesne soruluyor: Was?",
+            "de": "Es wird nach einer Sache gefragt: Was?",
+            "en": "The question asks about a thing: Was?"
+          }
+        },
+        {
+          "word": "Subjekt / Objekt",
+          "sentence": "___ Lehrerin erklärt ___ Satz noch einmal.",
+          "options": [
+            "Die / den",
+            "Den / die",
+            "Der / einen"
+          ],
+          "correct": "Die / den",
+          "explanations": {
+            "tr": "Lehrerin özne → die; Satz maskulin nesne → den.",
+            "de": "Lehrerin ist Subjekt → die; Satz ist maskulines Objekt → den.",
+            "en": "Lehrerin is the subject → die; Satz is a masculine object → den."
+          }
+        },
+        {
+          "word": "Subjekt / Objekt",
+          "sentence": "___ Kind braucht ___ Heft für die Schule.",
+          "options": [
+            "Das / ein",
+            "Den / einen",
+            "Ein / der"
+          ],
+          "correct": "Das / ein",
+          "explanations": {
+            "tr": "Kind özne olarak das; Heft nötr Akkusativda ein.",
+            "de": "Kind als Subjekt: das; Heft ist Neutrum im Akkusativ: ein.",
+            "en": "Kind as subject: das; Heft is neuter accusative: ein."
+          }
+        },
+        {
+          "word": "W-Frage",
+          "sentence": "___ sucht ihr am Bahnhof? – Frau König.",
+          "options": [
+            "Wen",
+            "Wer",
+            "Was"
+          ],
+          "correct": "Wen",
+          "explanations": {
+            "tr": "Kişi Akkusativ nesne olarak soruluyor: Wen?",
+            "de": "Eine Person wird als Akkusativobjekt gefragt: Wen?",
+            "en": "A person is being asked about as the accusative object: Wen?"
+          }
+        },
+        {
+          "word": "Subjekt / Objekt",
+          "sentence": "___ Arzt untersucht ___ Patienten.",
+          "options": [
+            "Der / den",
+            "Den / der",
+            "Ein / der"
+          ],
+          "correct": "Der / den",
+          "explanations": {
+            "tr": "Arzt eylemi yapan özne, Patient eylemden etkilenen Akkusativ nesne.",
+            "de": "Arzt ist das Subjekt, Patient das Akkusativobjekt.",
+            "en": "Arzt is the subject, Patient is the accusative object."
+          }
+        },
+        {
+          "word": "W-Frage",
+          "sentence": "___ braucht einen neuen Drucker? – Das Büro.",
+          "options": [
+            "Wer",
+            "Wen",
+            "Was"
+          ],
+          "correct": "Wer",
+          "explanations": {
+            "tr": "Bir kurum/özne soruluyor; cümlede yapan öğe için Wer kullanılır.",
+            "de": "Gefragt wird nach dem Subjekt; dafür verwendet man Wer.",
+            "en": "The question asks for the subject, so Wer is used."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kein-possessiv-4",
+      "title": {
+        "tr": "Übung 4 – kein ve Possessivartikel",
+        "de": "Übung 4 – kein und Possessivartikel",
+        "en": "Exercise 4 – kein and possessive articles"
+      },
+      "description": {
+        "tr": "keinen ve meinen/deinen/seinen gibi maskulin Akkusativ biçimlerini bağlam içinde çalış.",
+        "de": "Übe keinen sowie Formen wie meinen/deinen/seinen im maskulinen Akkusativ.",
+        "en": "Practise keinen and forms such as meinen/deinen/seinen in masculine accusative."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel–Schwer",
+        "en": "Intermediate–Hard"
+      },
+      "questions": [
+        {
+          "word": "kein",
+          "sentence": "Ich habe ___ Führerschein, deshalb fahre ich nicht.",
+          "options": [
+            "keinen",
+            "kein",
+            "keinem"
+          ],
+          "correct": "keinen",
+          "explanations": {
+            "tr": "Führerschein maskulin Akkusativ: keinen Führerschein.",
+            "de": "Führerschein ist maskulin im Akkusativ: keinen Führerschein.",
+            "en": "Führerschein is masculine accusative: keinen Führerschein."
+          }
+        },
+        {
+          "word": "mein",
+          "sentence": "Wo ist ___ Schlüssel? Ich finde ihn nicht.",
+          "options": [
+            "mein",
+            "meinen",
+            "meinem"
+          ],
+          "correct": "mein",
+          "explanations": {
+            "tr": "Burada Schlüssel özne değil ama 'Wo ist mein Schlüssel?' cümlesinde sein ile Nominativ kullanılır.",
+            "de": "In 'Wo ist mein Schlüssel?' steht Schlüssel nach sein im Nominativ.",
+            "en": "In 'Wo ist mein Schlüssel?', Schlüssel is nominative after sein."
+          }
+        },
+        {
+          "word": "mein",
+          "sentence": "Ich finde ___ Schlüssel nicht.",
+          "options": [
+            "meinen",
+            "mein",
+            "meinem"
+          ],
+          "correct": "meinen",
+          "explanations": {
+            "tr": "finden + Akkusativ; maskulin: meinen Schlüssel.",
+            "de": "finden + Akkusativ; maskulin: meinen Schlüssel.",
+            "en": "finden + accusative; masculine: meinen Schlüssel."
+          }
+        },
+        {
+          "word": "dein",
+          "sentence": "Nimmst du ___ Regenschirm mit?",
+          "options": [
+            "deinen",
+            "dein",
+            "deinem"
+          ],
+          "correct": "deinen",
+          "explanations": {
+            "tr": "Regenschirm maskulin Akkusativ: deinen.",
+            "de": "Regenschirm ist maskulin im Akkusativ: deinen.",
+            "en": "Regenschirm is masculine accusative: deinen."
+          }
+        },
+        {
+          "word": "sein",
+          "sentence": "Max verkauft ___ alten Computer.",
+          "options": [
+            "seinen",
+            "sein",
+            "seinem"
+          ],
+          "correct": "seinen",
+          "explanations": {
+            "tr": "Computer maskulin Akkusativ: seinen Computer.",
+            "de": "Computer ist maskulin im Akkusativ: seinen Computer.",
+            "en": "Computer is masculine accusative: seinen Computer."
+          }
+        },
+        {
+          "word": "ihr",
+          "sentence": "Lisa besucht ___ Bruder in München.",
+          "options": [
+            "ihren",
+            "ihr",
+            "ihrem"
+          ],
+          "correct": "ihren",
+          "explanations": {
+            "tr": "Bruder maskulin Akkusativ: ihren Bruder.",
+            "de": "Bruder ist maskulin im Akkusativ: ihren Bruder.",
+            "en": "Bruder is masculine accusative: ihren Bruder."
+          }
+        },
+        {
+          "word": "kein",
+          "sentence": "Wir kaufen heute ___ Fleisch.",
+          "options": [
+            "kein",
+            "keinen",
+            "keine"
+          ],
+          "correct": "kein",
+          "explanations": {
+            "tr": "Fleisch nötrdür: kein Fleisch.",
+            "de": "Fleisch ist Neutrum: kein Fleisch.",
+            "en": "Fleisch is neuter: kein Fleisch."
+          }
+        },
+        {
+          "word": "kein",
+          "sentence": "Sie braucht ___ neue Jacke; die alte ist noch gut.",
+          "options": [
+            "keine",
+            "keinen",
+            "kein"
+          ],
+          "correct": "keine",
+          "explanations": {
+            "tr": "Jacke feminin: keine Jacke.",
+            "de": "Jacke ist feminin: keine Jacke.",
+            "en": "Jacke is feminine: keine Jacke."
+          }
+        },
+        {
+          "word": "unser",
+          "sentence": "Wir besuchen morgen ___ neuen Nachbarn.",
+          "options": [
+            "unseren",
+            "unser",
+            "unserem"
+          ],
+          "correct": "unseren",
+          "explanations": {
+            "tr": "Nachbar maskulin Akkusativ: unseren Nachbarn.",
+            "de": "Nachbar ist maskulin im Akkusativ: unseren Nachbarn.",
+            "en": "Nachbar is masculine accusative: unseren Nachbarn."
+          }
+        },
+        {
+          "word": "euer",
+          "sentence": "Habt ihr ___ Ausweis dabei?",
+          "options": [
+            "euren",
+            "euer",
+            "eurem"
+          ],
+          "correct": "euren",
+          "explanations": {
+            "tr": "Ausweis maskulin Akkusativ: euren Ausweis.",
+            "de": "Ausweis ist maskulin im Akkusativ: euren Ausweis.",
+            "en": "Ausweis is masculine accusative: euren Ausweis."
+          }
+        }
+      ]
+    },
+    {
+      "id": "dialoge-5",
+      "title": {
+        "tr": "Übung 5 – Günlük diyaloglar",
+        "de": "Übung 5 – Alltagsdialoge",
+        "en": "Exercise 5 – Everyday dialogues"
+      },
+      "description": {
+        "tr": "Kısa diyaloglarda hangi nesnenin Akkusativ olduğunu ve doğru artikel biçimini bul.",
+        "de": "Bestimme im Dialog das Akkusativobjekt und die passende Artikelform.",
+        "en": "Identify the accusative object and the correct article form in short dialogues."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Restaurant",
+          "sentence": "A: Was möchtest du? B: Ich nehme ___ Salat und eine Suppe.",
+          "options": [
+            "den",
+            "der",
+            "dem"
+          ],
+          "correct": "den",
+          "explanations": {
+            "tr": "Salat maskulin ve nehmen fiilinin nesnesi: den Salat.",
+            "de": "Salat ist maskulin und Objekt von nehmen: den Salat.",
+            "en": "Salat is masculine and the object of nehmen: den Salat."
+          }
+        },
+        {
+          "word": "Einkaufen",
+          "sentence": "A: Brauchen wir Milch? B: Ja, und wir brauchen auch ___ Käse.",
+          "options": [
+            "den",
+            "der",
+            "dem"
+          ],
+          "correct": "den",
+          "explanations": {
+            "tr": "Käse maskulin; brauchen + Akkusativ → den Käse.",
+            "de": "Käse ist maskulin; brauchen + Akkusativ → den Käse.",
+            "en": "Käse is masculine; brauchen + accusative → den Käse."
+          }
+        },
+        {
+          "word": "Bahnhof",
+          "sentence": "A: Suchst du ___ Eingang? B: Ja, ich sehe ihn nicht.",
+          "options": [
+            "den",
+            "der",
+            "dem"
+          ],
+          "correct": "den",
+          "explanations": {
+            "tr": "Eingang maskulin Akkusativ: den Eingang.",
+            "de": "Eingang ist maskulin im Akkusativ: den Eingang.",
+            "en": "Eingang is masculine accusative: den Eingang."
+          }
+        },
+        {
+          "word": "Arzt",
+          "sentence": "A: Haben Sie ___ Termin? B: Ja, um 14 Uhr.",
+          "options": [
+            "einen",
+            "ein",
+            "einem"
+          ],
+          "correct": "einen",
+          "explanations": {
+            "tr": "Termin maskulin ve haben Akkusativ alır.",
+            "de": "Termin ist maskulin und haben verlangt Akkusativ.",
+            "en": "Termin is masculine and haben takes accusative."
+          }
+        },
+        {
+          "word": "Kleidung",
+          "sentence": "A: Wie findest du ___ Pullover? B: Sehr schön.",
+          "options": [
+            "den",
+            "der",
+            "dem"
+          ],
+          "correct": "den",
+          "explanations": {
+            "tr": "Pullover maskulin; finden + Akkusativ.",
+            "de": "Pullover ist maskulin; finden + Akkusativ.",
+            "en": "Pullover is masculine; finden + accusative."
+          }
+        },
+        {
+          "word": "Bibliothek",
+          "sentence": "A: Leihst du ___ Buch aus? B: Ja, für eine Woche.",
+          "options": [
+            "das",
+            "den",
+            "dem"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "Buch nötr: das Buch; Akkusativda değişmez.",
+            "de": "Buch ist Neutrum: das Buch; im Akkusativ unverändert.",
+            "en": "Buch is neuter: das Buch; unchanged in the accusative."
+          }
+        },
+        {
+          "word": "Hotel",
+          "sentence": "A: Wir brauchen noch ___ Zimmer für eine Nacht.",
+          "options": [
+            "ein",
+            "einen",
+            "einem"
+          ],
+          "correct": "ein",
+          "explanations": {
+            "tr": "Zimmer nötr: ein Zimmer.",
+            "de": "Zimmer ist Neutrum: ein Zimmer.",
+            "en": "Zimmer is neuter: ein Zimmer."
+          }
+        },
+        {
+          "word": "Familie",
+          "sentence": "A: Wen besuchst du am Sonntag? B: ___ Onkel.",
+          "options": [
+            "Meinen",
+            "Mein",
+            "Meinem"
+          ],
+          "correct": "Meinen",
+          "explanations": {
+            "tr": "Wen? sorusunun cevabı Akkusativ; Onkel maskulin: meinen Onkel.",
+            "de": "Die Antwort auf Wen? steht im Akkusativ; Onkel ist maskulin: meinen Onkel.",
+            "en": "The answer to Wen? is accusative; Onkel is masculine: meinen Onkel."
+          }
+        },
+        {
+          "word": "Büro",
+          "sentence": "A: Hast du einen Drucker? B: Nein, ich habe ___ Drucker.",
+          "options": [
+            "keinen",
+            "kein",
+            "keinem"
+          ],
+          "correct": "keinen",
+          "explanations": {
+            "tr": "Drucker maskulin Akkusativ: keinen Drucker.",
+            "de": "Drucker ist maskulin im Akkusativ: keinen Drucker.",
+            "en": "Drucker is masculine accusative: keinen Drucker."
+          }
+        },
+        {
+          "word": "Freizeit",
+          "sentence": "A: Was liest du gerade? B: ___ neuen Roman von Juli Zeh.",
+          "options": [
+            "Einen",
+            "Ein",
+            "Einem"
+          ],
+          "correct": "Einen",
+          "explanations": {
+            "tr": "Roman maskulin ve Was? sorusunun nesne cevabı: einen Roman.",
+            "de": "Roman ist maskulin und die Antwort ist ein Akkusativobjekt: einen Roman.",
+            "en": "Roman is masculine and the answer is an accusative object: einen Roman."
+          }
+        }
+      ]
+    },
+    {
+      "id": "schreiben-6",
+      "title": {
+        "tr": "Übung 6 – Akkusativ'i kendin yaz",
+        "de": "Übung 6 – Akkusativ selbst schreiben",
+        "en": "Exercise 6 – Write the accusative yourself"
+      },
+      "description": {
+        "tr": "Şık yok. Doğru artikel veya tam cümleyi kendin yaz.",
+        "de": "Keine Auswahl. Schreibe die richtige Artikelform oder den ganzen Satz selbst.",
+        "en": "No options. Type the correct article form or the complete sentence yourself."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "type": "text",
+          "word": "der Bus",
+          "sentence": "Ergänze nur den Artikel: Ich nehme ___ Bus zur Arbeit.",
+          "correct": "den",
+          "answers": [
+            "den"
+          ],
+          "explanations": {
+            "tr": "Bus maskulin Akkusativ: den.",
+            "de": "Bus ist maskulin im Akkusativ: den.",
+            "en": "Bus is masculine accusative: den."
+          }
+        },
+        {
+          "type": "text",
+          "word": "ein Kaffee",
+          "sentence": "Ergänze: Sie bestellt ___ Kaffee.",
+          "correct": "einen",
+          "answers": [
+            "einen"
+          ],
+          "explanations": {
+            "tr": "Kaffee maskulin: einen Kaffee.",
+            "de": "Kaffee ist maskulin: einen Kaffee.",
+            "en": "Kaffee is masculine: einen Kaffee."
+          }
+        },
+        {
+          "type": "text",
+          "word": "kein Termin",
+          "sentence": "Ergänze: Heute habe ich ___ Termin.",
+          "correct": "keinen",
+          "answers": [
+            "keinen"
+          ],
+          "explanations": {
+            "tr": "Termin maskulin Akkusativ: keinen.",
+            "de": "Termin ist maskulin im Akkusativ: keinen.",
+            "en": "Termin is masculine accusative: keinen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "mein Bruder",
+          "sentence": "Ergänze: Ich besuche morgen ___ Bruder.",
+          "correct": "meinen",
+          "answers": [
+            "meinen"
+          ],
+          "explanations": {
+            "tr": "Bruder maskulin Akkusativ: meinen Bruder.",
+            "de": "Bruder ist maskulin im Akkusativ: meinen Bruder.",
+            "en": "Bruder is masculine accusative: meinen Bruder."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Satz bilden",
+          "sentence": "Bilde den Satz: die Frau / einen neuen Laptop / kaufen",
+          "correct": "Die Frau kauft einen neuen Laptop.",
+          "answers": [
+            "die frau kauft einen neuen laptop",
+            "die frau kauft einen neuen laptop."
+          ],
+          "explanations": {
+            "tr": "Frau özne; Laptop maskulin Akkusativ: einen neuen Laptop.",
+            "de": "Frau ist Subjekt; Laptop ist maskulines Akkusativobjekt.",
+            "en": "Frau is the subject; Laptop is a masculine accusative object."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Satz bilden",
+          "sentence": "Bilde den Satz: wir / den Schlüssel / suchen",
+          "correct": "Wir suchen den Schlüssel.",
+          "answers": [
+            "wir suchen den schlüssel",
+            "wir suchen den schluessel"
+          ],
+          "explanations": {
+            "tr": "suchen Akkusativ alır; Schlüssel maskulin: den Schlüssel.",
+            "de": "suchen verlangt Akkusativ; Schlüssel ist maskulin: den Schlüssel.",
+            "en": "suchen takes accusative; Schlüssel is masculine: den Schlüssel."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Frage bilden",
+          "sentence": "Bilde eine Frage zur Person als Objekt: du / besuchen / dein Onkel",
+          "correct": "Wen besuchst du?",
+          "answers": [
+            "wen besuchst du",
+            "wen besuchst du?"
+          ],
+          "explanations": {
+            "tr": "Kişi nesne olarak sorulduğunda Wen? kullanılır.",
+            "de": "Nach einer Person als Objekt fragt man mit Wen?",
+            "en": "Use Wen? when asking about a person as the object."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Frage bilden",
+          "sentence": "Bilde eine Frage zur Sache: Anna / kaufen / ein Fahrrad",
+          "correct": "Was kauft Anna?",
+          "answers": [
+            "was kauft anna",
+            "was kauft anna?"
+          ],
+          "explanations": {
+            "tr": "Bir şey/nesne için Was? kullanılır.",
+            "de": "Nach einer Sache fragt man mit Was?",
+            "en": "Use Was? when asking about a thing."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Satz bilden",
+          "sentence": "Bilde den Satz: der Student / kein Drucker / haben",
+          "correct": "Der Student hat keinen Drucker.",
+          "answers": [
+            "der student hat keinen drucker",
+            "der student hat keinen drucker."
+          ],
+          "explanations": {
+            "tr": "Drucker maskulin Akkusativ; kein → keinen.",
+            "de": "Drucker ist maskulin im Akkusativ; kein → keinen.",
+            "en": "Drucker is masculine accusative; kein → keinen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Satz bilden",
+          "sentence": "Bilde den Satz: meine Eltern / unser neuer Nachbar / besuchen",
+          "correct": "Meine Eltern besuchen unseren neuen Nachbarn.",
+          "answers": [
+            "meine eltern besuchen unseren neuen nachbarn",
+            "meine eltern besuchen unseren neuen nachbarn."
+          ],
+          "explanations": {
+            "tr": "Nachbar maskulin Akkusativ; unser → unseren. Nachbar ayrıca zayıf isim olarak Nachbarn olur.",
+            "de": "Nachbar ist maskulin im Akkusativ; unser → unseren. Außerdem lautet die Form Nachbarn.",
+            "en": "Nachbar is masculine accusative; unser → unseren. The noun form is also Nachbarn."
+          }
+        }
+      ]
+    },
+    {
+      "id": "challenge-7",
+      "title": {
+        "tr": "Übung 7 – Akkusativ Challenge",
+        "de": "Übung 7 – Akkusativ-Challenge",
+        "en": "Exercise 7 – Accusative Challenge"
+      },
+      "description": {
+        "tr": "Artikel, nesne, Wen/Was, Negativartikel ve Possessivartikel karışık. Yardım tablosu yok.",
+        "de": "Artikel, Objekt, Wen/Was, Negativ- und Possessivartikel gemischt. Ohne Hilfstabelle.",
+        "en": "Mixed articles, objects, Wen/Was, negative and possessive articles. No helper table."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Kontext",
+          "sentence": "Der Zug kommt gleich. Ich finde ___ Fahrkarte nicht!",
+          "options": [
+            "meine",
+            "meinen",
+            "meiner"
+          ],
+          "correct": "meine",
+          "explanations": {
+            "tr": "Fahrkarte feminin Akkusativ: meine Fahrkarte.",
+            "de": "Fahrkarte ist feminin im Akkusativ: meine Fahrkarte.",
+            "en": "Fahrkarte is feminine accusative: meine Fahrkarte."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Kontext",
+          "sentence": "Ergänze: Für die Reise brauchen wir ___ großen Koffer. (ein)",
+          "correct": "einen",
+          "answers": [
+            "einen"
+          ],
+          "explanations": {
+            "tr": "Koffer maskulin Akkusativ: einen.",
+            "de": "Koffer ist maskulin im Akkusativ: einen.",
+            "en": "Koffer is masculine accusative: einen."
+          }
+        },
+        {
+          "word": "Wer/Wen",
+          "sentence": "___ ruft der Chef nach dem Meeting an? – Herrn Weber.",
+          "options": [
+            "Wen",
+            "Wer",
+            "Was"
+          ],
+          "correct": "Wen",
+          "explanations": {
+            "tr": "Herrn Weber kişi ve nesne olduğu için Wen?",
+            "de": "Herrn Weber ist eine Person als Objekt, deshalb Wen?",
+            "en": "Herrn Weber is a person as the object, so Wen?"
+          }
+        },
+        {
+          "type": "text",
+          "word": "Kontext",
+          "sentence": "Ergänze: Wir haben leider ___ freien Tisch mehr. (kein)",
+          "correct": "keinen",
+          "answers": [
+            "keinen"
+          ],
+          "explanations": {
+            "tr": "Tisch maskulin Akkusativ: keinen.",
+            "de": "Tisch ist maskulin im Akkusativ: keinen.",
+            "en": "Tisch is masculine accusative: keinen."
+          }
+        },
+        {
+          "word": "Nominativ/Akkusativ",
+          "sentence": "___ neue Kollege braucht ___ Firmenausweis.",
+          "options": [
+            "Der / einen",
+            "Den / ein",
+            "Einen / der"
+          ],
+          "correct": "Der / einen",
+          "explanations": {
+            "tr": "Kollege özne → der; Firmenausweis nesne ve maskulin → einen.",
+            "de": "Kollege ist Subjekt → der; Firmenausweis ist maskulines Objekt → einen.",
+            "en": "Kollege is the subject → der; Firmenausweis is a masculine object → einen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Satz",
+          "sentence": "Bilde den Satz: Lara / ihren alten Laptop / verkaufen",
+          "correct": "Lara verkauft ihren alten Laptop.",
+          "answers": [
+            "lara verkauft ihren alten laptop",
+            "lara verkauft ihren alten laptop."
+          ],
+          "explanations": {
+            "tr": "Laptop maskulin Akkusativ; ihr → ihren.",
+            "de": "Laptop ist maskulin im Akkusativ; ihr → ihren.",
+            "en": "Laptop is masculine accusative; ihr → ihren."
+          }
+        },
+        {
+          "word": "Kontext",
+          "sentence": "Ich mag die Wohnung, aber ich finde ___ Balkon sehr klein.",
+          "options": [
+            "den",
+            "der",
+            "dem"
+          ],
+          "correct": "den",
+          "explanations": {
+            "tr": "Balkon maskulin ve finden fiilinin nesnesi: den Balkon.",
+            "de": "Balkon ist maskulin und Objekt von finden: den Balkon.",
+            "en": "Balkon is masculine and the object of finden: den Balkon."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Frage",
+          "sentence": "Antwort: Ich besuche am Samstag meinen Großvater. Schreibe die Frage nach der Person.",
+          "correct": "Wen besuchst du am Samstag?",
+          "answers": [
+            "wen besuchst du am samstag",
+            "wen besuchst du am samstag?"
+          ],
+          "explanations": {
+            "tr": "Kişi nesne olarak soruluyor: Wen besuchst du ...?",
+            "de": "Nach der Person als Objekt fragt man: Wen besuchst du ...?",
+            "en": "Ask about the person as the object with: Wen besuchst du ...?"
+          }
+        },
+        {
+          "word": "Negation",
+          "sentence": "A: Kaufst du einen Drucker? B: Nein, ich brauche im Moment ___ Drucker.",
+          "options": [
+            "keinen",
+            "kein",
+            "keinem"
+          ],
+          "correct": "keinen",
+          "explanations": {
+            "tr": "Drucker maskulin Akkusativ; olumsuz artikel keinen.",
+            "de": "Drucker ist maskulin im Akkusativ; Negativartikel: keinen.",
+            "en": "Drucker is masculine accusative; negative article: keinen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Satz",
+          "sentence": "Bilde den Satz: die Ärztin / den Patienten / untersuchen",
+          "correct": "Die Ärztin untersucht den Patienten.",
+          "answers": [
+            "die ärztin untersucht den patienten",
+            "die aerztin untersucht den patienten"
+          ],
+          "explanations": {
+            "tr": "Ärztin özne; Patient maskulin Akkusativ: den Patienten.",
+            "de": "Ärztin ist Subjekt; Patient ist maskulines Akkusativobjekt: den Patienten.",
+            "en": "Ärztin is the subject; Patient is a masculine accusative object: den Patienten."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1250 @@
+{
+  "id": "praesens",
+  "level": "A1",
+  "title": {
+    "tr": "Präsens",
+    "de": "Präsens",
+    "en": "Present tense"
+  },
+  "description": {
+    "tr": "Düzenli ve kökü değişen fiilleri günlük cümlelerde doğru kişiyle çek; şıklı ve yazmalı alıştırmalarla pekiştir.",
+    "de": "Übe regelmäßige und stammwechselnde Verben im Präsens in Alltagssätzen.",
+    "en": "Practise regular and stem-changing verbs in the present tense in everyday sentences."
+  },
+  "lesson": {
+    "title": {
+      "tr": "Präsens – fiil çekimi ve kök değişimi",
+      "de": "Präsens – Konjugation und Stammwechsel",
+      "en": "Present tense – conjugation and stem changes"
+    },
+    "intro": {
+      "tr": "Präsens günlük rutinleri, genel durumları ve şu anda olan şeyleri anlatmak için kullanılır. Düzenli fiillerde kişi ekleri değişir; bazı güçlü fiillerde özellikle du ve er/sie/es ile fiil kökü de değişir.",
+      "de": "Das Präsens beschreibt Alltag, allgemeine Aussagen und Gegenwart. Bei regelmäßigen Verben ändern sich die Endungen; bei einigen starken Verben ändert sich zusätzlich der Stamm bei du und er/sie/es.",
+      "en": "The present tense is used for routines, general statements and the present. Regular verbs change their endings; some strong verbs also change their stem with du and er/sie/es."
+    },
+    "rules": [
+      {
+        "label": "Düzenli ekler",
+        "text": {
+          "tr": "ich -e · du -st · er/sie/es -t · wir -en · ihr -t · sie/Sie -en",
+          "de": "ich -e · du -st · er/sie/es -t · wir -en · ihr -t · sie/Sie -en",
+          "en": "ich -e · du -st · er/sie/es -t · wir -en · ihr -t · sie/Sie -en"
+        }
+      },
+      {
+        "label": "-d / -t kökleri",
+        "text": {
+          "tr": "arbeiten → du arbeitest, er arbeitet; reden → du redest.",
+          "de": "arbeiten → du arbeitest, er arbeitet; reden → du redest.",
+          "en": "arbeiten → du arbeitest, er arbeitet; reden → du redest."
+        }
+      },
+      {
+        "label": "e → i / ie",
+        "text": {
+          "tr": "sprechen → du sprichst; geben → er gibt; lesen → du liest; sehen → er sieht.",
+          "de": "sprechen → du sprichst; geben → er gibt; lesen → du liest; sehen → er sieht.",
+          "en": "sprechen → du sprichst; geben → er gibt; lesen → du liest; sehen → er sieht."
+        }
+      },
+      {
+        "label": "a → ä",
+        "text": {
+          "tr": "fahren → du fährst; schlafen → er schläft; tragen → sie trägt.",
+          "de": "fahren → du fährst; schlafen → er schläft; tragen → sie trägt.",
+          "en": "fahren → du fährst; schlafen → er schläft; tragen → sie trägt."
+        }
+      }
+    ],
+    "examples": [
+      "Ich arbeite heute zu Hause. — Bugün evden çalışıyorum.",
+      "Du sprichst sehr gut Deutsch. — Çok iyi Almanca konuşuyorsun.",
+      "Er fährt jeden Morgen mit dem Bus. — Her sabah otobüsle gidiyor.",
+      "Wir lesen im Kurs einen kurzen Text. — Derste kısa bir metin okuyoruz."
+    ],
+    "tip": {
+      "tr": "Kök değişimi genellikle yalnızca du ve er/sie/es biçimlerinde olur. wir, ihr ve sie/Sie çoğu zaman normal kökle devam eder.",
+      "de": "Der Stammwechsel betrifft meistens nur du und er/sie/es. Bei wir, ihr und sie/Sie bleibt der Stamm meist unverändert.",
+      "en": "Stem changes usually affect only du and er/sie/es. With wir, ihr and sie/Sie the original stem usually remains."
+    }
+  },
+  "exercises": [
+    {
+      "id": "regelmaessig-1",
+      "title": {
+        "tr": "Übung 1 – Düzenli fiiller bağlamda",
+        "de": "Übung 1 – Regelmäßige Verben im Kontext",
+        "en": "Exercise 1 – Regular verbs in context"
+      },
+      "description": {
+        "tr": "Özneye göre doğru eki seç; arbeiten, reden gibi özel yazım durumlarına dikkat et.",
+        "de": "Wähle die richtige Endung und achte auf Verben wie arbeiten und reden.",
+        "en": "Choose the correct ending and watch verbs such as arbeiten and reden."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Intermediate"
+      },
+      "questions": [
+        {
+          "word": "arbeiten",
+          "sentence": "Meine Schwester ___ seit einem Monat in einer Bäckerei.",
+          "options": [
+            "arbeitet",
+            "arbeitst",
+            "arbeiten"
+          ],
+          "correct": "arbeitet",
+          "explanations": {
+            "tr": "Meine Schwester = sie. arbeiten fiilinde er/sie/es → arbeitet.",
+            "de": "Meine Schwester = sie. arbeiten fiilinde er/sie/es → arbeitet.",
+            "en": "Meine Schwester = sie. arbeiten fiilinde er/sie/es → arbeitet."
+          }
+        },
+        {
+          "word": "wohnen",
+          "sentence": "Wo ___ ihr jetzt – noch in Essen oder schon in Duisburg?",
+          "options": [
+            "wohnt",
+            "wohnst",
+            "wohnen"
+          ],
+          "correct": "wohnt",
+          "explanations": {
+            "tr": "ihr ile düzenli fiil eki -t: ihr wohnt.",
+            "de": "ihr ile düzenli fiil eki -t: ihr wohnt.",
+            "en": "ihr ile düzenli fiil eki -t: ihr wohnt."
+          }
+        },
+        {
+          "word": "lernen",
+          "sentence": "Ich ___ jeden Abend ungefähr dreißig Minuten Deutsch.",
+          "options": [
+            "lerne",
+            "lernt",
+            "lernst"
+          ],
+          "correct": "lerne",
+          "explanations": {
+            "tr": "ich ile düzenli fiil eki -e: ich lerne.",
+            "de": "ich ile düzenli fiil eki -e: ich lerne.",
+            "en": "ich ile düzenli fiil eki -e: ich lerne."
+          }
+        },
+        {
+          "word": "machen",
+          "sentence": "Was ___ du normalerweise nach dem Unterricht?",
+          "options": [
+            "machst",
+            "macht",
+            "machen"
+          ],
+          "correct": "machst",
+          "explanations": {
+            "tr": "du ile -st: du machst.",
+            "de": "du ile -st: du machst.",
+            "en": "du ile -st: du machst."
+          }
+        },
+        {
+          "word": "antworten",
+          "sentence": "Warum ___ Herr Klein nicht auf meine E-Mail?",
+          "options": [
+            "antwortet",
+            "antwortst",
+            "antworten"
+          ],
+          "correct": "antwortet",
+          "explanations": {
+            "tr": "Herr Klein = er. antworten kökü -t ile bittiği için: antwortet.",
+            "de": "Herr Klein = er. antworten kökü -t ile bittiği için: antwortet.",
+            "en": "Herr Klein = er. antworten kökü -t ile bittiği için: antwortet."
+          }
+        },
+        {
+          "word": "reden",
+          "sentence": "Ihr ___ im Unterricht heute ungewöhnlich leise.",
+          "options": [
+            "redet",
+            "reden",
+            "redest"
+          ],
+          "correct": "redet",
+          "explanations": {
+            "tr": "ihr + reden → ihr redet.",
+            "de": "ihr + reden → ihr redet.",
+            "en": "ihr + reden → ihr redet."
+          }
+        },
+        {
+          "word": "brauchen",
+          "sentence": "Wir ___ für die Aufgabe noch ein Wörterbuch.",
+          "options": [
+            "brauchen",
+            "braucht",
+            "brauchst"
+          ],
+          "correct": "brauchen",
+          "explanations": {
+            "tr": "wir ile infinitiv biçimi kullanılır: wir brauchen.",
+            "de": "wir ile infinitiv biçimi kullanılır: wir brauchen.",
+            "en": "wir ile infinitiv biçimi kullanılır: wir brauchen."
+          }
+        },
+        {
+          "word": "kaufen",
+          "sentence": "Tom und Lena ___ die Fahrkarten online.",
+          "options": [
+            "kaufen",
+            "kauft",
+            "kaufst"
+          ],
+          "correct": "kaufen",
+          "explanations": {
+            "tr": "Tom und Lena = sie çoğul → kaufen.",
+            "de": "Tom und Lena = sie çoğul → kaufen.",
+            "en": "Tom und Lena = sie çoğul → kaufen."
+          }
+        },
+        {
+          "word": "studieren",
+          "sentence": "Was ___ deine Freundin an der Universität?",
+          "options": [
+            "studiert",
+            "studierst",
+            "studieren"
+          ],
+          "correct": "studiert",
+          "explanations": {
+            "tr": "deine Freundin = sie → studiert.",
+            "de": "deine Freundin = sie → studiert.",
+            "en": "deine Freundin = sie → studiert."
+          }
+        },
+        {
+          "word": "fragen",
+          "sentence": "Wenn ich etwas nicht verstehe, ___ ich die Lehrerin.",
+          "options": [
+            "frage",
+            "fragt",
+            "fragst"
+          ],
+          "correct": "frage",
+          "explanations": {
+            "tr": "ich + fragen → ich frage.",
+            "de": "ich + fragen → ich frage.",
+            "en": "ich + fragen → ich frage."
+          }
+        }
+      ]
+    },
+    {
+      "id": "endungen-2",
+      "title": {
+        "tr": "Übung 2 – Zor ekler ve yazım",
+        "de": "Übung 2 – Endungen und Schreibregeln",
+        "en": "Exercise 2 – Endings and spelling"
+      },
+      "description": {
+        "tr": "-d/-t ile biten köklerde ve heißen gibi fiillerde doğru yazımı seç.",
+        "de": "Achte auf Verbstämme mit -d/-t und auf Formen wie heißen.",
+        "en": "Focus on stems ending in -d/-t and forms such as heißen."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Intermediate"
+      },
+      "questions": [
+        {
+          "word": "arbeiten",
+          "sentence": "Du ___ diese Woche jeden Tag bis 18 Uhr.",
+          "options": [
+            "arbeitest",
+            "arbeitst",
+            "arbeitet"
+          ],
+          "correct": "arbeitest",
+          "explanations": {
+            "tr": "arbeiten: du biçiminde telaffuzu kolaylaştırmak için -est gelir: arbeitest.",
+            "de": "arbeiten: du biçiminde telaffuzu kolaylaştırmak için -est gelir: arbeitest.",
+            "en": "arbeiten: du biçiminde telaffuzu kolaylaştırmak için -est gelir: arbeitest."
+          }
+        },
+        {
+          "word": "finden",
+          "sentence": "Wie ___ ihr den neuen Deutschkurs?",
+          "options": [
+            "findet",
+            "finden",
+            "findest"
+          ],
+          "correct": "findet",
+          "explanations": {
+            "tr": "ihr + finden → findet.",
+            "de": "ihr + finden → findet.",
+            "en": "ihr + finden → findet."
+          }
+        },
+        {
+          "word": "baden",
+          "sentence": "Das Kind ___ im Sommer fast jeden Tag im See.",
+          "options": [
+            "badet",
+            "badt",
+            "baden"
+          ],
+          "correct": "badet",
+          "explanations": {
+            "tr": "baden kökü -d ile biter; er/sie/es → badet.",
+            "de": "baden kökü -d ile biter; er/sie/es → badet.",
+            "en": "baden kökü -d ile biter; er/sie/es → badet."
+          }
+        },
+        {
+          "word": "warten",
+          "sentence": "Wir ___ schon seit zwanzig Minuten auf den Bus.",
+          "options": [
+            "warten",
+            "wartet",
+            "wartest"
+          ],
+          "correct": "warten",
+          "explanations": {
+            "tr": "wir → warten.",
+            "de": "wir → warten.",
+            "en": "wir → warten."
+          }
+        },
+        {
+          "word": "reden",
+          "sentence": "Du ___ sehr schnell, wenn du nervös bist.",
+          "options": [
+            "redest",
+            "redst",
+            "redet"
+          ],
+          "correct": "redest",
+          "explanations": {
+            "tr": "reden → du redest.",
+            "de": "reden → du redest.",
+            "en": "reden → du redest."
+          }
+        },
+        {
+          "word": "heißen",
+          "sentence": "Wie ___ du mit Nachnamen?",
+          "options": [
+            "heißt",
+            "heißst",
+            "heißen"
+          ],
+          "correct": "heißt",
+          "explanations": {
+            "tr": "heißen fiilinde du biçimi heißt olur; ekstra -s eklenmez.",
+            "de": "heißen fiilinde du biçimi heißt olur; ekstra -s eklenmez.",
+            "en": "heißen fiilinde du biçimi heißt olur; ekstra -s eklenmez."
+          }
+        },
+        {
+          "word": "heißen",
+          "sentence": "Der neue Kollege ___ Martin Schuster.",
+          "options": [
+            "heißt",
+            "heißest",
+            "heißen"
+          ],
+          "correct": "heißt",
+          "explanations": {
+            "tr": "er → heißt.",
+            "de": "er → heißt.",
+            "en": "er → heißt."
+          }
+        },
+        {
+          "word": "öffnen",
+          "sentence": "Wann ___ das Geschäft am Samstag?",
+          "options": [
+            "öffnet",
+            "öffnen",
+            "öffnest"
+          ],
+          "correct": "öffnet",
+          "explanations": {
+            "tr": "das Geschäft = es → öffnet.",
+            "de": "das Geschäft = es → öffnet.",
+            "en": "das Geschäft = es → öffnet."
+          }
+        },
+        {
+          "word": "rechnen",
+          "sentence": "Ihr ___ die Aufgabe zuerst ohne Taschenrechner.",
+          "options": [
+            "rechnet",
+            "rechnen",
+            "rechnest"
+          ],
+          "correct": "rechnet",
+          "explanations": {
+            "tr": "ihr → rechnet.",
+            "de": "ihr → rechnet.",
+            "en": "ihr → rechnet."
+          }
+        },
+        {
+          "word": "zeichnen",
+          "sentence": "Meine Tochter ___ gern Tiere und Häuser.",
+          "options": [
+            "zeichnet",
+            "zeichnen",
+            "zeichnest"
+          ],
+          "correct": "zeichnet",
+          "explanations": {
+            "tr": "meine Tochter = sie → zeichnet.",
+            "de": "meine Tochter = sie → zeichnet.",
+            "en": "meine Tochter = sie → zeichnet."
+          }
+        }
+      ]
+    },
+    {
+      "id": "stammwechsel-3",
+      "title": {
+        "tr": "Übung 3 – Kökü değişen fiiller",
+        "de": "Übung 3 – Verben mit Stammwechsel",
+        "en": "Exercise 3 – Stem-changing verbs"
+      },
+      "description": {
+        "tr": "du ve er/sie/es biçimlerinde e→i/ie ve a→ä değişimlerini bağlam içinde çöz.",
+        "de": "Übe e→i/ie und a→ä bei du und er/sie/es.",
+        "en": "Practise e→i/ie and a→ä changes with du and er/sie/es."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel–Schwer",
+        "en": "Intermediate–Hard"
+      },
+      "questions": [
+        {
+          "word": "fahren",
+          "sentence": "Wie ___ du normalerweise zur Arbeit?",
+          "options": [
+            "fährst",
+            "fahrst",
+            "fahrt"
+          ],
+          "correct": "fährst",
+          "explanations": {
+            "tr": "fahren: du → fährst (a→ä).",
+            "de": "fahren: du → fährst (a→ä).",
+            "en": "fahren: du → fährst (a→ä)."
+          }
+        },
+        {
+          "word": "sprechen",
+          "sentence": "Im Büro ___ er meistens Deutsch mit seinen Kollegen.",
+          "options": [
+            "spricht",
+            "sprecht",
+            "sprechen"
+          ],
+          "correct": "spricht",
+          "explanations": {
+            "tr": "sprechen: er → spricht (e→i).",
+            "de": "sprechen: er → spricht (e→i).",
+            "en": "sprechen: er → spricht (e→i)."
+          }
+        },
+        {
+          "word": "lesen",
+          "sentence": "Meine Mutter ___ jeden Morgen die Nachrichten auf dem Handy.",
+          "options": [
+            "liest",
+            "lest",
+            "lesen"
+          ],
+          "correct": "liest",
+          "explanations": {
+            "tr": "lesen: sie → liest (e→ie).",
+            "de": "lesen: sie → liest (e→ie).",
+            "en": "lesen: sie → liest (e→ie)."
+          }
+        },
+        {
+          "word": "geben",
+          "sentence": "Warum ___ du mir nicht gleich Bescheid?",
+          "options": [
+            "gibst",
+            "gebst",
+            "gibt"
+          ],
+          "correct": "gibst",
+          "explanations": {
+            "tr": "geben: du → gibst.",
+            "de": "geben: du → gibst.",
+            "en": "geben: du → gibst."
+          }
+        },
+        {
+          "word": "nehmen",
+          "sentence": "Paul ___ für den Weg zur Uni meistens die Straßenbahn.",
+          "options": [
+            "nimmt",
+            "nehmt",
+            "nehmen"
+          ],
+          "correct": "nimmt",
+          "explanations": {
+            "tr": "nehmen: er → nimmt.",
+            "de": "nehmen: er → nimmt.",
+            "en": "nehmen: er → nimmt."
+          }
+        },
+        {
+          "word": "sehen",
+          "sentence": "___ du das Schild dort an der Ecke?",
+          "options": [
+            "Siehst",
+            "Sehst",
+            "Seht"
+          ],
+          "correct": "Siehst",
+          "explanations": {
+            "tr": "sehen: du → siehst.",
+            "de": "sehen: du → siehst.",
+            "en": "sehen: du → siehst."
+          }
+        },
+        {
+          "word": "schlafen",
+          "sentence": "Das Baby ___ heute ungewöhnlich lange.",
+          "options": [
+            "schläft",
+            "schlaft",
+            "schlafen"
+          ],
+          "correct": "schläft",
+          "explanations": {
+            "tr": "schlafen: es → schläft (a→ä).",
+            "de": "schlafen: es → schläft (a→ä).",
+            "en": "schlafen: es → schläft (a→ä)."
+          }
+        },
+        {
+          "word": "tragen",
+          "sentence": "Heute ___ Anna eine schwarze Jacke und weiße Schuhe.",
+          "options": [
+            "trägt",
+            "tragt",
+            "tragen"
+          ],
+          "correct": "trägt",
+          "explanations": {
+            "tr": "tragen: sie → trägt.",
+            "de": "tragen: sie → trägt.",
+            "en": "tragen: sie → trägt."
+          }
+        },
+        {
+          "word": "helfen",
+          "sentence": "Warum ___ du deinem Bruder nicht bei den Hausaufgaben?",
+          "options": [
+            "hilfst",
+            "helfst",
+            "helft"
+          ],
+          "correct": "hilfst",
+          "explanations": {
+            "tr": "helfen: du → hilfst (e→i).",
+            "de": "helfen: du → hilfst (e→i).",
+            "en": "helfen: du → hilfst (e→i)."
+          }
+        },
+        {
+          "word": "fallen",
+          "sentence": "Pass auf! Das Glas ___ gleich vom Tisch.",
+          "options": [
+            "fällt",
+            "fallt",
+            "fallen"
+          ],
+          "correct": "fällt",
+          "explanations": {
+            "tr": "fallen: es → fällt (a→ä).",
+            "de": "fallen: es → fällt (a→ä).",
+            "en": "fallen: es → fällt (a→ä)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "dialoge-4",
+      "title": {
+        "tr": "Übung 4 – Günlük diyaloglar",
+        "de": "Übung 4 – Alltagsdialoge",
+        "en": "Exercise 4 – Everyday dialogues"
+      },
+      "description": {
+        "tr": "Fiili sadece özneye değil, kısa diyaloğun anlamına göre de seç.",
+        "de": "Wähle die Form anhand von Subjekt und Dialogkontext.",
+        "en": "Choose the form using both the subject and dialogue context."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel–Schwer",
+        "en": "Intermediate–Hard"
+      },
+      "questions": [
+        {
+          "word": "wissen",
+          "sentence": "A: Wo ist Raum 204? B: Tut mir leid, ich ___ es auch nicht.",
+          "options": [
+            "weiß",
+            "wisse",
+            "weißt"
+          ],
+          "correct": "weiß",
+          "explanations": {
+            "tr": "wissen fiilinin ich biçimi weiß.",
+            "de": "wissen fiilinin ich biçimi weiß.",
+            "en": "wissen fiilinin ich biçimi weiß."
+          }
+        },
+        {
+          "word": "werden",
+          "sentence": "A: Wann ___ du 18? B: Im Dezember.",
+          "options": [
+            "wirst",
+            "werdest",
+            "wird"
+          ],
+          "correct": "wirst",
+          "explanations": {
+            "tr": "werden: du → wirst.",
+            "de": "werden: du → wirst.",
+            "en": "werden: du → wirst."
+          }
+        },
+        {
+          "word": "mögen",
+          "sentence": "A: ___ dein Bruder eigentlich Kaffee? B: Nein, lieber Tee.",
+          "options": [
+            "Mag",
+            "Mögt",
+            "Mögen"
+          ],
+          "correct": "Mag",
+          "explanations": {
+            "tr": "mögen: er → mag.",
+            "de": "mögen: er → mag.",
+            "en": "mögen: er → mag."
+          }
+        },
+        {
+          "word": "laufen",
+          "sentence": "A: Der Bus kommt erst in 20 Minuten. B: Dann ___ ich lieber zu Fuß.",
+          "options": [
+            "laufe",
+            "läufst",
+            "läuft"
+          ],
+          "correct": "laufe",
+          "explanations": {
+            "tr": "ich biçiminde kök değişmez: ich laufe.",
+            "de": "ich biçiminde kök değişmez: ich laufe.",
+            "en": "ich biçiminde kök değişmez: ich laufe."
+          }
+        },
+        {
+          "word": "halten",
+          "sentence": "A: Was ___ du von dem neuen Kurs? B: Ich finde ihn interessant.",
+          "options": [
+            "hältst",
+            "haltest",
+            "haltet"
+          ],
+          "correct": "hältst",
+          "explanations": {
+            "tr": "halten: du → hältst.",
+            "de": "halten: du → hältst.",
+            "en": "halten: du → hältst."
+          }
+        },
+        {
+          "word": "essen",
+          "sentence": "A: Was macht Lara? B: Sie ___ gerade ihr Mittagessen.",
+          "options": [
+            "isst",
+            "esst",
+            "essen"
+          ],
+          "correct": "isst",
+          "explanations": {
+            "tr": "essen: sie → isst.",
+            "de": "essen: sie → isst.",
+            "en": "essen: sie → isst."
+          }
+        },
+        {
+          "word": "treffen",
+          "sentence": "A: Wen ___ du heute Abend? B: Zwei Freunde aus dem Sprachkurs.",
+          "options": [
+            "triffst",
+            "treffst",
+            "trifft"
+          ],
+          "correct": "triffst",
+          "explanations": {
+            "tr": "treffen: du → triffst.",
+            "de": "treffen: du → triffst.",
+            "en": "treffen: du → triffst."
+          }
+        },
+        {
+          "word": "waschen",
+          "sentence": "A: Warum ist deine Jacke nass? B: Ich ___ sie gerade.",
+          "options": [
+            "wasche",
+            "wäschst",
+            "wäscht"
+          ],
+          "correct": "wasche",
+          "explanations": {
+            "tr": "ich biçiminde kök değişimi yok: ich wasche.",
+            "de": "ich biçiminde kök değişimi yok: ich wasche.",
+            "en": "ich biçiminde kök değişimi yok: ich wasche."
+          }
+        },
+        {
+          "word": "vergessen",
+          "sentence": "A: Wo ist dein Schlüssel? B: Ich ___ ihn ständig irgendwo.",
+          "options": [
+            "vergesse",
+            "vergisst",
+            "vergesst"
+          ],
+          "correct": "vergesse",
+          "explanations": {
+            "tr": "ich biçimi vergesse; kök değişimi du/er-sie-es biçimlerinde olur.",
+            "de": "ich biçimi vergesse; kök değişimi du/er-sie-es biçimlerinde olur.",
+            "en": "ich biçimi vergesse; kök değişimi du/er-sie-es biçimlerinde olur."
+          }
+        },
+        {
+          "word": "genießen",
+          "sentence": "A: Wie ist dein Urlaub? B: Super, wir ___ jeden Tag am Meer.",
+          "options": [
+            "genießen",
+            "genießt",
+            "genießst"
+          ],
+          "correct": "genießen",
+          "explanations": {
+            "tr": "wir → genießen.",
+            "de": "wir → genießen.",
+            "en": "wir → genießen."
+          }
+        }
+      ]
+    },
+    {
+      "id": "schreiben-5",
+      "title": {
+        "tr": "Übung 5 – Fiili kendin çek",
+        "de": "Übung 5 – Verbformen selbst schreiben",
+        "en": "Exercise 5 – Type the verb form"
+      },
+      "description": {
+        "tr": "Şık yok: parantezdeki fiilin doğru Präsens biçimini kendin yaz.",
+        "de": "Keine Auswahl: Schreibe die richtige Präsensform selbst.",
+        "en": "No options: type the correct present-tense form yourself."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "type": "text",
+          "word": "sprechen",
+          "sentence": "Du ___ im Unterricht schon sehr viel Deutsch. (sprechen)",
+          "correct": "sprichst",
+          "answers": [
+            "sprichst"
+          ],
+          "explanations": {
+            "tr": "sprechen: du → sprichst.",
+            "de": "sprechen: du → sprichst.",
+            "en": "sprechen: du → sprichst."
+          }
+        },
+        {
+          "type": "text",
+          "word": "arbeiten",
+          "sentence": "Mein Vater ___ heute von zu Hause. (arbeiten)",
+          "correct": "arbeitet",
+          "answers": [
+            "arbeitet"
+          ],
+          "explanations": {
+            "tr": "mein Vater = er; arbeiten → arbeitet.",
+            "de": "mein Vater = er; arbeiten → arbeitet.",
+            "en": "mein Vater = er; arbeiten → arbeitet."
+          }
+        },
+        {
+          "type": "text",
+          "word": "fahren",
+          "sentence": "Wann ___ ihr morgen nach Köln? (fahren)",
+          "correct": "fahrt",
+          "answers": [
+            "fahrt"
+          ],
+          "explanations": {
+            "tr": "Önemli: kök değişimi ihr biçiminde olmaz. ihr fahrt.",
+            "de": "Önemli: kök değişimi ihr biçiminde olmaz. ihr fahrt.",
+            "en": "Önemli: kök değişimi ihr biçiminde olmaz. ihr fahrt."
+          }
+        },
+        {
+          "type": "text",
+          "word": "lesen",
+          "sentence": "Wir ___ im Kurs einen kurzen Text. (lesen)",
+          "correct": "lesen",
+          "answers": [
+            "lesen"
+          ],
+          "explanations": {
+            "tr": "wir biçiminde kök değişmez: wir lesen.",
+            "de": "wir biçiminde kök değişmez: wir lesen.",
+            "en": "wir biçiminde kök değişmez: wir lesen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "nehmen",
+          "sentence": "Warum ___ du nicht den früheren Zug? (nehmen)",
+          "correct": "nimmst",
+          "answers": [
+            "nimmst"
+          ],
+          "explanations": {
+            "tr": "nehmen: du → nimmst.",
+            "de": "nehmen: du → nimmst.",
+            "en": "nehmen: du → nimmst."
+          }
+        },
+        {
+          "type": "text",
+          "word": "tragen",
+          "sentence": "Welche Schuhe ___ deine Schwester heute? (tragen)",
+          "correct": "trägt",
+          "answers": [
+            "trägt",
+            "tragt"
+          ],
+          "explanations": {
+            "tr": "deine Schwester = sie → trägt.",
+            "de": "deine Schwester = sie → trägt.",
+            "en": "deine Schwester = sie → trägt."
+          }
+        },
+        {
+          "type": "text",
+          "word": "antworten",
+          "sentence": "Die Lehrerin ___ auf jede Frage sehr geduldig. (antworten)",
+          "correct": "antwortet",
+          "answers": [
+            "antwortet"
+          ],
+          "explanations": {
+            "tr": "die Lehrerin = sie; antworten → antwortet.",
+            "de": "die Lehrerin = sie; antworten → antwortet.",
+            "en": "die Lehrerin = sie; antworten → antwortet."
+          }
+        },
+        {
+          "type": "text",
+          "word": "sehen",
+          "sentence": "Was ___ ihr von eurem Platz aus? (sehen)",
+          "correct": "seht",
+          "answers": [
+            "seht"
+          ],
+          "explanations": {
+            "tr": "ihr biçiminde kök değişmez: ihr seht.",
+            "de": "ihr biçiminde kök değişmez: ihr seht.",
+            "en": "ihr biçiminde kök değişmez: ihr seht."
+          }
+        },
+        {
+          "type": "text",
+          "word": "helfen",
+          "sentence": "Mein Bruder ___ mir oft beim Kochen. (helfen)",
+          "correct": "hilft",
+          "answers": [
+            "hilft"
+          ],
+          "explanations": {
+            "tr": "mein Bruder = er; helfen → hilft.",
+            "de": "mein Bruder = er; helfen → hilft.",
+            "en": "mein Bruder = er; helfen → hilft."
+          }
+        },
+        {
+          "type": "text",
+          "word": "heißen",
+          "sentence": "Wie ___ Ihre neue Kollegin? (heißen)",
+          "correct": "heißt",
+          "answers": [
+            "heißt",
+            "heisst"
+          ],
+          "explanations": {
+            "tr": "Ihre neue Kollegin = sie; heißen → heißt.",
+            "de": "Ihre neue Kollegin = sie; heißen → heißt.",
+            "en": "Ihre neue Kollegin = sie; heißen → heißt."
+          }
+        }
+      ]
+    },
+    {
+      "id": "saetze-bilden-6",
+      "title": {
+        "tr": "Übung 6 – Cümleyi kendin kur",
+        "de": "Übung 6 – Sätze selbst bilden",
+        "en": "Exercise 6 – Build the sentence"
+      },
+      "description": {
+        "tr": "Verilen kelimelerle doğru fiil çekimini ve temel cümle sırasını kendin oluştur.",
+        "de": "Bilde selbst Sätze mit richtiger Verbform und Wortstellung.",
+        "en": "Build sentences with the correct verb form and basic word order."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "type": "text",
+          "word": "arbeiten",
+          "sentence": "Bilde den Satz: meine Mutter / jeden Montag / im Büro / arbeiten",
+          "correct": "Meine Mutter arbeitet jeden Montag im Büro.",
+          "answers": [
+            "meine mutter arbeitet jeden montag im büro",
+            "meine mutter arbeitet jeden montag im buero"
+          ],
+          "explanations": {
+            "tr": "Özne meine Mutter = sie; arbeiten → arbeitet.",
+            "de": "Özne meine Mutter = sie; arbeiten → arbeitet.",
+            "en": "Özne meine Mutter = sie; arbeiten → arbeitet."
+          }
+        },
+        {
+          "type": "text",
+          "word": "fahren",
+          "sentence": "Bilde eine Frage: du / morgen / mit dem Zug / fahren",
+          "correct": "Fährst du morgen mit dem Zug?",
+          "answers": [
+            "fährst du morgen mit dem zug",
+            "fahrst du morgen mit dem zug"
+          ],
+          "explanations": {
+            "tr": "Evet/hayır sorusunda çekimli fiil başa gelir: Fährst du ...?",
+            "de": "Evet/hayır sorusunda çekimli fiil başa gelir: Fährst du ...?",
+            "en": "Evet/hayır sorusunda çekimli fiil başa gelir: Fährst du ...?"
+          }
+        },
+        {
+          "type": "text",
+          "word": "sprechen",
+          "sentence": "Bilde den Satz: er / mit seiner Chefin / Deutsch / sprechen",
+          "correct": "Er spricht mit seiner Chefin Deutsch.",
+          "answers": [
+            "er spricht mit seiner chefin deutsch"
+          ],
+          "explanations": {
+            "tr": "er + sprechen → spricht.",
+            "de": "er + sprechen → spricht.",
+            "en": "er + sprechen → spricht."
+          }
+        },
+        {
+          "type": "text",
+          "word": "lesen",
+          "sentence": "Bilde eine Frage: was / deine Schwester / am Abend / lesen",
+          "correct": "Was liest deine Schwester am Abend?",
+          "answers": [
+            "was liest deine schwester am abend"
+          ],
+          "explanations": {
+            "tr": "W-soru: Was + çekimli fiil + özne; lesen → liest.",
+            "de": "W-soru: Was + çekimli fiil + özne; lesen → liest.",
+            "en": "W-soru: Was + çekimli fiil + özne; lesen → liest."
+          }
+        },
+        {
+          "type": "text",
+          "word": "nehmen",
+          "sentence": "Bilde den Satz: wir / heute / den Bus / nehmen",
+          "correct": "Wir nehmen heute den Bus.",
+          "answers": [
+            "wir nehmen heute den bus"
+          ],
+          "explanations": {
+            "tr": "wir biçiminde nehmen değişmez.",
+            "de": "wir biçiminde nehmen değişmez.",
+            "en": "wir biçiminde nehmen değişmez."
+          }
+        },
+        {
+          "type": "text",
+          "word": "sehen",
+          "sentence": "Bilde eine Frage: ihr / das Gebäude dort / sehen",
+          "correct": "Seht ihr das Gebäude dort?",
+          "answers": [
+            "seht ihr das gebäude dort",
+            "seht ihr das gebaude dort"
+          ],
+          "explanations": {
+            "tr": "ihr + sehen → seht.",
+            "de": "ihr + sehen → seht.",
+            "en": "ihr + sehen → seht."
+          }
+        },
+        {
+          "type": "text",
+          "word": "helfen",
+          "sentence": "Bilde den Satz: du / deinem Freund / bei der Aufgabe / helfen",
+          "correct": "Du hilfst deinem Freund bei der Aufgabe.",
+          "answers": [
+            "du hilfst deinem freund bei der aufgabe"
+          ],
+          "explanations": {
+            "tr": "du + helfen → hilfst.",
+            "de": "du + helfen → hilfst.",
+            "en": "du + helfen → hilfst."
+          }
+        },
+        {
+          "type": "text",
+          "word": "tragen",
+          "sentence": "Bilde den Satz: Lisa / heute / einen roten Mantel / tragen",
+          "correct": "Lisa trägt heute einen roten Mantel.",
+          "answers": [
+            "lisa trägt heute einen roten mantel",
+            "lisa tragt heute einen roten mantel"
+          ],
+          "explanations": {
+            "tr": "Lisa = sie; tragen → trägt.",
+            "de": "Lisa = sie; tragen → trägt.",
+            "en": "Lisa = sie; tragen → trägt."
+          }
+        },
+        {
+          "type": "text",
+          "word": "wissen",
+          "sentence": "Bilde den Satz: ich / die Antwort / nicht / wissen",
+          "correct": "Ich weiß die Antwort nicht.",
+          "answers": [
+            "ich weiß die antwort nicht",
+            "ich weiss die antwort nicht"
+          ],
+          "explanations": {
+            "tr": "wissen fiilinin ich biçimi weiß.",
+            "de": "wissen fiilinin ich biçimi weiß.",
+            "en": "wissen fiilinin ich biçimi weiß."
+          }
+        },
+        {
+          "type": "text",
+          "word": "werden",
+          "sentence": "Bilde eine Frage: wann / dein Bruder / 18 Jahre alt / werden",
+          "correct": "Wann wird dein Bruder 18 Jahre alt?",
+          "answers": [
+            "wann wird dein bruder 18 jahre alt"
+          ],
+          "explanations": {
+            "tr": "dein Bruder = er; werden → wird.",
+            "de": "dein Bruder = er; werden → wird.",
+            "en": "dein Bruder = er; werden → wird."
+          }
+        }
+      ]
+    },
+    {
+      "id": "challenge-7",
+      "title": {
+        "tr": "Übung 7 – Präsens Challenge",
+        "de": "Übung 7 – Präsens-Challenge",
+        "en": "Exercise 7 – Present Tense Challenge"
+      },
+      "description": {
+        "tr": "Yardım tablosu olmadan düzenli, yazımı özel ve kökü değişen fiilleri karışık çöz.",
+        "de": "Ohne Hilfstabelle: regelmäßige, besondere und stammwechselnde Verben gemischt.",
+        "en": "No helper table: solve a mixture of regular, spelling-sensitive and stem-changing verbs."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "fahren",
+          "sentence": "Normalerweise ___ Lea mit dem Fahrrad, aber heute nimmt sie den Bus.",
+          "options": [
+            "fährt",
+            "fahrt",
+            "fahren"
+          ],
+          "correct": "fährt",
+          "explanations": {
+            "tr": "Lea = sie; fahren → fährt.",
+            "de": "Lea = sie; fahren → fährt.",
+            "en": "Lea = sie; fahren → fährt."
+          }
+        },
+        {
+          "type": "text",
+          "word": "geben",
+          "sentence": "Ergänze: Warum ___ du mir nie eine klare Antwort? (geben)",
+          "correct": "gibst",
+          "answers": [
+            "gibst"
+          ],
+          "explanations": {
+            "tr": "geben: du → gibst.",
+            "de": "geben: du → gibst.",
+            "en": "geben: du → gibst."
+          }
+        },
+        {
+          "word": "arbeiten",
+          "sentence": "Wenn Max Frühschicht hat, ___ er schon um sechs Uhr.",
+          "options": [
+            "arbeitet",
+            "arbeitst",
+            "arbeiten"
+          ],
+          "correct": "arbeitet",
+          "explanations": {
+            "tr": "Max = er; arbeiten → arbeitet.",
+            "de": "Max = er; arbeiten → arbeitet.",
+            "en": "Max = er; arbeiten → arbeitet."
+          }
+        },
+        {
+          "type": "text",
+          "word": "lesen",
+          "sentence": "Ergänze: Meine Kollegin ___ die E-Mails immer zuerst. (lesen)",
+          "correct": "liest",
+          "answers": [
+            "liest"
+          ],
+          "explanations": {
+            "tr": "meine Kollegin = sie; lesen → liest.",
+            "de": "meine Kollegin = sie; lesen → liest.",
+            "en": "meine Kollegin = sie; lesen → liest."
+          }
+        },
+        {
+          "word": "wissen",
+          "sentence": "___ ihr, wann der Kurs beginnt?",
+          "options": [
+            "Wisst",
+            "Weißt",
+            "Wissen"
+          ],
+          "correct": "Wisst",
+          "explanations": {
+            "tr": "wissen: ihr → wisst.",
+            "de": "wissen: ihr → wisst.",
+            "en": "wissen: ihr → wisst."
+          }
+        },
+        {
+          "type": "text",
+          "word": "halten",
+          "sentence": "Bilde die Frage: du / was / von dieser Idee / halten",
+          "correct": "Was hältst du von dieser Idee?",
+          "answers": [
+            "was hältst du von dieser idee",
+            "was haltst du von dieser idee"
+          ],
+          "explanations": {
+            "tr": "halten: du → hältst; W-soruda fiil ikinci sırada.",
+            "de": "halten: du → hältst; W-soruda fiil ikinci sırada.",
+            "en": "halten: du → hältst; W-soruda fiil ikinci sırada."
+          }
+        },
+        {
+          "word": "sehen",
+          "sentence": "Von meinem Fenster aus ___ ich direkt den Bahnhof.",
+          "options": [
+            "sehe",
+            "siehst",
+            "sieht"
+          ],
+          "correct": "sehe",
+          "explanations": {
+            "tr": "ich biçiminde kök değişimi yok: sehe.",
+            "de": "ich biçiminde kök değişimi yok: sehe.",
+            "en": "ich biçiminde kök değişimi yok: sehe."
+          }
+        },
+        {
+          "type": "text",
+          "word": "schlafen",
+          "sentence": "Ergänze: Unser Hund ___ am Wochenende oft bis zehn Uhr. (schlafen)",
+          "correct": "schläft",
+          "answers": [
+            "schläft",
+            "schlaft"
+          ],
+          "explanations": {
+            "tr": "unser Hund = er; schlafen → schläft.",
+            "de": "unser Hund = er; schlafen → schläft.",
+            "en": "unser Hund = er; schlafen → schläft."
+          }
+        },
+        {
+          "word": "reden",
+          "sentence": "Warum ___ du so leise? Ich verstehe dich kaum.",
+          "options": [
+            "redest",
+            "redst",
+            "redet"
+          ],
+          "correct": "redest",
+          "explanations": {
+            "tr": "reden: du → redest.",
+            "de": "reden: du → redest.",
+            "en": "reden: du → redest."
+          }
+        },
+        {
+          "type": "text",
+          "word": "nehmen",
+          "sentence": "Bilde den Satz: meine Eltern / für die Reise / nur einen kleinen Koffer / nehmen",
+          "correct": "Meine Eltern nehmen für die Reise nur einen kleinen Koffer.",
+          "answers": [
+            "meine eltern nehmen für die reise nur einen kleinen koffer"
+          ],
+          "explanations": {
+            "tr": "meine Eltern = sie çoğul; nehmen → nehmen.",
+            "de": "meine Eltern = sie çoğul; nehmen → nehmen.",
+            "en": "meine Eltern = sie çoğul; nehmen → nehmen."
+          }
+        }
+      ]
+    }
+  ]
+}

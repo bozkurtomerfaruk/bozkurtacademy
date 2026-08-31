@@ -7,80 +7,80 @@
     "en": "Articles: der · die · das"
   },
   "description": {
-    "tr": "İsimlerin gramatik cinsiyetini artikellerle birlikte çalış.",
-    "de": "Lerne das Genus der Nomen zusammen mit ihren Artikeln.",
-    "en": "Practise noun gender together with the correct articles."
+    "tr": "Artikelleri ezberlemekle kalma; kelime sonları ve cümle bağlamından yararlanarak doğru artikeli seç.",
+    "de": "Übe Artikel mit Wortendungen und im Satzkontext.",
+    "en": "Practise articles using word endings and sentence context."
   },
   "lesson": {
     "title": {
-      "tr": "der · die · das nasıl kullanılır?",
-      "de": "Wie verwendet man der · die · das?",
-      "en": "How do der · die · das work?"
+      "tr": "der · die · das: ipuçları ve kullanım",
+      "de": "der · die · das: Hinweise und Gebrauch",
+      "en": "der · die · das: clues and use"
     },
     "intro": {
-      "tr": "Almancada isimlerin bir gramatik cinsiyeti vardır. Bu yüzden isimleri mümkün olduğunca artikeliyle birlikte öğrenmek gerekir.",
-      "de": "Im Deutschen haben Nomen ein grammatisches Geschlecht. Deshalb sollte man Nomen möglichst zusammen mit ihrem Artikel lernen.",
-      "en": "German nouns have grammatical gender, so it is best to learn each noun together with its article."
+      "tr": "Artikeller her zaman tahmin edilemez; ancak bazı kelime sonları güçlü ipuçları verir. İsimleri yine de artikeliyle birlikte öğren.",
+      "de": "Artikel sind nicht immer vorhersagbar. Einige Endungen geben aber starke Hinweise.",
+      "en": "Articles cannot always be predicted, but some noun endings are useful clues."
     },
     "rules": [
       {
-        "label": "der",
+        "label": "-ung / -heit / -keit",
         "text": {
-          "tr": "Maskulin",
-          "de": "Maskulin",
-          "en": "Masculine"
+          "tr": "çoğunlukla die",
+          "de": "meist die",
+          "en": "usually die"
         }
       },
       {
-        "label": "die",
+        "label": "-chen / -lein",
         "text": {
-          "tr": "Feminin",
-          "de": "Feminin",
-          "en": "Feminine"
+          "tr": "her zaman das",
+          "de": "immer das",
+          "en": "always das"
         }
       },
       {
-        "label": "das",
+        "label": "günler / aylar",
         "text": {
-          "tr": "Nötr",
-          "de": "Neutral",
-          "en": "Neuter"
+          "tr": "çoğunlukla der",
+          "de": "meist der",
+          "en": "usually der"
         }
       }
     ],
     "examples": [
-      "der Tisch — masa",
-      "die Lampe — lamba",
-      "das Buch — kitap"
+      "die Wohnung — daire",
+      "das Mädchen — kız",
+      "der Montag — Pazartesi"
     ],
     "tip": {
-      "tr": "Artikel her zaman tahmin edilemez. “Buch” değil, “das Buch” şeklinde ezberlemek daha etkilidir.",
-      "de": "Der Artikel lässt sich nicht immer erraten. Lerne besser „das Buch“ statt nur „Buch“.",
-      "en": "The article cannot always be guessed. Learn “das Buch” rather than only “Buch”."
+      "tr": "İpucunu kullan ama son kararı kelimeyi artikeliyle öğrenerek ver.",
+      "de": "Nutze Regeln als Hilfe, lerne das Nomen aber mit Artikel.",
+      "en": "Use patterns as clues, but still learn each noun with its article."
     }
   },
   "exercises": [
     {
-      "id": "grundlagen-1",
+      "id": "kontext-1",
       "title": {
-        "tr": "Übung 1 – Temel Artikel",
-        "de": "Übung 1 – Grundlagen",
-        "en": "Exercise 1 – Basic Articles"
+        "tr": "Übung 1 – Bağlamda Artikel",
+        "de": "Übung 1 – Artikel im Kontext",
+        "en": "Exercise 1 – Articles in context"
       },
       "description": {
-        "tr": "der, die ve das arasından doğru artikeli seç.",
-        "de": "Wähle den richtigen Artikel: der, die oder das.",
-        "en": "Choose the correct article: der, die or das."
+        "tr": "Daha az belirgin kelimelerde doğru artikeli cümle içinde seç.",
+        "de": "Wähle den Artikel im Satzkontext.",
+        "en": "Choose the article in sentence context."
       },
       "difficulty": {
-        "tr": "Temel",
-        "de": "Grundlage",
-        "en": "Basic"
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Intermediate"
       },
       "questions": [
         {
-          "word": "Tisch",
-          "sentence": "___ Tisch ist groß.",
+          "word": "Bahnhof",
+          "sentence": "___ Bahnhof ist gleich neben dem Hotel.",
           "options": [
             "der",
             "die",
@@ -88,14 +88,14 @@
           ],
           "correct": "der",
           "explanations": {
-            "tr": "“Tisch” maskulin bir isimdir: der Tisch.",
-            "de": "„Tisch“ ist maskulin: der Tisch.",
-            "en": "“Tisch” is masculine: der Tisch."
+            "tr": "Bahnhof maskulindir: der Bahnhof.",
+            "de": "Bahnhof maskulindir: der Bahnhof.",
+            "en": "Bahnhof maskulindir: der Bahnhof."
           }
         },
         {
-          "word": "Lampe",
-          "sentence": "___ Lampe ist neu.",
+          "word": "Wohnung",
+          "sentence": "___ Wohnung im dritten Stock ist sehr hell.",
           "options": [
             "der",
             "die",
@@ -103,14 +103,14 @@
           ],
           "correct": "die",
           "explanations": {
-            "tr": "“Lampe” feminin bir isimdir: die Lampe.",
-            "de": "„Lampe“ ist feminin: die Lampe.",
-            "en": "“Lampe” is feminine: die Lampe."
+            "tr": "-ung ile biten isimler çoğunlukla feminen: die Wohnung.",
+            "de": "-ung ile biten isimler çoğunlukla feminen: die Wohnung.",
+            "en": "-ung ile biten isimler çoğunlukla feminen: die Wohnung."
           }
         },
         {
-          "word": "Buch",
-          "sentence": "___ Buch ist interessant.",
+          "word": "Mädchen",
+          "sentence": "___ Mädchen wartet vor der Schule.",
           "options": [
             "der",
             "die",
@@ -118,29 +118,14 @@
           ],
           "correct": "das",
           "explanations": {
-            "tr": "“Buch” nötr bir isimdir: das Buch.",
-            "de": "„Buch“ ist neutral: das Buch.",
-            "en": "“Buch” is neuter: das Buch."
+            "tr": "-chen küçültme eki alan isimler nötrdür: das Mädchen.",
+            "de": "-chen küçültme eki alan isimler nötrdür: das Mädchen.",
+            "en": "-chen küçültme eki alan isimler nötrdür: das Mädchen."
           }
         },
         {
-          "word": "Auto",
-          "sentence": "___ Auto ist schnell.",
-          "options": [
-            "der",
-            "die",
-            "das"
-          ],
-          "correct": "das",
-          "explanations": {
-            "tr": "“Auto” nötr bir isimdir: das Auto.",
-            "de": "„Auto“ ist neutral: das Auto.",
-            "en": "“Auto” is neuter: das Auto."
-          }
-        },
-        {
-          "word": "Schule",
-          "sentence": "___ Schule ist heute geschlossen.",
+          "word": "Universität",
+          "sentence": "___ Universität liegt im Stadtzentrum.",
           "options": [
             "der",
             "die",
@@ -148,14 +133,44 @@
           ],
           "correct": "die",
           "explanations": {
-            "tr": "“Schule” feminin bir isimdir: die Schule.",
-            "de": "„Schule“ ist feminin: die Schule.",
-            "en": "“Schule” is feminine: die Schule."
+            "tr": "Universität feminen bir isimdir: die Universität.",
+            "de": "Universität feminen bir isimdir: die Universität.",
+            "en": "Universität feminen bir isimdir: die Universität."
           }
         },
         {
-          "word": "Computer",
-          "sentence": "___ Computer funktioniert gut.",
+          "word": "Museum",
+          "sentence": "___ Museum öffnet um zehn Uhr.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "Museum nötrdür: das Museum.",
+            "de": "Museum nötrdür: das Museum.",
+            "en": "Museum nötrdür: das Museum."
+          }
+        },
+        {
+          "word": "Bäckerei",
+          "sentence": "___ Bäckerei an der Ecke ist schon offen.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Bäckerei feminen bir isimdir: die Bäckerei.",
+            "de": "Bäckerei feminen bir isimdir: die Bäckerei.",
+            "en": "Bäckerei feminen bir isimdir: die Bäckerei."
+          }
+        },
+        {
+          "word": "Teppich",
+          "sentence": "___ Teppich im Wohnzimmer ist neu.",
           "options": [
             "der",
             "die",
@@ -163,29 +178,411 @@
           ],
           "correct": "der",
           "explanations": {
-            "tr": "“Computer” maskulin bir isimdir: der Computer.",
-            "de": "„Computer“ ist maskulin: der Computer.",
-            "en": "“Computer” is masculine: der Computer."
+            "tr": "Teppich maskulindir: der Teppich.",
+            "de": "Teppich maskulindir: der Teppich.",
+            "en": "Teppich maskulindir: der Teppich."
           }
         },
         {
+          "word": "Rechnung",
+          "sentence": "___ Rechnung liegt noch auf dem Tisch.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "-ung sonu güçlü bir feminen ipucudur: die Rechnung.",
+            "de": "-ung sonu güçlü bir feminen ipucudur: die Rechnung.",
+            "en": "-ung sonu güçlü bir feminen ipucudur: die Rechnung."
+          }
+        },
+        {
+          "word": "Restaurant",
+          "sentence": "___ Restaurant gegenüber ist heute voll.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "Restaurant nötrdür: das Restaurant.",
+            "de": "Restaurant nötrdür: das Restaurant.",
+            "en": "Restaurant nötrdür: das Restaurant."
+          }
+        },
+        {
+          "word": "Schlüssel",
+          "sentence": "Wo ist ___ Schlüssel für die Haustür?",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "der",
+          "explanations": {
+            "tr": "Schlüssel maskulindir: der Schlüssel.",
+            "de": "Schlüssel maskulindir: der Schlüssel.",
+            "en": "Schlüssel maskulindir: der Schlüssel."
+          }
+        }
+      ]
+    },
+    {
+      "id": "muster-2",
+      "title": {
+        "tr": "Übung 2 – Kelime sonlarını kullan",
+        "de": "Übung 2 – Wortendungen nutzen",
+        "en": "Exercise 2 – Use noun endings"
+      },
+      "description": {
+        "tr": "Artikel seçerken tipik kelime sonlarını fark et.",
+        "de": "Achte auf typische Wortendungen.",
+        "en": "Use typical noun endings as clues."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Intermediate"
+      },
+      "questions": [
+        {
+          "word": "-heit",
+          "sentence": "___ Gesundheit ist wichtig.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "-heit ile biten isimler feminen olur: die Gesundheit.",
+            "de": "-heit ile biten isimler feminen olur: die Gesundheit.",
+            "en": "-heit ile biten isimler feminen olur: die Gesundheit."
+          }
+        },
+        {
+          "word": "-keit",
+          "sentence": "___ Möglichkeit klingt interessant.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "-keit ile biten isimler feminen olur: die Möglichkeit.",
+            "de": "-keit ile biten isimler feminen olur: die Möglichkeit.",
+            "en": "-keit ile biten isimler feminen olur: die Möglichkeit."
+          }
+        },
+        {
+          "word": "-chen",
+          "sentence": "___ Brötchen kostet einen Euro.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "-chen ile biten isimler nötrdür: das Brötchen.",
+            "de": "-chen ile biten isimler nötrdür: das Brötchen.",
+            "en": "-chen ile biten isimler nötrdür: das Brötchen."
+          }
+        },
+        {
+          "word": "-ung",
+          "sentence": "___ Einladung liegt auf dem Schreibtisch.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "-ung ile biten isimler çoğunlukla feminen: die Einladung.",
+            "de": "-ung ile biten isimler çoğunlukla feminen: die Einladung.",
+            "en": "-ung ile biten isimler çoğunlukla feminen: die Einladung."
+          }
+        },
+        {
+          "word": "Wochentag",
+          "sentence": "___ Freitag passt mir besser.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "der",
+          "explanations": {
+            "tr": "Haftanın günleri maskulindir: der Freitag.",
+            "de": "Haftanın günleri maskulindir: der Freitag.",
+            "en": "Haftanın günleri maskulindir: der Freitag."
+          }
+        },
+        {
+          "word": "Monat",
+          "sentence": "___ Januar ist oft kalt.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "der",
+          "explanations": {
+            "tr": "Ay adları maskulindir: der Januar.",
+            "de": "Ay adları maskulindir: der Januar.",
+            "en": "Ay adları maskulindir: der Januar."
+          }
+        },
+        {
+          "word": "-lein",
+          "sentence": "___ Büchlein ist sehr dünn.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "-lein ile biten küçültmeler nötrdür: das Büchlein.",
+            "de": "-lein ile biten küçültmeler nötrdür: das Büchlein.",
+            "en": "-lein ile biten küçültmeler nötrdür: das Büchlein."
+          }
+        },
+        {
+          "word": "-schaft",
+          "sentence": "___ Freundschaft ist mir wichtig.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "-schaft ile biten isimler feminen olur: die Freundschaft.",
+            "de": "-schaft ile biten isimler feminen olur: die Freundschaft.",
+            "en": "-schaft ile biten isimler feminen olur: die Freundschaft."
+          }
+        },
+        {
+          "word": "Getränk",
+          "sentence": "___ Saft im Kühlschrank ist für dich.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "der",
+          "explanations": {
+            "tr": "Saft maskulindir: der Saft.",
+            "de": "Saft maskulindir: der Saft.",
+            "en": "Saft maskulindir: der Saft."
+          }
+        },
+        {
+          "word": "Gerät",
+          "sentence": "___ Handy ist schon wieder leer.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "Handy nötrdür: das Handy.",
+            "de": "Handy nötrdür: das Handy.",
+            "en": "Handy nötrdür: das Handy."
+          }
+        }
+      ]
+    },
+    {
+      "id": "schreiben-3",
+      "title": {
+        "tr": "Übung 3 – Artikel + isim yaz",
+        "de": "Übung 3 – Artikel + Nomen schreiben",
+        "en": "Exercise 3 – Write article + noun"
+      },
+      "description": {
+        "tr": "Doğru artikel ile isim grubunu kendin yaz.",
+        "de": "Schreibe Artikel und Nomen selbst.",
+        "en": "Type the correct article and noun yourself."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel–Schwer",
+        "en": "Intermediate–Hard"
+      },
+      "questions": [
+        {
+          "type": "text",
+          "word": "Küche",
+          "sentence": "Schreibe Artikel + Nomen: ___ ist klein. (Küche)",
+          "correct": "die Küche",
+          "answers": [
+            "die küche"
+          ],
+          "explanations": {
+            "tr": "Küche feminen: die Küche.",
+            "de": "Küche feminen: die Küche.",
+            "en": "Küche feminen: die Küche."
+          }
+        },
+        {
+          "type": "text",
           "word": "Fenster",
-          "sentence": "___ Fenster ist offen.",
-          "options": [
-            "der",
-            "die",
-            "das"
+          "sentence": "Schreibe Artikel + Nomen: ___ ist noch offen. (Fenster)",
+          "correct": "das Fenster",
+          "answers": [
+            "das fenster"
           ],
-          "correct": "das",
           "explanations": {
-            "tr": "“Fenster” nötr bir isimdir: das Fenster.",
-            "de": "„Fenster“ ist neutral: das Fenster.",
-            "en": "“Fenster” is neuter: das Fenster."
+            "tr": "Fenster nötr: das Fenster.",
+            "de": "Fenster nötr: das Fenster.",
+            "en": "Fenster nötr: das Fenster."
           }
         },
         {
-          "word": "Zeitung",
-          "sentence": "___ Zeitung liegt auf dem Tisch.",
+          "type": "text",
+          "word": "Termin",
+          "sentence": "Schreibe Artikel + Nomen: ___ ist am Donnerstag. (Termin)",
+          "correct": "der Termin",
+          "answers": [
+            "der termin"
+          ],
+          "explanations": {
+            "tr": "Termin maskulin: der Termin.",
+            "de": "Termin maskulin: der Termin.",
+            "en": "Termin maskulin: der Termin."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Nachricht",
+          "sentence": "Schreibe Artikel + Nomen: ___ ist sehr kurz. (Nachricht)",
+          "correct": "die Nachricht",
+          "answers": [
+            "die nachricht"
+          ],
+          "explanations": {
+            "tr": "Nachricht feminen: die Nachricht.",
+            "de": "Nachricht feminen: die Nachricht.",
+            "en": "Nachricht feminen: die Nachricht."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Problem",
+          "sentence": "Schreibe Artikel + Nomen: ___ ist nicht groß. (Problem)",
+          "correct": "das Problem",
+          "answers": [
+            "das problem"
+          ],
+          "explanations": {
+            "tr": "Problem nötr: das Problem.",
+            "de": "Problem nötr: das Problem.",
+            "en": "Problem nötr: das Problem."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Kurs",
+          "sentence": "Schreibe Artikel + Nomen: ___ beginnt um neun. (Kurs)",
+          "correct": "der Kurs",
+          "answers": [
+            "der kurs"
+          ],
+          "explanations": {
+            "tr": "Kurs maskulin: der Kurs.",
+            "de": "Kurs maskulin: der Kurs.",
+            "en": "Kurs maskulin: der Kurs."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Straße",
+          "sentence": "Schreibe Artikel + Nomen: ___ ist heute gesperrt. (Straße)",
+          "correct": "die Straße",
+          "answers": [
+            "die straße",
+            "die strasse"
+          ],
+          "explanations": {
+            "tr": "Straße feminen: die Straße.",
+            "de": "Straße feminen: die Straße.",
+            "en": "Straße feminen: die Straße."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Zimmer",
+          "sentence": "Schreibe Artikel + Nomen: ___ ist schon frei. (Zimmer)",
+          "correct": "das Zimmer",
+          "answers": [
+            "das zimmer"
+          ],
+          "explanations": {
+            "tr": "Zimmer nötr: das Zimmer.",
+            "de": "Zimmer nötr: das Zimmer.",
+            "en": "Zimmer nötr: das Zimmer."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Antwort",
+          "sentence": "Schreibe Artikel + Nomen: ___ ist richtig. (Antwort)",
+          "correct": "die Antwort",
+          "answers": [
+            "die antwort"
+          ],
+          "explanations": {
+            "tr": "Antwort feminen: die Antwort.",
+            "de": "Antwort feminen: die Antwort.",
+            "en": "Antwort feminen: die Antwort."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Bus",
+          "sentence": "Schreibe Artikel + Nomen: ___ kommt in fünf Minuten. (Bus)",
+          "correct": "der Bus",
+          "answers": [
+            "der bus"
+          ],
+          "explanations": {
+            "tr": "Bus maskulin: der Bus.",
+            "de": "Bus maskulin: der Bus.",
+            "en": "Bus maskulin: der Bus."
+          }
+        }
+      ]
+    },
+    {
+      "id": "challenge-4",
+      "title": {
+        "tr": "Übung 4 – Artikel Challenge",
+        "de": "Übung 4 – Artikel-Challenge",
+        "en": "Exercise 4 – Article Challenge"
+      },
+      "description": {
+        "tr": "Kural tablosu olmadan, bağlam ve kelime yapısını birlikte kullan.",
+        "de": "Ohne Hilfstabelle: Nutze Kontext und Wortstruktur.",
+        "en": "No helper table: use context and word structure together."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Erfahrung",
+          "sentence": "Für diese Stelle ist ___ Erfahrung sehr wichtig.",
           "options": [
             "der",
             "die",
@@ -193,29 +590,14 @@
           ],
           "correct": "die",
           "explanations": {
-            "tr": "“Zeitung” feminin bir isimdir: die Zeitung.",
-            "de": "„Zeitung“ ist feminin: die Zeitung.",
-            "en": "“Zeitung” is feminine: die Zeitung."
+            "tr": "Erfahrung feminen: die Erfahrung.",
+            "de": "Erfahrung feminen: die Erfahrung.",
+            "en": "Erfahrung feminen: die Erfahrung."
           }
         },
         {
-          "word": "Kaffee",
-          "sentence": "___ Kaffee ist heiß.",
-          "options": [
-            "der",
-            "die",
-            "das"
-          ],
-          "correct": "der",
-          "explanations": {
-            "tr": "“Kaffee” maskulin bir isimdir: der Kaffee.",
-            "de": "„Kaffee“ ist maskulin: der Kaffee.",
-            "en": "“Kaffee” is masculine: der Kaffee."
-          }
-        },
-        {
-          "word": "Kind",
-          "sentence": "___ Kind spielt im Garten.",
+          "word": "Ergebnis",
+          "sentence": "___ Ergebnis vom Test kommt morgen.",
           "options": [
             "der",
             "die",
@@ -223,9 +605,127 @@
           ],
           "correct": "das",
           "explanations": {
-            "tr": "“Kind” nötr bir isimdir: das Kind.",
-            "de": "„Kind“ ist neutral: das Kind.",
-            "en": "“Kind” is neuter: das Kind."
+            "tr": "Ergebnis nötrdür: das Ergebnis.",
+            "de": "Ergebnis nötrdür: das Ergebnis.",
+            "en": "Ergebnis nötrdür: das Ergebnis."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Entscheidung",
+          "sentence": "Schreibe Artikel + Nomen: Nach dem Gespräch ist ___ noch nicht leicht. (Entscheidung)",
+          "correct": "die Entscheidung",
+          "answers": [
+            "die entscheidung"
+          ],
+          "explanations": {
+            "tr": "-ung: die Entscheidung.",
+            "de": "-ung: die Entscheidung.",
+            "en": "-ung: die Entscheidung."
+          }
+        },
+        {
+          "word": "Unterricht",
+          "sentence": "___ Unterricht beginnt heute später.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "der",
+          "explanations": {
+            "tr": "Unterricht maskulindir: der Unterricht.",
+            "de": "Unterricht maskulindir: der Unterricht.",
+            "en": "Unterricht maskulindir: der Unterricht."
+          }
+        },
+        {
+          "word": "Information",
+          "sentence": "Woher kommt ___ Information?",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Information feminen: die Information.",
+            "de": "Information feminen: die Information.",
+            "en": "Information feminen: die Information."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Gespräch",
+          "sentence": "Schreibe Artikel + Nomen: ___ mit dem Lehrer war hilfreich. (Gespräch)",
+          "correct": "das Gespräch",
+          "answers": [
+            "das gespräch",
+            "das gesprach"
+          ],
+          "explanations": {
+            "tr": "Gespräch nötrdür: das Gespräch.",
+            "de": "Gespräch nötrdür: das Gespräch.",
+            "en": "Gespräch nötrdür: das Gespräch."
+          }
+        },
+        {
+          "word": "Fehler",
+          "sentence": "___ Fehler passiert mir oft.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "der",
+          "explanations": {
+            "tr": "Fehler maskulindir: der Fehler.",
+            "de": "Fehler maskulindir: der Fehler.",
+            "en": "Fehler maskulindir: der Fehler."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Übung",
+          "sentence": "Schreibe Artikel + Nomen: ___ am Ende ist ziemlich schwierig. (Übung)",
+          "correct": "die Übung",
+          "answers": [
+            "die übung",
+            "die ubung"
+          ],
+          "explanations": {
+            "tr": "-ung: die Übung.",
+            "de": "-ung: die Übung.",
+            "en": "-ung: die Übung."
+          }
+        },
+        {
+          "word": "Beispiel",
+          "sentence": "___ Beispiel erklärt die Regel gut.",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "Beispiel nötrdür: das Beispiel.",
+            "de": "Beispiel nötrdür: das Beispiel.",
+            "en": "Beispiel nötrdür: das Beispiel."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Unterschied",
+          "sentence": "Schreibe Artikel + Nomen: ___ zwischen den Sätzen ist klein. (Unterschied)",
+          "correct": "der Unterschied",
+          "answers": [
+            "der unterschied"
+          ],
+          "explanations": {
+            "tr": "Unterschied maskulindir: der Unterschied.",
+            "de": "Unterschied maskulindir: der Unterschied.",
+            "en": "Unterschied maskulindir: der Unterschied."
           }
         }
       ]

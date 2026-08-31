@@ -7,20 +7,20 @@
     "en": "Personal pronouns in the dative"
   },
   "description": {
-    "tr": "mir, dir, ihm, ihr, uns, euch, ihnen/Ihnen ile Dativ nesneleri çalış.",
-    "de": "Übe Dativobjekte mit mir, dir, ihm, ihr, uns, euch, ihnen/Ihnen.",
-    "en": "Practise dative objects with mir, dir, ihm, ihr, uns, euch, ihnen/Ihnen."
+    "tr": "mir, dir, ihm, ihr, uns, euch ve ihnen ile Dativ nesnelerini cümle içinde kullan.",
+    "de": "Übe Dativpronomen im Satz und im Dialog.",
+    "en": "Practise dative pronouns in sentences and dialogues."
   },
   "lesson": {
     "title": {
-      "tr": "Dativ personal zamirleri",
+      "tr": "Dativ zamirleri",
       "de": "Personalpronomen im Dativ",
-      "en": "Dative personal pronouns"
+      "en": "Dative pronouns"
     },
     "intro": {
-      "tr": "Dativ çoğu zaman bir eylemden dolaylı olarak etkilenen kişiyi gösterir. Bazı fiiller de doğrudan Dativ ister: helfen, danken, gefallen, gehören, passen, schmecken, zuhören gibi.",
-      "de": "Der Dativ bezeichnet oft die indirekt betroffene Person. Einige Verben verlangen direkt den Dativ, zum Beispiel helfen, danken, gefallen, gehören, passen, schmecken und zuhören.",
-      "en": "The dative often marks the indirectly affected person. Some verbs directly require the dative, such as helfen, danken, gefallen, gehören, passen, schmecken and zuhören."
+      "tr": "helfen, danken, gefallen, gehören, schmecken ve zuhören gibi bazı fiiller Dativ ister.",
+      "de": "Einige Verben wie helfen, danken, gefallen und gehören verlangen den Dativ.",
+      "en": "Some verbs such as helfen, danken, gefallen and gehören take the dative."
     },
     "rules": [
       {
@@ -42,7 +42,7 @@
       {
         "label": "er/es → ihm",
         "text": {
-          "tr": "ona (eril/nötr)",
+          "tr": "ona",
           "de": "ihm",
           "en": "to him/it"
         }
@@ -50,7 +50,7 @@
       {
         "label": "sie → ihr",
         "text": {
-          "tr": "ona (dişil)",
+          "tr": "ona",
           "de": "ihr",
           "en": "to her"
         }
@@ -62,405 +62,55 @@
           "de": "uns",
           "en": "to us"
         }
-      },
-      {
-        "label": "ihr → euch",
-        "text": {
-          "tr": "size",
-          "de": "euch",
-          "en": "to you (plural)"
-        }
-      },
-      {
-        "label": "sie → ihnen",
-        "text": {
-          "tr": "onlara",
-          "de": "ihnen",
-          "en": "to them"
-        }
-      },
-      {
-        "label": "Sie → Ihnen",
-        "text": {
-          "tr": "size (resmî)",
-          "de": "Ihnen",
-          "en": "to you (formal)"
-        }
       }
     ],
     "examples": [
-      "Kannst du mir helfen? — Bana yardım edebilir misin?",
-      "Die Schuhe passen ihm nicht. — Ayakkabılar ona olmuyor.",
-      "Wir danken euch für die Hilfe. — Yardımınız için size teşekkür ediyoruz."
+      "Kannst du mir helfen?",
+      "Das Buch gehört ihm."
     ],
     "tip": {
-      "tr": "Özellikle helfen, danken, gefallen, gehören, passen, schmecken ve zuhören fiillerini Dativ zamirleriyle birlikte ezberle.",
-      "de": "Lerne besonders helfen, danken, gefallen, gehören, passen, schmecken und zuhören zusammen mit dem Dativ.",
-      "en": "Learn especially helfen, danken, gefallen, gehören, passen, schmecken and zuhören together with the dative."
+      "tr": "Fiilin hangi hâli istediğini de öğren: helfen + Dativ.",
+      "de": "Lerne das Verb zusammen mit seinem Kasus.",
+      "en": "Learn each verb together with its case."
     }
   },
   "exercises": [
     {
-      "id": "dat-verben-1",
+      "id": "dat-kontext-1",
       "title": {
-        "tr": "Übung 1 – Dativ fiilleri",
-        "de": "Übung 1 – Dativverben",
-        "en": "Exercise 1 – Dative verbs"
+        "tr": "Übung 1 – Dativ fiilleri bağlamda",
+        "de": "Übung 1 – Dativverben im Kontext",
+        "en": "Exercise 1 – Dative verbs in context"
       },
       "description": {
-        "tr": "Fiilin istediği doğru Dativ personal zamirini seç.",
-        "de": "Wähle das passende Dativpronomen zum Verb.",
-        "en": "Choose the correct dative pronoun required by the verb."
-      },
-      "difficulty": {
-        "tr": "Temel",
-        "de": "Grundlage",
-        "en": "Basic"
-      },
-      "questions": [
-        {
-          "word": "ich",
-          "sentence": "Kannst du ___ bitte helfen?",
-          "options": [
-            "mir",
-            "mich",
-            "ich"
-          ],
-          "correct": "mir",
-          "explanations": {
-            "tr": "helfen Dativ ister: mir.",
-            "de": "helfen verlangt den Dativ: mir.",
-            "en": "helfen takes the dative: mir."
-          }
-        },
-        {
-          "word": "du",
-          "sentence": "Die neue Jacke steht ___ wirklich gut.",
-          "options": [
-            "dir",
-            "dich",
-            "du"
-          ],
-          "correct": "dir",
-          "explanations": {
-            "tr": "stehen + kişi burada Dativ: dir.",
-            "de": "stehen + Person steht hier im Dativ: dir.",
-            "en": "stehen + person uses the dative here: dir."
-          }
-        },
-        {
-          "word": "Paul",
-          "sentence": "Das Fahrrad gehört Paul. Es gehört ___.",
-          "options": [
-            "ihm",
-            "ihn",
-            "er"
-          ],
-          "correct": "ihm",
-          "explanations": {
-            "tr": "gehören Dativ ister; Paul → ihm.",
-            "de": "gehören verlangt den Dativ; Paul → ihm.",
-            "en": "gehören takes the dative; Paul → ihm."
-          }
-        },
-        {
-          "word": "Lena",
-          "sentence": "Der rote Pullover gefällt Lena. Er gefällt ___.",
-          "options": [
-            "ihr",
-            "sie",
-            "ihnen"
-          ],
-          "correct": "ihr",
-          "explanations": {
-            "tr": "gefallen Dativ ister; Lena → ihr.",
-            "de": "gefallen verlangt den Dativ; Lena → ihr.",
-            "en": "gefallen takes the dative; Lena → ihr."
-          }
-        },
-        {
-          "word": "wir",
-          "sentence": "Die Suppe schmeckt ___ sehr gut.",
-          "options": [
-            "uns",
-            "wir",
-            "euch"
-          ],
-          "correct": "uns",
-          "explanations": {
-            "tr": "schmecken + kişi Dativ: uns.",
-            "de": "schmecken + Person im Dativ: uns.",
-            "en": "schmecken + person uses the dative: uns."
-          }
-        },
-        {
-          "word": "ihr",
-          "sentence": "Ich danke ___ für eure Unterstützung.",
-          "options": [
-            "euch",
-            "ihr",
-            "sie"
-          ],
-          "correct": "euch",
-          "explanations": {
-            "tr": "danken Dativ ister; ihr → euch.",
-            "de": "danken verlangt den Dativ; ihr → euch.",
-            "en": "danken takes the dative; ihr → euch."
-          }
-        },
-        {
-          "word": "die Kinder",
-          "sentence": "Der Lehrer hört den Kindern zu. Er hört ___ aufmerksam zu.",
-          "options": [
-            "ihnen",
-            "sie",
-            "euch"
-          ],
-          "correct": "ihnen",
-          "explanations": {
-            "tr": "zuhören Dativ ister; die Kinder → ihnen.",
-            "de": "zuhören verlangt den Dativ; die Kinder → ihnen.",
-            "en": "zuhören takes the dative; die Kinder → ihnen."
-          }
-        },
-        {
-          "word": "Sie (formal)",
-          "sentence": "Wie geht es ___ heute, Frau Yılmaz?",
-          "options": [
-            "Ihnen",
-            "Sie",
-            "ihnen"
-          ],
-          "correct": "Ihnen",
-          "explanations": {
-            "tr": "Resmî hitapta es geht + Dativ: Ihnen.",
-            "de": "Formell: es geht + Dativ → Ihnen.",
-            "en": "Formal address: es geht + dative → Ihnen."
-          }
-        },
-        {
-          "word": "das Kind",
-          "sentence": "Die Mütze passt dem Kind. Sie passt ___.",
-          "options": [
-            "ihm",
-            "es",
-            "ihn"
-          ],
-          "correct": "ihm",
-          "explanations": {
-            "tr": "das Kind nötrdür; Dativ zamiri ihm olur.",
-            "de": "das Kind ist neutral; Dativpronomen: ihm.",
-            "en": "das Kind is neuter; dative pronoun: ihm."
-          }
-        },
-        {
-          "word": "Marta und Ali",
-          "sentence": "Die Musik gefällt Marta und Ali. Sie gefällt ___.",
-          "options": [
-            "ihnen",
-            "sie",
-            "euch"
-          ],
-          "correct": "ihnen",
-          "explanations": {
-            "tr": "Üçüncü kişi çoğul Dativ: ihnen.",
-            "de": "3. Person Plural im Dativ: ihnen.",
-            "en": "Third-person plural dative: ihnen."
-          }
-        }
-      ]
-    },
-    {
-      "id": "dat-indirekt-2",
-      "title": {
-        "tr": "Übung 2 – Dolaylı nesne",
-        "de": "Übung 2 – Indirektes Objekt",
-        "en": "Exercise 2 – Indirect object"
-      },
-      "description": {
-        "tr": "Bir şeyi kime verdiğini, gönderdiğini veya gösterdiğini Dativ zamiriyle ifade et.",
-        "de": "Drücke mit einem Dativpronomen aus, wem du etwas gibst, schickst oder zeigst.",
-        "en": "Use a dative pronoun to say to whom you give, send or show something."
-      },
-      "difficulty": {
-        "tr": "Kolay-Orta",
-        "de": "Leicht–Mittel",
-        "en": "Easy–Medium"
-      },
-      "questions": [
-        {
-          "word": "ich",
-          "sentence": "Ich habe meinen Stift vergessen. Gibst du ___ einen?",
-          "options": [
-            "mir",
-            "mich",
-            "ich"
-          ],
-          "correct": "mir",
-          "explanations": {
-            "tr": "Bir şeyi kime veriyorsun? → mir.",
-            "de": "Wem gibst du etwas? → mir.",
-            "en": "To whom do you give something? → mir."
-          }
-        },
-        {
-          "word": "du",
-          "sentence": "Ich schicke ___ heute Abend die Fotos.",
-          "options": [
-            "dir",
-            "dich",
-            "du"
-          ],
-          "correct": "dir",
-          "explanations": {
-            "tr": "Bir şeyi sana gönderiyorum: dir.",
-            "de": "Ich schicke dir etwas: dir.",
-            "en": "I send something to you: dir."
-          }
-        },
-        {
-          "word": "meine Schwester",
-          "sentence": "Ich kaufe meiner Schwester ein Buch. Ich kaufe ___ ein Buch.",
-          "options": [
-            "ihr",
-            "sie",
-            "ihm"
-          ],
-          "correct": "ihr",
-          "explanations": {
-            "tr": "meine Schwester feminin Dativ: ihr.",
-            "de": "meine Schwester im Dativ: ihr.",
-            "en": "meine Schwester in the dative: ihr."
-          }
-        },
-        {
-          "word": "mein Vater",
-          "sentence": "Wir bringen meinem Vater einen Kaffee. Wir bringen ___ einen Kaffee.",
-          "options": [
-            "ihm",
-            "ihn",
-            "er"
-          ],
-          "correct": "ihm",
-          "explanations": {
-            "tr": "mein Vater → ihm.",
-            "de": "mein Vater → ihm.",
-            "en": "mein Vater → ihm."
-          }
-        },
-        {
-          "word": "wir",
-          "sentence": "Kannst du ___ den Weg zeigen?",
-          "options": [
-            "uns",
-            "wir",
-            "euch"
-          ],
-          "correct": "uns",
-          "explanations": {
-            "tr": "Bir şeyi bize göstermek: uns.",
-            "de": "jemandem etwas zeigen: uns.",
-            "en": "show something to us: uns."
-          }
-        },
-        {
-          "word": "ihr",
-          "sentence": "Ich erkläre ___ die Aufgabe noch einmal.",
-          "options": [
-            "euch",
-            "ihr",
-            "sie"
-          ],
-          "correct": "euch",
-          "explanations": {
-            "tr": "ihr → euch Dativ.",
-            "de": "ihr → euch im Dativ.",
-            "en": "ihr → euch in the dative."
-          }
-        },
-        {
-          "word": "die Nachbarn",
-          "sentence": "Wir geben den Nachbarn unseren Schlüssel. Wir geben ___ unseren Schlüssel.",
-          "options": [
-            "ihnen",
-            "sie",
-            "euch"
-          ],
-          "correct": "ihnen",
-          "explanations": {
-            "tr": "die Nachbarn → ihnen Dativ.",
-            "de": "die Nachbarn → ihnen im Dativ.",
-            "en": "die Nachbarn → ihnen in the dative."
-          }
-        },
-        {
-          "word": "Sie (formal)",
-          "sentence": "Kann ich ___ die Rechnung per E-Mail schicken?",
-          "options": [
-            "Ihnen",
-            "Sie",
-            "ihnen"
-          ],
-          "correct": "Ihnen",
-          "explanations": {
-            "tr": "Resmî Dativ zamiri Ihnen büyük harfle yazılır.",
-            "de": "Das formelle Dativpronomen Ihnen wird großgeschrieben.",
-            "en": "Formal dative Ihnen is capitalized."
-          }
-        },
-        {
-          "word": "das Baby",
-          "sentence": "Die Mutter gibt dem Baby die Flasche. Sie gibt ___ die Flasche.",
-          "options": [
-            "ihm",
-            "es",
-            "ihn"
-          ],
-          "correct": "ihm",
-          "explanations": {
-            "tr": "das Baby nötr Dativ: ihm.",
-            "de": "das Baby im Dativ: ihm.",
-            "en": "das Baby in the dative: ihm."
-          }
-        },
-        {
-          "word": "Lara und ich",
-          "sentence": "Tom erzählt Lara und mir eine Geschichte. Er erzählt ___ eine Geschichte.",
-          "options": [
-            "uns",
-            "wir",
-            "ihnen"
-          ],
-          "correct": "uns",
-          "explanations": {
-            "tr": "Lara + ich = wir; Dativ: uns.",
-            "de": "Lara + ich = wir; Dativ: uns.",
-            "en": "Lara + I = wir; dative: uns."
-          }
-        }
-      ]
-    },
-    {
-      "id": "dat-gemischt-3",
-      "title": {
-        "tr": "Übung 3 – Karışık Dativ",
-        "de": "Übung 3 – Gemischter Dativ",
-        "en": "Exercise 3 – Mixed dative"
-      },
-      "description": {
-        "tr": "Dativ fiilleri ve dolaylı nesneleri birlikte çalış.",
-        "de": "Übe Dativverben und indirekte Objekte gemischt.",
-        "en": "Practise dative verbs and indirect objects together."
+        "tr": "Dativ isteyen fiili ve doğru zamiri birlikte düşün.",
+        "de": "Achte auf Dativverb und Pronomen.",
+        "en": "Consider both the dative verb and the pronoun."
       },
       "difficulty": {
         "tr": "Orta",
         "de": "Mittel",
-        "en": "Medium"
+        "en": "Intermediate"
       },
       "questions": [
         {
-          "word": "Herr Becker",
-          "sentence": "Herr Becker hat heute Geburtstag. Was schenkst du ___?",
+          "word": "meine Mutter",
+          "sentence": "Meine Mutter versteht die App nicht. Ich helfe ___ bei der Anmeldung.",
+          "options": [
+            "ihr",
+            "sie",
+            "ihn"
+          ],
+          "correct": "ihr",
+          "explanations": {
+            "tr": "helfen + Dativ; die Mutter → ihr.",
+            "de": "helfen + Dativ; die Mutter → ihr.",
+            "en": "helfen + Dativ; die Mutter → ihr."
+          }
+        },
+        {
+          "word": "der Student",
+          "sentence": "Der Student stellt eine gute Frage. Der Lehrer antwortet ___.",
           "options": [
             "ihm",
             "ihn",
@@ -468,44 +118,14 @@
           ],
           "correct": "ihm",
           "explanations": {
-            "tr": "schenken: alan kişi Dativ olur → ihm.",
-            "de": "Bei schenken steht die empfangende Person im Dativ → ihm.",
-            "en": "With schenken, the recipient is dative → ihm."
-          }
-        },
-        {
-          "word": "Anna",
-          "sentence": "Das Kleid ist zu groß. Es passt Anna nicht. Es passt ___ nicht.",
-          "options": [
-            "ihr",
-            "sie",
-            "ihm"
-          ],
-          "correct": "ihr",
-          "explanations": {
-            "tr": "passen Dativ ister; Anna → ihr.",
-            "de": "passen verlangt den Dativ; Anna → ihr.",
-            "en": "passen takes the dative; Anna → ihr."
-          }
-        },
-        {
-          "word": "ich",
-          "sentence": "Bitte hör ___ kurz zu.",
-          "options": [
-            "mir",
-            "mich",
-            "ich"
-          ],
-          "correct": "mir",
-          "explanations": {
-            "tr": "zuhören Dativ ister: mir.",
-            "de": "zuhören verlangt den Dativ: mir.",
-            "en": "zuhören takes the dative: mir."
+            "tr": "antworten + Dativ; der Student → ihm.",
+            "de": "antworten + Dativ; der Student → ihm.",
+            "en": "antworten + Dativ; der Student → ihm."
           }
         },
         {
           "word": "du",
-          "sentence": "Ich glaube ___, aber ich bin noch unsicher.",
+          "sentence": "Ich erkläre ___ die Aufgabe noch einmal.",
           "options": [
             "dir",
             "dich",
@@ -513,14 +133,14 @@
           ],
           "correct": "dir",
           "explanations": {
-            "tr": "glauben + kişi genellikle Dativ: dir.",
-            "de": "jemandem glauben → Dativ: dir.",
-            "en": "jemandem glauben uses the dative: dir."
+            "tr": "erklären: kişi Dativ → dir.",
+            "de": "erklären: kişi Dativ → dir.",
+            "en": "erklären: kişi Dativ → dir."
           }
         },
         {
           "word": "wir",
-          "sentence": "Die neue Wohnung gefällt ___ sehr.",
+          "sentence": "Der neue Kurs gefällt ___.",
           "options": [
             "uns",
             "wir",
@@ -528,29 +148,14 @@
           ],
           "correct": "uns",
           "explanations": {
-            "tr": "gefallen Dativ ister: uns.",
-            "de": "gefallen verlangt den Dativ: uns.",
-            "en": "gefallen takes the dative: uns."
+            "tr": "gefallen + Dativ; wir → uns.",
+            "de": "gefallen + Dativ; wir → uns.",
+            "en": "gefallen + Dativ; wir → uns."
           }
         },
         {
-          "word": "ihr",
-          "sentence": "Schmeckt ___ der Kuchen?",
-          "options": [
-            "euch",
-            "ihr",
-            "sie"
-          ],
-          "correct": "euch",
-          "explanations": {
-            "tr": "schmecken + kişi Dativ: euch.",
-            "de": "schmecken + Person im Dativ: euch.",
-            "en": "schmecken + person uses the dative: euch."
-          }
-        },
-        {
-          "word": "die Kolleginnen",
-          "sentence": "Ich antworte den Kolleginnen später. Ich antworte ___ später.",
+          "word": "die Kinder",
+          "sentence": "Die Suppe schmeckt den Kindern nicht. Sie schmeckt ___ zu salzig.",
           "options": [
             "ihnen",
             "sie",
@@ -558,29 +163,44 @@
           ],
           "correct": "ihnen",
           "explanations": {
-            "tr": "antworten Dativ ister; çoğul üçüncü kişi: ihnen.",
-            "de": "antworten verlangt den Dativ; Plural: ihnen.",
-            "en": "antworten takes the dative; plural: ihnen."
+            "tr": "die Kinder → Dativ ihnen.",
+            "de": "die Kinder → Dativ ihnen.",
+            "en": "die Kinder → Dativ ihnen."
           }
         },
         {
-          "word": "Sie (formal)",
-          "sentence": "Darf ich ___ etwas zeigen?",
+          "word": "Frau Klein",
+          "sentence": "Ich danke Frau Klein für die Hilfe. Ich danke ___ später noch einmal.",
           "options": [
-            "Ihnen",
-            "Sie",
-            "ihnen"
+            "ihr",
+            "sie",
+            "ihn"
           ],
-          "correct": "Ihnen",
+          "correct": "ihr",
           "explanations": {
-            "tr": "Bir şeyi size göstermek: Ihnen.",
-            "de": "jemandem etwas zeigen: Ihnen.",
-            "en": "show something to you formally: Ihnen."
+            "tr": "danken + Dativ; Frau Klein → ihr.",
+            "de": "danken + Dativ; Frau Klein → ihr.",
+            "en": "danken + Dativ; Frau Klein → ihr."
           }
         },
         {
-          "word": "der Hund",
-          "sentence": "Das neue Futter schmeckt dem Hund. Es schmeckt ___.",
+          "word": "ihr",
+          "sentence": "Ich höre ___ jetzt zu. Erzählt weiter!",
+          "options": [
+            "euch",
+            "ihr",
+            "sie"
+          ],
+          "correct": "euch",
+          "explanations": {
+            "tr": "zuhören + Dativ; ihr → euch.",
+            "de": "zuhören + Dativ; ihr → euch.",
+            "en": "zuhören + Dativ; ihr → euch."
+          }
+        },
+        {
+          "word": "mein Bruder",
+          "sentence": "Das Fahrrad gehört meinem Bruder. Es gehört ___.",
           "options": [
             "ihm",
             "ihn",
@@ -588,24 +208,370 @@
           ],
           "correct": "ihm",
           "explanations": {
-            "tr": "der Hund maskulin Dativ: ihm.",
-            "de": "der Hund im Dativ: ihm.",
-            "en": "der Hund in the dative: ihm."
+            "tr": "gehören + Dativ; mein Bruder → ihm.",
+            "de": "gehören + Dativ; mein Bruder → ihm.",
+            "en": "gehören + Dativ; mein Bruder → ihm."
           }
         },
         {
-          "word": "Sara und du",
-          "sentence": "Ich bringe Sara und dir zwei Tickets. Ich bringe ___ zwei Tickets.",
+          "word": "ich",
+          "sentence": "Kannst du ___ kurz helfen?",
+          "options": [
+            "mir",
+            "mich",
+            "ich"
+          ],
+          "correct": "mir",
+          "explanations": {
+            "tr": "helfen + Dativ; ich → mir.",
+            "de": "helfen + Dativ; ich → mir.",
+            "en": "helfen + Dativ; ich → mir."
+          }
+        },
+        {
+          "word": "die Kollegin",
+          "sentence": "Die Jacke passt meiner Kollegin gut. Sie passt ___ perfekt.",
+          "options": [
+            "ihr",
+            "sie",
+            "ihm"
+          ],
+          "correct": "ihr",
+          "explanations": {
+            "tr": "passen + Dativ; die Kollegin → ihr.",
+            "de": "passen + Dativ; die Kollegin → ihr.",
+            "en": "passen + Dativ; die Kollegin → ihr."
+          }
+        }
+      ]
+    },
+    {
+      "id": "dat-zwei-objekte-2",
+      "title": {
+        "tr": "Übung 2 – İki nesneli cümleler",
+        "de": "Übung 2 – Sätze mit zwei Objekten",
+        "en": "Exercise 2 – Sentences with two objects"
+      },
+      "description": {
+        "tr": "Kişi Dativ, şey çoğunlukla Akkusativ olduğunda doğru zamiri seç.",
+        "de": "Unterscheide Person im Dativ und Sache im Akkusativ.",
+        "en": "Distinguish the person in dative from the thing in accusative."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel–Schwer",
+        "en": "Intermediate–Hard"
+      },
+      "questions": [
+        {
+          "word": "meine Schwester",
+          "sentence": "Ich zeige meiner Schwester die Fotos. Ich zeige ___ auch das Video.",
+          "options": [
+            "ihr",
+            "sie",
+            "ihn"
+          ],
+          "correct": "ihr",
+          "explanations": {
+            "tr": "Gösterilen kişi Dativ: meiner Schwester → ihr.",
+            "de": "Gösterilen kişi Dativ: meiner Schwester → ihr.",
+            "en": "Gösterilen kişi Dativ: meiner Schwester → ihr."
+          }
+        },
+        {
+          "word": "der Kunde",
+          "sentence": "Die Verkäuferin erklärt dem Kunden den Vertrag. Sie erklärt ___ auch die Kosten.",
+          "options": [
+            "ihm",
+            "ihn",
+            "er"
+          ],
+          "correct": "ihm",
+          "explanations": {
+            "tr": "dem Kunden → Dativ ihm.",
+            "de": "dem Kunden → Dativ ihm.",
+            "en": "dem Kunden → Dativ ihm."
+          }
+        },
+        {
+          "word": "du",
+          "sentence": "Ich schicke ___ die Adresse per Nachricht.",
+          "options": [
+            "dir",
+            "dich",
+            "du"
+          ],
+          "correct": "dir",
+          "explanations": {
+            "tr": "Alıcı kişi Dativ: dir.",
+            "de": "Alıcı kişi Dativ: dir.",
+            "en": "Alıcı kişi Dativ: dir."
+          }
+        },
+        {
+          "word": "uns",
+          "sentence": "Kannst du ___ bitte die Rechnung schicken?",
+          "options": [
+            "uns",
+            "wir",
+            "euch"
+          ],
+          "correct": "uns",
+          "explanations": {
+            "tr": "wir → Dativ uns.",
+            "de": "wir → Dativ uns.",
+            "en": "wir → Dativ uns."
+          }
+        },
+        {
+          "word": "die Gäste",
+          "sentence": "Wir bieten den Gästen Kaffee an. Wir bieten ___ auch Tee an.",
+          "options": [
+            "ihnen",
+            "sie",
+            "euch"
+          ],
+          "correct": "ihnen",
+          "explanations": {
+            "tr": "den Gästen → ihnen.",
+            "de": "den Gästen → ihnen.",
+            "en": "den Gästen → ihnen."
+          }
+        },
+        {
+          "word": "Frau Berger",
+          "sentence": "Der Arzt erklärt Frau Berger die Ergebnisse. Er erklärt ___ alles langsam.",
+          "options": [
+            "ihr",
+            "sie",
+            "ihm"
+          ],
+          "correct": "ihr",
+          "explanations": {
+            "tr": "Frau Berger → Dativ ihr.",
+            "de": "Frau Berger → Dativ ihr.",
+            "en": "Frau Berger → Dativ ihr."
+          }
+        },
+        {
+          "word": "ihr",
+          "sentence": "Ich gebe ___ die Schlüssel morgen zurück.",
           "options": [
             "euch",
             "ihr",
-            "ihnen"
+            "sie"
           ],
           "correct": "euch",
           "explanations": {
-            "tr": "Sara + du = ihr; Dativ: euch.",
-            "de": "Sara + du = ihr; Dativ: euch.",
-            "en": "Sara + you = ihr; dative: euch."
+            "tr": "ihr → Dativ euch.",
+            "de": "ihr → Dativ euch.",
+            "en": "ihr → Dativ euch."
+          }
+        },
+        {
+          "word": "mein Sohn",
+          "sentence": "Ich kaufe meinem Sohn ein Wörterbuch. Ich kaufe ___ auch ein Heft.",
+          "options": [
+            "ihm",
+            "ihn",
+            "er"
+          ],
+          "correct": "ihm",
+          "explanations": {
+            "tr": "meinem Sohn → ihm.",
+            "de": "meinem Sohn → ihm.",
+            "en": "meinem Sohn → ihm."
+          }
+        },
+        {
+          "word": "Sie (formal)",
+          "sentence": "Kann ich ___ die Unterlagen morgen senden?",
+          "options": [
+            "Ihnen",
+            "Sie",
+            "euch"
+          ],
+          "correct": "Ihnen",
+          "explanations": {
+            "tr": "Resmî Sie'nin Dativ hâli Ihnen.",
+            "de": "Resmî Sie'nin Dativ hâli Ihnen.",
+            "en": "Resmî Sie'nin Dativ hâli Ihnen."
+          }
+        },
+        {
+          "word": "ich",
+          "sentence": "Der Lehrer gibt ___ eine zusätzliche Übung.",
+          "options": [
+            "mir",
+            "mich",
+            "ich"
+          ],
+          "correct": "mir",
+          "explanations": {
+            "tr": "ich → Dativ mir.",
+            "de": "ich → Dativ mir.",
+            "en": "ich → Dativ mir."
+          }
+        }
+      ]
+    },
+    {
+      "id": "dat-schreiben-3",
+      "title": {
+        "tr": "Übung 3 – Dativ zamirini yaz",
+        "de": "Übung 3 – Dativpronomen schreiben",
+        "en": "Exercise 3 – Type the dative pronoun"
+      },
+      "description": {
+        "tr": "Şık olmadan doğru Dativ zamirini üret.",
+        "de": "Schreibe das Dativpronomen ohne Auswahl.",
+        "en": "Type the dative pronoun without options."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "type": "text",
+          "word": "meine Oma",
+          "sentence": "Ich helfe meiner Oma beim Einkauf. → Ich helfe ___.",
+          "correct": "ihr",
+          "answers": [
+            "ihr"
+          ],
+          "explanations": {
+            "tr": "meiner Oma → ihr.",
+            "de": "meiner Oma → ihr.",
+            "en": "meiner Oma → ihr."
+          }
+        },
+        {
+          "type": "text",
+          "word": "der Nachbar",
+          "sentence": "Das Werkzeug gehört dem Nachbarn. → Es gehört ___.",
+          "correct": "ihm",
+          "answers": [
+            "ihm"
+          ],
+          "explanations": {
+            "tr": "dem Nachbarn → ihm.",
+            "de": "dem Nachbarn → ihm.",
+            "en": "dem Nachbarn → ihm."
+          }
+        },
+        {
+          "type": "text",
+          "word": "du",
+          "sentence": "Kann ich ___ etwas erklären?",
+          "correct": "dir",
+          "answers": [
+            "dir"
+          ],
+          "explanations": {
+            "tr": "du → Dativ dir.",
+            "de": "du → Dativ dir.",
+            "en": "du → Dativ dir."
+          }
+        },
+        {
+          "type": "text",
+          "word": "wir",
+          "sentence": "Der Film gefällt ___.",
+          "correct": "uns",
+          "answers": [
+            "uns"
+          ],
+          "explanations": {
+            "tr": "wir → Dativ uns.",
+            "de": "wir → Dativ uns.",
+            "en": "wir → Dativ uns."
+          }
+        },
+        {
+          "type": "text",
+          "word": "die Kinder",
+          "sentence": "Bitte hör den Kindern zu! → Bitte hör ___ zu!",
+          "correct": "ihnen",
+          "answers": [
+            "ihnen"
+          ],
+          "explanations": {
+            "tr": "den Kindern → ihnen.",
+            "de": "den Kindern → ihnen.",
+            "en": "den Kindern → ihnen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "ihr",
+          "sentence": "Ich antworte ___ später.",
+          "correct": "euch",
+          "answers": [
+            "euch"
+          ],
+          "explanations": {
+            "tr": "ihr → Dativ euch.",
+            "de": "ihr → Dativ euch.",
+            "en": "ihr → Dativ euch."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Frau Sommer",
+          "sentence": "Die Farbe steht Frau Sommer gut. → Sie steht ___ gut.",
+          "correct": "ihr",
+          "answers": [
+            "ihr"
+          ],
+          "explanations": {
+            "tr": "Frau Sommer → ihr.",
+            "de": "Frau Sommer → ihr.",
+            "en": "Frau Sommer → ihr."
+          }
+        },
+        {
+          "type": "text",
+          "word": "mein Vater",
+          "sentence": "Ich danke meinem Vater für alles. → Ich danke ___.",
+          "correct": "ihm",
+          "answers": [
+            "ihm"
+          ],
+          "explanations": {
+            "tr": "meinem Vater → ihm.",
+            "de": "meinem Vater → ihm.",
+            "en": "meinem Vater → ihm."
+          }
+        },
+        {
+          "type": "text",
+          "word": "ich",
+          "sentence": "Diese Musik gefällt ___.",
+          "correct": "mir",
+          "answers": [
+            "mir"
+          ],
+          "explanations": {
+            "tr": "ich → Dativ mir.",
+            "de": "ich → Dativ mir.",
+            "en": "ich → Dativ mir."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Sie (formal)",
+          "sentence": "Kann ich ___ helfen, Frau Weber?",
+          "correct": "Ihnen",
+          "answers": [
+            "ihnen"
+          ],
+          "explanations": {
+            "tr": "Resmî Sie → Dativ Ihnen.",
+            "de": "Resmî Sie → Dativ Ihnen.",
+            "en": "Resmî Sie → Dativ Ihnen."
           }
         }
       ]

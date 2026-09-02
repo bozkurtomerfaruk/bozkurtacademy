@@ -1,0 +1,1793 @@
+{
+  "id": "perfekt",
+  "level": "A1",
+  "title": {
+    "tr": "Perfekt",
+    "de": "Perfekt",
+    "en": "Present perfect"
+  },
+  "description": {
+    "tr": "haben/sein seçimi, Partizip II, düzenli-düzensiz ve ayrılabilen fiiller, cümle sırası ve günlük geçmiş anlatımı.",
+    "de": "Übe haben/sein, Partizip II, regelmäßige und unregelmäßige Verben, trennbare Verben, Satzstellung und Alltagserzählungen.",
+    "en": "Practise haben/sein, past participles, regular and irregular verbs, separable verbs, word order and everyday past narration."
+  },
+  "lesson": {
+    "title": {
+      "tr": "Perfekt – günlük Almancada geçmiş zaman",
+      "de": "Perfekt – Vergangenheit im Alltag",
+      "en": "Perfect tense – everyday past"
+    },
+    "intro": {
+      "tr": "Perfekt özellikle konuşma dilinde geçmişte olan olayları anlatmak için çok kullanılır. Yapı iki parçadan oluşur: çekimli haben/sein + Partizip II. Yardımcı fiil cümlenin ikinci yerindedir, Partizip II çoğunlukla en sona gider.",
+      "de": "Das Perfekt wird besonders in der gesprochenen Sprache für Vergangenes verwendet. Es besteht aus einer konjugierten Form von haben/sein und dem Partizip II. Das Hilfsverb steht meist auf Position 2, das Partizip II am Satzende.",
+      "en": "The perfect tense is widely used in spoken German for past events. It consists of conjugated haben/sein plus the past participle. The auxiliary is usually in position 2 and the participle goes to the end."
+    },
+    "rules": [
+      {
+        "label": "haben",
+        "text": {
+          "tr": "Fiillerin çoğu haben ile kullanılır: Ich habe gearbeitet. Wir haben gegessen. Sie hat geschrieben.",
+          "de": "Die meisten Verben bilden das Perfekt mit haben: Ich habe gearbeitet. Wir haben gegessen. Sie hat geschrieben.",
+          "en": "Most verbs form the perfect with haben: Ich habe gearbeitet. Wir haben gegessen. Sie hat geschrieben."
+        }
+      },
+      {
+        "label": "sein",
+        "text": {
+          "tr": "Yer değişimi ve durum değişimi bildiren birçok fiil sein alır: gehen, fahren, kommen, aufstehen, einschlafen, werden. bleiben, sein ve passieren de sein ile kullanılır.",
+          "de": "Viele Verben mit Orts- oder Zustandswechsel nehmen sein: gehen, fahren, kommen, aufstehen, einschlafen, werden. Auch bleiben, sein und passieren stehen mit sein.",
+          "en": "Many verbs of movement or change of state take sein: gehen, fahren, kommen, aufstehen, einschlafen, werden. bleiben, sein and passieren also use sein."
+        }
+      },
+      {
+        "label": "Düzenli Partizip II",
+        "text": {
+          "tr": "Çoğunlukla ge- + kök + -t: machen → gemacht, lernen → gelernt, kaufen → gekauft.",
+          "de": "Meist ge- + Stamm + -t: machen → gemacht, lernen → gelernt, kaufen → gekauft.",
+          "en": "Usually ge- + stem + -t: machen → gemacht, lernen → gelernt, kaufen → gekauft."
+        }
+      },
+      {
+        "label": "Düzensiz Partizip II",
+        "text": {
+          "tr": "Birçok güçlü fiilde biçim ezberlenir: gehen → gegangen, sehen → gesehen, schreiben → geschrieben, essen → gegessen.",
+          "de": "Bei vielen starken Verben muss man die Form lernen: gehen → gegangen, sehen → gesehen, schreiben → geschrieben, essen → gegessen.",
+          "en": "Many strong verbs have irregular participles that must be learned: gehen → gegangen, sehen → gesehen, schreiben → geschrieben, essen → gegessen."
+        }
+      },
+      {
+        "label": "Trennbare Verben",
+        "text": {
+          "tr": "ge- ön ek ile fiil arasına gelir: einkaufen → eingekauft, anrufen → angerufen, aufstehen → aufgestanden.",
+          "de": "Bei trennbaren Verben steht ge- zwischen Vorsilbe und Verb: einkaufen → eingekauft, anrufen → angerufen, aufstehen → aufgestanden.",
+          "en": "With separable verbs, ge- goes between prefix and verb: einkaufen → eingekauft, anrufen → angerufen, aufstehen → aufgestanden."
+        }
+      },
+      {
+        "label": "be-/ver-/er- ve -ieren",
+        "text": {
+          "tr": "be-, ver-, er- gibi ayrılmayan ön eklerde ve -ieren ile biten fiillerde genellikle ge- gelmez: besucht, verstanden, erzählt, studiert, fotografiert.",
+          "de": "Bei untrennbaren Vorsilben wie be-, ver-, er- und bei Verben auf -ieren steht normalerweise kein ge-: besucht, verstanden, erzählt, studiert, fotografiert.",
+          "en": "With inseparable prefixes such as be-, ver-, er- and verbs ending in -ieren, ge- is usually omitted: besucht, verstanden, erzählt, studiert, fotografiert."
+        }
+      }
+    ],
+    "examples": [
+      "Ich habe gestern lange gearbeitet. — Dün uzun süre çalıştım.",
+      "Wir sind nach Köln gefahren. — Köln'e gittik.",
+      "Sie hat ihre Mutter angerufen. — Annesini aradı.",
+      "Er ist früh aufgestanden. — Erken kalktı.",
+      "Was hast du am Wochenende gemacht? — Hafta sonu ne yaptın?"
+    ],
+    "tip": {
+      "tr": "Perfekt cümlesini üç adımda kur: 1) yardımcı fiil haben/sein, 2) özneye göre çekim, 3) doğru Partizip II'yi cümlenin sonuna koy.",
+      "de": "Bilde das Perfekt in drei Schritten: 1) haben/sein wählen, 2) Hilfsverb konjugieren, 3) richtiges Partizip II ans Satzende setzen.",
+      "en": "Build the perfect in three steps: 1) choose haben/sein, 2) conjugate the auxiliary, 3) place the correct participle at the end."
+    }
+  },
+  "exercises": [
+    {
+      "id": "haben-sein-1",
+      "title": {
+        "tr": "Übung 1 – haben mı sein mı?",
+        "de": "Übung 1 – haben oder sein?",
+        "en": "Exercise 1 – haben or sein?"
+      },
+      "description": {
+        "tr": "Temel Perfekt cümlelerinde doğru yardımcı fiili seç.",
+        "de": "Wähle das richtige Hilfsverb in einfachen Perfektsätzen.",
+        "en": "Choose the correct auxiliary in basic perfect sentences."
+      },
+      "difficulty": {
+        "tr": "Kolay-Orta",
+        "de": "Leicht–Mittel",
+        "en": "Easy–Intermediate"
+      },
+      "questions": [
+        {
+          "word": "essen",
+          "sentence": "Ich ___ gestern eine Pizza gegessen.",
+          "options": [
+            "habe",
+            "bin",
+            "ist"
+          ],
+          "correct": "habe",
+          "explanations": {
+            "tr": "essen çoğunlukla haben ile kullanılır.",
+            "de": "essen çoğunlukla haben ile kullanılır.",
+            "en": "essen çoğunlukla haben ile kullanılır."
+          }
+        },
+        {
+          "word": "fahren",
+          "sentence": "Wir ___ am Wochenende nach Hamburg gefahren.",
+          "options": [
+            "sind",
+            "haben",
+            "seid"
+          ],
+          "correct": "sind",
+          "explanations": {
+            "tr": "Yer değişimi: fahren → sein.",
+            "de": "Yer değişimi: fahren → sein.",
+            "en": "Yer değişimi: fahren → sein."
+          }
+        },
+        {
+          "word": "arbeiten",
+          "sentence": "Paul ___ gestern lange gearbeitet.",
+          "options": [
+            "hat",
+            "ist",
+            "hast"
+          ],
+          "correct": "hat",
+          "explanations": {
+            "tr": "arbeiten → haben.",
+            "de": "arbeiten → haben.",
+            "en": "arbeiten → haben."
+          }
+        },
+        {
+          "word": "gehen",
+          "sentence": "___ ihr gestern ins Kino gegangen?",
+          "options": [
+            "Seid",
+            "Habt",
+            "Sind"
+          ],
+          "correct": "Seid",
+          "explanations": {
+            "tr": "gehen yer değişimi bildirir → sein; ihr → seid.",
+            "de": "gehen yer değişimi bildirir → sein; ihr → seid.",
+            "en": "gehen yer değişimi bildirir → sein; ihr → seid."
+          }
+        },
+        {
+          "word": "lesen",
+          "sentence": "Meine Eltern ___ die Zeitung gelesen.",
+          "options": [
+            "haben",
+            "sind",
+            "hat"
+          ],
+          "correct": "haben",
+          "explanations": {
+            "tr": "lesen → haben.",
+            "de": "lesen → haben.",
+            "en": "lesen → haben."
+          }
+        },
+        {
+          "word": "kommen",
+          "sentence": "Mia ___ spät nach Hause gekommen.",
+          "options": [
+            "ist",
+            "hat",
+            "sind"
+          ],
+          "correct": "ist",
+          "explanations": {
+            "tr": "kommen → sein.",
+            "de": "kommen → sein.",
+            "en": "kommen → sein."
+          }
+        },
+        {
+          "word": "frühstücken",
+          "sentence": "Ich ___ heute noch nicht gefrühstückt.",
+          "options": [
+            "habe",
+            "bin",
+            "ist"
+          ],
+          "correct": "habe",
+          "explanations": {
+            "tr": "frühstücken → haben.",
+            "de": "frühstücken → haben.",
+            "en": "frühstücken → haben."
+          }
+        },
+        {
+          "word": "aufstehen",
+          "sentence": "Wann ___ du heute aufgestanden?",
+          "options": [
+            "bist",
+            "hast",
+            "ist"
+          ],
+          "correct": "bist",
+          "explanations": {
+            "tr": "aufstehen durum değişimi → sein.",
+            "de": "aufstehen durum değişimi → sein.",
+            "en": "aufstehen durum değişimi → sein."
+          }
+        },
+        {
+          "word": "machen",
+          "sentence": "Was ___ ihr am Samstag gemacht?",
+          "options": [
+            "habt",
+            "seid",
+            "haben"
+          ],
+          "correct": "habt",
+          "explanations": {
+            "tr": "machen → haben; ihr → habt.",
+            "de": "machen → haben; ihr → habt.",
+            "en": "machen → haben; ihr → habt."
+          }
+        },
+        {
+          "word": "bleiben",
+          "sentence": "Wir ___ gestern zu Hause geblieben.",
+          "options": [
+            "sind",
+            "haben",
+            "seid"
+          ],
+          "correct": "sind",
+          "explanations": {
+            "tr": "bleiben istisna olarak sein ile kullanılır.",
+            "de": "bleiben istisna olarak sein ile kullanılır.",
+            "en": "bleiben istisna olarak sein ile kullanılır."
+          }
+        }
+      ]
+    },
+    {
+      "id": "regelmaessig-2",
+      "title": {
+        "tr": "Übung 2 – Düzenli Partizip II",
+        "de": "Übung 2 – Regelmäßiges Partizip II",
+        "en": "Exercise 2 – Regular past participles"
+      },
+      "description": {
+        "tr": "Düzenli fiillerin Partizip II biçimlerini bağlam içinde seç.",
+        "de": "Übe regelmäßige Partizip-II-Formen im Kontext.",
+        "en": "Practise regular past participles in context."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Intermediate"
+      },
+      "questions": [
+        {
+          "word": "machen",
+          "sentence": "Ich habe meine Hausaufgaben schon ___.",
+          "options": [
+            "gemacht",
+            "gemachen",
+            "macht"
+          ],
+          "correct": "gemacht",
+          "explanations": {
+            "tr": "machen → gemacht.",
+            "de": "machen → gemacht.",
+            "en": "machen → gemacht."
+          }
+        },
+        {
+          "word": "lernen",
+          "sentence": "Wie lange hast du gestern Deutsch ___?",
+          "options": [
+            "gelernt",
+            "gelernen",
+            "lernt"
+          ],
+          "correct": "gelernt",
+          "explanations": {
+            "tr": "lernen → gelernt.",
+            "de": "lernen → gelernt.",
+            "en": "lernen → gelernt."
+          }
+        },
+        {
+          "word": "kaufen",
+          "sentence": "Wir haben neue Stühle ___.",
+          "options": [
+            "gekauft",
+            "gekaufen",
+            "kauft"
+          ],
+          "correct": "gekauft",
+          "explanations": {
+            "tr": "kaufen → gekauft.",
+            "de": "kaufen → gekauft.",
+            "en": "kaufen → gekauft."
+          }
+        },
+        {
+          "word": "kochen",
+          "sentence": "Meine Mutter hat eine Suppe ___.",
+          "options": [
+            "gekocht",
+            "gekochen",
+            "kocht"
+          ],
+          "correct": "gekocht",
+          "explanations": {
+            "tr": "kochen → gekocht.",
+            "de": "kochen → gekocht.",
+            "en": "kochen → gekocht."
+          }
+        },
+        {
+          "word": "fragen",
+          "sentence": "Der Student hat die Lehrerin etwas ___.",
+          "options": [
+            "gefragt",
+            "gefragen",
+            "fragt"
+          ],
+          "correct": "gefragt",
+          "explanations": {
+            "tr": "fragen → gefragt.",
+            "de": "fragen → gefragt.",
+            "en": "fragen → gefragt."
+          }
+        },
+        {
+          "word": "wohnen",
+          "sentence": "Früher haben wir in Bonn ___.",
+          "options": [
+            "gewohnt",
+            "gewohnen",
+            "wohnt"
+          ],
+          "correct": "gewohnt",
+          "explanations": {
+            "tr": "wohnen → gewohnt.",
+            "de": "wohnen → gewohnt.",
+            "en": "wohnen → gewohnt."
+          }
+        },
+        {
+          "word": "lachen",
+          "sentence": "Wir haben den ganzen Abend ___.",
+          "options": [
+            "gelacht",
+            "gelachen",
+            "lacht"
+          ],
+          "correct": "gelacht",
+          "explanations": {
+            "tr": "lachen → gelacht.",
+            "de": "lachen → gelacht.",
+            "en": "lachen → gelacht."
+          }
+        },
+        {
+          "word": "warten",
+          "sentence": "Warum hast du so lange auf den Bus ___?",
+          "options": [
+            "gewartet",
+            "gewarten",
+            "wartet"
+          ],
+          "correct": "gewartet",
+          "explanations": {
+            "tr": "warten → gewartet; -et.",
+            "de": "warten → gewartet; -et.",
+            "en": "warten → gewartet; -et."
+          }
+        },
+        {
+          "word": "arbeiten",
+          "sentence": "Sie hat am Samstag sechs Stunden ___.",
+          "options": [
+            "gearbeitet",
+            "gearbeiten",
+            "arbeitet"
+          ],
+          "correct": "gearbeitet",
+          "explanations": {
+            "tr": "arbeiten → gearbeitet.",
+            "de": "arbeiten → gearbeitet.",
+            "en": "arbeiten → gearbeitet."
+          }
+        },
+        {
+          "word": "parken",
+          "sentence": "Wo hast du dein Auto ___?",
+          "options": [
+            "geparkt",
+            "geparken",
+            "parkt"
+          ],
+          "correct": "geparkt",
+          "explanations": {
+            "tr": "parken → geparkt.",
+            "de": "parken → geparkt.",
+            "en": "parken → geparkt."
+          }
+        }
+      ]
+    },
+    {
+      "id": "unregelmaessig-3",
+      "title": {
+        "tr": "Übung 3 – Düzensiz Partizip II",
+        "de": "Übung 3 – Unregelmäßiges Partizip II",
+        "en": "Exercise 3 – Irregular past participles"
+      },
+      "description": {
+        "tr": "Sık kullanılan güçlü fiillerin Partizip II biçimlerini ayırt et.",
+        "de": "Übe häufige starke Verben im Partizip II.",
+        "en": "Practise common strong verbs in the past participle."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Intermediate"
+      },
+      "questions": [
+        {
+          "word": "essen",
+          "sentence": "Wir haben im Restaurant Fisch ___.",
+          "options": [
+            "gegessen",
+            "geesst",
+            "gegessenet"
+          ],
+          "correct": "gegessen",
+          "explanations": {
+            "tr": "essen → gegessen.",
+            "de": "essen → gegessen.",
+            "en": "essen → gegessen."
+          }
+        },
+        {
+          "word": "sehen",
+          "sentence": "Hast du den neuen Film schon ___?",
+          "options": [
+            "gesehen",
+            "geseht",
+            "gesehenen"
+          ],
+          "correct": "gesehen",
+          "explanations": {
+            "tr": "sehen → gesehen.",
+            "de": "sehen → gesehen.",
+            "en": "sehen → gesehen."
+          }
+        },
+        {
+          "word": "schreiben",
+          "sentence": "Sie hat mir gestern eine E-Mail ___.",
+          "options": [
+            "geschrieben",
+            "geschreibt",
+            "geschreiben"
+          ],
+          "correct": "geschrieben",
+          "explanations": {
+            "tr": "schreiben → geschrieben.",
+            "de": "schreiben → geschrieben.",
+            "en": "schreiben → geschrieben."
+          }
+        },
+        {
+          "word": "finden",
+          "sentence": "Ich habe meine Schlüssel endlich ___.",
+          "options": [
+            "gefunden",
+            "gefindet",
+            "gefundenen"
+          ],
+          "correct": "gefunden",
+          "explanations": {
+            "tr": "finden → gefunden.",
+            "de": "finden → gefunden.",
+            "en": "finden → gefunden."
+          }
+        },
+        {
+          "word": "sprechen",
+          "sentence": "Wir haben lange über das Problem ___.",
+          "options": [
+            "gesprochen",
+            "gesprecht",
+            "gesprechen"
+          ],
+          "correct": "gesprochen",
+          "explanations": {
+            "tr": "sprechen → gesprochen.",
+            "de": "sprechen → gesprochen.",
+            "en": "sprechen → gesprochen."
+          }
+        },
+        {
+          "word": "nehmen",
+          "sentence": "Er hat den früheren Zug ___.",
+          "options": [
+            "genommen",
+            "genehmt",
+            "genommenen"
+          ],
+          "correct": "genommen",
+          "explanations": {
+            "tr": "nehmen → genommen.",
+            "de": "nehmen → genommen.",
+            "en": "nehmen → genommen."
+          }
+        },
+        {
+          "word": "trinken",
+          "sentence": "Ich habe heute nur Wasser ___.",
+          "options": [
+            "getrunken",
+            "getrinkt",
+            "getrunkt"
+          ],
+          "correct": "getrunken",
+          "explanations": {
+            "tr": "trinken → getrunken.",
+            "de": "trinken → getrunken.",
+            "en": "trinken → getrunken."
+          }
+        },
+        {
+          "word": "schlafen",
+          "sentence": "Das Baby hat sehr lange ___.",
+          "options": [
+            "geschlafen",
+            "geschläft",
+            "geschlaft"
+          ],
+          "correct": "geschlafen",
+          "explanations": {
+            "tr": "schlafen → geschlafen.",
+            "de": "schlafen → geschlafen.",
+            "en": "schlafen → geschlafen."
+          }
+        },
+        {
+          "word": "geben",
+          "sentence": "Wer hat dir diese Nummer ___?",
+          "options": [
+            "gegeben",
+            "gegebt",
+            "gegibt"
+          ],
+          "correct": "gegeben",
+          "explanations": {
+            "tr": "geben → gegeben.",
+            "de": "geben → gegeben.",
+            "en": "geben → gegeben."
+          }
+        },
+        {
+          "word": "backen",
+          "sentence": "Meine Oma hat einen Kuchen ___.",
+          "options": [
+            "gebacken",
+            "gebackt",
+            "gebackenen"
+          ],
+          "correct": "gebacken",
+          "explanations": {
+            "tr": "backen → gebacken.",
+            "de": "backen → gebacken.",
+            "en": "backen → gebacken."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sein-verben-4",
+      "title": {
+        "tr": "Übung 4 – sein ile Perfekt",
+        "de": "Übung 4 – Perfekt mit sein",
+        "en": "Exercise 4 – Perfect with sein"
+      },
+      "description": {
+        "tr": "Yer/durum değişimi ve önemli sein istisnalarını birlikte çalış.",
+        "de": "Übe Orts-/Zustandswechsel und wichtige sein-Ausnahmen.",
+        "en": "Practise movement/change-of-state verbs and important sein exceptions."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Intermediate"
+      },
+      "questions": [
+        {
+          "word": "gehen",
+          "sentence": "Meine Schwester ___ zu Fuß zur Uni gegangen.",
+          "options": [
+            "ist",
+            "hat",
+            "sind"
+          ],
+          "correct": "ist",
+          "explanations": {
+            "tr": "gehen → sein.",
+            "de": "gehen → sein.",
+            "en": "gehen → sein."
+          }
+        },
+        {
+          "word": "fliegen",
+          "sentence": "Wir ___ letztes Jahr nach Wien geflogen.",
+          "options": [
+            "sind",
+            "haben",
+            "seid"
+          ],
+          "correct": "sind",
+          "explanations": {
+            "tr": "fliegen yer değişimi → sein.",
+            "de": "fliegen yer değişimi → sein.",
+            "en": "fliegen yer değişimi → sein."
+          }
+        },
+        {
+          "word": "fallen",
+          "sentence": "Das Kind ___ vom Stuhl gefallen.",
+          "options": [
+            "ist",
+            "hat",
+            "sind"
+          ],
+          "correct": "ist",
+          "explanations": {
+            "tr": "fallen → sein.",
+            "de": "fallen → sein.",
+            "en": "fallen → sein."
+          }
+        },
+        {
+          "word": "werden",
+          "sentence": "Du ___ aber groß geworden!",
+          "options": [
+            "bist",
+            "hast",
+            "ist"
+          ],
+          "correct": "bist",
+          "explanations": {
+            "tr": "werden durum değişimi → sein.",
+            "de": "werden durum değişimi → sein.",
+            "en": "werden durum değişimi → sein."
+          }
+        },
+        {
+          "word": "einschlafen",
+          "sentence": "Paula ___ beim Lesen eingeschlafen.",
+          "options": [
+            "ist",
+            "hat",
+            "sind"
+          ],
+          "correct": "ist",
+          "explanations": {
+            "tr": "einschlafen durum değişimi → sein.",
+            "de": "einschlafen durum değişimi → sein.",
+            "en": "einschlafen durum değişimi → sein."
+          }
+        },
+        {
+          "word": "aufwachen",
+          "sentence": "Ich ___ heute sehr früh aufgewacht.",
+          "options": [
+            "bin",
+            "habe",
+            "ist"
+          ],
+          "correct": "bin",
+          "explanations": {
+            "tr": "aufwachen durum değişimi → sein.",
+            "de": "aufwachen durum değişimi → sein.",
+            "en": "aufwachen durum değişimi → sein."
+          }
+        },
+        {
+          "word": "bleiben",
+          "sentence": "Warum ___ ihr so lange im Büro geblieben?",
+          "options": [
+            "seid",
+            "habt",
+            "sind"
+          ],
+          "correct": "seid",
+          "explanations": {
+            "tr": "bleiben her zaman sein ile.",
+            "de": "bleiben her zaman sein ile.",
+            "en": "bleiben her zaman sein ile."
+          }
+        },
+        {
+          "word": "passieren",
+          "sentence": "Was ___ gestern passiert?",
+          "options": [
+            "ist",
+            "hat",
+            "sind"
+          ],
+          "correct": "ist",
+          "explanations": {
+            "tr": "passieren → sein.",
+            "de": "passieren → sein.",
+            "en": "passieren → sein."
+          }
+        },
+        {
+          "word": "sein",
+          "sentence": "Ich ___ schon einmal in Österreich gewesen.",
+          "options": [
+            "bin",
+            "habe",
+            "war"
+          ],
+          "correct": "bin",
+          "explanations": {
+            "tr": "Perfekt von sein → bin gewesen.",
+            "de": "Perfekt von sein → bin gewesen.",
+            "en": "Perfekt von sein → bin gewesen."
+          }
+        },
+        {
+          "word": "reisen",
+          "sentence": "Meine Freunde ___ im Sommer durch Italien gereist.",
+          "options": [
+            "sind",
+            "haben",
+            "ist"
+          ],
+          "correct": "sind",
+          "explanations": {
+            "tr": "reisen yer değişimi → sein.",
+            "de": "reisen yer değişimi → sein.",
+            "en": "reisen yer değişimi → sein."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trennbar-5",
+      "title": {
+        "tr": "Übung 5 – Trennbare Verben + Perfekt",
+        "de": "Übung 5 – Trennbare Verben im Perfekt",
+        "en": "Exercise 5 – Separable verbs in the perfect"
+      },
+      "description": {
+        "tr": "ge- ekinin ayrılabilen fiilde doğru yere girmesine dikkat et.",
+        "de": "Achte auf die Position von ge- bei trennbaren Verben.",
+        "en": "Pay attention to the position of ge- in separable verbs."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel–Schwer",
+        "en": "Intermediate–Hard"
+      },
+      "questions": [
+        {
+          "word": "einkaufen",
+          "sentence": "Wir haben am Samstag für die Woche ___.",
+          "options": [
+            "eingekauft",
+            "geeinkauft",
+            "einkaufen"
+          ],
+          "correct": "eingekauft",
+          "explanations": {
+            "tr": "einkaufen → eingekauft.",
+            "de": "einkaufen → eingekauft.",
+            "en": "einkaufen → eingekauft."
+          }
+        },
+        {
+          "word": "anrufen",
+          "sentence": "Ich habe dich gestern dreimal ___.",
+          "options": [
+            "angerufen",
+            "geanrufen",
+            "anruft"
+          ],
+          "correct": "angerufen",
+          "explanations": {
+            "tr": "anrufen → angerufen.",
+            "de": "anrufen → angerufen.",
+            "en": "anrufen → angerufen."
+          }
+        },
+        {
+          "word": "aufstehen",
+          "sentence": "Wann bist du heute ___?",
+          "options": [
+            "aufgestanden",
+            "geaufstanden",
+            "aufgesteht"
+          ],
+          "correct": "aufgestanden",
+          "explanations": {
+            "tr": "aufstehen → aufgestanden; sein.",
+            "de": "aufstehen → aufgestanden; sein.",
+            "en": "aufstehen → aufgestanden; sein."
+          }
+        },
+        {
+          "word": "abholen",
+          "sentence": "Sie hat ihren Bruder vom Bahnhof ___.",
+          "options": [
+            "abgeholt",
+            "geabholt",
+            "abgeholen"
+          ],
+          "correct": "abgeholt",
+          "explanations": {
+            "tr": "abholen → abgeholt.",
+            "de": "abholen → abgeholt.",
+            "en": "abholen → abgeholt."
+          }
+        },
+        {
+          "word": "ausschalten",
+          "sentence": "Hast du das Licht ___?",
+          "options": [
+            "ausgeschaltet",
+            "geauschaltet",
+            "ausschaltet"
+          ],
+          "correct": "ausgeschaltet",
+          "explanations": {
+            "tr": "ausschalten → ausgeschaltet.",
+            "de": "ausschalten → ausgeschaltet.",
+            "en": "ausschalten → ausgeschaltet."
+          }
+        },
+        {
+          "word": "einsteigen",
+          "sentence": "Wir sind am Hauptbahnhof ___.",
+          "options": [
+            "eingestiegen",
+            "geeinstiegen",
+            "einsteigen"
+          ],
+          "correct": "eingestiegen",
+          "explanations": {
+            "tr": "einsteigen → eingestiegen; sein.",
+            "de": "einsteigen → eingestiegen; sein.",
+            "en": "einsteigen → eingestiegen; sein."
+          }
+        },
+        {
+          "word": "mitbringen",
+          "sentence": "Warum hast du deinen Ausweis nicht ___?",
+          "options": [
+            "mitgebracht",
+            "gemitbracht",
+            "mitgebringt"
+          ],
+          "correct": "mitgebracht",
+          "explanations": {
+            "tr": "mitbringen → mitgebracht.",
+            "de": "mitbringen → mitgebracht.",
+            "en": "mitbringen → mitgebracht."
+          }
+        },
+        {
+          "word": "aufräumen",
+          "sentence": "Die Kinder haben ihr Zimmer ___.",
+          "options": [
+            "aufgeräumt",
+            "geaufräumt",
+            "aufgeräumen"
+          ],
+          "correct": "aufgeräumt",
+          "explanations": {
+            "tr": "aufräumen → aufgeräumt.",
+            "de": "aufräumen → aufgeräumt.",
+            "en": "aufräumen → aufgeräumt."
+          }
+        },
+        {
+          "word": "fernsehen",
+          "sentence": "Wir haben gestern Abend lange ___.",
+          "options": [
+            "ferngesehen",
+            "gefernsehen",
+            "ferngeseht"
+          ],
+          "correct": "ferngesehen",
+          "explanations": {
+            "tr": "fernsehen → ferngesehen.",
+            "de": "fernsehen → ferngesehen.",
+            "en": "fernsehen → ferngesehen."
+          }
+        },
+        {
+          "word": "anfangen",
+          "sentence": "Der Kurs hat um neun Uhr ___.",
+          "options": [
+            "angefangen",
+            "geanfangen",
+            "angefangt"
+          ],
+          "correct": "angefangen",
+          "explanations": {
+            "tr": "anfangen → angefangen.",
+            "de": "anfangen → angefangen.",
+            "en": "anfangen → angefangen."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ohne-ge-6",
+      "title": {
+        "tr": "Übung 6 – Hangi fiilde ge- yok?",
+        "de": "Übung 6 – Wann gibt es kein ge-?",
+        "en": "Exercise 6 – When is there no ge-?"
+      },
+      "description": {
+        "tr": "be-, ver-, er- gibi ön ekleri ve -ieren fiillerini doğru Partizip II ile kullan.",
+        "de": "Übe untrennbare Vorsilben und Verben auf -ieren.",
+        "en": "Practise inseparable prefixes and verbs ending in -ieren."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel–Schwer",
+        "en": "Intermediate–Hard"
+      },
+      "questions": [
+        {
+          "word": "besuchen",
+          "sentence": "Wir haben gestern unsere Großeltern ___.",
+          "options": [
+            "besucht",
+            "gebesucht",
+            "besuchen"
+          ],
+          "correct": "besucht",
+          "explanations": {
+            "tr": "be- ile ge- gelmez: besucht.",
+            "de": "be- ile ge- gelmez: besucht.",
+            "en": "be- ile ge- gelmez: besucht."
+          }
+        },
+        {
+          "word": "verstehen",
+          "sentence": "Ich habe die Aufgabe nicht ___.",
+          "options": [
+            "verstanden",
+            "geverstanden",
+            "versteht"
+          ],
+          "correct": "verstanden",
+          "explanations": {
+            "tr": "ver- ile ge- gelmez: verstanden.",
+            "de": "ver- ile ge- gelmez: verstanden.",
+            "en": "ver- ile ge- gelmez: verstanden."
+          }
+        },
+        {
+          "word": "erzählen",
+          "sentence": "Sie hat mir eine interessante Geschichte ___.",
+          "options": [
+            "erzählt",
+            "geerzählt",
+            "erzählen"
+          ],
+          "correct": "erzählt",
+          "explanations": {
+            "tr": "er- ile ge- gelmez: erzählt.",
+            "de": "er- ile ge- gelmez: erzählt.",
+            "en": "er- ile ge- gelmez: erzählt."
+          }
+        },
+        {
+          "word": "studieren",
+          "sentence": "Wo hast du ___?",
+          "options": [
+            "studiert",
+            "gestudiert",
+            "studieren"
+          ],
+          "correct": "studiert",
+          "explanations": {
+            "tr": "-ieren → ge- yok: studiert.",
+            "de": "-ieren → ge- yok: studiert.",
+            "en": "-ieren → ge- yok: studiert."
+          }
+        },
+        {
+          "word": "fotografieren",
+          "sentence": "Wir haben viele Gebäude ___.",
+          "options": [
+            "fotografiert",
+            "gefotografiert",
+            "fotografieren"
+          ],
+          "correct": "fotografiert",
+          "explanations": {
+            "tr": "-ieren → fotografiert.",
+            "de": "-ieren → fotografiert.",
+            "en": "-ieren → fotografiert."
+          }
+        },
+        {
+          "word": "verpassen",
+          "sentence": "Ihr habt schon wieder den Zug ___.",
+          "options": [
+            "verpasst",
+            "geverpasst",
+            "verpassen"
+          ],
+          "correct": "verpasst",
+          "explanations": {
+            "tr": "ver- → ge- yok.",
+            "de": "ver- → ge- yok.",
+            "en": "ver- → ge- yok."
+          }
+        },
+        {
+          "word": "beschweren",
+          "sentence": "Die Nachbarn haben sich über den Lärm ___.",
+          "options": [
+            "beschwert",
+            "gebeschwert",
+            "beschweren"
+          ],
+          "correct": "beschwert",
+          "explanations": {
+            "tr": "be- → ge- yok.",
+            "de": "be- → ge- yok.",
+            "en": "be- → ge- yok."
+          }
+        },
+        {
+          "word": "vorbereiten",
+          "sentence": "Der Chef hat die Präsentation ___.",
+          "options": [
+            "vorbereitet",
+            "gevobereitet",
+            "vorbereiten"
+          ],
+          "correct": "vorbereitet",
+          "explanations": {
+            "tr": "vorbereiten burada ge- almaz.",
+            "de": "vorbereiten burada ge- almaz.",
+            "en": "vorbereiten burada ge- almaz."
+          }
+        },
+        {
+          "word": "übernachten",
+          "sentence": "Wir haben im Hotel ___.",
+          "options": [
+            "übernachtet",
+            "geübernachtet",
+            "übernachten"
+          ],
+          "correct": "übernachtet",
+          "explanations": {
+            "tr": "über- ayrılmayan ön ek; ge- yok.",
+            "de": "über- ayrılmayan ön ek; ge- yok.",
+            "en": "über- ayrılmayan ön ek; ge- yok."
+          }
+        },
+        {
+          "word": "reparieren",
+          "sentence": "Der Techniker hat meinen Laptop ___.",
+          "options": [
+            "repariert",
+            "gerepariert",
+            "reparieren"
+          ],
+          "correct": "repariert",
+          "explanations": {
+            "tr": "-ieren → repariert.",
+            "de": "-ieren → repariert.",
+            "en": "-ieren → repariert."
+          }
+        }
+      ]
+    },
+    {
+      "id": "satzstellung-7",
+      "title": {
+        "tr": "Übung 7 – Perfekt'te cümle sırası",
+        "de": "Übung 7 – Satzstellung im Perfekt",
+        "en": "Exercise 7 – Word order in the perfect"
+      },
+      "description": {
+        "tr": "Yardımcı fiilin ve Partizip II'nin doğru yerini seç.",
+        "de": "Wähle die richtige Position von Hilfsverb und Partizip II.",
+        "en": "Choose the correct position of the auxiliary and participle."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel–Schwer",
+        "en": "Intermediate–Hard"
+      },
+      "questions": [
+        {
+          "word": "Satzstellung",
+          "sentence": "Welche Variante ist richtig?",
+          "options": [
+            "Ich habe gestern lange gearbeitet.",
+            "Ich gestern habe lange gearbeitet.",
+            "Ich habe gearbeitet gestern lange."
+          ],
+          "correct": "Ich habe gestern lange gearbeitet.",
+          "explanations": {
+            "tr": "haben 2. pozisyonda, Partizip II sonda.",
+            "de": "haben 2. pozisyonda, Partizip II sonda.",
+            "en": "haben 2. pozisyonda, Partizip II sonda."
+          }
+        },
+        {
+          "word": "Satzstellung",
+          "sentence": "Welche Variante ist richtig? ",
+          "options": [
+            "Wir sind am Sonntag nach Köln gefahren.",
+            "Wir am Sonntag sind nach Köln gefahren.",
+            "Wir sind gefahren am Sonntag nach Köln."
+          ],
+          "correct": "Wir sind am Sonntag nach Köln gefahren.",
+          "explanations": {
+            "tr": "sind ikinci yerde, gefahren sonda.",
+            "de": "sind ikinci yerde, gefahren sonda.",
+            "en": "sind ikinci yerde, gefahren sonda."
+          }
+        },
+        {
+          "word": "Frage",
+          "sentence": "Welche Frage ist richtig?",
+          "options": [
+            "Was hast du am Wochenende gemacht?",
+            "Was du hast am Wochenende gemacht?",
+            "Was gemacht hast du am Wochenende?"
+          ],
+          "correct": "Was hast du am Wochenende gemacht?",
+          "explanations": {
+            "tr": "W-soru + yardımcı fiil + özne + ... + Partizip II.",
+            "de": "W-soru + yardımcı fiil + özne + ... + Partizip II.",
+            "en": "W-soru + yardımcı fiil + özne + ... + Partizip II."
+          }
+        },
+        {
+          "word": "Frage",
+          "sentence": "Welche Frage ist richtig? ",
+          "options": [
+            "Wann bist du heute aufgestanden?",
+            "Wann du bist heute aufgestanden?",
+            "Wann aufgestanden bist du heute?"
+          ],
+          "correct": "Wann bist du heute aufgestanden?",
+          "explanations": {
+            "tr": "Wann + bist + du + ... + aufgestanden.",
+            "de": "Wann + bist + du + ... + aufgestanden.",
+            "en": "Wann + bist + du + ... + aufgestanden."
+          }
+        },
+        {
+          "word": "Satzstellung",
+          "sentence": "Welche Variante ist richtig?  ",
+          "options": [
+            "Mara hat gestern ihre Mutter angerufen.",
+            "Mara gestern hat ihre Mutter angerufen.",
+            "Mara hat angerufen gestern ihre Mutter."
+          ],
+          "correct": "Mara hat gestern ihre Mutter angerufen.",
+          "explanations": {
+            "tr": "angerufen sonda.",
+            "de": "angerufen sonda.",
+            "en": "angerufen sonda."
+          }
+        },
+        {
+          "word": "Satzstellung",
+          "sentence": "Welche Variante ist richtig?   ",
+          "options": [
+            "Die Kinder sind früh eingeschlafen.",
+            "Die Kinder früh sind eingeschlafen.",
+            "Die Kinder sind eingeschlafen früh."
+          ],
+          "correct": "Die Kinder sind früh eingeschlafen.",
+          "explanations": {
+            "tr": "sind 2. pozisyonda, eingeschlafen sonda.",
+            "de": "sind 2. pozisyonda, eingeschlafen sonda.",
+            "en": "sind 2. pozisyonda, eingeschlafen sonda."
+          }
+        },
+        {
+          "word": "Frage",
+          "sentence": "Welche Frage ist richtig?  ",
+          "options": [
+            "Habt ihr die Tickets schon gekauft?",
+            "Ihr habt die Tickets schon gekauft?",
+            "Gekauft habt ihr schon die Tickets?"
+          ],
+          "correct": "Habt ihr die Tickets schon gekauft?",
+          "explanations": {
+            "tr": "Ja/Nein sorusunda yardımcı fiil başa gelir.",
+            "de": "Ja/Nein sorusunda yardımcı fiil başa gelir.",
+            "en": "Ja/Nein sorusunda yardımcı fiil başa gelir."
+          }
+        },
+        {
+          "word": "Satzstellung",
+          "sentence": "Welche Variante ist richtig?    ",
+          "options": [
+            "Ich habe meinen Schlüssel nicht gefunden.",
+            "Ich meinen Schlüssel habe nicht gefunden.",
+            "Ich habe gefunden meinen Schlüssel nicht."
+          ],
+          "correct": "Ich habe meinen Schlüssel nicht gefunden.",
+          "explanations": {
+            "tr": "gefunden cümle sonunda.",
+            "de": "gefunden cümle sonunda.",
+            "en": "gefunden cümle sonunda."
+          }
+        },
+        {
+          "word": "Frage",
+          "sentence": "Welche Frage ist richtig?   ",
+          "options": [
+            "Warum ist der Bus so spät angekommen?",
+            "Warum der Bus ist so spät angekommen?",
+            "Warum angekommen ist der Bus so spät?"
+          ],
+          "correct": "Warum ist der Bus so spät angekommen?",
+          "explanations": {
+            "tr": "Warum + ist + özne + ... + angekommen.",
+            "de": "Warum + ist + özne + ... + angekommen.",
+            "en": "Warum + ist + özne + ... + angekommen."
+          }
+        },
+        {
+          "word": "Satzstellung",
+          "sentence": "Welche Variante ist richtig?     ",
+          "options": [
+            "Wir haben gestern Abend ferngesehen.",
+            "Wir gestern Abend haben ferngesehen.",
+            "Wir haben ferngesehen gestern Abend."
+          ],
+          "correct": "Wir haben gestern Abend ferngesehen.",
+          "explanations": {
+            "tr": "ferngesehen sonda.",
+            "de": "ferngesehen sonda.",
+            "en": "ferngesehen sonda."
+          }
+        }
+      ]
+    },
+    {
+      "id": "praesens-perfekt-8",
+      "title": {
+        "tr": "Übung 8 – Präsens mi Perfekt mi?",
+        "de": "Übung 8 – Präsens oder Perfekt?",
+        "en": "Exercise 8 – Present or perfect?"
+      },
+      "description": {
+        "tr": "Bağlamdaki zaman ifadesine göre doğru zamanı seç.",
+        "de": "Wähle anhand des Kontexts Präsens oder Perfekt.",
+        "en": "Choose present or perfect according to the time context."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "lernen",
+          "sentence": "Heute ___ ich zu Hause. Gestern ___ ich in der Bibliothek ___.",
+          "options": [
+            "lerne / habe / gelernt",
+            "habe / lerne / gelernt",
+            "lernte / habe / lernen"
+          ],
+          "correct": "lerne / habe / gelernt",
+          "explanations": {
+            "tr": "Heute → Präsens; gestern → Perfekt.",
+            "de": "Heute → Präsens; gestern → Perfekt.",
+            "en": "Heute → Präsens; gestern → Perfekt."
+          }
+        },
+        {
+          "word": "wohnen",
+          "sentence": "Jetzt ___ wir in Hamburg. Früher ___ wir in Köln ___.",
+          "options": [
+            "wohnen / haben / gewohnt",
+            "haben / wohnen / gewohnt",
+            "wohnen / sind / gewohnt"
+          ],
+          "correct": "wohnen / haben / gewohnt",
+          "explanations": {
+            "tr": "Jetzt Präsens, früher Perfekt.",
+            "de": "Jetzt Präsens, früher Perfekt.",
+            "en": "Jetzt Präsens, früher Perfekt."
+          }
+        },
+        {
+          "word": "suchen",
+          "sentence": "Heute ___ ich Anna. Gestern ___ ich Herrn Klein ___.",
+          "options": [
+            "suche / habe / gesucht",
+            "gesucht / habe / suche",
+            "suche / bin / gesucht"
+          ],
+          "correct": "suche / habe / gesucht",
+          "explanations": {
+            "tr": "Heute Präsens; gestern Perfekt.",
+            "de": "Heute Präsens; gestern Perfekt.",
+            "en": "Heute Präsens; gestern Perfekt."
+          }
+        },
+        {
+          "word": "spielen",
+          "sentence": "Heute ___ Bayern nicht. Sie ___ gestern schon ___.",
+          "options": [
+            "spielt / hat / gespielt",
+            "hat / spielt / gespielt",
+            "spielt / ist / gespielt"
+          ],
+          "correct": "spielt / hat / gespielt",
+          "explanations": {
+            "tr": "Heute Präsens, gestern Perfekt.",
+            "de": "Heute Präsens, gestern Perfekt.",
+            "en": "Heute Präsens, gestern Perfekt."
+          }
+        },
+        {
+          "word": "machen",
+          "sentence": "Ich ___ die Aufgabe gerade. Die Hausaufgaben ___ ich schon ___.",
+          "options": [
+            "mache / habe / gemacht",
+            "gemacht / habe / mache",
+            "mache / bin / gemacht"
+          ],
+          "correct": "mache / habe / gemacht",
+          "explanations": {
+            "tr": "gerade → Präsens; schon → geçmiş tamamlanmış.",
+            "de": "gerade → Präsens; schon → geçmiş tamamlanmış.",
+            "en": "gerade → Präsens; schon → geçmiş tamamlanmış."
+          }
+        },
+        {
+          "word": "kochen",
+          "sentence": "Mama, ___ du gerade? – Nein, ich ___ schon ___.",
+          "options": [
+            "kochst / habe / gekocht",
+            "hast / koche / gekocht",
+            "kochst / bin / gekocht"
+          ],
+          "correct": "kochst / habe / gekocht",
+          "explanations": {
+            "tr": "gerade Präsens; schon Perfekt.",
+            "de": "gerade Präsens; schon Perfekt.",
+            "en": "gerade Präsens; schon Perfekt."
+          }
+        },
+        {
+          "word": "parken",
+          "sentence": "Wo ___ du normalerweise? Wo ___ du heute das Auto ___?",
+          "options": [
+            "parkst / hast / geparkt",
+            "hast / parkst / geparkt",
+            "parkst / bist / geparkt"
+          ],
+          "correct": "parkst / hast / geparkt",
+          "explanations": {
+            "tr": "normalerweise Präsens; heute tamamlanmış olay → Perfekt.",
+            "de": "normalerweise Präsens; heute tamamlanmış olay → Perfekt.",
+            "en": "normalerweise Präsens; heute tamamlanmış olay → Perfekt."
+          }
+        },
+        {
+          "word": "leben",
+          "sentence": "Jetzt ___ er in Berlin. Früher ___ er in Zürich ___.",
+          "options": [
+            "lebt / hat / gelebt",
+            "hat / lebt / gelebt",
+            "lebt / ist / gelebt"
+          ],
+          "correct": "lebt / hat / gelebt",
+          "explanations": {
+            "tr": "Jetzt Präsens, früher Perfekt.",
+            "de": "Jetzt Präsens, früher Perfekt.",
+            "en": "Jetzt Präsens, früher Perfekt."
+          }
+        },
+        {
+          "word": "decken",
+          "sentence": "Rudi ___ den Tisch gerade. Seine Schwester ___ ihn gestern ___.",
+          "options": [
+            "deckt / hat / gedeckt",
+            "hat / deckt / gedeckt",
+            "deckt / ist / gedeckt"
+          ],
+          "correct": "deckt / hat / gedeckt",
+          "explanations": {
+            "tr": "gerade Präsens; gestern Perfekt.",
+            "de": "gerade Präsens; gestern Perfekt.",
+            "en": "gerade Präsens; gestern Perfekt."
+          }
+        },
+        {
+          "word": "hören",
+          "sentence": "___ du das? Ich ___ vorhin auch etwas ___.",
+          "options": [
+            "Hörst / habe / gehört",
+            "Hast / höre / gehört",
+            "Hörst / bin / gehört"
+          ],
+          "correct": "Hörst / habe / gehört",
+          "explanations": {
+            "tr": "Şimdi duyma → Präsens; vorhin → Perfekt.",
+            "de": "Şimdi duyma → Präsens; vorhin → Perfekt.",
+            "en": "Şimdi duyma → Präsens; vorhin → Perfekt."
+          }
+        }
+      ]
+    },
+    {
+      "id": "tagesablauf-9",
+      "title": {
+        "tr": "Übung 9 – Gününü Perfekt ile anlat",
+        "de": "Übung 9 – Tagesablauf im Perfekt",
+        "en": "Exercise 9 – Describe a day in the perfect"
+      },
+      "description": {
+        "tr": "Şık yok. Yardımcı fiil ve Partizip II'yi kendin yaz.",
+        "de": "Keine Auswahl. Schreibe Hilfsverb und Partizip II selbst.",
+        "en": "No options. Write the auxiliary and participle yourself."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "type": "text",
+          "word": "aufwachen",
+          "sentence": "Ergänze komplett: Ich ___ um 6:30 Uhr ___. (aufwachen)",
+          "correct": "bin / aufgewacht",
+          "answers": [
+            "bin / aufgewacht",
+            "bin aufgewacht"
+          ],
+          "explanations": {
+            "tr": "aufwachen → sein + aufgewacht.",
+            "de": "aufwachen → sein + aufgewacht.",
+            "en": "aufwachen → sein + aufgewacht."
+          }
+        },
+        {
+          "type": "text",
+          "word": "aufstehen",
+          "sentence": "Ergänze komplett: Danach ___ ich sofort ___. (aufstehen)",
+          "correct": "bin / aufgestanden",
+          "answers": [
+            "bin / aufgestanden",
+            "bin aufgestanden"
+          ],
+          "explanations": {
+            "tr": "aufstehen → sein + aufgestanden.",
+            "de": "aufstehen → sein + aufgestanden.",
+            "en": "aufstehen → sein + aufgestanden."
+          }
+        },
+        {
+          "type": "text",
+          "word": "frühstücken",
+          "sentence": "Ergänze komplett: Ich ___ schnell ___. (frühstücken)",
+          "correct": "habe / gefrühstückt",
+          "answers": [
+            "habe / gefrühstückt",
+            "habe gefrühstückt"
+          ],
+          "explanations": {
+            "tr": "frühstücken → haben + gefrühstückt.",
+            "de": "frühstücken → haben + gefrühstückt.",
+            "en": "frühstücken → haben + gefrühstückt."
+          }
+        },
+        {
+          "type": "text",
+          "word": "gehen",
+          "sentence": "Ergänze komplett: Um acht Uhr ___ ich zur Arbeit ___. (gehen)",
+          "correct": "bin / gegangen",
+          "answers": [
+            "bin / gegangen",
+            "bin gegangen"
+          ],
+          "explanations": {
+            "tr": "gehen → sein + gegangen.",
+            "de": "gehen → sein + gegangen.",
+            "en": "gehen → sein + gegangen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "arbeiten",
+          "sentence": "Ergänze komplett: Ich ___ bis 13 Uhr ___. (arbeiten)",
+          "correct": "habe / gearbeitet",
+          "answers": [
+            "habe / gearbeitet",
+            "habe gearbeitet"
+          ],
+          "explanations": {
+            "tr": "arbeiten → haben + gearbeitet.",
+            "de": "arbeiten → haben + gearbeitet.",
+            "en": "arbeiten → haben + gearbeitet."
+          }
+        },
+        {
+          "type": "text",
+          "word": "essen",
+          "sentence": "Ergänze komplett: In der Pause ___ ich ein Sandwich ___. (essen)",
+          "correct": "habe / gegessen",
+          "answers": [
+            "habe / gegessen",
+            "habe gegessen"
+          ],
+          "explanations": {
+            "tr": "essen → haben + gegessen.",
+            "de": "essen → haben + gegessen.",
+            "en": "essen → haben + gegessen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "einkaufen",
+          "sentence": "Ergänze komplett: Nach der Arbeit ___ ich im Supermarkt ___. (einkaufen)",
+          "correct": "habe / eingekauft",
+          "answers": [
+            "habe / eingekauft",
+            "habe eingekauft"
+          ],
+          "explanations": {
+            "tr": "einkaufen → haben + eingekauft.",
+            "de": "einkaufen → haben + eingekauft.",
+            "en": "einkaufen → haben + eingekauft."
+          }
+        },
+        {
+          "type": "text",
+          "word": "zurückkommen",
+          "sentence": "Ergänze komplett: Um 19 Uhr ___ ich nach Hause ___. (zurückkommen)",
+          "correct": "bin / zurückgekommen",
+          "answers": [
+            "bin / zurückgekommen",
+            "bin zurückgekommen",
+            "bin / zurueckgekommen",
+            "bin zurueckgekommen"
+          ],
+          "explanations": {
+            "tr": "zurückkommen → sein + zurückgekommen.",
+            "de": "zurückkommen → sein + zurückgekommen.",
+            "en": "zurückkommen → sein + zurückgekommen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "fernsehen",
+          "sentence": "Ergänze komplett: Am Abend ___ ich eine Stunde ___. (fernsehen)",
+          "correct": "habe / ferngesehen",
+          "answers": [
+            "habe / ferngesehen",
+            "habe ferngesehen"
+          ],
+          "explanations": {
+            "tr": "fernsehen → haben + ferngesehen.",
+            "de": "fernsehen → haben + ferngesehen.",
+            "en": "fernsehen → haben + ferngesehen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "einschlafen",
+          "sentence": "Ergänze komplett: Gegen 23 Uhr ___ ich ___. (einschlafen)",
+          "correct": "bin / eingeschlafen",
+          "answers": [
+            "bin / eingeschlafen",
+            "bin eingeschlafen"
+          ],
+          "explanations": {
+            "tr": "einschlafen → sein + eingeschlafen.",
+            "de": "einschlafen → sein + eingeschlafen.",
+            "en": "einschlafen → sein + eingeschlafen."
+          }
+        }
+      ]
+    },
+    {
+      "id": "challenge-10",
+      "title": {
+        "tr": "Übung 10 – Perfekt Master Challenge",
+        "de": "Übung 10 – Perfekt-Master-Challenge",
+        "en": "Exercise 10 – Perfect Master Challenge"
+      },
+      "description": {
+        "tr": "haben/sein, düzensiz fiiller, trennbare fiiller, ge- olmayan fiiller ve cümle üretimi karışık.",
+        "de": "Gemischt: haben/sein, starke Verben, trennbare Verben, Formen ohne ge- und Satzproduktion.",
+        "en": "Mixed haben/sein, strong verbs, separable verbs, forms without ge- and sentence production."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "type": "text",
+          "word": "fahren",
+          "sentence": "Bilde den Satz: wir / gestern / nach München / fahren",
+          "correct": "Wir sind gestern nach München gefahren.",
+          "answers": [
+            "wir sind gestern nach münchen gefahren",
+            "wir sind gestern nach muenchen gefahren"
+          ],
+          "explanations": {
+            "tr": "fahren yer değişimi → sind gefahren.",
+            "de": "fahren yer değişimi → sind gefahren.",
+            "en": "fahren yer değişimi → sind gefahren."
+          }
+        },
+        {
+          "type": "text",
+          "word": "schreiben",
+          "sentence": "Bilde den Satz: Frau Becker / eine lange E-Mail / schreiben",
+          "correct": "Frau Becker hat eine lange E-Mail geschrieben.",
+          "answers": [
+            "frau becker hat eine lange e-mail geschrieben",
+            "frau becker hat eine lange email geschrieben"
+          ],
+          "explanations": {
+            "tr": "schreiben → hat geschrieben.",
+            "de": "schreiben → hat geschrieben.",
+            "en": "schreiben → hat geschrieben."
+          }
+        },
+        {
+          "word": "Fehler finden",
+          "sentence": "Welche Variante ist richtig?",
+          "options": [
+            "Ich habe meinen Bruder angerufen.",
+            "Ich bin meinen Bruder angerufen.",
+            "Ich habe meinen Bruder geanrufen."
+          ],
+          "correct": "Ich habe meinen Bruder angerufen.",
+          "explanations": {
+            "tr": "anrufen → haben + angerufen.",
+            "de": "anrufen → haben + angerufen.",
+            "en": "anrufen → haben + angerufen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "passieren",
+          "sentence": "Ergänze: Was ___ gestern ___? (passieren)",
+          "correct": "ist / passiert",
+          "answers": [
+            "ist / passiert",
+            "ist passiert"
+          ],
+          "explanations": {
+            "tr": "passieren istisna olarak sein ile.",
+            "de": "passieren istisna olarak sein ile.",
+            "en": "passieren istisna olarak sein ile."
+          }
+        },
+        {
+          "word": "Partizip",
+          "sentence": "Welche Form ist richtig?",
+          "options": [
+            "verstanden",
+            "geverstanden",
+            "vergestanden"
+          ],
+          "correct": "verstanden",
+          "explanations": {
+            "tr": "verstehen → verstanden; ge- yok.",
+            "de": "verstehen → verstanden; ge- yok.",
+            "en": "verstehen → verstanden; ge- yok."
+          }
+        },
+        {
+          "type": "text",
+          "word": "mitbringen",
+          "sentence": "Bilde die Frage: ihr / die Dokumente / mitbringen",
+          "correct": "Habt ihr die Dokumente mitgebracht?",
+          "answers": [
+            "habt ihr die dokumente mitgebracht"
+          ],
+          "explanations": {
+            "tr": "mitbringen → habt ... mitgebracht.",
+            "de": "mitbringen → habt ... mitgebracht.",
+            "en": "mitbringen → habt ... mitgebracht."
+          }
+        },
+        {
+          "word": "haben/sein",
+          "sentence": "Meine Schwester ___ im Zug eingeschlafen, aber mein Bruder ___ die ganze Zeit gelesen.",
+          "options": [
+            "ist / hat",
+            "hat / ist",
+            "ist / ist"
+          ],
+          "correct": "ist / hat",
+          "explanations": {
+            "tr": "einschlafen → sein; lesen → haben.",
+            "de": "einschlafen → sein; lesen → haben.",
+            "en": "einschlafen → sein; lesen → haben."
+          }
+        },
+        {
+          "type": "text",
+          "word": "werden",
+          "sentence": "Bilde den Satz: das Wetter / plötzlich / kalt / werden",
+          "correct": "Das Wetter ist plötzlich kalt geworden.",
+          "answers": [
+            "das wetter ist plötzlich kalt geworden"
+          ],
+          "explanations": {
+            "tr": "werden → ist geworden.",
+            "de": "werden → ist geworden.",
+            "en": "werden → ist geworden."
+          }
+        },
+        {
+          "word": "Satzstellung",
+          "sentence": "Welche Variante ist richtig?",
+          "options": [
+            "Warum hast du mir nicht geantwortet?",
+            "Warum du hast mir nicht geantwortet?",
+            "Warum geantwortet hast du mir nicht?"
+          ],
+          "correct": "Warum hast du mir nicht geantwortet?",
+          "explanations": {
+            "tr": "W-soru + hast + du + ... + geantwortet.",
+            "de": "W-soru + hast + du + ... + geantwortet.",
+            "en": "W-soru + hast + du + ... + geantwortet."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Mischung",
+          "sentence": "Bilde einen Satz: ich / heute Morgen / früh / aufstehen / und / Kaffee / trinken",
+          "correct": "Ich bin heute Morgen früh aufgestanden und habe Kaffee getrunken.",
+          "answers": [
+            "ich bin heute morgen früh aufgestanden und habe kaffee getrunken",
+            "ich bin heute morgen frueh aufgestanden und habe kaffee getrunken"
+          ],
+          "explanations": {
+            "tr": "aufstehen → sein; trinken → haben. İki farklı yardımcı fiil gerekir.",
+            "de": "aufstehen → sein; trinken → haben. İki farklı yardımcı fiil gerekir.",
+            "en": "aufstehen → sein; trinken → haben. İki farklı yardımcı fiil gerekir."
+          }
+        }
+      ]
+    }
+  ]
+}

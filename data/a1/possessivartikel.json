@@ -1,0 +1,1261 @@
+{
+  "id": "possessivartikel",
+  "level": "A1",
+  "title": {
+    "tr": "Possessivartikel",
+    "de": "Possessivartikel",
+    "en": "Possessive articles"
+  },
+  "description": {
+    "tr": "mein, dein, sein, ihr, unser, euer ve Ihr biçimlerini Nominativ ve Akkusativ'de aile ve günlük hayat bağlamlarında çalış.",
+    "de": "Übe mein, dein, sein, ihr, unser, euer und Ihr im Nominativ und Akkusativ in Familie und Alltag.",
+    "en": "Practise mein, dein, sein, ihr, unser, euer and Ihr in nominative and accusative contexts."
+  },
+  "lesson": {
+    "title": {
+      "tr": "Possessivartikel – Kimin?",
+      "de": "Possessivartikel – Wem gehört etwas?",
+      "en": "Possessive articles – whose?"
+    },
+    "intro": {
+      "tr": "Possessivartikel bir şeyin kime ait olduğunu gösterir. Kök, sahip olan kişiye göre seçilir; son ek ise ismin cinsiyetine, çoğul olup olmamasına ve cümledeki görevine göre değişir.",
+      "de": "Possessivartikel zeigen Zugehörigkeit. Der Stamm richtet sich nach der Person, die etwas besitzt; die Endung richtet sich nach Genus, Numerus und Kasus des Nomens.",
+      "en": "Possessive articles show ownership. The stem depends on the owner; the ending depends on the noun's gender, number and case."
+    },
+    "rules": [
+      {
+        "label": "Sahip olan kişi",
+        "text": {
+          "tr": "ich → mein · du → dein · er → sein · sie (tekil) → ihr · wir → unser · ihr → euer · sie (çoğul) → ihr · Sie → Ihr",
+          "de": "ich → mein · du → dein · er → sein · sie → ihr · wir → unser · ihr → euer · sie → ihr · Sie → Ihr",
+          "en": "ich → mein · du → dein · er → sein · sie → ihr · wir → unser · ihr → euer · sie → ihr · Sie → Ihr"
+        }
+      },
+      {
+        "label": "Nominativ",
+        "text": {
+          "tr": "Maskulin/nötr çoğu zaman ek almaz: mein Vater, dein Auto. Feminin/çoğul -e alır: meine Mutter, deine Freunde.",
+          "de": "Maskulin/Neutrum meist ohne Endung: mein Vater, dein Auto. Feminin/Plural mit -e: meine Mutter, deine Freunde.",
+          "en": "Masculine/neuter often have no ending: mein Vater, dein Auto. Feminine/plural take -e: meine Mutter, deine Freunde."
+        }
+      },
+      {
+        "label": "Akkusativ",
+        "text": {
+          "tr": "Maskulin -en alır: meinen Vater, deinen Bruder. Feminin/nötr/çoğul Nominativdeki biçimle aynıdır: meine Tasche, mein Auto, meine Freunde.",
+          "de": "Maskulin bekommt -en: meinen Vater, deinen Bruder. Feminin/Neutrum/Plural bleiben wie im Nominativ.",
+          "en": "Masculine takes -en: meinen Vater, deinen Bruder. Feminine/neuter/plural stay like the nominative."
+        }
+      },
+      {
+        "label": "euer",
+        "text": {
+          "tr": "euer + son ek geldiğinde çoğu zaman ikinci e düşer: eure Mutter, euren Vater, eure Freunde.",
+          "de": "Bei euer fällt vor einer Endung meist das zweite e weg: eure Mutter, euren Vater, eure Freunde.",
+          "en": "With euer, the second e usually drops before an ending: eure Mutter, euren Vater, eure Freunde."
+        }
+      },
+      {
+        "label": "Ihr / ihr",
+        "text": {
+          "tr": "Resmî Sie için Possessivartikel büyük harfle Ihr- yazılır: Ihre Tochter. sie için ise küçük harfle ihr-: ihre Tochter.",
+          "de": "Bei höflichem Sie schreibt man Ihr- groß: Ihre Tochter. Bei sie schreibt man ihr- klein: ihre Tochter.",
+          "en": "Formal Sie uses capital Ihr-: Ihre Tochter. For sie, use lowercase ihr-: ihre Tochter."
+        }
+      }
+    ],
+    "examples": [
+      "Mein Vater arbeitet in Berlin. — Babam Berlin'de çalışıyor.",
+      "Das ist ihre Schwester. — Bu onun kız kardeşi.",
+      "Wir besuchen unseren Onkel. — Amcamızı/dayımızı ziyaret ediyoruz.",
+      "Sind das eure Freunde? — Bunlar sizin arkadaşlarınız mı?",
+      "Wie ist Ihre Adresse? — Adresiniz nedir?"
+    ],
+    "tip": {
+      "tr": "İki adım düşün: 1) Sahip kim? → mein/dein/sein/ihr... 2) İsim hangi biçimde? → mein Vater / meine Mutter / meinen Vater.",
+      "de": "Denke in zwei Schritten: 1) Wem gehört es? → mein/dein/sein/ihr... 2) Welche Form braucht das Nomen? → mein Vater / meine Mutter / meinen Vater.",
+      "en": "Think in two steps: 1) Who owns it? → mein/dein/sein/ihr... 2) What form does the noun need? → mein Vater / meine Mutter / meinen Vater."
+    }
+  },
+  "exercises": [
+    {
+      "id": "grundformen-1",
+      "title": {
+        "tr": "Übung 1 – mein, dein, sein, ihr",
+        "de": "Übung 1 – mein, dein, sein, ihr",
+        "en": "Exercise 1 – mein, dein, sein, ihr"
+      },
+      "description": {
+        "tr": "Sahip olan kişiye göre doğru kökü ve Nominativ biçimini seç.",
+        "de": "Wähle den passenden Stamm und die Nominativform.",
+        "en": "Choose the correct owner stem and nominative form."
+      },
+      "difficulty": {
+        "tr": "Kolay-Orta",
+        "de": "Leicht–Mittel",
+        "en": "Easy–Intermediate"
+      },
+      "questions": [
+        {
+          "word": "ich",
+          "sentence": "Ich heiße Lea. ___ Bruder heißt Jonas.",
+          "options": [
+            "Mein",
+            "Dein",
+            "Sein"
+          ],
+          "correct": "Mein",
+          "explanations": {
+            "tr": "Sahip ich → mein; Bruder maskulin Nominativ → mein Bruder.",
+            "de": "Sahip ich → mein; Bruder maskulin Nominativ → mein Bruder.",
+            "en": "Sahip ich → mein; Bruder maskulin Nominativ → mein Bruder."
+          }
+        },
+        {
+          "word": "du",
+          "sentence": "Wie alt ist ___ Schwester, Emir?",
+          "options": [
+            "deine",
+            "dein",
+            "seine"
+          ],
+          "correct": "deine",
+          "explanations": {
+            "tr": "Sahip du → dein; Schwester feminin → deine.",
+            "de": "Sahip du → dein; Schwester feminin → deine.",
+            "en": "Sahip du → dein; Schwester feminin → deine."
+          }
+        },
+        {
+          "word": "er",
+          "sentence": "Das ist Paul. ___ Vater arbeitet bei einer Bank.",
+          "options": [
+            "Sein",
+            "Seine",
+            "Ihr"
+          ],
+          "correct": "Sein",
+          "explanations": {
+            "tr": "Sahip er → sein; Vater maskulin → sein.",
+            "de": "Sahip er → sein; Vater maskulin → sein.",
+            "en": "Sahip er → sein; Vater maskulin → sein."
+          }
+        },
+        {
+          "word": "sie",
+          "sentence": "Das ist Anna. ___ Mutter kommt aus Wien.",
+          "options": [
+            "Ihre",
+            "Seine",
+            "Ihr"
+          ],
+          "correct": "Ihre",
+          "explanations": {
+            "tr": "Sahip sie → ihr; Mutter feminin → ihre.",
+            "de": "Sahip sie → ihr; Mutter feminin → ihre.",
+            "en": "Sahip sie → ihr; Mutter feminin → ihre."
+          }
+        },
+        {
+          "word": "ich",
+          "sentence": "___ Auto ist schon zehn Jahre alt.",
+          "options": [
+            "Mein",
+            "Meine",
+            "Meinen"
+          ],
+          "correct": "Mein",
+          "explanations": {
+            "tr": "Auto nötr Nominativ → mein Auto.",
+            "de": "Auto nötr Nominativ → mein Auto.",
+            "en": "Auto nötr Nominativ → mein Auto."
+          }
+        },
+        {
+          "word": "du",
+          "sentence": "Sind das ___ Freunde aus dem Kurs?",
+          "options": [
+            "deine",
+            "dein",
+            "deinen"
+          ],
+          "correct": "deine",
+          "explanations": {
+            "tr": "Freunde çoğul → deine.",
+            "de": "Freunde çoğul → deine.",
+            "en": "Freunde çoğul → deine."
+          }
+        },
+        {
+          "word": "er",
+          "sentence": "Tom hat eine Schwester. ___ Schwester studiert Medizin.",
+          "options": [
+            "Seine",
+            "Sein",
+            "Ihre"
+          ],
+          "correct": "Seine",
+          "explanations": {
+            "tr": "Sahip Tom = er → sein; Schwester → seine.",
+            "de": "Sahip Tom = er → sein; Schwester → seine.",
+            "en": "Sahip Tom = er → sein; Schwester → seine."
+          }
+        },
+        {
+          "word": "sie",
+          "sentence": "Mara wohnt in Bonn. ___ Wohnung ist sehr klein.",
+          "options": [
+            "Ihre",
+            "Ihr",
+            "Seine"
+          ],
+          "correct": "Ihre",
+          "explanations": {
+            "tr": "Mara = sie; Wohnung feminin → ihre.",
+            "de": "Mara = sie; Wohnung feminin → ihre.",
+            "en": "Mara = sie; Wohnung feminin → ihre."
+          }
+        },
+        {
+          "word": "ich",
+          "sentence": "Das sind ___ Eltern.",
+          "options": [
+            "meine",
+            "mein",
+            "meinen"
+          ],
+          "correct": "meine",
+          "explanations": {
+            "tr": "Eltern çoğul → meine.",
+            "de": "Eltern çoğul → meine.",
+            "en": "Eltern çoğul → meine."
+          }
+        },
+        {
+          "word": "du",
+          "sentence": "Ist das ___ Handy?",
+          "options": [
+            "dein",
+            "deine",
+            "deinen"
+          ],
+          "correct": "dein",
+          "explanations": {
+            "tr": "Handy nötr → dein.",
+            "de": "Handy nötr → dein.",
+            "en": "Handy nötr → dein."
+          }
+        }
+      ]
+    },
+    {
+      "id": "unser-euer-ihr-2",
+      "title": {
+        "tr": "Übung 2 – unser, euer, ihr, Ihr",
+        "de": "Übung 2 – unser, euer, ihr, Ihr",
+        "en": "Exercise 2 – unser, euer, ihr, Ihr"
+      },
+      "description": {
+        "tr": "Çoğul sahiplik ve resmî hitap biçimlerini ayırt et.",
+        "de": "Unterscheide Pluralbesitz und höfliche Formen.",
+        "en": "Distinguish plural ownership and formal forms."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Intermediate"
+      },
+      "questions": [
+        {
+          "word": "wir",
+          "sentence": "Wir wohnen hier. Das ist ___ Haus.",
+          "options": [
+            "unser",
+            "unsere",
+            "unseren"
+          ],
+          "correct": "unser",
+          "explanations": {
+            "tr": "wir → unser; Haus nötr.",
+            "de": "wir → unser; Haus nötr.",
+            "en": "wir → unser; Haus nötr."
+          }
+        },
+        {
+          "word": "wir",
+          "sentence": "___ Nachbarn sind sehr freundlich.",
+          "options": [
+            "Unsere",
+            "Unser",
+            "Unseren"
+          ],
+          "correct": "Unsere",
+          "explanations": {
+            "tr": "Nachbarn çoğul → unsere.",
+            "de": "Nachbarn çoğul → unsere.",
+            "en": "Nachbarn çoğul → unsere."
+          }
+        },
+        {
+          "word": "ihr",
+          "sentence": "Kinder, sind das ___ Schuhe?",
+          "options": [
+            "eure",
+            "euer",
+            "euren"
+          ],
+          "correct": "eure",
+          "explanations": {
+            "tr": "ihr → euer; Schuhe çoğul → eure.",
+            "de": "ihr → euer; Schuhe çoğul → eure.",
+            "en": "ihr → euer; Schuhe çoğul → eure."
+          }
+        },
+        {
+          "word": "ihr",
+          "sentence": "Wie heißt ___ neuer Lehrer?",
+          "options": [
+            "euer",
+            "eure",
+            "euren"
+          ],
+          "correct": "euer",
+          "explanations": {
+            "tr": "Lehrer maskulin Nominativ → euer.",
+            "de": "Lehrer maskulin Nominativ → euer.",
+            "en": "Lehrer maskulin Nominativ → euer."
+          }
+        },
+        {
+          "word": "ihr",
+          "sentence": "Ist das ___ Katze?",
+          "options": [
+            "eure",
+            "euer",
+            "euren"
+          ],
+          "correct": "eure",
+          "explanations": {
+            "tr": "Katze feminin → eure.",
+            "de": "Katze feminin → eure.",
+            "en": "Katze feminin → eure."
+          }
+        },
+        {
+          "word": "sie plural",
+          "sentence": "Die Müllers haben zwei Kinder. ___ Kinder gehen schon zur Schule.",
+          "options": [
+            "Ihre",
+            "Seine",
+            "Eure"
+          ],
+          "correct": "Ihre",
+          "explanations": {
+            "tr": "sie çoğul → ihr; Kinder çoğul → ihre.",
+            "de": "sie çoğul → ihr; Kinder çoğul → ihre.",
+            "en": "sie çoğul → ihr; Kinder çoğul → ihre."
+          }
+        },
+        {
+          "word": "Sie",
+          "sentence": "Frau Weber, wie ist ___ Telefonnummer?",
+          "options": [
+            "Ihre",
+            "ihre",
+            "Ihr"
+          ],
+          "correct": "Ihre",
+          "explanations": {
+            "tr": "Resmî Sie → Ihr- büyük harfle; Telefonnummer feminin → Ihre.",
+            "de": "Resmî Sie → Ihr- büyük harfle; Telefonnummer feminin → Ihre.",
+            "en": "Resmî Sie → Ihr- büyük harfle; Telefonnummer feminin → Ihre."
+          }
+        },
+        {
+          "word": "Sie",
+          "sentence": "Herr Klein, ist das ___ Büro?",
+          "options": [
+            "Ihr",
+            "Ihre",
+            "Ihren"
+          ],
+          "correct": "Ihr",
+          "explanations": {
+            "tr": "Büro nötr Nominativ → Ihr.",
+            "de": "Büro nötr Nominativ → Ihr.",
+            "en": "Büro nötr Nominativ → Ihr."
+          }
+        },
+        {
+          "word": "wir",
+          "sentence": "___ Tochter lernt gerade Deutsch.",
+          "options": [
+            "Unsere",
+            "Unser",
+            "Unseren"
+          ],
+          "correct": "Unsere",
+          "explanations": {
+            "tr": "wir → unser; Tochter feminin → unsere.",
+            "de": "wir → unser; Tochter feminin → unsere.",
+            "en": "wir → unser; Tochter feminin → unsere."
+          }
+        },
+        {
+          "word": "ihr",
+          "sentence": "Sind das ___ Eltern?",
+          "options": [
+            "eure",
+            "euer",
+            "euren"
+          ],
+          "correct": "eure",
+          "explanations": {
+            "tr": "Eltern çoğul → eure.",
+            "de": "Eltern çoğul → eure.",
+            "en": "Eltern çoğul → eure."
+          }
+        }
+      ]
+    },
+    {
+      "id": "nominativ-3",
+      "title": {
+        "tr": "Übung 3 – Nominativ",
+        "de": "Übung 3 – Nominativ",
+        "en": "Exercise 3 – Nominative"
+      },
+      "description": {
+        "tr": "Maskulin, feminin, nötr ve çoğul isimlerde doğru Nominativ biçimini seç.",
+        "de": "Übe die richtige Nominativform bei allen Genera und im Plural.",
+        "en": "Practise the correct nominative form for all genders and plural."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Intermediate"
+      },
+      "questions": [
+        {
+          "word": "Kollege",
+          "sentence": "Welche Variante ist richtig?",
+          "options": [
+            "Das sind meine Kollegen aus dem Kurs.",
+            "Das sind mein Kollegen aus dem Kurs.",
+            "Das sind meinen Kollegen aus dem Kurs."
+          ],
+          "correct": "Das sind meine Kollegen aus dem Kurs.",
+          "explanations": {
+            "tr": "Kollegen çoğul → meine.",
+            "de": "Kollegen çoğul → meine.",
+            "en": "Kollegen çoğul → meine."
+          }
+        },
+        {
+          "word": "Vater",
+          "sentence": "Welche Variante ist richtig? ",
+          "options": [
+            "Woher kommt dein Vater?",
+            "Woher kommt deine Vater?",
+            "Woher kommt deinen Vater?"
+          ],
+          "correct": "Woher kommt dein Vater?",
+          "explanations": {
+            "tr": "Vater maskulin Nominativ → dein.",
+            "de": "Vater maskulin Nominativ → dein.",
+            "en": "Vater maskulin Nominativ → dein."
+          }
+        },
+        {
+          "word": "Tochter",
+          "sentence": "Welche Variante ist richtig?  ",
+          "options": [
+            "Wie alt ist Ihre Tochter?",
+            "Wie alt ist Ihr Tochter?",
+            "Wie alt ist Ihren Tochter?"
+          ],
+          "correct": "Wie alt ist Ihre Tochter?",
+          "explanations": {
+            "tr": "Tochter feminin → Ihre.",
+            "de": "Tochter feminin → Ihre.",
+            "en": "Tochter feminin → Ihre."
+          }
+        },
+        {
+          "word": "Name",
+          "sentence": "Welche Variante ist richtig?   ",
+          "options": [
+            "Wie ist Ihr Name?",
+            "Wie ist Ihre Name?",
+            "Wie ist Ihren Name?"
+          ],
+          "correct": "Wie ist Ihr Name?",
+          "explanations": {
+            "tr": "Name maskulin Nominativ → Ihr.",
+            "de": "Name maskulin Nominativ → Ihr.",
+            "en": "Name maskulin Nominativ → Ihr."
+          }
+        },
+        {
+          "word": "Bruder",
+          "sentence": "Welche Variante ist richtig?    ",
+          "options": [
+            "Sein Bruder heißt Tim.",
+            "Seine Bruder heißt Tim.",
+            "Seinen Bruder heißt Tim."
+          ],
+          "correct": "Sein Bruder heißt Tim.",
+          "explanations": {
+            "tr": "Bruder maskulin Nominativ → sein.",
+            "de": "Bruder maskulin Nominativ → sein.",
+            "en": "Bruder maskulin Nominativ → sein."
+          }
+        },
+        {
+          "word": "Kinder",
+          "sentence": "Welche Variante ist richtig?     ",
+          "options": [
+            "Ihre Kinder leben in Hamburg.",
+            "Ihr Kinder leben in Hamburg.",
+            "Ihren Kinder leben in Hamburg."
+          ],
+          "correct": "Ihre Kinder leben in Hamburg.",
+          "explanations": {
+            "tr": "Kinder çoğul → ihre.",
+            "de": "Kinder çoğul → ihre.",
+            "en": "Kinder çoğul → ihre."
+          }
+        },
+        {
+          "word": "Sohn",
+          "sentence": "Welche Variante ist richtig?      ",
+          "options": [
+            "Unser Sohn studiert Physik.",
+            "Unsere Sohn studiert Physik.",
+            "Unseren Sohn studiert Physik."
+          ],
+          "correct": "Unser Sohn studiert Physik.",
+          "explanations": {
+            "tr": "Sohn maskulin Nominativ → unser.",
+            "de": "Sohn maskulin Nominativ → unser.",
+            "en": "Sohn maskulin Nominativ → unser."
+          }
+        },
+        {
+          "word": "Chefin",
+          "sentence": "Welche Variante ist richtig?       ",
+          "options": [
+            "Wie ist eure neue Chefin?",
+            "Wie ist euer neue Chefin?",
+            "Wie ist euren neue Chefin?"
+          ],
+          "correct": "Wie ist eure neue Chefin?",
+          "explanations": {
+            "tr": "Chefin feminin → eure.",
+            "de": "Chefin feminin → eure.",
+            "en": "Chefin feminin → eure."
+          }
+        },
+        {
+          "word": "Großeltern",
+          "sentence": "Welche Variante ist richtig?        ",
+          "options": [
+            "Das sind unsere Großeltern.",
+            "Das sind unser Großeltern.",
+            "Das sind unseren Großeltern."
+          ],
+          "correct": "Das sind unsere Großeltern.",
+          "explanations": {
+            "tr": "Großeltern çoğul → unsere.",
+            "de": "Großeltern çoğul → unsere.",
+            "en": "Großeltern çoğul → unsere."
+          }
+        },
+        {
+          "word": "Wohnung",
+          "sentence": "Welche Variante ist richtig?         ",
+          "options": [
+            "Seine Wohnung ist sehr gemütlich.",
+            "Sein Wohnung ist sehr gemütlich.",
+            "Seinen Wohnung ist sehr gemütlich."
+          ],
+          "correct": "Seine Wohnung ist sehr gemütlich.",
+          "explanations": {
+            "tr": "Wohnung feminin → seine.",
+            "de": "Wohnung feminin → seine.",
+            "en": "Wohnung feminin → seine."
+          }
+        }
+      ]
+    },
+    {
+      "id": "akkusativ-4",
+      "title": {
+        "tr": "Übung 4 – Akkusativ",
+        "de": "Übung 4 – Akkusativ",
+        "en": "Exercise 4 – Accusative"
+      },
+      "description": {
+        "tr": "Özellikle maskulin isimlerde -en biçimine dikkat et.",
+        "de": "Achte besonders auf die Endung -en bei maskulinen Nomen.",
+        "en": "Pay special attention to -en with masculine nouns."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel–Schwer",
+        "en": "Intermediate–Hard"
+      },
+      "questions": [
+        {
+          "word": "Freund",
+          "sentence": "Du kannst ___ Freund gern mitbringen.",
+          "options": [
+            "deinen",
+            "dein",
+            "deine"
+          ],
+          "correct": "deinen",
+          "explanations": {
+            "tr": "Freund maskulin Akkusativ → deinen.",
+            "de": "Freund maskulin Akkusativ → deinen.",
+            "en": "Freund maskulin Akkusativ → deinen."
+          }
+        },
+        {
+          "word": "Handy",
+          "sentence": "Laura hat ___ neues Handy gestern gekauft.",
+          "options": [
+            "ihr",
+            "ihren",
+            "ihre"
+          ],
+          "correct": "ihr",
+          "explanations": {
+            "tr": "Handy nötr Akkusativ → ihr.",
+            "de": "Handy nötr Akkusativ → ihr.",
+            "en": "Handy nötr Akkusativ → ihr."
+          }
+        },
+        {
+          "word": "Bücher",
+          "sentence": "Mia verkauft ___ alten Bücher.",
+          "options": [
+            "ihre",
+            "ihren",
+            "ihr"
+          ],
+          "correct": "ihre",
+          "explanations": {
+            "tr": "Bücher çoğul → ihre.",
+            "de": "Bücher çoğul → ihre.",
+            "en": "Bücher çoğul → ihre."
+          }
+        },
+        {
+          "word": "Wohnung",
+          "sentence": "Sami mag ___ Wohnung sehr.",
+          "options": [
+            "seine",
+            "seinen",
+            "sein"
+          ],
+          "correct": "seine",
+          "explanations": {
+            "tr": "Wohnung feminin Akkusativ → seine.",
+            "de": "Wohnung feminin Akkusativ → seine.",
+            "en": "Wohnung feminin Akkusativ → seine."
+          }
+        },
+        {
+          "word": "Vater",
+          "sentence": "Wir laden ___ Vater zum Essen ein.",
+          "options": [
+            "unseren",
+            "unser",
+            "unsere"
+          ],
+          "correct": "unseren",
+          "explanations": {
+            "tr": "Vater maskulin Akkusativ → unseren.",
+            "de": "Vater maskulin Akkusativ → unseren.",
+            "en": "Vater maskulin Akkusativ → unseren."
+          }
+        },
+        {
+          "word": "Schreibtisch",
+          "sentence": "Wo hast du ___ Schreibtisch gekauft?",
+          "options": [
+            "deinen",
+            "dein",
+            "deine"
+          ],
+          "correct": "deinen",
+          "explanations": {
+            "tr": "Schreibtisch maskulin Akkusativ → deinen.",
+            "de": "Schreibtisch maskulin Akkusativ → deinen.",
+            "en": "Schreibtisch maskulin Akkusativ → deinen."
+          }
+        },
+        {
+          "word": "Computer",
+          "sentence": "Julia muss ___ Computer reparieren lassen.",
+          "options": [
+            "ihren",
+            "ihr",
+            "ihre"
+          ],
+          "correct": "ihren",
+          "explanations": {
+            "tr": "Computer maskulin Akkusativ → ihren.",
+            "de": "Computer maskulin Akkusativ → ihren.",
+            "en": "Computer maskulin Akkusativ → ihren."
+          }
+        },
+        {
+          "word": "Nachbarn",
+          "sentence": "Habt ihr schon ___ neuen Nachbarn kennengelernt?",
+          "options": [
+            "euren",
+            "euer",
+            "eure"
+          ],
+          "correct": "euren",
+          "explanations": {
+            "tr": "Nachbar maskulin Akkusativ → euren.",
+            "de": "Nachbar maskulin Akkusativ → euren.",
+            "en": "Nachbar maskulin Akkusativ → euren."
+          }
+        },
+        {
+          "word": "Tochter",
+          "sentence": "Ich möchte ___ Tochter für den Kurs anmelden.",
+          "options": [
+            "meine",
+            "meinen",
+            "mein"
+          ],
+          "correct": "meine",
+          "explanations": {
+            "tr": "Tochter feminin Akkusativ → meine.",
+            "de": "Tochter feminin Akkusativ → meine.",
+            "en": "Tochter feminin Akkusativ → meine."
+          }
+        },
+        {
+          "word": "Meeting",
+          "sentence": "Wir müssen ___ Meeting verschieben.",
+          "options": [
+            "unser",
+            "unseren",
+            "unsere"
+          ],
+          "correct": "unser",
+          "explanations": {
+            "tr": "Meeting nötr Akkusativ → unser.",
+            "de": "Meeting nötr Akkusativ → unser.",
+            "en": "Meeting nötr Akkusativ → unser."
+          }
+        }
+      ]
+    },
+    {
+      "id": "familie-dialoge-5",
+      "title": {
+        "tr": "Übung 5 – Aile ve günlük diyaloglar",
+        "de": "Übung 5 – Familie und Alltagsdialoge",
+        "en": "Exercise 5 – Family and everyday dialogues"
+      },
+      "description": {
+        "tr": "Kaynaklardaki aile ve tanışma bağlamına benzer, ancak özgün diyaloglarla çalış.",
+        "de": "Übe Familie und Alltag mit neu formulierten Dialogen.",
+        "en": "Practise family and everyday contexts with newly written dialogues."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel–Schwer",
+        "en": "Intermediate–Hard"
+      },
+      "questions": [
+        {
+          "word": "Familie",
+          "sentence": "A: Ist Jonas ___ Bruder? B: Nein, er ist nicht mein Bruder.",
+          "options": [
+            "dein",
+            "deine",
+            "deinen"
+          ],
+          "correct": "dein",
+          "explanations": {
+            "tr": "Bruder maskulin Nominativ → dein.",
+            "de": "Bruder maskulin Nominativ → dein.",
+            "en": "Bruder maskulin Nominativ → dein."
+          }
+        },
+        {
+          "word": "Familie",
+          "sentence": "A: Ist Anna eure Schwester? B: Ja, sie ist ___ Schwester.",
+          "options": [
+            "unsere",
+            "unser",
+            "unseren"
+          ],
+          "correct": "unsere",
+          "explanations": {
+            "tr": "wir → unser; Schwester feminin → unsere.",
+            "de": "wir → unser; Schwester feminin → unsere.",
+            "en": "wir → unser; Schwester feminin → unsere."
+          }
+        },
+        {
+          "word": "Höflich",
+          "sentence": "A: Herr Meier, ist Frau Meier ___ Frau? B: Ja, sie ist meine Frau.",
+          "options": [
+            "Ihre",
+            "Ihr",
+            "Ihren"
+          ],
+          "correct": "Ihre",
+          "explanations": {
+            "tr": "Frau feminin, resmî Sie → Ihre.",
+            "de": "Frau feminin, resmî Sie → Ihre.",
+            "en": "Frau feminin, resmî Sie → Ihre."
+          }
+        },
+        {
+          "word": "Freunde",
+          "sentence": "A: Sind Tom und Lara deine Freunde? B: Ja, sie sind ___ Freunde.",
+          "options": [
+            "meine",
+            "mein",
+            "meinen"
+          ],
+          "correct": "meine",
+          "explanations": {
+            "tr": "Freunde çoğul → meine.",
+            "de": "Freunde çoğul → meine.",
+            "en": "Freunde çoğul → meine."
+          }
+        },
+        {
+          "word": "Chef",
+          "sentence": "A: Frau König, ist Herr Braun ___ Chef? B: Ja, er ist mein Chef.",
+          "options": [
+            "Ihr",
+            "Ihre",
+            "Ihren"
+          ],
+          "correct": "Ihr",
+          "explanations": {
+            "tr": "Chef maskulin Nominativ → Ihr.",
+            "de": "Chef maskulin Nominativ → Ihr.",
+            "en": "Chef maskulin Nominativ → Ihr."
+          }
+        },
+        {
+          "word": "Auto",
+          "sentence": "A: Hat Paul ___ Auto? B: Ja, er hat sein Auto dabei.",
+          "options": [
+            "sein",
+            "seinen",
+            "seine"
+          ],
+          "correct": "sein",
+          "explanations": {
+            "tr": "Auto nötr Akkusativ → sein.",
+            "de": "Auto nötr Akkusativ → sein.",
+            "en": "Auto nötr Akkusativ → sein."
+          }
+        },
+        {
+          "word": "Geld",
+          "sentence": "A: Hast du ___ Geld? B: Nein, ich habe dein Geld nicht.",
+          "options": [
+            "mein",
+            "meinen",
+            "meine"
+          ],
+          "correct": "mein",
+          "explanations": {
+            "tr": "Geld nötr Akkusativ → mein.",
+            "de": "Geld nötr Akkusativ → mein.",
+            "en": "Geld nötr Akkusativ → mein."
+          }
+        },
+        {
+          "word": "Schuhe",
+          "sentence": "A: Kinder, sind das ___ Schuhe? B: Ja, das sind unsere Schuhe.",
+          "options": [
+            "eure",
+            "euer",
+            "euren"
+          ],
+          "correct": "eure",
+          "explanations": {
+            "tr": "Schuhe çoğul → eure.",
+            "de": "Schuhe çoğul → eure.",
+            "en": "Schuhe çoğul → eure."
+          }
+        },
+        {
+          "word": "Mutter",
+          "sentence": "A: Ist das Pauls Mutter? B: Ja, das ist ___ Mutter.",
+          "options": [
+            "seine",
+            "sein",
+            "ihre"
+          ],
+          "correct": "seine",
+          "explanations": {
+            "tr": "Paul = er → sein; Mutter feminin → seine.",
+            "de": "Paul = er → sein; Mutter feminin → seine.",
+            "en": "Paul = er → sein; Mutter feminin → seine."
+          }
+        },
+        {
+          "word": "Bilder",
+          "sentence": "A: Frau Lang, sind das ___ Bilder? B: Ja, das sind meine Bilder.",
+          "options": [
+            "Ihre",
+            "Ihr",
+            "Ihren"
+          ],
+          "correct": "Ihre",
+          "explanations": {
+            "tr": "Bilder çoğul ve resmî Sie → Ihre.",
+            "de": "Bilder çoğul ve resmî Sie → Ihre.",
+            "en": "Bilder çoğul ve resmî Sie → Ihre."
+          }
+        }
+      ]
+    },
+    {
+      "id": "schreiben-6",
+      "title": {
+        "tr": "Übung 6 – Possessivartikel'i kendin yaz",
+        "de": "Übung 6 – Possessivartikel selbst schreiben",
+        "en": "Exercise 6 – Write the possessive article yourself"
+      },
+      "description": {
+        "tr": "Şık yok. Parantezdeki kişiye göre doğru biçimi kendin yaz.",
+        "de": "Keine Auswahl. Schreibe die passende Form zur Person in Klammern.",
+        "en": "No options. Write the correct form for the person in brackets."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "type": "text",
+          "word": "du",
+          "sentence": "Wann beginnt ___ neuer Deutschkurs? (du)",
+          "correct": "dein",
+          "answers": [
+            "dein"
+          ],
+          "explanations": {
+            "tr": "Kurs maskulin Nominativ; du → dein.",
+            "de": "Kurs maskulin Nominativ; du → dein.",
+            "en": "Kurs maskulin Nominativ; du → dein."
+          }
+        },
+        {
+          "type": "text",
+          "word": "er",
+          "sentence": "Mark wohnt seit einem Jahr hier. ___ Wohnung ist klein. (er)",
+          "correct": "Seine",
+          "answers": [
+            "seine"
+          ],
+          "explanations": {
+            "tr": "Wohnung feminin; er → seine.",
+            "de": "Wohnung feminin; er → seine.",
+            "en": "Wohnung feminin; er → seine."
+          }
+        },
+        {
+          "type": "text",
+          "word": "sie",
+          "sentence": "Frau Berger liebt ___ Job. (sie)",
+          "correct": "ihren",
+          "answers": [
+            "ihren"
+          ],
+          "explanations": {
+            "tr": "Job maskulin Akkusativ; sie → ihren.",
+            "de": "Job maskulin Akkusativ; sie → ihren.",
+            "en": "Job maskulin Akkusativ; sie → ihren."
+          }
+        },
+        {
+          "type": "text",
+          "word": "ich",
+          "sentence": "Ich möchte ___ Tochter anmelden. (ich)",
+          "correct": "meine",
+          "answers": [
+            "meine"
+          ],
+          "explanations": {
+            "tr": "Tochter feminin Akkusativ → meine.",
+            "de": "Tochter feminin Akkusativ → meine.",
+            "en": "Tochter feminin Akkusativ → meine."
+          }
+        },
+        {
+          "type": "text",
+          "word": "du",
+          "sentence": "Wo hast du ___ Schreibtisch gekauft? (du)",
+          "correct": "deinen",
+          "answers": [
+            "deinen"
+          ],
+          "explanations": {
+            "tr": "Schreibtisch maskulin Akkusativ → deinen.",
+            "de": "Schreibtisch maskulin Akkusativ → deinen.",
+            "en": "Schreibtisch maskulin Akkusativ → deinen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Sie",
+          "sentence": "Können Sie mir bitte ___ neue E-Mail-Adresse schicken? (Sie)",
+          "correct": "Ihre",
+          "answers": [
+            "ihre"
+          ],
+          "explanations": {
+            "tr": "Resmî Sie → Ihre; E-Mail-Adresse feminin.",
+            "de": "Resmî Sie → Ihre; E-Mail-Adresse feminin.",
+            "en": "Resmî Sie → Ihre; E-Mail-Adresse feminin."
+          }
+        },
+        {
+          "type": "text",
+          "word": "wir",
+          "sentence": "Wir müssen ___ Meeting verschieben. (wir)",
+          "correct": "unser",
+          "answers": [
+            "unser"
+          ],
+          "explanations": {
+            "tr": "Meeting nötr Akkusativ → unser.",
+            "de": "Meeting nötr Akkusativ → unser.",
+            "en": "Meeting nötr Akkusativ → unser."
+          }
+        },
+        {
+          "type": "text",
+          "word": "ihr",
+          "sentence": "Habt ihr schon ___ neuen Nachbarn gesehen? (ihr)",
+          "correct": "euren",
+          "answers": [
+            "euren"
+          ],
+          "explanations": {
+            "tr": "Nachbar maskulin Akkusativ; euer → euren.",
+            "de": "Nachbar maskulin Akkusativ; euer → euren.",
+            "en": "Nachbar maskulin Akkusativ; euer → euren."
+          }
+        },
+        {
+          "type": "text",
+          "word": "sie plural",
+          "sentence": "Die Familie verkauft ___ altes Auto. (sie)",
+          "correct": "ihr",
+          "answers": [
+            "ihr"
+          ],
+          "explanations": {
+            "tr": "sie çoğul → ihr; Auto nötr Akkusativ.",
+            "de": "sie çoğul → ihr; Auto nötr Akkusativ.",
+            "en": "sie çoğul → ihr; Auto nötr Akkusativ."
+          }
+        },
+        {
+          "type": "text",
+          "word": "ich",
+          "sentence": "Das sind ___ Eltern. (ich)",
+          "correct": "meine",
+          "answers": [
+            "meine"
+          ],
+          "explanations": {
+            "tr": "Eltern çoğul Nominativ → meine.",
+            "de": "Eltern çoğul Nominativ → meine.",
+            "en": "Eltern çoğul Nominativ → meine."
+          }
+        }
+      ]
+    },
+    {
+      "id": "challenge-7",
+      "title": {
+        "tr": "Übung 7 – Possessivartikel Challenge",
+        "de": "Übung 7 – Possessivartikel-Challenge",
+        "en": "Exercise 7 – Possessive Article Challenge"
+      },
+      "description": {
+        "tr": "Sahip kişi, cinsiyet, çoğul ve Nominativ/Akkusativ birlikte. Dativ ve Genitiv yok.",
+        "de": "Besitzer, Genus, Plural sowie Nominativ/Akkusativ gemischt. Kein Dativ oder Genitiv.",
+        "en": "Mixed owner, gender, plural and nominative/accusative. No dative or genitive."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Nominativ/Akkusativ",
+          "sentence": "Das ist ___ Bruder. Ich besuche ___ Bruder morgen.",
+          "options": [
+            "mein / meinen",
+            "meinen / mein",
+            "meine / meinen"
+          ],
+          "correct": "mein / meinen",
+          "explanations": {
+            "tr": "İlk cümle Nominativ: mein Bruder. İkinci cümle Akkusativ: meinen Bruder.",
+            "de": "İlk cümle Nominativ: mein Bruder. İkinci cümle Akkusativ: meinen Bruder.",
+            "en": "İlk cümle Nominativ: mein Bruder. İkinci cümle Akkusativ: meinen Bruder."
+          }
+        },
+        {
+          "type": "text",
+          "word": "ihr",
+          "sentence": "Bilde den Satz: ihr / eure neue Lehrerin / sehr nett / sein",
+          "correct": "Eure neue Lehrerin ist sehr nett.",
+          "answers": [
+            "eure neue lehrerin ist sehr nett"
+          ],
+          "explanations": {
+            "tr": "Lehrerin feminin Nominativ → eure.",
+            "de": "Lehrerin feminin Nominativ → eure.",
+            "en": "Lehrerin feminin Nominativ → eure."
+          }
+        },
+        {
+          "word": "sein/ihr",
+          "sentence": "Paul hat eine Schwester. ___ Schwester heißt Lea.",
+          "options": [
+            "Seine",
+            "Ihre",
+            "Sein"
+          ],
+          "correct": "Seine",
+          "explanations": {
+            "tr": "Paul = er → sein; Schwester → seine.",
+            "de": "Paul = er → sein; Schwester → seine.",
+            "en": "Paul = er → sein; Schwester → seine."
+          }
+        },
+        {
+          "word": "sein/ihr",
+          "sentence": "Anna hat einen Bruder. Ich kenne ___ Bruder.",
+          "options": [
+            "ihren",
+            "seinen",
+            "ihr"
+          ],
+          "correct": "ihren",
+          "explanations": {
+            "tr": "Anna = sie → ihr; Bruder maskulin Akkusativ → ihren.",
+            "de": "Anna = sie → ihr; Bruder maskulin Akkusativ → ihren.",
+            "en": "Anna = sie → ihr; Bruder maskulin Akkusativ → ihren."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Sie",
+          "sentence": "Bilde die Frage: Frau Klein / das / Ihr Auto / sein",
+          "correct": "Frau Klein, ist das Ihr Auto?",
+          "answers": [
+            "frau klein ist das ihr auto",
+            "frau klein, ist das ihr auto"
+          ],
+          "explanations": {
+            "tr": "Resmî Sie → Ihr; Auto nötr.",
+            "de": "Resmî Sie → Ihr; Auto nötr.",
+            "en": "Resmî Sie → Ihr; Auto nötr."
+          }
+        },
+        {
+          "word": "euer",
+          "sentence": "Wir kennen ___ neuen Trainer noch nicht.",
+          "options": [
+            "euren",
+            "euer",
+            "eure"
+          ],
+          "correct": "euren",
+          "explanations": {
+            "tr": "Trainer maskulin Akkusativ → euren.",
+            "de": "Trainer maskulin Akkusativ → euren.",
+            "en": "Trainer maskulin Akkusativ → euren."
+          }
+        },
+        {
+          "type": "text",
+          "word": "wir",
+          "sentence": "Ergänze: Das sind ___ Freunde. (wir)",
+          "correct": "unsere",
+          "answers": [
+            "unsere"
+          ],
+          "explanations": {
+            "tr": "Freunde çoğul Nominativ → unsere.",
+            "de": "Freunde çoğul Nominativ → unsere.",
+            "en": "Freunde çoğul Nominativ → unsere."
+          }
+        },
+        {
+          "word": "Akkusativ",
+          "sentence": "Mia sucht ___ Schlüssel.",
+          "options": [
+            "ihren",
+            "ihr",
+            "ihre"
+          ],
+          "correct": "ihren",
+          "explanations": {
+            "tr": "Mia = sie; Schlüssel maskulin Akkusativ → ihren.",
+            "de": "Mia = sie; Schlüssel maskulin Akkusativ → ihren.",
+            "en": "Mia = sie; Schlüssel maskulin Akkusativ → ihren."
+          }
+        },
+        {
+          "type": "text",
+          "word": "ich",
+          "sentence": "Bilde den Satz: ich / meinen Vater / heute / anrufen",
+          "correct": "Ich rufe meinen Vater heute an.",
+          "answers": [
+            "ich rufe meinen vater heute an"
+          ],
+          "explanations": {
+            "tr": "Vater maskulin Akkusativ → meinen.",
+            "de": "Vater maskulin Akkusativ → meinen.",
+            "en": "Vater maskulin Akkusativ → meinen."
+          }
+        },
+        {
+          "word": "Formal",
+          "sentence": "Welche Variante ist richtig?",
+          "options": [
+            "Herr Braun, ist das Ihre Tochter?",
+            "Herr Braun, ist das ihr Tochter?",
+            "Herr Braun, ist das Ihren Tochter?"
+          ],
+          "correct": "Herr Braun, ist das Ihre Tochter?",
+          "explanations": {
+            "tr": "Resmî Sie → Ihre; Tochter feminin.",
+            "de": "Resmî Sie → Ihre; Tochter feminin.",
+            "en": "Resmî Sie → Ihre; Tochter feminin."
+          }
+        }
+      ]
+    }
+  ]
+}

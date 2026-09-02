@@ -411,3 +411,10 @@
 #page-grammar .grammar-hero-copy p {
   max-width: 800px;
 }
+.brand-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}

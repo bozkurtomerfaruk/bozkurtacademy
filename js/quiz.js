@@ -526,17 +526,23 @@
     el.textContent=`${t('bestLabel')}: ${best ? best+'/'+state.pool.length : '—'}`;
   }
 
-  function resetQuiz(pool){
-    state.pool=pool.map((q,i)=>({...q,_index:i}));
-    state.index=0;
-    state.selected='';
-    state.checked=false;
-    state.score=0;
-    state.wrong=[];
-    state.responses={};
-    renderQuiz();
-  }
+ function resetQuiz(pool){
+  state.pool=pool.map((q,i)=>({
+    ...q,
+    options:Array.isArray(q.options)
+      ? shuffleOptions(q.options)
+      : q.options,
+    _index:i
+  }));
 
+  state.index=0;
+  state.selected='';
+  state.checked=false;
+  state.score=0;
+  state.wrong=[];
+  state.responses={};
+  renderQuiz();
+}
   function renderQuiz(){
     const q=state.pool[state.index];
     if(!q) return;

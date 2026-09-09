@@ -741,23 +741,6 @@ function renderCheckedQuestion(q, response){
     `${((state.index+1)/state.pool.length)*100}%`;
 }
 
-    if(isWritten(q)){
-      const input=$('writtenAnswerInput');
-      if(input) input.disabled=true;
-    }else{
-      document.querySelectorAll('#quizOptions .quiz-option').forEach(btn=>{
-        btn.disabled=true;
-        btn.classList.remove('selected');
-        if(btn.dataset.answer===q.correct) btn.classList.add('correct');
-        else if(btn.dataset.answer===response.selected) btn.classList.add('wrong');
-      });
-    }
-
-    $('checkAnswerBtn').style.display='none';
-    $('nextQuestionBtn').style.display='inline-flex';
-    $('progressBar').style.width=`${((state.index+1)/state.pool.length)*100}%`;
-  }
-
   function checkAnswer(){
     if(state.checked) return;
     const q=state.pool[state.index];

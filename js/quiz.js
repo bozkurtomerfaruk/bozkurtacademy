@@ -240,15 +240,54 @@
   }
 
   function exerciseHistoryState(view){
-    return {
-      baPage:'exercises',
-      baExerciseView:view,
-      level:state.level?.id || null,
-      topic:state.topicMeta?.id || state.topicData?.id || null,
-      exercise:state.exercise?.id || null
-    };
+  return {
+    baPage:'exercises',
+    baExerciseView:view,
+    level:state.level?.id || null,
+    topic:state.topicMeta?.id || state.topicData?.id || null,
+    exercise:state.exercise?.id || null,
+    question:view === 'quiz' ? state.index + 1 : null
+  };
+}
+  function syncCurrentQuestionHistory(){
+  if(!state.exercise) return;
+
+  const hs = history.state || {};
+
+  if(
+    hs.baPage !== 'exercises' ||
+    hs.baExerciseView !== 'quiz'
+  ){
+    return;
   }
 
+  const question = state.index + 1;
+
+  history.replaceState(
+    {
+      ...hs,
+      baPage:'exercises',
+      baExerciseView:'quiz',
+      level:state.level?.id || state.topicData?.level || null,
+      topic:state.topicMeta?.id || state.topicData?.id || null,
+      exercise:state.exercise?.id || null,
+      question
+    },
+    '',
+    location.hash
+  );
+
+  window.dispatchEvent(
+    new CustomEvent('ba:exercise-question-change', {
+      detail:{
+        level:state.level?.id || state.topicData?.level || null,
+        topic:state.topicMeta?.id || state.topicData?.id || null,
+        exercise:state.exercise?.id || null,
+        question
+      }
+    })
+  );
+}
   function pushExerciseHistory(view){
     if(!history.pushState) return;
     history.pushState(exerciseHistoryState(view), '', '#exercises');
@@ -519,7 +558,8 @@
     return `baBestScore:${level}:${topic}:${ex}`;
   }
 
-  function updateBestScore(){
+  function 
+    (){
     const el=$('bestScore');
     if(!el) return;
     const best=Number(localStorage.getItem(bestScoreKey()) || 0);
@@ -609,7 +649,8 @@
       $('nextQuestionBtn').style.display='none';
     }
 
-    updateBestScore();
+    updateBestScore(); 
+    syncCurrentQuestionHistory();
   }
 
   function selectAnswer(answer){
@@ -686,6 +727,31 @@
     state.index--;
     renderQuiz();
   }
+  function previousQuestion(){
+  if(state.index<=0) return;
+  state.index--;
+  renderQuiz();
+}
+
+function goToQuestion(number){
+  if(!state.pool.length) return;
+
+  let target = Number.parseInt(number, 10);
+
+  if(!Number.isFinite(target)){
+    target = 1;
+  }
+
+  target = Math.max(1, Math.min(target, state.pool.length));
+
+  state.index = target - 1;
+  renderQuiz();
+
+  window.scrollTo({
+    top: document.getElementById('page-exercises')?.offsetTop || 0,
+    behavior:'auto'
+  });
+}
 
   function nextQuestion(){
     const q=state.pool[state.index];
@@ -808,8 +874,13 @@
           updateBreadcrumb();
           return;
         }
-        startExercise(exercise.id, false);
-        return;
+       startExercise(exercise.id, false);
+
+if(histState.question){
+  goToQuestion(histState.question);
+}
+
+return;
       }
 
       goLevels(false);
@@ -849,6 +920,11 @@
       await restoreHistoryState(history.state);
     }catch(error){ showError(error); }
   }
+  window.BAQuiz = {
+  ...(window.BAQuiz || {}),
+  goToQuestion,
+  getCurrentQuestion: () => state.index + 1
+};
 
   window.addEventListener('popstate', event=>restoreHistoryState(event.state));
   window.addEventListener('ba:pagechange', event=>{

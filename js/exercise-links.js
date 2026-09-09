@@ -20,25 +20,41 @@
 
     if (parts[0] !== 'exercises') return null;
 
-    return {
-      level: parts[1] || null,
-      topic: parts[2] || null,
-      exercise: parts[3] || null
-    };
+   const rawQuestion = parts[4] || '';
+const match = rawQuestion.match(/^q?(\d+)$/i);
+
+return {
+  level: parts[1] || null,
+  topic: parts[2] || null,
+  exercise: parts[3] || null,
+  question: match ? Math.max(1, Number(match[1])) : null
+};
   }
 
-  function exerciseHash(level, topic, exercise) {
-    if (!level) return '#exercises';
-    if (!topic) return `#exercises/${encodePart(level)}`;
-    if (!exercise) return `#exercises/${encodePart(level)}/${encodePart(topic)}`;
-    return `#exercises/${encodePart(level)}/${encodePart(topic)}/${encodePart(exercise)}`;
+  function exerciseHash(level, topic, exercise, question) {
+  if (!level) return '#exercises';
+
+  if (!topic) {
+    return `#exercises/${encodePart(level)}`;
   }
 
+  if (!exercise) {
+    return `#exercises/${encodePart(level)}/${encodePart(topic)}`;
+  }
+
+  const base =
+    `#exercises/${encodePart(level)}/${encodePart(topic)}/${encodePart(exercise)}`;
+
+  if (!question) return base;
+
+  return `${base}/q${Math.max(1, Number(question) || 1)}`;
+}
   function replaceCurrentExerciseUrl(view, ids = {}) {
     const hs = history.state || {};
     const level = ids.level ?? hs.level ?? null;
     const topic = ids.topic ?? hs.topic ?? null;
     const exercise = ids.exercise ?? hs.exercise ?? null;
+    const question = ids.question ?? hs.question ?? null;
 
     let hash = '#exercises';
 
@@ -51,8 +67,8 @@
     }
 
     if (view === 'quiz' && level && topic && exercise) {
-      hash = exerciseHash(level, topic, exercise);
-    }
+     hash = exerciseHash(level, topic, exercise, question);
+}
 
     history.replaceState(
       {
@@ -61,7 +77,8 @@
         baExerciseView: view,
         level: level || null,
         topic: topic || null,
-        exercise: view === 'quiz' ? (exercise || null) : null
+        exercise: view === 'quiz' ? (exercise || null) : null,
+        question: view === 'quiz' ? (Number(question) || 1) : null
       },
       '',
       hash
@@ -146,6 +163,9 @@
     window.addEventListener('popstate', () => {
       setTimeout(syncUrlFromHistory, 0);
     });
+    window.addEventListener('ba:exercise-question-change', () => {
+      scheduleUrlSync();
+});
   }
 
   async function openDeepLink(target) {
@@ -209,18 +229,27 @@
         )
       );
 
-      exerciseButton.click();
+     exerciseButton.click();
 
-      await waitFor(
-        () => history.state?.baExerciseView === 'quiz' &&
-              history.state?.exercise === target.exercise
-      );
+await waitFor(
+  () => history.state?.baExerciseView === 'quiz' &&
+        history.state?.exercise === target.exercise
+);
 
-      replaceCurrentExerciseUrl('quiz', {
-        level: target.level,
-        topic: target.topic,
-        exercise: target.exercise
-      });
+if (target.question && window.BAQuiz?.goToQuestion) {
+  window.BAQuiz.goToQuestion(target.question);
+
+  await waitFor(
+    () => Number(history.state?.question) === Number(target.question)
+  );
+}
+
+replaceCurrentExerciseUrl('quiz', {
+  level: target.level,
+  topic: target.topic,
+  exercise: target.exercise,
+  question: target.question || 1
+});
 
     } catch (error) {
       console.error('Deep-link could not be opened:', error);

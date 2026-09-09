@@ -558,13 +558,15 @@
     return `baBestScore:${level}:${topic}:${ex}`;
   }
 
-  function 
-    (){
-    const el=$('bestScore');
-    if(!el) return;
-    const best=Number(localStorage.getItem(bestScoreKey()) || 0);
-    el.textContent=`${t('bestLabel')}: ${best ? best+'/'+state.pool.length : '—'}`;
-  }
+function updateBestScore(){
+  const el=$('bestScore');
+  if(!el) return;
+
+  const best=Number(localStorage.getItem(bestScoreKey()) || 0);
+
+  el.textContent=
+    `${t('bestLabel')}: ${best ? best+'/'+state.pool.length : '—'}`;
+}
 
  function resetQuiz(pool){
   state.pool=pool.map((q,i)=>({
@@ -727,11 +729,6 @@
     state.index--;
     renderQuiz();
   }
-  function previousQuestion(){
-  if(state.index<=0) return;
-  state.index--;
-  renderQuiz();
-}
 
 function goToQuestion(number){
   if(!state.pool.length) return;

@@ -81,19 +81,23 @@
 
 
   const QUIZ_I18N = {
-    tr:{
-      previous:'← Önceki Soru',
-      writtenPlaceholder:'Cevabını Almanca yaz...',
-      writtenHint:'Cevabını yaz ve kontrol et.',
-      correctAnswer:'Doğru cevap',
-      writtenChip:'Yazmalı',
-      noHelpChip:'Yardım kapalı'
-    },
+   tr:{
+  previous:'← Önceki Soru',
+  writtenPlaceholder:'Cevabını Almanca yaz...',
+  writtenHint:'Cevabını yaz ve kontrol et.',
+  correctAnswer:'Doğru cevap',
+  correctShort:'Doğru. Bu yapıyı doğru kullandın.',
+  whyWrong:'Neden?',
+  writtenChip:'Yazmalı',
+  noHelpChip:'Yardım kapalı'
+},
     de:{
       previous:'← Vorherige Frage',
       writtenPlaceholder:'Schreibe deine Antwort auf Deutsch...',
       writtenHint:'Schreibe deine Antwort und prüfe sie.',
       correctAnswer:'Richtige Antwort',
+      correctShort:'Richtig. Du hast die Struktur korrekt verwendet.',
+      whyWrong:'Warum?',
       writtenChip:'Schreiben',
       noHelpChip:'Ohne Hilfe'
     },
@@ -102,6 +106,8 @@
       writtenPlaceholder:'Type your answer in German...',
       writtenHint:'Write your answer and check it.',
       correctAnswer:'Correct answer',
+      correctShort:'Correct. You used the structure correctly.',
+      whyWrong:'Why?',
       writtenChip:'Written',
       noHelpChip:'No help'
     }
@@ -663,18 +669,77 @@ function updateBestScore(){
     document.querySelectorAll('#quizOptions .quiz-option').forEach(btn=>btn.classList.toggle('selected',btn.dataset.answer===answer));
   }
 
-  function renderCheckedQuestion(q, response){
-    const feedback=$('quizFeedback');
-    const explanation=escapeHtml(localize(q.explanations));
-    const correctDisplay=escapeHtml(q.correct || (q.answers?.[0] || ''));
+function renderCheckedQuestion(q, response){
+  const feedback=$('quizFeedback');
 
-    if(response.correct){
-      feedback.className='quiz-feedback show good';
-      feedback.innerHTML=`<strong>${t('correctTitle')}</strong>${explanation}`;
-    }else{
-      feedback.className='quiz-feedback show bad';
-      feedback.innerHTML=`<strong>${t('wrongTitle')}</strong>${isWritten(q) && correctDisplay ? `<div class="correct-answer-line">${escapeHtml(qt('correctAnswer'))}: <b>${correctDisplay}</b></div>` : ''}${explanation}`;
-    }
+  const detailedExplanation =
+    escapeHtml(localize(q.explanations));
+
+  const correctDisplay =
+    escapeHtml(q.correct || (q.answers?.[0] || ''));
+
+  if(response.correct){
+
+    feedback.className='quiz-feedback show good';
+
+    feedback.innerHTML=`
+      <strong>${t('correctTitle')}</strong>
+      <div class="correct-short-feedback">
+        ${escapeHtml(qt('correctShort'))}
+      </div>
+    `;
+
+  }else{
+
+    feedback.className='quiz-feedback show bad';
+
+    feedback.innerHTML=`
+      <strong>${t('wrongTitle')}</strong>
+
+      ${
+        correctDisplay
+          ? `<div class="correct-answer-line">
+               ${escapeHtml(qt('correctAnswer'))}:
+               <b>${correctDisplay}</b>
+             </div>`
+          : ''
+      }
+
+      ${
+        detailedExplanation
+          ? `<div class="wrong-explanation">
+               <strong>${escapeHtml(qt('whyWrong'))}</strong>
+               <p>${detailedExplanation}</p>
+             </div>`
+          : ''
+      }
+    `;
+  }
+
+  if(isWritten(q)){
+    const input=$('writtenAnswerInput');
+    if(input) input.disabled=true;
+  }else{
+    document
+      .querySelectorAll('#quizOptions .quiz-option')
+      .forEach(btn=>{
+        btn.disabled=true;
+        btn.classList.remove('selected');
+
+        if(btn.dataset.answer===q.correct){
+          btn.classList.add('correct');
+        }else if(btn.dataset.answer===response.selected){
+          btn.classList.add('wrong');
+        }
+      });
+  }
+
+  $('checkAnswerBtn').style.display='none';
+  $('nextQuestionBtn').style.display='inline-flex';
+
+  $('progressBar').style.width=
+    `${((state.index+1)/state.pool.length)*100}%`;
+}
 
     if(isWritten(q)){
       const input=$('writtenAnswerInput');

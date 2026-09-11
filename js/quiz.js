@@ -89,7 +89,8 @@
   correctShort:'Doğru. Bu yapıyı doğru kullandın.',
   whyWrong:'Neden?',
   writtenChip:'Yazmalı',
-  noHelpChip:'Yardım kapalı'
+  noHelpChip:'Yardım kapalı', 
+  nextExercise:'Sonraki Alıştırma →'
 },
     de:{
       previous:'← Vorherige Frage',
@@ -99,7 +100,8 @@
       correctShort:'Richtig. Du hast die Struktur korrekt verwendet.',
       whyWrong:'Warum?',
       writtenChip:'Schreiben',
-      noHelpChip:'Ohne Hilfe'
+      noHelpChip:'Ohne Hilfe',
+      nextExercise:'Nächste Übung →'
     },
     en:{
       previous:'← Previous Question',
@@ -109,7 +111,8 @@
       correctShort:'Correct. You used the structure correctly.',
       whyWrong:'Why?',
       writtenChip:'Written',
-      noHelpChip:'No help'
+      noHelpChip:'No help',
+      nextExercise:'Next Exercise →'
     }
   };
 
@@ -809,6 +812,29 @@ function goToQuestion(number){
       showResult();
     }
   }
+  function getNextExercise(){
+  const exercises = state.topicData?.exercises || [];
+  const currentIndex = exercises.findIndex(
+    ex => ex.id === state.exercise?.id
+  );
+
+  if(
+    currentIndex < 0 ||
+    currentIndex >= exercises.length - 1
+  ){
+    return null;
+  }
+
+  return exercises[currentIndex + 1];
+}
+
+function startNextExercise(){
+  const nextExercise = getNextExercise();
+
+  if(!nextExercise) return;
+
+  startExercise(nextExercise.id, true);
+}
 
   function showResult(){
     syncScoreAndWrong();
@@ -820,6 +846,7 @@ function goToQuestion(number){
     const currentBest=Number(localStorage.getItem(bestScoreKey()) || 0);
     if(state.score>currentBest) localStorage.setItem(bestScoreKey(), String(state.score));
     const message=percent>=90?t('resultPerfect'):percent>=70?t('resultGood'):t('resultPractice');
+    const nextExercise=getNextExercise();
     const wrongHtml=state.wrong.length
       ? `<div class="wrong-summary"><strong>${t('wrongAnswersTitle')}</strong>${state.wrong.map(q=>`<div><strong>${escapeHtml(q.correct || q.answers?.[0] || '')} ${escapeHtml(q.word || '')}</strong><br><small>${escapeHtml(localize(q.explanations))}</small></div>`).join('')}</div>`
       : `<div class="notice" style="margin-top:22px">${t('noWrongAnswers')}</div>`;
@@ -830,14 +857,33 @@ function goToQuestion(number){
       <p class="result-message">${message}</p>
       ${wrongHtml}
       <div class="quiz-actions" style="justify-content:center">
-        <button class="btn primary" type="button" id="restartQuizBtn">${t('restartQuiz')}</button>
-        ${state.wrong.length?`<button class="btn gold" type="button" id="retryWrongBtn">${t('retryWrong')}</button>`:''}
-        <button class="btn ghost" type="button" id="resultBackBtn">${t('backToExercises')}</button>
-      </div>
+  <button class="btn primary" type="button" id="restartQuizBtn">
+    ${t('restartQuiz')}
+  </button>
+
+  ${state.wrong.length
+    ? `<button class="btn gold" type="button" id="retryWrongBtn">
+         ${t('retryWrong')}
+       </button>`
+    : ''
+  }
+
+  <button class="btn ghost" type="button" id="resultBackBtn">
+    ${t('backToExercises')}
+  </button>
+
+  ${nextExercise
+    ? `<button class="btn gold" type="button" id="nextExerciseBtn">
+         ${escapeHtml(qt('nextExercise'))}
+       </button>`
+    : ''
+  }
+</div>
     </div>`;
     $('restartQuizBtn')?.addEventListener('click',()=>resetQuiz(state.exercise.questions || []));
     $('retryWrongBtn')?.addEventListener('click',()=>resetQuiz(state.wrong.map(q=>({...q}))));
     $('resultBackBtn')?.addEventListener('click',()=>goBackToDepth(2, ()=>goSets(false)));
+    $('nextExerciseBtn')?.addEventListener('click', startNextExercise);
   }
 
   function goLevels(writeHistory=false){

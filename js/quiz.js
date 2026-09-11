@@ -346,14 +346,13 @@
       state.level.topics.forEach(topic=>rows.push({level:state.level,topic}));
     }
 
-    const levelTabs=state.catalog.levels.map(level=>{
-      const ready=level.topics.filter(topic=>topic.status==='ready').length;
-      return `<button class="exercise-discovery-level ${state.level?.id===level.id && !query?'active':''}" type="button" data-hub-level="${level.id}">
-        <span class="exercise-discovery-level-code">${level.id}</span>
-        <span class="exercise-discovery-level-name">${escapeHtml(localize(level.title))}</span>
-        <span class="exercise-discovery-level-meta">${ready} ${escapeHtml(ht('ready'))} · ${level.topics.length} ${escapeHtml(ht('total'))}</span>
-      </button>`;
-    }).join('');
+   const levelTabs=state.catalog.levels.map(level=>{
+  return `<button class="exercise-discovery-level ${state.level?.id===level.id && !query?'active':''}" type="button" data-hub-level="${level.id}">
+    <span class="exercise-discovery-level-code">${level.id}</span>
+    <span class="exercise-discovery-level-name">${escapeHtml(localize(level.title))}</span>
+    <span class="exercise-discovery-level-meta">${level.topics.length} ${escapeHtml(ht('total'))}</span>
+  </button>`;
+}).join('');
 
     const cards=rows.length ? rows.map(({level,topic})=>{
       const ready=topic.status==='ready';

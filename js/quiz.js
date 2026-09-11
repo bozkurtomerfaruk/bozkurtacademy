@@ -360,7 +360,7 @@
         data-hub-topic="${topic.id}" data-hub-topic-level="${level.id}" ${ready?'':'disabled'}>
         <div class="exercise-discovery-topic-top">
           <span class="exercise-discovery-topic-level">${level.id}</span>
-          <span class="exercise-discovery-status ${ready?'ready':'soon'}">${ready?escapeHtml(ht('ready')):escapeHtml(ht('soon'))}</span>
+          ${ready ? '' : `<span class="exercise-discovery-status soon">${escapeHtml(ht('soon'))}</span>`}
         </div>
         <h3>${escapeHtml(localize(topic.title))}</h3>
         <p>${escapeHtml(localize(topic.description))}</p>

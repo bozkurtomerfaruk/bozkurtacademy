@@ -396,11 +396,11 @@
             "de": "Konjunktiv II",
             "en": "Konjunktiv II"
           },
-         "description": {
-  "tr": "Varsayımsal durumlar, geçmişte gerçekleşmemiş olaylar, dilekler, kibarlık, tavsiyeler ve günlük kullanım için kapsamlı Konjunktiv II alıştırmaları.",
-  "de": "Umfangreiche Übungen zu hypothetischen Situationen, irrealer Vergangenheit, Wünschen, Höflichkeit, Ratschlägen und alltäglicher Anwendung.",
-  "en": "Comprehensive practice with hypothetical situations, unreal past events, wishes, politeness, advice and everyday use."
-},
+          "description": {
+            "tr": "A2 tekrarından farklı, daha zor B1 paketi: irreale Bedingungen, Vergangenheit, Modalverben, Wünsche, Höflichkeit, Ratschläge ve Passiv için 20 Übung.",
+            "de": "Anspruchsvolleres B1-Paket statt A2-Wiederholung: 20 Übungen zu irrealen Bedingungen, Vergangenheit, Modalverben, Wünschen, Höflichkeit, Ratschlägen und Passiv.",
+            "en": "Harder B1 package rather than an A2 repeat: 20 exercises on unreal conditions, past forms, modals, wishes, politeness, advice and passive."
+          },
           "status": "ready",
           "path": "data/b1/konjunktiv-ii-b1.json"
         },
@@ -412,11 +412,12 @@
             "en": "Genitive"
           },
           "description": {
-            "tr": "İyelik ve Genitiv edatları.",
-            "de": "Besitz und Genitivpräpositionen.",
-            "en": "Possession and genitive prepositions."
+            "tr": "Sahiplik, Wessen, Genitivartikel, isim sonları, possessivartikel, sıfat çekimi, wegen/während ve sık Genitiv ifadeleri için kapsamlı alıştırmalar.",
+            "de": "Umfangreiche Übungen zu Besitz, Wessen, Genitivartikeln, Nomenendungen, Possessivartikeln, Adjektivdeklination, wegen/während und häufigen Genitivwendungen.",
+            "en": "Comprehensive exercises on possession, Wessen, genitive articles, noun endings, possessives, adjective declension, wegen/während and common genitive phrases."
           },
-          "status": "soon"
+          "status": "ready",
+          "path": "data/b1/genitiv.json"
         },
         {
           "id": "n-deklination",

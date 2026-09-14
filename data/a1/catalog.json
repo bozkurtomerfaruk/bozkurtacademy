@@ -1,0 +1,642 @@
+{
+  "version": 1,
+  "levels": [
+    {
+      "id": "A1",
+      "title": {
+        "tr": "Başlangıç",
+        "de": "Anfänger",
+        "en": "Beginner"
+      },
+      "description": {
+        "tr": "Temel cümleler, günlük ifadeler ve ilk gramer yapıları.",
+        "de": "Grundlegende Sätze, Alltagssprache und erste Grammatik.",
+        "en": "Basic sentences, everyday expressions and first grammar structures."
+      },
+      "topics": [
+        {
+          "id": "artikel",
+          "title": {
+            "tr": "Artikel: der · die · das",
+            "de": "Artikel: der · die · das",
+            "en": "Articles: der · die · das"
+          },
+          "description": {
+            "tr": "İsimlerin gramatik cinsiyeti ve temel artikeller.",
+            "de": "Genus der Nomen und bestimmte Artikel.",
+            "en": "Noun gender and basic definite articles."
+          },
+          "status": "ready",
+          "path": "data/a1/artikel.json"
+        },
+        {
+          "id": "personalpronomen-akkusativ",
+          "title": {
+            "tr": "Personalpronomen im Akkusativ",
+            "de": "Personalpronomen im Akkusativ",
+            "en": "Personal pronouns: accusative"
+          },
+          "description": {
+            "tr": "mich, dich, ihn, sie, es, uns, euch, sie/Sie.",
+            "de": "mich, dich, ihn, sie, es, uns, euch, sie/Sie.",
+            "en": "mich, dich, ihn, sie, es, uns, euch, sie/Sie."
+          },
+          "status": "ready",
+          "path": "data/a1/personalpronomen-akkusativ.json"
+        },
+        {
+          "id": "personalpronomen-dativ",
+          "title": {
+            "tr": "Personalpronomen im Dativ",
+            "de": "Personalpronomen im Dativ",
+            "en": "Personal pronouns: dative"
+          },
+          "description": {
+            "tr": "mir, dir, ihm, ihr, uns, euch, ihnen/Ihnen.",
+            "de": "mir, dir, ihm, ihr, uns, euch, ihnen/Ihnen.",
+            "en": "mir, dir, ihm, ihr, uns, euch, ihnen/Ihnen."
+          },
+          "status": "ready",
+          "path": "data/a1/personalpronomen-dativ.json"
+        },
+        {
+          "id": "sein-haben",
+          "title": {
+            "tr": "sein & haben",
+            "de": "sein & haben",
+            "en": "sein & haben"
+          },
+          "description": {
+            "tr": "sein ve haben fiillerinin Präsens çekimi ve günlük kullanımı.",
+            "de": "Präsensformen und Alltagsgebrauch von sein und haben.",
+            "en": "Present-tense forms and everyday use of sein and haben."
+          },
+          "status": "ready",
+          "path": "data/a1/sein-haben.json"
+        },
+        {
+          "id": "praesens",
+          "title": {
+            "tr": "Präsens",
+            "de": "Präsens",
+            "en": "Present tense"
+          },
+          "description": {
+            "tr": "Düzenli, yazımı özel ve kökü değişen fiilleri Präsens'te bağlam içinde çalış.",
+            "de": "Übe regelmäßige, besondere und stammwechselnde Verben im Präsens.",
+            "en": "Practise regular, spelling-sensitive and stem-changing verbs in the present tense."
+          },
+          "status": "ready",
+          "path": "data/a1/praesens.json"
+        },
+        {
+          "id": "negation",
+          "title": {
+            "tr": "Negation",
+            "de": "Negation",
+            "en": "Negation"
+          },
+          "description": {
+            "tr": "nicht, kein, nichts, niemand, nirgendwo, noch nicht ve nicht mehr ile günlük A1 olumsuz cümleleri.",
+            "de": "A1-Negation mit nicht, kein, nichts, niemand, nirgendwo, noch nicht und nicht mehr.",
+            "en": "A1 negation with nicht, kein, nichts, niemand, nirgendwo, noch nicht and nicht mehr."
+          },
+          "status": "ready",
+          "path": "data/a1/negation.json"
+        },
+        {
+          "id": "w-fragen",
+          "title": {
+            "tr": "W-Fragen",
+            "de": "W-Fragen",
+            "en": "W-questions"
+          },
+          "description": {
+            "tr": "Wer, was, wo, woher, wohin, wann, wie ve warum ile temel soru cümlelerini çalış.",
+            "de": "Übe wichtige W-Fragen wie wer, was, wo, woher, wohin, wann, wie und warum.",
+            "en": "Practise core W-questions such as who, what, where, where from, where to, when, how and why."
+          },
+          "status": "ready",
+          "path": "data/a1/w-fragen.json"
+        },
+        {
+          "id": "zahlen-uhrzeit-datum",
+          "title": {
+            "tr": "Sayılar · Saatler · Tarihler",
+            "de": "Zahlen · Uhrzeit · Datum",
+            "en": "Numbers · Time · Dates"
+          },
+          "description": {
+            "tr": "Sayılar, fiyatlar, telefon numaraları, saatler ve tarihleri günlük cümlelerde yazma odaklı kapsamlı alıştırmalar.",
+            "de": "Umfangreiche Schreibübungen zu Zahlen, Preisen, Telefonnummern, Uhrzeiten und Datumsangaben im Alltag.",
+            "en": "Comprehensive writing practice with numbers, prices, phone numbers, times and dates in everyday contexts."
+          },
+          "status": "ready",
+          "path": "data/a1/zahlen-uhrzeit-datum.json"
+        },
+        {
+          "id": "akkusativ",
+          "title": {
+            "tr": "Akkusativ",
+            "de": "Akkusativ",
+            "en": "Accusative"
+          },
+          "description": {
+            "tr": "Wen? Was?, Akkusativ artikelleri ve günlük hayatta sık kullanılan Akkusativ fiilleri.",
+            "de": "Wen? Was?, Akkusativartikel und häufige Verben mit Akkusativ.",
+            "en": "Wen? Was?, accusative articles and common verbs with accusative objects."
+          },
+          "status": "ready",
+          "path": "data/a1/akkusativ.json"
+        },
+        {
+          "id": "modalverben",
+          "title": {
+            "tr": "Modalverben",
+            "de": "Modalverben",
+            "en": "Modal verbs"
+          },
+          "description": {
+            "tr": "können, dürfen, wollen, sollen ve müssen fiillerini yalnızca Präsens'te çalış.",
+            "de": "Übe können, dürfen, wollen, sollen und müssen ausschließlich im Präsens.",
+            "en": "Practise können, dürfen, wollen, sollen and müssen in the present tense only."
+          },
+          "status": "ready",
+          "path": "data/a1/modalverben.json"
+        },
+        {
+          "id": "trennbare-verben",
+          "title": {
+            "tr": "Trennbare Verben",
+            "de": "Trennbare Verben",
+            "en": "Separable verbs"
+          },
+          "description": {
+            "tr": "Ayrılabilen fiilleri Präsens'te çek, ön eki doğru yere koy ve soru/cümle yapısını çalış.",
+            "de": "Übe trennbare Verben im Präsens, die Stellung der Vorsilbe sowie Fragen und Sätze.",
+            "en": "Practise separable verbs in the present tense, prefix placement, questions and sentences."
+          },
+          "status": "ready",
+          "path": "data/a1/trennbare-verben.json"
+        },
+        {
+          "id": "possessivartikel",
+          "title": {
+            "tr": "Possessivartikel",
+            "de": "Possessivartikel",
+            "en": "Possessive articles"
+          },
+          "description": {
+            "tr": "mein, dein, sein, ihr, unser, euer ve Ihr biçimlerini Nominativ ve Akkusativ'de çalış.",
+            "de": "Übe mein, dein, sein, ihr, unser, euer und Ihr im Nominativ und Akkusativ.",
+            "en": "Practise mein, dein, sein, ihr, unser, euer and Ihr in nominative and accusative."
+          },
+          "status": "ready",
+          "path": "data/a1/possessivartikel.json"
+        },
+        {
+          "id": "perfekt",
+          "title": {
+            "tr": "Perfekt'e giriş",
+            "de": "Einführung ins Perfekt",
+            "en": "Introduction to Perfekt"
+          },
+          "description": {
+            "tr": "haben/sein, Partizip II, düzenli-düzensiz ve ayrılabilen fiillerle Perfekt'i kapsamlı çalış.",
+            "de": "Übe das Perfekt umfassend mit haben/sein, Partizip II, regelmäßigen, starken und trennbaren Verben.",
+            "en": "Practise the perfect tense comprehensively with haben/sein, participles, regular, strong and separable verbs."
+          },
+          "status": "ready",
+          "path": "data/a1/perfekt.json"
+        }
+      ]
+    },
+    {
+      "id": "A2",
+      "title": {
+        "tr": "Temel",
+        "de": "Grundstufe",
+        "en": "Elementary"
+      },
+      "description": {
+        "tr": "Günlük iletişimde daha ayrıntılı gramer ve cümle yapıları.",
+        "de": "Mehr Grammatik und Satzbau für die Alltagskommunikation.",
+        "en": "More grammar and sentence structure for everyday communication."
+      },
+      "topics": [
+        {
+          "id": "dativ",
+          "title": {
+            "tr": "Dativ",
+            "de": "Dativ",
+            "en": "Dative"
+          },
+          "description": {
+            "tr": "Dativartikel, Dativ zamirleri, Dativ fiilleri, Dativ prepozisyonları ve Dativ + Akkusativ yapılarını kapsamlı çalış.",
+            "de": "Übe Dativartikel, Dativpronomen, Dativverben, Dativpräpositionen und Dativ + Akkusativ umfassend.",
+            "en": "Practise dative articles, dative pronouns, dative verbs, dative prepositions and dative + accusative structures."
+          },
+          "status": "ready",
+          "path": "data/a2/dativ.json"
+        },
+        {
+          "id": "wechselpraepositionen",
+          "title": {
+            "tr": "Wechselpräpositionen",
+            "de": "Wechselpräpositionen",
+            "en": "Two-way prepositions"
+          },
+          "description": {
+            "tr": "Wo? = Dativ, Wohin? = Akkusativ mantığını Wechselpräpositionen ile kapsamlı çalış.",
+            "de": "Übe Wechselpräpositionen umfassend mit Wo? = Dativ und Wohin? = Akkusativ.",
+            "en": "Practise two-way prepositions comprehensively with Wo? = dative and Wohin? = accusative."
+          },
+          "status": "ready",
+          "path": "data/a2/wechselpraepositionen.json"
+        },
+        {
+          "id": "reflexive-verben",
+          "title": {
+            "tr": "Reflexive Verben",
+            "de": "Reflexive Verben",
+            "en": "Reflexive verbs"
+          },
+          "description": {
+            "tr": "Reflexivpronomen, Akkusativ/Dativ ve reflexive fiillerin sabit prepozisyonlarını kapsamlı çalış.",
+            "de": "Übe Reflexivpronomen, Akkusativ/Dativ und feste Präpositionen reflexiver Verben umfassend.",
+            "en": "Practise reflexive pronouns, accusative/dative and fixed prepositions of reflexive verbs comprehensively."
+          },
+          "status": "ready",
+          "path": "data/a2/reflexive-verben.json"
+        },
+        {
+          "id": "konjunktiv-ii",
+          "title": {
+            "tr": "Konjunktiv II",
+            "de": "Konjunktiv II",
+            "en": "Konjunktiv II"
+          },
+          "description": {
+            "tr": "A2 düzeyinde wäre, hätte, würde, könnte, sollte, müsste, dürfte, höfliche Bitten, Ratschläge, Wünsche ve basit wenn-cümlelerini alt başlıklar halinde çalış.",
+            "de": "Übe auf A2-Niveau wäre, hätte, würde, könnte, sollte, müsste, dürfte, höfliche Bitten, Ratschläge, Wünsche und einfache wenn-Sätze in getrennten Teilthemen.",
+            "en": "Practise A2-level wäre, hätte, würde, könnte, sollte, müsste, dürfte, polite requests, advice, wishes and simple wenn-clauses in separate subtopics."
+          },
+          "status": "ready",
+          "path": "data/a2/konjunktiv-ii.json"
+        },
+        {
+          "id": "nebensaetze",
+          "title": {
+            "tr": "Nebensätze",
+            "de": "Nebensätze",
+            "en": "Subordinate clauses"
+          },
+          "description": {
+            "tr": "A2 Nebensätze: her bağlaç için ayrı Übung ve en çok karıştırılan bağlaçlar için hedefli karışık alıştırmalar.",
+            "de": "A2-Nebensätze: einzelne Übungen pro Konjunktion plus gezielte Mischübungen für häufig verwechselte Konnektoren.",
+            "en": "A2 subordinate clauses: separate exercises for each conjunction plus targeted mixed practice for commonly confused connectors."
+          },
+          "status": "ready",
+          "path": "data/a2/nebensaetze.json"
+        },
+        {
+          "id": "komparativ-superlativ",
+          "title": {
+            "tr": "Komparativ & Superlativ",
+            "de": "Komparativ & Superlativ",
+            "en": "Comparative & superlative"
+          },
+          "description": {
+            "tr": "Komparativ, Superlativ, als/wie, Umlaut, düzensiz biçimler ve günlük karşılaştırmalar için 18 ayrı Übung.",
+            "de": "18 Übungen zu Komparativ, Superlativ, als/wie, Umlaut, unregelmäßigen Formen und Alltagsvergleichen.",
+            "en": "18 exercises on comparative, superlative, als/wie, umlaut, irregular forms and everyday comparisons."
+          },
+          "status": "ready",
+          "path": "data/a2/komparativ-superlativ.json"
+        },
+        {
+          "id": "adjektivdeklination",
+          "title": {
+            "tr": "Adjektivdeklination",
+            "de": "Adjektivdeklination",
+            "en": "Adjective endings"
+          },
+          "description": {
+            "tr": "Belirli/belirsiz artikel, mein-/kein-, artikelsiz çekim ve Nominativ–Akkusativ–Dativ için 18 ayrı Übung.",
+            "de": "18 Übungen zu bestimmtem/unbestimmtem Artikel, mein-/kein-, artikelloser Deklination sowie Nominativ–Akkusativ–Dativ.",
+            "en": "18 exercises on definite/indefinite articles, mein-/kein-, adjective endings without articles, and nominative–accusative–dative."
+          },
+          "status": "ready",
+          "path": "data/a2/adjektivdeklination.json"
+        },
+        {
+          "id": "verben-praepositionen",
+          "title": {
+            "tr": "Verben mit Präpositionen",
+            "de": "Verben mit Präpositionen",
+            "en": "Verbs with prepositions"
+          },
+          "description": {
+            "tr": "Sabit fiil–prepozisyon kalıpları, Kasus, reflexive yapılar, wo(r)- soruları ve da(r)- zamirleri için 18 ayrı Übung.",
+            "de": "18 Übungen zu festen Verb-Präposition-Verbindungen, Kasus, reflexiven Formen, wo(r)-Fragen und da(r)-Pronominaladverbien.",
+            "en": "18 exercises on fixed verb-preposition combinations, case, reflexive forms, wo(r)-questions and da(r)-pronominal adverbs."
+          },
+          "status": "ready",
+          "path": "data/a2/verben-praepositionen.json"
+        },
+        {
+          "id": "praeteritum",
+          "title": {
+            "tr": "Präteritum",
+            "de": "Präteritum",
+            "en": "Simple past"
+          },
+          "description": {
+            "tr": "sein/haben, Modalverben, düzenli/düzensiz ve ayrılabilen fiiller için 18 ayrı Präteritum Übung.",
+            "de": "18 Präteritum-Übungen zu sein/haben, Modalverben, regelmäßigen/unregelmäßigen und trennbaren Verben.",
+            "en": "18 simple-past exercises on sein/haben, modal, regular/irregular and separable verbs."
+          },
+          "status": "ready",
+          "path": "data/a2/praeteritum.json"
+        }
+      ]
+    },
+    {
+      "id": "B1",
+      "title": {
+        "tr": "Orta",
+        "de": "Mittelstufe",
+        "en": "Intermediate"
+      },
+      "description": {
+        "tr": "Bağlaçlar, yan cümleler ve daha bağımsız dil kullanımı.",
+        "de": "Nebensätze, Konnektoren und selbstständigere Sprachverwendung.",
+        "en": "Subordinate clauses, connectors and more independent language use."
+      },
+      "topics": [
+        {
+          "id": "konnektoren",
+          "title": {
+            "tr": "Konnektoren",
+            "de": "Konnektoren",
+            "en": "Connectors"
+          },
+          "description": {
+            "tr": "Konjunktionen, Subjunktionen, Konjunktionaladverbien, Wortstellung ve zweiteilige Konnektoren için 22 ayrı Übung.",
+            "de": "22 Übungen zu Konjunktionen, Subjunktionen, Konjunktionaladverbien, Wortstellung und zweiteiligen Konnektoren.",
+            "en": "22 exercises on conjunctions, subordinators, conjunctive adverbs, word order and two-part connectors."
+          },
+          "status": "ready",
+          "path": "data/b1/konnektoren.json"
+        },
+        {
+          "id": "relativsaetze",
+          "title": {
+            "tr": "Relativsätze",
+            "de": "Relativsätze",
+            "en": "Relative clauses"
+          },
+          "description": {
+            "tr": "Nominativ, Akkusativ, Dativ, Präpositionen, dessen/deren, wo/wohin/woher/was ve yazmalı Relativsatz çalışmaları için 18 Übung.",
+            "de": "18 Übungen zu Nominativ, Akkusativ, Dativ, Präpositionen, dessen/deren, wo/wohin/woher/was und Satzbildung.",
+            "en": "18 exercises on nominative, accusative, dative, prepositions, dessen/deren, wo/wohin/woher/was and sentence building."
+          },
+          "status": "ready",
+          "path": "data/b1/relativsaetze.json"
+        },
+        {
+          "id": "passiv",
+          "title": {
+            "tr": "Passiv",
+            "de": "Passiv",
+            "en": "Passive voice"
+          },
+          "description": {
+            "tr": "Präsens, Präteritum, Perfekt, Modalpassiv, von + Dativ, unpersönliches Passiv ve Aktiv–Passiv dönüşümleri için 18 Übung.",
+            "de": "18 Übungen zu Präsens, Präteritum, Perfekt, Modalpassiv, von + Dativ, unpersönlichem Passiv und Aktiv–Passiv-Umformungen.",
+            "en": "18 exercises on present, simple-past and perfect passive, modal passive, von + dative, impersonal passive and active–passive transformations."
+          },
+          "status": "ready",
+          "path": "data/b1/passiv.json"
+        },
+        {
+          "id": "konjunktiv-ii-b1",
+          "title": {
+            "tr": "Konjunktiv II",
+            "de": "Konjunktiv II",
+            "en": "Konjunktiv II"
+          },
+          "description": {
+            "tr": "Varsayımsal durumlar, geçmişte gerçekleşmemiş olaylar, dilekler, kibarlık, tavsiyeler ve günlük kullanım için kapsamlı Konjunktiv II alıştırmaları.",
+            "de": "Umfangreiche Übungen zu hypothetischen Situationen, irrealer Vergangenheit, Wünschen, Höflichkeit, Ratschlägen und alltäglicher Anwendung.",
+            "en": "Comprehensive practice with hypothetical situations, unreal past events, wishes, politeness, advice and everyday use."
+          },
+          "status": "ready",
+          "path": "data/b1/konjunktiv-ii-b1.json"
+        },
+        {
+          "id": "genitiv",
+          "title": {
+            "tr": "Genitiv",
+            "de": "Genitiv",
+            "en": "Genitive"
+          },
+          "description": {
+            "tr": "Sahiplik, Wessen, Genitivartikel, isim sonları, possessivartikel, sıfat çekimi, wegen/während ve sık Genitiv ifadeleri için kapsamlı alıştırmalar.",
+            "de": "Umfangreiche Übungen zu Besitz, Wessen, Genitivartikeln, Nomenendungen, Possessivartikeln, Adjektivdeklination, wegen/während und häufigen Genitivwendungen.",
+            "en": "Comprehensive exercises on possession, Wessen, genitive articles, noun endings, possessives, adjective declension, wegen/während and common genitive phrases."
+          },
+          "status": "ready",
+          "path": "data/b1/genitiv.json"
+        },
+        {
+          "id": "n-deklination",
+          "title": {
+            "tr": "N-Deklination",
+            "de": "N-Deklination",
+            "en": "N-declension"
+          },
+          "description": {
+            "tr": "Zayıf isimleri Nominativ, Akkusativ, Dativ ve Genitivde; artikel, sıfat, Kasus ve özel biçimlerle kapsamlı şekilde çalış.",
+            "de": "Umfangreiche Übungen zu schwachen Nomen in Nominativ, Akkusativ, Dativ und Genitiv mit Artikeln, Adjektiven, Kasus und Sonderformen.",
+            "en": "Comprehensive practice with weak nouns in nominative, accusative, dative and genitive, including determiners, adjectives, case and special forms."
+          },
+          "status": "ready",
+          "path": "data/b1/n-deklination.json"
+        },
+        {
+          "id": "infinitiv-zu",
+          "title": {
+            "tr": "Infinitiv mit zu",
+            "de": "Infinitiv mit zu",
+            "en": "Infinitive with zu"
+          },
+          "description": {
+            "tr": "Infinitiv mit zu, ayrılabilen fiiller, kişi ilişkisi, Passiv, Perfektinfinitiv ve cümle dönüşümleri için kapsamlı B1 alıştırmaları.",
+            "de": "Umfangreiche B1-Übungen zu Infinitiv mit zu, trennbaren Verben, Personenbezug, Passiv, Perfektinfinitiv und Satzumformungen.",
+            "en": "Comprehensive B1 practice on zu-infinitives, separable verbs, person reference, passive, perfect infinitives and sentence transformations."
+          },
+          "status": "ready",
+          "path": "data/b1/infinitiv-zu.json"
+        },
+        {
+          "id": "praeteritum-b1",
+          "title": {
+            "tr": "Präteritum vertieft",
+            "de": "Präteritum vertieft",
+            "en": "Past tense in depth"
+          },
+          "description": {
+            "tr": "Düzenli ve düzensiz fiiller, Modalverben, ayrılabilen fiiller, zaman karşılaştırmaları ve hikâye anlatımı için kapsamlı Präteritum alıştırmaları.",
+            "de": "Umfangreiche Übungen zu regelmäßigen und unregelmäßigen Verben, Modalverben, trennbaren Verben, Zeitvergleichen und Erzählungen.",
+            "en": "Comprehensive preterite practice with regular and irregular verbs, modal verbs, separable verbs, time contrasts and narrative contexts."
+          },
+          "status": "ready",
+          "path": "data/b1/praeteritum-b1.json"
+        },
+        {
+          "id": "plusquamperfekt",
+          "title": {
+            "tr": "Plusquamperfekt",
+            "de": "Plusquamperfekt",
+            "en": "Past perfect"
+          },
+          "description": {
+            "tr": "Geçmişteki olayların sırası, hatte/war + Partizip II, nachdem/als ve geçmiş zaman farkları için kapsamlı alıştırmalar.",
+            "de": "Umfangreiche Übungen zur Reihenfolge vergangener Ereignisse, hatte/war + Partizip II, nachdem/als und den Unterschieden der Vergangenheitsformen.",
+            "en": "Comprehensive practice on past-event sequencing, hatte/war + past participle, nachdem/als and differences between past tenses."
+          },
+          "status": "ready",
+          "path": "data/b1/plusquamperfekt.json"
+        }
+      ]
+    },
+    {
+      "id": "B2",
+      "title": {
+        "tr": "Orta-İleri",
+        "de": "Obere Mittelstufe",
+        "en": "Upper intermediate"
+      },
+      "description": {
+        "tr": "Akademik ve profesyonel kullanım için ileri gramer yapıları.",
+        "de": "Fortgeschrittene Grammatik für akademische und berufliche Kontexte.",
+        "en": "Advanced grammar for academic and professional contexts."
+      },
+      "topics": [
+        {
+          "id": "konjunktiv-i",
+          "title": {
+            "tr": "Konjunktiv I",
+            "de": "Konjunktiv I",
+            "en": "Konjunktiv I"
+          },
+          "description": {
+            "tr": "Dolaylı anlatım.",
+            "de": "Indirekte Rede.",
+            "en": "Reported speech."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "passiv-varianten",
+          "title": {
+            "tr": "Passiv Varianten",
+            "de": "Passivvarianten",
+            "en": "Passive variants"
+          },
+          "description": {
+            "tr": "İleri pasif yapılar ve alternatifler.",
+            "de": "Erweiterte Passivformen und Alternativen.",
+            "en": "Advanced passive forms and alternatives."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "nominalisierung",
+          "title": {
+            "tr": "Nominalisierung",
+            "de": "Nominalisierung",
+            "en": "Nominalisation"
+          },
+          "description": {
+            "tr": "Fiil ve sıfatlardan isimleştirme.",
+            "de": "Nominalisierung von Verben und Adjektiven.",
+            "en": "Nominalising verbs and adjectives."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "partizipialattribute",
+          "title": {
+            "tr": "Partizipialattribute",
+            "de": "Partizipialattribute",
+            "en": "Participial attributes"
+          },
+          "description": {
+            "tr": "Partizip I/II ile sıfat yapıları.",
+            "de": "Adjektivische Strukturen mit Partizip I/II.",
+            "en": "Adjectival structures using participles."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "konnektoren-b2",
+          "title": {
+            "tr": "İleri Konnektoren",
+            "de": "Fortgeschrittene Konnektoren",
+            "en": "Advanced connectors"
+          },
+          "description": {
+            "tr": "insofern, wohingegen, demgegenüber...",
+            "de": "insofern, wohingegen, demgegenüber...",
+            "en": "insofern, wohingegen, demgegenüber..."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "funktionsverbgefuege",
+          "title": {
+            "tr": "Funktionsverbgefüge",
+            "de": "Funktionsverbgefüge",
+            "en": "Light-verb constructions"
+          },
+          "description": {
+            "tr": "eine Entscheidung treffen gibi yapılar.",
+            "de": "Verbindungen wie eine Entscheidung treffen.",
+            "en": "Constructions such as eine Entscheidung treffen."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "genitivpraepositionen",
+          "title": {
+            "tr": "Genitivpräpositionen",
+            "de": "Genitivpräpositionen",
+            "en": "Genitive prepositions"
+          },
+          "description": {
+            "tr": "angesichts, hinsichtlich, trotz...",
+            "de": "angesichts, hinsichtlich, trotz...",
+            "en": "angesichts, hinsichtlich, trotz..."
+          },
+          "status": "soon"
+        },
+        {
+          "id": "adjektivdeklination-b2",
+          "title": {
+            "tr": "Adjektivdeklination vertieft",
+            "de": "Adjektivdeklination vertieft",
+            "en": "Advanced adjective endings"
+          },
+          "description": {
+            "tr": "Karmaşık isim gruplarında sıfat çekimi.",
+            "de": "Adjektivdeklination in komplexeren Nominalgruppen.",
+            "en": "Adjective endings in more complex noun phrases."
+          },
+          "status": "soon"
+        }
+      ]
+    }
+  ]
+}

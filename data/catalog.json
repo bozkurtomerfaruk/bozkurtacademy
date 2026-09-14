@@ -570,16 +570,31 @@
           "path": "data/b2/nominalisierung.json"
         },
         {
-          "id": "partizipialattribute",
+          "id": "partizip-i",
           "title": {
-            "tr": "Partizipialattribute",
-            "de": "Partizipialattribute",
-            "en": "Participial attributes"
+            "tr": "Partizip I",
+            "de": "Partizip I",
+            "en": "Present participle"
           },
           "description": {
-            "tr": "Partizip I/II ile sıfat yapıları.",
-            "de": "Adjektivische Strukturen mit Partizip I/II.",
-            "en": "Adjectival structures using participles."
+            "tr": "Infinitiv + d, genişletilmiş Partizip-I attribute, Relativsatz dönüşümü ve dört Kasus'ta sıfat çekimi için kapsamlı B2 alıştırmaları.",
+            "de": "Umfangreiche B2-Übungen zu Infinitiv + d, erweiterten Partizip-I-Attributen, Relativsatz-Umformungen und Deklination in allen vier Kasus.",
+            "en": "Comprehensive B2 practice on infinitive + d, extended Participle I attributes, relative-clause transformations and declension in all four cases."
+          },
+          "status": "ready",
+          "path": "data/b2/partizip-i.json"
+        },
+        {
+          "id": "partizip-ii",
+          "title": {
+            "tr": "Partizip II",
+            "de": "Partizip II",
+            "en": "Past participle"
+          },
+          "description": {
+            "tr": "Partizip II'nin sıfat olarak kullanımı, genişletilmiş attribute ve Relativsatz dönüşümleri.",
+            "de": "Partizip II als Adjektiv, erweiterte Attribute und Relativsatz-Umformungen.",
+            "en": "Participle II as an adjective, extended attributes and relative-clause transformations."
           },
           "status": "soon"
         },

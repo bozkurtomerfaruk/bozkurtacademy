@@ -90,6 +90,21 @@
           "path": "data/a1/praesens.json"
         },
         {
+          "id": "negation",
+          "title": {
+            "tr": "Negation",
+            "de": "Negation",
+            "en": "Negation"
+          },
+          "description": {
+            "tr": "nicht, kein, nichts, niemand, nirgendwo, noch nicht ve nicht mehr ile günlük A1 olumsuz cümleleri.",
+            "de": "A1-Negation mit nicht, kein, nichts, niemand, nirgendwo, noch nicht und nicht mehr.",
+            "en": "A1 negation with nicht, kein, nichts, niemand, nirgendwo, noch nicht and nicht mehr."
+          },
+          "status": "ready",
+          "path": "data/a1/negation.json"
+        },
+        {
           "id": "w-fragen",
           "title": {
             "tr": "W-Fragen",

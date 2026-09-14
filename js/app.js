@@ -39,6 +39,38 @@ const translations = {
         contactTag:'Contact', contactTitle:'Let’s plan your German goal together.', contactSub:'In your first message, write your level, goal, exam date if any, and preferred lesson type.', contactInfoTitle:'Contact information', whatsappText:'You can add your WhatsApp number here.', lessonOptionsText:'Private lesson · Group lesson · Academic consulting', formTitle:'First meeting message', nameLabel:'Full name', emailLabel:'Email', messageLabel:'Message', sendMessage:'Prepare email message', footerText:'German lessons, grammar, exercises and exam preparation.'
       }
     };
+Object.assign(translations.tr, {
+  aboutTitle:'Dil öğretimi, mühendislik disiplini ve Almanya deneyimini bir araya getiriyorum.',
+  aboutSub:'Liseden bu yana yabancı dillerde özel ders veriyor; bugün bu öğretim deneyimini Almanya’daki eğitim, iş ve günlük yaşam tecrübemle birleştiriyorum.',
+
+  founderBio:'Yabancı dil öğretmeye lise yıllarımda özel dersler vererek başladım. Farklı seviyelerdeki öğrencilerle çalışırken bir dili öğrenmenin yalnızca gramer kurallarını bilmekten ibaret olmadığını; doğru açıklama, düzenli tekrar ve öğrencinin ihtiyacına uygun pratiğin çok daha önemli olduğunu gördüm.',
+  founderBio2:'Bugün Almanya’da Makine Mühendisliği eğitimime devam ederken, Almanca öğretme deneyimimi Almanya’daki üniversite, iş ve günlük yaşam tecrübemle birleştiriyorum. Amacım öğrencilerime yalnızca sınavda doğru cevap verebilecekleri değil, gerçek hayatta kullanabilecekleri Almancayı öğretmek.',
+
+  aboutJourneyTag:'Geçmişim',
+  aboutJourneyTitle:'Dil eğitiminden mühendisliğe uzanan çok yönlü bir deneyim.',
+  aboutJourneySub:'Eğitim ve çalışma hayatımdaki farklı deneyimleri derslerimin daha sistemli, anlaşılır ve gerçek kullanım odaklı olması için kullanıyorum.',
+
+  aboutTeachingTitle:'Liseden beri özel ders',
+  aboutTeachingText:'Lise yıllarımdan itibaren yabancı dillerde özel ders veriyorum. Bu süreçte farklı öğrenme hızlarına ve ihtiyaçlara sahip öğrencilerle birebir çalışma deneyimi kazandım.',
+
+  aboutEducationTitle:'Türkiye ve Almanya’da eğitim',
+  aboutEducationText:'İstanbul Teknik Üniversitesi’nde başlayan mühendislik eğitimimin ardından Erasmus+ kapsamında Hochschule Düsseldorf’ta eğitim aldım. Şu anda Universität Duisburg-Essen’da Makine Mühendisliği eğitimime devam ediyorum.',
+
+  aboutLanguagesTitle:'Çok dilli bakış açısı',
+  aboutLanguagesText:'Türkçeyi ana dilim olarak; Almanca ve İngilizceyi akıcı seviyede kullanıyorum. Bir yabancı dili öğrenme sürecini öğrenci perspektifinden de bildiğim için konuları mümkün olduğunca açık ve karşılaştırmalı anlatmaya önem veriyorum.',
+
+  aboutEngineeringTitle:'Mühendislik ve profesyonel deneyim',
+  aboutEngineeringText:'Mercedes-Benz, Aluminium Norf, Ford ve TÜBİTAK gibi kurumlarda üretim, kalite, süreç geliştirme, veri analizi ve teknik projeler üzerine deneyim kazandım. Bu teknik altyapı; derslerimde planlı çalışma, problem çözme ve konuları adım adım açıklama yaklaşımımı güçlendiriyor.',
+
+  aboutGermanyTitle:'Almanya’da gerçek yaşam deneyimi',
+  aboutGermanyText:'Almanya’da eğitim görmek ve çalışmak sayesinde üniversite, iş başvuruları, profesyonel iletişim ve günlük yaşamda kullanılan Almancayı doğrudan deneyimliyorum. Derslerde yalnızca kitap Almancası değil, öğrencinin Almanya’da gerçekten karşılaşacağı iletişim durumlarına da yer veriyorum.',
+
+  aboutMethodTag:'Ders yaklaşımım',
+  aboutMethodTitle:'Her öğrenci için aynı ders planı değil.',
+
+  method3Title:'Kişiye özel anlatım',
+  method3Text:'Öğrencinin zorlandığı konu farklıysa kullanılan örnekler, sorular ve ödevler de buna göre değiştirilir.'
+});
 
 Object.assign(translations.tr, {
   exerciseHubTag:'Alıştırma Merkezi',

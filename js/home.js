@@ -102,7 +102,7 @@
   });
   document.addEventListener('DOMContentLoaded', () => {
     function cleanHeadingPunctuation() {
-      document.querySelectorAll('h1,h2,h3').forEach(heading => {
+      document.querySelectorAll('h1,h2,h3:not(#quizQuestion)').forEach(heading => {
         const walker = document.createTreeWalker(heading, NodeFilter.SHOW_TEXT);
         let node, lastText = null;
         while ((node = walker.nextNode())) {

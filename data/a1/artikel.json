@@ -7,9 +7,9 @@
     "en": "Articles: der · die · das"
   },
   "description": {
-    "tr": "Artikelleri ezberlemekle kalma; kelime sonları ve cümle bağlamından yararlanarak doğru artikeli seç.",
-    "de": "Übe Artikel mit Wortendungen und im Satzkontext.",
-    "en": "Practise articles using word endings and sentence context."
+    "tr": "der, die, das artikellerini günlük kelimeler, kelime sonları, birleşik isimler ve çoğul yapılarla 12 Übung / 120 soruda kapsamlı çalış.",
+    "de": "Übe der, die und das in 12 Übungen / 120 Fragen mit Alltagswortschatz, Wortendungen, Komposita und Plural.",
+    "en": "Practise der, die and das across 12 exercises / 120 questions using everyday vocabulary, noun endings, compounds and plural forms."
   },
   "lesson": {
     "title": {
@@ -18,45 +18,91 @@
       "en": "der · die · das: clues and use"
     },
     "intro": {
-      "tr": "Artikeller her zaman tahmin edilemez; ancak bazı kelime sonları güçlü ipuçları verir. İsimleri yine de artikeliyle birlikte öğren.",
-      "de": "Artikel sind nicht immer vorhersagbar. Einige Endungen geben aber starke Hinweise.",
-      "en": "Articles cannot always be predicted, but some noun endings are useful clues."
+      "tr": "Almancada isimlerin gramatik cinsiyeti vardır. Artikel her zaman kesin olarak tahmin edilemez; bu nedenle ismi artikeliyle öğrenmek en güvenli yöntemdir. Yine de bazı kelime sonları, anlam grupları ve birleşik isimlerin son unsuru güçlü ipuçları verir.",
+      "de": "Deutsche Nomen haben ein grammatisches Geschlecht. Der Artikel ist nicht immer sicher vorhersagbar; deshalb sollte man Nomen mit Artikel lernen. Bestimmte Endungen, Bedeutungsgruppen und das letzte Glied eines Kompositums geben aber starke Hinweise.",
+      "en": "German nouns have grammatical gender. Articles cannot always be predicted, so learning each noun with its article is safest. Still, certain endings, semantic groups and the final element of compound nouns give strong clues."
     },
     "rules": [
       {
-        "label": "-ung / -heit / -keit",
+        "label": "Maskulin",
         "text": {
-          "tr": "çoğunlukla die",
-          "de": "meist die",
-          "en": "usually die"
+          "tr": "Maskulin isimler der alır: der Tisch, der Bus, der Kaffee.",
+          "de": "Maskulin isimler der alır: der Tisch, der Bus, der Kaffee.",
+          "en": "Maskulin isimler der alır: der Tisch, der Bus, der Kaffee."
         }
       },
       {
-        "label": "-chen / -lein",
+        "label": "Feminin",
         "text": {
-          "tr": "her zaman das",
-          "de": "immer das",
-          "en": "always das"
+          "tr": "Feminin isimler die alır: die Lampe, die Schule, die Zeitung.",
+          "de": "Feminin isimler die alır: die Lampe, die Schule, die Zeitung.",
+          "en": "Feminin isimler die alır: die Lampe, die Schule, die Zeitung."
         }
       },
       {
-        "label": "günler / aylar",
+        "label": "Neutrum",
         "text": {
-          "tr": "çoğunlukla der",
-          "de": "meist der",
-          "en": "usually der"
+          "tr": "Nötr isimler das alır: das Buch, das Kind, das Fenster.",
+          "de": "Nötr isimler das alır: das Buch, das Kind, das Fenster.",
+          "en": "Nötr isimler das alır: das Buch, das Kind, das Fenster."
+        }
+      },
+      {
+        "label": "Feminen ekler",
+        "text": {
+          "tr": "-ung, -heit, -keit, -schaft, -ei, -ion ve -tät güçlü biçimde die işaret eder.",
+          "de": "-ung, -heit, -keit, -schaft, -ei, -ion ve -tät güçlü biçimde die işaret eder.",
+          "en": "-ung, -heit, -keit, -schaft, -ei, -ion ve -tät güçlü biçimde die işaret eder."
+        }
+      },
+      {
+        "label": "Nötr ekler",
+        "text": {
+          "tr": "-chen ve -lein her zaman das alır. İsimleşmiş infinitivler de nötrdür: das Essen, das Lesen.",
+          "de": "-chen ve -lein her zaman das alır. İsimleşmiş infinitivler de nötrdür: das Essen, das Lesen.",
+          "en": "-chen ve -lein her zaman das alır. İsimleşmiş infinitivler de nötrdür: das Essen, das Lesen."
+        }
+      },
+      {
+        "label": "Gün / ay / mevsim",
+        "text": {
+          "tr": "Haftanın günleri, aylar ve mevsimler maskulindir: der Montag, der Januar, der Sommer.",
+          "de": "Haftanın günleri, aylar ve mevsimler maskulindir: der Montag, der Januar, der Sommer.",
+          "en": "Haftanın günleri, aylar ve mevsimler maskulindir: der Montag, der Januar, der Sommer."
+        }
+      },
+      {
+        "label": "Komposita",
+        "text": {
+          "tr": "Birleşik isimlerde son isim artikeli belirler: die Tür → die Haustür; das Zimmer → das Schlafzimmer.",
+          "de": "Birleşik isimlerde son isim artikeli belirler: die Tür → die Haustür; das Zimmer → das Schlafzimmer.",
+          "en": "Birleşik isimlerde son isim artikeli belirler: die Tür → die Haustür; das Zimmer → das Schlafzimmer."
+        }
+      },
+      {
+        "label": "Plural",
+        "text": {
+          "tr": "Nominativ Plural'da belirli artikel her zaman die olur: die Bücher, die Kinder, die Autos.",
+          "de": "Nominativ Plural'da belirli artikel her zaman die olur: die Bücher, die Kinder, die Autos.",
+          "en": "Nominativ Plural'da belirli artikel her zaman die olur: die Bücher, die Kinder, die Autos."
         }
       }
     ],
     "examples": [
+      "der Tisch — masa",
+      "die Lampe — lamba",
+      "das Buch — kitap",
       "die Wohnung — daire",
       "das Mädchen — kız",
-      "der Montag — Pazartesi"
+      "der Montag — Pazartesi",
+      "die Haustür — ev kapısı",
+      "das Schlafzimmer — yatak odası",
+      "die Bücher — kitaplar"
     ],
     "tip": {
-      "tr": "İpucunu kullan ama son kararı kelimeyi artikeliyle öğrenerek ver.",
-      "de": "Nutze Regeln als Hilfe, lerne das Nomen aber mit Artikel.",
-      "en": "Use patterns as clues, but still learn each noun with its article."
+      "tr": "İpucunu kullan ama son kararı ezber yerine kelimeyi bir bütün olarak öğrenerek ver: sadece 'Buch' değil 'das Buch', sadece 'Wohnung' değil 'die Wohnung'.",
+      "de": "Nutze Regeln als Hilfe, lerne aber immer die ganze Einheit: nicht nur „Buch“, sondern „das Buch“; nicht nur „Wohnung“, sondern „die Wohnung“.",
+      "en": "Use patterns as clues, but learn the full unit: not just “Buch” but “das Buch”, and not just “Wohnung” but “die Wohnung”."
     }
   },
   "exercises": [
@@ -64,18 +110,18 @@
       "id": "kontext-1",
       "title": {
         "tr": "Übung 1 – Bağlamda Artikel",
-        "de": "Übung 1 – Artikel im Kontext",
-        "en": "Exercise 1 – Articles in context"
+        "de": "Übung 1 – Bağlamda Artikel",
+        "en": "Übung 1 – Bağlamda Artikel"
       },
       "description": {
-        "tr": "Daha az belirgin kelimelerde doğru artikeli cümle içinde seç.",
-        "de": "Wähle den Artikel im Satzkontext.",
-        "en": "Choose the article in sentence context."
+        "tr": "Günlük cümlelerde doğru der/die/das biçimini seç.",
+        "de": "Günlük cümlelerde doğru der/die/das biçimini seç.",
+        "en": "Günlük cümlelerde doğru der/die/das biçimini seç."
       },
       "difficulty": {
         "tr": "Orta",
-        "de": "Mittel",
-        "en": "Intermediate"
+        "de": "Orta",
+        "en": "Orta"
       },
       "questions": [
         {
@@ -88,9 +134,9 @@
           ],
           "correct": "der",
           "explanations": {
-            "tr": "Bu soruda doğru cevap “der”. “___ Bahnhof ist gleich neben dem Hotel.” cümlesinde “Bahnhof” ipucuna bakıldığında soruya özel kritik nokta şudur: Bahnhof maskulindir: der Bahnhof.  Tamamlanmış doğru cümle: “der Bahnhof ist gleich neben dem Hotel.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Diyalogdaki bağlam ipucu doğru biçimin seçilmesinde doğrudan rol oynuyor.  Yanlış şıklar neden olmaz? “die” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “das” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Die richtige Antwort ist „der“. Im Satz „___ Bahnhof ist gleich neben dem Hotel.“ mit dem Hinweis „Bahnhof“ ist der entscheidende Punkt: Bahnhof maskulindir: der Bahnhof.  Vollständig lautet der Satz: „der Bahnhof ist gleich neben dem Hotel.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. Der Dialogkontext liefert einen direkten Hinweis darauf, welche Form passt.  Warum passen die anderen Optionen nicht? „die“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „das“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "The correct answer is “der”. In the sentence “___ Bahnhof ist gleich neben dem Hotel.” with the cue “Bahnhof”, the item-specific point is: Bahnhof maskulindir: der Bahnhof.  The completed sentence is: “der Bahnhof ist gleich neben dem Hotel.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. The dialogue context directly helps determine which form is correct.  Why are the other options wrong? “die” does not match the noun's required article/gender here. “das” does not match the noun's required article/gender here."
+            "tr": "Doğru cevap: “der”. Bahnhof maskulindir: der Bahnhof. Bu soruda “___ Bahnhof ist gleich neben dem Hotel.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der“. Bahnhof maskulindir: der Bahnhof. Lerne das Nomen in „___ Bahnhof ist gleich neben dem Hotel.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der”. Bahnhof maskulindir: der Bahnhof. In “___ Bahnhof ist gleich neben dem Hotel.”, learn the noun together with its article."
           }
         },
         {
@@ -98,44 +144,44 @@
           "sentence": "___ Wohnung im dritten Stock ist sehr hell.",
           "options": [
             "der",
-            "die",
-            "das"
+            "das",
+            "die"
           ],
           "correct": "die",
           "explanations": {
-            "tr": "Buradaki boşluğu “die” ile tamamlamak gerekir. “___ Wohnung im dritten Stock ist sehr hell.” cümlesinde “Wohnung” ipucuna bakıldığında soruya özel kritik nokta şudur: -ung ile biten isimler çoğunlukla feminen: die Wohnung.  Tamamlanmış doğru cümle: “die Wohnung im dritten Stock ist sehr hell.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Diyalogdaki bağlam ipucu doğru biçimin seçilmesinde doğrudan rol oynuyor.  Yanlış şıklar neden olmaz? “der” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “das” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Die Lücke muss hier mit „die“ ergänzt werden. Im Satz „___ Wohnung im dritten Stock ist sehr hell.“ mit dem Hinweis „Wohnung“ ist der entscheidende Punkt: -ung ile biten isimler çoğunlukla feminen: die Wohnung.  Vollständig lautet der Satz: „die Wohnung im dritten Stock ist sehr hell.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. Der Dialogkontext liefert einen direkten Hinweis darauf, welche Form passt.  Warum passen die anderen Optionen nicht? „der“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „das“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "This blank needs “die”. In the sentence “___ Wohnung im dritten Stock ist sehr hell.” with the cue “Wohnung”, the item-specific point is: -ung ile biten isimler çoğunlukla feminen: die Wohnung.  The completed sentence is: “die Wohnung im dritten Stock ist sehr hell.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. The dialogue context directly helps determine which form is correct.  Why are the other options wrong? “der” does not match the noun's required article/gender here. “das” does not match the noun's required article/gender here."
+            "tr": "Doğru cevap: “die”. -ung güçlü bir feminen ipucudur: die Wohnung. Bu soruda “___ Wohnung im dritten Stock ist sehr hell.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. -ung güçlü bir feminen ipucudur: die Wohnung. Lerne das Nomen in „___ Wohnung im dritten Stock ist sehr hell.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. -ung güçlü bir feminen ipucudur: die Wohnung. In “___ Wohnung im dritten Stock ist sehr hell.”, learn the noun together with its article."
           }
         },
         {
           "word": "Mädchen",
           "sentence": "___ Mädchen wartet vor der Schule.",
           "options": [
-            "der",
             "die",
-            "das"
+            "das",
+            "der"
           ],
           "correct": "das",
           "explanations": {
-            "tr": "Doğru biçim “das”; bu cümlenin gramer yapısı bunu gerektiriyor. “___ Mädchen wartet vor der Schule.” cümlesinde “Mädchen” ipucuna bakıldığında soruya özel kritik nokta şudur: -chen küçültme eki alan isimler nötrdür: das Mädchen.  Tamamlanmış doğru cümle: “das Mädchen wartet vor der Schule.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Diyalogdaki bağlam ipucu doğru biçimin seçilmesinde doğrudan rol oynuyor.  Yanlış şıklar neden olmaz? “der” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “die” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Grammatisch korrekt ist in diesem Satz „das“. Im Satz „___ Mädchen wartet vor der Schule.“ mit dem Hinweis „Mädchen“ ist der entscheidende Punkt: -chen küçültme eki alan isimler nötrdür: das Mädchen.  Vollständig lautet der Satz: „das Mädchen wartet vor der Schule.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. Der Dialogkontext liefert einen direkten Hinweis darauf, welche Form passt.  Warum passen die anderen Optionen nicht? „der“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „die“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "The grammatically correct form here is “das”. In the sentence “___ Mädchen wartet vor der Schule.” with the cue “Mädchen”, the item-specific point is: -chen küçültme eki alan isimler nötrdür: das Mädchen.  The completed sentence is: “das Mädchen wartet vor der Schule.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. The dialogue context directly helps determine which form is correct.  Why are the other options wrong? “der” does not match the noun's required article/gender here. “die” does not match the noun's required article/gender here."
+            "tr": "Doğru cevap: “das”. -chen ile biten küçültme isimleri nötrdür: das Mädchen. Bu soruda “___ Mädchen wartet vor der Schule.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das“. -chen ile biten küçültme isimleri nötrdür: das Mädchen. Lerne das Nomen in „___ Mädchen wartet vor der Schule.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das”. -chen ile biten küçültme isimleri nötrdür: das Mädchen. In “___ Mädchen wartet vor der Schule.”, learn the noun together with its article."
           }
         },
         {
           "word": "Universität",
           "sentence": "___ Universität liegt im Stadtzentrum.",
           "options": [
-            "der",
             "die",
+            "der",
             "das"
           ],
           "correct": "die",
           "explanations": {
-            "tr": "Bu cümlede kullanılabilecek doğru seçenek “die”. “___ Universität liegt im Stadtzentrum.” cümlesinde “Universität” ipucuna bakıldığında soruya özel kritik nokta şudur: Universität feminen bir isimdir: die Universität.  Tamamlanmış doğru cümle: “die Universität liegt im Stadtzentrum.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Diyalogdaki bağlam ipucu doğru biçimin seçilmesinde doğrudan rol oynuyor.  Yanlış şıklar neden olmaz? “der” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “das” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Für diese Stelle passt „die“. Im Satz „___ Universität liegt im Stadtzentrum.“ mit dem Hinweis „Universität“ ist der entscheidende Punkt: Universität feminen bir isimdir: die Universität.  Vollständig lautet der Satz: „die Universität liegt im Stadtzentrum.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. Der Dialogkontext liefert einen direkten Hinweis darauf, welche Form passt.  Warum passen die anderen Optionen nicht? „der“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „das“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "“die” is the form that fits this sentence. In the sentence “___ Universität liegt im Stadtzentrum.” with the cue “Universität”, the item-specific point is: Universität feminen bir isimdir: die Universität.  The completed sentence is: “die Universität liegt im Stadtzentrum.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. The dialogue context directly helps determine which form is correct.  Why are the other options wrong? “der” does not match the noun's required article/gender here. “das” does not match the noun's required article/gender here."
+            "tr": "Doğru cevap: “die”. Universität feminen bir isimdir: die Universität. Bu soruda “___ Universität liegt im Stadtzentrum.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. Universität feminen bir isimdir: die Universität. Lerne das Nomen in „___ Universität liegt im Stadtzentrum.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. Universität feminen bir isimdir: die Universität. In “___ Universität liegt im Stadtzentrum.”, learn the noun together with its article."
           }
         },
         {
@@ -148,24 +194,24 @@
           ],
           "correct": "das",
           "explanations": {
-            "tr": "Bu soruda doğru cevap “das”. “___ Museum öffnet um zehn Uhr.” cümlesinde “Museum” ipucuna bakıldığında soruya özel kritik nokta şudur: Museum nötrdür: das Museum.  Tamamlanmış doğru cümle: “das Museum öffnet um zehn Uhr.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Diyalogdaki bağlam ipucu doğru biçimin seçilmesinde doğrudan rol oynuyor.  Yanlış şıklar neden olmaz? “der” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “die” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Die richtige Antwort ist „das“. Im Satz „___ Museum öffnet um zehn Uhr.“ mit dem Hinweis „Museum“ ist der entscheidende Punkt: Museum nötrdür: das Museum.  Vollständig lautet der Satz: „das Museum öffnet um zehn Uhr.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. Der Dialogkontext liefert einen direkten Hinweis darauf, welche Form passt.  Warum passen die anderen Optionen nicht? „der“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „die“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "The correct answer is “das”. In the sentence “___ Museum öffnet um zehn Uhr.” with the cue “Museum”, the item-specific point is: Museum nötrdür: das Museum.  The completed sentence is: “das Museum öffnet um zehn Uhr.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. The dialogue context directly helps determine which form is correct.  Why are the other options wrong? “der” does not match the noun's required article/gender here. “die” does not match the noun's required article/gender here."
+            "tr": "Doğru cevap: “das”. Museum nötrdür: das Museum. Bu soruda “___ Museum öffnet um zehn Uhr.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das“. Museum nötrdür: das Museum. Lerne das Nomen in „___ Museum öffnet um zehn Uhr.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das”. Museum nötrdür: das Museum. In “___ Museum öffnet um zehn Uhr.”, learn the noun together with its article."
           }
         },
         {
           "word": "Bäckerei",
           "sentence": "___ Bäckerei an der Ecke ist schon offen.",
           "options": [
-            "der",
+            "das",
             "die",
-            "das"
+            "der"
           ],
           "correct": "die",
           "explanations": {
-            "tr": "Buradaki boşluğu “die” ile tamamlamak gerekir. “___ Bäckerei an der Ecke ist schon offen.” cümlesinde “Bäckerei” ipucuna bakıldığında soruya özel kritik nokta şudur: Bäckerei feminen bir isimdir: die Bäckerei.  Tamamlanmış doğru cümle: “die Bäckerei an der Ecke ist schon offen.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Diyalogdaki bağlam ipucu doğru biçimin seçilmesinde doğrudan rol oynuyor.  Yanlış şıklar neden olmaz? “der” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “das” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Die Lücke muss hier mit „die“ ergänzt werden. Im Satz „___ Bäckerei an der Ecke ist schon offen.“ mit dem Hinweis „Bäckerei“ ist der entscheidende Punkt: Bäckerei feminen bir isimdir: die Bäckerei.  Vollständig lautet der Satz: „die Bäckerei an der Ecke ist schon offen.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. Der Dialogkontext liefert einen direkten Hinweis darauf, welche Form passt.  Warum passen die anderen Optionen nicht? „der“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „das“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "This blank needs “die”. In the sentence “___ Bäckerei an der Ecke ist schon offen.” with the cue “Bäckerei”, the item-specific point is: Bäckerei feminen bir isimdir: die Bäckerei.  The completed sentence is: “die Bäckerei an der Ecke ist schon offen.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. The dialogue context directly helps determine which form is correct.  Why are the other options wrong? “der” does not match the noun's required article/gender here. “das” does not match the noun's required article/gender here."
+            "tr": "Doğru cevap: “die”. Bäckerei feminen bir isimdir: die Bäckerei. Bu soruda “___ Bäckerei an der Ecke ist schon offen.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. Bäckerei feminen bir isimdir: die Bäckerei. Lerne das Nomen in „___ Bäckerei an der Ecke ist schon offen.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. Bäckerei feminen bir isimdir: die Bäckerei. In “___ Bäckerei an der Ecke ist schon offen.”, learn the noun together with its article."
           }
         },
         {
@@ -178,9 +224,9 @@
           ],
           "correct": "der",
           "explanations": {
-            "tr": "Doğru biçim “der”; bu cümlenin gramer yapısı bunu gerektiriyor. “___ Teppich im Wohnzimmer ist neu.” cümlesinde “Teppich” ipucuna bakıldığında soruya özel kritik nokta şudur: Teppich maskulindir: der Teppich.  Tamamlanmış doğru cümle: “der Teppich im Wohnzimmer ist neu.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Diyalogdaki bağlam ipucu doğru biçimin seçilmesinde doğrudan rol oynuyor.  Yanlış şıklar neden olmaz? “die” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “das” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Grammatisch korrekt ist in diesem Satz „der“. Im Satz „___ Teppich im Wohnzimmer ist neu.“ mit dem Hinweis „Teppich“ ist der entscheidende Punkt: Teppich maskulindir: der Teppich.  Vollständig lautet der Satz: „der Teppich im Wohnzimmer ist neu.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. Der Dialogkontext liefert einen direkten Hinweis darauf, welche Form passt.  Warum passen die anderen Optionen nicht? „die“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „das“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "The grammatically correct form here is “der”. In the sentence “___ Teppich im Wohnzimmer ist neu.” with the cue “Teppich”, the item-specific point is: Teppich maskulindir: der Teppich.  The completed sentence is: “der Teppich im Wohnzimmer ist neu.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. The dialogue context directly helps determine which form is correct.  Why are the other options wrong? “die” does not match the noun's required article/gender here. “das” does not match the noun's required article/gender here."
+            "tr": "Doğru cevap: “der”. Teppich maskulindir: der Teppich. Bu soruda “___ Teppich im Wohnzimmer ist neu.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der“. Teppich maskulindir: der Teppich. Lerne das Nomen in „___ Teppich im Wohnzimmer ist neu.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der”. Teppich maskulindir: der Teppich. In “___ Teppich im Wohnzimmer ist neu.”, learn the noun together with its article."
           }
         },
         {
@@ -188,29 +234,29 @@
           "sentence": "___ Rechnung liegt noch auf dem Tisch.",
           "options": [
             "der",
-            "die",
-            "das"
+            "das",
+            "die"
           ],
           "correct": "die",
           "explanations": {
-            "tr": "Bu cümlede kullanılabilecek doğru seçenek “die”. “___ Rechnung liegt noch auf dem Tisch.” cümlesinde “Rechnung” ipucuna bakıldığında soruya özel kritik nokta şudur: -ung sonu güçlü bir feminen ipucudur: die Rechnung.  Tamamlanmış doğru cümle: “die Rechnung liegt noch auf dem Tisch.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Diyalogdaki bağlam ipucu doğru biçimin seçilmesinde doğrudan rol oynuyor.  Yanlış şıklar neden olmaz? “der” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “das” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Für diese Stelle passt „die“. Im Satz „___ Rechnung liegt noch auf dem Tisch.“ mit dem Hinweis „Rechnung“ ist der entscheidende Punkt: -ung sonu güçlü bir feminen ipucudur: die Rechnung.  Vollständig lautet der Satz: „die Rechnung liegt noch auf dem Tisch.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. Der Dialogkontext liefert einen direkten Hinweis darauf, welche Form passt.  Warum passen die anderen Optionen nicht? „der“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „das“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "“die” is the form that fits this sentence. In the sentence “___ Rechnung liegt noch auf dem Tisch.” with the cue “Rechnung”, the item-specific point is: -ung sonu güçlü bir feminen ipucudur: die Rechnung.  The completed sentence is: “die Rechnung liegt noch auf dem Tisch.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. The dialogue context directly helps determine which form is correct.  Why are the other options wrong? “der” does not match the noun's required article/gender here. “das” does not match the noun's required article/gender here."
+            "tr": "Doğru cevap: “die”. -ung sonu feminen: die Rechnung. Bu soruda “___ Rechnung liegt noch auf dem Tisch.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. -ung sonu feminen: die Rechnung. Lerne das Nomen in „___ Rechnung liegt noch auf dem Tisch.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. -ung sonu feminen: die Rechnung. In “___ Rechnung liegt noch auf dem Tisch.”, learn the noun together with its article."
           }
         },
         {
           "word": "Restaurant",
           "sentence": "___ Restaurant gegenüber ist heute voll.",
           "options": [
-            "der",
             "die",
-            "das"
+            "das",
+            "der"
           ],
           "correct": "das",
           "explanations": {
-            "tr": "Bu soruda doğru cevap “das”. “___ Restaurant gegenüber ist heute voll.” cümlesinde “Restaurant” ipucuna bakıldığında soruya özel kritik nokta şudur: Restaurant nötrdür: das Restaurant.  Tamamlanmış doğru cümle: “das Restaurant gegenüber ist heute voll.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Diyalogdaki bağlam ipucu doğru biçimin seçilmesinde doğrudan rol oynuyor.  Yanlış şıklar neden olmaz? “der” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “die” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Die richtige Antwort ist „das“. Im Satz „___ Restaurant gegenüber ist heute voll.“ mit dem Hinweis „Restaurant“ ist der entscheidende Punkt: Restaurant nötrdür: das Restaurant.  Vollständig lautet der Satz: „das Restaurant gegenüber ist heute voll.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. Der Dialogkontext liefert einen direkten Hinweis darauf, welche Form passt.  Warum passen die anderen Optionen nicht? „der“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „die“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "The correct answer is “das”. In the sentence “___ Restaurant gegenüber ist heute voll.” with the cue “Restaurant”, the item-specific point is: Restaurant nötrdür: das Restaurant.  The completed sentence is: “das Restaurant gegenüber ist heute voll.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. The dialogue context directly helps determine which form is correct.  Why are the other options wrong? “der” does not match the noun's required article/gender here. “die” does not match the noun's required article/gender here."
+            "tr": "Doğru cevap: “das”. Restaurant nötrdür: das Restaurant. Bu soruda “___ Restaurant gegenüber ist heute voll.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das“. Restaurant nötrdür: das Restaurant. Lerne das Nomen in „___ Restaurant gegenüber ist heute voll.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das”. Restaurant nötrdür: das Restaurant. In “___ Restaurant gegenüber ist heute voll.”, learn the noun together with its article."
           }
         },
         {
@@ -223,9 +269,9 @@
           ],
           "correct": "der",
           "explanations": {
-            "tr": "Buradaki boşluğu “der” ile tamamlamak gerekir. “Wo ist ___ Schlüssel für die Haustür?” cümlesinde “Schlüssel” ipucuna bakıldığında soruya özel kritik nokta şudur: Schlüssel maskulindir: der Schlüssel.  Tamamlanmış doğru cümle: “Wo ist der Schlüssel für die Haustür?”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Diyalogdaki bağlam ipucu doğru biçimin seçilmesinde doğrudan rol oynuyor.  Yanlış şıklar neden olmaz? “die” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “das” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Die Lücke muss hier mit „der“ ergänzt werden. Im Satz „Wo ist ___ Schlüssel für die Haustür?“ mit dem Hinweis „Schlüssel“ ist der entscheidende Punkt: Schlüssel maskulindir: der Schlüssel.  Vollständig lautet der Satz: „Wo ist der Schlüssel für die Haustür?“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. Der Dialogkontext liefert einen direkten Hinweis darauf, welche Form passt.  Warum passen die anderen Optionen nicht? „die“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „das“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "This blank needs “der”. In the sentence “Wo ist ___ Schlüssel für die Haustür?” with the cue “Schlüssel”, the item-specific point is: Schlüssel maskulindir: der Schlüssel.  The completed sentence is: “Wo ist der Schlüssel für die Haustür?”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. The dialogue context directly helps determine which form is correct.  Why are the other options wrong? “die” does not match the noun's required article/gender here. “das” does not match the noun's required article/gender here."
+            "tr": "Doğru cevap: “der”. Schlüssel maskulindir: der Schlüssel. Bu soruda “Wo ist ___ Schlüssel für die Haustür?” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der“. Schlüssel maskulindir: der Schlüssel. Lerne das Nomen in „Wo ist ___ Schlüssel für die Haustür?“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der”. Schlüssel maskulindir: der Schlüssel. In “Wo ist ___ Schlüssel für die Haustür?”, learn the noun together with its article."
           }
         }
       ]
@@ -234,18 +280,18 @@
       "id": "muster-2",
       "title": {
         "tr": "Übung 2 – Kelime sonlarını kullan",
-        "de": "Übung 2 – Wortendungen nutzen",
-        "en": "Exercise 2 – Use noun endings"
+        "de": "Übung 2 – Kelime sonlarını kullan",
+        "en": "Übung 2 – Kelime sonlarını kullan"
       },
       "description": {
-        "tr": "Artikel seçerken tipik kelime sonlarını fark et.",
-        "de": "Achte auf typische Wortendungen.",
-        "en": "Use typical noun endings as clues."
+        "tr": "Güçlü artikel ipuçlarını kelime sonlarından tanı.",
+        "de": "Güçlü artikel ipuçlarını kelime sonlarından tanı.",
+        "en": "Güçlü artikel ipuçlarını kelime sonlarından tanı."
       },
       "difficulty": {
         "tr": "Orta",
-        "de": "Mittel",
-        "en": "Intermediate"
+        "de": "Orta",
+        "en": "Orta"
       },
       "questions": [
         {
@@ -253,149 +299,149 @@
           "sentence": "___ Gesundheit ist wichtig.",
           "options": [
             "der",
-            "die",
-            "das"
+            "das",
+            "die"
           ],
           "correct": "die",
           "explanations": {
-            "tr": "Bu soruda doğru cevap “die”. “___ Gesundheit ist wichtig.” cümlesinde “-heit” ipucuna bakıldığında soruya özel kritik nokta şudur: -heit ile biten isimler feminen olur: die Gesundheit.  Tamamlanmış doğru cümle: “die Gesundheit ist wichtig.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Özne, nesne ve cümledeki anlam ipucunu sırayla kontrol etmek doğru cevaba götürür.  Yanlış şıklar neden olmaz? “der” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “das” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Die richtige Antwort ist „die“. Im Satz „___ Gesundheit ist wichtig.“ mit dem Hinweis „-heit“ ist der entscheidende Punkt: -heit ile biten isimler feminen olur: die Gesundheit.  Vollständig lautet der Satz: „die Gesundheit ist wichtig.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. Wer Subjekt, Objekt und Bedeutungshinweis nacheinander prüft, kommt zur richtigen Lösung.  Warum passen die anderen Optionen nicht? „der“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „das“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "The correct answer is “die”. In the sentence “___ Gesundheit ist wichtig.” with the cue “-heit”, the item-specific point is: -heit ile biten isimler feminen olur: die Gesundheit.  The completed sentence is: “die Gesundheit ist wichtig.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. Checking the subject, object and meaning clue in sequence leads to the correct answer.  Why are the other options wrong? “der” does not match the noun's required article/gender here. “das” does not match the noun's required article/gender here."
+            "tr": "Doğru cevap: “die”. -heit ile biten isimler feminen olur: die Gesundheit. Bu soruda “___ Gesundheit ist wichtig.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. -heit ile biten isimler feminen olur: die Gesundheit. Lerne das Nomen in „___ Gesundheit ist wichtig.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. -heit ile biten isimler feminen olur: die Gesundheit. In “___ Gesundheit ist wichtig.”, learn the noun together with its article."
           }
         },
         {
           "word": "-keit",
           "sentence": "___ Möglichkeit klingt interessant.",
           "options": [
-            "der",
+            "das",
             "die",
+            "der"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. -keit ile biten isimler feminen olur: die Möglichkeit. Bu soruda “___ Möglichkeit klingt interessant.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. -keit ile biten isimler feminen olur: die Möglichkeit. Lerne das Nomen in „___ Möglichkeit klingt interessant.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. -keit ile biten isimler feminen olur: die Möglichkeit. In “___ Möglichkeit klingt interessant.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "-ung",
+          "sentence": "___ Einladung liegt auf dem Tisch.",
+          "options": [
+            "die",
+            "der",
             "das"
           ],
           "correct": "die",
           "explanations": {
-            "tr": "Buradaki boşluğu “die” ile tamamlamak gerekir. “___ Möglichkeit klingt interessant.” cümlesinde “-keit” ipucuna bakıldığında soruya özel kritik nokta şudur: -keit ile biten isimler feminen olur: die Möglichkeit.  Tamamlanmış doğru cümle: “die Möglichkeit klingt interessant.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Özne, nesne ve cümledeki anlam ipucunu sırayla kontrol etmek doğru cevaba götürür.  Yanlış şıklar neden olmaz? “der” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “das” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Die Lücke muss hier mit „die“ ergänzt werden. Im Satz „___ Möglichkeit klingt interessant.“ mit dem Hinweis „-keit“ ist der entscheidende Punkt: -keit ile biten isimler feminen olur: die Möglichkeit.  Vollständig lautet der Satz: „die Möglichkeit klingt interessant.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. Wer Subjekt, Objekt und Bedeutungshinweis nacheinander prüft, kommt zur richtigen Lösung.  Warum passen die anderen Optionen nicht? „der“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „das“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "This blank needs “die”. In the sentence “___ Möglichkeit klingt interessant.” with the cue “-keit”, the item-specific point is: -keit ile biten isimler feminen olur: die Möglichkeit.  The completed sentence is: “die Möglichkeit klingt interessant.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. Checking the subject, object and meaning clue in sequence leads to the correct answer.  Why are the other options wrong? “der” does not match the noun's required article/gender here. “das” does not match the noun's required article/gender here."
+            "tr": "Doğru cevap: “die”. -ung ile biten isimler feminen olur: die Einladung. Bu soruda “___ Einladung liegt auf dem Tisch.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. -ung ile biten isimler feminen olur: die Einladung. Lerne das Nomen in „___ Einladung liegt auf dem Tisch.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. -ung ile biten isimler feminen olur: die Einladung. In “___ Einladung liegt auf dem Tisch.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "-schaft",
+          "sentence": "___ Freundschaft ist wichtig.",
+          "options": [
+            "der",
+            "das",
+            "die"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. -schaft ile biten isimler feminen olur: die Freundschaft. Bu soruda “___ Freundschaft ist wichtig.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. -schaft ile biten isimler feminen olur: die Freundschaft. Lerne das Nomen in „___ Freundschaft ist wichtig.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. -schaft ile biten isimler feminen olur: die Freundschaft. In “___ Freundschaft ist wichtig.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "-ei",
+          "sentence": "___ Bäckerei macht um sieben auf.",
+          "options": [
+            "das",
+            "die",
+            "der"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. -ei ile biten birçok isim feminen: die Bäckerei. Bu soruda “___ Bäckerei macht um sieben auf.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. -ei ile biten birçok isim feminen: die Bäckerei. Lerne das Nomen in „___ Bäckerei macht um sieben auf.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. -ei ile biten birçok isim feminen: die Bäckerei. In “___ Bäckerei macht um sieben auf.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "-ion",
+          "sentence": "___ Information ist sehr wichtig.",
+          "options": [
+            "die",
+            "der",
+            "das"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. -ion ile biten isimler feminen olur: die Information. Bu soruda “___ Information ist sehr wichtig.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. -ion ile biten isimler feminen olur: die Information. Lerne das Nomen in „___ Information ist sehr wichtig.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. -ion ile biten isimler feminen olur: die Information. In “___ Information ist sehr wichtig.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "-tät",
+          "sentence": "___ Universität ist sehr groß.",
+          "options": [
+            "der",
+            "das",
+            "die"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. -tät ile biten isimler feminen olur: die Universität. Bu soruda “___ Universität ist sehr groß.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. -tät ile biten isimler feminen olur: die Universität. Lerne das Nomen in „___ Universität ist sehr groß.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. -tät ile biten isimler feminen olur: die Universität. In “___ Universität ist sehr groß.”, learn the noun together with its article."
           }
         },
         {
           "word": "-chen",
           "sentence": "___ Brötchen kostet einen Euro.",
           "options": [
-            "der",
             "die",
-            "das"
+            "das",
+            "der"
           ],
           "correct": "das",
           "explanations": {
-            "tr": "Doğru biçim “das”; bu cümlenin gramer yapısı bunu gerektiriyor. “___ Brötchen kostet einen Euro.” cümlesinde “-chen” ipucuna bakıldığında soruya özel kritik nokta şudur: -chen ile biten isimler nötrdür: das Brötchen.  Tamamlanmış doğru cümle: “das Brötchen kostet einen Euro.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Özne, nesne ve cümledeki anlam ipucunu sırayla kontrol etmek doğru cevaba götürür.  Yanlış şıklar neden olmaz? “der” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “die” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Grammatisch korrekt ist in diesem Satz „das“. Im Satz „___ Brötchen kostet einen Euro.“ mit dem Hinweis „-chen“ ist der entscheidende Punkt: -chen ile biten isimler nötrdür: das Brötchen.  Vollständig lautet der Satz: „das Brötchen kostet einen Euro.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. Wer Subjekt, Objekt und Bedeutungshinweis nacheinander prüft, kommt zur richtigen Lösung.  Warum passen die anderen Optionen nicht? „der“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „die“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "The grammatically correct form here is “das”. In the sentence “___ Brötchen kostet einen Euro.” with the cue “-chen”, the item-specific point is: -chen ile biten isimler nötrdür: das Brötchen.  The completed sentence is: “das Brötchen kostet einen Euro.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. Checking the subject, object and meaning clue in sequence leads to the correct answer.  Why are the other options wrong? “der” does not match the noun's required article/gender here. “die” does not match the noun's required article/gender here."
+            "tr": "Doğru cevap: “das”. -chen her zaman nötrdür: das Brötchen. Bu soruda “___ Brötchen kostet einen Euro.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das“. -chen her zaman nötrdür: das Brötchen. Lerne das Nomen in „___ Brötchen kostet einen Euro.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das”. -chen her zaman nötrdür: das Brötchen. In “___ Brötchen kostet einen Euro.”, learn the noun together with its article."
           }
         },
         {
-          "word": "-ung",
-          "sentence": "___ Einladung liegt auf dem Schreibtisch.",
+          "word": "-lein",
+          "sentence": "___ Häuschen ist alt.",
           "options": [
+            "das",
             "der",
-            "die",
-            "das"
+            "die"
           ],
-          "correct": "die",
+          "correct": "das",
           "explanations": {
-            "tr": "Bu cümlede kullanılabilecek doğru seçenek “die”. “___ Einladung liegt auf dem Schreibtisch.” cümlesinde “-ung” ipucuna bakıldığında soruya özel kritik nokta şudur: -ung ile biten isimler çoğunlukla feminen: die Einladung.  Tamamlanmış doğru cümle: “die Einladung liegt auf dem Schreibtisch.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Özne, nesne ve cümledeki anlam ipucunu sırayla kontrol etmek doğru cevaba götürür.  Yanlış şıklar neden olmaz? “der” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “das” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Für diese Stelle passt „die“. Im Satz „___ Einladung liegt auf dem Schreibtisch.“ mit dem Hinweis „-ung“ ist der entscheidende Punkt: -ung ile biten isimler çoğunlukla feminen: die Einladung.  Vollständig lautet der Satz: „die Einladung liegt auf dem Schreibtisch.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. Wer Subjekt, Objekt und Bedeutungshinweis nacheinander prüft, kommt zur richtigen Lösung.  Warum passen die anderen Optionen nicht? „der“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „das“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "“die” is the form that fits this sentence. In the sentence “___ Einladung liegt auf dem Schreibtisch.” with the cue “-ung”, the item-specific point is: -ung ile biten isimler çoğunlukla feminen: die Einladung.  The completed sentence is: “die Einladung liegt auf dem Schreibtisch.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. Checking the subject, object and meaning clue in sequence leads to the correct answer.  Why are the other options wrong? “der” does not match the noun's required article/gender here. “das” does not match the noun's required article/gender here."
-          }
-        },
-        {
-          "word": "Wochentag",
-          "sentence": "___ Freitag passt mir besser.",
-          "options": [
-            "der",
-            "die",
-            "das"
-          ],
-          "correct": "der",
-          "explanations": {
-            "tr": "Bu soruda doğru cevap “der”. “___ Freitag passt mir besser.” cümlesinde “Wochentag” ipucuna bakıldığında soruya özel kritik nokta şudur: Haftanın günleri maskulindir: der Freitag.  Tamamlanmış doğru cümle: “der Freitag passt mir besser.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Özne, nesne ve cümledeki anlam ipucunu sırayla kontrol etmek doğru cevaba götürür.  Yanlış şıklar neden olmaz? “die” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “das” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Die richtige Antwort ist „der“. Im Satz „___ Freitag passt mir besser.“ mit dem Hinweis „Wochentag“ ist der entscheidende Punkt: Haftanın günleri maskulindir: der Freitag.  Vollständig lautet der Satz: „der Freitag passt mir besser.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. Wer Subjekt, Objekt und Bedeutungshinweis nacheinander prüft, kommt zur richtigen Lösung.  Warum passen die anderen Optionen nicht? „die“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „das“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "The correct answer is “der”. In the sentence “___ Freitag passt mir besser.” with the cue “Wochentag”, the item-specific point is: Haftanın günleri maskulindir: der Freitag.  The completed sentence is: “der Freitag passt mir besser.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. Checking the subject, object and meaning clue in sequence leads to the correct answer.  Why are the other options wrong? “die” does not match the noun's required article/gender here. “das” does not match the noun's required article/gender here."
+            "tr": "Doğru cevap: “das”. -lein her zaman nötrdür: das Häuschen. Bu soruda “___ Häuschen ist alt.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das“. -lein her zaman nötrdür: das Häuschen. Lerne das Nomen in „___ Häuschen ist alt.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das”. -lein her zaman nötrdür: das Häuschen. In “___ Häuschen ist alt.”, learn the noun together with its article."
           }
         },
         {
           "word": "Monat",
           "sentence": "___ Januar ist oft kalt.",
           "options": [
-            "der",
             "die",
-            "das"
+            "das",
+            "der"
           ],
           "correct": "der",
           "explanations": {
-            "tr": "Buradaki boşluğu “der” ile tamamlamak gerekir. “___ Januar ist oft kalt.” cümlesinde “Monat” ipucuna bakıldığında soruya özel kritik nokta şudur: Ay adları maskulindir: der Januar.  Tamamlanmış doğru cümle: “der Januar ist oft kalt.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Özne, nesne ve cümledeki anlam ipucunu sırayla kontrol etmek doğru cevaba götürür.  Yanlış şıklar neden olmaz? “die” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “das” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Die Lücke muss hier mit „der“ ergänzt werden. Im Satz „___ Januar ist oft kalt.“ mit dem Hinweis „Monat“ ist der entscheidende Punkt: Ay adları maskulindir: der Januar.  Vollständig lautet der Satz: „der Januar ist oft kalt.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. Wer Subjekt, Objekt und Bedeutungshinweis nacheinander prüft, kommt zur richtigen Lösung.  Warum passen die anderen Optionen nicht? „die“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „das“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "This blank needs “der”. In the sentence “___ Januar ist oft kalt.” with the cue “Monat”, the item-specific point is: Ay adları maskulindir: der Januar.  The completed sentence is: “der Januar ist oft kalt.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. Checking the subject, object and meaning clue in sequence leads to the correct answer.  Why are the other options wrong? “die” does not match the noun's required article/gender here. “das” does not match the noun's required article/gender here."
-          }
-        },
-        {
-          "word": "-lein",
-          "sentence": "___ Büchlein ist sehr dünn.",
-          "options": [
-            "der",
-            "die",
-            "das"
-          ],
-          "correct": "das",
-          "explanations": {
-            "tr": "Doğru biçim “das”; bu cümlenin gramer yapısı bunu gerektiriyor. “___ Büchlein ist sehr dünn.” cümlesinde “-lein” ipucuna bakıldığında soruya özel kritik nokta şudur: -lein ile biten küçültmeler nötrdür: das Büchlein.  Tamamlanmış doğru cümle: “das Büchlein ist sehr dünn.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Özne, nesne ve cümledeki anlam ipucunu sırayla kontrol etmek doğru cevaba götürür.  Yanlış şıklar neden olmaz? “der” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “die” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Grammatisch korrekt ist in diesem Satz „das“. Im Satz „___ Büchlein ist sehr dünn.“ mit dem Hinweis „-lein“ ist der entscheidende Punkt: -lein ile biten küçültmeler nötrdür: das Büchlein.  Vollständig lautet der Satz: „das Büchlein ist sehr dünn.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. Wer Subjekt, Objekt und Bedeutungshinweis nacheinander prüft, kommt zur richtigen Lösung.  Warum passen die anderen Optionen nicht? „der“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „die“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "The grammatically correct form here is “das”. In the sentence “___ Büchlein ist sehr dünn.” with the cue “-lein”, the item-specific point is: -lein ile biten küçültmeler nötrdür: das Büchlein.  The completed sentence is: “das Büchlein ist sehr dünn.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. Checking the subject, object and meaning clue in sequence leads to the correct answer.  Why are the other options wrong? “der” does not match the noun's required article/gender here. “die” does not match the noun's required article/gender here."
-          }
-        },
-        {
-          "word": "-schaft",
-          "sentence": "___ Freundschaft ist mir wichtig.",
-          "options": [
-            "der",
-            "die",
-            "das"
-          ],
-          "correct": "die",
-          "explanations": {
-            "tr": "Bu cümlede kullanılabilecek doğru seçenek “die”. “___ Freundschaft ist mir wichtig.” cümlesinde “-schaft” ipucuna bakıldığında soruya özel kritik nokta şudur: -schaft ile biten isimler feminen olur: die Freundschaft.  Tamamlanmış doğru cümle: “die Freundschaft ist mir wichtig.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Özne, nesne ve cümledeki anlam ipucunu sırayla kontrol etmek doğru cevaba götürür.  Yanlış şıklar neden olmaz? “der” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “das” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Für diese Stelle passt „die“. Im Satz „___ Freundschaft ist mir wichtig.“ mit dem Hinweis „-schaft“ ist der entscheidende Punkt: -schaft ile biten isimler feminen olur: die Freundschaft.  Vollständig lautet der Satz: „die Freundschaft ist mir wichtig.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. Wer Subjekt, Objekt und Bedeutungshinweis nacheinander prüft, kommt zur richtigen Lösung.  Warum passen die anderen Optionen nicht? „der“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „das“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "“die” is the form that fits this sentence. In the sentence “___ Freundschaft ist mir wichtig.” with the cue “-schaft”, the item-specific point is: -schaft ile biten isimler feminen olur: die Freundschaft.  The completed sentence is: “die Freundschaft ist mir wichtig.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. Checking the subject, object and meaning clue in sequence leads to the correct answer.  Why are the other options wrong? “der” does not match the noun's required article/gender here. “das” does not match the noun's required article/gender here."
-          }
-        },
-        {
-          "word": "Getränk",
-          "sentence": "___ Saft im Kühlschrank ist für dich.",
-          "options": [
-            "der",
-            "die",
-            "das"
-          ],
-          "correct": "der",
-          "explanations": {
-            "tr": "Bu soruda doğru cevap “der”. “___ Saft im Kühlschrank ist für dich.” cümlesinde “Getränk” ipucuna bakıldığında soruya özel kritik nokta şudur: Saft maskulindir: der Saft.  Tamamlanmış doğru cümle: “der Saft im Kühlschrank ist für dich.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Özne, nesne ve cümledeki anlam ipucunu sırayla kontrol etmek doğru cevaba götürür.  Yanlış şıklar neden olmaz? “die” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “das” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Die richtige Antwort ist „der“. Im Satz „___ Saft im Kühlschrank ist für dich.“ mit dem Hinweis „Getränk“ ist der entscheidende Punkt: Saft maskulindir: der Saft.  Vollständig lautet der Satz: „der Saft im Kühlschrank ist für dich.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. Wer Subjekt, Objekt und Bedeutungshinweis nacheinander prüft, kommt zur richtigen Lösung.  Warum passen die anderen Optionen nicht? „die“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „das“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "The correct answer is “der”. In the sentence “___ Saft im Kühlschrank ist für dich.” with the cue “Getränk”, the item-specific point is: Saft maskulindir: der Saft.  The completed sentence is: “der Saft im Kühlschrank ist für dich.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. Checking the subject, object and meaning clue in sequence leads to the correct answer.  Why are the other options wrong? “die” does not match the noun's required article/gender here. “das” does not match the noun's required article/gender here."
-          }
-        },
-        {
-          "word": "Gerät",
-          "sentence": "___ Handy ist schon wieder leer.",
-          "options": [
-            "der",
-            "die",
-            "das"
-          ],
-          "correct": "das",
-          "explanations": {
-            "tr": "Buradaki boşluğu “das” ile tamamlamak gerekir. “___ Handy ist schon wieder leer.” cümlesinde “Gerät” ipucuna bakıldığında soruya özel kritik nokta şudur: Handy nötrdür: das Handy.  Tamamlanmış doğru cümle: “das Handy ist schon wieder leer.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Özne, nesne ve cümledeki anlam ipucunu sırayla kontrol etmek doğru cevaba götürür.  Yanlış şıklar neden olmaz? “der” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “die” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Die Lücke muss hier mit „das“ ergänzt werden. Im Satz „___ Handy ist schon wieder leer.“ mit dem Hinweis „Gerät“ ist der entscheidende Punkt: Handy nötrdür: das Handy.  Vollständig lautet der Satz: „das Handy ist schon wieder leer.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. Wer Subjekt, Objekt und Bedeutungshinweis nacheinander prüft, kommt zur richtigen Lösung.  Warum passen die anderen Optionen nicht? „der“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „die“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "This blank needs “das”. In the sentence “___ Handy ist schon wieder leer.” with the cue “Gerät”, the item-specific point is: Handy nötrdür: das Handy.  The completed sentence is: “das Handy ist schon wieder leer.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. Checking the subject, object and meaning clue in sequence leads to the correct answer.  Why are the other options wrong? “der” does not match the noun's required article/gender here. “die” does not match the noun's required article/gender here."
+            "tr": "Doğru cevap: “der”. Ay adları maskulindir: der Januar. Bu soruda “___ Januar ist oft kalt.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der“. Ay adları maskulindir: der Januar. Lerne das Nomen in „___ Januar ist oft kalt.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der”. Ay adları maskulindir: der Januar. In “___ Januar ist oft kalt.”, learn the noun together with its article."
           }
         }
       ]
@@ -404,18 +450,18 @@
       "id": "schreiben-3",
       "title": {
         "tr": "Übung 3 – Artikel + isim yaz",
-        "de": "Übung 3 – Artikel + Nomen schreiben",
-        "en": "Exercise 3 – Write article + noun"
+        "de": "Übung 3 – Artikel + isim yaz",
+        "en": "Übung 3 – Artikel + isim yaz"
       },
       "description": {
-        "tr": "Doğru artikel ile isim grubunu kendin yaz.",
-        "de": "Schreibe Artikel und Nomen selbst.",
-        "en": "Type the correct article and noun yourself."
+        "tr": "Şık yok: doğru Artikel + Nomen grubunu kendin yaz.",
+        "de": "Şık yok: doğru Artikel + Nomen grubunu kendin yaz.",
+        "en": "Şık yok: doğru Artikel + Nomen grubunu kendin yaz."
       },
       "difficulty": {
         "tr": "Orta-Zor",
-        "de": "Mittel–Schwer",
-        "en": "Intermediate–Hard"
+        "de": "Orta-Zor",
+        "en": "Orta-Zor"
       },
       "questions": [
         {
@@ -424,82 +470,41 @@
           "sentence": "Schreibe Artikel + Nomen: ___ ist klein. (Küche)",
           "correct": "die Küche",
           "answers": [
+            "die kueche",
             "die küche"
           ],
           "explanations": {
-            "tr": "Bu soruda doğru cevap “die Küche”. “Schreibe Artikel + Nomen: ___ ist klein. (Küche)” cümlesinde “Küche” ipucuna bakıldığında soruya özel kritik nokta şudur: Küche feminen: die Küche.  Tamamlanmış doğru cümle: “Schreibe Artikel + Nomen: die Küche ist klein. (Küche)”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Bu üretim sorusunda çekim kadar kelime sırası ve yazım da önemlidir.",
-            "de": "Die richtige Antwort ist „die Küche“. Im Satz „Schreibe Artikel + Nomen: ___ ist klein. (Küche)“ mit dem Hinweis „Küche“ ist der entscheidende Punkt: Küche feminen: die Küche.  Vollständig lautet der Satz: „Schreibe Artikel + Nomen: die Küche ist klein. (Küche)“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. In dieser Produktionsaufgabe sind neben der Form auch Wortstellung und Schreibweise wichtig.",
-            "en": "The correct answer is “die Küche”. In the sentence “Schreibe Artikel + Nomen: ___ ist klein. (Küche)” with the cue “Küche”, the item-specific point is: Küche feminen: die Küche.  The completed sentence is: “Schreibe Artikel + Nomen: die Küche ist klein. (Küche)”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. In this production item, word order and spelling matter in addition to the grammatical form."
+            "tr": "Doğru cevap: “die Küche”. Küche feminen: die Küche. Bu soruda “Schreibe Artikel + Nomen: ___ ist klein. (Küche)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die Küche“. Küche feminen: die Küche. Lerne das Nomen in „Schreibe Artikel + Nomen: ___ ist klein. (Küche)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die Küche”. Küche feminen: die Küche. In “Schreibe Artikel + Nomen: ___ ist klein. (Küche)”, learn the noun together with its article."
           }
         },
         {
           "type": "text",
-          "word": "Fenster",
-          "sentence": "Schreibe Artikel + Nomen: ___ ist noch offen. (Fenster)",
-          "correct": "das Fenster",
+          "word": "Bahnhof",
+          "sentence": "Schreibe Artikel + Nomen: ___ ist groß. (Bahnhof)",
+          "correct": "der Bahnhof",
           "answers": [
-            "das fenster"
+            "der bahnhof"
           ],
           "explanations": {
-            "tr": "Buradaki boşluğu “das Fenster” ile tamamlamak gerekir. “Schreibe Artikel + Nomen: ___ ist noch offen. (Fenster)” cümlesinde “Fenster” ipucuna bakıldığında soruya özel kritik nokta şudur: Fenster nötr: das Fenster.  Tamamlanmış doğru cümle: “Schreibe Artikel + Nomen: das Fenster ist noch offen. (Fenster)”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Bu üretim sorusunda çekim kadar kelime sırası ve yazım da önemlidir.",
-            "de": "Die Lücke muss hier mit „das Fenster“ ergänzt werden. Im Satz „Schreibe Artikel + Nomen: ___ ist noch offen. (Fenster)“ mit dem Hinweis „Fenster“ ist der entscheidende Punkt: Fenster nötr: das Fenster.  Vollständig lautet der Satz: „Schreibe Artikel + Nomen: das Fenster ist noch offen. (Fenster)“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. In dieser Produktionsaufgabe sind neben der Form auch Wortstellung und Schreibweise wichtig.",
-            "en": "This blank needs “das Fenster”. In the sentence “Schreibe Artikel + Nomen: ___ ist noch offen. (Fenster)” with the cue “Fenster”, the item-specific point is: Fenster nötr: das Fenster.  The completed sentence is: “Schreibe Artikel + Nomen: das Fenster ist noch offen. (Fenster)”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. In this production item, word order and spelling matter in addition to the grammatical form."
+            "tr": "Doğru cevap: “der Bahnhof”. Bahnhof maskulin: der Bahnhof. Bu soruda “Schreibe Artikel + Nomen: ___ ist groß. (Bahnhof)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der Bahnhof“. Bahnhof maskulin: der Bahnhof. Lerne das Nomen in „Schreibe Artikel + Nomen: ___ ist groß. (Bahnhof)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der Bahnhof”. Bahnhof maskulin: der Bahnhof. In “Schreibe Artikel + Nomen: ___ ist groß. (Bahnhof)”, learn the noun together with its article."
           }
         },
         {
           "type": "text",
-          "word": "Termin",
-          "sentence": "Schreibe Artikel + Nomen: ___ ist am Donnerstag. (Termin)",
-          "correct": "der Termin",
+          "word": "Museum",
+          "sentence": "Schreibe Artikel + Nomen: ___ ist heute geschlossen. (Museum)",
+          "correct": "das Museum",
           "answers": [
-            "der termin"
+            "das museum"
           ],
           "explanations": {
-            "tr": "Doğru biçim “der Termin”; bu cümlenin gramer yapısı bunu gerektiriyor. “Schreibe Artikel + Nomen: ___ ist am Donnerstag. (Termin)” cümlesinde “Termin” ipucuna bakıldığında soruya özel kritik nokta şudur: Termin maskulin: der Termin.  Tamamlanmış doğru cümle: “Schreibe Artikel + Nomen: der Termin ist am Donnerstag. (Termin)”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Bu üretim sorusunda çekim kadar kelime sırası ve yazım da önemlidir.",
-            "de": "Grammatisch korrekt ist in diesem Satz „der Termin“. Im Satz „Schreibe Artikel + Nomen: ___ ist am Donnerstag. (Termin)“ mit dem Hinweis „Termin“ ist der entscheidende Punkt: Termin maskulin: der Termin.  Vollständig lautet der Satz: „Schreibe Artikel + Nomen: der Termin ist am Donnerstag. (Termin)“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. In dieser Produktionsaufgabe sind neben der Form auch Wortstellung und Schreibweise wichtig.",
-            "en": "The grammatically correct form here is “der Termin”. In the sentence “Schreibe Artikel + Nomen: ___ ist am Donnerstag. (Termin)” with the cue “Termin”, the item-specific point is: Termin maskulin: der Termin.  The completed sentence is: “Schreibe Artikel + Nomen: der Termin ist am Donnerstag. (Termin)”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. In this production item, word order and spelling matter in addition to the grammatical form."
-          }
-        },
-        {
-          "type": "text",
-          "word": "Nachricht",
-          "sentence": "Schreibe Artikel + Nomen: ___ ist sehr kurz. (Nachricht)",
-          "correct": "die Nachricht",
-          "answers": [
-            "die nachricht"
-          ],
-          "explanations": {
-            "tr": "Bu cümlede kullanılabilecek doğru seçenek “die Nachricht”. “Schreibe Artikel + Nomen: ___ ist sehr kurz. (Nachricht)” cümlesinde “Nachricht” ipucuna bakıldığında soruya özel kritik nokta şudur: Nachricht feminen: die Nachricht.  Tamamlanmış doğru cümle: “Schreibe Artikel + Nomen: die Nachricht ist sehr kurz. (Nachricht)”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Bu üretim sorusunda çekim kadar kelime sırası ve yazım da önemlidir.",
-            "de": "Für diese Stelle passt „die Nachricht“. Im Satz „Schreibe Artikel + Nomen: ___ ist sehr kurz. (Nachricht)“ mit dem Hinweis „Nachricht“ ist der entscheidende Punkt: Nachricht feminen: die Nachricht.  Vollständig lautet der Satz: „Schreibe Artikel + Nomen: die Nachricht ist sehr kurz. (Nachricht)“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. In dieser Produktionsaufgabe sind neben der Form auch Wortstellung und Schreibweise wichtig.",
-            "en": "“die Nachricht” is the form that fits this sentence. In the sentence “Schreibe Artikel + Nomen: ___ ist sehr kurz. (Nachricht)” with the cue “Nachricht”, the item-specific point is: Nachricht feminen: die Nachricht.  The completed sentence is: “Schreibe Artikel + Nomen: die Nachricht ist sehr kurz. (Nachricht)”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. In this production item, word order and spelling matter in addition to the grammatical form."
-          }
-        },
-        {
-          "type": "text",
-          "word": "Problem",
-          "sentence": "Schreibe Artikel + Nomen: ___ ist nicht groß. (Problem)",
-          "correct": "das Problem",
-          "answers": [
-            "das problem"
-          ],
-          "explanations": {
-            "tr": "Bu soruda doğru cevap “das Problem”. “Schreibe Artikel + Nomen: ___ ist nicht groß. (Problem)” cümlesinde “Problem” ipucuna bakıldığında soruya özel kritik nokta şudur: Problem nötr: das Problem.  Tamamlanmış doğru cümle: “Schreibe Artikel + Nomen: das Problem ist nicht groß. (Problem)”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Bu üretim sorusunda çekim kadar kelime sırası ve yazım da önemlidir.",
-            "de": "Die richtige Antwort ist „das Problem“. Im Satz „Schreibe Artikel + Nomen: ___ ist nicht groß. (Problem)“ mit dem Hinweis „Problem“ ist der entscheidende Punkt: Problem nötr: das Problem.  Vollständig lautet der Satz: „Schreibe Artikel + Nomen: das Problem ist nicht groß. (Problem)“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. In dieser Produktionsaufgabe sind neben der Form auch Wortstellung und Schreibweise wichtig.",
-            "en": "The correct answer is “das Problem”. In the sentence “Schreibe Artikel + Nomen: ___ ist nicht groß. (Problem)” with the cue “Problem”, the item-specific point is: Problem nötr: das Problem.  The completed sentence is: “Schreibe Artikel + Nomen: das Problem ist nicht groß. (Problem)”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. In this production item, word order and spelling matter in addition to the grammatical form."
-          }
-        },
-        {
-          "type": "text",
-          "word": "Kurs",
-          "sentence": "Schreibe Artikel + Nomen: ___ beginnt um neun. (Kurs)",
-          "correct": "der Kurs",
-          "answers": [
-            "der kurs"
-          ],
-          "explanations": {
-            "tr": "Buradaki boşluğu “der Kurs” ile tamamlamak gerekir. “Schreibe Artikel + Nomen: ___ beginnt um neun. (Kurs)” cümlesinde “Kurs” ipucuna bakıldığında soruya özel kritik nokta şudur: Kurs maskulin: der Kurs.  Tamamlanmış doğru cümle: “Schreibe Artikel + Nomen: der Kurs beginnt um neun. (Kurs)”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Bu üretim sorusunda çekim kadar kelime sırası ve yazım da önemlidir.",
-            "de": "Die Lücke muss hier mit „der Kurs“ ergänzt werden. Im Satz „Schreibe Artikel + Nomen: ___ beginnt um neun. (Kurs)“ mit dem Hinweis „Kurs“ ist der entscheidende Punkt: Kurs maskulin: der Kurs.  Vollständig lautet der Satz: „Schreibe Artikel + Nomen: der Kurs beginnt um neun. (Kurs)“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. In dieser Produktionsaufgabe sind neben der Form auch Wortstellung und Schreibweise wichtig.",
-            "en": "This blank needs “der Kurs”. In the sentence “Schreibe Artikel + Nomen: ___ beginnt um neun. (Kurs)” with the cue “Kurs”, the item-specific point is: Kurs maskulin: der Kurs.  The completed sentence is: “Schreibe Artikel + Nomen: der Kurs beginnt um neun. (Kurs)”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. In this production item, word order and spelling matter in addition to the grammatical form."
+            "tr": "Doğru cevap: “das Museum”. Museum nötr: das Museum. Bu soruda “Schreibe Artikel + Nomen: ___ ist heute geschlossen. (Museum)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das Museum“. Museum nötr: das Museum. Lerne das Nomen in „Schreibe Artikel + Nomen: ___ ist heute geschlossen. (Museum)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das Museum”. Museum nötr: das Museum. In “Schreibe Artikel + Nomen: ___ ist heute geschlossen. (Museum)”, learn the noun together with its article."
           }
         },
         {
@@ -508,13 +513,13 @@
           "sentence": "Schreibe Artikel + Nomen: ___ ist heute gesperrt. (Straße)",
           "correct": "die Straße",
           "answers": [
-            "die straße",
-            "die strasse"
+            "die strasse",
+            "die straße"
           ],
           "explanations": {
-            "tr": "Doğru biçim “die Straße”; bu cümlenin gramer yapısı bunu gerektiriyor. “Schreibe Artikel + Nomen: ___ ist heute gesperrt. (Straße)” cümlesinde “Straße” ipucuna bakıldığında soruya özel kritik nokta şudur: Straße feminen: die Straße.  Tamamlanmış doğru cümle: “Schreibe Artikel + Nomen: die Straße ist heute gesperrt. (Straße)”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Bu üretim sorusunda çekim kadar kelime sırası ve yazım da önemlidir.",
-            "de": "Grammatisch korrekt ist in diesem Satz „die Straße“. Im Satz „Schreibe Artikel + Nomen: ___ ist heute gesperrt. (Straße)“ mit dem Hinweis „Straße“ ist der entscheidende Punkt: Straße feminen: die Straße.  Vollständig lautet der Satz: „Schreibe Artikel + Nomen: die Straße ist heute gesperrt. (Straße)“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. In dieser Produktionsaufgabe sind neben der Form auch Wortstellung und Schreibweise wichtig.",
-            "en": "The grammatically correct form here is “die Straße”. In the sentence “Schreibe Artikel + Nomen: ___ ist heute gesperrt. (Straße)” with the cue “Straße”, the item-specific point is: Straße feminen: die Straße.  The completed sentence is: “Schreibe Artikel + Nomen: die Straße ist heute gesperrt. (Straße)”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. In this production item, word order and spelling matter in addition to the grammatical form."
+            "tr": "Doğru cevap: “die Straße”. Straße feminen: die Straße. Bu soruda “Schreibe Artikel + Nomen: ___ ist heute gesperrt. (Straße)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die Straße“. Straße feminen: die Straße. Lerne das Nomen in „Schreibe Artikel + Nomen: ___ ist heute gesperrt. (Straße)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die Straße”. Straße feminen: die Straße. In “Schreibe Artikel + Nomen: ___ ist heute gesperrt. (Straße)”, learn the noun together with its article."
           }
         },
         {
@@ -526,9 +531,9 @@
             "das zimmer"
           ],
           "explanations": {
-            "tr": "Bu cümlede kullanılabilecek doğru seçenek “das Zimmer”. “Schreibe Artikel + Nomen: ___ ist schon frei. (Zimmer)” cümlesinde “Zimmer” ipucuna bakıldığında soruya özel kritik nokta şudur: Zimmer nötr: das Zimmer.  Tamamlanmış doğru cümle: “Schreibe Artikel + Nomen: das Zimmer ist schon frei. (Zimmer)”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Bu üretim sorusunda çekim kadar kelime sırası ve yazım da önemlidir.",
-            "de": "Für diese Stelle passt „das Zimmer“. Im Satz „Schreibe Artikel + Nomen: ___ ist schon frei. (Zimmer)“ mit dem Hinweis „Zimmer“ ist der entscheidende Punkt: Zimmer nötr: das Zimmer.  Vollständig lautet der Satz: „Schreibe Artikel + Nomen: das Zimmer ist schon frei. (Zimmer)“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. In dieser Produktionsaufgabe sind neben der Form auch Wortstellung und Schreibweise wichtig.",
-            "en": "“das Zimmer” is the form that fits this sentence. In the sentence “Schreibe Artikel + Nomen: ___ ist schon frei. (Zimmer)” with the cue “Zimmer”, the item-specific point is: Zimmer nötr: das Zimmer.  The completed sentence is: “Schreibe Artikel + Nomen: das Zimmer ist schon frei. (Zimmer)”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. In this production item, word order and spelling matter in addition to the grammatical form."
+            "tr": "Doğru cevap: “das Zimmer”. Zimmer nötr: das Zimmer. Bu soruda “Schreibe Artikel + Nomen: ___ ist schon frei. (Zimmer)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das Zimmer“. Zimmer nötr: das Zimmer. Lerne das Nomen in „Schreibe Artikel + Nomen: ___ ist schon frei. (Zimmer)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das Zimmer”. Zimmer nötr: das Zimmer. In “Schreibe Artikel + Nomen: ___ ist schon frei. (Zimmer)”, learn the noun together with its article."
           }
         },
         {
@@ -540,9 +545,9 @@
             "die antwort"
           ],
           "explanations": {
-            "tr": "Bu soruda doğru cevap “die Antwort”. “Schreibe Artikel + Nomen: ___ ist richtig. (Antwort)” cümlesinde “Antwort” ipucuna bakıldığında soruya özel kritik nokta şudur: Antwort feminen: die Antwort.  Tamamlanmış doğru cümle: “Schreibe Artikel + Nomen: die Antwort ist richtig. (Antwort)”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Bu üretim sorusunda çekim kadar kelime sırası ve yazım da önemlidir.",
-            "de": "Die richtige Antwort ist „die Antwort“. Im Satz „Schreibe Artikel + Nomen: ___ ist richtig. (Antwort)“ mit dem Hinweis „Antwort“ ist der entscheidende Punkt: Antwort feminen: die Antwort.  Vollständig lautet der Satz: „Schreibe Artikel + Nomen: die Antwort ist richtig. (Antwort)“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. In dieser Produktionsaufgabe sind neben der Form auch Wortstellung und Schreibweise wichtig.",
-            "en": "The correct answer is “die Antwort”. In the sentence “Schreibe Artikel + Nomen: ___ ist richtig. (Antwort)” with the cue “Antwort”, the item-specific point is: Antwort feminen: die Antwort.  The completed sentence is: “Schreibe Artikel + Nomen: die Antwort ist richtig. (Antwort)”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. In this production item, word order and spelling matter in addition to the grammatical form."
+            "tr": "Doğru cevap: “die Antwort”. Antwort feminen: die Antwort. Bu soruda “Schreibe Artikel + Nomen: ___ ist richtig. (Antwort)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die Antwort“. Antwort feminen: die Antwort. Lerne das Nomen in „Schreibe Artikel + Nomen: ___ ist richtig. (Antwort)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die Antwort”. Antwort feminen: die Antwort. In “Schreibe Artikel + Nomen: ___ ist richtig. (Antwort)”, learn the noun together with its article."
           }
         },
         {
@@ -554,79 +559,248 @@
             "der bus"
           ],
           "explanations": {
-            "tr": "Buradaki boşluğu “der Bus” ile tamamlamak gerekir. “Schreibe Artikel + Nomen: ___ kommt in fünf Minuten. (Bus)” cümlesinde “Bus” ipucuna bakıldığında soruya özel kritik nokta şudur: Bus maskulin: der Bus.  Tamamlanmış doğru cümle: “Schreibe Artikel + Nomen: der Bus kommt in fünf Minuten. (Bus)”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Bu üretim sorusunda çekim kadar kelime sırası ve yazım da önemlidir.",
-            "de": "Die Lücke muss hier mit „der Bus“ ergänzt werden. Im Satz „Schreibe Artikel + Nomen: ___ kommt in fünf Minuten. (Bus)“ mit dem Hinweis „Bus“ ist der entscheidende Punkt: Bus maskulin: der Bus.  Vollständig lautet der Satz: „Schreibe Artikel + Nomen: der Bus kommt in fünf Minuten. (Bus)“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. In dieser Produktionsaufgabe sind neben der Form auch Wortstellung und Schreibweise wichtig.",
-            "en": "This blank needs “der Bus”. In the sentence “Schreibe Artikel + Nomen: ___ kommt in fünf Minuten. (Bus)” with the cue “Bus”, the item-specific point is: Bus maskulin: der Bus.  The completed sentence is: “Schreibe Artikel + Nomen: der Bus kommt in fünf Minuten. (Bus)”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. In this production item, word order and spelling matter in addition to the grammatical form."
+            "tr": "Doğru cevap: “der Bus”. Bus maskulin: der Bus. Bu soruda “Schreibe Artikel + Nomen: ___ kommt in fünf Minuten. (Bus)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der Bus“. Bus maskulin: der Bus. Lerne das Nomen in „Schreibe Artikel + Nomen: ___ kommt in fünf Minuten. (Bus)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der Bus”. Bus maskulin: der Bus. In “Schreibe Artikel + Nomen: ___ kommt in fünf Minuten. (Bus)”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Fenster",
+          "sentence": "Schreibe Artikel + Nomen: ___ ist offen. (Fenster)",
+          "correct": "das Fenster",
+          "answers": [
+            "das fenster"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “das Fenster”. Fenster nötr: das Fenster. Bu soruda “Schreibe Artikel + Nomen: ___ ist offen. (Fenster)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das Fenster“. Fenster nötr: das Fenster. Lerne das Nomen in „Schreibe Artikel + Nomen: ___ ist offen. (Fenster)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das Fenster”. Fenster nötr: das Fenster. In “Schreibe Artikel + Nomen: ___ ist offen. (Fenster)”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Schule",
+          "sentence": "Schreibe Artikel + Nomen: ___ beginnt um acht Uhr. (Schule)",
+          "correct": "die Schule",
+          "answers": [
+            "die schule"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “die Schule”. Schule feminen: die Schule. Bu soruda “Schreibe Artikel + Nomen: ___ beginnt um acht Uhr. (Schule)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die Schule“. Schule feminen: die Schule. Lerne das Nomen in „Schreibe Artikel + Nomen: ___ beginnt um acht Uhr. (Schule)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die Schule”. Schule feminen: die Schule. In “Schreibe Artikel + Nomen: ___ beginnt um acht Uhr. (Schule)”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Kaffee",
+          "sentence": "Schreibe Artikel + Nomen: ___ ist noch heiß. (Kaffee)",
+          "correct": "der Kaffee",
+          "answers": [
+            "der kaffee"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “der Kaffee”. Kaffee maskulin: der Kaffee. Bu soruda “Schreibe Artikel + Nomen: ___ ist noch heiß. (Kaffee)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der Kaffee“. Kaffee maskulin: der Kaffee. Lerne das Nomen in „Schreibe Artikel + Nomen: ___ ist noch heiß. (Kaffee)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der Kaffee”. Kaffee maskulin: der Kaffee. In “Schreibe Artikel + Nomen: ___ ist noch heiß. (Kaffee)”, learn the noun together with its article."
           }
         }
-      ]
+      ],
+      "hideLesson": true
     },
     {
       "id": "challenge-4",
       "title": {
         "tr": "Übung 4 – Artikel Challenge",
-        "de": "Übung 4 – Artikel-Challenge",
-        "en": "Exercise 4 – Article Challenge"
+        "de": "Übung 4 – Artikel Challenge",
+        "en": "Übung 4 – Artikel Challenge"
       },
       "description": {
-        "tr": "Kural tablosu olmadan, bağlam ve kelime yapısını birlikte kullan.",
-        "de": "Ohne Hilfstabelle: Nutze Kontext und Wortstruktur.",
-        "en": "No helper table: use context and word structure together."
+        "tr": "Yardımcı tablo olmadan bağlam ve kelime yapısını birlikte kullan.",
+        "de": "Yardımcı tablo olmadan bağlam ve kelime yapısını birlikte kullan.",
+        "en": "Yardımcı tablo olmadan bağlam ve kelime yapısını birlikte kullan."
       },
       "difficulty": {
         "tr": "Zor",
-        "de": "Schwer",
-        "en": "Hard"
+        "de": "Zor",
+        "en": "Zor"
       },
-      "hideLesson": true,
       "questions": [
         {
           "word": "Erfahrung",
           "sentence": "Für diese Stelle ist ___ Erfahrung sehr wichtig.",
           "options": [
-            "der",
+            "das",
             "die",
-            "das"
+            "der"
           ],
           "correct": "die",
           "explanations": {
-            "tr": "Bu soruda doğru cevap “die”. “Für diese Stelle ist ___ Erfahrung sehr wichtig.” cümlesinde “Erfahrung” ipucuna bakıldığında soruya özel kritik nokta şudur: Erfahrung feminen: die Erfahrung.  Tamamlanmış doğru cümle: “Für diese Stelle ist die Erfahrung sehr wichtig.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Bu karışık soruda anlam, çekim, hâl ve cümle yapısını aynı anda kontrol etmek gerekir.  Yanlış şıklar neden olmaz? “der” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “das” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Die richtige Antwort ist „die“. Im Satz „Für diese Stelle ist ___ Erfahrung sehr wichtig.“ mit dem Hinweis „Erfahrung“ ist der entscheidende Punkt: Erfahrung feminen: die Erfahrung.  Vollständig lautet der Satz: „Für diese Stelle ist die Erfahrung sehr wichtig.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. In dieser gemischten Aufgabe müssen Bedeutung, Konjugation, Kasus und Satzbau gleichzeitig geprüft werden.  Warum passen die anderen Optionen nicht? „der“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „das“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "The correct answer is “die”. In the sentence “Für diese Stelle ist ___ Erfahrung sehr wichtig.” with the cue “Erfahrung”, the item-specific point is: Erfahrung feminen: die Erfahrung.  The completed sentence is: “Für diese Stelle ist die Erfahrung sehr wichtig.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. This mixed item requires meaning, conjugation, case and sentence structure to be checked together.  Why are the other options wrong? “der” does not match the noun's required article/gender here. “das” does not match the noun's required article/gender here."
+            "tr": "Doğru cevap: “die”. -ung ile biten Erfahrung feminen: die Erfahrung. Bu soruda “Für diese Stelle ist ___ Erfahrung sehr wichtig.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. -ung ile biten Erfahrung feminen: die Erfahrung. Lerne das Nomen in „Für diese Stelle ist ___ Erfahrung sehr wichtig.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. -ung ile biten Erfahrung feminen: die Erfahrung. In “Für diese Stelle ist ___ Erfahrung sehr wichtig.”, learn the noun together with its article."
           }
         },
         {
-          "word": "Ergebnis",
-          "sentence": "___ Ergebnis vom Test kommt morgen.",
+          "word": "Problem",
+          "sentence": "___ Problem ist noch nicht gelöst.",
           "options": [
+            "das",
             "der",
-            "die",
-            "das"
+            "die"
           ],
           "correct": "das",
           "explanations": {
-            "tr": "Buradaki boşluğu “das” ile tamamlamak gerekir. “___ Ergebnis vom Test kommt morgen.” cümlesinde “Ergebnis” ipucuna bakıldığında soruya özel kritik nokta şudur: Ergebnis nötrdür: das Ergebnis.  Tamamlanmış doğru cümle: “das Ergebnis vom Test kommt morgen.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Bu karışık soruda anlam, çekim, hâl ve cümle yapısını aynı anda kontrol etmek gerekir.  Yanlış şıklar neden olmaz? “der” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “die” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Die Lücke muss hier mit „das“ ergänzt werden. Im Satz „___ Ergebnis vom Test kommt morgen.“ mit dem Hinweis „Ergebnis“ ist der entscheidende Punkt: Ergebnis nötrdür: das Ergebnis.  Vollständig lautet der Satz: „das Ergebnis vom Test kommt morgen.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. In dieser gemischten Aufgabe müssen Bedeutung, Konjugation, Kasus und Satzbau gleichzeitig geprüft werden.  Warum passen die anderen Optionen nicht? „der“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „die“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "This blank needs “das”. In the sentence “___ Ergebnis vom Test kommt morgen.” with the cue “Ergebnis”, the item-specific point is: Ergebnis nötrdür: das Ergebnis.  The completed sentence is: “das Ergebnis vom Test kommt morgen.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. This mixed item requires meaning, conjugation, case and sentence structure to be checked together.  Why are the other options wrong? “der” does not match the noun's required article/gender here. “die” does not match the noun's required article/gender here."
+            "tr": "Doğru cevap: “das”. Problem nötrdür: das Problem. Bu soruda “___ Problem ist noch nicht gelöst.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das“. Problem nötrdür: das Problem. Lerne das Nomen in „___ Problem ist noch nicht gelöst.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das”. Problem nötrdür: das Problem. In “___ Problem ist noch nicht gelöst.”, learn the noun together with its article."
           }
         },
         {
-          "type": "text",
-          "word": "Entscheidung",
-          "sentence": "Schreibe Artikel + Nomen: Nach dem Gespräch ist ___ noch nicht leicht. (Entscheidung)",
-          "correct": "die Entscheidung",
-          "answers": [
-            "die entscheidung"
+          "word": "Verkehr",
+          "sentence": "___ Verkehr ist heute sehr stark.",
+          "options": [
+            "die",
+            "das",
+            "der"
           ],
+          "correct": "der",
           "explanations": {
-            "tr": "Doğru biçim “die Entscheidung”; bu cümlenin gramer yapısı bunu gerektiriyor. “Schreibe Artikel + Nomen: Nach dem Gespräch ist ___ noch nicht leicht. (Entscheidung)” cümlesinde “Entscheidung” ipucuna bakıldığında soruya özel kritik nokta şudur: -ung: die Entscheidung.  Tamamlanmış doğru cümle: “Schreibe Artikel + Nomen: Nach dem Gespräch ist die Entscheidung noch nicht leicht. (Entscheidung)”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Bu karışık soruda anlam, çekim, hâl ve cümle yapısını aynı anda kontrol etmek gerekir.",
-            "de": "Grammatisch korrekt ist in diesem Satz „die Entscheidung“. Im Satz „Schreibe Artikel + Nomen: Nach dem Gespräch ist ___ noch nicht leicht. (Entscheidung)“ mit dem Hinweis „Entscheidung“ ist der entscheidende Punkt: -ung: die Entscheidung.  Vollständig lautet der Satz: „Schreibe Artikel + Nomen: Nach dem Gespräch ist die Entscheidung noch nicht leicht. (Entscheidung)“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. In dieser gemischten Aufgabe müssen Bedeutung, Konjugation, Kasus und Satzbau gleichzeitig geprüft werden.",
-            "en": "The grammatically correct form here is “die Entscheidung”. In the sentence “Schreibe Artikel + Nomen: Nach dem Gespräch ist ___ noch nicht leicht. (Entscheidung)” with the cue “Entscheidung”, the item-specific point is: -ung: die Entscheidung.  The completed sentence is: “Schreibe Artikel + Nomen: Nach dem Gespräch ist die Entscheidung noch nicht leicht. (Entscheidung)”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. This mixed item requires meaning, conjugation, case and sentence structure to be checked together."
+            "tr": "Doğru cevap: “der”. Verkehr maskulindir: der Verkehr. Bu soruda “___ Verkehr ist heute sehr stark.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der“. Verkehr maskulindir: der Verkehr. Lerne das Nomen in „___ Verkehr ist heute sehr stark.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der”. Verkehr maskulindir: der Verkehr. In “___ Verkehr ist heute sehr stark.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Entscheidung",
+          "sentence": "___ Entscheidung war nicht einfach.",
+          "options": [
+            "das",
+            "die",
+            "der"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. -ung sonu: die Entscheidung. Bu soruda “___ Entscheidung war nicht einfach.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. -ung sonu: die Entscheidung. Lerne das Nomen in „___ Entscheidung war nicht einfach.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. -ung sonu: die Entscheidung. In “___ Entscheidung war nicht einfach.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Gebäude",
+          "sentence": "___ Gebäude dort ist sehr alt.",
+          "options": [
+            "das",
+            "der",
+            "die"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "Doğru cevap: “das”. Gebäude nötrdür: das Gebäude. Bu soruda “___ Gebäude dort ist sehr alt.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das“. Gebäude nötrdür: das Gebäude. Lerne das Nomen in „___ Gebäude dort ist sehr alt.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das”. Gebäude nötrdür: das Gebäude. In “___ Gebäude dort ist sehr alt.”, learn the noun together with its article."
           }
         },
         {
           "word": "Unterricht",
-          "sentence": "___ Unterricht beginnt heute später.",
+          "sentence": "___ Unterricht beginnt um neun Uhr.",
+          "options": [
+            "die",
+            "das",
+            "der"
+          ],
+          "correct": "der",
+          "explanations": {
+            "tr": "Doğru cevap: “der”. Unterricht maskulindir: der Unterricht. Bu soruda “___ Unterricht beginnt um neun Uhr.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der“. Unterricht maskulindir: der Unterricht. Lerne das Nomen in „___ Unterricht beginnt um neun Uhr.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der”. Unterricht maskulindir: der Unterricht. In “___ Unterricht beginnt um neun Uhr.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Möglichkeit",
+          "sentence": "___ Möglichkeit gefällt mir.",
+          "options": [
+            "das",
+            "die",
+            "der"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. -keit → die Möglichkeit. Bu soruda “___ Möglichkeit gefällt mir.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. -keit → die Möglichkeit. Lerne das Nomen in „___ Möglichkeit gefällt mir.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. -keit → die Möglichkeit. In “___ Möglichkeit gefällt mir.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Mädchen",
+          "sentence": "___ Mädchen spricht schon gut Deutsch.",
+          "options": [
+            "das",
+            "der",
+            "die"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "Doğru cevap: “das”. -chen → das Mädchen. Bu soruda “___ Mädchen spricht schon gut Deutsch.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das“. -chen → das Mädchen. Lerne das Nomen in „___ Mädchen spricht schon gut Deutsch.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das”. -chen → das Mädchen. In “___ Mädchen spricht schon gut Deutsch.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Frühling",
+          "sentence": "___ Frühling beginnt im März.",
+          "options": [
+            "die",
+            "das",
+            "der"
+          ],
+          "correct": "der",
+          "explanations": {
+            "tr": "Doğru cevap: “der”. Mevsim adları maskulindir: der Frühling. Bu soruda “___ Frühling beginnt im März.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der“. Mevsim adları maskulindir: der Frühling. Lerne das Nomen in „___ Frühling beginnt im März.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der”. Mevsim adları maskulindir: der Frühling. In “___ Frühling beginnt im März.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Handy",
+          "sentence": "___ Handy ist schon wieder leer.",
+          "options": [
+            "die",
+            "das",
+            "der"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "Doğru cevap: “das”. Handy nötrdür: das Handy. Bu soruda “___ Handy ist schon wieder leer.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das“. Handy nötrdür: das Handy. Lerne das Nomen in „___ Handy ist schon wieder leer.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das”. Handy nötrdür: das Handy. In “___ Handy ist schon wieder leer.”, learn the noun together with its article."
+          }
+        }
+      ],
+      "hideLesson": true
+    },
+    {
+      "id": "alltag-5",
+      "title": {
+        "tr": "Übung 5 – Günlük temel kelimeler",
+        "de": "Übung 5 – Günlük temel kelimeler",
+        "en": "Übung 5 – Günlük temel kelimeler"
+      },
+      "description": {
+        "tr": "Ev, okul ve günlük hayatta çok kullanılan isimlerin artikellerini pekiştir.",
+        "de": "Ev, okul ve günlük hayatta çok kullanılan isimlerin artikellerini pekiştir.",
+        "en": "Ev, okul ve günlük hayatta çok kullanılan isimlerin artikellerini pekiştir."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Orta",
+        "en": "Orta"
+      },
+      "questions": [
+        {
+          "word": "Tisch",
+          "sentence": "___ Tisch steht im Wohnzimmer.",
           "options": [
             "der",
             "die",
@@ -634,44 +808,691 @@
           ],
           "correct": "der",
           "explanations": {
-            "tr": "Bu cümlede kullanılabilecek doğru seçenek “der”. “___ Unterricht beginnt heute später.” cümlesinde “Unterricht” ipucuna bakıldığında soruya özel kritik nokta şudur: Unterricht maskulindir: der Unterricht.  Tamamlanmış doğru cümle: “der Unterricht beginnt heute später.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Bu karışık soruda anlam, çekim, hâl ve cümle yapısını aynı anda kontrol etmek gerekir.  Yanlış şıklar neden olmaz? “die” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “das” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Für diese Stelle passt „der“. Im Satz „___ Unterricht beginnt heute später.“ mit dem Hinweis „Unterricht“ ist der entscheidende Punkt: Unterricht maskulindir: der Unterricht.  Vollständig lautet der Satz: „der Unterricht beginnt heute später.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. In dieser gemischten Aufgabe müssen Bedeutung, Konjugation, Kasus und Satzbau gleichzeitig geprüft werden.  Warum passen die anderen Optionen nicht? „die“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „das“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "“der” is the form that fits this sentence. In the sentence “___ Unterricht beginnt heute später.” with the cue “Unterricht”, the item-specific point is: Unterricht maskulindir: der Unterricht.  The completed sentence is: “der Unterricht beginnt heute später.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. This mixed item requires meaning, conjugation, case and sentence structure to be checked together.  Why are the other options wrong? “die” does not match the noun's required article/gender here. “das” does not match the noun's required article/gender here."
+            "tr": "Doğru cevap: “der”. Tisch maskulindir. Bu soruda “___ Tisch steht im Wohnzimmer.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der“. Tisch maskulindir. Lerne das Nomen in „___ Tisch steht im Wohnzimmer.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der”. Tisch maskulindir. In “___ Tisch steht im Wohnzimmer.”, learn the noun together with its article."
           }
         },
         {
-          "word": "Information",
-          "sentence": "Woher kommt ___ Information?",
+          "word": "Lampe",
+          "sentence": "___ Lampe ist neu.",
           "options": [
             "der",
+            "das",
+            "die"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. Lampe feminindir. Bu soruda “___ Lampe ist neu.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. Lampe feminindir. Lerne das Nomen in „___ Lampe ist neu.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. Lampe feminindir. In “___ Lampe ist neu.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Buch",
+          "sentence": "___ Buch ist interessant.",
+          "options": [
             "die",
+            "das",
+            "der"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "Doğru cevap: “das”. Buch nötrdür. Bu soruda “___ Buch ist interessant.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das“. Buch nötrdür. Lerne das Nomen in „___ Buch ist interessant.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das”. Buch nötrdür. In “___ Buch ist interessant.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Tür",
+          "sentence": "___ Tür ist offen.",
+          "options": [
+            "die",
+            "der",
             "das"
           ],
           "correct": "die",
           "explanations": {
-            "tr": "Bu soruda doğru cevap “die”. “Woher kommt ___ Information?” cümlesinde “Information” ipucuna bakıldığında soruya özel kritik nokta şudur: Information feminen: die Information.  Tamamlanmış doğru cümle: “Woher kommt die Information?”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Bu karışık soruda anlam, çekim, hâl ve cümle yapısını aynı anda kontrol etmek gerekir.  Yanlış şıklar neden olmaz? “der” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “das” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Die richtige Antwort ist „die“. Im Satz „Woher kommt ___ Information?“ mit dem Hinweis „Information“ ist der entscheidende Punkt: Information feminen: die Information.  Vollständig lautet der Satz: „Woher kommt die Information?“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. In dieser gemischten Aufgabe müssen Bedeutung, Konjugation, Kasus und Satzbau gleichzeitig geprüft werden.  Warum passen die anderen Optionen nicht? „der“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „das“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "The correct answer is “die”. In the sentence “Woher kommt ___ Information?” with the cue “Information”, the item-specific point is: Information feminen: die Information.  The completed sentence is: “Woher kommt die Information?”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. This mixed item requires meaning, conjugation, case and sentence structure to be checked together.  Why are the other options wrong? “der” does not match the noun's required article/gender here. “das” does not match the noun's required article/gender here."
+            "tr": "Doğru cevap: “die”. Tür feminindir. Bu soruda “___ Tür ist offen.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. Tür feminindir. Lerne das Nomen in „___ Tür ist offen.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. Tür feminindir. In “___ Tür ist offen.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Stuhl",
+          "sentence": "___ Stuhl ist kaputt.",
+          "options": [
+            "die",
+            "das",
+            "der"
+          ],
+          "correct": "der",
+          "explanations": {
+            "tr": "Doğru cevap: “der”. Stuhl maskulindir. Bu soruda “___ Stuhl ist kaputt.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der“. Stuhl maskulindir. Lerne das Nomen in „___ Stuhl ist kaputt.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der”. Stuhl maskulindir. In “___ Stuhl ist kaputt.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Bett",
+          "sentence": "___ Bett ist sehr bequem.",
+          "options": [
+            "die",
+            "das",
+            "der"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "Doğru cevap: “das”. Bett nötrdür. Bu soruda “___ Bett ist sehr bequem.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das“. Bett nötrdür. Lerne das Nomen in „___ Bett ist sehr bequem.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das”. Bett nötrdür. In “___ Bett ist sehr bequem.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Jacke",
+          "sentence": "___ Jacke ist zu groß.",
+          "options": [
+            "die",
+            "der",
+            "das"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. Jacke feminindir. Bu soruda “___ Jacke ist zu groß.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. Jacke feminindir. Lerne das Nomen in „___ Jacke ist zu groß.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. Jacke feminindir. In “___ Jacke ist zu groß.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Rucksack",
+          "sentence": "___ Rucksack ist schwer.",
+          "options": [
+            "die",
+            "das",
+            "der"
+          ],
+          "correct": "der",
+          "explanations": {
+            "tr": "Doğru cevap: “der”. Rucksack maskulindir. Bu soruda “___ Rucksack ist schwer.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der“. Rucksack maskulindir. Lerne das Nomen in „___ Rucksack ist schwer.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der”. Rucksack maskulindir. In “___ Rucksack ist schwer.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Fahrrad",
+          "sentence": "___ Fahrrad steht vor dem Haus.",
+          "options": [
+            "die",
+            "das",
+            "der"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "Doğru cevap: “das”. Fahrrad nötrdür. Bu soruda “___ Fahrrad steht vor dem Haus.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das“. Fahrrad nötrdür. Lerne das Nomen in „___ Fahrrad steht vor dem Haus.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das”. Fahrrad nötrdür. In “___ Fahrrad steht vor dem Haus.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Zeitung",
+          "sentence": "___ Zeitung liegt auf dem Tisch.",
+          "options": [
+            "die",
+            "der",
+            "das"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. Zeitung feminindir. Bu soruda “___ Zeitung liegt auf dem Tisch.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. Zeitung feminindir. Lerne das Nomen in „___ Zeitung liegt auf dem Tisch.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. Zeitung feminindir. In “___ Zeitung liegt auf dem Tisch.”, learn the noun together with its article."
+          }
+        }
+      ]
+    },
+    {
+      "id": "feminine-endungen-6",
+      "title": {
+        "tr": "Übung 6 – Güçlü feminen ekler",
+        "de": "Übung 6 – Güçlü feminen ekler",
+        "en": "Übung 6 – Güçlü feminen ekler"
+      },
+      "description": {
+        "tr": "-ung, -heit, -keit, -schaft, -ei, -ion ve -tät sonlarını yazılı olarak çalış.",
+        "de": "-ung, -heit, -keit, -schaft, -ei, -ion ve -tät sonlarını yazılı olarak çalış.",
+        "en": "-ung, -heit, -keit, -schaft, -ei, -ion ve -tät sonlarını yazılı olarak çalış."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Zor",
+        "en": "Zor"
+      },
+      "questions": [
+        {
+          "type": "text",
+          "word": "Wohnung",
+          "sentence": "Schreibe Artikel + Nomen: Wohnung",
+          "correct": "die Wohnung",
+          "answers": [
+            "die wohnung"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “die Wohnung”. -ung → die. Bu soruda “Schreibe Artikel + Nomen: Wohnung” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die Wohnung“. -ung → die. Lerne das Nomen in „Schreibe Artikel + Nomen: Wohnung“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die Wohnung”. -ung → die. In “Schreibe Artikel + Nomen: Wohnung”, learn the noun together with its article."
           }
         },
         {
           "type": "text",
-          "word": "Gespräch",
-          "sentence": "Schreibe Artikel + Nomen: ___ mit dem Lehrer war hilfreich. (Gespräch)",
-          "correct": "das Gespräch",
+          "word": "Zeitung",
+          "sentence": "Schreibe Artikel + Nomen: Zeitung",
+          "correct": "die Zeitung",
           "answers": [
-            "das gespräch",
-            "das gesprach"
+            "die zeitung"
           ],
           "explanations": {
-            "tr": "Buradaki boşluğu “das Gespräch” ile tamamlamak gerekir. “Schreibe Artikel + Nomen: ___ mit dem Lehrer war hilfreich. (Gespräch)” cümlesinde “Gespräch” ipucuna bakıldığında soruya özel kritik nokta şudur: Gespräch nötrdür: das Gespräch.  Tamamlanmış doğru cümle: “Schreibe Artikel + Nomen: das Gespräch mit dem Lehrer war hilfreich. (Gespräch)”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Bu karışık soruda anlam, çekim, hâl ve cümle yapısını aynı anda kontrol etmek gerekir.",
-            "de": "Die Lücke muss hier mit „das Gespräch“ ergänzt werden. Im Satz „Schreibe Artikel + Nomen: ___ mit dem Lehrer war hilfreich. (Gespräch)“ mit dem Hinweis „Gespräch“ ist der entscheidende Punkt: Gespräch nötrdür: das Gespräch.  Vollständig lautet der Satz: „Schreibe Artikel + Nomen: das Gespräch mit dem Lehrer war hilfreich. (Gespräch)“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. In dieser gemischten Aufgabe müssen Bedeutung, Konjugation, Kasus und Satzbau gleichzeitig geprüft werden.",
-            "en": "This blank needs “das Gespräch”. In the sentence “Schreibe Artikel + Nomen: ___ mit dem Lehrer war hilfreich. (Gespräch)” with the cue “Gespräch”, the item-specific point is: Gespräch nötrdür: das Gespräch.  The completed sentence is: “Schreibe Artikel + Nomen: das Gespräch mit dem Lehrer war hilfreich. (Gespräch)”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. This mixed item requires meaning, conjugation, case and sentence structure to be checked together."
+            "tr": "Doğru cevap: “die Zeitung”. -ung → die. Bu soruda “Schreibe Artikel + Nomen: Zeitung” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die Zeitung“. -ung → die. Lerne das Nomen in „Schreibe Artikel + Nomen: Zeitung“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die Zeitung”. -ung → die. In “Schreibe Artikel + Nomen: Zeitung”, learn the noun together with its article."
           }
         },
         {
-          "word": "Fehler",
-          "sentence": "___ Fehler passiert mir oft.",
+          "type": "text",
+          "word": "Freiheit",
+          "sentence": "Schreibe Artikel + Nomen: Freiheit",
+          "correct": "die Freiheit",
+          "answers": [
+            "die freiheit"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “die Freiheit”. -heit → die. Bu soruda “Schreibe Artikel + Nomen: Freiheit” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die Freiheit“. -heit → die. Lerne das Nomen in „Schreibe Artikel + Nomen: Freiheit“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die Freiheit”. -heit → die. In “Schreibe Artikel + Nomen: Freiheit”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Möglichkeit",
+          "sentence": "Schreibe Artikel + Nomen: Möglichkeit",
+          "correct": "die Möglichkeit",
+          "answers": [
+            "die moeglichkeit",
+            "die möglichkeit"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “die Möglichkeit”. -keit → die. Bu soruda “Schreibe Artikel + Nomen: Möglichkeit” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die Möglichkeit“. -keit → die. Lerne das Nomen in „Schreibe Artikel + Nomen: Möglichkeit“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die Möglichkeit”. -keit → die. In “Schreibe Artikel + Nomen: Möglichkeit”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Freundschaft",
+          "sentence": "Schreibe Artikel + Nomen: Freundschaft",
+          "correct": "die Freundschaft",
+          "answers": [
+            "die freundschaft"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “die Freundschaft”. -schaft → die. Bu soruda “Schreibe Artikel + Nomen: Freundschaft” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die Freundschaft“. -schaft → die. Lerne das Nomen in „Schreibe Artikel + Nomen: Freundschaft“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die Freundschaft”. -schaft → die. In “Schreibe Artikel + Nomen: Freundschaft”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Bäckerei",
+          "sentence": "Schreibe Artikel + Nomen: Bäckerei",
+          "correct": "die Bäckerei",
+          "answers": [
+            "die baeckerei",
+            "die bäckerei"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “die Bäckerei”. -ei → die. Bu soruda “Schreibe Artikel + Nomen: Bäckerei” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die Bäckerei“. -ei → die. Lerne das Nomen in „Schreibe Artikel + Nomen: Bäckerei“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die Bäckerei”. -ei → die. In “Schreibe Artikel + Nomen: Bäckerei”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Information",
+          "sentence": "Schreibe Artikel + Nomen: Information",
+          "correct": "die Information",
+          "answers": [
+            "die information"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “die Information”. -ion → die. Bu soruda “Schreibe Artikel + Nomen: Information” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die Information“. -ion → die. Lerne das Nomen in „Schreibe Artikel + Nomen: Information“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die Information”. -ion → die. In “Schreibe Artikel + Nomen: Information”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Station",
+          "sentence": "Schreibe Artikel + Nomen: Station",
+          "correct": "die Station",
+          "answers": [
+            "die station"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “die Station”. -ion → die. Bu soruda “Schreibe Artikel + Nomen: Station” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die Station“. -ion → die. Lerne das Nomen in „Schreibe Artikel + Nomen: Station“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die Station”. -ion → die. In “Schreibe Artikel + Nomen: Station”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Universität",
+          "sentence": "Schreibe Artikel + Nomen: Universität",
+          "correct": "die Universität",
+          "answers": [
+            "die universitaet",
+            "die universität"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “die Universität”. -tät → die. Bu soruda “Schreibe Artikel + Nomen: Universität” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die Universität“. -tät → die. Lerne das Nomen in „Schreibe Artikel + Nomen: Universität“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die Universität”. -tät → die. In “Schreibe Artikel + Nomen: Universität”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Qualität",
+          "sentence": "Schreibe Artikel + Nomen: Qualität",
+          "correct": "die Qualität",
+          "answers": [
+            "die qualitaet",
+            "die qualität"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “die Qualität”. -tät → die. Bu soruda “Schreibe Artikel + Nomen: Qualität” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die Qualität“. -tät → die. Lerne das Nomen in „Schreibe Artikel + Nomen: Qualität“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die Qualität”. -tät → die. In “Schreibe Artikel + Nomen: Qualität”, learn the noun together with its article."
+          }
+        }
+      ],
+      "hideLesson": true
+    },
+    {
+      "id": "neutral-7",
+      "title": {
+        "tr": "Übung 7 – das için güçlü ipuçları",
+        "de": "Übung 7 – das için güçlü ipuçları",
+        "en": "Übung 7 – das için güçlü ipuçları"
+      },
+      "description": {
+        "tr": "-chen/-lein ve isimleşmiş infinitivleri doğru artikel ile yaz.",
+        "de": "-chen/-lein ve isimleşmiş infinitivleri doğru artikel ile yaz.",
+        "en": "-chen/-lein ve isimleşmiş infinitivleri doğru artikel ile yaz."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Zor",
+        "en": "Zor"
+      },
+      "questions": [
+        {
+          "type": "text",
+          "word": "Mädchen",
+          "sentence": "Schreibe Artikel + Nomen: Mädchen",
+          "correct": "das Mädchen",
+          "answers": [
+            "das maedchen",
+            "das mädchen"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “das Mädchen”. -chen her zaman nötrdür. Bu soruda “Schreibe Artikel + Nomen: Mädchen” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das Mädchen“. -chen her zaman nötrdür. Lerne das Nomen in „Schreibe Artikel + Nomen: Mädchen“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das Mädchen”. -chen her zaman nötrdür. In “Schreibe Artikel + Nomen: Mädchen”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Brötchen",
+          "sentence": "Schreibe Artikel + Nomen: Brötchen",
+          "correct": "das Brötchen",
+          "answers": [
+            "das broetchen",
+            "das brötchen"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “das Brötchen”. -chen → das. Bu soruda “Schreibe Artikel + Nomen: Brötchen” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das Brötchen“. -chen → das. Lerne das Nomen in „Schreibe Artikel + Nomen: Brötchen“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das Brötchen”. -chen → das. In “Schreibe Artikel + Nomen: Brötchen”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Häuschen",
+          "sentence": "Schreibe Artikel + Nomen: Häuschen",
+          "correct": "das Häuschen",
+          "answers": [
+            "das haeuschen",
+            "das häuschen"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “das Häuschen”. -chen → das. Bu soruda “Schreibe Artikel + Nomen: Häuschen” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das Häuschen“. -chen → das. Lerne das Nomen in „Schreibe Artikel + Nomen: Häuschen“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das Häuschen”. -chen → das. In “Schreibe Artikel + Nomen: Häuschen”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Fräulein",
+          "sentence": "Schreibe Artikel + Nomen: Fräulein",
+          "correct": "das Fräulein",
+          "answers": [
+            "das fraeulein",
+            "das fräulein"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “das Fräulein”. -lein her zaman nötrdür. Bu soruda “Schreibe Artikel + Nomen: Fräulein” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das Fräulein“. -lein her zaman nötrdür. Lerne das Nomen in „Schreibe Artikel + Nomen: Fräulein“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das Fräulein”. -lein her zaman nötrdür. In “Schreibe Artikel + Nomen: Fräulein”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Essen",
+          "sentence": "Schreibe Artikel + Nomen: Essen (isim olarak)",
+          "correct": "das Essen",
+          "answers": [
+            "das essen"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “das Essen”. İsimleşmiş fiiller çoğunlukla nötrdür: das Essen. Bu soruda “Schreibe Artikel + Nomen: Essen (isim olarak)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das Essen“. İsimleşmiş fiiller çoğunlukla nötrdür: das Essen. Lerne das Nomen in „Schreibe Artikel + Nomen: Essen (isim olarak)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das Essen”. İsimleşmiş fiiller çoğunlukla nötrdür: das Essen. In “Schreibe Artikel + Nomen: Essen (isim olarak)”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Lesen",
+          "sentence": "Schreibe Artikel + Nomen: Lesen (isim olarak)",
+          "correct": "das Lesen",
+          "answers": [
+            "das lesen"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “das Lesen”. İsimleşmiş infinitiv nötrdür. Bu soruda “Schreibe Artikel + Nomen: Lesen (isim olarak)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das Lesen“. İsimleşmiş infinitiv nötrdür. Lerne das Nomen in „Schreibe Artikel + Nomen: Lesen (isim olarak)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das Lesen”. İsimleşmiş infinitiv nötrdür. In “Schreibe Artikel + Nomen: Lesen (isim olarak)”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Schwimmen",
+          "sentence": "Schreibe Artikel + Nomen: Schwimmen (isim olarak)",
+          "correct": "das Schwimmen",
+          "answers": [
+            "das schwimmen"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “das Schwimmen”. İsimleşmiş infinitiv nötrdür. Bu soruda “Schreibe Artikel + Nomen: Schwimmen (isim olarak)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das Schwimmen“. İsimleşmiş infinitiv nötrdür. Lerne das Nomen in „Schreibe Artikel + Nomen: Schwimmen (isim olarak)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das Schwimmen”. İsimleşmiş infinitiv nötrdür. In “Schreibe Artikel + Nomen: Schwimmen (isim olarak)”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Lernen",
+          "sentence": "Schreibe Artikel + Nomen: Lernen (isim olarak)",
+          "correct": "das Lernen",
+          "answers": [
+            "das lernen"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “das Lernen”. İsimleşmiş infinitiv nötrdür. Bu soruda “Schreibe Artikel + Nomen: Lernen (isim olarak)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das Lernen“. İsimleşmiş infinitiv nötrdür. Lerne das Nomen in „Schreibe Artikel + Nomen: Lernen (isim olarak)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das Lernen”. İsimleşmiş infinitiv nötrdür. In “Schreibe Artikel + Nomen: Lernen (isim olarak)”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Kind",
+          "sentence": "Schreibe Artikel + Nomen: Kind",
+          "correct": "das Kind",
+          "answers": [
+            "das kind"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “das Kind”. Kind nötrdür. Bu soruda “Schreibe Artikel + Nomen: Kind” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das Kind“. Kind nötrdür. Lerne das Nomen in „Schreibe Artikel + Nomen: Kind“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das Kind”. Kind nötrdür. In “Schreibe Artikel + Nomen: Kind”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Wasser",
+          "sentence": "Schreibe Artikel + Nomen: Wasser",
+          "correct": "das Wasser",
+          "answers": [
+            "das wasser"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “das Wasser”. Wasser nötrdür. Bu soruda “Schreibe Artikel + Nomen: Wasser” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das Wasser“. Wasser nötrdür. Lerne das Nomen in „Schreibe Artikel + Nomen: Wasser“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das Wasser”. Wasser nötrdür. In “Schreibe Artikel + Nomen: Wasser”, learn the noun together with its article."
+          }
+        }
+      ],
+      "hideLesson": true
+    },
+    {
+      "id": "maskulin-8",
+      "title": {
+        "tr": "Übung 8 – der için güçlü gruplar",
+        "de": "Übung 8 – der için güçlü gruplar",
+        "en": "Übung 8 – der için güçlü gruplar"
+      },
+      "description": {
+        "tr": "Günler, aylar, mevsimler ve erkek kişi adlarını yazılı olarak çalış.",
+        "de": "Günler, aylar, mevsimler ve erkek kişi adlarını yazılı olarak çalış.",
+        "en": "Günler, aylar, mevsimler ve erkek kişi adlarını yazılı olarak çalış."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Zor",
+        "en": "Zor"
+      },
+      "questions": [
+        {
+          "type": "text",
+          "word": "Montag",
+          "sentence": "Schreibe Artikel + Nomen: Montag",
+          "correct": "der Montag",
+          "answers": [
+            "der montag"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “der Montag”. Haftanın günleri maskulindir. Bu soruda “Schreibe Artikel + Nomen: Montag” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der Montag“. Haftanın günleri maskulindir. Lerne das Nomen in „Schreibe Artikel + Nomen: Montag“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der Montag”. Haftanın günleri maskulindir. In “Schreibe Artikel + Nomen: Montag”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Freitag",
+          "sentence": "Schreibe Artikel + Nomen: Freitag",
+          "correct": "der Freitag",
+          "answers": [
+            "der freitag"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “der Freitag”. Haftanın günleri maskulindir. Bu soruda “Schreibe Artikel + Nomen: Freitag” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der Freitag“. Haftanın günleri maskulindir. Lerne das Nomen in „Schreibe Artikel + Nomen: Freitag“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der Freitag”. Haftanın günleri maskulindir. In “Schreibe Artikel + Nomen: Freitag”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Januar",
+          "sentence": "Schreibe Artikel + Nomen: Januar",
+          "correct": "der Januar",
+          "answers": [
+            "der januar"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “der Januar”. Ay adları maskulindir. Bu soruda “Schreibe Artikel + Nomen: Januar” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der Januar“. Ay adları maskulindir. Lerne das Nomen in „Schreibe Artikel + Nomen: Januar“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der Januar”. Ay adları maskulindir. In “Schreibe Artikel + Nomen: Januar”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "August",
+          "sentence": "Schreibe Artikel + Nomen: August",
+          "correct": "der August",
+          "answers": [
+            "der august"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “der August”. Ay adları maskulindir. Bu soruda “Schreibe Artikel + Nomen: August” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der August“. Ay adları maskulindir. Lerne das Nomen in „Schreibe Artikel + Nomen: August“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der August”. Ay adları maskulindir. In “Schreibe Artikel + Nomen: August”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Sommer",
+          "sentence": "Schreibe Artikel + Nomen: Sommer",
+          "correct": "der Sommer",
+          "answers": [
+            "der sommer"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “der Sommer”. Mevsimler maskulindir. Bu soruda “Schreibe Artikel + Nomen: Sommer” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der Sommer“. Mevsimler maskulindir. Lerne das Nomen in „Schreibe Artikel + Nomen: Sommer“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der Sommer”. Mevsimler maskulindir. In “Schreibe Artikel + Nomen: Sommer”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Winter",
+          "sentence": "Schreibe Artikel + Nomen: Winter",
+          "correct": "der Winter",
+          "answers": [
+            "der winter"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “der Winter”. Mevsimler maskulindir. Bu soruda “Schreibe Artikel + Nomen: Winter” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der Winter“. Mevsimler maskulindir. Lerne das Nomen in „Schreibe Artikel + Nomen: Winter“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der Winter”. Mevsimler maskulindir. In “Schreibe Artikel + Nomen: Winter”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Frühling",
+          "sentence": "Schreibe Artikel + Nomen: Frühling",
+          "correct": "der Frühling",
+          "answers": [
+            "der fruehling",
+            "der frühling"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “der Frühling”. Mevsimler maskulindir. Bu soruda “Schreibe Artikel + Nomen: Frühling” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der Frühling“. Mevsimler maskulindir. Lerne das Nomen in „Schreibe Artikel + Nomen: Frühling“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der Frühling”. Mevsimler maskulindir. In “Schreibe Artikel + Nomen: Frühling”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Herbst",
+          "sentence": "Schreibe Artikel + Nomen: Herbst",
+          "correct": "der Herbst",
+          "answers": [
+            "der herbst"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “der Herbst”. Mevsimler maskulindir. Bu soruda “Schreibe Artikel + Nomen: Herbst” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der Herbst“. Mevsimler maskulindir. Lerne das Nomen in „Schreibe Artikel + Nomen: Herbst“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der Herbst”. Mevsimler maskulindir. In “Schreibe Artikel + Nomen: Herbst”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Vater",
+          "sentence": "Schreibe Artikel + Nomen: Vater",
+          "correct": "der Vater",
+          "answers": [
+            "der vater"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “der Vater”. Erkek kişi adı: der Vater. Bu soruda “Schreibe Artikel + Nomen: Vater” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der Vater“. Erkek kişi adı: der Vater. Lerne das Nomen in „Schreibe Artikel + Nomen: Vater“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der Vater”. Erkek kişi adı: der Vater. In “Schreibe Artikel + Nomen: Vater”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Bruder",
+          "sentence": "Schreibe Artikel + Nomen: Bruder",
+          "correct": "der Bruder",
+          "answers": [
+            "der bruder"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “der Bruder”. Erkek kişi adı: der Bruder. Bu soruda “Schreibe Artikel + Nomen: Bruder” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der Bruder“. Erkek kişi adı: der Bruder. Lerne das Nomen in „Schreibe Artikel + Nomen: Bruder“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der Bruder”. Erkek kişi adı: der Bruder. In “Schreibe Artikel + Nomen: Bruder”, learn the noun together with its article."
+          }
+        }
+      ],
+      "hideLesson": true
+    },
+    {
+      "id": "komposita-9",
+      "title": {
+        "tr": "Übung 9 – Birleşik isimlerde Artikel",
+        "de": "Übung 9 – Birleşik isimlerde Artikel",
+        "en": "Übung 9 – Birleşik isimlerde Artikel"
+      },
+      "description": {
+        "tr": "Birleşik kelimelerde son isim unsurunun artikeli belirlediğini uygula.",
+        "de": "Birleşik kelimelerde son isim unsurunun artikeli belirlediğini uygula.",
+        "en": "Birleşik kelimelerde son isim unsurunun artikeli belirlediğini uygula."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Zor",
+        "en": "Zor"
+      },
+      "questions": [
+        {
+          "word": "Haustür",
+          "sentence": "___ Haustür ist offen.",
+          "options": [
+            "der",
+            "das",
+            "die"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. Birleşik isimde son kelime belirleyicidir: die Tür → die Haustür. Bu soruda “___ Haustür ist offen.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. Birleşik isimde son kelime belirleyicidir: die Tür → die Haustür. Lerne das Nomen in „___ Haustür ist offen.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. Birleşik isimde son kelime belirleyicidir: die Tür → die Haustür. In “___ Haustür ist offen.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Schlafzimmer",
+          "sentence": "___ Schlafzimmer ist groß.",
+          "options": [
+            "die",
+            "das",
+            "der"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "Doğru cevap: “das”. das Zimmer → das Schlafzimmer. Bu soruda “___ Schlafzimmer ist groß.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das“. das Zimmer → das Schlafzimmer. Lerne das Nomen in „___ Schlafzimmer ist groß.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das”. das Zimmer → das Schlafzimmer. In “___ Schlafzimmer ist groß.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Küchentisch",
+          "sentence": "___ Küchentisch ist neu.",
           "options": [
             "der",
             "die",
@@ -679,56 +1500,617 @@
           ],
           "correct": "der",
           "explanations": {
-            "tr": "Doğru biçim “der”; bu cümlenin gramer yapısı bunu gerektiriyor. “___ Fehler passiert mir oft.” cümlesinde “Fehler” ipucuna bakıldığında soruya özel kritik nokta şudur: Fehler maskulindir: der Fehler.  Tamamlanmış doğru cümle: “der Fehler passiert mir oft.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Bu karışık soruda anlam, çekim, hâl ve cümle yapısını aynı anda kontrol etmek gerekir.  Yanlış şıklar neden olmaz? “die” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “das” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Grammatisch korrekt ist in diesem Satz „der“. Im Satz „___ Fehler passiert mir oft.“ mit dem Hinweis „Fehler“ ist der entscheidende Punkt: Fehler maskulindir: der Fehler.  Vollständig lautet der Satz: „der Fehler passiert mir oft.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. In dieser gemischten Aufgabe müssen Bedeutung, Konjugation, Kasus und Satzbau gleichzeitig geprüft werden.  Warum passen die anderen Optionen nicht? „die“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „das“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "The grammatically correct form here is “der”. In the sentence “___ Fehler passiert mir oft.” with the cue “Fehler”, the item-specific point is: Fehler maskulindir: der Fehler.  The completed sentence is: “der Fehler passiert mir oft.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. This mixed item requires meaning, conjugation, case and sentence structure to be checked together.  Why are the other options wrong? “die” does not match the noun's required article/gender here. “das” does not match the noun's required article/gender here."
+            "tr": "Doğru cevap: “der”. der Tisch → der Küchentisch. Bu soruda “___ Küchentisch ist neu.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der“. der Tisch → der Küchentisch. Lerne das Nomen in „___ Küchentisch ist neu.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der”. der Tisch → der Küchentisch. In “___ Küchentisch ist neu.”, learn the noun together with its article."
           }
         },
         {
-          "type": "text",
-          "word": "Übung",
-          "sentence": "Schreibe Artikel + Nomen: ___ am Ende ist ziemlich schwierig. (Übung)",
-          "correct": "die Übung",
-          "answers": [
-            "die übung",
-            "die ubung"
+          "word": "Wasserflasche",
+          "sentence": "___ Wasserflasche ist leer.",
+          "options": [
+            "der",
+            "das",
+            "die"
           ],
+          "correct": "die",
           "explanations": {
-            "tr": "Bu cümlede kullanılabilecek doğru seçenek “die Übung”. “Schreibe Artikel + Nomen: ___ am Ende ist ziemlich schwierig. (Übung)” cümlesinde “Übung” ipucuna bakıldığında soruya özel kritik nokta şudur: -ung: die Übung.  Tamamlanmış doğru cümle: “Schreibe Artikel + Nomen: die Übung am Ende ist ziemlich schwierig. (Übung)”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Bu karışık soruda anlam, çekim, hâl ve cümle yapısını aynı anda kontrol etmek gerekir.",
-            "de": "Für diese Stelle passt „die Übung“. Im Satz „Schreibe Artikel + Nomen: ___ am Ende ist ziemlich schwierig. (Übung)“ mit dem Hinweis „Übung“ ist der entscheidende Punkt: -ung: die Übung.  Vollständig lautet der Satz: „Schreibe Artikel + Nomen: die Übung am Ende ist ziemlich schwierig. (Übung)“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. In dieser gemischten Aufgabe müssen Bedeutung, Konjugation, Kasus und Satzbau gleichzeitig geprüft werden.",
-            "en": "“die Übung” is the form that fits this sentence. In the sentence “Schreibe Artikel + Nomen: ___ am Ende ist ziemlich schwierig. (Übung)” with the cue “Übung”, the item-specific point is: -ung: die Übung.  The completed sentence is: “Schreibe Artikel + Nomen: die Übung am Ende ist ziemlich schwierig. (Übung)”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. This mixed item requires meaning, conjugation, case and sentence structure to be checked together."
+            "tr": "Doğru cevap: “die”. die Flasche → die Wasserflasche. Bu soruda “___ Wasserflasche ist leer.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. die Flasche → die Wasserflasche. Lerne das Nomen in „___ Wasserflasche ist leer.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. die Flasche → die Wasserflasche. In “___ Wasserflasche ist leer.”, learn the noun together with its article."
           }
         },
         {
-          "word": "Beispiel",
-          "sentence": "___ Beispiel erklärt die Regel gut.",
+          "word": "Wörterbuch",
+          "sentence": "___ Wörterbuch ist auf dem Tisch.",
+          "options": [
+            "die",
+            "das",
+            "der"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "Doğru cevap: “das”. das Buch → das Wörterbuch. Bu soruda “___ Wörterbuch ist auf dem Tisch.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das“. das Buch → das Wörterbuch. Lerne das Nomen in „___ Wörterbuch ist auf dem Tisch.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das”. das Buch → das Wörterbuch. In “___ Wörterbuch ist auf dem Tisch.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Computerraum",
+          "sentence": "___ Computerraum ist im zweiten Stock.",
           "options": [
             "der",
             "die",
             "das"
           ],
+          "correct": "der",
+          "explanations": {
+            "tr": "Doğru cevap: “der”. der Raum → der Computerraum. Bu soruda “___ Computerraum ist im zweiten Stock.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der“. der Raum → der Computerraum. Lerne das Nomen in „___ Computerraum ist im zweiten Stock.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der”. der Raum → der Computerraum. In “___ Computerraum ist im zweiten Stock.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Schultasche",
+          "sentence": "___ Schultasche ist schwer.",
+          "options": [
+            "der",
+            "das",
+            "die"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. die Tasche → die Schultasche. Bu soruda “___ Schultasche ist schwer.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. die Tasche → die Schultasche. Lerne das Nomen in „___ Schultasche ist schwer.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. die Tasche → die Schultasche. In “___ Schultasche ist schwer.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Kinderzimmer",
+          "sentence": "___ Kinderzimmer ist hell.",
+          "options": [
+            "die",
+            "das",
+            "der"
+          ],
           "correct": "das",
           "explanations": {
-            "tr": "Bu soruda doğru cevap “das”. “___ Beispiel erklärt die Regel gut.” cümlesinde “Beispiel” ipucuna bakıldığında soruya özel kritik nokta şudur: Beispiel nötrdür: das Beispiel.  Tamamlanmış doğru cümle: “das Beispiel erklärt die Regel gut.”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Bu karışık soruda anlam, çekim, hâl ve cümle yapısını aynı anda kontrol etmek gerekir.  Yanlış şıklar neden olmaz? “der” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor. “die” bu isim için gereken artikel/cinsiyet biçimiyle uyuşmuyor.",
-            "de": "Die richtige Antwort ist „das“. Im Satz „___ Beispiel erklärt die Regel gut.“ mit dem Hinweis „Beispiel“ ist der entscheidende Punkt: Beispiel nötrdür: das Beispiel.  Vollständig lautet der Satz: „das Beispiel erklärt die Regel gut.“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. In dieser gemischten Aufgabe müssen Bedeutung, Konjugation, Kasus und Satzbau gleichzeitig geprüft werden.  Warum passen die anderen Optionen nicht? „der“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens. „die“ passt hier nicht zum benötigten Artikel bzw. Genus des Nomens.",
-            "en": "The correct answer is “das”. In the sentence “___ Beispiel erklärt die Regel gut.” with the cue “Beispiel”, the item-specific point is: Beispiel nötrdür: das Beispiel.  The completed sentence is: “das Beispiel erklärt die Regel gut.”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. This mixed item requires meaning, conjugation, case and sentence structure to be checked together.  Why are the other options wrong? “der” does not match the noun's required article/gender here. “die” does not match the noun's required article/gender here."
+            "tr": "Doğru cevap: “das”. das Zimmer → das Kinderzimmer. Bu soruda “___ Kinderzimmer ist hell.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das“. das Zimmer → das Kinderzimmer. Lerne das Nomen in „___ Kinderzimmer ist hell.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das”. das Zimmer → das Kinderzimmer. In “___ Kinderzimmer ist hell.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Haustier",
+          "sentence": "___ Haustier schläft.",
+          "options": [
+            "das",
+            "der",
+            "die"
+          ],
+          "correct": "das",
+          "explanations": {
+            "tr": "Doğru cevap: “das”. das Tier → das Haustier. Bu soruda “___ Haustier schläft.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das“. das Tier → das Haustier. Lerne das Nomen in „___ Haustier schläft.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das”. das Tier → das Haustier. In “___ Haustier schläft.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Bahnhof",
+          "sentence": "___ Bahnhof ist heute voll.",
+          "options": [
+            "die",
+            "das",
+            "der"
+          ],
+          "correct": "der",
+          "explanations": {
+            "tr": "Doğru cevap: “der”. der Hof → der Bahnhof. Bu soruda “___ Bahnhof ist heute voll.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der“. der Hof → der Bahnhof. Lerne das Nomen in „___ Bahnhof ist heute voll.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der”. der Hof → der Bahnhof. In “___ Bahnhof ist heute voll.”, learn the noun together with its article."
+          }
+        }
+      ],
+      "hideLesson": true
+    },
+    {
+      "id": "plural-10",
+      "title": {
+        "tr": "Übung 10 – Plural: immer die",
+        "de": "Übung 10 – Plural: immer die",
+        "en": "Übung 10 – Plural: immer die"
+      },
+      "description": {
+        "tr": "Nominativ çoğul isimlerde belirli artikelin die olduğunu pekiştir.",
+        "de": "Nominativ çoğul isimlerde belirli artikelin die olduğunu pekiştir.",
+        "en": "Nominativ çoğul isimlerde belirli artikelin die olduğunu pekiştir."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Orta-Zor",
+        "en": "Orta-Zor"
+      },
+      "questions": [
+        {
+          "word": "Bücher",
+          "sentence": "___ Bücher sind neu.",
+          "options": [
+            "das",
+            "die",
+            "der"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. Nominativ Plural'da belirli artikel die olur. Bu soruda “___ Bücher sind neu.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. Nominativ Plural'da belirli artikel die olur. Lerne das Nomen in „___ Bücher sind neu.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. Nominativ Plural'da belirli artikel die olur. In “___ Bücher sind neu.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Kinder",
+          "sentence": "___ Kinder spielen draußen.",
+          "options": [
+            "die",
+            "der",
+            "das"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. Plural → die Kinder. Bu soruda “___ Kinder spielen draußen.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. Plural → die Kinder. Lerne das Nomen in „___ Kinder spielen draußen.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. Plural → die Kinder. In “___ Kinder spielen draußen.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Autos",
+          "sentence": "___ Autos stehen vor dem Haus.",
+          "options": [
+            "der",
+            "das",
+            "die"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. Plural → die Autos. Bu soruda “___ Autos stehen vor dem Haus.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. Plural → die Autos. Lerne das Nomen in „___ Autos stehen vor dem Haus.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. Plural → die Autos. In “___ Autos stehen vor dem Haus.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Frauen",
+          "sentence": "___ Frauen warten vor dem Kino.",
+          "options": [
+            "das",
+            "die",
+            "der"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. Plural → die Frauen. Bu soruda “___ Frauen warten vor dem Kino.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. Plural → die Frauen. Lerne das Nomen in „___ Frauen warten vor dem Kino.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. Plural → die Frauen. In “___ Frauen warten vor dem Kino.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Tische",
+          "sentence": "___ Tische sind frei.",
+          "options": [
+            "die",
+            "der",
+            "das"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. Plural → die Tische. Bu soruda “___ Tische sind frei.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. Plural → die Tische. Lerne das Nomen in „___ Tische sind frei.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. Plural → die Tische. In “___ Tische sind frei.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Fenster",
+          "sentence": "___ Fenster sind offen.",
+          "options": [
+            "der",
+            "das",
+            "die"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. Fenster burada çoğuldur → die Fenster. Bu soruda “___ Fenster sind offen.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. Fenster burada çoğuldur → die Fenster. Lerne das Nomen in „___ Fenster sind offen.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. Fenster burada çoğuldur → die Fenster. In “___ Fenster sind offen.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Wohnungen",
+          "sentence": "___ Wohnungen sind teuer.",
+          "options": [
+            "das",
+            "die",
+            "der"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. Plural → die Wohnungen. Bu soruda “___ Wohnungen sind teuer.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. Plural → die Wohnungen. Lerne das Nomen in „___ Wohnungen sind teuer.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. Plural → die Wohnungen. In “___ Wohnungen sind teuer.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Städte",
+          "sentence": "___ Städte sind sehr alt.",
+          "options": [
+            "die",
+            "der",
+            "das"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. Plural → die Städte. Bu soruda “___ Städte sind sehr alt.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. Plural → die Städte. Lerne das Nomen in „___ Städte sind sehr alt.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. Plural → die Städte. In “___ Städte sind sehr alt.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Lehrer",
+          "sentence": "___ Lehrer sind schon da.",
+          "options": [
+            "der",
+            "das",
+            "die"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. Lehrer burada çoğuldur → die Lehrer. Bu soruda “___ Lehrer sind schon da.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. Lehrer burada çoğuldur → die Lehrer. Lerne das Nomen in „___ Lehrer sind schon da.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. Lehrer burada çoğuldur → die Lehrer. In “___ Lehrer sind schon da.”, learn the noun together with its article."
+          }
+        },
+        {
+          "word": "Schulen",
+          "sentence": "___ Schulen sind heute geschlossen.",
+          "options": [
+            "das",
+            "die",
+            "der"
+          ],
+          "correct": "die",
+          "explanations": {
+            "tr": "Doğru cevap: “die”. Plural → die Schulen. Bu soruda “___ Schulen sind heute geschlossen.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die“. Plural → die Schulen. Lerne das Nomen in „___ Schulen sind heute geschlossen.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die”. Plural → die Schulen. In “___ Schulen sind heute geschlossen.”, learn the noun together with its article."
+          }
+        }
+      ],
+      "hideLesson": true
+    },
+    {
+      "id": "stadt-schule-11",
+      "title": {
+        "tr": "Übung 11 – Stadt, okul ve günlük yaşam",
+        "de": "Übung 11 – Stadt, okul ve günlük yaşam",
+        "en": "Übung 11 – Stadt, okul ve günlük yaşam"
+      },
+      "description": {
+        "tr": "Gerçek günlük bağlamlarda Artikel + Nomen grubunu kendin üret.",
+        "de": "Gerçek günlük bağlamlarda Artikel + Nomen grubunu kendin üret.",
+        "en": "Gerçek günlük bağlamlarda Artikel + Nomen grubunu kendin üret."
+      },
+      "difficulty": {
+        "tr": "Çok Zor",
+        "de": "Çok Zor",
+        "en": "Çok Zor"
+      },
+      "questions": [
+        {
+          "type": "text",
+          "word": "Apotheke",
+          "sentence": "Schreibe Artikel + Nomen: Vor uns ist ___. (Apotheke)",
+          "correct": "die Apotheke",
+          "answers": [
+            "die apotheke"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “die Apotheke”. Apotheke feminindir. Bu soruda “Schreibe Artikel + Nomen: Vor uns ist ___. (Apotheke)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die Apotheke“. Apotheke feminindir. Lerne das Nomen in „Schreibe Artikel + Nomen: Vor uns ist ___. (Apotheke)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die Apotheke”. Apotheke feminindir. In “Schreibe Artikel + Nomen: Vor uns ist ___. (Apotheke)”, learn the noun together with its article."
           }
         },
         {
           "type": "text",
-          "word": "Unterschied",
-          "sentence": "Schreibe Artikel + Nomen: ___ zwischen den Sätzen ist klein. (Unterschied)",
-          "correct": "der Unterschied",
+          "word": "Krankenhaus",
+          "sentence": "Schreibe Artikel + Nomen: Dort ist ___. (Krankenhaus)",
+          "correct": "das Krankenhaus",
           "answers": [
-            "der unterschied"
+            "das krankenhaus"
           ],
           "explanations": {
-            "tr": "Buradaki boşluğu “der Unterschied” ile tamamlamak gerekir. “Schreibe Artikel + Nomen: ___ zwischen den Sätzen ist klein. (Unterschied)” cümlesinde “Unterschied” ipucuna bakıldığında soruya özel kritik nokta şudur: Unterschied maskulindir: der Unterschied.  Tamamlanmış doğru cümle: “Schreibe Artikel + Nomen: der Unterschied zwischen den Sätzen ist klein. (Unterschied)”. Belirli artikel, ismin gramatik cinsiyetine göre seçilir: maskulin der, feminin die, nötr das. Bu nedenle isimle artikel birlikte öğrenilmelidir. Bu karışık soruda anlam, çekim, hâl ve cümle yapısını aynı anda kontrol etmek gerekir.",
-            "de": "Die Lücke muss hier mit „der Unterschied“ ergänzt werden. Im Satz „Schreibe Artikel + Nomen: ___ zwischen den Sätzen ist klein. (Unterschied)“ mit dem Hinweis „Unterschied“ ist der entscheidende Punkt: Unterschied maskulindir: der Unterschied.  Vollständig lautet der Satz: „Schreibe Artikel + Nomen: der Unterschied zwischen den Sätzen ist klein. (Unterschied)“. Der bestimmte Artikel richtet sich nach dem grammatischen Genus: Maskulinum der, Femininum die, Neutrum das. Nomen und Artikel sollten deshalb zusammen gelernt werden. In dieser gemischten Aufgabe müssen Bedeutung, Konjugation, Kasus und Satzbau gleichzeitig geprüft werden.",
-            "en": "This blank needs “der Unterschied”. In the sentence “Schreibe Artikel + Nomen: ___ zwischen den Sätzen ist klein. (Unterschied)” with the cue “Unterschied”, the item-specific point is: Unterschied maskulindir: der Unterschied.  The completed sentence is: “Schreibe Artikel + Nomen: der Unterschied zwischen den Sätzen ist klein. (Unterschied)”. The definite article depends on grammatical gender: masculine der, feminine die, neuter das. The noun and its article should therefore be learned together. This mixed item requires meaning, conjugation, case and sentence structure to be checked together."
+            "tr": "Doğru cevap: “das Krankenhaus”. Krankenhaus nötrdür. Bu soruda “Schreibe Artikel + Nomen: Dort ist ___. (Krankenhaus)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das Krankenhaus“. Krankenhaus nötrdür. Lerne das Nomen in „Schreibe Artikel + Nomen: Dort ist ___. (Krankenhaus)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das Krankenhaus”. Krankenhaus nötrdür. In “Schreibe Artikel + Nomen: Dort ist ___. (Krankenhaus)”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Supermarkt",
+          "sentence": "Schreibe Artikel + Nomen: Neben der Bank ist ___. (Supermarkt)",
+          "correct": "der Supermarkt",
+          "answers": [
+            "der supermarkt"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “der Supermarkt”. Supermarkt maskulindir. Bu soruda “Schreibe Artikel + Nomen: Neben der Bank ist ___. (Supermarkt)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der Supermarkt“. Supermarkt maskulindir. Lerne das Nomen in „Schreibe Artikel + Nomen: Neben der Bank ist ___. (Supermarkt)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der Supermarkt”. Supermarkt maskulindir. In “Schreibe Artikel + Nomen: Neben der Bank ist ___. (Supermarkt)”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Haltestelle",
+          "sentence": "Schreibe Artikel + Nomen: Hier ist ___. (Haltestelle)",
+          "correct": "die Haltestelle",
+          "answers": [
+            "die haltestelle"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “die Haltestelle”. Haltestelle feminindir. Bu soruda “Schreibe Artikel + Nomen: Hier ist ___. (Haltestelle)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die Haltestelle“. Haltestelle feminindir. Lerne das Nomen in „Schreibe Artikel + Nomen: Hier ist ___. (Haltestelle)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die Haltestelle”. Haltestelle feminindir. In “Schreibe Artikel + Nomen: Hier ist ___. (Haltestelle)”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Hotel",
+          "sentence": "Schreibe Artikel + Nomen: Gegenüber ist ___. (Hotel)",
+          "correct": "das Hotel",
+          "answers": [
+            "das hotel"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “das Hotel”. Hotel nötrdür. Bu soruda “Schreibe Artikel + Nomen: Gegenüber ist ___. (Hotel)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das Hotel“. Hotel nötrdür. Lerne das Nomen in „Schreibe Artikel + Nomen: Gegenüber ist ___. (Hotel)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das Hotel”. Hotel nötrdür. In “Schreibe Artikel + Nomen: Gegenüber ist ___. (Hotel)”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Arzt",
+          "sentence": "Schreibe Artikel + Nomen: Dort arbeitet ___. (Arzt)",
+          "correct": "der Arzt",
+          "answers": [
+            "der arzt"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “der Arzt”. Arzt maskulindir. Bu soruda “Schreibe Artikel + Nomen: Dort arbeitet ___. (Arzt)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der Arzt“. Arzt maskulindir. Lerne das Nomen in „Schreibe Artikel + Nomen: Dort arbeitet ___. (Arzt)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der Arzt”. Arzt maskulindir. In “Schreibe Artikel + Nomen: Dort arbeitet ___. (Arzt)”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Bibliothek",
+          "sentence": "Schreibe Artikel + Nomen: Links ist ___. (Bibliothek)",
+          "correct": "die Bibliothek",
+          "answers": [
+            "die bibliothek"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “die Bibliothek”. Bibliothek feminindir. Bu soruda “Schreibe Artikel + Nomen: Links ist ___. (Bibliothek)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die Bibliothek“. Bibliothek feminindir. Lerne das Nomen in „Schreibe Artikel + Nomen: Links ist ___. (Bibliothek)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die Bibliothek”. Bibliothek feminindir. In “Schreibe Artikel + Nomen: Links ist ___. (Bibliothek)”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Büro",
+          "sentence": "Schreibe Artikel + Nomen: Im ersten Stock ist ___. (Büro)",
+          "correct": "das Büro",
+          "answers": [
+            "das buero",
+            "das büro"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “das Büro”. Büro nötrdür. Bu soruda “Schreibe Artikel + Nomen: Im ersten Stock ist ___. (Büro)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das Büro“. Büro nötrdür. Lerne das Nomen in „Schreibe Artikel + Nomen: Im ersten Stock ist ___. (Büro)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das Büro”. Büro nötrdür. In “Schreibe Artikel + Nomen: Im ersten Stock ist ___. (Büro)”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Markt",
+          "sentence": "Schreibe Artikel + Nomen: Heute ist ___. (Markt)",
+          "correct": "der Markt",
+          "answers": [
+            "der markt"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “der Markt”. Markt maskulindir. Bu soruda “Schreibe Artikel + Nomen: Heute ist ___. (Markt)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der Markt“. Markt maskulindir. Lerne das Nomen in „Schreibe Artikel + Nomen: Heute ist ___. (Markt)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der Markt”. Markt maskulindir. In “Schreibe Artikel + Nomen: Heute ist ___. (Markt)”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Toilette",
+          "sentence": "Schreibe Artikel + Nomen: Wo ist ___? (Toilette)",
+          "correct": "die Toilette",
+          "answers": [
+            "die toilette"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “die Toilette”. Toilette feminindir. Bu soruda “Schreibe Artikel + Nomen: Wo ist ___? (Toilette)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die Toilette“. Toilette feminindir. Lerne das Nomen in „Schreibe Artikel + Nomen: Wo ist ___? (Toilette)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die Toilette”. Toilette feminindir. In “Schreibe Artikel + Nomen: Wo ist ___? (Toilette)”, learn the noun together with its article."
           }
         }
-      ]
+      ],
+      "hideLesson": true
+    },
+    {
+      "id": "master-12",
+      "title": {
+        "tr": "Übung 12 – Artikel Master Challenge",
+        "de": "Übung 12 – Artikel Master Challenge",
+        "en": "Übung 12 – Artikel Master Challenge"
+      },
+      "description": {
+        "tr": "Kelime sonu, anlam grubu, birleşik isim ve plural bilgisini birlikte kullan.",
+        "de": "Kelime sonu, anlam grubu, birleşik isim ve plural bilgisini birlikte kullan.",
+        "en": "Kelime sonu, anlam grubu, birleşik isim ve plural bilgisini birlikte kullan."
+      },
+      "difficulty": {
+        "tr": "Çok Zor",
+        "de": "Çok Zor",
+        "en": "Çok Zor"
+      },
+      "questions": [
+        {
+          "type": "text",
+          "word": "Wohnung",
+          "sentence": "Korrigiere: der Wohnung ist sehr klein.",
+          "correct": "Die Wohnung ist sehr klein",
+          "answers": [
+            "die wohnung ist sehr klein"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “Die Wohnung ist sehr klein”. Wohnung -ung ile biter ve feminindir. Bu soruda “Korrigiere: der Wohnung ist sehr klein.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „Die Wohnung ist sehr klein“. Wohnung -ung ile biter ve feminindir. Lerne das Nomen in „Korrigiere: der Wohnung ist sehr klein.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “Die Wohnung ist sehr klein”. Wohnung -ung ile biter ve feminindir. In “Korrigiere: der Wohnung ist sehr klein.”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Mädchen",
+          "sentence": "Korrigiere: die Mädchen wartet draußen. (Singular)",
+          "correct": "Das Mädchen wartet draußen",
+          "answers": [
+            "das maedchen wartet draussen",
+            "das mädchen wartet draußen"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “Das Mädchen wartet draußen”. Singular Mädchen nötrdür: das Mädchen. Bu soruda “Korrigiere: die Mädchen wartet draußen. (Singular)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „Das Mädchen wartet draußen“. Singular Mädchen nötrdür: das Mädchen. Lerne das Nomen in „Korrigiere: die Mädchen wartet draußen. (Singular)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “Das Mädchen wartet draußen”. Singular Mädchen nötrdür: das Mädchen. In “Korrigiere: die Mädchen wartet draußen. (Singular)”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Januar",
+          "sentence": "Korrigiere: das Januar ist sehr kalt.",
+          "correct": "Der Januar ist sehr kalt",
+          "answers": [
+            "der januar ist sehr kalt"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “Der Januar ist sehr kalt”. Ay adları maskulindir. Bu soruda “Korrigiere: das Januar ist sehr kalt.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „Der Januar ist sehr kalt“. Ay adları maskulindir. Lerne das Nomen in „Korrigiere: das Januar ist sehr kalt.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “Der Januar ist sehr kalt”. Ay adları maskulindir. In “Korrigiere: das Januar ist sehr kalt.”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Kinderzimmer",
+          "sentence": "Korrigiere: die Kinderzimmer ist groß. (Singular)",
+          "correct": "Das Kinderzimmer ist groß",
+          "answers": [
+            "das kinderzimmer ist gross",
+            "das kinderzimmer ist groß"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “Das Kinderzimmer ist groß”. Son kelime Zimmer nötrdür. Bu soruda “Korrigiere: die Kinderzimmer ist groß. (Singular)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „Das Kinderzimmer ist groß“. Son kelime Zimmer nötrdür. Lerne das Nomen in „Korrigiere: die Kinderzimmer ist groß. (Singular)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “Das Kinderzimmer ist groß”. Son kelime Zimmer nötrdür. In “Korrigiere: die Kinderzimmer ist groß. (Singular)”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Information",
+          "sentence": "Korrigiere: der Information ist wichtig.",
+          "correct": "Die Information ist wichtig",
+          "answers": [
+            "die information ist wichtig"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “Die Information ist wichtig”. -ion → feminen. Bu soruda “Korrigiere: der Information ist wichtig.” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „Die Information ist wichtig“. -ion → feminen. Lerne das Nomen in „Korrigiere: der Information ist wichtig.“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “Die Information ist wichtig”. -ion → feminen. In “Korrigiere: der Information ist wichtig.”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Brötchen",
+          "sentence": "Schreibe doğru Artikel + Nomen: ___ schmeckt gut. (Brötchen)",
+          "correct": "das Brötchen",
+          "answers": [
+            "das broetchen",
+            "das brötchen"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “das Brötchen”. -chen → nötr. Bu soruda “Schreibe doğru Artikel + Nomen: ___ schmeckt gut. (Brötchen)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das Brötchen“. -chen → nötr. Lerne das Nomen in „Schreibe doğru Artikel + Nomen: ___ schmeckt gut. (Brötchen)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das Brötchen”. -chen → nötr. In “Schreibe doğru Artikel + Nomen: ___ schmeckt gut. (Brötchen)”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Freundschaft",
+          "sentence": "Schreibe doğru Artikel + Nomen: ___ ist wichtig. (Freundschaft)",
+          "correct": "die Freundschaft",
+          "answers": [
+            "die freundschaft"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “die Freundschaft”. -schaft → feminen. Bu soruda “Schreibe doğru Artikel + Nomen: ___ ist wichtig. (Freundschaft)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die Freundschaft“. -schaft → feminen. Lerne das Nomen in „Schreibe doğru Artikel + Nomen: ___ ist wichtig. (Freundschaft)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die Freundschaft”. -schaft → feminen. In “Schreibe doğru Artikel + Nomen: ___ ist wichtig. (Freundschaft)”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Sommer",
+          "sentence": "Schreibe doğru Artikel + Nomen: ___ ist warm. (Sommer)",
+          "correct": "der Sommer",
+          "answers": [
+            "der sommer"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “der Sommer”. Mevsim adı maskulin. Bu soruda “Schreibe doğru Artikel + Nomen: ___ ist warm. (Sommer)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „der Sommer“. Mevsim adı maskulin. Lerne das Nomen in „Schreibe doğru Artikel + Nomen: ___ ist warm. (Sommer)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “der Sommer”. Mevsim adı maskulin. In “Schreibe doğru Artikel + Nomen: ___ ist warm. (Sommer)”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Wörterbuch",
+          "sentence": "Schreibe doğru Artikel + Nomen: ___ ist sehr nützlich. (Wörterbuch)",
+          "correct": "das Wörterbuch",
+          "answers": [
+            "das woerterbuch",
+            "das wörterbuch"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “das Wörterbuch”. Son isim Buch nötrdür. Bu soruda “Schreibe doğru Artikel + Nomen: ___ ist sehr nützlich. (Wörterbuch)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „das Wörterbuch“. Son isim Buch nötrdür. Lerne das Nomen in „Schreibe doğru Artikel + Nomen: ___ ist sehr nützlich. (Wörterbuch)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “das Wörterbuch”. Son isim Buch nötrdür. In “Schreibe doğru Artikel + Nomen: ___ ist sehr nützlich. (Wörterbuch)”, learn the noun together with its article."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Bücher",
+          "sentence": "Schreibe doğru Artikel + Nomen: ___ liegen auf dem Tisch. (Bücher)",
+          "correct": "die Bücher",
+          "answers": [
+            "die buecher",
+            "die bücher"
+          ],
+          "explanations": {
+            "tr": "Doğru cevap: “die Bücher”. Nominativ Plural → die. Bu soruda “Schreibe doğru Artikel + Nomen: ___ liegen auf dem Tisch. (Bücher)” içindeki ismi artikeliyle birlikte düşün.",
+            "de": "Die richtige Antwort ist „die Bücher“. Nominativ Plural → die. Lerne das Nomen in „Schreibe doğru Artikel + Nomen: ___ liegen auf dem Tisch. (Bücher)“ immer zusammen mit seinem Artikel.",
+            "en": "The correct answer is “die Bücher”. Nominativ Plural → die. In “Schreibe doğru Artikel + Nomen: ___ liegen auf dem Tisch. (Bücher)”, learn the noun together with its article."
+          }
+        }
+      ],
+      "hideLesson": true
     }
   ]
 }

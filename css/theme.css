@@ -44,7 +44,7 @@ body.academy-theme{
 .academy-theme .card p{color:#5e675b}
 .academy-theme .notice{background:#e9ede2;border:1px solid #dce0d5;border-radius:5px;color:#354c32}
 .academy-theme footer{background:transparent;color:#5e675b}
-.academy-theme .site-motion [data-site-reveal]{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.65,.3,1)}
+.academy-theme .site-motion [data-site-reveal]{opacity:0;transform:translateY(32px);transition:opacity .95s ease,transform .95s cubic-bezier(.2,.65,.3,1)}
 .academy-theme .site-motion [data-site-reveal].is-visible{opacity:1;transform:none}
 /* Lessons */
 #page-lessons .lesson-hero-pro{width:100%;margin:0;padding:64px 0 32px;background:none;color:#202820;border-radius:0;box-shadow:none;overflow:visible}
@@ -150,3 +150,9 @@ body.academy-theme{
 #page-exercises .result-score{background:#263e2d;box-shadow:none;border-radius:6px}
 #page-exercises .result-score span{color:#e9ede2;font-weight:500}
 #page-exercises .exercise-discovery-heading>span{background:transparent;border-color:#dce0d5;border-radius:4px;font-weight:500}
+
+/* Consistent scroll reveals on small screens and keyboard access. */
+.academy-theme .site-motion [data-site-reveal]:focus-within{opacity:1;transform:none}
+.academy-theme .home-motion [data-home-reveal]{transform:translateY(32px);transition:opacity .95s ease,transform .95s cubic-bezier(.2,.65,.3,1)}
+.academy-theme .home-motion [data-home-reveal].is-visible{transform:none}
+@media(prefers-reduced-motion:reduce){.academy-theme .home-motion [data-home-reveal]{transform:none;transition:none}}

@@ -50,8 +50,8 @@
   const I18N = {
     tr: {
       tag: 'Gramer Konuları',
-      heroTitle: 'Almanca gramerini seviyene göre öğren.',
-      heroSub: 'Seviyeni seç, konunu bul ve Almanca gramerini adım adım öğren.',
+      heroTitle: 'Almanca gramer konuları',
+      heroSub: 'A1–B2 seviyelerine göre gramer başlıkları ve ilgili alıştırmalara erişim.',
       toolbarTitle: 'Gramer konunu bul',
       toolbarSub: 'Bir seviye seç veya arama kutusundan doğrudan konuya ulaş.',
       search: 'Gramer konusu ara...',
@@ -66,15 +66,15 @@
       noResultSub: 'Farklı bir kelime dene veya seviyeler arasında geçiş yap.',
       breadcrumbGrammar: 'Gramer',
       comingLabel: 'Konu anlatımı',
-      comingTitle: 'Bu içerik hazırlanıyor.',
-      comingText: 'Bu kart ileride açıklama, kurallar, örnek cümleler ve ilgili alıştırmalara bağlantı içerecek.',
+      comingTitle: 'Konu anlatımı hazırlanıyor',
+      comingText: 'Bu konu için ayrıntılı anlatım henüz yayımlanmadı. Çalışmalarına alıştırmalar bölümünden devam edebilirsin.',
       back: 'Konulara Dön',
       exercises: 'Alıştırmalara Git'
     },
     de: {
       tag: 'Grammatik',
-      heroTitle: 'Lerne deutsche Grammatik passend zu deinem Niveau.',
-      heroSub: 'Wähle dein Niveau, finde ein Thema und lerne Grammatik Schritt für Schritt.',
+      heroTitle: 'Deutsche Grammatik nach Niveau',
+      heroSub: 'Grammatikthemen von A1 bis B2 und Zugang zu passenden Übungen.',
       toolbarTitle: 'Finde dein Grammatikthema',
       toolbarSub: 'Wähle ein Niveau oder suche direkt nach einem Thema.',
       search: 'Grammatikthema suchen...',
@@ -89,15 +89,15 @@
       noResultSub: 'Versuche einen anderen Suchbegriff oder wechsle das Niveau.',
       breadcrumbGrammar: 'Grammatik',
       comingLabel: 'Grammatikerklärung',
-      comingTitle: 'Dieser Inhalt wird vorbereitet.',
-      comingText: 'Hier findest du später Erklärung, Regeln, Beispielsätze und passende Übungen.',
+      comingTitle: 'Grammatikerklärung in Vorbereitung',
+      comingText: 'Eine ausführliche Erklärung ist noch nicht veröffentlicht. Du kannst im Übungsbereich weiterarbeiten.',
       back: 'Zurück zu Themen',
       exercises: 'Zu den Übungen'
     },
     en: {
       tag: 'Grammar',
-      heroTitle: 'Learn German grammar at your level.',
-      heroSub: 'Choose your level, find a topic and learn German grammar step by step.',
+      heroTitle: 'German grammar by level',
+      heroSub: 'Grammar topics from A1 to B2 and access to related exercises.',
       toolbarTitle: 'Find a grammar topic',
       toolbarSub: 'Choose a level or search directly for a topic.',
       search: 'Search grammar topics...',
@@ -112,8 +112,8 @@
       noResultSub: 'Try another search term or switch levels.',
       breadcrumbGrammar: 'Grammar',
       comingLabel: 'Grammar lesson',
-      comingTitle: 'This lesson is being prepared.',
-      comingText: 'This page will later include explanations, rules, example sentences and links to relevant exercises.',
+      comingTitle: 'Grammar explanation in preparation',
+      comingText: 'A detailed explanation has not yet been published. You can continue in the exercises section.',
       back: 'Back to Topics',
       exercises: 'Go to Exercises'
     }
@@ -146,9 +146,187 @@
     document.head.appendChild(link);
   }
 
+  const topicDescriptions = {
+  "artikel": [
+    "İsimlerin artikelleri ve temel kullanım kuralları",
+    "Artikel der Nomen und grundlegende Verwendung",
+    "Noun articles and their basic use"
+  ],
+  "personalpronomen": [
+    "Kişi zamirleri ve cümlede özne kullanımı",
+    "Personalpronomen und Subjekte im Satz",
+    "Personal pronouns and sentence subjects"
+  ],
+  "sein-haben": [
+    "sein ve haben fiillerinin Präsens çekimi",
+    "Präsensformen von sein und haben",
+    "Present-tense forms of sein and haben"
+  ],
+  "praesens": [
+    "Düzenli ve temel düzensiz fiillerin Präsens çekimi",
+    "Präsensformen regelmäßiger und wichtiger unregelmäßiger Verben",
+    "Present-tense forms of regular and common irregular verbs"
+  ],
+  "w-fragen": [
+    "Soru sözcükleri ve soru cümlesinin yapısı",
+    "Fragewörter und Aufbau von W-Fragen",
+    "Question words and wh-question structure"
+  ],
+  "akkusativ": [
+    "Doğrudan nesne ve Akkusativ artikel biçimleri",
+    "Direktes Objekt und Artikelformen im Akkusativ",
+    "Direct objects and accusative article forms"
+  ],
+  "modalverben": [
+    "Temel modal fiiller ve cümlede kullanımı",
+    "Grundlegende Modalverben und ihre Satzstellung",
+    "Basic modal verbs and word order"
+  ],
+  "trennbare-verben": [
+    "Ayrılabilen fiillerin çekimi ve ön ekin yeri",
+    "Trennbare Verben und Stellung der Vorsilbe",
+    "Separable verbs and prefix placement"
+  ],
+  "possessivartikel": [
+    "Sahiplik bildiren artikel biçimleri",
+    "Possessivartikel und ihre Formen",
+    "Possessive articles and their forms"
+  ],
+  "perfekt": [
+    "haben/sein ve Partizip II ile geçmiş zaman",
+    "Vergangenheit mit haben/sein und Partizip II",
+    "Past tense with haben/sein and the past participle"
+  ],
+  "dativ": [
+    "Dolaylı nesne ve Dativ artikel biçimleri",
+    "Indirektes Objekt und Artikelformen im Dativ",
+    "Indirect objects and dative article forms"
+  ],
+  "wechselpraepositionen": [
+    "Wo ve Wohin ayrımına göre edat kullanımı",
+    "Wechselpräpositionen mit Wo und Wohin",
+    "Two-way prepositions with location and direction"
+  ],
+  "reflexive-verben": [
+    "Dönüşlü fiiller ve dönüşlülük zamirleri",
+    "Reflexive Verben und Reflexivpronomen",
+    "Reflexive verbs and pronouns"
+  ],
+  "konjunktiv-ii-basic": [
+    "İstek, öneri ve kibar ifadeler için temel yapılar",
+    "Grundformen für Wünsche, Vorschläge und höfliche Aussagen",
+    "Basic forms for wishes, suggestions and polite expressions"
+  ],
+  "dass-saetze": [
+    "dass ile yan cümleler ve fiilin konumu",
+    "Nebensätze mit dass und Verbstellung",
+    "dass clauses and verb position"
+  ],
+  "weil-wenn-obwohl": [
+    "Sebep, koşul ve karşıtlık bildiren yan cümleler",
+    "Nebensätze für Grund, Bedingung und Gegensatz",
+    "Clauses expressing reason, condition and contrast"
+  ],
+  "komparativ-superlativ": [
+    "Sıfatların karşılaştırma biçimleri",
+    "Steigerungsformen der Adjektive",
+    "Comparative and superlative adjective forms"
+  ],
+  "praepositionen-a2": [
+    "Sık kullanılan Akkusativ ve Dativ edatları",
+    "Häufige Präpositionen mit Akkusativ und Dativ",
+    "Common accusative and dative prepositions"
+  ],
+  "adjektivdeklination-a2": [
+    "Sıfat çekimine giriş ve temel ekler",
+    "Einstieg in die Adjektivdeklination",
+    "Introduction to adjective endings"
+  ],
+  "relativsaetze": [
+    "İsimleri açıklayan yan cümleler ve ilgi zamirleri",
+    "Relativsätze und Relativpronomen",
+    "Relative clauses and pronouns"
+  ],
+  "passiv": [
+    "werden ve Partizip II ile edilgen yapı",
+    "Passiv mit werden und Partizip II",
+    "Passive voice with werden and the past participle"
+  ],
+  "infinitiv-mit-zu": [
+    "zu ile mastar yapıları ve cümle bağlantıları",
+    "Infinitivgruppen mit zu",
+    "Infinitive constructions with zu"
+  ],
+  "verben-mit-praepositionen": [
+    "Sabit fiil-edat birleşimleri",
+    "Feste Verb-Präposition-Verbindungen",
+    "Fixed verb-preposition combinations"
+  ],
+  "praeteritum": [
+    "sein, haben ve modal fiillerde geçmiş zaman",
+    "Präteritum von sein, haben und Modalverben",
+    "Simple past of sein, haben and modal verbs"
+  ],
+  "temporalsaetze": [
+    "Zaman bildiren yan cümleler",
+    "Temporale Nebensätze",
+    "Time clauses"
+  ],
+  "zweiteilige-konnektoren": [
+    "İkili bağlaçlar ve cümle bağlantıları",
+    "Zweiteilige Konnektoren und Satzverbindungen",
+    "Paired connectors and clause combinations"
+  ],
+  "konjunktiv-ii-b1": [
+    "Varsayım, tavsiye ve kibar ifade yapıları",
+    "Hypothesen, Ratschläge und höfliche Aussagen",
+    "Hypotheses, advice and polite expressions"
+  ],
+  "konjunktiv-i": [
+    "Dolaylı anlatımda Konjunktiv I kullanımı",
+    "Konjunktiv I in der indirekten Rede",
+    "Konjunktiv I in reported speech"
+  ],
+  "nominalisierung": [
+    "Fiil ve sıfatların isimleşmesi",
+    "Nominalisierung von Verben und Adjektiven",
+    "Nominalisation of verbs and adjectives"
+  ],
+  "passiv-modalverben": [
+    "Modal fiillerle edilgen yapılar",
+    "Passiv mit Modalverben",
+    "Passive constructions with modal verbs"
+  ],
+  "partizipialkonstruktionen": [
+    "Partizip I ve II ile sıfat ve cümle yapıları",
+    "Konstruktionen mit Partizip I und II",
+    "Constructions with present and past participles"
+  ],
+  "n-deklination": [
+    "Özel çekime sahip maskulin isimler",
+    "Maskuline Nomen mit N-Deklination",
+    "Masculine nouns with weak declension"
+  ],
+  "komplexe-nebensaetze": [
+    "İleri düzey yan cümle yapıları",
+    "Komplexe Nebensatzstrukturen",
+    "Complex subordinate clause structures"
+  ],
+  "konnektoren-b2": [
+    "İleri düzey bağlayıcılar ve anlam ilişkileri",
+    "Konnektoren und Bedeutungsbeziehungen auf B2",
+    "Advanced connectors and meaning relationships"
+  ],
+  "indirekte-rede": [
+    "Konjunktiv I ve II ile dolaylı anlatım",
+    "Indirekte Rede mit Konjunktiv I und II",
+    "Reported speech with Konjunktiv I and II"
+  ]
+};
   function localizeTopic(topic) {
     // Topic names are intentionally kept in standard German terminology.
-    return { id: topic[0], title: topic[1], description: topic[2] };
+    const index = {tr:0, de:1, en:2}[lang()] ?? 0;
+    return { id: topic[0], title: topic[1], description: topicDescriptions[topic[0]]?.[index] || topic[2] };
   }
 
   function root() {

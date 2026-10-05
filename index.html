@@ -15,8 +15,9 @@
   <link rel="stylesheet" href="css/style.css?v=10" />
   <link rel="stylesheet" href="css/lessons.css?v=1" />
   <link rel="stylesheet" href="css/home.css?v=1" />
+  <link rel="stylesheet" href="css/theme.css?v=1" />
 </head>
-<body>
+<body class="academy-theme">
   <div class="shell">
     <header class="topbar">
       <nav class="nav">
@@ -26,8 +27,8 @@
         </button>
         <div class="nav-links" aria-label="Site menüsü">
           <button class="nav-link active" data-page="home" data-i18n="navHome">Ana Sayfa</button>
-          <button class="nav-link" data-page="lessons" data-i18n="navLessons">Almanca Ders</button>
-          <button class="nav-link" data-page="grammar" data-i18n="navGrammar">Gramer Konuları</button>
+          <button class="nav-link" data-page="lessons" data-i18n="navLessons">Almanca Dersleri</button>
+          <button class="nav-link" data-page="grammar" data-i18n="navGrammar">Gramer</button>
           <button class="nav-link" data-page="exercises" data-i18n="navExercises">Alıştırmalar</button>
           <button class="nav-link" data-page="exams" data-i18n="navExams">Sınav Hazırlığı</button>
           <button class="nav-link" data-page="about" data-i18n="navAbout">Hakkımda</button>
@@ -96,13 +97,13 @@
       <section class="page" id="page-lessons">
         <section class="lesson-hero-pro">
           <div class="lesson-hero-copy">
-            <span class="tag" data-i18n="lessonsTag">Online Almanca Özel Ders</span>
+            <span class="tag" data-i18n="lessonsTag">Almanca Dersleri</span>
             <div class="lesson-free-badge" data-i18n="lessonFreeBadge">İlk ders ücretsiz</div>
-            <h1 data-i18n="lessonsTitle">Almancayı hedefin için öğren: eğitim, iş, sınav ve günlük yaşam</h1>
-            <p data-i18n="lessonsSub">Almanya’da Makina Mühendisliği öğrencisi olarak; yalnızca dil bilgisi değil, Almanya’da gerçekten işine yarayacak Almanca üzerine çalışıyorum.</p>
+            <h1 data-i18n="lessonsTitle">Online Almanca dersleri</h1>
+            <p data-i18n="lessonsSub">A1’den B2’ye bireysel dersler, konuşma pratiği ve sınav hazırlığı. Ders içeriği seviyene ve öğrenme hedeflerine göre belirlenir.</p>
             <div class="lesson-hero-actions">
-              <button class="btn gold" type="button" data-page="contact" data-i18n="lessonContactCta">Ücretsiz ilk ders için iletişime geç</button>
-              <button class="lesson-inline-link" type="button" onclick="document.getElementById('lesson-details').scrollIntoView({behavior:'smooth'})" data-i18n="lessonExplore">Ders içeriğini incele ↓</button>
+              <button class="btn gold" type="button" data-page="contact" data-i18n="lessonContactCta">İlk ders için iletişim</button>
+              <button class="lesson-inline-link" type="button" onclick="document.getElementById('lesson-details').scrollIntoView({behavior:'smooth'})" data-i18n="lessonExplore">Ders içeriği ↓</button>
             </div>
           </div>
           <div class="lesson-hero-stats" aria-label="Ders bilgileri">
@@ -116,43 +117,43 @@
           <div class="lesson-intro-grid">
             <article class="lesson-feature-card lesson-feature-highlight">
               <span class="lesson-kicker" data-i18n="lessonFirstKicker">İlk ders</span>
-              <h2 data-i18n="lessonFirstTitle">Önce seviyeni ve hedefini birlikte netleştiriyoruz</h2>
-              <p data-i18n="lessonFirstText">İlk derste seviye tespiti yapıyor, seni tanıyor, hangi noktada olduğunu belirliyor ve sana özel bir ders planı oluşturuyorum.</p>
+              <h2 data-i18n="lessonFirstTitle">Seviye değerlendirmesi ve ders planı</h2>
+              <p data-i18n="lessonFirstText">İlk derste mevcut seviyen, hedeflerin ve çalışma ihtiyaçların değerlendirilir. Sonraki derslerin içeriği bu görüşmeye göre planlanır.</p>
             </article>
             <article class="lesson-feature-card">
               <span class="lesson-card-icon">◎</span>
-              <h3 data-i18n="lessonPlanTitle">Kişiye özel plan</h3>
-              <p data-i18n="lessonPlanText">Ders akışı; seviyene, öğrenme hızına, zorlandığın alanlara ve ulaşmak istediğin hedefe göre şekillenir.</p>
+              <h3 data-i18n="lessonPlanTitle">Seviyene uygun içerik</h3>
+              <p data-i18n="lessonPlanText">Konuların sırası ve çalışma temposu, mevcut bilgine ve ilerlemene göre düzenlenir.</p>
             </article>
             <article class="lesson-feature-card">
               <span class="lesson-card-icon">↗</span>
-              <h3 data-i18n="lessonPracticalTitle">Gerçek kullanım odaklı</h3>
-              <p data-i18n="lessonPracticalText">Gramer bilgisini konuşma, yazma, eğitim, iş ve günlük yaşamda kullanabileceğin yapılarla birleştiriyoruz.</p>
+              <h3 data-i18n="lessonPracticalTitle">Konuşma ve yazma pratiği</h3>
+              <p data-i18n="lessonPracticalText">Dil bilgisi; örnek cümleler, kısa diyaloglar ve yazma çalışmalarıyla uygulanır.</p>
             </article>
           </div>
         </section>
 
         <section class="block lesson-page-block">
           <div class="lesson-section-head">
-            <span class="tag" data-i18n="lessonOfferTag">Neler sunuyorum?</span>
-            <h2 data-i18n="lessonOfferTitle">Tek bir hedefe değil, Almanca yolculuğunun tamamına destek</h2>
+            <span class="tag" data-i18n="lessonOfferTag">Çalışma Alanları</span>
+            <h2 data-i18n="lessonOfferTitle">Ders içerikleri</h2>
           </div>
           <div class="lesson-offer-grid">
-            <article class="lesson-offer"><span>01</span><h3 data-i18n="offer1Title">A1’den B2’ye bireysel Almanca</h3><p data-i18n="offer1Text">Temelden başlayıp düzenli ilerlemek veya mevcut seviyendeki eksikleri kapatmak için birebir dersler.</p></article>
-            <article class="lesson-offer"><span>02</span><h3 data-i18n="offer2Title">Teknik Almanca</h3><p data-i18n="offer2Text">Mühendislik, sanayi ve iş dünyasında kullanılan teknik kelime ve ifade yapılarına yönelik çalışma.</p></article>
-            <article class="lesson-offer"><span>03</span><h3 data-i18n="offer3Title">Dil bilgisi, konuşma ve yazma</h3><p data-i18n="offer3Text">Grameri tek başına ezberlemek yerine konuşma ve yazma pratiğiyle birlikte kullanma.</p></article>
-            <article class="lesson-offer"><span>04</span><h3 data-i18n="offer4Title">Sınav hazırlığı</h3><p data-i18n="offer4Text">TELC, Goethe, TestDaF ve benzeri sınavlara hedef odaklı hazırlık.</p></article>
-            <article class="lesson-offer"><span>05</span><h3 data-i18n="offer5Title">Almanya’da eğitim ve iş</h3><p data-i18n="offer5Text">Üniversite, Ausbildung, iş başvurusu ve profesyonel hayat için gerekli dil desteği.</p></article>
-            <article class="lesson-offer"><span>06</span><h3 data-i18n="offer6Title">Günlük yaşam ve vize süreçleri</h3><p data-i18n="offer6Text">Almanya’ya taşınma, günlük iletişim, aile birleşimi ve vize süreçlerinde ihtiyaç duyulan Almanca.</p></article>
+            <article class="lesson-offer"><span>01</span><h3 data-i18n="offer1Title">A1’den B2’ye bireysel Almanca</h3><p data-i18n="offer1Text">Başlangıçtan B2’ye kadar kelime, dil bilgisi ve iletişim becerileri üzerine birebir çalışma.</p></article>
+            <article class="lesson-offer"><span>02</span><h3 data-i18n="offer2Title">Teknik Almanca</h3><p data-i18n="offer2Text">Mühendislik ve iş ortamlarında kullanılan kelimeler, metinler ve iletişim örnekleri.</p></article>
+            <article class="lesson-offer"><span>03</span><h3 data-i18n="offer3Title">Dil bilgisi, konuşma ve yazma</h3><p data-i18n="offer3Text">Gramer konularını sözlü ve yazılı ifadeye dönüştüren uygulamalar.</p></article>
+            <article class="lesson-offer"><span>04</span><h3 data-i18n="offer4Title">Sınav hazırlığı</h3><p data-i18n="offer4Text">Hedef sınavın görev türlerine yönelik okuma, dinleme, yazma ve konuşma çalışmaları.</p></article>
+            <article class="lesson-offer"><span>05</span><h3 data-i18n="offer5Title">Almanya’da eğitim ve iş</h3><p data-i18n="offer5Text">Üniversite, Ausbildung ve iş başvurularında kullanılan Almanca üzerine çalışma.</p></article>
+            <article class="lesson-offer"><span>06</span><h3 data-i18n="offer6Title">Günlük yaşamda Almanca</h3><p data-i18n="offer6Text">Randevu, alışveriş, telefon görüşmesi ve resmi işlemler için iletişim pratiği.</p></article>
           </div>
         </section>
 
         <section class="block lesson-page-block">
           <div class="lesson-audience-wrap">
             <div class="lesson-section-head lesson-section-head-left">
-              <span class="tag" data-i18n="lessonAudienceTag">Kimler için uygun?</span>
-              <h2 data-i18n="lessonAudienceTitle">Hedefin Almanya ise, ders planını hedefine göre kurabiliriz</h2>
-              <p data-i18n="lessonAudienceSub">Farklı amaçlarla Almanca öğrenen öğrenciler için ders içerikleri hedefe göre özelleştirilir.</p>
+              <span class="tag" data-i18n="lessonAudienceTag">Öğrenme Hedefleri</span>
+              <h2 data-i18n="lessonAudienceTitle">Kimler için uygun</h2>
+              <p data-i18n="lessonAudienceSub">Dersler, Almancayı eğitimde, işte veya günlük yaşamda kullanmak isteyen öğrencilere yöneliktir.</p>
             </div>
             <div class="lesson-check-list">
               <div data-i18n="aud1">Almanya’ya taşınmak isteyenler</div>
@@ -172,14 +173,14 @@
         <section class="block lesson-page-block">
           <div class="lesson-why-grid">
             <div class="lesson-section-head lesson-section-head-left">
-              <span class="tag" data-i18n="lessonWhyTag">Neden benimle?</span>
-              <h2 data-i18n="lessonWhyTitle">Teknik disiplin, kişisel plan ve pratik Almanca</h2>
+              <span class="tag" data-i18n="lessonWhyTag">Ders Düzeni</span>
+              <h2 data-i18n="lessonWhyTitle">Derslerin işleyişi</h2>
             </div>
             <div class="lesson-why-cards">
-              <article><h3 data-i18n="why1Title">Teknik altyapı</h3><p data-i18n="why1Text">Mühendislik eğitimim sayesinde teknik Almanca ve profesyonel dil kullanımına güçlü bir bakış açısı sunuyorum.</p></article>
-              <article><h3 data-i18n="why2Title">Sabırlı ve düzenli ders yapısı</h3><p data-i18n="why2Text">Derslerde acele etmek yerine konuyu anlayarak, tekrar ederek ve düzenli ilerleyerek öğrenmeye odaklanıyoruz.</p></article>
-              <article><h3 data-i18n="why3Title">Kişiye özel materyal</h3><p data-i18n="why3Text">Ders materyalleri öğrencinin seviyesine, hedeflerine ve eksiklerine göre hazırlanır.</p></article>
-              <article><h3 data-i18n="why4Title">Tamamen online</h3><p data-i18n="why4Text">Dersler Zoom veya Google Meet üzerinden online olarak gerçekleştirilir.</p></article>
+              <article><h3 data-i18n="why1Title">Adım adım konu anlatımı</h3><p data-i18n="why1Text">Yeni konular örneklerle açıklanır; anlaşılmayan noktalar uygulama sırasında tekrar ele alınır.</p></article>
+              <article><h3 data-i18n="why2Title">Düzenli tekrar</h3><p data-i18n="why2Text">Önceki konular kısa tekrarlarla korunur ve yeni konularla bağlantı kurulur.</p></article>
+              <article><h3 data-i18n="why3Title">Ders materyalleri</h3><p data-i18n="why3Text">Konu anlatımları ve alıştırmalar, ders içindeki çalışmaların tekrarında kullanılır.</p></article>
+              <article><h3 data-i18n="why4Title">Online ders</h3><p data-i18n="why4Text">Dersler Zoom veya Google Meet üzerinden, 50 dakikalık oturumlar hâlinde yapılır.</p></article>
             </div>
           </div>
         </section>
@@ -187,11 +188,11 @@
         <section class="block lesson-page-block lesson-final-cta-wrap">
           <div class="lesson-final-cta">
             <div>
-              <span class="tag" data-i18n="lessonCtaTag">Başlamak ister misin?</span>
-              <h2 data-i18n="lessonCtaTitle">İlk ders ücretsiz. Seviyeni ve hedefini birlikte belirleyelim</h2>
-              <p data-i18n="lessonCtaText">İletişim sayfasından kısa bir mesaj bırakman yeterli. Seviyeni, hedefini ve özellikle çalışmak istediğin konuyu yazabilirsin.</p>
+              <span class="tag" data-i18n="lessonCtaTag">İlk Görüşme</span>
+              <h2 data-i18n="lessonCtaTitle">İlk ders için iletişim</h2>
+              <p data-i18n="lessonCtaText">Seviyeni ve öğrenme hedefini mesajında paylaşabilirsin. İlk ders ücretsizdir.</p>
             </div>
-            <button class="btn gold lesson-cta-button" type="button" data-page="contact" data-i18n="lessonCtaButton">İlk Dersi Planla →</button>
+            <button class="btn gold lesson-cta-button" type="button" data-page="contact" data-i18n="lessonCtaButton">İletişime geç</button>
           </div>
         </section>
       </section>
@@ -217,9 +218,9 @@
       <section class="page" id="page-exercises">
         <div class="page-hero">
           <div class="page-hero-inner">
-            <span class="tag" data-i18n="exerciseHubTag">Alıştırma Merkezi</span>
-            <h1 data-i18n="exerciseHubTitle">Seviyeni seç, konuyu aç ve çalışmaya başla</h1>
-            <p data-i18n="exerciseHubSub">A1, A2, B1 ve B2 seviyelerinde konu bazlı alıştırma setleri. Yeni materyaller geldikçe bu bölüm otomatik olarak büyüyecek.</p>
+            <span class="tag" data-i18n="exerciseHubTag">Alıştırmalar</span>
+            <h1 data-i18n="exerciseHubTitle">Seviyelere göre Almanca alıştırmaları</h1>
+            <p data-i18n="exerciseHubSub">A1–B2 seviyelerinde konu bazlı sorular ve cevap açıklamaları. Seviyeni seçerek veya konu arayarak çalışmaya başlayabilirsin.</p>
           </div>
         </div>
 
@@ -230,7 +231,7 @@
             <div class="section-head">
               <div>
                 <span class="tag" data-i18n="stepOne">1. Adım</span>
-                <h2 data-i18n="chooseLevel">Seviye seç</h2>
+                <h2 data-i18n="chooseLevel">Seviye seçimi</h2>
                 <p class="sub" data-i18n="chooseLevelSub">Çalışmak istediğin Almanca seviyesini seç.</p>
               </div>
             </div>
@@ -245,7 +246,7 @@
               <div>
                 <span class="tag" data-i18n="stepTwo">2. Adım</span>
                 <h2 id="topicViewTitle">A1 Konuları</h2>
-                <p class="sub" data-i18n="chooseTopicSub">Bir konu seç. İçeriği hazır olan konularda alıştırmaları hemen açabilirsin.</p>
+                <p class="sub" data-i18n="chooseTopicSub">Çalışmak istediğin konuyu seç. Hazır paketlerde konu anlatımı ve alıştırmalar bulunur.</p>
               </div>
             </div>
             <div class="topic-choice-grid" id="topicChoiceGrid"></div>
@@ -259,8 +260,8 @@
             <div class="section-head">
               <div>
                 <span class="tag" data-i18n="stepThree">3. Adım</span>
-                <h2 data-i18n="chooseExercise">Alıştırma seç</h2>
-                <p class="sub" data-i18n="chooseExerciseSub">Çözmek istediğin alıştırma setini aç.</p>
+                <h2 data-i18n="chooseExercise">Alıştırma paketleri</h2>
+                <p class="sub" data-i18n="chooseExerciseSub">Soru türünü ve zorluk seviyesini inceleyerek bir paket seç.</p>
               </div>
             </div>
             <div class="exercise-set-grid" id="exerciseSetGrid"></div>
@@ -300,8 +301,21 @@
       </section>
 
       <section class="page" id="page-exams">
-        <div class="page-hero"><div class="page-hero-inner"><span class="tag" data-i18n="examTag">Sınav Hazırlığı</span><h1 data-i18n="examTitle">Goethe, telc, ÖSD ve okul sınavlarına hazırlık</h1><p data-i18n="examSub">Sınav hazırlığı; okuma, dinleme, yazma ve konuşma becerilerini hedef sınava göre birlikte geliştirir.</p></div></div>
-        <section class="block"><div class="cards"><article class="card"><div class="icon">📖</div><h3>Lesen</h3><p data-i18n="examRead">Metin anlama, ana fikir bulma, doğru-yanlış ve eşleştirme soruları.</p></article><article class="card"><div class="icon">✍️</div><h3>Schreiben</h3><p data-i18n="examWrite">E-posta, mektup, görüş yazısı ve sınav formatına uygun yazma pratiği.</p></article><article class="card"><div class="icon">💬</div><h3>Sprechen</h3><p data-i18n="examSpeak">Kendini tanıtma, görsel anlatma, fikir belirtme ve karşılıklı konuşma çalışmaları.</p></article></div></section>
+        <div class="page-hero"><div class="page-hero-inner"><span class="tag" data-i18n="examTag">Sınav Hazırlığı</span><h1 data-i18n="examTitle">Almanca sınavlarına hazırlık</h1><p data-i18n="examSub">Goethe, telc, ÖSD ve okul sınavları için görev türleri ve dil becerileri üzerine çalışma. İçerik, hedef sınavına göre belirlenir.</p></div></div>
+        <section class="block">
+          <div class="grid-2">
+            <article class="card"><h3>Lesen</h3><p data-i18n="examRead">Metinlerde ana fikir, ayrıntı ve bilgi eşleştirme üzerine çalışma.</p></article>
+            <article class="card"><h3>Hören</h3><p data-i18n="examListen">Günlük konuşmalarda ve sınav kayıtlarında ana bilgileri ve ayrıntıları anlama.</p></article>
+            <article class="card"><h3>Schreiben</h3><p data-i18n="examWrite">E-posta, mektup ve görüş yazılarını görev yönergesine uygun biçimde hazırlama.</p></article>
+            <article class="card"><h3>Sprechen</h3><p data-i18n="examSpeak">Kendini tanıtma, fikir belirtme ve karşılıklı konuşma görevleri üzerine uygulama.</p></article>
+          </div>
+        </section>
+        <section class="block">
+          <div class="lesson-final-cta exam-plan">
+            <div><span class="tag" data-i18n="examTag">Sınav Hazırlığı</span><h2 data-i18n="examProcessTitle">Sınava yönelik çalışma planı</h2><p data-i18n="examProcessText">İlk görüşmede sınavın, mevcut seviyen ve sınav tarihin değerlendirilir. Çalışma planı, geliştirilmesi gereken becerilere ve hazırlık süresine göre oluşturulur.</p></div>
+            <button class="btn primary" type="button" data-page="contact" data-i18n="examContact">Sınav hazırlığı için iletişim</button>
+          </div>
+        </section>
       </section>
 
       <section class="page" id="page-about">
@@ -310,13 +324,9 @@
     <div class="page-hero-inner">
       <span class="tag" data-i18n="aboutTag">Hakkımda</span>
 
-      <h1 data-i18n="aboutTitle">
-        Dil öğretimi, mühendislik disiplini ve Almanya deneyimini bir araya getiriyorum</h1>
+      <h1 data-i18n="aboutTitle">Ömer Faruk Bozkurt</h1>
 
-      <p data-i18n="aboutSub">
-        Liseden bu yana yabancı dillerde özel ders veriyor; bugün bu öğretim deneyimini
-        Almanya’daki eğitim, iş ve günlük yaşam tecrübemle birleştiriyorum.
-      </p>
+      <p data-i18n="aboutSub">Almanya’da yaşayan, online Almanca dersleri veren bir Makine Mühendisliği öğrencisiyim.</p>
     </div>
   </div>
 
@@ -330,23 +340,13 @@
 
       <div class="about-text">
 
-        <span class="tag" data-i18n="founderRole3">Kurucu & Eğitmen</span>
+        <span class="tag" data-i18n="founderRole3">Almanca eğitmeni</span>
 
         <h2>Ömer Faruk Bozkurt</h2>
 
-        <p class="founder-bio" data-i18n="founderBio">
-          Yabancı dil öğretmeye lise yıllarımda özel dersler vererek başladım.
-          Farklı seviyelerdeki öğrencilerle çalışırken bir dili öğrenmenin yalnızca
-          gramer kurallarını bilmekten ibaret olmadığını; doğru açıklama, düzenli
-          tekrar ve öğrencinin ihtiyacına uygun pratiğin çok daha önemli olduğunu gördüm.
-        </p>
+        <p class="founder-bio" data-i18n="founderBio">Yabancı dil öğretmeye lise yıllarında özel ders vererek başladım. Derslerimde açık konu anlatımı, düzenli tekrar ve sözlü uygulamaya önem veriyorum.</p>
 
-        <p class="founder-bio" data-i18n="founderBio2">
-          Bugün Almanya’da Makine Mühendisliği eğitimime devam ederken,
-          Almanca öğretme deneyimimi Almanya’daki üniversite, iş ve günlük yaşam
-          tecrübemle birleştiriyorum. Amacım öğrencilerime yalnızca sınavda doğru
-          cevap verebilecekleri değil, gerçek hayatta kullanabilecekleri Almancayı öğretmek.
-        </p>
+        <p class="founder-bio" data-i18n="founderBio2">Almanya’daki eğitim ve günlük yaşam deneyimimi, öğrencilerin karşılaşabileceği iletişim durumlarına yönelik örneklerle derslere taşıyorum.</p>
 
       </div>
     </div>
@@ -356,15 +356,11 @@
   <section class="block">
 
     <div class="section-head center">
-      <span class="tag" data-i18n="aboutJourneyTag">Geçmişim</span>
+      <span class="tag" data-i18n="aboutJourneyTag">Eğitim ve Deneyim</span>
 
-      <h2 data-i18n="aboutJourneyTitle">
-        Dil eğitiminden mühendisliğe uzanan çok yönlü bir deneyim</h2>
+      <h2 data-i18n="aboutJourneyTitle">Eğitim ve çalışma geçmişim</h2>
 
-      <p class="sub" data-i18n="aboutJourneySub">
-        Eğitim ve çalışma hayatımdaki farklı deneyimleri derslerimin daha sistemli,
-        anlaşılır ve gerçek kullanım odaklı olması için kullanıyorum.
-      </p>
+      <p class="sub" data-i18n="aboutJourneySub">Dil öğretimi, mühendislik eğitimi ve Almanya’daki yaşam deneyimim.</p>
     </div>
 
 
@@ -373,45 +369,27 @@
       <article class="card white">
         <div class="icon">🗣️</div>
 
-        <h3 data-i18n="aboutTeachingTitle">
-          Liseden beri özel ders
-        </h3>
+        <h3 data-i18n="aboutTeachingTitle">Özel ders deneyimi</h3>
 
-        <p data-i18n="aboutTeachingText">
-          Lise yıllarımdan itibaren yabancı dillerde özel ders veriyorum.
-          Bu süreçte farklı öğrenme hızlarına ve ihtiyaçlara sahip öğrencilerle
-          birebir çalışma deneyimi kazandım.
-        </p>
+        <p data-i18n="aboutTeachingText">Lise yıllarından beri farklı seviyelerde öğrencilere yabancı dil dersleri veriyorum.</p>
       </article>
 
 
       <article class="card white">
         <div class="icon">🎓</div>
 
-        <h3 data-i18n="aboutEducationTitle">
-          Türkiye ve Almanya’da eğitim
-        </h3>
+        <h3 data-i18n="aboutEducationTitle">Mühendislik eğitimi</h3>
 
-        <p data-i18n="aboutEducationText">
-          İstanbul Teknik Üniversitesi’nde başlayan mühendislik eğitimimin ardından
-          Erasmus+ kapsamında Hochschule Düsseldorf’ta eğitim aldım.
-          Şu anda Universität Duisburg-Essen’da Makine Mühendisliği eğitimime devam ediyorum.
-        </p>
+        <p data-i18n="aboutEducationText">İstanbul Teknik Üniversitesi’nde başlayan mühendislik eğitimimin ardından Erasmus+ kapsamında Hochschule Düsseldorf’ta eğitim aldım. Universität Duisburg-Essen’da Makine Mühendisliği eğitimime devam ediyorum.</p>
       </article>
 
 
       <article class="card white">
         <div class="icon">🌍</div>
 
-        <h3 data-i18n="aboutLanguagesTitle">
-          Çok dilli bakış açısı
-        </h3>
+        <h3 data-i18n="aboutLanguagesTitle">Dil bilgisi</h3>
 
-        <p data-i18n="aboutLanguagesText">
-          Türkçeyi ana dilim olarak; Almanca ve İngilizceyi akıcı seviyede kullanıyorum.
-          Bir yabancı dili öğrenme sürecini öğrenci perspektifinden de bildiğim için
-          konuları mümkün olduğunca açık ve karşılaştırmalı anlatmaya önem veriyorum.
-        </p>
+        <p data-i18n="aboutLanguagesText">Ana dilim Türkçe. Almanca ve İngilizceyi akıcı biçimde kullanıyorum; derslerde gerektiğinde diller arasında karşılaştırmalar yapıyorum.</p>
       </article>
 
     </div>
@@ -425,32 +403,18 @@
 
       <article class="level-card">
 
-        <h3 data-i18n="aboutEngineeringTitle">
-          Mühendislik ve profesyonel deneyim
-        </h3>
+        <h3 data-i18n="aboutEngineeringTitle">Profesyonel deneyim</h3>
 
-        <p data-i18n="aboutEngineeringText">
-          Mercedes-Benz, Aluminium Norf, Ford ve TÜBİTAK gibi kurumlarda üretim,
-          kalite, süreç geliştirme, veri analizi ve teknik projeler üzerine deneyim kazandım.
-          Bu teknik altyapı; derslerimde planlı çalışma, problem çözme ve konuları
-          adım adım açıklama yaklaşımımı güçlendiriyor.
-        </p>
+        <p data-i18n="aboutEngineeringText">Mercedes-Benz, Aluminium Norf, Ford ve TÜBİTAK’ta üretim, kalite, süreç geliştirme, veri analizi ve teknik projeler üzerine deneyim kazandım.</p>
 
       </article>
 
 
       <article class="level-card">
 
-        <h3 data-i18n="aboutGermanyTitle">
-          Almanya’da gerçek yaşam deneyimi
-        </h3>
+        <h3 data-i18n="aboutGermanyTitle">Almanya’da yaşam</h3>
 
-        <p data-i18n="aboutGermanyText">
-          Almanya’da eğitim görmek ve çalışmak sayesinde üniversite, iş başvuruları,
-          profesyonel iletişim ve günlük yaşamda kullanılan Almancayı doğrudan deneyimliyorum.
-          Derslerde yalnızca kitap Almancası değil, öğrencinin Almanya’da gerçekten
-          karşılaşacağı iletişim durumlarına da yer veriyorum.
-        </p>
+        <p data-i18n="aboutGermanyText">Derslerde üniversite, iş başvuruları ve günlük iletişimden örnekler kullanıyorum.</p>
 
       </article>
 
@@ -462,42 +426,32 @@
   <section class="block">
 
     <div class="section-head center">
-      <span class="tag" data-i18n="aboutMethodTag">Ders yaklaşımım</span>
+      <span class="tag" data-i18n="aboutMethodTag">Ders Yaklaşımı</span>
 
-      <h2 data-i18n="aboutMethodTitle">
-        Her öğrenci için aynı ders planı değil</h2>
+      <h2 data-i18n="aboutMethodTitle">Açıklama, uygulama ve tekrar</h2>
     </div>
 
 
     <div class="cards">
 
       <article class="card white">
-        <h3 data-i18n="method1Title">Sistemli ilerleme</h3>
+        <h3 data-i18n="method1Title">Ders planı</h3>
 
-        <p data-i18n="method1Text">
-          Her öğrencinin seviyesi, hedefi ve eksikleri belirlenir;
-          dersler buna göre planlanır.
-        </p>
+        <p data-i18n="method1Text">Derslerin içeriği öğrencinin seviyesine, hedeflerine ve çalışma ihtiyaçlarına göre düzenlenir.</p>
       </article>
 
 
       <article class="card white">
-        <h3 data-i18n="method2Title">Gerçek kullanım</h3>
+        <h3 data-i18n="method2Title">Dil pratiği</h3>
 
-        <p data-i18n="method2Text">
-          Amaç yalnızca kural bilmek değil; Almancayı eğitim,
-          iş ve günlük yaşamda kullanabilmektir.
-        </p>
+        <p data-i18n="method2Text">Öğrenilen yapılar cümleler, diyaloglar ve yazma çalışmalarıyla kullanılır.</p>
       </article>
 
 
       <article class="card white">
-        <h3 data-i18n="method3Title">Kişiye özel anlatım</h3>
+        <h3 data-i18n="method3Title">Konu tekrarı</h3>
 
-        <p data-i18n="method3Text">
-          Öğrencinin zorlandığı konu farklıysa kullanılan örnekler,
-          sorular ve ödevler de buna göre değiştirilir.
-        </p>
+        <p data-i18n="method3Text">Zorlanılan konular yeni örnekler ve kısa alıştırmalarla tekrar ele alınır.</p>
       </article>
 
     </div>
@@ -510,8 +464,8 @@
         <div class="page-hero">
           <div class="page-hero-inner">
             <span class="tag" data-i18n="contactTag">İletişim</span>
-            <h1 data-i18n="contactTitle">Almanca hedefini birlikte planlayalım</h1>
-            <p data-i18n="contactSub">Kısa bir mesaj bırak; seviyene ve hedefine göre sana dönüş yapayım.</p>
+            <h1 data-i18n="contactTitle">Dersler ve ilk görüşme için iletişim</h1>
+            <p data-i18n="contactSub">Dersler hakkında bilgi almak için mesaj gönderebilir veya e-posta adresimden ulaşabilirsin.</p>
           </div>
         </div>
 
@@ -528,10 +482,10 @@
 
               <div class="contact-heading-row">
                 <span class="contact-heading-line" aria-hidden="true"></span>
-                <h2 data-i18n="formTitle">İlk görüşme için yaz</h2>
+                <h2 data-i18n="formTitle">İletişim formu</h2>
               </div>
 
-              <p class="contact-guide-title" data-i18n="contactGuideTitle">İlk mesajında şu bilgileri paylaşabilirsin:</p>
+              <p class="contact-guide-title" data-i18n="contactGuideTitle">Mesajında paylaşabileceğin bilgiler:</p>
               <ul class="contact-guide-list">
                 <li data-i18n="contactGuide1">Almanca seviyen (biliyorsan A1–B2)</li>
                 <li data-i18n="contactGuide2">Hedefin: günlük Almanca, sınav, iş veya okul</li>
@@ -560,7 +514,7 @@
 
                 <input class="contact-honey" type="text" id="companyWebsite" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
-                <button id="contactSubmitBtn" class="btn primary block contact-submit" type="submit" data-i18n="sendMessage">Mesaj Gönder</button>
+                <button id="contactSubmitBtn" class="btn primary block contact-submit" type="submit" data-i18n="sendMessage">Mesaj gönder</button>
                 <div id="formStatus" class="contact-form-status" role="status" aria-live="polite"></div>
               </form>
             </article>
@@ -569,12 +523,13 @@
       </section>
     </main>
 
-    <footer><div><strong>Bozkurt Academy</strong><br><span data-i18n="footerText">Almanca dersleri, gramer, alıştırmalar ve sınav hazırlığı.</span></div><div>© 2026 Bozkurt Academy</div></footer>
+    <footer><div><strong>Bozkurt Academy</strong><br><span data-i18n="footerText">Online Almanca dersleri ve öğrenme materyalleri</span></div><div>© 2026 Bozkurt Academy</div></footer>
   </div>
   <script src="js/app.js?v=10"></script>
-  <script src="js/quiz.js?v=13"></script>
+  <script src="js/quiz.js?v=14"></script>
   <script src="js/exercise-links.js?v=3"></script>
-  <script src="js/grammar.js?v=1"></script>
-  <script src="js/home.js?v=2"></script>
+  <script src="js/grammar.js?v=2"></script>
+  <script src="js/theme.js?v=1"></script>
+  <script src="js/home.js?v=3"></script>
 </body>
 </html>

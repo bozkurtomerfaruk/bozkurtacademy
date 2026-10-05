@@ -14,6 +14,7 @@
   <meta name="author" content="Bozkurt Academy" />
   <link rel="stylesheet" href="css/style.css?v=10" />
   <link rel="stylesheet" href="css/lessons.css?v=1" />
+  <link rel="stylesheet" href="css/home.css?v=1" />
 </head>
 <body>
   <div class="shell">
@@ -41,50 +42,55 @@
     </header>
 
     <main>
-      <section class="page active" id="page-home">
-        <div class="hero">
-          <div class="photo-frame">
-            <img src="images/omer-faruk.jpg" alt="Ömer Faruk Bozkurt - Bozkurt Academy Kurucu ve Eğitmen" />
-            <div class="photo-badge"><strong>Ömer Faruk Bozkurt</strong><span data-i18n="founderRole">Kurucu & Eğitmen</span></div>
-          </div>
-          <div class="hero-copy">
-            <span class="tag" data-i18n="heroTag">A1’den B2’ye Almanca desteği</span>
-            <h1 data-i18n="heroTitle">Almanca hedefin için planlı, anlaşılır ve kişisel eğitim.</h1>
-            <p class="lead" data-i18n="heroSub">Bozkurt Academy; bireysel ders, grup dersi, akademik danışmanlık, gramer konuları, seviye bazlı alıştırmalar ve sınav hazırlığı ile Almanca öğrenme sürecini net bir plana dönüştürür.</p>
-            <div class="founder-line"><div class="mini-logo">BA</div><div><strong>Ömer Faruk Bozkurt</strong><small data-i18n="founderRole2">Kurucu & Eğitmen</small></div></div>
-            <div class="cta-row"><button class="btn gold" data-page="contact" data-i18n="ctaContact">İlk görüşme için yaz</button><button class="btn ghost" data-page="exercises" data-i18n="ctaExercises">Alıştırmaları incele</button></div>
-            <div class="stats">
-              <div class="stat"><strong>A1-B2</strong><span data-i18n="stat1">Seviye bazlı eğitim</span></div>
-              <div class="stat"><strong>50 dk</strong><span data-i18n="stat2">Online özel ders</span></div>
-              <div class="stat"><strong data-i18n="stat3Value">Ücretsiz</strong><span data-i18n="stat3">İlk ders</span></div>
+      <section class="page active home-page" id="page-home">
+        <section class="home-hero" aria-labelledby="home-title">
+          <div class="home-intro" data-home-reveal>
+            <p class="home-eyebrow" data-i18n="homeEyebrow">Ömer Faruk Bozkurt · Online Almanca dersleri</p>
+            <h1 id="home-title" data-i18n="homeTitle">Birlikte Almanca çalışalım.</h1>
+            <p class="home-lead" data-i18n="homeIntro">Ben Ömer. Almanya’da yaşıyor, online Almanca dersleri veriyorum. Derslerde konuları birlikte çalışıyor, bol örnekle pratiğe döküyoruz.</p>
+            <div class="home-actions">
+              <button class="home-button" type="button" data-page="contact" data-i18n="homeContact">İlk ders için yaz</button>
+              <button class="home-text-link" type="button" data-page="exercises"><span data-i18n="homeExercises">Alıştırmaları keşfet</span><span aria-hidden="true">↗</span></button>
             </div>
+            <div class="home-facts"><span>A1–B2</span><span data-i18n="homeDuration">50 dakika · Online</span><span data-i18n="homeFree">İlk ders ücretsiz</span></div>
           </div>
-        </div>
+          <figure class="home-portrait" data-home-reveal>
+            <img src="images/omer-faruk.jpg" width="600" height="750" alt="Ömer Faruk Bozkurt" fetchpriority="high">
+            <figcaption><span>Ömer Faruk Bozkurt</span><span data-i18n="homePortraitCaption">Almanca eğitmeni</span></figcaption>
+          </figure>
+          <button class="home-scroll" type="button" data-home-scroll="home-lessons"><span data-i18n="homeScroll">Dersleri tanı</span><span aria-hidden="true">↓</span></button>
+        </section>
 
-        <section class="block">
-          <div class="section-head center">
-            <span class="tag" data-i18n="servicesTag">Ders ve Danışmanlık</span>
-            <h2 data-i18n="servicesTitle">İhtiyacına göre üç farklı çalışma modeli.</h2>
-            <p class="sub" data-i18n="servicesSub">Almanca öğreniminde hedef, seviye ve zaman planı kişiye göre değişir. Bu yüzden ders modeli öğrenciye göre belirlenir.</p>
+        <section class="home-section home-lessons" id="home-lessons" aria-labelledby="home-lessons-title">
+          <div class="home-section-heading" data-home-reveal>
+            <p class="home-eyebrow" data-i18n="homeLessonEyebrow">Derslerde nasıl çalışıyoruz?</p>
+            <h2 id="home-lessons-title" data-i18n="homeLessonTitle">Anlayarak öğren. Konuşarak pekiştir.</h2>
+            <button class="home-text-link" type="button" data-page="lessons"><span data-i18n="homeLessonLink">Dersler hakkında</span><span aria-hidden="true">↗</span></button>
           </div>
-          <div class="cards">
-            <article class="card white"><div class="icon">👤</div><h3 data-i18n="service1Title">Bireysel ders</h3><p data-i18n="service1Text">Kişiye özel plan, birebir takip, seviyeye uygun materyal ve düzenli geri bildirim.</p><div class="pill-row"><span class="pill">Online</span><span class="pill" data-i18n="pillPersonal">Kişisel plan</span><span class="pill" data-i18n="pillFast">Hızlı ilerleme</span></div></article>
-            <article class="card white"><div class="icon">👥</div><h3 data-i18n="service2Title">Grup dersi</h3><p data-i18n="service2Text">Benzer seviyedeki öğrencilerle etkileşimli, konuşma destekli ve düzenli Almanca dersleri.</p><div class="pill-row"><span class="pill" data-i18n="pillSpeaking">Konuşma</span><span class="pill" data-i18n="pillGroup">Grup takibi</span><span class="pill" data-i18n="pillRoutine">Düzen</span></div></article>
-            <article class="card white"><div class="icon">🎓</div><h3 data-i18n="service3Title">Akademik danışmanlık</h3><p data-i18n="service3Text">Almanya’da eğitim, iş, günlük yaşam, sınav süreci ve akademik Almanca için yol haritası desteği.</p><div class="pill-row"><span class="pill" data-i18n="pillGermany">Almanya</span><span class="pill" data-i18n="pillExam">Sınav</span><span class="pill" data-i18n="pillAcademic">Akademik</span></div></article>
+          <div class="home-steps">
+            <article class="home-step" data-home-reveal><span class="home-step-number" aria-hidden="true">01</span><div><h3 data-i18n="homeStep1Title">Önce seni tanıyorum.</h3><p data-i18n="homeStep1Text">İlk derste seviyeni, hedefini ve zorlandığın konuları konuşuyoruz.</p></div></article>
+            <article class="home-step" data-home-reveal><span class="home-step-number" aria-hidden="true">02</span><div><h3 data-i18n="homeStep2Title">Birlikte uyguluyoruz.</h3><p data-i18n="homeStep2Text">Bir kuralı öğrendikten sonra cümleler kuruyor, kısa diyaloglarla kullanıyoruz.</p></div></article>
+            <article class="home-step" data-home-reveal><span class="home-step-number" aria-hidden="true">03</span><div><h3 data-i18n="homeStep3Title">Ders dışında da çalışıyorsun.</h3><p data-i18n="homeStep3Text">Buradaki konu anlatımları ve alıştırmalarla öğrendiklerini tekrar edebilirsin.</p></div></article>
           </div>
         </section>
 
-        <section class="block">
-          <div class="section-head center">
-            <span class="tag" data-i18n="commentsTag">Öğrenci Yorumları</span>
-            <h2 data-i18n="commentsTitle">Öğrencilerden Yorumlar</h2>
-            <p class="sub" data-i18n="commentsSub">Derslerin anlaşılır, düzenli ve motive edici olması öğrencilerin Almanca öğrenme sürecini kolaylaştırır.</p>
+        <section class="home-section home-practice" aria-labelledby="home-practice-title">
+          <div class="home-practice-copy" data-home-reveal>
+            <p class="home-eyebrow" data-i18n="homePracticeEyebrow">Kısa bir Almanca molası</p>
+            <h2 id="home-practice-title" data-i18n="homePracticeTitle">Bir cümleyle başla.</h2>
+            <p data-i18n="homePracticeText">Konunu seç, soruları çöz ve her cevabın açıklamasını oku. Alıştırmalar herkese açık.</p>
+            <a class="home-text-link" href="#exercises/A1/sein-haben"><span data-i18n="homePracticeLink">sein &amp; haben ile çalış</span><span aria-hidden="true">↗</span></a>
           </div>
-          <div class="testimonials">
-            <article class="quote"><p data-i18n="quote1">Almancaya sıfırdan başladım. Konular çok net anlatıldı; artık kendi cümlelerimi kurabiliyorum.</p><strong>Elif K.</strong><small>A1 öğrencisi</small></article>
-            <article class="quote"><p data-i18n="quote2">Grameri ilk defa ezber gibi değil, mantığıyla öğrendim. Ders sonrası alıştırmalar konuyu kalıcı hale getiriyor.</p><strong>Mert A.</strong><small>B1 hazırlık</small></article>
-            <article class="quote"><p data-i18n="quote3">Sınav için özellikle yazma ve konuşmada çok zorlanıyordum. Planlı ilerleyince özgüvenim ciddi şekilde arttı.</p><strong>Deniz S.</strong><small>Goethe sınav hazırlığı</small></article>
+          <div class="home-example" data-home-reveal>
+            <span class="home-example-label">A1 · sein &amp; haben</span>
+            <p class="home-example-sentence">Ich <span>habe</span> Hunger.<br>Ich <span>bin</span> müde.</p>
+            <p class="home-example-note" data-i18n="homeExampleNote">“Acıktım” derken haben, “yorgunum” derken sein kullanılır. Küçük bir fark, iki günlük ifade.</p>
           </div>
+        </section>
+
+        <section class="home-section home-closing" aria-labelledby="home-closing-title" data-home-reveal>
+          <div><p class="home-eyebrow" data-i18n="homeClosingEyebrow">Tanışalım</p><h2 id="home-closing-title" data-i18n="homeClosingTitle">Almanca öğrenmek için nereden başlayacağını konuşalım.</h2><p data-i18n="homeClosingText">Seviyeni ve ne için Almanca öğrenmek istediğini yaz. İlk ders ücretsiz.</p></div>
+          <button class="home-button" type="button" data-page="contact" data-i18n="homeContact">İlk ders için yaz</button>
         </section>
       </section>
       <section class="page" id="page-lessons">
@@ -572,5 +578,6 @@
   <script src="js/quiz.js?v=13"></script>
   <script src="js/exercise-links.js?v=3"></script>
   <script src="js/grammar.js?v=1"></script>
+  <script src="js/home.js?v=1"></script>
 </body>
 </html>

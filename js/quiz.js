@@ -625,6 +625,12 @@ function updateBestScore(){
       const input=$('writtenAnswerInput');
       if(input){
         input.disabled=state.checked;
+        input.addEventListener('keydown',event=>{
+          if(event.key!=='Enter' || event.isComposing || event.keyCode===229) return;
+          if(q.multiline && event.shiftKey) return;
+          event.preventDefault();
+          checkAnswer();
+        });
         input.addEventListener('input',()=>{
           state.selected=input.value;
           state.responses[q._index]={...responseFor(q),selected:input.value};

@@ -28,8 +28,8 @@
 
   const HUB_I18N = {
     tr:{
-      heroSub:'Seviyeni seç, gramer konunu bul ve öğrendiklerini interaktif alıştırmalarla hemen pekiştir.',
-      title:'Alıştırma konunu bul',
+      heroSub:'A1–B2 seviyelerinde konu bazlı sorular ve cevap açıklamaları. Seviye seçerek veya konu arayarak çalışmaya başlayabilirsin.',
+      title:'Konu seçimi',
       subtitle:'Bir seviye seç veya arama kutusundan çalışmak istediğin gramer konusuna ulaş.',
       search:'Gramer konusu ara...',
       allLevels:'Arama tüm seviyelerde yapılıyor.',
@@ -41,11 +41,11 @@
       emptyTitle:'Eşleşen konu bulunamadı',
       emptySub:'Farklı bir kelime dene veya seviyeler arasında geçiş yap.',
       levelHeading:(level)=>`${level} Alıştırmaları`,
-      levelSub:(level)=>`${level} seviyesindeki gramer konularını seç ve hemen pratik yapmaya başla.`
+      levelSub:(level)=>`${level} seviyesindeki gramer konularını seç ve alıştırmaları incele.`
     },
     de:{
-      heroSub:'Wähle dein Niveau, finde ein Grammatikthema und festige dein Wissen direkt mit interaktiven Übungen.',
-      title:'Finde deine Übung',
+      heroSub:'Themenbezogene Aufgaben mit Erklärungen von A1 bis B2. Wähle ein Niveau oder suche nach einem Thema.',
+      title:'Themenauswahl',
       subtitle:'Wähle ein Niveau oder suche direkt nach einem Grammatikthema.',
       search:'Grammatikthema suchen...',
       allLevels:'Die Suche läuft über alle Niveaus.',
@@ -57,11 +57,11 @@
       emptyTitle:'Kein passendes Thema gefunden',
       emptySub:'Versuche einen anderen Suchbegriff oder wechsle das Niveau.',
       levelHeading:(level)=>`${level} Übungen`,
-      levelSub:(level)=>`Wähle ein Grammatikthema auf Niveau ${level} und starte direkt mit dem Üben.`
+      levelSub:(level)=>`Wähle ein Grammatikthema auf Niveau ${level} und wähle passende Übungen.`
     },
     en:{
-      heroSub:'Choose your level, find a grammar topic and reinforce what you know with interactive exercises.',
-      title:'Find an exercise topic',
+      heroSub:'Topic-based questions with answer explanations from A1 to B2. Choose a level or search for a topic.',
+      title:'Choose a topic',
       subtitle:'Choose a level or search directly for the grammar topic you want to practise.',
       search:'Search grammar topics...',
       allLevels:'Search is running across all levels.',
@@ -73,7 +73,7 @@
       emptyTitle:'No matching topic found',
       emptySub:'Try another search term or switch levels.',
       levelHeading:(level)=>`${level} Exercises`,
-      levelSub:(level)=>`Choose a grammar topic at ${level} level and start practising right away.`
+      levelSub:(level)=>`Choose a grammar topic at ${level} level and choose an exercise set.`
     }
   };
 

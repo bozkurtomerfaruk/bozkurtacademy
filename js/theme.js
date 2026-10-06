@@ -285,6 +285,33 @@
    Object.entries(copy).forEach(([language, values]) => Object.assign(window.BA.translations[language], values));
  }
  document.addEventListener('DOMContentLoaded', () => {
+   const themeButton = document.getElementById('themeToggle');
+   function updateThemeButton() {
+     const dark = document.documentElement.dataset.theme === 'dark';
+     const language = document.documentElement.lang?.slice(0,2) || 'tr';
+     const labels = {tr:['Koyu temaya geç','Açık temaya geç'],de:['Dunkles Design aktivieren','Helles Design aktivieren'],en:['Switch to dark theme','Switch to light theme']};
+     const label = (labels[language] || labels.tr)[dark ? 1 : 0];
+     if (themeButton) {
+       themeButton.setAttribute('aria-label',label);
+       themeButton.setAttribute('title',label);
+       themeButton.setAttribute('aria-pressed',String(dark));
+       themeButton.firstElementChild.textContent = dark ? '☀' : '☾';
+     }
+   }
+   themeButton?.addEventListener('click', () => {
+     const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+     document.documentElement.dataset.theme = theme;
+     try {localStorage.setItem('ba-theme',theme);} catch (_) {}
+     updateThemeButton();
+   });
+   window.addEventListener('ba:languagechange',updateThemeButton);
+   window.addEventListener('storage',event => {
+     if (event.key === 'ba-theme') {
+       document.documentElement.dataset.theme = event.newValue === 'dark' ? 'dark' : 'light';
+       updateThemeButton();
+     }
+   });
+   updateThemeButton();
    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
    const atomic = '.about-text, .level-card, .contact-mail-row, .contact-heading, .contact-guide, .field, .contact-submit, .page-hero, .lesson-hero-pro, .lesson-feature-card, .lesson-offer, .lesson-section-head, .lesson-check-list > *, .lesson-why-cards > *, .lesson-final-cta, .about-photo, .founder-info, .timeline-item, .method-card, .card, .contact-info, .exercise-discovery-toolbar, .exercise-discovery-levels, .exercise-discovery-heading, .exercise-discovery-topic, .exercise-set-card, .topic-overview, .grammar-toolbar, .grammar-level-tabs, .grammar-topic-card, .grammar-detail-view, .lesson-panel, .quiz-panel, .section-head';
    const tracked = new Set();
@@ -332,3 +359,4 @@
    setup();
  });
 })();
+

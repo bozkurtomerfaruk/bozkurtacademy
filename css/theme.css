@@ -156,3 +156,48 @@ body.academy-theme{
 .academy-theme .home-motion [data-home-reveal]{transform:translateY(32px);transition:opacity .95s ease,transform .95s cubic-bezier(.2,.65,.3,1)}
 .academy-theme .home-motion [data-home-reveal].is-visible{transform:none}
 @media(prefers-reduced-motion:reduce){.academy-theme .home-motion [data-home-reveal]{transform:none;transition:none}}
+
+/* Accessible light/dark choice shared by all pages. */
+.academy-theme .nav-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px}
+.academy-theme .theme-toggle{display:grid;place-items:center;width:40px;height:40px;flex-shrink:0;border:1px solid #dedfd6;border-radius:6px;background:transparent;color:#263e2d;font-size:23px;cursor:pointer}
+.academy-theme .theme-toggle:hover{background:#e9ece3}
+@media(min-width:1021px){.academy-theme .topbar .nav{grid-template-columns:200px minmax(0,1fr) 158px}}
+@media(max-width:1020px){.academy-theme .nav-actions{margin-left:auto}.academy-theme .nav-actions .lang{margin-left:0}}
+html[data-theme="dark"]{color-scheme:dark;background:#171d19!important}
+html[data-theme="dark"] body.academy-theme{--bg:#171d19;--paper:#202922;--ink:#e8ede6;--dark:#e8ede6;--muted:#b3beb0;--line:#39463a;--gold:#afc8a4;--gold-2:#2b382d;--brown:#afc8a4;--green:#afc8a4;--cream:#2b382d;background:#171d19!important;color:#e8ede6!important}
+html[data-theme="dark"] .academy-theme .home-page{--home-muted:#b3beb0;--home-line:#39463a;--home-green:#afc8a4}
+html[data-theme="dark"] .academy-theme .topbar{background:rgba(23,29,25,.96)!important;color:#e8ede6!important;border-color:#39463a!important}
+html[data-theme="dark"] .academy-theme :is(h1,h2,h3,h4,.brand-title,.home-portrait figcaption span:first-child){color:#e8ede6!important}
+html[data-theme="dark"] .academy-theme :is(.nav-link,.lang button,.theme-toggle){color:#c2cdbd!important}
+html[data-theme="dark"] .academy-theme :is(.lang,.theme-toggle){border-color:#465143!important}
+html[data-theme="dark"] .academy-theme :is(.nav-link.active,.nav-link:hover,.theme-toggle:hover){background:#2b382d!important;color:#e8ede6!important}
+html[data-theme="dark"] .academy-theme .lang button.active{background:#afc8a4!important;color:#172219!important}
+html[data-theme="dark"] .academy-theme :is(.page-hero-inner p,.card p,.founder-bio,.about-text p,.lesson-hero-pro p,.lesson-hero-stats span,.lesson-final-cta p,.exam-plan p,.topic-overview p,footer,.sub){color:#b3beb0!important}
+html[data-theme="dark"] .academy-theme :is(.tag,.lesson-kicker,.lesson-inline-link,.home-text-link,.home-example-label,.exercise-discovery-topic-action,.grammar-topic-arrow,.grammar-topic-footer,.grammar-detail-breadcrumb button){color:#afc8a4!important}
+html[data-theme="dark"] .academy-theme :is(.card,.level-card,.contact-main-card,.lesson-panel,.quiz-panel,.exercise-set-card,.topic-choice-card,.level-choice-card,.exercise-discovery-level,.exercise-discovery-topic,.exercise-discovery-empty,.grammar-level-tab,.grammar-topic-card,.grammar-detail-card,.grammar-empty){background:#202922!important;border-color:#39463a!important;color:#e8ede6!important}
+html[data-theme="dark"] .academy-theme :is(.about-text,.lesson-feature-card,.lesson-offer,.lesson-why-cards article){background:transparent!important;border-color:#39463a!important}
+html[data-theme="dark"] .academy-theme :is(.lesson-hero-stats,.lesson-check-list div,.lesson-audience-wrap,.contact-mail-row,.home-facts span+span,footer){border-color:#39463a!important}
+html[data-theme="dark"] .academy-theme :is(.home-example,.topic-overview,.notice,.lesson-final-cta,.exam-plan,.grammar-coming-soon,.contact-mail-icon,.lesson-free-badge,.lesson-rule>div){background:#2b382d!important;border-color:#465143!important;color:#d8e6d0!important}
+html[data-theme="dark"] .academy-theme .home-example-sentence{color:#e8ede6!important}
+html[data-theme="dark"] .academy-theme :is(.home-example-sentence span,.home-eyebrow){color:#afc8a4!important}
+html[data-theme="dark"] .academy-theme :is(.btn.primary,.btn.gold,.home-button,.contact-submit){background:#afc8a4!important;border-color:#afc8a4!important;color:#172219!important}
+html[data-theme="dark"] .academy-theme :is(.btn.primary:hover,.btn.gold:hover,.home-button:hover){background:#c3d9b9!important;color:#172219!important}
+html[data-theme="dark"] .academy-theme .btn.ghost{background:transparent!important;border-color:#65765e!important;color:#d8e6d0!important}
+html[data-theme="dark"] .academy-theme :is(input,textarea,select,.written-answer-input,.exercise-discovery-search input,.grammar-search input,.quiz-option){background:#171f19!important;border-color:#52624d!important;color:#e8ede6!important}
+html[data-theme="dark"] .academy-theme :is(input,textarea)::placeholder{color:#9fae9a!important}
+html[data-theme="dark"] .academy-theme :is(.set-chip,.topic-status,.quiz-word,.quiz-counter,.grammar-level-code,.grammar-topic-level,.exercise-discovery-level-code,.exercise-discovery-topic-level){background:#344530!important;color:#d1e3c7!important;border-color:#52624d!important}
+html[data-theme="dark"] .academy-theme :is(.exercise-discovery-level.active,.grammar-level-tab.active){background:#afc8a4!important;color:#172219!important;border-color:#afc8a4!important}
+html[data-theme="dark"] .academy-theme :is(.exercise-discovery-level.active .exercise-discovery-level-code,.grammar-level-tab.active .grammar-level-code){background:#e8ede6!important;color:#172219!important}
+html[data-theme="dark"] .academy-theme .quiz-option.selected{background:#344530!important;border-color:#afc8a4!important}
+html[data-theme="dark"] .academy-theme :is(.quiz-option.correct,.quiz-feedback.good){background:#233d2b!important;color:#c3e9cd!important;border-color:#648e6c!important}
+html[data-theme="dark"] .academy-theme :is(.quiz-option.wrong,.quiz-feedback.bad,.form-status.error){background:#432927!important;color:#f3c8c4!important;border-color:#b27670!important}
+html[data-theme="dark"] .academy-theme .progress-track{background:#39463a!important}
+html[data-theme="dark"] .academy-theme .progress-bar{background:#afc8a4!important}
+html[data-theme="dark"] .academy-theme :is(.lesson-rule strong,.grammar-coming-soon small,.exercise-breadcrumb button,.exercise-discovery-heading>span){color:#afc8a4!important}
+html[data-theme="dark"] .academy-theme :is(.exercise-discovery-level-meta,.exercise-discovery-status,.best-score,.written-answer-wrap label,.set-meta,.grammar-result-count){color:#b3beb0!important}
+html[data-theme="dark"] .academy-theme .result-score{background:#344530!important;color:#e8ede6!important}
+html[data-theme="dark"] .academy-theme :is(button,a):focus-visible{outline-color:#afc8a4!important}
+
+@media(max-width:700px){.academy-theme .nav .brand{width:auto;min-width:0;gap:8px}.academy-theme .brand-title{font-size:15px}.academy-theme .brand-logo{width:36px;height:36px}.academy-theme .nav-actions{gap:5px}.academy-theme .theme-toggle{width:36px;height:36px}}
+html[data-theme="dark"] .academy-theme :is(.contact-mail-row a,.contact-guide-title,.contact-guide-list,.field label,.written-answer-wrap label,.exercise-set-card p,.grammar-topic-card p){color:#b3beb0!important}
+html[data-theme="dark"] .academy-theme :is(.exercise-discovery-level.active,.grammar-level-tab.active) :is(.exercise-discovery-level-name,.exercise-discovery-level-meta,.grammar-level-name){color:#172219!important}

@@ -313,7 +313,7 @@
    });
    updateThemeButton();
    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-   const atomic = '.about-text, .level-card, .contact-mail-row, .contact-heading, .contact-guide, .field, .contact-submit, .page-hero, .lesson-hero-pro, .lesson-feature-card, .lesson-offer, .lesson-section-head, .lesson-check-list > *, .lesson-why-cards > *, .lesson-final-cta, .about-photo, .founder-info, .timeline-item, .method-card, .card, .contact-info, .exercise-discovery-toolbar, .exercise-discovery-levels, .exercise-discovery-heading, .exercise-discovery-topic, .exercise-set-card, .topic-overview, .grammar-toolbar, .grammar-level-tabs, .grammar-topic-card, .grammar-detail-view, .lesson-panel, .quiz-panel, .section-head';
+   const atomic = '.a1-section, .a1-practice, .a1-author, .a1-article-header, .a1-contents, .about-text, .level-card, .contact-mail-row, .contact-heading, .contact-guide, .field, .contact-submit, .page-hero, .lesson-hero-pro, .lesson-feature-card, .lesson-offer, .lesson-section-head, .lesson-check-list > *, .lesson-why-cards > *, .lesson-final-cta, .about-photo, .founder-info, .timeline-item, .method-card, .card, .contact-info, .exercise-discovery-toolbar, .exercise-discovery-levels, .exercise-discovery-heading, .exercise-discovery-topic, .exercise-set-card, .topic-overview, .grammar-toolbar, .grammar-level-tabs, .grammar-topic-card, .grammar-detail-view, .lesson-panel, .quiz-panel, .section-head';
    const tracked = new Set();
    let observer, scheduled = false;
    function showAll() {

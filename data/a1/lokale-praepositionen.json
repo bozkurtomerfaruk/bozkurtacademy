@@ -1,0 +1,1813 @@
+{
+  "id": "lokale-praepositionen",
+  "level": "A1",
+  "title": {
+    "tr": "Lokale Präpositionen",
+    "de": "Lokale Präpositionen",
+    "en": "Local prepositions"
+  },
+  "description": {
+    "tr": "10 Übung ve 100 soru: Wo/Wohin/Woher, in/bei, nach/zu, aus/von, yer-yön ifadeleri, artikeller ve hata düzeltme.",
+    "de": "10 Übungen mit 100 Aufgaben zu Wo/Wohin/Woher, in/bei, nach/zu, aus/von, Orts- und Richtungsangaben, Artikeln und Fehlerkorrektur.",
+    "en": "10 exercises with 100 questions on Wo/Wohin/Woher, in/bei, nach/zu, aus/von, location, direction, articles and corrections."
+  },
+  "lesson": {
+    "title": {
+      "tr": "Yer ve yön edatları – A1 çalışma rehberi",
+      "de": "Lokale Präpositionen – A1-Lernüberblick",
+      "en": "Local prepositions – A1 study guide"
+    },
+    "intro": {
+      "tr": "Önce soruyu ayırt et: Wo? = nerede, Wohin? = nereye, Woher? = nereden. Sonra kişinin yanında olma, bir yerin içinde olma, hedef veya çıkış noktasına göre edatı seç.",
+      "de": "Unterscheide zuerst Wo? (Ort), Wohin? (Ziel) und Woher? (Herkunft). Wähle dann die Präposition nach Person, Innenraum, Ziel oder Ausgangspunkt.",
+      "en": "First distinguish Wo? (location), Wohin? (destination) and Woher? (origin). Then choose the preposition for a person, interior, destination or starting point."
+    },
+    "rules": [
+      {
+        "label": "wo",
+        "text": {
+          "tr": "Wo? bir kişinin veya nesnenin bulunduğu yeri sorar.",
+          "de": "Wo? fragt nach einem Ort oder einer Position.",
+          "en": "Wo? asks about a location or position."
+        }
+      },
+      {
+        "label": "wohin",
+        "text": {
+          "tr": "Wohin? bir hareketin hedefini sorar.",
+          "de": "Wohin? fragt nach dem Ziel einer Bewegung.",
+          "en": "Wohin? asks about the destination of a movement."
+        }
+      },
+      {
+        "label": "woher",
+        "text": {
+          "tr": "Woher? gelinen yeri veya kökeni sorar.",
+          "de": "Woher? fragt nach der Herkunft oder dem Ausgangsort.",
+          "en": "Woher? asks about origin or the place someone comes from."
+        }
+      },
+      {
+        "label": "in",
+        "text": {
+          "tr": "Bir yerin içinde bulunmak için in + Dativ kullanılır. Şehir ve artikelsiz ülke adlarıyla da in kullanılır: in Köln, in Spanien.",
+          "de": "Für einen Ort innerhalb eines Raums steht in + Dativ. Bei Städten und Ländern ohne Artikel steht ebenfalls in: in Köln, in Spanien.",
+          "en": "Use in + dative for a location inside a space. Also use in with cities and countries without articles: in Köln, in Spanien."
+        }
+      },
+      {
+        "label": "bei",
+        "text": {
+          "tr": "Bir kişinin yanında veya evinde bulunmak için bei + Dativ kullanılır: bei meiner Tante. beim = bei dem.",
+          "de": "Bei + Dativ bezeichnet den Aufenthalt bei einer Person: bei meiner Tante. Beim = bei dem.",
+          "en": "Use bei + dative when staying with a person: bei meiner Tante. Beim = bei dem."
+        }
+      },
+      {
+        "label": "nach",
+        "text": {
+          "tr": "Şehirlere ve artikelsiz ülkelere giderken nach kullanılır: nach Köln, nach Spanien.",
+          "de": "Bei Zielen wie Städten und Ländern ohne Artikel steht nach: nach Köln, nach Spanien.",
+          "en": "Use nach for destinations that are cities or countries without articles: nach Köln, nach Spanien."
+        }
+      },
+      {
+        "label": "zu",
+        "text": {
+          "tr": "Bir kişiye veya belirtilen hedef noktaya giderken zu + Dativ kullanılır. zum = zu dem; zur = zu der.",
+          "de": "Für den Weg zu einer Person oder einem Zielpunkt steht zu + Dativ. Zum = zu dem; zur = zu der.",
+          "en": "Use zu + dative for movement to a person or a destination point. Zum = zu dem; zur = zu der."
+        }
+      },
+      {
+        "label": "aus",
+        "text": {
+          "tr": "Bir yerin içinden gelmek ve şehir/ülke kökeni için aus + Dativ kullanılır: aus dem Haus, aus Berlin, aus der Türkei.",
+          "de": "Aus + Dativ bezeichnet das Herauskommen aus einem Raum oder die Herkunft: aus dem Haus, aus Berlin, aus der Türkei.",
+          "en": "Use aus + dative for coming out of a space or for origin: aus dem Haus, aus Berlin, aus der Türkei."
+        }
+      },
+      {
+        "label": "von",
+        "text": {
+          "tr": "Bir kişiden, etkinlikten veya belirtilen noktadan gelmek için von + Dativ kullanılır. vom = von dem.",
+          "de": "Von + Dativ bezeichnet den Ausgangspunkt bei Personen, Aktivitäten oder bestimmten Orten. Vom = von dem.",
+          "en": "Use von + dative for coming from people, activities or a given starting point. Vom = von dem."
+        }
+      },
+      {
+        "label": "home",
+        "text": {
+          "tr": "Evde: zu Hause. Eve: nach Hause. Evden: von zu Hause. Bunlar sabit ifadelerdir.",
+          "de": "Zu Hause bezeichnet den Ort, nach Hause das Ziel und von zu Hause den Ausgangspunkt. Das sind feste Wendungen.",
+          "en": "Zu Hause means at home, nach Hause means homeward and von zu Hause means from home. Learn these as fixed phrases."
+        }
+      },
+      {
+        "label": "position",
+        "text": {
+          "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile mevcut konum soruluyorsa (Wo?) Dativ kullanılır. Hareket olması tek başına Akkusativ gerektirmez.",
+          "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einer Position (Wo?) mit Dativ. Bewegung allein bedeutet nicht automatisch Akkusativ.",
+          "en": "Use dative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a position (Wo?). Movement alone does not automatically require accusative."
+        }
+      },
+      {
+        "label": "destination",
+        "text": {
+          "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile yeni bir hedef konum belirtiliyorsa (Wohin?) Akkusativ kullanılır.",
+          "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einem Zielort (Wohin?) mit Akkusativ.",
+          "en": "Use accusative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a new target position (Wohin?)."
+        }
+      },
+      {
+        "label": "durch",
+        "text": {
+          "tr": "Bir yerin içinden geçmek için durch + Akkusativ kullanılır: durch den Park.",
+          "de": "Durch + Akkusativ beschreibt einen Weg durch einen Raum: durch den Park.",
+          "en": "Use durch + accusative for a route through a space: durch den Park."
+        }
+      },
+      {
+        "label": "um",
+        "text": {
+          "tr": "Bir yerin etrafından veya çevresinden gitmek için um + Akkusativ kullanılır.",
+          "de": "Um + Akkusativ beschreibt einen Weg rund um etwas.",
+          "en": "Use um + accusative for a route around something."
+        }
+      },
+      {
+        "label": "gegenüber",
+        "text": {
+          "tr": "Karşısında anlamında gegenüber + Dativ kullanılır: gegenüber der Schule.",
+          "de": "Gegenüber + Dativ bezeichnet die gegenüberliegende Seite: gegenüber der Schule.",
+          "en": "Use gegenüber + dative to mean opposite: gegenüber der Schule."
+        }
+      }
+    ],
+    "examples": [
+      "Wo bist du? – Ich bin in der Küche.",
+      "Wohin fährst du? – Ich fahre nach Bonn.",
+      "Woher kommst du? – Ich komme aus Italien.",
+      "Ich bin bei meiner Schwester.",
+      "Ich gehe zu meiner Schwester.",
+      "Ich komme von meiner Schwester.",
+      "Das Buch liegt auf dem Tisch.",
+      "Ich lege das Buch auf den Tisch.",
+      "Wir gehen durch den Park.",
+      "Die Bank ist gegenüber der Schule."
+    ],
+    "tip": {
+      "tr": "1–4: temel sorular, bulunulan yer, hedef ve köken; 5–6: konum ile hedefi ayırt etme; 7: yol tarifi; 8: edat ve artikel; 9: hata düzeltme; 10: karışık tekrar. Yazılı sorularda yalnızca istenen ifadeyi yaz; Enter ile kontrol et.",
+      "de": "1–4: Fragen, Ort, Ziel und Herkunft; 5–6: Position und Ziel unterscheiden; 7: Wege; 8: Präposition und Artikel; 9: Fehlerkorrektur; 10: Wiederholung. Schreibe nur die verlangte Wortgruppe; Enter prüft die Antwort.",
+      "en": "1–4: questions, location, destination and origin; 5–6: position versus destination; 7: routes; 8: preposition and article; 9: corrections; 10: mixed review. Type only the requested phrase; press Enter to check."
+    }
+  },
+  "exercises": [
+    {
+      "id": "wo-wohin-woher-1",
+      "title": {
+        "tr": "Übung 1 – Wo, Wohin veya Woher",
+        "de": "Übung 1 – Wo, Wohin oder Woher",
+        "en": "Exercise 1 – Wo, Wohin or Woher"
+      },
+      "description": {
+        "tr": "Cevaba uygun soru kelimesini seç.",
+        "de": "Wähle das Fragewort zur Antwort.",
+        "en": "Choose the question word that matches the answer."
+      },
+      "difficulty": {
+        "tr": "Temel çalışma",
+        "de": "Grundlagen",
+        "en": "Foundations"
+      },
+      "hideLesson": false,
+      "questions": [
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "___ wohnt Anna? – In Bremen.",
+          "correct": "Wo",
+          "explanations": {
+            "tr": "Wo? bir kişinin veya nesnenin bulunduğu yeri sorar. Doğru cevap: Wo.",
+            "de": "Wo? fragt nach einem Ort oder einer Position. Richtige Antwort: Wo.",
+            "en": "Wo? asks about a location or position. Correct answer: Wo."
+          },
+          "options": [
+            "Wo",
+            "Wohin",
+            "Woher"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "___ fährt Omar? – Nach Wien.",
+          "correct": "Wohin",
+          "explanations": {
+            "tr": "Wohin? bir hareketin hedefini sorar. Doğru cevap: Wohin.",
+            "de": "Wohin? fragt nach dem Ziel einer Bewegung. Richtige Antwort: Wohin.",
+            "en": "Wohin? asks about the destination of a movement. Correct answer: Wohin."
+          },
+          "options": [
+            "Wo",
+            "Wohin",
+            "Woher"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "___ kommt Sofia? – Aus Spanien.",
+          "correct": "Woher",
+          "explanations": {
+            "tr": "Woher? gelinen yeri veya kökeni sorar. Doğru cevap: Woher.",
+            "de": "Woher? fragt nach der Herkunft oder dem Ausgangsort. Richtige Antwort: Woher.",
+            "en": "Woher? asks about origin or the place someone comes from. Correct answer: Woher."
+          },
+          "options": [
+            "Wo",
+            "Wohin",
+            "Woher"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "___ liegt das Handy? – Auf dem Sofa.",
+          "correct": "Wo",
+          "explanations": {
+            "tr": "Wo? bir kişinin veya nesnenin bulunduğu yeri sorar. Doğru cevap: Wo.",
+            "de": "Wo? fragt nach einem Ort oder einer Position. Richtige Antwort: Wo.",
+            "en": "Wo? asks about a location or position. Correct answer: Wo."
+          },
+          "options": [
+            "Wo",
+            "Wohin",
+            "Woher"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "___ gehst du jetzt? – Zur Schule.",
+          "correct": "Wohin",
+          "explanations": {
+            "tr": "Wohin? bir hareketin hedefini sorar. Doğru cevap: Wohin.",
+            "de": "Wohin? fragt nach dem Ziel einer Bewegung. Richtige Antwort: Wohin.",
+            "en": "Wohin? asks about the destination of a movement. Correct answer: Wohin."
+          },
+          "options": [
+            "Wo",
+            "Wohin",
+            "Woher"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "___ kommst du gerade? – Von meiner Oma.",
+          "correct": "Woher",
+          "explanations": {
+            "tr": "Woher? gelinen yeri veya kökeni sorar. Doğru cevap: Woher.",
+            "de": "Woher? fragt nach der Herkunft oder dem Ausgangsort. Richtige Antwort: Woher.",
+            "en": "Woher? asks about origin or the place someone comes from. Correct answer: Woher."
+          },
+          "options": [
+            "Wo",
+            "Wohin",
+            "Woher"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "___ sind die Kinder? – Im Garten.",
+          "correct": "Wo",
+          "explanations": {
+            "tr": "Wo? bir kişinin veya nesnenin bulunduğu yeri sorar. Doğru cevap: Wo.",
+            "de": "Wo? fragt nach einem Ort oder einer Position. Richtige Antwort: Wo.",
+            "en": "Wo? asks about a location or position. Correct answer: Wo."
+          },
+          "options": [
+            "Wo",
+            "Wohin",
+            "Woher"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "___ fliegt ihr morgen? – Nach Italien.",
+          "correct": "Wohin",
+          "explanations": {
+            "tr": "Wohin? bir hareketin hedefini sorar. Doğru cevap: Wohin.",
+            "de": "Wohin? fragt nach dem Ziel einer Bewegung. Richtige Antwort: Wohin.",
+            "en": "Wohin? asks about the destination of a movement. Correct answer: Wohin."
+          },
+          "options": [
+            "Wo",
+            "Wohin",
+            "Woher"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "___ kommt dieser Zug? – Aus Hamburg.",
+          "correct": "Woher",
+          "explanations": {
+            "tr": "Woher? gelinen yeri veya kökeni sorar. Doğru cevap: Woher.",
+            "de": "Woher? fragt nach der Herkunft oder dem Ausgangsort. Richtige Antwort: Woher.",
+            "en": "Woher? asks about origin or the place someone comes from. Correct answer: Woher."
+          },
+          "options": [
+            "Wo",
+            "Wohin",
+            "Woher"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "___ sitzt Paul? – Neben seiner Schwester.",
+          "correct": "Wo",
+          "explanations": {
+            "tr": "Wo? bir kişinin veya nesnenin bulunduğu yeri sorar. Doğru cevap: Wo.",
+            "de": "Wo? fragt nach einem Ort oder einer Position. Richtige Antwort: Wo.",
+            "en": "Wo? asks about a location or position. Correct answer: Wo."
+          },
+          "options": [
+            "Wo",
+            "Wohin",
+            "Woher"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "in-bei-zuhause-2",
+      "title": {
+        "tr": "Übung 2 – Bulunulan yer",
+        "de": "Übung 2 – Wo ist jemand?",
+        "en": "Exercise 2 – Where is someone?"
+      },
+      "description": {
+        "tr": "in, bei veya zu seç. Yer bildiren sabit ifadelere dikkat et.",
+        "de": "Wähle in, bei oder zu. Achte auf feste Ortsangaben.",
+        "en": "Choose in, bei or zu. Pay attention to fixed location phrases."
+      },
+      "difficulty": {
+        "tr": "Temel çalışma",
+        "de": "Grundlagen",
+        "en": "Foundations"
+      },
+      "hideLesson": false,
+      "questions": [
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Wir wohnen ___ Dresden.",
+          "correct": "in",
+          "explanations": {
+            "tr": "Bir yerin içinde bulunmak için in + Dativ kullanılır. Şehir ve artikelsiz ülke adlarıyla da in kullanılır: in Köln, in Spanien. Doğru cevap: in.",
+            "de": "Für einen Ort innerhalb eines Raums steht in + Dativ. Bei Städten und Ländern ohne Artikel steht ebenfalls in: in Köln, in Spanien. Richtige Antwort: in.",
+            "en": "Use in + dative for a location inside a space. Also use in with cities and countries without articles: in Köln, in Spanien. Correct answer: in."
+          },
+          "options": [
+            "in",
+            "bei",
+            "zu"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Mia übernachtet ___ ihrer Tante.",
+          "correct": "bei",
+          "explanations": {
+            "tr": "Bir kişinin yanında veya evinde bulunmak için bei + Dativ kullanılır: bei meiner Tante. beim = bei dem. Doğru cevap: bei.",
+            "de": "Bei + Dativ bezeichnet den Aufenthalt bei einer Person: bei meiner Tante. Beim = bei dem. Richtige Antwort: bei.",
+            "en": "Use bei + dative when staying with a person: bei meiner Tante. Beim = bei dem. Correct answer: bei."
+          },
+          "options": [
+            "in",
+            "bei",
+            "zu"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Heute bleibe ich ___ Hause.",
+          "correct": "zu",
+          "explanations": {
+            "tr": "Evde: zu Hause. Eve: nach Hause. Evden: von zu Hause. Bunlar sabit ifadelerdir. Doğru cevap: zu.",
+            "de": "Zu Hause bezeichnet den Ort, nach Hause das Ziel und von zu Hause den Ausgangspunkt. Das sind feste Wendungen. Richtige Antwort: zu.",
+            "en": "Zu Hause means at home, nach Hause means homeward and von zu Hause means from home. Learn these as fixed phrases. Correct answer: zu."
+          },
+          "options": [
+            "in",
+            "bei",
+            "zu"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Die Milch ist ___ der Küche.",
+          "correct": "in",
+          "explanations": {
+            "tr": "Bir yerin içinde bulunmak için in + Dativ kullanılır. Şehir ve artikelsiz ülke adlarıyla da in kullanılır: in Köln, in Spanien. Doğru cevap: in.",
+            "de": "Für einen Ort innerhalb eines Raums steht in + Dativ. Bei Städten und Ländern ohne Artikel steht ebenfalls in: in Köln, in Spanien. Richtige Antwort: in.",
+            "en": "Use in + dative for a location inside a space. Also use in with cities and countries without articles: in Köln, in Spanien. Correct answer: in."
+          },
+          "options": [
+            "in",
+            "bei",
+            "zu"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Tom ist ___ seinem Freund zu Besuch.",
+          "correct": "bei",
+          "explanations": {
+            "tr": "Bir kişinin yanında veya evinde bulunmak için bei + Dativ kullanılır: bei meiner Tante. beim = bei dem. Doğru cevap: bei.",
+            "de": "Bei + Dativ bezeichnet den Aufenthalt bei einer Person: bei meiner Tante. Beim = bei dem. Richtige Antwort: bei.",
+            "en": "Use bei + dative when staying with a person: bei meiner Tante. Beim = bei dem. Correct answer: bei."
+          },
+          "options": [
+            "in",
+            "bei",
+            "zu"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Meine Eltern leben ___ Portugal.",
+          "correct": "in",
+          "explanations": {
+            "tr": "Bir yerin içinde bulunmak için in + Dativ kullanılır. Şehir ve artikelsiz ülke adlarıyla da in kullanılır: in Köln, in Spanien. Doğru cevap: in.",
+            "de": "Für einen Ort innerhalb eines Raums steht in + Dativ. Bei Städten und Ländern ohne Artikel steht ebenfalls in: in Köln, in Spanien. Richtige Antwort: in.",
+            "en": "Use in + dative for a location inside a space. Also use in with cities and countries without articles: in Köln, in Spanien. Correct answer: in."
+          },
+          "options": [
+            "in",
+            "bei",
+            "zu"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Am Sonntag frühstücke ich ___ Hause.",
+          "correct": "zu",
+          "explanations": {
+            "tr": "Evde: zu Hause. Eve: nach Hause. Evden: von zu Hause. Bunlar sabit ifadelerdir. Doğru cevap: zu.",
+            "de": "Zu Hause bezeichnet den Ort, nach Hause das Ziel und von zu Hause den Ausgangspunkt. Das sind feste Wendungen. Richtige Antwort: zu.",
+            "en": "Zu Hause means at home, nach Hause means homeward and von zu Hause means from home. Learn these as fixed phrases. Correct answer: zu."
+          },
+          "options": [
+            "in",
+            "bei",
+            "zu"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Lara ist heute ___ ihrer Schwester zu Gast.",
+          "correct": "bei",
+          "explanations": {
+            "tr": "Bir kişinin yanında veya evinde bulunmak için bei + Dativ kullanılır: bei meiner Tante. beim = bei dem. Doğru cevap: bei.",
+            "de": "Bei + Dativ bezeichnet den Aufenthalt bei einer Person: bei meiner Tante. Beim = bei dem. Richtige Antwort: bei.",
+            "en": "Use bei + dative when staying with a person: bei meiner Tante. Beim = bei dem. Correct answer: bei."
+          },
+          "options": [
+            "in",
+            "bei",
+            "zu"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Die Kinder spielen ___ ihrem Zimmer.",
+          "correct": "in",
+          "explanations": {
+            "tr": "Bir yerin içinde bulunmak için in + Dativ kullanılır. Şehir ve artikelsiz ülke adlarıyla da in kullanılır: in Köln, in Spanien. Doğru cevap: in.",
+            "de": "Für einen Ort innerhalb eines Raums steht in + Dativ. Bei Städten und Ländern ohne Artikel steht ebenfalls in: in Köln, in Spanien. Richtige Antwort: in.",
+            "en": "Use in + dative for a location inside a space. Also use in with cities and countries without articles: in Köln, in Spanien. Correct answer: in."
+          },
+          "options": [
+            "in",
+            "bei",
+            "zu"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Bist du heute Abend ___ Hause?",
+          "correct": "zu",
+          "explanations": {
+            "tr": "Evde: zu Hause. Eve: nach Hause. Evden: von zu Hause. Bunlar sabit ifadelerdir. Doğru cevap: zu.",
+            "de": "Zu Hause bezeichnet den Ort, nach Hause das Ziel und von zu Hause den Ausgangspunkt. Das sind feste Wendungen. Richtige Antwort: zu.",
+            "en": "Zu Hause means at home, nach Hause means homeward and von zu Hause means from home. Learn these as fixed phrases. Correct answer: zu."
+          },
+          "options": [
+            "in",
+            "bei",
+            "zu"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nach-zu-3",
+      "title": {
+        "tr": "Übung 3 – Hedef: nach veya zu",
+        "de": "Übung 3 – Ziele mit nach oder zu",
+        "en": "Exercise 3 – Destinations with nach or zu"
+      },
+      "description": {
+        "tr": "Boşluğa nach veya zu yaz.",
+        "de": "Ergänze nach oder zu.",
+        "en": "Fill in nach or zu."
+      },
+      "difficulty": {
+        "tr": "Temel çalışma",
+        "de": "Grundlagen",
+        "en": "Foundations"
+      },
+      "hideLesson": false,
+      "questions": [
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Morgen fahren wir ___ Leipzig.",
+          "correct": "nach",
+          "explanations": {
+            "tr": "Şehirlere ve artikelsiz ülkelere giderken nach kullanılır: nach Köln, nach Spanien. Doğru cevap: nach.",
+            "de": "Bei Zielen wie Städten und Ländern ohne Artikel steht nach: nach Köln, nach Spanien. Richtige Antwort: nach.",
+            "en": "Use nach for destinations that are cities or countries without articles: nach Köln, nach Spanien. Correct answer: nach."
+          },
+          "type": "text",
+          "answers": [
+            "nach"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Ich gehe ___ meiner Nachbarin.",
+          "correct": "zu",
+          "explanations": {
+            "tr": "Bir kişiye veya belirtilen hedef noktaya giderken zu + Dativ kullanılır. zum = zu dem; zur = zu der. Doğru cevap: zu.",
+            "de": "Für den Weg zu einer Person oder einem Zielpunkt steht zu + Dativ. Zum = zu dem; zur = zu der. Richtige Antwort: zu.",
+            "en": "Use zu + dative for movement to a person or a destination point. Zum = zu dem; zur = zu der. Correct answer: zu."
+          },
+          "type": "text",
+          "answers": [
+            "zu"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Im Sommer fliegen sie ___ Griechenland.",
+          "correct": "nach",
+          "explanations": {
+            "tr": "Şehirlere ve artikelsiz ülkelere giderken nach kullanılır: nach Köln, nach Spanien. Doğru cevap: nach.",
+            "de": "Bei Zielen wie Städten und Ländern ohne Artikel steht nach: nach Köln, nach Spanien. Richtige Antwort: nach.",
+            "en": "Use nach for destinations that are cities or countries without articles: nach Köln, nach Spanien. Correct answer: nach."
+          },
+          "type": "text",
+          "answers": [
+            "nach"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Nach dem Kurs gehe ich ___ Hause.",
+          "correct": "nach",
+          "explanations": {
+            "tr": "Evde: zu Hause. Eve: nach Hause. Evden: von zu Hause. Bunlar sabit ifadelerdir. Doğru cevap: nach.",
+            "de": "Zu Hause bezeichnet den Ort, nach Hause das Ziel und von zu Hause den Ausgangspunkt. Das sind feste Wendungen. Richtige Antwort: nach.",
+            "en": "Zu Hause means at home, nach Hause means homeward and von zu Hause means from home. Learn these as fixed phrases. Correct answer: nach."
+          },
+          "type": "text",
+          "answers": [
+            "nach"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Wir gehen ___ unserem Lehrer.",
+          "correct": "zu",
+          "explanations": {
+            "tr": "Bir kişiye veya belirtilen hedef noktaya giderken zu + Dativ kullanılır. zum = zu dem; zur = zu der. Doğru cevap: zu.",
+            "de": "Für den Weg zu einer Person oder einem Zielpunkt steht zu + Dativ. Zum = zu dem; zur = zu der. Richtige Antwort: zu.",
+            "en": "Use zu + dative for movement to a person or a destination point. Zum = zu dem; zur = zu der. Correct answer: zu."
+          },
+          "type": "text",
+          "answers": [
+            "zu"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Der Bus fährt ___ Bonn.",
+          "correct": "nach",
+          "explanations": {
+            "tr": "Şehirlere ve artikelsiz ülkelere giderken nach kullanılır: nach Köln, nach Spanien. Doğru cevap: nach.",
+            "de": "Bei Zielen wie Städten und Ländern ohne Artikel steht nach: nach Köln, nach Spanien. Richtige Antwort: nach.",
+            "en": "Use nach for destinations that are cities or countries without articles: nach Köln, nach Spanien. Correct answer: nach."
+          },
+          "type": "text",
+          "answers": [
+            "nach"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Ich bringe das Buch ___ Frau Weber.",
+          "correct": "zu",
+          "explanations": {
+            "tr": "Bir kişiye veya belirtilen hedef noktaya giderken zu + Dativ kullanılır. zum = zu dem; zur = zu der. Doğru cevap: zu.",
+            "de": "Für den Weg zu einer Person oder einem Zielpunkt steht zu + Dativ. Zum = zu dem; zur = zu der. Richtige Antwort: zu.",
+            "en": "Use zu + dative for movement to a person or a destination point. Zum = zu dem; zur = zu der. Correct answer: zu."
+          },
+          "type": "text",
+          "answers": [
+            "zu"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Fahrt ihr am Samstag ___ Polen?",
+          "correct": "nach",
+          "explanations": {
+            "tr": "Şehirlere ve artikelsiz ülkelere giderken nach kullanılır: nach Köln, nach Spanien. Doğru cevap: nach.",
+            "de": "Bei Zielen wie Städten und Ländern ohne Artikel steht nach: nach Köln, nach Spanien. Richtige Antwort: nach.",
+            "en": "Use nach for destinations that are cities or countries without articles: nach Köln, nach Spanien. Correct answer: nach."
+          },
+          "type": "text",
+          "answers": [
+            "nach"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Heute gehe ich ___ meinen Großeltern.",
+          "correct": "zu",
+          "explanations": {
+            "tr": "Bir kişiye veya belirtilen hedef noktaya giderken zu + Dativ kullanılır. zum = zu dem; zur = zu der. Doğru cevap: zu.",
+            "de": "Für den Weg zu einer Person oder einem Zielpunkt steht zu + Dativ. Zum = zu dem; zur = zu der. Richtige Antwort: zu.",
+            "en": "Use zu + dative for movement to a person or a destination point. Zum = zu dem; zur = zu der. Correct answer: zu."
+          },
+          "type": "text",
+          "answers": [
+            "zu"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Mein Bruder reist ___ Japan.",
+          "correct": "nach",
+          "explanations": {
+            "tr": "Şehirlere ve artikelsiz ülkelere giderken nach kullanılır: nach Köln, nach Spanien. Doğru cevap: nach.",
+            "de": "Bei Zielen wie Städten und Ländern ohne Artikel steht nach: nach Köln, nach Spanien. Richtige Antwort: nach.",
+            "en": "Use nach for destinations that are cities or countries without articles: nach Köln, nach Spanien. Correct answer: nach."
+          },
+          "type": "text",
+          "answers": [
+            "nach"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aus-von-4",
+      "title": {
+        "tr": "Übung 4 – Nereden: aus veya von",
+        "de": "Übung 4 – Herkunft mit aus oder von",
+        "en": "Exercise 4 – Origin with aus or von"
+      },
+      "description": {
+        "tr": "Boşluğa aus veya von yaz.",
+        "de": "Ergänze aus oder von.",
+        "en": "Fill in aus or von."
+      },
+      "difficulty": {
+        "tr": "Temel çalışma",
+        "de": "Grundlagen",
+        "en": "Foundations"
+      },
+      "hideLesson": false,
+      "questions": [
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Ich komme ___ Österreich.",
+          "correct": "aus",
+          "explanations": {
+            "tr": "Bir yerin içinden gelmek ve şehir/ülke kökeni için aus + Dativ kullanılır: aus dem Haus, aus Berlin, aus der Türkei. Doğru cevap: aus.",
+            "de": "Aus + Dativ bezeichnet das Herauskommen aus einem Raum oder die Herkunft: aus dem Haus, aus Berlin, aus der Türkei. Richtige Antwort: aus.",
+            "en": "Use aus + dative for coming out of a space or for origin: aus dem Haus, aus Berlin, aus der Türkei. Correct answer: aus."
+          },
+          "type": "text",
+          "answers": [
+            "aus"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Sie kommt gerade ___ ihrer Freundin.",
+          "correct": "von",
+          "explanations": {
+            "tr": "Bir kişiden, etkinlikten veya belirtilen noktadan gelmek için von + Dativ kullanılır. vom = von dem. Doğru cevap: von.",
+            "de": "Von + Dativ bezeichnet den Ausgangspunkt bei Personen, Aktivitäten oder bestimmten Orten. Vom = von dem. Richtige Antwort: von.",
+            "en": "Use von + dative for coming from people, activities or a given starting point. Vom = von dem. Correct answer: von."
+          },
+          "type": "text",
+          "answers": [
+            "von"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Der Mann geht ___ dem Haus heraus.",
+          "correct": "aus",
+          "explanations": {
+            "tr": "Bir yerin içinden gelmek ve şehir/ülke kökeni için aus + Dativ kullanılır: aus dem Haus, aus Berlin, aus der Türkei. Doğru cevap: aus.",
+            "de": "Aus + Dativ bezeichnet das Herauskommen aus einem Raum oder die Herkunft: aus dem Haus, aus Berlin, aus der Türkei. Richtige Antwort: aus.",
+            "en": "Use aus + dative for coming out of a space or for origin: aus dem Haus, aus Berlin, aus der Türkei. Correct answer: aus."
+          },
+          "type": "text",
+          "answers": [
+            "aus"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Wir kommen ___ einer Geburtstagsfeier.",
+          "correct": "von",
+          "explanations": {
+            "tr": "Bir kişiden, etkinlikten veya belirtilen noktadan gelmek için von + Dativ kullanılır. vom = von dem. Doğru cevap: von.",
+            "de": "Von + Dativ bezeichnet den Ausgangspunkt bei Personen, Aktivitäten oder bestimmten Orten. Vom = von dem. Richtige Antwort: von.",
+            "en": "Use von + dative for coming from people, activities or a given starting point. Vom = von dem. Correct answer: von."
+          },
+          "type": "text",
+          "answers": [
+            "von"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Meine Familie kommt ___ der Türkei.",
+          "correct": "aus",
+          "explanations": {
+            "tr": "Bir yerin içinden gelmek ve şehir/ülke kökeni için aus + Dativ kullanılır: aus dem Haus, aus Berlin, aus der Türkei. Doğru cevap: aus.",
+            "de": "Aus + Dativ bezeichnet das Herauskommen aus einem Raum oder die Herkunft: aus dem Haus, aus Berlin, aus der Türkei. Richtige Antwort: aus.",
+            "en": "Use aus + dative for coming out of a space or for origin: aus dem Haus, aus Berlin, aus der Türkei. Correct answer: aus."
+          },
+          "type": "text",
+          "answers": [
+            "aus"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Das Kind kommt ___ dem Zimmer heraus.",
+          "correct": "aus",
+          "explanations": {
+            "tr": "Bir yerin içinden gelmek ve şehir/ülke kökeni için aus + Dativ kullanılır: aus dem Haus, aus Berlin, aus der Türkei. Doğru cevap: aus.",
+            "de": "Aus + Dativ bezeichnet das Herauskommen aus einem Raum oder die Herkunft: aus dem Haus, aus Berlin, aus der Türkei. Richtige Antwort: aus.",
+            "en": "Use aus + dative for coming out of a space or for origin: aus dem Haus, aus Berlin, aus der Türkei. Correct answer: aus."
+          },
+          "type": "text",
+          "answers": [
+            "aus"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Ich komme gerade ___ meinem Arzt.",
+          "correct": "von",
+          "explanations": {
+            "tr": "Bir kişiden, etkinlikten veya belirtilen noktadan gelmek için von + Dativ kullanılır. vom = von dem. Doğru cevap: von.",
+            "de": "Von + Dativ bezeichnet den Ausgangspunkt bei Personen, Aktivitäten oder bestimmten Orten. Vom = von dem. Richtige Antwort: von.",
+            "en": "Use von + dative for coming from people, activities or a given starting point. Vom = von dem. Correct answer: von."
+          },
+          "type": "text",
+          "answers": [
+            "von"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Dieser Zug kommt ___ München.",
+          "correct": "aus",
+          "explanations": {
+            "tr": "Bir yerin içinden gelmek ve şehir/ülke kökeni için aus + Dativ kullanılır: aus dem Haus, aus Berlin, aus der Türkei. Doğru cevap: aus.",
+            "de": "Aus + Dativ bezeichnet das Herauskommen aus einem Raum oder die Herkunft: aus dem Haus, aus Berlin, aus der Türkei. Richtige Antwort: aus.",
+            "en": "Use aus + dative for coming out of a space or for origin: aus dem Haus, aus Berlin, aus der Türkei. Correct answer: aus."
+          },
+          "type": "text",
+          "answers": [
+            "aus"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Wir kommen ___ zu Hause.",
+          "correct": "von",
+          "explanations": {
+            "tr": "Evde: zu Hause. Eve: nach Hause. Evden: von zu Hause. Bunlar sabit ifadelerdir. Doğru cevap: von.",
+            "de": "Zu Hause bezeichnet den Ort, nach Hause das Ziel und von zu Hause den Ausgangspunkt. Das sind feste Wendungen. Richtige Antwort: von.",
+            "en": "Zu Hause means at home, nach Hause means homeward and von zu Hause means from home. Learn these as fixed phrases. Correct answer: von."
+          },
+          "type": "text",
+          "answers": [
+            "von"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Die Katze springt ___ dem Karton heraus.",
+          "correct": "aus",
+          "explanations": {
+            "tr": "Bir yerin içinden gelmek ve şehir/ülke kökeni için aus + Dativ kullanılır: aus dem Haus, aus Berlin, aus der Türkei. Doğru cevap: aus.",
+            "de": "Aus + Dativ bezeichnet das Herauskommen aus einem Raum oder die Herkunft: aus dem Haus, aus Berlin, aus der Türkei. Richtige Antwort: aus.",
+            "en": "Use aus + dative for coming out of a space or for origin: aus dem Haus, aus Berlin, aus der Türkei. Correct answer: aus."
+          },
+          "type": "text",
+          "answers": [
+            "aus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "positionen-5",
+      "title": {
+        "tr": "Übung 5 – Konum: Wo?",
+        "de": "Übung 5 – Positionen mit Wo?",
+        "en": "Exercise 5 – Positions with Wo?"
+      },
+      "description": {
+        "tr": "Bağlama göre yer edatını seç.",
+        "de": "Wähle die Ortspräposition nach dem Kontext.",
+        "en": "Choose the location preposition from context."
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Consolidation"
+      },
+      "hideLesson": false,
+      "questions": [
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Das Buch liegt oben auf der Tischplatte. Es liegt ___ dem Tisch.",
+          "correct": "auf",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile mevcut konum soruluyorsa (Wo?) Dativ kullanılır. Hareket olması tek başına Akkusativ gerektirmez. Doğru cevap: auf.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einer Position (Wo?) mit Dativ. Bewegung allein bedeutet nicht automatisch Akkusativ. Richtige Antwort: auf.",
+            "en": "Use dative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a position (Wo?). Movement alone does not automatically require accusative. Correct answer: auf."
+          },
+          "options": [
+            "auf",
+            "unter",
+            "neben"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Die Katze ist unter dem Bett versteckt. Sie sitzt ___ dem Bett.",
+          "correct": "unter",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile mevcut konum soruluyorsa (Wo?) Dativ kullanılır. Hareket olması tek başına Akkusativ gerektirmez. Doğru cevap: unter.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einer Position (Wo?) mit Dativ. Bewegung allein bedeutet nicht automatisch Akkusativ. Richtige Antwort: unter.",
+            "en": "Use dative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a position (Wo?). Movement alone does not automatically require accusative. Correct answer: unter."
+          },
+          "options": [
+            "auf",
+            "unter",
+            "über"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Das Bild hängt an der Wand direkt oberhalb des Sofas. Es hängt ___ dem Sofa.",
+          "correct": "über",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile mevcut konum soruluyorsa (Wo?) Dativ kullanılır. Hareket olması tek başına Akkusativ gerektirmez. Doğru cevap: über.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einer Position (Wo?) mit Dativ. Bewegung allein bedeutet nicht automatisch Akkusativ. Richtige Antwort: über.",
+            "en": "Use dative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a position (Wo?). Movement alone does not automatically require accusative. Correct answer: über."
+          },
+          "options": [
+            "unter",
+            "in",
+            "über"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Der Schlüssel ist im Inneren der Tasche. Er ist ___ der Tasche.",
+          "correct": "in",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile mevcut konum soruluyorsa (Wo?) Dativ kullanılır. Hareket olması tek başına Akkusativ gerektirmez. Doğru cevap: in.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einer Position (Wo?) mit Dativ. Bewegung allein bedeutet nicht automatisch Akkusativ. Richtige Antwort: in.",
+            "en": "Use dative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a position (Wo?). Movement alone does not automatically require accusative. Correct answer: in."
+          },
+          "options": [
+            "in",
+            "auf",
+            "vor"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Ben sitzt rechts von Mia, direkt an ihrer Seite. Er sitzt ___ Mia.",
+          "correct": "neben",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile mevcut konum soruluyorsa (Wo?) Dativ kullanılır. Hareket olması tek başına Akkusativ gerektirmez. Doğru cevap: neben.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einer Position (Wo?) mit Dativ. Bewegung allein bedeutet nicht automatisch Akkusativ. Richtige Antwort: neben.",
+            "en": "Use dative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a position (Wo?). Movement alone does not automatically require accusative. Correct answer: neben."
+          },
+          "options": [
+            "über",
+            "unter",
+            "neben"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Ein Auto steht links, ein Auto rechts von mir. Ich stehe ___ den Autos.",
+          "correct": "zwischen",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile mevcut konum soruluyorsa (Wo?) Dativ kullanılır. Hareket olması tek başına Akkusativ gerektirmez. Doğru cevap: zwischen.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einer Position (Wo?) mit Dativ. Bewegung allein bedeutet nicht automatisch Akkusativ. Richtige Antwort: zwischen.",
+            "en": "Use dative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a position (Wo?). Movement alone does not automatically require accusative. Correct answer: zwischen."
+          },
+          "options": [
+            "zwischen",
+            "auf",
+            "über"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Wir warten draußen direkt vor dem Eingang. Wir stehen ___ der Tür.",
+          "correct": "vor",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile mevcut konum soruluyorsa (Wo?) Dativ kullanılır. Hareket olması tek başına Akkusativ gerektirmez. Doğru cevap: vor.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einer Position (Wo?) mit Dativ. Bewegung allein bedeutet nicht automatisch Akkusativ. Richtige Antwort: vor.",
+            "en": "Use dative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a position (Wo?). Movement alone does not automatically require accusative. Correct answer: vor."
+          },
+          "options": [
+            "in",
+            "vor",
+            "über"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Das Fahrrad ist hinter der Garage, nicht davor. Es steht ___ der Garage.",
+          "correct": "hinter",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile mevcut konum soruluyorsa (Wo?) Dativ kullanılır. Hareket olması tek başına Akkusativ gerektirmez. Doğru cevap: hinter.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einer Position (Wo?) mit Dativ. Bewegung allein bedeutet nicht automatisch Akkusativ. Richtige Antwort: hinter.",
+            "en": "Use dative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a position (Wo?). Movement alone does not automatically require accusative. Correct answer: hinter."
+          },
+          "options": [
+            "auf",
+            "zwischen",
+            "hinter"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Das Poster hängt an der Wand. Es hängt ___ der Wand.",
+          "correct": "an",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile mevcut konum soruluyorsa (Wo?) Dativ kullanılır. Hareket olması tek başına Akkusativ gerektirmez. Doğru cevap: an.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einer Position (Wo?) mit Dativ. Bewegung allein bedeutet nicht automatisch Akkusativ. Richtige Antwort: an.",
+            "en": "Use dative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a position (Wo?). Movement alone does not automatically require accusative. Correct answer: an."
+          },
+          "options": [
+            "unter",
+            "an",
+            "in"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Die Lampe steht auf dem kleinen Tisch. Sie steht ___ dem Tisch.",
+          "correct": "auf",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile mevcut konum soruluyorsa (Wo?) Dativ kullanılır. Hareket olması tek başına Akkusativ gerektirmez. Doğru cevap: auf.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einer Position (Wo?) mit Dativ. Bewegung allein bedeutet nicht automatisch Akkusativ. Richtige Antwort: auf.",
+            "en": "Use dative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a position (Wo?). Movement alone does not automatically require accusative. Correct answer: auf."
+          },
+          "options": [
+            "auf",
+            "unter",
+            "hinter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dativ-akkusativ-6",
+      "title": {
+        "tr": "Übung 6 – Konum ve hedefi ayırt et",
+        "de": "Übung 6 – Position oder Ziel?",
+        "en": "Exercise 6 – Position or destination?"
+      },
+      "description": {
+        "tr": "Edat sabit: yalnızca doğru artikel biçimini yaz.",
+        "de": "Die Präposition ist vorgegeben. Schreibe nur die richtige Artikelform.",
+        "en": "The preposition is given. Type only the correct article form."
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Consolidation"
+      },
+      "hideLesson": false,
+      "questions": [
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Das Buch liegt auf ___ Tisch. (der Tisch)",
+          "correct": "dem",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile mevcut konum soruluyorsa (Wo?) Dativ kullanılır. Hareket olması tek başına Akkusativ gerektirmez. Doğru cevap: dem.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einer Position (Wo?) mit Dativ. Bewegung allein bedeutet nicht automatisch Akkusativ. Richtige Antwort: dem.",
+            "en": "Use dative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a position (Wo?). Movement alone does not automatically require accusative. Correct answer: dem."
+          },
+          "type": "text",
+          "answers": [
+            "dem"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Ich lege das Buch auf ___ Tisch. (der Tisch)",
+          "correct": "den",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile yeni bir hedef konum belirtiliyorsa (Wohin?) Akkusativ kullanılır. Doğru cevap: den.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einem Zielort (Wohin?) mit Akkusativ. Richtige Antwort: den.",
+            "en": "Use accusative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a new target position (Wohin?). Correct answer: den."
+          },
+          "type": "text",
+          "answers": [
+            "den"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Das Kind spielt in ___ Küche. (die Küche)",
+          "correct": "der",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile mevcut konum soruluyorsa (Wo?) Dativ kullanılır. Hareket olması tek başına Akkusativ gerektirmez. Doğru cevap: der.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einer Position (Wo?) mit Dativ. Bewegung allein bedeutet nicht automatisch Akkusativ. Richtige Antwort: der.",
+            "en": "Use dative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a position (Wo?). Movement alone does not automatically require accusative. Correct answer: der."
+          },
+          "type": "text",
+          "answers": [
+            "der"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Das Kind geht in ___ Küche hinein. (die Küche)",
+          "correct": "die",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile yeni bir hedef konum belirtiliyorsa (Wohin?) Akkusativ kullanılır. Doğru cevap: die.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einem Zielort (Wohin?) mit Akkusativ. Richtige Antwort: die.",
+            "en": "Use accusative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a new target position (Wohin?). Correct answer: die."
+          },
+          "type": "text",
+          "answers": [
+            "die"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Die Katze sitzt unter ___ Stuhl. (der Stuhl)",
+          "correct": "dem",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile mevcut konum soruluyorsa (Wo?) Dativ kullanılır. Hareket olması tek başına Akkusativ gerektirmez. Doğru cevap: dem.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einer Position (Wo?) mit Dativ. Bewegung allein bedeutet nicht automatisch Akkusativ. Richtige Antwort: dem.",
+            "en": "Use dative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a position (Wo?). Movement alone does not automatically require accusative. Correct answer: dem."
+          },
+          "type": "text",
+          "answers": [
+            "dem"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Die Katze läuft unter ___ Stuhl und bleibt dort. (der Stuhl)",
+          "correct": "den",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile yeni bir hedef konum belirtiliyorsa (Wohin?) Akkusativ kullanılır. Doğru cevap: den.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einem Zielort (Wohin?) mit Akkusativ. Richtige Antwort: den.",
+            "en": "Use accusative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a new target position (Wohin?). Correct answer: den."
+          },
+          "type": "text",
+          "answers": [
+            "den"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Das Bild hängt an ___ Wand. (die Wand)",
+          "correct": "der",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile mevcut konum soruluyorsa (Wo?) Dativ kullanılır. Hareket olması tek başına Akkusativ gerektirmez. Doğru cevap: der.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einer Position (Wo?) mit Dativ. Bewegung allein bedeutet nicht automatisch Akkusativ. Richtige Antwort: der.",
+            "en": "Use dative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a position (Wo?). Movement alone does not automatically require accusative. Correct answer: der."
+          },
+          "type": "text",
+          "answers": [
+            "der"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Ich hänge das Bild an ___ Wand. (die Wand)",
+          "correct": "die",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile yeni bir hedef konum belirtiliyorsa (Wohin?) Akkusativ kullanılır. Doğru cevap: die.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einem Zielort (Wohin?) mit Akkusativ. Richtige Antwort: die.",
+            "en": "Use accusative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a new target position (Wohin?). Correct answer: die."
+          },
+          "type": "text",
+          "answers": [
+            "die"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Der Ball liegt in ___ Zimmer. (das Zimmer)",
+          "correct": "dem",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile mevcut konum soruluyorsa (Wo?) Dativ kullanılır. Hareket olması tek başına Akkusativ gerektirmez. Doğru cevap: dem.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einer Position (Wo?) mit Dativ. Bewegung allein bedeutet nicht automatisch Akkusativ. Richtige Antwort: dem.",
+            "en": "Use dative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a position (Wo?). Movement alone does not automatically require accusative. Correct answer: dem."
+          },
+          "type": "text",
+          "answers": [
+            "dem"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Ich trage den Ball in ___ Zimmer hinein. (das Zimmer)",
+          "correct": "das",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile yeni bir hedef konum belirtiliyorsa (Wohin?) Akkusativ kullanılır. Doğru cevap: das.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einem Zielort (Wohin?) mit Akkusativ. Richtige Antwort: das.",
+            "en": "Use accusative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a new target position (Wohin?). Correct answer: das."
+          },
+          "type": "text",
+          "answers": [
+            "das"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wege-7",
+      "title": {
+        "tr": "Übung 7 – Yollar ve hedef noktaları",
+        "de": "Übung 7 – Wege und Zielpunkte",
+        "en": "Exercise 7 – Routes and destination points"
+      },
+      "description": {
+        "tr": "Parantezdeki seçeneklerden doğru ifadeyi yaz.",
+        "de": "Schreibe den passenden Ausdruck aus der Klammer.",
+        "en": "Type the correct expression from the choices in brackets."
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Consolidation"
+      },
+      "hideLesson": false,
+      "questions": [
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Wir gehen ___ den Park: am Eingang hinein, am anderen Ausgang hinaus. (durch / um / bei)",
+          "correct": "durch",
+          "explanations": {
+            "tr": "Bir yerin içinden geçmek için durch + Akkusativ kullanılır: durch den Park. Doğru cevap: durch.",
+            "de": "Durch + Akkusativ beschreibt einen Weg durch einen Raum: durch den Park. Richtige Antwort: durch.",
+            "en": "Use durch + accusative for a route through a space: durch den Park. Correct answer: durch."
+          },
+          "type": "text",
+          "answers": [
+            "durch"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Wir gehen einmal ___ den See herum. (durch / um / aus)",
+          "correct": "um",
+          "explanations": {
+            "tr": "Bir yerin etrafından veya çevresinden gitmek için um + Akkusativ kullanılır. Doğru cevap: um.",
+            "de": "Um + Akkusativ beschreibt einen Weg rund um etwas. Richtige Antwort: um.",
+            "en": "Use um + accusative for a route around something. Correct answer: um."
+          },
+          "type": "text",
+          "answers": [
+            "um"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Ich gehe ___ Arzt. (zum / beim / vom)",
+          "correct": "zum",
+          "explanations": {
+            "tr": "Bir kişiye veya belirtilen hedef noktaya giderken zu + Dativ kullanılır. zum = zu dem; zur = zu der. Doğru cevap: zum.",
+            "de": "Für den Weg zu einer Person oder einem Zielpunkt steht zu + Dativ. Zum = zu dem; zur = zu der. Richtige Antwort: zum.",
+            "en": "Use zu + dative for movement to a person or a destination point. Zum = zu dem; zur = zu der. Correct answer: zum."
+          },
+          "type": "text",
+          "answers": [
+            "zum"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Sara geht ___ Post. (zur / bei der / aus der)",
+          "correct": "zur",
+          "explanations": {
+            "tr": "Bir kişiye veya belirtilen hedef noktaya giderken zu + Dativ kullanılır. zum = zu dem; zur = zu der. Doğru cevap: zur.",
+            "de": "Für den Weg zu einer Person oder einem Zielpunkt steht zu + Dativ. Zum = zu dem; zur = zu der. Richtige Antwort: zur.",
+            "en": "Use zu + dative for movement to a person or a destination point. Zum = zu dem; zur = zu der. Correct answer: zur."
+          },
+          "type": "text",
+          "answers": [
+            "zur"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Die Bank liegt auf der anderen Straßenseite, direkt ___ der Schule. (gegenüber / durch / um)",
+          "correct": "gegenüber",
+          "explanations": {
+            "tr": "Karşısında anlamında gegenüber + Dativ kullanılır: gegenüber der Schule. Doğru cevap: gegenüber.",
+            "de": "Gegenüber + Dativ bezeichnet die gegenüberliegende Seite: gegenüber der Schule. Richtige Antwort: gegenüber.",
+            "en": "Use gegenüber + dative to mean opposite: gegenüber der Schule. Correct answer: gegenüber."
+          },
+          "type": "text",
+          "answers": [
+            "gegenüber"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Der Bus fährt ___ den Tunnel: auf einer Seite hinein, auf der anderen hinaus. (durch / um / bei)",
+          "correct": "durch",
+          "explanations": {
+            "tr": "Bir yerin içinden geçmek için durch + Akkusativ kullanılır: durch den Park. Doğru cevap: durch.",
+            "de": "Durch + Akkusativ beschreibt einen Weg durch einen Raum: durch den Park. Richtige Antwort: durch.",
+            "en": "Use durch + accusative for a route through a space: durch den Park. Correct answer: durch."
+          },
+          "type": "text",
+          "answers": [
+            "durch"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Wir laufen einmal ___ das Haus herum. (aus / um / von)",
+          "correct": "um",
+          "explanations": {
+            "tr": "Bir yerin etrafından veya çevresinden gitmek için um + Akkusativ kullanılır. Doğru cevap: um.",
+            "de": "Um + Akkusativ beschreibt einen Weg rund um etwas. Richtige Antwort: um.",
+            "en": "Use um + accusative for a route around something. Correct answer: um."
+          },
+          "type": "text",
+          "answers": [
+            "um"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Ich gehe ___ Bahnhof. (zum / beim / vom)",
+          "correct": "zum",
+          "explanations": {
+            "tr": "Bir kişiye veya belirtilen hedef noktaya giderken zu + Dativ kullanılır. zum = zu dem; zur = zu der. Doğru cevap: zum.",
+            "de": "Für den Weg zu einer Person oder einem Zielpunkt steht zu + Dativ. Zum = zu dem; zur = zu der. Richtige Antwort: zum.",
+            "en": "Use zu + dative for movement to a person or a destination point. Zum = zu dem; zur = zu der. Correct answer: zum."
+          },
+          "type": "text",
+          "answers": [
+            "zum"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Lisa fährt ___ Bushaltestelle. (zur / bei der / von der)",
+          "correct": "zur",
+          "explanations": {
+            "tr": "Bir kişiye veya belirtilen hedef noktaya giderken zu + Dativ kullanılır. zum = zu dem; zur = zu der. Doğru cevap: zur.",
+            "de": "Für den Weg zu einer Person oder einem Zielpunkt steht zu + Dativ. Zum = zu dem; zur = zu der. Richtige Antwort: zur.",
+            "en": "Use zu + dative for movement to a person or a destination point. Zum = zu dem; zur = zu der. Correct answer: zur."
+          },
+          "type": "text",
+          "answers": [
+            "zur"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Die Bäckerei ist auf der anderen Straßenseite, direkt ___ dem Hotel. (gegenüber / durch / um)",
+          "correct": "gegenüber",
+          "explanations": {
+            "tr": "Karşısında anlamında gegenüber + Dativ kullanılır: gegenüber der Schule. Doğru cevap: gegenüber.",
+            "de": "Gegenüber + Dativ bezeichnet die gegenüberliegende Seite: gegenüber der Schule. Richtige Antwort: gegenüber.",
+            "en": "Use gegenüber + dative to mean opposite: gegenüber der Schule. Correct answer: gegenüber."
+          },
+          "type": "text",
+          "answers": [
+            "gegenüber"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "artikel-8",
+      "title": {
+        "tr": "Übung 8 – Edat ve artikel",
+        "de": "Übung 8 – Präposition und Artikel",
+        "en": "Exercise 8 – Preposition and article"
+      },
+      "description": {
+        "tr": "Parantezdeki edat ve artikelden boşluğa gelen ifadeyi yaz.",
+        "de": "Schreibe die Präposition und den Artikel aus der Klammer in der passenden Form.",
+        "en": "Write the given preposition and article in the correct form."
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Consolidation"
+      },
+      "hideLesson": false,
+      "questions": [
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Wir sind ___ Garten. (in + der)",
+          "correct": "in dem",
+          "explanations": {
+            "tr": "Bir yerin içinde bulunmak için in + Dativ kullanılır. Şehir ve artikelsiz ülke adlarıyla da in kullanılır: in Köln, in Spanien. Doğru cevap: in dem.",
+            "de": "Für einen Ort innerhalb eines Raums steht in + Dativ. Bei Städten und Ländern ohne Artikel steht ebenfalls in: in Köln, in Spanien. Richtige Antwort: in dem.",
+            "en": "Use in + dative for a location inside a space. Also use in with cities and countries without articles: in Köln, in Spanien. Correct answer: in dem."
+          },
+          "type": "text",
+          "answers": [
+            "in dem",
+            "im"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Ich gehe ___ Garten hinein. (in + der)",
+          "correct": "in den",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile yeni bir hedef konum belirtiliyorsa (Wohin?) Akkusativ kullanılır. Doğru cevap: in den.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einem Zielort (Wohin?) mit Akkusativ. Richtige Antwort: in den.",
+            "en": "Use accusative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a new target position (Wohin?). Correct answer: in den."
+          },
+          "type": "text",
+          "answers": [
+            "in den"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Sie kommt ___ Küche heraus. (aus + die)",
+          "correct": "aus der",
+          "explanations": {
+            "tr": "Bir yerin içinden gelmek ve şehir/ülke kökeni için aus + Dativ kullanılır: aus dem Haus, aus Berlin, aus der Türkei. Doğru cevap: aus der.",
+            "de": "Aus + Dativ bezeichnet das Herauskommen aus einem Raum oder die Herkunft: aus dem Haus, aus Berlin, aus der Türkei. Richtige Antwort: aus der.",
+            "en": "Use aus + dative for coming out of a space or for origin: aus dem Haus, aus Berlin, aus der Türkei. Correct answer: aus der."
+          },
+          "type": "text",
+          "answers": [
+            "aus der"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Wir gehen ___ Bahnhof. (zu + der)",
+          "correct": "zu dem",
+          "explanations": {
+            "tr": "Bir kişiye veya belirtilen hedef noktaya giderken zu + Dativ kullanılır. zum = zu dem; zur = zu der. Doğru cevap: zu dem.",
+            "de": "Für den Weg zu einer Person oder einem Zielpunkt steht zu + Dativ. Zum = zu dem; zur = zu der. Richtige Antwort: zu dem.",
+            "en": "Use zu + dative for movement to a person or a destination point. Zum = zu dem; zur = zu der. Correct answer: zu dem."
+          },
+          "type": "text",
+          "answers": [
+            "zu dem",
+            "zum"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Er kommt ___ Arzt. (von + der)",
+          "correct": "von dem",
+          "explanations": {
+            "tr": "Bir kişiden, etkinlikten veya belirtilen noktadan gelmek için von + Dativ kullanılır. vom = von dem. Doğru cevap: von dem.",
+            "de": "Von + Dativ bezeichnet den Ausgangspunkt bei Personen, Aktivitäten oder bestimmten Orten. Vom = von dem. Richtige Antwort: von dem.",
+            "en": "Use von + dative for coming from people, activities or a given starting point. Vom = von dem. Correct answer: von dem."
+          },
+          "type": "text",
+          "answers": [
+            "von dem",
+            "vom"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Das Handy liegt ___ Sofa. (auf + das)",
+          "correct": "auf dem",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile mevcut konum soruluyorsa (Wo?) Dativ kullanılır. Hareket olması tek başına Akkusativ gerektirmez. Doğru cevap: auf dem.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einer Position (Wo?) mit Dativ. Bewegung allein bedeutet nicht automatisch Akkusativ. Richtige Antwort: auf dem.",
+            "en": "Use dative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a position (Wo?). Movement alone does not automatically require accusative. Correct answer: auf dem."
+          },
+          "type": "text",
+          "answers": [
+            "auf dem"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Ich lege das Handy ___ Sofa. (auf + das)",
+          "correct": "auf das",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile yeni bir hedef konum belirtiliyorsa (Wohin?) Akkusativ kullanılır. Doğru cevap: auf das.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einem Zielort (Wohin?) mit Akkusativ. Richtige Antwort: auf das.",
+            "en": "Use accusative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a new target position (Wohin?). Correct answer: auf das."
+          },
+          "type": "text",
+          "answers": [
+            "auf das",
+            "aufs"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Wir fahren ___ Tunnel. (durch + der)",
+          "correct": "durch den",
+          "explanations": {
+            "tr": "Bir yerin içinden geçmek için durch + Akkusativ kullanılır: durch den Park. Doğru cevap: durch den.",
+            "de": "Durch + Akkusativ beschreibt einen Weg durch einen Raum: durch den Park. Richtige Antwort: durch den.",
+            "en": "Use durch + accusative for a route through a space: durch den Park. Correct answer: durch den."
+          },
+          "type": "text",
+          "answers": [
+            "durch den"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Sie laufen ___ See herum. (um + der)",
+          "correct": "um den",
+          "explanations": {
+            "tr": "Bir yerin etrafından veya çevresinden gitmek için um + Akkusativ kullanılır. Doğru cevap: um den.",
+            "de": "Um + Akkusativ beschreibt einen Weg rund um etwas. Richtige Antwort: um den.",
+            "en": "Use um + accusative for a route around something. Correct answer: um den."
+          },
+          "type": "text",
+          "answers": [
+            "um den"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Ich gehe ___ Apotheke. (zu + die)",
+          "correct": "zu der",
+          "explanations": {
+            "tr": "Bir kişiye veya belirtilen hedef noktaya giderken zu + Dativ kullanılır. zum = zu dem; zur = zu der. Doğru cevap: zu der.",
+            "de": "Für den Weg zu einer Person oder einem Zielpunkt steht zu + Dativ. Zum = zu dem; zur = zu der. Richtige Antwort: zu der.",
+            "en": "Use zu + dative for movement to a person or a destination point. Zum = zu dem; zur = zu der. Correct answer: zu der."
+          },
+          "type": "text",
+          "answers": [
+            "zu der",
+            "zur"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fehlerkorrektur-9",
+      "title": {
+        "tr": "Übung 9 – Yer ifadesini düzelt",
+        "de": "Übung 9 – Ortsangaben korrigieren",
+        "en": "Exercise 9 – Correct the location phrase"
+      },
+      "description": {
+        "tr": "Hatayı düzelt ve yalnızca boşluğa gelen kelime veya ifadeyi yaz; tüm cümleyi yazma.",
+        "de": "Korrigiere den Fehler und schreibe nur das fehlende Wort oder die fehlende Wortgruppe, nicht den ganzen Satz.",
+        "en": "Correct the error and type only the word or phrase that fills the blank, not the full sentence."
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Consolidation"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Hatalı / Falsch / Incorrect: Ich wohne nach Berlin. → ___ Berlin",
+          "correct": "in",
+          "explanations": {
+            "tr": "Bir yerin içinde bulunmak için in + Dativ kullanılır. Şehir ve artikelsiz ülke adlarıyla da in kullanılır: in Köln, in Spanien. Doğru cevap: in.",
+            "de": "Für einen Ort innerhalb eines Raums steht in + Dativ. Bei Städten und Ländern ohne Artikel steht ebenfalls in: in Köln, in Spanien. Richtige Antwort: in.",
+            "en": "Use in + dative for a location inside a space. Also use in with cities and countries without articles: in Köln, in Spanien. Correct answer: in."
+          },
+          "type": "text",
+          "answers": [
+            "in"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Hatalı / Falsch / Incorrect: Wir fahren in Italien. → ___ Italien",
+          "correct": "nach",
+          "explanations": {
+            "tr": "Şehirlere ve artikelsiz ülkelere giderken nach kullanılır: nach Köln, nach Spanien. Doğru cevap: nach.",
+            "de": "Bei Zielen wie Städten und Ländern ohne Artikel steht nach: nach Köln, nach Spanien. Richtige Antwort: nach.",
+            "en": "Use nach for destinations that are cities or countries without articles: nach Köln, nach Spanien. Correct answer: nach."
+          },
+          "type": "text",
+          "answers": [
+            "nach"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Hatalı / Falsch / Incorrect: Ich bin nach Hause. → ___ Hause",
+          "correct": "zu",
+          "explanations": {
+            "tr": "Evde: zu Hause. Eve: nach Hause. Evden: von zu Hause. Bunlar sabit ifadelerdir. Doğru cevap: zu.",
+            "de": "Zu Hause bezeichnet den Ort, nach Hause das Ziel und von zu Hause den Ausgangspunkt. Das sind feste Wendungen. Richtige Antwort: zu.",
+            "en": "Zu Hause means at home, nach Hause means homeward and von zu Hause means from home. Learn these as fixed phrases. Correct answer: zu."
+          },
+          "type": "text",
+          "answers": [
+            "zu"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Hatalı / Falsch / Incorrect: Ich gehe zu Hause. → ___ Hause",
+          "correct": "nach",
+          "explanations": {
+            "tr": "Evde: zu Hause. Eve: nach Hause. Evden: von zu Hause. Bunlar sabit ifadelerdir. Doğru cevap: nach.",
+            "de": "Zu Hause bezeichnet den Ort, nach Hause das Ziel und von zu Hause den Ausgangspunkt. Das sind feste Wendungen. Richtige Antwort: nach.",
+            "en": "Zu Hause means at home, nach Hause means homeward and von zu Hause means from home. Learn these as fixed phrases. Correct answer: nach."
+          },
+          "type": "text",
+          "answers": [
+            "nach"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Hatalı / Falsch / Incorrect: Ich komme von Spanien. → ___ Spanien",
+          "correct": "aus",
+          "explanations": {
+            "tr": "Bir yerin içinden gelmek ve şehir/ülke kökeni için aus + Dativ kullanılır: aus dem Haus, aus Berlin, aus der Türkei. Doğru cevap: aus.",
+            "de": "Aus + Dativ bezeichnet das Herauskommen aus einem Raum oder die Herkunft: aus dem Haus, aus Berlin, aus der Türkei. Richtige Antwort: aus.",
+            "en": "Use aus + dative for coming out of a space or for origin: aus dem Haus, aus Berlin, aus der Türkei. Correct answer: aus."
+          },
+          "type": "text",
+          "answers": [
+            "aus"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Hatalı / Falsch / Incorrect: Ich bin bei meine Tante. → ___",
+          "correct": "bei meiner Tante",
+          "explanations": {
+            "tr": "Bir kişinin yanında veya evinde bulunmak için bei + Dativ kullanılır: bei meiner Tante. beim = bei dem. Doğru cevap: bei meiner Tante.",
+            "de": "Bei + Dativ bezeichnet den Aufenthalt bei einer Person: bei meiner Tante. Beim = bei dem. Richtige Antwort: bei meiner Tante.",
+            "en": "Use bei + dative when staying with a person: bei meiner Tante. Beim = bei dem. Correct answer: bei meiner Tante."
+          },
+          "type": "text",
+          "answers": [
+            "bei meiner Tante"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Hatalı / Falsch / Incorrect: Das Buch liegt auf den Tisch. → ___",
+          "correct": "auf dem Tisch",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile mevcut konum soruluyorsa (Wo?) Dativ kullanılır. Hareket olması tek başına Akkusativ gerektirmez. Doğru cevap: auf dem Tisch.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einer Position (Wo?) mit Dativ. Bewegung allein bedeutet nicht automatisch Akkusativ. Richtige Antwort: auf dem Tisch.",
+            "en": "Use dative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a position (Wo?). Movement alone does not automatically require accusative. Correct answer: auf dem Tisch."
+          },
+          "type": "text",
+          "answers": [
+            "auf dem Tisch"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Hatalı / Falsch / Incorrect: Ich lege das Buch auf dem Tisch. → ___",
+          "correct": "auf den Tisch",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile yeni bir hedef konum belirtiliyorsa (Wohin?) Akkusativ kullanılır. Doğru cevap: auf den Tisch.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einem Zielort (Wohin?) mit Akkusativ. Richtige Antwort: auf den Tisch.",
+            "en": "Use accusative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a new target position (Wohin?). Correct answer: auf den Tisch."
+          },
+          "type": "text",
+          "answers": [
+            "auf den Tisch"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Hatalı / Falsch / Incorrect: Wir gehen durch dem Park. → ___",
+          "correct": "durch den Park",
+          "explanations": {
+            "tr": "Bir yerin içinden geçmek için durch + Akkusativ kullanılır: durch den Park. Doğru cevap: durch den Park.",
+            "de": "Durch + Akkusativ beschreibt einen Weg durch einen Raum: durch den Park. Richtige Antwort: durch den Park.",
+            "en": "Use durch + accusative for a route through a space: durch den Park. Correct answer: durch den Park."
+          },
+          "type": "text",
+          "answers": [
+            "durch den Park"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Hatalı / Falsch / Incorrect: Sie kommt aus die Schule heraus. → ___",
+          "correct": "aus der Schule",
+          "explanations": {
+            "tr": "Bir yerin içinden gelmek ve şehir/ülke kökeni için aus + Dativ kullanılır: aus dem Haus, aus Berlin, aus der Türkei. Doğru cevap: aus der Schule.",
+            "de": "Aus + Dativ bezeichnet das Herauskommen aus einem Raum oder die Herkunft: aus dem Haus, aus Berlin, aus der Türkei. Richtige Antwort: aus der Schule.",
+            "en": "Use aus + dative for coming out of a space or for origin: aus dem Haus, aus Berlin, aus der Türkei. Correct answer: aus der Schule."
+          },
+          "type": "text",
+          "answers": [
+            "aus der Schule"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gemischt-10",
+      "title": {
+        "tr": "Übung 10 – Günlük yaşamda karışık tekrar",
+        "de": "Übung 10 – Gemischte Alltagsübungen",
+        "en": "Exercise 10 – Mixed everyday review"
+      },
+      "description": {
+        "tr": "Parantezdeki seçeneklerden doğru kelimeyi yaz.",
+        "de": "Schreibe das passende Wort aus der Klammer.",
+        "en": "Type the correct word from the choices in brackets."
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Consolidation"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "___ bist du? – In der Bibliothek. (Wo / Wohin / Woher)",
+          "correct": "Wo",
+          "explanations": {
+            "tr": "Wo? bir kişinin veya nesnenin bulunduğu yeri sorar. Doğru cevap: Wo.",
+            "de": "Wo? fragt nach einem Ort oder einer Position. Richtige Antwort: Wo.",
+            "en": "Wo? asks about a location or position. Correct answer: Wo."
+          },
+          "type": "text",
+          "answers": [
+            "Wo"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "___ fährst du? – Nach Salzburg. (Wo / Wohin / Woher)",
+          "correct": "Wohin",
+          "explanations": {
+            "tr": "Wohin? bir hareketin hedefini sorar. Doğru cevap: Wohin.",
+            "de": "Wohin? fragt nach dem Ziel einer Bewegung. Richtige Antwort: Wohin.",
+            "en": "Wohin? asks about the destination of a movement. Correct answer: Wohin."
+          },
+          "type": "text",
+          "answers": [
+            "Wohin"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "___ kommst du? – Aus Dänemark. (Wo / Wohin / Woher)",
+          "correct": "Woher",
+          "explanations": {
+            "tr": "Woher? gelinen yeri veya kökeni sorar. Doğru cevap: Woher.",
+            "de": "Woher? fragt nach der Herkunft oder dem Ausgangsort. Richtige Antwort: Woher.",
+            "en": "Woher? asks about origin or the place someone comes from. Correct answer: Woher."
+          },
+          "type": "text",
+          "answers": [
+            "Woher"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Ich bin heute ___ meinem Bruder zu Besuch. (bei / zu / nach)",
+          "correct": "bei",
+          "explanations": {
+            "tr": "Bir kişinin yanında veya evinde bulunmak için bei + Dativ kullanılır: bei meiner Tante. beim = bei dem. Doğru cevap: bei.",
+            "de": "Bei + Dativ bezeichnet den Aufenthalt bei einer Person: bei meiner Tante. Beim = bei dem. Richtige Antwort: bei.",
+            "en": "Use bei + dative when staying with a person: bei meiner Tante. Beim = bei dem. Correct answer: bei."
+          },
+          "type": "text",
+          "answers": [
+            "bei"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Wir fahren morgen ___ Frankreich. (in / nach / bei)",
+          "correct": "nach",
+          "explanations": {
+            "tr": "Şehirlere ve artikelsiz ülkelere giderken nach kullanılır: nach Köln, nach Spanien. Doğru cevap: nach.",
+            "de": "Bei Zielen wie Städten und Ländern ohne Artikel steht nach: nach Köln, nach Spanien. Richtige Antwort: nach.",
+            "en": "Use nach for destinations that are cities or countries without articles: nach Köln, nach Spanien. Correct answer: nach."
+          },
+          "type": "text",
+          "answers": [
+            "nach"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Nach der Arbeit gehe ich ___ Hause. (zu / nach / bei)",
+          "correct": "nach",
+          "explanations": {
+            "tr": "Evde: zu Hause. Eve: nach Hause. Evden: von zu Hause. Bunlar sabit ifadelerdir. Doğru cevap: nach.",
+            "de": "Zu Hause bezeichnet den Ort, nach Hause das Ziel und von zu Hause den Ausgangspunkt. Das sind feste Wendungen. Richtige Antwort: nach.",
+            "en": "Zu Hause means at home, nach Hause means homeward and von zu Hause means from home. Learn these as fixed phrases. Correct answer: nach."
+          },
+          "type": "text",
+          "answers": [
+            "nach"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Der Hund kommt ___ dem Haus heraus. (aus / von / nach)",
+          "correct": "aus",
+          "explanations": {
+            "tr": "Bir yerin içinden gelmek ve şehir/ülke kökeni için aus + Dativ kullanılır: aus dem Haus, aus Berlin, aus der Türkei. Doğru cevap: aus.",
+            "de": "Aus + Dativ bezeichnet das Herauskommen aus einem Raum oder die Herkunft: aus dem Haus, aus Berlin, aus der Türkei. Richtige Antwort: aus.",
+            "en": "Use aus + dative for coming out of a space or for origin: aus dem Haus, aus Berlin, aus der Türkei. Correct answer: aus."
+          },
+          "type": "text",
+          "answers": [
+            "aus"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Ich komme gerade ___ meiner Nachbarin. (aus / von / zu)",
+          "correct": "von",
+          "explanations": {
+            "tr": "Bir kişiden, etkinlikten veya belirtilen noktadan gelmek için von + Dativ kullanılır. vom = von dem. Doğru cevap: von.",
+            "de": "Von + Dativ bezeichnet den Ausgangspunkt bei Personen, Aktivitäten oder bestimmten Orten. Vom = von dem. Richtige Antwort: von.",
+            "en": "Use von + dative for coming from people, activities or a given starting point. Vom = von dem. Correct answer: von."
+          },
+          "type": "text",
+          "answers": [
+            "von"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Die Schlüssel liegen auf ___ Tisch. (dem / den / der)",
+          "correct": "dem",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile mevcut konum soruluyorsa (Wo?) Dativ kullanılır. Hareket olması tek başına Akkusativ gerektirmez. Doğru cevap: dem.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einer Position (Wo?) mit Dativ. Bewegung allein bedeutet nicht automatisch Akkusativ. Richtige Antwort: dem.",
+            "en": "Use dative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a position (Wo?). Movement alone does not automatically require accusative. Correct answer: dem."
+          },
+          "type": "text",
+          "answers": [
+            "dem"
+          ]
+        },
+        {
+          "word": "Lokale Präpositionen",
+          "sentence": "Ich lege die Schlüssel auf ___ Tisch. (dem / den / der)",
+          "correct": "den",
+          "explanations": {
+            "tr": "in, an, auf, unter, über, vor, hinter, neben ve zwischen ile yeni bir hedef konum belirtiliyorsa (Wohin?) Akkusativ kullanılır. Doğru cevap: den.",
+            "de": "In, an, auf, unter, über, vor, hinter, neben und zwischen stehen bei einem Zielort (Wohin?) mit Akkusativ. Richtige Antwort: den.",
+            "en": "Use accusative with in, an, auf, unter, über, vor, hinter, neben and zwischen for a new target position (Wohin?). Correct answer: den."
+          },
+          "type": "text",
+          "answers": [
+            "den"
+          ]
+        }
+      ]
+    }
+  ]
+}
+

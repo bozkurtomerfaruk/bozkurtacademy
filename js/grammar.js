@@ -683,7 +683,7 @@
         detail.querySelector('.a1-article-header h2')?.focus({preventScroll:true});
       } catch (_) {
         if (activeTopic?.id !== id || activeTopic?.level !== level) return;
-        detail.innerHTML='<p role="alert">Konu anlatımı yüklenemedi. Lütfen tekrar dene.</p><button type="button" class="btn primary" id="a1Retry">Tekrar dene</button><button type="button" class="btn ghost" id="a1Return">A1 konularına dön</button>';
+        detail.innerHTML='<p role="alert">Konu anlatımı yüklenemedi. Lütfen tekrar dene.</p><button type="button" class="btn primary" id="a1Retry">Tekrar dene</button><button type="button" class="btn ghost" id="a1Return">'+escapeHtml(level)+' konularına dön</button>';
         detail.querySelector('#a1Retry').addEventListener('click',()=>openTopic(level,id,{restore:true}));
         detail.querySelector('#a1Return').addEventListener('click',()=>closeA1());
       }
@@ -774,7 +774,7 @@
     try {
       const response=await fetch('data/catalog.json');if(!response.ok)throw Error('Catalog');
       const catalog=await response.json();
-      const registryResponse=await fetch('data/grammar-index.json');if(!registryResponse.ok)throw Error('Grammar index');
+      const registryResponse=await fetch('data/grammar-index.json?v=2');if(!registryResponse.ok)throw Error('Grammar index');
       const registry=await registryResponse.json();
       const datasets=await Promise.all(Object.keys(registry.levels).map(async level=>[level,await window.BAA1Lessons.load(level)]));
       for(const [level,data] of datasets)authored[level]=new Set(data.lessons.map(l=>l.id));

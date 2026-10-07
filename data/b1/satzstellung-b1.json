@@ -1,0 +1,1743 @@
+{
+  "id": "satzstellung-b1",
+  "level": "B1",
+  "title": {
+    "tr": "Satzstellung – cümle sırası",
+    "de": "Satzstellung – B1",
+    "en": "Word order – B1"
+  },
+  "description": {
+    "tr": "10 Übung, 100 soru: fiilin yeri, cümle parantezi, nesne ve zamir sırası, TeKaMoLo, nicht ve yan cümleler.",
+    "de": "10 Übungen mit 100 Aufgaben zu Verbposition, Satzklammer, Objekt- und Pronomenfolge, TeKaMoLo, nicht und Nebensätzen.",
+    "en": "10 exercises with 100 questions on verb position, sentence brackets, objects and pronouns, TeKaMoLo, nicht and subordinate clauses."
+  },
+  "lesson": {
+    "title": {
+      "tr": "Satzstellung – cümle sırası – çalışma rehberi",
+      "de": "Satzstellung – B1 – Lernüberblick",
+      "en": "Word order – B1 – study guide"
+    },
+    "intro": {
+      "tr": "Önce temel örneği incele, sonra alıştırmaları sırayla çöz. Yazılı sorularda verilen başlangıcı ve istenen anlamı koru.",
+      "de": "Lies zuerst die Beispiele und bearbeite dann die Übungen der Reihe nach. Behalte bei Schreibaufgaben Satzanfang und Bedeutung bei.",
+      "en": "Read the examples first, then work through the exercises in order. Keep the specified opening and meaning in written tasks."
+    },
+    "rules": [
+      {
+        "label": "v2",
+        "text": {
+          "tr": "Ana cümlede çekimli fiil ikinci öğededir. İlk öğe birden fazla kelimeden oluşabilir.",
+          "de": "Im Aussagesatz steht das finite Verb an zweiter Satzgliedposition. Ein Satzglied kann mehrere Wörter enthalten.",
+          "en": "In a statement, the finite verb takes the second constituent position. A constituent can contain several words."
+        }
+      },
+      {
+        "label": "bracket",
+        "text": {
+          "tr": "Çekimli fiil ikinci öğede, mastar/Partizip II/ayrılabilen ön ek ana cümlenin sonunda kalır.",
+          "de": "Das finite Verb steht an Position 2; Infinitiv, Partizip II oder trennbarer Verbzusatz stehen am Ende.",
+          "en": "The finite verb takes position 2; an infinitive, past participle or separable prefix goes at the end."
+        }
+      },
+      {
+        "label": "objects",
+        "text": {
+          "tr": "Bu soruda iki nesne de zayıf kişi zamiridir; temel tarafsız sıra Akkusativ + Dativ olur: es ihr.",
+          "de": "Hier sind beide Objekte unbetonte Personalpronomen. Die neutrale Reihenfolge ist Akkusativ vor Dativ: es ihr.",
+          "en": "Both objects here are unstressed personal pronouns. Use the neutral order accusative before dative: es ihr."
+        }
+      },
+      {
+        "label": "tekamolo",
+        "text": {
+          "tr": "Soruda özellikle istenen TeKaMoLo sırası: zaman → neden → nasıl/araç → yer/hedef. Bu, her bağlamda zorunlu tek sıra değildir.",
+          "de": "Die hier verlangte TeKaMoLo-Folge lautet: temporal → kausal → modal → lokal. Andere Kontexte erlauben andere Reihenfolgen.",
+          "en": "The requested TeKaMoLo order is time → reason → manner/means → place/destination. It is not the only possible order in every context."
+        }
+      },
+      {
+        "label": "negation",
+        "text": {
+          "tr": "nicht, karşıtlıkla özellikle reddedilen öğenin hemen önüne gelir. İstenen anlam ve başlangıcı koru.",
+          "de": "Bei gezielter Kontrastnegation steht nicht unmittelbar vor dem verneinten Satzglied. Behalte Bedeutung und Satzanfang bei.",
+          "en": "For focused contrastive negation, put nicht immediately before the negated constituent. Keep the requested meaning and opening."
+        }
+      },
+      {
+        "label": "question",
+        "text": {
+          "tr": "Evet/hayır sorusunda çekimli fiil başta; W-sorusunda soru grubunun hemen ardından gelir.",
+          "de": "In Ja/Nein-Fragen steht das finite Verb zuerst; in W-Fragen direkt nach der Fragegruppe.",
+          "en": "In yes/no questions the finite verb comes first; in question-word questions it follows the question phrase."
+        }
+      },
+      {
+        "label": "sub",
+        "text": {
+          "tr": "Yan cümlede çekimli fiil sonda kalır. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir.",
+          "de": "Im Nebensatz steht das finite Verb am Ende. Ein vorangestellter Nebensatz wird direkt vom finiten Hauptsatzverb gefolgt.",
+          "en": "A subordinate clause ends in the finite verb. If it comes first, the main-clause finite verb follows the comma directly."
+        }
+      }
+    ],
+    "examples": [
+      "Morgen fahre ich nach Berlin.",
+      "Ich habe es ihr gestern gegeben.",
+      "Weil ich krank bin, bleibe ich zu Hause."
+    ],
+    "tip": {
+      "tr": "Yazılı cevaplarda yalnızca istenen ifadeyi yaz. Enter ile kontrol et. Tam cümlelerde gerekli virgülü koru; düzeltme sorularında verilen kelimeleri değiştirme.",
+      "de": "Schreibe nur den verlangten Ausdruck. Prüfe mit Enter. Setze in ganzen Sätzen nötige Kommas; ändere bei Korrekturen nicht die vorgegebenen Wörter.",
+      "en": "Write only what is requested and press Enter to check. Keep necessary commas in full sentences and preserve the given words in correction tasks."
+    }
+  },
+  "exercises": [
+    {
+      "id": "verb-zweit-1",
+      "title": {
+        "tr": "Übung 1 – Fiil ikinci öğede",
+        "de": "Übung 1 – Verb an Position 2",
+        "en": "Exercise 1 – Verb in second position"
+      },
+      "description": {
+        "tr": "Doğru ana cümle sırasını seç.",
+        "de": "Wähle den richtig gebauten Aussagesatz.",
+        "en": "Choose the correctly ordered statement."
+      },
+      "difficulty": {
+        "tr": "Temel",
+        "de": "Grundlagen",
+        "en": "Foundations"
+      },
+      "questions": [
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Heute lerne ich Deutsch.",
+          "explanations": {
+            "tr": "Ana cümlede çekimli fiil ikinci öğededir. İlk öğe birden fazla kelimeden oluşabilir. Hedef cevap: Heute lerne ich Deutsch.",
+            "de": "Im Aussagesatz steht das finite Verb an zweiter Satzgliedposition. Ein Satzglied kann mehrere Wörter enthalten. Zielantwort: Heute lerne ich Deutsch.",
+            "en": "In a statement, the finite verb takes the second constituent position. A constituent can contain several words. Target answer: Heute lerne ich Deutsch."
+          },
+          "options": [
+            "Heute lerne ich Deutsch.",
+            "Heute ich lerne Deutsch.",
+            "Heute Deutsch ich lerne."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Am Montag beginnt der Kurs.",
+          "explanations": {
+            "tr": "Ana cümlede çekimli fiil ikinci öğededir. İlk öğe birden fazla kelimeden oluşabilir. Hedef cevap: Am Montag beginnt der Kurs.",
+            "de": "Im Aussagesatz steht das finite Verb an zweiter Satzgliedposition. Ein Satzglied kann mehrere Wörter enthalten. Zielantwort: Am Montag beginnt der Kurs.",
+            "en": "In a statement, the finite verb takes the second constituent position. A constituent can contain several words. Target answer: Am Montag beginnt der Kurs."
+          },
+          "options": [
+            "Am Montag der Kurs beginnt.",
+            "Am Montag beginnt der Kurs.",
+            "Am Montag der beginnt Kurs."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "In Berlin wohnt meine Schwester.",
+          "explanations": {
+            "tr": "Ana cümlede çekimli fiil ikinci öğededir. İlk öğe birden fazla kelimeden oluşabilir. Hedef cevap: In Berlin wohnt meine Schwester.",
+            "de": "Im Aussagesatz steht das finite Verb an zweiter Satzgliedposition. Ein Satzglied kann mehrere Wörter enthalten. Zielantwort: In Berlin wohnt meine Schwester.",
+            "en": "In a statement, the finite verb takes the second constituent position. A constituent can contain several words. Target answer: In Berlin wohnt meine Schwester."
+          },
+          "options": [
+            "In Berlin meine Schwester wohnt.",
+            "In Berlin wohnt meine Schwester.",
+            "In Berlin meine wohnt Schwester."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Nach dem Essen gehen wir spazieren.",
+          "explanations": {
+            "tr": "Ana cümlede çekimli fiil ikinci öğededir. İlk öğe birden fazla kelimeden oluşabilir. Hedef cevap: Nach dem Essen gehen wir spazieren.",
+            "de": "Im Aussagesatz steht das finite Verb an zweiter Satzgliedposition. Ein Satzglied kann mehrere Wörter enthalten. Zielantwort: Nach dem Essen gehen wir spazieren.",
+            "en": "In a statement, the finite verb takes the second constituent position. A constituent can contain several words. Target answer: Nach dem Essen gehen wir spazieren."
+          },
+          "options": [
+            "Nach dem Essen wir gehen spazieren.",
+            "Nach dem Essen spazieren wir gehen.",
+            "Nach dem Essen gehen wir spazieren."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Deshalb bleibe ich zu Hause.",
+          "explanations": {
+            "tr": "Ana cümlede çekimli fiil ikinci öğededir. İlk öğe birden fazla kelimeden oluşabilir. Hedef cevap: Deshalb bleibe ich zu Hause.",
+            "de": "Im Aussagesatz steht das finite Verb an zweiter Satzgliedposition. Ein Satzglied kann mehrere Wörter enthalten. Zielantwort: Deshalb bleibe ich zu Hause.",
+            "en": "In a statement, the finite verb takes the second constituent position. A constituent can contain several words. Target answer: Deshalb bleibe ich zu Hause."
+          },
+          "options": [
+            "Deshalb bleibe ich zu Hause.",
+            "Deshalb ich bleibe zu Hause.",
+            "Deshalb zu Hause ich bleibe."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Trotzdem kommt er mit.",
+          "explanations": {
+            "tr": "Ana cümlede çekimli fiil ikinci öğededir. İlk öğe birden fazla kelimeden oluşabilir. Hedef cevap: Trotzdem kommt er mit.",
+            "de": "Im Aussagesatz steht das finite Verb an zweiter Satzgliedposition. Ein Satzglied kann mehrere Wörter enthalten. Zielantwort: Trotzdem kommt er mit.",
+            "en": "In a statement, the finite verb takes the second constituent position. A constituent can contain several words. Target answer: Trotzdem kommt er mit."
+          },
+          "options": [
+            "Trotzdem er kommt mit.",
+            "Trotzdem kommt er mit.",
+            "Trotzdem mit er kommt."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Um acht Uhr fährt der Bus.",
+          "explanations": {
+            "tr": "Ana cümlede çekimli fiil ikinci öğededir. İlk öğe birden fazla kelimeden oluşabilir. Hedef cevap: Um acht Uhr fährt der Bus.",
+            "de": "Im Aussagesatz steht das finite Verb an zweiter Satzgliedposition. Ein Satzglied kann mehrere Wörter enthalten. Zielantwort: Um acht Uhr fährt der Bus.",
+            "en": "In a statement, the finite verb takes the second constituent position. A constituent can contain several words. Target answer: Um acht Uhr fährt der Bus."
+          },
+          "options": [
+            "Um acht Uhr der Bus fährt.",
+            "Um acht Uhr fährt der Bus.",
+            "Um acht Uhr der fährt Bus."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Diese Aufgabe finde ich schwierig.",
+          "explanations": {
+            "tr": "Ana cümlede çekimli fiil ikinci öğededir. İlk öğe birden fazla kelimeden oluşabilir. Hedef cevap: Diese Aufgabe finde ich schwierig.",
+            "de": "Im Aussagesatz steht das finite Verb an zweiter Satzgliedposition. Ein Satzglied kann mehrere Wörter enthalten. Zielantwort: Diese Aufgabe finde ich schwierig.",
+            "en": "In a statement, the finite verb takes the second constituent position. A constituent can contain several words. Target answer: Diese Aufgabe finde ich schwierig."
+          },
+          "options": [
+            "Diese Aufgabe ich finde schwierig.",
+            "Diese Aufgabe schwierig ich finde.",
+            "Diese Aufgabe finde ich schwierig."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Mit dem Zug fahren wir nach Hamburg.",
+          "explanations": {
+            "tr": "Ana cümlede çekimli fiil ikinci öğededir. İlk öğe birden fazla kelimeden oluşabilir. Hedef cevap: Mit dem Zug fahren wir nach Hamburg.",
+            "de": "Im Aussagesatz steht das finite Verb an zweiter Satzgliedposition. Ein Satzglied kann mehrere Wörter enthalten. Zielantwort: Mit dem Zug fahren wir nach Hamburg.",
+            "en": "In a statement, the finite verb takes the second constituent position. A constituent can contain several words. Target answer: Mit dem Zug fahren wir nach Hamburg."
+          },
+          "options": [
+            "Mit dem Zug fahren wir nach Hamburg.",
+            "Mit dem Zug wir fahren nach Hamburg.",
+            "Mit dem Zug nach Hamburg wir fahren."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Seit zwei Jahren lernt sie Deutsch.",
+          "explanations": {
+            "tr": "Ana cümlede çekimli fiil ikinci öğededir. İlk öğe birden fazla kelimeden oluşabilir. Hedef cevap: Seit zwei Jahren lernt sie Deutsch.",
+            "de": "Im Aussagesatz steht das finite Verb an zweiter Satzgliedposition. Ein Satzglied kann mehrere Wörter enthalten. Zielantwort: Seit zwei Jahren lernt sie Deutsch.",
+            "en": "In a statement, the finite verb takes the second constituent position. A constituent can contain several words. Target answer: Seit zwei Jahren lernt sie Deutsch."
+          },
+          "options": [
+            "Seit zwei Jahren sie lernt Deutsch.",
+            "Seit zwei Jahren lernt sie Deutsch.",
+            "Seit zwei Jahren Deutsch sie lernt."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anderer-satzanfang-2",
+      "title": {
+        "tr": "Übung 2 – Verilen ifadeyle başla",
+        "de": "Übung 2 – Ein anderes Satzglied zuerst",
+        "en": "Exercise 2 – Change the opening"
+      },
+      "description": {
+        "tr": "Verilen ifadeyi başa al; diğer kelimeleri koru.",
+        "de": "Stelle den angegebenen Ausdruck an den Anfang; behalte die anderen Wörter.",
+        "en": "Move the specified phrase to the beginning and preserve the other words."
+      },
+      "difficulty": {
+        "tr": "Temel",
+        "de": "Grundlagen",
+        "en": "Foundations"
+      },
+      "questions": [
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ich lerne heute Deutsch. → Beginne mit „Heute“.",
+          "correct": "Heute lerne ich Deutsch.",
+          "explanations": {
+            "tr": "Ana cümlede çekimli fiil ikinci öğededir. İlk öğe birden fazla kelimeden oluşabilir. Hedef cevap: Heute lerne ich Deutsch.",
+            "de": "Im Aussagesatz steht das finite Verb an zweiter Satzgliedposition. Ein Satzglied kann mehrere Wörter enthalten. Zielantwort: Heute lerne ich Deutsch.",
+            "en": "In a statement, the finite verb takes the second constituent position. A constituent can contain several words. Target answer: Heute lerne ich Deutsch."
+          },
+          "type": "text",
+          "answers": [
+            "Heute lerne ich Deutsch."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Wir fahren morgen nach Köln. → Beginne mit „Morgen“.",
+          "correct": "Morgen fahren wir nach Köln.",
+          "explanations": {
+            "tr": "Ana cümlede çekimli fiil ikinci öğededir. İlk öğe birden fazla kelimeden oluşabilir. Hedef cevap: Morgen fahren wir nach Köln.",
+            "de": "Im Aussagesatz steht das finite Verb an zweiter Satzgliedposition. Ein Satzglied kann mehrere Wörter enthalten. Zielantwort: Morgen fahren wir nach Köln.",
+            "en": "In a statement, the finite verb takes the second constituent position. A constituent can contain several words. Target answer: Morgen fahren wir nach Köln."
+          },
+          "type": "text",
+          "answers": [
+            "Morgen fahren wir nach Köln.",
+            "Morgen fahren wir nach Koeln."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Der Kurs beginnt um neun Uhr. → Beginne mit „Um neun Uhr“.",
+          "correct": "Um neun Uhr beginnt der Kurs.",
+          "explanations": {
+            "tr": "Ana cümlede çekimli fiil ikinci öğededir. İlk öğe birden fazla kelimeden oluşabilir. Hedef cevap: Um neun Uhr beginnt der Kurs.",
+            "de": "Im Aussagesatz steht das finite Verb an zweiter Satzgliedposition. Ein Satzglied kann mehrere Wörter enthalten. Zielantwort: Um neun Uhr beginnt der Kurs.",
+            "en": "In a statement, the finite verb takes the second constituent position. A constituent can contain several words. Target answer: Um neun Uhr beginnt der Kurs."
+          },
+          "type": "text",
+          "answers": [
+            "Um neun Uhr beginnt der Kurs."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Anna wohnt in Hamburg. → Beginne mit „In Hamburg“.",
+          "correct": "In Hamburg wohnt Anna.",
+          "explanations": {
+            "tr": "Ana cümlede çekimli fiil ikinci öğededir. İlk öğe birden fazla kelimeden oluşabilir. Hedef cevap: In Hamburg wohnt Anna.",
+            "de": "Im Aussagesatz steht das finite Verb an zweiter Satzgliedposition. Ein Satzglied kann mehrere Wörter enthalten. Zielantwort: In Hamburg wohnt Anna.",
+            "en": "In a statement, the finite verb takes the second constituent position. A constituent can contain several words. Target answer: In Hamburg wohnt Anna."
+          },
+          "type": "text",
+          "answers": [
+            "In Hamburg wohnt Anna."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ich arbeite am Samstag. → Beginne mit „Am Samstag“.",
+          "correct": "Am Samstag arbeite ich.",
+          "explanations": {
+            "tr": "Ana cümlede çekimli fiil ikinci öğededir. İlk öğe birden fazla kelimeden oluşabilir. Hedef cevap: Am Samstag arbeite ich.",
+            "de": "Im Aussagesatz steht das finite Verb an zweiter Satzgliedposition. Ein Satzglied kann mehrere Wörter enthalten. Zielantwort: Am Samstag arbeite ich.",
+            "en": "In a statement, the finite verb takes the second constituent position. A constituent can contain several words. Target answer: Am Samstag arbeite ich."
+          },
+          "type": "text",
+          "answers": [
+            "Am Samstag arbeite ich."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Wir gehen danach nach Hause. → Beginne mit „Danach“.",
+          "correct": "Danach gehen wir nach Hause.",
+          "explanations": {
+            "tr": "Ana cümlede çekimli fiil ikinci öğededir. İlk öğe birden fazla kelimeden oluşabilir. Hedef cevap: Danach gehen wir nach Hause.",
+            "de": "Im Aussagesatz steht das finite Verb an zweiter Satzgliedposition. Ein Satzglied kann mehrere Wörter enthalten. Zielantwort: Danach gehen wir nach Hause.",
+            "en": "In a statement, the finite verb takes the second constituent position. A constituent can contain several words. Target answer: Danach gehen wir nach Hause."
+          },
+          "type": "text",
+          "answers": [
+            "Danach gehen wir nach Hause."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Er kommt deshalb später. → Beginne mit „Deshalb“.",
+          "correct": "Deshalb kommt er später.",
+          "explanations": {
+            "tr": "Ana cümlede çekimli fiil ikinci öğededir. İlk öğe birden fazla kelimeden oluşabilir. Hedef cevap: Deshalb kommt er später.",
+            "de": "Im Aussagesatz steht das finite Verb an zweiter Satzgliedposition. Ein Satzglied kann mehrere Wörter enthalten. Zielantwort: Deshalb kommt er später.",
+            "en": "In a statement, the finite verb takes the second constituent position. A constituent can contain several words. Target answer: Deshalb kommt er später."
+          },
+          "type": "text",
+          "answers": [
+            "Deshalb kommt er später.",
+            "Deshalb kommt er spaeter."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Sie bleibt trotzdem hier. → Beginne mit „Trotzdem“.",
+          "correct": "Trotzdem bleibt sie hier.",
+          "explanations": {
+            "tr": "Ana cümlede çekimli fiil ikinci öğededir. İlk öğe birden fazla kelimeden oluşabilir. Hedef cevap: Trotzdem bleibt sie hier.",
+            "de": "Im Aussagesatz steht das finite Verb an zweiter Satzgliedposition. Ein Satzglied kann mehrere Wörter enthalten. Zielantwort: Trotzdem bleibt sie hier.",
+            "en": "In a statement, the finite verb takes the second constituent position. A constituent can contain several words. Target answer: Trotzdem bleibt sie hier."
+          },
+          "type": "text",
+          "answers": [
+            "Trotzdem bleibt sie hier."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Wir fahren mit dem Bus. → Beginne mit „Mit dem Bus“.",
+          "correct": "Mit dem Bus fahren wir.",
+          "explanations": {
+            "tr": "Ana cümlede çekimli fiil ikinci öğededir. İlk öğe birden fazla kelimeden oluşabilir. Hedef cevap: Mit dem Bus fahren wir.",
+            "de": "Im Aussagesatz steht das finite Verb an zweiter Satzgliedposition. Ein Satzglied kann mehrere Wörter enthalten. Zielantwort: Mit dem Bus fahren wir.",
+            "en": "In a statement, the finite verb takes the second constituent position. A constituent can contain several words. Target answer: Mit dem Bus fahren wir."
+          },
+          "type": "text",
+          "answers": [
+            "Mit dem Bus fahren wir."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ich finde diese Aufgabe leicht. → Beginne mit „Diese Aufgabe“.",
+          "correct": "Diese Aufgabe finde ich leicht.",
+          "explanations": {
+            "tr": "Ana cümlede çekimli fiil ikinci öğededir. İlk öğe birden fazla kelimeden oluşabilir. Hedef cevap: Diese Aufgabe finde ich leicht.",
+            "de": "Im Aussagesatz steht das finite Verb an zweiter Satzgliedposition. Ein Satzglied kann mehrere Wörter enthalten. Zielantwort: Diese Aufgabe finde ich leicht.",
+            "en": "In a statement, the finite verb takes the second constituent position. A constituent can contain several words. Target answer: Diese Aufgabe finde ich leicht."
+          },
+          "type": "text",
+          "answers": [
+            "Diese Aufgabe finde ich leicht."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "satzklammer-3",
+      "title": {
+        "tr": "Übung 3 – Cümle parantezi",
+        "de": "Übung 3 – Satzklammer",
+        "en": "Exercise 3 – Sentence brackets"
+      },
+      "description": {
+        "tr": "Çekimli fiil ile sondaki fiil parçasını doğru yerleştiren cümleyi seç.",
+        "de": "Wähle die richtige Verteilung der Verbteile.",
+        "en": "Choose the correct placement of the verb parts."
+      },
+      "difficulty": {
+        "tr": "Temel",
+        "de": "Grundlagen",
+        "en": "Foundations"
+      },
+      "questions": [
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Ich muss heute arbeiten.",
+          "explanations": {
+            "tr": "Çekimli fiil ikinci öğede, mastar/Partizip II/ayrılabilen ön ek ana cümlenin sonunda kalır. Hedef cevap: Ich muss heute arbeiten.",
+            "de": "Das finite Verb steht an Position 2; Infinitiv, Partizip II oder trennbarer Verbzusatz stehen am Ende. Zielantwort: Ich muss heute arbeiten.",
+            "en": "The finite verb takes position 2; an infinitive, past participle or separable prefix goes at the end. Target answer: Ich muss heute arbeiten."
+          },
+          "options": [
+            "Ich muss heute arbeiten.",
+            "Ich heute muss arbeiten.",
+            "Ich muss arbeiten heute ich."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Heute habe ich lange gearbeitet.",
+          "explanations": {
+            "tr": "Çekimli fiil ikinci öğede, mastar/Partizip II/ayrılabilen ön ek ana cümlenin sonunda kalır. Hedef cevap: Heute habe ich lange gearbeitet.",
+            "de": "Das finite Verb steht an Position 2; Infinitiv, Partizip II oder trennbarer Verbzusatz stehen am Ende. Zielantwort: Heute habe ich lange gearbeitet.",
+            "en": "The finite verb takes position 2; an infinitive, past participle or separable prefix goes at the end. Target answer: Heute habe ich lange gearbeitet."
+          },
+          "options": [
+            "Heute ich habe lange gearbeitet.",
+            "Heute habe ich lange gearbeitet.",
+            "Heute habe gearbeitet ich lange."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Morgen rufe ich dich an.",
+          "explanations": {
+            "tr": "Çekimli fiil ikinci öğede, mastar/Partizip II/ayrılabilen ön ek ana cümlenin sonunda kalır. Hedef cevap: Morgen rufe ich dich an.",
+            "de": "Das finite Verb steht an Position 2; Infinitiv, Partizip II oder trennbarer Verbzusatz stehen am Ende. Zielantwort: Morgen rufe ich dich an.",
+            "en": "The finite verb takes position 2; an infinitive, past participle or separable prefix goes at the end. Target answer: Morgen rufe ich dich an."
+          },
+          "options": [
+            "Morgen ich rufe dich an.",
+            "Morgen rufe an ich dich.",
+            "Morgen rufe ich dich an."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Wir sind gestern angekommen.",
+          "explanations": {
+            "tr": "Çekimli fiil ikinci öğede, mastar/Partizip II/ayrılabilen ön ek ana cümlenin sonunda kalır. Hedef cevap: Wir sind gestern angekommen.",
+            "de": "Das finite Verb steht an Position 2; Infinitiv, Partizip II oder trennbarer Verbzusatz stehen am Ende. Zielantwort: Wir sind gestern angekommen.",
+            "en": "The finite verb takes position 2; an infinitive, past participle or separable prefix goes at the end. Target answer: Wir sind gestern angekommen."
+          },
+          "options": [
+            "Wir sind gestern angekommen.",
+            "Wir gestern sind angekommen.",
+            "Wir angekommen sind gestern."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Der Zug fährt um acht Uhr ab.",
+          "explanations": {
+            "tr": "Çekimli fiil ikinci öğede, mastar/Partizip II/ayrılabilen ön ek ana cümlenin sonunda kalır. Hedef cevap: Der Zug fährt um acht Uhr ab.",
+            "de": "Das finite Verb steht an Position 2; Infinitiv, Partizip II oder trennbarer Verbzusatz stehen am Ende. Zielantwort: Der Zug fährt um acht Uhr ab.",
+            "en": "The finite verb takes position 2; an infinitive, past participle or separable prefix goes at the end. Target answer: Der Zug fährt um acht Uhr ab."
+          },
+          "options": [
+            "Der Zug um acht Uhr fährt ab.",
+            "Der Zug fährt um acht Uhr ab.",
+            "Der Zug ab fährt um acht Uhr."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Sie möchte hier bleiben.",
+          "explanations": {
+            "tr": "Çekimli fiil ikinci öğede, mastar/Partizip II/ayrılabilen ön ek ana cümlenin sonunda kalır. Hedef cevap: Sie möchte hier bleiben.",
+            "de": "Das finite Verb steht an Position 2; Infinitiv, Partizip II oder trennbarer Verbzusatz stehen am Ende. Zielantwort: Sie möchte hier bleiben.",
+            "en": "The finite verb takes position 2; an infinitive, past participle or separable prefix goes at the end. Target answer: Sie möchte hier bleiben."
+          },
+          "options": [
+            "Sie hier möchte bleiben.",
+            "Sie bleiben möchte hier.",
+            "Sie möchte hier bleiben."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Das Auto wird morgen repariert.",
+          "explanations": {
+            "tr": "Çekimli fiil ikinci öğede, mastar/Partizip II/ayrılabilen ön ek ana cümlenin sonunda kalır. Hedef cevap: Das Auto wird morgen repariert.",
+            "de": "Das finite Verb steht an Position 2; Infinitiv, Partizip II oder trennbarer Verbzusatz stehen am Ende. Zielantwort: Das Auto wird morgen repariert.",
+            "en": "The finite verb takes position 2; an infinitive, past participle or separable prefix goes at the end. Target answer: Das Auto wird morgen repariert."
+          },
+          "options": [
+            "Das Auto wird morgen repariert.",
+            "Das Auto morgen wird repariert.",
+            "Das Auto repariert wird morgen."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Wir hatten schon gegessen.",
+          "explanations": {
+            "tr": "Çekimli fiil ikinci öğede, mastar/Partizip II/ayrılabilen ön ek ana cümlenin sonunda kalır. Hedef cevap: Wir hatten schon gegessen.",
+            "de": "Das finite Verb steht an Position 2; Infinitiv, Partizip II oder trennbarer Verbzusatz stehen am Ende. Zielantwort: Wir hatten schon gegessen.",
+            "en": "The finite verb takes position 2; an infinitive, past participle or separable prefix goes at the end. Target answer: Wir hatten schon gegessen."
+          },
+          "options": [
+            "Wir schon hatten gegessen.",
+            "Wir hatten schon gegessen.",
+            "Wir gegessen hatten schon."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Er würde gern mitkommen.",
+          "explanations": {
+            "tr": "Çekimli fiil ikinci öğede, mastar/Partizip II/ayrılabilen ön ek ana cümlenin sonunda kalır. Hedef cevap: Er würde gern mitkommen.",
+            "de": "Das finite Verb steht an Position 2; Infinitiv, Partizip II oder trennbarer Verbzusatz stehen am Ende. Zielantwort: Er würde gern mitkommen.",
+            "en": "The finite verb takes position 2; an infinitive, past participle or separable prefix goes at the end. Target answer: Er würde gern mitkommen."
+          },
+          "options": [
+            "Er gern würde mitkommen.",
+            "Er mitkommen würde gern.",
+            "Er würde gern mitkommen."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Ich habe das Fenster zugemacht.",
+          "explanations": {
+            "tr": "Çekimli fiil ikinci öğede, mastar/Partizip II/ayrılabilen ön ek ana cümlenin sonunda kalır. Hedef cevap: Ich habe das Fenster zugemacht.",
+            "de": "Das finite Verb steht an Position 2; Infinitiv, Partizip II oder trennbarer Verbzusatz stehen am Ende. Zielantwort: Ich habe das Fenster zugemacht.",
+            "en": "The finite verb takes position 2; an infinitive, past participle or separable prefix goes at the end. Target answer: Ich habe das Fenster zugemacht."
+          },
+          "options": [
+            "Ich habe das Fenster zugemacht.",
+            "Ich das Fenster habe zugemacht.",
+            "Ich zugemacht habe das Fenster."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pronomen-4",
+      "title": {
+        "tr": "Übung 4 – İki nesne zamirinin sırası",
+        "de": "Übung 4 – Zwei Objektpronomen",
+        "en": "Exercise 4 – Two object pronouns"
+      },
+      "description": {
+        "tr": "İki nesne de vurgusuz kişi zamiri olacak. Yalnız boşluğa gelecek zamir çiftini yaz.",
+        "de": "Verwende zwei unbetonte Objektpronomen. Schreibe nur das Pronomenpaar.",
+        "en": "Use two unstressed object pronouns. Write only the pronoun pair."
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Consolidation"
+      },
+      "questions": [
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ich gebe Anna das Buch. → Ich gebe ___. (Anna = ihr; das Buch = es)",
+          "correct": "es ihr",
+          "explanations": {
+            "tr": "Bu soruda iki nesne de zayıf kişi zamiridir; temel tarafsız sıra Akkusativ + Dativ olur: es ihr. Hedef cevap: es ihr",
+            "de": "Hier sind beide Objekte unbetonte Personalpronomen. Die neutrale Reihenfolge ist Akkusativ vor Dativ: es ihr. Zielantwort: es ihr",
+            "en": "Both objects here are unstressed personal pronouns. Use the neutral order accusative before dative: es ihr. Target answer: es ihr"
+          },
+          "type": "text",
+          "answers": [
+            "es ihr"
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Er zeigt Paul das Foto. → Er zeigt ___. (Paul = ihm; das Foto = es)",
+          "correct": "es ihm",
+          "explanations": {
+            "tr": "Bu soruda iki nesne de zayıf kişi zamiridir; temel tarafsız sıra Akkusativ + Dativ olur: es ihr. Hedef cevap: es ihm",
+            "de": "Hier sind beide Objekte unbetonte Personalpronomen. Die neutrale Reihenfolge ist Akkusativ vor Dativ: es ihr. Zielantwort: es ihm",
+            "en": "Both objects here are unstressed personal pronouns. Use the neutral order accusative before dative: es ihr. Target answer: es ihm"
+          },
+          "type": "text",
+          "answers": [
+            "es ihm"
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Sie gibt mir den Schlüssel. → Sie gibt ___. (den Schlüssel = ihn)",
+          "correct": "ihn mir",
+          "explanations": {
+            "tr": "Bu soruda iki nesne de zayıf kişi zamiridir; temel tarafsız sıra Akkusativ + Dativ olur: es ihr. Hedef cevap: ihn mir",
+            "de": "Hier sind beide Objekte unbetonte Personalpronomen. Die neutrale Reihenfolge ist Akkusativ vor Dativ: es ihr. Zielantwort: ihn mir",
+            "en": "Both objects here are unstressed personal pronouns. Use the neutral order accusative before dative: es ihr. Target answer: ihn mir"
+          },
+          "type": "text",
+          "answers": [
+            "ihn mir"
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Wir schicken dir die Rechnung. → Wir schicken ___. (die Rechnung = sie)",
+          "correct": "sie dir",
+          "explanations": {
+            "tr": "Bu soruda iki nesne de zayıf kişi zamiridir; temel tarafsız sıra Akkusativ + Dativ olur: es ihr. Hedef cevap: sie dir",
+            "de": "Hier sind beide Objekte unbetonte Personalpronomen. Die neutrale Reihenfolge ist Akkusativ vor Dativ: es ihr. Zielantwort: sie dir",
+            "en": "Both objects here are unstressed personal pronouns. Use the neutral order accusative before dative: es ihr. Target answer: sie dir"
+          },
+          "type": "text",
+          "answers": [
+            "sie dir"
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ich erkläre euch das Problem. → Ich erkläre ___. (das Problem = es)",
+          "correct": "es euch",
+          "explanations": {
+            "tr": "Bu soruda iki nesne de zayıf kişi zamiridir; temel tarafsız sıra Akkusativ + Dativ olur: es ihr. Hedef cevap: es euch",
+            "de": "Hier sind beide Objekte unbetonte Personalpronomen. Die neutrale Reihenfolge ist Akkusativ vor Dativ: es ihr. Zielantwort: es euch",
+            "en": "Both objects here are unstressed personal pronouns. Use the neutral order accusative before dative: es ihr. Target answer: es euch"
+          },
+          "type": "text",
+          "answers": [
+            "es euch"
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Er bringt uns den Kuchen. → Er bringt ___. (den Kuchen = ihn)",
+          "correct": "ihn uns",
+          "explanations": {
+            "tr": "Bu soruda iki nesne de zayıf kişi zamiridir; temel tarafsız sıra Akkusativ + Dativ olur: es ihr. Hedef cevap: ihn uns",
+            "de": "Hier sind beide Objekte unbetonte Personalpronomen. Die neutrale Reihenfolge ist Akkusativ vor Dativ: es ihr. Zielantwort: ihn uns",
+            "en": "Both objects here are unstressed personal pronouns. Use the neutral order accusative before dative: es ihr. Target answer: ihn uns"
+          },
+          "type": "text",
+          "answers": [
+            "ihn uns"
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Sie zeigt den Gästen das Zimmer. → Sie zeigt ___. (den Gästen = ihnen; das Zimmer = es)",
+          "correct": "es ihnen",
+          "explanations": {
+            "tr": "Bu soruda iki nesne de zayıf kişi zamiridir; temel tarafsız sıra Akkusativ + Dativ olur: es ihr. Hedef cevap: es ihnen",
+            "de": "Hier sind beide Objekte unbetonte Personalpronomen. Die neutrale Reihenfolge ist Akkusativ vor Dativ: es ihr. Zielantwort: es ihnen",
+            "en": "Both objects here are unstressed personal pronouns. Use the neutral order accusative before dative: es ihr. Target answer: es ihnen"
+          },
+          "type": "text",
+          "answers": [
+            "es ihnen"
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ich gebe dir die Karte. → Ich gebe ___. (die Karte = sie)",
+          "correct": "sie dir",
+          "explanations": {
+            "tr": "Bu soruda iki nesne de zayıf kişi zamiridir; temel tarafsız sıra Akkusativ + Dativ olur: es ihr. Hedef cevap: sie dir",
+            "de": "Hier sind beide Objekte unbetonte Personalpronomen. Die neutrale Reihenfolge ist Akkusativ vor Dativ: es ihr. Zielantwort: sie dir",
+            "en": "Both objects here are unstressed personal pronouns. Use the neutral order accusative before dative: es ihr. Target answer: sie dir"
+          },
+          "type": "text",
+          "answers": [
+            "sie dir"
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Wir schicken ihm die Fotos. → Wir schicken ___. (die Fotos = sie)",
+          "correct": "sie ihm",
+          "explanations": {
+            "tr": "Bu soruda iki nesne de zayıf kişi zamiridir; temel tarafsız sıra Akkusativ + Dativ olur: es ihr. Hedef cevap: sie ihm",
+            "de": "Hier sind beide Objekte unbetonte Personalpronomen. Die neutrale Reihenfolge ist Akkusativ vor Dativ: es ihr. Zielantwort: sie ihm",
+            "en": "Both objects here are unstressed personal pronouns. Use the neutral order accusative before dative: es ihr. Target answer: sie ihm"
+          },
+          "type": "text",
+          "answers": [
+            "sie ihm"
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Sie leiht mir das Fahrrad. → Sie leiht ___. (das Fahrrad = es)",
+          "correct": "es mir",
+          "explanations": {
+            "tr": "Bu soruda iki nesne de zayıf kişi zamiridir; temel tarafsız sıra Akkusativ + Dativ olur: es ihr. Hedef cevap: es mir",
+            "de": "Hier sind beide Objekte unbetonte Personalpronomen. Die neutrale Reihenfolge ist Akkusativ vor Dativ: es ihr. Zielantwort: es mir",
+            "en": "Both objects here are unstressed personal pronouns. Use the neutral order accusative before dative: es ihr. Target answer: es mir"
+          },
+          "type": "text",
+          "answers": [
+            "es mir"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tekamolo-5",
+      "title": {
+        "tr": "Übung 5 – TeKaMoLo düzeni",
+        "de": "Übung 5 – TeKaMoLo als Grundmuster",
+        "en": "Exercise 5 – TeKaMoLo as a base pattern"
+      },
+      "description": {
+        "tr": "Bu görevde verilen başlangıcı koru ve diğer blokları zaman → neden → nasıl/araç → yer/hedef sırasına koy. Başka bağlamlarda farklı sıralar da mümkündür.",
+        "de": "Behalte den Anfang und ordne die Blöcke hier temporal → kausal → modal → lokal. Andere Kontexte erlauben andere Folgen.",
+        "en": "Keep the opening and order the blocks here as time → reason → manner/means → place/destination. Other orders can work in other contexts."
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Consolidation"
+      },
+      "questions": [
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ich fahre | mit dem Bus | morgen | zur Arbeit.",
+          "correct": "Ich fahre morgen mit dem Bus zur Arbeit.",
+          "explanations": {
+            "tr": "Soruda özellikle istenen TeKaMoLo sırası: zaman → neden → nasıl/araç → yer/hedef. Bu, her bağlamda zorunlu tek sıra değildir. Hedef cevap: Ich fahre morgen mit dem Bus zur Arbeit.",
+            "de": "Die hier verlangte TeKaMoLo-Folge lautet: temporal → kausal → modal → lokal. Andere Kontexte erlauben andere Reihenfolgen. Zielantwort: Ich fahre morgen mit dem Bus zur Arbeit.",
+            "en": "The requested TeKaMoLo order is time → reason → manner/means → place/destination. It is not the only possible order in every context. Target answer: Ich fahre morgen mit dem Bus zur Arbeit."
+          },
+          "type": "text",
+          "answers": [
+            "Ich fahre morgen mit dem Bus zur Arbeit."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Wir reisen | nach Berlin | nächste Woche | mit dem Zug.",
+          "correct": "Wir reisen nächste Woche mit dem Zug nach Berlin.",
+          "explanations": {
+            "tr": "Soruda özellikle istenen TeKaMoLo sırası: zaman → neden → nasıl/araç → yer/hedef. Bu, her bağlamda zorunlu tek sıra değildir. Hedef cevap: Wir reisen nächste Woche mit dem Zug nach Berlin.",
+            "de": "Die hier verlangte TeKaMoLo-Folge lautet: temporal → kausal → modal → lokal. Andere Kontexte erlauben andere Reihenfolgen. Zielantwort: Wir reisen nächste Woche mit dem Zug nach Berlin.",
+            "en": "The requested TeKaMoLo order is time → reason → manner/means → place/destination. It is not the only possible order in every context. Target answer: Wir reisen nächste Woche mit dem Zug nach Berlin."
+          },
+          "type": "text",
+          "answers": [
+            "Wir reisen nächste Woche mit dem Zug nach Berlin.",
+            "Wir reisen naechste Woche mit dem Zug nach Berlin."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Sie geht | wegen des Streiks | heute | zu Fuß | zur Arbeit.",
+          "correct": "Sie geht heute wegen des Streiks zu Fuß zur Arbeit.",
+          "explanations": {
+            "tr": "Soruda özellikle istenen TeKaMoLo sırası: zaman → neden → nasıl/araç → yer/hedef. Bu, her bağlamda zorunlu tek sıra değildir. Hedef cevap: Sie geht heute wegen des Streiks zu Fuß zur Arbeit.",
+            "de": "Die hier verlangte TeKaMoLo-Folge lautet: temporal → kausal → modal → lokal. Andere Kontexte erlauben andere Reihenfolgen. Zielantwort: Sie geht heute wegen des Streiks zu Fuß zur Arbeit.",
+            "en": "The requested TeKaMoLo order is time → reason → manner/means → place/destination. It is not the only possible order in every context. Target answer: Sie geht heute wegen des Streiks zu Fuß zur Arbeit."
+          },
+          "type": "text",
+          "answers": [
+            "Sie geht heute wegen des Streiks zu Fuß zur Arbeit.",
+            "Sie geht heute wegen des Streiks zu Fuss zur Arbeit."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Er arbeitet | zu Hause | heute | wegen einer Erkältung.",
+          "correct": "Er arbeitet heute wegen einer Erkältung zu Hause.",
+          "explanations": {
+            "tr": "Soruda özellikle istenen TeKaMoLo sırası: zaman → neden → nasıl/araç → yer/hedef. Bu, her bağlamda zorunlu tek sıra değildir. Hedef cevap: Er arbeitet heute wegen einer Erkältung zu Hause.",
+            "de": "Die hier verlangte TeKaMoLo-Folge lautet: temporal → kausal → modal → lokal. Andere Kontexte erlauben andere Reihenfolgen. Zielantwort: Er arbeitet heute wegen einer Erkältung zu Hause.",
+            "en": "The requested TeKaMoLo order is time → reason → manner/means → place/destination. It is not the only possible order in every context. Target answer: Er arbeitet heute wegen einer Erkältung zu Hause."
+          },
+          "type": "text",
+          "answers": [
+            "Er arbeitet heute wegen einer Erkältung zu Hause.",
+            "Er arbeitet heute wegen einer Erkaeltung zu Hause."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ich lerne | konzentriert | jeden Abend | in der Bibliothek.",
+          "correct": "Ich lerne jeden Abend konzentriert in der Bibliothek.",
+          "explanations": {
+            "tr": "Soruda özellikle istenen TeKaMoLo sırası: zaman → neden → nasıl/araç → yer/hedef. Bu, her bağlamda zorunlu tek sıra değildir. Hedef cevap: Ich lerne jeden Abend konzentriert in der Bibliothek.",
+            "de": "Die hier verlangte TeKaMoLo-Folge lautet: temporal → kausal → modal → lokal. Andere Kontexte erlauben andere Reihenfolgen. Zielantwort: Ich lerne jeden Abend konzentriert in der Bibliothek.",
+            "en": "The requested TeKaMoLo order is time → reason → manner/means → place/destination. It is not the only possible order in every context. Target answer: Ich lerne jeden Abend konzentriert in der Bibliothek."
+          },
+          "type": "text",
+          "answers": [
+            "Ich lerne jeden Abend konzentriert in der Bibliothek."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Wir fahren | wegen des Wetters | am Sonntag | mit dem Auto | nach Köln.",
+          "correct": "Wir fahren am Sonntag wegen des Wetters mit dem Auto nach Köln.",
+          "explanations": {
+            "tr": "Soruda özellikle istenen TeKaMoLo sırası: zaman → neden → nasıl/araç → yer/hedef. Bu, her bağlamda zorunlu tek sıra değildir. Hedef cevap: Wir fahren am Sonntag wegen des Wetters mit dem Auto nach Köln.",
+            "de": "Die hier verlangte TeKaMoLo-Folge lautet: temporal → kausal → modal → lokal. Andere Kontexte erlauben andere Reihenfolgen. Zielantwort: Wir fahren am Sonntag wegen des Wetters mit dem Auto nach Köln.",
+            "en": "The requested TeKaMoLo order is time → reason → manner/means → place/destination. It is not the only possible order in every context. Target answer: Wir fahren am Sonntag wegen des Wetters mit dem Auto nach Köln."
+          },
+          "type": "text",
+          "answers": [
+            "Wir fahren am Sonntag wegen des Wetters mit dem Auto nach Köln.",
+            "Wir fahren am Sonntag wegen des Wetters mit dem Auto nach Koeln."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Die Kinder spielen | im Garten | nachmittags | zusammen.",
+          "correct": "Die Kinder spielen nachmittags zusammen im Garten.",
+          "explanations": {
+            "tr": "Soruda özellikle istenen TeKaMoLo sırası: zaman → neden → nasıl/araç → yer/hedef. Bu, her bağlamda zorunlu tek sıra değildir. Hedef cevap: Die Kinder spielen nachmittags zusammen im Garten.",
+            "de": "Die hier verlangte TeKaMoLo-Folge lautet: temporal → kausal → modal → lokal. Andere Kontexte erlauben andere Reihenfolgen. Zielantwort: Die Kinder spielen nachmittags zusammen im Garten.",
+            "en": "The requested TeKaMoLo order is time → reason → manner/means → place/destination. It is not the only possible order in every context. Target answer: Die Kinder spielen nachmittags zusammen im Garten."
+          },
+          "type": "text",
+          "answers": [
+            "Die Kinder spielen nachmittags zusammen im Garten."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Anna fährt | zur Schule | jeden Morgen | mit dem Fahrrad.",
+          "correct": "Anna fährt jeden Morgen mit dem Fahrrad zur Schule.",
+          "explanations": {
+            "tr": "Soruda özellikle istenen TeKaMoLo sırası: zaman → neden → nasıl/araç → yer/hedef. Bu, her bağlamda zorunlu tek sıra değildir. Hedef cevap: Anna fährt jeden Morgen mit dem Fahrrad zur Schule.",
+            "de": "Die hier verlangte TeKaMoLo-Folge lautet: temporal → kausal → modal → lokal. Andere Kontexte erlauben andere Reihenfolgen. Zielantwort: Anna fährt jeden Morgen mit dem Fahrrad zur Schule.",
+            "en": "The requested TeKaMoLo order is time → reason → manner/means → place/destination. It is not the only possible order in every context. Target answer: Anna fährt jeden Morgen mit dem Fahrrad zur Schule."
+          },
+          "type": "text",
+          "answers": [
+            "Anna fährt jeden Morgen mit dem Fahrrad zur Schule.",
+            "Anna faehrt jeden Morgen mit dem Fahrrad zur Schule."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ich bleibe | wegen der Prüfung | morgen | zu Hause.",
+          "correct": "Ich bleibe morgen wegen der Prüfung zu Hause.",
+          "explanations": {
+            "tr": "Soruda özellikle istenen TeKaMoLo sırası: zaman → neden → nasıl/araç → yer/hedef. Bu, her bağlamda zorunlu tek sıra değildir. Hedef cevap: Ich bleibe morgen wegen der Prüfung zu Hause.",
+            "de": "Die hier verlangte TeKaMoLo-Folge lautet: temporal → kausal → modal → lokal. Andere Kontexte erlauben andere Reihenfolgen. Zielantwort: Ich bleibe morgen wegen der Prüfung zu Hause.",
+            "en": "The requested TeKaMoLo order is time → reason → manner/means → place/destination. It is not the only possible order in every context. Target answer: Ich bleibe morgen wegen der Prüfung zu Hause."
+          },
+          "type": "text",
+          "answers": [
+            "Ich bleibe morgen wegen der Prüfung zu Hause.",
+            "Ich bleibe morgen wegen der Pruefung zu Hause."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Wir gehen | gemeinsam | nach dem Kurs | ins Café.",
+          "correct": "Wir gehen nach dem Kurs gemeinsam ins Café.",
+          "explanations": {
+            "tr": "Soruda özellikle istenen TeKaMoLo sırası: zaman → neden → nasıl/araç → yer/hedef. Bu, her bağlamda zorunlu tek sıra değildir. Hedef cevap: Wir gehen nach dem Kurs gemeinsam ins Café.",
+            "de": "Die hier verlangte TeKaMoLo-Folge lautet: temporal → kausal → modal → lokal. Andere Kontexte erlauben andere Reihenfolgen. Zielantwort: Wir gehen nach dem Kurs gemeinsam ins Café.",
+            "en": "The requested TeKaMoLo order is time → reason → manner/means → place/destination. It is not the only possible order in every context. Target answer: Wir gehen nach dem Kurs gemeinsam ins Café."
+          },
+          "type": "text",
+          "answers": [
+            "Wir gehen nach dem Kurs gemeinsam ins Café."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nicht-fokus-6",
+      "title": {
+        "tr": "Übung 6 – nicht ile neyi reddediyorsun?",
+        "de": "Übung 6 – Gezielte Negation mit nicht",
+        "en": "Exercise 6 – Focused negation with nicht"
+      },
+      "description": {
+        "tr": "nicht kelimesini [köşeli parantezdeki] öğenin hemen önüne ekle. Diğer kelimeleri koruyarak tam cümleyi yaz.",
+        "de": "Füge nicht direkt vor dem markierten Satzglied ein. Behalte alle anderen Wörter.",
+        "en": "Insert nicht directly before the bracketed constituent. Keep all other words."
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Consolidation"
+      },
+      "questions": [
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ich fahre [morgen], sondern heute.",
+          "correct": "Ich fahre nicht morgen, sondern heute.",
+          "explanations": {
+            "tr": "nicht, karşıtlıkla özellikle reddedilen öğenin hemen önüne gelir. İstenen anlam ve başlangıcı koru. Hedef cevap: Ich fahre nicht morgen, sondern heute.",
+            "de": "Bei gezielter Kontrastnegation steht nicht unmittelbar vor dem verneinten Satzglied. Behalte Bedeutung und Satzanfang bei. Zielantwort: Ich fahre nicht morgen, sondern heute.",
+            "en": "For focused contrastive negation, put nicht immediately before the negated constituent. Keep the requested meaning and opening. Target answer: Ich fahre nicht morgen, sondern heute."
+          },
+          "type": "text",
+          "answers": [
+            "Ich fahre nicht morgen, sondern heute."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Wir reisen [mit dem Bus], sondern mit dem Zug.",
+          "correct": "Wir reisen nicht mit dem Bus, sondern mit dem Zug.",
+          "explanations": {
+            "tr": "nicht, karşıtlıkla özellikle reddedilen öğenin hemen önüne gelir. İstenen anlam ve başlangıcı koru. Hedef cevap: Wir reisen nicht mit dem Bus, sondern mit dem Zug.",
+            "de": "Bei gezielter Kontrastnegation steht nicht unmittelbar vor dem verneinten Satzglied. Behalte Bedeutung und Satzanfang bei. Zielantwort: Wir reisen nicht mit dem Bus, sondern mit dem Zug.",
+            "en": "For focused contrastive negation, put nicht immediately before the negated constituent. Keep the requested meaning and opening. Target answer: Wir reisen nicht mit dem Bus, sondern mit dem Zug."
+          },
+          "type": "text",
+          "answers": [
+            "Wir reisen nicht mit dem Bus, sondern mit dem Zug."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Sie wohnt [in Berlin], sondern in Bonn.",
+          "correct": "Sie wohnt nicht in Berlin, sondern in Bonn.",
+          "explanations": {
+            "tr": "nicht, karşıtlıkla özellikle reddedilen öğenin hemen önüne gelir. İstenen anlam ve başlangıcı koru. Hedef cevap: Sie wohnt nicht in Berlin, sondern in Bonn.",
+            "de": "Bei gezielter Kontrastnegation steht nicht unmittelbar vor dem verneinten Satzglied. Behalte Bedeutung und Satzanfang bei. Zielantwort: Sie wohnt nicht in Berlin, sondern in Bonn.",
+            "en": "For focused contrastive negation, put nicht immediately before the negated constituent. Keep the requested meaning and opening. Target answer: Sie wohnt nicht in Berlin, sondern in Bonn."
+          },
+          "type": "text",
+          "answers": [
+            "Sie wohnt nicht in Berlin, sondern in Bonn."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Er kommt [am Montag], sondern am Dienstag.",
+          "correct": "Er kommt nicht am Montag, sondern am Dienstag.",
+          "explanations": {
+            "tr": "nicht, karşıtlıkla özellikle reddedilen öğenin hemen önüne gelir. İstenen anlam ve başlangıcı koru. Hedef cevap: Er kommt nicht am Montag, sondern am Dienstag.",
+            "de": "Bei gezielter Kontrastnegation steht nicht unmittelbar vor dem verneinten Satzglied. Behalte Bedeutung und Satzanfang bei. Zielantwort: Er kommt nicht am Montag, sondern am Dienstag.",
+            "en": "For focused contrastive negation, put nicht immediately before the negated constituent. Keep the requested meaning and opening. Target answer: Er kommt nicht am Montag, sondern am Dienstag."
+          },
+          "type": "text",
+          "answers": [
+            "Er kommt nicht am Montag, sondern am Dienstag."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ich gebe das Buch [Paul], sondern Anna.",
+          "correct": "Ich gebe das Buch nicht Paul, sondern Anna.",
+          "explanations": {
+            "tr": "nicht, karşıtlıkla özellikle reddedilen öğenin hemen önüne gelir. İstenen anlam ve başlangıcı koru. Hedef cevap: Ich gebe das Buch nicht Paul, sondern Anna.",
+            "de": "Bei gezielter Kontrastnegation steht nicht unmittelbar vor dem verneinten Satzglied. Behalte Bedeutung und Satzanfang bei. Zielantwort: Ich gebe das Buch nicht Paul, sondern Anna.",
+            "en": "For focused contrastive negation, put nicht immediately before the negated constituent. Keep the requested meaning and opening. Target answer: Ich gebe das Buch nicht Paul, sondern Anna."
+          },
+          "type": "text",
+          "answers": [
+            "Ich gebe das Buch nicht Paul, sondern Anna."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Wir treffen uns [um acht], sondern um neun.",
+          "correct": "Wir treffen uns nicht um acht, sondern um neun.",
+          "explanations": {
+            "tr": "nicht, karşıtlıkla özellikle reddedilen öğenin hemen önüne gelir. İstenen anlam ve başlangıcı koru. Hedef cevap: Wir treffen uns nicht um acht, sondern um neun.",
+            "de": "Bei gezielter Kontrastnegation steht nicht unmittelbar vor dem verneinten Satzglied. Behalte Bedeutung und Satzanfang bei. Zielantwort: Wir treffen uns nicht um acht, sondern um neun.",
+            "en": "For focused contrastive negation, put nicht immediately before the negated constituent. Keep the requested meaning and opening. Target answer: Wir treffen uns nicht um acht, sondern um neun."
+          },
+          "type": "text",
+          "answers": [
+            "Wir treffen uns nicht um acht, sondern um neun."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Sie arbeitet [heute], sondern morgen.",
+          "correct": "Sie arbeitet nicht heute, sondern morgen.",
+          "explanations": {
+            "tr": "nicht, karşıtlıkla özellikle reddedilen öğenin hemen önüne gelir. İstenen anlam ve başlangıcı koru. Hedef cevap: Sie arbeitet nicht heute, sondern morgen.",
+            "de": "Bei gezielter Kontrastnegation steht nicht unmittelbar vor dem verneinten Satzglied. Behalte Bedeutung und Satzanfang bei. Zielantwort: Sie arbeitet nicht heute, sondern morgen.",
+            "en": "For focused contrastive negation, put nicht immediately before the negated constituent. Keep the requested meaning and opening. Target answer: Sie arbeitet nicht heute, sondern morgen."
+          },
+          "type": "text",
+          "answers": [
+            "Sie arbeitet nicht heute, sondern morgen."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Er fährt [nach Hamburg], sondern nach Bremen.",
+          "correct": "Er fährt nicht nach Hamburg, sondern nach Bremen.",
+          "explanations": {
+            "tr": "nicht, karşıtlıkla özellikle reddedilen öğenin hemen önüne gelir. İstenen anlam ve başlangıcı koru. Hedef cevap: Er fährt nicht nach Hamburg, sondern nach Bremen.",
+            "de": "Bei gezielter Kontrastnegation steht nicht unmittelbar vor dem verneinten Satzglied. Behalte Bedeutung und Satzanfang bei. Zielantwort: Er fährt nicht nach Hamburg, sondern nach Bremen.",
+            "en": "For focused contrastive negation, put nicht immediately before the negated constituent. Keep the requested meaning and opening. Target answer: Er fährt nicht nach Hamburg, sondern nach Bremen."
+          },
+          "type": "text",
+          "answers": [
+            "Er fährt nicht nach Hamburg, sondern nach Bremen.",
+            "Er faehrt nicht nach Hamburg, sondern nach Bremen."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ich möchte [Tee], sondern Kaffee.",
+          "correct": "Ich möchte nicht Tee, sondern Kaffee.",
+          "explanations": {
+            "tr": "nicht, karşıtlıkla özellikle reddedilen öğenin hemen önüne gelir. İstenen anlam ve başlangıcı koru. Hedef cevap: Ich möchte nicht Tee, sondern Kaffee.",
+            "de": "Bei gezielter Kontrastnegation steht nicht unmittelbar vor dem verneinten Satzglied. Behalte Bedeutung und Satzanfang bei. Zielantwort: Ich möchte nicht Tee, sondern Kaffee.",
+            "en": "For focused contrastive negation, put nicht immediately before the negated constituent. Keep the requested meaning and opening. Target answer: Ich möchte nicht Tee, sondern Kaffee."
+          },
+          "type": "text",
+          "answers": [
+            "Ich möchte nicht Tee, sondern Kaffee.",
+            "Ich moechte nicht Tee, sondern Kaffee."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Wir gehen [ins Kino], sondern ins Theater.",
+          "correct": "Wir gehen nicht ins Kino, sondern ins Theater.",
+          "explanations": {
+            "tr": "nicht, karşıtlıkla özellikle reddedilen öğenin hemen önüne gelir. İstenen anlam ve başlangıcı koru. Hedef cevap: Wir gehen nicht ins Kino, sondern ins Theater.",
+            "de": "Bei gezielter Kontrastnegation steht nicht unmittelbar vor dem verneinten Satzglied. Behalte Bedeutung und Satzanfang bei. Zielantwort: Wir gehen nicht ins Kino, sondern ins Theater.",
+            "en": "For focused contrastive negation, put nicht immediately before the negated constituent. Keep the requested meaning and opening. Target answer: Wir gehen nicht ins Kino, sondern ins Theater."
+          },
+          "type": "text",
+          "answers": [
+            "Wir gehen nicht ins Kino, sondern ins Theater."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fragen-7",
+      "title": {
+        "tr": "Übung 7 – Soru cümlesi kur",
+        "de": "Übung 7 – Fragen bilden",
+        "en": "Exercise 7 – Build questions"
+      },
+      "description": {
+        "tr": "Verilen soruyu tam cümle olarak kur.",
+        "de": "Bilde die angegebene Frage als ganzen Satz.",
+        "en": "Write the requested question as a full sentence."
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Consolidation"
+      },
+      "questions": [
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ja/Nein-Frage: du | hast | Zeit",
+          "correct": "Hast du Zeit?",
+          "explanations": {
+            "tr": "Evet/hayır sorusunda çekimli fiil başta; W-sorusunda soru grubunun hemen ardından gelir. Hedef cevap: Hast du Zeit?",
+            "de": "In Ja/Nein-Fragen steht das finite Verb zuerst; in W-Fragen direkt nach der Fragegruppe. Zielantwort: Hast du Zeit?",
+            "en": "In yes/no questions the finite verb comes first; in question-word questions it follows the question phrase. Target answer: Hast du Zeit?"
+          },
+          "type": "text",
+          "answers": [
+            "Hast du Zeit?"
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ja/Nein-Frage: ihr | könnt | morgen | kommen",
+          "correct": "Könnt ihr morgen kommen?",
+          "explanations": {
+            "tr": "Evet/hayır sorusunda çekimli fiil başta; W-sorusunda soru grubunun hemen ardından gelir. Hedef cevap: Könnt ihr morgen kommen?",
+            "de": "In Ja/Nein-Fragen steht das finite Verb zuerst; in W-Fragen direkt nach der Fragegruppe. Zielantwort: Könnt ihr morgen kommen?",
+            "en": "In yes/no questions the finite verb comes first; in question-word questions it follows the question phrase. Target answer: Könnt ihr morgen kommen?"
+          },
+          "type": "text",
+          "answers": [
+            "Könnt ihr morgen kommen?",
+            "Koennt ihr morgen kommen?"
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ja/Nein-Frage: Anna | hat | angerufen",
+          "correct": "Hat Anna angerufen?",
+          "explanations": {
+            "tr": "Evet/hayır sorusunda çekimli fiil başta; W-sorusunda soru grubunun hemen ardından gelir. Hedef cevap: Hat Anna angerufen?",
+            "de": "In Ja/Nein-Fragen steht das finite Verb zuerst; in W-Fragen direkt nach der Fragegruppe. Zielantwort: Hat Anna angerufen?",
+            "en": "In yes/no questions the finite verb comes first; in question-word questions it follows the question phrase. Target answer: Hat Anna angerufen?"
+          },
+          "type": "text",
+          "answers": [
+            "Hat Anna angerufen?"
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ja/Nein-Frage: der Zug | ist | angekommen",
+          "correct": "Ist der Zug angekommen?",
+          "explanations": {
+            "tr": "Evet/hayır sorusunda çekimli fiil başta; W-sorusunda soru grubunun hemen ardından gelir. Hedef cevap: Ist der Zug angekommen?",
+            "de": "In Ja/Nein-Fragen steht das finite Verb zuerst; in W-Fragen direkt nach der Fragegruppe. Zielantwort: Ist der Zug angekommen?",
+            "en": "In yes/no questions the finite verb comes first; in question-word questions it follows the question phrase. Target answer: Ist der Zug angekommen?"
+          },
+          "type": "text",
+          "answers": [
+            "Ist der Zug angekommen?"
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ja/Nein-Frage: du | stehst | früh | auf",
+          "correct": "Stehst du früh auf?",
+          "explanations": {
+            "tr": "Evet/hayır sorusunda çekimli fiil başta; W-sorusunda soru grubunun hemen ardından gelir. Hedef cevap: Stehst du früh auf?",
+            "de": "In Ja/Nein-Fragen steht das finite Verb zuerst; in W-Fragen direkt nach der Fragegruppe. Zielantwort: Stehst du früh auf?",
+            "en": "In yes/no questions the finite verb comes first; in question-word questions it follows the question phrase. Target answer: Stehst du früh auf?"
+          },
+          "type": "text",
+          "answers": [
+            "Stehst du früh auf?",
+            "Stehst du frueh auf?"
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "W-Frage: wann | beginnt | der Kurs",
+          "correct": "Wann beginnt der Kurs?",
+          "explanations": {
+            "tr": "Evet/hayır sorusunda çekimli fiil başta; W-sorusunda soru grubunun hemen ardından gelir. Hedef cevap: Wann beginnt der Kurs?",
+            "de": "In Ja/Nein-Fragen steht das finite Verb zuerst; in W-Fragen direkt nach der Fragegruppe. Zielantwort: Wann beginnt der Kurs?",
+            "en": "In yes/no questions the finite verb comes first; in question-word questions it follows the question phrase. Target answer: Wann beginnt der Kurs?"
+          },
+          "type": "text",
+          "answers": [
+            "Wann beginnt der Kurs?"
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "W-Frage: wo | wohnt | deine Schwester",
+          "correct": "Wo wohnt deine Schwester?",
+          "explanations": {
+            "tr": "Evet/hayır sorusunda çekimli fiil başta; W-sorusunda soru grubunun hemen ardından gelir. Hedef cevap: Wo wohnt deine Schwester?",
+            "de": "In Ja/Nein-Fragen steht das finite Verb zuerst; in W-Fragen direkt nach der Fragegruppe. Zielantwort: Wo wohnt deine Schwester?",
+            "en": "In yes/no questions the finite verb comes first; in question-word questions it follows the question phrase. Target answer: Wo wohnt deine Schwester?"
+          },
+          "type": "text",
+          "answers": [
+            "Wo wohnt deine Schwester?"
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "W-Frage: mit wem | sprichst | du",
+          "correct": "Mit wem sprichst du?",
+          "explanations": {
+            "tr": "Evet/hayır sorusunda çekimli fiil başta; W-sorusunda soru grubunun hemen ardından gelir. Hedef cevap: Mit wem sprichst du?",
+            "de": "In Ja/Nein-Fragen steht das finite Verb zuerst; in W-Fragen direkt nach der Fragegruppe. Zielantwort: Mit wem sprichst du?",
+            "en": "In yes/no questions the finite verb comes first; in question-word questions it follows the question phrase. Target answer: Mit wem sprichst du?"
+          },
+          "type": "text",
+          "answers": [
+            "Mit wem sprichst du?"
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "W-Frage: warum | hast | du | angerufen",
+          "correct": "Warum hast du angerufen?",
+          "explanations": {
+            "tr": "Evet/hayır sorusunda çekimli fiil başta; W-sorusunda soru grubunun hemen ardından gelir. Hedef cevap: Warum hast du angerufen?",
+            "de": "In Ja/Nein-Fragen steht das finite Verb zuerst; in W-Fragen direkt nach der Fragegruppe. Zielantwort: Warum hast du angerufen?",
+            "en": "In yes/no questions the finite verb comes first; in question-word questions it follows the question phrase. Target answer: Warum hast du angerufen?"
+          },
+          "type": "text",
+          "answers": [
+            "Warum hast du angerufen?"
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "W-Frage: wann | musst | du | arbeiten",
+          "correct": "Wann musst du arbeiten?",
+          "explanations": {
+            "tr": "Evet/hayır sorusunda çekimli fiil başta; W-sorusunda soru grubunun hemen ardından gelir. Hedef cevap: Wann musst du arbeiten?",
+            "de": "In Ja/Nein-Fragen steht das finite Verb zuerst; in W-Fragen direkt nach der Fragegruppe. Zielantwort: Wann musst du arbeiten?",
+            "en": "In yes/no questions the finite verb comes first; in question-word questions it follows the question phrase. Target answer: Wann musst du arbeiten?"
+          },
+          "type": "text",
+          "answers": [
+            "Wann musst du arbeiten?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nebensaetze-8",
+      "title": {
+        "tr": "Übung 8 – Yan cümleyle sıra",
+        "de": "Übung 8 – Wortstellung mit Nebensätzen",
+        "en": "Exercise 8 – Subordinate clauses"
+      },
+      "description": {
+        "tr": "Doğru fiil sırasını seç.",
+        "de": "Wähle die richtige Verbposition.",
+        "en": "Choose the correct verb positions."
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Consolidation"
+      },
+      "questions": [
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Ich bleibe hier, weil ich Zeit habe.",
+          "explanations": {
+            "tr": "Yan cümlede çekimli fiil sonda kalır. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir. Hedef cevap: Ich bleibe hier, weil ich Zeit habe.",
+            "de": "Im Nebensatz steht das finite Verb am Ende. Ein vorangestellter Nebensatz wird direkt vom finiten Hauptsatzverb gefolgt. Zielantwort: Ich bleibe hier, weil ich Zeit habe.",
+            "en": "A subordinate clause ends in the finite verb. If it comes first, the main-clause finite verb follows the comma directly. Target answer: Ich bleibe hier, weil ich Zeit habe."
+          },
+          "options": [
+            "Ich bleibe hier, weil ich Zeit habe.",
+            "Ich bleibe hier, weil habe ich Zeit.",
+            "Ich bleibe hier, weil ich habe Zeit."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Weil ich krank bin, bleibe ich zu Hause.",
+          "explanations": {
+            "tr": "Yan cümlede çekimli fiil sonda kalır. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir. Hedef cevap: Weil ich krank bin, bleibe ich zu Hause.",
+            "de": "Im Nebensatz steht das finite Verb am Ende. Ein vorangestellter Nebensatz wird direkt vom finiten Hauptsatzverb gefolgt. Zielantwort: Weil ich krank bin, bleibe ich zu Hause.",
+            "en": "A subordinate clause ends in the finite verb. If it comes first, the main-clause finite verb follows the comma directly. Target answer: Weil ich krank bin, bleibe ich zu Hause."
+          },
+          "options": [
+            "Weil ich krank bin, ich bleibe zu Hause.",
+            "Weil ich krank bin, bleibe ich zu Hause.",
+            "Weil bin ich krank, bleibe ich zu Hause."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Wenn du kommst, kochen wir zusammen.",
+          "explanations": {
+            "tr": "Yan cümlede çekimli fiil sonda kalır. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir. Hedef cevap: Wenn du kommst, kochen wir zusammen.",
+            "de": "Im Nebensatz steht das finite Verb am Ende. Ein vorangestellter Nebensatz wird direkt vom finiten Hauptsatzverb gefolgt. Zielantwort: Wenn du kommst, kochen wir zusammen.",
+            "en": "A subordinate clause ends in the finite verb. If it comes first, the main-clause finite verb follows the comma directly. Target answer: Wenn du kommst, kochen wir zusammen."
+          },
+          "options": [
+            "Wenn du kommst, wir kochen zusammen.",
+            "Wenn kommst du, kochen wir zusammen.",
+            "Wenn du kommst, kochen wir zusammen."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Ich weiß, dass sie heute arbeitet.",
+          "explanations": {
+            "tr": "Yan cümlede çekimli fiil sonda kalır. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir. Hedef cevap: Ich weiß, dass sie heute arbeitet.",
+            "de": "Im Nebensatz steht das finite Verb am Ende. Ein vorangestellter Nebensatz wird direkt vom finiten Hauptsatzverb gefolgt. Zielantwort: Ich weiß, dass sie heute arbeitet.",
+            "en": "A subordinate clause ends in the finite verb. If it comes first, the main-clause finite verb follows the comma directly. Target answer: Ich weiß, dass sie heute arbeitet."
+          },
+          "options": [
+            "Ich weiß, dass sie heute arbeitet.",
+            "Ich weiß, dass arbeitet sie heute.",
+            "Ich weiß, dass sie arbeitet heute."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Obwohl es regnet, gehen wir spazieren.",
+          "explanations": {
+            "tr": "Yan cümlede çekimli fiil sonda kalır. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir. Hedef cevap: Obwohl es regnet, gehen wir spazieren.",
+            "de": "Im Nebensatz steht das finite Verb am Ende. Ein vorangestellter Nebensatz wird direkt vom finiten Hauptsatzverb gefolgt. Zielantwort: Obwohl es regnet, gehen wir spazieren.",
+            "en": "A subordinate clause ends in the finite verb. If it comes first, the main-clause finite verb follows the comma directly. Target answer: Obwohl es regnet, gehen wir spazieren."
+          },
+          "options": [
+            "Obwohl es regnet, wir gehen spazieren.",
+            "Obwohl es regnet, gehen wir spazieren.",
+            "Obwohl regnet es, gehen wir spazieren."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Ich weiß nicht, wann der Bus abfährt.",
+          "explanations": {
+            "tr": "Yan cümlede çekimli fiil sonda kalır. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir. Hedef cevap: Ich weiß nicht, wann der Bus abfährt.",
+            "de": "Im Nebensatz steht das finite Verb am Ende. Ein vorangestellter Nebensatz wird direkt vom finiten Hauptsatzverb gefolgt. Zielantwort: Ich weiß nicht, wann der Bus abfährt.",
+            "en": "A subordinate clause ends in the finite verb. If it comes first, the main-clause finite verb follows the comma directly. Target answer: Ich weiß nicht, wann der Bus abfährt."
+          },
+          "options": [
+            "Ich weiß nicht, wann fährt der Bus ab.",
+            "Ich weiß nicht, wann der Bus fährt ab.",
+            "Ich weiß nicht, wann der Bus abfährt."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Sie fragt, ob ich helfen kann.",
+          "explanations": {
+            "tr": "Yan cümlede çekimli fiil sonda kalır. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir. Hedef cevap: Sie fragt, ob ich helfen kann.",
+            "de": "Im Nebensatz steht das finite Verb am Ende. Ein vorangestellter Nebensatz wird direkt vom finiten Hauptsatzverb gefolgt. Zielantwort: Sie fragt, ob ich helfen kann.",
+            "en": "A subordinate clause ends in the finite verb. If it comes first, the main-clause finite verb follows the comma directly. Target answer: Sie fragt, ob ich helfen kann."
+          },
+          "options": [
+            "Sie fragt, ob ich helfen kann.",
+            "Sie fragt, ob kann ich helfen.",
+            "Sie fragt, ob ich kann helfen."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Nachdem wir gegessen hatten, gingen wir los.",
+          "explanations": {
+            "tr": "Yan cümlede çekimli fiil sonda kalır. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir. Hedef cevap: Nachdem wir gegessen hatten, gingen wir los.",
+            "de": "Im Nebensatz steht das finite Verb am Ende. Ein vorangestellter Nebensatz wird direkt vom finiten Hauptsatzverb gefolgt. Zielantwort: Nachdem wir gegessen hatten, gingen wir los.",
+            "en": "A subordinate clause ends in the finite verb. If it comes first, the main-clause finite verb follows the comma directly. Target answer: Nachdem wir gegessen hatten, gingen wir los."
+          },
+          "options": [
+            "Nachdem wir gegessen hatten, wir gingen los.",
+            "Nachdem wir gegessen hatten, gingen wir los.",
+            "Nachdem hatten wir gegessen, gingen wir los."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Das Buch, das du empfohlen hast, ist spannend.",
+          "explanations": {
+            "tr": "Yan cümlede çekimli fiil sonda kalır. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir. Hedef cevap: Das Buch, das du empfohlen hast, ist spannend.",
+            "de": "Im Nebensatz steht das finite Verb am Ende. Ein vorangestellter Nebensatz wird direkt vom finiten Hauptsatzverb gefolgt. Zielantwort: Das Buch, das du empfohlen hast, ist spannend.",
+            "en": "A subordinate clause ends in the finite verb. If it comes first, the main-clause finite verb follows the comma directly. Target answer: Das Buch, das du empfohlen hast, ist spannend."
+          },
+          "options": [
+            "Das Buch, das du hast empfohlen, ist spannend.",
+            "Das Buch, das hast du empfohlen, ist spannend.",
+            "Das Buch, das du empfohlen hast, ist spannend."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Welcher Satz ist richtig?",
+          "correct": "Ich freue mich, weil du mitkommst.",
+          "explanations": {
+            "tr": "Yan cümlede çekimli fiil sonda kalır. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir. Hedef cevap: Ich freue mich, weil du mitkommst.",
+            "de": "Im Nebensatz steht das finite Verb am Ende. Ein vorangestellter Nebensatz wird direkt vom finiten Hauptsatzverb gefolgt. Zielantwort: Ich freue mich, weil du mitkommst.",
+            "en": "A subordinate clause ends in the finite verb. If it comes first, the main-clause finite verb follows the comma directly. Target answer: Ich freue mich, weil du mitkommst."
+          },
+          "options": [
+            "Ich freue mich, weil du mitkommst.",
+            "Ich freue mich, weil kommst du mit.",
+            "Ich freue mich, weil du kommst mit."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fehler-korrigieren-9",
+      "title": {
+        "tr": "Übung 9 – Sırayı düzelt",
+        "de": "Übung 9 – Wortstellungsfehler korrigieren",
+        "en": "Exercise 9 – Correct word order"
+      },
+      "description": {
+        "tr": "Verilen başlangıcı ve kelimeleri koruyarak fiil sırasını düzelt.",
+        "de": "Korrigiere die Verbpositionen und behalte Satzanfang und Wörter.",
+        "en": "Correct the verb positions while keeping the opening and words."
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Consolidation"
+      },
+      "questions": [
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Heute ich habe Zeit.",
+          "correct": "Heute habe ich Zeit.",
+          "explanations": {
+            "tr": "Yan cümlede çekimli fiil sonda kalır. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir. Hedef cevap: Heute habe ich Zeit.",
+            "de": "Im Nebensatz steht das finite Verb am Ende. Ein vorangestellter Nebensatz wird direkt vom finiten Hauptsatzverb gefolgt. Zielantwort: Heute habe ich Zeit.",
+            "en": "A subordinate clause ends in the finite verb. If it comes first, the main-clause finite verb follows the comma directly. Target answer: Heute habe ich Zeit."
+          },
+          "type": "text",
+          "answers": [
+            "Heute habe ich Zeit."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Morgen wir fahren nach Berlin.",
+          "correct": "Morgen fahren wir nach Berlin.",
+          "explanations": {
+            "tr": "Yan cümlede çekimli fiil sonda kalır. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir. Hedef cevap: Morgen fahren wir nach Berlin.",
+            "de": "Im Nebensatz steht das finite Verb am Ende. Ein vorangestellter Nebensatz wird direkt vom finiten Hauptsatzverb gefolgt. Zielantwort: Morgen fahren wir nach Berlin.",
+            "en": "A subordinate clause ends in the finite verb. If it comes first, the main-clause finite verb follows the comma directly. Target answer: Morgen fahren wir nach Berlin."
+          },
+          "type": "text",
+          "answers": [
+            "Morgen fahren wir nach Berlin."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ich heute muss arbeiten.",
+          "correct": "Ich muss heute arbeiten.",
+          "explanations": {
+            "tr": "Yan cümlede çekimli fiil sonda kalır. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir. Hedef cevap: Ich muss heute arbeiten.",
+            "de": "Im Nebensatz steht das finite Verb am Ende. Ein vorangestellter Nebensatz wird direkt vom finiten Hauptsatzverb gefolgt. Zielantwort: Ich muss heute arbeiten.",
+            "en": "A subordinate clause ends in the finite verb. If it comes first, the main-clause finite verb follows the comma directly. Target answer: Ich muss heute arbeiten."
+          },
+          "type": "text",
+          "answers": [
+            "Ich muss heute arbeiten."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Um neun Uhr der Kurs beginnt.",
+          "correct": "Um neun Uhr beginnt der Kurs.",
+          "explanations": {
+            "tr": "Yan cümlede çekimli fiil sonda kalır. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir. Hedef cevap: Um neun Uhr beginnt der Kurs.",
+            "de": "Im Nebensatz steht das finite Verb am Ende. Ein vorangestellter Nebensatz wird direkt vom finiten Hauptsatzverb gefolgt. Zielantwort: Um neun Uhr beginnt der Kurs.",
+            "en": "A subordinate clause ends in the finite verb. If it comes first, the main-clause finite verb follows the comma directly. Target answer: Um neun Uhr beginnt der Kurs."
+          },
+          "type": "text",
+          "answers": [
+            "Um neun Uhr beginnt der Kurs."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ich bleibe hier, weil ich habe Zeit.",
+          "correct": "Ich bleibe hier, weil ich Zeit habe.",
+          "explanations": {
+            "tr": "Yan cümlede çekimli fiil sonda kalır. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir. Hedef cevap: Ich bleibe hier, weil ich Zeit habe.",
+            "de": "Im Nebensatz steht das finite Verb am Ende. Ein vorangestellter Nebensatz wird direkt vom finiten Hauptsatzverb gefolgt. Zielantwort: Ich bleibe hier, weil ich Zeit habe.",
+            "en": "A subordinate clause ends in the finite verb. If it comes first, the main-clause finite verb follows the comma directly. Target answer: Ich bleibe hier, weil ich Zeit habe."
+          },
+          "type": "text",
+          "answers": [
+            "Ich bleibe hier, weil ich Zeit habe."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Wenn du kommst, wir essen zusammen.",
+          "correct": "Wenn du kommst, essen wir zusammen.",
+          "explanations": {
+            "tr": "Yan cümlede çekimli fiil sonda kalır. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir. Hedef cevap: Wenn du kommst, essen wir zusammen.",
+            "de": "Im Nebensatz steht das finite Verb am Ende. Ein vorangestellter Nebensatz wird direkt vom finiten Hauptsatzverb gefolgt. Zielantwort: Wenn du kommst, essen wir zusammen.",
+            "en": "A subordinate clause ends in the finite verb. If it comes first, the main-clause finite verb follows the comma directly. Target answer: Wenn du kommst, essen wir zusammen."
+          },
+          "type": "text",
+          "answers": [
+            "Wenn du kommst, essen wir zusammen."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Sie fragt, wann fährt der Zug ab.",
+          "correct": "Sie fragt, wann der Zug abfährt.",
+          "explanations": {
+            "tr": "Yan cümlede çekimli fiil sonda kalır. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir. Hedef cevap: Sie fragt, wann der Zug abfährt.",
+            "de": "Im Nebensatz steht das finite Verb am Ende. Ein vorangestellter Nebensatz wird direkt vom finiten Hauptsatzverb gefolgt. Zielantwort: Sie fragt, wann der Zug abfährt.",
+            "en": "A subordinate clause ends in the finite verb. If it comes first, the main-clause finite verb follows the comma directly. Target answer: Sie fragt, wann der Zug abfährt."
+          },
+          "type": "text",
+          "answers": [
+            "Sie fragt, wann der Zug abfährt.",
+            "Sie fragt, wann der Zug abfaehrt."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ich weiß, dass sie hat angerufen.",
+          "correct": "Ich weiß, dass sie angerufen hat.",
+          "explanations": {
+            "tr": "Yan cümlede çekimli fiil sonda kalır. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir. Hedef cevap: Ich weiß, dass sie angerufen hat.",
+            "de": "Im Nebensatz steht das finite Verb am Ende. Ein vorangestellter Nebensatz wird direkt vom finiten Hauptsatzverb gefolgt. Zielantwort: Ich weiß, dass sie angerufen hat.",
+            "en": "A subordinate clause ends in the finite verb. If it comes first, the main-clause finite verb follows the comma directly. Target answer: Ich weiß, dass sie angerufen hat."
+          },
+          "type": "text",
+          "answers": [
+            "Ich weiß, dass sie angerufen hat.",
+            "Ich weiss, dass sie angerufen hat."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Weil er krank ist, er bleibt zu Hause.",
+          "correct": "Weil er krank ist, bleibt er zu Hause.",
+          "explanations": {
+            "tr": "Yan cümlede çekimli fiil sonda kalır. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir. Hedef cevap: Weil er krank ist, bleibt er zu Hause.",
+            "de": "Im Nebensatz steht das finite Verb am Ende. Ein vorangestellter Nebensatz wird direkt vom finiten Hauptsatzverb gefolgt. Zielantwort: Weil er krank ist, bleibt er zu Hause.",
+            "en": "A subordinate clause ends in the finite verb. If it comes first, the main-clause finite verb follows the comma directly. Target answer: Weil er krank ist, bleibt er zu Hause."
+          },
+          "type": "text",
+          "answers": [
+            "Weil er krank ist, bleibt er zu Hause."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Gestern ich bin früh aufgestanden.",
+          "correct": "Gestern bin ich früh aufgestanden.",
+          "explanations": {
+            "tr": "Yan cümlede çekimli fiil sonda kalır. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir. Hedef cevap: Gestern bin ich früh aufgestanden.",
+            "de": "Im Nebensatz steht das finite Verb am Ende. Ein vorangestellter Nebensatz wird direkt vom finiten Hauptsatzverb gefolgt. Zielantwort: Gestern bin ich früh aufgestanden.",
+            "en": "A subordinate clause ends in the finite verb. If it comes first, the main-clause finite verb follows the comma directly. Target answer: Gestern bin ich früh aufgestanden."
+          },
+          "type": "text",
+          "answers": [
+            "Gestern bin ich früh aufgestanden.",
+            "Gestern bin ich frueh aufgestanden."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "schreiben-mix-10",
+      "title": {
+        "tr": "Übung 10 – Tam cümleyle tekrar",
+        "de": "Übung 10 – Gemischte Satzbildung",
+        "en": "Exercise 10 – Mixed sentence building"
+      },
+      "description": {
+        "tr": "Bloklardan tam cümle kur. İlk bloğu başta tut; fiil grubunu doğru yerleştir.",
+        "de": "Bilde ganze Sätze aus den Blöcken. Behalte den ersten Block am Anfang.",
+        "en": "Build full sentences from the blocks. Keep the first block at the beginning."
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Consolidation"
+      },
+      "questions": [
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Heute | ich | muss | arbeiten.",
+          "correct": "Heute muss ich arbeiten.",
+          "explanations": {
+            "tr": "Çekimli fiil ikinci öğede, mastar/Partizip II/ayrılabilen ön ek ana cümlenin sonunda kalır. Hedef cevap: Heute muss ich arbeiten.",
+            "de": "Das finite Verb steht an Position 2; Infinitiv, Partizip II oder trennbarer Verbzusatz stehen am Ende. Zielantwort: Heute muss ich arbeiten.",
+            "en": "The finite verb takes position 2; an infinitive, past participle or separable prefix goes at the end. Target answer: Heute muss ich arbeiten."
+          },
+          "type": "text",
+          "answers": [
+            "Heute muss ich arbeiten."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Gestern | wir | haben | gekocht.",
+          "correct": "Gestern haben wir gekocht.",
+          "explanations": {
+            "tr": "Çekimli fiil ikinci öğede, mastar/Partizip II/ayrılabilen ön ek ana cümlenin sonunda kalır. Hedef cevap: Gestern haben wir gekocht.",
+            "de": "Das finite Verb steht an Position 2; Infinitiv, Partizip II oder trennbarer Verbzusatz stehen am Ende. Zielantwort: Gestern haben wir gekocht.",
+            "en": "The finite verb takes position 2; an infinitive, past participle or separable prefix goes at the end. Target answer: Gestern haben wir gekocht."
+          },
+          "type": "text",
+          "answers": [
+            "Gestern haben wir gekocht."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Morgen | ich | rufe | dich | an.",
+          "correct": "Morgen rufe ich dich an.",
+          "explanations": {
+            "tr": "Çekimli fiil ikinci öğede, mastar/Partizip II/ayrılabilen ön ek ana cümlenin sonunda kalır. Hedef cevap: Morgen rufe ich dich an.",
+            "de": "Das finite Verb steht an Position 2; Infinitiv, Partizip II oder trennbarer Verbzusatz stehen am Ende. Zielantwort: Morgen rufe ich dich an.",
+            "en": "The finite verb takes position 2; an infinitive, past participle or separable prefix goes at the end. Target answer: Morgen rufe ich dich an."
+          },
+          "type": "text",
+          "answers": [
+            "Morgen rufe ich dich an."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Am Montag | der Kurs | beginnt.",
+          "correct": "Am Montag beginnt der Kurs.",
+          "explanations": {
+            "tr": "Çekimli fiil ikinci öğede, mastar/Partizip II/ayrılabilen ön ek ana cümlenin sonunda kalır. Hedef cevap: Am Montag beginnt der Kurs.",
+            "de": "Das finite Verb steht an Position 2; Infinitiv, Partizip II oder trennbarer Verbzusatz stehen am Ende. Zielantwort: Am Montag beginnt der Kurs.",
+            "en": "The finite verb takes position 2; an infinitive, past participle or separable prefix goes at the end. Target answer: Am Montag beginnt der Kurs."
+          },
+          "type": "text",
+          "answers": [
+            "Am Montag beginnt der Kurs."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Wenn du Zeit hast, | wir | gehen | spazieren.",
+          "correct": "Wenn du Zeit hast, gehen wir spazieren.",
+          "explanations": {
+            "tr": "Çekimli fiil ikinci öğede, mastar/Partizip II/ayrılabilen ön ek ana cümlenin sonunda kalır. Hedef cevap: Wenn du Zeit hast, gehen wir spazieren.",
+            "de": "Das finite Verb steht an Position 2; Infinitiv, Partizip II oder trennbarer Verbzusatz stehen am Ende. Zielantwort: Wenn du Zeit hast, gehen wir spazieren.",
+            "en": "The finite verb takes position 2; an infinitive, past participle or separable prefix goes at the end. Target answer: Wenn du Zeit hast, gehen wir spazieren."
+          },
+          "type": "text",
+          "answers": [
+            "Wenn du Zeit hast, gehen wir spazieren."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ich weiß nicht, | wann | der Zug | ankommt.",
+          "correct": "Ich weiß nicht, wann der Zug ankommt.",
+          "explanations": {
+            "tr": "Çekimli fiil ikinci öğede, mastar/Partizip II/ayrılabilen ön ek ana cümlenin sonunda kalır. Hedef cevap: Ich weiß nicht, wann der Zug ankommt.",
+            "de": "Das finite Verb steht an Position 2; Infinitiv, Partizip II oder trennbarer Verbzusatz stehen am Ende. Zielantwort: Ich weiß nicht, wann der Zug ankommt.",
+            "en": "The finite verb takes position 2; an infinitive, past participle or separable prefix goes at the end. Target answer: Ich weiß nicht, wann der Zug ankommt."
+          },
+          "type": "text",
+          "answers": [
+            "Ich weiß nicht, wann der Zug ankommt.",
+            "Ich weiss nicht, wann der Zug ankommt."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Sie fragt, | ob | ich | helfen | kann.",
+          "correct": "Sie fragt, ob ich helfen kann.",
+          "explanations": {
+            "tr": "Çekimli fiil ikinci öğede, mastar/Partizip II/ayrılabilen ön ek ana cümlenin sonunda kalır. Hedef cevap: Sie fragt, ob ich helfen kann.",
+            "de": "Das finite Verb steht an Position 2; Infinitiv, Partizip II oder trennbarer Verbzusatz stehen am Ende. Zielantwort: Sie fragt, ob ich helfen kann.",
+            "en": "The finite verb takes position 2; an infinitive, past participle or separable prefix goes at the end. Target answer: Sie fragt, ob ich helfen kann."
+          },
+          "type": "text",
+          "answers": [
+            "Sie fragt, ob ich helfen kann."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Das Formular | muss | heute | ausgefüllt | werden.",
+          "correct": "Das Formular muss heute ausgefüllt werden.",
+          "explanations": {
+            "tr": "Çekimli fiil ikinci öğede, mastar/Partizip II/ayrılabilen ön ek ana cümlenin sonunda kalır. Hedef cevap: Das Formular muss heute ausgefüllt werden.",
+            "de": "Das finite Verb steht an Position 2; Infinitiv, Partizip II oder trennbarer Verbzusatz stehen am Ende. Zielantwort: Das Formular muss heute ausgefüllt werden.",
+            "en": "The finite verb takes position 2; an infinitive, past participle or separable prefix goes at the end. Target answer: Das Formular muss heute ausgefüllt werden."
+          },
+          "type": "text",
+          "answers": [
+            "Das Formular muss heute ausgefüllt werden.",
+            "Das Formular muss heute ausgefuellt werden."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Nachdem wir gegessen hatten, | wir | gingen | nach Hause.",
+          "correct": "Nachdem wir gegessen hatten, gingen wir nach Hause.",
+          "explanations": {
+            "tr": "Çekimli fiil ikinci öğede, mastar/Partizip II/ayrılabilen ön ek ana cümlenin sonunda kalır. Hedef cevap: Nachdem wir gegessen hatten, gingen wir nach Hause.",
+            "de": "Das finite Verb steht an Position 2; Infinitiv, Partizip II oder trennbarer Verbzusatz stehen am Ende. Zielantwort: Nachdem wir gegessen hatten, gingen wir nach Hause.",
+            "en": "The finite verb takes position 2; an infinitive, past participle or separable prefix goes at the end. Target answer: Nachdem wir gegessen hatten, gingen wir nach Hause."
+          },
+          "type": "text",
+          "answers": [
+            "Nachdem wir gegessen hatten, gingen wir nach Hause."
+          ]
+        },
+        {
+          "word": "Satzstellung – B1",
+          "sentence": "Ich gebe | es | ihr.",
+          "correct": "Ich gebe es ihr.",
+          "explanations": {
+            "tr": "Çekimli fiil ikinci öğede, mastar/Partizip II/ayrılabilen ön ek ana cümlenin sonunda kalır. Hedef cevap: Ich gebe es ihr.",
+            "de": "Das finite Verb steht an Position 2; Infinitiv, Partizip II oder trennbarer Verbzusatz stehen am Ende. Zielantwort: Ich gebe es ihr.",
+            "en": "The finite verb takes position 2; an infinitive, past participle or separable prefix goes at the end. Target answer: Ich gebe es ihr."
+          },
+          "type": "text",
+          "answers": [
+            "Ich gebe es ihr."
+          ]
+        }
+      ]
+    }
+  ]
+}

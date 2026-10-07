@@ -772,7 +772,7 @@
     injectCss();if(!root())return;
     renderShell();
     try {
-      const response=await fetch('data/catalog.json');if(!response.ok)throw Error('Catalog');
+      const response=await fetch('data/catalog.json?v=2');if(!response.ok)throw Error('Catalog');
       const catalog=await response.json();
       const registryResponse=await fetch('data/grammar-index.json?v=2');if(!registryResponse.ok)throw Error('Grammar index');
       const registry=await registryResponse.json();

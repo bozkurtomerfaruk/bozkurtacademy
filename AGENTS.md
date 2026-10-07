@@ -1,5 +1,7 @@
 # Exercise and grammar authoring
 
+Every question needs feedback explaining its own grammatical trigger: the actual subject and verb form, required preposition/case, meaning clue or word-order constituents. Do not reuse a topic-level paragraph with only the correct answer substituted. Preserve useful existing reasoning and avoid stock instructions that bury it. Check incorrect multiple-choice and written submissions in the browser, including Enter submission, when changing feedback.
+
 When adding an exercise topic at any level, also add its complete grammar lesson in the same task without asking the user separately. This is a standing user preference.
 
 Use the exercise topic ID in data/<level>-grammar.json. Register a new level in data/grammar-index.json. The grammar list derives from data/catalog.json; do not maintain a separate topic list.

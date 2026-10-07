@@ -668,21 +668,21 @@
     const detail = document.getElementById('grammarDetailView');
     if (!list || !detail) return;
 
-    if (level === 'A1' && window.BAA1Lessons) {
+    if (authored[level]?.has(id) && window.BAA1Lessons) {
       activeTopic = {level,id};
       currentLevel = level;
-      detail.dataset.lesson = id;
+      detail.dataset.lesson = level+'/'+id;
       detail.innerHTML = '<p role="status">Konu anlatımı yükleniyor…</p>';
       list.classList.add('hidden');
       detail.classList.add('active');
-      if (!options.restore) history.pushState({baPage:'grammar',grammarLevel:level,grammarTopic:id},'', '#grammar/A1/'+encodeURIComponent(id));
+      if (!options.restore) history.pushState({baPage:'grammar',grammarLevel:level,grammarTopic:id},'', '#grammar/'+level+'/'+encodeURIComponent(id));
       try {
-        await window.BAA1Lessons.render(detail,id,key=>openTopic('A1',key));
-        if (activeTopic?.id !== id) return;
+        await window.BAA1Lessons.render(detail,id,key=>openTopic(level,key),level);
+        if (activeTopic?.id !== id || activeTopic?.level !== level) return;
         detail.querySelectorAll('[data-a1-back]').forEach(button=>button.addEventListener('click',()=>closeA1()));
         detail.querySelector('.a1-article-header h2')?.focus({preventScroll:true});
       } catch (_) {
-        if (activeTopic?.id !== id) return;
+        if (activeTopic?.id !== id || activeTopic?.level !== level) return;
         detail.innerHTML='<p role="alert">Konu anlatımı yüklenemedi. Lütfen tekrar dene.</p><button type="button" class="btn primary" id="a1Retry">Tekrar dene</button><button type="button" class="btn ghost" id="a1Return">A1 konularına dön</button>';
         detail.querySelector('#a1Retry').addEventListener('click',()=>openTopic(level,id,{restore:true}));
         detail.querySelector('#a1Return').addEventListener('click',()=>closeA1());
@@ -739,11 +739,11 @@
   }
 
   function closeA1(writeHistory=true) {
+    currentLevel=activeTopic?.level || currentLevel;
     activeTopic=null;
     const detail=document.getElementById('grammarDetailView');
     if(detail) {detail.dataset.lesson='';detail.classList.remove('active');}
     document.getElementById('grammarListView')?.classList.remove('hidden');
-    currentLevel='A1';
     renderLevels();renderTopics();
     if(writeHistory) history.pushState({baPage:'grammar'},'','#grammar');
     window.scrollTo({top:root()?.offsetTop || 0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
@@ -754,25 +754,37 @@
     renderShell();
     if(previous) openTopic(previous.level,previous.id,{restore:true,keepScroll:true}).then(()=>window.scrollTo({top:position,behavior:'instant'}));
   }
+  const authored={};
+  let ready=false;
   function restoreRoute(hash=location.hash) {
-    const match=String(hash).match(/^#grammar\/A1\/([^/]+)$/);
-    if(match) {
-      let id;try{id=decodeURIComponent(match[1]);}catch(_){return;}
-      if(findTopic('A1',id)) {
-        if(activeTopic?.id!==id) openTopic('A1',id,{restore:true});
-        return;
-      }
+    if(!ready)return;
+    const match=String(hash).match(/^#grammar\/(A1|A2|B1|B2)(?:\/([^/]+))?$/);
+    if(match){
+      currentLevel=match[1];
+      if(!match[2]){if(activeTopic)closeA1(false);renderLevels();renderTopics();return;}
+      let id;try{id=decodeURIComponent(match[2]);}catch(_){return;}
+      if(findTopic(currentLevel,id) && (activeTopic?.id!==id || activeTopic?.level!==currentLevel))openTopic(currentLevel,id,{restore:true});
+      return;
     }
-    if(location.hash==='#grammar' && activeTopic)closeA1(false);
+    if(hash==='#grammar' && activeTopic)closeA1(false);
   }
-  function init() {
-    injectCss();
-    if (!root()) return;
+  async function init() {
+    injectCss();if(!root())return;
     renderShell();
-    if(initialGrammarHash.startsWith('#grammar/A1/')) {
-      history.replaceState({baPage:'grammar'},'',initialGrammarHash);
-      restoreRoute(initialGrammarHash);
-    }
+    try {
+      const response=await fetch('data/catalog.json');if(!response.ok)throw Error('Catalog');
+      const catalog=await response.json();
+      const registryResponse=await fetch('data/grammar-index.json');if(!registryResponse.ok)throw Error('Grammar index');
+      const registry=await registryResponse.json();
+      const datasets=await Promise.all(Object.keys(registry.levels).map(async level=>[level,await window.BAA1Lessons.load(level)]));
+      for(const [level,data] of datasets)authored[level]=new Set(data.lessons.map(l=>l.id));
+      for(const level of catalog.levels){
+        const lessons=datasets.find(([key])=>key===level.id)?.[1].lessons || [];
+        TOPICS[level.id]=level.topics.map(t=>{const lesson=lessons.find(l=>l.id===t.id);return [t.id,lesson?.title || t.title.tr,lesson?.description || t.description];});
+      }
+    }catch(error){console.warn('Gramer kataloğu yüklenemedi',error);}
+    ready=true;renderLevels();renderTopics();
+    if(initialGrammarHash.startsWith('#grammar/')){history.replaceState({baPage:'grammar'},'',initialGrammarHash);restoreRoute(initialGrammarHash);}else restoreRoute();
   }
   window.addEventListener('ba:languagechange', rerenderLanguage);
   window.addEventListener('popstate',()=>{if(location.hash.startsWith('#grammar'))restoreRoute();});

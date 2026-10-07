@@ -2861,6 +2861,378 @@
         "de": "Plusquamperfekt – Erklärung auf Türkisch mit visuellen Beispielen.",
         "en": "Past perfect – Turkish explanation with visual examples."
       }
+    },
+    {
+      "id": "indirekte-fragen",
+      "title": "Indirekte Fragen – dolaylı ve kibar sorular",
+      "lead": "Wann beginnt der Kurs? doğrudan bir sorudur. Ich möchte wissen, wann der Kurs beginnt ise aynı bilgiyi daha büyük bir cümlenin içine yerleştirir. Bu yapıyla kibarca bilgi isteyebilir, bilmediğin bir şeyi söyleyebilir veya başkasının sorusunu aktarabilirsin.",
+      "sections": [
+        {
+          "title": "1 · Soruyu bir cümlenin içine yerleştir",
+          "paragraphs": [
+            "Dolaylı soru, bir sorunun Ich weiß nicht, … veya Können Sie mir sagen, … gibi bir girişe bağlanmasıdır. Türkçedeki “ne zaman başladığını” ifadesine benzer. Giriş cümlesi çekimli fiilini korur; içteki soru artık yan cümle sırasıyla kurulur."
+          ],
+          "examples": [
+            {
+              "de": "Wann beginnt der Kurs?",
+              "tr": "Kurs ne zaman başlıyor?",
+              "note": ""
+            },
+            {
+              "de": "Ich weiß nicht, wann der Kurs beginnt.",
+              "tr": "Kursun ne zaman başladığını bilmiyorum.",
+              "note": ""
+            },
+            {
+              "de": "Können Sie mir sagen, wann der Kurs beginnt?",
+              "tr": "Kursun ne zaman başladığını söyleyebilir misiniz?",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Doğrudan",
+                "Wann beginnt der Kurs?"
+              ],
+              [
+                "Giriş",
+                "Ich weiß nicht, …"
+              ],
+              [
+                "Dolaylı",
+                "wann der Kurs beginnt"
+              ]
+            ],
+            "caption": "Soruyu içeri alırken çekimli beginnt fiilini sona taşı."
+          }
+        },
+        {
+          "title": "2 · Soru kelimesi varsa onu koru",
+          "paragraphs": [
+            "wer, was, wann, wo, warum ve wie gibi soru kelimeleri dolaylı soruda da kalır. wie viel, wie lange ve welche Linie gibi grupları bölme. Edat varsa o da kalır: mit wem, worauf. wer özneyse ayrıca er gibi bir özne ekleme."
+          ],
+          "examples": [
+            {
+              "de": "Wo wohnt Anna? → Weißt du, wo Anna wohnt?",
+              "tr": "Anna nerede yaşıyor? → Anna’nın nerede yaşadığını biliyor musun?",
+              "note": ""
+            },
+            {
+              "de": "Wer hilft uns? → Ich weiß nicht, wer uns hilft.",
+              "tr": "Bize kim yardım ediyor? → Bize kimin yardım ettiğini bilmiyorum.",
+              "note": ""
+            },
+            {
+              "de": "Mit wem spricht sie? → Weißt du, mit wem sie spricht?",
+              "tr": "Kiminle konuşuyor? → Kiminle konuştuğunu biliyor musun?",
+              "note": ""
+            }
+          ],
+          "table": {
+            "headers": [
+              "Bilgi",
+              "Kelime/grup"
+            ],
+            "rows": [
+              [
+                "Yer / hedef / köken",
+                "wo / wohin / woher"
+              ],
+              [
+                "Zaman / süre / sıklık",
+                "wann / wie lange / wie oft"
+              ],
+              [
+                "Kişi: özne / Akkusativ / Dativ",
+                "wer / wen / wem"
+              ],
+              [
+                "Miktar / seçim",
+                "wie viel / welche …"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "3 · Evet/hayır sorusuysa ob ekle",
+          "paragraphs": [
+            "Ist der Kurs kostenlos? sorusu evet veya hayır ile cevaplanabilir. Başında soru kelimesi olmadığı için dolaylı biçimde ob kullanılır. ob burada “olup olmadığını” anlamı verir. Çekimli fiil, diğer dolaylı sorularda olduğu gibi sona gider."
+          ],
+          "examples": [
+            {
+              "de": "Ist der Kurs kostenlos?",
+              "tr": "Kurs ücretsiz mi?",
+              "note": ""
+            },
+            {
+              "de": "Ich möchte wissen, ob der Kurs kostenlos ist.",
+              "tr": "Kursun ücretsiz olup olmadığını öğrenmek istiyorum.",
+              "note": ""
+            },
+            {
+              "de": "Wissen Sie, ob man hier parken darf?",
+              "tr": "Buraya park edilip edilemeyeceğini biliyor musunuz?",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "W-Frage",
+                "Wann beginnt der Kurs?"
+              ],
+              [
+                "→ soru kelimesi",
+                "wann der Kurs beginnt"
+              ],
+              [
+                "Ja/Nein-Frage",
+                "Ist der Kurs kostenlos?"
+              ],
+              [
+                "→ ob",
+                "ob der Kurs kostenlos ist"
+              ]
+            ],
+            "caption": "Soru kelimesi varsa koru; evet/hayır sorusunda ob ekle."
+          }
+        },
+        {
+          "title": "4 · Fiil sırasını adım adım değiştir",
+          "paragraphs": [
+            "Doğrudan W-sorusunda çekimli fiil soru grubundan hemen sonra gelir. Dolaylı soruda ise özne ve diğer öğelerden sonra, en sonda yer alır. Ayrılabilen fiil burada yeniden birleşir: Wann fährt der Zug ab? → wann der Zug abfährt. İki çekimli fiili de aynı yere taşıma; giriş cümlesinin fiili yerinde kalır."
+          ],
+          "examples": [
+            {
+              "de": "Ich weiß nicht, wann der Zug abfährt.",
+              "tr": "Trenin ne zaman kalktığını bilmiyorum.",
+              "note": ""
+            },
+            {
+              "de": "Könnten Sie mir sagen, wo der Ausgang ist?",
+              "tr": "Çıkışın nerede olduğunu söyleyebilir misiniz?",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "Könnten Sie mir sagen,",
+              "wann",
+              "der Zug",
+              "abfährt?"
+            ],
+            "labels": [
+              "Giriş cümlesi",
+              "Soru kelimesi",
+              "Yan cümlenin öznesi",
+              "Birleşen fiil: sonda"
+            ]
+          }
+        },
+        {
+          "title": "5 · Perfekt ve modal fiiller",
+          "paragraphs": [
+            "Perfektte Partizip II ve çekimli yardımcı fiil yan cümlenin sonunda bulunur: gekauft hat, angekommen ist. Modal fiilde önce ana fiilin mastarı, sonra çekimli modal gelir: bezahlen muss. Girişte Könnten Sie …? olması içteki bütün fiilleri Konjunktiv II yapmaz; içteki soru kendi zaman ve anlamını korur."
+          ],
+          "examples": [
+            {
+              "de": "Weißt du, ob Anna das Ticket gekauft hat?",
+              "tr": "Anna’nın bileti alıp almadığını biliyor musun?",
+              "note": ""
+            },
+            {
+              "de": "Ich weiß nicht, wann sie angekommen ist.",
+              "tr": "Ne zaman vardığını bilmiyorum.",
+              "note": ""
+            },
+            {
+              "de": "Könnten Sie mir sagen, wo ich warten kann?",
+              "tr": "Nerede bekleyebileceğimi söyleyebilir misiniz?",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Präsens",
+                "wo Anna wohnt"
+              ],
+              [
+                "Perfekt",
+                "wo Anna gewohnt hat"
+              ],
+              [
+                "Modal",
+                "wo Anna wohnen kann"
+              ]
+            ],
+            "caption": "En sağdaki çekimli fiili kontrol et: wohnt, hat veya kann."
+          }
+        },
+        {
+          "title": "6 · ob, dass ve wenn ayrımı",
+          "paragraphs": [
+            "ob bir evet/hayır sorusunu aktarır. dass bildiğin, düşündüğün veya aktardığın içeriği bağlar. wenn bir koşul veya zaman ilişkisi kurar. Üçünde de fiilin sonda olması anlamlarının aynı olduğu anlamına gelmez. Ich weiß nicht, ob er kommt bir sorudur; Wenn er kommt, … bir koşuldur."
+          ],
+          "examples": [
+            {
+              "de": "Ich weiß nicht, ob er kommt.",
+              "tr": "Gelip gelmeyeceğini bilmiyorum.",
+              "note": ""
+            },
+            {
+              "de": "Ich weiß, dass er kommt.",
+              "tr": "Geleceğini biliyorum.",
+              "note": ""
+            },
+            {
+              "de": "Wenn er kommt, essen wir zusammen.",
+              "tr": "Gelirse birlikte yemek yeriz.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "ob",
+                "Bilinmeyen: geliyor mu?"
+              ],
+              [
+                "dass",
+                "İçerik: geldiğini biliyorum"
+              ],
+              [
+                "wenn",
+                "Koşul: gelirse"
+              ]
+            ],
+            "caption": "Bağlayıcıyı sadece fiil sırasına değil, anlatmak istediğin ilişkiye göre seç."
+          }
+        },
+        {
+          "title": "7 · Başkasının sorusunu aktarırken kişiyi kontrol et",
+          "paragraphs": [
+            "Anna sana Wo wohnst du? diye soruyor. Sen bu soruyu anlatırken du yerine ich kullanırsın: Anna möchte wissen, wo ich wohne. Başkasına aynı soruyu kibarca yeniden soruyorsan du/Sie değişmeyebilir. Türkçe veya İngilizce düşünerek bütün geçmiş soruları otomatik olarak geçmiş zamana çevirme; burada önce aynı zamanı koruyarak temel yapıyı öğreniyoruz."
+          ],
+          "examples": [
+            {
+              "de": "Anna fragt mich: „Hast du Zeit?“",
+              "tr": "Anna bana “Vaktin var mı?” diye soruyor.",
+              "note": ""
+            },
+            {
+              "de": "Anna möchte wissen, ob ich Zeit habe.",
+              "tr": "Anna vaktim olup olmadığını öğrenmek istiyor.",
+              "note": ""
+            },
+            {
+              "de": "Wo wohnen Sie? → Könnten Sie mir sagen, wo Sie wohnen?",
+              "tr": "Nerede yaşıyorsunuz? → Nerede yaşadığınızı söyleyebilir misiniz?",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "8 · Virgül ve cümle sonu işareti",
+          "paragraphs": [
+            "Giriş cümlesi ile dolaylı soru arasına virgül koy. Bütün cümle bir soruysa sonuna soru işareti gelir: Wissen Sie, …? Bütün cümle bir bildirimse nokta gelir: Ich weiß nicht, …. İçinde soru anlamı olması tek başına soru işareti gerektirmez. Kelime ve fiil sırasını öğrendikten sonra bu son kontrolü yap."
+          ],
+          "examples": [
+            {
+              "de": "Ich weiß nicht, wo sie wohnt.",
+              "tr": "Nerede yaşadığını bilmiyorum.",
+              "note": ""
+            },
+            {
+              "de": "Weißt du, wo sie wohnt?",
+              "tr": "Nerede yaşadığını biliyor musun?",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Ich weiß nicht, …",
+                "Bildirim → nokta"
+              ],
+              [
+                "Weißt du, …?",
+                "Bütün cümle soru → ?"
+              ]
+            ],
+            "caption": "Noktalama kararını içteki soruya değil, bütün cümleye göre ver."
+          }
+        },
+        {
+          "title": "9 · Günlük hayatta uygula",
+          "paragraphs": [
+            "İstasyonda kalkış saatini, kursta ücreti veya resmî bir dairede gerekli belgeleri sorabilirsin. Önce kısa giriş seç, sonra doğrudan sorunu içeri yerleştir. Yazılı alıştırmalarda verilen başlangıcı koru; böylece farklı doğru ifadeler arasından tek hedef yapı üzerinde çalışabilirsin."
+          ],
+          "examples": [
+            {
+              "de": "Könnten Sie mir sagen, wann der nächste Zug abfährt?",
+              "tr": "Bir sonraki trenin ne zaman kalktığını söyleyebilir misiniz?",
+              "note": ""
+            },
+            {
+              "de": "Ich möchte wissen, ob die Prüfung im Kurspreis enthalten ist.",
+              "tr": "Sınavın kurs ücretine dahil olup olmadığını öğrenmek istiyorum.",
+              "note": ""
+            },
+            {
+              "de": "Wissen Sie, welche Unterlagen ich mitbringen muss?",
+              "tr": "Hangi belgeleri yanımda getirmem gerektiğini biliyor musunuz?",
+              "note": ""
+            }
+          ]
+        }
+      ],
+      "summary": [
+        "Soru kelimesini koru; evet/hayır sorusuna ob ekle.",
+        "Çekimli fiil dolaylı sorunun sonunda yer alır.",
+        "Kişi, virgül ve cümle sonunu ayrıca kontrol et."
+      ],
+      "faq": [
+        {
+          "question": "Dolaylı soruda her zaman ob mu kullanılır?",
+          "answer": "Hayır. Soru kelimesi varsa onu koru: wann, wo, warum, mit wem. ob yalnızca dolaylı evet/hayır sorusunu başlatır."
+        },
+        {
+          "question": "Könnten Sie mir sagen, wo ist der Bahnhof? doğru mu?",
+          "answer": "Standart dolaylı soru sırası bu değildir. Doğrusu: Könnten Sie mir sagen, wo der Bahnhof ist? İçteki çekimli ist sonda yer alır."
+        },
+        {
+          "question": "Ich weiß nicht ile başlayan cümlede soru işareti gerekir mi?",
+          "answer": "Normal bir bildirimde hayır: Ich weiß nicht, wann er kommt. Wissen Sie, wann er kommt? ise bütünüyle sorudur ve soru işareti alır."
+        }
+      ],
+      "related": [
+        "konnektoren",
+        "konjunktiv-ii-b1",
+        "relativsaetze"
+      ],
+      "check": {
+        "question": "Könnten Sie mir sagen, ___ der Zug ___? (Wann fährt der Zug ab?)",
+        "answer": "wann … abfährt",
+        "why": "Soru kelimesi wann korunur; ayrılabilen abfahren yan cümlenin sonunda abfährt olur."
+      },
+      "titleTranslations": {
+        "tr": "Indirekte Fragen",
+        "de": "Indirekte Fragen",
+        "en": "Indirect questions"
+      },
+      "description": {
+        "tr": "Dolaylı sorularda soru kelimesi, ob ve fiilin sona gitmesi.",
+        "de": "Indirekte Fragen – Erklärung auf Türkisch mit visuellen Beispielen.",
+        "en": "Indirect questions – Turkish explanation with visual examples."
+      }
     }
   ]
 }

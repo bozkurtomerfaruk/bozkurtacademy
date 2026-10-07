@@ -1019,7 +1019,16 @@ return;
   window.BAQuiz = {
   ...(window.BAQuiz || {}),
   goToQuestion,
-  getCurrentQuestion: () => state.index + 1
+  getCurrentQuestion: () => state.index + 1,
+  openTopic: async (levelId, topicId) => {
+    if(!state.catalog) throw new Error('Exercise catalog is not ready');
+    const level=state.catalog.levels.find(item=>item.id===levelId);
+    if(!level?.topics.some(item=>item.id===topicId && item.path)) throw new Error('Exercise topic not found');
+    window.BA.showPage('exercises');
+    state.level=level;
+    await openTopic(topicId,true);
+    if(state.topicData?.id!==topicId) throw new Error('Exercise topic could not be loaded');
+  }
 };
 
   window.addEventListener('popstate', event=>restoreHistoryState(event.state));

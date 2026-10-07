@@ -1,0 +1,1828 @@
+{
+  "id": "temporale-praepositionen",
+  "level": "A1",
+  "title": {
+    "tr": "Temporale Präpositionen",
+    "de": "Temporale Präpositionen",
+    "en": "Temporal prepositions"
+  },
+  "description": {
+    "tr": "10 Übung ve 100 soru: am/im/um, vor/nach/beim, seit/vor/in, başlangıç-bitiş, süre, zaman soruları ve artikel çalışmaları.",
+    "de": "10 Übungen mit 100 Aufgaben zu am/im/um, vor/nach/beim, seit/vor/in, Anfang, Ende, Dauer, Zeitfragen und Artikeln.",
+    "en": "10 exercises with 100 questions on am/im/um, vor/nach/beim, seit/vor/in, starting and ending times, duration, time questions and articles."
+  },
+  "lesson": {
+    "title": {
+      "tr": "Zaman edatları – A1 çalışma rehberi",
+      "de": "Temporale Präpositionen – A1-Lernüberblick",
+      "en": "Temporal prepositions – A1 study guide"
+    },
+    "intro": {
+      "tr": "Zaman edatları olayın ne zaman olduğunu, ne kadar sürdüğünü veya ne zamandan beri devam ettiğini anlatır. Önce anlamı, sonra edatı ve gerekiyorsa artikeli seç.",
+      "de": "Temporale Präpositionen zeigen, wann etwas passiert, wie lange es dauert oder seit wann es andauert. Achte zuerst auf die Bedeutung, dann auf die Präposition und den Artikel.",
+      "en": "Temporal prepositions show when something happens, how long it lasts or since when it has continued. Choose the meaning first, then the preposition and article."
+    },
+    "rules": [
+      {
+        "label": "am",
+        "text": {
+          "tr": "Günler, tarihler ve gündüz bölümleriyle am (= an dem) kullanılır.",
+          "de": "Bei Wochentagen, Daten und Tageszeiten steht am (= an dem).",
+          "en": "Use am (= an dem) with weekdays, dates and parts of the day."
+        }
+      },
+      {
+        "label": "im",
+        "text": {
+          "tr": "Aylar ve mevsimlerle im (= in dem) kullanılır.",
+          "de": "Bei Monaten und Jahreszeiten steht im (= in dem).",
+          "en": "Use im (= in dem) with months and seasons."
+        }
+      },
+      {
+        "label": "um",
+        "text": {
+          "tr": "Kesin saat belirtirken um kullanılır.",
+          "de": "Eine genaue Uhrzeit steht mit um.",
+          "en": "Use um for an exact clock time."
+        }
+      },
+      {
+        "label": "in",
+        "text": {
+          "tr": "Şimdiden sonraki bir süre için in + Dativ kullanılır.",
+          "de": "Ein Zeitpunkt in der Zukunft steht mit in + Dativ.",
+          "en": "Use in + dative for a point in the future."
+        }
+      },
+      {
+        "label": "seit",
+        "text": {
+          "tr": "Geçmişte başlayıp hâlâ süren durumlarda seit + Dativ ve Präsens kullanılır.",
+          "de": "Seit + Dativ beschreibt einen Beginn in der Vergangenheit; der Zustand dauert noch an. Das Verb steht hier im Präsens.",
+          "en": "Use seit + dative with the present tense for a situation that began in the past and still continues."
+        }
+      },
+      {
+        "label": "vor",
+        "text": {
+          "tr": "vor + Dativ, bir olaydan önceyi veya geçmişte ne kadar zaman önce olduğunu belirtir.",
+          "de": "Vor + Dativ bedeutet früher als ein Ereignis oder eine bestimmte Zeit vor jetzt.",
+          "en": "Vor + dative means before an event or a length of time ago."
+        }
+      },
+      {
+        "label": "nach",
+        "text": {
+          "tr": "Bir olaydan sonraki zaman için nach + Dativ kullanılır.",
+          "de": "Nach + Dativ bedeutet später als ein Ereignis.",
+          "en": "Use nach + dative for a time after an event."
+        }
+      },
+      {
+        "label": "beim",
+        "text": {
+          "tr": "Bir etkinlik sırasında anlamında beim (= bei dem) kullanılır; fiilden türeyen isim büyük yazılır: beim Essen.",
+          "de": "Beim (= bei dem) bezeichnet eine gleichzeitige Tätigkeit. Das substantivierte Verb wird großgeschrieben: beim Essen.",
+          "en": "Beim (= bei dem) means during an activity. Capitalize the nominalized verb: beim Essen."
+        }
+      },
+      {
+        "label": "ab",
+        "text": {
+          "tr": "Bir başlangıç noktası belirtmek için ab kullanılır: ab morgen, ab Montag.",
+          "de": "Ab bezeichnet einen Anfangspunkt: ab morgen, ab Montag.",
+          "en": "Ab marks a starting point: ab morgen, ab Montag."
+        }
+      },
+      {
+        "label": "bis",
+        "text": {
+          "tr": "Bir bitiş noktası belirtmek için bis kullanılır: bis Freitag, bis 17 Uhr.",
+          "de": "Bis bezeichnet einen Endpunkt: bis Freitag, bis 17 Uhr.",
+          "en": "Bis marks an endpoint: bis Freitag, bis 17 Uhr."
+        }
+      },
+      {
+        "label": "für",
+        "text": {
+          "tr": "Planlanan veya sınırlı bir süre için für + Akkusativ kullanılır.",
+          "de": "Für + Akkusativ bezeichnet hier eine geplante oder begrenzte Dauer.",
+          "en": "Use für + accusative for a planned or limited duration."
+        }
+      },
+      {
+        "label": "gegen",
+        "text": {
+          "tr": "Kesin olmayan, yaklaşık bir saat için gegen kullanılır.",
+          "de": "Gegen bezeichnet eine ungefähre Uhrzeit.",
+          "en": "Use gegen for an approximate clock time."
+        }
+      },
+      {
+        "label": "zwischen",
+        "text": {
+          "tr": "İki zaman sınırı arasında anlamında zwischen … und … kullanılır.",
+          "de": "Zwischen … und … bezeichnet einen Zeitpunkt innerhalb zweier Grenzen.",
+          "en": "Zwischen … und … places a time between two limits."
+        }
+      },
+      {
+        "label": "von-bis",
+        "text": {
+          "tr": "Başlangıç ve bitiş birlikte veriliyorsa von … bis …; tarihlerde vom … bis zum … kullanılır.",
+          "de": "Ein Zeitraum steht mit von … bis …; bei Daten heißt es vom … bis zum ….",
+          "en": "Use von … bis … for a time span; with dates use vom … bis zum …."
+        }
+      },
+      {
+        "label": "artikel",
+        "text": {
+          "tr": "in, an, seit, vor, nach ve bei bu zaman ifadelerinde Dativ alır: einem Tag, einer Woche, einem Jahr. für Akkusativ alır: einen Tag, eine Woche, ein Jahr.",
+          "de": "In, an, seit, vor, nach und bei stehen hier mit Dativ: einem Tag, einer Woche, einem Jahr. Für steht mit Akkusativ: einen Tag, eine Woche, ein Jahr.",
+          "en": "These time uses of in, an, seit, vor, nach and bei take dative: einem Tag, einer Woche, einem Jahr. Für takes accusative: einen Tag, eine Woche, ein Jahr."
+        }
+      }
+    ],
+    "examples": [
+      "Am Dienstag habe ich Deutschunterricht.",
+      "Im Oktober beginnt der Kurs.",
+      "Der Zug fährt um 9:20 Uhr.",
+      "In einer Woche habe ich Urlaub.",
+      "Seit zwei Monaten lerne ich Deutsch.",
+      "Vor dem Frühstück dusche ich.",
+      "Nach dem Kurs gehe ich nach Hause.",
+      "Beim Kochen höre ich Radio.",
+      "Ich arbeite von 8 bis 16 Uhr.",
+      "Wir bleiben für eine Woche in Köln."
+    ],
+    "tip": {
+      "tr": "1–2: am/im/um; 3–6: olay sırası, geçmiş-gelecek, süre ve saat aralıkları; 7: zaman soruları; 8: artikel; 9: hata düzeltme; 10: karışık tekrar. Yazılı sorularda yalnızca istenen kelime veya ifadeyi yaz; Enter ile kontrol et.",
+      "de": "1–2: am/im/um; 3–6: Reihenfolge, Vergangenheit/Zukunft, Dauer und Zeiträume; 7: Zeitfragen; 8: Artikel; 9: Fehlerkorrektur; 10: Wiederholung. Schreibe nur das verlangte Wort oder die verlangte Wortgruppe; Enter prüft die Antwort.",
+      "en": "1–2: am/im/um; 3–6: event order, past/future, duration and time spans; 7: time questions; 8: articles; 9: corrections; 10: mixed review. Type only the requested word or phrase; press Enter to check."
+    }
+  },
+  "exercises": [
+    {
+      "id": "am-im-um-1",
+      "title": {
+        "tr": "Übung 1 – am, im veya um seç",
+        "de": "Übung 1 – am, im oder um wählen",
+        "en": "Exercise 1 – Choose am, im or um"
+      },
+      "description": {
+        "tr": "Gün, ay, mevsim ve saat ifadelerine uygun edatı seç.",
+        "de": "Wähle die Präposition zu Tag, Monat, Jahreszeit und Uhrzeit.",
+        "en": "Choose the preposition for days, months, seasons and times."
+      },
+      "difficulty": {
+        "tr": "Temel çalışma",
+        "de": "Grundlagen",
+        "en": "Foundations"
+      },
+      "hideLesson": false,
+      "questions": [
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Wir treffen uns ___ Mittwoch.",
+          "correct": "am",
+          "explanations": {
+            "tr": "Günler, tarihler ve gündüz bölümleriyle am (= an dem) kullanılır. Doğru cevap: am.",
+            "de": "Bei Wochentagen, Daten und Tageszeiten steht am (= an dem). Richtige Antwort: am.",
+            "en": "Use am (= an dem) with weekdays, dates and parts of the day. Correct answer: am."
+          },
+          "options": [
+            "am",
+            "im",
+            "um"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Der Film beginnt ___ 19:30 Uhr.",
+          "correct": "um",
+          "explanations": {
+            "tr": "Kesin saat belirtirken um kullanılır. Doğru cevap: um.",
+            "de": "Eine genaue Uhrzeit steht mit um. Richtige Antwort: um.",
+            "en": "Use um for an exact clock time. Correct answer: um."
+          },
+          "options": [
+            "am",
+            "im",
+            "um"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Lena hat ___ September Geburtstag.",
+          "correct": "im",
+          "explanations": {
+            "tr": "Aylar ve mevsimlerle im (= in dem) kullanılır. Doğru cevap: im.",
+            "de": "Bei Monaten und Jahreszeiten steht im (= in dem). Richtige Antwort: im.",
+            "en": "Use im (= in dem) with months and seasons. Correct answer: im."
+          },
+          "options": [
+            "am",
+            "im",
+            "um"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "___ Winter ist es hier kalt.",
+          "correct": "im",
+          "explanations": {
+            "tr": "Aylar ve mevsimlerle im (= in dem) kullanılır. Doğru cevap: im.",
+            "de": "Bei Monaten und Jahreszeiten steht im (= in dem). Richtige Antwort: im.",
+            "en": "Use im (= in dem) with months and seasons. Correct answer: im."
+          },
+          "options": [
+            "am",
+            "im",
+            "um"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "___ Morgen trinke ich Tee.",
+          "correct": "am",
+          "explanations": {
+            "tr": "Günler, tarihler ve gündüz bölümleriyle am (= an dem) kullanılır. Doğru cevap: am.",
+            "de": "Bei Wochentagen, Daten und Tageszeiten steht am (= an dem). Richtige Antwort: am.",
+            "en": "Use am (= an dem) with weekdays, dates and parts of the day. Correct answer: am."
+          },
+          "options": [
+            "am",
+            "im",
+            "um"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Der Bus fährt ___ 6:45 Uhr.",
+          "correct": "um",
+          "explanations": {
+            "tr": "Kesin saat belirtirken um kullanılır. Doğru cevap: um.",
+            "de": "Eine genaue Uhrzeit steht mit um. Richtige Antwort: um.",
+            "en": "Use um for an exact clock time. Correct answer: um."
+          },
+          "options": [
+            "am",
+            "im",
+            "um"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Ich habe ___ Freitag frei.",
+          "correct": "am",
+          "explanations": {
+            "tr": "Günler, tarihler ve gündüz bölümleriyle am (= an dem) kullanılır. Doğru cevap: am.",
+            "de": "Bei Wochentagen, Daten und Tageszeiten steht am (= an dem). Richtige Antwort: am.",
+            "en": "Use am (= an dem) with weekdays, dates and parts of the day. Correct answer: am."
+          },
+          "options": [
+            "am",
+            "im",
+            "um"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "___ Mai besuchen wir Berlin.",
+          "correct": "im",
+          "explanations": {
+            "tr": "Aylar ve mevsimlerle im (= in dem) kullanılır. Doğru cevap: im.",
+            "de": "Bei Monaten und Jahreszeiten steht im (= in dem). Richtige Antwort: im.",
+            "en": "Use im (= in dem) with months and seasons. Correct answer: im."
+          },
+          "options": [
+            "am",
+            "im",
+            "um"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Wir essen ___ Mittag zusammen.",
+          "correct": "am",
+          "explanations": {
+            "tr": "Günler, tarihler ve gündüz bölümleriyle am (= an dem) kullanılır. Doğru cevap: am.",
+            "de": "Bei Wochentagen, Daten und Tageszeiten steht am (= an dem). Richtige Antwort: am.",
+            "en": "Use am (= an dem) with weekdays, dates and parts of the day. Correct answer: am."
+          },
+          "options": [
+            "am",
+            "im",
+            "um"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "___ Sommer schwimme ich oft.",
+          "correct": "im",
+          "explanations": {
+            "tr": "Aylar ve mevsimlerle im (= in dem) kullanılır. Doğru cevap: im.",
+            "de": "Bei Monaten und Jahreszeiten steht im (= in dem). Richtige Antwort: im.",
+            "en": "Use im (= in dem) with months and seasons. Correct answer: im."
+          },
+          "options": [
+            "am",
+            "im",
+            "um"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "am-im-um-schreiben-2",
+      "title": {
+        "tr": "Übung 2 – Zaman edatını yaz",
+        "de": "Übung 2 – Zeitpräpositionen schreiben",
+        "en": "Exercise 2 – Write the time preposition"
+      },
+      "description": {
+        "tr": "Boşluğa am, im veya um yaz.",
+        "de": "Ergänze am, im oder um.",
+        "en": "Fill in am, im or um."
+      },
+      "difficulty": {
+        "tr": "Temel çalışma",
+        "de": "Grundlagen",
+        "en": "Foundations"
+      },
+      "hideLesson": false,
+      "questions": [
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Der Unterricht beginnt ___ 8 Uhr.",
+          "correct": "um",
+          "explanations": {
+            "tr": "Kesin saat belirtirken um kullanılır. Doğru cevap: um.",
+            "de": "Eine genaue Uhrzeit steht mit um. Richtige Antwort: um.",
+            "en": "Use um for an exact clock time. Correct answer: um."
+          },
+          "type": "text",
+          "answers": [
+            "um"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "___ Sonntag schlafen wir lange.",
+          "correct": "am",
+          "explanations": {
+            "tr": "Günler, tarihler ve gündüz bölümleriyle am (= an dem) kullanılır. Doğru cevap: am.",
+            "de": "Bei Wochentagen, Daten und Tageszeiten steht am (= an dem). Richtige Antwort: am.",
+            "en": "Use am (= an dem) with weekdays, dates and parts of the day. Correct answer: am."
+          },
+          "type": "text",
+          "answers": [
+            "am"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Meine Prüfung ist ___ November.",
+          "correct": "im",
+          "explanations": {
+            "tr": "Aylar ve mevsimlerle im (= in dem) kullanılır. Doğru cevap: im.",
+            "de": "Bei Monaten und Jahreszeiten steht im (= in dem). Richtige Antwort: im.",
+            "en": "Use im (= in dem) with months and seasons. Correct answer: im."
+          },
+          "type": "text",
+          "answers": [
+            "im"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "___ Abend lese ich ein Buch.",
+          "correct": "am",
+          "explanations": {
+            "tr": "Günler, tarihler ve gündüz bölümleriyle am (= an dem) kullanılır. Doğru cevap: am.",
+            "de": "Bei Wochentagen, Daten und Tageszeiten steht am (= an dem). Richtige Antwort: am.",
+            "en": "Use am (= an dem) with weekdays, dates and parts of the day. Correct answer: am."
+          },
+          "type": "text",
+          "answers": [
+            "am"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "___ Frühling sind die Parks grün.",
+          "correct": "im",
+          "explanations": {
+            "tr": "Aylar ve mevsimlerle im (= in dem) kullanılır. Doğru cevap: im.",
+            "de": "Bei Monaten und Jahreszeiten steht im (= in dem). Richtige Antwort: im.",
+            "en": "Use im (= in dem) with months and seasons. Correct answer: im."
+          },
+          "type": "text",
+          "answers": [
+            "im"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Der Termin ist ___ 14:15 Uhr.",
+          "correct": "um",
+          "explanations": {
+            "tr": "Kesin saat belirtirken um kullanılır. Doğru cevap: um.",
+            "de": "Eine genaue Uhrzeit steht mit um. Richtige Antwort: um.",
+            "en": "Use um for an exact clock time. Correct answer: um."
+          },
+          "type": "text",
+          "answers": [
+            "um"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "___ Wochenende besuche ich meine Eltern.",
+          "correct": "am",
+          "explanations": {
+            "tr": "Günler, tarihler ve gündüz bölümleriyle am (= an dem) kullanılır. Doğru cevap: am.",
+            "de": "Bei Wochentagen, Daten und Tageszeiten steht am (= an dem). Richtige Antwort: am.",
+            "en": "Use am (= an dem) with weekdays, dates and parts of the day. Correct answer: am."
+          },
+          "type": "text",
+          "answers": [
+            "am"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Wir fahren ___ August ans Meer.",
+          "correct": "im",
+          "explanations": {
+            "tr": "Aylar ve mevsimlerle im (= in dem) kullanılır. Doğru cevap: im.",
+            "de": "Bei Monaten und Jahreszeiten steht im (= in dem). Richtige Antwort: im.",
+            "en": "Use im (= in dem) with months and seasons. Correct answer: im."
+          },
+          "type": "text",
+          "answers": [
+            "im"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "___ 12. März habe ich einen Termin.",
+          "correct": "am",
+          "explanations": {
+            "tr": "Günler, tarihler ve gündüz bölümleriyle am (= an dem) kullanılır. Doğru cevap: am.",
+            "de": "Bei Wochentagen, Daten und Tageszeiten steht am (= an dem). Richtige Antwort: am.",
+            "en": "Use am (= an dem) with weekdays, dates and parts of the day. Correct answer: am."
+          },
+          "type": "text",
+          "answers": [
+            "am"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "___ Nachmittag lerne ich Deutsch.",
+          "correct": "am",
+          "explanations": {
+            "tr": "Günler, tarihler ve gündüz bölümleriyle am (= an dem) kullanılır. Doğru cevap: am.",
+            "de": "Bei Wochentagen, Daten und Tageszeiten steht am (= an dem). Richtige Antwort: am.",
+            "en": "Use am (= an dem) with weekdays, dates and parts of the day. Correct answer: am."
+          },
+          "type": "text",
+          "answers": [
+            "am"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vor-nach-beim-3",
+      "title": {
+        "tr": "Übung 3 – Önce, sonra veya sırasında",
+        "de": "Übung 3 – Vor, nach oder beim",
+        "en": "Exercise 3 – Before, after or during"
+      },
+      "description": {
+        "tr": "İlk cümledeki olay sırasına göre vor, nach veya beim seç.",
+        "de": "Wähle vor, nach oder beim nach der Reihenfolge im Kontext.",
+        "en": "Use the event order in the context to choose vor, nach or beim."
+      },
+      "difficulty": {
+        "tr": "Temel çalışma",
+        "de": "Grundlagen",
+        "en": "Foundations"
+      },
+      "hideLesson": false,
+      "questions": [
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Zuerst dusche ich, dann frühstücke ich. Ich dusche ___ dem Frühstück.",
+          "correct": "vor",
+          "explanations": {
+            "tr": "vor + Dativ, bir olaydan önceyi veya geçmişte ne kadar zaman önce olduğunu belirtir. Doğru cevap: vor.",
+            "de": "Vor + Dativ bedeutet früher als ein Ereignis oder eine bestimmte Zeit vor jetzt. Richtige Antwort: vor.",
+            "en": "Vor + dative means before an event or a length of time ago. Correct answer: vor."
+          },
+          "options": [
+            "vor",
+            "nach",
+            "beim"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Zuerst esse ich, dann gehe ich spazieren. Ich gehe ___ dem Essen spazieren.",
+          "correct": "nach",
+          "explanations": {
+            "tr": "Bir olaydan sonraki zaman için nach + Dativ kullanılır. Doğru cevap: nach.",
+            "de": "Nach + Dativ bedeutet später als ein Ereignis. Richtige Antwort: nach.",
+            "en": "Use nach + dative for a time after an event. Correct answer: nach."
+          },
+          "options": [
+            "vor",
+            "nach",
+            "beim"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Ich koche und höre gleichzeitig Radio. Ich höre ___ Kochen Radio.",
+          "correct": "beim",
+          "explanations": {
+            "tr": "Bir etkinlik sırasında anlamında beim (= bei dem) kullanılır; fiilden türeyen isim büyük yazılır: beim Essen. Doğru cevap: beim.",
+            "de": "Beim (= bei dem) bezeichnet eine gleichzeitige Tätigkeit. Das substantivierte Verb wird großgeschrieben: beim Essen. Richtige Antwort: beim.",
+            "en": "Beim (= bei dem) means during an activity. Capitalize the nominalized verb: beim Essen. Correct answer: beim."
+          },
+          "options": [
+            "vor",
+            "nach",
+            "beim"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Zuerst endet der Kurs, dann kaufe ich ein. Ich kaufe ___ dem Kurs ein.",
+          "correct": "nach",
+          "explanations": {
+            "tr": "Bir olaydan sonraki zaman için nach + Dativ kullanılır. Doğru cevap: nach.",
+            "de": "Nach + Dativ bedeutet später als ein Ereignis. Richtige Antwort: nach.",
+            "en": "Use nach + dative for a time after an event. Correct answer: nach."
+          },
+          "options": [
+            "vor",
+            "nach",
+            "beim"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Zuerst lerne ich, dann beginnt die Prüfung. Ich lerne ___ der Prüfung.",
+          "correct": "vor",
+          "explanations": {
+            "tr": "vor + Dativ, bir olaydan önceyi veya geçmişte ne kadar zaman önce olduğunu belirtir. Doğru cevap: vor.",
+            "de": "Vor + Dativ bedeutet früher als ein Ereignis oder eine bestimmte Zeit vor jetzt. Richtige Antwort: vor.",
+            "en": "Vor + dative means before an event or a length of time ago. Correct answer: vor."
+          },
+          "options": [
+            "vor",
+            "nach",
+            "beim"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Wir essen und sprechen gleichzeitig. Wir sprechen ___ Essen.",
+          "correct": "beim",
+          "explanations": {
+            "tr": "Bir etkinlik sırasında anlamında beim (= bei dem) kullanılır; fiilden türeyen isim büyük yazılır: beim Essen. Doğru cevap: beim.",
+            "de": "Beim (= bei dem) bezeichnet eine gleichzeitige Tätigkeit. Das substantivierte Verb wird großgeschrieben: beim Essen. Richtige Antwort: beim.",
+            "en": "Beim (= bei dem) means during an activity. Capitalize the nominalized verb: beim Essen. Correct answer: beim."
+          },
+          "options": [
+            "vor",
+            "nach",
+            "beim"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Zuerst wasche ich die Hände, dann esse ich. Ich wasche die Hände ___ dem Essen.",
+          "correct": "vor",
+          "explanations": {
+            "tr": "vor + Dativ, bir olaydan önceyi veya geçmişte ne kadar zaman önce olduğunu belirtir. Doğru cevap: vor.",
+            "de": "Vor + Dativ bedeutet früher als ein Ereignis oder eine bestimmte Zeit vor jetzt. Richtige Antwort: vor.",
+            "en": "Vor + dative means before an event or a length of time ago. Correct answer: vor."
+          },
+          "options": [
+            "vor",
+            "nach",
+            "beim"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Zuerst arbeite ich, dann fahre ich nach Hause. Ich fahre ___ der Arbeit nach Hause.",
+          "correct": "nach",
+          "explanations": {
+            "tr": "Bir olaydan sonraki zaman için nach + Dativ kullanılır. Doğru cevap: nach.",
+            "de": "Nach + Dativ bedeutet später als ein Ereignis. Richtige Antwort: nach.",
+            "en": "Use nach + dative for a time after an event. Correct answer: nach."
+          },
+          "options": [
+            "vor",
+            "nach",
+            "beim"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Ich frühstücke und lese gleichzeitig. Ich lese ___ Frühstücken.",
+          "correct": "beim",
+          "explanations": {
+            "tr": "Bir etkinlik sırasında anlamında beim (= bei dem) kullanılır; fiilden türeyen isim büyük yazılır: beim Essen. Doğru cevap: beim.",
+            "de": "Beim (= bei dem) bezeichnet eine gleichzeitige Tätigkeit. Das substantivierte Verb wird großgeschrieben: beim Essen. Richtige Antwort: beim.",
+            "en": "Beim (= bei dem) means during an activity. Capitalize the nominalized verb: beim Essen. Correct answer: beim."
+          },
+          "options": [
+            "vor",
+            "nach",
+            "beim"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Zuerst kaufe ich eine Fahrkarte, dann beginnt die Reise. Ich kaufe die Fahrkarte ___ der Reise.",
+          "correct": "vor",
+          "explanations": {
+            "tr": "vor + Dativ, bir olaydan önceyi veya geçmişte ne kadar zaman önce olduğunu belirtir. Doğru cevap: vor.",
+            "de": "Vor + Dativ bedeutet früher als ein Ereignis oder eine bestimmte Zeit vor jetzt. Richtige Antwort: vor.",
+            "en": "Vor + dative means before an event or a length of time ago. Correct answer: vor."
+          },
+          "options": [
+            "vor",
+            "nach",
+            "beim"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seit-vor-in-4",
+      "title": {
+        "tr": "Übung 4 – seit, vor veya in",
+        "de": "Übung 4 – seit, vor oder in",
+        "en": "Exercise 4 – seit, vor or in"
+      },
+      "description": {
+        "tr": "Devam eden durum, geçmişteki olay ve gelecekteki zamanı ayırt et.",
+        "de": "Unterscheide andauernde Zustände, vergangene Ereignisse und zukünftige Zeitpunkte.",
+        "en": "Distinguish ongoing situations, past events and future times."
+      },
+      "difficulty": {
+        "tr": "Temel çalışma",
+        "de": "Grundlagen",
+        "en": "Foundations"
+      },
+      "hideLesson": false,
+      "questions": [
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Ich wohne ___ drei Monaten hier und bleibe noch lange.",
+          "correct": "seit",
+          "explanations": {
+            "tr": "Geçmişte başlayıp hâlâ süren durumlarda seit + Dativ ve Präsens kullanılır. Doğru cevap: seit.",
+            "de": "Seit + Dativ beschreibt einen Beginn in der Vergangenheit; der Zustand dauert noch an. Das Verb steht hier im Präsens. Richtige Antwort: seit.",
+            "en": "Use seit + dative with the present tense for a situation that began in the past and still continues. Correct answer: seit."
+          },
+          "options": [
+            "seit",
+            "vor",
+            "in"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Heute ist Montag. ___ zwei Tagen ist Mittwoch.",
+          "correct": "in",
+          "explanations": {
+            "tr": "Şimdiden sonraki bir süre için in + Dativ kullanılır. Doğru cevap: in.",
+            "de": "Ein Zeitpunkt in der Zukunft steht mit in + Dativ. Richtige Antwort: in.",
+            "en": "Use in + dative for a point in the future. Correct answer: in."
+          },
+          "options": [
+            "seit",
+            "vor",
+            "in"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Ich habe Anna ___ einer Woche besucht.",
+          "correct": "vor",
+          "explanations": {
+            "tr": "vor + Dativ, bir olaydan önceyi veya geçmişte ne kadar zaman önce olduğunu belirtir. Doğru cevap: vor.",
+            "de": "Vor + Dativ bedeutet früher als ein Ereignis oder eine bestimmte Zeit vor jetzt. Richtige Antwort: vor.",
+            "en": "Vor + dative means before an event or a length of time ago. Correct answer: vor."
+          },
+          "options": [
+            "seit",
+            "vor",
+            "in"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Wir lernen ___ Januar Deutsch und lernen immer noch.",
+          "correct": "seit",
+          "explanations": {
+            "tr": "Geçmişte başlayıp hâlâ süren durumlarda seit + Dativ ve Präsens kullanılır. Doğru cevap: seit.",
+            "de": "Seit + Dativ beschreibt einen Beginn in der Vergangenheit; der Zustand dauert noch an. Das Verb steht hier im Präsens. Richtige Antwort: seit.",
+            "en": "Use seit + dative with the present tense for a situation that began in the past and still continues. Correct answer: seit."
+          },
+          "options": [
+            "seit",
+            "vor",
+            "in"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Jetzt ist es 10 Uhr. Der Bus kommt ___ zehn Minuten, also um 10:10 Uhr.",
+          "correct": "in",
+          "explanations": {
+            "tr": "Şimdiden sonraki bir süre için in + Dativ kullanılır. Doğru cevap: in.",
+            "de": "Ein Zeitpunkt in der Zukunft steht mit in + Dativ. Richtige Antwort: in.",
+            "en": "Use in + dative for a point in the future. Correct answer: in."
+          },
+          "options": [
+            "seit",
+            "vor",
+            "in"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Ali ist ___ einem Jahr nach Hamburg gekommen.",
+          "correct": "vor",
+          "explanations": {
+            "tr": "vor + Dativ, bir olaydan önceyi veya geçmişte ne kadar zaman önce olduğunu belirtir. Doğru cevap: vor.",
+            "de": "Vor + Dativ bedeutet früher als ein Ereignis oder eine bestimmte Zeit vor jetzt. Richtige Antwort: vor.",
+            "en": "Vor + dative means before an event or a length of time ago. Correct answer: vor."
+          },
+          "options": [
+            "seit",
+            "vor",
+            "in"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Eva arbeitet ___ 2022 in dieser Firma und arbeitet noch dort.",
+          "correct": "seit",
+          "explanations": {
+            "tr": "Geçmişte başlayıp hâlâ süren durumlarda seit + Dativ ve Präsens kullanılır. Doğru cevap: seit.",
+            "de": "Seit + Dativ beschreibt einen Beginn in der Vergangenheit; der Zustand dauert noch an. Das Verb steht hier im Präsens. Richtige Antwort: seit.",
+            "en": "Use seit + dative with the present tense for a situation that began in the past and still continues. Correct answer: seit."
+          },
+          "options": [
+            "seit",
+            "vor",
+            "in"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Heute ist der 1. Mai. ___ einer Woche, am 8. Mai, beginnt mein Urlaub.",
+          "correct": "in",
+          "explanations": {
+            "tr": "Şimdiden sonraki bir süre için in + Dativ kullanılır. Doğru cevap: in.",
+            "de": "Ein Zeitpunkt in der Zukunft steht mit in + Dativ. Richtige Antwort: in.",
+            "en": "Use in + dative for a point in the future. Correct answer: in."
+          },
+          "options": [
+            "seit",
+            "vor",
+            "in"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Ich habe ___ zwei Stunden gefrühstückt.",
+          "correct": "vor",
+          "explanations": {
+            "tr": "vor + Dativ, bir olaydan önceyi veya geçmişte ne kadar zaman önce olduğunu belirtir. Doğru cevap: vor.",
+            "de": "Vor + Dativ bedeutet früher als ein Ereignis oder eine bestimmte Zeit vor jetzt. Richtige Antwort: vor.",
+            "en": "Vor + dative means before an event or a length of time ago. Correct answer: vor."
+          },
+          "options": [
+            "seit",
+            "vor",
+            "in"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Wir warten ___ zwanzig Minuten und der Bus ist noch nicht da.",
+          "correct": "seit",
+          "explanations": {
+            "tr": "Geçmişte başlayıp hâlâ süren durumlarda seit + Dativ ve Präsens kullanılır. Doğru cevap: seit.",
+            "de": "Seit + Dativ beschreibt einen Beginn in der Vergangenheit; der Zustand dauert noch an. Das Verb steht hier im Präsens. Richtige Antwort: seit.",
+            "en": "Use seit + dative with the present tense for a situation that began in the past and still continues. Correct answer: seit."
+          },
+          "options": [
+            "seit",
+            "vor",
+            "in"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ab-bis-fuer-5",
+      "title": {
+        "tr": "Übung 5 – Başlangıç, bitiş ve süre",
+        "de": "Übung 5 – Anfang, Ende und Dauer",
+        "en": "Exercise 5 – Start, end and duration"
+      },
+      "description": {
+        "tr": "ab, bis veya für seç.",
+        "de": "Wähle ab, bis oder für.",
+        "en": "Choose ab, bis or für."
+      },
+      "difficulty": {
+        "tr": "Temel çalışma",
+        "de": "Grundlagen",
+        "en": "Foundations"
+      },
+      "hideLesson": false,
+      "questions": [
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Ab wann hast du Urlaub? – ___ Montag.",
+          "correct": "ab",
+          "explanations": {
+            "tr": "Bir başlangıç noktası belirtmek için ab kullanılır: ab morgen, ab Montag. Doğru cevap: ab.",
+            "de": "Ab bezeichnet einen Anfangspunkt: ab morgen, ab Montag. Richtige Antwort: ab.",
+            "en": "Ab marks a starting point: ab morgen, ab Montag. Correct answer: ab."
+          },
+          "options": [
+            "ab",
+            "bis",
+            "für"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Bis wann ist die Bibliothek offen? – ___ 18 Uhr.",
+          "correct": "bis",
+          "explanations": {
+            "tr": "Bir bitiş noktası belirtmek için bis kullanılır: bis Freitag, bis 17 Uhr. Doğru cevap: bis.",
+            "de": "Bis bezeichnet einen Endpunkt: bis Freitag, bis 17 Uhr. Richtige Antwort: bis.",
+            "en": "Bis marks an endpoint: bis Freitag, bis 17 Uhr. Correct answer: bis."
+          },
+          "options": [
+            "ab",
+            "bis",
+            "für"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Wie lange reservierst du das Zimmer? – ___ drei Nächte.",
+          "correct": "für",
+          "explanations": {
+            "tr": "Planlanan veya sınırlı bir süre için für + Akkusativ kullanılır. Doğru cevap: für.",
+            "de": "Für + Akkusativ bezeichnet hier eine geplante oder begrenzte Dauer. Richtige Antwort: für.",
+            "en": "Use für + accusative for a planned or limited duration. Correct answer: für."
+          },
+          "options": [
+            "ab",
+            "bis",
+            "für"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Ab wann gilt der neue Plan? – ___ morgen.",
+          "correct": "ab",
+          "explanations": {
+            "tr": "Bir başlangıç noktası belirtmek için ab kullanılır: ab morgen, ab Montag. Doğru cevap: ab.",
+            "de": "Ab bezeichnet einen Anfangspunkt: ab morgen, ab Montag. Richtige Antwort: ab.",
+            "en": "Ab marks a starting point: ab morgen, ab Montag. Correct answer: ab."
+          },
+          "options": [
+            "ab",
+            "bis",
+            "für"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Bis wann musst du arbeiten? – ___ Freitag.",
+          "correct": "bis",
+          "explanations": {
+            "tr": "Bir bitiş noktası belirtmek için bis kullanılır: bis Freitag, bis 17 Uhr. Doğru cevap: bis.",
+            "de": "Bis bezeichnet einen Endpunkt: bis Freitag, bis 17 Uhr. Richtige Antwort: bis.",
+            "en": "Bis marks an endpoint: bis Freitag, bis 17 Uhr. Correct answer: bis."
+          },
+          "options": [
+            "ab",
+            "bis",
+            "für"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Wie lange mietest du das Fahrrad? – ___ einen Tag.",
+          "correct": "für",
+          "explanations": {
+            "tr": "Planlanan veya sınırlı bir süre için für + Akkusativ kullanılır. Doğru cevap: für.",
+            "de": "Für + Akkusativ bezeichnet hier eine geplante oder begrenzte Dauer. Richtige Antwort: für.",
+            "en": "Use für + accusative for a planned or limited duration. Correct answer: für."
+          },
+          "options": [
+            "ab",
+            "bis",
+            "für"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Ab wann beginnt der Verkauf? – ___ nächster Woche.",
+          "correct": "ab",
+          "explanations": {
+            "tr": "Bir başlangıç noktası belirtmek için ab kullanılır: ab morgen, ab Montag. Doğru cevap: ab.",
+            "de": "Ab bezeichnet einen Anfangspunkt: ab morgen, ab Montag. Richtige Antwort: ab.",
+            "en": "Ab marks a starting point: ab morgen, ab Montag. Correct answer: ab."
+          },
+          "options": [
+            "ab",
+            "bis",
+            "für"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Bis wann dauert die Pause? – ___ 10:30 Uhr.",
+          "correct": "bis",
+          "explanations": {
+            "tr": "Bir bitiş noktası belirtmek için bis kullanılır: bis Freitag, bis 17 Uhr. Doğru cevap: bis.",
+            "de": "Bis bezeichnet einen Endpunkt: bis Freitag, bis 17 Uhr. Richtige Antwort: bis.",
+            "en": "Bis marks an endpoint: bis Freitag, bis 17 Uhr. Correct answer: bis."
+          },
+          "options": [
+            "ab",
+            "bis",
+            "für"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Wie lange buchst du den Sprachkurs? – ___ zwei Wochen.",
+          "correct": "für",
+          "explanations": {
+            "tr": "Planlanan veya sınırlı bir süre için für + Akkusativ kullanılır. Doğru cevap: für.",
+            "de": "Für + Akkusativ bezeichnet hier eine geplante oder begrenzte Dauer. Richtige Antwort: für.",
+            "en": "Use für + accusative for a planned or limited duration. Correct answer: für."
+          },
+          "options": [
+            "ab",
+            "bis",
+            "für"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Bis wann bleibst du heute hier? – ___ 16 Uhr.",
+          "correct": "bis",
+          "explanations": {
+            "tr": "Bir bitiş noktası belirtmek için bis kullanılır: bis Freitag, bis 17 Uhr. Doğru cevap: bis.",
+            "de": "Bis bezeichnet einen Endpunkt: bis Freitag, bis 17 Uhr. Richtige Antwort: bis.",
+            "en": "Bis marks an endpoint: bis Freitag, bis 17 Uhr. Correct answer: bis."
+          },
+          "options": [
+            "ab",
+            "bis",
+            "für"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zeitraeume-6",
+      "title": {
+        "tr": "Übung 6 – Saatler ve zaman aralıkları",
+        "de": "Übung 6 – Uhrzeiten und Zeiträume",
+        "en": "Exercise 6 – Clock times and time spans"
+      },
+      "description": {
+        "tr": "Boşluğa um, gegen, zwischen, von, bis veya vom yaz.",
+        "de": "Ergänze um, gegen, zwischen, von, bis oder vom.",
+        "en": "Fill in um, gegen, zwischen, von, bis or vom."
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Consolidation"
+      },
+      "hideLesson": false,
+      "questions": [
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Ich arbeite ___ 9 bis 17 Uhr.",
+          "correct": "von",
+          "explanations": {
+            "tr": "Başlangıç ve bitiş birlikte veriliyorsa von … bis …; tarihlerde vom … bis zum … kullanılır. Doğru cevap: von.",
+            "de": "Ein Zeitraum steht mit von … bis …; bei Daten heißt es vom … bis zum …. Richtige Antwort: von.",
+            "en": "Use von … bis … for a time span; with dates use vom … bis zum …. Correct answer: von."
+          },
+          "type": "text",
+          "answers": [
+            "von"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Der Laden ist von Montag ___ Samstag offen.",
+          "correct": "bis",
+          "explanations": {
+            "tr": "Başlangıç ve bitiş birlikte veriliyorsa von … bis …; tarihlerde vom … bis zum … kullanılır. Doğru cevap: bis.",
+            "de": "Ein Zeitraum steht mit von … bis …; bei Daten heißt es vom … bis zum …. Richtige Antwort: bis.",
+            "en": "Use von … bis … for a time span; with dates use vom … bis zum …. Correct answer: bis."
+          },
+          "type": "text",
+          "answers": [
+            "bis"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Wir kommen ___ 14 und 15 Uhr an.",
+          "correct": "zwischen",
+          "explanations": {
+            "tr": "İki zaman sınırı arasında anlamında zwischen … und … kullanılır. Doğru cevap: zwischen.",
+            "de": "Zwischen … und … bezeichnet einen Zeitpunkt innerhalb zweier Grenzen. Richtige Antwort: zwischen.",
+            "en": "Zwischen … und … places a time between two limits. Correct answer: zwischen."
+          },
+          "type": "text",
+          "answers": [
+            "zwischen"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Es ist keine genaue Zeit: Ich komme ___ 11 Uhr, vielleicht etwas früher oder später.",
+          "correct": "gegen",
+          "explanations": {
+            "tr": "Kesin olmayan, yaklaşık bir saat için gegen kullanılır. Doğru cevap: gegen.",
+            "de": "Gegen bezeichnet eine ungefähre Uhrzeit. Richtige Antwort: gegen.",
+            "en": "Use gegen for an approximate clock time. Correct answer: gegen."
+          },
+          "type": "text",
+          "answers": [
+            "gegen"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Der Kurs beginnt genau ___ 18:30 Uhr.",
+          "correct": "um",
+          "explanations": {
+            "tr": "Kesin saat belirtirken um kullanılır. Doğru cevap: um.",
+            "de": "Eine genaue Uhrzeit steht mit um. Richtige Antwort: um.",
+            "en": "Use um for an exact clock time. Correct answer: um."
+          },
+          "type": "text",
+          "answers": [
+            "um"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Ich habe ___ 7. bis zum 14. Juli Urlaub.",
+          "correct": "vom",
+          "explanations": {
+            "tr": "Başlangıç ve bitiş birlikte veriliyorsa von … bis …; tarihlerde vom … bis zum … kullanılır. Doğru cevap: vom.",
+            "de": "Ein Zeitraum steht mit von … bis …; bei Daten heißt es vom … bis zum …. Richtige Antwort: vom.",
+            "en": "Use von … bis … for a time span; with dates use vom … bis zum …. Correct answer: vom."
+          },
+          "type": "text",
+          "answers": [
+            "vom"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Die Mittagspause dauert von 12 ___ 13 Uhr.",
+          "correct": "bis",
+          "explanations": {
+            "tr": "Başlangıç ve bitiş birlikte veriliyorsa von … bis …; tarihlerde vom … bis zum … kullanılır. Doğru cevap: bis.",
+            "de": "Ein Zeitraum steht mit von … bis …; bei Daten heißt es vom … bis zum …. Richtige Antwort: bis.",
+            "en": "Use von … bis … for a time span; with dates use vom … bis zum …. Correct answer: bis."
+          },
+          "type": "text",
+          "answers": [
+            "bis"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Der Arzt ruft ___ 10 und 12 Uhr an.",
+          "correct": "zwischen",
+          "explanations": {
+            "tr": "İki zaman sınırı arasında anlamında zwischen … und … kullanılır. Doğru cevap: zwischen.",
+            "de": "Zwischen … und … bezeichnet einen Zeitpunkt innerhalb zweier Grenzen. Richtige Antwort: zwischen.",
+            "en": "Zwischen … und … places a time between two limits. Correct answer: zwischen."
+          },
+          "type": "text",
+          "answers": [
+            "zwischen"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Nicht genau um acht: Wir kommen ungefähr ___ 8 Uhr.",
+          "correct": "gegen",
+          "explanations": {
+            "tr": "Kesin olmayan, yaklaşık bir saat için gegen kullanılır. Doğru cevap: gegen.",
+            "de": "Gegen bezeichnet eine ungefähre Uhrzeit. Richtige Antwort: gegen.",
+            "en": "Use gegen for an approximate clock time. Correct answer: gegen."
+          },
+          "type": "text",
+          "answers": [
+            "gegen"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Der Zug fährt pünktlich ___ 16:05 Uhr ab.",
+          "correct": "um",
+          "explanations": {
+            "tr": "Kesin saat belirtirken um kullanılır. Doğru cevap: um.",
+            "de": "Eine genaue Uhrzeit steht mit um. Richtige Antwort: um.",
+            "en": "Use um for an exact clock time. Correct answer: um."
+          },
+          "type": "text",
+          "answers": [
+            "um"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zeitfragen-7",
+      "title": {
+        "tr": "Übung 7 – Doğru zaman sorusu",
+        "de": "Übung 7 – Die passende Zeitfrage",
+        "en": "Exercise 7 – Choose the time question"
+      },
+      "description": {
+        "tr": "Verilen cevaba uygun soru ifadesini seç.",
+        "de": "Wähle das Fragewort zur Antwort.",
+        "en": "Choose the question phrase that matches the answer."
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Consolidation"
+      },
+      "hideLesson": false,
+      "questions": [
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "___ beginnt dein Deutschkurs? – Am Donnerstag.",
+          "correct": "Wann",
+          "explanations": {
+            "tr": "Wann? bir olayın ne zaman olduğunu sorar. Doğru cevap: Wann.",
+            "de": "Wann? fragt nach einem Zeitpunkt. Richtige Antwort: Wann.",
+            "en": "Wann? asks when an event happens. Correct answer: Wann."
+          },
+          "options": [
+            "Wann",
+            "Wie lange",
+            "Seit wann"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "___ wohnst du hier? – Seit März.",
+          "correct": "Seit wann",
+          "explanations": {
+            "tr": "Seit wann? hâlâ süren bir durumun başlangıcını sorar. Doğru cevap: Seit wann.",
+            "de": "Seit wann? fragt nach dem Beginn eines noch andauernden Zustands. Richtige Antwort: Seit wann.",
+            "en": "Seit wann? asks when an ongoing situation began. Correct answer: Seit wann."
+          },
+          "options": [
+            "Bis wann",
+            "Seit wann",
+            "Ab wann"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "___ bleibst du im Hotel? – Für vier Nächte.",
+          "correct": "Wie lange",
+          "explanations": {
+            "tr": "Wie lange? süreyi sorar. Doğru cevap: Wie lange.",
+            "de": "Wie lange? fragt nach einer Dauer. Richtige Antwort: Wie lange.",
+            "en": "Wie lange? asks about duration. Correct answer: Wie lange."
+          },
+          "options": [
+            "Wann",
+            "Wie lange",
+            "Ab wann"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "___ ist die Apotheke heute offen? – Bis 19 Uhr.",
+          "correct": "Bis wann",
+          "explanations": {
+            "tr": "Bis wann? bitiş zamanını sorar. Doğru cevap: Bis wann.",
+            "de": "Bis wann? fragt nach dem Endpunkt. Richtige Antwort: Bis wann.",
+            "en": "Bis wann? asks about an endpoint. Correct answer: Bis wann."
+          },
+          "options": [
+            "Seit wann",
+            "Ab wann",
+            "Bis wann"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "___ gilt der neue Stundenplan? – Ab nächstem Montag.",
+          "correct": "Ab wann",
+          "explanations": {
+            "tr": "Ab wann? başlangıç zamanını sorar. Doğru cevap: Ab wann.",
+            "de": "Ab wann? fragt nach dem Anfangspunkt. Richtige Antwort: Ab wann.",
+            "en": "Ab wann? asks about a starting point. Correct answer: Ab wann."
+          },
+          "options": [
+            "Ab wann",
+            "Wie lange",
+            "Bis wann"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "___ fährt der Bus? – Um 7:40 Uhr.",
+          "correct": "Wann",
+          "explanations": {
+            "tr": "Wann? bir olayın ne zaman olduğunu sorar. Doğru cevap: Wann.",
+            "de": "Wann? fragt nach einem Zeitpunkt. Richtige Antwort: Wann.",
+            "en": "Wann? asks when an event happens. Correct answer: Wann."
+          },
+          "options": [
+            "Wie lange",
+            "Wann",
+            "Seit wann"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "___ lernt Mia Deutsch? – Seit einem Monat.",
+          "correct": "Seit wann",
+          "explanations": {
+            "tr": "Seit wann? hâlâ süren bir durumun başlangıcını sorar. Doğru cevap: Seit wann.",
+            "de": "Seit wann? fragt nach dem Beginn eines noch andauernden Zustands. Richtige Antwort: Seit wann.",
+            "en": "Seit wann? asks when an ongoing situation began. Correct answer: Seit wann."
+          },
+          "options": [
+            "Seit wann",
+            "Bis wann",
+            "Ab wann"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "___ dauert die Fahrt? – Zwei Stunden.",
+          "correct": "Wie lange",
+          "explanations": {
+            "tr": "Wie lange? süreyi sorar. Doğru cevap: Wie lange.",
+            "de": "Wie lange? fragt nach einer Dauer. Richtige Antwort: Wie lange.",
+            "en": "Wie lange? asks about duration. Correct answer: Wie lange."
+          },
+          "options": [
+            "Ab wann",
+            "Wie lange",
+            "Seit wann"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "___ musst du heute arbeiten? – Bis 16 Uhr.",
+          "correct": "Bis wann",
+          "explanations": {
+            "tr": "Bis wann? bitiş zamanını sorar. Doğru cevap: Bis wann.",
+            "de": "Bis wann? fragt nach dem Endpunkt. Richtige Antwort: Bis wann.",
+            "en": "Bis wann? asks about an endpoint. Correct answer: Bis wann."
+          },
+          "options": [
+            "Bis wann",
+            "Seit wann",
+            "Ab wann"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "___ ist das Museum wieder offen? – Ab Freitag.",
+          "correct": "Ab wann",
+          "explanations": {
+            "tr": "Ab wann? başlangıç zamanını sorar. Doğru cevap: Ab wann.",
+            "de": "Ab wann? fragt nach dem Anfangspunkt. Richtige Antwort: Ab wann.",
+            "en": "Ab wann? asks about a starting point. Correct answer: Ab wann."
+          },
+          "options": [
+            "Wie lange",
+            "Ab wann",
+            "Bis wann"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "artikel-schreiben-8",
+      "title": {
+        "tr": "Übung 8 – Edat ve artikeli tamamla",
+        "de": "Übung 8 – Präposition und Artikel ergänzen",
+        "en": "Exercise 8 – Complete preposition and article"
+      },
+      "description": {
+        "tr": "Parantezdeki edat ve ein/der ile tüm ifadeyi yaz. Yalnızca boşluğa gelen kısmı yaz.",
+        "de": "Schreibe die Präposition aus der Klammer zusammen mit der passenden Form von ein/der. Schreibe nur die Lücke.",
+        "en": "Write the given preposition with the correct form of ein/der. Type only the missing phrase."
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Consolidation"
+      },
+      "hideLesson": false,
+      "questions": [
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Die Prüfung ist ___ Woche. (in + ein)",
+          "correct": "in einer",
+          "explanations": {
+            "tr": "in, an, seit, vor, nach ve bei bu zaman ifadelerinde Dativ alır: einem Tag, einer Woche, einem Jahr. für Akkusativ alır: einen Tag, eine Woche, ein Jahr. Doğru cevap: in einer.",
+            "de": "In, an, seit, vor, nach und bei stehen hier mit Dativ: einem Tag, einer Woche, einem Jahr. Für steht mit Akkusativ: einen Tag, eine Woche, ein Jahr. Richtige Antwort: in einer.",
+            "en": "These time uses of in, an, seit, vor, nach and bei take dative: einem Tag, einer Woche, einem Jahr. Für takes accusative: einen Tag, eine Woche, ein Jahr. Correct answer: in einer."
+          },
+          "type": "text",
+          "answers": [
+            "in einer"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Ich lerne ___ Monat Deutsch. (seit + ein)",
+          "correct": "seit einem",
+          "explanations": {
+            "tr": "in, an, seit, vor, nach ve bei bu zaman ifadelerinde Dativ alır: einem Tag, einer Woche, einem Jahr. für Akkusativ alır: einen Tag, eine Woche, ein Jahr. Doğru cevap: seit einem.",
+            "de": "In, an, seit, vor, nach und bei stehen hier mit Dativ: einem Tag, einer Woche, einem Jahr. Für steht mit Akkusativ: einen Tag, eine Woche, ein Jahr. Richtige Antwort: seit einem.",
+            "en": "These time uses of in, an, seit, vor, nach and bei take dative: einem Tag, einer Woche, einem Jahr. Für takes accusative: einen Tag, eine Woche, ein Jahr. Correct answer: seit einem."
+          },
+          "type": "text",
+          "answers": [
+            "seit einem"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Wir buchen das Zimmer ___ Nacht. (für + ein)",
+          "correct": "für eine",
+          "explanations": {
+            "tr": "in, an, seit, vor, nach ve bei bu zaman ifadelerinde Dativ alır: einem Tag, einer Woche, einem Jahr. für Akkusativ alır: einen Tag, eine Woche, ein Jahr. Doğru cevap: für eine.",
+            "de": "In, an, seit, vor, nach und bei stehen hier mit Dativ: einem Tag, einer Woche, einem Jahr. Für steht mit Akkusativ: einen Tag, eine Woche, ein Jahr. Richtige Antwort: für eine.",
+            "en": "These time uses of in, an, seit, vor, nach and bei take dative: einem Tag, einer Woche, einem Jahr. Für takes accusative: einen Tag, eine Woche, ein Jahr. Correct answer: für eine."
+          },
+          "type": "text",
+          "answers": [
+            "für eine"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Ich habe ihn ___ Jahr besucht. (vor + ein)",
+          "correct": "vor einem",
+          "explanations": {
+            "tr": "in, an, seit, vor, nach ve bei bu zaman ifadelerinde Dativ alır: einem Tag, einer Woche, einem Jahr. für Akkusativ alır: einen Tag, eine Woche, ein Jahr. Doğru cevap: vor einem.",
+            "de": "In, an, seit, vor, nach und bei stehen hier mit Dativ: einem Tag, einer Woche, einem Jahr. Für steht mit Akkusativ: einen Tag, eine Woche, ein Jahr. Richtige Antwort: vor einem.",
+            "en": "These time uses of in, an, seit, vor, nach and bei take dative: einem Tag, einer Woche, einem Jahr. Für takes accusative: einen Tag, eine Woche, ein Jahr. Correct answer: vor einem."
+          },
+          "type": "text",
+          "answers": [
+            "vor einem"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Wir treffen uns ___ Unterricht. (nach + der)",
+          "correct": "nach dem",
+          "explanations": {
+            "tr": "in, an, seit, vor, nach ve bei bu zaman ifadelerinde Dativ alır: einem Tag, einer Woche, einem Jahr. für Akkusativ alır: einen Tag, eine Woche, ein Jahr. Doğru cevap: nach dem.",
+            "de": "In, an, seit, vor, nach und bei stehen hier mit Dativ: einem Tag, einer Woche, einem Jahr. Für steht mit Akkusativ: einen Tag, eine Woche, ein Jahr. Richtige Antwort: nach dem.",
+            "en": "These time uses of in, an, seit, vor, nach and bei take dative: einem Tag, einer Woche, einem Jahr. Für takes accusative: einen Tag, eine Woche, ein Jahr. Correct answer: nach dem."
+          },
+          "type": "text",
+          "answers": [
+            "nach dem"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Ich wasche die Hände ___ Essen. (vor + das)",
+          "correct": "vor dem",
+          "explanations": {
+            "tr": "in, an, seit, vor, nach ve bei bu zaman ifadelerinde Dativ alır: einem Tag, einer Woche, einem Jahr. für Akkusativ alır: einen Tag, eine Woche, ein Jahr. Doğru cevap: vor dem.",
+            "de": "In, an, seit, vor, nach und bei stehen hier mit Dativ: einem Tag, einer Woche, einem Jahr. Für steht mit Akkusativ: einen Tag, eine Woche, ein Jahr. Richtige Antwort: vor dem.",
+            "en": "These time uses of in, an, seit, vor, nach and bei take dative: einem Tag, einer Woche, einem Jahr. Für takes accusative: einen Tag, eine Woche, ein Jahr. Correct answer: vor dem."
+          },
+          "type": "text",
+          "answers": [
+            "vor dem"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Ich miete das Auto ___ Tag. (für + ein)",
+          "correct": "für einen",
+          "explanations": {
+            "tr": "in, an, seit, vor, nach ve bei bu zaman ifadelerinde Dativ alır: einem Tag, einer Woche, einem Jahr. für Akkusativ alır: einen Tag, eine Woche, ein Jahr. Doğru cevap: für einen.",
+            "de": "In, an, seit, vor, nach und bei stehen hier mit Dativ: einem Tag, einer Woche, einem Jahr. Für steht mit Akkusativ: einen Tag, eine Woche, ein Jahr. Richtige Antwort: für einen.",
+            "en": "These time uses of in, an, seit, vor, nach and bei take dative: einem Tag, einer Woche, einem Jahr. Für takes accusative: einen Tag, eine Woche, ein Jahr. Correct answer: für einen."
+          },
+          "type": "text",
+          "answers": [
+            "für einen"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Der Bus kommt ___ Stunde. (in + ein)",
+          "correct": "in einer",
+          "explanations": {
+            "tr": "in, an, seit, vor, nach ve bei bu zaman ifadelerinde Dativ alır: einem Tag, einer Woche, einem Jahr. für Akkusativ alır: einen Tag, eine Woche, ein Jahr. Doğru cevap: in einer.",
+            "de": "In, an, seit, vor, nach und bei stehen hier mit Dativ: einem Tag, einer Woche, einem Jahr. Für steht mit Akkusativ: einen Tag, eine Woche, ein Jahr. Richtige Antwort: in einer.",
+            "en": "These time uses of in, an, seit, vor, nach and bei take dative: einem Tag, einer Woche, einem Jahr. Für takes accusative: einen Tag, eine Woche, ein Jahr. Correct answer: in einer."
+          },
+          "type": "text",
+          "answers": [
+            "in einer"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Wir wohnen ___ Woche hier. (seit + ein)",
+          "correct": "seit einer",
+          "explanations": {
+            "tr": "in, an, seit, vor, nach ve bei bu zaman ifadelerinde Dativ alır: einem Tag, einer Woche, einem Jahr. für Akkusativ alır: einen Tag, eine Woche, ein Jahr. Doğru cevap: seit einer.",
+            "de": "In, an, seit, vor, nach und bei stehen hier mit Dativ: einem Tag, einer Woche, einem Jahr. Für steht mit Akkusativ: einen Tag, eine Woche, ein Jahr. Richtige Antwort: seit einer.",
+            "en": "These time uses of in, an, seit, vor, nach and bei take dative: einem Tag, einer Woche, einem Jahr. Für takes accusative: einen Tag, eine Woche, ein Jahr. Correct answer: seit einer."
+          },
+          "type": "text",
+          "answers": [
+            "seit einer"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Wir treffen uns ___ Samstag im April. (an + ein)",
+          "correct": "an einem",
+          "explanations": {
+            "tr": "in, an, seit, vor, nach ve bei bu zaman ifadelerinde Dativ alır: einem Tag, einer Woche, einem Jahr. für Akkusativ alır: einen Tag, eine Woche, ein Jahr. Doğru cevap: an einem.",
+            "de": "In, an, seit, vor, nach und bei stehen hier mit Dativ: einem Tag, einer Woche, einem Jahr. Für steht mit Akkusativ: einen Tag, eine Woche, ein Jahr. Richtige Antwort: an einem.",
+            "en": "These time uses of in, an, seit, vor, nach and bei take dative: einem Tag, einer Woche, einem Jahr. Für takes accusative: einen Tag, eine Woche, ein Jahr. Correct answer: an einem."
+          },
+          "type": "text",
+          "answers": [
+            "an einem"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fehlerkorrektur-9",
+      "title": {
+        "tr": "Übung 9 – Zaman ifadesini düzelt",
+        "de": "Übung 9 – Zeitangaben korrigieren",
+        "en": "Exercise 9 – Correct the time phrase"
+      },
+      "description": {
+        "tr": "Hatalı ifadeyi düzelt; yalnızca doğru zaman ifadesini yaz, tüm cümleyi değil.",
+        "de": "Korrigiere die fehlerhafte Zeitangabe. Schreibe nur die richtige Zeitangabe, nicht den ganzen Satz.",
+        "en": "Correct the faulty time phrase. Type only the corrected phrase, not the whole sentence."
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Consolidation"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Hatalı / Falsch / Incorrect: im Dienstag → ___",
+          "correct": "am Dienstag",
+          "explanations": {
+            "tr": "Günler, tarihler ve gündüz bölümleriyle am (= an dem) kullanılır. Doğru cevap: am Dienstag.",
+            "de": "Bei Wochentagen, Daten und Tageszeiten steht am (= an dem). Richtige Antwort: am Dienstag.",
+            "en": "Use am (= an dem) with weekdays, dates and parts of the day. Correct answer: am Dienstag."
+          },
+          "type": "text",
+          "answers": [
+            "am Dienstag"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Hatalı / Falsch / Incorrect: am Oktober → ___",
+          "correct": "im Oktober",
+          "explanations": {
+            "tr": "Aylar ve mevsimlerle im (= in dem) kullanılır. Doğru cevap: im Oktober.",
+            "de": "Bei Monaten und Jahreszeiten steht im (= in dem). Richtige Antwort: im Oktober.",
+            "en": "Use im (= in dem) with months and seasons. Correct answer: im Oktober."
+          },
+          "type": "text",
+          "answers": [
+            "im Oktober"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Hatalı / Falsch / Incorrect: im 9 Uhr → ___",
+          "correct": "um 9 Uhr",
+          "explanations": {
+            "tr": "Kesin saat belirtirken um kullanılır. Doğru cevap: um 9 Uhr.",
+            "de": "Eine genaue Uhrzeit steht mit um. Richtige Antwort: um 9 Uhr.",
+            "en": "Use um for an exact clock time. Correct answer: um 9 Uhr."
+          },
+          "type": "text",
+          "answers": [
+            "um 9 Uhr"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Hatalı / Falsch / Incorrect: seit einen Monat → ___",
+          "correct": "seit einem Monat",
+          "explanations": {
+            "tr": "in, an, seit, vor, nach ve bei bu zaman ifadelerinde Dativ alır: einem Tag, einer Woche, einem Jahr. für Akkusativ alır: einen Tag, eine Woche, ein Jahr. Doğru cevap: seit einem Monat.",
+            "de": "In, an, seit, vor, nach und bei stehen hier mit Dativ: einem Tag, einer Woche, einem Jahr. Für steht mit Akkusativ: einen Tag, eine Woche, ein Jahr. Richtige Antwort: seit einem Monat.",
+            "en": "These time uses of in, an, seit, vor, nach and bei take dative: einem Tag, einer Woche, einem Jahr. Für takes accusative: einen Tag, eine Woche, ein Jahr. Correct answer: seit einem Monat."
+          },
+          "type": "text",
+          "answers": [
+            "seit einem Monat"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Hatalı / Falsch / Incorrect: in eine Woche → ___",
+          "correct": "in einer Woche",
+          "explanations": {
+            "tr": "in, an, seit, vor, nach ve bei bu zaman ifadelerinde Dativ alır: einem Tag, einer Woche, einem Jahr. für Akkusativ alır: einen Tag, eine Woche, ein Jahr. Doğru cevap: in einer Woche.",
+            "de": "In, an, seit, vor, nach und bei stehen hier mit Dativ: einem Tag, einer Woche, einem Jahr. Für steht mit Akkusativ: einen Tag, eine Woche, ein Jahr. Richtige Antwort: in einer Woche.",
+            "en": "These time uses of in, an, seit, vor, nach and bei take dative: einem Tag, einer Woche, einem Jahr. Für takes accusative: einen Tag, eine Woche, ein Jahr. Correct answer: in einer Woche."
+          },
+          "type": "text",
+          "answers": [
+            "in einer Woche"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Hatalı / Falsch / Incorrect: für einem Tag → ___",
+          "correct": "für einen Tag",
+          "explanations": {
+            "tr": "in, an, seit, vor, nach ve bei bu zaman ifadelerinde Dativ alır: einem Tag, einer Woche, einem Jahr. für Akkusativ alır: einen Tag, eine Woche, ein Jahr. Doğru cevap: für einen Tag.",
+            "de": "In, an, seit, vor, nach und bei stehen hier mit Dativ: einem Tag, einer Woche, einem Jahr. Für steht mit Akkusativ: einen Tag, eine Woche, ein Jahr. Richtige Antwort: für einen Tag.",
+            "en": "These time uses of in, an, seit, vor, nach and bei take dative: einem Tag, einer Woche, einem Jahr. Für takes accusative: einen Tag, eine Woche, ein Jahr. Correct answer: für einen Tag."
+          },
+          "type": "text",
+          "answers": [
+            "für einen Tag"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Hatalı / Falsch / Incorrect: nach den Unterricht → ___",
+          "correct": "nach dem Unterricht",
+          "explanations": {
+            "tr": "in, an, seit, vor, nach ve bei bu zaman ifadelerinde Dativ alır: einem Tag, einer Woche, einem Jahr. für Akkusativ alır: einen Tag, eine Woche, ein Jahr. Doğru cevap: nach dem Unterricht.",
+            "de": "In, an, seit, vor, nach und bei stehen hier mit Dativ: einem Tag, einer Woche, einem Jahr. Für steht mit Akkusativ: einen Tag, eine Woche, ein Jahr. Richtige Antwort: nach dem Unterricht.",
+            "en": "These time uses of in, an, seit, vor, nach and bei take dative: einem Tag, einer Woche, einem Jahr. Für takes accusative: einen Tag, eine Woche, ein Jahr. Correct answer: nach dem Unterricht."
+          },
+          "type": "text",
+          "answers": [
+            "nach dem Unterricht"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Hatalı / Falsch / Incorrect: am Winter → ___",
+          "correct": "im Winter",
+          "explanations": {
+            "tr": "Aylar ve mevsimlerle im (= in dem) kullanılır. Doğru cevap: im Winter.",
+            "de": "Bei Monaten und Jahreszeiten steht im (= in dem). Richtige Antwort: im Winter.",
+            "en": "Use im (= in dem) with months and seasons. Correct answer: im Winter."
+          },
+          "type": "text",
+          "answers": [
+            "im Winter"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Hatalı / Falsch / Incorrect: zwischen 8 bis 9 Uhr → ___",
+          "correct": "zwischen 8 und 9 Uhr",
+          "explanations": {
+            "tr": "İki zaman sınırı arasında anlamında zwischen … und … kullanılır. Doğru cevap: zwischen 8 und 9 Uhr.",
+            "de": "Zwischen … und … bezeichnet einen Zeitpunkt innerhalb zweier Grenzen. Richtige Antwort: zwischen 8 und 9 Uhr.",
+            "en": "Zwischen … und … places a time between two limits. Correct answer: zwischen 8 und 9 Uhr."
+          },
+          "type": "text",
+          "answers": [
+            "zwischen 8 und 9 Uhr"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Hatalı / Falsch / Incorrect: von Montag und Freitag → ___",
+          "correct": "von Montag bis Freitag",
+          "explanations": {
+            "tr": "Başlangıç ve bitiş birlikte veriliyorsa von … bis …; tarihlerde vom … bis zum … kullanılır. Doğru cevap: von Montag bis Freitag.",
+            "de": "Ein Zeitraum steht mit von … bis …; bei Daten heißt es vom … bis zum …. Richtige Antwort: von Montag bis Freitag.",
+            "en": "Use von … bis … for a time span; with dates use vom … bis zum …. Correct answer: von Montag bis Freitag."
+          },
+          "type": "text",
+          "answers": [
+            "von Montag bis Freitag"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gemischt-10",
+      "title": {
+        "tr": "Übung 10 – Günlük yaşamda karışık tekrar",
+        "de": "Übung 10 – Gemischte Alltagsübungen",
+        "en": "Exercise 10 – Mixed everyday review"
+      },
+      "description": {
+        "tr": "Parantezdeki seçeneklerden doğru kelimeyi yaz.",
+        "de": "Schreibe das passende Wort aus der Klammer.",
+        "en": "Type the correct word from the choices in brackets."
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Consolidation"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Mein Termin ist ___ Dienstag. (am / im / um)",
+          "correct": "am",
+          "explanations": {
+            "tr": "Günler, tarihler ve gündüz bölümleriyle am (= an dem) kullanılır. Doğru cevap: am.",
+            "de": "Bei Wochentagen, Daten und Tageszeiten steht am (= an dem). Richtige Antwort: am.",
+            "en": "Use am (= an dem) with weekdays, dates and parts of the day. Correct answer: am."
+          },
+          "type": "text",
+          "answers": [
+            "am"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Wir fahren ___ Dezember nach Wien. (am / im / um)",
+          "correct": "im",
+          "explanations": {
+            "tr": "Aylar ve mevsimlerle im (= in dem) kullanılır. Doğru cevap: im.",
+            "de": "Bei Monaten und Jahreszeiten steht im (= in dem). Richtige Antwort: im.",
+            "en": "Use im (= in dem) with months and seasons. Correct answer: im."
+          },
+          "type": "text",
+          "answers": [
+            "im"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Ich wohne ___ zwei Jahren hier und wohne noch hier. (seit / vor / in)",
+          "correct": "seit",
+          "explanations": {
+            "tr": "Geçmişte başlayıp hâlâ süren durumlarda seit + Dativ ve Präsens kullanılır. Doğru cevap: seit.",
+            "de": "Seit + Dativ beschreibt einen Beginn in der Vergangenheit; der Zustand dauert noch an. Das Verb steht hier im Präsens. Richtige Antwort: seit.",
+            "en": "Use seit + dative with the present tense for a situation that began in the past and still continues. Correct answer: seit."
+          },
+          "type": "text",
+          "answers": [
+            "seit"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Jetzt ist es 12 Uhr. ___ einer Stunde, um 13 Uhr, beginnt der Kurs. (seit / vor / in)",
+          "correct": "in",
+          "explanations": {
+            "tr": "Şimdiden sonraki bir süre için in + Dativ kullanılır. Doğru cevap: in.",
+            "de": "Ein Zeitpunkt in der Zukunft steht mit in + Dativ. Richtige Antwort: in.",
+            "en": "Use in + dative for a point in the future. Correct answer: in."
+          },
+          "type": "text",
+          "answers": [
+            "in"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Zuerst essen wir, dann trinken wir Tee. Wir trinken ___ dem Essen Tee. (vor / nach / beim)",
+          "correct": "nach",
+          "explanations": {
+            "tr": "Bir olaydan sonraki zaman için nach + Dativ kullanılır. Doğru cevap: nach.",
+            "de": "Nach + Dativ bedeutet später als ein Ereignis. Richtige Antwort: nach.",
+            "en": "Use nach + dative for a time after an event. Correct answer: nach."
+          },
+          "type": "text",
+          "answers": [
+            "nach"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Ich lese und esse gleichzeitig. Ich lese ___ Essen. (vor / nach / beim)",
+          "correct": "beim",
+          "explanations": {
+            "tr": "Bir etkinlik sırasında anlamında beim (= bei dem) kullanılır; fiilden türeyen isim büyük yazılır: beim Essen. Doğru cevap: beim.",
+            "de": "Beim (= bei dem) bezeichnet eine gleichzeitige Tätigkeit. Das substantivierte Verb wird großgeschrieben: beim Essen. Richtige Antwort: beim.",
+            "en": "Beim (= bei dem) means during an activity. Capitalize the nominalized verb: beim Essen. Correct answer: beim."
+          },
+          "type": "text",
+          "answers": [
+            "beim"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Ab wann bist du erreichbar? – ___ morgen. (ab / bis / für)",
+          "correct": "ab",
+          "explanations": {
+            "tr": "Bir başlangıç noktası belirtmek için ab kullanılır: ab morgen, ab Montag. Doğru cevap: ab.",
+            "de": "Ab bezeichnet einen Anfangspunkt: ab morgen, ab Montag. Richtige Antwort: ab.",
+            "en": "Ab marks a starting point: ab morgen, ab Montag. Correct answer: ab."
+          },
+          "type": "text",
+          "answers": [
+            "ab"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Bis wann ist das Café geöffnet? – ___ 22 Uhr. (ab / bis / für)",
+          "correct": "bis",
+          "explanations": {
+            "tr": "Bir bitiş noktası belirtmek için bis kullanılır: bis Freitag, bis 17 Uhr. Doğru cevap: bis.",
+            "de": "Bis bezeichnet einen Endpunkt: bis Freitag, bis 17 Uhr. Richtige Antwort: bis.",
+            "en": "Bis marks an endpoint: bis Freitag, bis 17 Uhr. Correct answer: bis."
+          },
+          "type": "text",
+          "answers": [
+            "bis"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Wie lange mietest du die Wohnung? – ___ einen Monat. (ab / bis / für)",
+          "correct": "für",
+          "explanations": {
+            "tr": "Planlanan veya sınırlı bir süre için für + Akkusativ kullanılır. Doğru cevap: für.",
+            "de": "Für + Akkusativ bezeichnet hier eine geplante oder begrenzte Dauer. Richtige Antwort: für.",
+            "en": "Use für + accusative for a planned or limited duration. Correct answer: für."
+          },
+          "type": "text",
+          "answers": [
+            "für"
+          ]
+        },
+        {
+          "word": "Temporale Präpositionen",
+          "sentence": "Ich komme nicht genau um zwölf, sondern ungefähr ___ 12 Uhr. (um / gegen / zwischen)",
+          "correct": "gegen",
+          "explanations": {
+            "tr": "Kesin olmayan, yaklaşık bir saat için gegen kullanılır. Doğru cevap: gegen.",
+            "de": "Gegen bezeichnet eine ungefähre Uhrzeit. Richtige Antwort: gegen.",
+            "en": "Use gegen for an approximate clock time. Correct answer: gegen."
+          },
+          "type": "text",
+          "answers": [
+            "gegen"
+          ]
+        }
+      ]
+    }
+  ]
+}
+

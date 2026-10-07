@@ -3,17 +3,160 @@
 
   const TOPICS = {
     A1: [
-      ['artikel', 'Artikel – der, die, das', 'Almanca isimlerin artikellerini ve temel kullanımını öğren.'],
-      ['personalpronomen', 'Personalpronomen', 'ich, du, er, sie, es, wir, ihr ve sie/Sie zamirlerini tanı.'],
-      ['sein-haben', 'sein & haben', 'Almancanın iki temel fiilinin Präsens çekimini öğren.'],
-      ['praesens', 'Präsens', 'Düzenli ve temel düzensiz fiillerle şimdiki/geniş zamanı kur.'],
-      ['w-fragen', 'W-Fragen', 'wer, was, wo, wann, warum ve wie ile soru cümleleri kur.'],
-      ['akkusativ', 'Akkusativ', 'Doğrudan nesneyi, den/einen değişimini ve temel Akkusativ kullanımını öğren.'],
-      ['modalverben', 'Modalverben', 'können, müssen, wollen ve diğer temel modal fiilleri kullan.'],
-      ['trennbare-verben', 'Trennbare Verben', 'aufstehen, einkaufen, anrufen gibi ayrılabilen fiilleri öğren.'],
-      ['possessivartikel', 'Possessivartikel', 'mein, dein, sein, ihr, unser ve euer ile sahiplik bildir.'],
-      ['perfekt', 'Perfekt', 'haben/sein + Partizip II ile temel geçmiş zaman cümleleri kur.']
-    ],
+  [
+    "artikel",
+    "Artikel – der, die, das",
+    {
+      "tr": "İsimleri artikel ve çoğullarıyla öğren.",
+      "de": "Artikel: der · die · das – Grundlagen und Beispiele auf Türkisch.",
+      "en": "Articles: der · die · das – fundamentals and examples explained in Turkish."
+    }
+  ],
+  [
+    "plural",
+    "Plural – isimlerin çoğulu",
+    {
+      "tr": "Çoğul belirli artikel die olur.",
+      "de": "Plural – Grundlagen und Beispiele auf Türkisch.",
+      "en": "Plural – fundamentals and examples explained in Turkish."
+    }
+  ],
+  [
+    "personalpronomen-akkusativ",
+    "Personalpronomen im Akkusativ",
+    {
+      "tr": "Zamir, tekrar edilen ismin yerini alır.",
+      "de": "Personalpronomen im Akkusativ – Grundlagen und Beispiele auf Türkisch.",
+      "en": "Personal pronouns: accusative – fundamentals and examples explained in Turkish."
+    }
+  ],
+  [
+    "personalpronomen-dativ",
+    "Personalpronomen im Dativ",
+    {
+      "tr": "Dativ zamirlerini fiil veya edatla birlikte öğren.",
+      "de": "Personalpronomen im Dativ – Grundlagen und Beispiele auf Türkisch.",
+      "en": "Personal pronouns: dative – fundamentals and examples explained in Turkish."
+    }
+  ],
+  [
+    "sein-haben",
+    "sein & haben – olmak ve sahip olmak",
+    {
+      "tr": "sein: kimlik, durum, yaş ve yer.",
+      "de": "sein & haben – Grundlagen und Beispiele auf Türkisch.",
+      "en": "sein & haben – fundamentals and examples explained in Turkish."
+    }
+  ],
+  [
+    "praesens",
+    "Präsens – şimdiki ve geniş zaman",
+    {
+      "tr": "Düzenli fiilde kök + kişi eki kullanılır.",
+      "de": "Präsens – Grundlagen und Beispiele auf Türkisch.",
+      "en": "Present tense – fundamentals and examples explained in Turkish."
+    }
+  ],
+  [
+    "negation",
+    "Negation – nicht ve kein",
+    {
+      "tr": "Belirsiz veya artikelsiz isimleri çoğunlukla kein ile olumsuzla.",
+      "de": "Negation – Grundlagen und Beispiele auf Türkisch.",
+      "en": "Negation – fundamentals and examples explained in Turkish."
+    }
+  ],
+  [
+    "w-fragen",
+    "W-Fragen – soru cümleleri",
+    {
+      "tr": "Önce aradığın bilgiye uygun soru kelimesini seç.",
+      "de": "W-Fragen – Grundlagen und Beispiele auf Türkisch.",
+      "en": "W-questions – fundamentals and examples explained in Turkish."
+    }
+  ],
+  [
+    "zahlen-uhrzeit-datum",
+    "Sayılar, saatler ve tarihler",
+    {
+      "tr": "21–99: birler + und + onluklar.",
+      "de": "Zahlen · Uhrzeit · Datum – Grundlagen und Beispiele auf Türkisch.",
+      "en": "Numbers · Time · Dates – fundamentals and examples explained in Turkish."
+    }
+  ],
+  [
+    "temporale-praepositionen",
+    "Temporale Präpositionen – zaman edatları",
+    {
+      "tr": "am: gün/tarih; im: ay/mevsim; um: saat.",
+      "de": "Temporale Präpositionen – Grundlagen und Beispiele auf Türkisch.",
+      "en": "Temporal prepositions – fundamentals and examples explained in Turkish."
+    }
+  ],
+  [
+    "akkusativ",
+    "Akkusativ – doğrudan nesne",
+    {
+      "tr": "Akkusativ nesneyi fiille birlikte belirle.",
+      "de": "Akkusativ – Grundlagen und Beispiele auf Türkisch.",
+      "en": "Accusative – fundamentals and examples explained in Turkish."
+    }
+  ],
+  [
+    "modalverben",
+    "Modalverben – yapabilmek, zorunda olmak, istemek",
+    {
+      "tr": "Modal çekimli, ana fiil mastar olarak sonda.",
+      "de": "Modalverben – Grundlagen und Beispiele auf Türkisch.",
+      "en": "Modal verbs – fundamentals and examples explained in Turkish."
+    }
+  ],
+  [
+    "trennbare-verben",
+    "Trennbare Verben – ayrılabilen fiiller",
+    {
+      "tr": "Çekimli ana cümlede ön ek sona gider.",
+      "de": "Trennbare Verben – Grundlagen und Beispiele auf Türkisch.",
+      "en": "Separable verbs – fundamentals and examples explained in Turkish."
+    }
+  ],
+  [
+    "imperativ",
+    "Imperativ – rica ve yönerge cümleleri",
+    {
+      "tr": "Önce du/ihr/Sie hitabını belirle.",
+      "de": "Imperativ – Grundlagen und Beispiele auf Türkisch.",
+      "en": "Imperative – fundamentals and examples explained in Turkish."
+    }
+  ],
+  [
+    "possessivartikel",
+    "Possessivartikel – mein, dein, sein, ihr",
+    {
+      "tr": "Sahip kökü, sahip olunan isim eki belirler.",
+      "de": "Possessivartikel – Grundlagen und Beispiele auf Türkisch.",
+      "en": "Possessive articles – fundamentals and examples explained in Turkish."
+    }
+  ],
+  [
+    "perfekt",
+    "Perfekt – geçmişte olanları anlatma",
+    {
+      "tr": "haben/sein çekilir; Partizip II sona gelir.",
+      "de": "Einführung ins Perfekt – Grundlagen und Beispiele auf Türkisch.",
+      "en": "Introduction to Perfekt – fundamentals and examples explained in Turkish."
+    }
+  ],
+  [
+    "lokale-praepositionen",
+    "Lokale Präpositionen – yer ve yön edatları",
+    {
+      "tr": "Önce Wo/Wohin/Woher ayrımını yap.",
+      "de": "Lokale Präpositionen – Grundlagen und Beispiele auf Türkisch.",
+      "en": "Local prepositions – fundamentals and examples explained in Turkish."
+    }
+  ]
+],
     A2: [
       ['dativ', 'Dativ', 'Dolaylı nesneyi, dem/der/den biçimlerini ve temel Dativ kullanımını öğren.'],
       ['wechselpraepositionen', 'Wechselpräpositionen', 'in, auf, an gibi edatları Wo?/Wohin? ayrımıyla kullan.'],
@@ -119,6 +262,8 @@
     }
   };
 
+  const initialGrammarHash = location.hash;
+  let activeTopic = null;
   let currentLevel = 'A1';
   let searchTerm = '';
 
@@ -326,7 +471,7 @@
   function localizeTopic(topic) {
     // Topic names are intentionally kept in standard German terminology.
     const index = {tr:0, de:1, en:2}[lang()] ?? 0;
-    return { id: topic[0], title: topic[1], description: topicDescriptions[topic[0]]?.[index] || topic[2] };
+    return { id: topic[0], title: topic[1], description: typeof topic[2] === 'object' ? (topic[2][lang()] || topic[2].tr) : (topicDescriptions[topic[0]]?.[index] || topic[2]) };
   }
 
   function root() {
@@ -515,13 +660,37 @@
     return row ? localizeTopic(row) : null;
   }
 
-  function openTopic(level, id) {
+  async function openTopic(level, id, options = {}) {
     const topic = findTopic(level, id);
     if (!topic) return;
 
     const list = document.getElementById('grammarListView');
     const detail = document.getElementById('grammarDetailView');
     if (!list || !detail) return;
+
+    if (level === 'A1' && window.BAA1Lessons) {
+      activeTopic = {level,id};
+      currentLevel = level;
+      detail.dataset.lesson = id;
+      detail.innerHTML = '<p role="status">Konu anlatımı yükleniyor…</p>';
+      list.classList.add('hidden');
+      detail.classList.add('active');
+      if (!options.restore) history.pushState({baPage:'grammar',grammarLevel:level,grammarTopic:id},'', '#grammar/A1/'+encodeURIComponent(id));
+      try {
+        await window.BAA1Lessons.render(detail,id,key=>openTopic('A1',key));
+        if (activeTopic?.id !== id) return;
+        detail.querySelectorAll('[data-a1-back]').forEach(button=>button.addEventListener('click',()=>closeA1()));
+        detail.querySelector('.a1-article-header h2')?.focus({preventScroll:true});
+      } catch (_) {
+        if (activeTopic?.id !== id) return;
+        detail.innerHTML='<p role="alert">Konu anlatımı yüklenemedi. Lütfen tekrar dene.</p><button type="button" class="btn primary" id="a1Retry">Tekrar dene</button><button type="button" class="btn ghost" id="a1Return">A1 konularına dön</button>';
+        detail.querySelector('#a1Retry').addEventListener('click',()=>openTopic(level,id,{restore:true}));
+        detail.querySelector('#a1Return').addEventListener('click',()=>closeA1());
+      }
+      if (!options.keepScroll) window.scrollTo({top: detail.getBoundingClientRect().top+window.scrollY-140,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+      return;
+    }
+    activeTopic = null;
 
     detail.innerHTML = `
       <article class="grammar-detail-card">
@@ -569,22 +738,45 @@
     window.scrollTo({top: root()?.offsetTop || 0, behavior: 'smooth'});
   }
 
-  function rerenderLanguage() {
-    const listHidden = document.getElementById('grammarListView')?.classList.contains('hidden');
-    if (listHidden) {
-      // Detail text will be refreshed by returning to list. Keep interaction predictable.
-      document.getElementById('grammarDetailView')?.classList.remove('active');
-      document.getElementById('grammarListView')?.classList.remove('hidden');
-    }
-    renderShell();
+  function closeA1(writeHistory=true) {
+    activeTopic=null;
+    const detail=document.getElementById('grammarDetailView');
+    if(detail) {detail.dataset.lesson='';detail.classList.remove('active');}
+    document.getElementById('grammarListView')?.classList.remove('hidden');
+    currentLevel='A1';
+    renderLevels();renderTopics();
+    if(writeHistory) history.pushState({baPage:'grammar'},'','#grammar');
+    window.scrollTo({top:root()?.offsetTop || 0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
   }
-
+  function rerenderLanguage() {
+    const previous=activeTopic;
+    const position=window.scrollY;
+    renderShell();
+    if(previous) openTopic(previous.level,previous.id,{restore:true,keepScroll:true}).then(()=>window.scrollTo({top:position,behavior:'instant'}));
+  }
+  function restoreRoute(hash=location.hash) {
+    const match=String(hash).match(/^#grammar\/A1\/([^/]+)$/);
+    if(match) {
+      let id;try{id=decodeURIComponent(match[1]);}catch(_){return;}
+      if(findTopic('A1',id)) {
+        if(activeTopic?.id!==id) openTopic('A1',id,{restore:true});
+        return;
+      }
+    }
+    if(location.hash==='#grammar' && activeTopic)closeA1(false);
+  }
   function init() {
     injectCss();
     if (!root()) return;
     renderShell();
+    if(initialGrammarHash.startsWith('#grammar/A1/')) {
+      history.replaceState({baPage:'grammar'},'',initialGrammarHash);
+      restoreRoute(initialGrammarHash);
+    }
   }
-
   window.addEventListener('ba:languagechange', rerenderLanguage);
+  window.addEventListener('popstate',()=>{if(location.hash.startsWith('#grammar'))restoreRoute();});
+  window.addEventListener('ba:pagechange',e=>{if(e.detail?.page==='grammar')restoreRoute();});
+  window.addEventListener('hashchange',()=>{if(location.hash.startsWith('#grammar')){window.BA?.showPage('grammar',{historyMode:'none',scroll:false});restoreRoute();}});
   document.addEventListener('DOMContentLoaded', init);
 })();

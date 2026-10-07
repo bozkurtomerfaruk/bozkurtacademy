@@ -1,0 +1,2866 @@
+{
+  "version": 1,
+  "language": "tr",
+  "lessons": [
+    {
+      "id": "konnektoren",
+      "title": "Konnektoren – düşünceleri birbirine bağla",
+      "lead": "İki kısa cümle kurabiliyorsun: Ich bin müde. Ich gehe schlafen. Şimdi bu düşünceler arasındaki ilişkiyi göstereceğiz. Neden mi bildiriyorsun, sonuç mu çıkarıyorsun, yoksa bir karşıtlık mı var? Bağlaç seçimi hem anlamı hem fiilin yerini belirler.",
+      "sections": [
+        {
+          "title": "1 · Önce anlamı, sonra cümle sırasını seç",
+          "paragraphs": [
+            "Konnektor, kelimeleri veya cümleleri birbirine bağlayan ifadedir. Üç temel grup var. und, aber, denn gibi bağlaçlar ana cümlenin fiil sırasını değiştirmez. weil, obwohl, wenn gibi bağlaçlar yan cümle kurar ve çekimli fiili sona gönderir. deshalb ve trotzdem ise cümlede bir yer kaplar; başta kullanılırsa hemen ardından çekimli fiil gelir."
+          ],
+          "examples": [
+            {
+              "de": "Ich bin müde und ich gehe schlafen.",
+              "tr": "Yorgunum ve uyumaya gidiyorum.",
+              "note": ""
+            },
+            {
+              "de": "Ich gehe schlafen, weil ich müde bin.",
+              "tr": "Yorgun olduğum için uyumaya gidiyorum.",
+              "note": ""
+            },
+            {
+              "de": "Ich bin müde, deshalb gehe ich schlafen.",
+              "tr": "Yorgunum, bu yüzden uyumaya gidiyorum.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "und / aber / denn",
+                "Ana cümle sırası"
+              ],
+              [
+                "weil / obwohl / wenn",
+                "Çekimli fiil sonda"
+              ],
+              [
+                "deshalb / trotzdem",
+                "Başta ise hemen sonra fiil"
+              ]
+            ],
+            "caption": "Aynı düşünceyi bağlarken önce bağlayıcının grubunu belirle."
+          }
+        },
+        {
+          "title": "2 · und, oder, aber, denn, sondern",
+          "paragraphs": [
+            "und ekleme, oder seçenek, aber karşıtlık, denn neden bildirir. sondern ise önceki olumsuz bilgiyi düzeltir; çoğu zaman nicht veya kein sonrasında gelir. Bu bağlaçları cümlenin dışında bir bağlantı noktası gibi düşün: sonraki ana cümlede fiil yine ikinci öğedir."
+          ],
+          "examples": [
+            {
+              "de": "Ich trinke Tee oder ich trinke Wasser.",
+              "tr": "Çay içerim ya da su içerim.",
+              "note": ""
+            },
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Evde kalıyorum çünkü hastayım.",
+              "note": ""
+            },
+            {
+              "de": "Das ist kein Fehler, sondern eine Ausnahme.",
+              "tr": "Bu bir hata değil, bir istisna.",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "3 · weil ile neden, deshalb ile sonuç",
+          "paragraphs": [
+            "weil ve da bir nedeni yan cümlede açıklar. deshalb, deswegen ve darum önce verilen bir nedenin sonucunu başlatabilir. Başta deshalb varsa özneyi otomatik olarak arkasına koyma: deshalb bleibe ich. Fiilin ikinci öğe kuralını koru. weil yan cümlesi başta olursa bütün yan cümle ilk öğe sayılır; virgülden sonra ana cümlenin fiili gelir."
+          ],
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Hasta olduğum için evde kalıyorum.",
+              "note": ""
+            },
+            {
+              "de": "Weil ich krank bin, bleibe ich zu Hause.",
+              "tr": "Hasta olduğum için evde kalıyorum.",
+              "note": ""
+            },
+            {
+              "de": "Ich bin krank, deshalb bleibe ich zu Hause.",
+              "tr": "Hastayım, bu yüzden evde kalıyorum.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "Weil ich krank bin,",
+              "bleibe",
+              "ich zu Hause."
+            ],
+            "labels": [
+              "İlk öğe: bütün yan cümle",
+              "Ana cümlenin çekimli fiili",
+              "Özne + devamı"
+            ]
+          }
+        },
+        {
+          "title": "4 · obwohl ve trotzdem: beklenene ters sonuç",
+          "paragraphs": [
+            "obwohl “-mesine rağmen” anlamında yan cümle kurar. trotzdem ve dennoch ise “buna rağmen” anlamıyla ana cümle içinde kullanılır. Yağmur yağıyorsa evde kalmak beklenebilir; dışarı çıkmak bu beklentiye ters sonuçtur. aber daha genel bir karşıtlık kurar."
+          ],
+          "examples": [
+            {
+              "de": "Obwohl es regnet, gehen wir spazieren.",
+              "tr": "Yağmur yağmasına rağmen yürüyüşe çıkıyoruz.",
+              "note": ""
+            },
+            {
+              "de": "Es regnet, trotzdem gehen wir spazieren.",
+              "tr": "Yağmur yağıyor, buna rağmen yürüyüşe çıkıyoruz.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Es regnet.",
+                "Durum"
+              ],
+              [
+                "Beklenti",
+                "Evde kalmak"
+              ],
+              [
+                "Trotzdem gehen wir raus.",
+                "Beklentiye ters sonuç"
+              ]
+            ],
+            "caption": "obwohl ve trotzdem aynı ilişkiyi farklı cümle yapılarıyla anlatır."
+          }
+        },
+        {
+          "title": "5 · wenn, falls, dass ve ob farklı soruları cevaplar",
+          "paragraphs": [
+            "wenn koşul veya zaman bildirir; falls özellikle olası bir koşulu vurgular. dass bir düşüncenin, bilginin ya da sözün içeriğini aktarır. ob dolaylı evet-hayır sorusu kurar ve “olup olmadığını” demektir. Türkçede benzer duyulsalar da görevlerini ayır."
+          ],
+          "examples": [
+            {
+              "de": "Wenn ich Zeit habe, komme ich mit.",
+              "tr": "Vaktim olursa ben de gelirim.",
+              "note": ""
+            },
+            {
+              "de": "Ich weiß, dass der Kurs beginnt.",
+              "tr": "Kursun başladığını biliyorum.",
+              "note": ""
+            },
+            {
+              "de": "Ich weiß nicht, ob der Kurs heute beginnt.",
+              "tr": "Kursun bugün başlayıp başlamadığını bilmiyorum.",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "6 · Zaman bağlaçlarıyla olayları sırala",
+          "paragraphs": [
+            "Geçmişte tek bir olay veya tek bir dönem için als kullan: Als ich ein Kind war. Tekrarlanan durumlarda ve şimdiki/gelecek zaman ilişkilerinde wenn kullan. bevor “-meden önce”, nachdem “-dikten sonra”, während “-iken”, bis “-e kadar”, seitdem “-den beri”, sobald “olur olmaz” anlamı verir. Geçmişte önce biten olayı nachdem ile Plusquamperfekt kullanarak belirginleştirebilirsin."
+          ],
+          "examples": [
+            {
+              "de": "Als ich ein Kind war, wohnte ich in Ankara.",
+              "tr": "Çocukken Ankara’da yaşıyordum.",
+              "note": ""
+            },
+            {
+              "de": "Wenn ich Ferien hatte, besuchte ich meine Oma.",
+              "tr": "Ne zaman tatilim olsa büyükannemi ziyaret ederdim.",
+              "note": ""
+            },
+            {
+              "de": "Nachdem wir gegessen hatten, gingen wir spazieren.",
+              "tr": "Yemek yedikten sonra yürüyüşe çıktık.",
+              "note": ""
+            },
+            {
+              "de": "Ich warte, bis du fertig bist.",
+              "tr": "Sen hazır olana kadar bekliyorum.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Önce",
+                "Wir hatten gegessen."
+              ],
+              [
+                "Sonra",
+                "Wir gingen spazieren."
+              ],
+              [
+                "Bağlantı",
+                "Nachdem …, …"
+              ]
+            ],
+            "caption": "Yazıdaki sıradan önce gerçek hayattaki olay sırasını bul."
+          }
+        },
+        {
+          "title": "7 · Amaç, sonuç ve yöntem aynı şey değildir",
+          "paragraphs": [
+            "damit ve um … zu amaç bildirir: hangi hedef için? Aynı eylemi yapan kişi söz konusuysa um … zu kullanılabilir. Farklı özneler için damit gerekir. sodass gerçekleşen sonucu anlatır. indem ve dadurch, dass yöntemi, yani bir işin nasıl yapıldığını açıklar."
+          ],
+          "examples": [
+            {
+              "de": "Ich lerne, um die Prüfung zu bestehen.",
+              "tr": "Sınavı geçmek için çalışıyorum.",
+              "note": ""
+            },
+            {
+              "de": "Ich spreche langsam, damit alle mich verstehen.",
+              "tr": "Herkes beni anlasın diye yavaş konuşuyorum.",
+              "note": ""
+            },
+            {
+              "de": "Er sprach sehr leise, sodass ich ihn nicht verstand.",
+              "tr": "Çok kısık sesle konuştu, bu yüzden onu anlamadım.",
+              "note": ""
+            },
+            {
+              "de": "Du lernst Wörter, indem du sie in Sätzen benutzt.",
+              "tr": "Kelimeleri cümlelerde kullanarak öğrenirsin.",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "8 · İki parçalı bağlaçları bir bütün olarak öğren",
+          "paragraphs": [
+            "sowohl … als auch ve nicht nur … sondern auch iki olumlu unsuru bağlar. weder … noch “ne … ne de”, entweder … oder “ya … ya da” anlamındadır. zwar … aber bir bilgiyi kabul edip karşıt yönünü gösterir. einerseits … andererseits iki açıdan değerlendirme yapar. Bağladığın parçalar aynı türde olsun: iki isim, iki fiil veya iki cümle."
+          ],
+          "examples": [
+            {
+              "de": "Sie spricht sowohl Deutsch als auch Türkisch.",
+              "tr": "Hem Almanca hem Türkçe konuşuyor.",
+              "note": ""
+            },
+            {
+              "de": "Ich trinke weder Kaffee noch Tee.",
+              "tr": "Ne kahve ne de çay içiyorum.",
+              "note": ""
+            },
+            {
+              "de": "Der Kurs ist zwar intensiv, aber sehr hilfreich.",
+              "tr": "Kurs yoğun olsa da çok yararlı.",
+              "note": ""
+            }
+          ],
+          "table": {
+            "headers": [
+              "Kalıp",
+              "Temel ilişki"
+            ],
+            "rows": [
+              [
+                "sowohl … als auch",
+                "İkisi de"
+              ],
+              [
+                "nicht nur … sondern auch",
+                "İlkine ek olarak ikincisi de"
+              ],
+              [
+                "weder … noch",
+                "İkisi de değil"
+              ],
+              [
+                "entweder … oder",
+                "İki seçenekten biri"
+              ],
+              [
+                "zwar … aber",
+                "Kabul + karşıt yön"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "9 · je … desto: birlikte değişen iki özellik",
+          "paragraphs": [
+            "Her iki tarafta karşılaştırma biçimi gerekir: mehr, besser, schneller gibi. je ile başlayan yan cümlede çekimli fiil sona gider. desto/umso ile başlayan karşılaştırma grubu ana cümlenin ilk öğesi olur; ardından çekimli fiil gelir. Burada sabit bir sayı değil, “ne kadar … o kadar …” ilişkisi anlatılır."
+          ],
+          "examples": [
+            {
+              "de": "Je mehr ich übe, desto sicherer spreche ich.",
+              "tr": "Ne kadar çok pratik yaparsam o kadar güvenli konuşurum.",
+              "note": ""
+            },
+            {
+              "de": "Je früher wir losfahren, desto schneller kommen wir an.",
+              "tr": "Ne kadar erken yola çıkarsak o kadar çabuk varırız.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "Je mehr ich übe,",
+              "desto sicherer",
+              "spreche",
+              "ich."
+            ],
+            "labels": [
+              "Yan cümle: fiil sonda",
+              "Karşılaştırma grubu",
+              "Çekimli fiil",
+              "Özne"
+            ]
+          }
+        },
+        {
+          "title": "10 · Virgül ve dönüşüm kontrolü",
+          "paragraphs": [
+            "Yan cümleyi ana cümleden virgülle ayır. aber, denn ve sondern ile bağlanan cümlelerde de virgül kullanılır. İsimleri bağlayan sowohl … als auch, weder … noch ve entweder … oder arasında normalde virgül olmaz. Edatlı bir ifadeyi fiilli yan cümleye çevirirken özne ve fiil eklemeyi unutma: trotz des Regens → obwohl es regnet."
+          ],
+          "examples": [
+            {
+              "de": "Trotz des Regens gehen wir spazieren.",
+              "tr": "Yağmura rağmen yürüyüşe çıkıyoruz.",
+              "note": ""
+            },
+            {
+              "de": "Obwohl es regnet, gehen wir spazieren.",
+              "tr": "Yağmur yağmasına rağmen yürüyüşe çıkıyoruz.",
+              "note": ""
+            },
+            {
+              "de": "Vor dem Essen wasche ich mir die Hände.",
+              "tr": "Yemekten önce ellerimi yıkarım.",
+              "note": ""
+            },
+            {
+              "de": "Bevor ich esse, wasche ich mir die Hände.",
+              "tr": "Yemek yemeden önce ellerimi yıkarım.",
+              "note": ""
+            }
+          ]
+        }
+      ],
+      "summary": [
+        "Önce anlam ilişkisini, sonra bağlayıcının grubunu seç.",
+        "weil/obwohl: fiil sonda; deshalb/trotzdem başta: hemen sonra fiil.",
+        "İki parçalı bağlaçları ve virgülleri bütün kalıp içinde kontrol et."
+      ],
+      "faq": [
+        {
+          "question": "denn ve weil aynı sırayı mı kullanır?",
+          "answer": "Hayır. denn sonrasında ana cümle sırası korunur: denn ich bin müde. weil çekimli fiili sona gönderir: weil ich müde bin."
+        },
+        {
+          "question": "trotzdem ich bin müde doğru mu?",
+          "answer": "Bu sırayla değil. Başta trotzdem varsa çekimli fiil hemen sonra gelir: Trotzdem bin ich müde. obwohl kullanırsan: obwohl ich müde bin."
+        },
+        {
+          "question": "ob ile wenn nasıl ayrılır?",
+          "answer": "ob bilinmeyen evet-hayır sorusunu aktarır: Ich weiß nicht, ob er kommt. wenn bir koşul veya zaman ilişkisi kurar: Wenn er kommt, essen wir."
+        }
+      ],
+      "related": [
+        "infinitiv-zu",
+        "plusquamperfekt",
+        "konjunktiv-ii-b1"
+      ],
+      "check": {
+        "question": "Ich bin krank, deshalb ___ ich zu Hause. (bleiben)",
+        "answer": "bleibe",
+        "why": "deshalb ilk öğedir; çekimli fiil bleibe hemen ardından, özne ich onun ardından gelir."
+      },
+      "titleTranslations": {
+        "tr": "Konnektoren",
+        "de": "Konnektoren",
+        "en": "Connectors"
+      },
+      "description": {
+        "tr": "Önce anlam ilişkisini, sonra bağlayıcının grubunu seç.",
+        "de": "Konnektoren – Erklärung auf Türkisch mit visuellen Beispielen.",
+        "en": "Connectors – Turkish explanation with visual examples."
+      }
+    },
+    {
+      "id": "relativsaetze",
+      "title": "Relativsätze – hangi kişi, hangi şey?",
+      "lead": "“Bir komşum var. Komşum Almanca konuşuyor” yerine “Almanca konuşan bir komşum var” diyebilirsin. Almancada bu ek bilgiyi bir Relativsatz ile veririz. Küçük bir yan cümle, önündeki ismi daha açık hâle getirir.",
+      "sections": [
+        {
+          "title": "1 · İki cümleden bir açıklama üret",
+          "paragraphs": [
+            "Önce açıklayacağın ismi bul. Ardından ikinci cümlede o ismin yerini ilgi zamiri alır. Yan cümle virgülle başlar; çekimli fiil sonda olur. İlk örneklerde yan cümleyi sona koymak daha kolaydır."
+          ],
+          "examples": [
+            {
+              "de": "Das ist der Mann. Er wohnt nebenan.",
+              "tr": "Bu adam. Yan dairede oturuyor.",
+              "note": ""
+            },
+            {
+              "de": "Das ist der Mann, der nebenan wohnt.",
+              "tr": "Bu, yan dairede oturan adam.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "der Mann",
+                "Açıklanan isim"
+              ],
+              [
+                "er wohnt nebenan",
+                "İkinci bilgi"
+              ],
+              [
+                "der nebenan wohnt",
+                "İlgi zamiri + fiil sonda"
+              ]
+            ],
+            "caption": "İkinci cümledeki er, açıklanan isme bağlı der olur."
+          }
+        },
+        {
+          "title": "2 · Zamir seçiminde iki ayrı karar ver",
+          "paragraphs": [
+            "Cinsiyet ve tekil/çoğul bilgisi açıklanan isimden gelir. Hâl bilgisi ise ilgi zamirinin yan cümledeki görevinden gelir. Ana cümlede ismin Akkusativ olması, ilgi zamirinin de Akkusativ olacağı anlamına gelmez. Ich sehe den Mann, der dort steht örneğinde den Mann ana cümlede nesne; der yan cümlede öznedir."
+          ],
+          "examples": [
+            {
+              "de": "Ich sehe den Mann, der dort steht.",
+              "tr": "Orada duran adamı görüyorum.",
+              "note": ""
+            },
+            {
+              "de": "Das ist der Mann, den ich kenne.",
+              "tr": "Bu, tanıdığım adam.",
+              "note": ""
+            }
+          ],
+          "table": {
+            "headers": [
+              "Hâl",
+              "maskulin",
+              "feminin",
+              "neutral",
+              "çoğul"
+            ],
+            "rows": [
+              [
+                "Nominativ",
+                "der",
+                "die",
+                "das",
+                "die"
+              ],
+              [
+                "Akkusativ",
+                "den",
+                "die",
+                "das",
+                "die"
+              ],
+              [
+                "Dativ",
+                "dem",
+                "der",
+                "dem",
+                "denen"
+              ],
+              [
+                "Genitiv",
+                "dessen",
+                "deren",
+                "dessen",
+                "deren"
+              ]
+            ]
+          },
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "1 · der Mann",
+                "Maskulin, tekil"
+              ],
+              [
+                "2 · Ich kenne ihn.",
+                "Yan cümlede Akkusativ"
+              ],
+              [
+                "Sonuç",
+                "den ich kenne"
+              ]
+            ],
+            "caption": "Önce ismin grubunu, sonra yan cümlenin içindeki görevi belirle."
+          }
+        },
+        {
+          "title": "3 · Özne, nesne ve Dativ örneklerini karşılaştır",
+          "paragraphs": [
+            "İlgi zamiri işi yapıyorsa Nominativ olur. Yan cümlede başka bir özne varsa fiilin istediği nesne hâlini düşün. kennen Akkusativ, helfen Dativ ister. Zamiri seçmek için yan cümleyi kısa bir bağımsız cümle olarak kurmayı dene."
+          ],
+          "examples": [
+            {
+              "de": "Die Frau, die dort arbeitet, ist meine Nachbarin.",
+              "tr": "Orada çalışan kadın komşum.",
+              "note": ""
+            },
+            {
+              "de": "Die Frau, die ich gestern gesehen habe, ist meine Nachbarin.",
+              "tr": "Dün gördüğüm kadın komşum.",
+              "note": ""
+            },
+            {
+              "de": "Die Frau, der ich geholfen habe, ist meine Nachbarin.",
+              "tr": "Yardım ettiğim kadın komşum.",
+              "note": ""
+            },
+            {
+              "de": "Die Kinder, denen ich helfe, lernen Deutsch.",
+              "tr": "Yardım ettiğim çocuklar Almanca öğreniyor.",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "4 · Edat varsa zamirin önüne getir",
+          "paragraphs": [
+            "mit, für, auf veya in gibi bir edat gerekiyorsa yan cümleye de taşınır. Hâli edat ve anlam belirler. mit her zaman Dativ ister. Bir konum için in + Dativ, hedef için in + Akkusativ kullanabilirsin. İlgi zamiriyle im gibi artikel kısaltmaları yapma: in dem ayrı yazılır."
+          ],
+          "examples": [
+            {
+              "de": "Das ist der Kollege, mit dem ich arbeite.",
+              "tr": "Bu, birlikte çalıştığım iş arkadaşım.",
+              "note": ""
+            },
+            {
+              "de": "Die Wohnung, in der ich wohne, ist klein.",
+              "tr": "Oturduğum daire küçük.",
+              "note": ""
+            },
+            {
+              "de": "Die Wohnung, in die ich ziehe, ist größer.",
+              "tr": "Taşınacağım daire daha büyük.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "Die Wohnung,",
+              "in die",
+              "ich",
+              "ziehe,",
+              "ist größer."
+            ],
+            "labels": [
+              "Açıklanan isim",
+              "Edat + hedef: Akkusativ",
+              "Yan cümlenin öznesi",
+              "Yan cümlenin fiili",
+              "Ana cümlenin devamı"
+            ]
+          }
+        },
+        {
+          "title": "5 · dessen ve deren ile sahiplik göster",
+          "paragraphs": [
+            "Birinin arabası, bir kadının çocuğu veya bir grubun projesi gibi sahiplik ilişkilerinde dessen/deren kullanılır. Biçimi sahip olunan nesne değil, sahibi gösteren açıklanan isim belirler. der Mann/das Kind için dessen, die Frau/çoğul die Kinder için deren kullanılır. Ardından gelen isme ayrıca der/die/das ekleme."
+          ],
+          "examples": [
+            {
+              "de": "Das ist der Mann, dessen Auto draußen steht.",
+              "tr": "Bu, arabası dışarıda duran adam.",
+              "note": ""
+            },
+            {
+              "de": "Die Frau, deren Sohn hier lernt, ist Ärztin.",
+              "tr": "Oğlu burada öğrenim gören kadın doktor.",
+              "note": ""
+            },
+            {
+              "de": "Die Kinder, deren Eltern arbeiten, bleiben hier.",
+              "tr": "Anne babaları çalışan çocuklar burada kalıyor.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "der Mann",
+                "Sahip: maskulin"
+              ],
+              [
+                "dessen Auto",
+                "Onun arabası"
+              ],
+              [
+                "dessen Auto draußen steht",
+                "Araba yan cümlenin öznesi"
+              ]
+            ],
+            "caption": "dessen, Auto kelimesinden değil der Mann ifadesinden seçilir."
+          }
+        },
+        {
+          "title": "6 · Yerler için wo, genel bilgiler için was",
+          "paragraphs": [
+            "Şehir ve ülke gibi yerleri açıklarken wo kullanılabilir: Berlin, wo ich wohne. Bir daire gibi somut isimlerde in der gibi edatlı zamir, konum ilişkisini daha açık gösterir. Hedefte wohin, kökende woher karşına çıkabilir. alles, nichts ve das Beste gibi genel ifadelerden sonra was sık kullanılır; bütün bir cümleye gönderme yapan was da vardır."
+          ],
+          "examples": [
+            {
+              "de": "Berlin, wo ich wohne, ist eine große Stadt.",
+              "tr": "Yaşadığım Berlin büyük bir şehir.",
+              "note": ""
+            },
+            {
+              "de": "Das ist alles, was ich weiß.",
+              "tr": "Bildiğim her şey bu.",
+              "note": ""
+            },
+            {
+              "de": "Er hat bestanden, was mich sehr freut.",
+              "tr": "Sınavı geçti; bu da beni çok sevindiriyor.",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "7 · Araya giren yan cümleyi iki virgülle kapat",
+          "paragraphs": [
+            "İlgi cümlesi açıklanan ismin hemen ardından gelir. Ana cümlenin içine girdiyse başlangıç ve bitişte virgül vardır. Yan cümleyi geçici olarak çıkarınca ana cümlenin hâlâ tamamlanmış olması gerekir. Perfekt kullanılan yan cümlede Partizip II ve çekimli yardımcı fiil sonda yer alır."
+          ],
+          "examples": [
+            {
+              "de": "Das Buch, das du mir empfohlen hast, ist spannend.",
+              "tr": "Bana önerdiğin kitap sürükleyici.",
+              "note": ""
+            },
+            {
+              "de": "Das Buch ist spannend.",
+              "tr": "Kitap sürükleyici.",
+              "note": "Yan cümle çıkarıldığında ana cümle kalır."
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Das Buch,",
+                "Ana cümle başlar"
+              ],
+              [
+                "das du mir empfohlen hast,",
+                "Ek bilgi: iki virgül arasında"
+              ],
+              [
+                "ist spannend.",
+                "Ana cümle devam eder"
+              ]
+            ],
+            "caption": "İlgi cümlesini bir açıklama parantezi gibi gör."
+          }
+        }
+      ],
+      "summary": [
+        "Cinsiyet ve sayı açıklanan isimden; hâl yan cümledeki görevden gelir.",
+        "Çekimli fiil sonda, ilgi cümlesi virgüllerle ayrılır.",
+        "Dativ çoğul denen; sahiplik dessen/deren."
+      ],
+      "faq": [
+        {
+          "question": "Ana cümlede den Mann varsa neden der olabilir?",
+          "answer": "Çünkü iki cümlenin görevleri ayrı değerlendirilir. Ich sehe den Mann, der lacht: den Mann ana cümlede nesne, der yan cümlede öznedir."
+        },
+        {
+          "question": "mit dem yerine mit der nasıl seçilir?",
+          "answer": "mit Dativ ister. Açıklanan isim maskulin/nötr ise dem, feminin ise der, çoğul ise denen kullanılır."
+        },
+        {
+          "question": "dessen sonrasında iyelik artikeli gerekir mi?",
+          "answer": "Hayır. dessen Auto zaten “onun arabası” anlamındadır; dessen sein Auto biçimi kullanılmaz."
+        }
+      ],
+      "related": [
+        "genitiv",
+        "konnektoren",
+        "n-deklination"
+      ],
+      "check": {
+        "question": "Das ist der Kollege, mit ___ ich arbeite.",
+        "answer": "dem",
+        "why": "der Kollege maskulin; mit Dativ ister. Bu yüzden mit dem kullanılır."
+      },
+      "titleTranslations": {
+        "tr": "Relativsätze",
+        "de": "Relativsätze",
+        "en": "Relative clauses"
+      },
+      "description": {
+        "tr": "Cinsiyet ve sayı açıklanan isimden; hâl yan cümledeki görevden gelir.",
+        "de": "Relativsätze – Erklärung auf Türkisch mit visuellen Beispielen.",
+        "en": "Relative clauses – Turkish explanation with visual examples."
+      }
+    },
+    {
+      "id": "passiv",
+      "title": "Passiv – işi yapan yerine yapılan iş",
+      "lead": "Die Firma baut eine Schule cümlesi işi yapan firmayı öne çıkarır. Eine Schule wird gebaut cümlesi ise yapılan işe odaklanır. Passiv, kimin yaptığını bilmediğimizde veya yapılan işlem daha önemli olduğunda kullanışlıdır.",
+      "sections": [
+        {
+          "title": "1 · Bakış açısını değiştir",
+          "paragraphs": [
+            "Aktiv cümlede işi yapan kişi veya kurum öznedir. Temel Passiv dönüşümünde Akkusativ nesne yeni özne olur. Fiil werden + Partizip II biçimine çevrilir. Yeni özneye göre werden çekilir. İşi yapan kişiyi söylemek zorunda değilsin."
+          ],
+          "examples": [
+            {
+              "de": "Der Mechaniker repariert das Auto.",
+              "tr": "Tamirci arabayı onarıyor.",
+              "note": ""
+            },
+            {
+              "de": "Das Auto wird repariert.",
+              "tr": "Araba onarılıyor.",
+              "note": ""
+            },
+            {
+              "de": "Die Autos werden repariert.",
+              "tr": "Arabalar onarılıyor.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Der Mechaniker repariert das Auto.",
+                "Aktiv: yapan kişi önde"
+              ],
+              [
+                "das Auto → Das Auto",
+                "Akkusativ nesne → Nominativ özne"
+              ],
+              [
+                "Das Auto wird repariert.",
+                "Passiv: yapılan iş önde"
+              ]
+            ],
+            "caption": "Yeni özne tekilse wird, çoğulsa werden kullan."
+          }
+        },
+        {
+          "title": "2 · Präsens: werden + Partizip II",
+          "paragraphs": [
+            "werden çekimini hatırla: ich werde, du wirst, er/sie/es wird, wir werden, ihr werdet, sie/Sie werden. Partizip II ana cümlede sonda kalır. Präsens Passiv hem şu anda yapılan işlemi hem düzenli bir uygulamayı anlatabilir. Buradaki werden gelecek zaman yardımcı fiili değildir."
+          ],
+          "examples": [
+            {
+              "de": "Die Tür wird geöffnet.",
+              "tr": "Kapı açılıyor.",
+              "note": ""
+            },
+            {
+              "de": "Hier werden Fahrräder verkauft.",
+              "tr": "Burada bisiklet satılıyor.",
+              "note": ""
+            },
+            {
+              "de": "Die Räume werden jeden Tag gereinigt.",
+              "tr": "Odalar her gün temizleniyor.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "Die Räume",
+              "werden",
+              "jeden Tag",
+              "gereinigt."
+            ],
+            "labels": [
+              "Çoğul özne",
+              "Çekimli werden",
+              "Zaman ifadesi",
+              "Partizip II"
+            ]
+          }
+        },
+        {
+          "title": "3 · Geçmişte Passiv: wurde ve ist … worden",
+          "paragraphs": [
+            "Präteritum Passiv için wurde/wurden + Partizip II kullanılır. Perfekt Passiv için sein + Partizip II + worden gerekir. Passiv yardımcı fiilinin bu kullanımında geworden değil worden yazılır. Geçmişteki bir işlemi anlatırken iki yapı da bağlama göre kullanılabilir."
+          ],
+          "examples": [
+            {
+              "de": "Der Brief wurde gestern verschickt.",
+              "tr": "Mektup dün gönderildi.",
+              "note": ""
+            },
+            {
+              "de": "Der Brief ist gestern verschickt worden.",
+              "tr": "Mektup dün gönderildi.",
+              "note": ""
+            }
+          ],
+          "table": {
+            "headers": [
+              "Zaman",
+              "Örnek",
+              "Yapı"
+            ],
+            "rows": [
+              [
+                "Präsens",
+                "Die Tür wird geöffnet.",
+                "werden + Partizip II"
+              ],
+              [
+                "Präteritum",
+                "Die Tür wurde geöffnet.",
+                "wurde + Partizip II"
+              ],
+              [
+                "Perfekt",
+                "Die Tür ist geöffnet worden.",
+                "sein + Partizip II + worden"
+              ]
+            ]
+          },
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "wird geöffnet",
+                "Şimdiki işlem"
+              ],
+              [
+                "wurde geöffnet",
+                "Geçmişteki işlem"
+              ],
+              [
+                "ist geöffnet worden",
+                "Perfekt: worden"
+              ]
+            ],
+            "caption": "Zaman değişirken geöffnet aynı kalır; yardımcı fiil grubu değişir."
+          }
+        },
+        {
+          "title": "4 · Modal fiille zorunluluk ve olanak",
+          "paragraphs": [
+            "müssen, können veya dürfen çekimli fiil olur. Sonda Partizip II + werden yer alır. Böylece “yapılmalı”, “yapılabilir” veya “yapılmasına izin var” anlamı kurulur. Geçmişte modal fiili musste/konnte gibi çekebilirsin."
+          ],
+          "examples": [
+            {
+              "de": "Das Formular muss ausgefüllt werden.",
+              "tr": "Form doldurulmalı.",
+              "note": ""
+            },
+            {
+              "de": "Der Termin kann verschoben werden.",
+              "tr": "Randevu ertelenebilir.",
+              "note": ""
+            },
+            {
+              "de": "Die Rechnung musste sofort bezahlt werden.",
+              "tr": "Faturanın hemen ödenmesi gerekiyordu.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "Das Formular",
+              "muss",
+              "heute",
+              "ausgefüllt werden."
+            ],
+            "labels": [
+              "Özne",
+              "Çekimli modal",
+              "Zaman",
+              "Partizip II + werden"
+            ]
+          }
+        },
+        {
+          "title": "5 · Yapan kişiyi von ile ekle; Dativ değişmez",
+          "paragraphs": [
+            "Yapan kişi veya kurumu belirtmek için çoğunlukla von + Dativ kullanılır. durch + Akkusativ ise bir neden, araç veya aracı etkiyi öne çıkarabilir. Her iki kullanımda da bağlam önemlidir. Aktivde Dativ olan kişi Passivde Nominativ yapılmaz: Man hilft dem Kind → Dem Kind wird geholfen."
+          ],
+          "examples": [
+            {
+              "de": "Der Text wird von der Lehrerin korrigiert.",
+              "tr": "Metin öğretmen tarafından düzeltiliyor.",
+              "note": ""
+            },
+            {
+              "de": "Die Straße wurde durch den Sturm beschädigt.",
+              "tr": "Yol fırtına nedeniyle hasar gördü.",
+              "note": ""
+            },
+            {
+              "de": "Dem Kind wird geholfen.",
+              "tr": "Çocuğa yardım ediliyor.",
+              "note": "dem Kind Dativ kalır; özne yoktur."
+            }
+          ]
+        },
+        {
+          "title": "6 · Özne olmayan Passiv ve es",
+          "paragraphs": [
+            "Bazı fiillerle yeni bir özne oluşmaz. Es wird hier viel gearbeitet cümlesindeki es başlangıç yerini doldurur; bir nesneyi göstermez. Hier başa gelirse es kaybolur: Hier wird viel gearbeitet. Özne olmadığı için çekimli fiil tekil wird olur. Bu yapı özellikle faaliyetleri genel olarak anlatır."
+          ],
+          "examples": [
+            {
+              "de": "Es wird hier viel gearbeitet.",
+              "tr": "Burada çok çalışılıyor.",
+              "note": ""
+            },
+            {
+              "de": "Hier wird viel gearbeitet.",
+              "tr": "Burada çok çalışılıyor.",
+              "note": ""
+            },
+            {
+              "de": "Den Gästen wurde geholfen.",
+              "tr": "Misafirlere yardım edildi.",
+              "note": "den Gästen çoğul olsa da Dativdir; özne değildir."
+            }
+          ]
+        },
+        {
+          "title": "7 · İşlem ile sonucu ayır",
+          "paragraphs": [
+            "werden + Partizip II yapılan işlemi gösterir; sein + Partizip II çoğu uygun fiille sonuç durumunu gösterir. Die Tür wird geöffnet kapının açılma işlemini, Die Tür ist geöffnet kapının açık durumunu anlatır. Perfekt Passivde ise işlem anlatılır ve worden bulunur: Die Tür ist geöffnet worden."
+          ],
+          "examples": [
+            {
+              "de": "Die Tür wird geschlossen.",
+              "tr": "Kapı kapatılıyor.",
+              "note": ""
+            },
+            {
+              "de": "Die Tür ist geschlossen.",
+              "tr": "Kapı kapalı.",
+              "note": ""
+            },
+            {
+              "de": "Die Tür ist geschlossen worden.",
+              "tr": "Kapı kapatıldı.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "wird geschlossen",
+                "İşlem sürüyor"
+              ],
+              [
+                "ist geschlossen",
+                "Sonuç durumu"
+              ],
+              [
+                "ist geschlossen worden",
+                "İşlem gerçekleşti"
+              ]
+            ],
+            "caption": "sein gördüğünde yalnız ona bakma; worden olup olmadığını da kontrol et."
+          }
+        }
+      ],
+      "summary": [
+        "Temel dönüşüm: Akkusativ nesne yeni özne olur.",
+        "Passiv: werden + Partizip II; Perfektte worden kullanılır.",
+        "Modal Passiv: muss/kann + Partizip II + werden."
+      ],
+      "faq": [
+        {
+          "question": "Her Aktiv cümle aynı şekilde Passiv olur mu?",
+          "answer": "Hayır. Özellikle Akkusativ nesneli eylemler temel dönüşüme uygundur. Dativ fiillerinde nesne Dativ kalır; bazı fiillerle Passiv doğal değildir veya kullanılmaz."
+        },
+        {
+          "question": "worden ile geworden aynı mı?",
+          "answer": "Hayır. Passiv Perfektte worden kullan: ist repariert worden. werden “olmak” anlamındaysa geworden kullanılır: Er ist Arzt geworden."
+        },
+        {
+          "question": "Das Auto wird repariert gelecek zaman mı?",
+          "answer": "Bu Präsens Passivdir: araba onarılıyor. Gelecek zaman Aktivde wird + mastar olur: Er wird das Auto reparieren."
+        }
+      ],
+      "related": [
+        "praeteritum-b1",
+        "infinitiv-zu",
+        "konnektoren"
+      ],
+      "check": {
+        "question": "Die Dokumente müssen heute ___ ___. (prüfen, Passiv)",
+        "answer": "geprüft werden",
+        "why": "Modal fiil müssen çekimlidir; sonda Partizip II geprüft + mastar werden bulunur."
+      },
+      "titleTranslations": {
+        "tr": "Passiv",
+        "de": "Passiv",
+        "en": "Passive voice"
+      },
+      "description": {
+        "tr": "Temel dönüşüm: Akkusativ nesne yeni özne olur.",
+        "de": "Passiv – Erklärung auf Türkisch mit visuellen Beispielen.",
+        "en": "Passive voice – Turkish explanation with visual examples."
+      }
+    },
+    {
+      "id": "konjunktiv-ii-b1",
+      "title": "Konjunktiv II – varsayım ve gerçekleşmemiş geçmiş",
+      "lead": "A2’de hätte, wäre ve würde ile kibar istekler kurdun. B1’de bunları bir adım ileri taşıyacağız: gerçek olmayan bir durumu, geçmişte farklı olmasını istediğin bir olayı ve bunun sonucunu anlatacağız. Önce olay şimdi mi, geçmişte mi diye sor.",
+      "sections": [
+        {
+          "title": "1 · Gerçek bilgi ile varsayımı ayır",
+          "paragraphs": [
+            "Ich habe Zeit gerçek bir bilgidir. Wenn ich Zeit hätte, … ise “vaktim olsaydı” varsayımıdır; şu anda vakit olmadığı veya durumun gerçek dışı düşünüldüğü anlaşılır. Her wenn cümlesi Konjunktiv II değildir: Wenn ich Zeit habe, komme ich gerçekçi bir koşul olabilir."
+          ],
+          "examples": [
+            {
+              "de": "Ich habe keine Zeit.",
+              "tr": "Vaktim yok.",
+              "note": ""
+            },
+            {
+              "de": "Wenn ich Zeit hätte, würde ich mitkommen.",
+              "tr": "Vaktim olsaydı ben de gelirdim.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Gerçek",
+                "Ich habe keine Zeit."
+              ],
+              [
+                "Varsayılan koşul",
+                "Wenn ich Zeit hätte,"
+              ],
+              [
+                "Varsayılan sonuç",
+                "würde ich mitkommen."
+              ]
+            ],
+            "caption": "Konjunktiv II gerçek durumun alternatifini kurar."
+          }
+        },
+        {
+          "title": "2 · hätte, wäre ve modal biçimler",
+          "paragraphs": [
+            "haben → hätte, sein → wäre. Sık kullanılan modal biçimler könnte, müsste, dürfte ve sollte olur. können ile konnte geçmişi, könnte varsayım/olasılık veya kibarlığı gösterir. wollen → wollte ve sollen → sollte biçimleri Präteritum ile aynı görünür; anlamı bağlam belirler. hätte/wäre kişi ekleri alır."
+          ],
+          "examples": [
+            {
+              "de": "Ich wäre gern zu Hause.",
+              "tr": "Evde olmayı isterdim.",
+              "note": ""
+            },
+            {
+              "de": "Mit mehr Übung könntest du flüssiger sprechen.",
+              "tr": "Daha çok pratikle daha akıcı konuşabilirdin.",
+              "note": ""
+            },
+            {
+              "de": "Du solltest eine Pause machen.",
+              "tr": "Bir ara vermelisin.",
+              "note": ""
+            }
+          ],
+          "table": {
+            "headers": [
+              "Özne",
+              "haben",
+              "sein",
+              "können"
+            ],
+            "rows": [
+              [
+                "ich",
+                "hätte",
+                "wäre",
+                "könnte"
+              ],
+              [
+                "du",
+                "hättest",
+                "wärst",
+                "könntest"
+              ],
+              [
+                "er / sie / es",
+                "hätte",
+                "wäre",
+                "könnte"
+              ],
+              [
+                "wir / sie / Sie",
+                "hätten",
+                "wären",
+                "könnten"
+              ],
+              [
+                "ihr",
+                "hättet",
+                "wärt",
+                "könntet"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "3 · würde + mastar ile daha fazla fiil kullan",
+          "paragraphs": [
+            "Birçok fiilde würde + mastar günlük kullanım için doğal bir seçenektir. Ana cümlede würde çekilir, ana fiil mastar olarak sonda kalır. haben, sein ve modal fiillerde kısa biçimler genellikle daha doğaldır: hätte, wäre, könnte. würde ile würden ayrımını özneye göre yap."
+          ],
+          "examples": [
+            {
+              "de": "Ich würde gern in Berlin wohnen.",
+              "tr": "Berlin’de yaşamayı isterdim.",
+              "note": ""
+            },
+            {
+              "de": "Wenn wir mehr Geld hätten, würden wir öfter reisen.",
+              "tr": "Daha çok paramız olsaydı daha sık seyahat ederdik.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "Wenn wir mehr Geld hätten,",
+              "würden",
+              "wir öfter",
+              "reisen."
+            ],
+            "labels": [
+              "Yan cümle: hätte sonda",
+              "Ana cümlenin fiili",
+              "Özne + devamı",
+              "Mastar"
+            ]
+          }
+        },
+        {
+          "title": "4 · Geçmişte gerçekleşmeyen olay: hätte/wäre + Partizip II",
+          "paragraphs": [
+            "Şimdi farklı bir geçmiş hayal et. hätte gelernt “çalışmış olsaydım / çalışırdım”, wäre gekommen “gelmiş olsaydım / gelirdim” gibi çevrilebilir; kesin anlamı cümledeki görev belirler. Yardımcı fiil Perfektteki seçime dayanır: lernen haben alır, kommen sein alır. würde gelernt biçimi bu geçmiş yapının yerine geçmez."
+          ],
+          "examples": [
+            {
+              "de": "Ich habe nicht gelernt.",
+              "tr": "Çalışmadım.",
+              "note": ""
+            },
+            {
+              "de": "Wenn ich gelernt hätte, hätte ich die Prüfung bestanden.",
+              "tr": "Çalışmış olsaydım sınavı geçerdim.",
+              "note": ""
+            },
+            {
+              "de": "Wenn du früher gekommen wärst, hättest du Anna getroffen.",
+              "tr": "Daha erken gelseydin Anna’yla karşılaşırdın.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Gerçek geçmiş",
+                "Ich habe nicht gelernt."
+              ],
+              [
+                "Farklı geçmiş",
+                "Wenn ich gelernt hätte,"
+              ],
+              [
+                "Farklı sonuç",
+                "hätte ich bestanden."
+              ]
+            ],
+            "caption": "Geçmiş varsayımında Partizip II + hätte/wäre kullan."
+          }
+        },
+        {
+          "title": "5 · Geçmişte zorunluluk: hätte … machen müssen",
+          "paragraphs": [
+            "Modal fiille geçmiş varsayımı daha ileri bir yapıdır. Ana cümlede hätte + ana fiilin mastarı + modal mastar kullanılır. Buna Ersatzinfinitiv denir: müssen burada gemusst olmaz. Hätte ich früher losfahren sollen? gibi örnekleri bütün kalıp olarak çalış. İlk aşamada ana cümleleri sağlamlaştır."
+          ],
+          "examples": [
+            {
+              "de": "Ich hätte früher lernen müssen.",
+              "tr": "Daha erken çalışmam gerekirdi.",
+              "note": ""
+            },
+            {
+              "de": "Du hättest mich anrufen können.",
+              "tr": "Beni arayabilirdin.",
+              "note": ""
+            },
+            {
+              "de": "Wir hätten ein Taxi nehmen sollen.",
+              "tr": "Taksiye binmeliydik.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "Du",
+              "hättest",
+              "mich",
+              "anrufen können."
+            ],
+            "labels": [
+              "Özne",
+              "Çekimli hätte",
+              "Nesne",
+              "İki mastar: ana fiil + modal"
+            ]
+          }
+        },
+        {
+          "title": "6 · Dilek, kibarlık ve tavsiye",
+          "paragraphs": [
+            "Könnten Sie …? kibar bir ricadır. An deiner Stelle würde ich … “senin yerinde olsam” tavsiyesi kurar. Wenn ich doch mehr Zeit hätte! gerçekleşmeyen bir dileği vurgular; geçmiş dilekte Partizip II eklenir. doch, nur ve bloß bu dileği güçlendirebilir; zorunlu parçalar değildir."
+          ],
+          "examples": [
+            {
+              "de": "Könnten Sie das bitte wiederholen?",
+              "tr": "Bunu lütfen tekrar edebilir misiniz?",
+              "note": ""
+            },
+            {
+              "de": "An deiner Stelle würde ich mit der Lehrerin sprechen.",
+              "tr": "Senin yerinde olsam öğretmenle konuşurdum.",
+              "note": ""
+            },
+            {
+              "de": "Wenn ich doch mehr Zeit hätte!",
+              "tr": "Keşke daha çok vaktim olsa!",
+              "note": ""
+            },
+            {
+              "de": "Wenn ich doch früher angefangen hätte!",
+              "tr": "Keşke daha erken başlamış olsaydım!",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "7 · Hata kontrolü: zaman ve fiil sırası",
+          "paragraphs": [
+            "Önce varsayımın zamanını belirle. Şimdiki/geleceğe dönük varsayımda würde lernen; geçmiş varsayımında hätte gelernt. wenn yan cümlesinde çekimli fiil sona gider. Yan cümle baştaysa ana cümlenin çekimli fiili virgülden hemen sonra gelir. Geçmişteki bir koşulun bugüne etkisi de olabilir; anlamı okuyarak karar ver."
+          ],
+          "examples": [
+            {
+              "de": "Wenn ich gestern früher ins Bett gegangen wäre, wäre ich jetzt nicht so müde.",
+              "tr": "Dün daha erken yatsaydım şimdi bu kadar yorgun olmazdım.",
+              "note": "Koşul geçmişte, sonuç şimdi."
+            }
+          ]
+        }
+      ],
+      "summary": [
+        "Şimdiki varsayım: hätte/wäre veya würde + mastar.",
+        "Geçmiş varsayımı: hätte/wäre + Partizip II.",
+        "Modal geçmiş varsayımı: hätte + iki mastar."
+      ],
+      "faq": [
+        {
+          "question": "würde ve hätte birbirinin yerine geçer mi?",
+          "answer": "Hayır. würde ana fiilin mastarıyla kullanılır: würde lernen. hätte ise haben biçimidir veya geçmiş varsayımının yardımcı fiilidir: hätte Zeit; hätte gelernt."
+        },
+        {
+          "question": "wenn olmadan koşul kurabilir miyim?",
+          "answer": "Evet. Hätte ich mehr Zeit, würde ich mehr lesen. İlk cümlede çekimli fiil başa gelir. Önce wenn ile olan temel yapıyı öğrenmek daha kolaydır."
+        },
+        {
+          "question": "hätte gelernt ile hatte gelernt farkı ne?",
+          "answer": "hätte gelernt gerçekleşmemiş/varsayılan geçmişi, hatte gelernt gerçek bir geçmiş olaydan önceki olayı anlatır. Umlaut anlamı değiştirir."
+        }
+      ],
+      "related": [
+        "plusquamperfekt",
+        "konnektoren",
+        "praeteritum-b1"
+      ],
+      "check": {
+        "question": "Wenn ich früher losgegangen ___, hätte ich den Bus erreicht.",
+        "answer": "wäre",
+        "why": "losgehen Perfektte sein alır; geçmiş varsayımında gegangen wäre kullanılır."
+      },
+      "titleTranslations": {
+        "tr": "Konjunktiv II",
+        "de": "Konjunktiv II",
+        "en": "Konjunktiv II"
+      },
+      "description": {
+        "tr": "Şimdiki varsayım: hätte/wäre veya würde + mastar.",
+        "de": "Konjunktiv II – Erklärung auf Türkisch mit visuellen Beispielen.",
+        "en": "Konjunktiv II – Turkish explanation with visual examples."
+      }
+    },
+    {
+      "id": "genitiv",
+      "title": "Genitiv – kimin, neyin?",
+      "lead": "“Öğretmenin kitabı” veya “kursun başlangıcı” dediğinde iki isim arasında bir ilişki kurarsın. Almancada bunu Genitiv ile gösterebilirsin: das Buch der Lehrerin, der Beginn des Kurses. Önce hangi şeyin kime veya neye ait olduğunu bulacağız.",
+      "sections": [
+        {
+          "title": "1 · Wessen? sorusunu sor",
+          "paragraphs": [
+            "Genitiv yalnızca gerçek mülkiyet değildir; bir şeyin parçasını veya iki kavramın ilişkisini de gösterir. Önce ana ismi belirle: das Buch. Ardından kimin kitabı olduğunu ekle: der Lehrerin. Genitiv ifade çoğunlukla açıkladığı isimden sonra gelir."
+          ],
+          "examples": [
+            {
+              "de": "Das ist das Buch der Lehrerin.",
+              "tr": "Bu, öğretmenin kitabı.",
+              "note": ""
+            },
+            {
+              "de": "Der Beginn des Kurses ist um neun Uhr.",
+              "tr": "Kursun başlangıcı saat dokuzda.",
+              "note": ""
+            },
+            {
+              "de": "Wessen Tasche ist das?",
+              "tr": "Bu kimin çantası?",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "das Buch",
+                "Neyden söz ediyoruz?"
+              ],
+              [
+                "Wessen Buch?",
+                "Kimin kitabı?"
+              ],
+              [
+                "der Lehrerin",
+                "Genitiv: sahibini belirtir"
+              ]
+            ],
+            "caption": "Ana isim ve onu açıklayan Genitiv ifade farklı görevler taşır."
+          }
+        },
+        {
+          "title": "2 · Artikel ve isim sonunu birlikte değiştir",
+          "paragraphs": [
+            "Maskulin ve neutral tekilde belirli artikel des, belirsiz artikel eines olur; isim de genellikle -(e)s alır. Feminin tekilde der/einer, çoğulda der kullanılır ve bu nedenle isme Genitiv eki eklenmez. Çoğulda belirsiz artikel ein bulunmaz. des Kindes veya des Hauses gibi biçimleri kelimeyle birlikte öğren."
+          ],
+          "table": {
+            "headers": [
+              "Grup",
+              "Belirli artikel",
+              "Belirsiz artikel"
+            ],
+            "rows": [
+              [
+                "maskulin",
+                "des Mannes",
+                "eines Mannes"
+              ],
+              [
+                "feminin",
+                "der Frau",
+                "einer Frau"
+              ],
+              [
+                "neutral",
+                "des Kindes",
+                "eines Kindes"
+              ],
+              [
+                "çoğul",
+                "der Kinder",
+                "—"
+              ]
+            ]
+          },
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "der Kurs",
+                "Maskulin tekil"
+              ],
+              [
+                "des + Kurs + es",
+                "Artikel ve isim sonu"
+              ],
+              [
+                "der Beginn des Kurses",
+                "Tam ifade"
+              ]
+            ],
+            "caption": "Sadece der → des değişimini yapmak yetmez: Kurs → Kurses."
+          }
+        },
+        {
+          "title": "3 · -s, -es ve özel isimler",
+          "paragraphs": [
+            "Birçok çok heceli isim -s alır: des Lehrers. Tek hecelilerde -es sık görülür: des Kindes. s, ß, x veya z gibi seslerle biten isimlerde çoğunlukla -es gerekir: des Hauses, des Platzes. Zayıf maskulin isimler başka bir gruptur: des Studenten. Kişi adları artikel olmadan çoğunlukla -s alır ve isimden önce gelebilir: Annas Buch. Zaten s sesiyle biten adlarda kesme işareti kullanılır: Max’ Buch."
+          ],
+          "examples": [
+            {
+              "de": "Das ist Annas Buch.",
+              "tr": "Bu Anna’nın kitabı.",
+              "note": ""
+            },
+            {
+              "de": "Max’ Fahrrad ist neu.",
+              "tr": "Max’ın bisikleti yeni.",
+              "note": ""
+            },
+            {
+              "de": "Die Nummer des Platzes steht auf dem Ticket.",
+              "tr": "Yerin numarası bilette yazıyor.",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "4 · İyelik artikeli ve sıfat da hâle uyar",
+          "paragraphs": [
+            "mein, dein, sein gibi iyelik artikelleri de Genitivde çekilir: meines Bruders, meiner Schwester. Belirli veya iyelik artikeliyle gelen Genitiv sıfatlarında bu örneklerde -en görürsün. Ana ismin artikeli ise kendi cümle görevine göre seçilir: Ich sehe das Auto meines alten Freundes."
+          ],
+          "examples": [
+            {
+              "de": "Das Auto meines Bruders ist alt.",
+              "tr": "Erkek kardeşimin arabası eski.",
+              "note": ""
+            },
+            {
+              "de": "Ich sehe das Auto meiner neuen Nachbarin.",
+              "tr": "Yeni komşumun arabasını görüyorum.",
+              "note": ""
+            },
+            {
+              "de": "Die Meinung der jungen Leute ist wichtig.",
+              "tr": "Gençlerin görüşü önemli.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "das Auto",
+              "meines",
+              "alten",
+              "Freundes"
+            ],
+            "labels": [
+              "Ana isim: araba",
+              "Genitiv iyelik artikeli",
+              "Sıfat: -en",
+              "Maskulin isim: -es"
+            ]
+          }
+        },
+        {
+          "title": "5 · wegen ve während ile Genitiv",
+          "paragraphs": [
+            "Standart yazı dilinde wegen “nedeniyle”, während “sırasında” ve trotz “rağmen” gibi edatlar Genitivle kullanılır. Konuşmada özellikle wegen sonrasında Dativ duyabilirsin; bu alıştırmalarda standart Genitiv biçimini çalış. während bir isimden önce edat, çekimli yan cümlenin önünde ise bağlaç olabilir."
+          ],
+          "examples": [
+            {
+              "de": "Wegen des Regens bleiben wir zu Hause.",
+              "tr": "Yağmur nedeniyle evde kalıyoruz.",
+              "note": ""
+            },
+            {
+              "de": "Während des Unterrichts bleibt mein Handy aus.",
+              "tr": "Ders sırasında telefonum kapalı kalır.",
+              "note": ""
+            },
+            {
+              "de": "Während die Lehrerin erklärt, mache ich Notizen.",
+              "tr": "Öğretmen açıklarken not alıyorum.",
+              "note": "Bağlaç: çekimli fiil yan cümlenin sonunda."
+            }
+          ],
+          "table": {
+            "headers": [
+              "İsimli ifade",
+              "Fiilli cümle"
+            ],
+            "rows": [
+              [
+                "wegen des Regens",
+                "weil es regnet"
+              ],
+              [
+                "während des Unterrichts",
+                "während wir Unterricht haben"
+              ],
+              [
+                "trotz des Regens",
+                "obwohl es regnet"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "6 · von + Dativ ile karşılaştır ve son kontrolü yap",
+          "paragraphs": [
+            "Günlük konuşmada sahiplik için von + Dativ de kullanılır: das Auto von meinem Bruder. Genitiv yazılı ve daha resmî anlatımda çok yaygındır. Wessen? sorusunda ana ismi tekrarlaman gerekmez: Das ist Annas Tasche. Kontrol ederken hem artikel hem isim sonuna bak; des Studentens yerine des Studenten gerekir."
+          ],
+          "examples": [
+            {
+              "de": "Das ist das Auto meines Bruders.",
+              "tr": "Bu, erkek kardeşimin arabası.",
+              "note": ""
+            },
+            {
+              "de": "Das ist das Auto von meinem Bruder.",
+              "tr": "Bu, erkek kardeşimin arabası.",
+              "note": "Konuşmada yaygın alternatif."
+            },
+            {
+              "de": "Der Ausweis des Studenten liegt hier.",
+              "tr": "Öğrencinin kimliği burada duruyor.",
+              "note": ""
+            }
+          ]
+        }
+      ],
+      "summary": [
+        "Genitiv: Wessen? – kimin, neyin?",
+        "Maskulin/neutral tekil: des/eines + çoğunlukla -(e)s.",
+        "Feminin ve çoğul: der; zayıf isimlerin özel çekimini unutma."
+      ],
+      "faq": [
+        {
+          "question": "Her Genitiv isim -s alır mı?",
+          "answer": "Hayır. Feminin ve çoğul isimlere Genitiv nedeniyle -s eklenmez. Zayıf maskulin isimlerde de -(e)n kullanılır: des Studenten."
+        },
+        {
+          "question": "Annas Buch yazarken apostrof gerekir mi?",
+          "answer": "Normalde hayır. Anna → Annas Buch. Ad s sesiyle bitiyorsa yalnız kesme işareti kullanılır: Max’ Buch."
+        },
+        {
+          "question": "wegen dem Regen yanlış mı?",
+          "answer": "Konuşmada sık duyulur. Standart yazı dili ve buradaki hedef yapı wegen des Regens biçimidir."
+        }
+      ],
+      "related": [
+        "n-deklination",
+        "relativsaetze",
+        "konnektoren"
+      ],
+      "check": {
+        "question": "Das ist die Tasche ___ ___. (die Lehrerin, Genitiv)",
+        "answer": "der Lehrerin",
+        "why": "Feminin Genitivde die → der olur; Lehrerin ismine -s eklenmez."
+      },
+      "titleTranslations": {
+        "tr": "Genitiv",
+        "de": "Genitiv",
+        "en": "Genitive"
+      },
+      "description": {
+        "tr": "Genitiv: Wessen? – kimin, neyin?",
+        "de": "Genitiv – Erklärung auf Türkisch mit visuellen Beispielen.",
+        "en": "Genitive – Turkish explanation with visual examples."
+      }
+    },
+    {
+      "id": "n-deklination",
+      "title": "N-Deklination – bazı isimler neden -n alır?",
+      "lead": "der Student derken isim yalın görünür. Ama Ich sehe den Studenten cümlesinde yalnız artikel değil, isim de değişir. Bu özel gruptaki maskulin isimlere “zayıf isimler” denir. Kurala bütün isimleri sokmak yerine grubu ve birkaç önemli istisnayı öğreneceğiz.",
+      "sections": [
+        {
+          "title": "1 · Tekilde temel deseni gör",
+          "paragraphs": [
+            "Zayıf maskulin isimler tekil Nominativ dışında çoğunlukla -(e)n alır. Artikel de normal hâl kuralına göre değişir. der Student → den Studenten → dem Studenten → des Studenten. Buradaki -en çoğul işareti olmak zorunda değildir; tekil nesnede de bulunur."
+          ],
+          "examples": [
+            {
+              "de": "Der Student wartet.",
+              "tr": "Öğrenci bekliyor.",
+              "note": ""
+            },
+            {
+              "de": "Ich sehe den Studenten.",
+              "tr": "Öğrenciyi görüyorum.",
+              "note": ""
+            },
+            {
+              "de": "Ich helfe dem Studenten.",
+              "tr": "Öğrenciye yardım ediyorum.",
+              "note": ""
+            }
+          ],
+          "table": {
+            "headers": [
+              "Hâl",
+              "Soru/görev",
+              "Tekil biçim"
+            ],
+            "rows": [
+              [
+                "Nominativ",
+                "Kim? Özne",
+                "der Student"
+              ],
+              [
+                "Akkusativ",
+                "Kimi? Nesne",
+                "den Studenten"
+              ],
+              [
+                "Dativ",
+                "Kime?",
+                "dem Studenten"
+              ],
+              [
+                "Genitiv",
+                "Kimin?",
+                "des Studenten"
+              ]
+            ]
+          },
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Nominativ",
+                "der Student"
+              ],
+              [
+                "Diğer üç hâl",
+                "den / dem / des Studenten"
+              ],
+              [
+                "İki değişiklik",
+                "Artikel + isim sonu"
+              ]
+            ],
+            "caption": "İsim tekil olsa da Nominativ dışında -en alır."
+          }
+        },
+        {
+          "title": "2 · Sık görülen kelime grupları",
+          "paragraphs": [
+            "Birçok -e ile biten erkek kişi veya hayvan adı bu gruptadır: der Junge, der Kollege, der Kunde, der Löwe. -ant, -ent ve -ist ile biten birçok kişi adı da gruptadır: der Praktikant, der Student, der Polizist. Bunlar öğrenme ipucudur; her maskulin isim aynı kurala uymaz. der Arzt → den Arzt, der Lehrer → den Lehrer."
+          ],
+          "examples": [
+            {
+              "de": "Ich frage den Kollegen.",
+              "tr": "İş arkadaşıma soruyorum.",
+              "note": ""
+            },
+            {
+              "de": "Wir besuchen den Kunden.",
+              "tr": "Müşteriyi ziyaret ediyoruz.",
+              "note": ""
+            },
+            {
+              "de": "Sie spricht mit dem Polizisten.",
+              "tr": "Polisle konuşuyor.",
+              "note": ""
+            }
+          ],
+          "table": {
+            "headers": [
+              "Yalın biçim",
+              "Akkusativ tekil"
+            ],
+            "rows": [
+              [
+                "der Junge",
+                "den Jungen"
+              ],
+              [
+                "der Kollege",
+                "den Kollegen"
+              ],
+              [
+                "der Kunde",
+                "den Kunden"
+              ],
+              [
+                "der Mensch",
+                "den Menschen"
+              ],
+              [
+                "der Nachbar",
+                "den Nachbarn"
+              ],
+              [
+                "der Herr",
+                "den Herrn"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "3 · Fiil veya edat önce hâli belirler",
+          "paragraphs": [
+            "Önce hangi hâlin gerektiğini bul. sehen Akkusativ, helfen Dativ ister; mit de Dativ ister. Sonra ismin zayıf grupta olup olmadığını kontrol et. Zayıf isim olması kendi başına Dativ anlamına gelmez; -(e)n farklı hâllerde ortak görünür."
+          ],
+          "examples": [
+            {
+              "de": "Ich sehe einen Jungen.",
+              "tr": "Bir erkek çocuğu görüyorum.",
+              "note": ""
+            },
+            {
+              "de": "Ich helfe einem Jungen.",
+              "tr": "Bir erkek çocuğa yardım ediyorum.",
+              "note": ""
+            },
+            {
+              "de": "Ich spreche mit einem jungen Kollegen.",
+              "tr": "Genç bir iş arkadaşıyla konuşuyorum.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "mit",
+              "einem",
+              "jungen",
+              "Kollegen"
+            ],
+            "labels": [
+              "Dativ isteyen edat",
+              "Dativ artikel",
+              "Sıfat eki",
+              "Zayıf isim: -n"
+            ]
+          }
+        },
+        {
+          "title": "4 · Genitiv ve özel biçimler",
+          "paragraphs": [
+            "Temel zayıf isimlerde Genitiv -(e)n ile kurulur: des Studenten, des Menschen. der Name gibi bazı isimlerin Genitivinde ek bir -s vardır: des Namens; Akkusativ den Namen, Dativ dem Namen. das Herz nötr olmasına rağmen özel çekim gösterir: das Herz, dem Herzen, des Herzens. Bunları ayrı küçük bir grup olarak öğren."
+          ],
+          "table": {
+            "headers": [
+              "Nominativ",
+              "Akkusativ",
+              "Dativ",
+              "Genitiv"
+            ],
+            "rows": [
+              [
+                "der Student",
+                "den Studenten",
+                "dem Studenten",
+                "des Studenten"
+              ],
+              [
+                "der Name",
+                "den Namen",
+                "dem Namen",
+                "des Namens"
+              ],
+              [
+                "das Herz",
+                "das Herz",
+                "dem Herzen",
+                "des Herzens"
+              ]
+            ]
+          },
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Student",
+                "Genitiv: des Studenten"
+              ],
+              [
+                "Name",
+                "Genitiv: des Namens"
+              ],
+              [
+                "Herz",
+                "Genitiv: des Herzens"
+              ]
+            ],
+            "caption": "İstisna biçimleri genel kurala zorla uydurma."
+          }
+        },
+        {
+          "title": "5 · Tekil ve çoğulu bağlamdan ayır",
+          "paragraphs": [
+            "den Studenten hem Akkusativ tekil hem Dativ çoğul olabilir. Yalnız ismin sonuna bakmak yetmez; fiil, edat ve cümle görevini oku. der Herr tekilde den Herrn, çoğulda die Herren olur. Dativ çoğulda zaten -n ile biten isimlere ikinci bir n eklenmez."
+          ],
+          "examples": [
+            {
+              "de": "Ich sehe den Studenten.",
+              "tr": "Öğrenciyi görüyorum.",
+              "note": "Akkusativ tekil."
+            },
+            {
+              "de": "Ich helfe den Studenten.",
+              "tr": "Öğrencilere yardım ediyorum.",
+              "note": "Dativ çoğul."
+            },
+            {
+              "de": "Ich spreche mit dem Herrn.",
+              "tr": "Beyefendiyle konuşuyorum.",
+              "note": ""
+            },
+            {
+              "de": "Ich spreche mit den Herren.",
+              "tr": "Beyefendilerle konuşuyorum.",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "6 · Üç adımlı kontrolle cümle kur",
+          "paragraphs": [
+            "Önce ismi artikeliyle öğren: der Kunde. Cümlede hâli bul: danken Dativ ister. Sonra artikel ve isim sonunu birlikte seç: Ich danke dem Kunden. Sıfat varsa onun eki üçüncü bir kontrol olur. Bir son ek gördüğünde “bu sıfat mı, isim mi?” diye sor; genç anlamındaki jung sıfat, Kollege ise isimdir."
+          ],
+          "examples": [
+            {
+              "de": "Ich danke dem netten Kunden.",
+              "tr": "Nazik müşteriye teşekkür ediyorum.",
+              "note": ""
+            },
+            {
+              "de": "Die Adresse des neuen Kollegen fehlt.",
+              "tr": "Yeni iş arkadaşının adresi eksik.",
+              "note": ""
+            }
+          ]
+        }
+      ],
+      "summary": [
+        "Zayıf maskulin isimler tekil Nominativ dışında -(e)n alır.",
+        "Hâli fiil/edat belirler; artikel ve isim ayrı kontrol edilir.",
+        "Name, Herz ve Herr gibi özel biçimleri ayrıca öğren."
+      ],
+      "faq": [
+        {
+          "question": "Bütün -e ile biten isimler zayıf mı?",
+          "answer": "Hayır. Bu gruptaki tipik maskulin kişi/hayvan isimleri yardımcı bir ipucudur. die Schule gibi feminin isimlere bu kural uygulanmaz."
+        },
+        {
+          "question": "des Studentens neden yanlış?",
+          "answer": "Student temel zayıf isimdir ve Genitivde des Studenten olur. Name gibi bazı özel isimlerde ek -s vardır: des Namens."
+        },
+        {
+          "question": "den Studenten tekil mi çoğul mu?",
+          "answer": "İkisi de olabilir. Ich sehe den Studenten: Akkusativ tekil. Ich helfe den Studenten: Dativ çoğul. Görev ve fiil karar verir."
+        }
+      ],
+      "related": [
+        "genitiv",
+        "relativsaetze",
+        "passiv"
+      ],
+      "check": {
+        "question": "Ich spreche mit einem ___. (Kollege)",
+        "answer": "Kollegen",
+        "why": "mit Dativ ister. Kollege zayıf maskulin isimdir; tekil Nominativ dışında -n alır."
+      },
+      "titleTranslations": {
+        "tr": "N-Deklination",
+        "de": "N-Deklination",
+        "en": "N-declension"
+      },
+      "description": {
+        "tr": "Zayıf maskulin isimler tekil Nominativ dışında -(e)n alır.",
+        "de": "N-Deklination – Erklärung auf Türkisch mit visuellen Beispielen.",
+        "en": "N-declension – Turkish explanation with visual examples."
+      }
+    },
+    {
+      "id": "infinitiv-zu",
+      "title": "Infinitiv mit zu – ikinci eylemi bağla",
+      "lead": "Ich lerne Deutsch diyebilirsin. “Almanca öğrenmeye çalışıyorum” demek istediğinde ikinci bir eylem eklenir: Ich versuche, Deutsch zu lernen. Bu yapıda ikinci fiil kişiye göre çekilmez. Kimin yaptığı ve zu kelimesinin yeri önemlidir.",
+      "sections": [
+        {
+          "title": "1 · Çekimli fiil ve mastarı ayır",
+          "paragraphs": [
+            "Ana cümledeki fiil çekilir: ich versuche, wir versuchen. İkinci eylem zu + mastar grubudur ve çoğunlukla sona gelir. Mastar grubunda ayrıca bir özne yazılmaz; yapan kişi cümledeki bir kişi veya genel bağlamdan anlaşılır. Başlangıç için planen, versuchen, hoffen ve vergessen ile kısa örnekler kur."
+          ],
+          "examples": [
+            {
+              "de": "Ich versuche, Deutsch zu lernen.",
+              "tr": "Almanca öğrenmeye çalışıyorum.",
+              "note": ""
+            },
+            {
+              "de": "Wir planen, nach Berlin zu fahren.",
+              "tr": "Berlin’e gitmeyi planlıyoruz.",
+              "note": ""
+            },
+            {
+              "de": "Ich habe vergessen, die Tür zu schließen.",
+              "tr": "Kapıyı kapatmayı unuttum.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "Ich",
+              "versuche,",
+              "jeden Tag Deutsch",
+              "zu lernen."
+            ],
+            "labels": [
+              "Özne",
+              "Çekimli fiil",
+              "Mastar grubunun devamı",
+              "zu + mastar"
+            ]
+          }
+        },
+        {
+          "title": "2 · zu ayrılabilen fiilde nereye girer?",
+          "paragraphs": [
+            "Basit fiilde zu ayrı yazılır: zu lernen. Ayrılabilen fiilde ön ek ile kökün arasına girer ve kelime birleşik yazılır: aufstehen → aufzustehen, einkaufen → einzukaufen. Ayrılmayan ön eklerde ayrı kalır: besuchen → zu besuchen. -ieren fiillerinde de zu ayrı yazılır: zu studieren."
+          ],
+          "examples": [
+            {
+              "de": "Ich versuche, früh aufzustehen.",
+              "tr": "Erken kalkmaya çalışıyorum.",
+              "note": ""
+            },
+            {
+              "de": "Sie hat vergessen, mich anzurufen.",
+              "tr": "Beni aramayı unuttu.",
+              "note": ""
+            },
+            {
+              "de": "Er plant, Medizin zu studieren.",
+              "tr": "Tıp okumayı planlıyor.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "lernen",
+                "zu lernen"
+              ],
+              [
+                "auf + stehen",
+                "auf + zu + stehen → aufzustehen"
+              ],
+              [
+                "besuchen",
+                "zu besuchen"
+              ]
+            ],
+            "caption": "zu yerini bulurken fiilin ayrılabilir olup olmadığını kontrol et."
+          }
+        },
+        {
+          "title": "3 · Eylemi kimin yaptığını bul",
+          "paragraphs": [
+            "Ich verspreche dir, pünktlich zu kommen cümlesinde gelecek olan kişi ich olur. Ich bitte dich, pünktlich zu kommen cümlesinde gelecek olan kişi dich ile belirtilen muhataptır. Bu nedenle “zu varsa özne her zaman ana cümlenin öznesidir” kuralı yeterli değildir; ana fiilin kalıbını öğren. Kişiyi açıkça başka özneyle söylemek gerekiyorsa dass cümlesi kurabilirsin."
+          ],
+          "examples": [
+            {
+              "de": "Ich verspreche dir, pünktlich zu kommen.",
+              "tr": "Sana zamanında geleceğime söz veriyorum.",
+              "note": ""
+            },
+            {
+              "de": "Ich bitte dich, pünktlich zu kommen.",
+              "tr": "Senden zamanında gelmeni rica ediyorum.",
+              "note": ""
+            },
+            {
+              "de": "Ich hoffe, dass meine Schwester kommt.",
+              "tr": "Kız kardeşimin gelmesini umuyorum.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Ich verspreche dir …",
+                "Gelecek kişi: ich"
+              ],
+              [
+                "Ich bitte dich …",
+                "Gelecek kişi: du"
+              ],
+              [
+                "Ich hoffe, dass sie kommt.",
+                "Özne açıkça yazılır"
+              ]
+            ],
+            "caption": "Mastar grubunun yapan kişisini ana fiilin anlamından çıkar."
+          }
+        },
+        {
+          "title": "4 · um … zu, ohne … zu, statt … zu",
+          "paragraphs": [
+            "um … zu amaç; ohne … zu “-meden”; statt … zu “-mek yerine” anlamı kurar. Temel kullanımlarda mastar eylemini ana cümlenin öznesi yapar. Amaçta farklı özne gerekiyorsa damit kullan. ohne ve statt için farklı özneyle ohne dass/statt dass yapıları vardır. Bu grupları virgülle ayır."
+          ],
+          "examples": [
+            {
+              "de": "Ich lerne, um die Prüfung zu bestehen.",
+              "tr": "Sınavı geçmek için çalışıyorum.",
+              "note": ""
+            },
+            {
+              "de": "Er geht, ohne sich zu verabschieden.",
+              "tr": "Vedalaşmadan gidiyor.",
+              "note": ""
+            },
+            {
+              "de": "Sie liest, statt fernzusehen.",
+              "tr": "Televizyon izlemek yerine okuyor.",
+              "note": ""
+            },
+            {
+              "de": "Ich spreche langsam, damit du mich verstehst.",
+              "tr": "Beni anlayasın diye yavaş konuşuyorum.",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "5 · İsim ve sıfatlarla; virgül kararı",
+          "paragraphs": [
+            "Zeit haben, Lust haben ve die Möglichkeit haben gibi kalıplarda zu grubu bir ismi açıklar. Es ist wichtig/möglich/schön gibi yapılardan sonra da gelir. Güncel yazım kuralında yan cümle değerindeki genişletilmiş zu grupları virgülle ayrılır: Ich versuche, jeden Tag zu lernen. Yalnız zu + mastardan oluşan basit grupta virgül bazı kullanımlarda bırakılabilir: Ich versuche(,) zu schlafen. Fiille tek bir yüklem oluşturan yapılarda ise virgül konmaz: Du brauchst nicht zu warten. um/ohne/statt ile başlayan grupları virgülle ayır."
+          ],
+          "examples": [
+            {
+              "de": "Ich habe keine Zeit, lange zu warten.",
+              "tr": "Uzun süre bekleyecek vaktim yok.",
+              "note": ""
+            },
+            {
+              "de": "Es ist wichtig, regelmäßig zu üben.",
+              "tr": "Düzenli pratik yapmak önemli.",
+              "note": ""
+            },
+            {
+              "de": "Ich freue mich darauf, dich zu sehen.",
+              "tr": "Seni görecek olmaktan mutluyum.",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "6 · Ne zaman zu kullanılmaz?",
+          "paragraphs": [
+            "Modal fiillerden sonra mastar zu almaz: Ich muss lernen. lassen ve gehen gibi bazı fiillerin belirli yapılarında da zu bulunmaz: Ich lasse mein Fahrrad reparieren; Ich gehe einkaufen. Sadece ikinci bir fiil gördüğün için zu ekleme. lernen gibi bazı fiillerde yapı değişebilir; kalıbı örnekle öğren."
+          ],
+          "examples": [
+            {
+              "de": "Ich muss heute arbeiten.",
+              "tr": "Bugün çalışmak zorundayım.",
+              "note": ""
+            },
+            {
+              "de": "Ich gehe einkaufen.",
+              "tr": "Alışverişe gidiyorum.",
+              "note": ""
+            },
+            {
+              "de": "Ich lasse mein Fahrrad reparieren.",
+              "tr": "Bisikletimi tamir ettiriyorum.",
+              "note": ""
+            }
+          ],
+          "table": {
+            "headers": [
+              "Ana yapı",
+              "Devamı"
+            ],
+            "rows": [
+              [
+                "versuchen / planen",
+                "zu lernen / zu fahren"
+              ],
+              [
+                "müssen / können",
+                "lernen / fahren"
+              ],
+              [
+                "gehen + etkinlik",
+                "einkaufen"
+              ],
+              [
+                "lassen",
+                "reparieren"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "7 · İleri örnek: Passiv ve önce biten eylem",
+          "paragraphs": [
+            "Passiv mastar grubu zu + Partizip II + werden diye sıralanmaz; doğru sıra Partizip II + zu werden olur: eingeladen zu werden. Daha önce tamamlanmış eylem için Partizip II + zu haben/zu sein kullanılır. Yardımcı fiil Perfektteki seçime uyar. Önce temel yapıyı öğren, sonra bu iki özel anlamı ayır."
+          ],
+          "examples": [
+            {
+              "de": "Sie hofft, eingeladen zu werden.",
+              "tr": "Davet edilmeyi umuyor.",
+              "note": ""
+            },
+            {
+              "de": "Er behauptet, die Aufgabe erledigt zu haben.",
+              "tr": "Görevi tamamladığını iddia ediyor.",
+              "note": ""
+            },
+            {
+              "de": "Sie behauptet, rechtzeitig angekommen zu sein.",
+              "tr": "Zamanında vardığını iddia ediyor.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "einladen",
+                "Davet etmek"
+              ],
+              [
+                "eingeladen zu werden",
+                "Davet edilmek"
+              ],
+              [
+                "eingeladen zu haben",
+                "Davet etmiş olmak"
+              ]
+            ],
+            "caption": "Passiv ve önce biten eylem farklı yardımcı fiil grupları gerektirir."
+          }
+        }
+      ],
+      "summary": [
+        "Ana fiil çekilir; zu grubundaki fiil mastar kalır.",
+        "Ayrılabilen fiilde zu araya girer: anzurufen.",
+        "Yapan kişiyi fiilin kalıbından bul; modal fiillerde zu kullanma."
+      ],
+      "faq": [
+        {
+          "question": "Ich muss zu lernen neden yanlış?",
+          "answer": "müssen bir modal fiildir ve ardından zu olmadan mastar gelir: Ich muss lernen."
+        },
+        {
+          "question": "zu grubunun öznesi her zaman ich mi?",
+          "answer": "Hayır. Ich bitte dich, zu kommen cümlesinde gelecek kişi du olur. Kimin yaptığı ana fiilin kalıbından ve bağlamdan anlaşılır."
+        },
+        {
+          "question": "zu grubundan önce her zaman virgül mü gerekir?",
+          "answer": "Genişletilmiş, yan cümle değerindeki gruplar virgülle ayrılır. Basit zu + mastarda virgül bazı kullanımlarda bırakılabilir. Tek bir yüklemin parçasıysa virgül kullanılmaz: Du brauchst nicht zu warten."
+        }
+      ],
+      "related": [
+        "konnektoren",
+        "passiv",
+        "konjunktiv-ii-b1"
+      ],
+      "check": {
+        "question": "Ich habe vergessen, dich ___. (anrufen)",
+        "answer": "anzurufen",
+        "why": "anrufen ayrılabilen fiildir; zu ön ek an ile rufen arasına girer."
+      },
+      "titleTranslations": {
+        "tr": "Infinitiv mit zu",
+        "de": "Infinitiv mit zu",
+        "en": "Infinitive with zu"
+      },
+      "description": {
+        "tr": "Ana fiil çekilir; zu grubundaki fiil mastar kalır.",
+        "de": "Infinitiv mit zu – Erklärung auf Türkisch mit visuellen Beispielen.",
+        "en": "Infinitive with zu – Turkish explanation with visual examples."
+      },
+      "reading": "https://grammis.ids-mannheim.de/rechtschreibung/6203",
+      "readingTitle": "IDS · Resmî virgül kuralı §73"
+    },
+    {
+      "id": "praeteritum-b1",
+      "title": "Präteritum – geçmişi bir hikâyeye dönüştür",
+      "lead": "A2’de war, hatte ve ging gibi biçimleri tanıdın. Şimdi düzenli, güçlü ve karışık fiilleri aynı anlatı içinde kullanacağız. Hedef yalnızca boşluğa bir fiil yazmak değil; olayları birbirine bağlayan kısa bir geçmiş hikâyesi kurmak.",
+      "sections": [
+        {
+          "title": "1 · Präteritum ile anlatı kur",
+          "paragraphs": [
+            "Präteritum geçmiş olayları özellikle yazılı hikâye, haber ve raporlarda anlatır. Günlük konuşmada Perfekt yaygındır; sein, haben ve modal fiillerin Präteritum biçimleri konuşmada da çok kullanılır. İkisi arasında her zaman Türkçedeki “-di/-miş” ayrımı yoktur; biçim, bağlam ve anlatım tercihi önemlidir."
+          ],
+          "examples": [
+            {
+              "de": "Gestern war ich zu Hause.",
+              "tr": "Dün evdeydim.",
+              "note": ""
+            },
+            {
+              "de": "Ich öffnete das Fenster und sah einen Vogel.",
+              "tr": "Pencereyi açtım ve bir kuş gördüm.",
+              "note": ""
+            },
+            {
+              "de": "Ich habe das Fenster geöffnet und einen Vogel gesehen.",
+              "tr": "Pencereyi açtım ve bir kuş gördüm.",
+              "note": "Aynı olayların Perfekt anlatımı."
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Perfekt",
+                "ich habe gesehen"
+              ],
+              [
+                "Präteritum",
+                "ich sah"
+              ],
+              [
+                "Ortak nokta",
+                "İkisi de geçmiş olay anlatabilir"
+              ]
+            ],
+            "caption": "Yardımcı fiili olan Perfekt ile tek çekimli geçmiş fiili karşılaştır."
+          }
+        },
+        {
+          "title": "2 · Düzenli fiil: kök + -te + kişi eki",
+          "paragraphs": [
+            "lernen → lernte. ich ve er/sie/es biçimleri aynıdır; du -st, wir/sie/Sie -n, ihr -t alır. arbeiten gibi kökü -t/-d ile biten fiillerde araya e gelir: arbeitete. Ana cümlede çekimli fiil ikinci öğedir; başa zaman ifadesi gelmesi bu kuralı değiştirmez."
+          ],
+          "examples": [
+            {
+              "de": "Ich lernte jeden Abend.",
+              "tr": "Her akşam çalışıyordum.",
+              "note": ""
+            },
+            {
+              "de": "Du arbeitetest am Wochenende.",
+              "tr": "Hafta sonu çalıştın.",
+              "note": ""
+            },
+            {
+              "de": "Am Abend warteten wir vor dem Kino.",
+              "tr": "Akşam sinemanın önünde bekledik.",
+              "note": ""
+            }
+          ],
+          "table": {
+            "headers": [
+              "Özne",
+              "lernen",
+              "arbeiten"
+            ],
+            "rows": [
+              [
+                "ich / er / sie / es",
+                "lernte",
+                "arbeitete"
+              ],
+              [
+                "du",
+                "lerntest",
+                "arbeitetest"
+              ],
+              [
+                "wir / sie / Sie",
+                "lernten",
+                "arbeiteten"
+              ],
+              [
+                "ihr",
+                "lerntet",
+                "arbeitetet"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "3 · Güçlü fiiller: değişen kökü öğren",
+          "paragraphs": [
+            "Güçlü fiillerin Präteritum kökü değişir: gehen → ging, sehen → sah, finden → fand. ich ve er/sie/es biçiminde ek yoktur. Diğer kişiler bu köke uygun kişi eki alır: du gingst, wir gingen, ihr gingt. Kökü tahmin etmek yerine mastar, Präteritum ve Partizip II biçimlerini birlikte not et."
+          ],
+          "examples": [
+            {
+              "de": "Ich ging nach Hause.",
+              "tr": "Eve gittim.",
+              "note": ""
+            },
+            {
+              "de": "Sie fand ihren Schlüssel.",
+              "tr": "Anahtarını buldu.",
+              "note": ""
+            },
+            {
+              "de": "Wir blieben bis neun Uhr.",
+              "tr": "Saat dokuza kadar kaldık.",
+              "note": ""
+            }
+          ],
+          "table": {
+            "headers": [
+              "Mastar",
+              "Präteritum: ich",
+              "Partizip II"
+            ],
+            "rows": [
+              [
+                "gehen",
+                "ging",
+                "gegangen"
+              ],
+              [
+                "sehen",
+                "sah",
+                "gesehen"
+              ],
+              [
+                "finden",
+                "fand",
+                "gefunden"
+              ],
+              [
+                "bleiben",
+                "blieb",
+                "geblieben"
+              ],
+              [
+                "schreiben",
+                "schrieb",
+                "geschrieben"
+              ],
+              [
+                "nehmen",
+                "nahm",
+                "genommen"
+              ]
+            ]
+          },
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "gehen",
+                "Mastar"
+              ],
+              [
+                "ging → wir gingen",
+                "Değişen geçmiş kökü"
+              ],
+              [
+                "ist gegangen",
+                "Perfekt biçimi"
+              ]
+            ],
+            "caption": "Präteritum kökü ve Partizip II aynı biçim değildir."
+          }
+        },
+        {
+          "title": "4 · Karışık fiiller ve modal fiiller",
+          "paragraphs": [
+            "denken → dachte, bringen → brachte ve kennen → kannte hem kök değiştirir hem -te türü geçmiş eki taşır. Modal fiillerde geçmiş biçim çoğunlukla Umlautunu kaybeder: können → konnte, müssen → musste. Ana fiil mastar olarak sonda kalır. sollte ve wollte gibi biçimlerin anlamını bağlamdan oku."
+          ],
+          "examples": [
+            {
+              "de": "Ich dachte an dich.",
+              "tr": "Seni düşündüm.",
+              "note": ""
+            },
+            {
+              "de": "Er brachte einen Kuchen mit.",
+              "tr": "Yanında bir kek getirdi.",
+              "note": ""
+            },
+            {
+              "de": "Wir mussten lange warten.",
+              "tr": "Uzun süre beklemek zorunda kaldık.",
+              "note": ""
+            },
+            {
+              "de": "Als Kind durfte ich nicht allein reisen.",
+              "tr": "Çocukken tek başıma seyahat etmeme izin yoktu.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "Wir",
+              "mussten",
+              "am Bahnhof lange",
+              "warten."
+            ],
+            "labels": [
+              "Özne",
+              "Geçmiş modal",
+              "Yer + süre",
+              "Mastar"
+            ]
+          }
+        },
+        {
+          "title": "5 · Ayrılabilen fiil ve yan cümle sırası",
+          "paragraphs": [
+            "Ana cümlede ayrılabilen ön ek sona gider: stand … auf, rief … an. Yan cümlede fiil tek parça olarak sona gelir: weil ich früh aufstand. Perfektte ise Partizip II yapısı ayrıdır: bin aufgestanden. Düzensiz kökü ve ön ekin yerini iki ayrı kontrol olarak düşün."
+          ],
+          "examples": [
+            {
+              "de": "Ich stand um sieben Uhr auf.",
+              "tr": "Saat yedide kalktım.",
+              "note": ""
+            },
+            {
+              "de": "Dann rief ich meine Schwester an.",
+              "tr": "Sonra kız kardeşimi aradım.",
+              "note": ""
+            },
+            {
+              "de": "Ich war müde, weil ich früh aufstand.",
+              "tr": "Erken kalktığım için yorgundum.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Ana cümle",
+                "Ich stand früh auf."
+              ],
+              [
+                "Yan cümle",
+                "weil ich früh aufstand"
+              ],
+              [
+                "Perfekt",
+                "Ich bin früh aufgestanden."
+              ]
+            ],
+            "caption": "Ön ekin yeri cümle türüne, kök biçimi zamana bağlıdır."
+          }
+        },
+        {
+          "title": "6 · Olayları bağla ve daha eski geçmişi ayır",
+          "paragraphs": [
+            "zuerst, dann, danach ve schließlich olay sırasını görünür kılar. Bir geçmiş olaydan daha önce olan bir olayı açıklarken Plusquamperfekt kullanabilirsin. Hikâyenin ana olay çizgisinde Präteritum, geriye bakışta hatte/war + Partizip II bulunur. Tek tek fiillerden sonra kısa metin üretmeyi dene."
+          ],
+          "examples": [
+            {
+              "de": "Am Samstag fuhr Leyla in die Stadt. Dort traf sie einen Freund. Sie tranken Kaffee und sprachen lange.",
+              "tr": "Cumartesi Leyla şehre gitti. Orada bir arkadaşıyla karşılaştı. Kahve içtiler ve uzun süre konuştular.",
+              "note": ""
+            },
+            {
+              "de": "Als sie nach Hause kam, merkte sie, dass sie ihre Tasche im Café vergessen hatte.",
+              "tr": "Eve geldiğinde çantasını kafede unuttuğunu fark etti.",
+              "note": "Çantayı unutması eve gelişinden önce oldu."
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Önce",
+                "Sie hatte die Tasche vergessen."
+              ],
+              [
+                "Ana olay",
+                "Sie kam nach Hause."
+              ],
+              [
+                "Sonra",
+                "Sie merkte es."
+              ]
+            ],
+            "caption": "Bir hikâyede her geçmiş eylemi aynı zamana koymak zorunda değilsin."
+          }
+        }
+      ],
+      "summary": [
+        "Düzenli: lernte; güçlü: ging; karışık: dachte.",
+        "Modal geçmişten sonra ana fiil mastar kalır.",
+        "Ayrılabilen ön ek ana cümlede sonda, yan cümlede fiille birleşiktir."
+      ],
+      "faq": [
+        {
+          "question": "ich gingte doğru mu?",
+          "answer": "Hayır. gehen güçlü fiildir: ich ging. Düzenli fiillerin -te kalıbını bütün fiillere uygulama."
+        },
+        {
+          "question": "Präteritum ile Perfekt arasında kesin bir anlam farkı var mı?",
+          "answer": "Çoğu temel olayda ikisi aynı geçmiş olayı anlatabilir. Präteritum yazılı anlatıda, Perfekt günlük konuşmada sık kullanılır; bölgesel ve fiile bağlı farklılıklar vardır."
+        },
+        {
+          "question": "konnte ile könnte nasıl ayrılır?",
+          "answer": "konnte geçmişte yapabilmeyi anlatır. könnte Konjunktiv II olup varsayım, olasılık veya kibarlık anlatabilir."
+        }
+      ],
+      "related": [
+        "plusquamperfekt",
+        "konjunktiv-ii-b1",
+        "konnektoren"
+      ],
+      "check": {
+        "question": "Gestern ___ ich früh ___. (aufstehen, Präteritum)",
+        "answer": "stand … auf",
+        "why": "aufstehen güçlü ve ayrılabilen fiildir: stand geçmiş kökü; auf ana cümlede sona gider."
+      },
+      "titleTranslations": {
+        "tr": "Präteritum vertieft",
+        "de": "Präteritum vertieft",
+        "en": "Past tense in depth"
+      },
+      "description": {
+        "tr": "Düzenli: lernte; güçlü: ging; karışık: dachte.",
+        "de": "Präteritum vertieft – Erklärung auf Türkisch mit visuellen Beispielen.",
+        "en": "Past tense in depth – Turkish explanation with visual examples."
+      }
+    },
+    {
+      "id": "plusquamperfekt",
+      "title": "Plusquamperfekt – geçmişten bir adım daha geriye",
+      "lead": "Geçmişte bir yere vardın ama tren daha önce gitmişti. İki olay da geçmişte; biri diğerinden önce. Plusquamperfekt tam olarak bu geri bakışı anlatır: Als ich ankam, war der Zug schon abgefahren.",
+      "sections": [
+        {
+          "title": "1 · İki geçmiş olayın sırasını çiz",
+          "paragraphs": [
+            "Önce hangi olayın önce olduğunu bul. Sonra anlatının geçmişteki referans noktasını belirle. Daha önce gerçekleşmiş olayı Plusquamperfekt ile gösterebilirsin. Bu zaman yalnızca “çok eski” olay demek değildir; iki dakika önceki bir olay da başka geçmiş olaydan önce olabilir."
+          ],
+          "examples": [
+            {
+              "de": "Der Zug fuhr um acht Uhr ab. Ich kam um fünf nach acht an.",
+              "tr": "Tren saat sekizde kalktı. Ben sekizi beş geçe vardım.",
+              "note": ""
+            },
+            {
+              "de": "Als ich ankam, war der Zug schon abgefahren.",
+              "tr": "Vardığımda tren çoktan kalkmıştı.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "08:00 · önce",
+                "Der Zug war abgefahren."
+              ],
+              [
+                "08:05 · referans anı",
+                "Ich kam an."
+              ],
+              [
+                "Şimdi",
+                "Olayları geriye dönerek anlatıyorum"
+              ]
+            ],
+            "caption": "Plusquamperfekt, başka bir geçmiş noktadan daha önceye bakar."
+          }
+        },
+        {
+          "title": "2 · Yapı: hatte/war + Partizip II",
+          "paragraphs": [
+            "Perfektteki yardımcı fiili Präteritum biçimine çevir; Partizip II aynı kalır. habe gelernt → hatte gelernt, bin gekommen → war gekommen. Yardımcı fiil özneye göre çekilir. Ana cümlede yardımcı fiil ikinci öğe, Partizip II sonda bulunur."
+          ],
+          "examples": [
+            {
+              "de": "Ich hatte die Aufgabe erledigt.",
+              "tr": "Görevi tamamlamıştım.",
+              "note": ""
+            },
+            {
+              "de": "Wir waren schon angekommen.",
+              "tr": "Çoktan varmıştık.",
+              "note": ""
+            }
+          ],
+          "table": {
+            "headers": [
+              "Özne",
+              "haben",
+              "sein"
+            ],
+            "rows": [
+              [
+                "ich / er / sie / es",
+                "hatte",
+                "war"
+              ],
+              [
+                "du",
+                "hattest",
+                "warst"
+              ],
+              [
+                "wir / sie / Sie",
+                "hatten",
+                "waren"
+              ],
+              [
+                "ihr",
+                "hattet",
+                "wart"
+              ]
+            ]
+          },
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "Ich",
+              "hatte",
+              "die Aufgabe schon",
+              "erledigt."
+            ],
+            "labels": [
+              "Özne",
+              "Çekimli yardımcı fiil",
+              "Nesne + zaman",
+              "Partizip II"
+            ]
+          }
+        },
+        {
+          "title": "3 · haben mi sein mı? Perfekt bilgisini kullan",
+          "paragraphs": [
+            "Birçok fiil haben alır. kommen, gehen, abfahren gibi bir yerden başka yere geçiş bildiren ve einschlafen gibi durum değişimi bildiren birçok fiil sein alır. Ama “hareket varsa her zaman sein” kuralı yeterli değildir: tanzen çoğunlukla haben ile kullanılır. Fiili Perfekt yardımcı fiiliyle birlikte öğrenmek en güvenli yoldur."
+          ],
+          "examples": [
+            {
+              "de": "Sie hatte lange getanzt.",
+              "tr": "Uzun süre dans etmişti.",
+              "note": ""
+            },
+            {
+              "de": "Sie war nach Hause gegangen.",
+              "tr": "Eve gitmişti.",
+              "note": ""
+            },
+            {
+              "de": "Das Kind war eingeschlafen.",
+              "tr": "Çocuk uykuya dalmıştı.",
+              "note": ""
+            }
+          ],
+          "table": {
+            "headers": [
+              "Perfekt",
+              "Plusquamperfekt"
+            ],
+            "rows": [
+              [
+                "hat gegessen",
+                "hatte gegessen"
+              ],
+              [
+                "hat geschrieben",
+                "hatte geschrieben"
+              ],
+              [
+                "ist abgefahren",
+                "war abgefahren"
+              ],
+              [
+                "ist geblieben",
+                "war geblieben"
+              ]
+            ]
+          },
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Perfekt: hat gemacht",
+                "→ hatte gemacht"
+              ],
+              [
+                "Perfekt: ist gegangen",
+                "→ war gegangen"
+              ],
+              [
+                "Partizip II",
+                "Biçimi korunur"
+              ]
+            ],
+            "caption": "Yardımcı fiili değiştir; Partizip II’yi yeniden üretme."
+          }
+        },
+        {
+          "title": "4 · nachdem ve als ile öncelik-sonralık",
+          "paragraphs": [
+            "Geçmişte bitmiş bir olaydan sonra olanı anlatırken nachdem + Plusquamperfekt ve ana cümlede Präteritum sık kullanılır. nachdem yan cümlesinde Partizip II’den sonra çekimli yardımcı fiil sonda yer alır. als ise tek geçmiş olayı veya dönemi referans noktası yapar; daha önce olanı diğer cümlede gösterebilirsin."
+          ],
+          "examples": [
+            {
+              "de": "Nachdem wir gegessen hatten, gingen wir spazieren.",
+              "tr": "Yemek yedikten sonra yürüyüşe çıktık.",
+              "note": ""
+            },
+            {
+              "de": "Nachdem sie angekommen war, rief sie mich an.",
+              "tr": "Vardıktan sonra beni aradı.",
+              "note": ""
+            },
+            {
+              "de": "Als ich nach Hause kam, hatte mein Bruder schon gekocht.",
+              "tr": "Eve geldiğimde erkek kardeşim çoktan yemek yapmıştı.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "Nachdem wir gegessen hatten,",
+              "gingen",
+              "wir",
+              "spazieren."
+            ],
+            "labels": [
+              "Önce biten olay: yardımcı fiil sonda",
+              "Ana cümlenin çekimli fiili",
+              "Özne",
+              "Devamı"
+            ]
+          }
+        },
+        {
+          "title": "5 · Neden ve karşıtlık içinde de kullan",
+          "paragraphs": [
+            "Plusquamperfekt yalnızca nachdem ile kurulmaz. weil ve obwohl gibi bağlaçlarla geçmişteki bir durumun daha eski nedenini veya beklenmeyen arka planını anlatabilirsin. schon, bereits, vorher ve zuvor önceliği belirginleştirir; bu kelimeler tek başına belirli bir zamanı zorunlu kılmaz."
+          ],
+          "examples": [
+            {
+              "de": "Ich konnte nicht bezahlen, weil ich mein Portemonnaie vergessen hatte.",
+              "tr": "Cüzdanımı unuttuğum için ödeme yapamadım.",
+              "note": ""
+            },
+            {
+              "de": "Obwohl er vorher getankt hatte, sprang das Auto nicht an.",
+              "tr": "Daha önce yakıt almış olmasına rağmen araba çalışmadı.",
+              "note": ""
+            },
+            {
+              "de": "Sie war erleichtert, denn sie hatte die Prüfung bestanden.",
+              "tr": "Rahatlamıştı çünkü sınavı geçmişti.",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "6 · Üç geçmiş biçimi ve varsayımı karşılaştır",
+          "paragraphs": [
+            "Perfekt ve Präteritum çoğu zaman anlatının geçmiş olaylarını verir. Plusquamperfekt bu olaylardan önceki arka planı gösterir. hatte ile hätte ayrımına özellikle dikkat et: hatte gelernt gerçek bir önceki olayı, hätte gelernt ise varsayılan/gerçekleşmemiş geçmişi anlatabilir. Plusquamperfekti sadece cümle uzun diye seçme; olay ilişkisini oku."
+          ],
+          "examples": [
+            {
+              "de": "Ich lernte am Abend.",
+              "tr": "Akşam çalıştım.",
+              "note": ""
+            },
+            {
+              "de": "Ich habe am Abend gelernt.",
+              "tr": "Akşam çalıştım.",
+              "note": ""
+            },
+            {
+              "de": "Als sie anrief, hatte ich schon gelernt.",
+              "tr": "O aradığında çoktan çalışmıştım.",
+              "note": ""
+            },
+            {
+              "de": "Wenn ich gelernt hätte, hätte ich bestanden.",
+              "tr": "Çalışmış olsaydım geçerdim.",
+              "note": "Bu son örnek Konjunktiv II’dir."
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "lernte / habe gelernt",
+                "Geçmişteki olay"
+              ],
+              [
+                "hatte gelernt",
+                "Daha önce gerçekleşen olay"
+              ],
+              [
+                "hätte gelernt",
+                "Varsayılan geçmiş"
+              ]
+            ],
+            "caption": "Yardımcı fiilin zamanı ve Umlaut, anlamı değiştirir."
+          }
+        }
+      ],
+      "summary": [
+        "İki geçmiş olaydan önce olan: hatte/war + Partizip II.",
+        "Yardımcı fiil seçimi Perfektle aynıdır.",
+        "Yan cümlede: gegessen hatte / angekommen war."
+      ],
+      "faq": [
+        {
+          "question": "Plusquamperfekt en eski olaylar için mi?",
+          "answer": "Yaşından çok başka bir geçmiş olayla ilişkisi önemlidir. Bir olay iki dakika önce olmuş olsa da sonraki geçmiş referans noktasından önceyse Plusquamperfekt kullanılabilir."
+        },
+        {
+          "question": "nachdem sonrasında her zaman Plusquamperfekt mi?",
+          "answer": "Hayır. Burada geçmiş anlatısındaki yaygın eşleşmeyi çalışıyoruz. Şimdi veya gelecekle ilgili bağlamlarda başka zamanlar kullanılır: Nachdem ich gegessen habe, gehe ich spazieren."
+        },
+        {
+          "question": "schon varsa mutlaka Plusquamperfekt mi?",
+          "answer": "Hayır. Ich habe schon gegessen de doğrudur. Seçimi schon tek başına değil, olayın başka bir geçmiş olaya göre konumu belirler."
+        }
+      ],
+      "related": [
+        "praeteritum-b1",
+        "konnektoren",
+        "konjunktiv-ii-b1"
+      ],
+      "check": {
+        "question": "Als wir ankamen, ___ der Zug schon abgefahren.",
+        "answer": "war",
+        "why": "abfahren Perfektte sein alır. Trenin kalkışı varışımızdan önce olduğundan war abgefahren kullanılır."
+      },
+      "titleTranslations": {
+        "tr": "Plusquamperfekt",
+        "de": "Plusquamperfekt",
+        "en": "Past perfect"
+      },
+      "description": {
+        "tr": "İki geçmiş olaydan önce olan: hatte/war + Partizip II.",
+        "de": "Plusquamperfekt – Erklärung auf Türkisch mit visuellen Beispielen.",
+        "en": "Past perfect – Turkish explanation with visual examples."
+      }
+    }
+  ]
+}

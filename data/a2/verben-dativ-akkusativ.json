@@ -1,0 +1,1722 @@
+{
+  "id": "verben-dativ-akkusativ",
+  "level": "A2",
+  "title": {
+    "tr": "Verben mit Dativ und Akkusativ",
+    "de": "Verben mit Dativ und Akkusativ",
+    "en": "Verbs with dative and accusative objects"
+  },
+  "description": {
+    "tr": "10 alıştırma, 100 soru: alıcı ve nesne, artikel çekimi, zamirler ve iki nesneli cümleler",
+    "de": "10 Übungen, 100 Aufgaben: Empfänger und Sache, Artikel, Pronomen und Sätze mit zwei Objekten",
+    "en": "10 exercises, 100 questions: recipients and things, articles, pronouns and sentences with two objects"
+  },
+  "lesson": {
+    "title": {
+      "tr": "İki nesneli fiiller – çalışma rehberi",
+      "de": "Verben mit zwei Objekten – Lernüberblick",
+      "en": "Verbs with two objects – study guide"
+    },
+    "intro": {
+      "tr": "geben gibi fiillerde kime? sorusu alıcıyı, ne? sorusu verilen şeyi buldurur. Bu fiillerle alıcı Dativ, şey Akkusativ olur. Bu ayrımı bütün fiillere genelleme: Ich sehe den Mann cümlesinde kişi Akkusativdir.",
+      "de": "Bei geben findet Wem? den Empfänger, Was? die Sache. Bei diesen Verben steht der Empfänger im Dativ, die Sache im Akkusativ. Das gilt nicht pauschal für alle Personen: Ich sehe den Mann hat ein Akkusativobjekt.",
+      "en": "With geben, Wem? identifies the recipient and Was? the thing. These verbs take a dative recipient and accusative thing. Do not apply that rule to all people: Ich sehe den Mann has an accusative object."
+    },
+    "rules": [
+      {
+        "label": "geben",
+        "text": {
+          "tr": "jemandem etwas geben: dem Kind das Buch",
+          "de": "jemandem etwas geben: dem Kind das Buch",
+          "en": "give someone something: dem Kind das Buch"
+        }
+      },
+      {
+        "label": "Pronomen",
+        "text": {
+          "tr": "İki vurgusuz zamirde temel sıra Akkusativ + Dativ: Ich gebe es ihm.",
+          "de": "Bei zwei unbetonten Pronomen steht normalerweise Akkusativ vor Dativ: Ich gebe es ihm.",
+          "en": "With two unstressed pronouns, accusative normally precedes dative: Ich gebe es ihm."
+        }
+      }
+    ],
+    "examples": [
+      "Ich gebe dem Kind das Buch. – Çocuğa kitabı veriyorum.",
+      "Ich gebe ihm das Buch. – Ona kitabı veriyorum.",
+      "Ich gebe es ihm. – Onu ona veriyorum."
+    ],
+    "tip": {
+      "tr": "Yazılı cevaplarda görevde istenen kelimeyi veya bütün cümleyi yaz. Verilen başlangıcı koru; Enter ile kontrol edebilirsin.",
+      "de": "Schreibe je nach Aufgabe das verlangte Wort oder den ganzen Satz. Behalte den Satzanfang; prüfe mit Enter.",
+      "en": "Write the requested word or full sentence, keeping the given opening. Press Enter to check."
+    }
+  },
+  "exercises": [
+    {
+      "id": "empfaenger-1",
+      "title": {
+        "tr": "Übung 1 – Kime? Dativ alıcı",
+        "de": "Übung 1 – Wem? Der Empfänger",
+        "en": "Exercise 1 – The dative recipient"
+      },
+      "description": {
+        "tr": "Dativ alıcıyı seç",
+        "de": "Wähle den Empfänger im Dativ",
+        "en": "Choose the dative recipient"
+      },
+      "difficulty": {
+        "tr": "Temel",
+        "de": "Grundlagen",
+        "en": "Foundations"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Wortgruppe ist das Dativobjekt? Ich gebe dem Kind das Buch.",
+          "correct": "dem Kind",
+          "explanations": {
+            "tr": "geben fiilinde dem Kind alıcıdır: Wem? sorusu bu alıcıyı buldurur. Yanıt dem Kind. das Buch ise verilen/anlatılan şey olarak Akkusativdir; Ich özne görevindedir.",
+            "de": "Bei geben ist dem Kind der Empfänger: Wem? das Buch bezeichnet die Sache im Akkusativ, Ich ist das Subjekt.",
+            "en": "With geben, dem Kind is the recipient answering Wem? das Buch is the thing in the accusative and Ich is the subject."
+          },
+          "options": [
+            "dem Kind",
+            "das Buch",
+            "Ich"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Wortgruppe ist das Dativobjekt? Anna schenkt ihrer Mutter einen Schal.",
+          "correct": "ihrer Mutter",
+          "explanations": {
+            "tr": "schenken fiilinde ihrer Mutter alıcıdır: Wem? sorusu bu alıcıyı buldurur. Yanıt ihrer Mutter. einen Schal ise verilen/anlatılan şey olarak Akkusativdir; Anna özne görevindedir.",
+            "de": "Bei schenken ist ihrer Mutter der Empfänger: Wem? einen Schal bezeichnet die Sache im Akkusativ, Anna ist das Subjekt.",
+            "en": "With schenken, ihrer Mutter is the recipient answering Wem? einen Schal is the thing in the accusative and Anna is the subject."
+          },
+          "options": [
+            "ihrer Mutter",
+            "einen Schal",
+            "Anna"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Wortgruppe ist das Dativobjekt? Wir zeigen dem Gast den Weg.",
+          "correct": "dem Gast",
+          "explanations": {
+            "tr": "zeigen fiilinde dem Gast alıcıdır: Wem? sorusu bu alıcıyı buldurur. Yanıt dem Gast. den Weg ise verilen/anlatılan şey olarak Akkusativdir; Wir özne görevindedir.",
+            "de": "Bei zeigen ist dem Gast der Empfänger: Wem? den Weg bezeichnet die Sache im Akkusativ, Wir ist das Subjekt.",
+            "en": "With zeigen, dem Gast is the recipient answering Wem? den Weg is the thing in the accusative and Wir is the subject."
+          },
+          "options": [
+            "dem Gast",
+            "den Weg",
+            "Wir"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Wortgruppe ist das Dativobjekt? Paul schickt seinem Bruder eine Nachricht.",
+          "correct": "seinem Bruder",
+          "explanations": {
+            "tr": "schicken fiilinde seinem Bruder alıcıdır: Wem? sorusu bu alıcıyı buldurur. Yanıt seinem Bruder. eine Nachricht ise verilen/anlatılan şey olarak Akkusativdir; Paul özne görevindedir.",
+            "de": "Bei schicken ist seinem Bruder der Empfänger: Wem? eine Nachricht bezeichnet die Sache im Akkusativ, Paul ist das Subjekt.",
+            "en": "With schicken, seinem Bruder is the recipient answering Wem? eine Nachricht is the thing in the accusative and Paul is the subject."
+          },
+          "options": [
+            "seinem Bruder",
+            "eine Nachricht",
+            "Paul"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Wortgruppe ist das Dativobjekt? Die Lehrerin erklärt den Schülern die Aufgabe.",
+          "correct": "den Schülern",
+          "explanations": {
+            "tr": "erklären fiilinde den Schülern alıcıdır: Wem? sorusu bu alıcıyı buldurur. Yanıt den Schülern. die Aufgabe ise verilen/anlatılan şey olarak Akkusativdir; Die Lehrerin özne görevindedir.",
+            "de": "Bei erklären ist den Schülern der Empfänger: Wem? die Aufgabe bezeichnet die Sache im Akkusativ, Die Lehrerin ist das Subjekt.",
+            "en": "With erklären, den Schülern is the recipient answering Wem? die Aufgabe is the thing in the accusative and Die Lehrerin is the subject."
+          },
+          "options": [
+            "den Schülern",
+            "die Aufgabe",
+            "Die Lehrerin"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Wortgruppe ist das Dativobjekt? Ich bringe der Nachbarin einen Kuchen.",
+          "correct": "der Nachbarin",
+          "explanations": {
+            "tr": "bringen fiilinde der Nachbarin alıcıdır: Wem? sorusu bu alıcıyı buldurur. Yanıt der Nachbarin. einen Kuchen ise verilen/anlatılan şey olarak Akkusativdir; Ich özne görevindedir.",
+            "de": "Bei bringen ist der Nachbarin der Empfänger: Wem? einen Kuchen bezeichnet die Sache im Akkusativ, Ich ist das Subjekt.",
+            "en": "With bringen, der Nachbarin is the recipient answering Wem? einen Kuchen is the thing in the accusative and Ich is the subject."
+          },
+          "options": [
+            "der Nachbarin",
+            "einen Kuchen",
+            "Ich"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Wortgruppe ist das Dativobjekt? Du leihst deinem Freund das Fahrrad.",
+          "correct": "deinem Freund",
+          "explanations": {
+            "tr": "leihen fiilinde deinem Freund alıcıdır: Wem? sorusu bu alıcıyı buldurur. Yanıt deinem Freund. das Fahrrad ise verilen/anlatılan şey olarak Akkusativdir; Du özne görevindedir.",
+            "de": "Bei leihen ist deinem Freund der Empfänger: Wem? das Fahrrad bezeichnet die Sache im Akkusativ, Du ist das Subjekt.",
+            "en": "With leihen, deinem Freund is the recipient answering Wem? das Fahrrad is the thing in the accusative and Du is the subject."
+          },
+          "options": [
+            "deinem Freund",
+            "das Fahrrad",
+            "Du"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Wortgruppe ist das Dativobjekt? Wir erzählen den Kindern eine Geschichte.",
+          "correct": "den Kindern",
+          "explanations": {
+            "tr": "erzählen fiilinde den Kindern alıcıdır: Wem? sorusu bu alıcıyı buldurur. Yanıt den Kindern. eine Geschichte ise verilen/anlatılan şey olarak Akkusativdir; Wir özne görevindedir.",
+            "de": "Bei erzählen ist den Kindern der Empfänger: Wem? eine Geschichte bezeichnet die Sache im Akkusativ, Wir ist das Subjekt.",
+            "en": "With erzählen, den Kindern is the recipient answering Wem? eine Geschichte is the thing in the accusative and Wir is the subject."
+          },
+          "options": [
+            "den Kindern",
+            "eine Geschichte",
+            "Wir"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Wortgruppe ist das Dativobjekt? Der Kellner empfiehlt der Frau den Salat.",
+          "correct": "der Frau",
+          "explanations": {
+            "tr": "empfehlen fiilinde der Frau alıcıdır: Wem? sorusu bu alıcıyı buldurur. Yanıt der Frau. den Salat ise verilen/anlatılan şey olarak Akkusativdir; Der Kellner özne görevindedir.",
+            "de": "Bei empfehlen ist der Frau der Empfänger: Wem? den Salat bezeichnet die Sache im Akkusativ, Der Kellner ist das Subjekt.",
+            "en": "With empfehlen, der Frau is the recipient answering Wem? den Salat is the thing in the accusative and Der Kellner is the subject."
+          },
+          "options": [
+            "der Frau",
+            "den Salat",
+            "Der Kellner"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Wortgruppe ist das Dativobjekt? Meine Schwester kauft unserem Vater ein Geschenk.",
+          "correct": "unserem Vater",
+          "explanations": {
+            "tr": "kaufen fiilinde unserem Vater alıcıdır: Wem? sorusu bu alıcıyı buldurur. Yanıt unserem Vater. ein Geschenk ise verilen/anlatılan şey olarak Akkusativdir; Meine Schwester özne görevindedir.",
+            "de": "Bei kaufen ist unserem Vater der Empfänger: Wem? ein Geschenk bezeichnet die Sache im Akkusativ, Meine Schwester ist das Subjekt.",
+            "en": "With kaufen, unserem Vater is the recipient answering Wem? ein Geschenk is the thing in the accusative and Meine Schwester is the subject."
+          },
+          "options": [
+            "unserem Vater",
+            "ein Geschenk",
+            "Meine Schwester"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sache-2",
+      "title": {
+        "tr": "Übung 2 – Ne? Akkusativ nesne",
+        "de": "Übung 2 – Was? Die Sache",
+        "en": "Exercise 2 – The accusative thing"
+      },
+      "description": {
+        "tr": "Akkusativ nesneyi seç",
+        "de": "Wähle das Akkusativobjekt",
+        "en": "Choose the accusative object"
+      },
+      "difficulty": {
+        "tr": "Temel",
+        "de": "Grundlagen",
+        "en": "Foundations"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Wortgruppe ist das Akkusativobjekt? Ich gebe dem Kind das Buch.",
+          "correct": "das Buch",
+          "explanations": {
+            "tr": "das Buch, geben ile verilen, gösterilen veya iletilen şeyi adlandırıyor. Was? sorusunun cevabı olduğu için bu yapıda Akkusativdir. dem Kind alıcı olarak Dativ, Ich özne olarak Nominativdir.",
+            "de": "das Buch ist hier die mit geben übermittelte bzw. betroffene Sache und das Akkusativobjekt. dem Kind ist der Dativempfänger; Ich steht als Subjekt im Nominativ.",
+            "en": "das Buch names the thing given, shown or communicated with geben and is the accusative object here. dem Kind is the dative recipient; Ich is the nominative subject."
+          },
+          "options": [
+            "das Buch",
+            "dem Kind",
+            "Ich"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Wortgruppe ist das Akkusativobjekt? Anna schenkt ihrer Mutter einen Schal.",
+          "correct": "einen Schal",
+          "explanations": {
+            "tr": "einen Schal, schenken ile verilen, gösterilen veya iletilen şeyi adlandırıyor. Was? sorusunun cevabı olduğu için bu yapıda Akkusativdir. ihrer Mutter alıcı olarak Dativ, Anna özne olarak Nominativdir.",
+            "de": "einen Schal ist hier die mit schenken übermittelte bzw. betroffene Sache und das Akkusativobjekt. ihrer Mutter ist der Dativempfänger; Anna steht als Subjekt im Nominativ.",
+            "en": "einen Schal names the thing given, shown or communicated with schenken and is the accusative object here. ihrer Mutter is the dative recipient; Anna is the nominative subject."
+          },
+          "options": [
+            "einen Schal",
+            "ihrer Mutter",
+            "Anna"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Wortgruppe ist das Akkusativobjekt? Wir zeigen dem Gast den Weg.",
+          "correct": "den Weg",
+          "explanations": {
+            "tr": "den Weg, zeigen ile verilen, gösterilen veya iletilen şeyi adlandırıyor. Was? sorusunun cevabı olduğu için bu yapıda Akkusativdir. dem Gast alıcı olarak Dativ, Wir özne olarak Nominativdir.",
+            "de": "den Weg ist hier die mit zeigen übermittelte bzw. betroffene Sache und das Akkusativobjekt. dem Gast ist der Dativempfänger; Wir steht als Subjekt im Nominativ.",
+            "en": "den Weg names the thing given, shown or communicated with zeigen and is the accusative object here. dem Gast is the dative recipient; Wir is the nominative subject."
+          },
+          "options": [
+            "den Weg",
+            "dem Gast",
+            "Wir"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Wortgruppe ist das Akkusativobjekt? Paul schickt seinem Bruder eine Nachricht.",
+          "correct": "eine Nachricht",
+          "explanations": {
+            "tr": "eine Nachricht, schicken ile verilen, gösterilen veya iletilen şeyi adlandırıyor. Was? sorusunun cevabı olduğu için bu yapıda Akkusativdir. seinem Bruder alıcı olarak Dativ, Paul özne olarak Nominativdir.",
+            "de": "eine Nachricht ist hier die mit schicken übermittelte bzw. betroffene Sache und das Akkusativobjekt. seinem Bruder ist der Dativempfänger; Paul steht als Subjekt im Nominativ.",
+            "en": "eine Nachricht names the thing given, shown or communicated with schicken and is the accusative object here. seinem Bruder is the dative recipient; Paul is the nominative subject."
+          },
+          "options": [
+            "eine Nachricht",
+            "seinem Bruder",
+            "Paul"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Wortgruppe ist das Akkusativobjekt? Die Lehrerin erklärt den Schülern die Aufgabe.",
+          "correct": "die Aufgabe",
+          "explanations": {
+            "tr": "die Aufgabe, erklären ile verilen, gösterilen veya iletilen şeyi adlandırıyor. Was? sorusunun cevabı olduğu için bu yapıda Akkusativdir. den Schülern alıcı olarak Dativ, Die Lehrerin özne olarak Nominativdir.",
+            "de": "die Aufgabe ist hier die mit erklären übermittelte bzw. betroffene Sache und das Akkusativobjekt. den Schülern ist der Dativempfänger; Die Lehrerin steht als Subjekt im Nominativ.",
+            "en": "die Aufgabe names the thing given, shown or communicated with erklären and is the accusative object here. den Schülern is the dative recipient; Die Lehrerin is the nominative subject."
+          },
+          "options": [
+            "die Aufgabe",
+            "den Schülern",
+            "Die Lehrerin"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Wortgruppe ist das Akkusativobjekt? Ich bringe der Nachbarin einen Kuchen.",
+          "correct": "einen Kuchen",
+          "explanations": {
+            "tr": "einen Kuchen, bringen ile verilen, gösterilen veya iletilen şeyi adlandırıyor. Was? sorusunun cevabı olduğu için bu yapıda Akkusativdir. der Nachbarin alıcı olarak Dativ, Ich özne olarak Nominativdir.",
+            "de": "einen Kuchen ist hier die mit bringen übermittelte bzw. betroffene Sache und das Akkusativobjekt. der Nachbarin ist der Dativempfänger; Ich steht als Subjekt im Nominativ.",
+            "en": "einen Kuchen names the thing given, shown or communicated with bringen and is the accusative object here. der Nachbarin is the dative recipient; Ich is the nominative subject."
+          },
+          "options": [
+            "einen Kuchen",
+            "der Nachbarin",
+            "Ich"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Wortgruppe ist das Akkusativobjekt? Du leihst deinem Freund das Fahrrad.",
+          "correct": "das Fahrrad",
+          "explanations": {
+            "tr": "das Fahrrad, leihen ile verilen, gösterilen veya iletilen şeyi adlandırıyor. Was? sorusunun cevabı olduğu için bu yapıda Akkusativdir. deinem Freund alıcı olarak Dativ, Du özne olarak Nominativdir.",
+            "de": "das Fahrrad ist hier die mit leihen übermittelte bzw. betroffene Sache und das Akkusativobjekt. deinem Freund ist der Dativempfänger; Du steht als Subjekt im Nominativ.",
+            "en": "das Fahrrad names the thing given, shown or communicated with leihen and is the accusative object here. deinem Freund is the dative recipient; Du is the nominative subject."
+          },
+          "options": [
+            "das Fahrrad",
+            "deinem Freund",
+            "Du"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Wortgruppe ist das Akkusativobjekt? Wir erzählen den Kindern eine Geschichte.",
+          "correct": "eine Geschichte",
+          "explanations": {
+            "tr": "eine Geschichte, erzählen ile verilen, gösterilen veya iletilen şeyi adlandırıyor. Was? sorusunun cevabı olduğu için bu yapıda Akkusativdir. den Kindern alıcı olarak Dativ, Wir özne olarak Nominativdir.",
+            "de": "eine Geschichte ist hier die mit erzählen übermittelte bzw. betroffene Sache und das Akkusativobjekt. den Kindern ist der Dativempfänger; Wir steht als Subjekt im Nominativ.",
+            "en": "eine Geschichte names the thing given, shown or communicated with erzählen and is the accusative object here. den Kindern is the dative recipient; Wir is the nominative subject."
+          },
+          "options": [
+            "eine Geschichte",
+            "den Kindern",
+            "Wir"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Wortgruppe ist das Akkusativobjekt? Der Kellner empfiehlt der Frau den Salat.",
+          "correct": "den Salat",
+          "explanations": {
+            "tr": "den Salat, empfehlen ile verilen, gösterilen veya iletilen şeyi adlandırıyor. Was? sorusunun cevabı olduğu için bu yapıda Akkusativdir. der Frau alıcı olarak Dativ, Der Kellner özne olarak Nominativdir.",
+            "de": "den Salat ist hier die mit empfehlen übermittelte bzw. betroffene Sache und das Akkusativobjekt. der Frau ist der Dativempfänger; Der Kellner steht als Subjekt im Nominativ.",
+            "en": "den Salat names the thing given, shown or communicated with empfehlen and is the accusative object here. der Frau is the dative recipient; Der Kellner is the nominative subject."
+          },
+          "options": [
+            "den Salat",
+            "der Frau",
+            "Der Kellner"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Wortgruppe ist das Akkusativobjekt? Meine Schwester kauft unserem Vater ein Geschenk.",
+          "correct": "ein Geschenk",
+          "explanations": {
+            "tr": "ein Geschenk, kaufen ile verilen, gösterilen veya iletilen şeyi adlandırıyor. Was? sorusunun cevabı olduğu için bu yapıda Akkusativdir. unserem Vater alıcı olarak Dativ, Meine Schwester özne olarak Nominativdir.",
+            "de": "ein Geschenk ist hier die mit kaufen übermittelte bzw. betroffene Sache und das Akkusativobjekt. unserem Vater ist der Dativempfänger; Meine Schwester steht als Subjekt im Nominativ.",
+            "en": "ein Geschenk names the thing given, shown or communicated with kaufen and is the accusative object here. unserem Vater is the dative recipient; Meine Schwester is the nominative subject."
+          },
+          "options": [
+            "ein Geschenk",
+            "unserem Vater",
+            "Meine Schwester"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dativ-artikel-3",
+      "title": {
+        "tr": "Übung 3 – Alıcının artikelini seç",
+        "de": "Übung 3 – Artikel beim Empfänger",
+        "en": "Exercise 3 – Recipient articles"
+      },
+      "description": {
+        "tr": "Parantezdeki grubu Dative getir",
+        "de": "Setze die Wortgruppe aus der Klammer in den Dativ",
+        "en": "Put the phrase in brackets in the dative"
+      },
+      "difficulty": {
+        "tr": "Temel",
+        "de": "Grundlagen",
+        "en": "Foundations"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Ich gebe ___ das Buch. (das Kind)",
+          "correct": "dem Kind",
+          "explanations": {
+            "tr": "geben burada alıcı için Dativ ister. das Kind → dem Kind: das → dem; Kind neutral. das Buch verilen/anlatılan nesnedir; onun Akkusativ biçimi bu boşluğa ait değildir.",
+            "de": "geben verlangt hier einen Dativempfänger. das Kind → dem Kind: das → dem; Kind ist neutral. das Buch bleibt das Akkusativobjekt und gehört nicht in diese Lücke.",
+            "en": "geben requires a dative recipient here. das Kind → dem Kind: das → dem; Kind is neuter. das Buch remains the accusative object and does not fill this gap."
+          },
+          "options": [
+            "dem Kind",
+            "das Kind",
+            "den Kind"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Anna schenkt ___ einen Schal. (ihre Mutter)",
+          "correct": "ihrer Mutter",
+          "explanations": {
+            "tr": "schenken burada alıcı için Dativ ister. ihre Mutter → ihrer Mutter: ihre → ihrer; Mutter feminin. einen Schal verilen/anlatılan nesnedir; onun Akkusativ biçimi bu boşluğa ait değildir.",
+            "de": "schenken verlangt hier einen Dativempfänger. ihre Mutter → ihrer Mutter: ihre → ihrer; Mutter ist feminin. einen Schal bleibt das Akkusativobjekt und gehört nicht in diese Lücke.",
+            "en": "schenken requires a dative recipient here. ihre Mutter → ihrer Mutter: ihre → ihrer; Mutter is feminine. einen Schal remains the accusative object and does not fill this gap."
+          },
+          "options": [
+            "ihrer Mutter",
+            "ihre Mutter",
+            "ihren Mutter"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Wir zeigen ___ den Weg. (der Gast)",
+          "correct": "dem Gast",
+          "explanations": {
+            "tr": "zeigen burada alıcı için Dativ ister. der Gast → dem Gast: der → dem; Gast maskulin. den Weg verilen/anlatılan nesnedir; onun Akkusativ biçimi bu boşluğa ait değildir.",
+            "de": "zeigen verlangt hier einen Dativempfänger. der Gast → dem Gast: der → dem; Gast ist maskulin. den Weg bleibt das Akkusativobjekt und gehört nicht in diese Lücke.",
+            "en": "zeigen requires a dative recipient here. der Gast → dem Gast: der → dem; Gast is masculine. den Weg remains the accusative object and does not fill this gap."
+          },
+          "options": [
+            "dem Gast",
+            "der Gast",
+            "den Gast"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Paul schickt ___ eine Nachricht. (sein Bruder)",
+          "correct": "seinem Bruder",
+          "explanations": {
+            "tr": "schicken burada alıcı için Dativ ister. sein Bruder → seinem Bruder: sein → seinem; Bruder maskulin. eine Nachricht verilen/anlatılan nesnedir; onun Akkusativ biçimi bu boşluğa ait değildir.",
+            "de": "schicken verlangt hier einen Dativempfänger. sein Bruder → seinem Bruder: sein → seinem; Bruder ist maskulin. eine Nachricht bleibt das Akkusativobjekt und gehört nicht in diese Lücke.",
+            "en": "schicken requires a dative recipient here. sein Bruder → seinem Bruder: sein → seinem; Bruder is masculine. eine Nachricht remains the accusative object and does not fill this gap."
+          },
+          "options": [
+            "seinem Bruder",
+            "sein Bruder",
+            "seinen Bruder"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Die Lehrerin erklärt ___ die Aufgabe. (die Schüler)",
+          "correct": "den Schülern",
+          "explanations": {
+            "tr": "erklären burada alıcı için Dativ ister. die Schüler → den Schülern: die → den; Schüler çoğul Dativde Schülern olur. die Aufgabe verilen/anlatılan nesnedir; onun Akkusativ biçimi bu boşluğa ait değildir.",
+            "de": "erklären verlangt hier einen Dativempfänger. die Schüler → den Schülern: die → den; Schüler erhält im Dativ Plural -n. die Aufgabe bleibt das Akkusativobjekt und gehört nicht in diese Lücke.",
+            "en": "erklären requires a dative recipient here. die Schüler → den Schülern: die → den; plural Schüler adds -n in the dative. die Aufgabe remains the accusative object and does not fill this gap."
+          },
+          "options": [
+            "den Schülern",
+            "die Schüler",
+            "dem Schülern"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Ich bringe ___ einen Kuchen. (die Nachbarin)",
+          "correct": "der Nachbarin",
+          "explanations": {
+            "tr": "bringen burada alıcı için Dativ ister. die Nachbarin → der Nachbarin: die → der; Nachbarin feminin. einen Kuchen verilen/anlatılan nesnedir; onun Akkusativ biçimi bu boşluğa ait değildir.",
+            "de": "bringen verlangt hier einen Dativempfänger. die Nachbarin → der Nachbarin: die → der; Nachbarin ist feminin. einen Kuchen bleibt das Akkusativobjekt und gehört nicht in diese Lücke.",
+            "en": "bringen requires a dative recipient here. die Nachbarin → der Nachbarin: die → der; Nachbarin is feminine. einen Kuchen remains the accusative object and does not fill this gap."
+          },
+          "options": [
+            "der Nachbarin",
+            "die Nachbarin",
+            "den Nachbarin"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Du leihst ___ das Fahrrad. (dein Freund)",
+          "correct": "deinem Freund",
+          "explanations": {
+            "tr": "leihen burada alıcı için Dativ ister. dein Freund → deinem Freund: dein → deinem; Freund maskulin. das Fahrrad verilen/anlatılan nesnedir; onun Akkusativ biçimi bu boşluğa ait değildir.",
+            "de": "leihen verlangt hier einen Dativempfänger. dein Freund → deinem Freund: dein → deinem; Freund ist maskulin. das Fahrrad bleibt das Akkusativobjekt und gehört nicht in diese Lücke.",
+            "en": "leihen requires a dative recipient here. dein Freund → deinem Freund: dein → deinem; Freund is masculine. das Fahrrad remains the accusative object and does not fill this gap."
+          },
+          "options": [
+            "deinem Freund",
+            "dein Freund",
+            "deinen Freund"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Wir erzählen ___ eine Geschichte. (die Kinder)",
+          "correct": "den Kindern",
+          "explanations": {
+            "tr": "erzählen burada alıcı için Dativ ister. die Kinder → den Kindern: die → den; Kinder çoğul Dativde Kindern olur. eine Geschichte verilen/anlatılan nesnedir; onun Akkusativ biçimi bu boşluğa ait değildir.",
+            "de": "erzählen verlangt hier einen Dativempfänger. die Kinder → den Kindern: die → den; Kinder erhält im Dativ Plural -n. eine Geschichte bleibt das Akkusativobjekt und gehört nicht in diese Lücke.",
+            "en": "erzählen requires a dative recipient here. die Kinder → den Kindern: die → den; plural Kinder adds -n in the dative. eine Geschichte remains the accusative object and does not fill this gap."
+          },
+          "options": [
+            "den Kindern",
+            "die Kinder",
+            "dem Kindern"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Der Kellner empfiehlt ___ den Salat. (die Frau)",
+          "correct": "der Frau",
+          "explanations": {
+            "tr": "empfehlen burada alıcı için Dativ ister. die Frau → der Frau: die → der; Frau feminin. den Salat verilen/anlatılan nesnedir; onun Akkusativ biçimi bu boşluğa ait değildir.",
+            "de": "empfehlen verlangt hier einen Dativempfänger. die Frau → der Frau: die → der; Frau ist feminin. den Salat bleibt das Akkusativobjekt und gehört nicht in diese Lücke.",
+            "en": "empfehlen requires a dative recipient here. die Frau → der Frau: die → der; Frau is feminine. den Salat remains the accusative object and does not fill this gap."
+          },
+          "options": [
+            "der Frau",
+            "die Frau",
+            "den Frau"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Meine Schwester kauft ___ ein Geschenk. (unser Vater)",
+          "correct": "unserem Vater",
+          "explanations": {
+            "tr": "kaufen burada alıcı için Dativ ister. unser Vater → unserem Vater: unser → unserem; Vater maskulin. ein Geschenk verilen/anlatılan nesnedir; onun Akkusativ biçimi bu boşluğa ait değildir.",
+            "de": "kaufen verlangt hier einen Dativempfänger. unser Vater → unserem Vater: unser → unserem; Vater ist maskulin. ein Geschenk bleibt das Akkusativobjekt und gehört nicht in diese Lücke.",
+            "en": "kaufen requires a dative recipient here. unser Vater → unserem Vater: unser → unserem; Vater is masculine. ein Geschenk remains the accusative object and does not fill this gap."
+          },
+          "options": [
+            "unserem Vater",
+            "unser Vater",
+            "unseren Vater"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "akkusativ-artikel-4",
+      "title": {
+        "tr": "Übung 4 – Nesnenin artikelini seç",
+        "de": "Übung 4 – Artikel bei der Sache",
+        "en": "Exercise 4 – Object articles"
+      },
+      "description": {
+        "tr": "Parantezdeki grubu Akkusative getir",
+        "de": "Setze die Wortgruppe aus der Klammer in den Akkusativ",
+        "en": "Put the phrase in brackets in the accusative"
+      },
+      "difficulty": {
+        "tr": "Temel",
+        "de": "Grundlagen",
+        "en": "Foundations"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Ich gebe dem Kind ___. (das Buch)",
+          "correct": "das Buch",
+          "explanations": {
+            "tr": "geben ile dem Kind alıcı olarak zaten Dativdir. Boşluk, Was? ile sorulan Buch nesnesidir ve Akkusativ gerekir: das nötr Akkusativde değişmez. Doğru grup das Buch; her Akkusativde artikel değişmek zorunda değildir.",
+            "de": "dem Kind ist bei geben bereits der Dativempfänger. Gesucht ist die Sache Buch im Akkusativ: das bleibt im neutralen Akkusativ gleich. Daher das Buch; Akkusativ bedeutet nicht immer eine sichtbare Artikeländerung.",
+            "en": "dem Kind is already the dative recipient of geben. The missing thing Buch requires the accusative: das stays unchanged in neuter accusative. Use das Buch; accusative does not always visibly change the article."
+          },
+          "options": [
+            "das Buch",
+            "dem Buch",
+            "der Buch"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Anna schenkt ihrer Mutter ___. (ein Schal)",
+          "correct": "einen Schal",
+          "explanations": {
+            "tr": "schenken ile ihrer Mutter alıcı olarak zaten Dativdir. Boşluk, Was? ile sorulan Schal nesnesidir ve Akkusativ gerekir: ein → einen; Schal maskulin. Doğru grup einen Schal; her Akkusativde artikel değişmek zorunda değildir.",
+            "de": "ihrer Mutter ist bei schenken bereits der Dativempfänger. Gesucht ist die Sache Schal im Akkusativ: ein → einen; Schal ist maskulin. Daher einen Schal; Akkusativ bedeutet nicht immer eine sichtbare Artikeländerung.",
+            "en": "ihrer Mutter is already the dative recipient of schenken. The missing thing Schal requires the accusative: ein → einen; Schal is masculine. Use einen Schal; accusative does not always visibly change the article."
+          },
+          "options": [
+            "einen Schal",
+            "der Schal",
+            "dem Schal"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Wir zeigen dem Gast ___. (der Weg)",
+          "correct": "den Weg",
+          "explanations": {
+            "tr": "zeigen ile dem Gast alıcı olarak zaten Dativdir. Boşluk, Was? ile sorulan Weg nesnesidir ve Akkusativ gerekir: der → den; Weg maskulin. Doğru grup den Weg; her Akkusativde artikel değişmek zorunda değildir.",
+            "de": "dem Gast ist bei zeigen bereits der Dativempfänger. Gesucht ist die Sache Weg im Akkusativ: der → den; Weg ist maskulin. Daher den Weg; Akkusativ bedeutet nicht immer eine sichtbare Artikeländerung.",
+            "en": "dem Gast is already the dative recipient of zeigen. The missing thing Weg requires the accusative: der → den; Weg is masculine. Use den Weg; accusative does not always visibly change the article."
+          },
+          "options": [
+            "den Weg",
+            "der Weg",
+            "dem Weg"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Paul schickt seinem Bruder ___. (eine Nachricht)",
+          "correct": "eine Nachricht",
+          "explanations": {
+            "tr": "schicken ile seinem Bruder alıcı olarak zaten Dativdir. Boşluk, Was? ile sorulan Nachricht nesnesidir ve Akkusativ gerekir: eine feminin Akkusativde değişmez. Doğru grup eine Nachricht; her Akkusativde artikel değişmek zorunda değildir.",
+            "de": "seinem Bruder ist bei schicken bereits der Dativempfänger. Gesucht ist die Sache Nachricht im Akkusativ: eine bleibt im femininen Akkusativ gleich. Daher eine Nachricht; Akkusativ bedeutet nicht immer eine sichtbare Artikeländerung.",
+            "en": "seinem Bruder is already the dative recipient of schicken. The missing thing Nachricht requires the accusative: eine stays unchanged in feminine accusative. Use eine Nachricht; accusative does not always visibly change the article."
+          },
+          "options": [
+            "eine Nachricht",
+            "der Nachricht",
+            "den Nachricht"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Die Lehrerin erklärt den Schülern ___. (die Aufgabe)",
+          "correct": "die Aufgabe",
+          "explanations": {
+            "tr": "erklären ile den Schülern alıcı olarak zaten Dativdir. Boşluk, Was? ile sorulan Aufgabe nesnesidir ve Akkusativ gerekir: die feminin Akkusativde değişmez. Doğru grup die Aufgabe; her Akkusativde artikel değişmek zorunda değildir.",
+            "de": "den Schülern ist bei erklären bereits der Dativempfänger. Gesucht ist die Sache Aufgabe im Akkusativ: die bleibt im femininen Akkusativ gleich. Daher die Aufgabe; Akkusativ bedeutet nicht immer eine sichtbare Artikeländerung.",
+            "en": "den Schülern is already the dative recipient of erklären. The missing thing Aufgabe requires the accusative: die stays unchanged in feminine accusative. Use die Aufgabe; accusative does not always visibly change the article."
+          },
+          "options": [
+            "die Aufgabe",
+            "der Aufgabe",
+            "den Aufgabe"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Ich bringe der Nachbarin ___. (ein Kuchen)",
+          "correct": "einen Kuchen",
+          "explanations": {
+            "tr": "bringen ile der Nachbarin alıcı olarak zaten Dativdir. Boşluk, Was? ile sorulan Kuchen nesnesidir ve Akkusativ gerekir: ein → einen; Kuchen maskulin. Doğru grup einen Kuchen; her Akkusativde artikel değişmek zorunda değildir.",
+            "de": "der Nachbarin ist bei bringen bereits der Dativempfänger. Gesucht ist die Sache Kuchen im Akkusativ: ein → einen; Kuchen ist maskulin. Daher einen Kuchen; Akkusativ bedeutet nicht immer eine sichtbare Artikeländerung.",
+            "en": "der Nachbarin is already the dative recipient of bringen. The missing thing Kuchen requires the accusative: ein → einen; Kuchen is masculine. Use einen Kuchen; accusative does not always visibly change the article."
+          },
+          "options": [
+            "einen Kuchen",
+            "der Kuchen",
+            "dem Kuchen"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Du leihst deinem Freund ___. (das Fahrrad)",
+          "correct": "das Fahrrad",
+          "explanations": {
+            "tr": "leihen ile deinem Freund alıcı olarak zaten Dativdir. Boşluk, Was? ile sorulan Fahrrad nesnesidir ve Akkusativ gerekir: das nötr Akkusativde değişmez. Doğru grup das Fahrrad; her Akkusativde artikel değişmek zorunda değildir.",
+            "de": "deinem Freund ist bei leihen bereits der Dativempfänger. Gesucht ist die Sache Fahrrad im Akkusativ: das bleibt im neutralen Akkusativ gleich. Daher das Fahrrad; Akkusativ bedeutet nicht immer eine sichtbare Artikeländerung.",
+            "en": "deinem Freund is already the dative recipient of leihen. The missing thing Fahrrad requires the accusative: das stays unchanged in neuter accusative. Use das Fahrrad; accusative does not always visibly change the article."
+          },
+          "options": [
+            "das Fahrrad",
+            "dem Fahrrad",
+            "der Fahrrad"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Wir erzählen den Kindern ___. (eine Geschichte)",
+          "correct": "eine Geschichte",
+          "explanations": {
+            "tr": "erzählen ile den Kindern alıcı olarak zaten Dativdir. Boşluk, Was? ile sorulan Geschichte nesnesidir ve Akkusativ gerekir: eine feminin Akkusativde değişmez. Doğru grup eine Geschichte; her Akkusativde artikel değişmek zorunda değildir.",
+            "de": "den Kindern ist bei erzählen bereits der Dativempfänger. Gesucht ist die Sache Geschichte im Akkusativ: eine bleibt im femininen Akkusativ gleich. Daher eine Geschichte; Akkusativ bedeutet nicht immer eine sichtbare Artikeländerung.",
+            "en": "den Kindern is already the dative recipient of erzählen. The missing thing Geschichte requires the accusative: eine stays unchanged in feminine accusative. Use eine Geschichte; accusative does not always visibly change the article."
+          },
+          "options": [
+            "eine Geschichte",
+            "der Geschichte",
+            "den Geschichte"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Der Kellner empfiehlt der Frau ___. (der Salat)",
+          "correct": "den Salat",
+          "explanations": {
+            "tr": "empfehlen ile der Frau alıcı olarak zaten Dativdir. Boşluk, Was? ile sorulan Salat nesnesidir ve Akkusativ gerekir: der → den; Salat maskulin. Doğru grup den Salat; her Akkusativde artikel değişmek zorunda değildir.",
+            "de": "der Frau ist bei empfehlen bereits der Dativempfänger. Gesucht ist die Sache Salat im Akkusativ: der → den; Salat ist maskulin. Daher den Salat; Akkusativ bedeutet nicht immer eine sichtbare Artikeländerung.",
+            "en": "der Frau is already the dative recipient of empfehlen. The missing thing Salat requires the accusative: der → den; Salat is masculine. Use den Salat; accusative does not always visibly change the article."
+          },
+          "options": [
+            "den Salat",
+            "der Salat",
+            "dem Salat"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Meine Schwester kauft unserem Vater ___. (ein Geschenk)",
+          "correct": "ein Geschenk",
+          "explanations": {
+            "tr": "kaufen ile unserem Vater alıcı olarak zaten Dativdir. Boşluk, Was? ile sorulan Geschenk nesnesidir ve Akkusativ gerekir: ein nötr Akkusativde değişmez. Doğru grup ein Geschenk; her Akkusativde artikel değişmek zorunda değildir.",
+            "de": "unserem Vater ist bei kaufen bereits der Dativempfänger. Gesucht ist die Sache Geschenk im Akkusativ: ein bleibt im neutralen Akkusativ gleich. Daher ein Geschenk; Akkusativ bedeutet nicht immer eine sichtbare Artikeländerung.",
+            "en": "unserem Vater is already the dative recipient of kaufen. The missing thing Geschenk requires the accusative: ein stays unchanged in neuter accusative. Use ein Geschenk; accusative does not always visibly change the article."
+          },
+          "options": [
+            "ein Geschenk",
+            "dem Geschenk",
+            "der Geschenk"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zwei-objekte-5",
+      "title": {
+        "tr": "Übung 5 – İki nesneyi birlikte çek",
+        "de": "Übung 5 – Beide Objekte einsetzen",
+        "en": "Exercise 5 – Inflect both objects"
+      },
+      "description": {
+        "tr": "Verilen özneyle başla; isimli nesneleri Dativ → Akkusativ sırasıyla yaz",
+        "de": "Beginne mit dem Subjekt; schreibe die nominalen Objekte in der Folge Dativ → Akkusativ",
+        "en": "Start with the subject and order the noun objects dative → accusative"
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Practice"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Bilde einen Satz: Ich | gebe | das Kind | das Buch. Reihenfolge: Subjekt + Verb + Dativ + Akkusativ.",
+          "correct": "Ich gebe dem Kind das Buch.",
+          "explanations": {
+            "tr": "geben ile das Kind alıcı, das Buch ise nesnedir. Alıcı dem Kind olur: das → dem; Kind neutral. Nesne das Buch olur: das nötr Akkusativde değişmez. Görev özellikle isimli nesnelerde Dativ → Akkusativ sırasını istiyor; bağlama göre başka sıralar da mümkün olabilir.",
+            "de": "Bei geben wird der Empfänger das Kind zu dem Kind: das → dem; Kind ist neutral. Die Sache das Buch wird zu das Buch: das bleibt im neutralen Akkusativ gleich. Hier ist ausdrücklich Dativ vor Akkusativ verlangt; das ist keine absolute Regel für jeden Kontext.",
+            "en": "With geben, recipient das Kind becomes dem Kind: das → dem; Kind is neuter. Thing das Buch becomes das Buch: das stays unchanged in neuter accusative. This task explicitly requests dative before accusative; other contexts may allow different orders."
+          },
+          "type": "text",
+          "answers": [
+            "Ich gebe dem Kind das Buch."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Bilde einen Satz: Anna | schenkt | ihre Mutter | ein Schal. Reihenfolge: Subjekt + Verb + Dativ + Akkusativ.",
+          "correct": "Anna schenkt ihrer Mutter einen Schal.",
+          "explanations": {
+            "tr": "schenken ile ihre Mutter alıcı, ein Schal ise nesnedir. Alıcı ihrer Mutter olur: ihre → ihrer; Mutter feminin. Nesne einen Schal olur: ein → einen; Schal maskulin. Görev özellikle isimli nesnelerde Dativ → Akkusativ sırasını istiyor; bağlama göre başka sıralar da mümkün olabilir.",
+            "de": "Bei schenken wird der Empfänger ihre Mutter zu ihrer Mutter: ihre → ihrer; Mutter ist feminin. Die Sache ein Schal wird zu einen Schal: ein → einen; Schal ist maskulin. Hier ist ausdrücklich Dativ vor Akkusativ verlangt; das ist keine absolute Regel für jeden Kontext.",
+            "en": "With schenken, recipient ihre Mutter becomes ihrer Mutter: ihre → ihrer; Mutter is feminine. Thing ein Schal becomes einen Schal: ein → einen; Schal is masculine. This task explicitly requests dative before accusative; other contexts may allow different orders."
+          },
+          "type": "text",
+          "answers": [
+            "Anna schenkt ihrer Mutter einen Schal."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Bilde einen Satz: Wir | zeigen | der Gast | der Weg. Reihenfolge: Subjekt + Verb + Dativ + Akkusativ.",
+          "correct": "Wir zeigen dem Gast den Weg.",
+          "explanations": {
+            "tr": "zeigen ile der Gast alıcı, der Weg ise nesnedir. Alıcı dem Gast olur: der → dem; Gast maskulin. Nesne den Weg olur: der → den; Weg maskulin. Görev özellikle isimli nesnelerde Dativ → Akkusativ sırasını istiyor; bağlama göre başka sıralar da mümkün olabilir.",
+            "de": "Bei zeigen wird der Empfänger der Gast zu dem Gast: der → dem; Gast ist maskulin. Die Sache der Weg wird zu den Weg: der → den; Weg ist maskulin. Hier ist ausdrücklich Dativ vor Akkusativ verlangt; das ist keine absolute Regel für jeden Kontext.",
+            "en": "With zeigen, recipient der Gast becomes dem Gast: der → dem; Gast is masculine. Thing der Weg becomes den Weg: der → den; Weg is masculine. This task explicitly requests dative before accusative; other contexts may allow different orders."
+          },
+          "type": "text",
+          "answers": [
+            "Wir zeigen dem Gast den Weg."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Bilde einen Satz: Paul | schickt | sein Bruder | eine Nachricht. Reihenfolge: Subjekt + Verb + Dativ + Akkusativ.",
+          "correct": "Paul schickt seinem Bruder eine Nachricht.",
+          "explanations": {
+            "tr": "schicken ile sein Bruder alıcı, eine Nachricht ise nesnedir. Alıcı seinem Bruder olur: sein → seinem; Bruder maskulin. Nesne eine Nachricht olur: eine feminin Akkusativde değişmez. Görev özellikle isimli nesnelerde Dativ → Akkusativ sırasını istiyor; bağlama göre başka sıralar da mümkün olabilir.",
+            "de": "Bei schicken wird der Empfänger sein Bruder zu seinem Bruder: sein → seinem; Bruder ist maskulin. Die Sache eine Nachricht wird zu eine Nachricht: eine bleibt im femininen Akkusativ gleich. Hier ist ausdrücklich Dativ vor Akkusativ verlangt; das ist keine absolute Regel für jeden Kontext.",
+            "en": "With schicken, recipient sein Bruder becomes seinem Bruder: sein → seinem; Bruder is masculine. Thing eine Nachricht becomes eine Nachricht: eine stays unchanged in feminine accusative. This task explicitly requests dative before accusative; other contexts may allow different orders."
+          },
+          "type": "text",
+          "answers": [
+            "Paul schickt seinem Bruder eine Nachricht."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Bilde einen Satz: Die Lehrerin | erklärt | die Schüler | die Aufgabe. Reihenfolge: Subjekt + Verb + Dativ + Akkusativ.",
+          "correct": "Die Lehrerin erklärt den Schülern die Aufgabe.",
+          "explanations": {
+            "tr": "erklären ile die Schüler alıcı, die Aufgabe ise nesnedir. Alıcı den Schülern olur: die → den; Schüler çoğul Dativde Schülern olur. Nesne die Aufgabe olur: die feminin Akkusativde değişmez. Görev özellikle isimli nesnelerde Dativ → Akkusativ sırasını istiyor; bağlama göre başka sıralar da mümkün olabilir.",
+            "de": "Bei erklären wird der Empfänger die Schüler zu den Schülern: die → den; Schüler erhält im Dativ Plural -n. Die Sache die Aufgabe wird zu die Aufgabe: die bleibt im femininen Akkusativ gleich. Hier ist ausdrücklich Dativ vor Akkusativ verlangt; das ist keine absolute Regel für jeden Kontext.",
+            "en": "With erklären, recipient die Schüler becomes den Schülern: die → den; plural Schüler adds -n in the dative. Thing die Aufgabe becomes die Aufgabe: die stays unchanged in feminine accusative. This task explicitly requests dative before accusative; other contexts may allow different orders."
+          },
+          "type": "text",
+          "answers": [
+            "Die Lehrerin erklärt den Schülern die Aufgabe.",
+            "Die Lehrerin erklaert den Schuelern die Aufgabe."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Bilde einen Satz: Ich | bringe | die Nachbarin | ein Kuchen. Reihenfolge: Subjekt + Verb + Dativ + Akkusativ.",
+          "correct": "Ich bringe der Nachbarin einen Kuchen.",
+          "explanations": {
+            "tr": "bringen ile die Nachbarin alıcı, ein Kuchen ise nesnedir. Alıcı der Nachbarin olur: die → der; Nachbarin feminin. Nesne einen Kuchen olur: ein → einen; Kuchen maskulin. Görev özellikle isimli nesnelerde Dativ → Akkusativ sırasını istiyor; bağlama göre başka sıralar da mümkün olabilir.",
+            "de": "Bei bringen wird der Empfänger die Nachbarin zu der Nachbarin: die → der; Nachbarin ist feminin. Die Sache ein Kuchen wird zu einen Kuchen: ein → einen; Kuchen ist maskulin. Hier ist ausdrücklich Dativ vor Akkusativ verlangt; das ist keine absolute Regel für jeden Kontext.",
+            "en": "With bringen, recipient die Nachbarin becomes der Nachbarin: die → der; Nachbarin is feminine. Thing ein Kuchen becomes einen Kuchen: ein → einen; Kuchen is masculine. This task explicitly requests dative before accusative; other contexts may allow different orders."
+          },
+          "type": "text",
+          "answers": [
+            "Ich bringe der Nachbarin einen Kuchen."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Bilde einen Satz: Du | leihst | dein Freund | das Fahrrad. Reihenfolge: Subjekt + Verb + Dativ + Akkusativ.",
+          "correct": "Du leihst deinem Freund das Fahrrad.",
+          "explanations": {
+            "tr": "leihen ile dein Freund alıcı, das Fahrrad ise nesnedir. Alıcı deinem Freund olur: dein → deinem; Freund maskulin. Nesne das Fahrrad olur: das nötr Akkusativde değişmez. Görev özellikle isimli nesnelerde Dativ → Akkusativ sırasını istiyor; bağlama göre başka sıralar da mümkün olabilir.",
+            "de": "Bei leihen wird der Empfänger dein Freund zu deinem Freund: dein → deinem; Freund ist maskulin. Die Sache das Fahrrad wird zu das Fahrrad: das bleibt im neutralen Akkusativ gleich. Hier ist ausdrücklich Dativ vor Akkusativ verlangt; das ist keine absolute Regel für jeden Kontext.",
+            "en": "With leihen, recipient dein Freund becomes deinem Freund: dein → deinem; Freund is masculine. Thing das Fahrrad becomes das Fahrrad: das stays unchanged in neuter accusative. This task explicitly requests dative before accusative; other contexts may allow different orders."
+          },
+          "type": "text",
+          "answers": [
+            "Du leihst deinem Freund das Fahrrad."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Bilde einen Satz: Wir | erzählen | die Kinder | eine Geschichte. Reihenfolge: Subjekt + Verb + Dativ + Akkusativ.",
+          "correct": "Wir erzählen den Kindern eine Geschichte.",
+          "explanations": {
+            "tr": "erzählen ile die Kinder alıcı, eine Geschichte ise nesnedir. Alıcı den Kindern olur: die → den; Kinder çoğul Dativde Kindern olur. Nesne eine Geschichte olur: eine feminin Akkusativde değişmez. Görev özellikle isimli nesnelerde Dativ → Akkusativ sırasını istiyor; bağlama göre başka sıralar da mümkün olabilir.",
+            "de": "Bei erzählen wird der Empfänger die Kinder zu den Kindern: die → den; Kinder erhält im Dativ Plural -n. Die Sache eine Geschichte wird zu eine Geschichte: eine bleibt im femininen Akkusativ gleich. Hier ist ausdrücklich Dativ vor Akkusativ verlangt; das ist keine absolute Regel für jeden Kontext.",
+            "en": "With erzählen, recipient die Kinder becomes den Kindern: die → den; plural Kinder adds -n in the dative. Thing eine Geschichte becomes eine Geschichte: eine stays unchanged in feminine accusative. This task explicitly requests dative before accusative; other contexts may allow different orders."
+          },
+          "type": "text",
+          "answers": [
+            "Wir erzählen den Kindern eine Geschichte.",
+            "Wir erzaehlen den Kindern eine Geschichte."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Bilde einen Satz: Der Kellner | empfiehlt | die Frau | der Salat. Reihenfolge: Subjekt + Verb + Dativ + Akkusativ.",
+          "correct": "Der Kellner empfiehlt der Frau den Salat.",
+          "explanations": {
+            "tr": "empfehlen ile die Frau alıcı, der Salat ise nesnedir. Alıcı der Frau olur: die → der; Frau feminin. Nesne den Salat olur: der → den; Salat maskulin. Görev özellikle isimli nesnelerde Dativ → Akkusativ sırasını istiyor; bağlama göre başka sıralar da mümkün olabilir.",
+            "de": "Bei empfehlen wird der Empfänger die Frau zu der Frau: die → der; Frau ist feminin. Die Sache der Salat wird zu den Salat: der → den; Salat ist maskulin. Hier ist ausdrücklich Dativ vor Akkusativ verlangt; das ist keine absolute Regel für jeden Kontext.",
+            "en": "With empfehlen, recipient die Frau becomes der Frau: die → der; Frau is feminine. Thing der Salat becomes den Salat: der → den; Salat is masculine. This task explicitly requests dative before accusative; other contexts may allow different orders."
+          },
+          "type": "text",
+          "answers": [
+            "Der Kellner empfiehlt der Frau den Salat."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Bilde einen Satz: Meine Schwester | kauft | unser Vater | ein Geschenk. Reihenfolge: Subjekt + Verb + Dativ + Akkusativ.",
+          "correct": "Meine Schwester kauft unserem Vater ein Geschenk.",
+          "explanations": {
+            "tr": "kaufen ile unser Vater alıcı, ein Geschenk ise nesnedir. Alıcı unserem Vater olur: unser → unserem; Vater maskulin. Nesne ein Geschenk olur: ein nötr Akkusativde değişmez. Görev özellikle isimli nesnelerde Dativ → Akkusativ sırasını istiyor; bağlama göre başka sıralar da mümkün olabilir.",
+            "de": "Bei kaufen wird der Empfänger unser Vater zu unserem Vater: unser → unserem; Vater ist maskulin. Die Sache ein Geschenk wird zu ein Geschenk: ein bleibt im neutralen Akkusativ gleich. Hier ist ausdrücklich Dativ vor Akkusativ verlangt; das ist keine absolute Regel für jeden Kontext.",
+            "en": "With kaufen, recipient unser Vater becomes unserem Vater: unser → unserem; Vater is masculine. Thing ein Geschenk becomes ein Geschenk: ein stays unchanged in neuter accusative. This task explicitly requests dative before accusative; other contexts may allow different orders."
+          },
+          "type": "text",
+          "answers": [
+            "Meine Schwester kauft unserem Vater ein Geschenk."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dativpronomen-6",
+      "title": {
+        "tr": "Übung 6 – Alıcı yerine zamir",
+        "de": "Übung 6 – Pronomen für den Empfänger",
+        "en": "Exercise 6 – Recipient pronouns"
+      },
+      "description": {
+        "tr": "Yalnızca Dativ zamirini yaz",
+        "de": "Schreibe nur das Dativpronomen",
+        "en": "Write only the dative pronoun"
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Practice"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Ich gebe dem Kind das Buch. Ersetze nur „dem Kind“: Ich gebe ___ das Buch.",
+          "correct": "ihm",
+          "explanations": {
+            "tr": "dem Kind, geben fiilinin Dativ alıcısıdır. Yerine geçen zamir de Dativ kalır: dem Kind → ihm. das Buch nesnesi değiştirilmez; kişi zamiri seçerken alıcının tekil/çoğul ve cinsiyet bilgisini koru.",
+            "de": "dem Kind ist der Dativempfänger von geben; das Ersatzpronomen bleibt deshalb im Dativ: ihm. das Buch bleibt unverändert. Das Pronomen muss zu Geschlecht und Numerus des Empfängers passen.",
+            "en": "dem Kind is the dative recipient of geben, so its replacement remains dative: ihm. Keep das Buch unchanged and retain the recipient’s gender and number."
+          },
+          "type": "text",
+          "answers": [
+            "ihm"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Anna schenkt ihrer Mutter einen Schal. Ersetze nur „ihrer Mutter“: Anna schenkt ___ einen Schal.",
+          "correct": "ihr",
+          "explanations": {
+            "tr": "ihrer Mutter, schenken fiilinin Dativ alıcısıdır. Yerine geçen zamir de Dativ kalır: ihrer Mutter → ihr. einen Schal nesnesi değiştirilmez; kişi zamiri seçerken alıcının tekil/çoğul ve cinsiyet bilgisini koru.",
+            "de": "ihrer Mutter ist der Dativempfänger von schenken; das Ersatzpronomen bleibt deshalb im Dativ: ihr. einen Schal bleibt unverändert. Das Pronomen muss zu Geschlecht und Numerus des Empfängers passen.",
+            "en": "ihrer Mutter is the dative recipient of schenken, so its replacement remains dative: ihr. Keep einen Schal unchanged and retain the recipient’s gender and number."
+          },
+          "type": "text",
+          "answers": [
+            "ihr"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Wir zeigen dem Gast den Weg. Ersetze nur „dem Gast“: Wir zeigen ___ den Weg.",
+          "correct": "ihm",
+          "explanations": {
+            "tr": "dem Gast, zeigen fiilinin Dativ alıcısıdır. Yerine geçen zamir de Dativ kalır: dem Gast → ihm. den Weg nesnesi değiştirilmez; kişi zamiri seçerken alıcının tekil/çoğul ve cinsiyet bilgisini koru.",
+            "de": "dem Gast ist der Dativempfänger von zeigen; das Ersatzpronomen bleibt deshalb im Dativ: ihm. den Weg bleibt unverändert. Das Pronomen muss zu Geschlecht und Numerus des Empfängers passen.",
+            "en": "dem Gast is the dative recipient of zeigen, so its replacement remains dative: ihm. Keep den Weg unchanged and retain the recipient’s gender and number."
+          },
+          "type": "text",
+          "answers": [
+            "ihm"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Paul schickt seinem Bruder eine Nachricht. Ersetze nur „seinem Bruder“: Paul schickt ___ eine Nachricht.",
+          "correct": "ihm",
+          "explanations": {
+            "tr": "seinem Bruder, schicken fiilinin Dativ alıcısıdır. Yerine geçen zamir de Dativ kalır: seinem Bruder → ihm. eine Nachricht nesnesi değiştirilmez; kişi zamiri seçerken alıcının tekil/çoğul ve cinsiyet bilgisini koru.",
+            "de": "seinem Bruder ist der Dativempfänger von schicken; das Ersatzpronomen bleibt deshalb im Dativ: ihm. eine Nachricht bleibt unverändert. Das Pronomen muss zu Geschlecht und Numerus des Empfängers passen.",
+            "en": "seinem Bruder is the dative recipient of schicken, so its replacement remains dative: ihm. Keep eine Nachricht unchanged and retain the recipient’s gender and number."
+          },
+          "type": "text",
+          "answers": [
+            "ihm"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Die Lehrerin erklärt den Schülern die Aufgabe. Ersetze nur „den Schülern“: Die Lehrerin erklärt ___ die Aufgabe.",
+          "correct": "ihnen",
+          "explanations": {
+            "tr": "den Schülern, erklären fiilinin Dativ alıcısıdır. Yerine geçen zamir de Dativ kalır: den Schülern → ihnen. die Aufgabe nesnesi değiştirilmez; kişi zamiri seçerken alıcının tekil/çoğul ve cinsiyet bilgisini koru.",
+            "de": "den Schülern ist der Dativempfänger von erklären; das Ersatzpronomen bleibt deshalb im Dativ: ihnen. die Aufgabe bleibt unverändert. Das Pronomen muss zu Geschlecht und Numerus des Empfängers passen.",
+            "en": "den Schülern is the dative recipient of erklären, so its replacement remains dative: ihnen. Keep die Aufgabe unchanged and retain the recipient’s gender and number."
+          },
+          "type": "text",
+          "answers": [
+            "ihnen"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Ich bringe der Nachbarin einen Kuchen. Ersetze nur „der Nachbarin“: Ich bringe ___ einen Kuchen.",
+          "correct": "ihr",
+          "explanations": {
+            "tr": "der Nachbarin, bringen fiilinin Dativ alıcısıdır. Yerine geçen zamir de Dativ kalır: der Nachbarin → ihr. einen Kuchen nesnesi değiştirilmez; kişi zamiri seçerken alıcının tekil/çoğul ve cinsiyet bilgisini koru.",
+            "de": "der Nachbarin ist der Dativempfänger von bringen; das Ersatzpronomen bleibt deshalb im Dativ: ihr. einen Kuchen bleibt unverändert. Das Pronomen muss zu Geschlecht und Numerus des Empfängers passen.",
+            "en": "der Nachbarin is the dative recipient of bringen, so its replacement remains dative: ihr. Keep einen Kuchen unchanged and retain the recipient’s gender and number."
+          },
+          "type": "text",
+          "answers": [
+            "ihr"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Du leihst deinem Freund das Fahrrad. Ersetze nur „deinem Freund“: Du leihst ___ das Fahrrad.",
+          "correct": "ihm",
+          "explanations": {
+            "tr": "deinem Freund, leihen fiilinin Dativ alıcısıdır. Yerine geçen zamir de Dativ kalır: deinem Freund → ihm. das Fahrrad nesnesi değiştirilmez; kişi zamiri seçerken alıcının tekil/çoğul ve cinsiyet bilgisini koru.",
+            "de": "deinem Freund ist der Dativempfänger von leihen; das Ersatzpronomen bleibt deshalb im Dativ: ihm. das Fahrrad bleibt unverändert. Das Pronomen muss zu Geschlecht und Numerus des Empfängers passen.",
+            "en": "deinem Freund is the dative recipient of leihen, so its replacement remains dative: ihm. Keep das Fahrrad unchanged and retain the recipient’s gender and number."
+          },
+          "type": "text",
+          "answers": [
+            "ihm"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Wir erzählen den Kindern eine Geschichte. Ersetze nur „den Kindern“: Wir erzählen ___ eine Geschichte.",
+          "correct": "ihnen",
+          "explanations": {
+            "tr": "den Kindern, erzählen fiilinin Dativ alıcısıdır. Yerine geçen zamir de Dativ kalır: den Kindern → ihnen. eine Geschichte nesnesi değiştirilmez; kişi zamiri seçerken alıcının tekil/çoğul ve cinsiyet bilgisini koru.",
+            "de": "den Kindern ist der Dativempfänger von erzählen; das Ersatzpronomen bleibt deshalb im Dativ: ihnen. eine Geschichte bleibt unverändert. Das Pronomen muss zu Geschlecht und Numerus des Empfängers passen.",
+            "en": "den Kindern is the dative recipient of erzählen, so its replacement remains dative: ihnen. Keep eine Geschichte unchanged and retain the recipient’s gender and number."
+          },
+          "type": "text",
+          "answers": [
+            "ihnen"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Der Kellner empfiehlt der Frau den Salat. Ersetze nur „der Frau“: Der Kellner empfiehlt ___ den Salat.",
+          "correct": "ihr",
+          "explanations": {
+            "tr": "der Frau, empfehlen fiilinin Dativ alıcısıdır. Yerine geçen zamir de Dativ kalır: der Frau → ihr. den Salat nesnesi değiştirilmez; kişi zamiri seçerken alıcının tekil/çoğul ve cinsiyet bilgisini koru.",
+            "de": "der Frau ist der Dativempfänger von empfehlen; das Ersatzpronomen bleibt deshalb im Dativ: ihr. den Salat bleibt unverändert. Das Pronomen muss zu Geschlecht und Numerus des Empfängers passen.",
+            "en": "der Frau is the dative recipient of empfehlen, so its replacement remains dative: ihr. Keep den Salat unchanged and retain the recipient’s gender and number."
+          },
+          "type": "text",
+          "answers": [
+            "ihr"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Meine Schwester kauft unserem Vater ein Geschenk. Ersetze nur „unserem Vater“: Meine Schwester kauft ___ ein Geschenk.",
+          "correct": "ihm",
+          "explanations": {
+            "tr": "unserem Vater, kaufen fiilinin Dativ alıcısıdır. Yerine geçen zamir de Dativ kalır: unserem Vater → ihm. ein Geschenk nesnesi değiştirilmez; kişi zamiri seçerken alıcının tekil/çoğul ve cinsiyet bilgisini koru.",
+            "de": "unserem Vater ist der Dativempfänger von kaufen; das Ersatzpronomen bleibt deshalb im Dativ: ihm. ein Geschenk bleibt unverändert. Das Pronomen muss zu Geschlecht und Numerus des Empfängers passen.",
+            "en": "unserem Vater is the dative recipient of kaufen, so its replacement remains dative: ihm. Keep ein Geschenk unchanged and retain the recipient’s gender and number."
+          },
+          "type": "text",
+          "answers": [
+            "ihm"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "akkusativpronomen-7",
+      "title": {
+        "tr": "Übung 7 – Nesne yerine zamir",
+        "de": "Übung 7 – Pronomen für die Sache",
+        "en": "Exercise 7 – Object pronouns"
+      },
+      "description": {
+        "tr": "Yalnızca Akkusativ zamirini yaz",
+        "de": "Schreibe nur das Akkusativpronomen",
+        "en": "Write only the accusative pronoun"
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Practice"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Ich gebe dem Kind das Buch. Ersetze nur „das Buch“: Ich gebe ___ dem Kind.",
+          "correct": "es",
+          "explanations": {
+            "tr": "das Buch, geben fiilinin Akkusativ nesnesidir. Bu isim yerine es gelir; bu zamir alıcıyı değil das Buch grubunu temsil eder. İsimli Dativ grubu dem Kind korunur; vurgusuz Akkusativ zamiri burada onun önündedir.",
+            "de": "das Buch ist das Akkusativobjekt von geben; dafür steht es. Dieses Pronomen bezeichnet die Sache, nicht den Empfänger. Die nominale Dativgruppe dem Kind bleibt erhalten und folgt hier dem unbetonten Pronomen.",
+            "en": "das Buch is the accusative object of geben, replaced by es. This pronoun refers to the thing rather than the recipient. Keep dative noun phrase dem Kind after the unstressed pronoun."
+          },
+          "type": "text",
+          "answers": [
+            "es"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Anna schenkt ihrer Mutter einen Schal. Ersetze nur „einen Schal“: Anna schenkt ___ ihrer Mutter.",
+          "correct": "ihn",
+          "explanations": {
+            "tr": "einen Schal, schenken fiilinin Akkusativ nesnesidir. Bu isim yerine ihn gelir; bu zamir alıcıyı değil einen Schal grubunu temsil eder. İsimli Dativ grubu ihrer Mutter korunur; vurgusuz Akkusativ zamiri burada onun önündedir.",
+            "de": "einen Schal ist das Akkusativobjekt von schenken; dafür steht ihn. Dieses Pronomen bezeichnet die Sache, nicht den Empfänger. Die nominale Dativgruppe ihrer Mutter bleibt erhalten und folgt hier dem unbetonten Pronomen.",
+            "en": "einen Schal is the accusative object of schenken, replaced by ihn. This pronoun refers to the thing rather than the recipient. Keep dative noun phrase ihrer Mutter after the unstressed pronoun."
+          },
+          "type": "text",
+          "answers": [
+            "ihn"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Wir zeigen dem Gast den Weg. Ersetze nur „den Weg“: Wir zeigen ___ dem Gast.",
+          "correct": "ihn",
+          "explanations": {
+            "tr": "den Weg, zeigen fiilinin Akkusativ nesnesidir. Bu isim yerine ihn gelir; bu zamir alıcıyı değil den Weg grubunu temsil eder. İsimli Dativ grubu dem Gast korunur; vurgusuz Akkusativ zamiri burada onun önündedir.",
+            "de": "den Weg ist das Akkusativobjekt von zeigen; dafür steht ihn. Dieses Pronomen bezeichnet die Sache, nicht den Empfänger. Die nominale Dativgruppe dem Gast bleibt erhalten und folgt hier dem unbetonten Pronomen.",
+            "en": "den Weg is the accusative object of zeigen, replaced by ihn. This pronoun refers to the thing rather than the recipient. Keep dative noun phrase dem Gast after the unstressed pronoun."
+          },
+          "type": "text",
+          "answers": [
+            "ihn"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Paul schickt seinem Bruder eine Nachricht. Ersetze nur „eine Nachricht“: Paul schickt ___ seinem Bruder.",
+          "correct": "sie",
+          "explanations": {
+            "tr": "eine Nachricht, schicken fiilinin Akkusativ nesnesidir. Bu isim yerine sie gelir; bu zamir alıcıyı değil eine Nachricht grubunu temsil eder. İsimli Dativ grubu seinem Bruder korunur; vurgusuz Akkusativ zamiri burada onun önündedir.",
+            "de": "eine Nachricht ist das Akkusativobjekt von schicken; dafür steht sie. Dieses Pronomen bezeichnet die Sache, nicht den Empfänger. Die nominale Dativgruppe seinem Bruder bleibt erhalten und folgt hier dem unbetonten Pronomen.",
+            "en": "eine Nachricht is the accusative object of schicken, replaced by sie. This pronoun refers to the thing rather than the recipient. Keep dative noun phrase seinem Bruder after the unstressed pronoun."
+          },
+          "type": "text",
+          "answers": [
+            "sie"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Die Lehrerin erklärt den Schülern die Aufgabe. Ersetze nur „die Aufgabe“: Die Lehrerin erklärt ___ den Schülern.",
+          "correct": "sie",
+          "explanations": {
+            "tr": "die Aufgabe, erklären fiilinin Akkusativ nesnesidir. Bu isim yerine sie gelir; bu zamir alıcıyı değil die Aufgabe grubunu temsil eder. İsimli Dativ grubu den Schülern korunur; vurgusuz Akkusativ zamiri burada onun önündedir.",
+            "de": "die Aufgabe ist das Akkusativobjekt von erklären; dafür steht sie. Dieses Pronomen bezeichnet die Sache, nicht den Empfänger. Die nominale Dativgruppe den Schülern bleibt erhalten und folgt hier dem unbetonten Pronomen.",
+            "en": "die Aufgabe is the accusative object of erklären, replaced by sie. This pronoun refers to the thing rather than the recipient. Keep dative noun phrase den Schülern after the unstressed pronoun."
+          },
+          "type": "text",
+          "answers": [
+            "sie"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Ich bringe der Nachbarin einen Kuchen. Ersetze nur „einen Kuchen“: Ich bringe ___ der Nachbarin.",
+          "correct": "ihn",
+          "explanations": {
+            "tr": "einen Kuchen, bringen fiilinin Akkusativ nesnesidir. Bu isim yerine ihn gelir; bu zamir alıcıyı değil einen Kuchen grubunu temsil eder. İsimli Dativ grubu der Nachbarin korunur; vurgusuz Akkusativ zamiri burada onun önündedir.",
+            "de": "einen Kuchen ist das Akkusativobjekt von bringen; dafür steht ihn. Dieses Pronomen bezeichnet die Sache, nicht den Empfänger. Die nominale Dativgruppe der Nachbarin bleibt erhalten und folgt hier dem unbetonten Pronomen.",
+            "en": "einen Kuchen is the accusative object of bringen, replaced by ihn. This pronoun refers to the thing rather than the recipient. Keep dative noun phrase der Nachbarin after the unstressed pronoun."
+          },
+          "type": "text",
+          "answers": [
+            "ihn"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Du leihst deinem Freund das Fahrrad. Ersetze nur „das Fahrrad“: Du leihst ___ deinem Freund.",
+          "correct": "es",
+          "explanations": {
+            "tr": "das Fahrrad, leihen fiilinin Akkusativ nesnesidir. Bu isim yerine es gelir; bu zamir alıcıyı değil das Fahrrad grubunu temsil eder. İsimli Dativ grubu deinem Freund korunur; vurgusuz Akkusativ zamiri burada onun önündedir.",
+            "de": "das Fahrrad ist das Akkusativobjekt von leihen; dafür steht es. Dieses Pronomen bezeichnet die Sache, nicht den Empfänger. Die nominale Dativgruppe deinem Freund bleibt erhalten und folgt hier dem unbetonten Pronomen.",
+            "en": "das Fahrrad is the accusative object of leihen, replaced by es. This pronoun refers to the thing rather than the recipient. Keep dative noun phrase deinem Freund after the unstressed pronoun."
+          },
+          "type": "text",
+          "answers": [
+            "es"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Wir erzählen den Kindern eine Geschichte. Ersetze nur „eine Geschichte“: Wir erzählen ___ den Kindern.",
+          "correct": "sie",
+          "explanations": {
+            "tr": "eine Geschichte, erzählen fiilinin Akkusativ nesnesidir. Bu isim yerine sie gelir; bu zamir alıcıyı değil eine Geschichte grubunu temsil eder. İsimli Dativ grubu den Kindern korunur; vurgusuz Akkusativ zamiri burada onun önündedir.",
+            "de": "eine Geschichte ist das Akkusativobjekt von erzählen; dafür steht sie. Dieses Pronomen bezeichnet die Sache, nicht den Empfänger. Die nominale Dativgruppe den Kindern bleibt erhalten und folgt hier dem unbetonten Pronomen.",
+            "en": "eine Geschichte is the accusative object of erzählen, replaced by sie. This pronoun refers to the thing rather than the recipient. Keep dative noun phrase den Kindern after the unstressed pronoun."
+          },
+          "type": "text",
+          "answers": [
+            "sie"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Der Kellner empfiehlt der Frau den Salat. Ersetze nur „den Salat“: Der Kellner empfiehlt ___ der Frau.",
+          "correct": "ihn",
+          "explanations": {
+            "tr": "den Salat, empfehlen fiilinin Akkusativ nesnesidir. Bu isim yerine ihn gelir; bu zamir alıcıyı değil den Salat grubunu temsil eder. İsimli Dativ grubu der Frau korunur; vurgusuz Akkusativ zamiri burada onun önündedir.",
+            "de": "den Salat ist das Akkusativobjekt von empfehlen; dafür steht ihn. Dieses Pronomen bezeichnet die Sache, nicht den Empfänger. Die nominale Dativgruppe der Frau bleibt erhalten und folgt hier dem unbetonten Pronomen.",
+            "en": "den Salat is the accusative object of empfehlen, replaced by ihn. This pronoun refers to the thing rather than the recipient. Keep dative noun phrase der Frau after the unstressed pronoun."
+          },
+          "type": "text",
+          "answers": [
+            "ihn"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Meine Schwester kauft unserem Vater ein Geschenk. Ersetze nur „ein Geschenk“: Meine Schwester kauft ___ unserem Vater.",
+          "correct": "es",
+          "explanations": {
+            "tr": "ein Geschenk, kaufen fiilinin Akkusativ nesnesidir. Bu isim yerine es gelir; bu zamir alıcıyı değil ein Geschenk grubunu temsil eder. İsimli Dativ grubu unserem Vater korunur; vurgusuz Akkusativ zamiri burada onun önündedir.",
+            "de": "ein Geschenk ist das Akkusativobjekt von kaufen; dafür steht es. Dieses Pronomen bezeichnet die Sache, nicht den Empfänger. Die nominale Dativgruppe unserem Vater bleibt erhalten und folgt hier dem unbetonten Pronomen.",
+            "en": "ein Geschenk is the accusative object of kaufen, replaced by es. This pronoun refers to the thing rather than the recipient. Keep dative noun phrase unserem Vater after the unstressed pronoun."
+          },
+          "type": "text",
+          "answers": [
+            "es"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zwei-pronomen-8",
+      "title": {
+        "tr": "Übung 8 – İki nesne de zamir",
+        "de": "Übung 8 – Zwei Pronomen",
+        "en": "Exercise 8 – Two pronouns"
+      },
+      "description": {
+        "tr": "İki nesneyi vurgusuz zamirle değiştir; verilen özneyle başla",
+        "de": "Ersetze beide Objekte durch unbetonte Pronomen; beginne mit dem Subjekt",
+        "en": "Replace both objects with unstressed pronouns; start with the subject"
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Practice"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Ersetze beide Objekte. Neutrale Reihenfolge mit unbetonten Pronomen: Ich gebe dem Kind das Buch.",
+          "correct": "Ich gebe es ihm.",
+          "explanations": {
+            "tr": "das Buch → es Akkusativ nesne; dem Kind → ihm Dativ alıcıdır. İki nesne de vurgusuz zamir olduğunda temel sıra es + ihm olur. İsimli örnekteki Dativ → Akkusativ sırasını otomatik olarak buraya taşıma.",
+            "de": "das Buch → es ist Akkusativ; dem Kind → ihm ist Dativ. Bei zwei unbetonten Objektpronomen lautet die neutrale Folge es vor ihm, anders als in der nominalen Ausgangsfolge.",
+            "en": "das Buch → es is accusative; dem Kind → ihm is dative. Two unstressed object pronouns normally follow the order es before ihm; do not simply copy the original noun-phrase order."
+          },
+          "type": "text",
+          "answers": [
+            "Ich gebe es ihm."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Ersetze beide Objekte. Neutrale Reihenfolge mit unbetonten Pronomen: Anna schenkt ihrer Mutter einen Schal.",
+          "correct": "Anna schenkt ihn ihr.",
+          "explanations": {
+            "tr": "einen Schal → ihn Akkusativ nesne; ihrer Mutter → ihr Dativ alıcıdır. İki nesne de vurgusuz zamir olduğunda temel sıra ihn + ihr olur. İsimli örnekteki Dativ → Akkusativ sırasını otomatik olarak buraya taşıma.",
+            "de": "einen Schal → ihn ist Akkusativ; ihrer Mutter → ihr ist Dativ. Bei zwei unbetonten Objektpronomen lautet die neutrale Folge ihn vor ihr, anders als in der nominalen Ausgangsfolge.",
+            "en": "einen Schal → ihn is accusative; ihrer Mutter → ihr is dative. Two unstressed object pronouns normally follow the order ihn before ihr; do not simply copy the original noun-phrase order."
+          },
+          "type": "text",
+          "answers": [
+            "Anna schenkt ihn ihr."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Ersetze beide Objekte. Neutrale Reihenfolge mit unbetonten Pronomen: Wir zeigen dem Gast den Weg.",
+          "correct": "Wir zeigen ihn ihm.",
+          "explanations": {
+            "tr": "den Weg → ihn Akkusativ nesne; dem Gast → ihm Dativ alıcıdır. İki nesne de vurgusuz zamir olduğunda temel sıra ihn + ihm olur. İsimli örnekteki Dativ → Akkusativ sırasını otomatik olarak buraya taşıma.",
+            "de": "den Weg → ihn ist Akkusativ; dem Gast → ihm ist Dativ. Bei zwei unbetonten Objektpronomen lautet die neutrale Folge ihn vor ihm, anders als in der nominalen Ausgangsfolge.",
+            "en": "den Weg → ihn is accusative; dem Gast → ihm is dative. Two unstressed object pronouns normally follow the order ihn before ihm; do not simply copy the original noun-phrase order."
+          },
+          "type": "text",
+          "answers": [
+            "Wir zeigen ihn ihm."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Ersetze beide Objekte. Neutrale Reihenfolge mit unbetonten Pronomen: Paul schickt seinem Bruder eine Nachricht.",
+          "correct": "Paul schickt sie ihm.",
+          "explanations": {
+            "tr": "eine Nachricht → sie Akkusativ nesne; seinem Bruder → ihm Dativ alıcıdır. İki nesne de vurgusuz zamir olduğunda temel sıra sie + ihm olur. İsimli örnekteki Dativ → Akkusativ sırasını otomatik olarak buraya taşıma.",
+            "de": "eine Nachricht → sie ist Akkusativ; seinem Bruder → ihm ist Dativ. Bei zwei unbetonten Objektpronomen lautet die neutrale Folge sie vor ihm, anders als in der nominalen Ausgangsfolge.",
+            "en": "eine Nachricht → sie is accusative; seinem Bruder → ihm is dative. Two unstressed object pronouns normally follow the order sie before ihm; do not simply copy the original noun-phrase order."
+          },
+          "type": "text",
+          "answers": [
+            "Paul schickt sie ihm."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Ersetze beide Objekte. Neutrale Reihenfolge mit unbetonten Pronomen: Die Lehrerin erklärt den Schülern die Aufgabe.",
+          "correct": "Die Lehrerin erklärt sie ihnen.",
+          "explanations": {
+            "tr": "die Aufgabe → sie Akkusativ nesne; den Schülern → ihnen Dativ alıcıdır. İki nesne de vurgusuz zamir olduğunda temel sıra sie + ihnen olur. İsimli örnekteki Dativ → Akkusativ sırasını otomatik olarak buraya taşıma.",
+            "de": "die Aufgabe → sie ist Akkusativ; den Schülern → ihnen ist Dativ. Bei zwei unbetonten Objektpronomen lautet die neutrale Folge sie vor ihnen, anders als in der nominalen Ausgangsfolge.",
+            "en": "die Aufgabe → sie is accusative; den Schülern → ihnen is dative. Two unstressed object pronouns normally follow the order sie before ihnen; do not simply copy the original noun-phrase order."
+          },
+          "type": "text",
+          "answers": [
+            "Die Lehrerin erklärt sie ihnen.",
+            "Die Lehrerin erklaert sie ihnen."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Ersetze beide Objekte. Neutrale Reihenfolge mit unbetonten Pronomen: Ich bringe der Nachbarin einen Kuchen.",
+          "correct": "Ich bringe ihn ihr.",
+          "explanations": {
+            "tr": "einen Kuchen → ihn Akkusativ nesne; der Nachbarin → ihr Dativ alıcıdır. İki nesne de vurgusuz zamir olduğunda temel sıra ihn + ihr olur. İsimli örnekteki Dativ → Akkusativ sırasını otomatik olarak buraya taşıma.",
+            "de": "einen Kuchen → ihn ist Akkusativ; der Nachbarin → ihr ist Dativ. Bei zwei unbetonten Objektpronomen lautet die neutrale Folge ihn vor ihr, anders als in der nominalen Ausgangsfolge.",
+            "en": "einen Kuchen → ihn is accusative; der Nachbarin → ihr is dative. Two unstressed object pronouns normally follow the order ihn before ihr; do not simply copy the original noun-phrase order."
+          },
+          "type": "text",
+          "answers": [
+            "Ich bringe ihn ihr."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Ersetze beide Objekte. Neutrale Reihenfolge mit unbetonten Pronomen: Du leihst deinem Freund das Fahrrad.",
+          "correct": "Du leihst es ihm.",
+          "explanations": {
+            "tr": "das Fahrrad → es Akkusativ nesne; deinem Freund → ihm Dativ alıcıdır. İki nesne de vurgusuz zamir olduğunda temel sıra es + ihm olur. İsimli örnekteki Dativ → Akkusativ sırasını otomatik olarak buraya taşıma.",
+            "de": "das Fahrrad → es ist Akkusativ; deinem Freund → ihm ist Dativ. Bei zwei unbetonten Objektpronomen lautet die neutrale Folge es vor ihm, anders als in der nominalen Ausgangsfolge.",
+            "en": "das Fahrrad → es is accusative; deinem Freund → ihm is dative. Two unstressed object pronouns normally follow the order es before ihm; do not simply copy the original noun-phrase order."
+          },
+          "type": "text",
+          "answers": [
+            "Du leihst es ihm."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Ersetze beide Objekte. Neutrale Reihenfolge mit unbetonten Pronomen: Wir erzählen den Kindern eine Geschichte.",
+          "correct": "Wir erzählen sie ihnen.",
+          "explanations": {
+            "tr": "eine Geschichte → sie Akkusativ nesne; den Kindern → ihnen Dativ alıcıdır. İki nesne de vurgusuz zamir olduğunda temel sıra sie + ihnen olur. İsimli örnekteki Dativ → Akkusativ sırasını otomatik olarak buraya taşıma.",
+            "de": "eine Geschichte → sie ist Akkusativ; den Kindern → ihnen ist Dativ. Bei zwei unbetonten Objektpronomen lautet die neutrale Folge sie vor ihnen, anders als in der nominalen Ausgangsfolge.",
+            "en": "eine Geschichte → sie is accusative; den Kindern → ihnen is dative. Two unstressed object pronouns normally follow the order sie before ihnen; do not simply copy the original noun-phrase order."
+          },
+          "type": "text",
+          "answers": [
+            "Wir erzählen sie ihnen.",
+            "Wir erzaehlen sie ihnen."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Ersetze beide Objekte. Neutrale Reihenfolge mit unbetonten Pronomen: Der Kellner empfiehlt der Frau den Salat.",
+          "correct": "Der Kellner empfiehlt ihn ihr.",
+          "explanations": {
+            "tr": "den Salat → ihn Akkusativ nesne; der Frau → ihr Dativ alıcıdır. İki nesne de vurgusuz zamir olduğunda temel sıra ihn + ihr olur. İsimli örnekteki Dativ → Akkusativ sırasını otomatik olarak buraya taşıma.",
+            "de": "den Salat → ihn ist Akkusativ; der Frau → ihr ist Dativ. Bei zwei unbetonten Objektpronomen lautet die neutrale Folge ihn vor ihr, anders als in der nominalen Ausgangsfolge.",
+            "en": "den Salat → ihn is accusative; der Frau → ihr is dative. Two unstressed object pronouns normally follow the order ihn before ihr; do not simply copy the original noun-phrase order."
+          },
+          "type": "text",
+          "answers": [
+            "Der Kellner empfiehlt ihn ihr."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Ersetze beide Objekte. Neutrale Reihenfolge mit unbetonten Pronomen: Meine Schwester kauft unserem Vater ein Geschenk.",
+          "correct": "Meine Schwester kauft es ihm.",
+          "explanations": {
+            "tr": "ein Geschenk → es Akkusativ nesne; unserem Vater → ihm Dativ alıcıdır. İki nesne de vurgusuz zamir olduğunda temel sıra es + ihm olur. İsimli örnekteki Dativ → Akkusativ sırasını otomatik olarak buraya taşıma.",
+            "de": "ein Geschenk → es ist Akkusativ; unserem Vater → ihm ist Dativ. Bei zwei unbetonten Objektpronomen lautet die neutrale Folge es vor ihm, anders als in der nominalen Ausgangsfolge.",
+            "en": "ein Geschenk → es is accusative; unserem Vater → ihm is dative. Two unstressed object pronouns normally follow the order es before ihm; do not simply copy the original noun-phrase order."
+          },
+          "type": "text",
+          "answers": [
+            "Meine Schwester kauft es ihm."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fehler-9",
+      "title": {
+        "tr": "Übung 9 – Hata düzeltme",
+        "de": "Übung 9 – Fehler korrigieren",
+        "en": "Exercise 9 – Correct errors"
+      },
+      "description": {
+        "tr": "Yalnızca hâl hatasını düzelt; kelimeleri ve sıralamayı koru",
+        "de": "Korrigiere nur den Kasusfehler; behalte Wörter und Reihenfolge",
+        "en": "Correct only the case error; keep the words and order"
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Practice"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Korrigiere: Ich gebe das Kind das Buch.",
+          "correct": "Ich gebe dem Kind das Buch.",
+          "explanations": {
+            "tr": "das Kind bu cümlede özne değil, geben fiilinin alıcısıdır. Bu nedenle Nominativ biçiminden dem Kind Dativ biçimine geçmeli: das → dem; Kind neutral. das Buch Akkusativ nesnesi doğru olduğu için korunur.",
+            "de": "das Kind ist hier nicht das Subjekt, sondern der Empfänger von geben. Deshalb muss es dem Kind im Dativ heißen: das → dem; Kind ist neutral. Das Akkusativobjekt das Buch ist bereits richtig.",
+            "en": "das Kind is not the subject here; it is the recipient of geben. Change it to dative dem Kind: das → dem; Kind is neuter. The accusative object das Buch is already correct."
+          },
+          "type": "text",
+          "answers": [
+            "Ich gebe dem Kind das Buch."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Korrigiere: Anna schenkt ihre Mutter einen Schal.",
+          "correct": "Anna schenkt ihrer Mutter einen Schal.",
+          "explanations": {
+            "tr": "ihre Mutter bu cümlede özne değil, schenken fiilinin alıcısıdır. Bu nedenle Nominativ biçiminden ihrer Mutter Dativ biçimine geçmeli: ihre → ihrer; Mutter feminin. einen Schal Akkusativ nesnesi doğru olduğu için korunur.",
+            "de": "ihre Mutter ist hier nicht das Subjekt, sondern der Empfänger von schenken. Deshalb muss es ihrer Mutter im Dativ heißen: ihre → ihrer; Mutter ist feminin. Das Akkusativobjekt einen Schal ist bereits richtig.",
+            "en": "ihre Mutter is not the subject here; it is the recipient of schenken. Change it to dative ihrer Mutter: ihre → ihrer; Mutter is feminine. The accusative object einen Schal is already correct."
+          },
+          "type": "text",
+          "answers": [
+            "Anna schenkt ihrer Mutter einen Schal."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Korrigiere: Wir zeigen der Gast den Weg.",
+          "correct": "Wir zeigen dem Gast den Weg.",
+          "explanations": {
+            "tr": "der Gast bu cümlede özne değil, zeigen fiilinin alıcısıdır. Bu nedenle Nominativ biçiminden dem Gast Dativ biçimine geçmeli: der → dem; Gast maskulin. den Weg Akkusativ nesnesi doğru olduğu için korunur.",
+            "de": "der Gast ist hier nicht das Subjekt, sondern der Empfänger von zeigen. Deshalb muss es dem Gast im Dativ heißen: der → dem; Gast ist maskulin. Das Akkusativobjekt den Weg ist bereits richtig.",
+            "en": "der Gast is not the subject here; it is the recipient of zeigen. Change it to dative dem Gast: der → dem; Gast is masculine. The accusative object den Weg is already correct."
+          },
+          "type": "text",
+          "answers": [
+            "Wir zeigen dem Gast den Weg."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Korrigiere: Paul schickt sein Bruder eine Nachricht.",
+          "correct": "Paul schickt seinem Bruder eine Nachricht.",
+          "explanations": {
+            "tr": "sein Bruder bu cümlede özne değil, schicken fiilinin alıcısıdır. Bu nedenle Nominativ biçiminden seinem Bruder Dativ biçimine geçmeli: sein → seinem; Bruder maskulin. eine Nachricht Akkusativ nesnesi doğru olduğu için korunur.",
+            "de": "sein Bruder ist hier nicht das Subjekt, sondern der Empfänger von schicken. Deshalb muss es seinem Bruder im Dativ heißen: sein → seinem; Bruder ist maskulin. Das Akkusativobjekt eine Nachricht ist bereits richtig.",
+            "en": "sein Bruder is not the subject here; it is the recipient of schicken. Change it to dative seinem Bruder: sein → seinem; Bruder is masculine. The accusative object eine Nachricht is already correct."
+          },
+          "type": "text",
+          "answers": [
+            "Paul schickt seinem Bruder eine Nachricht."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Korrigiere: Die Lehrerin erklärt die Schüler die Aufgabe.",
+          "correct": "Die Lehrerin erklärt den Schülern die Aufgabe.",
+          "explanations": {
+            "tr": "die Schüler bu cümlede özne değil, erklären fiilinin alıcısıdır. Bu nedenle Nominativ biçiminden den Schülern Dativ biçimine geçmeli: die → den; Schüler çoğul Dativde Schülern olur. die Aufgabe Akkusativ nesnesi doğru olduğu için korunur.",
+            "de": "die Schüler ist hier nicht das Subjekt, sondern der Empfänger von erklären. Deshalb muss es den Schülern im Dativ heißen: die → den; Schüler erhält im Dativ Plural -n. Das Akkusativobjekt die Aufgabe ist bereits richtig.",
+            "en": "die Schüler is not the subject here; it is the recipient of erklären. Change it to dative den Schülern: die → den; plural Schüler adds -n in the dative. The accusative object die Aufgabe is already correct."
+          },
+          "type": "text",
+          "answers": [
+            "Die Lehrerin erklärt den Schülern die Aufgabe.",
+            "Die Lehrerin erklaert den Schuelern die Aufgabe."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Korrigiere: Ich bringe die Nachbarin einen Kuchen.",
+          "correct": "Ich bringe der Nachbarin einen Kuchen.",
+          "explanations": {
+            "tr": "die Nachbarin bu cümlede özne değil, bringen fiilinin alıcısıdır. Bu nedenle Nominativ biçiminden der Nachbarin Dativ biçimine geçmeli: die → der; Nachbarin feminin. einen Kuchen Akkusativ nesnesi doğru olduğu için korunur.",
+            "de": "die Nachbarin ist hier nicht das Subjekt, sondern der Empfänger von bringen. Deshalb muss es der Nachbarin im Dativ heißen: die → der; Nachbarin ist feminin. Das Akkusativobjekt einen Kuchen ist bereits richtig.",
+            "en": "die Nachbarin is not the subject here; it is the recipient of bringen. Change it to dative der Nachbarin: die → der; Nachbarin is feminine. The accusative object einen Kuchen is already correct."
+          },
+          "type": "text",
+          "answers": [
+            "Ich bringe der Nachbarin einen Kuchen."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Korrigiere: Du leihst dein Freund das Fahrrad.",
+          "correct": "Du leihst deinem Freund das Fahrrad.",
+          "explanations": {
+            "tr": "dein Freund bu cümlede özne değil, leihen fiilinin alıcısıdır. Bu nedenle Nominativ biçiminden deinem Freund Dativ biçimine geçmeli: dein → deinem; Freund maskulin. das Fahrrad Akkusativ nesnesi doğru olduğu için korunur.",
+            "de": "dein Freund ist hier nicht das Subjekt, sondern der Empfänger von leihen. Deshalb muss es deinem Freund im Dativ heißen: dein → deinem; Freund ist maskulin. Das Akkusativobjekt das Fahrrad ist bereits richtig.",
+            "en": "dein Freund is not the subject here; it is the recipient of leihen. Change it to dative deinem Freund: dein → deinem; Freund is masculine. The accusative object das Fahrrad is already correct."
+          },
+          "type": "text",
+          "answers": [
+            "Du leihst deinem Freund das Fahrrad."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Korrigiere: Wir erzählen die Kinder eine Geschichte.",
+          "correct": "Wir erzählen den Kindern eine Geschichte.",
+          "explanations": {
+            "tr": "die Kinder bu cümlede özne değil, erzählen fiilinin alıcısıdır. Bu nedenle Nominativ biçiminden den Kindern Dativ biçimine geçmeli: die → den; Kinder çoğul Dativde Kindern olur. eine Geschichte Akkusativ nesnesi doğru olduğu için korunur.",
+            "de": "die Kinder ist hier nicht das Subjekt, sondern der Empfänger von erzählen. Deshalb muss es den Kindern im Dativ heißen: die → den; Kinder erhält im Dativ Plural -n. Das Akkusativobjekt eine Geschichte ist bereits richtig.",
+            "en": "die Kinder is not the subject here; it is the recipient of erzählen. Change it to dative den Kindern: die → den; plural Kinder adds -n in the dative. The accusative object eine Geschichte is already correct."
+          },
+          "type": "text",
+          "answers": [
+            "Wir erzählen den Kindern eine Geschichte.",
+            "Wir erzaehlen den Kindern eine Geschichte."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Korrigiere: Der Kellner empfiehlt die Frau den Salat.",
+          "correct": "Der Kellner empfiehlt der Frau den Salat.",
+          "explanations": {
+            "tr": "die Frau bu cümlede özne değil, empfehlen fiilinin alıcısıdır. Bu nedenle Nominativ biçiminden der Frau Dativ biçimine geçmeli: die → der; Frau feminin. den Salat Akkusativ nesnesi doğru olduğu için korunur.",
+            "de": "die Frau ist hier nicht das Subjekt, sondern der Empfänger von empfehlen. Deshalb muss es der Frau im Dativ heißen: die → der; Frau ist feminin. Das Akkusativobjekt den Salat ist bereits richtig.",
+            "en": "die Frau is not the subject here; it is the recipient of empfehlen. Change it to dative der Frau: die → der; Frau is feminine. The accusative object den Salat is already correct."
+          },
+          "type": "text",
+          "answers": [
+            "Der Kellner empfiehlt der Frau den Salat."
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Korrigiere: Meine Schwester kauft unser Vater ein Geschenk.",
+          "correct": "Meine Schwester kauft unserem Vater ein Geschenk.",
+          "explanations": {
+            "tr": "unser Vater bu cümlede özne değil, kaufen fiilinin alıcısıdır. Bu nedenle Nominativ biçiminden unserem Vater Dativ biçimine geçmeli: unser → unserem; Vater maskulin. ein Geschenk Akkusativ nesnesi doğru olduğu için korunur.",
+            "de": "unser Vater ist hier nicht das Subjekt, sondern der Empfänger von kaufen. Deshalb muss es unserem Vater im Dativ heißen: unser → unserem; Vater ist maskulin. Das Akkusativobjekt ein Geschenk ist bereits richtig.",
+            "en": "unser Vater is not the subject here; it is the recipient of kaufen. Change it to dative unserem Vater: unser → unserem; Vater is masculine. The accusative object ein Geschenk is already correct."
+          },
+          "type": "text",
+          "answers": [
+            "Meine Schwester kauft unserem Vater ein Geschenk."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verbvergleich-10",
+      "title": {
+        "tr": "Übung 10 – Fiilin istediği hâli ayır",
+        "de": "Übung 10 – Verbergänzungen unterscheiden",
+        "en": "Exercise 10 – Distinguish verb patterns"
+      },
+      "description": {
+        "tr": "Özne hariç, cümledeki nesnelerin hâlini seç",
+        "de": "Wähle die Kasus der Objekte, ohne das Subjekt",
+        "en": "Choose the object cases, excluding the subject"
+      },
+      "difficulty": {
+        "tr": "Pekiştirme",
+        "de": "Vertiefung",
+        "en": "Practice"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Kasus haben die Objekte (ohne Subjekt)? Ich helfe dem Mann.",
+          "correct": "Dativ",
+          "explanations": {
+            "tr": "helfen Dativ nesne alır; kişi olduğu için değil, fiilin kalıbı nedeniyle dem Mann olur.",
+            "de": "helfen verlangt ein Dativobjekt: dem Mann. Der Kasus folgt aus dem Verb, nicht bloß daraus, dass eine Person gemeint ist.",
+            "en": "helfen takes a dative object, dem Mann. The verb determines the case; being a person does not automatically mean dative."
+          },
+          "options": [
+            "Dativ",
+            "Akkusativ",
+            "Dativ + Akkusativ"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Kasus haben die Objekte (ohne Subjekt)? Ich sehe den Mann.",
+          "correct": "Akkusativ",
+          "explanations": {
+            "tr": "sehen Akkusativ nesne alır: der Mann → den Mann. Bir kişinin nesne olması onu Dativ yapmaz.",
+            "de": "sehen verlangt Akkusativ: der Mann → den Mann. Ein Personenobjekt muss nicht Dativ sein.",
+            "en": "sehen requires accusative: der Mann → den Mann. A person can be an accusative object."
+          },
+          "options": [
+            "Dativ",
+            "Akkusativ",
+            "Dativ + Akkusativ"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Kasus haben die Objekte (ohne Subjekt)? Anna schenkt ihrer Mutter einen Schal.",
+          "correct": "Dativ + Akkusativ",
+          "explanations": {
+            "tr": "schenken ile ihrer Mutter hediyeyi alan Dativ kişi, einen Schal verilen Akkusativ şeydir.",
+            "de": "Bei schenken ist ihrer Mutter der Dativempfänger und einen Schal die Sache im Akkusativ.",
+            "en": "With schenken, ihrer Mutter is the dative recipient and einen Schal the accusative gift."
+          },
+          "options": [
+            "Dativ",
+            "Akkusativ",
+            "Dativ + Akkusativ"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Kasus haben die Objekte (ohne Subjekt)? Wir danken der Lehrerin.",
+          "correct": "Dativ",
+          "explanations": {
+            "tr": "danken tek başına burada Dativ nesne alır: die Lehrerin → der Lehrerin. Bu cümlede ikinci bir Akkusativ nesne yok.",
+            "de": "danken verlangt hier der Lehrerin im Dativ. Ein zweites Akkusativobjekt steht in diesem Satz nicht.",
+            "en": "danken takes der Lehrerin in the dative. This sentence has no second accusative object."
+          },
+          "options": [
+            "Dativ",
+            "Akkusativ",
+            "Dativ + Akkusativ"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Kasus haben die Objekte (ohne Subjekt)? Paul besucht seine Oma.",
+          "correct": "Akkusativ",
+          "explanations": {
+            "tr": "besuchen Akkusativ ister. seine Oma bir kişiyi anlatsa da bu fiille Akkusativdir; feminin biçim görünüşte değişmez.",
+            "de": "besuchen verlangt Akkusativ; seine Oma bleibt trotz Personenbezug Akkusativ. Die feminine Form sieht unverändert aus.",
+            "en": "besuchen takes accusative; seine Oma is accusative despite referring to a person. Its feminine form looks unchanged."
+          },
+          "options": [
+            "Dativ",
+            "Akkusativ",
+            "Dativ + Akkusativ"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Kasus haben die Objekte (ohne Subjekt)? Ich bringe der Nachbarin einen Kuchen.",
+          "correct": "Dativ + Akkusativ",
+          "explanations": {
+            "tr": "bringen ile der Nachbarin kime getirildiğini, einen Kuchen ne getirildiğini gösterir: Dativ alıcı + Akkusativ şey.",
+            "de": "Bei bringen beantwortet der Nachbarin Wem? und einen Kuchen Was?: Dativ plus Akkusativ.",
+            "en": "With bringen, der Nachbarin answers Wem? and einen Kuchen answers Was?: dative plus accusative."
+          },
+          "options": [
+            "Dativ",
+            "Akkusativ",
+            "Dativ + Akkusativ"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Kasus haben die Objekte (ohne Subjekt)? Die Musik gefällt den Kindern.",
+          "correct": "Dativ",
+          "explanations": {
+            "tr": "gefallen yapısında Die Musik öznedir, den Kindern beğenen kişileri Dativ olarak gösterir. Musik burada Akkusativ nesne değildir.",
+            "de": "Bei gefallen ist Die Musik das Subjekt, den Kindern das Dativobjekt. Musik ist hier kein Akkusativobjekt.",
+            "en": "With gefallen, Die Musik is the subject and den Kindern the dative object. Musik is not an accusative object here."
+          },
+          "options": [
+            "Dativ",
+            "Akkusativ",
+            "Dativ + Akkusativ"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Kasus haben die Objekte (ohne Subjekt)? Du kaufst das Buch.",
+          "correct": "Akkusativ",
+          "explanations": {
+            "tr": "kaufen bu cümlede yalnızca das Buch Akkusativ nesnesiyle kullanılıyor. Başka örnekte alıcı eklenebilir ama burada ayrıca Dativ grubu yok.",
+            "de": "kaufen hat in diesem Satz nur das Akkusativobjekt das Buch. Ein Dativempfänger wäre möglich, ist hier aber nicht genannt.",
+            "en": "This use of kaufen has only accusative object das Buch. A dative recipient could be added but is not present here."
+          },
+          "options": [
+            "Dativ",
+            "Akkusativ",
+            "Dativ + Akkusativ"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Kasus haben die Objekte (ohne Subjekt)? Wir erklären dem Gast den Plan.",
+          "correct": "Dativ + Akkusativ",
+          "explanations": {
+            "tr": "erklären ile dem Gast açıklamayı alan kişi, den Plan açıklanan şeydir. Bu yüzden sırasıyla Dativ ve Akkusativdir.",
+            "de": "Bei erklären ist dem Gast der Adressat im Dativ und den Plan der Inhalt im Akkusativ.",
+            "en": "With erklären, dem Gast is the dative addressee and den Plan the accusative content."
+          },
+          "options": [
+            "Dativ",
+            "Akkusativ",
+            "Dativ + Akkusativ"
+          ]
+        },
+        {
+          "word": "Dativ und Akkusativ",
+          "sentence": "Welche Kasus haben die Objekte (ohne Subjekt)? Paul leiht seinem Freund das Fahrrad.",
+          "correct": "Dativ + Akkusativ",
+          "explanations": {
+            "tr": "leihen ile seinem Freund ödünç alan Dativ kişi, das Fahrrad ödünç verilen Akkusativ nesnedir.",
+            "de": "Bei leihen ist seinem Freund der Dativempfänger und das Fahrrad das verliehene Akkusativobjekt.",
+            "en": "With leihen, seinem Freund is the dative recipient and das Fahrrad the accusative thing being lent."
+          },
+          "options": [
+            "Dativ",
+            "Akkusativ",
+            "Dativ + Akkusativ"
+          ]
+        }
+      ]
+    }
+  ]
+}

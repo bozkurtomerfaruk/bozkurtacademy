@@ -1872,6 +1872,488 @@
         "de": "Präteritum – Erklärung auf Türkisch mit visuellen Beispielen.",
         "en": "Simple past – Turkish explanation with visual examples."
       }
+    },
+    {
+      "id": "futur-i",
+      "title": "Futur I – geleceği anlatma",
+      "lead": "Yarın, gelecek hafta veya daha sonra yapacağın bir işi anlatmak için Futur I kullanabilirsin. Bu konuda werden + mastar yapısını adım adım öğrenelim. Almancada geleceği anlatmanın tek yolu Futur I değildir; zaman ifadesiyle Präsens de sık kullanılır.",
+      "sections": [
+        {
+          "title": "1 · Önce anlamı tanı",
+          "paragraphs": [
+            "Futur I, geleceğe yönelik bir ifade kurmamıza yardım eder. Ich werde lernen cümlesinde asıl eylem lernen, gelecek yapısını kuran fiil werden olur. Türkçeye çoğunlukla “çalışacağım” diye çeviririz; ancak çeviri her zaman kelime kelime ilerlemez."
+          ],
+          "examples": [
+            {
+              "de": "Ich werde lernen.",
+              "tr": "Ders çalışacağım.",
+              "note": ""
+            },
+            {
+              "de": "Ich werde morgen lernen.",
+              "tr": "Yarın ders çalışacağım.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "jetzt",
+                "şimdi"
+              ],
+              [
+                "→",
+                "ileriye bakıyoruz"
+              ],
+              [
+                "morgen",
+                "yarın: Ich werde lernen"
+              ]
+            ],
+            "caption": "Zaman çizgisi: konuşma anından gelecekteki eyleme"
+          }
+        },
+        {
+          "title": "2 · werden özneye göre değişir",
+          "paragraphs": [
+            "werden düzensiz çekilir. Özellikle du wirst ve er/sie/es wird biçimlerine dikkat et. Anna gibi tek bir kişi er/sie grubundadır; die Kinder çoğuldur. Kibar Sie her zaman werden alır."
+          ],
+          "examples": [
+            {
+              "de": "Du wirst kommen.",
+              "tr": "Geleceksin.",
+              "note": ""
+            },
+            {
+              "de": "Anna wird arbeiten.",
+              "tr": "Anna çalışacak.",
+              "note": ""
+            },
+            {
+              "de": "Die Kinder werden spielen.",
+              "tr": "Çocuklar oynayacak.",
+              "note": ""
+            }
+          ],
+          "table": {
+            "headers": [
+              "Özne",
+              "werden",
+              "Kısa örnek"
+            ],
+            "rows": [
+              [
+                "ich",
+                "werde",
+                "ich werde lernen"
+              ],
+              [
+                "du",
+                "wirst",
+                "du wirst lernen"
+              ],
+              [
+                "er / sie / es",
+                "wird",
+                "er wird lernen"
+              ],
+              [
+                "wir",
+                "werden",
+                "wir werden lernen"
+              ],
+              [
+                "ihr",
+                "werdet",
+                "ihr werdet lernen"
+              ],
+              [
+                "sie / Sie",
+                "werden",
+                "sie/Sie werden lernen"
+              ]
+            ]
+          },
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "ich → werde",
+                "tekil birinci kişi"
+              ],
+              [
+                "du → wirst",
+                "tekil ikinci kişi"
+              ],
+              [
+                "Anna → wird",
+                "tekil üçüncü kişi"
+              ],
+              [
+                "die Kinder → werden",
+                "çoğul üçüncü kişi"
+              ]
+            ],
+            "caption": "Önce özneyi bul, sonra werden biçimini seç"
+          }
+        },
+        {
+          "title": "3 · Asıl fiil mastar olarak sonda kalır",
+          "paragraphs": [
+            "Mastar, fiilin sözlükteki biçimidir: lernen, kommen, lesen. Futur I’da kişi eki werden üzerindedir; ikinci fiili yeniden çekmeyiz. Ich werde lerne ve Ich werde gelernt bu yapı için yanlış olur. Doğrusu Ich werde lernen."
+          ],
+          "examples": [
+            {
+              "de": "Ich werde ein Buch lesen.",
+              "tr": "Bir kitap okuyacağım.",
+              "note": ""
+            },
+            {
+              "de": "Wir werden morgen unsere Oma besuchen.",
+              "tr": "Yarın büyükannemizi ziyaret edeceğiz.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "Wir",
+              "werden",
+              "morgen unsere Oma",
+              "besuchen"
+            ],
+            "labels": [
+              "Özne",
+              "Çekimli werden",
+              "Zaman + kimi?",
+              "Mastar: sonda"
+            ]
+          }
+        },
+        {
+          "title": "4 · Zaman ifadesi başa geldiğinde sıra değişir",
+          "paragraphs": [
+            "Ana cümlede çekimli fiil ikinci öğededir. Morgen veya nächste Woche başa gelirse özne onunla fiilin arasına girmez. Bir öğe birkaç kelimeden oluşabilir: nächste Woche tek bir zaman grubudur."
+          ],
+          "examples": [
+            {
+              "de": "Ich werde morgen lernen.",
+              "tr": "Yarın ders çalışacağım.",
+              "note": ""
+            },
+            {
+              "de": "Morgen werde ich lernen.",
+              "tr": "Yarın ders çalışacağım.",
+              "note": "Morgen başta; hemen ardından werde gelir."
+            },
+            {
+              "de": "Nächste Woche werden wir nach Wien reisen.",
+              "tr": "Gelecek hafta Viyana’ya seyahat edeceğiz.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "Nächste Woche",
+              "werden",
+              "wir nach Wien",
+              "reisen"
+            ],
+            "labels": [
+              "1. öğe: zaman",
+              "2. öğe: çekimli fiil",
+              "Özne + hedef",
+              "Mastar: sonda"
+            ]
+          }
+        },
+        {
+          "title": "5 · nicht ve kein ile olumsuzluk",
+          "paragraphs": [
+            "Bir eylemi olumsuz anlatırken nicht kullanırız: Ich werde morgen nicht arbeiten. Olumsuzluk werden çekimini değiştirmez. Belirsiz bir isim grubunu olumsuz yaparken ise kein kullanılır: einen Brief → keinen Brief. nicht’in yeri vurguya göre değişebilir; burada tarafsız, basit örnekleri çalışıyoruz."
+          ],
+          "examples": [
+            {
+              "de": "Ich werde morgen nicht arbeiten.",
+              "tr": "Yarın çalışmayacağım.",
+              "note": ""
+            },
+            {
+              "de": "Wir werden keine Suppe kochen.",
+              "tr": "Çorba pişirmeyeceğiz.",
+              "note": ""
+            },
+            {
+              "de": "Ich werde keinen Brief schreiben.",
+              "tr": "Mektup yazmayacağım.",
+              "note": "Brief maskulin Akkusativ: keinen Brief"
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "arbeiten → nicht arbeiten",
+                "Eylemi olumsuz yap"
+              ],
+              [
+                "eine Suppe → keine Suppe",
+                "Belirsiz isim grubunu olumsuz yap"
+              ],
+              [
+                "werde / werden",
+                "Kişi çekimi aynı kalır"
+              ]
+            ],
+            "caption": "Önce neyi olumsuz yaptığını belirle"
+          }
+        },
+        {
+          "title": "6 · Evet/hayır ve W-soruları",
+          "paragraphs": [
+            "Evet veya hayırla cevaplanabilen soruda werden başa gelir. Soru kelimesi varsa önce o kelime ya da soru grubu, ardından çekimli werden gelir. Mastar iki tür soruda da sondadır."
+          ],
+          "examples": [
+            {
+              "de": "Wirst du kommen?",
+              "tr": "Gelecek misin?",
+              "note": ""
+            },
+            {
+              "de": "Wirst du morgen kommen?",
+              "tr": "Yarın gelecek misin?",
+              "note": ""
+            },
+            {
+              "de": "Wann wirst du kommen?",
+              "tr": "Ne zaman geleceksin?",
+              "note": ""
+            },
+            {
+              "de": "Wie lange werdet ihr hier bleiben?",
+              "tr": "Burada ne kadar kalacaksınız?",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Wirst | du | morgen | kommen?",
+                "Evet/hayır: çekimli fiil başta"
+              ],
+              [
+                "Wann | wirst | du | kommen?",
+                "W-sorusu: soru grubu + çekimli fiil"
+              ]
+            ],
+            "caption": "Soru türü başlangıcı değiştirir; mastar sonda kalır"
+          }
+        },
+        {
+          "title": "7 · Ayrılabilen fiilleri tek parça yaz",
+          "paragraphs": [
+            "Präsens’te Ich stehe früh auf dersin. Futur I’da ise çekimli fiil werde olur; aufstehen mastarı sonda ve tek parça kalır. Aynı şey einkaufen, anrufen ve aufräumen için geçerlidir."
+          ],
+          "examples": [
+            {
+              "de": "Ich stehe morgen früh auf.",
+              "tr": "Yarın erken kalkıyorum.",
+              "note": ""
+            },
+            {
+              "de": "Ich werde morgen früh aufstehen.",
+              "tr": "Yarın erken kalkacağım.",
+              "note": ""
+            },
+            {
+              "de": "Anna wird mich heute Abend anrufen.",
+              "tr": "Anna bu akşam beni arayacak.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "stehe … auf",
+                "Präsens: çekimli fiilde ön ek ayrılır"
+              ],
+              [
+                "werde … aufstehen",
+                "Futur I: mastar bir arada kalır"
+              ],
+              [
+                "wird … anrufen",
+                "an ön eki mastardan ayrılmaz"
+              ]
+            ],
+            "caption": "werden çekildiğinde ayrılabilen asıl fiil mastar olur"
+          }
+        },
+        {
+          "title": "8 · sein ve haben de mastar olabilir",
+          "paragraphs": [
+            "Gelecekte bir yerde bulunmayı veya bir durumu sein ile; bir şeye sahip olmayı haben ile anlatabilirsin. werden zaten çekilmiş olduğu için bin, ist, habe veya hat eklemeyiz."
+          ],
+          "examples": [
+            {
+              "de": "Ich werde morgen zu Hause sein.",
+              "tr": "Yarın evde olacağım.",
+              "note": ""
+            },
+            {
+              "de": "Du wirst nächste Woche mehr Zeit haben.",
+              "tr": "Gelecek hafta daha çok zamanın olacak.",
+              "note": ""
+            },
+            {
+              "de": "Wir werden um acht Uhr dort sein.",
+              "tr": "Saat sekizde orada olacağız.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "werde … sein",
+                "Konum / durum: evde olacağım"
+              ],
+              [
+                "wirst … haben",
+                "Sahiplik: zamanın olacak"
+              ],
+              [
+                "werde … bin ✗",
+                "İkinci fiili yeniden çekme"
+              ]
+            ],
+            "caption": "Gelecekte “olmak” ve “sahip olmak”: mastar seçimi anlama bağlı"
+          }
+        },
+        {
+          "title": "9 · Präsens de geleceği anlatabilir",
+          "paragraphs": [
+            "Morgen besuche ich meine Oma cümlesinin fiili Präsens’tedir ama morgen sayesinde anlam gelecektir. Günlük konuşmada planları böyle anlatmak çok yaygındır. Bu cümleyi yalnızca werden olmadığı için yanlış sayma.",
+            "Morgen werde ich meine Oma besuchen da doğrudur. Futur I bağlama göre bir niyeti, sözü veya öngörüyü öne çıkarabilir. Pakette “Futur I’a dönüştür” deniyorsa istenen yapıyı kullan; anlam soruluyorsa zaman ifadesine bak."
+          ],
+          "examples": [
+            {
+              "de": "Morgen besuche ich meine Oma.",
+              "tr": "Yarın büyükannemi ziyaret edeceğim.",
+              "note": "Fiil: Präsens · anlam: gelecek"
+            },
+            {
+              "de": "Morgen werde ich meine Oma besuchen.",
+              "tr": "Yarın büyükannemi ziyaret edeceğim.",
+              "note": "Fiil: Futur I · anlam: gelecek"
+            },
+            {
+              "de": "Ich werde dir helfen.",
+              "tr": "Sana yardım edeceğim.",
+              "note": "Bağlama göre bir söz verme"
+            },
+            {
+              "de": "Es wird morgen regnen.",
+              "tr": "Yarın yağmur yağacak.",
+              "note": "Geleceğe yönelik bir öngörü"
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Morgen besuche ich …",
+                "Präsens + gelecek zaman ifadesi"
+              ],
+              [
+                "Morgen werde ich … besuchen",
+                "Futur I"
+              ],
+              [
+                "İkisi de geleceği anlatabilir",
+                "Seçim bağlama ve göreve bağlı"
+              ]
+            ],
+            "caption": "Fiilin dilbilgisel zamanı ile cümlenin zaman anlamını ayır"
+          }
+        },
+        {
+          "title": "10 · werden her zaman Futur I değildir",
+          "paragraphs": [
+            "Ich werde müde cümlesinde müde bir sıfattır; anlamı “Yoruluyorum” veya “Yorgun hâle geliyorum” olur. Burada werden “olmak / bir duruma geçmek” anlamındaki asıl fiildir. Ich werde arbeiten cümlesinde ise arbeiten mastarı vardır ve werden gelecek yapısına yardım eder. Şimdilik bu iki kullanımı ayırmak yeterli."
+          ],
+          "examples": [
+            {
+              "de": "Ich werde müde.",
+              "tr": "Yoruluyorum.",
+              "note": ""
+            },
+            {
+              "de": "Ich werde morgen arbeiten.",
+              "tr": "Yarın çalışacağım.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "werde + müde",
+                "Bir duruma geçmek: sıfat"
+              ],
+              [
+                "werde + arbeiten",
+                "Futur I: asıl fiilin mastarı"
+              ]
+            ],
+            "caption": "werden gördüğünde ardından sıfat mı, mastar mı geldiğini kontrol et"
+          }
+        }
+      ],
+      "summary": [
+        "Önce özneyi bul: du wirst, Anna wird, wir werden.",
+        "Ana cümlede çekimli werden ikinci öğede; asıl fiilin mastarı sonda olur.",
+        "Ayrılabilen fiilin mastarı tek parça kalır: werde … aufstehen.",
+        "Präsens + morgen gibi zaman ifadesi de geleceği anlatabilir."
+      ],
+      "faq": [
+        {
+          "question": "Geleceği anlatırken her zaman werden kullanmak zorunda mıyım?",
+          "answer": "Hayır. Morgen komme ich gibi Präsens cümleleri de geleceği anlatır. Zaman ifadesi ve bağlam bunu açıklar. Alıştırmada özellikle Futur I isteniyorsa werden + mastar kullan."
+        },
+        {
+          "question": "Ich werde gelernt neden yanlış?",
+          "answer": "Futur I’da asıl fiil mastar olur: Ich werde lernen. gelernt Partizip II’dir. Bu derste başka zaman yapılarını değil, yalnızca werden + mastar yapısını çalışıyoruz."
+        },
+        {
+          "question": "Ich werde müde de Futur I mı?",
+          "answer": "Hayır. müde bir sıfattır; cümle yorgun hâle gelmeyi anlatır. Futur I örneğinde asıl eylem mastar olarak gelir: Ich werde arbeiten."
+        }
+      ],
+      "related": [
+        "konjunktiv-ii",
+        "nebensaetze",
+        "reflexive-verben"
+      ],
+      "check": {
+        "question": "Morgen ___ Anna früh ___. (werden / aufstehen)",
+        "answer": "Morgen wird Anna früh aufstehen.",
+        "why": "Anna tekil üçüncü kişi olduğu için wird gerekir. Morgen ilk öğedir; wird ikinci öğeye gelir. aufstehen ayrılmadan mastar olarak sonda kalır."
+      },
+      "titleTranslations": {
+        "tr": "Futur I",
+        "de": "Futur I",
+        "en": "Future tense (Futur I)"
+      },
+      "description": {
+        "tr": "werden + mastar ile gelecek planları, sorular ve olumsuz cümleler",
+        "de": "Futur I – Erklärung auf Türkisch mit visuellen Beispielen",
+        "en": "Futur I – Turkish explanation with visual examples"
+      }
     }
   ]
 }

@@ -1,0 +1,1770 @@
+{
+  "id": "futur-i",
+  "level": "A2",
+  "title": {
+    "tr": "Futur I",
+    "de": "Futur I",
+    "en": "Future tense (Futur I)"
+  },
+  "description": {
+    "tr": "10 alıştırma ve 100 soru: werden, mastar, gelecek planları, soru ve olumsuzluk",
+    "de": "10 Übungen mit 100 Aufgaben: werden, Infinitiv, Zukunftspläne, Fragen und Verneinung",
+    "en": "10 exercises with 100 questions: werden, infinitives, future plans, questions and negation"
+  },
+  "lesson": {
+    "title": {
+      "tr": "Futur I – geleceği anlatma",
+      "de": "Futur I – über die Zukunft sprechen",
+      "en": "Futur I – talking about the future"
+    },
+    "intro": {
+      "tr": "Futur I için özneye göre werden çekilir; asıl fiil mastar olarak cümlenin sonunda kalır. Önce çekimi, ardından cümle sırasını çalış.",
+      "de": "Für das Futur I wird werden passend zum Subjekt konjugiert; das Vollverb steht im Infinitiv am Satzende. Übe zuerst die Formen, dann die Satzstellung.",
+      "en": "To form Futur I, conjugate werden for the subject and put the main verb in the infinitive at the end. Practise the forms first, then word order."
+    },
+    "rules": [
+      {
+        "label": "werden",
+        "text": {
+          "tr": "ich werde · du wirst · er/sie/es wird · wir werden · ihr werdet · sie/Sie werden",
+          "de": "ich werde · du wirst · er/sie/es wird · wir werden · ihr werdet · sie/Sie werden",
+          "en": "ich werde · du wirst · er/sie/es wird · wir werden · ihr werdet · sie/Sie werden"
+        }
+      },
+      {
+        "label": "Infinitiv",
+        "text": {
+          "tr": "Ana cümlede çekimli werden ikinci öğede, asıl fiilin mastarı sonda olur.",
+          "de": "Im Aussagesatz steht das finite werden an Position 2 und der Infinitiv am Ende.",
+          "en": "In a statement, finite werden takes position 2 and the infinitive goes last."
+        }
+      },
+      {
+        "label": "Präsens",
+        "text": {
+          "tr": "Gelecek, zaman ifadesiyle Präsens kullanılarak da anlatılabilir: Morgen lerne ich.",
+          "de": "Auch Präsens mit einer Zeitangabe kann Zukunft ausdrücken: Morgen lerne ich.",
+          "en": "Present tense with a time expression can also express the future: Morgen lerne ich."
+        }
+      }
+    ],
+    "examples": [
+      "Ich werde morgen lernen. – Yarın ders çalışacağım.",
+      "Wirst du am Samstag kommen? – Cumartesi gelecek misin?"
+    ],
+    "tip": {
+      "tr": "Yazılı sorularda verilen kelimeleri ve başlangıcı koru. Yalnızca istenen kelimeyi veya cümleyi yaz; Enter ile kontrol edebilirsin.",
+      "de": "Behalte bei Schreibaufgaben die vorgegebenen Wörter und den Satzanfang. Schreibe nur das Verlangte und prüfe mit Enter.",
+      "en": "Keep the given words and sentence opening in written tasks. Write only what is requested and press Enter to check."
+    }
+  },
+  "exercises": [
+    {
+      "id": "werden-1",
+      "title": {
+        "tr": "Übung 1 – werden çekimi",
+        "de": "Übung 1 – Formen von werden",
+        "en": "Exercise 1 – Forms of werden"
+      },
+      "description": {
+        "tr": "Özneye uygun werden biçimini seç",
+        "de": "Wähle die zum Subjekt passende Form",
+        "en": "Choose the form matching the subject"
+      },
+      "difficulty": {
+        "tr": "A2 sonu",
+        "de": "Ende A2",
+        "en": "End of A2"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Futur I",
+          "sentence": "Ich ___ morgen lernen.",
+          "correct": "werde",
+          "explanations": {
+            "tr": "Özne Ich; burada tekil birinci kişi olarak werde gerekir. lernen asıl fiilin mastarıdır ve sonda kalır. Özneye uymayan werden çekimi bu cümleyi yanlış yapar.",
+            "de": "Ich ist hier 1. Person Singular; dazu gehört werde. lernen bleibt als Infinitiv am Ende. Eine andere Personenform passt nicht zum Subjekt.",
+            "en": "Ich is first-person singular, so use werde. The main verb lernen remains an infinitive at the end. A different person form would not agree with the subject."
+          },
+          "options": [
+            "werde",
+            "wirst",
+            "wird",
+            "werden"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Du ___ am Samstag kommen.",
+          "correct": "wirst",
+          "explanations": {
+            "tr": "Özne Du; burada tekil ikinci kişi olarak wirst gerekir. kommen asıl fiilin mastarıdır ve sonda kalır. Özneye uymayan werden çekimi bu cümleyi yanlış yapar.",
+            "de": "Du ist hier 2. Person Singular; dazu gehört wirst. kommen bleibt als Infinitiv am Ende. Eine andere Personenform passt nicht zum Subjekt.",
+            "en": "Du is second-person singular, so use wirst. The main verb kommen remains an infinitive at the end. A different person form would not agree with the subject."
+          },
+          "options": [
+            "wirst",
+            "werde",
+            "wird",
+            "werden"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Er ___ später anrufen.",
+          "correct": "wird",
+          "explanations": {
+            "tr": "Özne Er; burada tekil üçüncü kişi olarak wird gerekir. anrufen asıl fiilin mastarıdır ve sonda kalır. Özneye uymayan werden çekimi bu cümleyi yanlış yapar.",
+            "de": "Er ist hier 3. Person Singular; dazu gehört wird. anrufen bleibt als Infinitiv am Ende. Eine andere Personenform passt nicht zum Subjekt.",
+            "en": "Er is third-person singular, so use wird. The main verb anrufen remains an infinitive at the end. A different person form would not agree with the subject."
+          },
+          "options": [
+            "wird",
+            "werde",
+            "wirst",
+            "werden"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Wir ___ nächste Woche reisen.",
+          "correct": "werden",
+          "explanations": {
+            "tr": "Özne Wir; burada çoğul birinci kişi olarak werden gerekir. reisen asıl fiilin mastarıdır ve sonda kalır. Özneye uymayan werden çekimi bu cümleyi yanlış yapar.",
+            "de": "Wir ist hier 1. Person Plural; dazu gehört werden. reisen bleibt als Infinitiv am Ende. Eine andere Personenform passt nicht zum Subjekt.",
+            "en": "Wir is first-person plural, so use werden. The main verb reisen remains an infinitive at the end. A different person form would not agree with the subject."
+          },
+          "options": [
+            "werden",
+            "werde",
+            "wirst",
+            "wird"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Ihr ___ morgen kochen.",
+          "correct": "werdet",
+          "explanations": {
+            "tr": "Özne Ihr; burada çoğul ikinci kişi olarak werdet gerekir. kochen asıl fiilin mastarıdır ve sonda kalır. Özneye uymayan werden çekimi bu cümleyi yanlış yapar.",
+            "de": "Ihr ist hier 2. Person Plural; dazu gehört werdet. kochen bleibt als Infinitiv am Ende. Eine andere Personenform passt nicht zum Subjekt.",
+            "en": "Ihr is second-person plural, so use werdet. The main verb kochen remains an infinitive at the end. A different person form would not agree with the subject."
+          },
+          "options": [
+            "werdet",
+            "werde",
+            "wirst",
+            "wird"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Die Kinder ___ im Garten spielen.",
+          "correct": "werden",
+          "explanations": {
+            "tr": "Özne Die Kinder; burada çoğul üçüncü kişi olarak werden gerekir. spielen asıl fiilin mastarıdır ve sonda kalır. Özneye uymayan werden çekimi bu cümleyi yanlış yapar.",
+            "de": "Die Kinder ist hier 3. Person Plural; dazu gehört werden. spielen bleibt als Infinitiv am Ende. Eine andere Personenform passt nicht zum Subjekt.",
+            "en": "Die Kinder is third-person plural, so use werden. The main verb spielen remains an infinitive at the end. A different person form would not agree with the subject."
+          },
+          "options": [
+            "werden",
+            "werde",
+            "wirst",
+            "wird"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Anna ___ morgen arbeiten.",
+          "correct": "wird",
+          "explanations": {
+            "tr": "Özne Anna; burada tekil üçüncü kişi olarak wird gerekir. arbeiten asıl fiilin mastarıdır ve sonda kalır. Özneye uymayan werden çekimi bu cümleyi yanlış yapar.",
+            "de": "Anna ist hier 3. Person Singular; dazu gehört wird. arbeiten bleibt als Infinitiv am Ende. Eine andere Personenform passt nicht zum Subjekt.",
+            "en": "Anna is third-person singular, so use wird. The main verb arbeiten remains an infinitive at the end. A different person form would not agree with the subject."
+          },
+          "options": [
+            "wird",
+            "werde",
+            "wirst",
+            "werden"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Es ___ morgen regnen.",
+          "correct": "wird",
+          "explanations": {
+            "tr": "Özne Es; burada tekil üçüncü kişi olarak wird gerekir. regnen asıl fiilin mastarıdır ve sonda kalır. Özneye uymayan werden çekimi bu cümleyi yanlış yapar.",
+            "de": "Es ist hier 3. Person Singular; dazu gehört wird. regnen bleibt als Infinitiv am Ende. Eine andere Personenform passt nicht zum Subjekt.",
+            "en": "Es is third-person singular, so use wird. The main verb regnen remains an infinitive at the end. A different person form would not agree with the subject."
+          },
+          "options": [
+            "wird",
+            "werde",
+            "wirst",
+            "werden"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Meine Schwester und ich ___ das Zimmer aufräumen.",
+          "correct": "werden",
+          "explanations": {
+            "tr": "Özne Meine Schwester und ich; burada wir anlamındaki çoğul özne olarak werden gerekir. aufräumen asıl fiilin mastarıdır ve sonda kalır. Özneye uymayan werden çekimi bu cümleyi yanlış yapar.",
+            "de": "Meine Schwester und ich ist hier ein plurales Subjekt wie wir; dazu gehört werden. aufräumen bleibt als Infinitiv am Ende. Eine andere Personenform passt nicht zum Subjekt.",
+            "en": "Meine Schwester und ich is a plural subject equivalent to wir, so use werden. The main verb aufräumen remains an infinitive at the end. A different person form would not agree with the subject."
+          },
+          "options": [
+            "werden",
+            "werde",
+            "wirst",
+            "wird"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Sie ___ morgen eine E-Mail bekommen. (höfliche Anrede)",
+          "correct": "werden",
+          "explanations": {
+            "tr": "Özne Sie; burada kibar hitap; Sie olarak werden gerekir. bekommen asıl fiilin mastarıdır ve sonda kalır. Özneye uymayan werden çekimi bu cümleyi yanlış yapar.",
+            "de": "Sie ist hier die höfliche Anrede Sie; dazu gehört werden. bekommen bleibt als Infinitiv am Ende. Eine andere Personenform passt nicht zum Subjekt.",
+            "en": "Sie is the formal form of address Sie, so use werden. The main verb bekommen remains an infinitive at the end. A different person form would not agree with the subject."
+          },
+          "options": [
+            "werden",
+            "werde",
+            "wirst",
+            "wird"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "infinitiv-2",
+      "title": {
+        "tr": "Übung 2 – Sonda mastar",
+        "de": "Übung 2 – Infinitiv am Ende",
+        "en": "Exercise 2 – Final infinitive"
+      },
+      "description": {
+        "tr": "Asıl fiilin mastarını seç",
+        "de": "Wähle den Infinitiv des Vollverbs",
+        "en": "Choose the main verb in the infinitive"
+      },
+      "difficulty": {
+        "tr": "A2 sonu",
+        "de": "Ende A2",
+        "en": "End of A2"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Futur I",
+          "sentence": "Ich werde morgen ___.",
+          "correct": "arbeiten",
+          "explanations": {
+            "tr": "Çalışma eylemi eylemini arbeiten anlatır. Cümlede zaten werde çekilmiş olduğu için arbeiten yeniden kişi eki almaz. Partizip II de gerekmez: Futur I, werden + mastar yapısıdır.",
+            "de": "Das Arbeiten wird mit arbeiten ausgedrückt. werde ist bereits konjugiert; deshalb steht arbeiten im Infinitiv, nicht als Personenform oder Partizip II.",
+            "en": "The action of working is expressed by arbeiten. Since werde is already conjugated, use the infinitive arbeiten, not another person form or past participle."
+          },
+          "options": [
+            "arbeiten",
+            "arbeite",
+            "gearbeitet",
+            "arbeitet"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Du wirst am Freitag ___.",
+          "correct": "kommen",
+          "explanations": {
+            "tr": "Gelme eylemi eylemini kommen anlatır. Cümlede zaten wirst çekilmiş olduğu için kommen yeniden kişi eki almaz. Partizip II de gerekmez: Futur I, werden + mastar yapısıdır.",
+            "de": "Das Kommen wird mit kommen ausgedrückt. wirst ist bereits konjugiert; deshalb steht kommen im Infinitiv, nicht als Personenform oder Partizip II.",
+            "en": "The action of coming is expressed by kommen. Since wirst is already conjugated, use the infinitive kommen, not another person form or past participle."
+          },
+          "options": [
+            "kommen",
+            "kommst",
+            "gekommen",
+            "kommt"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Wir werden eine Suppe ___.",
+          "correct": "kochen",
+          "explanations": {
+            "tr": "Çorba hazırlama eylemini kochen anlatır. Cümlede zaten werden çekilmiş olduğu için kochen yeniden kişi eki almaz. Partizip II de gerekmez: Futur I, werden + mastar yapısıdır.",
+            "de": "Das Suppekochen wird mit kochen ausgedrückt. werden ist bereits konjugiert; deshalb steht kochen im Infinitiv, nicht als Personenform oder Partizip II.",
+            "en": "The action of cooking soup is expressed by kochen. Since werden is already conjugated, use the infinitive kochen, not another person form or past participle."
+          },
+          "options": [
+            "kochen",
+            "kocht",
+            "gekocht",
+            "koche"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Anna wird das Buch ___.",
+          "correct": "lesen",
+          "explanations": {
+            "tr": "Kitap okuma eylemini lesen anlatır. Cümlede zaten wird çekilmiş olduğu için lesen yeniden kişi eki almaz. Partizip II de gerekmez: Futur I, werden + mastar yapısıdır.",
+            "de": "Das Lesen des Buches wird mit lesen ausgedrückt. wird ist bereits konjugiert; deshalb steht lesen im Infinitiv, nicht als Personenform oder Partizip II.",
+            "en": "The action of reading the book is expressed by lesen. Since wird is already conjugated, use the infinitive lesen, not another person form or past participle."
+          },
+          "options": [
+            "lesen",
+            "liest",
+            "gelesen",
+            "lese"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Ihr werdet nach Berlin ___.",
+          "correct": "fahren",
+          "explanations": {
+            "tr": "Berlin’e yolculuk eylemini fahren anlatır. Cümlede zaten werdet çekilmiş olduğu için fahren yeniden kişi eki almaz. Partizip II de gerekmez: Futur I, werden + mastar yapısıdır.",
+            "de": "Das Fahrt nach Berlin wird mit fahren ausgedrückt. werdet ist bereits konjugiert; deshalb steht fahren im Infinitiv, nicht als Personenform oder Partizip II.",
+            "en": "The action of travelling to Berlin is expressed by fahren. Since werdet is already conjugated, use the infinitive fahren, not another person form or past participle."
+          },
+          "options": [
+            "fahren",
+            "fahrt",
+            "gefahren",
+            "fährt"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Die Kinder werden im Park ___.",
+          "correct": "spielen",
+          "explanations": {
+            "tr": "Parkta oynama eylemini spielen anlatır. Cümlede zaten Kinder çekilmiş olduğu için spielen yeniden kişi eki almaz. Partizip II de gerekmez: Futur I, werden + mastar yapısıdır.",
+            "de": "Das Spielen im Park wird mit spielen ausgedrückt. Kinder ist bereits konjugiert; deshalb steht spielen im Infinitiv, nicht als Personenform oder Partizip II.",
+            "en": "The action of playing in the park is expressed by spielen. Since Kinder is already conjugated, use the infinitive spielen, not another person form or past participle."
+          },
+          "options": [
+            "spielen",
+            "spielt",
+            "gespielt",
+            "spiele"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Er wird einen Brief ___.",
+          "correct": "schreiben",
+          "explanations": {
+            "tr": "Mektup yazma eylemini schreiben anlatır. Cümlede zaten wird çekilmiş olduğu için schreiben yeniden kişi eki almaz. Partizip II de gerekmez: Futur I, werden + mastar yapısıdır.",
+            "de": "Das Schreiben eines Briefs wird mit schreiben ausgedrückt. wird ist bereits konjugiert; deshalb steht schreiben im Infinitiv, nicht als Personenform oder Partizip II.",
+            "en": "The action of writing a letter is expressed by schreiben. Since wird is already conjugated, use the infinitive schreiben, not another person form or past participle."
+          },
+          "options": [
+            "schreiben",
+            "schreibt",
+            "geschrieben",
+            "schreibe"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Ich werde Wasser ___.",
+          "correct": "trinken",
+          "explanations": {
+            "tr": "Su içme eylemini trinken anlatır. Cümlede zaten werde çekilmiş olduğu için trinken yeniden kişi eki almaz. Partizip II de gerekmez: Futur I, werden + mastar yapısıdır.",
+            "de": "Das Wassertrinken wird mit trinken ausgedrückt. werde ist bereits konjugiert; deshalb steht trinken im Infinitiv, nicht als Personenform oder Partizip II.",
+            "en": "The action of drinking water is expressed by trinken. Since werde is already conjugated, use the infinitive trinken, not another person form or past participle."
+          },
+          "options": [
+            "trinken",
+            "trinke",
+            "getrunken",
+            "trinkt"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Wir werden hier ___.",
+          "correct": "bleiben",
+          "explanations": {
+            "tr": "Burada kalma eylemini bleiben anlatır. Cümlede zaten werden çekilmiş olduğu için bleiben yeniden kişi eki almaz. Partizip II de gerekmez: Futur I, werden + mastar yapısıdır.",
+            "de": "Das Bleiben hier wird mit bleiben ausgedrückt. werden ist bereits konjugiert; deshalb steht bleiben im Infinitiv, nicht als Personenform oder Partizip II.",
+            "en": "The action of staying here is expressed by bleiben. Since werden is already conjugated, use the infinitive bleiben, not another person form or past participle."
+          },
+          "options": [
+            "bleiben",
+            "bleibt",
+            "geblieben",
+            "bleibe"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Du wirst deine Freundin ___.",
+          "correct": "treffen",
+          "explanations": {
+            "tr": "Arkadaşınla buluşma eylemini treffen anlatır. Cümlede zaten wirst çekilmiş olduğu için treffen yeniden kişi eki almaz. Partizip II de gerekmez: Futur I, werden + mastar yapısıdır.",
+            "de": "Das Treffen mit deiner Freundin wird mit treffen ausgedrückt. wirst ist bereits konjugiert; deshalb steht treffen im Infinitiv, nicht als Personenform oder Partizip II.",
+            "en": "The action of meeting your friend is expressed by treffen. Since wirst is already conjugated, use the infinitive treffen, not another person form or past participle."
+          },
+          "options": [
+            "treffen",
+            "triffst",
+            "getroffen",
+            "trifft"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "satzbau-3",
+      "title": {
+        "tr": "Übung 3 – Cümle sırası",
+        "de": "Übung 3 – Satzstellung",
+        "en": "Exercise 3 – Word order"
+      },
+      "description": {
+        "tr": "Verilen başlangıçla doğru Futur I cümlesini seç",
+        "de": "Wähle den richtigen Futur-I-Satz mit dem vorgegebenen Anfang",
+        "en": "Choose the correct Futur I sentence with the given opening"
+      },
+      "difficulty": {
+        "tr": "A2 sonu",
+        "de": "Ende A2",
+        "en": "End of A2"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Futur I",
+          "sentence": "Beginne mit „Morgen“: Welcher Satz ist richtig?",
+          "correct": "Morgen werde ich lernen.",
+          "explanations": {
+            "tr": "Morgen cümlenin ilk öğesidir; birkaç kelime olsa da tek zaman grubudur. Çekimli werde ikinci öğeye, özne ich onun arkasına, mastar lernen sona gelir.",
+            "de": "Morgen ist das erste Satzglied, auch wenn es mehrere Wörter enthält. Danach folgen das finite werde, das Subjekt ich und zuletzt der Infinitiv lernen.",
+            "en": "Morgen is the first constituent, even if it contains several words. Put finite werde next, followed by the subject ich, and end with the infinitive lernen."
+          },
+          "options": [
+            "Morgen werde ich lernen.",
+            "Morgen ich werde lernen.",
+            "Morgen werde lernen ich.",
+            "Morgen ich lernen werde."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Beginne mit „Am Montag“: Welcher Satz ist richtig?",
+          "correct": "Am Montag wird Anna arbeiten.",
+          "explanations": {
+            "tr": "Am Montag cümlenin ilk öğesidir; birkaç kelime olsa da tek zaman grubudur. Çekimli wird ikinci öğeye, özne Anna onun arkasına, mastar arbeiten sona gelir.",
+            "de": "Am Montag ist das erste Satzglied, auch wenn es mehrere Wörter enthält. Danach folgen das finite wird, das Subjekt Anna und zuletzt der Infinitiv arbeiten.",
+            "en": "Am Montag is the first constituent, even if it contains several words. Put finite wird next, followed by the subject Anna, and end with the infinitive arbeiten."
+          },
+          "options": [
+            "Am Montag wird Anna arbeiten.",
+            "Am Montag Anna wird arbeiten.",
+            "Am Montag wird arbeiten Anna.",
+            "Am Montag Anna arbeiten wird."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Beginne mit „Nächste Woche“: Welcher Satz ist richtig?",
+          "correct": "Nächste Woche werden wir reisen.",
+          "explanations": {
+            "tr": "Nächste Woche cümlenin ilk öğesidir; birkaç kelime olsa da tek zaman grubudur. Çekimli werden ikinci öğeye, özne wir onun arkasına, mastar reisen sona gelir.",
+            "de": "Nächste Woche ist das erste Satzglied, auch wenn es mehrere Wörter enthält. Danach folgen das finite werden, das Subjekt wir und zuletzt der Infinitiv reisen.",
+            "en": "Nächste Woche is the first constituent, even if it contains several words. Put finite werden next, followed by the subject wir, and end with the infinitive reisen."
+          },
+          "options": [
+            "Nächste Woche werden wir reisen.",
+            "Nächste Woche wir werden reisen.",
+            "Nächste Woche werden reisen wir.",
+            "Nächste Woche wir reisen werden."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Beginne mit „Heute Abend“: Welcher Satz ist richtig?",
+          "correct": "Heute Abend werdet ihr kochen.",
+          "explanations": {
+            "tr": "Heute Abend cümlenin ilk öğesidir; birkaç kelime olsa da tek zaman grubudur. Çekimli werdet ikinci öğeye, özne ihr onun arkasına, mastar kochen sona gelir.",
+            "de": "Heute Abend ist das erste Satzglied, auch wenn es mehrere Wörter enthält. Danach folgen das finite werdet, das Subjekt ihr und zuletzt der Infinitiv kochen.",
+            "en": "Heute Abend is the first constituent, even if it contains several words. Put finite werdet next, followed by the subject ihr, and end with the infinitive kochen."
+          },
+          "options": [
+            "Heute Abend werdet ihr kochen.",
+            "Heute Abend ihr werdet kochen.",
+            "Heute Abend werdet kochen ihr.",
+            "Heute Abend ihr kochen werdet."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Beginne mit „Bald“: Welcher Satz ist richtig?",
+          "correct": "Bald wirst du kommen.",
+          "explanations": {
+            "tr": "Bald cümlenin ilk öğesidir; birkaç kelime olsa da tek zaman grubudur. Çekimli wirst ikinci öğeye, özne du onun arkasına, mastar kommen sona gelir.",
+            "de": "Bald ist das erste Satzglied, auch wenn es mehrere Wörter enthält. Danach folgen das finite wirst, das Subjekt du und zuletzt der Infinitiv kommen.",
+            "en": "Bald is the first constituent, even if it contains several words. Put finite wirst next, followed by the subject du, and end with the infinitive kommen."
+          },
+          "options": [
+            "Bald wirst du kommen.",
+            "Bald du wirst kommen.",
+            "Bald wirst kommen du.",
+            "Bald du kommen wirst."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Beginne mit „Im Sommer“: Welcher Satz ist richtig?",
+          "correct": "Im Sommer werden die Kinder schwimmen.",
+          "explanations": {
+            "tr": "Im Sommer cümlenin ilk öğesidir; birkaç kelime olsa da tek zaman grubudur. Çekimli werden ikinci öğeye, özne die Kinder onun arkasına, mastar schwimmen sona gelir.",
+            "de": "Im Sommer ist das erste Satzglied, auch wenn es mehrere Wörter enthält. Danach folgen das finite werden, das Subjekt die Kinder und zuletzt der Infinitiv schwimmen.",
+            "en": "Im Sommer is the first constituent, even if it contains several words. Put finite werden next, followed by the subject die Kinder, and end with the infinitive schwimmen."
+          },
+          "options": [
+            "Im Sommer werden die Kinder schwimmen.",
+            "Im Sommer die Kinder werden schwimmen.",
+            "Im Sommer werden schwimmen die Kinder.",
+            "Im Sommer die Kinder schwimmen werden."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Beginne mit „Nach dem Kurs“: Welcher Satz ist richtig?",
+          "correct": "Nach dem Kurs wird Paul anrufen.",
+          "explanations": {
+            "tr": "Nach dem Kurs cümlenin ilk öğesidir; birkaç kelime olsa da tek zaman grubudur. Çekimli wird ikinci öğeye, özne Paul onun arkasına, mastar anrufen sona gelir.",
+            "de": "Nach dem Kurs ist das erste Satzglied, auch wenn es mehrere Wörter enthält. Danach folgen das finite wird, das Subjekt Paul und zuletzt der Infinitiv anrufen.",
+            "en": "Nach dem Kurs is the first constituent, even if it contains several words. Put finite wird next, followed by the subject Paul, and end with the infinitive anrufen."
+          },
+          "options": [
+            "Nach dem Kurs wird Paul anrufen.",
+            "Nach dem Kurs Paul wird anrufen.",
+            "Nach dem Kurs wird anrufen Paul.",
+            "Nach dem Kurs Paul anrufen wird."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Beginne mit „Am Wochenende“: Welcher Satz ist richtig?",
+          "correct": "Am Wochenende werden meine Eltern wandern.",
+          "explanations": {
+            "tr": "Am Wochenende cümlenin ilk öğesidir; birkaç kelime olsa da tek zaman grubudur. Çekimli werden ikinci öğeye, özne meine Eltern onun arkasına, mastar wandern sona gelir.",
+            "de": "Am Wochenende ist das erste Satzglied, auch wenn es mehrere Wörter enthält. Danach folgen das finite werden, das Subjekt meine Eltern und zuletzt der Infinitiv wandern.",
+            "en": "Am Wochenende is the first constituent, even if it contains several words. Put finite werden next, followed by the subject meine Eltern, and end with the infinitive wandern."
+          },
+          "options": [
+            "Am Wochenende werden meine Eltern wandern.",
+            "Am Wochenende meine Eltern werden wandern.",
+            "Am Wochenende werden wandern meine Eltern.",
+            "Am Wochenende meine Eltern wandern werden."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Beginne mit „Später“: Welcher Satz ist richtig?",
+          "correct": "Später werde ich aufräumen.",
+          "explanations": {
+            "tr": "Später cümlenin ilk öğesidir; birkaç kelime olsa da tek zaman grubudur. Çekimli werde ikinci öğeye, özne ich onun arkasına, mastar aufräumen sona gelir.",
+            "de": "Später ist das erste Satzglied, auch wenn es mehrere Wörter enthält. Danach folgen das finite werde, das Subjekt ich und zuletzt der Infinitiv aufräumen.",
+            "en": "Später is the first constituent, even if it contains several words. Put finite werde next, followed by the subject ich, and end with the infinitive aufräumen."
+          },
+          "options": [
+            "Später werde ich aufräumen.",
+            "Später ich werde aufräumen.",
+            "Später werde aufräumen ich.",
+            "Später ich aufräumen werde."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Beginne mit „Morgen früh“: Welcher Satz ist richtig?",
+          "correct": "Morgen früh wird es regnen.",
+          "explanations": {
+            "tr": "Morgen früh cümlenin ilk öğesidir; birkaç kelime olsa da tek zaman grubudur. Çekimli wird ikinci öğeye, özne es onun arkasına, mastar regnen sona gelir.",
+            "de": "Morgen früh ist das erste Satzglied, auch wenn es mehrere Wörter enthält. Danach folgen das finite wird, das Subjekt es und zuletzt der Infinitiv regnen.",
+            "en": "Morgen früh is the first constituent, even if it contains several words. Put finite wird next, followed by the subject es, and end with the infinitive regnen."
+          },
+          "options": [
+            "Morgen früh wird es regnen.",
+            "Morgen früh es wird regnen.",
+            "Morgen früh wird regnen es.",
+            "Morgen früh es regnen wird."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "umformen-4",
+      "title": {
+        "tr": "Übung 4 – Futur I’a dönüştür",
+        "de": "Übung 4 – Ins Futur I umformen",
+        "en": "Exercise 4 – Change to Futur I"
+      },
+      "description": {
+        "tr": "Verilen özneyle başla ve bütün cümleyi yaz",
+        "de": "Beginne mit dem gegebenen Subjekt und schreibe den ganzen Satz",
+        "en": "Start with the given subject and write the whole sentence"
+      },
+      "difficulty": {
+        "tr": "A2 sonu",
+        "de": "Ende A2",
+        "en": "End of A2"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Futur I",
+          "sentence": "Formuliere im Futur I. Beginne mit „Ich“: Ich lerne morgen.",
+          "correct": "Ich werde morgen lernen.",
+          "explanations": {
+            "tr": "Ich öznesine werde uyar. İlk cümledeki eylem Futur I’da lernen mastarına dönüşüp sona gider; morgen bilgisi korunur. Präsens cümlesi dilbilgisel olabilir, ancak görev özellikle Futur I’a dönüştürmeni istiyor.",
+            "de": "Zu Ich passt werde. Das Vollverb steht jetzt als Infinitiv lernen am Ende; morgen bleibt erhalten. Der Präsenssatz ist möglich, aber verlangt ist die Umformung ins Futur I.",
+            "en": "Ich requires werde. Change the main verb to infinitive lernen at the end and retain morgen. The present-tense sentence can be grammatical, but this task specifically requests Futur I."
+          },
+          "type": "text",
+          "answers": [
+            "Ich werde morgen lernen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Formuliere im Futur I. Beginne mit „Du“: Du kaufst am Freitag ein.",
+          "correct": "Du wirst am Freitag einkaufen.",
+          "explanations": {
+            "tr": "Du öznesine wirst uyar. İlk cümledeki eylem Futur I’da einkaufen mastarına dönüşüp sona gider; am Freitag bilgisi korunur. Präsens cümlesi dilbilgisel olabilir, ancak görev özellikle Futur I’a dönüştürmeni istiyor.",
+            "de": "Zu Du passt wirst. Das Vollverb steht jetzt als Infinitiv einkaufen am Ende; am Freitag bleibt erhalten. Der Präsenssatz ist möglich, aber verlangt ist die Umformung ins Futur I.",
+            "en": "Du requires wirst. Change the main verb to infinitive einkaufen at the end and retain am Freitag. The present-tense sentence can be grammatical, but this task specifically requests Futur I."
+          },
+          "type": "text",
+          "answers": [
+            "Du wirst am Freitag einkaufen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Formuliere im Futur I. Beginne mit „Anna“: Anna arbeitet nächste Woche.",
+          "correct": "Anna wird nächste Woche arbeiten.",
+          "explanations": {
+            "tr": "Anna öznesine wird uyar. İlk cümledeki eylem Futur I’da arbeiten mastarına dönüşüp sona gider; nächste Woche bilgisi korunur. Präsens cümlesi dilbilgisel olabilir, ancak görev özellikle Futur I’a dönüştürmeni istiyor.",
+            "de": "Zu Anna passt wird. Das Vollverb steht jetzt als Infinitiv arbeiten am Ende; nächste Woche bleibt erhalten. Der Präsenssatz ist möglich, aber verlangt ist die Umformung ins Futur I.",
+            "en": "Anna requires wird. Change the main verb to infinitive arbeiten at the end and retain nächste Woche. The present-tense sentence can be grammatical, but this task specifically requests Futur I."
+          },
+          "type": "text",
+          "answers": [
+            "Anna wird nächste Woche arbeiten.",
+            "Anna wird naechste Woche arbeiten."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Formuliere im Futur I. Beginne mit „Wir“: Wir besuchen morgen unsere Oma.",
+          "correct": "Wir werden morgen unsere Oma besuchen.",
+          "explanations": {
+            "tr": "Wir öznesine werden uyar. İlk cümledeki eylem Futur I’da besuchen mastarına dönüşüp sona gider; morgen unsere Oma bilgisi korunur. Präsens cümlesi dilbilgisel olabilir, ancak görev özellikle Futur I’a dönüştürmeni istiyor.",
+            "de": "Zu Wir passt werden. Das Vollverb steht jetzt als Infinitiv besuchen am Ende; morgen unsere Oma bleibt erhalten. Der Präsenssatz ist möglich, aber verlangt ist die Umformung ins Futur I.",
+            "en": "Wir requires werden. Change the main verb to infinitive besuchen at the end and retain morgen unsere Oma. The present-tense sentence can be grammatical, but this task specifically requests Futur I."
+          },
+          "type": "text",
+          "answers": [
+            "Wir werden morgen unsere Oma besuchen.",
+            "Wir werden unsere Oma morgen besuchen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Formuliere im Futur I. Beginne mit „Ihr“: Ihr kocht heute Abend.",
+          "correct": "Ihr werdet heute Abend kochen.",
+          "explanations": {
+            "tr": "Ihr öznesine werdet uyar. İlk cümledeki eylem Futur I’da kochen mastarına dönüşüp sona gider; heute Abend bilgisi korunur. Präsens cümlesi dilbilgisel olabilir, ancak görev özellikle Futur I’a dönüştürmeni istiyor.",
+            "de": "Zu Ihr passt werdet. Das Vollverb steht jetzt als Infinitiv kochen am Ende; heute Abend bleibt erhalten. Der Präsenssatz ist möglich, aber verlangt ist die Umformung ins Futur I.",
+            "en": "Ihr requires werdet. Change the main verb to infinitive kochen at the end and retain heute Abend. The present-tense sentence can be grammatical, but this task specifically requests Futur I."
+          },
+          "type": "text",
+          "answers": [
+            "Ihr werdet heute Abend kochen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Formuliere im Futur I. Beginne mit „Die Kinder“: Die Kinder spielen im Park.",
+          "correct": "Die Kinder werden im Park spielen.",
+          "explanations": {
+            "tr": "Die Kinder öznesine werden uyar. İlk cümledeki eylem Futur I’da spielen mastarına dönüşüp sona gider; im Park bilgisi korunur. Präsens cümlesi dilbilgisel olabilir, ancak görev özellikle Futur I’a dönüştürmeni istiyor.",
+            "de": "Zu Die Kinder passt werden. Das Vollverb steht jetzt als Infinitiv spielen am Ende; im Park bleibt erhalten. Der Präsenssatz ist möglich, aber verlangt ist die Umformung ins Futur I.",
+            "en": "Die Kinder requires werden. Change the main verb to infinitive spielen at the end and retain im Park. The present-tense sentence can be grammatical, but this task specifically requests Futur I."
+          },
+          "type": "text",
+          "answers": [
+            "Die Kinder werden im Park spielen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Formuliere im Futur I. Beginne mit „Paul“: Paul liest das Buch.",
+          "correct": "Paul wird das Buch lesen.",
+          "explanations": {
+            "tr": "Paul öznesine wird uyar. İlk cümledeki eylem Futur I’da lesen mastarına dönüşüp sona gider; das Buch bilgisi korunur. Präsens cümlesi dilbilgisel olabilir, ancak görev özellikle Futur I’a dönüştürmeni istiyor.",
+            "de": "Zu Paul passt wird. Das Vollverb steht jetzt als Infinitiv lesen am Ende; das Buch bleibt erhalten. Der Präsenssatz ist möglich, aber verlangt ist die Umformung ins Futur I.",
+            "en": "Paul requires wird. Change the main verb to infinitive lesen at the end and retain das Buch. The present-tense sentence can be grammatical, but this task specifically requests Futur I."
+          },
+          "type": "text",
+          "answers": [
+            "Paul wird das Buch lesen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Formuliere im Futur I. Beginne mit „Ich“: Ich schreibe eine E-Mail.",
+          "correct": "Ich werde eine E-Mail schreiben.",
+          "explanations": {
+            "tr": "Ich öznesine werde uyar. İlk cümledeki eylem Futur I’da schreiben mastarına dönüşüp sona gider; eine E-Mail bilgisi korunur. Präsens cümlesi dilbilgisel olabilir, ancak görev özellikle Futur I’a dönüştürmeni istiyor.",
+            "de": "Zu Ich passt werde. Das Vollverb steht jetzt als Infinitiv schreiben am Ende; eine E-Mail bleibt erhalten. Der Präsenssatz ist möglich, aber verlangt ist die Umformung ins Futur I.",
+            "en": "Ich requires werde. Change the main verb to infinitive schreiben at the end and retain eine E-Mail. The present-tense sentence can be grammatical, but this task specifically requests Futur I."
+          },
+          "type": "text",
+          "answers": [
+            "Ich werde eine E-Mail schreiben."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Formuliere im Futur I. Beginne mit „Wir“: Wir treffen unsere Freunde.",
+          "correct": "Wir werden unsere Freunde treffen.",
+          "explanations": {
+            "tr": "Wir öznesine werden uyar. İlk cümledeki eylem Futur I’da treffen mastarına dönüşüp sona gider; unsere Freunde bilgisi korunur. Präsens cümlesi dilbilgisel olabilir, ancak görev özellikle Futur I’a dönüştürmeni istiyor.",
+            "de": "Zu Wir passt werden. Das Vollverb steht jetzt als Infinitiv treffen am Ende; unsere Freunde bleibt erhalten. Der Präsenssatz ist möglich, aber verlangt ist die Umformung ins Futur I.",
+            "en": "Wir requires werden. Change the main verb to infinitive treffen at the end and retain unsere Freunde. The present-tense sentence can be grammatical, but this task specifically requests Futur I."
+          },
+          "type": "text",
+          "answers": [
+            "Wir werden unsere Freunde treffen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Formuliere im Futur I. Beginne mit „Du“: Du bleibst zu Hause.",
+          "correct": "Du wirst zu Hause bleiben.",
+          "explanations": {
+            "tr": "Du öznesine wirst uyar. İlk cümledeki eylem Futur I’da bleiben mastarına dönüşüp sona gider; zu Hause bilgisi korunur. Präsens cümlesi dilbilgisel olabilir, ancak görev özellikle Futur I’a dönüştürmeni istiyor.",
+            "de": "Zu Du passt wirst. Das Vollverb steht jetzt als Infinitiv bleiben am Ende; zu Hause bleibt erhalten. Der Präsenssatz ist möglich, aber verlangt ist die Umformung ins Futur I.",
+            "en": "Du requires wirst. Change the main verb to infinitive bleiben at the end and retain zu Hause. The present-tense sentence can be grammatical, but this task specifically requests Futur I."
+          },
+          "type": "text",
+          "answers": [
+            "Du wirst zu Hause bleiben."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verneinung-5",
+      "title": {
+        "tr": "Übung 5 – Olumsuz cümleler",
+        "de": "Übung 5 – Verneinung",
+        "en": "Exercise 5 – Negation"
+      },
+      "description": {
+        "tr": "Verilen özneyle başla; nicht varsa doğrudan mastarın önüne koy",
+        "de": "Beginne mit dem Subjekt; setze nicht direkt vor den Infinitiv",
+        "en": "Start with the given subject; put nicht directly before the infinitive"
+      },
+      "difficulty": {
+        "tr": "A2 sonu",
+        "de": "Ende A2",
+        "en": "End of A2"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Futur I",
+          "sentence": "Beginne mit „Ich“. Ordne: Ich | arbeiten | morgen | nicht | werde (nicht direkt vor den Infinitiv)",
+          "correct": "Ich werde morgen nicht arbeiten.",
+          "explanations": {
+            "tr": "Ich ile werde çekimi eşleşir. morgen zaman bilgisi korunur; nicht, arbeiten ile anlatılan eylemi olumsuz yapar. Mastar arbeiten sonda kalır; olumsuzluk werden çekimini değiştirmez.",
+            "de": "Zu Ich gehört werde. morgen bleibt als Zeit- bzw. Ortsangabe erhalten; nicht verneint das arbeiten. Der Infinitiv arbeiten bleibt am Ende; die Verneinung ändert die Personenform nicht.",
+            "en": "Ich takes werde. Keep the time/place phrase morgen; nicht negates the action arbeiten. The infinitive arbeiten stays last; negation does not change the person form."
+          },
+          "type": "text",
+          "answers": [
+            "Ich werde morgen nicht arbeiten."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Beginne mit „Du“. Ordne: Du | kommen | am Samstag | nicht | wirst (nicht direkt vor den Infinitiv)",
+          "correct": "Du wirst am Samstag nicht kommen.",
+          "explanations": {
+            "tr": "Du ile wirst çekimi eşleşir. am Samstag zaman bilgisi korunur; nicht, kommen ile anlatılan eylemi olumsuz yapar. Mastar kommen sonda kalır; olumsuzluk werden çekimini değiştirmez.",
+            "de": "Zu Du gehört wirst. am Samstag bleibt als Zeit- bzw. Ortsangabe erhalten; nicht verneint das kommen. Der Infinitiv kommen bleibt am Ende; die Verneinung ändert die Personenform nicht.",
+            "en": "Du takes wirst. Keep the time/place phrase am Samstag; nicht negates the action kommen. The infinitive kommen stays last; negation does not change the person form."
+          },
+          "type": "text",
+          "answers": [
+            "Du wirst am Samstag nicht kommen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Beginne mit „Anna“. Ordne: Anna | anrufen | heute | nicht | wird (nicht direkt vor den Infinitiv)",
+          "correct": "Anna wird heute nicht anrufen.",
+          "explanations": {
+            "tr": "Anna ile wird çekimi eşleşir. heute zaman bilgisi korunur; nicht, anrufen ile anlatılan eylemi olumsuz yapar. Mastar anrufen sonda kalır; olumsuzluk werden çekimini değiştirmez.",
+            "de": "Zu Anna gehört wird. heute bleibt als Zeit- bzw. Ortsangabe erhalten; nicht verneint das anrufen. Der Infinitiv anrufen bleibt am Ende; die Verneinung ändert die Personenform nicht.",
+            "en": "Anna takes wird. Keep the time/place phrase heute; nicht negates the action anrufen. The infinitive anrufen stays last; negation does not change the person form."
+          },
+          "type": "text",
+          "answers": [
+            "Anna wird heute nicht anrufen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Beginne mit „Wir“. Ordne: Wir | reisen | morgen | nicht | werden (nicht direkt vor den Infinitiv)",
+          "correct": "Wir werden morgen nicht reisen.",
+          "explanations": {
+            "tr": "Wir ile werden çekimi eşleşir. morgen zaman bilgisi korunur; nicht, reisen ile anlatılan eylemi olumsuz yapar. Mastar reisen sonda kalır; olumsuzluk werden çekimini değiştirmez.",
+            "de": "Zu Wir gehört werden. morgen bleibt als Zeit- bzw. Ortsangabe erhalten; nicht verneint das reisen. Der Infinitiv reisen bleibt am Ende; die Verneinung ändert die Personenform nicht.",
+            "en": "Wir takes werden. Keep the time/place phrase morgen; nicht negates the action reisen. The infinitive reisen stays last; negation does not change the person form."
+          },
+          "type": "text",
+          "answers": [
+            "Wir werden morgen nicht reisen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Beginne mit „Ihr“. Ordne: Ihr | kochen | heute Abend | nicht | werdet (nicht direkt vor den Infinitiv)",
+          "correct": "Ihr werdet heute Abend nicht kochen.",
+          "explanations": {
+            "tr": "Ihr ile werdet çekimi eşleşir. heute Abend zaman bilgisi korunur; nicht, kochen ile anlatılan eylemi olumsuz yapar. Mastar kochen sonda kalır; olumsuzluk werden çekimini değiştirmez.",
+            "de": "Zu Ihr gehört werdet. heute Abend bleibt als Zeit- bzw. Ortsangabe erhalten; nicht verneint das kochen. Der Infinitiv kochen bleibt am Ende; die Verneinung ändert die Personenform nicht.",
+            "en": "Ihr takes werdet. Keep the time/place phrase heute Abend; nicht negates the action kochen. The infinitive kochen stays last; negation does not change the person form."
+          },
+          "type": "text",
+          "answers": [
+            "Ihr werdet heute Abend nicht kochen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Beginne mit „Paul“. Ordne: Paul | lesen | das Buch | nicht | wird (nicht direkt vor den Infinitiv)",
+          "correct": "Paul wird das Buch nicht lesen.",
+          "explanations": {
+            "tr": "Paul ile wird çekimi eşleşir. das Buch zaman bilgisi korunur; nicht, lesen ile anlatılan eylemi olumsuz yapar. Mastar lesen sonda kalır; olumsuzluk werden çekimini değiştirmez.",
+            "de": "Zu Paul gehört wird. das Buch bleibt als Zeit- bzw. Ortsangabe erhalten; nicht verneint das lesen. Der Infinitiv lesen bleibt am Ende; die Verneinung ändert die Personenform nicht.",
+            "en": "Paul takes wird. Keep the time/place phrase das Buch; nicht negates the action lesen. The infinitive lesen stays last; negation does not change the person form."
+          },
+          "type": "text",
+          "answers": [
+            "Paul wird das Buch nicht lesen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Beginne mit „Ich“. Ordne: Ich | schreiben | keinen Brief | werde",
+          "correct": "Ich werde keinen Brief schreiben.",
+          "explanations": {
+            "tr": "Ich ile werde çekimi eşleşir. keinen Brief isim grubunu olumsuz yapıyor; burada yalnızca nicht kullanmak verilen isim grubunu karşılamaz. Mastar schreiben sonda kalır; olumsuzluk werden çekimini değiştirmez.",
+            "de": "Zu Ich gehört werde. keinen Brief verneint die Nominalgruppe; behalte diese vorgegebenen Wörter. Der Infinitiv schreiben bleibt am Ende; die Verneinung ändert die Personenform nicht.",
+            "en": "Ich takes werde. keinen Brief negates the noun phrase; keep these given words. The infinitive schreiben stays last; negation does not change the person form."
+          },
+          "type": "text",
+          "answers": [
+            "Ich werde keinen Brief schreiben."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Beginne mit „Wir“. Ordne: Wir | kochen | keine Suppe | werden",
+          "correct": "Wir werden keine Suppe kochen.",
+          "explanations": {
+            "tr": "Wir ile werden çekimi eşleşir. keine Suppe isim grubunu olumsuz yapıyor; burada yalnızca nicht kullanmak verilen isim grubunu karşılamaz. Mastar kochen sonda kalır; olumsuzluk werden çekimini değiştirmez.",
+            "de": "Zu Wir gehört werden. keine Suppe verneint die Nominalgruppe; behalte diese vorgegebenen Wörter. Der Infinitiv kochen bleibt am Ende; die Verneinung ändert die Personenform nicht.",
+            "en": "Wir takes werden. keine Suppe negates the noun phrase; keep these given words. The infinitive kochen stays last; negation does not change the person form."
+          },
+          "type": "text",
+          "answers": [
+            "Wir werden keine Suppe kochen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Beginne mit „Die Kinder“. Ordne: Die Kinder | spielen | im Park | nicht | werden (nicht direkt vor den Infinitiv)",
+          "correct": "Die Kinder werden im Park nicht spielen.",
+          "explanations": {
+            "tr": "Die Kinder ile werden çekimi eşleşir. im Park zaman bilgisi korunur; nicht, spielen ile anlatılan eylemi olumsuz yapar. Mastar spielen sonda kalır; olumsuzluk werden çekimini değiştirmez.",
+            "de": "Zu Die Kinder gehört werden. im Park bleibt als Zeit- bzw. Ortsangabe erhalten; nicht verneint das spielen. Der Infinitiv spielen bleibt am Ende; die Verneinung ändert die Personenform nicht.",
+            "en": "Die Kinder takes werden. Keep the time/place phrase im Park; nicht negates the action spielen. The infinitive spielen stays last; negation does not change the person form."
+          },
+          "type": "text",
+          "answers": [
+            "Die Kinder werden im Park nicht spielen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Beginne mit „Du“. Ordne: Du | bekommen | keine E-Mail | wirst",
+          "correct": "Du wirst keine E-Mail bekommen.",
+          "explanations": {
+            "tr": "Du ile wirst çekimi eşleşir. keine E-Mail isim grubunu olumsuz yapıyor; burada yalnızca nicht kullanmak verilen isim grubunu karşılamaz. Mastar bekommen sonda kalır; olumsuzluk werden çekimini değiştirmez.",
+            "de": "Zu Du gehört wirst. keine E-Mail verneint die Nominalgruppe; behalte diese vorgegebenen Wörter. Der Infinitiv bekommen bleibt am Ende; die Verneinung ändert die Personenform nicht.",
+            "en": "Du takes wirst. keine E-Mail negates the noun phrase; keep these given words. The infinitive bekommen stays last; negation does not change the person form."
+          },
+          "type": "text",
+          "answers": [
+            "Du wirst keine E-Mail bekommen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fragen-6",
+      "title": {
+        "tr": "Übung 6 – Gelecekle ilgili sorular",
+        "de": "Übung 6 – Fragen zur Zukunft",
+        "en": "Exercise 6 – Questions about the future"
+      },
+      "description": {
+        "tr": "Özneyi çekimli werden arkasına, mastarı sona koy",
+        "de": "Setze das Subjekt direkt nach dem finiten werden und den Infinitiv ans Ende",
+        "en": "Put the subject directly after finite werden and the infinitive last"
+      },
+      "difficulty": {
+        "tr": "A2 sonu",
+        "de": "Ende A2",
+        "en": "End of A2"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Futur I",
+          "sentence": "Ja/Nein-Frage: du | kommen | morgen | wirst",
+          "correct": "Wirst du morgen kommen?",
+          "explanations": {
+            "tr": "Evet/hayır sorusunda çekimli Wirst en başa gelir. Özne du, bu çekimle eşleşir. kommen mastarı soru cümlesinde de sonda kalır.",
+            "de": "Die Ja/Nein-Frage beginnt mit dem finiten Wirst. Wirst stimmt mit dem Subjekt du überein. Auch in der Frage steht der Infinitiv kommen am Ende.",
+            "en": "The yes/no question begins with finite Wirst. Wirst agrees with subject du. The infinitive kommen goes last in the question too."
+          },
+          "type": "text",
+          "answers": [
+            "Wirst du morgen kommen?"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Ja/Nein-Frage: Anna | arbeiten | am Freitag | wird",
+          "correct": "Wird Anna am Freitag arbeiten?",
+          "explanations": {
+            "tr": "Evet/hayır sorusunda çekimli Wird en başa gelir. Özne Anna, bu çekimle eşleşir. arbeiten mastarı soru cümlesinde de sonda kalır.",
+            "de": "Die Ja/Nein-Frage beginnt mit dem finiten Wird. Wird stimmt mit dem Subjekt Anna überein. Auch in der Frage steht der Infinitiv arbeiten am Ende.",
+            "en": "The yes/no question begins with finite Wird. Wird agrees with subject Anna. The infinitive arbeiten goes last in the question too."
+          },
+          "type": "text",
+          "answers": [
+            "Wird Anna am Freitag arbeiten?"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Ja/Nein-Frage: wir | reisen | morgen | werden",
+          "correct": "Werden wir morgen reisen?",
+          "explanations": {
+            "tr": "Evet/hayır sorusunda çekimli Werden en başa gelir. Özne wir, bu çekimle eşleşir. reisen mastarı soru cümlesinde de sonda kalır.",
+            "de": "Die Ja/Nein-Frage beginnt mit dem finiten Werden. Werden stimmt mit dem Subjekt wir überein. Auch in der Frage steht der Infinitiv reisen am Ende.",
+            "en": "The yes/no question begins with finite Werden. Werden agrees with subject wir. The infinitive reisen goes last in the question too."
+          },
+          "type": "text",
+          "answers": [
+            "Werden wir morgen reisen?"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Ja/Nein-Frage: ihr | kochen | heute Abend | werdet",
+          "correct": "Werdet ihr heute Abend kochen?",
+          "explanations": {
+            "tr": "Evet/hayır sorusunda çekimli Werdet en başa gelir. Özne ihr, bu çekimle eşleşir. kochen mastarı soru cümlesinde de sonda kalır.",
+            "de": "Die Ja/Nein-Frage beginnt mit dem finiten Werdet. Werdet stimmt mit dem Subjekt ihr überein. Auch in der Frage steht der Infinitiv kochen am Ende.",
+            "en": "The yes/no question begins with finite Werdet. Werdet agrees with subject ihr. The infinitive kochen goes last in the question too."
+          },
+          "type": "text",
+          "answers": [
+            "Werdet ihr heute Abend kochen?"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Ja/Nein-Frage: Paul | lesen | das Buch | wird",
+          "correct": "Wird Paul das Buch lesen?",
+          "explanations": {
+            "tr": "Evet/hayır sorusunda çekimli Wird en başa gelir. Özne Paul, bu çekimle eşleşir. lesen mastarı soru cümlesinde de sonda kalır.",
+            "de": "Die Ja/Nein-Frage beginnt mit dem finiten Wird. Wird stimmt mit dem Subjekt Paul überein. Auch in der Frage steht der Infinitiv lesen am Ende.",
+            "en": "The yes/no question begins with finite Wird. Wird agrees with subject Paul. The infinitive lesen goes last in the question too."
+          },
+          "type": "text",
+          "answers": [
+            "Wird Paul das Buch lesen?"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "W-Frage: Wann | du | kommen | wirst",
+          "correct": "Wann wirst du kommen?",
+          "explanations": {
+            "tr": "“Wann” tek bir soru grubudur; hemen ardından wirst gelir. Özne du, bu çekimle eşleşir. kommen mastarı soru cümlesinde de sonda kalır.",
+            "de": "Die Fragegruppe Wann steht zuerst, unmittelbar danach wirst. wirst stimmt mit dem Subjekt du überein. Auch in der Frage steht der Infinitiv kommen am Ende.",
+            "en": "The question phrase Wann comes first, immediately followed by wirst. wirst agrees with subject du. The infinitive kommen goes last in the question too."
+          },
+          "type": "text",
+          "answers": [
+            "Wann wirst du kommen?"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "W-Frage: Was | Anna | machen | morgen | wird",
+          "correct": "Was wird Anna morgen machen?",
+          "explanations": {
+            "tr": "“Was” tek bir soru grubudur; hemen ardından wird gelir. Özne Anna, bu çekimle eşleşir. machen mastarı soru cümlesinde de sonda kalır.",
+            "de": "Die Fragegruppe Was steht zuerst, unmittelbar danach wird. wird stimmt mit dem Subjekt Anna überein. Auch in der Frage steht der Infinitiv machen am Ende.",
+            "en": "The question phrase Was comes first, immediately followed by wird. wird agrees with subject Anna. The infinitive machen goes last in the question too."
+          },
+          "type": "text",
+          "answers": [
+            "Was wird Anna morgen machen?"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "W-Frage: Wo | wir | wohnen | werden",
+          "correct": "Wo werden wir wohnen?",
+          "explanations": {
+            "tr": "“Wo” tek bir soru grubudur; hemen ardından werden gelir. Özne wir, bu çekimle eşleşir. wohnen mastarı soru cümlesinde de sonda kalır.",
+            "de": "Die Fragegruppe Wo steht zuerst, unmittelbar danach werden. werden stimmt mit dem Subjekt wir überein. Auch in der Frage steht der Infinitiv wohnen am Ende.",
+            "en": "The question phrase Wo comes first, immediately followed by werden. werden agrees with subject wir. The infinitive wohnen goes last in the question too."
+          },
+          "type": "text",
+          "answers": [
+            "Wo werden wir wohnen?"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "W-Frage: Wie lange | ihr | bleiben | hier | werdet",
+          "correct": "Wie lange werdet ihr hier bleiben?",
+          "explanations": {
+            "tr": "“Wie lange” tek bir soru grubudur; hemen ardından werdet gelir. Özne ihr, bu çekimle eşleşir. bleiben mastarı soru cümlesinde de sonda kalır.",
+            "de": "Die Fragegruppe Wie lange steht zuerst, unmittelbar danach werdet. werdet stimmt mit dem Subjekt ihr überein. Auch in der Frage steht der Infinitiv bleiben am Ende.",
+            "en": "The question phrase Wie lange comes first, immediately followed by werdet. werdet agrees with subject ihr. The infinitive bleiben goes last in the question too."
+          },
+          "type": "text",
+          "answers": [
+            "Wie lange werdet ihr hier bleiben?"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "W-Frage: Wohin | die Kinder | fahren | im Sommer | werden",
+          "correct": "Wohin werden die Kinder im Sommer fahren?",
+          "explanations": {
+            "tr": "“Wohin” tek bir soru grubudur; hemen ardından werden gelir. Özne die Kinder, bu çekimle eşleşir. fahren mastarı soru cümlesinde de sonda kalır.",
+            "de": "Die Fragegruppe Wohin steht zuerst, unmittelbar danach werden. werden stimmt mit dem Subjekt die Kinder überein. Auch in der Frage steht der Infinitiv fahren am Ende.",
+            "en": "The question phrase Wohin comes first, immediately followed by werden. werden agrees with subject die Kinder. The infinitive fahren goes last in the question too."
+          },
+          "type": "text",
+          "answers": [
+            "Wohin werden die Kinder im Sommer fahren?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trennbare-verben-7",
+      "title": {
+        "tr": "Übung 7 – Ayrılabilen fiiller",
+        "de": "Übung 7 – Trennbare Verben",
+        "en": "Exercise 7 – Separable verbs"
+      },
+      "description": {
+        "tr": "Futur I’da verilen fiilin tamamını mastar olarak yaz",
+        "de": "Schreibe das ganze Verb im Futur I im Infinitiv",
+        "en": "Write the complete verb as an infinitive in Futur I"
+      },
+      "difficulty": {
+        "tr": "A2 sonu",
+        "de": "Ende A2",
+        "en": "End of A2"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Futur I",
+          "sentence": "Ordne. Beginne mit „Ich“: Ich | aufstehen | morgen früh | werde",
+          "correct": "Ich werde morgen früh aufstehen.",
+          "explanations": {
+            "tr": "aufstehen, auf ön ekiyle ayrılabilen fiildir. Ancak burada werde zaten çekildiği için aufstehen mastar kalır: ön ek kökten ayrılmaz. Ich ile başlayan cümlede werde ikinci öğede, aufstehen sonda olur.",
+            "de": "aufstehen ist mit auf trennbar. Hier ist aber werde konjugiert und aufstehen ein Infinitiv; der Verbzusatz bleibt verbunden. Nach Ich steht werde, am Ende das ganze aufstehen.",
+            "en": "aufstehen is separable with prefix auf. Here werde is conjugated and aufstehen is an infinitive, so keep the prefix attached. Put werde after Ich and the whole verb aufstehen last."
+          },
+          "type": "text",
+          "answers": [
+            "Ich werde morgen früh aufstehen.",
+            "Ich werde morgen frueh aufstehen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Ordne. Beginne mit „Du“: Du | einkaufen | am Samstag | wirst",
+          "correct": "Du wirst am Samstag einkaufen.",
+          "explanations": {
+            "tr": "einkaufen, ein ön ekiyle ayrılabilen fiildir. Ancak burada wirst zaten çekildiği için einkaufen mastar kalır: ön ek kökten ayrılmaz. Du ile başlayan cümlede wirst ikinci öğede, einkaufen sonda olur.",
+            "de": "einkaufen ist mit ein trennbar. Hier ist aber wirst konjugiert und einkaufen ein Infinitiv; der Verbzusatz bleibt verbunden. Nach Du steht wirst, am Ende das ganze einkaufen.",
+            "en": "einkaufen is separable with prefix ein. Here wirst is conjugated and einkaufen is an infinitive, so keep the prefix attached. Put wirst after Du and the whole verb einkaufen last."
+          },
+          "type": "text",
+          "answers": [
+            "Du wirst am Samstag einkaufen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Ordne. Beginne mit „Anna“: Anna | anrufen | später | wird",
+          "correct": "Anna wird später anrufen.",
+          "explanations": {
+            "tr": "anrufen, an ön ekiyle ayrılabilen fiildir. Ancak burada wird zaten çekildiği için anrufen mastar kalır: ön ek kökten ayrılmaz. Anna ile başlayan cümlede wird ikinci öğede, anrufen sonda olur.",
+            "de": "anrufen ist mit an trennbar. Hier ist aber wird konjugiert und anrufen ein Infinitiv; der Verbzusatz bleibt verbunden. Nach Anna steht wird, am Ende das ganze anrufen.",
+            "en": "anrufen is separable with prefix an. Here wird is conjugated and anrufen is an infinitive, so keep the prefix attached. Put wird after Anna and the whole verb anrufen last."
+          },
+          "type": "text",
+          "answers": [
+            "Anna wird später anrufen.",
+            "Anna wird spaeter anrufen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Ordne. Beginne mit „Wir“: Wir | aufräumen | das Zimmer | werden",
+          "correct": "Wir werden das Zimmer aufräumen.",
+          "explanations": {
+            "tr": "aufräumen, auf ön ekiyle ayrılabilen fiildir. Ancak burada werden zaten çekildiği için aufräumen mastar kalır: ön ek kökten ayrılmaz. Wir ile başlayan cümlede werden ikinci öğede, aufräumen sonda olur.",
+            "de": "aufräumen ist mit auf trennbar. Hier ist aber werden konjugiert und aufräumen ein Infinitiv; der Verbzusatz bleibt verbunden. Nach Wir steht werden, am Ende das ganze aufräumen.",
+            "en": "aufräumen is separable with prefix auf. Here werden is conjugated and aufräumen is an infinitive, so keep the prefix attached. Put werden after Wir and the whole verb aufräumen last."
+          },
+          "type": "text",
+          "answers": [
+            "Wir werden das Zimmer aufräumen.",
+            "Wir werden das Zimmer aufraeumen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Ordne. Beginne mit „Ihr“: Ihr | mitkommen | morgen | werdet",
+          "correct": "Ihr werdet morgen mitkommen.",
+          "explanations": {
+            "tr": "mitkommen, mit ön ekiyle ayrılabilen fiildir. Ancak burada werdet zaten çekildiği için mitkommen mastar kalır: ön ek kökten ayrılmaz. Ihr ile başlayan cümlede werdet ikinci öğede, mitkommen sonda olur.",
+            "de": "mitkommen ist mit mit trennbar. Hier ist aber werdet konjugiert und mitkommen ein Infinitiv; der Verbzusatz bleibt verbunden. Nach Ihr steht werdet, am Ende das ganze mitkommen.",
+            "en": "mitkommen is separable with prefix mit. Here werdet is conjugated and mitkommen is an infinitive, so keep the prefix attached. Put werdet after Ihr and the whole verb mitkommen last."
+          },
+          "type": "text",
+          "answers": [
+            "Ihr werdet morgen mitkommen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Ordne. Beginne mit „Paul“: Paul | aussteigen | am Bahnhof | wird",
+          "correct": "Paul wird am Bahnhof aussteigen.",
+          "explanations": {
+            "tr": "aussteigen, aus ön ekiyle ayrılabilen fiildir. Ancak burada wird zaten çekildiği için aussteigen mastar kalır: ön ek kökten ayrılmaz. Paul ile başlayan cümlede wird ikinci öğede, aussteigen sonda olur.",
+            "de": "aussteigen ist mit aus trennbar. Hier ist aber wird konjugiert und aussteigen ein Infinitiv; der Verbzusatz bleibt verbunden. Nach Paul steht wird, am Ende das ganze aussteigen.",
+            "en": "aussteigen is separable with prefix aus. Here wird is conjugated and aussteigen is an infinitive, so keep the prefix attached. Put wird after Paul and the whole verb aussteigen last."
+          },
+          "type": "text",
+          "answers": [
+            "Paul wird am Bahnhof aussteigen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Ordne. Beginne mit „Die Kinder“: Die Kinder | anziehen | die Jacken | werden",
+          "correct": "Die Kinder werden die Jacken anziehen.",
+          "explanations": {
+            "tr": "anziehen, an ön ekiyle ayrılabilen fiildir. Ancak burada werden zaten çekildiği için anziehen mastar kalır: ön ek kökten ayrılmaz. Die Kinder ile başlayan cümlede werden ikinci öğede, anziehen sonda olur.",
+            "de": "anziehen ist mit an trennbar. Hier ist aber werden konjugiert und anziehen ein Infinitiv; der Verbzusatz bleibt verbunden. Nach Die Kinder steht werden, am Ende das ganze anziehen.",
+            "en": "anziehen is separable with prefix an. Here werden is conjugated and anziehen is an infinitive, so keep the prefix attached. Put werden after Die Kinder and the whole verb anziehen last."
+          },
+          "type": "text",
+          "answers": [
+            "Die Kinder werden die Jacken anziehen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Ordne. Beginne mit „Ich“: Ich | zurückkommen | morgen | werde",
+          "correct": "Ich werde morgen zurückkommen.",
+          "explanations": {
+            "tr": "zurückkommen, zurück ön ekiyle ayrılabilen fiildir. Ancak burada werde zaten çekildiği için zurückkommen mastar kalır: ön ek kökten ayrılmaz. Ich ile başlayan cümlede werde ikinci öğede, zurückkommen sonda olur.",
+            "de": "zurückkommen ist mit zurück trennbar. Hier ist aber werde konjugiert und zurückkommen ein Infinitiv; der Verbzusatz bleibt verbunden. Nach Ich steht werde, am Ende das ganze zurückkommen.",
+            "en": "zurückkommen is separable with prefix zurück. Here werde is conjugated and zurückkommen is an infinitive, so keep the prefix attached. Put werde after Ich and the whole verb zurückkommen last."
+          },
+          "type": "text",
+          "answers": [
+            "Ich werde morgen zurückkommen.",
+            "Ich werde morgen zurueckkommen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Ordne. Beginne mit „Wir“: Wir | ausfüllen | das Formular | werden",
+          "correct": "Wir werden das Formular ausfüllen.",
+          "explanations": {
+            "tr": "ausfüllen, aus ön ekiyle ayrılabilen fiildir. Ancak burada werden zaten çekildiği için ausfüllen mastar kalır: ön ek kökten ayrılmaz. Wir ile başlayan cümlede werden ikinci öğede, ausfüllen sonda olur.",
+            "de": "ausfüllen ist mit aus trennbar. Hier ist aber werden konjugiert und ausfüllen ein Infinitiv; der Verbzusatz bleibt verbunden. Nach Wir steht werden, am Ende das ganze ausfüllen.",
+            "en": "ausfüllen is separable with prefix aus. Here werden is conjugated and ausfüllen is an infinitive, so keep the prefix attached. Put werden after Wir and the whole verb ausfüllen last."
+          },
+          "type": "text",
+          "answers": [
+            "Wir werden das Formular ausfüllen.",
+            "Wir werden das Formular ausfuellen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Ordne. Beginne mit „Du“: Du | umsteigen | am Bahnhof | wirst",
+          "correct": "Du wirst am Bahnhof umsteigen.",
+          "explanations": {
+            "tr": "umsteigen, um ön ekiyle ayrılabilen fiildir. Ancak burada wirst zaten çekildiği için umsteigen mastar kalır: ön ek kökten ayrılmaz. Du ile başlayan cümlede wirst ikinci öğede, umsteigen sonda olur.",
+            "de": "umsteigen ist mit um trennbar. Hier ist aber wirst konjugiert und umsteigen ein Infinitiv; der Verbzusatz bleibt verbunden. Nach Du steht wirst, am Ende das ganze umsteigen.",
+            "en": "umsteigen is separable with prefix um. Here wirst is conjugated and umsteigen is an infinitive, so keep the prefix attached. Put wirst after Du and the whole verb umsteigen last."
+          },
+          "type": "text",
+          "answers": [
+            "Du wirst am Bahnhof umsteigen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sein-haben-8",
+      "title": {
+        "tr": "Übung 8 – sein ve haben ile gelecek",
+        "de": "Übung 8 – Zukunft mit sein und haben",
+        "en": "Exercise 8 – Future with sein and haben"
+      },
+      "description": {
+        "tr": "Anlama uygun mastarı seç",
+        "de": "Wähle den Infinitiv passend zur Bedeutung",
+        "en": "Choose the infinitive matching the meaning"
+      },
+      "difficulty": {
+        "tr": "A2 sonu",
+        "de": "Ende A2",
+        "en": "End of A2"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Futur I",
+          "sentence": "Ich werde morgen zu Hause ___.",
+          "correct": "sein",
+          "explanations": {
+            "tr": "Bu cümle bir yerde bulunma anlatıyor; bu yüzden sein seçilir. werde gelecek yapısının çekimli fiilidir; sein burada mastar olmalı. haben kullanmak hedef anlamı değiştirir, bin ise yanlış bir ikinci çekimli fiil olur.",
+            "de": "Gemeint ist einen Aufenthalt; dafür steht sein. werde ist schon das finite Verb, also bleibt sein im Infinitiv. haben würde die Bedeutung ändern; bin wäre eine unpassende zweite finite Form.",
+            "en": "This sentence describes being in a place, which requires sein. werde is already finite, so sein must be an infinitive. haben changes the meaning and bin adds an incorrect second finite form."
+          },
+          "options": [
+            "sein",
+            "haben",
+            "bin",
+            "gewesen"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Du wirst nächste Woche mehr Zeit ___.",
+          "correct": "haben",
+          "explanations": {
+            "tr": "Bu cümle zamana sahip olma anlatıyor; bu yüzden haben seçilir. wirst gelecek yapısının çekimli fiilidir; haben burada mastar olmalı. sein kullanmak hedef anlamı değiştirir, habe ise yanlış bir ikinci çekimli fiil olur.",
+            "de": "Gemeint ist Zeitbesitz; dafür steht haben. wirst ist schon das finite Verb, also bleibt haben im Infinitiv. sein würde die Bedeutung ändern; habe wäre eine unpassende zweite finite Form.",
+            "en": "This sentence describes having time, which requires haben. wirst is already finite, so haben must be an infinitive. sein changes the meaning and habe adds an incorrect second finite form."
+          },
+          "options": [
+            "haben",
+            "sein",
+            "habe",
+            "gehabt"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Anna wird am Freitag in Berlin ___.",
+          "correct": "sein",
+          "explanations": {
+            "tr": "Bu cümle Berlin’de bulunma anlatıyor; bu yüzden sein seçilir. wird gelecek yapısının çekimli fiilidir; sein burada mastar olmalı. haben kullanmak hedef anlamı değiştirir, bin ise yanlış bir ikinci çekimli fiil olur.",
+            "de": "Gemeint ist einen Aufenthalt in Berlin; dafür steht sein. wird ist schon das finite Verb, also bleibt sein im Infinitiv. haben würde die Bedeutung ändern; bin wäre eine unpassende zweite finite Form.",
+            "en": "This sentence describes being in Berlin, which requires sein. wird is already finite, so sein must be an infinitive. haben changes the meaning and bin adds an incorrect second finite form."
+          },
+          "options": [
+            "sein",
+            "haben",
+            "bin",
+            "gewesen"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Wir werden im Sommer Urlaub ___.",
+          "correct": "haben",
+          "explanations": {
+            "tr": "Bu cümle izin/tatil imkânına sahip olma anlatıyor; bu yüzden haben seçilir. werden gelecek yapısının çekimli fiilidir; haben burada mastar olmalı. sein kullanmak hedef anlamı değiştirir, habe ise yanlış bir ikinci çekimli fiil olur.",
+            "de": "Gemeint ist Urlaubhaben; dafür steht haben. werden ist schon das finite Verb, also bleibt haben im Infinitiv. sein würde die Bedeutung ändern; habe wäre eine unpassende zweite finite Form.",
+            "en": "This sentence describes having time off, which requires haben. werden is already finite, so haben must be an infinitive. sein changes the meaning and habe adds an incorrect second finite form."
+          },
+          "options": [
+            "haben",
+            "sein",
+            "habe",
+            "gehabt"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Ihr werdet morgen müde ___.",
+          "correct": "sein",
+          "explanations": {
+            "tr": "Bu cümle yorgun olma durumu anlatıyor; bu yüzden sein seçilir. werdet gelecek yapısının çekimli fiilidir; sein burada mastar olmalı. haben kullanmak hedef anlamı değiştirir, bin ise yanlış bir ikinci çekimli fiil olur.",
+            "de": "Gemeint ist den Zustand müde; dafür steht sein. werdet ist schon das finite Verb, also bleibt sein im Infinitiv. haben würde die Bedeutung ändern; bin wäre eine unpassende zweite finite Form.",
+            "en": "This sentence describes being tired, which requires sein. werdet is already finite, so sein must be an infinitive. haben changes the meaning and bin adds an incorrect second finite form."
+          },
+          "options": [
+            "sein",
+            "haben",
+            "bin",
+            "gewesen"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Paul wird bald ein neues Fahrrad ___.",
+          "correct": "haben",
+          "explanations": {
+            "tr": "Bu cümle bisiklete sahip olma anlatıyor; bu yüzden haben seçilir. wird gelecek yapısının çekimli fiilidir; haben burada mastar olmalı. sein kullanmak hedef anlamı değiştirir, habe ise yanlış bir ikinci çekimli fiil olur.",
+            "de": "Gemeint ist den Besitz eines Fahrrads; dafür steht haben. wird ist schon das finite Verb, also bleibt haben im Infinitiv. sein würde die Bedeutung ändern; habe wäre eine unpassende zweite finite Form.",
+            "en": "This sentence describes owning a bike, which requires haben. wird is already finite, so haben must be an infinitive. sein changes the meaning and habe adds an incorrect second finite form."
+          },
+          "options": [
+            "haben",
+            "sein",
+            "habe",
+            "gehabt"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Die Kinder werden später hungrig ___.",
+          "correct": "sein",
+          "explanations": {
+            "tr": "Bu cümle aç olma durumu anlatıyor; bu yüzden sein seçilir. Kinder gelecek yapısının çekimli fiilidir; sein burada mastar olmalı. haben kullanmak hedef anlamı değiştirir, bin ise yanlış bir ikinci çekimli fiil olur.",
+            "de": "Gemeint ist den Zustand hungrig; dafür steht sein. Kinder ist schon das finite Verb, also bleibt sein im Infinitiv. haben würde die Bedeutung ändern; bin wäre eine unpassende zweite finite Form.",
+            "en": "This sentence describes being hungry, which requires sein. Kinder is already finite, so sein must be an infinitive. haben changes the meaning and bin adds an incorrect second finite form."
+          },
+          "options": [
+            "sein",
+            "haben",
+            "bin",
+            "gewesen"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Ich werde am Montag einen Termin ___.",
+          "correct": "haben",
+          "explanations": {
+            "tr": "Bu cümle randevusu olma anlatıyor; bu yüzden haben seçilir. werde gelecek yapısının çekimli fiilidir; haben burada mastar olmalı. sein kullanmak hedef anlamı değiştirir, habe ise yanlış bir ikinci çekimli fiil olur.",
+            "de": "Gemeint ist einen Termin; dafür steht haben. werde ist schon das finite Verb, also bleibt haben im Infinitiv. sein würde die Bedeutung ändern; habe wäre eine unpassende zweite finite Form.",
+            "en": "This sentence describes having an appointment, which requires haben. werde is already finite, so haben must be an infinitive. sein changes the meaning and habe adds an incorrect second finite form."
+          },
+          "options": [
+            "haben",
+            "sein",
+            "habe",
+            "gehabt"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Wir werden um acht Uhr dort ___.",
+          "correct": "sein",
+          "explanations": {
+            "tr": "Bu cümle belirtilen yerde bulunma anlatıyor; bu yüzden sein seçilir. werden gelecek yapısının çekimli fiilidir; sein burada mastar olmalı. haben kullanmak hedef anlamı değiştirir, bin ise yanlış bir ikinci çekimli fiil olur.",
+            "de": "Gemeint ist einen Aufenthalt dort; dafür steht sein. werden ist schon das finite Verb, also bleibt sein im Infinitiv. haben würde die Bedeutung ändern; bin wäre eine unpassende zweite finite Form.",
+            "en": "This sentence describes being there, which requires sein. werden is already finite, so sein must be an infinitive. haben changes the meaning and bin adds an incorrect second finite form."
+          },
+          "options": [
+            "sein",
+            "haben",
+            "bin",
+            "gewesen"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Du wirst morgen keine Schule ___.",
+          "correct": "haben",
+          "explanations": {
+            "tr": "Bu cümle o gün okul/ders olmaması anlatıyor; bu yüzden haben seçilir. wirst gelecek yapısının çekimli fiilidir; haben burada mastar olmalı. sein kullanmak hedef anlamı değiştirir, habe ise yanlış bir ikinci çekimli fiil olur.",
+            "de": "Gemeint ist keinen Schulunterricht an diesem Tag; dafür steht haben. wirst ist schon das finite Verb, also bleibt haben im Infinitiv. sein würde die Bedeutung ändern; habe wäre eine unpassende zweite finite Form.",
+            "en": "This sentence describes not having school that day, which requires haben. wirst is already finite, so haben must be an infinitive. sein changes the meaning and habe adds an incorrect second finite form."
+          },
+          "options": [
+            "haben",
+            "sein",
+            "habe",
+            "gehabt"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "praesens-zukunft-9",
+      "title": {
+        "tr": "Übung 9 – Präsens ile gelecek",
+        "de": "Übung 9 – Präsens mit Zukunftsbedeutung",
+        "en": "Exercise 9 – Present tense expressing the future"
+      },
+      "description": {
+        "tr": "Cümlenin hangi zamanı anlattığını seç; fiil zamanı ile anlamı ayır",
+        "de": "Wähle die zeitliche Bedeutung; unterscheide Verbform und Bedeutung",
+        "en": "Choose the time meaning; distinguish verb form from meaning"
+      },
+      "difficulty": {
+        "tr": "A2 sonu",
+        "de": "Ende A2",
+        "en": "End of A2"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Futur I",
+          "sentence": "Welche zeitliche Bedeutung hat der Satz? Morgen besuche ich meine Oma.",
+          "correct": "Zukunft",
+          "explanations": {
+            "tr": "morgen, yarın demektir; olay gelecekte gerçekleşiyor. Präsens biçimi burada gelecek anlamına engel değildir; zaman ifadesi geleceği açıkça gösteriyor.",
+            "de": "morgen bezeichnet morgen; das Ereignis liegt in der Zukunft. Präsens kann hier Zukunft ausdrücken; die Zeitangabe macht das deutlich.",
+            "en": "morgen means tomorrow, placing the event in the future. The present tense can express the future here; the time phrase makes this clear."
+          },
+          "options": [
+            "Zukunft",
+            "Gegenwart",
+            "Vergangenheit"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Welche zeitliche Bedeutung hat der Satz? Jetzt lerne ich Deutsch.",
+          "correct": "Gegenwart",
+          "explanations": {
+            "tr": "jetzt, şimdi demektir; olay şimdi gerçekleşiyor. Burada zaman ifadesine ve cümlenin tamamına bakılır; Futur I’a dönüştürme istenmiyor.",
+            "de": "jetzt bezeichnet jetzt; das Ereignis liegt in der Gegenwart. Gesucht ist die Bedeutung des ganzen Satzes, keine Umformung ins Futur I.",
+            "en": "jetzt means now, placing the event in the present. Read the time phrase and whole sentence; no conversion to Futur I is requested."
+          },
+          "options": [
+            "Zukunft",
+            "Gegenwart",
+            "Vergangenheit"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Welche zeitliche Bedeutung hat der Satz? Nächste Woche reisen wir nach Wien.",
+          "correct": "Zukunft",
+          "explanations": {
+            "tr": "nächste Woche, gelecek hafta demektir; olay gelecekte gerçekleşiyor. Präsens biçimi burada gelecek anlamına engel değildir; zaman ifadesi geleceği açıkça gösteriyor.",
+            "de": "nächste Woche bezeichnet nächste Woche; das Ereignis liegt in der Zukunft. Präsens kann hier Zukunft ausdrücken; die Zeitangabe macht das deutlich.",
+            "en": "nächste Woche means next week, placing the event in the future. The present tense can express the future here; the time phrase makes this clear."
+          },
+          "options": [
+            "Zukunft",
+            "Gegenwart",
+            "Vergangenheit"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Welche zeitliche Bedeutung hat der Satz? Gestern habe ich Anna getroffen.",
+          "correct": "Vergangenheit",
+          "explanations": {
+            "tr": "gestern, dün demektir; olay geçmişte gerçekleşiyor. Burada zaman ifadesine ve cümlenin tamamına bakılır; Futur I’a dönüştürme istenmiyor.",
+            "de": "gestern bezeichnet gestern; das Ereignis liegt in der Vergangenheit. Gesucht ist die Bedeutung des ganzen Satzes, keine Umformung ins Futur I.",
+            "en": "gestern means yesterday, placing the event in the past. Read the time phrase and whole sentence; no conversion to Futur I is requested."
+          },
+          "options": [
+            "Zukunft",
+            "Gegenwart",
+            "Vergangenheit"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Welche zeitliche Bedeutung hat der Satz? Am kommenden Samstag kocht Paul für uns.",
+          "correct": "Zukunft",
+          "explanations": {
+            "tr": "am kommenden Samstag, önümüzdeki cumartesi demektir; olay gelecekte gerçekleşiyor. Präsens biçimi burada gelecek anlamına engel değildir; zaman ifadesi geleceği açıkça gösteriyor.",
+            "de": "am kommenden Samstag bezeichnet am kommenden Samstag; das Ereignis liegt in der Zukunft. Präsens kann hier Zukunft ausdrücken; die Zeitangabe macht das deutlich.",
+            "en": "am kommenden Samstag means this coming Saturday, placing the event in the future. The present tense can express the future here; the time phrase makes this clear."
+          },
+          "options": [
+            "Zukunft",
+            "Gegenwart",
+            "Vergangenheit"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Welche zeitliche Bedeutung hat der Satz? Im Moment regnet es.",
+          "correct": "Gegenwart",
+          "explanations": {
+            "tr": "im Moment, şu an demektir; olay şimdi gerçekleşiyor. Burada zaman ifadesine ve cümlenin tamamına bakılır; Futur I’a dönüştürme istenmiyor.",
+            "de": "im Moment bezeichnet im Moment; das Ereignis liegt in der Gegenwart. Gesucht ist die Bedeutung des ganzen Satzes, keine Umformung ins Futur I.",
+            "en": "im Moment means at the moment, placing the event in the present. Read the time phrase and whole sentence; no conversion to Futur I is requested."
+          },
+          "options": [
+            "Zukunft",
+            "Gegenwart",
+            "Vergangenheit"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Welche zeitliche Bedeutung hat der Satz? In zwei Tagen beginnt der Kurs.",
+          "correct": "Zukunft",
+          "explanations": {
+            "tr": "in zwei Tagen, iki gün sonra demektir; olay gelecekte gerçekleşiyor. Präsens biçimi burada gelecek anlamına engel değildir; zaman ifadesi geleceği açıkça gösteriyor.",
+            "de": "in zwei Tagen bezeichnet in zwei Tagen; das Ereignis liegt in der Zukunft. Präsens kann hier Zukunft ausdrücken; die Zeitangabe macht das deutlich.",
+            "en": "in zwei Tagen means in two days, placing the event in the future. The present tense can express the future here; the time phrase makes this clear."
+          },
+          "options": [
+            "Zukunft",
+            "Gegenwart",
+            "Vergangenheit"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Welche zeitliche Bedeutung hat der Satz? Letzte Woche waren wir in Berlin.",
+          "correct": "Vergangenheit",
+          "explanations": {
+            "tr": "letzte Woche, geçen hafta demektir; olay geçmişte gerçekleşiyor. Burada zaman ifadesine ve cümlenin tamamına bakılır; Futur I’a dönüştürme istenmiyor.",
+            "de": "letzte Woche bezeichnet letzte Woche; das Ereignis liegt in der Vergangenheit. Gesucht ist die Bedeutung des ganzen Satzes, keine Umformung ins Futur I.",
+            "en": "letzte Woche means last week, placing the event in the past. Read the time phrase and whole sentence; no conversion to Futur I is requested."
+          },
+          "options": [
+            "Zukunft",
+            "Gegenwart",
+            "Vergangenheit"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Welche zeitliche Bedeutung hat der Satz? Heute Abend rufe ich dich an. (Es ist jetzt 10 Uhr morgens.)",
+          "correct": "Zukunft",
+          "explanations": {
+            "tr": "heute Abend, sabah 10’a göre bu akşam demektir; olay gelecekte gerçekleşiyor. Präsens biçimi burada gelecek anlamına engel değildir; zaman ifadesi geleceği açıkça gösteriyor.",
+            "de": "heute Abend bezeichnet heute Abend im Vergleich zu 10 Uhr morgens; das Ereignis liegt in der Zukunft. Präsens kann hier Zukunft ausdrücken; die Zeitangabe macht das deutlich.",
+            "en": "heute Abend means this evening, relative to 10 a.m., placing the event in the future. The present tense can express the future here; the time phrase makes this clear."
+          },
+          "options": [
+            "Zukunft",
+            "Gegenwart",
+            "Vergangenheit"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Welche zeitliche Bedeutung hat der Satz? Nächstes Jahr lernt Anna Spanisch.",
+          "correct": "Zukunft",
+          "explanations": {
+            "tr": "nächstes Jahr, gelecek yıl demektir; olay gelecekte gerçekleşiyor. Präsens biçimi burada gelecek anlamına engel değildir; zaman ifadesi geleceği açıkça gösteriyor.",
+            "de": "nächstes Jahr bezeichnet nächstes Jahr; das Ereignis liegt in der Zukunft. Präsens kann hier Zukunft ausdrücken; die Zeitangabe macht das deutlich.",
+            "en": "nächstes Jahr means next year, placing the event in the future. The present tense can express the future here; the time phrase makes this clear."
+          },
+          "options": [
+            "Zukunft",
+            "Gegenwart",
+            "Vergangenheit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fehlerkorrektur-10",
+      "title": {
+        "tr": "Übung 10 – Hata düzeltme",
+        "de": "Übung 10 – Fehler korrigieren",
+        "en": "Exercise 10 – Correct mistakes"
+      },
+      "description": {
+        "tr": "Yalnızca hatayı düzelt; verilen kelimeleri ve başlangıcı koru",
+        "de": "Korrigiere nur den Fehler; behalte Wörter und Satzanfang",
+        "en": "Correct only the mistake; keep the given words and opening"
+      },
+      "difficulty": {
+        "tr": "A2 sonu",
+        "de": "Ende A2",
+        "en": "End of A2"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Futur I",
+          "sentence": "Korrigiere: Ich wird morgen lernen.",
+          "correct": "Ich werde morgen lernen.",
+          "explanations": {
+            "tr": "Ich tekil birinci kişidir: wird değil werde gerekir. lernen mastarı ve morgen zaman bilgisi doğru.",
+            "de": "Ich ist 1. Person Singular: werde statt wird. lernen und morgen bleiben erhalten.",
+            "en": "Ich is first-person singular: use werde instead of wird. Keep lernen and morgen."
+          },
+          "type": "text",
+          "answers": [
+            "Ich werde morgen lernen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Korrigiere: Du werde am Freitag kommen.",
+          "correct": "Du wirst am Freitag kommen.",
+          "explanations": {
+            "tr": "Du öznesi wirst ister. werde, ich çekimidir; kommen sonda mastar olarak kalır.",
+            "de": "Zu du gehört wirst; werde gehört zu ich. kommen bleibt als Infinitiv am Ende.",
+            "en": "Du takes wirst; werde belongs to ich. Keep kommen as the final infinitive."
+          },
+          "type": "text",
+          "answers": [
+            "Du wirst am Freitag kommen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Korrigiere: Anna wird morgen arbeitet.",
+          "correct": "Anna wird morgen arbeiten.",
+          "explanations": {
+            "tr": "Anna ile wird doğru eşleşir. İkinci fiil çekilmez: arbeitet yerine arbeiten mastarı gerekir.",
+            "de": "Anna wird ist richtig. Das zweite Verb muss arbeiten im Infinitiv heißen, nicht arbeitet.",
+            "en": "Anna wird agrees correctly. The second verb must be infinitive arbeiten, not arbeitet."
+          },
+          "type": "text",
+          "answers": [
+            "Anna wird morgen arbeiten."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Korrigiere: Wir werden morgen gereist.",
+          "correct": "Wir werden morgen reisen.",
+          "explanations": {
+            "tr": "Wir werden doğru; Futur I’da Partizip II gereist yerine reisen mastarı gerekir.",
+            "de": "Wir werden ist richtig; Futur I braucht reisen, nicht das Partizip II gereist.",
+            "en": "Wir werden is correct; Futur I requires infinitive reisen, not past participle gereist."
+          },
+          "type": "text",
+          "answers": [
+            "Wir werden morgen reisen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Korrigiere: Morgen ich werde kochen.",
+          "correct": "Morgen werde ich kochen.",
+          "explanations": {
+            "tr": "Morgen ilk öğeyi doldurur; ikinci öğe werde olmalıdır. Bu yüzden ich, werde arkasına geçer; kochen sonda kalır.",
+            "de": "Morgen besetzt Position 1; danach muss werde kommen, dann ich. kochen bleibt zuletzt.",
+            "en": "Morgen fills position 1, so werde comes next, followed by ich. Keep kochen last."
+          },
+          "type": "text",
+          "answers": [
+            "Morgen werde ich kochen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Korrigiere: Ihr werden heute Abend arbeiten.",
+          "correct": "Ihr werdet heute Abend arbeiten.",
+          "explanations": {
+            "tr": "Ihr çoğul ikinci kişidir ve werdet ister. werden çoğul wir/sie veya kibar Sie ile kullanılır.",
+            "de": "Ihr ist 2. Person Plural und verlangt werdet; werden gehört zu wir/sie oder höflichem Sie.",
+            "en": "Ihr is second-person plural and requires werdet; werden goes with wir/sie or formal Sie."
+          },
+          "type": "text",
+          "answers": [
+            "Ihr werdet heute Abend arbeiten."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Korrigiere: Ich werde morgen stehen auf.",
+          "correct": "Ich werde morgen aufstehen.",
+          "explanations": {
+            "tr": "Çekimli fiil werde olduğu için aufstehen mastarı tek parça kalır; auf ön eki ayrılmaz.",
+            "de": "Weil werde konjugiert ist, bleibt der Infinitiv aufstehen zusammen; auf wird nicht abgetrennt.",
+            "en": "Since werde is conjugated, keep infinitive aufstehen together; do not detach auf."
+          },
+          "type": "text",
+          "answers": [
+            "Ich werde morgen aufstehen."
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Korrigiere: Wirst du kommen morgen?",
+          "correct": "Wirst du morgen kommen?",
+          "explanations": {
+            "tr": "Wirst evet/hayır sorusunun başında doğru yerde. Ancak kommen mastarı sona gider; morgen onun önüne gelir.",
+            "de": "Wirst steht richtig am Anfang der Ja/Nein-Frage; kommen muss ans Ende, hinter morgen.",
+            "en": "Wirst correctly starts the yes/no question, but kommen must go last, after morgen."
+          },
+          "type": "text",
+          "answers": [
+            "Wirst du morgen kommen?"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Korrigiere: Wann du wirst kommen?",
+          "correct": "Wann wirst du kommen?",
+          "explanations": {
+            "tr": "Wann soru kelimesinden hemen sonra wirst gelmeli; özne du onun arkasına, kommen sona yerleşir.",
+            "de": "Nach Wann folgt unmittelbar wirst, dann das Subjekt du und zuletzt kommen.",
+            "en": "Put wirst directly after Wann, followed by subject du and final infinitive kommen."
+          },
+          "type": "text",
+          "answers": [
+            "Wann wirst du kommen?"
+          ]
+        },
+        {
+          "word": "Futur I",
+          "sentence": "Korrigiere: Die Kinder wird im Park spielen.",
+          "correct": "Die Kinder werden im Park spielen.",
+          "explanations": {
+            "tr": "Die Kinder çoğul bir özne olduğu için werden gerekir. wird tekil üçüncü kişidir; spielen mastarı değişmez.",
+            "de": "Die Kinder ist ein plurales Subjekt und verlangt werden statt wird. spielen bleibt unverändert.",
+            "en": "Die Kinder is plural, requiring werden instead of singular wird. Keep infinitive spielen unchanged."
+          },
+          "type": "text",
+          "answers": [
+            "Die Kinder werden im Park spielen."
+          ]
+        }
+      ]
+    }
+  ]
+}

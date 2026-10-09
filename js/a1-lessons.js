@@ -4,7 +4,7 @@
  const dataPromises={};
  function load(level='A1') {
    if (!/^[AB][12]$/.test(level)) return Promise.reject(Error('Geçersiz seviye'));
-   if (!dataPromises[level]) dataPromises[level] = fetch('data/'+level.toLowerCase()+'-grammar.json?v=3').then(r=>{if(!r.ok)throw Error('Dersler yüklenemedi');return r.json();}).catch(e=>{delete dataPromises[level];throw e;});
+   if (!dataPromises[level]) dataPromises[level] = fetch('data/'+level.toLowerCase()+'-grammar.json?v=4').then(r=>{if(!r.ok)throw Error('Dersler yüklenemedi');return r.json();}).catch(e=>{delete dataPromises[level];throw e;});
    return dataPromises[level];
  }
  const tiles = (items,cls='') => `<div class="lesson-diagram-tiles ${cls}">${items.map(([main,sub])=>`<div><strong lang="de">${h(main)}</strong><span>${h(sub)}</span></div>`).join('')}</div>`;

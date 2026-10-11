@@ -1,0 +1,1730 @@
+{
+  "id": "kausalsaetze",
+  "level": "B1",
+  "title": {
+    "tr": "Kausalsätze – weil, denn, da",
+    "de": "Kausalsätze – weil, denn, da",
+    "en": "Causal clauses – weil, denn, da"
+  },
+  "description": {
+    "tr": "10 alıştırma, 100 soru: neden bildirme, bağlaç seçimi, cümle sırası ve farklı zamanlar",
+    "de": "10 Übungen, 100 Aufgaben: Gründe, Konjunktionen, Satzstellung und verschiedene Zeitformen",
+    "en": "10 exercises, 100 questions: reasons, conjunctions, word order and different tenses"
+  },
+  "lesson": {
+    "title": {
+      "tr": "Kausalsätze – nedenleri birbirine bağla",
+      "de": "Kausalsätze – Gründe ausdrücken",
+      "en": "Causal clauses – expressing reasons"
+    },
+    "intro": {
+      "tr": "weil ve da yan cümle başlatır; çekimli fiil sonda olur. denn ile ikinci cümle ana cümle sırasını korur. Önce sonucu ve nedeni ayır, sonra verilen bağlaçla cümleyi kur.",
+      "de": "weil und da leiten Nebensätze mit Verbendstellung ein. Nach denn bleibt die Hauptsatzstellung erhalten. Trenne zuerst Folge und Grund und verwende dann die verlangte Konjunktion.",
+      "en": "weil and da introduce verb-final subordinate clauses. After denn, keep main-clause order. Identify the result and reason first, then use the specified conjunction."
+    },
+    "rules": [
+      {
+        "label": "weil / da",
+        "text": {
+          "tr": "weil es kalt ist · da es kalt ist: çekimli ist sonda",
+          "de": "weil es kalt ist · da es kalt ist: ist steht am Ende",
+          "en": "weil es kalt ist · da es kalt ist: finite ist goes last"
+        }
+      },
+      {
+        "label": "denn",
+        "text": {
+          "tr": "denn es ist kalt: denn sonrası ana cümle sırası",
+          "de": "denn es ist kalt: Hauptsatzstellung nach denn",
+          "en": "denn es ist kalt: main-clause order after denn"
+        }
+      },
+      {
+        "label": "Önce yan cümle",
+        "text": {
+          "tr": "Weil es kalt ist, nehme ich eine Jacke mit. Yan cümleden sonra ana fiil gelir.",
+          "de": "Weil es kalt ist, nehme ich eine Jacke mit. Nach dem Nebensatz folgt das Hauptsatzverb.",
+          "en": "Weil es kalt ist, nehme ich eine Jacke mit. The main-clause verb follows the initial subordinate clause."
+        }
+      }
+    ],
+    "examples": [
+      "Ich nehme eine Jacke mit, weil es kalt ist.",
+      "Ich nehme eine Jacke mit, denn es ist kalt.",
+      "Da es kalt ist, nehme ich eine Jacke mit."
+    ],
+    "tip": {
+      "tr": "Verilen bağlacı ve başlangıcı koru. Yazılı sorularda yalnızca boşluğu veya istenen bütün cümleyi yaz; gerekli virgülleri koy. Enter ile kontrol edebilirsin.",
+      "de": "Behalte Konjunktion und Satzanfang. Schreibe nur die Lücke oder den verlangten ganzen Satz und setze nötige Kommas. Prüfe mit Enter.",
+      "en": "Keep the given conjunction and opening. Write only the gap or requested whole sentence, including necessary commas. Press Enter to check."
+    }
+  },
+  "exercises": [
+    {
+      "id": "weil-denn-1",
+      "title": {
+        "tr": "Übung 1 – weil mi, denn mi?",
+        "de": "Übung 1 – weil oder denn?",
+        "en": "Exercise 1 – weil or denn?"
+      },
+      "description": {
+        "tr": "Yalnızca weil veya denn arasından, mevcut fiil sırasına göre seç",
+        "de": "Wähle nur zwischen weil und denn nach der vorhandenen Verbposition",
+        "en": "Choose only between weil and denn based on the given verb order"
+      },
+      "difficulty": {
+        "tr": "Temel",
+        "de": "Grundlagen",
+        "en": "Foundations"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Kausalsätze",
+          "sentence": "Ich nehme eine Jacke mit, ___ es heute kühl ist. (weil / denn)",
+          "correct": "weil",
+          "explanations": {
+            "tr": "Neden bölümü “es heute kühl ist”. Çekimli ist sonda olduğu için verilen iki seçenekten weil gerekir. denn seçilseydi es ist heute kühl şeklinde ana cümle sırası gerekirdi.",
+            "de": "Der Grund lautet „es heute kühl ist“. Das finite ist steht zuletzt, daher weil von diesen zwei Optionen. Nach denn müsste es es ist heute kühl heißen.",
+            "en": "The reason is “es heute kühl ist”. Finite ist goes last, so choose weil from these two options. With denn, the order would be es ist heute kühl."
+          },
+          "options": [
+            "weil",
+            "denn"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Lea fährt mit der Bahn, ___ ihr Auto steht in der Werkstatt. (weil / denn)",
+          "correct": "denn",
+          "explanations": {
+            "tr": "Neden bölümü “ihr Auto steht in der Werkstatt”. Çekimli steht ikinci öğede, ana cümle sırasındadır; bu yüzden denn seçilir. weil seçilseydi neden bölümü ihr Auto in der Werkstatt steht olmalıydı.",
+            "de": "Der Grund lautet „ihr Auto steht in der Werkstatt“. steht steht in Hauptsatzstellung, daher denn. Nach weil müsste es ihr Auto in der Werkstatt steht heißen.",
+            "en": "The reason is “ihr Auto steht in der Werkstatt”. steht has main-clause position, so choose denn. With weil, the order would be ihr Auto in der Werkstatt steht."
+          },
+          "options": [
+            "weil",
+            "denn"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Wir buchen ein anderes Hotel, ___ das erste Hotel keine freien Zimmer hat. (weil / denn)",
+          "correct": "weil",
+          "explanations": {
+            "tr": "Neden bölümü “das erste Hotel keine freien Zimmer hat”. Çekimli hat sonda olduğu için verilen iki seçenekten weil gerekir. denn seçilseydi das erste Hotel hat keine freien Zimmer şeklinde ana cümle sırası gerekirdi.",
+            "de": "Der Grund lautet „das erste Hotel keine freien Zimmer hat“. Das finite hat steht zuletzt, daher weil von diesen zwei Optionen. Nach denn müsste es das erste Hotel hat keine freien Zimmer heißen.",
+            "en": "The reason is “das erste Hotel keine freien Zimmer hat”. Finite hat goes last, so choose weil from these two options. With denn, the order would be das erste Hotel hat keine freien Zimmer."
+          },
+          "options": [
+            "weil",
+            "denn"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Ben trinkt ein Glas Wasser, ___ er hat Durst. (weil / denn)",
+          "correct": "denn",
+          "explanations": {
+            "tr": "Neden bölümü “er hat Durst”. Çekimli hat ikinci öğede, ana cümle sırasındadır; bu yüzden denn seçilir. weil seçilseydi neden bölümü er Durst hat olmalıydı.",
+            "de": "Der Grund lautet „er hat Durst“. hat steht in Hauptsatzstellung, daher denn. Nach weil müsste es er Durst hat heißen.",
+            "en": "The reason is “er hat Durst”. hat has main-clause position, so choose denn. With weil, the order would be er Durst hat."
+          },
+          "options": [
+            "weil",
+            "denn"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Die Kinder bleiben im Haus, ___ draußen ein Gewitter aufzieht. (weil / denn)",
+          "correct": "weil",
+          "explanations": {
+            "tr": "Neden bölümü “draußen ein Gewitter aufzieht”. Çekimli aufzieht sonda olduğu için verilen iki seçenekten weil gerekir. denn seçilseydi draußen zieht ein Gewitter auf şeklinde ana cümle sırası gerekirdi.",
+            "de": "Der Grund lautet „draußen ein Gewitter aufzieht“. Das finite aufzieht steht zuletzt, daher weil von diesen zwei Optionen. Nach denn müsste es draußen zieht ein Gewitter auf heißen.",
+            "en": "The reason is “draußen ein Gewitter aufzieht”. Finite aufzieht goes last, so choose weil from these two options. With denn, the order would be draußen zieht ein Gewitter auf."
+          },
+          "options": [
+            "weil",
+            "denn"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Nora verschiebt den Termin, ___ sie hat morgen keine Zeit. (weil / denn)",
+          "correct": "denn",
+          "explanations": {
+            "tr": "Neden bölümü “sie hat morgen keine Zeit”. Çekimli hat ikinci öğede, ana cümle sırasındadır; bu yüzden denn seçilir. weil seçilseydi neden bölümü sie morgen keine Zeit hat olmalıydı.",
+            "de": "Der Grund lautet „sie hat morgen keine Zeit“. hat steht in Hauptsatzstellung, daher denn. Nach weil müsste es sie morgen keine Zeit hat heißen.",
+            "en": "The reason is “sie hat morgen keine Zeit”. hat has main-clause position, so choose denn. With weil, the order would be sie morgen keine Zeit hat."
+          },
+          "options": [
+            "weil",
+            "denn"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Ich suche meine Brille, ___ die Buchstaben zu klein sind. (weil / denn)",
+          "correct": "weil",
+          "explanations": {
+            "tr": "Neden bölümü “die Buchstaben zu klein sind”. Çekimli sind sonda olduğu için verilen iki seçenekten weil gerekir. denn seçilseydi die Buchstaben sind zu klein şeklinde ana cümle sırası gerekirdi.",
+            "de": "Der Grund lautet „die Buchstaben zu klein sind“. Das finite sind steht zuletzt, daher weil von diesen zwei Optionen. Nach denn müsste es die Buchstaben sind zu klein heißen.",
+            "en": "The reason is “die Buchstaben zu klein sind”. Finite sind goes last, so choose weil from these two options. With denn, the order would be die Buchstaben sind zu klein."
+          },
+          "options": [
+            "weil",
+            "denn"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Wir öffnen das Fenster, ___ die Luft im Zimmer ist stickig. (weil / denn)",
+          "correct": "denn",
+          "explanations": {
+            "tr": "Neden bölümü “die Luft im Zimmer ist stickig”. Çekimli ist ikinci öğede, ana cümle sırasındadır; bu yüzden denn seçilir. weil seçilseydi neden bölümü die Luft im Zimmer stickig ist olmalıydı.",
+            "de": "Der Grund lautet „die Luft im Zimmer ist stickig“. ist steht in Hauptsatzstellung, daher denn. Nach weil müsste es die Luft im Zimmer stickig ist heißen.",
+            "en": "The reason is “die Luft im Zimmer ist stickig”. ist has main-clause position, so choose denn. With weil, the order would be die Luft im Zimmer stickig ist."
+          },
+          "options": [
+            "weil",
+            "denn"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Tom verkauft sein Fahrrad, ___ er es nicht mehr braucht. (weil / denn)",
+          "correct": "weil",
+          "explanations": {
+            "tr": "Neden bölümü “er es nicht mehr braucht”. Çekimli braucht sonda olduğu için verilen iki seçenekten weil gerekir. denn seçilseydi er braucht es nicht mehr şeklinde ana cümle sırası gerekirdi.",
+            "de": "Der Grund lautet „er es nicht mehr braucht“. Das finite braucht steht zuletzt, daher weil von diesen zwei Optionen. Nach denn müsste es er braucht es nicht mehr heißen.",
+            "en": "The reason is “er es nicht mehr braucht”. Finite braucht goes last, so choose weil from these two options. With denn, the order would be er braucht es nicht mehr."
+          },
+          "options": [
+            "weil",
+            "denn"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Die Praxis bleibt heute geschlossen, ___ die Ärztin ist krank. (weil / denn)",
+          "correct": "denn",
+          "explanations": {
+            "tr": "Neden bölümü “die Ärztin ist krank”. Çekimli ist ikinci öğede, ana cümle sırasındadır; bu yüzden denn seçilir. weil seçilseydi neden bölümü die Ärztin krank ist olmalıydı.",
+            "de": "Der Grund lautet „die Ärztin ist krank“. ist steht in Hauptsatzstellung, daher denn. Nach weil müsste es die Ärztin krank ist heißen.",
+            "en": "The reason is “die Ärztin ist krank”. ist has main-clause position, so choose denn. With weil, the order would be die Ärztin krank ist."
+          },
+          "options": [
+            "weil",
+            "denn"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grund-2",
+      "title": {
+        "tr": "Übung 2 – Neden ilişkisini bul",
+        "de": "Übung 2 – Die Begründung erkennen",
+        "en": "Exercise 2 – Recognize a reason"
+      },
+      "description": {
+        "tr": "Görev özellikle neden bildiren ilişki istiyor",
+        "de": "Gesucht ist ausdrücklich eine Begründung, keine Bedingung oder Einräumung",
+        "en": "The task specifically asks for a reason, not a condition or concession"
+      },
+      "difficulty": {
+        "tr": "Temel",
+        "de": "Grundlagen",
+        "en": "Foundations"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Kausalsätze",
+          "sentence": "Verbinde ausdrücklich mit einem Grund: Mila nimmt den früheren Zug, ___ sie pünktlich beim Termin sein möchte. (weil / obwohl / wenn)",
+          "correct": "weil",
+          "explanations": {
+            "tr": "Bu görevde erken trene binmenin nedeni randevuya zamanında yetişmek. weil nedeni bağlar; obwohl karşıtlık, wenn koşul/zaman ilişkisi kurardı. “sie pünktlich beim Termin sein möchte” bölümünün sonundaki möchte çekimli fiildir; bu sıra weil ile uyumludur.",
+            "de": "Hier ist eine Begründung verlangt: der frühere Zug soll die pünktliche Ankunft ermöglichen. weil nennt den Grund; obwohl wäre eine Einräumung, wenn eine Bedingung/Zeitrelation. Im Grundsatz „sie pünktlich beim Termin sein möchte“ steht möchte am Ende.",
+            "en": "This task requests a reason: the reason for the earlier train is arriving on time. weil supplies it; obwohl would express a concession and wenn a condition/time relation. In “sie pünktlich beim Termin sein möchte”, finite möchte correctly goes last."
+          },
+          "options": [
+            "weil",
+            "obwohl",
+            "wenn"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Verbinde ausdrücklich mit einem Grund: Wir wählen dieses Café, ___ es eine ruhige Terrasse hat. (weil / obwohl / wenn)",
+          "correct": "weil",
+          "explanations": {
+            "tr": "Bu görevde kafe seçiminin nedeni sakin terası. weil nedeni bağlar; obwohl karşıtlık, wenn koşul/zaman ilişkisi kurardı. “es eine ruhige Terrasse hat” bölümünün sonundaki hat çekimli fiildir; bu sıra weil ile uyumludur.",
+            "de": "Hier ist eine Begründung verlangt: die ruhige Terrasse begründet die Wahl des Cafés. weil nennt den Grund; obwohl wäre eine Einräumung, wenn eine Bedingung/Zeitrelation. Im Grundsatz „es eine ruhige Terrasse hat“ steht hat am Ende.",
+            "en": "This task requests a reason: the café is chosen for its quiet terrace. weil supplies it; obwohl would express a concession and wenn a condition/time relation. In “es eine ruhige Terrasse hat”, finite hat correctly goes last."
+          },
+          "options": [
+            "weil",
+            "obwohl",
+            "wenn"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Verbinde ausdrücklich mit einem Grund: Jonas lädt sein Handy auf, ___ der Akku fast leer ist. (weil / obwohl / wenn)",
+          "correct": "weil",
+          "explanations": {
+            "tr": "Bu görevde şarj etmenin nedeni pilin bitmek üzere olması. weil nedeni bağlar; obwohl karşıtlık, wenn koşul/zaman ilişkisi kurardı. “der Akku fast leer ist” bölümünün sonundaki ist çekimli fiildir; bu sıra weil ile uyumludur.",
+            "de": "Hier ist eine Begründung verlangt: der fast leere Akku begründet das Aufladen. weil nennt den Grund; obwohl wäre eine Einräumung, wenn eine Bedingung/Zeitrelation. Im Grundsatz „der Akku fast leer ist“ steht ist am Ende.",
+            "en": "This task requests a reason: charging is prompted by the nearly empty battery. weil supplies it; obwohl would express a concession and wenn a condition/time relation. In “der Akku fast leer ist”, finite ist correctly goes last."
+          },
+          "options": [
+            "weil",
+            "obwohl",
+            "wenn"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Verbinde ausdrücklich mit einem Grund: Ich schreibe den Namen auf, ___ ich ihn nicht vergessen will. (weil / obwohl / wenn)",
+          "correct": "weil",
+          "explanations": {
+            "tr": "Bu görevde not almanın nedeni ismi unutmamak. weil nedeni bağlar; obwohl karşıtlık, wenn koşul/zaman ilişkisi kurardı. “ich ihn nicht vergessen will” bölümünün sonundaki will çekimli fiildir; bu sıra weil ile uyumludur.",
+            "de": "Hier ist eine Begründung verlangt: das Aufschreiben soll das Vergessen verhindern. weil nennt den Grund; obwohl wäre eine Einräumung, wenn eine Bedingung/Zeitrelation. Im Grundsatz „ich ihn nicht vergessen will“ steht will am Ende.",
+            "en": "This task requests a reason: writing the name down avoids forgetting it. weil supplies it; obwohl would express a concession and wenn a condition/time relation. In “ich ihn nicht vergessen will”, finite will correctly goes last."
+          },
+          "options": [
+            "weil",
+            "obwohl",
+            "wenn"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Verbinde ausdrücklich mit einem Grund: Wir bestellen nur eine kleine Portion, ___ wir wenig Hunger haben. (weil / obwohl / wenn)",
+          "correct": "weil",
+          "explanations": {
+            "tr": "Bu görevde küçük porsiyonun nedeni az acıkmış olmamız. weil nedeni bağlar; obwohl karşıtlık, wenn koşul/zaman ilişkisi kurardı. “wir wenig Hunger haben” bölümünün sonundaki haben çekimli fiildir; bu sıra weil ile uyumludur.",
+            "de": "Hier ist eine Begründung verlangt: der geringe Hunger begründet die kleine Portion. weil nennt den Grund; obwohl wäre eine Einräumung, wenn eine Bedingung/Zeitrelation. Im Grundsatz „wir wenig Hunger haben“ steht haben am Ende.",
+            "en": "This task requests a reason: a small portion is chosen because we are not very hungry. weil supplies it; obwohl would express a concession and wenn a condition/time relation. In “wir wenig Hunger haben”, finite haben correctly goes last."
+          },
+          "options": [
+            "weil",
+            "obwohl",
+            "wenn"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Verbinde ausdrücklich mit einem Grund: Elif lernt jeden Abend, ___ sie die Prüfung bestehen möchte. (weil / obwohl / wenn)",
+          "correct": "weil",
+          "explanations": {
+            "tr": "Bu görevde çalışmanın nedeni sınavı geçme isteği. weil nedeni bağlar; obwohl karşıtlık, wenn koşul/zaman ilişkisi kurardı. “sie die Prüfung bestehen möchte” bölümünün sonundaki möchte çekimli fiildir; bu sıra weil ile uyumludur.",
+            "de": "Hier ist eine Begründung verlangt: der Wunsch zu bestehen begründet das Lernen. weil nennt den Grund; obwohl wäre eine Einräumung, wenn eine Bedingung/Zeitrelation. Im Grundsatz „sie die Prüfung bestehen möchte“ steht möchte am Ende.",
+            "en": "This task requests a reason: studying is motivated by wanting to pass the exam. weil supplies it; obwohl would express a concession and wenn a condition/time relation. In “sie die Prüfung bestehen möchte”, finite möchte correctly goes last."
+          },
+          "options": [
+            "weil",
+            "obwohl",
+            "wenn"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Verbinde ausdrücklich mit einem Grund: Das Team verschiebt die Besprechung, ___ zwei Kollegen fehlen. (weil / obwohl / wenn)",
+          "correct": "weil",
+          "explanations": {
+            "tr": "Bu görevde ertelemenin nedeni iki kişinin eksik olması. weil nedeni bağlar; obwohl karşıtlık, wenn koşul/zaman ilişkisi kurardı. “zwei Kollegen fehlen” bölümünün sonundaki fehlen çekimli fiildir; bu sıra weil ile uyumludur.",
+            "de": "Hier ist eine Begründung verlangt: die fehlenden Kollegen begründen die Verschiebung. weil nennt den Grund; obwohl wäre eine Einräumung, wenn eine Bedingung/Zeitrelation. Im Grundsatz „zwei Kollegen fehlen“ steht fehlen am Ende.",
+            "en": "This task requests a reason: the meeting is postponed because two colleagues are absent. weil supplies it; obwohl would express a concession and wenn a condition/time relation. In “zwei Kollegen fehlen”, finite fehlen correctly goes last."
+          },
+          "options": [
+            "weil",
+            "obwohl",
+            "wenn"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Verbinde ausdrücklich mit einem Grund: Ich ziehe feste Schuhe an, ___ der Weg steinig ist. (weil / obwohl / wenn)",
+          "correct": "weil",
+          "explanations": {
+            "tr": "Bu görevde ayakkabı seçiminin nedeni yolun taşlı olması. weil nedeni bağlar; obwohl karşıtlık, wenn koşul/zaman ilişkisi kurardı. “der Weg steinig ist” bölümünün sonundaki ist çekimli fiildir; bu sıra weil ile uyumludur.",
+            "de": "Hier ist eine Begründung verlangt: der steinige Weg begründet die festen Schuhe. weil nennt den Grund; obwohl wäre eine Einräumung, wenn eine Bedingung/Zeitrelation. Im Grundsatz „der Weg steinig ist“ steht ist am Ende.",
+            "en": "This task requests a reason: sturdy shoes are chosen for the rocky path. weil supplies it; obwohl would express a concession and wenn a condition/time relation. In “der Weg steinig ist”, finite ist correctly goes last."
+          },
+          "options": [
+            "weil",
+            "obwohl",
+            "wenn"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Verbinde ausdrücklich mit einem Grund: Lena geht zur Apotheke, ___ sie ein Medikament braucht. (weil / obwohl / wenn)",
+          "correct": "weil",
+          "explanations": {
+            "tr": "Bu görevde eczaneye gitmenin nedeni ilaca ihtiyaç duyması. weil nedeni bağlar; obwohl karşıtlık, wenn koşul/zaman ilişkisi kurardı. “sie ein Medikament braucht” bölümünün sonundaki braucht çekimli fiildir; bu sıra weil ile uyumludur.",
+            "de": "Hier ist eine Begründung verlangt: der Medikamentenbedarf begründet den Apothekenbesuch. weil nennt den Grund; obwohl wäre eine Einräumung, wenn eine Bedingung/Zeitrelation. Im Grundsatz „sie ein Medikament braucht“ steht braucht am Ende.",
+            "en": "This task requests a reason: the pharmacy visit is prompted by needing medicine. weil supplies it; obwohl would express a concession and wenn a condition/time relation. In “sie ein Medikament braucht”, finite braucht correctly goes last."
+          },
+          "options": [
+            "weil",
+            "obwohl",
+            "wenn"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Verbinde ausdrücklich mit einem Grund: Wir nehmen einen Schirm mit, ___ es regnen wird. (weil / obwohl / wenn)",
+          "correct": "weil",
+          "explanations": {
+            "tr": "Bu görevde şemsiye almanın nedeni beklenen yağmur. weil nedeni bağlar; obwohl karşıtlık, wenn koşul/zaman ilişkisi kurardı. “es regnen wird” bölümünün sonundaki wird çekimli fiildir; bu sıra weil ile uyumludur.",
+            "de": "Hier ist eine Begründung verlangt: der erwartete Regen begründet die Mitnahme des Schirms. weil nennt den Grund; obwohl wäre eine Einräumung, wenn eine Bedingung/Zeitrelation. Im Grundsatz „es regnen wird“ steht wird am Ende.",
+            "en": "This task requests a reason: an umbrella is taken because rain is expected. weil supplies it; obwohl would express a concession and wenn a condition/time relation. In “es regnen wird”, finite wird correctly goes last."
+          },
+          "options": [
+            "weil",
+            "obwohl",
+            "wenn"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weil-schreiben-3",
+      "title": {
+        "tr": "Übung 3 – weil ile yan cümle",
+        "de": "Übung 3 – Nebensätze mit weil schreiben",
+        "en": "Exercise 3 – Write weil clauses"
+      },
+      "description": {
+        "tr": "Yalnızca boşluğu yaz; verilen özne/başlangıç ve diğer kelimelerin sırası korunsun",
+        "de": "Schreibe nur die Lücke; behalte den Anfang und die Reihenfolge der übrigen Wörter",
+        "en": "Write only the gap; keep the given opening and order of the other words"
+      },
+      "difficulty": {
+        "tr": "Temel",
+        "de": "Grundlagen",
+        "en": "Foundations"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Kausalsätze",
+          "sentence": "Ich nehme eine Jacke mit, weil ___. Ausgangssatz: Es ist heute kühl. Behalte den Anfang; verschiebe nur das finite Verb ans Ende.",
+          "correct": "es heute kühl ist",
+          "explanations": {
+            "tr": "Neden “Es ist heute kühl” cümlesidir. weil sonrasında çekimli ist sona taşınır: es heute kühl ist. Diğer bilgiler aynı sırada kalır; ist yan cümleyi kapatır.",
+            "de": "Der Grund ist „Es ist heute kühl“. Nach weil steht das finite Verb am Ende: es heute kühl ist. Die übrigen Angaben bleiben in der gegebenen Folge; ist schließt den Nebensatz.",
+            "en": "The reason is “Es ist heute kühl”. After weil, put the finite verb at the end: es heute kühl ist. Keep the other words in the given order; final ist closes the clause."
+          },
+          "type": "text",
+          "answers": [
+            "es heute kühl ist",
+            "es heute kuehl ist"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Lea fährt mit der Bahn, weil ___. Ausgangssatz: Ihr Auto steht in der Werkstatt. Behalte den Anfang; verschiebe nur das finite Verb ans Ende.",
+          "correct": "ihr Auto in der Werkstatt steht",
+          "explanations": {
+            "tr": "Neden “Ihr Auto steht in der Werkstatt” cümlesidir. weil sonrasında çekimli steht sona taşınır: ihr Auto in der Werkstatt steht. Diğer bilgiler aynı sırada kalır; steht yan cümleyi kapatır.",
+            "de": "Der Grund ist „Ihr Auto steht in der Werkstatt“. Nach weil steht das finite Verb am Ende: ihr Auto in der Werkstatt steht. Die übrigen Angaben bleiben in der gegebenen Folge; steht schließt den Nebensatz.",
+            "en": "The reason is “Ihr Auto steht in der Werkstatt”. After weil, put the finite verb at the end: ihr Auto in der Werkstatt steht. Keep the other words in the given order; final steht closes the clause."
+          },
+          "type": "text",
+          "answers": [
+            "ihr Auto in der Werkstatt steht"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Wir buchen ein anderes Hotel, weil ___. Ausgangssatz: Das erste Hotel hat keine freien Zimmer. Behalte den Anfang; verschiebe nur das finite Verb ans Ende.",
+          "correct": "das erste Hotel keine freien Zimmer hat",
+          "explanations": {
+            "tr": "Neden “Das erste Hotel hat keine freien Zimmer” cümlesidir. weil sonrasında çekimli hat sona taşınır: das erste Hotel keine freien Zimmer hat. Diğer bilgiler aynı sırada kalır; hat yan cümleyi kapatır.",
+            "de": "Der Grund ist „Das erste Hotel hat keine freien Zimmer“. Nach weil steht das finite Verb am Ende: das erste Hotel keine freien Zimmer hat. Die übrigen Angaben bleiben in der gegebenen Folge; hat schließt den Nebensatz.",
+            "en": "The reason is “Das erste Hotel hat keine freien Zimmer”. After weil, put the finite verb at the end: das erste Hotel keine freien Zimmer hat. Keep the other words in the given order; final hat closes the clause."
+          },
+          "type": "text",
+          "answers": [
+            "das erste Hotel keine freien Zimmer hat"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Ben trinkt ein Glas Wasser, weil ___. Ausgangssatz: Er hat Durst. Behalte den Anfang; verschiebe nur das finite Verb ans Ende.",
+          "correct": "er Durst hat",
+          "explanations": {
+            "tr": "Neden “Er hat Durst” cümlesidir. weil sonrasında çekimli hat sona taşınır: er Durst hat. Diğer bilgiler aynı sırada kalır; hat yan cümleyi kapatır.",
+            "de": "Der Grund ist „Er hat Durst“. Nach weil steht das finite Verb am Ende: er Durst hat. Die übrigen Angaben bleiben in der gegebenen Folge; hat schließt den Nebensatz.",
+            "en": "The reason is “Er hat Durst”. After weil, put the finite verb at the end: er Durst hat. Keep the other words in the given order; final hat closes the clause."
+          },
+          "type": "text",
+          "answers": [
+            "er Durst hat"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Die Kinder bleiben im Haus, weil ___. Ausgangssatz: Draußen zieht ein Gewitter auf. Behalte den Anfang; verschiebe nur das finite Verb ans Ende.",
+          "correct": "draußen ein Gewitter aufzieht",
+          "explanations": {
+            "tr": "Neden “Draußen zieht ein Gewitter auf” cümlesidir. weil sonrasında çekimli zieht sona taşınır: draußen ein Gewitter aufzieht. auf ön eki çekimli kökle birleşip aufzieht olur; ayrı bırakılmaz.",
+            "de": "Der Grund ist „Draußen zieht ein Gewitter auf“. Nach weil steht das finite Verb am Ende: draußen ein Gewitter aufzieht. Der Zusatz auf wird mit zieht zu aufzieht verbunden.",
+            "en": "The reason is “Draußen zieht ein Gewitter auf”. After weil, put the finite verb at the end: draußen ein Gewitter aufzieht. Rejoin separable prefix auf with zieht to make aufzieht."
+          },
+          "type": "text",
+          "answers": [
+            "draußen ein Gewitter aufzieht",
+            "draussen ein Gewitter aufzieht"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Nora verschiebt den Termin, weil ___. Ausgangssatz: Sie hat morgen keine Zeit. Behalte den Anfang; verschiebe nur das finite Verb ans Ende.",
+          "correct": "sie morgen keine Zeit hat",
+          "explanations": {
+            "tr": "Neden “Sie hat morgen keine Zeit” cümlesidir. weil sonrasında çekimli hat sona taşınır: sie morgen keine Zeit hat. Diğer bilgiler aynı sırada kalır; hat yan cümleyi kapatır.",
+            "de": "Der Grund ist „Sie hat morgen keine Zeit“. Nach weil steht das finite Verb am Ende: sie morgen keine Zeit hat. Die übrigen Angaben bleiben in der gegebenen Folge; hat schließt den Nebensatz.",
+            "en": "The reason is “Sie hat morgen keine Zeit”. After weil, put the finite verb at the end: sie morgen keine Zeit hat. Keep the other words in the given order; final hat closes the clause."
+          },
+          "type": "text",
+          "answers": [
+            "sie morgen keine Zeit hat"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Ich suche meine Brille, weil ___. Ausgangssatz: Die Buchstaben sind zu klein. Behalte den Anfang; verschiebe nur das finite Verb ans Ende.",
+          "correct": "die Buchstaben zu klein sind",
+          "explanations": {
+            "tr": "Neden “Die Buchstaben sind zu klein” cümlesidir. weil sonrasında çekimli sind sona taşınır: die Buchstaben zu klein sind. Diğer bilgiler aynı sırada kalır; sind yan cümleyi kapatır.",
+            "de": "Der Grund ist „Die Buchstaben sind zu klein“. Nach weil steht das finite Verb am Ende: die Buchstaben zu klein sind. Die übrigen Angaben bleiben in der gegebenen Folge; sind schließt den Nebensatz.",
+            "en": "The reason is “Die Buchstaben sind zu klein”. After weil, put the finite verb at the end: die Buchstaben zu klein sind. Keep the other words in the given order; final sind closes the clause."
+          },
+          "type": "text",
+          "answers": [
+            "die Buchstaben zu klein sind"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Wir öffnen das Fenster, weil ___. Ausgangssatz: Die Luft im Zimmer ist stickig. Behalte den Anfang; verschiebe nur das finite Verb ans Ende.",
+          "correct": "die Luft im Zimmer stickig ist",
+          "explanations": {
+            "tr": "Neden “Die Luft im Zimmer ist stickig” cümlesidir. weil sonrasında çekimli ist sona taşınır: die Luft im Zimmer stickig ist. Diğer bilgiler aynı sırada kalır; ist yan cümleyi kapatır.",
+            "de": "Der Grund ist „Die Luft im Zimmer ist stickig“. Nach weil steht das finite Verb am Ende: die Luft im Zimmer stickig ist. Die übrigen Angaben bleiben in der gegebenen Folge; ist schließt den Nebensatz.",
+            "en": "The reason is “Die Luft im Zimmer ist stickig”. After weil, put the finite verb at the end: die Luft im Zimmer stickig ist. Keep the other words in the given order; final ist closes the clause."
+          },
+          "type": "text",
+          "answers": [
+            "die Luft im Zimmer stickig ist"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Tom verkauft sein Fahrrad, weil ___. Ausgangssatz: Er braucht es nicht mehr. Behalte den Anfang; verschiebe nur das finite Verb ans Ende.",
+          "correct": "er es nicht mehr braucht",
+          "explanations": {
+            "tr": "Neden “Er braucht es nicht mehr” cümlesidir. weil sonrasında çekimli braucht sona taşınır: er es nicht mehr braucht. Diğer bilgiler aynı sırada kalır; braucht yan cümleyi kapatır.",
+            "de": "Der Grund ist „Er braucht es nicht mehr“. Nach weil steht das finite Verb am Ende: er es nicht mehr braucht. Die übrigen Angaben bleiben in der gegebenen Folge; braucht schließt den Nebensatz.",
+            "en": "The reason is “Er braucht es nicht mehr”. After weil, put the finite verb at the end: er es nicht mehr braucht. Keep the other words in the given order; final braucht closes the clause."
+          },
+          "type": "text",
+          "answers": [
+            "er es nicht mehr braucht"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Die Praxis bleibt heute geschlossen, weil ___. Ausgangssatz: Die Ärztin ist krank. Behalte den Anfang; verschiebe nur das finite Verb ans Ende.",
+          "correct": "die Ärztin krank ist",
+          "explanations": {
+            "tr": "Neden “Die Ärztin ist krank” cümlesidir. weil sonrasında çekimli ist sona taşınır: die Ärztin krank ist. Diğer bilgiler aynı sırada kalır; ist yan cümleyi kapatır.",
+            "de": "Der Grund ist „Die Ärztin ist krank“. Nach weil steht das finite Verb am Ende: die Ärztin krank ist. Die übrigen Angaben bleiben in der gegebenen Folge; ist schließt den Nebensatz.",
+            "en": "The reason is “Die Ärztin ist krank”. After weil, put the finite verb at the end: die Ärztin krank ist. Keep the other words in the given order; final ist closes the clause."
+          },
+          "type": "text",
+          "answers": [
+            "die Ärztin krank ist",
+            "die Aerztin krank ist"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "denn-schreiben-4",
+      "title": {
+        "tr": "Übung 4 – denn ile iki ana cümle",
+        "de": "Übung 4 – Hauptsätze mit denn",
+        "en": "Exercise 4 – Main clauses with denn"
+      },
+      "description": {
+        "tr": "İki cümleyi denn ile birleştir; başlangıçları ve kelimeleri koru",
+        "de": "Verbinde mit denn; behalte Satzanfänge und Wörter",
+        "en": "Join with denn; keep both openings and the given words"
+      },
+      "difficulty": {
+        "tr": "B1 pekiştirme",
+        "de": "B1-Vertiefung",
+        "en": "B1 practice"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Kausalsätze",
+          "sentence": "Verbinde mit denn, ohne die Wortfolge zu ändern: Ich nehme eine Jacke mit. Es ist heute kühl.",
+          "correct": "Ich nehme eine Jacke mit, denn es ist heute kühl.",
+          "explanations": {
+            "tr": "“Es ist heute kühl” neden bildiren ikinci ana cümledir. denn önüne virgül gelir, fakat ist sona taşınmaz; mevcut ana cümle sırası korunur. İlk cümledeki Ich nehme eine Jacke mit sonucu, ikinci cümle onun nedenini anlatır.",
+            "de": "„Es ist heute kühl“ liefert den Grund als zweiter Hauptsatz. Vor denn steht ein Komma; ist bleibt in Hauptsatzstellung statt ans Ende zu wandern. Die erste Aussage „Ich nehme eine Jacke mit“ wird dadurch begründet.",
+            "en": "“Es ist heute kühl” supplies the reason as a second main clause. Use a comma before denn and keep ist in main-clause position. The first statement “Ich nehme eine Jacke mit” is the result being explained."
+          },
+          "type": "text",
+          "answers": [
+            "Ich nehme eine Jacke mit, denn es ist heute kühl.",
+            "Ich nehme eine Jacke mit, denn es ist heute kuehl."
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Verbinde mit denn, ohne die Wortfolge zu ändern: Lea fährt mit der Bahn. Ihr Auto steht in der Werkstatt.",
+          "correct": "Lea fährt mit der Bahn, denn ihr Auto steht in der Werkstatt.",
+          "explanations": {
+            "tr": "“Ihr Auto steht in der Werkstatt” neden bildiren ikinci ana cümledir. denn önüne virgül gelir, fakat steht sona taşınmaz; mevcut ana cümle sırası korunur. İlk cümledeki Lea fährt mit der Bahn sonucu, ikinci cümle onun nedenini anlatır.",
+            "de": "„Ihr Auto steht in der Werkstatt“ liefert den Grund als zweiter Hauptsatz. Vor denn steht ein Komma; steht bleibt in Hauptsatzstellung statt ans Ende zu wandern. Die erste Aussage „Lea fährt mit der Bahn“ wird dadurch begründet.",
+            "en": "“Ihr Auto steht in der Werkstatt” supplies the reason as a second main clause. Use a comma before denn and keep steht in main-clause position. The first statement “Lea fährt mit der Bahn” is the result being explained."
+          },
+          "type": "text",
+          "answers": [
+            "Lea fährt mit der Bahn, denn ihr Auto steht in der Werkstatt.",
+            "Lea faehrt mit der Bahn, denn ihr Auto steht in der Werkstatt."
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Verbinde mit denn, ohne die Wortfolge zu ändern: Wir buchen ein anderes Hotel. Das erste Hotel hat keine freien Zimmer.",
+          "correct": "Wir buchen ein anderes Hotel, denn das erste Hotel hat keine freien Zimmer.",
+          "explanations": {
+            "tr": "“Das erste Hotel hat keine freien Zimmer” neden bildiren ikinci ana cümledir. denn önüne virgül gelir, fakat hat sona taşınmaz; mevcut ana cümle sırası korunur. İlk cümledeki Wir buchen ein anderes Hotel sonucu, ikinci cümle onun nedenini anlatır.",
+            "de": "„Das erste Hotel hat keine freien Zimmer“ liefert den Grund als zweiter Hauptsatz. Vor denn steht ein Komma; hat bleibt in Hauptsatzstellung statt ans Ende zu wandern. Die erste Aussage „Wir buchen ein anderes Hotel“ wird dadurch begründet.",
+            "en": "“Das erste Hotel hat keine freien Zimmer” supplies the reason as a second main clause. Use a comma before denn and keep hat in main-clause position. The first statement “Wir buchen ein anderes Hotel” is the result being explained."
+          },
+          "type": "text",
+          "answers": [
+            "Wir buchen ein anderes Hotel, denn das erste Hotel hat keine freien Zimmer."
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Verbinde mit denn, ohne die Wortfolge zu ändern: Ben trinkt ein Glas Wasser. Er hat Durst.",
+          "correct": "Ben trinkt ein Glas Wasser, denn er hat Durst.",
+          "explanations": {
+            "tr": "“Er hat Durst” neden bildiren ikinci ana cümledir. denn önüne virgül gelir, fakat hat sona taşınmaz; mevcut ana cümle sırası korunur. İlk cümledeki Ben trinkt ein Glas Wasser sonucu, ikinci cümle onun nedenini anlatır.",
+            "de": "„Er hat Durst“ liefert den Grund als zweiter Hauptsatz. Vor denn steht ein Komma; hat bleibt in Hauptsatzstellung statt ans Ende zu wandern. Die erste Aussage „Ben trinkt ein Glas Wasser“ wird dadurch begründet.",
+            "en": "“Er hat Durst” supplies the reason as a second main clause. Use a comma before denn and keep hat in main-clause position. The first statement “Ben trinkt ein Glas Wasser” is the result being explained."
+          },
+          "type": "text",
+          "answers": [
+            "Ben trinkt ein Glas Wasser, denn er hat Durst."
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Verbinde mit denn, ohne die Wortfolge zu ändern: Die Kinder bleiben im Haus. Draußen zieht ein Gewitter auf.",
+          "correct": "Die Kinder bleiben im Haus, denn draußen zieht ein Gewitter auf.",
+          "explanations": {
+            "tr": "“Draußen zieht ein Gewitter auf” neden bildiren ikinci ana cümledir. denn önüne virgül gelir, fakat zieht sona taşınmaz; mevcut ana cümle sırası korunur. İlk cümledeki Die Kinder bleiben im Haus sonucu, ikinci cümle onun nedenini anlatır.",
+            "de": "„Draußen zieht ein Gewitter auf“ liefert den Grund als zweiter Hauptsatz. Vor denn steht ein Komma; zieht bleibt in Hauptsatzstellung statt ans Ende zu wandern. Die erste Aussage „Die Kinder bleiben im Haus“ wird dadurch begründet.",
+            "en": "“Draußen zieht ein Gewitter auf” supplies the reason as a second main clause. Use a comma before denn and keep zieht in main-clause position. The first statement “Die Kinder bleiben im Haus” is the result being explained."
+          },
+          "type": "text",
+          "answers": [
+            "Die Kinder bleiben im Haus, denn draußen zieht ein Gewitter auf.",
+            "Die Kinder bleiben im Haus, denn draussen zieht ein Gewitter auf."
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Verbinde mit denn, ohne die Wortfolge zu ändern: Nora verschiebt den Termin. Sie hat morgen keine Zeit.",
+          "correct": "Nora verschiebt den Termin, denn sie hat morgen keine Zeit.",
+          "explanations": {
+            "tr": "“Sie hat morgen keine Zeit” neden bildiren ikinci ana cümledir. denn önüne virgül gelir, fakat hat sona taşınmaz; mevcut ana cümle sırası korunur. İlk cümledeki Nora verschiebt den Termin sonucu, ikinci cümle onun nedenini anlatır.",
+            "de": "„Sie hat morgen keine Zeit“ liefert den Grund als zweiter Hauptsatz. Vor denn steht ein Komma; hat bleibt in Hauptsatzstellung statt ans Ende zu wandern. Die erste Aussage „Nora verschiebt den Termin“ wird dadurch begründet.",
+            "en": "“Sie hat morgen keine Zeit” supplies the reason as a second main clause. Use a comma before denn and keep hat in main-clause position. The first statement “Nora verschiebt den Termin” is the result being explained."
+          },
+          "type": "text",
+          "answers": [
+            "Nora verschiebt den Termin, denn sie hat morgen keine Zeit."
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Verbinde mit denn, ohne die Wortfolge zu ändern: Ich suche meine Brille. Die Buchstaben sind zu klein.",
+          "correct": "Ich suche meine Brille, denn die Buchstaben sind zu klein.",
+          "explanations": {
+            "tr": "“Die Buchstaben sind zu klein” neden bildiren ikinci ana cümledir. denn önüne virgül gelir, fakat sind sona taşınmaz; mevcut ana cümle sırası korunur. İlk cümledeki Ich suche meine Brille sonucu, ikinci cümle onun nedenini anlatır.",
+            "de": "„Die Buchstaben sind zu klein“ liefert den Grund als zweiter Hauptsatz. Vor denn steht ein Komma; sind bleibt in Hauptsatzstellung statt ans Ende zu wandern. Die erste Aussage „Ich suche meine Brille“ wird dadurch begründet.",
+            "en": "“Die Buchstaben sind zu klein” supplies the reason as a second main clause. Use a comma before denn and keep sind in main-clause position. The first statement “Ich suche meine Brille” is the result being explained."
+          },
+          "type": "text",
+          "answers": [
+            "Ich suche meine Brille, denn die Buchstaben sind zu klein."
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Verbinde mit denn, ohne die Wortfolge zu ändern: Wir öffnen das Fenster. Die Luft im Zimmer ist stickig.",
+          "correct": "Wir öffnen das Fenster, denn die Luft im Zimmer ist stickig.",
+          "explanations": {
+            "tr": "“Die Luft im Zimmer ist stickig” neden bildiren ikinci ana cümledir. denn önüne virgül gelir, fakat ist sona taşınmaz; mevcut ana cümle sırası korunur. İlk cümledeki Wir öffnen das Fenster sonucu, ikinci cümle onun nedenini anlatır.",
+            "de": "„Die Luft im Zimmer ist stickig“ liefert den Grund als zweiter Hauptsatz. Vor denn steht ein Komma; ist bleibt in Hauptsatzstellung statt ans Ende zu wandern. Die erste Aussage „Wir öffnen das Fenster“ wird dadurch begründet.",
+            "en": "“Die Luft im Zimmer ist stickig” supplies the reason as a second main clause. Use a comma before denn and keep ist in main-clause position. The first statement “Wir öffnen das Fenster” is the result being explained."
+          },
+          "type": "text",
+          "answers": [
+            "Wir öffnen das Fenster, denn die Luft im Zimmer ist stickig.",
+            "Wir oeffnen das Fenster, denn die Luft im Zimmer ist stickig."
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Verbinde mit denn, ohne die Wortfolge zu ändern: Tom verkauft sein Fahrrad. Er braucht es nicht mehr.",
+          "correct": "Tom verkauft sein Fahrrad, denn er braucht es nicht mehr.",
+          "explanations": {
+            "tr": "“Er braucht es nicht mehr” neden bildiren ikinci ana cümledir. denn önüne virgül gelir, fakat braucht sona taşınmaz; mevcut ana cümle sırası korunur. İlk cümledeki Tom verkauft sein Fahrrad sonucu, ikinci cümle onun nedenini anlatır.",
+            "de": "„Er braucht es nicht mehr“ liefert den Grund als zweiter Hauptsatz. Vor denn steht ein Komma; braucht bleibt in Hauptsatzstellung statt ans Ende zu wandern. Die erste Aussage „Tom verkauft sein Fahrrad“ wird dadurch begründet.",
+            "en": "“Er braucht es nicht mehr” supplies the reason as a second main clause. Use a comma before denn and keep braucht in main-clause position. The first statement “Tom verkauft sein Fahrrad” is the result being explained."
+          },
+          "type": "text",
+          "answers": [
+            "Tom verkauft sein Fahrrad, denn er braucht es nicht mehr."
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Verbinde mit denn, ohne die Wortfolge zu ändern: Die Praxis bleibt heute geschlossen. Die Ärztin ist krank.",
+          "correct": "Die Praxis bleibt heute geschlossen, denn die Ärztin ist krank.",
+          "explanations": {
+            "tr": "“Die Ärztin ist krank” neden bildiren ikinci ana cümledir. denn önüne virgül gelir, fakat ist sona taşınmaz; mevcut ana cümle sırası korunur. İlk cümledeki Die Praxis bleibt heute geschlossen sonucu, ikinci cümle onun nedenini anlatır.",
+            "de": "„Die Ärztin ist krank“ liefert den Grund als zweiter Hauptsatz. Vor denn steht ein Komma; ist bleibt in Hauptsatzstellung statt ans Ende zu wandern. Die erste Aussage „Die Praxis bleibt heute geschlossen“ wird dadurch begründet.",
+            "en": "“Die Ärztin ist krank” supplies the reason as a second main clause. Use a comma before denn and keep ist in main-clause position. The first statement “Die Praxis bleibt heute geschlossen” is the result being explained."
+          },
+          "type": "text",
+          "answers": [
+            "Die Praxis bleibt heute geschlossen, denn die Ärztin ist krank.",
+            "Die Praxis bleibt heute geschlossen, denn die Aerztin ist krank."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "da-vorne-5",
+      "title": {
+        "tr": "Übung 5 – da ile nedeni başa al",
+        "de": "Übung 5 – Den Grund mit da voranstellen",
+        "en": "Exercise 5 – Put a da clause first"
+      },
+      "description": {
+        "tr": "Yalnızca boşluğu yaz; verilen başlangıcı ve diğer kelimeleri koru",
+        "de": "Schreibe nur die Lücke; behalte den Anfang und die übrigen Wörter",
+        "en": "Write only the gap; keep the given opening and other words"
+      },
+      "difficulty": {
+        "tr": "B1 pekiştirme",
+        "de": "B1-Vertiefung",
+        "en": "B1 practice"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Kausalsätze",
+          "sentence": "Da ___, nehme ich eine Jacke mit. Ausgangssatz für den Grund: Es ist heute kühl. Verschiebe nur das finite Verb ans Ende.",
+          "correct": "es heute kühl ist",
+          "explanations": {
+            "tr": "Görev bağlacı da olarak veriyor; nedeni anlatan bölüm es heute kühl ist olur ve çekimli ist sonda kalır. Bu yan cümlenin tamamı ana cümlenin ilk öğesidir; virgülden hemen sonra nehme gelir. Aynı neden başka bir bağlamda weil ile de anlatılabilir.",
+            "de": "Die Aufgabe gibt da vor. Der Grund lautet es heute kühl ist, mit finitem ist am Ende. Der ganze Nebensatz besetzt Position 1; nach dem Komma folgt direkt nehme. Mit weil wäre dieselbe Begründung in anderem Kontext ebenfalls möglich.",
+            "en": "The task specifies da. Build the reason as es heute kühl ist, ending in finite ist. This entire clause fills position 1, so main-clause nehme directly follows the comma. The same reason could also be expressed with weil in another context."
+          },
+          "type": "text",
+          "answers": [
+            "es heute kühl ist",
+            "es heute kuehl ist"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Da ___, fährt Lea mit der Bahn. Ausgangssatz für den Grund: Ihr Auto steht in der Werkstatt. Verschiebe nur das finite Verb ans Ende.",
+          "correct": "ihr Auto in der Werkstatt steht",
+          "explanations": {
+            "tr": "Görev bağlacı da olarak veriyor; nedeni anlatan bölüm ihr Auto in der Werkstatt steht olur ve çekimli steht sonda kalır. Bu yan cümlenin tamamı ana cümlenin ilk öğesidir; virgülden hemen sonra fährt gelir. Aynı neden başka bir bağlamda weil ile de anlatılabilir.",
+            "de": "Die Aufgabe gibt da vor. Der Grund lautet ihr Auto in der Werkstatt steht, mit finitem steht am Ende. Der ganze Nebensatz besetzt Position 1; nach dem Komma folgt direkt fährt. Mit weil wäre dieselbe Begründung in anderem Kontext ebenfalls möglich.",
+            "en": "The task specifies da. Build the reason as ihr Auto in der Werkstatt steht, ending in finite steht. This entire clause fills position 1, so main-clause fährt directly follows the comma. The same reason could also be expressed with weil in another context."
+          },
+          "type": "text",
+          "answers": [
+            "ihr Auto in der Werkstatt steht"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Da ___, buchen wir ein anderes Hotel. Ausgangssatz für den Grund: Das erste Hotel hat keine freien Zimmer. Verschiebe nur das finite Verb ans Ende.",
+          "correct": "das erste Hotel keine freien Zimmer hat",
+          "explanations": {
+            "tr": "Görev bağlacı da olarak veriyor; nedeni anlatan bölüm das erste Hotel keine freien Zimmer hat olur ve çekimli hat sonda kalır. Bu yan cümlenin tamamı ana cümlenin ilk öğesidir; virgülden hemen sonra buchen gelir. Aynı neden başka bir bağlamda weil ile de anlatılabilir.",
+            "de": "Die Aufgabe gibt da vor. Der Grund lautet das erste Hotel keine freien Zimmer hat, mit finitem hat am Ende. Der ganze Nebensatz besetzt Position 1; nach dem Komma folgt direkt buchen. Mit weil wäre dieselbe Begründung in anderem Kontext ebenfalls möglich.",
+            "en": "The task specifies da. Build the reason as das erste Hotel keine freien Zimmer hat, ending in finite hat. This entire clause fills position 1, so main-clause buchen directly follows the comma. The same reason could also be expressed with weil in another context."
+          },
+          "type": "text",
+          "answers": [
+            "das erste Hotel keine freien Zimmer hat"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Da ___, trinkt Ben ein Glas Wasser. Ausgangssatz für den Grund: Er hat Durst. Verschiebe nur das finite Verb ans Ende.",
+          "correct": "er Durst hat",
+          "explanations": {
+            "tr": "Görev bağlacı da olarak veriyor; nedeni anlatan bölüm er Durst hat olur ve çekimli hat sonda kalır. Bu yan cümlenin tamamı ana cümlenin ilk öğesidir; virgülden hemen sonra trinkt gelir. Aynı neden başka bir bağlamda weil ile de anlatılabilir.",
+            "de": "Die Aufgabe gibt da vor. Der Grund lautet er Durst hat, mit finitem hat am Ende. Der ganze Nebensatz besetzt Position 1; nach dem Komma folgt direkt trinkt. Mit weil wäre dieselbe Begründung in anderem Kontext ebenfalls möglich.",
+            "en": "The task specifies da. Build the reason as er Durst hat, ending in finite hat. This entire clause fills position 1, so main-clause trinkt directly follows the comma. The same reason could also be expressed with weil in another context."
+          },
+          "type": "text",
+          "answers": [
+            "er Durst hat"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Da ___, bleiben die Kinder im Haus. Ausgangssatz für den Grund: Draußen zieht ein Gewitter auf. Verschiebe nur das finite Verb ans Ende.",
+          "correct": "draußen ein Gewitter aufzieht",
+          "explanations": {
+            "tr": "Görev bağlacı da olarak veriyor; nedeni anlatan bölüm draußen ein Gewitter aufzieht olur ve çekimli aufzieht sonda kalır. Bu yan cümlenin tamamı ana cümlenin ilk öğesidir; virgülden hemen sonra bleiben gelir. Aynı neden başka bir bağlamda weil ile de anlatılabilir.",
+            "de": "Die Aufgabe gibt da vor. Der Grund lautet draußen ein Gewitter aufzieht, mit finitem aufzieht am Ende. Der ganze Nebensatz besetzt Position 1; nach dem Komma folgt direkt bleiben. Mit weil wäre dieselbe Begründung in anderem Kontext ebenfalls möglich.",
+            "en": "The task specifies da. Build the reason as draußen ein Gewitter aufzieht, ending in finite aufzieht. This entire clause fills position 1, so main-clause bleiben directly follows the comma. The same reason could also be expressed with weil in another context."
+          },
+          "type": "text",
+          "answers": [
+            "draußen ein Gewitter aufzieht",
+            "draussen ein Gewitter aufzieht"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Da ___, verschiebt Nora den Termin. Ausgangssatz für den Grund: Sie hat morgen keine Zeit. Verschiebe nur das finite Verb ans Ende.",
+          "correct": "sie morgen keine Zeit hat",
+          "explanations": {
+            "tr": "Görev bağlacı da olarak veriyor; nedeni anlatan bölüm sie morgen keine Zeit hat olur ve çekimli hat sonda kalır. Bu yan cümlenin tamamı ana cümlenin ilk öğesidir; virgülden hemen sonra verschiebt gelir. Aynı neden başka bir bağlamda weil ile de anlatılabilir.",
+            "de": "Die Aufgabe gibt da vor. Der Grund lautet sie morgen keine Zeit hat, mit finitem hat am Ende. Der ganze Nebensatz besetzt Position 1; nach dem Komma folgt direkt verschiebt. Mit weil wäre dieselbe Begründung in anderem Kontext ebenfalls möglich.",
+            "en": "The task specifies da. Build the reason as sie morgen keine Zeit hat, ending in finite hat. This entire clause fills position 1, so main-clause verschiebt directly follows the comma. The same reason could also be expressed with weil in another context."
+          },
+          "type": "text",
+          "answers": [
+            "sie morgen keine Zeit hat"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Da ___, suche ich meine Brille. Ausgangssatz für den Grund: Die Buchstaben sind zu klein. Verschiebe nur das finite Verb ans Ende.",
+          "correct": "die Buchstaben zu klein sind",
+          "explanations": {
+            "tr": "Görev bağlacı da olarak veriyor; nedeni anlatan bölüm die Buchstaben zu klein sind olur ve çekimli sind sonda kalır. Bu yan cümlenin tamamı ana cümlenin ilk öğesidir; virgülden hemen sonra suche gelir. Aynı neden başka bir bağlamda weil ile de anlatılabilir.",
+            "de": "Die Aufgabe gibt da vor. Der Grund lautet die Buchstaben zu klein sind, mit finitem sind am Ende. Der ganze Nebensatz besetzt Position 1; nach dem Komma folgt direkt suche. Mit weil wäre dieselbe Begründung in anderem Kontext ebenfalls möglich.",
+            "en": "The task specifies da. Build the reason as die Buchstaben zu klein sind, ending in finite sind. This entire clause fills position 1, so main-clause suche directly follows the comma. The same reason could also be expressed with weil in another context."
+          },
+          "type": "text",
+          "answers": [
+            "die Buchstaben zu klein sind"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Da ___, öffnen wir das Fenster. Ausgangssatz für den Grund: Die Luft im Zimmer ist stickig. Verschiebe nur das finite Verb ans Ende.",
+          "correct": "die Luft im Zimmer stickig ist",
+          "explanations": {
+            "tr": "Görev bağlacı da olarak veriyor; nedeni anlatan bölüm die Luft im Zimmer stickig ist olur ve çekimli ist sonda kalır. Bu yan cümlenin tamamı ana cümlenin ilk öğesidir; virgülden hemen sonra öffnen gelir. Aynı neden başka bir bağlamda weil ile de anlatılabilir.",
+            "de": "Die Aufgabe gibt da vor. Der Grund lautet die Luft im Zimmer stickig ist, mit finitem ist am Ende. Der ganze Nebensatz besetzt Position 1; nach dem Komma folgt direkt öffnen. Mit weil wäre dieselbe Begründung in anderem Kontext ebenfalls möglich.",
+            "en": "The task specifies da. Build the reason as die Luft im Zimmer stickig ist, ending in finite ist. This entire clause fills position 1, so main-clause öffnen directly follows the comma. The same reason could also be expressed with weil in another context."
+          },
+          "type": "text",
+          "answers": [
+            "die Luft im Zimmer stickig ist"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Da ___, verkauft Tom sein Fahrrad. Ausgangssatz für den Grund: Er braucht es nicht mehr. Verschiebe nur das finite Verb ans Ende.",
+          "correct": "er es nicht mehr braucht",
+          "explanations": {
+            "tr": "Görev bağlacı da olarak veriyor; nedeni anlatan bölüm er es nicht mehr braucht olur ve çekimli braucht sonda kalır. Bu yan cümlenin tamamı ana cümlenin ilk öğesidir; virgülden hemen sonra verkauft gelir. Aynı neden başka bir bağlamda weil ile de anlatılabilir.",
+            "de": "Die Aufgabe gibt da vor. Der Grund lautet er es nicht mehr braucht, mit finitem braucht am Ende. Der ganze Nebensatz besetzt Position 1; nach dem Komma folgt direkt verkauft. Mit weil wäre dieselbe Begründung in anderem Kontext ebenfalls möglich.",
+            "en": "The task specifies da. Build the reason as er es nicht mehr braucht, ending in finite braucht. This entire clause fills position 1, so main-clause verkauft directly follows the comma. The same reason could also be expressed with weil in another context."
+          },
+          "type": "text",
+          "answers": [
+            "er es nicht mehr braucht"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Da ___, bleibt die Praxis heute geschlossen. Ausgangssatz für den Grund: Die Ärztin ist krank. Verschiebe nur das finite Verb ans Ende.",
+          "correct": "die Ärztin krank ist",
+          "explanations": {
+            "tr": "Görev bağlacı da olarak veriyor; nedeni anlatan bölüm die Ärztin krank ist olur ve çekimli ist sonda kalır. Bu yan cümlenin tamamı ana cümlenin ilk öğesidir; virgülden hemen sonra bleibt gelir. Aynı neden başka bir bağlamda weil ile de anlatılabilir.",
+            "de": "Die Aufgabe gibt da vor. Der Grund lautet die Ärztin krank ist, mit finitem ist am Ende. Der ganze Nebensatz besetzt Position 1; nach dem Komma folgt direkt bleibt. Mit weil wäre dieselbe Begründung in anderem Kontext ebenfalls möglich.",
+            "en": "The task specifies da. Build the reason as die Ärztin krank ist, ending in finite ist. This entire clause fills position 1, so main-clause bleibt directly follows the comma. The same reason could also be expressed with weil in another context."
+          },
+          "type": "text",
+          "answers": [
+            "die Ärztin krank ist",
+            "die Aerztin krank ist"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modal-6",
+      "title": {
+        "tr": "Übung 6 – Modal fiilleri sona yerleştir",
+        "de": "Übung 6 – Modalverben im Nebensatz",
+        "en": "Exercise 6 – Modal verbs in causal clauses"
+      },
+      "description": {
+        "tr": "Verilen kelimelerle doğru yan cümleyi seç",
+        "de": "Wähle den richtigen Nebensatz mit den gegebenen Wörtern",
+        "en": "Choose the correct subordinate clause using the given words"
+      },
+      "difficulty": {
+        "tr": "B1 pekiştirme",
+        "de": "B1-Vertiefung",
+        "en": "B1 practice"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Kausalsätze",
+          "sentence": "Ich verlasse das Büro früher, weil ___.",
+          "correct": "ich meinen Sohn abholen muss",
+          "explanations": {
+            "tr": "Ich verlasse das Büro früher cümlesinin nedeni bu yan cümledir. Çekimli modal fiil muss, ich öznesine uyar ve weil sonrasında en sona gider. Asıl fiil abholen mastardır; sıra abholen + muss olur. Modal fiili ana cümledeki gibi öne koyma.",
+            "de": "Der Grund zu „Ich verlasse das Büro früher“ hat das Subjekt ich und das finite Modalverb muss. Nach weil steht muss zuletzt, hinter dem Infinitiv abholen: abholen + muss.",
+            "en": "The reason for “Ich verlasse das Büro früher” has subject ich and finite modal muss. After weil, put muss last, following the main-verb infinitive abholen: abholen + muss."
+          },
+          "options": [
+            "ich meinen Sohn abholen muss",
+            "ich muss meinen Sohn abholen",
+            "muss ich meinen Sohn abholen"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Wir treffen uns erst morgen, weil ___.",
+          "correct": "Lea heute nicht kommen kann",
+          "explanations": {
+            "tr": "Wir treffen uns erst morgen cümlesinin nedeni bu yan cümledir. Çekimli modal fiil kann, Lea öznesine uyar ve weil sonrasında en sona gider. Asıl fiil kommen mastardır; sıra kommen + kann olur. Modal fiili ana cümledeki gibi öne koyma.",
+            "de": "Der Grund zu „Wir treffen uns erst morgen“ hat das Subjekt Lea und das finite Modalverb kann. Nach weil steht kann zuletzt, hinter dem Infinitiv kommen: kommen + kann.",
+            "en": "The reason for “Wir treffen uns erst morgen” has subject Lea and finite modal kann. After weil, put kann last, following the main-verb infinitive kommen: kommen + kann."
+          },
+          "options": [
+            "Lea heute nicht kommen kann",
+            "Lea kann heute nicht kommen",
+            "kann Lea heute nicht kommen"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Ben spart jeden Monat Geld, da ___.",
+          "correct": "er ein Auto kaufen möchte",
+          "explanations": {
+            "tr": "Ben spart jeden Monat Geld cümlesinin nedeni bu yan cümledir. Çekimli modal fiil möchte, er öznesine uyar ve da sonrasında en sona gider. Asıl fiil kaufen mastardır; sıra kaufen + möchte olur. Modal fiili ana cümledeki gibi öne koyma.",
+            "de": "Der Grund zu „Ben spart jeden Monat Geld“ hat das Subjekt er und das finite Modalverb möchte. Nach da steht möchte zuletzt, hinter dem Infinitiv kaufen: kaufen + möchte.",
+            "en": "The reason for “Ben spart jeden Monat Geld” has subject er and finite modal möchte. After da, put möchte last, following the main-verb infinitive kaufen: kaufen + möchte."
+          },
+          "options": [
+            "er ein Auto kaufen möchte",
+            "er möchte ein Auto kaufen",
+            "möchte er ein Auto kaufen"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Ich nehme den Bus, weil ___.",
+          "correct": "ich heute nicht fahren darf",
+          "explanations": {
+            "tr": "Ich nehme den Bus cümlesinin nedeni bu yan cümledir. Çekimli modal fiil darf, ich öznesine uyar ve weil sonrasında en sona gider. Asıl fiil fahren mastardır; sıra fahren + darf olur. Modal fiili ana cümledeki gibi öne koyma.",
+            "de": "Der Grund zu „Ich nehme den Bus“ hat das Subjekt ich und das finite Modalverb darf. Nach weil steht darf zuletzt, hinter dem Infinitiv fahren: fahren + darf.",
+            "en": "The reason for “Ich nehme den Bus” has subject ich and finite modal darf. After weil, put darf last, following the main-verb infinitive fahren: fahren + darf."
+          },
+          "options": [
+            "ich heute nicht fahren darf",
+            "ich darf heute nicht fahren",
+            "darf ich heute nicht fahren"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Nora besucht einen Sprachkurs, weil ___.",
+          "correct": "sie besser Deutsch sprechen will",
+          "explanations": {
+            "tr": "Nora besucht einen Sprachkurs cümlesinin nedeni bu yan cümledir. Çekimli modal fiil will, sie öznesine uyar ve weil sonrasında en sona gider. Asıl fiil sprechen mastardır; sıra sprechen + will olur. Modal fiili ana cümledeki gibi öne koyma.",
+            "de": "Der Grund zu „Nora besucht einen Sprachkurs“ hat das Subjekt sie und das finite Modalverb will. Nach weil steht will zuletzt, hinter dem Infinitiv sprechen: sprechen + will.",
+            "en": "The reason for “Nora besucht einen Sprachkurs” has subject sie and finite modal will. After weil, put will last, following the main-verb infinitive sprechen: sprechen + will."
+          },
+          "options": [
+            "sie besser Deutsch sprechen will",
+            "sie will besser Deutsch sprechen",
+            "will sie besser Deutsch sprechen"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Paul bleibt zu Hause, da ___.",
+          "correct": "er sich ausruhen soll",
+          "explanations": {
+            "tr": "Paul bleibt zu Hause cümlesinin nedeni bu yan cümledir. Çekimli modal fiil soll, er öznesine uyar ve da sonrasında en sona gider. Asıl fiil ausruhen mastardır; sıra ausruhen + soll olur. Modal fiili ana cümledeki gibi öne koyma.",
+            "de": "Der Grund zu „Paul bleibt zu Hause“ hat das Subjekt er und das finite Modalverb soll. Nach da steht soll zuletzt, hinter dem Infinitiv ausruhen: ausruhen + soll.",
+            "en": "The reason for “Paul bleibt zu Hause” has subject er and finite modal soll. After da, put soll last, following the main-verb infinitive ausruhen: ausruhen + soll."
+          },
+          "options": [
+            "er sich ausruhen soll",
+            "er soll sich ausruhen",
+            "soll er sich ausruhen"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Wir wählen einen anderen Termin, weil ___.",
+          "correct": "wir am Freitag nicht teilnehmen können",
+          "explanations": {
+            "tr": "Wir wählen einen anderen Termin cümlesinin nedeni bu yan cümledir. Çekimli modal fiil können, wir öznesine uyar ve weil sonrasında en sona gider. Asıl fiil teilnehmen mastardır; sıra teilnehmen + können olur. Modal fiili ana cümledeki gibi öne koyma.",
+            "de": "Der Grund zu „Wir wählen einen anderen Termin“ hat das Subjekt wir und das finite Modalverb können. Nach weil steht können zuletzt, hinter dem Infinitiv teilnehmen: teilnehmen + können.",
+            "en": "The reason for “Wir wählen einen anderen Termin” has subject wir and finite modal können. After weil, put können last, following the main-verb infinitive teilnehmen: teilnehmen + können."
+          },
+          "options": [
+            "wir am Freitag nicht teilnehmen können",
+            "wir können am Freitag nicht teilnehmen",
+            "können wir am Freitag nicht teilnehmen"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Die Kinder gehen ins Bett, da ___.",
+          "correct": "sie morgen früh aufstehen müssen",
+          "explanations": {
+            "tr": "Die Kinder gehen ins Bett cümlesinin nedeni bu yan cümledir. Çekimli modal fiil müssen, sie öznesine uyar ve da sonrasında en sona gider. Asıl fiil aufstehen mastardır; sıra aufstehen + müssen olur. Modal fiili ana cümledeki gibi öne koyma.",
+            "de": "Der Grund zu „Die Kinder gehen ins Bett“ hat das Subjekt sie und das finite Modalverb müssen. Nach da steht müssen zuletzt, hinter dem Infinitiv aufstehen: aufstehen + müssen.",
+            "en": "The reason for “Die Kinder gehen ins Bett” has subject sie and finite modal müssen. After da, put müssen last, following the main-verb infinitive aufstehen: aufstehen + müssen."
+          },
+          "options": [
+            "sie morgen früh aufstehen müssen",
+            "sie müssen morgen früh aufstehen",
+            "müssen sie morgen früh aufstehen"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Ihr braucht einen Ausweis, weil ___.",
+          "correct": "ihr das Gebäude betreten wollt",
+          "explanations": {
+            "tr": "Ihr braucht einen Ausweis cümlesinin nedeni bu yan cümledir. Çekimli modal fiil wollt, ihr öznesine uyar ve weil sonrasında en sona gider. Asıl fiil betreten mastardır; sıra betreten + wollt olur. Modal fiili ana cümledeki gibi öne koyma.",
+            "de": "Der Grund zu „Ihr braucht einen Ausweis“ hat das Subjekt ihr und das finite Modalverb wollt. Nach weil steht wollt zuletzt, hinter dem Infinitiv betreten: betreten + wollt.",
+            "en": "The reason for “Ihr braucht einen Ausweis” has subject ihr and finite modal wollt. After weil, put wollt last, following the main-verb infinitive betreten: betreten + wollt."
+          },
+          "options": [
+            "ihr das Gebäude betreten wollt",
+            "ihr wollt das Gebäude betreten",
+            "wollt ihr das Gebäude betreten"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Wir fragen die Nachbarin, weil ___.",
+          "correct": "sie uns helfen kann",
+          "explanations": {
+            "tr": "Wir fragen die Nachbarin cümlesinin nedeni bu yan cümledir. Çekimli modal fiil kann, sie öznesine uyar ve weil sonrasında en sona gider. Asıl fiil helfen mastardır; sıra helfen + kann olur. Modal fiili ana cümledeki gibi öne koyma.",
+            "de": "Der Grund zu „Wir fragen die Nachbarin“ hat das Subjekt sie und das finite Modalverb kann. Nach weil steht kann zuletzt, hinter dem Infinitiv helfen: helfen + kann.",
+            "en": "The reason for “Wir fragen die Nachbarin” has subject sie and finite modal kann. After weil, put kann last, following the main-verb infinitive helfen: helfen + kann."
+          },
+          "options": [
+            "sie uns helfen kann",
+            "sie kann uns helfen",
+            "kann sie uns helfen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "perfekt-7",
+      "title": {
+        "tr": "Übung 7 – Perfekt ile neden bildir",
+        "de": "Übung 7 – Gründe im Perfekt",
+        "en": "Exercise 7 – Reasons in the perfect tense"
+      },
+      "description": {
+        "tr": "Partizip II ve yardımcı fiilin sırasını seç",
+        "de": "Wähle die Reihenfolge von Partizip II und Hilfsverb",
+        "en": "Choose the order of past participle and auxiliary"
+      },
+      "difficulty": {
+        "tr": "B1 pekiştirme",
+        "de": "B1-Vertiefung",
+        "en": "B1 practice"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Kausalsätze",
+          "sentence": "Ich finde den Eingang nicht, weil ___.",
+          "correct": "ich die Adresse verloren habe",
+          "explanations": {
+            "tr": "Ich finde den Eingang nicht ifadesinin nedeni tamamlanmış bir olaydır. verloren Partizip II, habe ise ich öznesiyle çekilmiş yardımcı fiildir. weil yan cümlesinde yardımcı fiil sonda olur: verloren + habe; die Adresse bilgisi bunların önünde kalır.",
+            "de": "Der Grund zu „Ich finde den Eingang nicht“ ist ein abgeschlossenes Ereignis. verloren ist Partizip II, habe das finite Hilfsverb zu ich. Nach weil lautet das Ende verloren + habe; die Adresse steht davor.",
+            "en": "The reason for “Ich finde den Eingang nicht” is a completed event. verloren is the past participle and habe the finite auxiliary for ich. After weil, finish with verloren + habe, keeping die Adresse before them."
+          },
+          "options": [
+            "ich die Adresse verloren habe",
+            "ich habe die Adresse verloren",
+            "ich die Adresse habe verloren"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Lea ist erleichtert, weil ___.",
+          "correct": "sie die Prüfung bestanden hat",
+          "explanations": {
+            "tr": "Lea ist erleichtert ifadesinin nedeni tamamlanmış bir olaydır. bestanden Partizip II, hat ise sie öznesiyle çekilmiş yardımcı fiildir. weil yan cümlesinde yardımcı fiil sonda olur: bestanden + hat; die Prüfung bilgisi bunların önünde kalır.",
+            "de": "Der Grund zu „Lea ist erleichtert“ ist ein abgeschlossenes Ereignis. bestanden ist Partizip II, hat das finite Hilfsverb zu sie. Nach weil lautet das Ende bestanden + hat; die Prüfung steht davor.",
+            "en": "The reason for “Lea ist erleichtert” is a completed event. bestanden is the past participle and hat the finite auxiliary for sie. After weil, finish with bestanden + hat, keeping die Prüfung before them."
+          },
+          "options": [
+            "sie die Prüfung bestanden hat",
+            "sie hat die Prüfung bestanden",
+            "sie die Prüfung hat bestanden"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Wir können hineingehen, da ___.",
+          "correct": "der Hausmeister die Tür geöffnet hat",
+          "explanations": {
+            "tr": "Wir können hineingehen ifadesinin nedeni tamamlanmış bir olaydır. geöffnet Partizip II, hat ise der Hausmeister öznesiyle çekilmiş yardımcı fiildir. da yan cümlesinde yardımcı fiil sonda olur: geöffnet + hat; die Tür bilgisi bunların önünde kalır.",
+            "de": "Der Grund zu „Wir können hineingehen“ ist ein abgeschlossenes Ereignis. geöffnet ist Partizip II, hat das finite Hilfsverb zu der Hausmeister. Nach da lautet das Ende geöffnet + hat; die Tür steht davor.",
+            "en": "The reason for “Wir können hineingehen” is a completed event. geöffnet is the past participle and hat the finite auxiliary for der Hausmeister. After da, finish with geöffnet + hat, keeping die Tür before them."
+          },
+          "options": [
+            "der Hausmeister die Tür geöffnet hat",
+            "der Hausmeister hat die Tür geöffnet",
+            "der Hausmeister die Tür hat geöffnet"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Ben kommt später, weil ___.",
+          "correct": "er den Bus verpasst hat",
+          "explanations": {
+            "tr": "Ben kommt später ifadesinin nedeni tamamlanmış bir olaydır. verpasst Partizip II, hat ise er öznesiyle çekilmiş yardımcı fiildir. weil yan cümlesinde yardımcı fiil sonda olur: verpasst + hat; den Bus bilgisi bunların önünde kalır.",
+            "de": "Der Grund zu „Ben kommt später“ ist ein abgeschlossenes Ereignis. verpasst ist Partizip II, hat das finite Hilfsverb zu er. Nach weil lautet das Ende verpasst + hat; den Bus steht davor.",
+            "en": "The reason for “Ben kommt später” is a completed event. verpasst is the past participle and hat the finite auxiliary for er. After weil, finish with verpasst + hat, keeping den Bus before them."
+          },
+          "options": [
+            "er den Bus verpasst hat",
+            "er hat den Bus verpasst",
+            "er den Bus hat verpasst"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Die Wohnung ist leer, da ___.",
+          "correct": "meine Eltern schon abgereist sind",
+          "explanations": {
+            "tr": "Die Wohnung ist leer ifadesinin nedeni tamamlanmış bir olaydır. abgereist Partizip II, sind ise meine Eltern öznesiyle çekilmiş yardımcı fiildir. da yan cümlesinde yardımcı fiil sonda olur: abgereist + sind; schon bilgisi bunların önünde kalır.",
+            "de": "Der Grund zu „Die Wohnung ist leer“ ist ein abgeschlossenes Ereignis. abgereist ist Partizip II, sind das finite Hilfsverb zu meine Eltern. Nach da lautet das Ende abgereist + sind; schon steht davor.",
+            "en": "The reason for “Die Wohnung ist leer” is a completed event. abgereist is the past participle and sind the finite auxiliary for meine Eltern. After da, finish with abgereist + sind, keeping schon before them."
+          },
+          "options": [
+            "meine Eltern schon abgereist sind",
+            "meine Eltern sind schon abgereist",
+            "meine Eltern schon sind abgereist"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Ich muss neu anfangen, weil ___.",
+          "correct": "ich die Datei nicht gespeichert habe",
+          "explanations": {
+            "tr": "Ich muss neu anfangen ifadesinin nedeni tamamlanmış bir olaydır. gespeichert Partizip II, habe ise ich öznesiyle çekilmiş yardımcı fiildir. weil yan cümlesinde yardımcı fiil sonda olur: gespeichert + habe; die Datei nicht bilgisi bunların önünde kalır.",
+            "de": "Der Grund zu „Ich muss neu anfangen“ ist ein abgeschlossenes Ereignis. gespeichert ist Partizip II, habe das finite Hilfsverb zu ich. Nach weil lautet das Ende gespeichert + habe; die Datei nicht steht davor.",
+            "en": "The reason for “Ich muss neu anfangen” is a completed event. gespeichert is the past participle and habe the finite auxiliary for ich. After weil, finish with gespeichert + habe, keeping die Datei nicht before them."
+          },
+          "options": [
+            "ich die Datei nicht gespeichert habe",
+            "ich habe die Datei nicht gespeichert",
+            "ich die Datei nicht habe gespeichert"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Nora kennt die Antwort, weil ___.",
+          "correct": "sie den Text gelesen hat",
+          "explanations": {
+            "tr": "Nora kennt die Antwort ifadesinin nedeni tamamlanmış bir olaydır. gelesen Partizip II, hat ise sie öznesiyle çekilmiş yardımcı fiildir. weil yan cümlesinde yardımcı fiil sonda olur: gelesen + hat; den Text bilgisi bunların önünde kalır.",
+            "de": "Der Grund zu „Nora kennt die Antwort“ ist ein abgeschlossenes Ereignis. gelesen ist Partizip II, hat das finite Hilfsverb zu sie. Nach weil lautet das Ende gelesen + hat; den Text steht davor.",
+            "en": "The reason for “Nora kennt die Antwort” is a completed event. gelesen is the past participle and hat the finite auxiliary for sie. After weil, finish with gelesen + hat, keeping den Text before them."
+          },
+          "options": [
+            "sie den Text gelesen hat",
+            "sie hat den Text gelesen",
+            "sie den Text hat gelesen"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Wir nehmen ein Taxi, da ___.",
+          "correct": "der letzte Zug schon abgefahren ist",
+          "explanations": {
+            "tr": "Wir nehmen ein Taxi ifadesinin nedeni tamamlanmış bir olaydır. abgefahren Partizip II, ist ise der letzte Zug öznesiyle çekilmiş yardımcı fiildir. da yan cümlesinde yardımcı fiil sonda olur: abgefahren + ist; schon bilgisi bunların önünde kalır.",
+            "de": "Der Grund zu „Wir nehmen ein Taxi“ ist ein abgeschlossenes Ereignis. abgefahren ist Partizip II, ist das finite Hilfsverb zu der letzte Zug. Nach da lautet das Ende abgefahren + ist; schon steht davor.",
+            "en": "The reason for “Wir nehmen ein Taxi” is a completed event. abgefahren is the past participle and ist the finite auxiliary for der letzte Zug. After da, finish with abgefahren + ist, keeping schon before them."
+          },
+          "options": [
+            "der letzte Zug schon abgefahren ist",
+            "der letzte Zug ist schon abgefahren",
+            "der letzte Zug schon ist abgefahren"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Paul sucht seine Schlüssel, weil ___.",
+          "correct": "er sie zu Hause vergessen hat",
+          "explanations": {
+            "tr": "Paul sucht seine Schlüssel ifadesinin nedeni tamamlanmış bir olaydır. vergessen Partizip II, hat ise er öznesiyle çekilmiş yardımcı fiildir. weil yan cümlesinde yardımcı fiil sonda olur: vergessen + hat; sie zu Hause bilgisi bunların önünde kalır.",
+            "de": "Der Grund zu „Paul sucht seine Schlüssel“ ist ein abgeschlossenes Ereignis. vergessen ist Partizip II, hat das finite Hilfsverb zu er. Nach weil lautet das Ende vergessen + hat; sie zu Hause steht davor.",
+            "en": "The reason for “Paul sucht seine Schlüssel” is a completed event. vergessen is the past participle and hat the finite auxiliary for er. After weil, finish with vergessen + hat, keeping sie zu Hause before them."
+          },
+          "options": [
+            "er sie zu Hause vergessen hat",
+            "er hat sie zu Hause vergessen",
+            "er sie zu Hause hat vergessen"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Ich bin zufrieden, weil ___.",
+          "correct": "wir das Projekt abgeschlossen haben",
+          "explanations": {
+            "tr": "Ich bin zufrieden ifadesinin nedeni tamamlanmış bir olaydır. abgeschlossen Partizip II, haben ise wir öznesiyle çekilmiş yardımcı fiildir. weil yan cümlesinde yardımcı fiil sonda olur: abgeschlossen + haben; das Projekt bilgisi bunların önünde kalır.",
+            "de": "Der Grund zu „Ich bin zufrieden“ ist ein abgeschlossenes Ereignis. abgeschlossen ist Partizip II, haben das finite Hilfsverb zu wir. Nach weil lautet das Ende abgeschlossen + haben; das Projekt steht davor.",
+            "en": "The reason for “Ich bin zufrieden” is a completed event. abgeschlossen is the past participle and haben the finite auxiliary for wir. After weil, finish with abgeschlossen + haben, keeping das Projekt before them."
+          },
+          "options": [
+            "wir das Projekt abgeschlossen haben",
+            "wir haben das Projekt abgeschlossen",
+            "wir das Projekt haben abgeschlossen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plusquamperfekt-8",
+      "title": {
+        "tr": "Übung 8 – Daha önceki nedeni anlat",
+        "de": "Übung 8 – Frühere Gründe im Plusquamperfekt",
+        "en": "Exercise 8 – Earlier reasons in the past perfect"
+      },
+      "description": {
+        "tr": "Verilen Plusquamperfekt yapısını yan cümleye yerleştir",
+        "de": "Setze die vorgegebene Plusquamperfektform in den Nebensatz",
+        "en": "Place the specified past-perfect form in the subordinate clause"
+      },
+      "difficulty": {
+        "tr": "B1 pekiştirme",
+        "de": "B1-Vertiefung",
+        "en": "B1 practice"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Kausalsätze",
+          "sentence": "Plusquamperfekt ist vorgegeben: Ich konnte nicht bezahlen, weil ___.",
+          "correct": "ich meine Geldbörse zu Hause gelassen hatte",
+          "explanations": {
+            "tr": "“Ich konnte nicht bezahlen” geçmişteki durumdur; gelassen ile anlatılan neden ondan önce gerçekleşmiştir. Görev Plusquamperfekt istiyor: gelassen + hatte. weil sonrasında çekimli hatte en sonda, gelassen hemen önünde olur. Burada yalnızca fiil sırasını seçiyorsun; geçmişteki her neden otomatik olarak Plusquamperfekt gerektirmez.",
+            "de": "„Ich konnte nicht bezahlen“ beschreibt den vergangenen Bezugspunkt; der mit gelassen ausgedrückte Grund liegt davor. Vorgegeben ist Plusquamperfekt: gelassen + hatte. Nach weil steht das finite hatte zuletzt. Nicht jede vergangene Begründung verlangt automatisch Plusquamperfekt.",
+            "en": "“Ich konnte nicht bezahlen” is the past reference point, and the reason expressed by gelassen happened earlier. The task specifies past perfect: gelassen + hatte. After weil, finite hatte goes last. Not every past reason automatically requires past perfect."
+          },
+          "options": [
+            "ich meine Geldbörse zu Hause gelassen hatte",
+            "ich hatte meine Geldbörse zu Hause gelassen",
+            "ich meine Geldbörse zu Hause hatte gelassen"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Plusquamperfekt ist vorgegeben: Der Computer startete nicht, weil ___.",
+          "correct": "der Akku sich vollständig entladen hatte",
+          "explanations": {
+            "tr": "“Der Computer startete nicht” geçmişteki durumdur; entladen ile anlatılan neden ondan önce gerçekleşmiştir. Görev Plusquamperfekt istiyor: entladen + hatte. weil sonrasında çekimli hatte en sonda, entladen hemen önünde olur. Burada yalnızca fiil sırasını seçiyorsun; geçmişteki her neden otomatik olarak Plusquamperfekt gerektirmez.",
+            "de": "„Der Computer startete nicht“ beschreibt den vergangenen Bezugspunkt; der mit entladen ausgedrückte Grund liegt davor. Vorgegeben ist Plusquamperfekt: entladen + hatte. Nach weil steht das finite hatte zuletzt. Nicht jede vergangene Begründung verlangt automatisch Plusquamperfekt.",
+            "en": "“Der Computer startete nicht” is the past reference point, and the reason expressed by entladen happened earlier. The task specifies past perfect: entladen + hatte. After weil, finite hatte goes last. Not every past reason automatically requires past perfect."
+          },
+          "options": [
+            "der Akku sich vollständig entladen hatte",
+            "der Akku hatte sich vollständig entladen",
+            "der Akku sich vollständig hatte entladen"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Plusquamperfekt ist vorgegeben: Wir mussten draußen warten, weil ___.",
+          "correct": "jemand die Tür abgeschlossen hatte",
+          "explanations": {
+            "tr": "“Wir mussten draußen warten” geçmişteki durumdur; abgeschlossen ile anlatılan neden ondan önce gerçekleşmiştir. Görev Plusquamperfekt istiyor: abgeschlossen + hatte. weil sonrasında çekimli hatte en sonda, abgeschlossen hemen önünde olur. Burada yalnızca fiil sırasını seçiyorsun; geçmişteki her neden otomatik olarak Plusquamperfekt gerektirmez.",
+            "de": "„Wir mussten draußen warten“ beschreibt den vergangenen Bezugspunkt; der mit abgeschlossen ausgedrückte Grund liegt davor. Vorgegeben ist Plusquamperfekt: abgeschlossen + hatte. Nach weil steht das finite hatte zuletzt. Nicht jede vergangene Begründung verlangt automatisch Plusquamperfekt.",
+            "en": "“Wir mussten draußen warten” is the past reference point, and the reason expressed by abgeschlossen happened earlier. The task specifies past perfect: abgeschlossen + hatte. After weil, finite hatte goes last. Not every past reason automatically requires past perfect."
+          },
+          "options": [
+            "jemand die Tür abgeschlossen hatte",
+            "jemand hatte die Tür abgeschlossen",
+            "jemand die Tür hatte abgeschlossen"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Plusquamperfekt ist vorgegeben: Lea erreichte den Zug nicht mehr, weil ___.",
+          "correct": "der Zug schon abgefahren war",
+          "explanations": {
+            "tr": "“Lea erreichte den Zug nicht mehr” geçmişteki durumdur; abgefahren ile anlatılan neden ondan önce gerçekleşmiştir. Görev Plusquamperfekt istiyor: abgefahren + war. weil sonrasında çekimli war en sonda, abgefahren hemen önünde olur. Burada yalnızca fiil sırasını seçiyorsun; geçmişteki her neden otomatik olarak Plusquamperfekt gerektirmez.",
+            "de": "„Lea erreichte den Zug nicht mehr“ beschreibt den vergangenen Bezugspunkt; der mit abgefahren ausgedrückte Grund liegt davor. Vorgegeben ist Plusquamperfekt: abgefahren + war. Nach weil steht das finite war zuletzt. Nicht jede vergangene Begründung verlangt automatisch Plusquamperfekt.",
+            "en": "“Lea erreichte den Zug nicht mehr” is the past reference point, and the reason expressed by abgefahren happened earlier. The task specifies past perfect: abgefahren + war. After weil, finite war goes last. Not every past reason automatically requires past perfect."
+          },
+          "options": [
+            "der Zug schon abgefahren war",
+            "der Zug war schon abgefahren",
+            "der Zug schon war abgefahren"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Plusquamperfekt ist vorgegeben: Ben fand den Brief nicht, weil ___.",
+          "correct": "er ihn versehentlich weggeworfen hatte",
+          "explanations": {
+            "tr": "“Ben fand den Brief nicht” geçmişteki durumdur; weggeworfen ile anlatılan neden ondan önce gerçekleşmiştir. Görev Plusquamperfekt istiyor: weggeworfen + hatte. weil sonrasında çekimli hatte en sonda, weggeworfen hemen önünde olur. Burada yalnızca fiil sırasını seçiyorsun; geçmişteki her neden otomatik olarak Plusquamperfekt gerektirmez.",
+            "de": "„Ben fand den Brief nicht“ beschreibt den vergangenen Bezugspunkt; der mit weggeworfen ausgedrückte Grund liegt davor. Vorgegeben ist Plusquamperfekt: weggeworfen + hatte. Nach weil steht das finite hatte zuletzt. Nicht jede vergangene Begründung verlangt automatisch Plusquamperfekt.",
+            "en": "“Ben fand den Brief nicht” is the past reference point, and the reason expressed by weggeworfen happened earlier. The task specifies past perfect: weggeworfen + hatte. After weil, finite hatte goes last. Not every past reason automatically requires past perfect."
+          },
+          "options": [
+            "er ihn versehentlich weggeworfen hatte",
+            "er hatte ihn versehentlich weggeworfen",
+            "er ihn versehentlich hatte weggeworfen"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Plusquamperfekt ist vorgegeben: Das Essen war kalt, weil ___.",
+          "correct": "die Gäste sehr spät gekommen waren",
+          "explanations": {
+            "tr": "“Das Essen war kalt” geçmişteki durumdur; gekommen ile anlatılan neden ondan önce gerçekleşmiştir. Görev Plusquamperfekt istiyor: gekommen + waren. weil sonrasında çekimli waren en sonda, gekommen hemen önünde olur. Burada yalnızca fiil sırasını seçiyorsun; geçmişteki her neden otomatik olarak Plusquamperfekt gerektirmez.",
+            "de": "„Das Essen war kalt“ beschreibt den vergangenen Bezugspunkt; der mit gekommen ausgedrückte Grund liegt davor. Vorgegeben ist Plusquamperfekt: gekommen + waren. Nach weil steht das finite waren zuletzt. Nicht jede vergangene Begründung verlangt automatisch Plusquamperfekt.",
+            "en": "“Das Essen war kalt” is the past reference point, and the reason expressed by gekommen happened earlier. The task specifies past perfect: gekommen + waren. After weil, finite waren goes last. Not every past reason automatically requires past perfect."
+          },
+          "options": [
+            "die Gäste sehr spät gekommen waren",
+            "die Gäste waren sehr spät gekommen",
+            "die Gäste sehr spät waren gekommen"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Plusquamperfekt ist vorgegeben: Ich kannte den Weg, weil ___.",
+          "correct": "ich dort früher einmal gewesen war",
+          "explanations": {
+            "tr": "“Ich kannte den Weg” geçmişteki durumdur; gewesen ile anlatılan neden ondan önce gerçekleşmiştir. Görev Plusquamperfekt istiyor: gewesen + war. weil sonrasında çekimli war en sonda, gewesen hemen önünde olur. Burada yalnızca fiil sırasını seçiyorsun; geçmişteki her neden otomatik olarak Plusquamperfekt gerektirmez.",
+            "de": "„Ich kannte den Weg“ beschreibt den vergangenen Bezugspunkt; der mit gewesen ausgedrückte Grund liegt davor. Vorgegeben ist Plusquamperfekt: gewesen + war. Nach weil steht das finite war zuletzt. Nicht jede vergangene Begründung verlangt automatisch Plusquamperfekt.",
+            "en": "“Ich kannte den Weg” is the past reference point, and the reason expressed by gewesen happened earlier. The task specifies past perfect: gewesen + war. After weil, finite war goes last. Not every past reason automatically requires past perfect."
+          },
+          "options": [
+            "ich dort früher einmal gewesen war",
+            "ich war dort früher einmal gewesen",
+            "ich dort früher einmal war gewesen"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Plusquamperfekt ist vorgegeben: Nora bekam eine Erstattung, weil ___.",
+          "correct": "sie die Reise rechtzeitig storniert hatte",
+          "explanations": {
+            "tr": "“Nora bekam eine Erstattung” geçmişteki durumdur; storniert ile anlatılan neden ondan önce gerçekleşmiştir. Görev Plusquamperfekt istiyor: storniert + hatte. weil sonrasında çekimli hatte en sonda, storniert hemen önünde olur. Burada yalnızca fiil sırasını seçiyorsun; geçmişteki her neden otomatik olarak Plusquamperfekt gerektirmez.",
+            "de": "„Nora bekam eine Erstattung“ beschreibt den vergangenen Bezugspunkt; der mit storniert ausgedrückte Grund liegt davor. Vorgegeben ist Plusquamperfekt: storniert + hatte. Nach weil steht das finite hatte zuletzt. Nicht jede vergangene Begründung verlangt automatisch Plusquamperfekt.",
+            "en": "“Nora bekam eine Erstattung” is the past reference point, and the reason expressed by storniert happened earlier. The task specifies past perfect: storniert + hatte. After weil, finite hatte goes last. Not every past reason automatically requires past perfect."
+          },
+          "options": [
+            "sie die Reise rechtzeitig storniert hatte",
+            "sie hatte die Reise rechtzeitig storniert",
+            "sie die Reise rechtzeitig hatte storniert"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Plusquamperfekt ist vorgegeben: Die Pflanze war trocken, weil ___.",
+          "correct": "wir sie mehrere Tage nicht gegossen hatten",
+          "explanations": {
+            "tr": "“Die Pflanze war trocken” geçmişteki durumdur; gegossen ile anlatılan neden ondan önce gerçekleşmiştir. Görev Plusquamperfekt istiyor: gegossen + hatten. weil sonrasında çekimli hatten en sonda, gegossen hemen önünde olur. Burada yalnızca fiil sırasını seçiyorsun; geçmişteki her neden otomatik olarak Plusquamperfekt gerektirmez.",
+            "de": "„Die Pflanze war trocken“ beschreibt den vergangenen Bezugspunkt; der mit gegossen ausgedrückte Grund liegt davor. Vorgegeben ist Plusquamperfekt: gegossen + hatten. Nach weil steht das finite hatten zuletzt. Nicht jede vergangene Begründung verlangt automatisch Plusquamperfekt.",
+            "en": "“Die Pflanze war trocken” is the past reference point, and the reason expressed by gegossen happened earlier. The task specifies past perfect: gegossen + hatten. After weil, finite hatten goes last. Not every past reason automatically requires past perfect."
+          },
+          "options": [
+            "wir sie mehrere Tage nicht gegossen hatten",
+            "wir hatten sie mehrere Tage nicht gegossen",
+            "wir sie mehrere Tage nicht hatten gegossen"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Plusquamperfekt ist vorgegeben: Paul hatte keinen Zugang, weil ___.",
+          "correct": "er sein Passwort dreimal falsch eingegeben hatte",
+          "explanations": {
+            "tr": "“Paul hatte keinen Zugang” geçmişteki durumdur; eingegeben ile anlatılan neden ondan önce gerçekleşmiştir. Görev Plusquamperfekt istiyor: eingegeben + hatte. weil sonrasında çekimli hatte en sonda, eingegeben hemen önünde olur. Burada yalnızca fiil sırasını seçiyorsun; geçmişteki her neden otomatik olarak Plusquamperfekt gerektirmez.",
+            "de": "„Paul hatte keinen Zugang“ beschreibt den vergangenen Bezugspunkt; der mit eingegeben ausgedrückte Grund liegt davor. Vorgegeben ist Plusquamperfekt: eingegeben + hatte. Nach weil steht das finite hatte zuletzt. Nicht jede vergangene Begründung verlangt automatisch Plusquamperfekt.",
+            "en": "“Paul hatte keinen Zugang” is the past reference point, and the reason expressed by eingegeben happened earlier. The task specifies past perfect: eingegeben + hatte. After weil, finite hatte goes last. Not every past reason automatically requires past perfect."
+          },
+          "options": [
+            "er sein Passwort dreimal falsch eingegeben hatte",
+            "er hatte sein Passwort dreimal falsch eingegeben",
+            "er sein Passwort dreimal falsch hatte eingegeben"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "passiv-9",
+      "title": {
+        "tr": "Übung 9 – Passiv ile neden bildir",
+        "de": "Übung 9 – Gründe im Passiv",
+        "en": "Exercise 9 – Reasons in the passive"
+      },
+      "description": {
+        "tr": "Yalnızca boşluğu yaz; verilen Passiv cümlesinin kelimelerini koru",
+        "de": "Schreibe nur die Lücke; behalte die Wörter des vorgegebenen Passivsatzes",
+        "en": "Write only the gap; keep the words of the given passive sentence"
+      },
+      "difficulty": {
+        "tr": "B1 pekiştirme",
+        "de": "B1-Vertiefung",
+        "en": "B1 practice"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Kausalsätze",
+          "sentence": "Wir benutzen den Seiteneingang, weil ___. Ausgangssatz: Der Haupteingang wurde wegen Bauarbeiten gesperrt. Verschiebe nur das finite Verb ans Ende.",
+          "correct": "der Haupteingang wegen Bauarbeiten gesperrt wurde",
+          "explanations": {
+            "tr": "Neden cümlesi Passivdir: der Haupteingang, gesperrt eyleminden etkilenen öznedir. wurde çekimli werden biçimi, gesperrt Partizip II’dir. weil sonrasında Passiv korunur; sıra gesperrt + wurde olur. wegen Bauarbeiten bilgisi aynı sırada kalır.",
+            "de": "Der Grund steht im Passiv: der Haupteingang ist das vom Vorgang gesperrt betroffene Subjekt. wurde ist die finite Form von werden, gesperrt Partizip II. Nach weil bleibt das Passiv erhalten; das Ende lautet gesperrt + wurde.",
+            "en": "The reason is passive: subject der Haupteingang is affected by the action gesperrt. wurde is finite werden and gesperrt the past participle. After weil, preserve the passive and end with gesperrt + wurde, keeping wegen Bauarbeiten in the given order."
+          },
+          "type": "text",
+          "answers": [
+            "der Haupteingang wegen Bauarbeiten gesperrt wurde"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Der Kunde wartet länger, weil ___. Ausgangssatz: Das Paket wurde an die falsche Adresse geschickt. Verschiebe nur das finite Verb ans Ende.",
+          "correct": "das Paket an die falsche Adresse geschickt wurde",
+          "explanations": {
+            "tr": "Neden cümlesi Passivdir: das Paket, geschickt eyleminden etkilenen öznedir. wurde çekimli werden biçimi, geschickt Partizip II’dir. weil sonrasında Passiv korunur; sıra geschickt + wurde olur. an die falsche Adresse bilgisi aynı sırada kalır.",
+            "de": "Der Grund steht im Passiv: das Paket ist das vom Vorgang geschickt betroffene Subjekt. wurde ist die finite Form von werden, geschickt Partizip II. Nach weil bleibt das Passiv erhalten; das Ende lautet geschickt + wurde.",
+            "en": "The reason is passive: subject das Paket is affected by the action geschickt. wurde is finite werden and geschickt the past participle. After weil, preserve the passive and end with geschickt + wurde, keeping an die falsche Adresse in the given order."
+          },
+          "type": "text",
+          "answers": [
+            "das Paket an die falsche Adresse geschickt wurde"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Die Mitarbeiter arbeiten zu Hause, da ___. Ausgangssatz: Das Büro wird gerade renoviert. Verschiebe nur das finite Verb ans Ende.",
+          "correct": "das Büro gerade renoviert wird",
+          "explanations": {
+            "tr": "Neden cümlesi Passivdir: das Büro, renoviert eyleminden etkilenen öznedir. wird çekimli werden biçimi, renoviert Partizip II’dir. da sonrasında Passiv korunur; sıra renoviert + wird olur. gerade bilgisi aynı sırada kalır.",
+            "de": "Der Grund steht im Passiv: das Büro ist das vom Vorgang renoviert betroffene Subjekt. wird ist die finite Form von werden, renoviert Partizip II. Nach da bleibt das Passiv erhalten; das Ende lautet renoviert + wird.",
+            "en": "The reason is passive: subject das Büro is affected by the action renoviert. wird is finite werden and renoviert the past participle. After da, preserve the passive and end with renoviert + wird, keeping gerade in the given order."
+          },
+          "type": "text",
+          "answers": [
+            "das Büro gerade renoviert wird",
+            "das Buero gerade renoviert wird"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Die Sitzung fand nicht statt, weil ___. Ausgangssatz: Der Termin wurde kurzfristig abgesagt. Verschiebe nur das finite Verb ans Ende.",
+          "correct": "der Termin kurzfristig abgesagt wurde",
+          "explanations": {
+            "tr": "Neden cümlesi Passivdir: der Termin, abgesagt eyleminden etkilenen öznedir. wurde çekimli werden biçimi, abgesagt Partizip II’dir. weil sonrasında Passiv korunur; sıra abgesagt + wurde olur. kurzfristig bilgisi aynı sırada kalır.",
+            "de": "Der Grund steht im Passiv: der Termin ist das vom Vorgang abgesagt betroffene Subjekt. wurde ist die finite Form von werden, abgesagt Partizip II. Nach weil bleibt das Passiv erhalten; das Ende lautet abgesagt + wurde.",
+            "en": "The reason is passive: subject der Termin is affected by the action abgesagt. wurde is finite werden and abgesagt the past participle. After weil, preserve the passive and end with abgesagt + wurde, keeping kurzfristig in the given order."
+          },
+          "type": "text",
+          "answers": [
+            "der Termin kurzfristig abgesagt wurde"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Wir nehmen die Treppe, da ___. Ausgangssatz: Der Aufzug wird heute repariert. Verschiebe nur das finite Verb ans Ende.",
+          "correct": "der Aufzug heute repariert wird",
+          "explanations": {
+            "tr": "Neden cümlesi Passivdir: der Aufzug, repariert eyleminden etkilenen öznedir. wird çekimli werden biçimi, repariert Partizip II’dir. da sonrasında Passiv korunur; sıra repariert + wird olur. heute bilgisi aynı sırada kalır.",
+            "de": "Der Grund steht im Passiv: der Aufzug ist das vom Vorgang repariert betroffene Subjekt. wird ist die finite Form von werden, repariert Partizip II. Nach da bleibt das Passiv erhalten; das Ende lautet repariert + wird.",
+            "en": "The reason is passive: subject der Aufzug is affected by the action repariert. wird is finite werden and repariert the past participle. After da, preserve the passive and end with repariert + wird, keeping heute in the given order."
+          },
+          "type": "text",
+          "answers": [
+            "der Aufzug heute repariert wird"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Die Reisenden nahmen einen Bus, weil ___. Ausgangssatz: Die Bahnstrecke wurde nach dem Sturm geschlossen. Verschiebe nur das finite Verb ans Ende.",
+          "correct": "die Bahnstrecke nach dem Sturm geschlossen wurde",
+          "explanations": {
+            "tr": "Neden cümlesi Passivdir: die Bahnstrecke, geschlossen eyleminden etkilenen öznedir. wurde çekimli werden biçimi, geschlossen Partizip II’dir. weil sonrasında Passiv korunur; sıra geschlossen + wurde olur. nach dem Sturm bilgisi aynı sırada kalır.",
+            "de": "Der Grund steht im Passiv: die Bahnstrecke ist das vom Vorgang geschlossen betroffene Subjekt. wurde ist die finite Form von werden, geschlossen Partizip II. Nach weil bleibt das Passiv erhalten; das Ende lautet geschlossen + wurde.",
+            "en": "The reason is passive: subject die Bahnstrecke is affected by the action geschlossen. wurde is finite werden and geschlossen the past participle. After weil, preserve the passive and end with geschlossen + wurde, keeping nach dem Sturm in the given order."
+          },
+          "type": "text",
+          "answers": [
+            "die Bahnstrecke nach dem Sturm geschlossen wurde"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Die Schüler müssen draußen bleiben, weil ___. Ausgangssatz: Der Klassenraum wird noch gereinigt. Verschiebe nur das finite Verb ans Ende.",
+          "correct": "der Klassenraum noch gereinigt wird",
+          "explanations": {
+            "tr": "Neden cümlesi Passivdir: der Klassenraum, gereinigt eyleminden etkilenen öznedir. wird çekimli werden biçimi, gereinigt Partizip II’dir. weil sonrasında Passiv korunur; sıra gereinigt + wird olur. noch bilgisi aynı sırada kalır.",
+            "de": "Der Grund steht im Passiv: der Klassenraum ist das vom Vorgang gereinigt betroffene Subjekt. wird ist die finite Form von werden, gereinigt Partizip II. Nach weil bleibt das Passiv erhalten; das Ende lautet gereinigt + wird.",
+            "en": "The reason is passive: subject der Klassenraum is affected by the action gereinigt. wird is finite werden and gereinigt the past participle. After weil, preserve the passive and end with gereinigt + wird, keeping noch in the given order."
+          },
+          "type": "text",
+          "answers": [
+            "der Klassenraum noch gereinigt wird"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Nora konnte ihre Karte nicht benutzen, da ___. Ausgangssatz: Ihre Bankkarte wurde aus Sicherheitsgründen gesperrt. Verschiebe nur das finite Verb ans Ende.",
+          "correct": "ihre Bankkarte aus Sicherheitsgründen gesperrt wurde",
+          "explanations": {
+            "tr": "Neden cümlesi Passivdir: ihre Bankkarte, gesperrt eyleminden etkilenen öznedir. wurde çekimli werden biçimi, gesperrt Partizip II’dir. da sonrasında Passiv korunur; sıra gesperrt + wurde olur. aus Sicherheitsgründen bilgisi aynı sırada kalır.",
+            "de": "Der Grund steht im Passiv: ihre Bankkarte ist das vom Vorgang gesperrt betroffene Subjekt. wurde ist die finite Form von werden, gesperrt Partizip II. Nach da bleibt das Passiv erhalten; das Ende lautet gesperrt + wurde.",
+            "en": "The reason is passive: subject ihre Bankkarte is affected by the action gesperrt. wurde is finite werden and gesperrt the past participle. After da, preserve the passive and end with gesperrt + wurde, keeping aus Sicherheitsgründen in the given order."
+          },
+          "type": "text",
+          "answers": [
+            "ihre Bankkarte aus Sicherheitsgründen gesperrt wurde",
+            "ihre Bankkarte aus Sicherheitsgruenden gesperrt wurde"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Wir warten vor der Halle, weil ___. Ausgangssatz: Die Eintrittskarten werden am Eingang kontrolliert. Verschiebe nur das finite Verb ans Ende.",
+          "correct": "die Eintrittskarten am Eingang kontrolliert werden",
+          "explanations": {
+            "tr": "Neden cümlesi Passivdir: die Eintrittskarten, kontrolliert eyleminden etkilenen öznedir. werden çekimli werden biçimi, kontrolliert Partizip II’dir. weil sonrasında Passiv korunur; sıra kontrolliert + werden olur. am Eingang bilgisi aynı sırada kalır.",
+            "de": "Der Grund steht im Passiv: die Eintrittskarten ist das vom Vorgang kontrolliert betroffene Subjekt. werden ist die finite Form von werden, kontrolliert Partizip II. Nach weil bleibt das Passiv erhalten; das Ende lautet kontrolliert + werden.",
+            "en": "The reason is passive: subject die Eintrittskarten is affected by the action kontrolliert. werden is finite werden and kontrolliert the past participle. After weil, preserve the passive and end with kontrolliert + werden, keeping am Eingang in the given order."
+          },
+          "type": "text",
+          "answers": [
+            "die Eintrittskarten am Eingang kontrolliert werden"
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Die Firma entschuldigte sich, weil ___. Ausgangssatz: Die Bestellung wurde zu spät geliefert. Verschiebe nur das finite Verb ans Ende.",
+          "correct": "die Bestellung zu spät geliefert wurde",
+          "explanations": {
+            "tr": "Neden cümlesi Passivdir: die Bestellung, geliefert eyleminden etkilenen öznedir. wurde çekimli werden biçimi, geliefert Partizip II’dir. weil sonrasında Passiv korunur; sıra geliefert + wurde olur. zu spät bilgisi aynı sırada kalır.",
+            "de": "Der Grund steht im Passiv: die Bestellung ist das vom Vorgang geliefert betroffene Subjekt. wurde ist die finite Form von werden, geliefert Partizip II. Nach weil bleibt das Passiv erhalten; das Ende lautet geliefert + wurde.",
+            "en": "The reason is passive: subject die Bestellung is affected by the action geliefert. wurde is finite werden and geliefert the past participle. After weil, preserve the passive and end with geliefert + wurde, keeping zu spät in the given order."
+          },
+          "type": "text",
+          "answers": [
+            "die Bestellung zu spät geliefert wurde",
+            "die Bestellung zu spaet geliefert wurde"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fehler-10",
+      "title": {
+        "tr": "Übung 10 – Cümle sırası hatalarını düzelt",
+        "de": "Übung 10 – Satzstellungsfehler korrigieren",
+        "en": "Exercise 10 – Correct word-order errors"
+      },
+      "description": {
+        "tr": "Yalnızca fiil sırasını düzelt; bağlacı, kelimeleri ve başlangıcı koru",
+        "de": "Korrigiere nur die Verbposition; behalte Konjunktion, Wörter und Anfang",
+        "en": "Correct only verb order; keep the conjunction, words and opening"
+      },
+      "difficulty": {
+        "tr": "B1 pekiştirme",
+        "de": "B1-Vertiefung",
+        "en": "B1 practice"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "word": "Kausalsätze",
+          "sentence": "Korrigiere: Ich bleibe im Büro, weil ich muss noch arbeiten.",
+          "correct": "Ich bleibe im Büro, weil ich noch arbeiten muss.",
+          "explanations": {
+            "tr": "weil yan cümlesinde çekimli modal muss sona gider; arbeiten mastarı hemen önünde olur. ich öznesi ve noch bilgisi korunur.",
+            "de": "Nach weil steht das finite Modalverb muss zuletzt, direkt hinter arbeiten. ich und noch bleiben erhalten.",
+            "en": "After weil, finite modal muss goes last, following arbeiten. Keep ich and noch."
+          },
+          "type": "text",
+          "answers": [
+            "Ich bleibe im Büro, weil ich noch arbeiten muss.",
+            "Ich bleibe im Buero, weil ich noch arbeiten muss."
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Korrigiere: Lea bestellt kein Dessert, denn sie schon satt ist.",
+          "correct": "Lea bestellt kein Dessert, denn sie ist schon satt.",
+          "explanations": {
+            "tr": "denn sonrasında ikinci ana cümlede ist ikinci öğeye döner: sie ist schon satt. denn çekimli fiili sona gönderen bir yan cümle bağlacı değildir.",
+            "de": "Nach denn muss die Hauptsatzfolge sie ist schon satt stehen. denn löst keine Verbendstellung aus.",
+            "en": "After denn, use main-clause order sie ist schon satt. denn does not trigger verb-final order."
+          },
+          "type": "text",
+          "answers": [
+            "Lea bestellt kein Dessert, denn sie ist schon satt."
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Korrigiere: Da der Laden geschlossen ist, wir gehen nach Hause.",
+          "correct": "Da der Laden geschlossen ist, gehen wir nach Hause.",
+          "explanations": {
+            "tr": "Da der Laden geschlossen ist bütünü ilk öğedir. Virgülden hemen sonra ana cümlenin çekimli gehen fiili, ardından wir öznesi gelir.",
+            "de": "Der ganze Da-Satz besetzt Position 1. Nach dem Komma folgt gehen und dann das Subjekt wir.",
+            "en": "The entire Da-clause fills position 1. Put gehen immediately after the comma, then subject wir."
+          },
+          "type": "text",
+          "answers": [
+            "Da der Laden geschlossen ist, gehen wir nach Hause."
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Korrigiere: Ben ist müde, weil er hat schlecht geschlafen.",
+          "correct": "Ben ist müde, weil er schlecht geschlafen hat.",
+          "explanations": {
+            "tr": "geschlafen Partizip II olarak hat yardımcı fiilinden önce gelir. weil yan cümlesinde çekimli hat en sonda olur.",
+            "de": "geschlafen steht als Partizip II vor dem Hilfsverb hat. Im weil-Satz steht hat zuletzt.",
+            "en": "Past participle geschlafen precedes auxiliary hat, which goes last in the weil-clause."
+          },
+          "type": "text",
+          "answers": [
+            "Ben ist müde, weil er schlecht geschlafen hat.",
+            "Ben ist muede, weil er schlecht geschlafen hat."
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Korrigiere: Wir fahren nicht los, weil Lea kommt nicht mit.",
+          "correct": "Wir fahren nicht los, weil Lea nicht mitkommt.",
+          "explanations": {
+            "tr": "mitkommen ayrılabilen fiildir. weil yan cümlesinde mit ön eki çekimli kommt ile birleşir: mitkommt; bu birleşik fiil sonda olur.",
+            "de": "Im weil-Satz bleibt der Zusatz mit am finiten Verb: mitkommt. Die ganze Form steht am Ende.",
+            "en": "In the weil-clause, reattach prefix mit to the finite verb: mitkommt. The entire form goes last."
+          },
+          "type": "text",
+          "answers": [
+            "Wir fahren nicht los, weil Lea nicht mitkommt."
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Korrigiere: Da der Bus ausgefallen war, ich nahm ein Taxi.",
+          "correct": "Da der Bus ausgefallen war, nahm ich ein Taxi.",
+          "explanations": {
+            "tr": "Da bölümündeki ausgefallen war sırası zaten doğrudur. Hata ana cümlededir: yan cümleden sonra nahm, ardından ich gelmelidir.",
+            "de": "ausgefallen war im Da-Satz ist schon richtig. Im Hauptsatz muss nach dem Nebensatz nahm vor ich stehen.",
+            "en": "ausgefallen war is already correct in the Da-clause. In the main clause, put nahm before ich after the subordinate clause."
+          },
+          "type": "text",
+          "answers": [
+            "Da der Bus ausgefallen war, nahm ich ein Taxi."
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Korrigiere: Ich nehme Bargeld mit, weil die Karte wurde gesperrt.",
+          "correct": "Ich nehme Bargeld mit, weil die Karte gesperrt wurde.",
+          "explanations": {
+            "tr": "gesperrt wurde geçmiş Passiv yapısıdır. weil sonrasında çekimli wurde sona, gesperrt hemen önüne gider; Karte etkilenen özne olarak kalır.",
+            "de": "gesperrt wurde ist Passiv Präteritum. Nach weil steht wurde zuletzt hinter gesperrt; Karte bleibt das betroffene Subjekt.",
+            "en": "gesperrt wurde is past passive. After weil, put wurde last after gesperrt; Karte remains the affected subject."
+          },
+          "type": "text",
+          "answers": [
+            "Ich nehme Bargeld mit, weil die Karte gesperrt wurde."
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Korrigiere: Nora nimmt einen Schirm, denn es regnen wird.",
+          "correct": "Nora nimmt einen Schirm, denn es wird regnen.",
+          "explanations": {
+            "tr": "denn sonrası ana cümlede çekimli wird ikinci öğede, regnen mastarı sonda olur. regnen wird ise yan cümle sırasıdır.",
+            "de": "Nach denn steht wird in der Hauptsatzposition 2 und regnen zuletzt. regnen wird wäre Nebensatzstellung.",
+            "en": "After denn, finite wird takes main-clause position 2 and regnen goes last. regnen wird is subordinate-clause order."
+          },
+          "type": "text",
+          "answers": [
+            "Nora nimmt einen Schirm, denn es wird regnen."
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Korrigiere: Wir sind erleichtert, weil alle sind angekommen.",
+          "correct": "Wir sind erleichtert, weil alle angekommen sind.",
+          "explanations": {
+            "tr": "alle çoğul özneyle sind yardımcı fiili çekilir. weil yan cümlesinde angekommen Partizip II, sonra sonda sind gelir.",
+            "de": "Zum pluralen alle gehört sind. Im weil-Satz steht zuerst das Partizip II angekommen und zuletzt das finite sind.",
+            "en": "Plural subject alle takes auxiliary sind. In the weil-clause, put past participle angekommen before final finite sind."
+          },
+          "type": "text",
+          "answers": [
+            "Wir sind erleichtert, weil alle angekommen sind."
+          ]
+        },
+        {
+          "word": "Kausalsätze",
+          "sentence": "Korrigiere: Weil ich den Termin vergessen hatte, ich entschuldigte mich.",
+          "correct": "Weil ich den Termin vergessen hatte, entschuldigte ich mich.",
+          "explanations": {
+            "tr": "weil bölümündeki vergessen hatte doğru Plusquamperfekt sırasıdır. Bu bütün yan cümle ilk öğeyi doldurur; ana cümle entschuldigte ich mich ile başlamalıdır.",
+            "de": "vergessen hatte ist im weil-Satz schon richtig. Der ganze Nebensatz besetzt Position 1; danach folgt entschuldigte ich mich.",
+            "en": "vergessen hatte is already correct in the weil-clause. The whole clause fills position 1, followed by entschuldigte ich mich."
+          },
+          "type": "text",
+          "answers": [
+            "Weil ich den Termin vergessen hatte, entschuldigte ich mich."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -394,6 +394,485 @@
       }
     },
     {
+      "id": "kausalsaetze",
+      "title": "Kausalsätze – weil, denn ve da ile neden anlatma",
+      "lead": "Bir olayın nedenini açıklamak istediğinde neden bildiren cümleler kurarsın. Kausalsätze bu cümlelerin Almanca adıdır. A2’de gördüğün weil ve denn’i tekrar edip da ile başlayan cümleleri ve daha uzun fiil yapılarını adım adım çalışacağız.",
+      "sections": [
+        {
+          "title": "1 · Sonuç ve nedeni ayrı bul",
+          "paragraphs": [
+            "Ich nehme eine Jacke mit cümlesi ne yaptığını anlatır. Es ist kalt bunun nedenidir. Türkçede “Hava soğuk olduğu için yanıma bir ceket alıyorum” diyebiliriz. Cümleleri birleştirmeden önce hangi bilginin diğerini açıkladığını bul."
+          ],
+          "examples": [
+            {
+              "de": "Es ist kalt. Ich nehme eine Jacke mit.",
+              "tr": "Hava soğuk. Yanıma bir ceket alıyorum.",
+              "note": ""
+            },
+            {
+              "de": "Ich nehme eine Jacke mit, weil es kalt ist.",
+              "tr": "Hava soğuk olduğu için yanıma bir ceket alıyorum.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Es ist kalt",
+                "Neden: hava soğuk"
+              ],
+              [
+                "→",
+                "Neden sonucu açıklar"
+              ],
+              [
+                "Ich nehme eine Jacke mit",
+                "Sonuç: ceket alıyorum"
+              ]
+            ],
+            "caption": "İlk adım: ne oldu ve neden oldu?"
+          }
+        },
+        {
+          "title": "2 · weil çekimli fiili sona götürür",
+          "paragraphs": [
+            "weil “çünkü / ... olduğu için” anlamında neden bildiren yan cümle başlatır. Es ist kalt cümlesindeki ist, weil es kalt ist bölümünde sona geçer. İki bölüm arasına virgül koyarız. Bu derste standart yazı dilindeki yan cümle sırasını çalışıyoruz."
+          ],
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Hasta olduğum için evde kalıyorum.",
+              "note": ""
+            },
+            {
+              "de": "Lea fährt mit der Bahn, weil ihr Auto in der Werkstatt steht.",
+              "tr": "Arabası tamirhanede olduğu için Lea trenle gidiyor.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "Ich bleibe zu Hause,",
+              "weil",
+              "ich krank",
+              "bin"
+            ],
+            "labels": [
+              "Ana cümle: sonuç",
+              "Yan cümle bağlacı",
+              "Özne + diğer bilgi",
+              "Çekimli fiil: sonda"
+            ]
+          }
+        },
+        {
+          "title": "3 · denn ana cümle sırasını korur",
+          "paragraphs": [
+            "denn de bir neden açıklar, fakat iki ana cümleyi bağlar. denn sözcüğünü ikinci cümlenin ilk öğesi gibi sayma: denn ich bin krank örneğinde ich ilk öğe, bin ikinci öğedir. bin sona gitmez. denn öncesinde virgül gerekir."
+          ],
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, denn ich bin krank.",
+              "tr": "Evde kalıyorum çünkü hastayım.",
+              "note": ""
+            },
+            {
+              "de": "Die Kinder bleiben im Haus, denn draußen zieht ein Gewitter auf.",
+              "tr": "Çocuklar evde kalıyor çünkü dışarıda bir fırtına yaklaşıyor.",
+              "note": "draußen ilk öğe; zieht ikinci öğe; auf sonda"
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "weil ich krank bin",
+                "Yan cümle: bin sonda"
+              ],
+              [
+                "denn ich bin krank",
+                "Ana cümle: bin ikinci öğede"
+              ]
+            ],
+            "caption": "Aynı neden, iki farklı fiil sırası"
+          }
+        },
+        {
+          "title": "4 · da ile nedeni bir çerçeve olarak sun",
+          "paragraphs": [
+            "da da neden bildiren yan cümle kurar; çekimli fiil sonda olur. Genellikle konuşmada zaten bilinen veya başlangıçta verilen nedeni bir çerçeve gibi sunar. Bu bir eğilimdir, katı bir anlam ayrımı değildir: birçok cümlede weil ve da ikisi de mümkün olabilir. Bu yüzden alıştırmada da özellikle verildiyse onu koru."
+          ],
+          "examples": [
+            {
+              "de": "Da es kalt ist, nehme ich eine Jacke mit.",
+              "tr": "Hava soğuk olduğu için yanıma bir ceket alıyorum.",
+              "note": ""
+            },
+            {
+              "de": "Wir nehmen die Treppe, da der Aufzug repariert wird.",
+              "tr": "Asansör tamir edildiği için merdiveni kullanıyoruz.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "da es kalt ist",
+                "Neden: çekimli ist sonda"
+              ],
+              [
+                "weil es kalt ist",
+                "Aynı neden başka bağlamda da mümkün"
+              ],
+              [
+                "denn es ist kalt",
+                "Anlam benzer; cümle türü farklı"
+              ]
+            ],
+            "caption": "weil ve da seçimini sırf fiil sırasıyla birbirinden ayıramazsın"
+          }
+        },
+        {
+          "title": "5 · Yan cümle başta olursa ana fiil hemen ardından gelir",
+          "paragraphs": [
+            "Weil ich krank bin bölümü tek bir bütün olarak ana cümlenin ilk öğesini doldurur. Virgülden sonra önce çekimli bleibe, sonra özne ich gelir. Weil ich krank bin, ich bleibe zu Hause bu standart sıraya uymaz. denn ile nedeni bu şekilde bağımlı yan cümle olarak başa taşıyamazsın."
+          ],
+          "examples": [
+            {
+              "de": "Ich bleibe zu Hause, weil ich krank bin.",
+              "tr": "Hasta olduğum için evde kalıyorum.",
+              "note": ""
+            },
+            {
+              "de": "Weil ich krank bin, bleibe ich zu Hause.",
+              "tr": "Hasta olduğum için evde kalıyorum.",
+              "note": ""
+            },
+            {
+              "de": "Da der Laden geschlossen ist, gehen wir nach Hause.",
+              "tr": "Dükkân kapalı olduğu için eve gidiyoruz.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "Weil ich krank bin,",
+              "bleibe",
+              "ich",
+              "zu Hause"
+            ],
+            "labels": [
+              "1. öğe: bütün yan cümle",
+              "2. öğe: ana cümlenin fiili",
+              "Ana cümlenin öznesi",
+              "Diğer bilgi"
+            ]
+          }
+        },
+        {
+          "title": "6 · Ayrılabilen fiiller yan cümlede birleşir",
+          "paragraphs": [
+            "Ana cümlede Er kommt mit dersin. weil veya da yan cümlesinde ön ek çekimli fiille birleşir: weil er mitkommt. Fiilin kökü ve ön eki birlikte sona gider. denn sonrası ise ana cümle yapısı korunur: denn er kommt mit."
+          ],
+          "examples": [
+            {
+              "de": "Wir fahren los, weil Lea mitkommt.",
+              "tr": "Lea da geldiği için yola çıkıyoruz.",
+              "note": ""
+            },
+            {
+              "de": "Wir fahren los, denn Lea kommt mit.",
+              "tr": "Yola çıkıyoruz çünkü Lea da geliyor.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Lea kommt mit",
+                "Ana cümle: ön ek ayrılır"
+              ],
+              [
+                "weil Lea mitkommt",
+                "Yan cümle: ön ek birleşir"
+              ],
+              [
+                "denn Lea kommt mit",
+                "denn sonrası ana cümle sırası"
+              ]
+            ],
+            "caption": "mit + kommt → mitkommt: yan cümlede tek çekimli fiil"
+          }
+        },
+        {
+          "title": "7 · Modal fiil varsa en sona o gider",
+          "paragraphs": [
+            "Ich muss arbeiten cümlesinde muss çekimli modal fiil, arbeiten mastardır. weil ich arbeiten muss bölümünde mastar önce, çekimli modal sonra gelir. Modal fiilin kişi çekimi değişmez; yalnızca cümledeki yeri değişir."
+          ],
+          "examples": [
+            {
+              "de": "Ich bleibe im Büro, weil ich noch arbeiten muss.",
+              "tr": "Hâlâ çalışmam gerektiği için ofiste kalıyorum.",
+              "note": ""
+            },
+            {
+              "de": "Wir treffen uns morgen, da Lea heute nicht kommen kann.",
+              "tr": "Lea bugün gelemediği için yarın buluşuyoruz.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "weil",
+              "ich noch",
+              "arbeiten",
+              "muss"
+            ],
+            "labels": [
+              "Yan cümle bağlacı",
+              "Özne + diğer bilgi",
+              "Asıl fiil: mastar",
+              "Çekimli modal: sonda"
+            ]
+          }
+        },
+        {
+          "title": "8 · Perfektte yardımcı fiili sona yerleştir",
+          "paragraphs": [
+            "Ich habe den Bus verpasst cümlesinde habe çekimli yardımcı fiil, verpasst Partizip II’dir. weil ich den Bus verpasst habe yan cümlesinde Partizip II’den sonra yardımcı fiil gelir. sein ile kurulan Perfekt de aynı sırayı izler: weil der Zug abgefahren ist."
+          ],
+          "examples": [
+            {
+              "de": "Ben kommt später, weil er den Bus verpasst hat.",
+              "tr": "Otobüsü kaçırdığı için Ben daha geç geliyor.",
+              "note": ""
+            },
+            {
+              "de": "Wir nehmen ein Taxi, da der letzte Zug schon abgefahren ist.",
+              "tr": "Son tren çoktan kalktığı için taksiye biniyoruz.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "denn er hat den Bus verpasst",
+                "Ana cümle: hat ikinci öğede"
+              ],
+              [
+                "weil er den Bus verpasst hat",
+                "Yan cümle: Partizip II + hat"
+              ],
+              [
+                "da der Zug abgefahren ist",
+                "sein yardımcı fiili de sonda"
+              ]
+            ],
+            "caption": "Önce hangi fiilin çekimli olduğunu belirle"
+          }
+        },
+        {
+          "title": "9 · Geçmişten daha önceki neden: Plusquamperfekt",
+          "paragraphs": [
+            "Geçmişteki bir olaydan daha önce olmuş nedeni özellikle belirtmek istediğinde Plusquamperfekt kullanılabilir. Ich konnte nicht bezahlen geçmişteki durumdur; cüzdanı daha önce evde bırakmıştım: weil ich meine Geldbörse zu Hause gelassen hatte. Her geçmiş neden mutlaka Plusquamperfekt olmak zorunda değildir; zaman ilişkisi ve bağlam belirleyicidir."
+          ],
+          "examples": [
+            {
+              "de": "Ich konnte nicht bezahlen, weil ich meine Geldbörse zu Hause gelassen hatte.",
+              "tr": "Cüzdanımı evde bırakmış olduğum için ödeme yapamadım.",
+              "note": ""
+            },
+            {
+              "de": "Lea erreichte den Zug nicht mehr, da er schon abgefahren war.",
+              "tr": "Tren çoktan kalkmış olduğu için Lea trene yetişemedi.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "1 · Geldbörse zu Hause gelassen",
+                "Daha önce: nedeni oluşturan olay"
+              ],
+              [
+                "2 · konnte nicht bezahlen",
+                "Sonra: geçmişteki durum"
+              ],
+              [
+                "weil … gelassen hatte",
+                "Yan cümle: Partizip II + hatte"
+              ]
+            ],
+            "caption": "İki geçmiş olay arasındaki önceliği düşün"
+          }
+        },
+        {
+          "title": "10 · Passiv yapısını neden cümlesinde koru",
+          "paragraphs": [
+            "Die Tür wurde geschlossen cümlesi Passivdir: kapı eylemden etkilenen öznedir. weil die Tür geschlossen wurde bölümünde geschlossen Partizip II olarak, wurde çekimli yardımcı fiilden önce gelir. Buradaki wurde geçmiş Passiv, wird ise şimdiki Passiv biçimidir; bunu Perfektteki hat ile karıştırma."
+          ],
+          "examples": [
+            {
+              "de": "Wir können nicht hineingehen, weil die Tür geschlossen wurde.",
+              "tr": "Kapı kapatıldığı için içeri giremiyoruz.",
+              "note": ""
+            },
+            {
+              "de": "Wir nehmen die Treppe, da der Aufzug repariert wird.",
+              "tr": "Asansör tamir edildiği için merdiveni kullanıyoruz.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "die Tür wurde geschlossen",
+                "Passiv Präteritum: ana cümle"
+              ],
+              [
+                "weil die Tür geschlossen wurde",
+                "Partizip II + çekimli wurde"
+              ],
+              [
+                "da der Aufzug repariert wird",
+                "Passiv Präsens: çekimli wird sonda"
+              ]
+            ],
+            "caption": "Passiv zamanını değiştirme; yalnızca yan cümle sırasını kur"
+          }
+        },
+        {
+          "title": "11 · Neden, sonuç, koşul ve karşıtlığı ayır",
+          "paragraphs": [
+            "weil, da ve denn neden bildirir. deshalb ise sonucu başlatır: Es regnet, deshalb nehme ich einen Schirm mit. obwohl beklenene rağmen bir karşıtlık, wenn ise bağlama göre koşul veya zaman ilişkisi kurar. Aynı kelimelerle farklı ilişkiler anlatılabildiği için önce görevin istediği anlamı oku."
+          ],
+          "examples": [
+            {
+              "de": "Ich nehme einen Schirm mit, weil es regnet.",
+              "tr": "Yağmur yağdığı için şemsiye alıyorum.",
+              "note": ""
+            },
+            {
+              "de": "Es regnet, deshalb nehme ich einen Schirm mit.",
+              "tr": "Yağmur yağıyor, bu yüzden şemsiye alıyorum.",
+              "note": ""
+            },
+            {
+              "de": "Ich gehe spazieren, obwohl es regnet.",
+              "tr": "Yağmur yağmasına rağmen yürüyüşe çıkıyorum.",
+              "note": ""
+            },
+            {
+              "de": "Wenn es regnet, nehme ich einen Schirm mit.",
+              "tr": "Yağmur yağarsa/yağdığında şemsiye alırım.",
+              "note": ""
+            }
+          ],
+          "table": {
+            "headers": [
+              "Bağlantı",
+              "Ne anlatır?",
+              "Fiil sırası"
+            ],
+            "rows": [
+              [
+                "weil / da",
+                "neden",
+                "Yan cümlede sonda"
+              ],
+              [
+                "denn",
+                "neden",
+                "İkinci ana cümlede 2. öğe"
+              ],
+              [
+                "deshalb",
+                "sonuç",
+                "deshalb ardından çekimli fiil"
+              ],
+              [
+                "obwohl",
+                "karşıtlık",
+                "Yan cümlede sonda"
+              ],
+              [
+                "wenn",
+                "koşul / zaman",
+                "Yan cümlede sonda"
+              ]
+            ]
+          },
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Neden → es regnet",
+                "weil / da / denn"
+              ],
+              [
+                "Sonuç → ich nehme einen Schirm",
+                "deshalb"
+              ],
+              [
+                "İlişkiyi önce belirle",
+                "Bağlaç seçimi yalnızca kelime ezberi değildir"
+              ]
+            ],
+            "caption": "Aynı olaylar, farklı mantıksal ilişkiler"
+          }
+        }
+      ],
+      "summary": [
+        "weil ve da yan cümle kurar: çekimli fiil sonda. denn ana cümle sırasını korur.",
+        "Yan cümle baştaysa virgülden sonra ana cümlenin çekimli fiili gelir.",
+        "Modalde mastar + modal; Perfektte Partizip II + yardımcı fiil; Passivde Partizip II + wird/wurde.",
+        "weil ve da birçok bağlamda ikisi de mümkün olabilir; görevde verilen bağlacı koru."
+      ],
+      "faq": [
+        {
+          "question": "weil ile da arasında kesin bir anlam farkı var mı?",
+          "answer": "Hayır. İkisi de neden bildiren yan cümle kurar ve birçok bağlamda birbirinin yerine geçebilir. da sıkça zaten bilinen veya başlangıçta sunulan nedeni çerçeve olarak verir; bu katı bir doğruluk kuralı değildir."
+        },
+        {
+          "question": "denn ile neden fiil sona gitmiyor?",
+          "answer": "Çünkü denn burada iki ana cümleyi bağlar. İkinci cümle kendi ana cümle sırasını korur: denn ich bin müde. weil ise yan cümle kurar: weil ich müde bin."
+        },
+        {
+          "question": "weil ich muss arbeiten konuşmada duyuluyor; kullanmalı mıyım?",
+          "answer": "Konuşma dilinde weil sonrası ana cümle sırası duyulabilir. Ancak bu pakette standart yazı dili ve sınavlarda beklenen yan cümle sırası çalışılıyor: weil ich arbeiten muss."
+        }
+      ],
+      "related": [
+        "konnektoren",
+        "plusquamperfekt",
+        "passiv"
+      ],
+      "check": {
+        "question": "Weil ich den Bus verpasst habe, ___ ich ein Taxi. (nehmen)",
+        "answer": "Weil ich den Bus verpasst habe, nehme ich ein Taxi.",
+        "why": "weil bölümünde verpasst habe doğru Perfekt sırasıdır. Bütün yan cümle ilk öğeyi doldurduğu için ana cümlede nehme hemen virgülden sonra, ich onun arkasında gelir."
+      },
+      "titleTranslations": {
+        "tr": "Kausalsätze – weil, denn, da",
+        "de": "Kausalsätze – weil, denn, da",
+        "en": "Causal clauses – weil, denn, da"
+      },
+      "description": {
+        "tr": "weil, denn ve da; neden ilişkisi, fiil sırası ve farklı zamanlarda yan cümleler",
+        "de": "Kausalsätze – Erklärung auf Türkisch mit visuellen Beispielen",
+        "en": "Causal clauses – Turkish explanation with visual examples"
+      }
+    },
+    {
       "id": "relativsaetze",
       "title": "Relativsätze – hangi kişi, hangi şey?",
       "lead": "“Bir komşum var. Komşum Almanca konuşuyor” yerine “Almanca konuşan bir komşum var” diyebilirsin. Almancada bu ek bilgiyi bir Relativsatz ile veririz. Küçük bir yan cümle, önündeki ismi daha açık hâle getirir.",

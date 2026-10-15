@@ -6,8 +6,8 @@ legally checked. This file lists what the site
 actually does today, so you can answer a privacy-policy generator correctly. It is a
 checklist of facts, not the policy text itself.
 
-Last checked: student accounts, stage 1 (Firebase login, registration, teacher panel). A draft
-policy now exists as `privacy.html` and the footer link is visible.
+Last checked: student accounts stage 1 (Firebase login, registration, teacher panel, email
+verification) and GoatCounter visitor statistics on the public pages.
 
 ## Third-party services that receive visitors' personal data
 
@@ -17,7 +17,7 @@ policy now exists as `privacy.html` and the footer link is visible.
 | **FormSubmit** (formsubmit.co) | Only when someone sends the contact form | Name, email address, message text, plus IP address and browser details of the request | `js/app.js`, `fetch('https://formsubmit.co/ajax/…')` |
 | **FormSubmit** (formsubmit.co) | Only when someone sends a comment on a grammar lesson | Name, email address, comment text, the lesson and level, publication consent, plus IP address and browser details | `js/a1-lessons.js`, comment form |
 | **Gmail / Google** (Google Ireland Ltd.) | After FormSubmit forwards a form | Everything FormSubmit received, stored in the bozkurtt.omerfaruk@gmail.com mailbox | FormSubmit delivers to that address |
-
+| **GoatCounter** (bozkurtacademy.goatcounter.com) | Every page change on the public pages in `index.html` (home, lessons, grammar, exercises, exam prep, about, contact). Not on login, registration or panel pages, and never on localhost | Page address (path and hash, e.g. `/#grammar/A1/artikel`; exercise question numbers are dropped), referrer (first page of a visit only), page title, browser details (user agent) and screen width, country derived from the IP address. GoatCounter does not store the IP address. No cookies, no localStorage | `js/analytics.js`, `js/vendor/count.js` (served from this site, not from gc.zgo.at) |
 | **Firebase Authentication** (Google Ireland Ltd. / Google LLC) | When a student registers or signs in, and on every later visit of a signed-in student | Email address, password hash; with Google sign-in (16+ only) also the Google name, email and photo URL. Not region-bound: may be processed in the USA | `js/account/firebase.js`, `login.js`, `register.js` |
 | **Cloud Firestore** (Google, europe-west3 Frankfurt) | Student accounts only | Name, email, birth year, account status, exercise results (level, topic, exercise, score, time); for under-16s also parent name and email, consent date and method | `firestore.rules`, `js/account/*.js` |
 | **gstatic.com** (Google, Firebase SDK files) | Only on login/registration/panel pages, and on `index.html` only if the browser was signed in before (`baAccount`) | IP address and browser details of the request | `js/account/firebase.js` |
@@ -29,7 +29,8 @@ recipient address is kept 14 days to avoid duplicates).
 Guests who never sign in load nothing from Google. Apart from that, nothing else is loaded from another host while browsing. In particular:
 
 - **No Google Fonts.** STIX Two Text and Albert Sans are served from `fonts/` on the site itself.
-- No analytics, advertising, tracking pixels, social media widgets, embedded videos or maps.
+- No advertising, tracking pixels, social media widgets, embedded videos or maps. The only
+  statistics are GoatCounter (above): no cookies, no localStorage, no banner needed.
 - No cookies are set.
 
 ## Student accounts (stage 1)
@@ -80,7 +81,8 @@ Guests who never sign in load nothing from Google. Apart from that, nothing else
 - Comment function: yes, moderated, name and email required, name and comment published with consent.
 - Cookies: none. Local storage: yes, for settings only (theme, language, scores), no tracking.
 - Web fonts: locally hosted (no external font service).
-- Analytics, advertising, social plugins, embedded videos/maps: none.
+- Analytics: GoatCounter, cookieless, without storing IP addresses (see the table above).
+- Advertising, social plugins, embedded videos/maps: none.
 - External links: yes.
 
 ## To finish

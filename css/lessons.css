@@ -2,13 +2,11 @@
 #page-lessons{padding-top:clamp(16px,3vw,32px)}
 #page-lessons .lesson-hero-pro{margin:0;padding:0;color:var(--ba-ink)}
 #page-lessons .lesson-hero-copy{padding:clamp(28px,5vw,72px) clamp(22px,5vw,72px) 0;max-width:none}
-#page-lessons .lesson-hero-copy .tag{display:inline-block;margin:0 14px 18px 0}
-#page-lessons .lesson-free-badge{display:inline-block;margin:0 0 18px;padding:4px 10px;background:var(--ba-accent);color:var(--ba-accent-ink);font-size:var(--ba-small);font-weight:600;letter-spacing:0;text-transform:none;border-radius:0}
 #page-lessons .lesson-hero-pro h1{margin:0 0 20px;max-width:12em}
 #page-lessons .lesson-hero-pro p{font-size:var(--ba-lead);line-height:1.5;max-width:44ch;color:var(--ba-ink)}
 #page-lessons .lesson-hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:16px 28px;margin-top:32px}
 #page-lessons .lesson-inline-link{background:none;border:0;padding:0;min-height:44px;cursor:pointer;font:600 var(--ba-body) var(--ba-sans)}
-#page-lessons .lesson-hero-stats{--ba-stub-cols:3;margin:clamp(32px,5vw,56px) clamp(22px,5vw,72px) 0;padding-bottom:clamp(28px,4vw,48px)}
+#page-lessons .lesson-hero-stats{--ba-stub-cols:4;margin:clamp(32px,5vw,56px) clamp(22px,5vw,72px) 0;padding-bottom:clamp(28px,4vw,48px)}
 #page-lessons .lesson-hero-stats article{display:flex;flex-direction:column-reverse}
 
 #page-lessons .lesson-page-block{padding:clamp(56px,8vw,120px) 0 0}
@@ -20,8 +18,7 @@
 #page-lessons .lesson-intro-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:12px}
 #page-lessons .lesson-feature-card{padding:clamp(24px,3vw,40px);background:var(--ba-paper);border-radius:var(--ba-radius);border:0;box-shadow:none}
 #page-lessons .lesson-feature-highlight{background:var(--ba-field);color:var(--ba-field-ink)}
-#page-lessons .lesson-feature-highlight :is(h2,p,.lesson-kicker){color:var(--ba-field-ink)}
-#page-lessons .lesson-kicker{display:block;margin:0 0 12px;font-size:var(--ba-small);font-weight:500;letter-spacing:0;text-transform:none}
+#page-lessons .lesson-feature-highlight :is(h2,p){color:var(--ba-field-ink)}
 #page-lessons .lesson-feature-card h2{font-size:clamp(1.75rem,1.3rem + 1.4vw,2.375rem);margin:0 0 14px}
 #page-lessons .lesson-feature-card h3{font-size:var(--ba-lead);margin:0 0 10px}
 #page-lessons .lesson-feature-card p{margin:0;color:inherit}

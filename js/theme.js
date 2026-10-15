@@ -296,7 +296,7 @@
        themeButton.setAttribute('aria-label',label);
        themeButton.setAttribute('title',label);
        themeButton.setAttribute('aria-pressed',String(dark));
-       themeButton.firstElementChild.textContent = dark ? '☀' : '☾';
+       themeButton.classList.toggle('is-dark', dark);
      }
    }
    themeButton?.addEventListener('click', () => {

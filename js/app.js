@@ -334,6 +334,21 @@ document.addEventListener('DOMContentLoaded', ()=>{
     event.preventDefault();
     showPage(btn.dataset.page);
   }));
+  const menuToggle=document.querySelector('.menu-toggle');
+  const siteMenu=document.getElementById('siteMenu');
+  function setMenu(open, {focusToggle=false}={}){
+    if(!menuToggle) return;
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.textContent=t(open ? 'menuClose' : 'menuOpen');
+    document.body.classList.toggle('menu-open', open);
+    if(!open && focusToggle) menuToggle.focus();
+  }
+  menuToggle?.addEventListener('click',()=>setMenu(menuToggle.getAttribute('aria-expanded')!=='true'));
+  siteMenu?.addEventListener('click',event=>{ if(event.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown',event=>{
+    if(event.key==='Escape' && menuToggle?.getAttribute('aria-expanded')==='true') setMenu(false,{focusToggle:true});
+  });
+  window.addEventListener('ba:languagechange',()=>setMenu(menuToggle?.getAttribute('aria-expanded')==='true'));
   document.querySelector('[data-skip-link]')?.addEventListener('click',event=>{
     event.preventDefault();
     document.getElementById('main')?.focus();

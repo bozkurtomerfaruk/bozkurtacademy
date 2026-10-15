@@ -287,7 +287,7 @@
     const link = document.createElement('link');
     link.id = 'grammarHubCss';
     link.rel = 'stylesheet';
-    link.href = 'css/grammar.css?v=2';
+    link.href = 'css/grammar.css?v=3';
     document.head.appendChild(link);
   }
 
@@ -566,7 +566,7 @@
     const names = tx('levelNames');
 
     el.innerHTML = Object.keys(TOPICS).map(level => `
-      <button class="grammar-level-tab ${level === currentLevel ? 'active' : ''}" type="button" data-grammar-level="${level}">
+      <button class="grammar-level-tab ${level === currentLevel ? 'active' : ''}" type="button" aria-pressed="${level === currentLevel}" data-grammar-level="${level}">
         <span class="grammar-level-code">${level}</span>
         <span class="grammar-level-name">${escapeHtml(names[level])}</span>
         <span class="grammar-level-count">${TOPICS[level].length} ${escapeHtml(tx('levelTopics'))}</span>
@@ -642,11 +642,11 @@
         data-topic-level="${escapeHtml(item.level)}">
         <div class="grammar-card-top">
           <span class="grammar-topic-level">${escapeHtml(item.level)}</span>
-          <span class="grammar-topic-arrow">→</span>
+          <span class="grammar-topic-arrow" aria-hidden="true">→</span>
         </div>
         <h4>${escapeHtml(item.title)}</h4>
         <p>${escapeHtml(item.description)}</p>
-        <div class="grammar-topic-footer">${escapeHtml(tx('openTopic'))} →</div>
+        <div class="grammar-topic-footer">${escapeHtml(tx('openTopic'))}</div>
       </button>
     `).join('');
 

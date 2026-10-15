@@ -2,6 +2,41 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-10-15 · PR #17 ve PR #16 birleştirildi, sessiz yayında
+
+**Birleştirilen:** önce [PR #17](https://github.com/bozkurtomerfaruk/bozkurtacademy/pull/17) (GoatCounter), sonra [PR #16](https://github.com/bozkurtomerfaruk/bozkurtacademy/pull/16) (Aşama 1). İkisi `index.html` ve `docs/privacy-policy.md`'de çakıştı; çakışma çözüldü, iki betik de yerinde.
+
+**Birleştirmeden önce yapılanlar:**
+- **Sessiz yayın:** `index.html`'deki "Giriş" linki `hidden`. Giriş, kayıt ve panel sayfaları adresle açılıyor.
+- **privacy.html dolduruldu:**
+  - adres (Gielenstraße 5, 41460 Neuss);
+  - hukuki dayanaklar (DSGVO md. 6/1-b; 6/1-a ve 8; 6/1-f);
+  - ABD aktarımı (AB-ABD Veri Gizliliği Çerçevesi ve standart sözleşme maddeleri);
+  - imzalı formların saklanması, GoatCounter bölümü, denetim makamı (LDI NRW, www.ldi.nrw.de), tarih;
+  - en üstte "Bu metin hukuki olarak kontrol edilmektedir" notu.
+  
+  Aynı bilgiler veli onay formuna da işlendi. Sitede köşeli parantezli boşluk kalmadı.
+- **E-posta doğrulama:**
+  - e-posta ile kayıtta doğrulama e-postası gidiyor;
+  - öğrenci panelinde doğrulama durumu ve "yeniden gönder" düğmesi var;
+  - öğretmen panelinde her öğrencide "E-posta doğrulandı / doğrulanmadı" rozeti, doğrulanmamış öğrencide onay düğmesinin yanında uyarı (onay engellenmiyor).
+
+**Kurallarda küçük değişiklik (gerekliydi):** Öğretmen tarayıcıdan başka kullanıcıların doğrulama bilgisini okuyamıyor. Bu yüzden öğrenci, e-postası gerçekten doğrulanmışsa (giriş bilgisindeki `email_verified`) kendi profiline sadece `emailVerified: true` yazabiliyor. Başka alana dokunamıyor. 5 yeni test eklendi; toplam 50/50, GitHub Actions'ta da geçti.
+
+**Yayın:** GitHub Pages yayını (`pages build and deployment`, commit `546884b`) başarıyla tamamlandı. Canlı site geliştirme ortamından açılamadığı için sayfaları ben açıp göremedim.
+
+**Testler:** emülatörde uçtan uca akış (doğrulama e-postası, bağlantı, rozet dahil), GoatCounter sayımı, `check-grammar` PASS, ana sayfada "Giriş" linkinin gizli olduğu (390 ve 1280px).
+
+**Bilmen gerekenler:**
+- `privacy.html` ve veli formu, imzalı formlar için "kâğıt olarak kilitli bir dolapta ya da dijital olarak şifreli bir klasörde" diyor. Hangisini kullanıyorsan sadece onu bırakmalıyız.
+- `privacy.html` hâlâ `noindex`; hukuki kontrol bitince not ve `noindex` kaldırılıp "Giriş" linki açılacak.
+
+**Senden beklenenler:**
+1. `https://bozkurtacademy.com/giris.html` → **Google ile giriş yap** → ekranda görünen **UID**'i bana gönder. (Kurallar henüz yayınlanmadığı için "kayıt bulunamadı" mesajı normal; kayıt formunu doldurma.)
+2. UID'i kurallara yazdıktan sonra `firestore.rules` dosyasını Firebase Console → Firestore → Kurallar'a yapıştırıp **Yayınla** (`docs/kurulum.md`).
+3. Gizlilik metninin hukuki kontrolü bitince "Giriş linkini aç" demen.
+4. Aşama 2'ye (ödevler ve kaynaklar) geçmek için onayın.
+
 ## 2026-10-15 · Ayrı iş: GoatCounter PR açıldı
 
 **PR:** https://github.com/bozkurtomerfaruk/bozkurtacademy/pull/17 (dal: `claude/goatcounter`, main'den). Birleştirilmedi.

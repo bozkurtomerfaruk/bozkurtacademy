@@ -1,8 +1,11 @@
 // ogretmen-ogrenci.html?id=UID: öğrenci detayı, onay işlemleri, veli onayı, alıştırma sonuçları.
-import { $, consentGiven, currentYear, exerciseNames, formatDateTime, h, BERLIN, loadProfile, loadResults, scoreText, summarizeResults, validEmail } from './common.js';
 import {
-  approve, emailVerified, fmtDate, isEnabled, openDeleteDialog, recordConsent, requireTeacher, setActive, setInactive,
-  statusBadges, UNVERIFIED_WARNING, updateParent
+  $, bestResultSince, consentGiven, currentYear, exerciseNames, formatDateTime, h, BERLIN, loadAssignments, loadProfile,
+  loadResources, loadResults, safeLink, scoreText, summarizeResults, toDate, validEmail, validHttpsUrl
+} from './common.js';
+import {
+  addResource, approve, deleteAssignment, deleteResource, emailVerified, fmtDate, isEnabled, openDeleteDialog,
+  recordConsent, requireTeacher, setActive, setInactive, statusBadges, UNVERIFIED_WARNING, updateParent
 } from './teacher-common.js';
 
 const uid = new URLSearchParams(location.search).get('id');
@@ -146,8 +149,80 @@ function renderParent(){
   $('parentContent').replaceChildren(...items);
 }
 
-async function renderResults(){
-  const results = await loadResults(uid);
+// Öğrencinin ödevleri: yaklaşanlar önce, tamamlananlar sonda.
+async function renderAssignments(results){
+  const assignments = await loadAssignments(uid);
+  const box = $('assignmentsList');
+  if(!assignments.length){
+    box.replaceChildren(h('p', { class: 'acc-empty' }, 'Bu öğrenciye henüz ödev verilmedi.'));
+    return;
+  }
+  const names = await exerciseNames(assignments.flatMap((a) => a.exercises || []), 'tr');
+  assignments.sort((a, b) => (a.done - b.done) || ((toDate(a.dueAt) || 0) - (toDate(b.dueAt) || 0)));
+  const now = new Date();
+  box.replaceChildren(h('div', { class: 'acc-list' }, assignments.map((a) => {
+    const overdue = !a.done && toDate(a.dueAt) < now;
+    const remove = h('button', { class: 'acc-text-button', type: 'button' }, 'Bu öğrenciden kaldır');
+    remove.addEventListener('click', async () => {
+      if(!confirm(`"${a.title}" ödevi bu öğrenciden kaldırılsın mı?`)) return;
+      remove.disabled = true;
+      try{
+        await deleteAssignment(uid, a.id);
+        await reload();
+      }catch(error){
+        console.error(error);
+        setActionStatus('error', 'Ödev kaldırılamadı. Tekrar dene.');
+        remove.disabled = false;
+      }
+    });
+    return h('article', { class: 'acc-row acc-assign-row' },
+      h('div', { class: 'acc-row-main' },
+        h('span', { class: 'acc-row-name' }, a.title),
+        h('span', { class: 'acc-badges' },
+          h('span', { class: `acc-badge ${a.done ? 'success' : ''}` }, a.done ? `Tamamladı · ${fmtDateTime(a.doneAt)}` : 'Bekliyor'),
+          overdue ? h('span', { class: 'acc-badge warning' }, 'Süresi geçti') : null)),
+      h('dl', { class: 'acc-row-meta' },
+        h('div', {}, h('dt', {}, 'Teslim'), h('dd', {}, fmtDateTime(a.dueAt))),
+        a.docUrl ? h('div', {}, h('dt', {}, 'Doküman'), h('dd', {}, safeLink(a.docUrl, 'Aç'))) : null,
+        a.studentDocUrl ? h('div', {}, h('dt', {}, 'Öğrencinin dokümanı'), h('dd', {}, safeLink(a.studentDocUrl, 'Aç'))) : null),
+      h('div', { class: 'acc-row-actions' }, remove),
+      (a.exercises || []).length ? h('ul', { class: 'acc-status-list acc-row-full' }, a.exercises.map((e) => {
+        const n = names[`${e.level}/${e.topic}/${e.exercise}`];
+        const best = bestResultSince(results, e, a.createdAt);
+        return h('li', {},
+          h('span', {}, `${e.level} · ${n?.topic || e.topic} · ${n?.exercise || e.exercise}`),
+          h('span', { class: `acc-badge ${best ? 'success' : ''}` }, best ? `Çözüldü · ${scoreText(best)}` : 'Henüz çözülmedi'));
+      })) : null
+    );
+  })));
+}
+
+async function renderResources(){
+  const resources = await loadResources(uid);
+  const box = $('resourcesList');
+  box.replaceChildren(...(resources.length
+    ? [h('ul', { class: 'acc-resource-list' }, resources.map((r) => {
+      const remove = h('button', { class: 'acc-text-button', type: 'button' }, 'Sil');
+      remove.addEventListener('click', async () => {
+        if(!confirm(`"${r.title}" kaynağı silinsin mi?`)) return;
+        remove.disabled = true;
+        try{
+          await deleteResource(uid, r.id);
+          await reload();
+        }catch(error){
+          console.error(error);
+          setActionStatus('error', 'Kaynak silinemedi. Tekrar dene.');
+          remove.disabled = false;
+        }
+      });
+      return h('li', {},
+        h('div', {}, safeLink(r.url, r.title), r.note ? h('span', { class: 'acc-sub' }, r.note) : null),
+        remove);
+    }))]
+    : [h('p', { class: 'acc-hint' }, 'Henüz kaynak eklenmedi.')]));
+}
+
+async function renderResults(results){
   const box = $('resultsList');
   if(!results.length){
     box.replaceChildren(h('p', { class: 'acc-empty' }, isEnabled(student)
@@ -191,10 +266,43 @@ async function reload(){
   }
   renderProfile();
   renderParent();
-  await renderResults();
+  $('newAssignmentLink').href = `ogretmen-odev.html?ogrenci=${encodeURIComponent(uid)}`;
+  $('newAssignmentLink').hidden = !isEnabled(student);
+  const results = await loadResults(uid);
+  await Promise.all([renderAssignments(results), renderResources(), renderResults(results)]);
   $('studentLoading').hidden = true;
   $('studentApp').hidden = false;
 }
+
+$('resourceForm').addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const title = $('rTitle').value.trim();
+  const url = $('rUrl').value.trim();
+  const note = $('rNote').value.trim();
+  if(title.length < 2){
+    setActionStatus('error', 'Kaynak için bir başlık yaz.');
+    $('rTitle').focus();
+    return;
+  }
+  if(!validHttpsUrl(url)){
+    setActionStatus('error', 'Link https:// ile başlamalı.');
+    $('rUrl').focus();
+    return;
+  }
+  const button = $('rSubmit');
+  button.disabled = true;
+  try{
+    await addResource(uid, { title, url, note });
+    $('resourceForm').reset();
+    setActionStatus('success', 'Kaynak eklendi. Öğrenci panelinde görünür.');
+    await reload();
+  }catch(error){
+    console.error(error);
+    setActionStatus('error', 'Kaynak eklenemedi. Tekrar dene.');
+  }finally{
+    button.disabled = false;
+  }
+});
 
 const user = await requireTeacher({ loadingId: 'studentLoading', errorId: 'studentError' });
 if(user){

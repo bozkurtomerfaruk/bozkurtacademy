@@ -1,24 +1,6 @@
 /* Page-level rules still waiting for their redesign. Colours come from css/base.css tokens. */
 /* Lessons */
 /* Grammar browser and detail */
-#page-grammar{--gh-ink:var(--ba-ink);--gh-muted:var(--ba-muted);--gh-card:var(--ba-paper)}
-#page-grammar .grammar-browser{padding-top:24px}
-#page-grammar :is(.grammar-level-tab,.grammar-topic-card,.grammar-detail-card,.grammar-empty){border:1px solid var(--ba-line);border-radius:6px;box-shadow:none;background:var(--ba-paper)}
-#page-grammar .grammar-level-tab.active{background:var(--ba-accent);border-color:var(--ba-accent)}
-#page-grammar :is(.grammar-level-code,.grammar-topic-level){background:var(--ba-paper-2);color:var(--ba-accent);border-radius:4px;font-weight:600}
-#page-grammar .grammar-level-tab.active .grammar-level-code{background:var(--ba-paper);color:var(--ba-accent)}
-#page-grammar .grammar-level-name{font-weight:600}
-#page-grammar :is(.grammar-level-tab,.grammar-topic-card):hover{border-color:var(--ba-line-strong);box-shadow:none}
-#page-grammar .grammar-topic-card::after{display:none}
-#page-grammar :is(.grammar-topic-arrow,.grammar-topic-footer,.grammar-detail-breadcrumb button){color:var(--ba-accent);font-weight:600}
-#page-grammar .grammar-result-count{background:transparent;border-color:var(--ba-line);border-radius:4px}
-#page-grammar .grammar-search input{border-radius:5px;font-weight:400;border-color:var(--ba-line);background:var(--ba-paper)}
-#page-grammar .grammar-search input:focus{border-color:var(--ba-line-strong);box-shadow:0 0 0 3px transparent}
-#page-grammar .grammar-coming-soon{background:var(--ba-paper-2);color:var(--ba-ink);border-radius:5px}
-#page-grammar .grammar-coming-soon p{color:var(--ba-muted)}
-#page-grammar .grammar-coming-soon small{color:var(--ba-accent)}
-#page-grammar .grammar-detail-actions button{border-radius:5px;font-weight:600}
-#page-grammar .grammar-exercises-btn{background:var(--ba-accent);color:var(--ba-accent-ink);border-color:var(--ba-accent)!important}
 /* Exercise browser and quizzes */
 #page-exercises :is(.exercise-discovery-level,.exercise-discovery-topic,.exercise-discovery-empty){border-radius:6px;border:1px solid var(--ba-line);box-shadow:none;background:var(--ba-paper)}
 #page-exercises .exercise-discovery-level.active{background:var(--ba-accent);border-color:var(--ba-accent)}
@@ -48,7 +30,6 @@
 @media(max-width:700px){#page-exercises .lesson-panel{position:static}#page-exercises .quiz-panel{padding:22px}#page-exercises .exercise-discovery-levels{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 
-#page-grammar .grammar-topic-card h4{font-weight:600}
 #page-exercises .topic-overview{background:var(--ba-paper-2);color:var(--ba-ink);border-color:var(--ba-line)}
 #page-exercises .topic-overview p{color:var(--ba-muted)}
 #page-exercises .topic-overview .tag{background:transparent;color:var(--ba-accent);border:0}
@@ -59,28 +40,25 @@
 #page-exercises .exercise-discovery-heading>span{background:transparent;border-color:var(--ba-line);border-radius:4px;font-weight:500}
 
 html[data-theme="dark"] .academy-theme :is(.page-hero-inner p,.card p,.topic-overview p,footer,.sub){color:var(--ba-muted)!important}
-html[data-theme="dark"] .academy-theme :is(.exercise-discovery-topic-action,.grammar-topic-arrow,.grammar-topic-footer,.grammar-detail-breadcrumb button){color:var(--ba-accent)!important}
-html[data-theme="dark"] .academy-theme :is(.card,.level-card,.lesson-panel,.quiz-panel,.exercise-set-card,.topic-choice-card,.level-choice-card,.exercise-discovery-level,.exercise-discovery-topic,.exercise-discovery-empty,.grammar-level-tab,.grammar-topic-card,.grammar-detail-card,.grammar-empty){background:var(--ba-paper)!important;border-color:var(--ba-line)!important;color:var(--ba-ink)!important}
+html[data-theme="dark"] .academy-theme :is(.exercise-discovery-topic-action){color:var(--ba-accent)!important}
+html[data-theme="dark"] .academy-theme :is(.card,.level-card,.lesson-panel,.quiz-panel,.exercise-set-card,.topic-choice-card,.level-choice-card,.exercise-discovery-level,.exercise-discovery-topic,.exercise-discovery-empty){background:var(--ba-paper)!important;border-color:var(--ba-line)!important;color:var(--ba-ink)!important}
 html[data-theme="dark"] .academy-theme :is(footer){border-color:var(--ba-line)!important}
-html[data-theme="dark"] .academy-theme :is(.topic-overview,.notice,.grammar-coming-soon,.lesson-rule>div){background:var(--ba-paper-2)!important;border-color:var(--ba-line)!important;color:var(--ba-ink)!important}
-html[data-theme="dark"] .academy-theme :is(.written-answer-input,.exercise-discovery-search input,.grammar-search input,.quiz-option){background:var(--ba-paper)!important;border-color:var(--ba-line-strong)!important;color:var(--ba-ink)!important}
-html[data-theme="dark"] .academy-theme :is(.set-chip,.topic-status,.quiz-word,.quiz-counter,.grammar-level-code,.grammar-topic-level,.exercise-discovery-level-code,.exercise-discovery-topic-level){background:var(--ba-paper-2)!important;color:var(--ba-ink)!important;border-color:var(--ba-line-strong)!important}
-html[data-theme="dark"] .academy-theme :is(.exercise-discovery-level.active,.grammar-level-tab.active){background:var(--ba-accent)!important;color:var(--ba-accent-ink)!important;border-color:var(--ba-accent)!important}
-html[data-theme="dark"] .academy-theme :is(.exercise-discovery-level.active .exercise-discovery-level-code,.grammar-level-tab.active .grammar-level-code){background:var(--ba-ink)!important;color:var(--ba-accent-ink)!important}
+html[data-theme="dark"] .academy-theme :is(.topic-overview,.notice,.lesson-rule>div){background:var(--ba-paper-2)!important;border-color:var(--ba-line)!important;color:var(--ba-ink)!important}
+html[data-theme="dark"] .academy-theme :is(.written-answer-input,.exercise-discovery-search input,.quiz-option){background:var(--ba-paper)!important;border-color:var(--ba-line-strong)!important;color:var(--ba-ink)!important}
+html[data-theme="dark"] .academy-theme :is(.set-chip,.topic-status,.quiz-word,.quiz-counter,.exercise-discovery-level-code,.exercise-discovery-topic-level){background:var(--ba-paper-2)!important;color:var(--ba-ink)!important;border-color:var(--ba-line-strong)!important}
+html[data-theme="dark"] .academy-theme :is(.exercise-discovery-level.active){background:var(--ba-accent)!important;color:var(--ba-accent-ink)!important;border-color:var(--ba-accent)!important}
+html[data-theme="dark"] .academy-theme :is(.exercise-discovery-level.active .exercise-discovery-level-code){background:var(--ba-ink)!important;color:var(--ba-accent-ink)!important}
 html[data-theme="dark"] .academy-theme .quiz-option.selected{background:var(--ba-paper-2)!important;border-color:var(--ba-accent)!important}
 html[data-theme="dark"] .academy-theme :is(.quiz-option.correct,.quiz-feedback.good){background:var(--ba-right-bg)!important;color:var(--ba-right)!important;border-color:var(--ba-right)!important}
 html[data-theme="dark"] .academy-theme :is(.quiz-option.wrong,.quiz-feedback.bad,.form-status.error){background:var(--ba-wrong-bg)!important;color:var(--ba-wrong)!important;border-color:var(--ba-wrong)!important}
 html[data-theme="dark"] .academy-theme .progress-track{background:var(--ba-line)!important}
 html[data-theme="dark"] .academy-theme .progress-bar{background:var(--ba-accent)!important}
 /* Inactive level tabs keep readable names and counts in the dark theme. */
-html[data-theme="dark"] .academy-theme .grammar-level-tab:not(.active) .grammar-level-name{color:var(--ba-ink)!important}
-html[data-theme="dark"] .academy-theme .grammar-level-tab:not(.active) .grammar-level-count{color:var(--ba-muted)!important}
-html[data-theme="dark"] .academy-theme .grammar-level-tab.active .grammar-level-count{color:var(--ba-accent-ink)!important}
-#page-grammar .grammar-level-tab:not(.active) .grammar-level-count{color:var(--ba-muted)}
-html[data-theme="dark"] .academy-theme :is(.lesson-rule strong,.grammar-coming-soon small,.exercise-breadcrumb button,.exercise-discovery-heading>span){color:var(--ba-accent)!important}
-html[data-theme="dark"] .academy-theme :is(.exercise-discovery-level-meta,.exercise-discovery-status,.best-score,.written-answer-wrap label,.set-meta,.grammar-result-count){color:var(--ba-muted)!important}
+html[data-theme="dark"] .academy-theme :is(.lesson-rule strong,.exercise-breadcrumb button,.exercise-discovery-heading>span){color:var(--ba-accent)!important}
+html[data-theme="dark"] .academy-theme :is(.exercise-discovery-level-meta,.exercise-discovery-status,.best-score,.written-answer-wrap label,.set-meta){color:var(--ba-muted)!important}
 html[data-theme="dark"] .academy-theme .result-score{background:var(--ba-paper-2)!important;color:var(--ba-ink)!important}
 
-html[data-theme="dark"] .academy-theme :is(.written-answer-wrap label,.exercise-set-card p,.grammar-topic-card p){color:var(--ba-muted)!important}
-html[data-theme="dark"] .academy-theme :is(.exercise-discovery-level.active,.grammar-level-tab.active) :is(.exercise-discovery-level-name,.exercise-discovery-level-meta,.grammar-level-name){color:var(--ba-accent-ink)!important}
+html[data-theme="dark"] .academy-theme :is(.written-answer-wrap label,.exercise-set-card p){color:var(--ba-muted)!important}
+html[data-theme="dark"] .academy-theme :is(.exercise-discovery-level-meta){color:var(--ba-accent-ink)!important}
 
+html[data-theme="dark"] .academy-theme .exercise-discovery-level.active :is(.exercise-discovery-level-name,.exercise-discovery-level-meta){color:var(--ba-accent-ink)!important}

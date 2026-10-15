@@ -44,18 +44,8 @@
 #page-exercises .lesson-rule>div{background:var(--ba-paper-2);border-radius:5px}
 #page-exercises .lesson-panel{top:96px}
 #page-exercises .example-line{border-radius:5px}
-/* About and contact */
-#page-contact .contact-form-shell{max-width:920px;margin:0}
-#page-contact .contact-main-card{padding:36px}
-#page-contact .contact-mail-row{background:transparent;border:0;border-bottom:1px solid var(--ba-line);border-radius:0;padding:0 0 24px;margin-bottom:32px;width:100%}
-#page-contact .contact-mail-icon{background:var(--ba-paper-2);color:var(--ba-accent);border-radius:5px}
-#page-contact .contact-mail-row a{font-weight:600}
-#page-contact .contact-heading-line{background:var(--ba-line-strong)}
-#page-contact .contact-guide-title{font-weight:500}
-#page-contact .contact-guide-list{font-size:14px}
-#page-contact .field label{font-weight:600}
-#page-contact .contact-submit{width:auto;min-width:180px;padding-inline:26px}
-@media(max-width:700px){#page-contact .contact-main-card{padding:24px}#page-exercises .lesson-panel{position:static}#page-exercises .quiz-panel{padding:22px}#page-exercises .exercise-discovery-levels{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+@media(max-width:700px){#page-exercises .lesson-panel{position:static}#page-exercises .quiz-panel{padding:22px}#page-exercises .exercise-discovery-levels{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 
 #page-grammar .grammar-topic-card h4{font-weight:600}
@@ -70,9 +60,9 @@
 
 html[data-theme="dark"] .academy-theme :is(.page-hero-inner p,.card p,.topic-overview p,footer,.sub){color:var(--ba-muted)!important}
 html[data-theme="dark"] .academy-theme :is(.exercise-discovery-topic-action,.grammar-topic-arrow,.grammar-topic-footer,.grammar-detail-breadcrumb button){color:var(--ba-accent)!important}
-html[data-theme="dark"] .academy-theme :is(.card,.level-card,.contact-main-card,.lesson-panel,.quiz-panel,.exercise-set-card,.topic-choice-card,.level-choice-card,.exercise-discovery-level,.exercise-discovery-topic,.exercise-discovery-empty,.grammar-level-tab,.grammar-topic-card,.grammar-detail-card,.grammar-empty){background:var(--ba-paper)!important;border-color:var(--ba-line)!important;color:var(--ba-ink)!important}
-html[data-theme="dark"] .academy-theme :is(.contact-mail-row,footer){border-color:var(--ba-line)!important}
-html[data-theme="dark"] .academy-theme :is(.topic-overview,.notice,.grammar-coming-soon,.contact-mail-icon,.lesson-rule>div){background:var(--ba-paper-2)!important;border-color:var(--ba-line)!important;color:var(--ba-ink)!important}
+html[data-theme="dark"] .academy-theme :is(.card,.level-card,.lesson-panel,.quiz-panel,.exercise-set-card,.topic-choice-card,.level-choice-card,.exercise-discovery-level,.exercise-discovery-topic,.exercise-discovery-empty,.grammar-level-tab,.grammar-topic-card,.grammar-detail-card,.grammar-empty){background:var(--ba-paper)!important;border-color:var(--ba-line)!important;color:var(--ba-ink)!important}
+html[data-theme="dark"] .academy-theme :is(footer){border-color:var(--ba-line)!important}
+html[data-theme="dark"] .academy-theme :is(.topic-overview,.notice,.grammar-coming-soon,.lesson-rule>div){background:var(--ba-paper-2)!important;border-color:var(--ba-line)!important;color:var(--ba-ink)!important}
 html[data-theme="dark"] .academy-theme :is(.written-answer-input,.exercise-discovery-search input,.grammar-search input,.quiz-option){background:var(--ba-paper)!important;border-color:var(--ba-line-strong)!important;color:var(--ba-ink)!important}
 html[data-theme="dark"] .academy-theme :is(.set-chip,.topic-status,.quiz-word,.quiz-counter,.grammar-level-code,.grammar-topic-level,.exercise-discovery-level-code,.exercise-discovery-topic-level){background:var(--ba-paper-2)!important;color:var(--ba-ink)!important;border-color:var(--ba-line-strong)!important}
 html[data-theme="dark"] .academy-theme :is(.exercise-discovery-level.active,.grammar-level-tab.active){background:var(--ba-accent)!important;color:var(--ba-accent-ink)!important;border-color:var(--ba-accent)!important}
@@ -91,6 +81,6 @@ html[data-theme="dark"] .academy-theme :is(.lesson-rule strong,.grammar-coming-s
 html[data-theme="dark"] .academy-theme :is(.exercise-discovery-level-meta,.exercise-discovery-status,.best-score,.written-answer-wrap label,.set-meta,.grammar-result-count){color:var(--ba-muted)!important}
 html[data-theme="dark"] .academy-theme .result-score{background:var(--ba-paper-2)!important;color:var(--ba-ink)!important}
 
-html[data-theme="dark"] .academy-theme :is(.contact-mail-row a,.contact-guide-title,.contact-guide-list,.field label,.written-answer-wrap label,.exercise-set-card p,.grammar-topic-card p){color:var(--ba-muted)!important}
+html[data-theme="dark"] .academy-theme :is(.written-answer-wrap label,.exercise-set-card p,.grammar-topic-card p){color:var(--ba-muted)!important}
 html[data-theme="dark"] .academy-theme :is(.exercise-discovery-level.active,.grammar-level-tab.active) :is(.exercise-discovery-level-name,.exercise-discovery-level-meta,.grammar-level-name){color:var(--ba-accent-ink)!important}
 

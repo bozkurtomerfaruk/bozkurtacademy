@@ -18,11 +18,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&family=STIX+Two+Text:wght@400;600&display=swap">
   <link rel="stylesheet" href="css/style.css?v=11" />
-  <link rel="stylesheet" href="css/theme.css?v=9" />
+  <link rel="stylesheet" href="css/theme.css?v=10" />
   <link rel="stylesheet" href="css/base.css?v=3" />
   <link rel="stylesheet" href="css/home.css?v=5" />
   <link rel="stylesheet" href="css/lessons.css?v=2" />
-  <link rel="stylesheet" href="css/pages.css?v=2" />
+  <link rel="stylesheet" href="css/pages.css?v=3" />
   <link rel="stylesheet" href="css/a1-lessons.css?v=1" />
 </head>
 <body class="academy-theme">
@@ -510,7 +510,7 @@
 
         <section class="block">
           <div class="contact-form-shell">
-            <article class="contact-main-card">
+            <aside class="contact-guide">
               <div class="contact-mail-row">
                 <span class="contact-mail-icon" aria-hidden="true">✉</span>
                 <div>
@@ -518,14 +518,9 @@
                   <a href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a>
                 </div>
               </div>
-
-              <div class="contact-heading-row">
-                <span class="contact-heading-line" aria-hidden="true"></span>
-                <h2 data-i18n="formTitle">İletişim formu</h2>
-              </div>
-
-              <p class="contact-guide-title" data-i18n="contactGuideTitle">Mesajında paylaşabileceğin bilgiler:</p>
-              <ul class="contact-guide-list">
+              <div class="contact-guide-slip ba-slip">
+                <p class="contact-guide-title" data-i18n="contactGuideTitle">Mesajında paylaşabileceğin bilgiler:</p>
+                <ul class="contact-guide-list ba-checklist">
                 <li data-i18n="contactGuide1">Almanca seviyen (biliyorsan A1–B2)</li>
                 <li data-i18n="contactGuide2">Hedefin: günlük Almanca, sınav, iş veya okul</li>
                 <li data-i18n="contactGuide3">Zorlandığın konu veya beceri</li>
@@ -533,7 +528,15 @@
                 <li data-i18n="contactGuide5">Bireysel / grup ders tercihin</li>
                 <li data-i18n="contactGuide6">Varsa eklemek istediğin özel bir not</li>
               </ul>
-
+              </div>
+            </aside>
+            <article class="contact-main-card ba-card">
+              <div class="ba-stripe" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="contact-card-body">
+              <div class="contact-heading-row">
+                <span class="contact-heading-line" aria-hidden="true"></span>
+                <h2 data-i18n="formTitle">İletişim formu</h2>
+              </div>
               <form id="contactForm" class="contact-message-form" novalidate>
                 <div class="contact-form-grid">
                   <div class="field">
@@ -542,7 +545,7 @@
                   </div>
                   <div class="field">
                     <label for="email" data-i18n="emailLabel">E-posta</label>
-                    <input id="email" name="email" type="email" autocomplete="email" required data-i18n-placeholder="emailPlaceholder" placeholder="ornek@email.com" />
+                    <input id="email" name="email" type="email" autocomplete="email" spellcheck="false" required data-i18n-placeholder="emailPlaceholder" placeholder="ornek@email.com" />
                   </div>
                 </div>
 
@@ -556,6 +559,7 @@
                 <button id="contactSubmitBtn" class="btn primary block contact-submit" type="submit" data-i18n="sendMessage">Mesaj gönder</button>
                 <div id="formStatus" class="contact-form-status" role="status" aria-live="polite"></div>
               </form>
+              </div>
             </article>
           </div>
         </section>

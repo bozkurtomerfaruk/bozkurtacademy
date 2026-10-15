@@ -75,6 +75,23 @@ body.academy-theme{
 .ba-stripe i{flex:none;width:20px;background:var(--ba-paper)}
 .ba-stripe i:nth-child(odd){background:var(--ba-accent)}
 
+.ba-stripe--bold{height:32px}
+.ba-stripe--bold i{width:24px}
+/* Shared printed pieces: a paper card, a ticket stub, a slip with a torn edge, a check list */
+.academy-theme .ba-card{background:var(--ba-paper);color:var(--ba-ink);border-radius:var(--ba-radius);overflow:hidden}
+.academy-theme .ba-card-body{padding:clamp(24px,4vw,56px)}
+.academy-theme .ba-field{background:var(--ba-field);color:var(--ba-field-ink);border-radius:var(--ba-radius)}
+.academy-theme .ba-field :is(h2,h3,p,a){color:var(--ba-field-ink)}
+.academy-theme .ba-stub{display:grid;grid-template-columns:repeat(var(--ba-stub-cols,3),auto);justify-content:start;gap:16px 56px;margin:0;padding-top:24px;border-top:6px dotted var(--ba-ground);font-variant-numeric:tabular-nums}
+.academy-theme .ba-stub :is(dt,span){display:block;font-size:var(--ba-small);color:var(--ba-muted);font-weight:400}
+.academy-theme .ba-stub :is(dd,strong){display:block;margin:2px 0 0;font-family:var(--ba-serif);font-size:var(--ba-lead);font-weight:600;line-height:1.25;color:var(--ba-ink)}
+.academy-theme .ba-slip{background:var(--ba-paper);color:var(--ba-ink);padding:32px clamp(22px,3vw,40px) 44px;clip-path:polygon(0 0,100% 0,100.00% calc(100% - 12px),95.83% calc(100% - 0px),91.67% calc(100% - 12px),87.50% calc(100% - 0px),83.33% calc(100% - 12px),79.17% calc(100% - 0px),75.00% calc(100% - 12px),70.83% calc(100% - 0px),66.67% calc(100% - 12px),62.50% calc(100% - 0px),58.33% calc(100% - 12px),54.17% calc(100% - 0px),50.00% calc(100% - 12px),45.83% calc(100% - 0px),41.67% calc(100% - 12px),37.50% calc(100% - 0px),33.33% calc(100% - 12px),29.17% calc(100% - 0px),25.00% calc(100% - 12px),20.83% calc(100% - 0px),16.67% calc(100% - 12px),12.50% calc(100% - 0px),8.33% calc(100% - 12px),4.17% calc(100% - 0px),0.00% calc(100% - 12px))}
+.academy-theme .ba-checklist{list-style:none;margin:0;display:grid;gap:12px}
+.academy-theme .ba-checklist:not(.ba-slip){padding:0}
+.academy-theme .ba-checklist>*{position:relative;padding-left:32px;line-height:1.45}
+.academy-theme .ba-checklist>*::before{content:"✓";position:absolute;left:0;top:0;width:22px;height:22px;display:grid;place-items:center;background:var(--ba-accent);color:var(--ba-accent-ink);font-size:13px;font-weight:700}
+@media(max-width:560px){.academy-theme .ba-stub{grid-template-columns:repeat(2,auto);gap:16px 40px}}
+
 /* Buttons: square, one fill colour */
 .academy-theme .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;
@@ -178,3 +195,5 @@ body.academy-theme{
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   .academy-theme .site-motion [data-site-reveal]{opacity:1;transform:none}
 }
+.academy-theme :is(section,article,div,main,h1,h2,h3)[tabindex="-1"]:focus{outline:none!important}
+.academy-theme main [id]{scroll-margin-top:96px}

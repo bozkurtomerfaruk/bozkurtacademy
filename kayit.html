@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8f7f3" />
+  <meta name="robots" content="noindex, nofollow" />
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('ba-theme')==='dark'?'dark':'light'}catch(_){document.documentElement.dataset.theme='light'}</script>
+  <title>Kayıt ol | Bozkurt Academy</title>
+  <meta name="description" content="Bozkurt Academy öğrenci kaydı." />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="preload" href="fonts/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=11" />
+  <link rel="stylesheet" href="css/base.css?v=6" />
+  <link rel="stylesheet" href="css/account.css?v=1" />
+</head>
+<body class="academy-theme account-page">
+  <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
+  <div class="shell">
+    <header class="topbar">
+      <nav class="nav" aria-label="Site menüsü">
+        <a class="brand" href="index.html" aria-label="Bozkurt Academy ana sayfa">
+          <img src="images/logo-transparent.png?v=3" width="512" height="512" alt="" class="brand-logo">
+          <div><div class="brand-title">Bozkurt Academy</div></div>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteMenu" data-i18n="menuOpen">Menü</button>
+        <div class="nav-links" id="siteMenu">
+          <a class="nav-link" href="index.html" data-i18n="navHome">Ana Sayfa</a>
+          <a class="nav-link" href="index.html#lessons" data-i18n="navLessons">Almanca Dersleri</a>
+          <a class="nav-link" href="index.html#grammar" data-i18n="navGrammar">Gramer</a>
+          <a class="nav-link" href="index.html#exercises" data-i18n="navExercises">Alıştırmalar</a>
+          <a class="nav-link" href="index.html#exams" data-i18n="navExams">Sınav Hazırlığı</a>
+          <a class="nav-link" href="index.html#about" data-i18n="navAbout">Hakkımda</a>
+          <a class="nav-link" href="index.html#contact" data-i18n="navContact">İletişim</a>
+          <a class="nav-link nav-account active" aria-current="page" href="giris.html" id="navAccount" data-i18n="navLogin">Giriş</a>
+        </div>
+        <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Koyu temaya geç" aria-pressed="false"><svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="currentColor"/></svg><svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="lang" aria-label="Dil seçimi">
+          <button data-lang="tr" class="active">TR</button>
+          <button data-lang="de">DE</button>
+          <button data-lang="en">EN</button>
+        </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" tabindex="-1" class="acc-main">
+      <section class="acc-wrap acc-narrow" aria-labelledby="regTitle">
+        <div class="ba-card acc-card">
+          <div class="ba-stripe" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="ba-card-body">
+            <h1 id="regTitle" data-i18n="regTitle">Kayıt ol</h1>
+            <p class="acc-lead" id="regLead" data-i18n="regLead">Kayıttan sonra hesabın öğretmen onayıyla açılır.</p>
+            <p class="acc-status error" id="notConfigured" role="alert" hidden data-i18n="accNotConfigured">Giriş sistemi henüz kurulmadı. Kısa süre sonra açılacak.</p>
+
+            <form id="regForm" class="acc-form" novalidate>
+              <div class="field">
+                <label for="regName" data-i18n="regName">Ad soyad</label>
+                <input id="regName" name="name" autocomplete="name" maxlength="80" required>
+              </div>
+              <div class="field" id="emailField">
+                <label for="regEmail" data-i18n="accEmail">E-posta</label>
+                <input id="regEmail" name="email" type="email" autocomplete="email" inputmode="email" required>
+              </div>
+              <div class="field" id="passwordField">
+                <label for="regPassword" data-i18n="accPassword">Şifre</label>
+                <input id="regPassword" name="password" type="password" autocomplete="new-password" minlength="8" required aria-describedby="regPasswordHint">
+                <small class="acc-hint" id="regPasswordHint" data-i18n="regPasswordHint">En az 8 karakter.</small>
+              </div>
+              <div class="field">
+                <label for="regBirthYear" data-i18n="regBirthYear">Doğum yılı</label>
+                <input id="regBirthYear" name="birthYear" type="text" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="bday-year" placeholder="2008" required aria-describedby="regBirthYearHint">
+                <small class="acc-hint" id="regBirthYearHint" data-i18n="regBirthYearHint">Sadece yıl. Tam doğum tarihini sormuyoruz.</small>
+              </div>
+
+              <fieldset class="acc-minor" id="minorBox" hidden>
+                <legend data-i18n="regMinorTitle">Veli onayı</legend>
+                <p data-i18n="regMinorText">Hesabının açılması için velinin onayı gerekiyor. Öğretmenin velinle iletişime geçecek.</p>
+                <div class="field">
+                  <label for="regParentName" data-i18n="regParentName">Veli adı soyadı</label>
+                  <input id="regParentName" name="parentName" autocomplete="off" maxlength="80">
+                </div>
+                <div class="field">
+                  <label for="regParentEmail" data-i18n="regParentEmail">Veli e-postası</label>
+                  <input id="regParentEmail" name="parentEmail" type="email" autocomplete="off" inputmode="email">
+                </div>
+              </fieldset>
+
+              <label class="acc-check">
+                <input type="checkbox" id="regPrivacy" required>
+                <span><span data-i18n="regPrivacyBefore"></span><a class="ba-link" href="privacy.html" target="_blank" rel="noopener" data-i18n="regPrivacyLink">Gizlilik politikasını</a><span data-i18n="regPrivacyAfter"> okudum.</span></span>
+              </label>
+
+              <button class="btn primary acc-submit" type="submit" id="regSubmit" data-i18n="regSubmit">Kayıt ol</button>
+            </form>
+
+            <div id="googleArea" hidden>
+              <div class="acc-divider"><span data-i18n="accOr">veya</span></div>
+              <button class="btn ghost acc-google" type="button" id="googleBtn">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.3Z"/><path fill="currentColor" d="M12 22c2.7 0 5-.9 6.6-2.5l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22Z" opacity=".75"/><path fill="currentColor" d="M6.4 13.9a6 6 0 0 1 0-3.8V7.5H3.1a10 10 0 0 0 0 9l3.3-2.6Z" opacity=".55"/><path fill="currentColor" d="M12 6c1.5 0 2.8.5 3.8 1.5l2.9-2.9A10 10 0 0 0 3.1 7.5l3.3 2.6C7.2 7.8 9.4 6 12 6Z" opacity=".9"/></svg>
+                <span data-i18n="regGoogle">Google ile kayıt ol</span>
+              </button>
+              <p class="acc-hint" data-i18n="regGoogleNote">Google ile kayıtta e-posta adresin Google hesabından alınır. Önce adını ve doğum yılını yaz.</p>
+            </div>
+
+            <div class="acc-status" id="regStatus" role="alert" hidden></div>
+            <p class="acc-switch" id="regSwitch"><span data-i18n="regHaveAccount">Zaten hesabın var mı?</span> <a class="ba-link" href="giris.html" data-i18n="regLoginLink">Giriş yap</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong>Bozkurt Academy</strong><br><span data-i18n="footerText">Online Almanca dersleri ve öğrenme materyalleri</span></div>
+      <div class="footer-meta">
+        <nav class="footer-links" aria-label="Yasal bilgiler" data-i18n-aria="footerLegal">
+          <a href="privacy.html" data-i18n="footerPrivacy">Gizlilik politikası</a>
+        </nav>
+        <span>© 2026 Bozkurt Academy</span>
+      </div>
+    </footer>
+  </div>
+  <script src="js/app.js?v=14"></script>
+  <script src="js/theme.js?v=6"></script>
+  <script type="module" src="js/account/register.js"></script>
+</body>
+</html>

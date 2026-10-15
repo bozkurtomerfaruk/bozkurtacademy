@@ -17,13 +17,13 @@
   <link rel="preload" href="fonts/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=11" />
-  <link rel="stylesheet" href="css/base.css?v=5" />
+  <link rel="stylesheet" href="css/base.css?v=6" />
   <link rel="stylesheet" href="css/home.css?v=5" />
   <link rel="stylesheet" href="css/lessons.css?v=3" />
   <link rel="stylesheet" href="css/pages.css?v=4" />
   <link rel="stylesheet" id="grammarHubCss" href="css/grammar.css?v=5" />
   <link rel="stylesheet" href="css/a1-lessons.css?v=4" />
-  <link rel="stylesheet" id="exerciseHubCss" href="css/exercises-hub.css?v=4" />
+  <link rel="stylesheet" id="exerciseHubCss" href="css/exercises-hub.css?v=5" />
 </head>
 <body class="academy-theme">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
@@ -43,6 +43,8 @@
           <a class="nav-link" href="#exams" data-page="exams" data-i18n="navExams">Sınav Hazırlığı</a>
           <a class="nav-link" href="#about" data-page="about" data-i18n="navAbout">Hakkımda</a>
           <a class="nav-link" href="#contact" data-page="contact" data-i18n="navContact">İletişim</a>
+          <!-- Quiet launch: the account link stays hidden until the privacy policy is final. Login pages still open by URL. -->
+          <a class="nav-link nav-account" href="giris.html" id="navAccount" data-i18n="navLogin" hidden>Giriş</a>
         </div>
         <div class="nav-actions">
         <button id="themeToggle" class="theme-toggle" type="button" aria-label="Koyu temaya geç" aria-pressed="false"><svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="currentColor"/></svg><svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
@@ -556,21 +558,21 @@
     <footer>
       <div><strong>Bozkurt Academy</strong><br><span data-i18n="footerText">Online Almanca dersleri ve öğrenme materyalleri</span></div>
       <div class="footer-meta">
-        <!-- Privacy policy: add privacy.html (see docs/privacy-policy.md), then remove "hidden" below. -->
-        <nav class="footer-links" aria-label="Yasal bilgiler" data-i18n-aria="footerLegal" hidden>
+        <nav class="footer-links" aria-label="Yasal bilgiler" data-i18n-aria="footerLegal">
           <a href="privacy.html" data-i18n="footerPrivacy">Gizlilik politikası</a>
         </nav>
         <span>© 2026 Bozkurt Academy</span>
       </div>
     </footer>
   </div>
-  <script src="js/app.js?v=13"></script>
-  <script src="js/quiz.js?v=19"></script>
+  <script src="js/app.js?v=14"></script>
+  <script src="js/quiz.js?v=20"></script>
   <script src="js/exercise-links.js?v=3"></script>
   <script src="js/a1-lessons.js?v=9"></script>
   <script src="js/grammar.js?v=13"></script>
   <script src="js/theme.js?v=6"></script>
   <script src="js/home.js?v=5"></script>
+  <script type="module" src="js/account/session.js?v=1"></script>
   <script defer data-goatcounter="https://bozkurtacademy.goatcounter.com/count" data-goatcounter-settings='{"no_onload": true}' src="js/vendor/count.js?v=2.7.0"></script>
   <script defer src="js/analytics.js?v=1"></script>
 </body>

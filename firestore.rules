@@ -1,0 +1,140 @@
+rules_version = '2';
+
+// Bozkurt Academy: öğrenci sistemi güvenlik kuralları.
+// Firebase yapılandırması herkese açık olduğu için bütün koruma buradadır.
+// Kurulum: aşağıdaki teacherUid() içindeki değeri kendi UID'inle değiştir (docs/kurulum.md).
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function teacherUid() {
+      return 'OGRETMEN_UID_BURAYA';
+    }
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isTeacher() {
+      return signedIn() && request.auth.uid == teacherUid();
+    }
+
+    function isSelf(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    function profilePath(uid) {
+      return /databases/$(database)/documents/users/$(uid);
+    }
+
+    // Hesap açık mı: öğretmen onayı VE (16 yaş ve üstü VEYA veli onayı alınmış).
+    function isActive(uid) {
+      let p = get(profilePath(uid)).data;
+      return p.status == 'active'
+        && (p.minor == false || p.get('parentConsent', {}).get('given', false) == true);
+    }
+
+    // Öğrenci kendi alt koleksiyonlarını sadece hesabı açıkken okuyabilir.
+    function ownActive(uid) {
+      return isSelf(uid) && exists(profilePath(uid)) && isActive(uid);
+    }
+
+    function validEmail(value) {
+      return value is string && value.size() <= 254
+        && value.matches('^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$');
+    }
+
+    function validName(value) {
+      return value is string && value.size() >= 2 && value.size() <= 80;
+    }
+
+    function validParent(parent, studentEmail) {
+      return parent is map
+        && parent.keys().hasOnly(['name', 'email'])
+        && parent.keys().hasAll(['name', 'email'])
+        && validName(parent.name)
+        && validEmail(parent.email)
+        && parent.email.lower() != studentEmail.lower();
+    }
+
+    // Kayıt: öğrenci kendi profilini sadece "onay bekliyor" olarak oluşturabilir.
+    // 16 yaş altı: bu yıl − doğum yılı ≤ 16 (güvenli tarafta, docs/plan-ogrenci-sistemi.md 0.1).
+    function validNewProfile() {
+      let d = request.resource.data;
+      let year = request.time.year();
+      let provider = request.auth.token.firebase.sign_in_provider;
+      let minor = d.birthYear is int && year - d.birthYear <= 16;
+      return d.keys().hasOnly(['name', 'email', 'birthYear', 'minor', 'provider', 'status', 'parent', 'emailVerified', 'createdAt'])
+        && d.keys().hasAll(['name', 'email', 'birthYear', 'minor', 'provider', 'status', 'createdAt'])
+        && validName(d.name)
+        && request.auth.token.email is string
+        && d.email == request.auth.token.email
+        && d.birthYear is int && d.birthYear >= year - 100 && d.birthYear <= year - 5
+        && d.minor == minor
+        && provider in ['password', 'google.com']
+        && d.provider == provider
+        && d.status == 'pending'
+        && d.createdAt == request.time
+        && (!('emailVerified' in d) || verifiedFlag(d.emailVerified))
+        && (
+          (minor && provider == 'password' && ('parent' in d) && validParent(d.parent, d.email))
+          || (!minor && !('parent' in d))
+        );
+    }
+
+    // "E-posta doğrulandı" bilgisi sadece giriş bilgisi bunu doğruluyorsa yazılabilir.
+    function verifiedFlag(value) {
+      return value == true && request.auth.token.email_verified == true;
+    }
+
+    function validResult() {
+      let d = request.resource.data;
+      return d.keys().hasOnly(['level', 'topic', 'exercise', 'score', 'total', 'at'])
+        && d.keys().hasAll(['level', 'topic', 'exercise', 'score', 'total', 'at'])
+        && d.level is string && d.level.matches('^[A-C][12]$')
+        && d.topic is string && d.topic.matches('^[a-z0-9-]{1,60}$')
+        && d.exercise is string && d.exercise.matches('^[a-z0-9-]{1,60}$')
+        && d.total is int && d.total >= 1 && d.total <= 200
+        && d.score is int && d.score >= 0 && d.score <= d.total
+        && d.at == request.time;
+    }
+
+    // Öğretmen her şeyi okuyup yazabilir (öğrenci listesi, onay, silme).
+    match /{document=**} {
+      allow read, write: if isTeacher();
+    }
+
+    match /users/{uid} {
+      // Kendi profil belgesi: "onay bekleniyor" ekranı için onaysızken de okunabilir.
+      allow get: if isSelf(uid);
+      // Silinmiş hesap yeniden profil açamaz.
+      allow create: if isSelf(uid)
+        && !exists(/databases/$(database)/documents/deleted/$(uid))
+        && validNewProfile();
+      // Öğrenci kendi profilinde sadece "e-posta doğrulandı" bilgisini ekleyebilir (Firebase
+      // e-posta doğrulamasından sonra). Diğer güncellemeler ve silme: sadece öğretmen.
+      allow update: if isSelf(uid)
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['emailVerified'])
+        && verifiedFlag(request.resource.data.emailVerified);
+
+      match /results/{resultId} {
+        allow read: if ownActive(uid);
+        // Sadece eklenebilir; düzenleme ve silme yok.
+        allow create: if ownActive(uid) && validResult();
+      }
+
+      match /assignments/{assignmentId} {
+        allow read: if ownActive(uid);
+      }
+
+      match /resources/{resourceId} {
+        allow read: if ownActive(uid);
+      }
+
+      match /lessons/{lessonId} {
+        allow read: if ownActive(uid);
+      }
+    }
+
+    // deleted/{uid}: sadece öğretmen (genel kural). Öğrenci okuyamaz.
+  }
+}

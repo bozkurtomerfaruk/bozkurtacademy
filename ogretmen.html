@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8f7f3" />
+  <meta name="robots" content="noindex, nofollow" />
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('ba-theme')==='dark'?'dark':'light'}catch(_){document.documentElement.dataset.theme='light'}</script>
+  <title>Öğretmen paneli | Bozkurt Academy</title>
+  <meta name="description" content="Bozkurt Academy öğretmen paneli." />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="preload" href="fonts/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=11" />
+  <link rel="stylesheet" href="css/base.css?v=6" />
+  <link rel="stylesheet" href="css/account.css?v=1" />
+</head>
+<body class="academy-theme account-page teacher-page">
+  <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
+  <div class="shell">
+    <header class="topbar">
+      <nav class="nav" aria-label="Site menüsü">
+        <a class="brand" href="index.html" aria-label="Bozkurt Academy ana sayfa">
+          <img src="images/logo-transparent.png?v=3" width="512" height="512" alt="" class="brand-logo">
+          <div><div class="brand-title">Bozkurt Academy</div></div>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteMenu" data-i18n="menuOpen">Menü</button>
+        <div class="nav-links" id="siteMenu">
+          <a class="nav-link" href="index.html" data-i18n="navHome">Ana Sayfa</a>
+          <a class="nav-link" href="index.html#lessons" data-i18n="navLessons">Almanca Dersleri</a>
+          <a class="nav-link" href="index.html#grammar" data-i18n="navGrammar">Gramer</a>
+          <a class="nav-link" href="index.html#exercises" data-i18n="navExercises">Alıştırmalar</a>
+          <a class="nav-link" href="index.html#exams" data-i18n="navExams">Sınav Hazırlığı</a>
+          <a class="nav-link" href="index.html#about" data-i18n="navAbout">Hakkımda</a>
+          <a class="nav-link" href="index.html#contact" data-i18n="navContact">İletişim</a>
+          <a class="nav-link nav-account active" aria-current="page" href="ogretmen.html" id="navAccount" data-i18n="navTeacher">Öğretmen paneli</a>
+        </div>
+        <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Koyu temaya geç" aria-pressed="false"><svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="currentColor"/></svg><svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" tabindex="-1" class="acc-main">
+      <section class="acc-wrap acc-wide" aria-labelledby="teacherTitle">
+        <header class="acc-head acc-head-row">
+          <div>
+            <p class="acc-eyebrow">Öğretmen paneli</p>
+            <h1 id="teacherTitle">Öğrenciler</h1>
+          </div>
+          <button class="btn ghost" type="button" id="logoutBtn">Çıkış yap</button>
+        </header>
+        <p class="acc-status error" id="notConfigured" role="alert" hidden>Giriş sistemi henüz kurulmadı. Firebase yapılandırmasını js/account/config.js dosyasına ekle (docs/kurulum.md).</p>
+        <p class="acc-status" id="teacherLoading">Yükleniyor…</p>
+        <p class="acc-status error" id="teacherError" role="alert" hidden></p>
+        <div class="acc-status warning" id="staleWarning" role="status" hidden></div>
+
+        <div id="teacherApp" hidden>
+          <div class="acc-tabs" role="tablist" aria-label="Öğrenci listeleri">
+            <button class="acc-tab" role="tab" type="button" id="tab-ogrenciler" aria-controls="panel-ogrenciler" data-tab="ogrenciler">Öğrenciler <span class="acc-count" data-count="ogrenciler"></span></button>
+            <button class="acc-tab" role="tab" type="button" id="tab-onay" aria-controls="panel-onay" data-tab="onay">Onay bekleyenler <span class="acc-count" data-count="onay"></span></button>
+            <button class="acc-tab" role="tab" type="button" id="tab-veli" aria-controls="panel-veli" data-tab="veli">Veli onayı bekleyenler <span class="acc-count" data-count="veli"></span></button>
+            <button class="acc-tab" role="tab" type="button" id="tab-silinecek" aria-controls="panel-silinecek" data-tab="silinecek">Silinmesi gereken kayıtlar <span class="acc-count" data-count="silinecek"></span></button>
+          </div>
+
+          <section class="acc-tabpanel" role="tabpanel" id="panel-ogrenciler" aria-labelledby="tab-ogrenciler">
+            <div class="ba-search acc-filter">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <label class="visually-hidden" for="studentFilter">Öğrenci ara</label>
+              <input type="search" id="studentFilter" placeholder="Ad veya e-posta ile ara" autocomplete="off">
+            </div>
+            <div class="acc-list" id="list-ogrenciler"></div>
+          </section>
+          <section class="acc-tabpanel" role="tabpanel" id="panel-onay" aria-labelledby="tab-onay" hidden>
+            <p class="acc-hint">16 yaş ve üstü kayıtlar ile veli onayı alınmış 16 yaş altı kayıtlar. Onayladığında hesap açılır.</p>
+            <div class="acc-list" id="list-onay"></div>
+          </section>
+          <section class="acc-tabpanel" role="tabpanel" id="panel-veli" aria-labelledby="tab-veli" hidden>
+            <p class="acc-hint">16 yaş altı öğrenciler. Veli onayını site dışında aldıktan sonra öğrencinin sayfasında “Veli onayı alındı” olarak işaretle.</p>
+            <div class="acc-list" id="list-veli"></div>
+          </section>
+          <section class="acc-tabpanel" role="tabpanel" id="panel-silinecek" aria-labelledby="tab-silinecek" hidden>
+            <p class="acc-hint">Gizlilik politikasındaki saklama süreleri: son dersten 12 ay sonra (hiç ders yoksa onay tarihinden), onaylanmamış kayıtlar 30 gün sonra silinir. Sunucu olmadığı için silme otomatik değil; buradan başlatılır.</p>
+            <div class="acc-list" id="list-silinecek"></div>
+          </section>
+        </div>
+      </section>
+      <dialog class="acc-dialog" id="deleteDialog" aria-labelledby="deleteDialogTitle"></dialog>
+    </main>
+
+    <footer>
+      <div><strong>Bozkurt Academy</strong><br><span data-i18n="footerText">Online Almanca dersleri ve öğrenme materyalleri</span></div>
+      <div class="footer-meta">
+        <nav class="footer-links" aria-label="Yasal bilgiler" data-i18n-aria="footerLegal">
+          <a href="privacy.html" data-i18n="footerPrivacy">Gizlilik politikası</a>
+        </nav>
+        <span>© 2026 Bozkurt Academy</span>
+      </div>
+    </footer>
+  </div>
+  <script src="js/app.js?v=14"></script>
+  <script src="js/theme.js?v=6"></script>
+  <script type="module" src="js/account/teacher.js"></script>
+</body>
+</html>

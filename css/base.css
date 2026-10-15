@@ -198,6 +198,15 @@ body.academy-theme{
   .academy-theme .topbar .nav-links{display:flex;justify-content:center;flex-wrap:nowrap;gap:2px}
   .academy-theme .topbar .nav-link{white-space:nowrap}
 }
+/* Narrow desktops: eight menu links (with Giriş/Panelim) still fit on one line */
+@media(min-width:1021px) and (max-width:1199px){
+  .academy-theme .topbar .nav{grid-template-columns:auto minmax(0,1fr) auto}
+  .academy-theme .topbar .nav-link{padding:8px 6px;font-size:14px}
+}
+@media(min-width:1021px) and (max-width:1120px){
+  .academy-theme .topbar .brand{width:auto}
+  .academy-theme .topbar .brand-title{display:none}
+}
 @media(max-width:1020px){
   .academy-theme .nav{display:flex;flex-direction:row;align-items:center;flex-wrap:wrap;gap:10px}
   .academy-theme .nav-actions{margin-left:auto}

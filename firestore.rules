@@ -98,7 +98,28 @@ service cloud.firestore {
         && d.at == request.time;
     }
 
-    // Öğretmen her şeyi okuyup yazabilir (öğrenci listesi, onay, silme).
+    // Öğrencinin ödeve eklediği kendi dokümanı: sadece Google Docs / Drive linki.
+    function validStudentDoc(value) {
+      return value is string
+        && (value == '' || (value.size() <= 500 && value.matches('^https://(docs|drive)[.]google[.]com/.*')));
+    }
+
+    // Ödevde öğrencinin değiştirebildikleri: "tamamladım", tamamlama zamanı ve kendi doküman linki.
+    // Tamamlarken zaman sunucu saati olmak zorunda; geri alınca boşaltılır.
+    function validAssignmentUpdate() {
+      let d = request.resource.data;
+      let changed = d.diff(resource.data).affectedKeys();
+      return changed.hasOnly(['done', 'doneAt', 'studentDocUrl'])
+        && d.done is bool
+        && (
+          !changed.hasAny(['done', 'doneAt'])
+          || (d.done == true && d.doneAt == request.time)
+          || (d.done == false && d.doneAt == null)
+        )
+        && validStudentDoc(d.get('studentDocUrl', ''));
+    }
+
+    // Öğretmen her şeyi okuyup yazabilir (öğrenci listesi, onay, ödevler, kaynaklar, silme).
     match /{document=**} {
       allow read, write: if isTeacher();
     }
@@ -124,6 +145,7 @@ service cloud.firestore {
 
       match /assignments/{assignmentId} {
         allow read: if ownActive(uid);
+        allow update: if ownActive(uid) && validAssignmentUpdate();
       }
 
       match /resources/{resourceId} {

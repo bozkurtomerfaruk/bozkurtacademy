@@ -15,7 +15,7 @@
   <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=11" />
   <link rel="stylesheet" href="css/base.css?v=6" />
-  <link rel="stylesheet" href="css/account.css?v=1" />
+  <link rel="stylesheet" href="css/account.css?v=2" />
 </head>
 <body class="academy-theme account-page teacher-page">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
@@ -58,8 +58,41 @@
         <p class="acc-status error" id="studentError" role="alert" hidden></p>
         <div class="acc-status" id="actionStatus" role="status" aria-live="polite" hidden></div>
 
-        <div class="acc-layout" id="studentApp" hidden>
+        <div class="acc-layout acc-layout-side-first" id="studentApp" hidden>
           <div class="acc-primary">
+            <section class="acc-section" aria-labelledby="assignmentsTitle">
+              <div class="acc-section-head">
+                <h2 id="assignmentsTitle">Ödevler</h2>
+                <a class="btn ghost acc-row-action" id="newAssignmentLink" href="ogretmen-odev.html">Bu öğrenciye ödev ver</a>
+              </div>
+              <div id="assignmentsList"></div>
+            </section>
+
+            <section class="acc-section" aria-labelledby="resourcesTitle">
+              <h2 id="resourcesTitle">Kaynaklar</h2>
+              <form class="ba-card acc-card acc-resource-form" id="resourceForm" novalidate>
+                <div class="ba-card-body acc-form">
+                  <h3>Kaynak ekle</h3>
+                  <div class="acc-pick">
+                    <div class="field">
+                      <label for="rTitle">Başlık</label>
+                      <input id="rTitle" maxlength="120" autocomplete="off" required>
+                    </div>
+                    <div class="field">
+                      <label for="rUrl">Link</label>
+                      <input id="rUrl" type="url" inputmode="url" placeholder="https://" autocomplete="off" required>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="rNote">Kısa not (isteğe bağlı)</label>
+                    <input id="rNote" maxlength="500" autocomplete="off">
+                  </div>
+                  <button class="btn primary" type="submit" id="rSubmit">Kaynağı ekle</button>
+                </div>
+              </form>
+              <div id="resourcesList"></div>
+            </section>
+
             <section class="acc-section" aria-labelledby="resultsTitle">
               <h2 id="resultsTitle">Alıştırmalar</h2>
               <div id="resultsList"></div>

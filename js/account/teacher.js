@@ -1,12 +1,15 @@
 // ogretmen.html: öğrenci listesi, onay bekleyenler, veli onayı bekleyenler, silinmesi gereken kayıtlar.
-import { $, h } from './common.js';
+import { $, exerciseNames, formatDateTime, BERLIN, h, safeLink } from './common.js';
 import {
-  approve, categorize, emailVerified, fmtDate, lastLessonByStudent, listStudents, openDeleteDialog, requireTeacher,
-  statusBadges, UNVERIFIED_WARNING
+  approve, categorize, deleteAssignmentCopies, emailVerified, fmtDate, lastLessonByStudent, listStudents,
+  loadAssignmentGroups, openDeleteDialog, requireTeacher, statusBadges, UNVERIFIED_WARNING
 } from './teacher-common.js';
 
-const TABS = ['ogrenciler', 'onay', 'veli', 'silinecek'];
+const TABS = ['ogrenciler', 'onay', 'veli', 'odevler', 'silinecek'];
 let lists = null;
+let groups = [];
+let studentsById = new Map();
+const fmtDateTime = (value) => formatDateTime(value, { lang: 'tr', timeZone: BERLIN });
 
 const detailLink = (s) => h('a', { class: 'btn ghost acc-row-action', href: `ogretmen-ogrenci.html?id=${encodeURIComponent(s.id)}` }, 'Detay');
 
@@ -83,10 +86,63 @@ function renderStale(){
     : [empty('Silinmesi gereken kayıt yok.')]));
 }
 
+async function renderAssignments(){
+  const box = $('list-odevler');
+  if(!groups.length){
+    box.replaceChildren(empty('Henüz ödev verilmedi.'));
+    return;
+  }
+  const names = await exerciseNames(groups.flatMap((g) => g.exercises), 'tr');
+  box.replaceChildren(...groups.map((g) => {
+    const done = g.copies.filter((c) => c.done).length;
+    const overdue = g.dueAt && g.dueAt < new Date();
+    const students = g.copies
+      .map((c) => ({ ...c, student: studentsById.get(c.uid) }))
+      .sort((a, b) => (a.student?.name || '').localeCompare(b.student?.name || '', 'tr'));
+    const deleteBtn = h('button', { class: 'btn danger acc-row-action', type: 'button' }, 'Sil');
+    deleteBtn.addEventListener('click', async () => {
+      if(!confirm(`"${g.title}" ödevi ${g.copies.length} öğrenciden silinsin mi? Öğrencilerin işaretleri de silinir.`)) return;
+      deleteBtn.disabled = true;
+      try{
+        await deleteAssignmentCopies(g.copies.map((c) => c.ref));
+        await load();
+      }catch(error){
+        console.error(error);
+        deleteBtn.disabled = false;
+        showError('Ödev silinemedi. Tekrar dene.');
+      }
+    });
+    return h('article', { class: 'acc-row acc-assign-row' },
+      h('div', { class: 'acc-row-main' },
+        h('span', { class: 'acc-row-name' }, g.title),
+        h('span', { class: 'acc-badges' },
+          h('span', { class: `acc-badge ${done === g.copies.length ? 'success' : ''}` }, `${done}/${g.copies.length} tamamladı`),
+          overdue && done < g.copies.length ? h('span', { class: 'acc-badge warning' }, 'Süresi geçti') : null)),
+      h('dl', { class: 'acc-row-meta' },
+        h('div', {}, h('dt', {}, 'Teslim'), h('dd', {}, fmtDateTime(g.dueAt))),
+        h('div', {}, h('dt', {}, 'Alıştırma'), h('dd', {}, String(g.exercises.length))),
+        g.docUrl ? h('div', {}, h('dt', {}, 'Doküman'), h('dd', {}, safeLink(g.docUrl, 'Aç'))) : null),
+      h('div', { class: 'acc-row-actions' }, deleteBtn),
+      h('details', { class: 'acc-details acc-row-full' },
+        h('summary', {}, 'Öğrenciler ve alıştırmalar'),
+        g.exercises.length ? h('ul', { class: 'acc-plain-list' }, g.exercises.map((e) => {
+          const n = names[`${e.level}/${e.topic}/${e.exercise}`];
+          return h('li', {}, `${e.level} · ${n?.topic || e.topic} · ${n?.exercise || e.exercise}`);
+        })) : null,
+        h('ul', { class: 'acc-status-list' }, students.map((c) => h('li', {},
+          c.student
+            ? h('a', { class: 'ba-link', href: `ogretmen-ogrenci.html?id=${encodeURIComponent(c.uid)}` }, c.student.name)
+            : h('span', {}, 'Silinmiş öğrenci'),
+          h('span', { class: `acc-badge ${c.done ? 'success' : ''}` }, c.done ? `Tamamladı · ${fmtDateTime(c.doneAt)}` : 'Bekliyor'),
+          c.studentDocUrl ? safeLink(c.studentDocUrl, 'Öğrencinin dokümanı') : null))))
+    );
+  }));
+}
+
 function renderCounts(){
   for(const tab of TABS){
     const el = document.querySelector(`[data-count="${tab}"]`);
-    el.textContent = String(lists[tab].length);
+    el.textContent = String(tab === 'odevler' ? groups.length : lists[tab].length);
   }
   const stale = lists.silinecek.length;
   const warning = $('staleWarning');
@@ -119,13 +175,21 @@ function showError(message){
 
 async function load(){
   try{
-    const [students, lastLessons] = await Promise.all([listStudents(), lastLessonByStudent()]);
+    // Ödevler okunamasa bile öğrenci listesi açılsın.
+    const [students, lastLessons, assignmentGroups] = await Promise.all([
+      listStudents(),
+      lastLessonByStudent(),
+      loadAssignmentGroups().catch((error) => { console.warn(error); return []; })
+    ]);
     lists = categorize(students, lastLessons);
+    groups = assignmentGroups;
+    studentsById = new Map(students.map((st) => [st.id, st]));
     renderCounts();
     renderStudents();
     renderPending();
     renderParent();
     renderStale();
+    await renderAssignments();
     $('teacherLoading').hidden = true;
     $('teacherApp').hidden = false;
     showError('');
@@ -154,6 +218,12 @@ $('studentFilter').addEventListener('input', renderStudents);
 
 const user = await requireTeacher({ loadingId: 'teacherLoading', errorId: 'teacherError' });
 if(user){
+  if(new URLSearchParams(location.search).get('odev') === 'verildi'){
+    $('assignNotice').hidden = false;
+    $('assignNotice').className = 'acc-status success';
+    $('assignNotice').textContent = 'Ödev verildi.';
+    history.replaceState(null, '', `ogretmen.html${location.hash}`);
+  }
   showTab(location.hash.slice(1));
   await load();
 }

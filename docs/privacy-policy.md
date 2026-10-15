@@ -21,12 +21,9 @@ verification) and GoatCounter visitor statistics on the public pages.
 | **Firebase Authentication** (Google Ireland Ltd. / Google LLC) | When a student registers or signs in, and on every later visit of a signed-in student | Email address, password hash; with Google sign-in (16+ only) also the Google name, email and photo URL. Not region-bound: may be processed in the USA | `js/account/firebase.js`, `login.js`, `register.js` |
 | **Cloud Firestore** (Google, europe-west3 Frankfurt) | Student accounts only | Name, email, birth year, account status, exercise results (level, topic, exercise, score, time); for under-16s also parent name and email, consent date and method | `firestore.rules`, `js/account/*.js` |
 | **gstatic.com** (Google, Firebase SDK files) | Only on login/registration/panel pages, and on `index.html` only if the browser was signed in before (`baAccount`) | IP address and browser details of the request | `js/account/firebase.js` |
-
 | **Google Calendar / Meet** (Google, teacher's calendar) | When the teacher schedules, moves or cancels a lesson (from `ogretmen-takvim.html`) | Event with "Almanca dersi – student name", time, note, the student's email and, for under-16s when enabled, the parent's email as attendees; Google sends the invitations and updates and creates the Meet link. Only the teacher's browser talks to the Calendar API (scope `calendar.events`) | `js/account/calendar.js`, `js/account/lessons.js` |
 | **accounts.google.com** (Google Identity Services script) | Teacher pages only, to get the Calendar permission | Request details of the teacher's browser | `js/account/calendar.js` |
-
-Planned in stage 4 (not live yet): Gmail via Google Apps Script (reminder emails; a SHA-256 hash of
-each recipient address is kept 14 days to avoid duplicates).
+| **Gmail via Google Apps Script** (teacher's Google account) | Daily 18:00–19:00 Berlin, once the teacher has installed the script | Reminder email for the next day's lesson to each invited student and parent (date, time, duration, Meet link, lesson note). The script reads only events marked `source=bozkurtacademy` and stores a SHA-256 hash of event + time + recipient address for 14 days to avoid duplicates | `apps-script/Code.gs` |
 
 Guests who never sign in load nothing from Google. Apart from that, nothing else is loaded from another host while browsing. In particular:
 

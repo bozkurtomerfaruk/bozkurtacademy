@@ -2,6 +2,16 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-10-15 · Öğretmen UID'i yazıldı, kurallar yayına hazır
+
+**Birleştirilen:** [PR #18](https://github.com/bozkurtomerfaruk/bozkurtacademy/pull/18). UID `IoTwBV5HjRUaoLoj0SCI0VVGkfk2`, `firestore.rules` ve `js/account/config.js` dosyalarına yazıldı. 50/50 kural testi (yerelde ve GitHub Actions'ta) ve emülatörde uçtan uca akış geçti.
+
+**Senden beklenenler:**
+1. `firestore.rules` dosyasını Firebase Console → Firestore → Kurallar'a yapıştırıp **Yayınla**.
+2. İmzalı veli formlarını nerede saklayacağını tek seçenek olarak söylemen: kâğıt olarak kilitli bir dolapta **mı**, dijital olarak şifreli bir klasörde **mi**? (Son mesajda yine iki seçenek birlikte geçiyordu; `privacy.html` ve veli formunda şimdilik ikisi de yazıyor.)
+3. Gizlilik metninin hukuki kontrolü bitince "Giriş linkini aç" demen.
+4. Aşama 2 için onayın.
+
 ## 2026-10-15 · PR #17 ve PR #16 birleştirildi, sessiz yayında
 
 **Birleştirilen:** önce [PR #17](https://github.com/bozkurtomerfaruk/bozkurtacademy/pull/17) (GoatCounter), sonra [PR #16](https://github.com/bozkurtomerfaruk/bozkurtacademy/pull/16) (Aşama 1). İkisi `index.html` ve `docs/privacy-policy.md`'de çakıştı; çakışma çözüldü, iki betik de yerinde.

@@ -39,6 +39,10 @@ Firestore "üretim modunda" oluşturulduğu için kurallar yayınlanana kadar he
    - dersi taşıyınca ve iptal edince öğrenciye güncelleme gidiyor.
 5. Yerel geliştirmede (`?emulator=1`) gerçek Google yerine sahte takvim (`js/account/calendar-mock.js`) kullanılır; canlıda asla yüklenmez.
 
+### Öğrenci ve veli hatırlatma e-postaları (Aşama 4)
+
+Google Apps Script ile, senin Google hesabında: adım adım kurulum `apps-script/README.md`'de. Kısaca: script.google.com → yeni proje → `Code.gs` ve `appsscript.json`'ı yapıştır → Google Calendar API hizmetini ekle → `dryRun` → `installTrigger`.
+
 ### Kurallar her değiştiğinde
 
 `firestore.rules` değişen her birleştirmeden sonra (ör. Aşama 2: öğrencinin ödevi "tamamladım" olarak işaretleyebilmesi) dosyanın güncel hâlini Firebase Console → Firestore → Kurallar'a yapıştırıp **Yayınla**. Yayınlanmazsa yeni özellikler canlıda "izin yok" hatası verir.
@@ -94,5 +98,7 @@ curl -X POST -H 'Authorization: Bearer owner' -H 'Content-Type: application/json
 | `js/account/lessons.js` | Dersler: önce Firestore, sonra Google Calendar; başarısız işlemler ve yeniden deneme |
 | `js/account/calendar.js` | Google Identity Services (token client) ve Calendar API v3 |
 | `js/account/calendar-mock.js` | Sadece yerel emülatörde: sahte Google Calendar |
+| `apps-script/Code.gs`, `apps-script/appsscript.json` | Öğrenci ve veli hatırlatma e-postaları (Apps Script, öğretmenin hesabında) |
+| `tests/apps-script.test.mjs` | Apps Script birim testleri (sahte Google servisleriyle) |
 | `js/account/i18n.js` | Öğrenci sayfalarının TR/DE/EN metinleri |
 | `css/account.css` | Bu sayfaların yerleşimi |

@@ -18,10 +18,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&family=STIX+Two+Text:wght@400;600&display=swap">
   <link rel="stylesheet" href="css/style.css?v=11" />
-  <link rel="stylesheet" href="css/lessons.css?v=1" />
-  <link rel="stylesheet" href="css/theme.css?v=6" />
-  <link rel="stylesheet" href="css/base.css?v=1" />
+  <link rel="stylesheet" href="css/theme.css?v=7" />
+  <link rel="stylesheet" href="css/base.css?v=2" />
   <link rel="stylesheet" href="css/home.css?v=5" />
+  <link rel="stylesheet" href="css/lessons.css?v=2" />
   <link rel="stylesheet" href="css/a1-lessons.css?v=1" />
 </head>
 <body class="academy-theme">
@@ -128,18 +128,19 @@
         </section>
       </section>
       <section class="page" id="page-lessons">
-        <section class="lesson-hero-pro">
+        <section class="lesson-hero-pro ba-card">
+          <div class="ba-stripe ba-stripe--bold" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
           <div class="lesson-hero-copy">
             <span class="tag" data-i18n="lessonsTag">Almanca Dersleri</span>
             <div class="lesson-free-badge" data-i18n="lessonFreeBadge">İlk ders ücretsiz</div>
             <h1 data-i18n="lessonsTitle">Online Almanca dersleri</h1>
             <p data-i18n="lessonsSub">A1’den B2’ye bireysel dersler, konuşma pratiği ve sınav hazırlığı. Ders içeriği seviyene ve öğrenme hedeflerine göre belirlenir.</p>
             <div class="lesson-hero-actions">
-              <button class="btn gold" type="button" data-page="contact" data-i18n="lessonContactCta">İlk ders için iletişim</button>
-              <button class="lesson-inline-link" type="button" onclick="document.getElementById('lesson-details').scrollIntoView({behavior:'smooth'})" data-i18n="lessonExplore">Ders içeriği ↓</button>
+              <a class="btn gold" href="#contact" data-page="contact" data-i18n="lessonContactCta">İlk ders için iletişim</a>
+              <button class="lesson-inline-link ba-link" type="button" data-scroll-to="lesson-details" data-i18n="lessonExplore">Ders içeriği ↓</button>
             </div>
           </div>
-          <div class="lesson-hero-stats" aria-label="Ders bilgileri">
+          <div class="lesson-hero-stats ba-stub" aria-label="Ders bilgileri">
             <article><strong>A1–B2</strong><span data-i18n="lessonStatLevels">Seviye aralığı</span></article>
             <article><strong>50 dk</strong><span data-i18n="lessonStatDuration">Ders süresi</span></article>
             <article><strong>%100 Online</strong><span data-i18n="lessonStatOnline">Zoom / Google Meet</span></article>
@@ -148,19 +149,17 @@
 
         <section class="block lesson-page-block" id="lesson-details">
           <div class="lesson-intro-grid">
-            <article class="lesson-feature-card lesson-feature-highlight">
+            <article class="lesson-feature-card lesson-feature-highlight ba-field">
               <span class="lesson-kicker" data-i18n="lessonFirstKicker">İlk ders</span>
               <h2 data-i18n="lessonFirstTitle">Seviye değerlendirmesi ve ders planı</h2>
               <p data-i18n="lessonFirstText">İlk derste mevcut seviyen, hedeflerin ve çalışma ihtiyaçların değerlendirilir. Sonraki derslerin içeriği bu görüşmeye göre planlanır.</p>
             </article>
             <article class="lesson-feature-card">
-              <span class="lesson-card-icon">◎</span>
-              <h3 data-i18n="lessonPlanTitle">Seviyene uygun içerik</h3>
+                            <h3 data-i18n="lessonPlanTitle">Seviyene uygun içerik</h3>
               <p data-i18n="lessonPlanText">Konuların sırası ve çalışma temposu, mevcut bilgine ve ilerlemene göre düzenlenir.</p>
             </article>
             <article class="lesson-feature-card">
-              <span class="lesson-card-icon">↗</span>
-              <h3 data-i18n="lessonPracticalTitle">Konuşma ve yazma pratiği</h3>
+                            <h3 data-i18n="lessonPracticalTitle">Konuşma ve yazma pratiği</h3>
               <p data-i18n="lessonPracticalText">Dil bilgisi; örnek cümleler, kısa diyaloglar ve yazma çalışmalarıyla uygulanır.</p>
             </article>
           </div>
@@ -172,12 +171,12 @@
             <h2 data-i18n="lessonOfferTitle">Ders içerikleri</h2>
           </div>
           <div class="lesson-offer-grid">
-            <article class="lesson-offer"><span>01</span><h3 data-i18n="offer1Title">A1’den B2’ye bireysel Almanca</h3><p data-i18n="offer1Text">Başlangıçtan B2’ye kadar kelime, dil bilgisi ve iletişim becerileri üzerine birebir çalışma.</p></article>
-            <article class="lesson-offer"><span>02</span><h3 data-i18n="offer2Title">Teknik Almanca</h3><p data-i18n="offer2Text">Mühendislik ve iş ortamlarında kullanılan kelimeler, metinler ve iletişim örnekleri.</p></article>
-            <article class="lesson-offer"><span>03</span><h3 data-i18n="offer3Title">Dil bilgisi, konuşma ve yazma</h3><p data-i18n="offer3Text">Gramer konularını sözlü ve yazılı ifadeye dönüştüren uygulamalar.</p></article>
-            <article class="lesson-offer"><span>04</span><h3 data-i18n="offer4Title">Sınav hazırlığı</h3><p data-i18n="offer4Text">Hedef sınavın görev türlerine yönelik okuma, dinleme, yazma ve konuşma çalışmaları.</p></article>
-            <article class="lesson-offer"><span>05</span><h3 data-i18n="offer5Title">Almanya’da eğitim ve iş</h3><p data-i18n="offer5Text">Üniversite, Ausbildung ve iş başvurularında kullanılan Almanca üzerine çalışma.</p></article>
-            <article class="lesson-offer"><span>06</span><h3 data-i18n="offer6Title">Günlük yaşamda Almanca</h3><p data-i18n="offer6Text">Randevu, alışveriş, telefon görüşmesi ve resmi işlemler için iletişim pratiği.</p></article>
+            <article class="lesson-offer"><h3 data-i18n="offer1Title">A1’den B2’ye bireysel Almanca</h3><p data-i18n="offer1Text">Başlangıçtan B2’ye kadar kelime, dil bilgisi ve iletişim becerileri üzerine birebir çalışma.</p></article>
+            <article class="lesson-offer"><h3 data-i18n="offer2Title">Teknik Almanca</h3><p data-i18n="offer2Text">Mühendislik ve iş ortamlarında kullanılan kelimeler, metinler ve iletişim örnekleri.</p></article>
+            <article class="lesson-offer"><h3 data-i18n="offer3Title">Dil bilgisi, konuşma ve yazma</h3><p data-i18n="offer3Text">Gramer konularını sözlü ve yazılı ifadeye dönüştüren uygulamalar.</p></article>
+            <article class="lesson-offer"><h3 data-i18n="offer4Title">Sınav hazırlığı</h3><p data-i18n="offer4Text">Hedef sınavın görev türlerine yönelik okuma, dinleme, yazma ve konuşma çalışmaları.</p></article>
+            <article class="lesson-offer"><h3 data-i18n="offer5Title">Almanya’da eğitim ve iş</h3><p data-i18n="offer5Text">Üniversite, Ausbildung ve iş başvurularında kullanılan Almanca üzerine çalışma.</p></article>
+            <article class="lesson-offer"><h3 data-i18n="offer6Title">Günlük yaşamda Almanca</h3><p data-i18n="offer6Text">Randevu, alışveriş, telefon görüşmesi ve resmi işlemler için iletişim pratiği.</p></article>
           </div>
         </section>
 
@@ -188,7 +187,7 @@
               <h2 data-i18n="lessonAudienceTitle">Kimler için uygun</h2>
               <p data-i18n="lessonAudienceSub">Dersler, Almancayı eğitimde, işte veya günlük yaşamda kullanmak isteyen öğrencilere yöneliktir.</p>
             </div>
-            <div class="lesson-check-list">
+            <div class="lesson-check-list ba-slip ba-checklist">
               <div data-i18n="aud1">Almanya’ya taşınmak isteyenler</div>
               <div data-i18n="aud2">Almanya’da üniversite okumayı hedefleyen öğrenciler</div>
               <div data-i18n="aud3">Almanya’da Ausbildung yapmayı hedefleyenler</div>
@@ -219,13 +218,16 @@
         </section>
 
         <section class="block lesson-page-block lesson-final-cta-wrap">
-          <div class="lesson-final-cta">
+          <div class="lesson-final-cta ba-card">
+            <div class="ba-stripe ba-stripe--bold" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="lesson-final-cta-body">
             <div>
               <span class="tag" data-i18n="lessonCtaTag">İlk Görüşme</span>
               <h2 data-i18n="lessonCtaTitle">İlk ders için iletişim</h2>
               <p data-i18n="lessonCtaText">Seviyeni ve öğrenme hedefini mesajında paylaşabilirsin. İlk ders ücretsizdir.</p>
             </div>
-            <button class="btn gold lesson-cta-button" type="button" data-page="contact" data-i18n="lessonCtaButton">İletişime geç</button>
+            <a class="btn gold lesson-cta-button" href="#contact" data-page="contact" data-i18n="lessonCtaButton">İletişime geç</a>
+            </div>
           </div>
         </section>
       </section>
@@ -567,7 +569,7 @@
       </div>
     </footer>
   </div>
-  <script src="js/app.js?v=12"></script>
+  <script src="js/app.js?v=13"></script>
   <script src="js/quiz.js?v=16"></script>
   <script src="js/exercise-links.js?v=3"></script>
   <script src="js/a1-lessons.js?v=8"></script>

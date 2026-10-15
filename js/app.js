@@ -353,6 +353,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
     if(event.key==='Escape' && menuToggle?.getAttribute('aria-expanded')==='true') setMenu(false,{focusToggle:true});
   });
   window.addEventListener('ba:languagechange',()=>setMenu(menuToggle?.getAttribute('aria-expanded')==='true'));
+  document.querySelectorAll('[data-scroll-to]').forEach(button=>button.addEventListener('click',()=>{
+    const target=document.getElementById(button.dataset.scrollTo);
+    if(!target) return;
+    const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    target.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
+    target.setAttribute('tabindex','-1');
+    target.focus({preventScroll:true});
+  }));
   document.querySelector('[data-skip-link]')?.addEventListener('click',event=>{
     event.preventDefault();
     document.getElementById('main')?.focus();

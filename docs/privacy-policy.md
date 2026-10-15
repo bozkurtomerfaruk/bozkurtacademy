@@ -88,7 +88,7 @@ Guests who never sign in load nothing from Google. Apart from that, nothing else
 ## To finish
 
 1. Finish the legal check of `privacy.html` (Turkish only so far). It says signed consent forms are
-   kept "on paper in a locked cupboard or digitally in an encrypted folder"; keep only the one you use.
+   kept on paper in a locked cupboard and, when they arrive digitally, in an encrypted folder.
 2. Then remove the "Bu metin hukuki olarak kontrol edilmektedir" note and the `noindex` meta tag, and
    show the "Giriş" menu link in `index.html` again (it is `hidden` for the quiet launch).
 

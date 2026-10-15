@@ -278,7 +278,10 @@ function applyLanguage(lang){
     const key = el.getAttribute('data-i18n-placeholder');
     if(translations[lang] && translations[lang][key]) el.setAttribute('placeholder', translations[lang][key]);
   });
-  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
+  document.querySelectorAll('.lang button').forEach(b=>{
+    b.classList.toggle('active', b.dataset.lang===lang);
+    b.setAttribute('aria-pressed', String(b.dataset.lang===lang));
+  });
   window.dispatchEvent(new CustomEvent('ba:languagechange', {detail:{lang}}));
 }
 
@@ -301,7 +304,11 @@ function showPage(page, options={}){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   const target = document.getElementById('page-'+page);
   if(target) target.classList.add('active');
-  document.querySelectorAll('.nav-link').forEach(b=>b.classList.toggle('active', b.dataset.page===page));
+  document.querySelectorAll('.nav-link').forEach(b=>{
+    const current=b.dataset.page===page;
+    b.classList.toggle('active', current);
+    if(current) b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current');
+  });
   if(historyMode!=='none') writePageHistory(page, historyMode);
   if(scroll) window.scrollTo({top:0, behavior:'smooth'});
   window.dispatchEvent(new CustomEvent('ba:pagechange', {detail:{page}}));
@@ -321,7 +328,31 @@ window.addEventListener('popstate', event=>{
 });
 
 document.addEventListener('DOMContentLoaded', ()=>{
-  document.querySelectorAll('[data-page]').forEach(btn=>btn.addEventListener('click',()=>showPage(btn.dataset.page)));
+  document.querySelectorAll('[data-page]').forEach(btn=>btn.addEventListener('click',event=>{
+    // Let modified clicks on real links open the page in a new tab or window.
+    if(btn.tagName==='A' && (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)) return;
+    event.preventDefault();
+    showPage(btn.dataset.page);
+  }));
+  const menuToggle=document.querySelector('.menu-toggle');
+  const siteMenu=document.getElementById('siteMenu');
+  function setMenu(open, {focusToggle=false}={}){
+    if(!menuToggle) return;
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.textContent=t(open ? 'menuClose' : 'menuOpen');
+    document.body.classList.toggle('menu-open', open);
+    if(!open && focusToggle) menuToggle.focus();
+  }
+  menuToggle?.addEventListener('click',()=>setMenu(menuToggle.getAttribute('aria-expanded')!=='true'));
+  siteMenu?.addEventListener('click',event=>{ if(event.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown',event=>{
+    if(event.key==='Escape' && menuToggle?.getAttribute('aria-expanded')==='true') setMenu(false,{focusToggle:true});
+  });
+  window.addEventListener('ba:languagechange',()=>setMenu(menuToggle?.getAttribute('aria-expanded')==='true'));
+  document.querySelector('[data-skip-link]')?.addEventListener('click',event=>{
+    event.preventDefault();
+    document.getElementById('main')?.focus();
+  });
   document.querySelectorAll('.lang button').forEach(btn=>btn.addEventListener('click',()=>applyLanguage(btn.dataset.lang)));
 
   const form = document.getElementById('contactForm');

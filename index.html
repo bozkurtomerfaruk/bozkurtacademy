@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8f7f3" />
   <script>try{document.documentElement.dataset.theme=localStorage.getItem('ba-theme')==='dark'?'dark':'light'}catch(_){document.documentElement.dataset.theme='light'}</script>
   <title>Bozkurt Academy | Almanca Dersleri</title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
@@ -13,31 +14,36 @@
   <meta name="description" content="Bozkurt Academy ile Almanca dersleri, gramer konuları, seviye bazlı alıştırmalar ve sınav hazırlığı. Bireysel ders, grup dersi ve akademik danışmanlık." />
   <meta name="keywords" content="Almanca ders, Almanca özel ders, Almanca gramer, Almanca alıştırmalar, Goethe sınavı, telc, ÖSD, A1 Almanca, A2 Almanca, B1 Almanca, B2 Almanca" />
   <meta name="author" content="Bozkurt Academy" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&family=STIX+Two+Text:wght@400;600&display=swap">
   <link rel="stylesheet" href="css/style.css?v=10" />
   <link rel="stylesheet" href="css/lessons.css?v=1" />
-  <link rel="stylesheet" href="css/home.css?v=1" />
-  <link rel="stylesheet" href="css/theme.css?v=3" />
+  <link rel="stylesheet" href="css/home.css?v=4" />
+  <link rel="stylesheet" href="css/theme.css?v=5" />
   <link rel="stylesheet" href="css/a1-lessons.css?v=1" />
 </head>
 <body class="academy-theme">
+  <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
   <div class="shell">
     <header class="topbar">
-      <nav class="nav">
-        <button class="brand" data-page="home" aria-label="Bozkurt Academy ana sayfa">
+      <nav class="nav" aria-label="Site menüsü">
+        <a class="brand" href="#home" data-page="home" aria-label="Bozkurt Academy ana sayfa">
            <img src="images/logo-transparent.png?v=3" alt="Bozkurt Academy Logo" class="brand-logo">
           <div><div class="brand-title">Bozkurt Academy</div><div class="brand-sub" data-i18n="brandSub">Almancada net ilerleme</div></div>
-        </button>
-        <div class="nav-links" aria-label="Site menüsü">
-          <button class="nav-link active" data-page="home" data-i18n="navHome">Ana Sayfa</button>
-          <button class="nav-link" data-page="lessons" data-i18n="navLessons">Almanca Dersleri</button>
-          <button class="nav-link" data-page="grammar" data-i18n="navGrammar">Gramer</button>
-          <button class="nav-link" data-page="exercises" data-i18n="navExercises">Alıştırmalar</button>
-          <button class="nav-link" data-page="exams" data-i18n="navExams">Sınav Hazırlığı</button>
-          <button class="nav-link" data-page="about" data-i18n="navAbout">Hakkımda</button>
-          <button class="nav-link" data-page="contact" data-i18n="navContact">İletişim</button>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteMenu" data-i18n="menuOpen">Menü</button>
+        <div class="nav-links" id="siteMenu">
+          <a class="nav-link active" href="#home" data-page="home" data-i18n="navHome">Ana Sayfa</a>
+          <a class="nav-link" href="#lessons" data-page="lessons" data-i18n="navLessons">Almanca Dersleri</a>
+          <a class="nav-link" href="#grammar" data-page="grammar" data-i18n="navGrammar">Gramer</a>
+          <a class="nav-link" href="#exercises" data-page="exercises" data-i18n="navExercises">Alıştırmalar</a>
+          <a class="nav-link" href="#exams" data-page="exams" data-i18n="navExams">Sınav Hazırlığı</a>
+          <a class="nav-link" href="#about" data-page="about" data-i18n="navAbout">Hakkımda</a>
+          <a class="nav-link" href="#contact" data-page="contact" data-i18n="navContact">İletişim</a>
         </div>
         <div class="nav-actions">
-        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Koyu temaya geç" aria-pressed="false"><span aria-hidden="true">☾</span></button>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Koyu temaya geç" aria-pressed="false"><svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="currentColor"/></svg><svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
         <div class="lang" aria-label="Dil seçimi">
           <button data-lang="tr" class="active">TR</button>
           <button data-lang="de">DE</button>
@@ -47,56 +53,77 @@
       </nav>
     </header>
 
-    <main>
+    <main id="main" tabindex="-1">
       <section class="page active home-page" id="page-home">
         <section class="home-hero" aria-labelledby="home-title">
-          <div class="home-intro" data-home-reveal>
-            <p class="home-eyebrow" data-i18n="homeEyebrow">Ömer Faruk Bozkurt · Online Almanca dersleri</p>
-            <h1 id="home-title" data-i18n="homeTitle">Hedeflerine uygun Almanca eğitimi</h1>
-            <p class="home-lead" data-i18n="homeIntro">A1’den B2’ye online Almanca dersleri, sınav hazırlığı ve günlük kullanım için dil desteği. Ömer Faruk Bozkurt ile seviyene ve öğrenme hedeflerine uygun bir ders planı.</p>
-            <div class="home-actions">
-              <button class="home-button" type="button" data-page="contact" data-i18n="homeContact">İlk ders için iletişim</button>
-              <button class="home-text-link" type="button" data-page="exercises"><span data-i18n="homeExercises">Alıştırmaları keşfet</span><span aria-hidden="true">↗</span></button>
+          <div class="home-card" data-home-reveal>
+            <div class="home-stripe" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="home-card-body">
+              <h1 id="home-title" data-i18n="homeTitle">Hedeflerine uygun Almanca eğitimi</h1>
+              <p class="home-lead" data-i18n="homeIntro">A1’den B2’ye online Almanca dersleri, sınav hazırlığı ve günlük kullanım için dil desteği. Ömer Faruk Bozkurt ile seviyene ve öğrenme hedeflerine uygun bir ders planı.</p>
+              <div class="home-actions">
+                <a class="home-button" href="#contact" data-page="contact" data-i18n="homeContact">İlk ders için iletişim</a>
+                <a class="home-text-link" href="#exercises" data-page="exercises"><span data-i18n="homeExercises">Alıştırmaları keşfet</span><span aria-hidden="true">→</span></a>
+              </div>
+              <dl class="home-stub">
+                <div><dt data-i18n="homeStubLevel">Seviye</dt><dd>A1 → B2</dd></div>
+                <div><dt data-i18n="homeStubDuration">Ders süresi</dt><dd data-i18n="homeStubDurationValue">50&nbsp;dakika</dd></div>
+                <div><dt data-i18n="homeStubPlace">Nerede</dt><dd data-i18n="homeStubPlaceValue">Online</dd></div>
+                <div><dt data-i18n="homeStubFirst">İlk ders</dt><dd data-i18n="homeStubFirstValue">Ücretsiz</dd></div>
+              </dl>
             </div>
-            <div class="home-facts"><span>A1–B2</span><span data-i18n="homeDuration">50 dakika · Online</span><span data-i18n="homeFree">İlk ders ücretsiz</span></div>
           </div>
           <figure class="home-portrait" data-home-reveal>
-            <img src="images/omer-faruk.jpg" width="600" height="750" alt="Ömer Faruk Bozkurt" fetchpriority="high">
+            <img src="images/omer-faruk.jpg" width="1151" height="2048" alt="Ömer Faruk Bozkurt" fetchpriority="high">
             <figcaption><span>Ömer Faruk Bozkurt</span><span data-i18n="homePortraitCaption">Almanca eğitmeni</span></figcaption>
           </figure>
-          <button class="home-scroll" type="button" data-home-scroll="home-lessons"><span data-i18n="homeScroll">Dersleri tanı</span><span aria-hidden="true">↓</span></button>
         </section>
 
         <section class="home-section home-lessons" id="home-lessons" aria-labelledby="home-lessons-title">
           <div class="home-section-heading" data-home-reveal>
-            <p class="home-eyebrow" data-i18n="homeLessonEyebrow">Ders yaklaşımı</p>
             <h2 id="home-lessons-title" data-i18n="homeLessonTitle">Konu anlatımından uygulamaya</h2>
-            <button class="home-text-link" type="button" data-page="lessons"><span data-i18n="homeLessonLink">Dersler hakkında</span><span aria-hidden="true">↗</span></button>
+            <p data-i18n="homeLessonIntro">Her ders aynı düzende ilerler: önce seviyen ve hedefin, sonra konu ve uygulama, ardından tekrar.</p>
+            <a class="home-text-link" href="#lessons" data-page="lessons"><span data-i18n="homeLessonLink">Dersler hakkında</span><span aria-hidden="true">→</span></a>
           </div>
-          <div class="home-steps">
-            <article class="home-step" data-home-reveal><span class="home-step-number" aria-hidden="true">01</span><div><h3 data-i18n="homeStep1Title">Seviye ve hedef belirleme</h3><p data-i18n="homeStep1Text">İlk derste seviyeni, hedefini ve zorlandığın konuları konuşuyoruz.</p></div></article>
-            <article class="home-step" data-home-reveal><span class="home-step-number" aria-hidden="true">02</span><div><h3 data-i18n="homeStep2Title">Konu anlatımı ve uygulama</h3><p data-i18n="homeStep2Text">Bir kuralı öğrendikten sonra cümleler kuruyor, kısa diyaloglarla kullanıyoruz.</p></div></article>
-            <article class="home-step" data-home-reveal><span class="home-step-number" aria-hidden="true">03</span><div><h3 data-i18n="homeStep3Title">Ders sonrası tekrar</h3><p data-i18n="homeStep3Text">Buradaki konu anlatımları ve alıştırmalarla öğrendiklerini tekrar edebilirsin.</p></div></article>
+          <div class="home-slip" data-home-reveal>
+            <ol class="home-steps">
+              <li class="home-step"><div class="home-step-row"><h3 data-i18n="homeStep1Title">Seviye ve hedef belirleme</h3><span class="home-step-when" data-i18n="homeStep1When">İlk ders</span></div><p data-i18n="homeStep1Text">İlk derste seviyeni, hedefini ve zorlandığın konuları konuşuyoruz.</p></li>
+              <li class="home-step"><div class="home-step-row"><h3 data-i18n="homeStep2Title">Konu anlatımı ve uygulama</h3><span class="home-step-when" data-i18n="homeStep2When">Her ders · 50&nbsp;dk</span></div><p data-i18n="homeStep2Text">Bir kuralı öğrendikten sonra cümleler kuruyor, kısa diyaloglarla kullanıyoruz.</p></li>
+              <li class="home-step"><div class="home-step-row"><h3 data-i18n="homeStep3Title">Ders sonrası tekrar</h3><span class="home-step-when" data-i18n="homeStep3When">Dersler arasında</span></div><p data-i18n="homeStep3Text">Buradaki konu anlatımları ve alıştırmalarla öğrendiklerini tekrar edebilirsin.</p></li>
+            </ol>
+            <p class="home-slip-total"><span data-i18n="homeSlipTotal">İlk ders</span><strong data-i18n="homeSlipTotalValue">Ücretsiz</strong></p>
           </div>
         </section>
 
         <section class="home-section home-practice" aria-labelledby="home-practice-title">
           <div class="home-practice-copy" data-home-reveal>
-            <p class="home-eyebrow" data-i18n="homePracticeEyebrow">Alıştırmalar</p>
             <h2 id="home-practice-title" data-i18n="homePracticeTitle">Seviyene uygun Almanca alıştırmaları</h2>
             <p data-i18n="homePracticeText">Konunu seç, soruları çöz ve her cevabın açıklamasını oku. Alıştırmalar herkese açık.</p>
-            <a class="home-text-link" href="#exercises/A1/sein-haben"><span data-i18n="homePracticeLink">sein &amp; haben ile çalış</span><span aria-hidden="true">↗</span></a>
+            <a class="home-text-link" href="#exercises/A1/sein-haben"><span data-i18n="homePracticeLink">sein &amp; haben ile çalış</span><span aria-hidden="true">→</span></a>
           </div>
           <div class="home-example" data-home-reveal>
-            <span class="home-example-label">A1 · sein &amp; haben</span>
-            <p class="home-example-sentence">Ich <span>habe</span> Hunger.<br>Ich <span>bin</span> müde.</p>
+            <p class="home-example-prompt" data-i18n="homeQuizPrompt">Boşluğa hangisi gelir? Seç ve açıklamasını oku.</p>
+            <div class="home-quiz" data-home-quiz>
+              <div class="home-quiz-item" data-answer="habe" data-note-key="homeQuizNote1">
+                <p class="home-example-sentence" lang="de">Ich <span class="home-blank">habe</span> Hunger.</p>
+              </div>
+              <div class="home-quiz-item" data-answer="bin" data-note-key="homeQuizNote2">
+                <p class="home-example-sentence" lang="de">Ich <span class="home-blank">bin</span> müde.</p>
+              </div>
+            </div>
             <p class="home-example-note" data-i18n="homeExampleNote">“Acıktım” derken haben, “yorgunum” derken sein kullanılır. Küçük bir fark, iki günlük ifade.</p>
           </div>
         </section>
 
-        <section class="home-section home-closing" aria-labelledby="home-closing-title" data-home-reveal>
-          <div><p class="home-eyebrow" data-i18n="homeClosingEyebrow">İlk görüşme</p><h2 id="home-closing-title" data-i18n="homeClosingTitle">Almanca eğitimini birlikte planlayalım</h2><p data-i18n="homeClosingText">Seviyeni ve ne için Almanca öğrenmek istediğini yaz. İlk ders ücretsiz.</p></div>
-          <button class="home-button" type="button" data-page="contact" data-i18n="homeContact">İlk ders için iletişim</button>
+        <section class="home-closing" aria-labelledby="home-closing-title" data-home-reveal>
+          <div class="home-stripe" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="home-closing-body">
+            <div><h2 id="home-closing-title" data-i18n="homeClosingTitle">Almanca eğitimini birlikte planlayalım</h2><p data-i18n="homeClosingText">Seviyeni ve ne için Almanca öğrenmek istediğini yaz. İlk ders ücretsiz.</p></div>
+            <div class="home-closing-actions">
+              <a class="home-button" href="#contact" data-page="contact" data-i18n="homeContact">İlk ders için iletişim</a>
+              <a class="home-mail" href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a>
+            </div>
+          </div>
         </section>
       </section>
       <section class="page" id="page-lessons">
@@ -530,12 +557,12 @@
 
     <footer><div><strong>Bozkurt Academy</strong><br><span data-i18n="footerText">Online Almanca dersleri ve öğrenme materyalleri</span></div><div>© 2026 Bozkurt Academy</div></footer>
   </div>
-  <script src="js/app.js?v=10"></script>
+  <script src="js/app.js?v=12"></script>
   <script src="js/quiz.js?v=16"></script>
   <script src="js/exercise-links.js?v=3"></script>
   <script src="js/a1-lessons.js?v=8"></script>
   <script src="js/grammar.js?v=10"></script>
-  <script src="js/theme.js?v=4"></script>
-  <script src="js/home.js?v=3"></script>
+  <script src="js/theme.js?v=6"></script>
+  <script src="js/home.js?v=5"></script>
 </body>
 </html>

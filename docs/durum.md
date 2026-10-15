@@ -2,6 +2,32 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-10-15 · Aşama 2 bitti, PR açıldı, onay bekleniyor
+
+**PR:** [PR #20](https://github.com/bozkurtomerfaruk/bozkurtacademy/pull/20) (dal: `claude/asama-2-odevler`). Birleştirilmedi.
+
+**Önce birleşenler:**
+- [PR #18](https://github.com/bozkurtomerfaruk/bozkurtacademy/pull/18): öğretmen UID'i. Kuralları Firebase Console'da yayınladın.
+- [PR #19](https://github.com/bozkurtomerfaruk/bozkurtacademy/pull/19): imzalı veli formlarının saklandığı yer. Kâğıt olanlar kilitli dolapta, dijital olanlar (taranmış ya da e-postayla gelen) şifreli klasörde; ikisi birden yazıldı.
+
+**Aşama 2'de yapılan:**
+- Yeni ödev sayfası (`ogretmen-odev.html`): başlık, açıklama, Berlin saatiyle teslim tarihi, sitedeki alıştırmalar, isteğe bağlı Google Docs linki ("her öğrenciye kopya" → `/copy`), bir ya da birden fazla öğrenci.
+- Öğretmen panelinde "Ödevler" sekmesi: kaç öğrencinin tamamladığı, öğrenci bazında durum, ödevi silme.
+- Öğrenci detayı: ödevler (alıştırma sonuçlarıyla), kaynak ekleme ve silme.
+- Öğrenci paneli (TR/DE/EN): aktif ödevler (teslim tarihine göre), tamamlananlar, kaynaklar, "Tamamladım", geri alma ve kendi Google Docs linki.
+
+**Testler:** 61/61 kural testi, Aşama 2 ve Aşama 1 uçtan uca akışları, `check-grammar` PASS, 390/1440px açık/koyu ekran görüntüleri.
+
+**Bilmen gerekenler:**
+- `firestore.rules` değişti: **birleştirdikten sonra kuralları Firebase Console'da yeniden yayınlaman gerekiyor**, yoksa öğrenci ödevi işaretleyemez.
+- Verilmiş ödevi düzenleme yok (silip yeniden verilebiliyor).
+
+**Senden beklenenler:**
+1. Canlı testte sorun çıktıysa haber vermen.
+2. PR #20 için "birleştir" demen; ardından kuralları yeniden yayınlaman.
+3. Aşama 3 (ders takvimi, Google Calendar ve Meet) için onayın. Aşama 3'ten önce planın 9.B adımları gerekiyor: Calendar API, OAuth izin ekranı, istemci kimliği.
+4. Gizlilik metni kesinleşince "Giriş linkini aç" demen.
+
 ## 2026-10-15 · Öğretmen UID'i yazıldı, kurallar yayına hazır
 
 **Birleştirilen:** [PR #18](https://github.com/bozkurtomerfaruk/bozkurtacademy/pull/18). UID `IoTwBV5HjRUaoLoj0SCI0VVGkfk2`, `firestore.rules` ve `js/account/config.js` dosyalarına yazıldı. 50/50 kural testi (yerelde ve GitHub Actions'ta) ve emülatörde uçtan uca akış geçti.

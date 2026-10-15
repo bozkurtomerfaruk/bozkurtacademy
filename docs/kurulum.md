@@ -27,6 +27,18 @@ Firestore "üretim modunda" oluşturulduğu için kurallar yayınlanana kadar he
 
 İstersen bunun yerine Firebase CLI ile: `npx firebase deploy --only firestore --project bozkurtacademy-8ab85`.
 
+### Google Calendar (Aşama 3)
+
+1. Planın 9.B adımlarını yap (Calendar API, OAuth izin ekranı, test kullanıcısı, Web istemcisi; yetkili JavaScript kaynağı `https://bozkurtacademy.com`).
+2. İstemci kimliğini (`…apps.googleusercontent.com`) `js/account/config.js` → `GOOGLE_CLIENT_ID` alanına yaz. Gizli anahtar gerekmez.
+3. `ogretmen-takvim.html` → **Google Calendar'a bağlan**. İzin yaklaşık 1 saat geçerli, sadece bellekte tutulur; süresi dolunca bir sonraki işlemde yeniden sorulur. "Google bu uygulamayı doğrulamadı" uyarısı test modunda normaldir.
+4. İlk test: kendine (ikinci e-posta adresinle kayıtlı test öğrencisine) yarın için bir ders planla. Kontrol et:
+   - Takviminde "Almanca dersi – Ad" etkinliği ve Meet linki var;
+   - öğrenci adresine davet geldi;
+   - sana 1 gün önce e-posta, 30 dakika önce bildirim hatırlatması kurulu;
+   - dersi taşıyınca ve iptal edince öğrenciye güncelleme gidiyor.
+5. Yerel geliştirmede (`?emulator=1`) gerçek Google yerine sahte takvim (`js/account/calendar-mock.js`) kullanılır; canlıda asla yüklenmez.
+
 ### Kurallar her değiştiğinde
 
 `firestore.rules` değişen her birleştirmeden sonra (ör. Aşama 2: öğrencinin ödevi "tamamladım" olarak işaretleyebilmesi) dosyanın güncel hâlini Firebase Console → Firestore → Kurallar'a yapıştırıp **Yayınla**. Yayınlanmazsa yeni özellikler canlıda "izin yok" hatası verir.
@@ -78,5 +90,9 @@ curl -X POST -H 'Authorization: Bearer owner' -H 'Content-Type: application/json
 | `js/account/login.js`, `register.js`, `student.js` | Giriş, kayıt, öğrenci paneli |
 | `js/account/teacher.js`, `teacher-student.js`, `teacher-common.js` | Öğretmen paneli (öğrenciler, ödevler), öğrenci detayı (ödevler, kaynaklar) |
 | `js/account/teacher-assign.js` | `ogretmen-odev.html`: yeni ödev |
+| `js/account/teacher-calendar.js` | `ogretmen-takvim.html`: haftalık/aylık takvim, yeni ders, taşıma, iptal, tekrar dene |
+| `js/account/lessons.js` | Dersler: önce Firestore, sonra Google Calendar; başarısız işlemler ve yeniden deneme |
+| `js/account/calendar.js` | Google Identity Services (token client) ve Calendar API v3 |
+| `js/account/calendar-mock.js` | Sadece yerel emülatörde: sahte Google Calendar |
 | `js/account/i18n.js` | Öğrenci sayfalarının TR/DE/EN metinleri |
 | `css/account.css` | Bu sayfaların yerleşimi |

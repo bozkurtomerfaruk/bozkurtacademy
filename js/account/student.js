@@ -13,6 +13,7 @@ registerStrings();
 let profile = null;
 let results = [];
 let assignments = [];
+let lessons = [];
 let resources = [];
 let currentAuthUser = null;
 
@@ -66,6 +67,43 @@ async function renderHistory(){
 }
 
 const fmt = (value) => formatDateTime(value, { lang: lang() });
+
+async function loadLessons(uid){
+  const snap = await fs.getDocs(fs.collection(db, 'users', uid, 'lessons'));
+  return snap.docs.map((d) => ({ id: d.id, ...d.data(), startAt: toDate(d.data().startAt) }));
+}
+
+// Yaklaşan dersler öğrencinin kendi saat diliminde; farklıysa Berlin saati de yazılır.
+// "Görüşmeye katıl" dersten 10 dakika önce belirginleşir ve ders bitene kadar öyle kalır.
+function renderLessons(){
+  const now = Date.now();
+  const end = (l) => l.startAt.getTime() + (l.durationMin || 50) * 60000;
+  const upcoming = lessons.filter((l) => l.status === 'scheduled' && end(l) > now).sort((a, b) => a.startAt - b.startAt).slice(0, 10);
+  const locale = { tr: 'tr-TR', de: 'de-DE', en: 'en-GB' }[lang()] || 'tr-TR';
+  const day = new Intl.DateTimeFormat(locale, { weekday: 'long', day: 'numeric', month: 'long' });
+  const time = new Intl.DateTimeFormat(locale, { hour: '2-digit', minute: '2-digit' });
+  const berlin = new Intl.DateTimeFormat(locale, { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Berlin' });
+  $('lessonList').replaceChildren(...(upcoming.length
+    ? [h('ul', { class: 'acc-lesson-cards' }, upcoming.map((l) => {
+      const start = l.startAt.getTime();
+      const live = now >= start && now < end(l);
+      const soon = !live && start - now <= 10 * 60000;
+      const local = `${time.format(l.startAt)}–${time.format(new Date(end(l)))}`;
+      const inBerlin = `${berlin.format(l.startAt)}–${berlin.format(new Date(end(l)))}`;
+      return h('li', { class: `ba-card acc-card acc-lesson${live || soon ? ' is-now' : ''}` },
+        h('div', { class: 'ba-card-body' },
+          h('p', { class: 'acc-lesson-day' }, day.format(l.startAt)),
+          h('p', { class: 'acc-lesson-time' }, local,
+            local !== inBerlin ? h('span', { class: 'acc-sub' }, `${inBerlin} ${t('lessonBerlin')}`) : null),
+          h('p', { class: 'acc-sub' }, `${l.durationMin || 50} ${t('lessonMinutes')}`),
+          live || soon ? h('p', { class: 'acc-lesson-alert' }, t(live ? 'lessonLive' : 'lessonStartsSoon')) : null,
+          l.note ? h('p', { class: 'acc-assign-text' }, h('strong', {}, `${t('lessonNote')}: `), l.note) : null,
+          l.meetUrl
+            ? h('a', { class: `btn ${live || soon ? 'primary' : 'ghost'} acc-join-btn`, href: l.meetUrl, target: '_blank', rel: 'noopener noreferrer' }, t('lessonJoin'))
+            : h('p', { class: 'acc-hint' }, t('lessonNoLink'))));
+    }))]
+    : [h('p', { class: 'acc-empty' }, t('panelLessonsEmpty'))]));
+}
 
 // Öğrenci sadece "tamamladım", tamamlama zamanı ve kendi doküman linkini değiştirebilir (kurallar).
 async function saveAssignment(a, changes, statusEl){
@@ -191,8 +229,9 @@ async function render(){
   renderAccount();
   renderState();
   const active = accountState(profile) === 'active';
-  for(const id of ['assignSection', 'doneSection', 'resourceSection']) $(id).hidden = !active;
+  for(const id of ['lessonSection', 'assignSection', 'doneSection', 'resourceSection']) $(id).hidden = !active;
   if(active){
+    renderLessons();
     await renderAssignments();
     renderResources();
     await renderHistory();
@@ -221,7 +260,11 @@ async function start(){
     const verified = await syncEmailVerified(user, profile).catch((error) => { console.warn(error); return false; });
     $('verifyCard').hidden = verified;
     if(accountState(profile) === 'active'){
-      [results, assignments, resources] = await Promise.all([loadResults(user.uid), loadAssignments(user.uid), loadResources(user.uid)]);
+      [results, assignments, resources, lessons] = await Promise.all([
+        loadResults(user.uid), loadAssignments(user.uid), loadResources(user.uid), loadLessons(user.uid)
+      ]);
+      // "Görüşmeye katıl" düğmesinin durumu zamanla değişir.
+      setInterval(() => { if(!document.hidden) renderLessons(); }, 30000);
     }
     $('panelLoading').hidden = true;
     $('panelLayout').hidden = false;

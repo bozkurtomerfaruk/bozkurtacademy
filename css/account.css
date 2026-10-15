@@ -172,3 +172,55 @@
 .acc-row-warning{flex-basis:100%;margin:0;padding:8px 12px;border-radius:var(--ba-radius-small);background:var(--ba-wrong-bg);color:var(--ba-wrong);font-size:var(--ba-small);font-weight:600;line-height:1.4}
 .acc-row-actions .acc-row-warning{text-align:left}
 .acc-verify .btn{margin-top:4px}
+
+/* Aşama 2: ödevler ve kaynaklar */
+.acc-form .field textarea{width:100%;min-height:120px;padding:12px 14px;resize:vertical;line-height:1.5}
+.acc-stack{display:grid;gap:16px;min-width:0}
+.acc-stack>.acc-card{margin:0}
+.acc-section-head,.acc-tabpanel-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 12px}
+.acc-section-head h2{margin:0}
+.acc-tabpanel-head .acc-hint{margin:0;max-width:60ch}
+.acc-pick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media(max-width:560px){.acc-pick{grid-template-columns:1fr}}
+.acc-checklist{display:grid;gap:4px;margin:0;padding:0;border:0;max-height:320px;overflow:auto}
+.acc-checklist .acc-check{padding:8px 4px;border-radius:var(--ba-radius-small);font-size:var(--ba-body)}
+.acc-checklist .acc-check:hover{background:var(--ba-paper-2)}
+.acc-checklist .acc-sub{margin-top:2px}
+.acc-check-all{padding:4px;font-weight:600}
+.acc-small-head{font-family:var(--ba-sans)!important;font-size:var(--ba-small)!important;font-weight:600!important;display:flex;align-items:center;gap:8px;margin:0 0 8px!important}
+.acc-chosen{margin:0;padding-left:1.4em;display:grid;gap:6px}
+.acc-chosen li{display:flex;justify-content:space-between;align-items:center;gap:12px;line-height:1.4}
+.acc-chosen li.acc-hint{display:list-item;list-style:none;margin-left:-1.4em}
+.acc-chosen .acc-text-button{min-height:36px;flex:none}
+@media(min-width:901px){.acc-sticky{position:sticky;top:96px}}
+.acc-row-full{grid-column:1/-1}
+.acc-assign-row .acc-row-name{font-size:var(--ba-body)}
+.acc-plain-list{margin:8px 0;padding-left:1.25em;display:grid;gap:4px;font-size:var(--ba-small)}
+.acc-status-list{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:6px}
+.acc-status-list li{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;padding:8px 0;border-top:2px solid var(--ba-paper-2);font-size:var(--ba-small)}
+.acc-status-list li:first-child{border-top:0}
+.acc-status-list .acc-badge{margin-left:auto}
+.acc-resource-list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
+.acc-resource-list li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;border-radius:var(--ba-radius);background:var(--ba-paper)}
+.acc-resource-list a{font-weight:600;color:var(--ba-ink);overflow-wrap:anywhere}
+.acc-resource-list .acc-text-button{flex:none}
+.acc-resource-form{margin:0}
+.acc-resource-form h3{font-size:var(--ba-lead)}
+.acc-assign h3{font-size:var(--ba-lead);margin:0 0 6px}
+.acc-assign h4{font-family:var(--ba-sans);font-size:var(--ba-small);font-weight:600;margin:0;color:var(--ba-muted)}
+.acc-assign .ba-card-body{display:grid;gap:16px}
+.acc-assign-due{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0;color:var(--ba-muted);font-size:var(--ba-small);font-weight:600}
+.acc-assign-text{margin:0;white-space:pre-line;overflow-wrap:anywhere}
+.acc-assign-doc{display:grid;gap:6px;justify-items:start}
+.acc-assign-link{display:grid;gap:8px}
+.acc-assign-link input{width:100%;min-height:52px;padding:12px 14px}
+.acc-assign .acc-status{margin:0}
+@media(max-width:480px){
+  .acc-assign .acc-actions .btn{flex:1 1 100%}
+  .acc-status-list .acc-badge{margin-left:0}
+}
+/* Uzun linkler (ör. /copy önizlemesi) form ızgarasını genişletmesin */
+.acc-form>*{min-width:0}
+.acc-hint{overflow-wrap:anywhere}
+/* Öğrenci detayı: telefonda bilgiler ve işlemler (onayla, pasif yap, sil) üstte */
+@media(max-width:900px){.acc-layout-side-first .acc-side{order:-1}}

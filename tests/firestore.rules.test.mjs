@@ -391,6 +391,105 @@ describe('16 yaş altı: öğretmen onayı VE veli onayı', () => {
   });
 });
 
+describe('Ödevler ve kaynaklar', () => {
+  const assignment = () => ({
+    title: 'Artikel tekrarı', description: 'Alıştırmaları çöz.', dueAt: Timestamp.now(),
+    exercises: [{ level: 'A1', topic: 'artikel', exercise: 'kontext-1' }],
+    docUrl: 'https://docs.google.com/document/d/abc/copy', copyPerStudent: true, groupId: 'g1',
+    createdAt: Timestamp.now(), done: false, doneAt: null, studentDocUrl: ''
+  });
+  const ref = (db, uid = 'ayse') => doc(db, `users/${uid}/assignments/a1`);
+
+  async function setup(status = 'active'){
+    await seed('users/ayse', seededAdult(status));
+    await seed('users/ayse/assignments/a1', assignment());
+  }
+
+  test('öğrenci ödevi tamamladı olarak işaretleyebilir ve geri alabilir', async () => {
+    await setup();
+    await assertSucceeds(updateDoc(ref(ayse()), { done: true, doneAt: serverTimestamp() }));
+    await assertSucceeds(updateDoc(ref(ayse()), { done: false, doneAt: null }));
+  });
+
+  test('öğrenci kendi Google Docs linkini ekleyebilir ve silebilir', async () => {
+    await setup();
+    await assertSucceeds(updateDoc(ref(ayse()), { studentDocUrl: 'https://docs.google.com/document/d/xyz/edit' }));
+    await assertSucceeds(updateDoc(ref(ayse()), { studentDocUrl: 'https://drive.google.com/file/d/xyz/view' }));
+    await assertSucceeds(updateDoc(ref(ayse()), { studentDocUrl: '' }));
+  });
+
+  test('Google dışı ya da https olmayan link reddedilir', async () => {
+    await setup();
+    await assertFails(updateDoc(ref(ayse()), { studentDocUrl: 'https://example.com/doc' }));
+    await assertFails(updateDoc(ref(ayse()), { studentDocUrl: 'http://docs.google.com/document/d/x' }));
+    await assertFails(updateDoc(ref(ayse()), { studentDocUrl: 'javascript:alert(1)' }));
+    await assertFails(updateDoc(ref(ayse()), { studentDocUrl: 'https://docs.google.com.evil.com/x' }));
+  });
+
+  test('tamamlama zamanı uydurulamaz', async () => {
+    await setup();
+    await assertFails(updateDoc(ref(ayse()), { done: true, doneAt: Timestamp.fromDate(new Date(2020, 0, 1)) }));
+    await assertFails(updateDoc(ref(ayse()), { done: true }));
+    await assertFails(updateDoc(ref(ayse()), { done: false, doneAt: serverTimestamp() }));
+    await assertFails(updateDoc(ref(ayse()), { done: 'evet', doneAt: serverTimestamp() }));
+  });
+
+  test('öğrenci ödevin başlığını, tarihini veya alıştırmalarını değiştiremez', async () => {
+    await setup();
+    await assertFails(updateDoc(ref(ayse()), { title: 'Kolay ödev' }));
+    await assertFails(updateDoc(ref(ayse()), { dueAt: Timestamp.fromDate(new Date(2030, 0, 1)) }));
+    await assertFails(updateDoc(ref(ayse()), { exercises: [] }));
+    await assertFails(updateDoc(ref(ayse()), { done: true, doneAt: serverTimestamp(), title: 'x' }));
+  });
+
+  test('öğrenci ödev oluşturamaz ve silemez', async () => {
+    await setup();
+    await assertFails(setDoc(doc(ayse(), 'users/ayse/assignments/a2'), assignment()));
+    await assertFails(deleteDoc(ref(ayse())));
+  });
+
+  test('onaysız ya da pasif öğrenci ödevini okuyamaz ve işaretleyemez', async () => {
+    for(const status of ['pending', 'inactive']){
+      await env.clearFirestore();
+      await setup(status);
+      await assertFails(getDoc(ref(ayse())));
+      await assertFails(updateDoc(ref(ayse()), { done: true, doneAt: serverTimestamp() }));
+    }
+  });
+
+  test('veli onayı eksik 16 yaş altı öğrenci ödevini işaretleyemez', async () => {
+    await seed('users/can', seededMinor('active'));
+    await seed('users/can/assignments/a1', assignment());
+    await assertFails(updateDoc(ref(can(), 'can'), { done: true, doneAt: serverTimestamp() }));
+  });
+
+  test('öğrenci başka öğrencinin ödevini okuyamaz ve işaretleyemez', async () => {
+    await setup();
+    await seed('users/can', seededMinor('active', consentGiven));
+    await seed('users/can/assignments/a1', assignment());
+    await assertFails(getDoc(ref(ayse(), 'can')));
+    await assertFails(updateDoc(ref(ayse(), 'can'), { done: true, doneAt: serverTimestamp() }));
+  });
+
+  test('öğrenci kaynakları okuyabilir ama yazamaz', async () => {
+    await setup();
+    await seed('users/ayse/resources/k1', { title: 'Video', url: 'https://youtube.com/x', note: '', createdAt: Timestamp.now() });
+    await assertSucceeds(getDocs(collection(ayse(), 'users/ayse/resources')));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse/resources/k1'), { title: 'x' }));
+    await assertFails(deleteDoc(doc(ayse(), 'users/ayse/resources/k1')));
+  });
+
+  test('öğretmen ödev ve kaynak oluşturup silebilir, bütün ödevleri tek sorguyla okuyabilir', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    const db = teacherDb();
+    await assertSucceeds(setDoc(doc(db, 'users/ayse/assignments/a1'), assignment()));
+    await assertSucceeds(setDoc(doc(db, 'users/ayse/resources/k1'), { title: 'PDF', url: 'https://example.com/a.pdf', note: '', createdAt: serverTimestamp() }));
+    await assertSucceeds(getDocs(collectionGroup(db, 'assignments')));
+    await assertFails(getDocs(collectionGroup(ayse(), 'assignments')));
+    await assertSucceeds(deleteDoc(doc(db, 'users/ayse/assignments/a1')));
+  });
+});
+
 describe('Öğretmen', () => {
   test('öğretmen bütün öğrencileri listeleyebilir ve sonuçları okuyabilir', async () => {
     await seed('users/ayse', seededAdult('pending'));

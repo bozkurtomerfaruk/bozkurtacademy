@@ -47,6 +47,15 @@ Guests who never sign in load nothing from Google. Apart from that, nothing else
   Firebase Console.
 - Parent consent form draft: `docs/veli-onay-formu.md`.
 
+## Homework and resources (stage 2)
+
+- Homework is stored per student (`users/{uid}/assignments`): title, description, due date, chosen
+  site exercises, an optional Google Docs link from the teacher, and the student's own fields
+  (done, done time, an optional Google Docs/Drive link). Students can change only their own fields.
+- Resources (`users/{uid}/resources`): title, link and short note added by the teacher.
+- Links to Google Docs open Google's site in a new tab; Google only receives data if the student
+  opens them. No Google Drive API is used.
+
 ## Other things a generator usually asks about
 
 - **Local storage in the browser (not cookies, nothing is sent anywhere):**

@@ -1,0 +1,23 @@
+/* Smaller pages: exams, about, contact. Tokens and shared pieces come from base.css. */
+
+/* Sınav Hazırlığı: the four skills printed like the parts of an exam paper */
+#page-exams .exam-skills{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+#page-exams .exam-skill{padding:clamp(24px,3vw,40px)}
+#page-exams .exam-skill+.exam-skill{border-left:6px dotted var(--ba-ground)}
+#page-exams .exam-skill h3{font-family:var(--ba-serif);font-weight:400;font-size:clamp(1.75rem,1.2rem + 1.6vw,2.5rem);letter-spacing:-.02em;margin:0 0 12px}
+#page-exams .exam-skill p{margin:0;color:var(--ba-ink)}
+#page-exams .exam-plan{padding:0;display:block;color:var(--ba-ink)}
+#page-exams .exam-plan-body{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 48px;align-items:end;padding:clamp(28px,5vw,64px)}
+#page-exams .exam-plan h2{margin:0 0 12px;max-width:16em}
+#page-exams .exam-plan p{margin:0;max-width:48ch;color:var(--ba-ink)}
+@media(max-width:1020px){
+  #page-exams .exam-skills{grid-template-columns:1fr 1fr}
+  #page-exams .exam-skill:nth-child(3){border-left:0}
+  #page-exams .exam-skill:nth-child(n+3){border-top:6px dotted var(--ba-ground)}
+}
+@media(max-width:620px){
+  #page-exams .exam-skills{grid-template-columns:1fr}
+  #page-exams .exam-skill+.exam-skill{border-left:0;border-top:6px dotted var(--ba-ground)}
+  #page-exams .exam-plan-body{grid-template-columns:1fr}
+  #page-exams .exam-plan .btn{width:100%}
+}

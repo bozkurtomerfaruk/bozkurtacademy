@@ -36,4 +36,4 @@ if(configured){
   }
 }
 
-export { auth, db, fa, fs };
+export { auth, db, fa, fs, emulator };

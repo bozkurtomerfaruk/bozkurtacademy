@@ -22,9 +22,11 @@ verification) and GoatCounter visitor statistics on the public pages.
 | **Cloud Firestore** (Google, europe-west3 Frankfurt) | Student accounts only | Name, email, birth year, account status, exercise results (level, topic, exercise, score, time); for under-16s also parent name and email, consent date and method | `firestore.rules`, `js/account/*.js` |
 | **gstatic.com** (Google, Firebase SDK files) | Only on login/registration/panel pages, and on `index.html` only if the browser was signed in before (`baAccount`) | IP address and browser details of the request | `js/account/firebase.js` |
 
-Planned in later stages (not live yet): Google Calendar and Meet (lesson invitations with student and,
-for under-16s, parent email), Gmail via Google Apps Script (reminder emails; a SHA-256 hash of each
-recipient address is kept 14 days to avoid duplicates).
+| **Google Calendar / Meet** (Google, teacher's calendar) | When the teacher schedules, moves or cancels a lesson (from `ogretmen-takvim.html`) | Event with "Almanca dersi – student name", time, note, the student's email and, for under-16s when enabled, the parent's email as attendees; Google sends the invitations and updates and creates the Meet link. Only the teacher's browser talks to the Calendar API (scope `calendar.events`) | `js/account/calendar.js`, `js/account/lessons.js` |
+| **accounts.google.com** (Google Identity Services script) | Teacher pages only, to get the Calendar permission | Request details of the teacher's browser | `js/account/calendar.js` |
+
+Planned in stage 4 (not live yet): Gmail via Google Apps Script (reminder emails; a SHA-256 hash of
+each recipient address is kept 14 days to avoid duplicates).
 
 Guests who never sign in load nothing from Google. Apart from that, nothing else is loaded from another host while browsing. In particular:
 
@@ -46,6 +48,13 @@ Guests who never sign in load nothing from Google. Apart from that, nothing else
   ("Silinmesi gereken kayıtlar"); the Firebase Authentication account must then be deleted in the
   Firebase Console.
 - Parent consent form draft: `docs/veli-onay-formu.md`.
+
+## Lessons (stage 3)
+
+- Lessons are stored per student (`users/{uid}/lessons`): start time, duration, note, status, the
+  Google Calendar event id and the Meet link. Students can only read their own.
+- For under-16s the teacher can switch off adding the parent to invitations (`inviteParent`).
+- Deleting a student also deletes their Calendar events (future ones with a cancellation notice).
 
 ## Homework and resources (stage 2)
 

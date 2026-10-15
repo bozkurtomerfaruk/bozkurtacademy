@@ -7,6 +7,9 @@ import {
   addResource, approve, deleteAssignment, deleteResource, emailVerified, fmtDate, isEnabled, openDeleteDialog,
   recordConsent, requireTeacher, setActive, setInactive, statusBadges, UNVERIFIED_WARNING, updateParent
 } from './teacher-common.js';
+import * as cal from './calendar.js';
+import { db, fs } from './firebase.js';
+import { applyAttendees, loadStudentLessons } from './lessons.js';
 
 const uid = new URLSearchParams(location.search).get('id');
 let student = null;
@@ -145,8 +148,70 @@ function renderParent(){
   }else{
     items.push(h('p', { class: 'acc-hint' }, 'Veli onayını imzalı form (docs/veli-onay-formu.md) ya da velinin e-postasıyla site dışında al, sonra burada işaretle.'), consentForm());
   }
+  items.push(inviteParentControl());
   items.push(parentEditForm());
   $('parentContent').replaceChildren(...items);
+}
+
+let lessons = [];
+
+// Dersler: yaklaşanlar (en yakın önce) ve son 10 geçmiş ders. Taşıma ve iptal takvim sayfasında.
+function renderLessons(){
+  const now = new Date();
+  const end = (l) => new Date(l.startAt.getTime() + (l.durationMin || 50) * 60000);
+  const upcoming = lessons.filter((l) => l.status === 'scheduled' && end(l) > now).sort((a, b) => a.startAt - b.startAt);
+  const past = lessons.filter((l) => !(l.status === 'scheduled' && end(l) > now)).sort((a, b) => b.startAt - a.startAt).slice(0, 10);
+  const row = (l) => h('li', {},
+    h('span', {}, `${fmtDateTime(l.startAt)} · ${l.durationMin || 50} dk`),
+    l.status === 'cancelled' ? h('span', { class: 'acc-badge muted' }, 'İptal') : null,
+    l.calendarSync === 'failed' ? h('span', { class: 'acc-badge warning' }, 'Takvim hatası') : null,
+    l.status === 'scheduled' && end(l) > now && l.meetUrl ? safeLink(l.meetUrl, 'Görüşmeye katıl') : null);
+  $('lessonsList').replaceChildren(
+    upcoming.length
+      ? h('ul', { class: 'acc-status-list acc-lesson-list' }, upcoming.map(row))
+      : h('p', { class: 'acc-empty' }, 'Planlanmış ders yok.'),
+    past.length ? h('details', { class: 'acc-details' }, h('summary', {}, `Geçmiş dersler (${past.length})`), h('ul', { class: 'acc-status-list' }, past.map(row))) : null,
+    h('p', { class: 'acc-hint' }, h('a', { class: 'ba-link', href: 'ogretmen-takvim.html' }, 'Takvimde aç'), ' (taşıma ve iptal için).'));
+}
+
+// 16 yaş altı: ders davetlerine ve hatırlatmalara veli de eklensin mi (varsayılan açık).
+function inviteParentControl(){
+  const input = h('input', { type: 'checkbox', id: 'inviteParent', checked: student.inviteParent !== false });
+  const save = h('button', { class: 'btn ghost', type: 'button' }, 'Kaydet');
+  save.addEventListener('click', async () => {
+    save.disabled = true;
+    const value = input.checked;
+    let calendarError = null;
+    const future = lessons.filter((l) => l.status === 'scheduled' && l.startAt > new Date() && l.calendarEventId);
+    const applyToFuture = future.length > 0 && confirm(`Bu ayar gelecekteki ${future.length} derse de uygulansın mı? Değişiklik Google Calendar davetlerine yansır ve davetlilere bildirim gider.`);
+    if(applyToFuture){
+      try{ await cal.connect(); }catch(error){ calendarError = error; }
+    }
+    try{
+      await fs.updateDoc(fs.doc(db, 'users', uid), { inviteParent: value });
+      student.inviteParent = value;
+    }catch(error){
+      console.error(error);
+      setActionStatus('error', 'Kaydedilemedi. Tekrar dene.');
+      save.disabled = false;
+      return;
+    }
+    if(!applyToFuture){
+      setActionStatus('success', 'Kaydedildi. Yeni derslere uygulanacak.');
+    }else{
+      try{
+        const count = await applyAttendees(student, lessons, calendarError);
+        setActionStatus('success', `Kaydedildi. ${count} Google Calendar etkinliğinin davetlileri güncellendi.`);
+      }catch(error){
+        console.error(error);
+        setActionStatus('error', `Ayar kaydedildi ama Google Calendar güncellenemedi: ${error.message}. Daha sonra tekrar kaydet.`);
+      }
+    }
+    await reload();
+  });
+  return h('div', { class: 'acc-invite' },
+    h('label', { class: 'acc-check' }, input, h('span', {}, 'Ders davetlerine ve hatırlatma e-postalarına veliyi de ekle')),
+    save);
 }
 
 // Öğrencinin ödevleri: yaklaşanlar önce, tamamlananlar sonda.
@@ -268,7 +333,11 @@ async function reload(){
   renderParent();
   $('newAssignmentLink').href = `ogretmen-odev.html?ogrenci=${encodeURIComponent(uid)}`;
   $('newAssignmentLink').hidden = !isEnabled(student);
-  const results = await loadResults(uid);
+  $('newLessonLink').href = `ogretmen-takvim.html?yeni=1&ogrenci=${encodeURIComponent(uid)}`;
+  $('newLessonLink').hidden = !isEnabled(student);
+  const [results, studentLessons] = await Promise.all([loadResults(uid), loadStudentLessons(uid)]);
+  lessons = studentLessons;
+  renderLessons();
   await Promise.all([renderAssignments(results), renderResources(), renderResults(results)]);
   $('studentLoading').hidden = true;
   $('studentApp').hidden = false;

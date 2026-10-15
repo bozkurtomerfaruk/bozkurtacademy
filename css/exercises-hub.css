@@ -23,7 +23,6 @@
 
 /* Topic and its exercise sets */
 .topic-overview{margin:0 0 clamp(28px,4vw,40px);padding:clamp(24px,4vw,48px);background:var(--ba-field);color:var(--ba-field-ink);border:0;border-radius:var(--ba-radius);box-shadow:none}
-.topic-overview .tag{color:var(--ba-field-ink)!important;margin-bottom:10px}
 #page-exercises .topic-overview h2{margin:0 0 10px;color:var(--ba-field-ink)}
 .topic-overview p{margin:0;max-width:60ch;color:var(--ba-field-ink)}
 #exerciseSetView .section-head{display:block;margin:0 0 18px}

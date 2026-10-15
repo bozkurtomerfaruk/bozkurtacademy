@@ -1,13 +1,11 @@
 > **Bu bir taslaktır, kullanmadan önce hukuki olarak kontrol ettirin.**
 > **Dies ist ein Entwurf. Vor der Verwendung rechtlich prüfen lassen.**
->
-> Köşeli parantez içindeki yerleri doldurun. / Bitte die Stellen in eckigen Klammern ausfüllen.
 
 ---
 
 # Veli onay formu: Bozkurt Academy öğrenci hesabı
 
-**Sorumlu:** Ömer Faruk Bozkurt, [adres], bozkurtt.omerfaruk@gmail.com
+**Sorumlu:** Ömer Faruk Bozkurt, Gielenstraße 5, 41460 Neuss, Almanya, bozkurtt.omerfaruk@gmail.com
 
 Çocuğunuz Bozkurt Academy'nin online Almanca derslerine katılmak için bozkurtacademy.com sitesinde bir öğrenci hesabı açmak istiyor. 16 yaşından küçük öğrencilerin hesabı sizin onayınız olmadan açılmaz. Bu form, hangi verilerin neden işlendiğini açıklar.
 
@@ -33,7 +31,7 @@ Veriler reklam için kullanılmaz ve satılmaz.
 
 ## 3. Verilerin saklandığı yerler
 
-- **Google Firebase:** Giriş ve öğrenci verileri burada tutulur. Veritabanı (Cloud Firestore) Frankfurt'taki sunucularda bulunur. Giriş hesabı (e-posta adresi, şifrenin şifrelenmiş özeti) Google tarafından AB dışında, özellikle ABD'de de işlenebilir.
+- **Google Firebase:** Giriş ve öğrenci verileri burada tutulur. Veritabanı (Cloud Firestore) Frankfurt'taki sunucularda bulunur. Giriş hesabı (e-posta adresi, şifrenin şifrelenmiş özeti) Google tarafından AB dışında, özellikle ABD'de de işlenebilir; bu aktarım AB-ABD Veri Gizliliği Çerçevesi ve standart sözleşme maddeleri dayanağıyla yapılır.
 - **Google Calendar ve Google Meet:** Her ders öğretmenin Google Calendar'ında bir etkinlik olarak oluşturulur. Öğrencinin adı ve e-posta adresi, ders zamanı ve Meet linki bu etkinlikte yer alır. Davet e-postalarını Google gönderir.
 - **Gmail:** Dersten bir gün önce öğretmenin Gmail hesabından hatırlatma e-postası gönderilir (Google Apps Script ile).
 
@@ -41,13 +39,13 @@ Veriler reklam için kullanılmaz ve satılmaz.
 
 - Veriler son dersten 12 ay sonra silinir.
 - Onaylanmayan kayıtlar 30 gün içinde silinir.
-- Bu imzalı form [nerede] saklanır ve öğrencinin verileri silindiğinde [imha edilir / … süre saklanır].
+- Bu imzalı form kâğıt olarak kilitli bir dolapta ya da dijital olarak şifreli bir klasörde, onay geri alınana veya öğrenci silinene kadar saklanır, sonra imha edilir.
 
 ## 5. Haklarınız
 
 - Verilere erişmeyi, düzeltilmesini ve **silinmesini isteme hakkınız** var. Bunun için bozkurtt.omerfaruk@gmail.com adresine yazmanız yeterli.
 - **Bu onayı istediğiniz zaman geri alabilirsiniz.** Onay geri alınırsa öğrencinin bütün verileri (alıştırma sonuçları, ödevler, dersler ve veli bilgileri) silinir. Geri alma, o zamana kadar yapılan işlemleri geçersiz kılmaz.
-- Bir veri koruma denetim makamına şikâyette bulunabilirsiniz.
+- Bir veri koruma denetim makamına şikâyette bulunabilirsiniz. Yetkili makam: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW), www.ldi.nrw.de.
 
 ## 6. Onay
 
@@ -70,7 +68,7 @@ Velinin imzası: ______________________________
 
 # Einwilligungserklärung der Eltern: Schülerkonto bei Bozkurt Academy
 
-**Verantwortlicher:** Ömer Faruk Bozkurt, [Adresse], bozkurtt.omerfaruk@gmail.com
+**Verantwortlicher:** Ömer Faruk Bozkurt, Gielenstraße 5, 41460 Neuss, Deutschland, bozkurtt.omerfaruk@gmail.com
 
 Ihr Kind möchte für den Online-Deutschunterricht bei Bozkurt Academy ein Schülerkonto auf bozkurtacademy.com anlegen. Konten von Schülerinnen und Schülern unter 16 Jahren werden nur mit Ihrer Einwilligung freigeschaltet. Dieses Formular erklärt, welche Daten zu welchem Zweck verarbeitet werden.
 
@@ -96,7 +94,7 @@ Die Daten werden nicht für Werbung verwendet und nicht verkauft.
 
 ## 3. Speicherorte
 
-- **Google Firebase:** Anmelde- und Schülerdaten werden hier gespeichert. Die Datenbank (Cloud Firestore) liegt auf Servern in Frankfurt. Das Anmeldekonto (E-Mail-Adresse, verschlüsselter Passwort-Hash) kann von Google auch außerhalb der EU, insbesondere in den USA, verarbeitet werden.
+- **Google Firebase:** Anmelde- und Schülerdaten werden hier gespeichert. Die Datenbank (Cloud Firestore) liegt auf Servern in Frankfurt. Das Anmeldekonto (E-Mail-Adresse, verschlüsselter Passwort-Hash) kann von Google auch außerhalb der EU, insbesondere in den USA, verarbeitet werden; Grundlage dafür sind das EU-US Data Privacy Framework und die Standardvertragsklauseln der EU-Kommission.
 - **Google Calendar und Google Meet:** Jede Stunde wird als Termin im Google Calendar des Lehrers angelegt. Name und E-Mail-Adresse des Kindes, die Uhrzeit und der Meet-Link stehen in diesem Termin. Die Einladungs-E-Mails versendet Google.
 - **Gmail:** Einen Tag vor der Stunde wird vom Gmail-Konto des Lehrers eine Erinnerungs-E-Mail versendet (mit Google Apps Script).
 
@@ -104,13 +102,13 @@ Die Daten werden nicht für Werbung verwendet und nicht verkauft.
 
 - Die Daten werden 12 Monate nach der letzten Stunde gelöscht.
 - Nicht freigeschaltete Registrierungen werden innerhalb von 30 Tagen gelöscht.
-- Dieses unterschriebene Formular wird [Ort] aufbewahrt und bei Löschung der Schülerdaten [vernichtet / … aufbewahrt].
+- Dieses unterschriebene Formular wird in Papierform in einem abschließbaren Schrank oder digital in einem verschlüsselten Ordner aufbewahrt, bis die Einwilligung widerrufen oder das Schülerkonto gelöscht wird, und danach vernichtet.
 
 ## 5. Ihre Rechte
 
 - Sie haben das Recht auf Auskunft, Berichtigung und **Löschung der Daten**. Schreiben Sie dazu einfach an bozkurtt.omerfaruk@gmail.com.
 - **Sie können diese Einwilligung jederzeit widerrufen.** Nach einem Widerruf werden alle Daten des Kindes (Übungsergebnisse, Hausaufgaben, Stunden und Elterndaten) gelöscht. Der Widerruf berührt nicht die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung.
-- Sie können sich bei einer Datenschutz-Aufsichtsbehörde beschweren.
+- Sie können sich bei einer Datenschutz-Aufsichtsbehörde beschweren. Zuständig: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW), www.ldi.nrw.de.
 
 ## 6. Einwilligung
 

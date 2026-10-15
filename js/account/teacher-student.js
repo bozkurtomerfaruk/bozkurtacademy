@@ -1,7 +1,8 @@
 // ogretmen-ogrenci.html?id=UID: öğrenci detayı, onay işlemleri, veli onayı, alıştırma sonuçları.
 import { $, consentGiven, currentYear, exerciseNames, formatDateTime, h, BERLIN, loadProfile, loadResults, scoreText, summarizeResults, validEmail } from './common.js';
 import {
-  approve, fmtDate, isEnabled, openDeleteDialog, recordConsent, requireTeacher, setActive, setInactive, statusBadges, updateParent
+  approve, emailVerified, fmtDate, isEnabled, openDeleteDialog, recordConsent, requireTeacher, setActive, setInactive,
+  statusBadges, UNVERIFIED_WARNING, updateParent
 } from './teacher-common.js';
 
 const uid = new URLSearchParams(location.search).get('id');
@@ -54,7 +55,7 @@ function renderProfile(){
   $('studentBadges').replaceChildren(statusBadges(student));
   const age = currentYear() - student.birthYear;
   const rows = [
-    ['E-posta', student.email],
+    ['E-posta', `${student.email} (${emailVerified(student) ? 'doğrulandı' : 'doğrulanmadı'})`],
     ['Doğum yılı', `${student.birthYear} (bu yıl ${age} yaşına giriyor)`],
     ['Kayıt yöntemi', student.provider === 'google.com' ? 'Google' : 'E-posta ve şifre'],
     ['Kayıt', fmtDateTime(student.createdAt)],
@@ -63,7 +64,10 @@ function renderProfile(){
   $('profileList').replaceChildren(...rows.map(([dt, dd]) => h('div', {}, h('dt', {}, dt), h('dd', {}, dd))));
 
   const actions = [];
-  if(student.status === 'pending') actions.push(actionButton('Onayla', 'primary', () => approve(uid), 'Öğrenci onaylandı.'));
+  if(student.status === 'pending'){
+    if(!emailVerified(student)) actions.push(h('p', { class: 'acc-row-warning' }, UNVERIFIED_WARNING));
+    actions.push(actionButton('Onayla', 'primary', () => approve(uid), 'Öğrenci onaylandı.'));
+  }
   if(student.status === 'active') actions.push(actionButton('Pasif yap', 'ghost', () => setInactive(uid), 'Öğrenci pasif yapıldı. Hiçbir veriyi göremez.'));
   if(student.status === 'inactive') actions.push(actionButton('Yeniden aktif yap', 'primary', () => setActive(uid), 'Öğrenci yeniden aktif.'));
   const deleteBtn = h('button', { class: 'btn danger', type: 'button' }, 'Öğrenciyi ve bütün verilerini sil');

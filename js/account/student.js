@@ -4,13 +4,14 @@ import { TEACHER_EMAIL, TEACHER_UID } from './config.js';
 import { registerStrings, t, lang } from './i18n.js';
 import {
   $, accountState, clearHint, currentUser, exerciseNames, formatDateTime, h, loadProfile, loadResults,
-  scoreText, setHint, summarizeResults
+  scoreText, sendVerification, setHint, setStatus, summarizeResults, syncEmailVerified
 } from './common.js';
 
 registerStrings();
 
 let profile = null;
 let results = [];
+let currentAuthUser = null;
 
 const STATES = {
   pending: ['panelPendingTitle', 'panelPendingText'],
@@ -94,6 +95,9 @@ async function start(){
       return;
     }
     setHint('student');
+    currentAuthUser = user;
+    const verified = await syncEmailVerified(user, profile).catch((error) => { console.warn(error); return false; });
+    $('verifyCard').hidden = verified;
     if(accountState(profile) === 'active') results = await loadResults(user.uid);
     $('panelLoading').hidden = true;
     $('panelLayout').hidden = false;
@@ -109,6 +113,19 @@ $('logoutBtn').addEventListener('click', async () => {
   await fa.signOut(auth);
   clearHint();
   location.replace('index.html');
+});
+
+$('verifyResend').addEventListener('click', async () => {
+  const button = $('verifyResend');
+  button.disabled = true;
+  try{
+    await sendVerification(currentAuthUser, lang());
+    setStatus($('verifyStatus'), 'success', t('panelVerifySent'));
+  }catch(error){
+    console.error(error);
+    setStatus($('verifyStatus'), 'error', t('panelVerifyFailed'));
+    button.disabled = false;
+  }
 });
 
 window.addEventListener('ba:languagechange', () => { if(profile) render(); });

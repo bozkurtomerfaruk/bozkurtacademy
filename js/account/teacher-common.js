@@ -94,6 +94,12 @@ export function categorize(students, lastLessons){
   };
 }
 
+// Google hesapları zaten doğrulanmış sayılır; e-posta/şifre kayıtlarında öğrenci bağlantıya tıklayınca
+// profiline "emailVerified: true" yazılır.
+export const emailVerified = (s) => s.emailVerified === true || s.provider === 'google.com';
+
+export const UNVERIFIED_WARNING = 'E-posta doğrulanmadı. Yine de onaylayabilirsin.';
+
 export function statusBadges(s){
   const badges = [];
   if(s.status === 'inactive') badges.push(['Pasif', 'muted']);
@@ -101,6 +107,7 @@ export function statusBadges(s){
   else if(isEnabled(s)) badges.push(['Aktif', 'success']);
   if(s.minor) badges.push(['16 yaş altı', '']);
   if(s.minor && !consentGiven(s)) badges.push(['Veli onayı bekleniyor', 'warning']);
+  badges.push(emailVerified(s) ? ['E-posta doğrulandı', 'success'] : ['E-posta doğrulanmadı', 'warning']);
   return h('span', { class: 'acc-badges' }, badges.map(([text, type]) => h('span', { class: `acc-badge ${type}` }, text)));
 }
 

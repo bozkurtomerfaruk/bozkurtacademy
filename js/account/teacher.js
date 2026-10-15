@@ -1,7 +1,8 @@
 // ogretmen.html: öğrenci listesi, onay bekleyenler, veli onayı bekleyenler, silinmesi gereken kayıtlar.
 import { $, h } from './common.js';
 import {
-  approve, categorize, fmtDate, lastLessonByStudent, listStudents, openDeleteDialog, requireTeacher, statusBadges
+  approve, categorize, emailVerified, fmtDate, lastLessonByStudent, listStudents, openDeleteDialog, requireTeacher,
+  statusBadges, UNVERIFIED_WARNING
 } from './teacher-common.js';
 
 const TABS = ['ogrenciler', 'onay', 'veli', 'silinecek'];
@@ -53,7 +54,8 @@ function renderPending(){
           showError('Onaylanamadı. Tekrar dene.');
         }
       });
-      return row(s, [['Kayıt', fmtDate(s.createdAt)], ['Doğum yılı', String(s.birthYear)]], [approveBtn, detailLink(s)]);
+      const warning = emailVerified(s) ? null : h('p', { class: 'acc-row-warning' }, UNVERIFIED_WARNING);
+      return row(s, [['Kayıt', fmtDate(s.createdAt)], ['Doğum yılı', String(s.birthYear)]], [warning, approveBtn, detailLink(s)]);
     })
     : [empty('Onay bekleyen kayıt yok.')]));
 }

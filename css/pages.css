@@ -28,7 +28,8 @@
 #page-about .about-photo img{width:100%;height:100%;max-height:none;object-fit:cover;object-position:center 32%;display:block}
 #page-about .about-text{padding:0;border:0;box-shadow:none;display:flex;flex-direction:column}
 #page-about .about-letter{flex:1;display:flex;flex-direction:column;justify-content:center;padding:clamp(28px,5vw,72px)}
-#page-about .about-letter h2{margin:0 0 20px}
+#page-about .about-letter h2{margin:0 0 4px}
+#page-about .about-role{margin:0 0 24px;color:var(--ba-muted);font-size:var(--ba-body)}
 #page-about .founder-bio{margin:0 0 16px;padding:0;border:0;background:none;border-radius:0;font-size:var(--ba-lead);line-height:1.55;color:var(--ba-ink);max-width:40ch}
 #page-about .section-head{margin:0 0 28px;max-width:760px}
 #page-about .section-head h2{margin:0 0 12px}

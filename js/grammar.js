@@ -486,7 +486,6 @@
     el.innerHTML = `
       <div class="page-hero">
         <div class="page-hero-inner grammar-hero-copy">
-          <span class="tag" id="grammarHeroTag">${escapeHtml(tx('tag'))}</span>
           <h1 id="grammarHeroTitle">${escapeHtml(tx('heroTitle'))}</h1>
           <p id="grammarHeroSub">${escapeHtml(tx('heroSub'))}</p>
         </div>

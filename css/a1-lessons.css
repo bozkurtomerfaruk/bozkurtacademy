@@ -11,7 +11,6 @@
 .a1-breadcrumb button{min-height:44px;border:0;background:none;color:var(--ba-ink);padding:0;cursor:pointer;font:inherit;font-weight:600;text-decoration:underline;text-underline-offset:4px}
 
 /* Header */
-.a1-article-header .tag{margin-bottom:12px}
 #page-grammar .a1-article-header h2{font-size:clamp(2.125rem,1.4rem + 3vw,3.5rem);line-height:1.08;margin:0 0 20px;overflow-wrap:anywhere}
 .a1-article-header .a1-lead{font-size:var(--ba-lead);line-height:1.55;color:var(--ba-ink);margin:0}
 
@@ -74,7 +73,6 @@
 /* Practice: the one decorated card, outside the reading flow */
 .a1-practice{--a1-pad:clamp(20px,4vw,36px);margin:clamp(40px,6vw,64px) 0;padding:0 var(--a1-pad) 24px;border:0;border-radius:var(--ba-radius-small);background:var(--ba-paper-2);overflow:hidden}
 .a1-practice::before{content:"";display:block;height:16px;margin:0 calc(-1 * var(--a1-pad)) 24px;background:repeating-linear-gradient(90deg,var(--ba-accent) 0 20px,transparent 20px 40px)}
-.a1-practice .tag{display:block;margin-bottom:10px}
 #page-grammar .a1-practice h3{margin-top:0}
 .a1-practice .btn{text-decoration:none;white-space:normal;text-align:left}
 .a1-practice-status:empty{display:none}
@@ -88,7 +86,8 @@
 .a1-author{display:flex;gap:22px;align-items:flex-start;margin:0 0 32px;padding:24px;background:var(--ba-paper-2);border:0;border-radius:var(--ba-radius-small)}
 .a1-author img{width:84px;height:84px;object-fit:cover;object-position:center 30%;border-radius:var(--ba-radius-small);flex-shrink:0}
 .a1-author p{font-size:var(--ba-body);color:var(--ba-ink);margin:0 0 10px}
-#page-grammar .a1-author h3{margin:6px 0 8px;font-size:var(--ba-lead)}
+#page-grammar .a1-author h3{margin:0 0 2px;font-size:var(--ba-lead)}
+.a1-author-role{font-size:var(--ba-small)!important;color:var(--ba-muted)!important;margin:0 0 10px!important}
 .a1-author a{font-weight:600}
 .a1-reading{font-size:var(--ba-small);color:var(--ba-ink);margin:24px 0}
 

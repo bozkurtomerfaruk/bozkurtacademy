@@ -15,7 +15,7 @@
   <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=11" />
   <link rel="stylesheet" href="css/base.css?v=6" />
-  <link rel="stylesheet" href="css/account.css?v=1" />
+  <link rel="stylesheet" href="css/account.css?v=2" />
 </head>
 <body class="academy-theme account-page teacher-page">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
@@ -62,6 +62,7 @@
             <button class="acc-tab" role="tab" type="button" id="tab-ogrenciler" aria-controls="panel-ogrenciler" data-tab="ogrenciler">Öğrenciler <span class="acc-count" data-count="ogrenciler"></span></button>
             <button class="acc-tab" role="tab" type="button" id="tab-onay" aria-controls="panel-onay" data-tab="onay">Onay bekleyenler <span class="acc-count" data-count="onay"></span></button>
             <button class="acc-tab" role="tab" type="button" id="tab-veli" aria-controls="panel-veli" data-tab="veli">Veli onayı bekleyenler <span class="acc-count" data-count="veli"></span></button>
+            <button class="acc-tab" role="tab" type="button" id="tab-odevler" aria-controls="panel-odevler" data-tab="odevler">Ödevler <span class="acc-count" data-count="odevler"></span></button>
             <button class="acc-tab" role="tab" type="button" id="tab-silinecek" aria-controls="panel-silinecek" data-tab="silinecek">Silinmesi gereken kayıtlar <span class="acc-count" data-count="silinecek"></span></button>
           </div>
 
@@ -80,6 +81,14 @@
           <section class="acc-tabpanel" role="tabpanel" id="panel-veli" aria-labelledby="tab-veli" hidden>
             <p class="acc-hint">16 yaş altı öğrenciler. Veli onayını site dışında aldıktan sonra öğrencinin sayfasında “Veli onayı alındı” olarak işaretle.</p>
             <div class="acc-list" id="list-veli"></div>
+          </section>
+          <section class="acc-tabpanel" role="tabpanel" id="panel-odevler" aria-labelledby="tab-odevler" hidden>
+            <div class="acc-tabpanel-head">
+              <p class="acc-hint">Her ödev, seçilen her öğrenciye ayrı olarak verilir; öğrenciler birbirini görmez.</p>
+              <a class="btn primary" href="ogretmen-odev.html">Yeni ödev</a>
+            </div>
+            <p class="acc-status" id="assignNotice" role="status" hidden></p>
+            <div class="acc-list" id="list-odevler"></div>
           </section>
           <section class="acc-tabpanel" role="tabpanel" id="panel-silinecek" aria-labelledby="tab-silinecek" hidden>
             <p class="acc-hint">Gizlilik politikasındaki saklama süreleri: son dersten 12 ay sonra (hiç ders yoksa onay tarihinden), onaylanmamış kayıtlar 30 gün sonra silinir. Sunucu olmadığı için silme otomatik değil; buradan başlatılır.</p>

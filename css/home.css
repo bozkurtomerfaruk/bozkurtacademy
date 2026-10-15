@@ -35,7 +35,6 @@ body.home-view .menu-toggle{background:var(--h-paper);color:var(--h-ink)}
 .home-page :is(h1,h2,h3){font-family:var(--h-serif);color:var(--h-ink);text-wrap:balance}
 html[data-theme="dark"] body.home-view .home-page :is(h1,h2,h3){color:var(--h-ink)!important}
 .home-page p{text-wrap:pretty}
-.home-eyebrow{font-size:var(--h-small);font-weight:500;color:var(--h-muted);margin:0 0 16px}
 
 /* Hero: printed card beside the photograph */
 .home-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;min-height:clamp(600px,calc(100svh - 96px),820px)}
@@ -66,7 +65,7 @@ html[data-theme="dark"] body.home-view .home-page :is(h1,h2,h3){color:var(--h-in
 .home-section{width:min(1180px,100%);margin:0 auto;padding-top:clamp(80px,11vw,168px)}
 .home-lessons{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,7vw,112px);align-items:start;scroll-margin-top:110px}
 .home-page h2{font-size:var(--h-head);font-weight:400;line-height:1.08;letter-spacing:-.022em;margin:0 0 20px}
-.home-section-heading>p:not(.home-eyebrow){max-width:34ch;margin:0 0 20px}
+.home-section-heading>p{max-width:34ch;margin:0 0 20px}
 .home-slip{background:var(--h-paper);padding:32px clamp(22px,3vw,40px) 40px;clip-path:polygon(0 0,100% 0,100.00% calc(100% - 12px),95.83% calc(100% - 0px),91.67% calc(100% - 12px),87.50% calc(100% - 0px),83.33% calc(100% - 12px),79.17% calc(100% - 0px),75.00% calc(100% - 12px),70.83% calc(100% - 0px),66.67% calc(100% - 12px),62.50% calc(100% - 0px),58.33% calc(100% - 12px),54.17% calc(100% - 0px),50.00% calc(100% - 12px),45.83% calc(100% - 0px),41.67% calc(100% - 12px),37.50% calc(100% - 0px),33.33% calc(100% - 12px),29.17% calc(100% - 0px),25.00% calc(100% - 12px),20.83% calc(100% - 0px),16.67% calc(100% - 12px),12.50% calc(100% - 0px),8.33% calc(100% - 12px),4.17% calc(100% - 0px),0.00% calc(100% - 12px));max-width:560px;justify-self:end;width:100%}
 .home-steps{list-style:none;margin:0;padding:0;display:grid;gap:26px}
 .home-step-row{display:flex;align-items:baseline;gap:10px}
@@ -79,14 +78,12 @@ html[data-theme="dark"] body.home-view .home-page :is(h1,h2,h3){color:var(--h-in
 
 /* Practice: a field of green with the lesson's own example */
 .home-practice{width:auto;margin-top:clamp(80px,11vw,168px);padding:clamp(48px,7vw,112px) max(clamp(20px,5vw,72px),calc((100% - 1180px)/2));background:var(--h-field);color:var(--h-field-ink);border-radius:var(--h-radius);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,7vw,112px);align-items:center}
-.home-practice-copy :is(h2,p,.home-eyebrow,.home-text-link){color:var(--h-field-ink)!important}
+.home-practice-copy :is(h2,p,.home-text-link){color:var(--h-field-ink)!important}
 html[data-theme="dark"] body.home-view .home-practice h2{color:var(--h-field-ink)!important}
-.home-practice-copy>p:not(.home-eyebrow){max-width:34ch;margin:0 0 20px}
+.home-practice-copy>p{max-width:34ch;margin:0 0 20px}
 .home-example{background:var(--h-paper);color:var(--h-ink);border-radius:var(--h-radius);padding:clamp(26px,4vw,48px);transform:rotate(-1deg)}
-.home-example-label{font-size:var(--h-small);font-weight:600;color:var(--h-muted);margin:0}
-.home-example-prompt{margin:6px 0 18px;font-size:var(--h-body)}
+.home-example-prompt{margin:0 0 18px;font-size:var(--h-body)}
 .home-page .home-example :is(p){color:var(--h-ink)}
-.home-page .home-example .home-example-label{color:var(--h-muted)}
 .home-quiz{display:grid;gap:22px}
 .home-quiz-item{display:grid;gap:12px}
 .home-example-sentence{font-family:var(--h-serif);font-size:clamp(1.875rem,1.3rem + 2vw,2.875rem);line-height:1.2;letter-spacing:-.015em;margin:0}
@@ -106,7 +103,7 @@ html[data-theme="dark"] body.home-view .home-practice h2{color:var(--h-field-ink
 /* Closing: the reply card */
 .home-closing{width:min(1180px,100%);margin:clamp(80px,11vw,168px) auto clamp(48px,6vw,96px);background:var(--h-paper);border-radius:var(--h-radius);overflow:hidden}
 .home-closing-body{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px 56px;align-items:end;padding:clamp(32px,5vw,72px)}
-.home-closing-body p:not(.home-eyebrow){margin:0;max-width:44ch}
+.home-closing-body p{margin:0;max-width:44ch}
 .home-closing-actions{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
 .home-mail{color:var(--h-ink);font-weight:500;text-decoration:underline;text-underline-offset:5px;overflow-wrap:anywhere;min-height:44px;display:inline-flex;align-items:center}
 

@@ -40,7 +40,8 @@ export async function listStudents(){
 // Her öğrencinin en son (iptal edilmemiş) dersinin tarihi. Dersler Aşama 3'te eklenir; o zamana kadar boş.
 export async function lastLessonByStudent(){
   const map = new Map();
-  const snap = await fs.getDocs(fs.collectionGroup(db, 'lessons'));
+  // Bu okuma başarısız olsa bile öğrenci listesi açılsın; o zaman onay tarihine bakılır.
+  const snap = await fs.getDocs(fs.collectionGroup(db, 'lessons')).catch((error) => { console.warn(error); return { docs: [] }; });
   for(const d of snap.docs){
     const lesson = d.data();
     if(lesson.status === 'cancelled') continue;
@@ -124,6 +125,53 @@ export function recordConsent(uid, { date, method }){
     parentConsent: { given: true, at: fs.Timestamp.fromDate(date), method, recordedAt: fs.serverTimestamp() }
   });
 }
+
+// Ödevler: her öğrenciye ayrı bir kopya yazılır (users/{uid}/assignments), aynı groupId ile.
+// Böylece bir öğrenci aynı ödevi başka kimin aldığını göremez.
+export async function createAssignments(studentIds, data){
+  const groupId = crypto.randomUUID();
+  const batch = fs.writeBatch(db);
+  for(const uid of studentIds){
+    batch.set(fs.doc(fs.collection(db, 'users', uid, 'assignments')), {
+      ...data,
+      groupId,
+      createdAt: fs.serverTimestamp(),
+      done: false,
+      doneAt: null,
+      studentDocUrl: ''
+    });
+  }
+  await batch.commit();
+  return groupId;
+}
+
+// Bütün öğrencilerin ödevleri, groupId'ye göre gruplanmış.
+export async function loadAssignmentGroups(){
+  const snap = await fs.getDocs(fs.collectionGroup(db, 'assignments'));
+  const groups = new Map();
+  for(const d of snap.docs){
+    const a = d.data();
+    const key = a.groupId || d.id;
+    const group = groups.get(key) || { groupId: key, title: a.title, dueAt: toDate(a.dueAt), docUrl: a.docUrl, exercises: a.exercises || [], copies: [] };
+    group.copies.push({ ref: d.ref, uid: d.ref.parent.parent?.id, done: a.done === true, doneAt: toDate(a.doneAt), studentDocUrl: a.studentDocUrl || '' });
+    groups.set(key, group);
+  }
+  return [...groups.values()].sort((a, b) => (b.dueAt || 0) - (a.dueAt || 0));
+}
+
+export async function deleteAssignmentCopies(refs){
+  const batch = fs.writeBatch(db);
+  refs.forEach((ref) => batch.delete(ref));
+  await batch.commit();
+}
+
+export const deleteAssignment = (uid, id) => fs.deleteDoc(fs.doc(db, 'users', uid, 'assignments', id));
+
+export function addResource(uid, { title, url, note }){
+  return fs.addDoc(fs.collection(db, 'users', uid, 'resources'), { title, url, note, createdAt: fs.serverTimestamp() });
+}
+
+export const deleteResource = (uid, id) => fs.deleteDoc(fs.doc(db, 'users', uid, 'resources', id));
 
 const SUBCOLLECTIONS = ['results', 'assignments', 'resources', 'lessons'];
 

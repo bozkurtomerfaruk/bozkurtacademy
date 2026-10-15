@@ -15,7 +15,7 @@
   <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=11" />
   <link rel="stylesheet" href="css/base.css?v=6" />
-  <link rel="stylesheet" href="css/account.css?v=1" />
+  <link rel="stylesheet" href="css/account.css?v=2" />
 </head>
 <body class="academy-theme account-page">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
@@ -74,6 +74,21 @@
                 <h2 id="stateTitle"></h2>
                 <p id="stateText"></p>
               </div>
+            </section>
+
+            <section class="acc-section" id="assignSection" hidden aria-labelledby="assignTitle">
+              <h2 id="assignTitle" data-i18n="panelAssignTitle">Aktif ödevler</h2>
+              <div id="assignList"></div>
+            </section>
+
+            <section class="acc-section" id="doneSection" hidden aria-labelledby="doneTitle">
+              <h2 id="doneTitle" data-i18n="panelDoneTitle">Tamamlanan ödevler</h2>
+              <div id="doneList"></div>
+            </section>
+
+            <section class="acc-section" id="resourceSection" hidden aria-labelledby="resourceTitle">
+              <h2 id="resourceTitle" data-i18n="panelResourcesTitle">Kaynaklar</h2>
+              <div id="resourceList"></div>
             </section>
 
             <section class="acc-section" id="historySection" hidden aria-labelledby="historyTitle">

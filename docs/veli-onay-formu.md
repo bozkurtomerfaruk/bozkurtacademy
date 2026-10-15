@@ -39,7 +39,7 @@ Veriler reklam için kullanılmaz ve satılmaz.
 
 - Veriler son dersten 12 ay sonra silinir.
 - Onaylanmayan kayıtlar 30 gün içinde silinir.
-- Bu imzalı form kâğıt olarak kilitli bir dolapta ya da dijital olarak şifreli bir klasörde, onay geri alınana veya öğrenci silinene kadar saklanır, sonra imha edilir.
+- Bu imzalı form onay geri alınana veya öğrenci silinene kadar saklanır, sonra imha edilir: kâğıt olarak verilirse kilitli bir dolapta, dijital olarak (taranmış ya da e-postayla) verilirse şifreli bir klasörde.
 
 ## 5. Haklarınız
 
@@ -102,7 +102,7 @@ Die Daten werden nicht für Werbung verwendet und nicht verkauft.
 
 - Die Daten werden 12 Monate nach der letzten Stunde gelöscht.
 - Nicht freigeschaltete Registrierungen werden innerhalb von 30 Tagen gelöscht.
-- Dieses unterschriebene Formular wird in Papierform in einem abschließbaren Schrank oder digital in einem verschlüsselten Ordner aufbewahrt, bis die Einwilligung widerrufen oder das Schülerkonto gelöscht wird, und danach vernichtet.
+- Dieses unterschriebene Formular wird aufbewahrt, bis die Einwilligung widerrufen oder das Schülerkonto gelöscht wird, und danach vernichtet: in Papierform in einem abschließbaren Schrank, in digitaler Form (eingescannt oder per E-Mail) in einem verschlüsselten Ordner.
 
 ## 5. Ihre Rechte
 

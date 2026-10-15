@@ -1,9 +1,9 @@
-name: Firestore rules
+name: Firestore rules and Apps Script
 on:
   push:
-    paths: ['firestore.rules', 'tests/**', 'package.json', 'package-lock.json', 'firebase.json', '.github/workflows/firestore-rules.yml']
+    paths: ['firestore.rules', 'tests/**', 'apps-script/**', 'package.json', 'package-lock.json', 'firebase.json', '.github/workflows/firestore-rules.yml']
   pull_request:
-    paths: ['firestore.rules', 'tests/**', 'package.json', 'package-lock.json', 'firebase.json', '.github/workflows/firestore-rules.yml']
+    paths: ['firestore.rules', 'tests/**', 'apps-script/**', 'package.json', 'package-lock.json', 'firebase.json', '.github/workflows/firestore-rules.yml']
 jobs:
   rules:
     runs-on: ubuntu-latest

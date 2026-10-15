@@ -197,3 +197,4 @@ body.academy-theme{
 }
 .academy-theme :is(section,article,div,main,h1,h2,h3)[tabindex="-1"]:focus{outline:none!important}
 .academy-theme main [id]{scroll-margin-top:96px}
+.academy-theme .section-head.center{text-align:left;margin:0 0 28px;max-width:760px}

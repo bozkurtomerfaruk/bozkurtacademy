@@ -498,8 +498,7 @@
     if(!state.topicData) return;
     const overview=$('topicOverview');
     if(overview){
-      overview.innerHTML=`<span class="tag">${state.topicData.level} · ${t('topicLabel')}</span>
-        <h2>${escapeHtml(localize(state.topicData.title))}</h2>
+      overview.innerHTML=`<h2>${escapeHtml(localize(state.topicData.title))}</h2>
         <p>${escapeHtml(localize(state.topicData.description))}</p>`;
     }
     const grid=$('exerciseSetGrid');
@@ -545,7 +544,6 @@
     const rules=(lesson.rules || []).map(rule=>`<div><strong>${escapeHtml(rule.label)}</strong><span>${escapeHtml(localize(rule.text))}</span></div>`).join('');
     const examples=(lesson.examples || []).map(item=>`<div class="example-line">${escapeHtml(item)}</div>`).join('');
     panel.innerHTML=`
-      <div class="topic-status">✓ ${state.topicData.level} · ${escapeHtml(localize(state.topicData.title))}</div>
       <h3 class="lesson-panel-title">${escapeHtml(localize(lesson.title))}</h3>
       <p class="sub">${escapeHtml(localize(lesson.intro))}</p>
       ${rules?`<div class="lesson-rule dynamic-rules">${rules}</div>`:''}
@@ -869,7 +867,6 @@ function startNextExercise(){
       ? `<div class="wrong-summary"><strong>${t('wrongAnswersTitle')}</strong>${state.wrong.map(q=>`<div><strong>${escapeHtml(q.correct || q.answers?.[0] || '')} ${escapeHtml(q.word || '')}</strong><br><small>${escapeHtml(localize(q.explanations))}</small></div>`).join('')}</div>`
       : `<div class="notice result-notice">${t('noWrongAnswers')}</div>`;
     result.innerHTML=`<div class="result-box">
-      <span class="quiz-word">${state.topicData.level} · ${escapeHtml(localize(state.topicData.title))}</span>
       <h3>${escapeHtml(localize(state.exercise.title))}</h3>
       <div class="result-score"><div><strong>${state.score}/${total}</strong><span>${percent}% ${t('scoreLabel')}</span></div></div>
       <p class="result-message">${message}</p>

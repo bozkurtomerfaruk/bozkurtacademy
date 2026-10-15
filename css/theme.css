@@ -186,6 +186,11 @@ html[data-theme="dark"] .academy-theme :is(.quiz-option.correct,.quiz-feedback.g
 html[data-theme="dark"] .academy-theme :is(.quiz-option.wrong,.quiz-feedback.bad,.form-status.error){background:#432927!important;color:#f3c8c4!important;border-color:#b27670!important}
 html[data-theme="dark"] .academy-theme .progress-track{background:#39463a!important}
 html[data-theme="dark"] .academy-theme .progress-bar{background:#afc8a4!important}
+/* Inactive level tabs keep readable names and counts in the dark theme. */
+html[data-theme="dark"] .academy-theme .grammar-level-tab:not(.active) .grammar-level-name{color:#e8ede6!important}
+html[data-theme="dark"] .academy-theme .grammar-level-tab:not(.active) .grammar-level-count{color:#b3beb0!important}
+html[data-theme="dark"] .academy-theme .grammar-level-tab.active .grammar-level-count{color:#2b3a2e!important}
+#page-grammar .grammar-level-tab:not(.active) .grammar-level-count{color:#6b6259}
 html[data-theme="dark"] .academy-theme :is(.lesson-rule strong,.grammar-coming-soon small,.exercise-breadcrumb button,.exercise-discovery-heading>span){color:#afc8a4!important}
 html[data-theme="dark"] .academy-theme :is(.exercise-discovery-level-meta,.exercise-discovery-status,.best-score,.written-answer-wrap label,.set-meta,.grammar-result-count){color:#b3beb0!important}
 html[data-theme="dark"] .academy-theme .result-score{background:#344530!important;color:#e8ede6!important}

@@ -5,7 +5,7 @@ The footer has a "Gizlilik politikası" link that stays hidden until a policy ex
 actually does today, so you can answer a privacy-policy generator correctly. It is a
 checklist of facts, not the policy text itself.
 
-Last checked: after fonts were moved onto the site (no Google Fonts any more).
+Last checked: after GoatCounter visitor statistics were added to the public pages.
 
 ## Third-party services that receive visitors' personal data
 
@@ -15,11 +15,13 @@ Last checked: after fonts were moved onto the site (no Google Fonts any more).
 | **FormSubmit** (formsubmit.co) | Only when someone sends the contact form | Name, email address, message text, plus IP address and browser details of the request | `js/app.js`, `fetch('https://formsubmit.co/ajax/…')` |
 | **FormSubmit** (formsubmit.co) | Only when someone sends a comment on a grammar lesson | Name, email address, comment text, the lesson and level, publication consent, plus IP address and browser details | `js/a1-lessons.js`, comment form |
 | **Gmail / Google** (Google Ireland Ltd.) | After FormSubmit forwards a form | Everything FormSubmit received, stored in the bozkurtt.omerfaruk@gmail.com mailbox | FormSubmit delivers to that address |
+| **GoatCounter** (bozkurtacademy.goatcounter.com) | Every page change on the public pages in `index.html` (home, lessons, grammar, exercises, exam prep, about, contact). Not on login, registration or panel pages, and never on localhost | Page address (path and hash, e.g. `/#grammar/A1/artikel`; exercise question numbers are dropped), referrer (first page of a visit only), page title, browser details (user agent) and screen width, country derived from the IP address. GoatCounter does not store the IP address. No cookies, no localStorage | `js/analytics.js`, `js/vendor/count.js` (served from this site, not from gc.zgo.at) |
 
 Nothing else is loaded from another host while browsing. In particular:
 
 - **No Google Fonts.** STIX Two Text and Albert Sans are served from `fonts/` on the site itself.
-- No analytics, advertising, tracking pixels, social media widgets, embedded videos or maps.
+- No advertising, tracking pixels, social media widgets, embedded videos or maps. The only
+  statistics are GoatCounter (above): no cookies, no localStorage, no banner needed.
 - No cookies are set.
 
 ## Other things a generator usually asks about
@@ -51,7 +53,8 @@ Nothing else is loaded from another host while browsing. In particular:
 - Comment function: yes, moderated, name and email required, name and comment published with consent.
 - Cookies: none. Local storage: yes, for settings only (theme, language, scores), no tracking.
 - Web fonts: locally hosted (no external font service).
-- Analytics, advertising, social plugins, embedded videos/maps: none.
+- Analytics: GoatCounter, cookieless, without storing IP addresses (see the table above).
+- Advertising, social plugins, embedded videos/maps: none.
 - External links: yes.
 
 ## To finish

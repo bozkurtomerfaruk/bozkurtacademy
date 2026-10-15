@@ -1,6 +1,11 @@
 /* Bozkurt Academy design system: the lesson card.
    Paper on sand, STIX Two Text for headings, Albert Sans for text, moss green for actions.
    Every page uses these tokens; page stylesheets only add layout. */
+/* Fonts are served from this site (fonts/*.woff2): variable subsets limited to weights 400–600 and the
+   Latin, Turkish and German characters the site uses. Licence: SIL Open Font License, see fonts/*-OFL.txt. */
+@font-face{font-family:"Albert Sans";font-style:normal;font-weight:400 600;font-display:swap;src:url("../fonts/albert-sans.woff2") format("woff2")}
+@font-face{font-family:"STIX Two Text";font-style:normal;font-weight:400 600;font-display:swap;src:url("../fonts/stix-two-text.woff2") format("woff2")}
+
 :root{
   --ba-ground:#ddd6c6;--ba-paper:#f3f0e8;--ba-paper-2:#e6e1d5;
   --ba-ink:#2a2a26;--ba-muted:#55534a;

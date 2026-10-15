@@ -2,6 +2,17 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-10-15 · Aşama 4 birleşti, gizlilik metni güncellendi
+
+**Birleşen:** [PR #22](https://github.com/bozkurtomerfaruk/bozkurtacademy/pull/22) (Aşama 4, hatırlatma e-postaları) ve [PR #23](https://github.com/bozkurtomerfaruk/bozkurtacademy/pull/23) (`privacy.html` bölüm 7 ve 8'den "Ders takvimi devreye girdiğinde:" kaldırıldı, çünkü ders takvimi artık devrede).
+
+**Dört aşamanın hepsi birleşti.**
+
+**Senin yapacakların:**
+- Apps Script'i `apps-script/README.md`'deki adımlarla kur, önce `dryRun()`, sonra `installTrigger()` çalıştır.
+- Canlı sitede bir deneme dersi oluştur; Calendar davetini, Meet linkini ve ertesi gün gelen hatırlatma e-postasını kontrol et.
+- Hukuki kontrol bitince bana "Giriş linkini aç" yaz. O zaman `index.html`'deki gizli "Giriş" linkini açar, `privacy.html`'deki `noindex` ve "kontrol edilmektedir" notunu kaldırırım.
+
 ## 2026-10-15 · Aşama 4 bitti, PR açıldı, onay bekleniyor
 
 **PR:** [PR #22](https://github.com/bozkurtomerfaruk/bozkurtacademy/pull/22) (dal: `claude/asama-4-hatirlatma`). Birleştirilmedi.

@@ -11,7 +11,7 @@ Firebase projesi (`bozkurtacademy-8ab85`) hazır ve `js/account/config.js` için
 1. PR birleşip site yayına girince `https://bozkurtacademy.com/giris.html` adresine git ve **Google ile giriş yap**. (Menüdeki "Giriş" linki sessiz yayın için gizli; sayfa adresle açılıyor.)
 2. Henüz öğretmen olarak tanınmadığın için "Bu hesapla tamamlanmış bir kayıt yok" mesajı ve altında **UID** görünür. Kayıt formunu doldurma.
    - Aynı değer Firebase Console → Authentication → Users → "Kullanıcı UID'si" sütununda da var.
-3. UID'i iki dosyada `OGRETMEN_UID_BURAYA` yerine yaz (ya da bana gönder, ben yazayım):
+3. UID iki dosyaya yazıldı (öğretmen UID'i: `IoTwBV5HjRUaoLoj0SCI0VVGkfk2`). Değişirse ikisini birlikte güncelle:
    - `firestore.rules` → `teacherUid()`
    - `js/account/config.js` → `TEACHER_UID`
 
@@ -59,7 +59,7 @@ Emülatörde öğretmen hesabı (UID'i kurallardaki değerle aynı olmalı):
 ```bash
 curl -X POST -H 'Authorization: Bearer owner' -H 'Content-Type: application/json' \
   http://127.0.0.1:9099/identitytoolkit.googleapis.com/v1/projects/demo-bozkurtacademy/accounts \
-  -d '{"localId":"OGRETMEN_UID_BURAYA","email":"ogretmen@example.com","password":"ogretmen123"}'
+  -d '{"localId":"IoTwBV5HjRUaoLoj0SCI0VVGkfk2","email":"ogretmen@example.com","password":"ogretmen123"}'
 ```
 
 ## Dosyalar

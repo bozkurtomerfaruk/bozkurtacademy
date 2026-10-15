@@ -11,7 +11,7 @@ export const firebaseConfig = {
 
 // Öğretmenin Firebase UID'i. firestore.rules içindeki teacherUid() ile aynı olmalı.
 // Buradaki değer sadece yönlendirme içindir; yetkiyi kurallar belirler.
-export const TEACHER_UID = 'OGRETMEN_UID_BURAYA';
+export const TEACHER_UID = 'IoTwBV5HjRUaoLoj0SCI0VVGkfk2';
 
 // Öğrencilerin veri silme talebi gönderebileceği adres (iletişim sayfasındakiyle aynı).
 export const TEACHER_EMAIL = 'bozkurtt.omerfaruk@gmail.com';

@@ -45,11 +45,6 @@
 #page-exercises .lesson-panel{top:96px}
 #page-exercises .example-line{border-radius:5px}
 /* About and contact */
-#page-about .about-photo{min-height:480px;border-radius:5px;box-shadow:none}
-#page-about .about-photo img{max-height:580px}
-#page-about .about-text{background:transparent;border:0;padding:20px 0 20px 24px;box-shadow:none}
-#page-about .cards{gap:36px}
-#page-about :is(.card,.level-card){background:transparent;border:0;border-top:1px solid var(--ba-line);padding:24px 0;border-radius:0}
 #page-contact .contact-form-shell{max-width:920px;margin:0}
 #page-contact .contact-main-card{padding:36px}
 #page-contact .contact-mail-row{background:transparent;border:0;border-bottom:1px solid var(--ba-line);border-radius:0;padding:0 0 24px;margin-bottom:32px;width:100%}
@@ -60,10 +55,9 @@
 #page-contact .contact-guide-list{font-size:14px}
 #page-contact .field label{font-weight:600}
 #page-contact .contact-submit{width:auto;min-width:180px;padding-inline:26px}
-@media(max-width:700px){#page-about .about-text{padding:15px 0}#page-about .about-photo{height:430px;min-height:0}#page-contact .contact-main-card{padding:24px}#page-exercises .lesson-panel{position:static}#page-exercises .quiz-panel{padding:22px}#page-exercises .exercise-discovery-levels{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){#page-contact .contact-main-card{padding:24px}#page-exercises .lesson-panel{position:static}#page-exercises .quiz-panel{padding:22px}#page-exercises .exercise-discovery-levels{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 
-#page-about .founder-bio{background:transparent;border:0;border-radius:0;padding:0;margin-top:18px;font-size:17px;color:var(--ba-muted)}
 #page-grammar .grammar-topic-card h4{font-weight:600}
 #page-exercises .topic-overview{background:var(--ba-paper-2);color:var(--ba-ink);border-color:var(--ba-line)}
 #page-exercises .topic-overview p{color:var(--ba-muted)}
@@ -74,10 +68,9 @@
 #page-exercises .result-score span{color:var(--ba-paper-2);font-weight:500}
 #page-exercises .exercise-discovery-heading>span{background:transparent;border-color:var(--ba-line);border-radius:4px;font-weight:500}
 
-html[data-theme="dark"] .academy-theme :is(.page-hero-inner p,.card p,.founder-bio,.about-text p,.topic-overview p,footer,.sub){color:var(--ba-muted)!important}
+html[data-theme="dark"] .academy-theme :is(.page-hero-inner p,.card p,.topic-overview p,footer,.sub){color:var(--ba-muted)!important}
 html[data-theme="dark"] .academy-theme :is(.exercise-discovery-topic-action,.grammar-topic-arrow,.grammar-topic-footer,.grammar-detail-breadcrumb button){color:var(--ba-accent)!important}
 html[data-theme="dark"] .academy-theme :is(.card,.level-card,.contact-main-card,.lesson-panel,.quiz-panel,.exercise-set-card,.topic-choice-card,.level-choice-card,.exercise-discovery-level,.exercise-discovery-topic,.exercise-discovery-empty,.grammar-level-tab,.grammar-topic-card,.grammar-detail-card,.grammar-empty){background:var(--ba-paper)!important;border-color:var(--ba-line)!important;color:var(--ba-ink)!important}
-html[data-theme="dark"] .academy-theme :is(.about-text){background:transparent!important;border-color:var(--ba-line)!important}
 html[data-theme="dark"] .academy-theme :is(.contact-mail-row,footer){border-color:var(--ba-line)!important}
 html[data-theme="dark"] .academy-theme :is(.topic-overview,.notice,.grammar-coming-soon,.contact-mail-icon,.lesson-rule>div){background:var(--ba-paper-2)!important;border-color:var(--ba-line)!important;color:var(--ba-ink)!important}
 html[data-theme="dark"] .academy-theme :is(.written-answer-input,.exercise-discovery-search input,.grammar-search input,.quiz-option){background:var(--ba-paper)!important;border-color:var(--ba-line-strong)!important;color:var(--ba-ink)!important}

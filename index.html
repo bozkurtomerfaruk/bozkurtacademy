@@ -18,11 +18,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&family=STIX+Two+Text:wght@400;600&display=swap">
   <link rel="stylesheet" href="css/style.css?v=11" />
-  <link rel="stylesheet" href="css/theme.css?v=8" />
-  <link rel="stylesheet" href="css/base.css?v=2" />
+  <link rel="stylesheet" href="css/theme.css?v=9" />
+  <link rel="stylesheet" href="css/base.css?v=3" />
   <link rel="stylesheet" href="css/home.css?v=5" />
   <link rel="stylesheet" href="css/lessons.css?v=2" />
-  <link rel="stylesheet" href="css/pages.css?v=1" />
+  <link rel="stylesheet" href="css/pages.css?v=2" />
   <link rel="stylesheet" href="css/a1-lessons.css?v=1" />
 </head>
 <body class="academy-theme">
@@ -31,7 +31,7 @@
     <header class="topbar">
       <nav class="nav" aria-label="Site menüsü">
         <a class="brand" href="#home" data-page="home" aria-label="Bozkurt Academy ana sayfa">
-           <img src="images/logo-transparent.png?v=3" alt="Bozkurt Academy Logo" class="brand-logo">
+           <img src="images/logo-transparent.png?v=3" width="512" height="512" alt="" class="brand-logo">
           <div><div class="brand-title">Bozkurt Academy</div><div class="brand-sub" data-i18n="brandSub">Almancada net ilerleme</div></div>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteMenu" data-i18n="menuOpen">Menü</button>
@@ -374,10 +374,12 @@
     <div class="about-box">
 
       <div class="about-photo">
-        <img src="images/omer-faruk.jpg" alt="Ömer Faruk Bozkurt" />
+        <img src="images/omer-faruk.jpg" width="1151" height="2048" loading="lazy" alt="Ömer Faruk Bozkurt" />
       </div>
 
-      <div class="about-text">
+      <div class="about-text ba-card">
+        <div class="ba-stripe" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="about-letter">
 
         <span class="tag" data-i18n="founderRole3">Almanca eğitmeni</span>
 
@@ -386,6 +388,7 @@
         <p class="founder-bio" data-i18n="founderBio">Yabancı dil öğretmeye lise yıllarında özel ders vererek başladım. Derslerimde açık konu anlatımı, düzenli tekrar ve sözlü uygulamaya önem veriyorum.</p>
 
         <p class="founder-bio" data-i18n="founderBio2">Almanya’daki eğitim ve günlük yaşam deneyimimi, öğrencilerin karşılaşabileceği iletişim durumlarına yönelik örneklerle derslere taşıyorum.</p>
+        </div>
 
       </div>
     </div>
@@ -403,10 +406,9 @@
     </div>
 
 
-    <div class="cards">
+    <div class="cards about-journey ba-slip">
 
-      <article class="card white">
-        <div class="icon">🗣️</div>
+      <article class="about-item">
 
         <h3 data-i18n="aboutTeachingTitle">Özel ders deneyimi</h3>
 
@@ -414,8 +416,7 @@
       </article>
 
 
-      <article class="card white">
-        <div class="icon">🎓</div>
+      <article class="about-item">
 
         <h3 data-i18n="aboutEducationTitle">Mühendislik eğitimi</h3>
 
@@ -423,8 +424,7 @@
       </article>
 
 
-      <article class="card white">
-        <div class="icon">🌍</div>
+      <article class="about-item">
 
         <h3 data-i18n="aboutLanguagesTitle">Dil bilgisi</h3>
 
@@ -438,9 +438,9 @@
 
   <section class="block">
 
-    <div class="grid-2">
+    <div class="grid-2 about-work ba-field">
 
-      <article class="level-card">
+      <article class="about-item">
 
         <h3 data-i18n="aboutEngineeringTitle">Profesyonel deneyim</h3>
 
@@ -449,7 +449,7 @@
       </article>
 
 
-      <article class="level-card">
+      <article class="about-item">
 
         <h3 data-i18n="aboutGermanyTitle">Almanya’da yaşam</h3>
 
@@ -471,23 +471,23 @@
     </div>
 
 
-    <div class="cards">
+    <div class="cards about-method">
 
-      <article class="card white">
+      <article class="about-item">
         <h3 data-i18n="method1Title">Ders planı</h3>
 
         <p data-i18n="method1Text">Derslerin içeriği öğrencinin seviyesine, hedeflerine ve çalışma ihtiyaçlarına göre düzenlenir.</p>
       </article>
 
 
-      <article class="card white">
+      <article class="about-item">
         <h3 data-i18n="method2Title">Dil pratiği</h3>
 
         <p data-i18n="method2Text">Öğrenilen yapılar cümleler, diyaloglar ve yazma çalışmalarıyla kullanılır.</p>
       </article>
 
 
-      <article class="card white">
+      <article class="about-item">
         <h3 data-i18n="method3Title">Konu tekrarı</h3>
 
         <p data-i18n="method3Text">Zorlanılan konular yeni örnekler ve kısa alıştırmalarla tekrar ele alınır.</p>

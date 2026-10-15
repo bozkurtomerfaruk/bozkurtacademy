@@ -7,7 +7,7 @@ service cloud.firestore {
   match /databases/{database}/documents {
 
     function teacherUid() {
-      return 'OGRETMEN_UID_BURAYA';
+      return 'IoTwBV5HjRUaoLoj0SCI0VVGkfk2';
     }
 
     function signedIn() {

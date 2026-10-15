@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8f7f3" />
+  <meta name="robots" content="noindex, nofollow" />
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('ba-theme')==='dark'?'dark':'light'}catch(_){document.documentElement.dataset.theme='light'}</script>
+  <title>Ders takvimi | Bozkurt Academy</title>
+  <meta name="description" content="Bozkurt Academy öğretmen paneli: ders takvimi." />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="preload" href="fonts/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=11" />
+  <link rel="stylesheet" href="css/base.css?v=6" />
+  <link rel="stylesheet" href="css/account.css?v=3" />
+</head>
+<body class="academy-theme account-page teacher-page">
+  <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
+  <div class="shell">
+    <header class="topbar">
+      <nav class="nav" aria-label="Site menüsü">
+        <a class="brand" href="index.html" aria-label="Bozkurt Academy ana sayfa">
+          <img src="images/logo-transparent.png?v=3" width="512" height="512" alt="" class="brand-logo">
+          <div><div class="brand-title">Bozkurt Academy</div></div>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteMenu" data-i18n="menuOpen">Menü</button>
+        <div class="nav-links" id="siteMenu">
+          <a class="nav-link" href="index.html" data-i18n="navHome">Ana Sayfa</a>
+          <a class="nav-link" href="index.html#lessons" data-i18n="navLessons">Almanca Dersleri</a>
+          <a class="nav-link" href="index.html#grammar" data-i18n="navGrammar">Gramer</a>
+          <a class="nav-link" href="index.html#exercises" data-i18n="navExercises">Alıştırmalar</a>
+          <a class="nav-link" href="index.html#exams" data-i18n="navExams">Sınav Hazırlığı</a>
+          <a class="nav-link" href="index.html#about" data-i18n="navAbout">Hakkımda</a>
+          <a class="nav-link" href="index.html#contact" data-i18n="navContact">İletişim</a>
+          <a class="nav-link nav-account active" aria-current="page" href="ogretmen.html" id="navAccount" data-i18n="navTeacher">Öğretmen paneli</a>
+        </div>
+        <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Koyu temaya geç" aria-pressed="false"><svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="currentColor"/></svg><svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" tabindex="-1" class="acc-main">
+      <section class="acc-wrap acc-wide" aria-labelledby="calTitle">
+        <p class="acc-back"><a class="ba-link" href="ogretmen.html">← Öğretmen paneli</a></p>
+        <header class="acc-head acc-head-row">
+          <div>
+            <p class="acc-eyebrow">Öğretmen paneli</p>
+            <h1 id="calTitle">Ders takvimi</h1>
+          </div>
+          <div class="acc-actions">
+            <span class="acc-badge" id="gcalStatus">Google Calendar bağlı değil</span>
+            <button class="btn ghost acc-row-action" type="button" id="gcalConnect">Google Calendar'a bağlan</button>
+          </div>
+        </header>
+        <p class="acc-status error" id="notConfigured" role="alert" hidden>Giriş sistemi henüz kurulmadı. Firebase yapılandırmasını js/account/config.js dosyasına ekle (docs/kurulum.md).</p>
+        <p class="acc-status" id="calLoading">Yükleniyor…</p>
+        <p class="acc-status error" id="calError" role="alert" hidden></p>
+        <div class="acc-status warning acc-sync-banner" id="syncBanner" role="alert" hidden></div>
+        <p class="acc-status" id="calNotice" role="status" aria-live="polite" hidden></p>
+
+        <div id="calApp" hidden>
+          <div class="acc-cal-toolbar">
+            <div class="acc-cal-nav">
+              <button class="btn ghost acc-icon-btn" type="button" id="calPrev" aria-label="Önceki">‹</button>
+              <button class="btn ghost acc-row-action" type="button" id="calToday">Bugün</button>
+              <button class="btn ghost acc-icon-btn" type="button" id="calNext" aria-label="Sonraki">›</button>
+              <h2 class="acc-cal-label" id="calLabel" aria-live="polite"></h2>
+            </div>
+            <div class="acc-cal-nav">
+              <div class="acc-segment" role="group" aria-label="Görünüm">
+                <button type="button" data-view="week" aria-pressed="true">Hafta</button>
+                <button type="button" data-view="month" aria-pressed="false">Ay</button>
+              </div>
+              <button class="btn primary acc-row-action" type="button" id="newLessonBtn">Yeni ders</button>
+            </div>
+          </div>
+          <div id="calView"></div>
+          <p class="acc-hint acc-cal-foot">Saatler Berlin saatiyle. Öğrenciler dersleri kendi saat dilimlerinde görür.</p>
+        </div>
+      </section>
+
+      <dialog class="acc-dialog acc-dialog-wide" id="lessonDialog" aria-labelledby="lessonDialogTitle"></dialog>
+      <dialog class="acc-dialog acc-dialog-wide" id="newLessonDialog" aria-labelledby="newLessonTitle">
+        <form class="acc-dialog-body acc-form" id="newLessonForm" novalidate>
+          <h2 id="newLessonTitle">Yeni ders</h2>
+          <div class="field">
+            <label for="nlStudent">Öğrenci</label>
+            <select id="nlStudent" required></select>
+          </div>
+          <div class="acc-pick">
+            <div class="field">
+              <label for="nlDate">Tarih</label>
+              <input id="nlDate" type="date" required>
+            </div>
+            <div class="field">
+              <label for="nlTime">Saat (Berlin)</label>
+              <input id="nlTime" type="time" step="300" required>
+            </div>
+          </div>
+          <div class="acc-pick">
+            <div class="field">
+              <label for="nlDuration">Süre (dakika)</label>
+              <input id="nlDuration" type="number" min="15" max="240" step="5" value="50" required>
+            </div>
+            <div class="field">
+              <label for="nlWeeks">Kaç hafta</label>
+              <input id="nlWeeks" type="number" min="2" max="26" value="10" disabled aria-describedby="nlWeeksHint">
+            </div>
+          </div>
+          <label class="acc-check">
+            <input type="checkbox" id="nlRepeat">
+            <span>Her hafta tekrarla</span>
+          </label>
+          <small class="acc-hint" id="nlWeeksHint">Tekrarlayan dersler Google Calendar'da tek etkinlik olur; öğrenciye tek davet gider. En fazla 26 hafta.</small>
+          <div class="field">
+            <label for="nlNote">Not (isteğe bağlı)</label>
+            <textarea id="nlNote" rows="3" maxlength="1000"></textarea>
+          </div>
+          <p class="acc-hint" id="nlInvitees"></p>
+          <p class="acc-status" id="nlStatus" role="alert" hidden></p>
+          <div class="acc-actions">
+            <button class="btn primary" type="submit" id="nlSubmit">Dersi planla</button>
+            <button class="btn ghost" type="button" id="nlCancel">Vazgeç</button>
+          </div>
+        </form>
+      </dialog>
+    </main>
+
+    <footer>
+      <div><strong>Bozkurt Academy</strong><br><span data-i18n="footerText">Online Almanca dersleri ve öğrenme materyalleri</span></div>
+      <div class="footer-meta">
+        <nav class="footer-links" aria-label="Yasal bilgiler" data-i18n-aria="footerLegal">
+          <a href="privacy.html" data-i18n="footerPrivacy">Gizlilik politikası</a>
+        </nav>
+        <span>© 2026 Bozkurt Academy</span>
+      </div>
+    </footer>
+  </div>
+  <script src="js/app.js?v=14"></script>
+  <script src="js/theme.js?v=6"></script>
+  <script type="module" src="js/account/teacher-calendar.js"></script>
+</body>
+</html>

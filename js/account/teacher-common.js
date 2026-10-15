@@ -2,6 +2,8 @@
 import { auth, configured, db, fa, fs, projectId } from './firebase.js';
 import { TEACHER_UID } from './config.js';
 import { $, BERLIN, clearHint, consentGiven, currentUser, formatDate, h, setHint, toDate } from './common.js';
+import * as cal from './calendar.js';
+import { deleteCalendarEvents, loadStudentLessons, needsCalendar } from './lessons.js';
 
 export const fmtDate = (value) => formatDate(value, { lang: 'tr', timeZone: BERLIN });
 
@@ -24,6 +26,7 @@ export async function requireTeacher({ loadingId, errorId }){
     return null;
   }
   setHint('teacher');
+  cal.preload();
   $('logoutBtn')?.addEventListener('click', async () => {
     await fa.signOut(auth);
     clearHint();
@@ -225,9 +228,28 @@ export function openDeleteDialog(dialog, student, { reason = '', onDone } = {}){
     status.hidden = false;
     status.className = 'acc-status';
     status.textContent = 'Siliniyor…';
+    // Önce Google Calendar: gelecek dersler iptal bildirimiyle, geçmişler bildirimsiz silinir.
+    // Takvim'e ulaşılamazsa veriler yine silinir; kalan etkinlikler sonra gösterilir.
+    let calendarResult = null;
     try{
+      const lessons = await loadStudentLessons(student.id);
+      if(needsCalendar(lessons)){
+        status.textContent = 'Google Calendar etkinlikleri siliniyor…';
+        try{
+          await cal.connect();
+          calendarResult = await deleteCalendarEvents(lessons);
+        }catch(error){
+          console.error(error);
+          calendarResult = { total: new Set(lessons.filter((l) => l.calendarEventId).map((l) => l.seriesEventId || l.calendarEventId)).size, failed: -1, error };
+        }
+      }
+    }catch(error){
+      console.error(error);
+    }
+    try{
+      status.textContent = 'Siliniyor…';
       await deleteStudentData(student.id);
-      showDeleted(dialog, student);
+      showDeleted(dialog, student, calendarResult);
       onDone?.(student);
     }catch(error){
       console.error(error);
@@ -240,19 +262,27 @@ export function openDeleteDialog(dialog, student, { reason = '', onDone } = {}){
   dialog.showModal();
 }
 
-function showDeleted(dialog, student){
+function calendarNote(result){
+  if(!result) return null;
+  if(result.failed === 0) return h('p', {}, `Google Calendar: ${result.total} etkinlik silindi (gelecek dersler için öğrenciye iptal bildirimi gitti).`);
+  const count = result.failed < 0 ? result.total : result.failed;
+  return h('p', { class: 'acc-status error' }, `Google Calendar: ${count} etkinlik silinemedi${result.error ? ` (${result.error.message})` : ''}. Bunları takviminden elle sil; "Almanca dersi – öğrenci adı" başlığıyla bulabilirsin.`);
+}
+
+function showDeleted(dialog, student, calendarResult){
   const consoleUrl = `https://console.firebase.google.com/project/${encodeURIComponent(projectId)}/authentication/users`;
   const closeBtn = h('button', { class: 'btn primary', type: 'button' }, 'Tamam');
   closeBtn.addEventListener('click', () => dialog.close());
   dialog.replaceChildren(h('div', { class: 'acc-dialog-body' },
     h('h2', { id: 'deleteDialogTitle' }, `${student.name} silindi`),
     h('p', {}, 'Firestore’daki bütün verileri silindi.'),
+    calendarNote(calendarResult),
     h('p', {}, h('strong', {}, 'Son adım: '), 'Giriş hesabını Firebase Console’dan sil. Authentication → Users → e-postayı bul → ⋮ → “Hesabı sil”.'),
     h('dl', { class: 'acc-dl' },
       h('div', {}, h('dt', {}, 'E-posta'), h('dd', { class: 'acc-copy-row' }, h('code', {}, student.email), copyButton(student.email))),
       h('div', {}, h('dt', {}, 'UID'), h('dd', { class: 'acc-copy-row' }, h('code', {}, student.id), copyButton(student.id)))
     ),
-    h('p', { class: 'acc-hint' }, 'Gmail’in “Gönderilenler” klasöründe bu öğrenciye ya da velisine giden e-postalar varsa onları da elle sil.'),
+    h('p', { class: 'acc-hint' }, 'Gmail’in “Gönderilenler” klasöründe ve Google Calendar’ın çöp kutusunda (30 gün) bu öğrenciye ya da velisine ait kayıtlar varsa onları da elle sil.'),
     h('div', { class: 'acc-actions' },
       h('a', { class: 'btn ghost', href: consoleUrl, target: '_blank', rel: 'noopener noreferrer' }, 'Firebase Console’u aç'),
       closeBtn)

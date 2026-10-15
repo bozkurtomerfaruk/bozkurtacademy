@@ -86,6 +86,7 @@
   writtenPlaceholder:'Cevabını Almanca yaz...',
   writtenHint:'Cevabını yaz ve kontrol et.',
   correctAnswer:'Doğru cevap',
+  yourAnswer:'Senin cevabın',
   correctShort:'Doğru. Bu yapıyı doğru kullandın.',
   whyWrong:'Neden?',
   writtenChip:'Yazmalı',
@@ -97,6 +98,7 @@
       writtenPlaceholder:'Schreibe deine Antwort auf Deutsch...',
       writtenHint:'Schreibe deine Antwort und prüfe sie.',
       correctAnswer:'Richtige Antwort',
+      yourAnswer:'Deine Antwort',
       correctShort:'Richtig. Du hast die Struktur korrekt verwendet.',
       whyWrong:'Warum?',
       writtenChip:'Schreiben',
@@ -108,6 +110,7 @@
       writtenPlaceholder:'Type your answer in German...',
       writtenHint:'Write your answer and check it.',
       correctAnswer:'Correct answer',
+      yourAnswer:'Your answer',
       correctShort:'Correct. You used the structure correctly.',
       whyWrong:'Why?',
       writtenChip:'Written',
@@ -181,7 +184,7 @@
     const link=document.createElement('link');
     link.id='exerciseHubCss';
     link.rel='stylesheet';
-    link.href='css/exercises-hub.css?v=3';
+    link.href='css/exercises-hub.css?v=4';
     document.head.appendChild(link);
   }
 
@@ -530,7 +533,7 @@
 
     const layout=panel.closest('.learn-layout');
     const hide=state.exercise?.hideLesson===true;
-    panel.style.display=hide?'none':'block';
+    panel.hidden=hide;
     layout?.classList.toggle('solo-quiz', hide);
 
     if(hide){
@@ -543,7 +546,7 @@
     const examples=(lesson.examples || []).map(item=>`<div class="example-line">${escapeHtml(item)}</div>`).join('');
     panel.innerHTML=`
       <div class="topic-status">✓ ${state.topicData.level} · ${escapeHtml(localize(state.topicData.title))}</div>
-      <h3 style="margin-top:14px">${escapeHtml(localize(lesson.title))}</h3>
+      <h3 class="lesson-panel-title">${escapeHtml(localize(lesson.title))}</h3>
       <p class="sub">${escapeHtml(localize(lesson.intro))}</p>
       ${rules?`<div class="lesson-rule dynamic-rules">${rules}</div>`:''}
       ${examples?`<div class="lesson-content-block"><h4>${t('lessonExamples')}</h4><div class="example-list">${examples}</div></div>`:''}
@@ -604,8 +607,8 @@ function updateBestScore(){
 
     ensurePreviousButton();
 
-    result.style.display='none';
-    view.style.display='block';
+    result.hidden=true;
+    view.hidden=false;
     $('quizCounter').textContent=`${t('questionLabelQuiz')} ${state.index+1} / ${state.pool.length}`;
     $('progressBar').style.width=`${(state.index/state.pool.length)*100}%`;
     $('quizQuestion').textContent=q.sentence;
@@ -640,7 +643,7 @@ function updateBestScore(){
         });
       }
     }else{
-      options.innerHTML=(q.options || []).map((opt,i)=>`<button class="quiz-option" type="button" data-answer="${escapeHtml(opt)}"><span class="option-letter">${String.fromCharCode(65+i)}</span><span>${escapeHtml(opt)}</span></button>`).join('');
+      options.innerHTML=(q.options || []).map((opt,i)=>`<button class="quiz-option" type="button" aria-pressed="${opt===state.selected}" data-answer="${escapeHtml(opt)}"><span class="option-letter">${String.fromCharCode(65+i)}</span><span>${escapeHtml(opt)}</span></button>`).join('');
       options.querySelectorAll('.quiz-option').forEach(btn=>{
         btn.addEventListener('click',()=>selectAnswer(btn.dataset.answer));
         if(btn.dataset.answer===state.selected) btn.classList.add('selected');
@@ -654,7 +657,7 @@ function updateBestScore(){
 
     const prev=$('prevQuestionBtn');
     if(prev){
-      prev.style.display=state.index>0?'inline-flex':'none';
+      prev.hidden=state.index<=0;
       prev.textContent=qt('previous');
     }
 
@@ -663,9 +666,9 @@ function updateBestScore(){
     if(state.checked){
       renderCheckedQuestion(q, response);
     }else{
-      $('checkAnswerBtn').style.display='inline-flex';
+      $('checkAnswerBtn').hidden=false;
       $('checkAnswerBtn').disabled=false;
-      $('nextQuestionBtn').style.display='none';
+      $('nextQuestionBtn').hidden=true;
     }
 
     updateBestScore(); 
@@ -677,7 +680,11 @@ function updateBestScore(){
     const q=state.pool[state.index];
     state.selected=answer;
     state.responses[q._index]={...responseFor(q),selected:answer};
-    document.querySelectorAll('#quizOptions .quiz-option').forEach(btn=>btn.classList.toggle('selected',btn.dataset.answer===answer));
+    document.querySelectorAll('#quizOptions .quiz-option').forEach(btn=>{
+      const on=btn.dataset.answer===answer;
+      btn.classList.toggle('selected',on);
+      btn.setAttribute('aria-pressed',String(on));
+    });
   }
 
 function renderCheckedQuestion(q, response){
@@ -737,16 +744,19 @@ function renderCheckedQuestion(q, response){
         btn.disabled=true;
         btn.classList.remove('selected');
 
+        btn.querySelector('.option-state')?.remove();
         if(btn.dataset.answer===q.correct){
           btn.classList.add('correct');
+          btn.insertAdjacentHTML('beforeend',`<span class="option-state"><span aria-hidden="true">✓</span> ${escapeHtml(qt('correctAnswer'))}</span>`);
         }else if(btn.dataset.answer===response.selected){
           btn.classList.add('wrong');
+          btn.insertAdjacentHTML('beforeend',`<span class="option-state"><span aria-hidden="true">✗</span> ${escapeHtml(qt('yourAnswer'))}</span>`);
         }
       });
   }
 
-  $('checkAnswerBtn').style.display='none';
-  $('nextQuestionBtn').style.display='inline-flex';
+  $('checkAnswerBtn').hidden=true;
+  $('nextQuestionBtn').hidden=false;
 
   $('progressBar').style.width=
     `${((state.index+1)/state.pool.length)*100}%`;
@@ -848,7 +858,7 @@ function startNextExercise(){
     syncScoreAndWrong();
     const view=$('quizView'), result=$('quizResult');
     if(!view || !result) return;
-    view.style.display='none'; result.style.display='block';
+    view.hidden=true; result.hidden=false;
     const total=state.pool.length;
     const percent=Math.round((state.score/total)*100);
     const currentBest=Number(localStorage.getItem(bestScoreKey()) || 0);
@@ -857,14 +867,14 @@ function startNextExercise(){
     const nextExercise=getNextExercise();
     const wrongHtml=state.wrong.length
       ? `<div class="wrong-summary"><strong>${t('wrongAnswersTitle')}</strong>${state.wrong.map(q=>`<div><strong>${escapeHtml(q.correct || q.answers?.[0] || '')} ${escapeHtml(q.word || '')}</strong><br><small>${escapeHtml(localize(q.explanations))}</small></div>`).join('')}</div>`
-      : `<div class="notice" style="margin-top:22px">${t('noWrongAnswers')}</div>`;
+      : `<div class="notice result-notice">${t('noWrongAnswers')}</div>`;
     result.innerHTML=`<div class="result-box">
       <span class="quiz-word">${state.topicData.level} · ${escapeHtml(localize(state.topicData.title))}</span>
       <h3>${escapeHtml(localize(state.exercise.title))}</h3>
       <div class="result-score"><div><strong>${state.score}/${total}</strong><span>${percent}% ${t('scoreLabel')}</span></div></div>
       <p class="result-message">${message}</p>
       ${wrongHtml}
-      <div class="quiz-actions" style="justify-content:center">
+      <div class="quiz-actions result-actions">
   <button class="btn primary" type="button" id="restartQuizBtn">
     ${t('restartQuiz')}
   </button>
@@ -996,7 +1006,7 @@ return;
     if($('exerciseSetView')?.hidden===false) renderSets();
     if($('exerciseQuizView')?.hidden===false){
       renderLesson();
-      if($('quizResult')?.style.display==='none') renderQuiz();
+      if($('quizResult')?.hidden) renderQuiz();
       else showResult();
     }
     updateBreadcrumb();

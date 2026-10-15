@@ -63,7 +63,7 @@ service cloud.firestore {
       let year = request.time.year();
       let provider = request.auth.token.firebase.sign_in_provider;
       let minor = d.birthYear is int && year - d.birthYear <= 16;
-      return d.keys().hasOnly(['name', 'email', 'birthYear', 'minor', 'provider', 'status', 'parent', 'createdAt'])
+      return d.keys().hasOnly(['name', 'email', 'birthYear', 'minor', 'provider', 'status', 'parent', 'emailVerified', 'createdAt'])
         && d.keys().hasAll(['name', 'email', 'birthYear', 'minor', 'provider', 'status', 'createdAt'])
         && validName(d.name)
         && request.auth.token.email is string
@@ -74,10 +74,16 @@ service cloud.firestore {
         && d.provider == provider
         && d.status == 'pending'
         && d.createdAt == request.time
+        && (!('emailVerified' in d) || verifiedFlag(d.emailVerified))
         && (
           (minor && provider == 'password' && ('parent' in d) && validParent(d.parent, d.email))
           || (!minor && !('parent' in d))
         );
+    }
+
+    // "E-posta doğrulandı" bilgisi sadece giriş bilgisi bunu doğruluyorsa yazılabilir.
+    function verifiedFlag(value) {
+      return value == true && request.auth.token.email_verified == true;
     }
 
     function validResult() {
@@ -104,7 +110,11 @@ service cloud.firestore {
       allow create: if isSelf(uid)
         && !exists(/databases/$(database)/documents/deleted/$(uid))
         && validNewProfile();
-      // Güncelleme ve silme: sadece öğretmen (yukarıdaki genel kural).
+      // Öğrenci kendi profilinde sadece "e-posta doğrulandı" bilgisini ekleyebilir (Firebase
+      // e-posta doğrulamasından sonra). Diğer güncellemeler ve silme: sadece öğretmen.
+      allow update: if isSelf(uid)
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['emailVerified'])
+        && verifiedFlag(request.resource.data.emailVerified);
 
       match /results/{resultId} {
         allow read: if ownActive(uid);

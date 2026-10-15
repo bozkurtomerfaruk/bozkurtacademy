@@ -60,6 +60,15 @@
 
         <div class="acc-layout" id="panelLayout" hidden>
           <div class="acc-primary">
+            <section class="ba-card acc-card acc-verify" id="verifyCard" hidden aria-labelledby="verifyTitle">
+              <div class="ba-card-body">
+                <h2 id="verifyTitle" data-i18n="panelVerifyTitle">E-posta adresini doğrula</h2>
+                <p data-i18n="panelVerifyText">Kayıt olduğunda e-posta adresine bir doğrulama bağlantısı gönderdik. Bağlantıya tıkladıktan sonra bu sayfayı yenile.</p>
+                <button class="btn ghost" type="button" id="verifyResend" data-i18n="panelVerifyResend">Doğrulama e-postasını yeniden gönder</button>
+                <p class="acc-status" id="verifyStatus" role="status" hidden></p>
+              </div>
+            </section>
+
             <section class="ba-card acc-card acc-state" id="stateCard" hidden aria-live="polite">
               <div class="ba-card-body">
                 <h2 id="stateTitle"></h2>

@@ -1,9 +1,9 @@
 // kayit.html: e-posta/şifre ile kayıt, 16 yaş ve üstü için Google ile kayıt, yarım kalan kaydı tamamlama.
 import { auth, configured, db, fa, fs } from './firebase.js';
 import { TEACHER_UID } from './config.js';
-import { registerStrings, t } from './i18n.js';
+import { registerStrings, t, lang } from './i18n.js';
 import {
-  $, authErrorKey, currentUser, isMinorBirthYear, loadProfile, setHint, setStatus, validBirthYear, validEmail
+  $, authErrorKey, currentUser, isMinorBirthYear, loadProfile, sendVerification, setHint, setStatus, validBirthYear, validEmail
 } from './common.js';
 
 registerStrings();
@@ -68,6 +68,7 @@ async function createProfile(user, form){
     createdAt: fs.serverTimestamp()
   };
   if(form.minor) data.parent = form.parent;
+  if(user.emailVerified) data.emailVerified = true;
   await fs.setDoc(fs.doc(db, 'users', user.uid), data);
   setHint('student');
   location.replace('panel.html');
@@ -90,6 +91,8 @@ async function submitWithPassword(event){
     let user = completing;
     if(!user){
       ({ user } = await fa.createUserWithEmailAndPassword(auth, form.email, form.password));
+      // Doğrulama e-postası gönderilemese de kayıt devam eder; panelden yeniden gönderilebilir.
+      await sendVerification(user, lang()).catch((error) => console.warn(error));
     }else if(form.minor && (await user.getIdTokenResult()).signInProvider === 'google.com'){
       fail('regErrMinorGoogle');
       return;

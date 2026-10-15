@@ -1,7 +1,8 @@
 # Privacy policy: what the site does with personal data
 
-The footer links to `privacy.html`, a draft policy that still needs a legal check and the
-bracketed placeholders filled in. This file lists what the site
+The footer links to `privacy.html`. Its details are filled in (controller address, legal bases,
+supervisory authority LDI NRW, US transfers, consent form storage, GoatCounter); the text is being
+legally checked. This file lists what the site
 actually does today, so you can answer a privacy-policy generator correctly. It is a
 checklist of facts, not the policy text itself.
 
@@ -37,6 +38,8 @@ Guests who never sign in load nothing from Google. Apart from that, nothing else
   year ≤ 16) also give a parent's name and email and cannot use Google sign-in.
 - Accounts open only after teacher approval; for under-16s also after the teacher records the parent's
   consent (date and method: signed form or email). Enforced in `firestore.rules`.
+- Registration with email/password sends a Firebase verification email; the profile stores
+  `emailVerified` once the student has confirmed it (shown to the teacher).
 - Retention shown in `privacy.html`: 12 months after the last lesson (or approval if there was no
   lesson), unapproved registrations 30 days. Deletion is manual from the teacher panel
   ("Silinmesi gereken kayıtlar"); the Firebase Authentication account must then be deleted in the
@@ -82,9 +85,10 @@ Guests who never sign in load nothing from Google. Apart from that, nothing else
 
 ## To finish
 
-1. Have the draft `privacy.html` checked and fill in the bracketed placeholders (address, legal
-   bases, supervisory authority, where signed consent forms are kept). It is Turkish only so far.
-2. Remove the draft note at the top and the `noindex` meta tag once it is final.
+1. Finish the legal check of `privacy.html` (Turkish only so far). It says signed consent forms are
+   kept "on paper in a locked cupboard or digitally in an encrypted folder"; keep only the one you use.
+2. Then remove the "Bu metin hukuki olarak kontrol edilmektedir" note and the `noindex` meta tag, and
+   show the "Giriş" menu link in `index.html` again (it is `hidden` for the quiet launch).
 
 If you teach from Germany as a business, also check whether you need an Impressum; the same
 footer nav can hold that link.

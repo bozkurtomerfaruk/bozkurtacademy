@@ -8,7 +8,7 @@ Firebase projesi (`bozkurtacademy-8ab85`) hazır ve `js/account/config.js` için
 
 ### 1. Öğretmen UID'ini bulma ve yazma
 
-1. PR birleşip site yayına girince `https://bozkurtacademy.com/giris.html` adresine git ve **Google ile giriş yap**.
+1. PR birleşip site yayına girince `https://bozkurtacademy.com/giris.html` adresine git ve **Google ile giriş yap**. (Menüdeki "Giriş" linki sessiz yayın için gizli; sayfa adresle açılıyor.)
 2. Henüz öğretmen olarak tanınmadığın için "Bu hesapla tamamlanmış bir kayıt yok" mesajı ve altında **UID** görünür. Kayıt formunu doldurma.
    - Aynı değer Firebase Console → Authentication → Users → "Kullanıcı UID'si" sütununda da var.
 3. UID'i iki dosyada `OGRETMEN_UID_BURAYA` yerine yaz (ya da bana gönder, ben yazayım):
@@ -35,6 +35,11 @@ Firestore "üretim modunda" oluşturulduğu için kurallar yayınlanana kadar he
 - [ ] 16 yaş altı (ör. doğum yılı 2012) bir test kaydı: veli alanları zorunlu, Google seçeneği yok, "Veli onayı bekleyenler"de görünüyor; sadece öğretmen onayıyla hesap açılmıyor, veli onayı işaretlenince açılıyor.
 - [ ] Test kayıtlarını öğrenci sayfasındaki "Öğrenciyi ve bütün verilerini sil" ile sil, sonra Firebase Console → Authentication'dan giriş hesaplarını da sil.
 - [ ] Şifre sıfırlama e-postası geliyor (Authentication → Templates dilinin Türkçe olduğunu kontrol et).
+- [ ] E-posta ile kayıtta doğrulama e-postası geliyor; bağlantıya tıklayıp öğrenci panelini yenileyince doğrulama kartı kayboluyor ve öğretmen panelinde "E-posta doğrulandı" görünüyor.
+
+### Sessiz yayından çıkış
+
+Gizlilik metni kesinleşince: `index.html`'de `id="navAccount"` bağlantısındaki `hidden` özelliğini kaldır, `privacy.html`'deki "kontrol edilmektedir" notunu ve `noindex` etiketini sil.
 
 ## Yerel geliştirme
 

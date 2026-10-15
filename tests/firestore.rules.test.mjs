@@ -248,6 +248,39 @@ describe('Profil okuma ve değiştirme', () => {
   });
 });
 
+describe('E-posta doğrulama bilgisi', () => {
+  const verified = (uid, email) => as(uid, { email, email_verified: true, firebase: { sign_in_provider: 'password' } });
+
+  test('e-postası doğrulanmış öğrenci kendi profiline emailVerified: true yazabilir', async () => {
+    await seed('users/ayse', seededAdult('pending'));
+    await assertSucceeds(updateDoc(doc(verified('ayse', 'ayse@example.com'), 'users/ayse'), { emailVerified: true }));
+  });
+
+  test('e-postası doğrulanmamış öğrenci emailVerified yazamaz', async () => {
+    await seed('users/ayse', seededAdult('pending'));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse'), { emailVerified: true }));
+  });
+
+  test('emailVerified ile birlikte başka alan değiştirilemez', async () => {
+    await seed('users/ayse', seededAdult('pending'));
+    const db = verified('ayse', 'ayse@example.com');
+    await assertFails(updateDoc(doc(db, 'users/ayse'), { emailVerified: true, status: 'active' }));
+    await assertFails(updateDoc(doc(db, 'users/ayse'), { emailVerified: false }));
+    await assertFails(updateDoc(doc(db, 'users/ayse'), { emailVerified: 'evet' }));
+  });
+
+  test('başka öğrencinin emailVerified alanı yazılamaz', async () => {
+    await seed('users/can', seededMinor('pending'));
+    await assertFails(updateDoc(doc(verified('ayse', 'ayse@example.com'), 'users/can'), { emailVerified: true }));
+  });
+
+  test('kayıtta emailVerified sadece doğrulanmış giriş bilgisiyle yazılabilir', async () => {
+    await assertFails(setDoc(doc(ayse(), 'users/ayse'), adultProfile({ emailVerified: true })));
+    const google = as('mert', { email: 'mert@example.com', email_verified: true, firebase: { sign_in_provider: 'google.com' } });
+    await assertSucceeds(setDoc(doc(google, 'users/mert'), adultProfile({ email: 'mert@example.com', provider: 'google.com', emailVerified: true })));
+  });
+});
+
 describe('Alıştırma sonuçları', () => {
   test('onaylı öğrenci sonuç ekleyebilir ve kendi sonuçlarını okuyabilir', async () => {
     await seed('users/ayse', seededAdult('active'));

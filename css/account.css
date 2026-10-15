@@ -167,3 +167,8 @@
 .acc-legal ul{margin:0;padding-left:1.25em;display:grid;gap:8px}
 .acc-legal code{font-size:.9em;overflow-wrap:anywhere}
 .acc-legal>.acc-status{margin:0 0 24px}
+
+/* Onay düğmesinin yanındaki uyarı (e-posta doğrulanmadı) */
+.acc-row-warning{flex-basis:100%;margin:0;padding:8px 12px;border-radius:var(--ba-radius-small);background:var(--ba-wrong-bg);color:var(--ba-wrong);font-size:var(--ba-small);font-weight:600;line-height:1.4}
+.acc-row-actions .acc-row-warning{text-align:left}
+.acc-verify .btn{margin-top:4px}

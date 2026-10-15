@@ -1,5 +1,5 @@
 // Giriş, kayıt ve panellerin ortak yardımcıları.
-import { auth, db, fs } from './firebase.js';
+import { auth, db, fa, fs } from './firebase.js';
 
 export const $ = (id) => document.getElementById(id);
 
@@ -99,6 +99,24 @@ export async function loadProfile(uid){
 }
 
 export const consentGiven = (profile) => profile?.parentConsent?.given === true;
+
+// E-posta doğrulama: bağlantı öğrenci paneline döner. Google hesapları zaten doğrulanmıştır.
+export function sendVerification(user, language){
+  auth.languageCode = language || 'tr';
+  return fa.sendEmailVerification(user, { url: `${location.origin}/panel.html` });
+}
+
+// Öğrenci bağlantıya tıkladıysa profile "emailVerified: true" yazılır (kurallar bunu giriş
+// bilgisindeki email_verified ile kontrol eder). Öğretmen panelde bu bilgiyi görür.
+export async function syncEmailVerified(user, profile){
+  if(profile.emailVerified === true) return true;
+  await user.reload();
+  if(!user.emailVerified) return false;
+  await user.getIdToken(true);
+  await fs.updateDoc(fs.doc(db, 'users', user.uid), { emailVerified: true });
+  profile.emailVerified = true;
+  return true;
+}
 
 // Hesabın öğrenci açısından durumu. Kurallardaki isActive() ile aynı mantık.
 export function accountState(profile){

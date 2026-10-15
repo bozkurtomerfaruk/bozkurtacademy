@@ -165,7 +165,7 @@ body.academy-theme{
 @media(max-width:1020px){.academy-theme .nav-actions{margin-left:auto}.academy-theme .nav-actions .lang{margin-left:0}}
 html[data-theme="dark"]{color-scheme:dark;background:#171d19!important}
 html[data-theme="dark"] body.academy-theme{--bg:#171d19;--paper:#202922;--ink:#e8ede6;--dark:#e8ede6;--muted:#b3beb0;--line:#39463a;--gold:#afc8a4;--gold-2:#2b382d;--brown:#afc8a4;--green:#afc8a4;--cream:#2b382d;background:#171d19!important;color:#e8ede6!important}
-html[data-theme="dark"] .academy-theme .home-page{--home-muted:#b3beb0;--home-line:#39463a;--home-green:#afc8a4}
+html[data-theme="dark"] .academy-theme .home-page{--home-muted:#b3beb0;--home-line:#39463a;--home-green:#afc8a4;--home-tint:#202922;--home-mark:rgba(175,200,164,.2)}
 html[data-theme="dark"] .academy-theme .topbar{background:rgba(23,29,25,.96)!important;color:#e8ede6!important;border-color:#39463a!important}
 html[data-theme="dark"] .academy-theme :is(h1,h2,h3,h4,.brand-title,.home-portrait figcaption span:first-child){color:#e8ede6!important}
 html[data-theme="dark"] .academy-theme :is(.nav-link,.lang button,.theme-toggle){color:#c2cdbd!important}
@@ -180,6 +180,7 @@ html[data-theme="dark"] .academy-theme :is(.lesson-hero-stats,.lesson-check-list
 html[data-theme="dark"] .academy-theme :is(.home-example,.topic-overview,.notice,.lesson-final-cta,.exam-plan,.grammar-coming-soon,.contact-mail-icon,.lesson-free-badge,.lesson-rule>div){background:#2b382d!important;border-color:#465143!important;color:#d8e6d0!important}
 html[data-theme="dark"] .academy-theme .home-example-sentence{color:#e8ede6!important}
 html[data-theme="dark"] .academy-theme :is(.home-example-sentence span,.home-eyebrow){color:#afc8a4!important}
+html[data-theme="dark"] .academy-theme .home-closing{background:#202922;border:1px solid #39463a}
 html[data-theme="dark"] .academy-theme :is(.btn.primary,.btn.gold,.home-button,.contact-submit){background:#afc8a4!important;border-color:#afc8a4!important;color:#172219!important}
 html[data-theme="dark"] .academy-theme :is(.btn.primary:hover,.btn.gold:hover,.home-button:hover){background:#c3d9b9!important;color:#172219!important}
 html[data-theme="dark"] .academy-theme .btn.ghost{background:transparent!important;border-color:#65765e!important;color:#d8e6d0!important}
@@ -201,3 +202,13 @@ html[data-theme="dark"] .academy-theme :is(button,a):focus-visible{outline-color
 @media(max-width:700px){.academy-theme .nav .brand{width:auto;min-width:0;gap:8px}.academy-theme .brand-title{font-size:15px}.academy-theme .brand-logo{width:36px;height:36px}.academy-theme .nav-actions{gap:5px}.academy-theme .theme-toggle{width:36px;height:36px}}
 html[data-theme="dark"] .academy-theme :is(.contact-mail-row a,.contact-guide-title,.contact-guide-list,.field label,.written-answer-wrap label,.exercise-set-card p,.grammar-topic-card p){color:#b3beb0!important}
 html[data-theme="dark"] .academy-theme :is(.exercise-discovery-level.active,.grammar-level-tab.active) :is(.exercise-discovery-level-name,.exercise-discovery-level-meta,.grammar-level-name){color:#172219!important}
+
+/* Skip link and touch behaviour shared by every page. */
+.skip-link{position:absolute;left:16px;top:-80px;z-index:100;padding:12px 18px;border-radius:5px;background:#263e2d;color:#fff;font-weight:600;font-size:14px;transition:top .2s}
+.skip-link:focus{top:12px}
+.academy-theme main:focus{outline:none}
+.academy-theme :is(.nav-link,.lang button,.theme-toggle,.brand){touch-action:manipulation}
+.academy-theme a.nav-link{display:inline-flex;align-items:center}
+.academy-theme .nav-link{transition:background-color .2s,color .2s}
+html[data-theme="dark"] .skip-link{background:#afc8a4;color:#172219}
+@media(prefers-reduced-motion:reduce){.skip-link{transition:none}}

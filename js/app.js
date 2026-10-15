@@ -260,6 +260,12 @@ Object.assign(translations.en, {
   lessonCtaTag:'Ready to start?', lessonCtaTitle:'The first lesson is free. Let’s identify your level and goal together.', lessonCtaText:'Send a short message through the contact page with your level, goal and the topic you want to focus on.', lessonCtaButton:'Plan First Lesson →'
 });
 
+// Account link in the menu (giriş/kayıt and panels live in separate pages, see js/account/).
+// The menu labels are repeated here because the account pages do not load home.js.
+Object.assign(translations.tr, {navLogin:'Giriş', navPanel:'Panelim', navTeacher:'Öğretmen paneli', menuOpen:'Menü', menuClose:'Kapat'});
+Object.assign(translations.de, {navLogin:'Anmelden', navPanel:'Mein Bereich', navTeacher:'Lehrerbereich', menuOpen:'Menü', menuClose:'Schließen'});
+Object.assign(translations.en, {navLogin:'Sign in', navPanel:'My area', navTeacher:'Teacher area', menuOpen:'Menu', menuClose:'Close'});
+
 let currentLang = localStorage.getItem('baLang') || 'tr';
 
 function t(key){
@@ -326,7 +332,11 @@ window.BA = {
   translations
 };
 
+// Only index.html has .page sections; the account pages share the header but not the router.
+const hasPages = () => Boolean(document.getElementById('page-home'));
+
 window.addEventListener('popstate', event=>{
+  if(!hasPages()) return;
   const page = event.state?.baPage || pageFromHash();
   showPage(BA_PAGES.includes(page) ? page : 'home', {historyMode:'none', scroll:false});
 });
@@ -438,5 +448,5 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   const startPage=pageFromHash();
   applyLanguage(currentLang);
-  showPage(startPage, {historyMode:'replace', scroll:false});
+  if(hasPages()) showPage(startPage, {historyMode:'replace', scroll:false});
 });

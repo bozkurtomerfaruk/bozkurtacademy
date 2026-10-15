@@ -133,3 +133,8 @@ textarea.written-answer-input{resize:vertical;min-height:110px;line-height:1.55}
   #page-exercises .quiz-actions .btn{flex:1 1 100%}
   #page-exercises .option-state{flex-basis:100%;margin-left:46px}
 }
+
+/* Signed-in students: "result saved" note under the result (js/account/session.js) */
+.academy-theme .result-saved-note{margin:16px 0 0}
+.academy-theme .result-saved-note.success{background:var(--ba-right-bg);color:var(--ba-right)}
+.academy-theme .result-saved-note.error{background:var(--ba-wrong-bg);color:var(--ba-wrong)}

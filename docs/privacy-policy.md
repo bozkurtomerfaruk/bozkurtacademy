@@ -1,11 +1,12 @@
 # Privacy policy: what the site does with personal data
 
-The footer has a "Gizlilik politikası" link that stays hidden until a policy exists
-(`index.html`, `<nav class="footer-links" ... hidden>`). This file lists what the site
+The footer links to `privacy.html`, a draft policy that still needs a legal check and the
+bracketed placeholders filled in. This file lists what the site
 actually does today, so you can answer a privacy-policy generator correctly. It is a
 checklist of facts, not the policy text itself.
 
-Last checked: after fonts were moved onto the site (no Google Fonts any more).
+Last checked: student accounts, stage 1 (Firebase login, registration, teacher panel). A draft
+policy now exists as `privacy.html` and the footer link is visible.
 
 ## Third-party services that receive visitors' personal data
 
@@ -16,11 +17,31 @@ Last checked: after fonts were moved onto the site (no Google Fonts any more).
 | **FormSubmit** (formsubmit.co) | Only when someone sends a comment on a grammar lesson | Name, email address, comment text, the lesson and level, publication consent, plus IP address and browser details | `js/a1-lessons.js`, comment form |
 | **Gmail / Google** (Google Ireland Ltd.) | After FormSubmit forwards a form | Everything FormSubmit received, stored in the bozkurtt.omerfaruk@gmail.com mailbox | FormSubmit delivers to that address |
 
-Nothing else is loaded from another host while browsing. In particular:
+| **Firebase Authentication** (Google Ireland Ltd. / Google LLC) | When a student registers or signs in, and on every later visit of a signed-in student | Email address, password hash; with Google sign-in (16+ only) also the Google name, email and photo URL. Not region-bound: may be processed in the USA | `js/account/firebase.js`, `login.js`, `register.js` |
+| **Cloud Firestore** (Google, europe-west3 Frankfurt) | Student accounts only | Name, email, birth year, account status, exercise results (level, topic, exercise, score, time); for under-16s also parent name and email, consent date and method | `firestore.rules`, `js/account/*.js` |
+| **gstatic.com** (Google, Firebase SDK files) | Only on login/registration/panel pages, and on `index.html` only if the browser was signed in before (`baAccount`) | IP address and browser details of the request | `js/account/firebase.js` |
+
+Planned in later stages (not live yet): Google Calendar and Meet (lesson invitations with student and,
+for under-16s, parent email), Gmail via Google Apps Script (reminder emails; a SHA-256 hash of each
+recipient address is kept 14 days to avoid duplicates).
+
+Guests who never sign in load nothing from Google. Apart from that, nothing else is loaded from another host while browsing. In particular:
 
 - **No Google Fonts.** STIX Two Text and Albert Sans are served from `fonts/` on the site itself.
 - No analytics, advertising, tracking pixels, social media widgets, embedded videos or maps.
 - No cookies are set.
+
+## Student accounts (stage 1)
+
+- Registration asks for name, email, password and birth year only; under-16s (current year − birth
+  year ≤ 16) also give a parent's name and email and cannot use Google sign-in.
+- Accounts open only after teacher approval; for under-16s also after the teacher records the parent's
+  consent (date and method: signed form or email). Enforced in `firestore.rules`.
+- Retention shown in `privacy.html`: 12 months after the last lesson (or approval if there was no
+  lesson), unapproved registrations 30 days. Deletion is manual from the teacher panel
+  ("Silinmesi gereken kayıtlar"); the Firebase Authentication account must then be deleted in the
+  Firebase Console.
+- Parent consent form draft: `docs/veli-onay-formu.md`.
 
 ## Other things a generator usually asks about
 
@@ -29,7 +50,12 @@ Nothing else is loaded from another host while browsing. In particular:
   - `baLang`: chosen language (TR/DE/EN).
   - `baBestScore:<level>:<topic>:<exercise>`: best score per exercise.
 
-  All three are only read by the page on the visitor's own device.
+  - `baAccount`: `student` or `teacher` after signing in; decides whether `index.html` loads Firebase
+    and what the menu link says. No personal data.
+  - `baEmulator`: only on localhost during development.
+  - Firebase keeps the sign-in session in the browser's IndexedDB (technically necessary for login).
+
+  These are only read by the page on the visitor's own device.
 - **Published comments:** when you approve a comment, you add it to `data/grammar-comments.json`,
   which is public. The page shows the commenter's name, the date, the comment and your reply.
   Email addresses are never published. The form asks for consent to this before sending. The file
@@ -56,11 +82,9 @@ Nothing else is loaded from another host while browsing. In particular:
 
 ## To finish
 
-1. Generate or have written a policy with the answers above. It must name you as the person
-   responsible and give a contact address. Have it checked if you run the lessons as a business.
-2. Save it as `privacy.html` in the site root (Turkish, and German/English if the language
-   switch should cover it).
-3. Remove `hidden` from the footer `<nav class="footer-links">` in `index.html`.
+1. Have the draft `privacy.html` checked and fill in the bracketed placeholders (address, legal
+   bases, supervisory authority, where signed consent forms are kept). It is Turkish only so far.
+2. Remove the draft note at the top and the `noindex` meta tag once it is final.
 
 If you teach from Germany as a business, also check whether you need an Impressum; the same
 footer nav can hold that link.

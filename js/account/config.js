@@ -18,4 +18,4 @@ export const TEACHER_EMAIL = 'bozkurtt.omerfaruk@gmail.com';
 
 // Google Calendar (sadece öğretmen): Google Cloud → Google Auth Platform → İstemciler → Web uygulaması.
 // Gizli anahtar (secret) gerekmez. Boşken canlı sitede Takvim bağlantısı kurulmaz, dersler yine Firestore'a kaydedilir.
-export const GOOGLE_CLIENT_ID = '';
+export const GOOGLE_CLIENT_ID = '8848854838-71mdsvir8jgidnqfnsl67ff357mgbdip.apps.googleusercontent.com';

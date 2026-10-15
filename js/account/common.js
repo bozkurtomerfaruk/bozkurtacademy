@@ -140,6 +140,15 @@ export async function loadCatalogLevels(){
   return (await loadCatalog()).levels || [];
 }
 
+// Ödev oluştururken: bir konunun alıştırmaları (data/<seviye>/<konu>.json).
+export async function loadTopicExercises(levelId, topicId){
+  const levels = await loadCatalogLevels();
+  const topic = levels.find((l) => l.id === levelId)?.topics?.find((t) => t.id === topicId);
+  if(!topic?.path) return [];
+  const data = await loadTopic(topic.path);
+  return (data?.exercises || []).map((e) => ({ id: e.id, title: e.title }));
+}
+
 async function loadTopic(path){
   if(!topicCache.has(path)) topicCache.set(path, fetch(path).then((r) => r.json()).catch(() => null));
   return topicCache.get(path);
@@ -205,4 +214,73 @@ export function setStatus(el, type, message){
   el.hidden = !message;
   el.className = `acc-status${type ? ' ' + type : ''}`;
   el.textContent = message || '';
+}
+
+// Google Docs, Sheets ve Slides linkleri "/copy" biçimine çevrilir: her öğrenci kendi kopyasını alır.
+// Tanınmayan linklerde null döner. Google Drive API kullanılmaz; sadece link.
+const DOCS_RE = /^https:\/\/docs\.google\.com\/(document|spreadsheets|presentation)\/d\/([A-Za-z0-9_-]+)/;
+export function docsCopyUrl(url){
+  const m = DOCS_RE.exec(String(url || '').trim());
+  return m ? `https://docs.google.com/${m[1]}/d/${m[2]}/copy` : null;
+}
+
+// Öğrencinin kendi doküman linki: sadece Google Docs / Drive (kurallarla aynı).
+export const validStudentDocUrl = (url) => url === '' || (url.length <= 500 && /^https:\/\/(docs|drive)\.google\.com\//.test(url));
+
+export const validHttpsUrl = (url) => {
+  try{ return new URL(url).protocol === 'https:' && url.length <= 1000; }catch(_){ return false; }
+};
+
+// Sitedeki alıştırmaya doğrudan bağlantı (js/exercise-links.js'teki adres biçimi).
+export function exerciseUrl({ level, topic, exercise }){
+  return `index.html#exercises/${[level, topic, exercise].map(encodeURIComponent).join('/')}`;
+}
+
+// Berlin saatindeki "YYYY-MM-DDTHH:MM" değerini gerçek zamana çevirir (tarayıcının saat diliminden bağımsız).
+function berlinOffsetMs(date){
+  const parts = Object.fromEntries(new Intl.DateTimeFormat('en-US', {
+    timeZone: BERLIN, hourCycle: 'h23', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'
+  }).formatToParts(date).map((p) => [p.type, p.value]));
+  const asUtc = Date.UTC(parts.year, parts.month - 1, parts.day, parts.hour, parts.minute, parts.second);
+  return asUtc - Math.floor(date.getTime() / 1000) * 1000;
+}
+
+export function berlinInputToDate(value){
+  const m = /^(\d{4})-(\d\d)-(\d\d)T(\d\d):(\d\d)$/.exec(value || '');
+  if(!m) return null;
+  const guess = Date.UTC(+m[1], m[2] - 1, +m[3], +m[4], +m[5]);
+  let date = new Date(guess - berlinOffsetMs(new Date(guess)));
+  date = new Date(guess - berlinOffsetMs(date));
+  return date;
+}
+
+export function dateToBerlinInput(date){
+  const parts = Object.fromEntries(new Intl.DateTimeFormat('en-CA', {
+    timeZone: BERLIN, hourCycle: 'h23', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit'
+  }).formatToParts(date).map((p) => [p.type, p.value]));
+  return `${parts.year}-${parts.month}-${parts.day}T${parts.hour}:${parts.minute}`;
+}
+
+export async function loadAssignments(uid){
+  const snap = await fs.getDocs(fs.collection(db, 'users', uid, 'assignments'));
+  return snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+}
+
+export async function loadResources(uid){
+  const snap = await fs.getDocs(fs.collection(db, 'users', uid, 'resources'));
+  return snap.docs.map((d) => ({ id: d.id, ...d.data() }))
+    .sort((a, b) => (toDate(b.createdAt) || 0) - (toDate(a.createdAt) || 0));
+}
+
+// Ödevdeki alıştırma bu ödev verildikten sonra çözüldü mü: en iyi sonuç.
+export function bestResultSince(results, exercise, since){
+  const from = toDate(since);
+  let best = null;
+  for(const r of results){
+    if(r.level !== exercise.level || r.topic !== exercise.topic || r.exercise !== exercise.exercise) continue;
+    const at = toDate(r.at);
+    if(from && at && at < from) continue;
+    if(!best || r.score / r.total > best.score / best.total) best = r;
+  }
+  return best;
 }

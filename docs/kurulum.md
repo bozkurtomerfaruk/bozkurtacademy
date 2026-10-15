@@ -27,6 +27,10 @@ Firestore "üretim modunda" oluşturulduğu için kurallar yayınlanana kadar he
 
 İstersen bunun yerine Firebase CLI ile: `npx firebase deploy --only firestore --project bozkurtacademy-8ab85`.
 
+### Kurallar her değiştiğinde
+
+`firestore.rules` değişen her birleştirmeden sonra (ör. Aşama 2: öğrencinin ödevi "tamamladım" olarak işaretleyebilmesi) dosyanın güncel hâlini Firebase Console → Firestore → Kurallar'a yapıştırıp **Yayınla**. Yayınlanmazsa yeni özellikler canlıda "izin yok" hatası verir.
+
 ### 3. Canlıda kontrol listesi
 
 - [ ] `giris.html`'de Google ile giriş yapınca öğretmen paneline (`ogretmen.html`) gidiyorsun.
@@ -72,6 +76,7 @@ curl -X POST -H 'Authorization: Bearer owner' -H 'Content-Type: application/json
 | `js/account/firebase.js` | SDK'yı CDN'den (gstatic, sabit sürüm) yükler, emülatör bağlantısı |
 | `js/account/session.js` | `index.html`: menüdeki Giriş/Panelim bağlantısı, alıştırma sonucu kaydı |
 | `js/account/login.js`, `register.js`, `student.js` | Giriş, kayıt, öğrenci paneli |
-| `js/account/teacher.js`, `teacher-student.js`, `teacher-common.js` | Öğretmen paneli ve öğrenci detayı |
+| `js/account/teacher.js`, `teacher-student.js`, `teacher-common.js` | Öğretmen paneli (öğrenciler, ödevler), öğrenci detayı (ödevler, kaynaklar) |
+| `js/account/teacher-assign.js` | `ogretmen-odev.html`: yeni ödev |
 | `js/account/i18n.js` | Öğrenci sayfalarının TR/DE/EN metinleri |
 | `css/account.css` | Bu sayfaların yerleşimi |

@@ -2,6 +2,33 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-10-15 · Aşama 4 bitti, PR açıldı, onay bekleniyor
+
+**PR:** [PR #22](https://github.com/bozkurtomerfaruk/bozkurtacademy/pull/22) (dal: `claude/asama-4-hatirlatma`). Birleştirilmedi.
+
+**Önce birleşen:** [PR #21](https://github.com/bozkurtomerfaruk/bozkurtacademy/pull/21) (Aşama 3), istemci kimliği `js/account/config.js`'e eklenmiş olarak.
+
+**Aşama 4'te yapılan:**
+- `apps-script/Code.gs`: her gün 18:00–19:00 (Berlin) arasında ertesi günün siteden oluşturulmuş derslerini buluyor; öğrenciye ve davetliyse veliye "Yarınki Almanca dersin – [saat]" e-postası gönderiyor.
+- İptal edilmiş derslere ve daveti reddedenlere göndermiyor; aynı ders için aynı kişiye iki kez göndermiyor.
+- `dryRun()` ile denenebiliyor, `installTrigger()` ile zamanlayıcı kuruluyor.
+- `apps-script/README.md`: adım adım kurulum.
+
+**Testler:** 17 Apps Script testi (sahte Google servisleri, yaz/kış saati günleri dahil) ve 65 kural testi, toplam 82/82. `check-grammar` PASS. E-posta önizlemeleri paylaşıldı.
+
+**Bilmen gerekenler:**
+- Gerçek Apps Script ve Gmail bu ortamdan çalıştırılamadı. Kurulumdan sonra README'deki "Deneme" adımlarıyla denenmeli.
+- İzin ekranın "In Produktion": Takvim'e ilk bağlanışta "Google bu uygulamayı doğrulamadı" uyarısı çıkar, "Gelişmiş" ile geçilir. Öğrencilerin Google girişi etkilenmez. Apps Script'in kendi izin ekranında da benzer bir uyarı çıkar.
+- İstemcide `https://bozkurtacademy.com` yetkili JavaScript kaynağı olarak ekli olmalı; değilse Takvim'e bağlanırken "origin" hatası çıkar.
+- `privacy.html` (hukuki kontrolde) Takvim ve hatırlatma bölümlerinde hâlâ "ders takvimi devreye girdiğinde" diyor. Kontrol bitince bu ifadeyi kaldırabiliriz.
+
+**Senden beklenenler:**
+1. PR #22 için "birleştir" demen; sonra `apps-script/README.md`'ye göre betiği kurman.
+2. Canlıda Takvim ve Meet'i test öğrencisiyle denemen (`docs/kurulum.md` → "Google Calendar (Aşama 3)").
+3. Gizlilik metni kesinleşince "Giriş linkini aç" demen.
+
+Planın dört aşaması bununla tamamlanıyor.
+
 ## 2026-10-15 · Aşama 3 bitti, PR açıldı, onay bekleniyor
 
 **PR:** [PR #21](https://github.com/bozkurtomerfaruk/bozkurtacademy/pull/21) (dal: `claude/asama-3-takvim`). Birleştirilmedi. Önce [PR #20](https://github.com/bozkurtomerfaruk/bozkurtacademy/pull/20) (Aşama 2) birleştirildi.

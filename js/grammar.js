@@ -287,7 +287,7 @@
     const link = document.createElement('link');
     link.id = 'grammarHubCss';
     link.rel = 'stylesheet';
-    link.href = 'css/grammar.css?v=3';
+    link.href = 'css/grammar.css?v=4';
     document.head.appendChild(link);
   }
 

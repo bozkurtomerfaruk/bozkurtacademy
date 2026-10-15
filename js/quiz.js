@@ -184,7 +184,7 @@
     const link=document.createElement('link');
     link.id='exerciseHubCss';
     link.rel='stylesheet';
-    link.href='css/exercises-hub.css?v=4';
+    link.href='css/exercises-hub.css?v=5';
     document.head.appendChild(link);
   }
 
@@ -826,6 +826,15 @@ function goToQuestion(number){
     }else{
       syncScoreAndWrong();
       showResult();
+      // Only a real finish is reported (showResult also runs again on language change).
+      // js/account/session.js saves it for signed-in students; guests are unaffected.
+      window.dispatchEvent(new CustomEvent('ba:exercise-finished', {detail:{
+        level:state.topicData?.level || state.level?.id,
+        topic:state.topicData?.id || state.topicMeta?.id,
+        exercise:state.exercise?.id,
+        score:state.score,
+        total:state.pool.length
+      }}));
     }
   }
   function getNextExercise(){

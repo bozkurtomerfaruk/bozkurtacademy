@@ -284,3 +284,30 @@ export function bestResultSince(results, exercise, since){
   }
   return best;
 }
+
+// Takvim için Berlin duvar saati. Gün anahtarı "YYYY-MM-DD"; gün hesapları tarayıcının saat diliminden bağımsız.
+const berlinFmt = new Intl.DateTimeFormat('en-CA', {
+  timeZone: BERLIN, hourCycle: 'h23', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', weekday: 'short'
+});
+const WEEKDAYS = { Mon: 0, Tue: 1, Wed: 2, Thu: 3, Fri: 4, Sat: 5, Sun: 6 };
+
+export function berlinParts(date){
+  const p = Object.fromEntries(berlinFmt.formatToParts(date).map((x) => [x.type, x.value]));
+  return { key: `${p.year}-${p.month}-${p.day}`, y: +p.year, m: +p.month, d: +p.day, hh: +p.hour, mm: +p.minute, dow: WEEKDAYS[p.weekday], time: `${p.hour}:${p.minute}` };
+}
+
+export function addDaysToKey(key, days){
+  const [y, m, d] = key.split('-').map(Number);
+  const t = new Date(Date.UTC(y, m - 1, d + days));
+  return t.toISOString().slice(0, 10);
+}
+
+// Haftanın pazartesisi.
+export function weekStartKey(key){
+  const [y, m, d] = key.split('-').map(Number);
+  const dow = (new Date(Date.UTC(y, m - 1, d)).getUTCDay() + 6) % 7;
+  return addDaysToKey(key, -dow);
+}
+
+export const berlinAt = (key, time) => berlinInputToDate(`${key}T${time}`);
+export const todayKey = () => berlinParts(new Date()).key;

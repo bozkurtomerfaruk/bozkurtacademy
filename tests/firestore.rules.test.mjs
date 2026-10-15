@@ -490,6 +490,41 @@ describe('Ödevler ve kaynaklar', () => {
   });
 });
 
+describe('Dersler', () => {
+  const lesson = () => ({ startAt: Timestamp.now(), durationMin: 50, note: '', status: 'scheduled', meetUrl: 'https://meet.google.com/x', calendarSync: 'ok', studentName: 'Ayşe Yılmaz' });
+
+  test('onaylı öğrenci kendi derslerini okuyabilir ama değiştiremez ve silemez', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await seed('users/ayse/lessons/l1', lesson());
+    await assertSucceeds(getDocs(collection(ayse(), 'users/ayse/lessons')));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse/lessons/l1'), { status: 'cancelled' }));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse/lessons/l1'), { meetUrl: 'https://evil.example' }));
+    await assertFails(deleteDoc(doc(ayse(), 'users/ayse/lessons/l1')));
+  });
+
+  test('öğrenci başka öğrencinin derslerini okuyamaz', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await seed('users/can', seededMinor('active', consentGiven));
+    await seed('users/can/lessons/l1', lesson());
+    await assertFails(getDocs(collection(ayse(), 'users/can/lessons')));
+    await assertFails(getDoc(doc(ayse(), 'users/can/lessons/l1')));
+  });
+
+  test('öğrenci veli davet ayarını değiştiremez, öğretmen değiştirebilir', async () => {
+    await seed('users/can', seededMinor('active', consentGiven));
+    await assertFails(updateDoc(doc(can(), 'users/can'), { inviteParent: false }));
+    await assertSucceeds(updateDoc(doc(teacherDb(), 'users/can'), { inviteParent: false }));
+  });
+
+  test('öğretmen ders oluşturabilir, güncelleyebilir ve silebilir', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    const db = teacherDb();
+    await assertSucceeds(setDoc(doc(db, 'users/ayse/lessons/l1'), lesson()));
+    await assertSucceeds(updateDoc(doc(db, 'users/ayse/lessons/l1'), { status: 'cancelled' }));
+    await assertSucceeds(deleteDoc(doc(db, 'users/ayse/lessons/l1')));
+  });
+});
+
 describe('Öğretmen', () => {
   test('öğretmen bütün öğrencileri listeleyebilir ve sonuçları okuyabilir', async () => {
     await seed('users/ayse', seededAdult('pending'));

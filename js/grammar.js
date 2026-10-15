@@ -287,7 +287,7 @@
     const link = document.createElement('link');
     link.id = 'grammarHubCss';
     link.rel = 'stylesheet';
-    link.href = 'css/grammar.css?v=4';
+    link.href = 'css/grammar.css?v=5';
     document.head.appendChild(link);
   }
 
@@ -502,7 +502,7 @@
               </div>
 
               <div class="grammar-search-wrap">
-                <div class="grammar-search">
+                <div class="grammar-search ba-search">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                     <circle cx="11" cy="11" r="7"></circle>
                     <path d="m20 20-3.5-3.5"></path>
@@ -513,7 +513,7 @@
               </div>
             </div>
 
-            <div class="grammar-level-tabs" id="grammarLevelTabs"></div>
+            <div class="grammar-level-tabs ba-level-tabs" id="grammarLevelTabs"></div>
             <div class="grammar-search-note" id="grammarSearchNote">${escapeHtml(tx('allResults'))}</div>
 
             <div class="grammar-section-heading">
@@ -524,7 +524,7 @@
               <div class="grammar-result-count" id="grammarResultCount"></div>
             </div>
 
-            <div class="grammar-topic-grid" id="grammarTopicGrid"></div>
+            <div class="grammar-topic-grid ba-toc" id="grammarTopicGrid"></div>
           </div>
 
           <div class="grammar-detail" id="grammarDetailView"></div>
@@ -566,10 +566,10 @@
     const names = tx('levelNames');
 
     el.innerHTML = Object.keys(TOPICS).map(level => `
-      <button class="grammar-level-tab ${level === currentLevel ? 'active' : ''}" type="button" aria-pressed="${level === currentLevel}" data-grammar-level="${level}">
-        <span class="grammar-level-code">${level}</span>
-        <span class="grammar-level-name">${escapeHtml(names[level])}</span>
-        <span class="grammar-level-count">${TOPICS[level].length} ${escapeHtml(tx('levelTopics'))}</span>
+      <button class="grammar-level-tab ba-level-tab ${level === currentLevel ? 'active' : ''}" type="button" aria-pressed="${level === currentLevel}" data-grammar-level="${level}">
+        <span class="grammar-level-code ba-level-code">${level}</span>
+        <span class="grammar-level-name ba-level-name">${escapeHtml(names[level])}</span>
+        <span class="grammar-level-count ba-level-meta">${TOPICS[level].length} ${escapeHtml(tx('levelTopics'))}</span>
       </button>
     `).join('');
 
@@ -628,7 +628,7 @@
 
     if (!rows.length) {
       grid.innerHTML = `
-        <div class="grammar-empty">
+        <div class="grammar-empty ba-toc-empty">
           <strong>${escapeHtml(tx('noResultTitle'))}</strong>
           <p>${escapeHtml(tx('noResultSub'))}</p>
         </div>
@@ -637,16 +637,16 @@
     }
 
     grid.innerHTML = rows.map(item => `
-      <button class="grammar-topic-card" type="button"
+      <button class="grammar-topic-card ba-toc-item" type="button"
         data-topic-id="${escapeHtml(item.id)}"
         data-topic-level="${escapeHtml(item.level)}">
-        <div class="grammar-card-top">
-          <span class="grammar-topic-level">${escapeHtml(item.level)}</span>
-          <span class="grammar-topic-arrow" aria-hidden="true">→</span>
+        <div class="grammar-card-top ba-toc-top">
+          <span class="grammar-topic-level ba-toc-level">${escapeHtml(item.level)}</span>
+          <span class="grammar-topic-arrow ba-toc-arrow" aria-hidden="true">→</span>
         </div>
         <h4>${escapeHtml(item.title)}</h4>
         <p>${escapeHtml(item.description)}</p>
-        <div class="grammar-topic-footer">${escapeHtml(tx('openTopic'))}</div>
+        <div class="grammar-topic-footer ba-toc-action">${escapeHtml(tx('openTopic'))}</div>
       </button>
     `).join('');
 

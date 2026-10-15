@@ -18,13 +18,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&family=STIX+Two+Text:wght@400;600&display=swap">
   <link rel="stylesheet" href="css/style.css?v=11" />
-  <link rel="stylesheet" href="css/theme.css?v=11" />
-  <link rel="stylesheet" href="css/base.css?v=3" />
+  <link rel="stylesheet" href="css/theme.css?v=12" />
+  <link rel="stylesheet" href="css/base.css?v=4" />
   <link rel="stylesheet" href="css/home.css?v=5" />
   <link rel="stylesheet" href="css/lessons.css?v=2" />
   <link rel="stylesheet" href="css/pages.css?v=3" />
-  <link rel="stylesheet" id="grammarHubCss" href="css/grammar.css?v=4" />
+  <link rel="stylesheet" id="grammarHubCss" href="css/grammar.css?v=5" />
   <link rel="stylesheet" href="css/a1-lessons.css?v=3" />
+  <link rel="stylesheet" id="exerciseHubCss" href="css/exercises-hub.css?v=3" />
 </head>
 <body class="academy-theme">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
@@ -275,7 +276,7 @@
             <div class="level-choice-grid" id="levelChoiceGrid"></div>
           </div>
 
-          <div id="exerciseTopicView" style="display:none">
+          <div id="exerciseTopicView" hidden>
             <div class="hub-toolbar">
               <button class="btn ghost hub-back" type="button" id="backToLevelsBtn">← <span data-i18n="backToLevels">Seviyelere dön</span></button>
             </div>
@@ -289,7 +290,7 @@
             <div class="topic-choice-grid" id="topicChoiceGrid"></div>
           </div>
 
-          <div id="exerciseSetView" style="display:none">
+          <div id="exerciseSetView" hidden>
             <div class="hub-toolbar">
               <button class="btn ghost hub-back" type="button" id="backToTopicsBtn">← <span data-i18n="backToTopics">Konulara dön</span></button>
             </div>
@@ -304,7 +305,7 @@
             <div class="exercise-set-grid" id="exerciseSetGrid"></div>
           </div>
 
-          <div id="exerciseQuizView" style="display:none">
+          <div id="exerciseQuizView" hidden>
             <div class="hub-toolbar">
               <button class="btn ghost hub-back" type="button" id="backToSetsBtn">← <span data-i18n="backToExercises">Alıştırmalara dön</span></button>
             </div>
@@ -333,7 +334,7 @@
             </div>
           </div>
 
-          <div class="exercise-load-error" id="exerciseLoadError" style="display:none"></div>
+          <div class="exercise-load-error" id="exerciseLoadError" role="alert" hidden></div>
         </section>
       </section>
 
@@ -579,10 +580,10 @@
     </footer>
   </div>
   <script src="js/app.js?v=13"></script>
-  <script src="js/quiz.js?v=16"></script>
+  <script src="js/quiz.js?v=17"></script>
   <script src="js/exercise-links.js?v=3"></script>
   <script src="js/a1-lessons.js?v=8"></script>
-  <script src="js/grammar.js?v=11"></script>
+  <script src="js/grammar.js?v=12"></script>
   <script src="js/theme.js?v=6"></script>
   <script src="js/home.js?v=5"></script>
 </body>

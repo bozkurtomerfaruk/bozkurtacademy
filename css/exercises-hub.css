@@ -58,7 +58,6 @@
   border-radius:18px;
   background:rgba(255,255,255,.95);
   padding:0 48px;
-  outline:none;
   font:inherit;
   font-weight:750;
   color:var(--dark);
@@ -394,7 +393,6 @@
   font:inherit;
   font-size:17px;
   font-weight:750;
-  outline:none;
   transition:border-color .18s ease,box-shadow .18s ease,background .18s ease;
 }
 textarea.written-answer-input{

@@ -11,3 +11,5 @@ Write simple Turkish for a first-time learner, German examples with Turkish tran
 Run node scripts/check-grammar.mjs and browser checks for the lesson, correct exercise destination, mobile overflow, dark mode and deep links. New exercise topics require actual authored explanations; a card or placeholder is insufficient. data/grammar-legacy.json only records existing B1/B2 gaps and must not be expanded to bypass coverage.
 
 Publish through the existing GitHub Pages workflow when the user has authorized publishing. Do not claim the coverage check writes educational content automatically or verifies email delivery.
+
+Design skills live in .claude/skills (web-design-guidelines for UI audits, taste-skill for visual direction). docs/design/claude-DESIGN.md is a reference design system from getdesign.md; use it for inspiration only and keep the site's existing theme, dark mode and Turkish learner focus unless the user asks for a redesign.

@@ -1,5 +1,4 @@
-/* Gramer konuları: level tabs like the tabs of a binder, topics printed as a table of contents.
-   Tokens come from base.css. */
+/* Gramer konuları. Level tabs (ba-level-tabs), the topic list (ba-toc) and search (ba-search) come from base.css. */
 .grammar-hub{--gh-ink:var(--ba-ink);--gh-muted:var(--ba-muted);--gh-card:var(--ba-paper);--gh-line:var(--ba-line)}
 .grammar-hub .grammar-hero-copy{width:100%;max-width:none}
 .grammar-browser{padding:clamp(8px,2vw,24px) 0 0}
@@ -9,47 +8,14 @@
 .grammar-toolbar{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,400px);align-items:end;gap:20px 32px;margin-bottom:24px}
 .grammar-toolbar-copy h2{margin:0 0 8px}
 .grammar-toolbar-copy p{margin:0;color:var(--ba-ink)}
-.grammar-search{position:relative}
-.grammar-search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:20px;height:20px;pointer-events:none;color:var(--ba-muted)}
-.grammar-search input{width:100%;min-height:52px;padding:0 48px;font-weight:400}
-.grammar-search input::-webkit-search-cancel-button{display:none}
-.grammar-search-clear{position:absolute;right:6px;top:50%;transform:translateY(-50%);display:none;width:44px;height:44px;place-items:center;border:0;border-radius:var(--ba-radius-small);background:transparent;color:var(--ba-ink);font-size:22px;cursor:pointer}
-.grammar-search-clear.visible{display:grid}
-.grammar-search-clear:hover{background:var(--ba-paper-2)}
 .grammar-search-note{display:none;margin:0 0 20px;color:var(--ba-muted);font-size:var(--ba-small)}
 .grammar-search-note.visible{display:block}
 
-/* Level tabs */
-.grammar-level-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0 0 clamp(32px,4vw,48px)}
-.grammar-level-tab{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:14px;align-items:center;min-height:76px;padding:14px 18px;border:0;border-radius:var(--ba-radius-small);background:var(--ba-paper);color:var(--ba-ink);text-align:left;cursor:pointer;touch-action:manipulation;transition:background-color .2s,transform .2s}
-.grammar-level-tab:hover{background:var(--ba-paper-2)}
-.grammar-level-tab:active{transform:scale(.98)}
-.grammar-level-code{grid-row:1/3;font-family:var(--ba-serif);font-size:clamp(1.75rem,1.4rem + 1vw,2.25rem);font-weight:600;line-height:1;color:inherit;background:none;min-width:0;height:auto;padding:0;margin:0;border-radius:0}
-.grammar-level-name{font-weight:600;font-size:var(--ba-body);color:inherit;margin:0}
-.grammar-level-count{font-size:var(--ba-small);color:var(--ba-muted);font-weight:400}
-.grammar-level-tab.active{background:var(--ba-accent);color:var(--ba-accent-ink)}
-.grammar-level-tab.active .grammar-level-count{color:var(--ba-accent-ink)}
-
-/* Topic list: one sheet, two columns of entries */
+/* Topic list heading */
 .grammar-section-heading{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:0 0 18px}
 .grammar-section-heading h3{margin:0 0 4px;font-family:var(--ba-serif);font-weight:400;font-size:clamp(1.75rem,1.3rem + 1.4vw,2.5rem);letter-spacing:-.02em}
 .grammar-section-heading p{margin:0;color:var(--ba-ink)}
 .grammar-result-count{flex:none;font-size:var(--ba-small);color:var(--ba-muted);font-variant-numeric:tabular-nums}
-.grammar-topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(24px,4vw,56px);padding:clamp(8px,2vw,24px) clamp(20px,4vw,48px);background:var(--ba-paper);border-radius:var(--ba-radius)}
-.grammar-topic-card{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"top top" "title arrow" "text arrow" "foot arrow";align-items:start;column-gap:16px;width:100%;min-height:0;padding:20px 0;border:0;border-bottom:4px dotted var(--ba-paper-2);border-radius:0;background:none;color:var(--ba-ink);text-align:left;cursor:pointer;touch-action:manipulation}
-.grammar-topic-card:hover h4{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
-.grammar-card-top{display:contents}
-.grammar-topic-level{grid-area:top;justify-self:start;font-size:var(--ba-small);font-weight:600;color:var(--ba-muted);background:none;padding:0;height:auto}
-.grammar-topic-arrow{grid-area:arrow;align-self:center;font-size:22px;color:var(--ba-accent);transition:transform .2s}
-.grammar-topic-card:hover .grammar-topic-arrow{transform:translateX(4px)}
-.grammar-topic-card h4{grid-area:title;margin:2px 0 6px;font-family:var(--ba-serif);font-weight:600;font-size:var(--ba-lead);line-height:1.3;color:var(--ba-ink)}
-.grammar-topic-card p{grid-area:text;margin:0;color:var(--ba-ink);font-size:var(--ba-body);line-height:1.5}
-.grammar-topic-footer{grid-area:foot;margin-top:8px;font-size:var(--ba-small);font-weight:600;color:var(--ba-accent)}
-html[data-theme="dark"] .grammar-topic-footer{color:var(--ba-accent)}
-.grammar-empty{grid-column:1/-1;padding:40px 8px;text-align:center}
-.grammar-empty strong{display:block;margin-bottom:8px;font-family:var(--ba-serif);font-size:var(--ba-lead)}
-.grammar-empty p{margin:0}
-
 /* Topics without a full lesson yet (B2) */
 .grammar-detail{display:none}
 .grammar-detail.active{display:block}
@@ -72,12 +38,9 @@ html[data-theme="dark"] .grammar-topic-footer{color:var(--ba-accent)}
 
 @media(max-width:900px){
   .grammar-toolbar{grid-template-columns:1fr;align-items:stretch}
-  .grammar-level-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .grammar-topic-grid{grid-template-columns:1fr}
 }
 @media(max-width:620px){
   .grammar-section-heading{flex-direction:column;align-items:flex-start}
-  .grammar-level-tab{min-height:64px;padding:12px 14px}
   .grammar-detail-actions button{flex:1 1 100%}
 }
 .grammar-hub:has(.grammar-detail.active) .page-hero{display:none}

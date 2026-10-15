@@ -181,7 +181,7 @@
     const link=document.createElement('link');
     link.id='exerciseHubCss';
     link.rel='stylesheet';
-    link.href='css/exercises-hub.css?v=2';
+    link.href='css/exercises-hub.css?v=3';
     document.head.appendChild(link);
   }
 
@@ -199,10 +199,10 @@
   function showOnly(id){
     ['exerciseLevelView','exerciseTopicView','exerciseSetView','exerciseQuizView'].forEach(view=>{
       const el = $(view);
-      if(el) el.style.display = view === id ? 'block' : 'none';
+      if(el) el.hidden = view !== id;
     });
     const err = $('exerciseLoadError');
-    if(err) err.style.display='none';
+    if(err) err.hidden=true;
   }
 
   function showError(error){
@@ -210,7 +210,7 @@
     const err = $('exerciseLoadError');
     if(!err) return;
     err.textContent = t('loadError');
-    err.style.display='block';
+    err.hidden=false;
   }
 
   function updateBreadcrumb(){
@@ -347,26 +347,27 @@
     }
 
    const levelTabs=state.catalog.levels.map(level=>{
-  return `<button class="exercise-discovery-level ${state.level?.id===level.id && !query?'active':''}" type="button" data-hub-level="${level.id}">
-    <span class="exercise-discovery-level-code">${level.id}</span>
-    <span class="exercise-discovery-level-name">${escapeHtml(localize(level.title))}</span>
-    <span class="exercise-discovery-level-meta">${level.topics.length} ${escapeHtml(ht('total'))}</span>
+  return `<button class="exercise-discovery-level ba-level-tab ${state.level?.id===level.id && !query?'active':''}" type="button" aria-pressed="${state.level?.id===level.id && !query}" data-hub-level="${level.id}">
+    <span class="exercise-discovery-level-code ba-level-code">${level.id}</span>
+    <span class="exercise-discovery-level-name ba-level-name">${escapeHtml(localize(level.title))}</span>
+    <span class="exercise-discovery-level-meta ba-level-meta">${level.topics.length} ${escapeHtml(ht('total'))}</span>
   </button>`;
 }).join('');
 
     const cards=rows.length ? rows.map(({level,topic})=>{
       const ready=topic.status==='ready';
-      return `<button class="exercise-discovery-topic ${ready?'ready':'soon'}" type="button"
+      return `<button class="exercise-discovery-topic ba-toc-item ${ready?'ready':'soon'}" type="button"
         data-hub-topic="${topic.id}" data-hub-topic-level="${level.id}" ${ready?'':'disabled'}>
-        <div class="exercise-discovery-topic-top">
-          <span class="exercise-discovery-topic-level">${level.id}</span>
+        <div class="exercise-discovery-topic-top ba-toc-top">
+          <span class="exercise-discovery-topic-level ba-toc-level">${level.id}</span>
           ${ready ? '' : `<span class="exercise-discovery-status soon">${escapeHtml(ht('soon'))}</span>`}
         </div>
         <h3>${escapeHtml(localize(topic.title))}</h3>
         <p>${escapeHtml(localize(topic.description))}</p>
-        <div class="exercise-discovery-topic-action">${ready?escapeHtml(ht('open'))+' →':escapeHtml(ht('soon'))}</div>
+        <div class="exercise-discovery-topic-action ba-toc-action">${ready?escapeHtml(ht('open')):escapeHtml(ht('soon'))}</div>
+        ${ready?'<span class="ba-toc-arrow" aria-hidden="true">→</span>':''}
       </button>`;
-    }).join('') : `<div class="exercise-discovery-empty">
+    }).join('') : `<div class="exercise-discovery-empty ba-toc-empty">
       <strong>${escapeHtml(ht('emptyTitle'))}</strong>
       <p>${escapeHtml(ht('emptySub'))}</p>
     </div>`;
@@ -378,18 +379,18 @@
           <h2>${escapeHtml(ht('title'))}</h2>
           <p>${escapeHtml(ht('subtitle'))}</p>
         </div>
-        <div class="exercise-discovery-search">
+        <div class="exercise-discovery-search ba-search">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <circle cx="11" cy="11" r="7"></circle>
             <path d="m20 20-3.5-3.5"></path>
           </svg>
           <input id="exerciseHubSearch" type="search" autocomplete="off"
-            placeholder="${escapeHtml(ht('search'))}" value="${escapeHtml(state.hubSearch || '')}">
+            aria-label="${escapeHtml(ht('search'))}" placeholder="${escapeHtml(ht('search'))}" value="${escapeHtml(state.hubSearch || '')}">
           <button id="exerciseHubSearchClear" class="${state.hubSearch?'visible':''}" type="button" aria-label="Clear">×</button>
         </div>
       </div>
 
-      <div class="exercise-discovery-levels">${levelTabs}</div>
+      <div class="exercise-discovery-levels ba-level-tabs">${levelTabs}</div>
       ${query?`<div class="exercise-discovery-search-note">${escapeHtml(ht('allLevels'))}</div>`:''}
 
       <div class="exercise-discovery-heading">
@@ -400,7 +401,7 @@
         <span>${rows.length} ${escapeHtml(ht('result'))}</span>
       </div>
 
-      <div class="exercise-discovery-grid">${cards}</div>
+      <div class="exercise-discovery-grid ba-toc">${cards}</div>
     `;
 
     view.querySelectorAll('[data-hub-level]').forEach(btn=>btn.addEventListener('click',()=>{
@@ -508,6 +509,7 @@
     grid.innerHTML=exercises.map(ex=>{
       const hasWritten=(ex.questions || []).some(q=>isWritten(q));
       return `<article class="exercise-set-card">
+      <div class="exercise-set-copy">
       <div class="set-meta">
         <span class="set-chip">${escapeHtml(localize(ex.difficulty))}</span>
         <span class="set-chip">${ex.questions?.length || 0} ${t('questions')}</span>
@@ -516,7 +518,8 @@
       </div>
       <h3>${escapeHtml(localize(ex.title))}</h3>
       <p>${escapeHtml(localize(ex.description))}</p>
-      <button class="btn primary block" type="button" data-exercise="${ex.id}">${t('openExercise')} →</button>
+      </div>
+      <button class="btn primary" type="button" data-exercise="${ex.id}">${t('openExercise')} <span aria-hidden="true">→</span></button>
     </article>`}).join('');
     grid.querySelectorAll('[data-exercise]').forEach(btn=>btn.addEventListener('click',()=>startExercise(btn.dataset.exercise)));
   }
@@ -988,10 +991,10 @@ return;
   function rerenderForLanguage(){
     if(!state.catalog) return;
     updateExerciseHero();
-    if($('exerciseLevelView')?.style.display!=='none') renderLevels();
-    if($('exerciseTopicView')?.style.display!=='none') renderLevels();
-    if($('exerciseSetView')?.style.display!=='none') renderSets();
-    if($('exerciseQuizView')?.style.display!=='none'){
+    if($('exerciseLevelView')?.hidden===false) renderLevels();
+    if($('exerciseTopicView')?.hidden===false) renderLevels();
+    if($('exerciseSetView')?.hidden===false) renderSets();
+    if($('exerciseQuizView')?.hidden===false){
       renderLesson();
       if($('quizResult')?.style.display==='none') renderQuiz();
       else showResult();

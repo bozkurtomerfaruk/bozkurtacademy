@@ -80,3 +80,4 @@ html[data-theme="dark"] .grammar-topic-footer{color:var(--ba-accent)}
   .grammar-level-tab{min-height:64px;padding:12px 14px}
   .grammar-detail-actions button{flex:1 1 100%}
 }
+.grammar-hub:has(.grammar-detail.active) .page-hero{display:none}

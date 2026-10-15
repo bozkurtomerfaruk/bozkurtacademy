@@ -2,6 +2,36 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-10-15 · Aşama 3 bitti, PR açıldı, onay bekleniyor
+
+**PR:** [PR #21](https://github.com/bozkurtomerfaruk/bozkurtacademy/pull/21) (dal: `claude/asama-3-takvim`). Birleştirilmedi. Önce [PR #20](https://github.com/bozkurtomerfaruk/bozkurtacademy/pull/20) (Aşama 2) birleştirildi.
+
+**Yapılan:**
+- Öğretmen ders takvimi (`ogretmen-takvim.html`):
+  - haftalık ve aylık görünüm (telefonda liste ve noktalar);
+  - yeni ders, haftalık tekrar (en fazla 26 hafta);
+  - "Görüşmeye katıl", taşıma, iptal, "bu ve sonrakileri iptal".
+- Google Calendar:
+  - Meet linki, öğrenci (ve ayar açıksa veli) davetli, `sendUpdates=all`;
+  - öğretmene 1 gün önce e-posta ve 30 dk önce bildirim;
+  - `extendedProperties` işareti;
+  - tekrarlayan dersler tek etkinlik.
+- Takvim hatası: ders Firestore'da kalıyor, "Google Calendar'a eklenemedi, tekrar dene" uyarısı ve "Tekrar dene" çıkıyor.
+- Öğrenci detayı: dersler ve veli davet ayarı. Silme akışı Takvim etkinliklerini de siliyor.
+- Öğrenci paneli: kendi saat diliminde yaklaşan dersler; "Görüşmeye katıl" 10 dk önce belirginleşiyor.
+
+**Testler:** 65/65 kural testi, sahte takvimle Aşama 3 uçtan uca, Aşama 1–2 ve GoatCounter testlerinde gerileme yok, `check-grammar` PASS, ekran görüntüleri paylaşıldı.
+
+**Bilmen gerekenler:**
+- `GOOGLE_CLIENT_ID` henüz boş. Gerçek Google Calendar ve Meet bu ortamdan denenemedi; istemci kimliği eklenince `docs/kurulum.md`'deki kontrol listesiyle denenmeli.
+- Bu PR'da `firestore.rules` değişmedi. Ama **PR #20 için kuralları yeniden yayınladığından emin ol** (ödev işaretleme kuralı).
+- Takvim izni tarayıcıda yaklaşık 1 saat geçerli; süresi dolunca bir işlemde yeniden sorulur.
+
+**Senden beklenenler:**
+1. Google Cloud istemci kimliğini (`…apps.googleusercontent.com`) göndermen. Gizli anahtar gerekmez.
+2. PR #21 için "birleştir" demen.
+3. Aşama 4 (Apps Script ile öğrenci ve veli hatırlatma e-postaları) için onayın.
+
 ## 2026-10-15 · Aşama 2 bitti, PR açıldı, onay bekleniyor
 
 **PR:** [PR #20](https://github.com/bozkurtomerfaruk/bozkurtacademy/pull/20) (dal: `claude/asama-2-odevler`). Birleştirilmedi.

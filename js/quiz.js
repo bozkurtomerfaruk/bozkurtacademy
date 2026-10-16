@@ -1016,7 +1016,8 @@ function startNextExercise(){
     if(writeHistory) pushExerciseHistory('sets');
   }
 
-  async function restoreHistoryState(histState){
+  // fresh: a deep link (exercise-links.js) always starts the exercise anew, even if it is still in memory.
+  async function restoreHistoryState(histState, {fresh=false}={}){
     if(!state.catalog) return;
     const page=histState?.baPage || (location.hash || '#home').slice(1).split('/')[0];
     if(page!=='exercises') return;
@@ -1051,7 +1052,7 @@ function startNextExercise(){
     }
 
     // Back from the grammar page to the quiz that is still in memory: keep answers and the result screen.
-    if(view==='quiz' && state.exercise?.id===histState.exercise && state.topicData?.id===meta.id && state.pool.length){
+    if(!fresh && view==='quiz' && state.exercise?.id===histState.exercise && state.topicData?.id===meta.id && state.pool.length){
       state.topicMeta=meta;
       showOnly('exerciseQuizView');
       updateBreadcrumb();
@@ -1132,9 +1133,25 @@ return;
       await restoreHistoryState(history.state);
     }catch(error){ showError(error); }
   }
+  // What is on screen now, in the shape of an exercise history state.
+  function currentView(){
+    const ids=currentIds();
+    const view=state.exercise ? 'quiz' : (state.topicData ? 'sets' : 'topics');
+    return {view, level:state.level?.id || ids.level, topic:view==='topics' ? null : ids.topic, exercise:view==='quiz' ? ids.exercise : null, question:view==='quiz' ? ids.question : null};
+  }
+
   window.BAQuiz = {
   ...(window.BAQuiz || {}),
   goToQuestion,
+  isReady: () => Boolean(state.catalog),
+  // Opens #exercises/<level>/<topic>/<exercise>/q<n> without writing history; the caller replaces the
+  // current entry, so the back button returns to the page the link was opened from.
+  openDeepLink: async ({level, topic, exercise, question}) => {
+    if(!state.catalog) throw new Error('Exercise catalog is not ready');
+    const view=exercise ? 'quiz' : (topic ? 'sets' : 'topics');
+    await restoreHistoryState({baPage:'exercises', baExerciseView:view, level, topic, exercise, question}, {fresh:true});
+    return currentView();
+  },
   getCurrentQuestion: () => state.index + 1,
   openTopic: async (levelId, topicId) => {
     if(!state.catalog) throw new Error('Exercise catalog is not ready');

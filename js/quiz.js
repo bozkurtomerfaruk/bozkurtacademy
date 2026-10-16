@@ -90,7 +90,7 @@
   correctShort:'Doğru. Bu yapıyı doğru kullandın.',
   whyWrong:'Neden?',
   writtenChip:'Yazmalı',
-  noHelpChip:'Yardım kapalı', 
+  studyTopic:'Konuyu çalış',
   nextExercise:'Sonraki Alıştırma →'
 },
     de:{
@@ -102,7 +102,7 @@
       correctShort:'Richtig. Du hast die Struktur korrekt verwendet.',
       whyWrong:'Warum?',
       writtenChip:'Schreiben',
-      noHelpChip:'Ohne Hilfe',
+      studyTopic:'Thema lernen',
       nextExercise:'Nächste Übung →'
     },
     en:{
@@ -114,7 +114,7 @@
       correctShort:'Correct. You used the structure correctly.',
       whyWrong:'Why?',
       writtenChip:'Written',
-      noHelpChip:'No help',
+      studyTopic:'Study the topic',
       nextExercise:'Next Exercise →'
     }
   };
@@ -184,7 +184,7 @@
     const link=document.createElement('link');
     link.id='exerciseHubCss';
     link.rel='stylesheet';
-    link.href='css/exercises-hub.css?v=5';
+    link.href='css/exercises-hub.css?v=6';
     document.head.appendChild(link);
   }
 
@@ -516,7 +516,6 @@
         <span class="set-chip">${escapeHtml(localize(ex.difficulty))}</span>
         <span class="set-chip">${ex.questions?.length || 0} ${t('questions')}</span>
         ${hasWritten?`<span class="set-chip">${escapeHtml(qt('writtenChip'))}</span>`:''}
-        ${ex.hideLesson?`<span class="set-chip set-chip-dark">${escapeHtml(qt('noHelpChip'))}</span>`:''}
       </div>
       <h3>${escapeHtml(localize(ex.title))}</h3>
       <p>${escapeHtml(localize(ex.description))}</p>
@@ -526,12 +525,16 @@
     grid.querySelectorAll('[data-exercise]').forEach(btn=>btn.addEventListener('click',()=>startExercise(btn.dataset.exercise)));
   }
 
+  // The side lesson panel is off for every exercise. Set this to true to show it again;
+  // an exercise can still opt out with hideLesson:true. Lesson data stays in the JSON files.
+  const SHOW_LESSON_PANEL=false;
+
   function renderLesson(){
     const panel=$('dynamicLessonPanel');
     if(!panel || !state.topicData) return;
 
     const layout=panel.closest('.learn-layout');
-    const hide=state.exercise?.hideLesson===true;
+    const hide=!SHOW_LESSON_PANEL || state.exercise?.hideLesson===true;
     panel.hidden=hide;
     layout?.classList.toggle('solo-quiz', hide);
 
@@ -552,11 +555,86 @@
     `;
   }
 
+  // "Konuyu çalış": the topic's lesson comes from data/grammar-index.json and data/<level>-grammar.json.
+  let grammarIndexPromise=null;
+  const grammarLessonPromises={};
+  function grammarLessonIds(level){
+    grammarIndexPromise ||= loadJSON('data/grammar-index.json').catch(error=>{grammarIndexPromise=null;throw error;});
+    return grammarLessonPromises[level] ||= grammarIndexPromise.then(index=>{
+      const path=index.levels?.[level];
+      return path ? loadJSON(path).then(data=>new Set((data.lessons || []).map(lesson=>lesson.id))) : new Set();
+    }).catch(error=>{delete grammarLessonPromises[level];throw error;});
+  }
+
+  function currentIds(){
+    return {
+      level:state.topicData?.level || state.level?.id || null,
+      topic:state.topicData?.id || state.topicMeta?.id || null,
+      exercise:state.exercise?.id || null,
+      question:state.index+1
+    };
+  }
+
+  const grammarHash=(level,topic)=>`#grammar/${encodeURIComponent(level)}/${encodeURIComponent(topic)}`;
+
+  function ensureStudyButton(){
+    const toolbar=document.querySelector('#exerciseQuizView .hub-toolbar');
+    if(!toolbar || $('studyTopicBtn')) return;
+    const link=document.createElement('a');
+    link.id='studyTopicBtn';
+    link.className='btn ghost hub-study';
+    link.hidden=true;
+    link.dataset.studyTopic='';
+    toolbar.appendChild(link);
+  }
+
+  async function updateStudyButtons(){
+    ensureStudyButton();
+    const {level,topic}=currentIds();
+    const links=document.querySelectorAll('#exerciseQuizView [data-study-topic]');
+    links.forEach(link=>{
+      link.textContent=qt('studyTopic');
+      link.hidden=true;
+    });
+    if(!level || !topic) return;
+    let available=false;
+    try{ available=(await grammarLessonIds(level)).has(topic); }
+    catch(error){ console.warn('Gramer dizini yüklenemedi', error); }
+    // Skip if the student moved to another topic while the lesson list was loading.
+    const now=currentIds();
+    if(!available || now.level!==level || now.topic!==topic) return;
+    document.querySelectorAll('#exerciseQuizView [data-study-topic]').forEach(link=>{
+      link.href=grammarHash(level,topic);
+      link.hidden=false;
+    });
+  }
+
+  function studyTopic(event){
+    const link=event.target.closest?.('#exerciseQuizView [data-study-topic]');
+    if(!link || link.hidden) return;
+    // Let modified clicks open the lesson in a new tab.
+    if(event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button>0) return;
+    event.preventDefault();
+    const {level,topic,exercise,question}=currentIds();
+    if(!level || !topic) return;
+    // Same tab: the quiz stays in memory, so coming back keeps its answers and result.
+    // baReturn lets the grammar page offer "Alıştırmaya dön"; baReturnDepth counts entries back to the quiz.
+    history.pushState({
+      baPage:'grammar',
+      grammarLevel:level,
+      grammarTopic:topic,
+      baReturn:{level,topic,exercise,question},
+      baReturnDepth:1
+    }, '', grammarHash(level,topic));
+    window.BA?.showPage('grammar', {historyMode:'none'});
+  }
+
   function startExercise(exerciseId, writeHistory=true){
     state.exercise=state.topicData.exercises.find(ex=>ex.id===exerciseId);
     if(!state.exercise) return;
     resetQuiz(state.exercise.questions || []);
     renderLesson();
+    updateStudyButtons();
     showOnly('exerciseQuizView');
     updateBreadcrumb();
     if(writeHistory) pushExerciseHistory('quiz');
@@ -896,6 +974,8 @@ function startNextExercise(){
     ${t('backToExercises')}
   </button>
 
+  <a class="btn ghost" id="resultStudyTopicBtn" data-study-topic hidden>${escapeHtml(qt('studyTopic'))}</a>
+
   ${nextExercise
     ? `<button class="btn gold" type="button" id="nextExerciseBtn">
          ${escapeHtml(qt('nextExercise'))}
@@ -908,6 +988,7 @@ function startNextExercise(){
     $('retryWrongBtn')?.addEventListener('click',()=>resetQuiz(state.wrong.map(q=>({...q}))));
     $('resultBackBtn')?.addEventListener('click',()=>goBackToDepth(2, ()=>goSets(false)));
     $('nextExerciseBtn')?.addEventListener('click', startNextExercise);
+    updateStudyButtons();
   }
 
   function goLevels(writeHistory=false){
@@ -969,6 +1050,19 @@ function startNextExercise(){
       return;
     }
 
+    // Back from the grammar page to the quiz that is still in memory: keep answers and the result screen.
+    if(view==='quiz' && state.exercise?.id===histState.exercise && state.topicData?.id===meta.id && state.pool.length){
+      state.topicMeta=meta;
+      showOnly('exerciseQuizView');
+      updateBreadcrumb();
+      if($('quizResult')?.hidden && histState.question && Number(histState.question)!==state.index+1){
+        goToQuestion(histState.question);
+      }else{
+        window.scrollTo({top:document.getElementById('page-exercises')?.offsetTop || 0, behavior:'auto'});
+      }
+      return;
+    }
+
     try{
       state.topicMeta=meta;
       state.topicData=await loadJSON(meta.path);
@@ -1014,6 +1108,7 @@ return;
       renderLesson();
       if($('quizResult')?.hidden) renderQuiz();
       else showResult();
+      updateStudyButtons();
     }
     updateBreadcrumb();
   }
@@ -1030,6 +1125,8 @@ return;
       $('backToTopicsBtn')?.addEventListener('click',()=>goBackToDepth(1, ()=>goTopics(false)));
       $('backToSetsBtn')?.addEventListener('click',()=>goBackToDepth(2, ()=>goSets(false)));
       ensurePreviousButton();
+      ensureStudyButton();
+      $('exerciseQuizView')?.addEventListener('click', studyTopic);
       $('checkAnswerBtn')?.addEventListener('click',checkAnswer);
       $('nextQuestionBtn')?.addEventListener('click',nextQuestion);
       await restoreHistoryState(history.state);

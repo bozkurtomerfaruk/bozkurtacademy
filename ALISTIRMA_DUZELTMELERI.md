@@ -9,10 +9,10 @@ Notlar:
 
 ## Toplam
 
-- İncelenen konu: 42 / 48
-- İncelenen soru: 7308
-- Düzeltilen soru: 1006
-- Onay bekleyen: 44
+- İncelenen konu: 45 / 48
+- İncelenen soru: 7908
+- Düzeltilen soru: 1225
+- Onay bekleyen: 61
 
 | Konu | İncelenen | Düzeltilen | Onay bekleyen |
 |---|---:|---:|---:|
@@ -58,6 +58,9 @@ Notlar:
 | `b1/passiv` | 180 | 37 | 2 |
 | `b1/plusquamperfekt` | 200 | 59 | 3 |
 | `b1/praeteritum-b1` | 200 | 49 | 2 |
+| `b2/genitivpraepositionen` | 200 | 47 | 15 |
+| `b2/je-desto` | 200 | 48 | 1 |
+| `b2/konjunktiv-i` | 200 | 124 | 1 |
 
 ## Onay bekleyenler
 
@@ -151,6 +154,40 @@ Bu sorular şüpheli ama değiştirilmedi. Karar senin.
   “Ich dachte, du kämst nicht mehr.” ve “Ich dachte, du würdest nicht mehr kommen.” de doğru ve yazı dilinde daha yaygın. B1 için add_answers ile kabul edilebilir; emin değilim çünkü görev yalnızca ana fiili değiştirmeyi hedefliyor olabilir.
 - **`b1/praeteritum-b1` › `master-20` › 8** — Schreibe im Präteritum: „Heute arbeite ich ...“ (→ Damals arbeitete ich ...)  
   Talimat “Heute”yi değiştirmeyi söylemiyor; öğrenci başka bir zaman zarfı (ör. “Vor zehn Jahren”) yazarsa reddedilir. Öneri: talimata “(Heute → Damals)” ipucu eklemek.
+- **`b2/genitivpraepositionen` › `innerhalb-ausserhalb-5` › 7** — Welche Präposition passt? „___ der EU gelten andere Zollregeln.“ (Aufgrund / Außerhalb / Innerhalb) → Außerhalb  
+  'Innerhalb der EU gelten andere Zollregeln' da anlamlı (AB içinde farklı gümrük kuralları). İki şık da doğru olabilir. Öneri: '___ der EU gelten andere Zollregeln als im Binnenmarkt.' veya bağlam eklemek.
+- **`b2/genitivpraepositionen` › `innerhalb-ausserhalb-5` › 9** — Welche Präposition passt? „___ des Campus gibt es kaum Parkplätze.“ (Innerhalb / Angesichts / Außerhalb) → Außerhalb  
+  'Innerhalb des Campus gibt es kaum Parkplätze' çok doğal; Außerhalb ile eşit derecede doğru. Öneri: cümleye bağlam ekle (ör. '___ des Campus gibt es kaum Parkplätze, deshalb parken alle direkt vor den Hörsälen.') ya da başka bir örnek seç.
+- **`b2/genitivpraepositionen` › `zeit-12` › 0** — Ergänze mit „zeit“: ___ (sein ganzes Leben) interessierte er sich für Astronomie. → Zeit seines ganzen Lebens interessierte er sich für Astronomie.  
+  Präposition 'zeit' (Duden) yalnızca 'zeit meines/seines/ihres … Lebens' kalıbında kullanılır. 'Zeit ihres Studiums', 'Zeit der Pandemie', 'Zeit des Wiederaufbaus' vb. doğal/standart değildir (doğrusu: während / zur Zeit + Genitiv). Alıştırmanın yeniden yazılması önerilir (ör. 'zeit seines Lebens / zeit ihres Lebens' farklı öznelerle veya başka bir Genitiv edatıyla). 'Zeit seines ganzen Lebens' kalıbın genişletilmiş hâli; kabul edilebilir ama 'zeit seines Lebens' daha yaygın.
+- **`b2/genitivpraepositionen` › `zeit-12` › 1** — Ergänze: ___ (ihr Studium) arbeitete sie in einem Café. → Zeit ihres Studiums arbeitete sie in einem Café.  
+  Präposition 'zeit' (Duden) yalnızca 'zeit meines/seines/ihres … Lebens' kalıbında kullanılır. 'Zeit ihres Studiums', 'Zeit der Pandemie', 'Zeit des Wiederaufbaus' vb. doğal/standart değildir (doğrusu: während / zur Zeit + Genitiv). Alıştırmanın yeniden yazılması önerilir (ör. 'zeit seines Lebens / zeit ihres Lebens' farklı öznelerle veya başka bir Genitiv edatıyla).
+- **`b2/genitivpraepositionen` › `zeit-12` › 2** — Ergänze: ___ (seine Tätigkeit im Ausland) lernte er drei Sprachen. → Zeit seiner Tätigkeit im Ausland lernte er drei Sprachen.  
+  Präposition 'zeit' (Duden) yalnızca 'zeit meines/seines/ihres … Lebens' kalıbında kullanılır. 'Zeit ihres Studiums', 'Zeit der Pandemie', 'Zeit des Wiederaufbaus' vb. doğal/standart değildir (doğrusu: während / zur Zeit + Genitiv). Alıştırmanın yeniden yazılması önerilir (ör. 'zeit seines Lebens / zeit ihres Lebens' farklı öznelerle veya başka bir Genitiv edatıyla).
+- **`b2/genitivpraepositionen` › `zeit-12` › 3** — Ergänze: ___ (der Wiederaufbau) lebten viele Familien provisorisch. → Zeit des Wiederaufbaus lebten viele Familien provisorisch.  
+  Präposition 'zeit' (Duden) yalnızca 'zeit meines/seines/ihres … Lebens' kalıbında kullanılır. 'Zeit ihres Studiums', 'Zeit der Pandemie', 'Zeit des Wiederaufbaus' vb. doğal/standart değildir (doğrusu: während / zur Zeit + Genitiv). Alıştırmanın yeniden yazılması önerilir (ör. 'zeit seines Lebens / zeit ihres Lebens' farklı öznelerle veya başka bir Genitiv edatıyla).
+- **`b2/genitivpraepositionen` › `zeit-12` › 4** — Ergänze: ___ (die Industrialisierung) wuchsen viele Städte schnell. → Zeit der Industrialisierung wuchsen viele Städte schnell.  
+  Präposition 'zeit' (Duden) yalnızca 'zeit meines/seines/ihres … Lebens' kalıbında kullanılır. 'Zeit ihres Studiums', 'Zeit der Pandemie', 'Zeit des Wiederaufbaus' vb. doğal/standart değildir (doğrusu: während / zur Zeit + Genitiv). Alıştırmanın yeniden yazılması önerilir (ör. 'zeit seines Lebens / zeit ihres Lebens' farklı öznelerle veya başka bir Genitiv edatıyla).
+- **`b2/genitivpraepositionen` › `zeit-12` › 5** — Ergänze: ___ (mein Aufenthalt in Kanada) schrieb ich regelmäßig Tagebuch. → Zeit meines Aufenthalts in Kanada schrieb ich regelmäßig Tagebuch.  
+  Präposition 'zeit' (Duden) yalnızca 'zeit meines/seines/ihres … Lebens' kalıbında kullanılır. 'Zeit ihres Studiums', 'Zeit der Pandemie', 'Zeit des Wiederaufbaus' vb. doğal/standart değildir (doğrusu: während / zur Zeit + Genitiv). Alıştırmanın yeniden yazılması önerilir (ör. 'zeit seines Lebens / zeit ihres Lebens' farklı öznelerle veya başka bir Genitiv edatıyla).
+- **`b2/genitivpraepositionen` › `zeit-12` › 6** — Ergänze: ___ (das Praktikum) wohnte er bei Freunden. → Zeit des Praktikums wohnte er bei Freunden.  
+  Präposition 'zeit' (Duden) yalnızca 'zeit meines/seines/ihres … Lebens' kalıbında kullanılır. 'Zeit ihres Studiums', 'Zeit der Pandemie', 'Zeit des Wiederaufbaus' vb. doğal/standart değildir (doğrusu: während / zur Zeit + Genitiv). Alıştırmanın yeniden yazılması önerilir (ör. 'zeit seines Lebens / zeit ihres Lebens' farklı öznelerle veya başka bir Genitiv edatıyla).
+- **`b2/genitivpraepositionen` › `zeit-12` › 7** — Ergänze: ___ (die Pandemie) arbeiteten viele Menschen zu Hause. → Zeit der Pandemie arbeiteten viele Menschen zu Hause.  
+  Präposition 'zeit' (Duden) yalnızca 'zeit meines/seines/ihres … Lebens' kalıbında kullanılır. 'Zeit ihres Studiums', 'Zeit der Pandemie', 'Zeit des Wiederaufbaus' vb. doğal/standart değildir (doğrusu: während / zur Zeit + Genitiv). Alıştırmanın yeniden yazılması önerilir (ör. 'zeit seines Lebens / zeit ihres Lebens' farklı öznelerle veya başka bir Genitiv edatıyla).
+- **`b2/genitivpraepositionen` › `zeit-12` › 8** — Ergänze: ___ (seine Ausbildung) hatte er wenig Freizeit. → Zeit seiner Ausbildung hatte er wenig Freizeit.  
+  Präposition 'zeit' (Duden) yalnızca 'zeit meines/seines/ihres … Lebens' kalıbında kullanılır. 'Zeit ihres Studiums', 'Zeit der Pandemie', 'Zeit des Wiederaufbaus' vb. doğal/standart değildir (doğrusu: während / zur Zeit + Genitiv). Alıştırmanın yeniden yazılması önerilir (ör. 'zeit seines Lebens / zeit ihres Lebens' farklı öznelerle veya başka bir Genitiv edatıyla).
+- **`b2/genitivpraepositionen` › `zeit-12` › 9** — Ergänze: ___ (unsere Zusammenarbeit) entstanden mehrere neue Ideen. → Zeit unserer Zusammenarbeit entstanden mehrere neue Ideen.  
+  Präposition 'zeit' (Duden) yalnızca 'zeit meines/seines/ihres … Lebens' kalıbında kullanılır. 'Zeit ihres Studiums', 'Zeit der Pandemie', 'Zeit des Wiederaufbaus' vb. doğal/standart değildir (doğrusu: während / zur Zeit + Genitiv). Alıştırmanın yeniden yazılması önerilir (ör. 'zeit seines Lebens / zeit ihres Lebens' farklı öznelerle veya başka bir Genitiv edatıyla).
+- **`b2/genitivpraepositionen` › `mix-19` › 8** — Welche Form ist korrekt? (Zeit seinen Studiums lebte er sehr sparsam. / Zeit seines Studiums lebte er sehr sparsam. / Zeit seinem Studium lebte er sehr sparsam.) → Zeit seines Studiums lebte er sehr sparsam.  
+  'Zeit seines Studiums' — zeit edatı yalnızca 'zeit … Lebens' kalıbında kullanılır; bu cümle standart değil. Öneri: 'Zeit seines Lebens lebte er sehr sparsam.'
+- **`b2/genitivpraepositionen` › `genitiv-erkennen-1` › 1** — Welcher Satz ist richtig? (Trotz dem langen Warten blieb sie ruhig. / Trotz der langen Wartens blieb sie ruhig. / Trotz des langen Wartens blieb sie ruhig.) → Trotz des langen Wartens blieb sie ruhig.  
+  Duden'e göre trotz Genitiv dışında Dativ ile de kullanılabilir ('trotz dem langen Warten' bölgesel/konuşma ama kabul edilen biçim). 'Welcher Satz ist richtig?' sorusunda bu şık tartışmalı. Öneri: soruyu 'Welcher Satz entspricht dem standardsprachlichen Genitiv?' yapmak veya Dativ şıkkını tamamen bozuk bir biçimle değiştirmek.
+- **`b2/genitivpraepositionen` › `mix-19` › 2** — Welche Form ist korrekt? (Trotz die zahlreichen Einwände wurde der Antrag genehmigt. / Trotz der zahlreichen Einwände wurde der Antrag genehmigt. / Trotz den zahlreichen Einwänden wurde der Antrag genehmigt.) → Trotz der zahlreichen Einwände wurde der Antrag genehmigt.  
+  'Trotz den zahlreichen Einwänden' — trotz + Dativ Duden'de geçerli varyant olarak geçer (özellikle güney Almanca). Öneri: yönergeyi Genitiv standardı olarak netleştirmek veya şıkkı değiştirmek.
+- **`b2/je-desto` › `zwei-saetze-8` › 8** — Verbinde: „Die Firma wächst internationaler. Die Koordination wird komplexer.“ → Je internationaler die Firma wächst, desto komplexer wird die Koordination.  
+  'Die Firma wächst internationaler' / 'Je internationaler die Firma wächst' doğal değil (international wachsen'in Komparativi zorlama). Öneri: 'Die Firma wird internationaler. → Je internationaler die Firma wird, desto komplexer wird die Koordination.' (answers da buna göre güncellenmeli).
+- **`b2/konjunktiv-i` › `fehlerkorrektur-17` › 3** — Korrigiere: „Er meint, sie könne gestern gekommen.“ → Er meint, sie sei gestern gekommen.  
+  'sie könne gestern gekommen sein' (Konjunktiv I + Infinitiv Perfekt, 'gelmiş olabilir') de dilbilgisel olarak hatayı düzelten bir biçim; ancak anlam değişiyor. Kabul edilip edilmeyeceğine karar verilmeli (öneri: yönergeye 'Perfekt der indirekten Rede' ipucu eklemek).
 
 ## Değiştirilen sorular
 
@@ -9717,3 +9754,2151 @@ Gerekçe: Talimat “Heute”nin neyle değiştirileceğini söylemiyor; “Frü
 - Kabul edilen cevaplar
   - Eski: `damals arbeitete ich in einem internationalen team, traf viele kunden und lernte ständig neue menschen kennen` / `damals arbeitete ich in einem internationalen team traf viele kunden und lernte ständig neue menschen kennen`
   - Yeni: `damals arbeitete ich in einem internationalen team, traf viele kunden und lernte ständig neue menschen kennen` / `damals arbeitete ich in einem internationalen team traf viele kunden und lernte ständig neue menschen kennen` / `früher arbeitete ich in einem internationalen team, traf viele kunden und lernte ständig neue menschen kennen` / `früher arbeitete ich in einem internationalen team traf viele kunden und lernte ständig neue menschen kennen`
+
+### `data/b2/genitivpraepositionen.json`
+
+#### `genitiv-erkennen-1` › 0
+Cümle: Welcher Satz ist grammatisch richtig?
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine sorunun kendi Genitiv tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Wegen des starken Windes wurde die Fähre abgesagt.. Kaynak ilk görevde wegen + Genitiv yapısını artikel ve sıfat sonlarıyla test ediyor.
+  - Yeni: Doğru cevap: Wegen des starken Windes wurde die Fähre abgesagt. wegen yazılı standart dilde Genitiv ister. der Wind maskulin → Genitiv: des + sıfat -en + isim -(e)s: des starken Windes. „dem starken Wind“ Dativ'dir (konuşma dili), „der starke Wind“ ise Nominativ.
+
+#### `genitiv-erkennen-1` › 1
+Cümle: Welcher Satz ist richtig?
+
+Gerekçe: 'Kaynakta' ifadesi kaldırıldı; isimdeki -s eksik anlatılıyordu (des + sıfat -en + isim).
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Trotz des langen Wartens blieb sie ruhig.. trotz, kaynakta Genitiv ile kullanılır: des + sıfat -en + isim.
+  - Yeni: Doğru cevap: Trotz des langen Wartens blieb sie ruhig. trotz standart dilde Genitiv ister. das Warten (isimleşmiş fiil) neutrum → des + sıfat -en + isim -s: des langen Wartens. „der … Wartens“ yanlış artikel, „dem langen Warten“ ise Dativ'dir.
+
+#### `wegen-2` › 5
+Cümle: Ergänze mit „wegen“: ___ (mein verspäteter Zug) verpasste ich den Anschluss.
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `wegen meines verspaeteten zuges verpasste ich den anschluss` / `wegen meines verspäteten zuges verpasste ich den anschluss`
+  - Yeni: `wegen meines verspaeteten zuges verpasste ich den anschluss` / `wegen meines verspäteten zuges verpasste ich den anschluss` / `wegen meines verspäteten zugs verpasste ich den anschluss`
+
+#### `wegen-2` › 6
+Cümle: Ergänze mit „wegen“: ___ (starker Schneefall) blieb die Schule geschlossen.
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `wegen starken schneefalls blieb die schule geschlossen`
+  - Yeni: `wegen starken schneefalls blieb die schule geschlossen` / `wegen starken schneefalles blieb die schule geschlossen`
+
+#### `trotz-3` › 0
+Cümle: Ergänze mit „trotz“: ___ (der starke Regen) fand das Konzert statt.
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine sorunun kendi Genitiv tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Trotz des starken Regens fand das Konzert statt.. trotz karşıtlık bildirir ve kaynakta Genitiv ile kullanılır.
+  - Yeni: Doğru cevap: Trotz des starken Regens fand das Konzert statt. trotz karşıtlık (…e rağmen) bildirir ve Genitiv ister. der Regen maskulin → des starken Regens (sıfat -en, isim -s).
+
+#### `trotz-3` › 2
+Cümle: Ergänze mit „trotz“: ___ (sein großer Erfolg) ist er bescheiden geblieben.
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `trotz seines grossen erfolgs ist er bescheiden geblieben` / `trotz seines großen erfolgs ist er bescheiden geblieben`
+  - Yeni: `trotz seines grossen erfolgs ist er bescheiden geblieben` / `trotz seines großen erfolgs ist er bescheiden geblieben` / `trotz seines großen erfolges ist er bescheiden geblieben`
+
+#### `trotz-3` › 4
+Cümle: Ergänze mit „trotz“: ___ (das klare Verbot) benutzte er sein Handy.
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `trotz des klaren verbots benutzte er sein handy`
+  - Yeni: `trotz des klaren verbots benutzte er sein handy` / `trotz des klaren verbotes benutzte er sein handy`
+
+#### `trotz-3` › 8
+Cümle: Ergänze mit „trotz“: ___ (der Protest der Anwohner) wurde gebaut.
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `trotz des protests der anwohner wurde gebaut`
+  - Yeni: `trotz des protests der anwohner wurde gebaut` / `trotz des protestes der anwohner wurde gebaut`
+
+#### `waehrend-4` › 0
+Cümle: Ergänze mit „während“: ___ (mein Praktikum) lernte ich viele Fachbegriffe.
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine sorunun kendi Genitiv tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Während meines Praktikums lernte ich viele Fachbegriffe.. Kaynakta während + Genitiv süre/dönem bildirir.
+  - Yeni: Doğru cevap: Während meines Praktikums lernte ich viele Fachbegriffe. während bir dönem boyunca anlamı verir ve Genitiv ister. das Praktikum neutrum → mein → meines, isim -s alır: meines Praktikums.
+
+#### `waehrend-4` › 2
+Cümle: Ergänze mit „während“: ___ (der Flug) darf das Gerät nicht benutzt werden.
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `waehrend des fluges darf das geraet nicht benutzt werden` / `während des fluges darf das gerät nicht benutzt werden`
+  - Yeni: `waehrend des fluges darf das geraet nicht benutzt werden` / `während des fluges darf das gerät nicht benutzt werden` / `während des flugs darf das gerät nicht benutzt werden`
+
+#### `waehrend-4` › 5
+Cümle: Ergänze mit „während“: ___ (sein Aufenthalt in Wien) besuchte er mehrere Museen.
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `waehrend seines aufenthalts in wien besuchte er mehrere museen` / `während seines aufenthalts in wien besuchte er mehrere museen`
+  - Yeni: `waehrend seines aufenthalts in wien besuchte er mehrere museen` / `während seines aufenthalts in wien besuchte er mehrere museen` / `während seines aufenthaltes in wien besuchte er mehrere museen`
+
+#### `waehrend-4` › 8
+Cümle: Ergänze mit „während“: ___ (ein Gespräch mit dem Kunden) klingelte das Telefon.
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `waehrend eines gespraechs mit dem kunden klingelte das telefon` / `während eines gesprächs mit dem kunden klingelte das telefon`
+  - Yeni: `waehrend eines gespraechs mit dem kunden klingelte das telefon` / `während eines gesprächs mit dem kunden klingelte das telefon` / `während eines gespräches mit dem kunden klingelte das telefon`
+
+#### `aufgrund-infolge-6` › 2
+Cümle: Welche Präposition passt? „___ des Unwetters wurden mehrere Straßen überflutet.“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine sorunun kendi Genitiv tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Infolge. Kaynakta Unwetter → infolge türü sonuç ilişkisi örnekleniyor.
+  - Yeni: Doğru cevap: Infolge. Yolların su basması fırtınanın doğrudan sonucudur; bir olayın sonucunu anlatırken infolge + Genitiv kullanılır: infolge des Unwetters. Trotz (…e rağmen) ve anlässlich (… vesilesiyle) anlamca uymaz.
+
+#### `anstatt-anstelle-7` › 0
+Cümle: Ergänze mit „anstatt“: ___ (der geplante Vortrag) gab es eine Diskussion.
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `anstatt des geplanten vortrags gab es eine diskussion`
+  - Yeni: `anstatt des geplanten vortrags gab es eine diskussion` / `anstatt des geplanten vortrages gab es eine diskussion`
+
+#### `anstatt-anstelle-7` › 1
+Cümle: Ergänze mit „anstelle“: ___ (ein schriftlicher Bericht) reichte er eine Präsentation ein.
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `anstelle eines schriftlichen berichts reichte er eine praesentation ein` / `anstelle eines schriftlichen berichts reichte er eine präsentation ein`
+  - Yeni: `anstelle eines schriftlichen berichts reichte er eine praesentation ein` / `anstelle eines schriftlichen berichts reichte er eine präsentation ein` / `anstelle eines schriftlichen berichtes reichte er eine präsentation ein`
+
+#### `anstatt-anstelle-7` › 7
+Cümle: Ergänze mit „anstelle“: ___ (der alte Teppich) liegt jetzt Parkett im Raum.
+
+Gerekçe: Açıklama sadece kaynağa atıf yapıyordu, kural yoktu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Anstelle des alten Teppichs liegt jetzt Parkett im Raum.. Kaynakta benzer 'eski halının yerine' anlamı geçiyor; burada özgün cümle kullanılıyor.
+  - Yeni: Doğru cevap: Anstelle des alten Teppichs liegt jetzt Parkett im Raum. anstelle „…in yerine“ demektir ve Genitiv ister. der Teppich maskulin → des + sıfat -en + isim -s: des alten Teppichs.
+
+#### `anstatt-anstelle-7` › 9
+Cümle: Ergänze mit „anstelle“: ___ (das ursprüngliche Konzept) wurde eine einfachere Lösung gewählt.
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `anstelle des urspruenglichen konzepts wurde eine einfachere loesung gewaehlt` / `anstelle des ursprünglichen konzepts wurde eine einfachere lösung gewählt`
+  - Yeni: `anstelle des urspruenglichen konzepts wurde eine einfachere loesung gewaehlt` / `anstelle des ursprünglichen konzepts wurde eine einfachere lösung gewählt` / `anstelle des ursprünglichen konzeptes wurde eine einfachere lösung gewählt`
+
+#### `anlaesslich-8` › 2
+Cümle: Ergänze: ___ (sein achtzigster Geburtstag) kamen Gäste aus mehreren Ländern.
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `anlaesslich seines achtzigsten geburtstags kamen gaeste aus mehreren laendern` / `anlässlich seines achtzigsten geburtstags kamen gäste aus mehreren ländern`
+  - Yeni: `anlaesslich seines achtzigsten geburtstags kamen gaeste aus mehreren laendern` / `anlässlich seines achtzigsten geburtstags kamen gäste aus mehreren ländern` / `anlässlich seines achtzigsten geburtstages kamen gäste aus mehreren ländern`
+
+#### `anlaesslich-8` › 5
+Cümle: Ergänze: ___ (der Tag der offenen Tür) bietet die Universität Führungen an.
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu. des Tages varyantı da kabul edildiği için açıklama güncellendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Anlässlich des Tags der offenen Tür bietet die Universität Führungen an.. Maskulin Genitiv: des Tags.
+  - Yeni: Doğru cevap: Anlässlich des Tags der offenen Tür bietet die Universität Führungen an. der Tag maskulin → Genitiv des Tags / des Tages; „der offenen Tür“ adın sabit Genitiv parçasıdır ve değişmez.
+- Kabul edilen cevaplar
+  - Eski: `anlaesslich des tags der offenen tuer bietet die universitaet fuehrungen an` / `anlässlich des tags der offenen tür bietet die universität führungen an`
+  - Yeni: `anlaesslich des tags der offenen tuer bietet die universitaet fuehrungen an` / `anlässlich des tags der offenen tür bietet die universität führungen an` / `anlässlich des tages der offenen tür bietet die universität führungen an`
+
+#### `angesichts-9` › 4
+Cümle: Ergänze: ___ (sein Gesundheitszustand) reduzierte er seine Arbeitszeit.
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `angesichts seines gesundheitszustands reduzierte er seine arbeitszeit`
+  - Yeni: `angesichts seines gesundheitszustands reduzierte er seine arbeitszeit` / `angesichts seines gesundheitszustandes reduzierte er seine arbeitszeit`
+
+#### `raeumlich-10` › 9
+Cümle: Welche Präposition passt? „Sie suchten eine Unterkunft ___ des touristischen Zentrums.“
+
+Gerekçe: 'innerhalb' çeldiricisi de anlamca doğruydu (Unterkunft innerhalb des touristischen Zentrums); mekân bildirmeyen trotz ile değiştirildi. Çeldirici değiştiği için açıklama netleştirildi.
+
+- Seçenekler
+  - Eski: `abseits` / `innerhalb` / `mittels`
+  - Yeni: `abseits` / `trotz` / `mittels`
+- Açıklama (TR)
+  - Eski: Doğru cevap: abseits. Turistik merkezden uzakta, sakin bir yerde: abseits.
+  - Yeni: Doğru cevap: abseits. abseits + Genitiv „…den uzakta, kenarında“ demektir: abseits des touristischen Zentrums = turistik merkezden uzakta, sakin bir yerde. trotz ve mittels mekân bildirmez.
+
+#### `mittels-11` › 2
+Cümle: Ergänze: Die Identität wurde ___ (ein biometrischer Abgleich) bestätigt.
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `die identitaet wurde mittels eines biometrischen abgleichs bestaetigt` / `die identität wurde mittels eines biometrischen abgleichs bestätigt`
+  - Yeni: `die identitaet wurde mittels eines biometrischen abgleichs bestaetigt` / `die identität wurde mittels eines biometrischen abgleichs bestätigt` / `die identität wurde mittels eines biometrischen abgleiches bestätigt`
+
+#### `mittels-11` › 6
+Cümle: Ergänze: Die Position wurde ___ (Satellitendaten, Pl.) bestimmt.
+
+Gerekçe: Açıklama belirsiz ve anlaşılmazdı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Die Position wurde mittels Satellitendaten bestimmt.. Artikelsiz çoğul biçim burada isim biçimini değiştirmez.
+  - Yeni: Doğru cevap: Die Position wurde mittels Satellitendaten bestimmt. Satellitendaten çoğul ve artikelsizdir; çoğul Genitivde isim değişmez (Daten), bu yüzden mittels Satellitendaten yazılır. Artikel veya sıfat olsaydı Genitiv görünürdü: mittels genauer Satellitendaten.
+
+#### `praeposition-waehlen-14` › 2
+Cümle: Welche Präposition passt? „Er suchte eine Wohnung ___ des Verkehrslärms.“
+
+Gerekçe: 'aufgrund' çeldiricisi de doğruydu: 'Er suchte eine Wohnung aufgrund des Verkehrslärms' (gürültü yüzünden ev aradı) anlamlı ve dilbilgisel; mittels ile değiştirildi. Çeldirici değiştiği için açıklama güncellendi.
+
+- Seçenekler
+  - Eski: `aufgrund` / `innerhalb` / `abseits`
+  - Yeni: `mittels` / `innerhalb` / `abseits`
+- Açıklama (TR)
+  - Eski: Doğru cevap: abseits. Gürültüden uzakta: abseits.
+  - Yeni: Doğru cevap: abseits. abseits des Verkehrslärms = trafik gürültüsünden uzakta. abseits + Genitiv bir şeyin uzağını/kenarını bildirir; mittels (araç) ve innerhalb (içinde) anlamca uymaz.
+
+#### `artikel-adjektiv-15` › 1
+Cümle: Ergänze: trotz ___ (ein klares Verbot)
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `eines klaren verbots`
+  - Yeni: `eines klaren verbots` / `eines klaren verbotes`
+
+#### `artikel-adjektiv-15` › 2
+Cümle: Ergänze: während ___ (mein langer Aufenthalt)
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `meines langen aufenthalts`
+  - Yeni: `meines langen aufenthalts` / `meines langen aufenthaltes`
+
+#### `artikel-adjektiv-15` › 4
+Cümle: Ergänze: angesichts ___ (steigende Preise, Pl.)
+
+Gerekçe: TR açıklamada İngilizce 'adjective' vardı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: steigender Preise. Artikelsiz Genitiv plural: adjective -er.
+  - Yeni: Doğru cevap: steigender Preise. Artikel olmadığı için çoğul Genitivi sıfat gösterir: güçlü son -er → steigender Preise.
+
+#### `artikel-adjektiv-15` › 6
+Cümle: Ergänze: anlässlich ___ (sein fünfzigster Geburtstag)
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `seines fuenfzigsten geburtstags` / `seines fünfzigsten geburtstags`
+  - Yeni: `seines fuenfzigsten geburtstags` / `seines fünfzigsten geburtstags` / `seines fünfzigsten geburtstages`
+
+#### `artikel-adjektiv-15` › 7
+Cümle: Ergänze: infolge ___ (ein schwerer Unfall)
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `eines schweren unfalls`
+  - Yeni: `eines schweren unfalls` / `eines schweren unfalles`
+
+#### `nomenendungen-16` › 1
+Cümle: Ergänze: trotz des ___ (Verbot)
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu. -es varyantı da kabul edildiği için açıklama güncellendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Verbots. Neutrum Verbot Genitivte -s alır.
+  - Yeni: Doğru cevap: Verbots. das Verbot neutrum; Genitivte isim -s veya -es alır: des Verbots / des Verbotes.
+- Kabul edilen cevaplar
+  - Eski: `verbots`
+  - Yeni: `verbots` / `verbotes`
+
+#### `nomenendungen-16` › 2
+Cümle: Ergänze: während des ___ (Urlaub)
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu. -es varyantı da kabul edildiği için açıklama güncellendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Urlaubs. Maskulin Urlaub → Urlaubs.
+  - Yeni: Doğru cevap: Urlaubs. der Urlaub maskulin; Genitivte isim -s veya -es alır: des Urlaubs / des Urlaubes.
+- Kabul edilen cevaplar
+  - Eski: `urlaubs`
+  - Yeni: `urlaubs` / `urlaubes`
+
+#### `nomenendungen-16` › 6
+Cümle: Ergänze: unweit des ___ (Bahnhof)
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu. -es varyantı da kabul edildiği için açıklama güncellendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Bahnhofs. Maskulin Bahnhof → Bahnhofs.
+  - Yeni: Doğru cevap: Bahnhofs. der Bahnhof maskulin; Genitivte isim -s veya -es alır: des Bahnhofs / des Bahnhofes.
+- Kabul edilen cevaplar
+  - Eski: `bahnhofs`
+  - Yeni: `bahnhofs` / `bahnhofes`
+
+#### `nomenendungen-16` › 9
+Cümle: Ergänze: oberhalb des ___ (Dorf)
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu. -s varyantı da kabul edildiği için açıklama güncellendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Dorfes. Tek heceli/uygun nötr isimlerde -es yaygındır: Dorfes.
+  - Yeni: Doğru cevap: Dorfes. das Dorf tek heceli neutrum isim; Genitivte -es yaygındır (des Dorfes), des Dorfs da doğrudur.
+- Kabul edilen cevaplar
+  - Eski: `dorfes`
+  - Yeni: `dorfes` / `dorfs`
+
+#### `fehlerkorrektur-17` › 0
+Cümle: Korrigiere: „Wegen dem starken Regen bleiben wir zu Hause.“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine sorunun kendi Genitiv tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Wegen des starken Regens bleiben wir zu Hause.. Kaynakta standart kullanım Genitiv'tir: des starken Regens.
+  - Yeni: Doğru cevap: Wegen des starken Regens bleiben wir zu Hause. Yazılı standart dilde wegen Genitiv ister; „wegen dem“ konuşma dilidir. der Regen maskulin → des starken Regens (sıfat -en, isim -s).
+
+#### `fehlerkorrektur-17` › 3
+Cümle: Korrigiere: „Innerhalb ein Monats muss alles fertig sein.“
+
+Gerekçe: Açıklama Monat'ı yanlışlıkla neutrum sayıyordu; der Monat maskulindir.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Innerhalb eines Monats muss alles fertig sein.. Neutrum Genitiv belirsiz artikel: eines.
+  - Yeni: Doğru cevap: Innerhalb eines Monats muss alles fertig sein. der Monat maskulin; Genitivte belirsiz artikel eines olur, isim -s alır: eines Monats. „ein Monats“ yanlış, çünkü artikel de Genitiv sonu taşımalıdır.
+
+#### `fehlerkorrektur-17` › 5
+Cümle: Korrigiere: „Aufgrund technische Probleme begann die Sitzung später.“
+
+Gerekçe: TR açıklamada İngilizce 'adjective' vardı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Aufgrund technischer Probleme begann die Sitzung später.. Artikelsiz Genitiv plural adjective -er.
+  - Yeni: Doğru cevap: Aufgrund technischer Probleme begann die Sitzung später. Artikel olmadığından çoğul Genitivi sıfat gösterir: technische → technischer Probleme.
+
+#### `fehlerkorrektur-17` › 7
+Cümle: Korrigiere: „Infolge einen Stromausfall blieb das Gebäude dunkel.“
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `infolge eines stromausfalls blieb das gebaeude dunkel` / `infolge eines stromausfalls blieb das gebäude dunkel`
+  - Yeni: `infolge eines stromausfalls blieb das gebaeude dunkel` / `infolge eines stromausfalls blieb das gebäude dunkel` / `infolge eines stromausfalles blieb das gebäude dunkel`
+
+#### `fehlerkorrektur-17` › 8
+Cümle: Korrigiere: „Unweit dem Bahnhof wurde gebaut.“
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `unweit des bahnhofs wurde gebaut`
+  - Yeni: `unweit des bahnhofs wurde gebaut` / `unweit des bahnhofes wurde gebaut`
+
+#### `fehlerkorrektur-17` › 9
+Cümle: Korrigiere: „Mittels moderne Software wurden die Daten analysiert.“
+
+Gerekçe: TR açıklamada İngilizce 'adjective' vardı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Mittels moderner Software wurden die Daten analysiert.. Artikelsiz feminin Genitiv adjective -er.
+  - Yeni: Doğru cevap: Mittels moderner Software wurden die Daten analysiert. die Software feminin ve artikelsiz; Genitivte sıfat güçlü -er sonu alır: moderner Software.
+
+#### `b2-beruflich-18` › 0
+Cümle: Ergänze die passende Präposition und Genitivgruppe: ___ (die hohe Auslastung) verlängerten sich die Lieferzeiten.
+
+Gerekçe: Soru edat ipucu vermiyor ('die passende Präposition'); wegen ve infolge + Genitiv de aynı anlamda kesin doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `aufgrund der hohen auslastung verlaengerten sich die lieferzeiten` / `aufgrund der hohen auslastung verlängerten sich die lieferzeiten`
+  - Yeni: `aufgrund der hohen auslastung verlaengerten sich die lieferzeiten` / `aufgrund der hohen auslastung verlängerten sich die lieferzeiten` / `wegen der hohen auslastung verlängerten sich die lieferzeiten` / `infolge der hohen auslastung verlängerten sich die lieferzeiten`
+
+#### `b2-beruflich-18` › 1
+Cümle: Ergänze: ___ (das neue Forschungsprojekt) wurde ein zusätzliches Labor eingerichtet. [anlässlich]
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `anlaesslich des neuen forschungsprojekts wurde ein zusaetzliches labor eingerichtet` / `anlässlich des neuen forschungsprojekts wurde ein zusätzliches labor eingerichtet`
+  - Yeni: `anlaesslich des neuen forschungsprojekts wurde ein zusaetzliches labor eingerichtet` / `anlässlich des neuen forschungsprojekts wurde ein zusätzliches labor eingerichtet` / `anlässlich des neuen forschungsprojektes wurde ein zusätzliches labor eingerichtet`
+
+#### `mix-19` › 2
+Cümle: Welche Form ist korrekt?
+
+Gerekçe: TR açıklamada İngilizce 'article' vardı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Trotz der zahlreichen Einwände wurde der Antrag genehmigt.. Plural Genitiv belirli article: der zahlreichen Einwände.
+  - Yeni: Doğru cevap: Trotz der zahlreichen Einwände wurde der Antrag genehmigt. trotz Genitiv ister; çoğul Genitivde belirli artikel der, sıfat -en: der zahlreichen Einwände. „den … Einwänden“ Dativ, „die …“ Nominativ/Akkusativ'dir.
+
+#### `master-20` › 0
+Cümle: Schreibe vollständig mit „angesichts“: ___ (die sich schnell verändernde Marktlage) muss die Strategie flexibel bleiben.
+
+Gerekçe: TR açıklamada İngilizce 'article' vardı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Angesichts der sich schnell verändernden Marktlage muss die Strategie flexibel bleiben.. Feminin Genitiv belirli article + genişletilmiş sıfat grubu: der ... Marktlage.
+  - Yeni: Doğru cevap: Angesichts der sich schnell verändernden Marktlage muss die Strategie flexibel bleiben. die Marktlage feminin → Genitiv artikeli der; genişletilmiş sıfat grubu (sich schnell verändernd) artikelden sonra -en alır: der sich schnell verändernden Marktlage.
+
+#### `master-20` › 1
+Cümle: Schreibe mit „infolge“: ___ (ein unerwarteter Ausfall des Kühlsystems) musste die Produktion unterbrochen werden.
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `infolge eines unerwarteten ausfalls des kuehlsystems musste die produktion unterbrochen werden` / `infolge eines unerwarteten ausfalls des kühlsystems musste die produktion unterbrochen werden`
+  - Yeni: `infolge eines unerwarteten ausfalls des kuehlsystems musste die produktion unterbrochen werden` / `infolge eines unerwarteten ausfalls des kühlsystems musste die produktion unterbrochen werden` / `infolge eines unerwarteten ausfalles des kühlsystems musste die produktion unterbrochen werden`
+
+#### `master-20` › 3
+Cümle: Schreibe mit „trotz“: ___ (die von mehreren Fachleuten geäußerten Bedenken) wurde das Projekt fortgesetzt.
+
+Gerekçe: TR açıklamada İngilizce 'article/attribute' vardı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Trotz der von mehreren Fachleuten geäußerten Bedenken wurde das Projekt fortgesetzt.. Plural Genitiv belirli article: der; genişletilmiş Partizip attribute -en.
+  - Yeni: Doğru cevap: Trotz der von mehreren Fachleuten geäußerten Bedenken wurde das Projekt fortgesetzt. die Bedenken çoğul → Genitiv artikeli der; genişletilmiş Partizip grubu (von mehreren Fachleuten geäußert) artikelden sonra -en alır: geäußerten.
+
+#### `master-20` › 7
+Cümle: Korrigiere vollständig: „Aufgrund den stark gestiegenen Kosten wurde das Projekt gestoppt.“
+
+Gerekçe: TR açıklamada İngilizce 'article/adjectival' vardı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Aufgrund der stark gestiegenen Kosten wurde das Projekt gestoppt.. Çoğul Genitiv belirli article der; genişletilmiş adjectival grup -en.
+  - Yeni: Doğru cevap: Aufgrund der stark gestiegenen Kosten wurde das Projekt gestoppt. aufgrund Genitiv ister; die Kosten çoğul → der (den Dativ'dir). Genişletilmiş sıfat grubu artikelden sonra -en alır: der stark gestiegenen Kosten.
+
+#### `master-20` › 8
+Cümle: Schreibe mit „unweit“: ___ (der neu ausgebaute Hauptbahnhof) hat die Firma ein Büro gemietet.
+
+Gerekçe: Bu isim Genitivte hem -s hem -es alabilir (Duden: -[e]s); geçerli -es/-s varyantı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `unweit des neu ausgebauten hauptbahnhofs hat die firma ein buero gemietet` / `unweit des neu ausgebauten hauptbahnhofs hat die firma ein büro gemietet`
+  - Yeni: `unweit des neu ausgebauten hauptbahnhofs hat die firma ein buero gemietet` / `unweit des neu ausgebauten hauptbahnhofs hat die firma ein büro gemietet` / `unweit des neu ausgebauten hauptbahnhofes hat die firma ein büro gemietet`
+
+### `data/b2/je-desto.json`
+
+#### `richtiger-satz-1` › 0
+Cümle: Welcher Satz ist richtig?
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je länger wir warten, desto ungeduldiger werden wir.. Kaynakta ilk görev doğrudan doğru kelime sırasını seçtiriyor: je-cümlesi yan cümle, desto-cümlesi ana cümle düzenindedir.
+  - Yeni: Doğru cevap: Je länger wir warten, desto ungeduldiger werden wir. je-cümlesi yan cümledir: çekimli fiil sona gider (wir warten). desto + Komparativ (ungeduldiger) ana cümlenin ilk alanıdır; çekimli fiil hemen ardından gelir, sonra özne: werden wir.
+
+#### `richtiger-satz-1` › 2
+Cümle: Welcher Satz ist richtig?
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je höher die Miete ist, desto weniger Geld bleibt am Monatsende übrig.. Kaynakta größer ... mehr ve mehr ... weniger gibi miktar ilişkileri kullanılıyor.
+  - Yeni: Doğru cevap: Je höher die Miete ist, desto weniger Geld bleibt am Monatsende übrig. je-cümlesinde çekimli fiil ist sondadır. desto weniger Geld ilk alanı doldurur; çekimli fiil bleibt ikinci sırada, ayrılabilen ön ek übrig en sonda.
+
+#### `richtiger-satz-1` › 6
+Cümle: Welcher Satz ist richtig?
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je schneller das Unternehmen wächst, desto mehr Personal muss es einstellen.. Kaynakta benzer şekilde modal fiil ve mehr yapıları doğru söz dizimiyle çalıştırılıyor.
+  - Yeni: Doğru cevap: Je schneller das Unternehmen wächst, desto mehr Personal muss es einstellen. je-cümlesinde wächst sonda. desto mehr Personal ilk alan; modal fiil muss ikinci sırada, özne es ardından, mastar einstellen en sonda.
+
+#### `wortstellung-2` › 1
+Cümle: Welche Wortstellung ist richtig?
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je länger der Vortrag dauert, desto unruhiger wird das Publikum.. Kaynakta 'Je älter das Brot ist, desto trockener ist es' aynı söz dizimi modelini gösterir.
+  - Yeni: Doğru cevap: Je länger der Vortrag dauert, desto unruhiger wird das Publikum. je-cümlesinde çekimli fiil dauert sonda; desto unruhiger ilk alan, çekimli fiil wird ikinci sırada, özne das Publikum ardından.
+
+#### `wortstellung-2` › 4
+Cümle: Welche Wortstellung ist richtig?
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je häufiger wir miteinander sprechen, desto besser verstehen wir uns.. Kaynakta häufiger/öfter türü karşılaştırmalar kullanılıyor.
+  - Yeni: Doğru cevap: Je häufiger wir miteinander sprechen, desto besser verstehen wir uns. je-cümlesinde sprechen sonda; desto besser ilk alan, verstehen ikinci sırada, sonra özne wir ve dönüşlü zamir uns.
+
+#### `wortstellung-2` › 7
+Cümle: Welche Wortstellung ist richtig?
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je größer die Entfernung ist, desto länger dauert die Fahrt.. Kaynakta 'Je weiter der Weg ist, desto länger braucht man' aynı mantığı kullanır.
+  - Yeni: Doğru cevap: Je größer die Entfernung ist, desto länger dauert die Fahrt. je-cümlesinde ist sonda; desto + Komparativ (länger) birlikte ilk alandır, dauert hemen ardından gelir. „desto dauert …“ yanlıştır, çünkü Komparativ desto'dan ayrılmaz.
+
+#### `komparativ-3` › 1
+Cümle: Ergänze: „Je ___ der Weg ist, desto länger brauchen wir.“ (weit)
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: weiter. Kaynakta weiter ... länger eşleşmesi kullanılıyor.
+  - Yeni: Doğru cevap: weiter. weit düzenli Komparativ yapar: weit → weiter. je + Komparativ ile başlayan yan cümlede fiil sondadır: Je weiter der Weg ist, …
+
+#### `komparativ-saetze-4` › 0
+Cümle: Bilde einen je-desto-Satz: „Die Straße wird glatt. Man muss vorsichtig fahren.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je glatter die Straße wird, desto vorsichtiger muss man fahren.. Kaynakta glatter/vorsichtiger ilişkisi doğrudan aynı türde çalıştırılıyor.
+  - Yeni: Doğru cevap: Je glatter die Straße wird, desto vorsichtiger muss man fahren. İki sıfat Komparativ olur: glatt → glatter, vorsichtig → vorsichtiger. je-cümlesinde wird sonda; desto-cümlesinde modal muss ikinci sırada, fahren sonda.
+
+#### `komparativ-saetze-4` › 2
+Cümle: Bilde: „Die Musik ist laut. Die Nachbarn werden ärgerlich.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je lauter die Musik ist, desto ärgerlicher werden die Nachbarn.. Kaynakta lauter ... ärgerlicher modeli bulunuyor.
+  - Yeni: Doğru cevap: Je lauter die Musik ist, desto ärgerlicher werden die Nachbarn. laut → lauter, ärgerlich → ärgerlicher. je-cümlesinde ist sonda; desto ärgerlicher ilk alan, werden ikinci sırada, özne die Nachbarn ardından.
+
+#### `komparativ-saetze-4` › 5
+Cümle: Bilde: „Das Licht ist hell. Man erkennt Details deutlich.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je heller das Licht ist, desto deutlicher erkennt man Details.. Kaynakta heller ... deutlicher eşleşmesi kullanılıyor.
+  - Yeni: Doğru cevap: Je heller das Licht ist, desto deutlicher erkennt man Details. hell → heller, deutlich → deutlicher. je-cümlesinde ist sonda; desto deutlicher'den sonra çekimli fiil erkennt, sonra özne man gelir.
+
+#### `komparativ-saetze-4` › 9
+Cümle: Bilde: „Das Training ist intensiv. Die Sportler werden fit.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je intensiver das Training ist, desto fitter werden die Sportler.. Kaynakta intensiver ve fitter türü karşılaştırmalar aynı görevde geçiyor.
+  - Yeni: Doğru cevap: Je intensiver das Training ist, desto fitter werden die Sportler. intensiv → intensiver, fit → fitter (t ikizlenir). je-cümlesinde ist sonda; desto fitter'dan sonra werden, sonra özne die Sportler.
+
+#### `mehr-weniger-5` › 1
+Cümle: Welche Ergänzung passt? „Je größer die Wohnung ist, desto ___ Platz hat man.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: mehr. Kaynakta größer ... mehr modeli bulunuyor.
+  - Yeni: Doğru cevap: mehr. Daire büyüdükçe yer de artar: desto mehr Platz. mehr miktarın artışını, weniger azalışını gösterir; größer ise isimle (Platz) miktar bildirmez.
+
+#### `mehr-weniger-5` › 2
+Cümle: Welche Ergänzung passt? „Je mehr Überstunden sie macht, desto ___ Freizeit hat sie.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: weniger. Kaynakta mehr ... weniger ilişkisi kullanılıyor.
+  - Yeni: Doğru cevap: weniger. Fazla mesai arttıkça boş zaman azalır: desto weniger Freizeit. İlişki ters yönlüdür (mehr Überstunden → weniger Freizeit).
+
+#### `mehr-weniger-5` › 4
+Cümle: Welche Ergänzung passt? „Je intensiver das Parfüm duftet, desto ___ braucht man davon.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: weniger. Kaynak çözümünde intensiver ... weniger eşleşmesi bulunuyor.
+  - Yeni: Doğru cevap: weniger. Parfüm yoğun koktukça daha azı yeter: desto weniger braucht man davon. Yoğunluk arttıkça ihtiyaç azalır, bu yüzden weniger.
+
+#### `mehr-weniger-schreiben-6` › 6
+Cümle: Bilde: „Wir haben mehr Daten. Wir können genauer planen.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je mehr Daten wir haben, desto genauer können wir planen.. Kaynakta daha fazla miktar ile daha yüksek derece birlikte kullanılabiliyor.
+  - Yeni: Doğru cevap: Je mehr Daten wir haben, desto genauer können wir planen. je mehr Daten başta, çekimli fiil haben yan cümlenin sonunda. desto genauer'den sonra modal können ikinci sırada, özne wir ardından, planen sonda.
+
+#### `mehr-weniger-schreiben-6` › 9
+Cümle: Bilde: „Wir verschwenden weniger Material. Die Produktion wird nachhaltiger.“
+
+Gerekçe: TR açıklamada İngilizce terim vardı; Türkçe ve somut gerekçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je weniger Material wir verschwenden, desto nachhaltiger wird die Produktion.. weniger + isim ve adjectival Komparativ birlikte kullanılır.
+  - Yeni: Doğru cevap: Je weniger Material wir verschwenden, desto nachhaltiger wird die Produktion. je weniger + isim (Material) yan cümlenin başında, verschwenden sonda; desto + sıfatın Komparativi (nachhaltiger), ardından wird.
+
+#### `paare-7` › 0
+Cümle: Welche Kombination passt logisch? „Je ___ man eine Sprache benutzt, desto ___ spricht man.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: häufiger ... flüssiger. PDF'de öfter/häufiger ile daha iyi performans arasında ilişki kuruluyor.
+  - Yeni: Doğru cevap: häufiger ... flüssiger. Bir dili ne kadar sık kullanırsan o kadar akıcı konuşursun: Je häufiger …, desto flüssiger … . seltener veya langsamer mantıksal ilişkiyi bozar.
+
+#### `paare-7` › 3
+Cümle: Welche Kombination passt? „Je ___ die Strecke ist, desto ___ dauert die Fahrt.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: weiter ... länger. PDF çözümünde weiter ... länger eşleşmesi vardır.
+  - Yeni: Doğru cevap: weiter ... länger. Yol uzadıkça yolculuk uzun sürer: Je weiter die Strecke ist, desto länger dauert die Fahrt. kürzer ile ilişki ters ve mantıksız olur.
+
+#### `paare-7` › 4
+Cümle: Welche Kombination passt? „Je ___ jemand ist, desto ___ reagiert er auf Kritik.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: sensibler ... verletzlicher. Kaynak çözümünde sensibler ... verletzlicher çifti bulunuyor.
+  - Yeni: Doğru cevap: sensibler ... verletzlicher. Hassas biri eleştiriye daha kırılgan tepki verir: Je sensibler jemand ist, desto verletzlicher reagiert er. Diğer çiftler mantıksal yönü ters çevirir.
+
+#### `paare-7` › 5
+Cümle: Welche Kombination passt? „Je ___ die Kleidung ist, desto ___ fühlt sie sich an.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: weicher ... angenehmer. Kaynakta weicher ... besser benzeri dokunsal ilişki var.
+  - Yeni: Doğru cevap: weicher ... angenehmer. Giysi yumuşadıkça tende daha hoş hissedilir: Je weicher die Kleidung ist, desto angenehmer fühlt sie sich an. weicher ... unangenehmer ve härter ... angenehmer mantığa ters.
+
+#### `zwei-saetze-8` › 0
+Cümle: Verbinde: „Der Kurs ist anspruchsvoller. Die Teilnehmenden müssen sich besser vorbereiten.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je anspruchsvoller der Kurs ist, desto besser müssen sich die Teilnehmenden vorbereiten.. PDF Aufgabe 2'de iki bağımsız cümle uygun neden-sonuç sırasıyla birleştiriliyor.
+  - Yeni: Doğru cevap: Je anspruchsvoller der Kurs ist, desto besser müssen sich die Teilnehmenden vorbereiten. Neden (zorlu kurs) je-cümlesine, sonuç (iyi hazırlık) desto-cümlesine gelir. je-cümlesinde ist sonda; desto besser'den sonra modal müssen, dönüşlü sich, özne, en sonda vorbereiten.
+
+#### `logische-richtung-9` › 0
+Cümle: Welche Aussage gibt die logische Beziehung richtig wieder? „Die Temperatur steigt. Der Energieverbrauch der Kühlung steigt.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je höher die Temperatur steigt, desto mehr Energie verbraucht die Kühlung.. Aufgabe 2 kaynakta iki cümlenin hangi sırayla je-desto ilişkisine dönüşeceğini test ediyor.
+  - Yeni: Doğru cevap: Je höher die Temperatur steigt, desto mehr Energie verbraucht die Kühlung. Sıcaklık arttıkça soğutmanın enerji tüketimi de artar: neden je-cümlesinde, sonuç desto-cümlesinde, ikisi aynı yönde (höher → mehr). Diğer şıklar yönü ters çevirir veya sebep ile sonucu karıştırır.
+
+#### `logische-richtung-9` › 3
+Cümle: Welche Formulierung passt? „Der Kaffee wird stärker. Man braucht weniger davon.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je stärker der Kaffee ist, desto weniger braucht man davon.. Kaynakta intensiver ... weniger benzer örnek bulunuyor.
+  - Yeni: Doğru cevap: Je stärker der Kaffee ist, desto weniger braucht man davon. Kahve sertleştikçe daha azı yeter: stärker → weniger (ters yönlü ilişki). mehr ilişkiyi bozar; ilk şık sebep ile sonucu ters çevirir.
+
+#### `logische-richtung-9` › 4
+Cümle: Welche Formulierung passt? „Die Straßen werden glatter. Man muss vorsichtiger fahren.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je glatter die Straßen werden, desto vorsichtiger muss man fahren.. Kaynakta aynı semantik yön örnekleniyor.
+  - Yeni: Doğru cevap: Je glatter die Straßen werden, desto vorsichtiger muss man fahren. Yollar kayganlaştıkça daha dikkatli sürmek gerekir: neden je-cümlesinde, sonuç desto-cümlesinde. schneller mantığa ters; üçüncü şık sebep ile sonucu ters çevirir.
+
+#### `logische-richtung-9` › 8
+Cümle: Welche Formulierung passt? „Der Wind wird stärker. Der Regenschirm muss fester gehalten werden.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je stärker der Wind wird, desto fester muss man den Regenschirm halten.. PDF çözümünde windiger ... besser/fester ilişkisi var.
+  - Yeni: Doğru cevap: Je stärker der Wind wird, desto fester muss man den Regenschirm halten. Rüzgâr güçlendikçe şemsiyeyi daha sıkı tutmak gerekir: stärker → fester. lockerer mantığa ters; ikinci şık sebep ile sonucu ters çevirir.
+
+#### `modalverben-10` › 1
+Cümle: Welche Form ist korrekt?
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je früher sie aufstehen muss, desto müder ist sie am Abend.. PDF'de 'Je früher Peter aufstehen muss...' modeli bulunuyor.
+  - Yeni: Doğru cevap: Je früher sie aufstehen muss, desto müder ist sie am Abend. je-cümlesi yan cümle olduğu için modal fiil muss en sona, mastar aufstehen ondan önce gelir. desto müder'den sonra çekimli ist ikinci sırada, özne sie ardından.
+
+#### `reflexive-verben-11` › 1
+Cümle: Bilde: „Wir konzentrieren uns besser. Wir machen weniger Fehler.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je besser wir uns konzentrieren, desto weniger Fehler machen wir.. Kaynakta besser/schneller gibi zarf karşılaştırmaları kullanılıyor.
+  - Yeni: Doğru cevap: Je besser wir uns konzentrieren, desto weniger Fehler machen wir. je-cümlesinde dönüşlü zamir uns özneden sonra, çekimli fiil konzentrieren sonda. desto weniger Fehler ilk alan, machen ikinci sırada, wir ardından.
+
+#### `reflexive-verben-11` › 4
+Cümle: Bilde: „Man bewegt sich mehr. Man fühlt sich fitter.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je mehr man sich bewegt, desto fitter fühlt man sich.. Kaynakta mehr Sport ... fitter mantığına benzer.
+  - Yeni: Doğru cevap: Je mehr man sich bewegt, desto fitter fühlt man sich. je-cümlesinde sich özneden sonra, bewegt sonda. desto fitter'dan sonra fühlt ikinci sırada, ardından man ve sich.
+
+#### `reflexive-verben-11` › 7
+Cümle: Bilde: „Er beeilt sich mehr. Er macht mehr Fehler.“
+
+Gerekçe: TR açıklamada İngilizce terim vardı; Türkçe ve somut gerekçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je mehr er sich beeilt, desto mehr Fehler macht er.. more + reflexive action ve more + noun ilişkisi.
+  - Yeni: Doğru cevap: Je mehr er sich beeilt, desto mehr Fehler macht er. İlk mehr fiilin derecesini (acele etmeyi), ikinci mehr isim miktarını (Fehler) gösterir. je-cümlesinde beeilt sonda; desto mehr Fehler'den sonra macht er.
+
+#### `trennbare-verben-12` › 1
+Cümle: Bilde: „Er steht früher auf. Er ist am Abend müder.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je früher er aufsteht, desto müder ist er am Abend.. PDF'de früher aufstehen / müder ilişkisi bulunuyor.
+  - Yeni: Doğru cevap: Je früher er aufsteht, desto müder ist er am Abend. aufstehen ayrılabilen fiildir; je-yan cümlesinde fiil sona gidince ön ek ayrılmaz: aufsteht. desto müder'den sonra ist ikinci sırada.
+
+#### `trennbare-verben-12` › 2
+Cümle: Bilde: „Wir räumen gründlicher auf. Die Wohnung ist sauberer.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je gründlicher wir aufräumen, desto sauberer ist die Wohnung.. Kaynakta gründlicher ... sauberer eşleşmesi var.
+  - Yeni: Doğru cevap: Je gründlicher wir aufräumen, desto sauberer ist die Wohnung. aufräumen yan cümlede sonda birleşik yazılır (wir räumen … auf → wir aufräumen). desto sauberer'den sonra ist ikinci sırada, özne die Wohnung ardından.
+
+#### `gegenlaeufig-13` › 1
+Cümle: Bilde: „Das Angebot wird teurer. Weniger Kunden kaufen es.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je teurer das Angebot wird, desto weniger Kunden kaufen es.. Kaynakta teurer ... weniger benzeri ilişki bulunuyor.
+  - Yeni: Doğru cevap: Je teurer das Angebot wird, desto weniger Kunden kaufen es. teuer → teurer (e düşer). Fiyat arttıkça müşteri azalır: ters yönlü ilişki weniger ile verilir. je-cümlesinde wird sonda; desto weniger Kunden'den sonra kaufen.
+
+#### `gegenlaeufig-13` › 5
+Cümle: Bilde: „Wir verwenden weniger Papier. Die Arbeit wird nachhaltiger.“
+
+Gerekçe: TR açıklamada İngilizce terim vardı; Türkçe ve somut gerekçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je weniger Papier wir verwenden, desto nachhaltiger wird die Arbeit.. weniger + isim ve adjectival Komparativ.
+  - Yeni: Doğru cevap: Je weniger Papier wir verwenden, desto nachhaltiger wird die Arbeit. je weniger + isim (Papier) yan cümlenin başında, verwenden sonda; desto + sıfatın Komparativi (nachhaltiger), ardından wird.
+
+#### `nomen-mengen-14` › 4
+Cümle: Bilde: „Ein Text enthält mehr Fachbegriffe. Er ist schwerer zu verstehen.“
+
+Gerekçe: TR açıklamada İngilizce terim vardı; Türkçe ve somut gerekçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je mehr Fachbegriffe ein Text enthält, desto schwerer ist er zu verstehen.. mehr + plural isim ve Komparativ predicate birlikte kullanılır.
+  - Yeni: Doğru cevap: Je mehr Fachbegriffe ein Text enthält, desto schwerer ist er zu verstehen. je mehr + çoğul isim (Fachbegriffe) başta, enthält sonda. desto schwerer'den sonra ist ikinci sırada; zu verstehen en sonda kalır.
+
+#### `nomen-mengen-14` › 6
+Cümle: Bilde: „Ein Produkt hat weniger Fehler. Es bekommt bessere Bewertungen.“
+
+Gerekçe: TR açıklamada İngilizce terim vardı; Türkçe ve somut gerekçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je weniger Fehler ein Produkt hat, desto bessere Bewertungen bekommt es.. Desto'da comparative adjective + noun phrase ön alandadır.
+  - Yeni: Doğru cevap: Je weniger Fehler ein Produkt hat, desto bessere Bewertungen bekommt es. desto'dan sonra Komparativ sıfat + isim (bessere Bewertungen) birlikte ilk alanı oluşturur; bekommt ikinci sırada, es ardından.
+
+#### `satzbau-15` › 1
+Cümle: Ordne: „je / mehr / wir / üben / desto / sicherer / wir / sprechen“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je mehr wir üben, desto sicherer sprechen wir.. Kaynakta üben ile daha iyi konuşma arasındaki ilişki kullanılıyor.
+  - Yeni: Doğru cevap: Je mehr wir üben, desto sicherer sprechen wir. je-cümlesinde üben sonda; desto sicherer'den sonra çekimli fiil sprechen, ardından özne wir gelir.
+
+#### `fehlerkorrektur-16` › 0
+Cümle: Korrigiere: „Je schneller fahren wir, desto früher kommen wir an.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je schneller wir fahren, desto früher kommen wir an.. PDF'nin ilk sorusundaki temel hata türü: je-cümlesinde fiil sona gitmelidir.
+  - Yeni: Doğru cevap: Je schneller wir fahren, desto früher kommen wir an. Hata je-cümlesindeydi: je yan cümle başlatır, çekimli fiil fahren sona gitmelidir. desto-cümlesi doğruydu: kommen wir an.
+
+#### `fehlerkorrektur-16` › 5
+Cümle: Korrigiere: „Je kälter es wird, desto muss man sich wärmer anziehen.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je kälter es wird, desto wärmer muss man sich anziehen.. PDF'deki hata tipinde Komparativ desto'dan hemen sonra gelmelidir.
+  - Yeni: Doğru cevap: Je kälter es wird, desto wärmer muss man sich anziehen. Komparativ (wärmer) desto'dan hemen sonra gelir ve onunla birlikte ilk alanı doldurur; modal muss ikinci sırada, anziehen sonda.
+
+#### `alltag-17` › 7
+Cümle: Bilde: „Du liest öfter. Dein Wortschatz wird größer.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je öfter du liest, desto größer wird dein Wortschatz.. Kaynakta öfter ile gelişim ilişkisi doğrudan çalıştırılıyor.
+  - Yeni: Doğru cevap: Je öfter du liest, desto größer wird dein Wortschatz. oft → öfter, groß → größer. je-cümlesinde liest sonda; desto größer'den sonra wird, ardından özne dein Wortschatz.
+
+#### `alltag-17` › 8
+Cümle: Bilde: „Die Kinder werden müder. Sie werden unruhiger.“
+
+Gerekçe: TR açıklamada İngilizce terim vardı; Türkçe ve somut gerekçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je müder die Kinder werden, desto unruhiger werden sie.. İki predicate Komparativ je-desto ile bağlanır.
+  - Yeni: Doğru cevap: Je müder die Kinder werden, desto unruhiger werden sie. Her iki bölümde de Komparativ werden fiilinin tamamlayıcısıdır. je-cümlesinde werden sonda; desto unruhiger'den sonra werden ikinci sırada, sie ardından.
+
+#### `alltag-17` › 9
+Cümle: Bilde: „Man wartet länger. Man wird nervöser.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je länger man wartet, desto nervöser wird man.. Kaynakta nervöser gibi Komparativler kullanılıyor.
+  - Yeni: Doğru cevap: Je länger man wartet, desto nervöser wird man. lang → länger, nervös → nervöser. je-cümlesinde wartet sonda; desto nervöser'den sonra wird, ardından man.
+
+#### `b2-kontext-18` › 5
+Cümle: Forme um: „Die Zahl der Schnittstellen steigt. Das System wird störanfälliger.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı. İpucu cümlesi Komparativ vermiyor; aynı anlamı veren diğer doğal Komparativ seçimleri de kesin doğru.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je mehr Schnittstellen ein System hat, desto störanfälliger wird es.. Kaynağın mehr + isim mantığına dayanarak daha doğal B2 yeniden formülasyon.
+  - Yeni: Doğru cevap: Je mehr Schnittstellen ein System hat, desto störanfälliger wird es. „Die Zahl der Schnittstellen steigt“ bilgisi je mehr + isim ile anlatılır; hat yan cümlenin sonunda. desto störanfälliger'den sonra wird, ardından es.
+- Kabul edilen cevaplar
+  - Eski: `je mehr schnittstellen ein system hat desto stoeranfaelliger wird es` / `je mehr schnittstellen ein system hat desto störanfälliger wird es` / `je mehr schnittstellen ein system hat, desto stoeranfaelliger wird es` / `je mehr schnittstellen ein system hat, desto störanfälliger wird es`
+  - Yeni: `je mehr schnittstellen ein system hat desto stoeranfaelliger wird es` / `je mehr schnittstellen ein system hat desto störanfälliger wird es` / `je mehr schnittstellen ein system hat, desto stoeranfaelliger wird es` / `je mehr schnittstellen ein system hat, desto störanfälliger wird es` / `je höher die zahl der schnittstellen ist, desto störanfälliger wird das system` / `je höher die zahl der schnittstellen wird, desto störanfälliger wird das system` / `je größer die zahl der schnittstellen ist, desto störanfälliger wird das system` / `je größer die zahl der schnittstellen wird, desto störanfälliger wird das system` / `je stärker die zahl der schnittstellen steigt, desto störanfälliger wird das system` / `je mehr schnittstellen es gibt, desto störanfälliger wird das system`
+
+#### `mix-19` › 2
+Cümle: Welche Form ist korrekt?
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je besser das Team vorbereitet ist, desto souveräner reagiert es.. Her iki cümlenin söz dizimi kaynak kuralına uygundur.
+  - Yeni: Doğru cevap: Je besser das Team vorbereitet ist, desto souveräner reagiert es. je-cümlesinde çekimli ist sonda (vorbereitet ist); desto souveräner'den sonra reagiert ikinci sırada, es ardından.
+
+#### `mix-19` › 6
+Cümle: Welche Form ist korrekt?
+
+Gerekçe: TR açıklamada yazım hatası vardı ('analizieren').
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je genauer wir die Ursache analysieren, desto leichter finden wir eine Lösung.. Je bölümünde analizieren sonda.
+  - Yeni: Doğru cevap: Je genauer wir die Ursache analysieren, desto leichter finden wir eine Lösung. je-cümlesinde analysieren sonda; desto leichter'den sonra finden ikinci sırada, wir ardından.
+
+#### `master-20` › 3
+Cümle: Verbinde: „Der Zeitdruck steigt. Die Entscheidungen werden unüberlegter.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı. İpucu cümlesi Komparativ vermiyor; aynı anlamı veren diğer doğal Komparativ seçimleri de kesin doğru.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je größer der Zeitdruck wird, desto unüberlegter werden die Entscheidungen.. Kaynakta nervöser/schneller gibi durum değişimleriyle aynı yapı kullanılır.
+  - Yeni: Doğru cevap: Je größer der Zeitdruck wird, desto unüberlegter werden die Entscheidungen. „steigt“ bilgisi Komparativ ile anlatılır: Zeitdruck için größer. je-cümlesinde wird sonda; desto unüberlegter'den sonra werden, ardından özne.
+- Kabul edilen cevaplar
+  - Eski: `je groesser der zeitdruck wird desto unueberlegter werden die entscheidungen` / `je groesser der zeitdruck wird, desto unueberlegter werden die entscheidungen` / `je größer der zeitdruck wird desto unüberlegter werden die entscheidungen` / `je größer der zeitdruck wird, desto unüberlegter werden die entscheidungen`
+  - Yeni: `je groesser der zeitdruck wird desto unueberlegter werden die entscheidungen` / `je groesser der zeitdruck wird, desto unueberlegter werden die entscheidungen` / `je größer der zeitdruck wird desto unüberlegter werden die entscheidungen` / `je größer der zeitdruck wird, desto unüberlegter werden die entscheidungen` / `je höher der zeitdruck wird, desto unüberlegter werden die entscheidungen` / `je stärker der zeitdruck steigt, desto unüberlegter werden die entscheidungen` / `je größer der zeitdruck ist, desto unüberlegter werden die entscheidungen` / `je höher der zeitdruck ist, desto unüberlegter werden die entscheidungen`
+
+#### `master-20` › 5
+Cümle: Verbinde: „Das Modell wird komplexer. Mehr Rechenleistung muss bereitgestellt werden.“
+
+Gerekçe: TR açıklamada İngilizce terim vardı; Türkçe ve somut gerekçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je komplexer das Modell wird, desto mehr Rechenleistung muss bereitgestellt werden.. Desto + mehr Rechenleistung ilk alan; modal passive 'muss ... werden' doğru sırada.
+  - Yeni: Doğru cevap: Je komplexer das Modell wird, desto mehr Rechenleistung muss bereitgestellt werden. desto mehr Rechenleistung ilk alan; modal muss ikinci sırada; Passiv mastarı bereitgestellt werden en sonda.
+
+#### `master-20` › 6
+Cümle: Forme als je-desto-Satz: „Mit zunehmender Erfahrung sinkt die Zahl der Fehler.“
+
+Gerekçe: Boş 'Kaynakta/PDF'de…' gerekçesi yerine bu cümlenin kendi kelime sırası/Komparativ tetikleyicisi yazıldı. Nominal ifadeyi açmanın başka kesin doğru yolları reddediliyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Je mehr Erfahrung man hat, desto weniger Fehler macht man.. Kaynağın mehr/weniger ilişkisi kullanılarak nominal ifade je-desto yapısına açılır.
+  - Yeni: Doğru cevap: Je mehr Erfahrung man hat, desto weniger Fehler macht man. „mit zunehmender Erfahrung“ = je mehr Erfahrung; „sinkt die Zahl der Fehler“ = desto weniger Fehler. je-cümlesinde hat sonda; desto weniger Fehler'den sonra macht man.
+- Kabul edilen cevaplar
+  - Eski: `je mehr erfahrung man hat desto weniger fehler macht man` / `je mehr erfahrung man hat, desto weniger fehler macht man`
+  - Yeni: `je mehr erfahrung man hat desto weniger fehler macht man` / `je mehr erfahrung man hat, desto weniger fehler macht man` / `je mehr erfahrung man hat, desto geringer ist die zahl der fehler` / `je mehr erfahrung man hat, desto geringer wird die zahl der fehler` / `je größer die erfahrung ist, desto geringer ist die zahl der fehler` / `je größer die erfahrung ist, desto weniger fehler macht man`
+
+#### `b2-kontext-18` › 1
+Cümle: Forme um: „Die Produktionsgeschwindigkeit steigt. Die Qualitätskontrolle muss genauer werden.“
+
+Gerekçe: İpucu cümlesi Komparativ vermiyor; aynı anlamı veren diğer doğal Komparativ seçimleri de kesin doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `je hoeher die produktionsgeschwindigkeit ist desto genauer muss die qualitaetskontrolle werden` / `je hoeher die produktionsgeschwindigkeit ist, desto genauer muss die qualitaetskontrolle werden` / `je höher die produktionsgeschwindigkeit ist desto genauer muss die qualitätskontrolle werden` / `je höher die produktionsgeschwindigkeit ist, desto genauer muss die qualitätskontrolle werden`
+  - Yeni: `je hoeher die produktionsgeschwindigkeit ist desto genauer muss die qualitaetskontrolle werden` / `je hoeher die produktionsgeschwindigkeit ist, desto genauer muss die qualitaetskontrolle werden` / `je höher die produktionsgeschwindigkeit ist desto genauer muss die qualitätskontrolle werden` / `je höher die produktionsgeschwindigkeit ist, desto genauer muss die qualitätskontrolle werden` / `je höher die produktionsgeschwindigkeit wird, desto genauer muss die qualitätskontrolle werden` / `je höher die produktionsgeschwindigkeit steigt, desto genauer muss die qualitätskontrolle werden` / `je stärker die produktionsgeschwindigkeit steigt, desto genauer muss die qualitätskontrolle werden`
+
+### `data/b2/konjunktiv-i.json`
+
+#### `erkennen-1` › 0
+Cümle: Welcher Satz steht im Konjunktiv I?
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Die Ärztin sagt, der Patient habe Fieber.. Kaynakta habe/hat karşılaştırmasıyla Konjunktiv I tanıma çalıştırılıyor.
+  - Yeni: Doğru cevap: Die Ärztin sagt, der Patient habe Fieber. haben fiilinin 3. tekil Konjunktiv I biçimi habe'dir (kök hab- + -e). hat Indikativ, hätte Konjunktiv II'dir.
+
+#### `erkennen-1` › 3
+Cümle: Welcher Satz steht im Konjunktiv I?
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Er meint, er könne morgen kommen.. Kaynak modal fiillerde “könne” gibi Konjunktiv-I biçimlerini kullanıyor.
+  - Yeni: Doğru cevap: Er meint, er könne morgen kommen. Modal fiillerde Konjunktiv I mastar kökünden kurulur: können → er könne. kann Indikativ, könnte Konjunktiv II'dir.
+
+#### `erkennen-1` › 5
+Cümle: Welcher Satz steht im Konjunktiv I?
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Der Trainer erklärt, der Spieler solle sich ausruhen.. Kaynakta sollen → solle biçimi doğrudan tanıma sorusu olarak geçiyor.
+  - Yeni: Doğru cevap: Der Trainer erklärt, der Spieler solle sich ausruhen. sollen → er solle (kök soll- + -e). soll Indikativ; sollte Präteritum/Konjunktiv II biçimidir.
+
+#### `erkennen-1` › 6
+Cümle: Welcher Satz steht im Konjunktiv I?
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Sie berichtet, der Zug stehe noch am Bahnsteig.. stehen → stehe, kaynakta aynı tür 3. tekil fiil dönüşümü çalıştırılıyor.
+  - Yeni: Doğru cevap: Sie berichtet, der Zug stehe noch am Bahnsteig. stehen → er stehe (kök steh- + -e). steht Indikativ, stünde Konjunktiv II'dir.
+
+#### `erkennen-1` › 7
+Cümle: Welcher Satz steht im Konjunktiv I?
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Er sagt, er nehme keine Tabletten.. Kaynakta nehmen → nehme örneği doğrudan bulunuyor.
+  - Yeni: Doğru cevap: Er sagt, er nehme keine Tabletten. Konjunktiv I mastar kökünden kurulur, Präsens'teki e → i değişimi olmaz: nehmen → er nehme (nimmt değil). nähme Konjunktiv II'dir.
+
+#### `erkennen-1` › 8
+Cümle: Welcher Satz steht im Konjunktiv I?
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Die Studentin sagt, sie werde sich anmelden.. Kaynakta werden → werde biçimi dolaylı anlatımda kullanılıyor.
+  - Yeni: Doğru cevap: Die Studentin sagt, sie werde sich anmelden. werden → sie werde (gelecek anlamı: werde + Infinitiv). wird Indikativ, würde Konjunktiv II'dir.
+
+#### `erkennen-1` › 9
+Cümle: Welcher Satz steht im Konjunktiv I?
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Der Autor behauptet, seine Aussagen seien korrekt.. Kaynakta çoğul sein için “seien” kullanılıyor.
+  - Yeni: Doğru cevap: Der Autor behauptet, seine Aussagen seien korrekt. Özne çoğul (seine Aussagen); sein fiilinin çoğul Konjunktiv I biçimi seien'dir. sind Indikativ, wären Konjunktiv II'dir.
+
+#### `haben-sein-2` › 2
+Cümle: Ergänze: „Die Eltern meinen, wir ___ zu laut. (sein)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: seien. Kaynakta wir/sie çoğul için “seien” kullanılıyor.
+  - Yeni: Doğru cevap: seien. Aktarılan cümlenin öznesi wir; sein fiilinin wir-biçimi Konjunktiv I'de seien'dir (Indikativ: sind).
+
+#### `haben-sein-2` › 7
+Cümle: Ergänze: „Sie erklären, sie ___ bereit. (sein)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: seien. Kaynağın çoğul sein biçimi “seien”dir.
+  - Yeni: Doğru cevap: seien. Aktarılan cümlenin öznesi sie (çoğul; erklären fiilinden anlaşılır); sein → sie seien (Indikativ: sind).
+
+#### `regelmaessige-verben-3` › 4
+Cümle: Ergänze: „Er meint, Lara ___ zu viel. (reden)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: rede. Kaynakta reden → rede biçimi bulunuyor.
+  - Yeni: Doğru cevap: rede. Özne Lara (3. tekil); Konjunktiv I kök + -e ile kurulur: red- + e → rede (Indikativ: redet).
+
+#### `regelmaessige-verben-3` › 5
+Cümle: Ergänze: „Sie sagt, ihr Bruder ___ gern Basketball. (spielen)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: spiele. Kaynakta spielen → spiele biçimi kullanılıyor.
+  - Yeni: Doğru cevap: spiele. Özne ihr Bruder (3. tekil); spiel- + e → spiele (Indikativ: spielt).
+
+#### `regelmaessige-verben-3` › 7
+Cümle: Ergänze: „Sie erklärt, sie ___ an Zufälle. (glauben)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: glaube. Kaynakta glauben → glaube biçimi geçiyor.
+  - Yeni: Doğru cevap: glaube. Özne sie (3. tekil); glaub- + e → glaube (Indikativ: glaubt).
+
+#### `regelmaessige-verben-3` › 8
+Cümle: Ergänze: „Er sagt, er ___ gutes Essen. (lieben)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: liebe. Kaynakta lieben → liebe.
+  - Yeni: Doğru cevap: liebe. Özne er (3. tekil); lieb- + e → liebe (Indikativ: liebt).
+
+#### `unregelmaessige-verben-4` › 0
+Cümle: Ergänze: „Er sagt, er ___ morgens wenig. (essen)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: esse. Kaynakta essen → esse biçimi geçiyor.
+  - Yeni: Doğru cevap: esse. Konjunktiv I mastar kökünden kurulur; Präsens'teki e → i değişimi olmaz: er isst → er esse.
+
+#### `unregelmaessige-verben-4` › 1
+Cümle: Ergänze: „Sie behauptet, ihr Vater ___ jeden Morgen früh auf. (stehen)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: stehe. Kaynakta stehen → stehe biçimi tanıma sorusunda kullanılıyor.
+  - Yeni: Doğru cevap: stehe. aufstehen ayrılabilen fiildir: auf cümlenin sonunda kalır. Özne ihr Vater; steh- + e → stehe … auf (Indikativ: steht … auf).
+
+#### `unregelmaessige-verben-4` › 2
+Cümle: Ergänze: „Der Patient sagt, er ___ keine Medikamente. (nehmen)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: nehme. Kaynakta nehmen → nehme biçimi doğrudan bulunuyor.
+  - Yeni: Doğru cevap: nehme. Konjunktiv I'de Präsens'teki e → i değişimi olmaz: er nimmt → er nehme.
+
+#### `modalverben-5` › 0
+Cümle: Ergänze: „Sie behauptet, sie ___ fünf Sprachen sprechen. (können)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: könne. Kaynakta können → könne.
+  - Yeni: Doğru cevap: könne. Özne sie (3. tekil); Konjunktiv I mastar kökünden kurulur: können → sie könne (Indikativ: kann).
+
+#### `modalverben-5` › 1
+Cümle: Ergänze: „Er meint, ich ___ mehr lernen. (müssen)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: müsse. Kaynakta müssen → müsse.
+  - Yeni: Doğru cevap: müsse. Özne ich; müssen → ich müsse (Indikativ: ich muss). Konjunktiv I'de ünlü mastardaki gibi kalır.
+
+#### `modalverben-5` › 2
+Cümle: Ergänze: „Sie sagt, sie ___ das Auto reparieren lassen. (wollen)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: wolle. Kaynakta wollen → wolle.
+  - Yeni: Doğru cevap: wolle. Özne sie (3. tekil); wollen → sie wolle (Indikativ: will).
+
+#### `modalverben-5` › 3
+Cümle: Ergänze: „Er fragt, ob er länger bleiben ___. (dürfen)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: dürfe. Kaynakta dürfen → dürfe.
+  - Yeni: Doğru cevap: dürfe. ob yan cümlesinde çekimli fiil sona gider; öznesi er: dürfen → er dürfe (Indikativ: darf).
+
+#### `modalverben-5` › 4
+Cümle: Ergänze: „Die Ärztin sagt, der Patient ___ mehr schlafen. (sollen)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: solle. Kaynakta sollen → solle.
+  - Yeni: Doğru cevap: solle. Özne der Patient (3. tekil); sollen → er solle (Indikativ: soll).
+
+#### `modalverben-5` › 5
+Cümle: Ergänze: „Mein Kollege bat mich, ich ___ ihm schreiben. (mögen)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: möge. Kaynakta mögen → möge.
+  - Yeni: Doğru cevap: möge. Bir rica dolaylı aktarılırken mögen'in Konjunktiv I biçimi kullanılır: ich möge (Indikativ: ich mag).
+
+#### `werden-6` › 0
+Cümle: Ergänze: „Sie erklärt, sie ___ sich morgen anmelden. (werden)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: werde. Kaynakta “werde sich ... anmelden” biçimi doğrudan bulunuyor.
+  - Yeni: Doğru cevap: werde. Özne sie (3. tekil); werden → sie werde; gelecek anlamı werde + Infinitiv ile aktarılır: sie werde sich morgen anmelden.
+
+#### `direkt-indirekt-praesens-7` › 0
+Cümle: Er sagt: „Ich habe keine Zeit.“ → indirekt
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Er sagt, er habe keine Zeit.. Kaynakta sagen + habe yapısı kullanılıyor.
+  - Yeni: Doğru cevap: Er sagt, er habe keine Zeit. „ich“ aktarımda er olur; haben → er habe (Indikativ: hat).
+- Kabul edilen cevaplar
+  - Eski: `er sagt, er habe keine zeit`
+  - Yeni: `er sagt, er habe keine zeit` / `er sagt, dass er keine zeit habe`
+
+#### `direkt-indirekt-praesens-7` › 4
+Cümle: Er antwortet: „Ich nehme keine Tabletten.“ → indirekt
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Er antwortet, er nehme keine Tabletten.. Kaynakta antworten + nehme biçimi bulunuyor.
+  - Yeni: Doğru cevap: Er antwortet, er nehme keine Tabletten. „ich“ → er; nehmen → er nehme (nimmt değil; Konjunktiv I'de ünlü değişmez).
+- Kabul edilen cevaplar
+  - Eski: `er antwortet, er nehme keine tabletten`
+  - Yeni: `er antwortet, er nehme keine tabletten` / `er antwortet, dass er keine tabletten nehme`
+
+#### `direkt-indirekt-praesens-7` › 7
+Cümle: Sie sagt: „Ich werde mich anmelden.“ → indirekt
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Sie sagt, sie werde sich anmelden.. Kaynakta werde yapısı bulunuyor.
+  - Yeni: Doğru cevap: Sie sagt, sie werde sich anmelden. „ich werde mich“ → sie werde sich: kişi zamiri ve dönüşlü zamir yeni özneye göre değişir, werden → werde.
+- Kabul edilen cevaplar
+  - Eski: `sie sagt, sie werde sich anmelden`
+  - Yeni: `sie sagt, sie werde sich anmelden` / `sie sagt, dass sie sich anmelden werde`
+
+#### `fehler-praesens-8` › 0
+Cümle: Korrigiere: „Er sagt, er hat keine Zeit.“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Er sagt, er habe keine Zeit.. Dolaylı anlatımda kaynak habe biçimini kullanıyor.
+  - Yeni: Doğru cevap: Er sagt, er habe keine Zeit. Dolaylı anlatımda Indikativ hat yerine Konjunktiv I kullanılır: er habe.
+
+#### `vergangenheit-erkennen-9` › 0
+Cümle: Welcher Satz steht in der Vergangenheit des Konjunktiv I?
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Sie sagt, er habe den Vertrag unterschrieben.. Kaynakta geçmiş Konjunktiv I için habe + Partizip II kullanılıyor.
+  - Yeni: Doğru cevap: Sie sagt, er habe den Vertrag unterschrieben. Konjunktiv I geçmişi: habe/sei + Partizip II. unterschreiben haben ile kurulur → habe … unterschrieben. hat Indikativ, hätte Konjunktiv II'dir.
+
+#### `vergangenheit-erkennen-9` › 2
+Cümle: Welcher Satz ist richtig?
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Sie behauptet, der Chef habe die Entscheidung getroffen.. Kaynakta treffen → habe ... getroffen.
+  - Yeni: Doğru cevap: Sie behauptet, der Chef habe die Entscheidung getroffen. eine Entscheidung treffen haben ile kurulur → habe … getroffen. hätte Konjunktiv II, hat Indikativ'dir.
+
+#### `vergangenheit-erkennen-9` › 3
+Cümle: Welcher Satz ist richtig?
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Er erklärt, es sei nichts passiert.. Kaynakta passieren → sei ... passiert.
+  - Yeni: Doğru cevap: Er erklärt, es sei nichts passiert. passieren sein ile kurulur → sei … passiert. ist Indikativ, wäre Konjunktiv II'dir.
+
+#### `vergangenheit-erkennen-9` › 4
+Cümle: Welcher Satz ist richtig?
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Sie sagt, sie habe alles erledigt.. Kaynakta erledigen → habe erledigt.
+  - Yeni: Doğru cevap: Sie sagt, sie habe alles erledigt. erledigen haben ile kurulur → habe … erledigt. hat Indikativ, hätte Konjunktiv II'dir.
+
+#### `vergangenheit-erkennen-9` › 5
+Cümle: Welcher Satz ist richtig?
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Er meint, seine Eltern seien weggefahren.. Kaynakta çoğul sein geçmişi “seien weggefahren”.
+  - Yeni: Doğru cevap: Er meint, seine Eltern seien weggefahren. Özne çoğul (seine Eltern) ve wegfahren sein ile kurulur → seien weggefahren. sind Indikativ, wären Konjunktiv II'dir.
+
+#### `vergangenheit-erkennen-9` › 6
+Cümle: Welcher Satz ist richtig?
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Sie berichtet, er habe viel getrunken.. Kaynakta trinken → habe getrunken.
+  - Yeni: Doğru cevap: Sie berichtet, er habe viel getrunken. trinken haben ile kurulur → habe … getrunken. hat Indikativ, hätte Konjunktiv II'dir.
+
+#### `vergangenheit-erkennen-9` › 7
+Cümle: Welcher Satz ist richtig?
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Er sagt, sie sei im Hotel geblieben.. Kaynakta bleiben → sei geblieben.
+  - Yeni: Doğru cevap: Er sagt, sie sei im Hotel geblieben. bleiben sein ile kurulur → sei … geblieben. ist Indikativ, wäre Konjunktiv II'dir.
+
+#### `vergangenheit-erkennen-9` › 8
+Cümle: Welcher Satz ist richtig?
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Die Zeitung berichtet, es habe im Wald gebrannt.. Kaynakta brennen → habe gebrannt.
+  - Yeni: Doğru cevap: Die Zeitung berichtet, es habe im Wald gebrannt. brennen haben ile kurulur → habe … gebrannt. hat Indikativ, hätte Konjunktiv II'dir.
+
+#### `vergangenheit-erkennen-9` › 9
+Cümle: Welcher Satz ist richtig?
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Der Verkäufer behauptet, er habe alles verkauft.. Kaynakta verkaufen → habe verkauft.
+  - Yeni: Doğru cevap: Der Verkäufer behauptet, er habe alles verkauft. verkaufen haben ile kurulur → habe … verkauft. hat Indikativ, hätte Konjunktiv II'dir.
+
+#### `vergangenheit-haben-10` › 2
+Cümle: Ergänze: „Er meint, er ___ die richtige Entscheidung ___. (treffen)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: habe die richtige Entscheidung getroffen. Kaynakta treffen → habe getroffen.
+  - Yeni: Doğru cevap: habe die richtige Entscheidung getroffen. treffen haben ile kurulur; Konjunktiv I geçmişi: habe + Partizip II (getroffen) sonda.
+
+#### `vergangenheit-haben-10` › 3
+Cümle: Ergänze: „Sie sagt, sie ___ dem Sänger Fragen ___. (stellen)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: habe dem Sänger Fragen gestellt. Kaynakta stellen → habe gestellt.
+  - Yeni: Doğru cevap: habe dem Sänger Fragen gestellt. Fragen stellen haben ile kurulur: habe + Partizip II gestellt; Partizip cümle sonunda.
+
+#### `vergangenheit-haben-10` › 4
+Cümle: Ergänze: „Er erklärt, er ___ alles ___. (erledigen)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: habe alles erledigt. Kaynakta erledigen → habe erledigt.
+  - Yeni: Doğru cevap: habe alles erledigt. erledigen haben ile kurulur; er- gibi ayrılmayan ön ekli fiillerde Partizip ge- almaz: erledigt.
+
+#### `vergangenheit-haben-10` › 5
+Cümle: Ergänze: „Sie berichtet, sie ___ viel Wasser ___. (trinken)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: habe viel Wasser getrunken. Kaynakta trinken → habe getrunken.
+  - Yeni: Doğru cevap: habe viel Wasser getrunken. trinken haben ile kurulur; düzensiz Partizip: getrunken.
+
+#### `vergangenheit-haben-10` › 6
+Cümle: Ergänze: „Er behauptet, er ___ früher gesünder ___. (leben)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: habe früher gesünder gelebt. Kaynakta leben → habe gelebt.
+  - Yeni: Doğru cevap: habe früher gesünder gelebt. leben haben ile kurulur; düzenli Partizip: gelebt.
+
+#### `vergangenheit-haben-10` › 7
+Cümle: Ergänze: „Die Nachbarin sagt, sie ___ die Pflanzen ___. (gießen)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: habe die Pflanzen gegossen. Kaynakta gießen → habe gegossen.
+  - Yeni: Doğru cevap: habe die Pflanzen gegossen. gießen haben ile kurulur; düzensiz Partizip: gegossen.
+
+#### `vergangenheit-haben-10` › 8
+Cümle: Ergänze: „Die Zeitung berichtet, es ___ im Wald ___. (brennen)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: habe im Wald gebrannt. Kaynakta brennen → habe gebrannt.
+  - Yeni: Doğru cevap: habe im Wald gebrannt. brennen yer değiştirme bildirmez, haben ile kurulur; özne es → habe … gebrannt.
+
+#### `vergangenheit-haben-10` › 9
+Cümle: Ergänze: „Der Händler sagt, er ___ alles ___. (verkaufen)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: habe alles verkauft. Kaynakta verkaufen → habe verkauft.
+  - Yeni: Doğru cevap: habe alles verkauft. verkaufen haben ile kurulur; ver- ön ekli fiil ge- almaz: verkauft.
+
+#### `vergangenheit-sein-11` › 0
+Cümle: Ergänze: „Er sagt, er ___ zum Arzt ___. (gehen)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: sei zum Arzt gegangen. Kaynakta gehen → gegangen sei / sei gegangen.
+  - Yeni: Doğru cevap: sei zum Arzt gegangen. gehen yer değiştirme (hareket) fiilidir, Perfekt'i sein ile kurulur → sei + Partizip II gegangen.
+
+#### `vergangenheit-sein-11` › 1
+Cümle: Ergänze: „Sie erklärt, es ___ nichts ___. (passieren)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: sei nichts passiert. Kaynakta passieren → sei passiert.
+  - Yeni: Doğru cevap: sei nichts passiert. passieren sein ile kurulur → es sei … passiert.
+
+#### `vergangenheit-sein-11` › 2
+Cümle: Ergänze: „Er sagt, seine Eltern ___ übers Wochenende ___. (wegfahren)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: seien übers Wochenende weggefahren. Kaynakta çoğul → seien weggefahren.
+  - Yeni: Doğru cevap: seien übers Wochenende weggefahren. Özne çoğul (seine Eltern) ve wegfahren hareket fiili → seien + weggefahren (ayrılabilen fiilde -ge- ön ekten sonra gelir).
+
+#### `vergangenheit-sein-11` › 3
+Cümle: Ergänze: „Sie erklärt, sie ___ im Hotel ___. (bleiben)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: sei im Hotel geblieben. Kaynakta bleiben → sei geblieben.
+  - Yeni: Doğru cevap: sei im Hotel geblieben. bleiben Perfekt'ini sein ile kurar → sei + geblieben.
+
+#### `vergangenheit-sein-11` › 4
+Cümle: Ergänze: „Mein Freund sagt, er ___ oft ___. (umziehen)“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: sei oft umgezogen. Kaynakta umziehen → sei umgezogen.
+  - Yeni: Doğru cevap: sei oft umgezogen. umziehen (taşınmak) yer değiştirme bildirir, sein ile kurulur → sei + umgezogen (-ge- ön ekten sonra).
+
+#### `ob-praesens-12` › 0
+Cümle: Forme indirekt mit „ob“: Er fragt: „Darf ich hier parken?“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Er fragt, ob er hier parken dürfe.. Kaynakta ob + dürfe yapısı bulunuyor.
+  - Yeni: Doğru cevap: Er fragt, ob er hier parken dürfe. Evet/hayır sorusu ob ile aktarılır; „ich“ → er; ob yan cümlesinde çekimli fiil sona gider: dürfen → er dürfe.
+- Cümle
+  - Eski: Forme indirekt mit „ob“: „Darf ich hier parken?“
+  - Yeni: Forme indirekt mit „ob“: Er fragt: „Darf ich hier parken?“
+
+#### `ob-vergangenheit-13` › 0
+Cümle: Forme indirekt: Sie fragt: „Ist er zum Arzt gegangen?“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Sie fragt, ob er zum Arzt gegangen sei.. Kaynakta ob + gegangen sei yapısı doğrudan bulunuyor.
+  - Yeni: Doğru cevap: Sie fragt, ob er zum Arzt gegangen sei. ob yan cümlesinde çekimli yardımcı fiil sona gider: gegangen sei. gehen sein ile kurulur.
+- Cümle
+  - Eski: Forme indirekt: „Ist er zum Arzt gegangen?“
+  - Yeni: Forme indirekt: Sie fragt: „Ist er zum Arzt gegangen?“
+
+#### `ob-vergangenheit-13` › 1
+Cümle: Forme indirekt: Sie fragt: „Hat er das Formular ausgefüllt?“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Sie fragt, ob er das Formular ausgefüllt habe.. Kaynakta ob + ausgefüllt habe bulunuyor.
+  - Yeni: Doğru cevap: Sie fragt, ob er das Formular ausgefüllt habe. ausfüllen haben ile kurulur; ob yan cümlesinde Partizip II'den sonra çekimli habe en sona gelir.
+- Cümle
+  - Eski: Forme indirekt: „Hat er das Formular ausgefüllt?“
+  - Yeni: Forme indirekt: Sie fragt: „Hat er das Formular ausgefüllt?“
+
+#### `ob-vergangenheit-13` › 2
+Cümle: Forme indirekt: Er fragt: „Hat sie die Pflanzen gegossen?“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Er fragt, ob sie die Pflanzen gegossen habe.. Kaynakta ob + gegossen habe.
+  - Yeni: Doğru cevap: Er fragt, ob sie die Pflanzen gegossen habe. gießen haben ile kurulur; ob yan cümlesinde sıra: gegossen habe.
+- Cümle
+  - Eski: Forme indirekt: „Hat sie die Pflanzen gegossen?“
+  - Yeni: Forme indirekt: Er fragt: „Hat sie die Pflanzen gegossen?“
+
+#### `ob-vergangenheit-13` › 8
+Cümle: Forme indirekt: Sie fragt: „Hat es dort gebrannt?“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Sie fragt, ob es dort gebrannt habe.. Kaynakta gebrannt habe modeli var.
+  - Yeni: Doğru cevap: Sie fragt, ob es dort gebrannt habe. brennen haben ile kurulur; ob yan cümlesinde gebrannt habe sonda.
+- Cümle
+  - Eski: Forme indirekt: „Hat es dort gebrannt?“
+  - Yeni: Forme indirekt: Sie fragt: „Hat es dort gebrannt?“
+
+#### `ob-vergangenheit-13` › 9
+Cümle: Forme indirekt: Er fragt: „Sind die Eltern weggefahren?“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Er fragt, ob die Eltern weggefahren seien.. Kaynakta çoğul geçmiş sein: seien weggefahren.
+  - Yeni: Doğru cevap: Er fragt, ob die Eltern weggefahren seien. Özne çoğul (die Eltern) ve wegfahren sein ile kurulur → weggefahren seien; ob yan cümlesinde çekimli fiil sonda.
+- Cümle
+  - Eski: Forme indirekt: „Sind die Eltern weggefahren?“
+  - Yeni: Forme indirekt: Er fragt: „Sind die Eltern weggefahren?“
+
+#### `wortstellung-14` › 4
+Cümle: Welche Variante ist korrekt?
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Die Zeitung berichtet, es habe im Wald gebrannt.. Kaynakta bu yapının çekimli kısmı ana dolaylı cümlede ikinci pozisyondadır.
+  - Yeni: Doğru cevap: Die Zeitung berichtet, es habe im Wald gebrannt. dass'sız dolaylı anlatım ana cümle düzenindedir: özne es, çekimli habe ikinci sırada, Partizip gebrannt sonda.
+
+#### `wortstellung-14` › 7
+Cümle: Welche Variante ist korrekt?
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Sie meint, er müsse mehr lernen.. Bu kaynakta dass'sız dolaylı anlatım normal ana cümle benzeri sıra ile veriliyor.
+  - Yeni: Doğru cevap: Sie meint, er müsse mehr lernen. dass kullanılmadığında dolaylı ifade ana cümle sırasını izler: özne er + çekimli müsse ikinci sırada, mastar lernen sonda. Karşılaştır: Sie meint, dass er mehr lernen müsse.
+
+#### `praesens-vergangenheit-15` › 9
+Cümle: Er sagt: „Es hat gebrannt.“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Er sagt, es habe gebrannt.. Kaynakta geçmiş brennen → habe gebrannt.
+  - Yeni: Doğru cevap: Er sagt, es habe gebrannt. Doğrudan cümle Perfekt (hat gebrannt) → Konjunktiv I geçmişi: habe + Partizip II gebrannt.
+- Kabul edilen cevaplar
+  - Eski: `er sagt, es habe gebrannt`
+  - Yeni: `er sagt, es habe gebrannt` / `er sagt, dass es gebrannt habe`
+
+#### `berufliche-kontexte-16` › 5
+Cümle: Direkte Rede: Der Student sagt: „Ich werde mich anmelden.“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Der Student sagt, er werde sich anmelden.. Kaynakta werde yapısı.
+  - Yeni: Doğru cevap: Der Student sagt, er werde sich anmelden. „ich werde mich“ → er werde sich: zamirler yeni özneye göre değişir, werden → werde.
+- Cümle
+  - Eski: Direkte Rede: Der Student: „Ich werde mich anmelden.“
+  - Yeni: Direkte Rede: Der Student sagt: „Ich werde mich anmelden.“
+- Kabul edilen cevaplar
+  - Eski: `der student sagt, er werde sich anmelden`
+  - Yeni: `der student sagt, er werde sich anmelden` / `der student sagt, dass er sich anmelden werde`
+
+#### `berufliche-kontexte-16` › 7
+Cümle: Direkte Rede: Der Verkäufer behauptet: „Ich habe alles verkauft.“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Der Verkäufer behauptet, er habe alles verkauft.. Kaynakta aynı fiil yapısı var.
+  - Yeni: Doğru cevap: Der Verkäufer behauptet, er habe alles verkauft. Doğrudan cümle Perfekt (ich habe verkauft): „ich“ → er, haben → habe + verkauft.
+- Cümle
+  - Eski: Direkte Rede: Der Verkäufer: „Ich habe alles verkauft.“
+  - Yeni: Direkte Rede: Der Verkäufer behauptet: „Ich habe alles verkauft.“
+- Kabul edilen cevaplar
+  - Eski: `der verkaeufer behauptet, er habe alles verkauft` / `der verkäufer behauptet, er habe alles verkauft`
+  - Yeni: `der verkaeufer behauptet, er habe alles verkauft` / `der verkäufer behauptet, er habe alles verkauft` / `der verkäufer behauptet, dass er alles verkauft habe`
+
+#### `berufliche-kontexte-16` › 8
+Cümle: Direkte Rede: Der Nachbar erzählt: „Die Familie ist umgezogen.“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Der Nachbar erzählt, die Familie sei umgezogen.. Kaynakta umziehen → sei umgezogen.
+  - Yeni: Doğru cevap: Der Nachbar erzählt, die Familie sei umgezogen. umziehen sein ile kurulur; Indikativ ist → Konjunktiv I sei: sei umgezogen.
+- Cümle
+  - Eski: Direkte Rede: Der Nachbar: „Die Familie ist umgezogen.“
+  - Yeni: Direkte Rede: Der Nachbar erzählt: „Die Familie ist umgezogen.“
+- Kabul edilen cevaplar
+  - Eski: `der nachbar erzaehlt, die familie sei umgezogen` / `der nachbar erzählt, die familie sei umgezogen`
+  - Yeni: `der nachbar erzaehlt, die familie sei umgezogen` / `der nachbar erzählt, die familie sei umgezogen` / `der nachbar erzählt, dass die familie umgezogen sei`
+
+#### `berufliche-kontexte-16` › 9
+Cümle: Direkte Rede: Die Zeitung berichtet: „Es hat im Wald gebrannt.“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Die Zeitung berichtet, es habe im Wald gebrannt.. Kaynakta bu yapı doğrudan bulunuyor.
+  - Yeni: Doğru cevap: Die Zeitung berichtet, es habe im Wald gebrannt. brennen haben ile kurulur; hat → habe: es habe … gebrannt.
+- Cümle
+  - Eski: Direkte Rede: Die Zeitung: „Es hat im Wald gebrannt.“
+  - Yeni: Direkte Rede: Die Zeitung berichtet: „Es hat im Wald gebrannt.“
+- Kabul edilen cevaplar
+  - Eski: `die zeitung berichtet, es habe im wald gebrannt`
+  - Yeni: `die zeitung berichtet, es habe im wald gebrannt` / `die zeitung berichtet, dass es im wald gebrannt habe`
+
+#### `fehlerkorrektur-17` › 4
+Cümle: Korrigiere: „Die Zeitung berichtet, es sei im Wald gebrannt.“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Die Zeitung berichtet, es habe im Wald gebrannt.. Kaynakta brennen haben ile kurulur.
+  - Yeni: Doğru cevap: Die Zeitung berichtet, es habe im Wald gebrannt. brennen yer değiştirme bildirmez, Perfekt'i haben ile kurulur; bu yüzden sei değil habe: es habe … gebrannt.
+
+#### `fehlerkorrektur-17` › 9
+Cümle: Korrigiere: „Sie sagt, sie wäre müde.“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Sie sagt, sie sei müde.. Kaynak odaklı bu pakette Konjunktiv I sein biçimi “sei”dir.
+  - Yeni: Doğru cevap: Sie sagt, sie sei müde. wäre Konjunktiv II'dir. sein fiilinin Konjunktiv I biçimi (sei) Indikativ'den (ist) farklı olduğu için dolaylı anlatımda sei kullanılır.
+
+#### `b2-mix-18` › 0
+Cümle: Die Zeugin sagt, sie ___ nichts gesehen.
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: habe. Kaynakta geçmiş haben → habe.
+  - Yeni: Doğru cevap: habe. Partizip gesehen var: Konjunktiv I geçmişi habe + Partizip II. hat Indikativ, hätte Konjunktiv II'dir.
+
+#### `b2-mix-18` › 3
+Cümle: Er sagt, er ___ keine Tabletten.
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: nehme. Kaynakta nehmen → nehme.
+  - Yeni: Doğru cevap: nehme. Konjunktiv I'de ünlü değişmez: nehmen → er nehme. nimmt Indikativ, nähme Konjunktiv II'dir.
+
+#### `b2-mix-18` › 7
+Cümle: Sie meint, ihr Bruder ___ zu viel.
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: esse. Kaynakta essen → esse.
+  - Yeni: Doğru cevap: esse. Konjunktiv I mastar kökünden kurulur: essen → er esse. isst Indikativ, äße Konjunktiv II'dir.
+
+#### `b2-mix-18` › 9
+Cümle: Sie fragt, ob er das Formular ___ ___.
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: ausgefüllt habe. Kaynakta ob + ausgefüllt habe.
+  - Yeni: Doğru cevap: ausgefüllt habe. ob yan cümlesinde çekimli fiil sona gider: Partizip ausgefüllt + habe. ausgefüllt hätte Konjunktiv II'dir; hat ausgefüllt yan cümle sırasına uymaz.
+
+#### `kurze-berichte-19` › 0
+Cümle: Formuliere indirekt: „Ich habe keine Probleme“, sagt der Mitarbeiter.
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu. Konuşma cümlesindeki gibi 'aktarılan cümle, sagt X' sırası da doğru.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Der Mitarbeiter sagt, er habe keine Probleme.. Kaynağın habe kalıbı.
+  - Yeni: Doğru cevap: Der Mitarbeiter sagt, er habe keine Probleme. „ich“ → er; haben → er habe (Indikativ: hat).
+- Kabul edilen cevaplar
+  - Eski: `der mitarbeiter sagt, er habe keine probleme`
+  - Yeni: `der mitarbeiter sagt, er habe keine probleme` / `der mitarbeiter sagt, dass er keine probleme habe` / `er habe keine probleme, sagt der mitarbeiter`
+
+#### `kurze-berichte-19` › 1
+Cümle: Formuliere indirekt: „Ich bin gleich da“, antwortet die Kollegin.
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu. Konuşma cümlesindeki gibi 'aktarılan cümle, sagt X' sırası da doğru.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Die Kollegin antwortet, sie sei gleich da.. Kaynakta sei gleich da örneği var.
+  - Yeni: Doğru cevap: Die Kollegin antwortet, sie sei gleich da. „ich“ → sie; sein → sie sei (Indikativ: ist).
+- Kabul edilen cevaplar
+  - Eski: `die kollegin antwortet, sie sei gleich da`
+  - Yeni: `die kollegin antwortet, sie sei gleich da` / `die kollegin antwortet, dass sie gleich da sei` / `sie sei gleich da, antwortet die kollegin`
+
+#### `kurze-berichte-19` › 2
+Cümle: Formuliere indirekt: „Ich kann fünf Sprachen sprechen“, behauptet er.
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu. Konuşma cümlesindeki gibi 'aktarılan cümle, sagt X' sırası da doğru.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Er behauptet, er könne fünf Sprachen sprechen.. Kaynakta könne + Infinitiv.
+  - Yeni: Doğru cevap: Er behauptet, er könne fünf Sprachen sprechen. „ich“ → er; können → er könne, mastar sprechen sonda.
+- Kabul edilen cevaplar
+  - Eski: `er behauptet, er koenne fuenf sprachen sprechen` / `er behauptet, er könne fünf sprachen sprechen`
+  - Yeni: `er behauptet, er koenne fuenf sprachen sprechen` / `er behauptet, er könne fünf sprachen sprechen` / `er behauptet, dass er fünf sprachen sprechen könne` / `er könne fünf sprachen sprechen, behauptet er`
+
+#### `kurze-berichte-19` › 3
+Cümle: Formuliere indirekt: „Ich will morgen anfangen“, erklärt sie.
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu. Konuşma cümlesindeki gibi 'aktarılan cümle, sagt X' sırası da doğru.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Sie erklärt, sie wolle morgen anfangen.. Kaynakta wolle yapısı.
+  - Yeni: Doğru cevap: Sie erklärt, sie wolle morgen anfangen. „ich“ → sie; wollen → sie wolle, mastar anfangen sonda.
+- Kabul edilen cevaplar
+  - Eski: `sie erklaert, sie wolle morgen anfangen` / `sie erklärt, sie wolle morgen anfangen`
+  - Yeni: `sie erklaert, sie wolle morgen anfangen` / `sie erklärt, sie wolle morgen anfangen` / `sie erklärt, dass sie morgen anfangen wolle` / `sie wolle morgen anfangen, erklärt sie`
+
+#### `kurze-berichte-19` › 4
+Cümle: Formuliere indirekt: „Ich habe den Termin verschoben“, sagt der Professor.
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu. Konuşma cümlesindeki gibi 'aktarılan cümle, sagt X' sırası da doğru.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Der Professor sagt, er habe den Termin verschoben.. Kaynakta habe ... verschoben.
+  - Yeni: Doğru cevap: Der Professor sagt, er habe den Termin verschoben. Perfekt (ich habe verschoben) → er habe + Partizip II verschoben.
+- Kabul edilen cevaplar
+  - Eski: `der professor sagt, er habe den termin verschoben`
+  - Yeni: `der professor sagt, er habe den termin verschoben` / `der professor sagt, dass er den termin verschoben habe` / `er habe den termin verschoben, sagt der professor`
+
+#### `kurze-berichte-19` › 5
+Cümle: Formuliere indirekt: „Ich bin zum Arzt gegangen“, erzählt er.
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu. Konuşma cümlesindeki gibi 'aktarılan cümle, sagt X' sırası da doğru.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Er erzählt, er sei zum Arzt gegangen.. Kaynakta gegangen sei / sei gegangen.
+  - Yeni: Doğru cevap: Er erzählt, er sei zum Arzt gegangen. gehen sein ile kurulur: ich bin gegangen → er sei gegangen.
+- Kabul edilen cevaplar
+  - Eski: `er erzaehlt, er sei zum arzt gegangen` / `er erzählt, er sei zum arzt gegangen`
+  - Yeni: `er erzaehlt, er sei zum arzt gegangen` / `er erzählt, er sei zum arzt gegangen` / `er erzählt, dass er zum arzt gegangen sei` / `er sei zum arzt gegangen, erzählt er`
+
+#### `kurze-berichte-19` › 6
+Cümle: Formuliere indirekt: „Ich habe die Pflanzen gegossen“, sagt die Nachbarin.
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu. Konuşma cümlesindeki gibi 'aktarılan cümle, sagt X' sırası da doğru.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Die Nachbarin sagt, sie habe die Pflanzen gegossen.. Kaynakta gegossen habe.
+  - Yeni: Doğru cevap: Die Nachbarin sagt, sie habe die Pflanzen gegossen. gießen haben ile kurulur: ich habe gegossen → sie habe gegossen.
+- Kabul edilen cevaplar
+  - Eski: `die nachbarin sagt, sie habe die pflanzen gegossen`
+  - Yeni: `die nachbarin sagt, sie habe die pflanzen gegossen` / `die nachbarin sagt, dass sie die pflanzen gegossen habe` / `sie habe die pflanzen gegossen, sagt die nachbarin`
+
+#### `kurze-berichte-19` › 7
+Cümle: Formuliere indirekt: „Wir sind weggefahren“, erklären die Eltern.
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu. Konuşma cümlesindeki gibi 'aktarılan cümle, sagt X' sırası da doğru.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Die Eltern erklären, sie seien weggefahren.. Kaynakta çoğul seien weggefahren.
+  - Yeni: Doğru cevap: Die Eltern erklären, sie seien weggefahren. „wir“ → sie (çoğul); wegfahren sein ile kurulur → sie seien weggefahren.
+- Kabul edilen cevaplar
+  - Eski: `die eltern erklaeren, sie seien weggefahren` / `die eltern erklären, sie seien weggefahren`
+  - Yeni: `die eltern erklaeren, sie seien weggefahren` / `die eltern erklären, sie seien weggefahren` / `die eltern erklären, dass sie weggefahren seien` / `sie seien weggefahren, erklären die eltern`
+
+#### `kurze-berichte-19` › 8
+Cümle: Formuliere indirekt: „Es hat im Wald gebrannt“, berichtet die Zeitung.
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu. Konuşma cümlesindeki gibi 'aktarılan cümle, sagt X' sırası da doğru.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Die Zeitung berichtet, es habe im Wald gebrannt.. Kaynakta birebir yapı türü var.
+  - Yeni: Doğru cevap: Die Zeitung berichtet, es habe im Wald gebrannt. Perfekt hat gebrannt → Konjunktiv I geçmişi habe gebrannt.
+- Kabul edilen cevaplar
+  - Eski: `die zeitung berichtet, es habe im wald gebrannt`
+  - Yeni: `die zeitung berichtet, es habe im wald gebrannt` / `die zeitung berichtet, dass es im wald gebrannt habe` / `es habe im wald gebrannt, berichtet die zeitung`
+
+#### `kurze-berichte-19` › 9
+Cümle: Formuliere indirekt: „Ich werde mich anmelden“, sagt die Studentin.
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu. Konuşma cümlesindeki gibi 'aktarılan cümle, sagt X' sırası da doğru.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Die Studentin sagt, sie werde sich anmelden.. Kaynakta werde + Infinitiv.
+  - Yeni: Doğru cevap: Die Studentin sagt, sie werde sich anmelden. „ich werde mich“ → sie werde sich; werden → werde + Infinitiv.
+- Kabul edilen cevaplar
+  - Eski: `die studentin sagt, sie werde sich anmelden`
+  - Yeni: `die studentin sagt, sie werde sich anmelden` / `die studentin sagt, dass sie sich anmelden werde` / `sie werde sich anmelden, sagt die studentin`
+
+#### `master-20` › 3
+Cümle: Formuliere indirekt mit „ob“: Sie fragt ihn: „Hast du das Formular ausgefüllt?“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi. Ayrıca q3'te düz bir cümle ('Ich habe … ausgefüllt.') 'als ob-Frage' isteniyordu; ob için doğrudan soru gerekir.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Sie fragt, ob er das Formular ausgefüllt habe.. Kaynakta ob + ausgefüllt habe yapısı doğrudan bulunur.
+  - Yeni: Doğru cevap: Sie fragt, ob er das Formular ausgefüllt habe. Evet/hayır sorusu ob ile aktarılır; „du“ → er; ob yan cümlesinde Partizip ausgefüllt + çekimli habe sonda.
+- Cümle
+  - Eski: Formuliere indirekt: „Ich habe das Formular ausgefüllt.“ als ob-Frage
+  - Yeni: Formuliere indirekt mit „ob“: Sie fragt ihn: „Hast du das Formular ausgefüllt?“
+
+#### `master-20` › 4
+Cümle: Formuliere indirekt: Sie sagt: „Es ist nichts passiert.“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Sie sagt, es sei nichts passiert.. Kaynakta sei nichts passiert.
+  - Yeni: Doğru cevap: Sie sagt, es sei nichts passiert. passieren sein ile kurulur: es ist passiert → es sei passiert.
+- Cümle
+  - Eski: Formuliere indirekt: „Es ist nichts passiert.“
+  - Yeni: Formuliere indirekt: Sie sagt: „Es ist nichts passiert.“
+- Kabul edilen cevaplar
+  - Eski: `sie sagt, es sei nichts passiert`
+  - Yeni: `sie sagt, es sei nichts passiert` / `sie sagt, dass nichts passiert sei`
+
+#### `master-20` › 5
+Cümle: Formuliere indirekt: Er meint: „Ich habe die richtige Entscheidung getroffen.“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Er meint, er habe die richtige Entscheidung getroffen.. Kaynakta habe ... getroffen.
+  - Yeni: Doğru cevap: Er meint, er habe die richtige Entscheidung getroffen. Perfekt (ich habe getroffen) → er habe + getroffen.
+- Cümle
+  - Eski: Formuliere indirekt: „Ich habe die richtige Entscheidung getroffen.“
+  - Yeni: Formuliere indirekt: Er meint: „Ich habe die richtige Entscheidung getroffen.“
+- Kabul edilen cevaplar
+  - Eski: `er meint, er habe die richtige entscheidung getroffen`
+  - Yeni: `er meint, er habe die richtige entscheidung getroffen` / `er meint, dass er die richtige entscheidung getroffen habe`
+
+#### `master-20` › 6
+Cümle: Formuliere indirekt: Er sagt: „Ich nehme keine Medikamente und trinke viel Wasser.“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Er sagt, er nehme keine Medikamente und trinke viel Wasser.. Kaynakta nehme ve geçmişte trinken örneği var; Präsens trinke aynı Konjunktiv-I kalıbını izler.
+  - Yeni: Doğru cevap: Er sagt, er nehme keine Medikamente und trinke viel Wasser. İki Präsens fiil de Konjunktiv I olur: nehmen → nehme (nimmt değil), trinken → trinke.
+- Cümle
+  - Eski: Formuliere indirekt: „Ich nehme keine Medikamente und trinke viel Wasser.“
+  - Yeni: Formuliere indirekt: Er sagt: „Ich nehme keine Medikamente und trinke viel Wasser.“
+- Kabul edilen cevaplar
+  - Eski: `er sagt, er nehme keine medikamente und trinke viel wasser`
+  - Yeni: `er sagt, er nehme keine medikamente und trinke viel wasser` / `er sagt, dass er keine medikamente nehme und viel wasser trinke`
+
+#### `master-20` › 7
+Cümle: Formuliere indirekt: Sie erklärt: „Ich bin im Hotel geblieben.“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Sie erklärt, sie sei im Hotel geblieben.. Kaynakta sei ... geblieben.
+  - Yeni: Doğru cevap: Sie erklärt, sie sei im Hotel geblieben. bleiben sein ile kurulur: ich bin geblieben → sie sei geblieben.
+- Cümle
+  - Eski: Formuliere indirekt: „Ich bin im Hotel geblieben.“
+  - Yeni: Formuliere indirekt: Sie erklärt: „Ich bin im Hotel geblieben.“
+- Kabul edilen cevaplar
+  - Eski: `sie erklaert, sie sei im hotel geblieben` / `sie erklärt, sie sei im hotel geblieben`
+  - Yeni: `sie erklaert, sie sei im hotel geblieben` / `sie erklärt, sie sei im hotel geblieben` / `sie erklärt, dass sie im hotel geblieben sei`
+
+#### `master-20` › 8
+Cümle: Korrigiere vollständig: „Er sagt, er hat alles verkauft und wird morgen anrufen.“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Er sagt, er habe alles verkauft und werde morgen anrufen.. Kaynakta habe verkauft ve werde + Infinitiv yapıları destekleniyor.
+  - Yeni: Doğru cevap: Er sagt, er habe alles verkauft und werde morgen anrufen. Indikativ hat → habe (geçmiş), wird → werde (gelecek); ikisi de Konjunktiv I'e çevrilir.
+
+#### `master-20` › 9
+Cümle: Formuliere indirekt: Er fragt: „Darf ich heute länger bleiben?“
+
+Gerekçe: Boş 'Kaynakta…' gerekçesi yerine özneye ve fiile özgü Konjunktiv-I kuralı yazıldı. Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Er fragt, ob er heute länger bleiben dürfe.. Kaynakta ob + dürfe yapısı doğrudan bulunur.
+  - Yeni: Doğru cevap: Er fragt, ob er heute länger bleiben dürfe. Evet/hayır sorusu ob ile aktarılır; ob yan cümlesinde dürfe en sonda, mastar bleiben ondan önce.
+- Cümle
+  - Eski: Formuliere indirekt: „Darf ich heute länger bleiben?“
+  - Yeni: Formuliere indirekt: Er fragt: „Darf ich heute länger bleiben?“
+
+#### `ob-praesens-12` › 1
+Cümle: Forme indirekt: Sie fragt: „Kann ich morgen kommen?“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi.
+
+- Cümle
+  - Eski: Forme indirekt: „Kann ich morgen kommen?“
+  - Yeni: Forme indirekt: Sie fragt: „Kann ich morgen kommen?“
+
+#### `ob-praesens-12` › 2
+Cümle: Forme indirekt: Er fragt: „Ist der Chef da?“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi.
+
+- Cümle
+  - Eski: Forme indirekt: „Ist der Chef da?“
+  - Yeni: Forme indirekt: Er fragt: „Ist der Chef da?“
+
+#### `ob-praesens-12` › 3
+Cümle: Forme indirekt: Er fragt: „Hat sie Zeit?“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi.
+
+- Cümle
+  - Eski: Forme indirekt: „Hat sie Zeit?“
+  - Yeni: Forme indirekt: Er fragt: „Hat sie Zeit?“
+
+#### `ob-praesens-12` › 4
+Cümle: Forme indirekt: Sie fragt: „Will Peter mitkommen?“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi.
+
+- Cümle
+  - Eski: Forme indirekt: „Will Peter mitkommen?“
+  - Yeni: Forme indirekt: Sie fragt: „Will Peter mitkommen?“
+
+#### `ob-praesens-12` › 5
+Cümle: Forme indirekt: Er fragt: „Muss ich warten?“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi.
+
+- Cümle
+  - Eski: Forme indirekt: „Muss ich warten?“
+  - Yeni: Forme indirekt: Er fragt: „Muss ich warten?“
+
+#### `ob-praesens-12` › 6
+Cümle: Forme indirekt: Sie fragt: „Kommt der Bus pünktlich?“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi.
+
+- Cümle
+  - Eski: Forme indirekt: „Kommt der Bus pünktlich?“
+  - Yeni: Forme indirekt: Sie fragt: „Kommt der Bus pünktlich?“
+
+#### `ob-praesens-12` › 7
+Cümle: Forme indirekt: Die Ärztin fragt: „Nimmt er Medikamente?“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi.
+
+- Cümle
+  - Eski: Forme indirekt: „Nimmt er Medikamente?“
+  - Yeni: Forme indirekt: Die Ärztin fragt: „Nimmt er Medikamente?“
+
+#### `ob-praesens-12` › 8
+Cümle: Forme indirekt: Er fragt: „Spielt sie heute?“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi.
+
+- Cümle
+  - Eski: Forme indirekt: „Spielt sie heute?“
+  - Yeni: Forme indirekt: Er fragt: „Spielt sie heute?“
+
+#### `ob-praesens-12` › 9
+Cümle: Forme indirekt: Sie fragt: „Wird er anrufen?“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi.
+
+- Cümle
+  - Eski: Forme indirekt: „Wird er anrufen?“
+  - Yeni: Forme indirekt: Sie fragt: „Wird er anrufen?“
+
+#### `ob-vergangenheit-13` › 3
+Cümle: Forme indirekt: Er fragt: „Ist der Zug angekommen?“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi.
+
+- Cümle
+  - Eski: Forme indirekt: „Ist der Zug angekommen?“
+  - Yeni: Forme indirekt: Er fragt: „Ist der Zug angekommen?“
+
+#### `ob-vergangenheit-13` › 4
+Cümle: Forme indirekt: Er fragt: „Hat sie alles verkauft?“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi.
+
+- Cümle
+  - Eski: Forme indirekt: „Hat sie alles verkauft?“
+  - Yeni: Forme indirekt: Er fragt: „Hat sie alles verkauft?“
+
+#### `ob-vergangenheit-13` › 5
+Cümle: Forme indirekt: Sie fragt: „Sind die Gäste gegangen?“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi.
+
+- Cümle
+  - Eski: Forme indirekt: „Sind die Gäste gegangen?“
+  - Yeni: Forme indirekt: Sie fragt: „Sind die Gäste gegangen?“
+
+#### `ob-vergangenheit-13` › 6
+Cümle: Forme indirekt: Sie fragt: „Hat er die Nachricht gelesen?“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi.
+
+- Cümle
+  - Eski: Forme indirekt: „Hat er die Nachricht gelesen?“
+  - Yeni: Forme indirekt: Sie fragt: „Hat er die Nachricht gelesen?“
+
+#### `ob-vergangenheit-13` › 7
+Cümle: Forme indirekt: Er fragt: „Ist sie zu Hause geblieben?“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi.
+
+- Cümle
+  - Eski: Forme indirekt: „Ist sie zu Hause geblieben?“
+  - Yeni: Forme indirekt: Er fragt: „Ist sie zu Hause geblieben?“
+
+#### `berufliche-kontexte-16` › 0
+Cümle: Direkte Rede: Die Sprecherin erklärt: „Die Daten sind korrekt.“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Cümle
+  - Eski: Direkte Rede: Die Sprecherin: „Die Daten sind korrekt.“
+  - Yeni: Direkte Rede: Die Sprecherin erklärt: „Die Daten sind korrekt.“
+- Kabul edilen cevaplar
+  - Eski: `die sprecherin erklaert, die daten seien korrekt` / `die sprecherin erklärt, die daten seien korrekt`
+  - Yeni: `die sprecherin erklaert, die daten seien korrekt` / `die sprecherin erklärt, die daten seien korrekt` / `die sprecherin erklärt, dass die daten korrekt seien`
+
+#### `berufliche-kontexte-16` › 1
+Cümle: Direkte Rede: Der Arzt sagt: „Der Patient muss sich schonen.“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Cümle
+  - Eski: Direkte Rede: Der Arzt: „Der Patient muss sich schonen.“
+  - Yeni: Direkte Rede: Der Arzt sagt: „Der Patient muss sich schonen.“
+- Kabul edilen cevaplar
+  - Eski: `der arzt sagt, der patient muesse sich schonen` / `der arzt sagt, der patient müsse sich schonen`
+  - Yeni: `der arzt sagt, der patient muesse sich schonen` / `der arzt sagt, der patient müsse sich schonen` / `der arzt sagt, dass der patient sich schonen müsse` / `der arzt sagt, dass sich der patient schonen müsse`
+
+#### `berufliche-kontexte-16` › 2
+Cümle: Direkte Rede: Der Manager erklärt: „Die Firma hat investiert.“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Cümle
+  - Eski: Direkte Rede: Der Manager: „Die Firma hat investiert.“
+  - Yeni: Direkte Rede: Der Manager erklärt: „Die Firma hat investiert.“
+- Kabul edilen cevaplar
+  - Eski: `der manager erklaert, die firma habe investiert` / `der manager erklärt, die firma habe investiert`
+  - Yeni: `der manager erklaert, die firma habe investiert` / `der manager erklärt, die firma habe investiert` / `der manager erklärt, dass die firma investiert habe`
+
+#### `berufliche-kontexte-16` › 3
+Cümle: Direkte Rede: Die Polizei berichtet: „Der Fahrer ist geflohen.“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Cümle
+  - Eski: Direkte Rede: Die Polizei: „Der Fahrer ist geflohen.“
+  - Yeni: Direkte Rede: Die Polizei berichtet: „Der Fahrer ist geflohen.“
+- Kabul edilen cevaplar
+  - Eski: `die polizei berichtet, der fahrer sei geflohen`
+  - Yeni: `die polizei berichtet, der fahrer sei geflohen` / `die polizei berichtet, dass der fahrer geflohen sei`
+
+#### `berufliche-kontexte-16` › 4
+Cümle: Direkte Rede: Die Zeugin sagt: „Ich habe nichts gehört.“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Cümle
+  - Eski: Direkte Rede: Die Zeugin: „Ich habe nichts gehört.“
+  - Yeni: Direkte Rede: Die Zeugin sagt: „Ich habe nichts gehört.“
+- Kabul edilen cevaplar
+  - Eski: `die zeugin sagt, sie habe nichts gehoert` / `die zeugin sagt, sie habe nichts gehört`
+  - Yeni: `die zeugin sagt, sie habe nichts gehoert` / `die zeugin sagt, sie habe nichts gehört` / `die zeugin sagt, dass sie nichts gehört habe`
+
+#### `berufliche-kontexte-16` › 6
+Cümle: Direkte Rede: Die Kundin behauptet: „Das Gerät funktioniert nicht.“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Cümle
+  - Eski: Direkte Rede: Die Kundin: „Das Gerät funktioniert nicht.“
+  - Yeni: Direkte Rede: Die Kundin behauptet: „Das Gerät funktioniert nicht.“
+- Kabul edilen cevaplar
+  - Eski: `die kundin behauptet, das geraet funktioniere nicht` / `die kundin behauptet, das gerät funktioniere nicht`
+  - Yeni: `die kundin behauptet, das geraet funktioniere nicht` / `die kundin behauptet, das gerät funktioniere nicht` / `die kundin behauptet, dass das gerät nicht funktioniere`
+
+#### `master-20` › 0
+Cümle: Formuliere indirekt: Er sagt: „Ich habe gestern mit dem Chef gesprochen und werde morgen entscheiden.“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Cümle
+  - Eski: Formuliere indirekt: „Ich habe gestern mit dem Chef gesprochen und werde morgen entscheiden.“
+  - Yeni: Formuliere indirekt: Er sagt: „Ich habe gestern mit dem Chef gesprochen und werde morgen entscheiden.“
+- Kabul edilen cevaplar
+  - Eski: `er sagt, er habe gestern mit dem chef gesprochen und werde morgen entscheiden`
+  - Yeni: `er sagt, er habe gestern mit dem chef gesprochen und werde morgen entscheiden` / `er sagt, dass er gestern mit dem chef gesprochen habe und morgen entscheiden werde`
+
+#### `master-20` › 1
+Cümle: Formuliere indirekt: Sie sagt: „Mein Vater ist weggefahren und kommt am Sonntag zurück.“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Cümle
+  - Eski: Formuliere indirekt: „Mein Vater ist weggefahren und kommt am Sonntag zurück.“
+  - Yeni: Formuliere indirekt: Sie sagt: „Mein Vater ist weggefahren und kommt am Sonntag zurück.“
+- Kabul edilen cevaplar
+  - Eski: `sie sagt, ihr vater sei weggefahren und komme am sonntag zurueck` / `sie sagt, ihr vater sei weggefahren und komme am sonntag zurück`
+  - Yeni: `sie sagt, ihr vater sei weggefahren und komme am sonntag zurueck` / `sie sagt, ihr vater sei weggefahren und komme am sonntag zurück` / `sie sagt, dass ihr vater weggefahren sei und am sonntag zurückkomme`
+
+#### `master-20` › 2
+Cümle: Formuliere indirekt: Er sagt: „Ich kann heute nicht kommen, weil ich arbeiten muss.“
+
+Gerekçe: Yönergede aktaran kişi/fiil verilmiyordu, ama cevap belirli bir özne ve fiil (ör. 'Er fragt', 'Die Sprecherin erklärt') istiyordu; öğrenci bunu tahmin edemez. Konuşan kişi ve fiil yönergeye eklendi. dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Cümle
+  - Eski: Formuliere indirekt: „Ich kann heute nicht kommen, weil ich arbeiten muss.“
+  - Yeni: Formuliere indirekt: Er sagt: „Ich kann heute nicht kommen, weil ich arbeiten muss.“
+- Kabul edilen cevaplar
+  - Eski: `er sagt, er koenne heute nicht kommen, weil er arbeiten muesse` / `er sagt, er könne heute nicht kommen, weil er arbeiten müsse`
+  - Yeni: `er sagt, er koenne heute nicht kommen, weil er arbeiten muesse` / `er sagt, er könne heute nicht kommen, weil er arbeiten müsse` / `er sagt, dass er heute nicht kommen könne, weil er arbeiten müsse`
+
+#### `direkt-indirekt-praesens-7` › 1
+Cümle: Sie behauptet: „Ich bin unschuldig.“ → indirekt
+
+Gerekçe: dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `sie behauptet, sie sei unschuldig`
+  - Yeni: `sie behauptet, sie sei unschuldig` / `sie behauptet, dass sie unschuldig sei`
+
+#### `direkt-indirekt-praesens-7` › 2
+Cümle: Er erklärt: „Ich kann nicht kommen.“ → indirekt
+
+Gerekçe: dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `er erklaert, er koenne nicht kommen` / `er erklärt, er könne nicht kommen`
+  - Yeni: `er erklaert, er koenne nicht kommen` / `er erklärt, er könne nicht kommen` / `er erklärt, dass er nicht kommen könne`
+
+#### `direkt-indirekt-praesens-7` › 3
+Cümle: Sie meint: „Mein Bruder arbeitet zu viel.“ → indirekt
+
+Gerekçe: dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `sie meint, ihr bruder arbeite zu viel`
+  - Yeni: `sie meint, ihr bruder arbeite zu viel` / `sie meint, dass ihr bruder zu viel arbeite`
+
+#### `direkt-indirekt-praesens-7` › 5
+Cümle: Sie berichtet: „Der Zug fährt pünktlich.“ → indirekt
+
+Gerekçe: dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `sie berichtet, der zug fahre puenktlich` / `sie berichtet, der zug fahre pünktlich`
+  - Yeni: `sie berichtet, der zug fahre puenktlich` / `sie berichtet, der zug fahre pünktlich` / `sie berichtet, dass der zug pünktlich fahre`
+
+#### `direkt-indirekt-praesens-7` › 6
+Cümle: Der Arzt erklärt: „Der Patient soll sich ausruhen.“ → indirekt
+
+Gerekçe: dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `der arzt erklaert, der patient solle sich ausruhen` / `der arzt erklärt, der patient solle sich ausruhen`
+  - Yeni: `der arzt erklaert, der patient solle sich ausruhen` / `der arzt erklärt, der patient solle sich ausruhen` / `der arzt erklärt, dass der patient sich ausruhen solle` / `der arzt erklärt, dass sich der patient ausruhen solle`
+
+#### `direkt-indirekt-praesens-7` › 8
+Cümle: Er behauptet: „Meine Kollegen sind unzufrieden.“ → indirekt
+
+Gerekçe: dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `er behauptet, seine kollegen seien unzufrieden`
+  - Yeni: `er behauptet, seine kollegen seien unzufrieden` / `er behauptet, dass seine kollegen unzufrieden seien`
+
+#### `direkt-indirekt-praesens-7` › 9
+Cümle: Sie erzählt: „Ich liebe diese Stadt.“ → indirekt
+
+Gerekçe: dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `sie erzaehlt, sie liebe diese stadt` / `sie erzählt, sie liebe diese stadt`
+  - Yeni: `sie erzaehlt, sie liebe diese stadt` / `sie erzählt, sie liebe diese stadt` / `sie erzählt, dass sie diese stadt liebe`
+
+#### `praesens-vergangenheit-15` › 0
+Cümle: Er sagt: „Ich arbeite viel.“
+
+Gerekçe: dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `er sagt, er arbeite viel`
+  - Yeni: `er sagt, er arbeite viel` / `er sagt, dass er viel arbeite`
+
+#### `praesens-vergangenheit-15` › 1
+Cümle: Er sagt: „Ich habe viel gearbeitet.“
+
+Gerekçe: dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `er sagt, er habe viel gearbeitet`
+  - Yeni: `er sagt, er habe viel gearbeitet` / `er sagt, dass er viel gearbeitet habe`
+
+#### `praesens-vergangenheit-15` › 2
+Cümle: Sie sagt: „Ich bin müde.“
+
+Gerekçe: dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `sie sagt, sie sei muede` / `sie sagt, sie sei müde`
+  - Yeni: `sie sagt, sie sei muede` / `sie sagt, sie sei müde` / `sie sagt, dass sie müde sei`
+
+#### `praesens-vergangenheit-15` › 3
+Cümle: Sie sagt: „Ich bin früh gekommen.“
+
+Gerekçe: dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `sie sagt, sie sei frueh gekommen` / `sie sagt, sie sei früh gekommen`
+  - Yeni: `sie sagt, sie sei frueh gekommen` / `sie sagt, sie sei früh gekommen` / `sie sagt, dass sie früh gekommen sei`
+
+#### `praesens-vergangenheit-15` › 4
+Cümle: Er meint: „Ich kann helfen.“
+
+Gerekçe: dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `er meint, er koenne helfen` / `er meint, er könne helfen`
+  - Yeni: `er meint, er koenne helfen` / `er meint, er könne helfen` / `er meint, dass er helfen könne`
+
+#### `praesens-vergangenheit-15` › 5
+Cümle: Er berichtet: „Ich habe geholfen.“
+
+Gerekçe: dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `er berichtet, er habe geholfen`
+  - Yeni: `er berichtet, er habe geholfen` / `er berichtet, dass er geholfen habe`
+
+#### `praesens-vergangenheit-15` › 6
+Cümle: Sie sagt: „Meine Eltern sind weg.“
+
+Gerekçe: dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `sie sagt, ihre eltern seien weg`
+  - Yeni: `sie sagt, ihre eltern seien weg` / `sie sagt, dass ihre eltern weg seien`
+
+#### `praesens-vergangenheit-15` › 7
+Cümle: Sie sagt: „Meine Eltern sind weggefahren.“
+
+Gerekçe: dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `sie sagt, ihre eltern seien weggefahren`
+  - Yeni: `sie sagt, ihre eltern seien weggefahren` / `sie sagt, dass ihre eltern weggefahren seien`
+
+#### `praesens-vergangenheit-15` › 8
+Cümle: Er sagt: „Es brennt.“
+
+Gerekçe: dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv-I aktarımıdır; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `er sagt, es brenne`
+  - Yeni: `er sagt, es brenne` / `er sagt, dass es brenne`

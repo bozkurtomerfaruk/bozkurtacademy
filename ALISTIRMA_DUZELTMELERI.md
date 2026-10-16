@@ -6,19 +6,29 @@ Notlar:
 
 - Sitenin varsayılan dili Türkçe olduğu için açıklama düzeltmeleri `explanations.tr` alanında yapıldı. Cevap, cümle veya seçenek değiştiğinde `de` ve `en` açıklamaları da yeniden yazıldı (aksi halde eski cevabı söyleyeceklerdi).
 - Kök dizindeki `w-fragen.json` sitede kullanılmıyor (katalogda yok); incelenmedi. Kullanılan sürüm `data/a1/w-fragen.json`.
+- Yazılı sorularda yalnızca kesin doğru olan eşdeğer cevaplar kabul listesine eklendi (ör. başka geçerli kelime sırası, -s/-es Genitiv, dass-varyantı). Virgül konusunda sorunun mevcut kuralı korundu: liste zaten virgülsüz yazımı kabul ediyorsa yeni varyant iki yazımla eklendi; yalnızca virgüllü yazımı kabul eden sorulara virgülsüz cevap eklenmedi.
+- "Onay bekleyenler" bölümündeki sorular değiştirilmedi; karar sizde.
+
+## Sık görülen hata türleri
+
+1. Şablon açıklamalar: yanlış özne/fiil/cinsiyet/hâl alıntısı, başka soruya ait parça veya soruyla ilgisiz kural kuyruğu.
+2. Gerekçesiz açıklamalar: yalnızca "Kaynakta…", "PDF'de…" ya da "Wo? → Dativ" gibi kural vermeyen metinler.
+3. Türkçe açıklama alanında Almanca/İngilizce cümle veya kelimeler.
+4. Birden fazla doğru şık: bağlamsız cümlede iki şık da geçerliydi (ör. Präsens/Präteritum, für/gegen, sowohl/weder); bağlam eklendi veya çeldirici değiştirildi.
+5. Veri hataları: liste olarak kaydedilmiş doğru cevap/şıklar, kelimeyi tekrarlayan şıklar, cevabı veren ipuçları.
+6. Yazılı sorularda reddedilen doğru cevaplar (ekranda gösterilen doğru cevabın bile kabul edilmediği 6 soru dahil).
 
 ## Toplam
 
-- İncelenen konu: 45 / 48
-- İncelenen soru: 7908
-- Düzeltilen soru: 1225
-- Onay bekleyen: 61
+- İncelenen konu: 48 / 48
+- İncelenen soru: 8528
+- Düzeltilen soru: 1363
+- Onay bekleyen: 80
 
 | Konu | İncelenen | Düzeltilen | Onay bekleyen |
 |---|---:|---:|---:|
-| `a2/reflexive-verben` | 100 | 13 | 2 |
-| `a1/artikel` | 120 | 6 | 0 |
 | `a1/akkusativ` | 240 | 23 | 0 |
+| `a1/artikel` | 120 | 6 | 0 |
 | `a1/imperativ` | 200 | 74 | 0 |
 | `a1/lokale-praepositionen` | 100 | 5 | 1 |
 | `a1/modalverben` | 240 | 10 | 0 |
@@ -41,26 +51,30 @@ Notlar:
 | `a2/konjunktiv-ii` | 150 | 8 | 0 |
 | `a2/nebensaetze` | 200 | 10 | 2 |
 | `a2/praeteritum` | 180 | 13 | 1 |
+| `a2/reflexive-verben` | 100 | 13 | 2 |
 | `a2/verben-dativ-akkusativ` | 100 | 4 | 0 |
 | `a2/verben-praepositionen` | 180 | 44 | 3 |
 | `a2/wechselpraepositionen` | 100 | 37 | 1 |
-| `b1/pronominaladverbien` | 100 | 27 | 1 |
-| `b1/relativsaetze` | 180 | 10 | 3 |
-| `b1/satzstellung-b1` | 100 | 2 | 0 |
-| `b2/nominalisierung` | 200 | 60 | 4 |
-| `b2/partizip-i` | 200 | 14 | 1 |
-| `b2/partizip-ii` | 200 | 16 | 0 |
-| `b2/passiv-varianten` | 200 | 36 | 0 |
 | `b1/genitiv` | 200 | 26 | 6 |
 | `b1/indirekte-fragen` | 120 | 8 | 0 |
 | `b1/infinitiv-zu` | 200 | 43 | 10 |
 | `b1/kausalsaetze` | 100 | 0 | 0 |
+| `b1/konjunktiv-ii-b1` | 200 | 28 | 12 |
+| `b1/konnektoren` | 220 | 56 | 4 |
+| `b1/n-deklination` | 200 | 54 | 3 |
 | `b1/passiv` | 180 | 37 | 2 |
 | `b1/plusquamperfekt` | 200 | 59 | 3 |
 | `b1/praeteritum-b1` | 200 | 49 | 2 |
+| `b1/pronominaladverbien` | 100 | 27 | 1 |
+| `b1/relativsaetze` | 180 | 10 | 3 |
+| `b1/satzstellung-b1` | 100 | 2 | 0 |
 | `b2/genitivpraepositionen` | 200 | 47 | 15 |
 | `b2/je-desto` | 200 | 48 | 1 |
 | `b2/konjunktiv-i` | 200 | 124 | 1 |
+| `b2/nominalisierung` | 200 | 60 | 4 |
+| `b2/partizip-i` | 200 | 14 | 1 |
+| `b2/partizip-ii` | 200 | 16 | 0 |
+| `b2/passiv-varianten` | 200 | 36 | 0 |
 
 ## Onay bekleyenler
 
@@ -188,205 +202,46 @@ Bu sorular şüpheli ama değiştirilmedi. Karar senin.
   'Die Firma wächst internationaler' / 'Je internationaler die Firma wächst' doğal değil (international wachsen'in Komparativi zorlama). Öneri: 'Die Firma wird internationaler. → Je internationaler die Firma wird, desto komplexer wird die Koordination.' (answers da buna göre güncellenmeli).
 - **`b2/konjunktiv-i` › `fehlerkorrektur-17` › 3** — Korrigiere: „Er meint, sie könne gestern gekommen.“ → Er meint, sie sei gestern gekommen.  
   'sie könne gestern gekommen sein' (Konjunktiv I + Infinitiv Perfekt, 'gelmiş olabilir') de dilbilgisel olarak hatayı düzelten bir biçim; ancak anlam değişiyor. Kabul edilip edilmeyeceğine karar verilmeli (öneri: yönergeye 'Perfekt der indirekten Rede' ipucu eklemek).
+- **`b1/konjunktiv-ii-b1` › `starke-formen-2` › 9** — Ergänze: „Ich ___ es gern selbst, bevor ich entscheide. (sehen)“ → sähe  
+  “Ich sähe es gern selbst” çok arkaik/yapay; ipucu olmadan “Ich sehe es gern selbst” (Präsens) da dilbilgisel olarak doğru. Öneri: cümleyi “An deiner Stelle ___ ich mir das selbst genau an. (sehen)” → sähe gibi varsayım ipucu olan bir cümleyle değiştirmek veya “würde … sehen” kabul etmek.
+- **`b1/konjunktiv-ii-b1` › `modalverben-b1-3` › 0** — Du ___ das Gespräch nicht weiter aufschieben; sonst wird es schwieriger. (solltest / sollst / würdest) → solltest  
+  “Du sollst das Gespräch nicht weiter aufschieben” (Präsens, başkasının isteği) da dilbilgisel olarak doğru. Konu Konjunktiv II olduğu için “solltest” amaçlanan cevap; istenirse “sollst” yerine “solltet” gibi açık yanlış bir çeldirici konabilir.
+- **`b1/konjunktiv-ii-b1` › `wuerde-oder-direkt-4` › 3** — Welche Form ist natürlicher? (Ich wüsste gern, wie das funktioniert. / Ich würde gern wissen, wie das funktioniert. / Ich wusste gern, wie das funktioniert.) → Ich wüsste gern, wie das funktioniert.  
+  “Ich würde gern wissen, wie das funktioniert.” da en az o kadar doğal ve yaygın (aynı dosyada Übung 1 soru 6 bu kalıbı doğal diye öğretiyor). Soru ‘hangisi daha doğal’ diye sorduğu için iki şık doğru sayılabilir. Öneri: würde-şıkkını yanlış bir biçimle (ör. “Ich würde gern gewusst, …”) değiştirmek.
+- **`b1/konjunktiv-ii-b1` › `wuerde-oder-direkt-4` › 7** — Welche Form ist natürlicher? (Wenn ich ihn treffen würde, würde ich ihn darauf ansprechen. / Wenn ich ihn traf, würde ich ihn darauf ansprechen. / Wenn ich ihn träfe, würde ich ihn darauf ansprechen.) → Wenn ich ihn träfe, würde ich ihn darauf ansprechen.  
+  “träfe” günümüzde oldukça yazı dili/arkaik; “Wenn ich ihn treffen würde, würde ich …” konuşmada daha doğal (q4 de çoğu fiilde würde'nin daha doğal olduğunu söylüyor). Çift würde üslup açısından kaçınılsa da ‘hangisi daha doğal’ sorusu tartışmalı. Öneri: soruyu ‘Welche Form ist korrekt und stilistisch besser?’ diye değiştirmek veya würde-şıkkını yanlış bir biçimle değiştirmek.
+- **`b1/konjunktiv-ii-b1` › `modalverben-vergangenheit-8` › 2** — Ohne den Stau ___ wir pünktlich ankommen können. (würden / hätten / wären) → hätten  
+  Zaman ipucu yok: “Ohne den Stau würden wir pünktlich ankommen können” (şimdiki varsayım) de dilbilgisel. Öneri: “Ohne den Stau gestern ___ wir pünktlich ankommen können.”
+- **`b1/konjunktiv-ii-b1` › `modalverben-vergangenheit-8` › 4** — Sie ___ den Vertrag genauer lesen müssen. (wäre / würde / hätte) → hätte  
+  Zaman ipucu yok: “Sie würde den Vertrag genauer lesen müssen” de dilbilgisel (şimdiki varsayım). Öneri: “Sie ___ den Vertrag vor der Unterschrift genauer lesen müssen.” veya “gestern” eklemek.
+- **`b1/konjunktiv-ii-b1` › `hoeflichkeit-14` › 0** — ___ Sie mir bitte sagen, wo Gleis 8 ist? (Könnten / Konnten / Können) → Könnten  
+  “Können Sie mir bitte sagen …?” dilbilgisel olarak tamamen doğru; sadece daha az kibar. Öneri: çeldiriciyi “Kannst” gibi açık yanlış bir biçimle değiştirmek ya da yönergeye ‘en kibar biçimi seç’ eklemek.
+- **`b1/konjunktiv-ii-b1` › `hoeflichkeit-14` › 1** — ___ ich kurz Ihren Stift benutzen? (Darf / Durfte / Dürfte) → Dürfte  
+  “Darf ich kurz Ihren Stift benutzen?” tamamen doğru ve kibar. Öneri: Übung 3 soru 1'deki gibi “Darf” yerine “Würde” koymak.
+- **`b1/konjunktiv-ii-b1` › `hoeflichkeit-14` › 2** — ___ Sie vielleicht einen Moment Zeit für mich? (Haben / Hätten / Hatten) → Hätten  
+  “Haben Sie vielleicht einen Moment Zeit für mich?” tamamen doğru. Öneri: çeldiriciyi değiştirmek (ör. “Hättet”) veya yönergeye ‘Konjunktiv II ile’ eklemek.
+- **`b1/konjunktiv-ii-b1` › `hoeflichkeit-14` › 3** — ___ es möglich, den Termin zu verschieben? (Wäre / War / Ist) → Wäre  
+  “Ist es möglich, den Termin zu verschieben?” tamamen doğru. Öneri: “Ist” yerine “Würde” gibi yanlış bir çeldirici.
+- **`b1/konjunktiv-ii-b1` › `hoeflichkeit-14` › 6** — ___ wir die Rechnung getrennt bekommen? (Könnten / Konnten / Können) → Könnten  
+  “Können wir die Rechnung getrennt bekommen?” tamamen doğru. Öneri: “Können” yerine yanlış bir biçim (ör. “Könntet”).
+- **`b1/konjunktiv-ii-b1` › `dialoge-18` › 1** — A: Entschuldigung, ___ Sie mir sagen, ob dieser Platz frei ist? (konnten / können / könnten) → könnten  
+  “Entschuldigung, können Sie mir sagen, ob dieser Platz frei ist?” tamamen doğru. Öneri: “können” yerine yanlış bir biçim (ör. “könntest”).
+- **`b1/konnektoren` › `temporal-mix-9` › 2** — ___ sie in Berlin wohnt, fährt sie nur noch Fahrrad. (Sobald / Seitdem / Bis) → Seitdem  
+  “Sobald sie in Berlin wohnt, fährt sie nur noch Fahrrad.” gelecek anlamında (Berlin'e taşınır taşınmaz) dilbilgisel ve anlamlı. Öneri: zaman ipucu eklemek (ör. “___ sie vor zwei Jahren nach Berlin gezogen ist, …” → Seitdem) veya Sobald yerine başka çeldirici.
+- **`b1/konnektoren` › `temporal-mix-9` › 4** — ___ der Zug fährt, lese ich meistens. (Seitdem / Sobald / Während) → Während  
+  “Sobald der Zug fährt, lese ich meistens.” (tren kalkar kalkmaz okurum) de doğal ve doğru. Öneri: Sobald yerine “Bis” değil (o da olası), ör. “Ob” gibi açık yanlış bir çeldirici veya cümleye “die ganze Fahrt über” gibi eşzamanlılık ipucu.
+- **`b1/konnektoren` › `indem-12` › 6** — Er lernt neue Wörter, ___ er kurze Texte schreibt. (indem / weil / obwohl) → indem  
+  “Er lernt neue Wörter, weil er kurze Texte schreibt.” nedensel okumayla dilbilgisel ve kabul edilebilir. Öneri: “weil” yerine açıkça yanlış bir çeldirici (ör. “ob”).
+- **`b1/konnektoren` › `indem-12` › 7** — Wir verbessern den Service, ___ wir Rückmeldungen systematisch auswerten. (sodass / wenn / indem) → indem  
+  “Wir verbessern den Service, wenn wir Rückmeldungen systematisch auswerten.” (koşul/alışkanlık) de doğru. Öneri: “wenn” yerine açıkça yanlış bir çeldirici (ör. “obwohl”).
+- **`b1/n-deklination` › `sonderformen-7` › 2** — Der Patient hat Probleme mit dem ___. (Herz) (Herzens / Herzen / Herz) → Herzen  
+  Duden'e göre Herz'in Dativi “dem Herzen”, ancak tıp dilinde “dem Herz” de kabul edilir; cümle tıbbi bağlam (Patient, Probleme mit dem Herz/Herzen). “Herz” şıkkı tartışmalı. Öneri: tıbbi olmayan bir cümle (ör. „Er spricht aus tiefstem ___.“ → Herzen) veya şıkkı değiştirmek. TR açıklama da “Kaynak çözümünde” diyor, kural yazılmalı: Herz nötr, Dativ dem Herzen, Genitiv des Herzens.
+- **`b1/n-deklination` › `kasus-umformungen-17` › 0** — Setze in den Akkusativ: „Der Student wartet draußen.“ → Ich sehe den Studenten draußen.  
+  Übung 17'nin tüm yazılı soruları (q0–q9) açık uçlu: ‘Setze in den Akkusativ/Dativ/Genitiv’ deniyor ama hedef cümle (fiil, prepozisyon) verilmiyor; tek kabul edilen cevap (ör. „Ich sehe den Studenten draußen.“) tahmin edilemez, her doğru cümle reddedilir. Öneri: hedef çerçeveyi vermek (ör. „Ich sehe ___ draußen. (der Student)“) ve cevabı yalnız öbek yapmak.
+- **`b1/n-deklination` › `fehlerkorrektur-18` › 8** — Korrigiere: „Mit dem Bär gehe ich nicht näher.“ → Mit dem Bären gehe ich nicht näher.  
+  „Mit dem Bären gehe ich nicht näher.“ dilbilgisel ama anlamı garip/doğal değil. Öneri: „Ich gehe nicht näher an den Bär heran.“ → „… an den Bären heran.“ veya „Der Tierarzt hilft dem Bär.“ → „… dem Bären.“
 
 ## Değiştirilen sorular
-
-### `data/a2/reflexive-verben.json`
-
-#### `akkusativ-dativ-3` › 3
-Cümle: Zieh ___ bitte eine Jacke an.
-
-Gerekçe: Açıklama 'Akkusativ nesne → dir' diyerek dir'i Akkusativ gibi gösteriyordu. Kural: cümlede ayrı bir Akkusativ nesne varsa dönüşlü zamir Dativ olur.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: dir. eine Jacke Akkusativ nesne → dir.
-  - Yeni: Doğru cevap: dir. Cümlede zaten bir Akkusativ nesne (eine Jacke) olduğu için dönüşlü zamir Dativ olur: du → dir. Karşılaştır: Zieh dich an! (başka nesne yok → Akkusativ: dich).
-
-#### `akkusativ-dativ-3` › 2
-Cümle: Du putzt ___ die Zähne.
-
-Gerekçe: Açıklama kuralı (ayrı Akkusativ nesne → dönüşlü zamir Dativ) söylemiyordu.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: dir. die Zähne = Akkusativ; du → dir.
-  - Yeni: Doğru cevap: dir. Cümlede zaten bir Akkusativ nesne (die Zähne) var; bu yüzden dönüşlü zamir Dativ olur: du → dir. Karşılaştır: Du wäschst dich. (başka nesne yok → Akkusativ: dich).
-
-#### `akkusativ-dativ-3` › 5
-Cümle: Sie kämmt ___ die Haare.
-
-Gerekçe: 'ihr' de dil bilgisel olarak mümkün (başka birinin saçı); açıklama neden dönüşlü 'sich' gerektiğini göstermiyordu.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: sich. 3. tekil Dativ ve Akkusativ reflexiv biçimi aynı: sich.
-  - Yeni: Doğru cevap: sich. Özne sie (3. tekil); 3. şahısta dönüşlü zamir hem Akkusativ hem Dativ'de sich'tir. die Haare Akkusativ nesne olsa da biçim değişmez. ihr seçilirse cümle 'başka bir kadının saçını tarar' anlamına gelir; dönüşlü değildir.
-
-#### `akkusativ-dativ-3` › 6
-Cümle: Er rasiert ___ jeden Morgen.
-
-Gerekçe: 'ihn' de dil bilgisel olarak mümkün (başka biri); açıklamaya dönüşlü/dönüşsüz farkı eklendi.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: sich. Ek nesne yok → sich.
-  - Yeni: Doğru cevap: sich. Özne er ve ayrı bir nesne yok; kişi kendini tıraş ediyor → dönüşlü zamir sich. ihn seçilirse 'başka bir erkeği tıraş eder' anlamına gelir; dönüşlü değildir.
-
-#### `alltag-4` › 1
-Cümle: Danach ___ ich ___ die Zähne.
-
-Gerekçe: Açıklama 'die Zähne Akkusativ → mir' diyerek mir'i Akkusativ gibi gösteriyordu.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: putze / mir. die Zähne ek Akkusativ nesne → mir.
-  - Yeni: Doğru cevap: putze / mir. Cümlede ayrı bir Akkusativ nesne (die Zähne) var; bu yüzden dönüşlü zamir Dativ olur: ich → mir. Karşılaştır: Ich wasche mich. (başka nesne yok → mich).
-
-#### `alltag-4` › 6
-Cümle: Vor dem Spiegel ___ du ___ die Haare.
-
-Gerekçe: Açıklama 'die Haare Akkusativ → dir' diyerek kuralı ters gösteriyordu.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: kämmst / dir. die Haare Akkusativ → dir.
-  - Yeni: Doğru cevap: kämmst / dir. Cümlede ayrı bir Akkusativ nesne (die Haare) var; bu yüzden dönüşlü zamir Dativ olur: du → dir. Fiil du'ya göre çekimlenir: du kämmst. Karşılaştır: Du kämmst dich. (başka nesne yok → dich).
-
-#### `alltag-4` › 7
-Cümle: Es ist kalt. ___ dir eine warme Jacke ___.
-
-Gerekçe: Seçeneklerde boş parça vardı ('Zieh / / an'); cümlede iki boşluk var. Açıklama kuralı içermiyordu.
-
-- Seçenekler
-  - Eski: `Zieh / / an` / `Wasch / / ab` / `Setz / / hin`
-  - Yeni: `Zieh / an` / `Wasch / ab` / `Setz / hin`
-- Cevap
-  - Eski: Zieh / / an
-  - Yeni: Zieh / an
-- Açıklama (TR)
-  - Eski: Doğru cevap: Zieh / / an. Zieh dir eine Jacke an.
-  - Yeni: Doğru cevap: Zieh / an. du'ya emir: Zieh … an! (ayrılabilen fiilde ön ek an sona gider). Cümlede ayrı Akkusativ nesne (eine warme Jacke) olduğu için dönüşlü zamir Dativ: dir. Karşılaştır: Zieh dich an! (başka nesne yok → dich).
-- DE/EN açıklamaları da güncellendi.
-
-#### `challenge-10` › 0
-Cümle: Vor dem Essen wasche ich ___ die Hände.
-
-Gerekçe: Açıklama 'die Hände = Akkusativ nesne → mir' diyerek mir'i Akkusativ gibi gösteriyordu.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: mir. die Hände = Akkusativ nesne → mir.
-  - Yeni: Doğru cevap: mir. Cümlede ayrı bir Akkusativ nesne (die Hände) var; bu yüzden dönüşlü zamir Dativ olur: ich → mir. Karşılaştır: Vor dem Essen wasche ich mich. (başka nesne yok → mich).
-
-#### `saetze-bilden-9` › 4
-Cümle: Bilde den Satz: ich / die Hände / sich waschen
-
-Gerekçe: Açıklama 'die Hände Akkusativ nesne → mir' diyerek kuralı yanlış gösteriyordu.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: Ich wasche mir die Hände.. die Hände Akkusativ nesne → mir.  Reflexivpronomen özneye göre seçilir. Bazı fiiller sabit prepozisyon ister; ayrıca ayrı bir Akkusativ nesne varsa mir/dir gibi Dativ reflexiv biçimleri görülebilir. Bu üretim sorusunda çekim kadar kelime sırası ve yazım da önemlidir.
-  - Yeni: Doğru cevap: Ich wasche mir die Hände. Cümlede ayrı bir Akkusativ nesne (die Hände) olduğu için dönüşlü zamir Dativ olur: ich → mir. Karşılaştır: Ich wasche mich. (başka nesne yok → mich).
-
-#### `praepositionen-1-5` › 4
-Cümle: Anna hat gestern ein Geschenk bekommen. Sie freut sich ___ das Geschenk.
-
-Gerekçe: Bağlamsız 'Sie freut sich ___ das Geschenk.' cümlesinde 'auf' da doğruydu (henüz alınmamış hediyeyi beklemek). Bağlam eklenerek tek doğru cevap sağlandı.
-
-- Cümle
-  - Eski: Sie freut sich ___ das Geschenk.
-  - Yeni: Anna hat gestern ein Geschenk bekommen. Sie freut sich ___ das Geschenk.
-- Açıklama (TR)
-  - Eski: Doğru cevap: über. Alınan/gerçekleşen şey → sich freuen über.
-  - Yeni: Doğru cevap: über. Hediye zaten alındı (gestern bekommen) → olmuş bir şeye sevinmek: sich freuen über. Karşılaştır: Sie freut sich auf ihren Geburtstag. (gelecekteki bir şeyi dört gözle beklemek → auf).
-- DE/EN açıklamaları da güncellendi.
-
-#### `praepositionen-2-6` › 9
-Cümle: Wir treffen uns morgen ___ unseren Kollegen.
-
-Gerekçe: Çeldirici 'bei' de doğruydu: 'Wir treffen uns morgen bei unseren Kollegen' (meslektaşlarımızın evinde buluşuyoruz). bei → an olarak değiştirildi.
-
-- Seçenekler
-  - Eski: `mit` / `bei` / `nach`
-  - Yeni: `mit` / `an` / `um`
-- Açıklama (TR)
-  - Eski: Doğru cevap: mit. sich treffen mit.
-  - Yeni: Doğru cevap: mit. Kiminle buluşulduğu sich treffen mit + Dativ ile söylenir: mit unseren Kollegen. an ve um bu fiille kişi için kullanılmaz.
-- DE/EN açıklamaları da güncellendi.
-
-#### `dialoge-8` › 7
-Cümle: A: Kennst du noch unser erstes Klassenzimmer? B: Ja, ich ___ mich gut ___.
-
-Gerekçe: Cümlede üç boşluk vardı ama seçenekler iki parçalıydı; fazla boşluk silindi.
-
-- Cümle
-  - Eski: A: Kennst du noch unser erstes Klassenzimmer? B: Ja, ich ___ mich gut ___ ___.
-  - Yeni: A: Kennst du noch unser erstes Klassenzimmer? B: Ja, ich ___ mich gut ___.
-- Açıklama (TR)
-  - Eski: Doğru cevap: erinnere / daran. sich an etwas erinnern → daran.
-  - Yeni: Doğru cevap: erinnere / daran. sich erinnern an + şey; şeyin yerine geçen zamir da- + an → daran (daran = ona/onu). Karşılaştır: Ich freue mich darüber. (sich freuen über)
-- DE/EN açıklamaları da güncellendi.
-
-#### `challenge-10` › 9
-Cümle: Bilde den Satz: Petra / vor dem Spiegel / die Haare / sich kämmen
-
-Gerekçe: 'Petra kämmt sich die Haare vor dem Spiegel.' sıralaması da doğru, ama kabul edilmiyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `petra kämmt sich vor dem spiegel die haare` / `petra kaemmt sich vor dem spiegel die haare`
-  - Yeni: `petra kämmt sich vor dem spiegel die haare` / `petra kaemmt sich vor dem spiegel die haare` / `petra kämmt sich die haare vor dem spiegel` / `petra kaemmt sich die haare vor dem spiegel`
-
-### `data/a1/artikel.json`
-
-#### `muster-2` › 8
-Cümle: ___ Häuschen ist alt.
-
-Gerekçe: İpucu '-lein' yazıyordu ve açıklama 'Häuschen'i -lein örneği sayıyordu; Häuschen -chen ile biter.
-
-- word
-  - Eski: -lein
-  - Yeni: -chen
-- Açıklama (TR)
-  - Eski: Doğru cevap: das. -lein her zaman nötrdür: das Häuschen.
-  - Yeni: Doğru cevap: das. Häuschen (küçük ev) -chen ile biter; -chen ve -lein ile biten küçültme isimleri her zaman nötrdür: das Häuschen. Karşılaştır: das Büchlein (-lein).
-
-#### `master-12` › 5
-Cümle: Schreibe Artikel + Nomen: ___ schmeckt gut. (Brötchen)
-
-Gerekçe: Yönergede Almanca-Türkçe karışık yazım vardı ('Schreibe doğru Artikel').
-
-- Cümle
-  - Eski: Schreibe doğru Artikel + Nomen: ___ schmeckt gut. (Brötchen)
-  - Yeni: Schreibe Artikel + Nomen: ___ schmeckt gut. (Brötchen)
-
-#### `master-12` › 6
-Cümle: Schreibe Artikel + Nomen: ___ ist wichtig. (Freundschaft)
-
-Gerekçe: Yönergede Almanca-Türkçe karışık yazım vardı ('Schreibe doğru Artikel').
-
-- Cümle
-  - Eski: Schreibe doğru Artikel + Nomen: ___ ist wichtig. (Freundschaft)
-  - Yeni: Schreibe Artikel + Nomen: ___ ist wichtig. (Freundschaft)
-
-#### `master-12` › 7
-Cümle: Schreibe Artikel + Nomen: ___ ist warm. (Sommer)
-
-Gerekçe: Yönergede Almanca-Türkçe karışık yazım vardı ('Schreibe doğru Artikel').
-
-- Cümle
-  - Eski: Schreibe doğru Artikel + Nomen: ___ ist warm. (Sommer)
-  - Yeni: Schreibe Artikel + Nomen: ___ ist warm. (Sommer)
-
-#### `master-12` › 8
-Cümle: Schreibe Artikel + Nomen: ___ ist sehr nützlich. (Wörterbuch)
-
-Gerekçe: Yönergede Almanca-Türkçe karışık yazım vardı ('Schreibe doğru Artikel').
-
-- Cümle
-  - Eski: Schreibe doğru Artikel + Nomen: ___ ist sehr nützlich. (Wörterbuch)
-  - Yeni: Schreibe Artikel + Nomen: ___ ist sehr nützlich. (Wörterbuch)
-
-#### `master-12` › 9
-Cümle: Schreibe Artikel + Nomen: ___ liegen auf dem Tisch. (Bücher)
-
-Gerekçe: Yönergede Almanca-Türkçe karışık yazım vardı ('Schreibe doğru Artikel').
-
-- Cümle
-  - Eski: Schreibe doğru Artikel + Nomen: ___ liegen auf dem Tisch. (Bücher)
-  - Yeni: Schreibe Artikel + Nomen: ___ liegen auf dem Tisch. (Bücher)
 
 ### `data/a1/akkusativ.json`
 
@@ -612,6 +467,65 @@ Gerekçe: Boşluğa yalnızca prepozisyon gelir (artikel ve isim cümlede zaten 
 - Kabul edilen cevaplar
   - Eski: `ohne deinen pass`
   - Yeni: `ohne deinen pass` / `ohne`
+
+### `data/a1/artikel.json`
+
+#### `muster-2` › 8
+Cümle: ___ Häuschen ist alt.
+
+Gerekçe: İpucu '-lein' yazıyordu ve açıklama 'Häuschen'i -lein örneği sayıyordu; Häuschen -chen ile biter.
+
+- word
+  - Eski: -lein
+  - Yeni: -chen
+- Açıklama (TR)
+  - Eski: Doğru cevap: das. -lein her zaman nötrdür: das Häuschen.
+  - Yeni: Doğru cevap: das. Häuschen (küçük ev) -chen ile biter; -chen ve -lein ile biten küçültme isimleri her zaman nötrdür: das Häuschen. Karşılaştır: das Büchlein (-lein).
+
+#### `master-12` › 5
+Cümle: Schreibe Artikel + Nomen: ___ schmeckt gut. (Brötchen)
+
+Gerekçe: Yönergede Almanca-Türkçe karışık yazım vardı ('Schreibe doğru Artikel').
+
+- Cümle
+  - Eski: Schreibe doğru Artikel + Nomen: ___ schmeckt gut. (Brötchen)
+  - Yeni: Schreibe Artikel + Nomen: ___ schmeckt gut. (Brötchen)
+
+#### `master-12` › 6
+Cümle: Schreibe Artikel + Nomen: ___ ist wichtig. (Freundschaft)
+
+Gerekçe: Yönergede Almanca-Türkçe karışık yazım vardı ('Schreibe doğru Artikel').
+
+- Cümle
+  - Eski: Schreibe doğru Artikel + Nomen: ___ ist wichtig. (Freundschaft)
+  - Yeni: Schreibe Artikel + Nomen: ___ ist wichtig. (Freundschaft)
+
+#### `master-12` › 7
+Cümle: Schreibe Artikel + Nomen: ___ ist warm. (Sommer)
+
+Gerekçe: Yönergede Almanca-Türkçe karışık yazım vardı ('Schreibe doğru Artikel').
+
+- Cümle
+  - Eski: Schreibe doğru Artikel + Nomen: ___ ist warm. (Sommer)
+  - Yeni: Schreibe Artikel + Nomen: ___ ist warm. (Sommer)
+
+#### `master-12` › 8
+Cümle: Schreibe Artikel + Nomen: ___ ist sehr nützlich. (Wörterbuch)
+
+Gerekçe: Yönergede Almanca-Türkçe karışık yazım vardı ('Schreibe doğru Artikel').
+
+- Cümle
+  - Eski: Schreibe doğru Artikel + Nomen: ___ ist sehr nützlich. (Wörterbuch)
+  - Yeni: Schreibe Artikel + Nomen: ___ ist sehr nützlich. (Wörterbuch)
+
+#### `master-12` › 9
+Cümle: Schreibe Artikel + Nomen: ___ liegen auf dem Tisch. (Bücher)
+
+Gerekçe: Yönergede Almanca-Türkçe karışık yazım vardı ('Schreibe doğru Artikel').
+
+- Cümle
+  - Eski: Schreibe doğru Artikel + Nomen: ___ liegen auf dem Tisch. (Bücher)
+  - Yeni: Schreibe Artikel + Nomen: ___ liegen auf dem Tisch. (Bücher)
 
 ### `data/a1/imperativ.json`
 
@@ -5222,6 +5136,144 @@ Gerekçe: Ekranda gösterilen doğru cevap (uzun tire '–' ile) kabul listesind
   - Eski: `machen machte gemacht` / `machen - machte - gemacht`
   - Yeni: `machen machte gemacht` / `machen - machte - gemacht` / `machen – machte – gemacht`
 
+### `data/a2/reflexive-verben.json`
+
+#### `akkusativ-dativ-3` › 3
+Cümle: Zieh ___ bitte eine Jacke an.
+
+Gerekçe: Açıklama 'Akkusativ nesne → dir' diyerek dir'i Akkusativ gibi gösteriyordu. Kural: cümlede ayrı bir Akkusativ nesne varsa dönüşlü zamir Dativ olur.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: dir. eine Jacke Akkusativ nesne → dir.
+  - Yeni: Doğru cevap: dir. Cümlede zaten bir Akkusativ nesne (eine Jacke) olduğu için dönüşlü zamir Dativ olur: du → dir. Karşılaştır: Zieh dich an! (başka nesne yok → Akkusativ: dich).
+
+#### `akkusativ-dativ-3` › 2
+Cümle: Du putzt ___ die Zähne.
+
+Gerekçe: Açıklama kuralı (ayrı Akkusativ nesne → dönüşlü zamir Dativ) söylemiyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: dir. die Zähne = Akkusativ; du → dir.
+  - Yeni: Doğru cevap: dir. Cümlede zaten bir Akkusativ nesne (die Zähne) var; bu yüzden dönüşlü zamir Dativ olur: du → dir. Karşılaştır: Du wäschst dich. (başka nesne yok → Akkusativ: dich).
+
+#### `akkusativ-dativ-3` › 5
+Cümle: Sie kämmt ___ die Haare.
+
+Gerekçe: 'ihr' de dil bilgisel olarak mümkün (başka birinin saçı); açıklama neden dönüşlü 'sich' gerektiğini göstermiyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: sich. 3. tekil Dativ ve Akkusativ reflexiv biçimi aynı: sich.
+  - Yeni: Doğru cevap: sich. Özne sie (3. tekil); 3. şahısta dönüşlü zamir hem Akkusativ hem Dativ'de sich'tir. die Haare Akkusativ nesne olsa da biçim değişmez. ihr seçilirse cümle 'başka bir kadının saçını tarar' anlamına gelir; dönüşlü değildir.
+
+#### `akkusativ-dativ-3` › 6
+Cümle: Er rasiert ___ jeden Morgen.
+
+Gerekçe: 'ihn' de dil bilgisel olarak mümkün (başka biri); açıklamaya dönüşlü/dönüşsüz farkı eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: sich. Ek nesne yok → sich.
+  - Yeni: Doğru cevap: sich. Özne er ve ayrı bir nesne yok; kişi kendini tıraş ediyor → dönüşlü zamir sich. ihn seçilirse 'başka bir erkeği tıraş eder' anlamına gelir; dönüşlü değildir.
+
+#### `alltag-4` › 1
+Cümle: Danach ___ ich ___ die Zähne.
+
+Gerekçe: Açıklama 'die Zähne Akkusativ → mir' diyerek mir'i Akkusativ gibi gösteriyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: putze / mir. die Zähne ek Akkusativ nesne → mir.
+  - Yeni: Doğru cevap: putze / mir. Cümlede ayrı bir Akkusativ nesne (die Zähne) var; bu yüzden dönüşlü zamir Dativ olur: ich → mir. Karşılaştır: Ich wasche mich. (başka nesne yok → mich).
+
+#### `alltag-4` › 6
+Cümle: Vor dem Spiegel ___ du ___ die Haare.
+
+Gerekçe: Açıklama 'die Haare Akkusativ → dir' diyerek kuralı ters gösteriyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: kämmst / dir. die Haare Akkusativ → dir.
+  - Yeni: Doğru cevap: kämmst / dir. Cümlede ayrı bir Akkusativ nesne (die Haare) var; bu yüzden dönüşlü zamir Dativ olur: du → dir. Fiil du'ya göre çekimlenir: du kämmst. Karşılaştır: Du kämmst dich. (başka nesne yok → dich).
+
+#### `alltag-4` › 7
+Cümle: Es ist kalt. ___ dir eine warme Jacke ___.
+
+Gerekçe: Seçeneklerde boş parça vardı ('Zieh / / an'); cümlede iki boşluk var. Açıklama kuralı içermiyordu.
+
+- Seçenekler
+  - Eski: `Zieh / / an` / `Wasch / / ab` / `Setz / / hin`
+  - Yeni: `Zieh / an` / `Wasch / ab` / `Setz / hin`
+- Cevap
+  - Eski: Zieh / / an
+  - Yeni: Zieh / an
+- Açıklama (TR)
+  - Eski: Doğru cevap: Zieh / / an. Zieh dir eine Jacke an.
+  - Yeni: Doğru cevap: Zieh / an. du'ya emir: Zieh … an! (ayrılabilen fiilde ön ek an sona gider). Cümlede ayrı Akkusativ nesne (eine warme Jacke) olduğu için dönüşlü zamir Dativ: dir. Karşılaştır: Zieh dich an! (başka nesne yok → dich).
+- DE/EN açıklamaları da güncellendi.
+
+#### `challenge-10` › 0
+Cümle: Vor dem Essen wasche ich ___ die Hände.
+
+Gerekçe: Açıklama 'die Hände = Akkusativ nesne → mir' diyerek mir'i Akkusativ gibi gösteriyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: mir. die Hände = Akkusativ nesne → mir.
+  - Yeni: Doğru cevap: mir. Cümlede ayrı bir Akkusativ nesne (die Hände) var; bu yüzden dönüşlü zamir Dativ olur: ich → mir. Karşılaştır: Vor dem Essen wasche ich mich. (başka nesne yok → mich).
+
+#### `saetze-bilden-9` › 4
+Cümle: Bilde den Satz: ich / die Hände / sich waschen
+
+Gerekçe: Açıklama 'die Hände Akkusativ nesne → mir' diyerek kuralı yanlış gösteriyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Ich wasche mir die Hände.. die Hände Akkusativ nesne → mir.  Reflexivpronomen özneye göre seçilir. Bazı fiiller sabit prepozisyon ister; ayrıca ayrı bir Akkusativ nesne varsa mir/dir gibi Dativ reflexiv biçimleri görülebilir. Bu üretim sorusunda çekim kadar kelime sırası ve yazım da önemlidir.
+  - Yeni: Doğru cevap: Ich wasche mir die Hände. Cümlede ayrı bir Akkusativ nesne (die Hände) olduğu için dönüşlü zamir Dativ olur: ich → mir. Karşılaştır: Ich wasche mich. (başka nesne yok → mich).
+
+#### `praepositionen-1-5` › 4
+Cümle: Anna hat gestern ein Geschenk bekommen. Sie freut sich ___ das Geschenk.
+
+Gerekçe: Bağlamsız 'Sie freut sich ___ das Geschenk.' cümlesinde 'auf' da doğruydu (henüz alınmamış hediyeyi beklemek). Bağlam eklenerek tek doğru cevap sağlandı.
+
+- Cümle
+  - Eski: Sie freut sich ___ das Geschenk.
+  - Yeni: Anna hat gestern ein Geschenk bekommen. Sie freut sich ___ das Geschenk.
+- Açıklama (TR)
+  - Eski: Doğru cevap: über. Alınan/gerçekleşen şey → sich freuen über.
+  - Yeni: Doğru cevap: über. Hediye zaten alındı (gestern bekommen) → olmuş bir şeye sevinmek: sich freuen über. Karşılaştır: Sie freut sich auf ihren Geburtstag. (gelecekteki bir şeyi dört gözle beklemek → auf).
+- DE/EN açıklamaları da güncellendi.
+
+#### `praepositionen-2-6` › 9
+Cümle: Wir treffen uns morgen ___ unseren Kollegen.
+
+Gerekçe: Çeldirici 'bei' de doğruydu: 'Wir treffen uns morgen bei unseren Kollegen' (meslektaşlarımızın evinde buluşuyoruz). bei → an olarak değiştirildi.
+
+- Seçenekler
+  - Eski: `mit` / `bei` / `nach`
+  - Yeni: `mit` / `an` / `um`
+- Açıklama (TR)
+  - Eski: Doğru cevap: mit. sich treffen mit.
+  - Yeni: Doğru cevap: mit. Kiminle buluşulduğu sich treffen mit + Dativ ile söylenir: mit unseren Kollegen. an ve um bu fiille kişi için kullanılmaz.
+- DE/EN açıklamaları da güncellendi.
+
+#### `dialoge-8` › 7
+Cümle: A: Kennst du noch unser erstes Klassenzimmer? B: Ja, ich ___ mich gut ___.
+
+Gerekçe: Cümlede üç boşluk vardı ama seçenekler iki parçalıydı; fazla boşluk silindi.
+
+- Cümle
+  - Eski: A: Kennst du noch unser erstes Klassenzimmer? B: Ja, ich ___ mich gut ___ ___.
+  - Yeni: A: Kennst du noch unser erstes Klassenzimmer? B: Ja, ich ___ mich gut ___.
+- Açıklama (TR)
+  - Eski: Doğru cevap: erinnere / daran. sich an etwas erinnern → daran.
+  - Yeni: Doğru cevap: erinnere / daran. sich erinnern an + şey; şeyin yerine geçen zamir da- + an → daran (daran = ona/onu). Karşılaştır: Ich freue mich darüber. (sich freuen über)
+- DE/EN açıklamaları da güncellendi.
+
+#### `challenge-10` › 9
+Cümle: Bilde den Satz: Petra / vor dem Spiegel / die Haare / sich kämmen
+
+Gerekçe: 'Petra kämmt sich die Haare vor dem Spiegel.' sıralaması da doğru, ama kabul edilmiyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `petra kämmt sich vor dem spiegel die haare` / `petra kaemmt sich vor dem spiegel die haare`
+  - Yeni: `petra kämmt sich vor dem spiegel die haare` / `petra kaemmt sich vor dem spiegel die haare` / `petra kämmt sich die haare vor dem spiegel` / `petra kaemmt sich die haare vor dem spiegel`
+
 ### `data/a2/verben-dativ-akkusativ.json`
 
 #### `akkusativ-artikel-4` › 1
@@ -6087,1559 +6139,6 @@ Gerekçe: Yer bildiren grup başa alınabilir (çekimli fiil yine 2. sırada); b
   - Eski: `die flaschen stehen im keller`
   - Yeni: `die flaschen stehen im keller` / `im keller stehen die flaschen`
 
-### `data/b1/pronominaladverbien.json`
-
-#### `da-formen-1` › 5
-Cümle: Das hängt von der Zeit ab. Das hängt ___ ab.
-
-Gerekçe: Açıklama 'der Zeit ab' diye bozuk alıntı yapıyordu (ab ayrılan ön ek, ismin parçası değil).
-
-- Açıklama (TR)
-  - Eski: abhängen von kalıbında von korunur. der Zeit ab bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + von → davon kullanılır. Doğru cevap: davon
-  - Yeni: abhängen von kalıbında von korunur. von der Zeit bir kişi değil, bir şeydir; aynı edat grubunu tekrar etmek yerine da- + von → davon kullanılır. Ayrılan ön ek ab yine sonda kalır: Das hängt davon ab. Doğru cevap: davon
-
-#### `wo-fragen-2` › 3
-Cümle: ___ schreibst du? – Mit einem Bleistift.
-
-Gerekçe: Açıklama 'mit ünlüyle başladığında araya r girer' diyordu; mit ünsüzle başlar, araya r girmez.
-
-- Açıklama (TR)
-  - Eski: schreiben mit kalıbının edatı mit. Burada bir kişi değil, einem Bleistift soruluyor; bu yüzden wo- + mit → womit. mit ünlüyle başladığında araya r girer. Doğru cevap: Womit
-  - Yeni: schreiben mit kalıbının edatı mit. Burada bir kişi değil, bir şey soruluyor: einem Bleistift (mit einem Bleistift); bu yüzden wo- + mit → womit. mit ünsüzle başladığı için araya r girmez (karşılaştır: wo + auf → worauf). Doğru cevap: Womit
-
-#### `wo-fragen-2` › 4
-Cümle: ___ interessierst du dich? – Für Geschichte.
-
-Gerekçe: Açıklama 'für ünlüyle başladığında araya r girer' diyordu; für ünsüzle başlar, araya r girmez.
-
-- Açıklama (TR)
-  - Eski: sich interessieren für kalıbının edatı für. Burada bir kişi değil, Geschichte soruluyor; bu yüzden wo- + für → wofür. für ünlüyle başladığında araya r girer. Doğru cevap: Wofür
-  - Yeni: sich interessieren für kalıbının edatı für. Burada bir kişi değil, bir şey soruluyor: Geschichte; bu yüzden wo- + für → wofür. für ünsüzle başladığı için araya r girmez (karşılaştır: wo + auf → worauf). Doğru cevap: Wofür
-
-#### `wo-fragen-2` › 5
-Cümle: ___ hängt das ab? – Vom Wetter.
-
-Gerekçe: Açıklama 'von ünlüyle başladığında araya r girer' diyordu; von ünsüzle başlar, araya r girmez. Ayrıca 'Vom Wetter soruluyor' alıntısı düzeltildi.
-
-- Açıklama (TR)
-  - Eski: abhängen von kalıbının edatı von. Burada bir kişi değil, Vom Wetter soruluyor; bu yüzden wo- + von → wovon. von ünlüyle başladığında araya r girer. Doğru cevap: Wovon
-  - Yeni: abhängen von kalıbının edatı von. Burada bir kişi değil, bir şey soruluyor: das Wetter (vom Wetter); bu yüzden wo- + von → wovon. von ünsüzle başladığı için araya r girmez (karşılaştır: wo + auf → worauf). Doğru cevap: Wovon
-
-#### `wo-fragen-2` › 6
-Cümle: ___ beginnst du? – Mit der ersten Aufgabe.
-
-Gerekçe: Açıklama 'mit ünlüyle başladığında araya r girer' diyordu; mit ünsüzle başlar, araya r girmez.
-
-- Açıklama (TR)
-  - Eski: beginnen mit kalıbının edatı mit. Burada bir kişi değil, der ersten Aufgabe soruluyor; bu yüzden wo- + mit → womit. mit ünlüyle başladığında araya r girer. Doğru cevap: Womit
-  - Yeni: beginnen mit kalıbının edatı mit. Burada bir kişi değil, bir şey soruluyor: der ersten Aufgabe (mit der ersten Aufgabe); bu yüzden wo- + mit → womit. mit ünsüzle başladığı için araya r girmez (karşılaştır: wo + auf → worauf). Doğru cevap: Womit
-
-#### `wo-fragen-2` › 7
-Cümle: ___ träumst du? – Von einem Urlaub.
-
-Gerekçe: Açıklama 'von ünlüyle başladığında araya r girer' diyordu; von ünsüzle başlar, araya r girmez.
-
-- Açıklama (TR)
-  - Eski: träumen von kalıbının edatı von. Burada bir kişi değil, einem Urlaub soruluyor; bu yüzden wo- + von → wovon. von ünlüyle başladığında araya r girer. Doğru cevap: Wovon
-  - Yeni: träumen von kalıbının edatı von. Burada bir kişi değil, bir şey soruluyor: einem Urlaub (von einem Urlaub); bu yüzden wo- + von → wovon. von ünsüzle başladığı için araya r girmez (karşılaştır: wo + auf → worauf). Doğru cevap: Wovon
-
-#### `personen-sachen-4` › 7
-Cümle: Sie erzählt ___. (von der Reise)
-
-Gerekçe: Açıklamada fiil kalıbı eksikti ('… von kalıbında').
-
-- Açıklama (TR)
-  - Eski: … von kalıbında von korunur. der Reise bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + von → davon kullanılır. Doğru cevap: davon
-  - Yeni: erzählen von kalıbında von korunur. die Reise bir kişi değil, bir şeydir; aynı edat grubunu tekrar etmek yerine da- + von → davon kullanılır. Karşılaştır: von ihrer Schwester (kişi) → von ihr. Doğru cevap: davon
-
-#### `feste-praepositionen-5` › 4
-Cümle: Der Vorschlag ist gut. Ich bin ___. (für einen Vorschlag sein)
-
-Gerekçe: Açıklama 'einen Vorschlag sein) bir kişi değildir' diye bozuk alıntı içeriyordu.
-
-- Açıklama (TR)
-  - Eski: für/gegen etwas sein kalıbında für korunur. einen Vorschlag sein) bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + für → dafür kullanılır. Doğru cevap: dafür
-  - Yeni: für/gegen etwas sein kalıbında für korunur (Der Vorschlag ist gut → onu destekliyoruz: für). der Vorschlag bir kişi değil, bir şeydir; aynı edat grubunu tekrar etmek yerine da- + für → dafür kullanılır. Doğru cevap: dafür
-
-#### `feste-praepositionen-5` › 5
-Cümle: Der Vorschlag gefällt mir nicht. Ich bin ___. (gegen einen Vorschlag sein)
-
-Gerekçe: Açıklama 'einen Vorschlag sein) bir kişi değildir' diye bozuk alıntı içeriyordu.
-
-- Açıklama (TR)
-  - Eski: für/gegen etwas sein kalıbında gegen korunur. einen Vorschlag sein) bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + gegen → dagegen kullanılır. Doğru cevap: dagegen
-  - Yeni: für/gegen etwas sein kalıbında gegen korunur (Der Vorschlag gefällt mir nicht → karşıyız: gegen). der Vorschlag bir kişi değil, bir şeydir; aynı edat grubunu tekrar etmek yerine da- + gegen → dagegen kullanılır. Doğru cevap: dagegen
-
-#### `feste-praepositionen-5` › 7
-Cümle: Der Erfolg freut mich. Ich bin ___ stolz. (stolz auf)
-
-Gerekçe: Açıklama yanlış kalıptan (sich freuen auf) bahsediyordu; cümledeki kalıp stolz sein auf.
-
-- Açıklama (TR)
-  - Eski: sich freuen auf kalıbında auf korunur. Sorudaki şey/durum bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + auf → darauf kullanılır. Doğru cevap: darauf
-  - Yeni: stolz sein auf kalıbında auf korunur. der Erfolg bir kişi değil, bir şeydir; aynı edat grubunu tekrar etmek yerine da- + auf → darauf kullanılır. auf ünlüyle başladığı için araya r girer. Doğru cevap: darauf
-
-#### `frage-antwort-6` › 0
-Cümle: Worauf wartest du? – Ich warte ___.
-
-Gerekçe: TR/DE/EN açıklama boşluklu cümleyi ('… ___') temsil edilen şey gibi alıntılıyordu; anlamsızdı.
-
-- Açıklama (TR)
-  - Eski: warten auf kalıbında auf korunur. Ich warte ___ bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + auf → darauf kullanılır. Doğru cevap: darauf
-  - Yeni: Soru Worauf ile bir şey hakkında soruluyor (kişi değil). warten auf kalıbında auf korunur; cevapta aynı şeyi da- + auf → darauf ile anlatırız: Ich warte darauf. auf ünlüyle başladığı için araya r girer. Doğru cevap: darauf
-- DE/EN açıklamaları da güncellendi.
-
-#### `frage-antwort-6` › 1
-Cümle: Worüber sprecht ihr? – Wir sprechen ___.
-
-Gerekçe: TR/DE/EN açıklama boşluklu cümleyi ('… ___') temsil edilen şey gibi alıntılıyordu; anlamsızdı.
-
-- Açıklama (TR)
-  - Eski: sprechen über kalıbında über korunur. Wir sprechen ___ bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + über → darüber kullanılır. Doğru cevap: darüber
-  - Yeni: Soru Worüber ile bir şey hakkında soruluyor (kişi değil). sprechen über kalıbında über korunur; cevapta aynı şeyi da- + über → darüber ile anlatırız: Wir sprechen darüber. über ünlüyle başladığı için araya r girer. Doğru cevap: darüber
-- DE/EN açıklamaları da güncellendi.
-
-#### `frage-antwort-6` › 2
-Cümle: Woran denkst du? – Ich denke ___.
-
-Gerekçe: TR/DE/EN açıklama boşluklu cümleyi ('… ___') temsil edilen şey gibi alıntılıyordu; anlamsızdı.
-
-- Açıklama (TR)
-  - Eski: denken an kalıbında an korunur. Ich denke ___ bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + an → daran kullanılır. Doğru cevap: daran
-  - Yeni: Soru Woran ile bir şey hakkında soruluyor (kişi değil). denken an kalıbında an korunur; cevapta aynı şeyi da- + an → daran ile anlatırız: Ich denke daran. an ünlüyle başladığı için araya r girer. Doğru cevap: daran
-- DE/EN açıklamaları da güncellendi.
-
-#### `frage-antwort-6` › 3
-Cümle: Womit arbeitest du? – Ich arbeite ___.
-
-Gerekçe: TR/DE/EN açıklama boşluklu cümleyi ('… ___') temsil edilen şey gibi alıntılıyordu; anlamsızdı.
-
-- Açıklama (TR)
-  - Eski: arbeiten mit kalıbında mit korunur. Ich arbeite ___ bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + mit → damit kullanılır. Doğru cevap: damit
-  - Yeni: Soru Womit ile bir şey hakkında soruluyor (kişi değil). arbeiten mit kalıbında mit korunur; cevapta aynı şeyi da- + mit → damit ile anlatırız: Ich arbeite damit. mit ünsüzle başladığı için araya r girmez. Doğru cevap: damit
-- DE/EN açıklamaları da güncellendi.
-
-#### `frage-antwort-6` › 4
-Cümle: Wofür interessierst du dich? – Ich interessiere mich ___.
-
-Gerekçe: TR/DE/EN açıklama boşluklu cümleyi ('… ___') temsil edilen şey gibi alıntılıyordu; anlamsızdı.
-
-- Açıklama (TR)
-  - Eski: sich interessieren für kalıbında für korunur. Ich interessiere mich ___ bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + für → dafür kullanılır. Doğru cevap: dafür
-  - Yeni: Soru Wofür ile bir şey hakkında soruluyor (kişi değil). sich interessieren für kalıbında für korunur; cevapta aynı şeyi da- + für → dafür ile anlatırız: Ich interessiere mich dafür. für ünsüzle başladığı için araya r girmez. Doğru cevap: dafür
-- DE/EN açıklamaları da güncellendi.
-
-#### `frage-antwort-6` › 5
-Cümle: Wovon träumst du? – Ich träume ___.
-
-Gerekçe: TR/DE/EN açıklama boşluklu cümleyi ('… ___') temsil edilen şey gibi alıntılıyordu; anlamsızdı.
-
-- Açıklama (TR)
-  - Eski: träumen von kalıbında von korunur. Ich träume ___ bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + von → davon kullanılır. Doğru cevap: davon
-  - Yeni: Soru Wovon ile bir şey hakkında soruluyor (kişi değil). träumen von kalıbında von korunur; cevapta aynı şeyi da- + von → davon ile anlatırız: Ich träume davon. von ünsüzle başladığı için araya r girmez. Doğru cevap: davon
-- DE/EN açıklamaları da güncellendi.
-
-#### `frage-antwort-6` › 6
-Cümle: Wogegen protestiert ihr? – Wir protestieren ___.
-
-Gerekçe: TR/DE/EN açıklama boşluklu cümleyi ('… ___') temsil edilen şey gibi alıntılıyordu; anlamsızdı.
-
-- Açıklama (TR)
-  - Eski: protestieren gegen kalıbında gegen korunur. Wir protestieren ___ bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + gegen → dagegen kullanılır. Doğru cevap: dagegen
-  - Yeni: Soru Wogegen ile bir şey hakkında soruluyor (kişi değil). protestieren gegen kalıbında gegen korunur; cevapta aynı şeyi da- + gegen → dagegen ile anlatırız: Wir protestieren dagegen. gegen ünsüzle başladığı için araya r girmez. Doğru cevap: dagegen
-- DE/EN açıklamaları da güncellendi.
-
-#### `frage-antwort-6` › 7
-Cümle: Woran nimmst du teil? – Ich nehme ___ teil.
-
-Gerekçe: TR/DE/EN açıklama boşluklu cümleyi ('… ___') temsil edilen şey gibi alıntılıyordu; anlamsızdı.
-
-- Açıklama (TR)
-  - Eski: teilnehmen an kalıbında an korunur. Ich nehme ___ teil bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + an → daran kullanılır. Doğru cevap: daran
-  - Yeni: Soru Woran ile bir şey hakkında soruluyor (kişi değil). teilnehmen an kalıbında an korunur; cevapta aynı şeyi da- + an → daran ile anlatırız: Ich nehme daran teil. an ünlüyle başladığı için araya r girer. Doğru cevap: daran
-- DE/EN açıklamaları da güncellendi.
-
-#### `frage-antwort-6` › 8
-Cümle: Worüber freust du dich? – Ich freue mich ___.
-
-Gerekçe: TR/DE/EN açıklama boşluklu cümleyi ('… ___') temsil edilen şey gibi alıntılıyordu; anlamsızdı.
-
-- Açıklama (TR)
-  - Eski: sich freuen über kalıbında über korunur. Ich freue mich ___ bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + über → darüber kullanılır. Doğru cevap: darüber
-  - Yeni: Soru Worüber ile bir şey hakkında soruluyor (kişi değil). sich freuen über kalıbında über korunur; cevapta aynı şeyi da- + über → darüber ile anlatırız: Ich freue mich darüber. über ünlüyle başladığı için araya r girer. Doğru cevap: darüber
-- DE/EN açıklamaları da güncellendi.
-
-#### `frage-antwort-6` › 9
-Cümle: Woraus besteht es? – Es besteht ___.
-
-Gerekçe: TR/DE/EN açıklama boşluklu cümleyi ('… ___') temsil edilen şey gibi alıntılıyordu; anlamsızdı.
-
-- Açıklama (TR)
-  - Eski: bestehen aus kalıbında aus korunur. Es besteht ___ bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + aus → daraus kullanılır. Doğru cevap: daraus
-  - Yeni: Soru Woraus ile bir şey hakkında soruluyor (kişi değil). bestehen aus kalıbında aus korunur; cevapta aynı şeyi da- + aus → daraus ile anlatırız: Es besteht daraus. aus ünlüyle başladığı için araya r girer. Doğru cevap: daraus
-- DE/EN açıklamaları da güncellendi.
-
-#### `dass-saetze-7` › 4
-Cümle: Die Idee ist gut. Ich bin ___, dass wir früher anfangen.
-
-Gerekçe: Bağlam yoktu: 'Ich bin dagegen, dass wir früher anfangen' da tamamen doğru; iki şık doğruydu. Anlamı belirleyen bağlam cümlesi eklendi.
-
-- Açıklama (TR)
-  - Eski: für/gegen etwas sein kalıbındaki edat für olduğu için dafür gerekir. Burada dafür, ardından gelen “dass wir früher anfangen” grubundaki olaya işaret eder; dass grubunu da- ifadesinden virgülle ayırırız. Doğru cevap: dafür
-  - Yeni: für/gegen etwas sein kalıbında fikri destekliyorsak für kullanılır. İlk cümle “Die Idee ist gut” olduğu için destek var: dafür. Burada dafür, ardından gelen “dass wir früher anfangen” grubundaki olaya işaret eder; dass grubunu da- ifadesinden virgülle ayırırız. Karşılaştır: Die Idee ist schlecht. Ich bin dagegen, … Doğru cevap: dafür
-- Cümle
-  - Eski: Ich bin ___, dass wir früher anfangen.
-  - Yeni: Die Idee ist gut. Ich bin ___, dass wir früher anfangen.
-
-#### `dass-saetze-7` › 9
-Cümle: Der Kurs ist uns wichtig. Wir sind ___, dass der Kurs gestrichen wird.
-
-Gerekçe: Bağlam yoktu: 'Wir sind dafür, dass der Kurs gestrichen wird' da doğru; iki şık doğruydu. Anlamı belirleyen bağlam cümlesi eklendi.
-
-- Açıklama (TR)
-  - Eski: für/gegen etwas sein kalıbındaki edat gegen olduğu için dagegen gerekir. Burada dagegen, ardından gelen “dass der Kurs gestrichen wird” grubundaki olaya işaret eder; dass grubunu da- ifadesinden virgülle ayırırız. Doğru cevap: dagegen
-  - Yeni: Kurs bizim için önemli (Der Kurs ist uns wichtig), bu yüzden kaldırılmasına karşıyız: gegen etwas sein → dagegen. Burada dagegen, ardından gelen “dass der Kurs gestrichen wird” grubundaki olaya işaret eder; dass grubunu da- ifadesinden virgülle ayırırız. Karşılaştır: Wir sind dafür, … (destekliyoruz). Doğru cevap: dagegen
-- Cümle
-  - Eski: Wir sind ___, dass der Kurs gestrichen wird.
-  - Yeni: Der Kurs ist uns wichtig. Wir sind ___, dass der Kurs gestrichen wird.
-
-#### `zu-gruppen-8` › 0
-Cümle: Du kommst nächste Woche. Ich freue mich ___, dich zu sehen.
-
-Gerekçe: Bağlam yoktu: 'Ich freue mich darüber, dich zu sehen' (şu an görüşürken) de doğru; darauf/darüber ikisi de mümkündü. Geleceği gösteren bağlam eklendi.
-
-- Açıklama (TR)
-  - Eski: sich freuen auf kalıbındaki edat auf olduğu için darauf gerekir. Burada darauf, ardından gelen “dich zu sehen” grubundaki olaya işaret eder; zu grubunu da- ifadesinden virgülle ayırırız. Doğru cevap: darauf
-  - Yeni: Görüşme gelecekte (Du kommst nächste Woche); gelecekteki bir şeye sevinmek sich freuen auf ile anlatılır → darauf. Burada darauf, ardından gelen “dich zu sehen” grubuna işaret eder; zu grubunu virgülle ayırırız. Karşılaştır: olmuş/şu anki bir şeye sevinmek sich freuen über → darüber. Doğru cevap: darauf
-- Cümle
-  - Eski: Ich freue mich ___, dich zu sehen.
-  - Yeni: Du kommst nächste Woche. Ich freue mich ___, dich zu sehen.
-
-#### `zu-gruppen-8` › 9
-Cümle: Wir rechnen ___, länger warten zu müssen.
-
-Gerekçe: Açıklama yanlış kalıp (warten auf … edat mit) diyordu; cümledeki kalıp rechnen mit.
-
-- Açıklama (TR)
-  - Eski: warten auf kalıbındaki edat mit olduğu için damit gerekir. Burada damit, ardından gelen “länger warten zu müssen” grubundaki olaya işaret eder; zu grubunu da- ifadesinden virgülle ayırırız. Doğru cevap: damit
-  - Yeni: rechnen mit kalıbındaki edat mit olduğu için damit gerekir. Burada damit, ardından gelen “länger warten zu müssen” grubundaki olaya işaret eder; zu grubunu da- ifadesinden virgülle ayırırız. mit ünsüzle başladığı için araya r girmez. Doğru cevap: damit
-
-#### `fehler-korrigieren-9` › 7
-Cümle: Worauf wartest du? (Bir kişi soruluyor.) → Worauf yerine: ___
-
-Gerekçe: TR açıklamada Almanca 'die Person' alıntısı vardı ('Burada die Person bir kişidir'); anlaşılır Türkçe yapıldı.
-
-- Açıklama (TR)
-  - Eski: Burada die Person bir kişidir; da-/wo- ile bir şey sorulmuyor veya temsil edilmiyor. auf bu kullanımda Akkusativ ister: kişi/soru zamirinin doğru biçimi wen, tam ifade Auf wen. Doğru cevap: Auf wen
-  - Yeni: Parantezde bir kişinin sorulduğu söyleniyor. wo- biçimleri (Worauf) yalnız şeyler için kullanılır; kişi sorulurken edat + soru zamiri gelir. auf burada Akkusativ ister: wen → Auf wen. Doğru cevap: Auf wen
-
-#### `fehler-korrigieren-9` › 8
-Cümle: Womit sprichst du? (Bir kişi soruluyor.) → Womit yerine: ___
-
-Gerekçe: TR açıklamada Almanca 'die Person' alıntısı vardı ('Burada die Person bir kişidir'); anlaşılır Türkçe yapıldı.
-
-- Açıklama (TR)
-  - Eski: Burada die Person bir kişidir; da-/wo- ile bir şey sorulmuyor veya temsil edilmiyor. mit bu kullanımda Dativ ister: kişi/soru zamirinin doğru biçimi wem, tam ifade Mit wem. Doğru cevap: Mit wem
-  - Yeni: Parantezde bir kişinin sorulduğu söyleniyor. wo- biçimleri (Womit) yalnız şeyler için kullanılır; kişi sorulurken edat + soru zamiri gelir. mit burada Dativ ister: wem → Mit wem. Doğru cevap: Mit wem
-
-#### `schreiben-mix-10` › 9
-Cümle: [Mit welchem Gegenstand] schreibst du?
-
-Gerekçe: Açıklama 'mit ünlüyle başladığında araya r girer' diyordu; mit ünsüzle başlar.
-
-- Açıklama (TR)
-  - Eski: schreiben mit kalıbının edatı mit. Burada bir kişi değil, Mit welchem Gegenstand soruluyor; bu yüzden wo- + mit → womit. mit ünlüyle başladığında araya r girer. Doğru cevap: Womit schreibst du?
-  - Yeni: schreiben mit kalıbının edatı mit. Burada bir kişi değil, bir şey (Mit welchem Gegenstand) soruluyor; bu yüzden wo- + mit → womit. mit ünsüzle başladığı için araya r girmez. Doğru cevap: Womit schreibst du?
-
-### `data/b1/relativsaetze.json`
-
-#### `grundlagen-wortstellung-1` › 8
-Cümle: Verbinde: „Der Zug fährt nach Hamburg. Der Zug steht auf Gleis 4.“
-
-Gerekçe: İki cümlede de özne tam isim (der Zug); hangisi Relativsatz yapılırsa yapılsın geçerli. 'Der Zug, der auf Gleis 4 steht, fährt nach Hamburg.' doğru olduğu hâlde reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `der zug der nach hamburg fährt steht auf gleis 4` / `der zug, der nach hamburg fährt, steht auf gleis 4` / `der zug der nach hamburg faehrt steht auf gleis 4`
-  - Yeni: `der zug der nach hamburg fährt steht auf gleis 4` / `der zug, der nach hamburg fährt, steht auf gleis 4` / `der zug der nach hamburg faehrt steht auf gleis 4` / `der zug, der auf gleis 4 steht, fährt nach hamburg`
-
-#### `grundlagen-wortstellung-1` › 9
-Cümle: Verbinde: „Das Buch ist ausverkauft. Ich wollte das Buch bestellen.“
-
-Gerekçe: İkinci cümlede de tam isim (das Buch) var; ilk cümleyi Relativsatz yapan varyantlar (Nominativ 'das', fiil sonda) dilbilgisel olarak doğru ama reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `das buch das ich bestellen wollte ist ausverkauft` / `das buch, das ich bestellen wollte, ist ausverkauft`
-  - Yeni: `das buch das ich bestellen wollte ist ausverkauft` / `das buch, das ich bestellen wollte, ist ausverkauft` / `das buch, das ausverkauft ist, wollte ich bestellen` / `ich wollte das buch bestellen, das ausverkauft ist`
-
-#### `kasus-mix-6` › 6
-Cümle: Die Teilnehmer, ___ die Prüfung bestanden haben, bekommen ein Zertifikat.
-
-Gerekçe: Açıklama fiil grubunu 'haben bestanden' diye yanlış sırayla alıntılıyordu; Relativsatz'ta fiil grubu 'bestanden haben' sırasıyla sondadır.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: die. Bezugswort “die Teilnehmer” olduğu için Relativpronomen çoğul biçimden gelir; fakat Kasus ana cümleden değil, Relativsatz içindeki görevden belirlenir. Burada Teilnehmer 'haben bestanden' fiil grubunun öznesidir. Bu nedenle Nominativ gerekir ve doğru biçim “die” olur. Diğer seçenekler (“denen”, “deren”) ya yanlış Kasus'u ya da yanlış cinsiyet/çoğul biçimini gösterir.
-  - Yeni: Doğru cevap: die. Bezugswort “die Teilnehmer” olduğu için Relativpronomen çoğul biçimden gelir; fakat Kasus ana cümleden değil, Relativsatz içindeki görevden belirlenir. Burada Teilnehmer 'bestanden haben' fiil grubunun öznesidir (sınavı onlar geçti; die Prüfung nesnedir). Bu nedenle Nominativ gerekir ve doğru biçim “die” olur. Diğer seçenekler (“denen”, “deren”) ya yanlış Kasus'u ya da yanlış cinsiyet/çoğul biçimini gösterir.
-
-#### `wo-12` › 8
-Cümle: Ergänze: Das ist die Bibliothek, ___ ich normalerweise lerne.
-
-Gerekçe: Boşluğa 'in der' (die Bibliothek, Wo? → in + Dativ) da tamamen doğru; reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `wo`
-  - Yeni: `wo` / `in der`
-
-#### `wo-12` › 9
-Cümle: Ergänze: Der Laden, ___ ich immer einkaufe, hat heute geschlossen.
-
-Gerekçe: Boşluğa 'in dem' (der Laden, Wo? → in + Dativ) da tamamen doğru; reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `wo`
-  - Yeni: `wo` / `in dem`
-
-#### `wohin-woher-13` › 8
-Cümle: Ergänze: Das ist der Markt, ___ wir die alten Bücher bringen.
-
-Gerekçe: 'etwas auf den Markt bringen' (Wohin? → auf + Akkusativ, der Markt) da doğru; reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `wohin`
-  - Yeni: `wohin` / `auf den`
-
-#### `wohin-woher-13` › 9
-Cümle: Ergänze: Leipzig ist die Stadt, ___ unser Lehrer kommt.
-
-Gerekçe: 'aus der Stadt kommen' (aus + Dativ, die Stadt) da doğru; reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `woher`
-  - Yeni: `woher` / `aus der`
-
-#### `saetze-verbinden-16` › 7
-Cümle: Verbinde: „Das Café ist geschlossen. Wir treffen uns dort immer.“
-
-Gerekçe: 'in dem' (Wo? → in + Dativ, das Café) wo'nun standart eşdeğeri; reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `das café, wo wir uns immer treffen, ist geschlossen`
-  - Yeni: `das café, wo wir uns immer treffen, ist geschlossen` / `das café, in dem wir uns immer treffen, ist geschlossen`
-
-#### `saetze-verbinden-16` › 9
-Cümle: Verbinde: „Das ist die Stadt. Meine Mutter kommt aus dieser Stadt.“
-
-Gerekçe: Verilen cümle 'aus dieser Stadt' içeriyor; 'aus der' (aus + Dativ, feminin) en doğrudan ve standart birleştirme, ama reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `das ist die stadt, woher meine mutter kommt`
-  - Yeni: `das ist die stadt, woher meine mutter kommt` / `das ist die stadt, aus der meine mutter kommt`
-
-#### `master-18` › 9
-Cümle: Verbinde: „Das ist das Museum. Wir gehen morgen in das Museum.“
-
-Gerekçe: Yön bildiren yerlerde 'wohin' de Relativwort olarak doğru (Übung 13'te öğretiliyor); reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `das ist das museum in das wir morgen gehen` / `das ist das museum, in das wir morgen gehen`
-  - Yeni: `das ist das museum in das wir morgen gehen` / `das ist das museum, in das wir morgen gehen` / `das ist das museum, wohin wir morgen gehen`
-
-### `data/b1/satzstellung-b1.json`
-
-#### `schreiben-mix-10` › 7
-Cümle: Das Formular | muss | heute | ausgefüllt | werden.
-
-Gerekçe: Açıklama sağ parantezi yalnız 'werden' olarak gösteriyordu; sonda kalan grup 'ausgefüllt werden' (Partizip + mastar).
-
-- Açıklama (TR)
-  - Eski: “Das Formular” ilk öğedir; çekimli muss ikinci öğeye gelir. werden ise sağ parantezi kapatan fiil parçasıdır ve sonda kalır. Doğru cevap: Das Formular muss heute ausgefüllt werden.
-  - Yeni: “Das Formular” ilk öğedir; çekimli muss ikinci öğeye gelir. Sağ parantezi edilgen fiil grubu ausgefüllt werden kapatır: önce Partizip ausgefüllt, en sonda mastar werden. Doğru cevap: Das Formular muss heute ausgefüllt werden.
-
-#### `schreiben-mix-10` › 9
-Cümle: Ich gebe | es | ihr.
-
-Gerekçe: Açıklamadaki 'Özne ilk öğe değilse…' şablon kuyruğu bu soruyla ilgisizdi (özne zaten ilk öğe); sorunun asıl kuralı olan es + ihr zamir sırası açıklanmıyordu.
-
-- Açıklama (TR)
-  - Eski: “Ich” ilk öğedir; çekimli gebe ikinci öğeye gelir. Özne ilk öğe değilse fiilden sonraki alana yerleşir. Doğru cevap: Ich gebe es ihr.
-  - Yeni: “Ich” ilk öğedir; çekimli gebe ikinci öğeye gelir. Ardından iki vurgusuz kişi zamiri gelir: önce Akkusativ es (verilen şey), sonra Dativ ihr (alıcı). Karşılaştır: Ich gebe ihr das Buch (isim nesne → Dativ önce). Doğru cevap: Ich gebe es ihr.
-
-### `data/b2/nominalisierung.json`
-
-#### `gross-klein-verben-1` › 1
-Cümle: Welcher Satz ist richtig?
-
-Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
-
-- Açıklama (TR)
-  - Eski: Das burada das biçimidir ve ardından gelen Schwimmen bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Schwimmen im See macht mir Spaß.
-  - Yeni: Doğru cevap: Das Schwimmen im See macht mir Spaß. Artikel das, fiili nötr bir isme çevirir: das Schwimmen (yüzme). İsim olduğu için büyük harfle yazılır; zu schwimmen ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Ich möchte im See schwimmen (fiil → küçük harf).
-
-#### `gross-klein-verben-1` › 2
-Cümle: Welcher Satz ist richtig?
-
-Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
-
-- Açıklama (TR)
-  - Eski: Das burada das biçimidir ve ardından gelen Fotografieren bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Fotografieren ist hier verboten.
-  - Yeni: Doğru cevap: Das Fotografieren ist hier verboten. Artikel das, fiili nötr bir isme çevirir: das Fotografieren (fotoğraf çekme). İsim olduğu için büyük harfle yazılır; zu fotografieren ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Hier darf man nicht fotografieren (fiil → küçük harf).
-
-#### `gross-klein-verben-1` › 6
-Cümle: Welcher Satz ist richtig?
-
-Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
-
-- Açıklama (TR)
-  - Eski: Das burada das biçimidir ve ardından gelen Warten bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Warten dauert heute sehr lange.
-  - Yeni: Doğru cevap: Das Warten dauert heute sehr lange. Artikel das, fiili nötr bir isme çevirir: das Warten (bekleme). İsim olduğu için büyük harfle yazılır; zu warten ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Wir müssen lange warten (fiil → küçük harf).
-
-#### `das-infinitiv-3` › 0
-Cümle: Welche Form passt? „Das ___ am Morgen hilft mir.“
-
-Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
-
-- Açıklama (TR)
-  - Eski: Das burada das biçimidir ve ardından gelen Laufen bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Laufen
-  - Yeni: Doğru cevap: Laufen. Artikel das, fiili nötr bir isme çevirir: das Laufen (koşma). İsim olduğu için büyük harfle yazılır; zu laufen ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Ich gehe morgens gern laufen (fiil → küçük harf).
-
-#### `das-infinitiv-3` › 2
-Cümle: Welche Form passt? „Das ___ fremder Gebäude ist verboten.“
-
-Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
-
-- Açıklama (TR)
-  - Eski: Das burada das biçimidir ve ardından gelen Betreten bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Betreten
-  - Yeni: Doğru cevap: Betreten. Artikel das, fiili nötr bir isme çevirir: das Betreten (girme). İsim olduğu için büyük harfle yazılır; zu betreten ise fiil biçimidir ve artikelle kullanılmaz. Fiilin nesnesi isimleşmede Genitiv olur: fremde Gebäude betreten → das Betreten fremder Gebäude. Karşılaştır: Man darf das Gebäude nicht betreten (fiil → küçük harf).
-
-#### `das-infinitiv-3` › 4
-Cümle: Welche Form passt? „Das ___ neuer Wörter braucht Zeit.“
-
-Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
-
-- Açıklama (TR)
-  - Eski: Das burada das biçimidir ve ardından gelen Lernen bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Lernen
-  - Yeni: Doğru cevap: Lernen. Artikel das, fiili nötr bir isme çevirir: das Lernen (öğrenme). İsim olduğu için büyük harfle yazılır; zu lernen ise fiil biçimidir ve artikelle kullanılmaz. Fiilin nesnesi isimleşmede Genitiv olur: neue Wörter lernen → das Lernen neuer Wörter. Karşılaştır: Ich muss neue Wörter lernen (fiil → küçük harf).
-
-#### `das-infinitiv-3` › 6
-Cümle: Welche Form passt? „Das ___ macht ihn nervös.“
-
-Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
-
-- Açıklama (TR)
-  - Eski: Das burada das biçimidir ve ardından gelen Warten bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Warten
-  - Yeni: Doğru cevap: Warten. Artikel das, fiili nötr bir isme çevirir: das Warten (bekleme). İsim olduğu için büyük harfle yazılır; zu warten ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Wir müssen lange warten (fiil → küçük harf).
-
-#### `das-infinitiv-3` › 8
-Cümle: Welche Form passt? „Das ___ vor Publikum fällt ihr schwer.“
-
-Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
-
-- Açıklama (TR)
-  - Eski: Das burada das biçimidir ve ardından gelen Sprechen bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Sprechen
-  - Yeni: Doğru cevap: Sprechen. Artikel das, fiili nötr bir isme çevirir: das Sprechen (konuşma). İsim olduğu için büyük harfle yazılır; zu sprechen ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Sie muss vor Publikum sprechen (fiil → küçük harf).
-
-#### `nominalisierte-infinitive-schreiben-4` › 3
-Cümle: Ergänze: „das ___ im Chor“ (singen)
-
-Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
-
-- Açıklama (TR)
-  - Eski: das burada das biçimidir ve ardından gelen Singen bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: das Singen im Chor
-  - Yeni: Doğru cevap: das Singen im Chor. Artikel das, fiili nötr bir isme çevirir: das Singen (şarkı söyleme). İsim olduğu için büyük harfle yazılır; zu singen ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Sie singt gern (fiil → küçük harf).
-
-#### `nominalisierte-infinitive-schreiben-4` › 4
-Cümle: Ergänze: „das ___ der Brücke“ (betreten)
-
-Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
-
-- Açıklama (TR)
-  - Eski: das burada das biçimidir ve ardından gelen Betreten bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: das Betreten der Brücke
-  - Yeni: Doğru cevap: das Betreten der Brücke. Artikel das, fiili nötr bir isme çevirir: das Betreten (girme). İsim olduğu için büyük harfle yazılır; zu betreten ise fiil biçimidir ve artikelle kullanılmaz. Fiilin nesnesi isimleşmede Genitiv olur: die Brücke betreten → das Betreten der Brücke. Karşılaştır: Man darf das Gebäude nicht betreten (fiil → küçük harf).
-
-#### `verb-nomen-wechsel-5` › 5
-Cümle: Formuliere nominal: „Beim Fahren muss ich mich konzentrieren.“
-
-Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
-
-- Açıklama (TR)
-  - Eski: Das burada das biçimidir ve ardından gelen Fahren bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Fahren erfordert meine Konzentration.
-  - Yeni: Doğru cevap: Das Fahren erfordert meine Konzentration. Artikel das, fiili nötr bir isme çevirir: das Fahren (araba sürme). İsim olduğu için büyük harfle yazılır; zu fahren ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Ich muss vorsichtig fahren (fiil → küçük harf).
-
-#### `verb-nomen-wechsel-5` › 7
-Cümle: Formuliere nominal: „Man darf die Brücke nicht betreten.“
-
-Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
-
-- Açıklama (TR)
-  - Eski: Das burada das biçimidir ve ardından gelen Betreten bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Betreten der Brücke ist verboten.
-  - Yeni: Doğru cevap: Das Betreten der Brücke ist verboten. Artikel das, fiili nötr bir isme çevirir: das Betreten (girme). İsim olduğu için büyük harfle yazılır; zu betreten ise fiil biçimidir ve artikelle kullanılmaz. Fiilin nesnesi isimleşmede Genitiv olur: die Brücke betreten → das Betreten der Brücke. Karşılaştır: Man darf das Gebäude nicht betreten (fiil → küçük harf).
-
-#### `verb-transformation-16` › 4
-Cümle: Formuliere nominal: „Man darf die Brücke nicht betreten.“
-
-Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
-
-- Açıklama (TR)
-  - Eski: Das burada das biçimidir ve ardından gelen Betreten bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Betreten der Brücke ist verboten.
-  - Yeni: Doğru cevap: Das Betreten der Brücke ist verboten. Artikel das, fiili nötr bir isme çevirir: das Betreten (girme). İsim olduğu için büyük harfle yazılır; zu betreten ise fiil biçimidir ve artikelle kullanılmaz. Fiilin nesnesi isimleşmede Genitiv olur: die Brücke betreten → das Betreten der Brücke. Karşılaştır: Man darf das Gebäude nicht betreten (fiil → küçük harf).
-
-#### `verb-transformation-16` › 9
-Cümle: Formuliere nominal: „Wir sprechen vor Publikum; das fällt uns schwer.“
-
-Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
-
-- Açıklama (TR)
-  - Eski: Das burada das biçimidir ve ardından gelen Sprechen bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Sprechen vor Publikum fällt uns schwer.
-  - Yeni: Doğru cevap: Das Sprechen vor Publikum fällt uns schwer. Artikel das, fiili nötr bir isme çevirir: das Sprechen (konuşma). İsim olduğu için büyük harfle yazılır; zu sprechen ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Sie muss vor Publikum sprechen (fiil → küçük harf).
-
-#### `fehlerkorrektur-17` › 1
-Cümle: Korrigiere: „Das singen macht ihr Spaß.“
-
-Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
-
-- Açıklama (TR)
-  - Eski: Das burada das biçimidir ve ardından gelen Singen bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Singen macht ihr Spaß.
-  - Yeni: Doğru cevap: Das Singen macht ihr Spaß. Artikel das, fiili nötr bir isme çevirir: das Singen (şarkı söyleme). İsim olduğu için büyük harfle yazılır; zu singen ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Sie singt gern (fiil → küçük harf).
-
-#### `b2-kontext-18` › 1
-Cümle: Ergänze: „Das ___ neuer Methoden kostet Zeit.“ (erlernen)
-
-Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
-
-- Açıklama (TR)
-  - Eski: Das burada das biçimidir ve ardından gelen Erlernen bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Erlernen neuer Methoden kostet Zeit.
-  - Yeni: Doğru cevap: Das Erlernen neuer Methoden kostet Zeit. Artikel das, fiili nötr bir isme çevirir: das Erlernen (öğrenme). İsim olduğu için büyük harfle yazılır; zu erlernen ise fiil biçimidir ve artikelle kullanılmaz. Fiilin nesnesi isimleşmede Genitiv olur: neue Methoden erlernen → das Erlernen neuer Methoden. Karşılaştır: Wir müssen neue Methoden erlernen (fiil → küçük harf).
-
-#### `b2-mix-19` › 4
-Cümle: Welche Form ist korrekt?
-
-Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
-
-- Açıklama (TR)
-  - Eski: Das burada das biçimidir ve ardından gelen Fotografieren bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Fotografieren ist hier verboten.
-  - Yeni: Doğru cevap: Das Fotografieren ist hier verboten. Artikel das, fiili nötr bir isme çevirir: das Fotografieren (fotoğraf çekme). İsim olduğu için büyük harfle yazılır; zu fotografieren ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Hier darf man nicht fotografieren (fiil → küçük harf).
-
-#### `master-20` › 4
-Cümle: Formuliere nominal: „Man darf diesen Bereich nicht betreten.“
-
-Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı. Geçerli ve eşdeğer bir varyant (kelime sırası / gern-gerne / -es Genitiv) reddediliyordu.
-
-- Açıklama (TR)
-  - Eski: Das burada das biçimidir ve ardından gelen Betreten bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Betreten dieses Bereichs ist verboten.
-  - Yeni: Doğru cevap: Das Betreten dieses Bereichs ist verboten. Artikel das, fiili nötr bir isme çevirir: das Betreten (girme). İsim olduğu için büyük harfle yazılır; zu betreten ise fiil biçimidir ve artikelle kullanılmaz. Fiilin nesnesi isimleşmede Genitiv olur: diesen Bereich betreten → das Betreten dieses Bereichs. Karşılaştır: Man darf das Gebäude nicht betreten (fiil → küçük harf).
-- Kabul edilen cevaplar
-  - Eski: `das betreten dieses bereichs ist verboten`
-  - Yeni: `das betreten dieses bereichs ist verboten` / `das betreten dieses bereiches ist verboten`
-
-#### `adjektiv-gross-klein-6` › 5
-Cümle: Welcher Satz ist richtig?
-
-Gerekçe: Açıklama renk adı Grün'ü 'eylem adı / isimleşmiş mastar' olarak tanımlıyordu (de/en'de de 'substantivierter Infinitiv'); Grün bir renk adıdır.
-
-- Açıklama (TR)
-  - Eski: das burada das biçimidir ve ardından gelen Grün bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Ich mag das Grün der Bäume.
-  - Yeni: Doğru cevap: Ich mag das Grün der Bäume. Burada Grün bir renk adıdır (isim): das Grün, ardından Genitiv der Bäume gelir. Renk isimleri büyük yazılır ve ek almaz. Karşılaştır: Die Bäume sind grün (yüklem sıfatı → küçük harf).
-- DE/EN açıklamaları da güncellendi.
-
-#### `farben-9` › 7
-Cümle: Ergänze: „Ich liebe das ___ des Frühlings.“ (grün)
-
-Gerekçe: Açıklama renk adı Grün'ü 'eylem adı / isimleşmiş mastar' olarak tanımlıyordu (de/en'de de 'substantivierter Infinitiv'); Grün bir renk adıdır.
-
-- Açıklama (TR)
-  - Eski: das burada das biçimidir ve ardından gelen Grün bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Grün
-  - Yeni: Doğru cevap: Grün. Artikel das ve ardından gelen Genitiv des Frühlings, Grün'ün burada bir renk adı (isim) olduğunu gösterir: das Grün. Renk isimleri büyük yazılır ve ek almaz. Karşılaştır: Die Blätter sind grün (yüklem sıfatı → küçük harf).
-- DE/EN açıklamaları da güncellendi.
-
-#### `praeposition-nominalisiert-2` › 1
-Cümle: Welche Form passt? „Vom vielen ___ bekomme ich Rückenschmerzen.“
-
-Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
-
-- Açıklama (TR)
-  - Eski: “Vom vielen Sitzen” yapısı vardır. Doğru cevap: Sitzen
-  - Yeni: Doğru cevap: Sitzen. vom = von dem; dem artikeli ve vielen sıfatı bir isim ister. Bu yüzden sitzen isimleşir ve büyük yazılır: vom vielen Sitzen (çok oturmaktan). Sıfat vielen küçük kalır. Karşılaştır: Ich sitze viel (fiil → küçük).
-
-#### `das-infinitiv-3` › 1
-Cümle: Welche Form passt? „Ich gehe morgens gern ___.“
-
-Gerekçe: İki şık doğruydu: 'Ich gehe morgens gern zum Laufen' de dilbilgisel olarak doğru bir cümle (gehen + zum + isimleşmiş fiil). Çeldirici yanlış 'zu laufen' ile değiştirildi ve açıklama somutlaştırıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: laufen. Burada fiil kullanımı vardır; isimleşme yoktur.
-  - Yeni: Doğru cevap: laufen. gehen + Infinitiv yapısında (laufen gehen = koşmaya gitmek) ikinci fiil yalın Infinitiv olarak kalır, zu almaz ve küçük yazılır. Karşılaştır: Das Laufen am Morgen hilft mir (das → isim, büyük harf).
-- Seçenekler
-  - Eski: `Laufen` / `zum Laufen` / `laufen`
-  - Yeni: `Laufen` / `zu laufen` / `laufen`
-
-#### `das-infinitiv-3` › 5
-Cümle: Welche Form passt? „Ich muss heute noch ___.“
-
-Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
-
-- Açıklama (TR)
-  - Eski: “ich muss ... lernen” küçük harfle verilir. Doğru cevap: lernen
-  - Yeni: Doğru cevap: lernen. Modal fiil muss, ikinci fiili yalın Infinitiv olarak cümle sonuna gönderir: Ich muss heute noch lernen. Bu bir fiildir, isim değildir; küçük yazılır. Karşılaştır: Das Lernen braucht Zeit (das → isim).
-
-#### `nominalisierte-infinitive-schreiben-4` › 2
-Cümle: Ergänze: „vom vielen ___“ (sitzen)
-
-Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
-
-- Açıklama (TR)
-  - Eski: aynı kalıp bulunur. Doğru cevap: vom vielen Sitzen
-  - Yeni: Doğru cevap: vom vielen Sitzen. vom = von dem; dem artikeli ve vielen sıfatı bir isim gerektirir. Bu yüzden sitzen isimleşir ve büyük yazılır: vom vielen Sitzen (çok oturmaktan). Sıfat vielen küçük kalır.
-
-#### `verb-nomen-wechsel-5` › 9
-Cümle: Formuliere nominal: „Er sitzt zu viel.“
-
-Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
-
-- Açıklama (TR)
-  - Eski: “Vom vielen Sitzen ...” modeli vardır. Doğru cevap: Vom vielen Sitzen bekommt er Beschwerden.
-  - Yeni: Doğru cevap: Vom vielen Sitzen bekommt er Beschwerden. er sitzt viel → vom vielen Sitzen: vom = von dem, viel sıfat olarak -en alır ve küçük kalır, Sitzen isimleşmiş fiil olarak büyük yazılır. von burada sebep bildirir: çok oturmaktan şikâyetleri oluyor.
-
-#### `adjektiv-gross-klein-6` › 7
-Cümle: Welcher Satz ist richtig?
-
-Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
-
-- Açıklama (TR)
-  - Eski: “Das Neue” biçimi bulunur. Doğru cevap: Das Neue macht vielen Angst.
-  - Yeni: Doğru cevap: Das Neue macht vielen Angst. das'tan sonra neu bir isim gibi kullanılıyor (yeni olan şey); arkasından nitelediği bir isim gelmiyor. Bu yüzden büyük yazılır ve belirli artikelden sonra -e alır: das Neue. Das Neu eksiz, das neue küçük harfli olduğu için yanlıştır.
-
-#### `das-adjektiv-8` › 7
-Cümle: Ergänze: „Das ___ daran war seine Reaktion.“ (überraschend)
-
-Gerekçe: Açıklama sadece cevabı tekrarlıyordu veya TR alanında İngilizce kelime vardı ("adjective"); kural yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: Überraschende. das + nominalisierte adjective.
-  - Yeni: Doğru cevap: Überraschende. das'tan sonra überraschend bir isim gibi kullanılıyor (şaşırtıcı olan şey); arkasından nitelediği bir isim gelmiyor. Bu yüzden büyük yazılır ve belirli artikel das'tan sonra -e alır: das Überraschende.
-
-#### `das-adjektiv-8` › 8
-Cümle: Ergänze: „Das ___ bleibt oft unbemerkt.“ (positiv)
-
-Gerekçe: Açıklama sadece cevabı tekrarlıyordu veya TR alanında İngilizce kelime vardı ("adjective"); kural yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: Positive. das Positive.
-  - Yeni: Doğru cevap: Positive. das'tan sonra positiv bir isim gibi kullanılıyor (olumlu olan şey); arkasından nitelediği bir isim gelmiyor. Bu yüzden büyük yazılır ve belirli artikel das'tan sonra -e alır: das Positive.
-
-#### `das-adjektiv-8` › 9
-Cümle: Ergänze: „Das ___ ist manchmal schwer zu akzeptieren.“ (unbekannt)
-
-Gerekçe: Açıklama sadece cevabı tekrarlıyordu veya TR alanında İngilizce kelime vardı ("adjective"); kural yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: Unbekannte. das Unbekannte.
-  - Yeni: Doğru cevap: Unbekannte. das'tan sonra unbekannt bir isim gibi kullanılıyor (bilinmeyen şey); arkasından nitelediği bir isim gelmiyor. Bu yüzden büyük yazılır ve belirli artikel das'tan sonra -e alır: das Unbekannte.
-
-#### `master-20` › 5
-Cümle: Ergänze: „Das ___ an der Lösung ist ihre Einfachheit.“ (überzeugend)
-
-Gerekçe: Açıklama sadece cevabı tekrarlıyordu veya TR alanında İngilizce kelime vardı ("adjective"); kural yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: Das Überzeugende an der Lösung ist ihre Einfachheit.. das + nominalisierte adjective -e.
-  - Yeni: Doğru cevap: Das Überzeugende an der Lösung ist ihre Einfachheit. das'tan sonra überzeugend bir isim gibi kullanılıyor (ikna edici olan şey); arkasından nitelediği bir isim gelmiyor. Bu yüzden büyük yazılır ve belirli artikel das'tan sonra -e alır: das Überzeugende.
-
-#### `b2-mix-19` › 7
-Cümle: Welche Form ist korrekt?
-
-Gerekçe: TR açıklamada İngilizce "adjective" kelimesi vardı; kural Türkçe yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: Nichts Wichtiges wurde vergessen.. nichts + nominalisierte adjective -es.
-  - Yeni: Doğru cevap: Nichts Wichtiges wurde vergessen. nichts'ten sonra sıfat isim gibi kullanılır: büyük yazılır ve nötr güçlü çekimle -es alır: nichts Wichtiges. Wichtige (son eksik) ve wichtiges (küçük harf) yanlıştır. Karşılaştır: alles Wichtige (alles'ten sonra -e).
-
-#### `farben-9` › 5
-Cümle: Ergänze: „Das ___ des Himmels erinnert mich ans Meer.“ (blau)
-
-Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
-
-- Açıklama (TR)
-  - Eski: “das Blau” bulunur. Doğru cevap: Blau
-  - Yeni: Doğru cevap: Blau. Artikel das ve ardından gelen Genitiv des Himmels, Blau'nun burada bir renk adı (isim) olduğunu gösterir: das Blau. Renk isimleri büyük yazılır ve ek almaz. Karşılaştır: Der Himmel ist blau (yüklem sıfatı → küçük).
-
-#### `personen-nominativ-10` › 2
-Cümle: Ergänze: „Meine ___ arbeitet jetzt in Köln.“ (bekannt)
-
-Gerekçe: Açıklamada artikel boş kalmıştı ("Sorudaki  ve Nominativ"); tetikleyici Meine yazıldı.
-
-- Açıklama (TR)
-  - Eski: Bekannte burada bir kişiyi veya insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. Sorudaki  ve Nominativ görevi sıfat çekimindeki sonu belirler. İsimleşme, sıfatın çekim ekini kaldırmaz. Doğru cevap: Bekannte
-  - Yeni: Doğru cevap: Bekannte. Bekannte burada bir kişiyi (kadın tanıdık) adlandırıyor; bu yüzden büyük harfle yazılır. Cümlenin öznesi olduğu için Nominativ'tir; feminin meine'den sonra son -e olur: meine Bekannte. Karşılaştır: mein Bekannter (erkek tanıdık).
-
-#### `personen-nominativ-10` › 5
-Cümle: Ergänze: „Der ___ fragt nach dem Weg.“ (reisend)
-
-Gerekçe: Açıklama hâli yanlış veriyordu (özne Nominativ iken "Dativ" yazıyordu).
-
-- Açıklama (TR)
-  - Eski: Reisende burada bir kişiyi veya insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. Sorudaki Der ve Dativ görevi sıfat çekimindeki sonu belirler. İsimleşme, sıfatın çekim ekini kaldırmaz. Doğru cevap: Reisende
-  - Yeni: Doğru cevap: Reisende. Reisende (yolcu) bir kişiyi adlandırıyor; bu yüzden büyük harfle yazılır. Der Reisende fiil fragt'ın öznesidir (Nominativ); maskulin der'den sonra son -e olur. Karşılaştır: ein Reisender.
-
-#### `personen-nominativ-10` › 6
-Cümle: Ergänze: „Eine ___ spricht mit dem Arzt.“ (angestellt)
-
-Gerekçe: Açıklama hâli yanlış veriyordu (özne Nominativ iken "Dativ" yazıyordu).
-
-- Açıklama (TR)
-  - Eski: Angestellte burada bir kişiyi veya insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. Sorudaki Eine ve Dativ görevi sıfat çekimindeki sonu belirler. İsimleşme, sıfatın çekim ekini kaldırmaz. Doğru cevap: Angestellte
-  - Yeni: Doğru cevap: Angestellte. Angestellte (çalışan) bir kişiyi adlandırıyor; bu yüzden büyük harfle yazılır. Eine Angestellte fiil spricht'in öznesidir (Nominativ); feminin eine'den sonra son -e olur. mit dem Arzt'taki Dativ bu kelimeyi etkilemez. Karşılaştır: ein Angestellter (erkek).
-
-#### `personen-nominativ-10` › 8
-Cümle: Ergänze: „Ein ___ hilft uns.“ (deutsch)
-
-Gerekçe: Açıklama hâli yanlış veriyordu (özne Nominativ iken "Dativ" yazıyordu).
-
-- Açıklama (TR)
-  - Eski: Deutscher burada bir kişiyi veya insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. Sorudaki Ein ve Dativ görevi sıfat çekimindeki sonu belirler. İsimleşme, sıfatın çekim ekini kaldırmaz. Doğru cevap: Deutscher
-  - Yeni: Doğru cevap: Deutscher. Deutscher bir kişiyi adlandırıyor; bu yüzden büyük harfle yazılır. Ein Deutscher fiil hilft'in öznesidir (Nominativ); maskulin ein sonu göstermediği için sıfat -er alır. uns ise nesnedir. Karşılaştır: der Deutsche.
-
-#### `gruppen-plural-12` › 4
-Cümle: Ergänze: „Viele ___ warten vor dem Gebäude.“ (reisend)
-
-Gerekçe: Açıklama tetikleyiciyi "dem ve Dativ" olarak veriyordu; boşluktaki kelime viele ile kullanılan Nominativ özne.
-
-- Açıklama (TR)
-  - Eski: Reisende burada bir kişiyi veya insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. Sorudaki dem ve Dativ görevi sıfat çekimindeki sonu belirler. İsimleşme, sıfatın çekim ekini kaldırmaz. Doğru cevap: Reisende
-  - Yeni: Doğru cevap: Reisende. Reisende bir insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. Viele Reisende cümlenin öznesidir (Nominativ çoğul). Belirli artikel olmadığı için (viele) sıfat güçlü çekimle -e alır. vor dem Gebäude'deki Dativ bu kelimeyi etkilemez. Karşılaştır: die Reisenden.
-
-#### `gruppen-plural-12` › 7
-Cümle: Ergänze: „Einige ___ protestieren.“ (unzufrieden)
-
-Gerekçe: Açıklamada tetikleyici boş kalmıştı ("Sorudaki  ve"); einige yazıldı.
-
-- Açıklama (TR)
-  - Eski: Unzufriedene burada bir kişiyi veya insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. Sorudaki  ve Nominativ görevi sıfat çekimindeki sonu belirler. İsimleşme, sıfatın çekim ekini kaldırmaz. Doğru cevap: Unzufriedene
-  - Yeni: Doğru cevap: Unzufriedene. Unzufriedene (memnun olmayanlar) bir insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. Einige Unzufriedene özne (Nominativ çoğul); einige'den sonra sıfat güçlü çekimle -e alır. Karşılaştır: die Unzufriedenen.
-
-#### `gruppen-plural-12` › 8
-Cümle: Ergänze: „Wir befragen mehrere ___.“ (fremd)
-
-Gerekçe: Açıklamada tetikleyici boş kalmıştı ("Sorudaki  ve"); mehrere ve befragen + Akkusativ yazıldı.
-
-- Açıklama (TR)
-  - Eski: Fremde burada bir kişiyi veya insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. Sorudaki  ve Akkusativ görevi sıfat çekimindeki sonu belirler. İsimleşme, sıfatın çekim ekini kaldırmaz. Doğru cevap: Fremde
-  - Yeni: Doğru cevap: Fremde. Fremde (yabancılar) bir insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. befragen Akkusativ nesne ister; mehrere'den sonra çoğulda sıfat güçlü çekimle -e alır: mehrere Fremde. Karşılaştır: die Fremden.
-
-#### `gruppen-plural-12` › 9
-Cümle: Ergänze: „Die ___ besuchen heute die ___.“ (jung/krank)
-
-Gerekçe: Açıklama iki boşluğu da Nominativ sayıyordu; ikinci boşluk besuchen fiilinin Akkusativ nesnesi.
-
-- Açıklama (TR)
-  - Eski: Jungen und Kranken burada bir kişiyi veya insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. Sorudaki Die ve Nominativ görevi sıfat çekimindeki sonu belirler. İsimleşme, sıfatın çekim ekini kaldırmaz. Doğru cevap: Jungen und Kranken
-  - Yeni: Doğru cevap: Jungen und Kranken. İkisi de insan gruplarını adlandırıyor; bu yüzden büyük harfle yazılır. Die Jungen özne (Nominativ çoğul), die Kranken besuchen'in nesnesi (Akkusativ çoğul). Çoğul belirli artikel die'den sonra her iki hâlde de son -en olur.
-
-#### `adjektiv-transformation-15` › 3
-Cümle: Formuliere nominal: „Das ist neu.“ → „... fasziniert mich.“
-
-Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: Das Neue fasziniert mich.. Kaynağın “Das Neue” örneği.
-  - Yeni: Doğru cevap: Das Neue fasziniert mich. Das ist neu cümlesindeki sıfat, das ile isim olur: das Neue (yeni olan şey). Arkasından isim gelmediği için büyük yazılır ve belirli artikelden sonra -e alır.
-
-#### `adjektiv-transformation-15` › 5
-Cümle: Formuliere nominal: „Er ist arbeitslos.“ → „... sucht Arbeit.“
-
-Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
-
-- Açıklama (TR)
-  - Eski: der Arbeitslose. Doğru cevap: Der Arbeitslose sucht Arbeit.
-  - Yeni: Doğru cevap: Der Arbeitslose sucht Arbeit. Er ist arbeitslos → der Arbeitslose (işsiz kişi). Kişi adı olduğu için büyük yazılır; maskulin Nominativ der'den sonra sıfat sonu -e olur. Karşılaştır: ein Arbeitsloser.
-
-#### `adjektiv-transformation-15` › 6
-Cümle: Formuliere nominal: „Sie ist bekannt.“ → „Meine ... hat geheiratet.“
-
-Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
-
-- Açıklama (TR)
-  - Eski: Meine Bekannte. Doğru cevap: Meine Bekannte hat geheiratet.
-  - Yeni: Doğru cevap: Meine Bekannte hat geheiratet. Sie ist bekannt → meine Bekannte (kadın tanıdık). Kişi adı olduğu için büyük yazılır; feminin Nominativ meine'den sonra son -e olur. Karşılaştır: mein Bekannter (erkek).
-
-#### `adjektiv-transformation-15` › 7
-Cümle: Formuliere nominal: „Er ist fremd.“ → „Ein ... hat geklopft.“
-
-Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
-
-- Açıklama (TR)
-  - Eski: Ein Fremder. Doğru cevap: Ein Fremder hat geklopft.
-  - Yeni: Doğru cevap: Ein Fremder hat geklopft. Er ist fremd → ein Fremder (yabancı biri). Kişi adı olduğu için büyük yazılır; maskulin Nominativ ein sonu göstermediği için sıfat -er alır. Karşılaştır: der Fremde.
-
-#### `adjektiv-transformation-15` › 8
-Cümle: Formuliere nominal: „Sie sind deutsch.“ → „Die ... sind pünktlich.“
-
-Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
-
-- Açıklama (TR)
-  - Eski: Die Deutschen. Doğru cevap: Die Deutschen sind pünktlich.
-  - Yeni: Doğru cevap: Die Deutschen sind pünktlich. Sie sind deutsch → die Deutschen (Almanlar). Grup adı olduğu için büyük yazılır; çoğul belirli artikel die'den sonra son -en olur. Karşılaştır: Deutsche (artikelsiz çoğul).
-
-#### `verb-transformation-16` › 1
-Cümle: Formuliere nominal: „Er sitzt sehr viel und wird davon müde.“
-
-Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
-
-- Açıklama (TR)
-  - Eski: “Vom vielen Sitzen ...” modeli vardır. Doğru cevap: Vom vielen Sitzen wird er müde.
-  - Yeni: Doğru cevap: Vom vielen Sitzen wird er müde. er sitzt viel → vom vielen Sitzen: vom = von dem, viel sıfat olarak -en alır ve küçük kalır, Sitzen isimleşmiş fiil olarak büyük yazılır. von burada sebep bildirir (çok oturmaktan).
-- Kabul edilen cevaplar
-  - Eski: `vom vielen sitzen wird er muede` / `vom vielen sitzen wird er müde`
-  - Yeni: `vom vielen sitzen wird er muede` / `vom vielen sitzen wird er müde` / `er wird vom vielen sitzen müde`
-
-#### `verb-transformation-16` › 3
-Cümle: Formuliere nominal: „Sie singt im Chor und hat viel Spaß.“
-
-Gerekçe: Açıklama 'viel sonrasında sıfat isimleşiyor, bu yüzden Spaß büyük yazılır' diyordu; Spaß zaten normal bir isimdir. Asıl tetikleyici das Singen.
-
-- Açıklama (TR)
-  - Eski: Burada viel sonrasında sıfat bir ismin önünde durmuyor, ismin görevini üstleniyor. Bu yüzden Spaß büyük harfle yazılır. Küçük harfli sıfat biçimi bu isimleşmeyi göstermez. Doğru cevap: Das Singen im Chor macht ihr viel Spaß.
-  - Yeni: Doğru cevap: Das Singen im Chor macht ihr viel Spaß. sie singt → das Singen: artikel das fiili nötr isme çevirir, bu yüzden Singen büyük yazılır ve cümlenin öznesi olur (macht). Spaß zaten bir isimdir; viel onu niteler.
-
-#### `verb-transformation-16` › 0
-Cümle: Formuliere nominal: „Ich fahre und muss mich konzentrieren.“
-
-Gerekçe: Geçerli ve eşdeğer bir varyant (kelime sırası / gern-gerne / -es Genitiv) reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `beim fahren muss ich mich konzentrieren`
-  - Yeni: `beim fahren muss ich mich konzentrieren` / `ich muss mich beim fahren konzentrieren`
-
-#### `verb-transformation-16` › 5
-Cümle: Formuliere nominal: „Ich lerne und höre dabei Musik.“
-
-Gerekçe: Geçerli ve eşdeğer bir varyant (kelime sırası / gern-gerne / -es Genitiv) reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `beim lernen hoere ich musik` / `beim lernen höre ich musik`
-  - Yeni: `beim lernen hoere ich musik` / `beim lernen höre ich musik` / `ich höre beim lernen musik`
-
-#### `verb-transformation-16` › 7
-Cümle: Formuliere nominal: „Er liest viel und entspannt sich dabei.“
-
-Gerekçe: Geçerli ve eşdeğer bir varyant (kelime sırası / gern-gerne / -es Genitiv) reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `beim lesen entspannt er sich`
-  - Yeni: `beim lesen entspannt er sich` / `er entspannt sich beim lesen`
-
-#### `verb-nomen-wechsel-5` › 6
-Cümle: Formuliere mit Verb: „Das Rauchen ist hier nicht erlaubt.“
-
-Gerekçe: Geçerli ve eşdeğer bir varyant (kelime sırası / gern-gerne / -es Genitiv) reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `man darf hier nicht rauchen`
-  - Yeni: `man darf hier nicht rauchen` / `hier darf man nicht rauchen`
-
-#### `verb-nomen-wechsel-5` › 8
-Cümle: Formuliere mit Verb: „Das Singen macht ihr Spaß.“
-
-Gerekçe: Geçerli ve eşdeğer bir varyant (kelime sırası / gern-gerne / -es Genitiv) reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `sie singt gern`
-  - Yeni: `sie singt gern` / `sie singt gerne`
-
-#### `verb-nomen-wechsel-5` › 2
-Cümle: Formuliere mit Infinitiv: „Hör mit dem Weinen auf.“
-
-Gerekçe: Bare zu-Infinitiv (aufhören + zu weinen, ek öğe yok) virgülsüz de yazılabilir; virgülsüz cevap reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `hoer auf, zu weinen` / `hör auf, zu weinen`
-  - Yeni: `hoer auf, zu weinen` / `hör auf, zu weinen` / `hör auf zu weinen`
-
-#### `verb-nomen-wechsel-5` › 4
-Cümle: Formuliere mit Infinitiv: „Zum Spielen kommt sie später vorbei.“
-
-Gerekçe: Infinitiv grubu cümle başına da alınabilir; eşdeğer kelime sırası reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `sie kommt spaeter vorbei, um zu spielen` / `sie kommt später vorbei, um zu spielen`
-  - Yeni: `sie kommt spaeter vorbei, um zu spielen` / `sie kommt später vorbei, um zu spielen` / `um zu spielen, kommt sie später vorbei`
-
-#### `b2-kontext-18` › 6
-Cümle: Ergänze: „Sie sucht nach etwas ___.“ (passend)
-
-Gerekçe: Açıklama Dativ sonunu (-em) açıklamıyordu; tetikleyici nach + Dativ yazıldı.
-
-- Açıklama (TR)
-  - Eski: Burada etwas sonrasında sıfat bir ismin önünde durmuyor, ismin görevini üstleniyor. Bu yüzden Passendem büyük harfle yazılır. Küçük harfli sıfat biçimi bu isimleşmeyi göstermez. Doğru cevap: Sie sucht nach etwas Passendem.
-  - Yeni: Doğru cevap: Sie sucht nach etwas Passendem. etwas'tan sonra sıfat isim gibi kullanılır ve büyük yazılır. nach edatı Dativ ister; artikel olmadığı için sıfat nötr Dativ güçlü sonunu alır: -em → etwas Passendem. Karşılaştır: Ich suche etwas Passendes (Akkusativ → -es).
-
-#### `b2-kontext-18` › 7
-Cümle: Ergänze: „Wir danken den ___.“ (beteiligt)
-
-Gerekçe: İpucunda İngilizce metin vardı ve cevabın kendisi (beteiligten) veriliyordu; ipucu sıfat kökü (beteiligt) olarak düzeltildi.
-
-- Cümle
-  - Eski: Ergänze: „Wir danken den ___.“ (beteiligten, adjective stem beteiligt)
-  - Yeni: Ergänze: „Wir danken den ___.“ (beteiligt)
-- Açıklama (TR)
-  - Eski: Doğru cevap: Wir danken den Beteiligten.. den + Dativ çoğul nominalisierte sıfat -en.
-  - Yeni: Doğru cevap: Wir danken den Beteiligten. danken Dativ ister; çoğul Dativ belirli artikel den'den sonra isimleşmiş sıfat -en alır ve kişi adı olduğu için büyük yazılır: den Beteiligten (katılanlar/ilgililer).
-
-#### `master-20` › 1
-Cümle: Ergänze: „Wir haben etwas ___ und nichts ___ erfahren.“ (positiv/neu)
-
-Gerekçe: Açıklama yalnızca ilk boşluğu (etwas Positives) açıklıyordu; nichts Neues eklendi.
-
-- Açıklama (TR)
-  - Eski: Burada etwas sonrasında sıfat bir ismin önünde durmuyor, ismin görevini üstleniyor. Bu yüzden Positives büyük harfle yazılır ve bu yapıdaki nötr çekim -es ile görünür. Küçük harfli sıfat biçimi bu isimleşmeyi göstermez. Doğru cevap: etwas Positives und nichts Neues
-  - Yeni: Doğru cevap: etwas Positives und nichts Neues. etwas ve nichts'ten sonra sıfat isim gibi kullanılır; arkasından isim gelmediği için büyük yazılır ve nötr güçlü çekimle -es alır: etwas Positives, nichts Neues.
-
-#### `master-20` › 3
-Cümle: Ergänze: „Mit einem ___ und zwei ___ wurde gesprochen.“ (verantwortlich/beteiligt)
-
-Gerekçe: Açıklama ikinci boşluk için belirsizdi ("uygun sonla"); Dativ çoğul -en kuralı yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: mit einem Verantwortlichen und zwei Beteiligten. Dativ tekil maskulin -en; sayı sonrası çoğul kişi adı uygun sonla kullanılır.
-  - Yeni: Doğru cevap: mit einem Verantwortlichen und zwei Beteiligten. mit Dativ ister. einem'den sonra tekil maskulin Dativ son -en: einem Verantwortlichen. zwei çekim göstermez; Dativ çoğulda sıfat sonu yine -en olur: zwei Beteiligten. Kişi adları olduğu için ikisi de büyük yazılır.
-
-#### `master-20` › 6
-Cümle: Korrigiere: „Beim analysieren haben die Verantwortliche nichts neues entdeckt.“
-
-Gerekçe: Açıklama üç hatadan yalnızca birini (nichts Neues) açıklıyordu.
-
-- Açıklama (TR)
-  - Eski: Burada nichts sonrasında sıfat bir ismin önünde durmuyor, ismin görevini üstleniyor. Bu yüzden Neues büyük harfle yazılır ve bu yapıdaki nötr çekim -es ile görünür. Küçük harfli sıfat biçimi bu isimleşmeyi göstermez. Doğru cevap: Beim Analysieren haben die Verantwortlichen nichts Neues entdeckt.
-  - Yeni: Doğru cevap: Beim Analysieren haben die Verantwortlichen nichts Neues entdeckt. Üç düzeltme var: beim = bei dem, ardından gelen fiil isimleşir → Analysieren büyük; die Verantwortlichen özne (Nominativ çoğul), belirli artikel die'den sonra -en; nichts'ten sonra isimleşen sıfat büyük yazılır ve -es alır → nichts Neues.
-
-#### `master-20` › 7
-Cümle: Ergänze: „Ich wünsche allen ___ alles ___.“ (beteiligt/gut)
-
-Gerekçe: Açıklama yalnızca alles Gute kısmını açıklıyordu; allen Beteiligten eklendi.
-
-- Açıklama (TR)
-  - Eski: Burada alles sonrasında sıfat bir ismin önünde durmuyor, ismin görevini üstleniyor. Bu yüzden Gute büyük harfle yazılır ve bu yapıdaki nötr çekim -e ile görünür. Küçük harfli sıfat biçimi bu isimleşmeyi göstermez. Doğru cevap: allen Beteiligten alles Gute
-  - Yeni: Doğru cevap: allen Beteiligten alles Gute. wünschen kime sorusunda Dativ ister: allen Beteiligten (Dativ çoğul, allen'den sonra -en, kişi adı → büyük). alles'ten sonra isimleşen sıfat büyük yazılır ve -e alır: alles Gute.
-
-### `data/b2/partizip-i.json`
-
-#### `bildung-erkennen-1` › 0
-Cümle: Welche Form ist das richtige Partizip I von „schwimmen“?
-
-Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: schwimmend. Partizip I wird aus dem Infinitiv + d gebildet: schwimmen + d → schwimmend.
-  - Yeni: Doğru cevap: schwimmend. Partizip I, Infinitiv'e -d eklenerek yapılır: schwimmen + d → schwimmend. geschwommen Partizip II'dir; schwimmernd diye bir biçim yoktur.
-
-#### `bildung-erkennen-1` › 1
-Cümle: Welche Form ist das richtige Partizip I von „spielen“?
-
-Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: spielend. spielen + d ergibt spielend; gespielt ist Partizip II.
-  - Yeni: Doğru cevap: spielend. Partizip I = Infinitiv + d: spielen + d → spielend. gespielt Partizip II'dir; spielernd diye bir biçim yoktur.
-
-#### `bildung-erkennen-1` › 2
-Cümle: Welche Form ist das richtige Partizip I von „lernen“?
-
-Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: lernend. Der Infinitiv lernen erhält ein -d: lernend.
-  - Yeni: Doğru cevap: lernend. Infinitiv lernen'e -d eklenir: lernen + d → lernend. gelernt Partizip II'dir; lernernd diye bir biçim yoktur.
-
-#### `bildung-erkennen-1` › 3
-Cümle: Welche Form ist das richtige Partizip I von „fliegen“?
-
-Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: fliegend. fliegen + d → fliegend; geflogen gehört zum Partizip II.
-  - Yeni: Doğru cevap: fliegend. Partizip I = Infinitiv + d: fliegen + d → fliegend. geflogen Partizip II'dir; fliegernd diye bir biçim yoktur.
-
-#### `erweiterte-gruppen-4` › 3
-Cümle: Forme um: „Menschen, die Sport treiben“
-
-Gerekçe: Açıklama "Kaynakta ... modeli bulunur" diye boş gerekçe veriyordu; ayrıca Duden'e göre bitişik yazım sporttreibend de doğrudur ve reddediliyordu.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: Sport treibende Menschen. Kaynakta 'Sport treibende Menschen' modeli bulunur; treiben → treibend.
-  - Yeni: Doğru cevap: Sport treibende Menschen. Relativsatz'daki nesne (Sport) Partizip I'in önüne geçer: treiben → treibend. Artikelsiz çoğul Nominativ'de sıfat sonu -e olur: Sport treibende Menschen (bitişik sporttreibende de yazılabilir).
-- Kabul edilen cevaplar
-  - Eski: `sport treibende menschen`
-  - Yeni: `sport treibende menschen` / `sporttreibende menschen`
-
-#### `erweiterte-attribute-12` › 3
-Cümle: Schreibe als Partizip-I-Gruppe: „Menschen, die regelmäßig Sport treiben“
-
-Gerekçe: Duden'e göre bitişik yazım (sporttreibend) da doğrudur; reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `regelmaessig sport treibende menschen` / `regelmäßig sport treibende menschen`
-  - Yeni: `regelmaessig sport treibende menschen` / `regelmäßig sport treibende menschen` / `regelmäßig sporttreibende menschen`
-
-#### `erweiterte-attribute-12` › 6
-Cümle: Schreibe als Partizip-I-Gruppe: „Menschen, die allein in Großstädten leben“
-
-Gerekçe: TR açıklamada İngilizce kelime ("alone") vardı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: allein in Großstädten lebende Menschen. alone/yer bilgisi Partizip-I grubuna dahil olur.
-  - Yeni: Doğru cevap: allein in Großstädten lebende Menschen. Relativsatz'daki tüm tamamlayıcılar (allein, in Großstädten) Partizip I'in önüne aynı sırayla geçer: leben → lebend. Artikelsiz çoğulda sıfat sonu -e olur.
-
-#### `akkusativ-7` › 5
-Cümle: Ergänze: „Wir besuchen eine ___ Frau.“ (allein leben)
-
-Gerekçe: Duden'e göre "allein lebend" ayrı da "alleinlebend" bitişik de yazılabilir; ayrı yazılmış doğru cevap reddediliyordu. Açıklamadaki uydurma Infinitiv "alleinleben" düzeltildi.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: alleinlebende. eine + feminin Akkusativ → -e; alleinleben → alleinlebend.
-  - Yeni: Doğru cevap: alleinlebende. allein leben → alleinlebend (ayrı da yazılabilir: allein lebend). Wir besuchen + Akkusativ; feminin eine'den sonra son -e olur: eine alleinlebende Frau.
-- Kabul edilen cevaplar
-  - Eski: `alleinlebende`
-  - Yeni: `alleinlebende` / `allein lebende`
-
-#### `genitiv-9` › 8
-Cümle: Ergänze: „Die Bedürfnisse ___ Personen unterscheiden sich.“ (allein leben)
-
-Gerekçe: Duden'e göre "allein lebend" ayrı da "alleinlebend" bitişik de yazılabilir; ayrı yazılmış doğru cevap reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `alleinlebender`
-  - Yeni: `alleinlebender` / `allein lebender`
-
-#### `deklinationsfehler-17` › 4
-Cümle: Korrigiere: „Die Zahl alleinlebenden Menschen steigt.“
-
-Gerekçe: Duden'e göre "allein lebend" ayrı da "alleinlebend" bitişik de yazılabilir; ayrı yazılmış doğru cevap reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `die zahl alleinlebender menschen steigt`
-  - Yeni: `die zahl alleinlebender menschen steigt` / `die zahl allein lebender menschen steigt`
-
-#### `master-20` › 8
-Cümle: Forme als Partizip-I-Gruppe: „Personen, die allein leben und regelmäßig von zu Hause arbeiten“
-
-Gerekçe: Duden'e göre "allein lebend" ayrı da "alleinlebend" bitişik de yazılabilir; ayrı yazılmış doğru cevap reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `allein lebende und regelmaessig von zu hause arbeitende personen` / `allein lebende und regelmäßig von zu hause arbeitende personen`
-  - Yeni: `allein lebende und regelmaessig von zu hause arbeitende personen` / `allein lebende und regelmäßig von zu hause arbeitende personen` / `alleinlebende und regelmäßig von zu hause arbeitende personen`
-
-#### `saetze-verbinden-15` › 4
-Cümle: Verbinde: „Viele Menschen arbeiten nachts. Sie brauchen am Tag Ruhe.“
-
-Gerekçe: Girdideki "viele" korunduğunda da cevap doğrudur (Viele nachts arbeitende Menschen ...); reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `nachts arbeitende menschen brauchen am tag ruhe`
-  - Yeni: `nachts arbeitende menschen brauchen am tag ruhe` / `viele nachts arbeitende menschen brauchen am tag ruhe`
-
-#### `mix-19` › 1
-Cümle: Welche Form ist korrekt?
-
-Gerekçe: İki şık doğruydu: "Ein schnell gewachsenes Unternehmen" (sein ile çekimlenen wachsen'in Partizip II'si sıfat olarak) de dilbilgisel olarak doğru. Çeldirici yanlış sonlu bir biçimle değiştirildi.
-
-- Seçenekler
-  - Eski: `Ein schnell gewachsenes Unternehmen braucht Kapital.` / `Ein schnell wachsendes Unternehmen braucht Kapital.` / `Ein schnell wachsender Unternehmen braucht Kapital.`
-  - Yeni: `Ein schnell wachsende Unternehmen braucht Kapital.` / `Ein schnell wachsendes Unternehmen braucht Kapital.` / `Ein schnell wachsender Unternehmen braucht Kapital.`
-- Açıklama (TR)
-  - Eski: Doğru cevap: Ein schnell wachsendes Unternehmen braucht Kapital.. ein + neutrum Nominativ → -es; devam eden büyüme → wachsend.
-  - Yeni: Doğru cevap: Ein schnell wachsendes Unternehmen braucht Kapital. Unternehmen nötrdür ve öznedir (Nominativ). ein sonu göstermediği için sıfat nötr işareti -es alır: ein wachsendes Unternehmen. Partizip I (wachsend) büyümenin hâlâ sürdüğünü anlatır.
-
-#### `mix-19` › 8
-Cümle: Welche Form ist korrekt?
-
-Gerekçe: İki şık doğruydu: "Die ständig gestiegenen Preise" (sein ile çekimlenen steigen'in Partizip II'si) de dilbilgisel olarak doğru. Çeldirici yanlış sonlu bir biçimle değiştirildi; TR'deki İngilizce "article" düzeltildi.
-
-- Seçenekler
-  - Eski: `Die ständig steigenden Preise sorgen für Kritik.` / `Die ständig steigende Preise sorgen für Kritik.` / `Die ständig gestiegenen Preise sorgen für Kritik.`
-  - Yeni: `Die ständig steigenden Preise sorgen für Kritik.` / `Die ständig steigende Preise sorgen für Kritik.` / `Die ständig steigender Preise sorgen für Kritik.`
-- Açıklama (TR)
-  - Eski: Doğru cevap: Die ständig steigenden Preise sorgen für Kritik.. Belirli article plural → -en; devam eden süreç Partizip I ile anlatılır.
-  - Yeni: Doğru cevap: Die ständig steigenden Preise sorgen für Kritik. Preise çoğuldur ve öznedir; çoğul belirli artikel die'den sonra sıfat sonu -en olur. Partizip I (steigend) sürecin devam ettiğini anlatır.
-
-### `data/b2/partizip-ii.json`
-
-#### `erkennen-1` › 0
-Cümle: Welches Wort ist das Partizip II von „schreiben“?
-
-Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: geschrieben. schreiben ist unregelmäßig: geschrieben.
-  - Yeni: Doğru cevap: geschrieben. schreiben güçlü (düzensiz) bir fiildir: ge- + değişen kök + -en → geschrieben. schreibend Partizip I'dir; geschreibt diye bir biçim yoktur.
-
-#### `erkennen-1` › 1
-Cümle: Welches Wort ist das Partizip II von „öffnen“?
-
-Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: geöffnet. Regelmäßiges Verb: ge- + Stamm + -t.
-  - Yeni: Doğru cevap: geöffnet. öffnen düzenli bir fiildir: ge- + kök + -t. Kök öffn- ünsüz + n ile bittiği için telaffuz kolaylığı için araya -e- girer: geöffnet. öffnend Partizip I'dir.
-
-#### `erkennen-1` › 2
-Cümle: Welches Wort ist das Partizip II von „verlieren“?
-
-Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: verloren. Unregelmäßiges Verb: verlieren → verloren.
-  - Yeni: Doğru cevap: verloren. verlieren güçlü bir fiildir ve ver- ayrılmaz ön ek olduğu için ge- almaz: verloren. geverliert iki kuralı da çiğner; verlierend Partizip I'dir.
-
-#### `erkennen-1` › 3
-Cümle: Welches Wort ist das Partizip II von „renovieren“?
-
-Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: renoviert. Verben auf -ieren bilden das Partizip II ohne ge-.
-  - Yeni: Doğru cevap: renoviert. -ieren ile biten fiiller Partizip II'de ge- almaz: renovieren → renoviert. renovierend Partizip I'dir.
-
-#### `erkennen-1` › 4
-Cümle: Welches Wort ist das Partizip II von „mitnehmen“?
-
-Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: mitgenommen. Trennbares Verb: Vorsilbe + ge + Stamm → mitgenommen.
-  - Yeni: Doğru cevap: mitgenommen. mitnehmen ayrılabilen bir fiildir: ge- ön ek ile kök arasına girer: mit + ge + nommen → mitgenommen. mitnehmend Partizip I'dir.
-
-#### `erkennen-1` › 5
-Cümle: Welches Wort ist das Partizip II von „besuchen“?
-
-Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: besucht. Untrennbare Vorsilbe be-: kein ge-.
-  - Yeni: Doğru cevap: besucht. be- ayrılmaz bir ön ektir; bu yüzden ge- eklenmez: besuchen → besucht. besuchend Partizip I'dir.
-
-#### `erkennen-1` › 7
-Cümle: Welches Wort ist das Partizip II von „durchführen“?
-
-Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: durchgeführt. Trennbares Verb: durchgeführt.
-  - Yeni: Doğru cevap: durchgeführt. durchführen burada ayrılabilen bir fiildir (Ich führe das Projekt durch); ge- ön ek ile kök arasına girer: durch + ge + führt.
-
-#### `erkennen-1` › 9
-Cümle: Welches Wort ist das Partizip II von „zerbrechen“?
-
-Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: zerbrochen. zer- ist untrennbar; starkes Verb: zerbrochen.
-  - Yeni: Doğru cevap: zerbrochen. zer- ayrılmaz bir ön ektir, bu yüzden ge- almaz; brechen güçlü fiil olduğu için -en ile biter: zerbrochen.
-
-#### `nominativ-bestimmt-8` › 8
-Cümle: Ergänze: „Der ___ Termin findet morgen statt.“ (verschieben)
-
-Gerekçe: TR açıklamada İngilizce kelime vardı ("adjectival ending", "article", "carefully"); Türkçe yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: verschobene. verschoben + adjectival ending -e.
-  - Yeni: Doğru cevap: verschobene. verschieben → verschoben (ver- → ge- yok). der Termin maskulin ve özne (Nominativ); belirli artikel der'den sonra sıfat sonu -e olur: der verschobene Termin.
-
-#### `relativsatz-einfach-13` › 2
-Cümle: Forme um: „die Daten, die gespeichert wurden“
-
-Gerekçe: TR açıklamada İngilizce kelime vardı ("adjectival ending", "article", "carefully"); Türkçe yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: die gespeicherten Daten. Belirli article plural → -en.
-  - Yeni: Doğru cevap: die gespeicherten Daten. die Daten, die gespeichert wurden → Partizip II gespeichert sıfat olur. Çoğul belirli artikel die'den sonra sıfat sonu -en olur.
-
-#### `relativsatz-einfach-13` › 7
-Cümle: Forme um: „der Schlüssel, der verloren wurde“
-
-Gerekçe: TR açıklamada İngilizce kelime vardı ("adjectival ending", "article", "carefully"); Türkçe yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: der verlorene Schlüssel. verlieren → verloren; adjectival ending -e.
-  - Yeni: Doğru cevap: der verlorene Schlüssel. verlieren → verloren (ver- → ge- yok). Maskulin Nominativ'de belirli artikel der'den sonra sıfat sonu -e olur.
-
-#### `erweiterte-attribute-14` › 2
-Cümle: Forme um: „die Ergebnisse, die sorgfältig geprüft wurden“
-
-Gerekçe: TR açıklamada İngilizce kelime vardı ("adjectival ending", "article", "carefully"); Türkçe yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: die sorgfältig geprüften Ergebnisse. Zarf carefully Partizip II'den önce; plural → -en.
-  - Yeni: Doğru cevap: die sorgfältig geprüften Ergebnisse. Relativsatz'daki zarf (sorgfältig) Partizip II'nin önüne geçer. Çoğul belirli artikel die'den sonra sıfat sonu -en olur.
-
-#### `erweiterte-attribute-14` › 6
-Cümle: Forme um: „die Ware, die frisch geerntet wurde“
-
-Gerekçe: TR açıklamada İngilizce kelime ("adjectival") vardı ve sıfat sonu açıklanmıyordu.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: die frisch geerntete Ware. frisch + geerntet adjectival yapı oluşturur.
-  - Yeni: Doğru cevap: die frisch geerntete Ware. Zarf frisch Partizip II'nin (geerntet) önünde kalır. die Ware feminin; belirli artikel die'den sonra Nominativ'de sıfat sonu -e olur.
-
-#### `bedeutung-16` › 0
-Cümle: Welche Aussage passt zu „die geschlossene Tür“?
-
-Gerekçe: TR açıklamada İngilizce "adjectival" vardı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: Die Tür ist bereits geschlossen worden.. Partizip II adjectival kullanım sonuçlanmış/pasif durumu anlatır.
-  - Yeni: Doğru cevap: Die Tür ist bereits geschlossen worden. Sıfat olarak kullanılan Partizip II (geschlossen) kapıya yapılmış ve tamamlanmış bir eylemi, yani pasif sonucu anlatır. Kapı eylemi yapan değildir.
-
-#### `bedeutung-16` › 8
-Cümle: Welche Aussage passt zu „das zerbrochene Glas“?
-
-Gerekçe: Açıklama belirsizdi ("bazı yapılar"); neden pasif değil de aktif sonuç olduğu açıklandı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: Das Glas ist zerbrochen.. Bazı Partizip II yapıları sonuç/durum anlamını doğrudan verir.
-  - Yeni: Doğru cevap: Das Glas ist zerbrochen. zerbrechen burada nesnesiz (geçişsiz) kullanılır ve Perfekt'i sein ile yapar: Das Glas ist zerbrochen. Bu tür fiillerde Partizip II pasif değil, tamamlanmış bir değişimin sonucunu anlatır: kırılmış bardak.
-
-#### `master-20` › 1
-Cümle: Verbinde: „Ein Motor wurde neu entwickelt. Das Unternehmen testet ihn.“
-
-Gerekçe: İkinci cümledeki ihn belirli bir motoru gösterdiği için belirli artikelli varyant (den neu entwickelten Motor) de doğrudur; reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `das unternehmen testet einen neu entwickelten motor`
-  - Yeni: `das unternehmen testet einen neu entwickelten motor` / `das unternehmen testet den neu entwickelten motor`
-
-### `data/b2/passiv-varianten.json`
-
-#### `duerfen-praesens-4` › 7
-Cümle: Bilde Passiv: „Man darf hier Fußball spielen.“
-
-Gerekçe: Açıklama yapıyı "impersonal Passiv" diye yanlış tanımlıyordu: Fußball Akkusativ nesnedir ve pasifte Nominativ özne olur (öznesiz pasif değil). Ayrıca eşdeğer kelime sırası reddediliyordu.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: Hier darf Fußball gespielt werden.. Kaynakta benzer şekilde yer ögesiyle impersonal Passiv çalıştırılıyor.
-  - Yeni: Doğru cevap: Hier darf Fußball gespielt werden. Aktif cümledeki Akkusativ nesne (Fußball) pasifte Nominativ özne olur; bu yüzden bu öznesiz (unpersönlich) bir pasif değildir. Yapı: darf + Partizip II (gespielt) + werden. Karşılaştır: Hier darf nicht geparkt werden (nesne yok → öznesiz pasif).
-- Kabul edilen cevaplar
-  - Eski: `hier darf fussball gespielt werden` / `hier darf fußball gespielt werden`
-  - Yeni: `hier darf fussball gespielt werden` / `hier darf fußball gespielt werden` / `fußball darf hier gespielt werden`
-
-#### `unpersoenlich-10` › 9
-Cümle: Forme ins Passiv um: „Man darf hier musizieren.“
-
-Gerekçe: Açıklama yalnızca "Kaynakta / İlk PDF'de ... çalıştırılıyor" diyordu; öğrenciye kural vermiyordu. Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: Hier darf musiziert werden.. Kaynakta musizieren gibi nesnesiz fiiller de Präsens Passiv'e dönüştürülüyor.
-  - Yeni: Doğru cevap: Hier darf musiziert werden. musizieren nesnesiz bir fiildir; Akkusativ nesne olmadığı için pasifte özne de olmaz (öznesiz pasif). Modal fiil tekil darf olur, sonda Partizip II + werden gelir: musiziert werden.
-- Kabul edilen cevaplar
-  - Eski: `hier darf musiziert werden`
-  - Yeni: `hier darf musiziert werden` / `es darf hier musiziert werden`
-
-#### `dativ-passiv-7` › 4
-Cümle: Bilde Passiv: „Man muss dem Kollegen gratulieren.“
-
-Gerekçe: Açıklamada yazım hatası vardı ("gratuliern/gratulieren").
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: Dem Kollegen muss gratuliert werden.. gratuliern/gratulieren Dativ nesnesi korunur.
-  - Yeni: Doğru cevap: Dem Kollegen muss gratuliert werden. gratulieren Dativ ister; Dativ nesne (dem Kollegen) pasifte Nominativ özneye dönüşmez, Dativ olarak kalır. Özne olmadığı için modal fiil tekil muss olur.
-
-#### `praeteritum-aktiv-passiv-12` › 1
-Cümle: Forme ins Passiv um: „Er durfte den Baum nicht fällen.“
-
-Gerekçe: Açıklama yalnızca "Kaynakta / İlk PDF'de ... çalıştırılıyor" diyordu; öğrenciye kural vermiyordu. Ayrıca nicht'in von-grubundan önce geldiği eşdeğer sıra reddediliyordu.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: Der Baum durfte von ihm nicht gefällt werden.. Kaynakta aynı zaman yapısı doğrudan çalıştırılıyor.
-  - Yeni: Doğru cevap: Der Baum durfte von ihm nicht gefällt werden. Aktif cümle Präteritum (durfte) olduğu için pasifte de durfte kalır. Akkusativ nesne den Baum → özne der Baum; aktif özne er → von ihm (von + Dativ). Sonda Partizip II + werden: gefällt werden.
-- Kabul edilen cevaplar
-  - Eski: `der baum durfte von ihm nicht gefaellt werden` / `der baum durfte von ihm nicht gefällt werden`
-  - Yeni: `der baum durfte von ihm nicht gefaellt werden` / `der baum durfte von ihm nicht gefällt werden` / `der baum durfte nicht von ihm gefällt werden`
-
-#### `perfekt-13` › 6
-Cümle: Forme ins Passiv um: „Sie hat ihn benachrichtigen können.“
-
-Gerekçe: Açıklama yalnızca "Kaynakta / İlk PDF'de ... çalıştırılıyor" diyordu; öğrenciye kural vermiyordu.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: Er hat von ihr benachrichtigt werden können.. İlk PDF'de bu tip Perfekt Passiv doğrudan yer alıyor.
-  - Yeni: Doğru cevap: Er hat von ihr benachrichtigt werden können. Akkusativ ihn pasifte Nominativ özne er olur; aktif özne sie → von ihr. Modal fiilin Perfekt'i haben ile kurulur ve modal fiil Infinitiv biçiminde (Ersatzinfinitiv) en sona gelir: hat + benachrichtigt werden + können.
-
-#### `plusquamperfekt-15` › 0
-Cümle: Forme ins Passiv um: „Die Polizei hatte den Mann festnehmen können.“
-
-Gerekçe: Açıklama yalnızca "Kaynakta / İlk PDF'de ... çalıştırılıyor" diyordu; öğrenciye kural vermiyordu.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: Der Mann hatte von der Polizei festgenommen werden können.. İlk PDF'de Plusquamperfekt mit Modalverb bu zincirle çalıştırılıyor.
-  - Yeni: Doğru cevap: Der Mann hatte von der Polizei festgenommen werden können. Plusquamperfekt'te yardımcı fiil hatte olur; zincir: hatte + Partizip II (festgenommen) + werden + können (Ersatzinfinitiv). Akkusativ den Mann → özne der Mann; die Polizei → von der Polizei.
-
-#### `plusquamperfekt-15` › 1
-Cümle: Forme ins Passiv um: „Sie hatte den Hund suchen müssen.“
-
-Gerekçe: Açıklama yalnızca "Kaynakta / İlk PDF'de ... çalıştırılıyor" diyordu; öğrenciye kural vermiyordu.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: Der Hund hatte von ihr gesucht werden müssen.. Kaynakta aynı yapı örneklenir.
-  - Yeni: Doğru cevap: Der Hund hatte von ihr gesucht werden müssen. Akkusativ den Hund pasifte özne der Hund olur; aktif özne sie → von ihr (Dativ). Zincir: hatte + gesucht + werden + müssen; modal fiil Ersatzinfinitiv olarak en sonda durur.
-
-#### `konjunktiv-ii-vergangenheit-16` › 0
-Cümle: Forme ins Passiv um: „Du hättest ihn fragen sollen.“
-
-Gerekçe: Açıklama yalnızca "Kaynakta / İlk PDF'de ... çalıştırılıyor" diyordu; öğrenciye kural vermiyordu.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: Er hätte von dir gefragt werden sollen.. İlk PDF'de Konjunktiv II Vergangenheit mit Modalverb açıkça çalıştırılıyor.
-  - Yeni: Doğru cevap: Er hätte von dir gefragt werden sollen. Akkusativ ihn pasifte Nominativ özne er olur; aktif özne du → von dir (Dativ). Konjunktiv II Vergangenheit zinciri: hätte + Partizip II (gefragt) + werden + sollen.
-
-#### `futur-i-17` › 0
-Cümle: Forme ins Passiv um: „Man wird das Haus renovieren müssen.“
-
-Gerekçe: Açıklama "İlk PDF'de" diye öğrenci için anlamsız bir kaynağa atıf yapıyordu; kural sade biçimde yazıldı.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: Das Haus wird renoviert werden müssen.. İlk PDF'de Futur I mit Modalverb: wird + Partizip II + werden + müssen.
-  - Yeni: Doğru cevap: Das Haus wird renoviert werden müssen. Futur I'de çekimli fiil wird'dir; Akkusativ das Haus pasifte özne olur. Zincir: wird + Partizip II (renoviert) + werden + müssen.
-
-#### `futur-i-17` › 2
-Cümle: Forme ins Passiv um: „Wir werden Deutsch lernen müssen.“
-
-Gerekçe: Açıklama yalnızca "Kaynakta / İlk PDF'de ... çalıştırılıyor" diyordu; öğrenciye kural vermiyordu.
-
-- Açıklama (TR)
-  - Eski: Doğru cevap: Deutsch wird von uns gelernt werden müssen.. Kaynakta bu tip Futur dönüşümü çalıştırılıyor.
-  - Yeni: Doğru cevap: Deutsch wird von uns gelernt werden müssen. Akkusativ nesne Deutsch pasifte özne olur ve tekil olduğu için çekimli fiil wird'dir; aktif özne wir → von uns. Zincir: wird + gelernt + werden + müssen.
-
-#### `konjunktiv-ii-vergangenheit-16` › 3
-Cümle: Forme ins Passiv um: „Die Bank hätte ihm einen Kredit geben können.“
-
-Gerekçe: Dativ öğenin başa alındığı daha doğal ve eşdeğer kelime sırası reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `ein kredit haette ihm von der bank gegeben werden koennen` / `ein kredit hätte ihm von der bank gegeben werden können`
-  - Yeni: `ein kredit haette ihm von der bank gegeben werden koennen` / `ein kredit hätte ihm von der bank gegeben werden können` / `ihm hätte von der bank ein kredit gegeben werden können`
-
-#### `master-20` › 4
-Cümle: Forme ins Passiv um: „Die Bank hätte dem Kunden einen Kredit geben können.“
-
-Gerekçe: Dativ öğenin başa alındığı daha doğal ve eşdeğer kelime sırası reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `ein kredit haette dem kunden von der bank gegeben werden koennen` / `ein kredit hätte dem kunden von der bank gegeben werden können`
-  - Yeni: `ein kredit haette dem kunden von der bank gegeben werden koennen` / `ein kredit hätte dem kunden von der bank gegeben werden können` / `dem kunden hätte von der bank ein kredit gegeben werden können`
-
-#### `aktiv-passiv-praesens-8` › 9
-Cümle: Forme ins Passiv um: „Der Lieferant kann die Ware morgen bringen.“
-
-Gerekçe: Zaman zarfının von-grubundan önce geldiği doğal ve eşdeğer kelime sırası reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `die ware kann vom lieferanten morgen gebracht werden`
-  - Yeni: `die ware kann vom lieferanten morgen gebracht werden` / `die ware kann morgen vom lieferanten gebracht werden`
-
-#### `master-20` › 0
-Cümle: Forme ins Passiv um und erhalte das Tempus: „Die Techniker müssen die Anlage heute prüfen.“
-
-Gerekçe: Zaman zarfının von-grubundan sonra geldiği eşdeğer kelime sırası reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `die anlage muss heute von den technikern geprueft werden` / `die anlage muss heute von den technikern geprüft werden`
-  - Yeni: `die anlage muss heute von den technikern geprueft werden` / `die anlage muss heute von den technikern geprüft werden` / `die anlage muss von den technikern heute geprüft werden`
-
-#### `duerfen-praesens-4` › 0
-Cümle: Bilde Passiv: „Man darf hier nicht parken.“
-
-Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `hier darf nicht geparkt werden`
-  - Yeni: `hier darf nicht geparkt werden` / `es darf hier nicht geparkt werden`
-
-#### `duerfen-praesens-4` › 3
-Cümle: Bilde Passiv: „Man darf im Museum nicht fotografieren.“
-
-Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `im museum darf nicht fotografiert werden`
-  - Yeni: `im museum darf nicht fotografiert werden` / `es darf im museum nicht fotografiert werden`
-
-#### `unpersoenlich-10` › 0
-Cümle: Forme ins Passiv um: „Man muss hier leise arbeiten.“
-
-Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `hier muss leise gearbeitet werden`
-  - Yeni: `hier muss leise gearbeitet werden` / `es muss hier leise gearbeitet werden`
-
-#### `unpersoenlich-10` › 1
-Cümle: Forme ins Passiv um: „Man darf im Gebäude nicht rauchen.“
-
-Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `im gebaeude darf nicht geraucht werden` / `im gebäude darf nicht geraucht werden`
-  - Yeni: `im gebaeude darf nicht geraucht werden` / `im gebäude darf nicht geraucht werden` / `es darf im gebäude nicht geraucht werden`
-
-#### `unpersoenlich-10` › 2
-Cümle: Forme ins Passiv um: „Man kann hier gut übernachten.“
-
-Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `hier kann gut uebernachtet werden` / `hier kann gut übernachtet werden`
-  - Yeni: `hier kann gut uebernachtet werden` / `hier kann gut übernachtet werden` / `es kann hier gut übernachtet werden`
-
-#### `unpersoenlich-10` › 3
-Cümle: Forme ins Passiv um: „Man soll nicht über andere spotten.“
-
-Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `ueber andere soll nicht gespottet werden` / `über andere soll nicht gespottet werden`
-  - Yeni: `ueber andere soll nicht gespottet werden` / `über andere soll nicht gespottet werden` / `es soll nicht über andere gespottet werden`
-
-#### `unpersoenlich-10` › 4
-Cümle: Forme ins Passiv um: „Man muss für Gerechtigkeit kämpfen.“
-
-Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `fuer gerechtigkeit muss gekaempft werden` / `für gerechtigkeit muss gekämpft werden`
-  - Yeni: `fuer gerechtigkeit muss gekaempft werden` / `für gerechtigkeit muss gekämpft werden` / `es muss für gerechtigkeit gekämpft werden`
-
-#### `unpersoenlich-10` › 5
-Cümle: Forme ins Passiv um: „Man darf auf dem See segeln.“
-
-Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `auf dem see darf gesegelt werden`
-  - Yeni: `auf dem see darf gesegelt werden` / `es darf auf dem see gesegelt werden`
-
-#### `unpersoenlich-10` › 6
-Cümle: Forme ins Passiv um: „Man kann über das Problem diskutieren.“
-
-Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `ueber das problem kann diskutiert werden` / `über das problem kann diskutiert werden`
-  - Yeni: `ueber das problem kann diskutiert werden` / `über das problem kann diskutiert werden` / `es kann über das problem diskutiert werden`
-
-#### `unpersoenlich-10` › 7
-Cümle: Forme ins Passiv um: „Man muss auf den Bus warten.“
-
-Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `auf den bus muss gewartet werden`
-  - Yeni: `auf den bus muss gewartet werden` / `es muss auf den bus gewartet werden`
-
-#### `unpersoenlich-10` › 8
-Cümle: Forme ins Passiv um: „Man soll über die Katastrophe berichten.“
-
-Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `ueber die katastrophe soll berichtet werden` / `über die katastrophe soll berichtet werden`
-  - Yeni: `ueber die katastrophe soll berichtet werden` / `über die katastrophe soll berichtet werden` / `es soll über die katastrophe berichtet werden`
-
-#### `master-20` › 5
-Cümle: Forme ins Passiv um: „Man wird in Zukunft mehr über das Problem diskutieren müssen.“
-
-Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
-
-- Kabul edilen cevaplar
-  - Eski: `in zukunft wird mehr ueber das problem diskutiert werden muessen` / `in zukunft wird mehr über das problem diskutiert werden müssen`
-  - Yeni: `in zukunft wird mehr ueber das problem diskutiert werden muessen` / `in zukunft wird mehr über das problem diskutiert werden müssen` / `es wird in zukunft mehr über das problem diskutiert werden müssen`
-
-#### `praeteritum-erkennen-11` › 0
-Cümle: Welche Form ist im Präteritum korrekt?
-
-Gerekçe: Şıklardan biri Präsens biçimdi ve dilbilgisel olarak doğruydu; "Welche Form ist korrekt?" sorusunda iki doğru cevap oluşuyordu. Soruya zaman bilgisi eklendi.
-
-- Cümle
-  - Eski: Welche Form ist korrekt?
-  - Yeni: Welche Form ist im Präteritum korrekt?
-
-#### `praeteritum-erkennen-11` › 1
-Cümle: Welche Form ist im Präteritum korrekt?
-
-Gerekçe: Şıklardan biri Präsens biçimdi ve dilbilgisel olarak doğruydu; "Welche Form ist korrekt?" sorusunda iki doğru cevap oluşuyordu. Soruya zaman bilgisi eklendi.
-
-- Cümle
-  - Eski: Welche Form ist korrekt?
-  - Yeni: Welche Form ist im Präteritum korrekt?
-
-#### `praeteritum-erkennen-11` › 2
-Cümle: Welche Form ist im Präteritum korrekt?
-
-Gerekçe: Şıklardan biri Präsens biçimdi ve dilbilgisel olarak doğruydu; "Welche Form ist korrekt?" sorusunda iki doğru cevap oluşuyordu. Soruya zaman bilgisi eklendi.
-
-- Cümle
-  - Eski: Welche Form ist korrekt?
-  - Yeni: Welche Form ist im Präteritum korrekt?
-
-#### `praeteritum-erkennen-11` › 3
-Cümle: Welche Form ist im Präteritum korrekt?
-
-Gerekçe: Şıklardan biri Präsens biçimdi ve dilbilgisel olarak doğruydu; "Welche Form ist korrekt?" sorusunda iki doğru cevap oluşuyordu. Soruya zaman bilgisi eklendi.
-
-- Cümle
-  - Eski: Welche Form ist korrekt?
-  - Yeni: Welche Form ist im Präteritum korrekt?
-
-#### `praeteritum-erkennen-11` › 4
-Cümle: Welche Form ist im Präteritum korrekt?
-
-Gerekçe: Şıklardan biri Präsens biçimdi ve dilbilgisel olarak doğruydu; "Welche Form ist korrekt?" sorusunda iki doğru cevap oluşuyordu. Soruya zaman bilgisi eklendi.
-
-- Cümle
-  - Eski: Welche Form ist korrekt?
-  - Yeni: Welche Form ist im Präteritum korrekt?
-
-#### `praeteritum-erkennen-11` › 5
-Cümle: Welche Form ist im Präteritum korrekt?
-
-Gerekçe: Şıklardan biri Präsens biçimdi ve dilbilgisel olarak doğruydu; "Welche Form ist korrekt?" sorusunda iki doğru cevap oluşuyordu. Soruya zaman bilgisi eklendi.
-
-- Cümle
-  - Eski: Welche Form ist korrekt?
-  - Yeni: Welche Form ist im Präteritum korrekt?
-
-#### `praeteritum-erkennen-11` › 6
-Cümle: Welche Form ist im Präteritum korrekt?
-
-Gerekçe: Şıklardan biri Präsens biçimdi ve dilbilgisel olarak doğruydu; "Welche Form ist korrekt?" sorusunda iki doğru cevap oluşuyordu. Soruya zaman bilgisi eklendi.
-
-- Cümle
-  - Eski: Welche Form ist korrekt?
-  - Yeni: Welche Form ist im Präteritum korrekt?
-
-#### `praeteritum-erkennen-11` › 7
-Cümle: Welche Form ist im Präteritum korrekt?
-
-Gerekçe: Şıklardan biri Präsens biçimdi ve dilbilgisel olarak doğruydu; "Welche Form ist korrekt?" sorusunda iki doğru cevap oluşuyordu. Soruya zaman bilgisi eklendi.
-
-- Cümle
-  - Eski: Welche Form ist korrekt?
-  - Yeni: Welche Form ist im Präteritum korrekt?
-
-#### `praeteritum-erkennen-11` › 8
-Cümle: Welche Form ist im Präteritum korrekt?
-
-Gerekçe: Şıklardan biri Präsens biçimdi ve dilbilgisel olarak doğruydu; "Welche Form ist korrekt?" sorusunda iki doğru cevap oluşuyordu. Soruya zaman bilgisi eklendi.
-
-- Cümle
-  - Eski: Welche Form ist korrekt?
-  - Yeni: Welche Form ist im Präteritum korrekt?
-
-#### `praeteritum-erkennen-11` › 9
-Cümle: Welche Form ist im Präteritum korrekt?
-
-Gerekçe: Şıklardan biri Präsens biçimdi ve dilbilgisel olarak doğruydu; "Welche Form ist korrekt?" sorusunda iki doğru cevap oluşuyordu. Soruya zaman bilgisi eklendi.
-
-- Cümle
-  - Eski: Welche Form ist korrekt?
-  - Yeni: Welche Form ist im Präteritum korrekt?
-
 ### `data/b1/genitiv.json`
 
 #### `eigennamen-1` › 5
@@ -8380,6 +6879,1365 @@ Gerekçe: Gerekçe 'kaynak formatında virgül' diyordu; virgülün neden zorunl
 - Açıklama (TR)
   - Eski: Doğru cevap: Viele halten es für schwierig, die Ursache herauszufinden.. herausfinden → herauszufinden; kaynak formatında virgül de kullanılır.
   - Yeni: Doğru cevap: Viele halten es für schwierig, die Ursache herauszufinden. es sonraki Infinitivsatz'ı gösterdiği için virgül zorunludur. herausfinden ayrılabilir: zu, heraus ile finden arasına girer → herauszufinden.
+
+### `data/b1/konjunktiv-ii-b1.json`
+
+#### `starke-formen-2` › 5
+Cümle: An deiner Stelle ___ ich das Problem nicht einfach liegen. (lassen)
+
+Gerekçe: Eski cümlede (Ich ___ das Problem nicht einfach liegen.) varsayım ipucu yoktu; “Ich lasse/ließ das Problem nicht einfach liegen” da doğru olurdu. “An deiner Stelle” eklenerek Konjunktiv II zorunlu hâle getirildi; TR'deki “lassen”ın ek hatası da düzeldi.
+
+- Cümle
+  - Eski: Ich ___ das Problem nicht einfach liegen. (lassen)
+  - Yeni: An deiner Stelle ___ ich das Problem nicht einfach liegen. (lassen)
+- Açıklama (TR)
+  - Eski: Doğru cevap: ließe. “lassen”ın Konjunktiv-II biçimi “ließe”dir; “ließ” Präteritumdur.
+  - Yeni: Doğru cevap: ließe. “An deiner Stelle” varsayımsal bir tavsiye kurar; bu yüzden Konjunktiv II gerekir: “lassen” → “ließe”. “lasse” gerçek şimdiki zaman (Präsens), “ließ” gerçek geçmiştir (Präteritum).
+
+#### `modalverben-b1-3` › 1
+Cümle: ___ ich kurz Ihren Drucker benutzen?
+
+Gerekçe: Çeldirici “Darf ich kurz Ihren Drucker benutzen?” tamamen doğru ve doğal bir cümleydi; yanlış olan Präteritum “Durfte” ile değiştirildi.
+
+- Seçenekler
+  - Eski: `Darf` / `Würde` / `Dürfte`
+  - Yeni: `Durfte` / `Würde` / `Dürfte`
+- Açıklama (TR)
+  - Eski: Doğru cevap: Dürfte. İzin istemeyi daha kibar yapmak için “dürfte” kullanılır.
+  - Yeni: Doğru cevap: Dürfte. İzin isteği “dürfen” ile yapılır; Konjunktiv II “dürfte” ricayı daha kibar yapar. “Durfte” geçmiş zamandır (Präteritum); “Würde ich ... benutzen?” ise izin sorma anlamı vermez.
+
+#### `modalverben-b1-3` › 2
+Cümle: Wir ___ die Frist verlängern, wenn beide Seiten zustimmen würden.
+
+Gerekçe: Eski yan cümle gerçek koşuldu (wenn beide Seiten zustimmen); bu durumda “Wir können die Frist verlängern” en doğru cevaptı. Yan cümle Konjunktiv II yapıldı (zustimmen würden), böylece yalnız “könnten” doğru.
+
+- Cümle
+  - Eski: Wir ___ die Frist verlängern, wenn beide Seiten zustimmen.
+  - Yeni: Wir ___ die Frist verlängern, wenn beide Seiten zustimmen würden.
+- Açıklama (TR)
+  - Eski: Doğru cevap: könnten. Gerçekleşmesi koşula bağlı bir olasılık için “könnten”.
+  - Yeni: Doğru cevap: könnten. Yan cümlede “zustimmen würden” varsayımsal bir koşul kuruyor; ana cümlede de Konjunktiv II gerekir: wir könnten. “können” gerçek koşulda (wenn beide Seiten zustimmen) kullanılırdı; “konnten” geçmiş zamandır.
+
+#### `passiv-gegenwart-12` › 6
+Cümle: Wenn der Termin verschoben würde, ___ die Teilnehmer rechtzeitig informiert werden.
+
+Gerekçe: Çeldirici “würden” de doğruydu: “… würden die Teilnehmer rechtzeitig informiert werden” geçerli bir Konjunktiv-II-Passiv cümlesidir. Yanlış olan “musste” (tekil + Präteritum) ile değiştirildi.
+
+- Seçenekler
+  - Eski: `müssten` / `mussten` / `würden`
+  - Yeni: `müssten` / `mussten` / `musste`
+- Açıklama (TR)
+  - Eski: Doğru cevap: müssten. Varsayımsal durumda zorunluluk “müssten informiert werden”.
+  - Yeni: Doğru cevap: müssten. Koşul varsayımsal (verschoben würde); sonuçta zorunluluk + Passiv: müssten + informiert werden. Özne “die Teilnehmer” çoğul olduğu için “müssten”; “mussten” ve “musste” geçmiş zamandır, “musste” ayrıca tekildir.
+
+#### `wuerde-oder-direkt-4` › 3
+Cümle: Welche Form ist natürlicher?
+
+Gerekçe: TR açıklama sadece “Kaynaklar … destekliyor” diyordu; kural yoktu. Kural ve “wusste” karşılaştırması yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Ich wüsste gern, wie das funktioniert.. Kaynaklar “wüsste” biçimini destekliyor; burada özel biçim doğal ve nettir.
+  - Yeni: Doğru cevap: Ich wüsste gern, wie das funktioniert.. “wissen” fiilinin kısa Konjunktiv-II biçimi “wüsste”dir; “Ich wüsste gern …” tıpkı “Ich hätte gern …” gibi yerleşik ve kibar bir kalıptır. “wusste” Präteritumdur ve gerçek geçmişi anlatır.
+
+#### `passiv-vergangenheit-13` › 5
+Cümle: Wenn genug Personal da gewesen wäre, ___ die Arbeiten früher abgeschlossen werden können.
+
+Gerekçe: TR açıklama “Arbeiten”i Passiv nesnesi olarak tanımlıyordu; Passiv cümlede Nominativ öznedir ve çoğul fiili o belirler.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: hätten. Çoğul “Arbeiten” anlamca Passiv nesnesi; modal geçmiş yapı “hätten ... abgeschlossen werden können”.
+  - Yeni: Doğru cevap: hätten. “die Arbeiten” Passiv cümlenin çoğul öznesidir; bu yüzden çoğul “hätten”. Modalverbli Passiv geçmişte Ersatzinfinitiv ile kurulur: hätten ... abgeschlossen werden können (“gekonnt” değil).
+
+#### `modalverben-b1-3` › 9
+Cümle: Formuliere als Rat: „Du musst früher mit dem Lernen anfangen.“
+
+Gerekçe: Eşdeğer kelime sırası (früher Mittelfeld'de sonra) de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `du solltest früher mit dem lernen anfangen` / `du solltest frueher mit dem lernen anfangen`
+  - Yeni: `du solltest früher mit dem lernen anfangen` / `du solltest frueher mit dem lernen anfangen` / `du solltest mit dem lernen früher anfangen`
+
+#### `irreale-bedingung-gegenwart-5` › 8
+Cümle: Verbinde irreal: „Ich habe nicht genug Zeit. Deshalb mache ich den Kurs nicht.“
+
+Gerekçe: Ana cümle + wenn-cümlesi sırası da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `wenn ich genug zeit hätte, würde ich den kurs machen` / `wenn ich genug zeit haette, wuerde ich den kurs machen`
+  - Yeni: `wenn ich genug zeit hätte, würde ich den kurs machen` / `wenn ich genug zeit haette, wuerde ich den kurs machen` / `ich würde den kurs machen, wenn ich genug zeit hätte`
+
+#### `irreale-bedingung-gegenwart-5` › 9
+Cümle: Verbinde irreal: „Der Weg ist weit. Deshalb fahre ich mit dem Bus.“
+
+Gerekçe: Ters cümle sırası da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `wenn der weg nicht so weit wäre, würde ich nicht mit dem bus fahren` / `wenn der weg nicht so weit waere, wuerde ich nicht mit dem bus fahren`
+  - Yeni: `wenn der weg nicht so weit wäre, würde ich nicht mit dem bus fahren` / `wenn der weg nicht so weit waere, wuerde ich nicht mit dem bus fahren` / `ich würde nicht mit dem bus fahren, wenn der weg nicht so weit wäre`
+
+#### `irreale-vergangenheit-7` › 8
+Cümle: Forme irreal: „Ich wusste nichts davon. Deshalb konnte ich nicht reagieren.“
+
+Gerekçe: Ters cümle sırası da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `wenn ich davon gewusst hätte, hätte ich reagieren können` / `wenn ich davon gewusst haette, haette ich reagieren koennen`
+  - Yeni: `wenn ich davon gewusst hätte, hätte ich reagieren können` / `wenn ich davon gewusst haette, haette ich reagieren koennen` / `ich hätte reagieren können, wenn ich davon gewusst hätte`
+
+#### `irreale-vergangenheit-7` › 9
+Cümle: Forme irreal: „Sie fuhr zu spät los. Deshalb verpasste sie den Zug.“
+
+Gerekçe: Ters cümle sırası da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `wenn sie früher losgefahren wäre, hätte sie den zug nicht verpasst` / `wenn sie frueher losgefahren waere, haette sie den zug nicht verpasst`
+  - Yeni: `wenn sie früher losgefahren wäre, hätte sie den zug nicht verpasst` / `wenn sie frueher losgefahren waere, haette sie den zug nicht verpasst` / `sie hätte den zug nicht verpasst, wenn sie früher losgefahren wäre`
+
+#### `modalverben-vergangenheit-8` › 9
+Cümle: Forme irreal: „Wir konnten das Problem nicht lösen, weil wir die Daten nicht hatten.“
+
+Gerekçe: Ters cümle sırası da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `wenn wir die daten gehabt hätten, hätten wir das problem lösen können` / `wenn wir die daten gehabt haetten, haetten wir das problem loesen koennen`
+  - Yeni: `wenn wir die daten gehabt hätten, hätten wir das problem lösen können` / `wenn wir die daten gehabt haetten, haetten wir das problem loesen koennen` / `wir hätten das problem lösen können, wenn wir die daten gehabt hätten`
+
+#### `gegenwart-vergangenheit-9` › 8
+Cümle: Schreibe in die Vergangenheit um: „Wenn ich mehr Geld hätte, würde ich das Auto kaufen.“
+
+Gerekçe: Ters cümle sırası da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `wenn ich mehr geld gehabt hätte, hätte ich das auto gekauft` / `wenn ich mehr geld gehabt haette, haette ich das auto gekauft`
+  - Yeni: `wenn ich mehr geld gehabt hätte, hätte ich das auto gekauft` / `wenn ich mehr geld gehabt haette, haette ich das auto gekauft` / `ich hätte das auto gekauft, wenn ich mehr geld gehabt hätte`
+
+#### `gegenwart-vergangenheit-9` › 9
+Cümle: Schreibe in die Gegenwart um: „Wenn sie früher gekommen wäre, hätte sie uns geholfen.“
+
+Gerekçe: würde-biçimi ve ters sıra da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `wenn sie früher käme, würde sie uns helfen` / `wenn sie frueher kaeme, wuerde sie uns helfen`
+  - Yeni: `wenn sie früher käme, würde sie uns helfen` / `wenn sie frueher kaeme, wuerde sie uns helfen` / `wenn sie früher kommen würde, würde sie uns helfen` / `sie würde uns helfen, wenn sie früher käme`
+
+#### `wunsch-gegenwart-10` › 8
+Cümle: Bilde einen Wunschsatz: „Meine Aussprache ist noch unsicher.“
+
+Gerekçe: wenn'li dilek cümlesi ve tek partikelli biçimler de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `wäre meine aussprache doch nur sicherer` / `waere meine aussprache doch nur sicherer`
+  - Yeni: `wäre meine aussprache doch nur sicherer` / `waere meine aussprache doch nur sicherer` / `wenn meine aussprache doch nur sicherer wäre` / `wäre meine aussprache doch sicherer` / `wäre meine aussprache nur sicherer`
+
+#### `wunsch-gegenwart-10` › 9
+Cümle: Bilde einen Wunschsatz: „Ich kann heute nicht mitkommen.“
+
+Gerekçe: wenn'li dilek, tek partikel ve eşdeğer sıra da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `könnte ich doch nur heute mitkommen` / `koennte ich doch nur heute mitkommen`
+  - Yeni: `könnte ich doch nur heute mitkommen` / `koennte ich doch nur heute mitkommen` / `wenn ich doch nur heute mitkommen könnte` / `könnte ich doch heute mitkommen` / `könnte ich heute doch nur mitkommen`
+
+#### `wunsch-vergangenheit-11` › 8
+Cümle: Bilde einen Wunschsatz: „Ich habe den Vertrag zu schnell unterschrieben.“
+
+Gerekçe: Tek partikel ve wenn'li dilek de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `hätte ich den vertrag doch nur nicht so schnell unterschrieben` / `haette ich den vertrag doch nur nicht so schnell unterschrieben`
+  - Yeni: `hätte ich den vertrag doch nur nicht so schnell unterschrieben` / `haette ich den vertrag doch nur nicht so schnell unterschrieben` / `hätte ich den vertrag doch nicht so schnell unterschrieben` / `wenn ich den vertrag doch nur nicht so schnell unterschrieben hätte`
+
+#### `wunsch-vergangenheit-11` › 9
+Cümle: Bilde einen Wunschsatz: „Wir sind nicht länger geblieben.“
+
+Gerekçe: Tek partikel ve wenn'li dilek de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `wären wir doch nur länger geblieben` / `waeren wir doch nur laenger geblieben`
+  - Yeni: `wären wir doch nur länger geblieben` / `waeren wir doch nur laenger geblieben` / `wären wir doch länger geblieben` / `wenn wir doch nur länger geblieben wären`
+
+#### `passiv-gegenwart-12` › 8
+Cümle: Forme um: „Wenn wir mehr Zeit hätten, könnten wir die Daten genauer prüfen.“ (Passiv)
+
+Gerekçe: Ters cümle sırası da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `wenn wir mehr zeit hätten, könnten die daten genauer geprüft werden` / `wenn wir mehr zeit haetten, koennten die daten genauer geprueft werden`
+  - Yeni: `wenn wir mehr zeit hätten, könnten die daten genauer geprüft werden` / `wenn wir mehr zeit haetten, koennten die daten genauer geprueft werden` / `die daten könnten genauer geprüft werden, wenn wir mehr zeit hätten`
+
+#### `passiv-vergangenheit-13` › 8
+Cümle: Forme irreal: „Die Maschine wurde nicht rechtzeitig gewartet. Deshalb ist sie ausgefallen.“
+
+Gerekçe: Ters cümle sırası da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `wenn die maschine rechtzeitig gewartet worden wäre, wäre sie nicht ausgefallen` / `wenn die maschine rechtzeitig gewartet worden waere, waere sie nicht ausgefallen`
+  - Yeni: `wenn die maschine rechtzeitig gewartet worden wäre, wäre sie nicht ausgefallen` / `wenn die maschine rechtzeitig gewartet worden waere, waere sie nicht ausgefallen` / `die maschine wäre nicht ausgefallen, wenn sie rechtzeitig gewartet worden wäre`
+
+#### `passiv-vergangenheit-13` › 9
+Cümle: Forme irreal: „Der Fehler wurde zu spät entdeckt. Deshalb konnte er nicht behoben werden.“
+
+Gerekçe: Ters cümle sırası da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `wenn der fehler früher entdeckt worden wäre, hätte er behoben werden können` / `wenn der fehler frueher entdeckt worden waere, haette er behoben werden koennen`
+  - Yeni: `wenn der fehler früher entdeckt worden wäre, hätte er behoben werden können` / `wenn der fehler frueher entdeckt worden waere, haette er behoben werden koennen` / `der fehler hätte behoben werden können, wenn er früher entdeckt worden wäre`
+
+#### `hoeflichkeit-14` › 8
+Cümle: Formuliere höflicher: „Geben Sie mir bitte eine Kopie.“
+
+Gerekçe: “Würden Sie …?” ve bitte'siz biçim de kibar Konjunktiv II ricasıdır.
+
+- Kabul edilen cevaplar
+  - Eski: `könnten sie mir bitte eine kopie geben` / `koennten sie mir bitte eine kopie geben`
+  - Yeni: `könnten sie mir bitte eine kopie geben` / `koennten sie mir bitte eine kopie geben` / `würden sie mir bitte eine kopie geben` / `könnten sie mir eine kopie geben`
+
+#### `hoeflichkeit-14` › 9
+Cümle: Formuliere höflicher: „Ich will einen Tisch am Fenster.“
+
+Gerekçe: gern/gerne eşdeğer.
+
+- Kabul edilen cevaplar
+  - Eski: `ich hätte gern einen tisch am fenster` / `ich haette gern einen tisch am fenster`
+  - Yeni: `ich hätte gern einen tisch am fenster` / `ich haette gern einen tisch am fenster` / `ich hätte gerne einen tisch am fenster`
+
+#### `direkt-hoeflich-15` › 8
+Cümle: Formuliere höflich: „Öffnen Sie das Fenster.“
+
+Gerekçe: “Würden Sie bitte …?” ve eşdeğer sıra da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `könnten sie bitte das fenster öffnen` / `koennten sie bitte das fenster oeffnen`
+  - Yeni: `könnten sie bitte das fenster öffnen` / `koennten sie bitte das fenster oeffnen` / `würden sie bitte das fenster öffnen` / `könnten sie das fenster bitte öffnen`
+
+#### `direkt-hoeflich-15` › 9
+Cümle: Formuliere höflich: „Hilf deinem Bruder bei den Hausaufgaben.“
+
+Gerekçe: Eşdeğer sıra ve würdest-ricası da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `könntest du deinem bruder bitte bei den hausaufgaben helfen` / `koenntest du deinem bruder bitte bei den hausaufgaben helfen`
+  - Yeni: `könntest du deinem bruder bitte bei den hausaufgaben helfen` / `koenntest du deinem bruder bitte bei den hausaufgaben helfen` / `könntest du bitte deinem bruder bei den hausaufgaben helfen` / `würdest du deinem bruder bitte bei den hausaufgaben helfen`
+
+#### `ratschlag-vergangenheit-17` › 8
+Cümle: Formuliere eine Kritik: „Du hast mir nichts gesagt.“
+
+Gerekçe: Kaynak cümle “nichts gesagt”; “früher” olmadan kurulan eleştiriler de doğru ve hatta daha yakın.
+
+- Kabul edilen cevaplar
+  - Eski: `du hättest mir früher bescheid sagen sollen` / `du haettest mir frueher bescheid sagen sollen`
+  - Yeni: `du hättest mir früher bescheid sagen sollen` / `du haettest mir frueher bescheid sagen sollen` / `du hättest mir bescheid sagen sollen` / `du hättest es mir sagen sollen` / `du hättest mir etwas sagen sollen`
+
+#### `dialoge-18` › 9
+Cümle: A: „Entschuldigung, ich brauche eine Kopie dieses Dokuments.“ Bilde eine höfliche Bitte.
+
+Gerekçe: “Würden Sie …?” de kibar rica.
+
+- Kabul edilen cevaplar
+  - Eski: `könnten sie mir bitte eine kopie dieses dokuments geben` / `koennten sie mir bitte eine kopie dieses dokuments geben`
+  - Yeni: `könnten sie mir bitte eine kopie dieses dokuments geben` / `koennten sie mir bitte eine kopie dieses dokuments geben` / `würden sie mir bitte eine kopie dieses dokuments geben`
+
+#### `master-20` › 8
+Cümle: Forme vollständig irreal um: „Wir hatten die Unterlagen nicht. Deshalb konnten wir den Antrag nicht rechtzeitig einreichen.“
+
+Gerekçe: Ters cümle sırası da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `wenn wir die unterlagen gehabt hätten, hätten wir den antrag rechtzeitig einreichen können` / `wenn wir die unterlagen gehabt haetten, haetten wir den antrag rechtzeitig einreichen koennen`
+  - Yeni: `wenn wir die unterlagen gehabt hätten, hätten wir den antrag rechtzeitig einreichen können` / `wenn wir die unterlagen gehabt haetten, haetten wir den antrag rechtzeitig einreichen koennen` / `wir hätten den antrag rechtzeitig einreichen können, wenn wir die unterlagen gehabt hätten`
+
+### `data/b1/konnektoren.json`
+
+#### `grundwissen-1` › 8
+Cümle: Ergänze die Regel: Eine Subjunktion schickt das konjugierte Verb ans ___.
+
+Gerekçe: TR açıklama sadece “Kaynakta …” diyordu; kural ve örnek yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Ende. Kaynakta Subjunktion için temel kural fiilin Nebensatz'ın sonuna gitmesidir.
+  - Yeni: Doğru cevap: Ende. Subjunktion (weil, dass, obwohl, wenn …) bir Nebensatz başlatır ve çekimli fiili yan cümlenin sonuna (ans Ende) gönderir: …, weil ich müde bin. Karşılaştır: …, denn ich bin müde (denn bir Konjunktiondur, fiil sona gitmez).
+
+#### `grundwissen-1` › 9
+Cümle: Ergänze die Regel: Ein Konjunktionaladverb steht im zweiten Satz normalerweise auf Position ___.
+
+Gerekçe: TR açıklama sadece “Kaynakta …” diyordu; kural ve örnek yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: 1. Kaynakta deshalb/trotzdem gibi Konjunktionaladverbien için Position 1 vurgulanır.
+  - Yeni: Doğru cevap: 1. Konjunktionaladverb (deshalb, trotzdem, deswegen …) ikinci ana cümlede Position 1'i doldurur; çekimli fiil hemen ardından Position 2'ye, özne ondan sonra gelir: Ich bin müde, deshalb gehe ich ins Bett. Karşılaştır: aber/und/denn Position 0'da durur (…, aber ich gehe …).
+
+#### `weil-da-3` › 6
+Cümle: ___ der Zug Verspätung hat, kommen wir später an.
+
+Gerekçe: Çeldirici “Falls” da doğruydu: “Falls der Zug Verspätung hat, kommen wir später an.” mantıklı bir şart cümlesidir. “Obwohl” ile değiştirildi.
+
+- Seçenekler
+  - Eski: `Da` / `Falls` / `Bevor`
+  - Yeni: `Da` / `Obwohl` / `Bevor`
+- Açıklama (TR)
+  - Eski: Doğru cevap: Da. Gecikmenin nedeni trenin rötarıdır; cümle başında “da” doğal bir neden bağlantısı kurar.
+  - Yeni: Doğru cevap: Da. Gecikmenin nedeni trenin rötarıdır; cümle başında “da” bilinen bir nedeni verir ve çekimli fiil (hat) yan cümlenin sonuna gider. “Obwohl” karşıtlık bildirir, burada anlam uymaz.
+
+#### `als-wenn-7` › 7
+Cümle: ___ ich meinen ersten Job bekam, war ich sehr nervös.
+
+Gerekçe: Çeldirici “Da” nedensel okumayla dilbilgisel ve anlamlıydı (Da ich meinen ersten Job bekam, war ich nervös = ilk işimi aldığım için gergindim). Açıkça yanlış “Ob” ile değiştirildi.
+
+- Seçenekler
+  - Eski: `Wenn` / `Da` / `Als`
+  - Yeni: `Wenn` / `Ob` / `Als`
+- Açıklama (TR)
+  - Eski: Doğru cevap: Als. Geçmişte bir kez gerçekleşen ilk iş olayı için “als”.
+  - Yeni: Doğru cevap: Als. Geçmişte bir kez gerçekleşen olay (ilk işi almak) için temporal “als” kullanılır; “wenn” geçmişte yalnızca tekrarlanan olaylar içindir (jedes Mal, wenn …).
+
+#### `bevor-nachdem-8` › 0
+Cümle: ___ ich zur Arbeit fahre, frühstücke ich in Ruhe.
+
+Gerekçe: TR açıklama “bevor daha önce olan eylemi tanımlar” diyordu; tersi doğru: bevor-cümlesindeki eylem sonra olur.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Bevor. Kahvaltı işe gitmeden önce gerçekleşiyor; “bevor” daha önce olan eylemi tanımlar.
+  - Yeni: Doğru cevap: Bevor. “bevor” yan cümlesi sonra gelen eylemi verir (işe gitmek); ana cümledeki kahvaltı ondan önce yapılır. “Nachdem” ise önce tamamlanan eylemi verir ve Perfekt/Plusquamperfekt ister (Nachdem ich gefrühstückt habe, …).
+
+#### `damit-umzu-10` › 0
+Cümle: Ich stelle den Wecker früher, ___ ich den Zug nicht verpasse.
+
+Gerekçe: TR açıklama (“özne aynı olmak zorunda değil”) belirsizdi; asıl ipucu (çekimli fiil, zu yok) yazılmadı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: damit. Ana cümle ve amaç cümlesinin öznesi aynı olmak zorunda değil; finite Nebensatz için “damit”.
+  - Yeni: Doğru cevap: damit. Boşluktan sonra öznesi (ich) ve çekimli fiili (verpasse) olan tam bir yan cümle var, “zu” yok; bu yüzden “um” olamaz. Çekimli amaç cümlesi “damit” ile kurulur. Özneler aynı olduğu için “…, um den Zug nicht zu verpassen” de mümkündür.
+
+#### `damit-umzu-10` › 6
+Cümle: Der Arzt erklärt alles genau, ___ der Patient die Therapie versteht.
+
+Gerekçe: Çeldirici “sodass” da doğruydu: “Der Arzt erklärt alles genau, sodass der Patient die Therapie versteht.” (sonuç). Açıkça yanlış “denn” ile değiştirildi.
+
+- Seçenekler
+  - Eski: `damit` / `um` / `sodass`
+  - Yeni: `damit` / `um` / `denn`
+- Açıklama (TR)
+  - Eski: Doğru cevap: damit. Özneler farklı; amaç bildiriliyor, sonuç değil.
+  - Yeni: Doğru cevap: damit. Ana cümlenin öznesi “der Arzt”, yan cümlenin öznesi “der Patient”; özneler farklı olduğu için “um … zu” olmaz, amaç “damit” ile kurulur. “denn” ana cümle sırası ister (denn der Patient versteht …); burada fiil sonda olduğu için uymaz.
+
+#### `sodass-11` › 9
+Cümle: Ergänze: „Die Musik war sehr laut, ___ wir uns kaum unterhalten konnten.“
+
+Gerekçe: Eski cümle “so laut, ___” idi; ana cümlede “so” varsa doğru bağlaç yalnız “dass”tır (so … dass), “so laut, sodass” hatalıdır. “so laut” → “sehr laut” yapıldı, böylece sodass/so dass doğru.
+
+- Cümle
+  - Eski: Ergänze: „Die Musik war so laut, ___ wir uns kaum unterhalten konnten.“
+  - Yeni: Ergänze: „Die Musik war sehr laut, ___ wir uns kaum unterhalten konnten.“
+- Açıklama (TR)
+  - Eski: Doğru cevap: sodass. “so laut” derecesinin sonucu konuşamamak olduğu için “sodass” gerekir.
+  - Yeni: Doğru cevap: sodass. Müziğin çok yüksek olmasının sonucu konuşamamaktır; sonuç cümlesi “sodass” ile başlar ve çekimli fiil (konnten) sona gider. Dikkat: Ana cümlede “so + sıfat” varsa yalnızca “dass” kullanılır: Die Musik war so laut, dass …
+
+#### `indem-12` › 1
+Cümle: Sie verbessert ihre Aussprache, ___ sie jeden Tag laut liest.
+
+Gerekçe: Çeldirici “weil” nedensel okumayla doğruydu (Sie verbessert ihre Aussprache, weil sie jeden Tag laut liest). “obwohl” ile değiştirildi.
+
+- Seçenekler
+  - Eski: `weil` / `falls` / `indem`
+  - Yeni: `obwohl` / `falls` / `indem`
+- Açıklama (TR)
+  - Eski: Doğru cevap: indem. Gelişmenin yöntemi her gün sesli okumaktır.
+  - Yeni: Doğru cevap: indem. Telaffuzu nasıl geliştirdiği (yöntem) anlatılıyor: her gün sesli okuyarak → “indem”, çekimli fiil (liest) sonda. “obwohl” karşıtlık, “falls” şart bildirir; anlama uymaz.
+
+#### `indem-12` › 3
+Cümle: Wir reduzieren Müll, ___ wir Mehrwegflaschen benutzen.
+
+Gerekçe: Çeldirici “seitdem” de doğruydu (Wir reduzieren Müll, seitdem wir Mehrwegflaschen benutzen). “obwohl” ile değiştirildi; zayıf TR açıklama da somutlaştırıldı.
+
+- Seçenekler
+  - Eski: `indem` / `sodass` / `seitdem`
+  - Yeni: `indem` / `sodass` / `obwohl`
+- Açıklama (TR)
+  - Eski: Doğru cevap: indem. Amaçtan çok yöntemi/araç biçimini anlatıyor.
+  - Yeni: Doğru cevap: indem. Çöpü nasıl azalttığımız (yöntem) anlatılıyor: Mehrwegflaschen kullanarak → “indem”. “obwohl” karşıtlık, “sodass” sonuç bildirir; ikisi de anlama uymaz.
+
+#### `sowohl-nichtnur-16` › 0
+Cümle: Mina ist in Berlin aufgewachsen und hat in London studiert. Sie spricht ___ Deutsch ___ Englisch fließend.
+
+Gerekçe: Bağlam yoktu; “Mina spricht weder Deutsch noch Englisch fließend.” de doğru ve mantıklıydı. Anlamı belirleyen bağlam cümlesi eklendi.
+
+- Cümle
+  - Eski: Mina spricht ___ Deutsch ___ Englisch fließend.
+  - Yeni: Mina ist in Berlin aufgewachsen und hat in London studiert. Sie spricht ___ Deutsch ___ Englisch fließend.
+- Açıklama (TR)
+  - Eski: Doğru cevap: sowohl ... als auch. İki unsur da olumlu biçimde eşit olarak ekleniyor; “sowohl ... als auch”.
+  - Yeni: Doğru cevap: sowohl ... als auch. Berlin'de büyüyüp Londra'da okuduğu için iki dili de konuşuyor: iki olumlu unsur eşit biçimde eklenir → sowohl ... als auch. “weder ... noch” ikisini de olumsuzlar, “entweder ... oder” yalnızca birini seçer.
+
+#### `sowohl-nichtnur-16` › 2
+Cümle: Wir haben zwei Tage Zeit und möchten alles sehen: Wir besuchen ___ das Museum ___ die Altstadt.
+
+Gerekçe: Bağlam yoktu; “Wir besuchen weder das Museum noch die Altstadt.” de doğruydu. Bağlam eklendi.
+
+- Cümle
+  - Eski: Wir besuchen ___ das Museum ___ die Altstadt.
+  - Yeni: Wir haben zwei Tage Zeit und möchten alles sehen: Wir besuchen ___ das Museum ___ die Altstadt.
+- Açıklama (TR)
+  - Eski: Doğru cevap: sowohl ... als auch. Her iki yer de ziyaret edilecek; ikisi birlikte olumlu.
+  - Yeni: Doğru cevap: sowohl ... als auch. “alles sehen” ipucu: iki yer de ziyaret edilecek → sowohl ... als auch. “weder ... noch” ikisini de reddeder; “zwar ... aber” karşıtlık ister.
+
+#### `sowohl-nichtnur-16` › 4
+Cümle: Die App gibt es für alle Smartphones: Sie funktioniert ___ auf Android ___ auf iOS.
+
+Gerekçe: Bağlam yoktu; “Die App funktioniert weder auf Android noch auf iOS.” de doğruydu. Bağlam eklendi.
+
+- Cümle
+  - Eski: Die App funktioniert ___ auf Android ___ auf iOS.
+  - Yeni: Die App gibt es für alle Smartphones: Sie funktioniert ___ auf Android ___ auf iOS.
+- Açıklama (TR)
+  - Eski: Doğru cevap: sowohl ... als auch. İki platformda da çalışıyor.
+  - Yeni: Doğru cevap: sowohl ... als auch. “für alle Smartphones” ipucu: uygulama iki sistemde de çalışıyor → sowohl ... als auch. “weder ... noch” ikisini de olumsuzlar.
+
+#### `sowohl-nichtnur-16` › 6
+Cümle: Das Projekt ist zu groß für unser kleines Team. Wir brauchen beides: ___ mehr Zeit ___ mehr Personal.
+
+Gerekçe: Bağlam yoktu; “weder … noch” ve “entweder … oder” da doğru cümleler kuruyordu. “beides” ipucu eklendi.
+
+- Cümle
+  - Eski: Wir brauchen ___ mehr Zeit ___ mehr Personal.
+  - Yeni: Das Projekt ist zu groß für unser kleines Team. Wir brauchen beides: ___ mehr Zeit ___ mehr Personal.
+- Açıklama (TR)
+  - Eski: Doğru cevap: sowohl ... als auch. Her iki şeye de ihtiyaç var.
+  - Yeni: Doğru cevap: sowohl ... als auch. “beides” ipucu: iki şeye de ihtiyaç var → sowohl ... als auch. “entweder ... oder” yalnızca birini, “weder ... noch” hiçbirini ifade eder.
+
+#### `sowohl-nichtnur-16` › 8
+Cümle: Ergänze vollständig: „Lena interessiert sich für beide Fächer und studiert ___ Biologie ___ Chemie.“
+
+Gerekçe: Bağlam yoktu; weder/entweder ile de doğru cümle kuruluyordu. Bağlam eklendi ve eşanlamlı “nicht nur …, sondern auch …” kabul edildi.
+
+- Cümle
+  - Eski: Ergänze vollständig: „Lena studiert ___ Biologie ___ Chemie.“
+  - Yeni: Ergänze vollständig: „Lena interessiert sich für beide Fächer und studiert ___ Biologie ___ Chemie.“
+- Açıklama (TR)
+  - Eski: Doğru cevap: sowohl Biologie als auch Chemie. İki bölüm de aynı ölçüde geçerli olduğu için “sowohl ... als auch”.
+  - Yeni: Doğru cevap: sowohl Biologie als auch Chemie. “beide Fächer” ipucu: iki bölüm de aynı ölçüde geçerli → sowohl ... als auch (virgülsüz). “nicht nur Biologie, sondern auch Chemie” de aynı anlamı vurgulu verir.
+
+#### `weder-entweder-17` › 0
+Cümle: Ich bestelle heute lieber Pizza, denn ich habe ___ Zeit ___ Lust zu kochen.
+
+Gerekçe: Bağlam yoktu; “sowohl Zeit als auch Lust zu kochen” de doğruydu. Bağlam eklendi.
+
+- Cümle
+  - Eski: Heute habe ich ___ Zeit ___ Lust zu kochen.
+  - Yeni: Ich bestelle heute lieber Pizza, denn ich habe ___ Zeit ___ Lust zu kochen.
+- Açıklama (TR)
+  - Eski: Doğru cevap: weder ... noch. Her iki unsur da olumsuz: ne zaman ne istek var.
+  - Yeni: Doğru cevap: weder ... noch. Pizza sipariş etmesinin nedeni: ne zamanı ne de isteği var → iki unsur da olumsuz: weder ... noch. “sowohl ... als auch” ikisini de olumlu yapar ve “lieber Pizza” ile çelişir.
+
+#### `weder-entweder-17` › 1
+Cümle: Du musst dich entscheiden: Wir können ___ am Freitag ___ am Samstag fahren.
+
+Gerekçe: Bağlam yoktu; “weder am Freitag noch am Samstag” da doğruydu. Bağlam eklendi.
+
+- Cümle
+  - Eski: Wir können ___ am Freitag ___ am Samstag fahren.
+  - Yeni: Du musst dich entscheiden: Wir können ___ am Freitag ___ am Samstag fahren.
+- Açıklama (TR)
+  - Eski: Doğru cevap: entweder ... oder. İki alternatiften biri seçilecek.
+  - Yeni: Doğru cevap: entweder ... oder. “Du musst dich entscheiden” ipucu: iki günden biri seçilecek → entweder ... oder. “weder ... noch” iki seçeneği de ortadan kaldırırdı.
+
+#### `weder-entweder-17` › 2
+Cümle: Das Gerät ist kaputt: Es funktioniert ___ mit Akku ___ mit Kabel.
+
+Gerekçe: Bağlam yoktu; sowohl … als auch ve entweder … oder da doğru cümle kuruyordu. Bağlam eklendi.
+
+- Cümle
+  - Eski: Das Gerät funktioniert ___ mit Akku ___ mit Kabel.
+  - Yeni: Das Gerät ist kaputt: Es funktioniert ___ mit Akku ___ mit Kabel.
+- Açıklama (TR)
+  - Eski: Doğru cevap: weder ... noch. İki seçenek de çalışmıyor; çift olumsuzlama.
+  - Yeni: Doğru cevap: weder ... noch. “kaputt” ipucu: cihaz iki yolla da çalışmıyor → çift olumsuzlama: weder ... noch.
+
+#### `weder-entweder-17` › 3
+Cümle: Du hast zwei Möglichkeiten: Du kannst ___ hier warten ___ später wiederkommen.
+
+Gerekçe: Bağlam yoktu; “Du kannst weder hier warten noch später wiederkommen.” de doğruydu. Bağlam eklendi.
+
+- Cümle
+  - Eski: Du kannst ___ hier warten ___ später wiederkommen.
+  - Yeni: Du hast zwei Möglichkeiten: Du kannst ___ hier warten ___ später wiederkommen.
+- Açıklama (TR)
+  - Eski: Doğru cevap: entweder ... oder. İki olası seçenek sunuluyor.
+  - Yeni: Doğru cevap: entweder ... oder. “zwei Möglichkeiten” ipucu: iki seçenekten biri → entweder ... oder. “weder ... noch” iki seçeneği de olumsuzlardı.
+
+#### `weder-entweder-17` › 4
+Cümle: Sie hat nie Fremdsprachen gelernt und spricht ___ Italienisch ___ Portugiesisch.
+
+Gerekçe: Bağlam yoktu; üç şık da dilbilgisel olarak doğru cümle kuruyordu. Bağlam eklendi.
+
+- Cümle
+  - Eski: Sie spricht ___ Italienisch ___ Portugiesisch.
+  - Yeni: Sie hat nie Fremdsprachen gelernt und spricht ___ Italienisch ___ Portugiesisch.
+- Açıklama (TR)
+  - Eski: Doğru cevap: weder ... noch. İki dili de konuşmadığı ifade ediliyor.
+  - Yeni: Doğru cevap: weder ... noch. “nie Fremdsprachen gelernt” ipucu: iki dili de konuşmuyor → weder ... noch.
+
+#### `weder-entweder-17` › 5
+Cümle: Für zwei Gerichte reicht das Geld nicht: Wir bestellen ___ Pizza ___ Sushi.
+
+Gerekçe: Bağlam yoktu; üç şık da doğru cümle kuruyordu. Bağlam eklendi.
+
+- Cümle
+  - Eski: Wir bestellen ___ Pizza ___ Sushi.
+  - Yeni: Für zwei Gerichte reicht das Geld nicht: Wir bestellen ___ Pizza ___ Sushi.
+- Açıklama (TR)
+  - Eski: Doğru cevap: entweder ... oder. İki yemek seçeneğinden biri seçilecek.
+  - Yeni: Doğru cevap: entweder ... oder. Para iki yemeğe yetmiyor; iki seçenekten biri sipariş edilecek → entweder ... oder. “nicht nur ... sondern auch” ikisini birden, “weder ... noch” hiçbirini ifade eder.
+
+#### `weder-entweder-17` › 6
+Cümle: Ich weiß nichts von seinem Problem, denn ich habe ___ seine E-Mail gelesen ___ seinen Anruf gehört.
+
+Gerekçe: Bağlam yoktu; sowohl … als auch ve entweder … oder da doğru cümle kuruyordu. Bağlam eklendi.
+
+- Cümle
+  - Eski: Ich habe ___ seine E-Mail gelesen ___ seinen Anruf gehört.
+  - Yeni: Ich weiß nichts von seinem Problem, denn ich habe ___ seine E-Mail gelesen ___ seinen Anruf gehört.
+- Açıklama (TR)
+  - Eski: Doğru cevap: weder ... noch. Her iki eylem de gerçekleşmedi.
+  - Yeni: Doğru cevap: weder ... noch. “Ich weiß nichts” ipucu: iki eylem de gerçekleşmedi → weder ... noch.
+
+#### `weder-entweder-17` › 7
+Cümle: Das ist noch nicht entschieden: Morgen arbeiten wir ___ im Büro ___ von zu Hause.
+
+Gerekçe: Bağlam yoktu; “weder im Büro noch von zu Hause” (ör. tatil) da doğruydu. Bağlam eklendi.
+
+- Cümle
+  - Eski: Morgen arbeiten wir ___ im Büro ___ von zu Hause.
+  - Yeni: Das ist noch nicht entschieden: Morgen arbeiten wir ___ im Büro ___ von zu Hause.
+- Açıklama (TR)
+  - Eski: Doğru cevap: entweder ... oder. İki çalışma yerinden biri seçilecek.
+  - Yeni: Doğru cevap: entweder ... oder. “noch nicht entschieden” ipucu: iki yerden biri seçilecek → entweder ... oder.
+
+#### `weder-entweder-17` › 8
+Cümle: Ergänze: „Ich vertrage kein Koffein, deshalb trinke ich ___ Kaffee ___ schwarzen Tee.“
+
+Gerekçe: Bağlam yoktu; “sowohl … als auch”/“entweder … oder” ile de doğru cümle kuruluyordu, açıklamadaki ‘reddedildiği için’ cümlede yoktu. Bağlam eklendi.
+
+- Cümle
+  - Eski: Ergänze: „Ich trinke ___ Kaffee ___ schwarzen Tee.“
+  - Yeni: Ergänze: „Ich vertrage kein Koffein, deshalb trinke ich ___ Kaffee ___ schwarzen Tee.“
+- Açıklama (TR)
+  - Eski: Doğru cevap: weder Kaffee noch schwarzen Tee. İki içecek de reddedildiği için “weder ... noch”.
+  - Yeni: Doğru cevap: weder Kaffee noch schwarzen Tee. Kafein dokunduğu için iki içecek de reddediliyor → weder ... noch (araya virgül gelmez).
+
+#### `weder-entweder-17` › 9
+Cümle: Ergänze: „Ich weiß noch nicht, wann ich Zeit habe. Wir treffen uns ___ heute ___ morgen.“
+
+Gerekçe: Bağlam yoktu; weder … noch ve sowohl … als auch da doğru cümle kuruyordu. Bağlam eklendi.
+
+- Cümle
+  - Eski: Ergänze: „Wir treffen uns ___ heute ___ morgen.“
+  - Yeni: Ergänze: „Ich weiß noch nicht, wann ich Zeit habe. Wir treffen uns ___ heute ___ morgen.“
+- Açıklama (TR)
+  - Eski: Doğru cevap: entweder heute oder morgen. İki zamandan biri seçileceği için “entweder ... oder”.
+  - Yeni: Doğru cevap: entweder heute oder morgen. Henüz belli değil; iki günden biri seçilecek → entweder ... oder.
+
+#### `master-22` › 4
+Cümle: ___ ich die Datei abschicke, kontrolliere ich noch einmal den Anhang.
+
+Gerekçe: “Bevor ich die Datei abgeschickt habe, kontrolliere ich …” yapay; bevor ile normalde Präsens kullanılır (Bevor ich die Datei abschicke). Cümle düzeltildi; Perfekt yalnız q5'teki nachdem için kaldı.
+
+- Cümle
+  - Eski: ___ ich die Datei abgeschickt habe, kontrolliere ich noch einmal den Anhang.
+  - Yeni: ___ ich die Datei abschicke, kontrolliere ich noch einmal den Anhang.
+- Açıklama (TR)
+  - Eski: Doğru cevap: Bevor. Kontrol gönderimden önce yapılır.
+  - Yeni: Doğru cevap: Bevor. Ek dosya kontrolü gönderimden önce yapılır; sonra gelen eylem (abschicken) “bevor” yan cümlesindedir ve fiil sona gider. “Nachdem” önce tamamlanan eylemi verir ve Perfekt ister (Nachdem ich die Datei abgeschickt habe, …).
+
+#### `konjunktionen-2` › 8
+Cümle: Ergänze: Ich wollte anrufen, ___ mein Handy war leer.
+
+Gerekçe: “doch” da Position 0'da duran karşıtlık Konjunktionudur: Ich wollte anrufen, doch mein Handy war leer.
+
+- Kabul edilen cevaplar
+  - Eski: `aber`
+  - Yeni: `aber` / `doch`
+
+#### `weil-da-3` › 8
+Cümle: Verbinde mit „weil“: „Nina geht früh schlafen. Sie ist sehr müde.“
+
+Gerekçe: weil-cümlesi başta da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `nina geht früh schlafen, weil sie sehr müde ist`
+  - Yeni: `nina geht früh schlafen, weil sie sehr müde ist` / `weil sie sehr müde ist, geht nina früh schlafen`
+
+#### `obwohl-trotzdem-4` › 8
+Cümle: Verbinde mit „obwohl“: „Lena ist krank. Sie arbeitet weiter.“
+
+Gerekçe: obwohl-cümlesi sonda da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `obwohl lena krank ist, arbeitet sie weiter`
+  - Yeni: `obwohl lena krank ist, arbeitet sie weiter` / `lena arbeitet weiter, obwohl sie krank ist`
+
+#### `obwohl-trotzdem-4` › 9
+Cümle: Verbinde mit „trotzdem“: „Der Akku ist fast leer. Ich benutze das Handy weiter.“
+
+Gerekçe: İki ayrı cümle ve Mittelfeld'de trotzdem da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `der akku ist fast leer, trotzdem benutze ich das handy weiter`
+  - Yeni: `der akku ist fast leer, trotzdem benutze ich das handy weiter` / `der akku ist fast leer. trotzdem benutze ich das handy weiter` / `der akku ist fast leer, ich benutze das handy trotzdem weiter`
+
+#### `deshalb-deswegen-5` › 9
+Cümle: Ergänze passend: „Die Bahn streikt, ___ arbeite ich heute von zu Hause.“
+
+Gerekçe: also/daher da aynı sonuç Konjunktionaladverbleridir ve Position 1'de inversion ister.
+
+- Kabul edilen cevaplar
+  - Eski: `deshalb` / `deswegen` / `darum`
+  - Yeni: `deshalb` / `deswegen` / `darum` / `also` / `daher`
+
+#### `wenn-falls-6` › 8
+Cümle: Verbinde mit „wenn“: „Du brauchst Hilfe. Ruf mich an.“
+
+Gerekçe: wenn-cümlesi sonda da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `wenn du hilfe brauchst, ruf mich an`
+  - Yeni: `wenn du hilfe brauchst, ruf mich an` / `ruf mich an, wenn du hilfe brauchst`
+
+#### `als-wenn-7` › 9
+Cümle: Ergänze: „___ ich heute früher fertig bin, rufe ich dich an.“
+
+Gerekçe: Gelecek zaman bağlamında “sobald”/“falls” da doğru ve anlamlı.
+
+- Kabul edilen cevaplar
+  - Eski: `wenn`
+  - Yeni: `wenn` / `sobald` / `falls`
+
+#### `bevor-nachdem-8` › 8
+Cümle: Verbinde mit „bevor“: „Ich gehe schlafen. Ich putze mir die Zähne.“
+
+Gerekçe: bevor-cümlesi sonda da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `bevor ich schlafen gehe, putze ich mir die zähne`
+  - Yeni: `bevor ich schlafen gehe, putze ich mir die zähne` / `ich putze mir die zähne, bevor ich schlafen gehe`
+
+#### `bevor-nachdem-8` › 9
+Cümle: Verbinde mit „nachdem“: „Mia hat die E-Mail gelesen. Sie ruft ihren Chef an.“
+
+Gerekçe: nachdem-cümlesi sonda da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `nachdem mia die e-mail gelesen hat, ruft sie ihren chef an`
+  - Yeni: `nachdem mia die e-mail gelesen hat, ruft sie ihren chef an` / `mia ruft ihren chef an, nachdem sie die e-mail gelesen hat`
+
+#### `temporal-mix-9` › 8
+Cümle: Ergänze: „___ ich auf den Bus warte, beantworte ich E-Mails.“
+
+Gerekçe: “Solange ich auf den Bus warte …” ve alışkanlık bildiren “Wenn ich auf den Bus warte …” da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `während` / `waehrend`
+  - Yeni: `während` / `waehrend` / `solange` / `wenn`
+
+#### `damit-umzu-10` › 8
+Cümle: Verbinde mit „damit“: „Ich schicke dir den Link. Du kannst dich anmelden.“
+
+Gerekçe: damit-cümlesi başta da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `ich schicke dir den link, damit du dich anmelden kannst`
+  - Yeni: `ich schicke dir den link, damit du dich anmelden kannst` / `damit du dich anmelden kannst, schicke ich dir den link`
+
+#### `damit-umzu-10` › 9
+Cümle: Verbinde mit „um ... zu“: „Ich mache Notizen. Ich will nichts vergessen.“
+
+Gerekçe: um-zu grubu başta da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `ich mache notizen, um nichts zu vergessen`
+  - Yeni: `ich mache notizen, um nichts zu vergessen` / `um nichts zu vergessen, mache ich notizen`
+
+#### `sodass-11` › 8
+Cümle: Verbinde mit „sodass“: „Der Wind war sehr stark. Mehrere Bäume fielen um.“
+
+Gerekçe: “so dass” ayrı yazımı da geçerli (q9'da da kabul ediliyor).
+
+- Kabul edilen cevaplar
+  - Eski: `der wind war sehr stark, sodass mehrere bäume umfielen` / `der wind war sehr stark, sodass mehrere baeume umfielen`
+  - Yeni: `der wind war sehr stark, sodass mehrere bäume umfielen` / `der wind war sehr stark, sodass mehrere baeume umfielen` / `der wind war sehr stark, so dass mehrere bäume umfielen` / `der wind war sehr stark, so dass mehrere baeume umfielen`
+
+#### `indem-12` › 8
+Cümle: Verbinde mit „indem“: „Nora fährt mit dem Fahrrad. So bleibt sie fit.“
+
+Gerekçe: indem-cümlesi başta ve “Fahrrad fahren” biçimi de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `nora bleibt fit, indem sie mit dem fahrrad fährt` / `nora bleibt fit, indem sie mit dem fahrrad faehrt`
+  - Yeni: `nora bleibt fit, indem sie mit dem fahrrad fährt` / `nora bleibt fit, indem sie mit dem fahrrad faehrt` / `indem sie mit dem fahrrad fährt, bleibt nora fit` / `nora bleibt fit, indem sie fahrrad fährt`
+
+#### `nominal-nebensatz-15` › 0
+Cümle: Forme um: „Bei starkem Regen bleibt der Markt geschlossen.“
+
+Gerekçe: falls ve ters sıra da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `wenn es stark regnet, bleibt der markt geschlossen`
+  - Yeni: `wenn es stark regnet, bleibt der markt geschlossen` / `falls es stark regnet, bleibt der markt geschlossen` / `der markt bleibt geschlossen, wenn es stark regnet`
+
+#### `nominal-nebensatz-15` › 1
+Cümle: Forme um: „Trotz seiner Erkältung geht Amir zur Arbeit.“
+
+Gerekçe: Ters sıra ve isimli biçim de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `obwohl amir erkältet ist, geht er zur arbeit`
+  - Yeni: `obwohl amir erkältet ist, geht er zur arbeit` / `amir geht zur arbeit, obwohl er erkältet ist` / `obwohl amir eine erkältung hat, geht er zur arbeit`
+
+#### `nominal-nebensatz-15` › 2
+Cümle: Forme um: „Vor dem Öffnen der Tür klopft sie zweimal.“
+
+Gerekçe: Ters sıra da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `bevor sie die tür öffnet, klopft sie zweimal`
+  - Yeni: `bevor sie die tür öffnet, klopft sie zweimal` / `sie klopft zweimal, bevor sie die tür öffnet`
+
+#### `nominal-nebensatz-15` › 3
+Cümle: Forme um: „Seit seinem Umzug fährt Paul jeden Tag mit der Bahn.“
+
+Gerekçe: “seit” Subjunktion olarak ve ters sıra da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `seitdem paul umgezogen ist, fährt er jeden tag mit der bahn`
+  - Yeni: `seitdem paul umgezogen ist, fährt er jeden tag mit der bahn` / `seit paul umgezogen ist, fährt er jeden tag mit der bahn` / `paul fährt jeden tag mit der bahn, seitdem er umgezogen ist`
+
+#### `nominal-nebensatz-15` › 4
+Cümle: Forme um: „Nach dem Ende des Kurses trinken wir noch einen Kaffee.“
+
+Gerekçe: Perfekt'li eşdeğer biçimler de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `nachdem der kurs beendet ist, trinken wir noch einen kaffee`
+  - Yeni: `nachdem der kurs beendet ist, trinken wir noch einen kaffee` / `nachdem der kurs geendet hat, trinken wir noch einen kaffee` / `nachdem der kurs zu ende gegangen ist, trinken wir noch einen kaffee`
+
+#### `nominal-nebensatz-15` › 5
+Cümle: Forme um: „Während der Besprechung bleiben die Handys aus.“
+
+Gerekçe: “stattfindet” de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `während die besprechung läuft, bleiben die handys aus`
+  - Yeni: `während die besprechung läuft, bleiben die handys aus` / `während die besprechung stattfindet, bleiben die handys aus`
+
+#### `nominal-nebensatz-15` › 6
+Cümle: Forme um: „Aus Angst vor dem Hund blieb das Kind stehen.“
+
+Gerekçe: Ters sıra da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `weil das kind angst vor dem hund hatte, blieb es stehen`
+  - Yeni: `weil das kind angst vor dem hund hatte, blieb es stehen` / `das kind blieb stehen, weil es angst vor dem hund hatte`
+
+#### `nominal-nebensatz-15` › 7
+Cümle: Forme um: „Zum Energiesparen schalten wir nachts alle Geräte aus.“
+
+Gerekçe: Ters sıra da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `um energie zu sparen, schalten wir nachts alle geräte aus`
+  - Yeni: `um energie zu sparen, schalten wir nachts alle geräte aus` / `wir schalten nachts alle geräte aus, um energie zu sparen`
+
+#### `nominal-nebensatz-15` › 8
+Cümle: Forme um: „Bis zum Beginn des Films warten wir draußen.“
+
+Gerekçe: Ters sıra ve anfangen de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `bis der film beginnt, warten wir draußen`
+  - Yeni: `bis der film beginnt, warten wir draußen` / `wir warten draußen, bis der film beginnt` / `bis der film anfängt, warten wir draußen`
+
+#### `nominal-nebensatz-15` › 9
+Cümle: Forme um: „An ihrem ersten Arbeitstag war Lea sehr nervös.“
+
+Gerekçe: Ters sıra da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `als lea ihren ersten arbeitstag hatte, war sie sehr nervös`
+  - Yeni: `als lea ihren ersten arbeitstag hatte, war sie sehr nervös` / `lea war sehr nervös, als sie ihren ersten arbeitstag hatte`
+
+#### `zwar-einerseits-18` › 8
+Cümle: Ergänze: „Sie ist ___ müde, ___ sie arbeitet weiter.“
+
+Gerekçe: Tam cümle yazımı da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `zwar müde, aber` / `zwar muede, aber`
+  - Yeni: `zwar müde, aber` / `zwar muede, aber` / `sie ist zwar müde, aber sie arbeitet weiter`
+
+#### `zwar-einerseits-18` › 9
+Cümle: Ergänze: „___ ist das Angebot günstig, ___ ist die Qualität nicht überzeugend.“
+
+Gerekçe: Tam cümle yazımı da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `einerseits ist das angebot günstig, andererseits` / `einerseits ist das angebot guenstig, andererseits`
+  - Yeni: `einerseits ist das angebot günstig, andererseits` / `einerseits ist das angebot guenstig, andererseits` / `einerseits ist das angebot günstig, andererseits ist die qualität nicht überzeugend`
+
+#### `je-desto-19` › 8
+Cümle: Bilde den Satz: viel lesen / groß Wortschatz
+
+Gerekçe: umso ve “ist” de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `je mehr man liest, desto größer wird der wortschatz` / `je mehr man liest, desto groesser wird der wortschatz`
+  - Yeni: `je mehr man liest, desto größer wird der wortschatz` / `je mehr man liest, desto groesser wird der wortschatz` / `je mehr man liest, umso größer wird der wortschatz` / `je mehr man liest, desto größer ist der wortschatz`
+
+#### `je-desto-19` › 9
+Cümle: Bilde den Satz: früh anfangen / schnell fertig sein
+
+Gerekçe: desto da doğru (umso ile eşdeğer).
+
+- Kabul edilen cevaplar
+  - Eski: `je früher man anfängt, umso schneller ist man fertig` / `je frueher man anfaengt, umso schneller ist man fertig`
+  - Yeni: `je früher man anfängt, umso schneller ist man fertig` / `je frueher man anfaengt, umso schneller ist man fertig` / `je früher man anfängt, desto schneller ist man fertig`
+
+#### `master-22` › 8
+Cümle: Verbinde sinnvoll: „Ich hatte wenig Zeit. Ich half meinem Freund trotzdem.“
+
+Gerekçe: obwohl-cümlesi sonda da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `obwohl ich wenig zeit hatte, half ich meinem freund`
+  - Yeni: `obwohl ich wenig zeit hatte, half ich meinem freund` / `ich half meinem freund, obwohl ich wenig zeit hatte`
+
+#### `master-22` › 9
+Cümle: Bilde mit „je ... desto“: „Wenn ich mehr spreche, werde ich sicherer.“
+
+Gerekçe: umso desto ile eşdeğer.
+
+- Kabul edilen cevaplar
+  - Eski: `je mehr ich spreche, desto sicherer werde ich`
+  - Yeni: `je mehr ich spreche, desto sicherer werde ich` / `je mehr ich spreche, umso sicherer werde ich`
+
+### `data/b1/n-deklination.json`
+
+#### `erkennen-1` › 0
+Cümle: Welches Nomen gehört in diesem Kontext zur n-Deklination?
+
+Gerekçe: TR açıklama yalnızca “Kaynakta …” diyordu; Kasus ipucu ve kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Polizist. Kaynaklarda “Polizist → Polizisten” zayıf isim olarak kullanılır; Computer ve Arzt bu alıştırmalarda n-Deklination değildir.
+  - Yeni: Doğru cevap: Polizist. -ist ile biten maskulin kişi isimleri n-Deklination'a girer: der Polizist → den/dem/des Polizisten. Computer ve Arzt normal maskulin isimlerdir: den Computer, den Arzt.
+
+#### `erkennen-1` › 1
+Cümle: Welches Nomen gehört zur n-Deklination?
+
+Gerekçe: TR açıklama yalnızca “Kaynakta …” diyordu; Kasus ipucu ve kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Student. Student, oblique Kasuslarda Studenten olur; Chef ve Kellner kaynakta yanlış -n eklenen karşı örnekler olarak geçer.
+  - Yeni: Doğru cevap: Student. -ent ile biten maskulin kişi isimleri zayıf çekilir: der Student → den/dem/des Studenten. Chef ve Kellner normal çekilir: den Chef, dem Kellner (-en eklenmez).
+
+#### `erkennen-1` › 2
+Cümle: Welches Nomen gehört zur n-Deklination?
+
+Gerekçe: TR açıklama yalnızca “Kaynakta …” diyordu; Kasus ipucu ve kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Therapeut. Therapeut → Therapeuten; Hund ve Gesetz kaynaklarda bu gruba dahil edilmez.
+  - Yeni: Doğru cevap: Therapeut. Therapeut (Yunanca kökenli maskulin meslek adı) zayıf çekilir: den/dem/des Therapeuten. Hund normal maskulin (den Hund), Gesetz ise nötr bir isimdir (das Gesetz).
+
+#### `erkennen-1` › 3
+Cümle: Welches Nomen gehört zur n-Deklination?
+
+Gerekçe: TR açıklama yalnızca “Kaynakta …” diyordu; Kasus ipucu ve kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Bär. Kaynakta Akkusativ “einen großen Bären” doğru kabul edilir.
+  - Yeni: Doğru cevap: Bär. Bär, -e ile bitmediği hâlde n-Deklination'a giren istisnalardandır (Mensch, Herr, Nachbar gibi): einen Bären, dem Bären. Computer ve Arzt normal çekilir: den Computer, den Arzt.
+
+#### `erkennen-1` › 4
+Cümle: Welches Nomen gehört zur n-Deklination?
+
+Gerekçe: TR açıklama yalnızca “Kaynakta …” diyordu; Kasus ipucu ve kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Pilot. Pilot → Piloten; diğer iki isim kaynak örneklerinde n-Deklination eki almaz.
+  - Yeni: Doğru cevap: Pilot. -ot ile biten maskulin kişi isimleri zayıf çekilir: der Pilot → den Piloten. Kellner ve Außenminister -er ile biten normal maskulin isimlerdir: den Kellner, den Außenminister.
+
+#### `erkennen-1` › 6
+Cümle: Welches Nomen gehört zur n-Deklination?
+
+Gerekçe: TR açıklama yalnızca “Kaynakta …” diyordu; Kasus ipucu ve kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Patient. Patient → Patienten; kaynakta “dem todkranken Patienten” biçimi verilir.
+  - Yeni: Doğru cevap: Patient. -ent ile biten maskulin kişi isimleri zayıf çekilir: der Patient → dem Patienten. Computer ve Chef normal çekilir: dem Computer, dem Chef.
+
+#### `erkennen-1` › 7
+Cümle: Welches Nomen gehört zur n-Deklination?
+
+Gerekçe: TR açıklama yalnızca “Kaynakta …” diyordu; Kasus ipucu ve kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Mensch. Kaynakta çoğul/çekimli biçim “Menschen” kullanılır.
+  - Yeni: Doğru cevap: Mensch. Mensch, ek kuralına uymayan bir n-Deklination ismidir: den/dem/des Menschen. Hund normal maskulin (den Hund), Gesetz nötr bir isimdir (das Gesetz).
+
+#### `erkennen-1` › 9
+Cümle: Schreibe nur das schwache Nomen: „Arzt / Therapeut“
+
+Gerekçe: TR açıklama yalnızca “Kaynakta …” diyordu; Kasus ipucu ve kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Therapeut. Kaynakta Therapeut → Therapeuten, Arzt ise n-Deklination değildir.
+  - Yeni: Doğru cevap: Therapeut. Therapeut zayıf çekilir (den Therapeuten); Arzt normal maskulin isimdir (den Arzt, dem Arzt).
+
+#### `nominativ-2` › 0
+Cümle: ___ arbeitet heute im Frühdienst. (Polizist)
+
+Gerekçe: TR açıklama yalnızca “Kaynakta …” diyordu; Kasus ipucu ve kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Der Polizist. Kaynak açıkça Nominativte ek gelmediğini söylüyor; özne “der Polizist”.
+  - Yeni: Doğru cevap: Der Polizist. “arbeitet” fiilinin öznesi Nominativtir; n-Deklination isimleri Nominativ tekilde ek almaz: der Polizist (Akkusativ olsaydı: den Polizisten).
+
+#### `nominativ-2` › 5
+Cümle: ___ hat die Fluggäste begrüßt. (Pilot)
+
+Gerekçe: TR açıklama yalnızca “Kaynakta …” diyordu; Kasus ipucu ve kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Der Pilot. Kaynak çözümünde Nominativ “Der Pilot” olarak verilir.
+  - Yeni: Doğru cevap: Der Pilot. “hat … begrüßt” fiilinin öznesi Nominativtir; Nominativ tekilde ek yok: der Pilot (Akkusativ: den Piloten).
+
+#### `akkusativ-3` › 3
+Cümle: Die Polizei befragt den ___ noch einmal. (Zeuge)
+
+Gerekçe: TR açıklama yalnızca “X → Xen” diyordu; cümledeki Kasus tetikleyicisi eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Zeugen. Zeuge → Zeugen.
+  - Yeni: Doğru cevap: Zeugen. befragen doğrudan nesne (Akkusativ) ister: den Zeugen. Zeuge -e ile biten zayıf isimdir ve Akkusativte -n alır.
+
+#### `akkusativ-3` › 4
+Cümle: Ich empfehle dir diesen ___. (Therapeut)
+
+Gerekçe: TR açıklama yalnızca “Kaynakta …” diyordu; Kasus ipucu ve kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Therapeuten. Kaynakta “diesen Therapeuten” biçimi kullanılır.
+  - Yeni: Doğru cevap: Therapeuten. empfehlen'de “dir” Dativ, önerilen kişi Akkusativtir: diesen (Akkusativ maskulin) + Therapeuten. Therapeut zayıf isim olduğu için -en alır.
+
+#### `akkusativ-3` › 6
+Cümle: Die Kinder beobachten einen ___ im Wald. (Hase)
+
+Gerekçe: TR açıklama yalnızca “X → Xen” diyordu; cümledeki Kasus tetikleyicisi eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Hasen. Hase → Hasen.
+  - Yeni: Doğru cevap: Hasen. beobachten Akkusativ nesne ister: einen Hasen. Hase -e ile biten zayıf isimdir, Akkusativte -n alır.
+
+#### `akkusativ-3` › 7
+Cümle: Der Zoo hat einen neuen ___ bekommen. (Löwe)
+
+Gerekçe: TR açıklama yalnızca “X → Xen” diyordu; cümledeki Kasus tetikleyicisi eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Löwen. Löwe → Löwen.
+  - Yeni: Doğru cevap: Löwen. bekommen Akkusativ nesne ister: einen neuen Löwen. Löwe -e ile biten zayıf isimdir, Akkusativte -n alır.
+
+#### `dativ-4` › 6
+Cümle: Sie redet mit einem ___. (Franzose)
+
+Gerekçe: TR açıklama yalnızca “X → Xen” diyordu; cümledeki Kasus tetikleyicisi eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Franzosen. Franzose → Franzosen.
+  - Yeni: Doğru cevap: Franzosen. reden mit + Dativ: mit einem Franzosen. Franzose -e ile biten zayıf isimdir, Dativte -n alır.
+
+#### `genitiv-5` › 1
+Cümle: Die Entwürfe des ___ gefallen uns. (Architekt)
+
+Gerekçe: TR açıklama yalnızca “Kaynakta …” diyordu; Kasus ipucu ve kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Architekten. Kaynakta “des Architekten” biçimi bulunur.
+  - Yeni: Doğru cevap: Architekten. “des” Genitiv maskulin gösterir; Architekt zayıf isimdir ve Genitivte -s değil -en alır: des Architekten.
+
+#### `genitiv-5` › 4
+Cümle: Der Name des ___ steht auf der Liste. (Kunde)
+
+Gerekçe: TR açıklama yalnızca “X → Xen” diyordu; cümledeki Kasus tetikleyicisi eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Kunden. Kunde → Kunden.
+  - Yeni: Doğru cevap: Kunden. “des” Genitiv maskulin gösterir; Kunde zayıf isim olduğu için -s almaz, -n alır: des Kunden.
+
+#### `genitiv-5` › 5
+Cümle: Die Aussage des ___ war überzeugend. (Zeuge)
+
+Gerekçe: TR açıklama yalnızca “X → Xen” diyordu; cümledeki Kasus tetikleyicisi eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Zeugen. Zeuge → Zeugen.
+  - Yeni: Doğru cevap: Zeugen. “des” Genitiv maskulin gösterir; Zeuge zayıf isim olduğu için -s almaz, -n alır: des Zeugen.
+
+#### `genitiv-5` › 6
+Cümle: Die Rede des ___ wurde übertragen. (Präsident)
+
+Gerekçe: TR açıklama yalnızca “X → Xen” diyordu; cümledeki Kasus tetikleyicisi eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Präsidenten. Präsident → Präsidenten.
+  - Yeni: Doğru cevap: Präsidenten. “des” Genitiv maskulin gösterir; Präsident -es değil -en alır: des Präsidenten.
+
+#### `genitiv-5` › 7
+Cümle: Das Foto des ___ hängt im Büro. (Kollege)
+
+Gerekçe: TR açıklama yalnızca “X → Xen” diyordu; cümledeki Kasus tetikleyicisi eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Kollegen. Kollege → Kollegen.
+  - Yeni: Doğru cevap: Kollegen. “des” Genitiv maskulin gösterir; Kollege zayıf isimdir: des Kollegen (Kolleges yanlış).
+
+#### `genitiv-5` › 9
+Cümle: Ergänze: „Die Meinung des ___ wurde veröffentlicht. (Chinese)“
+
+Gerekçe: TR alanında İngilizce “in Genitiv” vardı ve Kasus ipucu eksikti.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Chinesen. Chinese → Chinesen in Genitiv.
+  - Yeni: Doğru cevap: Chinesen. “des” Genitiv maskulin gösterir; Chinese -e ile biten zayıf isimdir: des Chinesen.
+
+#### `sonderformen-7` › 0
+Cümle: Wir müssen ___ Becker heute anrufen. (Herr)
+
+Gerekçe: TR açıklama yalnızca “Kaynakta …” diyordu; Kasus ipucu ve kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Herrn. Kaynakta Akkusativ tekil “Herrn” olarak verilir.
+  - Yeni: Doğru cevap: Herrn. anrufen Akkusativ nesne ister; Herr tekil Akkusativ, Dativ ve Genitivte “Herrn” olur: Herrn Becker. “Herren” çoğul biçimdir.
+
+#### `sonderformen-7` › 1
+Cümle: Ich kenne seinen ___ nicht. (Name)
+
+Gerekçe: TR açıklama yalnızca “Kaynakta …” diyordu; Kasus ipucu ve kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Namen. Kaynakta “seinen Namen” biçimi verilir.
+  - Yeni: Doğru cevap: Namen. “seinen” Akkusativ maskulin gösterir; Name Akkusativte -n alır: seinen Namen (Genitivte ise özel biçim: des Namens).
+
+#### `sonderformen-7` › 4
+Cümle: Die Frau seines ___ wartet draußen. (Herz)
+
+Gerekçe: TR açıklama yalnızca “Kaynakta …” diyordu; Kasus ipucu ve kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Herzens. Kaynakta “seines Herzens” biçimi bulunur; Genitivde özel -ens biçimi.
+  - Yeni: Doğru cevap: Herzens. “seines” Genitiv gösterir; Herz nötr ve özel çekilen bir isimdir: Genitiv des Herzens (Dativ: dem Herzen). “die Frau seines Herzens” kalıplaşmış bir ifadedir.
+
+#### `sonderformen-7` › 8
+Cümle: Ergänze: „Ich habe mit ___ Müller gesprochen.“ (Herr)
+
+Gerekçe: Cümlede ipucu yoktu; “mit Frau Müller” da doğru olurdu. “(Herr)” ipucu eklendi; TR açıklama (“Dativ/Akkusativ dışı olmayan kullanımda”) anlamsızdı.
+
+- Cümle
+  - Eski: Ergänze: „Ich habe mit ___ Müller gesprochen.“
+  - Yeni: Ergänze: „Ich habe mit ___ Müller gesprochen.“ (Herr)
+- Açıklama (TR)
+  - Eski: Doğru cevap: Herrn. Dativ/Akkusativ dışı olmayan kullanımda Herr → Herrn.
+  - Yeni: Doğru cevap: Herrn. mit + Dativ; Herr tekil Dativte “Herrn” olur: mit Herrn Müller (Nominativ: Herr Müller).
+
+#### `personen-berufe-8` › 1
+Cümle: Wir begrüßen den neuen ___.
+
+Gerekçe: TR açıklama yalnızca “X → Xen” diyordu; cümledeki Kasus tetikleyicisi eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Präsidenten. Präsident → Präsidenten.
+  - Yeni: Doğru cevap: Präsidenten. begrüßen Akkusativ nesne ister: den neuen Präsidenten. Präsident zayıf isimdir, Akkusativte -en alır.
+
+#### `personen-berufe-8` › 3
+Cümle: Ich habe mit einem ___ gesprochen.
+
+Gerekçe: TR açıklama yalnızca “X → Xen” diyordu; cümledeki Kasus tetikleyicisi eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Psychologen. Psychologe n-Deklination biçimi Psychologen.
+  - Yeni: Doğru cevap: Psychologen. mit + Dativ: mit einem Psychologen. Psychologe -e ile biten zayıf isimdir, Dativte -n alır.
+
+#### `personen-berufe-8` › 5
+Cümle: Die Patientin vertraut dem ___.
+
+Gerekçe: TR açıklamada Kasus tetikleyicisi (vertrauen + Dativ) yoktu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Therapeuten. Dativ Therapeuten.
+  - Yeni: Doğru cevap: Therapeuten. vertrauen Dativ ister: dem Therapeuten. Therapeut zayıf isimdir, Dativte -en alır.
+
+#### `personen-berufe-8` › 6
+Cümle: Die Polizei sucht den ___.
+
+Gerekçe: TR açıklama yalnızca “X → Xen” diyordu; cümledeki Kasus tetikleyicisi eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Terroristen. Terrorist → Terroristen.
+  - Yeni: Doğru cevap: Terroristen. suchen Akkusativ nesne ister: den Terroristen. -ist ile biten maskulin isimler -en alır.
+
+#### `tiere-weitere-10` › 4
+Cümle: Wie spricht man diesen ___ aus? (Buchstabe)
+
+Gerekçe: TR açıklama yalnızca “Kaynakta …” diyordu; Kasus ipucu ve kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Buchstaben. Kaynakta Akkusativ “den Buchstaben” doğru kabul edilir.
+  - Yeni: Doğru cevap: Buchstaben. aussprechen Akkusativ nesne ister: diesen Buchstaben. Buchstabe -e ile biten zayıf isimdir, Akkusativte -n alır.
+
+#### `singular-plural-11` › 8
+Cümle: Ergänze: „Mit den ___ spreche ich später. (Kollege, Pl.)“
+
+Gerekçe: TR alanında İngilizce “article” kelimesi vardı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Kollegen. Çoğul Dativ Kollegen; article “den” sayıyı gösterir.
+  - Yeni: Doğru cevap: Kollegen. mit + Dativ; “den” burada çoğul Dativ artikelidir (tekil olsaydı “dem” olurdu): mit den Kollegen.
+
+#### `praepositionen-13` › 0
+Cümle: Wir sprechen ___ neuen Kollegen. (mit, Sg.)
+
+Gerekçe: Tekil ipucu yoktu; çoğul Dativ “mit den neuen Kollegen” de doğruydu. Açıklama zaten tekil diyor; ipucu eklendi.
+
+- Cümle
+  - Eski: Wir sprechen ___ neuen Kollegen. (mit)
+  - Yeni: Wir sprechen ___ neuen Kollegen. (mit, Sg.)
+
+#### `praepositionen-13` › 2
+Cümle: Das Foto stammt ___ Fotografen. (von, Sg.)
+
+Gerekçe: Tekil ipucu yoktu; çoğul “von den Fotografen” de doğruydu.
+
+- Cümle
+  - Eski: Das Foto stammt ___ Fotografen. (von)
+  - Yeni: Das Foto stammt ___ Fotografen. (von, Sg.)
+
+#### `praepositionen-13` › 3
+Cümle: Er sitzt ___ Psychologen. (bei, Sg.)
+
+Gerekçe: Tekil ipucu yoktu; çoğul “bei den Psychologen” de doğruydu. Açıklamaya isim biçimi eklendi.
+
+- Cümle
+  - Eski: Er sitzt ___ Psychologen. (bei)
+  - Yeni: Er sitzt ___ Psychologen. (bei, Sg.)
+- Açıklama (TR)
+  - Eski: Doğru cevap: bei dem. bei + Dativ.
+  - Yeni: Doğru cevap: bei dem. bei + Dativ; tekil maskulin: bei dem (= beim) Psychologen. Psychologe Dativte -n alır.
+
+#### `praepositionen-13` › 4
+Cümle: Wir sprechen ___ Präsidenten. (über, Sg.)
+
+Gerekçe: Eski cümle (über den Unterschied) zayıf isim içermiyordu ve konu dışıydı; TR açıklama karışıktı (“kaynak mantığı”). Cümle zayıf isimle (Präsident) yeniden kuruldu, şıklar ve cevap aynı.
+
+- Cümle
+  - Eski: Wir sprechen ___ Unterschied zwischen zwei Personen.
+  - Yeni: Wir sprechen ___ Präsidenten. (über, Sg.)
+- Açıklama (TR)
+  - Eski: Doğru cevap: über den. Bu cümlede über doğrudan nesne benzeri Akkusativ: über den Unterschied; zayıf isim değil ama Kasus karşılaştırması için kaynak mantığı.
+  - Yeni: Doğru cevap: über den. sprechen über + Akkusativ (bir konu/kişi hakkında konuşmak): über den Präsidenten. Präsident zayıf isimdir, Akkusativte -en alır. “über dem” yer bildiren Dativtir (bir şeyin üstünde), burada anlam uymaz.
+
+#### `praepositionen-13` › 5
+Cümle: Sie spricht ___ Franzosen auf Französisch. (mit, Sg.)
+
+Gerekçe: Tekil ipucu yoktu; çoğul “mit den Franzosen” de doğruydu.
+
+- Cümle
+  - Eski: Sie spricht ___ Franzosen auf Französisch. (mit)
+  - Yeni: Sie spricht ___ Franzosen auf Französisch. (mit, Sg.)
+
+#### `praepositionen-13` › 6
+Cümle: Der Junge spielt ___ Bärenfigur. (mit)
+
+Gerekçe: TR açıklama kuralı söylemiyordu (“dikkatini ölçer”).
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: mit der. Bu karşılaştırma cinsiyet/Kasus dikkatini ölçer; “Bärenfigur” birleşik feminin normal isimdir.
+  - Yeni: Doğru cevap: mit der. mit + Dativ; birleşik isimde cinsiyeti son kelime belirler: die Figur → die Bärenfigur (feminin) → Dativ “der Bärenfigur”. Bär n-Deklination olsa da burada belirleyici değildir.
+
+#### `schwach-oder-normal-14` › 1
+Cümle: Welcher Satz ist korrekt?
+
+Gerekçe: TR açıklama yalnızca “Kaynakta …” diyordu; Kasus ipucu ve kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Er hat den Hund gestreichelt.. Hund bu kaynakta n-Deklination karşı örneğidir; tekil Akkusativ Hund.
+  - Yeni: Doğru cevap: Er hat den Hund gestreichelt.. Hund normal maskulin isimdir; tekil Akkusativte ek almaz: den Hund (“den Hunden” çoğul Dativtir).
+
+#### `schwach-oder-normal-14` › 3
+Cümle: Welcher Satz ist korrekt?
+
+Gerekçe: Çeldirici “Wir haben den Kellnern viel Trinkgeld gegeben.” çoğul Dativ olarak tamamen doğruydu. Akkusativ “den Kellner” ile değiştirildi.
+
+- Seçenekler
+  - Eski: `Wir haben dem Kellner viel Trinkgeld gegeben.` / `Wir haben dem Kellnern viel Trinkgeld gegeben.` / `Wir haben den Kellnern viel Trinkgeld gegeben.`
+  - Yeni: `Wir haben dem Kellner viel Trinkgeld gegeben.` / `Wir haben dem Kellnern viel Trinkgeld gegeben.` / `Wir haben den Kellner viel Trinkgeld gegeben.`
+- Açıklama (TR)
+  - Eski: Doğru cevap: Wir haben dem Kellner viel Trinkgeld gegeben.. Kellner n-Deklination değildir; tekil Dativ Kellner.
+  - Yeni: Doğru cevap: Wir haben dem Kellner viel Trinkgeld gegeben.. geben'de alıcı kişi Dativtir: dem Kellner. Kellner normal maskulin isimdir, tekilde -n almaz (dem Kellnern yanlış); “den Kellner” Akkusativtir ve alıcı için yanlıştır.
+
+#### `schwach-oder-normal-14` › 4
+Cümle: Welcher Satz ist korrekt?
+
+Gerekçe: TR açıklama yalnızca “Kaynakta …” diyordu; Kasus ipucu ve kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Ich musste den Arzt noch einmal anrufen.. Arzt kaynakta n-Deklination değildir; Akkusativ Arzt.
+  - Yeni: Doğru cevap: Ich musste den Arzt noch einmal anrufen.. anrufen Akkusativ ister: den Arzt. Arzt normal maskulin isimdir, -en almaz.
+
+#### `schwach-oder-normal-14` › 6
+Cümle: Welcher Satz ist korrekt?
+
+Gerekçe: TR alanında İngilizce “in Akkusativ” vardı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Sie wird ihren Neffen wiedersehen.. Neffe → Neffen in Akkusativ.
+  - Yeni: Doğru cevap: Sie wird ihren Neffen wiedersehen.. wiedersehen Akkusativ ister: ihren Neffen. Neffe -e ile biten zayıf isimdir, Akkusativte -n alır.
+
+#### `schwach-oder-normal-14` › 8
+Cümle: Korrigiere: „Ich habe den Chefen gefragt.“
+
+Gerekçe: TR açıklama yalnızca “Kaynakta …” diyordu; Kasus ipucu ve kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Ich habe den Chef gefragt.. Chef kaynakta n-Deklination değildir; -en eklenmez.
+  - Yeni: Doğru cevap: Ich habe den Chef gefragt.. fragen Akkusativ ister: den Chef. Chef normal maskulin isimdir, -en eklenmez.
+
+#### `fehlerkorrektur-18` › 4
+Cümle: Korrigiere: „Ich habe den Chefen angerufen.“
+
+Gerekçe: TR açıklama yalnızca “Kaynakta …” diyordu; Kasus ipucu ve kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Ich habe den Chef angerufen.. Chef kaynakta n-Deklination değildir; -en eklenmez.
+  - Yeni: Doğru cevap: Ich habe den Chef angerufen.. anrufen Akkusativ ister: den Chef. Chef normal maskulin isimdir; Akkusativte de değişmez, -en eklenmez.
+
+#### `passendes-nomen-15` › 5
+Cümle: Sie sagt, ich sei die Frau seines ___.
+
+Gerekçe: TR açıklama yalnızca “Kaynakta …” diyordu; Kasus ipucu ve kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Herzens. Kaynakta sabit biçim “die Frau seines Herzens”.
+  - Yeni: Doğru cevap: Herzens. “seines” Genitiv gösterir; Herz Genitivte özel biçim alır: seines Herzens (kalıp: die Frau seines Herzens).
+
+#### `passendes-nomen-15` › 8
+Cümle: Ergänze und dekliniere: „Ein starker ___ kann viel bewirken.“ (Wille)
+
+Gerekçe: Soru olmayan bir “Wortbank”a atıf yapıyordu; ipucu olmadan cevap bilinemezdi. Ipucu “(Wille)” eklendi; TR “Kaynakta” gerekçesi düzeltildi.
+
+- Cümle
+  - Eski: Wähle aus der Wortbank und dekliniere: „Ein starker ___ kann viel bewirken.“
+  - Yeni: Ergänze und dekliniere: „Ein starker ___ kann viel bewirken.“ (Wille)
+- Açıklama (TR)
+  - Eski: Doğru cevap: Wille. Kaynakta “Ein starker Wille ...”; Nominativ olduğu için ek yok.
+  - Yeni: Doğru cevap: Wille. “Ein starker ___” cümlenin öznesidir (Nominativ); Nominativ tekilde ek yok: ein starker Wille (Genitiv: des Willens).
+
+#### `passendes-nomen-15` › 9
+Cümle: Ergänze und dekliniere: „Die Feuerwehr befreite den verletzten ___ aus dem Auto.“ (Insasse)
+
+Gerekçe: Soru olmayan bir “Wortbank”a atıf yapıyordu; ipucu “(Insasse)” eklendi.
+
+- Cümle
+  - Eski: Wähle aus der Wortbank und dekliniere: „Die Feuerwehr befreite den verletzten ___ aus dem Auto.“
+  - Yeni: Ergänze und dekliniere: „Die Feuerwehr befreite den verletzten ___ aus dem Auto.“ (Insasse)
+- Açıklama (TR)
+  - Eski: Doğru cevap: Insassen. Akkusativ maskulin “den verletzten Insassen”.
+  - Yeni: Doğru cevap: Insassen. befreien Akkusativ nesne ister: den verletzten Insassen. Insasse -e ile biten zayıf isimdir, Akkusativte -n alır.
+
+#### `b1-mix-19` › 2
+Cümle: Welche Ergänzung ist vollständig korrekt? „Wir haben ___ kennengelernt.“
+
+Gerekçe: Cümle bağlamı yoktu; “einem sehr höflichen Franzosen” (Dativ) da doğru bir öbekti. Kasusu belirleyen çerçeve cümle eklendi.
+
+- Cümle
+  - Eski: Welche Ergänzung ist vollständig korrekt?
+  - Yeni: Welche Ergänzung ist vollständig korrekt? „Wir haben ___ kennengelernt.“
+- Açıklama (TR)
+  - Eski: Doğru cevap: einen sehr höflichen Franzosen. Akkusativ “einen ... Franzosen”.
+  - Yeni: Doğru cevap: einen sehr höflichen Franzosen. kennenlernen Akkusativ nesne ister: einen + sıfat -en + Franzosen. “einem” Dativtir; Franzose Akkusativte -n almalıdır.
+
+#### `b1-mix-19` › 3
+Cümle: Welche Ergänzung ist vollständig korrekt? „___ hält heute seine erste Rede.“
+
+Gerekçe: Bağlam yoktu; “den neuen Präsidenten” (Akkusativ) ve “der neuen Präsidenten” (Genitiv çoğul) de doğru öbeklerdi. Çerçeve cümle eklendi.
+
+- Cümle
+  - Eski: Welche Ergänzung ist vollständig korrekt?
+  - Yeni: Welche Ergänzung ist vollständig korrekt? „___ hält heute seine erste Rede.“
+- Açıklama (TR)
+  - Eski: Doğru cevap: der neue Präsident. Nominativ Singular: der neue Präsident.
+  - Yeni: Doğru cevap: der neue Präsident. Boşluk cümlenin öznesidir (Nominativ): der + neue + Präsident; Nominativ tekilde isim ek almaz.
+
+#### `b1-mix-19` › 6
+Cümle: Welche Ergänzung ist vollständig korrekt? „Ich empfehle dir ___.“
+
+Gerekçe: Bağlam yoktu; “diesem jungen Therapeuten” (Dativ) da doğru bir öbekti. Çerçeve cümle eklendi.
+
+- Cümle
+  - Eski: Welche Ergänzung ist vollständig korrekt?
+  - Yeni: Welche Ergänzung ist vollständig korrekt? „Ich empfehle dir ___.“
+- Açıklama (TR)
+  - Eski: Doğru cevap: diesen jungen Therapeuten. Akkusativ maskulin “diesen ... Therapeuten”.
+  - Yeni: Doğru cevap: diesen jungen Therapeuten. empfehlen: kişi “dir” Dativ, önerilen kişi Akkusativ: diesen jungen Therapeuten. “diesem” Dativtir; Therapeut Akkusativte -en almalıdır.
+
+#### `master-20` › 0
+Cümle: Der Professor spricht mit ___ über das Projekt.
+
+Gerekçe: Çeldirici “mit den neuen Studenten” çoğul Dativ olarak doğruydu. Genitiv “des neuen Studenten” ile değiştirildi.
+
+- Seçenekler
+  - Eski: `dem neuen Studenten` / `den neuen Studenten` / `dem neuen Student`
+  - Yeni: `dem neuen Studenten` / `des neuen Studenten` / `dem neuen Student`
+- Açıklama (TR)
+  - Eski: Doğru cevap: dem neuen Studenten. mit + Dativ; “dem neuen Studenten”.
+  - Yeni: Doğru cevap: dem neuen Studenten. mit + Dativ: dem neuen Studenten. “des” Genitivtir; “dem neuen Student” yanlış, çünkü Student Dativte -en alır.
+
+#### `master-20` › 3
+Cümle: Die Ärztin empfiehlt ___ eine neue Therapie.
+
+Gerekçe: Çeldirici “den Patienten” çoğul Dativ olarak doğruydu (Die Ärztin empfiehlt den Patienten eine neue Therapie). Genitiv “des Patienten” ile değiştirildi.
+
+- Seçenekler
+  - Eski: `dem Patienten` / `den Patienten` / `dem Patient`
+  - Yeni: `dem Patienten` / `des Patienten` / `dem Patient`
+- Açıklama (TR)
+  - Eski: Doğru cevap: dem Patienten. empfehlen yapısında kişi Dativ; Patienten.
+  - Yeni: Doğru cevap: dem Patienten. empfehlen: kişi Dativ, önerilen şey (eine neue Therapie) Akkusativtir: dem Patienten. “dem Patient” yanlış, çünkü Patient Dativte -en alır.
+
+#### `satzbau-16` › 7
+Cümle: Ordne: „der Patient / bei / der Psychologe / sein“
+
+Gerekçe: beim = bei dem; açık yazım da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `der patient ist beim psychologen`
+  - Yeni: `der patient ist beim psychologen` / `der patient ist bei dem psychologen`
+
+#### `satzbau-16` › 8
+Cümle: Ordne: „der Zeuge / dem Polizisten / die Situation / erklären“
+
+Gerekçe: Belirli Akkusativ nesne Dativden önce de gelebilir.
+
+- Kabul edilen cevaplar
+  - Eski: `der zeuge erklärt dem polizisten die situation` / `der zeuge erklaert dem polizisten die situation`
+  - Yeni: `der zeuge erklärt dem polizisten die situation` / `der zeuge erklaert dem polizisten die situation` / `der zeuge erklärt die situation dem polizisten`
+
+#### `satzbau-16` › 9
+Cümle: Ordne: „wir / den Präsidenten / gestern / sehen“
+
+Gerekçe: Yönergede zaman belirtilmemiş; Präteritum ve eşdeğer sıralar da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `wir haben den präsidenten gestern gesehen` / `wir haben den praesidenten gestern gesehen`
+  - Yeni: `wir haben den präsidenten gestern gesehen` / `wir haben den praesidenten gestern gesehen` / `wir haben gestern den präsidenten gesehen` / `gestern haben wir den präsidenten gesehen` / `wir sahen den präsidenten gestern` / `wir sahen gestern den präsidenten`
 
 ### `data/b1/passiv.json`
 
@@ -9754,6 +9612,382 @@ Gerekçe: Talimat “Heute”nin neyle değiştirileceğini söylemiyor; “Frü
 - Kabul edilen cevaplar
   - Eski: `damals arbeitete ich in einem internationalen team, traf viele kunden und lernte ständig neue menschen kennen` / `damals arbeitete ich in einem internationalen team traf viele kunden und lernte ständig neue menschen kennen`
   - Yeni: `damals arbeitete ich in einem internationalen team, traf viele kunden und lernte ständig neue menschen kennen` / `damals arbeitete ich in einem internationalen team traf viele kunden und lernte ständig neue menschen kennen` / `früher arbeitete ich in einem internationalen team, traf viele kunden und lernte ständig neue menschen kennen` / `früher arbeitete ich in einem internationalen team traf viele kunden und lernte ständig neue menschen kennen`
+
+### `data/b1/pronominaladverbien.json`
+
+#### `da-formen-1` › 5
+Cümle: Das hängt von der Zeit ab. Das hängt ___ ab.
+
+Gerekçe: Açıklama 'der Zeit ab' diye bozuk alıntı yapıyordu (ab ayrılan ön ek, ismin parçası değil).
+
+- Açıklama (TR)
+  - Eski: abhängen von kalıbında von korunur. der Zeit ab bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + von → davon kullanılır. Doğru cevap: davon
+  - Yeni: abhängen von kalıbında von korunur. von der Zeit bir kişi değil, bir şeydir; aynı edat grubunu tekrar etmek yerine da- + von → davon kullanılır. Ayrılan ön ek ab yine sonda kalır: Das hängt davon ab. Doğru cevap: davon
+
+#### `wo-fragen-2` › 3
+Cümle: ___ schreibst du? – Mit einem Bleistift.
+
+Gerekçe: Açıklama 'mit ünlüyle başladığında araya r girer' diyordu; mit ünsüzle başlar, araya r girmez.
+
+- Açıklama (TR)
+  - Eski: schreiben mit kalıbının edatı mit. Burada bir kişi değil, einem Bleistift soruluyor; bu yüzden wo- + mit → womit. mit ünlüyle başladığında araya r girer. Doğru cevap: Womit
+  - Yeni: schreiben mit kalıbının edatı mit. Burada bir kişi değil, bir şey soruluyor: einem Bleistift (mit einem Bleistift); bu yüzden wo- + mit → womit. mit ünsüzle başladığı için araya r girmez (karşılaştır: wo + auf → worauf). Doğru cevap: Womit
+
+#### `wo-fragen-2` › 4
+Cümle: ___ interessierst du dich? – Für Geschichte.
+
+Gerekçe: Açıklama 'für ünlüyle başladığında araya r girer' diyordu; für ünsüzle başlar, araya r girmez.
+
+- Açıklama (TR)
+  - Eski: sich interessieren für kalıbının edatı für. Burada bir kişi değil, Geschichte soruluyor; bu yüzden wo- + für → wofür. für ünlüyle başladığında araya r girer. Doğru cevap: Wofür
+  - Yeni: sich interessieren für kalıbının edatı für. Burada bir kişi değil, bir şey soruluyor: Geschichte; bu yüzden wo- + für → wofür. für ünsüzle başladığı için araya r girmez (karşılaştır: wo + auf → worauf). Doğru cevap: Wofür
+
+#### `wo-fragen-2` › 5
+Cümle: ___ hängt das ab? – Vom Wetter.
+
+Gerekçe: Açıklama 'von ünlüyle başladığında araya r girer' diyordu; von ünsüzle başlar, araya r girmez. Ayrıca 'Vom Wetter soruluyor' alıntısı düzeltildi.
+
+- Açıklama (TR)
+  - Eski: abhängen von kalıbının edatı von. Burada bir kişi değil, Vom Wetter soruluyor; bu yüzden wo- + von → wovon. von ünlüyle başladığında araya r girer. Doğru cevap: Wovon
+  - Yeni: abhängen von kalıbının edatı von. Burada bir kişi değil, bir şey soruluyor: das Wetter (vom Wetter); bu yüzden wo- + von → wovon. von ünsüzle başladığı için araya r girmez (karşılaştır: wo + auf → worauf). Doğru cevap: Wovon
+
+#### `wo-fragen-2` › 6
+Cümle: ___ beginnst du? – Mit der ersten Aufgabe.
+
+Gerekçe: Açıklama 'mit ünlüyle başladığında araya r girer' diyordu; mit ünsüzle başlar, araya r girmez.
+
+- Açıklama (TR)
+  - Eski: beginnen mit kalıbının edatı mit. Burada bir kişi değil, der ersten Aufgabe soruluyor; bu yüzden wo- + mit → womit. mit ünlüyle başladığında araya r girer. Doğru cevap: Womit
+  - Yeni: beginnen mit kalıbının edatı mit. Burada bir kişi değil, bir şey soruluyor: der ersten Aufgabe (mit der ersten Aufgabe); bu yüzden wo- + mit → womit. mit ünsüzle başladığı için araya r girmez (karşılaştır: wo + auf → worauf). Doğru cevap: Womit
+
+#### `wo-fragen-2` › 7
+Cümle: ___ träumst du? – Von einem Urlaub.
+
+Gerekçe: Açıklama 'von ünlüyle başladığında araya r girer' diyordu; von ünsüzle başlar, araya r girmez.
+
+- Açıklama (TR)
+  - Eski: träumen von kalıbının edatı von. Burada bir kişi değil, einem Urlaub soruluyor; bu yüzden wo- + von → wovon. von ünlüyle başladığında araya r girer. Doğru cevap: Wovon
+  - Yeni: träumen von kalıbının edatı von. Burada bir kişi değil, bir şey soruluyor: einem Urlaub (von einem Urlaub); bu yüzden wo- + von → wovon. von ünsüzle başladığı için araya r girmez (karşılaştır: wo + auf → worauf). Doğru cevap: Wovon
+
+#### `personen-sachen-4` › 7
+Cümle: Sie erzählt ___. (von der Reise)
+
+Gerekçe: Açıklamada fiil kalıbı eksikti ('… von kalıbında').
+
+- Açıklama (TR)
+  - Eski: … von kalıbında von korunur. der Reise bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + von → davon kullanılır. Doğru cevap: davon
+  - Yeni: erzählen von kalıbında von korunur. die Reise bir kişi değil, bir şeydir; aynı edat grubunu tekrar etmek yerine da- + von → davon kullanılır. Karşılaştır: von ihrer Schwester (kişi) → von ihr. Doğru cevap: davon
+
+#### `feste-praepositionen-5` › 4
+Cümle: Der Vorschlag ist gut. Ich bin ___. (für einen Vorschlag sein)
+
+Gerekçe: Açıklama 'einen Vorschlag sein) bir kişi değildir' diye bozuk alıntı içeriyordu.
+
+- Açıklama (TR)
+  - Eski: für/gegen etwas sein kalıbında für korunur. einen Vorschlag sein) bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + für → dafür kullanılır. Doğru cevap: dafür
+  - Yeni: für/gegen etwas sein kalıbında für korunur (Der Vorschlag ist gut → onu destekliyoruz: für). der Vorschlag bir kişi değil, bir şeydir; aynı edat grubunu tekrar etmek yerine da- + für → dafür kullanılır. Doğru cevap: dafür
+
+#### `feste-praepositionen-5` › 5
+Cümle: Der Vorschlag gefällt mir nicht. Ich bin ___. (gegen einen Vorschlag sein)
+
+Gerekçe: Açıklama 'einen Vorschlag sein) bir kişi değildir' diye bozuk alıntı içeriyordu.
+
+- Açıklama (TR)
+  - Eski: für/gegen etwas sein kalıbında gegen korunur. einen Vorschlag sein) bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + gegen → dagegen kullanılır. Doğru cevap: dagegen
+  - Yeni: für/gegen etwas sein kalıbında gegen korunur (Der Vorschlag gefällt mir nicht → karşıyız: gegen). der Vorschlag bir kişi değil, bir şeydir; aynı edat grubunu tekrar etmek yerine da- + gegen → dagegen kullanılır. Doğru cevap: dagegen
+
+#### `feste-praepositionen-5` › 7
+Cümle: Der Erfolg freut mich. Ich bin ___ stolz. (stolz auf)
+
+Gerekçe: Açıklama yanlış kalıptan (sich freuen auf) bahsediyordu; cümledeki kalıp stolz sein auf.
+
+- Açıklama (TR)
+  - Eski: sich freuen auf kalıbında auf korunur. Sorudaki şey/durum bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + auf → darauf kullanılır. Doğru cevap: darauf
+  - Yeni: stolz sein auf kalıbında auf korunur. der Erfolg bir kişi değil, bir şeydir; aynı edat grubunu tekrar etmek yerine da- + auf → darauf kullanılır. auf ünlüyle başladığı için araya r girer. Doğru cevap: darauf
+
+#### `frage-antwort-6` › 0
+Cümle: Worauf wartest du? – Ich warte ___.
+
+Gerekçe: TR/DE/EN açıklama boşluklu cümleyi ('… ___') temsil edilen şey gibi alıntılıyordu; anlamsızdı.
+
+- Açıklama (TR)
+  - Eski: warten auf kalıbında auf korunur. Ich warte ___ bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + auf → darauf kullanılır. Doğru cevap: darauf
+  - Yeni: Soru Worauf ile bir şey hakkında soruluyor (kişi değil). warten auf kalıbında auf korunur; cevapta aynı şeyi da- + auf → darauf ile anlatırız: Ich warte darauf. auf ünlüyle başladığı için araya r girer. Doğru cevap: darauf
+- DE/EN açıklamaları da güncellendi.
+
+#### `frage-antwort-6` › 1
+Cümle: Worüber sprecht ihr? – Wir sprechen ___.
+
+Gerekçe: TR/DE/EN açıklama boşluklu cümleyi ('… ___') temsil edilen şey gibi alıntılıyordu; anlamsızdı.
+
+- Açıklama (TR)
+  - Eski: sprechen über kalıbında über korunur. Wir sprechen ___ bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + über → darüber kullanılır. Doğru cevap: darüber
+  - Yeni: Soru Worüber ile bir şey hakkında soruluyor (kişi değil). sprechen über kalıbında über korunur; cevapta aynı şeyi da- + über → darüber ile anlatırız: Wir sprechen darüber. über ünlüyle başladığı için araya r girer. Doğru cevap: darüber
+- DE/EN açıklamaları da güncellendi.
+
+#### `frage-antwort-6` › 2
+Cümle: Woran denkst du? – Ich denke ___.
+
+Gerekçe: TR/DE/EN açıklama boşluklu cümleyi ('… ___') temsil edilen şey gibi alıntılıyordu; anlamsızdı.
+
+- Açıklama (TR)
+  - Eski: denken an kalıbında an korunur. Ich denke ___ bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + an → daran kullanılır. Doğru cevap: daran
+  - Yeni: Soru Woran ile bir şey hakkında soruluyor (kişi değil). denken an kalıbında an korunur; cevapta aynı şeyi da- + an → daran ile anlatırız: Ich denke daran. an ünlüyle başladığı için araya r girer. Doğru cevap: daran
+- DE/EN açıklamaları da güncellendi.
+
+#### `frage-antwort-6` › 3
+Cümle: Womit arbeitest du? – Ich arbeite ___.
+
+Gerekçe: TR/DE/EN açıklama boşluklu cümleyi ('… ___') temsil edilen şey gibi alıntılıyordu; anlamsızdı.
+
+- Açıklama (TR)
+  - Eski: arbeiten mit kalıbında mit korunur. Ich arbeite ___ bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + mit → damit kullanılır. Doğru cevap: damit
+  - Yeni: Soru Womit ile bir şey hakkında soruluyor (kişi değil). arbeiten mit kalıbında mit korunur; cevapta aynı şeyi da- + mit → damit ile anlatırız: Ich arbeite damit. mit ünsüzle başladığı için araya r girmez. Doğru cevap: damit
+- DE/EN açıklamaları da güncellendi.
+
+#### `frage-antwort-6` › 4
+Cümle: Wofür interessierst du dich? – Ich interessiere mich ___.
+
+Gerekçe: TR/DE/EN açıklama boşluklu cümleyi ('… ___') temsil edilen şey gibi alıntılıyordu; anlamsızdı.
+
+- Açıklama (TR)
+  - Eski: sich interessieren für kalıbında für korunur. Ich interessiere mich ___ bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + für → dafür kullanılır. Doğru cevap: dafür
+  - Yeni: Soru Wofür ile bir şey hakkında soruluyor (kişi değil). sich interessieren für kalıbında für korunur; cevapta aynı şeyi da- + für → dafür ile anlatırız: Ich interessiere mich dafür. für ünsüzle başladığı için araya r girmez. Doğru cevap: dafür
+- DE/EN açıklamaları da güncellendi.
+
+#### `frage-antwort-6` › 5
+Cümle: Wovon träumst du? – Ich träume ___.
+
+Gerekçe: TR/DE/EN açıklama boşluklu cümleyi ('… ___') temsil edilen şey gibi alıntılıyordu; anlamsızdı.
+
+- Açıklama (TR)
+  - Eski: träumen von kalıbında von korunur. Ich träume ___ bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + von → davon kullanılır. Doğru cevap: davon
+  - Yeni: Soru Wovon ile bir şey hakkında soruluyor (kişi değil). träumen von kalıbında von korunur; cevapta aynı şeyi da- + von → davon ile anlatırız: Ich träume davon. von ünsüzle başladığı için araya r girmez. Doğru cevap: davon
+- DE/EN açıklamaları da güncellendi.
+
+#### `frage-antwort-6` › 6
+Cümle: Wogegen protestiert ihr? – Wir protestieren ___.
+
+Gerekçe: TR/DE/EN açıklama boşluklu cümleyi ('… ___') temsil edilen şey gibi alıntılıyordu; anlamsızdı.
+
+- Açıklama (TR)
+  - Eski: protestieren gegen kalıbında gegen korunur. Wir protestieren ___ bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + gegen → dagegen kullanılır. Doğru cevap: dagegen
+  - Yeni: Soru Wogegen ile bir şey hakkında soruluyor (kişi değil). protestieren gegen kalıbında gegen korunur; cevapta aynı şeyi da- + gegen → dagegen ile anlatırız: Wir protestieren dagegen. gegen ünsüzle başladığı için araya r girmez. Doğru cevap: dagegen
+- DE/EN açıklamaları da güncellendi.
+
+#### `frage-antwort-6` › 7
+Cümle: Woran nimmst du teil? – Ich nehme ___ teil.
+
+Gerekçe: TR/DE/EN açıklama boşluklu cümleyi ('… ___') temsil edilen şey gibi alıntılıyordu; anlamsızdı.
+
+- Açıklama (TR)
+  - Eski: teilnehmen an kalıbında an korunur. Ich nehme ___ teil bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + an → daran kullanılır. Doğru cevap: daran
+  - Yeni: Soru Woran ile bir şey hakkında soruluyor (kişi değil). teilnehmen an kalıbında an korunur; cevapta aynı şeyi da- + an → daran ile anlatırız: Ich nehme daran teil. an ünlüyle başladığı için araya r girer. Doğru cevap: daran
+- DE/EN açıklamaları da güncellendi.
+
+#### `frage-antwort-6` › 8
+Cümle: Worüber freust du dich? – Ich freue mich ___.
+
+Gerekçe: TR/DE/EN açıklama boşluklu cümleyi ('… ___') temsil edilen şey gibi alıntılıyordu; anlamsızdı.
+
+- Açıklama (TR)
+  - Eski: sich freuen über kalıbında über korunur. Ich freue mich ___ bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + über → darüber kullanılır. Doğru cevap: darüber
+  - Yeni: Soru Worüber ile bir şey hakkında soruluyor (kişi değil). sich freuen über kalıbında über korunur; cevapta aynı şeyi da- + über → darüber ile anlatırız: Ich freue mich darüber. über ünlüyle başladığı için araya r girer. Doğru cevap: darüber
+- DE/EN açıklamaları da güncellendi.
+
+#### `frage-antwort-6` › 9
+Cümle: Woraus besteht es? – Es besteht ___.
+
+Gerekçe: TR/DE/EN açıklama boşluklu cümleyi ('… ___') temsil edilen şey gibi alıntılıyordu; anlamsızdı.
+
+- Açıklama (TR)
+  - Eski: bestehen aus kalıbında aus korunur. Es besteht ___ bir kişi değildir; aynı edat grubunu tekrar etmek yerine da- + aus → daraus kullanılır. Doğru cevap: daraus
+  - Yeni: Soru Woraus ile bir şey hakkında soruluyor (kişi değil). bestehen aus kalıbında aus korunur; cevapta aynı şeyi da- + aus → daraus ile anlatırız: Es besteht daraus. aus ünlüyle başladığı için araya r girer. Doğru cevap: daraus
+- DE/EN açıklamaları da güncellendi.
+
+#### `dass-saetze-7` › 4
+Cümle: Die Idee ist gut. Ich bin ___, dass wir früher anfangen.
+
+Gerekçe: Bağlam yoktu: 'Ich bin dagegen, dass wir früher anfangen' da tamamen doğru; iki şık doğruydu. Anlamı belirleyen bağlam cümlesi eklendi.
+
+- Açıklama (TR)
+  - Eski: für/gegen etwas sein kalıbındaki edat für olduğu için dafür gerekir. Burada dafür, ardından gelen “dass wir früher anfangen” grubundaki olaya işaret eder; dass grubunu da- ifadesinden virgülle ayırırız. Doğru cevap: dafür
+  - Yeni: für/gegen etwas sein kalıbında fikri destekliyorsak für kullanılır. İlk cümle “Die Idee ist gut” olduğu için destek var: dafür. Burada dafür, ardından gelen “dass wir früher anfangen” grubundaki olaya işaret eder; dass grubunu da- ifadesinden virgülle ayırırız. Karşılaştır: Die Idee ist schlecht. Ich bin dagegen, … Doğru cevap: dafür
+- Cümle
+  - Eski: Ich bin ___, dass wir früher anfangen.
+  - Yeni: Die Idee ist gut. Ich bin ___, dass wir früher anfangen.
+
+#### `dass-saetze-7` › 9
+Cümle: Der Kurs ist uns wichtig. Wir sind ___, dass der Kurs gestrichen wird.
+
+Gerekçe: Bağlam yoktu: 'Wir sind dafür, dass der Kurs gestrichen wird' da doğru; iki şık doğruydu. Anlamı belirleyen bağlam cümlesi eklendi.
+
+- Açıklama (TR)
+  - Eski: für/gegen etwas sein kalıbındaki edat gegen olduğu için dagegen gerekir. Burada dagegen, ardından gelen “dass der Kurs gestrichen wird” grubundaki olaya işaret eder; dass grubunu da- ifadesinden virgülle ayırırız. Doğru cevap: dagegen
+  - Yeni: Kurs bizim için önemli (Der Kurs ist uns wichtig), bu yüzden kaldırılmasına karşıyız: gegen etwas sein → dagegen. Burada dagegen, ardından gelen “dass der Kurs gestrichen wird” grubundaki olaya işaret eder; dass grubunu da- ifadesinden virgülle ayırırız. Karşılaştır: Wir sind dafür, … (destekliyoruz). Doğru cevap: dagegen
+- Cümle
+  - Eski: Wir sind ___, dass der Kurs gestrichen wird.
+  - Yeni: Der Kurs ist uns wichtig. Wir sind ___, dass der Kurs gestrichen wird.
+
+#### `zu-gruppen-8` › 0
+Cümle: Du kommst nächste Woche. Ich freue mich ___, dich zu sehen.
+
+Gerekçe: Bağlam yoktu: 'Ich freue mich darüber, dich zu sehen' (şu an görüşürken) de doğru; darauf/darüber ikisi de mümkündü. Geleceği gösteren bağlam eklendi.
+
+- Açıklama (TR)
+  - Eski: sich freuen auf kalıbındaki edat auf olduğu için darauf gerekir. Burada darauf, ardından gelen “dich zu sehen” grubundaki olaya işaret eder; zu grubunu da- ifadesinden virgülle ayırırız. Doğru cevap: darauf
+  - Yeni: Görüşme gelecekte (Du kommst nächste Woche); gelecekteki bir şeye sevinmek sich freuen auf ile anlatılır → darauf. Burada darauf, ardından gelen “dich zu sehen” grubuna işaret eder; zu grubunu virgülle ayırırız. Karşılaştır: olmuş/şu anki bir şeye sevinmek sich freuen über → darüber. Doğru cevap: darauf
+- Cümle
+  - Eski: Ich freue mich ___, dich zu sehen.
+  - Yeni: Du kommst nächste Woche. Ich freue mich ___, dich zu sehen.
+
+#### `zu-gruppen-8` › 9
+Cümle: Wir rechnen ___, länger warten zu müssen.
+
+Gerekçe: Açıklama yanlış kalıp (warten auf … edat mit) diyordu; cümledeki kalıp rechnen mit.
+
+- Açıklama (TR)
+  - Eski: warten auf kalıbındaki edat mit olduğu için damit gerekir. Burada damit, ardından gelen “länger warten zu müssen” grubundaki olaya işaret eder; zu grubunu da- ifadesinden virgülle ayırırız. Doğru cevap: damit
+  - Yeni: rechnen mit kalıbındaki edat mit olduğu için damit gerekir. Burada damit, ardından gelen “länger warten zu müssen” grubundaki olaya işaret eder; zu grubunu da- ifadesinden virgülle ayırırız. mit ünsüzle başladığı için araya r girmez. Doğru cevap: damit
+
+#### `fehler-korrigieren-9` › 7
+Cümle: Worauf wartest du? (Bir kişi soruluyor.) → Worauf yerine: ___
+
+Gerekçe: TR açıklamada Almanca 'die Person' alıntısı vardı ('Burada die Person bir kişidir'); anlaşılır Türkçe yapıldı.
+
+- Açıklama (TR)
+  - Eski: Burada die Person bir kişidir; da-/wo- ile bir şey sorulmuyor veya temsil edilmiyor. auf bu kullanımda Akkusativ ister: kişi/soru zamirinin doğru biçimi wen, tam ifade Auf wen. Doğru cevap: Auf wen
+  - Yeni: Parantezde bir kişinin sorulduğu söyleniyor. wo- biçimleri (Worauf) yalnız şeyler için kullanılır; kişi sorulurken edat + soru zamiri gelir. auf burada Akkusativ ister: wen → Auf wen. Doğru cevap: Auf wen
+
+#### `fehler-korrigieren-9` › 8
+Cümle: Womit sprichst du? (Bir kişi soruluyor.) → Womit yerine: ___
+
+Gerekçe: TR açıklamada Almanca 'die Person' alıntısı vardı ('Burada die Person bir kişidir'); anlaşılır Türkçe yapıldı.
+
+- Açıklama (TR)
+  - Eski: Burada die Person bir kişidir; da-/wo- ile bir şey sorulmuyor veya temsil edilmiyor. mit bu kullanımda Dativ ister: kişi/soru zamirinin doğru biçimi wem, tam ifade Mit wem. Doğru cevap: Mit wem
+  - Yeni: Parantezde bir kişinin sorulduğu söyleniyor. wo- biçimleri (Womit) yalnız şeyler için kullanılır; kişi sorulurken edat + soru zamiri gelir. mit burada Dativ ister: wem → Mit wem. Doğru cevap: Mit wem
+
+#### `schreiben-mix-10` › 9
+Cümle: [Mit welchem Gegenstand] schreibst du?
+
+Gerekçe: Açıklama 'mit ünlüyle başladığında araya r girer' diyordu; mit ünsüzle başlar.
+
+- Açıklama (TR)
+  - Eski: schreiben mit kalıbının edatı mit. Burada bir kişi değil, Mit welchem Gegenstand soruluyor; bu yüzden wo- + mit → womit. mit ünlüyle başladığında araya r girer. Doğru cevap: Womit schreibst du?
+  - Yeni: schreiben mit kalıbının edatı mit. Burada bir kişi değil, bir şey (Mit welchem Gegenstand) soruluyor; bu yüzden wo- + mit → womit. mit ünsüzle başladığı için araya r girmez. Doğru cevap: Womit schreibst du?
+
+### `data/b1/relativsaetze.json`
+
+#### `grundlagen-wortstellung-1` › 8
+Cümle: Verbinde: „Der Zug fährt nach Hamburg. Der Zug steht auf Gleis 4.“
+
+Gerekçe: İki cümlede de özne tam isim (der Zug); hangisi Relativsatz yapılırsa yapılsın geçerli. 'Der Zug, der auf Gleis 4 steht, fährt nach Hamburg.' doğru olduğu hâlde reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `der zug der nach hamburg fährt steht auf gleis 4` / `der zug, der nach hamburg fährt, steht auf gleis 4` / `der zug der nach hamburg faehrt steht auf gleis 4`
+  - Yeni: `der zug der nach hamburg fährt steht auf gleis 4` / `der zug, der nach hamburg fährt, steht auf gleis 4` / `der zug der nach hamburg faehrt steht auf gleis 4` / `der zug, der auf gleis 4 steht, fährt nach hamburg`
+
+#### `grundlagen-wortstellung-1` › 9
+Cümle: Verbinde: „Das Buch ist ausverkauft. Ich wollte das Buch bestellen.“
+
+Gerekçe: İkinci cümlede de tam isim (das Buch) var; ilk cümleyi Relativsatz yapan varyantlar (Nominativ 'das', fiil sonda) dilbilgisel olarak doğru ama reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `das buch das ich bestellen wollte ist ausverkauft` / `das buch, das ich bestellen wollte, ist ausverkauft`
+  - Yeni: `das buch das ich bestellen wollte ist ausverkauft` / `das buch, das ich bestellen wollte, ist ausverkauft` / `das buch, das ausverkauft ist, wollte ich bestellen` / `ich wollte das buch bestellen, das ausverkauft ist`
+
+#### `kasus-mix-6` › 6
+Cümle: Die Teilnehmer, ___ die Prüfung bestanden haben, bekommen ein Zertifikat.
+
+Gerekçe: Açıklama fiil grubunu 'haben bestanden' diye yanlış sırayla alıntılıyordu; Relativsatz'ta fiil grubu 'bestanden haben' sırasıyla sondadır.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: die. Bezugswort “die Teilnehmer” olduğu için Relativpronomen çoğul biçimden gelir; fakat Kasus ana cümleden değil, Relativsatz içindeki görevden belirlenir. Burada Teilnehmer 'haben bestanden' fiil grubunun öznesidir. Bu nedenle Nominativ gerekir ve doğru biçim “die” olur. Diğer seçenekler (“denen”, “deren”) ya yanlış Kasus'u ya da yanlış cinsiyet/çoğul biçimini gösterir.
+  - Yeni: Doğru cevap: die. Bezugswort “die Teilnehmer” olduğu için Relativpronomen çoğul biçimden gelir; fakat Kasus ana cümleden değil, Relativsatz içindeki görevden belirlenir. Burada Teilnehmer 'bestanden haben' fiil grubunun öznesidir (sınavı onlar geçti; die Prüfung nesnedir). Bu nedenle Nominativ gerekir ve doğru biçim “die” olur. Diğer seçenekler (“denen”, “deren”) ya yanlış Kasus'u ya da yanlış cinsiyet/çoğul biçimini gösterir.
+
+#### `wo-12` › 8
+Cümle: Ergänze: Das ist die Bibliothek, ___ ich normalerweise lerne.
+
+Gerekçe: Boşluğa 'in der' (die Bibliothek, Wo? → in + Dativ) da tamamen doğru; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `wo`
+  - Yeni: `wo` / `in der`
+
+#### `wo-12` › 9
+Cümle: Ergänze: Der Laden, ___ ich immer einkaufe, hat heute geschlossen.
+
+Gerekçe: Boşluğa 'in dem' (der Laden, Wo? → in + Dativ) da tamamen doğru; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `wo`
+  - Yeni: `wo` / `in dem`
+
+#### `wohin-woher-13` › 8
+Cümle: Ergänze: Das ist der Markt, ___ wir die alten Bücher bringen.
+
+Gerekçe: 'etwas auf den Markt bringen' (Wohin? → auf + Akkusativ, der Markt) da doğru; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `wohin`
+  - Yeni: `wohin` / `auf den`
+
+#### `wohin-woher-13` › 9
+Cümle: Ergänze: Leipzig ist die Stadt, ___ unser Lehrer kommt.
+
+Gerekçe: 'aus der Stadt kommen' (aus + Dativ, die Stadt) da doğru; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `woher`
+  - Yeni: `woher` / `aus der`
+
+#### `saetze-verbinden-16` › 7
+Cümle: Verbinde: „Das Café ist geschlossen. Wir treffen uns dort immer.“
+
+Gerekçe: 'in dem' (Wo? → in + Dativ, das Café) wo'nun standart eşdeğeri; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `das café, wo wir uns immer treffen, ist geschlossen`
+  - Yeni: `das café, wo wir uns immer treffen, ist geschlossen` / `das café, in dem wir uns immer treffen, ist geschlossen`
+
+#### `saetze-verbinden-16` › 9
+Cümle: Verbinde: „Das ist die Stadt. Meine Mutter kommt aus dieser Stadt.“
+
+Gerekçe: Verilen cümle 'aus dieser Stadt' içeriyor; 'aus der' (aus + Dativ, feminin) en doğrudan ve standart birleştirme, ama reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `das ist die stadt, woher meine mutter kommt`
+  - Yeni: `das ist die stadt, woher meine mutter kommt` / `das ist die stadt, aus der meine mutter kommt`
+
+#### `master-18` › 9
+Cümle: Verbinde: „Das ist das Museum. Wir gehen morgen in das Museum.“
+
+Gerekçe: Yön bildiren yerlerde 'wohin' de Relativwort olarak doğru (Übung 13'te öğretiliyor); reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `das ist das museum in das wir morgen gehen` / `das ist das museum, in das wir morgen gehen`
+  - Yeni: `das ist das museum in das wir morgen gehen` / `das ist das museum, in das wir morgen gehen` / `das ist das museum, wohin wir morgen gehen`
+
+### `data/b1/satzstellung-b1.json`
+
+#### `schreiben-mix-10` › 7
+Cümle: Das Formular | muss | heute | ausgefüllt | werden.
+
+Gerekçe: Açıklama sağ parantezi yalnız 'werden' olarak gösteriyordu; sonda kalan grup 'ausgefüllt werden' (Partizip + mastar).
+
+- Açıklama (TR)
+  - Eski: “Das Formular” ilk öğedir; çekimli muss ikinci öğeye gelir. werden ise sağ parantezi kapatan fiil parçasıdır ve sonda kalır. Doğru cevap: Das Formular muss heute ausgefüllt werden.
+  - Yeni: “Das Formular” ilk öğedir; çekimli muss ikinci öğeye gelir. Sağ parantezi edilgen fiil grubu ausgefüllt werden kapatır: önce Partizip ausgefüllt, en sonda mastar werden. Doğru cevap: Das Formular muss heute ausgefüllt werden.
+
+#### `schreiben-mix-10` › 9
+Cümle: Ich gebe | es | ihr.
+
+Gerekçe: Açıklamadaki 'Özne ilk öğe değilse…' şablon kuyruğu bu soruyla ilgisizdi (özne zaten ilk öğe); sorunun asıl kuralı olan es + ihr zamir sırası açıklanmıyordu.
+
+- Açıklama (TR)
+  - Eski: “Ich” ilk öğedir; çekimli gebe ikinci öğeye gelir. Özne ilk öğe değilse fiilden sonraki alana yerleşir. Doğru cevap: Ich gebe es ihr.
+  - Yeni: “Ich” ilk öğedir; çekimli gebe ikinci öğeye gelir. Ardından iki vurgusuz kişi zamiri gelir: önce Akkusativ es (verilen şey), sonra Dativ ihr (alıcı). Karşılaştır: Ich gebe ihr das Buch (isim nesne → Dativ önce). Doğru cevap: Ich gebe es ihr.
 
 ### `data/b2/genitivpraepositionen.json`
 
@@ -11902,3 +12136,1180 @@ Gerekçe: dass'lı dolaylı anlatım (fiil sonda) da kesin doğru bir Konjunktiv
 - Kabul edilen cevaplar
   - Eski: `er sagt, es brenne`
   - Yeni: `er sagt, es brenne` / `er sagt, dass es brenne`
+
+### `data/b2/nominalisierung.json`
+
+#### `gross-klein-verben-1` › 1
+Cümle: Welcher Satz ist richtig?
+
+Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
+
+- Açıklama (TR)
+  - Eski: Das burada das biçimidir ve ardından gelen Schwimmen bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Schwimmen im See macht mir Spaß.
+  - Yeni: Doğru cevap: Das Schwimmen im See macht mir Spaß. Artikel das, fiili nötr bir isme çevirir: das Schwimmen (yüzme). İsim olduğu için büyük harfle yazılır; zu schwimmen ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Ich möchte im See schwimmen (fiil → küçük harf).
+
+#### `gross-klein-verben-1` › 2
+Cümle: Welcher Satz ist richtig?
+
+Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
+
+- Açıklama (TR)
+  - Eski: Das burada das biçimidir ve ardından gelen Fotografieren bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Fotografieren ist hier verboten.
+  - Yeni: Doğru cevap: Das Fotografieren ist hier verboten. Artikel das, fiili nötr bir isme çevirir: das Fotografieren (fotoğraf çekme). İsim olduğu için büyük harfle yazılır; zu fotografieren ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Hier darf man nicht fotografieren (fiil → küçük harf).
+
+#### `gross-klein-verben-1` › 6
+Cümle: Welcher Satz ist richtig?
+
+Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
+
+- Açıklama (TR)
+  - Eski: Das burada das biçimidir ve ardından gelen Warten bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Warten dauert heute sehr lange.
+  - Yeni: Doğru cevap: Das Warten dauert heute sehr lange. Artikel das, fiili nötr bir isme çevirir: das Warten (bekleme). İsim olduğu için büyük harfle yazılır; zu warten ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Wir müssen lange warten (fiil → küçük harf).
+
+#### `das-infinitiv-3` › 0
+Cümle: Welche Form passt? „Das ___ am Morgen hilft mir.“
+
+Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
+
+- Açıklama (TR)
+  - Eski: Das burada das biçimidir ve ardından gelen Laufen bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Laufen
+  - Yeni: Doğru cevap: Laufen. Artikel das, fiili nötr bir isme çevirir: das Laufen (koşma). İsim olduğu için büyük harfle yazılır; zu laufen ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Ich gehe morgens gern laufen (fiil → küçük harf).
+
+#### `das-infinitiv-3` › 2
+Cümle: Welche Form passt? „Das ___ fremder Gebäude ist verboten.“
+
+Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
+
+- Açıklama (TR)
+  - Eski: Das burada das biçimidir ve ardından gelen Betreten bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Betreten
+  - Yeni: Doğru cevap: Betreten. Artikel das, fiili nötr bir isme çevirir: das Betreten (girme). İsim olduğu için büyük harfle yazılır; zu betreten ise fiil biçimidir ve artikelle kullanılmaz. Fiilin nesnesi isimleşmede Genitiv olur: fremde Gebäude betreten → das Betreten fremder Gebäude. Karşılaştır: Man darf das Gebäude nicht betreten (fiil → küçük harf).
+
+#### `das-infinitiv-3` › 4
+Cümle: Welche Form passt? „Das ___ neuer Wörter braucht Zeit.“
+
+Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
+
+- Açıklama (TR)
+  - Eski: Das burada das biçimidir ve ardından gelen Lernen bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Lernen
+  - Yeni: Doğru cevap: Lernen. Artikel das, fiili nötr bir isme çevirir: das Lernen (öğrenme). İsim olduğu için büyük harfle yazılır; zu lernen ise fiil biçimidir ve artikelle kullanılmaz. Fiilin nesnesi isimleşmede Genitiv olur: neue Wörter lernen → das Lernen neuer Wörter. Karşılaştır: Ich muss neue Wörter lernen (fiil → küçük harf).
+
+#### `das-infinitiv-3` › 6
+Cümle: Welche Form passt? „Das ___ macht ihn nervös.“
+
+Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
+
+- Açıklama (TR)
+  - Eski: Das burada das biçimidir ve ardından gelen Warten bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Warten
+  - Yeni: Doğru cevap: Warten. Artikel das, fiili nötr bir isme çevirir: das Warten (bekleme). İsim olduğu için büyük harfle yazılır; zu warten ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Wir müssen lange warten (fiil → küçük harf).
+
+#### `das-infinitiv-3` › 8
+Cümle: Welche Form passt? „Das ___ vor Publikum fällt ihr schwer.“
+
+Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
+
+- Açıklama (TR)
+  - Eski: Das burada das biçimidir ve ardından gelen Sprechen bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Sprechen
+  - Yeni: Doğru cevap: Sprechen. Artikel das, fiili nötr bir isme çevirir: das Sprechen (konuşma). İsim olduğu için büyük harfle yazılır; zu sprechen ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Sie muss vor Publikum sprechen (fiil → küçük harf).
+
+#### `nominalisierte-infinitive-schreiben-4` › 3
+Cümle: Ergänze: „das ___ im Chor“ (singen)
+
+Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
+
+- Açıklama (TR)
+  - Eski: das burada das biçimidir ve ardından gelen Singen bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: das Singen im Chor
+  - Yeni: Doğru cevap: das Singen im Chor. Artikel das, fiili nötr bir isme çevirir: das Singen (şarkı söyleme). İsim olduğu için büyük harfle yazılır; zu singen ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Sie singt gern (fiil → küçük harf).
+
+#### `nominalisierte-infinitive-schreiben-4` › 4
+Cümle: Ergänze: „das ___ der Brücke“ (betreten)
+
+Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
+
+- Açıklama (TR)
+  - Eski: das burada das biçimidir ve ardından gelen Betreten bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: das Betreten der Brücke
+  - Yeni: Doğru cevap: das Betreten der Brücke. Artikel das, fiili nötr bir isme çevirir: das Betreten (girme). İsim olduğu için büyük harfle yazılır; zu betreten ise fiil biçimidir ve artikelle kullanılmaz. Fiilin nesnesi isimleşmede Genitiv olur: die Brücke betreten → das Betreten der Brücke. Karşılaştır: Man darf das Gebäude nicht betreten (fiil → küçük harf).
+
+#### `verb-nomen-wechsel-5` › 5
+Cümle: Formuliere nominal: „Beim Fahren muss ich mich konzentrieren.“
+
+Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
+
+- Açıklama (TR)
+  - Eski: Das burada das biçimidir ve ardından gelen Fahren bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Fahren erfordert meine Konzentration.
+  - Yeni: Doğru cevap: Das Fahren erfordert meine Konzentration. Artikel das, fiili nötr bir isme çevirir: das Fahren (araba sürme). İsim olduğu için büyük harfle yazılır; zu fahren ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Ich muss vorsichtig fahren (fiil → küçük harf).
+
+#### `verb-nomen-wechsel-5` › 7
+Cümle: Formuliere nominal: „Man darf die Brücke nicht betreten.“
+
+Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
+
+- Açıklama (TR)
+  - Eski: Das burada das biçimidir ve ardından gelen Betreten bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Betreten der Brücke ist verboten.
+  - Yeni: Doğru cevap: Das Betreten der Brücke ist verboten. Artikel das, fiili nötr bir isme çevirir: das Betreten (girme). İsim olduğu için büyük harfle yazılır; zu betreten ise fiil biçimidir ve artikelle kullanılmaz. Fiilin nesnesi isimleşmede Genitiv olur: die Brücke betreten → das Betreten der Brücke. Karşılaştır: Man darf das Gebäude nicht betreten (fiil → küçük harf).
+
+#### `verb-transformation-16` › 4
+Cümle: Formuliere nominal: „Man darf die Brücke nicht betreten.“
+
+Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
+
+- Açıklama (TR)
+  - Eski: Das burada das biçimidir ve ardından gelen Betreten bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Betreten der Brücke ist verboten.
+  - Yeni: Doğru cevap: Das Betreten der Brücke ist verboten. Artikel das, fiili nötr bir isme çevirir: das Betreten (girme). İsim olduğu için büyük harfle yazılır; zu betreten ise fiil biçimidir ve artikelle kullanılmaz. Fiilin nesnesi isimleşmede Genitiv olur: die Brücke betreten → das Betreten der Brücke. Karşılaştır: Man darf das Gebäude nicht betreten (fiil → küçük harf).
+
+#### `verb-transformation-16` › 9
+Cümle: Formuliere nominal: „Wir sprechen vor Publikum; das fällt uns schwer.“
+
+Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
+
+- Açıklama (TR)
+  - Eski: Das burada das biçimidir ve ardından gelen Sprechen bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Sprechen vor Publikum fällt uns schwer.
+  - Yeni: Doğru cevap: Das Sprechen vor Publikum fällt uns schwer. Artikel das, fiili nötr bir isme çevirir: das Sprechen (konuşma). İsim olduğu için büyük harfle yazılır; zu sprechen ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Sie muss vor Publikum sprechen (fiil → küçük harf).
+
+#### `fehlerkorrektur-17` › 1
+Cümle: Korrigiere: „Das singen macht ihr Spaß.“
+
+Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
+
+- Açıklama (TR)
+  - Eski: Das burada das biçimidir ve ardından gelen Singen bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Singen macht ihr Spaß.
+  - Yeni: Doğru cevap: Das Singen macht ihr Spaß. Artikel das, fiili nötr bir isme çevirir: das Singen (şarkı söyleme). İsim olduğu için büyük harfle yazılır; zu singen ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Sie singt gern (fiil → küçük harf).
+
+#### `b2-kontext-18` › 1
+Cümle: Ergänze: „Das ___ neuer Methoden kostet Zeit.“ (erlernen)
+
+Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
+
+- Açıklama (TR)
+  - Eski: Das burada das biçimidir ve ardından gelen Erlernen bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Erlernen neuer Methoden kostet Zeit.
+  - Yeni: Doğru cevap: Das Erlernen neuer Methoden kostet Zeit. Artikel das, fiili nötr bir isme çevirir: das Erlernen (öğrenme). İsim olduğu için büyük harfle yazılır; zu erlernen ise fiil biçimidir ve artikelle kullanılmaz. Fiilin nesnesi isimleşmede Genitiv olur: neue Methoden erlernen → das Erlernen neuer Methoden. Karşılaştır: Wir müssen neue Methoden erlernen (fiil → küçük harf).
+
+#### `b2-mix-19` › 4
+Cümle: Welche Form ist korrekt?
+
+Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı.
+
+- Açıklama (TR)
+  - Eski: Das burada das biçimidir ve ardından gelen Fotografieren bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Fotografieren ist hier verboten.
+  - Yeni: Doğru cevap: Das Fotografieren ist hier verboten. Artikel das, fiili nötr bir isme çevirir: das Fotografieren (fotoğraf çekme). İsim olduğu için büyük harfle yazılır; zu fotografieren ise fiil biçimidir ve artikelle kullanılmaz. Karşılaştır: Hier darf man nicht fotografieren (fiil → küçük harf).
+
+#### `master-20` › 4
+Cümle: Formuliere nominal: „Man darf diesen Bereich nicht betreten.“
+
+Gerekçe: Açıklama 'Das burada das biçimidir' diye anlamsız bir şablonla başlıyordu; tetikleyici (das artikeli fiili isme çevirir) ve karşılaştırma yazıldı. Geçerli ve eşdeğer bir varyant (kelime sırası / gern-gerne / -es Genitiv) reddediliyordu.
+
+- Açıklama (TR)
+  - Eski: Das burada das biçimidir ve ardından gelen Betreten bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Das Betreten dieses Bereichs ist verboten.
+  - Yeni: Doğru cevap: Das Betreten dieses Bereichs ist verboten. Artikel das, fiili nötr bir isme çevirir: das Betreten (girme). İsim olduğu için büyük harfle yazılır; zu betreten ise fiil biçimidir ve artikelle kullanılmaz. Fiilin nesnesi isimleşmede Genitiv olur: diesen Bereich betreten → das Betreten dieses Bereichs. Karşılaştır: Man darf das Gebäude nicht betreten (fiil → küçük harf).
+- Kabul edilen cevaplar
+  - Eski: `das betreten dieses bereichs ist verboten`
+  - Yeni: `das betreten dieses bereichs ist verboten` / `das betreten dieses bereiches ist verboten`
+
+#### `adjektiv-gross-klein-6` › 5
+Cümle: Welcher Satz ist richtig?
+
+Gerekçe: Açıklama renk adı Grün'ü 'eylem adı / isimleşmiş mastar' olarak tanımlıyordu (de/en'de de 'substantivierter Infinitiv'); Grün bir renk adıdır.
+
+- Açıklama (TR)
+  - Eski: das burada das biçimidir ve ardından gelen Grün bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Ich mag das Grün der Bäume.
+  - Yeni: Doğru cevap: Ich mag das Grün der Bäume. Burada Grün bir renk adıdır (isim): das Grün, ardından Genitiv der Bäume gelir. Renk isimleri büyük yazılır ve ek almaz. Karşılaştır: Die Bäume sind grün (yüklem sıfatı → küçük harf).
+- DE/EN açıklamaları da güncellendi.
+
+#### `farben-9` › 7
+Cümle: Ergänze: „Ich liebe das ___ des Frühlings.“ (grün)
+
+Gerekçe: Açıklama renk adı Grün'ü 'eylem adı / isimleşmiş mastar' olarak tanımlıyordu (de/en'de de 'substantivierter Infinitiv'); Grün bir renk adıdır.
+
+- Açıklama (TR)
+  - Eski: das burada das biçimidir ve ardından gelen Grün bir eylem adı olarak kullanılır. Fiilin mastarı isimleştiğinden büyük harfle yazılır. Cümlede çekimli fiil olarak kullanılan biçimle karıştırma. Doğru cevap: Grün
+  - Yeni: Doğru cevap: Grün. Artikel das ve ardından gelen Genitiv des Frühlings, Grün'ün burada bir renk adı (isim) olduğunu gösterir: das Grün. Renk isimleri büyük yazılır ve ek almaz. Karşılaştır: Die Blätter sind grün (yüklem sıfatı → küçük harf).
+- DE/EN açıklamaları da güncellendi.
+
+#### `praeposition-nominalisiert-2` › 1
+Cümle: Welche Form passt? „Vom vielen ___ bekomme ich Rückenschmerzen.“
+
+Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
+
+- Açıklama (TR)
+  - Eski: “Vom vielen Sitzen” yapısı vardır. Doğru cevap: Sitzen
+  - Yeni: Doğru cevap: Sitzen. vom = von dem; dem artikeli ve vielen sıfatı bir isim ister. Bu yüzden sitzen isimleşir ve büyük yazılır: vom vielen Sitzen (çok oturmaktan). Sıfat vielen küçük kalır. Karşılaştır: Ich sitze viel (fiil → küçük).
+
+#### `das-infinitiv-3` › 1
+Cümle: Welche Form passt? „Ich gehe morgens gern ___.“
+
+Gerekçe: İki şık doğruydu: 'Ich gehe morgens gern zum Laufen' de dilbilgisel olarak doğru bir cümle (gehen + zum + isimleşmiş fiil). Çeldirici yanlış 'zu laufen' ile değiştirildi ve açıklama somutlaştırıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: laufen. Burada fiil kullanımı vardır; isimleşme yoktur.
+  - Yeni: Doğru cevap: laufen. gehen + Infinitiv yapısında (laufen gehen = koşmaya gitmek) ikinci fiil yalın Infinitiv olarak kalır, zu almaz ve küçük yazılır. Karşılaştır: Das Laufen am Morgen hilft mir (das → isim, büyük harf).
+- Seçenekler
+  - Eski: `Laufen` / `zum Laufen` / `laufen`
+  - Yeni: `Laufen` / `zu laufen` / `laufen`
+
+#### `das-infinitiv-3` › 5
+Cümle: Welche Form passt? „Ich muss heute noch ___.“
+
+Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
+
+- Açıklama (TR)
+  - Eski: “ich muss ... lernen” küçük harfle verilir. Doğru cevap: lernen
+  - Yeni: Doğru cevap: lernen. Modal fiil muss, ikinci fiili yalın Infinitiv olarak cümle sonuna gönderir: Ich muss heute noch lernen. Bu bir fiildir, isim değildir; küçük yazılır. Karşılaştır: Das Lernen braucht Zeit (das → isim).
+
+#### `nominalisierte-infinitive-schreiben-4` › 2
+Cümle: Ergänze: „vom vielen ___“ (sitzen)
+
+Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
+
+- Açıklama (TR)
+  - Eski: aynı kalıp bulunur. Doğru cevap: vom vielen Sitzen
+  - Yeni: Doğru cevap: vom vielen Sitzen. vom = von dem; dem artikeli ve vielen sıfatı bir isim gerektirir. Bu yüzden sitzen isimleşir ve büyük yazılır: vom vielen Sitzen (çok oturmaktan). Sıfat vielen küçük kalır.
+
+#### `verb-nomen-wechsel-5` › 9
+Cümle: Formuliere nominal: „Er sitzt zu viel.“
+
+Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
+
+- Açıklama (TR)
+  - Eski: “Vom vielen Sitzen ...” modeli vardır. Doğru cevap: Vom vielen Sitzen bekommt er Beschwerden.
+  - Yeni: Doğru cevap: Vom vielen Sitzen bekommt er Beschwerden. er sitzt viel → vom vielen Sitzen: vom = von dem, viel sıfat olarak -en alır ve küçük kalır, Sitzen isimleşmiş fiil olarak büyük yazılır. von burada sebep bildirir: çok oturmaktan şikâyetleri oluyor.
+
+#### `adjektiv-gross-klein-6` › 7
+Cümle: Welcher Satz ist richtig?
+
+Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
+
+- Açıklama (TR)
+  - Eski: “Das Neue” biçimi bulunur. Doğru cevap: Das Neue macht vielen Angst.
+  - Yeni: Doğru cevap: Das Neue macht vielen Angst. das'tan sonra neu bir isim gibi kullanılıyor (yeni olan şey); arkasından nitelediği bir isim gelmiyor. Bu yüzden büyük yazılır ve belirli artikelden sonra -e alır: das Neue. Das Neu eksiz, das neue küçük harfli olduğu için yanlıştır.
+
+#### `das-adjektiv-8` › 7
+Cümle: Ergänze: „Das ___ daran war seine Reaktion.“ (überraschend)
+
+Gerekçe: Açıklama sadece cevabı tekrarlıyordu veya TR alanında İngilizce kelime vardı ("adjective"); kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Überraschende. das + nominalisierte adjective.
+  - Yeni: Doğru cevap: Überraschende. das'tan sonra überraschend bir isim gibi kullanılıyor (şaşırtıcı olan şey); arkasından nitelediği bir isim gelmiyor. Bu yüzden büyük yazılır ve belirli artikel das'tan sonra -e alır: das Überraschende.
+
+#### `das-adjektiv-8` › 8
+Cümle: Ergänze: „Das ___ bleibt oft unbemerkt.“ (positiv)
+
+Gerekçe: Açıklama sadece cevabı tekrarlıyordu veya TR alanında İngilizce kelime vardı ("adjective"); kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Positive. das Positive.
+  - Yeni: Doğru cevap: Positive. das'tan sonra positiv bir isim gibi kullanılıyor (olumlu olan şey); arkasından nitelediği bir isim gelmiyor. Bu yüzden büyük yazılır ve belirli artikel das'tan sonra -e alır: das Positive.
+
+#### `das-adjektiv-8` › 9
+Cümle: Ergänze: „Das ___ ist manchmal schwer zu akzeptieren.“ (unbekannt)
+
+Gerekçe: Açıklama sadece cevabı tekrarlıyordu veya TR alanında İngilizce kelime vardı ("adjective"); kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Unbekannte. das Unbekannte.
+  - Yeni: Doğru cevap: Unbekannte. das'tan sonra unbekannt bir isim gibi kullanılıyor (bilinmeyen şey); arkasından nitelediği bir isim gelmiyor. Bu yüzden büyük yazılır ve belirli artikel das'tan sonra -e alır: das Unbekannte.
+
+#### `master-20` › 5
+Cümle: Ergänze: „Das ___ an der Lösung ist ihre Einfachheit.“ (überzeugend)
+
+Gerekçe: Açıklama sadece cevabı tekrarlıyordu veya TR alanında İngilizce kelime vardı ("adjective"); kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Das Überzeugende an der Lösung ist ihre Einfachheit.. das + nominalisierte adjective -e.
+  - Yeni: Doğru cevap: Das Überzeugende an der Lösung ist ihre Einfachheit. das'tan sonra überzeugend bir isim gibi kullanılıyor (ikna edici olan şey); arkasından nitelediği bir isim gelmiyor. Bu yüzden büyük yazılır ve belirli artikel das'tan sonra -e alır: das Überzeugende.
+
+#### `b2-mix-19` › 7
+Cümle: Welche Form ist korrekt?
+
+Gerekçe: TR açıklamada İngilizce "adjective" kelimesi vardı; kural Türkçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Nichts Wichtiges wurde vergessen.. nichts + nominalisierte adjective -es.
+  - Yeni: Doğru cevap: Nichts Wichtiges wurde vergessen. nichts'ten sonra sıfat isim gibi kullanılır: büyük yazılır ve nötr güçlü çekimle -es alır: nichts Wichtiges. Wichtige (son eksik) ve wichtiges (küçük harf) yanlıştır. Karşılaştır: alles Wichtige (alles'ten sonra -e).
+
+#### `farben-9` › 5
+Cümle: Ergänze: „Das ___ des Himmels erinnert mich ans Meer.“ (blau)
+
+Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
+
+- Açıklama (TR)
+  - Eski: “das Blau” bulunur. Doğru cevap: Blau
+  - Yeni: Doğru cevap: Blau. Artikel das ve ardından gelen Genitiv des Himmels, Blau'nun burada bir renk adı (isim) olduğunu gösterir: das Blau. Renk isimleri büyük yazılır ve ek almaz. Karşılaştır: Der Himmel ist blau (yüklem sıfatı → küçük).
+
+#### `personen-nominativ-10` › 2
+Cümle: Ergänze: „Meine ___ arbeitet jetzt in Köln.“ (bekannt)
+
+Gerekçe: Açıklamada artikel boş kalmıştı ("Sorudaki  ve Nominativ"); tetikleyici Meine yazıldı.
+
+- Açıklama (TR)
+  - Eski: Bekannte burada bir kişiyi veya insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. Sorudaki  ve Nominativ görevi sıfat çekimindeki sonu belirler. İsimleşme, sıfatın çekim ekini kaldırmaz. Doğru cevap: Bekannte
+  - Yeni: Doğru cevap: Bekannte. Bekannte burada bir kişiyi (kadın tanıdık) adlandırıyor; bu yüzden büyük harfle yazılır. Cümlenin öznesi olduğu için Nominativ'tir; feminin meine'den sonra son -e olur: meine Bekannte. Karşılaştır: mein Bekannter (erkek tanıdık).
+
+#### `personen-nominativ-10` › 5
+Cümle: Ergänze: „Der ___ fragt nach dem Weg.“ (reisend)
+
+Gerekçe: Açıklama hâli yanlış veriyordu (özne Nominativ iken "Dativ" yazıyordu).
+
+- Açıklama (TR)
+  - Eski: Reisende burada bir kişiyi veya insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. Sorudaki Der ve Dativ görevi sıfat çekimindeki sonu belirler. İsimleşme, sıfatın çekim ekini kaldırmaz. Doğru cevap: Reisende
+  - Yeni: Doğru cevap: Reisende. Reisende (yolcu) bir kişiyi adlandırıyor; bu yüzden büyük harfle yazılır. Der Reisende fiil fragt'ın öznesidir (Nominativ); maskulin der'den sonra son -e olur. Karşılaştır: ein Reisender.
+
+#### `personen-nominativ-10` › 6
+Cümle: Ergänze: „Eine ___ spricht mit dem Arzt.“ (angestellt)
+
+Gerekçe: Açıklama hâli yanlış veriyordu (özne Nominativ iken "Dativ" yazıyordu).
+
+- Açıklama (TR)
+  - Eski: Angestellte burada bir kişiyi veya insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. Sorudaki Eine ve Dativ görevi sıfat çekimindeki sonu belirler. İsimleşme, sıfatın çekim ekini kaldırmaz. Doğru cevap: Angestellte
+  - Yeni: Doğru cevap: Angestellte. Angestellte (çalışan) bir kişiyi adlandırıyor; bu yüzden büyük harfle yazılır. Eine Angestellte fiil spricht'in öznesidir (Nominativ); feminin eine'den sonra son -e olur. mit dem Arzt'taki Dativ bu kelimeyi etkilemez. Karşılaştır: ein Angestellter (erkek).
+
+#### `personen-nominativ-10` › 8
+Cümle: Ergänze: „Ein ___ hilft uns.“ (deutsch)
+
+Gerekçe: Açıklama hâli yanlış veriyordu (özne Nominativ iken "Dativ" yazıyordu).
+
+- Açıklama (TR)
+  - Eski: Deutscher burada bir kişiyi veya insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. Sorudaki Ein ve Dativ görevi sıfat çekimindeki sonu belirler. İsimleşme, sıfatın çekim ekini kaldırmaz. Doğru cevap: Deutscher
+  - Yeni: Doğru cevap: Deutscher. Deutscher bir kişiyi adlandırıyor; bu yüzden büyük harfle yazılır. Ein Deutscher fiil hilft'in öznesidir (Nominativ); maskulin ein sonu göstermediği için sıfat -er alır. uns ise nesnedir. Karşılaştır: der Deutsche.
+
+#### `gruppen-plural-12` › 4
+Cümle: Ergänze: „Viele ___ warten vor dem Gebäude.“ (reisend)
+
+Gerekçe: Açıklama tetikleyiciyi "dem ve Dativ" olarak veriyordu; boşluktaki kelime viele ile kullanılan Nominativ özne.
+
+- Açıklama (TR)
+  - Eski: Reisende burada bir kişiyi veya insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. Sorudaki dem ve Dativ görevi sıfat çekimindeki sonu belirler. İsimleşme, sıfatın çekim ekini kaldırmaz. Doğru cevap: Reisende
+  - Yeni: Doğru cevap: Reisende. Reisende bir insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. Viele Reisende cümlenin öznesidir (Nominativ çoğul). Belirli artikel olmadığı için (viele) sıfat güçlü çekimle -e alır. vor dem Gebäude'deki Dativ bu kelimeyi etkilemez. Karşılaştır: die Reisenden.
+
+#### `gruppen-plural-12` › 7
+Cümle: Ergänze: „Einige ___ protestieren.“ (unzufrieden)
+
+Gerekçe: Açıklamada tetikleyici boş kalmıştı ("Sorudaki  ve"); einige yazıldı.
+
+- Açıklama (TR)
+  - Eski: Unzufriedene burada bir kişiyi veya insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. Sorudaki  ve Nominativ görevi sıfat çekimindeki sonu belirler. İsimleşme, sıfatın çekim ekini kaldırmaz. Doğru cevap: Unzufriedene
+  - Yeni: Doğru cevap: Unzufriedene. Unzufriedene (memnun olmayanlar) bir insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. Einige Unzufriedene özne (Nominativ çoğul); einige'den sonra sıfat güçlü çekimle -e alır. Karşılaştır: die Unzufriedenen.
+
+#### `gruppen-plural-12` › 8
+Cümle: Ergänze: „Wir befragen mehrere ___.“ (fremd)
+
+Gerekçe: Açıklamada tetikleyici boş kalmıştı ("Sorudaki  ve"); mehrere ve befragen + Akkusativ yazıldı.
+
+- Açıklama (TR)
+  - Eski: Fremde burada bir kişiyi veya insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. Sorudaki  ve Akkusativ görevi sıfat çekimindeki sonu belirler. İsimleşme, sıfatın çekim ekini kaldırmaz. Doğru cevap: Fremde
+  - Yeni: Doğru cevap: Fremde. Fremde (yabancılar) bir insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. befragen Akkusativ nesne ister; mehrere'den sonra çoğulda sıfat güçlü çekimle -e alır: mehrere Fremde. Karşılaştır: die Fremden.
+
+#### `gruppen-plural-12` › 9
+Cümle: Ergänze: „Die ___ besuchen heute die ___.“ (jung/krank)
+
+Gerekçe: Açıklama iki boşluğu da Nominativ sayıyordu; ikinci boşluk besuchen fiilinin Akkusativ nesnesi.
+
+- Açıklama (TR)
+  - Eski: Jungen und Kranken burada bir kişiyi veya insan grubunu adlandırıyor; bu yüzden büyük harfle yazılır. Sorudaki Die ve Nominativ görevi sıfat çekimindeki sonu belirler. İsimleşme, sıfatın çekim ekini kaldırmaz. Doğru cevap: Jungen und Kranken
+  - Yeni: Doğru cevap: Jungen und Kranken. İkisi de insan gruplarını adlandırıyor; bu yüzden büyük harfle yazılır. Die Jungen özne (Nominativ çoğul), die Kranken besuchen'in nesnesi (Akkusativ çoğul). Çoğul belirli artikel die'den sonra her iki hâlde de son -en olur.
+
+#### `adjektiv-transformation-15` › 3
+Cümle: Formuliere nominal: „Das ist neu.“ → „... fasziniert mich.“
+
+Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Das Neue fasziniert mich.. Kaynağın “Das Neue” örneği.
+  - Yeni: Doğru cevap: Das Neue fasziniert mich. Das ist neu cümlesindeki sıfat, das ile isim olur: das Neue (yeni olan şey). Arkasından isim gelmediği için büyük yazılır ve belirli artikelden sonra -e alır.
+
+#### `adjektiv-transformation-15` › 5
+Cümle: Formuliere nominal: „Er ist arbeitslos.“ → „... sucht Arbeit.“
+
+Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
+
+- Açıklama (TR)
+  - Eski: der Arbeitslose. Doğru cevap: Der Arbeitslose sucht Arbeit.
+  - Yeni: Doğru cevap: Der Arbeitslose sucht Arbeit. Er ist arbeitslos → der Arbeitslose (işsiz kişi). Kişi adı olduğu için büyük yazılır; maskulin Nominativ der'den sonra sıfat sonu -e olur. Karşılaştır: ein Arbeitsloser.
+
+#### `adjektiv-transformation-15` › 6
+Cümle: Formuliere nominal: „Sie ist bekannt.“ → „Meine ... hat geheiratet.“
+
+Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
+
+- Açıklama (TR)
+  - Eski: Meine Bekannte. Doğru cevap: Meine Bekannte hat geheiratet.
+  - Yeni: Doğru cevap: Meine Bekannte hat geheiratet. Sie ist bekannt → meine Bekannte (kadın tanıdık). Kişi adı olduğu için büyük yazılır; feminin Nominativ meine'den sonra son -e olur. Karşılaştır: mein Bekannter (erkek).
+
+#### `adjektiv-transformation-15` › 7
+Cümle: Formuliere nominal: „Er ist fremd.“ → „Ein ... hat geklopft.“
+
+Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
+
+- Açıklama (TR)
+  - Eski: Ein Fremder. Doğru cevap: Ein Fremder hat geklopft.
+  - Yeni: Doğru cevap: Ein Fremder hat geklopft. Er ist fremd → ein Fremder (yabancı biri). Kişi adı olduğu için büyük yazılır; maskulin Nominativ ein sonu göstermediği için sıfat -er alır. Karşılaştır: der Fremde.
+
+#### `adjektiv-transformation-15` › 8
+Cümle: Formuliere nominal: „Sie sind deutsch.“ → „Die ... sind pünktlich.“
+
+Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
+
+- Açıklama (TR)
+  - Eski: Die Deutschen. Doğru cevap: Die Deutschen sind pünktlich.
+  - Yeni: Doğru cevap: Die Deutschen sind pünktlich. Sie sind deutsch → die Deutschen (Almanlar). Grup adı olduğu için büyük yazılır; çoğul belirli artikel die'den sonra son -en olur. Karşılaştır: Deutsche (artikelsiz çoğul).
+
+#### `verb-transformation-16` › 1
+Cümle: Formuliere nominal: „Er sitzt sehr viel und wird davon müde.“
+
+Gerekçe: Açıklama gerekçesizdi ("... yapısı vardır / bulunur"); kural ve tetikleyici yazıldı.
+
+- Açıklama (TR)
+  - Eski: “Vom vielen Sitzen ...” modeli vardır. Doğru cevap: Vom vielen Sitzen wird er müde.
+  - Yeni: Doğru cevap: Vom vielen Sitzen wird er müde. er sitzt viel → vom vielen Sitzen: vom = von dem, viel sıfat olarak -en alır ve küçük kalır, Sitzen isimleşmiş fiil olarak büyük yazılır. von burada sebep bildirir (çok oturmaktan).
+- Kabul edilen cevaplar
+  - Eski: `vom vielen sitzen wird er muede` / `vom vielen sitzen wird er müde`
+  - Yeni: `vom vielen sitzen wird er muede` / `vom vielen sitzen wird er müde` / `er wird vom vielen sitzen müde`
+
+#### `verb-transformation-16` › 3
+Cümle: Formuliere nominal: „Sie singt im Chor und hat viel Spaß.“
+
+Gerekçe: Açıklama 'viel sonrasında sıfat isimleşiyor, bu yüzden Spaß büyük yazılır' diyordu; Spaß zaten normal bir isimdir. Asıl tetikleyici das Singen.
+
+- Açıklama (TR)
+  - Eski: Burada viel sonrasında sıfat bir ismin önünde durmuyor, ismin görevini üstleniyor. Bu yüzden Spaß büyük harfle yazılır. Küçük harfli sıfat biçimi bu isimleşmeyi göstermez. Doğru cevap: Das Singen im Chor macht ihr viel Spaß.
+  - Yeni: Doğru cevap: Das Singen im Chor macht ihr viel Spaß. sie singt → das Singen: artikel das fiili nötr isme çevirir, bu yüzden Singen büyük yazılır ve cümlenin öznesi olur (macht). Spaß zaten bir isimdir; viel onu niteler.
+
+#### `verb-transformation-16` › 0
+Cümle: Formuliere nominal: „Ich fahre und muss mich konzentrieren.“
+
+Gerekçe: Geçerli ve eşdeğer bir varyant (kelime sırası / gern-gerne / -es Genitiv) reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `beim fahren muss ich mich konzentrieren`
+  - Yeni: `beim fahren muss ich mich konzentrieren` / `ich muss mich beim fahren konzentrieren`
+
+#### `verb-transformation-16` › 5
+Cümle: Formuliere nominal: „Ich lerne und höre dabei Musik.“
+
+Gerekçe: Geçerli ve eşdeğer bir varyant (kelime sırası / gern-gerne / -es Genitiv) reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `beim lernen hoere ich musik` / `beim lernen höre ich musik`
+  - Yeni: `beim lernen hoere ich musik` / `beim lernen höre ich musik` / `ich höre beim lernen musik`
+
+#### `verb-transformation-16` › 7
+Cümle: Formuliere nominal: „Er liest viel und entspannt sich dabei.“
+
+Gerekçe: Geçerli ve eşdeğer bir varyant (kelime sırası / gern-gerne / -es Genitiv) reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `beim lesen entspannt er sich`
+  - Yeni: `beim lesen entspannt er sich` / `er entspannt sich beim lesen`
+
+#### `verb-nomen-wechsel-5` › 6
+Cümle: Formuliere mit Verb: „Das Rauchen ist hier nicht erlaubt.“
+
+Gerekçe: Geçerli ve eşdeğer bir varyant (kelime sırası / gern-gerne / -es Genitiv) reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `man darf hier nicht rauchen`
+  - Yeni: `man darf hier nicht rauchen` / `hier darf man nicht rauchen`
+
+#### `verb-nomen-wechsel-5` › 8
+Cümle: Formuliere mit Verb: „Das Singen macht ihr Spaß.“
+
+Gerekçe: Geçerli ve eşdeğer bir varyant (kelime sırası / gern-gerne / -es Genitiv) reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `sie singt gern`
+  - Yeni: `sie singt gern` / `sie singt gerne`
+
+#### `verb-nomen-wechsel-5` › 2
+Cümle: Formuliere mit Infinitiv: „Hör mit dem Weinen auf.“
+
+Gerekçe: Bare zu-Infinitiv (aufhören + zu weinen, ek öğe yok) virgülsüz de yazılabilir; virgülsüz cevap reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `hoer auf, zu weinen` / `hör auf, zu weinen`
+  - Yeni: `hoer auf, zu weinen` / `hör auf, zu weinen` / `hör auf zu weinen`
+
+#### `verb-nomen-wechsel-5` › 4
+Cümle: Formuliere mit Infinitiv: „Zum Spielen kommt sie später vorbei.“
+
+Gerekçe: Infinitiv grubu cümle başına da alınabilir; eşdeğer kelime sırası reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `sie kommt spaeter vorbei, um zu spielen` / `sie kommt später vorbei, um zu spielen`
+  - Yeni: `sie kommt spaeter vorbei, um zu spielen` / `sie kommt später vorbei, um zu spielen` / `um zu spielen, kommt sie später vorbei`
+
+#### `b2-kontext-18` › 6
+Cümle: Ergänze: „Sie sucht nach etwas ___.“ (passend)
+
+Gerekçe: Açıklama Dativ sonunu (-em) açıklamıyordu; tetikleyici nach + Dativ yazıldı.
+
+- Açıklama (TR)
+  - Eski: Burada etwas sonrasında sıfat bir ismin önünde durmuyor, ismin görevini üstleniyor. Bu yüzden Passendem büyük harfle yazılır. Küçük harfli sıfat biçimi bu isimleşmeyi göstermez. Doğru cevap: Sie sucht nach etwas Passendem.
+  - Yeni: Doğru cevap: Sie sucht nach etwas Passendem. etwas'tan sonra sıfat isim gibi kullanılır ve büyük yazılır. nach edatı Dativ ister; artikel olmadığı için sıfat nötr Dativ güçlü sonunu alır: -em → etwas Passendem. Karşılaştır: Ich suche etwas Passendes (Akkusativ → -es).
+
+#### `b2-kontext-18` › 7
+Cümle: Ergänze: „Wir danken den ___.“ (beteiligt)
+
+Gerekçe: İpucunda İngilizce metin vardı ve cevabın kendisi (beteiligten) veriliyordu; ipucu sıfat kökü (beteiligt) olarak düzeltildi.
+
+- Cümle
+  - Eski: Ergänze: „Wir danken den ___.“ (beteiligten, adjective stem beteiligt)
+  - Yeni: Ergänze: „Wir danken den ___.“ (beteiligt)
+- Açıklama (TR)
+  - Eski: Doğru cevap: Wir danken den Beteiligten.. den + Dativ çoğul nominalisierte sıfat -en.
+  - Yeni: Doğru cevap: Wir danken den Beteiligten. danken Dativ ister; çoğul Dativ belirli artikel den'den sonra isimleşmiş sıfat -en alır ve kişi adı olduğu için büyük yazılır: den Beteiligten (katılanlar/ilgililer).
+
+#### `master-20` › 1
+Cümle: Ergänze: „Wir haben etwas ___ und nichts ___ erfahren.“ (positiv/neu)
+
+Gerekçe: Açıklama yalnızca ilk boşluğu (etwas Positives) açıklıyordu; nichts Neues eklendi.
+
+- Açıklama (TR)
+  - Eski: Burada etwas sonrasında sıfat bir ismin önünde durmuyor, ismin görevini üstleniyor. Bu yüzden Positives büyük harfle yazılır ve bu yapıdaki nötr çekim -es ile görünür. Küçük harfli sıfat biçimi bu isimleşmeyi göstermez. Doğru cevap: etwas Positives und nichts Neues
+  - Yeni: Doğru cevap: etwas Positives und nichts Neues. etwas ve nichts'ten sonra sıfat isim gibi kullanılır; arkasından isim gelmediği için büyük yazılır ve nötr güçlü çekimle -es alır: etwas Positives, nichts Neues.
+
+#### `master-20` › 3
+Cümle: Ergänze: „Mit einem ___ und zwei ___ wurde gesprochen.“ (verantwortlich/beteiligt)
+
+Gerekçe: Açıklama ikinci boşluk için belirsizdi ("uygun sonla"); Dativ çoğul -en kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: mit einem Verantwortlichen und zwei Beteiligten. Dativ tekil maskulin -en; sayı sonrası çoğul kişi adı uygun sonla kullanılır.
+  - Yeni: Doğru cevap: mit einem Verantwortlichen und zwei Beteiligten. mit Dativ ister. einem'den sonra tekil maskulin Dativ son -en: einem Verantwortlichen. zwei çekim göstermez; Dativ çoğulda sıfat sonu yine -en olur: zwei Beteiligten. Kişi adları olduğu için ikisi de büyük yazılır.
+
+#### `master-20` › 6
+Cümle: Korrigiere: „Beim analysieren haben die Verantwortliche nichts neues entdeckt.“
+
+Gerekçe: Açıklama üç hatadan yalnızca birini (nichts Neues) açıklıyordu.
+
+- Açıklama (TR)
+  - Eski: Burada nichts sonrasında sıfat bir ismin önünde durmuyor, ismin görevini üstleniyor. Bu yüzden Neues büyük harfle yazılır ve bu yapıdaki nötr çekim -es ile görünür. Küçük harfli sıfat biçimi bu isimleşmeyi göstermez. Doğru cevap: Beim Analysieren haben die Verantwortlichen nichts Neues entdeckt.
+  - Yeni: Doğru cevap: Beim Analysieren haben die Verantwortlichen nichts Neues entdeckt. Üç düzeltme var: beim = bei dem, ardından gelen fiil isimleşir → Analysieren büyük; die Verantwortlichen özne (Nominativ çoğul), belirli artikel die'den sonra -en; nichts'ten sonra isimleşen sıfat büyük yazılır ve -es alır → nichts Neues.
+
+#### `master-20` › 7
+Cümle: Ergänze: „Ich wünsche allen ___ alles ___.“ (beteiligt/gut)
+
+Gerekçe: Açıklama yalnızca alles Gute kısmını açıklıyordu; allen Beteiligten eklendi.
+
+- Açıklama (TR)
+  - Eski: Burada alles sonrasında sıfat bir ismin önünde durmuyor, ismin görevini üstleniyor. Bu yüzden Gute büyük harfle yazılır ve bu yapıdaki nötr çekim -e ile görünür. Küçük harfli sıfat biçimi bu isimleşmeyi göstermez. Doğru cevap: allen Beteiligten alles Gute
+  - Yeni: Doğru cevap: allen Beteiligten alles Gute. wünschen kime sorusunda Dativ ister: allen Beteiligten (Dativ çoğul, allen'den sonra -en, kişi adı → büyük). alles'ten sonra isimleşen sıfat büyük yazılır ve -e alır: alles Gute.
+
+### `data/b2/partizip-i.json`
+
+#### `bildung-erkennen-1` › 0
+Cümle: Welche Form ist das richtige Partizip I von „schwimmen“?
+
+Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: schwimmend. Partizip I wird aus dem Infinitiv + d gebildet: schwimmen + d → schwimmend.
+  - Yeni: Doğru cevap: schwimmend. Partizip I, Infinitiv'e -d eklenerek yapılır: schwimmen + d → schwimmend. geschwommen Partizip II'dir; schwimmernd diye bir biçim yoktur.
+
+#### `bildung-erkennen-1` › 1
+Cümle: Welche Form ist das richtige Partizip I von „spielen“?
+
+Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: spielend. spielen + d ergibt spielend; gespielt ist Partizip II.
+  - Yeni: Doğru cevap: spielend. Partizip I = Infinitiv + d: spielen + d → spielend. gespielt Partizip II'dir; spielernd diye bir biçim yoktur.
+
+#### `bildung-erkennen-1` › 2
+Cümle: Welche Form ist das richtige Partizip I von „lernen“?
+
+Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: lernend. Der Infinitiv lernen erhält ein -d: lernend.
+  - Yeni: Doğru cevap: lernend. Infinitiv lernen'e -d eklenir: lernen + d → lernend. gelernt Partizip II'dir; lernernd diye bir biçim yoktur.
+
+#### `bildung-erkennen-1` › 3
+Cümle: Welche Form ist das richtige Partizip I von „fliegen“?
+
+Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: fliegend. fliegen + d → fliegend; geflogen gehört zum Partizip II.
+  - Yeni: Doğru cevap: fliegend. Partizip I = Infinitiv + d: fliegen + d → fliegend. geflogen Partizip II'dir; fliegernd diye bir biçim yoktur.
+
+#### `erweiterte-gruppen-4` › 3
+Cümle: Forme um: „Menschen, die Sport treiben“
+
+Gerekçe: Açıklama "Kaynakta ... modeli bulunur" diye boş gerekçe veriyordu; ayrıca Duden'e göre bitişik yazım sporttreibend de doğrudur ve reddediliyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Sport treibende Menschen. Kaynakta 'Sport treibende Menschen' modeli bulunur; treiben → treibend.
+  - Yeni: Doğru cevap: Sport treibende Menschen. Relativsatz'daki nesne (Sport) Partizip I'in önüne geçer: treiben → treibend. Artikelsiz çoğul Nominativ'de sıfat sonu -e olur: Sport treibende Menschen (bitişik sporttreibende de yazılabilir).
+- Kabul edilen cevaplar
+  - Eski: `sport treibende menschen`
+  - Yeni: `sport treibende menschen` / `sporttreibende menschen`
+
+#### `erweiterte-attribute-12` › 3
+Cümle: Schreibe als Partizip-I-Gruppe: „Menschen, die regelmäßig Sport treiben“
+
+Gerekçe: Duden'e göre bitişik yazım (sporttreibend) da doğrudur; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `regelmaessig sport treibende menschen` / `regelmäßig sport treibende menschen`
+  - Yeni: `regelmaessig sport treibende menschen` / `regelmäßig sport treibende menschen` / `regelmäßig sporttreibende menschen`
+
+#### `erweiterte-attribute-12` › 6
+Cümle: Schreibe als Partizip-I-Gruppe: „Menschen, die allein in Großstädten leben“
+
+Gerekçe: TR açıklamada İngilizce kelime ("alone") vardı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: allein in Großstädten lebende Menschen. alone/yer bilgisi Partizip-I grubuna dahil olur.
+  - Yeni: Doğru cevap: allein in Großstädten lebende Menschen. Relativsatz'daki tüm tamamlayıcılar (allein, in Großstädten) Partizip I'in önüne aynı sırayla geçer: leben → lebend. Artikelsiz çoğulda sıfat sonu -e olur.
+
+#### `akkusativ-7` › 5
+Cümle: Ergänze: „Wir besuchen eine ___ Frau.“ (allein leben)
+
+Gerekçe: Duden'e göre "allein lebend" ayrı da "alleinlebend" bitişik de yazılabilir; ayrı yazılmış doğru cevap reddediliyordu. Açıklamadaki uydurma Infinitiv "alleinleben" düzeltildi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: alleinlebende. eine + feminin Akkusativ → -e; alleinleben → alleinlebend.
+  - Yeni: Doğru cevap: alleinlebende. allein leben → alleinlebend (ayrı da yazılabilir: allein lebend). Wir besuchen + Akkusativ; feminin eine'den sonra son -e olur: eine alleinlebende Frau.
+- Kabul edilen cevaplar
+  - Eski: `alleinlebende`
+  - Yeni: `alleinlebende` / `allein lebende`
+
+#### `genitiv-9` › 8
+Cümle: Ergänze: „Die Bedürfnisse ___ Personen unterscheiden sich.“ (allein leben)
+
+Gerekçe: Duden'e göre "allein lebend" ayrı da "alleinlebend" bitişik de yazılabilir; ayrı yazılmış doğru cevap reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `alleinlebender`
+  - Yeni: `alleinlebender` / `allein lebender`
+
+#### `deklinationsfehler-17` › 4
+Cümle: Korrigiere: „Die Zahl alleinlebenden Menschen steigt.“
+
+Gerekçe: Duden'e göre "allein lebend" ayrı da "alleinlebend" bitişik de yazılabilir; ayrı yazılmış doğru cevap reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `die zahl alleinlebender menschen steigt`
+  - Yeni: `die zahl alleinlebender menschen steigt` / `die zahl allein lebender menschen steigt`
+
+#### `master-20` › 8
+Cümle: Forme als Partizip-I-Gruppe: „Personen, die allein leben und regelmäßig von zu Hause arbeiten“
+
+Gerekçe: Duden'e göre "allein lebend" ayrı da "alleinlebend" bitişik de yazılabilir; ayrı yazılmış doğru cevap reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `allein lebende und regelmaessig von zu hause arbeitende personen` / `allein lebende und regelmäßig von zu hause arbeitende personen`
+  - Yeni: `allein lebende und regelmaessig von zu hause arbeitende personen` / `allein lebende und regelmäßig von zu hause arbeitende personen` / `alleinlebende und regelmäßig von zu hause arbeitende personen`
+
+#### `saetze-verbinden-15` › 4
+Cümle: Verbinde: „Viele Menschen arbeiten nachts. Sie brauchen am Tag Ruhe.“
+
+Gerekçe: Girdideki "viele" korunduğunda da cevap doğrudur (Viele nachts arbeitende Menschen ...); reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `nachts arbeitende menschen brauchen am tag ruhe`
+  - Yeni: `nachts arbeitende menschen brauchen am tag ruhe` / `viele nachts arbeitende menschen brauchen am tag ruhe`
+
+#### `mix-19` › 1
+Cümle: Welche Form ist korrekt?
+
+Gerekçe: İki şık doğruydu: "Ein schnell gewachsenes Unternehmen" (sein ile çekimlenen wachsen'in Partizip II'si sıfat olarak) de dilbilgisel olarak doğru. Çeldirici yanlış sonlu bir biçimle değiştirildi.
+
+- Seçenekler
+  - Eski: `Ein schnell gewachsenes Unternehmen braucht Kapital.` / `Ein schnell wachsendes Unternehmen braucht Kapital.` / `Ein schnell wachsender Unternehmen braucht Kapital.`
+  - Yeni: `Ein schnell wachsende Unternehmen braucht Kapital.` / `Ein schnell wachsendes Unternehmen braucht Kapital.` / `Ein schnell wachsender Unternehmen braucht Kapital.`
+- Açıklama (TR)
+  - Eski: Doğru cevap: Ein schnell wachsendes Unternehmen braucht Kapital.. ein + neutrum Nominativ → -es; devam eden büyüme → wachsend.
+  - Yeni: Doğru cevap: Ein schnell wachsendes Unternehmen braucht Kapital. Unternehmen nötrdür ve öznedir (Nominativ). ein sonu göstermediği için sıfat nötr işareti -es alır: ein wachsendes Unternehmen. Partizip I (wachsend) büyümenin hâlâ sürdüğünü anlatır.
+
+#### `mix-19` › 8
+Cümle: Welche Form ist korrekt?
+
+Gerekçe: İki şık doğruydu: "Die ständig gestiegenen Preise" (sein ile çekimlenen steigen'in Partizip II'si) de dilbilgisel olarak doğru. Çeldirici yanlış sonlu bir biçimle değiştirildi; TR'deki İngilizce "article" düzeltildi.
+
+- Seçenekler
+  - Eski: `Die ständig steigenden Preise sorgen für Kritik.` / `Die ständig steigende Preise sorgen für Kritik.` / `Die ständig gestiegenen Preise sorgen für Kritik.`
+  - Yeni: `Die ständig steigenden Preise sorgen für Kritik.` / `Die ständig steigende Preise sorgen für Kritik.` / `Die ständig steigender Preise sorgen für Kritik.`
+- Açıklama (TR)
+  - Eski: Doğru cevap: Die ständig steigenden Preise sorgen für Kritik.. Belirli article plural → -en; devam eden süreç Partizip I ile anlatılır.
+  - Yeni: Doğru cevap: Die ständig steigenden Preise sorgen für Kritik. Preise çoğuldur ve öznedir; çoğul belirli artikel die'den sonra sıfat sonu -en olur. Partizip I (steigend) sürecin devam ettiğini anlatır.
+
+### `data/b2/partizip-ii.json`
+
+#### `erkennen-1` › 0
+Cümle: Welches Wort ist das Partizip II von „schreiben“?
+
+Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: geschrieben. schreiben ist unregelmäßig: geschrieben.
+  - Yeni: Doğru cevap: geschrieben. schreiben güçlü (düzensiz) bir fiildir: ge- + değişen kök + -en → geschrieben. schreibend Partizip I'dir; geschreibt diye bir biçim yoktur.
+
+#### `erkennen-1` › 1
+Cümle: Welches Wort ist das Partizip II von „öffnen“?
+
+Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: geöffnet. Regelmäßiges Verb: ge- + Stamm + -t.
+  - Yeni: Doğru cevap: geöffnet. öffnen düzenli bir fiildir: ge- + kök + -t. Kök öffn- ünsüz + n ile bittiği için telaffuz kolaylığı için araya -e- girer: geöffnet. öffnend Partizip I'dir.
+
+#### `erkennen-1` › 2
+Cümle: Welches Wort ist das Partizip II von „verlieren“?
+
+Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: verloren. Unregelmäßiges Verb: verlieren → verloren.
+  - Yeni: Doğru cevap: verloren. verlieren güçlü bir fiildir ve ver- ayrılmaz ön ek olduğu için ge- almaz: verloren. geverliert iki kuralı da çiğner; verlierend Partizip I'dir.
+
+#### `erkennen-1` › 3
+Cümle: Welches Wort ist das Partizip II von „renovieren“?
+
+Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: renoviert. Verben auf -ieren bilden das Partizip II ohne ge-.
+  - Yeni: Doğru cevap: renoviert. -ieren ile biten fiiller Partizip II'de ge- almaz: renovieren → renoviert. renovierend Partizip I'dir.
+
+#### `erkennen-1` › 4
+Cümle: Welches Wort ist das Partizip II von „mitnehmen“?
+
+Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: mitgenommen. Trennbares Verb: Vorsilbe + ge + Stamm → mitgenommen.
+  - Yeni: Doğru cevap: mitgenommen. mitnehmen ayrılabilen bir fiildir: ge- ön ek ile kök arasına girer: mit + ge + nommen → mitgenommen. mitnehmend Partizip I'dir.
+
+#### `erkennen-1` › 5
+Cümle: Welches Wort ist das Partizip II von „besuchen“?
+
+Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: besucht. Untrennbare Vorsilbe be-: kein ge-.
+  - Yeni: Doğru cevap: besucht. be- ayrılmaz bir ön ektir; bu yüzden ge- eklenmez: besuchen → besucht. besuchend Partizip I'dir.
+
+#### `erkennen-1` › 7
+Cümle: Welches Wort ist das Partizip II von „durchführen“?
+
+Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: durchgeführt. Trennbares Verb: durchgeführt.
+  - Yeni: Doğru cevap: durchgeführt. durchführen burada ayrılabilen bir fiildir (Ich führe das Projekt durch); ge- ön ek ile kök arasına girer: durch + ge + führt.
+
+#### `erkennen-1` › 9
+Cümle: Welches Wort ist das Partizip II von „zerbrechen“?
+
+Gerekçe: TR açıklama alanında Almanca cümle vardı; kural Türkçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: zerbrochen. zer- ist untrennbar; starkes Verb: zerbrochen.
+  - Yeni: Doğru cevap: zerbrochen. zer- ayrılmaz bir ön ektir, bu yüzden ge- almaz; brechen güçlü fiil olduğu için -en ile biter: zerbrochen.
+
+#### `nominativ-bestimmt-8` › 8
+Cümle: Ergänze: „Der ___ Termin findet morgen statt.“ (verschieben)
+
+Gerekçe: TR açıklamada İngilizce kelime vardı ("adjectival ending", "article", "carefully"); Türkçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: verschobene. verschoben + adjectival ending -e.
+  - Yeni: Doğru cevap: verschobene. verschieben → verschoben (ver- → ge- yok). der Termin maskulin ve özne (Nominativ); belirli artikel der'den sonra sıfat sonu -e olur: der verschobene Termin.
+
+#### `relativsatz-einfach-13` › 2
+Cümle: Forme um: „die Daten, die gespeichert wurden“
+
+Gerekçe: TR açıklamada İngilizce kelime vardı ("adjectival ending", "article", "carefully"); Türkçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: die gespeicherten Daten. Belirli article plural → -en.
+  - Yeni: Doğru cevap: die gespeicherten Daten. die Daten, die gespeichert wurden → Partizip II gespeichert sıfat olur. Çoğul belirli artikel die'den sonra sıfat sonu -en olur.
+
+#### `relativsatz-einfach-13` › 7
+Cümle: Forme um: „der Schlüssel, der verloren wurde“
+
+Gerekçe: TR açıklamada İngilizce kelime vardı ("adjectival ending", "article", "carefully"); Türkçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: der verlorene Schlüssel. verlieren → verloren; adjectival ending -e.
+  - Yeni: Doğru cevap: der verlorene Schlüssel. verlieren → verloren (ver- → ge- yok). Maskulin Nominativ'de belirli artikel der'den sonra sıfat sonu -e olur.
+
+#### `erweiterte-attribute-14` › 2
+Cümle: Forme um: „die Ergebnisse, die sorgfältig geprüft wurden“
+
+Gerekçe: TR açıklamada İngilizce kelime vardı ("adjectival ending", "article", "carefully"); Türkçe yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: die sorgfältig geprüften Ergebnisse. Zarf carefully Partizip II'den önce; plural → -en.
+  - Yeni: Doğru cevap: die sorgfältig geprüften Ergebnisse. Relativsatz'daki zarf (sorgfältig) Partizip II'nin önüne geçer. Çoğul belirli artikel die'den sonra sıfat sonu -en olur.
+
+#### `erweiterte-attribute-14` › 6
+Cümle: Forme um: „die Ware, die frisch geerntet wurde“
+
+Gerekçe: TR açıklamada İngilizce kelime ("adjectival") vardı ve sıfat sonu açıklanmıyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: die frisch geerntete Ware. frisch + geerntet adjectival yapı oluşturur.
+  - Yeni: Doğru cevap: die frisch geerntete Ware. Zarf frisch Partizip II'nin (geerntet) önünde kalır. die Ware feminin; belirli artikel die'den sonra Nominativ'de sıfat sonu -e olur.
+
+#### `bedeutung-16` › 0
+Cümle: Welche Aussage passt zu „die geschlossene Tür“?
+
+Gerekçe: TR açıklamada İngilizce "adjectival" vardı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Die Tür ist bereits geschlossen worden.. Partizip II adjectival kullanım sonuçlanmış/pasif durumu anlatır.
+  - Yeni: Doğru cevap: Die Tür ist bereits geschlossen worden. Sıfat olarak kullanılan Partizip II (geschlossen) kapıya yapılmış ve tamamlanmış bir eylemi, yani pasif sonucu anlatır. Kapı eylemi yapan değildir.
+
+#### `bedeutung-16` › 8
+Cümle: Welche Aussage passt zu „das zerbrochene Glas“?
+
+Gerekçe: Açıklama belirsizdi ("bazı yapılar"); neden pasif değil de aktif sonuç olduğu açıklandı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Das Glas ist zerbrochen.. Bazı Partizip II yapıları sonuç/durum anlamını doğrudan verir.
+  - Yeni: Doğru cevap: Das Glas ist zerbrochen. zerbrechen burada nesnesiz (geçişsiz) kullanılır ve Perfekt'i sein ile yapar: Das Glas ist zerbrochen. Bu tür fiillerde Partizip II pasif değil, tamamlanmış bir değişimin sonucunu anlatır: kırılmış bardak.
+
+#### `master-20` › 1
+Cümle: Verbinde: „Ein Motor wurde neu entwickelt. Das Unternehmen testet ihn.“
+
+Gerekçe: İkinci cümledeki ihn belirli bir motoru gösterdiği için belirli artikelli varyant (den neu entwickelten Motor) de doğrudur; reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `das unternehmen testet einen neu entwickelten motor`
+  - Yeni: `das unternehmen testet einen neu entwickelten motor` / `das unternehmen testet den neu entwickelten motor`
+
+### `data/b2/passiv-varianten.json`
+
+#### `duerfen-praesens-4` › 7
+Cümle: Bilde Passiv: „Man darf hier Fußball spielen.“
+
+Gerekçe: Açıklama yapıyı "impersonal Passiv" diye yanlış tanımlıyordu: Fußball Akkusativ nesnedir ve pasifte Nominativ özne olur (öznesiz pasif değil). Ayrıca eşdeğer kelime sırası reddediliyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Hier darf Fußball gespielt werden.. Kaynakta benzer şekilde yer ögesiyle impersonal Passiv çalıştırılıyor.
+  - Yeni: Doğru cevap: Hier darf Fußball gespielt werden. Aktif cümledeki Akkusativ nesne (Fußball) pasifte Nominativ özne olur; bu yüzden bu öznesiz (unpersönlich) bir pasif değildir. Yapı: darf + Partizip II (gespielt) + werden. Karşılaştır: Hier darf nicht geparkt werden (nesne yok → öznesiz pasif).
+- Kabul edilen cevaplar
+  - Eski: `hier darf fussball gespielt werden` / `hier darf fußball gespielt werden`
+  - Yeni: `hier darf fussball gespielt werden` / `hier darf fußball gespielt werden` / `fußball darf hier gespielt werden`
+
+#### `unpersoenlich-10` › 9
+Cümle: Forme ins Passiv um: „Man darf hier musizieren.“
+
+Gerekçe: Açıklama yalnızca "Kaynakta / İlk PDF'de ... çalıştırılıyor" diyordu; öğrenciye kural vermiyordu. Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Hier darf musiziert werden.. Kaynakta musizieren gibi nesnesiz fiiller de Präsens Passiv'e dönüştürülüyor.
+  - Yeni: Doğru cevap: Hier darf musiziert werden. musizieren nesnesiz bir fiildir; Akkusativ nesne olmadığı için pasifte özne de olmaz (öznesiz pasif). Modal fiil tekil darf olur, sonda Partizip II + werden gelir: musiziert werden.
+- Kabul edilen cevaplar
+  - Eski: `hier darf musiziert werden`
+  - Yeni: `hier darf musiziert werden` / `es darf hier musiziert werden`
+
+#### `dativ-passiv-7` › 4
+Cümle: Bilde Passiv: „Man muss dem Kollegen gratulieren.“
+
+Gerekçe: Açıklamada yazım hatası vardı ("gratuliern/gratulieren").
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Dem Kollegen muss gratuliert werden.. gratuliern/gratulieren Dativ nesnesi korunur.
+  - Yeni: Doğru cevap: Dem Kollegen muss gratuliert werden. gratulieren Dativ ister; Dativ nesne (dem Kollegen) pasifte Nominativ özneye dönüşmez, Dativ olarak kalır. Özne olmadığı için modal fiil tekil muss olur.
+
+#### `praeteritum-aktiv-passiv-12` › 1
+Cümle: Forme ins Passiv um: „Er durfte den Baum nicht fällen.“
+
+Gerekçe: Açıklama yalnızca "Kaynakta / İlk PDF'de ... çalıştırılıyor" diyordu; öğrenciye kural vermiyordu. Ayrıca nicht'in von-grubundan önce geldiği eşdeğer sıra reddediliyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Der Baum durfte von ihm nicht gefällt werden.. Kaynakta aynı zaman yapısı doğrudan çalıştırılıyor.
+  - Yeni: Doğru cevap: Der Baum durfte von ihm nicht gefällt werden. Aktif cümle Präteritum (durfte) olduğu için pasifte de durfte kalır. Akkusativ nesne den Baum → özne der Baum; aktif özne er → von ihm (von + Dativ). Sonda Partizip II + werden: gefällt werden.
+- Kabul edilen cevaplar
+  - Eski: `der baum durfte von ihm nicht gefaellt werden` / `der baum durfte von ihm nicht gefällt werden`
+  - Yeni: `der baum durfte von ihm nicht gefaellt werden` / `der baum durfte von ihm nicht gefällt werden` / `der baum durfte nicht von ihm gefällt werden`
+
+#### `perfekt-13` › 6
+Cümle: Forme ins Passiv um: „Sie hat ihn benachrichtigen können.“
+
+Gerekçe: Açıklama yalnızca "Kaynakta / İlk PDF'de ... çalıştırılıyor" diyordu; öğrenciye kural vermiyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Er hat von ihr benachrichtigt werden können.. İlk PDF'de bu tip Perfekt Passiv doğrudan yer alıyor.
+  - Yeni: Doğru cevap: Er hat von ihr benachrichtigt werden können. Akkusativ ihn pasifte Nominativ özne er olur; aktif özne sie → von ihr. Modal fiilin Perfekt'i haben ile kurulur ve modal fiil Infinitiv biçiminde (Ersatzinfinitiv) en sona gelir: hat + benachrichtigt werden + können.
+
+#### `plusquamperfekt-15` › 0
+Cümle: Forme ins Passiv um: „Die Polizei hatte den Mann festnehmen können.“
+
+Gerekçe: Açıklama yalnızca "Kaynakta / İlk PDF'de ... çalıştırılıyor" diyordu; öğrenciye kural vermiyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Der Mann hatte von der Polizei festgenommen werden können.. İlk PDF'de Plusquamperfekt mit Modalverb bu zincirle çalıştırılıyor.
+  - Yeni: Doğru cevap: Der Mann hatte von der Polizei festgenommen werden können. Plusquamperfekt'te yardımcı fiil hatte olur; zincir: hatte + Partizip II (festgenommen) + werden + können (Ersatzinfinitiv). Akkusativ den Mann → özne der Mann; die Polizei → von der Polizei.
+
+#### `plusquamperfekt-15` › 1
+Cümle: Forme ins Passiv um: „Sie hatte den Hund suchen müssen.“
+
+Gerekçe: Açıklama yalnızca "Kaynakta / İlk PDF'de ... çalıştırılıyor" diyordu; öğrenciye kural vermiyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Der Hund hatte von ihr gesucht werden müssen.. Kaynakta aynı yapı örneklenir.
+  - Yeni: Doğru cevap: Der Hund hatte von ihr gesucht werden müssen. Akkusativ den Hund pasifte özne der Hund olur; aktif özne sie → von ihr (Dativ). Zincir: hatte + gesucht + werden + müssen; modal fiil Ersatzinfinitiv olarak en sonda durur.
+
+#### `konjunktiv-ii-vergangenheit-16` › 0
+Cümle: Forme ins Passiv um: „Du hättest ihn fragen sollen.“
+
+Gerekçe: Açıklama yalnızca "Kaynakta / İlk PDF'de ... çalıştırılıyor" diyordu; öğrenciye kural vermiyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Er hätte von dir gefragt werden sollen.. İlk PDF'de Konjunktiv II Vergangenheit mit Modalverb açıkça çalıştırılıyor.
+  - Yeni: Doğru cevap: Er hätte von dir gefragt werden sollen. Akkusativ ihn pasifte Nominativ özne er olur; aktif özne du → von dir (Dativ). Konjunktiv II Vergangenheit zinciri: hätte + Partizip II (gefragt) + werden + sollen.
+
+#### `futur-i-17` › 0
+Cümle: Forme ins Passiv um: „Man wird das Haus renovieren müssen.“
+
+Gerekçe: Açıklama "İlk PDF'de" diye öğrenci için anlamsız bir kaynağa atıf yapıyordu; kural sade biçimde yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Das Haus wird renoviert werden müssen.. İlk PDF'de Futur I mit Modalverb: wird + Partizip II + werden + müssen.
+  - Yeni: Doğru cevap: Das Haus wird renoviert werden müssen. Futur I'de çekimli fiil wird'dir; Akkusativ das Haus pasifte özne olur. Zincir: wird + Partizip II (renoviert) + werden + müssen.
+
+#### `futur-i-17` › 2
+Cümle: Forme ins Passiv um: „Wir werden Deutsch lernen müssen.“
+
+Gerekçe: Açıklama yalnızca "Kaynakta / İlk PDF'de ... çalıştırılıyor" diyordu; öğrenciye kural vermiyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Deutsch wird von uns gelernt werden müssen.. Kaynakta bu tip Futur dönüşümü çalıştırılıyor.
+  - Yeni: Doğru cevap: Deutsch wird von uns gelernt werden müssen. Akkusativ nesne Deutsch pasifte özne olur ve tekil olduğu için çekimli fiil wird'dir; aktif özne wir → von uns. Zincir: wird + gelernt + werden + müssen.
+
+#### `konjunktiv-ii-vergangenheit-16` › 3
+Cümle: Forme ins Passiv um: „Die Bank hätte ihm einen Kredit geben können.“
+
+Gerekçe: Dativ öğenin başa alındığı daha doğal ve eşdeğer kelime sırası reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `ein kredit haette ihm von der bank gegeben werden koennen` / `ein kredit hätte ihm von der bank gegeben werden können`
+  - Yeni: `ein kredit haette ihm von der bank gegeben werden koennen` / `ein kredit hätte ihm von der bank gegeben werden können` / `ihm hätte von der bank ein kredit gegeben werden können`
+
+#### `master-20` › 4
+Cümle: Forme ins Passiv um: „Die Bank hätte dem Kunden einen Kredit geben können.“
+
+Gerekçe: Dativ öğenin başa alındığı daha doğal ve eşdeğer kelime sırası reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `ein kredit haette dem kunden von der bank gegeben werden koennen` / `ein kredit hätte dem kunden von der bank gegeben werden können`
+  - Yeni: `ein kredit haette dem kunden von der bank gegeben werden koennen` / `ein kredit hätte dem kunden von der bank gegeben werden können` / `dem kunden hätte von der bank ein kredit gegeben werden können`
+
+#### `aktiv-passiv-praesens-8` › 9
+Cümle: Forme ins Passiv um: „Der Lieferant kann die Ware morgen bringen.“
+
+Gerekçe: Zaman zarfının von-grubundan önce geldiği doğal ve eşdeğer kelime sırası reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `die ware kann vom lieferanten morgen gebracht werden`
+  - Yeni: `die ware kann vom lieferanten morgen gebracht werden` / `die ware kann morgen vom lieferanten gebracht werden`
+
+#### `master-20` › 0
+Cümle: Forme ins Passiv um und erhalte das Tempus: „Die Techniker müssen die Anlage heute prüfen.“
+
+Gerekçe: Zaman zarfının von-grubundan sonra geldiği eşdeğer kelime sırası reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `die anlage muss heute von den technikern geprueft werden` / `die anlage muss heute von den technikern geprüft werden`
+  - Yeni: `die anlage muss heute von den technikern geprueft werden` / `die anlage muss heute von den technikern geprüft werden` / `die anlage muss von den technikern heute geprüft werden`
+
+#### `duerfen-praesens-4` › 0
+Cümle: Bilde Passiv: „Man darf hier nicht parken.“
+
+Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `hier darf nicht geparkt werden`
+  - Yeni: `hier darf nicht geparkt werden` / `es darf hier nicht geparkt werden`
+
+#### `duerfen-praesens-4` › 3
+Cümle: Bilde Passiv: „Man darf im Museum nicht fotografieren.“
+
+Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `im museum darf nicht fotografiert werden`
+  - Yeni: `im museum darf nicht fotografiert werden` / `es darf im museum nicht fotografiert werden`
+
+#### `unpersoenlich-10` › 0
+Cümle: Forme ins Passiv um: „Man muss hier leise arbeiten.“
+
+Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `hier muss leise gearbeitet werden`
+  - Yeni: `hier muss leise gearbeitet werden` / `es muss hier leise gearbeitet werden`
+
+#### `unpersoenlich-10` › 1
+Cümle: Forme ins Passiv um: „Man darf im Gebäude nicht rauchen.“
+
+Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `im gebaeude darf nicht geraucht werden` / `im gebäude darf nicht geraucht werden`
+  - Yeni: `im gebaeude darf nicht geraucht werden` / `im gebäude darf nicht geraucht werden` / `es darf im gebäude nicht geraucht werden`
+
+#### `unpersoenlich-10` › 2
+Cümle: Forme ins Passiv um: „Man kann hier gut übernachten.“
+
+Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `hier kann gut uebernachtet werden` / `hier kann gut übernachtet werden`
+  - Yeni: `hier kann gut uebernachtet werden` / `hier kann gut übernachtet werden` / `es kann hier gut übernachtet werden`
+
+#### `unpersoenlich-10` › 3
+Cümle: Forme ins Passiv um: „Man soll nicht über andere spotten.“
+
+Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `ueber andere soll nicht gespottet werden` / `über andere soll nicht gespottet werden`
+  - Yeni: `ueber andere soll nicht gespottet werden` / `über andere soll nicht gespottet werden` / `es soll nicht über andere gespottet werden`
+
+#### `unpersoenlich-10` › 4
+Cümle: Forme ins Passiv um: „Man muss für Gerechtigkeit kämpfen.“
+
+Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `fuer gerechtigkeit muss gekaempft werden` / `für gerechtigkeit muss gekämpft werden`
+  - Yeni: `fuer gerechtigkeit muss gekaempft werden` / `für gerechtigkeit muss gekämpft werden` / `es muss für gerechtigkeit gekämpft werden`
+
+#### `unpersoenlich-10` › 5
+Cümle: Forme ins Passiv um: „Man darf auf dem See segeln.“
+
+Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `auf dem see darf gesegelt werden`
+  - Yeni: `auf dem see darf gesegelt werden` / `es darf auf dem see gesegelt werden`
+
+#### `unpersoenlich-10` › 6
+Cümle: Forme ins Passiv um: „Man kann über das Problem diskutieren.“
+
+Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `ueber das problem kann diskutiert werden` / `über das problem kann diskutiert werden`
+  - Yeni: `ueber das problem kann diskutiert werden` / `über das problem kann diskutiert werden` / `es kann über das problem diskutiert werden`
+
+#### `unpersoenlich-10` › 7
+Cümle: Forme ins Passiv um: „Man muss auf den Bus warten.“
+
+Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `auf den bus muss gewartet werden`
+  - Yeni: `auf den bus muss gewartet werden` / `es muss auf den bus gewartet werden`
+
+#### `unpersoenlich-10` › 8
+Cümle: Forme ins Passiv um: „Man soll über die Katastrophe berichten.“
+
+Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `ueber die katastrophe soll berichtet werden` / `über die katastrophe soll berichtet werden`
+  - Yeni: `ueber die katastrophe soll berichtet werden` / `über die katastrophe soll berichtet werden` / `es soll über die katastrophe berichtet werden`
+
+#### `master-20` › 5
+Cümle: Forme ins Passiv um: „Man wird in Zukunft mehr über das Problem diskutieren müssen.“
+
+Gerekçe: Öznesiz pasifte birinci konum es ile de doldurulabilir; bu eşdeğer ve doğru varyant reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `in zukunft wird mehr ueber das problem diskutiert werden muessen` / `in zukunft wird mehr über das problem diskutiert werden müssen`
+  - Yeni: `in zukunft wird mehr ueber das problem diskutiert werden muessen` / `in zukunft wird mehr über das problem diskutiert werden müssen` / `es wird in zukunft mehr über das problem diskutiert werden müssen`
+
+#### `praeteritum-erkennen-11` › 0
+Cümle: Welche Form ist im Präteritum korrekt?
+
+Gerekçe: Şıklardan biri Präsens biçimdi ve dilbilgisel olarak doğruydu; "Welche Form ist korrekt?" sorusunda iki doğru cevap oluşuyordu. Soruya zaman bilgisi eklendi.
+
+- Cümle
+  - Eski: Welche Form ist korrekt?
+  - Yeni: Welche Form ist im Präteritum korrekt?
+
+#### `praeteritum-erkennen-11` › 1
+Cümle: Welche Form ist im Präteritum korrekt?
+
+Gerekçe: Şıklardan biri Präsens biçimdi ve dilbilgisel olarak doğruydu; "Welche Form ist korrekt?" sorusunda iki doğru cevap oluşuyordu. Soruya zaman bilgisi eklendi.
+
+- Cümle
+  - Eski: Welche Form ist korrekt?
+  - Yeni: Welche Form ist im Präteritum korrekt?
+
+#### `praeteritum-erkennen-11` › 2
+Cümle: Welche Form ist im Präteritum korrekt?
+
+Gerekçe: Şıklardan biri Präsens biçimdi ve dilbilgisel olarak doğruydu; "Welche Form ist korrekt?" sorusunda iki doğru cevap oluşuyordu. Soruya zaman bilgisi eklendi.
+
+- Cümle
+  - Eski: Welche Form ist korrekt?
+  - Yeni: Welche Form ist im Präteritum korrekt?
+
+#### `praeteritum-erkennen-11` › 3
+Cümle: Welche Form ist im Präteritum korrekt?
+
+Gerekçe: Şıklardan biri Präsens biçimdi ve dilbilgisel olarak doğruydu; "Welche Form ist korrekt?" sorusunda iki doğru cevap oluşuyordu. Soruya zaman bilgisi eklendi.
+
+- Cümle
+  - Eski: Welche Form ist korrekt?
+  - Yeni: Welche Form ist im Präteritum korrekt?
+
+#### `praeteritum-erkennen-11` › 4
+Cümle: Welche Form ist im Präteritum korrekt?
+
+Gerekçe: Şıklardan biri Präsens biçimdi ve dilbilgisel olarak doğruydu; "Welche Form ist korrekt?" sorusunda iki doğru cevap oluşuyordu. Soruya zaman bilgisi eklendi.
+
+- Cümle
+  - Eski: Welche Form ist korrekt?
+  - Yeni: Welche Form ist im Präteritum korrekt?
+
+#### `praeteritum-erkennen-11` › 5
+Cümle: Welche Form ist im Präteritum korrekt?
+
+Gerekçe: Şıklardan biri Präsens biçimdi ve dilbilgisel olarak doğruydu; "Welche Form ist korrekt?" sorusunda iki doğru cevap oluşuyordu. Soruya zaman bilgisi eklendi.
+
+- Cümle
+  - Eski: Welche Form ist korrekt?
+  - Yeni: Welche Form ist im Präteritum korrekt?
+
+#### `praeteritum-erkennen-11` › 6
+Cümle: Welche Form ist im Präteritum korrekt?
+
+Gerekçe: Şıklardan biri Präsens biçimdi ve dilbilgisel olarak doğruydu; "Welche Form ist korrekt?" sorusunda iki doğru cevap oluşuyordu. Soruya zaman bilgisi eklendi.
+
+- Cümle
+  - Eski: Welche Form ist korrekt?
+  - Yeni: Welche Form ist im Präteritum korrekt?
+
+#### `praeteritum-erkennen-11` › 7
+Cümle: Welche Form ist im Präteritum korrekt?
+
+Gerekçe: Şıklardan biri Präsens biçimdi ve dilbilgisel olarak doğruydu; "Welche Form ist korrekt?" sorusunda iki doğru cevap oluşuyordu. Soruya zaman bilgisi eklendi.
+
+- Cümle
+  - Eski: Welche Form ist korrekt?
+  - Yeni: Welche Form ist im Präteritum korrekt?
+
+#### `praeteritum-erkennen-11` › 8
+Cümle: Welche Form ist im Präteritum korrekt?
+
+Gerekçe: Şıklardan biri Präsens biçimdi ve dilbilgisel olarak doğruydu; "Welche Form ist korrekt?" sorusunda iki doğru cevap oluşuyordu. Soruya zaman bilgisi eklendi.
+
+- Cümle
+  - Eski: Welche Form ist korrekt?
+  - Yeni: Welche Form ist im Präteritum korrekt?
+
+#### `praeteritum-erkennen-11` › 9
+Cümle: Welche Form ist im Präteritum korrekt?
+
+Gerekçe: Şıklardan biri Präsens biçimdi ve dilbilgisel olarak doğruydu; "Welche Form ist korrekt?" sorusunda iki doğru cevap oluşuyordu. Soruya zaman bilgisi eklendi.
+
+- Cümle
+  - Eski: Welche Form ist korrekt?
+  - Yeni: Welche Form ist im Präteritum korrekt?

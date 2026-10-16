@@ -214,7 +214,7 @@
           ],
           "correct": "dir",
           "explanations": {
-            "tr": "Doğru cevap: dir. Die Person, der etwas erklärt wird, steht im Dativ: du → dir.",
+            "tr": "Doğru cevap: dir. erklären'de açıklanan şey Akkusativ (die Aufgabe), açıklamanın yapıldığı kişi Dativ olur: du → dir.",
             "de": "Die richtige Antwort ist „dir“. Die Person, der etwas erklärt wird, steht im Dativ: du → dir. Bestimme in „Ich erkläre ___ die Aufgabe noch einmal.“ zuerst die Person/Sache auf die Frage Wem? und wähle dann das passende Dativpronomen.",
             "en": "The correct answer is “dir”. Die Person, der etwas erklärt wird, steht im Dativ: du → dir. In “Ich erkläre ___ die Aufgabe noch einmal.”, first identify who/what answers Wem? ('to whom?'), then choose the corresponding dative pronoun."
           }
@@ -1249,10 +1249,11 @@
           "sentence": "Bilde: die Jacke / sie / gut stehen",
           "correct": "Die Jacke steht ihr gut",
           "answers": [
-            "die jacke steht ihr gut"
+            "die jacke steht ihr gut",
+            "die jacke steht ihnen gut"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Die Jacke steht ihr gut. stehen im Sinn von 'gut aussehen' + Dativ.",
+            "tr": "Doğru cevap: Die Jacke steht ihr gut. stehen 'yakışmak' anlamında Dativ alır: sie (tekil) → ihr. (sie çoğul ise: Die Jacke steht ihnen gut.)",
             "de": "Die richtige Antwort ist „Die Jacke steht ihr gut“. stehen im Sinn von 'gut aussehen' + Dativ. Bestimme in „Bilde: die Jacke / sie / gut stehen“ zuerst die Person/Sache auf die Frage Wem? und wähle dann das passende Dativpronomen.",
             "en": "The correct answer is “Die Jacke steht ihr gut”. stehen im Sinn von 'gut aussehen' + Dativ. In “Bilde: die Jacke / sie / gut stehen”, first identify who/what answers Wem? ('to whom?'), then choose the corresponding dative pronoun."
           }
@@ -1561,7 +1562,8 @@
           "sentence": "Ergänze: Wie geht es ___ nach der Operation? (sie)",
           "correct": "ihr",
           "answers": [
-            "ihr"
+            "ihr",
+            "ihnen"
           ],
           "explanations": {
             "tr": "Doğru cevap: ihr. sie → ihr.",
@@ -1617,10 +1619,11 @@
           "sentence": "Bilde: mir / heute / besser gehen",
           "correct": "Mir geht es heute besser",
           "answers": [
-            "mir geht es heute besser"
+            "mir geht es heute besser",
+            "es geht mir heute besser"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Mir geht es heute besser. feste Wendung: jemandem geht es ...",
+            "tr": "Doğru cevap: Mir geht es heute besser. 'jemandem geht es …' kalıbında kişi her zaman Dativ'dir: ich → mir. Es geht mir heute besser. de doğrudur.",
             "de": "Die richtige Antwort ist „Mir geht es heute besser“. feste Wendung: jemandem geht es ... Bestimme in „Bilde: mir / heute / besser gehen“ zuerst die Person/Sache auf die Frage Wem? und wähle dann das passende Dativpronomen.",
             "en": "The correct answer is “Mir geht es heute besser”. feste Wendung: jemandem geht es ... In “Bilde: mir / heute / besser gehen”, first identify who/what answers Wem? ('to whom?'), then choose the corresponding dative pronoun."
           }
@@ -1645,7 +1648,8 @@
           "sentence": "Bilde: uns / sehr gut / gehen",
           "correct": "Uns geht es sehr gut",
           "answers": [
-            "uns geht es sehr gut"
+            "uns geht es sehr gut",
+            "es geht uns sehr gut"
           ],
           "explanations": {
             "tr": "Doğru cevap: Uns geht es sehr gut. wir → uns.",
@@ -1892,7 +1896,7 @@
             "der film gefällt dem kind"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Der Film gefällt dem Kind. ihm kann auch neutrum es representieren.",
+            "tr": "Doğru cevap: Der Film gefällt dem Kind. ihm hem maskulin (er) hem nötr (es) için Dativ zamiridir; burada das Kind → dem Kind.",
             "de": "Die richtige Antwort ist „Der Film gefällt dem Kind“. ihm kann auch neutrum es representieren. Bestimme in „Ergänze: Der Film gefällt ihm. (das Kind)“ zuerst die Person/Sache auf die Frage Wem? und wähle dann das passende Dativpronomen.",
             "en": "The correct answer is “Der Film gefällt dem Kind”. ihm kann auch neutrum es representieren. In “Ergänze: Der Film gefällt ihm. (das Kind)”, first identify who/what answers Wem? ('to whom?'), then choose the corresponding dative pronoun."
           }
@@ -2364,7 +2368,8 @@
           "sentence": "Bilde: ich / sie / Blumen / mitbringen",
           "correct": "Ich bringe ihr Blumen mit",
           "answers": [
-            "ich bringe ihr blumen mit"
+            "ich bringe ihr blumen mit",
+            "ich bringe ihnen blumen mit"
           ],
           "explanations": {
             "tr": "Doğru cevap: Ich bringe ihr Blumen mit. Alıcı sie → ihr; mit sonda.",
@@ -2601,7 +2606,8 @@
           "sentence": "Bilde: er / sie / Blumen bringen / sollen",
           "correct": "Er soll ihr Blumen bringen",
           "answers": [
-            "er soll ihr blumen bringen"
+            "er soll ihr blumen bringen",
+            "er soll ihnen blumen bringen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Er soll ihr Blumen bringen. sie singular → ihr.",
@@ -2780,7 +2786,7 @@
             "du kommst morgen zu mir"
           ],
           "explanations": {
-            "tr": "Doğru cevap: “Du kommst morgen zu mir”. zu mir. “Bilde: du / morgen / zu / ich / kommen” cümlesinde önce Wem? sorusuna cevap veren kişi/varlığı bul; sonra Nominativ biçimini uygun Dativ zamirine dönüştür.",
+            "tr": "Doğru cevap: Du kommst morgen zu mir. zu her zaman Dativ ister: ich → mir.",
             "de": "Die richtige Antwort ist „Du kommst morgen zu mir“. zu mir. Bestimme in „Bilde: du / morgen / zu / ich / kommen“ zuerst die Person/Sache auf die Frage Wem? und wähle dann das passende Dativpronomen.",
             "en": "The correct answer is “Du kommst morgen zu mir”. zu mir. In “Bilde: du / morgen / zu / ich / kommen”, first identify who/what answers Wem? ('to whom?'), then choose the corresponding dative pronoun."
           }
@@ -2841,7 +2847,8 @@
           "sentence": "Bilde Frage: Ich helfe meiner Mutter.",
           "correct": "Wem hilfst du",
           "answers": [
-            "wem hilfst du"
+            "wem hilfst du",
+            "wem helfe ich"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wem hilfst du. helfen → Wem?",
@@ -2884,7 +2891,8 @@
           "sentence": "Bilde Frage: Ich danke dem Lehrer.",
           "correct": "Wem dankst du",
           "answers": [
-            "wem dankst du"
+            "wem dankst du",
+            "wem danke ich"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wem dankst du. danken → Wem?",
@@ -2912,7 +2920,8 @@
           "sentence": "Bilde Frage: Wir zeigen den Gästen das Zimmer.",
           "correct": "Wem zeigt ihr das Zimmer",
           "answers": [
-            "wem zeigt ihr das zimmer"
+            "wem zeigt ihr das zimmer",
+            "wem zeigen wir das zimmer"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wem zeigt ihr das Zimmer. kişiyi Dativ olarak sorarız.",
@@ -2926,7 +2935,8 @@
           "sentence": "Bilde Frage: Ich schicke Paul die E-Mail.",
           "correct": "Wem schickst du die E-Mail",
           "answers": [
-            "wem schickst du die e-mail"
+            "wem schickst du die e-mail",
+            "wem schicke ich die e-mail"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wem schickst du die E-Mail. Paul alıcı → Dativ.",
@@ -2955,7 +2965,8 @@
           "sentence": "Bilde Frage: Ich bringe meinem Vater einen Kaffee.",
           "correct": "Wem bringst du einen Kaffee",
           "answers": [
-            "wem bringst du einen kaffee"
+            "wem bringst du einen kaffee",
+            "wem bringe ich einen kaffee"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wem bringst du einen Kaffee. Vater → Dativ.",
@@ -3061,10 +3072,11 @@
           "sentence": "Bilde: ich / Sie / noch nicht antworten",
           "correct": "Ich habe Ihnen noch nicht geantwortet",
           "answers": [
-            "ich habe ihnen noch nicht geantwortet"
+            "ich habe ihnen noch nicht geantwortet",
+            "ich antworte ihnen noch nicht"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Ich habe Ihnen noch nicht geantwortet. formelles Sie → Ihnen; Perfekt burada sadece zamir bağlamı için kullanılır.",
+            "tr": "Doğru cevap: Ich habe Ihnen noch nicht geantwortet. antworten Dativ ister; resmî Sie → Ihnen. Präsens'te de doğru: Ich antworte Ihnen noch nicht.",
             "de": "Die richtige Antwort ist „Ich habe Ihnen noch nicht geantwortet“. formelles Sie → Ihnen; Perfekt burada sadece zamir bağlamı için kullanılır. Bestimme in „Bilde: ich / Sie / noch nicht antworten“ zuerst die Person/Sache auf die Frage Wem? und wähle dann das passende Dativpronomen.",
             "en": "The correct answer is “Ich habe Ihnen noch nicht geantwortet”. formelles Sie → Ihnen; Perfekt burada sadece zamir bağlamı için kullanılır. In “Bilde: ich / Sie / noch nicht antworten”, first identify who/what answers Wem? ('to whom?'), then choose the corresponding dative pronoun."
           }
@@ -3091,7 +3103,9 @@
           "correct": "Das Fahrrad gehört ihr nicht",
           "answers": [
             "das fahrrad gehoert ihr nicht",
-            "das fahrrad gehört ihr nicht"
+            "das fahrrad gehört ihr nicht",
+            "das fahrrad gehört ihnen nicht",
+            "das fahrrad gehoert ihnen nicht"
           ],
           "explanations": {
             "tr": "Doğru cevap: Das Fahrrad gehört ihr nicht. sie → ihr.",
@@ -3384,7 +3398,7 @@
             "euch"
           ],
           "explanations": {
-            "tr": "Doğru cevap: euch. Konuşan 'wir'e hitap eden kişi çoğul ihr → euch.",
+            "tr": "Doğru cevap: euch. A 'wir' diye konuşuyor; B bu gruba 'ihr' diye hitap eder. erklären'de kişi Dativ: ihr → euch.",
             "de": "Die richtige Antwort ist „euch“. Konuşan 'wir'e hitap eden kişi çoğul ihr → euch. Bestimme in „A: Wir verstehen das nicht. B: Ich erkläre ___ alles.“ zuerst die Person/Sache auf die Frage Wem? und wähle dann das passende Dativpronomen.",
             "en": "The correct answer is “euch”. Konuşan 'wir'e hitap eden kişi çoğul ihr → euch. In “A: Wir verstehen das nicht. B: Ich erkläre ___ alles.”, first identify who/what answers Wem? ('to whom?'), then choose the corresponding dative pronoun."
           }
@@ -3454,7 +3468,7 @@
             "euch"
           ],
           "explanations": {
-            "tr": "Doğru cevap: euch. Karşıdaki wir grubu → euch.",
+            "tr": "Doğru cevap: euch. A 'wir' diye konuşuyor; B bu gruba 'ihr' diye hitap eder. leihen'de kişi Dativ: ihr → euch.",
             "de": "Die richtige Antwort ist „euch“. Karşıdaki wir grubu → euch. Bestimme in „A: Wir haben kein Auto. B: Ich leihe ___ meins.“ zuerst die Person/Sache auf die Frage Wem? und wähle dann das passende Dativpronomen.",
             "en": "The correct answer is “euch”. Karşıdaki wir grubu → euch. In “A: Wir haben kein Auto. B: Ich leihe ___ meins.”, first identify who/what answers Wem? ('to whom?'), then choose the corresponding dative pronoun."
           }
@@ -3486,7 +3500,10 @@
           "sentence": "Durum: Annen alışverişte yardım istiyor. Ona yardım ediyorsun.",
           "correct": "Ich helfe ihr beim Einkauf",
           "answers": [
-            "ich helfe ihr beim einkauf"
+            "ich helfe ihr beim einkauf",
+            "ich helfe ihr beim einkaufen",
+            "ich helfe meiner mutter beim einkauf",
+            "ich helfe meiner mutter beim einkaufen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Ich helfe ihr beim Einkauf. Mutter → ihr.",
@@ -3500,7 +3517,8 @@
           "sentence": "Durum: Arkadaşın sana bir kitap veriyor.",
           "correct": "Mein Freund gibt mir ein Buch",
           "answers": [
-            "mein freund gibt mir ein buch"
+            "mein freund gibt mir ein buch",
+            "meine freundin gibt mir ein buch"
           ],
           "explanations": {
             "tr": "Doğru cevap: Mein Freund gibt mir ein Buch. ich → mir.",
@@ -3543,7 +3561,8 @@
           "sentence": "Durum: Çocuklar çorbayı seviyor; tadı onlara güzel geliyor.",
           "correct": "Die Suppe schmeckt ihnen gut",
           "answers": [
-            "die suppe schmeckt ihnen gut"
+            "die suppe schmeckt ihnen gut",
+            "die suppe schmeckt den kindern gut"
           ],
           "explanations": {
             "tr": "Doğru cevap: Die Suppe schmeckt ihnen gut. Kinder → ihnen.",
@@ -3557,7 +3576,9 @@
           "sentence": "Durum: Kız kardeşine doğum günü hediyesi veriyorsun.",
           "correct": "Ich schenke ihr ein Geburtstagsgeschenk",
           "answers": [
-            "ich schenke ihr ein geburtstagsgeschenk"
+            "ich schenke ihr ein geburtstagsgeschenk",
+            "ich gebe ihr ein geburtstagsgeschenk",
+            "ich schenke meiner schwester ein geburtstagsgeschenk"
           ],
           "explanations": {
             "tr": "Doğru cevap: Ich schenke ihr ein Geburtstagsgeschenk. Schwester → ihr.",
@@ -3571,7 +3592,10 @@
           "sentence": "Durum: Komşuna teşekkür ediyorsun.",
           "correct": "Ich danke ihm",
           "answers": [
-            "ich danke ihm"
+            "ich danke ihm",
+            "ich danke ihr",
+            "ich danke meinem nachbarn",
+            "ich danke meiner nachbarin"
           ],
           "explanations": {
             "tr": "Doğru cevap: Ich danke ihm. Nachbar maskulin → ihm.",
@@ -3582,16 +3606,18 @@
         {
           "type": "text",
           "word": "Alltag",
-          "sentence": "Durum: Arkadaşların seni dinliyor. Sen de onlara dinliyorsun.",
+          "sentence": "Durum: Arkadaşların seni dinliyor. Sen de onları dinliyorsun.",
           "correct": "Ich höre ihnen auch zu",
           "answers": [
             "ich hoere ihnen auch zu",
-            "ich höre ihnen auch zu"
+            "ich höre ihnen auch zu",
+            "ich höre ihnen zu",
+            "ich hoere ihnen zu"
           ],
           "explanations": {
             "tr": "Doğru cevap: Ich höre ihnen auch zu. Freunde plural → ihnen.",
-            "de": "Die richtige Antwort ist „Ich höre ihnen auch zu“. Freunde plural → ihnen. Bestimme in „Durum: Arkadaşların seni dinliyor. Sen de onlara dinliyorsun.“ zuerst die Person/Sache auf die Frage Wem? und wähle dann das passende Dativpronomen.",
-            "en": "The correct answer is “Ich höre ihnen auch zu”. Freunde plural → ihnen. In “Durum: Arkadaşların seni dinliyor. Sen de onlara dinliyorsun.”, first identify who/what answers Wem? ('to whom?'), then choose the corresponding dative pronoun."
+            "de": "Die richtige Antwort ist „Ich höre ihnen auch zu“. Freunde plural → ihnen. Bestimme in „Durum: Arkadaşların seni dinliyor. Sen de onları dinliyorsun.“ zuerst die Person/Sache auf die Frage Wem? und wähle dann das passende Dativpronomen.",
+            "en": "The correct answer is “Ich höre ihnen auch zu”. Freunde plural → ihnen. In “Durum: Arkadaşların seni dinliyor. Sen de onları dinliyorsun.”, first identify who/what answers Wem? ('to whom?'), then choose the corresponding dative pronoun."
           }
         },
         {
@@ -3601,7 +3627,9 @@
           "correct": "Der Arzt erklärt Ihnen etwas",
           "answers": [
             "der arzt erklaert ihnen etwas",
-            "der arzt erklärt ihnen etwas"
+            "der arzt erklärt ihnen etwas",
+            "die ärztin erklärt ihnen etwas",
+            "die aerztin erklaert ihnen etwas"
           ],
           "explanations": {
             "tr": "Doğru cevap: Der Arzt erklärt Ihnen etwas. formelles Sie → Ihnen.",
@@ -3856,15 +3884,15 @@
         {
           "type": "text",
           "word": "Fehler",
-          "sentence": "Korrigiere: Ich danke euch nicht? (du)",
+          "sentence": "Korrigiere: Ich danke dich. (du)",
           "correct": "Ich danke dir",
           "answers": [
             "ich danke dir"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Ich danke dir. du → dir.",
-            "de": "Die richtige Antwort ist „Ich danke dir“. du → dir. Bestimme in „Korrigiere: Ich danke euch nicht? (du)“ zuerst die Person/Sache auf die Frage Wem? und wähle dann das passende Dativpronomen.",
-            "en": "The correct answer is “Ich danke dir”. du → dir. In “Korrigiere: Ich danke euch nicht? (du)”, first identify who/what answers Wem? ('to whom?'), then choose the corresponding dative pronoun."
+            "tr": "Doğru cevap: Ich danke dir. danken Dativ ister; du → dir (dich Akkusativ'tir).",
+            "de": "Richtig ist „Ich danke dir.“ danken verlangt den Dativ: du → dir.",
+            "en": "The answer is “Ich danke dir.” danken takes the dative: du → dir."
           }
         },
         {
@@ -3887,7 +3915,8 @@
           "sentence": "Korrigiere: Herr Meier, kann ich Sie helfen?",
           "correct": "Herr Meier, kann ich Ihnen helfen",
           "answers": [
-            "herr meier, kann ich ihnen helfen"
+            "herr meier, kann ich ihnen helfen",
+            "herr meier kann ich ihnen helfen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Herr Meier, kann ich Ihnen helfen. formelles Sie'nin Dativ biçimi Ihnen.",
@@ -4076,16 +4105,21 @@
         {
           "type": "text",
           "word": "Master",
-          "sentence": "Korrigiere: Die Kinder hören der Lehrerin? – Ja, sie hören sie zu.",
-          "correct": "Die Kinder hören ihr zu",
+          "sentence": "Korrigiere: Hören die Kinder der Lehrerin zu? – Ja, sie hören sie zu.",
+          "correct": "Ja, sie hören ihr zu",
           "answers": [
-            "die kinder hoeren ihr zu",
-            "die kinder hören ihr zu"
+            "ja, sie hören ihr zu",
+            "ja, sie hoeren ihr zu",
+            "ja sie hören ihr zu",
+            "sie hören ihr zu",
+            "sie hoeren ihr zu",
+            "die kinder hören ihr zu",
+            "die kinder hoeren ihr zu"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Die Kinder hören ihr zu. zuhören + Dativ; Lehrerin → ihr.",
-            "de": "Die richtige Antwort ist „Die Kinder hören ihr zu“. zuhören + Dativ; Lehrerin → ihr. Bestimme in „Korrigiere: Die Kinder hören der Lehrerin? – Ja, sie hören sie zu.“ zuerst die Person/Sache auf die Frage Wem? und wähle dann das passende Dativpronomen.",
-            "en": "The correct answer is “Die Kinder hören ihr zu”. zuhören + Dativ; Lehrerin → ihr. In “Korrigiere: Die Kinder hören der Lehrerin? – Ja, sie hören sie zu.”, first identify who/what answers Wem? ('to whom?'), then choose the corresponding dative pronoun."
+            "tr": "Doğru cevap: Ja, sie hören ihr zu. zuhören Dativ ister: die Lehrerin → ihr (sie Akkusativ'tir).",
+            "de": "Richtig ist „Ja, sie hören ihr zu.“ zuhören verlangt den Dativ: die Lehrerin → ihr.",
+            "en": "The answer is “Ja, sie hören ihr zu.” zuhören takes the dative: die Lehrerin → ihr."
           }
         },
         {
@@ -4108,7 +4142,8 @@
           "sentence": "Durum: Arkadaşların sana hediyeler getiriyor ve sen onlara teşekkür ediyorsun.",
           "correct": "Meine Freunde bringen mir Geschenke und ich danke ihnen",
           "answers": [
-            "meine freunde bringen mir geschenke und ich danke ihnen"
+            "meine freunde bringen mir geschenke und ich danke ihnen",
+            "meine freunde bringen mir geschenke, und ich danke ihnen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Meine Freunde bringen mir Geschenke und ich danke ihnen. ich → mir; Freunde plural → ihnen.",

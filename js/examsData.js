@@ -20,7 +20,11 @@
    Teil numbers come from the order in the list; do not write them yourself.
 
    A new exam: add an entry to `exams`. `comingSoon: true` shows a disabled card without levels.
-   `skipLevel: true` (DTZ) skips the level step, so its address is #exams/dtz/lesen. */
+   `skipLevel: true` (DTZ) skips the level step, so its address is #exams/dtz/lesen.
+   `levelStep: 'format'` (TestDaF) turns the level step into a format step; such a level entry carries its
+   own code, name, description and optional tag instead of using `levels` below.
+   `levelRange: 'B2–C1'` is shown on the exam card instead of the list of levels.
+   `partLabel: 'aufgabe'` names the parts "Aufgabe 1, 2 …"; without it they are "Teil 1, 2 …". */
 window.BA_EXAMS = {
   // Level badges shared by all exams. difficulty is 1–5 stars.
   levels: {
@@ -457,6 +461,102 @@ window.BA_EXAMS = {
             ] },
           ]
         },
+      ]
+    },
+    {
+      id: 'testdaf',
+      name: 'TestDaF',
+      fullName: 'Test Deutsch als Fremdsprache',
+      // One exam from B2 to C1: the card shows this instead of a list of levels.
+      levelRange: 'B2–C1',
+      // The second step chooses a format instead of a level.
+      levelStep: 'format',
+      // Parts are called "Aufgabe 1, 2 …" instead of "Teil 1, 2 …".
+      partLabel: 'aufgabe',
+      description: {
+        tr: 'Almanya’da üniversitede okumak isteyenler için akademik Almanca sınavı. Her bölümün sonucu TDN 3, 4 veya 5 olarak verilir.',
+        de: 'Die Prüfung für akademisches Deutsch, vor allem für ein Studium in Deutschland. Jeder Prüfungsteil wird mit TDN 3, 4 oder 5 bewertet.',
+        en: 'The academic German exam, mainly for studying in Germany. Each section is rated TDN 3, 4 or 5.'
+      },
+      levels: [
+        {
+          id: 'digital',
+          code: { tr: 'Dijital', de: 'Digital', en: 'Digital' },
+          name: { tr: 'Dijital TestDaF', de: 'Digitaler TestDaF', en: 'Digital TestDaF' },
+          tag: { tr: 'Yaygın format', de: 'Gängiges Format', en: 'Most common format' },
+          description: {
+            tr: 'Sınav bir test merkezinde bilgisayarda yapılır.',
+            de: 'Die Prüfung wird in einem Testzentrum am Computer abgelegt.',
+            en: 'The exam is taken on a computer at a test centre.'
+          },
+          sections: [
+            { id: 'lesen', teile: [
+              { title: null, exercises: [] }, // Aufgabe 1
+              { title: null, exercises: [] }, // Aufgabe 2
+              { title: null, exercises: [] }, // Aufgabe 3
+              { title: null, exercises: [] }, // Aufgabe 4
+              { title: null, exercises: [] }, // Aufgabe 5
+              { title: null, exercises: [] }, // Aufgabe 6
+              { title: null, exercises: [] }, // Aufgabe 7
+            ] },
+            { id: 'hoeren', teile: [
+              { title: null, exercises: [] }, // Aufgabe 1
+              { title: null, exercises: [] }, // Aufgabe 2
+              { title: null, exercises: [] }, // Aufgabe 3
+              { title: null, exercises: [] }, // Aufgabe 4
+              { title: null, exercises: [] }, // Aufgabe 5
+              { title: null, exercises: [] }, // Aufgabe 6
+              { title: null, exercises: [] }, // Aufgabe 7
+            ] },
+            { id: 'schreiben', teile: [
+              { title: null, exercises: [] }, // Aufgabe 1
+              { title: null, exercises: [] }, // Aufgabe 2
+            ] },
+            { id: 'sprechen', teile: [
+              { title: null, exercises: [] }, // Aufgabe 1
+              { title: null, exercises: [] }, // Aufgabe 2
+              { title: null, exercises: [] }, // Aufgabe 3
+              { title: null, exercises: [] }, // Aufgabe 4
+              { title: null, exercises: [] }, // Aufgabe 5
+              { title: null, exercises: [] }, // Aufgabe 6
+              { title: null, exercises: [] }, // Aufgabe 7
+            ] },
+          ]
+        },
+        {
+          id: 'papier',
+          code: { tr: 'Kâğıt', de: 'Papier', en: 'Paper' },
+          name: { tr: 'Kâğıt tabanlı TestDaF', de: 'Papierbasierter TestDaF', en: 'Paper-based TestDaF' },
+          description: {
+            tr: 'Okuma, dinleme ve yazma görevleri kâğıt üzerinde cevaplanır.',
+            de: 'Lesen, Hören und Schreiben werden auf Papier bearbeitet.',
+            en: 'Reading, listening and writing are answered on paper.'
+          },
+          sections: [
+            { id: 'lesen', teile: [
+              { title: null, exercises: [] }, // Aufgabe 1
+              { title: null, exercises: [] }, // Aufgabe 2
+              { title: null, exercises: [] }, // Aufgabe 3
+            ] },
+            { id: 'hoeren', teile: [
+              { title: null, exercises: [] }, // Aufgabe 1
+              { title: null, exercises: [] }, // Aufgabe 2
+              { title: null, exercises: [] }, // Aufgabe 3
+            ] },
+            { id: 'schreiben', teile: [
+              { title: null, exercises: [] }, // Aufgabe 1
+            ] },
+            { id: 'sprechen', teile: [
+              { title: null, exercises: [] }, // Aufgabe 1
+              { title: null, exercises: [] }, // Aufgabe 2
+              { title: null, exercises: [] }, // Aufgabe 3
+              { title: null, exercises: [] }, // Aufgabe 4
+              { title: null, exercises: [] }, // Aufgabe 5
+              { title: null, exercises: [] }, // Aufgabe 6
+              { title: null, exercises: [] }, // Aufgabe 7
+            ] },
+          ]
+        }
       ]
     },
     {

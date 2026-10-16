@@ -169,7 +169,7 @@
           ],
           "correct": "Wegen des starken Windes wurde die Fähre abgesagt.",
           "explanations": {
-            "tr": "Doğru cevap: Wegen des starken Windes wurde die Fähre abgesagt.. Kaynak ilk görevde wegen + Genitiv yapısını artikel ve sıfat sonlarıyla test ediyor.",
+            "tr": "Doğru cevap: Wegen des starken Windes wurde die Fähre abgesagt. wegen yazılı standart dilde Genitiv ister. der Wind maskulin → Genitiv: des + sıfat -en + isim -(e)s: des starken Windes. „dem starken Wind“ Dativ'dir (konuşma dili), „der starke Wind“ ise Nominativ.",
             "de": "Die richtige Antwort ist „Wegen des starken Windes wurde die Fähre abgesagt.“. Achte bei „Welcher Satz ist grammatisch richtig?“ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “Wegen des starken Windes wurde die Fähre abgesagt.”. In “Welcher Satz ist grammatisch richtig?”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -184,7 +184,7 @@
           ],
           "correct": "Trotz des langen Wartens blieb sie ruhig.",
           "explanations": {
-            "tr": "Doğru cevap: Trotz des langen Wartens blieb sie ruhig.. trotz, kaynakta Genitiv ile kullanılır: des + sıfat -en + isim.",
+            "tr": "Doğru cevap: Trotz des langen Wartens blieb sie ruhig. trotz standart dilde Genitiv ister. das Warten (isimleşmiş fiil) neutrum → des + sıfat -en + isim -s: des langen Wartens. „der … Wartens“ yanlış artikel, „dem langen Warten“ ise Dativ'dir.",
             "de": "Die richtige Antwort ist „Trotz des langen Wartens blieb sie ruhig.“. Achte bei „Welcher Satz ist richtig?“ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “Trotz des langen Wartens blieb sie ruhig.”. In “Welcher Satz ist richtig?”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -408,7 +408,8 @@
           "correct": "Wegen meines verspäteten Zuges verpasste ich den Anschluss.",
           "answers": [
             "wegen meines verspaeteten zuges verpasste ich den anschluss",
-            "wegen meines verspäteten zuges verpasste ich den anschluss"
+            "wegen meines verspäteten zuges verpasste ich den anschluss",
+            "wegen meines verspäteten zugs verpasste ich den anschluss"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wegen meines verspäteten Zuges verpasste ich den Anschluss.. Possessivartikel Genitiv: meines verspäteten Zuges.",
@@ -422,7 +423,8 @@
           "sentence": "Ergänze mit „wegen“: ___ (starker Schneefall) blieb die Schule geschlossen.",
           "correct": "Wegen starken Schneefalls blieb die Schule geschlossen.",
           "answers": [
-            "wegen starken schneefalls blieb die schule geschlossen"
+            "wegen starken schneefalls blieb die schule geschlossen",
+            "wegen starken schneefalles blieb die schule geschlossen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wegen starken Schneefalls blieb die Schule geschlossen.. Artikelsiz maskulin Genitivte sıfat -en; isim güçlü Genitiv -s taşır.",
@@ -503,7 +505,7 @@
             "trotz des starken regens fand das konzert statt"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Trotz des starken Regens fand das Konzert statt.. trotz karşıtlık bildirir ve kaynakta Genitiv ile kullanılır.",
+            "tr": "Doğru cevap: Trotz des starken Regens fand das Konzert statt. trotz karşıtlık (…e rağmen) bildirir ve Genitiv ister. der Regen maskulin → des starken Regens (sıfat -en, isim -s).",
             "de": "Die richtige Antwort ist „Trotz des starken Regens fand das Konzert statt.“. Achte bei „Ergänze mit „trotz“: ___ (der starke Regen) fand das Konzert statt.“ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “Trotz des starken Regens fand das Konzert statt.”. In “Ergänze mit „trotz“: ___ (der starke Regen) fand das Konzert statt.”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -529,7 +531,8 @@
           "correct": "Trotz seines großen Erfolgs ist er bescheiden geblieben.",
           "answers": [
             "trotz seines grossen erfolgs ist er bescheiden geblieben",
-            "trotz seines großen erfolgs ist er bescheiden geblieben"
+            "trotz seines großen erfolgs ist er bescheiden geblieben",
+            "trotz seines großen erfolges ist er bescheiden geblieben"
           ],
           "explanations": {
             "tr": "Doğru cevap: Trotz seines großen Erfolgs ist er bescheiden geblieben.. Possessivartikel maskulin Genitiv: seines großen Erfolgs.",
@@ -558,7 +561,8 @@
           "sentence": "Ergänze mit „trotz“: ___ (das klare Verbot) benutzte er sein Handy.",
           "correct": "Trotz des klaren Verbots benutzte er sein Handy.",
           "answers": [
-            "trotz des klaren verbots benutzte er sein handy"
+            "trotz des klaren verbots benutzte er sein handy",
+            "trotz des klaren verbotes benutzte er sein handy"
           ],
           "explanations": {
             "tr": "Doğru cevap: Trotz des klaren Verbots benutzte er sein Handy.. Neutrum Genitiv: des klaren Verbots.",
@@ -616,7 +620,8 @@
           "sentence": "Ergänze mit „trotz“: ___ (der Protest der Anwohner) wurde gebaut.",
           "correct": "Trotz des Protests der Anwohner wurde gebaut.",
           "answers": [
-            "trotz des protests der anwohner wurde gebaut"
+            "trotz des protests der anwohner wurde gebaut",
+            "trotz des protestes der anwohner wurde gebaut"
           ],
           "explanations": {
             "tr": "Doğru cevap: Trotz des Protests der Anwohner wurde gebaut.. des Protests + der Anwohner biçiminde iki Genitiv grubu oluşur.",
@@ -669,7 +674,7 @@
             "während meines praktikums lernte ich viele fachbegriffe"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Während meines Praktikums lernte ich viele Fachbegriffe.. Kaynakta während + Genitiv süre/dönem bildirir.",
+            "tr": "Doğru cevap: Während meines Praktikums lernte ich viele Fachbegriffe. während bir dönem boyunca anlamı verir ve Genitiv ister. das Praktikum neutrum → mein → meines, isim -s alır: meines Praktikums.",
             "de": "Die richtige Antwort ist „Während meines Praktikums lernte ich viele Fachbegriffe.“. Achte bei „Ergänze mit „während“: ___ (mein Praktikum) lernte ich viele Fachbegriffe.“ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “Während meines Praktikums lernte ich viele Fachbegriffe.”. In “Ergänze mit „während“: ___ (mein Praktikum) lernte ich viele Fachbegriffe.”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -696,7 +701,8 @@
           "correct": "Während des Fluges darf das Gerät nicht benutzt werden.",
           "answers": [
             "waehrend des fluges darf das geraet nicht benutzt werden",
-            "während des fluges darf das gerät nicht benutzt werden"
+            "während des fluges darf das gerät nicht benutzt werden",
+            "während des flugs darf das gerät nicht benutzt werden"
           ],
           "explanations": {
             "tr": "Doğru cevap: Während des Fluges darf das Gerät nicht benutzt werden.. Maskulin Genitiv: des Fluges.",
@@ -741,7 +747,8 @@
           "correct": "Während seines Aufenthalts in Wien besuchte er mehrere Museen.",
           "answers": [
             "waehrend seines aufenthalts in wien besuchte er mehrere museen",
-            "während seines aufenthalts in wien besuchte er mehrere museen"
+            "während seines aufenthalts in wien besuchte er mehrere museen",
+            "während seines aufenthaltes in wien besuchte er mehrere museen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Während seines Aufenthalts in Wien besuchte er mehrere Museen.. Possessivartikel Genitiv: seines Aufenthalts.",
@@ -786,7 +793,8 @@
           "correct": "Während eines Gesprächs mit dem Kunden klingelte das Telefon.",
           "answers": [
             "waehrend eines gespraechs mit dem kunden klingelte das telefon",
-            "während eines gesprächs mit dem kunden klingelte das telefon"
+            "während eines gesprächs mit dem kunden klingelte das telefon",
+            "während eines gespräches mit dem kunden klingelte das telefon"
           ],
           "explanations": {
             "tr": "Doğru cevap: Während eines Gesprächs mit dem Kunden klingelte das Telefon.. Neutrum Genitiv: eines Gesprächs.",
@@ -1041,7 +1049,7 @@
           ],
           "correct": "Infolge",
           "explanations": {
-            "tr": "Doğru cevap: Infolge. Kaynakta Unwetter → infolge türü sonuç ilişkisi örnekleniyor.",
+            "tr": "Doğru cevap: Infolge. Yolların su basması fırtınanın doğrudan sonucudur; bir olayın sonucunu anlatırken infolge + Genitiv kullanılır: infolge des Unwetters. Trotz (…e rağmen) ve anlässlich (… vesilesiyle) anlamca uymaz.",
             "de": "Die richtige Antwort ist „Infolge“. Achte bei „Welche Präposition passt? „___ des Unwetters wurden mehrere Straßen überflutet.““ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “Infolge”. In “Welche Präposition passt? „___ des Unwetters wurden mehrere Straßen überflutet.“”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -1178,7 +1186,8 @@
           "sentence": "Ergänze mit „anstatt“: ___ (der geplante Vortrag) gab es eine Diskussion.",
           "correct": "Anstatt des geplanten Vortrags gab es eine Diskussion.",
           "answers": [
-            "anstatt des geplanten vortrags gab es eine diskussion"
+            "anstatt des geplanten vortrags gab es eine diskussion",
+            "anstatt des geplanten vortrages gab es eine diskussion"
           ],
           "explanations": {
             "tr": "Doğru cevap: Anstatt des geplanten Vortrags gab es eine Diskussion.. anstatt bir şeyin yerine başka bir şey yapılmasını anlatır; Genitiv: des Vortrags.",
@@ -1193,7 +1202,8 @@
           "correct": "Anstelle eines schriftlichen Berichts reichte er eine Präsentation ein.",
           "answers": [
             "anstelle eines schriftlichen berichts reichte er eine praesentation ein",
-            "anstelle eines schriftlichen berichts reichte er eine präsentation ein"
+            "anstelle eines schriftlichen berichts reichte er eine präsentation ein",
+            "anstelle eines schriftlichen berichtes reichte er eine präsentation ein"
           ],
           "explanations": {
             "tr": "Doğru cevap: Anstelle eines schriftlichen Berichts reichte er eine Präsentation ein.. anstelle + Genitiv: eines schriftlichen Berichts.",
@@ -1281,7 +1291,7 @@
             "anstelle des alten teppichs liegt jetzt parkett im raum"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Anstelle des alten Teppichs liegt jetzt Parkett im Raum.. Kaynakta benzer 'eski halının yerine' anlamı geçiyor; burada özgün cümle kullanılıyor.",
+            "tr": "Doğru cevap: Anstelle des alten Teppichs liegt jetzt Parkett im Raum. anstelle „…in yerine“ demektir ve Genitiv ister. der Teppich maskulin → des + sıfat -en + isim -s: des alten Teppichs.",
             "de": "Die richtige Antwort ist „Anstelle des alten Teppichs liegt jetzt Parkett im Raum.“. Achte bei „Ergänze mit „anstelle“: ___ (der alte Teppich) liegt jetzt Parkett im Raum.“ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “Anstelle des alten Teppichs liegt jetzt Parkett im Raum.”. In “Ergänze mit „anstelle“: ___ (der alte Teppich) liegt jetzt Parkett im Raum.”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -1308,7 +1318,8 @@
           "correct": "Anstelle des ursprünglichen Konzepts wurde eine einfachere Lösung gewählt.",
           "answers": [
             "anstelle des urspruenglichen konzepts wurde eine einfachere loesung gewaehlt",
-            "anstelle des ursprünglichen konzepts wurde eine einfachere lösung gewählt"
+            "anstelle des ursprünglichen konzepts wurde eine einfachere lösung gewählt",
+            "anstelle des ursprünglichen konzeptes wurde eine einfachere lösung gewählt"
           ],
           "explanations": {
             "tr": "Doğru cevap: Anstelle des ursprünglichen Konzepts wurde eine einfachere Lösung gewählt.. Neutrum Genitiv: des ursprünglichen Konzepts.",
@@ -1374,7 +1385,8 @@
           "correct": "Anlässlich seines achtzigsten Geburtstags kamen Gäste aus mehreren Ländern.",
           "answers": [
             "anlaesslich seines achtzigsten geburtstags kamen gaeste aus mehreren laendern",
-            "anlässlich seines achtzigsten geburtstags kamen gäste aus mehreren ländern"
+            "anlässlich seines achtzigsten geburtstags kamen gäste aus mehreren ländern",
+            "anlässlich seines achtzigsten geburtstages kamen gäste aus mehreren ländern"
           ],
           "explanations": {
             "tr": "Doğru cevap: Anlässlich seines achtzigsten Geburtstags kamen Gäste aus mehreren Ländern.. Possessivartikel maskulin Genitiv.",
@@ -1419,10 +1431,11 @@
           "correct": "Anlässlich des Tags der offenen Tür bietet die Universität Führungen an.",
           "answers": [
             "anlaesslich des tags der offenen tuer bietet die universitaet fuehrungen an",
-            "anlässlich des tags der offenen tür bietet die universität führungen an"
+            "anlässlich des tags der offenen tür bietet die universität führungen an",
+            "anlässlich des tages der offenen tür bietet die universität führungen an"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Anlässlich des Tags der offenen Tür bietet die Universität Führungen an.. Maskulin Genitiv: des Tags.",
+            "tr": "Doğru cevap: Anlässlich des Tags der offenen Tür bietet die Universität Führungen an. der Tag maskulin → Genitiv des Tags / des Tages; „der offenen Tür“ adın sabit Genitiv parçasıdır ve değişmez.",
             "de": "Die richtige Antwort ist „Anlässlich des Tags der offenen Tür bietet die Universität Führungen an.“. Achte bei „Ergänze: ___ (der Tag der offenen Tür) bietet die Universität Führungen an.“ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “Anlässlich des Tags der offenen Tür bietet die Universität Führungen an.”. In “Ergänze: ___ (der Tag der offenen Tür) bietet die Universität Führungen an.”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -1571,7 +1584,8 @@
           "sentence": "Ergänze: ___ (sein Gesundheitszustand) reduzierte er seine Arbeitszeit.",
           "correct": "Angesichts seines Gesundheitszustands reduzierte er seine Arbeitszeit.",
           "answers": [
-            "angesichts seines gesundheitszustands reduzierte er seine arbeitszeit"
+            "angesichts seines gesundheitszustands reduzierte er seine arbeitszeit",
+            "angesichts seines gesundheitszustandes reduzierte er seine arbeitszeit"
           ],
           "explanations": {
             "tr": "Doğru cevap: Angesichts seines Gesundheitszustands reduzierte er seine Arbeitszeit.. Possessivartikel maskulin Genitiv.",
@@ -1813,12 +1827,12 @@
           "sentence": "Welche Präposition passt? „Sie suchten eine Unterkunft ___ des touristischen Zentrums.“",
           "options": [
             "abseits",
-            "innerhalb",
+            "trotz",
             "mittels"
           ],
           "correct": "abseits",
           "explanations": {
-            "tr": "Doğru cevap: abseits. Turistik merkezden uzakta, sakin bir yerde: abseits.",
+            "tr": "Doğru cevap: abseits. abseits + Genitiv „…den uzakta, kenarında“ demektir: abseits des touristischen Zentrums = turistik merkezden uzakta, sakin bir yerde. trotz ve mittels mekân bildirmez.",
             "de": "Die richtige Antwort ist „abseits“. Achte bei „Welche Präposition passt? „Sie suchten eine Unterkunft ___ des touristischen Zentrums.““ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “abseits”. In “Welche Präposition passt? „Sie suchten eine Unterkunft ___ des touristischen Zentrums.“”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -1879,7 +1893,8 @@
           "correct": "Die Identität wurde mittels eines biometrischen Abgleichs bestätigt.",
           "answers": [
             "die identitaet wurde mittels eines biometrischen abgleichs bestaetigt",
-            "die identität wurde mittels eines biometrischen abgleichs bestätigt"
+            "die identität wurde mittels eines biometrischen abgleichs bestätigt",
+            "die identität wurde mittels eines biometrischen abgleiches bestätigt"
           ],
           "explanations": {
             "tr": "Doğru cevap: Die Identität wurde mittels eines biometrischen Abgleichs bestätigt.. Maskulin Genitiv: eines biometrischen Abgleichs.",
@@ -1939,7 +1954,7 @@
             "die position wurde mittels satellitendaten bestimmt"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Die Position wurde mittels Satellitendaten bestimmt.. Artikelsiz çoğul biçim burada isim biçimini değiştirmez.",
+            "tr": "Doğru cevap: Die Position wurde mittels Satellitendaten bestimmt. Satellitendaten çoğul ve artikelsizdir; çoğul Genitivde isim değişmez (Daten), bu yüzden mittels Satellitendaten yazılır. Artikel veya sıfat olsaydı Genitiv görünürdü: mittels genauer Satellitendaten.",
             "de": "Die richtige Antwort ist „Die Position wurde mittels Satellitendaten bestimmt.“. Achte bei „Ergänze: Die Position wurde ___ (Satellitendaten, Pl.) bestimmt.“ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “Die Position wurde mittels Satellitendaten bestimmt.”. In “Ergänze: Die Position wurde ___ (Satellitendaten, Pl.) bestimmt.”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -2379,13 +2394,13 @@
           "word": "Kontext",
           "sentence": "Welche Präposition passt? „Er suchte eine Wohnung ___ des Verkehrslärms.“",
           "options": [
-            "aufgrund",
+            "mittels",
             "innerhalb",
             "abseits"
           ],
           "correct": "abseits",
           "explanations": {
-            "tr": "Doğru cevap: abseits. Gürültüden uzakta: abseits.",
+            "tr": "Doğru cevap: abseits. abseits des Verkehrslärms = trafik gürültüsünden uzakta. abseits + Genitiv bir şeyin uzağını/kenarını bildirir; mittels (araç) ve innerhalb (içinde) anlamca uymaz.",
             "de": "Die richtige Antwort ist „abseits“. Achte bei „Welche Präposition passt? „Er suchte eine Wohnung ___ des Verkehrslärms.““ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “abseits”. In “Welche Präposition passt? „Er suchte eine Wohnung ___ des Verkehrslärms.“”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -2536,7 +2551,8 @@
           "sentence": "Ergänze: trotz ___ (ein klares Verbot)",
           "correct": "eines klaren Verbots",
           "answers": [
-            "eines klaren verbots"
+            "eines klaren verbots",
+            "eines klaren verbotes"
           ],
           "explanations": {
             "tr": "Doğru cevap: eines klaren Verbots. Neutrum Genitiv belirsiz artikel: eines klaren Verbots.",
@@ -2550,7 +2566,8 @@
           "sentence": "Ergänze: während ___ (mein langer Aufenthalt)",
           "correct": "meines langen Aufenthalts",
           "answers": [
-            "meines langen aufenthalts"
+            "meines langen aufenthalts",
+            "meines langen aufenthaltes"
           ],
           "explanations": {
             "tr": "Doğru cevap: meines langen Aufenthalts. Possessivartikel Genitiv maskulin: meines + -en.",
@@ -2581,7 +2598,7 @@
             "steigender preise"
           ],
           "explanations": {
-            "tr": "Doğru cevap: steigender Preise. Artikelsiz Genitiv plural: adjective -er.",
+            "tr": "Doğru cevap: steigender Preise. Artikel olmadığı için çoğul Genitivi sıfat gösterir: güçlü son -er → steigender Preise.",
             "de": "Die richtige Antwort ist „steigender Preise“. Achte bei „Ergänze: angesichts ___ (steigende Preise, Pl.)“ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “steigender Preise”. In “Ergänze: angesichts ___ (steigende Preise, Pl.)”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -2608,7 +2625,8 @@
           "correct": "seines fünfzigsten Geburtstags",
           "answers": [
             "seines fuenfzigsten geburtstags",
-            "seines fünfzigsten geburtstags"
+            "seines fünfzigsten geburtstags",
+            "seines fünfzigsten geburtstages"
           ],
           "explanations": {
             "tr": "Doğru cevap: seines fünfzigsten Geburtstags. Possessivartikel maskulin Genitiv + -en.",
@@ -2622,7 +2640,8 @@
           "sentence": "Ergänze: infolge ___ (ein schwerer Unfall)",
           "correct": "eines schweren Unfalls",
           "answers": [
-            "eines schweren unfalls"
+            "eines schweren unfalls",
+            "eines schweren unfalles"
           ],
           "explanations": {
             "tr": "Doğru cevap: eines schweren Unfalls. Maskulin Genitiv belirsiz artikel.",
@@ -2699,10 +2718,11 @@
           "sentence": "Ergänze: trotz des ___ (Verbot)",
           "correct": "Verbots",
           "answers": [
-            "verbots"
+            "verbots",
+            "verbotes"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Verbots. Neutrum Verbot Genitivte -s alır.",
+            "tr": "Doğru cevap: Verbots. das Verbot neutrum; Genitivte isim -s veya -es alır: des Verbots / des Verbotes.",
             "de": "Die richtige Antwort ist „Verbots“. Achte bei „Ergänze: trotz des ___ (Verbot)“ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “Verbots”. In “Ergänze: trotz des ___ (Verbot)”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -2713,10 +2733,11 @@
           "sentence": "Ergänze: während des ___ (Urlaub)",
           "correct": "Urlaubs",
           "answers": [
-            "urlaubs"
+            "urlaubs",
+            "urlaubes"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Urlaubs. Maskulin Urlaub → Urlaubs.",
+            "tr": "Doğru cevap: Urlaubs. der Urlaub maskulin; Genitivte isim -s veya -es alır: des Urlaubs / des Urlaubes.",
             "de": "Die richtige Antwort ist „Urlaubs“. Achte bei „Ergänze: während des ___ (Urlaub)“ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “Urlaubs”. In “Ergänze: während des ___ (Urlaub)”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -2770,10 +2791,11 @@
           "sentence": "Ergänze: unweit des ___ (Bahnhof)",
           "correct": "Bahnhofs",
           "answers": [
-            "bahnhofs"
+            "bahnhofs",
+            "bahnhofes"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Bahnhofs. Maskulin Bahnhof → Bahnhofs.",
+            "tr": "Doğru cevap: Bahnhofs. der Bahnhof maskulin; Genitivte isim -s veya -es alır: des Bahnhofs / des Bahnhofes.",
             "de": "Die richtige Antwort ist „Bahnhofs“. Achte bei „Ergänze: unweit des ___ (Bahnhof)“ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “Bahnhofs”. In “Ergänze: unweit des ___ (Bahnhof)”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -2812,10 +2834,11 @@
           "sentence": "Ergänze: oberhalb des ___ (Dorf)",
           "correct": "Dorfes",
           "answers": [
-            "dorfes"
+            "dorfes",
+            "dorfs"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Dorfes. Tek heceli/uygun nötr isimlerde -es yaygındır: Dorfes.",
+            "tr": "Doğru cevap: Dorfes. das Dorf tek heceli neutrum isim; Genitivte -es yaygındır (des Dorfes), des Dorfs da doğrudur.",
             "de": "Die richtige Antwort ist „Dorfes“. Achte bei „Ergänze: oberhalb des ___ (Dorf)“ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “Dorfes”. In “Ergänze: oberhalb des ___ (Dorf)”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -2850,7 +2873,7 @@
             "wegen des starken regens bleiben wir zu hause"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Wegen des starken Regens bleiben wir zu Hause.. Kaynakta standart kullanım Genitiv'tir: des starken Regens.",
+            "tr": "Doğru cevap: Wegen des starken Regens bleiben wir zu Hause. Yazılı standart dilde wegen Genitiv ister; „wegen dem“ konuşma dilidir. der Regen maskulin → des starken Regens (sıfat -en, isim -s).",
             "de": "Die richtige Antwort ist „Wegen des starken Regens bleiben wir zu Hause.“. Achte bei „Korrigiere: „Wegen dem starken Regen bleiben wir zu Hause.““ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “Wegen des starken Regens bleiben wir zu Hause.”. In “Korrigiere: „Wegen dem starken Regen bleiben wir zu Hause.“”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -2893,7 +2916,7 @@
             "innerhalb eines monats muss alles fertig sein"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Innerhalb eines Monats muss alles fertig sein.. Neutrum Genitiv belirsiz artikel: eines.",
+            "tr": "Doğru cevap: Innerhalb eines Monats muss alles fertig sein. der Monat maskulin; Genitivte belirsiz artikel eines olur, isim -s alır: eines Monats. „ein Monats“ yanlış, çünkü artikel de Genitiv sonu taşımalıdır.",
             "de": "Die richtige Antwort ist „Innerhalb eines Monats muss alles fertig sein.“. Achte bei „Korrigiere: „Innerhalb ein Monats muss alles fertig sein.““ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “Innerhalb eines Monats muss alles fertig sein.”. In “Korrigiere: „Innerhalb ein Monats muss alles fertig sein.“”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -2923,7 +2946,7 @@
             "aufgrund technischer probleme begann die sitzung später"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Aufgrund technischer Probleme begann die Sitzung später.. Artikelsiz Genitiv plural adjective -er.",
+            "tr": "Doğru cevap: Aufgrund technischer Probleme begann die Sitzung später. Artikel olmadığından çoğul Genitivi sıfat gösterir: technische → technischer Probleme.",
             "de": "Die richtige Antwort ist „Aufgrund technischer Probleme begann die Sitzung später.“. Achte bei „Korrigiere: „Aufgrund technische Probleme begann die Sitzung später.““ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “Aufgrund technischer Probleme begann die Sitzung später.”. In “Korrigiere: „Aufgrund technische Probleme begann die Sitzung später.“”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -2950,7 +2973,8 @@
           "correct": "Infolge eines Stromausfalls blieb das Gebäude dunkel.",
           "answers": [
             "infolge eines stromausfalls blieb das gebaeude dunkel",
-            "infolge eines stromausfalls blieb das gebäude dunkel"
+            "infolge eines stromausfalls blieb das gebäude dunkel",
+            "infolge eines stromausfalles blieb das gebäude dunkel"
           ],
           "explanations": {
             "tr": "Doğru cevap: Infolge eines Stromausfalls blieb das Gebäude dunkel.. Maskulin Genitiv: eines Stromausfalls.",
@@ -2964,7 +2988,8 @@
           "sentence": "Korrigiere: „Unweit dem Bahnhof wurde gebaut.“",
           "correct": "Unweit des Bahnhofs wurde gebaut.",
           "answers": [
-            "unweit des bahnhofs wurde gebaut"
+            "unweit des bahnhofs wurde gebaut",
+            "unweit des bahnhofes wurde gebaut"
           ],
           "explanations": {
             "tr": "Doğru cevap: Unweit des Bahnhofs wurde gebaut.. unweit + Genitiv: des Bahnhofs.",
@@ -2981,7 +3006,7 @@
             "mittels moderner software wurden die daten analysiert"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Mittels moderner Software wurden die Daten analysiert.. Artikelsiz feminin Genitiv adjective -er.",
+            "tr": "Doğru cevap: Mittels moderner Software wurden die Daten analysiert. die Software feminin ve artikelsiz; Genitivte sıfat güçlü -er sonu alır: moderner Software.",
             "de": "Die richtige Antwort ist „Mittels moderner Software wurden die Daten analysiert.“. Achte bei „Korrigiere: „Mittels moderne Software wurden die Daten analysiert.““ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “Mittels moderner Software wurden die Daten analysiert.”. In “Korrigiere: „Mittels moderne Software wurden die Daten analysiert.“”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -3014,7 +3039,9 @@
           "correct": "Aufgrund der hohen Auslastung verlängerten sich die Lieferzeiten.",
           "answers": [
             "aufgrund der hohen auslastung verlaengerten sich die lieferzeiten",
-            "aufgrund der hohen auslastung verlängerten sich die lieferzeiten"
+            "aufgrund der hohen auslastung verlängerten sich die lieferzeiten",
+            "wegen der hohen auslastung verlängerten sich die lieferzeiten",
+            "infolge der hohen auslastung verlängerten sich die lieferzeiten"
           ],
           "explanations": {
             "tr": "Doğru cevap: Aufgrund der hohen Auslastung verlängerten sich die Lieferzeiten.. İş bağlamında sebep/gerekçe: aufgrund + Genitiv.",
@@ -3029,7 +3056,8 @@
           "correct": "Anlässlich des neuen Forschungsprojekts wurde ein zusätzliches Labor eingerichtet.",
           "answers": [
             "anlaesslich des neuen forschungsprojekts wurde ein zusaetzliches labor eingerichtet",
-            "anlässlich des neuen forschungsprojekts wurde ein zusätzliches labor eingerichtet"
+            "anlässlich des neuen forschungsprojekts wurde ein zusätzliches labor eingerichtet",
+            "anlässlich des neuen forschungsprojektes wurde ein zusätzliches labor eingerichtet"
           ],
           "explanations": {
             "tr": "Doğru cevap: Anlässlich des neuen Forschungsprojekts wurde ein zusätzliches Labor eingerichtet.. Vesile/bağlam: anlässlich + des Projekts.",
@@ -3215,7 +3243,7 @@
           ],
           "correct": "Trotz der zahlreichen Einwände wurde der Antrag genehmigt.",
           "explanations": {
-            "tr": "Doğru cevap: Trotz der zahlreichen Einwände wurde der Antrag genehmigt.. Plural Genitiv belirli article: der zahlreichen Einwände.",
+            "tr": "Doğru cevap: Trotz der zahlreichen Einwände wurde der Antrag genehmigt. trotz Genitiv ister; çoğul Genitivde belirli artikel der, sıfat -en: der zahlreichen Einwände. „den … Einwänden“ Dativ, „die …“ Nominativ/Akkusativ'dir.",
             "de": "Die richtige Antwort ist „Trotz der zahlreichen Einwände wurde der Antrag genehmigt.“. Achte bei „Welche Form ist korrekt?“ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “Trotz der zahlreichen Einwände wurde der Antrag genehmigt.”. In “Welche Form ist korrekt?”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -3356,7 +3384,7 @@
             "angesichts der sich schnell verändernden marktlage muss die strategie flexibel bleiben"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Angesichts der sich schnell verändernden Marktlage muss die Strategie flexibel bleiben.. Feminin Genitiv belirli article + genişletilmiş sıfat grubu: der ... Marktlage.",
+            "tr": "Doğru cevap: Angesichts der sich schnell verändernden Marktlage muss die Strategie flexibel bleiben. die Marktlage feminin → Genitiv artikeli der; genişletilmiş sıfat grubu (sich schnell verändernd) artikelden sonra -en alır: der sich schnell verändernden Marktlage.",
             "de": "Die richtige Antwort ist „Angesichts der sich schnell verändernden Marktlage muss die Strategie flexibel bleiben.“. Achte bei „Schreibe vollständig mit „angesichts“: ___ (die sich schnell verändernde Marktlage) muss die Strategie flexibel bleiben.“ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “Angesichts der sich schnell verändernden Marktlage muss die Strategie flexibel bleiben.”. In “Schreibe vollständig mit „angesichts“: ___ (die sich schnell verändernde Marktlage) muss die Strategie flexibel bleiben.”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -3368,7 +3396,8 @@
           "correct": "Infolge eines unerwarteten Ausfalls des Kühlsystems musste die Produktion unterbrochen werden.",
           "answers": [
             "infolge eines unerwarteten ausfalls des kuehlsystems musste die produktion unterbrochen werden",
-            "infolge eines unerwarteten ausfalls des kühlsystems musste die produktion unterbrochen werden"
+            "infolge eines unerwarteten ausfalls des kühlsystems musste die produktion unterbrochen werden",
+            "infolge eines unerwarteten ausfalles des kühlsystems musste die produktion unterbrochen werden"
           ],
           "explanations": {
             "tr": "Doğru cevap: Infolge eines unerwarteten Ausfalls des Kühlsystems musste die Produktion unterbrochen werden.. Maskulin Genitiv: eines unerwarteten Ausfalls; ardından ikinci Genitiv des Kühlsystems.",
@@ -3401,7 +3430,7 @@
             "trotz der von mehreren fachleuten geäußerten bedenken wurde das projekt fortgesetzt"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Trotz der von mehreren Fachleuten geäußerten Bedenken wurde das Projekt fortgesetzt.. Plural Genitiv belirli article: der; genişletilmiş Partizip attribute -en.",
+            "tr": "Doğru cevap: Trotz der von mehreren Fachleuten geäußerten Bedenken wurde das Projekt fortgesetzt. die Bedenken çoğul → Genitiv artikeli der; genişletilmiş Partizip grubu (von mehreren Fachleuten geäußert) artikelden sonra -en alır: geäußerten.",
             "de": "Die richtige Antwort ist „Trotz der von mehreren Fachleuten geäußerten Bedenken wurde das Projekt fortgesetzt.“. Achte bei „Schreibe mit „trotz“: ___ (die von mehreren Fachleuten geäußerten Bedenken) wurde das Projekt fortgesetzt.“ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “Trotz der von mehreren Fachleuten geäußerten Bedenken wurde das Projekt fortgesetzt.”. In “Schreibe mit „trotz“: ___ (die von mehreren Fachleuten geäußerten Bedenken) wurde das Projekt fortgesetzt.”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -3460,7 +3489,7 @@
             "aufgrund der stark gestiegenen kosten wurde das projekt gestoppt"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Aufgrund der stark gestiegenen Kosten wurde das Projekt gestoppt.. Çoğul Genitiv belirli article der; genişletilmiş adjectival grup -en.",
+            "tr": "Doğru cevap: Aufgrund der stark gestiegenen Kosten wurde das Projekt gestoppt. aufgrund Genitiv ister; die Kosten çoğul → der (den Dativ'dir). Genişletilmiş sıfat grubu artikelden sonra -en alır: der stark gestiegenen Kosten.",
             "de": "Die richtige Antwort ist „Aufgrund der stark gestiegenen Kosten wurde das Projekt gestoppt.“. Achte bei „Korrigiere vollständig: „Aufgrund den stark gestiegenen Kosten wurde das Projekt gestoppt.““ besonders auf die Bedeutung der Präposition, den Genitivartikel sowie die Nomen- und Adjektivendungen.",
             "en": "The correct answer is “Aufgrund der stark gestiegenen Kosten wurde das Projekt gestoppt.”. In “Korrigiere vollständig: „Aufgrund den stark gestiegenen Kosten wurde das Projekt gestoppt.“”, pay special attention to the meaning of the preposition, the genitive article, and noun/adjective endings."
           }
@@ -3472,7 +3501,8 @@
           "correct": "Unweit des neu ausgebauten Hauptbahnhofs hat die Firma ein Büro gemietet.",
           "answers": [
             "unweit des neu ausgebauten hauptbahnhofs hat die firma ein buero gemietet",
-            "unweit des neu ausgebauten hauptbahnhofs hat die firma ein büro gemietet"
+            "unweit des neu ausgebauten hauptbahnhofs hat die firma ein büro gemietet",
+            "unweit des neu ausgebauten hauptbahnhofes hat die firma ein büro gemietet"
           ],
           "explanations": {
             "tr": "Doğru cevap: Unweit des neu ausgebauten Hauptbahnhofs hat die Firma ein Büro gemietet.. Maskulin Genitiv: des ... Hauptbahnhofs.",

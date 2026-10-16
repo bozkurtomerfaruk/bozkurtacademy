@@ -220,14 +220,14 @@
           "sentence": "Wir besuchen ___ Nachbarn am Sonntag.",
           "options": [
             "die",
-            "den",
+            "dem",
             "der"
           ],
           "correct": "die",
           "explanations": {
-            "tr": "Doğru cevap: die. Çoğul belirli artikel Akkusativ'te die olarak kalır.",
-            "de": "Die richtige Antwort ist „die“. Çoğul belirli artikel Akkusativ'te die olarak kalır. Suche in „Wir besuchen ___ Nachbarn am Sonntag.“ zuerst das Verb und dann das direkte Objekt auf Wen?/Was?. Prüfe anschließend Genus und Akkusativform.",
-            "en": "The correct answer is “die”. Çoğul belirli artikel Akkusativ'te die olarak kalır. In “Wir besuchen ___ Nachbarn am Sonntag.”, first find the verb, then the direct object answering Wen?/Was?, and finally check the noun's gender and accusative form."
+            "tr": "Doğru cevap: die. İpucu çoğul: die Nachbarn. Çoğulda belirli artikel Akkusativ'te de die kalır. (Not: tekil olsaydı der Nachbar → Akkusativ den Nachbarn olurdu; bu yüzden 'den' seçeneği kaldırıldı.)",
+            "de": "Richtig ist „die“: Der Hinweis ist Plural (die Nachbarn); im Plural bleibt der Artikel im Akkusativ die. Vollständig: „Wir besuchen die Nachbarn am Sonntag.“",
+            "en": "The answer is “die”: the cue is plural (die Nachbarn), and the plural article stays die in the accusative."
           }
         },
         {
@@ -950,7 +950,7 @@
           ],
           "correct": "zwei Tickets",
           "explanations": {
-            "tr": "Doğru cevap: zwei Tickets. Sayıdan sonra plural isim doğrudan Akkusativ'te aynı çoğul biçimde kalır.",
+            "tr": "Doğru cevap: zwei Tickets. Ticket'in çoğulu -s ile yapılır: das Ticket → die Tickets. Çoğul isim Akkusativ'te de aynı biçimde kalır; 'Ticketen' ve 'Ticketsen' diye bir biçim yoktur.",
             "de": "Die richtige Antwort ist „zwei Tickets“. Sayıdan sonra plural isim doğrudan Akkusativ'te aynı çoğul biçimde kalır. Suche in „A: Was habt ihr? B: Wir haben ___.“ zuerst das Verb und dann das direkte Objekt auf Wen?/Was?. Prüfe anschließend Genus und Akkusativform.",
             "en": "The correct answer is “zwei Tickets”. Sayıdan sonra plural isim doğrudan Akkusativ'te aynı çoğul biçimde kalır. In “A: Was habt ihr? B: Wir haben ___.”, first find the verb, then the direct object answering Wen?/Was?, and finally check the noun's gender and accusative form."
           }
@@ -2055,10 +2055,11 @@
           "sentence": "Stelle die Frage: Ich brauche einen Termin.",
           "correct": "Was brauche ich",
           "answers": [
-            "was brauche ich"
+            "was brauche ich",
+            "was brauchst du"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Was brauche ich. Termin şey/soyut nesne: Was?",
+            "tr": "Doğru cevap: Was brauche ich / Was brauchst du? Termin bir şeydir (kişi değil), bu yüzden Was? ile sorulur. Kişi olsaydı Wen? kullanılırdı.",
             "de": "Die richtige Antwort ist „Was brauche ich“. Termin şey/soyut nesne: Was? Suche in „Stelle die Frage: Ich brauche einen Termin.“ zuerst das Verb und dann das direkte Objekt auf Wen?/Was?. Prüfe anschließend Genus und Akkusativform.",
             "en": "The correct answer is “Was brauche ich”. Termin şey/soyut nesne: Was? In “Stelle die Frage: Ich brauche einen Termin.”, first find the verb, then the direct object answering Wen?/Was?, and finally check the noun's gender and accusative form."
           }
@@ -2115,15 +2116,15 @@
         {
           "type": "text",
           "word": "haben",
-          "sentence": "Ergänze vollständig: Ich habe ___ . (der Termin)",
+          "sentence": "Ergänze vollständig: Ich habe ___ . (ein Termin)",
           "correct": "einen Termin",
           "answers": [
             "einen termin"
           ],
           "explanations": {
-            "tr": "Doğru cevap: einen Termin. haben doğrudan nesne alır; Termin maskulin.",
-            "de": "Die richtige Antwort ist „einen Termin“. haben doğrudan nesne alır; Termin maskulin. Suche in „Ergänze vollständig: Ich habe ___ . (der Termin)“ zuerst das Verb und dann das direkte Objekt auf Wen?/Was?. Prüfe anschließend Genus und Akkusativform.",
-            "en": "The correct answer is “einen Termin”. haben doğrudan nesne alır; Termin maskulin. In “Ergänze vollständig: Ich habe ___ . (der Termin)”, first find the verb, then the direct object answering Wen?/Was?, and finally check the noun's gender and accusative form."
+            "tr": "Doğru cevap: einen Termin. haben Akkusativ nesne alır; Termin maskulin olduğu için ein → einen olur.",
+            "de": "Die richtige Antwort ist „einen Termin“. haben doğrudan nesne alır; Termin maskulin. Suche in „Ergänze vollständig: Ich habe ___ . (ein Termin)“ zuerst das Verb und dann das direkte Objekt auf Wen?/Was?. Prüfe anschließend Genus und Akkusativform.",
+            "en": "The correct answer is “einen Termin”. haben doğrudan nesne alır; Termin maskulin. In “Ergänze vollständig: Ich habe ___ . (ein Termin)”, first find the verb, then the direct object answering Wen?/Was?, and finally check the noun's gender and accusative form."
           }
         },
         {
@@ -2810,7 +2811,7 @@
             "keine"
           ],
           "explanations": {
-            "tr": "Doğru cevap: keine. Feminin negative article keine.",
+            "tr": "Doğru cevap: keine. Tasche feminin; feminin olumsuz artikel Akkusativ'te değişmez: keine Tasche.",
             "de": "Die richtige Antwort ist „keine“. Feminin negative article keine. Suche in „Ergänze negativ: Sie kauft ___ Tasche.“ zuerst das Verb und dann das direkte Objekt auf Wen?/Was?. Prüfe anschließend Genus und Akkusativform.",
             "en": "The correct answer is “keine”. Feminin negative article keine. In “Ergänze negativ: Sie kauft ___ Tasche.”, first find the verb, then the direct object answering Wen?/Was?, and finally check the noun's gender and accusative form."
           }
@@ -2852,7 +2853,7 @@
             "keine"
           ],
           "explanations": {
-            "tr": "Doğru cevap: keine. Plural negative article keine.",
+            "tr": "Doğru cevap: keine. Freunde çoğul; çoğulda olumsuz artikel Akkusativ'te keine olur.",
             "de": "Die richtige Antwort ist „keine“. Plural negative article keine. Suche in „Ergänze negativ: Er hat ___ Freunde hier.“ zuerst das Verb und dann das direkte Objekt auf Wen?/Was?. Prüfe anschließend Genus und Akkusativform.",
             "en": "The correct answer is “keine”. Plural negative article keine. In “Ergänze negativ: Er hat ___ Freunde hier.”, first find the verb, then the direct object answering Wen?/Was?, and finally check the noun's gender and accusative form."
           }
@@ -2927,7 +2928,9 @@
           "correct": "für meinen Bruder",
           "answers": [
             "fuer meinen bruder",
-            "für meinen bruder"
+            "für meinen bruder",
+            "für",
+            "fuer"
           ],
           "explanations": {
             "tr": "Doğru cevap: für meinen Bruder. für daima Akkusativ ister; mein Bruder → meinen Bruder.",
@@ -2941,7 +2944,8 @@
           "sentence": "Ergänze: Ich gehe nicht ___ meinen Regenschirm raus.",
           "correct": "ohne meinen Regenschirm",
           "answers": [
-            "ohne meinen regenschirm"
+            "ohne meinen regenschirm",
+            "ohne"
           ],
           "explanations": {
             "tr": "Doğru cevap: ohne meinen Regenschirm. ohne + Akkusativ; Regenschirm maskulin.",
@@ -2955,7 +2959,8 @@
           "sentence": "Ergänze: Das Auto fährt ___ einen Baum.",
           "correct": "gegen einen Baum",
           "answers": [
-            "gegen einen baum"
+            "gegen einen baum",
+            "gegen"
           ],
           "explanations": {
             "tr": "Doğru cevap: gegen einen Baum. gegen + Akkusativ; Baum maskulin.",
@@ -2969,7 +2974,8 @@
           "sentence": "Ergänze: Wir gehen ___ den See.",
           "correct": "um den See",
           "answers": [
-            "um den see"
+            "um den see",
+            "um"
           ],
           "explanations": {
             "tr": "Doğru cevap: um den See. um + Akkusativ; See maskulin.",
@@ -2984,7 +2990,9 @@
           "correct": "für meine Mutter",
           "answers": [
             "fuer meine mutter",
-            "für meine mutter"
+            "für meine mutter",
+            "für",
+            "fuer"
           ],
           "explanations": {
             "tr": "Doğru cevap: für meine Mutter. Mutter feminin; meine değişmez.",
@@ -2998,7 +3006,8 @@
           "sentence": "Ergänze: Er trinkt Kaffee ___ Zucker.",
           "correct": "ohne Zucker",
           "answers": [
-            "ohne zucker"
+            "ohne zucker",
+            "ohne"
           ],
           "explanations": {
             "tr": "Doğru cevap: ohne Zucker. Artikelsiz madde adı; ohne + Akkusativ.",
@@ -3012,7 +3021,8 @@
           "sentence": "Ergänze: Sie spielt ___ ihre Freundin.",
           "correct": "gegen ihre Freundin",
           "answers": [
-            "gegen ihre freundin"
+            "gegen ihre freundin",
+            "gegen"
           ],
           "explanations": {
             "tr": "Doğru cevap: gegen ihre Freundin. Freundin feminin; ihre.",
@@ -3026,7 +3036,8 @@
           "sentence": "Ergänze: Die Kinder laufen ___ das Haus.",
           "correct": "um das Haus",
           "answers": [
-            "um das haus"
+            "um das haus",
+            "um"
           ],
           "explanations": {
             "tr": "Doğru cevap: um das Haus. Haus neutrum; das.",
@@ -3041,7 +3052,9 @@
           "correct": "für die Kinder",
           "answers": [
             "fuer die kinder",
-            "für die kinder"
+            "für die kinder",
+            "für",
+            "fuer"
           ],
           "explanations": {
             "tr": "Doğru cevap: für die Kinder. Plural die.",
@@ -3055,7 +3068,8 @@
           "sentence": "Ergänze: Du kannst nicht ___ deinen Pass reisen.",
           "correct": "ohne deinen Pass",
           "answers": [
-            "ohne deinen pass"
+            "ohne deinen pass",
+            "ohne"
           ],
           "explanations": {
             "tr": "Doğru cevap: ohne deinen Pass. Pass maskulin; dein → deinen.",
@@ -3283,7 +3297,7 @@
             "wir treffen unseren lehrer"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Wir treffen unseren Lehrer. Soru ihr grubuna sorulmuş olabilir; cevap 'Wir ...'. Lehrer maskulin: unseren.",
+            "tr": "Doğru cevap: Wir treffen unseren Lehrer. Soru ihr ile sorulduğu için cevap wir ile verilir; bu yüzden euer → unser olur. Lehrer maskulin ve Akkusativ: unseren Lehrer.",
             "de": "Die richtige Antwort ist „Wir treffen unseren Lehrer“. Soru ihr grubuna sorulmuş olabilir; cevap 'Wir ...'. Lehrer maskulin: unseren. Suche in „Antworte: Wen trefft ihr? (euer Lehrer)“ zuerst das Verb und dann das direkte Objekt auf Wen?/Was?. Prüfe anschließend Genus und Akkusativform.",
             "en": "The correct answer is “Wir treffen unseren Lehrer”. Soru ihr grubuna sorulmuş olabilir; cevap 'Wir ...'. Lehrer maskulin: unseren. In “Antworte: Wen trefft ihr? (euer Lehrer)”, first find the verb, then the direct object answering Wen?/Was?, and finally check the noun's gender and accusative form."
           }
@@ -3513,7 +3527,8 @@
           "sentence": "Durum: Yeni telefonu beğeniyorsun. (das neue Handy)",
           "correct": "Ich finde das neue Handy gut",
           "answers": [
-            "ich finde das neue handy gut"
+            "ich finde das neue handy gut",
+            "ich mag das neue handy"
           ],
           "explanations": {
             "tr": "Doğru cevap: Ich finde das neue Handy gut. finden + Akkusativ; Handy neutrum.",
@@ -3542,7 +3557,13 @@
           "correct": "Ich kaufe ein Geschenk für meinen Bruder",
           "answers": [
             "ich kaufe ein geschenk fuer meinen bruder",
-            "ich kaufe ein geschenk für meinen bruder"
+            "ich kaufe ein geschenk für meinen bruder",
+            "ich kaufe für meinen bruder ein geschenk",
+            "ich kaufe fuer meinen bruder ein geschenk",
+            "ich kaufe ein geschenk für meine schwester",
+            "ich kaufe ein geschenk fuer meine schwester",
+            "ich kaufe für meine schwester ein geschenk",
+            "ich kaufe fuer meine schwester ein geschenk"
           ],
           "explanations": {
             "tr": "Doğru cevap: Ich kaufe ein Geschenk für meinen Bruder. Geschenk neutrum; für + Akkusativ meinen Bruder.",
@@ -3593,7 +3614,9 @@
           "correct": "Die Sekretärin macht einen Termin",
           "answers": [
             "die sekretaerin macht einen termin",
-            "die sekretärin macht einen termin"
+            "die sekretärin macht einen termin",
+            "der sekretär macht einen termin",
+            "der sekretaer macht einen termin"
           ],
           "explanations": {
             "tr": "Doğru cevap: Die Sekretärin macht einen Termin. Termin maskulin: einen.",
@@ -3688,15 +3711,16 @@
         {
           "type": "text",
           "word": "Büro",
-          "sentence": "Bilde: Biz yazıcıyı bulamıyoruz. (der Drucker / kein finden)",
+          "sentence": "Bilde: Biz yazıcıyı bulamıyoruz. (der Drucker / nicht finden)",
           "correct": "Wir finden den Drucker nicht",
           "answers": [
-            "wir finden den drucker nicht"
+            "wir finden den drucker nicht",
+            "wir können den drucker nicht finden"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Wir finden den Drucker nicht. Drucker maskulin: den; nicht fiil/nesne ilişkisindeki bulunamama anlamını olumsuzlar.",
-            "de": "Die richtige Antwort ist „Wir finden den Drucker nicht“. Drucker maskulin: den; nicht fiil/nesne ilişkisindeki bulunamama anlamını olumsuzlar. Suche in „Bilde: Biz yazıcıyı bulamıyoruz. (der Drucker / kein finden)“ zuerst das Verb und dann das direkte Objekt auf Wen?/Was?. Prüfe anschließend Genus und Akkusativform.",
-            "en": "The correct answer is “Wir finden den Drucker nicht”. Drucker maskulin: den; nicht fiil/nesne ilişkisindeki bulunamama anlamını olumsuzlar. In “Bilde: Biz yazıcıyı bulamıyoruz. (der Drucker / kein finden)”, first find the verb, then the direct object answering Wen?/Was?, and finally check the noun's gender and accusative form."
+            "tr": "Doğru cevap: Wir finden den Drucker nicht. Belirli artikelli nesne (den Drucker) kein ile değil nicht ile olumsuzlanır; nicht cümlenin sonuna gelir. Karşılaştır: Wir finden keinen Drucker. (belirsiz: hiç yazıcı bulamıyoruz)",
+            "de": "Die richtige Antwort ist „Wir finden den Drucker nicht“. Drucker maskulin: den; nicht fiil/nesne ilişkisindeki bulunamama anlamını olumsuzlar. Suche in „Bilde: Biz yazıcıyı bulamıyoruz. (der Drucker / nicht finden)“ zuerst das Verb und dann das direkte Objekt auf Wen?/Was?. Prüfe anschließend Genus und Akkusativform.",
+            "en": "The correct answer is “Wir finden den Drucker nicht”. Drucker maskulin: den; nicht fiil/nesne ilişkisindeki bulunamama anlamını olumsuzlar. In “Bilde: Biz yazıcıyı bulamıyoruz. (der Drucker / nicht finden)”, first find the verb, then the direct object answering Wen?/Was?, and finally check the noun's gender and accusative form."
           }
         },
         {
@@ -3869,7 +3893,10 @@
           "sentence": "Korrigiere: Wen kaufst du? – Ein Buch.",
           "correct": "Was kaufst du? – Ein Buch",
           "answers": [
-            "was kaufst du? – ein buch"
+            "was kaufst du? – ein buch",
+            "was kaufst du? - ein buch",
+            "was kaufst du - ein buch",
+            "was kaufst du? ein buch"
           ],
           "explanations": {
             "tr": "Doğru cevap: Was kaufst du? – Ein Buch. Şey/nesne için Was?, kişi için Wen? kullanılır.",
@@ -4032,7 +4059,10 @@
           "sentence": "Durum: Sen hiç kahve içmiyorsun ama her gün çay içiyorsun.",
           "correct": "Ich trinke keinen Kaffee, aber ich trinke jeden Tag Tee",
           "answers": [
-            "ich trinke keinen kaffee, aber ich trinke jeden tag tee"
+            "ich trinke keinen kaffee, aber ich trinke jeden tag tee",
+            "ich trinke keinen kaffee aber ich trinke jeden tag tee",
+            "ich trinke keinen kaffee, aber jeden tag tee",
+            "ich trinke keinen kaffee aber jeden tag tee"
           ],
           "explanations": {
             "tr": "Doğru cevap: Ich trinke keinen Kaffee, aber ich trinke jeden Tag Tee. Kaffee maskulin: keinen; Tee artikelsiz içecek/madde adı olarak kullanılabilir.",

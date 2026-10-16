@@ -249,7 +249,8 @@
           "answers": [
             "der zug der nach hamburg fährt steht auf gleis 4",
             "der zug, der nach hamburg fährt, steht auf gleis 4",
-            "der zug der nach hamburg faehrt steht auf gleis 4"
+            "der zug der nach hamburg faehrt steht auf gleis 4",
+            "der zug, der auf gleis 4 steht, fährt nach hamburg"
           ],
           "explanations": {
             "tr": "Doğru cevap: Der Zug, der nach Hamburg fährt, steht auf Gleis 4.. Bezugswort 'der Zug' maskulin Nominativ olduğu için 'der' seçilir; Relativsatz'ta 'fährt' sona gider.",
@@ -264,7 +265,9 @@
           "correct": "Das Buch, das ich bestellen wollte, ist ausverkauft.",
           "answers": [
             "das buch das ich bestellen wollte ist ausverkauft",
-            "das buch, das ich bestellen wollte, ist ausverkauft"
+            "das buch, das ich bestellen wollte, ist ausverkauft",
+            "das buch, das ausverkauft ist, wollte ich bestellen",
+            "ich wollte das buch bestellen, das ausverkauft ist"
           ],
           "explanations": {
             "tr": "Doğru cevap: Das Buch, das ich bestellen wollte, ist ausverkauft.. Bezugswort 'das Buch' nötrdür; Relativsatz'ta kitap doğrudan nesne olduğu için Akkusativ 'das' kullanılır ve 'bestellen wollte' sonda kalır.",
@@ -1065,7 +1068,7 @@
           ],
           "correct": "die",
           "explanations": {
-            "tr": "Doğru cevap: die. Bezugswort “die Teilnehmer” olduğu için Relativpronomen çoğul biçimden gelir; fakat Kasus ana cümleden değil, Relativsatz içindeki görevden belirlenir. Burada Teilnehmer 'haben bestanden' fiil grubunun öznesidir. Bu nedenle Nominativ gerekir ve doğru biçim “die” olur. Diğer seçenekler (“denen”, “deren”) ya yanlış Kasus'u ya da yanlış cinsiyet/çoğul biçimini gösterir.",
+            "tr": "Doğru cevap: die. Bezugswort “die Teilnehmer” olduğu için Relativpronomen çoğul biçimden gelir; fakat Kasus ana cümleden değil, Relativsatz içindeki görevden belirlenir. Burada Teilnehmer 'bestanden haben' fiil grubunun öznesidir (sınavı onlar geçti; die Prüfung nesnedir). Bu nedenle Nominativ gerekir ve doğru biçim “die” olur. Diğer seçenekler (“denen”, “deren”) ya yanlış Kasus'u ya da yanlış cinsiyet/çoğul biçimini gösterir.",
             "de": "Die richtige Antwort ist „die“. Das Bezugswort „die Teilnehmer“ bestimmt Genus/Numerus (Plural), der Kasus wird durch die Funktion im Relativsatz bestimmt. Hier ist Nominativ nötig; deshalb lautet das Relativpronomen „die“.",
             "en": "The correct answer is “die”. The antecedent “die Teilnehmer” determines gender/number (plural), while the relative clause determines the case. Here the pronoun is nominative, so the correct form is “die”."
           }
@@ -2105,7 +2108,8 @@
           "sentence": "Ergänze: Das ist die Bibliothek, ___ ich normalerweise lerne.",
           "correct": "wo",
           "answers": [
-            "wo"
+            "wo",
+            "in der"
           ],
           "explanations": {
             "tr": "Doğru cevap: wo. Öğrenme eylemi belirli bir yerde gerçekleşiyor. Bir yerin içinde/üzerinde bulunma anlamında kaynaklardaki kullanımda “wo” kullanılabilir.",
@@ -2119,7 +2123,8 @@
           "sentence": "Ergänze: Der Laden, ___ ich immer einkaufe, hat heute geschlossen.",
           "correct": "wo",
           "answers": [
-            "wo"
+            "wo",
+            "in dem"
           ],
           "explanations": {
             "tr": "Doğru cevap: wo. Alışveriş eylemi mağazada gerçekleşiyor. Bir yerin içinde/üzerinde bulunma anlamında kaynaklardaki kullanımda “wo” kullanılabilir.",
@@ -2273,7 +2278,8 @@
           "sentence": "Ergänze: Das ist der Markt, ___ wir die alten Bücher bringen.",
           "correct": "wohin",
           "answers": [
-            "wohin"
+            "wohin",
+            "auf den"
           ],
           "explanations": {
             "tr": "Doğru cevap: wohin. Kitapların götürüldüğü hedef pazar. Bir yere doğru yön/hedef anlatılıyorsa “wohin” kullanılır.",
@@ -2287,7 +2293,8 @@
           "sentence": "Ergänze: Leipzig ist die Stadt, ___ unser Lehrer kommt.",
           "correct": "woher",
           "answers": [
-            "woher"
+            "woher",
+            "aus der"
           ],
           "explanations": {
             "tr": "Doğru cevap: woher. Öğretmenin geldiği/köken aldığı şehir. Bir yerden gelme/köken anlatılıyorsa “woher” kullanılır.",
@@ -2758,7 +2765,8 @@
           "sentence": "Verbinde: „Das Café ist geschlossen. Wir treffen uns dort immer.“",
           "correct": "Das Café, wo wir uns immer treffen, ist geschlossen.",
           "answers": [
-            "das café, wo wir uns immer treffen, ist geschlossen"
+            "das café, wo wir uns immer treffen, ist geschlossen",
+            "das café, in dem wir uns immer treffen, ist geschlossen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Das Café, wo wir uns immer treffen, ist geschlossen.. Yer referansı ve eylemin gerçekleştiği konum olduğu için 'wo'.",
@@ -2786,7 +2794,8 @@
           "sentence": "Verbinde: „Das ist die Stadt. Meine Mutter kommt aus dieser Stadt.“",
           "correct": "Das ist die Stadt, woher meine Mutter kommt.",
           "answers": [
-            "das ist die stadt, woher meine mutter kommt"
+            "das ist die stadt, woher meine mutter kommt",
+            "das ist die stadt, aus der meine mutter kommt"
           ],
           "explanations": {
             "tr": "Doğru cevap: Das ist die Stadt, woher meine Mutter kommt.. Şehir köken/gelme noktası olduğu için 'woher'.",
@@ -3118,7 +3127,8 @@
           "correct": "Das ist das Museum, in das wir morgen gehen.",
           "answers": [
             "das ist das museum in das wir morgen gehen",
-            "das ist das museum, in das wir morgen gehen"
+            "das ist das museum, in das wir morgen gehen",
+            "das ist das museum, wohin wir morgen gehen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Das ist das Museum, in das wir morgen gehen.. Hareket/hedef anlamı var: Wohin? → in + Akkusativ; 'das Museum' nötr olduğundan 'in das'.",

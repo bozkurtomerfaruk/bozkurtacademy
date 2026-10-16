@@ -614,7 +614,8 @@
           "sentence": "Schreibe als Wort: 100",
           "correct": "einhundert",
           "answers": [
-            "einhundert"
+            "einhundert",
+            "hundert"
           ],
           "explanations": {
             "tr": "Doğru cevap: einhundert. 100 → einhundert.",
@@ -629,7 +630,9 @@
           "correct": "einhundertfünf",
           "answers": [
             "einhundertfuenf",
-            "einhundertfünf"
+            "einhundertfünf",
+            "hundertfünf",
+            "hundertfuenf"
           ],
           "explanations": {
             "tr": "Doğru cevap: einhundertfünf. Yüzlükten sonra ayrıca “und” kullanılmaz.",
@@ -700,7 +703,8 @@
           "sentence": "Schreibe als Wort: 1000",
           "correct": "eintausend",
           "answers": [
-            "eintausend"
+            "eintausend",
+            "tausend"
           ],
           "explanations": {
             "tr": "Doğru cevap: eintausend. 1000 → eintausend.",
@@ -1051,7 +1055,7 @@
             "achtzig cent"
           ],
           "explanations": {
-            "tr": "Doğru cevap: achtzig Cent. 0,80 € yalnızca “achtzig Cent” olarak söylenebilir.",
+            "tr": "Doğru cevap: achtzig Cent. 1 Euro'dan küçük tutarlar günlük dilde yalnızca Cent ile söylenir: 0,80 € → achtzig Cent ('null Euro achtzig' pek kullanılmaz).",
             "de": "Die richtige Antwort ist „achtzig Cent“. Achte bei „Schreibe den Preis mit Worten: 0,80 €“ besonders auf die genaue Schreibweise.",
             "en": "The correct answer is “achtzig Cent”. Pay special attention to the exact spelling in “Schreibe den Preis mit Worten: 0,80 €”."
           }
@@ -1140,7 +1144,9 @@
           "correct": "Fünf Personen kommen.",
           "answers": [
             "fuenf personen kommen",
-            "fünf personen kommen"
+            "fünf personen kommen",
+            "es kommen fünf personen",
+            "es kommen fuenf personen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Fünf Personen kommen.. 5 kişi → fünf Personen.",
@@ -1198,7 +1204,11 @@
           "correct": "Einunddreißig Studenten sind im Kurs.",
           "answers": [
             "einunddreissig studenten sind im kurs",
-            "einunddreißig studenten sind im kurs"
+            "einunddreißig studenten sind im kurs",
+            "im kurs sind einunddreißig studenten",
+            "im kurs sind einunddreissig studenten",
+            "es sind einunddreißig studenten im kurs",
+            "es sind einunddreissig studenten im kurs"
           ],
           "explanations": {
             "tr": "Doğru cevap: Einunddreißig Studenten sind im Kurs.. 31 → einunddreißig.",
@@ -1318,7 +1328,8 @@
           "sentence": "Schreibe als Satz: 14:00",
           "correct": "Es ist vierzehn Uhr.",
           "answers": [
-            "es ist vierzehn uhr"
+            "es ist vierzehn uhr",
+            "es ist zwei uhr"
           ],
           "explanations": {
             "tr": "Doğru cevap: Es ist vierzehn Uhr.. Resmî saat okumasında 14:00 → vierzehn Uhr.",
@@ -1332,7 +1343,8 @@
           "sentence": "Schreibe als Satz: 18:00",
           "correct": "Es ist achtzehn Uhr.",
           "answers": [
-            "es ist achtzehn uhr"
+            "es ist achtzehn uhr",
+            "es ist sechs uhr"
           ],
           "explanations": {
             "tr": "Doğru cevap: Es ist achtzehn Uhr.. 18:00 → achtzehn Uhr.",
@@ -1389,7 +1401,8 @@
           "sentence": "Antworte vollständig: „Wie spät ist es?“ – 20:00",
           "correct": "Es ist zwanzig Uhr.",
           "answers": [
-            "es ist zwanzig uhr"
+            "es ist zwanzig uhr",
+            "es ist acht uhr"
           ],
           "explanations": {
             "tr": "Doğru cevap: Es ist zwanzig Uhr.. 20:00 → zwanzig Uhr.",
@@ -1632,7 +1645,8 @@
           "sentence": "Schreibe umgangssprachlich: 13:20",
           "correct": "Es ist zwanzig nach eins.",
           "answers": [
-            "es ist zwanzig nach eins"
+            "es ist zwanzig nach eins",
+            "es ist zehn vor halb zwei"
           ],
           "explanations": {
             "tr": "Doğru cevap: Es ist zwanzig nach eins.. 13:20 → zwanzig nach eins.",
@@ -1676,7 +1690,8 @@
           "sentence": "Schreibe umgangssprachlich: 10:40",
           "correct": "Es ist zwanzig vor elf.",
           "answers": [
-            "es ist zwanzig vor elf"
+            "es ist zwanzig vor elf",
+            "es ist zehn nach halb elf"
           ],
           "explanations": {
             "tr": "Doğru cevap: Es ist zwanzig vor elf.. 10:40 → zwanzig vor elf.",
@@ -1951,7 +1966,8 @@
           "correct": "Der Termin ist um vierzehn Uhr dreißig.",
           "answers": [
             "der termin ist um vierzehn uhr dreissig",
-            "der termin ist um vierzehn uhr dreißig"
+            "der termin ist um vierzehn uhr dreißig",
+            "der termin ist um halb drei"
           ],
           "explanations": {
             "tr": "Doğru cevap: Der Termin ist um vierzehn Uhr dreißig.. Saat “um” ile bağlanır.",
@@ -2009,7 +2025,9 @@
           "sentence": "Schreibe vollständig: „Ich / 07:30 / aufstehen“",
           "correct": "Ich stehe um halb acht auf.",
           "answers": [
-            "ich stehe um halb acht auf"
+            "ich stehe um halb acht auf",
+            "ich stehe um sieben uhr dreißig auf",
+            "ich stehe um sieben uhr dreissig auf"
           ],
           "explanations": {
             "tr": "Doğru cevap: Ich stehe um halb acht auf.. 07:30 günlük dilde halb acht.",
@@ -2592,7 +2610,8 @@
           "sentence": "Schreibe vollständig: „Geburtstag / 14.02.“",
           "correct": "Mein Geburtstag ist am vierzehnten Februar.",
           "answers": [
-            "mein geburtstag ist am vierzehnten februar"
+            "mein geburtstag ist am vierzehnten februar",
+            "ich habe am vierzehnten februar geburtstag"
           ],
           "explanations": {
             "tr": "Doğru cevap: Mein Geburtstag ist am vierzehnten Februar.. Tarihler cümlede am + ordinal + ay biçimindedir.",
@@ -2814,7 +2833,8 @@
           "sentence": "Bilde die Frage zu: „Wir treffen uns am fünften Oktober.“",
           "correct": "Wann trefft ihr euch?",
           "answers": [
-            "wann trefft ihr euch"
+            "wann trefft ihr euch",
+            "wann treffen wir uns"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wann trefft ihr euch?. Buluşmanın zamanını Wann ile sor.",
@@ -3191,7 +3211,9 @@
           "correct": "32 = zweiunddreißig",
           "answers": [
             "32 = zweiunddreissig",
-            "32 = zweiunddreißig"
+            "32 = zweiunddreißig",
+            "zweiunddreißig",
+            "zweiunddreissig"
           ],
           "explanations": {
             "tr": "Doğru cevap: 32 = zweiunddreißig. 21–99 arasında birler önce gelir.",
@@ -3205,7 +3227,8 @@
           "sentence": "Korrigiere: „16 = sechszehn“",
           "correct": "16 = sechzehn",
           "answers": [
-            "16 = sechzehn"
+            "16 = sechzehn",
+            "sechzehn"
           ],
           "explanations": {
             "tr": "Doğru cevap: 16 = sechzehn. 16'nın doğru yazımı sechzehn.",
@@ -3219,7 +3242,8 @@
           "sentence": "Korrigiere: „17 = siebenzehn“",
           "correct": "17 = siebzehn",
           "answers": [
-            "17 = siebzehn"
+            "17 = siebzehn",
+            "siebzehn"
           ],
           "explanations": {
             "tr": "Doğru cevap: 17 = siebzehn. 17'nin doğru yazımı siebzehn.",

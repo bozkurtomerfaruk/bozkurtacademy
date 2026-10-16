@@ -136,7 +136,7 @@
           ],
           "correct": "Ich arbeite heute nicht.",
           "explanations": {
-            "tr": "Doğru cevap: Ich arbeite heute nicht.. Basit ana cümlede çekimli fiil ikinci pozisyonda kalır; “nicht” fiilden önce gelmez.",
+            "tr": "Doğru cevap: Ich arbeite heute nicht. Çekimli fiil 2. pozisyonda kalır. Bütün cümle olumsuzlanınca nicht en sona gelir. 'Ich arbeite nicht heute' yalnızca karşıtlık için kullanılır (nicht heute, sondern morgen).",
             "de": "Die richtige Antwort ist „Ich arbeite heute nicht.“. Achte bei „Welcher Satz ist richtig?“ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Ich arbeite heute nicht.”. In “Welcher Satz ist richtig?”, pay special attention to the type of negation and word order."
           }
@@ -417,7 +417,7 @@
             "ich gehe nicht gern joggen"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Ich gehe nicht gern joggen.. Kaynakta “nicht gern” kullanımına benzer şekilde tercih olumsuzlanır.",
+            "tr": "Doğru cevap: Ich gehe nicht gern joggen. gern (severek) olumsuzlanınca nicht onun önüne gelir: nicht gern = sevmeyerek, hoşlanmadan.",
             "de": "Die richtige Antwort ist „Ich gehe nicht gern joggen.“. Achte bei „Verneine: „Ich gehe gern joggen.““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Ich gehe nicht gern joggen.”. In “Verneine: „Ich gehe gern joggen.“”, pay special attention to the type of negation and word order."
           }
@@ -646,7 +646,7 @@
             "wir wollen euch nicht stören"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Wir wollen euch nicht stören.. Kaynakta doğrudan bu kelime sırası modeli vardır.",
+            "tr": "Doğru cevap: Wir wollen euch nicht stören. Modal fiil 2. pozisyonda, infinitiv sonda kalır; nicht infinitivin hemen önüne gelir. Zamir nesne (euch) nicht'ten önce durur.",
             "de": "Die richtige Antwort ist „Wir wollen euch nicht stören.“. Achte bei „Verneine: „Wir wollen euch stören.““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Wir wollen euch nicht stören.”. In “Verneine: „Wir wollen euch stören.“”, pay special attention to the type of negation and word order."
           }
@@ -704,7 +704,7 @@
             "du musst heute nicht arbeiten"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Du musst heute nicht arbeiten.. Kaynak kapsamındaki temel nicht yerleşimi modal fiille uygulanır.",
+            "tr": "Doğru cevap: Du musst heute nicht arbeiten. nicht infinitivin (arbeiten) önüne gelir. Dikkat: nicht müssen = zorunda olmamak (yasak değil!).",
             "de": "Die richtige Antwort ist „Du musst heute nicht arbeiten.“. Achte bei „Verneine: „Du musst heute arbeiten.““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Du musst heute nicht arbeiten.”. In “Verneine: „Du musst heute arbeiten.“”, pay special attention to the type of negation and word order."
           }
@@ -727,15 +727,15 @@
           "type": "text",
           "word": "nicht + Modalverb",
           "sentence": "Verneine: „Ich möchte Kaffee trinken.“",
-          "correct": "Ich möchte nicht Kaffee trinken.",
+          "correct": "Ich möchte keinen Kaffee trinken.",
           "answers": [
-            "ich moechte nicht kaffee trinken",
-            "ich möchte nicht kaffee trinken"
+            "ich möchte keinen kaffee trinken",
+            "ich moechte keinen kaffee trinken"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Ich möchte nicht Kaffee trinken.. Bu alıştırmada eylem/ifade “nicht” ile olumsuzlanır; isim için kein ayrı setlerde çalışılır.",
-            "de": "Die richtige Antwort ist „Ich möchte nicht Kaffee trinken.“. Achte bei „Verneine: „Ich möchte Kaffee trinken.““ besonders auf die Art der Negation und die Wortstellung.",
-            "en": "The correct answer is “Ich möchte nicht Kaffee trinken.”. In “Verneine: „Ich möchte Kaffee trinken.“”, pay special attention to the type of negation and word order."
+            "tr": "Doğru cevap: Ich möchte keinen Kaffee trinken. Artikelsiz isim (Kaffee) nicht ile değil kein ile olumsuzlanır: Kaffee maskulin, Akkusativ → keinen Kaffee. 'nicht Kaffee' yalnızca karşıtlıkta kullanılır: Ich möchte nicht Kaffee, sondern Tee trinken.",
+            "de": "Richtig ist „Ich möchte keinen Kaffee trinken.“ Ein Nomen ohne Artikel wird mit kein verneint (Kaffee, maskulin, Akkusativ → keinen). „nicht Kaffee“ steht nur im Kontrast: nicht Kaffee, sondern Tee.",
+            "en": "The answer is “Ich möchte keinen Kaffee trinken.” A noun without an article is negated with kein (masculine accusative → keinen). “nicht Kaffee” is only used for contrast."
           }
         },
         {
@@ -895,7 +895,7 @@
         },
         {
           "word": "noch nicht / nicht mehr",
-          "sentence": "Ergänze: „Ich trinke ___ Kaffee.“ (artık)",
+          "sentence": "Ergänze: „Ich rauche ___.“ (artık)",
           "options": [
             "noch nicht",
             "nichts",
@@ -903,9 +903,9 @@
           ],
           "correct": "nicht mehr",
           "explanations": {
-            "tr": "Doğru cevap: nicht mehr. Artık kahve içmiyorum: nicht mehr.",
-            "de": "Die richtige Antwort ist „nicht mehr“. Achte bei „Ergänze: „Ich trinke ___ Kaffee.“ (artık)“ besonders auf die Art der Negation und die Wortstellung.",
-            "en": "The correct answer is “nicht mehr”. In “Ergänze: „Ich trinke ___ Kaffee.“ (artık)”, pay special attention to the type of negation and word order."
+            "tr": "Doğru cevap: nicht mehr. Eskiden sigara içiyordu, artık içmiyor: nicht mehr = artık değil. Karşılaştır: isimle kein … mehr kullanılır: Ich trinke keinen Kaffee mehr.",
+            "de": "Richtig ist „nicht mehr“: Früher hat die Person geraucht, jetzt nicht mehr. Mit einem Nomen sagt man kein … mehr: Ich trinke keinen Kaffee mehr.",
+            "en": "The answer is “nicht mehr” (no longer). With a noun, German uses kein … mehr: Ich trinke keinen Kaffee mehr."
           }
         },
         {
@@ -925,7 +925,7 @@
         },
         {
           "word": "noch nicht / nicht mehr",
-          "sentence": "Ergänze: „Wir haben ___ Kontakt.“ (artık değil)",
+          "sentence": "Ergänze: „Wir haben ___.“ (artık değil)",
           "options": [
             "keinen Kontakt mehr",
             "nicht Kontakt mehr",
@@ -933,9 +933,9 @@
           ],
           "correct": "keinen Kontakt mehr",
           "explanations": {
-            "tr": "Doğru cevap: keinen Kontakt mehr. Kaynakta isimle “keinen Kontakt mehr” kullanımı gösterilir.",
-            "de": "Die richtige Antwort ist „keinen Kontakt mehr“. Achte bei „Ergänze: „Wir haben ___ Kontakt.“ (artık değil)“ besonders auf die Art der Negation und die Wortstellung.",
-            "en": "The correct answer is “keinen Kontakt mehr”. In “Ergänze: „Wir haben ___ Kontakt.“ (artık değil)”, pay special attention to the type of negation and word order."
+            "tr": "Doğru cevap: keinen Kontakt mehr. İsim (Kontakt) nicht ile değil kein ile olumsuzlanır; 'artık' anlamı için mehr eklenir: kein … mehr. Kontakt maskulin, Akkusativ → keinen.",
+            "de": "Richtig ist „keinen Kontakt mehr“: Ein Nomen wird mit kein verneint; „nicht mehr“ wird mit einem Nomen zu kein … mehr.",
+            "en": "The answer is “keinen Kontakt mehr”: nouns are negated with kein; “no longer” with a noun is kein … mehr."
           }
         }
       ]
@@ -1009,7 +1009,7 @@
             "paul hat keinen hunger"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Paul hat keinen Hunger.. Kaynakta “Hunger” için keinen kullanılır.",
+            "tr": "Doğru cevap: Paul hat keinen Hunger. Artikelsiz isim (Hunger) kein ile olumsuzlanır. Hunger maskulin ve Akkusativ nesne → keinen.",
             "de": "Die richtige Antwort ist „Paul hat keinen Hunger.“. Achte bei „Verneine: „Paul hat Hunger.““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Paul hat keinen Hunger.”. In “Verneine: „Paul hat Hunger.“”, pay special attention to the type of negation and word order."
           }
@@ -1023,7 +1023,7 @@
             "anna hat keinen urlaub"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Anna hat keinen Urlaub.. Kaynakta “Urlaub” için keinen kullanılır.",
+            "tr": "Doğru cevap: Anna hat keinen Urlaub. Artikelsiz isim (Urlaub) kein ile olumsuzlanır. Urlaub maskulin ve Akkusativ nesne → keinen.",
             "de": "Die richtige Antwort ist „Anna hat keinen Urlaub.“. Achte bei „Verneine: „Anna hat Urlaub.““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Anna hat keinen Urlaub.”. In “Verneine: „Anna hat Urlaub.“”, pay special attention to the type of negation and word order."
           }
@@ -1212,7 +1212,7 @@
             "ich habe keine taschenlampe"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Ich habe keine Taschenlampe.. Kaynakta “keine Taschenlampe” biçimi vardır.",
+            "tr": "Doğru cevap: Ich habe keine Taschenlampe. Belirsiz artikelli isim kein ile olumsuzlanır: eine → keine (Taschenlampe feminin).",
             "de": "Die richtige Antwort ist „Ich habe keine Taschenlampe.“. Achte bei „Verneine: „Ich habe eine Taschenlampe.““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Ich habe keine Taschenlampe.”. In “Verneine: „Ich habe eine Taschenlampe.“”, pay special attention to the type of negation and word order."
           }
@@ -1226,7 +1226,7 @@
             "tim hat keine ahnung"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Tim hat keine Ahnung.. Kaynakta “keine Ahnung” doğrudan kullanılır.",
+            "tr": "Doğru cevap: Tim hat keine Ahnung. Belirsiz artikelli isim kein ile olumsuzlanır: eine → keine (Ahnung feminin). 'Keine Ahnung!' = Hiç bilmiyorum.",
             "de": "Die richtige Antwort ist „Tim hat keine Ahnung.“. Achte bei „Verneine: „Tim hat eine Ahnung.““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Tim hat keine Ahnung.”. In “Verneine: „Tim hat eine Ahnung.“”, pay special attention to the type of negation and word order."
           }
@@ -1240,7 +1240,7 @@
             "lisa hat keinen kuchen"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Lisa hat keinen Kuchen.. Kaynakta maskulin Akkusativ “keinen Kuchen” modeli vardır.",
+            "tr": "Doğru cevap: Lisa hat keinen Kuchen. einen → keinen: Kuchen maskulin ve Akkusativ nesne.",
             "de": "Die richtige Antwort ist „Lisa hat keinen Kuchen.“. Achte bei „Verneine: „Lisa hat einen Kuchen.““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Lisa hat keinen Kuchen.”. In “Verneine: „Lisa hat einen Kuchen.“”, pay special attention to the type of negation and word order."
           }
@@ -1254,7 +1254,7 @@
             "peter hat keinen hund"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Peter hat keinen Hund.. Kaynakta “keinen Hund” karşıt cümlesi bulunur.",
+            "tr": "Doğru cevap: Peter hat keinen Hund. einen → keinen: Hund maskulin ve Akkusativ nesne.",
             "de": "Die richtige Antwort ist „Peter hat keinen Hund.“. Achte bei „Verneine: „Peter hat einen Hund.““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Peter hat keinen Hund.”. In “Verneine: „Peter hat einen Hund.“”, pay special attention to the type of negation and word order."
           }
@@ -1473,7 +1473,7 @@
             "lena sagt nichts"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Lena sagt nichts.. Kaynakta “nichts gesagt” modeli vardır.",
+            "tr": "Doğru cevap: Lena sagt nichts. etwas (bir şey) olumsuzlanınca nichts (hiçbir şey) olur. nicht değil: Lena sagt nicht etwas.",
             "de": "Die richtige Antwort ist „Lena sagt nichts.“. Achte bei „Verneine mit „nichts“: „Lena sagt etwas.““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Lena sagt nichts.”. In “Verneine mit „nichts“: „Lena sagt etwas.“”, pay special attention to the type of negation and word order."
           }
@@ -1488,7 +1488,7 @@
             "nein, ich höre nichts"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Nein, ich höre nichts.. Kaynakta bu anlam doğrudan çalışılır.",
+            "tr": "Doğru cevap: Nein, ich höre nichts. Soru etwas ile soruluyor; olumsuz cevapta etwas → nichts. Fiil ich'e göre: ich höre.",
             "de": "Die richtige Antwort ist „Nein, ich höre nichts.“. Achte bei „Antworte negativ: „Hörst du etwas?““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Nein, ich höre nichts.”. In “Antworte negativ: „Hörst du etwas?“”, pay special attention to the type of negation and word order."
           }
@@ -1559,7 +1559,7 @@
             "mara möchte nichts trinken"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Mara möchte nichts trinken.. Kaynak kapsamındaki modal fiil + nichts + infinitiv düzeni.",
+            "tr": "Doğru cevap: Mara möchte nichts trinken. etwas → nichts; modal fiil (möchte) 2. pozisyonda, infinitiv (trinken) sonda kalır.",
             "de": "Die richtige Antwort ist „Mara möchte nichts trinken.“. Achte bei „Verneine: „Mara möchte etwas trinken.““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Mara möchte nichts trinken.”. In “Verneine: „Mara möchte etwas trinken.“”, pay special attention to the type of negation and word order."
           }
@@ -1736,7 +1736,7 @@
             "niemand hat aufgeräumt"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Niemand hat aufgeräumt.. Kaynakta niemand özne olarak Perfekt cümlesinde geçer.",
+            "tr": "Doğru cevap: Niemand hat aufgeräumt. jemand (biri) → niemand (hiç kimse). Özne olduğu için Nominativ: niemand; Perfekt'te fiil düzeni değişmez.",
             "de": "Die richtige Antwort ist „Niemand hat aufgeräumt.“. Achte bei „Verneine: „Jemand hat aufgeräumt.““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Niemand hat aufgeräumt.”. In “Verneine: „Jemand hat aufgeräumt.“”, pay special attention to the type of negation and word order."
           }
@@ -1785,7 +1785,7 @@
           ],
           "correct": "niemanden",
           "explanations": {
-            "tr": "Doğru cevap: niemanden. Kaynakta kennen fiilinin nesnesi için niemanden kullanılır.",
+            "tr": "Doğru cevap: niemanden. kennen Akkusativ nesne alır; niemand'ın Akkusativ biçimi niemanden'dir.",
             "de": "Die richtige Antwort ist „niemanden“. Achte bei „Ergänze: „Peter kennt ___.““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “niemanden”. In “Ergänze: „Peter kennt ___.“”, pay special attention to the type of negation and word order."
           }
@@ -1845,7 +1845,7 @@
           ],
           "correct": "Niemandem",
           "explanations": {
-            "tr": "Doğru cevap: Niemandem. Kaynakta “Wem ...? – Niemandem.” biçimi doğrudan verilir.",
+            "tr": "Doğru cevap: Niemandem. gehören Dativ ister; soru da Dativ (Wem?). niemand'ın Dativ biçimi niemandem'dir.",
             "de": "Die richtige Antwort ist „Niemandem“. Achte bei „Ergänze: „Wem gehört das Fahrrad? – ___.““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Niemandem”. In “Ergänze: „Wem gehört das Fahrrad? – ___.“”, pay special attention to the type of negation and word order."
           }
@@ -1956,7 +1956,7 @@
             "ich finde den schlüssel nirgendwo"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Ich finde den Schlüssel nirgendwo.. Kaynakta überall karşıtı olarak nirgendwo kullanılır.",
+            "tr": "Doğru cevap: Ich finde den Schlüssel nirgendwo. überall (her yerde) karşıtı nirgendwo (hiçbir yerde) olur.",
             "de": "Die richtige Antwort ist „Ich finde den Schlüssel nirgendwo.“. Achte bei „Verneine mit „nirgendwo“: „Ich finde den Schlüssel überall.““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Ich finde den Schlüssel nirgendwo.”. In “Verneine mit „nirgendwo“: „Ich finde den Schlüssel überall.“”, pay special attention to the type of negation and word order."
           }
@@ -1970,7 +1970,7 @@
             "wir haben nirgendwo gesucht"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Wir haben nirgendwo gesucht.. Kaynakta bu karşıtlık doğrudan gösterilir.",
+            "tr": "Doğru cevap: Wir haben nirgendwo gesucht. überall → nirgendwo (hiçbir yerde). Perfekt'te nirgendwo Partizip II'den (gesucht) önce durur.",
             "de": "Die richtige Antwort ist „Wir haben nirgendwo gesucht.“. Achte bei „Verneine mit „nirgendwo“: „Wir haben überall gesucht.““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Wir haben nirgendwo gesucht.”. In “Verneine mit „nirgendwo“: „Wir haben überall gesucht.“”, pay special attention to the type of negation and word order."
           }
@@ -1995,7 +1995,10 @@
           "sentence": "Antworte negativ: „Wo ist mein Handy?“",
           "correct": "Mein Handy ist nirgendwo.",
           "answers": [
-            "mein handy ist nirgendwo"
+            "mein handy ist nirgendwo",
+            "ich finde es nirgendwo",
+            "es ist nirgendwo",
+            "ich finde mein handy nirgendwo"
           ],
           "explanations": {
             "tr": "Doğru cevap: Mein Handy ist nirgendwo.. Hiçbir yerde anlamında nirgendwo.",
@@ -2079,7 +2082,9 @@
           "sentence": "Antworte negativ: „Wo kann ich das kaufen?“",
           "correct": "Du kannst das nirgendwo kaufen.",
           "answers": [
-            "du kannst das nirgendwo kaufen"
+            "du kannst das nirgendwo kaufen",
+            "das kannst du nirgendwo kaufen",
+            "man kann das nirgendwo kaufen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Du kannst das nirgendwo kaufen.. Yer olumsuzluğu nirgendwo.",
@@ -2253,7 +2258,7 @@
           ],
           "correct": "Er ist noch niemals geflogen.",
           "explanations": {
-            "tr": "Doğru cevap: Er ist noch niemals geflogen.. Kaynakta bu anlam için niemals/noch niemals kullanımı desteklenir.",
+            "tr": "Doğru cevap: Er ist noch niemals geflogen. schon einmal (daha önce bir kez) karşıtı noch nie / noch niemals (henüz hiç) olur.",
             "de": "Die richtige Antwort ist „Er ist noch niemals geflogen.“. Achte bei „Gegenteil: „Er ist schon einmal geflogen.““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Er ist noch niemals geflogen.”. In “Gegenteil: „Er ist schon einmal geflogen.“”, pay special attention to the type of negation and word order."
           }
@@ -2482,7 +2487,7 @@
           ],
           "correct": "nichts",
           "explanations": {
-            "tr": "Doğru cevap: nichts. Kaynakta “nichts gesagt” modeli vardır.",
+            "tr": "Doğru cevap: nichts. Söylenen 'şey' olumsuzlanıyor: hiçbir şey = nichts. nicht ve keine burada nesne yerine geçemez.",
             "de": "Die richtige Antwort ist „nichts“. Achte bei „Mara hat den ganzen Abend ___ gesagt.“ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “nichts”. In “Mara hat den ganzen Abend ___ gesagt.”, pay special attention to the type of negation and word order."
           }
@@ -2557,7 +2562,7 @@
           ],
           "correct": "nicht",
           "explanations": {
-            "tr": "Doğru cevap: nicht. Kaynakta “Das verrate ich dir nicht.” modeli vardır.",
+            "tr": "Doğru cevap: nicht. Cümlede zaten nesne var (das, dir); eylemin kendisi olumsuzlanıyor → nicht, sona gelir.",
             "de": "Die richtige Antwort ist „nicht“. Achte bei „Das verrate ich dir ___.“ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “nicht”. In “Das verrate ich dir ___.”, pay special attention to the type of negation and word order."
           }
@@ -2572,7 +2577,7 @@
           ],
           "correct": "keine",
           "explanations": {
-            "tr": "Doğru cevap: keine. Kaynakta “keine Ahnung” kullanılır.",
+            "tr": "Doğru cevap: keine. Ahnung bir isimdir (feminin); isim kein ile olumsuzlanır: keine Ahnung.",
             "de": "Die richtige Antwort ist „keine“. Achte bei „Sie hat ___ Ahnung.“ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “keine”. In “Sie hat ___ Ahnung.”, pay special attention to the type of negation and word order."
           }
@@ -2707,7 +2712,7 @@
             "peter hat keine ahnung"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Peter hat keine Ahnung.. Kaynakta geçen “keine Ahnung” kalıbı.",
+            "tr": "Doğru cevap: Peter hat keine Ahnung. Fiil 2. pozisyonda (hat); isim (Ahnung, feminin) keine ile olumsuzlanır.",
             "de": "Die richtige Antwort ist „Peter hat keine Ahnung.“. Achte bei „Ordne und schreibe: „Peter / keine / haben / Ahnung““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Peter hat keine Ahnung.”. In “Ordne und schreibe: „Peter / keine / haben / Ahnung“”, pay special attention to the type of negation and word order."
           }
@@ -2718,7 +2723,8 @@
           "sentence": "Ordne und schreibe: „ich / niemanden / kennen / hier“",
           "correct": "Ich kenne hier niemanden.",
           "answers": [
-            "ich kenne hier niemanden"
+            "ich kenne hier niemanden",
+            "ich kenne niemanden hier"
           ],
           "explanations": {
             "tr": "Doğru cevap: Ich kenne hier niemanden.. Kişi nesnesi Akkusativ: niemanden.",
@@ -2736,7 +2742,7 @@
             "der kaffee ist nicht mehr heiß"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Der Kaffee ist nicht mehr heiß.. Kaynakta “nicht mehr heiß” yapısı bulunur.",
+            "tr": "Doğru cevap: Der Kaffee ist nicht mehr heiß. sein 2. pozisyonda; nicht mehr (artık değil) sıfattan (heiß) önce gelir.",
             "de": "Die richtige Antwort ist „Der Kaffee ist nicht mehr heiß.“. Achte bei „Ordne und schreibe: „der Kaffee / nicht mehr / heiß / sein““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Der Kaffee ist nicht mehr heiß.”. In “Ordne und schreibe: „der Kaffee / nicht mehr / heiß / sein“”, pay special attention to the type of negation and word order."
           }
@@ -2750,7 +2756,7 @@
             "die kinder wollen noch nicht schlafen"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Die Kinder wollen noch nicht schlafen.. Kaynakta modal fiille “noch nicht schlafen” yapısı bulunur.",
+            "tr": "Doğru cevap: Die Kinder wollen noch nicht schlafen. Modal fiil 2. pozisyonda, infinitiv sonda; noch nicht (henüz değil) infinitivden önce gelir.",
             "de": "Die richtige Antwort ist „Die Kinder wollen noch nicht schlafen.“. Achte bei „Ordne und schreibe: „die Kinder / noch nicht / schlafen / wollen““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Die Kinder wollen noch nicht schlafen.”. In “Ordne und schreibe: „die Kinder / noch nicht / schlafen / wollen“”, pay special attention to the type of negation and word order."
           }
@@ -2853,7 +2859,9 @@
           "correct": "Wem gehört das? – Niemandem.",
           "answers": [
             "wem gehoert das? – niemandem",
-            "wem gehört das? – niemandem"
+            "wem gehört das? – niemandem",
+            "wem gehört das? - niemandem",
+            "wem gehoert das? - niemandem"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wem gehört das? – Niemandem.. Wem Dativ sorusudur; niemandem gerekir.",
@@ -2914,7 +2922,7 @@
             "wir haben nirgendwo gesucht"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Wir haben nirgendwo gesucht.. Yer olumsuzluğunda kaynakta überall ↔ nirgendwo karşıtlığı kullanılır.",
+            "tr": "Doğru cevap: Wir haben nirgendwo gesucht. 'überall nicht' denmez; 'hiçbir yerde' tek kelimeyle nirgendwo'dur.",
             "de": "Die richtige Antwort ist „Wir haben nirgendwo gesucht.“. Achte bei „Korrigiere: „Wir haben überall nicht gesucht.““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Wir haben nirgendwo gesucht.”. In “Korrigiere: „Wir haben überall nicht gesucht.“”, pay special attention to the type of negation and word order."
           }
@@ -3154,7 +3162,7 @@
             "keine freundin kommt mit"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Keine Freundin kommt mit.. Kaynakta “keine ihrer Freundinnen” kişi grubunu olumsuzlar; burada temel keine kullanılır.",
+            "tr": "Doğru cevap: Keine Freundin kommt mit. Özne belirsiz artikelli bir isim (eine Freundin); isim kein ile olumsuzlanır: eine → keine.",
             "de": "Die richtige Antwort ist „Keine Freundin kommt mit.“. Achte bei „Verneine: „Eine Freundin kommt mit.““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Keine Freundin kommt mit.”. In “Verneine: „Eine Freundin kommt mit.“”, pay special attention to the type of negation and word order."
           }
@@ -3240,7 +3248,7 @@
             "ich habe keine taschenlampe"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Ich habe keine Taschenlampe.. Kaynakta “keine Taschenlampe” kullanımı vardır.",
+            "tr": "Doğru cevap: Ich habe keine Taschenlampe. eine → keine: belirsiz artikelli isim kein ile olumsuzlanır.",
             "de": "Die richtige Antwort ist „Ich habe keine Taschenlampe.“. Achte bei „Verneine: „Ich habe eine Taschenlampe.““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Ich habe keine Taschenlampe.”. In “Verneine: „Ich habe eine Taschenlampe.“”, pay special attention to the type of negation and word order."
           }
@@ -3388,7 +3396,7 @@
             "wir konnten nichts und niemanden sehen"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Wir konnten nichts und niemanden sehen.. Kaynağın son sorusundaki nichts + niemanden kombinasyonu temel alınır.",
+            "tr": "Doğru cevap: Wir konnten nichts und niemanden sehen. Was? (şey) → nichts; Wen? (kişi, Akkusativ) → niemanden.",
             "de": "Die richtige Antwort ist „Wir konnten nichts und niemanden sehen.“. Achte bei „Antworte negativ: „Was und wen konntet ihr im Dunkeln sehen?““ besonders auf die Art der Negation und die Wortstellung.",
             "en": "The correct answer is “Wir konnten nichts und niemanden sehen.”. In “Antworte negativ: „Was und wen konntet ihr im Dunkeln sehen?“”, pay special attention to the type of negation and word order."
           }

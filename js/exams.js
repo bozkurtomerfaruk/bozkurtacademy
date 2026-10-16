@@ -66,22 +66,44 @@
     return 4;
   }
 
-  const levelMeta = level => data.levels[level.id] || { code: level.id.toUpperCase(), name: '', description: '' };
-  const levelBadges = exam => exam.levels.map(level => levelMeta(level).code);
+  // A level entry may carry its own code, name, description and tag (TestDaF formats);
+  // otherwise they come from the shared `levels` list.
+  function levelMeta(level) {
+    const shared = data.levels[level.id] || { code: level.id.toUpperCase(), name: '', description: '' };
+    const own = Object.fromEntries(['code', 'name', 'description', 'tag', 'difficulty']
+      .filter(key => level[key] !== undefined).map(key => [key, level[key]]));
+    return { ...shared, ...own };
+  }
+  const levelCode = level => loc(levelMeta(level).code);
+  const levelBadges = exam => exam.levelRange ? [exam.levelRange] : exam.levels.map(levelCode);
 
-  function teilCount(n) {
-    return fill(n === 1 ? 'examTeilCountOne' : 'examTeilCountMany', { n });
+  // Exam-level options: a format step instead of levels (TestDaF), "Aufgabe" instead of "Teil".
+  const isFormat = exam => exam?.levelStep === 'format';
+  const isAufgabe = exam => exam?.partLabel === 'aufgabe';
+  const partKey = (exam, teilKey, aufgabeKey) => isAufgabe(exam) ? aufgabeKey : teilKey;
+  const partName = (exam, n) => `${isAufgabe(exam) ? 'Aufgabe' : 'Teil'} ${n}`;
+
+  function partCount(exam, n) {
+    const key = n === 1 ? partKey(exam, 'examTeilCountOne', 'examAufgabeCountOne') : partKey(exam, 'examTeilCountMany', 'examAufgabeCountMany');
+    return fill(key, { n });
   }
 
-  /* Step indicator: Sınav › Seviye › Bölüm › Teil. Finished steps show the choice and link back. */
+  // "Goethe-Zertifikat B1", "Dijital TestDaF" or "DTZ"
+  function examTitle(exam, level) {
+    if (exam.skipLevel) return exam.name;
+    if (isFormat(exam)) return loc(levelMeta(level).name);
+    return `${exam.name} ${levelCode(level)}`;
+  }
+
+  /* Step indicator: Sınav › Seviye (or Format) › Bölüm › Teil (or Aufgabe). Finished steps show the choice and link back. */
   function renderSteps(route) {
     const current = step(route);
     const exam = route.exam;
     const items = [
       { label: t('examStepExam'), value: exam?.name, href: hashFor() },
       {
-        label: t('examStepLevel'),
-        value: route.level ? levelMeta(route.level).code : '',
+        label: t(isFormat(exam) ? 'examStepFormat' : 'examStepLevel'),
+        value: route.level ? levelCode(route.level) : '',
         // DTZ has a single level: shown, but there is nothing to choose.
         href: exam?.skipLevel ? null : (exam ? hashFor(exam.id) : null)
       },
@@ -90,7 +112,7 @@
         value: route.section ? (data.sections[route.section.id]?.name || route.section.id) : '',
         href: route.level ? routeHash({ ...route, section: null }) : null
       },
-      { label: t('examStepTeil'), value: '', href: null }
+      { label: t(partKey(exam, 'examStepTeil', 'examStepAufgabe')), value: '', href: null }
     ];
 
     return `<ol class="exam-steps">${items.map((item, index) => {
@@ -124,7 +146,7 @@
     const cards = data.exams.map(exam => {
       const badges = exam.comingSoon ? '' : `
         <div class="exam-card-meta">
-          <span class="exam-card-meta-label">${escapeHtml(t(exam.skipLevel ? 'examLevelSingle' : 'examLevelsLabel'))}</span>
+          <span class="exam-card-meta-label">${escapeHtml(t(exam.skipLevel || exam.levelRange ? 'examLevelSingle' : 'examLevelsLabel'))}</span>
           <span class="exam-chips">${levelBadges(exam).map(code => `<span class="exam-chip">${escapeHtml(code)}</span>`).join('')}</span>
         </div>`;
       const top = exam.fullName || exam.comingSoon ? `
@@ -136,7 +158,7 @@
         <h3>${escapeHtml(exam.name)}</h3>
         <p>${escapeHtml(loc(exam.description))}</p>
         ${badges}
-        <span class="exam-card-action">${escapeHtml(t(exam.comingSoon ? 'examSoon' : (exam.skipLevel ? 'examViewSections' : 'examViewLevels')))}${exam.comingSoon ? '' : ' <span aria-hidden="true">→</span>'}</span>`;
+        <span class="exam-card-action">${escapeHtml(t(exam.comingSoon ? 'examSoon' : (exam.skipLevel ? 'examViewSections' : (isFormat(exam) ? 'examViewFormats' : 'examViewLevels'))))}${exam.comingSoon ? '' : ' <span aria-hidden="true">→</span>'}</span>`;
       if (exam.comingSoon) {
         return `<li><div class="exam-card is-soon" aria-disabled="true" aria-label="${escapeHtml(fill('examSoonLabel', { name: exam.name }))}">${content}</div></li>`;
       }
@@ -145,12 +167,30 @@
     return heading(t('examChooseExam'), t('examChooseExamSub'), null) + `<ul class="exam-grid" role="list">${cards}</ul>`;
   }
 
-  /* Step 2 */
-  function renderLevels(exam) {
+  /* Step 2 for TestDaF: the exam format */
+  function renderFormats(exam) {
     const cards = exam.levels.map(level => {
       const meta = levelMeta(level);
-      return `<li><a class="exam-card exam-level-card" href="${hashFor(exam.id, level.id)}" aria-label="${escapeHtml(fill('examChooseLabel', { name: `${meta.code} – ${loc(meta.name)}` }))}">
-        <span class="exam-level-badge">${escapeHtml(meta.code)}</span>
+      const tag = loc(meta.tag);
+      return `<li><a class="exam-card exam-format-card" href="${hashFor(exam.id, level.id)}" aria-label="${escapeHtml(fill('examChooseLabel', { name: loc(meta.name) + (tag ? ` (${tag})` : '') }))}">
+        ${tag ? `<span class="exam-card-top"><span class="exam-tag">${escapeHtml(tag)}</span></span>` : ''}
+        <h3>${escapeHtml(loc(meta.name))}</h3>
+        <p>${escapeHtml(loc(meta.description))}</p>
+        <span class="exam-card-action">${escapeHtml(t('examViewSections'))} <span aria-hidden="true">→</span></span>
+      </a></li>`;
+    }).join('');
+    return heading(t('examChooseFormat'), fill('examChooseFormatSub', { exam: exam.name }), hashFor())
+      + `<ul class="exam-grid" role="list">${cards}</ul>`;
+  }
+
+  /* Step 2 */
+  function renderLevels(exam) {
+    if (isFormat(exam)) return renderFormats(exam);
+    const cards = exam.levels.map(level => {
+      const meta = levelMeta(level);
+      const code = loc(meta.code);
+      return `<li><a class="exam-card exam-level-card" href="${hashFor(exam.id, level.id)}" aria-label="${escapeHtml(fill('examChooseLabel', { name: `${code} – ${loc(meta.name)}` }))}">
+        <span class="exam-level-badge">${escapeHtml(code)}</span>
         <div class="exam-level-body">
           <h3>${escapeHtml(loc(meta.name))}</h3>
           ${level.officialName ? `<span class="exam-card-kicker">${escapeHtml(level.officialName)}</span>` : ''}
@@ -166,20 +206,18 @@
   /* Step 3 */
   function renderSections(route) {
     const { exam, level } = route;
-    const meta = levelMeta(level);
     const cards = level.sections.map(section => {
       const info = data.sections[section.id] || { name: section.id, translation: '', description: '' };
       const translation = loc(info.translation);
       const showTranslation = translation && translation !== info.name;
-      return `<li><a class="exam-card" href="${routeHash({ ...route, section })}" aria-label="${escapeHtml(fill('examChooseLabel', { name: showTranslation ? `${info.name} (${translation})` : info.name }) + ', ' + teilCount(section.teile.length))}">
-        <span class="exam-card-top"><span class="exam-card-kicker">${escapeHtml(teilCount(section.teile.length))}</span></span>
+      return `<li><a class="exam-card" href="${routeHash({ ...route, section })}" aria-label="${escapeHtml(fill('examChooseLabel', { name: showTranslation ? `${info.name} (${translation})` : info.name }) + ', ' + partCount(exam, section.teile.length))}">
+        <span class="exam-card-top"><span class="exam-card-kicker">${escapeHtml(partCount(exam, section.teile.length))}</span></span>
         <h3><span lang="de">${escapeHtml(info.name)}</span>${showTranslation ? ` <span class="exam-translation">${escapeHtml(translation)}</span>` : ''}</h3>
         <p>${escapeHtml(loc(info.description))}</p>
-        <span class="exam-card-action">${escapeHtml(t('examViewTeile'))} <span aria-hidden="true">→</span></span>
+        <span class="exam-card-action">${escapeHtml(t(partKey(exam, 'examViewTeile', 'examViewAufgaben')))} <span aria-hidden="true">→</span></span>
       </a></li>`;
     }).join('');
-    const title = exam.skipLevel ? exam.name : `${exam.name} ${meta.code}`;
-    return heading(t('examChooseSection'), fill('examChooseSectionSub', { exam: title }), exam.skipLevel ? hashFor() : hashFor(exam.id))
+    return heading(t('examChooseSection'), fill('examChooseSectionSub', { exam: examTitle(exam, level) }), exam.skipLevel ? hashFor() : hashFor(exam.id))
       + `<ul class="exam-grid" role="list">${cards}</ul>`;
   }
 
@@ -201,12 +239,12 @@
     const translation = loc(info.translation);
     const name = translation && translation !== info.name ? `${info.name} (${translation})` : info.name;
     const cards = section.teile.map((teil, index) => {
-      const label = `Teil ${index + 1}`;
+      const label = partName(exam, index + 1);
       const title = loc(teil.title);
       const exercises = (teil.exercises || []).filter(item => item && item.href);
       const body = exercises.length
         ? `<ul class="exam-sets" role="list">${exercises.map((item, i) => exerciseLink(item, label, i)).join('')}</ul>`
-        : `<p class="exam-teil-empty">${escapeHtml(t('examNoExercises'))}</p>
+        : `<p class="exam-teil-empty">${escapeHtml(t(partKey(exam, 'examNoExercises', 'examNoExercisesAufgabe')))}</p>
            <button class="btn exam-start" type="button" disabled aria-label="${escapeHtml(fill('examStartSoonLabel', { name: label }))}">${escapeHtml(t('examStart'))}</button>`;
       return `<li><article class="exam-card exam-teil${exercises.length ? '' : ' is-soon'}" aria-labelledby="exam-teil-${index + 1}">
         <div class="exam-card-top">
@@ -217,8 +255,8 @@
         ${body}
       </article></li>`;
     }).join('');
-    const examTitle = exam.skipLevel ? exam.name : `${exam.name} ${levelMeta(level).code}`;
-    return heading(fill('examChooseTeil', { section: info.name }), fill('examChooseTeilSub', { exam: examTitle, section: name }), routeHash({ ...route, section: null }))
+    return heading(fill(partKey(exam, 'examChooseTeil', 'examChooseAufgabe'), { section: info.name }),
+      fill(partKey(exam, 'examChooseTeilSub', 'examChooseAufgabeSub'), { exam: examTitle(exam, level), section: name }), routeHash({ ...route, section: null }))
       + `<ul class="exam-grid exam-teil-grid" role="list">${cards}</ul>`;
   }
 

@@ -168,14 +168,14 @@ return {
 });
   }
 
-  async function openDeepLink(target) {
+  async function openDeepLink(target, hash) {
     if (!target?.level) return;
 
     // app.js hash'i sadeleştirse bile orijinal özel linki geri getir.
     history.replaceState(
       { ...(history.state || {}), baPage: 'exercises' },
       '',
-      originalHash
+      hash
     );
 
     if (window.BA?.showPage) {
@@ -209,12 +209,13 @@ return {
 
       topicButton.click();
 
-      if (!target.exercise) {
-        await waitFor(
-          () => history.state?.baExerciseView === 'sets' &&
-                history.state?.topic === target.topic
-        );
+      // Konu yüklenene kadar bekle; sayfa açıkken eski alıştırma butonları hâlâ DOM'da olabilir.
+      await waitFor(
+        () => history.state?.baExerciseView === 'sets' &&
+              history.state?.topic === target.topic
+      );
 
+      if (!target.exercise) {
         replaceCurrentExerciseUrl('sets', {
           level: target.level,
           topic: target.topic
@@ -265,9 +266,18 @@ replaceCurrentExerciseUrl('quiz', {
 
   setupDelegatedSync();
 
+  // Sayfa açıkken gelen özel linkler (ör. Sınav Hazırlığı'ndaki "Başla"): sayfa yenilenmeden aç.
+  // Geri/ileri ile dönülen alıştırma kayıtlarında history.state zaten dolu; onları quiz.js açar.
+  window.addEventListener('hashchange', () => {
+    if (history.state?.baExerciseView) return;
+    const hash = location.hash;
+    const target = parseExerciseHash(hash);
+    if (target?.level) openDeepLink(target, hash);
+  });
+
   document.addEventListener('DOMContentLoaded', () => {
     if (deepTarget?.level) {
-      setTimeout(() => openDeepLink(deepTarget), 0);
+      setTimeout(() => openDeepLink(deepTarget, originalHash), 0);
     } else {
       scheduleUrlSync();
     }

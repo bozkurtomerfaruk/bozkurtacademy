@@ -189,7 +189,7 @@
     const external = /^https?:\/\//i.test(href) && !href.startsWith(location.origin);
     return `<li class="exam-set">
       <span class="exam-set-title">${escapeHtml(title)}</span>
-      <a class="btn primary exam-start" href="${escapeHtml(href)}"${external ? ' target="_blank" rel="noopener"' : ''} data-exam-exercise
+      <a class="btn primary exam-start" href="${escapeHtml(href)}"${external ? ' target="_blank" rel="noopener"' : ''}
         aria-label="${escapeHtml(fill('examStartLabel', { name: `${teilLabel} – ${title}` }) + (external ? ` (${t('examNewTab')})` : ''))}">${escapeHtml(t('examStart'))}</a>
     </li>`;
   }
@@ -260,17 +260,10 @@
     if (!root || !data) return;
 
     // Clicks on step links and cards change the hash; move focus to the new heading afterwards.
+    // Links to #exercises/... and #grammar/... are opened by exercise-links.js and grammar.js.
     root.addEventListener('click', event => {
-      const link = event.target.closest('a[href]');
-      if (!link || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-      const href = link.getAttribute('href');
-      if (href.startsWith('#exams')) { focusNext = true; return; }
-      // Other pages of this site open their deep links only on load (see home.js for the same case).
-      if (link.hasAttribute('data-exam-exercise') && href.startsWith('#') && !href.startsWith('#grammar')) {
-        event.preventDefault();
-        location.assign(href);
-        location.reload();
-      }
+      const link = event.target.closest('a[href^="#exams"]');
+      if (link && !(event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)) focusNext = true;
     });
 
     if (initialHash.startsWith('#exams/')) {
@@ -287,6 +280,9 @@
     render();
   });
   window.addEventListener('ba:pagechange', event => { if (event.detail?.page === 'exams') render(); });
-  window.addEventListener('ba:languagechange', render);
+  // On another page, draw again in the new language only when the exams page is opened.
+  window.addEventListener('ba:languagechange', () => {
+    if (location.hash.startsWith('#exams')) render(); else rendered = '';
+  });
   document.addEventListener('DOMContentLoaded', setup);
 })();

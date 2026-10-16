@@ -233,12 +233,7 @@
         });
       });
     });
-    // app.js handles hash routes on initial load; preserve the exercise deep link.
-    home.querySelector('a[href="#exercises/A1/sein-haben"]')?.addEventListener('click', event => {
-      event.preventDefault();
-      window.location.assign('#exercises/A1/sein-haben');
-      window.location.reload();
-    });
+    // #exercises/A1/sein-haben is opened without a reload by exercise-links.js.
     // One sein/haben question per sentence; the static answers stay visible without script.
     const t = key => window.BA?.t ? window.BA.t(key) : key;
     home.querySelectorAll('[data-home-quiz] .home-quiz-item').forEach(item => {

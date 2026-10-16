@@ -168,12 +168,24 @@ return {
 });
   }
 
+  // Özel link (doğrudan URL veya sayfa içindeki bir bağlantı): seviye › konu › alıştırma adımları
+  // geçmişe ayrı kayıt olarak yazılmaz; mevcut kayıt değiştirilir. Böylece tek geri tuşu öğrenciyi
+  // geldiği yere (ör. #exams/goethe/b1/lesen) götürür. Elle gezinme quiz.js'te olduğu gibi kalır.
   async function openDeepLink(target, hash) {
     if (!target?.level) return;
 
+    const view = target.exercise ? 'quiz' : (target.topic ? 'sets' : 'topics');
+
     // app.js hash'i sadeleştirse bile orijinal özel linki geri getir.
     history.replaceState(
-      { ...(history.state || {}), baPage: 'exercises' },
+      {
+        baPage: 'exercises',
+        baExerciseView: view,
+        level: target.level,
+        topic: target.topic,
+        exercise: target.exercise,
+        question: view === 'quiz' ? (target.question || 1) : null
+      },
       '',
       hash
     );
@@ -186,72 +198,11 @@ return {
     }
 
     try {
-      const levelButton = await waitFor(
-        () => document.querySelector(
-          `[data-hub-level="${CSS.escape(target.level)}"]`
-        )
-      );
+      const quiz = await waitFor(() => window.BAQuiz?.isReady?.() && window.BAQuiz);
+      const shown = await quiz.openDeepLink(target);
 
-      levelButton.click();
-
-      if (!target.topic) {
-        replaceCurrentExerciseUrl('topics', {
-          level: target.level
-        });
-        return;
-      }
-
-      const topicButton = await waitFor(
-        () => document.querySelector(
-          `.exercise-discovery-topic.ready[data-hub-topic-level="${CSS.escape(target.level)}"][data-hub-topic="${CSS.escape(target.topic)}"]`
-        )
-      );
-
-      topicButton.click();
-
-      // Konu yüklenene kadar bekle; sayfa açıkken eski alıştırma butonları hâlâ DOM'da olabilir.
-      await waitFor(
-        () => history.state?.baExerciseView === 'sets' &&
-              history.state?.topic === target.topic
-      );
-
-      if (!target.exercise) {
-        replaceCurrentExerciseUrl('sets', {
-          level: target.level,
-          topic: target.topic
-        });
-
-        return;
-      }
-
-      const exerciseButton = await waitFor(
-        () => document.querySelector(
-          `[data-exercise="${CSS.escape(target.exercise)}"]`
-        )
-      );
-
-     exerciseButton.click();
-
-await waitFor(
-  () => history.state?.baExerciseView === 'quiz' &&
-        history.state?.exercise === target.exercise
-);
-
-if (target.question && window.BAQuiz?.goToQuestion) {
-  window.BAQuiz.goToQuestion(target.question);
-
-  await waitFor(
-    () => Number(history.state?.question) === Number(target.question)
-  );
-}
-
-replaceCurrentExerciseUrl('quiz', {
-  level: target.level,
-  topic: target.topic,
-  exercise: target.exercise,
-  question: target.question || 1
-});
-
+      // Bulunamayan konu/alıştırmada quiz.js en yakın geçerli görünümü açar; adres onu göstersin.
+      replaceCurrentExerciseUrl(shown.view, shown);
     } catch (error) {
       console.error('Deep-link could not be opened:', error);
 

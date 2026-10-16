@@ -259,7 +259,7 @@
             "ende"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Ende. Kaynakta Subjunktion için temel kural fiilin Nebensatz'ın sonuna gitmesidir.",
+            "tr": "Doğru cevap: Ende. Subjunktion (weil, dass, obwohl, wenn …) bir Nebensatz başlatır ve çekimli fiili yan cümlenin sonuna (ans Ende) gönderir: …, weil ich müde bin. Karşılaştır: …, denn ich bin müde (denn bir Konjunktiondur, fiil sona gitmez).",
             "de": "Die richtige Antwort ist „Ende“. Achte auf Konnektor, Satzbau und Verbposition.",
             "en": "The correct answer is “Ende”. Check the connector, clause structure, and verb position."
           }
@@ -274,7 +274,7 @@
             "eins"
           ],
           "explanations": {
-            "tr": "Doğru cevap: 1. Kaynakta deshalb/trotzdem gibi Konjunktionaladverbien için Position 1 vurgulanır.",
+            "tr": "Doğru cevap: 1. Konjunktionaladverb (deshalb, trotzdem, deswegen …) ikinci ana cümlede Position 1'i doldurur; çekimli fiil hemen ardından Position 2'ye, özne ondan sonra gelir: Ich bin müde, deshalb gehe ich ins Bett. Karşılaştır: aber/und/denn Position 0'da durur (…, aber ich gehe …).",
             "de": "Die richtige Antwort ist „1“. Achte auf Konnektor, Satzbau und Verbposition.",
             "en": "The correct answer is “1”. Check the connector, clause structure, and verb position."
           }
@@ -425,7 +425,8 @@
           "sentence": "Ergänze: Ich wollte anrufen, ___ mein Handy war leer.",
           "correct": "aber",
           "answers": [
-            "aber"
+            "aber",
+            "doch"
           ],
           "explanations": {
             "tr": "Doğru cevap: aber. Aramak istiyordu fakat telefon boştu; karşıtlık için “aber” gerekir.",
@@ -562,12 +563,12 @@
           "sentence": "___ der Zug Verspätung hat, kommen wir später an.",
           "options": [
             "Da",
-            "Falls",
+            "Obwohl",
             "Bevor"
           ],
           "correct": "Da",
           "explanations": {
-            "tr": "Doğru cevap: Da. Gecikmenin nedeni trenin rötarıdır; cümle başında “da” doğal bir neden bağlantısı kurar.",
+            "tr": "Doğru cevap: Da. Gecikmenin nedeni trenin rötarıdır; cümle başında “da” bilinen bir nedeni verir ve çekimli fiil (hat) yan cümlenin sonuna gider. “Obwohl” karşıtlık bildirir, burada anlam uymaz.",
             "de": "Die richtige Antwort ist „Da“. Achte auf Bedeutung und Wortstellung des Konnektors.",
             "en": "The correct answer is “Da”. Check both the connector's meaning and the word order it requires."
           }
@@ -593,7 +594,8 @@
           "sentence": "Verbinde mit „weil“: „Nina geht früh schlafen. Sie ist sehr müde.“",
           "correct": "Nina geht früh schlafen, weil sie sehr müde ist.",
           "answers": [
-            "nina geht früh schlafen, weil sie sehr müde ist"
+            "nina geht früh schlafen, weil sie sehr müde ist",
+            "weil sie sehr müde ist, geht nina früh schlafen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Nina geht früh schlafen, weil sie sehr müde ist.. “weil” Nebensatz kurduğu için “ist” yan cümlenin sonuna gider.",
@@ -761,7 +763,8 @@
           "sentence": "Verbinde mit „obwohl“: „Lena ist krank. Sie arbeitet weiter.“",
           "correct": "Obwohl Lena krank ist, arbeitet sie weiter.",
           "answers": [
-            "obwohl lena krank ist, arbeitet sie weiter"
+            "obwohl lena krank ist, arbeitet sie weiter",
+            "lena arbeitet weiter, obwohl sie krank ist"
           ],
           "explanations": {
             "tr": "Doğru cevap: Obwohl Lena krank ist, arbeitet sie weiter.. “obwohl” Nebensatz'ta fiili sona gönderir; ana cümlede inversion oluşur.",
@@ -775,7 +778,9 @@
           "sentence": "Verbinde mit „trotzdem“: „Der Akku ist fast leer. Ich benutze das Handy weiter.“",
           "correct": "Der Akku ist fast leer, trotzdem benutze ich das Handy weiter.",
           "answers": [
-            "der akku ist fast leer, trotzdem benutze ich das handy weiter"
+            "der akku ist fast leer, trotzdem benutze ich das handy weiter",
+            "der akku ist fast leer. trotzdem benutze ich das handy weiter",
+            "der akku ist fast leer, ich benutze das handy trotzdem weiter"
           ],
           "explanations": {
             "tr": "Doğru cevap: Der Akku ist fast leer, trotzdem benutze ich das Handy weiter.. “trotzdem” ikinci Hauptsatz'ın Position 1'inde yer alır; hemen ardından “benutze ich” gelir.",
@@ -945,7 +950,9 @@
           "answers": [
             "deshalb",
             "deswegen",
-            "darum"
+            "darum",
+            "also",
+            "daher"
           ],
           "explanations": {
             "tr": "Doğru cevap: deshalb. Bahn grevi evden çalışma sonucuna yol açıyor; “deshalb” uygun sonuç bağlayıcısıdır.",
@@ -1099,7 +1106,8 @@
           "sentence": "Verbinde mit „wenn“: „Du brauchst Hilfe. Ruf mich an.“",
           "correct": "Wenn du Hilfe brauchst, ruf mich an.",
           "answers": [
-            "wenn du hilfe brauchst, ruf mich an"
+            "wenn du hilfe brauchst, ruf mich an",
+            "ruf mich an, wenn du hilfe brauchst"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wenn du Hilfe brauchst, ruf mich an.. “wenn” şart Nebensatz'ı başa alır; “brauchst” sona, Hauptsatz fiili “ruf” başa gelir.",
@@ -1252,12 +1260,12 @@
           "sentence": "___ ich meinen ersten Job bekam, war ich sehr nervös.",
           "options": [
             "Wenn",
-            "Da",
+            "Ob",
             "Als"
           ],
           "correct": "Als",
           "explanations": {
-            "tr": "Doğru cevap: Als. Geçmişte bir kez gerçekleşen ilk iş olayı için “als”.",
+            "tr": "Doğru cevap: Als. Geçmişte bir kez gerçekleşen olay (ilk işi almak) için temporal “als” kullanılır; “wenn” geçmişte yalnızca tekrarlanan olaylar içindir (jedes Mal, wenn …).",
             "de": "Die richtige Antwort ist „Als“. Achte auf Bedeutung und Wortstellung des Konnektors.",
             "en": "The correct answer is “Als”. Check both the connector's meaning and the word order it requires."
           }
@@ -1282,7 +1290,9 @@
           "sentence": "Ergänze: „___ ich heute früher fertig bin, rufe ich dich an.“",
           "correct": "Wenn",
           "answers": [
-            "wenn"
+            "wenn",
+            "sobald",
+            "falls"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wenn. Bugün henüz gerçekleşmemiş gelecek koşul/zaman için “wenn”.",
@@ -1320,7 +1330,7 @@
           ],
           "correct": "Bevor",
           "explanations": {
-            "tr": "Doğru cevap: Bevor. Kahvaltı işe gitmeden önce gerçekleşiyor; “bevor” daha önce olan eylemi tanımlar.",
+            "tr": "Doğru cevap: Bevor. “bevor” yan cümlesi sonra gelen eylemi verir (işe gitmek); ana cümledeki kahvaltı ondan önce yapılır. “Nachdem” ise önce tamamlanan eylemi verir ve Perfekt/Plusquamperfekt ister (Nachdem ich gefrühstückt habe, …).",
             "de": "Die richtige Antwort ist „Bevor“. Achte auf Bedeutung und Wortstellung des Konnektors.",
             "en": "The correct answer is “Bevor”. Check both the connector's meaning and the word order it requires."
           }
@@ -1436,7 +1446,8 @@
           "sentence": "Verbinde mit „bevor“: „Ich gehe schlafen. Ich putze mir die Zähne.“",
           "correct": "Bevor ich schlafen gehe, putze ich mir die Zähne.",
           "answers": [
-            "bevor ich schlafen gehe, putze ich mir die zähne"
+            "bevor ich schlafen gehe, putze ich mir die zähne",
+            "ich putze mir die zähne, bevor ich schlafen gehe"
           ],
           "explanations": {
             "tr": "Doğru cevap: Bevor ich schlafen gehe, putze ich mir die Zähne.. Diş fırçalama uyumadan önce gerçekleşir; “bevor” yan cümlesinde çekimli fiil sona gider.",
@@ -1450,7 +1461,8 @@
           "sentence": "Verbinde mit „nachdem“: „Mia hat die E-Mail gelesen. Sie ruft ihren Chef an.“",
           "correct": "Nachdem Mia die E-Mail gelesen hat, ruft sie ihren Chef an.",
           "answers": [
-            "nachdem mia die e-mail gelesen hat, ruft sie ihren chef an"
+            "nachdem mia die e-mail gelesen hat, ruft sie ihren chef an",
+            "mia ruft ihren chef an, nachdem sie die e-mail gelesen hat"
           ],
           "explanations": {
             "tr": "Doğru cevap: Nachdem Mia die E-Mail gelesen hat, ruft sie ihren Chef an.. E-postayı okuma önce tamamlandığı için “nachdem” ile önceki eylem verilir.",
@@ -1605,7 +1617,9 @@
           "correct": "Während",
           "answers": [
             "während",
-            "waehrend"
+            "waehrend",
+            "solange",
+            "wenn"
           ],
           "explanations": {
             "tr": "Doğru cevap: Während. Bekleme ve e-posta yanıtlama aynı anda gerçekleştiği için “während”.",
@@ -1658,7 +1672,7 @@
           ],
           "correct": "damit",
           "explanations": {
-            "tr": "Doğru cevap: damit. Ana cümle ve amaç cümlesinin öznesi aynı olmak zorunda değil; finite Nebensatz için “damit”.",
+            "tr": "Doğru cevap: damit. Boşluktan sonra öznesi (ich) ve çekimli fiili (verpasse) olan tam bir yan cümle var, “zu” yok; bu yüzden “um” olamaz. Çekimli amaç cümlesi “damit” ile kurulur. Özneler aynı olduğu için “…, um den Zug nicht zu verpassen” de mümkündür.",
             "de": "Die richtige Antwort ist „damit“. Achte auf Bedeutung und Wortstellung des Konnektors.",
             "en": "The correct answer is “damit”. Check both the connector's meaning and the word order it requires."
           }
@@ -1744,11 +1758,11 @@
           "options": [
             "damit",
             "um",
-            "sodass"
+            "denn"
           ],
           "correct": "damit",
           "explanations": {
-            "tr": "Doğru cevap: damit. Özneler farklı; amaç bildiriliyor, sonuç değil.",
+            "tr": "Doğru cevap: damit. Ana cümlenin öznesi “der Arzt”, yan cümlenin öznesi “der Patient”; özneler farklı olduğu için “um … zu” olmaz, amaç “damit” ile kurulur. “denn” ana cümle sırası ister (denn der Patient versteht …); burada fiil sonda olduğu için uymaz.",
             "de": "Die richtige Antwort ist „damit“. Achte auf Bedeutung und Wortstellung des Konnektors.",
             "en": "The correct answer is “damit”. Check both the connector's meaning and the word order it requires."
           }
@@ -1774,7 +1788,8 @@
           "sentence": "Verbinde mit „damit“: „Ich schicke dir den Link. Du kannst dich anmelden.“",
           "correct": "Ich schicke dir den Link, damit du dich anmelden kannst.",
           "answers": [
-            "ich schicke dir den link, damit du dich anmelden kannst"
+            "ich schicke dir den link, damit du dich anmelden kannst",
+            "damit du dich anmelden kannst, schicke ich dir den link"
           ],
           "explanations": {
             "tr": "Doğru cevap: Ich schicke dir den Link, damit du dich anmelden kannst.. Amaç cümlesinin öznesi “du”; “damit” Nebensatz kurar ve “kannst” sona gider.",
@@ -1788,7 +1803,8 @@
           "sentence": "Verbinde mit „um ... zu“: „Ich mache Notizen. Ich will nichts vergessen.“",
           "correct": "Ich mache Notizen, um nichts zu vergessen.",
           "answers": [
-            "ich mache notizen, um nichts zu vergessen"
+            "ich mache notizen, um nichts zu vergessen",
+            "um nichts zu vergessen, mache ich notizen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Ich mache Notizen, um nichts zu vergessen.. Her iki eylemin öznesi “ich”; tekrar edilen özne atılır ve “um ... zu” kullanılır.",
@@ -1944,7 +1960,9 @@
           "correct": "Der Wind war sehr stark, sodass mehrere Bäume umfielen.",
           "answers": [
             "der wind war sehr stark, sodass mehrere bäume umfielen",
-            "der wind war sehr stark, sodass mehrere baeume umfielen"
+            "der wind war sehr stark, sodass mehrere baeume umfielen",
+            "der wind war sehr stark, so dass mehrere bäume umfielen",
+            "der wind war sehr stark, so dass mehrere baeume umfielen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Der Wind war sehr stark, sodass mehrere Bäume umfielen.. İlk durumun sonucu ağaçların devrilmesidir; “sodass” sonuç yan cümlesi kurar.",
@@ -1955,14 +1973,14 @@
         {
           "type": "text",
           "word": "Konsekutivsatz",
-          "sentence": "Ergänze: „Die Musik war so laut, ___ wir uns kaum unterhalten konnten.“",
+          "sentence": "Ergänze: „Die Musik war sehr laut, ___ wir uns kaum unterhalten konnten.“",
           "correct": "sodass",
           "answers": [
             "sodass",
             "so dass"
           ],
           "explanations": {
-            "tr": "Doğru cevap: sodass. “so laut” derecesinin sonucu konuşamamak olduğu için “sodass” gerekir.",
+            "tr": "Doğru cevap: sodass. Müziğin çok yüksek olmasının sonucu konuşamamaktır; sonuç cümlesi “sodass” ile başlar ve çekimli fiil (konnten) sona gider. Dikkat: Ana cümlede “so + sıfat” varsa yalnızca “dass” kullanılır: Die Musik war so laut, dass …",
             "de": "Die richtige Antwort ist „sodass“. Achte auf Konnektor, Satzbau und Verbposition.",
             "en": "The correct answer is “sodass”. Check the connector, clause structure, and verb position."
           }
@@ -2006,13 +2024,13 @@
           "word": "Modalsatz",
           "sentence": "Sie verbessert ihre Aussprache, ___ sie jeden Tag laut liest.",
           "options": [
-            "weil",
+            "obwohl",
             "falls",
             "indem"
           ],
           "correct": "indem",
           "explanations": {
-            "tr": "Doğru cevap: indem. Gelişmenin yöntemi her gün sesli okumaktır.",
+            "tr": "Doğru cevap: indem. Telaffuzu nasıl geliştirdiği (yöntem) anlatılıyor: her gün sesli okuyarak → “indem”, çekimli fiil (liest) sonda. “obwohl” karşıtlık, “falls” şart bildirir; anlama uymaz.",
             "de": "Die richtige Antwort ist „indem“. Achte auf Bedeutung und Wortstellung des Konnektors.",
             "en": "The correct answer is “indem”. Check both the connector's meaning and the word order it requires."
           }
@@ -2038,11 +2056,11 @@
           "options": [
             "indem",
             "sodass",
-            "seitdem"
+            "obwohl"
           ],
           "correct": "indem",
           "explanations": {
-            "tr": "Doğru cevap: indem. Amaçtan çok yöntemi/araç biçimini anlatıyor.",
+            "tr": "Doğru cevap: indem. Çöpü nasıl azalttığımız (yöntem) anlatılıyor: Mehrwegflaschen kullanarak → “indem”. “obwohl” karşıtlık, “sodass” sonuç bildirir; ikisi de anlama uymaz.",
             "de": "Die richtige Antwort ist „indem“. Achte auf Bedeutung und Wortstellung des Konnektors.",
             "en": "The correct answer is “indem”. Check both the connector's meaning and the word order it requires."
           }
@@ -2114,7 +2132,9 @@
           "correct": "Nora bleibt fit, indem sie mit dem Fahrrad fährt.",
           "answers": [
             "nora bleibt fit, indem sie mit dem fahrrad fährt",
-            "nora bleibt fit, indem sie mit dem fahrrad faehrt"
+            "nora bleibt fit, indem sie mit dem fahrrad faehrt",
+            "indem sie mit dem fahrrad fährt, bleibt nora fit",
+            "nora bleibt fit, indem sie fahrrad fährt"
           ],
           "explanations": {
             "tr": "Doğru cevap: Nora bleibt fit, indem sie mit dem Fahrrad fährt.. Fit kalmanın yolu bisiklete binmek olduğu için yöntem cümlesi “indem” ile kurulur.",
@@ -2501,7 +2521,9 @@
           "sentence": "Forme um: „Bei starkem Regen bleibt der Markt geschlossen.“",
           "correct": "Wenn es stark regnet, bleibt der Markt geschlossen.",
           "answers": [
-            "wenn es stark regnet, bleibt der markt geschlossen"
+            "wenn es stark regnet, bleibt der markt geschlossen",
+            "falls es stark regnet, bleibt der markt geschlossen",
+            "der markt bleibt geschlossen, wenn es stark regnet"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wenn es stark regnet, bleibt der Markt geschlossen.. “bei + isim” burada koşul/zaman anlamı taşıyor; fiilli cümleye dönüştürülünce “wenn” uygundur.",
@@ -2515,7 +2537,9 @@
           "sentence": "Forme um: „Trotz seiner Erkältung geht Amir zur Arbeit.“",
           "correct": "Obwohl Amir erkältet ist, geht er zur Arbeit.",
           "answers": [
-            "obwohl amir erkältet ist, geht er zur arbeit"
+            "obwohl amir erkältet ist, geht er zur arbeit",
+            "amir geht zur arbeit, obwohl er erkältet ist",
+            "obwohl amir eine erkältung hat, geht er zur arbeit"
           ],
           "explanations": {
             "tr": "Doğru cevap: Obwohl Amir erkältet ist, geht er zur Arbeit.. “trotz” karşıt beklenti bildirir; yan cümle karşılığı “obwohl”.",
@@ -2529,7 +2553,8 @@
           "sentence": "Forme um: „Vor dem Öffnen der Tür klopft sie zweimal.“",
           "correct": "Bevor sie die Tür öffnet, klopft sie zweimal.",
           "answers": [
-            "bevor sie die tür öffnet, klopft sie zweimal"
+            "bevor sie die tür öffnet, klopft sie zweimal",
+            "sie klopft zweimal, bevor sie die tür öffnet"
           ],
           "explanations": {
             "tr": "Doğru cevap: Bevor sie die Tür öffnet, klopft sie zweimal.. “vor + isimleşmiş eylem” zaman yan cümlesinde “bevor” ile açılır.",
@@ -2543,7 +2568,9 @@
           "sentence": "Forme um: „Seit seinem Umzug fährt Paul jeden Tag mit der Bahn.“",
           "correct": "Seitdem Paul umgezogen ist, fährt er jeden Tag mit der Bahn.",
           "answers": [
-            "seitdem paul umgezogen ist, fährt er jeden tag mit der bahn"
+            "seitdem paul umgezogen ist, fährt er jeden tag mit der bahn",
+            "seit paul umgezogen ist, fährt er jeden tag mit der bahn",
+            "paul fährt jeden tag mit der bahn, seitdem er umgezogen ist"
           ],
           "explanations": {
             "tr": "Doğru cevap: Seitdem Paul umgezogen ist, fährt er jeden Tag mit der Bahn.. Başlangıç noktasından bugüne süren ilişki “seitdem” ile fiilli yan cümleye çevrilir.",
@@ -2557,7 +2584,9 @@
           "sentence": "Forme um: „Nach dem Ende des Kurses trinken wir noch einen Kaffee.“",
           "correct": "Nachdem der Kurs beendet ist, trinken wir noch einen Kaffee.",
           "answers": [
-            "nachdem der kurs beendet ist, trinken wir noch einen kaffee"
+            "nachdem der kurs beendet ist, trinken wir noch einen kaffee",
+            "nachdem der kurs geendet hat, trinken wir noch einen kaffee",
+            "nachdem der kurs zu ende gegangen ist, trinken wir noch einen kaffee"
           ],
           "explanations": {
             "tr": "Doğru cevap: Nachdem der Kurs beendet ist, trinken wir noch einen Kaffee.. Önce kurs bitiyor, sonra kahve içiliyor; “nachdem” önce tamamlanan eylemi bağlar.",
@@ -2571,7 +2600,8 @@
           "sentence": "Forme um: „Während der Besprechung bleiben die Handys aus.“",
           "correct": "Während die Besprechung läuft, bleiben die Handys aus.",
           "answers": [
-            "während die besprechung läuft, bleiben die handys aus"
+            "während die besprechung läuft, bleiben die handys aus",
+            "während die besprechung stattfindet, bleiben die handys aus"
           ],
           "explanations": {
             "tr": "Doğru cevap: Während die Besprechung läuft, bleiben die Handys aus.. Aynı zaman dilimini fiilli cümleyle anlatmak için “während”.",
@@ -2585,7 +2615,8 @@
           "sentence": "Forme um: „Aus Angst vor dem Hund blieb das Kind stehen.“",
           "correct": "Weil das Kind Angst vor dem Hund hatte, blieb es stehen.",
           "answers": [
-            "weil das kind angst vor dem hund hatte, blieb es stehen"
+            "weil das kind angst vor dem hund hatte, blieb es stehen",
+            "das kind blieb stehen, weil es angst vor dem hund hatte"
           ],
           "explanations": {
             "tr": "Doğru cevap: Weil das Kind Angst vor dem Hund hatte, blieb es stehen.. “aus Angst” neden bildiriyor; fiilli Kausalsatz “weil”.",
@@ -2599,7 +2630,8 @@
           "sentence": "Forme um: „Zum Energiesparen schalten wir nachts alle Geräte aus.“",
           "correct": "Um Energie zu sparen, schalten wir nachts alle Geräte aus.",
           "answers": [
-            "um energie zu sparen, schalten wir nachts alle geräte aus"
+            "um energie zu sparen, schalten wir nachts alle geräte aus",
+            "wir schalten nachts alle geräte aus, um energie zu sparen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Um Energie zu sparen, schalten wir nachts alle Geräte aus.. “zum + isimleşmiş fiil” burada amaç bildirir; aynı özneyle “um ... zu”.",
@@ -2613,7 +2645,9 @@
           "sentence": "Forme um: „Bis zum Beginn des Films warten wir draußen.“",
           "correct": "Bis der Film beginnt, warten wir draußen.",
           "answers": [
-            "bis der film beginnt, warten wir draußen"
+            "bis der film beginnt, warten wir draußen",
+            "wir warten draußen, bis der film beginnt",
+            "bis der film anfängt, warten wir draußen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Bis der Film beginnt, warten wir draußen.. “bis zum Beginn” bitiş sınırını fiilli “bis” yan cümlesine dönüştürür.",
@@ -2627,7 +2661,8 @@
           "sentence": "Forme um: „An ihrem ersten Arbeitstag war Lea sehr nervös.“",
           "correct": "Als Lea ihren ersten Arbeitstag hatte, war sie sehr nervös.",
           "answers": [
-            "als lea ihren ersten arbeitstag hatte, war sie sehr nervös"
+            "als lea ihren ersten arbeitstag hatte, war sie sehr nervös",
+            "lea war sehr nervös, als sie ihren ersten arbeitstag hatte"
           ],
           "explanations": {
             "tr": "Doğru cevap: Als Lea ihren ersten Arbeitstag hatte, war sie sehr nervös.. Geçmişte bir kez yaşanan belirli gün için temporal “als” uygundur.",
@@ -2658,7 +2693,7 @@
       "questions": [
         {
           "word": "Zweiteilige Konnektoren",
-          "sentence": "Mina spricht ___ Deutsch ___ Englisch fließend.",
+          "sentence": "Mina ist in Berlin aufgewachsen und hat in London studiert. Sie spricht ___ Deutsch ___ Englisch fließend.",
           "options": [
             "sowohl ... als auch",
             "weder ... noch",
@@ -2666,7 +2701,7 @@
           ],
           "correct": "sowohl ... als auch",
           "explanations": {
-            "tr": "Doğru cevap: sowohl ... als auch. İki unsur da olumlu biçimde eşit olarak ekleniyor; “sowohl ... als auch”.",
+            "tr": "Doğru cevap: sowohl ... als auch. Berlin'de büyüyüp Londra'da okuduğu için iki dili de konuşuyor: iki olumlu unsur eşit biçimde eklenir → sowohl ... als auch. “weder ... noch” ikisini de olumsuzlar, “entweder ... oder” yalnızca birini seçer.",
             "de": "Die richtige Antwort ist „sowohl ... als auch“. Achte auf Bedeutung und Wortstellung des Konnektors.",
             "en": "The correct answer is “sowohl ... als auch”. Check both the connector's meaning and the word order it requires."
           }
@@ -2688,7 +2723,7 @@
         },
         {
           "word": "Zweiteilige Konnektoren",
-          "sentence": "Wir besuchen ___ das Museum ___ die Altstadt.",
+          "sentence": "Wir haben zwei Tage Zeit und möchten alles sehen: Wir besuchen ___ das Museum ___ die Altstadt.",
           "options": [
             "weder ... noch",
             "sowohl ... als auch",
@@ -2696,7 +2731,7 @@
           ],
           "correct": "sowohl ... als auch",
           "explanations": {
-            "tr": "Doğru cevap: sowohl ... als auch. Her iki yer de ziyaret edilecek; ikisi birlikte olumlu.",
+            "tr": "Doğru cevap: sowohl ... als auch. “alles sehen” ipucu: iki yer de ziyaret edilecek → sowohl ... als auch. “weder ... noch” ikisini de reddeder; “zwar ... aber” karşıtlık ister.",
             "de": "Die richtige Antwort ist „sowohl ... als auch“. Achte auf Bedeutung und Wortstellung des Konnektors.",
             "en": "The correct answer is “sowohl ... als auch”. Check both the connector's meaning and the word order it requires."
           }
@@ -2718,7 +2753,7 @@
         },
         {
           "word": "Zweiteilige Konnektoren",
-          "sentence": "Die App funktioniert ___ auf Android ___ auf iOS.",
+          "sentence": "Die App gibt es für alle Smartphones: Sie funktioniert ___ auf Android ___ auf iOS.",
           "options": [
             "weder ... noch",
             "zwar ... aber",
@@ -2726,7 +2761,7 @@
           ],
           "correct": "sowohl ... als auch",
           "explanations": {
-            "tr": "Doğru cevap: sowohl ... als auch. İki platformda da çalışıyor.",
+            "tr": "Doğru cevap: sowohl ... als auch. “für alle Smartphones” ipucu: uygulama iki sistemde de çalışıyor → sowohl ... als auch. “weder ... noch” ikisini de olumsuzlar.",
             "de": "Die richtige Antwort ist „sowohl ... als auch“. Achte auf Bedeutung und Wortstellung des Konnektors.",
             "en": "The correct answer is “sowohl ... als auch”. Check both the connector's meaning and the word order it requires."
           }
@@ -2748,7 +2783,7 @@
         },
         {
           "word": "Zweiteilige Konnektoren",
-          "sentence": "Wir brauchen ___ mehr Zeit ___ mehr Personal.",
+          "sentence": "Das Projekt ist zu groß für unser kleines Team. Wir brauchen beides: ___ mehr Zeit ___ mehr Personal.",
           "options": [
             "sowohl ... als auch",
             "weder ... noch",
@@ -2756,7 +2791,7 @@
           ],
           "correct": "sowohl ... als auch",
           "explanations": {
-            "tr": "Doğru cevap: sowohl ... als auch. Her iki şeye de ihtiyaç var.",
+            "tr": "Doğru cevap: sowohl ... als auch. “beides” ipucu: iki şeye de ihtiyaç var → sowohl ... als auch. “entweder ... oder” yalnızca birini, “weder ... noch” hiçbirini ifade eder.",
             "de": "Die richtige Antwort ist „sowohl ... als auch“. Achte auf Bedeutung und Wortstellung des Konnektors.",
             "en": "The correct answer is “sowohl ... als auch”. Check both the connector's meaning and the word order it requires."
           }
@@ -2779,13 +2814,13 @@
         {
           "type": "text",
           "word": "Zweiteilige Konnektoren",
-          "sentence": "Ergänze vollständig: „Lena studiert ___ Biologie ___ Chemie.“",
+          "sentence": "Ergänze vollständig: „Lena interessiert sich für beide Fächer und studiert ___ Biologie ___ Chemie.“",
           "correct": "sowohl Biologie als auch Chemie",
           "answers": [
             "sowohl biologie als auch chemie"
           ],
           "explanations": {
-            "tr": "Doğru cevap: sowohl Biologie als auch Chemie. İki bölüm de aynı ölçüde geçerli olduğu için “sowohl ... als auch”.",
+            "tr": "Doğru cevap: sowohl Biologie als auch Chemie. “beide Fächer” ipucu: iki bölüm de aynı ölçüde geçerli → sowohl ... als auch (virgülsüz). “nicht nur Biologie, sondern auch Chemie” de aynı anlamı vurgulu verir.",
             "de": "Die richtige Antwort ist „sowohl Biologie als auch Chemie“. Achte auf Konnektor, Satzbau und Verbposition.",
             "en": "The correct answer is “sowohl Biologie als auch Chemie”. Check the connector, clause structure, and verb position."
           }
@@ -2827,7 +2862,7 @@
       "questions": [
         {
           "word": "Zweiteilige Konnektoren",
-          "sentence": "Heute habe ich ___ Zeit ___ Lust zu kochen.",
+          "sentence": "Ich bestelle heute lieber Pizza, denn ich habe ___ Zeit ___ Lust zu kochen.",
           "options": [
             "weder ... noch",
             "entweder ... oder",
@@ -2835,14 +2870,14 @@
           ],
           "correct": "weder ... noch",
           "explanations": {
-            "tr": "Doğru cevap: weder ... noch. Her iki unsur da olumsuz: ne zaman ne istek var.",
+            "tr": "Doğru cevap: weder ... noch. Pizza sipariş etmesinin nedeni: ne zamanı ne de isteği var → iki unsur da olumsuz: weder ... noch. “sowohl ... als auch” ikisini de olumlu yapar ve “lieber Pizza” ile çelişir.",
             "de": "Die richtige Antwort ist „weder ... noch“. Achte auf Bedeutung und Wortstellung des Konnektors.",
             "en": "The correct answer is “weder ... noch”. Check both the connector's meaning and the word order it requires."
           }
         },
         {
           "word": "Zweiteilige Konnektoren",
-          "sentence": "Wir können ___ am Freitag ___ am Samstag fahren.",
+          "sentence": "Du musst dich entscheiden: Wir können ___ am Freitag ___ am Samstag fahren.",
           "options": [
             "weder ... noch",
             "nicht nur ... sondern auch",
@@ -2850,14 +2885,14 @@
           ],
           "correct": "entweder ... oder",
           "explanations": {
-            "tr": "Doğru cevap: entweder ... oder. İki alternatiften biri seçilecek.",
+            "tr": "Doğru cevap: entweder ... oder. “Du musst dich entscheiden” ipucu: iki günden biri seçilecek → entweder ... oder. “weder ... noch” iki seçeneği de ortadan kaldırırdı.",
             "de": "Die richtige Antwort ist „entweder ... oder“. Achte auf Bedeutung und Wortstellung des Konnektors.",
             "en": "The correct answer is “entweder ... oder”. Check both the connector's meaning and the word order it requires."
           }
         },
         {
           "word": "Zweiteilige Konnektoren",
-          "sentence": "Das Gerät funktioniert ___ mit Akku ___ mit Kabel.",
+          "sentence": "Das Gerät ist kaputt: Es funktioniert ___ mit Akku ___ mit Kabel.",
           "options": [
             "sowohl ... als auch",
             "weder ... noch",
@@ -2865,14 +2900,14 @@
           ],
           "correct": "weder ... noch",
           "explanations": {
-            "tr": "Doğru cevap: weder ... noch. İki seçenek de çalışmıyor; çift olumsuzlama.",
+            "tr": "Doğru cevap: weder ... noch. “kaputt” ipucu: cihaz iki yolla da çalışmıyor → çift olumsuzlama: weder ... noch.",
             "de": "Die richtige Antwort ist „weder ... noch“. Achte auf Bedeutung und Wortstellung des Konnektors.",
             "en": "The correct answer is “weder ... noch”. Check both the connector's meaning and the word order it requires."
           }
         },
         {
           "word": "Zweiteilige Konnektoren",
-          "sentence": "Du kannst ___ hier warten ___ später wiederkommen.",
+          "sentence": "Du hast zwei Möglichkeiten: Du kannst ___ hier warten ___ später wiederkommen.",
           "options": [
             "entweder ... oder",
             "weder ... noch",
@@ -2880,14 +2915,14 @@
           ],
           "correct": "entweder ... oder",
           "explanations": {
-            "tr": "Doğru cevap: entweder ... oder. İki olası seçenek sunuluyor.",
+            "tr": "Doğru cevap: entweder ... oder. “zwei Möglichkeiten” ipucu: iki seçenekten biri → entweder ... oder. “weder ... noch” iki seçeneği de olumsuzlardı.",
             "de": "Die richtige Antwort ist „entweder ... oder“. Achte auf Bedeutung und Wortstellung des Konnektors.",
             "en": "The correct answer is “entweder ... oder”. Check both the connector's meaning and the word order it requires."
           }
         },
         {
           "word": "Zweiteilige Konnektoren",
-          "sentence": "Sie spricht ___ Italienisch ___ Portugiesisch.",
+          "sentence": "Sie hat nie Fremdsprachen gelernt und spricht ___ Italienisch ___ Portugiesisch.",
           "options": [
             "sowohl ... als auch",
             "entweder ... oder",
@@ -2895,14 +2930,14 @@
           ],
           "correct": "weder ... noch",
           "explanations": {
-            "tr": "Doğru cevap: weder ... noch. İki dili de konuşmadığı ifade ediliyor.",
+            "tr": "Doğru cevap: weder ... noch. “nie Fremdsprachen gelernt” ipucu: iki dili de konuşmuyor → weder ... noch.",
             "de": "Die richtige Antwort ist „weder ... noch“. Achte auf Bedeutung und Wortstellung des Konnektors.",
             "en": "The correct answer is “weder ... noch”. Check both the connector's meaning and the word order it requires."
           }
         },
         {
           "word": "Zweiteilige Konnektoren",
-          "sentence": "Wir bestellen ___ Pizza ___ Sushi.",
+          "sentence": "Für zwei Gerichte reicht das Geld nicht: Wir bestellen ___ Pizza ___ Sushi.",
           "options": [
             "nicht nur ... sondern auch",
             "entweder ... oder",
@@ -2910,14 +2945,14 @@
           ],
           "correct": "entweder ... oder",
           "explanations": {
-            "tr": "Doğru cevap: entweder ... oder. İki yemek seçeneğinden biri seçilecek.",
+            "tr": "Doğru cevap: entweder ... oder. Para iki yemeğe yetmiyor; iki seçenekten biri sipariş edilecek → entweder ... oder. “nicht nur ... sondern auch” ikisini birden, “weder ... noch” hiçbirini ifade eder.",
             "de": "Die richtige Antwort ist „entweder ... oder“. Achte auf Bedeutung und Wortstellung des Konnektors.",
             "en": "The correct answer is “entweder ... oder”. Check both the connector's meaning and the word order it requires."
           }
         },
         {
           "word": "Zweiteilige Konnektoren",
-          "sentence": "Ich habe ___ seine E-Mail gelesen ___ seinen Anruf gehört.",
+          "sentence": "Ich weiß nichts von seinem Problem, denn ich habe ___ seine E-Mail gelesen ___ seinen Anruf gehört.",
           "options": [
             "weder ... noch",
             "entweder ... oder",
@@ -2925,14 +2960,14 @@
           ],
           "correct": "weder ... noch",
           "explanations": {
-            "tr": "Doğru cevap: weder ... noch. Her iki eylem de gerçekleşmedi.",
+            "tr": "Doğru cevap: weder ... noch. “Ich weiß nichts” ipucu: iki eylem de gerçekleşmedi → weder ... noch.",
             "de": "Die richtige Antwort ist „weder ... noch“. Achte auf Bedeutung und Wortstellung des Konnektors.",
             "en": "The correct answer is “weder ... noch”. Check both the connector's meaning and the word order it requires."
           }
         },
         {
           "word": "Zweiteilige Konnektoren",
-          "sentence": "Morgen arbeiten wir ___ im Büro ___ von zu Hause.",
+          "sentence": "Das ist noch nicht entschieden: Morgen arbeiten wir ___ im Büro ___ von zu Hause.",
           "options": [
             "weder ... noch",
             "zwar ... aber",
@@ -2940,7 +2975,7 @@
           ],
           "correct": "entweder ... oder",
           "explanations": {
-            "tr": "Doğru cevap: entweder ... oder. İki çalışma yerinden biri seçilecek.",
+            "tr": "Doğru cevap: entweder ... oder. “noch nicht entschieden” ipucu: iki yerden biri seçilecek → entweder ... oder.",
             "de": "Die richtige Antwort ist „entweder ... oder“. Achte auf Bedeutung und Wortstellung des Konnektors.",
             "en": "The correct answer is “entweder ... oder”. Check both the connector's meaning and the word order it requires."
           }
@@ -2948,13 +2983,13 @@
         {
           "type": "text",
           "word": "Zweiteilige Konnektoren",
-          "sentence": "Ergänze: „Ich trinke ___ Kaffee ___ schwarzen Tee.“",
+          "sentence": "Ergänze: „Ich vertrage kein Koffein, deshalb trinke ich ___ Kaffee ___ schwarzen Tee.“",
           "correct": "weder Kaffee noch schwarzen Tee",
           "answers": [
             "weder kaffee noch schwarzen tee"
           ],
           "explanations": {
-            "tr": "Doğru cevap: weder Kaffee noch schwarzen Tee. İki içecek de reddedildiği için “weder ... noch”.",
+            "tr": "Doğru cevap: weder Kaffee noch schwarzen Tee. Kafein dokunduğu için iki içecek de reddediliyor → weder ... noch (araya virgül gelmez).",
             "de": "Die richtige Antwort ist „weder Kaffee noch schwarzen Tee“. Achte auf Konnektor, Satzbau und Verbposition.",
             "en": "The correct answer is “weder Kaffee noch schwarzen Tee”. Check the connector, clause structure, and verb position."
           }
@@ -2962,13 +2997,13 @@
         {
           "type": "text",
           "word": "Zweiteilige Konnektoren",
-          "sentence": "Ergänze: „Wir treffen uns ___ heute ___ morgen.“",
+          "sentence": "Ergänze: „Ich weiß noch nicht, wann ich Zeit habe. Wir treffen uns ___ heute ___ morgen.“",
           "correct": "entweder heute oder morgen",
           "answers": [
             "entweder heute oder morgen"
           ],
           "explanations": {
-            "tr": "Doğru cevap: entweder heute oder morgen. İki zamandan biri seçileceği için “entweder ... oder”.",
+            "tr": "Doğru cevap: entweder heute oder morgen. Henüz belli değil; iki günden biri seçilecek → entweder ... oder.",
             "de": "Die richtige Antwort ist „entweder heute oder morgen“. Achte auf Konnektor, Satzbau und Verbposition.",
             "en": "The correct answer is “entweder heute oder morgen”. Check the connector, clause structure, and verb position."
           }
@@ -3120,7 +3155,8 @@
           "correct": "zwar müde, aber",
           "answers": [
             "zwar müde, aber",
-            "zwar muede, aber"
+            "zwar muede, aber",
+            "sie ist zwar müde, aber sie arbeitet weiter"
           ],
           "explanations": {
             "tr": "Doğru cevap: zwar müde, aber. Yorgunluk kabul ediliyor ancak devam etmesi karşıtlık oluşturuyor.",
@@ -3135,7 +3171,8 @@
           "correct": "Einerseits ist das Angebot günstig, andererseits",
           "answers": [
             "einerseits ist das angebot günstig, andererseits",
-            "einerseits ist das angebot guenstig, andererseits"
+            "einerseits ist das angebot guenstig, andererseits",
+            "einerseits ist das angebot günstig, andererseits ist die qualität nicht überzeugend"
           ],
           "explanations": {
             "tr": "Doğru cevap: Einerseits ist das Angebot günstig, andererseits. İki karşıt değerlendirme “einerseits ... andererseits” ile dengelenir.",
@@ -3291,7 +3328,9 @@
           "correct": "Je mehr man liest, desto größer wird der Wortschatz.",
           "answers": [
             "je mehr man liest, desto größer wird der wortschatz",
-            "je mehr man liest, desto groesser wird der wortschatz"
+            "je mehr man liest, desto groesser wird der wortschatz",
+            "je mehr man liest, umso größer wird der wortschatz",
+            "je mehr man liest, desto größer ist der wortschatz"
           ],
           "explanations": {
             "tr": "Doğru cevap: Je mehr man liest, desto größer wird der Wortschatz.. “viel” Komparativde “mehr”, “groß” ise “größer” olur; je-cümlesinde fiil sona, desto-cümlesinde fiil ikinci konuma gelir.",
@@ -3306,7 +3345,8 @@
           "correct": "Je früher man anfängt, umso schneller ist man fertig.",
           "answers": [
             "je früher man anfängt, umso schneller ist man fertig",
-            "je frueher man anfaengt, umso schneller ist man fertig"
+            "je frueher man anfaengt, umso schneller ist man fertig",
+            "je früher man anfängt, desto schneller ist man fertig"
           ],
           "explanations": {
             "tr": "Doğru cevap: Je früher man anfängt, umso schneller ist man fertig.. Her iki tarafta da Komparativ gerekir: früher / schneller; je yan cümlesinde “anfängt” sona gider.",
@@ -3727,7 +3767,7 @@
         },
         {
           "word": "Master Challenge",
-          "sentence": "___ ich die Datei abgeschickt habe, kontrolliere ich noch einmal den Anhang.",
+          "sentence": "___ ich die Datei abschicke, kontrolliere ich noch einmal den Anhang.",
           "options": [
             "Nachdem",
             "Seitdem",
@@ -3735,7 +3775,7 @@
           ],
           "correct": "Bevor",
           "explanations": {
-            "tr": "Doğru cevap: Bevor. Kontrol gönderimden önce yapılır.",
+            "tr": "Doğru cevap: Bevor. Ek dosya kontrolü gönderimden önce yapılır; sonra gelen eylem (abschicken) “bevor” yan cümlesindedir ve fiil sona gider. “Nachdem” önce tamamlanan eylemi verir ve Perfekt ister (Nachdem ich die Datei abgeschickt habe, …).",
             "de": "Die richtige Antwort ist „Bevor“. Achte auf Bedeutung und Wortstellung des Konnektors.",
             "en": "The correct answer is “Bevor”. Check both the connector's meaning and the word order it requires."
           }
@@ -3791,7 +3831,8 @@
           "sentence": "Verbinde sinnvoll: „Ich hatte wenig Zeit. Ich half meinem Freund trotzdem.“",
           "correct": "Obwohl ich wenig Zeit hatte, half ich meinem Freund.",
           "answers": [
-            "obwohl ich wenig zeit hatte, half ich meinem freund"
+            "obwohl ich wenig zeit hatte, half ich meinem freund",
+            "ich half meinem freund, obwohl ich wenig zeit hatte"
           ],
           "explanations": {
             "tr": "Doğru cevap: Obwohl ich wenig Zeit hatte, half ich meinem Freund.. İki cümle arasında beklenmeyen karşıtlık var; “obwohl” Nebensatz olarak bu ilişkiyi doğru kurar.",
@@ -3805,7 +3846,8 @@
           "sentence": "Bilde mit „je ... desto“: „Wenn ich mehr spreche, werde ich sicherer.“",
           "correct": "Je mehr ich spreche, desto sicherer werde ich.",
           "answers": [
-            "je mehr ich spreche, desto sicherer werde ich"
+            "je mehr ich spreche, desto sicherer werde ich",
+            "je mehr ich spreche, umso sicherer werde ich"
           ],
           "explanations": {
             "tr": "Doğru cevap: Je mehr ich spreche, desto sicherer werde ich.. Koşul biçimindeki anlam orantılı karşılaştırmaya çevrilir; “mehr” ve “sicherer” Komparativ, je-cümlesinde fiil sonda.",

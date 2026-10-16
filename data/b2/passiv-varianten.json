@@ -653,7 +653,8 @@
           "sentence": "Bilde Passiv: „Man darf hier nicht parken.“",
           "correct": "Hier darf nicht geparkt werden.",
           "answers": [
-            "hier darf nicht geparkt werden"
+            "hier darf nicht geparkt werden",
+            "es darf hier nicht geparkt werden"
           ],
           "explanations": {
             "tr": "Doğru cevap: Hier darf nicht geparkt werden.. Nesnesiz park etmek fiilinde impersonal Passiv kullanılır.",
@@ -696,7 +697,8 @@
           "sentence": "Bilde Passiv: „Man darf im Museum nicht fotografieren.“",
           "correct": "Im Museum darf nicht fotografiert werden.",
           "answers": [
-            "im museum darf nicht fotografiert werden"
+            "im museum darf nicht fotografiert werden",
+            "es darf im museum nicht fotografiert werden"
           ],
           "explanations": {
             "tr": "Doğru cevap: Im Museum darf nicht fotografiert werden.. Nesnesiz kullanımda impersonal Passiv.",
@@ -755,10 +757,11 @@
           "correct": "Hier darf Fußball gespielt werden.",
           "answers": [
             "hier darf fussball gespielt werden",
-            "hier darf fußball gespielt werden"
+            "hier darf fußball gespielt werden",
+            "fußball darf hier gespielt werden"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Hier darf Fußball gespielt werden.. Kaynakta benzer şekilde yer ögesiyle impersonal Passiv çalıştırılıyor.",
+            "tr": "Doğru cevap: Hier darf Fußball gespielt werden. Aktif cümledeki Akkusativ nesne (Fußball) pasifte Nominativ özne olur; bu yüzden bu öznesiz (unpersönlich) bir pasif değildir. Yapı: darf + Partizip II (gespielt) + werden. Karşılaştır: Hier darf nicht geparkt werden (nesne yok → öznesiz pasif).",
             "de": "Die richtige Antwort ist „Hier darf Fußball gespielt werden.“. Achte bei „Bilde Passiv: „Man darf hier Fußball spielen.““ besonders auf Modalverb, Partizip II, werden und den Kasus.",
             "en": "The correct answer is “Hier darf Fußball gespielt werden.”. In “Bilde Passiv: „Man darf hier Fußball spielen.“”, pay special attention to the modal verb, past participle, werden and case."
           }
@@ -1216,7 +1219,7 @@
             "dem kollegen muss gratuliert werden"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Dem Kollegen muss gratuliert werden.. gratuliern/gratulieren Dativ nesnesi korunur.",
+            "tr": "Doğru cevap: Dem Kollegen muss gratuliert werden. gratulieren Dativ ister; Dativ nesne (dem Kollegen) pasifte Nominativ özneye dönüşmez, Dativ olarak kalır. Özne olmadığı için modal fiil tekil muss olur.",
             "de": "Die richtige Antwort ist „Dem Kollegen muss gratuliert werden.“. Achte bei „Bilde Passiv: „Man muss dem Kollegen gratulieren.““ besonders auf Modalverb, Partizip II, werden und den Kasus.",
             "en": "The correct answer is “Dem Kollegen muss gratuliert werden.”. In “Bilde Passiv: „Man muss dem Kollegen gratulieren.“”, pay special attention to the modal verb, past participle, werden and case."
           }
@@ -1451,7 +1454,8 @@
           "sentence": "Forme ins Passiv um: „Der Lieferant kann die Ware morgen bringen.“",
           "correct": "Die Ware kann vom Lieferanten morgen gebracht werden.",
           "answers": [
-            "die ware kann vom lieferanten morgen gebracht werden"
+            "die ware kann vom lieferanten morgen gebracht werden",
+            "die ware kann morgen vom lieferanten gebracht werden"
           ],
           "explanations": {
             "tr": "Doğru cevap: Die Ware kann vom Lieferanten morgen gebracht werden.. bringen → gebracht; yapan kişi von + Dativ.",
@@ -1651,7 +1655,8 @@
           "sentence": "Forme ins Passiv um: „Man muss hier leise arbeiten.“",
           "correct": "Hier muss leise gearbeitet werden.",
           "answers": [
-            "hier muss leise gearbeitet werden"
+            "hier muss leise gearbeitet werden",
+            "es muss hier leise gearbeitet werden"
           ],
           "explanations": {
             "tr": "Doğru cevap: Hier muss leise gearbeitet werden.. Nesnesiz arbeiten fiili impersonal Passiv olur.",
@@ -1666,7 +1671,8 @@
           "correct": "Im Gebäude darf nicht geraucht werden.",
           "answers": [
             "im gebaeude darf nicht geraucht werden",
-            "im gebäude darf nicht geraucht werden"
+            "im gebäude darf nicht geraucht werden",
+            "es darf im gebäude nicht geraucht werden"
           ],
           "explanations": {
             "tr": "Doğru cevap: Im Gebäude darf nicht geraucht werden.. Nesne olmadığı için pasif özne yoktur.",
@@ -1681,7 +1687,8 @@
           "correct": "Hier kann gut übernachtet werden.",
           "answers": [
             "hier kann gut uebernachtet werden",
-            "hier kann gut übernachtet werden"
+            "hier kann gut übernachtet werden",
+            "es kann hier gut übernachtet werden"
           ],
           "explanations": {
             "tr": "Doğru cevap: Hier kann gut übernachtet werden.. übernachten nesnesizdir.",
@@ -1696,7 +1703,8 @@
           "correct": "Über andere soll nicht gespottet werden.",
           "answers": [
             "ueber andere soll nicht gespottet werden",
-            "über andere soll nicht gespottet werden"
+            "über andere soll nicht gespottet werden",
+            "es soll nicht über andere gespottet werden"
           ],
           "explanations": {
             "tr": "Doğru cevap: Über andere soll nicht gespottet werden.. Edatlı nesne korunur; impersonal Passiv.",
@@ -1711,7 +1719,8 @@
           "correct": "Für Gerechtigkeit muss gekämpft werden.",
           "answers": [
             "fuer gerechtigkeit muss gekaempft werden",
-            "für gerechtigkeit muss gekämpft werden"
+            "für gerechtigkeit muss gekämpft werden",
+            "es muss für gerechtigkeit gekämpft werden"
           ],
           "explanations": {
             "tr": "Doğru cevap: Für Gerechtigkeit muss gekämpft werden.. Edat grubu korunur; pasif özne oluşmaz.",
@@ -1725,7 +1734,8 @@
           "sentence": "Forme ins Passiv um: „Man darf auf dem See segeln.“",
           "correct": "Auf dem See darf gesegelt werden.",
           "answers": [
-            "auf dem see darf gesegelt werden"
+            "auf dem see darf gesegelt werden",
+            "es darf auf dem see gesegelt werden"
           ],
           "explanations": {
             "tr": "Doğru cevap: Auf dem See darf gesegelt werden.. Nesnesiz segeln → impersonal Passiv.",
@@ -1740,7 +1750,8 @@
           "correct": "Über das Problem kann diskutiert werden.",
           "answers": [
             "ueber das problem kann diskutiert werden",
-            "über das problem kann diskutiert werden"
+            "über das problem kann diskutiert werden",
+            "es kann über das problem diskutiert werden"
           ],
           "explanations": {
             "tr": "Doğru cevap: Über das Problem kann diskutiert werden.. über + Akkusativ edat grubu korunur.",
@@ -1754,7 +1765,8 @@
           "sentence": "Forme ins Passiv um: „Man muss auf den Bus warten.“",
           "correct": "Auf den Bus muss gewartet werden.",
           "answers": [
-            "auf den bus muss gewartet werden"
+            "auf den bus muss gewartet werden",
+            "es muss auf den bus gewartet werden"
           ],
           "explanations": {
             "tr": "Doğru cevap: Auf den Bus muss gewartet werden.. warten auf + Akkusativ korunur.",
@@ -1769,7 +1781,8 @@
           "correct": "Über die Katastrophe soll berichtet werden.",
           "answers": [
             "ueber die katastrophe soll berichtet werden",
-            "über die katastrophe soll berichtet werden"
+            "über die katastrophe soll berichtet werden",
+            "es soll über die katastrophe berichtet werden"
           ],
           "explanations": {
             "tr": "Doğru cevap: Über die Katastrophe soll berichtet werden.. berichten über + Akkusativ; impersonal Passiv.",
@@ -1783,10 +1796,11 @@
           "sentence": "Forme ins Passiv um: „Man darf hier musizieren.“",
           "correct": "Hier darf musiziert werden.",
           "answers": [
-            "hier darf musiziert werden"
+            "hier darf musiziert werden",
+            "es darf hier musiziert werden"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Hier darf musiziert werden.. Kaynakta musizieren gibi nesnesiz fiiller de Präsens Passiv'e dönüştürülüyor.",
+            "tr": "Doğru cevap: Hier darf musiziert werden. musizieren nesnesiz bir fiildir; Akkusativ nesne olmadığı için pasifte özne de olmaz (öznesiz pasif). Modal fiil tekil darf olur, sonda Partizip II + werden gelir: musiziert werden.",
             "de": "Die richtige Antwort ist „Hier darf musiziert werden.“. Achte bei „Forme ins Passiv um: „Man darf hier musizieren.““ besonders auf Modalverb, Partizip II, werden und den Kasus.",
             "en": "The correct answer is “Hier darf musiziert werden.”. In “Forme ins Passiv um: „Man darf hier musizieren.“”, pay special attention to the modal verb, past participle, werden and case."
           }
@@ -1814,7 +1828,7 @@
       "questions": [
         {
           "word": "Präteritum",
-          "sentence": "Welche Form ist korrekt?",
+          "sentence": "Welche Form ist im Präteritum korrekt?",
           "options": [
             "Der Text musste übersetzt werden.",
             "Der Text muss übersetzt werden.",
@@ -1823,13 +1837,13 @@
           "correct": "Der Text musste übersetzt werden.",
           "explanations": {
             "tr": "Doğru cevap: Der Text musste übersetzt werden.. Präteritumda Modalverb çekilir: musste; pasif infinitif “übersetzt werden” kalır.",
-            "de": "Die richtige Antwort ist „Der Text musste übersetzt werden.“. Achte bei „Welche Form ist korrekt?“ besonders auf Modalverb, Partizip II, werden und den Kasus.",
-            "en": "The correct answer is “Der Text musste übersetzt werden.”. In “Welche Form ist korrekt?”, pay special attention to the modal verb, past participle, werden and case."
+            "de": "Die richtige Antwort ist „Der Text musste übersetzt werden.“. Achte bei „Welche Form ist im Präteritum korrekt?“ besonders auf Modalverb, Partizip II, werden und den Kasus.",
+            "en": "The correct answer is “Der Text musste übersetzt werden.”. In “Welche Form ist im Präteritum korrekt?”, pay special attention to the modal verb, past participle, werden and case."
           }
         },
         {
           "word": "Präteritum",
-          "sentence": "Welche Form ist korrekt?",
+          "sentence": "Welche Form ist im Präteritum korrekt?",
           "options": [
             "Der Baum darf nicht gefällt werden.",
             "Der Baum durfte nicht gefällt worden.",
@@ -1838,13 +1852,13 @@
           "correct": "Der Baum durfte nicht gefällt werden.",
           "explanations": {
             "tr": "Doğru cevap: Der Baum durfte nicht gefällt werden.. dürfen Präteritum: durfte.",
-            "de": "Die richtige Antwort ist „Der Baum durfte nicht gefällt werden.“. Achte bei „Welche Form ist korrekt?“ besonders auf Modalverb, Partizip II, werden und den Kasus.",
-            "en": "The correct answer is “Der Baum durfte nicht gefällt werden.”. In “Welche Form ist korrekt?”, pay special attention to the modal verb, past participle, werden and case."
+            "de": "Die richtige Antwort ist „Der Baum durfte nicht gefällt werden.“. Achte bei „Welche Form ist im Präteritum korrekt?“ besonders auf Modalverb, Partizip II, werden und den Kasus.",
+            "en": "The correct answer is “Der Baum durfte nicht gefällt werden.”. In “Welche Form ist im Präteritum korrekt?”, pay special attention to the modal verb, past participle, werden and case."
           }
         },
         {
           "word": "Präteritum",
-          "sentence": "Welche Form ist korrekt?",
+          "sentence": "Welche Form ist im Präteritum korrekt?",
           "options": [
             "Der Brief konnte nicht geschrieben worden.",
             "Der Brief konnte nicht geschrieben werden.",
@@ -1853,13 +1867,13 @@
           "correct": "Der Brief konnte nicht geschrieben werden.",
           "explanations": {
             "tr": "Doğru cevap: Der Brief konnte nicht geschrieben werden.. können Präteritum: konnte.",
-            "de": "Die richtige Antwort ist „Der Brief konnte nicht geschrieben werden.“. Achte bei „Welche Form ist korrekt?“ besonders auf Modalverb, Partizip II, werden und den Kasus.",
-            "en": "The correct answer is “Der Brief konnte nicht geschrieben werden.”. In “Welche Form ist korrekt?”, pay special attention to the modal verb, past participle, werden and case."
+            "de": "Die richtige Antwort ist „Der Brief konnte nicht geschrieben werden.“. Achte bei „Welche Form ist im Präteritum korrekt?“ besonders auf Modalverb, Partizip II, werden und den Kasus.",
+            "en": "The correct answer is “Der Brief konnte nicht geschrieben werden.”. In “Welche Form ist im Präteritum korrekt?”, pay special attention to the modal verb, past participle, werden and case."
           }
         },
         {
           "word": "Präteritum",
-          "sentence": "Welche Form ist korrekt?",
+          "sentence": "Welche Form ist im Präteritum korrekt?",
           "options": [
             "Die Tür sollte geschlossen werden.",
             "Die Tür soll geschlossen werden.",
@@ -1868,13 +1882,13 @@
           "correct": "Die Tür sollte geschlossen werden.",
           "explanations": {
             "tr": "Doğru cevap: Die Tür sollte geschlossen werden.. sollen Präteritum: sollte.",
-            "de": "Die richtige Antwort ist „Die Tür sollte geschlossen werden.“. Achte bei „Welche Form ist korrekt?“ besonders auf Modalverb, Partizip II, werden und den Kasus.",
-            "en": "The correct answer is “Die Tür sollte geschlossen werden.”. In “Welche Form ist korrekt?”, pay special attention to the modal verb, past participle, werden and case."
+            "de": "Die richtige Antwort ist „Die Tür sollte geschlossen werden.“. Achte bei „Welche Form ist im Präteritum korrekt?“ besonders auf Modalverb, Partizip II, werden und den Kasus.",
+            "en": "The correct answer is “Die Tür sollte geschlossen werden.”. In “Welche Form ist im Präteritum korrekt?”, pay special attention to the modal verb, past participle, werden and case."
           }
         },
         {
           "word": "Präteritum",
-          "sentence": "Welche Form ist korrekt?",
+          "sentence": "Welche Form ist im Präteritum korrekt?",
           "options": [
             "Es muss geholfen werden.",
             "Es musste geholfen worden.",
@@ -1883,13 +1897,13 @@
           "correct": "Es musste geholfen werden.",
           "explanations": {
             "tr": "Doğru cevap: Es musste geholfen werden.. Impersonal Passiv Präteritum: musste geholfen werden.",
-            "de": "Die richtige Antwort ist „Es musste geholfen werden.“. Achte bei „Welche Form ist korrekt?“ besonders auf Modalverb, Partizip II, werden und den Kasus.",
-            "en": "The correct answer is “Es musste geholfen werden.”. In “Welche Form ist korrekt?”, pay special attention to the modal verb, past participle, werden and case."
+            "de": "Die richtige Antwort ist „Es musste geholfen werden.“. Achte bei „Welche Form ist im Präteritum korrekt?“ besonders auf Modalverb, Partizip II, werden und den Kasus.",
+            "en": "The correct answer is “Es musste geholfen werden.”. In “Welche Form ist im Präteritum korrekt?”, pay special attention to the modal verb, past participle, werden and case."
           }
         },
         {
           "word": "Präteritum",
-          "sentence": "Welche Form ist korrekt?",
+          "sentence": "Welche Form ist im Präteritum korrekt?",
           "options": [
             "Die Daten konnten gespeichert worden.",
             "Die Daten konnten gespeichert werden.",
@@ -1898,13 +1912,13 @@
           "correct": "Die Daten konnten gespeichert werden.",
           "explanations": {
             "tr": "Doğru cevap: Die Daten konnten gespeichert werden.. Çoğul Modalverb Präteritum: konnten.",
-            "de": "Die richtige Antwort ist „Die Daten konnten gespeichert werden.“. Achte bei „Welche Form ist korrekt?“ besonders auf Modalverb, Partizip II, werden und den Kasus.",
-            "en": "The correct answer is “Die Daten konnten gespeichert werden.”. In “Welche Form ist korrekt?”, pay special attention to the modal verb, past participle, werden and case."
+            "de": "Die richtige Antwort ist „Die Daten konnten gespeichert werden.“. Achte bei „Welche Form ist im Präteritum korrekt?“ besonders auf Modalverb, Partizip II, werden und den Kasus.",
+            "en": "The correct answer is “Die Daten konnten gespeichert werden.”. In “Welche Form ist im Präteritum korrekt?”, pay special attention to the modal verb, past participle, werden and case."
           }
         },
         {
           "word": "Präteritum",
-          "sentence": "Welche Form ist korrekt?",
+          "sentence": "Welche Form ist im Präteritum korrekt?",
           "options": [
             "Im Büro durfte nicht geraucht werden.",
             "Im Büro darf nicht geraucht werden.",
@@ -1913,13 +1927,13 @@
           "correct": "Im Büro durfte nicht geraucht werden.",
           "explanations": {
             "tr": "Doğru cevap: Im Büro durfte nicht geraucht werden.. dürfen → durfte; werden infinitifi değişmez.",
-            "de": "Die richtige Antwort ist „Im Büro durfte nicht geraucht werden.“. Achte bei „Welche Form ist korrekt?“ besonders auf Modalverb, Partizip II, werden und den Kasus.",
-            "en": "The correct answer is “Im Büro durfte nicht geraucht werden.”. In “Welche Form ist korrekt?”, pay special attention to the modal verb, past participle, werden and case."
+            "de": "Die richtige Antwort ist „Im Büro durfte nicht geraucht werden.“. Achte bei „Welche Form ist im Präteritum korrekt?“ besonders auf Modalverb, Partizip II, werden und den Kasus.",
+            "en": "The correct answer is “Im Büro durfte nicht geraucht werden.”. In “Welche Form ist im Präteritum korrekt?”, pay special attention to the modal verb, past participle, werden and case."
           }
         },
         {
           "word": "Präteritum",
-          "sentence": "Welche Form ist korrekt?",
+          "sentence": "Welche Form ist im Präteritum korrekt?",
           "options": [
             "Die Geräte müssen überprüft werden.",
             "Die Geräte mussten überprüft worden.",
@@ -1928,13 +1942,13 @@
           "correct": "Die Geräte mussten überprüft werden.",
           "explanations": {
             "tr": "Doğru cevap: Die Geräte mussten überprüft werden.. Çoğul müssen Präteritum: mussten.",
-            "de": "Die richtige Antwort ist „Die Geräte mussten überprüft werden.“. Achte bei „Welche Form ist korrekt?“ besonders auf Modalverb, Partizip II, werden und den Kasus.",
-            "en": "The correct answer is “Die Geräte mussten überprüft werden.”. In “Welche Form ist korrekt?”, pay special attention to the modal verb, past participle, werden and case."
+            "de": "Die richtige Antwort ist „Die Geräte mussten überprüft werden.“. Achte bei „Welche Form ist im Präteritum korrekt?“ besonders auf Modalverb, Partizip II, werden und den Kasus.",
+            "en": "The correct answer is “Die Geräte mussten überprüft werden.”. In “Welche Form ist im Präteritum korrekt?”, pay special attention to the modal verb, past participle, werden and case."
           }
         },
         {
           "word": "Präteritum",
-          "sentence": "Welche Form ist korrekt?",
+          "sentence": "Welche Form ist im Präteritum korrekt?",
           "options": [
             "Der Antrag konnte genehmigt worden.",
             "Der Antrag konnte genehmigt werden.",
@@ -1943,13 +1957,13 @@
           "correct": "Der Antrag konnte genehmigt werden.",
           "explanations": {
             "tr": "Doğru cevap: Der Antrag konnte genehmigt werden.. konnte + genehmigt werden.",
-            "de": "Die richtige Antwort ist „Der Antrag konnte genehmigt werden.“. Achte bei „Welche Form ist korrekt?“ besonders auf Modalverb, Partizip II, werden und den Kasus.",
-            "en": "The correct answer is “Der Antrag konnte genehmigt werden.”. In “Welche Form ist korrekt?”, pay special attention to the modal verb, past participle, werden and case."
+            "de": "Die richtige Antwort ist „Der Antrag konnte genehmigt werden.“. Achte bei „Welche Form ist im Präteritum korrekt?“ besonders auf Modalverb, Partizip II, werden und den Kasus.",
+            "en": "The correct answer is “Der Antrag konnte genehmigt werden.”. In “Welche Form ist im Präteritum korrekt?”, pay special attention to the modal verb, past participle, werden and case."
           }
         },
         {
           "word": "Präteritum",
-          "sentence": "Welche Form ist korrekt?",
+          "sentence": "Welche Form ist im Präteritum korrekt?",
           "options": [
             "Die Regel sollte erklärt werden.",
             "Die Regel soll erklärt werden.",
@@ -1958,8 +1972,8 @@
           "correct": "Die Regel sollte erklärt werden.",
           "explanations": {
             "tr": "Doğru cevap: Die Regel sollte erklärt werden.. sollen Präteritum: sollte.",
-            "de": "Die richtige Antwort ist „Die Regel sollte erklärt werden.“. Achte bei „Welche Form ist korrekt?“ besonders auf Modalverb, Partizip II, werden und den Kasus.",
-            "en": "The correct answer is “Die Regel sollte erklärt werden.”. In “Welche Form ist korrekt?”, pay special attention to the modal verb, past participle, werden and case."
+            "de": "Die richtige Antwort ist „Die Regel sollte erklärt werden.“. Achte bei „Welche Form ist im Präteritum korrekt?“ besonders auf Modalverb, Partizip II, werden und den Kasus.",
+            "en": "The correct answer is “Die Regel sollte erklärt werden.”. In “Welche Form ist im Präteritum korrekt?”, pay special attention to the modal verb, past participle, werden and case."
           }
         }
       ],
@@ -2005,10 +2019,11 @@
           "correct": "Der Baum durfte von ihm nicht gefällt werden.",
           "answers": [
             "der baum durfte von ihm nicht gefaellt werden",
-            "der baum durfte von ihm nicht gefällt werden"
+            "der baum durfte von ihm nicht gefällt werden",
+            "der baum durfte nicht von ihm gefällt werden"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Der Baum durfte von ihm nicht gefällt werden.. Kaynakta aynı zaman yapısı doğrudan çalıştırılıyor.",
+            "tr": "Doğru cevap: Der Baum durfte von ihm nicht gefällt werden. Aktif cümle Präteritum (durfte) olduğu için pasifte de durfte kalır. Akkusativ nesne den Baum → özne der Baum; aktif özne er → von ihm (von + Dativ). Sonda Partizip II + werden: gefällt werden.",
             "de": "Die richtige Antwort ist „Der Baum durfte von ihm nicht gefällt werden.“. Achte bei „Forme ins Passiv um: „Er durfte den Baum nicht fällen.““ besonders auf Modalverb, Partizip II, werden und den Kasus.",
             "en": "The correct answer is “Der Baum durfte von ihm nicht gefällt werden.”. In “Forme ins Passiv um: „Er durfte den Baum nicht fällen.“”, pay special attention to the modal verb, past participle, werden and case."
           }
@@ -2249,7 +2264,7 @@
             "er hat von ihr benachrichtigt werden können"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Er hat von ihr benachrichtigt werden können.. İlk PDF'de bu tip Perfekt Passiv doğrudan yer alıyor.",
+            "tr": "Doğru cevap: Er hat von ihr benachrichtigt werden können. Akkusativ ihn pasifte Nominativ özne er olur; aktif özne sie → von ihr. Modal fiilin Perfekt'i haben ile kurulur ve modal fiil Infinitiv biçiminde (Ersatzinfinitiv) en sona gelir: hat + benachrichtigt werden + können.",
             "de": "Die richtige Antwort ist „Er hat von ihr benachrichtigt werden können.“. Achte bei „Forme ins Passiv um: „Sie hat ihn benachrichtigen können.““ besonders auf Modalverb, Partizip II, werden und den Kasus.",
             "en": "The correct answer is “Er hat von ihr benachrichtigt werden können.”. In “Forme ins Passiv um: „Sie hat ihn benachrichtigen können.“”, pay special attention to the modal verb, past participle, werden and case."
           }
@@ -2501,7 +2516,7 @@
             "der mann hatte von der polizei festgenommen werden können"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Der Mann hatte von der Polizei festgenommen werden können.. İlk PDF'de Plusquamperfekt mit Modalverb bu zincirle çalıştırılıyor.",
+            "tr": "Doğru cevap: Der Mann hatte von der Polizei festgenommen werden können. Plusquamperfekt'te yardımcı fiil hatte olur; zincir: hatte + Partizip II (festgenommen) + werden + können (Ersatzinfinitiv). Akkusativ den Mann → özne der Mann; die Polizei → von der Polizei.",
             "de": "Die richtige Antwort ist „Der Mann hatte von der Polizei festgenommen werden können.“. Achte bei „Forme ins Passiv um: „Die Polizei hatte den Mann festnehmen können.““ besonders auf Modalverb, Partizip II, werden und den Kasus.",
             "en": "The correct answer is “Der Mann hatte von der Polizei festgenommen werden können.”. In “Forme ins Passiv um: „Die Polizei hatte den Mann festnehmen können.“”, pay special attention to the modal verb, past participle, werden and case."
           }
@@ -2516,7 +2531,7 @@
             "der hund hatte von ihr gesucht werden müssen"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Der Hund hatte von ihr gesucht werden müssen.. Kaynakta aynı yapı örneklenir.",
+            "tr": "Doğru cevap: Der Hund hatte von ihr gesucht werden müssen. Akkusativ den Hund pasifte özne der Hund olur; aktif özne sie → von ihr (Dativ). Zincir: hatte + gesucht + werden + müssen; modal fiil Ersatzinfinitiv olarak en sonda durur.",
             "de": "Die richtige Antwort ist „Der Hund hatte von ihr gesucht werden müssen.“. Achte bei „Forme ins Passiv um: „Sie hatte den Hund suchen müssen.““ besonders auf Modalverb, Partizip II, werden und den Kasus.",
             "en": "The correct answer is “Der Hund hatte von ihr gesucht werden müssen.”. In “Forme ins Passiv um: „Sie hatte den Hund suchen müssen.“”, pay special attention to the modal verb, past participle, werden and case."
           }
@@ -2672,7 +2687,7 @@
             "er hätte von dir gefragt werden sollen"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Er hätte von dir gefragt werden sollen.. İlk PDF'de Konjunktiv II Vergangenheit mit Modalverb açıkça çalıştırılıyor.",
+            "tr": "Doğru cevap: Er hätte von dir gefragt werden sollen. Akkusativ ihn pasifte Nominativ özne er olur; aktif özne du → von dir (Dativ). Konjunktiv II Vergangenheit zinciri: hätte + Partizip II (gefragt) + werden + sollen.",
             "de": "Die richtige Antwort ist „Er hätte von dir gefragt werden sollen.“. Achte bei „Forme ins Passiv um: „Du hättest ihn fragen sollen.““ besonders auf Modalverb, Partizip II, werden und den Kasus.",
             "en": "The correct answer is “Er hätte von dir gefragt werden sollen.”. In “Forme ins Passiv um: „Du hättest ihn fragen sollen.“”, pay special attention to the modal verb, past participle, werden and case."
           }
@@ -2714,7 +2729,8 @@
           "correct": "Ein Kredit hätte ihm von der Bank gegeben werden können.",
           "answers": [
             "ein kredit haette ihm von der bank gegeben werden koennen",
-            "ein kredit hätte ihm von der bank gegeben werden können"
+            "ein kredit hätte ihm von der bank gegeben werden können",
+            "ihm hätte von der bank ein kredit gegeben werden können"
           ],
           "explanations": {
             "tr": "Doğru cevap: Ein Kredit hätte ihm von der Bank gegeben werden können.. Dativ “ihm” korunur; Akkusativ “einen Kredit” özne olur.",
@@ -2843,7 +2859,7 @@
             "das haus wird renoviert werden müssen"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Das Haus wird renoviert werden müssen.. İlk PDF'de Futur I mit Modalverb: wird + Partizip II + werden + müssen.",
+            "tr": "Doğru cevap: Das Haus wird renoviert werden müssen. Futur I'de çekimli fiil wird'dir; Akkusativ das Haus pasifte özne olur. Zincir: wird + Partizip II (renoviert) + werden + müssen.",
             "de": "Die richtige Antwort ist „Das Haus wird renoviert werden müssen.“. Achte bei „Forme ins Passiv um: „Man wird das Haus renovieren müssen.““ besonders auf Modalverb, Partizip II, werden und den Kasus.",
             "en": "The correct answer is “Das Haus wird renoviert werden müssen.”. In “Forme ins Passiv um: „Man wird das Haus renovieren müssen.“”, pay special attention to the modal verb, past participle, werden and case."
           }
@@ -2873,7 +2889,7 @@
             "deutsch wird von uns gelernt werden müssen"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Deutsch wird von uns gelernt werden müssen.. Kaynakta bu tip Futur dönüşümü çalıştırılıyor.",
+            "tr": "Doğru cevap: Deutsch wird von uns gelernt werden müssen. Akkusativ nesne Deutsch pasifte özne olur ve tekil olduğu için çekimli fiil wird'dir; aktif özne wir → von uns. Zincir: wird + gelernt + werden + müssen.",
             "de": "Die richtige Antwort ist „Deutsch wird von uns gelernt werden müssen.“. Achte bei „Forme ins Passiv um: „Wir werden Deutsch lernen müssen.““ besonders auf Modalverb, Partizip II, werden und den Kasus.",
             "en": "The correct answer is “Deutsch wird von uns gelernt werden müssen.”. In “Forme ins Passiv um: „Wir werden Deutsch lernen müssen.“”, pay special attention to the modal verb, past participle, werden and case."
           }
@@ -3353,7 +3369,8 @@
           "correct": "Die Anlage muss heute von den Technikern geprüft werden.",
           "answers": [
             "die anlage muss heute von den technikern geprueft werden",
-            "die anlage muss heute von den technikern geprüft werden"
+            "die anlage muss heute von den technikern geprüft werden",
+            "die anlage muss von den technikern heute geprüft werden"
           ],
           "explanations": {
             "tr": "Doğru cevap: Die Anlage muss heute von den Technikern geprüft werden.. Präsens: muss + geprüft werden; yapan kişi von + Dativ.",
@@ -3412,7 +3429,8 @@
           "correct": "Ein Kredit hätte dem Kunden von der Bank gegeben werden können.",
           "answers": [
             "ein kredit haette dem kunden von der bank gegeben werden koennen",
-            "ein kredit hätte dem kunden von der bank gegeben werden können"
+            "ein kredit hätte dem kunden von der bank gegeben werden können",
+            "dem kunden hätte von der bank ein kredit gegeben werden können"
           ],
           "explanations": {
             "tr": "Doğru cevap: Ein Kredit hätte dem Kunden von der Bank gegeben werden können.. Dativ dem Kunden korunur; Akkusativ nesne pasif özne olur.",
@@ -3427,7 +3445,8 @@
           "correct": "In Zukunft wird mehr über das Problem diskutiert werden müssen.",
           "answers": [
             "in zukunft wird mehr ueber das problem diskutiert werden muessen",
-            "in zukunft wird mehr über das problem diskutiert werden müssen"
+            "in zukunft wird mehr über das problem diskutiert werden müssen",
+            "es wird in zukunft mehr über das problem diskutiert werden müssen"
           ],
           "explanations": {
             "tr": "Doğru cevap: In Zukunft wird mehr über das Problem diskutiert werden müssen.. Nesnesiz/edatlı yapı Futur I impersonal Passiv.",

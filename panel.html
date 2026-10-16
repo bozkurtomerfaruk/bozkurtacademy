@@ -8,13 +8,14 @@
   <script>try{document.documentElement.dataset.theme=localStorage.getItem('ba-theme')==='dark'?'dark':'light'}catch(_){document.documentElement.dataset.theme='light'}</script>
   <title>Panelim | Bozkurt Academy</title>
   <meta name="description" content="Bozkurt Academy öğrenci paneli." />
-  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3">
   <link rel="preload" href="fonts/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=11" />
-  <link rel="stylesheet" href="css/base.css?v=6" />
+  <link rel="stylesheet" href="css/base.css?v=7" />
   <link rel="stylesheet" href="css/account.css?v=3" />
 </head>
 <body class="academy-theme account-page">
@@ -23,7 +24,7 @@
     <header class="topbar">
       <nav class="nav" aria-label="Site menüsü">
         <a class="brand" href="index.html" aria-label="Bozkurt Academy ana sayfa">
-          <img src="images/logo-transparent.png?v=3" width="512" height="512" alt="" class="brand-logo">
+          <img src="images/logo-mark.svg" width="64" height="64" alt="" class="brand-logo brand-logo-light"><img src="images/logo-mark-dark.svg" width="64" height="64" alt="" class="brand-logo brand-logo-dark">
           <div><div class="brand-title">Bozkurt Academy</div></div>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteMenu" data-i18n="menuOpen">Menü</button>
@@ -122,7 +123,7 @@
     </main>
 
     <footer>
-      <div><strong>Bozkurt Academy</strong><br><span data-i18n="footerText">Online Almanca dersleri ve öğrenme materyalleri</span></div>
+      <div class="footer-brand"><img src="images/logo-mark.svg" width="64" height="64" alt="" class="footer-logo brand-logo-light"><img src="images/logo-mark-dark.svg" width="64" height="64" alt="" class="footer-logo brand-logo-dark"><div><strong>Bozkurt Academy</strong><br><span data-i18n="footerText">Online Almanca dersleri ve öğrenme materyalleri</span></div></div>
       <div class="footer-meta">
         <nav class="footer-links" aria-label="Yasal bilgiler" data-i18n-aria="footerLegal">
           <a href="privacy.html" data-i18n="footerPrivacy">Gizlilik politikası</a>

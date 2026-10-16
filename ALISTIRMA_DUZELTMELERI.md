@@ -9,10 +9,10 @@ Notlar:
 
 ## Toplam
 
-- İncelenen konu: 39 / 48
-- İncelenen soru: 6728
-- Düzeltilen soru: 861
-- Onay bekleyen: 37
+- İncelenen konu: 42 / 48
+- İncelenen soru: 7308
+- Düzeltilen soru: 1006
+- Onay bekleyen: 44
 
 | Konu | İncelenen | Düzeltilen | Onay bekleyen |
 |---|---:|---:|---:|
@@ -55,6 +55,9 @@ Notlar:
 | `b1/indirekte-fragen` | 120 | 8 | 0 |
 | `b1/infinitiv-zu` | 200 | 43 | 10 |
 | `b1/kausalsaetze` | 100 | 0 | 0 |
+| `b1/passiv` | 180 | 37 | 2 |
+| `b1/plusquamperfekt` | 200 | 59 | 3 |
+| `b1/praeteritum-b1` | 200 | 49 | 2 |
 
 ## Onay bekleyenler
 
@@ -134,6 +137,20 @@ Bu sorular şüpheli ama değiştirilmedi. Karar senin.
   Zaman ipucu yok; 'Sie ist überzeugt, die richtige Entscheidung zu treffen' de doğru. Öneri: 'gestern' gibi bir ipucu ekle.
 - **`b1/infinitiv-zu` › `praesens-perfekt-15` › 3** — Sie ist erleichtert, pünktlich ___. (gekommen zu sein / zu kommen / gekommen zu haben → gekommen zu sein)  
   Diğer soruların aksine (schon/morgen) zaman ipucu yok; 'Sie ist erleichtert, pünktlich zu kommen' de mümkün. Öneri: 'heute Morgen' veya 'endlich' gibi ipucu ekle.
+- **`b1/passiv` › `master-18` › 5** — Aktiv: Im Saal diskutiert man über den Plan. → Passiv: (… → Im Saal wird über den Plan diskutiert.)  
+  Çeldirici “Der Plan wird im Saal diskutiert.” dilbilgisel olarak doğru ve anlamca neredeyse aynı (diskutieren geçişli de kullanılır: den Plan diskutieren). Verilen cümlenin birebir dönüşümü olmadığı için yanlış sayılıyor; açıklamada “über ile verilen tamamlayıcı korunur, bu yüzden öznesiz Passiv” notu yeterli olabilir ya da çeldirici değiştirilebilir (ör. “Über den Plan werden im Saal diskutiert.”).
+- **`b1/passiv` › `praeteritum-9` › 2** — Der Vertrag ___ gestern unterschrieben. (ist || wurde || war → wurde)  
+  “Der Vertrag war gestern unterschrieben” Zustandspassiv Präteritum olarak marjinal biçimde mümkün. Başlık Vorgangspassiv dediği için büyük sorun değil; istenirse “war” yerine “wird” çeldiricisi konabilir.
+- **`b1/plusquamperfekt` › `vorvergangenheit-8` › 6** — Er kannte den Weg gut, weil er früher oft dort ___. (gewesen war || gewesen ist || war → gewesen war)  
+  “weil er früher oft dort war” (Präteritum) günlük ve yazılı Almancada da çok yaygın ve doğru kabul edilir; “früher” zaten önceliği gösteriyor. Konu Plusquamperfekt olduğu için cevap anahtarı savunulabilir, ama “war” şıkkı belirsiz çeldirici. Öneri: “war” yerine “hatte gewesen” çeldiricisi.
+- **`b1/plusquamperfekt` › `mini-geschichten-18` › 5** — Als wir das Hotel erreichten, ___ unsere Freunde bereits ___. (einchecken) (waren ... eingecheckt || hatten ... eingecheckt || haben ... eingecheckt → hatten ... eingecheckt)  
+  Nesnesiz “einchecken” için sein ile kullanım (sind eingecheckt) da yaygındır ve bazı sözlükler hat/ist ikisini de verir. “waren ... eingecheckt” belirsiz olabilir. Öneri: fiili haben'i kesin alan bir fiille değiştirmek (ör. bezahlen → hatten ... bezahlt).
+- **`b1/plusquamperfekt` › `vorvergangenheit-8` › 2** — Sie war sehr müde, weil sie in der Nacht kaum ___. (schlafen) (schlief || geschlafen hatte || geschlafen hat → geschlafen hatte)  
+  “weil sie in der Nacht kaum schlief” konuşma dilinde kabul edilebilir; okul kuralı Plusquamperfekt ister. Büyük ihtimalle sorun değil; bilgi için.
+- **`b1/praeteritum-b1` › `praesens-zu-praeteritum-8` › 4** — Setze ins Präteritum: „Ich denke, du kommst nicht mehr.“ (→ Ich dachte, du kommst nicht mehr.)  
+  “Ich dachte, du kämst nicht mehr.” ve “Ich dachte, du würdest nicht mehr kommen.” de doğru ve yazı dilinde daha yaygın. B1 için add_answers ile kabul edilebilir; emin değilim çünkü görev yalnızca ana fiili değiştirmeyi hedefliyor olabilir.
+- **`b1/praeteritum-b1` › `master-20` › 8** — Schreibe im Präteritum: „Heute arbeite ich ...“ (→ Damals arbeitete ich ...)  
+  Talimat “Heute”yi değiştirmeyi söylemiyor; öğrenci başka bir zaman zarfı (ör. “Vor zehn Jahren”) yazarsa reddedilir. Öneri: talimata “(Heute → Damals)” ipucu eklemek.
 
 ## Değiştirilen sorular
 
@@ -8326,3 +8343,1377 @@ Gerekçe: Gerekçe 'kaynak formatında virgül' diyordu; virgülün neden zorunl
 - Açıklama (TR)
   - Eski: Doğru cevap: Viele halten es für schwierig, die Ursache herauszufinden.. herausfinden → herauszufinden; kaynak formatında virgül de kullanılır.
   - Yeni: Doğru cevap: Viele halten es für schwierig, die Ursache herauszufinden. es sonraki Infinitivsatz'ı gösterdiği için virgül zorunludur. herausfinden ayrılabilir: zu, heraus ile finden arasına girer → herauszufinden.
+
+### `data/b1/passiv.json`
+
+#### `partizip-ii-3` › 8
+Cümle: Ergänze: Die Rechnung wird sofort ___. (bezahlen)
+
+Gerekçe: TR'deki “-ieren olmayan” ifadesi anlamsız ve kafa karıştırıcıydı; kural: ayrılmayan be- ön eki → ge- yok.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: bezahlt. “bezahlen” -ieren olmayan ayrılmaz be- ön ekli fiildir; Partizip II “bezahlt”, ge- almaz.
+  - Yeni: Doğru cevap: bezahlt. “bezahlen” fiilindeki be- ayrılmayan bir ön ektir; böyle fiiller Partizip II'de ge- almaz: bezahlen → bezahlt. Karşılaştır: zahlen → gezahlt.
+
+#### `aktiv-passiv-praesens-4` › 6
+Cümle: Forme um: „Der Elektriker repariert die Lampe.“
+
+Gerekçe: “von dem” = “vom”; açık yazım da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `die lampe wird vom elektriker repariert`
+  - Yeni: `die lampe wird vom elektriker repariert` / `die lampe wird von dem elektriker repariert`
+
+#### `aktiv-passiv-praesens-4` › 9
+Cümle: Forme um: „Die Firma verschickt heute die Unterlagen.“
+
+Gerekçe: Zaman ifadesi başa alınabilir veya Agens'ten sonra gelebilir; ikisi de doğru Passiv cümlesi.
+
+- Kabul edilen cevaplar
+  - Eski: `die unterlagen werden heute von der firma verschickt`
+  - Yeni: `die unterlagen werden heute von der firma verschickt` / `heute werden die unterlagen von der firma verschickt` / `die unterlagen werden von der firma heute verschickt`
+
+#### `pronomen-5` › 8
+Cümle: Forme um: „Der Arzt informiert mich.“
+
+Gerekçe: “von dem” = “vom”; açık yazım da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `ich werde vom arzt informiert`
+  - Yeni: `ich werde vom arzt informiert` / `ich werde von dem arzt informiert`
+
+#### `agens-von-6` › 0
+Cümle: Das Dokument wird ___ Chef unterschrieben.
+
+Gerekçe: Çeldirici “durch den” açıklanmıyordu; imzalayan kişinin kendisi von ile verilir, durch araç/aracı içindir.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: vom. Yapan kişi tekil maskulin “der Chef”; von + Dativ → von dem = vom.
+  - Yeni: Doğru cevap: vom. İşi yapan kişi (Agens) Passivde von + Dativ ile verilir: der Chef → von dem Chef = vom Chef. “von den” çoğul Dativdir; “durch + Akkusativ” ise işi yapan kişiyi değil, aracı ya da aracı kişiyi bildirir.
+
+#### `man-unpersoenlich-8` › 0
+Cümle: Aktiv: Man spricht hier nur Deutsch. → Passiv:
+
+Gerekçe: Açıklama cümleyi “öznesiz Passiv” sayıyordu; oysa “Deutsch” sprechen'in Akkusativ nesnesidir ve Passivde özne olur (kişisel Passiv).
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Hier wird nur Deutsch gesprochen.. “man” öznesi Passivde düşer; cümle “Hier wird ... gesprochen” şeklinde öznesiz Passiv olur.
+  - Yeni: Doğru cevap: Hier wird nur Deutsch gesprochen. “man” Passivde düşer. Aktivdeki Akkusativ nesne “Deutsch” Passivde Nominativ özne olur; tekil olduğu için “wird gesprochen”. “werden” çoğul özne ister; “ist ... gesprochen” ise Vorgangspassiv değildir.
+
+#### `man-unpersoenlich-8` › 7
+Cümle: Aktiv: Man klopft an die Tür. → Passiv:
+
+Gerekçe: Açıklama “werden” ve “Die Tür wird angeklopft” çeldiricilerinin neden yanlış olduğunu söylemiyordu; tetikleyici prepozisyonlu tamamlayıcı + tekil wird.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Es wird an die Tür geklopft.. Cümle başında yer tutucu “es” kullanılabilir; eylem asıl odaktır.
+  - Yeni: Doğru cevap: Es wird an die Tür geklopft. “an die Tür” prepozisyonlu bir tamamlayıcıdır, Akkusativ nesne değildir; bu yüzden Passivde özne olamaz (“Die Tür wird angeklopft” yanlış). Öznesiz Passivde fiil her zaman tekil “wird” olur; ilk pozisyon boş kalmasın diye yer tutucu “es” gelir. Karşılaştır: An die Tür wird geklopft. (başta başka öğe var → es düşer)
+
+#### `man-unpersoenlich-8` › 8
+Cümle: Forme um: „Man arbeitet hier auch samstags.“
+
+Gerekçe: Yer tutucu es ile veya zaman ifadesi başta kurulan öznesiz Passiv de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `hier wird auch samstags gearbeitet`
+  - Yeni: `hier wird auch samstags gearbeitet` / `es wird hier auch samstags gearbeitet` / `auch samstags wird hier gearbeitet` / `samstags wird hier auch gearbeitet`
+
+#### `man-unpersoenlich-8` › 9
+Cümle: Forme um: „Man spricht in der Sitzung nicht über private Themen.“
+
+Gerekçe: Yer tutucu es ile veya prepozisyonlu öğe başta kurulan öznesiz Passiv de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `in der sitzung wird nicht über private themen gesprochen`
+  - Yeni: `in der sitzung wird nicht über private themen gesprochen` / `es wird in der sitzung nicht über private themen gesprochen` / `über private themen wird in der sitzung nicht gesprochen`
+
+#### `praeteritum-9` › 1
+Cümle: Die Straßen ___ letztes Wochenende gesperrt.
+
+Gerekçe: “am Wochenende” ile “Die Straßen werden am Wochenende gesperrt” (Präsens/gelecek) de doğruydu. Belirgin bir geçmiş zaman ifadesi eklendi.
+
+- Cümle
+  - Eski: Die Straßen ___ am Wochenende gesperrt.
+  - Yeni: Die Straßen ___ letztes Wochenende gesperrt.
+- Açıklama (TR)
+  - Eski: Doğru cevap: wurden. Çoğul özne “die Straßen” → Präteritum “wurden”.
+  - Yeni: Doğru cevap: wurden. “letztes Wochenende” geçmişi gösterir ve özne “die Straßen” çoğuldur → Präteritum Passiv: wurden gesperrt. “werden” Präsens'tir; “sind gesperrt” ise işlemi değil durumu (Zustandspassiv) anlatır.
+
+#### `praeteritum-9` › 3
+Cümle: Die Ergebnisse ___ letzten Montag veröffentlicht.
+
+Gerekçe: “am Montag” ile “Die Ergebnisse werden am Montag veröffentlicht” (gelecek) de doğruydu. Belirgin bir geçmiş zaman ifadesi eklendi.
+
+- Cümle
+  - Eski: Die Ergebnisse ___ am Montag veröffentlicht.
+  - Yeni: Die Ergebnisse ___ letzten Montag veröffentlicht.
+- Açıklama (TR)
+  - Eski: Doğru cevap: wurden. Çoğul ve geçmiş zaman → “wurden veröffentlicht”.
+  - Yeni: Doğru cevap: wurden. “letzten Montag” geçmiş zaman ifadesidir; çoğul özne “die Ergebnisse” → wurden veröffentlicht. “werden” Präsens'tir; “waren veröffentlicht” işlemi değil, sonuç durumunu anlatır.
+
+#### `praeteritum-9` › 4
+Cümle: Das Geschäft ___ im Mai 2020 eröffnet.
+
+Gerekçe: “im Mai” tek başına geçmişi göstermiyordu; “Das Geschäft wird im Mai eröffnet” (gelecek) de doğruydu. Belirgin bir geçmiş zaman ifadesi eklendi.
+
+- Cümle
+  - Eski: Das Geschäft ___ im Mai eröffnet.
+  - Yeni: Das Geschäft ___ im Mai 2020 eröffnet.
+- Açıklama (TR)
+  - Eski: Doğru cevap: wurde. Tekil geçmiş olay: wurde eröffnet.
+  - Yeni: Doğru cevap: wurde. “im Mai 2020” geçmişteki bir zamandır; tekil özne “das Geschäft” → wurde eröffnet. “wird” Präsens/gelecek, “ist eröffnet” ise şimdiki durumu anlatır.
+
+#### `praeteritum-9` › 5
+Cümle: Die Teilnehmer ___ gestern am Eingang kontrolliert.
+
+Gerekçe: Cümlede zaman ipucu yoktu; “Die Teilnehmer werden am Eingang kontrolliert” de doğruydu. Belirgin bir geçmiş zaman ifadesi eklendi.
+
+- Cümle
+  - Eski: Die Teilnehmer ___ am Eingang kontrolliert.
+  - Yeni: Die Teilnehmer ___ gestern am Eingang kontrolliert.
+- Açıklama (TR)
+  - Eski: Doğru cevap: wurden. Geçmişte gerçekleşen işlem çoğul “wurden kontrolliert”.
+  - Yeni: Doğru cevap: wurden. “gestern” geçmişi gösterir; çoğul özne “die Teilnehmer” → wurden kontrolliert. “werden” Präsens'tir; “sind” ile Perfekt kurulacaksa sonda “worden” gerekir.
+
+#### `praeteritum-9` › 6
+Cümle: Die Sitzung ___ gestern um 17 Uhr beendet.
+
+Gerekçe: Zaman ipucu yoktu; “wird um 17 Uhr beendet” ve Zustandspassiv “ist um 17 Uhr beendet” de doğruydu. Belirgin bir geçmiş zaman ifadesi eklendi.
+
+- Cümle
+  - Eski: Die Sitzung ___ um 17 Uhr beendet.
+  - Yeni: Die Sitzung ___ gestern um 17 Uhr beendet.
+- Açıklama (TR)
+  - Eski: Doğru cevap: wurde. Biten toplantı geçmiş süreç olarak “wurde beendet”.
+  - Yeni: Doğru cevap: wurde. “gestern” geçmişteki bir işlemi gösterir; tekil özne “die Sitzung” → wurde beendet. “wird” Präsens'tir; “ist beendet” sadece sonucu (durumu) anlatır.
+
+#### `praeteritum-9` › 7
+Cümle: Die Pakete ___ gestern noch am Abend verschickt.
+
+Gerekçe: “noch am selben Tag” geçmişe bağlı değildi; “Die Pakete werden noch am selben Tag verschickt” (genel durum) de doğruydu. Belirgin bir geçmiş zaman ifadesi eklendi.
+
+- Cümle
+  - Eski: Die Pakete ___ noch am selben Tag verschickt.
+  - Yeni: Die Pakete ___ gestern noch am Abend verschickt.
+- Açıklama (TR)
+  - Eski: Doğru cevap: wurden. Geçmişte çoğul işlem “wurden verschickt”.
+  - Yeni: Doğru cevap: wurden. “gestern” geçmişi gösterir; çoğul özne “die Pakete” → wurden verschickt. “werden” Präsens'tir; “sind verschickt” durumu anlatır.
+
+#### `perfekt-10` › 0
+Cümle: Der Bericht ___. (Perfekt)
+
+Gerekçe: Şıklar bütün fiil grubunu (zarf ve Partizip II dahil) içeriyordu, cümlede ise aynı kelimeler iki boşluğun arasında/yanında tekrar yazılıydı (ör. “ist bereits geschrieben worden bereits geschrieben”). Cümle tek boşluğa indirildi, hedef zaman (Perfekt) belirtildi.
+
+- Cümle
+  - Eski: Der Bericht ___ bereits geschrieben ___.
+  - Yeni: Der Bericht ___. (Perfekt)
+
+#### `perfekt-10` › 1
+Cümle: Die Tickets ___. (Perfekt)
+
+Gerekçe: Şıklar bütün fiil grubunu (zarf ve Partizip II dahil) içeriyordu, cümlede ise aynı kelimeler iki boşluğun arasında/yanında tekrar yazılıydı (ör. “ist bereits geschrieben worden bereits geschrieben”). Cümle tek boşluğa indirildi, hedef zaman (Perfekt) belirtildi.
+
+- Cümle
+  - Eski: Die Tickets ___ online verkauft ___.
+  - Yeni: Die Tickets ___. (Perfekt)
+
+#### `perfekt-10` › 2
+Cümle: Das Formular ___. (Perfekt)
+
+Gerekçe: Şıklar bütün fiil grubunu (zarf ve Partizip II dahil) içeriyordu, cümlede ise aynı kelimeler iki boşluğun arasında/yanında tekrar yazılıydı (ör. “ist bereits geschrieben worden bereits geschrieben”). Cümle tek boşluğa indirildi, hedef zaman (Perfekt) belirtildi.
+
+- Cümle
+  - Eski: Das Formular ___ noch nicht unterschrieben ___.
+  - Yeni: Das Formular ___. (Perfekt)
+
+#### `perfekt-10` › 3
+Cümle: Die Geräte ___. (Perfekt)
+
+Gerekçe: Şıklar bütün fiil grubunu (zarf ve Partizip II dahil) içeriyordu, cümlede ise aynı kelimeler iki boşluğun arasında/yanında tekrar yazılıydı (ör. “ist bereits geschrieben worden bereits geschrieben”). Cümle tek boşluğa indirildi, hedef zaman (Perfekt) belirtildi.
+
+- Cümle
+  - Eski: Die Geräte ___ gestern geprüft ___.
+  - Yeni: Die Geräte ___. (Perfekt)
+
+#### `perfekt-10` › 4
+Cümle: Die Wohnung ___. (Perfekt)
+
+Gerekçe: Şıklar bütün fiil grubunu (zarf ve Partizip II dahil) içeriyordu, cümlede ise aynı kelimeler iki boşluğun arasında/yanında tekrar yazılıydı (ör. “ist bereits geschrieben worden bereits geschrieben”). Cümle tek boşluğa indirildi, hedef zaman (Perfekt) belirtildi.
+
+- Cümle
+  - Eski: Die Wohnung ___ komplett renoviert ___.
+  - Yeni: Die Wohnung ___. (Perfekt)
+
+#### `perfekt-10` › 5
+Cümle: Die Dateien ___. (Perfekt)
+
+Gerekçe: Şıklar bütün fiil grubunu (zarf ve Partizip II dahil) içeriyordu, cümlede ise aynı kelimeler iki boşluğun arasında/yanında tekrar yazılıydı (ör. “ist bereits geschrieben worden bereits geschrieben”). Cümle tek boşluğa indirildi, hedef zaman (Perfekt) belirtildi.
+
+- Cümle
+  - Eski: Die Dateien ___ sicher gespeichert ___.
+  - Yeni: Die Dateien ___. (Perfekt)
+
+#### `perfekt-10` › 6
+Cümle: Der neue Präsident ___. (Perfekt)
+
+Gerekçe: Şıklar bütün fiil grubunu (zarf ve Partizip II dahil) içeriyordu, cümlede ise aynı kelimeler iki boşluğun arasında/yanında tekrar yazılıydı (ör. “ist bereits geschrieben worden bereits geschrieben”). Cümle tek boşluğa indirildi, hedef zaman (Perfekt) belirtildi. Ayrıca TR açıklaması cümleyi aynen tekrarlayan boş şablondu.
+
+- Cümle
+  - Eski: Der neue Präsident ___ gewählt ___.
+  - Yeni: Der neue Präsident ___. (Perfekt)
+- Açıklama (TR)
+  - Eski: Doğru cevap: “ist gewählt worden”. Bu soruda hedef zaman Perfekt; doğru yapı “ist gewählt worden”. Bu soruda özellikle “Der neue Präsident ___ gewählt ___.” cümlesindeki özne, zaman ve fiil grubuna dikkat etmelisin.
+  - Yeni: Doğru cevap: ist gewählt worden. Tekil özne “der neue Präsident” → ist. Vorgangspassiv Perfekt: sein + Partizip II (gewählt) + worden. “wurde gewählt” Präteritum'dur; Passiv Perfekt'te yardımcı fiil “haben” değil “sein” olur.
+
+#### `perfekt-10` › 7
+Cümle: Die Gäste ___. (Perfekt)
+
+Gerekçe: Şıklar bütün fiil grubunu (zarf ve Partizip II dahil) içeriyordu, cümlede ise aynı kelimeler iki boşluğun arasında/yanında tekrar yazılıydı (ör. “ist bereits geschrieben worden bereits geschrieben”). Cümle tek boşluğa indirildi, hedef zaman (Perfekt) belirtildi.
+
+- Cümle
+  - Eski: Die Gäste ___ über die Änderung informiert ___.
+  - Yeni: Die Gäste ___. (Perfekt)
+
+#### `zeitformen-mix-11` › 2
+Cümle: Die Ware ___. (Perfekt)
+
+Gerekçe: Şıklar “bereits kontrolliert” içerdiği hâlde cümlede de vardı; kelimeler iki kez görünüyordu. Tek boşluğa indirildi.
+
+- Cümle
+  - Eski: Die Ware ___ bereits kontrolliert ___. (Perfekt)
+  - Yeni: Die Ware ___. (Perfekt)
+
+#### `zeitformen-mix-11` › 5
+Cümle: Die Türen ___. (Perfekt)
+
+Gerekçe: Şıklar “schon geöffnet” içerdiği hâlde cümlede de vardı; tek boşluğa indirildi.
+
+- Cümle
+  - Eski: Die Türen ___ schon geöffnet ___. (Perfekt)
+  - Yeni: Die Türen ___. (Perfekt)
+
+#### `zeitformen-mix-11` › 8
+Cümle: Ergänze im Perfekt: Die Rechnung ___ schon ___. (bezahlen)
+
+Gerekçe: Cümlede “schon” zaten yazılı; iki boşluğu dolduran öğrenci “ist / bezahlt worden” yazar, bu reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `ist schon bezahlt worden`
+  - Yeni: `ist schon bezahlt worden` / `ist bezahlt worden` / `ist ... bezahlt worden` / `ist … bezahlt worden`
+
+#### `zeitformen-mix-11` › 9
+Cümle: Ergänze im Präteritum: Die Rechnungen ___ gestern ___. (bezahlen)
+
+Gerekçe: Cümlede “gestern” zaten yazılı; iki boşluğu dolduran öğrenci “wurden / bezahlt” yazar, bu reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `wurden gestern bezahlt`
+  - Yeni: `wurden gestern bezahlt` / `wurden bezahlt` / `wurden ... bezahlt` / `wurden … bezahlt`
+
+#### `modal-passiv-praesens-12` › 9
+Cümle: Forme um: „Man darf hier keine Fotos machen.“
+
+Gerekçe: Özne başta veya yer tutucu es ile kurulan sıralar da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `hier dürfen keine fotos gemacht werden`
+  - Yeni: `hier dürfen keine fotos gemacht werden` / `keine fotos dürfen hier gemacht werden` / `es dürfen hier keine fotos gemacht werden`
+
+#### `modal-passiv-vergangenheit-13` › 6
+Cümle: Die alte Regel ___ nächstes Jahr abgeschafft werden. (Futur I Passiv)
+
+Gerekçe: TR açıklaması “kaynakta da görülen” diye boş gerekçe veriyordu; zaman ipucu ve özne eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: wird. Kaynakta da görülen Futur I Passiv kalıbı: wird + Partizip II + werden.
+  - Yeni: Doğru cevap: wird. “nächstes Jahr” geleceği gösterir → Futur I Passiv: werden + Partizip II + werden. Tekil özne “die alte Regel” → wird ... abgeschafft werden. “wurde” Präteritum'dur; “ist” ile Futur kurulmaz.
+
+#### `passivfaehigkeit-15` › 2
+Cümle: „Es regnet seit Stunden.“
+
+Gerekçe: “Kaynakta da...” boş gerekçe; kural ve karşılaştırma eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: nicht passivfähig. Kaynakta da bu tür hava olayı cümlesi Passiv'e dönüştürülemez; ortada insan tarafından gerçekleştirilen bir eylem yoktur.
+  - Yeni: Doğru cevap: nicht passivfähig. “regnen” bir hava olayıdır; “es” gerçek bir yapan değildir ve insanın yaptığı bir eylem yoktur. Bu yüzden ne kişisel ne de öznesiz Passiv kurulabilir. Karşılaştır: Man arbeitet hier. → Hier wird gearbeitet. (insan etkinliği → mümkün)
+
+#### `passivfaehigkeit-15` › 9
+Cümle: Forme ins Passiv, wenn möglich: „Es schneit seit dem Morgen.“
+
+Gerekçe: “Kaynakta...” boş gerekçe düzeltildi. “wenn möglich” talimatına “nicht möglich” yazmak da doğru bir cevaptır.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: –. Kaynakta “Es hat geregnet” örneğinde olduğu gibi hava olayları normal Vorgangspassive dönüştürülmez; bu yüzden cevap çizgidir.
+  - Yeni: Doğru cevap: –. “schneien” bir hava olayıdır; yapan bir kişi ve Akkusativ nesne yoktur. Bu yüzden Passive dönüştürülemez, cevap çizgidir (–). Karşılaştır: Man spricht hier leise. → Hier wird leise gesprochen.
+- Kabul edilen cevaplar
+  - Eski: `-` / `–`
+  - Yeni: `-` / `–` / `nicht möglich` / `nicht passivfähig` / `—`
+
+#### `deklination-agens-16` › 6
+Cümle: Der schwere Koffer wurde von ___ jungen Mann getragen.
+
+Gerekçe: “Reisenden” sıfattan isimdir: von dem (der Reisende), von der (die Reisende, kadın) ve von den (çoğul) üçü de doğruydu. Cinsiyeti belli bir isimle (der Mann) değiştirildi.
+
+- Cümle
+  - Eski: Der schwere Koffer wurde von ___ müden Reisenden getragen.
+  - Yeni: Der schwere Koffer wurde von ___ jungen Mann getragen.
+- Açıklama (TR)
+  - Eski: Doğru cevap: dem. Tekil maskulin belirli artikel Dativ “von dem müden Reisenden”.
+  - Yeni: Doğru cevap: dem. von her zaman Dativ ister. “der junge Mann” tekil maskulindir → Dativ: von dem jungen Mann (sıfat -en alır). “den jungen Mann” Akkusativ'dir, von ile kullanılmaz; “der” feminin Dativ'dir.
+
+#### `fehler-korrigieren-17` › 7
+Cümle: Korrigiere: „Hier werden viel gearbeitet.“
+
+Gerekçe: Yer tutucu es ile kurulan öznesiz Passiv de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `hier wird viel gearbeitet`
+  - Yeni: `hier wird viel gearbeitet` / `es wird hier viel gearbeitet`
+
+#### `master-18` › 2
+Cümle: „Die Unterlagen ___.“ (Perfekt)
+
+Gerekçe: Şıklar cümledeki “bereits digital gespeichert” kelimelerini tekrarlıyordu; ayrıca hedef zaman belirtilmediği için “wurden bereits digital gespeichert” de doğruydu. Tek boşluk + (Perfekt) ipucu.
+
+- Cümle
+  - Eski: „Die Unterlagen ___ bereits digital gespeichert ___.“
+  - Yeni: „Die Unterlagen ___.“ (Perfekt)
+- Açıklama (TR)
+  - Eski: Doğru cevap: sind bereits digital gespeichert worden. Perfekt Passiv çoğul: sind + gespeichert + worden.
+  - Yeni: Doğru cevap: sind bereits digital gespeichert worden. İstenen zaman Perfekt; çoğul özne “die Unterlagen” → sind + Partizip II (gespeichert) + worden. Passiv Perfekt'te “geworden” değil “worden” kullanılır; “wurden ... gespeichert” Präteritum'dur.
+
+#### `master-18` › 7
+Cümle: „Es hat geregnet.“ → Passiv:
+
+Gerekçe: “Kaynakta... örnek olarak verilir” boş gerekçe; kural eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: –. Hava olayı cümlesi kaynakta passivfähig olmayan örnek olarak verilir; normal Vorgangspassiv kurulmaz.
+  - Yeni: Doğru cevap: –. “regnen” bir hava olayıdır; “es” yapan bir kişi değildir ve Akkusativ nesne yoktur. Bu yüzden Passiv kurulamaz; “Es ist geregnet worden” ve “Es wurde geregnet” yanlıştır.
+
+#### `master-18` › 8
+Cümle: Forme um: „Die Techniker mussten die Anlage gestern abschalten.“
+
+Gerekçe: Zaman ifadesinin farklı konumları da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `die anlage musste gestern von den technikern abgeschaltet werden`
+  - Yeni: `die anlage musste gestern von den technikern abgeschaltet werden` / `die anlage musste von den technikern gestern abgeschaltet werden` / `gestern musste die anlage von den technikern abgeschaltet werden`
+
+#### `master-18` › 9
+Cümle: Forme um: „Man hat in der Sitzung lange über die Kosten gesprochen.“
+
+Gerekçe: Yer tutucu es ile veya prepozisyonlu öğe başta kurulan öznesiz Passiv de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `in der sitzung ist lange über die kosten gesprochen worden`
+  - Yeni: `in der sitzung ist lange über die kosten gesprochen worden` / `es ist in der sitzung lange über die kosten gesprochen worden` / `über die kosten ist in der sitzung lange gesprochen worden`
+
+### `data/b1/plusquamperfekt.json`
+
+#### `hilfsverb-1` › 9
+Cümle: Ergänze: „Sie ___ den ganzen Kuchen aufgegessen.“
+
+Gerekçe: Cümle başındaki “Sie” tekil sie de olabilir; o zaman “hatte” doğrudur ve reddediliyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: hatten. “aufessen” haben ile kurulur; çoğul sie için “hatten”.
+  - Yeni: Doğru cevap: hatten. “aufessen” Akkusativ nesne alır (den ganzen Kuchen), bu yüzden haben ile kurulur. “Sie” çoğul (onlar) veya resmî Sie ise “hatten”; tekil sie (o, kadın) ise “hatte” olur, ikisi de doğrudur.
+- Kabul edilen cevaplar
+  - Eski: `hatten`
+  - Yeni: `hatten` / `hatte`
+
+#### `war-formen-3` › 9
+Cümle: Ergänze: „Sie ___ schon aufgestanden.“
+
+Gerekçe: Cümle başındaki “Sie” tekil sie de olabilir; o zaman “war” doğrudur ve reddediliyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: waren. çoğul sie + aufstehen → waren aufgestanden.
+  - Yeni: Doğru cevap: waren. “aufstehen” durum değişikliği bildirir ve sein alır. Çoğul sie (onlar) veya resmî Sie için “waren”; tekil sie (o, kadın) anlamında “war” da doğrudur.
+- Kabul edilen cevaplar
+  - Eski: `waren`
+  - Yeni: `waren` / `war`
+
+#### `zeitformen-erkennen-7` › 5
+Cümle: Welche Zeitform? „Er hatte den Computer erfunden.“
+
+Gerekçe: “Kaynakta ... sınıflandırılır” boş gerekçe; biçim kuralı eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Plusquamperfekt. Kaynakta “hatte erfunden” Plusquamperfekt olarak sınıflandırılır.
+  - Yeni: Doğru cevap: Plusquamperfekt. haben'in Präteritum biçimi “hatte” + Partizip II “erfunden” → Plusquamperfekt. Karşılaştır: Er hat den Computer erfunden. (Perfekt) / Er erfand den Computer. (Präteritum)
+
+#### `vorvergangenheit-8` › 0
+Cümle: Als ich ins Büro kam, ___ die Besprechung schon ___. (beginnen)
+
+Gerekçe: Präteritum çeldiricisi cümlede zaten bulunan zarfı (schon/bereits/längst) ikinci boşluğa tekrar koyuyordu (ör. “begann die Besprechung schon schon”); ayrıca Präteritum burada kısmen kabul edilebilir bir okuma veriyordu. Yerine açıkça yanlış yardımcı fiil/biçim çeldiricisi kondu.
+
+- Seçenekler
+  - Eski: `hatte ... begonnen` / `hat ... begonnen` / `begann ... schon`
+  - Yeni: `hatte ... begonnen` / `hat ... begonnen` / `war ... begonnen`
+
+#### `vorvergangenheit-8` › 1
+Cümle: Als der Bus endlich kam, ___ wir fast vierzig Minuten ___. (warten)
+
+Gerekçe: “warteten ... bereits” cümleye girince “warteten wir fast vierzig Minuten bereits” gibi bozuk sıra veriyor, ayrıca Präteritum (“warteten wir bereits fast vierzig Minuten”) bu bağlamda doğal ve doğru bir okumadır. Açıkça yanlış “waren ... gewartet” kondu.
+
+- Seçenekler
+  - Eski: `haben ... gewartet` / `warteten ... bereits` / `hatten ... gewartet`
+  - Yeni: `haben ... gewartet` / `waren ... gewartet` / `hatten ... gewartet`
+
+#### `vorvergangenheit-8` › 3
+Cümle: Das Auto sprang nicht an, obwohl er vorher ___. (tanken)
+
+Gerekçe: “Kaynakta benzer yapı...” boş gerekçe; olay sırası ve yan cümle kuralı eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: getankt hatte. Kaynakta benzer yapı doğrudan Plusquamperfekt ile verilir; tanklama daha önce gerçekleşir.
+  - Yeni: Doğru cevap: getankt hatte. Benzin alma, arabanın çalışmamasından önce olmuştur → daha eski olay Plusquamperfekt: hatte + getankt. obwohl yan cümlesinde çekimli fiil “hatte” en sonda durur.
+
+#### `vorvergangenheit-8` › 5
+Cümle: Als wir am Restaurant ankamen, ___ die Küche bereits ___. (schließen)
+
+Gerekçe: Präteritum çeldiricisi cümlede zaten bulunan zarfı (schon/bereits/längst) ikinci boşluğa tekrar koyuyordu (ör. “begann die Besprechung schon schon”); ayrıca Präteritum burada kısmen kabul edilebilir bir okuma veriyordu. Yerine açıkça yanlış yardımcı fiil/biçim çeldiricisi kondu. (“war ... geschlossen” Zustandspassiv olarak doğru olacağı için seçilmedi.)
+
+- Seçenekler
+  - Eski: `schloss ... bereits` / `hatte ... geschlossen` / `hat ... geschlossen`
+  - Yeni: `hatte ... geschließt` / `hatte ... geschlossen` / `hat ... geschlossen`
+
+#### `vorvergangenheit-8` › 7
+Cümle: Als die Feuerwehr kam, ___ die Bewohner das Gebäude schon ___. (verlassen)
+
+Gerekçe: Präteritum çeldiricisi cümlede zaten bulunan zarfı (schon/bereits/längst) ikinci boşluğa tekrar koyuyordu (ör. “begann die Besprechung schon schon”); ayrıca Präteritum burada kısmen kabul edilebilir bir okuma veriyordu. Yerine açıkça yanlış yardımcı fiil/biçim çeldiricisi kondu.
+
+- Seçenekler
+  - Eski: `haben ... verlassen` / `verließen ... schon` / `hatten ... verlassen`
+  - Yeni: `haben ... verlassen` / `waren ... verlassen` / `hatten ... verlassen`
+
+#### `vorvergangenheit-8` › 8
+Cümle: Ergänze: „Als ich anrief, ___ sie das Büro schon ___. (verlassen)“
+
+Gerekçe: Cümlede “sie das Büro schon” zaten yazılı; iki boşluğu dolduran öğrencinin “hatte / verlassen” cevabı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `hatte sie das büro schon verlassen`
+  - Yeni: `hatte sie das büro schon verlassen` / `hatte verlassen` / `hatte ... verlassen` / `hatte … verlassen`
+
+#### `nachdem-9` › 0
+Cümle: Nachdem wir die Tickets ___, gingen wir zum Bahnsteig. (kaufen)
+
+Gerekçe: “Kaynakta...” boş gerekçe; özne, yardımcı fiil ve olay sırası eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: gekauft hatten. Kaynakta nachdem + Plusquamperfekt ile önceki olay ifade edilir.
+  - Yeni: Doğru cevap: gekauft hatten. Bilet alma, perona gitmekten (gingen) önce olmuştur. nachdem ile anlatılan önceki olay Plusquamperfekt olur: wir → hatten + gekauft; yan cümlede çekimli fiil sonda.
+
+#### `nachdem-9` › 3
+Cümle: Nachdem der Regen ___, gingen die Kinder hinaus. (aufhören)
+
+Gerekçe: “Kaynakta ... desteklenir” boş gerekçe; kural eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: aufgehört hatte. Kaynakta nachdem + aufgehört hatte benzeri yapı desteklenir.
+  - Yeni: Doğru cevap: aufgehört hatte. Yağmurun durması çocukların dışarı çıkmasından (gingen) önce olur → Plusquamperfekt. aufhören haben ile kurulur; nachdem yan cümlesinde “hatte” en sonda.
+
+#### `nachdem-9` › 8
+Cümle: Verbinde mit „nachdem“: „Ich frühstückte. Danach fuhr ich zur Arbeit.“
+
+Gerekçe: Ana cümle başta da doğru bir nachdem cümlesidir.
+
+- Kabul edilen cevaplar
+  - Eski: `nachdem ich gefruehstueckt hatte fuhr ich zur arbeit` / `nachdem ich gefruehstueckt hatte, fuhr ich zur arbeit` / `nachdem ich gefrühstückt hatte fuhr ich zur arbeit` / `nachdem ich gefrühstückt hatte, fuhr ich zur arbeit`
+  - Yeni: `nachdem ich gefruehstueckt hatte fuhr ich zur arbeit` / `nachdem ich gefruehstueckt hatte, fuhr ich zur arbeit` / `nachdem ich gefrühstückt hatte fuhr ich zur arbeit` / `nachdem ich gefrühstückt hatte, fuhr ich zur arbeit` / `ich fuhr zur arbeit, nachdem ich gefrühstückt hatte` / `ich fuhr zur arbeit nachdem ich gefrühstückt hatte`
+
+#### `nachdem-9` › 9
+Cümle: Verbinde mit „nachdem“: „Wir kamen im Hotel an. Danach gingen wir essen.“
+
+Gerekçe: Ana cümle başta da doğru bir nachdem cümlesidir.
+
+- Kabul edilen cevaplar
+  - Eski: `nachdem wir im hotel angekommen waren gingen wir essen` / `nachdem wir im hotel angekommen waren, gingen wir essen`
+  - Yeni: `nachdem wir im hotel angekommen waren gingen wir essen` / `nachdem wir im hotel angekommen waren, gingen wir essen` / `wir gingen essen, nachdem wir im hotel angekommen waren` / `wir gingen essen nachdem wir im hotel angekommen waren`
+
+#### `als-10` › 0
+Cümle: Als ich nach Hause kam, ___ mein Bruder schon ___. (einschlafen)
+
+Gerekçe: Präteritum çeldiricisi cümlede zaten bulunan zarfı (schon/bereits/längst) ikinci boşluğa tekrar koyuyordu (ör. “begann die Besprechung schon schon”); ayrıca Präteritum burada kısmen kabul edilebilir bir okuma veriyordu. Yerine açıkça yanlış yardımcı fiil/biçim çeldiricisi kondu. Ayrıca TR “Kaynakta ... örneği bulunur” boş gerekçesi düzeltildi.
+
+- Seçenekler
+  - Eski: `war ... eingeschlafen` / `ist ... eingeschlafen` / `schlief ... schon`
+  - Yeni: `war ... eingeschlafen` / `ist ... eingeschlafen` / `hatte ... eingeschlafen`
+- Açıklama (TR)
+  - Eski: Doğru cevap: war ... eingeschlafen. Kaynakta “war eingeschlafen, als ... kam” örneği bulunur; önceki olay Plusquamperfekt.
+  - Yeni: Doğru cevap: war ... eingeschlafen. Kardeşin uyuması eve gelmemden (kam) önce olmuştur → Plusquamperfekt. einschlafen bir durum değişikliğidir, sein alır: war ... eingeschlafen.
+
+#### `als-10` › 1
+Cümle: Als die Lehrerin den Raum betrat, ___ die Schüler bereits ihre Plätze ___. (einnehmen)
+
+Gerekçe: “nahmen ... bereits ein” cümlede “bereits” tekrarını veriyordu; ayrıca “nahmen die Schüler bereits ihre Plätze ein” (oturuyorlardı) doğru bir Präteritum okumasıdır. Açıkça yanlış yardımcı fiil kondu.
+
+- Seçenekler
+  - Eski: `haben ... eingenommen` / `nahmen ... bereits ein` / `hatten ... eingenommen`
+  - Yeni: `haben ... eingenommen` / `waren ... eingenommen` / `hatten ... eingenommen`
+
+#### `als-10` › 2
+Cümle: Als wir ankamen, ___ das Konzert schon ___. (beginnen)
+
+Gerekçe: Präteritum çeldiricisi cümlede zaten bulunan zarfı (schon/bereits/längst) ikinci boşluğa tekrar koyuyordu (ör. “begann die Besprechung schon schon”); ayrıca Präteritum burada kısmen kabul edilebilir bir okuma veriyordu. Yerine açıkça yanlış yardımcı fiil/biçim çeldiricisi kondu. TR “Kaynakta benzer cümle doğrudan verilir” boş gerekçesi düzeltildi.
+
+- Seçenekler
+  - Eski: `begann ... schon` / `hatte ... begonnen` / `hat ... begonnen`
+  - Yeni: `war ... begonnen` / `hatte ... begonnen` / `hat ... begonnen`
+- Açıklama (TR)
+  - Eski: Doğru cevap: hatte ... begonnen. Kaynakta benzer cümle doğrudan verilir.
+  - Yeni: Doğru cevap: hatte ... begonnen. Konser bizim varışımızdan (ankamen) önce başlamıştı → Plusquamperfekt. beginnen haben ile kurulur: hatte ... begonnen.
+
+#### `als-10` › 3
+Cümle: Als der Chef fragte, ___ ich die Datei bereits ___. (schicken)
+
+Gerekçe: Präteritum çeldiricisi cümlede zaten bulunan zarfı (schon/bereits/längst) ikinci boşluğa tekrar koyuyordu (ör. “begann die Besprechung schon schon”); ayrıca Präteritum burada kısmen kabul edilebilir bir okuma veriyordu. Yerine açıkça yanlış yardımcı fiil/biçim çeldiricisi kondu.
+
+- Seçenekler
+  - Eski: `hatte ... geschickt` / `habe ... geschickt` / `schickte ... schon`
+  - Yeni: `hatte ... geschickt` / `habe ... geschickt` / `war ... geschickt`
+
+#### `als-10` › 4
+Cümle: Als sie aufwachte, ___ es draußen schon ___. (schneien)
+
+Gerekçe: Präteritum çeldiricisi cümlede zaten bulunan zarfı (schon/bereits/längst) ikinci boşluğa tekrar koyuyordu (ör. “begann die Besprechung schon schon”); ayrıca Präteritum burada kısmen kabul edilebilir bir okuma veriyordu. Yerine açıkça yanlış yardımcı fiil/biçim çeldiricisi kondu. (“schneite es draußen schon” = hâlâ kar yağıyordu, ayrıca doğru bir okuma.)
+
+- Seçenekler
+  - Eski: `hat ... geschneit` / `schneite ... schon` / `hatte ... geschneit`
+  - Yeni: `hat ... geschneit` / `war ... geschneit` / `hatte ... geschneit`
+
+#### `als-10` › 5
+Cümle: Als die Polizei eintraf, ___ der Dieb längst ___. (fliehen)
+
+Gerekçe: Präteritum çeldiricisi cümlede zaten bulunan zarfı (schon/bereits/längst) ikinci boşluğa tekrar koyuyordu (ör. “begann die Besprechung schon schon”); ayrıca Präteritum burada kısmen kabul edilebilir bir okuma veriyordu. Yerine açıkça yanlış yardımcı fiil/biçim çeldiricisi kondu.
+
+- Seçenekler
+  - Eski: `floh ... längst` / `war ... geflohen` / `ist ... geflohen`
+  - Yeni: `hatte ... geflohen` / `war ... geflohen` / `ist ... geflohen`
+
+#### `als-10` › 6
+Cümle: Als wir die Rechnung bekamen, ___ wir bereits ___. (essen)
+
+Gerekçe: Präteritum çeldiricisi cümlede zaten bulunan zarfı (schon/bereits/längst) ikinci boşluğa tekrar koyuyordu (ör. “begann die Besprechung schon schon”); ayrıca Präteritum burada kısmen kabul edilebilir bir okuma veriyordu. Yerine açıkça yanlış yardımcı fiil/biçim çeldiricisi kondu.
+
+- Seçenekler
+  - Eski: `hatten ... gegessen` / `haben ... gegessen` / `aßen ... bereits`
+  - Yeni: `hatten ... gegessen` / `haben ... gegessen` / `waren ... gegessen`
+
+#### `als-10` › 7
+Cümle: Als sie mich anrief, ___ ich den Fehler schon ___. (bemerken)
+
+Gerekçe: Präteritum çeldiricisi cümlede zaten bulunan zarfı (schon/bereits/längst) ikinci boşluğa tekrar koyuyordu (ör. “begann die Besprechung schon schon”); ayrıca Präteritum burada kısmen kabul edilebilir bir okuma veriyordu. Yerine açıkça yanlış yardımcı fiil/biçim çeldiricisi kondu.
+
+- Seçenekler
+  - Eski: `habe ... bemerkt` / `bemerkte ... schon` / `hatte ... bemerkt`
+  - Yeni: `habe ... bemerkt` / `war ... bemerkt` / `hatte ... bemerkt`
+
+#### `als-10` › 8
+Cümle: Verbinde: „Der Zug fuhr ab. Danach erreichten wir den Bahnhof.“
+
+Gerekçe: Verilen cümlelerde “schon” yok; schon'suz, bereits'li veya ana cümle başta yazılan biçimler de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `als wir den bahnhof erreichten war der zug schon abgefahren` / `als wir den bahnhof erreichten, war der zug schon abgefahren`
+  - Yeni: `als wir den bahnhof erreichten war der zug schon abgefahren` / `als wir den bahnhof erreichten, war der zug schon abgefahren` / `der zug war schon abgefahren, als wir den bahnhof erreichten` / `der zug war schon abgefahren als wir den bahnhof erreichten` / `als wir den bahnhof erreichten, war der zug abgefahren` / `als wir den bahnhof erreichten war der zug abgefahren` / `als wir den bahnhof erreichten, war der zug bereits abgefahren` / `als wir den bahnhof erreichten war der zug bereits abgefahren`
+
+#### `als-10` › 9
+Cümle: Verbinde: „Sie beendete die Arbeit. Später kam der Chef.“
+
+Gerekçe: Verilen cümlelerde “schon” yok; schon'suz, bereits'li veya ana cümle başta yazılan biçimler de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `als der chef kam hatte sie die arbeit schon beendet` / `als der chef kam, hatte sie die arbeit schon beendet`
+  - Yeni: `als der chef kam hatte sie die arbeit schon beendet` / `als der chef kam, hatte sie die arbeit schon beendet` / `sie hatte die arbeit schon beendet, als der chef kam` / `sie hatte die arbeit schon beendet als der chef kam` / `als der chef kam, hatte sie die arbeit beendet` / `als der chef kam hatte sie die arbeit beendet` / `als der chef kam, hatte sie die arbeit bereits beendet` / `als der chef kam hatte sie die arbeit bereits beendet`
+
+#### `zeitadverbien-11` › 1
+Cümle: Susi war traurig. Sie hatte sich ___ mit ihrer Freundin gestritten.
+
+Gerekçe: “Kaynakta ... işaretlenir” boş gerekçe; anlam ipucu eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: zuvor. Kaynakta “zuvor” ile daha eski geçmiş açıkça işaretlenir.
+  - Yeni: Doğru cevap: zuvor. Kavga, üzgün olmasından (war traurig) önce olmuştur; “zuvor” (= daha önce) Plusquamperfekt “hatte ... gestritten” ile uyumludur. “danach” sonrasını, “morgen” geleceği bildirir.
+
+#### `zeitadverbien-11` › 8
+Cümle: Ergänze passend: „Als der Kurs begann, hatte ich die Unterlagen ___ gelesen.“
+
+Gerekçe: “schon/vorher/zuvor gelesen” de bağlama tamamen uyar ve doğrudur.
+
+- Kabul edilen cevaplar
+  - Eski: `bereits`
+  - Yeni: `bereits` / `schon` / `vorher` / `zuvor`
+
+#### `zeitadverbien-11` › 9
+Cümle: Ergänze passend: „Sie kannte die Stadt gut, weil sie ___ dort gelebt hatte.“
+
+Gerekçe: “weil sie ___ dort gelebt hatte” boşluğuna bu zarflar da doğru ve doğal biçimde uyar.
+
+- Kabul edilen cevaplar
+  - Eski: `früher` / `frueher`
+  - Yeni: `früher` / `frueher` / `vorher` / `zuvor` / `lange` / `jahrelang` / `einmal` / `schon einmal`
+
+#### `nebensatz-12` › 0
+Cümle: Welche Variante ist korrekt?
+
+Gerekçe: “Kaynakta ...” boş gerekçe; yan cümle sırası kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: ..., nachdem wir die Fahrkarten gekauft hatten.. Kaynakta nachdem yan cümlesinde Partizip II önce, çekimli yardımcı fiil en sonda yer alır.
+  - Yeni: Doğru cevap: ..., nachdem wir die Fahrkarten gekauft hatten. nachdem yan cümle kurar: çekimli yardımcı fiil “hatten” en sona gider, Partizip II “gekauft” hemen önünde durur; nesne “die Fahrkarten” fiil grubundan önce gelir.
+
+#### `nebensatz-12` › 2
+Cümle: Welche Variante ist korrekt?
+
+Gerekçe: “Kaynakta ...” boş gerekçe; yan cümle sırası kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: ..., obwohl er vorher getankt hatte.. Kaynakta “obwohl er vorher getankt hatte” modeli kullanılır.
+  - Yeni: Doğru cevap: ..., obwohl er vorher getankt hatte. obwohl yan cümle kurar: çekimli yardımcı fiil “hatte” en sonda, Partizip II “getankt” ondan önce; zarf “vorher” fiil grubunun önünde kalır.
+
+#### `nebensatz-12` › 5
+Cümle: Welche Variante ist korrekt?
+
+Gerekçe: “Kaynakta ...” boş gerekçe; yan cümle sırası kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: ..., nachdem der Regen aufgehört hatte.. Kaynakta aynı fiil ve bağlaçla bu sıra desteklenir.
+  - Yeni: Doğru cevap: ..., nachdem der Regen aufgehört hatte. nachdem yan cümlesinde sıra: özne (der Regen) + Partizip II (aufgehört) + çekimli yardımcı fiil (hatte) en sonda.
+
+#### `nebensatz-12` › 7
+Cümle: Welche Variante ist korrekt?
+
+Gerekçe: “Kaynakta ...” boş gerekçe; yan cümle sırası kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: ..., nachdem wir die Stadt besichtigt hatten.. Kaynakta “nachdem ... besichtigt hatten” yapısı bulunur.
+  - Yeni: Doğru cevap: ..., nachdem wir die Stadt besichtigt hatten. Yan cümlede çekimli “hatten” en sona gider; “besichtigt” ondan önce, nesne “die Stadt” fiil grubundan önce durur.
+
+#### `haben-sein-b1-13` › 0
+Cümle: Die Sportler ___ um den See gerannt.
+
+Gerekçe: “Kaynak...” boş gerekçe; haben/sein seçiminin nedeni yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: waren. Kaynağın B1-B2 bölümünde yönlü hareket “waren ... gerannt” olarak verilir.
+  - Yeni: Doğru cevap: waren. rennen hareket fiilidir; “um den See” bir güzergâh bildirir → sein: waren ... gerannt. Çoğul özne “die Sportler” → waren.
+
+#### `haben-sein-b1-13` › 1
+Cümle: Miriam ___ über den See gerudert.
+
+Gerekçe: “Kaynak...” boş gerekçe; haben/sein seçiminin nedeni yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: war. Kaynak yönlü hareket bağlamında rudern için sein kullanır.
+  - Yeni: Doğru cevap: war. “über den See rudern” bir yerden bir yere hareket bildirir → sein: war ... gerudert. Karşılaştır: Sie hatte zwei Stunden gerudert. (yalnızca etkinlik/süre → haben)
+
+#### `haben-sein-b1-13` › 3
+Cümle: Marko ___ sich in Veronika verliebt.
+
+Gerekçe: “Kaynak...” boş gerekçe; haben/sein seçiminin nedeni yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: hatte. Kaynakta “hatte sich verliebt” verilir; dönüşlü fiil haben alır.
+  - Yeni: Doğru cevap: hatte. sich verlieben dönüşlü fiildir; dönüşlü fiiller Perfekt ve Plusquamperfekt'te haben alır: hatte sich ... verliebt.
+
+#### `haben-sein-b1-13` › 4
+Cümle: Die Kinder ___ lange geschlafen.
+
+Gerekçe: “Kaynak...” boş gerekçe; haben/sein seçiminin nedeni yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: hatten. Kaynakta schlafen “hatten geschlafen” biçiminde.
+  - Yeni: Doğru cevap: hatten. schlafen hareket ya da durum değişikliği bildirmez, haben alır: hatten ... geschlafen. Karşılaştır: Die Kinder waren eingeschlafen. (einschlafen = durum değişikliği → sein)
+
+#### `haben-sein-b1-13` › 6
+Cümle: Roberto ___ aus dem Haus geschlichen.
+
+Gerekçe: “Kaynak...” boş gerekçe; haben/sein seçiminin nedeni yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: war. Kaynakta schleichen hedefli hareket bağlamında sein ile verilir.
+  - Yeni: Doğru cevap: war. schleichen burada evden dışarı çıkmayı (aus dem Haus) anlatan hareket fiilidir → sein: war ... geschlichen. Karşılaştır: Er hatte sich aus dem Haus geschlichen. (dönüşlü kullanım → haben)
+
+#### `unregelmaessige-partizipien-14` › 0
+Cümle: Plusquamperfekt von „brechen“ (sich den Arm brechen)
+
+Gerekçe: brechen nesnesiz kullanımda sein alır (Der Ast war gebrochen); bu yüzden “war gebrochen” de doğruydu. Bağlam (sich den Arm brechen) eklendi; “Kaynakta...” boş gerekçe düzeltildi.
+
+- Cümle
+  - Eski: Plusquamperfekt von „brechen“
+  - Yeni: Plusquamperfekt von „brechen“ (sich den Arm brechen)
+- Açıklama (TR)
+  - Eski: Doğru cevap: hatte gebrochen. Kaynakta “sich die Hand gebrochen hatte” biçimi kullanılır.
+  - Yeni: Doğru cevap: hatte gebrochen. brechen güçlü fiildir: brechen → brach → gebrochen (gebrecht yok). sich den Arm brechen Akkusativ nesne alır (den Arm) → haben: hatte gebrochen. Karşılaştır: Der Ast war gebrochen. (nesne yok, durum değişikliği → sein)
+
+#### `unregelmaessige-partizipien-14` › 1
+Cümle: Plusquamperfekt von „beginnen“
+
+Gerekçe: “Kaynakta ...” boş gerekçe; Partizip II kuralı ve yardımcı fiil nedeni yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: hatte begonnen. Kaynakta “hatte das Konzert schon begonnen” modeli vardır.
+  - Yeni: Doğru cevap: hatte begonnen. beginnen güçlü fiildir: beginnen → begann → begonnen; be- ön eki yüzünden ge- almaz. Yardımcı fiil haben: hatte begonnen.
+
+#### `unregelmaessige-partizipien-14` › 2
+Cümle: Plusquamperfekt von „streiten“
+
+Gerekçe: “Kaynakta ...” boş gerekçe; Partizip II kuralı ve yardımcı fiil nedeni yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: hatte gestritten. Kaynakta “hatte sich ... gestritten” biçimi geçer.
+  - Yeni: Doğru cevap: hatte gestritten. streiten güçlü fiildir: streiten → stritt → gestritten (gestreitet yok). Genellikle dönüşlü kullanılır (sich streiten) ve haben alır: Sie hatte sich gestritten.
+
+#### `unregelmaessige-partizipien-14` › 3
+Cümle: Plusquamperfekt von „vergehen“
+
+Gerekçe: “Kaynakta ...” boş gerekçe; Partizip II kuralı ve yardımcı fiil nedeni yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: war vergangen. Kaynakta süre için “eine Stunde vergangen war” kullanılır.
+  - Yeni: Doğru cevap: war vergangen. vergehen (zaman geçmek) bir durum değişikliğidir, sein alır; Partizip II: vergangen. Örnek: Eine Stunde war vergangen.
+
+#### `unregelmaessige-partizipien-14` › 4
+Cümle: Plusquamperfekt von „fliehen“
+
+Gerekçe: “Kaynakta ...” boş gerekçe; Partizip II kuralı ve yardımcı fiil nedeni yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: war geflohen. Üçüncü kaynakta fliehen → geflohen ve sein ile gösterilir.
+  - Yeni: Doğru cevap: war geflohen. fliehen (kaçmak) yer değiştirme bildiren hareket fiilidir, sein alır; Partizip II düzensizdir: geflohen. Örnek: Der Dieb war geflohen.
+
+#### `unregelmaessige-partizipien-14` › 5
+Cümle: Plusquamperfekt von „erfinden“
+
+Gerekçe: “Kaynakta ...” boş gerekçe; Partizip II kuralı ve yardımcı fiil nedeni yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: hatte erfunden. Kaynakta “hatte ... erfunden” bulunur.
+  - Yeni: Doğru cevap: hatte erfunden. erfinden, finden gibi çekilir (fand – gefunden), ama er- ayrılmaz ön ek olduğu için ge- almaz: erfunden. Akkusativ nesne alır → haben.
+
+#### `unregelmaessige-partizipien-14` › 6
+Cümle: Plusquamperfekt von „verzeihen“
+
+Gerekçe: “Kaynakta ...” boş gerekçe; Partizip II kuralı ve yardımcı fiil nedeni yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: hatte verziehen. Üçüncü kaynak çözümünde verzeihen → verziehen.
+  - Yeni: Doğru cevap: hatte verziehen. verzeihen güçlü fiildir: verzeihen → verzieh → verziehen; ver- ön eki yüzünden ge- almaz. Yardımcı fiil haben: Sie hatte ihm verziehen.
+
+#### `unregelmaessige-partizipien-14` › 7
+Cümle: Plusquamperfekt von „gießen“
+
+Gerekçe: “Kaynakta ...” boş gerekçe; Partizip II kuralı ve yardımcı fiil nedeni yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: hatte gegossen. Kaynak çözümünde gießen → gegossen.
+  - Yeni: Doğru cevap: hatte gegossen. gießen güçlü fiildir: gießen → goss → gegossen (gegießt yok). Akkusativ nesne alır (die Blumen gießen) → haben.
+
+#### `konnektoren-15` › 2
+Cümle: Das Auto sprang nicht an, obwohl der Mechaniker es am Vortag ___. (prüfen)
+
+Gerekçe: “Kaynakta ... modeli bulunur” boş gerekçe; olay sırası ipucu eklendi.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: geprüft hatte. Kaynakta obwohl + vorher + Plusquamperfekt modeli bulunur.
+  - Yeni: Doğru cevap: geprüft hatte. Kontrol “am Vortag” yapılmıştı, yani arabanın çalışmamasından önce → Plusquamperfekt. prüfen haben alır; obwohl yan cümlesinde “hatte” en sonda.
+
+#### `konnektoren-15` › 7
+Cümle: Er bestellte keinen Nachtisch, denn er ___ vorher schon viel ___. (essen)
+
+Gerekçe: Präteritum çeldiricisi cümlede zaten bulunan zarfı (schon/bereits/längst) ikinci boşluğa tekrar koyuyordu (ör. “begann die Besprechung schon schon”); ayrıca Präteritum burada kısmen kabul edilebilir bir okuma veriyordu. Yerine açıkça yanlış yardımcı fiil/biçim çeldiricisi kondu.
+
+- Seçenekler
+  - Eski: `hat ... gegessen` / `aß ... schon` / `hatte ... gegessen`
+  - Yeni: `hat ... gegessen` / `war ... gegessen` / `hatte ... gegessen`
+
+#### `konnektoren-15` › 8
+Cümle: Verbinde mit „weil“: „Ich musste zurück. Ich hatte meinen Ausweis vergessen.“
+
+Gerekçe: weil yan cümlesi başta da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `ich musste zurueck weil ich meinen ausweis vergessen hatte` / `ich musste zurueck, weil ich meinen ausweis vergessen hatte` / `ich musste zurück weil ich meinen ausweis vergessen hatte` / `ich musste zurück, weil ich meinen ausweis vergessen hatte`
+  - Yeni: `ich musste zurueck weil ich meinen ausweis vergessen hatte` / `ich musste zurueck, weil ich meinen ausweis vergessen hatte` / `ich musste zurück weil ich meinen ausweis vergessen hatte` / `ich musste zurück, weil ich meinen ausweis vergessen hatte` / `weil ich meinen ausweis vergessen hatte, musste ich zurück` / `weil ich meinen ausweis vergessen hatte musste ich zurück`
+
+#### `konnektoren-15` › 9
+Cümle: Verbinde mit „obwohl“: „Er hatte vorher getankt. Das Auto sprang nicht an.“
+
+Gerekçe: “Kaynakta ...” boş gerekçe düzeltildi; obwohl yan cümlesi başta da doğru.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Das Auto sprang nicht an, obwohl er vorher getankt hatte.. Kaynakta aynı ilişki modeli Plusquamperfekt ile kullanılır.
+  - Yeni: Doğru cevap: Das Auto sprang nicht an, obwohl er vorher getankt hatte. obwohl beklenmeyen bir karşıtlık bildirir: benzin alınmıştı ama araba çalışmadı. Benzin alma daha önce olduğu için Plusquamperfekt kalır; obwohl yan cümlesinde “hatte” en sona gider.
+- Kabul edilen cevaplar
+  - Eski: `das auto sprang nicht an obwohl er vorher getankt hatte` / `das auto sprang nicht an, obwohl er vorher getankt hatte`
+  - Yeni: `das auto sprang nicht an obwohl er vorher getankt hatte` / `das auto sprang nicht an, obwohl er vorher getankt hatte` / `obwohl er vorher getankt hatte, sprang das auto nicht an` / `obwohl er vorher getankt hatte sprang das auto nicht an`
+
+#### `satzbau-16` › 0
+Cümle: Bilde den Satz: „als / ich / ankommen / das Meeting / schon / beginnen“
+
+Gerekçe: Ana cümle/yan cümle sırasının değiştiği biçim de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `als ich ankam hatte das meeting schon begonnen` / `als ich ankam, hatte das meeting schon begonnen`
+  - Yeni: `als ich ankam hatte das meeting schon begonnen` / `als ich ankam, hatte das meeting schon begonnen` / `das meeting hatte schon begonnen, als ich ankam` / `das meeting hatte schon begonnen als ich ankam`
+
+#### `satzbau-16` › 1
+Cümle: Bilde den Satz: „nachdem / wir / die Tickets / kaufen / wir / einsteigen“
+
+Gerekçe: Ana cümle/yan cümle sırasının değiştiği biçim de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `nachdem wir die tickets gekauft hatten stiegen wir ein` / `nachdem wir die tickets gekauft hatten, stiegen wir ein`
+  - Yeni: `nachdem wir die tickets gekauft hatten stiegen wir ein` / `nachdem wir die tickets gekauft hatten, stiegen wir ein` / `wir stiegen ein, nachdem wir die tickets gekauft hatten` / `wir stiegen ein nachdem wir die tickets gekauft hatten`
+
+#### `satzbau-16` › 3
+Cümle: Bilde den Satz: „als / die Polizei / kommen / der Dieb / schon / fliehen“
+
+Gerekçe: Ana cümle/yan cümle sırasının değiştiği biçim de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `als die polizei kam war der dieb schon geflohen` / `als die polizei kam, war der dieb schon geflohen`
+  - Yeni: `als die polizei kam war der dieb schon geflohen` / `als die polizei kam, war der dieb schon geflohen` / `der dieb war schon geflohen, als die polizei kam` / `der dieb war schon geflohen als die polizei kam`
+
+#### `satzbau-16` › 5
+Cümle: Bilde den Satz: „nachdem / der Regen / aufhören / die Kinder / rausgehen“
+
+Gerekçe: Ana cümle/yan cümle sırasının değiştiği biçim de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `nachdem der regen aufgehoert hatte gingen die kinder raus` / `nachdem der regen aufgehoert hatte, gingen die kinder raus` / `nachdem der regen aufgehört hatte gingen die kinder raus` / `nachdem der regen aufgehört hatte, gingen die kinder raus`
+  - Yeni: `nachdem der regen aufgehoert hatte gingen die kinder raus` / `nachdem der regen aufgehoert hatte, gingen die kinder raus` / `nachdem der regen aufgehört hatte gingen die kinder raus` / `nachdem der regen aufgehört hatte, gingen die kinder raus` / `die kinder gingen raus, nachdem der regen aufgehört hatte` / `die kinder gingen raus nachdem der regen aufgehört hatte`
+
+#### `satzbau-16` › 7
+Cümle: Bilde den Satz: „als / wir / Bahnhof / erreichen / Zug / abfahren“
+
+Gerekçe: Ana cümle/yan cümle sırasının değiştiği biçim de doğru. Ayrıca verilen öğelerde “schon” yok; schon'suz cümle reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `als wir den bahnhof erreichten war der zug schon abgefahren` / `als wir den bahnhof erreichten, war der zug schon abgefahren`
+  - Yeni: `als wir den bahnhof erreichten war der zug schon abgefahren` / `als wir den bahnhof erreichten, war der zug schon abgefahren` / `als wir den bahnhof erreichten, war der zug abgefahren` / `als wir den bahnhof erreichten war der zug abgefahren` / `der zug war schon abgefahren, als wir den bahnhof erreichten` / `der zug war schon abgefahren als wir den bahnhof erreichten`
+
+#### `satzbau-16` › 8
+Cümle: Bilde den Satz: „sie / Prüfung bestehen / weil / gut / sich vorbereiten“
+
+Gerekçe: Ana cümle/yan cümle sırasının değiştiği biçim de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `sie bestand die pruefung weil sie sich gut vorbereitet hatte` / `sie bestand die pruefung, weil sie sich gut vorbereitet hatte` / `sie bestand die prüfung weil sie sich gut vorbereitet hatte` / `sie bestand die prüfung, weil sie sich gut vorbereitet hatte`
+  - Yeni: `sie bestand die pruefung weil sie sich gut vorbereitet hatte` / `sie bestand die pruefung, weil sie sich gut vorbereitet hatte` / `sie bestand die prüfung weil sie sich gut vorbereitet hatte` / `sie bestand die prüfung, weil sie sich gut vorbereitet hatte` / `weil sie sich gut vorbereitet hatte, bestand sie die prüfung` / `weil sie sich gut vorbereitet hatte bestand sie die prüfung`
+
+#### `satzbau-16` › 9
+Cümle: Bilde den Satz: „nachdem / Gäste / gehen / wir / aufräumen“
+
+Gerekçe: Ana cümle/yan cümle sırasının değiştiği biçim de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `nachdem die gaeste gegangen waren raeumten wir auf` / `nachdem die gaeste gegangen waren, raeumten wir auf` / `nachdem die gäste gegangen waren räumten wir auf` / `nachdem die gäste gegangen waren, räumten wir auf`
+  - Yeni: `nachdem die gaeste gegangen waren raeumten wir auf` / `nachdem die gaeste gegangen waren, raeumten wir auf` / `nachdem die gäste gegangen waren räumten wir auf` / `nachdem die gäste gegangen waren, räumten wir auf` / `wir räumten auf, nachdem die gäste gegangen waren` / `wir räumten auf nachdem die gäste gegangen waren`
+
+#### `mini-geschichten-18` › 3
+Cümle: Die Wanderer waren erschöpft. Sie ___ seit dem Morgen viele Kilometer ___. (laufen)
+
+Gerekçe: “Kaynak ... destekler” boş gerekçe; kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: waren ... gelaufen. Kaynak hareket fiillerinde sein kullanımını destekler.
+  - Yeni: Doğru cevap: waren ... gelaufen. Yürüyüş, yorgunluktan önce olmuştur → Plusquamperfekt. laufen burada mesafe kat eden (viele Kilometer) hareket fiilidir ve sein alır: waren ... gelaufen.
+
+#### `mini-geschichten-18` › 8
+Cümle: Ergänze: „Als der Kurs begann, ___ ich meinen Kaffee schon ___. (trinken)“
+
+Gerekçe: Cümlede “ich meinen Kaffee schon” zaten yazılı; iki boşluğu dolduran “hatte / getrunken” cevabı reddediliyordu.
+
+- Kabul edilen cevaplar
+  - Eski: `hatte ich meinen kaffee schon getrunken`
+  - Yeni: `hatte ich meinen kaffee schon getrunken` / `hatte getrunken` / `hatte ... getrunken` / `hatte … getrunken`
+
+#### `zeitformen-zusammenhang-19` › 5
+Cümle: Welche Form erzählt das frühere von zwei vergangenen Ereignissen?
+
+Gerekçe: “Kaynakların ...” boş gerekçe; kural ve örnek yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Plusquamperfekt. Kaynakların “weit zurück in die Vergangenheit” ve olay sırası alıştırmaları bu işlevi destekler.
+  - Yeni: Doğru cevap: Plusquamperfekt. Geçmişte iki olay varsa, daha önce olan olay Plusquamperfekt ile anlatılır (Vorvergangenheit): Ich hatte gegessen. Dann ging ich los.
+
+#### `zeitformen-zusammenhang-19` › 6
+Cümle: Welche Form passt für das spätere Hauptereignis in „Nachdem ... , ___ er nach Hause.“?
+
+Gerekçe: “Kaynak örneklerinde ...” boş gerekçe; kural yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Präteritum. Kaynak örneklerinde nachdem yan cümlesi Plusquamperfekt, sonraki ana olay çoğunlukla Präteritumdur.
+  - Yeni: Doğru cevap: Präteritum. nachdem yan cümlesi önceki olayı Plusquamperfekt ile verir; ana cümledeki sonraki olay geçmişte anlatıldığı için Präteritum olur: Nachdem er gegessen hatte, ging er nach Hause.
+
+#### `zeitformen-zusammenhang-19` › 8
+Cümle: Nenne die beiden Zeitformen: „Nachdem wir gegessen hatten, gingen wir spazieren.“
+
+Gerekçe: “und” veya boşluksuz eğik çizgiyle yazılan cevap da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `plusquamperfekt / präteritum` / `plusquamperfekt / praeteritum` / `plusquamperfekt, präteritum` / `plusquamperfekt, praeteritum`
+  - Yeni: `plusquamperfekt / präteritum` / `plusquamperfekt / praeteritum` / `plusquamperfekt, präteritum` / `plusquamperfekt, praeteritum` / `plusquamperfekt und präteritum` / `plusquamperfekt/präteritum`
+
+### `data/b1/praeteritum-b1.json`
+
+#### `starke-verben-1-2` › 0
+Cümle: Als Jugendliche ___ sie jeden Monat mehrere Romane. (lesen)
+
+Gerekçe: “Kaynakta ...” boş gerekçe; sorunun kendi kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: las. Kaynakta lesen → las karşılaştırması verilir; burada geçmiş anlatım var.
+  - Yeni: Doğru cevap: las. “Als Jugendliche” geçmiş bir dönemi gösterir → Präteritum. lesen güçlü fiildir, kökteki sesli harf değişir: lesen → las (-te eklenmez).
+
+#### `starke-verben-1-2` › 6
+Cümle: Nach der Arbeit ___ er sofort seine nassen Schuhe aus. (ausziehen)
+
+Gerekçe: “Kaynakta ...” boş gerekçe; sorunun kendi kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: zog. Kaynakta ausziehen → zog ... aus modeli bulunur; kök “zog”.
+  - Yeni: Doğru cevap: zog. ausziehen ayrılabilir güçlü fiildir: ziehen → zog. Ana cümlede çekimli kök “zog” ikinci pozisyonda, ön ek “aus” cümle sonunda: Er zog seine Schuhe aus.
+
+#### `starke-verben-1-2` › 7
+Cümle: Früher ___ meine Schwester jeden Morgen fünf Kilometer. (laufen)
+
+Gerekçe: “Kaynakta ...” boş gerekçe; sorunun kendi kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: lief. Kaynakta laufen → lief karşılaştırması bulunur.
+  - Yeni: Doğru cevap: lief. “Früher” geçmişi gösterir; laufen güçlü fiildir: laufen → lief (laufte yok). Tekil özne “meine Schwester” → lief.
+
+#### `modalverben-4` › 0
+Cümle: Als Kind ___ ich nie lange aufbleiben. (dürfen)
+
+Gerekçe: “Kaynakta ...” boş gerekçe; sorunun kendi kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: durfte. Kaynakta dürfen → durfte biçimi verilir; bu gerçek geçmiş anlatımıdır.
+  - Yeni: Doğru cevap: durfte. “Als Kind” gerçek geçmişi gösterir → Präteritum: dürfen → durfte (umlaut düşer). “dürfte” Konjunktiv II'dir (tahmin/olasılık), “darf” Präsens'tir.
+
+#### `modalverben-4` › 3
+Cümle: Er ___ sein Zimmer aufräumen, hatte aber keine Lust. (sollen)
+
+Gerekçe: “Kaynakta ...” boş gerekçe; sorunun kendi kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: sollte. Kaynakta sollen → sollte örneği bulunur.
+  - Yeni: Doğru cevap: sollte. “hatte aber keine Lust” cümlenin geçmişte olduğunu gösterir → sollen → sollte (er sollte). “soll” Präsens'tir; “sollte er” özneyi iki kez yazar.
+
+#### `sein-haben-5` › 2
+Cümle: Früher ___ ihr deutlich sportlicher. (sein)
+
+Gerekçe: “Kaynakta ...” boş gerekçe; sorunun kendi kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: wart. Kaynakta ihr biçimi “wart” olarak verilir.
+  - Yeni: Doğru cevap: wart. Özne “ihr”; sein'ın Präteritum ihr biçimi “wart”tır. “warst” du, “waren” wir/sie biçimidir.
+
+#### `trennbare-verben-6` › 0
+Cümle: Beim Studium ___ er eine interessante Frau ___. (kennenlernen)
+
+Gerekçe: “Kaynakta ...” boş gerekçe; sorunun kendi kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: lernte ... kennen. Kaynak anlatısında kennenlernen Präteritumda “lernte ... kennen” olarak ayrılır.
+  - Yeni: Doğru cevap: lernte ... kennen. kennenlernen ana cümlede ayrılır: çekimli “lernte” ikinci pozisyonda, “kennen” cümle sonunda.
+
+#### `trennbare-verben-6` › 1
+Cümle: Eine Firma ___ ihr nach dem Studium einen Job ___. (anbieten)
+
+Gerekçe: “Kaynakta ...” boş gerekçe; sorunun kendi kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: bot ... an. Kaynakta anbieten → bot ... an biçimi bulunur.
+  - Yeni: Doğru cevap: bot ... an. anbieten ayrılabilir güçlü fiildir: bieten → bot. Çekimli “bot” ikinci pozisyonda, ön ek “an” cümle sonunda.
+
+#### `trennbare-verben-6` › 3
+Cümle: Nach der Arbeit ___ er sich sofort ___. (hinlegen)
+
+Gerekçe: “Kaynakta ...” boş gerekçe; sorunun kendi kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: legte ... hin. Kaynak tabloya göre hinlegen → legte ... hin.
+  - Yeni: Doğru cevap: legte ... hin. hinlegen düzenli ayrılabilir fiildir: legen → legte; “hin” cümle sonuna gider: Er legte sich sofort hin.
+
+#### `trennbare-verben-6` › 4
+Cümle: Vor der Feier ___ sie die Kerzen ___. (anzünden)
+
+Gerekçe: Açıklama “Kaynak tablosunda zündeten” diye başka biçim alıntılıyordu; sorunun kendi öznesi ve biçimi yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: zündete ... an. Kaynak tablosunda anzünden → zündeten ... an; tekil biçim zündete ... an.
+  - Yeni: Doğru cevap: zündete ... an. anzünden düzenli ayrılabilir fiildir: tekil özne “sie” için zündete, ön ek “an” cümle sonunda.
+
+#### `trennbare-verben-6` › 5
+Cümle: Nach einigen Monaten ___ er mit dem Rauchen ___. (aufhören)
+
+Gerekçe: Açıklama kaynaktaki çoğul “hörten” biçimini alıntılıyordu; sorunun öznesi “er”.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: hörte ... auf. Kaynakta aufhören → hörten ... auf; tekil “hörte ... auf”.
+  - Yeni: Doğru cevap: hörte ... auf. aufhören düzenli ayrılabilir fiildir: hören → hörte; tekil “er” için hörte, “auf” cümle sonunda: Er hörte mit dem Rauchen auf.
+
+#### `praesens-zu-praeteritum-8` › 4
+Cümle: Setze ins Präteritum: „Ich denke, du kommst nicht mehr.“
+
+Gerekçe: “kaynak örneğinde ... bırakılmıştır” boş gerekçe; neden yan cümlenin değişmediği açıklandı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Ich dachte, du kommst nicht mehr.. Ana fiil denken → dachte; kaynak örneğinde yan cümle şimdiki biçimde bırakılmıştır.
+  - Yeni: Doğru cevap: Ich dachte, du kommst nicht mehr. Ana fiil denken karışık fiildir: denken → dachte (kök değişir ve -te alır). Yan cümle (du kommst nicht mehr) o anki düşüncenin içeriğidir; bu yüzden Präsens kalabilir.
+
+#### `frueher-heute-9` › 8
+Cümle: Ergänze beide Formen: „Früher ___ er oft Fußball. Heute ___ er Tennis. (spielen)“
+
+Gerekçe: Boşluksuz eğik çizgiyle yazım da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `spielte / spielt` / `spielte, spielt` / `spielte spielt`
+  - Yeni: `spielte / spielt` / `spielte, spielt` / `spielte spielt` / `spielte/spielt`
+
+#### `frueher-heute-9` › 9
+Cümle: Ergänze beide Formen: „Früher ___ Bernhard Französisch. Heute ___ er Chinesisch. (lernen)“
+
+Gerekçe: Boşluksuz eğik çizgiyle yazım da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `lernte / lernt` / `lernte, lernt` / `lernte lernt`
+  - Yeni: `lernte / lernt` / `lernte, lernt` / `lernte lernt` / `lernte/lernt`
+
+#### `zeitformen-tabelle-1-10` › 0
+Cümle: Welche Reihe ist korrekt? „antworten“
+
+Gerekçe: “Kaynak tablosunda ...” boş gerekçe; biçimlerin kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: antworten – antworteten – geantwortet – haben. Kaynak zaman tablosunda antworten → antworteten → geantwortet → haben.
+  - Yeni: Doğru cevap: antworten – antworteten – geantwortet – haben. antworten düzenli fiildir; kök -t ile bittiği için araya -e- girer: antworteten, geantwortet. Yardımcı fiil haben. (Bu tabloda Präteritum çoğul wir/sie biçimiyle verilir.)
+
+#### `zeitformen-tabelle-1-10` › 1
+Cümle: Welche Reihe ist korrekt? „dürfen“
+
+Gerekçe: “Kaynak tablosunda ...” boş gerekçe; biçimlerin kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: dürfen – durften – gedurft – haben. Kaynak tablosunda dürfen → durften → gedurft → haben.
+  - Yeni: Doğru cevap: dürfen – durften – gedurft – haben. Modal fiil dürfen Präteritum'da umlautu kaybeder: durften (“dürften” Konjunktiv II'dir). Partizip II gedurft, yardımcı fiil haben.
+
+#### `zeitformen-tabelle-1-10` › 2
+Cümle: Welche Reihe ist korrekt? „haben“
+
+Gerekçe: “Kaynak tablosunda ...” boş gerekçe; biçimlerin kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: haben – hatten – gehabt – haben. Kaynak tablosunda haben → hatten → gehabt → haben.
+  - Yeni: Doğru cevap: haben – hatten – gehabt – haben. haben düzensizdir: Präteritum hatten (“hätten” Konjunktiv II'dir), Partizip II gehabt; Perfekt'i de haben ile kurulur.
+
+#### `zeitformen-tabelle-1-10` › 4
+Cümle: Welche Reihe ist korrekt? „mieten“
+
+Gerekçe: “Kaynak tablosunda ...” boş gerekçe; biçimlerin kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: mieten – mieteten – gemietet – haben. Kaynak tablosunda mieten → mieteten → gemietet → haben.
+  - Yeni: Doğru cevap: mieten – mieteten – gemietet – haben. Kök -t ile bittiği için Präteritum ve Partizip II'de araya -e- girer: mieteten, gemietet.
+
+#### `zeitformen-tabelle-1-10` › 6
+Cümle: Welche Reihe ist korrekt? „überzeugen“
+
+Gerekçe: “Kaynak tablosunda ...” boş gerekçe; biçimlerin kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: überzeugen – überzeugten – überzeugt – haben. Kaynak tablosu überzeugen → überzeugten → überzeugt → haben.
+  - Yeni: Doğru cevap: überzeugen – überzeugten – überzeugt – haben. über- burada ayrılmayan ön ektir (vurgu zeugen'dedir); bu yüzden Partizip II ge- almaz: überzeugt.
+
+#### `zeitformen-tabelle-1-10` › 7
+Cümle: Welche Reihe ist korrekt? „können“
+
+Gerekçe: “Kaynak tablosunda ...” boş gerekçe; biçimlerin kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: können – konnten – gekonnt – haben. Kaynak tablosunda können → konnten → gekonnt → haben.
+  - Yeni: Doğru cevap: können – konnten – gekonnt – haben. können Präteritum'da umlautu kaybeder: konnten (“könnten” Konjunktiv II'dir). Partizip II gekonnt.
+
+#### `zeitformen-tabelle-1-10` › 8
+Cümle: Ergänze die Reihe: „feiern – ___ – gefeiert – haben“
+
+Gerekçe: Boş gerekçe düzeltildi. Präteritum temel biçimi olarak genelde tekil “feierte” öğretilir; soru kişi belirtmediği için bu da doğru.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: feierten. Kaynak tablosunda feiern → feierten → gefeiert → haben.
+  - Yeni: Doğru cevap: feierten. feiern düzenli fiildir: tablodaki çoğul biçim feierten (tekil: feierte).
+- Kabul edilen cevaplar
+  - Eski: `feierten`
+  - Yeni: `feierten` / `feierte`
+
+#### `zeitformen-tabelle-1-10` › 9
+Cümle: Ergänze die Reihe: „erklären – ___ – erklärt – haben“
+
+Gerekçe: Boş gerekçe düzeltildi. Soru kişi belirtmediği için tekil temel biçim “erklärte” de doğru.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: erklärten. Kaynak tablosunda çoğul/tablo biçimi erklären → erklärten.
+  - Yeni: Doğru cevap: erklärten. erklären düzenli fiildir: çoğul Präteritum erklärten (tekil: erklärte). er- ön eki yüzünden Partizip II ge- almaz: erklärt.
+- Kabul edilen cevaplar
+  - Eski: `erklärten` / `erklaerten`
+  - Yeni: `erklärten` / `erklaerten` / `erklärte`
+
+#### `zeitformen-trennbar-11` › 0
+Cümle: Welche Reihe ist korrekt? „hinlegen“
+
+Gerekçe: “Kaynak ...” boş gerekçe; ayrılabilir fiil kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: hinlegen – legte ... hin – hingelegt – haben. Kaynak tablosunda hinlegen → legte ... hin → hingelegt → haben.
+  - Yeni: Doğru cevap: hinlegen – legte ... hin – hingelegt – haben. Präteritum'da ön ek ayrılır (legte ... hin); Partizip II'de ge- ön ek ile kök arasına girer: hin-ge-legt. Yardımcı fiil haben.
+
+#### `zeitformen-trennbar-11` › 1
+Cümle: Welche Reihe ist korrekt? „anzünden“
+
+Gerekçe: “Kaynak ...” boş gerekçe; ayrılabilir fiil kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: anzünden – zündete ... an – angezündet – haben. Kaynakta anzünden ayrılabilir fiil olarak gösterilir.
+  - Yeni: Doğru cevap: anzünden – zündete ... an – angezündet – haben. an- ayrılabilir ön ektir: Präteritum'da zündete ... an, Partizip II'de an-ge-zündet.
+
+#### `zeitformen-trennbar-11` › 5
+Cümle: Welche Reihe ist korrekt? „nachfragen“
+
+Gerekçe: “Kaynak ...” boş gerekçe; ayrılabilir fiil kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: nachfragen – fragte ... nach – nachgefragt – haben. Kaynak tablosunda nachfragen → fragte ... nach → nachgefragt.
+  - Yeni: Doğru cevap: nachfragen – fragte ... nach – nachgefragt – haben. nach- ayrılabilir ön ektir: Präteritum fragte ... nach, Partizip II nach-ge-fragt.
+
+#### `zeitformen-trennbar-11` › 6
+Cümle: Welche Präteritumform passt zu „ankreuzen“?
+
+Gerekçe: “Kaynak ...” boş gerekçe; ayrılabilir fiil kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: kreuzten ... an. Kaynak çözüm tablosu çoğul biçimi “kreuzten ... an” verir.
+  - Yeni: Doğru cevap: kreuzten ... an. ankreuzen'de an- ayrılabilir; Präteritum'da çekimli “kreuzten” öne, “an” sona gider. “auf” bu fiilin ön eki değildir.
+
+#### `zeitformen-trennbar-11` › 7
+Cümle: Welche Präteritumform passt zu „einschalten“?
+
+Gerekçe: “Kaynak ...” boş gerekçe; ayrılabilir fiil kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: schalteten ... ein. Kaynak çözüm tablosu “schalteten ... ein” biçimini verir.
+  - Yeni: Doğru cevap: schalteten ... ein. einschalten'in ön eki “ein”dir ve Präteritum'da sona gider: schalteten ... ein. “schalteten ... an” başka bir fiile (anschalten) aittir; “einschalteten” ana cümlede ayrılmadan kullanılamaz.
+
+#### `zeitformen-trennbar-11` › 8
+Cümle: Ergänze: „aufhören – ___ – aufgehört – haben“
+
+Gerekçe: Boş gerekçe düzeltildi; kişi belirtilmediği için tekil “hörte ... auf” da doğru.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: hörten ... auf. Kaynak tablo biçimi çoğul Präteritum “hörten ... auf”.
+  - Yeni: Doğru cevap: hörten ... auf. aufhören'de auf- ayrılabilir; Präteritum hörten ... auf (tekil: hörte ... auf).
+- Kabul edilen cevaplar
+  - Eski: `hörten ... auf` / `hoerten ... auf` / `hörten auf` / `hoerten auf`
+  - Yeni: `hörten ... auf` / `hoerten ... auf` / `hörten auf` / `hoerten auf` / `hörte ... auf` / `hörte auf` / `hörten … auf` / `hörte … auf`
+
+#### `zeitformen-trennbar-11` › 9
+Cümle: Ergänze: „nachfragen – ___ – nachgefragt – haben“
+
+Gerekçe: Boş gerekçe düzeltildi; kişi belirtilmediği için tekil “fragte ... nach” da doğru.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: fragten ... nach. Kaynak tablo biçimi “fragten ... nach”.
+  - Yeni: Doğru cevap: fragten ... nach. nachfragen'de nach- ayrılabilir; Präteritum fragten ... nach (tekil: fragte ... nach).
+- Kabul edilen cevaplar
+  - Eski: `fragten ... nach` / `fragten nach`
+  - Yeni: `fragten ... nach` / `fragten nach` / `fragte ... nach` / `fragte nach` / `fragten … nach` / `fragte … nach`
+
+#### `geschichte-1-12` › 7
+Cümle: Nach einigen Monaten ___ das Projekt ein großer Erfolg. (werden)
+
+Gerekçe: “Kaynakta ...” boş gerekçe; sorunun kendi kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: wurde. Kaynak anlatısında werden → wurde biçimi bulunur.
+  - Yeni: Doğru cevap: wurde. werden düzensizdir: werden → wurde. Tekil özne “das Projekt” → wurde (“werdete” yoktur, “wird” Präsens'tir).
+
+#### `regelmaessig-oder-stark-14` › 0
+Cümle: Welche Präteritumform gehört zu „denken“?
+
+Gerekçe: “Kaynakta ...” boş gerekçe; sorunun kendi kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: dachte. Kaynakta denken → dachte örneği bulunur.
+  - Yeni: Doğru cevap: dachte. denken karışık fiildir: kök değişir (denk- → dach-) ama yine de -te alır: dachte. “dankte” ise danken fiiline aittir.
+
+#### `zeitangaben-15` › 5
+Cümle: „Seit diesem Jahr“ → „Er ___ weniger Kaffee.“ (trinken)
+
+Gerekçe: “Kaynaklardaki ... benzer şekilde” boş gerekçe; seit + Präsens kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: trinkt. Kaynaklardaki früher/heute karşılaştırmasına benzer şekilde güncel dönem Präsensle verilir.
+  - Yeni: Doğru cevap: trinkt. “Seit diesem Jahr” geçmişte başlayıp bugün de süren bir durumu anlatır; Almancada bu Präsens ile söylenir: Er trinkt weniger Kaffee. “trank” geçmişte kalmış bir durumu gösterir.
+
+#### `fehlerkorrektur-16` › 0
+Cümle: Korrigiere: „Gestern ich ging sehr früh nach Hause.“
+
+Gerekçe: Özne başta, fiil ikinci pozisyonda; bu sıra da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `gestern ging ich sehr frueh nach hause` / `gestern ging ich sehr früh nach hause`
+  - Yeni: `gestern ging ich sehr frueh nach hause` / `gestern ging ich sehr früh nach hause` / `ich ging gestern sehr früh nach hause`
+
+#### `fehlerkorrektur-16` › 1
+Cümle: Korrigiere: „Als Kind ich konnte sehr gut schwimmen.“
+
+Gerekçe: Özne başta, fiil ikinci pozisyonda; bu sıra da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `als kind konnte ich sehr gut schwimmen`
+  - Yeni: `als kind konnte ich sehr gut schwimmen` / `ich konnte als kind sehr gut schwimmen`
+
+#### `trennbare-satzstellung-17` › 8
+Cümle: Ordne korrekt: „gestern / einschalten / der Hausmeister / die Heizung“
+
+Gerekçe: Özne başta olan sıra da doğru (fiil ikinci pozisyonda, ein sonda).
+
+- Kabul edilen cevaplar
+  - Eski: `gestern schaltete der hausmeister die heizung ein`
+  - Yeni: `gestern schaltete der hausmeister die heizung ein` / `der hausmeister schaltete gestern die heizung ein`
+
+#### `trennbare-satzstellung-17` › 9
+Cümle: Ordne korrekt: „im Seminar / wir / kennenlernen / eine neue Methode“
+
+Gerekçe: Özne başta olan sıra da doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `im seminar lernten wir eine neue methode kennen`
+  - Yeni: `im seminar lernten wir eine neue methode kennen` / `wir lernten im seminar eine neue methode kennen`
+
+#### `satzbau-18` › 0
+Cümle: Bilde einen Satz: „gestern / ich / spät / nach Hause / kommen“
+
+Gerekçe: “Bilde einen Satz” sırayı zorunlu kılmıyor; özne başta, fiil ikinci pozisyonda olan cümle de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `gestern kam ich spaet nach hause` / `gestern kam ich spät nach hause`
+  - Yeni: `gestern kam ich spaet nach hause` / `gestern kam ich spät nach hause` / `ich kam gestern spät nach hause`
+
+#### `satzbau-18` › 1
+Cümle: Bilde einen Satz: „als Kind / du / sehr gut / singen / können“
+
+Gerekçe: “Bilde einen Satz” sırayı zorunlu kılmıyor; özne başta, fiil ikinci pozisyonda olan cümle de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `als kind konntest du sehr gut singen`
+  - Yeni: `als kind konntest du sehr gut singen` / `du konntest als kind sehr gut singen`
+
+#### `satzbau-18` › 2
+Cümle: Bilde einen Satz: „früher / unsere Nachbarn / lange / im Ausland / leben“
+
+Gerekçe: “Bilde einen Satz” sırayı zorunlu kılmıyor; özne başta, fiil ikinci pozisyonda olan cümle de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `frueher lebten unsere nachbarn lange im ausland` / `früher lebten unsere nachbarn lange im ausland`
+  - Yeni: `frueher lebten unsere nachbarn lange im ausland` / `früher lebten unsere nachbarn lange im ausland` / `unsere nachbarn lebten früher lange im ausland`
+
+#### `satzbau-18` › 3
+Cümle: Bilde einen Satz: „nach der Arbeit / er / die Schuhe / ausziehen“
+
+Gerekçe: “Bilde einen Satz” sırayı zorunlu kılmıyor; özne başta, fiil ikinci pozisyonda olan cümle de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `nach der arbeit zog er die schuhe aus`
+  - Yeni: `nach der arbeit zog er die schuhe aus` / `er zog nach der arbeit die schuhe aus`
+
+#### `satzbau-18` › 4
+Cümle: Bilde einen Satz: „gestern / die Politiker / den ganzen Abend / diskutieren“
+
+Gerekçe: “Bilde einen Satz” sırayı zorunlu kılmıyor; özne başta, fiil ikinci pozisyonda olan cümle de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `gestern diskutierten die politiker den ganzen abend`
+  - Yeni: `gestern diskutierten die politiker den ganzen abend` / `die politiker diskutierten gestern den ganzen abend`
+
+#### `satzbau-18` › 5
+Cümle: Bilde einen Satz: „plötzlich / jemand / an der Tür / klopfen“
+
+Gerekçe: “Bilde einen Satz” sırayı zorunlu kılmıyor; özne başta, fiil ikinci pozisyonda olan cümle de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `ploetzlich klopfte jemand an der tuer` / `plötzlich klopfte jemand an der tür`
+  - Yeni: `ploetzlich klopfte jemand an der tuer` / `plötzlich klopfte jemand an der tür` / `jemand klopfte plötzlich an der tür`
+
+#### `satzbau-18` › 6
+Cümle: Bilde einen Satz: „letzten Winter / wir / kein Auto / haben“
+
+Gerekçe: “Bilde einen Satz” sırayı zorunlu kılmıyor; özne başta, fiil ikinci pozisyonda olan cümle de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `letzten winter hatten wir kein auto`
+  - Yeni: `letzten winter hatten wir kein auto` / `wir hatten letzten winter kein auto`
+
+#### `satzbau-18` › 7
+Cümle: Bilde einen Satz: „damals / die Frau / ein grünes Kleid / tragen“
+
+Gerekçe: “Bilde einen Satz” sırayı zorunlu kılmıyor; özne başta, fiil ikinci pozisyonda olan cümle de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `damals trug die frau ein gruenes kleid` / `damals trug die frau ein grünes kleid`
+  - Yeni: `damals trug die frau ein gruenes kleid` / `damals trug die frau ein grünes kleid` / `die frau trug damals ein grünes kleid`
+
+#### `satzbau-18` › 8
+Cümle: Bilde einen Satz: „im Studium / Anton / eine Frau / kennenlernen“
+
+Gerekçe: “Bilde einen Satz” sırayı zorunlu kılmıyor; özne başta, fiil ikinci pozisyonda olan cümle de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `im studium lernte anton eine frau kennen`
+  - Yeni: `im studium lernte anton eine frau kennen` / `anton lernte im studium eine frau kennen`
+
+#### `satzbau-18` › 9
+Cümle: Bilde einen Satz: „später / Spanien / seine neue Heimat / werden“
+
+Gerekçe: “Bilde einen Satz” sırayı zorunlu kılmıyor; özne başta, fiil ikinci pozisyonda olan cümle de doğru.
+
+- Kabul edilen cevaplar
+  - Eski: `spaeter wurde spanien seine neue heimat` / `später wurde spanien seine neue heimat`
+  - Yeni: `spaeter wurde spanien seine neue heimat` / `später wurde spanien seine neue heimat` / `spanien wurde später seine neue heimat`
+
+#### `b1-mix-19` › 6
+Cümle: Welche Ergänzung ist korrekt? „Beim Umzug ___ er die Kisten vorsichtig auf den Boden.“
+
+Gerekçe: TR açıklaması (“hinlegen/legen türü düzenli eylem bağlamında”) anlaşılmazdı; legen/liegen ayrımı açıkça yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: legte. hinlegen/legen türü düzenli eylem bağlamında legte; “lag” liegen'dir.
+  - Yeni: Doğru cevap: legte. Cümlede Akkusativ nesne (die Kisten) ve yön (auf den Boden) var → geçişli “legen” (koymak, düzenli fiil): legte. “lag” nesnesiz “liegen” (durmak/yatmak) fiilinin Präteritum'udur; “legt” Präsens'tir.
+
+#### `b1-mix-19` › 7
+Cümle: Welche Ergänzung ist korrekt? „Nach einigen Jahren ___ sie sich für einen Umzug.“
+
+Gerekçe: “Kaynakta ...” boş gerekçe; sorunun kendi kuralı yazıldı.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: entschieden. Kaynak hikâyesinde sich entscheiden → entschieden (çoğul) olarak verilir.
+  - Yeni: Doğru cevap: entschieden. sich entscheiden güçlü fiildir: entscheiden → entschied; çoğul “sie” → entschieden. “entscheideten” diye bir biçim yoktur, “entscheiden” Präsens'tir.
+
+#### `master-20` › 8
+Cümle: Schreibe im Präteritum: „Heute arbeite ich in einem internationalen Team, treffe viele Kunden und lerne ständig neue Menschen kennen.“
+
+Gerekçe: Talimat “Heute”nin neyle değiştirileceğini söylemiyor; “Früher” de doğru. Açıklama Heute → damals değişikliğini anlatmıyordu.
+
+- Açıklama (TR)
+  - Eski: Doğru cevap: Damals arbeitete ich in einem internationalen Team, traf viele Kunden und lernte ständig neue Menschen kennen.. Üç fiil farklı yapıdadır: arbeiten → arbeitete, treffen → traf, kennenlernen → lernte ... kennen.
+  - Yeni: Doğru cevap: Damals arbeitete ich in einem internationalen Team, traf viele Kunden und lernte ständig neue Menschen kennen. “Heute” geçmiş zamanla uyuşmaz; yerine damals/früher gelir. Üç fiil farklı yapıdadır: arbeiten → arbeitete (düzenli), treffen → traf (güçlü), kennenlernen → lernte ... kennen (ayrılabilir).
+- Kabul edilen cevaplar
+  - Eski: `damals arbeitete ich in einem internationalen team, traf viele kunden und lernte ständig neue menschen kennen` / `damals arbeitete ich in einem internationalen team traf viele kunden und lernte ständig neue menschen kennen`
+  - Yeni: `damals arbeitete ich in einem internationalen team, traf viele kunden und lernte ständig neue menschen kennen` / `damals arbeitete ich in einem internationalen team traf viele kunden und lernte ständig neue menschen kennen` / `früher arbeitete ich in einem internationalen team, traf viele kunden und lernte ständig neue menschen kennen` / `früher arbeitete ich in einem internationalen team traf viele kunden und lernte ständig neue menschen kennen`

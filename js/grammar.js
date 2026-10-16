@@ -212,7 +212,8 @@
       comingTitle: 'Konu anlatımı hazırlanıyor',
       comingText: 'Bu konu için ayrıntılı anlatım henüz yayımlanmadı. Çalışmalarına alıştırmalar bölümünden devam edebilirsin.',
       back: 'Konulara Dön',
-      exercises: 'Alıştırmalara Git'
+      exercises: 'Alıştırmalara Git',
+      returnToExercise: 'Alıştırmaya dön'
     },
     de: {
       tag: 'Grammatik',
@@ -235,7 +236,8 @@
       comingTitle: 'Grammatikerklärung in Vorbereitung',
       comingText: 'Eine ausführliche Erklärung ist noch nicht veröffentlicht. Du kannst im Übungsbereich weiterarbeiten.',
       back: 'Zurück zu Themen',
-      exercises: 'Zu den Übungen'
+      exercises: 'Zu den Übungen',
+      returnToExercise: 'Zurück zur Übung'
     },
     en: {
       tag: 'Grammar',
@@ -258,7 +260,8 @@
       comingTitle: 'Grammar explanation in preparation',
       comingText: 'A detailed explanation has not yet been published. You can continue in the exercises section.',
       back: 'Back to Topics',
-      exercises: 'Go to Exercises'
+      exercises: 'Go to Exercises',
+      returnToExercise: 'Back to the exercise'
     }
   };
 
@@ -674,11 +677,12 @@
       detail.innerHTML = '<p role="status">Konu anlatımı yükleniyor…</p>';
       list.classList.add('hidden');
       detail.classList.add('active');
-      if (!options.restore) history.pushState({baPage:'grammar',grammarLevel:level,grammarTopic:id},'', '#grammar/'+level+'/'+encodeURIComponent(id));
+      if (!options.restore) history.pushState(carryReturn({baPage:'grammar',grammarLevel:level,grammarTopic:id}),'', '#grammar/'+level+'/'+encodeURIComponent(id));
       try {
         await window.BAA1Lessons.render(detail,id,key=>openTopic(level,key),level);
         if (activeTopic?.id !== id || activeTopic?.level !== level) return;
         detail.querySelectorAll('[data-a1-back]').forEach(button=>button.addEventListener('click',()=>closeA1()));
+        addReturnLinks(detail);
         detail.querySelector('.a1-article-header h2')?.focus({preventScroll:true});
       } catch (_) {
         if (activeTopic?.id !== id || activeTopic?.level !== level) return;
@@ -737,6 +741,39 @@
     window.scrollTo({top: root()?.offsetTop || 0, behavior: 'smooth'});
   }
 
+  // Arriving from an exercise ("Konuyu çalış", js/quiz.js) leaves baReturn and baReturnDepth in history.state.
+  // Pages opened from here keep baReturn and count one more step back to the quiz.
+  function carryReturn(state) {
+    const current = history.state || {};
+    if (!current.baReturn || !current.baReturnDepth) return state;
+    return {...state, baReturn: current.baReturn, baReturnDepth: current.baReturnDepth + 1};
+  }
+
+  function addReturnLinks(detail) {
+    const target = history.state?.baReturn;
+    if (!target?.level || !target.topic || !target.exercise || !history.state.baReturnDepth) return;
+    const href = '#exercises/' + [target.level, target.topic, target.exercise].map(encodeURIComponent).join('/') + '/q' + Math.max(1, Number(target.question) || 1);
+    const link = () => {
+      const a = document.createElement('a');
+      a.className = 'btn primary grammar-return-link';
+      a.href = href;
+      a.textContent = '← ' + tx('returnToExercise');
+      a.addEventListener('click', event => {
+        // Modified clicks open the exercise deep link in a new tab.
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button > 0) return;
+        event.preventDefault();
+        // Going back through history returns to the quiz still in memory, so answers and results stay.
+        history.go(-(Number(history.state?.baReturnDepth) || 1));
+      });
+      return a;
+    };
+    const top = document.createElement('div');
+    top.className = 'grammar-return';
+    top.appendChild(link());
+    detail.querySelector('.a1-breadcrumb')?.after(top);
+    detail.querySelector('[data-a1-practice]')?.before(link());
+  }
+
   function closeA1(writeHistory=true) {
     currentLevel=activeTopic?.level || currentLevel;
     activeTopic=null;
@@ -744,7 +781,7 @@
     if(detail) {detail.dataset.lesson='';detail.classList.remove('active');}
     document.getElementById('grammarListView')?.classList.remove('hidden');
     renderLevels();renderTopics();
-    if(writeHistory) history.pushState({baPage:'grammar'},'','#grammar');
+    if(writeHistory) history.pushState(carryReturn({baPage:'grammar'}),'','#grammar');
     window.scrollTo({top:root()?.offsetTop || 0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
   }
   function rerenderLanguage() {

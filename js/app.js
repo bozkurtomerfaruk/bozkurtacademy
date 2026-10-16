@@ -266,6 +266,53 @@ Object.assign(translations.tr, {navLogin:'Giriş', navPanel:'Panelim', navTeache
 Object.assign(translations.de, {navLogin:'Anmelden', navPanel:'Mein Bereich', navTeacher:'Lehrerbereich', menuOpen:'Menü', menuClose:'Schließen'});
 Object.assign(translations.en, {navLogin:'Sign in', navPanel:'My area', navTeacher:'Teacher area', menuOpen:'Menu', menuClose:'Close'});
 
+// Sınav Hazırlığı steps (js/exams.js). Exam, level and section texts live in js/examsData.js.
+Object.assign(translations.tr, {
+  examStepsLabel:'Sınav hazırlığı adımları', examStepExam:'Sınav', examStepLevel:'Seviye', examStepSection:'Bölüm', examStepTeil:'Teil',
+  examStepBack:'{step} adımına dön: {value}', examBack:'Önceki adım',
+  examChooseExam:'Sınavını seç', examChooseExamSub:'Hazırlandığın sınavı seç; ardından seviyeni, bölümü ve Teil’i seçeceksin.',
+  examChooseLevel:'Seviyeni seç', examChooseLevelSub:'{exam} için sunulan seviyelerden birini seç.',
+  examChooseSection:'Bölümü seç', examChooseSectionSub:'{exam} sınavının bölümleri. Çalışmak istediğin beceriyi seç.',
+  examChooseTeil:'{section}: Teil seç', examChooseTeilSub:'{exam} · {section}. Her Teil sınavdaki bir görev türüne karşılık gelir.',
+  examChooseLabel:'Seç: {name}', examLevelsLabel:'Seviyeler', examLevelSingle:'Tek sınav',
+  examViewLevels:'Seviyeleri gör', examViewSections:'Bölümleri gör', examViewTeile:'Teil’leri gör',
+  examTeilCountOne:'{n} Teil', examTeilCountMany:'{n} Teil', examDifficulty:'Zorluk: 5 üzerinden {n}',
+  examSoon:'Yakında', examSoonLabel:'{name}: yakında', examStart:'Başla', examStartLabel:'Başla: {name}',
+  examStartSoonLabel:'{name}: alıştırma yakında', examNoExercises:'Bu Teil için alıştırmalar hazırlanıyor.',
+  examSetFallback:'Alıştırma seti {n}', examNewTab:'yeni sekmede açılır',
+  examNoScript:'Sınav adımlarını görmek için tarayıcında JavaScript’i etkinleştir.'
+});
+Object.assign(translations.de, {
+  examStepsLabel:'Schritte der Prüfungsvorbereitung', examStepExam:'Prüfung', examStepLevel:'Niveau', examStepSection:'Prüfungsteil', examStepTeil:'Teil',
+  examStepBack:'Zurück zum Schritt {step}: {value}', examBack:'Vorheriger Schritt',
+  examChooseExam:'Wähle deine Prüfung', examChooseExamSub:'Wähle die Prüfung, auf die du dich vorbereitest; danach Niveau, Prüfungsteil und Teil.',
+  examChooseLevel:'Wähle dein Niveau', examChooseLevelSub:'Wähle eines der Niveaus, die {exam} anbietet.',
+  examChooseSection:'Wähle einen Prüfungsteil', examChooseSectionSub:'Die Prüfungsteile von {exam}. Wähle die Fertigkeit, die du üben möchtest.',
+  examChooseTeil:'{section}: Wähle einen Teil', examChooseTeilSub:'{exam} · {section}. Jeder Teil entspricht einem Aufgabentyp der Prüfung.',
+  examChooseLabel:'Auswählen: {name}', examLevelsLabel:'Niveaus', examLevelSingle:'Eine Prüfung',
+  examViewLevels:'Niveaus ansehen', examViewSections:'Prüfungsteile ansehen', examViewTeile:'Teile ansehen',
+  examTeilCountOne:'{n} Teil', examTeilCountMany:'{n} Teile', examDifficulty:'Schwierigkeit: {n} von 5',
+  examSoon:'Demnächst', examSoonLabel:'{name}: demnächst', examStart:'Starten', examStartLabel:'Starten: {name}',
+  examStartSoonLabel:'{name}: Übungen folgen demnächst', examNoExercises:'Die Übungen für diesen Teil sind in Vorbereitung.',
+  examSetFallback:'Übungsset {n}', examNewTab:'öffnet in neuem Tab',
+  examNoScript:'Aktiviere JavaScript in deinem Browser, um die Prüfungsschritte zu sehen.'
+});
+Object.assign(translations.en, {
+  examStepsLabel:'Exam preparation steps', examStepExam:'Exam', examStepLevel:'Level', examStepSection:'Section', examStepTeil:'Teil',
+  examStepBack:'Back to the {step} step: {value}', examBack:'Previous step',
+  examChooseExam:'Choose your exam', examChooseExamSub:'Choose the exam you are preparing for; then pick your level, section and Teil.',
+  examChooseLevel:'Choose your level', examChooseLevelSub:'Choose one of the levels offered by {exam}.',
+  examChooseSection:'Choose a section', examChooseSectionSub:'The sections of {exam}. Choose the skill you want to practise.',
+  examChooseTeil:'{section}: choose a Teil', examChooseTeilSub:'{exam} · {section}. Each Teil is one task type of the exam.',
+  examChooseLabel:'Choose: {name}', examLevelsLabel:'Levels', examLevelSingle:'Single exam',
+  examViewLevels:'View levels', examViewSections:'View sections', examViewTeile:'View Teile',
+  examTeilCountOne:'{n} Teil', examTeilCountMany:'{n} Teile', examDifficulty:'Difficulty: {n} out of 5',
+  examSoon:'Coming soon', examSoonLabel:'{name}: coming soon', examStart:'Start', examStartLabel:'Start: {name}',
+  examStartSoonLabel:'{name}: exercises coming soon', examNoExercises:'Exercises for this Teil are being prepared.',
+  examSetFallback:'Exercise set {n}', examNewTab:'opens in a new tab',
+  examNoScript:'Enable JavaScript in your browser to see the exam steps.'
+});
+
 let currentLang = localStorage.getItem('baLang') || 'tr';
 
 function t(key){

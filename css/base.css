@@ -180,6 +180,10 @@ body.academy-theme{
 .academy-theme .brand-title{font-family:var(--ba-serif);font-weight:600;font-size:19px;letter-spacing:-.01em;color:var(--ba-ink)}
 .academy-theme .brand-sub{display:none}
 .academy-theme .brand-logo{width:44px;height:44px}
+/* Logo: a light and a dark copy of images/logo-mark*.svg; the theme decides which one shows. */
+.academy-theme .brand-logo-dark{display:none}
+html[data-theme="dark"] .academy-theme .brand-logo-light{display:none}
+html[data-theme="dark"] .academy-theme .brand-logo-dark{display:block}
 .academy-theme .nav-link{display:inline-flex;align-items:center;min-height:40px;padding:8px 10px;border-radius:var(--ba-radius-small);color:var(--ba-ink);font-weight:500;font-size:15px;text-decoration:none;touch-action:manipulation;transition:background-color .2s,color .2s}
 .academy-theme .nav-link:hover,.academy-theme .nav-link.active{background:var(--ba-paper);color:var(--ba-ink)}
 .academy-theme .nav-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px}
@@ -236,6 +240,8 @@ body.academy-theme{
   background:none;border:0;box-shadow:none;color:var(--ba-muted);font-family:var(--ba-sans);font-size:var(--ba-small)
 }
 .academy-theme footer strong{color:var(--ba-ink)}
+.academy-theme .footer-brand{display:flex;align-items:center;gap:12px}
+.academy-theme .footer-logo{flex:none;width:40px;height:40px}
 .academy-theme .footer-meta{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
 .academy-theme .footer-links{display:flex;gap:16px;flex-wrap:wrap}
 .academy-theme .footer-links[hidden]{display:none}

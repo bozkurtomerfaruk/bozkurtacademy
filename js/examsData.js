@@ -1,0 +1,475 @@
+/* Sınav Hazırlığı (#exams): every exam, level, section and Teil shown on the page comes from this file.
+   js/exams.js builds the cards and the #exams/... addresses from it; nothing about the exams is written in index.html.
+
+   Texts in three languages are written as { tr, de, en }. A plain string is used for all languages.
+
+   Adding exercises to a Teil (the only change needed, the "Başla" button appears by itself):
+
+     { title: null, exercises: [] }, // Teil 1
+   becomes
+     {
+       title: { tr: 'Kısa mesajlar', de: 'Kurze Nachrichten', en: 'Short messages' },   // optional, shown under "Teil 1"
+       exercises: [
+         { title: { tr: 'Set 1', de: 'Set 1', en: 'Set 1' }, href: '#exercises/B1/konnektoren' },
+         { title: 'Modelltest', href: 'https://example.com/modelltest.pdf' }
+       ]
+     }, // Teil 1
+
+   href is either an address on this site starting with # or a full https:// address.
+   An empty exercises list shows the Teil as "Yakında" (coming soon) with a disabled button.
+   Teil numbers come from the order in the list; do not write them yourself.
+
+   A new exam: add an entry to `exams`. `comingSoon: true` shows a disabled card without levels.
+   `skipLevel: true` (DTZ) skips the level step, so its address is #exams/dtz/lesen. */
+window.BA_EXAMS = {
+  // Level badges shared by all exams. difficulty is 1–5 stars.
+  levels: {
+    a1: {
+      code: 'A1', difficulty: 1,
+      name: { tr: 'Başlangıç', de: 'Anfänger', en: 'Beginner' },
+      description: {
+        tr: 'Tanıdık günlük ifadeleri ve çok basit cümleleri anlama ve kullanma.',
+        de: 'Vertraute Alltagsausdrücke und ganz einfache Sätze verstehen und verwenden.',
+        en: 'Understand and use familiar everyday expressions and very simple sentences.'
+      }
+    },
+    a2: {
+      code: 'A2', difficulty: 2,
+      name: { tr: 'Temel', de: 'Grundlegende Kenntnisse', en: 'Elementary' },
+      description: {
+        tr: 'Alışveriş, aile, iş gibi sık karşılaşılan konularda basit iletişim kurma.',
+        de: 'Sich in häufigen Situationen wie Einkauf, Familie oder Arbeit einfach verständigen.',
+        en: 'Communicate simply about frequent topics such as shopping, family and work.'
+      }
+    },
+    b1: {
+      code: 'B1', difficulty: 3,
+      name: { tr: 'Orta', de: 'Fortgeschrittene Sprachverwendung', en: 'Intermediate' },
+      description: {
+        tr: 'İş, okul ve boş zamanla ilgili metinlerde ana fikri anlama, deneyimlerini anlatma.',
+        de: 'Hauptpunkte zu Arbeit, Schule und Freizeit verstehen und über Erfahrungen berichten.',
+        en: 'Understand the main points about work, school and leisure, and describe experiences.'
+      }
+    },
+    b2: {
+      code: 'B2', difficulty: 4,
+      name: { tr: 'Orta-üstü', de: 'Selbstständige Sprachverwendung', en: 'Upper intermediate' },
+      description: {
+        tr: 'Karmaşık metinlerin ana fikrini anlama, ayrıntılı ve akıcı biçimde görüş bildirme.',
+        de: 'Komplexe Texte verstehen und sich detailliert und fließend äußern.',
+        en: 'Understand complex texts and express opinions in detail and fluently.'
+      }
+    },
+    c1: {
+      code: 'C1', difficulty: 5,
+      name: { tr: 'İleri', de: 'Fachkundige Sprachkenntnisse', en: 'Advanced' },
+      description: {
+        tr: 'Uzun ve zor metinleri anlama, eğitimde ve işte dili esnek biçimde kullanma.',
+        de: 'Lange, anspruchsvolle Texte verstehen und die Sprache in Studium und Beruf flexibel nutzen.',
+        en: 'Understand long, demanding texts and use the language flexibly in study and work.'
+      }
+    },
+    'a2-b1': {
+      code: 'A2–B1', difficulty: null,
+      name: { tr: 'Temel – Orta', de: 'A2 bis B1', en: 'Elementary – Intermediate' },
+      description: {
+        tr: 'Tek sınav; sonuca göre A2 veya B1 belgesi verilir.',
+        de: 'Eine Prüfung; je nach Ergebnis wird A2 oder B1 bescheinigt.',
+        en: 'One exam; the result certifies A2 or B1.'
+      }
+    }
+  },
+
+  // Sections (Prüfungsteile). name is German; translation is shown next to it.
+  sections: {
+    hoeren: {
+      name: 'Hören',
+      translation: { tr: 'Dinleme', de: 'Hören', en: 'Listening' },
+      description: {
+        tr: 'Duyuru, konuşma ve röportajlarda ana bilgiyi ve ayrıntıları anlama.',
+        de: 'Hauptinformationen und Details in Durchsagen, Gesprächen und Interviews verstehen.',
+        en: 'Understand key information and details in announcements, conversations and interviews.'
+      }
+    },
+    lesen: {
+      name: 'Lesen',
+      translation: { tr: 'Okuma', de: 'Lesen', en: 'Reading' },
+      description: {
+        tr: 'Kısa notlardan uzun metinlere kadar farklı metin türlerini anlama.',
+        de: 'Verschiedene Textsorten von kurzen Notizen bis zu längeren Texten verstehen.',
+        en: 'Understand different kinds of text, from short notes to longer articles.'
+      }
+    },
+    sprachbausteine: {
+      name: 'Sprachbausteine',
+      translation: { tr: 'Dil Yapıları', de: 'Sprachbausteine', en: 'Language elements' },
+      description: {
+        tr: 'Metindeki boşluklara uygun kelimeyi ve dil bilgisi yapısını seçme.',
+        de: 'Passende Wörter und grammatische Strukturen für Lücken in einem Text wählen.',
+        en: 'Choose the right word and grammatical structure for gaps in a text.'
+      }
+    },
+    schreiben: {
+      name: 'Schreiben',
+      translation: { tr: 'Yazma', de: 'Schreiben', en: 'Writing' },
+      description: {
+        tr: 'Görev yönergesine uygun form, mesaj, e-posta veya metin yazma.',
+        de: 'Formulare, Nachrichten, E-Mails oder Texte passend zur Aufgabenstellung schreiben.',
+        en: 'Write forms, messages, emails or texts that follow the task instructions.'
+      }
+    },
+    sprechen: {
+      name: 'Sprechen',
+      translation: { tr: 'Konuşma', de: 'Sprechen', en: 'Speaking' },
+      description: {
+        tr: 'Kendini tanıtma, bir konuyu anlatma ve karşılıklı konuşma görevleri.',
+        de: 'Sich vorstellen, über ein Thema sprechen und gemeinsam etwas aushandeln.',
+        en: 'Introduce yourself, talk about a topic and take part in a conversation.'
+      }
+    }
+  },
+
+  // Exams in the order they are shown. Each level lists its sections in exam order.
+  exams: [
+    {
+      id: 'goethe',
+      name: 'Goethe-Zertifikat',
+      description: {
+        tr: 'Goethe-Institut’un dünya genelinde tanınan Almanca sınavları.',
+        de: 'Die weltweit anerkannten Deutschprüfungen des Goethe-Instituts.',
+        en: 'The internationally recognised German exams of the Goethe-Institut.'
+      },
+      levels: [
+        {
+          id: 'a1',
+          officialName: 'Goethe-Zertifikat A1: Start Deutsch 1',
+          sections: [
+            { id: 'hoeren', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+            ] },
+            { id: 'lesen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+            ] },
+            { id: 'schreiben', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+            ] },
+            { id: 'sprechen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+            ] },
+          ]
+        },
+        {
+          id: 'a2',
+          officialName: 'Goethe-Zertifikat A2',
+          sections: [
+            { id: 'hoeren', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+              { title: null, exercises: [] }, // Teil 4
+            ] },
+            { id: 'lesen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+              { title: null, exercises: [] }, // Teil 4
+            ] },
+            { id: 'schreiben', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+            ] },
+            { id: 'sprechen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+            ] },
+          ]
+        },
+        {
+          id: 'b1',
+          officialName: 'Goethe-Zertifikat B1',
+          sections: [
+            { id: 'hoeren', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+              { title: null, exercises: [] }, // Teil 4
+            ] },
+            { id: 'lesen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+              { title: null, exercises: [] }, // Teil 4
+              { title: null, exercises: [] }, // Teil 5
+            ] },
+            { id: 'schreiben', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+            ] },
+            { id: 'sprechen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+            ] },
+          ]
+        },
+        {
+          id: 'b2',
+          officialName: 'Goethe-Zertifikat B2',
+          sections: [
+            { id: 'hoeren', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+              { title: null, exercises: [] }, // Teil 4
+            ] },
+            { id: 'lesen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+              { title: null, exercises: [] }, // Teil 4
+              { title: null, exercises: [] }, // Teil 5
+            ] },
+            { id: 'schreiben', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+            ] },
+            { id: 'sprechen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+            ] },
+          ]
+        },
+        {
+          id: 'c1',
+          officialName: 'Goethe-Zertifikat C1',
+          sections: [
+            { id: 'hoeren', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+              { title: null, exercises: [] }, // Teil 4
+            ] },
+            { id: 'lesen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+              { title: null, exercises: [] }, // Teil 4
+            ] },
+            { id: 'schreiben', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+            ] },
+            { id: 'sprechen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+            ] },
+          ]
+        },
+      ]
+    },
+    {
+      id: 'telc',
+      name: 'telc Deutsch',
+      description: {
+        tr: 'telc gGmbH’nin Almanca sınavları. B1 ve üzeri seviyelerde ayrıca Sprachbausteine bölümü vardır.',
+        de: 'Die Deutschprüfungen der telc gGmbH. Ab B1 gibt es zusätzlich den Teil Sprachbausteine.',
+        en: 'The German exams of telc gGmbH. From B1 upwards they also include Sprachbausteine.'
+      },
+      levels: [
+        {
+          id: 'a1',
+          officialName: 'telc Deutsch A1 · Start Deutsch 1',
+          sections: [
+            { id: 'hoeren', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+            ] },
+            { id: 'lesen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+            ] },
+            { id: 'schreiben', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+            ] },
+            { id: 'sprechen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+            ] },
+          ]
+        },
+        {
+          id: 'a2',
+          officialName: 'telc Deutsch A2 · Start Deutsch 2',
+          sections: [
+            { id: 'hoeren', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+            ] },
+            { id: 'lesen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+            ] },
+            { id: 'schreiben', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+            ] },
+            { id: 'sprechen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+            ] },
+          ]
+        },
+        {
+          id: 'b1',
+          officialName: 'telc Deutsch B1 · Zertifikat Deutsch',
+          sections: [
+            { id: 'hoeren', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+            ] },
+            { id: 'lesen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+            ] },
+            { id: 'sprachbausteine', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+            ] },
+            { id: 'schreiben', teile: [
+              { title: null, exercises: [] }, // Teil 1
+            ] },
+            { id: 'sprechen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+            ] },
+          ]
+        },
+        {
+          id: 'b2',
+          officialName: 'telc Deutsch B2',
+          sections: [
+            { id: 'hoeren', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+            ] },
+            { id: 'lesen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+            ] },
+            { id: 'sprachbausteine', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+            ] },
+            { id: 'schreiben', teile: [
+              { title: null, exercises: [] }, // Teil 1
+            ] },
+            { id: 'sprechen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+            ] },
+          ]
+        },
+        {
+          id: 'c1',
+          officialName: 'telc Deutsch C1 Hochschule',
+          sections: [
+            { id: 'hoeren', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+            ] },
+            { id: 'lesen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+            ] },
+            { id: 'sprachbausteine', teile: [
+              { title: null, exercises: [] }, // Teil 1
+            ] },
+            { id: 'schreiben', teile: [
+              { title: null, exercises: [] }, // Teil 1
+            ] },
+            { id: 'sprechen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+            ] },
+          ]
+        },
+      ]
+    },
+    {
+      id: 'dtz',
+      name: 'DTZ',
+      fullName: 'Deutsch-Test für Zuwanderer',
+      skipLevel: true,
+      description: {
+        tr: 'Uyum kursunun sonunda yapılan sınav. Tek sınavda sonuç A2 veya B1 olarak belirlenir.',
+        de: 'Die Abschlussprüfung des Integrationskurses. Eine Prüfung, Ergebnis A2 oder B1.',
+        en: 'The final exam of the integration course. One exam with an A2 or B1 result.'
+      },
+      levels: [
+        {
+          id: 'a2-b1',
+          officialName: 'Deutsch-Test für Zuwanderer (DTZ)',
+          sections: [
+            { id: 'hoeren', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+              { title: null, exercises: [] }, // Teil 4
+            ] },
+            { id: 'lesen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+              { title: null, exercises: [] }, // Teil 4
+              { title: null, exercises: [] }, // Teil 5
+            ] },
+            { id: 'schreiben', teile: [
+              { title: null, exercises: [] }, // Teil 1
+            ] },
+            { id: 'sprechen', teile: [
+              { title: null, exercises: [] }, // Teil 1
+              { title: null, exercises: [] }, // Teil 2
+              { title: null, exercises: [] }, // Teil 3
+            ] },
+          ]
+        },
+      ]
+    },
+    {
+      id: 'oesd',
+      name: 'ÖSD',
+      fullName: 'Österreichisches Sprachdiplom Deutsch',
+      comingSoon: true,
+      description: {
+        tr: 'Avusturya Dil Diploması sınavları. Hazırlık içeriği yakında eklenecek.',
+        de: 'Die Prüfungen des Österreichischen Sprachdiploms. Vorbereitung folgt in Kürze.',
+        en: 'The Austrian German Language Diploma exams. Preparation material is coming soon.'
+      },
+      levels: []
+    }
+  ]
+};

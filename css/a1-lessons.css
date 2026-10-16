@@ -124,3 +124,7 @@
   .a1-author{flex-direction:column;gap:14px}
   .a1-author img{width:64px;height:64px}
 }
+/* "Alıştırmaya dön" when the lesson was opened from an exercise (js/grammar.js) */
+.grammar-return{margin:-12px 0 28px}
+.a1-article .grammar-return-link{text-decoration:none;white-space:normal;text-align:left}
+.a1-practice .grammar-return-link{margin:0 10px 10px 0}

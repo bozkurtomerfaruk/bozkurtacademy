@@ -6,8 +6,8 @@
 .exercise-breadcrumb:empty{display:none}
 .exercise-breadcrumb button{min-height:44px;border:0;padding:0;background:none;color:var(--ba-ink);font:inherit;font-weight:600;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
 .exercise-breadcrumb .sep{opacity:1}
-.hub-toolbar{display:flex;margin:0 0 20px}
-.hub-back{padding:0 18px}
+.hub-toolbar{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px}
+.hub-back,.hub-study{padding:0 18px}
 
 /* Hub: heading, search, tabs, topic list */
 .exercise-discovery-toolbar{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,400px);align-items:end;gap:20px 32px;margin-bottom:24px}

@@ -1,23 +1,85 @@
 /* Smaller pages: exams, about, contact. Tokens and shared pieces come from base.css. */
 
-/* Sınav Hazırlığı: the four skills printed like the parts of an exam paper */
-#page-exams .exam-skills{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
-#page-exams .exam-skill{padding:clamp(24px,3vw,40px)}
-#page-exams .exam-skill+.exam-skill{border-left:6px dotted var(--ba-ground)}
-#page-exams .exam-skill h3{font-family:var(--ba-serif);font-weight:400;font-size:clamp(1.75rem,1.2rem + 1.6vw,2.5rem);letter-spacing:-.02em;margin:0 0 12px}
-#page-exams .exam-skill p{margin:0;color:var(--ba-ink)}
+/* Sınav Hazırlığı: exam → level → section → Teil (js/exams.js). Cards are paper on sand like the exercise hub. */
+#page-exams .exam-flow{padding-bottom:0}
+#page-exams .exam-steps{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin:0 0 clamp(28px,4vw,44px);padding:0;list-style:none}
+#page-exams .exam-step{display:flex;align-items:center;gap:8px;min-width:0}
+#page-exams .exam-step+.exam-step::before{content:"›";color:var(--ba-muted);font-size:20px;line-height:1}
+#page-exams .exam-step :is(a,.exam-step-static){display:flex;align-items:center;gap:10px;min-height:52px;padding:8px 14px 8px 8px;border-radius:var(--ba-radius-small);color:var(--ba-ink);text-decoration:none}
+#page-exams .exam-step a{background:var(--ba-paper);transition:background-color .2s}
+#page-exams .exam-step a:hover{background:var(--ba-paper-2)}
+#page-exams .exam-step a:hover strong{text-decoration:underline;text-underline-offset:4px}
+#page-exams .exam-step-no{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;background:var(--ba-paper-2);font-weight:600;font-size:var(--ba-small);font-variant-numeric:tabular-nums}
+#page-exams .exam-step-text{display:flex;flex-direction:column;min-width:0;line-height:1.25}
+#page-exams .exam-step-label{color:var(--ba-muted);font-size:var(--ba-small)}
+#page-exams .exam-step strong{font-weight:600;overflow-wrap:anywhere}
+#page-exams .exam-step.is-current .exam-step-static{background:var(--ba-accent);color:var(--ba-accent-ink)}
+#page-exams .exam-step.is-current .exam-step-no{background:var(--ba-accent-ink);color:var(--ba-accent)}
+#page-exams .exam-step.is-current .exam-step-label{color:var(--ba-accent-ink);font-weight:600}
+#page-exams .exam-step.is-todo .exam-step-static{color:var(--ba-muted)}
+#page-exams .exam-step.is-todo .exam-step-no{background:transparent;box-shadow:inset 0 0 0 2px var(--ba-line-strong)}
+#page-exams .exam-step.is-done .exam-step-static{background:var(--ba-paper)}
+#page-exams .exam-step.is-done .exam-step-no{background:var(--ba-accent);color:var(--ba-accent-ink)}
+
+#page-exams .exam-flow-head{margin:0 0 24px}
+#page-exams .exam-flow-head h2{margin:0 0 8px}
+#page-exams .exam-flow-head .sub{margin:0;max-width:60ch;color:var(--ba-ink)}
+#page-exams .exam-back{margin:0 0 20px;padding:0 18px}
+
+#page-exams .exam-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
+#page-exams .exam-grid>li{display:flex;min-width:0}
+#page-exams .exam-card{display:flex;flex-direction:column;gap:10px;width:100%;min-width:0;padding:clamp(20px,2.4vw,28px);background:var(--ba-paper);border-radius:var(--ba-radius);color:var(--ba-ink);text-decoration:none;transition:background-color .2s,transform .2s}
+#page-exams a.exam-card:hover{background:var(--ba-paper-2)}
+#page-exams a.exam-card:hover h3{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+#page-exams a.exam-card:active{transform:scale(.99)}
+#page-exams .exam-card h3{margin:0;font-family:var(--ba-serif);font-weight:600;font-size:var(--ba-lead);line-height:1.25;overflow-wrap:anywhere}
+#page-exams .exam-card p{margin:0;color:var(--ba-ink);font-size:var(--ba-body);line-height:1.5}
+#page-exams .exam-card-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+#page-exams .exam-card-kicker{color:var(--ba-muted);font-size:var(--ba-small);font-weight:500}
+#page-exams .exam-card-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:auto;padding-top:14px;border-top:4px dotted var(--ba-paper-2)}
+#page-exams .exam-card-meta-label{color:var(--ba-muted);font-size:var(--ba-small)}
+#page-exams .exam-chips{display:flex;flex-wrap:wrap;gap:4px}
+#page-exams .exam-chip{padding:2px 8px;border-radius:4px;background:var(--ba-paper-2);font-size:var(--ba-small);font-weight:600;font-variant-numeric:tabular-nums}
+#page-exams a.exam-card:hover .exam-chip{background:var(--ba-paper)}
+#page-exams .exam-card-action{margin-top:auto;color:var(--ba-accent);font-size:var(--ba-small);font-weight:600}
+#page-exams .exam-card-meta+.exam-card-action{margin-top:0}
+#page-exams .exam-badge{flex:none;padding:2px 10px;border-radius:999px;background:var(--ba-paper-2);color:var(--ba-ink);font-size:var(--ba-small);font-weight:600}
+#page-exams .exam-card.is-soon{background:transparent;box-shadow:inset 0 0 0 2px var(--ba-line);cursor:not-allowed}
+#page-exams .exam-card.is-soon :is(h3,p,.exam-card-action){color:var(--ba-muted)}
+#page-exams .exam-teil.is-soon{cursor:default}
+
+/* Level cards: the big badge from the exercise hub's level tabs */
+#page-exams .exam-level-card{flex-direction:row;align-items:flex-start;gap:18px}
+#page-exams .exam-level-badge{flex:none;min-width:2.2ch;font-family:var(--ba-serif);font-size:clamp(2rem,1.5rem + 1.4vw,2.75rem);font-weight:600;line-height:1}
+#page-exams .exam-level-body{display:flex;flex-direction:column;gap:8px;min-width:0;flex:1;align-self:stretch}
+#page-exams .exam-card-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;margin-top:auto;padding-top:6px}
+#page-exams .exam-card-foot .exam-card-action{margin-top:0}
+#page-exams .exam-stars{color:var(--ba-accent);font-size:18px;letter-spacing:2px;line-height:1}
+#page-exams .exam-stars-off{color:var(--ba-line-strong);opacity:.55}
+#page-exams .exam-translation{display:block;margin-top:2px;font-family:var(--ba-sans);font-size:var(--ba-body);font-weight:500;color:var(--ba-muted)}
+
+/* Teil cards and their exercise sets */
+#page-exams .exam-teil h3{font-size:clamp(1.5rem,1.2rem + .9vw,1.875rem);font-weight:400;letter-spacing:-.015em}
+#page-exams .exam-teil-title{font-weight:600}
+#page-exams .exam-teil-empty{color:var(--ba-muted)!important;font-size:var(--ba-small)!important}
+#page-exams .exam-teil>.exam-start{margin-top:auto;align-self:flex-start}
+#page-exams .exam-sets{display:grid;gap:0;margin:auto 0 0;padding:0;list-style:none}
+#page-exams .exam-set{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-top:4px dotted var(--ba-paper-2)}
+#page-exams .exam-set-title{min-width:0;overflow-wrap:anywhere}
+#page-exams .exam-start{flex:none;min-height:44px;padding:0 20px}
+
 #page-exams .exam-plan{padding:0;display:block;color:var(--ba-ink)}
 #page-exams .exam-plan-body{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 48px;align-items:end;padding:clamp(28px,5vw,64px)}
 #page-exams .exam-plan h2{margin:0 0 12px;max-width:16em}
 #page-exams .exam-plan p{margin:0;max-width:48ch;color:var(--ba-ink)}
 @media(max-width:1020px){
-  #page-exams .exam-skills{grid-template-columns:1fr 1fr}
-  #page-exams .exam-skill:nth-child(3){border-left:0}
-  #page-exams .exam-skill:nth-child(n+3){border-top:6px dotted var(--ba-ground)}
+  #page-exams .exam-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:620px){
-  #page-exams .exam-skills{grid-template-columns:1fr}
-  #page-exams .exam-skill+.exam-skill{border-left:0;border-top:6px dotted var(--ba-ground)}
+  #page-exams .exam-grid{grid-template-columns:1fr}
+  #page-exams .exam-steps{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  #page-exams .exam-step+.exam-step::before{display:none}
+  #page-exams .exam-step :is(a,.exam-step-static){width:100%}
   #page-exams .exam-plan-body{grid-template-columns:1fr}
   #page-exams .exam-plan .btn{width:100%}
 }

@@ -9,8 +9,9 @@
   const gc = window.goatcounter;
   if(!gc?.count || gc.filter()) return;
 
-  // How many hash segments identify a page: exercises/level/topic/exercise, grammar/level/topic.
-  const DEPTH = { exercises: 4, grammar: 3 };
+  // How many hash segments identify a page: exercises/level/topic/exercise, grammar/level/topic,
+  // exams/exam/level/section.
+  const DEPTH = { exercises: 4, grammar: 3, exams: 4 };
 
   function currentPath(){
     const parts = location.hash.replace(/^#/, '').split(/[/?]/).filter(Boolean);

@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="css/base.css?v=7" />
   <link rel="stylesheet" href="css/home.css?v=5" />
   <link rel="stylesheet" href="css/lessons.css?v=3" />
-  <link rel="stylesheet" href="css/pages.css?v=4" />
+  <link rel="stylesheet" href="css/pages.css?v=5" />
   <link rel="stylesheet" id="grammarHubCss" href="css/grammar.css?v=5" />
   <link rel="stylesheet" href="css/a1-lessons.css?v=4" />
   <link rel="stylesheet" id="exerciseHubCss" href="css/exercises-hub.css?v=5" />
@@ -331,13 +331,9 @@
 
       <section class="page" id="page-exams">
         <div class="page-hero"><div class="page-hero-inner"><h1 data-i18n="examTitle">Almanca sınavlarına hazırlık</h1><p data-i18n="examSub">Goethe, telc, ÖSD ve okul sınavları için görev türleri ve dil becerileri üzerine çalışma. İçerik, hedef sınavına göre belirlenir.</p></div></div>
-        <section class="block">
-          <div class="exam-skills ba-card">
-            <article class="exam-skill"><h3 lang="de">Lesen</h3><p data-i18n="examRead">Metinlerde ana fikir, ayrıntı ve bilgi eşleştirme üzerine çalışma.</p></article>
-            <article class="exam-skill"><h3 lang="de">Hören</h3><p data-i18n="examListen">Günlük konuşmalarda ve sınav kayıtlarında ana bilgileri ve ayrıntıları anlama.</p></article>
-            <article class="exam-skill"><h3 lang="de">Schreiben</h3><p data-i18n="examWrite">E-posta, mektup ve görüş yazılarını görev yönergesine uygun biçimde hazırlama.</p></article>
-            <article class="exam-skill"><h3 lang="de">Sprechen</h3><p data-i18n="examSpeak">Kendini tanıtma, fikir belirtme ve karşılıklı konuşma görevleri üzerine uygulama.</p></article>
-          </div>
+        <section class="block exam-flow" id="examFlow" aria-labelledby="examFlowTitle" data-step="1">
+          <nav class="exam-steps-nav" id="examSteps" aria-label="Sınav hazırlığı adımları" data-i18n-aria="examStepsLabel"></nav>
+          <div id="examView"><noscript><p data-i18n="examNoScript">Sınav adımlarını görmek için tarayıcında JavaScript’i etkinleştir.</p></noscript></div>
         </section>
         <section class="block">
           <div class="exam-plan ba-card">
@@ -566,15 +562,17 @@
       </div>
     </footer>
   </div>
-  <script src="js/app.js?v=14"></script>
+  <script src="js/app.js?v=15"></script>
   <script src="js/quiz.js?v=20"></script>
   <script src="js/exercise-links.js?v=3"></script>
   <script src="js/a1-lessons.js?v=9"></script>
   <script src="js/grammar.js?v=13"></script>
   <script src="js/theme.js?v=6"></script>
   <script src="js/home.js?v=5"></script>
+  <script src="js/examsData.js?v=1"></script>
+  <script src="js/exams.js?v=1"></script>
   <script type="module" src="js/account/session.js?v=1"></script>
   <script defer data-goatcounter="https://bozkurtacademy.goatcounter.com/count" data-goatcounter-settings='{"no_onload": true}' src="js/vendor/count.js?v=2.7.0"></script>
-  <script defer src="js/analytics.js?v=1"></script>
+  <script defer src="js/analytics.js?v=2"></script>
 </body>
 </html>

@@ -190,7 +190,6 @@
     ]
   };
 
-
   const initialGrammarHash = location.hash;
   let activeTopic = null;
   let currentLevel = 'A1';

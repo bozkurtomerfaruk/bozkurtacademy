@@ -3475,6 +3475,1222 @@
         }
       ],
       "hideLesson": true
+    },
+    {
+      "id": "ja-nein-21",
+      "title": {
+        "tr": "Übung 21 – N-Deklination: Ja oder Nein?",
+        "de": "Übung 21 – N-Deklination: Ja oder Nein?",
+        "en": "Übung 21 – N-Deklination: Ja oder Nein?"
+      },
+      "description": {
+        "tr": "İsmin N-Deklination alıp almadığına karar ver; Käse, Arzt ve dişil biçimler gibi tuzaklara dikkat et.",
+        "de": "Entscheide, ob das Nomen zur n-Deklination gehört; achte auf Fallen wie Käse, Arzt und feminine Formen.",
+        "en": "Decide whether the noun belongs to the n-declension; watch out for traps such as Käse, Arzt and feminine forms."
+      },
+      "difficulty": {
+        "tr": "Kolay",
+        "de": "Leicht",
+        "en": "Easy"
+      },
+      "questions": [
+        {
+          "word": "Ja oder Nein?",
+          "sentence": "Gehört „der Neffe“ zur n-Deklination? Tipp: maskulin, Person, Endung -e.",
+          "options": [
+            "Ja",
+            "Nein"
+          ],
+          "correct": "Ja",
+          "explanations": {
+            "tr": "Evet. der Neffe (yeğen) -e ile biten eril bir kişi adıdır: den/dem/des Neffen.",
+            "de": "Ja. „der Neffe“ ist eine maskuline Person auf -e: den/dem/des Neffen.",
+            "en": "Yes. “der Neffe” is a masculine person noun ending in -e: den/dem/des Neffen."
+          }
+        },
+        {
+          "word": "Ja oder Nein?",
+          "sentence": "Gehört „der Käse“ zur n-Deklination? Tipp: Endung -e – aber ist Käse eine Person oder ein Tier?",
+          "options": [
+            "Ja",
+            "Nein"
+          ],
+          "correct": "Nein",
+          "explanations": {
+            "tr": "Hayır. der Käse -e ile bitse de canlı değildir ve normal çekilir: den Käse, des Käses. -e sonu tek başına yeterli değildir.",
+            "de": "Nein. „der Käse“ endet auf -e, ist aber kein Lebewesen und wird normal dekliniert: den Käse, des Käses.",
+            "en": "No. “der Käse” ends in -e but is not a living being, so it declines normally: den Käse, des Käses."
+          }
+        },
+        {
+          "word": "Ja oder Nein?",
+          "sentence": "Gehört „der Journalist“ zur n-Deklination? Tipp: Achte auf die Endung -ist.",
+          "options": [
+            "Ja",
+            "Nein"
+          ],
+          "correct": "Ja",
+          "explanations": {
+            "tr": "Evet. -ist ile biten eril kişi adları N-Deklination alır: den/dem/des Journalisten.",
+            "de": "Ja. Maskuline Personen auf -ist gehören zur n-Deklination: den/dem/des Journalisten.",
+            "en": "Yes. Masculine person nouns in -ist take the n-declension: den/dem/des Journalisten."
+          }
+        },
+        {
+          "word": "Ja oder Nein?",
+          "sentence": "Gehört „der Tisch“ zur n-Deklination? Tipp: Ist das eine Person? Gibt es eine typische Endung?",
+          "options": [
+            "Ja",
+            "Nein"
+          ],
+          "correct": "Nein",
+          "explanations": {
+            "tr": "Hayır. der Tisch bir eşyadır ve tipik bir zayıf isim eki yoktur: den Tisch, dem Tisch, des Tisches.",
+            "de": "Nein. „der Tisch“ ist ein Gegenstand ohne typische Endung: den Tisch, dem Tisch, des Tisches.",
+            "en": "No. “der Tisch” is an object with no typical weak ending: den Tisch, dem Tisch, des Tisches."
+          }
+        },
+        {
+          "word": "Ja oder Nein?",
+          "sentence": "Gehört „der Diplomat“ zur n-Deklination? Tipp: Achte auf die Endung -at.",
+          "options": [
+            "Ja",
+            "Nein"
+          ],
+          "correct": "Ja",
+          "explanations": {
+            "tr": "Evet. -at ile biten eril kişi adları (Soldat, Kandidat, Diplomat) zayıftır: den/dem/des Diplomaten.",
+            "de": "Ja. Maskuline Personen auf -at (Soldat, Kandidat, Diplomat) sind schwach: den/dem/des Diplomaten.",
+            "en": "Yes. Masculine persons in -at (Soldat, Kandidat, Diplomat) are weak: den/dem/des Diplomaten."
+          }
+        },
+        {
+          "word": "Ja oder Nein?",
+          "sentence": "Gehört „die Studentin“ zur n-Deklination? Tipp: Welcher Artikel steht vor dem Nomen?",
+          "options": [
+            "Ja",
+            "Nein"
+          ],
+          "correct": "Nein",
+          "explanations": {
+            "tr": "Hayır. N-Deklination yalnız eril isimlerde vardır. die Studentin dişildir ve tekilde hiç ek almaz: mit der Studentin.",
+            "de": "Nein. Die n-Deklination gibt es nur bei maskulinen Nomen. „die Studentin“ ist feminin: mit der Studentin.",
+            "en": "No. Only masculine nouns take the n-declension. “die Studentin” is feminine: mit der Studentin."
+          }
+        },
+        {
+          "word": "Ja oder Nein?",
+          "sentence": "Gehört „der Psychologe“ zur n-Deklination? Tipp: Achte auf die Endung -oge.",
+          "options": [
+            "Ja",
+            "Nein"
+          ],
+          "correct": "Ja",
+          "explanations": {
+            "tr": "Evet. -oge ile biten meslek adları (Biologe, Psychologe, Pädagoge) zayıftır: den/dem/des Psychologen.",
+            "de": "Ja. Berufe auf -oge (Biologe, Psychologe, Pädagoge) sind schwach: den/dem/des Psychologen.",
+            "en": "Yes. Professions in -oge (Biologe, Psychologe, Pädagoge) are weak: den/dem/des Psychologen."
+          }
+        },
+        {
+          "word": "Ja oder Nein?",
+          "sentence": "Gehört „der Lehrer“ zur n-Deklination? Tipp: Nomen auf -er sind meistens normal.",
+          "options": [
+            "Ja",
+            "Nein"
+          ],
+          "correct": "Nein",
+          "explanations": {
+            "tr": "Hayır. der Lehrer normal eril isimdir: den Lehrer, dem Lehrer, des Lehrers. *den Lehreren* yanlıştır.",
+            "de": "Nein. „der Lehrer“ ist ein normales maskulines Nomen: den Lehrer, dem Lehrer, des Lehrers.",
+            "en": "No. “der Lehrer” is an ordinary masculine noun: den Lehrer, dem Lehrer, des Lehrers."
+          }
+        },
+        {
+          "word": "Ja oder Nein?",
+          "sentence": "Gehört „der Elefant“ zur n-Deklination? Tipp: Achte auf die Endung -ant.",
+          "options": [
+            "Ja",
+            "Nein"
+          ],
+          "correct": "Ja",
+          "explanations": {
+            "tr": "Evet. -ant ile biten eril isimler zayıftır; hayvan adı Elefant da buna dahildir: den/dem/des Elefanten.",
+            "de": "Ja. Maskuline Nomen auf -ant sind schwach, auch das Tier Elefant: den/dem/des Elefanten.",
+            "en": "Yes. Masculine nouns in -ant are weak, including the animal Elefant: den/dem/des Elefanten."
+          }
+        },
+        {
+          "word": "Ja oder Nein?",
+          "sentence": "Gehört „der Arzt“ zur n-Deklination? Tipp: Person ja – aber gibt es eine typische Endung?",
+          "options": [
+            "Ja",
+            "Nein"
+          ],
+          "correct": "Nein",
+          "explanations": {
+            "tr": "Hayır. der Arzt bir kişi olsa da normal çekilir: den Arzt, dem Arzt, des Arztes. Kişi olmak tek başına kural değildir.",
+            "de": "Nein. „der Arzt“ ist zwar eine Person, wird aber normal dekliniert: den Arzt, dem Arzt, des Arztes.",
+            "en": "No. “der Arzt” is a person but declines normally: den Arzt, dem Arzt, des Arztes."
+          }
+        }
+      ]
+    },
+    {
+      "id": "artikel-nomen-22",
+      "title": {
+        "tr": "Übung 22 – Artikel + Nomen einsetzen",
+        "de": "Übung 22 – Artikel + Nomen einsetzen",
+        "en": "Übung 22 – Artikel + Nomen einsetzen"
+      },
+      "description": {
+        "tr": "Parantezdeki ismi doğru artikel ve doğru sonla yaz. Kasus fiilden veya edattan gelir.",
+        "de": "Schreibe das Nomen in Klammern mit dem richtigen Artikel und der richtigen Endung. Der Kasus kommt vom Verb oder von der Präposition.",
+        "en": "Write the noun in brackets with the correct article and ending. The case comes from the verb or preposition."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Medium"
+      },
+      "questions": [
+        {
+          "type": "text",
+          "word": "Artikel + Nomen",
+          "sentence": "Ich helfe ___ im Garten. (der Nachbar) Tipp: helfen + ?",
+          "correct": "dem Nachbarn",
+          "answers": [
+            "dem nachbarn"
+          ],
+          "explanations": {
+            "tr": "helfen Dativ ister → dem. Nachbar zayıf isimdir ve yalnız -n alır: dem Nachbarn.",
+            "de": "„helfen“ verlangt den Dativ → dem. „Nachbar“ ist schwach und bekommt nur -n: dem Nachbarn.",
+            "en": "“helfen” takes the dative → dem. “Nachbar” is weak and adds only -n: dem Nachbarn."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Artikel + Nomen",
+          "sentence": "Kennst du ___ dort an der Bushaltestelle? (der Junge) Tipp: kennen + ?",
+          "correct": "den Jungen",
+          "answers": [
+            "den jungen"
+          ],
+          "explanations": {
+            "tr": "kennen Akkusativ ister → den. -e ile biten Junge -n alır: den Jungen.",
+            "de": "„kennen“ verlangt den Akkusativ → den. „Junge“ auf -e bekommt -n: den Jungen.",
+            "en": "“kennen” takes the accusative → den. “Junge” ending in -e adds -n: den Jungen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Artikel + Nomen",
+          "sentence": "Das ist das Auto ___. (der Präsident) Tipp: Wessen Auto?",
+          "correct": "des Präsidenten",
+          "answers": [
+            "des präsidenten"
+          ],
+          "explanations": {
+            "tr": "“Kimin arabası?” sorusu Genitiv ister → des. Präsident -en alır ve Genitivde -s eklenmez: des Präsidenten.",
+            "de": "„Wessen Auto?“ → Genitiv, also des. „Präsident“ bekommt -en und kein -s: des Präsidenten.",
+            "en": "“Whose car?” → genitive, so des. “Präsident” takes -en and no -s: des Präsidenten."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Artikel + Nomen",
+          "sentence": "___ wartet schon seit einer Stunde. (der Kunde) Tipp: Wer wartet?",
+          "correct": "der Kunde",
+          "answers": [
+            "der kunde"
+          ],
+          "explanations": {
+            "tr": "Cümlenin öznesi (kim bekliyor?) Nominativtir. Nominativ tekilde ek yoktur: der Kunde.",
+            "de": "Das Subjekt („Wer wartet?“) steht im Nominativ. Im Nominativ Singular gibt es keine Endung: der Kunde.",
+            "en": "The subject (“Who is waiting?”) is nominative. Nominative singular has no ending: der Kunde."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Artikel + Nomen",
+          "sentence": "Wir gratulieren ___ zum Geburtstag. (der Kollege) Tipp: gratulieren + ?",
+          "correct": "dem Kollegen",
+          "answers": [
+            "dem kollegen"
+          ],
+          "explanations": {
+            "tr": "gratulieren Dativ ister → dem. Kollege -n alır: dem Kollegen.",
+            "de": "„gratulieren“ verlangt den Dativ → dem. „Kollege“ bekommt -n: dem Kollegen.",
+            "en": "“gratulieren” takes the dative → dem. “Kollege” adds -n: dem Kollegen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Artikel + Nomen",
+          "sentence": "Die Polizei sucht ___ des Unfalls. (der Zeuge) Tipp: Wen sucht die Polizei?",
+          "correct": "den Zeugen",
+          "answers": [
+            "den zeugen"
+          ],
+          "explanations": {
+            "tr": "suchen Akkusativ ister (kimi arıyor?) → den. Zeuge -n alır: den Zeugen.",
+            "de": "„suchen“ verlangt den Akkusativ („Wen?“) → den. „Zeuge“ bekommt -n: den Zeugen.",
+            "en": "“suchen” takes the accusative (“whom?”) → den. “Zeuge” adds -n: den Zeugen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Artikel + Nomen",
+          "sentence": "Ich habe ein Interview mit ___ gelesen. (der Astronom) Tipp: mit + ?",
+          "correct": "dem Astronomen",
+          "answers": [
+            "dem astronomen"
+          ],
+          "explanations": {
+            "tr": "mit her zaman Dativ ister → dem. -nom ile biten Astronom -en alır: dem Astronomen.",
+            "de": "„mit“ steht immer mit Dativ → dem. „Astronom“ auf -nom bekommt -en: dem Astronomen.",
+            "en": "“mit” always takes the dative → dem. “Astronom” in -nom adds -en: dem Astronomen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Artikel + Nomen",
+          "sentence": "Die Kamera ___ ist sehr teuer. (der Fotograf) Tipp: Wessen Kamera?",
+          "correct": "des Fotografen",
+          "answers": [
+            "des fotografen"
+          ],
+          "explanations": {
+            "tr": "Sahiplik (kimin kamerası?) Genitiv ister → des. Fotograf -en alır, -s almaz: des Fotografen.",
+            "de": "Besitz („Wessen Kamera?“) → Genitiv, also des. „Fotograf“ bekommt -en, kein -s: des Fotografen.",
+            "en": "Possession (“whose camera?”) → genitive, so des. “Fotograf” takes -en, no -s: des Fotografen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Artikel + Nomen",
+          "sentence": "Kannst du bitte ___ anrufen? (der Assistent) Tipp: anrufen + ?",
+          "correct": "den Assistenten",
+          "answers": [
+            "den assistenten"
+          ],
+          "explanations": {
+            "tr": "anrufen Akkusativ ister → den. -ent ile biten Assistent -en alır: den Assistenten.",
+            "de": "„anrufen“ verlangt den Akkusativ → den. „Assistent“ auf -ent bekommt -en: den Assistenten.",
+            "en": "“anrufen” takes the accusative → den. “Assistent” in -ent adds -en: den Assistenten."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Artikel + Nomen",
+          "sentence": "Das Zimmer ___ liegt im zweiten Stock. (der Patient) Tipp: Wessen Zimmer?",
+          "correct": "des Patienten",
+          "answers": [
+            "des patienten"
+          ],
+          "explanations": {
+            "tr": "Kimin odası? → Genitiv, des. Patient -en alır ve Genitivde -s eklenmez: des Patienten.",
+            "de": "„Wessen Zimmer?“ → Genitiv, des. „Patient“ bekommt -en und kein -s: des Patienten.",
+            "en": "“Whose room?” → genitive, des. “Patient” takes -en and no -s: des Patienten."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Artikel + Nomen",
+          "sentence": "Ohne ___ können wir das Konzert nicht beginnen. (der Pianist) Tipp: ohne + ?",
+          "correct": "den Pianisten",
+          "answers": [
+            "den pianisten"
+          ],
+          "explanations": {
+            "tr": "ohne Akkusativ ister → den. -ist ile biten Pianist -en alır: den Pianisten.",
+            "de": "„ohne“ verlangt den Akkusativ → den. „Pianist“ auf -ist bekommt -en: den Pianisten.",
+            "en": "“ohne” takes the accusative → den. “Pianist” in -ist adds -en: den Pianisten."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Artikel + Nomen",
+          "sentence": "Die Kinder füttern ___ im Zoo. (der Affe) Tipp: Wen füttern sie?",
+          "correct": "den Affen",
+          "answers": [
+            "den affen"
+          ],
+          "explanations": {
+            "tr": "füttern Akkusativ nesne ister → den. -e ile biten hayvan adı Affe -n alır: den Affen.",
+            "de": "„füttern“ hat ein Akkusativobjekt → den. Das Tier „Affe“ auf -e bekommt -n: den Affen.",
+            "en": "“füttern” has an accusative object → den. The animal “Affe” ending in -e adds -n: den Affen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Artikel + Nomen",
+          "sentence": "Wir haben ___ den Weg zum Bahnhof erklärt. (der Tourist) Tipp: jemandem etwas erklären",
+          "correct": "dem Touristen",
+          "answers": [
+            "dem touristen"
+          ],
+          "explanations": {
+            "tr": "erklären yapısında kişi Dativ, şey Akkusativ olur (jemandem etwas) → dem. Tourist -en alır: dem Touristen.",
+            "de": "Bei „jemandem etwas erklären“ steht die Person im Dativ → dem. „Tourist“ bekommt -en: dem Touristen.",
+            "en": "In “jemandem etwas erklären” the person is dative → dem. “Tourist” adds -en: dem Touristen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Artikel + Nomen",
+          "sentence": "Ich habe ___ eine Frage gestellt. (der Experte) Tipp: jemandem eine Frage stellen",
+          "correct": "dem Experten",
+          "answers": [
+            "dem experten"
+          ],
+          "explanations": {
+            "tr": "jemandem eine Frage stellen: soru soran kişiye Dativ → dem. Experte -n alır: dem Experten.",
+            "de": "„jemandem eine Frage stellen“: die Person steht im Dativ → dem. „Experte“ bekommt -n: dem Experten.",
+            "en": "“jemandem eine Frage stellen”: the person is dative → dem. “Experte” adds -n: dem Experten."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Artikel + Nomen",
+          "sentence": "Der Professor antwortet ___ nach der Vorlesung. (die Studenten – Plural) Tipp: antworten + ?",
+          "correct": "den Studenten",
+          "answers": [
+            "den studenten"
+          ],
+          "explanations": {
+            "tr": "antworten Dativ ister; çoğul Dativ artikeli den olur. Studenten zaten -n ile bittiği için ikinci bir -n eklenmez: den Studenten.",
+            "de": "„antworten“ verlangt den Dativ; im Plural heißt der Artikel den. „Studenten“ endet schon auf -n, also kein weiteres -n.",
+            "en": "“antworten” takes the dative; the dative plural article is den. “Studenten” already ends in -n, so no extra -n."
+          }
+        }
+      ]
+    },
+    {
+      "id": "richtige-form-23",
+      "title": {
+        "tr": "Übung 23 – Die richtige Form wählen",
+        "de": "Übung 23 – Die richtige Form wählen",
+        "en": "Übung 23 – Die richtige Form wählen"
+      },
+      "description": {
+        "tr": "Üç seçenekten artikel ve isim sonu doğru olanı seç.",
+        "de": "Wähle die Form, bei der Artikel und Nomenendung stimmen.",
+        "en": "Choose the option in which both article and noun ending are correct."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Medium"
+      },
+      "questions": [
+        {
+          "word": "Die richtige Form",
+          "sentence": "Wir sprechen mit ___. Tipp: mit + Dativ",
+          "options": [
+            "dem Kollege",
+            "dem Kollegen",
+            "den Kollegen"
+          ],
+          "correct": "dem Kollegen",
+          "explanations": {
+            "tr": "mit Dativ ister → dem; Kollege Dativda -n alır. \"dem Kollege\" eki unutur, \"den Kollegen\" ise Akkusativ ya da Dativ çoğuldur.",
+            "de": "„mit“ + Dativ → dem; „Kollege“ bekommt -n. „dem Kollege“ hat keine Endung, „den Kollegen“ ist Akkusativ oder Dativ Plural.",
+            "en": "“mit” + dative → dem; “Kollege” takes -n. “dem Kollege” lacks the ending, “den Kollegen” is accusative or dative plural."
+          }
+        },
+        {
+          "word": "Die richtige Form",
+          "sentence": "___ bringt die Pakete jeden Morgen. Tipp: Wer bringt die Pakete?",
+          "options": [
+            "Der Lieferant",
+            "Der Lieferanten",
+            "Den Lieferanten"
+          ],
+          "correct": "Der Lieferant",
+          "explanations": {
+            "tr": "Kim getiriyor? → özne, Nominativ. Nominativ tekilde ek yoktur: Der Lieferant.",
+            "de": "„Wer bringt?“ → Subjekt im Nominativ. Im Nominativ Singular keine Endung: Der Lieferant.",
+            "en": "“Who brings?” → nominative subject. No ending in nominative singular: Der Lieferant."
+          }
+        },
+        {
+          "word": "Die richtige Form",
+          "sentence": "Ich sehe ___ jeden Tag vor der Schule. Tipp: sehen + Akkusativ",
+          "options": [
+            "den Polizist",
+            "den Polizisten",
+            "dem Polizisten"
+          ],
+          "correct": "den Polizisten",
+          "explanations": {
+            "tr": "sehen Akkusativ ister → den; Polizist -en alır: den Polizisten. \"dem Polizisten\" Dativtir.",
+            "de": "„sehen“ + Akkusativ → den; „Polizist“ bekommt -en: den Polizisten. „dem Polizisten“ ist Dativ.",
+            "en": "“sehen” + accusative → den; “Polizist” adds -en: den Polizisten. “dem Polizisten” is dative."
+          }
+        },
+        {
+          "word": "Die richtige Form",
+          "sentence": "Das ist die Meinung ___. Tipp: Genitiv – mit oder ohne -s?",
+          "options": [
+            "des Biologen",
+            "des Biologens",
+            "der Biologe"
+          ],
+          "correct": "des Biologen",
+          "explanations": {
+            "tr": "Kimin görüşü? → Genitiv, des. Zayıf isimlerde Genitivde -s eklenmez: des Biologen (*des Biologens* yanlış).",
+            "de": "„Wessen Meinung?“ → Genitiv, des. Schwache Nomen bekommen im Genitiv kein -s: des Biologen.",
+            "en": "“Whose opinion?” → genitive, des. Weak nouns take no -s in the genitive: des Biologen."
+          }
+        },
+        {
+          "word": "Die richtige Form",
+          "sentence": "Der Trainer lobt ___ nach dem Spiel. Tipp: Wen lobt er?",
+          "options": [
+            "den Jungen",
+            "den Junge",
+            "dem Jungen"
+          ],
+          "correct": "den Jungen",
+          "explanations": {
+            "tr": "loben Akkusativ ister → den; Junge -n alır: den Jungen. \"dem Jungen\" Dativtir.",
+            "de": "„loben“ + Akkusativ → den; „Junge“ bekommt -n: den Jungen. „dem Jungen“ ist Dativ.",
+            "en": "“loben” + accusative → den; “Junge” adds -n: den Jungen. “dem Jungen” is dative."
+          }
+        },
+        {
+          "word": "Die richtige Form",
+          "sentence": "Ich schreibe ___ eine E-Mail. Tipp: jemandem etwas schreiben",
+          "options": [
+            "dem Kandidat",
+            "den Kandidaten",
+            "dem Kandidaten"
+          ],
+          "correct": "dem Kandidaten",
+          "explanations": {
+            "tr": "jemandem etwas schreiben: kişi Dativ → dem; Kandidat -en alır: dem Kandidaten.",
+            "de": "„jemandem etwas schreiben“: Person im Dativ → dem; „Kandidat“ bekommt -en: dem Kandidaten.",
+            "en": "“jemandem etwas schreiben”: the person is dative → dem; “Kandidat” adds -en: dem Kandidaten."
+          }
+        },
+        {
+          "word": "Die richtige Form",
+          "sentence": "Wir warten schon lange auf ___. Tipp: Ist „Arzt“ ein schwaches Nomen?",
+          "options": [
+            "den Arzt",
+            "den Arzten",
+            "dem Arzt"
+          ],
+          "correct": "den Arzt",
+          "explanations": {
+            "tr": "warten auf Akkusativ ister → den. Arzt zayıf isim değildir, ek almaz: den Arzt.",
+            "de": "„warten auf“ + Akkusativ → den. „Arzt“ ist kein schwaches Nomen und bleibt ohne Endung: den Arzt.",
+            "en": "“warten auf” + accusative → den. “Arzt” is not a weak noun and takes no ending: den Arzt."
+          }
+        },
+        {
+          "word": "Die richtige Form",
+          "sentence": "Im Zoo fotografieren wir ___. Tipp: Wen fotografieren wir?",
+          "options": [
+            "den Löwe",
+            "den Löwen",
+            "der Löwen"
+          ],
+          "correct": "den Löwen",
+          "explanations": {
+            "tr": "fotografieren Akkusativ ister → den; Löwe -n alır: den Löwen.",
+            "de": "„fotografieren“ + Akkusativ → den; „Löwe“ bekommt -n: den Löwen.",
+            "en": "“fotografieren” + accusative → den; “Löwe” adds -n: den Löwen."
+          }
+        },
+        {
+          "word": "Die richtige Form",
+          "sentence": "Das Foto ___ ist heute in der Zeitung. Tipp: Wessen Foto?",
+          "options": [
+            "des Demonstranten",
+            "des Demonstrants",
+            "dem Demonstranten"
+          ],
+          "correct": "des Demonstranten",
+          "explanations": {
+            "tr": "Kimin fotoğrafı? → Genitiv, des. Demonstrant -en alır, -s almaz: des Demonstranten.",
+            "de": "„Wessen Foto?“ → Genitiv, des. „Demonstrant“ bekommt -en, kein -s: des Demonstranten.",
+            "en": "“Whose photo?” → genitive, des. “Demonstrant” takes -en, no -s: des Demonstranten."
+          }
+        },
+        {
+          "word": "Die richtige Form",
+          "sentence": "Herr Yılmaz kauft ein Geschenk für ___. Tipp: für + Akkusativ",
+          "options": [
+            "seinen Neffe",
+            "seinen Neffen",
+            "seinem Neffen"
+          ],
+          "correct": "seinen Neffen",
+          "explanations": {
+            "tr": "für Akkusativ ister → seinen; Neffe -n alır: seinen Neffen. \"seinem\" Dativ ekidir.",
+            "de": "„für“ + Akkusativ → seinen; „Neffe“ bekommt -n: seinen Neffen. „seinem“ ist Dativ.",
+            "en": "“für” + accusative → seinen; “Neffe” adds -n: seinen Neffen. “seinem” is dative."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fehler-finden-24",
+      "title": {
+        "tr": "Übung 24 – Fehler finden und korrigieren",
+        "de": "Übung 24 – Fehler finden und korrigieren",
+        "en": "Übung 24 – Fehler finden und korrigieren"
+      },
+      "description": {
+        "tr": "Cümledeki N-Deklination hatalarını bul ve cümleyi doğru biçimde yeniden yaz.",
+        "de": "Finde die Fehler bei der n-Deklination und schreibe den Satz richtig.",
+        "en": "Find the n-declension errors and rewrite the sentence correctly."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel-Schwer",
+        "en": "Medium-Hard"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "type": "text",
+          "word": "Fehler korrigieren",
+          "sentence": "Korrigiere den Satz: „Kennst du den Name des Student?“",
+          "correct": "Kennst du den Namen des Studenten?",
+          "answers": [
+            "kennst du den namen des studenten"
+          ],
+          "explanations": {
+            "tr": "İki hata var: kennen Akkusativ ister → den Namen; \"kimin adı?\" Genitiv ister → des Studenten (-s olmadan).",
+            "de": "Zwei Fehler: „kennen“ + Akkusativ → den Namen; „Wessen Name?“ → Genitiv des Studenten (ohne -s).",
+            "en": "Two errors: “kennen” + accusative → den Namen; “whose name?” → genitive des Studenten (no -s)."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Fehler korrigieren",
+          "sentence": "Korrigiere den Satz: „Ich habe gestern mit dem Nachbar gesprochen.“",
+          "correct": "Ich habe gestern mit dem Nachbarn gesprochen.",
+          "answers": [
+            "ich habe gestern mit dem nachbarn gesprochen"
+          ],
+          "explanations": {
+            "tr": "mit Dativ ister ve Nachbar zayıf isimdir → dem Nachbarn. Günlük konuşmada ek düşebilir, yazılı dilde gerekir.",
+            "de": "„mit“ + Dativ, und „Nachbar“ ist schwach → dem Nachbarn. In der gesprochenen Sprache fällt die Endung manchmal weg, schriftlich nicht.",
+            "en": "“mit” + dative, and “Nachbar” is weak → dem Nachbarn. Speech sometimes drops the ending; writing does not."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Fehler korrigieren",
+          "sentence": "Korrigiere den Satz: „Der Praktikanten kommt heute zum ersten Mal.“",
+          "correct": "Der Praktikant kommt heute zum ersten Mal.",
+          "answers": [
+            "der praktikant kommt heute zum ersten mal"
+          ],
+          "explanations": {
+            "tr": "Özne Nominativ tekildir (kim geliyor?). Nominativ tekilde ek yoktur: Der Praktikant.",
+            "de": "Das Subjekt steht im Nominativ Singular („Wer kommt?“). Dort gibt es keine Endung: Der Praktikant.",
+            "en": "The subject is nominative singular (“Who is coming?”). No ending there: Der Praktikant."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Fehler korrigieren",
+          "sentence": "Korrigiere den Satz: „Wir danken dem Chefen für die Hilfe.“",
+          "correct": "Wir danken dem Chef für die Hilfe.",
+          "answers": [
+            "wir danken dem chef für die hilfe"
+          ],
+          "explanations": {
+            "tr": "danken Dativ ister → dem. Ama Chef zayıf isim değildir, ek almaz: dem Chef.",
+            "de": "„danken“ + Dativ → dem. Aber „Chef“ ist kein schwaches Nomen: dem Chef.",
+            "en": "“danken” + dative → dem. But “Chef” is not a weak noun: dem Chef."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Fehler korrigieren",
+          "sentence": "Korrigiere den Satz: „Das ist ein wichtiges Recht des Menschens.“",
+          "correct": "Das ist ein wichtiges Recht des Menschen.",
+          "answers": [
+            "das ist ein wichtiges recht des menschen"
+          ],
+          "explanations": {
+            "tr": "Mensch zayıf isimdir; Genitivde yalnız -en alır, -s eklenmez: des Menschen.",
+            "de": "„Mensch“ ist schwach; im Genitiv nur -en, kein -s: des Menschen.",
+            "en": "“Mensch” is weak; in the genitive only -en, no -s: des Menschen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Fehler korrigieren",
+          "sentence": "Korrigiere den Satz: „Die Kollegin hilft dem Kunde.“",
+          "correct": "Die Kollegin hilft dem Kunden.",
+          "answers": [
+            "die kollegin hilft dem kunden"
+          ],
+          "explanations": {
+            "tr": "helfen Dativ ister ve Kunde zayıf isimdir → dem Kunden. Die Kollegin dişil olduğu için doğrudur, ek almaz.",
+            "de": "„helfen“ + Dativ, „Kunde“ ist schwach → dem Kunden. „Die Kollegin“ ist feminin und richtig.",
+            "en": "“helfen” + dative, “Kunde” is weak → dem Kunden. “Die Kollegin” is feminine and correct."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Fehler korrigieren",
+          "sentence": "Korrigiere den Satz: „Die Ärztin untersucht den Patient.“",
+          "correct": "Die Ärztin untersucht den Patienten.",
+          "answers": [
+            "die ärztin untersucht den patienten"
+          ],
+          "explanations": {
+            "tr": "untersuchen Akkusativ ister → den; Patient -en alır: den Patienten. Die Ärztin dişil öznedir ve zaten doğrudur.",
+            "de": "„untersuchen“ + Akkusativ → den; „Patient“ bekommt -en: den Patienten. „Die Ärztin“ ist feminines Subjekt und richtig.",
+            "en": "“untersuchen” + accusative → den; “Patient” adds -en: den Patienten. “Die Ärztin” is the feminine subject and correct."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Fehler korrigieren",
+          "sentence": "Korrigiere den Satz: „Ich habe einen Brief an Herr Schulz geschrieben.“",
+          "correct": "Ich habe einen Brief an Herrn Schulz geschrieben.",
+          "answers": [
+            "ich habe einen brief an herrn schulz geschrieben"
+          ],
+          "explanations": {
+            "tr": "an burada Akkusativ ister (bir yöne/kişiye yazmak). Herr tekilde Nominativ dışında Herrn olur: an Herrn Schulz.",
+            "de": "„an“ steht hier mit Akkusativ. „Herr“ heißt außerhalb des Nominativ Singular „Herrn“: an Herrn Schulz.",
+            "en": "“an” takes the accusative here. Outside nominative singular “Herr” becomes “Herrn”: an Herrn Schulz."
+          }
+        }
+      ]
+    },
+    {
+      "id": "umformen-25",
+      "title": {
+        "tr": "Übung 25 – Vom Nominativ in einen anderen Kasus",
+        "de": "Übung 25 – Vom Nominativ in einen anderen Kasus",
+        "en": "Übung 25 – Vom Nominativ in einen anderen Kasus"
+      },
+      "description": {
+        "tr": "Nominativdeki ismi verilen fiil veya edatla yeni bir cümlede kullan. Tam cümleyi yaz.",
+        "de": "Verwende das Nomen aus dem Nominativ-Satz mit dem neuen Verb oder der Präposition. Schreibe den ganzen Satz.",
+        "en": "Use the noun from the nominative sentence with the new verb or preposition. Write the whole sentence."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel-Schwer",
+        "en": "Medium-Hard"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "type": "text",
+          "word": "Sätze umformen",
+          "sentence": "„Der Polizist ist nett.“ → Schreibe neu: „Ich danke …“",
+          "correct": "Ich danke dem Polizisten.",
+          "answers": [
+            "ich danke dem polizisten"
+          ],
+          "explanations": {
+            "tr": "danken Dativ ister → dem; Polizist -en alır: Ich danke dem Polizisten.",
+            "de": "„danken“ + Dativ → dem; „Polizist“ bekommt -en: Ich danke dem Polizisten.",
+            "en": "“danken” + dative → dem; “Polizist” adds -en: Ich danke dem Polizisten."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Sätze umformen",
+          "sentence": "„Der Bauer verkauft Gemüse.“ → Schreibe neu: „Wir kaufen Kartoffeln bei …“",
+          "correct": "Wir kaufen Kartoffeln beim Bauern.",
+          "answers": [
+            "wir kaufen kartoffeln beim bauern",
+            "wir kaufen kartoffeln bei dem bauern"
+          ],
+          "explanations": {
+            "tr": "bei Dativ ister → bei dem = beim; Bauer zayıf isimdir ve -n alır: beim Bauern.",
+            "de": "„bei“ + Dativ → bei dem = beim; „Bauer“ ist schwach und bekommt -n: beim Bauern.",
+            "en": "“bei” + dative → bei dem = beim; “Bauer” is weak and adds -n: beim Bauern."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Sätze umformen",
+          "sentence": "„Der Philosoph ist berühmt.“ → Schreibe neu: „Ich lese ein Buch über …“",
+          "correct": "Ich lese ein Buch über den Philosophen.",
+          "answers": [
+            "ich lese ein buch über den philosophen"
+          ],
+          "explanations": {
+            "tr": "\"bir şey hakkında\" anlamındaki über Akkusativ ister → den; -soph ile biten Philosoph -en alır: über den Philosophen.",
+            "de": "„über“ (Thema) + Akkusativ → den; „Philosoph“ auf -soph bekommt -en: über den Philosophen.",
+            "en": "“über” (topic) + accusative → den; “Philosoph” in -soph adds -en: über den Philosophen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Sätze umformen",
+          "sentence": "„Der Held rettet das Kind.“ → Schreibe neu: „Der Film erzählt die Geschichte …“",
+          "correct": "Der Film erzählt die Geschichte des Helden.",
+          "answers": [
+            "der film erzählt die geschichte des helden"
+          ],
+          "explanations": {
+            "tr": "Kimin hikâyesi? → Genitiv, des. Held zayıf isimdir: des Helden (-s yok).",
+            "de": "„Wessen Geschichte?“ → Genitiv, des. „Held“ ist schwach: des Helden (kein -s).",
+            "en": "“Whose story?” → genitive, des. “Held” is weak: des Helden (no -s)."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Sätze umformen",
+          "sentence": "„Der Franzose ist neu in der Klasse.“ → Schreibe neu: „Wir zeigen …“",
+          "correct": "Wir zeigen dem Franzosen die Schule.",
+          "answers": [
+            "wir zeigen dem franzosen die schule"
+          ],
+          "explanations": {
+            "tr": "jemandem etwas zeigen: kişi Dativ → dem; milliyet adı Franzose -n alır. Şey (die Schule) Akkusativtir: Wir zeigen dem Franzosen die Schule.",
+            "de": "„jemandem etwas zeigen“: Person im Dativ → dem Franzosen, die Sache im Akkusativ: die Schule.",
+            "en": "“jemandem etwas zeigen”: the person is dative → dem Franzosen, the thing accusative: die Schule."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Sätze umformen",
+          "sentence": "„Der Prinz heiratet.“ → Schreibe neu: „Alle Zeitungen schreiben über die Hochzeit …“",
+          "correct": "Alle Zeitungen schreiben über die Hochzeit des Prinzen.",
+          "answers": [
+            "alle zeitungen schreiben über die hochzeit des prinzen"
+          ],
+          "explanations": {
+            "tr": "Kimin düğünü? → Genitiv, des. Prinz zayıf isimdir: des Prinzen. über yalnız die Hochzeit'i etkiler.",
+            "de": "„Wessen Hochzeit?“ → Genitiv, des Prinzen. „über“ bestimmt nur „die Hochzeit“ (Akkusativ).",
+            "en": "“Whose wedding?” → genitive, des Prinzen. “über” only governs “die Hochzeit” (accusative)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sonderformen-26",
+      "title": {
+        "tr": "Übung 26 – Name, Herr, Herz, Gedanke, Buchstabe",
+        "de": "Übung 26 – Name, Herr, Herz, Gedanke, Buchstabe",
+        "en": "Übung 26 – Name, Herr, Herz, Gedanke, Buchstabe"
+      },
+      "description": {
+        "tr": "Genitivde -ns alan isimleri, Herr ve Herz biçimlerini çalış.",
+        "de": "Übe Nomen mit -ns im Genitiv sowie die Formen von Herr und Herz.",
+        "en": "Practise nouns with -ns in the genitive and the forms of Herr and Herz."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "type": "text",
+          "word": "Sonderformen",
+          "sentence": "Weißt du die Bedeutung ___? (der Name) Tipp: Genitiv – Name ist eine Ausnahme.",
+          "correct": "des Namens",
+          "answers": [
+            "des namens"
+          ],
+          "explanations": {
+            "tr": "Kimin/neyin anlamı? → Genitiv, des. Name özel gruptadır: Akk/Dat -n, Genitiv -ns → des Namens.",
+            "de": "„Wessen Bedeutung?“ → Genitiv. „Name“ ist eine Ausnahme: Akk/Dat -n, Genitiv -ns → des Namens.",
+            "en": "“Whose meaning?” → genitive. “Name” is an exception: acc/dat -n, genitive -ns → des Namens."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Sonderformen",
+          "sentence": "Ich habe ___ Lehmann eine E-Mail geschrieben. (Herr) Tipp: jemandem schreiben",
+          "correct": "Herrn",
+          "answers": [
+            "herrn"
+          ],
+          "explanations": {
+            "tr": "jemandem schreiben: kişi Dativ. Herr tekilde Nominativ dışında yalnız -n alır: Herrn Lehmann.",
+            "de": "„jemandem schreiben“: Person im Dativ. „Herr“ bekommt im Singular nur -n: Herrn Lehmann.",
+            "en": "“jemandem schreiben”: the person is dative. Singular “Herr” adds only -n: Herrn Lehmann."
+          }
+        },
+        {
+          "word": "Sonderformen",
+          "sentence": "Mein Opa hat Probleme mit ___. Tipp: mit + Dativ, „Herz“ ist neutral.",
+          "options": [
+            "dem Herz",
+            "dem Herzen",
+            "dem Herzens"
+          ],
+          "correct": "dem Herzen",
+          "explanations": {
+            "tr": "mit Dativ ister. das Herz nötr olsa da düzensizdir: Dativ dem Herzen, Genitiv des Herzens.",
+            "de": "„mit“ + Dativ. „das Herz“ ist neutral, aber unregelmäßig: Dativ dem Herzen, Genitiv des Herzens.",
+            "en": "“mit” + dative. “das Herz” is neuter but irregular: dative dem Herzen, genitive des Herzens."
+          }
+        },
+        {
+          "word": "Sonderformen",
+          "sentence": "Ich verstehe den Kern ___ nicht. Tipp: Gedanke funktioniert wie Name.",
+          "options": [
+            "des Gedanken",
+            "des Gedankens",
+            "des Gedanke"
+          ],
+          "correct": "des Gedankens",
+          "explanations": {
+            "tr": "Neyin özü? → Genitiv. Gedanke, Name gibi Genitivde -ns alır: des Gedankens.",
+            "de": "„Wessen Kern?“ → Genitiv. „Gedanke“ bekommt wie „Name“ im Genitiv -ns: des Gedankens.",
+            "en": "“Whose core?” → genitive. Like “Name”, “Gedanke” takes -ns in the genitive: des Gedankens."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Sonderformen",
+          "sentence": "Die Aussprache dieses ___ ist für viele schwer. (der Buchstabe) Tipp: Genitiv mit -ns",
+          "correct": "Buchstabens",
+          "answers": [
+            "buchstabens"
+          ],
+          "explanations": {
+            "tr": "dieses Genitiv artikelidir. Buchstabe, Name grubundandır ve Genitivde -ns alır: dieses Buchstabens.",
+            "de": "„dieses“ zeigt den Genitiv. „Buchstabe“ gehört zur Name-Gruppe: Genitiv -ns → dieses Buchstabens.",
+            "en": "“dieses” marks the genitive. “Buchstabe” belongs to the Name group: genitive -ns → dieses Buchstabens."
+          }
+        },
+        {
+          "word": "Sonderformen",
+          "sentence": "Meine Damen und ___, herzlich willkommen! Tipp: Plural",
+          "options": [
+            "Herrn",
+            "Herren",
+            "Herr"
+          ],
+          "correct": "Herren",
+          "explanations": {
+            "tr": "Burada çoğul vardır (baylar). Herr'in çoğulu Herren'dir; Herrn yalnız tekil Akk/Dat/Gen biçimidir.",
+            "de": "Hier steht der Plural. Der Plural von „Herr“ ist „Herren“; „Herrn“ ist nur Singular (Akk/Dat/Gen).",
+            "en": "This is plural. The plural of “Herr” is “Herren”; “Herrn” is only singular (acc/dat/gen)."
+          }
+        },
+        {
+          "word": "Sonderformen",
+          "sentence": "Das ist eine Frage des guten ___. Tipp: der Wille – Genitiv",
+          "options": [
+            "Willen",
+            "Willens",
+            "Wille"
+          ],
+          "correct": "Willens",
+          "explanations": {
+            "tr": "des guten → Genitiv. Wille, Name gibi Genitivde -ns alır: des guten Willens.",
+            "de": "„des guten“ → Genitiv. „Wille“ bekommt wie „Name“ -ns: des guten Willens.",
+            "en": "“des guten” → genitive. Like “Name”, “Wille” takes -ns: des guten Willens."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lueckentext-praktikum-27",
+      "title": {
+        "tr": "Übung 27 – Lückentext: Der erste Arbeitstag",
+        "de": "Übung 27 – Lückentext: Der erste Arbeitstag",
+        "en": "Übung 27 – Lückentext: Der erste Arbeitstag"
+      },
+      "description": {
+        "tr": "Emre'nin staj ilk gününü sırayla oku ve boşlukları artikel + isimle doldur. Chef ve Informatiker gibi normal isimlere dikkat!",
+        "de": "Lies Emres ersten Praktikumstag der Reihe nach und ergänze Artikel + Nomen. Achtung bei normalen Nomen wie Chef und Informatiker!",
+        "en": "Read Emre's first internship day in order and fill in article + noun. Watch out for ordinary nouns like Chef and Informatiker!"
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "type": "text",
+          "word": "Lückentext · Der erste Arbeitstag",
+          "sentence": "(1/10) Emre ist zum ersten Mal in der Firma. ___ ist ein bisschen nervös. (der Praktikant)",
+          "correct": "Der Praktikant",
+          "answers": [
+            "der praktikant"
+          ],
+          "explanations": {
+            "tr": "Kim heyecanlı? → özne, Nominativ tekil. Ek yok: Der Praktikant.",
+            "de": "„Wer ist nervös?“ → Subjekt im Nominativ Singular, keine Endung: Der Praktikant.",
+            "en": "“Who is nervous?” → nominative singular subject, no ending: Der Praktikant."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Lückentext · Der erste Arbeitstag",
+          "sentence": "(2/10) Zuerst begrüßt Emre ___, Herrn Krüger. (der Chef)",
+          "correct": "den Chef",
+          "answers": [
+            "den chef"
+          ],
+          "explanations": {
+            "tr": "begrüßen Akkusativ ister → den. Chef zayıf isim değildir, ek almaz: den Chef. (Herrn ise Herr'in Akkusativ biçimidir.)",
+            "de": "„begrüßen“ + Akkusativ → den. „Chef“ ist nicht schwach: den Chef. („Herrn“ ist der Akkusativ von „Herr“.)",
+            "en": "“begrüßen” + accusative → den. “Chef” is not weak: den Chef. (“Herrn” is the accusative of “Herr”.)"
+          }
+        },
+        {
+          "type": "text",
+          "word": "Lückentext · Der erste Arbeitstag",
+          "sentence": "(3/10) Herr Krüger stellt ihm ___ Jonas vor. (sein Kollege)",
+          "correct": "seinen Kollegen",
+          "answers": [
+            "seinen kollegen"
+          ],
+          "explanations": {
+            "tr": "jemandem jemanden vorstellen: tanıtılan kişi Akkusativ → seinen; Kollege -n alır: seinen Kollegen.",
+            "de": "„jemandem jemanden vorstellen“: die vorgestellte Person im Akkusativ → seinen Kollegen.",
+            "en": "“jemandem jemanden vorstellen”: the person introduced is accusative → seinen Kollegen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Lückentext · Der erste Arbeitstag",
+          "sentence": "(4/10) Jonas zeigt ___ das Büro und die Kaffeemaschine. (der Praktikant)",
+          "correct": "dem Praktikanten",
+          "answers": [
+            "dem praktikanten"
+          ],
+          "explanations": {
+            "tr": "jemandem etwas zeigen: kişi Dativ → dem; Praktikant -en alır: dem Praktikanten.",
+            "de": "„jemandem etwas zeigen“: Person im Dativ → dem Praktikanten.",
+            "en": "“jemandem etwas zeigen”: the person is dative → dem Praktikanten."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Lückentext · Der erste Arbeitstag",
+          "sentence": "(5/10) Mittags isst Emre mit ___ in der Kantine. (der Informatiker)",
+          "correct": "dem Informatiker",
+          "answers": [
+            "dem informatiker"
+          ],
+          "explanations": {
+            "tr": "mit Dativ ister → dem. Informatiker -er ile biten normal bir isimdir, -n almaz: dem Informatiker.",
+            "de": "„mit“ + Dativ → dem. „Informatiker“ ist ein normales Nomen auf -er: dem Informatiker.",
+            "en": "“mit” + dative → dem. “Informatiker” is an ordinary noun in -er: dem Informatiker."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Lückentext · Der erste Arbeitstag",
+          "sentence": "(6/10) Um zwei Uhr kommt ___ aus Polen. (ein Kunde)",
+          "correct": "ein Kunde",
+          "answers": [
+            "ein kunde"
+          ],
+          "explanations": {
+            "tr": "Kim geliyor? → özne, Nominativ tekil. Ek yok: ein Kunde.",
+            "de": "„Wer kommt?“ → Subjekt im Nominativ Singular, keine Endung: ein Kunde.",
+            "en": "“Who comes?” → nominative singular subject, no ending: ein Kunde."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Lückentext · Der erste Arbeitstag",
+          "sentence": "(7/10) Emre hört zu, als Jonas mit ___ über den Vertrag spricht. (der Pole)",
+          "correct": "dem Polen",
+          "answers": [
+            "dem polen"
+          ],
+          "explanations": {
+            "tr": "mit Dativ ister → dem; milliyet adı Pole -n alır: dem Polen.",
+            "de": "„mit“ + Dativ → dem; die Nationalität „Pole“ bekommt -n: dem Polen.",
+            "en": "“mit” + dative → dem; the nationality “Pole” adds -n: dem Polen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Lückentext · Der erste Arbeitstag",
+          "sentence": "(8/10) Danach ruft Emre ___ an und bestellt Papier. (der Lieferant)",
+          "correct": "den Lieferanten",
+          "answers": [
+            "den lieferanten"
+          ],
+          "explanations": {
+            "tr": "anrufen Akkusativ ister → den; Lieferant -en alır: den Lieferanten.",
+            "de": "„anrufen“ + Akkusativ → den; „Lieferant“ bekommt -en: den Lieferanten.",
+            "en": "“anrufen” + accusative → den; “Lieferant” adds -en: den Lieferanten."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Lückentext · Der erste Arbeitstag",
+          "sentence": "(9/10) Am Nachmittag lernt er ___ Frau Weber kennen. (die Assistentin)",
+          "correct": "die Assistentin",
+          "answers": [
+            "die assistentin"
+          ],
+          "explanations": {
+            "tr": "kennenlernen Akkusativ ister; dişil Akkusativ artikeli die'dir. Dişil isimler N-Deklination almaz: die Assistentin.",
+            "de": "„kennenlernen“ + Akkusativ; feminin bleibt „die“. Feminine Nomen haben keine n-Deklination: die Assistentin.",
+            "en": "“kennenlernen” + accusative; feminine stays “die”. Feminine nouns have no n-declension: die Assistentin."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Lückentext · Der erste Arbeitstag",
+          "sentence": "(10/10) Abends schreibt Emre: „Das Team ist super, und das Büro ___ ist riesig!“ (der Chef)",
+          "correct": "des Chefs",
+          "answers": [
+            "des chefs"
+          ],
+          "explanations": {
+            "tr": "Kimin ofisi? → Genitiv. Chef normal eril isim olduğu için Genitivde -s alır: des Chefs (zayıf isimlerin tersine).",
+            "de": "„Wessen Büro?“ → Genitiv. „Chef“ ist ein normales Nomen und bekommt -s: des Chefs.",
+            "en": "“Whose office?” → genitive. “Chef” is an ordinary noun and takes -s: des Chefs."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lueckentext-krankenhaus-28",
+      "title": {
+        "tr": "Übung 28 – Lückentext: Besuch im Krankenhaus",
+        "de": "Übung 28 – Lückentext: Besuch im Krankenhaus",
+        "en": "Übung 28 – Lückentext: Besuch im Krankenhaus"
+      },
+      "description": {
+        "tr": "Lena'nın hastane ziyaretini sırayla oku; Arzt ve Pfleger gibi normal isimleri zayıf isimlerden ayır.",
+        "de": "Lies Lenas Krankenhausbesuch der Reihe nach; unterscheide normale Nomen wie Arzt und Pfleger von schwachen Nomen.",
+        "en": "Read Lena's hospital visit in order; tell ordinary nouns like Arzt and Pfleger apart from weak nouns."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "hideLesson": true,
+      "questions": [
+        {
+          "type": "text",
+          "word": "Lückentext · Im Krankenhaus",
+          "sentence": "(1/8) Lenas Opa liegt im Krankenhaus. Er teilt das Zimmer mit ___. (ein anderer Patient)",
+          "correct": "einem anderen Patienten",
+          "answers": [
+            "einem anderen patienten"
+          ],
+          "explanations": {
+            "tr": "mit Dativ ister → einem anderen; Patient -en alır: einem anderen Patienten.",
+            "de": "„mit“ + Dativ → einem anderen; „Patient“ bekommt -en: einem anderen Patienten.",
+            "en": "“mit” + dative → einem anderen; “Patient” adds -en: einem anderen Patienten."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Lückentext · Im Krankenhaus",
+          "sentence": "(2/8) Am Empfang fragt Lena ___ nach der Zimmernummer. (ein Pfleger)",
+          "correct": "einen Pfleger",
+          "answers": [
+            "einen pfleger"
+          ],
+          "explanations": {
+            "tr": "fragen Akkusativ ister → einen. Pfleger -er ile biten normal isimdir, -n almaz: einen Pfleger.",
+            "de": "„fragen“ + Akkusativ → einen. „Pfleger“ ist ein normales Nomen auf -er: einen Pfleger.",
+            "en": "“fragen” + accusative → einen. “Pfleger” is an ordinary noun in -er: einen Pfleger."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Lückentext · Im Krankenhaus",
+          "sentence": "(3/8) Im Zimmer erklärt ___ gerade die Medikamente. (der Arzt)",
+          "correct": "der Arzt",
+          "answers": [
+            "der arzt"
+          ],
+          "explanations": {
+            "tr": "Kim açıklıyor? → özne, Nominativ: der Arzt. die Medikamente Akkusativ nesnedir.",
+            "de": "„Wer erklärt?“ → Subjekt im Nominativ: der Arzt. „die Medikamente“ ist das Akkusativobjekt.",
+            "en": "“Who explains?” → nominative subject: der Arzt. “die Medikamente” is the accusative object."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Lückentext · Im Krankenhaus",
+          "sentence": "(4/8) Er lacht und sagt: „Ihr Opa ist ___!“ (ein starker Mensch)",
+          "correct": "ein starker Mensch",
+          "answers": [
+            "ein starker mensch"
+          ],
+          "explanations": {
+            "tr": "sein fiilinden sonra gelen isim de Nominativtir. Nominativ tekilde ek yoktur: ein starker Mensch.",
+            "de": "Nach „sein“ steht das Prädikativ im Nominativ; im Nominativ Singular keine Endung: ein starker Mensch.",
+            "en": "After “sein” the complement is nominative; no ending in nominative singular: ein starker Mensch."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Lückentext · Im Krankenhaus",
+          "sentence": "(5/8) Im anderen Bett liegt ein Mann aus Athen. Lena bringt auch ___ ein Stück Kuchen. (der Grieche)",
+          "correct": "dem Griechen",
+          "answers": [
+            "dem griechen"
+          ],
+          "explanations": {
+            "tr": "jemandem etwas bringen: kişi Dativ → dem; Grieche -n alır: dem Griechen.",
+            "de": "„jemandem etwas bringen“: Person im Dativ → dem Griechen.",
+            "en": "“jemandem etwas bringen”: the person is dative → dem Griechen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Lückentext · Im Krankenhaus",
+          "sentence": "(6/8) Die Familie ___ ist sehr freundlich. (der Grieche)",
+          "correct": "des Griechen",
+          "answers": [
+            "des griechen"
+          ],
+          "explanations": {
+            "tr": "Kimin ailesi? → Genitiv, des. Zayıf isimde -s yok: des Griechen.",
+            "de": "„Wessen Familie?“ → Genitiv, des. Schwaches Nomen ohne -s: des Griechen.",
+            "en": "“Whose family?” → genitive, des. Weak noun without -s: des Griechen."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Lückentext · Im Krankenhaus",
+          "sentence": "(7/8) Opa hat noch Probleme mit ___, aber es geht ihm schon besser. (das Herz)",
+          "correct": "dem Herzen",
+          "answers": [
+            "dem herzen"
+          ],
+          "explanations": {
+            "tr": "mit Dativ ister. das Herz düzensizdir: Dativ dem Herzen (Akkusativ ise das Herz).",
+            "de": "„mit“ + Dativ. „das Herz“ ist unregelmäßig: Dativ dem Herzen (Akkusativ: das Herz).",
+            "en": "“mit” + dative. “das Herz” is irregular: dative dem Herzen (accusative: das Herz)."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Lückentext · Im Krankenhaus",
+          "sentence": "(8/8) Zum Schluss dankt Lena ___, der Opa operiert hat. (der Spezialist)",
+          "correct": "dem Spezialisten",
+          "answers": [
+            "dem spezialisten"
+          ],
+          "explanations": {
+            "tr": "danken Dativ ister → dem; -ist ile biten Spezialist -en alır: dem Spezialisten.",
+            "de": "„danken“ + Dativ → dem; „Spezialist“ auf -ist bekommt -en: dem Spezialisten.",
+            "en": "“danken” + dative → dem; “Spezialist” in -ist adds -en: dem Spezialisten."
+          }
+        }
+      ]
     }
   ]
 }

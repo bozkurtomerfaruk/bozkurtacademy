@@ -1,5 +1,7 @@
 (() => {
  'use strict';
+ // Status and error texts live in js/app.js (grammarLesson…, grammarComment…); the lesson itself is Turkish.
+ const t = key => window.BA?.t ? window.BA.t(key) : key;
  const h = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
  const dataPromises={};
  function load(level='A1') {
@@ -49,7 +51,7 @@
    container.querySelector('[data-a1-about]').addEventListener('click',e=>{e.preventDefault();window.BA.showPage('about');});
    container.querySelector('[data-a1-practice]').addEventListener('click',async e=>{
      e.preventDefault();const status=container.querySelector('.a1-practice-status');
-     try {await window.BAQuiz.openTopic(level,id);}catch(_){status.textContent='Alıştırma açılamadı. Bağlantıyı yeni sekmede açabilir veya biraz sonra tekrar deneyebilirsin.';}
+     try {await window.BAQuiz.openTopic(level,id);}catch(_){status.textContent=t('grammarLessonPracticeError');}
    });
    setupComments(container,lesson,level);
    return lesson;
@@ -59,8 +61,8 @@
    (async () => {try {
      const response=await fetch('data/grammar-comments.json',{cache:'no-store'});if(!response.ok)throw Error('comments');
      const data=await response.json();const rows=Array.isArray(data[level+'/'+lesson.id] || data[lesson.id])?(data[level+'/'+lesson.id] || data[lesson.id]):[];
-     list.innerHTML=rows.length?rows.map(row=>`<article class="a1-comment"><header><strong>${h(row.name)}</strong> <time>${h(row.date)}</time></header><p>${h(row.comment)}</p>${row.reply?`<div class="a1-comment-reply"><strong>Ömer Faruk Bozkurt</strong><p>${h(row.reply)}</p></div>`:''}</article>`).join(''):'<p>Bu konudaki ilk yorumu sen yazabilirsin.</p>';
-   } catch(_) {list.innerHTML='<p>Yayımlanan yorumlar şu anda yüklenemiyor. Yine de yorumunu gönderebilirsin.</p>';}})();
+     list.innerHTML=rows.length?rows.map(row=>`<article class="a1-comment"><header><strong>${h(row.name)}</strong> <time>${h(row.date)}</time></header><p>${h(row.comment)}</p>${row.reply?`<div class="a1-comment-reply"><strong>Ömer Faruk Bozkurt</strong><p>${h(row.reply)}</p></div>`:''}</article>`).join(''):`<p>${h(t('grammarCommentsEmpty'))}</p>`;
+   } catch(_) {list.innerHTML=`<p>${h(t('grammarCommentsLoadError'))}</p>`;}})();
    const form=container.querySelector('.a1-comment-form');const status=container.querySelector('.a1-comment-status');
    let submitting=false,lastSent=0;
    form.addEventListener('submit',async event=>{
@@ -68,14 +70,14 @@
      const values=new FormData(form);const name=String(values.get('name')||'').trim(),email=String(values.get('email')||'').trim(),comment=String(values.get('comment')||'').trim();
      status.className='a1-comment-status';
      if(values.get('website'))return;
-     if(!name || name.length>60 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length>254 || comment.length<10 || comment.length>2000 || !values.get('consent')){status.textContent='Adını, geçerli e-posta adresini ve en az 10 karakterlik yorumunu yazıp yayımlama onayını işaretle.';status.classList.add('error');return;}
-     if(Date.now()-lastSent<30000){status.textContent='Yeni bir yorum göndermeden önce kısa bir süre bekle.';return;}
-     submitting=true;const button=form.querySelector('[type="submit"]');button.disabled=true;status.textContent='Yorumun gönderiliyor…';
+     if(!name || name.length>60 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length>254 || comment.length<10 || comment.length>2000 || !values.get('consent')){status.textContent=t('grammarCommentInvalid');status.classList.add('error');return;}
+     if(Date.now()-lastSent<30000){status.textContent=t('grammarCommentWait');return;}
+     submitting=true;const button=form.querySelector('[type="submit"]');button.disabled=true;status.textContent=t('grammarCommentSending');
      try {
        const response=await fetch('https://formsubmit.co/ajax/bozkurtt.omerfaruk@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name,email,message:comment,topic:lesson.title,topic_id:lesson.id,level,publication_consent:'Öğrenci yorumunun adıyla yayımlanmasına onay verdi.',_subject:'Bozkurt Academy - '+level+' yorum incelemesi: '+lesson.title,_replyto:email,_url:'https://bozkurtacademy.com/#grammar/'+level+'/'+lesson.id,_template:'table'})});
        const result=await response.json();if(!response.ok || result.success===false || result.success==='false')throw Error('send');
-       form.reset();lastSent=Date.now();status.textContent='Yorumun inceleme için gönderildi. Onaylandıktan sonra bu konuda yayımlanabilir.';status.classList.add('success');
-     }catch(_){status.textContent='Yorumun gönderilemedi. Yazdıkların korundu; biraz sonra tekrar deneyebilirsin.';status.classList.add('error');}
+       form.reset();lastSent=Date.now();status.textContent=t('grammarCommentSent');status.classList.add('success');
+     }catch(_){status.textContent=t('grammarCommentSendError');status.classList.add('error');}
      finally{submitting=false;button.disabled=false;}
    });
  }

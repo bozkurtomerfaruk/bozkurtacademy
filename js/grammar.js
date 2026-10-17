@@ -597,7 +597,7 @@
       activeTopic = {level,id};
       currentLevel = level;
       detail.dataset.lesson = level+'/'+id;
-      detail.innerHTML = '<p role="status">Konu anlatımı yükleniyor…</p>';
+      detail.innerHTML = `<p role="status">${escapeHtml(t('grammarLessonLoading'))}</p>`;
       list.classList.add('hidden');
       detail.classList.add('active');
       if (!options.restore) history.pushState(carryReturn({baPage:'grammar',grammarLevel:level,grammarTopic:id}),'', '#grammar/'+level+'/'+encodeURIComponent(id));
@@ -609,7 +609,7 @@
         detail.querySelector('.a1-article-header h2')?.focus({preventScroll:true});
       } catch (_) {
         if (activeTopic?.id !== id || activeTopic?.level !== level) return;
-        detail.innerHTML='<p role="alert">Konu anlatımı yüklenemedi. Lütfen tekrar dene.</p><button type="button" class="btn primary" id="a1Retry">Tekrar dene</button><button type="button" class="btn ghost" id="a1Return">'+escapeHtml(level)+' konularına dön</button>';
+        detail.innerHTML=`<p role="alert">${escapeHtml(t('grammarLessonLoadError'))}</p><button type="button" class="btn primary" id="a1Retry">${escapeHtml(t('grammarRetry'))}</button><button type="button" class="btn ghost" id="a1Return">${escapeHtml(fill('grammarBackToLevel', {level}))}</button>`;
         detail.querySelector('#a1Retry').addEventListener('click',()=>openTopic(level,id,{restore:true}));
         detail.querySelector('#a1Return').addEventListener('click',()=>closeA1());
       }

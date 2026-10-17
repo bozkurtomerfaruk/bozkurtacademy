@@ -1477,18 +1477,16 @@
         {
           "type": "text",
           "word": "Zwei Sätze → je ... desto",
-          "sentence": "Verbinde: „Die Firma wächst internationaler. Die Koordination wird komplexer.“",
-          "correct": "Je internationaler die Firma wächst, desto komplexer wird die Koordination.",
+          "sentence": "Verbinde: „Die Firma wird internationaler. Die Koordination wird komplexer.“",
+          "correct": "Je internationaler die Firma wird, desto komplexer wird die Koordination.",
           "answers": [
-            "je internationaler die firma waechst desto komplexer wird die koordination",
-            "je internationaler die firma waechst, desto komplexer wird die koordination",
-            "je internationaler die firma wächst desto komplexer wird die koordination",
-            "je internationaler die firma wächst, desto komplexer wird die koordination"
+            "je internationaler die firma wird desto komplexer wird die koordination",
+            "je internationaler die firma wird, desto komplexer wird die koordination"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Je internationaler die Firma wächst, desto komplexer wird die Koordination.. B2 profesyonel bağlamında iki değişken karşılaştırılır.",
-            "de": "Die richtige Antwort ist „Je internationaler die Firma wächst, desto komplexer wird die Koordination.“. Achte bei „Verbinde: „Die Firma wächst internationaler. Die Koordination wird komplexer.““ besonders darauf, dass das finite Verb im je-Satz am Ende steht und im desto-Satz nach dem Komparativ an zweiter Position folgt.",
-            "en": "The correct answer is “Je internationaler die Firma wächst, desto komplexer wird die Koordination.”. In “Verbinde: „Die Firma wächst internationaler. Die Koordination wird komplexer.“”, pay special attention to the finite verb going to the end of the je-clause and appearing in second position after the comparative phrase in the desto-clause."
+            "tr": "Doğru cevap: Je internationaler die Firma wird, desto komplexer wird die Koordination. je-cümlesi yan cümledir: Komparativ başta, çekimli fiil (wird) sonda. desto-cümlesinde Komparativden hemen sonra çekimli fiil gelir: desto komplexer wird …",
+            "de": "Die richtige Antwort ist „Je internationaler die Firma wird, desto komplexer wird die Koordination.“. Im je-Satz steht das finite Verb am Ende, im desto-Satz folgt es direkt nach dem Komparativ.",
+            "en": "The correct answer is “Je internationaler die Firma wird, desto komplexer wird die Koordination.”. In the je-clause the finite verb goes to the end; in the desto-clause it follows the comparative directly."
           }
         },
         {

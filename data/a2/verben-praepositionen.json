@@ -698,13 +698,13 @@
           "options": [
             "vor",
             "für",
-            "über"
+            "an"
           ],
           "correct": "für",
           "explanations": {
-            "tr": "Doğru cevap: für. Utanılan şey Akzent; “sich schämen für”. Bu fiil kalıp olarak “sich schämen für” şeklinde öğrenilmelidir ve prepozisyondan sonra Akkusativ gelir. Diğer seçenekler “vor”, “über” bu fiilin sabit kalıbına uymuyor.",
-            "de": "Die richtige Antwort ist „für“. Im Satz „Du musst dich nicht ___ deinen Akzent schämen.“ wird die feste Verbindung „sich schämen für“ gebraucht. Nach „für“ steht hier Akk. Die anderen Optionen „vor“, „über“ gehören nicht zu dieser festen Verb-Präposition-Verbindung.",
-            "en": "The correct answer is “für”. In “Du musst dich nicht ___ deinen Akzent schämen.”, the fixed pattern “sich schämen für” is required. Here “für” takes the akk. The other options “vor”, “über” do not belong to this fixed verb-preposition pattern."
+            "tr": "Doğru cevap: für. Utanılan şey Akzent; kalıp 'sich schämen für + Akkusativ': sich für deinen Akzent schämen. 'vor' birinin önünde utanmayı anlatır (sich vor jemandem schämen), 'an' bu fiille kullanılmaz.",
+            "de": "Die richtige Antwort ist „für“. Im Satz „Du musst dich nicht ___ deinen Akzent schämen.“ wird die feste Verbindung „sich schämen für“ gebraucht. Nach „für“ steht hier Akk. Die anderen Optionen „vor“, „an“ gehören nicht zu dieser festen Verb-Präposition-Verbindung.",
+            "en": "The correct answer is “für”. In “Du musst dich nicht ___ deinen Akzent schämen.”, the fixed pattern “sich schämen für” is required. Here “für” takes the akk. The other options “vor”, “an” do not belong to this fixed verb-preposition pattern."
           }
         },
         {
@@ -1157,13 +1157,13 @@
           "options": [
             "zu",
             "mit",
-            "bei"
+            "auf"
           ],
           "correct": "mit",
           "explanations": {
-            "tr": "Doğru cevap: mit. Başlanacak bölüm Kapitel fünf; “anfangen mit”. Bu fiil kalıp olarak “anfangen mit” şeklinde öğrenilmelidir ve prepozisyondan sonra Dativ gelir. Diğer seçenekler “zu”, “bei” bu fiilin sabit kalıbına uymuyor.",
-            "de": "Die richtige Antwort ist „mit“. Im Satz „Wir fangen heute ___ Kapitel fünf an.“ wird die feste Verbindung „anfangen mit“ gebraucht. Nach „mit“ steht hier Dat. Die anderen Optionen „zu“, „bei“ gehören nicht zu dieser festen Verb-Präposition-Verbindung.",
-            "en": "The correct answer is “mit”. In “Wir fangen heute ___ Kapitel fünf an.”, the fixed pattern “anfangen mit” is required. Here “mit” takes the dat. The other options “zu”, “bei” do not belong to this fixed verb-preposition pattern."
+            "tr": "Doğru cevap: mit. Başlanacak bölüm Kapitel fünf; kalıp 'anfangen mit + Dativ': mit Kapitel fünf anfangen. 'zu' ve 'auf' bu fiille kullanılmaz.",
+            "de": "Die richtige Antwort ist „mit“. Im Satz „Wir fangen heute ___ Kapitel fünf an.“ wird die feste Verbindung „anfangen mit“ gebraucht. Nach „mit“ steht hier Dat. Die anderen Optionen „zu“, „auf“ gehören nicht zu dieser festen Verb-Präposition-Verbindung.",
+            "en": "The correct answer is “mit”. In “Wir fangen heute ___ Kapitel fünf an.”, the fixed pattern “anfangen mit” is required. Here “mit” takes the dat. The other options “zu”, “auf” do not belong to this fixed verb-preposition pattern."
           }
         },
         {
@@ -2109,16 +2109,16 @@
         {
           "type": "text",
           "word": "Frage",
-          "sentence": "Formuliere die Frage: „Das Programm eignet sich für Anfänger.“",
+          "sentence": "Formuliere die Frage: „Das Programm eignet sich für den Unterricht.“",
           "correct": "Wofür eignet sich das Programm?",
           "answers": [
             "wofür eignet sich das programm",
             "wofuer eignet sich das programm"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Wofür eignet sich das Programm?. Anfänger burada hedef grup olarak genel kategori; alıştırmada prepozisyon nesnesi “für” için “wofür” sorusu isteniyor. “sich eignen für” kalıbında prepozisyon “für”dir. Şey/konu sorulurken soru biçimi “wofür” olur.",
-            "de": "Die richtige Antwort ist „Wofür eignet sich das Programm?“. Die feste Verbindung lautet „sich eignen für“. Bei Sachen bildet man die Frage mit „wofür“.",
-            "en": "The correct answer is “Wofür eignet sich das Programm?”. The fixed pattern is “sich eignen für”. For things, the question form is “wofür”."
+            "tr": "Doğru cevap: Wofür eignet sich das Programm?. Kalıp 'sich eignen für'; sorulan şey bir kişi değil, bir şey (der Unterricht). Şeyler için wo- + Präposition kullanılır: wo + für → wofür. Karşılaştır: kişi olsaydı 'Für wen eignet sich das Programm?' (für Anfänger).",
+            "de": "Die richtige Antwort ist „Wofür eignet sich das Programm?“. Die Verbindung lautet „sich eignen für“. Gefragt wird nach einer Sache (der Unterricht), deshalb wo- + Präposition: wofür. Bei einer Person fragt man: Für wen eignet sich das Programm?",
+            "en": "The correct answer is “Wofür eignet sich das Programm?”. The pattern is “sich eignen für”. The question is about a thing (der Unterricht), so use wo- + preposition: wofür. For a person you would ask: Für wen eignet sich das Programm?"
           }
         }
       ],
@@ -2450,15 +2450,15 @@
         {
           "type": "text",
           "word": "Pronominaladverb",
-          "sentence": "Ergänze: Die App ist für Anfänger geeignet. Sie eignet sich gut ___.",
+          "sentence": "Ergänze: Die App ist für den Unterricht geeignet. Sie eignet sich gut ___.",
           "correct": "dafür",
           "answers": [
             "dafür"
           ],
           "explanations": {
-            "tr": "Doğru cevap: dafür. “für diesen Zweck/diese Gruppe” tekrarında “dafür” kullanılır. Bir şeyi tekrar isimle söylemek yerine “für + şey” yapısı için “dafür” kullanılır. Temel fiil kalıbı “sich eignen für”dir.",
-            "de": "Die richtige Antwort ist „dafür“. Für eine Sache ersetzt „dafür“ die Präpositionalergänzung mit „für“. Die Verbverbindung lautet „sich eignen für“.",
-            "en": "The correct answer is “dafür”. For a thing, “dafür” replaces the prepositional phrase with “für”. The verb pattern is “sich eignen für”."
+            "tr": "Doğru cevap: dafür. Kalıp 'sich eignen für'. 'für den Unterricht' bir şey olduğu için tekrar edilmek yerine da- + für → dafür kullanılır. Karşılaştır: kişi olsaydı 'für sie' denirdi (Sie eignet sich gut für Anfänger → für sie).",
+            "de": "Die richtige Antwort ist „dafür“. Die Verbindung lautet „sich eignen für“. „für den Unterricht“ ist eine Sache, deshalb ersetzt man sie durch da- + für → dafür. Bei Personen steht dagegen „für sie“.",
+            "en": "The correct answer is “dafür”. The pattern is “sich eignen für”. “für den Unterricht” is a thing, so it is replaced by da- + für → dafür. For people you would use “für sie” instead."
           }
         }
       ],

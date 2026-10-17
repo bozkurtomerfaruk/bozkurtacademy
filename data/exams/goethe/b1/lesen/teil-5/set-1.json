@@ -1,0 +1,141 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 5,
+  "set": "set-1",
+  "title": "Die Hausordnung",
+  "minutes": 10,
+  "context": "Sie ziehen in eine neue Wohnung und lesen die Hausordnung.",
+  "instructions": "Lesen Sie die Aufgaben 27 bis 30 und den Text dazu. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "hausordnung",
+          "title": "Hausordnung der Wohnanlage Am Mühlbach",
+          "paragraphs": [
+            "Liebe Mieterinnen und Mieter, damit sich alle in unserer Wohnanlage wohlfühlen, bitten wir Sie, die folgenden Regeln zu beachten.",
+            {
+              "heading": "Ruhezeiten"
+            },
+            "Bitte nehmen Sie Rücksicht auf Ihre Nachbarn. Von 22 bis 7 Uhr sowie an Sonn- und Feiertagen gilt Ruhezeit. In dieser Zeit sind laute Musik, Bohren und Hämmern nicht erlaubt. Wenn Sie eine Feier planen, informieren Sie Ihre Nachbarn bitte einige Tage vorher mit einem Aushang im Treppenhaus.",
+            {
+              "heading": "Waschküche"
+            },
+            "Die Waschmaschinen und Trockner im Keller können Sie täglich von 7 bis 21 Uhr benutzen. Tragen Sie sich bitte vorher in den Plan an der Tür ein. Jede Wohnung darf die Waschküche höchstens zweimal pro Woche reservieren. Den Schlüssel bekommen Sie beim Hausmeister.",
+            {
+              "heading": "Müll"
+            },
+            "Die Mülltonnen stehen hinter dem Haus. Bitte trennen Sie Papier, Verpackungen, Bio- und Restmüll. Große Gegenstände wie Möbel oder Elektrogeräte dürfen nicht neben die Tonnen gestellt werden. Ihre Abholung können Sie kostenlos bei der Stadtreinigung bestellen.",
+            {
+              "heading": "Fahrräder und Kinderwagen"
+            },
+            "Fahrräder gehören in den Fahrradkeller oder in die Fahrradständer vor dem Eingang. Im Treppenhaus dürfen sie nicht stehen, weil sie im Notfall den Weg versperren. Kinderwagen können Sie im Erdgeschoss unter der Treppe abstellen.",
+            {
+              "heading": "Haustiere"
+            },
+            "Kleine Haustiere wie Katzen, Vögel oder Fische sind erlaubt. Wenn Sie einen Hund halten möchten, brauchen Sie die schriftliche Erlaubnis der Hausverwaltung.",
+            {
+              "heading": "Hausmeister"
+            },
+            "Unser Hausmeister, Herr Brandl, ist montags bis freitags von 8 bis 12 Uhr in seinem Büro im Erdgeschoss. Bei Notfällen, zum Beispiel wenn ein Wasserrohr kaputt ist, rufen Sie bitte die Notrufnummer an, die im Treppenhaus hängt.",
+            "Vielen Dank für Ihr Verständnis! Ihre Hausverwaltung Kröger & Partner"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 27,
+          "type": "abc",
+          "prompt": "Wer in seiner Wohnung eine Party feiern möchte, …",
+          "options": {
+            "a": "muss vorher den Hausmeister fragen.",
+            "b": "soll die Nachbarn rechtzeitig informieren.",
+            "c": "darf nur am Wochenende feiern."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "hausordnung",
+              "quote": "Wenn Sie eine Feier planen, informieren Sie Ihre Nachbarn bitte einige Tage vorher mit einem Aushang im Treppenhaus."
+            }
+          ],
+          "explanation": "Parti planlayan kişi komşularını birkaç gün önceden merdiven boşluğuna asılan bir duyuruyla bilgilendirmeli. a) yanlış: Kapıcıdan izin almak gerektiği yazmıyor. c) yanlış: Hafta sonu sınırı yok; tam tersine pazar günü dinlenme saati var."
+        },
+        {
+          "number": 28,
+          "type": "abc",
+          "prompt": "Die Waschküche …",
+          "options": {
+            "a": "kann man jeden Tag bis 22 Uhr benutzen.",
+            "b": "kann man so oft reservieren, wie man möchte.",
+            "c": "muss man vorher reservieren."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "hausordnung",
+              "quote": "Tragen Sie sich bitte vorher in den Plan an der Tür ein."
+            },
+            {
+              "text": "hausordnung",
+              "quote": "Die Waschmaschinen und Trockner im Keller können Sie täglich von 7 bis 21 Uhr benutzen."
+            },
+            {
+              "text": "hausordnung",
+              "quote": "Jede Wohnung darf die Waschküche höchstens zweimal pro Woche reservieren."
+            }
+          ],
+          "explanation": "Çamaşırhaneyi kullanmadan önce kapıdaki listeye adını yazmak, yani rezervasyon yapmak gerekiyor. a) yanlış: Kullanım saati 22'ye değil 21'e kadar (22 dinlenme saatinin başlangıcı, tuzak). b) yanlış: Her daire haftada en fazla iki kez rezervasyon yapabilir."
+        },
+        {
+          "number": 29,
+          "type": "abc",
+          "prompt": "Alte Möbel …",
+          "options": {
+            "a": "darf man neben die Mülltonnen stellen.",
+            "b": "holt die Stadtreinigung kostenlos ab.",
+            "c": "muss man in den Keller bringen."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "hausordnung",
+              "quote": "Ihre Abholung können Sie kostenlos bei der Stadtreinigung bestellen."
+            },
+            {
+              "text": "hausordnung",
+              "quote": "Große Gegenstände wie Möbel oder Elektrogeräte dürfen nicht neben die Tonnen gestellt werden."
+            }
+          ],
+          "explanation": "Büyük eşyaların alınmasını belediyenin temizlik birimine ücretsiz sipariş edebilirsiniz: Eski mobilyaları onlar ücretsiz alıyor. a) yanlış: Mobilya gibi büyük eşyalar çöp kutularının yanına bırakılamaz. c) metinde geçmiyor; bodrumda çamaşırhane ve bisiklet odası var, mobilya için değil."
+        },
+        {
+          "number": 30,
+          "type": "abc",
+          "prompt": "Den Hausmeister …",
+          "options": {
+            "a": "findet man von Montag bis Freitag vormittags in seinem Büro.",
+            "b": "soll man bei einem kaputten Wasserrohr zuerst anrufen.",
+            "c": "erreicht man auch am Wochenende im Büro."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "hausordnung",
+              "quote": "ist montags bis freitags von 8 bis 12 Uhr in seinem Büro im Erdgeschoss"
+            },
+            {
+              "text": "hausordnung",
+              "quote": "rufen Sie bitte die Notrufnummer an, die im Treppenhaus hängt"
+            }
+          ],
+          "explanation": "Kapıcı Herr Brandl pazartesiden cumaya 8–12 arası, yani sabahları ofisinde. b) yanlış: Su borusu patlaması gibi acil durumlarda merdiven boşluğundaki acil numara aranmalı. c) yanlış: Ofis saatleri sadece hafta içi."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 5,
+  "set": "set-2",
+  "title": "Kurse im Sportzentrum",
+  "minutes": 10,
+  "context": "Sie möchten im Sportzentrum Talblick einen Kurs machen und lesen die Informationen dazu.",
+  "instructions": "Lesen Sie die Aufgaben 27 bis 30 und den Text dazu. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "sportzentrum",
+          "title": "Sportzentrum Talblick – Informationen für Kursteilnehmer",
+          "paragraphs": [
+            "Liebe Kursteilnehmerinnen und Kursteilnehmer, hier finden Sie die wichtigsten Informationen zu unseren Kursen.",
+            {
+              "heading": "Anmeldung"
+            },
+            "Für alle Kurse ist eine Anmeldung nötig. Sie können sich online über unsere Webseite oder persönlich an der Rezeption anmelden. Telefonische Anmeldungen sind leider nicht möglich. Ihr Platz ist erst sicher, wenn Sie die Kursgebühr bezahlt haben.",
+            {
+              "heading": "Kursgebühren"
+            },
+            "Ein Kurs mit zehn Terminen kostet 85 Euro, für Mitglieder des Sportzentrums 60 Euro. Schülerinnen, Schüler und Studierende erhalten mit einem gültigen Ausweis 20 Prozent Ermäßigung. Die Gebühr können Sie an der Rezeption bar oder mit Karte bezahlen oder online überweisen.",
+            {
+              "heading": "Probestunde"
+            },
+            "Sie wissen noch nicht, ob ein Kurs das Richtige für Sie ist? Dann machen Sie eine Probestunde. Sie kostet 8 Euro. Wenn Sie sich danach für den Kurs anmelden, ziehen wir diesen Betrag von der Kursgebühr ab.",
+            {
+              "heading": "Abmeldung"
+            },
+            "Bis eine Woche vor Kursbeginn können Sie sich kostenlos abmelden. Danach bekommen Sie die Kursgebühr nur zurück, wenn Sie ein ärztliches Attest vorlegen. Termine, die Sie verpassen, können Sie leider nicht nachholen.",
+            {
+              "heading": "Ausfall von Terminen"
+            },
+            "Wenn ein Kurstermin ausfällt, weil die Trainerin oder der Trainer krank ist, bieten wir Ihnen einen Ersatztermin an. Wir informieren Sie rechtzeitig per E-Mail.",
+            {
+              "heading": "Umkleiden"
+            },
+            "Bitte bringen Sie saubere Hallenschuhe und ein Handtuch mit. Für Ihre Wertsachen gibt es abschließbare Schränke in den Umkleiden.",
+            {
+              "heading": "Anfahrt"
+            },
+            "Vor dem Sportzentrum gibt es 40 kostenlose Parkplätze. Mit dem Bus erreichen Sie uns mit der Linie 7, Haltestelle „Talblick“. Fahrräder können Sie im Hof abstellen.",
+            "Wir wünschen Ihnen viel Spaß beim Training! Ihr Team vom Sportzentrum Talblick"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 27,
+          "type": "abc",
+          "prompt": "Für einen Kurs kann man sich …",
+          "options": {
+            "a": "auch per Telefon anmelden.",
+            "b": "nur im Internet anmelden.",
+            "c": "auch direkt im Sportzentrum anmelden."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "sportzentrum",
+              "quote": "Sie können sich online über unsere Webseite oder persönlich an der Rezeption anmelden."
+            },
+            {
+              "text": "sportzentrum",
+              "quote": "Telefonische Anmeldungen sind leider nicht möglich."
+            }
+          ],
+          "explanation": "Kayıt internetten veya resepsiyonda şahsen yapılabiliyor; resepsiyon spor merkezinin içinde. a) yanlış: Telefonla kayıt mümkün değil. b) yanlış: İnternet tek yol değil, resepsiyonda da kayıt olunabiliyor."
+        },
+        {
+          "number": 28,
+          "type": "abc",
+          "prompt": "Wer zuerst eine Probestunde macht und sich dann für den Kurs anmeldet, …",
+          "options": {
+            "a": "bezahlt die volle Kursgebühr und zusätzlich 8 Euro.",
+            "b": "bezahlt für den Kurs 8 Euro weniger.",
+            "c": "bekommt 20 Prozent Ermäßigung."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "sportzentrum",
+              "quote": "Wenn Sie sich danach für den Kurs anmelden, ziehen wir diesen Betrag von der Kursgebühr ab."
+            }
+          ],
+          "explanation": "Deneme dersi 8 euro; ardından kursa kaydolursanız bu tutar kurs ücretinden düşülüyor („ziehen wir diesen Betrag von der Kursgebühr ab“). a) yanlış: 8 euro ek olarak ödenmiyor, düşülüyor. c) yanlış: Yüzde 20 indirim deneme dersiyle değil, öğrenci kimliğiyle ilgili."
+        },
+        {
+          "number": 29,
+          "type": "abc",
+          "prompt": "Wer sich drei Tage vor Kursbeginn abmeldet, …",
+          "options": {
+            "a": "bekommt sein Geld nur mit einem ärztlichen Attest zurück.",
+            "b": "muss nichts bezahlen.",
+            "c": "kann die Termine später nachholen."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "sportzentrum",
+              "quote": "Bis eine Woche vor Kursbeginn können Sie sich kostenlos abmelden."
+            },
+            {
+              "text": "sportzentrum",
+              "quote": "Danach bekommen Sie die Kursgebühr nur zurück, wenn Sie ein ärztliches Attest vorlegen."
+            }
+          ],
+          "explanation": "Ücretsiz iptal kurs başlangıcından bir hafta öncesine kadar mümkün. Üç gün kala iptal bu süreden sonra olduğu için para sadece doktor raporuyla geri alınabilir. b) yanlış: Ücretsiz iptal süresi geçmiş. c) yanlış: Kaçırılan dersler telafi edilemiyor."
+        },
+        {
+          "number": 30,
+          "type": "abc",
+          "prompt": "Wenn die Trainerin krank ist, …",
+          "options": {
+            "a": "bekommen die Teilnehmer ihr Geld zurück.",
+            "b": "fällt der Termin ohne Ersatz aus.",
+            "c": "gibt es einen anderen Termin."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "sportzentrum",
+              "quote": "bieten wir Ihnen einen Ersatztermin an"
+            }
+          ],
+          "explanation": "Antrenör hastalandığı için ders iptal olursa spor merkezi telafi dersi (Ersatztermin) veriyor ve e-postayla haber veriyor. a) yanlış: Para iadesinden söz edilmiyor. b) yanlış: Ders yerine başka bir tarih veriliyor."
+        }
+      ]
+    }
+  ]
+}

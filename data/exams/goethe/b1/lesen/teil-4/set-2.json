@@ -1,0 +1,191 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-2",
+  "title": "Handys in der Schule?",
+  "minutes": 15,
+  "context": "Im Online-Forum einer Zeitung diskutieren Leserinnen und Leser, ob Handys in Schulen verboten werden sollen.",
+  "instructions": "Lesen Sie die Texte 20 bis 26. Wählen Sie: Ist die Person für ein Handyverbot an Schulen?",
+  "groups": [
+    {
+      "layout": "comments",
+      "question": "Ist die Person für ein Handyverbot an Schulen?",
+      "texts": [
+        {
+          "id": "jan",
+          "label": "0",
+          "byline": "Jan, 41, Ahrweide",
+          "paragraphs": [
+            "Mein Sohn schaut in jeder Pause auf sein Handy, statt mit seinen Freunden zu reden oder Fußball zu spielen. Meiner Meinung nach sollten Handys in der Schule ganz verboten sein. Nach dem Unterricht kann er es ja wieder benutzen. Früher ging es doch auch ohne Smartphone."
+          ]
+        },
+        {
+          "id": "lea",
+          "label": "20",
+          "byline": "Lea, 16, Kornbach",
+          "paragraphs": [
+            "Ein komplettes Verbot fände ich übertrieben. Wir benutzen das Handy im Unterricht oft, zum Beispiel als Wörterbuch oder für kleine Umfragen. Natürlich sollte man im Unterricht nicht chatten, aber das können die Lehrer auch ohne Verbot kontrollieren. Außerdem lernen wir so, verantwortungsvoll mit dem Handy umzugehen, und das ist doch auch ein wichtiges Ziel der Schule."
+          ]
+        },
+        {
+          "id": "ursula",
+          "label": "21",
+          "byline": "Ursula, 54, Weidenfels",
+          "paragraphs": [
+            "Ich bin Lehrerin und war am Anfang skeptisch, weil ich dachte, die Schüler würden ihre Handys dann heimlich benutzen. Seit unsere Schule ein Verbot eingeführt hat, sind die Pausen aber viel lebendiger, und es gibt weniger Streit in Chatgruppen. Ich möchte nicht mehr zurück. Auch die Schülerinnen und Schüler selbst sagen, dass sie sich jetzt mehr unterhalten."
+          ]
+        },
+        {
+          "id": "dennis",
+          "label": "22",
+          "byline": "Dennis, 38, Hagenfurt",
+          "paragraphs": [
+            "Meine Tochter fährt jeden Tag eine Stunde mit dem Bus zur Schule. Ich möchte, dass sie mich jederzeit erreichen kann, wenn etwas passiert. Ein Verbot würde mir große Sorgen machen. Außerdem nutzt sie die Zeit im Bus, um mit dem Handy Vokabeln zu lernen. Ich verstehe nicht, warum man ihr das wegnehmen sollte."
+          ]
+        },
+        {
+          "id": "piotr",
+          "label": "23",
+          "byline": "Piotr, 60, Ulmenrode",
+          "paragraphs": [
+            "Als Hausmeister sehe ich jeden Tag, wie Schüler auf dem Schulhof nur auf ihre Bildschirme starren. Trotzdem glaube ich nicht, dass Verbote helfen. Die Jugendlichen müssen lernen, vernünftig mit dem Handy umzugehen – und das lernen sie nicht, wenn man es ihnen einfach wegnimmt. Ich habe selbst Enkel und weiß, wie wichtig das ist."
+          ]
+        },
+        {
+          "id": "amira",
+          "label": "24",
+          "byline": "Amira, 17, Seelingen",
+          "paragraphs": [
+            "Viele meiner Freunde schimpfen über das Verbot an unserer Schule, und ich war am Anfang auch nicht begeistert. Aber ehrlich gesagt kann ich mich jetzt besser konzentrieren, und meine Noten sind besser geworden. Inzwischen finde ich das Verbot richtig. In den Pausen reden wir jetzt auch wieder mehr miteinander."
+          ]
+        },
+        {
+          "id": "sophie",
+          "label": "25",
+          "byline": "Sophie, 35, Talbrück",
+          "paragraphs": [
+            "Bei uns zu Hause gibt es feste Handyzeiten, und das funktioniert gut. Ich wünsche mir, dass auch die Schule so klare Regeln hat: Während des Schultags bleiben die Handys im Schrank, und zwar für alle. Das wäre auch für die Lehrerinnen und Lehrer einfacher. Wer sein Kind dringend erreichen muss, kann ja im Sekretariat anrufen."
+          ]
+        },
+        {
+          "id": "malik",
+          "label": "26",
+          "byline": "Malik, 14, Grauheim",
+          "paragraphs": [
+            "In meiner Klasse haben nicht alle ein teures Handy, und manche werden deswegen ausgelacht. Wenn die Handys in der Schule im Spind bleiben müssten, gäbe es dieses Problem nicht mehr. Deshalb fände ich ein Verbot gut, auch wenn ich mein Handy selbst gern benutze. Meine Eltern sehen das übrigens genauso."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "ja-nein",
+          "prompt": "Jan",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "jan",
+              "quote": "Meiner Meinung nach sollten Handys in der Schule ganz verboten sein."
+            }
+          ],
+          "explanation": "Jan oğlunun teneffüslerde sürekli telefona baktığını anlatıyor ve telefonların okulda tamamen yasaklanması gerektiğini söylüyor. Yasaktan yana: ja."
+        },
+        {
+          "number": 20,
+          "type": "ja-nein",
+          "prompt": "Lea",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "lea",
+              "quote": "Ein komplettes Verbot fände ich übertrieben."
+            }
+          ],
+          "explanation": "Lea tam bir yasağı abartılı buluyor; telefonu derste sözlük olarak ya da küçük anketler için kullanıyorlar. Derste mesajlaşmanın yasak olmadan da kontrol edilebileceğini düşünüyor. Karşı: nein."
+        },
+        {
+          "number": 21,
+          "type": "ja-nein",
+          "prompt": "Ursula",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "ursula",
+              "quote": "Ich möchte nicht mehr zurück."
+            }
+          ],
+          "explanation": "Tuzak: Ursula başta şüpheliymiş („skeptisch“). Ama okulunda yasak getirildiğinden beri teneffüsler daha canlı ve sohbet gruplarında daha az kavga var; eski duruma dönmek istemiyor. Bugün yasaktan yana: ja."
+        },
+        {
+          "number": 22,
+          "type": "ja-nein",
+          "prompt": "Dennis",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "dennis",
+              "quote": "Ein Verbot würde mir große Sorgen machen."
+            }
+          ],
+          "explanation": "Dennis, kızı okula uzun yoldan otobüsle gittiği için ona her an ulaşabilmek istiyor. Bir yasak onu çok endişelendirirdi. Karşı: nein."
+        },
+        {
+          "number": 23,
+          "type": "ja-nein",
+          "prompt": "Piotr",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "piotr",
+              "quote": "Trotzdem glaube ich nicht, dass Verbote helfen."
+            }
+          ],
+          "explanation": "Tuzak: Piotr öğrencilerin sürekli ekrana baktığını eleştiriyor, ama „Trotzdem“ (yine de) diyerek yasakların işe yaramadığını düşündüğünü söylüyor. Gençlerin telefonu doğru kullanmayı öğrenmesi gerekiyor. Karşı: nein."
+        },
+        {
+          "number": 24,
+          "type": "ja-nein",
+          "prompt": "Amira",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "amira",
+              "quote": "Inzwischen finde ich das Verbot richtig."
+            }
+          ],
+          "explanation": "Tuzak: Amira'nın arkadaşları yasaktan şikâyet ediyor ve kendisi de başta memnun değilmiş. Ama artık daha iyi odaklanıyor, notları yükselmiş ve yasağı doğru buluyor. Yanında: ja."
+        },
+        {
+          "number": 25,
+          "type": "ja-nein",
+          "prompt": "Sophie",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "sophie",
+              "quote": "Während des Schultags bleiben die Handys im Schrank, und zwar für alle."
+            }
+          ],
+          "explanation": "Sophie okulun da net kurallar koymasını istiyor: Okul günü boyunca telefonlar herkes için dolapta kalmalı. Bu bir yasak talebi: ja."
+        },
+        {
+          "number": 26,
+          "type": "ja-nein",
+          "prompt": "Malik",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "malik",
+              "quote": "Deshalb fände ich ein Verbot gut"
+            }
+          ],
+          "explanation": "Malik pahalı telefonu olmayan öğrencilerin alay konusu olduğunu, telefonlar dolapta kalırsa bu sorunun biteceğini söylüyor. Kendisi telefonunu sevse de yasağı iyi buluyor: ja."
+        }
+      ]
+    }
+  ]
+}

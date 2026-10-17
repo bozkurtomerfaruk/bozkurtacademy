@@ -2075,12 +2075,13 @@
     {
       "id": "n-deklination",
       "title": "N-Deklination – bazı isimler neden -n alır?",
-      "lead": "der Student derken isim yalın görünür. Ama Ich sehe den Studenten cümlesinde yalnız artikel değil, isim de değişir. Bu özel gruptaki maskulin isimlere “zayıf isimler” denir. Kurala bütün isimleri sokmak yerine grubu ve birkaç önemli istisnayı öğreneceğiz.",
+      "lead": "der Student derken isim yalın görünür. Ama Ich sehe den Studenten cümlesinde yalnız artikel değil, isim de değişir. Bu özel gruptaki maskulin isimlere “zayıf isimler” denir. Kurala bütün isimleri sokmak yerine grubu ve birkaç önemli istisnayı öğreneceğiz. Bu konu B1 sınavında (Goethe/telc) özellikle Schreiben ve Sprechen bölümlerinde önemlidir: Kollege, Kunde, Nachbar, Herr gibi kelimeleri e-postada ve konuşmada sürekli kullanırsın.",
       "sections": [
         {
-          "title": "1 · Tekilde temel deseni gör",
+          "title": "1 · Tekilde ve çoğulda temel deseni gör",
           "paragraphs": [
-            "Zayıf maskulin isimler tekil Nominativ dışında çoğunlukla -(e)n alır. Artikel de normal hâl kuralına göre değişir. der Student → den Studenten → dem Studenten → des Studenten. Buradaki -en çoğul işareti olmak zorunda değildir; tekil nesnede de bulunur."
+            "Zayıf maskulin isimler tekil Nominativ dışında çoğunlukla -(e)n alır. Artikel de normal hâl kuralına göre değişir. der Student → den Studenten → dem Studenten → des Studenten. Buradaki -en çoğul işareti olmak zorunda değildir; tekil nesnede de bulunur.",
+            "Çoğulda bütün hâllerde -(e)n vardır: die Studenten, den Studenten, der Studenten. Dikkat: Genitivde -s eklenmez. Doğrusu des Studenten, *des Studentens* yanlıştır."
           ],
           "examples": [
             {
@@ -2101,30 +2102,30 @@
           ],
           "table": {
             "headers": [
-              "Hâl",
-              "Soru/görev",
-              "Tekil biçim"
+              "Kasus",
+              "Tekil",
+              "Çoğul"
             ],
             "rows": [
               [
                 "Nominativ",
-                "Kim? Özne",
-                "der Student"
+                "der Student / der Kollege",
+                "die Studenten / die Kollegen"
               ],
               [
                 "Akkusativ",
-                "Kimi? Nesne",
-                "den Studenten"
+                "den Studenten / den Kollegen",
+                "die Studenten / die Kollegen"
               ],
               [
                 "Dativ",
-                "Kime?",
-                "dem Studenten"
+                "dem Studenten / dem Kollegen",
+                "den Studenten / den Kollegen"
               ],
               [
                 "Genitiv",
-                "Kimin?",
-                "des Studenten"
+                "des Studenten / des Kollegen",
+                "der Studenten / der Kollegen"
               ]
             ]
           },
@@ -2148,56 +2149,169 @@
           }
         },
         {
-          "title": "2 · Sık görülen kelime grupları",
+          "title": "2 · Hangi isimler N-Deklination alır?",
           "paragraphs": [
-            "Birçok -e ile biten erkek kişi veya hayvan adı bu gruptadır: der Junge, der Kollege, der Kunde, der Löwe. -ant, -ent ve -ist ile biten birçok kişi adı da gruptadır: der Praktikant, der Student, der Polizist. Bunlar öğrenme ipucudur; her maskulin isim aynı kurala uymaz. der Arzt → den Arzt, der Lehrer → den Lehrer."
+            "Kuralı bütün isimlere uygulama; yalnız belirli eril (der) isimler bu gruptadır. En kolay yol sonlara bakmaktır: -e ile biten erkek kişi ve hayvan adları (milliyetler dahil), -ent, -ant, -ist, -oge, -at ve -graf/-soph/-nom ile biten kişi adları. Birkaç isim ise hiçbir kalıba uymaz; bunları ezberle.",
+            "Bunlar öğrenme ipucudur; her maskulin isim aynı kurala uymaz. der Arzt → den Arzt, der Lehrer → den Lehrer, der Chef → den Chef. der Käse de -e ile bitse bile canlı olmadığı için normal çekilir: den Käse, des Käses."
           ],
           "examples": [
             {
+              "de": "Der Junge spielt im Garten.",
+              "tr": "Erkek çocuk bahçede oynuyor.",
+              "note": "-e · Nominativ: ek yok."
+            },
+            {
+              "de": "Ich rufe heute meinen Neffen an.",
+              "tr": "Bugün yeğenimi arıyorum.",
+              "note": "-e · Akkusativ."
+            },
+            {
               "de": "Ich frage den Kollegen.",
               "tr": "İş arkadaşıma soruyorum.",
-              "note": ""
+              "note": "-e · Akkusativ."
+            },
+            {
+              "de": "Ich habe einen Russen und einen Chinesen kennengelernt.",
+              "tr": "Bir Rus ve bir Çinliyle tanıştım.",
+              "note": "Milliyet · Akkusativ."
+            },
+            {
+              "de": "Wir sprechen mit dem Franzosen auf Englisch.",
+              "tr": "Fransızla İngilizce konuşuyoruz.",
+              "note": "Milliyet · Dativ."
+            },
+            {
+              "de": "Der Präsident hält heute eine Rede.",
+              "tr": "Cumhurbaşkanı bugün bir konuşma yapıyor.",
+              "note": "-ent · Nominativ."
+            },
+            {
+              "de": "Die Ärztin untersucht den Patienten.",
+              "tr": "Doktor hastayı muayene ediyor.",
+              "note": "-ent · Akkusativ; die Ärztin dişil olduğu için ek almaz."
+            },
+            {
+              "de": "Wir haben einen neuen Praktikanten.",
+              "tr": "Yeni bir stajyerimiz var.",
+              "note": "-ant · Akkusativ."
+            },
+            {
+              "de": "Die Firma wartet auf den Lieferanten.",
+              "tr": "Şirket tedarikçiyi bekliyor.",
+              "note": "-ant · warten auf + Akkusativ."
+            },
+            {
+              "de": "Sie spricht mit dem Polizisten.",
+              "tr": "Polisle konuşuyor.",
+              "note": "-ist · Dativ."
+            },
+            {
+              "de": "Der Journalist stellt dem Touristen eine Frage.",
+              "tr": "Gazeteci turiste bir soru soruyor.",
+              "note": "-ist · Nominativ + Dativ."
+            },
+            {
+              "de": "Der Psychologe hört gut zu.",
+              "tr": "Psikolog iyi dinliyor.",
+              "note": "-oge · Nominativ."
+            },
+            {
+              "de": "Die Eltern sprechen mit dem Pädagogen.",
+              "tr": "Veliler pedagogla konuşuyor.",
+              "note": "-oge · Dativ."
+            },
+            {
+              "de": "Die Partei stellt einen jungen Kandidaten vor.",
+              "tr": "Parti genç bir aday tanıtıyor.",
+              "note": "-at · Akkusativ."
+            },
+            {
+              "de": "Ich hole mir einen Kaffee am Automaten.",
+              "tr": "Otomattan kendime bir kahve alıyorum.",
+              "note": "-at · an + Dativ."
+            },
+            {
+              "de": "Wir brauchen einen Fotografen für die Hochzeit.",
+              "tr": "Düğün için bir fotoğrafçıya ihtiyacımız var.",
+              "note": "-graf · Akkusativ."
+            },
+            {
+              "de": "Das Buch des Philosophen ist schwer zu lesen.",
+              "tr": "Filozofun kitabını okumak zor.",
+              "note": "-soph · Genitiv, -s yok."
+            },
+            {
+              "de": "Jeder Mensch braucht Freunde.",
+              "tr": "Her insanın arkadaşa ihtiyacı var.",
+              "note": "Ezber · Nominativ: ek yok."
+            },
+            {
+              "de": "Das ist das Haus des Bauern.",
+              "tr": "Bu, çiftçinin evi.",
+              "note": "Ezber · Genitiv."
+            },
+            {
+              "de": "Im Wald hat er einen Bären gesehen.",
+              "tr": "Ormanda bir ayı gördü.",
+              "note": "Ezber · Akkusativ."
             },
             {
               "de": "Wir besuchen den Kunden.",
               "tr": "Müşteriyi ziyaret ediyoruz.",
               "note": ""
-            },
-            {
-              "de": "Sie spricht mit dem Polizisten.",
-              "tr": "Polisle konuşuyor.",
-              "note": ""
             }
           ],
           "table": {
             "headers": [
-              "Yalın biçim",
-              "Akkusativ tekil"
+              "Grup",
+              "Örnekler",
+              "Örnek biçim"
             ],
             "rows": [
               [
-                "der Junge",
-                "den Jungen"
-              ],
-              [
-                "der Kollege",
+                "-e (kişi/hayvan)",
+                "der Junge, der Kollege, der Kunde, der Neffe, der Löwe, der Affe, der Hase, der Zeuge, der Experte",
                 "den Kollegen"
               ],
               [
-                "der Kunde",
-                "den Kunden"
+                "-e (milliyet)",
+                "der Türke, der Franzose, der Grieche, der Russe, der Pole, der Chinese",
+                "dem Türken"
               ],
               [
-                "der Mensch",
-                "den Menschen"
+                "-ent",
+                "der Student, der Präsident, der Patient, der Assistent, der Konkurrent",
+                "den Patienten"
               ],
               [
-                "der Nachbar",
-                "den Nachbarn"
+                "-ant",
+                "der Praktikant, der Elefant, der Demonstrant, der Lieferant",
+                "dem Praktikanten"
               ],
               [
-                "der Herr",
-                "den Herrn"
+                "-ist",
+                "der Polizist, der Journalist, der Tourist, der Spezialist, der Pianist",
+                "des Polizisten"
+              ],
+              [
+                "-oge",
+                "der Biologe, der Psychologe, der Pädagoge",
+                "den Psychologen"
+              ],
+              [
+                "-at",
+                "der Soldat, der Kandidat, der Diplomat, der Automat",
+                "dem Kandidaten"
+              ],
+              [
+                "-graf / -soph / -nom",
+                "der Fotograf, der Philosoph, der Astronom",
+                "den Fotografen"
+              ],
+              [
+                "Ezberle",
+                "der Mensch, der Herr, der Nachbar, der Bauer, der Bär, der Held, der Prinz, der Graf",
+                "den Menschen, den Herrn, den Nachbarn"
               ]
             ]
           }
@@ -2241,9 +2355,100 @@
           }
         },
         {
-          "title": "4 · Genitiv ve özel biçimler",
+          "title": "4 · Dört hâlde örnek cümleler",
           "paragraphs": [
-            "Temel zayıf isimlerde Genitiv -(e)n ile kurulur: des Studenten, des Menschen. der Name gibi bazı isimlerin Genitivinde ek bir -s vardır: des Namens; Akkusativ den Namen, Dativ dem Namen. das Herz nötr olmasına rağmen özel çekim gösterir: das Herz, dem Herzen, des Herzens. Bunları ayrı küçük bir grup olarak öğren."
+            "Aynı kural her hâlde çalışır: Nominativ tekilde ek yok, diğer hâllerde -(e)n. Örnekleri hâle göre grupladık; her cümlede hâli belirleyen fiil, edat veya soruya dikkat et."
+          ],
+          "examples": [
+            {
+              "de": "Der Kunde wartet an der Kasse.",
+              "tr": "Müşteri kasada bekliyor.",
+              "note": "Nominativ · Kim bekliyor?"
+            },
+            {
+              "de": "Mein Kollege kommt aus Izmir.",
+              "tr": "İş arkadaşım İzmirli.",
+              "note": "Nominativ · özne."
+            },
+            {
+              "de": "Der Tourist sucht den Bahnhof.",
+              "tr": "Turist garı arıyor.",
+              "note": "Nominativ · özne."
+            },
+            {
+              "de": "Kennst du den neuen Praktikanten?",
+              "tr": "Yeni stajyeri tanıyor musun?",
+              "note": "Akkusativ · kennen."
+            },
+            {
+              "de": "Die Polizei sucht einen Zeugen.",
+              "tr": "Polis bir tanık arıyor.",
+              "note": "Akkusativ · suchen."
+            },
+            {
+              "de": "Ich frage den Polizisten nach dem Weg.",
+              "tr": "Polise yolu soruyorum.",
+              "note": "Akkusativ · fragen."
+            },
+            {
+              "de": "Ich helfe dem Jungen bei den Hausaufgaben.",
+              "tr": "Çocuğa ödevlerinde yardım ediyorum.",
+              "note": "Dativ · helfen."
+            },
+            {
+              "de": "Wir sprechen mit dem Kunden.",
+              "tr": "Müşteriyle konuşuyoruz.",
+              "note": "Dativ · mit."
+            },
+            {
+              "de": "Die Ärztin gibt dem Patienten ein Rezept.",
+              "tr": "Doktor hastaya bir reçete veriyor.",
+              "note": "Dativ · jemandem etwas geben."
+            },
+            {
+              "de": "Das ist das Büro des Präsidenten.",
+              "tr": "Bu, başkanın ofisi.",
+              "note": "Genitiv · Wessen?"
+            },
+            {
+              "de": "Wegen des Patienten bleibt die Ärztin länger.",
+              "tr": "Hasta yüzünden doktor daha uzun kalıyor.",
+              "note": "Genitiv · wegen."
+            },
+            {
+              "de": "Das Auto des Nachbarn steht vor unserer Tür.",
+              "tr": "Komşunun arabası kapımızın önünde duruyor.",
+              "note": "Genitiv · Wessen Auto?"
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Nominativ",
+                "der Kunde"
+              ],
+              [
+                "Akkusativ",
+                "den Kunden"
+              ],
+              [
+                "Dativ",
+                "dem Kunden"
+              ],
+              [
+                "Genitiv",
+                "des Kunden"
+              ]
+            ],
+            "caption": "Tek kelime, dört hâl: yalnız Nominativ ek almaz."
+          }
+        },
+        {
+          "title": "5 · Genitiv ve özel biçimler",
+          "paragraphs": [
+            "Temel zayıf isimlerde Genitiv -(e)n ile kurulur: des Studenten, des Menschen. der Name gibi bazı isimlerin Genitivinde ek bir -s vardır: des Namens; Akkusativ den Namen, Dativ dem Namen. das Herz nötr olmasına rağmen özel çekim gösterir: das Herz, dem Herzen, des Herzens. Bunları ayrı küçük bir grup olarak öğren.",
+            "der Gedanke, der Buchstabe, der Glaube, der Wille ve der Friede da Name gibi çekilir: Akkusativ ve Dativde -n, Genitivde -ns. der Herr ise tekilde yalnız -n alır (den/dem/des Herrn), çoğulda -en alır (die Herren). Mektupta: Sehr geehrter Herr Becker, ama Ich schreibe Herrn Becker."
           ],
           "table": {
             "headers": [
@@ -2266,10 +2471,46 @@
                 "des Namens"
               ],
               [
+                "der Gedanke",
+                "den Gedanken",
+                "dem Gedanken",
+                "des Gedankens"
+              ],
+              [
+                "der Buchstabe",
+                "den Buchstaben",
+                "dem Buchstaben",
+                "des Buchstabens"
+              ],
+              [
+                "der Glaube",
+                "den Glauben",
+                "dem Glauben",
+                "des Glaubens"
+              ],
+              [
+                "der Wille",
+                "den Willen",
+                "dem Willen",
+                "des Willens"
+              ],
+              [
+                "der Friede",
+                "den Frieden",
+                "dem Frieden",
+                "des Friedens"
+              ],
+              [
                 "das Herz",
                 "das Herz",
                 "dem Herzen",
                 "des Herzens"
+              ],
+              [
+                "der Herr",
+                "den Herrn",
+                "dem Herrn",
+                "des Herrn"
               ]
             ]
           },
@@ -2290,10 +2531,37 @@
               ]
             ],
             "caption": "İstisna biçimleri genel kurala zorla uydurma."
-          }
+          },
+          "examples": [
+            {
+              "de": "Ich verstehe die Bedeutung des Namens nicht.",
+              "tr": "Adın anlamını anlamıyorum.",
+              "note": "Genitiv -ns."
+            },
+            {
+              "de": "Ich schreibe Herrn Becker eine E-Mail.",
+              "tr": "Bay Becker’e bir e-posta yazıyorum.",
+              "note": "Dativ: Herrn."
+            },
+            {
+              "de": "Meine Damen und Herren, herzlich willkommen!",
+              "tr": "Bayanlar ve baylar, hoş geldiniz!",
+              "note": "Çoğul: Herren."
+            },
+            {
+              "de": "Er hat ein gutes Herz.",
+              "tr": "İyi kalpli biri.",
+              "note": "Akkusativ: das Herz, ek yok."
+            },
+            {
+              "de": "Ich danke Ihnen von ganzem Herzen.",
+              "tr": "Size tüm kalbimle teşekkür ederim.",
+              "note": "Dativ: Herzen."
+            }
+          ]
         },
         {
-          "title": "5 · Tekil ve çoğulu bağlamdan ayır",
+          "title": "6 · Tekil ve çoğulu bağlamdan ayır",
           "paragraphs": [
             "den Studenten hem Akkusativ tekil hem Dativ çoğul olabilir. Yalnız ismin sonuna bakmak yetmez; fiil, edat ve cümle görevini oku. der Herr tekilde den Herrn, çoğulda die Herren olur. Dativ çoğulda zaten -n ile biten isimlere ikinci bir n eklenmez."
           ],
@@ -2321,7 +2589,62 @@
           ]
         },
         {
-          "title": "6 · Üç adımlı kontrolle cümle kur",
+          "title": "7 · Sık yapılan hatalar",
+          "paragraphs": [
+            "Aşağıdaki hatalar yazılı sınavlarda sık görülür. Günlük konuşmada bazen ek düşer (mit dem Student), ama yazılı dilde ve Goethe/telc B1 sınavında doğru biçim beklenir: mit dem Studenten."
+          ],
+          "table": {
+            "headers": [
+              "❌ Yanlış",
+              "✅ Doğru",
+              "Neden?"
+            ],
+            "rows": [
+              [
+                "Der Studenten lernt.",
+                "Der Student lernt.",
+                "Nominativ tekilde ek yok."
+              ],
+              [
+                "das Buch des Studentens",
+                "das Buch des Studenten",
+                "Zayıf isimde Genitiv -s almaz."
+              ],
+              [
+                "Ich spreche mit der Kolleginen.",
+                "Ich spreche mit der Kollegin.",
+                "Dişil isimler N-Deklination almaz."
+              ],
+              [
+                "Ich esse den Käsen.",
+                "Ich esse den Käse.",
+                "Her -e ile biten eril isim zayıf değildir."
+              ],
+              [
+                "Ich frage den Arzten.",
+                "Ich frage den Arzt.",
+                "Arzt normal maskulin isimdir."
+              ],
+              [
+                "Ich schreibe Herr Becker.",
+                "Ich schreibe Herrn Becker.",
+                "Herr: Nominativ dışında Herrn."
+              ],
+              [
+                "die Bedeutung des Namen",
+                "die Bedeutung des Namens",
+                "Name grubu Genitivde -ns alır."
+              ],
+              [
+                "mit dem Student",
+                "mit dem Studenten",
+                "Konuşmada duyulur, yazıda yanlıştır."
+              ]
+            ]
+          }
+        },
+        {
+          "title": "8 · Üç adımlı kontrolle cümle kur",
           "paragraphs": [
             "Önce ismi artikeliyle öğren: der Kunde. Cümlede hâli bul: danken Dativ ister. Sonra artikel ve isim sonunu birlikte seç: Ich danke dem Kunden. Sıfat varsa onun eki üçüncü bir kontrol olur. Bir son ek gördüğünde “bu sıfat mı, isim mi?” diye sor; genç anlamındaki jung sıfat, Kollege ise isimdir."
           ],
@@ -2336,13 +2659,33 @@
               "tr": "Yeni iş arkadaşının adresi eksik.",
               "note": ""
             }
-          ]
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Nominativ tekil",
+                "der Student – ek yok"
+              ],
+              [
+                "Diğer her yer",
+                "-(e)n: den/dem/des Studenten, die Studenten"
+              ],
+              [
+                "Genitiv",
+                "-s yok! İstisna: des Namens, des Herzens"
+              ]
+            ],
+            "caption": "Hatırlatma kartı: Nominativ tekil hariç her yerde -(e)n."
+          }
         }
       ],
       "summary": [
-        "Zayıf maskulin isimler tekil Nominativ dışında -(e)n alır.",
-        "Hâli fiil/edat belirler; artikel ve isim ayrı kontrol edilir.",
-        "Name, Herz ve Herr gibi özel biçimleri ayrıca öğren."
+        "Hatırlatma kartı: Nominativ tekil hariç her yerde -(e)n alır; çoğulda da bütün hâllerde -(e)n vardır.",
+        "Gruplar: -e (kişi, hayvan, milliyet), -ent, -ant, -ist, -oge, -at, -graf/-soph/-nom ve Mensch, Herr, Nachbar gibi ezber kelimeler.",
+        "Genitivde -s yok: des Studenten. İstisna: des Namens, des Gedankens, des Herzens.",
+        "Dişil biçimler (die Studentin) ile Käse, Arzt, Lehrer, Chef N-Deklination almaz.",
+        "Hâli fiil/edat belirler; artikel ve isim ayrı kontrol edilir."
       ],
       "faq": [
         {
@@ -2356,6 +2699,10 @@
         {
           "question": "den Studenten tekil mi çoğul mu?",
           "answer": "İkisi de olabilir. Ich sehe den Studenten: Akkusativ tekil. Ich helfe den Studenten: Dativ çoğul. Görev ve fiil karar verir."
+        },
+        {
+          "question": "Konuşmada „mit dem Student“ duyuyorum. Bu doğru mu?",
+          "answer": "Günlük konuşmada ek bazen düşer. Ama yazılı dilde ve Goethe/telc B1 sınavında doğru biçim beklenir: mit dem Studenten."
         }
       ],
       "related": [

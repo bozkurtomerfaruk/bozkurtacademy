@@ -261,10 +261,11 @@
           "sentence": "Ergänze: „Sie ___ den ganzen Kuchen aufgegessen.“",
           "correct": "hatten",
           "answers": [
-            "hatten"
+            "hatten",
+            "hatte"
           ],
           "explanations": {
-            "tr": "Doğru cevap: hatten. “aufessen” haben ile kurulur; çoğul sie için “hatten”.",
+            "tr": "Doğru cevap: hatten. “aufessen” Akkusativ nesne alır (den ganzen Kuchen), bu yüzden haben ile kurulur. “Sie” çoğul (onlar) veya resmî Sie ise “hatten”; tekil sie (o, kadın) ise “hatte” olur, ikisi de doğrudur.",
             "de": "Die richtige Antwort ist „hatten“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “hatten”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -597,10 +598,11 @@
           "sentence": "Ergänze: „Sie ___ schon aufgestanden.“",
           "correct": "waren",
           "answers": [
-            "waren"
+            "waren",
+            "war"
           ],
           "explanations": {
-            "tr": "Doğru cevap: waren. çoğul sie + aufstehen → waren aufgestanden.",
+            "tr": "Doğru cevap: waren. “aufstehen” durum değişikliği bildirir ve sein alır. Çoğul sie (onlar) veya resmî Sie için “waren”; tekil sie (o, kadın) anlamında “war” da doğrudur.",
             "de": "Die richtige Antwort ist „waren“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “waren”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -1204,7 +1206,7 @@
           ],
           "correct": "Plusquamperfekt",
           "explanations": {
-            "tr": "Doğru cevap: Plusquamperfekt. Kaynakta “hatte erfunden” Plusquamperfekt olarak sınıflandırılır.",
+            "tr": "Doğru cevap: Plusquamperfekt. haben'in Präteritum biçimi “hatte” + Partizip II “erfunden” → Plusquamperfekt. Karşılaştır: Er hat den Computer erfunden. (Perfekt) / Er erfand den Computer. (Präteritum)",
             "de": "Die richtige Antwort ist „Plusquamperfekt“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “Plusquamperfekt”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -1295,7 +1297,7 @@
           "options": [
             "hatte ... begonnen",
             "hat ... begonnen",
-            "begann ... schon"
+            "war ... begonnen"
           ],
           "correct": "hatte ... begonnen",
           "explanations": {
@@ -1309,7 +1311,7 @@
           "sentence": "Als der Bus endlich kam, ___ wir fast vierzig Minuten ___. (warten)",
           "options": [
             "haben ... gewartet",
-            "warteten ... bereits",
+            "waren ... gewartet",
             "hatten ... gewartet"
           ],
           "correct": "hatten ... gewartet",
@@ -1344,7 +1346,7 @@
           ],
           "correct": "getankt hatte",
           "explanations": {
-            "tr": "Doğru cevap: getankt hatte. Kaynakta benzer yapı doğrudan Plusquamperfekt ile verilir; tanklama daha önce gerçekleşir.",
+            "tr": "Doğru cevap: getankt hatte. Benzin alma, arabanın çalışmamasından önce olmuştur → daha eski olay Plusquamperfekt: hatte + getankt. obwohl yan cümlesinde çekimli fiil “hatte” en sonda durur.",
             "de": "Die richtige Antwort ist „getankt hatte“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “getankt hatte”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -1368,7 +1370,7 @@
           "word": "Vorvergangenheit",
           "sentence": "Als wir am Restaurant ankamen, ___ die Küche bereits ___. (schließen)",
           "options": [
-            "schloss ... bereits",
+            "hatte ... geschließt",
             "hatte ... geschlossen",
             "hat ... geschlossen"
           ],
@@ -1385,11 +1387,11 @@
           "options": [
             "gewesen war",
             "gewesen ist",
-            "war"
+            "hatte gewesen"
           ],
           "correct": "gewesen war",
           "explanations": {
-            "tr": "Doğru cevap: gewesen war. Önceki deneyim daha eski geçmişi gösterir; sein → gewesen war.",
+            "tr": "Doğru cevap: gewesen war. Yolu tanıması, daha önce orada bulunmuş olmasına dayanır → Plusquamperfekt. sein fiili Perfekt'i sein ile kurar: war + gewesen; yan cümlede çekimli fiil sona gider: gewesen war. 'gewesen ist' Perfekt'tir; 'hatte gewesen' yanlış yardımcı fiil ve yanlış sıradır.",
             "de": "Die richtige Antwort ist „gewesen war“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “gewesen war”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -1399,7 +1401,7 @@
           "sentence": "Als die Feuerwehr kam, ___ die Bewohner das Gebäude schon ___. (verlassen)",
           "options": [
             "haben ... verlassen",
-            "verließen ... schon",
+            "waren ... verlassen",
             "hatten ... verlassen"
           ],
           "correct": "hatten ... verlassen",
@@ -1415,7 +1417,10 @@
           "sentence": "Ergänze: „Als ich anrief, ___ sie das Büro schon ___. (verlassen)“",
           "correct": "hatte sie das Büro schon verlassen",
           "answers": [
-            "hatte sie das büro schon verlassen"
+            "hatte sie das büro schon verlassen",
+            "hatte verlassen",
+            "hatte ... verlassen",
+            "hatte … verlassen"
           ],
           "explanations": {
             "tr": "Doğru cevap: hatte sie das Büro schon verlassen. Aramadan önce ofisten ayrılmıştı; daha eski geçmiş Plusquamperfekt olur.",
@@ -1468,7 +1473,7 @@
           ],
           "correct": "gekauft hatten",
           "explanations": {
-            "tr": "Doğru cevap: gekauft hatten. Kaynakta nachdem + Plusquamperfekt ile önceki olay ifade edilir.",
+            "tr": "Doğru cevap: gekauft hatten. Bilet alma, perona gitmekten (gingen) önce olmuştur. nachdem ile anlatılan önceki olay Plusquamperfekt olur: wir → hatten + gekauft; yan cümlede çekimli fiil sonda.",
             "de": "Die richtige Antwort ist „gekauft hatten“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “gekauft hatten”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -1513,7 +1518,7 @@
           ],
           "correct": "aufgehört hatte",
           "explanations": {
-            "tr": "Doğru cevap: aufgehört hatte. Kaynakta nachdem + aufgehört hatte benzeri yapı desteklenir.",
+            "tr": "Doğru cevap: aufgehört hatte. Yağmurun durması çocukların dışarı çıkmasından (gingen) önce olur → Plusquamperfekt. aufhören haben ile kurulur; nachdem yan cümlesinde “hatte” en sonda.",
             "de": "Die richtige Antwort ist „aufgehört hatte“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “aufgehört hatte”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -1587,7 +1592,9 @@
             "nachdem ich gefruehstueckt hatte fuhr ich zur arbeit",
             "nachdem ich gefruehstueckt hatte, fuhr ich zur arbeit",
             "nachdem ich gefrühstückt hatte fuhr ich zur arbeit",
-            "nachdem ich gefrühstückt hatte, fuhr ich zur arbeit"
+            "nachdem ich gefrühstückt hatte, fuhr ich zur arbeit",
+            "ich fuhr zur arbeit, nachdem ich gefrühstückt hatte",
+            "ich fuhr zur arbeit nachdem ich gefrühstückt hatte"
           ],
           "explanations": {
             "tr": "Doğru cevap: Nachdem ich gefrühstückt hatte, fuhr ich zur Arbeit.. İlk olay “frühstücken” Plusquamperfekt olur; nachdem yan cümlesinde “hatte” sonda.",
@@ -1602,7 +1609,9 @@
           "correct": "Nachdem wir im Hotel angekommen waren, gingen wir essen.",
           "answers": [
             "nachdem wir im hotel angekommen waren gingen wir essen",
-            "nachdem wir im hotel angekommen waren, gingen wir essen"
+            "nachdem wir im hotel angekommen waren, gingen wir essen",
+            "wir gingen essen, nachdem wir im hotel angekommen waren",
+            "wir gingen essen nachdem wir im hotel angekommen waren"
           ],
           "explanations": {
             "tr": "Doğru cevap: Nachdem wir im Hotel angekommen waren, gingen wir essen.. ankommen sein alır; önceki olay “angekommen waren”.",
@@ -1637,11 +1646,11 @@
           "options": [
             "war ... eingeschlafen",
             "ist ... eingeschlafen",
-            "schlief ... schon"
+            "hatte ... eingeschlafen"
           ],
           "correct": "war ... eingeschlafen",
           "explanations": {
-            "tr": "Doğru cevap: war ... eingeschlafen. Kaynakta “war eingeschlafen, als ... kam” örneği bulunur; önceki olay Plusquamperfekt.",
+            "tr": "Doğru cevap: war ... eingeschlafen. Kardeşin uyuması eve gelmemden (kam) önce olmuştur → Plusquamperfekt. einschlafen bir durum değişikliğidir, sein alır: war ... eingeschlafen.",
             "de": "Die richtige Antwort ist „war ... eingeschlafen“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “war ... eingeschlafen”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -1651,7 +1660,7 @@
           "sentence": "Als die Lehrerin den Raum betrat, ___ die Schüler bereits ihre Plätze ___. (einnehmen)",
           "options": [
             "haben ... eingenommen",
-            "nahmen ... bereits ein",
+            "waren ... eingenommen",
             "hatten ... eingenommen"
           ],
           "correct": "hatten ... eingenommen",
@@ -1665,13 +1674,13 @@
           "word": "als + Vorvergangenheit",
           "sentence": "Als wir ankamen, ___ das Konzert schon ___. (beginnen)",
           "options": [
-            "begann ... schon",
+            "war ... begonnen",
             "hatte ... begonnen",
             "hat ... begonnen"
           ],
           "correct": "hatte ... begonnen",
           "explanations": {
-            "tr": "Doğru cevap: hatte ... begonnen. Kaynakta benzer cümle doğrudan verilir.",
+            "tr": "Doğru cevap: hatte ... begonnen. Konser bizim varışımızdan (ankamen) önce başlamıştı → Plusquamperfekt. beginnen haben ile kurulur: hatte ... begonnen.",
             "de": "Die richtige Antwort ist „hatte ... begonnen“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “hatte ... begonnen”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -1682,7 +1691,7 @@
           "options": [
             "hatte ... geschickt",
             "habe ... geschickt",
-            "schickte ... schon"
+            "war ... geschickt"
           ],
           "correct": "hatte ... geschickt",
           "explanations": {
@@ -1696,7 +1705,7 @@
           "sentence": "Als sie aufwachte, ___ es draußen schon ___. (schneien)",
           "options": [
             "hat ... geschneit",
-            "schneite ... schon",
+            "war ... geschneit",
             "hatte ... geschneit"
           ],
           "correct": "hatte ... geschneit",
@@ -1710,7 +1719,7 @@
           "word": "als + Vorvergangenheit",
           "sentence": "Als die Polizei eintraf, ___ der Dieb längst ___. (fliehen)",
           "options": [
-            "floh ... längst",
+            "hatte ... geflohen",
             "war ... geflohen",
             "ist ... geflohen"
           ],
@@ -1727,7 +1736,7 @@
           "options": [
             "hatten ... gegessen",
             "haben ... gegessen",
-            "aßen ... bereits"
+            "waren ... gegessen"
           ],
           "correct": "hatten ... gegessen",
           "explanations": {
@@ -1741,7 +1750,7 @@
           "sentence": "Als sie mich anrief, ___ ich den Fehler schon ___. (bemerken)",
           "options": [
             "habe ... bemerkt",
-            "bemerkte ... schon",
+            "war ... bemerkt",
             "hatte ... bemerkt"
           ],
           "correct": "hatte ... bemerkt",
@@ -1758,7 +1767,13 @@
           "correct": "Als wir den Bahnhof erreichten, war der Zug schon abgefahren.",
           "answers": [
             "als wir den bahnhof erreichten war der zug schon abgefahren",
-            "als wir den bahnhof erreichten, war der zug schon abgefahren"
+            "als wir den bahnhof erreichten, war der zug schon abgefahren",
+            "der zug war schon abgefahren, als wir den bahnhof erreichten",
+            "der zug war schon abgefahren als wir den bahnhof erreichten",
+            "als wir den bahnhof erreichten, war der zug abgefahren",
+            "als wir den bahnhof erreichten war der zug abgefahren",
+            "als wir den bahnhof erreichten, war der zug bereits abgefahren",
+            "als wir den bahnhof erreichten war der zug bereits abgefahren"
           ],
           "explanations": {
             "tr": "Doğru cevap: Als wir den Bahnhof erreichten, war der Zug schon abgefahren.. Trenin hareketi varıştan önce gerçekleştiği için Plusquamperfekt kullanılır.",
@@ -1773,7 +1788,13 @@
           "correct": "Als der Chef kam, hatte sie die Arbeit schon beendet.",
           "answers": [
             "als der chef kam hatte sie die arbeit schon beendet",
-            "als der chef kam, hatte sie die arbeit schon beendet"
+            "als der chef kam, hatte sie die arbeit schon beendet",
+            "sie hatte die arbeit schon beendet, als der chef kam",
+            "sie hatte die arbeit schon beendet als der chef kam",
+            "als der chef kam, hatte sie die arbeit beendet",
+            "als der chef kam hatte sie die arbeit beendet",
+            "als der chef kam, hatte sie die arbeit bereits beendet",
+            "als der chef kam hatte sie die arbeit bereits beendet"
           ],
           "explanations": {
             "tr": "Doğru cevap: Als der Chef kam, hatte sie die Arbeit schon beendet.. İşin bitmesi daha eski geçmiş olaydır.",
@@ -1827,7 +1848,7 @@
           ],
           "correct": "zuvor",
           "explanations": {
-            "tr": "Doğru cevap: zuvor. Kaynakta “zuvor” ile daha eski geçmiş açıkça işaretlenir.",
+            "tr": "Doğru cevap: zuvor. Kavga, üzgün olmasından (war traurig) önce olmuştur; “zuvor” (= daha önce) Plusquamperfekt “hatte ... gestritten” ile uyumludur. “danach” sonrasını, “morgen” geleceği bildirir.",
             "de": "Die richtige Antwort ist „zuvor“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “zuvor”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -1928,7 +1949,10 @@
           "sentence": "Ergänze passend: „Als der Kurs begann, hatte ich die Unterlagen ___ gelesen.“",
           "correct": "bereits",
           "answers": [
-            "bereits"
+            "bereits",
+            "schon",
+            "vorher",
+            "zuvor"
           ],
           "explanations": {
             "tr": "Doğru cevap: bereits. Ders başlamadan önce okuma tamamlanmıştı; “bereits” uygun zaman zarfıdır.",
@@ -1943,7 +1967,13 @@
           "correct": "früher",
           "answers": [
             "früher",
-            "frueher"
+            "frueher",
+            "vorher",
+            "zuvor",
+            "lange",
+            "jahrelang",
+            "einmal",
+            "schon einmal"
           ],
           "explanations": {
             "tr": "Doğru cevap: früher. Daha önceki yaşam deneyimini “früher” belirtir.",
@@ -1981,7 +2011,7 @@
           ],
           "correct": "..., nachdem wir die Fahrkarten gekauft hatten.",
           "explanations": {
-            "tr": "Doğru cevap: ..., nachdem wir die Fahrkarten gekauft hatten.. Kaynakta nachdem yan cümlesinde Partizip II önce, çekimli yardımcı fiil en sonda yer alır.",
+            "tr": "Doğru cevap: ..., nachdem wir die Fahrkarten gekauft hatten. nachdem yan cümle kurar: çekimli yardımcı fiil “hatten” en sona gider, Partizip II “gekauft” hemen önünde durur; nesne “die Fahrkarten” fiil grubundan önce gelir.",
             "de": "Die richtige Antwort ist „..., nachdem wir die Fahrkarten gekauft hatten.“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “..., nachdem wir die Fahrkarten gekauft hatten.”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -2011,7 +2041,7 @@
           ],
           "correct": "..., obwohl er vorher getankt hatte.",
           "explanations": {
-            "tr": "Doğru cevap: ..., obwohl er vorher getankt hatte.. Kaynakta “obwohl er vorher getankt hatte” modeli kullanılır.",
+            "tr": "Doğru cevap: ..., obwohl er vorher getankt hatte. obwohl yan cümle kurar: çekimli yardımcı fiil “hatte” en sonda, Partizip II “getankt” ondan önce; zarf “vorher” fiil grubunun önünde kalır.",
             "de": "Die richtige Antwort ist „..., obwohl er vorher getankt hatte.“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “..., obwohl er vorher getankt hatte.”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -2056,7 +2086,7 @@
           ],
           "correct": "..., nachdem der Regen aufgehört hatte.",
           "explanations": {
-            "tr": "Doğru cevap: ..., nachdem der Regen aufgehört hatte.. Kaynakta aynı fiil ve bağlaçla bu sıra desteklenir.",
+            "tr": "Doğru cevap: ..., nachdem der Regen aufgehört hatte. nachdem yan cümlesinde sıra: özne (der Regen) + Partizip II (aufgehört) + çekimli yardımcı fiil (hatte) en sonda.",
             "de": "Die richtige Antwort ist „..., nachdem der Regen aufgehört hatte.“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “..., nachdem der Regen aufgehört hatte.”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -2086,7 +2116,7 @@
           ],
           "correct": "..., nachdem wir die Stadt besichtigt hatten.",
           "explanations": {
-            "tr": "Doğru cevap: ..., nachdem wir die Stadt besichtigt hatten.. Kaynakta “nachdem ... besichtigt hatten” yapısı bulunur.",
+            "tr": "Doğru cevap: ..., nachdem wir die Stadt besichtigt hatten. Yan cümlede çekimli “hatten” en sona gider; “besichtigt” ondan önce, nesne “die Stadt” fiil grubundan önce durur.",
             "de": "Die richtige Antwort ist „..., nachdem wir die Stadt besichtigt hatten.“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “..., nachdem wir die Stadt besichtigt hatten.”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -2150,7 +2180,7 @@
           ],
           "correct": "waren",
           "explanations": {
-            "tr": "Doğru cevap: waren. Kaynağın B1-B2 bölümünde yönlü hareket “waren ... gerannt” olarak verilir.",
+            "tr": "Doğru cevap: waren. rennen hareket fiilidir; “um den See” bir güzergâh bildirir → sein: waren ... gerannt. Çoğul özne “die Sportler” → waren.",
             "de": "Die richtige Antwort ist „waren“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “waren”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -2165,7 +2195,7 @@
           ],
           "correct": "war",
           "explanations": {
-            "tr": "Doğru cevap: war. Kaynak yönlü hareket bağlamında rudern için sein kullanır.",
+            "tr": "Doğru cevap: war. “über den See rudern” bir yerden bir yere hareket bildirir → sein: war ... gerudert. Karşılaştır: Sie hatte zwei Stunden gerudert. (yalnızca etkinlik/süre → haben)",
             "de": "Die richtige Antwort ist „war“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “war”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -2195,7 +2225,7 @@
           ],
           "correct": "hatte",
           "explanations": {
-            "tr": "Doğru cevap: hatte. Kaynakta “hatte sich verliebt” verilir; dönüşlü fiil haben alır.",
+            "tr": "Doğru cevap: hatte. sich verlieben dönüşlü fiildir; dönüşlü fiiller Perfekt ve Plusquamperfekt'te haben alır: hatte sich ... verliebt.",
             "de": "Die richtige Antwort ist „hatte“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “hatte”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -2210,7 +2240,7 @@
           ],
           "correct": "hatten",
           "explanations": {
-            "tr": "Doğru cevap: hatten. Kaynakta schlafen “hatten geschlafen” biçiminde.",
+            "tr": "Doğru cevap: hatten. schlafen hareket ya da durum değişikliği bildirmez, haben alır: hatten ... geschlafen. Karşılaştır: Die Kinder waren eingeschlafen. (einschlafen = durum değişikliği → sein)",
             "de": "Die richtige Antwort ist „hatten“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “hatten”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -2240,7 +2270,7 @@
           ],
           "correct": "war",
           "explanations": {
-            "tr": "Doğru cevap: war. Kaynakta schleichen hedefli hareket bağlamında sein ile verilir.",
+            "tr": "Doğru cevap: war. schleichen burada evden dışarı çıkmayı (aus dem Haus) anlatan hareket fiilidir → sein: war ... geschlichen. Karşılaştır: Er hatte sich aus dem Haus geschlichen. (dönüşlü kullanım → haben)",
             "de": "Die richtige Antwort ist „war“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “war”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -2311,7 +2341,7 @@
       "questions": [
         {
           "word": "Unregelmäßige Partizipien",
-          "sentence": "Plusquamperfekt von „brechen“",
+          "sentence": "Plusquamperfekt von „brechen“ (sich den Arm brechen)",
           "options": [
             "hatte gebrochen",
             "hatte gebrecht",
@@ -2319,7 +2349,7 @@
           ],
           "correct": "hatte gebrochen",
           "explanations": {
-            "tr": "Doğru cevap: hatte gebrochen. Kaynakta “sich die Hand gebrochen hatte” biçimi kullanılır.",
+            "tr": "Doğru cevap: hatte gebrochen. brechen güçlü fiildir: brechen → brach → gebrochen (gebrecht yok). sich den Arm brechen Akkusativ nesne alır (den Arm) → haben: hatte gebrochen. Karşılaştır: Der Ast war gebrochen. (nesne yok, durum değişikliği → sein)",
             "de": "Die richtige Antwort ist „hatte gebrochen“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “hatte gebrochen”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -2334,7 +2364,7 @@
           ],
           "correct": "hatte begonnen",
           "explanations": {
-            "tr": "Doğru cevap: hatte begonnen. Kaynakta “hatte das Konzert schon begonnen” modeli vardır.",
+            "tr": "Doğru cevap: hatte begonnen. beginnen güçlü fiildir: beginnen → begann → begonnen; be- ön eki yüzünden ge- almaz. Yardımcı fiil haben: hatte begonnen.",
             "de": "Die richtige Antwort ist „hatte begonnen“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “hatte begonnen”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -2349,7 +2379,7 @@
           ],
           "correct": "hatte gestritten",
           "explanations": {
-            "tr": "Doğru cevap: hatte gestritten. Kaynakta “hatte sich ... gestritten” biçimi geçer.",
+            "tr": "Doğru cevap: hatte gestritten. streiten güçlü fiildir: streiten → stritt → gestritten (gestreitet yok). Genellikle dönüşlü kullanılır (sich streiten) ve haben alır: Sie hatte sich gestritten.",
             "de": "Die richtige Antwort ist „hatte gestritten“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “hatte gestritten”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -2364,7 +2394,7 @@
           ],
           "correct": "war vergangen",
           "explanations": {
-            "tr": "Doğru cevap: war vergangen. Kaynakta süre için “eine Stunde vergangen war” kullanılır.",
+            "tr": "Doğru cevap: war vergangen. vergehen (zaman geçmek) bir durum değişikliğidir, sein alır; Partizip II: vergangen. Örnek: Eine Stunde war vergangen.",
             "de": "Die richtige Antwort ist „war vergangen“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “war vergangen”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -2379,7 +2409,7 @@
           ],
           "correct": "war geflohen",
           "explanations": {
-            "tr": "Doğru cevap: war geflohen. Üçüncü kaynakta fliehen → geflohen ve sein ile gösterilir.",
+            "tr": "Doğru cevap: war geflohen. fliehen (kaçmak) yer değiştirme bildiren hareket fiilidir, sein alır; Partizip II düzensizdir: geflohen. Örnek: Der Dieb war geflohen.",
             "de": "Die richtige Antwort ist „war geflohen“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “war geflohen”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -2394,7 +2424,7 @@
           ],
           "correct": "hatte erfunden",
           "explanations": {
-            "tr": "Doğru cevap: hatte erfunden. Kaynakta “hatte ... erfunden” bulunur.",
+            "tr": "Doğru cevap: hatte erfunden. erfinden, finden gibi çekilir (fand – gefunden), ama er- ayrılmaz ön ek olduğu için ge- almaz: erfunden. Akkusativ nesne alır → haben.",
             "de": "Die richtige Antwort ist „hatte erfunden“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “hatte erfunden”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -2409,7 +2439,7 @@
           ],
           "correct": "hatte verziehen",
           "explanations": {
-            "tr": "Doğru cevap: hatte verziehen. Üçüncü kaynak çözümünde verzeihen → verziehen.",
+            "tr": "Doğru cevap: hatte verziehen. verzeihen güçlü fiildir: verzeihen → verzieh → verziehen; ver- ön eki yüzünden ge- almaz. Yardımcı fiil haben: Sie hatte ihm verziehen.",
             "de": "Die richtige Antwort ist „hatte verziehen“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “hatte verziehen”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -2424,7 +2454,7 @@
           ],
           "correct": "hatte gegossen",
           "explanations": {
-            "tr": "Doğru cevap: hatte gegossen. Kaynak çözümünde gießen → gegossen.",
+            "tr": "Doğru cevap: hatte gegossen. gießen güçlü fiildir: gießen → goss → gegossen (gegießt yok). Akkusativ nesne alır (die Blumen gießen) → haben.",
             "de": "Die richtige Antwort ist „hatte gegossen“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “hatte gegossen”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -2518,7 +2548,7 @@
           ],
           "correct": "geprüft hatte",
           "explanations": {
-            "tr": "Doğru cevap: geprüft hatte. Kaynakta obwohl + vorher + Plusquamperfekt modeli bulunur.",
+            "tr": "Doğru cevap: geprüft hatte. Kontrol “am Vortag” yapılmıştı, yani arabanın çalışmamasından önce → Plusquamperfekt. prüfen haben alır; obwohl yan cümlesinde “hatte” en sonda.",
             "de": "Die richtige Antwort ist „geprüft hatte“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “geprüft hatte”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -2588,7 +2618,7 @@
           "sentence": "Er bestellte keinen Nachtisch, denn er ___ vorher schon viel ___. (essen)",
           "options": [
             "hat ... gegessen",
-            "aß ... schon",
+            "war ... gegessen",
             "hatte ... gegessen"
           ],
           "correct": "hatte ... gegessen",
@@ -2607,7 +2637,9 @@
             "ich musste zurueck weil ich meinen ausweis vergessen hatte",
             "ich musste zurueck, weil ich meinen ausweis vergessen hatte",
             "ich musste zurück weil ich meinen ausweis vergessen hatte",
-            "ich musste zurück, weil ich meinen ausweis vergessen hatte"
+            "ich musste zurück, weil ich meinen ausweis vergessen hatte",
+            "weil ich meinen ausweis vergessen hatte, musste ich zurück",
+            "weil ich meinen ausweis vergessen hatte musste ich zurück"
           ],
           "explanations": {
             "tr": "Doğru cevap: Ich musste zurück, weil ich meinen Ausweis vergessen hatte.. Daha eski olay weil yan cümlesinde Plusquamperfekt olarak sona yerleşir.",
@@ -2622,10 +2654,12 @@
           "correct": "Das Auto sprang nicht an, obwohl er vorher getankt hatte.",
           "answers": [
             "das auto sprang nicht an obwohl er vorher getankt hatte",
-            "das auto sprang nicht an, obwohl er vorher getankt hatte"
+            "das auto sprang nicht an, obwohl er vorher getankt hatte",
+            "obwohl er vorher getankt hatte, sprang das auto nicht an",
+            "obwohl er vorher getankt hatte sprang das auto nicht an"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Das Auto sprang nicht an, obwohl er vorher getankt hatte.. Kaynakta aynı ilişki modeli Plusquamperfekt ile kullanılır.",
+            "tr": "Doğru cevap: Das Auto sprang nicht an, obwohl er vorher getankt hatte. obwohl beklenmeyen bir karşıtlık bildirir: benzin alınmıştı ama araba çalışmadı. Benzin alma daha önce olduğu için Plusquamperfekt kalır; obwohl yan cümlesinde “hatte” en sona gider.",
             "de": "Die richtige Antwort ist „Das Auto sprang nicht an, obwohl er vorher getankt hatte.“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “Das Auto sprang nicht an, obwohl er vorher getankt hatte.”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -2658,7 +2692,9 @@
           "correct": "Als ich ankam, hatte das Meeting schon begonnen.",
           "answers": [
             "als ich ankam hatte das meeting schon begonnen",
-            "als ich ankam, hatte das meeting schon begonnen"
+            "als ich ankam, hatte das meeting schon begonnen",
+            "das meeting hatte schon begonnen, als ich ankam",
+            "das meeting hatte schon begonnen als ich ankam"
           ],
           "explanations": {
             "tr": "Doğru cevap: Als ich ankam, hatte das Meeting schon begonnen.. Referans olayı Präteritum “ankam”, daha önceki olay Plusquamperfekt “hatte begonnen”.",
@@ -2673,7 +2709,9 @@
           "correct": "Nachdem wir die Tickets gekauft hatten, stiegen wir ein.",
           "answers": [
             "nachdem wir die tickets gekauft hatten stiegen wir ein",
-            "nachdem wir die tickets gekauft hatten, stiegen wir ein"
+            "nachdem wir die tickets gekauft hatten, stiegen wir ein",
+            "wir stiegen ein, nachdem wir die tickets gekauft hatten",
+            "wir stiegen ein nachdem wir die tickets gekauft hatten"
           ],
           "explanations": {
             "tr": "Doğru cevap: Nachdem wir die Tickets gekauft hatten, stiegen wir ein.. Bilet alma önce gerçekleşir; nachdem yan cümlesinde Plusquamperfekt.",
@@ -2703,7 +2741,9 @@
           "correct": "Als die Polizei kam, war der Dieb schon geflohen.",
           "answers": [
             "als die polizei kam war der dieb schon geflohen",
-            "als die polizei kam, war der dieb schon geflohen"
+            "als die polizei kam, war der dieb schon geflohen",
+            "der dieb war schon geflohen, als die polizei kam",
+            "der dieb war schon geflohen als die polizei kam"
           ],
           "explanations": {
             "tr": "Doğru cevap: Als die Polizei kam, war der Dieb schon geflohen.. Kaçış polis gelmeden önce; fliehen sein alır.",
@@ -2737,7 +2777,9 @@
             "nachdem der regen aufgehoert hatte gingen die kinder raus",
             "nachdem der regen aufgehoert hatte, gingen die kinder raus",
             "nachdem der regen aufgehört hatte gingen die kinder raus",
-            "nachdem der regen aufgehört hatte, gingen die kinder raus"
+            "nachdem der regen aufgehört hatte, gingen die kinder raus",
+            "die kinder gingen raus, nachdem der regen aufgehört hatte",
+            "die kinder gingen raus nachdem der regen aufgehört hatte"
           ],
           "explanations": {
             "tr": "Doğru cevap: Nachdem der Regen aufgehört hatte, gingen die Kinder raus.. Yağmurun durması daha önce gerçekleşir.",
@@ -2767,7 +2809,11 @@
           "correct": "Als wir den Bahnhof erreichten, war der Zug schon abgefahren.",
           "answers": [
             "als wir den bahnhof erreichten war der zug schon abgefahren",
-            "als wir den bahnhof erreichten, war der zug schon abgefahren"
+            "als wir den bahnhof erreichten, war der zug schon abgefahren",
+            "als wir den bahnhof erreichten, war der zug abgefahren",
+            "als wir den bahnhof erreichten war der zug abgefahren",
+            "der zug war schon abgefahren, als wir den bahnhof erreichten",
+            "der zug war schon abgefahren als wir den bahnhof erreichten"
           ],
           "explanations": {
             "tr": "Doğru cevap: Als wir den Bahnhof erreichten, war der Zug schon abgefahren.. Trenin kalkması istasyona ulaşmadan önce gerçekleşmiştir.",
@@ -2784,7 +2830,9 @@
             "sie bestand die pruefung weil sie sich gut vorbereitet hatte",
             "sie bestand die pruefung, weil sie sich gut vorbereitet hatte",
             "sie bestand die prüfung weil sie sich gut vorbereitet hatte",
-            "sie bestand die prüfung, weil sie sich gut vorbereitet hatte"
+            "sie bestand die prüfung, weil sie sich gut vorbereitet hatte",
+            "weil sie sich gut vorbereitet hatte, bestand sie die prüfung",
+            "weil sie sich gut vorbereitet hatte bestand sie die prüfung"
           ],
           "explanations": {
             "tr": "Doğru cevap: Sie bestand die Prüfung, weil sie sich gut vorbereitet hatte.. Hazırlık sınav sonucundan önce tamamlanmıştır.",
@@ -2801,7 +2849,9 @@
             "nachdem die gaeste gegangen waren raeumten wir auf",
             "nachdem die gaeste gegangen waren, raeumten wir auf",
             "nachdem die gäste gegangen waren räumten wir auf",
-            "nachdem die gäste gegangen waren, räumten wir auf"
+            "nachdem die gäste gegangen waren, räumten wir auf",
+            "wir räumten auf, nachdem die gäste gegangen waren",
+            "wir räumten auf nachdem die gäste gegangen waren"
           ],
           "explanations": {
             "tr": "Doğru cevap: Nachdem die Gäste gegangen waren, räumten wir auf.. gehen sein alır; nachdem yan cümlesinde waren sonda.",
@@ -3055,7 +3105,7 @@
           ],
           "correct": "waren ... gelaufen",
           "explanations": {
-            "tr": "Doğru cevap: waren ... gelaufen. Kaynak hareket fiillerinde sein kullanımını destekler.",
+            "tr": "Doğru cevap: waren ... gelaufen. Yürüyüş, yorgunluktan önce olmuştur → Plusquamperfekt. laufen burada mesafe kat eden (viele Kilometer) hareket fiilidir ve sein alır: waren ... gelaufen.",
             "de": "Die richtige Antwort ist „waren ... gelaufen“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “waren ... gelaufen”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -3077,17 +3127,17 @@
         },
         {
           "word": "Mini-Geschichten",
-          "sentence": "Als wir das Hotel erreichten, ___ unsere Freunde bereits ___. (einchecken)",
+          "sentence": "Als wir das Hotel erreichten, ___ unsere Freunde das Zimmer bereits ___. (bezahlen)",
           "options": [
-            "waren ... eingecheckt",
-            "hatten ... eingecheckt",
-            "haben ... eingecheckt"
+            "waren ... bezahlt",
+            "hatten ... bezahlt",
+            "haben ... bezahlt"
           ],
-          "correct": "hatten ... eingecheckt",
+          "correct": "hatten ... bezahlt",
           "explanations": {
-            "tr": "Doğru cevap: hatten ... eingecheckt. einchecken haben ile kurulur; arkadaşlar daha önce check-in yapmıştır.",
-            "de": "Die richtige Antwort ist „hatten ... eingecheckt“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
-            "en": "The correct answer is “hatten ... eingecheckt”. Check the auxiliary, past participle and the order of the past events."
+            "tr": "Doğru cevap: hatten ... bezahlt. Ödeme, otele varmamızdan önce olmuş → Plusquamperfekt: hatte(n) + Partizip II. bezahlen Akkusativ nesne alır (das Zimmer) ve haben ile kurulur. 'haben … bezahlt' Perfekt'tir; 'waren … bezahlt' yanlış yardımcı fiildir.",
+            "de": "Die richtige Antwort ist „hatten ... bezahlt“. Das Bezahlen war vor der Ankunft → Plusquamperfekt mit hatte(n) + Partizip II. bezahlen bildet das Perfekt mit haben.",
+            "en": "The correct answer is “hatten ... bezahlt”. The payment happened before the arrival → past perfect with hatte(n) + past participle. bezahlen forms its perfect with haben."
           }
         },
         {
@@ -3126,7 +3176,10 @@
           "sentence": "Ergänze: „Als der Kurs begann, ___ ich meinen Kaffee schon ___. (trinken)“",
           "correct": "hatte ich meinen Kaffee schon getrunken",
           "answers": [
-            "hatte ich meinen kaffee schon getrunken"
+            "hatte ich meinen kaffee schon getrunken",
+            "hatte getrunken",
+            "hatte ... getrunken",
+            "hatte … getrunken"
           ],
           "explanations": {
             "tr": "Doğru cevap: hatte ich meinen Kaffee schon getrunken. Kahveyi içme dersin başlamasından önce tamamlanmıştır.",
@@ -3254,7 +3307,7 @@
           ],
           "correct": "Plusquamperfekt",
           "explanations": {
-            "tr": "Doğru cevap: Plusquamperfekt. Kaynakların “weit zurück in die Vergangenheit” ve olay sırası alıştırmaları bu işlevi destekler.",
+            "tr": "Doğru cevap: Plusquamperfekt. Geçmişte iki olay varsa, daha önce olan olay Plusquamperfekt ile anlatılır (Vorvergangenheit): Ich hatte gegessen. Dann ging ich los.",
             "de": "Die richtige Antwort ist „Plusquamperfekt“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “Plusquamperfekt”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -3269,7 +3322,7 @@
           ],
           "correct": "Präteritum",
           "explanations": {
-            "tr": "Doğru cevap: Präteritum. Kaynak örneklerinde nachdem yan cümlesi Plusquamperfekt, sonraki ana olay çoğunlukla Präteritumdur.",
+            "tr": "Doğru cevap: Präteritum. nachdem yan cümlesi önceki olayı Plusquamperfekt ile verir; ana cümledeki sonraki olay geçmişte anlatıldığı için Präteritum olur: Nachdem er gegessen hatte, ging er nach Hause.",
             "de": "Die richtige Antwort ist „Präteritum“. Achte auf Hilfsverb, Partizip II und die zeitliche Reihenfolge der vergangenen Ereignisse.",
             "en": "The correct answer is “Präteritum”. Check the auxiliary, past participle and the order of the past events."
           }
@@ -3298,7 +3351,9 @@
             "plusquamperfekt / präteritum",
             "plusquamperfekt / praeteritum",
             "plusquamperfekt, präteritum",
-            "plusquamperfekt, praeteritum"
+            "plusquamperfekt, praeteritum",
+            "plusquamperfekt und präteritum",
+            "plusquamperfekt/präteritum"
           ],
           "explanations": {
             "tr": "Doğru cevap: Plusquamperfekt / Präteritum. “hatten gegessen” Plusquamperfekt; “gingen” Präteritum.",

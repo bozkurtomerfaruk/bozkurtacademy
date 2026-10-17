@@ -421,13 +421,13 @@
           "options": [
             "ziehen / ein",
             "zieht / ein",
-            "ziehen / um"
+            "ziehen / aus"
           ],
           "correct": "ziehen / ein",
           "explanations": {
-            "tr": "Doğru cevap: ziehen / ein. wir + einziehen → ziehen ... ein.",
-            "de": "Die richtige Antwort ist „ziehen / ein“. wir + einziehen → ziehen ... ein. In „Wir ___ nächsten Monat in die neue Wohnung ___.“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
-            "en": "The correct answer is “ziehen / ein”. wir + einziehen → ziehen ... ein. In “Wir ___ nächsten Monat in die neue Wohnung ___.”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
+            "tr": "Doğru cevap: ziehen / ein. wir + einziehen (taşınıp yerleşmek) → ziehen … ein. 'zieht' ihr/er biçimidir; 'ausziehen' ise bir yerden taşınıp çıkmaktır (aus der Wohnung).",
+            "de": "Richtig ist „ziehen … ein“: wir + einziehen. „zieht“ passt nicht zu wir; ausziehen bedeutet aus einer Wohnung weggehen.",
+            "en": "The answer is “ziehen … ein” (wir + einziehen, to move in)."
           }
         },
         {
@@ -867,7 +867,7 @@
         },
         {
           "word": "Wochenende",
-          "sentence": "A: Was macht ihr Samstag? B: Wir ___ zuerst ___.",
+          "sentence": "A: Was macht ihr Samstag? B: Der Kühlschrank ist leer. Wir ___ zuerst ___.",
           "options": [
             "kommen / an",
             "kaufen / ein",
@@ -875,9 +875,9 @@
           ],
           "correct": "kaufen / ein",
           "explanations": {
-            "tr": "Doğru cevap: kaufen / ein. Alışveriş yapmak: einkaufen.",
-            "de": "Die richtige Antwort ist „kaufen / ein“. Alışveriş yapmak: einkaufen. In „A: Was macht ihr Samstag? B: Wir ___ zuerst ___.“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
-            "en": "The correct answer is “kaufen / ein”. Alışveriş yapmak: einkaufen. In “A: Was macht ihr Samstag? B: Wir ___ zuerst ___.”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
+            "tr": "Doğru cevap: kaufen / ein. Buzdolabı boş → alışveriş yapmak gerekiyor: einkaufen. wir → kaufen … ein (ön ek sona).",
+            "de": "Richtig ist „kaufen … ein“: Der Kühlschrank ist leer, also wird eingekauft. wir → kaufen … ein.",
+            "en": "The answer is “kaufen … ein”: the fridge is empty, so they go shopping (einkaufen)."
           }
         },
         {
@@ -1095,7 +1095,8 @@
           "sentence": "Bilde: Anna / den Computer / morgens / einschalten",
           "correct": "Anna schaltet morgens den Computer ein",
           "answers": [
-            "anna schaltet morgens den computer ein"
+            "anna schaltet morgens den computer ein",
+            "anna schaltet den computer morgens ein"
           ],
           "explanations": {
             "tr": "Doğru cevap: Anna schaltet morgens den Computer ein. Anna = sie → schaltet ... ein.",
@@ -2363,7 +2364,8 @@
           "sentence": "Bilde: Anna / morgen Abend / ihre Freundin / anrufen",
           "correct": "Anna ruft morgen Abend ihre Freundin an",
           "answers": [
-            "anna ruft morgen abend ihre freundin an"
+            "anna ruft morgen abend ihre freundin an",
+            "anna ruft ihre freundin morgen abend an"
           ],
           "explanations": {
             "tr": "Doğru cevap: Anna ruft morgen Abend ihre Freundin an. an sonda.",
@@ -2377,7 +2379,8 @@
           "sentence": "Bilde: ihr / nach der Arbeit / die Jacken / ausziehen",
           "correct": "Ihr zieht nach der Arbeit die Jacken aus",
           "answers": [
-            "ihr zieht nach der arbeit die jacken aus"
+            "ihr zieht nach der arbeit die jacken aus",
+            "ihr zieht die jacken nach der arbeit aus"
           ],
           "explanations": {
             "tr": "Doğru cevap: Ihr zieht nach der Arbeit die Jacken aus. aus sonda.",
@@ -2392,7 +2395,9 @@
           "correct": "Ich rufe den Kunden später zurück",
           "answers": [
             "ich rufe den kunden spaeter zurueck",
-            "ich rufe den kunden später zurück"
+            "ich rufe den kunden später zurück",
+            "ich rufe später den kunden zurück",
+            "ich rufe spaeter den kunden zurueck"
           ],
           "explanations": {
             "tr": "Doğru cevap: Ich rufe den Kunden später zurück. zurück sonda.",
@@ -2407,7 +2412,9 @@
           "correct": "Die Kinder räumen jeden Freitag ihr Zimmer auf",
           "answers": [
             "die kinder raeumen jeden freitag ihr zimmer auf",
-            "die kinder räumen jeden freitag ihr zimmer auf"
+            "die kinder räumen jeden freitag ihr zimmer auf",
+            "die kinder räumen ihr zimmer jeden freitag auf",
+            "die kinder raeumen ihr zimmer jeden freitag auf"
           ],
           "explanations": {
             "tr": "Doğru cevap: Die Kinder räumen jeden Freitag ihr Zimmer auf. auf sonda.",
@@ -2595,16 +2602,16 @@
         {
           "type": "text",
           "word": "Frage",
-          "sentence": "Bilde Frage: ihr / den Lehrer / zuhören",
+          "sentence": "Bilde Frage: ihr / der Lehrer / zuhören",
           "correct": "Hört ihr dem Lehrer zu",
           "answers": [
             "hoert ihr dem lehrer zu",
             "hört ihr dem lehrer zu"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Hört ihr dem Lehrer zu. hört başta; zu sonda.",
-            "de": "Die richtige Antwort ist „Hört ihr dem Lehrer zu“. hört başta; zu sonda. In „Bilde Frage: ihr / den Lehrer / zuhören“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
-            "en": "The correct answer is “Hört ihr dem Lehrer zu”. hört başta; zu sonda. In “Bilde Frage: ihr / den Lehrer / zuhören”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
+            "tr": "Doğru cevap: Hört ihr dem Lehrer zu? Evet/hayır sorusunda çekimli kısım (hört) başa, ön ek (zu) sona gelir. zuhören Dativ ister: der Lehrer → dem Lehrer.",
+            "de": "Die richtige Antwort ist „Hört ihr dem Lehrer zu“. hört başta; zu sonda. In „Bilde Frage: ihr / der Lehrer / zuhören“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
+            "en": "The correct answer is “Hört ihr dem Lehrer zu”. hört başta; zu sonda. In “Bilde Frage: ihr / der Lehrer / zuhören”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
           }
         },
         {
@@ -3140,7 +3147,8 @@
           "sentence": "Ordne: morgen / ich / um 6 Uhr / auf / stehe",
           "correct": "Ich stehe morgen um 6 Uhr auf",
           "answers": [
-            "ich stehe morgen um 6 uhr auf"
+            "ich stehe morgen um 6 uhr auf",
+            "morgen stehe ich um 6 uhr auf"
           ],
           "explanations": {
             "tr": "Doğru cevap: Ich stehe morgen um 6 Uhr auf. çekimli fiil 2. pozisyon, auf sonda.",
@@ -3154,7 +3162,9 @@
           "sentence": "Ordne: seine Mutter / Paul / an / ruft / heute",
           "correct": "Paul ruft seine Mutter heute an",
           "answers": [
-            "paul ruft seine mutter heute an"
+            "paul ruft seine mutter heute an",
+            "heute ruft paul seine mutter an",
+            "paul ruft heute seine mutter an"
           ],
           "explanations": {
             "tr": "Doğru cevap: Paul ruft seine Mutter heute an. an sonda.",
@@ -3168,7 +3178,8 @@
           "sentence": "Ordne: am Bahnhof / wir / aus / steigen",
           "correct": "Wir steigen am Bahnhof aus",
           "answers": [
-            "wir steigen am bahnhof aus"
+            "wir steigen am bahnhof aus",
+            "am bahnhof steigen wir aus"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wir steigen am Bahnhof aus. aus sonda.",
@@ -3197,7 +3208,9 @@
           "correct": "Die Kinder räumen am Samstag ihr Zimmer auf",
           "answers": [
             "die kinder raeumen am samstag ihr zimmer auf",
-            "die kinder räumen am samstag ihr zimmer auf"
+            "die kinder räumen am samstag ihr zimmer auf",
+            "am samstag räumen die kinder ihr zimmer auf",
+            "am samstag raeumen die kinder ihr zimmer auf"
           ],
           "explanations": {
             "tr": "Doğru cevap: Die Kinder räumen am Samstag ihr Zimmer auf. auf sonda.",
@@ -3212,7 +3225,9 @@
           "correct": "Der Zug fährt um acht Uhr ab",
           "answers": [
             "der zug faehrt um acht uhr ab",
-            "der zug fährt um acht uhr ab"
+            "der zug fährt um acht uhr ab",
+            "um acht uhr fährt der zug ab",
+            "um acht uhr faehrt der zug ab"
           ],
           "explanations": {
             "tr": "Doğru cevap: Der Zug fährt um acht Uhr ab. ab sonda.",
@@ -3226,7 +3241,8 @@
           "sentence": "Ordne: meine Freunde / heute / vorbei / kommen",
           "correct": "Meine Freunde kommen heute vorbei",
           "answers": [
-            "meine freunde kommen heute vorbei"
+            "meine freunde kommen heute vorbei",
+            "heute kommen meine freunde vorbei"
           ],
           "explanations": {
             "tr": "Doğru cevap: Meine Freunde kommen heute vorbei. vorbei sonda.",
@@ -3255,7 +3271,9 @@
           "correct": "Ich rufe dich später zurück",
           "answers": [
             "ich rufe dich spaeter zurueck",
-            "ich rufe dich später zurück"
+            "ich rufe dich später zurück",
+            "später rufe ich dich zurück",
+            "spaeter rufe ich dich zurueck"
           ],
           "explanations": {
             "tr": "Doğru cevap: Ich rufe dich später zurück. zurück sonda.",
@@ -3269,7 +3287,8 @@
           "sentence": "Ordne: jeden Abend / meine Eltern / fern / sehen",
           "correct": "Meine Eltern sehen jeden Abend fern",
           "answers": [
-            "meine eltern sehen jeden abend fern"
+            "meine eltern sehen jeden abend fern",
+            "jeden abend sehen meine eltern fern"
           ],
           "explanations": {
             "tr": "Doğru cevap: Meine Eltern sehen jeden Abend fern. fern sonda.",
@@ -3473,7 +3492,7 @@
             "ich stehe werktags um 6:30 uhr auf"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Ich stehe werktags um 6:30 Uhr auf. aufstehen.",
+            "tr": "Doğru cevap: Ich stehe werktags um 6:30 Uhr auf. aufstehen ayrılabilen bir fiildir: çekimli kısım (stehe) 2. pozisyonda, ön ek (auf) cümlenin sonunda.",
             "de": "Die richtige Antwort ist „Ich stehe werktags um 6:30 Uhr auf“. aufstehen. In „Bilde: ich / werktags / um 6:30 Uhr / aufstehen“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
             "en": "The correct answer is “Ich stehe werktags um 6:30 Uhr auf”. aufstehen. In “Bilde: ich / werktags / um 6:30 Uhr / aufstehen”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
           }
@@ -3488,7 +3507,7 @@
             "mein bruder wacht oft früh auf"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Mein Bruder wacht oft früh auf. aufwachen.",
+            "tr": "Doğru cevap: Mein Bruder wacht oft früh auf. aufwachen ayrılabilen bir fiildir: çekimli kısım (wacht) 2. pozisyonda, ön ek (auf) cümlenin sonunda.",
             "de": "Die richtige Antwort ist „Mein Bruder wacht oft früh auf“. aufwachen. In „Bilde: mein Bruder / oft / früh / aufwachen“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
             "en": "The correct answer is “Mein Bruder wacht oft früh auf”. aufwachen. In “Bilde: mein Bruder / oft / früh / aufwachen”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
           }
@@ -3502,7 +3521,7 @@
             "du machst morgens das radio an"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Du machst morgens das Radio an. anmachen.",
+            "tr": "Doğru cevap: Du machst morgens das Radio an. anmachen ayrılabilen bir fiildir: çekimli kısım (machst) 2. pozisyonda, ön ek (an) cümlenin sonunda.",
             "de": "Die richtige Antwort ist „Du machst morgens das Radio an“. anmachen. In „Bilde: du / morgens / das Radio / anmachen“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
             "en": "The correct answer is “Du machst morgens das Radio an”. anmachen. In “Bilde: du / morgens / das Radio / anmachen”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
           }
@@ -3516,7 +3535,7 @@
             "wir machen nachts das licht aus"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Wir machen nachts das Licht aus. ausmachen.",
+            "tr": "Doğru cevap: Wir machen nachts das Licht aus. ausmachen ayrılabilen bir fiildir: çekimli kısım (machen) 2. pozisyonda, ön ek (aus) cümlenin sonunda.",
             "de": "Die richtige Antwort ist „Wir machen nachts das Licht aus“. ausmachen. In „Bilde: wir / nachts / das Licht / ausmachen“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
             "en": "The correct answer is “Wir machen nachts das Licht aus”. ausmachen. In “Bilde: wir / nachts / das Licht / ausmachen”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
           }
@@ -3531,7 +3550,7 @@
             "ich räume am samstag die wohnung auf"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Ich räume am Samstag die Wohnung auf. aufräumen.",
+            "tr": "Doğru cevap: Ich räume am Samstag die Wohnung auf. aufräumen ayrılabilen bir fiildir: çekimli kısım (räume) 2. pozisyonda, ön ek (auf) cümlenin sonunda.",
             "de": "Die richtige Antwort ist „Ich räume am Samstag die Wohnung auf“. aufräumen. In „Bilde: ich / am Samstag / die Wohnung / aufräumen“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
             "en": "The correct answer is “Ich räume am Samstag die Wohnung auf”. aufräumen. In “Bilde: ich / am Samstag / die Wohnung / aufräumen”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
           }
@@ -3545,7 +3564,7 @@
             "ihr macht am abend die fenster zu"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Ihr macht am Abend die Fenster zu. zumachen.",
+            "tr": "Doğru cevap: Ihr macht am Abend die Fenster zu. zumachen ayrılabilen bir fiildir: çekimli kısım (macht) 2. pozisyonda, ön ek (zu) cümlenin sonunda.",
             "de": "Die richtige Antwort ist „Ihr macht am Abend die Fenster zu“. zumachen. In „Bilde: ihr / am Abend / die Fenster / zumachen“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
             "en": "The correct answer is “Ihr macht am Abend die Fenster zu”. zumachen. In “Bilde: ihr / am Abend / die Fenster / zumachen”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
           }
@@ -3559,7 +3578,7 @@
             "das kind zieht morgens seine schuhe an"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Das Kind zieht morgens seine Schuhe an. anziehen.",
+            "tr": "Doğru cevap: Das Kind zieht morgens seine Schuhe an. anziehen ayrılabilen bir fiildir: çekimli kısım (zieht) 2. pozisyonda, ön ek (an) cümlenin sonunda.",
             "de": "Die richtige Antwort ist „Das Kind zieht morgens seine Schuhe an“. anziehen. In „Bilde: das Kind / morgens / seine Schuhe / anziehen“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
             "en": "The correct answer is “Das Kind zieht morgens seine Schuhe an”. anziehen. In “Bilde: das Kind / morgens / seine Schuhe / anziehen”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
           }
@@ -3573,7 +3592,7 @@
             "er zieht zu hause die jacke aus"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Er zieht zu Hause die Jacke aus. ausziehen.",
+            "tr": "Doğru cevap: Er zieht zu Hause die Jacke aus. ausziehen ayrılabilen bir fiildir: çekimli kısım (zieht) 2. pozisyonda, ön ek (aus) cümlenin sonunda.",
             "de": "Die richtige Antwort ist „Er zieht zu Hause die Jacke aus“. ausziehen. In „Bilde: er / zu Hause / die Jacke / ausziehen“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
             "en": "The correct answer is “Er zieht zu Hause die Jacke aus”. ausziehen. In “Bilde: er / zu Hause / die Jacke / ausziehen”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
           }
@@ -3587,7 +3606,7 @@
             "wir sehen nach dem abendessen fern"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Wir sehen nach dem Abendessen fern. fernsehen.",
+            "tr": "Doğru cevap: Wir sehen nach dem Abendessen fern. fernsehen ayrılabilen bir fiildir: çekimli kısım (sehen) 2. pozisyonda, ön ek (fern) cümlenin sonunda.",
             "de": "Die richtige Antwort ist „Wir sehen nach dem Abendessen fern“. fernsehen. In „Bilde: wir / nach dem Abendessen / fernsehen“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
             "en": "The correct answer is “Wir sehen nach dem Abendessen fern”. fernsehen. In “Bilde: wir / nach dem Abendessen / fernsehen”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
           }
@@ -3637,7 +3656,7 @@
             "ich rufe meine freundin heute an"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Ich rufe meine Freundin heute an. anrufen.",
+            "tr": "Doğru cevap: Ich rufe meine Freundin heute an. anrufen ayrılabilen bir fiildir: çekimli kısım (rufe) 2. pozisyonda, ön ek (an) cümlenin sonunda.",
             "de": "Die richtige Antwort ist „Ich rufe meine Freundin heute an“. anrufen. In „Bilde: ich / meine Freundin / heute / anrufen“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
             "en": "The correct answer is “Ich rufe meine Freundin heute an”. anrufen. In “Bilde: ich / meine Freundin / heute / anrufen”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
           }
@@ -3652,7 +3671,7 @@
             "der kunde ruft später zurück"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Der Kunde ruft später zurück. zurückrufen.",
+            "tr": "Doğru cevap: Der Kunde ruft später zurück. zurückrufen ayrılabilen bir fiildir: çekimli kısım (ruft) 2. pozisyonda, ön ek (zurück) cümlenin sonunda.",
             "de": "Die richtige Antwort ist „Der Kunde ruft später zurück“. zurückrufen. In „Bilde: der Kunde / später / zurückrufen“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
             "en": "The correct answer is “Der Kunde ruft später zurück”. zurückrufen. In “Bilde: der Kunde / später / zurückrufen”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
           }
@@ -3666,7 +3685,7 @@
             "wir laden unsere freunde zum essen ein"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Wir laden unsere Freunde zum Essen ein. einladen.",
+            "tr": "Doğru cevap: Wir laden unsere Freunde zum Essen ein. einladen ayrılabilen bir fiildir: çekimli kısım (laden) 2. pozisyonda, ön ek (ein) cümlenin sonunda.",
             "de": "Die richtige Antwort ist „Wir laden unsere Freunde zum Essen ein“. einladen. In „Bilde: wir / unsere Freunde / zum Essen / einladen“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
             "en": "The correct answer is “Wir laden unsere Freunde zum Essen ein”. einladen. In “Bilde: wir / unsere Freunde / zum Essen / einladen”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
           }
@@ -3680,7 +3699,7 @@
             "du kommst am freitag mit"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Du kommst am Freitag mit. mitkommen.",
+            "tr": "Doğru cevap: Du kommst am Freitag mit. mitkommen ayrılabilen bir fiildir: çekimli kısım (kommst) 2. pozisyonda, ön ek (mit) cümlenin sonunda.",
             "de": "Die richtige Antwort ist „Du kommst am Freitag mit“. mitkommen. In „Bilde: du / am Freitag / mitkommen“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
             "en": "The correct answer is “Du kommst am Freitag mit”. mitkommen. In “Bilde: du / am Freitag / mitkommen”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
           }
@@ -3694,7 +3713,7 @@
             "ihr kommt am abend kurz vorbei"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Ihr kommt am Abend kurz vorbei. vorbeikommen.",
+            "tr": "Doğru cevap: Ihr kommt am Abend kurz vorbei. vorbeikommen ayrılabilen bir fiildir: çekimli kısım (kommt) 2. pozisyonda, ön ek (vorbei) cümlenin sonunda.",
             "de": "Die richtige Antwort ist „Ihr kommt am Abend kurz vorbei“. vorbeikommen. In „Bilde: ihr / am Abend / kurz / vorbeikommen“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
             "en": "The correct answer is “Ihr kommt am Abend kurz vorbei”. vorbeikommen. In “Bilde: ihr / am Abend / kurz / vorbeikommen”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
           }
@@ -3724,7 +3743,7 @@
             "anna bringt getränke mit"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Anna bringt Getränke mit. mitbringen.",
+            "tr": "Doğru cevap: Anna bringt Getränke mit. mitbringen ayrılabilen bir fiildir: çekimli kısım (bringt) 2. pozisyonda, ön ek (mit) cümlenin sonunda.",
             "de": "Die richtige Antwort ist „Anna bringt Getränke mit“. mitbringen. In „Bilde: Anna / Getränke / mitbringen“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
             "en": "The correct answer is “Anna bringt Getränke mit”. mitbringen. In “Bilde: Anna / Getränke / mitbringen”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
           }
@@ -3752,7 +3771,7 @@
             "der vater liest dem kind ein buch vor"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Der Vater liest dem Kind ein Buch vor. vorlesen.",
+            "tr": "Doğru cevap: Der Vater liest dem Kind ein Buch vor. vorlesen ayrılabilen bir fiildir: çekimli kısım (liest) 2. pozisyonda, ön ek (vor) cümlenin sonunda. Dinleyen kişi Dativ (dem Kind), okunan şey Akkusativ (ein Buch).",
             "de": "Die richtige Antwort ist „Der Vater liest dem Kind ein Buch vor“. vorlesen. In „Bilde: der Vater / dem Kind / ein Buch / vorlesen“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
             "en": "The correct answer is “Der Vater liest dem Kind ein Buch vor”. vorlesen. In “Bilde: der Vater / dem Kind / ein Buch / vorlesen”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
           }
@@ -4008,7 +4027,7 @@
             "der zug kommt zehn minuten später an"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Der Zug kommt zehn Minuten später an. ankommen.",
+            "tr": "Doğru cevap: Der Zug kommt zehn Minuten später an. ankommen ayrılabilen bir fiildir: çekimli kısım (kommt) 2. pozisyonda, ön ek (an) cümlenin sonunda.",
             "de": "Die richtige Antwort ist „Der Zug kommt zehn Minuten später an“. ankommen. In „Bilde: der Zug / zehn Minuten später / ankommen“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
             "en": "The correct answer is “Der Zug kommt zehn Minuten später an”. ankommen. In “Bilde: der Zug / zehn Minuten später / ankommen”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
           }
@@ -4079,7 +4098,7 @@
             "ich lade meine freunde am samstag ein"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Ich lade meine Freunde am Samstag ein. einladen.",
+            "tr": "Doğru cevap: Ich lade meine Freunde am Samstag ein. einladen ayrılabilen bir fiildir: çekimli kısım (lade) 2. pozisyonda, ön ek (ein) cümlenin sonunda.",
             "de": "Die richtige Antwort ist „Ich lade meine Freunde am Samstag ein“. einladen. In „Bilde: ich / meine Freunde / am Samstag / einladen“ steht der konjugierte Verbstamm an der normalen Verbposition; die trennbare Vorsilbe steht am Satzende.",
             "en": "The correct answer is “Ich lade meine Freunde am Samstag ein”. einladen. In “Bilde: ich / meine Freunde / am Samstag / einladen”, put the conjugated verb stem in the normal verb position and the separable prefix at the end of the clause."
           }

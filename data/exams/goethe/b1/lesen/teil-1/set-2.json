@@ -33,7 +33,12 @@
           "type": "richtig-falsch",
           "prompt": "Malte hat im Moment Ferien.",
           "answer": "richtig",
-          "evidence": [{ "text": "mail", "quote": "jetzt sind endlich Semesterferien" }],
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "jetzt sind endlich Semesterferien"
+            }
+          ],
           "explanation": "Malte „jetzt sind endlich Semesterferien“ yazıyor: Şu anda üniversitede dönem tatili var. İfade doğru."
         },
         {
@@ -41,7 +46,12 @@
           "type": "richtig-falsch",
           "prompt": "Malte verdient im Tierheim Geld für sein Auslandssemester.",
           "answer": "falsch",
-          "evidence": [{ "text": "mail", "quote": "Geld bekomme ich dort zwar nicht" }],
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Geld bekomme ich dort zwar nicht"
+            }
+          ],
           "explanation": "Tuzak: Malte yurt dışı dönemi için para biriktirmek istiyordu, ama bunun için kafede çalışmayı planlamıştı. Barınakta gönüllü (ehrenamtlich) çalışıyor ve „Geld bekomme ich dort zwar nicht“ – orada para almıyor. İfade yanlış."
         },
         {
@@ -49,7 +59,12 @@
           "type": "richtig-falsch",
           "prompt": "Malte hat durch seine Mitbewohnerin von dem Tierheim erfahren.",
           "answer": "richtig",
-          "evidence": [{ "text": "mail", "quote": "Aber dann hat mir meine Mitbewohnerin Clara von dem Tierheim erzählt" }],
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Aber dann hat mir meine Mitbewohnerin Clara von dem Tierheim erzählt"
+            }
+          ],
           "explanation": "Barınağı ona ev arkadaşı Clara anlatmış: „hat mir meine Mitbewohnerin Clara von dem Tierheim erzählt“. „von etwas erfahren“ (bir şeyi öğrenmek, duymak) bu cümleyle aynı anlamda; ifade doğru."
         },
         {
@@ -57,7 +72,12 @@
           "type": "richtig-falsch",
           "prompt": "Malte arbeitet jeden Tag im Tierheim.",
           "answer": "falsch",
-          "evidence": [{ "text": "mail", "quote": "Ich bin dreimal pro Woche dort, immer vormittags." }],
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Ich bin dreimal pro Woche dort, immer vormittags."
+            }
+          ],
           "explanation": "Malte barınağa haftada üç kez gidiyor („dreimal pro Woche“), her gün değil. İfade yanlış."
         },
         {
@@ -65,7 +85,12 @@
           "type": "richtig-falsch",
           "prompt": "Bruno bekommt bald eine neue Familie.",
           "answer": "falsch",
-          "evidence": [{ "text": "mail", "quote": "Leider möchte ihn niemand haben, weil er schon zwölf Jahre alt ist." }],
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Leider möchte ihn niemand haben, weil er schon zwölf Jahre alt ist."
+            }
+          ],
           "explanation": "Bruno on iki yaşında olduğu için onu kimse sahiplenmek istemiyor („Leider möchte ihn niemand haben“). Yakında yeni bir aileye gideceğine dair bir bilgi yok, metin tam tersini söylüyor. İfade yanlış."
         },
         {
@@ -73,7 +98,12 @@
           "type": "richtig-falsch",
           "prompt": "Malte lernt in den Ferien regelmäßig für die Uni.",
           "answer": "richtig",
-          "evidence": [{ "text": "mail", "quote": "ich lerne trotzdem jeden Abend zwei Stunden" }],
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "ich lerne trotzdem jeden Abend zwei Stunden"
+            }
+          ],
           "explanation": "Ailesi daha çok ders çalışmasını istese de Malte „jeden Abend zwei Stunden“ (her akşam iki saat) çalışıyor. Her akşam = düzenli olarak; ifade doğru."
         },
         {
@@ -81,8 +111,13 @@
           "type": "richtig-falsch",
           "prompt": "Ines kann während ihres Besuchs bei Malte übernachten.",
           "answer": "richtig",
-          "evidence": [{ "text": "mail", "quote": "Du kannst gern bei mir schlafen" }],
-          "explanation": "Malte „Du kannst gern bei mir schlafen“ diyor; Clara o sırada ailesinin yanında olacağı için yer de var. „bei jemandem schlafen“ ile „übernachten“ aynı anlama gelir; ifade doğru."
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Du kannst gern bei mir schlafen"
+            }
+          ],
+          "explanation": "Malte „Du kannst gern bei mir schlafen“ diyor; Clara o sırada zaten ailesinin yanında olacak („sowieso bei ihren Eltern“). „bei jemandem schlafen“ ile „übernachten“ aynı anlama gelir; ifade doğru."
         }
       ]
     }

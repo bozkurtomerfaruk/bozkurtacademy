@@ -33,7 +33,12 @@
           "type": "richtig-falsch",
           "prompt": "Lena wohnt seit einem halben Jahr in Wiesenbach.",
           "answer": "richtig",
-          "evidence": [{ "text": "blog", "quote": "Vor sechs Monaten bin ich mit meinem Freund Tobias aus Hallbergen, einer Großstadt im Norden, nach Wiesenbach gezogen." }],
+          "evidence": [
+            {
+              "text": "blog",
+              "quote": "Vor sechs Monaten bin ich mit meinem Freund Tobias aus Hallbergen, einer Großstadt im Norden, nach Wiesenbach gezogen."
+            }
+          ],
           "explanation": "Lena „vor sechs Monaten“ (altı ay önce) Wiesenbach'a taşındığını yazıyor. Altı ay, yarım yıl (ein halbes Jahr) demektir; bu yüzden ifade doğru."
         },
         {
@@ -41,7 +46,12 @@
           "type": "richtig-falsch",
           "prompt": "Lena ist wegen einer neuen Arbeitsstelle nach Wiesenbach gezogen.",
           "answer": "richtig",
-          "evidence": [{ "text": "blog", "quote": "Der Grund für den Umzug war meine neue Stelle" }],
+          "evidence": [
+            {
+              "text": "blog",
+              "quote": "Der Grund für den Umzug war meine neue Stelle"
+            }
+          ],
           "explanation": "Metin açıkça söylüyor: „Der Grund für den Umzug war meine neue Stelle“ – taşınmanın sebebi yeni işi. „Stelle“ ve „Arbeitsstelle“ aynı anlama gelir, ifade doğru."
         },
         {
@@ -49,7 +59,12 @@
           "type": "richtig-falsch",
           "prompt": "Lena fährt meistens mit dem Bus zur Arbeit.",
           "answer": "falsch",
-          "evidence": [{ "text": "blog", "quote": "deshalb fahre ich fast immer mit dem Auto" }],
+          "evidence": [
+            {
+              "text": "blog",
+              "quote": "deshalb fahre ich fast immer mit dem Auto"
+            }
+          ],
           "explanation": "Otobüs metinde geçiyor ama tuzak: Otobüsle neredeyse bir saat sürdüğü için Lena „fast immer mit dem Auto“ (neredeyse her zaman arabayla) gidiyor. Yani çoğunlukla otobüsle değil, arabayla gidiyor; ifade yanlış."
         },
         {
@@ -57,7 +72,12 @@
           "type": "richtig-falsch",
           "prompt": "Lena hat ihrer Nachbarin in der ersten Woche einen Kuchen gebracht.",
           "answer": "falsch",
-          "evidence": [{ "text": "blog", "quote": "Schon in der ersten Woche hat uns unsere Nachbarin Frau Albers einen Kuchen gebracht" }],
+          "evidence": [
+            {
+              "text": "blog",
+              "quote": "Schon in der ersten Woche hat uns unsere Nachbarin Frau Albers einen Kuchen gebracht"
+            }
+          ],
           "explanation": "Kişiler ters çevrilmiş: Cümlede özne „unsere Nachbarin Frau Albers“, „uns“ ise Lena ve Tobias. Yani pastayı komşu getirdi, Lena değil. İfade yanlış."
         },
         {
@@ -65,7 +85,12 @@
           "type": "richtig-falsch",
           "prompt": "Lena macht ihre Einkäufe heute für mehrere Tage auf einmal.",
           "answer": "richtig",
-          "evidence": [{ "text": "blog", "quote": "kaufe am Montag nach der Arbeit im Supermarkt in Rothfeld für die ganze Woche ein" }],
+          "evidence": [
+            {
+              "text": "blog",
+              "quote": "kaufe am Montag nach der Arbeit im Supermarkt in Rothfeld für die ganze Woche ein"
+            }
+          ],
           "explanation": "Lena artık pazartesi günü işten sonra „für die ganze Woche“ (bütün hafta için) alışveriş yapıyor. Bütün hafta = birkaç gün için tek seferde alışveriş; ifade doğru."
         },
         {
@@ -73,15 +98,25 @@
           "type": "richtig-falsch",
           "prompt": "Lena hat in Wiesenbach ein neues Hobby gefunden.",
           "answer": "richtig",
-          "evidence": [{ "text": "blog", "quote": "Dafür gibt es einen Chor, und seit März singe ich dort mit." }],
-          "explanation": "Köyde sinema yok ama bir koro var ve Lena mart ayından beri orada şarkı söylüyor („seit März singe ich dort mit“). Koroda şarkı söylemek onun yeni hobisi; ifade doğru."
+          "evidence": [
+            {
+              "text": "blog",
+              "quote": "Dafür gibt es einen Chor, und seit März singe ich dort mit."
+            }
+          ],
+          "explanation": "Köyde sinema yok, „Dafür“ (onun yerine) bir koro var ve Lena mart ayından beri orada şarkı söylüyor („seit März singe ich dort mit“). „seit März“ ve „Dafür“, bunun Wiesenbach'ta başladığı yeni bir boş zaman etkinliği olduğunu gösteriyor; ifade doğru."
         },
         {
           "number": 6,
           "type": "richtig-falsch",
           "prompt": "Lena hat mit dem Chor schon ein Konzert gegeben.",
           "answer": "falsch",
-          "evidence": [{ "text": "blog", "quote": "Im Dezember geben wir unser erstes Konzert" }],
+          "evidence": [
+            {
+              "text": "blog",
+              "quote": "Im Dezember geben wir unser erstes Konzert"
+            }
+          ],
           "explanation": "İlk konser aralıkta olacak: „Im Dezember geben wir unser erstes Konzert“ ve Lena „şimdiden heyecanlıyım“ diyor. Konser henüz verilmedi; ifade yanlış."
         }
       ]

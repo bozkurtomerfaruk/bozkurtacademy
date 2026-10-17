@@ -190,80 +190,6 @@
     ]
   };
 
-  const I18N = {
-    tr: {
-      tag: 'Gramer Konuları',
-      heroTitle: 'Almanca gramer konuları',
-      heroSub: 'A1–B2 seviyelerine göre gramer başlıkları ve ilgili alıştırmalara erişim.',
-      toolbarTitle: 'Gramer konunu bul',
-      toolbarSub: 'Bir seviye seç veya arama kutusundan doğrudan konuya ulaş.',
-      search: 'Gramer konusu ara...',
-      result: 'konu',
-      allResults: 'Arama tüm seviyelerde yapılıyor.',
-      levelNames: {A1:'Başlangıç', A2:'Temel', B1:'Orta', B2:'Orta-İleri'},
-      levelTopics: 'konu',
-      sectionTitle: level => `${level} Gramer Konuları`,
-      sectionSub: level => `${level} seviyesinde öğrenmen gereken temel gramer başlıkları.`,
-      openTopic: 'Konuya Git',
-      noResultTitle: 'Eşleşen konu bulunamadı',
-      noResultSub: 'Farklı bir kelime dene veya seviyeler arasında geçiş yap.',
-      breadcrumbGrammar: 'Gramer',
-      comingLabel: 'Konu anlatımı',
-      comingTitle: 'Konu anlatımı hazırlanıyor',
-      comingText: 'Bu konu için ayrıntılı anlatım henüz yayımlanmadı. Çalışmalarına alıştırmalar bölümünden devam edebilirsin.',
-      back: 'Konulara Dön',
-      exercises: 'Alıştırmalara Git',
-      returnToExercise: 'Alıştırmaya dön'
-    },
-    de: {
-      tag: 'Grammatik',
-      heroTitle: 'Deutsche Grammatik nach Niveau',
-      heroSub: 'Grammatikthemen von A1 bis B2 und Zugang zu passenden Übungen.',
-      toolbarTitle: 'Finde dein Grammatikthema',
-      toolbarSub: 'Wähle ein Niveau oder suche direkt nach einem Thema.',
-      search: 'Grammatikthema suchen...',
-      result: 'Themen',
-      allResults: 'Die Suche läuft über alle Niveaus.',
-      levelNames: {A1:'Anfang', A2:'Grundlagen', B1:'Mittelstufe', B2:'Fortgeschritten'},
-      levelTopics: 'Themen',
-      sectionTitle: level => `${level} Grammatik`,
-      sectionSub: level => `Wichtige Grammatikthemen auf dem Niveau ${level}.`,
-      openTopic: 'Thema öffnen',
-      noResultTitle: 'Kein passendes Thema gefunden',
-      noResultSub: 'Versuche einen anderen Suchbegriff oder wechsle das Niveau.',
-      breadcrumbGrammar: 'Grammatik',
-      comingLabel: 'Grammatikerklärung',
-      comingTitle: 'Grammatikerklärung in Vorbereitung',
-      comingText: 'Eine ausführliche Erklärung ist noch nicht veröffentlicht. Du kannst im Übungsbereich weiterarbeiten.',
-      back: 'Zurück zu Themen',
-      exercises: 'Zu den Übungen',
-      returnToExercise: 'Zurück zur Übung'
-    },
-    en: {
-      tag: 'Grammar',
-      heroTitle: 'German grammar by level',
-      heroSub: 'Grammar topics from A1 to B2 and access to related exercises.',
-      toolbarTitle: 'Find a grammar topic',
-      toolbarSub: 'Choose a level or search directly for a topic.',
-      search: 'Search grammar topics...',
-      result: 'topics',
-      allResults: 'Search is running across all levels.',
-      levelNames: {A1:'Beginner', A2:'Elementary', B1:'Intermediate', B2:'Upper intermediate'},
-      levelTopics: 'topics',
-      sectionTitle: level => `${level} Grammar Topics`,
-      sectionSub: level => `Key grammar topics for German level ${level}.`,
-      openTopic: 'Open Topic',
-      noResultTitle: 'No matching topic found',
-      noResultSub: 'Try another search term or switch levels.',
-      breadcrumbGrammar: 'Grammar',
-      comingLabel: 'Grammar lesson',
-      comingTitle: 'Grammar explanation in preparation',
-      comingText: 'A detailed explanation has not yet been published. You can continue in the exercises section.',
-      back: 'Back to Topics',
-      exercises: 'Go to Exercises',
-      returnToExercise: 'Back to the exercise'
-    }
-  };
 
   const initialGrammarHash = location.hash;
   let activeTopic = null;
@@ -271,13 +197,12 @@
   let searchTerm = '';
 
   function lang() {
-    return window.baI18n?.lang?.() || localStorage.getItem('baLang') || 'tr';
+    return window.BA?.lang || 'tr';
   }
 
-  function tx(key) {
-    const l = lang();
-    return I18N[l]?.[key] ?? I18N.tr[key] ?? key;
-  }
+  // Texts live in js/app.js under grammar…; {level} is filled in.
+  const t = key => window.BA?.t ? window.BA.t(key) : key;
+  const fill = (key, values) => t(key).replace(/\{(\w+)\}/g, (_, name) => values[name] ?? '');
 
   function escapeHtml(value) {
     return String(value ?? '').replace(/[&<>"']/g, ch => ({
@@ -489,8 +414,8 @@
     el.innerHTML = `
       <div class="page-hero">
         <div class="page-hero-inner grammar-hero-copy">
-          <h1 id="grammarHeroTitle">${escapeHtml(tx('heroTitle'))}</h1>
-          <p id="grammarHeroSub">${escapeHtml(tx('heroSub'))}</p>
+          <h1 id="grammarHeroTitle">${escapeHtml(t('grammarTitle'))}</h1>
+          <p id="grammarHeroSub">${escapeHtml(t('grammarSub'))}</p>
         </div>
       </div>
 
@@ -499,8 +424,8 @@
           <div class="grammar-list-view" id="grammarListView">
             <div class="grammar-toolbar">
               <div class="grammar-toolbar-copy">
-                <h2 id="grammarToolbarTitle">${escapeHtml(tx('toolbarTitle'))}</h2>
-                <p id="grammarToolbarSub">${escapeHtml(tx('toolbarSub'))}</p>
+                <h2 id="grammarToolbarTitle">${escapeHtml(t('grammarToolbarTitle'))}</h2>
+                <p id="grammarToolbarSub">${escapeHtml(t('grammarToolbarSub'))}</p>
               </div>
 
               <div class="grammar-search-wrap">
@@ -509,14 +434,14 @@
                     <circle cx="11" cy="11" r="7"></circle>
                     <path d="m20 20-3.5-3.5"></path>
                   </svg>
-                  <input id="grammarSearchInput" type="search" autocomplete="off" placeholder="${escapeHtml(tx('search'))}" aria-label="${escapeHtml(tx('search'))}">
+                  <input id="grammarSearchInput" type="search" autocomplete="off" placeholder="${escapeHtml(t('grammarSearch'))}" aria-label="${escapeHtml(t('grammarSearch'))}">
                   <button class="grammar-search-clear" id="grammarSearchClear" type="button" aria-label="Clear">×</button>
                 </div>
               </div>
             </div>
 
             <div class="grammar-level-tabs ba-level-tabs" id="grammarLevelTabs"></div>
-            <div class="grammar-search-note" id="grammarSearchNote">${escapeHtml(tx('allResults'))}</div>
+            <div class="grammar-search-note" id="grammarSearchNote">${escapeHtml(t('grammarAllResults'))}</div>
 
             <div class="grammar-section-heading">
               <div>
@@ -565,13 +490,12 @@
   function renderLevels() {
     const el = document.getElementById('grammarLevelTabs');
     if (!el) return;
-    const names = tx('levelNames');
 
     el.innerHTML = Object.keys(TOPICS).map(level => `
       <button class="grammar-level-tab ba-level-tab ${level === currentLevel ? 'active' : ''}" type="button" aria-pressed="${level === currentLevel}" data-grammar-level="${level}">
         <span class="grammar-level-code ba-level-code">${level}</span>
-        <span class="grammar-level-name ba-level-name">${escapeHtml(names[level])}</span>
-        <span class="grammar-level-count ba-level-meta">${TOPICS[level].length} ${escapeHtml(tx('levelTopics'))}</span>
+        <span class="grammar-level-name ba-level-name">${escapeHtml(t('grammarLevelNames' + level))}</span>
+        <span class="grammar-level-count ba-level-meta">${TOPICS[level].length} ${escapeHtml(t('grammarLevelTopics'))}</span>
       </button>
     `).join('');
 
@@ -620,19 +544,19 @@
     const count = document.getElementById('grammarResultCount');
 
     if (searchTerm) {
-      if (sectionTitle) sectionTitle.textContent = tx('toolbarTitle');
-      if (sectionSub) sectionSub.textContent = tx('allResults');
+      if (sectionTitle) sectionTitle.textContent = t('grammarToolbarTitle');
+      if (sectionSub) sectionSub.textContent = t('grammarAllResults');
     } else {
-      if (sectionTitle) sectionTitle.textContent = tx('sectionTitle')(currentLevel);
-      if (sectionSub) sectionSub.textContent = tx('sectionSub')(currentLevel);
+      if (sectionTitle) sectionTitle.textContent = fill('grammarSectionTitle', {level:currentLevel});
+      if (sectionSub) sectionSub.textContent = fill('grammarSectionSub', {level:currentLevel});
     }
-    if (count) count.textContent = `${rows.length} ${tx('result')}`;
+    if (count) count.textContent = `${rows.length} ${t('grammarResult')}`;
 
     if (!rows.length) {
       grid.innerHTML = `
         <div class="grammar-empty ba-toc-empty">
-          <strong>${escapeHtml(tx('noResultTitle'))}</strong>
-          <p>${escapeHtml(tx('noResultSub'))}</p>
+          <strong>${escapeHtml(t('grammarNoResultTitle'))}</strong>
+          <p>${escapeHtml(t('grammarNoResultSub'))}</p>
         </div>
       `;
       return;
@@ -648,7 +572,7 @@
         </div>
         <h4>${escapeHtml(item.title)}</h4>
         <p>${escapeHtml(item.description)}</p>
-        <div class="grammar-topic-footer ba-toc-action">${escapeHtml(tx('openTopic'))}</div>
+        <div class="grammar-topic-footer ba-toc-action">${escapeHtml(t('grammarOpenTopic'))}</div>
       </button>
     `).join('');
 
@@ -698,7 +622,7 @@
     detail.innerHTML = `
       <article class="grammar-detail-card">
         <div class="grammar-detail-breadcrumb">
-          <button type="button" id="grammarBreadcrumbBack">${escapeHtml(tx('breadcrumbGrammar'))}</button>
+          <button type="button" id="grammarBreadcrumbBack">${escapeHtml(t('grammarBreadcrumbGrammar'))}</button>
           <span>›</span>
           <span>${escapeHtml(level)}</span>
           <span>›</span>
@@ -710,14 +634,14 @@
         <p class="grammar-detail-intro">${escapeHtml(topic.description)}</p>
 
         <div class="grammar-coming-soon">
-          <small>${escapeHtml(tx('comingLabel'))}</small>
-          <h4>${escapeHtml(tx('comingTitle'))}</h4>
-          <p>${escapeHtml(tx('comingText'))}</p>
+          <small>${escapeHtml(t('grammarComingLabel'))}</small>
+          <h4>${escapeHtml(t('grammarComingTitle'))}</h4>
+          <p>${escapeHtml(t('grammarComingText'))}</p>
         </div>
 
         <div class="grammar-detail-actions">
-          <button class="grammar-back-btn" type="button" id="grammarBackBtn">← ${escapeHtml(tx('back'))}</button>
-          <button class="grammar-exercises-btn" type="button" id="grammarExercisesBtn">${escapeHtml(tx('exercises'))} →</button>
+          <button class="grammar-back-btn" type="button" id="grammarBackBtn">← ${escapeHtml(t('grammarBack'))}</button>
+          <button class="grammar-exercises-btn" type="button" id="grammarExercisesBtn">${escapeHtml(t('grammarExercises'))} →</button>
         </div>
       </article>
     `;
@@ -757,7 +681,7 @@
       const a = document.createElement('a');
       a.className = 'btn primary grammar-return-link';
       a.href = href;
-      a.textContent = '← ' + tx('returnToExercise');
+      a.textContent = '← ' + t('grammarReturnToExercise');
       a.addEventListener('click', event => {
         // Modified clicks open the exercise deep link in a new tab.
         if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button > 0) return;

@@ -11,6 +11,7 @@
   let focusNext = false;
   let rendered = '';
   let renderedRoute = '';
+  let openedDirectly = false;
 
   const t = key => window.BA?.t ? window.BA.t(key) : key;
   const fill = (key, values) => t(key).replace(/\{(\w+)\}/g, (_, name) => values[name] ?? '');
@@ -315,15 +316,19 @@
     root.dataset.step = route.set ? 'task' : String(current);
     if (route.set) window.BAExamTask?.render(root.querySelector('#examTask'), { path: setPath(route), preserve: sameRoute });
 
+    const behavior = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
     if (focusNext) {
       focusNext = false;
       const title = root.querySelector('#examFlowTitle');
       title?.focus({ preventScroll: true });
       const top = root.getBoundingClientRect().top;
-      if (top < 0 || top > window.innerHeight * .6) {
-        root.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
-      }
+      // A set starts well below the hero: bring its heading to the top.
+      if (route.set && !sameRoute) title?.scrollIntoView({ behavior, block: 'start' });
+      else if (top < 0 || top > window.innerHeight * .6) root.scrollIntoView({ behavior, block: 'start' });
+    } else if (route.set && openedDirectly) {
+      root.querySelector('#examFlowTitle')?.scrollIntoView({ behavior: 'auto', block: 'start' });
     }
+    openedDirectly = false;
   }
 
   function setup() {
@@ -340,6 +345,9 @@
     if (initialHash.startsWith('#exams/')) {
       history.replaceState({ ...(history.state || {}), baPage: 'exams' }, '', initialHash);
     }
+    // app.js has already drawn the page for "#exams"; draw the restored address once more.
+    rendered = '';
+    openedDirectly = true;
     render();
   }
 

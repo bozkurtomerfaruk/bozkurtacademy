@@ -29,7 +29,7 @@
 #page-exams .task-group--ads .task-text,#page-exams .task-group--comments .task-text{padding:16px 18px}
 #page-exams .task-group--ads .task-text h3{font-size:var(--ba-body)}
 #page-exams .task-group--ads .task-text p,#page-exams .task-group--comments .task-text p{font-size:var(--ba-small);line-height:1.55}
-#page-exams .task-group--ads .task-text-label,#page-exams .task-group--comments .task-text-label{float:left;margin:0 12px 4px 0}
+#page-exams .task-group--ads .task-text-label,#page-exams .task-group--comments .task-text-label{margin:0 0 8px}
 
 /* Highlighted sentences appear only after checking. */
 #page-exams .task-evidence{border-radius:3px;transition:background-color .3s}
@@ -41,6 +41,9 @@
 #page-exams .task-stem{margin:0 0 2px;padding:12px 16px;border-radius:var(--ba-radius-small);background:var(--ba-paper-2);font-weight:600}
 #page-exams .task-q{margin:0;padding:14px 16px;border:0;border-radius:var(--ba-radius);background:var(--ba-paper);min-width:0}
 #page-exams .task-q-head{display:flex;gap:10px;align-items:flex-start;width:100%;margin:0 0 10px;padding:0;font-weight:500;line-height:1.45}
+/* A legend is drawn on the fieldset border; floating it keeps the question inside the card. */
+#page-exams fieldset.task-q>legend{float:left}
+#page-exams fieldset.task-q>legend~*{clear:both}
 #page-exams .task-q-no{display:inline-grid;place-items:center;flex:none;min-width:28px;height:28px;padding:0 6px;border-radius:999px;background:var(--ba-paper-2);font-weight:600;font-size:var(--ba-small);font-variant-numeric:tabular-nums}
 #page-exams .task-q-no.is-example{background:var(--ba-accent);color:var(--ba-accent-ink)}
 #page-exams .task-q-prompt{padding-top:2px}

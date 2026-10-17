@@ -18,7 +18,9 @@
   };
 
   const lang = () => window.BA?.lang || 'tr';
+  // Texts live in js/app.js (hub… for the exercise hub, quiz… for the question screen).
   const t = (key) => window.BA?.t(key) || key;
+  const fill = (key, values) => t(key).replace(/\{(\w+)\}/g, (_, name) => values[name] ?? '');
   const localize = (value) => {
     if(value == null) return '';
     if(typeof value === 'string') return value;
@@ -26,100 +28,10 @@
   };
 
 
-  const HUB_I18N = {
-    tr:{
-      heroSub:'A1–B2 seviyelerinde konu bazlı sorular ve cevap açıklamaları. Seviye seçerek veya konu arayarak çalışmaya başlayabilirsin.',
-      title:'Konu seçimi',
-      subtitle:'Bir seviye seç veya arama kutusundan çalışmak istediğin gramer konusuna ulaş.',
-      search:'Gramer konusu ara...',
-      allLevels:'Arama tüm seviyelerde yapılıyor.',
-      result:'konu',
-      ready:'hazır',
-      total:'konu',
-      open:'Alıştırmaları Aç',
-      soon:'Hazırlanıyor',
-      emptyTitle:'Eşleşen konu bulunamadı',
-      emptySub:'Farklı bir kelime dene veya seviyeler arasında geçiş yap.',
-      levelHeading:(level)=>`${level} Alıştırmaları`,
-      levelSub:(level)=>`${level} seviyesindeki gramer konularını seç ve alıştırmaları incele.`
-    },
-    de:{
-      heroSub:'Themenbezogene Aufgaben mit Erklärungen von A1 bis B2. Wähle ein Niveau oder suche nach einem Thema.',
-      title:'Themenauswahl',
-      subtitle:'Wähle ein Niveau oder suche direkt nach einem Grammatikthema.',
-      search:'Grammatikthema suchen...',
-      allLevels:'Die Suche läuft über alle Niveaus.',
-      result:'Themen',
-      ready:'bereit',
-      total:'Themen',
-      open:'Übungen öffnen',
-      soon:'In Vorbereitung',
-      emptyTitle:'Kein passendes Thema gefunden',
-      emptySub:'Versuche einen anderen Suchbegriff oder wechsle das Niveau.',
-      levelHeading:(level)=>`${level} Übungen`,
-      levelSub:(level)=>`Wähle ein Grammatikthema auf Niveau ${level} und wähle passende Übungen.`
-    },
-    en:{
-      heroSub:'Topic-based questions with answer explanations from A1 to B2. Choose a level or search for a topic.',
-      title:'Choose a topic',
-      subtitle:'Choose a level or search directly for the grammar topic you want to practise.',
-      search:'Search grammar topics...',
-      allLevels:'Search is running across all levels.',
-      result:'topics',
-      ready:'ready',
-      total:'topics',
-      open:'Open Exercises',
-      soon:'Coming soon',
-      emptyTitle:'No matching topic found',
-      emptySub:'Try another search term or switch levels.',
-      levelHeading:(level)=>`${level} Exercises`,
-      levelSub:(level)=>`Choose a grammar topic at ${level} level and choose an exercise set.`
-    }
-  };
-
-  const ht = (key) => HUB_I18N[lang()]?.[key] ?? HUB_I18N.tr[key] ?? key;
 
 
-  const QUIZ_I18N = {
-   tr:{
-  previous:'← Önceki Soru',
-  writtenPlaceholder:'Cevabını Almanca yaz...',
-  writtenHint:'Cevabını yaz ve kontrol et.',
-  correctAnswer:'Doğru cevap',
-  yourAnswer:'Senin cevabın',
-  correctShort:'Doğru. Bu yapıyı doğru kullandın.',
-  whyWrong:'Neden?',
-  writtenChip:'Yazmalı',
-  studyTopic:'Konuyu çalış',
-  nextExercise:'Sonraki Alıştırma →'
-},
-    de:{
-      previous:'← Vorherige Frage',
-      writtenPlaceholder:'Schreibe deine Antwort auf Deutsch...',
-      writtenHint:'Schreibe deine Antwort und prüfe sie.',
-      correctAnswer:'Richtige Antwort',
-      yourAnswer:'Deine Antwort',
-      correctShort:'Richtig. Du hast die Struktur korrekt verwendet.',
-      whyWrong:'Warum?',
-      writtenChip:'Schreiben',
-      studyTopic:'Thema lernen',
-      nextExercise:'Nächste Übung →'
-    },
-    en:{
-      previous:'← Previous Question',
-      writtenPlaceholder:'Type your answer in German...',
-      writtenHint:'Write your answer and check it.',
-      correctAnswer:'Correct answer',
-      yourAnswer:'Your answer',
-      correctShort:'Correct. You used the structure correctly.',
-      whyWrong:'Why?',
-      writtenChip:'Written',
-      studyTopic:'Study the topic',
-      nextExercise:'Next Exercise →'
-    }
-  };
 
-  const qt = (key) => QUIZ_I18N[lang()]?.[key] ?? QUIZ_I18N.tr[key] ?? key;
+
 
   function normalizeWritten(value){
     return String(value ?? '')
@@ -174,7 +86,7 @@
     btn.className='btn ghost';
     btn.type='button';
     btn.id='prevQuestionBtn';
-    btn.textContent=qt('previous');
+    btn.textContent=t('quizPrevious');
     actions.insertBefore(btn, check);
     btn.addEventListener('click', previousQuestion);
   }
@@ -188,10 +100,6 @@
     document.head.appendChild(link);
   }
 
-  function updateExerciseHero(){
-    const sub=document.querySelector('#page-exercises [data-i18n="exerciseHubSub"]');
-    if(sub) sub.textContent=ht('heroSub');
-  }
 
   async function loadJSON(path){
     const response = await fetch(path, {cache:'no-store'});
@@ -353,7 +261,7 @@
   return `<button class="exercise-discovery-level ba-level-tab ${state.level?.id===level.id && !query?'active':''}" type="button" aria-pressed="${state.level?.id===level.id && !query}" data-hub-level="${level.id}">
     <span class="exercise-discovery-level-code ba-level-code">${level.id}</span>
     <span class="exercise-discovery-level-name ba-level-name">${escapeHtml(localize(level.title))}</span>
-    <span class="exercise-discovery-level-meta ba-level-meta">${level.topics.length} ${escapeHtml(ht('total'))}</span>
+    <span class="exercise-discovery-level-meta ba-level-meta">${level.topics.length} ${escapeHtml(t('hubTotal'))}</span>
   </button>`;
 }).join('');
 
@@ -363,24 +271,24 @@
         data-hub-topic="${topic.id}" data-hub-topic-level="${level.id}" ${ready?'':'disabled'}>
         <div class="exercise-discovery-topic-top ba-toc-top">
           <span class="exercise-discovery-topic-level ba-toc-level">${level.id}</span>
-          ${ready ? '' : `<span class="exercise-discovery-status soon">${escapeHtml(ht('soon'))}</span>`}
+          ${ready ? '' : `<span class="exercise-discovery-status soon">${escapeHtml(t('hubSoon'))}</span>`}
         </div>
         <h3>${escapeHtml(localize(topic.title))}</h3>
         <p>${escapeHtml(localize(topic.description))}</p>
-        <div class="exercise-discovery-topic-action ba-toc-action">${ready?escapeHtml(ht('open')):escapeHtml(ht('soon'))}</div>
+        <div class="exercise-discovery-topic-action ba-toc-action">${ready?escapeHtml(t('hubOpen')):escapeHtml(t('hubSoon'))}</div>
         ${ready?'<span class="ba-toc-arrow" aria-hidden="true">→</span>':''}
       </button>`;
     }).join('') : `<div class="exercise-discovery-empty ba-toc-empty">
-      <strong>${escapeHtml(ht('emptyTitle'))}</strong>
-      <p>${escapeHtml(ht('emptySub'))}</p>
+      <strong>${escapeHtml(t('hubEmptyTitle'))}</strong>
+      <p>${escapeHtml(t('hubEmptySub'))}</p>
     </div>`;
 
     const levelForHeading=state.level?.id || 'A1';
     view.innerHTML=`
       <div class="exercise-discovery-toolbar">
         <div>
-          <h2>${escapeHtml(ht('title'))}</h2>
-          <p>${escapeHtml(ht('subtitle'))}</p>
+          <h2>${escapeHtml(t('hubTitle'))}</h2>
+          <p>${escapeHtml(t('hubSubtitle'))}</p>
         </div>
         <div class="exercise-discovery-search ba-search">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -388,20 +296,20 @@
             <path d="m20 20-3.5-3.5"></path>
           </svg>
           <input id="exerciseHubSearch" type="search" autocomplete="off"
-            aria-label="${escapeHtml(ht('search'))}" placeholder="${escapeHtml(ht('search'))}" value="${escapeHtml(state.hubSearch || '')}">
+            aria-label="${escapeHtml(t('hubSearch'))}" placeholder="${escapeHtml(t('hubSearch'))}" value="${escapeHtml(state.hubSearch || '')}">
           <button id="exerciseHubSearchClear" class="${state.hubSearch?'visible':''}" type="button" aria-label="Clear">×</button>
         </div>
       </div>
 
       <div class="exercise-discovery-levels ba-level-tabs">${levelTabs}</div>
-      ${query?`<div class="exercise-discovery-search-note">${escapeHtml(ht('allLevels'))}</div>`:''}
+      ${query?`<div class="exercise-discovery-search-note">${escapeHtml(t('hubAllLevels'))}</div>`:''}
 
       <div class="exercise-discovery-heading">
         <div>
-          <h3>${escapeHtml(query ? ht('title') : ht('levelHeading')(levelForHeading))}</h3>
-          <p>${escapeHtml(query ? ht('allLevels') : ht('levelSub')(levelForHeading))}</p>
+          <h3>${escapeHtml(query ? t('hubTitle') : fill('hubLevelHeading', {level:levelForHeading}))}</h3>
+          <p>${escapeHtml(query ? t('hubAllLevels') : fill('hubLevelSub', {level:levelForHeading}))}</p>
         </div>
-        <span>${rows.length} ${escapeHtml(ht('result'))}</span>
+        <span>${rows.length} ${escapeHtml(t('hubResult'))}</span>
       </div>
 
       <div class="exercise-discovery-grid ba-toc">${cards}</div>
@@ -515,7 +423,7 @@
       <div class="set-meta">
         <span class="set-chip">${escapeHtml(localize(ex.difficulty))}</span>
         <span class="set-chip">${ex.questions?.length || 0} ${t('questions')}</span>
-        ${hasWritten?`<span class="set-chip">${escapeHtml(qt('writtenChip'))}</span>`:''}
+        ${hasWritten?`<span class="set-chip">${escapeHtml(t('quizWrittenChip'))}</span>`:''}
       </div>
       <h3>${escapeHtml(localize(ex.title))}</h3>
       <p>${escapeHtml(localize(ex.description))}</p>
@@ -593,7 +501,7 @@
     const {level,topic}=currentIds();
     const links=document.querySelectorAll('#exerciseQuizView [data-study-topic]');
     links.forEach(link=>{
-      link.textContent=qt('studyTopic');
+      link.textContent=t('quizStudyTopic');
       link.hidden=true;
     });
     if(!level || !topic) return;
@@ -698,10 +606,10 @@ function updateBestScore(){
     if(isWritten(q)){
       options.innerHTML=`
         <div class="written-answer-wrap">
-          <label for="writtenAnswerInput">${escapeHtml(qt('writtenHint'))}</label>
+          <label for="writtenAnswerInput">${escapeHtml(t('quizWrittenHint'))}</label>
           ${q.multiline
-            ? `<textarea id="writtenAnswerInput" class="written-answer-input" rows="3" placeholder="${escapeHtml(qt('writtenPlaceholder'))}">${escapeHtml(state.selected)}</textarea>`
-            : `<input id="writtenAnswerInput" class="written-answer-input" type="text" autocomplete="off" spellcheck="false" placeholder="${escapeHtml(qt('writtenPlaceholder'))}" value="${escapeHtml(state.selected)}">`
+            ? `<textarea id="writtenAnswerInput" class="written-answer-input" rows="3" placeholder="${escapeHtml(t('quizWrittenPlaceholder'))}">${escapeHtml(state.selected)}</textarea>`
+            : `<input id="writtenAnswerInput" class="written-answer-input" type="text" autocomplete="off" spellcheck="false" placeholder="${escapeHtml(t('quizWrittenPlaceholder'))}" value="${escapeHtml(state.selected)}">`
           }
         </div>`;
       const input=$('writtenAnswerInput');
@@ -734,7 +642,7 @@ function updateBestScore(){
     const prev=$('prevQuestionBtn');
     if(prev){
       prev.hidden=state.index<=0;
-      prev.textContent=qt('previous');
+      prev.textContent=t('quizPrevious');
     }
 
     $('nextQuestionBtn').textContent=state.index===state.pool.length-1?t('finishQuiz'):t('nextQuestion');
@@ -779,7 +687,7 @@ function renderCheckedQuestion(q, response){
     feedback.innerHTML=`
       <strong>${t('correctTitle')}</strong>
       <div class="correct-short-feedback">
-        ${escapeHtml(qt('correctShort'))}
+        ${escapeHtml(t('quizCorrectShort'))}
       </div>
     `;
 
@@ -793,7 +701,7 @@ function renderCheckedQuestion(q, response){
       ${
         correctDisplay
           ? `<div class="correct-answer-line">
-               ${escapeHtml(qt('correctAnswer'))}:
+               ${escapeHtml(t('quizCorrectAnswer'))}:
                <b>${correctDisplay}</b>
              </div>`
           : ''
@@ -802,7 +710,7 @@ function renderCheckedQuestion(q, response){
       ${
         detailedExplanation
           ? `<div class="wrong-explanation">
-               <strong>${escapeHtml(qt('whyWrong'))}</strong>
+               <strong>${escapeHtml(t('quizWhyWrong'))}</strong>
                <p>${detailedExplanation}</p>
              </div>`
           : ''
@@ -823,10 +731,10 @@ function renderCheckedQuestion(q, response){
         btn.querySelector('.option-state')?.remove();
         if(btn.dataset.answer===q.correct){
           btn.classList.add('correct');
-          btn.insertAdjacentHTML('beforeend',`<span class="option-state"><span aria-hidden="true">✓</span> ${escapeHtml(qt('correctAnswer'))}</span>`);
+          btn.insertAdjacentHTML('beforeend',`<span class="option-state"><span aria-hidden="true">✓</span> ${escapeHtml(t('quizCorrectAnswer'))}</span>`);
         }else if(btn.dataset.answer===response.selected){
           btn.classList.add('wrong');
-          btn.insertAdjacentHTML('beforeend',`<span class="option-state"><span aria-hidden="true">✗</span> ${escapeHtml(qt('yourAnswer'))}</span>`);
+          btn.insertAdjacentHTML('beforeend',`<span class="option-state"><span aria-hidden="true">✗</span> ${escapeHtml(t('quizYourAnswer'))}</span>`);
         }
       });
   }
@@ -974,11 +882,11 @@ function startNextExercise(){
     ${t('backToExercises')}
   </button>
 
-  <a class="btn ghost" id="resultStudyTopicBtn" data-study-topic hidden>${escapeHtml(qt('studyTopic'))}</a>
+  <a class="btn ghost" id="resultStudyTopicBtn" data-study-topic hidden>${escapeHtml(t('quizStudyTopic'))}</a>
 
   ${nextExercise
     ? `<button class="btn gold" type="button" id="nextExerciseBtn">
-         ${escapeHtml(qt('nextExercise'))}
+         ${escapeHtml(t('quizNextExercise'))}
        </button>`
     : ''
   }
@@ -1101,7 +1009,6 @@ return;
 
   function rerenderForLanguage(){
     if(!state.catalog) return;
-    updateExerciseHero();
     if($('exerciseLevelView')?.hidden===false) renderLevels();
     if($('exerciseTopicView')?.hidden===false) renderLevels();
     if($('exerciseSetView')?.hidden===false) renderSets();
@@ -1117,7 +1024,6 @@ return;
   async function init(){
     try{
       injectHubCss();
-      updateExerciseHero();
       state.catalog=await loadJSON('data/catalog.json');
       state.level=state.catalog.levels[0] || null;
       renderLevels();

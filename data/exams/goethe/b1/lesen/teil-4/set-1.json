@@ -1,0 +1,191 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-1",
+  "title": "Einkaufen am Sonntag?",
+  "minutes": 15,
+  "context": "In einer Zeitung lesen Sie Kommentare zu einem Artikel über die Öffnung von Geschäften am Sonntag.",
+  "instructions": "Lesen Sie die Texte 20 bis 26. Wählen Sie: Ist die Person für die Öffnung der Geschäfte am Sonntag?",
+  "groups": [
+    {
+      "layout": "comments",
+      "question": "Ist die Person für die Öffnung der Geschäfte am Sonntag?",
+      "texts": [
+        {
+          "id": "selin",
+          "label": "0",
+          "byline": "Selin, 29, Fennrode",
+          "paragraphs": [
+            "Ich arbeite als Pflegerin im Schichtdienst und habe unter der Woche oft keine Zeit zum Einkaufen. Wenn die Geschäfte sonntags offen wären, könnte ich alles in Ruhe erledigen. In vielen anderen Ländern ist das ganz normal – warum nicht auch bei uns? Auch meine Kolleginnen würden das sehr praktisch finden."
+          ]
+        },
+        {
+          "id": "karl",
+          "label": "20",
+          "byline": "Karl, 61, Talbrück",
+          "paragraphs": [
+            "Viele sagen, Einkaufen am Sonntag wäre praktisch. Das mag sein. Aber ich habe 30 Jahre im Einzelhandel gearbeitet und weiß, was das für die Angestellten bedeutet. Der Sonntag ist für viele der einzige Tag, an dem die ganze Familie zusammen ist. Den sollten wir nicht für ein paar zusätzliche Einkäufe opfern. Wer am Samstag etwas vergessen hat, kann es auch am Montag noch kaufen."
+          ]
+        },
+        {
+          "id": "mira",
+          "label": "21",
+          "byline": "Mira, 23, Ostwalden",
+          "paragraphs": [
+            "Ich studiere und arbeite am Wochenende in einem Buchladen. Natürlich müsste ich dann vielleicht auch sonntags arbeiten, aber dafür bekäme ich einen Zuschlag. Außerdem ist die Innenstadt am Sonntag immer wie ausgestorben. Mit offenen Geschäften wäre viel mehr los, und auch die Cafés hätten mehr Gäste. Viele Touristen kommen gerade am Wochenende in unsere Stadt und stehen dann vor geschlossenen Türen."
+          ]
+        },
+        {
+          "id": "bernd",
+          "label": "22",
+          "byline": "Bernd, 45, Seelingen",
+          "paragraphs": [
+            "Ich habe nichts gegen lange Öffnungszeiten unter der Woche, im Gegenteil: Bis 22 Uhr finde ich super. Aber der Sonntag ist für mich ein Ruhetag, und das soll er auch bleiben. Wer wirklich dringend etwas braucht, kann zur Tankstelle oder zum Bahnhof gehen. Wir verbringen den Sonntag lieber mit einem Ausflug in die Natur als im Kaufhaus."
+          ]
+        },
+        {
+          "id": "natalia",
+          "label": "23",
+          "byline": "Natalia, 38, Grauheim",
+          "paragraphs": [
+            "Als Mutter von drei Kindern ist Einkaufen am Samstag für mich der reinste Stress: volle Parkplätze, lange Schlangen an der Kasse. Wenn man die Einkäufe auf zwei Tage verteilen könnte, wäre es überall ruhiger. Die Mitarbeiter müssten dann natürlich gut bezahlt werden und einen anderen freien Tag bekommen. Dann könnte ich am Samstag auch mal mit den Kindern auf den Spielplatz gehen."
+          ]
+        },
+        {
+          "id": "ole",
+          "label": "24",
+          "byline": "Ole, 19, Mooshagen",
+          "paragraphs": [
+            "Meine Eltern sind total dagegen, weil für sie der Sonntag der Familie gehört. Ich sehe das anders. Ich würde sonntags gern mit Freunden durch die Läden bummeln. Das ist für uns Freizeit und kein Stress. Und wer nicht einkaufen will, muss ja nicht. Außerdem gibt es bei uns am Sonntag sonst nicht viel zu tun."
+          ]
+        },
+        {
+          "id": "gisela",
+          "label": "25",
+          "byline": "Gisela, 72, Bad Eichholz",
+          "paragraphs": [
+            "Früher fand ich die Idee gut. Heute sehe ich das anders: Die kleinen Geschäfte haben gar nicht genug Personal, um auch noch am siebten Tag zu öffnen. Am Ende würden nur die großen Ketten profitieren, und die kleinen Läden müssten schließen. Deshalb bin ich inzwischen dagegen. Mein Neffe hat selbst einen kleinen Blumenladen und könnte sich das nicht leisten."
+          ]
+        },
+        {
+          "id": "tarek",
+          "label": "26",
+          "byline": "Tarek, 33, Lindweiler",
+          "paragraphs": [
+            "Ich bin Koch und arbeite sowieso jeden Sonntag. Ehrlich gesagt verstehe ich die ganze Diskussion nicht: Restaurants, Museen und Kinos haben sonntags auch geöffnet. Warum sollen dann gerade die Geschäfte geschlossen bleiben? Viele Menschen arbeiten heute sowieso zu ganz unterschiedlichen Zeiten. Ein Sonntag, an dem alles geschlossen ist, passt einfach nicht mehr in unsere Zeit."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "ja-nein",
+          "prompt": "Selin",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "selin",
+              "quote": "Wenn die Geschäfte sonntags offen wären, könnte ich alles in Ruhe erledigen."
+            }
+          ],
+          "explanation": "Selin vardiyalı çalıştığı için hafta içi alışverişe vakit bulamıyor; mağazalar pazar açık olsa her şeyi rahatça halledebileceğini söylüyor. Pazar açılışından yana: ja."
+        },
+        {
+          "number": 20,
+          "type": "ja-nein",
+          "prompt": "Karl",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "karl",
+              "quote": "Den sollten wir nicht für ein paar zusätzliche Einkäufe opfern."
+            }
+          ],
+          "explanation": "Tuzak: Karl „pratik olabilir“ diye başlıyor („Das mag sein“), ama sonra „Aber“ diyerek asıl görüşünü söylüyor: Pazar, ailenin bir arada olduğu tek gün ve birkaç alışveriş için feda edilmemeli. Karşı: nein."
+        },
+        {
+          "number": 21,
+          "type": "ja-nein",
+          "prompt": "Mira",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "mira",
+              "quote": "Mit offenen Geschäften wäre viel mehr los, und auch die Cafés hätten mehr Gäste."
+            }
+          ],
+          "explanation": "Mira pazar çalışması gerekebileceğini kabul ediyor ama bunun için ek ücret alacağını, ayrıca açık mağazalarla şehir merkezinin canlanacağını söylüyor. Yanında: ja."
+        },
+        {
+          "number": 22,
+          "type": "ja-nein",
+          "prompt": "Bernd",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "bernd",
+              "quote": "Aber der Sonntag ist für mich ein Ruhetag, und das soll er auch bleiben."
+            }
+          ],
+          "explanation": "Tuzak: Bernd hafta içi uzun çalışma saatlerine olumlu bakıyor („Bis 22 Uhr finde ich super“), ama soru pazar günüyle ilgili. Pazar onun için dinlenme günü ve öyle kalmalı. Karşı: nein."
+        },
+        {
+          "number": 23,
+          "type": "ja-nein",
+          "prompt": "Natalia",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "natalia",
+              "quote": "Wenn man die Einkäufe auf zwei Tage verteilen könnte, wäre es überall ruhiger."
+            }
+          ],
+          "explanation": "Natalia alışverişin iki güne dağılırsa her yerin daha sakin olacağını düşünüyor. Çalışanların iyi ücret alması gerektiğini eklemesi bir şart, karşı olduğu anlamına gelmiyor. Yanında: ja."
+        },
+        {
+          "number": 24,
+          "type": "ja-nein",
+          "prompt": "Ole",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "ole",
+              "quote": "Ich sehe das anders. Ich würde sonntags gern mit Freunden durch die Läden bummeln."
+            }
+          ],
+          "explanation": "Tuzak: Karşı olanlar Ole'nin anne babası. Ole „Ich sehe das anders“ diyor ve pazar günü arkadaşlarıyla mağazaları gezmek istiyor. Yanında: ja."
+        },
+        {
+          "number": 25,
+          "type": "ja-nein",
+          "prompt": "Gisela",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "gisela",
+              "quote": "Deshalb bin ich inzwischen dagegen."
+            }
+          ],
+          "explanation": "Tuzak: Gisela eskiden fikri iyi buluyormuş („Früher fand ich die Idee gut“), ama bugün küçük dükkanların zarar göreceğini düşünüyor ve „inzwischen dagegen“ – artık karşı. Önemli olan bugünkü görüşü: nein."
+        },
+        {
+          "number": 26,
+          "type": "ja-nein",
+          "prompt": "Tarek",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "tarek",
+              "quote": "Warum sollen dann gerade die Geschäfte geschlossen bleiben?"
+            }
+          ],
+          "explanation": "Tarek restoran, müze ve sinemaların pazar açık olduğunu hatırlatıp mağazaların neden kapalı kalması gerektiğini soruyor. Bu soru, mağazaların da açılmasından yana olduğunu gösteriyor: ja."
+        }
+      ]
+    }
+  ]
+}

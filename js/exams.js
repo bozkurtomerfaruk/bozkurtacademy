@@ -1,5 +1,6 @@
 // Sınav Hazırlığı (#exams): exam → level → section → Teil, built entirely from js/examsData.js.
-// Addresses: #exams, #exams/goethe, #exams/goethe/b1, #exams/goethe/b1/lesen (DTZ: #exams/dtz/lesen).
+// Addresses: #exams, #exams/goethe, #exams/goethe/b1, #exams/goethe/b1/lesen (DTZ: #exams/dtz/lesen),
+// and one exam set: #exams/goethe/b1/lesen/1/set-1 (Teil 1, set-1), played by js/exam-task.js.
 // Cards are ordinary links, so the browser keeps the history; this file only listens for the hash.
 (() => {
   'use strict';
@@ -9,6 +10,7 @@
   const data = window.BA_EXAMS;
   let focusNext = false;
   let rendered = '';
+  let renderedRoute = '';
 
   const t = key => window.BA?.t ? window.BA.t(key) : key;
   const fill = (key, values) => t(key).replace(/\{(\w+)\}/g, (_, name) => values[name] ?? '');
@@ -32,7 +34,7 @@
   // opens the nearest valid step instead of an empty page.
   function parseRoute(hash) {
     const parts = String(hash || '').replace(/^#/, '').split('/').filter(Boolean).map(decodePart);
-    const route = { exam: null, level: null, section: null };
+    const route = { exam: null, level: null, section: null, teil: null, set: null };
     if (parts[0] !== 'exams' || !data) return route;
 
     const exam = data.exams.find(item => item.id === parts[1] && !item.comingSoon);
@@ -49,6 +51,12 @@
     if (!route.level) return route;
 
     route.section = route.level.sections.find(item => item.id === rest[0]) || null;
+    if (!route.section) return route;
+
+    // An exam set: Teil number (from 1) and the set id listed in that Teil's exercises.
+    const teil = route.section.teile[Number(rest[1]) - 1];
+    const set = (teil?.exercises || []).find(item => item?.set && item.set === rest[2]);
+    if (set) { route.teil = Number(rest[1]); route.set = set; }
     return route;
   }
 
@@ -56,8 +64,12 @@
     if (!route.exam) return hashFor();
     const level = route.exam.skipLevel ? null : route.level?.id;
     if (!route.exam.skipLevel && !route.level) return hashFor(route.exam.id);
-    return hashFor(route.exam.id, level, route.section?.id);
+    return hashFor(route.exam.id, level, route.section?.id, route.set ? String(route.teil) : null, route.set?.set);
   }
+
+  // data/exams/goethe/b1/lesen/teil-1/set-1.json
+  const setPath = route => `data/exams/${route.exam.id}/${route.level.id}/${route.section.id}/teil-${route.teil}/${route.set.set}.json`;
+  const setTitle = (set, index) => loc(set.title) || fill('examSetFallback', { n: index + 1 });
 
   function step(route) {
     if (!route.exam) return 1;
@@ -112,14 +124,19 @@
         value: route.section ? (data.sections[route.section.id]?.name || route.section.id) : '',
         href: route.level ? routeHash({ ...route, section: null }) : null
       },
-      { label: t(partKey(exam, 'examStepTeil', 'examStepAufgabe')), value: '', href: null }
+      {
+        label: t(partKey(exam, 'examStepTeil', 'examStepAufgabe')),
+        // With a set open, the step shows "Teil 1 · title" and links back to the list of Teile.
+        value: route.set ? `${partName(exam, route.teil)} · ${setTitle(route.set, route.section.teile[route.teil - 1].exercises.indexOf(route.set))}` : '',
+        href: route.set ? routeHash({ ...route, teil: null, set: null }) : null
+      }
     ];
 
     return `<ol class="exam-steps">${items.map((item, index) => {
       const number = index + 1;
       const state = number < current ? 'done' : number === current ? 'current' : 'todo';
       const inner = `<span class="exam-step-no" aria-hidden="true">${number}</span><span class="exam-step-text"><span class="exam-step-label">${escapeHtml(item.label)}</span>${item.value ? `<strong>${escapeHtml(item.value)}</strong>` : ''}</span>`;
-      const body = state === 'done' && item.href
+      const body = (state === 'done' || route.set) && item.href
         ? `<a href="${item.href}" aria-label="${escapeHtml(fill('examStepBack', { step: item.label, value: item.value || '' }))}">${inner}</a>`
         : `<span class="exam-step-static">${inner}</span>`;
       return `<li class="exam-step is-${state}"${state === 'current' ? ' aria-current="step"' : ''}>${body}</li>`;
@@ -221,9 +238,10 @@
       + `<ul class="exam-grid" role="list">${cards}</ul>`;
   }
 
-  function exerciseLink(exercise, teilLabel, index) {
-    const title = loc(exercise.title) || fill('examSetFallback', { n: index + 1 });
-    const href = String(exercise.href || '');
+  function exerciseLink(exercise, teilLabel, index, route, teilNumber) {
+    const title = setTitle(exercise, index);
+    // A set of this site opens in the exam player; otherwise href is an address of this site or a full URL.
+    const href = exercise.set ? routeHash({ ...route, teil: teilNumber, set: exercise }) : String(exercise.href || '');
     const external = /^https?:\/\//i.test(href) && !href.startsWith(location.origin);
     return `<li class="exam-set">
       <span class="exam-set-title">${escapeHtml(title)}</span>
@@ -241,9 +259,9 @@
     const cards = section.teile.map((teil, index) => {
       const label = partName(exam, index + 1);
       const title = loc(teil.title);
-      const exercises = (teil.exercises || []).filter(item => item && item.href);
+      const exercises = (teil.exercises || []).filter(item => item && (item.href || item.set));
       const body = exercises.length
-        ? `<ul class="exam-sets" role="list">${exercises.map((item, i) => exerciseLink(item, label, i)).join('')}</ul>`
+        ? `<ul class="exam-sets" role="list">${exercises.map((item, i) => exerciseLink(item, label, i, route, index + 1)).join('')}</ul>`
         : `<p class="exam-teil-empty">${escapeHtml(t(partKey(exam, 'examNoExercises', 'examNoExercisesAufgabe')))}</p>
            <button class="btn exam-start" type="button" disabled aria-label="${escapeHtml(fill('examStartSoonLabel', { name: label }))}">${escapeHtml(t('examStart'))}</button>`;
       return `<li><article class="exam-card exam-teil${exercises.length ? '' : ' is-soon'}" aria-labelledby="exam-teil-${index + 1}">
@@ -258,6 +276,16 @@
     return heading(fill(partKey(exam, 'examChooseTeil', 'examChooseAufgabe'), { section: info.name }),
       fill(partKey(exam, 'examChooseTeilSub', 'examChooseAufgabeSub'), { exam: examTitle(exam, level), section: name }), routeHash({ ...route, section: null }))
       + `<ul class="exam-grid exam-teil-grid" role="list">${cards}</ul>`;
+  }
+
+  /* One exam set: the heading from here, the task itself from js/exam-task.js */
+  function renderTask(route) {
+    const { exam, level, section } = route;
+    const info = data.sections[section.id] || { name: section.id, translation: '' };
+    const index = section.teile[route.teil - 1].exercises.indexOf(route.set);
+    return heading(`${partName(exam, route.teil)} · ${setTitle(route.set, index)}`,
+      `${examTitle(exam, level)} · ${info.name}`, routeHash({ ...route, teil: null, set: null }))
+      + `<div class="exam-task" id="examTask"></div>`;
   }
 
   function render() {
@@ -275,12 +303,17 @@
     const key = routeHash(route) + '|' + lang();
     if (key === rendered) return;
     rendered = key;
+    // Same address, other language: an open set keeps its answers.
+    const sameRoute = renderedRoute === routeHash(route);
+    renderedRoute = routeHash(route);
 
     const current = step(route);
-    const views = [null, renderExams, () => renderLevels(route.exam), () => renderSections(route), () => renderTeile(route)];
+    const views = [null, renderExams, () => renderLevels(route.exam), () => renderSections(route),
+      () => route.set ? renderTask(route) : renderTeile(route)];
     root.querySelector('#examSteps').innerHTML = renderSteps(route);
     root.querySelector('#examView').innerHTML = views[current]();
-    root.dataset.step = String(current);
+    root.dataset.step = route.set ? 'task' : String(current);
+    if (route.set) window.BAExamTask?.render(root.querySelector('#examTask'), { path: setPath(route), preserve: sameRoute });
 
     if (focusNext) {
       focusNext = false;
@@ -320,7 +353,7 @@
   window.addEventListener('ba:pagechange', event => { if (event.detail?.page === 'exams') render(); });
   // On another page, draw again in the new language only when the exams page is opened.
   window.addEventListener('ba:languagechange', () => {
-    if (location.hash.startsWith('#exams')) render(); else rendered = '';
+    if (location.hash.startsWith('#exams')) render(); else { rendered = ''; renderedRoute = ''; }
   });
   document.addEventListener('DOMContentLoaded', setup);
 })();

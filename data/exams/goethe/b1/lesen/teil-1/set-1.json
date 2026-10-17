@@ -1,0 +1,90 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-1",
+  "title": "Neu im Dorf",
+  "minutes": 10,
+  "instructions": "Lesen Sie den Text und die Aufgaben 1 bis 6. Wählen Sie: Sind die Aussagen richtig oder falsch?",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "blog",
+          "title": "Mein erstes halbes Jahr auf dem Land",
+          "byline": "Lenas Blog",
+          "paragraphs": [
+            "Hallo zusammen! Viele von euch haben mich gefragt, wie es mir in meinem neuen Zuhause geht. Vor sechs Monaten bin ich mit meinem Freund Tobias aus Hallbergen, einer Großstadt im Norden, nach Wiesenbach gezogen. Wiesenbach ist ein kleines Dorf mit knapp 900 Einwohnern. Ehrlich gesagt hatte ich am Anfang ziemlich Angst vor diesem Schritt.",
+            "Der Grund für den Umzug war meine neue Stelle: Ich arbeite jetzt als Krankenpflegerin in der Klinik in Rothfeld, der nächsten Kleinstadt. Mit dem Bus brauche ich fast eine Stunde, deshalb fahre ich fast immer mit dem Auto. Tobias hat es leichter. Er ist Grafiker und arbeitet meistens von zu Hause aus.",
+            "Was mir sofort gefallen hat: Die Leute hier sind sehr hilfsbereit. Schon in der ersten Woche hat uns unsere Nachbarin Frau Albers einen Kuchen gebracht und erklärt, wann der Müll abgeholt wird. Inzwischen helfe ich ihr manchmal im Garten, und dafür zeigt sie mir, wie man Marmelade kocht.",
+            "Natürlich gibt es auch Nachteile. Im Dorf gibt es keinen Supermarkt, nur einen kleinen Laden, der schon um 16 Uhr schließt. Am Anfang habe ich oft vergessen, rechtzeitig einzukaufen. Heute schreibe ich jeden Sonntag eine Liste und kaufe am Montag nach der Arbeit im Supermarkt in Rothfeld für die ganze Woche ein.",
+            "Am meisten vermisse ich das Kino. In Hallbergen bin ich fast jede Woche mit Freundinnen ins Kino gegangen, aber in Wiesenbach gibt es keins. Dafür gibt es einen Chor, und seit März singe ich dort mit. Wir proben jeden Donnerstag im Gemeindehaus. Im Dezember geben wir unser erstes Konzert – ich bin jetzt schon nervös!",
+            "Würde ich wieder umziehen? Ja, auf jeden Fall! Nur eine Sache möchte ich noch ändern: Im Frühling wollen wir uns Fahrräder kaufen, damit wir auch ohne Auto in die Nachbarorte kommen. Bis bald, eure Lena"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Lena wohnt seit einem halben Jahr in Wiesenbach.",
+          "answer": "richtig",
+          "evidence": [{ "text": "blog", "quote": "Vor sechs Monaten bin ich mit meinem Freund Tobias aus Hallbergen, einer Großstadt im Norden, nach Wiesenbach gezogen." }],
+          "explanation": "Lena „vor sechs Monaten“ (altı ay önce) Wiesenbach'a taşındığını yazıyor. Altı ay, yarım yıl (ein halbes Jahr) demektir; bu yüzden ifade doğru."
+        },
+        {
+          "number": 1,
+          "type": "richtig-falsch",
+          "prompt": "Lena ist wegen einer neuen Arbeitsstelle nach Wiesenbach gezogen.",
+          "answer": "richtig",
+          "evidence": [{ "text": "blog", "quote": "Der Grund für den Umzug war meine neue Stelle" }],
+          "explanation": "Metin açıkça söylüyor: „Der Grund für den Umzug war meine neue Stelle“ – taşınmanın sebebi yeni işi. „Stelle“ ve „Arbeitsstelle“ aynı anlama gelir, ifade doğru."
+        },
+        {
+          "number": 2,
+          "type": "richtig-falsch",
+          "prompt": "Lena fährt meistens mit dem Bus zur Arbeit.",
+          "answer": "falsch",
+          "evidence": [{ "text": "blog", "quote": "deshalb fahre ich fast immer mit dem Auto" }],
+          "explanation": "Otobüs metinde geçiyor ama tuzak: Otobüsle neredeyse bir saat sürdüğü için Lena „fast immer mit dem Auto“ (neredeyse her zaman arabayla) gidiyor. Yani çoğunlukla otobüsle değil, arabayla gidiyor; ifade yanlış."
+        },
+        {
+          "number": 3,
+          "type": "richtig-falsch",
+          "prompt": "Lena hat ihrer Nachbarin in der ersten Woche einen Kuchen gebracht.",
+          "answer": "falsch",
+          "evidence": [{ "text": "blog", "quote": "Schon in der ersten Woche hat uns unsere Nachbarin Frau Albers einen Kuchen gebracht" }],
+          "explanation": "Kişiler ters çevrilmiş: Cümlede özne „unsere Nachbarin Frau Albers“, „uns“ ise Lena ve Tobias. Yani pastayı komşu getirdi, Lena değil. İfade yanlış."
+        },
+        {
+          "number": 4,
+          "type": "richtig-falsch",
+          "prompt": "Lena macht ihre Einkäufe heute für mehrere Tage auf einmal.",
+          "answer": "richtig",
+          "evidence": [{ "text": "blog", "quote": "kaufe am Montag nach der Arbeit im Supermarkt in Rothfeld für die ganze Woche ein" }],
+          "explanation": "Lena artık pazartesi günü işten sonra „für die ganze Woche“ (bütün hafta için) alışveriş yapıyor. Bütün hafta = birkaç gün için tek seferde alışveriş; ifade doğru."
+        },
+        {
+          "number": 5,
+          "type": "richtig-falsch",
+          "prompt": "Lena hat in Wiesenbach ein neues Hobby gefunden.",
+          "answer": "richtig",
+          "evidence": [{ "text": "blog", "quote": "Dafür gibt es einen Chor, und seit März singe ich dort mit." }],
+          "explanation": "Köyde sinema yok ama bir koro var ve Lena mart ayından beri orada şarkı söylüyor („seit März singe ich dort mit“). Koroda şarkı söylemek onun yeni hobisi; ifade doğru."
+        },
+        {
+          "number": 6,
+          "type": "richtig-falsch",
+          "prompt": "Lena hat mit dem Chor schon ein Konzert gegeben.",
+          "answer": "falsch",
+          "evidence": [{ "text": "blog", "quote": "Im Dezember geben wir unser erstes Konzert" }],
+          "explanation": "İlk konser aralıkta olacak: „Im Dezember geben wir unser erstes Konzert“ ve Lena „şimdiden heyecanlıyım“ diyor. Konser henüz verilmedi; ifade yanlış."
+        }
+      ]
+    }
+  ]
+}

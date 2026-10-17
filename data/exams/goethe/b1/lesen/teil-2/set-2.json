@@ -1,0 +1,164 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-2",
+  "title": "Schulgarten und Nachtbus",
+  "minutes": 20,
+  "instructions": "Lesen Sie die beiden Texte und die Aufgaben 7 bis 12. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "schulgarten",
+          "title": "Vom Beet auf den Markt: Schüler verkaufen ihr eigenes Gemüse",
+          "paragraphs": [
+            "Wenn Hannes Wolter nach seinem Lieblingsfach gefragt wird, antwortet er nicht „Biologie“, sondern „Garten“. Seit drei Jahren gibt es an der Gesamtschule Eichental das Wahlfach „Schulgarten“. Jeden Mittwochnachmittag arbeiten dort rund 25 Schülerinnen und Schüler aus den Klassen 7 bis 9 auf einem Stück Land hinter der Sporthalle. Das Fach ist so beliebt, dass es inzwischen eine Warteliste gibt.",
+            "Am Anfang war das Gelände nur eine Wiese. Die Jugendlichen haben die Beete selbst angelegt, einen Zaun gebaut und geplant, was wann gepflanzt wird. Werkzeug und Samen hat ihnen ein Gartencenter aus der Nachbarschaft geschenkt. „Die Schüler lernen hier Dinge, die man im Klassenzimmer nicht lernen kann“, sagt Wolter. „Zum Beispiel Geduld. Eine Kartoffel wächst nicht schneller, wenn man sie jeden Tag anschaut.“",
+            "Seit letztem Sommer verkaufen die Schüler ihre Ernte. Jeden ersten Samstag im Monat stehen sie mit einem eigenen Stand auf dem Wochenmarkt. Von dem Geld kaufen sie neue Pflanzen, und was übrig bleibt, spenden sie an eine Organisation, die Lebensmittel an bedürftige Familien verteilt.",
+            "In den Sommerferien kümmern sich Eltern und Nachbarn um den Garten, denn Tomaten und Bohnen brauchen auch im August Wasser. Für die Zukunft hat die Gruppe schon neue Pläne: Sie möchte Bienen halten und eigenen Honig verkaufen. Dafür muss Wolter aber zuerst einen Kurs bei einem Imkerverein machen. Und Wolter hat noch einen Wunsch: ein kleines Gewächshaus, damit die Gruppe auch im Winter etwas anbauen kann."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 7,
+          "type": "abc",
+          "prompt": "Im Wahlfach „Schulgarten“ …",
+          "options": {
+            "a": "lernen die Schüler auch, geduldig zu sein.",
+            "b": "arbeiten Schüler aus allen Klassen der Schule.",
+            "c": "sind die Schüler jeden Tag nach dem Unterricht im Garten."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "schulgarten",
+              "quote": "Zum Beispiel Geduld."
+            },
+            {
+              "text": "schulgarten",
+              "quote": "Jeden Mittwochnachmittag arbeiten dort rund 25 Schülerinnen und Schüler aus den Klassen 7 bis 9"
+            }
+          ],
+          "explanation": "Öğretmen Wolter, öğrencilerin bahçede sınıfta öğrenilemeyecek şeyler öğrendiğini söylüyor: „Zum Beispiel Geduld“ (örneğin sabır). b) yanlış: Sadece 7–9. sınıflardan öğrenciler katılıyor. c) yanlış: Bahçe çalışması her gün değil, sadece çarşamba öğleden sonraları."
+        },
+        {
+          "number": 8,
+          "type": "abc",
+          "prompt": "Das Werkzeug für den Garten …",
+          "options": {
+            "a": "haben die Schüler mit ihrem eigenen Geld gekauft.",
+            "b": "kommt aus dem Werkraum der Schule.",
+            "c": "war ein Geschenk."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "schulgarten",
+              "quote": "Werkzeug und Samen hat ihnen ein Gartencenter aus der Nachbarschaft geschenkt."
+            }
+          ],
+          "explanation": "Aletleri ve tohumları yakındaki bir bahçe merkezi hediye etmiş („geschenkt“). a) ve b) yanlış: Aletlerin nereden geldiği metinde açıkça yazıyor; öğrenciler satın almamış, okuldan da gelmemiş."
+        },
+        {
+          "number": 9,
+          "type": "abc",
+          "prompt": "Mit dem Geld vom Wochenmarkt …",
+          "options": {
+            "a": "bezahlen die Schüler ihre Klassenfahrt.",
+            "b": "kaufen die Schüler neue Pflanzen.",
+            "c": "bezahlt die Schule den Imkerkurs."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "schulgarten",
+              "quote": "Von dem Geld kaufen sie neue Pflanzen"
+            }
+          ],
+          "explanation": "Pazardan gelen parayla yeni bitkiler alıyorlar; kalanı ihtiyaç sahibi ailelere yiyecek dağıtan bir kuruluşa bağışlıyorlar. a) metinde geçmiyor. c) yanlış: Arıcılık kursundan söz ediliyor ama parasının pazar gelirinden ödendiği yazmıyor; kurs henüz yapılmadı bile."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "nachtbus",
+          "title": "Nachts sicher nach Hause: Marlingen testet eine neue Buslinie",
+          "paragraphs": [
+            "Wer in Marlingen abends ausgeht, hatte bisher ein Problem: Der letzte Bus fuhr schon um 23.15 Uhr. Danach blieben nur ein teures Taxi oder ein langer Fußweg. Das soll sich jetzt ändern. Seit dem 1. Mai fährt freitags und samstags die Nachtlinie N1 – bis 3 Uhr morgens und jede halbe Stunde.",
+            "Die Idee kam von jungen Leuten aus dem Jugendparlament der Stadt. Sie hatten im Winter über 2000 Unterschriften gesammelt. „Viele Jugendliche fahren nachts mit dem Fahrrad über die Landstraße nach Hause, auch bei Regen und ohne Licht. Das ist gefährlich“, sagt Leonie Stark (17), eine der Organisatorinnen. Mit den Unterschriften sind sie dann zum Bürgermeister gegangen.",
+            "Die N1 fährt vom Bahnhof durch die Innenstadt bis zu den Dörfern Hollbach und Kranzweiler. Eine Fahrt kostet 3,50 Euro, mit Schülerausweis die Hälfte. Die Fahrkarte kann man auch mit einer App kaufen; beim Fahrer kann man nur bar bezahlen. Fahrräder darf man im Nachtbus leider nicht mitnehmen.",
+            "In den ersten Wochen waren die Busse noch fast leer. Inzwischen fahren an einem normalen Samstag rund 300 Fahrgäste mit. Die Busfahrer berichten, dass es bisher kaum Probleme gab. Trotzdem fährt in jedem Bus ein Mitarbeiter eines Sicherheitsdienstes mit. Besonders voll ist der Bus kurz nach Mitternacht, wenn viele Veranstaltungen zu Ende sind.",
+            "Die Testphase dauert ein Jahr. Danach entscheidet die Stadt, ob die Linie bleibt. Wenn ja, könnte der Nachtbus in Zukunft auch vor Feiertagen fahren."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 10,
+          "type": "abc",
+          "prompt": "Die Nachtlinie N1 …",
+          "options": {
+            "a": "fährt jede Nacht bis 3 Uhr.",
+            "b": "fährt an zwei Tagen pro Woche alle 30 Minuten.",
+            "c": "fährt seit dem letzten Winter."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "nachtbus",
+              "quote": "Seit dem 1. Mai fährt freitags und samstags die Nachtlinie N1 – bis 3 Uhr morgens und jede halbe Stunde."
+            }
+          ],
+          "explanation": "N1 cuma ve cumartesi (haftada iki gün) her yarım saatte bir çalışıyor. a) yanlış: Her gece değil, sadece cuma ve cumartesi. c) yanlış: Kışın imza toplandı; otobüs 1 Mayıs'tan beri çalışıyor."
+        },
+        {
+          "number": 11,
+          "type": "abc",
+          "prompt": "Die Idee für die Nachtlinie …",
+          "options": {
+            "a": "hatten Jugendliche aus Marlingen.",
+            "b": "kam von den Busfahrern.",
+            "c": "kam von einem Sicherheitsdienst."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "nachtbus",
+              "quote": "Die Idee kam von jungen Leuten aus dem Jugendparlament der Stadt."
+            }
+          ],
+          "explanation": "Fikir şehrin gençlik meclisindeki gençlerden çıkmış ve 2000'den fazla imza toplamışlar. b) yanlış: Şoförler sadece şimdiye kadar pek sorun olmadığını anlatıyor. c) yanlış: Güvenlik görevlisi otobüste görev yapıyor, fikir onlardan gelmedi."
+        },
+        {
+          "number": 12,
+          "type": "abc",
+          "prompt": "Wer mit der N1 fährt, …",
+          "options": {
+            "a": "muss die Fahrkarte vorher mit der App kaufen.",
+            "b": "kann beim Fahrer mit der Bankkarte bezahlen.",
+            "c": "zahlt mit Schülerausweis 1,75 Euro."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "nachtbus",
+              "quote": "Eine Fahrt kostet 3,50 Euro, mit Schülerausweis die Hälfte."
+            },
+            {
+              "text": "nachtbus",
+              "quote": "beim Fahrer kann man nur bar bezahlen"
+            }
+          ],
+          "explanation": "Bir yolculuk 3,50 euro, öğrenci kimliğiyle yarı fiyatına: 3,50 ÷ 2 = 1,75 euro. a) yanlış: Uygulama sadece bir seçenek („auch“), bilet şoförden de alınabilir. b) yanlış: Şoföre sadece nakit ödeme yapılabiliyor („nur bar“)."
+        }
+      ]
+    }
+  ]
+}

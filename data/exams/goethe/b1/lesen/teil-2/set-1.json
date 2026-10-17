@@ -1,0 +1,167 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-1",
+  "title": "Bibliothek und Gemüsekiste",
+  "minutes": 20,
+  "instructions": "Lesen Sie die beiden Texte und die Aufgaben 7 bis 12. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "bibliothek",
+          "title": "Bücher, Spiele und Kaffee: Die Stadtbibliothek öffnet jetzt auch sonntags",
+          "paragraphs": [
+            "Seit Anfang des Jahres hat die Stadtbibliothek in Neuhagen auch am Sonntag geöffnet, und zwar von 11 bis 17 Uhr. Die Idee kam nicht von der Stadtverwaltung, sondern von den Bürgern selbst: Bei einer Umfrage im letzten Herbst hatten sich über 60 Prozent der Teilnehmer längere Öffnungszeiten am Wochenende gewünscht.",
+            "„Viele Menschen arbeiten unter der Woche bis spät am Abend und haben nur am Sonntag Zeit“, erklärt Bibliotheksleiterin Martina Kessler. Weil die Bibliothek aber kein zusätzliches Personal bezahlen kann, helfen am Sonntag Ehrenamtliche. Sie beantworten Fragen, zeigen den Besuchern die Automaten und räumen Bücher in die Regale. Ausleihen und zurückgeben kann man am Sonntag nur an diesen Automaten, denn eine Beratung durch die Bibliothekarinnen gibt es an diesem Tag nicht.",
+            "Das Angebot ist ein großer Erfolg. An manchen Sonntagen kommen mehr als 400 Besucher – fast so viele wie an einem normalen Samstag. Besonders beliebt ist der Familiennachmittag: Jeden zweiten Sonntag lesen Ehrenamtliche Kindern Geschichten vor, und im Spieleraum können Eltern und Kinder neue Brettspiele ausprobieren. Außerdem gibt es im Eingangsbereich jetzt ein kleines Café. Es wird von Schülerinnen und Schülern des Gymnasiums am Stadtpark betrieben, die mit dem Geld ihre Klassenfahrt finanzieren.",
+            "Nicht alle sind begeistert. Einige Anwohner beschweren sich über die vielen Autos, die am Sonntag in ihrer Straße parken. Die Stadt will deshalb im Frühjahr neue Fahrradständer vor der Bibliothek aufstellen. Ob die Bibliothek auch nach dem Ende der Testphase im Dezember sonntags öffnet, entscheidet der Stadtrat im Herbst."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 7,
+          "type": "abc",
+          "prompt": "In diesem Text geht es darum, dass …",
+          "options": {
+            "a": "die Stadtbibliothek neue Mitarbeiter sucht.",
+            "b": "man die Stadtbibliothek jetzt auch am Sonntag besuchen kann.",
+            "c": "die Bürger über die Öffnungszeiten abstimmen sollen."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "bibliothek",
+              "quote": "Seit Anfang des Jahres hat die Stadtbibliothek in Neuhagen auch am Sonntag geöffnet"
+            }
+          ],
+          "explanation": "Metnin ana konusu ilk cümlede: Kütüphane yılbaşından beri pazar günleri de açık. a) yanlış: Kütüphane ek personel alamadığı için gönüllülerle çalışıyor. c) yanlış: Anket geçen sonbaharda yapıldı; vatandaşların yeniden oylama yapacağı yazmıyor, kararı belediye meclisi verecek."
+        },
+        {
+          "number": 8,
+          "type": "abc",
+          "prompt": "Am Sonntag …",
+          "options": {
+            "a": "helfen Ehrenamtliche in der Bibliothek.",
+            "b": "beraten die Bibliothekarinnen die Besucher.",
+            "c": "kann man keine Bücher ausleihen."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "bibliothek",
+              "quote": "Weil die Bibliothek aber kein zusätzliches Personal bezahlen kann, helfen am Sonntag Ehrenamtliche."
+            },
+            {
+              "text": "bibliothek",
+              "quote": "Ausleihen und zurückgeben kann man am Sonntag nur an diesen Automaten"
+            }
+          ],
+          "explanation": "Pazar günü gönüllüler (Ehrenamtliche) yardım ediyor. b) yanlış: Metin pazar günü kütüphanecilerin danışmanlık yapmadığını söylüyor. c) yanlış: Kitap ödünç almak mümkün, ama sadece otomatlardan („nur an diesen Automaten“)."
+        },
+        {
+          "number": 9,
+          "type": "abc",
+          "prompt": "Das Café im Eingangsbereich …",
+          "options": {
+            "a": "wird von der Bibliothek geführt.",
+            "b": "ist nur am Familiennachmittag geöffnet.",
+            "c": "wird von Schülerinnen und Schülern betrieben."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "bibliothek",
+              "quote": "Es wird von Schülerinnen und Schülern des Gymnasiums am Stadtpark betrieben"
+            }
+          ],
+          "explanation": "Kafeyi Stadtpark Lisesi'nin öğrencileri işletiyor ve parayla sınıf gezisini finanse ediyor. a) yanlış: Kafeyi kütüphane değil öğrenciler işletiyor. b) yanlış: Aile öğleden sonrası iki haftada bir yapılan ayrı bir etkinlik; kafenin sadece o gün açık olduğu yazmıyor."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "gruenkiste",
+          "title": "Gemüse aus der Region – geliefert mit dem Lastenrad",
+          "paragraphs": [
+            "Wer bei „Grünkiste“ bestellt, bekommt sein Gemüse nicht aus einem Lieferwagen, sondern vom Fahrrad. Vor zwei Jahren haben die Freunde Jonas Brehm und Aylin Doğan das kleine Unternehmen in Talheim gegründet. Damals studierten beide noch Umwelttechnik und ärgerten sich darüber, dass im Supermarkt so viel Gemüse aus fernen Ländern liegt. Das Geld für die ersten Räder haben sie sich bei Freunden und Familie geliehen.",
+            "Heute arbeiten sie mit zwölf Bauernhöfen aus der Region zusammen. Die Kunden bestellen bis Dienstagabend im Internet, am Donnerstag wird die Kiste geliefert. Was in der Kiste ist, hängt von der Jahreszeit ab: Im Winter gibt es vor allem Kartoffeln, Kohl und Äpfel, im Sommer Salat, Tomaten und Beeren. „Manche Kunden waren am Anfang überrascht, dass es im Januar keine Erdbeeren gibt“, erzählt Aylin Doğan und lacht.",
+            "Geliefert wird mit sechs Lastenrädern. Das ist nicht nur gut für die Umwelt, sondern auch praktisch: In der engen Altstadt finden die Fahrer immer einen Platz zum Halten. Bei Schnee und Eis müssen sie allerdings manchmal doch ein Auto nehmen. Außerdem sind die Räder viel günstiger als ein Lieferwagen.",
+            "Inzwischen hat Grünkiste über 800 Kunden und acht Mitarbeiter. Die meisten von ihnen sind Studierende, die neben dem Studium ein paar Stunden pro Woche fahren. Billig ist das Angebot nicht: Eine Kiste für zwei Personen kostet 24 Euro. „Dafür wissen unsere Kunden genau, woher ihr Essen kommt“, sagt Jonas Brehm. Im nächsten Jahr wollen die beiden auch Brot und Käse von Betrieben aus der Region anbieten."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 10,
+          "type": "abc",
+          "prompt": "Jonas Brehm und Aylin Doğan haben Grünkiste gegründet, weil sie …",
+          "options": {
+            "a": "während des Studiums Geld verdienen wollten.",
+            "b": "mit dem Gemüse im Supermarkt unzufrieden waren.",
+            "c": "selbst einen Bauernhof hatten."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "gruenkiste",
+              "quote": "ärgerten sich darüber, dass im Supermarkt so viel Gemüse aus fernen Ländern liegt"
+            }
+          ],
+          "explanation": "Kuruluş nedeni olarak metinde tek bir şey veriliyor: Süpermarkette uzak ülkelerden gelen çok fazla sebze olmasına kızıyorlardı („ärgerten sich darüber“). a) metinde geçmiyor; öğrencilerin para kazanması çalışanlarla ilgili, kurucularla değil. c) yanlış: Kendi çiftlikleri yok, bölgedeki on iki çiftlikle çalışıyorlar."
+        },
+        {
+          "number": 11,
+          "type": "abc",
+          "prompt": "Die Kunden von Grünkiste …",
+          "options": {
+            "a": "bekommen ihre Kiste zweimal pro Woche.",
+            "b": "können auch im Winter Erdbeeren bekommen.",
+            "c": "bekommen Gemüse, das zur Jahreszeit passt."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "gruenkiste",
+              "quote": "Was in der Kiste ist, hängt von der Jahreszeit ab"
+            },
+            {
+              "text": "gruenkiste",
+              "quote": "dass es im Januar keine Erdbeeren gibt"
+            }
+          ],
+          "explanation": "Kutunun içeriği mevsime göre değişiyor („hängt von der Jahreszeit ab“). a) yanlış: Sipariş salı akşamına kadar verilir, kutu perşembe gelir – haftada bir kez. b) yanlış: Ocak ayında çilek yok; bazı müşteriler buna şaşırmış."
+        },
+        {
+          "number": 12,
+          "type": "abc",
+          "prompt": "Bei Grünkiste …",
+          "options": {
+            "a": "fahren vor allem Studierende die Kisten aus.",
+            "b": "liefern die Fahrer bei jedem Wetter mit dem Fahrrad.",
+            "c": "arbeiten acht Fahrer in Vollzeit."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "gruenkiste",
+              "quote": "Die meisten von ihnen sind Studierende, die neben dem Studium ein paar Stunden pro Woche fahren."
+            },
+            {
+              "text": "gruenkiste",
+              "quote": "Bei Schnee und Eis müssen sie allerdings manchmal doch ein Auto nehmen."
+            }
+          ],
+          "explanation": "Sekiz çalışanın çoğu, okulun yanında haftada birkaç saat teslimat yapan üniversite öğrencileri. b) yanlış: Kar ve buzda bazen araba kullanmak zorundalar. c) yanlış: Sekiz sayısı doğru ama çoğu tam zamanlı değil, haftada sadece birkaç saat çalışıyor."
+        }
+      ]
+    }
+  ]
+}

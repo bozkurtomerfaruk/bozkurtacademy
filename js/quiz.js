@@ -27,12 +27,6 @@
     return value[lang()] || value.tr || value.de || value.en || '';
   };
 
-
-
-
-
-
-
   function normalizeWritten(value){
     return String(value ?? '')
       .normalize('NFC')
@@ -99,7 +93,6 @@
     link.href='css/exercises-hub.css?v=6';
     document.head.appendChild(link);
   }
-
 
   async function loadJSON(path){
     const response = await fetch(path, {cache:'no-store'});

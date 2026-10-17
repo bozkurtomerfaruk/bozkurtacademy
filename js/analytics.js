@@ -10,8 +10,8 @@
   if(!gc?.count || gc.filter()) return;
 
   // How many hash segments identify a page: exercises/level/topic/exercise, grammar/level/topic,
-  // exams/exam/level/section.
-  const DEPTH = { exercises: 4, grammar: 3, exams: 4 };
+  // exams/exam/level/section/teil/set.
+  const DEPTH = { exercises: 4, grammar: 3, exams: 6 };
 
   function currentPath(){
     const parts = location.hash.replace(/^#/, '').split(/[/?]/).filter(Boolean);

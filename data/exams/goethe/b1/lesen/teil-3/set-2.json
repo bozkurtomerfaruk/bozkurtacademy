@@ -1,0 +1,206 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-2",
+  "title": "Wohnen, Arbeit und Hilfe",
+  "minutes": 10,
+  "context": "Verschiedene Personen suchen eine Wohnung, eine Arbeit oder eine Dienstleistung.",
+  "instructions": "Lesen Sie die Situationen 13 bis 19 und die Anzeigen a bis j. Welche Anzeige passt zu welcher Situation? Sie können jede Anzeige nur einmal verwenden. Die Anzeige aus dem Beispiel können Sie nicht mehr verwenden. Für eine Situation gibt es keine passende Anzeige. In diesem Fall wählen Sie 0.",
+  "groups": [
+    {
+      "layout": "ads",
+      "texts": [
+        {
+          "id": "a",
+          "label": "a",
+          "title": "Hundetagesstätte „Bello & Co.“",
+          "paragraphs": [
+            "Sie arbeiten und Ihr Hund ist allein zu Hause? Bei uns spielt er den ganzen Tag mit anderen Hunden auf unserem großen Gelände. Betreuung Montag bis Freitag von 7 bis 18 Uhr, Abholung mit dem Hundebus möglich. Der erste Probetag ist kostenlos."
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "title": "Waschmaschine abzugeben",
+          "paragraphs": [
+            "Wegen Umzug verkaufe ich meine Waschmaschine, drei Jahre alt, funktioniert einwandfrei. 150 Euro, nur Abholung. Bei Interesse bitte eine SMS an 0176 5550123. Die Maschine hat sieben Kilo Fassungsvermögen und ist sehr leise. Den Transport müssen Sie selbst organisieren."
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "title": "Zimmer frei – September bis November",
+          "paragraphs": [
+            "In unserer freundlichen 3er-WG ist vom 1. September bis zum 30. November ein Zimmer frei, komplett mit Bett, Schrank und Schreibtisch. 380 Euro warm, zehn Minuten zur Uni. Wir freuen uns auf dich! Internet ist im Preis enthalten."
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "title": "Lernstudio Pluspunkt sucht Verstärkung",
+          "paragraphs": [
+            "Du studierst und erklärst gern? Wir suchen Studierende, die Schülerinnen und Schülern der Klassen 5 bis 10 Nachhilfe in Mathematik oder Englisch geben. Flexible Zeiten, 15 Euro pro Stunde. Erfahrung ist nicht nötig, wir bereiten dich gut vor. Bewirb dich einfach per E-Mail."
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "title": "Umzüge Kraft & Söhne",
+          "paragraphs": [
+            "Ob ganze Wohnung oder nur ein einzelnes Möbelstück: Wir transportieren schnell und sicher. Mit Transporter und zwei starken Helfern, auch am Samstag. Rufen Sie an für ein kostenloses Angebot! Auf Wunsch bauen wir Ihre Möbel auch ab und wieder auf."
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "title": "Helle 3-Zimmer-Wohnung",
+          "paragraphs": [
+            "Schöne Altbauwohnung im 3. Stock, ohne Aufzug, mit großem Balkon und Blick ins Grüne. 78 m², 850 Euro kalt, frei ab 1. Oktober. Die Küche ist neu, Haustiere sind erlaubt. Besichtigung am Samstag um 11 Uhr."
+          ]
+        },
+        {
+          "id": "g",
+          "label": "g",
+          "title": "Aushilfe gesucht!",
+          "paragraphs": [
+            "Das Café am Marktplatz sucht freundliche Aushilfen für Samstag und Sonntag, jeweils von 8 bis 14 Uhr. Auch Schülerinnen und Schüler ab 16 Jahren sind willkommen. Wir bezahlen 13 Euro pro Stunde, dazu gibt es Trinkgeld und ein kostenloses Frühstück. Bewerbung bitte direkt im Café."
+          ]
+        },
+        {
+          "id": "h",
+          "label": "h",
+          "title": "Wohnung im Erdgeschoss",
+          "paragraphs": [
+            "Ruhige 2-Zimmer-Wohnung im Erdgeschoss, ohne Stufen bis zur Wohnungstür, mit kleinem Garten. Ideal für ältere Menschen. Ab sofort frei, Hausverwaltung Seidel. Die Bushaltestelle ist direkt vor dem Haus, ein Supermarkt nur 200 Meter entfernt. Miete 620 Euro warm."
+          ]
+        },
+        {
+          "id": "i",
+          "label": "i",
+          "title": "Verkäufer/in in Vollzeit",
+          "paragraphs": [
+            "Die Bäckerei Kornfeld sucht ab sofort eine Verkäuferin oder einen Verkäufer in Vollzeit, Montag bis Freitag ab 6 Uhr. Erfahrung im Verkauf ist erwünscht. Wir bieten ein gutes Gehalt und ein nettes Team. Bewerbungen bitte schriftlich an unsere Filiale in der Bahnhofstraße."
+          ]
+        },
+        {
+          "id": "j",
+          "label": "j",
+          "title": "Urlaubsservice Sorglos",
+          "paragraphs": [
+            "Sie sind verreist und Ihre Wohnung ist leer? Wir gießen Ihre Pflanzen, leeren den Briefkasten und lüften regelmäßig. Zuverlässig und günstig – auch für mehrere Wochen. Ein Anruf genügt, wir kommen auch kurzfristig. Nach jedem Besuch bekommen Sie eine kurze Nachricht mit Foto."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Ihr Freund macht ein Praktikum und sucht für drei Monate ein möbliertes Zimmer.",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "c",
+              "quote": "vom 1. September bis zum 30. November ein Zimmer frei, komplett mit Bett, Schrank und Schreibtisch"
+            }
+          ],
+          "explanation": "c ilanındaki oda eylülden kasım sonuna kadar, yani üç ay boşta ve eşyalı (yatak, dolap, masa). Bu ilan örnekte kullanıldığı için başka bir durumda seçilemez."
+        },
+        {
+          "number": 13,
+          "type": "zuordnung",
+          "prompt": "Eine Kollegin fährt drei Wochen in Urlaub. Jemand soll in dieser Zeit ihre Blumen gießen und den Briefkasten leeren.",
+          "answer": "j",
+          "evidence": [
+            {
+              "text": "j",
+              "quote": "Wir gießen Ihre Pflanzen, leeren den Briefkasten und lüften regelmäßig."
+            }
+          ],
+          "explanation": "j ilanı tatil hizmeti: bitkileri suluyor, posta kutusunu boşaltıyor, birkaç hafta için de çalışıyor. Meslektaşın istediği her şey bu ilanda var."
+        },
+        {
+          "number": 14,
+          "type": "zuordnung",
+          "prompt": "Ihr Bruder ist 17, geht noch zur Schule und sucht einen Job am Wochenende.",
+          "answer": "g",
+          "evidence": [
+            {
+              "text": "g",
+              "quote": "für Samstag und Sonntag, jeweils von 8 bis 14 Uhr. Auch Schülerinnen und Schüler ab 16 Jahren sind willkommen."
+            }
+          ],
+          "explanation": "g ilanındaki kafe cumartesi ve pazar için yardımcı arıyor ve 16 yaşından büyük öğrencileri de kabul ediyor. Tuzak i ilanı: O da bir iş ama hafta içi tam zamanlı; okula giden kardeş için uygun değil."
+        },
+        {
+          "number": 15,
+          "type": "zuordnung",
+          "prompt": "Ihre Nachbarin hat ein neues Sofa gekauft und braucht Hilfe beim Transport.",
+          "answer": "e",
+          "evidence": [
+            {
+              "text": "e",
+              "quote": "Ob ganze Wohnung oder nur ein einzelnes Möbelstück: Wir transportieren schnell und sicher."
+            }
+          ],
+          "explanation": "e ilanındaki nakliye firması tek bir mobilyayı da taşıyor („nur ein einzelnes Möbelstück“). Komşunun sadece bir kanepesi var; bu ilan uygun."
+        },
+        {
+          "number": 16,
+          "type": "zuordnung",
+          "prompt": "Ein Bekannter arbeitet ganztags und sucht jemanden, der sich tagsüber um seinen Hund kümmert.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "a",
+              "quote": "Betreuung Montag bis Freitag von 7 bis 18 Uhr"
+            }
+          ],
+          "explanation": "a ilanı bir köpek kreşi: Hafta içi 7–18 arası köpeğe bakıyorlar, tam gün çalışan biri için uygun."
+        },
+        {
+          "number": 17,
+          "type": "zuordnung",
+          "prompt": "Ihre Tante kann nicht mehr gut Treppen steigen und sucht eine neue Wohnung.",
+          "answer": "h",
+          "evidence": [
+            {
+              "text": "h",
+              "quote": "Ruhige 2-Zimmer-Wohnung im Erdgeschoss, ohne Stufen bis zur Wohnungstür"
+            }
+          ],
+          "explanation": "h ilanındaki daire zemin katta ve kapıya kadar hiç basamak yok. Tuzak f ilanı: Güzel bir daire ama asansörsüz 3. katta; merdiven çıkamayan teyze için uygun değil."
+        },
+        {
+          "number": 18,
+          "type": "zuordnung",
+          "prompt": "Ein Freund studiert Mathematik und möchte neben dem Studium Schülern helfen.",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "d",
+              "quote": "Wir suchen Studierende, die Schülerinnen und Schülern der Klassen 5 bis 10 Nachhilfe in Mathematik oder Englisch geben."
+            }
+          ],
+          "explanation": "d ilanındaki etüt merkezi, öğrencilere matematik veya İngilizce özel dersi verecek üniversite öğrencileri arıyor. Matematik okuyan arkadaş için uygun."
+        },
+        {
+          "number": 19,
+          "type": "zuordnung",
+          "prompt": "Ihr Mitbewohner sucht jemanden, der seine kaputte Waschmaschine repariert.",
+          "answer": "0",
+          "evidence": [
+            {
+              "text": "b",
+              "quote": "Wegen Umzug verkaufe ich meine Waschmaschine"
+            }
+          ],
+          "explanation": "Uygun ilan yok, cevap 0. Tuzak b ilanı: Çamaşır makinesi geçiyor ama burada biri makinesini satıyor, tamir etmiyor. Diğer ilanlarda da tamir hizmeti yok."
+        }
+      ]
+    }
+  ]
+}

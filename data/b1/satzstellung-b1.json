@@ -1699,9 +1699,9 @@
           "sentence": "Das Formular | muss | heute | ausgefüllt | werden.",
           "correct": "Das Formular muss heute ausgefüllt werden.",
           "explanations": {
-            "tr": "“Das Formular” ilk öğedir; çekimli muss ikinci öğeye gelir. werden ise sağ parantezi kapatan fiil parçasıdır ve sonda kalır. Doğru cevap: Das Formular muss heute ausgefüllt werden.",
-            "de": "„Das Formular“ bildet das erste Satzglied, muss ist das finite Verb an Position 2. werden schließt die Satzklammer am Ende. Richtige Antwort: Das Formular muss heute ausgefüllt werden.",
-            "en": "“Das Formular” is the first constituent; muss is the finite verb in position 2. werden closes the sentence bracket at the end. Correct answer: Das Formular muss heute ausgefüllt werden."
+            "tr": "“Das Formular” ilk öğedir; çekimli muss ikinci öğeye gelir. Sağ parantezi edilgen fiil grubu ausgefüllt werden kapatır: önce Partizip ausgefüllt, en sonda mastar werden. Doğru cevap: Das Formular muss heute ausgefüllt werden.",
+            "de": "„Das Formular“ bildet das erste Satzglied, muss ist das finite Verb an Position 2. ausgefüllt werden schließt die Satzklammer am Ende. Richtige Antwort: Das Formular muss heute ausgefüllt werden.",
+            "en": "“Das Formular” is the first constituent; muss is the finite verb in position 2. ausgefüllt werden closes the sentence bracket at the end. Correct answer: Das Formular muss heute ausgefüllt werden."
           },
           "type": "text",
           "answers": [
@@ -1728,7 +1728,7 @@
           "sentence": "Ich gebe | es | ihr.",
           "correct": "Ich gebe es ihr.",
           "explanations": {
-            "tr": "“Ich” ilk öğedir; çekimli gebe ikinci öğeye gelir. Özne ilk öğe değilse fiilden sonraki alana yerleşir. Doğru cevap: Ich gebe es ihr.",
+            "tr": "“Ich” ilk öğedir; çekimli gebe ikinci öğeye gelir. Ardından iki vurgusuz kişi zamiri gelir: önce Akkusativ es (verilen şey), sonra Dativ ihr (alıcı). Karşılaştır: Ich gebe ihr das Buch (isim nesne → Dativ önce). Doğru cevap: Ich gebe es ihr.",
             "de": "„Ich“ bildet das erste Satzglied, gebe ist das finite Verb an Position 2. Das erste Satzglied zählt als Einheit, nicht als einzelne Wörter. Richtige Antwort: Ich gebe es ihr.",
             "en": "“Ich” is the first constituent; gebe is the finite verb in position 2. Count constituents rather than individual words. Correct answer: Ich gebe es ihr."
           },

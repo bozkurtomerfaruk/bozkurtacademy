@@ -627,7 +627,7 @@
           "sentence": "Fahrt ihr am Samstag ___ Polen?",
           "correct": "nach",
           "explanations": {
-            "tr": "Polen? gidilen hedef. Şehir veya artikelsiz ülke adına yönelirken nach kullanılır; in bu temel karşılaştırmada bulunulan yeri anlatır. Doğru cevap: nach",
+            "tr": "Doğru cevap: nach. Polen artikelsiz bir ülke adıdır; şehir ve artikelsiz ülkelere giderken nach kullanılır. Karşılaştır: in die Türkei (artikelli ülke), zu meiner Oma (kişi).",
             "de": "Polen? ist das Ziel. Bei Städten und Ländern ohne Artikel steht für das Ziel nach. Richtige Antwort: nach",
             "en": "Polen? is the destination. Use nach for a city or country without an article as the destination. Correct answer: nach"
           },
@@ -785,12 +785,12 @@
         },
         {
           "word": "Lokale Präpositionen",
-          "sentence": "Dieser Zug kommt ___ München.",
+          "sentence": "Meine Kollegin kommt ___ München. Sie ist dort geboren.",
           "correct": "aus",
           "explanations": {
-            "tr": "München içinden çıkılan yer veya şehir/ülke kökenidir. Bu nedenle aus + Dativ gerekir; von bir kişi/etkinlikten dönüşü anlatabilir. Doğru cevap: aus",
-            "de": "München bezeichnet einen Innenraum oder eine Orts-/Landesherkunft. Daher aus + Dativ. Richtige Antwort: aus",
-            "en": "München identifies an interior or city/country of origin. Use aus + dative. Correct answer: aus"
+            "tr": "Doğru cevap: aus. Kişinin nereli olduğunu (doğduğu şehir/ülke) söylerken aus + Dativ kullanılır: Sie kommt aus München. 'Sie ist dort geboren' kökeni gösterir. Karşılaştır: Sie kommt gerade von ihrer Freundin (bir kişiden dönüş → von).",
+            "de": "Richtige Antwort: aus. Bei der Herkunft (Geburtsort, Stadt, Land) steht aus + Dativ: Sie kommt aus München. „Sie ist dort geboren“ zeigt die Herkunft. Vergleich: Sie kommt gerade von ihrer Freundin (Rückkehr von einer Person → von).",
+            "en": "Correct answer: aus. For origin (place of birth, city, country) use aus + dative: Sie kommt aus München. “Sie ist dort geboren” signals origin. Compare: Sie kommt gerade von ihrer Freundin (coming back from a person → von)."
           },
           "type": "text",
           "answers": [
@@ -802,7 +802,7 @@
           "sentence": "Wir kommen ___ zu Hause.",
           "correct": "von",
           "explanations": {
-            "tr": "zu Hause dönüşün/gelmenin başlangıç noktasıdır: kişi, ziyaret veya etkinlik. Bu yüzden von + Dativ seçilir; aus ise bir yerin içinden çıkışı ya da şehir/ülke kökenini öne çıkarır. Doğru cevap: von",
+            "tr": "Doğru cevap: von. 'Evden gelmek' kalıbı von zu Hause'dir: von + zu Hause. Karşılaştır: Ich bin zu Hause. (evdeyim) / Ich gehe nach Hause. (eve gidiyorum)",
             "de": "zu Hause nennt den Ausgangspunkt bei einer Person, einem Besuch oder einer Veranstaltung. Dafür von + Dativ; aus würde einen Innenraum oder die Ortsherkunft bezeichnen. Richtige Antwort: von",
             "en": "zu Hause is the starting point at a person, visit or event. Use von + dative; aus would emphasize leaving an interior or a city/country of origin. Correct answer: von"
           },
@@ -1446,7 +1446,7 @@
           "sentence": "Wir fahren ___ Tunnel. (durch + der)",
           "correct": "durch den",
           "explanations": {
-            "tr": "Burada güzergâh bildiren durch edatı nedeniyle Akkusativ gerekir. Tunnel için doğru grup/biçim durch den olur. Hareket olsa bile sabit Dativ edatı veya mevcut konum bilgisi hâli belirler. Doğru cevap: durch den",
+            "tr": "Doğru cevap: durch den. durch her zaman Akkusativ ister (hareket olsun olmasın): der Tunnel → durch den Tunnel. Karşılaştır: in dem Tunnel (konum, Dativ).",
             "de": "Hier verlangt die Präposition durch Akkusativ. Für Tunnel lautet die benötigte Form durch den. Richtige Antwort: durch den",
             "en": "Here the preposition durch requires Akkusativ. The needed form for Tunnel is durch den. Correct answer: durch den"
           },
@@ -1460,7 +1460,7 @@
           "sentence": "Sie laufen ___ See herum. (um + der)",
           "correct": "um den",
           "explanations": {
-            "tr": "Burada güzergâh bildiren um edatı nedeniyle Akkusativ gerekir. See herum için doğru grup/biçim um den olur. Hareket olsa bile sabit Dativ edatı veya mevcut konum bilgisi hâli belirler. Doğru cevap: um den",
+            "tr": "Doğru cevap: um den. um (etrafında) her zaman Akkusativ ister: der See → um den See herum.",
             "de": "Hier verlangt die Präposition um Akkusativ. Für See herum lautet die benötigte Form um den. Richtige Antwort: um den",
             "en": "Here the preposition um requires Akkusativ. The needed form for See herum is um den. Correct answer: um den"
           },
@@ -1622,7 +1622,7 @@
           "sentence": "Hatalı / Falsch / Incorrect: Wir gehen durch dem Park. → ___",
           "correct": "durch den Park",
           "explanations": {
-            "tr": "Burada güzergâh bildiren durch edatı nedeniyle Akkusativ gerekir. durch den Park için doğru grup/biçim durch den Park olur. Hareket olsa bile sabit Dativ edatı veya mevcut konum bilgisi hâli belirler. Doğru cevap: durch den Park",
+            "tr": "Doğru cevap: durch den Park. durch her zaman Akkusativ ister; dem (Dativ) yanlıştır: der Park → durch den Park.",
             "de": "Hier verlangt die Präposition durch Akkusativ. Für durch den Park lautet die benötigte Form durch den Park. Richtige Antwort: durch den Park",
             "en": "Here the preposition durch requires Akkusativ. The needed form for durch den Park is durch den Park. Correct answer: durch den Park"
           },

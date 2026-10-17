@@ -1051,7 +1051,7 @@
         },
         {
           "word": "Uhrzeit",
-          "sentence": "___ beginnt der Zug? – Um 8:15 Uhr.",
+          "sentence": "___ fährt der Zug ab? – Um 8:15 Uhr.",
           "options": [
             "Wie oft",
             "Um wie viel Uhr",
@@ -1059,9 +1059,9 @@
           ],
           "correct": "Um wie viel Uhr",
           "explanations": {
-            "tr": "Doğru cevap: Um wie viel Uhr. Kesin saat sorusu için Um wie viel Uhr.",
-            "de": "Die richtige Antwort ist „Um wie viel Uhr“. Kesin saat sorusu için Um wie viel Uhr. Bestimme in „___ beginnt der Zug? – Um 8:15 Uhr.“ zuerst, welche Information gefragt ist: Person, Sache/Handlung, Ort, Herkunft, Ziel, Zeit, Grund, Art, Menge, Anzahl, Dauer oder Häufigkeit. Nach dem W-Wort steht normalerweise das konjugierte Verb.",
-            "en": "The correct answer is “Um wie viel Uhr”. Kesin saat sorusu için Um wie viel Uhr. In “___ beginnt der Zug? – Um 8:15 Uhr.”, first identify the requested information: person, thing/action, place, origin, destination, time, reason, manner, amount, number, duration or frequency. The conjugated verb normally follows the W-word."
+            "tr": "Doğru cevap: Um wie viel Uhr. Cevap kesin bir saat (Um 8:15 Uhr) olduğu için Um wie viel Uhr …? sorulur. Trenler için 'beginnen' değil abfahren (kalkmak) kullanılır.",
+            "de": "Die richtige Antwort ist „Um wie viel Uhr“. Kesin saat sorusu için Um wie viel Uhr. Bestimme in „___ fährt der Zug ab? – Um 8:15 Uhr.“ zuerst, welche Information gefragt ist: Person, Sache/Handlung, Ort, Herkunft, Ziel, Zeit, Grund, Art, Menge, Anzahl, Dauer oder Häufigkeit. Nach dem W-Wort steht normalerweise das konjugierte Verb.",
+            "en": "The correct answer is “Um wie viel Uhr”. Kesin saat sorusu için Um wie viel Uhr. In “___ fährt der Zug ab? – Um 8:15 Uhr.”, first identify the requested information: person, thing/action, place, origin, destination, time, reason, manner, amount, number, duration or frequency. The conjugated verb normally follows the W-word."
           }
         },
         {
@@ -2562,15 +2562,15 @@
         {
           "type": "text",
           "word": "ankommen",
-          "sentence": "Antwort: Der Zug kommt aus Berlin an. – Frage nach der Herkunft.",
-          "correct": "Woher kommt der Zug an?",
+          "sentence": "Antwort: Der Zug kommt an Gleis 5 an. – Frage nach dem Ort.",
+          "correct": "Wo kommt der Zug an?",
           "answers": [
-            "woher kommt der zug an"
+            "wo kommt der zug an"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Woher kommt der Zug an?. ankommen bağlamında geldiği kaynak Woher ile sorulabilir.",
-            "de": "Die richtige Antwort ist „Woher kommt der Zug an?“. ankommen bağlamında geldiği kaynak Woher ile sorulabilir. Bestimme in „Antwort: Der Zug kommt aus Berlin an. – Frage nach der Herkunft.“ zuerst, welche Information gefragt ist: Person, Sache/Handlung, Ort, Herkunft, Ziel, Zeit, Grund, Art, Menge, Anzahl, Dauer oder Häufigkeit. Nach dem W-Wort steht normalerweise das konjugierte Verb.",
-            "en": "The correct answer is “Woher kommt der Zug an?”. ankommen bağlamında geldiği kaynak Woher ile sorulabilir. In “Antwort: Der Zug kommt aus Berlin an. – Frage nach der Herkunft.”, first identify the requested information: person, thing/action, place, origin, destination, time, reason, manner, amount, number, duration or frequency. The conjugated verb normally follows the W-word."
+            "tr": "Doğru cevap: Wo kommt der Zug an? Yer soruluyor → Wo. ankommen ayrılabilir: çekimli kısım (kommt) soru kelimesinden sonra, ön ek (an) sonda.",
+            "de": "Richtig ist „Wo kommt der Zug an?“: Gefragt ist der Ort (an Gleis 5). ankommen ist trennbar: kommt … an.",
+            "en": "The answer is “Wo kommt der Zug an?”: the question asks for the place; ankommen is separable (kommt … an)."
           }
         },
         {
@@ -2687,7 +2687,8 @@
           "sentence": "Antwort: Ich kann gut kochen. – Frage nach der Fähigkeit.",
           "correct": "Was kannst du gut?",
           "answers": [
-            "was kannst du gut"
+            "was kannst du gut",
+            "was kannst du gut machen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Was kannst du gut?. Modalverb ikinci pozisyonda; infinitiv sonda.",
@@ -2802,7 +2803,9 @@
           "correct": "Wie lange darfst du draußen bleiben?",
           "answers": [
             "wie lange darfst du draussen bleiben",
-            "wie lange darfst du draußen bleiben"
+            "wie lange darfst du draußen bleiben",
+            "bis wann darfst du draußen bleiben",
+            "bis wann darfst du draussen bleiben"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wie lange darfst du draußen bleiben?. Süre sınırı → Wie lange.",
@@ -2894,7 +2897,9 @@
           "sentence": "Antwort: Das Ticket ist teuer, es kostet 40 Euro.",
           "correct": "Wie teuer ist das Ticket?",
           "answers": [
-            "wie teuer ist das ticket"
+            "wie teuer ist das ticket",
+            "wie viel kostet das ticket",
+            "was kostet das ticket"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wie teuer ist das Ticket?. Fiyat sıfatı + sein.",
@@ -2966,7 +2971,8 @@
           "correct": "Wie heißt du?",
           "answers": [
             "wie heisst du",
-            "wie heißt du"
+            "wie heißt du",
+            "wie ist dein name"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wie heißt du?. Doğal isim sorusu Wie heißt du? olarak kurulur.",
@@ -3114,7 +3120,9 @@
           "sentence": "Antwort: Für die Schule. – Verb: lernen / du / Deutsch",
           "correct": "Warum lernst du Deutsch?",
           "answers": [
-            "warum lernst du deutsch"
+            "warum lernst du deutsch",
+            "wofür lernst du deutsch",
+            "wofuer lernst du deutsch"
           ],
           "explanations": {
             "tr": "Doğru cevap: Warum lernst du Deutsch?. Sebep/amaç.",
@@ -3691,7 +3699,9 @@
           "sentence": "Durum: Arkadaşının hafta sonu nereye gittiğini sor.",
           "correct": "Wohin gehst du am Wochenende?",
           "answers": [
-            "wohin gehst du am wochenende"
+            "wohin gehst du am wochenende",
+            "wohin fährst du am wochenende",
+            "wohin faehrst du am wochenende"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wohin gehst du am Wochenende?. Hedef → Wohin.",
@@ -3733,7 +3743,9 @@
           "sentence": "Durum: Birinin işe nasıl gittiğini sor.",
           "correct": "Wie kommst du zur Arbeit?",
           "answers": [
-            "wie kommst du zur arbeit"
+            "wie kommst du zur arbeit",
+            "wie fährst du zur arbeit",
+            "wie faehrst du zur arbeit"
           ],
           "explanations": {
             "tr": "Doğru cevap: “Wie kommst du zur Arbeit?”. Yöntem. “Durum: Birinin işe nasıl gittiğini sor.” sorusunda önce hangi bilginin istendiğini belirle: kişi, şey/eylem, yer, kaynak, hedef, zaman, sebep, biçim, miktar, sayı, süre veya sıklık. W-sözcüğünden sonra çekimli fiil gelir; özne sorulmuyorsa özne genellikle fiilden sonra gelir.",
@@ -3747,7 +3759,9 @@
           "sentence": "Durum: Birinin haftada kaç kez spor yaptığını sor.",
           "correct": "Wie oft machst du Sport?",
           "answers": [
-            "wie oft machst du sport"
+            "wie oft machst du sport",
+            "wie oft machst du pro woche sport",
+            "wie oft pro woche machst du sport"
           ],
           "explanations": {
             "tr": "Doğru cevap: “Wie oft machst du Sport?”. Sıklık. “Durum: Birinin haftada kaç kez spor yaptığını sor.” sorusunda önce hangi bilginin istendiğini belirle: kişi, şey/eylem, yer, kaynak, hedef, zaman, sebep, biçim, miktar, sayı, süre veya sıklık. W-sözcüğünden sonra çekimli fiil gelir; özne sorulmuyorsa özne genellikle fiilden sonra gelir.",
@@ -3775,7 +3789,9 @@
           "sentence": "Durum: Masada ne olduğunu sor.",
           "correct": "Was ist auf dem Tisch?",
           "answers": [
-            "was ist auf dem tisch"
+            "was ist auf dem tisch",
+            "was liegt auf dem tisch",
+            "was steht auf dem tisch"
           ],
           "explanations": {
             "tr": "Doğru cevap: Was ist auf dem Tisch?. Şey → Was.",
@@ -3867,7 +3883,8 @@
           "sentence": "Antwort: Das kostet 12 Euro. – Frage nach dem Preis.",
           "correct": "Wie viel kostet das?",
           "answers": [
-            "wie viel kostet das"
+            "wie viel kostet das",
+            "was kostet das"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wie viel kostet das?. Fiyat/miktar.",
@@ -3953,7 +3970,11 @@
           "correct": "Wohin fährst du morgen? – Nach Berlin",
           "answers": [
             "wohin faehrst du morgen? – nach berlin",
-            "wohin fährst du morgen? – nach berlin"
+            "wohin fährst du morgen? – nach berlin",
+            "wohin fährst du morgen? - nach berlin",
+            "wohin faehrst du morgen? - nach berlin",
+            "wohin fährst du morgen",
+            "wohin faehrst du morgen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wohin fährst du morgen? – Nach Berlin. Nach Berlin hedef olduğu için Wohin.",
@@ -3989,7 +4010,11 @@
           "correct": "Wohin fährt deine Schwester morgen um 7 Uhr mit dem Zug?",
           "answers": [
             "wohin faehrt deine schwester morgen um 7 uhr mit dem zug",
-            "wohin fährt deine schwester morgen um 7 uhr mit dem zug"
+            "wohin fährt deine schwester morgen um 7 uhr mit dem zug",
+            "wohin fährt deine schwester morgen",
+            "wohin faehrt deine schwester morgen",
+            "wohin fährt deine schwester",
+            "wohin faehrt deine schwester"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wohin fährt deine Schwester morgen um 7 Uhr mit dem Zug?. Hedef → Wohin.",
@@ -4004,7 +4029,11 @@
           "correct": "Um wie viel Uhr fährt deine Schwester morgen mit dem Zug nach Hamburg?",
           "answers": [
             "um wie viel uhr faehrt deine schwester morgen mit dem zug nach hamburg",
-            "um wie viel uhr fährt deine schwester morgen mit dem zug nach hamburg"
+            "um wie viel uhr fährt deine schwester morgen mit dem zug nach hamburg",
+            "um wie viel uhr fährt deine schwester morgen nach hamburg",
+            "um wie viel uhr faehrt deine schwester morgen nach hamburg",
+            "um wie viel uhr fährt deine schwester morgen",
+            "um wie viel uhr faehrt deine schwester morgen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Um wie viel Uhr fährt deine Schwester morgen mit dem Zug nach Hamburg?. Kesin saat.",
@@ -4019,7 +4048,11 @@
           "correct": "Wie fährt deine Schwester morgen um 7 Uhr nach Hamburg?",
           "answers": [
             "wie faehrt deine schwester morgen um 7 uhr nach hamburg",
-            "wie fährt deine schwester morgen um 7 uhr nach hamburg"
+            "wie fährt deine schwester morgen um 7 uhr nach hamburg",
+            "wie fährt deine schwester nach hamburg",
+            "wie faehrt deine schwester nach hamburg",
+            "wie fährt deine schwester morgen nach hamburg",
+            "wie faehrt deine schwester morgen nach hamburg"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wie fährt deine Schwester morgen um 7 Uhr nach Hamburg?. Ulaşım biçimi → Wie.",
@@ -4033,7 +4066,9 @@
           "sentence": "Bilde Frage: Antwort: Paul lernt seit einem Jahr dreimal pro Woche Deutsch. – Frage nach der Dauer.",
           "correct": "Wie lange lernt Paul schon Deutsch?",
           "answers": [
-            "wie lange lernt paul schon deutsch"
+            "wie lange lernt paul schon deutsch",
+            "seit wann lernt paul deutsch",
+            "wie lange lernt paul deutsch"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wie lange lernt Paul schon Deutsch?. Süre → Wie lange.",
@@ -4118,7 +4153,9 @@
           "correct": "Wie heißt du? Wie alt bist du? Woher kommst du?",
           "answers": [
             "wie heisst du? wie alt bist du? woher kommst du",
-            "wie heißt du? wie alt bist du? woher kommst du"
+            "wie heißt du? wie alt bist du? woher kommst du",
+            "wie heißt du, wie alt bist du, woher kommst du",
+            "wie heisst du, wie alt bist du, woher kommst du"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wie heißt du? Wie alt bist du? Woher kommst du?. Üç farklı bilgi türü: isim, yaş, köken.",

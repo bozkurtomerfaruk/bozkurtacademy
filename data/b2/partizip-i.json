@@ -135,7 +135,7 @@
           ],
           "correct": "schwimmend",
           "explanations": {
-            "tr": "Doğru cevap: schwimmend. Partizip I wird aus dem Infinitiv + d gebildet: schwimmen + d → schwimmend.",
+            "tr": "Doğru cevap: schwimmend. Partizip I, Infinitiv'e -d eklenerek yapılır: schwimmen + d → schwimmend. geschwommen Partizip II'dir; schwimmernd diye bir biçim yoktur.",
             "de": "Die richtige Antwort ist „schwimmend“. Achte bei „Welche Form ist das richtige Partizip I von „schwimmen“?“ auf die Bildung des Partizips I, die Nominalgruppe und gegebenenfalls auf die Adjektivendung.",
             "en": "The correct answer is “schwimmend”. In “Welche Form ist das richtige Partizip I von „schwimmen“?”, check the formation of Participle I, the noun phrase and, where necessary, the adjective ending."
           }
@@ -150,7 +150,7 @@
           ],
           "correct": "spielend",
           "explanations": {
-            "tr": "Doğru cevap: spielend. spielen + d ergibt spielend; gespielt ist Partizip II.",
+            "tr": "Doğru cevap: spielend. Partizip I = Infinitiv + d: spielen + d → spielend. gespielt Partizip II'dir; spielernd diye bir biçim yoktur.",
             "de": "Die richtige Antwort ist „spielend“. Achte bei „Welche Form ist das richtige Partizip I von „spielen“?“ auf die Bildung des Partizips I, die Nominalgruppe und gegebenenfalls auf die Adjektivendung.",
             "en": "The correct answer is “spielend”. In “Welche Form ist das richtige Partizip I von „spielen“?”, check the formation of Participle I, the noun phrase and, where necessary, the adjective ending."
           }
@@ -165,7 +165,7 @@
           ],
           "correct": "lernend",
           "explanations": {
-            "tr": "Doğru cevap: lernend. Der Infinitiv lernen erhält ein -d: lernend.",
+            "tr": "Doğru cevap: lernend. Infinitiv lernen'e -d eklenir: lernen + d → lernend. gelernt Partizip II'dir; lernernd diye bir biçim yoktur.",
             "de": "Die richtige Antwort ist „lernend“. Achte bei „Welche Form ist das richtige Partizip I von „lernen“?“ auf die Bildung des Partizips I, die Nominalgruppe und gegebenenfalls auf die Adjektivendung.",
             "en": "The correct answer is “lernend”. In “Welche Form ist das richtige Partizip I von „lernen“?”, check the formation of Participle I, the noun phrase and, where necessary, the adjective ending."
           }
@@ -180,7 +180,7 @@
           ],
           "correct": "fliegend",
           "explanations": {
-            "tr": "Doğru cevap: fliegend. fliegen + d → fliegend; geflogen gehört zum Partizip II.",
+            "tr": "Doğru cevap: fliegend. Partizip I = Infinitiv + d: fliegen + d → fliegend. geflogen Partizip II'dir; fliegernd diye bir biçim yoktur.",
             "de": "Die richtige Antwort ist „fliegend“. Achte bei „Welche Form ist das richtige Partizip I von „fliegen“?“ auf die Bildung des Partizips I, die Nominalgruppe und gegebenenfalls auf die Adjektivendung.",
             "en": "The correct answer is “fliegend”. In “Welche Form ist das richtige Partizip I von „fliegen“?”, check the formation of Participle I, the noun phrase and, where necessary, the adjective ending."
           }
@@ -668,10 +668,11 @@
           "sentence": "Forme um: „Menschen, die Sport treiben“",
           "correct": "Sport treibende Menschen",
           "answers": [
-            "sport treibende menschen"
+            "sport treibende menschen",
+            "sporttreibende menschen"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Sport treibende Menschen. Kaynakta 'Sport treibende Menschen' modeli bulunur; treiben → treibend.",
+            "tr": "Doğru cevap: Sport treibende Menschen. Relativsatz'daki nesne (Sport) Partizip I'in önüne geçer: treiben → treibend. Artikelsiz çoğul Nominativ'de sıfat sonu -e olur: Sport treibende Menschen (bitişik sporttreibende de yazılabilir).",
             "de": "Die richtige Antwort ist „Sport treibende Menschen“. Achte bei „Forme um: „Menschen, die Sport treiben““ auf die Bildung des Partizips I, die Nominalgruppe und gegebenenfalls auf die Adjektivendung.",
             "en": "The correct answer is “Sport treibende Menschen”. In “Forme um: „Menschen, die Sport treiben“”, check the formation of Participle I, the noun phrase and, where necessary, the adjective ending."
           }
@@ -1191,10 +1192,11 @@
           "sentence": "Ergänze: „Wir besuchen eine ___ Frau.“ (allein leben)",
           "correct": "alleinlebende",
           "answers": [
-            "alleinlebende"
+            "alleinlebende",
+            "allein lebende"
           ],
           "explanations": {
-            "tr": "Doğru cevap: alleinlebende. eine + feminin Akkusativ → -e; alleinleben → alleinlebend.",
+            "tr": "Doğru cevap: alleinlebende. allein leben → alleinlebend (ayrı da yazılabilir: allein lebend). Wir besuchen + Akkusativ; feminin eine'den sonra son -e olur: eine alleinlebende Frau.",
             "de": "Die richtige Antwort ist „alleinlebende“. Achte bei „Ergänze: „Wir besuchen eine ___ Frau.“ (allein leben)“ auf die Bildung des Partizips I, die Nominalgruppe und gegebenenfalls auf die Adjektivendung.",
             "en": "The correct answer is “alleinlebende”. In “Ergänze: „Wir besuchen eine ___ Frau.“ (allein leben)”, check the formation of Participle I, the noun phrase and, where necessary, the adjective ending."
           }
@@ -1556,7 +1558,8 @@
           "sentence": "Ergänze: „Die Bedürfnisse ___ Personen unterscheiden sich.“ (allein leben)",
           "correct": "alleinlebender",
           "answers": [
-            "alleinlebender"
+            "alleinlebender",
+            "allein lebender"
           ],
           "explanations": {
             "tr": "Doğru cevap: alleinlebender. Nullartikel Genitiv plural → -er.",
@@ -1857,15 +1860,15 @@
         {
           "type": "text",
           "word": "Präpositionen",
-          "sentence": "Ergänze: „Die Polizei steht gegen laut ___ Demonstranten.“ (protestieren)",
+          "sentence": "Ergänze: „Die Polizei geht gegen laut ___ Demonstranten vor.“ (protestieren)",
           "correct": "protestierende",
           "answers": [
             "protestierende"
           ],
           "explanations": {
-            "tr": "Doğru cevap: protestierende. gegen + Akkusativ, Nullartikel Plural → -e.",
-            "de": "Die richtige Antwort ist „protestierende“. Achte bei „Ergänze: „Die Polizei steht gegen laut ___ Demonstranten.“ (protestieren)“ auf die Bildung des Partizips I, die Nominalgruppe und gegebenenfalls auf die Adjektivendung.",
-            "en": "The correct answer is “protestierende”. In “Ergänze: „Die Polizei steht gegen laut ___ Demonstranten.“ (protestieren)”, check the formation of Participle I, the noun phrase and, where necessary, the adjective ending."
+            "tr": "Doğru cevap: protestierende. 'gegen jemanden vorgehen' (birine karşı harekete geçmek) Akkusativ ister. Artikelsiz çoğul Akkusativ'de sıfat/Partizip -e alır: (gegen) laut protestierende Demonstranten. Partizip I: protestieren → protestierend.",
+            "de": "Die richtige Antwort ist „protestierende“. Achte bei „Ergänze: „Die Polizei geht gegen laut ___ Demonstranten vor.“ (protestieren)“ auf die Bildung des Partizips I, die Nominalgruppe und gegebenenfalls auf die Adjektivendung.",
+            "en": "The correct answer is “protestierende”. In “Ergänze: „Die Polizei geht gegen laut ___ Demonstranten vor.“ (protestieren)”, check the formation of Participle I, the noun phrase and, where necessary, the adjective ending."
           }
         },
         {
@@ -1982,7 +1985,8 @@
           "correct": "regelmäßig Sport treibende Menschen",
           "answers": [
             "regelmaessig sport treibende menschen",
-            "regelmäßig sport treibende menschen"
+            "regelmäßig sport treibende menschen",
+            "regelmäßig sporttreibende menschen"
           ],
           "explanations": {
             "tr": "Doğru cevap: regelmäßig Sport treibende Menschen. regelmäßig, Sport treibend grubunun önünde kalır.",
@@ -2029,7 +2033,7 @@
             "allein in großstädten lebende menschen"
           ],
           "explanations": {
-            "tr": "Doğru cevap: allein in Großstädten lebende Menschen. alone/yer bilgisi Partizip-I grubuna dahil olur.",
+            "tr": "Doğru cevap: allein in Großstädten lebende Menschen. Relativsatz'daki tüm tamamlayıcılar (allein, in Großstädten) Partizip I'in önüne aynı sırayla geçer: leben → lebend. Artikelsiz çoğulda sıfat sonu -e olur.",
             "de": "Die richtige Antwort ist „allein in Großstädten lebende Menschen“. Achte bei „Schreibe als Partizip-I-Gruppe: „Menschen, die allein in Großstädten leben““ auf die Bildung des Partizips I, die Nominalgruppe und gegebenenfalls auf die Adjektivendung.",
             "en": "The correct answer is “allein in Großstädten lebende Menschen”. In “Schreibe als Partizip-I-Gruppe: „Menschen, die allein in Großstädten leben“”, check the formation of Participle I, the noun phrase and, where necessary, the adjective ending."
           }
@@ -2493,7 +2497,8 @@
           "sentence": "Verbinde: „Viele Menschen arbeiten nachts. Sie brauchen am Tag Ruhe.“",
           "correct": "Nachts arbeitende Menschen brauchen am Tag Ruhe.",
           "answers": [
-            "nachts arbeitende menschen brauchen am tag ruhe"
+            "nachts arbeitende menschen brauchen am tag ruhe",
+            "viele nachts arbeitende menschen brauchen am tag ruhe"
           ],
           "explanations": {
             "tr": "Doğru cevap: Nachts arbeitende Menschen brauchen am Tag Ruhe.. Nullartikel plural Nominativ → arbeitende.",
@@ -2827,7 +2832,8 @@
           "sentence": "Korrigiere: „Die Zahl alleinlebenden Menschen steigt.“",
           "correct": "Die Zahl alleinlebender Menschen steigt.",
           "answers": [
-            "die zahl alleinlebender menschen steigt"
+            "die zahl alleinlebender menschen steigt",
+            "die zahl allein lebender menschen steigt"
           ],
           "explanations": {
             "tr": "Doğru cevap: Die Zahl alleinlebender Menschen steigt.. Nullartikel Genitiv plural → -er.",
@@ -3113,13 +3119,13 @@
           "word": "B2 Mix",
           "sentence": "Welche Form ist korrekt?",
           "options": [
-            "Ein schnell gewachsenes Unternehmen braucht Kapital.",
+            "Ein schnell wachsende Unternehmen braucht Kapital.",
             "Ein schnell wachsendes Unternehmen braucht Kapital.",
             "Ein schnell wachsender Unternehmen braucht Kapital."
           ],
           "correct": "Ein schnell wachsendes Unternehmen braucht Kapital.",
           "explanations": {
-            "tr": "Doğru cevap: Ein schnell wachsendes Unternehmen braucht Kapital.. ein + neutrum Nominativ → -es; devam eden büyüme → wachsend.",
+            "tr": "Doğru cevap: Ein schnell wachsendes Unternehmen braucht Kapital. Unternehmen nötrdür ve öznedir (Nominativ). ein sonu göstermediği için sıfat nötr işareti -es alır: ein wachsendes Unternehmen. Partizip I (wachsend) büyümenin hâlâ sürdüğünü anlatır.",
             "de": "Die richtige Antwort ist „Ein schnell wachsendes Unternehmen braucht Kapital.“. Achte bei „Welche Form ist korrekt?“ auf die Bildung des Partizips I, die Nominalgruppe und gegebenenfalls auf die Adjektivendung.",
             "en": "The correct answer is “Ein schnell wachsendes Unternehmen braucht Kapital.”. In “Welche Form ist korrekt?”, check the formation of Participle I, the noun phrase and, where necessary, the adjective ending."
           }
@@ -3220,11 +3226,11 @@
           "options": [
             "Die ständig steigenden Preise sorgen für Kritik.",
             "Die ständig steigende Preise sorgen für Kritik.",
-            "Die ständig gestiegenen Preise sorgen für Kritik."
+            "Die ständig steigender Preise sorgen für Kritik."
           ],
           "correct": "Die ständig steigenden Preise sorgen für Kritik.",
           "explanations": {
-            "tr": "Doğru cevap: Die ständig steigenden Preise sorgen für Kritik.. Belirli article plural → -en; devam eden süreç Partizip I ile anlatılır.",
+            "tr": "Doğru cevap: Die ständig steigenden Preise sorgen für Kritik. Preise çoğuldur ve öznedir; çoğul belirli artikel die'den sonra sıfat sonu -en olur. Partizip I (steigend) sürecin devam ettiğini anlatır.",
             "de": "Die richtige Antwort ist „Die ständig steigenden Preise sorgen für Kritik.“. Achte bei „Welche Form ist korrekt?“ auf die Bildung des Partizips I, die Nominalgruppe und gegebenenfalls auf die Adjektivendung.",
             "en": "The correct answer is “Die ständig steigenden Preise sorgen für Kritik.”. In “Welche Form ist korrekt?”, check the formation of Participle I, the noun phrase and, where necessary, the adjective ending."
           }
@@ -3391,7 +3397,8 @@
           "correct": "allein lebende und regelmäßig von zu Hause arbeitende Personen",
           "answers": [
             "allein lebende und regelmaessig von zu hause arbeitende personen",
-            "allein lebende und regelmäßig von zu hause arbeitende personen"
+            "allein lebende und regelmäßig von zu hause arbeitende personen",
+            "alleinlebende und regelmäßig von zu hause arbeitende personen"
           ],
           "explanations": {
             "tr": "Doğru cevap: allein lebende und regelmäßig von zu Hause arbeitende Personen. İki eşzamanlı özellik ayrı Partizip-I attribute olarak aynı ismi niteler.",

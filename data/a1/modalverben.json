@@ -788,17 +788,17 @@
         },
         {
           "word": "Technik",
-          "sentence": "A: Der Drucker funktioniert nicht. B: Ich ___ später danach sehen.",
+          "sentence": "A: Der Drucker funktioniert nicht. B: Kein Problem, ich ___ später danach sehen.",
           "options": [
             "kann",
-            "muss",
+            "darf",
             "soll"
           ],
           "correct": "kann",
           "explanations": {
-            "tr": "Doğru cevap: kann. Yapabilme/teklif: können.",
-            "de": "Die richtige Antwort ist „kann“. Yapabilme/teklif: können. Bestimme in „A: Der Drucker funktioniert nicht. B: Ich ___ später danach sehen.“ zuerst Subjekt und Modalbedeutung; konjugiere dann das Modalverb und lasse das Vollverb im Infinitiv am Satzende.",
-            "en": "The correct answer is “kann”. Yapabilme/teklif: können. In “A: Der Drucker funktioniert nicht. B: Ich ___ später danach sehen.”, first identify the subject and modal meaning; then conjugate the modal verb and keep the main verb in the infinitive at the end."
+            "tr": "Doğru cevap: kann. B yardım teklif ediyor ('Kein Problem'): yapabilme/imkân → können: ich kann. Karşılaştır: Ich muss später danach sehen. (zorunluluk)",
+            "de": "Richtig ist „kann“: B bietet Hilfe an („Kein Problem“) – Möglichkeit/Angebot mit können. Vollständig: „Kein Problem, ich kann später danach sehen.“",
+            "en": "The answer is “kann”: B is offering help (“Kein Problem”), which is expressed with können."
           }
         }
       ]
@@ -1214,7 +1214,7 @@
         },
         {
           "word": "Bedeutung",
-          "sentence": "Wir ___ im Sommer nach Spanien reisen.",
+          "sentence": "Wir lieben Sonne und Meer. Wir ___ im Sommer nach Spanien reisen.",
           "options": [
             "dürfen",
             "wollen",
@@ -1222,9 +1222,9 @@
           ],
           "correct": "wollen",
           "explanations": {
-            "tr": "Doğru cevap: wollen. Kendi istek/planı: wollen.",
-            "de": "Die richtige Antwort ist „wollen“. Kendi istek/planı: wollen. Bestimme in „Wir ___ im Sommer nach Spanien reisen.“ zuerst Subjekt und Modalbedeutung; konjugiere dann das Modalverb und lasse das Vollverb im Infinitiv am Satzende.",
-            "en": "The correct answer is “wollen”. Kendi istek/planı: wollen. In “Wir ___ im Sommer nach Spanien reisen.”, first identify the subject and modal meaning; then conjugate the modal verb and keep the main verb in the infinitive at the end."
+            "tr": "Doğru cevap: wollen. Kişiler kendi isteğini/planını anlatıyor (Sonne und Meer lieben) → wollen. dürfen izin, müssen zorunluluk anlatırdı.",
+            "de": "Richtig ist „wollen“: Es geht um einen eigenen Wunsch/Plan (Wir lieben Sonne und Meer). dürfen = Erlaubnis, müssen = Notwendigkeit.",
+            "en": "The answer is “wollen”: the speakers express their own wish/plan. dürfen = permission, müssen = necessity."
           }
         },
         {
@@ -3578,7 +3578,9 @@
           "sentence": "Durum: Arkadaşına bugün yardım edebilirsin. (können)",
           "correct": "Ich kann dir heute helfen",
           "answers": [
-            "ich kann dir heute helfen"
+            "ich kann dir heute helfen",
+            "ich kann meinem freund heute helfen",
+            "ich kann meiner freundin heute helfen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Ich kann dir heute helfen. Yapabilme/imkân: können.",
@@ -3656,7 +3658,11 @@
           "sentence": "Bilde: öğretmen diyor ki / biz metni okumalıyız / sollen",
           "correct": "Wir sollen den Text lesen",
           "answers": [
-            "wir sollen den text lesen"
+            "wir sollen den text lesen",
+            "der lehrer sagt, wir sollen den text lesen",
+            "die lehrerin sagt, wir sollen den text lesen",
+            "der lehrer sagt wir sollen den text lesen",
+            "die lehrerin sagt wir sollen den text lesen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wir sollen den Text lesen. öğretmen talimatı→sollen.",
@@ -3715,7 +3721,11 @@
           "sentence": "Bilde: doktor diyor ki / ben ilaçları almalıyım / sollen",
           "correct": "Ich soll die Medikamente nehmen",
           "answers": [
-            "ich soll die medikamente nehmen"
+            "ich soll die medikamente nehmen",
+            "der arzt sagt, ich soll die medikamente nehmen",
+            "die ärztin sagt, ich soll die medikamente nehmen",
+            "der arzt sagt ich soll die medikamente nehmen",
+            "die ärztin sagt ich soll die medikamente nehmen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Ich soll die Medikamente nehmen. doktor talimatı→sollen.",
@@ -3726,15 +3736,15 @@
         {
           "type": "text",
           "word": "Arzt",
-          "sentence": "Bilde: ben / bugün spor yapmamalıyım / sollen + nicht",
+          "sentence": "Bilde: ben / bugün spor yapmamalıyım / sollen + kein",
           "correct": "Ich soll heute keinen Sport machen",
           "answers": [
             "ich soll heute keinen sport machen"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Ich soll heute keinen Sport machen. doktorun tavsiyesi; keinen Sport.",
-            "de": "Die richtige Antwort ist „Ich soll heute keinen Sport machen“. doktorun tavsiyesi; keinen Sport. Bestimme in „Bilde: ben / bugün spor yapmamalıyım / sollen + nicht“ zuerst Subjekt und Modalbedeutung; konjugiere dann das Modalverb und lasse das Vollverb im Infinitiv am Satzende.",
-            "en": "The correct answer is “Ich soll heute keinen Sport machen”. doktorun tavsiyesi; keinen Sport. In “Bilde: ben / bugün spor yapmamalıyım / sollen + nicht”, first identify the subject and modal meaning; then conjugate the modal verb and keep the main verb in the infinitive at the end."
+            "tr": "Doğru cevap: Ich soll heute keinen Sport machen. Doktorun tavsiyesi → sollen. Sport artikelsiz bir isim olduğu için nicht ile değil kein ile olumsuzlanır: keinen Sport (Sport maskulin, Akkusativ).",
+            "de": "Die richtige Antwort ist „Ich soll heute keinen Sport machen“. doktorun tavsiyesi; keinen Sport. Bestimme in „Bilde: ben / bugün spor yapmamalıyım / sollen + kein“ zuerst Subjekt und Modalbedeutung; konjugiere dann das Modalverb und lasse das Vollverb im Infinitiv am Satzende.",
+            "en": "The correct answer is “Ich soll heute keinen Sport machen”. doktorun tavsiyesi; keinen Sport. In “Bilde: ben / bugün spor yapmamalıyım / sollen + kein”, first identify the subject and modal meaning; then conjugate the modal verb and keep the main verb in the infinitive at the end."
           }
         },
         {
@@ -3743,7 +3753,8 @@
           "sentence": "Bilde: müdür / toplantıya gelmek istiyor / wollen",
           "correct": "Der Chef will zur Besprechung kommen",
           "answers": [
-            "der chef will zur besprechung kommen"
+            "der chef will zur besprechung kommen",
+            "die chefin will zur besprechung kommen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Der Chef will zur Besprechung kommen. er→will.",
@@ -3925,7 +3936,7 @@
             "wir dürfen hier nicht parken"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Wir dürfen hier nicht parken. A1 doğal söz diziminde yer ifadesi ardından nicht + infinitiv.",
+            "tr": "Doğru cevap: Wir dürfen hier nicht parken. Bütün cümle olumsuzlanınca nicht yer ifadesinden (hier) sonra, infinitivin (parken) önüne gelir. 'nicht hier' yalnızca karşıtlık için kullanılır: Wir dürfen nicht hier, sondern dort parken.",
             "de": "Die richtige Antwort ist „Wir dürfen hier nicht parken“. A1 doğal söz diziminde yer ifadesi ardından nicht + infinitiv. Bestimme in „Korrigiere: Wir dürfen nicht hier parken.“ zuerst Subjekt und Modalbedeutung; konjugiere dann das Modalverb und lasse das Vollverb im Infinitiv am Satzende.",
             "en": "The correct answer is “Wir dürfen hier nicht parken”. A1 doğal söz diziminde yer ifadesi ardından nicht + infinitiv. In “Korrigiere: Wir dürfen nicht hier parken.”, first identify the subject and modal meaning; then conjugate the modal verb and keep the main verb in the infinitive at the end."
           }
@@ -4015,7 +4026,9 @@
           "sentence": "Bilde: der Arzt sagt / du / mehr / schlafen / sollen",
           "correct": "Du sollst mehr schlafen",
           "answers": [
-            "du sollst mehr schlafen"
+            "du sollst mehr schlafen",
+            "der arzt sagt, du sollst mehr schlafen",
+            "der arzt sagt du sollst mehr schlafen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Du sollst mehr schlafen. başkasının tavsiyesi→sollen.",
@@ -4102,7 +4115,8 @@
           "sentence": "Durum: Öğretmen, yarın kitabı getirmenizi söylüyor. (sollen)",
           "correct": "Wir sollen morgen das Buch mitbringen",
           "answers": [
-            "wir sollen morgen das buch mitbringen"
+            "wir sollen morgen das buch mitbringen",
+            "wir sollen das buch morgen mitbringen"
           ],
           "explanations": {
             "tr": "Doğru cevap: Wir sollen morgen das Buch mitbringen. talimat→sollen; mitbringen infinitiv birleşik sonda.",

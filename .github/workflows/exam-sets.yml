@@ -1,0 +1,12 @@
+name: Exam sets
+on:
+  push:
+    paths: ['data/exams/**', 'js/examsData.js', 'scripts/check-exams.mjs', '.github/workflows/exam-sets.yml']
+  pull_request:
+    paths: ['data/exams/**', 'js/examsData.js', 'scripts/check-exams.mjs', '.github/workflows/exam-sets.yml']
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/check-exams.mjs

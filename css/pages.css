@@ -13,7 +13,8 @@
 #page-exams .exam-step-text{display:flex;flex-direction:column;min-width:0;line-height:1.25}
 #page-exams .exam-step-label{color:var(--ba-muted);font-size:var(--ba-small)}
 #page-exams .exam-step strong{font-weight:600;overflow-wrap:anywhere}
-#page-exams .exam-step.is-current .exam-step-static{background:var(--ba-accent);color:var(--ba-accent-ink)}
+#page-exams .exam-step.is-current :is(a,.exam-step-static){background:var(--ba-accent);color:var(--ba-accent-ink)}
+#page-exams .exam-step.is-current a:hover{background:var(--ba-accent-hover)}
 #page-exams .exam-step.is-current .exam-step-no{background:var(--ba-accent-ink);color:var(--ba-accent)}
 #page-exams .exam-step.is-current .exam-step-label{color:var(--ba-accent-ink);font-weight:600}
 #page-exams .exam-step.is-todo .exam-step-static{color:var(--ba-muted)}

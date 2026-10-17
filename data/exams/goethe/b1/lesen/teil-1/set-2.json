@@ -1,0 +1,90 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Ferien im Tierheim",
+  "minutes": 10,
+  "instructions": "Lesen Sie den Text und die Aufgaben 1 bis 6. Wählen Sie: Sind die Aussagen richtig oder falsch?",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "mail",
+          "title": "Neues aus den Ferien",
+          "byline": "E-Mail von Malte an Ines",
+          "paragraphs": [
+            "Liebe Ines, entschuldige bitte, dass ich mich so lange nicht gemeldet habe. Die letzten Wochen an der Uni waren total stressig, aber jetzt sind endlich Semesterferien und ich habe wieder mehr Zeit.",
+            "Stell dir vor, ich arbeite seit Anfang Juli ehrenamtlich im Tierheim „Pfotenhof“ am Stadtrand. Eigentlich wollte ich in den Ferien in einem Café jobben, um Geld für mein Auslandssemester zu sparen. Aber dann hat mir meine Mitbewohnerin Clara von dem Tierheim erzählt, und ich habe mich spontan gemeldet. Geld bekomme ich dort zwar nicht, aber die Arbeit macht mir viel mehr Spaß als jeder Job im Café.",
+            "Ich bin dreimal pro Woche dort, immer vormittags. Zuerst mache ich die Zimmer der Katzen sauber, danach gehe ich mit den Hunden spazieren. Mein Liebling ist Bruno, ein alter Schäferhund. Am Anfang hatte er vor allen Menschen Angst, aber jetzt läuft er sofort zu mir, wenn ich komme. Leider möchte ihn niemand haben, weil er schon zwölf Jahre alt ist.",
+            "Meine Eltern finden das Ganze nicht so toll. Sie meinen, ich sollte die Ferien lieber zum Lernen nutzen. Aber meine nächsten Prüfungen sind erst im Oktober, und ich lerne trotzdem jeden Abend zwei Stunden. Das muss reichen!",
+            "Jetzt zu deinem Besuch: Du hattest ja geschrieben, dass du Ende August ein paar Tage zu mir kommen möchtest. Das passt super! Vom 25. bis 28. August habe ich frei, denn im Tierheim bin ich nur bis zum 24. eingeteilt. Du kannst gern bei mir schlafen, Clara ist in dieser Zeit sowieso bei ihren Eltern.",
+            "Schreib mir bitte bald, mit welchem Zug du kommst, dann hole ich dich am Bahnhof ab. Und bring bequeme Schuhe mit – wir besuchen zusammen Bruno, und er freut sich bestimmt über einen langen Spaziergang! Viele Grüße, dein Malte"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Malte hat im Moment Ferien.",
+          "answer": "richtig",
+          "evidence": [{ "text": "mail", "quote": "jetzt sind endlich Semesterferien" }],
+          "explanation": "Malte „jetzt sind endlich Semesterferien“ yazıyor: Şu anda üniversitede dönem tatili var. İfade doğru."
+        },
+        {
+          "number": 1,
+          "type": "richtig-falsch",
+          "prompt": "Malte verdient im Tierheim Geld für sein Auslandssemester.",
+          "answer": "falsch",
+          "evidence": [{ "text": "mail", "quote": "Geld bekomme ich dort zwar nicht" }],
+          "explanation": "Tuzak: Malte yurt dışı dönemi için para biriktirmek istiyordu, ama bunun için kafede çalışmayı planlamıştı. Barınakta gönüllü (ehrenamtlich) çalışıyor ve „Geld bekomme ich dort zwar nicht“ – orada para almıyor. İfade yanlış."
+        },
+        {
+          "number": 2,
+          "type": "richtig-falsch",
+          "prompt": "Malte hat durch seine Mitbewohnerin von dem Tierheim erfahren.",
+          "answer": "richtig",
+          "evidence": [{ "text": "mail", "quote": "Aber dann hat mir meine Mitbewohnerin Clara von dem Tierheim erzählt" }],
+          "explanation": "Barınağı ona ev arkadaşı Clara anlatmış: „hat mir meine Mitbewohnerin Clara von dem Tierheim erzählt“. „von etwas erfahren“ (bir şeyi öğrenmek, duymak) bu cümleyle aynı anlamda; ifade doğru."
+        },
+        {
+          "number": 3,
+          "type": "richtig-falsch",
+          "prompt": "Malte arbeitet jeden Tag im Tierheim.",
+          "answer": "falsch",
+          "evidence": [{ "text": "mail", "quote": "Ich bin dreimal pro Woche dort, immer vormittags." }],
+          "explanation": "Malte barınağa haftada üç kez gidiyor („dreimal pro Woche“), her gün değil. İfade yanlış."
+        },
+        {
+          "number": 4,
+          "type": "richtig-falsch",
+          "prompt": "Bruno bekommt bald eine neue Familie.",
+          "answer": "falsch",
+          "evidence": [{ "text": "mail", "quote": "Leider möchte ihn niemand haben, weil er schon zwölf Jahre alt ist." }],
+          "explanation": "Bruno on iki yaşında olduğu için onu kimse sahiplenmek istemiyor („Leider möchte ihn niemand haben“). Yakında yeni bir aileye gideceğine dair bir bilgi yok, metin tam tersini söylüyor. İfade yanlış."
+        },
+        {
+          "number": 5,
+          "type": "richtig-falsch",
+          "prompt": "Malte lernt in den Ferien regelmäßig für die Uni.",
+          "answer": "richtig",
+          "evidence": [{ "text": "mail", "quote": "ich lerne trotzdem jeden Abend zwei Stunden" }],
+          "explanation": "Ailesi daha çok ders çalışmasını istese de Malte „jeden Abend zwei Stunden“ (her akşam iki saat) çalışıyor. Her akşam = düzenli olarak; ifade doğru."
+        },
+        {
+          "number": 6,
+          "type": "richtig-falsch",
+          "prompt": "Ines kann während ihres Besuchs bei Malte übernachten.",
+          "answer": "richtig",
+          "evidence": [{ "text": "mail", "quote": "Du kannst gern bei mir schlafen" }],
+          "explanation": "Malte „Du kannst gern bei mir schlafen“ diyor; Clara o sırada ailesinin yanında olacağı için yer de var. „bei jemandem schlafen“ ile „übernachten“ aynı anlama gelir; ifade doğru."
+        }
+      ]
+    }
+  ]
+}

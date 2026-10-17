@@ -16,6 +16,9 @@
      }, // Teil 1
 
    href is either an address on this site starting with # or a full https:// address.
+   A set played on this site is written as { set: 'set-1', title: 'Neu im Dorf' }: its file is
+   data/exams/<exam>/<level>/<section>/teil-<n>/set-1.json (format: docs/sinav-setleri.md) and its address
+   #exams/<exam>/<level>/<section>/<n>/set-1.
    An empty exercises list shows the Teil as "Yakında" (coming soon) with a disabled button.
    Teil numbers come from the order in the list; do not write them yourself.
 
@@ -207,11 +210,41 @@ window.BA_EXAMS = {
               { title: null, exercises: [] }, // Teil 4
             ] },
             { id: 'lesen', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
-              { title: null, exercises: [] }, // Teil 3
-              { title: null, exercises: [] }, // Teil 4
-              { title: null, exercises: [] }, // Teil 5
+              {
+                title: { tr: 'Blog yazısı veya e-posta · richtig/falsch', de: 'Blogbeitrag oder E-Mail · richtig/falsch', en: 'Blog post or email · true/false' },
+                exercises: [
+                  { set: 'set-1', title: 'Neu im Dorf' },
+                  { set: 'set-2', title: 'Ferien im Tierheim' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: 'İki gazete haberi · a/b/c', de: 'Zwei Zeitungsartikel · a/b/c', en: 'Two newspaper articles · a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Bibliothek und Gemüsekiste' },
+                  { set: 'set-2', title: 'Schulgarten und Nachtbus' },
+                ]
+              }, // Teil 2
+              {
+                title: { tr: 'İlanlar · eşleştirme', de: 'Anzeigen · Zuordnung', en: 'Adverts · matching' },
+                exercises: [
+                  { set: 'set-1', title: 'Freizeit und Kurse' },
+                  { set: 'set-2', title: 'Wohnen, Arbeit und Hilfe' },
+                ]
+              }, // Teil 3
+              {
+                title: { tr: 'Okur yorumları · ja/nein', de: 'Leserkommentare · ja/nein', en: 'Reader comments · yes/no' },
+                exercises: [
+                  { set: 'set-1', title: 'Einkaufen am Sonntag?' },
+                  { set: 'set-2', title: 'Handys in der Schule?' },
+                ]
+              }, // Teil 4
+              {
+                title: { tr: 'Kurallar ve bilgiler · a/b/c', de: 'Regeln und Informationen · a/b/c', en: 'Rules and information · a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Die Hausordnung' },
+                  { set: 'set-2', title: 'Kurse im Sportzentrum' },
+                ]
+              }, // Teil 5
             ] },
             { id: 'schreiben', teile: [
               { title: null, exercises: [] }, // Teil 1

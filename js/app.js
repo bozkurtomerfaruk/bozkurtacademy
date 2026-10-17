@@ -395,7 +395,19 @@ const translations = {
     grammarComingText:'Bu konu için ayrıntılı anlatım henüz yayımlanmadı. Çalışmalarına alıştırmalar bölümünden devam edebilirsin.',
     grammarBack:'Konulara Dön',
     grammarExercises:'Alıştırmalara Git',
-    grammarReturnToExercise:'Alıştırmaya dön'
+    grammarReturnToExercise:'Alıştırmaya dön',
+    grammarLessonLoading:'Konu anlatımı yükleniyor…',
+    grammarLessonLoadError:'Konu anlatımı yüklenemedi. Lütfen tekrar dene.',
+    grammarRetry:'Tekrar dene',
+    grammarBackToLevel:'{level} konularına dön',
+    grammarLessonPracticeError:'Alıştırma açılamadı. Bağlantıyı yeni sekmede açabilir veya biraz sonra tekrar deneyebilirsin.',
+    grammarCommentsEmpty:'Bu konudaki ilk yorumu sen yazabilirsin.',
+    grammarCommentsLoadError:'Yayımlanan yorumlar şu anda yüklenemiyor. Yine de yorumunu gönderebilirsin.',
+    grammarCommentInvalid:'Adını, geçerli e-posta adresini ve en az 10 karakterlik yorumunu yazıp yayımlama onayını işaretle.',
+    grammarCommentWait:'Yeni bir yorum göndermeden önce kısa bir süre bekle.',
+    grammarCommentSending:'Yorumun gönderiliyor…',
+    grammarCommentSent:'Yorumun inceleme için gönderildi. Onaylandıktan sonra bu konuda yayımlanabilir.',
+    grammarCommentSendError:'Yorumun gönderilemedi. Yazdıkların korundu; biraz sonra tekrar deneyebilirsin.'
   },
   de: {
     brandSub:'Ein klarer Weg zum Deutschlernen',
@@ -790,7 +802,19 @@ const translations = {
     grammarComingText:'Eine ausführliche Erklärung ist noch nicht veröffentlicht. Du kannst im Übungsbereich weiterarbeiten.',
     grammarBack:'Zurück zu Themen',
     grammarExercises:'Zu den Übungen',
-    grammarReturnToExercise:'Zurück zur Übung'
+    grammarReturnToExercise:'Zurück zur Übung',
+    grammarLessonLoading:'Grammatikerklärung wird geladen…',
+    grammarLessonLoadError:'Die Grammatikerklärung konnte nicht geladen werden. Bitte versuche es erneut.',
+    grammarRetry:'Erneut versuchen',
+    grammarBackToLevel:'Zurück zu den {level}-Themen',
+    grammarLessonPracticeError:'Die Übung konnte nicht geöffnet werden. Du kannst den Link in einem neuen Tab öffnen oder es später erneut versuchen.',
+    grammarCommentsEmpty:'Du kannst den ersten Kommentar zu diesem Thema schreiben.',
+    grammarCommentsLoadError:'Veröffentlichte Kommentare können gerade nicht geladen werden. Du kannst deinen Kommentar trotzdem senden.',
+    grammarCommentInvalid:'Gib deinen Namen, eine gültige E-Mail-Adresse und einen Kommentar mit mindestens 10 Zeichen ein und bestätige die Veröffentlichung.',
+    grammarCommentWait:'Warte kurz, bevor du einen neuen Kommentar sendest.',
+    grammarCommentSending:'Dein Kommentar wird gesendet…',
+    grammarCommentSent:'Dein Kommentar wurde zur Prüfung gesendet. Nach der Freigabe kann er bei diesem Thema erscheinen.',
+    grammarCommentSendError:'Dein Kommentar konnte nicht gesendet werden. Dein Text bleibt erhalten; versuche es bitte später erneut.'
   },
   en: {
     brandSub:'A clear roadmap for learning German',
@@ -1185,7 +1209,19 @@ const translations = {
     grammarComingText:'A detailed explanation has not yet been published. You can continue in the exercises section.',
     grammarBack:'Back to Topics',
     grammarExercises:'Go to Exercises',
-    grammarReturnToExercise:'Back to the exercise'
+    grammarReturnToExercise:'Back to the exercise',
+    grammarLessonLoading:'Loading the grammar lesson…',
+    grammarLessonLoadError:'The grammar lesson could not be loaded. Please try again.',
+    grammarRetry:'Try again',
+    grammarBackToLevel:'Back to {level} topics',
+    grammarLessonPracticeError:'The exercise could not be opened. You can open the link in a new tab or try again later.',
+    grammarCommentsEmpty:'You can write the first comment on this topic.',
+    grammarCommentsLoadError:'Published comments cannot be loaded right now. You can still send your comment.',
+    grammarCommentInvalid:'Enter your name, a valid email address and a comment of at least 10 characters, and tick the publication consent.',
+    grammarCommentWait:'Please wait a moment before sending another comment.',
+    grammarCommentSending:'Sending your comment…',
+    grammarCommentSent:'Your comment was sent for review. Once approved, it may be published on this topic.',
+    grammarCommentSendError:'Your comment could not be sent. What you wrote is kept; please try again later.'
   }
 };
 

@@ -1246,17 +1246,17 @@
         },
         {
           "word": "von → Genitiv",
-          "sentence": "„die Uhr von Utes Schwester“ → Genitiv",
+          "sentence": "„die Uhr von meiner Schwester“ → Genitiv",
           "options": [
-            "Utes Schwester Uhr",
-            "die Uhr Utes Schwester",
-            "die Uhr von Utes Schwester"
+            "die Uhr meiner Schwester",
+            "die Uhr meine Schwester",
+            "die Uhr meinem Schwester"
           ],
-          "correct": "die Uhr von Utes Schwester",
+          "correct": "die Uhr meiner Schwester",
           "explanations": {
-            "tr": "Doğru cevap: die Uhr von Utes Schwester. Burada sahiplik zaten özel isim + s ile “Utes Schwester” içinde kurulmuştur; tüm grubu yapay biçimde çevirmek gerekmez.",
-            "de": "Die richtige Antwort ist „die Uhr von Utes Schwester“. Achte auf Genitivartikel, Genus/Numerus und die Endung des Nomens.",
-            "en": "The correct answer is “die Uhr von Utes Schwester”. Check the genitive article, gender/number and the noun ending."
+            "tr": "Doğru cevap: die Uhr meiner Schwester. von + Dativ (von meiner Schwester) Genitive dönüşür: meine Schwester feminin → Genitiv meiner Schwester. Feminin isim Genitivde ek almaz. 'meine' Nominativ/Akkusativ, 'meinem' maskulin/nötr Dativ'dir.",
+            "de": "Die richtige Antwort ist „die Uhr meiner Schwester“. Aus von + Dativ wird der Genitiv: meine Schwester (feminin) → meiner Schwester. Feminine Nomen bekommen im Genitiv keine Endung.",
+            "en": "The correct answer is “die Uhr meiner Schwester”. von + dative becomes the genitive: meine Schwester (feminine) → meiner Schwester. Feminine nouns take no ending in the genitive."
           }
         },
         {
@@ -1483,11 +1483,11 @@
           "options": [
             "Wegen des",
             "Wegen dem",
-            "Während des"
+            "Wegen der"
           ],
           "correct": "Wegen des",
           "explanations": {
-            "tr": "Doğru cevap: Wegen des. Konser yağmur yüzünden iptal oldu; neden bildiren edat wegen'dir ve Genitiv ister: der Regen (maskulin) → des starken Regens. Während zaman bildirir; wegen dem günlük konuşmada duyulur ama standart değildir.",
+            "tr": "Doğru cevap: Wegen des. Konser yağmur yüzünden iptal oldu; neden bildiren edat wegen'dir ve Genitiv ister: der Regen (maskulin) → des starken Regens. 'Wegen der' yanlış artikeldir (Regen feminin değil); 'wegen dem' günlük konuşmada duyulur ama standart değildir.",
             "de": "Die richtige Antwort ist „Wegen des“. Achte auf Genitivartikel, Genus/Numerus und die Endung des Nomens.",
             "en": "The correct answer is “Wegen des”. Check the genitive article, gender/number and the noun ending."
           }
@@ -2845,13 +2845,13 @@
           "word": "Kontext",
           "sentence": "___ wurde die Veranstaltung abgesagt.",
           "options": [
-            "Während des starken Regens",
+            "Wegen der starken Regens",
             "Wegen dem starken Regen",
             "Wegen des starken Regens"
           ],
           "correct": "Wegen des starken Regens",
           "explanations": {
-            "tr": "Doğru cevap: Wegen des starken Regens. İptalin nedeni yağmur olduğu için wegen; Genitiv des starken Regens.",
+            "tr": "Doğru cevap: Wegen des starken Regens. İptalin nedeni yağmur → wegen + Genitiv. der Regen maskulin: des + sıfat -en + isim -s → des starken Regens. 'der … Regens' yanlış artikeldir (der feminin/çoğul Genitivdir); 'dem starken Regen' Dativ'dir, standart dilde wegen Genitiv ister.",
             "de": "Die richtige Antwort ist „Wegen des starken Regens“. Achte auf Genitivartikel, Genus/Numerus und die Endung des Nomens.",
             "en": "The correct answer is “Wegen des starken Regens”. Check the genitive article, gender/number and the noun ending."
           }
@@ -2862,11 +2862,11 @@
           "options": [
             "Während die Besprechung",
             "Während der Besprechung",
-            "Wegen der Besprechung"
+            "Wegen die Besprechung"
           ],
           "correct": "Während der Besprechung",
           "explanations": {
-            "tr": "Doğru cevap: Während der Besprechung. Zaman ilişkisi için während + Genitiv “der Besprechung”.",
+            "tr": "Doğru cevap: Während der Besprechung. während + Genitiv; die Besprechung feminin → Genitiv der Besprechung. 'die Besprechung' Nominativ/Akkusativ'dir; ne während ne de wegen bu biçimle kullanılır.",
             "de": "Die richtige Antwort ist „Während der Besprechung“. Achte auf Genitivartikel, Genus/Numerus und die Endung des Nomens.",
             "en": "The correct answer is “Während der Besprechung”. Check the genitive article, gender/number and the noun ending."
           }
@@ -3366,13 +3366,13 @@
           "word": "Master Challenge",
           "sentence": "___ wurde nicht telefoniert. (das wichtige Meeting)",
           "options": [
-            "Wegen des wichtigen Meetings",
+            "Während der wichtigen Meetings",
             "Während des wichtigen Meetings",
             "Während dem wichtigen Meeting"
           ],
           "correct": "Während des wichtigen Meetings",
           "explanations": {
-            "tr": "Doğru cevap: Während des wichtigen Meetings. Zaman ilişkisi için während; nötr Genitiv des + -s.",
+            "tr": "Doğru cevap: Während des wichtigen Meetings. während + Genitiv; das Meeting nötr → des + sıfat -en + isim -s: des wichtigen Meetings. 'der … Meetings' yanlış artikeldir; 'dem … Meeting' Dativ'dir.",
             "de": "Die richtige Antwort ist „Während des wichtigen Meetings“. Achte auf Genitivartikel, Genus/Numerus und die Endung des Nomens.",
             "en": "The correct answer is “Während des wichtigen Meetings”. Check the genitive article, gender/number and the noun ending."
           }
@@ -3411,13 +3411,13 @@
           "word": "Master Challenge",
           "sentence": "Forme um: „die Telefonnummer von Frau Müller“",
           "options": [
-            "die Telefonnummer der Frau Müller",
+            "die Telefonnummer des Frau Müllers",
             "Frau Müllers Telefonnummer",
             "Frau Müller Telefonnummer"
           ],
           "correct": "Frau Müllers Telefonnummer",
           "explanations": {
-            "tr": "Doğru cevap: Frau Müllers Telefonnummer. Unvan + soyadı artikelsiz kullanıldığında soyadı -s alır ve tamlama ismin önüne geçer: Frau Müllers Telefonnummer. -s olmadan (Frau Müller Telefonnummer) sahiplik gösterilmez.",
+            "tr": "Doğru cevap: Frau Müllers Telefonnummer. Unvan + soyadı artikelsiz kullanıldığında soyadı -s alır ve sahip ismin önüne geçer: Frau Müllers Telefonnummer. 'des Frau Müllers' yanlıştır: Frau feminindir, 'des' maskulin/nötr artikelidir. -s olmadan (Frau Müller Telefonnummer) sahiplik gösterilmez.",
             "de": "Die richtige Antwort ist „Frau Müllers Telefonnummer“. Achte auf Genitivartikel, Genus/Numerus und die Endung des Nomens.",
             "en": "The correct answer is “Frau Müllers Telefonnummer”. Check the genitive article, gender/number and the noun ending."
           }

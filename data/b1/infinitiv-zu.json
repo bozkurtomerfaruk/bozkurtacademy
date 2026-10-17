@@ -310,13 +310,13 @@
           "word": "Verben + Infinitiv",
           "sentence": "Wir ___, das Problem ohne externe Hilfe zu lösen.",
           "options": [
-            "bitten",
-            "sind froh",
+            "möchten",
+            "müssen",
             "versuchen"
           ],
           "correct": "versuchen",
           "explanations": {
-            "tr": "Doğru cevap: versuchen. „versuchen, ... zu + Infinitiv“: deneyen ve problemi çözecek olan aynı kişiler (wir); bu yüzden Infinitivsatz'ta özne tekrar yazılmaz: das Problem ohne externe Hilfe zu lösen.",
+            "tr": "Doğru cevap: versuchen. „versuchen, ... zu + Infinitiv“: deneyen ve problemi çözecek olan aynı kişiler (wir); bu yüzden Infinitivsatz'ta özne tekrar yazılmaz. Modal fiiller (möchten, müssen) zu almaz ve virgülsüz kullanılır: Wir möchten das Problem lösen.",
             "de": "Die richtige Antwort ist „versuchen“. Achte auf die Bildung des Infinitivsatzes, den Bezug der handelnden Person und die Stellung von zu.",
             "en": "The correct answer is “versuchen”. Check how the infinitive clause is formed, who performs the action, and where zu is placed."
           }
@@ -483,12 +483,12 @@
           "sentence": "Es ist hier ___, private Dateien auf dem Firmencomputer zu speichern.",
           "options": [
             "überzeugt",
-            "geplant",
+            "gebeten",
             "verboten"
           ],
           "correct": "verboten",
           "explanations": {
-            "tr": "Doğru cevap: verboten. „Es ist verboten, ... zu ...“: neyin yasak olduğunu Infinitivsatz söyler: private Dateien ... zu speichern. Kimin yaptığı belirtilmez; genel bir kuraldır.",
+            "tr": "Doğru cevap: verboten. „Es ist verboten, ... zu ...“: neyin yasak olduğunu Infinitivsatz söyler: private Dateien ... zu speichern. Kimin yaptığı belirtilmez; genel bir kuraldır. 'Es ist überzeugt' ve 'Es ist gebeten' Almancada kurulmaz (überzeugt sein ve gebeten werden kişiyle kullanılır).",
             "de": "Die richtige Antwort ist „verboten“. Achte auf die Bildung des Infinitivsatzes, den Bezug der handelnden Person und die Stellung von zu.",
             "en": "The correct answer is “verboten”. Check how the infinitive clause is formed, who performs the action, and where zu is placed."
           }
@@ -558,12 +558,12 @@
           "sentence": "Ich habe keine ___, heute Abend noch einkaufen zu gehen.",
           "options": [
             "Zeit",
-            "Angst davor",
+            "Angst darauf",
             "Überzeugung"
           ],
           "correct": "Zeit",
           "explanations": {
-            "tr": "Doğru cevap: Zeit. „keine Zeit haben, ... zu ...“: zamanı olmayan ve alışverişe gidecek kişi aynı (ich); bu yüzden özne yazılmaz: heute Abend noch einkaufen zu gehen.",
+            "tr": "Doğru cevap: Zeit. „keine Zeit haben, ... zu ...“: zamanı olmayan ve alışverişe gidecek kişi aynı (ich); bu yüzden özne yazılmaz: heute Abend noch einkaufen zu gehen. 'Angst darauf' yanlıştır: Angst 'vor' ile kullanılır (Angst davor). 'keine Überzeugung haben, … zu' kalıp olarak kullanılmaz.",
             "de": "Die richtige Antwort ist „Zeit“. Achte auf die Bildung des Infinitivsatzes, den Bezug der handelnden Person und die Stellung von zu.",
             "en": "The correct answer is “Zeit”. Check how the infinitive clause is formed, who performs the action, and where zu is placed."
           }
@@ -572,13 +572,13 @@
           "word": "Ausdrücke + Infinitiv",
           "sentence": "Es gibt keinen ___, sich wegen eines kleinen Fehlers so zu ärgern.",
           "options": [
-            "Plan",
-            "Zwang",
+            "Lust",
+            "Zeit",
             "Grund"
           ],
           "correct": "Grund",
           "explanations": {
-            "tr": "Doğru cevap: Grund. „Es gibt keinen Grund, ... zu ...“ (… için bir sebep yok). Dönüşlü sich ärgern Infinitivsatz'ta da sich ile kalır: sich ... so zu ärgern.",
+            "tr": "Doğru cevap: Grund. „Es gibt keinen Grund, ... zu ...“ (… için bir sebep yok). 'keinen' maskulin Akkusativ'dir; boşluğa maskulin bir isim gelmeli: der Grund. die Lust ve die Zeit feminindir (keine Lust, keine Zeit). Dönüşlü sich ärgern Infinitivsatz'ta da sich ile kalır: sich ... so zu ärgern.",
             "de": "Die richtige Antwort ist „Grund“. Achte auf die Bildung des Infinitivsatzes, den Bezug der handelnden Person und die Stellung von zu.",
             "en": "The correct answer is “Grund”. Check how the infinitive clause is formed, who performs the action, and where zu is placed."
           }
@@ -1244,18 +1244,18 @@
         {
           "type": "text",
           "word": "dass → Infinitivsatz",
-          "sentence": "Forme um: „Mara bereut, dass sie so spät reagiert.“",
-          "correct": "Mara bereut, so spät zu reagieren.",
+          "sentence": "Forme um: „Mara bereut, dass sie so spät reagiert hat.“",
+          "correct": "Mara bereut, so spät reagiert zu haben.",
           "answers": [
-            "mara bereut so spaet zu reagieren",
-            "mara bereut so spät zu reagieren",
-            "mara bereut, so spaet zu reagieren",
-            "mara bereut, so spät zu reagieren"
+            "mara bereut so spaet reagiert zu haben",
+            "mara bereut so spät reagiert zu haben",
+            "mara bereut, so spaet reagiert zu haben",
+            "mara bereut, so spät reagiert zu haben"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Mara bereut, so spät zu reagieren.. Aynı kişi; reagieren → zu reagieren.",
-            "de": "Die richtige Antwort ist „Mara bereut, so spät zu reagieren.“. Achte auf die Bildung des Infinitivsatzes, den Bezug der handelnden Person und die Stellung von zu.",
-            "en": "The correct answer is “Mara bereut, so spät zu reagieren.”. Check how the infinitive clause is formed, who performs the action, and where zu is placed."
+            "tr": "Doğru cevap: Mara bereut, so spät reagiert zu haben. Pişman olan ve geç tepki veren aynı kişi (Mara), bu yüzden dass-cümlesi Infinitivsatz olur. Geç tepki ana cümleden önce olmuş (reagiert hat) → Infinitiv Perfekt: reagiert zu haben.",
+            "de": "Die richtige Antwort ist „Mara bereut, so spät reagiert zu haben.“. Subjekt im Haupt- und Nebensatz ist dasselbe (Mara), deshalb wird der dass-Satz zum Infinitivsatz. Die Reaktion liegt zeitlich vorher (reagiert hat) → Infinitiv Perfekt: reagiert zu haben.",
+            "en": "The correct answer is “Mara bereut, so spät reagiert zu haben.”. The subject is the same in both clauses (Mara), so the dass-clause becomes an infinitive clause. The reaction happened earlier (reagiert hat) → perfect infinitive: reagiert zu haben."
           }
         },
         {
@@ -2567,7 +2567,7 @@
         },
         {
           "word": "Präsens oder Perfekt",
-          "sentence": "Sie ist erleichtert, pünktlich ___.",
+          "sentence": "Sie ist erleichtert, gestern pünktlich ___.",
           "options": [
             "gekommen zu sein",
             "zu kommen",
@@ -2575,7 +2575,7 @@
           ],
           "correct": "gekommen zu sein",
           "explanations": {
-            "tr": "Doğru cevap: gekommen zu sein. Geliş tamamlanmış olarak değerlendiriliyor.",
+            "tr": "Doğru cevap: gekommen zu sein. 'gestern' gelişin geçmişte, ana cümleden önce olduğunu gösterir → Infinitiv Perfekt. kommen Perfektte sein alır: gekommen zu sein. 'zu kommen' zamanla uyuşmaz; 'gekommen zu haben' yanlış yardımcı fiildir.",
             "de": "Die richtige Antwort ist „gekommen zu sein“. Achte auf die Bildung des Infinitivsatzes, den Bezug der handelnden Person und die Stellung von zu.",
             "en": "The correct answer is “gekommen zu sein”. Check how the infinitive clause is formed, who performs the action, and where zu is placed."
           }
@@ -3232,7 +3232,7 @@
         },
         {
           "word": "B1 Kontext",
-          "sentence": "Welche Ergänzung passt? „Ich bin froh, ___.“",
+          "sentence": "Welche Ergänzung passt? „Gestern war ein schwieriger Tag. Ich bin froh, ___.“",
           "options": [
             "die Entscheidung nicht allein zu treffen",
             "die Entscheidung nicht allein getroffen zu sein",
@@ -3240,7 +3240,7 @@
           ],
           "correct": "die Entscheidung nicht allein getroffen zu haben",
           "explanations": {
-            "tr": "Doğru cevap: die Entscheidung nicht allein getroffen zu haben. Karar daha önce verilmiş; treffen Perfektte haben alır.",
+            "tr": "Doğru cevap: die Entscheidung nicht allein getroffen zu haben. 'Gestern' kararın geçmişte verildiğini gösterir; ana cümleden önce olan bir eylem için Infinitiv Perfekt kullanılır: Partizip II + zu haben. treffen Perfektte haben alır (getroffen haben → getroffen zu haben). '… zu treffen' şimdi/gelecek, '… getroffen zu sein' yanlış yardımcı fiildir.",
             "de": "Die richtige Antwort ist „die Entscheidung nicht allein getroffen zu haben“. Achte auf die Bildung des Infinitivsatzes, den Bezug der handelnden Person und die Stellung von zu.",
             "en": "The correct answer is “die Entscheidung nicht allein getroffen zu haben”. Check how the infinitive clause is formed, who performs the action, and where zu is placed."
           }
@@ -3392,15 +3392,15 @@
           "word": "Master Challenge",
           "sentence": "Welche Form ist korrekt?",
           "options": [
-            "Ich bin froh, die Unterlagen rechtzeitig abgeschickt zu haben.",
-            "Ich bin froh, die Unterlagen rechtzeitig abzuschicken.",
-            "Ich bin froh, die Unterlagen rechtzeitig abgeschickt zu sein."
+            "Ich bin froh, die Unterlagen gestern rechtzeitig abgeschickt zu haben.",
+            "Ich bin froh, die Unterlagen gestern rechtzeitig abzuschicken.",
+            "Ich bin froh, die Unterlagen gestern rechtzeitig abgeschickt zu sein."
           ],
-          "correct": "Ich bin froh, die Unterlagen rechtzeitig abgeschickt zu haben.",
+          "correct": "Ich bin froh, die Unterlagen gestern rechtzeitig abgeschickt zu haben.",
           "explanations": {
-            "tr": "Doğru cevap: Ich bin froh, die Unterlagen rechtzeitig abgeschickt zu haben.. Eylem tamamlanmış; abschicken Perfektte haben alır.",
-            "de": "Die richtige Antwort ist „Ich bin froh, die Unterlagen rechtzeitig abgeschickt zu haben.“. Achte auf die Bildung des Infinitivsatzes, den Bezug der handelnden Person und die Stellung von zu.",
-            "en": "The correct answer is “Ich bin froh, die Unterlagen rechtzeitig abgeschickt zu haben.”. Check how the infinitive clause is formed, who performs the action, and where zu is placed."
+            "tr": "Doğru cevap: Ich bin froh, die Unterlagen gestern rechtzeitig abgeschickt zu haben. 'gestern' gönderme eyleminin geçmişte, ana cümleden önce olduğunu gösterir → Infinitiv Perfekt. abschicken Perfektte haben alır: abgeschickt zu haben. 'gestern … abzuschicken' zamanla uyuşmaz; 'abgeschickt zu sein' yanlış yardımcı fiildir.",
+            "de": "Die richtige Antwort ist „Ich bin froh, die Unterlagen gestern rechtzeitig abgeschickt zu haben.“. Achte auf die Bildung des Infinitivsatzes, den Bezug der handelnden Person und die Stellung von zu.",
+            "en": "The correct answer is “Ich bin froh, die Unterlagen gestern rechtzeitig abgeschickt zu haben.”. Check how the infinitive clause is formed, who performs the action, and where zu is placed."
           }
         },
         {
@@ -3497,15 +3497,15 @@
           "word": "Master Challenge",
           "sentence": "Welche Form ist korrekt?",
           "options": [
-            "Sie ist überzeugt, die richtige Entscheidung zu treffen.",
-            "Sie ist überzeugt, die richtige Entscheidung getroffen zu sein.",
-            "Sie ist überzeugt, die richtige Entscheidung getroffen zu haben."
+            "Sie ist überzeugt, gestern die richtige Entscheidung zu treffen.",
+            "Sie ist überzeugt, gestern die richtige Entscheidung getroffen zu sein.",
+            "Sie ist überzeugt, gestern die richtige Entscheidung getroffen zu haben."
           ],
-          "correct": "Sie ist überzeugt, die richtige Entscheidung getroffen zu haben.",
+          "correct": "Sie ist überzeugt, gestern die richtige Entscheidung getroffen zu haben.",
           "explanations": {
-            "tr": "Doğru cevap: Sie ist überzeugt, die richtige Entscheidung getroffen zu haben.. Karar daha önce verilmiş; treffen → getroffen zu haben.",
-            "de": "Die richtige Antwort ist „Sie ist überzeugt, die richtige Entscheidung getroffen zu haben.“. Achte auf die Bildung des Infinitivsatzes, den Bezug der handelnden Person und die Stellung von zu.",
-            "en": "The correct answer is “Sie ist überzeugt, die richtige Entscheidung getroffen zu haben.”. Check how the infinitive clause is formed, who performs the action, and where zu is placed."
+            "tr": "Doğru cevap: Sie ist überzeugt, gestern die richtige Entscheidung getroffen zu haben. 'gestern' kararın geçmişte verildiğini gösterir → Infinitiv Perfekt: getroffen zu haben (treffen haben alır). 'gestern … zu treffen' zamanla uyuşmaz; 'getroffen zu sein' yanlış yardımcı fiildir.",
+            "de": "Die richtige Antwort ist „Sie ist überzeugt, gestern die richtige Entscheidung getroffen zu haben.“. Achte auf die Bildung des Infinitivsatzes, den Bezug der handelnden Person und die Stellung von zu.",
+            "en": "The correct answer is “Sie ist überzeugt, gestern die richtige Entscheidung getroffen zu haben.”. Check how the infinitive clause is formed, who performs the action, and where zu is placed."
           }
         },
         {

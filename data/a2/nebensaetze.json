@@ -696,14 +696,14 @@
           "sentence": "Ich nehme meine Jacke mit, ___ es später kalt wird.",
           "options": [
             "wenn",
-            "weil",
+            "ob",
             "dass"
           ],
           "correct": "wenn",
           "explanations": {
-            "tr": "Doğru cevap: wenn. Soğuk olması kesin sebep olarak verilmemiş; gelecekte gerçekleşebilecek bir koşul anlatılıyor. wenn şart, gelecek zaman veya tekrar eden durumları anlatabilir. wenn-cümlesi Nebensatz olduğu için çekimli fiil sona gider. Diğer seçenekler bu cümlede ya farklı bir anlam ilişkisi kurar ya da yanlış cümle yapısı gerektirir: “weil”, “dass”.",
-            "de": "Die richtige Antwort ist „wenn“. Im Satz „Ich nehme meine Jacke mit, ___ es später kalt wird.“ passt „wenn“, weil genau diese Funktion gebraucht wird. wenn kann eine Bedingung, Zukunft oder wiederholte Situation ausdrücken. Im wenn-Satz steht das finite Verb am Ende. Die anderen Optionen drücken hier entweder eine andere Beziehung aus oder verlangen eine andere Satzstruktur: „weil“, „dass“.",
-            "en": "The correct answer is “wenn”. In the sentence “Ich nehme meine Jacke mit, ___ es später kalt wird.”, “wenn” fits because this specific function is required. wenn can express a condition, future situation or repeated event. The finite verb goes to the end of the wenn-clause. The other options either express a different relationship here or require a different sentence structure: “weil”, “dass”."
+            "tr": "Doğru cevap: wenn. Ceketi, ileride soğuk olursa diye yanına alıyor: gelecekteki bir koşul → wenn. wenn-cümlesinde çekimli fiil (wird) sona gider. 'ob' (…ıp …madığı) dolaylı soru başlatır, 'dass' bir içerik bildirir; ikisi de burada anlamsız.",
+            "de": "Die richtige Antwort ist „wenn“. Die Jacke wird für den Fall mitgenommen, dass es später kalt wird: eine Bedingung in der Zukunft → wenn. Im wenn-Satz steht das finite Verb (wird) am Ende. „ob“ leitet eine indirekte Frage ein, „dass“ einen Inhaltssatz; beides passt hier nicht.",
+            "en": "The correct answer is “wenn”. The jacket is taken in case it gets cold later: a future condition → wenn. The finite verb (wird) goes to the end of the wenn-clause. “ob” introduces an indirect question and “dass” a content clause; neither fits here."
           }
         },
         {
@@ -1713,7 +1713,7 @@
         },
         {
           "word": "Zeit",
-          "sentence": "Ich rufe dich an, ___ ich mit dem Termin fertig bin.",
+          "sentence": "Ich rufe dich an, ___ ich beim Arzt gewesen bin.",
           "options": [
             "nachdem",
             "obwohl",
@@ -1721,24 +1721,24 @@
           ],
           "correct": "nachdem",
           "explanations": {
-            "tr": "Doğru cevap: nachdem. Telefon etme eylemi randevu bittikten sonra gerçekleşecek. nachdem '... yaptıktan sonra' anlamındadır; nachdem-cümlesindeki eylem önce tamamlanır, diğer eylem daha sonra gerçekleşir. Diğer seçenekler bu cümlede ya farklı bir anlam ilişkisi kurar ya da yanlış cümle yapısı gerektirir: “obwohl”, “dass”.",
-            "de": "Die richtige Antwort ist „nachdem“. Im Satz „Ich rufe dich an, ___ ich mit dem Termin fertig bin.“ passt „nachdem“, weil genau diese Funktion gebraucht wird. nachdem bedeutet 'nachdem etwas passiert ist': Die Handlung im nachdem-Satz ist zuerst abgeschlossen, danach folgt die andere Handlung. Die anderen Optionen drücken hier entweder eine andere Beziehung aus oder verlangen eine andere Satzstruktur: „obwohl“, „dass“.",
-            "en": "The correct answer is “nachdem”. In the sentence “Ich rufe dich an, ___ ich mit dem Termin fertig bin.”, “nachdem” fits because this specific function is required. nachdem means 'after something has happened': the action in the nachdem-clause is completed first, then the other action follows. The other options either express a different relationship here or require a different sentence structure: “obwohl”, “dass”."
+            "tr": "Doğru cevap: nachdem. Önce doktora gidilecek, sonra telefon edilecek. nachdem '…dıktan sonra' demektir ve zaman uyumu ister: ana cümle Präsens (rufe an) → nachdem-cümlesi Perfekt (gewesen bin). Çekimli fiil (bin) sona gider. obwohl (rağmen) ve dass anlamca uymaz.",
+            "de": "Die richtige Antwort ist „nachdem“. Zuerst der Arztbesuch, dann der Anruf. Bei nachdem gilt die Zeitenfolge: Hauptsatz im Präsens (rufe an) → nachdem-Satz im Perfekt (gewesen bin). Das finite Verb steht am Ende. „obwohl“ und „dass“ passen inhaltlich nicht.",
+            "en": "The correct answer is “nachdem”. First the doctor's visit, then the call. nachdem requires a tense shift: main clause in the present (rufe an) → nachdem-clause in the present perfect (gewesen bin). The finite verb goes to the end. “obwohl” and “dass” do not fit the meaning."
           }
         },
         {
           "word": "Nebensatz zuerst",
           "sentence": "Welche Variante ist richtig?",
           "options": [
-            "Nachdem der Film zu Ende ist, fahren wir nach Hause.",
-            "Nachdem ist der Film zu Ende, fahren wir nach Hause.",
-            "Nachdem der Film zu Ende ist, wir fahren nach Hause."
+            "Nachdem der Film zu Ende gegangen ist, fahren wir nach Hause.",
+            "Nachdem ist der Film zu Ende gegangen, fahren wir nach Hause.",
+            "Nachdem der Film zu Ende gegangen ist, wir fahren nach Hause."
           ],
-          "correct": "Nachdem der Film zu Ende ist, fahren wir nach Hause.",
+          "correct": "Nachdem der Film zu Ende gegangen ist, fahren wir nach Hause.",
           "explanations": {
-            "tr": "Doğru cevap: Nachdem der Film zu Ende ist, fahren wir nach Hause.. nachdem-cümlesi 'ist' ile biter; ardından Hauptsatz 'fahren wir' şeklinde başlar. nachdem '... yaptıktan sonra' anlamındadır; nachdem-cümlesindeki eylem önce tamamlanır, diğer eylem daha sonra gerçekleşir. Diğer seçenekler bu cümlede ya farklı bir anlam ilişkisi kurar ya da yanlış cümle yapısı gerektirir: “Nachdem ist der Film zu Ende, fahren wir nach Hause.”, “Nachdem der Film zu Ende ist, wir fahren nach Hause.”.",
-            "de": "Die richtige Antwort ist „Nachdem der Film zu Ende ist, fahren wir nach Hause.“. Im Satz „Welche Variante ist richtig?“ passt „Nachdem der Film zu Ende ist, fahren wir nach Hause.“, weil genau diese Funktion gebraucht wird. nachdem bedeutet 'nachdem etwas passiert ist': Die Handlung im nachdem-Satz ist zuerst abgeschlossen, danach folgt die andere Handlung. Die anderen Optionen drücken hier entweder eine andere Beziehung aus oder verlangen eine andere Satzstruktur: „Nachdem ist der Film zu Ende, fahren wir nach Hause.“, „Nachdem der Film zu Ende ist, wir fahren nach Hause.“.",
-            "en": "The correct answer is “Nachdem der Film zu Ende ist, fahren wir nach Hause.”. In the sentence “Welche Variante ist richtig?”, “Nachdem der Film zu Ende ist, fahren wir nach Hause.” fits because this specific function is required. nachdem means 'after something has happened': the action in the nachdem-clause is completed first, then the other action follows. The other options either express a different relationship here or require a different sentence structure: “Nachdem ist der Film zu Ende, fahren wir nach Hause.”, “Nachdem der Film zu Ende ist, wir fahren nach Hause.”."
+            "tr": "Doğru cevap: Nachdem der Film zu Ende gegangen ist, fahren wir nach Hause. nachdem-cümlesinde çekimli fiil (ist) sona gider; yan cümle başta olduğu için ana cümle fiille başlar: fahren wir. Zaman uyumu: ana cümle Präsens → nachdem-cümlesi Perfekt (zu Ende gegangen ist). Diğer şıklarda ya 'ist' yanlış yerde ya da ana cümle 'wir fahren' diye yanlış sırayla başlıyor.",
+            "de": "Die richtige Antwort ist „Nachdem der Film zu Ende gegangen ist, fahren wir nach Hause.“. Im nachdem-Satz steht das finite Verb (ist) am Ende; danach beginnt der Hauptsatz mit dem Verb: fahren wir. Zeitenfolge: Hauptsatz Präsens → nachdem-Satz Perfekt. In den anderen Optionen steht „ist“ falsch oder der Hauptsatz beginnt falsch mit „wir fahren“.",
+            "en": "The correct answer is “Nachdem der Film zu Ende gegangen ist, fahren wir nach Hause.”. In the nachdem-clause the finite verb (ist) goes to the end; the main clause then starts with the verb: fahren wir. Tense sequence: main clause present → nachdem-clause present perfect. In the other options “ist” is misplaced or the main clause wrongly starts with “wir fahren”."
           }
         },
         {

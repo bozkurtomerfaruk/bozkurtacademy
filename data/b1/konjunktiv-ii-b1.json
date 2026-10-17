@@ -439,16 +439,16 @@
         {
           "type": "text",
           "word": "Starke Formen",
-          "sentence": "Ergänze: „Ich ___ es gern selbst, bevor ich entscheide. (sehen)“",
+          "sentence": "Ergänze: „An deiner Stelle ___ ich mir die Wohnung vorher selbst an. (ansehen)“",
           "correct": "sähe",
           "answers": [
             "sähe",
             "saehe"
           ],
           "explanations": {
-            "tr": "Doğru cevap: sähe. Varsayımsal/kibar değerlendirmede “sehen” → “sähe”.",
-            "de": "Die richtige Antwort ist „sähe“. Achte auf Zeitstufe, Irrealität und die Stellung der Verbgruppe im Konjunktiv II.",
-            "en": "The correct answer is “sähe”. Pay attention to time reference, unreality, and the position of the verb group in Konjunktiv II."
+            "tr": "Doğru cevap: sähe. 'An deiner Stelle' (senin yerinde olsam) varsayım bildirir → Konjunktiv II. sehen güçlü fiildir: Präteritum sah → Konjunktiv II sähe (umlaut + -e). ansehen ayrılabilir: sähe … an.",
+            "de": "Die richtige Antwort ist „sähe“. „An deiner Stelle“ drückt eine Annahme aus → Konjunktiv II. sehen ist stark: sah → sähe. ansehen ist trennbar: sähe … an.",
+            "en": "The correct answer is “sähe”. “An deiner Stelle” expresses a hypothetical → Konjunktiv II. sehen is strong: sah → sähe. ansehen is separable: sähe … an."
           }
         }
       ],
@@ -477,12 +477,12 @@
           "sentence": "Du ___ das Gespräch nicht weiter aufschieben; sonst wird es schwieriger.",
           "options": [
             "solltest",
-            "sollst",
+            "solltet",
             "würdest"
           ],
           "correct": "solltest",
           "explanations": {
-            "tr": "Doğru cevap: solltest. Bu bir emir değil, tavsiye; “solltest” daha yumuşak bir öneri verir.",
+            "tr": "Doğru cevap: solltest. Bu bir emir değil, tavsiye; Konjunktiv II „du solltest“ yumuşak bir öneri verir. 'solltet' ihr içindir (özne du). 'würdest' tek başına modal anlam taşımaz.",
             "de": "Die richtige Antwort ist „solltest“. Achte auf Zeitstufe, Irrealität und die Stellung der Verbgruppe im Konjunktiv II.",
             "en": "The correct answer is “solltest”. Pay attention to time reference, unreality, and the position of the verb group in Konjunktiv II."
           }
@@ -693,12 +693,12 @@
           "sentence": "Welche Form ist natürlicher?",
           "options": [
             "Ich wüsste gern, wie das funktioniert.",
-            "Ich würde gern wissen, wie das funktioniert.",
+            "Ich würde gern gewusst, wie das funktioniert.",
             "Ich wusste gern, wie das funktioniert."
           ],
           "correct": "Ich wüsste gern, wie das funktioniert.",
           "explanations": {
-            "tr": "Doğru cevap: Ich wüsste gern, wie das funktioniert.. “wissen” fiilinin kısa Konjunktiv-II biçimi “wüsste”dir; “Ich wüsste gern …” tıpkı “Ich hätte gern …” gibi yerleşik ve kibar bir kalıptır. “wusste” Präteritumdur ve gerçek geçmişi anlatır.",
+            "tr": "Doğru cevap: Ich wüsste gern, wie das funktioniert. wissen fiilinin Konjunktiv II biçimi wüsste'dir; „Ich wüsste gern …“ tıpkı „Ich hätte gern …“ gibi yerleşik ve kibar bir kalıptır. 'würde gern gewusst' yanlıştır: würde'den sonra Partizip değil Infinitiv gelir (würde … wissen). 'wusste' Präteritumdur.",
             "de": "Die richtige Antwort ist „Ich wüsste gern, wie das funktioniert.“. Achte auf Zeitstufe, Irrealität und die Stellung der Verbgruppe im Konjunktiv II.",
             "en": "The correct answer is “Ich wüsste gern, wie das funktioniert.”. Pay attention to time reference, unreality, and the position of the verb group in Konjunktiv II."
           }
@@ -752,13 +752,13 @@
           "word": "würde oder direkte Form",
           "sentence": "Welche Form ist natürlicher?",
           "options": [
-            "Wenn ich ihn treffen würde, würde ich ihn darauf ansprechen.",
+            "Wenn ich ihn getroffen würde, würde ich ihn darauf ansprechen.",
             "Wenn ich ihn traf, würde ich ihn darauf ansprechen.",
             "Wenn ich ihn träfe, würde ich ihn darauf ansprechen."
           ],
           "correct": "Wenn ich ihn träfe, würde ich ihn darauf ansprechen.",
           "explanations": {
-            "tr": "Doğru cevap: Wenn ich ihn träfe, würde ich ihn darauf ansprechen.. “treffen” için sentetik “träfe” mümkündür ve B1'de tanınması yararlıdır.",
+            "tr": "Doğru cevap: Wenn ich ihn träfe, würde ich ihn darauf ansprechen. treffen fiilinin Konjunktiv II biçimi träfe'dir (traf → träfe). 'getroffen würde' yanlıştır: würde'den sonra Infinitiv gelir (treffen würde). 'traf' Präteritumdur, gerçek geçmişi anlatır.",
             "de": "Die richtige Antwort ist „Wenn ich ihn träfe, würde ich ihn darauf ansprechen.“. Achte auf Zeitstufe, Irrealität und die Stellung der Verbgruppe im Konjunktiv II.",
             "en": "The correct answer is “Wenn ich ihn träfe, würde ich ihn darauf ansprechen.”. Pay attention to time reference, unreality, and the position of the verb group in Konjunktiv II."
           }
@@ -1363,7 +1363,7 @@
         },
         {
           "word": "Modalverb Vergangenheit",
-          "sentence": "Ohne den Stau ___ wir pünktlich ankommen können.",
+          "sentence": "Ohne den Stau gestern ___ wir pünktlich ankommen können.",
           "options": [
             "würden",
             "hätten",
@@ -1371,7 +1371,7 @@
           ],
           "correct": "hätten",
           "explanations": {
-            "tr": "Doğru cevap: hätten. Geçmişte mümkün olmayan sonuç: hätten ankommen können.",
+            "tr": "Doğru cevap: hätten. 'gestern' geçmişi gösterir: geçmişte gerçekleşmemiş bir olasılık → hätten + Infinitiv + können (hätten ankommen können). 'würden … können' şimdiki/gelecek varsayımdır; 'wären' yanlış yardımcı fiildir.",
             "de": "Die richtige Antwort ist „hätten“. Achte auf Zeitstufe, Irrealität und die Stellung der Verbgruppe im Konjunktiv II.",
             "en": "The correct answer is “hätten”. Pay attention to time reference, unreality, and the position of the verb group in Konjunktiv II."
           }
@@ -1393,7 +1393,7 @@
         },
         {
           "word": "Modalverb Vergangenheit",
-          "sentence": "Sie ___ den Vertrag genauer lesen müssen.",
+          "sentence": "Sie ___ den Vertrag gestern vor der Unterschrift genauer lesen müssen.",
           "options": [
             "wäre",
             "würde",
@@ -1401,7 +1401,7 @@
           ],
           "correct": "hätte",
           "explanations": {
-            "tr": "Doğru cevap: hätte. Geçmişte yapılması gereken ama yapılmamış eylem: hätte lesen müssen.",
+            "tr": "Doğru cevap: hätte. 'gestern' geçmişi gösterir: geçmişte yapılması gereken ama yapılmamış eylem → hätte + Infinitiv + müssen (hätte lesen müssen). 'würde … müssen' şimdiki varsayımdır; 'wäre' yanlış yardımcı fiildir.",
             "de": "Die richtige Antwort ist „hätte“. Achte auf Zeitstufe, Irrealität und die Stellung der Verbgruppe im Konjunktiv II.",
             "en": "The correct answer is “hätte”. Pay attention to time reference, unreality, and the position of the verb group in Konjunktiv II."
           }
@@ -2363,9 +2363,9 @@
         "en": "Übung 14 – Höflichkeit auf B1"
       },
       "description": {
-        "tr": "Könnten, dürften, hätten, wären ve würden ile resmî/günlük nazik ifadeler kur.",
-        "de": "Könnten, dürften, hätten, wären ve würden ile resmî/günlük nazik ifadeler kur.",
-        "en": "Könnten, dürften, hätten, wären ve würden ile resmî/günlük nazik ifadeler kur."
+        "tr": "Konjunktiv II ile en kibar biçimi seç: könnten, dürften, hätten, wären ve würden ile resmî/günlük nazik ifadeler kur.",
+        "de": "Wähle die höflichste Form im Konjunktiv II: höfliche Bitten und Fragen mit könnten, dürften, hätten, wären und würden.",
+        "en": "Choose the most polite Konjunktiv II form: polite requests and questions with könnten, dürften, hätten, wären and würden."
       },
       "difficulty": {
         "tr": "Orta-Zor",
@@ -2375,7 +2375,7 @@
       "questions": [
         {
           "word": "Höflichkeit",
-          "sentence": "___ Sie mir bitte sagen, wo Gleis 8 ist?",
+          "sentence": "___ Sie mir bitte sagen, wo Gleis 8 ist? (Konjunktiv II – höflichste Form)",
           "options": [
             "Könnten",
             "Konnten",
@@ -2383,14 +2383,14 @@
           ],
           "correct": "Könnten",
           "explanations": {
-            "tr": "Doğru cevap: Könnten. Doğrudan “Können Sie ...?” yerine Konjunktiv II “Könnten Sie ...?” daha naziktir.",
-            "de": "Die richtige Antwort ist „Könnten“. Achte auf Zeitstufe, Irrealität und die Stellung der Verbgruppe im Konjunktiv II.",
-            "en": "The correct answer is “Könnten”. Pay attention to time reference, unreality, and the position of the verb group in Konjunktiv II."
+            "tr": "Doğru cevap: Könnten. „Könnten Sie mir bitte sagen …?“ Konjunktiv II ile kibar ricadır. 'Konnten' Präteritumdur. Yönerge Konjunktiv II ile en kibar biçimi istiyor; Indikativ biçim (ör. Können/Darf) dilbilgisel olarak doğru ama daha az kibar olduğu için burada cevap değildir.",
+            "de": "Die richtige Antwort ist „Könnten“. Gesucht ist die höflichste Form im Konjunktiv II; die Indikativform ist grammatisch möglich, aber weniger höflich.",
+            "en": "The correct answer is “Könnten”. The task asks for the most polite form in Konjunktiv II; the indicative form is grammatical but less polite."
           }
         },
         {
           "word": "Höflichkeit",
-          "sentence": "___ ich kurz Ihren Stift benutzen?",
+          "sentence": "___ ich kurz Ihren Stift benutzen? (Konjunktiv II – höflichste Form)",
           "options": [
             "Darf",
             "Durfte",
@@ -2398,14 +2398,14 @@
           ],
           "correct": "Dürfte",
           "explanations": {
-            "tr": "Doğru cevap: Dürfte. İzin istemeyi yumuşatan biçim “dürfte”.",
-            "de": "Die richtige Antwort ist „Dürfte“. Achte auf Zeitstufe, Irrealität und die Stellung der Verbgruppe im Konjunktiv II.",
-            "en": "The correct answer is “Dürfte”. Pay attention to time reference, unreality, and the position of the verb group in Konjunktiv II."
+            "tr": "Doğru cevap: Dürfte. İzin isterken Konjunktiv II „Dürfte ich …?“ en kibar biçimdir. 'Durfte' Präteritumdur. Yönerge Konjunktiv II ile en kibar biçimi istiyor; Indikativ biçim (ör. Können/Darf) dilbilgisel olarak doğru ama daha az kibar olduğu için burada cevap değildir.",
+            "de": "Die richtige Antwort ist „Dürfte“. Gesucht ist die höflichste Form im Konjunktiv II; die Indikativform ist grammatisch möglich, aber weniger höflich.",
+            "en": "The correct answer is “Dürfte”. The task asks for the most polite form in Konjunktiv II; the indicative form is grammatical but less polite."
           }
         },
         {
           "word": "Höflichkeit",
-          "sentence": "___ Sie vielleicht einen Moment Zeit für mich?",
+          "sentence": "___ Sie vielleicht einen Moment Zeit für mich? (Konjunktiv II – höflichste Form)",
           "options": [
             "Haben",
             "Hätten",
@@ -2413,14 +2413,14 @@
           ],
           "correct": "Hätten",
           "explanations": {
-            "tr": "Doğru cevap: Hätten. Kibar soru için “Hätten Sie ...?”.",
-            "de": "Die richtige Antwort ist „Hätten“. Achte auf Zeitstufe, Irrealität und die Stellung der Verbgruppe im Konjunktiv II.",
-            "en": "The correct answer is “Hätten”. Pay attention to time reference, unreality, and the position of the verb group in Konjunktiv II."
+            "tr": "Doğru cevap: Hätten. „Hätten Sie … Zeit?“ haben fiilinin Konjunktiv II biçimiyle kibar sorudur. 'Hatten' Präteritumdur. Yönerge Konjunktiv II ile en kibar biçimi istiyor; Indikativ biçim (ör. Können/Darf) dilbilgisel olarak doğru ama daha az kibar olduğu için burada cevap değildir.",
+            "de": "Die richtige Antwort ist „Hätten“. Gesucht ist die höflichste Form im Konjunktiv II; die Indikativform ist grammatisch möglich, aber weniger höflich.",
+            "en": "The correct answer is “Hätten”. The task asks for the most polite form in Konjunktiv II; the indicative form is grammatical but less polite."
           }
         },
         {
           "word": "Höflichkeit",
-          "sentence": "___ es möglich, den Termin zu verschieben?",
+          "sentence": "___ es möglich, den Termin zu verschieben? (Konjunktiv II – höflichste Form)",
           "options": [
             "Wäre",
             "War",
@@ -2428,9 +2428,9 @@
           ],
           "correct": "Wäre",
           "explanations": {
-            "tr": "Doğru cevap: Wäre. Resmî/kibar olasılık sorusu “Wäre es möglich ...?”.",
-            "de": "Die richtige Antwort ist „Wäre“. Achte auf Zeitstufe, Irrealität und die Stellung der Verbgruppe im Konjunktiv II.",
-            "en": "The correct answer is “Wäre”. Pay attention to time reference, unreality, and the position of the verb group in Konjunktiv II."
+            "tr": "Doğru cevap: Wäre. „Wäre es möglich, …?“ sein fiilinin Konjunktiv II biçimiyle resmî/kibar sorudur. 'War' Präteritumdur. Yönerge Konjunktiv II ile en kibar biçimi istiyor; Indikativ biçim (ör. Können/Darf) dilbilgisel olarak doğru ama daha az kibar olduğu için burada cevap değildir.",
+            "de": "Die richtige Antwort ist „Wäre“. Gesucht ist die höflichste Form im Konjunktiv II; die Indikativform ist grammatisch möglich, aber weniger höflich.",
+            "en": "The correct answer is “Wäre”. The task asks for the most polite form in Konjunktiv II; the indicative form is grammatical but less polite."
           }
         },
         {
@@ -2465,7 +2465,7 @@
         },
         {
           "word": "Höflichkeit",
-          "sentence": "___ wir die Rechnung getrennt bekommen?",
+          "sentence": "___ wir die Rechnung getrennt bekommen? (Konjunktiv II – höflichste Form)",
           "options": [
             "Könnten",
             "Konnten",
@@ -2473,9 +2473,9 @@
           ],
           "correct": "Könnten",
           "explanations": {
-            "tr": "Doğru cevap: Könnten. Talebi daha yumuşak ifade etmek için “Könnten wir ...?”.",
-            "de": "Die richtige Antwort ist „Könnten“. Achte auf Zeitstufe, Irrealität und die Stellung der Verbgruppe im Konjunktiv II.",
-            "en": "The correct answer is “Könnten”. Pay attention to time reference, unreality, and the position of the verb group in Konjunktiv II."
+            "tr": "Doğru cevap: Könnten. „Könnten wir …?“ talebi yumuşatır. 'Konnten' Präteritumdur. Yönerge Konjunktiv II ile en kibar biçimi istiyor; Indikativ biçim (ör. Können/Darf) dilbilgisel olarak doğru ama daha az kibar olduğu için burada cevap değildir.",
+            "de": "Die richtige Antwort ist „Könnten“. Gesucht ist die höflichste Form im Konjunktiv II; die Indikativform ist grammatisch möglich, aber weniger höflich.",
+            "en": "The correct answer is “Könnten”. The task asks for the most polite form in Konjunktiv II; the indicative form is grammatical but less polite."
           }
         },
         {
@@ -3082,7 +3082,7 @@
         },
         {
           "word": "Dialog",
-          "sentence": "A: Entschuldigung, ___ Sie mir sagen, ob dieser Platz frei ist?",
+          "sentence": "A: Entschuldigung, ___ Sie mir sagen, ob dieser Platz frei ist? (Konjunktiv II – höflichste Form)",
           "options": [
             "konnten",
             "können",
@@ -3090,9 +3090,9 @@
           ],
           "correct": "könnten",
           "explanations": {
-            "tr": "Doğru cevap: könnten. Yabancı/resmî kişiye kibar soru için “könnten Sie ...?”.",
-            "de": "Die richtige Antwort ist „könnten“. Achte auf Zeitstufe, Irrealität und die Stellung der Verbgruppe im Konjunktiv II.",
-            "en": "The correct answer is “könnten”. Pay attention to time reference, unreality, and the position of the verb group in Konjunktiv II."
+            "tr": "Doğru cevap: könnten. Yabancı/resmî bir kişiye kibar soru: „Könnten Sie mir sagen …?“. 'konnten' Präteritumdur (geçmiş). Yönerge Konjunktiv II ile en kibar biçimi istiyor; Indikativ biçim (ör. Können/Darf) dilbilgisel olarak doğru ama daha az kibar olduğu için burada cevap değildir.",
+            "de": "Die richtige Antwort ist „könnten“. Gesucht ist die höflichste Form im Konjunktiv II; die Indikativform ist grammatisch möglich, aber weniger höflich.",
+            "en": "The correct answer is “könnten”. The task asks for the most polite form in Konjunktiv II; the indicative form is grammatical but less polite."
           }
         },
         {

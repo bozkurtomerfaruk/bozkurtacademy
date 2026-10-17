@@ -1165,7 +1165,7 @@
         },
         {
           "word": "Sonderformen",
-          "sentence": "Der Patient hat Probleme mit dem ___. (Herz)",
+          "sentence": "Er dankt dir aus tiefstem ___. (Herz)",
           "options": [
             "Herzens",
             "Herzen",
@@ -1173,9 +1173,9 @@
           ],
           "correct": "Herzen",
           "explanations": {
-            "tr": "Doğru cevap: Herzen. Kaynak çözümünde Dativ “mit dem Herzen”.",
-            "de": "Die richtige Antwort ist „Herzen“. Achte auf Kasus, Artikelwort und die Form des schwachen Nomens. Im Nominativ Singular bleibt das Nomen meist unverändert; in Akkusativ, Dativ und Genitiv bekommt es die entsprechende n-/en-Form.",
-            "en": "The correct answer is “Herzen”. Check the case, determiner and weak-noun form. In nominative singular the noun normally stays unchanged; in accusative, dative and genitive it takes the relevant n-/en-form."
+            "tr": "Doğru cevap: Herzen. 'aus' Dativ ister: aus tiefstem Herzen (en içten). Herz nötr ama özel çekimlidir: das Herz, dem Herzen, des Herzens (Akkusativ: das Herz). 'Herzens' Genitiv'dir, 'Herz' Nominativ/Akkusativ'dir.",
+            "de": "Die richtige Antwort ist „Herzen“. aus verlangt den Dativ: aus tiefstem Herzen. Herz ist ein Sonderfall: das Herz, dem Herzen, des Herzens (Akkusativ: das Herz).",
+            "en": "The correct answer is “Herzen”. aus takes the dative: aus tiefstem Herzen. Herz is a special case: das Herz, dem Herzen, des Herzens (accusative: das Herz)."
           }
         },
         {
@@ -2826,141 +2826,151 @@
         {
           "type": "text",
           "word": "Kasus-Umformung",
-          "sentence": "Setze in den Akkusativ: „Der Student wartet draußen.“",
-          "correct": "Ich sehe den Studenten draußen.",
+          "sentence": "Setze ein (Akkusativ): „Ich sehe ___ draußen.“ (der Student)",
+          "correct": "den Studenten",
           "answers": [
+            "den studenten",
             "ich sehe den studenten draußen"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Ich sehe den Studenten draußen.. Student Nominativden Akkusative geçerken Studenten olur.",
-            "de": "Die richtige Antwort ist „Ich sehe den Studenten draußen.“. Achte auf Kasus, Artikelwort und die Form des schwachen Nomens. Im Nominativ Singular bleibt das Nomen meist unverändert; in Akkusativ, Dativ und Genitiv bekommt es die entsprechende n-/en-Form.",
-            "en": "The correct answer is “Ich sehe den Studenten draußen.”. Check the case, determiner and weak-noun form. In nominative singular the noun normally stays unchanged; in accusative, dative and genitive it takes the relevant n-/en-form."
+            "tr": "Doğru cevap: den Studenten. sehen Akkusativ nesne ister → Akkusativ. Student n-Deklination ismidir: Nominativ tekil dışında bütün hâllerde -(e)n alır: den Studenten. Tam cümle: Ich sehe den Studenten draußen.",
+            "de": "Die richtige Antwort ist „den Studenten“. Der Satz verlangt hier den Akkusativ. Student ist ein schwaches Nomen (n-Deklination) und bekommt außer im Nominativ Singular die Endung -(e)n: Ich sehe den Studenten draußen.",
+            "en": "The correct answer is “den Studenten”. The sentence requires the accusative here. Student is a weak noun (n-declension) and takes -(e)n in every form except the nominative singular: Ich sehe den Studenten draußen."
           }
         },
         {
           "type": "text",
           "word": "Kasus-Umformung",
-          "sentence": "Setze in den Dativ: „Der Kollege arbeitet hier.“",
-          "correct": "Ich spreche mit dem Kollegen.",
+          "sentence": "Setze ein (Dativ): „Ich spreche mit ___.“ (der Kollege)",
+          "correct": "dem Kollegen",
           "answers": [
+            "dem kollegen",
             "ich spreche mit dem kollegen"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Ich spreche mit dem Kollegen.. mit + Dativ → dem Kollegen.",
-            "de": "Die richtige Antwort ist „Ich spreche mit dem Kollegen.“. Achte auf Kasus, Artikelwort und die Form des schwachen Nomens. Im Nominativ Singular bleibt das Nomen meist unverändert; in Akkusativ, Dativ und Genitiv bekommt es die entsprechende n-/en-Form.",
-            "en": "The correct answer is “Ich spreche mit dem Kollegen.”. Check the case, determiner and weak-noun form. In nominative singular the noun normally stays unchanged; in accusative, dative and genitive it takes the relevant n-/en-form."
+            "tr": "Doğru cevap: dem Kollegen. mit Dativ ister → Dativ. Kollege n-Deklination ismidir: Nominativ tekil dışında bütün hâllerde -(e)n alır: dem Kollegen. Tam cümle: Ich spreche mit dem Kollegen.",
+            "de": "Die richtige Antwort ist „dem Kollegen“. Der Satz verlangt hier den Dativ. Kollege ist ein schwaches Nomen (n-Deklination) und bekommt außer im Nominativ Singular die Endung -(e)n: Ich spreche mit dem Kollegen.",
+            "en": "The correct answer is “dem Kollegen”. The sentence requires the dative here. Kollege is a weak noun (n-declension) and takes -(e)n in every form except the nominative singular: Ich spreche mit dem Kollegen."
           }
         },
         {
           "type": "text",
           "word": "Kasus-Umformung",
-          "sentence": "Setze in den Genitiv: „Der Fotograf arbeitet heute.“",
-          "correct": "Die Kamera des Fotografen ist neu.",
+          "sentence": "Setze ein (Genitiv): „Die Kamera ___ ist neu.“ (der Fotograf)",
+          "correct": "des Fotografen",
           "answers": [
+            "des fotografen",
             "die kamera des fotografen ist neu"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Die Kamera des Fotografen ist neu.. Genitiv “des Fotografen”.",
-            "de": "Die richtige Antwort ist „Die Kamera des Fotografen ist neu.“. Achte auf Kasus, Artikelwort und die Form des schwachen Nomens. Im Nominativ Singular bleibt das Nomen meist unverändert; in Akkusativ, Dativ und Genitiv bekommt es die entsprechende n-/en-Form.",
-            "en": "The correct answer is “Die Kamera des Fotografen ist neu.”. Check the case, determiner and weak-noun form. In nominative singular the noun normally stays unchanged; in accusative, dative and genitive it takes the relevant n-/en-form."
+            "tr": "Doğru cevap: des Fotografen. sahiplik (kimin kamerası?) Genitiv ister → Genitiv. Fotograf n-Deklination ismidir: Nominativ tekil dışında bütün hâllerde -(e)n alır: des Fotografen. Tam cümle: Die Kamera des Fotografen ist neu.",
+            "de": "Die richtige Antwort ist „des Fotografen“. Der Satz verlangt hier den Genitiv. Fotograf ist ein schwaches Nomen (n-Deklination) und bekommt außer im Nominativ Singular die Endung -(e)n: Die Kamera des Fotografen ist neu.",
+            "en": "The correct answer is “des Fotografen”. The sentence requires the genitive here. Fotograf is a weak noun (n-declension) and takes -(e)n in every form except the nominative singular: Die Kamera des Fotografen ist neu."
           }
         },
         {
           "type": "text",
           "word": "Kasus-Umformung",
-          "sentence": "Setze in den Akkusativ: „Der Junge spielt draußen.“",
-          "correct": "Ich rufe den Jungen.",
+          "sentence": "Setze ein (Akkusativ): „Ich rufe ___.“ (der Junge)",
+          "correct": "den Jungen",
           "answers": [
+            "den jungen",
             "ich rufe den jungen"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Ich rufe den Jungen.. Junge → Jungen.",
-            "de": "Die richtige Antwort ist „Ich rufe den Jungen.“. Achte auf Kasus, Artikelwort und die Form des schwachen Nomens. Im Nominativ Singular bleibt das Nomen meist unverändert; in Akkusativ, Dativ und Genitiv bekommt es die entsprechende n-/en-Form.",
-            "en": "The correct answer is “Ich rufe den Jungen.”. Check the case, determiner and weak-noun form. In nominative singular the noun normally stays unchanged; in accusative, dative and genitive it takes the relevant n-/en-form."
+            "tr": "Doğru cevap: den Jungen. rufen Akkusativ nesne ister → Akkusativ. Junge n-Deklination ismidir: Nominativ tekil dışında bütün hâllerde -(e)n alır: den Jungen. Tam cümle: Ich rufe den Jungen.",
+            "de": "Die richtige Antwort ist „den Jungen“. Der Satz verlangt hier den Akkusativ. Junge ist ein schwaches Nomen (n-Deklination) und bekommt außer im Nominativ Singular die Endung -(e)n: Ich rufe den Jungen.",
+            "en": "The correct answer is “den Jungen”. The sentence requires the accusative here. Junge is a weak noun (n-declension) and takes -(e)n in every form except the nominative singular: Ich rufe den Jungen."
           }
         },
         {
           "type": "text",
           "word": "Kasus-Umformung",
-          "sentence": "Setze in den Dativ: „Der Franzose wohnt hier.“",
-          "correct": "Ich rede mit dem Franzosen.",
+          "sentence": "Setze ein (Dativ): „Ich rede mit ___.“ (der Franzose)",
+          "correct": "dem Franzosen",
           "answers": [
+            "dem franzosen",
             "ich rede mit dem franzosen"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Ich rede mit dem Franzosen.. Franzose → Franzosen.",
-            "de": "Die richtige Antwort ist „Ich rede mit dem Franzosen.“. Achte auf Kasus, Artikelwort und die Form des schwachen Nomens. Im Nominativ Singular bleibt das Nomen meist unverändert; in Akkusativ, Dativ und Genitiv bekommt es die entsprechende n-/en-Form.",
-            "en": "The correct answer is “Ich rede mit dem Franzosen.”. Check the case, determiner and weak-noun form. In nominative singular the noun normally stays unchanged; in accusative, dative and genitive it takes the relevant n-/en-form."
+            "tr": "Doğru cevap: dem Franzosen. mit Dativ ister → Dativ. Franzose n-Deklination ismidir: Nominativ tekil dışında bütün hâllerde -(e)n alır: dem Franzosen. Tam cümle: Ich rede mit dem Franzosen.",
+            "de": "Die richtige Antwort ist „dem Franzosen“. Der Satz verlangt hier den Dativ. Franzose ist ein schwaches Nomen (n-Deklination) und bekommt außer im Nominativ Singular die Endung -(e)n: Ich rede mit dem Franzosen.",
+            "en": "The correct answer is “dem Franzosen”. The sentence requires the dative here. Franzose is a weak noun (n-declension) and takes -(e)n in every form except the nominative singular: Ich rede mit dem Franzosen."
           }
         },
         {
           "type": "text",
           "word": "Kasus-Umformung",
-          "sentence": "Setze in den Genitiv: „Der Präsident spricht.“",
-          "correct": "Die Rede des Präsidenten beginnt.",
+          "sentence": "Setze ein (Genitiv): „Die Rede ___ beginnt.“ (der Präsident)",
+          "correct": "des Präsidenten",
           "answers": [
+            "des präsidenten",
             "die rede des präsidenten beginnt"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Die Rede des Präsidenten beginnt.. Präsident → Präsidenten.",
-            "de": "Die richtige Antwort ist „Die Rede des Präsidenten beginnt.“. Achte auf Kasus, Artikelwort und die Form des schwachen Nomens. Im Nominativ Singular bleibt das Nomen meist unverändert; in Akkusativ, Dativ und Genitiv bekommt es die entsprechende n-/en-Form.",
-            "en": "The correct answer is “Die Rede des Präsidenten beginnt.”. Check the case, determiner and weak-noun form. In nominative singular the noun normally stays unchanged; in accusative, dative and genitive it takes the relevant n-/en-form."
+            "tr": "Doğru cevap: des Präsidenten. sahiplik (kimin konuşması?) Genitiv ister → Genitiv. Präsident n-Deklination ismidir: Nominativ tekil dışında bütün hâllerde -(e)n alır: des Präsidenten. Tam cümle: Die Rede des Präsidenten beginnt.",
+            "de": "Die richtige Antwort ist „des Präsidenten“. Der Satz verlangt hier den Genitiv. Präsident ist ein schwaches Nomen (n-Deklination) und bekommt außer im Nominativ Singular die Endung -(e)n: Die Rede des Präsidenten beginnt.",
+            "en": "The correct answer is “des Präsidenten”. The sentence requires the genitive here. Präsident is a weak noun (n-declension) and takes -(e)n in every form except the nominative singular: Die Rede des Präsidenten beginnt."
           }
         },
         {
           "type": "text",
           "word": "Kasus-Umformung",
-          "sentence": "Setze in den Akkusativ: „Der Therapeut ist freundlich.“",
-          "correct": "Ich empfehle den Therapeuten.",
+          "sentence": "Setze ein (Akkusativ): „Ich empfehle dir ___.“ (der Therapeut)",
+          "correct": "den Therapeuten",
           "answers": [
-            "ich empfehle den therapeuten"
+            "den therapeuten",
+            "ich empfehle dir den therapeuten"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Ich empfehle den Therapeuten.. Therapeut → Therapeuten.",
-            "de": "Die richtige Antwort ist „Ich empfehle den Therapeuten.“. Achte auf Kasus, Artikelwort und die Form des schwachen Nomens. Im Nominativ Singular bleibt das Nomen meist unverändert; in Akkusativ, Dativ und Genitiv bekommt es die entsprechende n-/en-Form.",
-            "en": "The correct answer is “Ich empfehle den Therapeuten.”. Check the case, determiner and weak-noun form. In nominative singular the noun normally stays unchanged; in accusative, dative and genitive it takes the relevant n-/en-form."
+            "tr": "Doğru cevap: den Therapeuten. empfehlen kişiye (dir, Dativ) bir şeyi/kişiyi (Akkusativ) önerir → Akkusativ. Therapeut n-Deklination ismidir: Nominativ tekil dışında bütün hâllerde -(e)n alır: den Therapeuten. Tam cümle: Ich empfehle dir den Therapeuten.",
+            "de": "Die richtige Antwort ist „den Therapeuten“. Der Satz verlangt hier den Akkusativ. Therapeut ist ein schwaches Nomen (n-Deklination) und bekommt außer im Nominativ Singular die Endung -(e)n: Ich empfehle dir den Therapeuten.",
+            "en": "The correct answer is “den Therapeuten”. The sentence requires the accusative here. Therapeut is a weak noun (n-declension) and takes -(e)n in every form except the nominative singular: Ich empfehle dir den Therapeuten."
           }
         },
         {
           "type": "text",
           "word": "Kasus-Umformung",
-          "sentence": "Setze in den Dativ: „Der Bär ist ruhig.“",
-          "correct": "Der Pfleger gibt dem Bären Futter.",
+          "sentence": "Setze ein (Dativ): „Der Pfleger gibt ___ Futter.“ (der Bär)",
+          "correct": "dem Bären",
           "answers": [
+            "dem bären",
             "der pfleger gibt dem bären futter"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Der Pfleger gibt dem Bären Futter.. Bär → Bären.",
-            "de": "Die richtige Antwort ist „Der Pfleger gibt dem Bären Futter.“. Achte auf Kasus, Artikelwort und die Form des schwachen Nomens. Im Nominativ Singular bleibt das Nomen meist unverändert; in Akkusativ, Dativ und Genitiv bekommt es die entsprechende n-/en-Form.",
-            "en": "The correct answer is “Der Pfleger gibt dem Bären Futter.”. Check the case, determiner and weak-noun form. In nominative singular the noun normally stays unchanged; in accusative, dative and genitive it takes the relevant n-/en-form."
+            "tr": "Doğru cevap: dem Bären. geben alıcıyı Dativ'de ister (kime?) → Dativ. Bär n-Deklination ismidir: Nominativ tekil dışında bütün hâllerde -(e)n alır: dem Bären. Tam cümle: Der Pfleger gibt dem Bären Futter.",
+            "de": "Die richtige Antwort ist „dem Bären“. Der Satz verlangt hier den Dativ. Bär ist ein schwaches Nomen (n-Deklination) und bekommt außer im Nominativ Singular die Endung -(e)n: Der Pfleger gibt dem Bären Futter.",
+            "en": "The correct answer is “dem Bären”. The sentence requires the dative here. Bär is a weak noun (n-declension) and takes -(e)n in every form except the nominative singular: Der Pfleger gibt dem Bären Futter."
           }
         },
         {
           "type": "text",
           "word": "Kasus-Umformung",
-          "sentence": "Setze in den Genitiv: „Der Zeuge wartet.“",
-          "correct": "Die Aussage des Zeugen ist wichtig.",
+          "sentence": "Setze ein (Genitiv): „Die Aussage ___ ist wichtig.“ (der Zeuge)",
+          "correct": "des Zeugen",
           "answers": [
+            "des zeugen",
             "die aussage des zeugen ist wichtig"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Die Aussage des Zeugen ist wichtig.. Zeuge → Zeugen in Genitiv.",
-            "de": "Die richtige Antwort ist „Die Aussage des Zeugen ist wichtig.“. Achte auf Kasus, Artikelwort und die Form des schwachen Nomens. Im Nominativ Singular bleibt das Nomen meist unverändert; in Akkusativ, Dativ und Genitiv bekommt es die entsprechende n-/en-Form.",
-            "en": "The correct answer is “Die Aussage des Zeugen ist wichtig.”. Check the case, determiner and weak-noun form. In nominative singular the noun normally stays unchanged; in accusative, dative and genitive it takes the relevant n-/en-form."
+            "tr": "Doğru cevap: des Zeugen. sahiplik (kimin ifadesi?) Genitiv ister → Genitiv. Zeuge n-Deklination ismidir: Nominativ tekil dışında bütün hâllerde -(e)n alır: des Zeugen. Tam cümle: Die Aussage des Zeugen ist wichtig.",
+            "de": "Die richtige Antwort ist „des Zeugen“. Der Satz verlangt hier den Genitiv. Zeuge ist ein schwaches Nomen (n-Deklination) und bekommt außer im Nominativ Singular die Endung -(e)n: Die Aussage des Zeugen ist wichtig.",
+            "en": "The correct answer is “des Zeugen”. The sentence requires the genitive here. Zeuge is a weak noun (n-declension) and takes -(e)n in every form except the nominative singular: Die Aussage des Zeugen ist wichtig."
           }
         },
         {
           "type": "text",
           "word": "Kasus-Umformung",
-          "sentence": "Setze in den Akkusativ: „Der Architekt kommt.“",
-          "correct": "Wir suchen den Architekten.",
+          "sentence": "Setze ein (Akkusativ): „Wir suchen ___.“ (der Architekt)",
+          "correct": "den Architekten",
           "answers": [
+            "den architekten",
             "wir suchen den architekten"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Wir suchen den Architekten.. Architekt → Architekten.",
-            "de": "Die richtige Antwort ist „Wir suchen den Architekten.“. Achte auf Kasus, Artikelwort und die Form des schwachen Nomens. Im Nominativ Singular bleibt das Nomen meist unverändert; in Akkusativ, Dativ und Genitiv bekommt es die entsprechende n-/en-Form.",
-            "en": "The correct answer is “Wir suchen den Architekten.”. Check the case, determiner and weak-noun form. In nominative singular the noun normally stays unchanged; in accusative, dative and genitive it takes the relevant n-/en-form."
+            "tr": "Doğru cevap: den Architekten. suchen Akkusativ nesne ister → Akkusativ. Architekt n-Deklination ismidir: Nominativ tekil dışında bütün hâllerde -(e)n alır: den Architekten. Tam cümle: Wir suchen den Architekten.",
+            "de": "Die richtige Antwort ist „den Architekten“. Der Satz verlangt hier den Akkusativ. Architekt ist ein schwaches Nomen (n-Deklination) und bekommt außer im Nominativ Singular die Endung -(e)n: Wir suchen den Architekten.",
+            "en": "The correct answer is “den Architekten”. The sentence requires the accusative here. Architekt is a weak noun (n-declension) and takes -(e)n in every form except the nominative singular: Wir suchen den Architekten."
           }
         }
       ],
@@ -3099,15 +3109,15 @@
         {
           "type": "text",
           "word": "Fehlerkorrektur",
-          "sentence": "Korrigiere: „Mit dem Bär gehe ich nicht näher.“",
-          "correct": "Mit dem Bären gehe ich nicht näher.",
+          "sentence": "Korrigiere: „Der Tierarzt hilft dem Bär.“",
+          "correct": "Der Tierarzt hilft dem Bären.",
           "answers": [
-            "mit dem bären gehe ich nicht näher"
+            "der tierarzt hilft dem bären"
           ],
           "explanations": {
-            "tr": "Doğru cevap: Mit dem Bären gehe ich nicht näher.. Dativ “dem Bären”.",
-            "de": "Die richtige Antwort ist „Mit dem Bären gehe ich nicht näher.“. Achte auf Kasus, Artikelwort und die Form des schwachen Nomens. Im Nominativ Singular bleibt das Nomen meist unverändert; in Akkusativ, Dativ und Genitiv bekommt es die entsprechende n-/en-Form.",
-            "en": "The correct answer is “Mit dem Bären gehe ich nicht näher.”. Check the case, determiner and weak-noun form. In nominative singular the noun normally stays unchanged; in accusative, dative and genitive it takes the relevant n-/en-form."
+            "tr": "Doğru cevap: Der Tierarzt hilft dem Bären. helfen Dativ ister: dem Bären. Bär n-Deklination ismidir; Nominativ tekil dışında bütün hâllerde -en alır (den Bären, dem Bären, des Bären).",
+            "de": "Die richtige Antwort ist „Der Tierarzt hilft dem Bären.“. Achte auf Kasus, Artikelwort und die Form des schwachen Nomens. Im Nominativ Singular bleibt das Nomen meist unverändert; in Akkusativ, Dativ und Genitiv bekommt es die entsprechende n-/en-Form.",
+            "en": "The correct answer is “Der Tierarzt hilft dem Bären.”. Check the case, determiner and weak-noun form. In nominative singular the noun normally stays unchanged; in accusative, dative and genitive it takes the relevant n-/en-form."
           }
         },
         {

@@ -22,7 +22,7 @@
             "Getränke und Würstchen kaufe ich, und meine Schwester backt einen Kuchen. Kannst du vielleicht einen Salat mitbringen? Bring bitte auch eine Decke mit, denn im Park gibt es nicht genug Bänke.",
             "Wenn es regnet, feiern wir im Café Lotte gegenüber vom Park. Dort habe ich schon einen Tisch reserviert. Am Samstagmorgen schreibe ich allen eine Nachricht, wo wir feiern.",
             "Mit dem Auto ist es schwierig, weil es am Park nur wenige Parkplätze gibt. Nimm lieber die Straßenbahn Linie 4 bis zur Haltestelle „Rosenpark“. Von dort sind es nur zwei Minuten zu Fuß.",
-            "Bitte sag mir bis Mittwoch, ob du kommen kannst. Ein Geschenk brauche ich nicht – ich freue mich einfach, wenn du da bist!",
+            "Bitte sag mir bis Mittwoch, ob du kommen kannst. Ein Geschenk brauche ich nicht. Bring lieber die Fotos von unserer Reise nach Italien mit! Musik bringt mein Bruder mit.",
             "Liebe Grüße",
             "Mehmet"
           ]
@@ -108,20 +108,20 @@
         {
           "number": 15,
           "type": "abc",
-          "prompt": "Mehmet möchte, dass Pia …",
+          "prompt": "Mehmet wünscht sich, dass Pia …",
           "options": {
-            "a": "ihm spätestens am Mittwoch antwortet.",
-            "b": "ihm ein Geschenk mitbringt.",
-            "c": "allen am Samstagmorgen eine Nachricht schreibt."
+            "a": "Bilder vom Urlaub in Italien mitbringt.",
+            "b": "ihm ein Geschenk zum Geburtstag mitbringt.",
+            "c": "Musik für das Picknick mitbringt."
           },
           "answer": "a",
           "evidence": [
             {
               "text": "mail",
-              "quote": "Bitte sag mir bis Mittwoch, ob du kommen kannst."
+              "quote": "Bring lieber die Fotos von unserer Reise nach Italien mit!"
             }
           ],
-          "explanation": "Mehmet, Pia'nın gelip gelemeyeceğini çarşambaya kadar söylemesini istiyor: „Bitte sag mir bis Mittwoch, ob du kommen kannst.“ „bis Mittwoch“ = en geç çarşamba (spätestens am Mittwoch); „sag mir, ob …“ = ona cevap vermek (antworten). b) yanlış: Mehmet hediye istemiyor: „Ein Geschenk brauche ich nicht“. c) yanlış: Cumartesi sabahı herkese mesajı Pia değil, Mehmet yazıyor: „Am Samstagmorgen schreibe ich allen eine Nachricht“."
+          "explanation": "Mehmet hediye istemiyor; onun yerine Pia'nın İtalya seyahatlerinin fotoğraflarını getirmesini istiyor: „Ein Geschenk brauche ich nicht. Bring lieber die Fotos von unserer Reise nach Italien mit!“ „Fotos“ = „Bilder“ (fotoğraflar); „Reise nach Italien“ = İtalya'ya yapılan seyahat (Urlaub in Italien). b) yanlış: Mehmet hediye istemiyor: „Ein Geschenk brauche ich nicht.“ c) yanlış: Müziği Pia değil, Mehmet'in erkek kardeşi getiriyor: „Musik bringt mein Bruder mit.“"
         }
       ]
     }

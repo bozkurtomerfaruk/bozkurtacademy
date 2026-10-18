@@ -21,7 +21,7 @@
             "leider habe ich keine gute Nachricht. Seit Dienstag liege ich mit Fieber im Bett. Gestern war ich beim Arzt, und er hat gesagt, dass ich eine Grippe habe. Ich soll bis Sonntag zu Hause bleiben.",
             "Deshalb kann ich am Freitag nicht mit dir ins Konzert gehen. Das tut mir wirklich leid! Die Karten habe ich schon gekauft. Vielleicht kannst du mit einer Kollegin gehen? Ich schicke dir die Karten heute noch als E-Mail.",
             "Ich habe auch eine Bitte: Kannst du morgen nach der Arbeit für mich einkaufen und kurz zu mir kommen? Ich brauche Tee und Tabletten gegen Fieber, und mein Kühlschrank ist fast leer. Ein bisschen Obst und Brot wären super. Das Geld gebe ich dir natürlich zurück. Bitte ruf mich vorher kurz an, denn meine Klingel ist kaputt.",
-            "Wenn ich wieder gesund bin, lade ich dich zum Essen ein. Hast du am Samstag, dem 24. Oktober, Zeit? Wir könnten in das neue Restaurant am Markt gehen.",
+            "Nächsten Montag muss ich noch einmal zum Arzt. Wenn alles gut ist, darf ich ab Dienstag wieder arbeiten. Der Arzt hat aber gesagt, dass ich noch nicht Fahrrad fahren soll. Deshalb nehme ich in der ersten Woche den Bus.",
             "Viele Grüße",
             "Valentin"
           ]
@@ -107,24 +107,24 @@
         {
           "number": 15,
           "type": "abc",
-          "prompt": "Valentin möchte Ida …",
+          "prompt": "Nächste Woche …",
           "options": {
-            "a": "am Freitag in ein Restaurant einladen.",
-            "b": "nach der Krankheit ins Restaurant einladen.",
-            "c": "zu sich nach Hause zum Essen einladen."
+            "a": "arbeitet Valentin schon ab Montag wieder.",
+            "b": "besucht Valentin zuerst noch einmal den Arzt.",
+            "c": "fährt Valentin mit dem Fahrrad zur Arbeit."
           },
           "answer": "b",
           "evidence": [
             {
               "text": "mail",
-              "quote": "Wenn ich wieder gesund bin, lade ich dich zum Essen ein."
+              "quote": "Nächsten Montag muss ich noch einmal zum Arzt."
             },
             {
               "text": "mail",
-              "quote": "Wir könnten in das neue Restaurant am Markt gehen."
+              "quote": "darf ich ab Dienstag wieder arbeiten"
             }
           ],
-          "explanation": "Valentin iyileşince Ida'yı yemeğe davet etmek istiyor: „Wenn ich wieder gesund bin, lade ich dich zum Essen ein.“ „wieder gesund“ = hastalıktan sonra (nach der Krankheit). Yemek için pazar yerindeki yeni restoranı öneriyor: „Wir könnten in das neue Restaurant am Markt gehen.“ a) yanlış: Cuma günü konser var ve Valentin pazara kadar evde kalmalı; yemek için 24 Ekim cumartesi gününü soruyor: „Hast du am Samstag, dem 24. Oktober, Zeit?“ c) yanlış: Evine değil, yeni restorana gitmeyi öneriyor."
+          "explanation": "Valentin gelecek pazartesi bir kez daha doktora gidecek, işe ancak ondan sonra, salıdan itibaren başlayabilir: „Nächsten Montag muss ich noch einmal zum Arzt. Wenn alles gut ist, darf ich ab Dienstag wieder arbeiten.“ „zum Arzt gehen“ = „den Arzt besuchen“. a) yanlış: Pazartesi doktora gidiyor; her şey yolundaysa pazartesiden değil, salıdan itibaren çalışabilir: „ab Dienstag“. c) yanlış: Doktor henüz bisiklete binmemesini söyledi, bu yüzden ilk hafta otobüse biniyor: „Deshalb nehme ich in der ersten Woche den Bus.“"
         }
       ]
     }

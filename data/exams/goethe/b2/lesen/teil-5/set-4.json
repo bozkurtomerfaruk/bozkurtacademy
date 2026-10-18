@@ -1,0 +1,157 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b2",
+  "section": "lesen",
+  "teil": 5,
+  "set": "set-4",
+  "title": "Teilnahme am Stadtlauf",
+  "minutes": 6,
+  "context": "Sie möchten beim „Stadtlauf Korbenau“ mitlaufen und lesen die Teilnahmebedingungen des Veranstalters.",
+  "instructions": "Lesen Sie die Überschriften a bis f und die Abschnitte. Welche Überschrift passt zu welchem Abschnitt? Zwei Überschriften bleiben übrig. Die Überschrift aus dem Beispiel können Sie nicht mehr wählen.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "abschnitt-0",
+          "title": "Abschnitt 0",
+          "paragraphs": [
+            "Melden Sie sich bitte bis spätestens 15. August über das Formular auf unserer Website an. Die Gebühr beträgt für die 10-Kilometer-Strecke 22 Euro, für die 5-Kilometer-Strecke 15 Euro; Schülerinnen und Schüler zahlen die Hälfte. Mitlaufen darf, wer am Veranstaltungstag mindestens 14 Jahre alt ist, Jüngere nur mit schriftlicher Zustimmung der Eltern. Nachmeldungen vor Ort werden nur angenommen, solange die Grenze von 1500 Personen nicht erreicht ist, und kosten 5 Euro Aufschlag."
+          ]
+        },
+        {
+          "id": "abschnitt-28",
+          "title": "Abschnitt 28",
+          "paragraphs": [
+            "Ihre Startnummer erhalten Sie am Vortag zwischen 14 und 19 Uhr in der Turnhalle der Realschule oder am Lauftag selbst bis spätestens eine Stunde vor Beginn. Bringen Sie dazu bitte Ihre Anmeldebestätigung und einen Ausweis mit. Die Nummer muss während des gesamten Rennens gut sichtbar vorne am Oberkörper befestigt sein; Sicherheitsnadeln liegen bereit. Wer sie auf dem Rücken oder an der Hose anbringt, wird von den Helfern an der Strecke angehalten."
+          ]
+        },
+        {
+          "id": "abschnitt-29",
+          "title": "Abschnitt 29",
+          "paragraphs": [
+            "Wer verhindert ist, kann seine Anmeldung bis zum 1. September stornieren; in diesem Fall erstatten wir die Gebühr abzüglich einer Bearbeitungspauschale von 4 Euro. Danach ist eine Rückzahlung leider nicht mehr möglich. Sie können Ihren Platz allerdings bis eine Woche vor der Veranstaltung kostenlos auf eine andere Person umschreiben lassen. Muss der Lauf wegen eines Unwetters oder behördlicher Auflagen abgesagt werden, bekommen Sie die Hälfte des Betrags zurück."
+          ]
+        },
+        {
+          "id": "abschnitt-30",
+          "title": "Abschnitt 30",
+          "paragraphs": [
+            "Für die elektronische Messung sorgt ein kleiner Chip auf der Rückseite Ihrer Startnummer; Sie müssen also kein zusätzliches Gerät mitführen. Die Uhr läuft für Sie erst, wenn Sie die Matte an der Startlinie überqueren. Es spielt also keine Rolle, wie weit hinten Sie sich aufstellen. Wer die Strecke abkürzt oder eine der Kontrollmatten unterwegs auslässt, wird nicht gewertet. Die Ergebnislisten stehen etwa eine Stunde nach dem Zieleinlauf auf unserer Website."
+          ]
+        },
+        {
+          "id": "a",
+          "label": "a",
+          "paragraphs": [
+            "Wenn Sie doch nicht dabei sein können"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "paragraphs": [
+            "Vorher zum Arzt? Ihre Gesundheit geht vor"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "paragraphs": [
+            "Ihr Bild in Zeitung und Internet"
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "paragraphs": [
+            "Ihr Weg auf die Starterliste"
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "paragraphs": [
+            "Damit jede Sekunde zählt"
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "paragraphs": [
+            "Unterlagen abholen und richtig tragen"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 0",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "abschnitt-0",
+              "quote": "Melden Sie sich bitte bis spätestens 15. August über das Formular auf unserer Website an."
+            }
+          ],
+          "explanation": "Bölüm 0 koşuya nasıl kayıt olunacağını anlatıyor: en geç „15. August“ (15 Ağustos) tarihine kadar internet sitesindeki formla kayıt, ücretler, yaş sınırı ve yerinde geç kayıt koşulları. d başlığı („katılımcı listesine giden yolunuz“) bunu farklı kelimelerle söylüyor. Bu başlık örnekte kullanıldığı için başka bir bölüm için seçilemez."
+        },
+        {
+          "number": 28,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 28",
+          "answer": "f",
+          "evidence": [
+            {
+              "text": "abschnitt-28",
+              "quote": "Ihre Startnummer erhalten Sie am Vortag zwischen 14 und 19 Uhr in der Turnhalle der Realschule"
+            },
+            {
+              "text": "abschnitt-28",
+              "quote": "gut sichtbar vorne am Oberkörper befestigt sein"
+            }
+          ],
+          "explanation": "Bölüm 28 göğüs numarasını anlatıyor: numara bir gün önce okulun spor salonunda veya yarış günü alınıyor, bunun için kayıt onayı ve kimlik getirilmeli; koşu boyunca „gut sichtbar vorne am Oberkörper“ (önde, gövdede, iyi görünür şekilde) takılı olmalı. f başlığı („belgeleri almak ve doğru takmak“) hem teslim almayı hem de doğru takmayı anlatıyor. Aldatıcı olan e başlığı: numara yarışla ilgili olduğu için süre ölçümü akla gelebilir, ama bu bölümde süre veya ölçüm hiç geçmiyor; zaman ölçümü bölüm 30'un konusu."
+        },
+        {
+          "number": 29,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 29",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "abschnitt-29",
+              "quote": "Wer verhindert ist, kann seine Anmeldung bis zum 1. September stornieren"
+            },
+            {
+              "text": "abschnitt-29",
+              "quote": "kostenlos auf eine andere Person umschreiben lassen"
+            }
+          ],
+          "explanation": "Bölüm 29 katılamayacak kişileri anlatıyor: „Wer verhindert ist“ (engeli çıkan kişi) 1 Eylül'e kadar kaydını iptal edip 4 Euro kesintiyle parasını geri alabiliyor; ayrıca etkinlikten bir hafta öncesine kadar yerini ücretsiz olarak başka birine devrettirebiliyor. a başlığı („yine de katılamayacaksanız“) bu durumu anlatıyor. Aldatıcı olan d başlığı: kayıt („Anmeldung“) ve başka bir kişinin listeye yazılması geçtiği için kayıt konusu gibi görünebilir, ama burada kaydın nasıl yapılacağı değil, iptal ve para iadesi anlatılıyor; d zaten örnekte kullanıldı. b de uymuyor: bölümde hastalıktan veya doktordan söz edilmiyor, yalnızca „verhindert“ deniyor."
+        },
+        {
+          "number": 30,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 30",
+          "answer": "e",
+          "evidence": [
+            {
+              "text": "abschnitt-30",
+              "quote": "Für die elektronische Messung sorgt ein kleiner Chip"
+            },
+            {
+              "text": "abschnitt-30",
+              "quote": "Die Uhr läuft für Sie erst, wenn Sie die Matte an der Startlinie überqueren."
+            }
+          ],
+          "explanation": "Bölüm 30 süre ölçümünü anlatıyor: „elektronische Messung“ (elektronik ölçüm) numaranın arkasındaki küçük bir çiple yapılıyor, „Die Uhr läuft für Sie erst“ (süreniz ancak) başlangıç çizgisindeki halı geçilince başlıyor, parkuru kısaltan değerlendirmeye alınmıyor, sonuç listeleri yaklaşık bir saat sonra sitede. e başlığı („her saniye sayılsın diye“) bu ölçümün amacını söylüyor. Aldatıcı olan c başlığı: „auf unserer Website“ internetle ilgili olduğu için uyuyor gibi görünür, ama sitede yayımlanan şey fotoğraf değil, sonuç listeleri; bölümde fotoğraftan veya gazeteden hiç söz edilmiyor. f de uymuyor: numara burada yalnızca çipin yeri olarak geçiyor; numaranın nereden alınacağı ve nasıl takılacağı bölüm 28'de."
+        }
+      ]
+    }
+  ]
+}

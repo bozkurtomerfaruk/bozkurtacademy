@@ -84,11 +84,17 @@
           "number": 0,
           "example": true,
           "type": "zuordnung",
-          "prompt": "In Betrieben, die ohne Unterbrechung produzieren, ist das Modell kaum umsetzbar.",
+          "prompt": "In Betrieben, die ohne Unterbrechung produzieren, ist das Konzept kaum umsetzbar.",
           "answer": "a",
           "evidence": [
-            { "text": "jasper", "quote": "in dem die Bänder rund um die Uhr laufen" },
-            { "text": "jasper", "quote": "bei uns in der Fertigung sehe ich dafür keine Chance" }
+            {
+              "text": "jasper",
+              "quote": "in dem die Bänder rund um die Uhr laufen"
+            },
+            {
+              "text": "jasper",
+              "quote": "bei uns in der Fertigung sehe ich dafür keine Chance"
+            }
           ],
           "explanation": "Jasper (a) bantların gece gündüz çalıştığı bir fabrikada çalışıyor („in dem die Bänder rund um die Uhr laufen“). Vardiyalar için ek eleman gerekeceğini, onların da bulunamadığını söylüyor ve „bei uns in der Fertigung sehe ich dafür keine Chance“ diye bitiriyor."
         },
@@ -98,60 +104,81 @@
           "prompt": "Bestimmte Einrichtungen könnten für ihre Nutzer noch schwerer erreichbar werden.",
           "answer": "f",
           "evidence": [
-            { "text": "ottilie", "quote": "befürchte ich, dass noch öfter alle Türen zu sind" }
+            {
+              "text": "ottilie",
+              "quote": "befürchte ich, dass noch öfter alle Türen zu sind"
+            }
           ],
           "explanation": "Ottilie (f) düzenli olarak doktorlara, resmî dairelere ve ustalara ihtiyaç duyduğunu, aile hekiminin cuma günleri zaten kapalı olduğunu yazıyor; dört günlük hafta standart olursa „befürchte ich, dass noch öfter alle Türen zu sind“. Priya (g) da müşterilerden söz ediyor, ama onun bürosu pazartesiden cumaya açık kalmış; yani tersini anlatıyor. Quirin (h) aynı açılış saatlerini korumak istiyor; onun derdi erişim değil, maliyet."
         },
         {
           "number": 23,
           "type": "zuordnung",
-          "prompt": "Für kleine Firmen kann das Modell bei der Suche nach Personal ein Vorteil sein.",
+          "prompt": "Für Unternehmen mit wenigen Mitarbeitern kann das Konzept die Personalgewinnung erleichtern.",
           "answer": "c",
           "evidence": [
-            { "text": "leopold", "quote": "Seitdem kommen Bewerbungen aus der ganzen Region" }
+            {
+              "text": "leopold",
+              "quote": "Seitdem kommen Bewerbungen aus der ganzen Region"
+            }
           ],
           "explanation": "Leopold (c) yıllarca kalfa bulamamış; dört günlük haftayı getirdikten sonra „Seitdem kommen Bewerbungen aus der ganzen Region“ ve iki yeni çalışan almış. Küçük işletmesi için bunun „die Rettung“ olduğunu söylüyor. Jasper (a) da personel eksikliğinden bahsediyor, ama ona göre model eleman sorununu çözmüyor, tersine daha fazla eleman gerektiriyor. Quirin (h) de küçük bir işletme sahibi, ama yeni eleman almak onun için yalnızca masraf demek."
         },
         {
           "number": 24,
           "type": "zuordnung",
-          "prompt": "Die Kosten der kürzeren Arbeitszeit würden letztlich an die Kundschaft weitergegeben.",
+          "prompt": "Letztlich würden die Verbraucher die Mehrausgaben für die verkürzte Woche tragen.",
           "answer": "h",
           "evidence": [
-            { "text": "quirin", "quote": "Das kann ich nur über höhere Brötchenpreise ausgleichen" }
+            {
+              "text": "quirin",
+              "quote": "Das kann ich nur über höhere Brötchenpreise ausgleichen"
+            }
           ],
           "explanation": "Quirin (h) aynı açılış saatleri için ek satış elemanı alması gerekeceğini ve „Das kann ich nur über höhere Brötchenpreise ausgleichen“ diyor; sonunda faturayı tezgâhta herkes ödüyor. Ottilie (f) de müşteri tarafından yazıyor, ama onun endişesi fiyatlar değil, kapalı kapılar. Leopold (c) işletmesinin maliyetlerinden hiç söz etmiyor."
         },
         {
           "number": 25,
           "type": "zuordnung",
-          "prompt": "Wer die gleiche Stundenzahl auf weniger Tage verteilt, gewinnt kaum etwas.",
+          "prompt": "Solange das volle Pensum bloß zusammengedrängt wird, bringt die Umstellung den Beschäftigten kaum Vorteile.",
           "answer": "b",
           "evidence": [
-            { "text": "katja", "quote": "allerdings jeweils zehn Stunden, weil die Gesamtstundenzahl gleich geblieben ist" },
-            { "text": "katja", "quote": "Von mehr Freizeit kann also keine Rede sein" }
+            {
+              "text": "katja",
+              "quote": "allerdings jeweils zehn Stunden, weil die Gesamtstundenzahl gleich geblieben ist"
+            },
+            {
+              "text": "katja",
+              "quote": "Von mehr Freizeit kann also keine Rede sein"
+            }
           ],
-          "explanation": "Katja (b) dört gün, ama günde on saat çalışıyor, çünkü toplam saat aynı kalmış. Boş gününü dinlenmekle geçirdiği için „Von mehr Freizeit kann also keine Rede sein“ diyor. Marlene (d) de daha kısa günler istiyor, ama onun sebebi çocuklarına öğleden sonra bakabilmek; toplam saati dört güne sıkıştırmaktan söz etmiyor. Nikolai (e) dört günlük haftayı olumlu yaşamış."
+          "explanation": "Katja (b) dört gün, ama günde on saat çalışıyor, çünkü toplam saat aynı kalmış. Boş gününü dinlenmekle geçirdiği için „Von mehr Freizeit kann also keine Rede sein“ diyor. Marlene (d) de daha kısa günler istiyor, ama onun sebebi çocuklarına öğleden sonra bakabilmek; toplam saati dört güne sıkıştırmaktan söz etmiyor. Nikolai (e) de beş günlük işi dört güne sığdırmak zorunda kalmış, ama bunu olumlu yaşamış; ekipte daha az kişi hasta bildirmiş."
         },
         {
           "number": 26,
           "type": "zuordnung",
-          "prompt": "Die Zahl der Fehltage kann sinken, wenn nur noch an vier Tagen gearbeitet wird.",
+          "prompt": "Mit einer verkürzten Woche können die Fehlzeiten zurückgehen.",
           "answer": "e",
           "evidence": [
-            { "text": "nikolai", "quote": "dass sich im Team deutlich seltener jemand krankgemeldet hat als im Jahr davor" }
+            {
+              "text": "nikolai",
+              "quote": "dass sich im Team deutlich seltener jemand krankgemeldet hat als im Jahr davor"
+            }
           ],
-          "explanation": "Nikolai (e) şirketindeki altı aylık denemeyi anlatıyor: en şaşırtıcı sonuç „dass sich im Team deutlich seltener jemand krankgemeldet hat als im Jahr davor“. Daha az kişinin hasta bildirmesi, ifadedeki işe gelinmeyen günlerin („Fehltage“) azalması demek. Leopold (c) de modeli denemiş, ama onun gördüğü fayda başvuruların artması; hastalık izinlerinden söz etmiyor. Katja (b) dört gün çalışıyor ve boş gününü daha çok yorgunluğunu atmak için kullanıyor; ama çalışanların daha az hasta olduğunu ya da daha az eksik olduğunu söylemiyor."
+          "explanation": "Nikolai (e) şirketindeki altı aylık denemeyi anlatıyor: en şaşırtıcı sonuç „dass sich im Team deutlich seltener jemand krankgemeldet hat als im Jahr davor“. Daha az kişinin hasta bildirmesi, ifadedeki işe gelinmeyen sürelerin („Fehlzeiten“) azalması demek. Leopold (c) de modeli denemiş, ama onun gördüğü fayda başvuruların artması; hastalık izinlerinden söz etmiyor. Katja (b) dört gün çalışıyor ve boş gününü daha çok yorgunluğunu atmak için kullanıyor; ama çalışanların daha az hasta olduğunu ya da daha az eksik olduğunu söylemiyor."
         },
         {
           "number": 27,
           "type": "zuordnung",
-          "prompt": "Für Familien wären kürzere Arbeitstage nützlicher als ein freier Tag mehr.",
+          "prompt": "Für Eltern wäre ein früherer Dienstschluss wertvoller als ein langes Wochenende.",
           "answer": "d",
           "evidence": [
-            { "text": "marlene", "quote": "wenn ich jeden Tag um 14 Uhr Feierabend machen könnte" }
+            {
+              "text": "marlene",
+              "quote": "wenn ich jeden Tag um 14 Uhr Feierabend machen könnte"
+            }
           ],
-          "explanation": "Marlene (d) iki ilkokul çocuğunun annesi olarak serbest bir cumadan çok her gün erken çıkmaktan yararlanacağını yazıyor: „wenn ich jeden Tag um 14 Uhr Feierabend machen könnte“; böylece çocuklar öğleden sonra bakıma gitmek zorunda kalmaz. Katja (b) da toplamda daha az saat istiyor, ama aileden söz etmiyor. Priya (g) farklı günlerde izin modelini anlatıyor; aile konusuna girmiyor."
+          "explanation": "Marlene (d) iki ilkokul çocuğunun annesi olarak serbest bir cumadan çok her gün erken çıkmaktan yararlanacağını yazıyor: „wenn ich jeden Tag um 14 Uhr Feierabend machen könnte“; böylece çocuklar öğleden sonra bakıma gitmek zorunda kalmaz. Katja (b) da toplamda daha az saat istiyor, ama aileden söz etmiyor; uzun hafta sonu („langes Wochenende“) da onun metninde yalnızca başkalarının beklentisi olarak geçiyor. Priya (g) farklı günlerde izin modelini anlatıyor; aile konusuna girmiyor."
         }
       ]
     }

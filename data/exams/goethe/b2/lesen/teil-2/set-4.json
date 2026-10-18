@@ -1,0 +1,192 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b2",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-4",
+  "title": "Ein Museum ohne Eintritt",
+  "minutes": 12,
+  "context": "Sie lesen in einer Zeitung einen Artikel über ein Museum, das keinen Eintritt mehr verlangt.",
+  "instructions": "Lesen Sie den Text und wählen Sie für die Lücken 10 bis 15 den passenden Satz a bis h. Zwei Sätze bleiben übrig. Das Beispiel (0) steht schon im Text.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Ein Museum ohne Eintritt",
+          "paragraphs": [
+            "Seit dem 1. Januar des vergangenen Jahres muss im Stadtmuseum Erlenbrück niemand mehr eine Eintrittskarte kaufen. Wer sich für die Geschichte der ehemaligen Tuchmacherstadt interessiert, geht einfach durch die Tür – das gilt auch für die Sonderausstellungen. Das Haus zeigt auf drei Etagen alte Webstühle, Stadtmodelle und Alltagsgegenstände aus fünf Jahrhunderten. {{0=Der Stadtrat hatte diesen Schritt nach langer Debatte mit knapper Mehrheit beschlossen.}} Zuvor hatte ein Erwachsener sieben Euro bezahlt, Schülerinnen und Schüler die Hälfte.",
+            "Die Bilanz nach dem ersten Jahr fällt eindeutig aus. Statt rund 38 000 Menschen wie im Jahr davor kamen fast 90 000. {{10}} Museumsdirektorin Dr. Ines Walther hatte zwar mit einem Anstieg gerechnet, aber nicht in diesem Ausmaß. „Schon im ersten Monat mussten wir an Samstagen die Tür zeitweise schließen, weil zu viele Menschen gleichzeitig in den Räumen waren“, erzählt sie. Inzwischen bittet das Museum Schulklassen und Reisegruppen, sich vorher anzumelden.",
+            "Billig ist das Modell allerdings nicht. Früher brachten die Eintrittskarten dem Museum jedes Jahr rund 260 000 Euro ein. {{11}} Hinzu kommen höhere Ausgaben für Reinigung und Aufsichtspersonal, denn mehr Besucher bedeuten auch mehr Arbeit. Zwei zusätzliche Aufsichtskräfte mussten eingestellt werden, damit an den Wochenenden alle Räume im Blick bleiben. Ein Teil davon fließt immerhin wieder zurück: Im Museumscafé und im Shop hat sich der Umsatz verdreifacht. {{12}} Unter dem Strich kostet die Neuerung die Stadt nach Angaben der Kämmerei etwa 180 000 Euro pro Jahr.",
+            "Nicht alle sind von dem Modell überzeugt. Die Opposition im Stadtrat hält es für falsch, so viel Geld auszugeben, während an mehreren Schulen der Stadt seit Jahren die Dächer undicht sind. Ihr Sprecher nennt den freien Eintritt ein „teures Geschenk, das vor allem Touristen zugutekommt“. Auch die privaten Museen in der Umgebung sind verärgert. {{13}} Der Leiter eines kleinen Spielzeugmuseums im Nachbarort berichtet, seine Besucherzahlen seien im vergangenen Jahr um ein Fünftel zurückgegangen.",
+            "Dr. Walther freut sich dagegen vor allem darüber, wer heute ins Museum kommt. Eine Befragung ergab, dass ein Drittel der Gäste vorher noch nie im Stadtmuseum gewesen war. {{14}} Auch Jugendliche nutzen das Haus inzwischen als Treffpunkt: Im Lesesaal im Erdgeschoss machen nachmittags Schülergruppen ihre Hausaufgaben, bevor sie noch einen Blick in die Ausstellung werfen.",
+            "Ob der freie Eintritt auf Dauer bleibt, ist noch offen. Der Stadtrat hat das Modell zunächst für drei Jahre beschlossen und will danach gründlich prüfen lassen, ob sich die Ausgaben gelohnt haben. {{15}} Die Direktorin blickt der Entscheidung gelassen entgegen. „Wer einmal gesehen hat, wie voll unsere Räume an einem gewöhnlichen Dienstag sind, wird das Rad kaum zurückdrehen wollen“, sagt sie."
+          ]
+        },
+        {
+          "id": "a",
+          "label": "a",
+          "paragraphs": [
+            "Unter diesen Neulingen sind auffallend viele Familien mit geringem Einkommen, für die sieben Euro pro Person früher schlicht zu viel waren."
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "paragraphs": [
+            "Damit hat sich die Zahl der Gäste mehr als verdoppelt – ein Rekord in der über hundertjährigen Geschichte des Hauses."
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "paragraphs": [
+            "Dabei kamen in den ersten Monaten kaum mehr Besucher als früher; erst ab dem Frühjahr stieg die Zahl sprunghaft an."
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "paragraphs": [
+            "Dort geben gerade Gäste, die sich über den gesparten Eintritt freuen, gern ein paar Euro für Kuchen oder einen Katalog aus."
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "paragraphs": [
+            "Diesen Verlust gleicht seitdem der Förderverein des Museums mit Spenden aus, sodass der Stadt dadurch keine Kosten entstehen."
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "paragraphs": [
+            "Deren Betreiber fürchten, dass die Menschen bald nicht mehr bereit sind, für einen Museumsbesuch zu zahlen, wenn er wenige Kilometer weiter nichts kostet."
+          ]
+        },
+        {
+          "id": "g",
+          "label": "g",
+          "paragraphs": [
+            "Diesen Betrag muss nun die Stadt aus ihrem Haushalt ersetzen, damit das Museum seine Arbeit fortsetzen kann."
+          ]
+        },
+        {
+          "id": "h",
+          "label": "h",
+          "paragraphs": [
+            "Dafür sammelt das Haus schon jetzt Daten: Ein Sensor am Eingang zählt jeden Gast, und einmal im Monat werden Besucher nach ihrer Herkunft befragt."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 10,
+          "type": "zuordnung",
+          "prompt": "Lücke 10",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Statt rund 38 000 Menschen wie im Jahr davor kamen fast 90 000."
+            },
+            {
+              "text": "artikel",
+              "quote": "aber nicht in diesem Ausmaß"
+            }
+          ],
+          "explanation": "Boşluktan önce ziyaretçi sayısının bir önceki yıldaki yaklaşık 38 000'den neredeyse 90 000'e çıktığı yazıyor. b cümlesi „Damit“ ile bu rakamları özetliyor: ziyaretçi sayısı iki katından fazla artmış, müzenin tarihinde bir rekor. Boşluktan sonra müdire bir artış beklediğini, ama „nicht in diesem Ausmaß“ (bu boyutta değil) olduğunu söylüyor; bu da b'deki rekor artışa bağlanıyor. En çok aldatan c cümlesi: „Dabei“ ile dilbilgisi olarak buraya uyar ve yine ziyaretçi sayısından söz eder, ama ilk aylarda neredeyse hiç artış olmadığını söylüyor. Bu, Dr. Walther'in „Schon im ersten Monat mussten wir an Samstagen die Tür zeitweise schließen“ (daha ilk ayda cumartesileri kapıyı zaman zaman kapatmak zorunda kaldık) sözüyle çelişiyor. a cümlesi de burada uymaz: „Unter diesen Neulingen“ (bu yeni gelenlerin arasında) için önce müzeye ilk kez gelenlerden söz edilmesi gerekir; bu bilgi ancak 14. boşluktan önceki anket sonucunda geliyor."
+        },
+        {
+          "number": 11,
+          "type": "zuordnung",
+          "prompt": "Lücke 11",
+          "answer": "g",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Früher brachten die Eintrittskarten dem Museum jedes Jahr rund 260 000 Euro ein."
+            },
+            {
+              "text": "artikel",
+              "quote": "Unter dem Strich kostet die Neuerung die Stadt"
+            }
+          ],
+          "explanation": "Boşluktan önce giriş biletlerinin müzeye eskiden her yıl yaklaşık 260 000 euro kazandırdığı yazıyor; bu para artık gelmiyor. g cümlesi „Diesen Betrag“ (bu tutarı) ile bu paraya gönderme yapıyor ve onu artık şehrin kendi bütçesinden karşılaması gerektiğini söylüyor. Boşluktan sonraki „Hinzu kommen höhere Ausgaben“ (buna ek olarak daha yüksek giderler geliyor) ve paragraf sonundaki „Unter dem Strich kostet die Neuerung die Stadt“ (sonuçta yenilik şehre … mal oluyor) da masrafları şehrin taşıdığını gösteriyor. En çok aldatan e cümlesi: „Diesen Verlust“ da aynı tutara gönderme yapabilir, ama e bu kaybı müzenin destek derneğinin bağışlarla karşıladığını ve şehre bu yüzden hiçbir masraf çıkmadığını söylüyor. Paragrafın sonuna göre ise yenilik şehre yılda yaklaşık 180 000 euroya mal oluyor („kostet die Neuerung die Stadt … etwa 180 000 Euro pro Jahr“)."
+        },
+        {
+          "number": 12,
+          "type": "zuordnung",
+          "prompt": "Lücke 12",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Im Museumscafé und im Shop hat sich der Umsatz verdreifacht."
+            },
+            {
+              "text": "artikel",
+              "quote": "nach Angaben der Kämmerei etwa 180 000 Euro pro Jahr"
+            }
+          ],
+          "explanation": "Boşluktan önce paranın bir kısmının geri döndüğü yazıyor: müze kafesinde ve dükkânında ciro üç katına çıkmış. d cümlesi „Dort“ (orada) ile kafe ve dükkâna gönderme yapıyor ve nedenini açıklıyor: girişten tasarruf ettiğine sevinen ziyaretçiler orada pasta veya katalog için memnuniyetle birkaç euro harcıyor. Boşluktan sonra şehre kalan net maliyet veriliyor; bu, kafeden gelen paranın masrafların bir kısmını karşılamasıyla uyumlu. En çok aldatan g ve e cümleleri: ikisi de bir tutardan veya kayıptan söz ediyor, ama boşluktan hemen önce bir kayıp değil, artan bir gelir (ciro) var; bu geliri kimsenin yerine koyması („ersetzen“) veya telafi etmesi („ausgleichen“) gerekmiyor."
+        },
+        {
+          "number": 13,
+          "type": "zuordnung",
+          "prompt": "Lücke 13",
+          "answer": "f",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Auch die privaten Museen in der Umgebung sind verärgert."
+            },
+            {
+              "text": "artikel",
+              "quote": "seine Besucherzahlen seien im vergangenen Jahr um ein Fünftel zurückgegangen"
+            }
+          ],
+          "explanation": "Boşluktan önce çevredeki özel müzelerin kızgın olduğu yazıyor. f cümlesi bu kızgınlığın nedenini veriyor: „Deren Betreiber“ (onların, yani özel müzelerin işletmecileri) birkaç kilometre ötede ziyaret ücretsizken insanların yakında müze ziyareti için para ödemeye razı olmayacağından korkuyor. Boşluktan sonra komşu kasabadaki küçük bir oyuncak müzesinin müdürü bunu bir örnekle destekliyor: ziyaretçi sayısı „um ein Fünftel zurückgegangen“ (beşte bir azalmış). En çok aldatan d cümlesi: „Dort“ dilbilgisi olarak „in der Umgebung“a (çevrede) da bağlanabilir, ama d'deki ziyaretçiler girişten tasarruf ettikleri için kafede para harcıyor; bu, giriş ücreti alan özel müzeleri değil, ücretsiz Stadtmuseum'u anlatıyor ve özel müzelerin kızgınlığını açıklamıyor."
+        },
+        {
+          "number": 14,
+          "type": "zuordnung",
+          "prompt": "Lücke 14",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "dass ein Drittel der Gäste vorher noch nie im Stadtmuseum gewesen war"
+            },
+            {
+              "text": "artikel",
+              "quote": "Auch Jugendliche nutzen das Haus inzwischen als Treffpunkt"
+            }
+          ],
+          "explanation": "Boşluktan önce bir ankete göre ziyaretçilerin üçte birinin daha önce müzeye hiç gelmemiş olduğu yazıyor. a cümlesi „Unter diesen Neulingen“ (bu yeni gelenlerin arasında) ile müzeye ilk kez gelen bu ziyaretçilere gönderme yapıyor: aralarında, eskiden kişi başı yedi euroyu fazla bulan, geliri düşük birçok aile var. Bu, metnin başındaki yedi euroluk eski giriş ücretiyle de uyumlu. Boşluktan sonraki „Auch Jugendliche …“ (gençler de …) „auch“ ile ikinci bir ziyaretçi grubunu ekliyor; demek ki öncesinde bir grup (aileler) anılmış olmalı. En çok aldatan h cümlesi: o da ziyaretçilerin sorgulandığı bir ankete değiniyor, ama „Dafür“ (bunun için) bir amaca gönderme yapıyor; burada öncesinde bir amaç yok ve h yeni ziyaretçi gruplarını değil, veri toplamayı anlatıyor."
+        },
+        {
+          "number": 15,
+          "type": "zuordnung",
+          "prompt": "Lücke 15",
+          "answer": "h",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "will danach gründlich prüfen lassen, ob sich die Ausgaben gelohnt haben"
+            },
+            {
+              "text": "artikel",
+              "quote": "Die Direktorin blickt der Entscheidung gelassen entgegen."
+            }
+          ],
+          "explanation": "Boşluktan önce şehir meclisinin modeli önce üç yıllığına kabul ettiği ve sonra harcamaların buna değip değmediğini „gründlich prüfen lassen“ (ayrıntılı olarak inceletmek) istediği yazıyor. h cümlesi „Dafür“ (bunun için, yani bu inceleme için) müzenin şimdiden veri topladığını söylüyor: girişte bir sensör her ziyaretçiyi sayıyor, ayda bir ziyaretçilere anket yapılıyor. Boşluktan sonra müdirenin bu karara („der Entscheidung“) sakin baktığı yazıyor; yani boşlukta hâlâ üç yıl sonraki inceleme ve karar konusu sürüyor. En çok aldatan e cümlesi: o da paradan söz eder, ama „Diesen Verlust“ için boşluktan önce bir kayıp yok; ayrıca e'ye göre şehre hiçbir masraf çıkmıyor, oysa metne göre yenilik şehre yılda yaklaşık 180 000 euroya mal oluyor."
+        }
+      ]
+    }
+  ]
+}

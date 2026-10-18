@@ -1,0 +1,161 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b2",
+  "section": "lesen",
+  "teil": 5,
+  "set": "set-3",
+  "title": "Hinweise für die Ferienwohnung",
+  "minutes": 6,
+  "context": "Sie haben die „Ferienwohnung Kiefernruh“ in Lauterwiesen gemietet und lesen die Hausinformationen für Gäste.",
+  "instructions": "Lesen Sie die Überschriften a bis f und die Abschnitte. Welche Überschrift passt zu welchem Abschnitt? Zwei Überschriften bleiben übrig. Die Überschrift aus dem Beispiel können Sie nicht mehr wählen.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "abschnitt-0",
+          "title": "Abschnitt 0",
+          "paragraphs": [
+            "Die Wohnung ist ab 15 Uhr für Sie bezugsfertig. Den Schlüssel finden Sie in einem kleinen Kasten mit Zahlenschloss rechts neben der Haustür; den Code schicken wir Ihnen zwei Tage vorher per SMS. Sollten Sie erst nach 22 Uhr anreisen, geben Sie uns bitte kurz telefonisch Bescheid. Im Flur liegt eine Mappe mit dem WLAN-Passwort, einer Karte der Wanderwege und den Öffnungszeiten der Geschäfte im Ort."
+          ]
+        },
+        {
+          "id": "abschnitt-28",
+          "title": "Abschnitt 28",
+          "paragraphs": [
+            "Bitte trennen Sie Ihren Abfall. Unter der Spüle stehen drei Behälter: einer für Verpackungen aus Kunststoff und Metall, einer für Bioabfälle und einer für Restmüll. Altpapier und Glas bringen Sie bitte zu den Containern am Parkplatz des Gemeindehauses, etwa 200 Meter die Straße hinunter. Volle Säcke stellen Sie in den grauen Schuppen hinter dem Haus, die Abholung übernehmen wir. Batterien werfen Sie bitte nicht in den Restmüll, sondern geben sie in der Sammelbox im Flur ab."
+          ]
+        },
+        {
+          "id": "abschnitt-29",
+          "title": "Abschnitt 29",
+          "paragraphs": [
+            "Alle Räume werden über eine Fußbodenheizung beheizt, die recht träge reagiert. Drehen Sie den Regler im Wohnzimmer deshalb nicht ganz auf, sondern höchstens auf Stufe 3; nach etwa einer Stunde spüren Sie die Wirkung. Lüften Sie lieber mehrmals täglich für wenige Minuten, statt die Fenster stundenlang gekippt zu lassen. Den Kaminofen dürfen Sie gern benutzen, Holz liegt neben der Terrasse bereit. Wenn Sie tagsüber unterwegs sind, schalten Sie bitte Licht und Elektrogeräte aus."
+          ]
+        },
+        {
+          "id": "abschnitt-30",
+          "title": "Abschnitt 30",
+          "paragraphs": [
+            "Am letzten Tag Ihres Aufenthalts bitten wir Sie, die Wohnung bis 10 Uhr zu räumen. Die Endreinigung ist im Mietpreis enthalten; spülen Sie aber bitte das Geschirr und leeren Sie den Kühlschrank. Benutzte Bettwäsche und Handtücher legen Sie einfach in den Wäschekorb im Bad. Den Schlüssel werfen Sie in den Briefkasten am Gartentor. Eine spätere Übergabe ist nach Absprache möglich, sofern am selben Tag keine neuen Gäste einziehen."
+          ]
+        },
+        {
+          "id": "a",
+          "label": "a",
+          "paragraphs": [
+            "Wenn Sie bei uns eintreffen"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "paragraphs": [
+            "Bevor Sie uns wieder verlassen"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "paragraphs": [
+            "Behaglich und trotzdem sparsam"
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "paragraphs": [
+            "Falls einmal etwas zu Bruch geht"
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "paragraphs": [
+            "Was in welche Tonne gehört"
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "paragraphs": [
+            "Rücksicht auf die Bewohner nebenan"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 0",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "abschnitt-0",
+              "quote": "Die Wohnung ist ab 15 Uhr für Sie bezugsfertig."
+            },
+            {
+              "text": "abschnitt-0",
+              "quote": "Sollten Sie erst nach 22 Uhr anreisen"
+            }
+          ],
+          "explanation": "Bölüm 0 misafirin geldiği ilk anı anlatıyor: daire „ab 15 Uhr“ (saat 15'ten itibaren) hazır, anahtar kapının yanındaki şifreli kutuda, „nach 22 Uhr anreisen“ (saat 22'den sonra gelmek) durumunda haber verilmeli, koridorda WLAN şifresi ve harita olan bir dosya var. a başlığı („bize vardığınızda“) bunu farklı kelimelerle söylüyor. Bu başlık örnekte kullanıldığı için başka bir bölüm için seçilemez."
+        },
+        {
+          "number": 28,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 28",
+          "answer": "e",
+          "evidence": [
+            {
+              "text": "abschnitt-28",
+              "quote": "Bitte trennen Sie Ihren Abfall."
+            },
+            {
+              "text": "abschnitt-28",
+              "quote": "Altpapier und Glas bringen Sie bitte zu den Containern am Parkplatz des Gemeindehauses"
+            }
+          ],
+          "explanation": "Bölüm 28 çöplerin ayrılmasını anlatıyor: „Bitte trennen Sie Ihren Abfall.“ Evyenin altında ambalaj, organik atık ve diğer çöpler için üç kap var; atık kâğıt ve cam belediye binasının otoparkındaki konteynerlere, piller koridordaki toplama kutusuna götürülüyor. e başlığı („hangi şey hangi çöp kutusuna gider“) bu kuralları „Abfall“ kelimesini tekrar etmeden özetliyor. Aldatıcı olan b başlığı: dolu çöp torbalarının arkadaki kulübeye konması ayrılmadan önce yapılan bir iş gibi düşünülebilir, ama bölümde son gün, saat veya anahtar teslimi hiç geçmiyor; konu tatil boyunca çöplerin nereye atılacağı."
+        },
+        {
+          "number": 29,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 29",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "abschnitt-29",
+              "quote": "Drehen Sie den Regler im Wohnzimmer deshalb nicht ganz auf"
+            },
+            {
+              "text": "abschnitt-29",
+              "quote": "schalten Sie bitte Licht und Elektrogeräte aus"
+            }
+          ],
+          "explanation": "Bölüm 29 yerden ısıtmayı ve enerji kullanımını anlatıyor: termostat „nicht ganz auf“ (sonuna kadar değil), en fazla 3. kademeye açılmalı, pencereler saatlerce aralık bırakılmamalı, dışarıdayken „Licht und Elektrogeräte“ (ışık ve elektrikli aletler) kapatılmalı. Bölümde hem ısınma (yerden ısıtma, „Kaminofen“) hem de enerjiyi idareli kullanma (en fazla 3. kademe, kısa havalandırma, ışıkları kapatma) var; c başlığı („rahat ve sıcak, ama yine de tutumlu“) tam bunu söylüyor. Aldatıcı olan f başlığı: „mehrmals täglich lüften“ ve şömine komşuları etkileyen konular gibi görünebilir, ama bölümde komşulardan veya gürültüden hiç söz edilmiyor."
+        },
+        {
+          "number": 30,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 30",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "abschnitt-30",
+              "quote": "Am letzten Tag Ihres Aufenthalts bitten wir Sie, die Wohnung bis 10 Uhr zu räumen."
+            },
+            {
+              "text": "abschnitt-30",
+              "quote": "Den Schlüssel werfen Sie in den Briefkasten am Gartentor."
+            }
+          ],
+          "explanation": "Bölüm 30 konaklamanın son gününü anlatıyor: daire „bis 10 Uhr“ (saat 10'a kadar) boşaltılmalı, bulaşık yıkanmalı, buzdolabı boşaltılmalı, çarşaf ve havlular banyodaki sepete konmalı, anahtar bahçe kapısındaki posta kutusuna atılmalı. b başlığı („bizden yeniden ayrılmadan önce“) bu durumu „letzter Tag“ veya „räumen“ kelimelerini tekrar etmeden anlatıyor. Aldatıcı olan d başlığı: bulaşık ve buzdolabı geçtiği için bir şeyin kırılması akla gelebilir, ama bölümde hasardan veya kırılan eşyadan hiç söz edilmiyor; ayrıca „neue Gäste“ yeni gelecek misafirlerdir, komşular değil, bu yüzden f de uymuyor."
+        }
+      ]
+    }
+  ]
+}

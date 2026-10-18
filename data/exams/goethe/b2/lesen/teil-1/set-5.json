@@ -1,0 +1,197 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b2",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Weniger Fleisch essen?",
+  "minutes": 18,
+  "context": "In einem Onlineforum diskutieren Menschen über die Frage: „Sollten wir weniger Fleisch essen?“",
+  "instructions": "Lesen Sie die Texte a bis d und die Aufgaben 1 bis 9. Welche Aussage passt zu welcher Person? Die Personen können mehrmals gewählt werden.",
+  "groups": [
+    {
+      "layout": "comments",
+      "none": false,
+      "texts": [
+        {
+          "id": "konstantin",
+          "label": "a",
+          "byline": "Konstantin, Mühlenbrock",
+          "paragraphs": [
+            "Ich führe die Metzgerei, die schon mein Großvater eröffnet hat, und kann Ihnen sagen: Die Leute kaufen heute deutlich weniger Wurst und Braten als vor zehn Jahren, unser Umsatz ist um fast ein Drittel gefallen. Trotzdem finde ich die Entwicklung im Grunde vernünftig. Meinen Kunden rate ich ganz offen: Lieber einmal pro Woche ein ordentliches Stück vom Hof nebenan als jeden Tag Billigware aus dem Kühlregal. Seit wir nur noch Tiere von drei Bauernhöfen aus der Umgebung verarbeiten, sind unsere Preise merklich gestiegen – und erstaunlich viele Stammkunden nehmen das ohne Murren in Kauf. Diese Kundschaft will wissen, wo das Schwein gelebt hat und wer es gefüttert hat. Was mich ärgert, sind die Grillpakete im Discounter für drei Euro; die machen alles kaputt, was Bauern und Handwerker aufbauen."
+          ]
+        },
+        {
+          "id": "lotte",
+          "label": "b",
+          "byline": "Lotte, Sonnwiesen",
+          "paragraphs": [
+            "Seit einem Jahr kommt bei uns montags bis freitags kein Fleisch mehr auf den Tisch. Meine drei Kinder haben in den ersten Wochen nur gemault, und mein Mann hat heimlich Salami ins Büro mitgenommen. Ich bin aber hart geblieben. Am Wochenende darf jeder essen, was er möchte. Die vegetarischen Würstchen und Burger aus dem Supermarkt habe ich allerdings schnell wieder aus dem Einkaufswagen verbannt: Diese kosten fast das Doppelte und haben eine Zutatenliste so lang wie mein Arm. Stattdessen koche ich wieder wie meine Oma – mit Linsen, Bohnen und Kichererbsen. Mittlerweile wünscht sich mein Jüngster zum Geburtstag Linseneintopf, und das Kichererbsen-Curry ist meistens schon nach zehn Minuten weg. Nebenbei ist unser Haushaltsbudget dadurch sogar geschrumpft."
+          ]
+        },
+        {
+          "id": "mehmet",
+          "label": "c",
+          "byline": "Mehmet, Torfbrück",
+          "paragraphs": [
+            "Ich bin Koch in der Kantine eines großen Versicherungskonzerns. Vor drei Jahren hat die Geschäftsleitung beschlossen, dass es mittwochs nur noch vegetarische Gerichte gibt – angeblich, um das Klima zu schützen. Der Protest war heftig: Es gab eine Unterschriftenliste, und manche Kollegen sind mittwochs zur Imbissbude gegenüber gegangen. Nach einem halben Jahr wurde der Veggie-Tag still und leise wieder abgeschafft. Heute stehen jeden Tag zwei Hauptgerichte zur Wahl, eines davon ohne Fleisch, und mit dem vegetarischen gebe ich mir besonders viel Mühe: frische Kräuter, kreative Soßen, wechselnde Zutaten aus aller Welt. Das Ergebnis überrascht mich selbst: Mehr als die Hälfte der Gäste greift inzwischen zur fleischlosen Variante, und zwar freiwillig. Mit Verboten erreicht man bei Erwachsenen offenbar das Gegenteil."
+          ]
+        },
+        {
+          "id": "nadine",
+          "label": "d",
+          "byline": "Nadine, Buchenried",
+          "paragraphs": [
+            "Was mich an der ganzen Diskussion nervt, ist der erhobene Zeigefinger. Wer im Freundeskreis ein Schnitzel bestellt, muss sich inzwischen fast rechtfertigen, als hätte er etwas Verbotenes getan. Dabei bin ich gar nicht dagegen, weniger Fleisch zu essen. Ich spiele Handball in der Regionalliga und habe letztes Jahr ausprobiert, mich rein pflanzlich zu ernähren. Nach zwei Monaten war ich ständig müde, und meine Blutwerte waren so schlecht, dass meine Ärztin mir Tabletten verschreiben wollte. Seitdem gibt es bei mir zwei- bis dreimal pro Woche Hähnchen oder Fisch, an den anderen Tagen Gemüse und Getreide. Ich finde, jeder sollte selbst herausfinden, was ihm guttut, statt sich von anderen ein schlechtes Gewissen machen zu lassen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "… hat erlebt, dass Vorgaben von oben am Arbeitsplatz auf Widerstand stießen.",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "mehmet",
+              "quote": "hat die Geschäftsleitung beschlossen"
+            },
+            {
+              "text": "mehmet",
+              "quote": "Der Protest war heftig"
+            }
+          ],
+          "explanation": "Mehmet'in (c) çalıştığı kantinde yönetim çarşambaları yalnızca vejetaryen yemek olmasına karar vermiş („hat die Geschäftsleitung beschlossen“); buna karşı „Der Protest war heftig“, bir imza listesi bile toplanmış. Lotte (b) de evde bir kural koymuş ve itirazla karşılaşmış, ama bu iş yerinde değil, evde olmuş. Nadine (d) arkadaş çevresindeki baskıdan söz ediyor; iş yerinde konmuş bir kural yok."
+        },
+        {
+          "number": 1,
+          "type": "zuordnung",
+          "prompt": "… bekommt die veränderten Essgewohnheiten im eigenen Familienbetrieb finanziell zu spüren.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "konstantin",
+              "quote": "die schon mein Großvater eröffnet hat"
+            },
+            {
+              "text": "konstantin",
+              "quote": "unser Umsatz ist um fast ein Drittel gefallen"
+            }
+          ],
+          "explanation": "Konstantin (a) büyükbabasının açtığı kasap dükkânını işletiyor („die schon mein Großvater eröffnet hat“) ve satışların düştüğünü yazıyor: „unser Umsatz ist um fast ein Drittel gefallen“. Mehmet'in (c) kantininde de konukların yarıdan fazlası etsiz yemeği seçiyor, ama kantin bir sigorta şirketine ait, onun aile işletmesi değil; gelir kaybından da söz etmiyor. Lotte (b) evin bütçesinin küçüldüğünü söylüyor, ama bunun bir işletmeyle ilgisi yok."
+        },
+        {
+          "number": 2,
+          "type": "zuordnung",
+          "prompt": "… hält fertige Ersatzprodukte für keine gute Lösung.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "lotte",
+              "quote": "Diese kosten fast das Doppelte"
+            }
+          ],
+          "explanation": "Lotte (b) süpermarketteki vejetaryen sosis ve burgerleri hemen bırakmış: „Diese kosten fast das Doppelte und haben eine Zutatenliste so lang wie mein Arm.“ Mehmet (c) vejetaryen yemekleri kendisi taze otlar ve soslarla hazırlıyor, ama hazır ürünler hakkında bir şey söylemiyor. Konstantin (a) ucuz et paketlerini eleştiriyor, etin yerine geçen ürünleri değil."
+        },
+        {
+          "number": 3,
+          "type": "zuordnung",
+          "prompt": "… stört sich an dem belehrenden Ton, in dem die Debatte oft geführt wird.",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "nadine",
+              "quote": "ist der erhobene Zeigefinger"
+            }
+          ],
+          "explanation": "Nadine'i (d) tartışmada en çok sinirlendiren şey: „ist der erhobene Zeigefinger“; arkadaşları arasında şnitzel sipariş eden neredeyse kendini savunmak zorunda kalıyor. Mehmet (c) yasakların ters etki yaptığını söylüyor, ama tartışmanın tonundan değil, kantindeki kuraldan söz ediyor. Konstantin (a) ucuz et paketlerine kızıyor; insanların nasıl konuştuğunu eleştirmiyor."
+        },
+        {
+          "number": 4,
+          "type": "zuordnung",
+          "prompt": "… hat festgestellt, dass Überzeugen durch Qualität mehr bewirkt als Zwang.",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "mehmet",
+              "quote": "greift inzwischen zur fleischlosen Variante, und zwar freiwillig"
+            }
+          ],
+          "explanation": "Mehmet (c) vejetaryen gün kaldırıldıktan sonra her gün etsiz bir yemeği özenle hazırlıyor; şimdi konukların yarıdan fazlası „greift inzwischen zur fleischlosen Variante, und zwar freiwillig“. Lotte (b) bunun tersini yaşamış: çocuklarının itirazına rağmen kuralını korumuş. Konstantin (a) müşterilerine tavsiye veriyor, ama zorlamayı çekici bir seçenekle karşılaştırmıyor."
+        },
+        {
+          "number": 5,
+          "type": "zuordnung",
+          "prompt": "… hält es für richtig, seltener, dafür aber hochwertiger zu essen.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "konstantin",
+              "quote": "Lieber einmal pro Woche ein ordentliches Stück vom Hof nebenan"
+            }
+          ],
+          "explanation": "Konstantin (a) müşterilerine şunu öneriyor: „Lieber einmal pro Woche ein ordentliches Stück vom Hof nebenan als jeden Tag Billigware aus dem Kühlregal.“ Nadine (d) de haftada yalnızca iki üç kez tavuk ya da balık yiyor, ama etin kalitesinden söz etmiyor; onun sebebi sağlığı. Lotte (b) hafta içi et pişirmiyor, ama hafta sonu daha iyi et almaktan bahsetmiyor."
+        },
+        {
+          "number": 6,
+          "type": "zuordnung",
+          "prompt": "… hat mit einem völligen Verzicht gesundheitlich negative Erfahrungen gemacht.",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "nadine",
+              "quote": "meine Blutwerte waren so schlecht"
+            }
+          ],
+          "explanation": "Nadine (d) tamamen bitkisel beslenmeyi denemiş; iki ay sonra sürekli yorgunmuş ve „meine Blutwerte waren so schlecht“, doktoru ilaç yazmak istemiş. O zamandan beri haftada iki üç kez tavuk ya da balık yiyor. Lotte (b) hafta içi etsiz yemek yapıyor, ama bir sağlık sorunu yaşadığını yazmıyor. Mehmet (c) etsiz yemek sunuyor; kendisinin eti tamamen bırakmayı denediğinden söz etmiyor."
+        },
+        {
+          "number": 7,
+          "type": "zuordnung",
+          "prompt": "… hat sich gegen anfängliche Beschwerden in der Familie durchgesetzt.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "lotte",
+              "quote": "Ich bin aber hart geblieben"
+            }
+          ],
+          "explanation": "Lotte'nin (b) üç çocuğu ilk haftalarda sürekli söylenmiş, eşi gizlice işe salam götürmüş; ama „Ich bin aber hart geblieben.“ Mehmet (c) de bir itirazdan söz ediyor, ama itiraz ailede değil, kantinde yönetimin koyduğu kurala karşıydı ve vejetaryen gün altı ay sonra kaldırıldı. Nadine (d) arkadaş çevresinden söz ediyor, ailesindeki bir itirazdan değil."
+        },
+        {
+          "number": 8,
+          "type": "zuordnung",
+          "prompt": "… beobachtet, dass viele bereit sind, für eine nachvollziehbare Herkunft tiefer in die Tasche zu greifen.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "konstantin",
+              "quote": "erstaunlich viele Stammkunden nehmen das ohne Murren in Kauf"
+            },
+            {
+              "text": "konstantin",
+              "quote": "Diese Kundschaft will wissen, wo das Schwein gelebt hat"
+            }
+          ],
+          "explanation": "Konstantin (a) fiyatlar yükselmesine rağmen „erstaunlich viele Stammkunden nehmen das ohne Murren in Kauf“ diyor, ve „Diese Kundschaft will wissen, wo das Schwein gelebt hat“. Lotte (b) için ise yüksek fiyat, hazır ürünleri bırakmasının bir sebebi. Mehmet'in (c) konukları etsiz yemeği seçiyor, ama daha fazla ödemekten söz edilmiyor."
+        },
+        {
+          "number": 9,
+          "type": "zuordnung",
+          "prompt": "… berichtet, dass Gerichte aus Hülsenfrüchten in der Familie gut ankommen.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "lotte",
+              "quote": "das Kichererbsen-Curry ist meistens schon nach zehn Minuten weg"
+            }
+          ],
+          "explanation": "Lotte (b) büyükannesi gibi mercimek, fasulye ve nohutla yemek yapıyor; en küçük çocuğu doğum gününde mercimek yahnisi istiyor ve „das Kichererbsen-Curry ist meistens schon nach zehn Minuten weg“. Mehmet'in (c) etsiz yemekleri de beğeniliyor, ama o baklagillerden değil, taze otlardan, soslardan ve farklı malzemelerden söz ediyor ve konuklarından bahsediyor, ailesinden değil. Nadine (d) sebze ve tahıl yiyor, ama başkalarının bu yemekleri sevip sevmediğinden söz etmiyor."
+        }
+      ]
+    }
+  ]
+}

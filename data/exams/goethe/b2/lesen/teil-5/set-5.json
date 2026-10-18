@@ -1,0 +1,157 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b2",
+  "section": "lesen",
+  "teil": 5,
+  "set": "set-5",
+  "title": "Regeln in der offenen Werkstatt",
+  "minutes": 6,
+  "context": "Sie möchten im „Werkraum Ostviertel“, einer offenen Werkstatt für alle, an eigenen Projekten arbeiten und lesen die Nutzungsregeln.",
+  "instructions": "Lesen Sie die Überschriften a bis f und die Abschnitte. Welche Überschrift passt zu welchem Abschnitt? Zwei Überschriften bleiben übrig. Die Überschrift aus dem Beispiel können Sie nicht mehr wählen.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "abschnitt-0",
+          "title": "Abschnitt 0",
+          "paragraphs": [
+            "Bevor Sie zum ersten Mal selbstständig arbeiten, nehmen Sie bitte an einer zweistündigen Einführung teil. Sie findet jeden Dienstag um 18 Uhr statt und kostet einmalig 10 Euro. Wir zeigen Ihnen dabei die Räume, erklären die wichtigsten Sicherheitsregeln und üben mit Ihnen, wie man im Notfall den Strom abschaltet. Für größere Maschinen wie die Kreissäge oder die Drechselbank ist zusätzlich ein eigener Kurs nötig, der mit einem kurzen praktischen Test endet."
+          ]
+        },
+        {
+          "id": "abschnitt-28",
+          "title": "Abschnitt 28",
+          "paragraphs": [
+            "In den Arbeitsräumen sind feste, geschlossene Schuhe Pflicht. Schutzbrillen und Gehörschutz liegen an jeder Maschine bereit und müssen während der Arbeit getragen werden. Lange Haare binden Sie bitte zusammen; Schals, Ketten und weite Ärmel legen Sie vorher ab, da sie sich in drehenden Teilen verfangen können. Handschuhe sind beim Schleifen erwünscht, an der Bohrmaschine dagegen verboten, weil sie dort leicht vom Bohrer erfasst werden."
+          ]
+        },
+        {
+          "id": "abschnitt-29",
+          "title": "Abschnitt 29",
+          "paragraphs": [
+            "Den Lasercutter, den 3D-Drucker und die Kreissäge reservieren Sie bitte vorab über unseren Online-Kalender, und zwar für höchstens drei Stunden am Stück. Können Sie einen Termin nicht wahrnehmen, geben Sie ihn bitte rechtzeitig frei, damit andere ihn nutzen können. Handwerkzeuge wie Hammer, Feilen oder Akkuschrauber stehen dagegen ohne Anmeldung zur Verfügung. Tragen Sie nach der Nutzung Ihre Arbeitszeit in die Liste an der Wand ein; danach berechnen wir die Gebühr."
+          ]
+        },
+        {
+          "id": "abschnitt-30",
+          "title": "Abschnitt 30",
+          "paragraphs": [
+            "Am Ende Ihrer Arbeitszeit hinterlassen Sie Ihren Platz bitte so, wie Sie ihn selbst gern vorfinden möchten. Saugen Sie Späne und Staub mit dem Industriesauger ab, statt sie wegzupusten, und wischen Sie die Werkbank feucht ab. Werkzeuge kommen zurück an ihren markierten Platz im Wandregal. Zum Schluss schalten Sie bitte alle Maschinen am Hauptschalter aus und tragen sich am Ausgang aus der Anwesenheitsliste aus."
+          ]
+        },
+        {
+          "id": "a",
+          "label": "a",
+          "paragraphs": [
+            "Holz, Schrauben und Co.: Was Sie selbst mitbringen"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "paragraphs": [
+            "Ohne Einweisung geht es nicht"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "paragraphs": [
+            "Richtig gekleidet und ausgerüstet"
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "paragraphs": [
+            "Unsere Öffnungszeiten im Überblick"
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "paragraphs": [
+            "Geräte im Voraus sichern"
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "paragraphs": [
+            "Ordentlich Feierabend machen"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 0",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "abschnitt-0",
+              "quote": "nehmen Sie bitte an einer zweistündigen Einführung teil"
+            }
+          ],
+          "explanation": "Bölüm 0 atölyede ilk kez tek başına çalışmadan önce katılınması gereken „zweistündige Einführung“ (iki saatlik tanıtım) dersini anlatıyor: her salı saat 18'de, bir kerelik 10 Euro; büyük makineler için ayrıca sınavla biten bir kurs gerekiyor. b başlığı („eğitim almadan olmaz“) bunu farklı kelimelerle söylüyor. Bu başlık örnekte kullanıldığı için başka bir bölüm için seçilemez."
+        },
+        {
+          "number": 28,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 28",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "abschnitt-28",
+              "quote": "In den Arbeitsräumen sind feste, geschlossene Schuhe Pflicht."
+            },
+            {
+              "text": "abschnitt-28",
+              "quote": "Schutzbrillen und Gehörschutz liegen an jeder Maschine bereit"
+            }
+          ],
+          "explanation": "Bölüm 28 çalışırken ne giyilip takılacağını anlatıyor: „feste, geschlossene Schuhe“ (sağlam, kapalı ayakkabı) zorunlu, koruyucu gözlük ve kulaklık takılmalı, uzun saçlar toplanmalı, atkı ve kolye çıkarılmalı, eldiven zımparalamada isteniyor ama matkapta yasak. c başlığı („doğru giyinmiş ve donanımlı“) bunu özetliyor. Aldatıcı olan a başlığı: ayakkabı gibi şeyleri kişinin kendisinin getirmesi gerektiği düşünülebilir, ama a başlığı tahta ve vida gibi malzemelerden söz ediyor; koruyucu gözlük ve kulaklık ise makinelerin yanında hazır bekliyor („liegen an jeder Maschine bereit“)."
+        },
+        {
+          "number": 29,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 29",
+          "answer": "e",
+          "evidence": [
+            {
+              "text": "abschnitt-29",
+              "quote": "reservieren Sie bitte vorab über unseren Online-Kalender"
+            },
+            {
+              "text": "abschnitt-29",
+              "quote": "für höchstens drei Stunden am Stück"
+            }
+          ],
+          "explanation": "Bölüm 29 lazer kesici, 3D yazıcı ve daire testere gibi makinelerin „vorab über unseren Online-Kalender“ (önceden çevrimiçi takvimden) ayırtılmasını anlatıyor: en fazla üç saat üst üste, kullanılmayacak randevu zamanında bırakılmalı, el aletleri ise kayıtsız kullanılabiliyor. e başlığı („aletleri önceden ayırtmak“) bunu „reservieren“ kelimesini tekrar etmeden söylüyor. Aldatıcı olan a başlığı: „Hammer, Feilen oder Akkuschrauber“ geçtiği için malzeme konusu gibi görünebilir, ama bunlar atölyenin sunduğu aletler; tahta, vida gibi malzemelerden ve neyin getirilmesi gerektiğinden söz edilmiyor. d de uymuyor: „höchstens drei Stunden am Stück“ bir rezervasyonun süresi; atölyenin açılış saatleri hiçbir bölümde verilmiyor."
+        },
+        {
+          "number": 30,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 30",
+          "answer": "f",
+          "evidence": [
+            {
+              "text": "abschnitt-30",
+              "quote": "Am Ende Ihrer Arbeitszeit hinterlassen Sie Ihren Platz bitte so, wie Sie ihn selbst gern vorfinden möchten."
+            },
+            {
+              "text": "abschnitt-30",
+              "quote": "schalten Sie bitte alle Maschinen am Hauptschalter aus"
+            }
+          ],
+          "explanation": "Bölüm 30 çalışma bittiğinde yapılacakları anlatıyor: „Am Ende Ihrer Arbeitszeit“ (çalışma sürenizin sonunda) talaş ve toz süpürülmeli, tezgâh silinmeli, aletler duvar rafındaki yerlerine konmalı, makineler ana şalterden kapatılmalı ve çıkışta katılım listesinden çıkış yapılmalı. f başlığı („düzenli bir şekilde işi bitirmek“) bu anı ve toparlanmayı anlatıyor. Aldatıcı olan e başlığı: bölüm 29'da da çalışma süresi listeye yazılıyor ve burada da bir liste geçiyor, ama burada hiçbir şey ayırtılmıyor; konu temizlik ve atölyeden ayrılırken yapılacaklar."
+        }
+      ]
+    }
+  ]
+}

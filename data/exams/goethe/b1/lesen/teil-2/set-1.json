@@ -49,7 +49,7 @@
           "options": {
             "a": "helfen Ehrenamtliche in der Bibliothek.",
             "b": "beraten die Bibliothekarinnen die Besucher.",
-            "c": "kann man keine Bücher ausleihen."
+            "c": "leihen die Ehrenamtlichen die Bücher aus."
           },
           "answer": "a",
           "evidence": [
@@ -62,15 +62,15 @@
               "quote": "Ausleihen und zurückgeben kann man am Sonntag nur an diesen Automaten"
             }
           ],
-          "explanation": "Pazar günü gönüllüler (Ehrenamtliche) yardım ediyor. b) yanlış: Metin kütüphanecilerin pazar günü çalışmadığını söylüyor („die Bibliothekarinnen arbeiten an diesem Tag nicht“). c) yanlış: Kitap ödünç almak mümkün, ama sadece otomatlardan („nur an diesen Automaten“)."
+          "explanation": "Pazar günü gönüllüler (Ehrenamtliche) yardım ediyor: soruları yanıtlıyor, ziyaretçilere otomatları gösteriyor ve kitapları raflara yerleştiriyor. b) yanlış: Metin kütüphanecilerin pazar günü çalışmadığını söylüyor („die Bibliothekarinnen arbeiten an diesem Tag nicht“). c) yanlış: Gönüllüler kitap ödünç vermiyor; pazar günü ödünç alma ve iade sadece otomatlardan yapılıyor („nur an diesen Automaten“)."
         },
         {
           "number": 9,
           "type": "abc",
           "prompt": "Das Café im Eingangsbereich …",
           "options": {
-            "a": "wird von der Bibliothek geführt.",
-            "b": "ist nur am Familiennachmittag geöffnet.",
+            "a": "bezahlt mit seinem Geld neue Spiele für den Spieleraum.",
+            "b": "wird von den Ehrenamtlichen der Bibliothek betrieben.",
             "c": "wird von Schülerinnen und Schülern betrieben."
           },
           "answer": "c",
@@ -78,9 +78,13 @@
             {
               "text": "bibliothek",
               "quote": "Es wird von Schülerinnen und Schülern des Gymnasiums am Stadtpark betrieben"
+            },
+            {
+              "text": "bibliothek",
+              "quote": "die mit dem Geld ihre Klassenfahrt finanzieren"
             }
           ],
-          "explanation": "Kafeyi Stadtpark Lisesi'nin öğrencileri işletiyor ve parayla sınıf gezisini finanse ediyor. a) yanlış: Kafeyi kütüphane değil öğrenciler işletiyor. b) yanlış: Aile öğleden sonrası iki haftada bir yapılan ayrı bir etkinlik; kafenin sadece o gün açık olduğu yazmıyor."
+          "explanation": "Kafeyi Stadtpark Lisesi'nin öğrencileri işletiyor („von Schülerinnen und Schülern … betrieben“). a) yanlış: Kafeden gelen parayla oyun odası için oyun alınmıyor; öğrenciler bu parayla sınıf gezilerini finanse ediyor („mit dem Geld ihre Klassenfahrt finanzieren“). b) yanlış: Gönüllüler pazar günü yardım ediyor ve çocuklara hikâye okuyor, ama kafeyi onlar değil öğrenciler işletiyor."
         }
       ]
     },
@@ -153,7 +157,7 @@
           "prompt": "Bei Grünkiste …",
           "options": {
             "a": "fahren vor allem Studierende die Kisten aus.",
-            "b": "liefern die Fahrer bei jedem Wetter mit dem Fahrrad.",
+            "b": "liefern die Fahrer in der Altstadt mit dem Auto.",
             "c": "arbeiten acht Fahrer in Vollzeit."
           },
           "answer": "a",
@@ -164,10 +168,14 @@
             },
             {
               "text": "gruenkiste",
+              "quote": "In der engen Altstadt finden die Fahrer immer einen Platz zum Halten."
+            },
+            {
+              "text": "gruenkiste",
               "quote": "Bei Schnee und Eis müssen sie allerdings manchmal doch ein Auto nehmen."
             }
           ],
-          "explanation": "Sekiz çalışanın çoğu, okulun yanında haftada birkaç saat teslimat yapan üniversite öğrencileri. b) yanlış: Kar ve buzda bazen araba kullanmak zorundalar. c) yanlış: Metinde sekiz çalışan var ama çoğu öğrenci ve haftada sadece birkaç saat çalışıyor; tam zamanlı sekiz şoförden söz edilmiyor."
+          "explanation": "Sekiz çalışanın çoğu, okulun yanında haftada birkaç saat teslimat yapan üniversite öğrencileri („Die meisten Mitarbeiter sind Studierende“). b) yanlış: Metin, yük bisikletlerinin dar eski şehirde pratik olduğunu söylüyor: Sürücüler orada her zaman duracak yer buluyor. Araba sadece kar ve buzda bazen kullanılıyor („Bei Schnee und Eis … manchmal doch ein Auto“), eski şehir için değil. c) yanlış: Metinde sekiz çalışan var ama çoğu öğrenci ve haftada sadece birkaç saat çalışıyor; tam zamanlı sekiz şoförden söz edilmiyor."
         }
       ]
     }

@@ -106,7 +106,7 @@ Set şu adresten açılır: `#exams/goethe/b1/lesen/1/set-1`. DTZ gibi seviye ad
 node scripts/check-exams.mjs
 ```
 
-Betik bütün setleri açar; dosya yolu, soru türleri, cevaplar, alıntılar ve numaralar için hata verir; her setin cevap dağılımını ve kelime sayılarını yazar. GitHub'da `data/exams/**` veya `js/examsData.js` değişince otomatik çalışır.
+Betik bütün setleri açar (yalnızca bazılarını kontrol etmek için: `node scripts/check-exams.mjs teil-3/set-4`); dosya yolu, soru türleri, cevaplar, alıntılar ve numaralar için hata verir; her setin cevap dağılımını ve kelime sayılarını yazar. GitHub'da `data/exams/**` veya `js/examsData.js` değişince otomatik çalışır.
 
 ## 4. İçerik kuralları
 

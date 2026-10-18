@@ -1,11 +1,12 @@
 // Checks every exam set listed in js/examsData.js (exercises: [{ set: 'set-1', … }]).
-// Format: docs/sinav-setleri.md. Run: node scripts/check-exams.mjs
+// Format: docs/sinav-setleri.md. Run: node scripts/check-exams.mjs [path filter, e.g. teil-3/set-4]
 import fs from 'node:fs';
 import vm from 'node:vm';
 
 const context = { window: {} };
 vm.runInNewContext(fs.readFileSync('js/examsData.js', 'utf8'), context);
 const data = context.window.BA_EXAMS;
+const only = process.argv[2] || '';
 
 const TYPES = {
   'richtig-falsch': () => ['richtig', 'falsch'],
@@ -23,6 +24,7 @@ for (const exam of data.exams) for (const level of exam.levels || []) for (const
       if (!entry?.set) continue;
       const teilNo = index + 1;
       const path = `data/exams/${exam.id}/${level.id}/${section.id}/teil-${teilNo}/${entry.set}.json`;
+      if (!path.includes(only)) continue;
       const fail = message => errors.push(`${path}: ${message}`);
       if (!fs.existsSync(path)) { fail('file missing'); continue; }
       let set;

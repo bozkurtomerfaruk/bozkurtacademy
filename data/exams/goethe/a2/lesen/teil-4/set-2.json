@@ -34,7 +34,7 @@
           "label": "c",
           "title": "Fahrradkurier Pedalpost",
           "paragraphs": [
-            "Briefe und Pakete bis zehn Kilo bringen wir mit dem Fahrrad schnell durch die ganze Stadt – oft in weniger als einer Stunde. Wir fahren von Montag bis Freitag, 8 bis 18 Uhr. Am Wochenende sind wir leider geschlossen."
+            "Wichtige Briefe und Dokumente bringen wir mit dem Fahrrad schnell durch die ganze Stadt – oft in weniger als einer Stunde. Pakete transportieren wir leider nicht. Wir fahren von Montag bis Freitag, 8 bis 18 Uhr. Am Wochenende sind wir geschlossen."
           ]
         },
         {
@@ -75,23 +75,23 @@
         {
           "number": 16,
           "type": "zuordnung",
-          "prompt": "Deniz möchte heute ein Paket mit Büchern – fast 15 Kilo – schnell zu seiner Schwester auf die andere Seite der Stadt schicken.",
+          "prompt": "Deniz hat für seine Schwester einen Karton mit alten Büchern gepackt. Sie wohnt auf der anderen Seite der Stadt, und die Bücher sollen heute noch schnell zu ihr kommen.",
           "answer": "x",
-          "evidence": [{ "text": "c", "quote": "Briefe und Pakete bis zehn Kilo" }],
-          "explanation": "Tuzak c: Bisikletli kurye paketleri hızlıca şehrin her yerine götürüyor, ama sadece on kiloya kadar: „Briefe und Pakete bis zehn Kilo“. Deniz'in paketi yaklaşık 15 kilo. Başka bir ilan da paket götürmüyor: d sadece süpermarketten alışveriş getiriyor, a, b ve f başka hizmetler, e örnekte kullanıldı. Bu yüzden cevap X."
+          "evidence": [{ "text": "c", "quote": "Pakete transportieren wir leider nicht." }],
+          "explanation": "Tuzak c: Bisikletli kurye hızlı ve şehrin her yerine gidiyor, ama sadece mektup ve belge götürüyor: „Pakete transportieren wir leider nicht.“ Deniz'in kitap kolisi bir paket; kurye onu götürmüyor. Başka bir ilan da paket götürmüyor: d süpermarketten alışveriş yapıp getiriyor, a bilgisayar yardımı, b çocuk bakımı, f bisiklet tamiri; e örnekte kullanıldı. Bu yüzden cevap X."
         },
         {
           "number": 17,
           "type": "zuordnung",
-          "prompt": "Die Mutter von Carla ist 82 Jahre alt und kann nicht mehr gut laufen. Jemand soll für sie Lebensmittel einkaufen und nach Hause bringen.",
+          "prompt": "Die Mutter von Carla ist 82 Jahre alt und hat Probleme mit den Beinen. Jemand soll für sie Brot, Milch und Obst holen und ihr die Sachen in die Wohnung tragen.",
           "answer": "d",
           "evidence": [{ "text": "d", "quote": "Wir kaufen für Sie im Supermarkt ein und bringen alles nach Hause." }],
-          "explanation": "d ilanı iyi yürüyemeyen insanlar için bir alışveriş servisi: Süpermarketten alışveriş yapıp her şeyi eve getiriyorlar. Carla'nın annesi için uygun. Tuzak c: Kurye de eve bir şeyler getiriyor, ama sadece mektup ve paket taşıyor; alışveriş yapmıyor."
+          "explanation": "d ilanı iyi yürüyemeyen insanlar için bir alışveriş servisi: Süpermarketten alışveriş yapıp her şeyi eve getiriyorlar. Bacakları ağrıyan Carla'nın annesi için uygun. Tuzak c: Kurye de hızlıca bir şeyler getiriyor, ama sadece mektup ve belge taşıyor; ilanda alışveriş yazmıyor."
         },
         {
           "number": 18,
           "type": "zuordnung",
-          "prompt": "Frank und seine Frau sind am Samstagabend zu einer Hochzeit eingeladen. Sie suchen jemanden, der auf ihre zweijährige Tochter aufpasst.",
+          "prompt": "Frank und seine Frau sind am Samstagabend zu einer Hochzeit eingeladen. In dieser Zeit soll jemand bei ihrer zweijährigen Tochter bleiben.",
           "answer": "b",
           "evidence": [{ "text": "b", "quote": "Ich komme abends und am Wochenende zu Ihnen nach Hause, gern auch für Kinder ab einem Jahr." }],
           "explanation": "b ilanındaki öğrenci akşamları ve hafta sonu eve gelip bir yaşından itibaren çocuklara bakıyor. Cumartesi akşamı ve iki yaşındaki kız için uygun. Tuzak a: Cumartesi öğleden sonra çocuklar için bilgisayar kursu var, ama sadece on yaşından itibaren çocuklar için ve bu bir çocuk bakımı değil."
@@ -99,18 +99,18 @@
         {
           "number": 19,
           "type": "zuordnung",
-          "prompt": "Ihr Nachbar hat einen neuen Laptop, aber das Internet funktioniert nicht. Er hat nur abends Zeit.",
+          "prompt": "Ihr Nachbar hat einen neuen Laptop, aber er kommt damit nicht ins Internet. Er braucht Hilfe zu Hause, hat aber erst nach der Arbeit, gegen 19 Uhr, Zeit.",
           "answer": "a",
           "evidence": [{ "text": "a", "quote": "Ihr Computer ist langsam oder das Internet funktioniert nicht?" }, { "text": "a", "quote": "auch abends bis 21 Uhr" }],
-          "explanation": "a ilanı internet çalışmadığında yardım ediyor ve akşam 21'e kadar eve geliyor. Komşu sadece akşamları vakit bulabiliyor; bu ilan uygun. Tuzak e: Bu servis de cihaz tamir ediyor, ama ilanda sadece çamaşır makinesi, buzdolabı ve televizyon yazıyor; bilgisayar ve internet yazmıyor."
+          "explanation": "a ilanı internet çalışmadığında yardım ediyor ve eve geliyor, akşam 21'e kadar da. Komşu ancak saat 19 civarında vakit bulabiliyor; bu ilan uygun. Tuzak e: Bu servis de cihaz tamir ediyor, ama ilanda sadece çamaşır makinesi, buzdolabı ve televizyon yazıyor; bilgisayar ve internet yazmıyor."
         },
         {
           "number": 20,
           "type": "zuordnung",
-          "prompt": "Eine Kollegin fährt jeden Tag mit dem Fahrrad zur Arbeit. Jetzt funktionieren die Bremsen nicht mehr, und sie hat keine Zeit, das Rad zu einer Werkstatt zu bringen.",
+          "prompt": "Eine Kollegin fährt jeden Tag mit dem Fahrrad zur Arbeit. Jetzt hält das Rad nicht mehr richtig an, aber sie hat keine Zeit, es zur Reparatur in ein Geschäft zu bringen.",
           "answer": "f",
           "evidence": [{ "text": "f", "quote": "an Ihren Arbeitsplatz und reparieren Bremsen, Licht und Reifen direkt bei Ihnen" }],
-          "explanation": "f ilanındaki gezici bisiklet atölyesi eve veya iş yerine geliyor ve frenleri orada tamir ediyor. Meslektaşın bisikleti atölyeye götürmesine gerek yok. Tuzak c: Orada da bisiklet var, ama bu bir kurye; bisiklet tamir etmiyor, sadece mektup ve paket götürüyor."
+          "explanation": "f ilanındaki gezici bisiklet atölyesi eve veya iş yerine geliyor ve frenleri (Bremsen) orada tamir ediyor. Bisiklet iyi durmuyorsa frenler bozuktur; meslektaşın bisikleti bir yere götürmesine gerek yok. Tuzak c: Orada da bisiklet var, ama bu bir kurye; bisiklet tamir etmiyor, mektup ve belge götürüyor."
         }
       ]
     }

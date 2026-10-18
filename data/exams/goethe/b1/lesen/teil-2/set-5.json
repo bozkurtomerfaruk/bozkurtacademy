@@ -31,7 +31,7 @@
           "options": {
             "a": "haben die Kinder keinen normalen Unterricht.",
             "b": "fahren die Kinder zu einem Zirkus in einer anderen Stadt.",
-            "c": "zeigen die Kinder schon am Montag eine Vorstellung."
+            "c": "zeigen die Kinder ihr Können in einer großen Vorstellung."
           },
           "answer": "a",
           "evidence": [
@@ -48,14 +48,14 @@
               "quote": "Am Ende der Woche zeigen die Kinder ihr Können in zwei großen Vorstellungen."
             }
           ],
-          "explanation": "Okuldaki 160 çocuk için bu hafta normal ders yok („keinen normalen Unterricht“); matematik ve Almanca yerine jonglörlük, akrobasi ve ip cambazlığı var. b) yanlış: Çocuklar başka bir şehre gitmiyor; sirk çadırı okulun spor sahasında duruyor („Auf dem Sportplatz der Grundschule“). c) yanlış: Pazartesi günü sadece çadır kuruldu („seit Montag“); gösteriler haftanın sonunda, cuma ve cumartesi („Am Ende der Woche … in zwei großen Vorstellungen“)."
+          "explanation": "Okuldaki 160 çocuk için bu hafta normal ders yok („keinen normalen Unterricht“); matematik ve Almanca yerine jonglörlük, akrobasi ve ip cambazlığı var. b) yanlış: Çocuklar başka bir şehre gitmiyor; sirk çadırı okulun spor sahasında duruyor („Auf dem Sportplatz der Grundschule“). c) yanlış: Çocuklar haftanın sonunda bir değil, iki büyük gösteri yapıyor („Am Ende der Woche … in zwei großen Vorstellungen“)."
         },
         {
           "number": 8,
           "type": "abc",
           "prompt": "Das Zirkusprojekt …",
           "options": {
-            "a": "wird mit dem Geld aus dem Kartenverkauf bezahlt.",
+            "a": "wird vor allem vom Zirkus „Stella Monti“ bezahlt.",
             "b": "wird vor allem von den Eltern bezahlt.",
             "c": "wird vor allem vom Förderverein der Schule bezahlt."
           },
@@ -71,10 +71,10 @@
             },
             {
               "text": "schulzirkus",
-              "quote": "Das Geld aus dem Kartenverkauf ist für neue Spielgeräte auf dem Schulhof gedacht."
+              "quote": "ist zu Gast"
             }
           ],
-          "explanation": "Projenin parasının büyük kısmını okulun destek derneği (Förderverein) ödüyor („zum größten Teil vom Förderverein“). a) yanlış: Bilet satışından gelen para proje için değil, okul bahçesine yeni oyun aletleri için düşünülüyor („für neue Spielgeräte auf dem Schulhof gedacht“). b) yanlış: Veliler parayı büyük ölçüde ödemiyor; çocuk başına sadece 25 euro ekliyorlar („nur 25 Euro pro Kind dazu“)."
+          "explanation": "Projenin parasının büyük kısmını okulun destek derneği (Förderverein) ödüyor („zum größten Teil vom Förderverein“). a) yanlış: Projenin büyük kısmını sirk değil, okulun destek derneği ödüyor; sirk okulda misafir olarak bulunuyor („ist zu Gast“). b) yanlış: Veliler parayı büyük ölçüde ödemiyor; çocuk başına sadece 25 euro ekliyorlar („nur 25 Euro pro Kind dazu“)."
         },
         {
           "number": 9,
@@ -124,26 +124,26 @@
           "type": "abc",
           "prompt": "Im Hotel Seerose …",
           "options": {
-            "a": "hat etwa die Hälfte der Gäste eine Behinderung.",
-            "b": "arbeiten Menschen mit und ohne Behinderung in verschiedenen Bereichen zusammen.",
+            "a": "wurde der Empfangstisch für die Gäste extra niedrig gebaut.",
+            "b": "arbeiten Menschen mit und ohne Behinderung zusammen.",
             "c": "arbeiten Menschen mit Behinderung ohne normalen Arbeitsvertrag."
           },
           "answer": "b",
           "evidence": [
             {
               "text": "hotel",
-              "quote": "Von den 40 Mitarbeiterinnen und Mitarbeitern hat etwa die Hälfte eine Behinderung."
+              "quote": "Kolleginnen und Kollegen mit und ohne Behinderung arbeiten gemeinsam an der Rezeption, in der Küche, im Restaurant und bei der Zimmerreinigung."
             },
             {
               "text": "hotel",
-              "quote": "Kolleginnen und Kollegen mit und ohne Behinderung arbeiten gemeinsam an der Rezeption, in der Küche, im Restaurant und bei der Zimmerreinigung."
+              "quote": "Er nutzt einen Rollstuhl, deshalb wurde der Empfangstisch extra niedrig gebaut."
             },
             {
               "text": "hotel",
               "quote": "Alle haben einen normalen Arbeitsvertrag"
             }
           ],
-          "explanation": "Metin açıkça engelli olan ve olmayan çalışanların resepsiyonda, mutfakta, restoranda ve oda temizliğinde birlikte çalıştığını söylüyor („mit und ohne Behinderung arbeiten gemeinsam“). a) yanlış: Yaklaşık yarısı engelli olanlar misafirler değil, otelin 40 çalışanı („Von den 40 Mitarbeiterinnen und Mitarbeitern“). c) yanlış: Bütün çalışanların normal bir iş sözleşmesi var ve adil bir ücret alıyorlar („Alle haben einen normalen Arbeitsvertrag“)."
+          "explanation": "Metin açıkça engelli olan ve olmayan çalışanların resepsiyonda, mutfakta, restoranda ve oda temizliğinde birlikte çalıştığını söylüyor („mit und ohne Behinderung arbeiten gemeinsam“). a) yanlış: Resepsiyon masası misafirler için değil, tekerlekli sandalye kullanan Kemal yüzünden özellikle alçak yapıldı („Er nutzt einen Rollstuhl, deshalb wurde der Empfangstisch extra niedrig gebaut.“). c) yanlış: Bütün çalışanların normal bir iş sözleşmesi var ve adil bir ücret alıyorlar („Alle haben einen normalen Arbeitsvertrag“)."
         },
         {
           "number": 11,

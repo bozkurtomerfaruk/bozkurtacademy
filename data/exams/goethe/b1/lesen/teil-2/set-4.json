@@ -48,14 +48,14 @@
               "quote": "Von der Gemeinde kam nur das Gebäude"
             }
           ],
-          "explanation": "Köylüler birlikte bir kooperatif (Genossenschaft) kurdu: Katılmak isteyen herkes 200 euroluk bir pay aldı ve böylece yaklaşık 60.000 euro toplandı. Eski dükkân bu parayla yenilendi („Mit dem Geld wurden der alte Laden renoviert“). a) yanlış: Belediye para vermedi, sadece binayı çok düşük bir kirayla verdi („Von der Gemeinde kam nur das Gebäude“). c) yanlış: Yenileme dükkân açılmadan önce payların parasıyla yapıldı; dükkân ilk yılında zaten sadece az kâr etti („nur wenig Gewinn“)."
+          "explanation": "Köylüler birlikte bir kooperatif (Genossenschaft) kurdu: Katılmak isteyen herkes 200 euroluk bir pay aldı ve böylece yaklaşık 60.000 euro toplandı. Eski dükkân bu parayla yenilendi („Mit dem Geld wurden der alte Laden renoviert“). a) yanlış: Belediye para vermedi, sadece binayı çok düşük bir kirayla verdi („Von der Gemeinde kam nur das Gebäude“). c) yanlış: Yenileme payların parasıyla yapıldı („Mit dem Geld wurden der alte Laden renoviert“); dükkân ilk yılında zaten sadece az kâr etti („nur wenig Gewinn“)."
         },
         {
           "number": 8,
           "type": "abc",
           "prompt": "Im Dorfladen …",
           "options": {
-            "a": "arbeiten rund 30 fest angestellte Verkäuferinnen.",
+            "a": "arbeiten die zwei Verkäuferinnen als Freiwillige.",
             "b": "kann man auch Waren bestellen, die es im Regal nicht gibt.",
             "c": "kommt bestellte Ware meistens erst nach einer Woche."
           },
@@ -74,7 +74,7 @@
               "quote": "Meistens ist es dann schon am nächsten Tag da."
             }
           ],
-          "explanation": "Rafta olmayan bir şeye ihtiyacı olan kişi onu kasada sipariş edebiliyor („kann es an der Kasse bestellen“). a) yanlış: Kadrolu satış elemanı sadece iki kişi; yaklaşık 30 kişi ise gönüllü olarak yardım ediyor („zusätzlich helfen rund 30 Freiwillige“). c) yanlış: Sipariş edilen ürün bir hafta sonra değil, çoğu zaman ertesi gün geliyor („schon am nächsten Tag da“)."
+          "explanation": "Rafta olmayan bir şeye ihtiyacı olan kişi onu kasada sipariş edebiliyor („kann es an der Kasse bestellen“). a) yanlış: İki satış elemanı gönüllü değil, kadrolu („zwei fest angestellte Verkäuferinnen“); gönüllüler ek olarak yardım eden yaklaşık 30 kişi („zusätzlich helfen rund 30 Freiwillige“). c) yanlış: Sipariş edilen ürün bir hafta sonra değil, çoğu zaman ertesi gün geliyor („schon am nächsten Tag da“)."
         },
         {
           "number": 9,

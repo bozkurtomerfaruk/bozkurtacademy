@@ -1,0 +1,129 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-2",
+  "title": "Die neue Wohnung",
+  "minutes": 8,
+  "instructions": "Sie lesen eine E-Mail. Wählen Sie für die Aufgaben 11 bis 15 die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "mail",
+          "title": "Endlich umgezogen!",
+          "byline": "E-Mail von Marco an Hakan",
+          "paragraphs": [
+            "Lieber Hakan,",
+            "endlich habe ich Zeit für eine E-Mail! Seit letztem Freitag wohne ich in meiner neuen Wohnung. Sie hat zwei Zimmer, eine kleine Küche und einen Balkon. Die Wohnung liegt im dritten Stock, und leider gibt es keinen Aufzug. Beim Umzug haben mir meine Brüder geholfen – nach vier Stunden waren wir sehr müde.",
+            "Die Wohnung ist nicht weit vom Bahnhof. Zur Arbeit fahre ich jetzt nur zehn Minuten mit der S-Bahn. Früher habe ich mit dem Bus fast eine Stunde gebraucht.",
+            "Meine Nachbarn habe ich auch schon kennengelernt. Neben mir wohnt ein junges Paar mit einem Baby. Die beiden haben mich gleich am ersten Abend zum Tee eingeladen.",
+            "Ein paar Sachen fehlen noch. Im Wohnzimmer habe ich noch keine Lampe, und die Waschmaschine kommt erst nächste Woche. Mein altes Sofa war zu groß für die Treppe, deshalb habe ich es verkauft. Jetzt suche ich ein neues.",
+            "Am Samstag, dem 7. November, möchte ich eine kleine Party machen. Kommst du? Und kannst du vielleicht schon am Nachmittag kommen? Ich möchte die Regale aufbauen, und allein ist das schwer.",
+            "Bis bald",
+            "Marco"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 11,
+          "type": "abc",
+          "prompt": "Marcos neue Wohnung …",
+          "options": {
+            "a": "hat drei Zimmer.",
+            "b": "hat einen Aufzug.",
+            "c": "hat einen Balkon."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Sie hat zwei Zimmer, eine kleine Küche und einen Balkon."
+            }
+          ],
+          "explanation": "Yeni dairenin bir balkonu var: „Sie hat zwei Zimmer, eine kleine Küche und einen Balkon.“ a) yanlış: Dairede üç değil, iki oda var; „dritten“ kelimesi oda sayısı değil, kat: „im dritten Stock“. b) yanlış: Binada asansör yok: „leider gibt es keinen Aufzug“."
+        },
+        {
+          "number": 12,
+          "type": "abc",
+          "prompt": "Marco …",
+          "options": {
+            "a": "braucht jetzt weniger Zeit zur Arbeit.",
+            "b": "fährt mit dem Bus zur Arbeit.",
+            "c": "hat beim Umzug Hilfe von Freunden bekommen."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Zur Arbeit fahre ich jetzt nur zehn Minuten mit der S-Bahn."
+            }
+          ],
+          "explanation": "Marco artık işe S-Bahn ile sadece on dakikada gidiyor; eskiden yaklaşık bir saat sürüyordu: „Früher habe ich mit dem Bus fast eine Stunde gebraucht.“ b) yanlış: Otobüsle eskiden gidiyordu, şimdi S-Bahn ile gidiyor. c) yanlış: Taşınırken ona arkadaşları değil, erkek kardeşleri yardım etti: „Beim Umzug haben mir meine Brüder geholfen“."
+        },
+        {
+          "number": 13,
+          "type": "abc",
+          "prompt": "Die Nachbarn …",
+          "options": {
+            "a": "haben zwei Kinder.",
+            "b": "haben Marco zum Tee eingeladen.",
+            "c": "haben Marco beim Umzug geholfen."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Die beiden haben mich gleich am ersten Abend zum Tee eingeladen."
+            }
+          ],
+          "explanation": "Yan dairedeki genç çift Marco'yu ilk akşam çaya davet etti: „Die beiden haben mich gleich am ersten Abend zum Tee eingeladen.“ a) yanlış: Çiftin iki çocuğu değil, bir bebeği var: „ein junges Paar mit einem Baby“. c) yanlış: Taşınmada komşular değil, Marco'nun erkek kardeşleri yardım etti."
+        },
+        {
+          "number": 14,
+          "type": "abc",
+          "prompt": "Marco …",
+          "options": {
+            "a": "hat noch keine Lampe im Wohnzimmer.",
+            "b": "bekommt die Waschmaschine diese Woche.",
+            "c": "hat sein altes Sofa in die neue Wohnung mitgenommen."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Im Wohnzimmer habe ich noch keine Lampe"
+            }
+          ],
+          "explanation": "Oturma odasında henüz lamba yok: „Im Wohnzimmer habe ich noch keine Lampe“. b) yanlış: Çamaşır makinesi bu hafta değil, gelecek hafta geliyor: „kommt erst nächste Woche“. c) yanlış: Eski kanepe merdiven için çok büyüktü, bu yüzden Marco onu sattı: „deshalb habe ich es verkauft“."
+        },
+        {
+          "number": 15,
+          "type": "abc",
+          "prompt": "Marco fragt Hakan, ob er …",
+          "options": {
+            "a": "am 7. November eine Party macht.",
+            "b": "ihm am Nachmittag bei den Regalen hilft.",
+            "c": "ein neues Sofa für ihn sucht."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Und kannst du vielleicht schon am Nachmittag kommen?"
+            },
+            {
+              "text": "mail",
+              "quote": "Ich möchte die Regale aufbauen, und allein ist das schwer."
+            }
+          ],
+          "explanation": "Marco, Hakan'ın öğleden sonra erkenden gelip gelemeyeceğini soruyor, çünkü rafları kurmak istiyor ve bu yalnız zor: „Ich möchte die Regale aufbauen, und allein ist das schwer.“ a) yanlış: 8 Kasım'da partiyi Hakan değil, Marco yapmak istiyor: „möchte ich eine kleine Party machen“. c) yanlış: Yeni kanepeyi Marco kendisi arıyor: „Jetzt suche ich ein neues.“ Hakan'dan bunu istemiyor."
+        }
+      ]
+    }
+  ]
+}

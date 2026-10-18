@@ -1,0 +1,163 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b2",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-5",
+  "title": "Schulnoten abschaffen?",
+  "minutes": 12,
+  "context": "In einer Elternzeitschrift lesen Sie Leserbriefe zu der Frage: „Sollten Schulen auf Noten verzichten?“",
+  "instructions": "Lesen Sie die Texte a bis h und die Aussagen 22 bis 27. Welche Aussage passt zu welchem Text? Jeder Text passt höchstens einmal. Ein Text bleibt übrig. Der Text aus dem Beispiel kann nicht mehr gewählt werden.",
+  "groups": [
+    {
+      "layout": "comments",
+      "none": false,
+      "texts": [
+        {
+          "id": "rainer",
+          "label": "a",
+          "byline": "Rainer, Fasanenweiler",
+          "paragraphs": [
+            "Meine Tochter geht in die dritte Klasse und klagt vor jeder Mathearbeit über Bauchschmerzen. Nachts schläft sie unruhig, morgens will sie nicht aufstehen. Seit in ihrem Zeugnis Ziffern stehen, ist aus dem neugierigen Mädchen ein ängstliches geworden. Mir ist klar, dass man irgendwann Leistungen messen muss. Aber mit acht Jahren? Ich würde mir wünschen, dass man zumindest in der Grundschule darauf verzichtet."
+          ]
+        },
+        {
+          "id": "selin",
+          "label": "b",
+          "byline": "Selin, Biberau",
+          "paragraphs": [
+            "In der zehnten Klasse habe ich für zwei Aufsätze, die sich kaum unterschieden, eine Zwei und eine Vier bekommen. Der einzige Unterschied: Zwischen den beiden Arbeiten hatte die Deutschlehrerin gewechselt. Seitdem glaube ich nicht mehr an die angebliche Objektivität von Zensuren. Was die eine Lehrerin originell findet, hält der nächste Lehrer für am Thema vorbei. Eine Ziffer erweckt nur den Anschein, als wäre sie exakt."
+          ]
+        },
+        {
+          "id": "torben",
+          "label": "c",
+          "byline": "Torben, Lärchenstedt",
+          "paragraphs": [
+            "Ich habe drei Kinder und finde, dass es auf den Zeitpunkt ankommt. Mit sechs oder sieben Jahren entwickeln sich Kinder sehr verschieden; wer langsamer lesen lernt, sollte nicht gleich als schwach abgestempelt werden. In den letzten Schuljahren vor dem Abschluss brauchen Jugendliche dagegen eine klare Orientierung, wo sie stehen. Deshalb halte ich es für vernünftig, die ersten Jahre ohne Ziffern zu gestalten und sie später einzuführen."
+          ]
+        },
+        {
+          "id": "ute",
+          "label": "d",
+          "byline": "Ute, Wieselbach",
+          "paragraphs": [
+            "Ich unterrichte an einer Grundschule, an der wir in den ersten beiden Klassen Berichte statt Ziffern verfassen. Für jedes meiner 26 Kinder schreibe ich dabei rund eine Seite. Das kostet mich vor jedem Halbjahr mehrere Wochenenden. Inhaltlich halte ich diese Texte für wertvoller als eine Zahl. Man stelle sich aber eine Kollegin am Gymnasium vor, die über hundert Jugendliche in verschiedenen Klassen hat: Das wäre kaum zu schaffen."
+          ]
+        },
+        {
+          "id": "valentina",
+          "label": "e",
+          "byline": "Valentina, Haselmoor",
+          "paragraphs": [
+            "Unser Sohn hat sechs Jahre lang eine Montessori-Einrichtung besucht, in der es nur Lernberichte gab. Dort war er fröhlich und selbstbewusst. Dann kam er aufs Gymnasium, und schon nach der ersten Klassenarbeit mit einer Fünf brach für ihn eine Welt zusammen. Er wusste schlicht nicht, wie er so eine Zahl einordnen sollte, und hat monatelang an sich gezweifelt. Inzwischen hat er sich gefangen, aber leicht war diese Zeit für keinen von uns."
+          ]
+        },
+        {
+          "id": "werner",
+          "label": "f",
+          "byline": "Werner, Kiebitzfeld",
+          "paragraphs": [
+            "Ich leite die Ausbildung in einem Maschinenbauunternehmen. Jedes Jahr landen über zweihundert Unterlagen von Jugendlichen auf meinem Tisch. Zeugnisse mit Ziffern geben mir einen ersten Anhaltspunkt, wen ich zum Gespräch einlade. Wenn jede Schule stattdessen eigene Texte formuliert, kann ich die Kandidaten kaum noch nebeneinanderlegen. Ich verstehe die pädagogischen Argumente durchaus. Die Frage, wie wir dann fair auswählen sollen, beantwortet mir aber niemand."
+          ]
+        },
+        {
+          "id": "ximena",
+          "label": "g",
+          "byline": "Ximena, Ammerbrück",
+          "paragraphs": [
+            "Abschaffen oder behalten – warum eigentlich entweder oder? An der Schule meiner Zwillinge gibt es zusätzlich zu den Zensuren zweimal im Jahr ein Gespräch zwischen Lehrerin, Eltern und Kind. Dort erfahren wir, woran es hapert, was gut läuft und wie wir zu Hause unterstützen können. Die Zahl allein hätte uns das nie verraten. Erst beides zusammen ergibt für mich ein vollständiges Bild."
+          ]
+        },
+        {
+          "id": "yannick",
+          "label": "h",
+          "byline": "Yannick, Storchenau",
+          "paragraphs": [
+            "Ehrlich gesagt hätte ich in der Oberstufe kaum ein Buch aufgeschlagen, wenn am Ende kein Zeugnis gewartet hätte. Die Aussicht auf eine gute Zensur hat mich angetrieben, auch in Fächern, die mich nicht interessiert haben. In meinem Jahrgang ging es vielen genauso. Schön wäre es natürlich, wenn alle nur aus Neugier lernten. So sind Jugendliche aber nun mal nicht, und das sollten die Befürworter der Reform nicht übersehen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Firmen benötigen für Einstellungsentscheidungen Informationen, die sich gegenüberstellen lassen.",
+          "answer": "f",
+          "evidence": [
+            { "text": "werner", "quote": "kann ich die Kandidaten kaum noch nebeneinanderlegen" }
+          ],
+          "explanation": "Werner (f) bir makine mühendisliği şirketinde mesleki eğitimi yönetiyor ve her yıl iki yüzden fazla başvuru alıyor. Rakamlı karneler ona kimi görüşmeye çağıracağı konusunda ilk ipucunu veriyor; her okul kendi metnini yazarsa „kann ich die Kandidaten kaum noch nebeneinanderlegen“."
+        },
+        {
+          "number": 22,
+          "type": "zuordnung",
+          "prompt": "Bewertungsdruck kann schon jüngeren Kindern körperlich zusetzen.",
+          "answer": "a",
+          "evidence": [
+            { "text": "rainer", "quote": "klagt vor jeder Mathearbeit über Bauchschmerzen" },
+            { "text": "rainer", "quote": "Nachts schläft sie unruhig" }
+          ],
+          "explanation": "Rainer (a) üçüncü sınıftaki kızının „klagt vor jeder Mathearbeit über Bauchschmerzen“ olduğunu ve „Nachts schläft sie unruhig“ diye yazıyor; karnede rakamlar olduğundan beri meraklı kız korkak olmuş. Torben (c) de küçük çocuklara not vermeye karşı, ama sebebi çocukların farklı hızda gelişmesi; bedensel şikâyetlerden söz etmiyor. Valentina (e) oğlunun aylarca kendinden şüphe ettiğini anlatıyor, ama bu ilkokulda değil, liseye geçince olmuş ve bedensel değil."
+        },
+        {
+          "number": 23,
+          "type": "zuordnung",
+          "prompt": "Ausführliche schriftliche Beurteilungen würden Lehrkräfte zeitlich stark belasten.",
+          "answer": "d",
+          "evidence": [
+            { "text": "ute", "quote": "Das kostet mich vor jedem Halbjahr mehrere Wochenenden" },
+            { "text": "ute", "quote": "Das wäre kaum zu schaffen" }
+          ],
+          "explanation": "Ute (d) ilkokulda not yerine rapor yazıyor; 26 öğrencisinin her biri için yaklaşık bir sayfa. „Das kostet mich vor jedem Halbjahr mehrere Wochenenden“. Yüzden fazla öğrencisi olan bir lise öğretmeni için: „Das wäre kaum zu schaffen“. Werner (f) de yazılı metinlerden yakınıyor, ama onun sorunu bunları yazmak değil, adayları karşılaştıramamak. Ximena (g) öğretmenle yapılan görüşmeleri olumlu anlatıyor; öğretmenin iş yükünden söz etmiyor."
+        },
+        {
+          "number": 24,
+          "type": "zuordnung",
+          "prompt": "Welches Ergebnis man erhält, hängt stark von der Person ab, die korrigiert.",
+          "answer": "b",
+          "evidence": [
+            { "text": "selin", "quote": "Zwischen den beiden Arbeiten hatte die Deutschlehrerin gewechselt" },
+            { "text": "selin", "quote": "Was die eine Lehrerin originell findet, hält der nächste Lehrer für am Thema vorbei" }
+          ],
+          "explanation": "Selin (b) neredeyse aynı iki kompozisyon için bir 2 ve bir 4 almış; tek fark: „Zwischen den beiden Arbeiten hatte die Deutschlehrerin gewechselt“. „Was die eine Lehrerin originell findet, hält der nächste Lehrer für am Thema vorbei“. Werner (f) de adil seçimden söz ediyor, ama o rakamları karşılaştırmak için faydalı buluyor; notun öğretmene bağlı olduğunu söylemiyor. Ximena (g) rakamın tek başına yetmediğini söylüyor, ama notu kimin verdiği konusuna girmiyor."
+        },
+        {
+          "number": 25,
+          "type": "zuordnung",
+          "prompt": "Ohne äußeren Anreiz würden manche Schüler deutlich weniger tun.",
+          "answer": "h",
+          "evidence": [
+            { "text": "yannick", "quote": "hätte ich in der Oberstufe kaum ein Buch aufgeschlagen" },
+            { "text": "yannick", "quote": "Die Aussicht auf eine gute Zensur hat mich angetrieben" }
+          ],
+          "explanation": "Yannick (h) sonunda bir karne beklemeseydi „hätte ich in der Oberstufe kaum ein Buch aufgeschlagen“ diyor; „Die Aussicht auf eine gute Zensur hat mich angetrieben“ ve sınıfındaki birçok kişi de böyleymiş. Torben (c) de büyük öğrencilerin not almasını istiyor, ama sebebi motivasyon değil, nerede durduklarını bilmeleri (Orientierung). Werner (f) notları savunuyor, ama işveren gözüyle, öğrencilerin çalışma isteği açısından değil."
+        },
+        {
+          "number": 26,
+          "type": "zuordnung",
+          "prompt": "Der Übergang aus einem System ohne Zensuren in ein herkömmliches kann Kinder überfordern.",
+          "answer": "e",
+          "evidence": [
+            { "text": "valentina", "quote": "brach für ihn eine Welt zusammen" },
+            { "text": "valentina", "quote": "hat monatelang an sich gezweifelt" }
+          ],
+          "explanation": "Valentina (e) oğlunun altı yıl yalnızca öğrenme raporları olan bir Montessori kurumuna gittiğini yazıyor. Liseye geçip ilk sınavdan 5 alınca „brach für ihn eine Welt zusammen“; bu rakamı nasıl yorumlayacağını bilmemiş ve „hat monatelang an sich gezweifelt“. Torben (c) de önce notsuz, sonra notlu bir düzen öneriyor, ama bu geçişin zor olabileceğini söylemiyor. Rainer (a) kızının korkularını anlatıyor, ama kızı notsuz bir okuldan gelmiyor."
+        },
+        {
+          "number": 27,
+          "type": "zuordnung",
+          "prompt": "Ziffern sollten durch regelmäßige individuelle Rückmeldungen ergänzt werden.",
+          "answer": "g",
+          "evidence": [
+            { "text": "ximena", "quote": "warum eigentlich entweder oder?" },
+            { "text": "ximena", "quote": "Erst beides zusammen ergibt für mich ein vollständiges Bild" }
+          ],
+          "explanation": "Ximena (g) „warum eigentlich entweder oder?“ diye soruyor: ikizlerinin okulunda notların yanında yılda iki kez öğretmen, aile ve çocukla bir görüşme yapılıyor. Rakam tek başına sorunları göstermezdi; „Erst beides zusammen ergibt für mich ein vollständiges Bild“. Ute (d) de raporları rakamdan daha değerli buluyor, ama ikisinin birlikte kullanılmasını önermiyor; raporlar onun okulunda notların yerine yazılıyor. Torben (c) de iki sistemi birleştiriyor, ama aynı anda değil, sırayla: önce notsuz, sonra notlu."
+        }
+      ]
+    }
+  ]
+}

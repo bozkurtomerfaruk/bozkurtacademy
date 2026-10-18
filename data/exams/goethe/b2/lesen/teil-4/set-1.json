@@ -1,0 +1,159 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b2",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-1",
+  "title": "Die Vier-Tage-Woche",
+  "minutes": 12,
+  "context": "In einer Zeitung lesen Sie Leserbriefe zu der Frage: „Sollte die Vier-Tage-Woche bei vollem Lohn Standard werden?“",
+  "instructions": "Lesen Sie die Texte a bis h und die Aussagen 22 bis 27. Welche Aussage passt zu welchem Text? Jeder Text passt höchstens einmal. Ein Text bleibt übrig. Der Text aus dem Beispiel kann nicht mehr gewählt werden.",
+  "groups": [
+    {
+      "layout": "comments",
+      "none": false,
+      "texts": [
+        {
+          "id": "jasper",
+          "label": "a",
+          "byline": "Jasper, Rabensee",
+          "paragraphs": [
+            "Ich arbeite in einem Werk für Autoteile, in dem die Bänder rund um die Uhr laufen. Wie soll das mit einer Vier-Tage-Woche funktionieren? Die Maschinen stehen ja nicht still, nur weil wir weniger arbeiten. Man bräuchte also zusätzliche Leute für die Schichten – und die findet man schon heute kaum. In einem Büro mag das Modell klappen, bei uns in der Fertigung sehe ich dafür keine Chance."
+          ]
+        },
+        {
+          "id": "katja",
+          "label": "b",
+          "byline": "Katja, Brennhausen",
+          "paragraphs": [
+            "Viele denken bei der Vier-Tage-Woche an ein langes Wochenende. Ich arbeite als Krankenpflegerin schon seit zwei Jahren an vier Tagen – allerdings jeweils zehn Stunden, weil die Gesamtstundenzahl gleich geblieben ist. Nach einer solchen Schicht bin ich so erschöpft, dass ich den freien Tag vor allem zum Erholen brauche. Von mehr Freizeit kann also keine Rede sein. Wenn schon vier Tage, dann bitte mit weniger Stunden insgesamt."
+          ]
+        },
+        {
+          "id": "leopold",
+          "label": "c",
+          "byline": "Leopold, Moorlingen",
+          "paragraphs": [
+            "Ich führe einen Malerbetrieb mit zwölf Beschäftigten. Jahrelang haben wir vergeblich nach Gesellen gesucht, Anzeigen blieben einfach unbeantwortet. Vor einem Jahr haben wir die Vier-Tage-Woche eingeführt, freitags ruhen bei uns die Pinsel. Seitdem kommen Bewerbungen aus der ganzen Region, zwei neue Kollegen haben wir bereits eingestellt. Ob das Modell überall Standard werden muss, kann ich nicht beurteilen. Für einen kleinen Betrieb wie unseren war es jedenfalls die Rettung."
+          ]
+        },
+        {
+          "id": "marlene",
+          "label": "d",
+          "byline": "Marlene, Eichtal",
+          "paragraphs": [
+            "Ein freier Freitag klingt verlockend, keine Frage. Als alleinerziehende Mutter von zwei Grundschulkindern hätte ich ehrlich gesagt mehr davon, wenn ich jeden Tag um 14 Uhr Feierabend machen könnte. Dann müssten die Kinder nicht in die Nachmittagsbetreuung, und ich könnte ihnen bei den Hausaufgaben helfen. Statt über die Zahl der Arbeitstage sollten wir lieber darüber reden, wie man die tägliche Arbeitszeit flexibler gestalten kann."
+          ]
+        },
+        {
+          "id": "nikolai",
+          "label": "e",
+          "byline": "Nikolai, Fuchsberg",
+          "paragraphs": [
+            "Als unsere Geschäftsführung einen sechsmonatigen Test ankündigte, war ich skeptisch: Ich dachte, wir würden die Arbeit von fünf Tagen nie in vier schaffen. Tatsächlich mussten wir einiges umstellen, zum Beispiel haben wir viele Besprechungen gestrichen. Das Erstaunlichste war aber, dass sich im Team deutlich seltener jemand krankgemeldet hat als im Jahr davor. Offenbar tut der zusätzliche Erholungstag einfach gut. Ich hoffe sehr, dass wir dabei bleiben."
+          ]
+        },
+        {
+          "id": "ottilie",
+          "label": "f",
+          "byline": "Ottilie, Sandhofen",
+          "paragraphs": [
+            "Ich bin 74 und brauche regelmäßig Ärzte, Ämter und Handwerker. Schon jetzt hat meine Hausarztpraxis freitags geschlossen, und auf einen Termin beim Bürgeramt warte ich wochenlang. Wenn die Vier-Tage-Woche Standard wird, befürchte ich, dass noch öfter alle Türen zu sind. Den Beschäftigten gönne ich mehr Freizeit von Herzen. Man sollte dabei aber auch an diejenigen denken, die auf diese Dienste angewiesen sind."
+          ]
+        },
+        {
+          "id": "priya",
+          "label": "g",
+          "byline": "Priya, Weilerbach",
+          "paragraphs": [
+            "In unserer Steuerkanzlei arbeiten wir seit letztem Jahr nur noch vier Tage, allerdings nicht alle am selben Tag. Jeder hat einen anderen Wochentag frei, sodass das Büro weiterhin von Montag bis Freitag besetzt ist. Unsere Mandanten haben die Umstellung kaum bemerkt. Natürlich braucht das gute Absprachen im Team, und am Anfang gab es manches Durcheinander. Inzwischen läuft es aber reibungslos, und niemand von uns möchte zurück."
+          ]
+        },
+        {
+          "id": "quirin",
+          "label": "h",
+          "byline": "Quirin, Kronau",
+          "paragraphs": [
+            "Weniger arbeiten bei gleichem Gehalt – wer wäre da nicht dafür? Ich frage mich nur, wer das bezahlen soll. Ich betreibe eine kleine Bäckerei. Wenn ich für dieselben Öffnungszeiten zusätzliche Verkäuferinnen einstellen muss, steigen meine Kosten erheblich. Das kann ich nur über höhere Brötchenpreise ausgleichen. Am Ende begleichen also wir alle an der Ladentheke die Rechnung. Deshalb halte ich nichts davon, das Modell gesetzlich vorzuschreiben."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "In Betrieben, die ohne Unterbrechung produzieren, ist das Modell kaum umsetzbar.",
+          "answer": "a",
+          "evidence": [
+            { "text": "jasper", "quote": "in dem die Bänder rund um die Uhr laufen" },
+            { "text": "jasper", "quote": "bei uns in der Fertigung sehe ich dafür keine Chance" }
+          ],
+          "explanation": "Jasper (a) bantların gece gündüz çalıştığı bir fabrikada çalışıyor („in dem die Bänder rund um die Uhr laufen“). Vardiyalar için ek eleman gerekeceğini, onların da bulunamadığını söylüyor ve „bei uns in der Fertigung sehe ich dafür keine Chance“ diye bitiriyor."
+        },
+        {
+          "number": 22,
+          "type": "zuordnung",
+          "prompt": "Bestimmte Einrichtungen könnten für ihre Nutzer noch schwerer erreichbar werden.",
+          "answer": "f",
+          "evidence": [
+            { "text": "ottilie", "quote": "befürchte ich, dass noch öfter alle Türen zu sind" }
+          ],
+          "explanation": "Ottilie (f) düzenli olarak doktorlara, resmî dairelere ve ustalara ihtiyaç duyduğunu, aile hekiminin cuma günleri zaten kapalı olduğunu yazıyor; dört günlük hafta standart olursa „befürchte ich, dass noch öfter alle Türen zu sind“. Priya (g) da müşterilerden söz ediyor, ama onun bürosu pazartesiden cumaya açık kalmış; yani tersini anlatıyor. Quirin (h) aynı açılış saatlerini korumak istiyor; onun derdi erişim değil, maliyet."
+        },
+        {
+          "number": 23,
+          "type": "zuordnung",
+          "prompt": "Für kleine Firmen kann das Modell bei der Suche nach Personal ein Vorteil sein.",
+          "answer": "c",
+          "evidence": [
+            { "text": "leopold", "quote": "Seitdem kommen Bewerbungen aus der ganzen Region" }
+          ],
+          "explanation": "Leopold (c) yıllarca kalfa bulamamış; dört günlük haftayı getirdikten sonra „Seitdem kommen Bewerbungen aus der ganzen Region“ ve iki yeni çalışan almış. Küçük işletmesi için bunun „die Rettung“ olduğunu söylüyor. Jasper (a) da personel eksikliğinden bahsediyor, ama ona göre model eleman sorununu çözmüyor, tersine daha fazla eleman gerektiriyor. Quirin (h) de küçük bir işletme sahibi, ama yeni eleman almak onun için yalnızca masraf demek."
+        },
+        {
+          "number": 24,
+          "type": "zuordnung",
+          "prompt": "Die Kosten der kürzeren Arbeitszeit würden letztlich an die Kundschaft weitergegeben.",
+          "answer": "h",
+          "evidence": [
+            { "text": "quirin", "quote": "Das kann ich nur über höhere Brötchenpreise ausgleichen" }
+          ],
+          "explanation": "Quirin (h) aynı açılış saatleri için ek satış elemanı alması gerekeceğini ve „Das kann ich nur über höhere Brötchenpreise ausgleichen“ diyor; sonunda faturayı tezgâhta herkes ödüyor. Ottilie (f) de müşteri tarafından yazıyor, ama onun endişesi fiyatlar değil, kapalı kapılar. Leopold (c) işletmesinin maliyetlerinden hiç söz etmiyor."
+        },
+        {
+          "number": 25,
+          "type": "zuordnung",
+          "prompt": "Wer die gleiche Stundenzahl auf weniger Tage verteilt, gewinnt kaum etwas.",
+          "answer": "b",
+          "evidence": [
+            { "text": "katja", "quote": "allerdings jeweils zehn Stunden, weil die Gesamtstundenzahl gleich geblieben ist" },
+            { "text": "katja", "quote": "Von mehr Freizeit kann also keine Rede sein" }
+          ],
+          "explanation": "Katja (b) dört gün, ama günde on saat çalışıyor, çünkü toplam saat aynı kalmış. Boş gününü dinlenmekle geçirdiği için „Von mehr Freizeit kann also keine Rede sein“ diyor. Marlene (d) de daha kısa günler istiyor, ama onun sebebi çocuklarına öğleden sonra bakabilmek; toplam saati dört güne sıkıştırmaktan söz etmiyor. Nikolai (e) dört günlük haftayı olumlu yaşamış."
+        },
+        {
+          "number": 26,
+          "type": "zuordnung",
+          "prompt": "Ein zusätzlicher freier Tag kann dazu führen, dass Beschäftigte seltener ausfallen.",
+          "answer": "e",
+          "evidence": [
+            { "text": "nikolai", "quote": "dass sich im Team deutlich seltener jemand krankgemeldet hat als im Jahr davor" }
+          ],
+          "explanation": "Nikolai (e) şirketindeki altı aylık denemeyi anlatıyor: en şaşırtıcı sonuç „dass sich im Team deutlich seltener jemand krankgemeldet hat als im Jahr davor“. Leopold (c) de modeli denemiş, ama onun gördüğü fayda başvuruların artması; hastalık izinlerinden söz etmiyor. Katja (b) dinlenmeden söz ediyor, ama ona göre boş gün yalnızca yorgunluğu gideriyor, çalışanların daha az hasta olduğunu söylemiyor."
+        },
+        {
+          "number": 27,
+          "type": "zuordnung",
+          "prompt": "Für Familien wären kürzere Arbeitstage nützlicher als ein freier Tag mehr.",
+          "answer": "d",
+          "evidence": [
+            { "text": "marlene", "quote": "wenn ich jeden Tag um 14 Uhr Feierabend machen könnte" }
+          ],
+          "explanation": "Marlene (d) iki ilkokul çocuğunun annesi olarak serbest bir cumadan çok her gün erken çıkmaktan yararlanacağını yazıyor: „wenn ich jeden Tag um 14 Uhr Feierabend machen könnte“; böylece çocuklar öğleden sonra bakıma gitmek zorunda kalmaz. Katja (b) da toplamda daha az saat istiyor, ama aileden söz etmiyor. Priya (g) farklı günlerde izin modelini anlatıyor; aile konusuna girmiyor."
+        }
+      ]
+    }
+  ]
+}

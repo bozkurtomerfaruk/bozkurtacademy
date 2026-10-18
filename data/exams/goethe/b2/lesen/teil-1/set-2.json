@@ -1,0 +1,156 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b2",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Lernen im Alter",
+  "minutes": 18,
+  "context": "In einem Onlineforum diskutieren Menschen über die Frage: „Lohnt es sich, mit über 60 noch ein Studium oder eine Ausbildung zu beginnen?“",
+  "instructions": "Lesen Sie die Texte a bis d und die Aufgaben 1 bis 9. Welche Aussage passt zu welcher Person? Die Personen können mehrmals gewählt werden.",
+  "groups": [
+    {
+      "layout": "comments",
+      "none": false,
+      "texts": [
+        {
+          "id": "elfriede",
+          "label": "a",
+          "byline": "Elfriede, Lindenberg",
+          "paragraphs": [
+            "Mit 63 habe ich mich an der Universität für Geschichte eingeschrieben – die Einschreibung selbst war gar kein Problem. Schwieriger war etwas anderes: In den ersten Wochen saß ich in den Seminaren meistens allein. Die jungen Leute waren höflich, aber zurückhaltend. Das änderte sich erst, als mich eine Kommilitonin fragte, ob ich bei einem Referat mitarbeiten wolle. Seitdem treffen wir uns jede Woche zu fünft in der Bibliothek, und ich gehöre einfach dazu. Oft werde ich gefragt, was ich mit dem Bachelor eigentlich anfangen will. Meine Antwort: gar nichts. Ich habe vierzig Jahre in einer Versicherung gearbeitet und möchte jetzt endlich verstehen, warum die Geschichte so verlaufen ist, wie sie verlaufen ist. Ob sich das lohnt? Für mich auf jeden Fall."
+          ]
+        },
+        {
+          "id": "gunnar",
+          "label": "b",
+          "byline": "Gunnar, Grauweiler",
+          "paragraphs": [
+            "Über dreißig Jahre war ich Systemadministrator, mit 61 habe ich eine Tischlerlehre begonnen. Das klingt verrückt, war aber die beste Entscheidung meines Lebens. Leicht war der Anfang allerdings nicht: Bevor mich ein kleiner Familienbetrieb genommen hat, habe ich elf Absagen bekommen. Meistens hieß es, man suche jemanden, der viele Jahre im Betrieb bleibt. In der Berufsschule dagegen haben mich die Jungs sofort akzeptiert. Nach der Gesellenprüfung möchte ich noch ein paar Jahre als Tischler arbeiten. Eines sollte man aber nicht unterschätzen: Das ist Handarbeit, man steht den ganzen Tag und trägt schwere Platten. Wer Probleme mit den Knien oder dem Rücken hat, sollte sich das gründlich überlegen. Ich habe Glück, ich bin noch recht fit."
+          ]
+        },
+        {
+          "id": "huelya",
+          "label": "c",
+          "byline": "Hülya, Steinhagen am See",
+          "paragraphs": [
+            "Ich unterrichte seit zehn Jahren Soziologie an einer Hochschule, und in fast jedem Semester sitzen auch zwei, drei Studierende über sechzig in meinen Seminaren. Für die Diskussionen ist das meistens eine Bereicherung: Wenn wir über den Wandel der Arbeitswelt sprechen, können sie aus eigener Erfahrung berichten, wie es vor vierzig Jahren in einem Betrieb zuging. Davon profitieren auch die Jüngeren, die solche Zeiten nur aus Büchern kennen. Es gibt allerdings auch eine Kehrseite. Manche älteren Teilnehmer erzählen so ausführlich von ihrem eigenen Leben, dass die anderen kaum noch zu Wort kommen. Dann muss ich freundlich, aber deutlich eingreifen. Wer mit über sechzig ein Studium beginnen möchte, dem rate ich, sich vorher genau über den Arbeitsaufwand zu informieren – der wird oft unterschätzt."
+          ]
+        },
+        {
+          "id": "ingmar",
+          "label": "d",
+          "byline": "Ingmar, Kesselbach",
+          "paragraphs": [
+            "Mit 65 wollte ich es noch einmal wissen und habe mich für Biologie eingeschrieben. Nach zwei Semestern habe ich aufgegeben. Das lag weniger am Stoff als an der Organisation: Skripte, Abgabetermine, Prüfungsanmeldungen – alles lief über eine Online-Plattform, mit der ich einfach nicht zurechtkam. Heute besuche ich als Gasthörer Vorlesungen, die mich interessieren, ganz ohne Prüfungen und Termine, und bin damit viel zufriedener. Manche werfen uns Älteren vor, wir würden jungen Menschen die Studienplätze wegnehmen. In Fächern wie Medizin, wo es viel mehr Bewerber als Plätze gibt, verstehe ich diesen Einwand durchaus. In Biologie war das an meiner Uni aber kein Thema. Grundsätzlich finde ich: Lernen lohnt sich in jedem Alter – nur muss nicht jeder gleich einen Abschluss machen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "… kennt ältere Studierende aus der eigenen Lehrtätigkeit.",
+          "answer": "c",
+          "evidence": [
+            { "text": "huelya", "quote": "Ich unterrichte seit zehn Jahren Soziologie an einer Hochschule" }
+          ],
+          "explanation": "Hülya (c) bir yüksekokulda ders veriyor: „Ich unterrichte seit zehn Jahren Soziologie an einer Hochschule“; seminerlerinde neredeyse her dönem altmış yaşın üzerinde öğrenciler oluyor. Elfriede (a) ve Ingmar (d) yaşlı öğrencileri öğretmen olarak değil, kendileri öğrenci olarak tanıyor."
+        },
+        {
+          "number": 1,
+          "type": "zuordnung",
+          "prompt": "… hat sich nach einem gescheiterten Versuch für eine unverbindlichere Form des Lernens entschieden.",
+          "answer": "d",
+          "evidence": [
+            { "text": "ingmar", "quote": "Nach zwei Semestern habe ich aufgegeben" },
+            { "text": "ingmar", "quote": "Heute besuche ich als Gasthörer Vorlesungen" }
+          ],
+          "explanation": "Ingmar (d) biyoloji okumayı iki dönem sonra bırakmış („Nach zwei Semestern habe ich aufgegeben“) ve şimdi sınavsız, tarihsiz olarak misafir dinleyici şeklinde derslere gidiyor: „Heute besuche ich als Gasthörer Vorlesungen“. Elfriede (a) başta yalnız kalmış ama okulu bırakmamış, lisans eğitimine devam ediyor. Gunnar (b) on bir ret almış ama sonunda çıraklığa başlamış; o da yarıda bırakmamış."
+        },
+        {
+          "number": 2,
+          "type": "zuordnung",
+          "prompt": "… hat erst durch eine gemeinsame Aufgabe Anschluss an Jüngere gefunden.",
+          "answer": "a",
+          "evidence": [
+            { "text": "elfriede", "quote": "Das änderte sich erst, als mich eine Kommilitonin fragte, ob ich bei einem Referat mitarbeiten wolle" }
+          ],
+          "explanation": "Elfriede (a) ilk haftalarda seminerlerde yalnız oturuyormuş. Durum ancak bir öğrenci onu bir sunuma katılmaya davet edince değişmiş: „Das änderte sich erst, als mich eine Kommilitonin fragte, ob ich bei einem Referat mitarbeiten wolle.“ Gunnar (b) da gençlerle birlikte okuyor, ama meslek okulunda gençler onu hemen kabul etmiş („sofort akzeptiert“); ortak bir göreve gerek kalmamış. Hülya (c) gençlerle yaşlıların ilişkisinden öğretmen olarak bahsediyor."
+        },
+        {
+          "number": 3,
+          "type": "zuordnung",
+          "prompt": "… weist darauf hin, dass die körperliche Verfassung entscheidend sein kann.",
+          "answer": "b",
+          "evidence": [
+            { "text": "gunnar", "quote": "Wer Probleme mit den Knien oder dem Rücken hat" }
+          ],
+          "explanation": "Gunnar (b) marangozluğun bütün gün ayakta durmayı ve ağır levha taşımayı gerektirdiğini yazıyor ve uyarıyor: „Wer Probleme mit den Knien oder dem Rücken hat, sollte sich das gründlich überlegen.“ Hülya (c) da bir uyarı yapıyor, ama onun uyarısı beden sağlığıyla değil, çalışma yüküyle ilgili. Ingmar (d) bıraktığı eğitimin sebebi olarak sağlığını değil, çevrim içi platformu gösteriyor."
+        },
+        {
+          "number": 4,
+          "type": "zuordnung",
+          "prompt": "… meint, dass auch die jüngeren Studierenden von den älteren etwas lernen können.",
+          "answer": "c",
+          "evidence": [
+            { "text": "huelya", "quote": "Davon profitieren auch die Jüngeren, die solche Zeiten nur aus Büchern kennen" }
+          ],
+          "explanation": "Hülya'ya (c) göre yaşlı öğrenciler kırk yıl önceki iş hayatını kendi deneyimlerinden anlatabiliyor ve „Davon profitieren auch die Jüngeren, die solche Zeiten nur aus Büchern kennen.“ Elfriede (a) gençlerle bir çalışma grubunda buluşuyor, ama gençlerin ondan bir şey öğrendiğini yazmıyor. Gunnar (b) meslek okulundaki gençlerden yalnızca onu kabul ettikleri için söz ediyor."
+        },
+        {
+          "number": 5,
+          "type": "zuordnung",
+          "prompt": "… hält einen häufigen Vorwurf gegenüber älteren Studierenden in bestimmten Fällen für berechtigt.",
+          "answer": "d",
+          "evidence": [
+            { "text": "ingmar", "quote": "verstehe ich diesen Einwand durchaus" }
+          ],
+          "explanation": "Ingmar (d) yaşlıların gençlerin okul yerlerini aldığı yönündeki suçlamayı aktarıyor ve tıp gibi aday sayısının yer sayısından çok fazla olduğu bölümlerde „verstehe ich diesen Einwand durchaus“ diyor; biyolojide ise bunun sorun olmadığını ekliyor. Hülya (c) yaşlı öğrencilerin olumsuz bir davranışını anlatıyor, ama bu başkalarının yaptığı bir suçlama değil, kendi gözlemi. Gunnar'ın (b) duyduğu ret gerekçesi bir eleştiri değil, işletmelerin ret sebebi."
+        },
+        {
+          "number": 6,
+          "type": "zuordnung",
+          "prompt": "… hat sich lange vergeblich um einen Ausbildungsplatz bemüht.",
+          "answer": "b",
+          "evidence": [
+            { "text": "gunnar", "quote": "habe ich elf Absagen bekommen" }
+          ],
+          "explanation": "Gunnar (b) küçük bir aile işletmesi onu almadan önce „habe ich elf Absagen bekommen“ diyor; işletmeler uzun yıllar kalacak birini arıyormuş. Elfriede (a) üniversiteye kaydın hiç sorun olmadığını yazıyor. Ingmar (d) da biyolojiye kaydolmuş; yer bulmakta zorlandığından söz etmiyor."
+        },
+        {
+          "number": 7,
+          "type": "zuordnung",
+          "prompt": "… strebt einen Abschluss an, ohne damit einen beruflichen Zweck zu verfolgen.",
+          "answer": "a",
+          "evidence": [
+            { "text": "elfriede", "quote": "Meine Antwort: gar nichts." }
+          ],
+          "explanation": "Elfriede'ye (a) lisans diplomasıyla ne yapacağı sorulunca cevabı „Meine Antwort: gar nichts.“; tarihin neden böyle geliştiğini anlamak istiyor. Gunnar (b) da bir sınava hazırlanıyor, ama kalfalık sınavından (Gesellenprüfung) sonra birkaç yıl marangoz olarak çalışmak istiyor, yani mesleki bir amacı var. Ingmar (d) artık misafir dinleyici olarak sınavsız derslere gidiyor; bir diploma hedeflemiyor."
+        },
+        {
+          "number": 8,
+          "type": "zuordnung",
+          "prompt": "… beobachtet, dass manche älteren Teilnehmer in Seminaren zu viel Raum einnehmen.",
+          "answer": "c",
+          "evidence": [
+            { "text": "huelya", "quote": "dass die anderen kaum noch zu Wort kommen" }
+          ],
+          "explanation": "Hülya (c) bazı yaşlı öğrencilerin kendi hayatlarını o kadar uzun anlattığını yazıyor ki „dass die anderen kaum noch zu Wort kommen“; o zaman müdahale etmesi gerekiyor. Ingmar (d) yaşlıların gençlerin okul yerlerini aldığı suçlamasından söz ediyor, ama bu seminerdeki davranışla değil, bölümlere kabul edilmeyle ilgili. Elfriede (a) gençlerin başta mesafeli olduğunu anlatıyor; yaşlıların davranışını eleştirmiyor."
+        },
+        {
+          "number": 9,
+          "type": "zuordnung",
+          "prompt": "… nennt technische Schwierigkeiten als Grund für das eigene Scheitern.",
+          "answer": "d",
+          "evidence": [
+            { "text": "ingmar", "quote": "mit der ich einfach nicht zurechtkam" }
+          ],
+          "explanation": "Ingmar (d) eğitimi bırakmasının sebebini konular değil, her şeyin yürüdüğü çevrim içi platform olarak açıklıyor: „mit der ich einfach nicht zurechtkam“. Gunnar (b) zorlukları anlatıyor, ama bunlar on bir ret ve bedensel yükle ilgili; üstelik o vazgeçmemiş. Elfriede'nin (a) zorluğu teknik değil, ilk haftalarda yalnız kalmasıydı."
+        }
+      ]
+    }
+  ]
+}

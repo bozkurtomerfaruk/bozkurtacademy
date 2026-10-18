@@ -1,0 +1,158 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b2",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-2",
+  "title": "Kostenloser Nahverkehr",
+  "minutes": 12,
+  "context": "In einer Zeitung lesen Sie Leserbriefe zu der Frage: „Sollten Busse und Bahnen in der Stadt kostenlos sein?“",
+  "instructions": "Lesen Sie die Texte a bis h und die Aussagen 22 bis 27. Welche Aussage passt zu welchem Text? Jeder Text passt höchstens einmal. Ein Text bleibt übrig. Der Text aus dem Beispiel kann nicht mehr gewählt werden.",
+  "groups": [
+    {
+      "layout": "comments",
+      "none": false,
+      "texts": [
+        {
+          "id": "ronja",
+          "label": "a",
+          "byline": "Ronja, Hasselfurt",
+          "paragraphs": [
+            "Ich fahre jeden Tag mit dem Auto zur Arbeit, obwohl eine Buslinie fast vor meiner Haustür hält. Am Preis liegt das nicht: Die Monatskarte würde mein Arbeitgeber sogar bezahlen. Aber wenn der Bus zum dritten Mal in einer Woche zwanzig Minuten zu spät kommt und ich deshalb eine Besprechung verpasse, ist das Thema für mich erledigt. Ich würde sofort umsteigen – sobald ich mich auf den Fahrplan verlassen könnte."
+          ]
+        },
+        {
+          "id": "sebastian",
+          "label": "b",
+          "byline": "Sebastian, Tiefenbrunn",
+          "paragraphs": [
+            "Das Ziel ist doch, dass weniger Menschen mit dem Auto in die Innenstadt fahren. Ich bezweifle, dass ein Nulltarif das erreicht. In meinem Bekanntenkreis würden vor allem diejenigen den Bus nehmen, die heute zu Fuß gehen oder mit dem Fahrrad fahren – also genau die, die ohnehin umweltfreundlich unterwegs sind. Wer gern Auto fährt, steigt wegen ein paar gesparter Euro nicht um."
+          ]
+        },
+        {
+          "id": "theresa",
+          "label": "c",
+          "byline": "Theresa, Wendlingen",
+          "paragraphs": [
+            "Ich fahre seit acht Jahren Linienbus. Was viele nicht wissen: Ein großer Teil der Verspätungen entsteht an den Haltestellen, weil ich Fahrkarten verkaufen und Wechselgeld herausgeben muss. Ohne Tickets könnten die Fahrgäste an allen Türen einsteigen, und wir wären viel schneller wieder unterwegs. Außerdem gäbe es keinen Streit mehr mit Leuten, die keinen gültigen Fahrschein haben. Für uns Fahrer wäre das eine echte Erleichterung."
+          ]
+        },
+        {
+          "id": "ulrich",
+          "label": "d",
+          "byline": "Ulrich, Ostermoor",
+          "paragraphs": [
+            "In der Stadt mag ein Nulltarif sinnvoll sein. Ich wohne aber in einem Dorf zwölf Kilometer außerhalb, und dort fährt der Bus morgens um sieben und nachmittags um vier – das war's. Ob die Fahrt dann etwas kostet oder nicht, ist mir ehrlich gesagt egal; ich brauche trotzdem ein Auto. Solange die Verbindungen so selten sind, ändert sich für uns auf dem Land gar nichts."
+          ]
+        },
+        {
+          "id": "vanessa",
+          "label": "e",
+          "byline": "Vanessa, Birkenfurt",
+          "paragraphs": [
+            "In unserer Stadt gibt es seit Jahren ein Sozialticket: Wer wenig verdient, fährt für zehn Euro im Monat. Das funktioniert gut. Einen Nulltarif für alle halte ich dagegen für den falschen Weg. Warum soll die Stadt auch für gut verdienende Pendler zahlen, die sich ihre Fahrkarte problemlos leisten können? Das Geld fehlt dann an anderer Stelle, etwa bei Schulen oder Schwimmbädern."
+          ]
+        },
+        {
+          "id": "wilhelm",
+          "label": "f",
+          "byline": "Wilhelm, Steinach am Wald",
+          "paragraphs": [
+            "Die Befürworter versprechen leere Straßen und saubere Luft, die Gegner warnen vor leeren Kassen. Beide Seiten stützen sich dabei vor allem auf Vermutungen. Ich würde deshalb vorschlagen, den Nulltarif zunächst für ein Jahr in unserer Stadt auszuprobieren und genau zu messen, wie viele Autofahrer tatsächlich umsteigen und was das kostet. Danach kann man immer noch entscheiden, ob man dabei bleibt."
+          ]
+        },
+        {
+          "id": "yasemin",
+          "label": "g",
+          "byline": "Yasemin, Lerchenau",
+          "paragraphs": [
+            "Ich bin alleinerziehend und arbeite in Teilzeit. Für meinen Sohn und mich gebe ich jeden Monat fast neunzig Euro für Fahrkarten aus – bei meinem Einkommen ist das enorm viel. Oft überlege ich zweimal, ob wir am Wochenende wirklich ins Schwimmbad oder zu meiner Mutter fahren. Kostenlose Busse würden bedeuten, dass wir wieder mehr unternehmen könnten, ohne jeden Euro umzudrehen."
+          ]
+        },
+        {
+          "id": "zacharias",
+          "label": "h",
+          "byline": "Zacharias, Gründorf",
+          "paragraphs": [
+            "Kostenlos ist in Wahrheit nichts – irgendjemand bezahlt immer. Die Frage ist nur, wer. Bisher sind es die Fahrgäste. Ich fände es gerechter, wenn diejenigen zahlen, die mit ihren Autos die Straßen verstopfen und die Luft verschmutzen, zum Beispiel über deutlich höhere Parkgebühren in der Innenstadt. Mit diesen Einnahmen könnte man Busse und Bahnen finanzieren. Unter dieser Bedingung wäre ich klar für einen Nulltarif."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Außerhalb der Städte wären häufigere Verbindungen wichtiger als ein kostenloses Angebot.",
+          "answer": "d",
+          "evidence": [
+            { "text": "ulrich", "quote": "Ob die Fahrt dann etwas kostet oder nicht, ist mir ehrlich gesagt egal" },
+            { "text": "ulrich", "quote": "Solange die Verbindungen so selten sind" }
+          ],
+          "explanation": "Ulrich (d) şehir dışındaki köyünde otobüsün günde yalnızca iki kez geçtiğini yazıyor. „Ob die Fahrt dann etwas kostet oder nicht, ist mir ehrlich gesagt egal“ diyor ve seferler bu kadar seyrek olduğu sürece („Solange die Verbindungen so selten sind“) kırsalda hiçbir şeyin değişmeyeceğini söylüyor."
+        },
+        {
+          "number": 22,
+          "type": "zuordnung",
+          "prompt": "Das Angebot würde eher Menschen anlocken, die schon bisher ohne Auto unterwegs sind.",
+          "answer": "b",
+          "evidence": [
+            { "text": "sebastian", "quote": "die heute zu Fuß gehen oder mit dem Fahrrad fahren" }
+          ],
+          "explanation": "Sebastian (b) ücretsiz otobüse daha çok „die heute zu Fuß gehen oder mit dem Fahrrad fahren“ kişilerin bineceğini, araba sevenlerin ise birkaç euro için vazgeçmeyeceğini yazıyor. Wilhelm (f) de kaç sürücünün gerçekten otobüse geçeceğini soruyor, ama cevabı bilmiyor ve önce ölçmek istiyor. Ronja (a) kendisi araba kullanıyor ve otobüs dakik olursa hemen geçeceğini söylüyor; yani sürücülerin geçmeyeceğini iddia etmiyor."
+        },
+        {
+          "number": 23,
+          "type": "zuordnung",
+          "prompt": "Für Haushalte mit geringem Einkommen würde ein Nulltarif mehr Möglichkeiten in der Freizeit bedeuten.",
+          "answer": "g",
+          "evidence": [
+            { "text": "yasemin", "quote": "dass wir wieder mehr unternehmen könnten, ohne jeden Euro umzudrehen" }
+          ],
+          "explanation": "Yasemin (g) yarı zamanlı çalışıyor ve bilete ayda neredeyse doksan euro veriyor; hafta sonu yüzme havuzuna gitmeyi iki kez düşünüyor. Ücretsiz otobüs onun için „dass wir wieder mehr unternehmen könnten, ohne jeden Euro umzudrehen“ anlamına geliyor. Vanessa (e) da az kazananlardan söz ediyor, ama onlar için şehrinde zaten sosyal bilet olduğunu ve herkese ücretsiz ulaşımın yanlış olduğunu yazıyor. Zacharias (h) parayı kimin ödeyeceğini tartışıyor, gelir durumundan söz etmiyor."
+        },
+        {
+          "number": 24,
+          "type": "zuordnung",
+          "prompt": "Manche würden den Bus häufiger nutzen, wenn er zuverlässiger wäre.",
+          "answer": "a",
+          "evidence": [
+            { "text": "ronja", "quote": "sobald ich mich auf den Fahrplan verlassen könnte" }
+          ],
+          "explanation": "Ronja (a) için sorun fiyat değil (aylık bileti işveren ödeyecek), otobüsün sık sık yirmi dakika gecikmesi. „Ich würde sofort umsteigen – sobald ich mich auf den Fahrplan verlassen könnte“ diyor. Theresa (c) da gecikmelerden söz ediyor, ama gecikmelerin sebebini anlatıyor; insanların otobüse daha çok bineceğini söylemiyor. Ulrich (d) örnekte kullanıldı; o da dakiklikten değil, seferlerin azlığından şikâyet ediyor."
+        },
+        {
+          "number": 25,
+          "type": "zuordnung",
+          "prompt": "Die Kosten sollten diejenigen tragen, die mit dem Auto in die Stadt fahren.",
+          "answer": "h",
+          "evidence": [
+            { "text": "zacharias", "quote": "über deutlich höhere Parkgebühren in der Innenstadt" }
+          ],
+          "explanation": "Zacharias (h) sokakları tıkayan ve havayı kirletenlerin ödemesini daha adil buluyor, örneğin „über deutlich höhere Parkgebühren in der Innenstadt“; bu gelirle otobüs ve trenler finanse edilebilir. Vanessa (e) de parayı tartışıyor, ama ona göre para okul ve havuz gibi başka yerlerde eksik kalır; sürücülerin ödemesini önermiyor. Wilhelm (f) maliyeti ölçmek istiyor, ama kimin ödemesi gerektiğini söylemiyor."
+        },
+        {
+          "number": 26,
+          "type": "zuordnung",
+          "prompt": "Ohne Fahrscheine kämen die Busse schneller voran.",
+          "answer": "c",
+          "evidence": [
+            { "text": "theresa", "quote": "und wir wären viel schneller wieder unterwegs" }
+          ],
+          "explanation": "Otobüs şoförü Theresa (c) gecikmelerin büyük kısmının durakta bilet satmaktan kaynaklandığını yazıyor; bilet olmazsa yolcular bütün kapılardan binebilir „und wir wären viel schneller wieder unterwegs“. Ronja (a) da otobüslerin geç kalmasından şikâyet ediyor, ama bunu biletlerle ilişkilendirmiyor. Sebastian (b) ücretsiz ulaşımın etkisini yolcuların kimler olacağı açısından değerlendiriyor, otobüslerin hızından söz etmiyor."
+        },
+        {
+          "number": 27,
+          "type": "zuordnung",
+          "prompt": "Bevor man sich festlegt, sollte man das Modell eine Zeit lang erproben.",
+          "answer": "f",
+          "evidence": [
+            { "text": "wilhelm", "quote": "den Nulltarif zunächst für ein Jahr in unserer Stadt auszuprobieren" }
+          ],
+          "explanation": "Wilhelm (f) iki tarafın da çoğunlukla tahminlere dayandığını düşünüyor ve „den Nulltarif zunächst für ein Jahr in unserer Stadt auszuprobieren“ öneriyor; karar ancak sonra verilmeli. Vanessa (e) şehrindeki sosyal bileti yıllardır işleyen bir örnek olarak anlatıyor, ama ücretsiz ulaşımı denemeyi önermiyor, doğrudan reddediyor. Zacharias (h) bir deneme değil, bir koşul öne sürüyor: park ücretleriyle finanse edilirse destekler."
+        }
+      ]
+    }
+  ]
+}

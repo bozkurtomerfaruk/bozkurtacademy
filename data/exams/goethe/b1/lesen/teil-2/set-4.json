@@ -1,0 +1,191 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-4",
+  "title": "Dorfladen und Müllsammler",
+  "minutes": 20,
+  "instructions": "Lesen Sie die beiden Texte und die Aufgaben 7 bis 12. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "dorfladen",
+          "title": "Ein Dorf kauft wieder ein: Haselgrund hat seinen eigenen Laden",
+          "paragraphs": [
+            "Als vor zwei Jahren der letzte Supermarkt in Haselgrund schloss, war die Aufregung groß. Wer Brot, Milch oder Obst kaufen wollte, musste plötzlich zwölf Kilometer in die nächste Stadt fahren. Für viele ältere Bewohner ohne Auto war das ein echtes Problem, denn der Bus fährt nur dreimal am Tag.",
+            "Svenja Seifert, Mutter von zwei Kindern, wollte das nicht akzeptieren. Sie lud zu einer Versammlung ins Gasthaus ein, und über hundert Menschen kamen. Gemeinsam gründeten sie eine Genossenschaft: Jeder, der mitmachen wollte, kaufte einen Anteil für 200 Euro. So kamen fast 60.000 Euro zusammen. Mit dem Geld wurden der alte Laden renoviert und die Regale gekauft. Die Gemeinde gab nur das Gebäude dazu, und zwar für eine sehr niedrige Miete.",
+            "Seit einem Jahr ist der „Haselgrunder Dorfladen“ nun von Montag bis Samstag geöffnet. Dort arbeiten zwei fest angestellte Verkäuferinnen, und zusätzlich helfen rund 30 Freiwillige, zum Beispiel beim Auspacken der Ware. Das Angebot ist kleiner als im Supermarkt. Wer aber etwas braucht, das nicht im Regal steht, kann es an der Kasse bestellen. Meistens ist es dann schon am nächsten Tag da.",
+            "Für viele ist der Laden mehr als ein Geschäft. In einer Ecke stehen drei kleine Tische, an denen man Kaffee trinken kann. „Hier trifft man sich und erfährt, was im Dorf los ist“, sagt Ludger, der seit 40 Jahren in Haselgrund wohnt. Leicht ist es trotzdem nicht: Im ersten Jahr hat der Laden nur wenig Gewinn gemacht. Svenja Seifert ist aber optimistisch: „Wenn jeder Haushalt hier pro Woche nur 20 Euro ausgibt, haben wir keine Sorgen mehr.“"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 7,
+          "type": "abc",
+          "prompt": "Den neuen Dorfladen …",
+          "options": {
+            "a": "hat die Gemeinde mit eigenem Geld eröffnet.",
+            "b": "haben die Bewohner gemeinsam bezahlt.",
+            "c": "hat Svenja Seifert allein gegründet."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "dorfladen",
+              "quote": "Gemeinsam gründeten sie eine Genossenschaft: Jeder, der mitmachen wollte, kaufte einen Anteil für 200 Euro."
+            },
+            {
+              "text": "dorfladen",
+              "quote": "Die Gemeinde gab nur das Gebäude dazu"
+            }
+          ],
+          "explanation": "Köylüler birlikte bir kooperatif (Genossenschaft) kurdu: Katılmak isteyen herkes 200 euroluk bir pay aldı ve böylece yaklaşık 60.000 euro toplandı. Dükkân bu parayla yenilendi. a) yanlış: Belediye sadece binayı verdi („Die Gemeinde gab nur das Gebäude dazu“), hem de çok düşük bir kira karşılığında („für eine sehr niedrige Miete“). c) yanlış: Svenja Seifert toplantıya davet etti, ama dükkânı yüzden fazla kişiyle birlikte kurdular („Gemeinsam gründeten sie …“)."
+        },
+        {
+          "number": 8,
+          "type": "abc",
+          "prompt": "Im Dorfladen …",
+          "options": {
+            "a": "arbeiten nur Freiwillige.",
+            "b": "kann man auch Waren bestellen, die es im Regal nicht gibt.",
+            "c": "gibt es mehr Produkte als in einem Supermarkt."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "dorfladen",
+              "quote": "Wer aber etwas braucht, das nicht im Regal steht, kann es an der Kasse bestellen."
+            },
+            {
+              "text": "dorfladen",
+              "quote": "Dort arbeiten zwei fest angestellte Verkäuferinnen"
+            },
+            {
+              "text": "dorfladen",
+              "quote": "Das Angebot ist kleiner als im Supermarkt."
+            }
+          ],
+          "explanation": "Rafta olmayan bir şeye ihtiyacı olan kişi onu kasada sipariş edebiliyor („kann es an der Kasse bestellen“); çoğu zaman ertesi gün geliyor. a) yanlış: Dükkânda iki kadrolu satış elemanı çalışıyor; gönüllüler onlara ek olarak yardım ediyor. c) yanlış: Ürün çeşidi süpermarketten daha az („kleiner als im Supermarkt“)."
+        },
+        {
+          "number": 9,
+          "type": "abc",
+          "prompt": "Der Dorfladen …",
+          "options": {
+            "a": "ist für viele auch ein Ort, an dem man sich trifft.",
+            "b": "hat im ersten Jahr viel Geld verdient.",
+            "c": "hat ein großes Café mit vielen Tischen."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "dorfladen",
+              "quote": "Hier trifft man sich und erfährt, was im Dorf los ist"
+            },
+            {
+              "text": "dorfladen",
+              "quote": "Im ersten Jahr hat der Laden nur wenig Gewinn gemacht."
+            },
+            {
+              "text": "dorfladen",
+              "quote": "In einer Ecke stehen drei kleine Tische"
+            }
+          ],
+          "explanation": "Birçok kişi için dükkân bir mağazadan fazlası: Ludger „Hier trifft man sich“ (burada buluşuluyor) ve köyde neler olduğunu öğreniyorsun diyor. b) yanlış: Dükkân ilk yılda sadece az kâr etti („nur wenig Gewinn“). c) yanlış: Büyük bir kafe yok; bir köşede kahve içilebilen sadece üç küçük masa var („drei kleine Tische“)."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "muellsammler",
+          "title": "Frische Luft und volle Säcke: Wanderverein räumt den Wald auf",
+          "paragraphs": [
+            "Plastikflaschen, alte Reifen, sogar ein kaputter Kühlschrank: Was die Mitglieder des Wandervereins „Bergfreunde Weißenbruch“ auf ihren Touren finden, macht sie wütend. „Wir wandern hier, weil wir die Natur lieben. Da tut es weh, so viel Müll zu sehen“, sagt der Vorsitzende Gregor Brinkmann. Deshalb hat der Verein in diesem Frühjahr zum ersten Mal einen großen Aufräumtag organisiert.",
+            "An einem Samstag im April trafen sich morgens um 9 Uhr über 80 Freiwillige am Wanderparkplatz. Es kamen nicht nur Vereinsmitglieder, sondern auch Familien, eine Schulklasse und mehrere Jäger aus der Gegend. In kleinen Gruppen gingen sie auf verschiedenen Wegen in den Wald. Handschuhe, Müllsäcke und Greifzangen hatte die Gemeinde zur Verfügung gestellt. Für die Kinder gab es außerdem ein Spiel: Wer die meisten Flaschendeckel fand, bekam einen Preis.",
+            "Nach fünf Stunden war das Ergebnis erschreckend: Die Helfer hatten fast zwei Tonnen Müll gesammelt. Den größten Teil machten aber nicht Flaschen oder Verpackungen aus, sondern Reste von Baustellen, zum Beispiel Steine und Beton, und alte Möbel. „Manche Leute fahren extra in den Wald, um ihren Sperrmüll loszuwerden“, sagt Brinkmann. „Dabei kann man ihn kostenlos abholen lassen.“ Den gesammelten Müll hat am Montag eine Firma aus der Region abgeholt.",
+            "Der Verein möchte den Aufräumtag jetzt einmal im Jahr wiederholen. Außerdem hat Brinkmann noch eine Idee: Bei jeder Wanderung soll in Zukunft jeder Teilnehmer einen kleinen Beutel mitnehmen und unterwegs Müll einsammeln. „Wenn alle ein bisschen helfen, bleibt der Wald sauber“, hofft er. Die Gemeinde möchte an zwei Waldwegen Kameras aufstellen. Ob das erlaubt ist, wird aber noch geprüft."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 10,
+          "type": "abc",
+          "prompt": "Am Aufräumtag …",
+          "options": {
+            "a": "durften nur Mitglieder des Vereins mitmachen.",
+            "b": "mussten die Helfer eigene Handschuhe mitbringen.",
+            "c": "haben auch Menschen geholfen, die nicht im Verein sind."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "muellsammler",
+              "quote": "Es kamen nicht nur Vereinsmitglieder, sondern auch Familien, eine Schulklasse und mehrere Jäger aus der Gegend."
+            },
+            {
+              "text": "muellsammler",
+              "quote": "Handschuhe, Müllsäcke und Greifzangen hatte die Gemeinde zur Verfügung gestellt."
+            }
+          ],
+          "explanation": "Temizlik gününe sadece dernek üyeleri değil, aileler, bir okul sınıfı ve bölgeden birkaç avcı da geldi („nicht nur Vereinsmitglieder, sondern auch …“). a) yanlış: Aynı cümle, dernek dışından insanların da katıldığını gösteriyor. b) yanlış: Eldivenleri, çöp torbalarını ve maşaları belediye sağladı („hatte die Gemeinde zur Verfügung gestellt“)."
+        },
+        {
+          "number": 11,
+          "type": "abc",
+          "prompt": "Der meiste Müll im Wald …",
+          "options": {
+            "a": "waren Reste von Baustellen und alte Möbel.",
+            "b": "waren Plastikflaschen und Verpackungen.",
+            "c": "wurde von der Gemeinde abgeholt."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "muellsammler",
+              "quote": "Den größten Teil machten aber nicht Flaschen oder Verpackungen aus, sondern Reste von Baustellen"
+            },
+            {
+              "text": "muellsammler",
+              "quote": "Den gesammelten Müll hat am Montag eine Firma aus der Region abgeholt."
+            }
+          ],
+          "explanation": "Çöpün en büyük kısmı inşaat artıkları (taş, beton gibi) ve eski mobilyalardı („Reste von Baustellen … und alte Möbel“). b) yanlış: Metin açıkça şişelerin ve ambalajların en büyük kısım olmadığını söylüyor („nicht Flaschen oder Verpackungen“). c) yanlış: Toplanan çöpü belediye değil, bölgeden bir firma pazartesi günü aldı („eine Firma aus der Region“)."
+        },
+        {
+          "number": 12,
+          "type": "abc",
+          "prompt": "In Zukunft …",
+          "options": {
+            "a": "soll es mehrere Aufräumtage pro Jahr geben.",
+            "b": "gibt es an allen Waldwegen Kameras.",
+            "c": "sollen die Wanderer bei jeder Tour Müll sammeln."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "muellsammler",
+              "quote": "Bei jeder Wanderung soll in Zukunft jeder Teilnehmer einen kleinen Beutel mitnehmen und unterwegs Müll einsammeln."
+            },
+            {
+              "text": "muellsammler",
+              "quote": "Der Verein möchte den Aufräumtag jetzt einmal im Jahr wiederholen."
+            },
+            {
+              "text": "muellsammler",
+              "quote": "Die Gemeinde möchte an zwei Waldwegen Kameras aufstellen."
+            }
+          ],
+          "explanation": "Brinkmann'ın fikri: Gelecekte her yürüyüşte her katılımcı küçük bir torba alacak ve yolda çöp toplayacak („soll … unterwegs Müll einsammeln“). a) yanlış: Dernek temizlik gününü yılda bir kez tekrarlamak istiyor („einmal im Jahr“), birkaç kez değil. b) yanlış: Belediye sadece iki orman yoluna kamera koymak istiyor ve buna izin olup olmadığı henüz kontrol ediliyor („Ob das erlaubt ist, wird aber noch geprüft“)."
+        }
+      ]
+    }
+  ]
+}

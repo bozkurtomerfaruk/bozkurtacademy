@@ -19,7 +19,7 @@
             "Ein Toaster, der nicht mehr warm wird, eine Hose mit Loch, eine Lampe, die nur noch flackert: Früher hätten viele Menschen in Lerchenfeld solche Dinge einfach in den Müll geworfen. Heute bringen sie sie ins Reparatur-Café. Jeden letzten Freitag im Monat treffen sich dort von 15 bis 19 Uhr Freiwillige im Gemeindehaus, um zusammen mit den Besuchern kaputte Sachen zu reparieren.",
             "Gegründet hat das Café vor drei Jahren die Rentnerin Renate Pohl. „Ich habe mich immer geärgert, wenn ein Gerät nach kurzer Zeit kaputtging und der Verkäufer nur gesagt hat: Kaufen Sie doch ein neues“, erzählt die frühere Elektrikerin. Heute gehören zum Team zwölf Helferinnen und Helfer, darunter ein pensionierter Uhrmacher, zwei Schneiderinnen und mehrere Studenten, die sich gut mit Computern auskennen.",
             "Wichtig ist: Die Besucher sollen nicht nur zuschauen. „Wir reparieren nicht für die Leute, sondern mit ihnen“, sagt Pohl. Wer etwas mitbringt, setzt sich deshalb neben einen Helfer und macht selbst mit. So lernen viele, wie sie kleine Probleme beim nächsten Mal allein lösen können. Die Reparatur ist kostenlos, aber über eine kleine Spende für Werkzeug freut sich das Team. Neue Ersatzteile müssen die Besucher allerdings selbst bezahlen.",
-            "Nicht alles kann gerettet werden. Etwa jedes dritte Gerät ist so kaputt, dass auch die Experten nicht mehr helfen können. Und manchmal wird es eng: Weil der Raum im Gemeindehaus an manchen Nachmittagen zu klein ist, sucht das Team jetzt größere Räume. Wer selbst etwas reparieren möchte, kann einfach vorbeikommen. Das nächste Treffen ist schon in zwei Wochen, eine Anmeldung ist nicht nötig."
+            "Nicht alles kann gerettet werden. Etwa jedes dritte Gerät ist so kaputt, dass auch die Experten nicht mehr helfen können. Und manchmal wird es eng: Weil an manchen Nachmittagen sehr viele Besucher kommen, müssen einige lange warten. Wer selbst etwas reparieren möchte, kann einfach vorbeikommen. Das nächste Treffen ist schon in zwei Wochen, eine Anmeldung ist nicht nötig."
           ]
         }
       ],
@@ -30,7 +30,7 @@
           "prompt": "Das Reparatur-Café …",
           "options": {
             "a": "findet jeden Freitag im Gemeindehaus statt.",
-            "b": "wurde von der Stadt Lerchenfeld gegründet.",
+            "b": "findet jeden letzten Freitag im Monat im Rathaus statt.",
             "c": "findet einmal im Monat im Gemeindehaus statt."
           },
           "answer": "c",
@@ -38,13 +38,9 @@
             {
               "text": "reparaturcafe",
               "quote": "Jeden letzten Freitag im Monat treffen sich dort von 15 bis 19 Uhr Freiwillige im Gemeindehaus"
-            },
-            {
-              "text": "reparaturcafe",
-              "quote": "Gegründet hat das Café vor drei Jahren die Rentnerin Renate Pohl."
             }
           ],
-          "explanation": "Gönüllüler her ayın son cuma günü Gemeindehaus'ta (topluluk salonu) buluşuyor: „Jeden letzten Freitag im Monat … im Gemeindehaus“ – yani kafe ayda bir kez yapılıyor. a) yanlış: Yer doğru, ama kafe her cuma değil, sadece her ayın son cuma günü var. b) yanlış: Kafeyi belediye değil, emekli Renate Pohl kurdu („Gegründet hat das Café … die Rentnerin Renate Pohl“)."
+          "explanation": "Gönüllüler her ayın son cuma günü Gemeindehaus'ta (topluluk salonu) buluşuyor: „Jeden letzten Freitag im Monat … im Gemeindehaus“ – yani kafe ayda bir kez yapılıyor. a) yanlış: Yer doğru, ama kafe her cuma değil, sadece her ayın son cuma günü var. b) yanlış: Gün doğru, ama buluşmalar belediye binasında (Rathaus) değil, Gemeindehaus'ta yapılıyor („im Gemeindehaus“)."
         },
         {
           "number": 8,
@@ -77,15 +73,15 @@
           "type": "abc",
           "prompt": "Das Team des Reparatur-Cafés …",
           "options": {
-            "a": "kann etwa ein Drittel der Geräte wieder reparieren.",
-            "b": "sucht für seine Treffen größere Räume.",
-            "c": "besteht zum größten Teil aus Schneiderinnen."
+            "a": "kann etwa zwei Drittel der Geräte nicht mehr reparieren.",
+            "b": "hat auch Mitglieder, die sich gut mit Computern auskennen.",
+            "c": "wurde von einem pensionierten Uhrmacher gegründet."
           },
           "answer": "b",
           "evidence": [
             {
               "text": "reparaturcafe",
-              "quote": "Weil der Raum im Gemeindehaus an manchen Nachmittagen zu klein ist, sucht das Team jetzt größere Räume."
+              "quote": "darunter ein pensionierter Uhrmacher, zwei Schneiderinnen und mehrere Studenten, die sich gut mit Computern auskennen"
             },
             {
               "text": "reparaturcafe",
@@ -93,10 +89,10 @@
             },
             {
               "text": "reparaturcafe",
-              "quote": "zwölf Helferinnen und Helfer, darunter ein pensionierter Uhrmacher, zwei Schneiderinnen und mehrere Studenten"
+              "quote": "Gegründet hat das Café vor drei Jahren die Rentnerin Renate Pohl."
             }
           ],
-          "explanation": "Gemeindehaus'taki oda bazı öğleden sonraları çok küçük kalıyor, bu yüzden ekip daha büyük bir yer arıyor („sucht das Team jetzt größere Räume“). a) yanlış: Metindeki üçte bir, tamir edilebilen cihazlar değil, tamir edilemeyen cihazlar: Yaklaşık her üç cihazdan biri o kadar bozuk ki uzmanlar da yardım edemiyor („Etwa jedes dritte Gerät ist so kaputt …“). c) yanlış: Ekipte on iki yardımcı var; terziler bunların sadece ikisi („zwei Schneiderinnen“). Ayrıca bir emekli saatçi ve birkaç üniversite öğrencisi de var."
+          "explanation": "Ekipte bilgisayardan iyi anlayan birkaç üniversite öğrencisi var („mehrere Studenten, die sich gut mit Computern auskennen“). a) yanlış: Tamir edilemeyen cihazlar üçte iki değil, yaklaşık üçte bir: Yaklaşık her üç cihazdan biri o kadar bozuk ki uzmanlar da yardım edemiyor („Etwa jedes dritte Gerät ist so kaputt …“). c) yanlış: Kafeyi emekli bir saatçi değil, emekli Renate Pohl kurdu („Gegründet hat das Café vor drei Jahren die Rentnerin Renate Pohl.“); emekli saatçi ekipteki yardımcılardan biri."
         }
       ]
     },

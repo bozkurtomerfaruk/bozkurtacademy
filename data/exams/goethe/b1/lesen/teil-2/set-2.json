@@ -31,7 +31,7 @@
           "options": {
             "a": "lernen die Schüler auch, geduldig zu sein.",
             "b": "arbeiten Schülerinnen und Schüler der Klassen 5 bis 7.",
-            "c": "arbeiten die Schüler samstags im Garten."
+            "c": "stehen die Schüler jeden Samstag auf dem Wochenmarkt."
           },
           "answer": "a",
           "evidence": [
@@ -45,21 +45,17 @@
             },
             {
               "text": "schulgarten",
-              "quote": "Jeden Mittwochnachmittag arbeiten dort"
-            },
-            {
-              "text": "schulgarten",
               "quote": "Jeden ersten Samstag im Monat stehen sie mit einem eigenen Stand auf dem Wochenmarkt."
             }
           ],
-          "explanation": "Öğretmen Wolter, öğrencilerin bahçede sınıfta öğrenilemeyecek şeyler öğrendiğini söylüyor: „Zum Beispiel Geduld“ (örneğin sabır). b) yanlış: Ders 5–7. sınıflar için değil, 7–9. sınıflar için („nur für die Klassen 7 bis 9“). c) yanlış: Bahçede çarşamba öğleden sonraları çalışılıyor („Jeden Mittwochnachmittag“); cumartesi sadece ayın ilk cumartesi günü ve bahçede değil, pazarda stant var."
+          "explanation": "Öğretmen Wolter, öğrencilerin bahçede sınıfta öğrenilemeyecek şeyler öğrendiğini söylüyor: „Zum Beispiel Geduld“ (örneğin sabır). b) yanlış: Ders 5–7. sınıflar için değil, 7–9. sınıflar için („nur für die Klassen 7 bis 9“). c) yanlış: Pazarda her cumartesi değil, sadece ayın ilk cumartesi günü stant açıyorlar („Jeden ersten Samstag im Monat“)."
         },
         {
           "number": 8,
           "type": "abc",
           "prompt": "Das Werkzeug für den Garten …",
           "options": {
-            "a": "wurde mit dem Geld vom Wochenmarkt gekauft.",
+            "a": "wurde von der Schule gekauft.",
             "b": "haben Eltern und Nachbarn mitgebracht.",
             "c": "hat ein Gartencenter in der Nähe geschenkt."
           },
@@ -74,7 +70,7 @@
               "quote": "Dann kümmern sich Eltern und Nachbarn darum"
             }
           ],
-          "explanation": "Aletleri ve tohumları yakındaki bir bahçe merkezi hediye etmiş („ein Gartencenter aus der Nachbarschaft geschenkt“). a) yanlış: Pazardan gelen parayla alet değil, yeni bitkiler alınıyor („Von dem Geld kaufen sie neue Pflanzen“). b) yanlış: Veliler ve komşular aletleri getirmedi; onlar yaz tatilinde bahçeyle ilgileniyor („In den Sommerferien … kümmern sich Eltern und Nachbarn darum“)."
+          "explanation": "Aletleri ve tohumları yakındaki bir bahçe merkezi hediye etmiş („ein Gartencenter aus der Nachbarschaft geschenkt“). a) yanlış: Aletleri okul satın almadı; onları yakındaki bir bahçe merkezi hediye etti („geschenkt“). b) yanlış: Veliler ve komşular aletleri getirmedi; onlar yaz tatilinde bahçeyle ilgileniyor („In den Sommerferien … kümmern sich Eltern und Nachbarn darum“)."
         },
         {
           "number": 9,
@@ -112,10 +108,10 @@
           "title": "Nachts sicher nach Hause: Marlingen testet eine neue Buslinie",
           "paragraphs": [
             "Wer in Marlingen abends ausgeht, hatte bisher ein Problem: Der letzte Bus fuhr schon um 23.15 Uhr. Danach blieben nur ein teures Taxi oder ein langer Fußweg. Das soll sich jetzt ändern. Seit dem 1. Mai fährt freitags und samstags die Nachtlinie N1 – bis 3 Uhr morgens und jede halbe Stunde.",
-            "Für die neue Linie hat sich das Jugendparlament der Stadt eingesetzt. Die jungen Leute hatten im Winter über 2000 Unterschriften gesammelt. „Viele Jugendliche fahren nachts mit dem Fahrrad über die Landstraße nach Hause, auch bei Regen und ohne Licht. Das ist gefährlich“, sagt Leonie Stark (17), eine der Organisatorinnen. Mit den Unterschriften sind sie dann zum Bürgermeister gegangen.",
+            "Für die neue Linie hat sich das Jugendparlament der Stadt eingesetzt. Die jungen Leute hatten im Winter über 2000 Unterschriften gesammelt. Der Grund: „Zu Fuß ist der Heimweg viel zu weit. Deshalb fahren viele Jugendliche nachts mit dem Fahrrad über die Landstraße nach Hause, auch bei Regen und ohne Licht. Das ist gefährlich“, sagt Leonie Stark (17), eine der Organisatorinnen. Mit den Unterschriften sind sie dann zum Bürgermeister gegangen.",
             "Die N1 fährt vom Bahnhof durch die Innenstadt bis zu den Dörfern Hollbach und Kranzweiler. Eine Fahrt kostet 3,50 Euro, mit Schülerausweis die Hälfte. Die Fahrkarte kann man auch mit einer App kaufen; beim Fahrer kann man nur bar bezahlen.",
             "In den ersten Wochen waren die Busse noch fast leer. Inzwischen fahren an einem normalen Samstag rund 300 Fahrgäste mit. Die Busfahrer berichten, dass es bisher kaum Probleme gab. Trotzdem fährt in jedem Bus ein Mitarbeiter eines Sicherheitsdienstes mit. Besonders voll ist der Bus kurz nach Mitternacht, wenn viele Veranstaltungen zu Ende sind.",
-            "Einen Wunsch hat das Jugendparlament allerdings noch: Fahrräder darf man im Nachtbus bisher nicht mitnehmen. Wer abends mit dem Rad in die Stadt gefahren ist, muss es dort über Nacht stehen lassen."
+            "Ein Problem gibt es allerdings noch: Fahrräder darf man im Nachtbus bisher nicht mitnehmen. Wer abends mit dem Rad in die Stadt gefahren ist, muss es dort über Nacht stehen lassen."
           ]
         }
       ],
@@ -151,18 +147,18 @@
           "evidence": [
             {
               "text": "nachtbus",
-              "quote": "Viele Jugendliche fahren nachts mit dem Fahrrad über die Landstraße nach Hause, auch bei Regen und ohne Licht. Das ist gefährlich"
+              "quote": "Der Grund: „Zu Fuß ist der Heimweg viel zu weit."
             },
             {
               "text": "nachtbus",
-              "quote": "Danach blieben nur ein teures Taxi oder ein langer Fußweg."
+              "quote": "fahren viele Jugendliche nachts mit dem Fahrrad über die Landstraße nach Hause, auch bei Regen und ohne Licht. Das ist gefährlich"
             },
             {
               "text": "nachtbus",
               "quote": "Der letzte Bus fuhr schon um 23.15 Uhr."
             }
           ],
-          "explanation": "Gençlik meclisinden Leonie Stark imza toplamalarının nedenini anlatıyor: Birçok genç gece bisikletle, yağmurda ve ışıksız, şehirlerarası yoldan (Landstraße) eve gidiyor ve bu tehlikeli („Das ist gefährlich“). b) yanlış: Landstraße'de gençler yürümüyor, bisikletle gidiyor („mit dem Fahrrad über die Landstraße“); uzun yürüyüş metinde sadece taksiye karşı bir seçenek olarak geçiyor („ein langer Fußweg“). c) yanlış: Son otobüs saat 22'de değil, 23.15'te kalkıyordu („Der letzte Bus fuhr schon um 23.15 Uhr“)."
+          "explanation": "Metin imza toplamanın nedenini açıkça veriyor („Der Grund:“). Organizatörlerden Leonie Stark'a göre yürüyerek eve dönmek çok uzun; bu yüzden birçok genç gece bisikletle, yağmurda ve ışıksız, şehirlerarası yoldan (Landstraße) eve gidiyor ve bu tehlikeli („Das ist gefährlich“). b) yanlış: Gençler Landstraße'de yürümüyor; yürüyerek dönüş çok uzun olduğu için bisikletle gidiyorlar („Zu Fuß ist der Heimweg viel zu weit“). c) yanlış: Son otobüs saat 22'de değil, 23.15'te kalkıyordu („Der letzte Bus fuhr schon um 23.15 Uhr“)."
         },
         {
           "number": 12,
@@ -171,7 +167,7 @@
           "options": {
             "a": "muss die Fahrkarte vorher mit der App kaufen.",
             "b": "kann beim Fahrer mit der Bankkarte bezahlen.",
-            "c": "zahlt mit Schülerausweis 1,75 Euro."
+            "c": "zahlt mit Schülerausweis nur die Hälfte."
           },
           "answer": "c",
           "evidence": [
@@ -188,7 +184,7 @@
               "quote": "Die Fahrkarte kann man auch mit einer App kaufen"
             }
           ],
-          "explanation": "Bir yolculuk 3,50 euro, öğrenci kimliğiyle yarı fiyatına: 3,50 ÷ 2 = 1,75 euro. a) yanlış: Uygulama sadece bir seçenek („auch“), bilet şoförden de alınabilir. b) yanlış: Şoföre sadece nakit ödeme yapılabiliyor („nur bar“)."
+          "explanation": "Bir yolculuk 3,50 euro, öğrenci kimliğiyle ise yarı fiyatına („mit Schülerausweis die Hälfte“). a) yanlış: Uygulama sadece bir seçenek („auch“), bilet şoförden de alınabilir. b) yanlış: Şoföre sadece nakit ödeme yapılabiliyor („nur bar“)."
         }
       ]
     }

@@ -1,0 +1,157 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b2",
+  "section": "lesen",
+  "teil": 5,
+  "set": "set-1",
+  "title": "Regeln im Gemeinschaftsbüro",
+  "minutes": 6,
+  "context": "Sie haben sich im Coworking-Space „Werkbank Feldkirchen“ angemeldet und lesen die Nutzungsregeln.",
+  "instructions": "Lesen Sie die Überschriften a bis f und die Abschnitte. Welche Überschrift passt zu welchem Abschnitt? Zwei Überschriften bleiben übrig. Die Überschrift aus dem Beispiel können Sie nicht mehr wählen.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "abschnitt-0",
+          "title": "Abschnitt 0",
+          "paragraphs": [
+            "Die Schreibtische im offenen Bereich sind nicht fest vergeben. Buchen Sie Ihren Tisch bitte spätestens am Vorabend über unsere App. Wer bis 10 Uhr nicht eingecheckt hat, verliert seine Buchung, und der Tisch wird für andere Mitglieder freigegeben. Bitte räumen Sie abends alles ab, denn über Nacht dürfen keine persönlichen Gegenstände liegen bleiben. Für Unterlagen und Laptops stehen abschließbare Fächer im Eingangsbereich bereit."
+          ]
+        },
+        {
+          "id": "abschnitt-28",
+          "title": "Abschnitt 28",
+          "paragraphs": [
+            "Im ersten Stock stehen zwei Besprechungsräume mit großem Bildschirm und Whiteboard zur Verfügung, in denen bis zu acht Leute Platz finden. Mitglieder mit dem Tarif „Flex“ können sie vier Stunden pro Woche kostenlos nutzen, jede weitere Stunde kostet 12 Euro. Stornieren Sie bitte spätestens 24 Stunden vorher, sonst wird Ihnen die Zeit trotzdem angerechnet. Hinterlassen Sie den Raum so, wie Sie ihn vorgefunden haben."
+          ]
+        },
+        {
+          "id": "abschnitt-29",
+          "title": "Abschnitt 29",
+          "paragraphs": [
+            "Im offenen Bereich bitten wir um Flüsterlautstärke. Telefonate und Videokonferenzen führen Sie bitte in einer der drei schallgedämmten Kabinen neben dem Treppenhaus. Diese können nicht gebucht werden und sollten daher nicht länger als 30 Minuten belegt sein. Musik hören Sie bitte nur über Kopfhörer. Fühlen Sie sich durch Ihre Tischnachbarn gestört, sprechen Sie diese zunächst freundlich an oder wenden Sie sich an unser Team am Empfang."
+          ]
+        },
+        {
+          "id": "abschnitt-30",
+          "title": "Abschnitt 30",
+          "paragraphs": [
+            "Mitglieder dürfen täglich bis zu zwei Gäste mitbringen. Diese melden sich bei ihrer Ankunft am Empfang an und erhalten ein Namensschild. Wer länger als zwei Stunden bleibt oder selbst einen Schreibtisch nutzen möchte, benötigt einen Tagespass für 15 Euro. Bitte beachten Sie, dass Sie für das Verhalten Ihrer Gäste verantwortlich sind. Lassen Sie diese deshalb nicht allein im Haus zurück, auch nicht für kurze Zeit."
+          ]
+        },
+        {
+          "id": "a",
+          "label": "a",
+          "paragraphs": [
+            "Gemeinsam beraten, planen, präsentieren"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "paragraphs": [
+            "Sicher surfen im gemeinsamen Netz"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "paragraphs": [
+            "Ihren Arbeitsplatz rechtzeitig reservieren"
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "paragraphs": [
+            "Wenn jemand Sie bei der Arbeit besucht"
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "paragraphs": [
+            "Ordnung rund um Kaffeemaschine und Kühlschrank"
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "paragraphs": [
+            "Damit alle konzentriert arbeiten können"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 0",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "abschnitt-0",
+              "quote": "Buchen Sie Ihren Tisch bitte spätestens am Vorabend über unsere App."
+            }
+          ],
+          "explanation": "Bölüm 0 masaların sabit olmadığını ve masanın „spätestens am Vorabend“ (en geç bir önceki akşam) uygulamadan ayırtılması gerektiğini anlatıyor; saat 10'a kadar giriş yapmayan yerini kaybediyor. c başlığı („çalışma yerinizi zamanında ayırtın“) bunu farklı kelimelerle söylüyor. Bu başlık örnekte kullanıldığı için başka bir bölüm için seçilemez."
+        },
+        {
+          "number": 28,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 28",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "abschnitt-28",
+              "quote": "zwei Besprechungsräume mit großem Bildschirm und Whiteboard"
+            },
+            {
+              "text": "abschnitt-28",
+              "quote": "in denen bis zu acht Leute Platz finden"
+            }
+          ],
+          "explanation": "Bölüm 28 birinci kattaki iki toplantı odasını anlatıyor: büyük ekran ve beyaz tahta var, „bis zu acht Leute“ (sekiz kişiye kadar) sığıyor; ücretsiz saatler, iptal ve odanın düzenli bırakılması kuralları veriliyor. a başlığı („birlikte danışmak, planlamak, sunum yapmak“) bir grubun ekran ve tahtayla çalıştığı bu odaları anlatıyor. Aldatıcı olan d başlığı: toplantılara misafir de gelebilir gibi düşünülebilir, ama bölümde ziyaretçilerden hiç söz edilmiyor; konu odaların kullanımı ve ücretleri."
+        },
+        {
+          "number": 29,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 29",
+          "answer": "f",
+          "evidence": [
+            {
+              "text": "abschnitt-29",
+              "quote": "bitten wir um Flüsterlautstärke"
+            },
+            {
+              "text": "abschnitt-29",
+              "quote": "Musik hören Sie bitte nur über Kopfhörer."
+            }
+          ],
+          "explanation": "Bölüm 29 açık alanda gürültüyü azaltmayı anlatıyor: „Flüsterlautstärke“ (fısıltı seviyesi), telefon ve video görüşmeleri ses yalıtımlı kabinlerde, müzik yalnızca kulaklıkla. Bütün bu kuralların amacı f başlığında söyleniyor: herkes dikkatini toplayarak çalışabilsin. Aldatıcı olan b başlığı: „Videokonferenzen“ internetle ilgili gibi görünür, ama bölümde ağ, bağlantı veya güvenlikten söz edilmiyor; yalnızca görüşmelerin nerede yapılacağı anlatılıyor."
+        },
+        {
+          "number": 30,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 30",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "abschnitt-30",
+              "quote": "Mitglieder dürfen täglich bis zu zwei Gäste mitbringen."
+            },
+            {
+              "text": "abschnitt-30",
+              "quote": "dass Sie für das Verhalten Ihrer Gäste verantwortlich sind"
+            }
+          ],
+          "explanation": "Bölüm 30 üyelerin yanlarında getirebileceği misafirleri anlatıyor: günde en fazla iki misafir, girişte kayıt ve isim kartı, uzun kalanlar için günlük bilet; üye misafirlerinden sorumlu. d başlığı („biri sizi işte ziyaret ederse“) bu durumu „Gäste“ kelimesini tekrar etmeden anlatıyor. Aldatıcı olan a başlığı: misafirlerle birlikte çalışmak akla gelebilir, ama bölümde toplantıdan, planlamadan veya sunumdan söz edilmiyor; konu misafirlerin kaydı, günlük bilet ve üyenin sorumluluğu."
+        }
+      ]
+    }
+  ]
+}

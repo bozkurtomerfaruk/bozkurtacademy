@@ -1,0 +1,196 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b2",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-1",
+  "title": "Ein Dorf macht seinen Strom selbst",
+  "minutes": 12,
+  "context": "Sie lesen in einer Zeitung einen Artikel über eine Energiegenossenschaft.",
+  "instructions": "Lesen Sie den Text und wählen Sie für die Lücken 10 bis 15 den passenden Satz a bis h. Zwei Sätze bleiben übrig. Das Beispiel (0) steht schon im Text.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Ein Dorf macht seinen Strom selbst",
+          "paragraphs": [
+            "Wer an einem sonnigen Tag durch Birkenried fährt, sieht auf vielen Dächern dunkle Platten glänzen. Das Dorf mit knapp 900 Einwohnern erzeugt seit vier Jahren mehr Strom, als es selbst verbraucht. {{0=Hinter diesem Erfolg steht kein Energiekonzern, sondern eine Genossenschaft, die die Bürgerinnen und Bürger selbst gegründet haben.}} Heute hat sie 340 Mitglieder, von denen jedes mindestens einen Anteil zu 500 Euro erworben hat. Im vergangenen Jahr wurde Birkenried für dieses Modell sogar mit einem Umweltpreis des Landes ausgezeichnet.",
+            "Den Anstoß gab Frau Reinholz, die früher an der Dorfschule unterrichtete. Als ihre Stromrechnung im Winter 2017 erneut kräftig gestiegen war, lud sie zu einem Informationsabend ins Gasthaus „Linde“ ein. {{10}} Noch bevor der Wirt die letzten Gläser abgeräumt hatte, hatten sich sechzig von ihnen in eine Liste eingetragen. Ein halbes Jahr später war die Genossenschaft gegründet.",
+            "Zunächst konzentrierte sich die Genossenschaft auf die Sonne. Wer ein geeignetes Dach besitzt, kann es ihr für zwanzig Jahre überlassen: Die Genossenschaft bezahlt Module und Montage, der Eigentümer erhält dafür eine jährliche Pacht und muss sich um nichts kümmern. {{11}} Inzwischen sind 120 Dächer belegt, darunter auch die der Turnhalle und des Feuerwehrhauses. Auf dem Parkplatz vor dem Rathaus kam zudem eine Ladestation für Elektroautos hinzu, die ebenfalls mit Solarstrom betrieben wird.",
+            "Schwieriger wurde es, als der Vorstand vorschlug, auf dem Hügel hinter dem Friedhof ein Windrad zu errichten. {{12}} Herr Ostendorf, dessen Haus nur wenige hundert Meter vom geplanten Standort entfernt liegt, erinnert sich: „Wir hatten den Eindruck, dass über unsere Köpfe hinweg entschieden wird.“ Die Genossenschaft gab daraufhin ein unabhängiges Lärmgutachten in Auftrag und organisierte Busfahrten zu einer vergleichbaren Anlage im Nachbarlandkreis. {{13}} Bei der Abstimmung stimmte schließlich eine deutliche Mehrheit der Mitglieder für das Projekt – allerdings wurde der Standort um 300 Meter nach Norden verschoben, weg von den Häusern.",
+            "Günstig war das Vorhaben nicht. Allein das Windrad kostete 4,2 Millionen Euro, den größten Teil davon finanzierte eine regionale Bank über einen Kredit. {{14}} Die Schatzmeisterin der Genossenschaft betont, dass seit der Inbetriebnahme in jedem Jahr ein Gewinn erwirtschaftet wurde. Die Mitglieder erhalten eine Dividende von drei Prozent – mehr, als ihnen derzeit ein Sparbuch einbringen würde. Über die Verwendung des übrigen Gewinns entscheidet jedes Frühjahr die Mitgliederversammlung.",
+            "Und was hat das Dorf davon? Die Mitglieder zahlen für ihren Strom rund zehn Prozent weniger als der regionale Durchschnitt. Außerdem fließt ein Teil des Gewinns in einen Gemeinschaftsfonds, aus dem bereits ein neuer Spielplatz und ein Bürgerbus bezahlt wurden. {{15}} Selbst Herr Ostendorf hat inzwischen einen Anteil gezeichnet. Als Nächstes will Birkenried einen großen Batteriespeicher bauen, damit der Solarstrom auch nach Sonnenuntergang genutzt werden kann."
+          ]
+        },
+        {
+          "id": "a",
+          "label": "a",
+          "paragraphs": [
+            "Gerade ältere Hausbesitzer, die keine eigene Anlage mehr finanzieren wollten, nahmen dieses Angebot gern an."
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "paragraphs": [
+            "Solche sichtbaren Vorteile haben nach Ansicht des Vorstands viel dazu beigetragen, dass auch frühere Gegner heute hinter dem Projekt stehen."
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "paragraphs": [
+            "Dort konnten sich die Zweifler mit eigenen Ohren davon überzeugen, wie laut ein solches Windrad tatsächlich ist."
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "paragraphs": [
+            "Weil die Solaranlagen so gut liefen, stimmten die Mitglieder dem Vorschlag ohne lange Diskussion zu."
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "paragraphs": [
+            "Statt der erwarteten zwanzig Gäste drängten sich an diesem Abend fast zweihundert Menschen im Saal."
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "paragraphs": [
+            "Dort steht seitdem das Windrad, das heute fast die Hälfte des Dorfstroms erzeugt."
+          ]
+        },
+        {
+          "id": "g",
+          "label": "g",
+          "paragraphs": [
+            "Mehrere Anwohner befürchteten, dass das Rauschen der Rotoren sie nachts um den Schlaf bringen würde, und schlossen sich zu einer Bürgerinitiative zusammen."
+          ]
+        },
+        {
+          "id": "h",
+          "label": "h",
+          "paragraphs": [
+            "Den Rest brachten die Mitglieder selbst auf, wobei manche ihre Anteile kurzerhand verdoppelten."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 10,
+          "type": "zuordnung",
+          "prompt": "Lücke 10",
+          "answer": "e",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "lud sie zu einem Informationsabend ins Gasthaus „Linde“ ein"
+            },
+            {
+              "text": "artikel",
+              "quote": "hatten sich sechzig von ihnen in eine Liste eingetragen"
+            }
+          ],
+          "explanation": "Boşluktan önce Frau Reinholz'un bir bilgilendirme akşamı düzenlediği yazıyor: „lud sie zu einem Informationsabend ins Gasthaus „Linde“ ein“. e cümlesi bu akşamın içeriğini sürdürüyor: „an diesem Abend“ o akşama gönderme yapıyor ve 20 yerine yaklaşık 200 kişinin geldiğini söylüyor. Boşluktan sonraki „sechzig von ihnen“ (onlardan altmışı) ancak e'deki „fast zweihundert Menschen“ varsa bir gruba bağlanabiliyor. En çok aldatan d cümlesi: „die Mitglieder“ çoğul olduğu için „von ihnen“ ile dilbilgisi olarak uyar, ama bu noktada henüz üye ve öneri yok; kooperatif metne göre ancak „Ein halbes Jahr später“ kuruldu."
+        },
+        {
+          "number": 11,
+          "type": "zuordnung",
+          "prompt": "Lücke 11",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "der Eigentümer erhält dafür eine jährliche Pacht und muss sich um nichts kümmern"
+            },
+            {
+              "text": "artikel",
+              "quote": "Inzwischen sind 120 Dächer belegt"
+            }
+          ],
+          "explanation": "Boşluktan önce kooperatifin teklifi anlatılıyor: modülleri ve montajı kooperatif ödüyor, ev sahibi kira alıyor ve „muss sich um nichts kümmern“. a cümlesi bu teklife („dieses Angebot“) kimlerin ilgi gösterdiğini söylüyor: kendi tesisini finanse etmek istemeyen yaşlı ev sahipleri. Boşluktan sonraki „Inzwischen sind 120 Dächer belegt“ de birçok ev sahibinin teklifi kabul ettiğinin sonucu. En çok aldatan h cümlesi: para konusu yüzünden uygun görünür, ama „Den Rest“ (geri kalanı) için önce bir „en büyük kısım“ gerekir; burada modülleri tamamen kooperatif ödüyor, üyelerin tamamlayacağı bir eksik yok."
+        },
+        {
+          "number": 12,
+          "type": "zuordnung",
+          "prompt": "Lücke 12",
+          "answer": "g",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Schwieriger wurde es"
+            },
+            {
+              "text": "artikel",
+              "quote": "„Wir hatten den Eindruck, dass über unsere Köpfe hinweg entschieden wird.“"
+            },
+            {
+              "text": "artikel",
+              "quote": "ein unabhängiges Lärmgutachten in Auftrag"
+            }
+          ],
+          "explanation": "Boşluktan önce „Schwieriger wurde es“ ile rüzgâr türbini önerisinin zorluk çıkardığı söyleniyor. g cümlesi bu zorluğu açıklıyor: komşular gece rotor sesinden korkuyor ve bir vatandaş girişimi kuruyor. Boşluktan sonra türbine yakın oturan Herr Ostendorf „Wir“ (biz) diyerek bu komşu grubundan konuşuyor; kooperatif de bir „Lärmgutachten“ (gürültü raporu) yaptırarak bu gürültü korkusuna cevap veriyor. En çok aldatan d cümlesi: „dem Vorschlag“ hemen önceki „vorschlug“a dilbilgisi olarak bağlanır, ama üyelerin uzun tartışmadan kabul etmesi „Schwieriger wurde es“ ve Ostendorf'un şikâyetiyle çelişir."
+        },
+        {
+          "number": 13,
+          "type": "zuordnung",
+          "prompt": "Lücke 13",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "organisierte Busfahrten zu einer vergleichbaren Anlage im Nachbarlandkreis"
+            },
+            {
+              "text": "artikel",
+              "quote": "stimmte schließlich eine deutliche Mehrheit der Mitglieder für das Projekt"
+            }
+          ],
+          "explanation": "Boşluktan önce kooperatifin komşu ilçedeki benzer bir türbine otobüs gezileri düzenlediği yazıyor: „organisierte Busfahrten zu einer vergleichbaren Anlage im Nachbarlandkreis“. c cümlesindeki „Dort“ bu yere gönderme yapıyor ve gezilerin amacını söylüyor: şüphe edenler türbinin gerçekte ne kadar gürültülü olduğunu kendi kulaklarıyla duyuyor. Ardından gelen oylamada çoğunluğun projeye oy vermesi bu ikna çabasının sonucu. En çok aldatan f cümlesi: o da „Dort“ ile başlıyor, ama „Dort“ burada komşu ilçe olurdu; Birkenried'in kendi türbini orada değil. Ayrıca oylama ve yer değişikliği daha sonra geliyor, yani bu noktada „seitdem“ duran bir türbin olamaz."
+        },
+        {
+          "number": 14,
+          "type": "zuordnung",
+          "prompt": "Lücke 14",
+          "answer": "h",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "den größten Teil davon finanzierte eine regionale Bank über einen Kredit"
+            },
+            {
+              "text": "artikel",
+              "quote": "Die Schatzmeisterin der Genossenschaft betont"
+            }
+          ],
+          "explanation": "Boşluktan önce 4,2 milyon euroluk türbinin „den größten Teil davon“ (en büyük kısmını) bir bankanın kredisiyle finanse edildiği yazıyor. h cümlesi kalan parayı tamamlıyor: „Den Rest brachten die Mitglieder selbst auf“, bazı üyeler paylarını iki katına çıkarmış. Böylece finansman tamamlanıyor ve sonraki cümlede saymanın kâr hakkındaki açıklamasına geçiliyor. En çok aldatan a cümlesi: „finanzieren“ ve „dieses Angebot“ kelimeleri banka kredisine bağlanabilir gibi görünür, ama krediyi ev sahipleri değil kooperatif aldı; a'daki teklif çatıların kiralanmasıyla ilgili."
+        },
+        {
+          "number": 15,
+          "type": "zuordnung",
+          "prompt": "Lücke 15",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "aus dem bereits ein neuer Spielplatz und ein Bürgerbus bezahlt wurden"
+            },
+            {
+              "text": "artikel",
+              "quote": "Selbst Herr Ostendorf hat inzwischen einen Anteil gezeichnet"
+            }
+          ],
+          "explanation": "Boşluktan önce köyün kazancı somut örneklerle anlatılıyor: daha ucuz elektrik ve fondan ödenen „ein neuer Spielplatz und ein Bürgerbus“. b cümlesindeki „Solche sichtbaren Vorteile“ bu örneklere gönderme yapıyor ve eski karşıtların artık projeyi desteklediğini söylüyor. Sonraki cümle bunu bir örnekle kanıtlıyor: eskiden türbine itiraz eden Herr Ostendorf bile „inzwischen einen Anteil gezeichnet“. En çok aldatan d cümlesi: ardından gelen batarya planı bir öneri gibi okunabilir, ama bu plan boşluktan sonra geliyor ve henüz yalnızca planlanıyor; d'deki „dem Vorschlag“ bir önceki öneriye gönderme yapmalı ve „Selbst Herr Ostendorf“ için gerekli olan eski karşıtlar bağlantısını kurmuyor."
+        }
+      ]
+    }
+  ]
+}

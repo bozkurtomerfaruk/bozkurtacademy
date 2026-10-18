@@ -1,0 +1,197 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b2",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-4",
+  "title": "Mehrgenerationenhäuser",
+  "minutes": 18,
+  "context": "In einem Onlineforum diskutieren Menschen über die Frage: „Würden Sie in einem Mehrgenerationenhaus wohnen wollen?“",
+  "instructions": "Lesen Sie die Texte a bis d und die Aufgaben 1 bis 9. Welche Aussage passt zu welcher Person? Die Personen können mehrmals gewählt werden.",
+  "groups": [
+    {
+      "layout": "comments",
+      "none": false,
+      "texts": [
+        {
+          "id": "gisbert",
+          "label": "a",
+          "byline": "Gisbert, Rodenhagen",
+          "paragraphs": [
+            "Seit dem Tod meiner Frau lebe ich in einem Mehrgenerationenhaus am Stadtrand, inzwischen im dritten Jahr. Am Anfang habe ich zu allem Ja gesagt: Kinder hüten, Pakete annehmen, für die Nachbarn kochen. Nach ein paar Monaten war ich völlig erschöpft. Heute sage ich auch mal Nein, und niemand nimmt mir das übel. Am schönsten sind die Nachmittage, an denen ich mit den Schulkindern aus dem zweiten Stock über ihren Matheaufgaben sitze. Vierzig Jahre lang habe ich an einem Gymnasium Mathematik unterrichtet, und es tut gut, dass das hier noch jemandem nützt. Das Getrampel im Treppenhaus hat mich im ersten Jahr allerdings wahnsinnig gemacht; inzwischen höre ich es kaum noch. Zurück in ein gewöhnliches Mietshaus? Nur, wenn es gesundheitlich nicht mehr anders geht."
+          ]
+        },
+        {
+          "id": "heike",
+          "label": "b",
+          "byline": "Heike, Fliederfeld",
+          "paragraphs": [
+            "Ich bin alleinerziehend mit zwei Söhnen und habe mir im Frühjahr ein Mehrgenerationenhaus in unserer Stadt angesehen. Die Vorstellung, dass jemand kurz auf die Jungs aufpasst, wenn ich länger im Büro bleiben muss, ist natürlich verlockend. Bisher hängt das immer an meiner Mutter, und die wohnt eine Stunde entfernt. Was mich abschreckt, ist die Hausversammlung: Bei der Besichtigung erzählte man mir, dass dort jeden Monat stundenlang diskutiert wird, etwa darüber, welche Pflanzen in den Hof kommen. Neben einer vollen Stelle und zwei Schulkindern bleibt mir für so etwas schlicht keine Kraft. Und ob die älteren Bewohner es lustig finden, wenn meine Jungs abends durchs Treppenhaus toben? Ganz ausschließen will ich den Umzug nicht, festgelegt habe ich mich aber auch noch nicht."
+          ]
+        },
+        {
+          "id": "ilyas",
+          "label": "c",
+          "byline": "Ilyas, Kaltenquell",
+          "paragraphs": [
+            "Ich bin bei meinen Großeltern aufgewachsen, zusammen mit zwei Tanten und vier Cousins im selben Haus, und denke unglaublich gern an diese Zeit zurück. Irgendwer war immer da, der zuhörte oder bei den Hausaufgaben half. Für mich ist das Modell deshalb keine romantische Idee, sondern etwas ganz Normales. Entscheidend ist allerdings, dass jeder seine Tür hinter sich zumachen kann. Bei meinen Großeltern teilten sich elf Menschen eine Küche und ein Bad, und so schön das war: Das würde ich mir als Erwachsener nicht mehr antun. Meine Freundin und ich haben uns deshalb bei einer Genossenschaft beworben, die gerade ein solches Projekt baut: zwanzig kleine Apartments, dazu ein großer Garten und eine Werkstatt für alle. Letzte Woche kam die gute Nachricht – im Frühjahr bekommen wir die Schlüssel."
+          ]
+        },
+        {
+          "id": "josefine",
+          "label": "d",
+          "byline": "Josefine, Ebersmühl",
+          "paragraphs": [
+            "Als ich in Rente ging, wollte ich unbedingt in ein Mehrgenerationenhaus ziehen. Vier Jahre lang stand ich auf den Wartelisten von zwei Projekten in der Gegend, ohne dass sich etwas tat. Irgendwann habe ich mich abgemeldet, weil ich nicht ewig in der Schwebe hängen wollte. Stattdessen habe ich mit zwei Nachbarinnen in unserer ganz gewöhnlichen Straße einen Treffpunkt gegründet: Jeden Donnerstag gibt es Kaffee und Kuchen im Gemeindesaal, junge Familien bringen ihre Kleinen mit, und wir Älteren erledigen schon mal Einkäufe für diejenigen, die krank sind. Die Studentin von gegenüber hat mir sogar gezeigt, wie ich per Video mit meinen Enkeln im Ausland telefoniere. Eigentlich habe ich so fast alles, was ich mir von einem solchen Haus erhofft hatte – nur ohne gemeinsames Dach. Käme heute doch noch ein Anruf, würde ich wahrscheinlich absagen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "… musste erst lernen, Bitten um Hilfe auch einmal abzulehnen.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "gisbert",
+              "quote": "Heute sage ich auch mal Nein"
+            }
+          ],
+          "explanation": "Gisbert (a) başta her şeye evet demiş ve birkaç ay sonra tükenmiş; bugün ise „Heute sage ich auch mal Nein, und niemand nimmt mir das übel“. Heike (b) birinin çocuklarına bakmasını umuyor; bir ricayı geri çevirmekten söz etmiyor. Josefine (d) hasta komşulara alışveriş yaparak yardım ediyor, ama hayır demeyi öğrenmesi gerektiğini yazmıyor."
+        },
+        {
+          "number": 1,
+          "type": "zuordnung",
+          "prompt": "… befürchtet, dass gemeinsame Entscheidungen zu viel Zeit in Anspruch nehmen würden.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "heike",
+              "quote": "dass dort jeden Monat stundenlang diskutiert wird"
+            }
+          ],
+          "explanation": "Heike (b) ev toplantısından çekiniyor: Gezide ona „dass dort jeden Monat stundenlang diskutiert wird“ anlatılmış; tam zamanlı işi ve iki okul çocuğu yanında buna gücü yok. Ilyas (c) herkesin kullandığı bahçe ve atölyeden söz ediyor, ama ortak kararlardan çekinmiyor. Gisbert (a) böyle bir evde yaşıyor, ama toplantılardan hiç bahsetmiyor."
+        },
+        {
+          "number": 2,
+          "type": "zuordnung",
+          "prompt": "… hat die Suche nach einem Platz nach langer Zeit aufgegeben.",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "josefine",
+              "quote": "Irgendwann habe ich mich abgemeldet"
+            }
+          ],
+          "explanation": "Josefine (d) dört yıl iki projenin bekleme listesinde kalmış, sonra: „Irgendwann habe ich mich abgemeldet“. Ilyas (c) de bir projeye başvurmuş, ama o olumlu cevap almış. Heike (b) bir evi gezmiş ve henüz karar vermemiş; uzun süre bir yer aradığından söz etmiyor."
+        },
+        {
+          "number": 3,
+          "type": "zuordnung",
+          "prompt": "… hält getrennte Wohnbereiche für unverzichtbar.",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "ilyas",
+              "quote": "dass jeder seine Tür hinter sich zumachen kann"
+            }
+          ],
+          "explanation": "Ilyas (c) için belirleyici olan şu: „dass jeder seine Tür hinter sich zumachen kann“. Büyükanne ve büyükbabasının evinde olduğu gibi on bir kişiyle tek mutfak ve tek banyoyu yetişkin olarak artık istemiyor. Gisbert (a) böyle bir evde memnun yaşıyor, ama ayrı yaşam alanlarını şart olarak koymuyor. Josefine (d) mahalledeki buluşmaları anlatıyor; ayrı yaşam alanlarından söz etmiyor."
+        },
+        {
+          "number": 4,
+          "type": "zuordnung",
+          "prompt": "… schätzt, dass das Wissen aus dem früheren Beruf noch gefragt ist.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "gisbert",
+              "quote": "Vierzig Jahre lang habe ich an einem Gymnasium Mathematik unterrichtet"
+            },
+            {
+              "text": "gisbert",
+              "quote": "dass das hier noch jemandem nützt"
+            }
+          ],
+          "explanation": "Gisbert (a) kırk yıl lisede matematik öğretmiş („Vierzig Jahre lang habe ich an einem Gymnasium Mathematik unterrichtet“) ve şimdi evdeki öğrencilerle matematik ödevlerine oturuyor; „es tut gut, dass das hier noch jemandem nützt“. Ilyas (c) çocukken ödevlerinde yardım gördüğünü anlatıyor, ama kendi mesleğinden söz etmiyor. Josefine (d) emekli ve alışverişlerde yardım ediyor, ama eski mesleği hakkında bir şey yazmıyor."
+        },
+        {
+          "number": 5,
+          "type": "zuordnung",
+          "prompt": "… erhofft sich Unterstützung bei der Betreuung des eigenen Nachwuchses.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "heike",
+              "quote": "dass jemand kurz auf die Jungs aufpasst"
+            }
+          ],
+          "explanation": "Heike (b) için „Die Vorstellung, dass jemand kurz auf die Jungs aufpasst“ cazip; şimdiye kadar bunu bir saat uzakta oturan annesi yapıyor. Gisbert (a) da çocuklara bakıyor, ama o yardım bekleyen değil, yardım eden taraf. Josefine'nin (d) buluşmalarına genç aileler küçük çocuklarıyla geliyor, ama kendisi çocuk bakımı için yardım beklemiyor."
+        },
+        {
+          "number": 6,
+          "type": "zuordnung",
+          "prompt": "… hat in der Kindheit gute Erfahrungen mit mehreren Generationen unter einem Dach gemacht.",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "ilyas",
+              "quote": "Ich bin bei meinen Großeltern aufgewachsen"
+            },
+            {
+              "text": "ilyas",
+              "quote": "denke unglaublich gern an diese Zeit zurück"
+            }
+          ],
+          "explanation": "Ilyas (c) büyükanne ve büyükbabasının yanında, iki teyzesi ve dört kuzeniyle aynı evde büyümüş: „Ich bin bei meinen Großeltern aufgewachsen“ ve o zamanı çok severek hatırlıyor: „denke unglaublich gern an diese Zeit zurück“. Gisbert (a) ile Josefine (d) yaşlılıkta kuşakların bir arada yaşamasını anlatıyor; çocukluklarından söz etmiyorlar."
+        },
+        {
+          "number": 7,
+          "type": "zuordnung",
+          "prompt": "… hat selbst eine Alternative ins Leben gerufen, die ähnliche Vorteile bietet.",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "josefine",
+              "quote": "einen Treffpunkt gegründet"
+            },
+            {
+              "text": "josefine",
+              "quote": "fast alles, was ich mir von einem solchen Haus erhofft hatte"
+            }
+          ],
+          "explanation": "Josefine (d) iki komşusuyla birlikte kendi sokağında bir buluşma noktası kurmuş („einen Treffpunkt gegründet“) ve böylece „fast alles, was ich mir von einem solchen Haus erhofft hatte“ elde etmiş. Ilyas (c) de bir projeye katılıyor, ama onu kendisi kurmamış; projeyi bir kooperatif inşa ediyor. Gisbert (a) zaten var olan bir evde yaşıyor."
+        },
+        {
+          "number": 8,
+          "type": "zuordnung",
+          "prompt": "… erträgt den Lärm im Gebäude mittlerweile gelassener als zu Beginn.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "gisbert",
+              "quote": "inzwischen höre ich es kaum noch"
+            }
+          ],
+          "explanation": "Gisbert'i (a) merdivenlerdeki ayak sesleri ilk yıl çıldırtmış, ama „inzwischen höre ich es kaum noch“. Heike (b) de gürültüden söz ediyor, ama yalnızca kendi oğullarının yaşlı sakinleri rahatsız edip etmeyeceğini merak ediyor. Ilyas (c) kalabalık bir evde büyümüş, ama gürültüye nasıl tepki verdiğinden söz etmiyor."
+        },
+        {
+          "number": 9,
+          "type": "zuordnung",
+          "prompt": "… hat für die nahe Zukunft bereits eine Zusage erhalten.",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "ilyas",
+              "quote": "im Frühjahr bekommen wir die Schlüssel"
+            }
+          ],
+          "explanation": "Ilyas (c) ve kız arkadaşı bir kooperatife başvurmuş; geçen hafta iyi haber gelmiş: „im Frühjahr bekommen wir die Schlüssel“. Josefine (d) de başvurmuş, ama yıllarca beklemiş ve sonunda listeden çıkmış. Heike (b) bir evi gezmiş, ama henüz bir karar vermemiş („festgelegt habe ich mich aber auch noch nicht“)."
+        }
+      ]
+    }
+  ]
+}

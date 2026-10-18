@@ -325,6 +325,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Digitale Auszeit' },
                   { set: 'set-2', title: 'Lernen im Alter' },
+                  { set: 'set-3', title: 'Sprachen lernen mit Apps' },
+                  { set: 'set-4', title: 'Mehrgenerationenhäuser' },
+                  { set: 'set-5', title: 'Weniger Fleisch essen?' },
                 ]
               }, // Teil 1
               {
@@ -332,6 +335,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Ein Dorf macht seinen Strom selbst' },
                   { set: 'set-2', title: 'Roboter in der Pflege' },
+                  { set: 'set-3', title: 'Die Rückkehr der Nachtzüge' },
+                  { set: 'set-4', title: 'Ein Museum ohne Eintritt' },
+                  { set: 'set-5', title: 'Unverpackt-Läden in der Krise' },
                 ]
               }, // Teil 2
               {
@@ -339,6 +345,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Warum wir Dinge aufschieben' },
                   { set: 'set-2', title: 'Stadtbäume in der Hitze' },
+                  { set: 'set-3', title: 'Die Kunst des Zuhörens' },
+                  { set: 'set-4', title: 'Wie Städte leiser werden' },
+                  { set: 'set-5', title: 'Das Comeback der Handschrift' },
                 ]
               }, // Teil 3
               {
@@ -346,6 +355,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Die Vier-Tage-Woche' },
                   { set: 'set-2', title: 'Kostenloser Nahverkehr' },
+                  { set: 'set-3', title: 'Programmieren als Pflichtfach?' },
+                  { set: 'set-4', title: 'Haustiere im Büro?' },
+                  { set: 'set-5', title: 'Schulnoten abschaffen?' },
                 ]
               }, // Teil 4
               {
@@ -353,6 +365,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Regeln im Gemeinschaftsbüro' },
                   { set: 'set-2', title: 'Das Pflichtpraktikum' },
+                  { set: 'set-3', title: 'Hinweise für die Ferienwohnung' },
+                  { set: 'set-4', title: 'Teilnahme am Stadtlauf' },
+                  { set: 'set-5', title: 'Regeln in der offenen Werkstatt' },
                 ]
               }, // Teil 5
             ] },

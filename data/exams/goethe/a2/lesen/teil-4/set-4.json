@@ -1,0 +1,118 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-4",
+  "title": "Wohnen auf Zeit",
+  "minutes": 8,
+  "instructions": "Sechs Personen suchen im Internet ein Zimmer oder eine Wohnung für einige Zeit. Lesen Sie die Aufgaben 16 bis 20 und die Anzeigen a bis f. Welche Anzeige passt zu welcher Person? Für eine Aufgabe gibt es keine passende Anzeige. In diesem Fall wählen Sie X. Die Anzeige aus dem Beispiel können Sie nicht mehr wählen.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": "x",
+      "texts": [
+        {
+          "id": "a",
+          "label": "a",
+          "title": "Pension Wiesengrund",
+          "paragraphs": [
+            "Kleine, ruhige Zimmer für eine oder zwei Personen, mit Frühstück. Sie können eine Nacht oder auch mehrere Wochen bleiben. Ab sieben Nächten wird es 20 Prozent billiger. Hunde und Katzen sind bei uns willkommen. Kochen ist in den Zimmern leider nicht möglich."
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "title": "Apartment am Stadtpark Mühlbrück",
+          "paragraphs": [
+            "Neues Apartment mit einem Zimmer, Küche, Bad und Waschmaschine – ideal für Leute, die in der Stadt arbeiten. Sie wohnen allein und ruhig, direkt am Park. Miete: 690 Euro im Monat. Wir vermieten nur für mindestens drei Monate."
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "title": "WG-Zimmer in Eichtal frei",
+          "paragraphs": [
+            "Unsere Mitbewohnerin ist von Juli bis September in Spanien. In dieser Zeit ist ihr Zimmer frei (14 m², mit Bett und Schreibtisch). Küche und Bad teilen wir zu dritt – wir sind alle Mitte zwanzig. 320 Euro im Monat, Internet inklusive."
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "title": "Günstiges Zimmer in Sandwiesen",
+          "paragraphs": [
+            "Ich bin 74 und wohne allein in einem großen Haus in Sandwiesen. Ich vermiete ab Oktober ein Zimmer mit eigenem Bad, gern an Studenten. Die Miete ist nur 150 Euro im Monat, wenn Sie mir im Garten und beim Einkaufen helfen."
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "title": "Ferienhaus Birkenhof",
+          "paragraphs": [
+            "Unser altes Bauernhaus hat sechs Schlafzimmer und eine große Küche – genau richtig für Gruppen von 8 bis 14 Personen. Im Garten gibt es einen Grillplatz. Wir vermieten das Haus für Wochenenden und ganze Wochen. Die Wanderwege beginnen direkt vor der Tür."
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "title": "Ferienwohnung „Am Bachufer“",
+          "paragraphs": [
+            "Zwei Schlafzimmer, Wohnzimmer, Küche und ein kleiner Garten – Platz für bis zu fünf Personen. Ihr Hund darf gern mitkommen. Den Bäcker und den Badesee erreichen Sie zu Fuß. Wir vermieten die Wohnung von Juni bis September, immer ab einer Woche."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Die Eltern von Lars kommen für drei Nächte zu Besuch. Die beiden möchten in einem kleinen Haus übernachten und morgens dort frühstücken.",
+          "answer": "a",
+          "evidence": [{ "text": "a", "quote": "Kleine, ruhige Zimmer für eine oder zwei Personen, mit Frühstück." }],
+          "explanation": "a ilanındaki pansiyonda bir veya iki kişilik küçük odalar var, kahvaltı da dahil; bir gece de kalınabiliyor. Lars'ın annesi ve babası için uygun. Bu ilan örnekte kullanıldığı için başka bir kişi için seçilemez."
+        },
+        {
+          "number": 16,
+          "type": "zuordnung",
+          "prompt": "Jette macht im August und September ein Praktikum in Eichtal. Für diese Zeit sucht sie ein Zimmer und möchte gern mit anderen jungen Leuten zusammenwohnen.",
+          "answer": "c",
+          "evidence": [{ "text": "c", "quote": "Unsere Mitbewohnerin ist von Juli bis September in Spanien." }, { "text": "c", "quote": "wir sind alle Mitte zwanzig" }],
+          "explanation": "c ilanındaki öğrenci evinde (WG) bir oda temmuzdan eylüle kadar boş; Jette'nin ağustos ve eylül ayları bu zamanın içinde. Ev Eichtal'da ve diğer kişiler yirmili yaşlarının ortasında. Tuzak d: Orada da bir oda var, ama sadece ekimden itibaren ve 74 yaşındaki bir kadının evinde."
+        },
+        {
+          "number": 17,
+          "type": "zuordnung",
+          "prompt": "Ihr Kollege arbeitet im März und April sechs Wochen in Mühlbrück. In dieser Zeit möchte er allein wohnen und abends selbst kochen.",
+          "answer": "x",
+          "evidence": [{ "text": "b", "quote": "Wir vermieten nur für mindestens drei Monate." }],
+          "explanation": "Tuzak b: Daire Mühlbrück'te, mutfaklı ve tek kişilik, ama „Wir vermieten nur für mindestens drei Monate“, yani en az üç ay için kiralanıyor. Meslektaş sadece altı hafta kalıyor. Başka bir ilan da uymuyor: a'da odalarda yemek pişirilemiyor (ve örnekte kullanıldı), c ortak bir ev ve sadece temmuz–eylül boş, d ekimden itibaren ve başka biriyle aynı evde, e 8–14 kişilik gruplar için, f sadece hazirandan eylüle kadar. Bu yüzden cevap X."
+        },
+        {
+          "number": 18,
+          "type": "zuordnung",
+          "prompt": "Maren möchte im Juli mit ihrem Mann, den zwei Kindern und dem Hund zwei Wochen Urlaub auf dem Land machen.",
+          "answer": "f",
+          "evidence": [{ "text": "f", "quote": "Platz für bis zu fünf Personen. Ihr Hund darf gern mitkommen." }],
+          "explanation": "f ilanındaki tatil dairesi beş kişiye kadar yer alıyor ve köpek de gelebiliyor. Haziran–eylül arası, en az bir hafta için kiralanıyor. Dört kişilik aile ve köpek için temmuzda iki hafta uygun. Tuzak a: Pansiyonda da köpekler kabul ediliyor, ama odalar sadece bir veya iki kişilik."
+        },
+        {
+          "number": 19,
+          "type": "zuordnung",
+          "prompt": "Anton beginnt im Oktober sein Studium in Sandwiesen. Er hat wenig Geld, aber er kann gut im Haus und im Garten mithelfen.",
+          "answer": "d",
+          "evidence": [{ "text": "d", "quote": "Die Miete ist nur 150 Euro im Monat, wenn Sie mir im Garten und beim Einkaufen helfen." }],
+          "explanation": "d ilanındaki oda Sandwiesen'de ve ekimden itibaren boş; öğrenciler isteniyor. Bahçede ve alışverişte yardım edilirse kira ayda sadece 150 euro. Anton için uygun. Tuzak c: Orada da genç insanlarla oturulabilir, ama oda sadece temmuzdan eylüle kadar boş ve ev Eichtal'da."
+        },
+        {
+          "number": 20,
+          "type": "zuordnung",
+          "prompt": "Zwölf Freunde möchten im Mai ein langes Wochenende zusammen verbringen. Tagsüber möchten sie wandern und abends draußen zusammen grillen.",
+          "answer": "e",
+          "evidence": [{ "text": "e", "quote": "genau richtig für Gruppen von 8 bis 14 Personen" }, { "text": "e", "quote": "Im Garten gibt es einen Grillplatz." }],
+          "explanation": "e ilanındaki tatil evi 8–14 kişilik gruplar için; bahçede bir mangal yeri var ve yürüyüş yolları kapının önünde başlıyor. Ev hafta sonları için de kiralanıyor. On iki arkadaş için uygun. Tuzak f: Orada da bahçe var, ama sadece beş kişiye kadar yer var ve daire mayısta kiralanmıyor."
+        }
+      ]
+    }
+  ]
+}

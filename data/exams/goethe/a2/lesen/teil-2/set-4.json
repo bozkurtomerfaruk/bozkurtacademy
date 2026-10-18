@@ -1,0 +1,92 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-4",
+  "title": "Im Einkaufszentrum",
+  "minutes": 6,
+  "instructions": "Sie sind im Einkaufszentrum „Sandwiesen-Center“. Lesen Sie die Aufgaben 6 bis 10 und die Informationstafel. Wo finden Sie das? Wählen Sie die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "tafel",
+          "title": "Sandwiesen-Center – Wegweiser",
+          "paragraphs": [
+            {
+              "rows": [
+                ["4. Stock", "Kino · Kinderland: Kinder von 3 bis 10 Jahren spielen hier, die Eltern kaufen in Ruhe ein"],
+                ["3. Stock", "Essen und Trinken: Pizza, Nudeln, Döner, Salate, Gerichte aus Asien · Eiscafé · Toiletten"],
+                ["2. Stock", "Elektronik: Fernseher, Computer, Handys · Spielwaren · Optiker: Brillen und Sehtest"],
+                ["1. Stock", "Mode für Damen, Herren und Kinder · Schuhe · Taschen"],
+                ["Erdgeschoss", "Kundenservice: Geschenkgutscheine, Kinderwagen ausleihen · Post: Briefmarken und Pakete · Reisebüro · Blumen"],
+                ["Untergeschoss", "Supermarkt · Getränkemarkt · Tierbedarf: Futter für Hund, Katze und Vogel · Schneiderei: Hosen und Röcke kürzer machen"]
+              ]
+            },
+            "Das Sandwiesen-Center ist von Montag bis Samstag von 9 bis 21 Uhr geöffnet. Rolltreppen und Aufzüge finden Sie am Brunnen in der Mitte."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "abc",
+          "prompt": "Ihre Brille ist kaputt. Sie brauchen eine neue.",
+          "options": { "a": "2. Stock", "b": "1. Stock", "c": "anderer Stock" },
+          "answer": "a",
+          "evidence": [{ "text": "tafel", "quote": "Optiker: Brillen und Sehtest" }],
+          "explanation": "Gözlükçü (Optiker) 2. katta: „Optiker: Brillen und Sehtest“. b) yanlış: 1. katta giyim, ayakkabı ve çanta var; gözlük yok."
+        },
+        {
+          "number": 6,
+          "type": "abc",
+          "prompt": "Sie haben eine neue Hose gekauft, aber die Beine sind zu lang.",
+          "options": { "a": "1. Stock", "b": "Erdgeschoss", "c": "anderer Stock" },
+          "answer": "c",
+          "evidence": [{ "text": "tafel", "quote": "Schneiderei: Hosen und Röcke kürzer machen" }],
+          "explanation": "Pantolonu kısaltmak için terzi gerekiyor: „Schneiderei: Hosen und Röcke kürzer machen“. Terzi alt katta (Untergeschoss); alt kat seçeneklerde yok, bu yüzden c doğru. a) yanlış: 1. katta pantolon satılıyor (Mode), ama kısaltılmıyor. b) yanlış: Zemin katta müşteri hizmetleri, postane ve seyahat acentesi var; terzi yok."
+        },
+        {
+          "number": 7,
+          "type": "abc",
+          "prompt": "Sie möchten heute Abend mit Freunden einen neuen Film sehen.",
+          "options": { "a": "2. Stock", "b": "4. Stock", "c": "anderer Stock" },
+          "answer": "b",
+          "evidence": [{ "text": "tafel", "quote": "Kino" }],
+          "explanation": "Film sinemada (Kino) izlenir. Sinema 4. katta. a) yanlış: 2. katta televizyon var, ama orada televizyon satılıyor: „Elektronik: Fernseher, Computer, Handys“. c) yanlış: Sinema seçeneklerdeki 4. katta."
+        },
+        {
+          "number": 8,
+          "type": "abc",
+          "prompt": "Ihre Katze hat zu Hause nichts mehr zu fressen.",
+          "options": { "a": "Untergeschoss", "b": "3. Stock", "c": "anderer Stock" },
+          "answer": "a",
+          "evidence": [{ "text": "tafel", "quote": "Tierbedarf: Futter für Hund, Katze und Vogel" }],
+          "explanation": "Kedi maması alt katta: „Tierbedarf: Futter für Hund, Katze und Vogel“. b) yanlış: 3. katta da yemek var, ama insanlar için: pizza, makarna, döner, salata. c) yanlış: Kedi maması seçeneklerdeki alt katta."
+        },
+        {
+          "number": 9,
+          "type": "abc",
+          "prompt": "Sie sind mit Ihrem Baby im Einkaufszentrum. Das Baby ist müde, aber Sie haben keinen Kinderwagen dabei.",
+          "options": { "a": "Erdgeschoss", "b": "4. Stock", "c": "anderer Stock" },
+          "answer": "a",
+          "evidence": [{ "text": "tafel", "quote": "Kundenservice: Geschenkgutscheine, Kinderwagen ausleihen" }],
+          "explanation": "Zemin kattaki müşteri hizmetlerinden bebek arabası ödünç alınabilir: „Kinderwagen ausleihen“. b) yanlış: 4. kattaki „Kinderland“ 3–10 yaş arası çocukların oyun yeri; bebek arabası orada yazmıyor. c) yanlış: Bebek arabası seçeneklerdeki zemin katta."
+        },
+        {
+          "number": 10,
+          "type": "abc",
+          "prompt": "Sie möchten in Ruhe Schuhe kaufen. Ihr Sohn ist sechs und soll so lange mit anderen Kindern spielen.",
+          "options": { "a": "2. Stock", "b": "1. Stock", "c": "anderer Stock" },
+          "answer": "c",
+          "evidence": [{ "text": "tafel", "quote": "Kinderland: Kinder von 3 bis 10 Jahren spielen hier, die Eltern kaufen in Ruhe ein" }],
+          "explanation": "Altı yaşındaki oğul „Kinderland“da oynayabilir: „Kinder von 3 bis 10 Jahren spielen hier, die Eltern kaufen in Ruhe ein“. Kinderland 4. katta; 4. kat seçeneklerde yok, bu yüzden c doğru. a) yanlış: 2. katta oyuncak (Spielwaren) satılıyor, ama orası çocukların oynadığı bir yer değil. b) yanlış: Ayakkabılar 1. katta, ama orada çocuklar için oyun yeri yok."
+        }
+      ]
+    }
+  ]
+}

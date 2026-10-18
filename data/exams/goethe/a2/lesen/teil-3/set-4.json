@@ -1,0 +1,124 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-4",
+  "title": "Krank im Bett",
+  "minutes": 8,
+  "instructions": "Sie lesen eine E-Mail. Wählen Sie für die Aufgaben 11 bis 15 die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "mail",
+          "title": "Leider kein Konzert",
+          "byline": "E-Mail von Valentin an Ida",
+          "paragraphs": [
+            "Hallo Ida,",
+            "leider habe ich keine gute Nachricht. Seit Dienstag liege ich mit Fieber im Bett. Gestern war ich beim Arzt, und er hat gesagt, dass ich eine Grippe habe. Ich soll bis Sonntag zu Hause bleiben.",
+            "Deshalb kann ich am Freitag nicht mit dir ins Konzert gehen. Das tut mir wirklich leid! Die Karten habe ich schon gekauft. Vielleicht kannst du mit einer Kollegin gehen? Ich schicke dir die Karten heute noch als E-Mail.",
+            "Ich habe auch eine Bitte: Kannst du morgen nach der Arbeit für mich einkaufen und kurz zu mir kommen? Ich brauche Tee und Tabletten gegen Fieber, und mein Kühlschrank ist fast leer. Ein bisschen Obst und Brot wären super. Das Geld gebe ich dir natürlich zurück. Bitte ruf mich vorher kurz an, denn meine Klingel ist kaputt.",
+            "Wenn ich wieder gesund bin, lade ich dich zum Essen ein. Hast du am Samstag, dem 24. Oktober, Zeit? Wir könnten in das neue Restaurant am Markt gehen.",
+            "Viele Grüße",
+            "Valentin"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 11,
+          "type": "abc",
+          "prompt": "Valentin …",
+          "options": {
+            "a": "ist seit Dienstag krank.",
+            "b": "war heute beim Arzt.",
+            "c": "muss bis Sonntag im Krankenhaus bleiben."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Seit Dienstag liege ich mit Fieber im Bett."
+            }
+          ],
+          "explanation": "Valentin salıdan beri ateşle yatakta yatıyor: „Seit Dienstag liege ich mit Fieber im Bett.“ b) yanlış: Doktora bugün değil, dün gitti: „Gestern war ich beim Arzt“. c) yanlış: Pazara kadar hastanede değil, evde kalması gerekiyor: „Ich soll bis Sonntag zu Hause bleiben.“"
+        },
+        {
+          "number": 12,
+          "type": "abc",
+          "prompt": "Am Freitag …",
+          "options": {
+            "a": "geht Valentin mit Ida ins Konzert.",
+            "b": "kann Ida mit einer anderen Person ins Konzert gehen.",
+            "c": "kauft Valentin die Karten für das Konzert."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Vielleicht kannst du mit einer Kollegin gehen?"
+            }
+          ],
+          "explanation": "Valentin, Ida'nın konsere bir iş arkadaşıyla gidebileceğini yazıyor: „Vielleicht kannst du mit einer Kollegin gehen?“ a) yanlış: Valentin hasta olduğu için cuma günü konsere gidemiyor: „Deshalb kann ich am Freitag nicht mit dir ins Konzert gehen.“ c) yanlış: Biletleri zaten satın aldı: „Die Karten habe ich schon gekauft.“"
+        },
+        {
+          "number": 13,
+          "type": "abc",
+          "prompt": "Valentin fragt, ob Ida …",
+          "options": {
+            "a": "morgen für ihn einkaufen kann.",
+            "b": "ihm Geld geben kann.",
+            "c": "ihm die Karten schicken kann."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Kannst du morgen nach der Arbeit für mich einkaufen"
+            }
+          ],
+          "explanation": "Valentin, Ida'ya yarın işten sonra onun için alışveriş yapıp yapamayacağını soruyor: „Kannst du morgen nach der Arbeit für mich einkaufen“. b) yanlış: Ida'dan para istemiyor; tersine, alışverişin parasını ona geri verecek: „Das Geld gebe ich dir natürlich zurück.“ c) yanlış: Biletleri Ida değil, Valentin gönderiyor: „Ich schicke dir die Karten heute noch als E-Mail.“"
+        },
+        {
+          "number": 14,
+          "type": "abc",
+          "prompt": "Valentin bittet Ida, vor dem Besuch …",
+          "options": {
+            "a": "zweimal zu klingeln.",
+            "b": "die Karten bei ihm abzuholen.",
+            "c": "ihn kurz anzurufen."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Bitte ruf mich vorher kurz an, denn meine Klingel ist kaputt."
+            }
+          ],
+          "explanation": "Valentin, Ida'dan gelmeden önce kısaca aramasını rica ediyor, çünkü zili bozuk: „Bitte ruf mich vorher kurz an, denn meine Klingel ist kaputt.“ a) yanlış: Zil bozuk olduğu için zil çalmak işe yaramaz. b) yanlış: Ida'nın biletleri alması gerekmiyor; Valentin onları bugün e-postayla gönderiyor."
+        },
+        {
+          "number": 15,
+          "type": "abc",
+          "prompt": "Valentin möchte Ida …",
+          "options": {
+            "a": "am Freitag in ein Restaurant einladen.",
+            "b": "am 24. Oktober zum Essen einladen.",
+            "c": "zu sich nach Hause zum Essen einladen."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Hast du am Samstag, dem 24. Oktober, Zeit?"
+            }
+          ],
+          "explanation": "Valentin iyileşince Ida'yı yemeğe davet etmek istiyor ve 24 Ekim cumartesi günü vakti olup olmadığını soruyor: „Hast du am Samstag, dem 24. Oktober, Zeit?“ a) yanlış: Cuma günü konser vardı ve Valentin o gün hasta; yemek için cumartesi gününü öneriyor. c) yanlış: Evine değil, pazar yerindeki yeni restorana gitmeyi öneriyor: „in das neue Restaurant am Markt“."
+        }
+      ]
+    }
+  ]
+}

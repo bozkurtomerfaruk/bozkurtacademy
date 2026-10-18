@@ -28,7 +28,7 @@
 #page-exams .task-gap{display:inline-flex;align-items:center;gap:4px;min-width:72px;margin:0 2px;padding:0 8px;border-bottom:2px solid var(--ba-accent);border-radius:var(--ba-radius-small) var(--ba-radius-small) 0 0;background:var(--ba-paper-2);font-weight:600;vertical-align:baseline}
 #page-exams .task-gap-no{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 5px;border-radius:999px;background:var(--ba-accent);color:var(--ba-accent-ink);font-size:12px;font-variant-numeric:tabular-nums}
 #page-exams .task-gap-pick{min-width:1ch;text-transform:lowercase}
-#page-exams .task-gap.is-example{min-width:0;font-weight:400;border-bottom-style:dashed}
+#page-exams .task-gap.is-example{display:inline;min-width:0;padding:1px 4px;font-weight:400;border-bottom-style:dashed;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 #page-exams .task-gap.is-right{border-bottom-color:var(--ba-right);background:var(--ba-right-bg)}
 #page-exams .task-gap.is-wrong{border-bottom-color:var(--ba-wrong);background:var(--ba-wrong-bg)}
 #page-exams .task-group--gaps .task-text:not(:first-child){padding:12px 16px}

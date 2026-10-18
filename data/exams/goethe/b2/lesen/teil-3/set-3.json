@@ -1,0 +1,149 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b2",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-3",
+  "title": "Die Kunst des Zuhörens",
+  "minutes": 12,
+  "instructions": "Lesen Sie den Text und die Aufgaben 16 bis 21. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Die Kunst des Zuhörens",
+          "byline": "Von Katrin Merz",
+          "paragraphs": [
+            "Wir verbringen einen großen Teil des Tages damit, anderen zuzuhören – im Büro, am Telefon, beim Abendessen. Trotzdem fühlen sich viele Menschen nach eigenen Angaben selten wirklich verstanden. An mangelnder Kommunikation kann das kaum liegen: Nie zuvor haben wir so viele Nachrichten ausgetauscht wie heute. Was fehlt, ist offenbar etwas anderes.",
+            "Eine Studie der Universität Lindenhain ging der Frage nach, wie viel Menschen von einem Gespräch tatsächlich behalten. Die Teilnehmenden führten zehnminütige Unterhaltungen und sollten anschließend wiedergeben, was ihr Gegenüber gesagt hatte. Im Durchschnitt konnten sie kaum die Hälfte der Inhalte korrekt nennen. Befragt, wie aufmerksam sie gewesen seien, gaben sich die meisten jedoch gute bis sehr gute Noten. Besonders schlecht schnitten diejenigen ab, deren Handy während des Gesprächs auf dem Tisch lag – selbst wenn es kein einziges Mal klingelte. Offenbar genügt schon die bloße Möglichkeit einer Unterbrechung, um einen Teil der Aufmerksamkeit zu binden.",
+            "Die Kommunikationstrainerin Saskia Lorenz überrascht das nicht. Seit fünfzehn Jahren arbeitet sie mit Führungskräften, Pflegeteams und Lehrkräften. „Die meisten Menschen hören nicht zu, um zu verstehen, sondern um zu antworten“, sagt sie. Während das Gegenüber noch spricht, legten sich viele im Kopf bereits eine Erwiderung zurecht oder suchten nach einem passenden eigenen Erlebnis. Dabei gingen genau die Zwischentöne verloren, auf die es ankomme. In ihren Seminaren lässt Lorenz deshalb eine einfache Übung machen: Bevor man selbst etwas sagen darf, muss man das zuvor Gehörte in eigenen Worten zusammenfassen – und zwar so, dass der andere zustimmt. „Nach einer halben Stunde sind viele erschöpft, weil sie merken, wie selten sie das sonst tun.“",
+            "Wie viel davon abhängen kann, zeigt ein Beispiel aus dem Berufsalltag. Jens Ostermann leitet die Kundenabteilung eines Versandhändlers. Jahrelang habe er die Besprechungen mit seinem Team für effizient gehalten, erzählt er: kurze Berichte, schnelle Entscheidungen. Erst als zwei erfahrene Mitarbeiterinnen kurz hintereinander kündigten, erfuhr er, dass sich beide mit ihren Vorschlägen nie ernst genommen gefühlt hatten. „Ich dachte, ich höre zu, weil ich niemanden unterbreche“, sagt Ostermann heute. Ähnliches berichtet Nadine Thalmann, Mutter einer fünfzehnjährigen Tochter. „Ich habe auf jedes Problem sofort mit einem Ratschlag reagiert. Irgendwann hat sie mir einfach nichts mehr erzählt.“ Seit Thalmann öfter nachfragt, statt Lösungen anzubieten, kämen die Gespräche wieder von allein.",
+            "Warum fällt etwas so Alltägliches so schwer? Lorenz nennt mehrere Gründe. Zum einen denken wir deutlich schneller, als andere sprechen; die freie Kapazität im Kopf füllt sich rasch mit eigenen Gedanken. Zum anderen verlangt echtes Zuhören, die eigene Meinung vorübergehend zurückzustellen. „Zuhören heißt nicht zustimmen“, betont die Trainerin. „Aber es heißt, den anderen erst einmal zu Ende denken zu lassen.“ Hinzu komme, dass Zuhören wenig Anerkennung finde: Wer in Besprechungen viel redet, gilt schnell als engagiert, wer aufmerksam folgt, wird dagegen leicht übersehen.",
+            "Muss also jeder ein Kommunikationsseminar besuchen? Ich halte das für übertrieben. Techniken mögen hilfreich sein, doch wer sie nur mechanisch anwendet, wirkt schnell, als spiele er eine Rolle – und das spürt das Gegenüber. Entscheidender scheint mir die Bereitschaft, sich wirklich für das zu interessieren, was ein anderer sagt, auch wenn es gerade nicht in den eigenen Tag passt. Das kostet Zeit und manchmal Geduld. Aber vermutlich gibt es kaum etwas Wertvolleres, das wir einander schenken können."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 16,
+          "type": "abc",
+          "prompt": "Was zeigt die Studie der Universität Lindenhain?",
+          "options": {
+            "a": "Ein Handy auf dem Tisch beeinträchtigt die Erinnerung nur dann, wenn es während des Gesprächs klingelt.",
+            "b": "Die meisten Teilnehmenden schätzten ihre eigene Aufmerksamkeit als eher gering ein.",
+            "c": "Die Teilnehmenden hielten sich für deutlich bessere Zuhörer, als ihre Ergebnisse vermuten lassen."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "kaum die Hälfte der Inhalte korrekt nennen"
+            },
+            {
+              "text": "artikel",
+              "quote": "gaben sich die meisten jedoch gute bis sehr gute Noten"
+            }
+          ],
+          "explanation": "Doğru cevap iki bilgiyi birleştirmeyi gerektiriyor: Katılımcılar konuşulanların ancak yarısını doğru hatırlayabildi („kaum die Hälfte der Inhalte korrekt nennen“), ama ne kadar dikkatli olduklarını sorunca çoğu kendine iyi veya çok iyi not verdi („gaben sich die meisten jedoch gute bis sehr gute Noten“). Yani kendilerini olduklarından daha iyi dinleyici sanıyorlar. a) yanlış: Masadaki telefon hiç çalmasa bile sonuç kötüydü („selbst wenn es kein einziges Mal klingelte“). b) yanlış: Katılımcılar dikkatlerini düşük değil, yüksek değerlendirdi."
+        },
+        {
+          "number": 17,
+          "type": "abc",
+          "prompt": "Worin sieht Saskia Lorenz das Hauptproblem vieler Gespräche?",
+          "options": {
+            "a": "Man beschäftigt sich gedanklich schon mit der eigenen Reaktion, bevor der andere ausgeredet hat.",
+            "b": "Man wiederholt das Gehörte zu oft in eigenen Worten, statt selbst etwas beizutragen.",
+            "c": "Man erzählt dem Gegenüber zu wenig von dem, was man selbst erlebt hat."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "hören nicht zu, um zu verstehen, sondern um zu antworten"
+            },
+            {
+              "text": "artikel",
+              "quote": "legten sich viele im Kopf bereits eine Erwiderung zurecht"
+            }
+          ],
+          "explanation": "Lorenz'e göre çoğu insan anlamak için değil, cevap vermek için dinliyor („hören nicht zu, um zu verstehen, sondern um zu antworten“): Karşıdaki daha konuşurken kafasında cevabını hazırlıyor („legten sich viele im Kopf bereits eine Erwiderung zurecht“). b) yanlış: Duyulanı kendi sözleriyle özetlemek Lorenz'in seminerdeki alıştırması; katılımcılar bunu normalde nadiren yapıyor („wie selten sie das sonst tun“). c) yanlış: Metne göre insanlar dinlerken zaten uygun bir kendi yaşantısını arıyor („nach einem passenden eigenen Erlebnis“); sorun bundan az bahsetmek değil, dikkatin bu yüzden dağılması."
+        },
+        {
+          "number": 18,
+          "type": "abc",
+          "prompt": "Welche Erkenntnis hat Jens Ostermann gewonnen?",
+          "options": {
+            "a": "Mitarbeitende kündigen vor allem dann, wenn sie in Besprechungen häufig unterbrochen werden.",
+            "b": "Den anderen ausreden zu lassen, bedeutet noch nicht, ihm wirklich zuzuhören.",
+            "c": "Seine Mitarbeiterinnen hatten ihm ihre Vorschläge zu selten mitgeteilt."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Ich dachte, ich höre zu, weil ich niemanden unterbreche"
+            }
+          ],
+          "explanation": "Ostermann kimsenin sözünü kesmediği için dinlediğini sanıyordu („Ich dachte, ich höre zu, weil ich niemanden unterbreche“); ama iki deneyimli çalışanı, önerileri hiç ciddiye alınmadığı için işten ayrıldı. Bu iki bilgiden, sadece sözü kesmemenin gerçek dinleme anlamına gelmediğini öğrendiği çıkıyor. a) yanlış: Ostermann kimsenin sözünü kesmiyordu, yine de çalışanlar istifa etti. c) yanlış: Çalışanlar önerilerini dile getirmişti; sorun, bu önerilerle ciddiye alınmadıklarını hissetmeleriydi („mit ihren Vorschlägen nie ernst genommen“)."
+        },
+        {
+          "number": 19,
+          "type": "abc",
+          "prompt": "Was wird am Beispiel von Nadine Thalmann deutlich?",
+          "options": {
+            "a": "Ihre Tochter erwartete vor allem praktische Lösungen für ihre Probleme.",
+            "b": "Gut gemeinte Hilfe kann dazu führen, dass sich jemand im Gespräch zurückzieht.",
+            "c": "Thalmann bietet ihrer Tochter heute häufiger Lösungen an als früher."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Irgendwann hat sie mir einfach nichts mehr erzählt"
+            }
+          ],
+          "explanation": "Thalmann her soruna hemen bir öneriyle karşılık verdi; bir süre sonra kızı ona hiçbir şey anlatmaz oldu („Irgendwann hat sie mir einfach nichts mehr erzählt“). İyi niyetli tavsiyeler kızın içine kapanmasına yol açtı. a) yanlış: Kız tam da sürekli çözüm önerileri yüzünden konuşmayı bıraktı; Thalmann çözüm sunmak yerine soru sormaya başlayınca konuşmalar yeniden kendiliğinden geliyor. c) yanlış: Tersine, Thalmann artık çözüm sunmak yerine daha sık soru soruyor („öfter nachfragt, statt Lösungen anzubieten“)."
+        },
+        {
+          "number": 20,
+          "type": "abc",
+          "prompt": "Was macht das Zuhören laut Lorenz zusätzlich schwierig?",
+          "options": {
+            "a": "Wer zuhört, muss am Ende die Meinung des anderen übernehmen.",
+            "b": "Andere sprechen meist schneller, als man ihren Gedanken folgen kann.",
+            "c": "Aufmerksames Folgen wird weniger gewürdigt als häufiges Reden."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Hinzu komme, dass Zuhören wenig Anerkennung finde"
+            }
+          ],
+          "explanation": "Lorenz ek bir sebep olarak dinlemenin az takdir gördüğünü söylüyor („Hinzu komme, dass Zuhören wenig Anerkennung finde“): Toplantılarda çok konuşan hemen ilgili sayılıyor, dikkatle takip eden ise kolayca gözden kaçıyor. a) yanlış: Lorenz açıkça dinlemenin aynı fikirde olmak anlamına gelmediğini söylüyor („Zuhören heißt nicht zustimmen“). b) yanlış: Tersi doğru: Biz başkalarının konuştuğundan daha hızlı düşünüyoruz („denken wir deutlich schneller, als andere sprechen“) ve boş kalan kapasite kendi düşüncelerimizle doluyor."
+        },
+        {
+          "number": 21,
+          "type": "abc",
+          "prompt": "Welche Meinung vertritt die Autorin am Schluss?",
+          "options": {
+            "a": "Echtes Interesse am Gegenüber zählt mehr als erlernte Gesprächstechniken.",
+            "b": "Ein Kommunikationsseminar wäre für die meisten Menschen sinnvoll.",
+            "c": "Gesprächstechniken schaden eher, als dass sie nützen."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Entscheidender scheint mir die Bereitschaft, sich wirklich für das zu interessieren"
+            }
+          ],
+          "explanation": "Yazar sonda teknikleri tamamen reddetmiyor ama daha önemli bir şeyi öne çıkarıyor: Karşıdakinin söylediğiyle gerçekten ilgilenme isteği ona göre daha belirleyici („Entscheidender scheint mir die Bereitschaft, sich wirklich für das zu interessieren“). b) yanlış: Herkesin iletişim semineri alması gerektiği fikrini abartılı buluyor („Ich halte das für übertrieben“). c) yanlış: Tekniklerin yardımcı olabileceğini kabul ediyor („Techniken mögen hilfreich sein“); sorun yalnızca onları mekanik biçimde uygulamak."
+        }
+      ]
+    }
+  ]
+}

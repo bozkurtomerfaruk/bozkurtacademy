@@ -1,0 +1,141 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 5,
+  "set": "set-3",
+  "title": "Auf dem Campingplatz",
+  "minutes": 10,
+  "context": "Sie machen Urlaub auf dem Campingplatz Erlensee und lesen die Platzordnung.",
+  "instructions": "Lesen Sie die Aufgaben 27 bis 30 und den Text dazu. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "campingplatz",
+          "title": "Campingplatz Erlensee – Platzordnung",
+          "paragraphs": [
+            "Liebe Gäste, herzlich willkommen auf dem Campingplatz Erlensee! Damit sich alle bei uns wohlfühlen, beachten Sie bitte die folgenden Hinweise.",
+            {
+              "heading": "Ankunft"
+            },
+            "Unsere Rezeption ist täglich von 8 bis 20 Uhr geöffnet. Bitte melden Sie sich dort an, bevor Sie Ihr Zelt aufbauen oder Ihren Wohnwagen abstellen. Wenn Sie später ankommen, können Sie die Nacht auf dem Parkplatz vor der Schranke verbringen. Die Anmeldung erledigen Sie dann am nächsten Morgen.",
+            {
+              "heading": "Ruhezeiten"
+            },
+            "Von 13 bis 15 Uhr und von 22 bis 7 Uhr gilt Ruhezeit. In dieser Zeit dürfen keine Autos auf dem Platz fahren. Bitte hören Sie Musik immer nur leise.",
+            {
+              "heading": "Grillen und Feuer"
+            },
+            "Mit Holzkohle- und Gasgrills dürfen Sie an Ihrem Stellplatz grillen. Offene Feuer sind an den Stellplätzen dagegen verboten, weil der Wald sehr nah ist. Ein Lagerfeuer dürfen Sie nur an der Feuerstelle am Seeufer machen. Diese Feuerstelle müssen Sie vorher an der Rezeption reservieren.",
+            {
+              "heading": "Hunde"
+            },
+            "Hunde sind bei uns willkommen, müssen aber auf dem ganzen Platz an der Leine bleiben. Pro Hund und Nacht bezahlen Sie 3 Euro. Zum Baden dürfen Hunde an den Hundestrand am Nordufer des Sees. Am Badestrand sind sie nicht erlaubt.",
+            {
+              "heading": "Duschen und Toiletten"
+            },
+            "Duschen und Toiletten gibt es in zwei Sanitärgebäuden. Für warmes Wasser brauchen Sie eine Duschmarke. Eine Marke kostet 1 Euro und reicht für vier Minuten.",
+            {
+              "heading": "Abreise"
+            },
+            "Am Abreisetag verlassen Sie Ihren Stellplatz bitte bis 11 Uhr. Wenn Sie länger bleiben möchten, sagen Sie bitte schon am Tag vorher an der Rezeption Bescheid. Bis 15 Uhr kostet das 5 Euro extra.",
+            "Bei Fragen hilft Ihnen unser Platzwart Herr Lindemann gern weiter. Ihr Team vom Campingplatz Erlensee"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 27,
+          "type": "abc",
+          "prompt": "Wer erst um 22 Uhr am Campingplatz ankommt, …",
+          "options": {
+            "a": "kann bis zum nächsten Morgen auf dem Parkplatz bleiben.",
+            "b": "muss sich sofort an der Rezeption anmelden.",
+            "c": "darf sein Zelt gleich auf dem Platz aufbauen."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "campingplatz",
+              "quote": "Wenn Sie später ankommen, können Sie die Nacht auf dem Parkplatz vor der Schranke verbringen."
+            },
+            {
+              "text": "campingplatz",
+              "quote": "Unsere Rezeption ist täglich von 8 bis 20 Uhr geöffnet."
+            }
+          ],
+          "explanation": "Resepsiyon 20'ye kadar açık. Daha geç gelen kişi „können Sie die Nacht auf dem Parkplatz vor der Schranke verbringen“ – geceyi bariyerin önündeki otoparkta geçirebilir; kayıt ertesi sabah yapılır. b) yanlış: Saat 22'de resepsiyon kapalı; metne göre kayıt „am nächsten Morgen“, yani ertesi sabah yapılır. c) yanlış: Çadır ancak resepsiyonda kayıt olduktan sonra kurulur („bevor Sie Ihr Zelt aufbauen“)."
+        },
+        {
+          "number": 28,
+          "type": "abc",
+          "prompt": "Wer ein Lagerfeuer machen möchte, …",
+          "options": {
+            "a": "darf es an seinem Stellplatz machen.",
+            "b": "findet dafür auf dem Campingplatz keinen Platz.",
+            "c": "muss die Feuerstelle vorher reservieren."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "campingplatz",
+              "quote": "Diese Feuerstelle müssen Sie vorher an der Rezeption reservieren."
+            },
+            {
+              "text": "campingplatz",
+              "quote": "Offene Feuer sind an den Stellplätzen dagegen verboten"
+            }
+          ],
+          "explanation": "Kamp ateşi sadece göl kıyısındaki ateş yerinde yakılabilir ve bu yer önceden resepsiyonda rezerve edilmeli: „müssen Sie vorher an der Rezeption reservieren“ („müssen“ – seçenekteki „muss“ ile aynı). a) yanlış: Kamp yerlerinde (Stellplätze) açık ateş yasak; orada sadece mangal yapılabilir. b) yanlış: Göl kıyısında bir ateş yeri (Feuerstelle am Seeufer) var."
+        },
+        {
+          "number": 29,
+          "type": "abc",
+          "prompt": "Hunde …",
+          "options": {
+            "a": "dürfen am Nordufer des Sees baden.",
+            "b": "können auf dem Platz frei herumlaufen.",
+            "c": "kosten keine zusätzliche Gebühr."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "campingplatz",
+              "quote": "Zum Baden dürfen Hunde an den Hundestrand am Nordufer des Sees."
+            },
+            {
+              "text": "campingplatz",
+              "quote": "Pro Hund und Nacht bezahlen Sie 3 Euro."
+            }
+          ],
+          "explanation": "Köpekler yüzmek için gölün kuzey kıyısındaki köpek plajına gidebilir: „Zum Baden dürfen Hunde an den Hundestrand am Nordufer des Sees.“ b) yanlış: Köpekler bütün alanda tasmalı kalmalı („an der Leine bleiben“). c) yanlış: Köpek başına gecelik 3 euro ödeniyor."
+        },
+        {
+          "number": 30,
+          "type": "abc",
+          "prompt": "Wer am Abreisetag bis zum Nachmittag bleiben möchte, …",
+          "options": {
+            "a": "muss dafür nichts extra bezahlen.",
+            "b": "soll das am Tag vorher an der Rezeption sagen.",
+            "c": "muss den Stellplatz trotzdem um 11 Uhr verlassen."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "campingplatz",
+              "quote": "Wenn Sie länger bleiben möchten, sagen Sie bitte schon am Tag vorher an der Rezeption Bescheid."
+            },
+            {
+              "text": "campingplatz",
+              "quote": "Bis 15 Uhr kostet das 5 Euro extra."
+            }
+          ],
+          "explanation": "Daha uzun kalmak isteyen kişi bunu bir gün önceden resepsiyona söylemeli: „sagen Sie bitte schon am Tag vorher an der Rezeption Bescheid“ (ricası „bitte“ – seçenekteki „soll“ ile uyumlu). a) yanlış: Saat 15'e kadar kalmak 5 euro ek ücret. c) yanlış: Saat 11 normal çıkış saati; haber veren kişi 5 euro ödeyerek 15'e kadar kalabilir."
+        }
+      ]
+    }
+  ]
+}

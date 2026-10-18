@@ -1,0 +1,137 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 5,
+  "set": "set-5",
+  "title": "Termin im Bürgeramt",
+  "minutes": 10,
+  "context": "Sie brauchen einen neuen Personalausweis und lesen die Informationen des Bürgeramts Grünwiesen.",
+  "instructions": "Lesen Sie die Aufgaben 27 bis 30 und den Text dazu. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "buergeramt",
+          "title": "Bürgeramt Grünwiesen – Informationen zu Terminen",
+          "paragraphs": [
+            "Liebe Bürgerinnen und Bürger, damit Sie bei uns nicht lange warten müssen, arbeiten wir mit Terminen. Bitte lesen Sie die folgenden Hinweise.",
+            {
+              "heading": "Termin buchen"
+            },
+            "Einen Termin können Sie online über das Portal der Stadt oder telefonisch buchen. Telefonisch erreichen Sie uns montags bis freitags von 8 bis 12 Uhr. Für jede Person brauchen Sie einen eigenen Termin, auch wenn Sie als Familie kommen. Ohne Termin können wir Sie nur in dringenden Fällen bedienen, zum Beispiel wenn Ihr Reisepass gestohlen wurde.",
+            {
+              "heading": "Unterlagen"
+            },
+            "Bringen Sie bitte zu jedem Termin Ihren Personalausweis oder Reisepass mit. Für einen neuen Ausweis brauchen Sie außerdem ein aktuelles Passfoto. Im Bürgeramt können leider keine Fotos gemacht werden. Welche Unterlagen Sie sonst noch brauchen, steht in der Bestätigungs-E-Mail zu Ihrem Termin.",
+            {
+              "heading": "Wartenummer"
+            },
+            "Ziehen Sie bei Ihrer Ankunft bitte am Automaten im Eingangsbereich eine Wartenummer. Sobald ein Schalter frei ist, erscheint Ihre Nummer auf dem Bildschirm im Wartebereich. Bitte kommen Sie nicht früher als zehn Minuten vor Ihrem Termin.",
+            {
+              "heading": "Absage"
+            },
+            "Wenn Sie zu einem Termin nicht kommen können, sagen Sie ihn bitte mindestens 24 Stunden vorher ab. Das geht nur über den Link in Ihrer Bestätigungs-E-Mail, nicht per Telefon. Die Absage kostet nichts, und Ihr Termin kann an andere Bürger vergeben werden.",
+            {
+              "heading": "Gebühren und Bezahlung"
+            },
+            "Ein Personalausweis kostet 37 Euro, ein Reisepass 70 Euro. Die Anmeldung einer neuen Wohnung ist kostenlos. Bei uns können Sie nur mit Karte bezahlen, denn Bargeld nehmen wir nicht mehr an. Einen Geldautomaten gibt es im Gebäude nicht.",
+            "Bei Fragen hilft Ihnen Frau Okafor am Infoschalter im Erdgeschoss gern weiter. Ihr Bürgeramt Grünwiesen"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 27,
+          "type": "abc",
+          "prompt": "Eine Familie mit drei Personen, die neue Ausweise braucht, …",
+          "options": {
+            "a": "kann alles bei einem gemeinsamen Termin erledigen.",
+            "b": "braucht für jede Person einen eigenen Termin.",
+            "c": "kann einfach ohne Termin ins Bürgeramt kommen."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "buergeramt",
+              "quote": "Für jede Person brauchen Sie einen eigenen Termin, auch wenn Sie als Familie kommen."
+            },
+            {
+              "text": "buergeramt",
+              "quote": "Ohne Termin können wir Sie nur in dringenden Fällen bedienen"
+            }
+          ],
+          "explanation": "Aile olarak gelseniz bile her kişi için ayrı bir randevu gerekiyor: „Für jede Person brauchen Sie einen eigenen Termin, auch wenn Sie als Familie kommen.“ a) yanlış: Tüm aile için tek bir ortak randevu yeterli değil. c) yanlış: Randevusuz sadece acil durumlarda (ör. pasaport çalındıysa) hizmet veriliyor; yeni kimlik almak metinde acil durum örneği olarak geçmiyor."
+        },
+        {
+          "number": 28,
+          "type": "abc",
+          "prompt": "Für einen neuen Ausweis …",
+          "options": {
+            "a": "braucht man ein aktuelles Foto.",
+            "b": "kann man im Bürgeramt ein Foto machen lassen.",
+            "c": "reicht der alte Ausweis ohne weitere Unterlagen."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "buergeramt",
+              "quote": "Für einen neuen Ausweis brauchen Sie außerdem ein aktuelles Passfoto."
+            },
+            {
+              "text": "buergeramt",
+              "quote": "Im Bürgeramt können leider keine Fotos gemacht werden."
+            }
+          ],
+          "explanation": "Yeni kimlik için kimlik kartı veya pasaportun yanında güncel bir vesikalık fotoğraf da gerekiyor: „brauchen Sie außerdem ein aktuelles Passfoto“. b) yanlış: Bürgeramt'ta fotoğraf çekilmiyor. c) yanlış: „außerdem“ (ayrıca) kelimesi eski kimliğin yetmediğini, fotoğrafın da gerektiğini gösteriyor."
+        },
+        {
+          "number": 29,
+          "type": "abc",
+          "prompt": "Wer zu seinem Termin nicht kommen kann, …",
+          "options": {
+            "a": "muss für die Absage eine Gebühr bezahlen.",
+            "b": "muss dafür persönlich ins Bürgeramt kommen.",
+            "c": "soll den Termin spätestens einen Tag vorher absagen."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "buergeramt",
+              "quote": "sagen Sie ihn bitte mindestens 24 Stunden vorher ab"
+            },
+            {
+              "text": "buergeramt",
+              "quote": "Das geht nur über den Link in Ihrer Bestätigungs-E-Mail, nicht per Telefon."
+            }
+          ],
+          "explanation": "Randevuya gelemeyecek kişi randevuyu en az 24 saat, yani bir gün önceden iptal etmeli: „sagen Sie ihn bitte mindestens 24 Stunden vorher ab“ („bitte“ ile yapılan rica – seçenekteki „soll“ ile uyumlu). a) yanlış: İptal ücretsiz („Die Absage kostet nichts“). b) yanlış: Bürgeramt'a gitmek gerekmiyor; iptal sadece onay e-postasındaki bağlantıyla yapılabiliyor."
+        },
+        {
+          "number": 30,
+          "type": "abc",
+          "prompt": "Die Gebühren im Bürgeramt …",
+          "options": {
+            "a": "kann man auch bar bezahlen.",
+            "b": "kann man mit Geld vom Automaten im Gebäude bezahlen.",
+            "c": "kann man nur mit Karte bezahlen."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "buergeramt",
+              "quote": "Bei uns können Sie nur mit Karte bezahlen, denn Bargeld nehmen wir nicht mehr an."
+            },
+            {
+              "text": "buergeramt",
+              "quote": "Einen Geldautomaten gibt es im Gebäude nicht."
+            }
+          ],
+          "explanation": "Bürgeramt'ta ödeme sadece kartla yapılabiliyor: „Bei uns können Sie nur mit Karte bezahlen“. a) yanlış: Nakit para artık kabul edilmiyor („Bargeld nehmen wir nicht mehr an“). b) yanlış: Binada para çekme otomatı (Geldautomat) yok; ayrıca nakit kabul edilmiyor."
+        }
+      ]
+    }
+  ]
+}

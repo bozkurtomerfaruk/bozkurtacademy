@@ -1,0 +1,129 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Schwimmen mit 40",
+  "minutes": 10,
+  "instructions": "Lesen Sie den Text und die Aufgaben 1 bis 6. Wählen Sie: Sind die Aussagen richtig oder falsch?",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "blog",
+          "title": "Endlich keine Angst mehr vor dem Wasser",
+          "byline": "Yusufs Blog",
+          "paragraphs": [
+            "Heute erzähle ich euch etwas, worüber ich lange nicht sprechen wollte: Ich bin 41 Jahre alt und konnte bis vor Kurzem nicht schwimmen. Seit Februar besuche ich deshalb einen Schwimmkurs für Erwachsene im Stadtbad Wellenhafen.",
+            "Warum ich es als Kind nicht gelernt habe? In meinem Heimatdorf gab es kein Schwimmbad, und der nächste See war weit weg. Meine Eltern hatten außerdem wenig Zeit, mit uns Kindern irgendwohin zu fahren. Später war es mir dann peinlich. Im Urlaub habe ich immer gesagt, dass ich keine Lust auf Wasser habe. In Wirklichkeit hatte ich einfach Angst.",
+            "Dass ich jetzt doch angefangen habe, liegt an meiner Tochter. Sie ist acht und schwimmt wie ein Fisch. Letzten Sommer wollte sie, dass ich mit ihr ins tiefe Becken springe, und ich musste Nein sagen. Ihr enttäuschtes Gesicht habe ich nicht vergessen. Da habe ich beschlossen: Jetzt lerne ich es endlich.",
+            "In unserem Kurs sind wir acht Erwachsene zwischen 30 und 65 Jahren. Unsere Trainerin heißt Dörte. Sie ist sehr geduldig und lacht nie, wenn jemand Wasser schluckt oder sich etwas nicht traut. In den ersten Stunden haben wir nur geübt, unter Wasser auszuatmen und auf dem Wasser zu liegen. Das klingt einfach, aber für mich war es richtig schwer.",
+            "Der Kurs findet einmal pro Woche statt, immer donnerstags um 19 Uhr. Das reicht mir aber nicht: Jeden Sonntagmorgen gehe ich zusätzlich allein ins Bad und übe im flachen Becken. Und es hilft! Letzte Woche bin ich zum ersten Mal ohne Hilfe 25 Meter geschwommen, also eine ganze Bahn. Ich war so stolz!",
+            "Mein nächstes Ziel: Im August möchte ich mit meiner Tochter im See schwimmen. Ins tiefe Becken springe ich allerdings noch nicht, denn davor habe ich immer noch großen Respekt. Dörte meint, das kommt später von allein. Bis zum nächsten Mal, euer Yusuf"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Yusuf lernt zurzeit in einem Kurs schwimmen.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "blog",
+              "quote": "Seit Februar besuche ich deshalb einen Schwimmkurs für Erwachsene im Stadtbad Wellenhafen."
+            }
+          ],
+          "explanation": "Yusuf şubattan beri yetişkinler için bir yüzme kursuna gidiyor („Seit Februar besuche ich … einen Schwimmkurs“). İfade doğru."
+        },
+        {
+          "number": 1,
+          "type": "richtig-falsch",
+          "prompt": "Yusuf hat im Urlaub immer offen gesagt, dass er Angst vor dem Wasser hat.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "blog",
+              "quote": "Im Urlaub habe ich immer gesagt, dass ich keine Lust auf Wasser habe."
+            },
+            {
+              "text": "blog",
+              "quote": "In Wirklichkeit hatte ich einfach Angst."
+            }
+          ],
+          "explanation": "Tuzak: Yusuf gerçekten korkuyordu, ama tatilde bunu söylemedi. Sonra bu durum ona utanç verici geldi („peinlich“). Tatilde hep „keine Lust auf Wasser“ (suya hevesim yok) dedi; „In Wirklichkeit“ (aslında) korkuyordu. Korkusunu açıkça söylemedi; ifade yanlış."
+        },
+        {
+          "number": 2,
+          "type": "richtig-falsch",
+          "prompt": "Yusuf hat sich wegen seiner Tochter für den Kurs entschieden.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "blog",
+              "quote": "Dass ich jetzt doch angefangen habe, liegt an meiner Tochter."
+            }
+          ],
+          "explanation": "Yusuf „liegt an meiner Tochter“ (kızım yüzünden) yazıyor: Kızı onunla derin havuza atlamak istedi, Yusuf hayır demek zorunda kaldı ve o zaman öğrenmeye karar verdi. İfade doğru."
+        },
+        {
+          "number": 3,
+          "type": "richtig-falsch",
+          "prompt": "Die Trainerin lacht, wenn jemand im Kurs Wasser schluckt.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "blog",
+              "quote": "Sie ist sehr geduldig und lacht nie, wenn jemand Wasser schluckt oder sich etwas nicht traut."
+            }
+          ],
+          "explanation": "Antrenör Dörte çok sabırlı ve biri su yuttuğunda ya da bir şeye cesaret edemediğinde „lacht nie“ (asla gülmüyor). İfade bunun tersini söylüyor; yanlış."
+        },
+        {
+          "number": 4,
+          "type": "richtig-falsch",
+          "prompt": "Yusuf geht mehr als einmal pro Woche schwimmen.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "blog",
+              "quote": "Jeden Sonntagmorgen gehe ich zusätzlich allein ins Bad und übe im flachen Becken."
+            }
+          ],
+          "explanation": "Kurs haftada bir kez, perşembe günleri. Ama Yusuf ayrıca („zusätzlich“) her pazar sabahı tek başına havuza gidip çalışıyor. Yani haftada iki kez yüzüyor; ifade doğru."
+        },
+        {
+          "number": 5,
+          "type": "richtig-falsch",
+          "prompt": "Yusuf kann inzwischen eine Bahn ohne Hilfe schwimmen.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "blog",
+              "quote": "Letzte Woche bin ich zum ersten Mal ohne Hilfe 25 Meter geschwommen, also eine ganze Bahn."
+            }
+          ],
+          "explanation": "Geçen hafta Yusuf ilk kez yardımsız 25 metre, yani „eine ganze Bahn“ (bütün bir kulvar) yüzdü. İfade doğru."
+        },
+        {
+          "number": 6,
+          "type": "richtig-falsch",
+          "prompt": "Yusuf ist schon mit seiner Tochter ins tiefe Becken gesprungen.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "blog",
+              "quote": "Ins tiefe Becken springe ich allerdings noch nicht"
+            }
+          ],
+          "explanation": "Yusuf „Ins tiefe Becken springe ich allerdings noch nicht“ yazıyor: Derin havuza henüz atlamıyor, çünkü hâlâ ondan çok çekiniyor. İfade yanlış."
+        }
+      ]
+    }
+  ]
+}

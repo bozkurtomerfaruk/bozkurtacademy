@@ -1,0 +1,129 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-3",
+  "title": "Radtour am Fluss",
+  "minutes": 10,
+  "instructions": "Lesen Sie den Text und die Aufgaben 1 bis 6. Wählen Sie: Sind die Aussagen richtig oder falsch?",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "blog",
+          "title": "Zwei Wochen an der Silberach",
+          "byline": "Janas Reiseblog",
+          "paragraphs": [
+            "Hallo ihr Lieben! Endlich habe ich wieder Internet und kann euch von unserer Radtour erzählen. Seit zwölf Tagen fahren mein Bruder Rasmus und ich mit dem Fahrrad an der Silberach entlang. Insgesamt wollen wir zwei Wochen unterwegs sein. Die Idee hatte übrigens Rasmus, nicht ich – sonst fahre ich mit dem Rad höchstens zum Bäcker.",
+            "Gestartet sind wir in Steinbrück, wo die Silberach beginnt. Der Radweg führt immer am Fluss entlang und ist fast überall flach. Deshalb schaffen wir jeden Tag ungefähr 50 Kilometer. Nur am zweiten Tag gab es einen langen Berg, und ich musste mein Rad ein Stück schieben.",
+            "Wir übernachten meistens auf Campingplätzen, weil das günstig ist. Unser Zelt ist klein, aber gemütlich. Zweimal haben wir uns aber ein Zimmer in einer Pension genommen, weil es die ganze Nacht geregnet hat. Sonst war das Wetter wunderbar: viel Sonne und nicht zu heiß.",
+            "Am sechsten Tag hatten wir dann unser erstes richtiges Problem: Kurz vor Kiesbach war plötzlich mein Hinterreifen kaputt. Wir hatten zwar Werkzeug dabei, aber keinen neuen Schlauch. Zum Glück hat uns ein älterer Mann geholfen, der gerade in seinem Garten arbeitete. Er hat uns einen Schlauch geschenkt und wollte kein Geld dafür haben. Seitdem haben wir immer zwei Ersatzschläuche in der Tasche.",
+            "Übermorgen fahren wir die letzte Etappe bis ans Meer, wo die Silberach endet. Dort holen uns unsere Eltern mit dem Auto ab, denn mit der Bahn ist die Rückfahrt mit zwei Fahrrädern zu kompliziert. Ich bin ein bisschen traurig, dass die Tour bald vorbei ist, aber meine Beine freuen sich auf eine Pause.",
+            "Und wie geht es weiter? Rasmus plant schon die nächste Tour für den kommenden Sommer: Dann möchte er an der Küste entlangfahren. Er hat mich gefragt, ob ich wieder mitkomme, und ich habe sofort Ja gesagt – wer hätte das gedacht! Bis bald, eure Jana"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Jana macht die Radtour zusammen mit ihrem Bruder.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "blog",
+              "quote": "Seit zwölf Tagen fahren mein Bruder Rasmus und ich mit dem Fahrrad an der Silberach entlang."
+            }
+          ],
+          "explanation": "Jana „mein Bruder Rasmus und ich“ yazıyor: Bisiklet turunu kardeşi Rasmus ile birlikte yapıyor. İfade doğru."
+        },
+        {
+          "number": 1,
+          "type": "richtig-falsch",
+          "prompt": "Die Radtour war Janas Idee.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "blog",
+              "quote": "Die Idee hatte übrigens Rasmus, nicht ich"
+            }
+          ],
+          "explanation": "Metin açık: „Die Idee hatte übrigens Rasmus, nicht ich“ – fikir Rasmus'tan çıktı, Jana'dan değil. Jana normalde bisikletle en fazla fırına gidiyor. İfade yanlış."
+        },
+        {
+          "number": 2,
+          "type": "richtig-falsch",
+          "prompt": "Auf dem Radweg müssen Jana und Rasmus oft bergauf fahren.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "blog",
+              "quote": "ist fast überall flach"
+            },
+            {
+              "text": "blog",
+              "quote": "Nur am zweiten Tag gab es einen langen Berg"
+            }
+          ],
+          "explanation": "Bisiklet yolu „fast überall flach“ (neredeyse her yerde düz). Sadece ikinci gün uzun bir yokuş vardı („Nur am zweiten Tag“). Yani sık sık yokuş yukarı gitmiyorlar; ifade yanlış."
+        },
+        {
+          "number": 3,
+          "type": "richtig-falsch",
+          "prompt": "Als es die ganze Nacht geregnet hat, haben die beiden nicht im Zelt geschlafen.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "blog",
+              "quote": "Zweimal haben wir uns aber ein Zimmer in einer Pension genommen, weil es die ganze Nacht geregnet hat."
+            }
+          ],
+          "explanation": "Genelde kamp alanında çadırda kalıyorlar, ama bütün gece yağmur yağdığı iki gece pansiyonda bir oda tuttular („ein Zimmer in einer Pension“). Yani yağmurda çadırda uyumadılar; ifade doğru."
+        },
+        {
+          "number": 4,
+          "type": "richtig-falsch",
+          "prompt": "Jana musste für den neuen Schlauch nichts bezahlen.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "blog",
+              "quote": "Er hat uns einen Schlauch geschenkt und wollte kein Geld dafür haben."
+            }
+          ],
+          "explanation": "Bahçede çalışan yaşlı adam onlara bir iç lastik hediye etti („geschenkt“) ve karşılığında para istemedi („wollte kein Geld dafür haben“). Jana hiçbir şey ödemedi; ifade doğru."
+        },
+        {
+          "number": 5,
+          "type": "richtig-falsch",
+          "prompt": "Jana und Rasmus fahren am Ende mit dem Zug nach Hause.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "blog",
+              "quote": "Dort holen uns unsere Eltern mit dem Auto ab, denn mit der Bahn ist die Rückfahrt mit zwei Fahrrädern zu kompliziert."
+            }
+          ],
+          "explanation": "Tuzak: Tren („Bahn“) metinde geçiyor, ama iki bisikletle trenle dönüş çok karmaşık. Bu yüzden anne babaları onları arabayla alacak („mit dem Auto ab“). İfade yanlış."
+        },
+        {
+          "number": 6,
+          "type": "richtig-falsch",
+          "prompt": "Jana möchte noch einmal eine Radtour mit Rasmus machen.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "blog",
+              "quote": "Er hat mich gefragt, ob ich wieder mitkomme, und ich habe sofort Ja gesagt"
+            }
+          ],
+          "explanation": "Rasmus gelecek yaz için yeni bir tur planlıyor ve Jana'ya yine gelip gelmeyeceğini sordu. Jana „ich habe sofort Ja gesagt“ (hemen evet dedim) yazıyor. İfade doğru."
+        }
+      ]
+    }
+  ]
+}

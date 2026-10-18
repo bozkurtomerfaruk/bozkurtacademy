@@ -1,0 +1,191 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-4",
+  "title": "Homeoffice für alle?",
+  "minutes": 15,
+  "context": "In einer Zeitschrift lesen Sie Kommentare zu einem Artikel über die Frage, ob alle Angestellten ein Recht auf Arbeit von zu Hause bekommen sollen.",
+  "instructions": "Lesen Sie die Texte 20 bis 26. Wählen Sie: Ist die Person für ein Recht auf Homeoffice?",
+  "groups": [
+    {
+      "layout": "comments",
+      "question": "Ist die Person für ein Recht auf Homeoffice?",
+      "texts": [
+        {
+          "id": "igor",
+          "label": "0",
+          "byline": "Igor, 52, Lauterfeld",
+          "paragraphs": [
+            "Ich leite eine kleine Bäckerei mit acht Mitarbeitern. Keiner von ihnen kann seine Arbeit zu Hause machen. Ein Recht auf Homeoffice für alle wäre deshalb ungerecht: Die einen bleiben bequem zu Hause, die anderen stehen um vier Uhr morgens in der Backstube. Deshalb bin ich gegen so ein Gesetz."
+          ]
+        },
+        {
+          "id": "jule",
+          "label": "20",
+          "byline": "Jule, 29, Moosach",
+          "paragraphs": [
+            "Ich arbeite selbst zwei Tage pro Woche zu Hause und finde das sehr angenehm. Trotzdem brauchen wir dafür kein Gesetz. In meiner Firma haben wir das mit unserer Chefin einfach besprochen, und es funktioniert gut. Jeder Betrieb ist anders, deshalb sollten die Firmen das mit den Angestellten selbst regeln. Ein Recht für alle passt nicht zu jedem Arbeitsplatz."
+          ]
+        },
+        {
+          "id": "kerstin",
+          "label": "21",
+          "byline": "Kerstin, 47, Nordheide",
+          "paragraphs": [
+            "Für Eltern mit kleinen Kindern ist Homeoffice bestimmt eine große Hilfe, das sehe ich ein. Ich selbst habe aber ein Jahr lang nur zu Hause gearbeitet und mich oft sehr allein gefühlt. Wenn alle ein Recht auf Homeoffice hätten, wären die Büros bald leer, und die Teams würden sich kaum noch sehen. Deshalb bin ich gegen ein solches Recht."
+          ]
+        },
+        {
+          "id": "lukas",
+          "label": "22",
+          "byline": "Lukas, 34, Pappelhain",
+          "paragraphs": [
+            "Natürlich kann nicht jeder zu Hause arbeiten, ein Busfahrer oder eine Krankenpflegerin zum Beispiel. Aber wer den ganzen Tag am Computer sitzt, sollte selbst entscheiden dürfen, wo er das tut. Ich fahre jeden Tag zwei Stunden mit dem Zug zur Arbeit und zurück. Diese Zeit könnte ich viel besser nutzen. Ein Recht auf Homeoffice wäre für Leute wie mich eine große Erleichterung."
+          ]
+        },
+        {
+          "id": "melek",
+          "label": "23",
+          "byline": "Melek, 38, Quellingen",
+          "paragraphs": [
+            "Ich bin dafür, aber nur, wenn die Firmen dann auch einen guten Arbeitsplatz zu Hause bezahlen: einen richtigen Schreibtisch, einen bequemen Stuhl und schnelles Internet. Wer am Küchentisch mit dem Laptop arbeitet, bekommt nach ein paar Wochen Rückenschmerzen. Wenn das geregelt ist, sollte jeder Angestellte das Recht haben, ein paar Tage pro Woche zu Hause zu arbeiten."
+          ]
+        },
+        {
+          "id": "norbert",
+          "label": "24",
+          "byline": "Norbert, 61, Rehwinkel",
+          "paragraphs": [
+            "Meine Tochter arbeitet seit zwei Jahren nur noch von zu Hause und ist begeistert. Ich sehe aber, dass sie abends und am Wochenende immer noch E-Mails beantwortet. Wenn das Büro in der Wohnung ist, hört die Arbeit nie richtig auf. Ein Recht auf Homeoffice würde dieses Problem nur größer machen. Arbeit und Freizeit sollten klar getrennt bleiben."
+          ]
+        },
+        {
+          "id": "olga",
+          "label": "25",
+          "byline": "Olga, 26, Schilfbach",
+          "paragraphs": [
+            "Viele Chefs behaupten, dass die Leute zu Hause weniger arbeiten. Bei mir ist es genau umgekehrt: Ohne Telefonklingeln und Gespräche im Großraumbüro schaffe ich viel mehr. Leider erlaubt mein Chef kein Homeoffice, obwohl ich nur am Computer arbeite. Deshalb wäre ein Gesetz gut, damit nicht mehr nur der Chef darüber entscheidet."
+          ]
+        },
+        {
+          "id": "pascal",
+          "label": "26",
+          "byline": "Pascal, 43, Tannau",
+          "paragraphs": [
+            "In unserer Firma arbeiten viele junge Leute, die gerade ihre Ausbildung beendet haben. Diese jungen Kollegen lernen am meisten, wenn sie neben erfahrenen Kollegen sitzen und schnell eine Frage stellen können. Per Videokonferenz klappt das viel schlechter. Wenn jeder einfach zu Hause bleiben dürfte, würden gerade die Neuen darunter leiden. Darum lehne ich ein Recht auf Homeoffice ab."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "ja-nein",
+          "prompt": "Igor",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "igor",
+              "quote": "Deshalb bin ich gegen so ein Gesetz."
+            }
+          ],
+          "explanation": "Igor sekiz çalışanlı küçük bir fırın işletiyor; çalışanlarından hiçbiri işini evde yapamıyor. Herkese evden çalışma hakkını bu yüzden adaletsiz buluyor ve böyle bir yasaya karşı olduğunu söylüyor: nein."
+        },
+        {
+          "number": 20,
+          "type": "ja-nein",
+          "prompt": "Jule",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "jule",
+              "quote": "Trotzdem brauchen wir dafür kein Gesetz."
+            }
+          ],
+          "explanation": "Tuzak: Jule haftada iki gün evden çalışıyor ve bunu çok rahat buluyor. Ama „Trotzdem“ – yine de – bunun için bir yasaya gerek olmadığını söylüyor. Ona göre her işyeri farklı; firmalar bunu çalışanlarla kendileri düzenlemeli. Herkese tanınan bir hakka karşı: nein."
+        },
+        {
+          "number": 21,
+          "type": "ja-nein",
+          "prompt": "Kerstin",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "kerstin",
+              "quote": "Deshalb bin ich gegen ein solches Recht."
+            }
+          ],
+          "explanation": "Tuzak: Kerstin küçük çocuklu ebeveynler için evden çalışmanın büyük bir yardım olduğunu kabul ediyor. Ama kendisi bir yıl sadece evden çalışmış ve kendini sık sık yalnız hissetmiş. Herkesin bu hakkı olursa büroların boşalacağını ve ekiplerin birbirini neredeyse hiç görmeyeceğini düşünüyor. Böyle bir hakka karşı: nein."
+        },
+        {
+          "number": 22,
+          "type": "ja-nein",
+          "prompt": "Lukas",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "lukas",
+              "quote": "Ein Recht auf Homeoffice wäre für Leute wie mich eine große Erleichterung."
+            }
+          ],
+          "explanation": "Tuzak: Lukas karşı argümanla başlıyor („Natürlich …“): Otobüs şoförü veya hemşire gibi herkes evden çalışamaz. Ama „Aber“ ile bütün gün bilgisayar başında çalışanların nerede çalışacağına kendileri karar verebilmesi gerektiğini söylüyor. Her gün trenle toplam iki saat yol yapıyor; böyle bir hak onun gibi insanlar için büyük bir kolaylık olur. Yanında: ja."
+        },
+        {
+          "number": 23,
+          "type": "ja-nein",
+          "prompt": "Melek",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "melek",
+              "quote": "Wenn das geregelt ist, sollte jeder Angestellte das Recht haben, ein paar Tage pro Woche zu Hause zu arbeiten."
+            }
+          ],
+          "explanation": "Melek „Ich bin dafür“ diyor; tek şartı firmaların evde iyi bir çalışma yerini (gerçek bir masa, rahat bir sandalye, hızlı internet) ödemesi. Bu bir şart, karşı olduğu anlamına gelmiyor: Bu düzenlenirse her çalışanın haftada birkaç gün evden çalışma hakkı olmalı. Yanında: ja."
+        },
+        {
+          "number": 24,
+          "type": "ja-nein",
+          "prompt": "Norbert",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "norbert",
+              "quote": "Ein Recht auf Homeoffice würde dieses Problem nur größer machen."
+            }
+          ],
+          "explanation": "Tuzak: Evden çalışmaya hayran olan Norbert'in kızı. Norbert ise kızının akşamları ve hafta sonu hâlâ e-posta cevapladığını görüyor; büro evin içindeyse iş hiç bitmiyor. Evden çalışma hakkının bu sorunu sadece büyüteceğini söylüyor. Karşı: nein."
+        },
+        {
+          "number": 25,
+          "type": "ja-nein",
+          "prompt": "Olga",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "olga",
+              "quote": "Deshalb wäre ein Gesetz gut, damit nicht mehr nur der Chef darüber entscheidet."
+            }
+          ],
+          "explanation": "Tuzak: Evde daha az çalışıldığını söyleyenler birçok patron; Olga'da durum tam tersi, evde çok daha fazla iş çıkarıyor. Olga sadece bilgisayarda çalışmasına rağmen patronu evden çalışmaya izin vermiyor. Bu yüzden kararı artık sadece patronun vermemesi için bir yasanın iyi olacağını söylüyor. Yanında: ja."
+        },
+        {
+          "number": 26,
+          "type": "ja-nein",
+          "prompt": "Pascal",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "pascal",
+              "quote": "Darum lehne ich ein Recht auf Homeoffice ab."
+            }
+          ],
+          "explanation": "Pascal'ın firmasında eğitimini yeni bitirmiş birçok genç çalışıyor. Onlar en çok deneyimli meslektaşlarının yanında oturup hızlıca soru sorabildiklerinde öğreniyor; video konferansla bu çok daha kötü işliyor. Herkes evde kalabilirse en çok yeni çalışanların zarar göreceğini düşünüyor. „lehne … ab“ – reddediyorum: nein."
+        }
+      ]
+    }
+  ]
+}

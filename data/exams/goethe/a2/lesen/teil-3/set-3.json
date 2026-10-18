@@ -35,7 +35,7 @@
           "prompt": "Mehmet …",
           "options": {
             "a": "wird am 13. Juni 40 Jahre alt.",
-            "b": "feiert nicht zu Hause, weil seine Wohnung zu klein ist.",
+            "b": "hat zu Hause nicht genug Platz für das Fest.",
             "c": "trifft seine Gäste um 13 Uhr im Park."
           },
           "answer": "b",
@@ -45,16 +45,16 @@
               "quote": "Ich möchte nicht zu Hause feiern, weil meine Wohnung zu klein ist."
             }
           ],
-          "explanation": "Mehmet evde kutlamak istemiyor, çünkü dairesi çok küçük: „Ich möchte nicht zu Hause feiern, weil meine Wohnung zu klein ist.“ a) yanlış: 13 Haziran'da 40 değil, 30 yaşına giriyor: „werde ich 30!“ c) yanlış: 13, ayın tarihi; misafirlerle saat 13'te değil, 15'te buluşuyor: „Wir treffen uns um 15 Uhr“."
+          "explanation": "Mehmet evde kutlamak istemiyor, çünkü dairesi çok küçük: „Ich möchte nicht zu Hause feiern, weil meine Wohnung zu klein ist.“ „zu klein“ = yeterince yer yok (nicht genug Platz). a) yanlış: 13 Haziran'da 40 değil, 30 yaşına giriyor: „werde ich 30!“ c) yanlış: 13, ayın tarihi; misafirlerle saat 13'te değil, 15'te buluşuyor: „Wir treffen uns um 15 Uhr“."
         },
         {
           "number": 12,
           "type": "abc",
           "prompt": "Mehmet fragt Pia, ob sie …",
           "options": {
-            "a": "einen Salat mitbringen kann.",
-            "b": "einen Kuchen backen kann.",
-            "c": "Getränke kaufen kann."
+            "a": "zum Picknick einen Salat mitnehmen kann.",
+            "b": "für das Picknick einen Kuchen backen kann.",
+            "c": "für alle Getränke kaufen kann."
           },
           "answer": "a",
           "evidence": [
@@ -63,7 +63,7 @@
               "quote": "Kannst du vielleicht einen Salat mitbringen?"
             }
           ],
-          "explanation": "Mehmet, Pia'ya salata getirip getiremeyeceğini soruyor: „Kannst du vielleicht einen Salat mitbringen?“ b) yanlış: Pastayı Mehmet'in kız kardeşi yapıyor: „meine Schwester backt einen Kuchen“. c) yanlış: İçecekleri Mehmet kendisi alıyor: „Getränke und Würstchen kaufe ich“."
+          "explanation": "Mehmet, Pia'ya pikniğe bir salata getirip getiremeyeceğini soruyor: „Kannst du vielleicht einen Salat mitbringen?“ „mitbringen“ = (pikniğe gelirken yanında) „mitnehmen“. b) yanlış: Pastayı Mehmet'in kız kardeşi yapıyor: „meine Schwester backt einen Kuchen“. c) yanlış: İçecekleri Mehmet kendisi alıyor: „Getränke und Würstchen kaufe ich“."
         },
         {
           "number": 13,
@@ -72,7 +72,7 @@
           "options": {
             "a": "feiert Mehmet an einem anderen Tag.",
             "b": "feiern alle in Mehmets Wohnung.",
-            "c": "feiern die Gäste in einem Café."
+            "c": "gehen alle in ein Café in der Nähe vom Park."
           },
           "answer": "c",
           "evidence": [
@@ -81,32 +81,36 @@
               "quote": "Wenn es regnet, feiern wir im Café Lotte gegenüber vom Park."
             }
           ],
-          "explanation": "Yağmur yağarsa parkın karşısındaki Café Lotte'de kutluyorlar: „Wenn es regnet, feiern wir im Café Lotte gegenüber vom Park.“ a) yanlış: Yağmurda kutlama başka bir güne kalmıyor; Mehmet kafede masa ayırttı ve cumartesi sabahı herkese nerede kutlayacaklarını yazacak: „Am Samstagmorgen schreibe ich allen eine Nachricht, wo wir feiern.“ b) yanlış: Mehmet'in dairesi çok küçük, bu yüzden evde kutlamak istemiyor; yağmurda da kafeye gidiyorlar."
+          "explanation": "Yağmur yağarsa parkın karşısındaki Café Lotte'de kutluyorlar: „Wenn es regnet, feiern wir im Café Lotte gegenüber vom Park.“ „gegenüber vom Park“ = parkın karşısında, yani parkın yakınında (in der Nähe vom Park). a) yanlış: Yağmurda kutlama başka bir güne kalmıyor; Mehmet kafede masa ayırttı ve cumartesi sabahı herkese nerede kutlayacaklarını yazacak: „Am Samstagmorgen schreibe ich allen eine Nachricht, wo wir feiern.“ b) yanlış: Mehmet'in dairesi çok küçük, bu yüzden evde kutlamak istemiyor; yağmurda da kafeye gidiyorlar."
         },
         {
           "number": 14,
           "type": "abc",
           "prompt": "Zum Park fährt Pia am besten …",
           "options": {
-            "a": "mit dem Auto.",
-            "b": "mit dem Bus Linie 4.",
-            "c": "mit der Straßenbahn."
+            "a": "mit dem Auto bis zum Park.",
+            "b": "mit dem Bus Linie 4 bis zum Park.",
+            "c": "mit der Bahn und dann ein Stück zu Fuß."
           },
           "answer": "c",
           "evidence": [
             {
               "text": "mail",
               "quote": "Nimm lieber die Straßenbahn Linie 4"
+            },
+            {
+              "text": "mail",
+              "quote": "Von dort sind es nur zwei Minuten zu Fuß."
             }
           ],
-          "explanation": "Mehmet, Pia'ya tramvayla gelmesini tavsiye ediyor: „Nimm lieber die Straßenbahn Linie 4“. a) yanlış: Arabayla gelmek zor, çünkü parkın yanında az park yeri var: „weil es am Park nur wenige Parkplätze gibt“. b) yanlış: 4 numaralı hat otobüs değil, tramvay hattı."
+          "explanation": "Mehmet, Pia'ya tramvayla gelmesini tavsiye ediyor; duraktan parka iki dakika yürünüyor: „Nimm lieber die Straßenbahn Linie 4 bis zur Haltestelle „Rosenpark“. Von dort sind es nur zwei Minuten zu Fuß.“ Tramvay (Straßenbahn) bir tür Bahn; iki dakika yürümek = biraz yürümek (ein Stück zu Fuß). a) yanlış: Arabayla gelmek zor, çünkü parkın yanında az park yeri var: „weil es am Park nur wenige Parkplätze gibt“. b) yanlış: 4 numaralı hat otobüs değil, tramvay hattı."
         },
         {
           "number": 15,
           "type": "abc",
           "prompt": "Mehmet möchte, dass Pia …",
           "options": {
-            "a": "ihm bis Mittwoch sagt, ob sie kommt.",
+            "a": "ihm spätestens am Mittwoch antwortet.",
             "b": "ihm ein Geschenk mitbringt.",
             "c": "allen am Samstagmorgen eine Nachricht schreibt."
           },
@@ -117,7 +121,7 @@
               "quote": "Bitte sag mir bis Mittwoch, ob du kommen kannst."
             }
           ],
-          "explanation": "Mehmet, Pia'nın çarşambaya kadar gelip gelemeyeceğini söylemesini istiyor: „Bitte sag mir bis Mittwoch, ob du kommen kannst.“ b) yanlış: Mehmet hediye istemiyor: „Ein Geschenk brauche ich nicht“. c) yanlış: Cumartesi sabahı herkese mesajı Pia değil, Mehmet yazıyor: „Am Samstagmorgen schreibe ich allen eine Nachricht“."
+          "explanation": "Mehmet, Pia'nın gelip gelemeyeceğini çarşambaya kadar söylemesini istiyor: „Bitte sag mir bis Mittwoch, ob du kommen kannst.“ „bis Mittwoch“ = en geç çarşamba (spätestens am Mittwoch); „sag mir, ob …“ = ona cevap vermek (antworten). b) yanlış: Mehmet hediye istemiyor: „Ein Geschenk brauche ich nicht“. c) yanlış: Cumartesi sabahı herkese mesajı Pia değil, Mehmet yazıyor: „Am Samstagmorgen schreibe ich allen eine Nachricht“."
         }
       ]
     }

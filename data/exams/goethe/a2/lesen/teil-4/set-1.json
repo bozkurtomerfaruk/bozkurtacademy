@@ -83,23 +83,23 @@
         {
           "number": 17,
           "type": "zuordnung",
-          "prompt": "Mona isst gern Sushi und möchte lernen, wie man es selbst macht.",
+          "prompt": "Mona isst sehr gern Sushi. Sie möchte einen Kurs besuchen, damit sie es später für ihre Freunde zu Hause zubereiten kann.",
           "answer": "a",
           "evidence": [{ "text": "a", "quote": "Lernen Sie, wie man Sushi und andere Gerichte aus Japan selbst macht!" }],
-          "explanation": "a ilanı bir yemek akşamı: Katılanlar suşiyi kendileri yapmayı öğreniyor. Mona'nın istediği tam bu. Tuzak b: Orada da suşi var, ama orası bir kurs değil, yemeği sadece eve getiriyor."
+          "explanation": "a ilanı bir yemek akşamı: Katılanlar küçük gruplar hâlinde suşiyi kendileri yapmayı öğreniyor. Mona bir kurs arıyor ve sonra suşiyi evde kendisi yapmak istiyor; bu ilan uygun. Tuzak b: Orada da suşi var, ama orası bir kurs değil, yemeği sadece eve getiriyor."
         },
         {
           "number": 18,
           "type": "zuordnung",
-          "prompt": "Rolf isst kein Fleisch und keinen Fisch. Er möchte am Montagabend mit seiner Frau in einem Restaurant essen.",
+          "prompt": "Rolf ist Vegetarier. Am Montagabend möchte er mit seiner Frau schön essen gehen.",
           "answer": "x",
           "evidence": [{ "text": "d", "quote": "Montag ist Ruhetag." }],
-          "explanation": "Tuzak d: „Grüne Gabel“ sadece vejetaryen yemek pişiriyor, ama „Montag ist Ruhetag“, yani pazartesi kapalı. Başka bir ilan da uymuyor: a perşembe günkü bir yemek kursu, b'de masa yok (sadece eve teslim), c örnekte kullanıldı, e saat 15'te kapanıyor, f sadece hafta sonu açık. Bu yüzden cevap X."
+          "explanation": "Tuzak d: „Grüne Gabel“ Rolf gibi vejetaryenler için uygun görünüyor: „Wir kochen nur vegetarische Gerichte“. Ama „Montag ist Ruhetag“, yani restoran pazartesi kapalı; Rolf ise pazartesi akşamı gitmek istiyor. Başka bir ilan da uymuyor: a perşembe günkü bir yemek kursu, b'de masa yok (sadece eve teslim), c örnekte kullanıldı, e saat 15'te kapanıyor, f sadece hafta sonu açık. Bu yüzden cevap X."
         },
         {
           "number": 19,
           "type": "zuordnung",
-          "prompt": "Ihre Nachbarin möchte am Sonntag mit ihren zwei kleinen Kindern frühstücken gehen. Die Kinder sollen dort spielen können.",
+          "prompt": "Ihre Nachbarin möchte am Sonntag mit ihren zwei kleinen Kindern frühstücken gehen. Für die Kinder soll es dort einen Platz zum Spielen geben.",
           "answer": "f",
           "evidence": [{ "text": "f", "quote": "In unserer Spielecke können Kinder malen und spielen" }],
           "explanation": "f ilanındaki kafede cumartesi ve pazar kahvaltı var ve bir oyun köşesi (Spielecke) bulunuyor; çocuklar orada oynayabilir. Tuzak d: Orada çocuklar için küçük tabaklar var, ama restoran ancak akşam 17'de açılıyor; sabah kahvaltı için açık değil."
@@ -107,7 +107,7 @@
         {
           "number": 20,
           "type": "zuordnung",
-          "prompt": "Ein Kollege ist heute Abend müde und möchte nicht kochen. Er möchte sich Sushi nach Hause bringen lassen.",
+          "prompt": "Ein Kollege ist heute Abend müde und möchte nicht kochen. Er möchte Sushi bestellen und es zu Hause auf dem Sofa essen.",
           "answer": "b",
           "evidence": [{ "text": "b", "quote": "wir bringen Ihr Essen in 40 Minuten zu Ihnen" }],
           "explanation": "b ilanı bir suşi teslimat servisi: Her gün 22'ye kadar online sipariş alıyor ve yemeği 40 dakikada eve getiriyor. Tuzak a: Orada da Japon yemekleri var, ama orada kişi kendisi yemek pişiriyor; eve teslimat yok."

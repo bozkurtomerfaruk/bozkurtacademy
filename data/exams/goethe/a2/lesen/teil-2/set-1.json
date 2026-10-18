@@ -1,0 +1,92 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-1",
+  "title": "Im Kaufhaus",
+  "minutes": 6,
+  "instructions": "Sie sind im Kaufhaus „Morgenstern“. Lesen Sie die Aufgaben 6 bis 10 und die Informationstafel. Wo finden Sie das? Wählen Sie die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "tafel",
+          "title": "Kaufhaus Morgenstern – Wegweiser",
+          "paragraphs": [
+            {
+              "rows": [
+                ["4. Stock", "Haushaltswaren: Teller, Tassen, Töpfe · Lampen · Handys und Kameras · Restaurant „Weitblick“: warme Mittagsgerichte, Kaffee und Kuchen · Kundentoiletten"],
+                ["3. Stock", "Spielwaren · Kindermode · Bücher und Schreibwaren · Fotoservice: Fotos drucken, Passfotos"],
+                ["2. Stock", "Herrenmode · Herrenschuhe · Sportkleidung und Sportschuhe · Koffer und Reisetaschen"],
+                ["1. Stock", "Damenmode · Damenschuhe · Unterwäsche · Hüte, Schals und Handschuhe"],
+                ["Erdgeschoss", "Kosmetik und Parfüm · Schmuck und Uhren · Zeitungen und Zeitschriften, auch aus dem Ausland · Information · Geschenkverpackung"],
+                ["Untergeschoss", "Lebensmittel · Bäckerei · Getränke · Schuhreparatur · Schlüsseldienst"]
+              ]
+            },
+            "Wir haben von Montag bis Samstag von 9.30 bis 20 Uhr für Sie geöffnet. Aufzüge und Rolltreppen finden Sie in der Mitte des Hauses."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "abc",
+          "prompt": "Sie suchen eine Halskette als Geschenk für eine Freundin.",
+          "options": { "a": "1. Stock", "b": "Erdgeschoss", "c": "anderer Stock" },
+          "answer": "b",
+          "evidence": [{ "text": "tafel", "quote": "Schmuck und Uhren" }],
+          "explanation": "Kolye bir takıdır (Schmuck). Tabloda „Schmuck und Uhren“ zemin katta (Erdgeschoss) yazıyor. a) yanlış: 1. katta kadın giyimi var, takı yok."
+        },
+        {
+          "number": 6,
+          "type": "abc",
+          "prompt": "Sie möchten Ihrer Mutter zum Geburtstag neue Kaffeetassen schenken.",
+          "options": { "a": "Erdgeschoss", "b": "1. Stock", "c": "anderer Stock" },
+          "answer": "c",
+          "evidence": [{ "text": "tafel", "quote": "Haushaltswaren: Teller, Tassen, Töpfe" }],
+          "explanation": "Fincanlar (Tassen) 4. katta: „Haushaltswaren: Teller, Tassen, Töpfe“. 4. kat seçeneklerde yok, bu yüzden c doğru. a) yanlış: Zemin katta hediye paketi (Geschenkverpackung) var, ama fincanlar orada yazmıyor. b) yanlış: 1. katta kadın giyimi var; anne için olsa da fincan orada yok."
+        },
+        {
+          "number": 7,
+          "type": "abc",
+          "prompt": "Sie möchten eine Zeitung aus Ihrem Heimatland kaufen.",
+          "options": { "a": "Erdgeschoss", "b": "3. Stock", "c": "anderer Stock" },
+          "answer": "a",
+          "evidence": [{ "text": "tafel", "quote": "Zeitungen und Zeitschriften, auch aus dem Ausland" }],
+          "explanation": "Zemin katta „Zeitungen und Zeitschriften, auch aus dem Ausland“ yazıyor; yurt dışından gazeteler de burada. b) yanlış: 3. katta kitap ve kırtasiye var, gazete yok. c) yanlış: Gazeteler seçeneklerdeki zemin katta."
+        },
+        {
+          "number": 8,
+          "type": "abc",
+          "prompt": "Sie möchten ab nächster Woche joggen und brauchen passende Schuhe.",
+          "options": { "a": "Untergeschoss", "b": "2. Stock", "c": "anderer Stock" },
+          "answer": "b",
+          "evidence": [{ "text": "tafel", "quote": "Sportkleidung und Sportschuhe" }],
+          "explanation": "Koşu için spor ayakkabısı gerekiyor. 2. katta „Sportkleidung und Sportschuhe“ var. a) yanlış: Alt katta ayakkabı tamiri (Schuhreparatur) var, yeni ayakkabı satılmıyor. c) yanlış: Spor ayakkabıları seçeneklerdeki 2. katta."
+        },
+        {
+          "number": 9,
+          "type": "abc",
+          "prompt": "Sie möchten Ihre Urlaubsfotos auf Papier drucken lassen.",
+          "options": { "a": "2. Stock", "b": "4. Stock", "c": "anderer Stock" },
+          "answer": "c",
+          "evidence": [{ "text": "tafel", "quote": "Fotoservice: Fotos drucken, Passfotos" }],
+          "explanation": "Fotoğraf baskısı 3. katta: „Fotoservice: Fotos drucken, Passfotos“. 3. kat seçeneklerde yok, bu yüzden c doğru. a) yanlış: 2. katta valiz ve seyahat çantası var. b) yanlış: 4. katta telefon ve fotoğraf makinesi var; fotoğraf baskısı (Fotoservice) orada yazmıyor."
+        },
+        {
+          "number": 10,
+          "type": "abc",
+          "prompt": "Sie möchten mittags im Kaufhaus in Ruhe etwas Warmes essen.",
+          "options": { "a": "4. Stock", "b": "Untergeschoss", "c": "anderer Stock" },
+          "answer": "a",
+          "evidence": [{ "text": "tafel", "quote": "Restaurant „Weitblick“: warme Mittagsgerichte" }],
+          "explanation": "4. katta bir restoran var: „Restaurant „Weitblick“: warme Mittagsgerichte“. Orada öğlen sıcak yemek yenebilir. b) yanlış: Alt katta gıda ve fırın var, restoran yok. c) yanlış: Restoran seçeneklerdeki 4. katta."
+        }
+      ]
+    }
+  ]
+}

@@ -18,7 +18,7 @@
           "paragraphs": [
             "Zweimal im Jahr, im Mai und im September, ist im Hof vom Haus Am Lindenplatz 7 in Grünhagen viel los. Dann verkaufen die Nachbarn alte Sachen, die sie nicht mehr brauchen. Den ersten Flohmarkt hat Nora Kramer vor drei Jahren organisiert. „Ich wollte meinen Keller leer machen, aber nicht alles wegwerfen“, erzählt die 35-jährige Lehrerin.",
             "Im Haus wohnen 18 Familien, und fast alle machen mit. Auf den Tischen liegen Kleidung, Bücher, Spielzeug und Geschirr. Möbel darf man nicht verkaufen, weil im Hof zu wenig Platz ist. Die Kinder aus dem Haus verkaufen Kekse und Saft.",
-            "Das Geld behalten die Nachbarn nicht ganz für sich. Jeder gibt die Hälfte von seinem Geld in eine gemeinsame Kasse. Im letzten Jahr waren so 640 Euro in der Kasse. Mit diesem Geld hat die Hausgemeinschaft neue Bänke für den Hof gekauft. Das Geld aus dem Keksverkauf bekommt der Kindergarten in der Nachbarstraße.",
+            "Das Geld behalten die Nachbarn nicht ganz für sich. Jeder gibt die Hälfte von seinem Geld in eine gemeinsame Kasse. Im letzten Jahr waren so 640 Euro in der Kasse. Mit diesem Geld haben die Leute im Haus neue Bänke für den Hof gekauft. Das Geld aus dem Keksverkauf bekommt der Kindergarten in der Nachbarstraße.",
             "Auch die älteren Nachbarn freuen sich. Oskar Ebert ist 78 und wohnt seit 35 Jahren im Haus. „Früher habe ich viele Nachbarn nur im Treppenhaus gesehen. Jetzt trinken wir zusammen Kaffee und reden“, sagt er. Der nächste Flohmarkt ist am Samstag, dem 12. September, von 10 bis 16 Uhr. Wenn es regnet, findet er eine Woche später statt."
           ]
         }
@@ -66,17 +66,17 @@
           "prompt": "Mit dem Geld aus der gemeinsamen Kasse …",
           "options": {
             "a": "hilft man dem Kindergarten in der Nachbarstraße.",
-            "b": "bekommt jede Familie 640 Euro.",
+            "b": "möchte man nächstes Jahr Bänke für den Hof kaufen.",
             "c": "haben die Nachbarn etwas zum Sitzen für den Hof gekauft."
           },
           "answer": "c",
           "evidence": [
             {
               "text": "flohmarkt",
-              "quote": "Mit diesem Geld hat die Hausgemeinschaft neue Bänke für den Hof gekauft."
+              "quote": "Mit diesem Geld haben die Leute im Haus neue Bänke für den Hof gekauft."
             }
           ],
-          "explanation": "Ortak kasadaki parayla ev sakinleri avlu için yeni banklar aldı: „Mit diesem Geld hat die Hausgemeinschaft neue Bänke für den Hof gekauft.“ Bank (Bank, çoğulu Bänke) üzerine oturulan bir şey (etwas zum Sitzen); „die Hausgemeinschaft“ = evdeki komşular (die Nachbarn). a) yanlış: Anaokulu kasadaki parayı değil, kurabiye satışından gelen parayı alıyor: „Das Geld aus dem Keksverkauf bekommt der Kindergarten“. b) yanlış: 640 euro geçen yıl kasada toplanan paranın tamamı, her aileye verilen para değil."
+          "explanation": "Ortak kasadaki parayla evdeki insanlar avlu için yeni banklar aldı: „Mit diesem Geld haben die Leute im Haus neue Bänke für den Hof gekauft.“ Bank (çoğulu Bänke) üzerine oturulan bir şey (etwas zum Sitzen); „die Leute im Haus“ = evdeki komşular (die Nachbarn). a) yanlış: Anaokulu kasadaki parayı değil, kurabiye satışından gelen parayı alıyor: „Das Geld aus dem Keksverkauf bekommt der Kindergarten“. b) yanlış: Banklar gelecek yıl alınmayacak; geçen yıl kasada toplanan 640 euroyla zaten alındı: „Im letzten Jahr waren so 640 Euro in der Kasse.“"
         },
         {
           "number": 4,

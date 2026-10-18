@@ -1,0 +1,125 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-3",
+  "title": "Geburtstag im Park",
+  "minutes": 8,
+  "instructions": "Sie lesen eine E-Mail. Wählen Sie für die Aufgaben 11 bis 15 die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "mail",
+          "title": "Einladung zum Picknick",
+          "byline": "E-Mail von Mehmet an Pia",
+          "paragraphs": [
+            "Liebe Pia,",
+            "am Samstag, dem 13. Juni, werde ich 30! Ich möchte nicht zu Hause feiern, weil meine Wohnung zu klein ist. Deshalb mache ich ein Picknick im Rosenpark, und ich lade dich herzlich ein. Wir treffen uns um 15 Uhr auf der großen Wiese neben dem Spielplatz.",
+            "Getränke und Würstchen kaufe ich, und meine Schwester backt einen Kuchen. Kannst du vielleicht einen Salat mitbringen? Bring bitte auch eine Decke mit, denn im Park gibt es nicht genug Bänke.",
+            "Wenn es regnet, feiern wir im Café Lotte gegenüber vom Park. Dort habe ich schon einen Tisch reserviert. Am Samstagmorgen schreibe ich allen eine Nachricht, wo wir feiern.",
+            "Mit dem Auto ist es schwierig, weil es am Park nur wenige Parkplätze gibt. Nimm lieber die Straßenbahn Linie 4 bis zur Haltestelle „Rosenpark“. Von dort sind es nur zwei Minuten zu Fuß.",
+            "Bitte sag mir bis Mittwoch, ob du kommen kannst. Ein Geschenk brauche ich nicht – ich freue mich einfach, wenn du da bist!",
+            "Liebe Grüße",
+            "Mehmet"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 11,
+          "type": "abc",
+          "prompt": "Mehmet …",
+          "options": {
+            "a": "wird am 13. Juni 40 Jahre alt.",
+            "b": "feiert nicht zu Hause, weil seine Wohnung zu klein ist.",
+            "c": "trifft seine Gäste um 13 Uhr im Park."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Ich möchte nicht zu Hause feiern, weil meine Wohnung zu klein ist."
+            }
+          ],
+          "explanation": "Mehmet evde kutlamak istemiyor, çünkü dairesi çok küçük: „Ich möchte nicht zu Hause feiern, weil meine Wohnung zu klein ist.“ a) yanlış: 13 Haziran'da 40 değil, 30 yaşına giriyor: „werde ich 30!“ c) yanlış: 13, ayın tarihi; misafirlerle saat 13'te değil, 15'te buluşuyor: „Wir treffen uns um 15 Uhr“."
+        },
+        {
+          "number": 12,
+          "type": "abc",
+          "prompt": "Mehmet fragt Pia, ob sie …",
+          "options": {
+            "a": "einen Salat mitbringen kann.",
+            "b": "einen Kuchen backen kann.",
+            "c": "Getränke kaufen kann."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Kannst du vielleicht einen Salat mitbringen?"
+            }
+          ],
+          "explanation": "Mehmet, Pia'ya salata getirip getiremeyeceğini soruyor: „Kannst du vielleicht einen Salat mitbringen?“ b) yanlış: Pastayı Mehmet'in kız kardeşi yapıyor: „meine Schwester backt einen Kuchen“. c) yanlış: İçecekleri Mehmet kendisi alıyor: „Getränke und Würstchen kaufe ich“."
+        },
+        {
+          "number": 13,
+          "type": "abc",
+          "prompt": "Wenn es regnet, …",
+          "options": {
+            "a": "feiert Mehmet an einem anderen Tag.",
+            "b": "feiern alle in Mehmets Wohnung.",
+            "c": "feiern die Gäste in einem Café."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Wenn es regnet, feiern wir im Café Lotte gegenüber vom Park."
+            }
+          ],
+          "explanation": "Yağmur yağarsa parkın karşısındaki Café Lotte'de kutluyorlar: „Wenn es regnet, feiern wir im Café Lotte gegenüber vom Park.“ a) yanlış: Yağmurda kutlama başka bir güne kalmıyor; Mehmet kafede masa ayırttı ve cumartesi sabahı herkese nerede kutlayacaklarını yazacak: „Am Samstagmorgen schreibe ich allen eine Nachricht, wo wir feiern.“ b) yanlış: Mehmet'in dairesi çok küçük, bu yüzden evde kutlamak istemiyor; yağmurda da kafeye gidiyorlar."
+        },
+        {
+          "number": 14,
+          "type": "abc",
+          "prompt": "Zum Park fährt Pia am besten …",
+          "options": {
+            "a": "mit dem Auto.",
+            "b": "mit dem Bus Linie 4.",
+            "c": "mit der Straßenbahn."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Nimm lieber die Straßenbahn Linie 4"
+            }
+          ],
+          "explanation": "Mehmet, Pia'ya tramvayla gelmesini tavsiye ediyor: „Nimm lieber die Straßenbahn Linie 4“. a) yanlış: Arabayla gelmek zor, çünkü parkın yanında az park yeri var: „weil es am Park nur wenige Parkplätze gibt“. b) yanlış: 4 numaralı hat otobüs değil, tramvay hattı."
+        },
+        {
+          "number": 15,
+          "type": "abc",
+          "prompt": "Mehmet möchte, dass Pia …",
+          "options": {
+            "a": "ihm bis Mittwoch sagt, ob sie kommt.",
+            "b": "ihm ein Geschenk mitbringt.",
+            "c": "allen am Samstagmorgen eine Nachricht schreibt."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Bitte sag mir bis Mittwoch, ob du kommen kannst."
+            }
+          ],
+          "explanation": "Mehmet, Pia'nın çarşambaya kadar gelip gelemeyeceğini söylemesini istiyor: „Bitte sag mir bis Mittwoch, ob du kommen kannst.“ b) yanlış: Mehmet hediye istemiyor: „Ein Geschenk brauche ich nicht“. c) yanlış: Cumartesi sabahı herkese mesajı Pia değil, Mehmet yazıyor: „Am Samstagmorgen schreibe ich allen eine Nachricht“."
+        }
+      ]
+    }
+  ]
+}

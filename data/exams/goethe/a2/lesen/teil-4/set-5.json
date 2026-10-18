@@ -1,0 +1,118 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-5",
+  "title": "Gebraucht kaufen",
+  "minutes": 8,
+  "instructions": "Sechs Personen suchen im Internet nach gebrauchten Sachen. Lesen Sie die Aufgaben 16 bis 20 und die Anzeigen a bis f. Welche Anzeige passt zu welcher Person? Für eine Aufgabe gibt es keine passende Anzeige. In diesem Fall wählen Sie X. Die Anzeige aus dem Beispiel können Sie nicht mehr wählen.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": "x",
+      "texts": [
+        {
+          "id": "a",
+          "label": "a",
+          "title": "Musikhaus Tonleiter",
+          "paragraphs": [
+            "Gebrauchte Gitarren, Keyboards und Geigen – unsere Musiklehrer haben alle Instrumente kontrolliert. Gitarren gibt es bei uns ab 150 Euro. Wer bei uns ein Instrument kauft, bekommt eine Probestunde gratis. Montag bis Freitag von 10 bis 19 Uhr."
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "title": "Kinderladen Purzelbaum",
+          "paragraphs": [
+            "Bei uns finden Sie gebrauchte Kleidung, Schuhe und Kinderbücher für Kinder von 0 bis 12 Jahren. Alle Sachen sind gewaschen und kosten wenig. Dienstag bis Samstag von 10 bis 18 Uhr, Marktstraße 5 in Eichtal."
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "title": "Bücherladen Seitenweise",
+          "paragraphs": [
+            "Romane, Krimis, Kochbücher und Reiseführer – alles gebraucht und schon ab 1 Euro. Neu bei uns ist das Tauschregal: Bringen Sie zwei Bücher, die Sie schon gelesen haben, und nehmen Sie ein anderes mit, ohne zu bezahlen."
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "title": "Möbelhalle Zweitzuhause",
+          "paragraphs": [
+            "Gebrauchte Sofas, Schränke, Tische und Stühle, alle noch schön und stabil. Für 25 Euro bringen wir die Möbel zu Ihnen nach Hause. Wir haben auch Fahrräder – so, wie sie sind, ohne Reparatur. Montag bis Samstag von 9 bis 18 Uhr."
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "title": "Fahrradladen Zweite Runde",
+          "paragraphs": [
+            "Gebrauchte Fahrräder für Damen, Herren und Kinder. Wir kontrollieren und reparieren jedes Rad, bevor wir es verkaufen. Deshalb bekommen Sie auf alle Räder sechs Monate Garantie. Preise ab 120 Euro."
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "title": "Kindersitz und Kinderbett zu verkaufen",
+          "paragraphs": [
+            "Wir ziehen um und verkaufen einen Kindersitz fürs Auto für Kinder von etwa einem bis vier Jahren (40 Euro) und ein Kinderbett aus Holz (60 Euro). Sie müssen die Sachen in Sandwiesen abholen, wir können nichts bringen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Gina braucht für ihre Tochter eine warme Winterjacke. Das Mädchen ist sieben und wächst schnell, deshalb soll die Jacke nicht viel kosten.",
+          "answer": "b",
+          "evidence": [{ "text": "b", "quote": "Bei uns finden Sie gebrauchte Kleidung, Schuhe und Kinderbücher für Kinder von 0 bis 12 Jahren." }],
+          "explanation": "b ilanındaki dükkân 0–12 yaş arası çocuklar için ikinci el kıyafet satıyor ve eşyalar ucuz: „kosten wenig“. Gina'nın yedi yaşındaki kızı için uygun. Bu ilan örnekte kullanıldığı için başka bir kişi için seçilemez."
+        },
+        {
+          "number": 16,
+          "type": "zuordnung",
+          "prompt": "Hugo möchte ein gebrauchtes Fahrrad kaufen. Er hat aber Angst, dass es schon nach ein paar Wochen kaputt ist.",
+          "answer": "e",
+          "evidence": [{ "text": "e", "quote": "Deshalb bekommen Sie auf alle Räder sechs Monate Garantie." }],
+          "explanation": "e ilanındaki dükkân her bisikleti satmadan önce kontrol edip tamir ediyor ve altı ay garanti veriyor. Bisiklet birkaç hafta sonra bozulursa Hugo garantiden yararlanabilir. Tuzak d: Orada da ikinci el bisiklet var, ama „so, wie sie sind, ohne Reparatur“, yani tamir edilmeden satılıyor."
+        },
+        {
+          "number": 17,
+          "type": "zuordnung",
+          "prompt": "Marens Enkel ist drei Jahre alt und fährt oft mit ihr im Auto mit. Sie sucht für ihn einen günstigen Sitz.",
+          "answer": "f",
+          "evidence": [{ "text": "f", "quote": "einen Kindersitz fürs Auto für Kinder von etwa einem bis vier Jahren (40 Euro)" }],
+          "explanation": "f ilanında yaklaşık bir ile dört yaş arası çocuklar için 40 euroya bir araba koltuğu satılıyor. Üç yaşındaki torun için uygun. Tuzak b: Orada da çocuklar için ikinci el eşyalar var, ama ilanda sadece kıyafet, ayakkabı ve çocuk kitapları yazıyor; araba koltuğu yazmıyor."
+        },
+        {
+          "number": 18,
+          "type": "zuordnung",
+          "prompt": "Ein Kollege liest gern Krimis. Er hat viele Bücher zu Hause, die er schon kennt, und möchte sie gegen andere tauschen.",
+          "answer": "c",
+          "evidence": [{ "text": "c", "quote": "Bringen Sie zwei Bücher, die Sie schon gelesen haben, und nehmen Sie ein anderes mit, ohne zu bezahlen." }],
+          "explanation": "c ilanındaki kitapçıda polisiye romanlar (Krimis) var ve bir takas rafı bulunuyor: Okunmuş iki kitap getiren, parasız başka bir kitap alabiliyor. Meslektaş için uygun. Tuzak b: Orada da kitap var, ama 0–12 yaş arası çocuklar için çocuk kitapları; takas da yazmıyor."
+        },
+        {
+          "number": 19,
+          "type": "zuordnung",
+          "prompt": "Ihre Nachbarn ziehen in eine größere Wohnung und brauchen noch einen Kleiderschrank und einen Esstisch. Die beiden haben kein Auto.",
+          "answer": "d",
+          "evidence": [{ "text": "d", "quote": "Gebrauchte Sofas, Schränke, Tische und Stühle" }, { "text": "d", "quote": "Für 25 Euro bringen wir die Möbel zu Ihnen nach Hause." }],
+          "explanation": "d ilanında ikinci el dolap ve masa var; mobilyalar 25 euroya eve getiriliyor. Arabası olmayan komşular için uygun. Tuzak f: Orada da bir mobilya (çocuk yatağı) var, ama eşyalar Sandwiesen'den alınmalı: „wir können nichts bringen“."
+        },
+        {
+          "number": 20,
+          "type": "zuordnung",
+          "prompt": "Anton möchte Gitarre spielen lernen und sucht dafür ein gebrauchtes Instrument. Er möchte höchstens 100 Euro bezahlen.",
+          "answer": "x",
+          "evidence": [{ "text": "a", "quote": "Gitarren gibt es bei uns ab 150 Euro." }],
+          "explanation": "Tuzak a: Müzik mağazasında ikinci el gitar var, ama „Gitarren gibt es bei uns ab 150 Euro“, yani gitarlar 150 eurodan başlıyor. Anton en fazla 100 euro ödemek istiyor. Başka bir ilanda müzik aleti yok: b çocuk eşyaları (örnekte kullanıldı), c kitap, d mobilya ve bisiklet, e bisiklet, f araba koltuğu ve çocuk yatağı. Bu yüzden cevap X."
+        }
+      ]
+    }
+  ]
+}

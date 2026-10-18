@@ -19,7 +19,7 @@
             "Ein Toaster, der nicht mehr warm wird, eine Hose mit Loch, eine Lampe, die nur noch flackert: Früher hätten viele Menschen in Lerchenfeld solche Dinge einfach in den Müll geworfen. Heute bringen sie sie ins Reparatur-Café. Jeden letzten Freitag im Monat treffen sich dort von 15 bis 19 Uhr Freiwillige im Gemeindehaus, um zusammen mit den Besuchern kaputte Sachen zu reparieren.",
             "Gegründet hat das Café vor drei Jahren die Rentnerin Renate Pohl. „Ich habe mich immer geärgert, wenn ein Gerät nach kurzer Zeit kaputtging und der Verkäufer nur gesagt hat: Kaufen Sie doch ein neues“, erzählt die frühere Elektrikerin. Heute gehören zum Team zwölf Helferinnen und Helfer, darunter ein pensionierter Uhrmacher, zwei Schneiderinnen und mehrere Studenten, die sich gut mit Computern auskennen.",
             "Wichtig ist: Die Besucher sollen nicht nur zuschauen. „Wir reparieren nicht für die Leute, sondern mit ihnen“, sagt Pohl. Wer etwas mitbringt, setzt sich deshalb neben einen Helfer und macht selbst mit. So lernen viele, wie sie kleine Probleme beim nächsten Mal allein lösen können. Die Reparatur ist kostenlos, aber über eine kleine Spende für Werkzeug freut sich das Team. Neue Ersatzteile müssen die Besucher allerdings selbst bezahlen.",
-            "Nicht alles kann gerettet werden. Etwa jedes dritte Gerät ist so kaputt, dass auch die Experten nicht mehr helfen können. Weil der Raum im Gemeindehaus an manchen Nachmittagen zu klein ist, sucht das Team jetzt größere Räume. Außerdem werden weitere Helfer gesucht, vor allem Menschen, die Kaffee kochen und Kuchen backen. „Ohne Kaffee und Kuchen wäre es ja kein richtiges Café“, sagt Pohl."
+            "Nicht alles kann gerettet werden. Etwa jedes dritte Gerät ist so kaputt, dass auch die Experten nicht mehr helfen können. Und manchmal wird es eng: Weil der Raum im Gemeindehaus an manchen Nachmittagen zu klein ist, sucht das Team jetzt größere Räume. Wer selbst etwas reparieren möchte, kann einfach vorbeikommen. Das nächste Treffen ist schon in zwei Wochen, eine Anmeldung ist nicht nötig."
           ]
         }
       ],
@@ -29,7 +29,7 @@
           "type": "abc",
           "prompt": "Das Reparatur-Café …",
           "options": {
-            "a": "ist jeden Samstag geöffnet.",
+            "a": "findet jeden Freitag im Gemeindehaus statt.",
             "b": "wurde von der Stadt Lerchenfeld gegründet.",
             "c": "findet einmal im Monat im Gemeindehaus statt."
           },
@@ -44,7 +44,7 @@
               "quote": "Gegründet hat das Café vor drei Jahren die Rentnerin Renate Pohl."
             }
           ],
-          "explanation": "Gönüllüler her ayın son cuma günü Gemeindehaus'ta (topluluk salonu) buluşuyor: „Jeden letzten Freitag im Monat … im Gemeindehaus“ – yani kafe ayda bir kez yapılıyor. a) yanlış: Kafe her cumartesi değil, her ayın son cuma günü açık. b) yanlış: Kafeyi belediye değil, emekli Renate Pohl kurdu („Gegründet hat das Café … die Rentnerin Renate Pohl“)."
+          "explanation": "Gönüllüler her ayın son cuma günü Gemeindehaus'ta (topluluk salonu) buluşuyor: „Jeden letzten Freitag im Monat … im Gemeindehaus“ – yani kafe ayda bir kez yapılıyor. a) yanlış: Yer doğru, ama kafe her cuma değil, sadece her ayın son cuma günü var. b) yanlış: Kafeyi belediye değil, emekli Renate Pohl kurdu („Gegründet hat das Café … die Rentnerin Renate Pohl“)."
         },
         {
           "number": 8,
@@ -52,7 +52,7 @@
           "prompt": "Im Reparatur-Café …",
           "options": {
             "a": "arbeiten die Besucher bei der Reparatur selbst mit.",
-            "b": "muss man für jede Reparatur bezahlen.",
+            "b": "bezahlt man für die Reparatur eine kleine Gebühr.",
             "c": "bekommen die Besucher neue Ersatzteile kostenlos."
           },
           "answer": "a",
@@ -63,23 +63,23 @@
             },
             {
               "text": "reparaturcafe",
-              "quote": "Die Reparatur ist kostenlos"
+              "quote": "Die Reparatur ist kostenlos, aber über eine kleine Spende für Werkzeug freut sich das Team."
             },
             {
               "text": "reparaturcafe",
               "quote": "Neue Ersatzteile müssen die Besucher allerdings selbst bezahlen."
             }
           ],
-          "explanation": "Ziyaretçiler sadece seyretmiyor: Bir şey getiren kişi bir yardımcının yanına oturuyor ve kendisi de çalışıyor („macht selbst mit“). Pohl da „nicht für die Leute, sondern mit ihnen“ (insanlar için değil, onlarla birlikte) tamir ettiklerini söylüyor. b) yanlış: Tamir ücretsiz („Die Reparatur ist kostenlos“); küçük bir bağış sadece memnuniyetle karşılanıyor. c) yanlış: Yeni yedek parçaların parasını ziyaretçiler kendileri ödemek zorunda („müssen die Besucher allerdings selbst bezahlen“)."
+          "explanation": "Ziyaretçiler sadece seyretmiyor: Bir şey getiren kişi bir yardımcının yanına oturuyor ve kendisi de çalışıyor („macht selbst mit“). Pohl da „nicht für die Leute, sondern mit ihnen“ (insanlar için değil, onlarla birlikte) tamir ettiklerini söylüyor. b) yanlış: Tamir ücretsiz („Die Reparatur ist kostenlos“); ekip alet için küçük bir bağışa sadece seviniyor („freut sich das Team“), bu zorunlu bir ücret değil. c) yanlış: Ücretsiz olan tamir; yeni yedek parçaların parasını ziyaretçiler kendileri ödemek zorunda („müssen die Besucher allerdings selbst bezahlen“)."
         },
         {
           "number": 9,
           "type": "abc",
           "prompt": "Das Team des Reparatur-Cafés …",
           "options": {
-            "a": "kann fast alle Geräte wieder reparieren.",
-            "b": "braucht mehr Platz.",
-            "c": "sucht vor allem Helfer, die sich mit Computern auskennen."
+            "a": "kann etwa ein Drittel der Geräte wieder reparieren.",
+            "b": "sucht für seine Treffen größere Räume.",
+            "c": "besteht zum größten Teil aus Schneiderinnen."
           },
           "answer": "b",
           "evidence": [
@@ -90,9 +90,13 @@
             {
               "text": "reparaturcafe",
               "quote": "Etwa jedes dritte Gerät ist so kaputt, dass auch die Experten nicht mehr helfen können."
+            },
+            {
+              "text": "reparaturcafe",
+              "quote": "zwölf Helferinnen und Helfer, darunter ein pensionierter Uhrmacher, zwei Schneiderinnen und mehrere Studenten"
             }
           ],
-          "explanation": "Gemeindehaus'taki oda bazı öğleden sonraları çok küçük kalıyor, bu yüzden ekip daha büyük bir yer arıyor („sucht das Team jetzt größere Räume“). a) yanlış: Yaklaşık her üç cihazdan biri o kadar bozuk ki uzmanlar da yardım edemiyor („jedes dritte Gerät“). c) yanlış: Ekip en çok kahve yapan ve kek pişiren insanlar arıyor („vor allem Menschen, die Kaffee kochen und Kuchen backen“); bilgisayardan iyi anlayan birkaç üniversite öğrencisi zaten ekipte var („mehrere Studenten, die sich gut mit Computern auskennen“)."
+          "explanation": "Gemeindehaus'taki oda bazı öğleden sonraları çok küçük kalıyor, bu yüzden ekip daha büyük bir yer arıyor („sucht das Team jetzt größere Räume“). a) yanlış: Metindeki üçte bir, tamir edilebilen cihazlar değil, tamir edilemeyen cihazlar: Yaklaşık her üç cihazdan biri o kadar bozuk ki uzmanlar da yardım edemiyor („Etwa jedes dritte Gerät ist so kaputt …“). c) yanlış: Ekipte on iki yardımcı var; terziler bunların sadece ikisi („zwei Schneiderinnen“). Ayrıca bir emekli saatçi ve birkaç üniversite öğrencisi de var."
         }
       ]
     },
@@ -103,10 +107,10 @@
           "id": "handykurs",
           "title": "Jung erklärt Alt: Schüler zeigen Senioren, wie das Smartphone funktioniert",
           "paragraphs": [
-            "Wie schreibt man eine Nachricht? Für viele ältere Menschen sind solche Fragen nicht einfach. In Obertann gibt es deshalb seit dem letzten Herbst einen besonderen Kurs: Schülerinnen und Schüler der Realschule Obertann erklären Seniorinnen und Senioren, wie man ein Smartphone benutzt. Der Kurs findet jeden Dienstag von 16 bis 17.30 Uhr im Bürgerhaus „Alte Mühle“ statt.",
-            "Die Idee hatte der Lehrer Holger Engel. Seine Mutter hatte ihm erzählt, dass sie zwar ein neues Handy besitzt, damit aber nur telefonieren kann. „Da dachte ich: Meine Schüler können das viel besser erklären als ich“, sagt Engel. Zuerst haben sich nur fünf Jugendliche gemeldet, heute machen 18 mit. Die Jugendlichen bekommen dafür kein Geld, aber eine Bescheinigung, die sie später zu ihren Bewerbungen legen können.",
+            "Wie schreibt man eine Nachricht? Wie schickt man ein Foto an die Familie? Für viele ältere Menschen sind solche Fragen nicht einfach. In Obertann gibt es deshalb seit dem letzten Herbst einen besonderen Kurs: Schülerinnen und Schüler der Realschule Obertann erklären Seniorinnen und Senioren, wie man ein Smartphone benutzt. Der Kurs findet jeden Dienstag von 16 bis 17.30 Uhr im Bürgerhaus „Alte Mühle“ statt.",
+            "Gestartet hat den Kurs der Lehrer Holger Engel. Seine Mutter hatte ihm erzählt, dass sie zwar ein neues Handy besitzt, damit aber nur telefonieren kann. „Da dachte ich: Meine Schüler können das viel besser erklären als ich“, sagt Engel. Zuerst haben sich nur fünf Jugendliche gemeldet, heute machen 18 mit. Die Jugendlichen bekommen dafür kein Geld, aber eine Bescheinigung, die sie später zu ihren Bewerbungen legen können.",
             "In jeder Stunde sitzt ein Jugendlicher mit höchstens zwei Senioren an einem Tisch. Alle bringen ihr eigenes Handy mit, denn jedes Gerät funktioniert ein bisschen anders. Der 16-jährige Emre hat schon gelernt, dass man langsam erklären muss. „Am Anfang habe ich zu schnell gesprochen und Wörter wie ‚App‘ oder ‚WLAN‘ benutzt, ohne sie zu erklären“, erzählt er. „Jetzt schreibe ich die wichtigsten Schritte auf einen Zettel, damit meine Teilnehmer zu Hause üben können.“",
-            "Auch die Senioren sind begeistert. „Jetzt kann ich mit meiner Enkelin in Kanada per Video sprechen“, freut sich die 79-jährige Wiebke. Und die Jugendlichen lernen ebenfalls etwas, denn viele Senioren erzählen gern von früher. Weil die Warteliste immer länger wird, soll es ab Januar einen zweiten Kurs am Donnerstag geben. Dafür sucht Engel noch weitere Schülerinnen und Schüler, die mitmachen wollen."
+            "Weil die Warteliste immer länger wird, soll es ab Januar einen zweiten Kurs am Donnerstag geben. Von dem Projekt haben beide Seiten etwas: Die Jugendlichen hören gern zu, wenn die Senioren von früher erzählen. Und die Senioren? „Ich spreche mit meiner Enkelin in Kanada jetzt per Video“, erzählt die 79-jährige Wiebke. „Das hätte ich vor einem Jahr nicht gedacht.“"
           ]
         }
       ],
@@ -117,8 +121,8 @@
           "prompt": "Holger Engel hat den Kurs gestartet, weil …",
           "options": {
             "a": "seine Mutter mit ihrem Handy nur telefonieren konnte.",
-            "b": "seine Schüler die Idee hatten.",
-            "c": "seine Schüler damit Geld verdienen wollten."
+            "b": "seine Mutter mit ihrer Enkelin per Video sprechen wollte.",
+            "c": "seine Schüler eine Bescheinigung für Bewerbungen brauchten."
           },
           "answer": "a",
           "evidence": [
@@ -128,17 +132,21 @@
             },
             {
               "text": "handykurs",
-              "quote": "Die Jugendlichen bekommen dafür kein Geld"
+              "quote": "„Ich spreche mit meiner Enkelin in Kanada jetzt per Video“, erzählt die 79-jährige Wiebke."
+            },
+            {
+              "text": "handykurs",
+              "quote": "aber eine Bescheinigung, die sie später zu ihren Bewerbungen legen können"
             }
           ],
-          "explanation": "Fikir öğretmen Holger Engel'den çıktı: Annesi ona yeni bir telefonu olduğunu ama onunla sadece telefon görüşmesi yapabildiğini anlatmıştı („damit aber nur telefonieren kann“). Bunun üzerine Engel, öğrencilerinin bunu kendisinden daha iyi anlatabileceğini düşündü. b) yanlış: Fikir öğrencilerden değil, öğretmen Engel'in kendisinden çıktı („Die Idee hatte der Lehrer Holger Engel“). c) yanlış: Öğrenciler bunun için para almıyor („Die Jugendlichen bekommen dafür kein Geld“), sadece bir belge alıyorlar."
+          "explanation": "Engel'in annesi ona yeni bir telefonu olduğunu ama onunla sadece telefon görüşmesi yapabildiğini anlatmıştı („damit aber nur telefonieren kann“). Bunun üzerine Engel, öğrencilerinin bunu kendisinden daha iyi anlatabileceğini düşündü („Da dachte ich …“). b) yanlış: Kanada'daki torunuyla görüntülü konuşan kişi Engel'in annesi değil, kursa katılan 79 yaşındaki Wiebke. c) yanlış: Belge, öğrencilerin kursta yardım ettikleri için aldıkları şey („bekommen dafür … eine Bescheinigung“); kursun başlama nedeni değil."
         },
         {
           "number": 11,
           "type": "abc",
           "prompt": "Emre …",
           "options": {
-            "a": "erklärt alles an einem Handy der Schule.",
+            "a": "übt mit den Senioren an Handys der Schule.",
             "b": "hat von Anfang an sehr langsam gesprochen.",
             "c": "gibt seinen Teilnehmern Notizen zum Üben mit."
           },
@@ -160,9 +168,9 @@
           "type": "abc",
           "prompt": "Der Kurs …",
           "options": {
-            "a": "soll ab Januar nur noch am Donnerstag stattfinden.",
+            "a": "wird ab Januar vom Dienstag auf den Donnerstag verlegt.",
             "b": "ist so beliebt, dass ein zweiter Kurs geplant ist.",
-            "c": "hat schon genug junge Helfer."
+            "c": "zieht ab Januar in die Realschule Obertann um."
           },
           "answer": "b",
           "evidence": [
@@ -172,10 +180,10 @@
             },
             {
               "text": "handykurs",
-              "quote": "Dafür sucht Engel noch weitere Schülerinnen und Schüler"
+              "quote": "im Bürgerhaus „Alte Mühle“"
             }
           ],
-          "explanation": "Bekleme listesi giderek uzadığı için ocak ayından itibaren perşembe günü ikinci bir kurs olacak („einen zweiten Kurs am Donnerstag“). a) yanlış: Perşembe kursu salı kursunun yerine gelmiyor, ona ek olarak ikinci bir kurs olarak planlanıyor. c) yanlış: Engel bunun için hâlâ başka öğrenciler arıyor („sucht Engel noch weitere Schülerinnen und Schüler“)."
+          "explanation": "Bekleme listesi giderek uzadığı için ocak ayından itibaren perşembe günü ikinci bir kurs olacak („einen zweiten Kurs am Donnerstag“). a) yanlış: Salı kursu perşembeye taşınmıyor; perşembe kursu ona ek olarak ikinci bir kurs. c) yanlış: Kurs Bürgerhaus „Alte Mühle“de yapılıyor; Realschule Obertann sadece öğrencilerin geldiği okul. Kursun oraya taşınacağı yazmıyor."
         }
       ]
     }

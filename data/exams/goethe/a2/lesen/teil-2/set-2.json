@@ -1,0 +1,92 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-2",
+  "title": "Im Klinikum",
+  "minutes": 6,
+  "instructions": "Sie sind im Klinikum Kranichfeld. Lesen Sie die Aufgaben 6 bis 10 und die Informationstafel. Wo finden Sie das? Wählen Sie die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "tafel",
+          "title": "Klinikum Kranichfeld – Wegweiser",
+          "paragraphs": [
+            {
+              "rows": [
+                ["4. Etage", "Verwaltung · Bescheinigungen und Kopien von Unterlagen · Kasse: Telefon und Fernseher am Bett"],
+                ["3. Etage", "Stationen 3A und 3B · Besucherraum mit Kaffeeautomat · Bücherei für Patienten"],
+                ["2. Etage", "Kinderstation · Spielzimmer · Küche für Eltern"],
+                ["1. Etage", "Apotheke · Röntgen · Labor · Fundbüro"],
+                ["Erdgeschoss", "Information · Anmeldung für Patienten · Cafeteria · Blumen und Geschenke · Kiosk: Zeitungen, Zeitschriften, Süßigkeiten"],
+                ["Untergeschoss", "Tiefgarage · Fahrradkeller · Schließfächer für Besucher"]
+              ]
+            },
+            "Besuchszeiten: täglich von 10 bis 20 Uhr. Die Aufzüge finden Sie links neben der Information. Die Cafeteria ist von 8 bis 18 Uhr geöffnet. Bitte stellen Sie Ihr Handy auf den Stationen leise."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "abc",
+          "prompt": "Sie kommen mit dem Fahrrad und möchten es abstellen.",
+          "options": { "a": "Untergeschoss", "b": "Erdgeschoss", "c": "andere Etage" },
+          "answer": "a",
+          "evidence": [{ "text": "tafel", "quote": "Fahrradkeller" }],
+          "explanation": "Bisikletler için bodrum kat (Untergeschoss) var: „Fahrradkeller“. b) yanlış: Zemin katta danışma, kafeterya ve kiosk var; bisiklet yeri yok."
+        },
+        {
+          "number": 6,
+          "type": "abc",
+          "prompt": "Ihr Neffe ist acht Jahre alt und liegt im Klinikum. Sie möchten ihn besuchen.",
+          "options": { "a": "2. Etage", "b": "3. Etage", "c": "andere Etage" },
+          "answer": "a",
+          "evidence": [{ "text": "tafel", "quote": "Kinderstation" }],
+          "explanation": "Yeğen sekiz yaşında, yani bir çocuk. Çocuk servisi (Kinderstation) 2. katta. b) yanlış: 3. katta bir ziyaretçi odası (Besucherraum) var ama çocuk servisi orada değil. c) yanlış: Çocuk servisi seçeneklerdeki 2. katta."
+        },
+        {
+          "number": 7,
+          "type": "abc",
+          "prompt": "Ihre Tante liegt auf Station 3B. Sie möchten für ihr Telefon am Bett bezahlen.",
+          "options": { "a": "3. Etage", "b": "Erdgeschoss", "c": "andere Etage" },
+          "answer": "c",
+          "evidence": [{ "text": "tafel", "quote": "Kasse: Telefon und Fernseher am Bett" }],
+          "explanation": "Yatak başındaki telefon için ödeme kasada yapılıyor: „Kasse: Telefon und Fernseher am Bett“. Kasa 4. katta; 4. kat seçeneklerde yok, bu yüzden c doğru. a) yanlış: Teyze 3B servisinde yatıyor, ama 3. katta kasa yok. b) yanlış: Zemin katta danışma ve hasta kaydı var, kasa yok."
+        },
+        {
+          "number": 8,
+          "type": "abc",
+          "prompt": "Sie haben gestern im Klinikum Ihren Regenschirm vergessen.",
+          "options": { "a": "Untergeschoss", "b": "1. Etage", "c": "andere Etage" },
+          "answer": "b",
+          "evidence": [{ "text": "tafel", "quote": "Fundbüro" }],
+          "explanation": "Unutulan eşyalar kayıp eşya bürosuna (Fundbüro) gider. Fundbüro 1. katta. a) yanlış: Bodrum katta ziyaretçiler için kilitli dolaplar (Schließfächer) var; orası kayıp eşya bürosu değil. c) yanlış: Fundbüro seçeneklerdeki 1. katta."
+        },
+        {
+          "number": 9,
+          "type": "abc",
+          "prompt": "Sie möchten eine Kopie von Ihren Unterlagen abholen.",
+          "options": { "a": "4. Etage", "b": "Erdgeschoss", "c": "andere Etage" },
+          "answer": "a",
+          "evidence": [{ "text": "tafel", "quote": "Bescheinigungen und Kopien von Unterlagen" }],
+          "explanation": "4. katta „Bescheinigungen und Kopien von Unterlagen“ yazıyor; belgelerin kopyası buradan alınır. b) yanlış: Zemin katta hasta kaydı (Anmeldung für Patienten) var, belge kopyası yok. c) yanlış: Kopyalar seçeneklerdeki 4. katta."
+        },
+        {
+          "number": 10,
+          "type": "abc",
+          "prompt": "Ihr Bruder liegt auf Station 3A. Sie möchten ihm eine Zeitschrift kaufen.",
+          "options": { "a": "3. Etage", "b": "Erdgeschoss", "c": "andere Etage" },
+          "answer": "b",
+          "evidence": [{ "text": "tafel", "quote": "Kiosk: Zeitungen, Zeitschriften, Süßigkeiten" }],
+          "explanation": "Dergi kioskta satılıyor: „Kiosk: Zeitungen, Zeitschriften, Süßigkeiten“. Kiosk zemin katta. a) yanlış: Kardeş 3A servisinde ve 3. katta hastalar için bir kütüphane (Bücherei) var; dergi satan yer ise zemin kattaki kiosk. c) yanlış: Kiosk seçeneklerdeki zemin katta."
+        }
+      ]
+    }
+  ]
+}

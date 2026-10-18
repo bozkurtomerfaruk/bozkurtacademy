@@ -1,0 +1,118 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-1",
+  "title": "Essen gehen",
+  "minutes": 8,
+  "instructions": "Sechs Personen suchen im Internet nach einem Ort zum Essen. Lesen Sie die Aufgaben 16 bis 20 und die Anzeigen a bis f. Welche Anzeige passt zu welcher Person? Für eine Aufgabe gibt es keine passende Anzeige. In diesem Fall wählen Sie X. Die Anzeige aus dem Beispiel können Sie nicht mehr wählen.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": "x",
+      "texts": [
+        {
+          "id": "a",
+          "label": "a",
+          "title": "Kochabend in der Markthalle Waldheim",
+          "paragraphs": [
+            "Lernen Sie, wie man Sushi und andere Gerichte aus Japan selbst macht! Jeden Donnerstag von 18 bis 21 Uhr kochen wir in kleinen Gruppen mit einer Köchin aus Tokio. Danach essen alle zusammen. Preis: 35 Euro, Anmeldung bis Dienstag."
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "title": "Sushi-Lieferservice Kirschblüte",
+          "paragraphs": [
+            "Frisches Sushi, jeden Tag von 12 bis 22 Uhr. Bei uns gibt es keine Tische – wir kochen nur für Ihr Zuhause. Bestellen Sie online, und wir bringen Ihr Essen in 40 Minuten zu Ihnen. Ab 20 Euro ist die Lieferung kostenlos."
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "title": "Gasthaus „Zum Kranich“",
+          "paragraphs": [
+            "Feiern Sie bei uns in Kranichfeld! Unser Saal hat Platz für bis zu 40 Personen – ideal für Geburtstage und Familienfeste. Wir kochen Gerichte aus der Region und haben auch am Sonntag geöffnet. Bitte reservieren Sie den Saal zwei Wochen vorher."
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "title": "Restaurant „Grüne Gabel“",
+          "paragraphs": [
+            "Bei uns gibt es kein Fleisch und keinen Fisch: Wir kochen nur vegetarische Gerichte mit frischem Gemüse vom Markt. Für Kinder haben wir kleine Teller. Geöffnet von Dienstag bis Sonntag, 17 bis 23 Uhr. Montag ist Ruhetag."
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "title": "Imbiss „Schnelle Schüssel“",
+          "paragraphs": [
+            "Keine Zeit? Bei uns bekommen Sie Suppen, Currywurst und Nudeln in fünf Minuten – zum Essen am Stehtisch oder zum Mitnehmen. Montag bis Freitag von 11 bis 15 Uhr, direkt am Bahnhof Seebrück."
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "title": "Café „Kleine Wolke“ am Marktplatz",
+          "paragraphs": [
+            "Samstag und Sonntag von 9 bis 17 Uhr: großes Frühstück, Kuchen und kleine warme Gerichte. In unserer Spielecke können Kinder malen und spielen, und die Eltern trinken in Ruhe ihren Kaffee. Am Wochenende bitte reservieren."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Greta wird 30 und möchte am Sonntag mit 25 Gästen in einem Restaurant feiern.",
+          "answer": "c",
+          "evidence": [{ "text": "c", "quote": "Unser Saal hat Platz für bis zu 40 Personen – ideal für Geburtstage und Familienfeste." }],
+          "explanation": "c ilanındaki lokantanın salonu 40 kişiye kadar yer alıyor ve doğum günleri için uygun; pazar günü de açık. Greta'nın 25 misafiri için yeterli. Bu ilan örnekte kullanıldığı için başka bir kişi için seçilemez."
+        },
+        {
+          "number": 16,
+          "type": "zuordnung",
+          "prompt": "Ilias arbeitet in Seebrück. In der Mittagspause hat er nur eine halbe Stunde Zeit und möchte schnell etwas Warmes essen.",
+          "answer": "e",
+          "evidence": [{ "text": "e", "quote": "Bei uns bekommen Sie Suppen, Currywurst und Nudeln in fünf Minuten" }],
+          "explanation": "e ilanındaki büfede çorba, köri sosis ve makarna beş dakikada hazır; hafta içi 11–15 arası, Seebrück garının yanında açık. Ilias için uygun. Tuzak f: Orada da küçük sıcak yemekler var, ama kafe sadece cumartesi ve pazar açık."
+        },
+        {
+          "number": 17,
+          "type": "zuordnung",
+          "prompt": "Mona isst gern Sushi und möchte lernen, wie man es selbst macht.",
+          "answer": "a",
+          "evidence": [{ "text": "a", "quote": "Lernen Sie, wie man Sushi und andere Gerichte aus Japan selbst macht!" }],
+          "explanation": "a ilanı bir yemek akşamı: Katılanlar Sushi'yi kendileri yapmayı öğreniyor. Mona'nın istediği tam bu. Tuzak b: Orada da Sushi var, ama orası bir kurs değil, yemeği sadece eve getiriyor."
+        },
+        {
+          "number": 18,
+          "type": "zuordnung",
+          "prompt": "Rolf isst kein Fleisch und keinen Fisch. Er möchte am Montagabend mit seiner Frau in einem Restaurant essen.",
+          "answer": "x",
+          "evidence": [{ "text": "d", "quote": "Montag ist Ruhetag." }],
+          "explanation": "Tuzak d: „Grüne Gabel“ sadece vejetaryen yemek pişiriyor, ama „Montag ist Ruhetag“, yani pazartesi kapalı. Başka bir ilan da uymuyor: a perşembe günkü bir yemek kursu, b'de masa yok (sadece eve teslim), c örnekte kullanıldı, e saat 15'te kapanıyor, f sadece hafta sonu açık. Bu yüzden cevap X."
+        },
+        {
+          "number": 19,
+          "type": "zuordnung",
+          "prompt": "Ihre Nachbarin möchte am Sonntag mit ihren zwei kleinen Kindern frühstücken gehen. Die Kinder sollen dort spielen können.",
+          "answer": "f",
+          "evidence": [{ "text": "f", "quote": "In unserer Spielecke können Kinder malen und spielen" }],
+          "explanation": "f ilanındaki kafede cumartesi ve pazar kahvaltı var ve bir oyun köşesi (Spielecke) bulunuyor; çocuklar orada oynayabilir. Tuzak d: Orada çocuklar için küçük tabaklar var, ama restoran sadece akşam 17'den sonra açık; kahvaltı yok."
+        },
+        {
+          "number": 20,
+          "type": "zuordnung",
+          "prompt": "Ein Kollege ist heute Abend müde und möchte nicht kochen. Er möchte sich Sushi nach Hause bringen lassen.",
+          "answer": "b",
+          "evidence": [{ "text": "b", "quote": "wir bringen Ihr Essen in 40 Minuten zu Ihnen" }],
+          "explanation": "b ilanı bir Sushi teslimat servisi: Her gün 22'ye kadar online sipariş alıyor ve yemeği 40 dakikada eve getiriyor. Tuzak a: Orada da Japon yemekleri var, ama orada kişi kendisi yemek pişiriyor; eve teslimat yok."
+        }
+      ]
+    }
+  ]
+}

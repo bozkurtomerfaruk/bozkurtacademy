@@ -188,6 +188,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Die jüngste Bäckerin der Stadt' },
                   { set: 'set-2', title: 'Flohmarkt im Hinterhof' },
+                  { set: 'set-3', title: 'Der älteste Läufer im Park' },
+                  { set: 'set-4', title: 'Kinoabend im Dorf' },
+                  { set: 'set-5', title: 'Die Taxifahrerin mit drei Sprachen' },
                 ]
               }, // Teil 1
               {
@@ -195,6 +198,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Im Kaufhaus' },
                   { set: 'set-2', title: 'Im Klinikum' },
+                  { set: 'set-3', title: 'Am Bahnhof' },
+                  { set: 'set-4', title: 'Im Einkaufszentrum' },
+                  { set: 'set-5', title: 'In der Volkshochschule' },
                 ]
               }, // Teil 2
               {
@@ -202,6 +208,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Grüße aus dem Sprachkurs' },
                   { set: 'set-2', title: 'Die neue Wohnung' },
+                  { set: 'set-3', title: 'Geburtstag im Park' },
+                  { set: 'set-4', title: 'Krank im Bett' },
+                  { set: 'set-5', title: 'Ein neues Hobby' },
                 ]
               }, // Teil 3
               {
@@ -209,6 +218,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Essen gehen' },
                   { set: 'set-2', title: 'Hilfe im Alltag' },
+                  { set: 'set-3', title: 'Sport und Bewegung' },
+                  { set: 'set-4', title: 'Wohnen auf Zeit' },
+                  { set: 'set-5', title: 'Gebraucht kaufen' },
                 ]
               }, // Teil 4
             ] },

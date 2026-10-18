@@ -1,0 +1,128 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Die Taxifahrerin mit drei Sprachen",
+  "minutes": 8,
+  "instructions": "Sie lesen in einer Zeitung diesen Text. Wählen Sie für die Aufgaben 1 bis 5 die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "taxi",
+          "title": "Die Taxifahrerin mit drei Sprachen",
+          "paragraphs": [
+            "Zora Winter fährt in Kiefernhain Taxi. Die 38-Jährige spricht Deutsch, Englisch und Spanisch. Zoras Mutter kommt aus Chile, deshalb spricht Zora Winter schon seit ihrer Kindheit Spanisch. Englisch hat sie in der Schule gelernt. Später hat sie ein Jahr in Kanada gearbeitet.",
+            "Zora Winter arbeitet von Dienstag bis Samstag, meistens von 14 bis 22 Uhr. Am Vormittag hat sie frei. Besonders im Sommer kommen viele Touristen mit dem Zug nach Kiefernhain, weil sie im Wald wandern möchten. Im Winter sind es nur wenige. Die Touristen freuen sich, wenn sie im Taxi ihre eigene Sprache sprechen können.",
+            "Lustige Erlebnisse hat sie viele. Einmal hat ein Mann aus England lange mit ihr Englisch gesprochen. Am Ende hat er gesagt: „Ihr Deutsch ist aber auch sehr gut!“ Der Mann hat gedacht, dass Zora Winter aus England kommt. Ein anderes Mal hat eine Familie aus Spanien ihren Koffer im Taxi vergessen. Zora Winter ist zum Hotel gefahren und hat den Koffer gebracht. Später hat die Familie ihr eine Postkarte aus Madrid geschickt.",
+            "Im nächsten Jahr möchte Zora Winter noch Italienisch lernen. Einen Kurs an der Volkshochschule hat sie schon gefunden. Er ist am Montagabend – das passt gut, denn montags fährt sie nicht."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "abc",
+          "prompt": "Zora Winter …",
+          "options": {
+            "a": "hat Spanisch in Kanada gelernt.",
+            "b": "spricht seit ihrer Kindheit Spanisch.",
+            "c": "hat Englisch von ihrer Mutter gelernt."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "taxi",
+              "quote": "deshalb spricht Zora Winter schon seit ihrer Kindheit Spanisch"
+            },
+            {
+              "text": "taxi",
+              "quote": "Englisch hat sie in der Schule gelernt."
+            }
+          ],
+          "explanation": "Annesi Şili'den geldiği için Zora Winter çocukluğundan beri İspanyolca konuşuyor: „deshalb spricht Zora Winter schon seit ihrer Kindheit Spanisch“. a) yanlış: Kanada'da İspanyolca öğrenmedi; orada bir yıl çalıştı. İspanyolcayı çocukken konuşmaya başladı. c) yanlış: İngilizceyi annesinden değil, okulda öğrendi: „Englisch hat sie in der Schule gelernt.“"
+        },
+        {
+          "number": 2,
+          "type": "abc",
+          "prompt": "Zora Winter arbeitet …",
+          "options": {
+            "a": "meistens am Nachmittag und am Abend.",
+            "b": "von Montag bis Freitag.",
+            "c": "meistens am Vormittag."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "taxi",
+              "quote": "meistens von 14 bis 22 Uhr"
+            }
+          ],
+          "explanation": "Zora Winter genellikle saat 14'ten 22'ye kadar, yani öğleden sonra ve akşam çalışıyor: „meistens von 14 bis 22 Uhr“. b) yanlış: Pazartesiden cumaya değil, salıdan cumartesiye çalışıyor: „von Dienstag bis Samstag“; pazartesi taksi sürmüyor. c) yanlış: Öğleden önce izinli: „Am Vormittag hat sie frei.“"
+        },
+        {
+          "number": 3,
+          "type": "abc",
+          "prompt": "Viele Touristen …",
+          "options": {
+            "a": "kommen im Winter zum Wandern nach Kiefernhain.",
+            "b": "kommen mit dem Auto nach Kiefernhain.",
+            "c": "freuen sich, wenn sie im Taxi ihre Sprache sprechen können."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "taxi",
+              "quote": "Die Touristen freuen sich, wenn sie im Taxi ihre eigene Sprache sprechen können."
+            }
+          ],
+          "explanation": "Turistler takside kendi dillerini konuşabildiklerinde seviniyor: „Die Touristen freuen sich, wenn sie im Taxi ihre eigene Sprache sprechen können.“ a) yanlış: Turistler özellikle yazın geliyor, kışın çok az geliyor: „Im Winter sind es nur wenige.“ b) yanlış: Turistler arabayla değil, trenle geliyor: „mit dem Zug nach Kiefernhain“."
+        },
+        {
+          "number": 4,
+          "type": "abc",
+          "prompt": "Der Mann aus England …",
+          "options": {
+            "a": "hat gedacht, dass Zora Winter aus England kommt.",
+            "b": "hat seinen Koffer im Taxi vergessen.",
+            "c": "hat Zora Winter eine Postkarte geschickt."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "taxi",
+              "quote": "Der Mann hat gedacht, dass Zora Winter aus England kommt."
+            }
+          ],
+          "explanation": "İngiltereli adam Zora Winter'ın İngiltere'den geldiğini sandı: „Der Mann hat gedacht, dass Zora Winter aus England kommt.“ b) yanlış: Bavulunu takside unutan İngiltereli adam değil, İspanya'dan gelen bir aile: „eine Familie aus Spanien“. c) yanlış: Madrid'den kartpostalı da İspanyol aile gönderdi: „Später hat die Familie ihr eine Postkarte aus Madrid geschickt.“"
+        },
+        {
+          "number": 5,
+          "type": "abc",
+          "prompt": "Der Italienischkurs …",
+          "options": {
+            "a": "beginnt schon in diesem Monat.",
+            "b": "ist an einem Tag, an dem Zora Winter nicht arbeitet.",
+            "c": "ist am Samstagabend."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "taxi",
+              "quote": "Er ist am Montagabend – das passt gut, denn montags fährt sie nicht."
+            },
+            {
+              "text": "taxi",
+              "quote": "Im nächsten Jahr möchte Zora Winter noch Italienisch lernen."
+            }
+          ],
+          "explanation": "İtalyanca kursu pazartesi akşamı; Zora Winter pazartesi günleri taksi sürmüyor: „Er ist am Montagabend – das passt gut, denn montags fährt sie nicht.“ a) yanlış: Bu ay değil, gelecek yıl İtalyanca öğrenmek istiyor: „Im nächsten Jahr möchte Zora Winter noch Italienisch lernen.“ c) yanlış: Kurs cumartesi değil, pazartesi akşamı; cumartesi Zora Winter çalışıyor."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-5",
+  "title": "Ein neues Hobby",
+  "minutes": 8,
+  "instructions": "Sie lesen eine E-Mail. Wählen Sie für die Aufgaben 11 bis 15 die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "mail",
+          "title": "Mein Donnerstagabend",
+          "byline": "E-Mail von Selma an Emil",
+          "paragraphs": [
+            "Lieber Emil,",
+            "du hast mich letzte Woche gefragt, was ich am Donnerstagabend immer mache. Ich lerne tanzen! Angefangen hat alles im Mai auf der Hochzeit von meiner Cousine. Alle haben getanzt, nur ich habe am Tisch gesessen, weil ich nicht tanzen konnte. Das wollte ich ändern.",
+            "Seit drei Monaten mache ich jetzt einen Salsakurs in der Tanzschule am Bahnhof. Unser Lehrer heißt Herr Sommer. Er ist schon über 60, aber er tanzt besser als wir alle! Er erklärt alles langsam und hat viel Geduld mit uns.",
+            "In der Gruppe sind zehn Leute. Die meisten kommen zu zweit, aber ich bin allein gekommen. Deshalb tanze ich jede Woche mit einem anderen Partner. So lerne ich alle kennen.",
+            "Ein Problem gibt es aber: Nach dem Kurs tun mir oft die Füße weh. Ich tanze noch in alten Sportschuhen, weil ich keine Tanzschuhe habe. Am Samstag will ich mir endlich Tanzschuhe kaufen.",
+            "Am Freitag, dem 27. November, gibt es in der Tanzschule einen Kursabend. Alle Gruppen zeigen dort, was sie gelernt haben. Möchtest du mitkommen? Der Eintritt ist frei, aber du musst dich bis zum 20. November bei mir melden.",
+            "Viele Grüße",
+            "Selma"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 11,
+          "type": "abc",
+          "prompt": "Selma hat mit dem Tanzen angefangen, weil …",
+          "options": {
+            "a": "sie im Mai geheiratet hat.",
+            "b": "Emil sie zu einem Tanzkurs eingeladen hat.",
+            "c": "sie auf einer Hochzeit nicht tanzen konnte."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "nur ich habe am Tisch gesessen, weil ich nicht tanzen konnte"
+            }
+          ],
+          "explanation": "Mayıs ayında kuzeninin düğününde herkes dans etti, Selma ise dans edemediği için masada oturdu: „nur ich habe am Tisch gesessen, weil ich nicht tanzen konnte“. Bunu değiştirmek istedi. a) yanlış: Mayıs ayında Selma değil, kuzeni evlendi: „auf der Hochzeit von meiner Cousine“. b) yanlış: Emil onu kursa davet etmedi; Emil ona perşembe akşamları ne yaptığını sordu: „du hast mich letzte Woche gefragt, was ich am Donnerstagabend immer mache“."
+        },
+        {
+          "number": 12,
+          "type": "abc",
+          "prompt": "Herr Sommer …",
+          "options": {
+            "a": "ist noch keine 60 Jahre alt.",
+            "b": "tanzt nicht so gut wie die Kursteilnehmer.",
+            "c": "erklärt alles langsam."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Er erklärt alles langsam und hat viel Geduld mit uns."
+            }
+          ],
+          "explanation": "Öğretmen Herr Sommer her şeyi yavaş açıklıyor ve çok sabırlı: „Er erklärt alles langsam und hat viel Geduld mit uns.“ a) yanlış: Herr Sommer 60 yaşın üstünde: „Er ist schon über 60“. b) yanlış: Kurstakilerin hepsinden daha iyi dans ediyor: „aber er tanzt besser als wir alle!“"
+        },
+        {
+          "number": 13,
+          "type": "abc",
+          "prompt": "Im Kurs …",
+          "options": {
+            "a": "tanzt Selma jede Woche mit einem anderen Partner.",
+            "b": "sind die meisten Leute allein gekommen.",
+            "c": "sind zwölf Leute."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Deshalb tanze ich jede Woche mit einem anderen Partner."
+            }
+          ],
+          "explanation": "Selma kursa yalnız geldiği için her hafta başka bir partnerle dans ediyor: „Deshalb tanze ich jede Woche mit einem anderen Partner.“ b) yanlış: Kursa yalnız gelen Selma; çoğu kişi ikişer geliyor: „Die meisten kommen zu zweit“. c) yanlış: Grupta on iki değil, on kişi var: „In der Gruppe sind zehn Leute.“"
+        },
+        {
+          "number": 14,
+          "type": "abc",
+          "prompt": "Selma …",
+          "options": {
+            "a": "hat schon neue Tanzschuhe gekauft.",
+            "b": "tanzt im Moment in alten Sportschuhen.",
+            "c": "kauft am Donnerstag neue Schuhe."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Ich tanze noch in alten Sportschuhen, weil ich keine Tanzschuhe habe."
+            }
+          ],
+          "explanation": "Selma dans ayakkabısı olmadığı için şu anda eski spor ayakkabılarla dans ediyor: „Ich tanze noch in alten Sportschuhen, weil ich keine Tanzschuhe habe.“ Kurstan sonra ayakları sık sık ağrıyor: „Nach dem Kurs tun mir oft die Füße weh.“ a) yanlış: Henüz dans ayakkabısı yok: „weil ich keine Tanzschuhe habe“. c) yanlış: Ayakkabıları perşembe değil, cumartesi almak istiyor: „Am Samstag will ich mir endlich Tanzschuhe kaufen.“ Perşembe akşamı onun kurs günü."
+        },
+        {
+          "number": 15,
+          "type": "abc",
+          "prompt": "Wenn Emil zum Kursabend kommen möchte, …",
+          "options": {
+            "a": "muss er eine Eintrittskarte kaufen.",
+            "b": "muss er sich bis zum 20. November bei Selma melden.",
+            "c": "muss er bis zum 27. November die Tanzschule anrufen."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "du musst dich bis zum 20. November bei mir melden"
+            }
+          ],
+          "explanation": "Emil kurs akşamına gelmek isterse 20 Kasım'a kadar Selma'ya haber vermesi gerekiyor: „du musst dich bis zum 20. November bei mir melden“. a) yanlış: Giriş ücretsiz: „Der Eintritt ist frei“. c) yanlış: 27 Kasım kurs akşamının tarihi; Emil dans okulunu değil, 20 Kasım'a kadar Selma'yı bilgilendirmeli: „bei mir melden“."
+        }
+      ]
+    }
+  ]
+}

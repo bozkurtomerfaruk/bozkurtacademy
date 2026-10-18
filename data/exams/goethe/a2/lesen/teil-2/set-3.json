@@ -1,0 +1,92 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-3",
+  "title": "Am Bahnhof",
+  "minutes": 6,
+  "instructions": "Sie sind im Hauptbahnhof Mühlbrück. Lesen Sie die Aufgaben 6 bis 10 und die Informationstafel. Wo finden Sie das? Wählen Sie die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "tafel",
+          "title": "Hauptbahnhof Mühlbrück – Wegweiser",
+          "paragraphs": [
+            {
+              "rows": [
+                ["3. Obergeschoss", "Parkplätze für Autos · Autos mieten"],
+                ["2. Obergeschoss", "Apotheke · Arztpraxis · Fundbüro · Friseur"],
+                ["1. Obergeschoss", "Gleise 1–10 · Wartesaal · Kaffeebar „Abfahrt“"],
+                ["Erdgeschoss", "Reisezentrum: Fahrkarten und Beratung · Information · Drogerie: Kosmetik, Shampoo, Zahnbürsten · Alles für die Reise: Koffer, Taschen, Kopfhörer · Geldautomat"],
+                ["1. Untergeschoss", "Gepäck abgeben: Schließfächer · Toiletten und Duschen · Supermarkt · Fahrradstation: Fahrräder mieten und reparieren"],
+                ["2. Untergeschoss", "U-Bahn: Linien U1 und U4 · S-Bahn: Gleise 21–24 · Fahrkartenautomaten"]
+              ]
+            },
+            "Der Bahnhof ist Tag und Nacht geöffnet. Das Reisezentrum ist täglich von 6 bis 22 Uhr für Sie da. Aufzüge gibt es neben der Information und an allen Gleisen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "abc",
+          "prompt": "Sie sind die ganze Nacht mit dem Zug gefahren und möchten vor Ihrem Termin noch duschen.",
+          "options": { "a": "Erdgeschoss", "b": "1. Untergeschoss", "c": "anderes Geschoss" },
+          "answer": "b",
+          "evidence": [{ "text": "tafel", "quote": "Toiletten und Duschen" }],
+          "explanation": "Duşlar 1. alt katta (1. Untergeschoss): „Toiletten und Duschen“. a) yanlış: Zemin katta bilet merkezi, danışma ve mağazalar var; duş yok."
+        },
+        {
+          "number": 6,
+          "type": "abc",
+          "prompt": "Ihr Zug nach Hamburg fährt in zehn Minuten von Gleis 7 ab.",
+          "options": { "a": "2. Untergeschoss", "b": "1. Obergeschoss", "c": "anderes Geschoss" },
+          "answer": "b",
+          "evidence": [{ "text": "tafel", "quote": "Gleise 1–10" }],
+          "explanation": "Tren 7. perondan kalkıyor. Tabloda „Gleise 1–10“ 1. üst katta (1. Obergeschoss) yazıyor; 7 numara da bu peronların içinde. a) yanlış: 2. alt katta da peronlar var, ama bunlar S-Bahn peronları 21–24: „S-Bahn: Gleise 21–24“. c) yanlış: 7. peron seçeneklerdeki 1. üst katta."
+        },
+        {
+          "number": 7,
+          "type": "abc",
+          "prompt": "Sie möchten für drei Tage ein Auto leihen und damit in die Berge fahren.",
+          "options": { "a": "Erdgeschoss", "b": "1. Untergeschoss", "c": "anderes Geschoss" },
+          "answer": "c",
+          "evidence": [{ "text": "tafel", "quote": "Autos mieten" }],
+          "explanation": "Araba kiralama („Autos mieten“) 3. üst katta. 3. üst kat seçeneklerde yok, bu yüzden c doğru. a) yanlış: Zemin katta bilet ve danışma (Reisezentrum) var; araba kiralama orada yazmıyor. b) yanlış: 1. alt katta da kiralama var, ama bisiklet kiralama: „Fahrräder mieten und reparieren“."
+        },
+        {
+          "number": 8,
+          "type": "abc",
+          "prompt": "Ihr Zug fährt erst am Abend. Bis dahin möchten Sie ohne Ihren schweren Koffer in die Stadt gehen.",
+          "options": { "a": "1. Untergeschoss", "b": "Erdgeschoss", "c": "anderes Geschoss" },
+          "answer": "a",
+          "evidence": [{ "text": "tafel", "quote": "Gepäck abgeben: Schließfächer" }],
+          "explanation": "Valizi birkaç saat bırakmak için kilitli dolaplar gerekiyor: „Gepäck abgeben: Schließfächer“. Bunlar 1. alt katta. b) yanlış: Zemin katta da valiz var, ama orada valiz satılıyor: „Alles für die Reise: Koffer, Taschen, Kopfhörer“. c) yanlış: Kilitli dolaplar seçeneklerdeki 1. alt katta."
+        },
+        {
+          "number": 9,
+          "type": "abc",
+          "prompt": "Sie haben eine Frage zu Ihrer Reise nach Wien. Sie möchten mit einer Person sprechen und dann gleich die Fahrkarte kaufen.",
+          "options": { "a": "2. Untergeschoss", "b": "Erdgeschoss", "c": "anderes Geschoss" },
+          "answer": "b",
+          "evidence": [{ "text": "tafel", "quote": "Reisezentrum: Fahrkarten und Beratung" }],
+          "explanation": "Zemin katta „Reisezentrum: Fahrkarten und Beratung“ var: Orada bilet satılıyor ve danışmanlık (Beratung) yapılıyor. a) yanlış: 2. alt katta da bilet alınabilir, ama orada bilet otomatları var: „Fahrkartenautomaten“. Bir otomatla konuşamazsınız; danışmanlık (Beratung) orada yazmıyor. c) yanlış: Reisezentrum seçeneklerdeki zemin katta."
+        },
+        {
+          "number": 10,
+          "type": "abc",
+          "prompt": "Sie haben starke Kopfschmerzen und brauchen ein Medikament.",
+          "options": { "a": "1. Untergeschoss", "b": "Erdgeschoss", "c": "anderes Geschoss" },
+          "answer": "c",
+          "evidence": [{ "text": "tafel", "quote": "Apotheke" }],
+          "explanation": "İlaç eczaneden (Apotheke) alınır. Eczane 2. üst katta; 2. üst kat seçeneklerde yok, bu yüzden c doğru. a) yanlış: 1. alt katta bir süpermarket var, eczane yok. b) yanlış: Zemin kattaki „Drogerie“ kozmetik, şampuan ve diş fırçası satıyor; ilaç orada yazmıyor."
+        }
+      ]
+    }
+  ]
+}

@@ -33,8 +33,10 @@
   function optionsFor(question, group) {
     if (FIXED_OPTIONS[question.type]) return FIXED_OPTIONS[question.type].map(([value, label]) => ({ value, label }));
     if (question.type === 'abc') return Object.entries(question.options).map(([value, label]) => ({ value, label }));
-    // zuordnung: every text of the group (ads a–j) plus the "no text fits" option (group.none, 0 by default; X at A2)
-    return [...group.texts.map(text => ({ value: text.label, label: text.label })), { value: noneOf(group), label: noneOf(group) }];
+    // zuordnung: every labelled text of the group (ads a–j, sentences a–h) plus the "no text fits" option
+    // (group.none: 0 by default, X at A2, false when there is none, e.g. Goethe B2)
+    const options = group.texts.filter(text => text.label).map(text => ({ value: text.label, label: text.label }));
+    return group.none === false ? options : [...options, { value: noneOf(group), label: noneOf(group) }];
   }
 
   const noneOf = group => group.none || '0';
@@ -42,9 +44,11 @@
   function answerText(question, group, value) {
     if (question.type === 'abc') return `${value}) ${question.options[value]}`;
     if (question.type === 'zuordnung') {
-      if (value === noneOf(group)) return `${value.toUpperCase()} (${t('taskNoMatch')})`;
+      if (group.none !== false && value === noneOf(group)) return `${value.toUpperCase()} (${t('taskNoMatch')})`;
       const text = group.texts.find(item => item.label === value);
-      return text?.title ? `${value} – ${text.title}` : value;
+      // Short texts without a title (sentences for a gap, headings) are shown in full.
+      const short = !text?.title && text?.paragraphs?.length === 1 && typeof text.paragraphs[0] === 'string' && text.paragraphs[0].length <= 160 ? text.paragraphs[0] : '';
+      return text?.title ? `${value} – ${text.title}` : short ? `${value} – ${short}` : value;
     }
     return FIXED_OPTIONS[question.type].find(([key]) => key === value)?.[1] || value;
   }
@@ -66,7 +70,10 @@
         html += `<span class="task-evidence" id="${mark.id}" data-q="${esc(mark.number)}" tabindex="-1">${esc(mark.quote)}</span>`;
         from = mark.at + mark.quote.length;
       }
-      return html + esc(paragraph.slice(from));
+      // {{10}} is a numbered gap (Goethe B2 Teil 2), {{0=…}} the example gap that is already filled in.
+      return (html + esc(paragraph.slice(from)))
+        .replace(/\{\{0=(.+?)\}\}/g, (all, sentence) => `<span class="task-gap is-example"><span class="task-gap-no">0</span> ${sentence}</span>`)
+        .replace(/\{\{(\d+)\}\}/g, (all, number) => `<span class="task-gap" data-gap="${number}"><span class="task-gap-no">${number}</span><span class="visually-hidden"> ${esc(t('taskGap'))}</span><span class="task-gap-pick"></span></span>`);
     };
     const paragraphs = text.paragraphs.map(paragraph => {
       // { "heading": "Ruhezeiten" } is a subheading inside the text (rules, notices).
@@ -109,7 +116,7 @@
 
     if (question.type === 'zuordnung') {
       const options = optionsFor(question, group).map(option =>
-        `<option value="${esc(option.value)}"${given === option.value ? ' selected' : ''}>${esc(option.value === noneOf(group) ? `${option.value.toUpperCase()} – ${t('taskNoMatch')}` : option.label)}</option>`).join('');
+        `<option value="${esc(option.value)}"${given === option.value ? ' selected' : ''}>${esc(group.none !== false && option.value === noneOf(group) ? `${option.value.toUpperCase()} – ${t('taskNoMatch')}` : option.label)}</option>`).join('');
       return `<div class="task-q task-q--select${question.example ? ' is-example' : ''}${outcome}" data-q="${esc(number)}">
         <label class="task-q-head" for="${name}">${badge}${prompt}</label>
         ${note}
@@ -154,6 +161,17 @@
     </div>`;
   }
 
+  // Gaps in a text show the sentence letter chosen for them.
+  function syncGaps(container, state, set) {
+    container.querySelectorAll('.task-gap[data-gap]').forEach(gap => {
+      const given = state.answers[gap.dataset.gap];
+      gap.querySelector('.task-gap-pick').textContent = given || '';
+      const question = set && questionsOf(set).find(({ question }) => String(question.number) === gap.dataset.gap)?.question;
+      gap.classList.toggle('is-right', !!(state.checked && question && given === question.answer));
+      gap.classList.toggle('is-wrong', !!(state.checked && question && given !== question.answer));
+    });
+  }
+
   function draw(container, set, path) {
     const state = states[path];
     const meta = [fill('taskMinutes', { n: set.minutes }), fill('taskQuestionCount', { n: scored(set).length })];
@@ -172,6 +190,7 @@
           : `<button class="btn primary" type="button" data-task-check>${esc(t('taskCheck'))}</button>`}
       </div>
     </div>`;
+    syncGaps(container, state, set);
   }
 
   function bind(container, set, path) {
@@ -184,6 +203,7 @@
       if (!input || !state || state.checked) return;
       if (input.value === '') delete state.answers[input.dataset.taskAnswer];
       else state.answers[input.dataset.taskAnswer] = input.value;
+      syncGaps(container, state, set);
       if (input.type === 'radio') {
         input.closest('.task-options')?.querySelectorAll('.task-option').forEach(option =>
           option.classList.toggle('is-chosen', option.contains(input)));

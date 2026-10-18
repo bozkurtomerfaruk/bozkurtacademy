@@ -52,9 +52,10 @@ Set şu adresten açılır: `#exams/goethe/b1/lesen/1/set-1`. DTZ gibi seviye ad
 }
 ```
 
-- `layout`: `article` (normal metin), `ads` (ilanlar, iki sütun), `comments` (okur yorumları).
+- `layout`: `article` (normal metin), `ads` (ilanlar, iki sütun), `comments` (okur yorumları), `gaps` (önce boşluklu metin, altında yerleştirilecek kısa cümleler/başlıklar listesi).
 - `question`: yalnızca Teil 4 gibi bütün soruların aynı olduğu durumlarda, soruların üstünde gösterilir.
-- `none`: eşleştirmede „uygun ilan yok“ seçeneğinin adı. Yazılmazsa `0` (Goethe B1); Goethe A2 Teil 4'te `"x"` (ekranda X). Cevap anahtarında da aynı değer kullanılır (`"answer": "x"`).
+- `none`: eşleştirmede „uygun ilan yok“ seçeneğinin adı. Yazılmazsa `0` (Goethe B1); Goethe A2 Teil 4'te `"x"` (ekranda X); böyle bir seçenek yoksa `false` (Goethe B2). Cevap anahtarında da aynı değer kullanılır (`"answer": "x"`).
+- Eşleştirmede seçenekler yalnızca `label`'ı olan metinlerdir; `label`'sız metinler (ör. boşluklu makale, başlığı aranan bölümler) okunacak metindir.
 
 ### Metin
 
@@ -74,6 +75,7 @@ Set şu adresten açılır: `#exams/goethe/b1/lesen/1/set-1`. DTZ gibi seviye ad
 
 - `id`: grup içinde benzersiz; açıklamalardaki alıntılar buna işaret eder.
 - `label`: ilan harfi (a–j) veya yorum numarası (0, 20…). Eşleştirme sorularında zorunludur.
+- Boşluklar (Goethe B2 Teil 2): düz metnin içinde `{{10}}` numaralı bir boşluktur; her boşluk grubun bir sorusuna karşılık gelir (soru numarası = boşluk numarası, `zuordnung`, seçenekler a–h cümleleri). Örnek boşluk `{{0=Örnek cümle.}}` olarak metne yazılır ve dolu gösterilir. Alıntılar boşluk işareti içeremez; boşluğun önündeki veya arkasındaki cümle alıntılanır.
 - `paragraphs`: düz metin; `{ "heading": "…" }` ara başlıktır (kurallar, duyurular); `{ "rows": [["3. Stock", "Spielwaren, Bücher"], …] }` bir tablodur (kat rehberi, bilgi panosu, program). Her satırda en az iki hücre olur, ilk hücre satır başlığı olarak gösterilir. Alıntılar (`evidence`) tablo hücrelerinde de aranır; bir alıntı tek bir hücrenin içinde kalmalıdır.
 
 ### Soru
@@ -96,7 +98,7 @@ Set şu adresten açılır: `#exams/goethe/b1/lesen/1/set-1`. DTZ gibi seviye ad
 | `abc` | `"options": { "a": "…", "b": "…", "c": "…" }` | `a`, `b` veya `c` |
 | `zuordnung` | grubun metinlerinin `label`'ları + `0` (veya grubun `none` değeri) | ör. `e`, `0` veya `x` |
 
-- `number`: sınavdaki numara (Teil 1: 1–6, Teil 2: 7–12, Teil 3: 13–19, Teil 4: 20–26, Teil 5: 27–30; Goethe A2: Teil 1: 1–5, Teil 2: 6–10, Teil 3: 11–15, Teil 4: 16–20). Numaralar ardışık olmalı.
+- `number`: sınavdaki numara (Teil 1: 1–6, Teil 2: 7–12, Teil 3: 13–19, Teil 4: 20–26, Teil 5: 27–30; Goethe A2: Teil 1: 1–5, Teil 2: 6–10, Teil 3: 11–15, Teil 4: 16–20; Goethe B2: Teil 1: 1–9, Teil 2: 10–15, Teil 3: 16–21, Teil 4: 22–27, Teil 5: 28–30). Numaralar ardışık olmalı.
 - `"example": true` ve `"number": 0`: örnek soru. Cevabı işaretli gösterilir, puana dahil değildir. Bir sette en fazla bir örnek olabilir.
 - `evidence`: cevabın dayandığı yerler. `quote`, `text` ile belirtilen metinde **harfi harfine ve yalnızca bir kez** geçmeli. Aynı metindeki alıntılar birbiriyle çakışmamalı. "Kontrol et"ten sonra bu yerler metinde soru numarasıyla vurgulanır. Cevabı `0` olan eşleştirme sorusunda boş bırakılabilir; tuzak ilanı göstermek için kullanılabilir.
 - `explanation`: Türkçe, en az 40 karakter.
@@ -125,5 +127,8 @@ Betik bütün setleri açar (yalnızca bazılarını kontrol etmek için: `node 
 - Eşleştirmede „uygun ilan yok“ (0 / X) tuzakları setler arasında çeşitlenir: her sette farklı bir sebebe dayanır (yer, gün/saat, hedef kitle, hizmet türü, sayı/fiyat/süre vb.); aynı Teil'de iki set aynı tür sebebi kullanmaz.
 - Soru köklerinde, seçeneklerde ve metinlerde zamir (er/sie/ihm/ihn …) iki kişiden hangisine gönderme yaptığı belirsiz kalacaksa zamir yerine isim yazılır (ör. „Marco fragt Hakan, ob Hakan …“). Rollerin yer değiştirmesine dayanan çeldiriciler (davet eden/davet edilen, yazan/okuyan) bir sette en fazla bir kez kullanılır.
 - Çeldiriciler dünya bilgisiyle veya mantıkla, metni okumadan elenemez (ör. 22 yaşındaki birinin „40 yıl“ çalışmış olması, bir dans öğretmeninin „öğrencilerden kötü dans etmesi“). Çeldirici, metinde gerçekten geçen ama yanlış kişiye, zamana veya duruma bağlanmış bir bilgiye dayanır.
+- Goethe B2 Teil 1'de kişilerin görüşleri birbirine yakın olur (hepsi aynı konuda, kısmen benzer argümanlarla), ama her ifade metinden kanıtlanabilir biçimde yalnızca tek bir kişiye aittir; diğer kişilerin metinleri o ifadeyi açıkça desteklemez veya ona karşıdır.
+- Goethe B2 Teil 2'de artan cümleler konuya uygun olur, ama boşluğun öncesi ve sonrasıyla bağlantısı (bağlaç, zamir, zaman, mantık sırası) tutmaz. Hiçbir boşluk yalnızca bir dilbilgisi ipucuyla (ör. tekil/çoğul zamir, „dennoch/deshalb“) çözülemez; doğru cümle içerik olarak da bağlanmalıdır.
+- Goethe B2 Teil 3'te sorular ve doğru şıklar metindeki cümleyi tekrar etmez; doğru cevap birden fazla cümleyi birleştirmeyi veya yazarın tutumunu çıkarmayı gerektirir. Çeldiriciler metinde geçen bilgileri yanlış ilişkilendirir.
 - Yeni bir set, cevap anahtarına bakmadan baştan çözülüp anahtarla karşılaştırılır.
 - Her yeni set grubu yazıldıktan sonra, setleri yazmamış ve konuşmanın bağlamını görmeyen bir alt ajanla bağımsız doğrulama yapılır: Ajana yalnızca cevapsız kopyalar (metinler, sorular, seçenekler; örnek soruların basılı çözümü hariç cevap ve açıklama yok) verilir. Ajan sınava giren bir öğrenci gibi çözer; her soru için cevabını, dayandığı cümleyi ve emin olup olmadığını yazar. Sonuç anahtarla karşılaştırılır; uyuşmayan, emin olunamayan ve ajanın fark ettiği sorunlar raporda listelenir ve düzeltmeden önce onaya sunulur.

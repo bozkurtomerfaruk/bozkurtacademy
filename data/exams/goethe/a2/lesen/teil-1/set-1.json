@@ -1,0 +1,124 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-1",
+  "title": "Die jüngste Bäckerin der Stadt",
+  "minutes": 8,
+  "instructions": "Sie lesen in einer Zeitung diesen Text. Wählen Sie für die Aufgaben 1 bis 5 die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "baeckerei",
+          "title": "Die jüngste Bäckerin der Stadt",
+          "paragraphs": [
+            "Leni Vogel ist 22 Jahre alt und hat seit März eine eigene Bäckerei in Fichtenau. Die Backstube Sonnenkorn am Marktplatz hat früher ihrem Großvater Bernhard gehört. Er hat das Geschäft 40 Jahre lang geführt. Letztes Jahr wollte er aufhören, weil er Probleme mit dem Rücken hatte. Leni war gerade mit ihrer Ausbildung fertig und hat sofort gesagt: „Ich mache weiter!“",
+            "Ihr Arbeitstag beginnt um drei Uhr nachts. Zuerst backt sie Brot und Brötchen, später Kuchen. In der Backstube arbeitet sie allein. Um sechs Uhr öffnet der Laden, und dort hilft ihr am Vormittag ihre Mutter. Am Nachmittag macht sie dann die Bestellungen für den nächsten Tag. Am Sonntag und am Montag ist die Bäckerei geschlossen.",
+            "Leni hat auch neue Ideen. Seit Mai gibt es jeden Freitag ein Brot mit Kürbiskernen. Vor dem Laden stehen jetzt drei kleine Tische, und dort können die Kunden Kaffee trinken. Die Rezepte von ihrem Großvater benutzt sie aber weiter.",
+            "Die meisten Kunden finden die Änderungen gut. Einige ältere Leute haben am Anfang aber gefragt: „Wo ist denn der Chef?“ Manche wünschen sich auch, dass die Bäckerei am Sonntag geöffnet ist. Das möchte Leni aber nicht. Ihr Großvater kommt fast jeden Morgen in den Laden – aber nicht zum Arbeiten, sondern zum Frühstücken."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "abc",
+          "prompt": "Leni Vogel …",
+          "options": {
+            "a": "hat die Bäckerei von ihrer Mutter bekommen.",
+            "b": "führt die Bäckerei seit März.",
+            "c": "hat die Bäckerei 40 Jahre lang geführt."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "baeckerei",
+              "quote": "hat seit März eine eigene Bäckerei in Fichtenau"
+            }
+          ],
+          "explanation": "Metnin başında Leni'nin mart ayından beri kendi fırını olduğu yazıyor: „hat seit März eine eigene Bäckerei“. a) yanlış: Fırın eskiden annesinin değil, dedesi Bernhard'ın: „hat früher ihrem Großvater Bernhard gehört“. c) yanlış: Fırını 40 yıl boyunca dedesi işletti, Leni değil: „Er hat das Geschäft 40 Jahre lang geführt.“"
+        },
+        {
+          "number": 2,
+          "type": "abc",
+          "prompt": "Lenis Mutter …",
+          "options": {
+            "a": "backt mit Leni in der Nacht Brot.",
+            "b": "macht am Nachmittag die Bestellungen.",
+            "c": "arbeitet am Vormittag im Laden."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "baeckerei",
+              "quote": "dort hilft ihr am Vormittag ihre Mutter"
+            }
+          ],
+          "explanation": "Annesi öğleden önce dükkânda yardım ediyor: „dort hilft ihr am Vormittag ihre Mutter“. a) yanlış: Gece fırında Leni yalnız çalışıyor: „In der Backstube arbeitet sie allein.“ b) yanlış: Öğleden sonra siparişleri annesi değil, Leni hazırlıyor: „Am Nachmittag macht sie dann die Bestellungen für den nächsten Tag.“."
+        },
+        {
+          "number": 3,
+          "type": "abc",
+          "prompt": "Neu in der Bäckerei ist, dass …",
+          "options": {
+            "a": "die Kunden vor dem Laden Kaffee trinken können.",
+            "b": "Leni die Rezepte von ihrem Großvater nicht mehr benutzt.",
+            "c": "es jeden Montag ein Brot mit Kürbiskernen gibt."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "baeckerei",
+              "quote": "dort können die Kunden Kaffee trinken"
+            }
+          ],
+          "explanation": "Dükkânın önünde artık üç küçük masa var ve müşteriler orada kahve içebiliyor: „dort können die Kunden Kaffee trinken“. b) yanlış: Leni dedesinin tariflerini kullanmaya devam ediyor: „benutzt sie aber weiter“. c) yanlış: Kabak çekirdekli ekmek pazartesi değil, her cuma var; pazartesi fırın zaten kapalı."
+        },
+        {
+          "number": 4,
+          "type": "abc",
+          "prompt": "Was steht im Text über die Kunden?",
+          "options": {
+            "a": "Viele finden die neuen Ideen nicht gut.",
+            "b": "Manche möchten, dass die Bäckerei am Montag geöffnet ist.",
+            "c": "Einige ältere Kunden haben zuerst nach dem Chef gefragt."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "baeckerei",
+              "quote": "Einige ältere Leute haben am Anfang aber gefragt"
+            }
+          ],
+          "explanation": "Bazı yaşlı müşteriler başta „Wo ist denn der Chef?“ (Patron nerede?) diye sormuş. a) yanlış: Müşterilerin çoğu değişiklikleri iyi buluyor: „Die meisten Kunden finden die Änderungen gut.“ b) yanlış: Bazı müşteriler fırının pazartesi değil, pazar günü açık olmasını istiyor: „dass die Bäckerei am Sonntag geöffnet ist“."
+        },
+        {
+          "number": 5,
+          "type": "abc",
+          "prompt": "Lenis Großvater …",
+          "options": {
+            "a": "frühstückt fast jeden Morgen in der Bäckerei.",
+            "b": "hilft Leni am Vormittag im Laden.",
+            "c": "hat aufgehört, weil er keine Lust mehr hatte."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "baeckerei",
+              "quote": "sondern zum Frühstücken"
+            },
+            {
+              "text": "baeckerei",
+              "quote": "weil er Probleme mit dem Rücken hatte"
+            }
+          ],
+          "explanation": "Dedesi neredeyse her sabah dükkâna geliyor, ama çalışmak için değil, kahvaltı etmek için: „nicht zum Arbeiten, sondern zum Frühstücken“. b) yanlış: Öğleden önce dükkânda annesi yardım ediyor, dedesi orada çalışmıyor. c) yanlış: Dedesi sırtında sorunlar olduğu için bıraktı: „weil er Probleme mit dem Rücken hatte“."
+        }
+      ]
+    }
+  ]
+}

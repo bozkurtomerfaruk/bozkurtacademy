@@ -1,0 +1,124 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Flohmarkt im Hinterhof",
+  "minutes": 8,
+  "instructions": "Sie lesen in einer Zeitung diesen Text. Wählen Sie für die Aufgaben 1 bis 5 die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "flohmarkt",
+          "title": "Flohmarkt im Hinterhof",
+          "paragraphs": [
+            "Zweimal im Jahr, im Mai und im September, ist im Hof vom Haus Am Lindenplatz 7 in Grünhagen viel los. Dann verkaufen die Nachbarn alte Sachen, die sie nicht mehr brauchen. Den ersten Flohmarkt hat Nora Kramer vor drei Jahren organisiert. „Ich wollte meinen Keller leer machen, aber nicht alles wegwerfen“, erzählt die 35-jährige Lehrerin.",
+            "Im Haus wohnen 18 Familien, und fast alle machen mit. Auf den Tischen liegen Kleidung, Bücher, Spielzeug und Geschirr. Möbel darf man nicht verkaufen, weil im Hof zu wenig Platz ist. Die Kinder aus dem Haus verkaufen Kekse und Saft.",
+            "Das Geld behalten die Nachbarn nicht ganz für sich. Jeder gibt die Hälfte von seinem Geld in eine gemeinsame Kasse. Im letzten Jahr waren so 640 Euro in der Kasse. Mit diesem Geld hat die Hausgemeinschaft neue Bänke für den Hof gekauft. Das Geld aus dem Keksverkauf bekommt der Kindergarten in der Nachbarstraße.",
+            "Auch Leute aus anderen Straßen kommen gern. Oskar Ebert ist 78 und wohnt seit 40 Jahren im Haus. „Früher habe ich viele Nachbarn nur im Treppenhaus gesehen. Jetzt trinken wir zusammen Kaffee und reden“, sagt er. Der nächste Flohmarkt ist am Samstag, dem 12. September, von 10 bis 16 Uhr. Wenn es regnet, findet er eine Woche später statt."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "abc",
+          "prompt": "Den Flohmarkt im Hinterhof gibt es …",
+          "options": {
+            "a": "zweimal im Jahr.",
+            "b": "jeden Samstag im Mai.",
+            "c": "seit 40 Jahren."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "flohmarkt",
+              "quote": "Zweimal im Jahr, im Mai und im September"
+            }
+          ],
+          "explanation": "Bit pazarı yılda iki kez, mayıs ve eylül aylarında yapılıyor: „Zweimal im Jahr, im Mai und im September“. b) yanlış: Mayıs ayında her cumartesi değil, yılda sadece iki kez var. c) yanlış: İlk bit pazarı üç yıl önce yapıldı: „vor drei Jahren“; 40 yıldır evde oturan kişi Oskar Ebert."
+        },
+        {
+          "number": 2,
+          "type": "abc",
+          "prompt": "Auf dem Flohmarkt …",
+          "options": {
+            "a": "kann man auch alte Möbel kaufen.",
+            "b": "verkaufen die Kinder Kekse und Saft.",
+            "c": "verkaufen die Kinder Spielzeug für den Kindergarten."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "flohmarkt",
+              "quote": "Die Kinder aus dem Haus verkaufen Kekse und Saft."
+            }
+          ],
+          "explanation": "Evdeki çocuklar kurabiye ve meyve suyu satıyor: „Die Kinder aus dem Haus verkaufen Kekse und Saft.“ a) yanlış: Avluda yer az olduğu için mobilya satmak yasak: „Möbel darf man nicht verkaufen“. c) yanlış: Çocuklar oyuncak değil, kurabiye ve meyve suyu satıyor. Anaokulu kurabiye satışından gelen parayı alıyor."
+        },
+        {
+          "number": 3,
+          "type": "abc",
+          "prompt": "Mit dem Geld aus der gemeinsamen Kasse …",
+          "options": {
+            "a": "hilft man dem Kindergarten in der Nachbarstraße.",
+            "b": "bekommt jede Familie 640 Euro.",
+            "c": "hat die Hausgemeinschaft Bänke für den Hof gekauft."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "flohmarkt",
+              "quote": "Mit diesem Geld hat die Hausgemeinschaft neue Bänke für den Hof gekauft."
+            }
+          ],
+          "explanation": "Ortak kasadaki parayla ev sakinleri avlu için yeni banklar aldı: „hat die Hausgemeinschaft neue Bänke für den Hof gekauft“. a) yanlış: Anaokulu kasadaki parayı değil, kurabiye satışından gelen parayı alıyor: „Das Geld aus dem Keksverkauf bekommt der Kindergarten“. b) yanlış: 640 euro geçen yıl kasada toplanan paranın tamamı, her aileye verilen para değil."
+        },
+        {
+          "number": 4,
+          "type": "abc",
+          "prompt": "Oskar Ebert …",
+          "options": {
+            "a": "wohnt seit drei Jahren im Haus.",
+            "b": "redet jetzt mehr mit seinen Nachbarn.",
+            "c": "kommt aus einer anderen Straße zum Flohmarkt."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "flohmarkt",
+              "quote": "Jetzt trinken wir zusammen Kaffee und reden"
+            },
+            {
+              "text": "flohmarkt",
+              "quote": "wohnt seit 40 Jahren im Haus"
+            }
+          ],
+          "explanation": "Oskar Ebert eskiden komşularını sadece merdivende görüyormuş, şimdi onlarla kahve içip konuşuyor: „Jetzt trinken wir zusammen Kaffee und reden“. a) yanlış: 40 yıldır bu evde oturuyor: „wohnt seit 40 Jahren im Haus“; üç yıl önce başlayan şey bit pazarı. c) yanlış: Başka sokaklardan gelen insanlar var, ama Oskar Ebert bu evde oturuyor."
+        },
+        {
+          "number": 5,
+          "type": "abc",
+          "prompt": "Der nächste Flohmarkt …",
+          "options": {
+            "a": "beginnt am Samstag um 16 Uhr.",
+            "b": "ist im Mai.",
+            "c": "findet bei Regen eine Woche später statt."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "flohmarkt",
+              "quote": "Wenn es regnet, findet er eine Woche später statt."
+            }
+          ],
+          "explanation": "Yağmur yağarsa bit pazarı bir hafta sonra yapılacak: „Wenn es regnet, findet er eine Woche später statt.“ a) yanlış: Bit pazarı saat 16'da başlamıyor, 10'dan 16'ya kadar sürüyor. b) yanlış: Bir sonraki bit pazarı mayısta değil, 13 Eylül'de: „am Samstag, dem 12. September“."
+        }
+      ]
+    }
+  ]
+}

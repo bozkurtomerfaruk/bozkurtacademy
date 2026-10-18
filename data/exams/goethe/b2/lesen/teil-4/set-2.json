@@ -135,12 +135,13 @@
         {
           "number": 26,
           "type": "zuordnung",
-          "prompt": "Ohne Fahrscheine kämen die Busse schneller voran.",
+          "prompt": "Mit einem Nulltarif würde der Busverkehr pünktlicher.",
           "answer": "c",
           "evidence": [
+            { "text": "theresa", "quote": "Ein großer Teil der Verspätungen entsteht an den Haltestellen" },
             { "text": "theresa", "quote": "und wir wären viel schneller wieder unterwegs" }
           ],
-          "explanation": "Otobüs şoförü Theresa (c) gecikmelerin büyük kısmının durakta bilet satmaktan kaynaklandığını yazıyor; bilet olmazsa yolcular bütün kapılardan binebilir „und wir wären viel schneller wieder unterwegs“. Ronja (a) da otobüslerin geç kalmasından şikâyet ediyor, ama bunu biletlerle ilişkilendirmiyor. Sebastian (b) ücretsiz ulaşımın etkisini yolcuların kimler olacağı açısından değerlendiriyor, otobüslerin hızından söz etmiyor."
+          "explanation": "Otobüs şoförü Theresa (c) gecikmelerin büyük kısmının durakta bilet satmaktan kaynaklandığını yazıyor: „Ein großer Teil der Verspätungen entsteht an den Haltestellen“. Bilet olmazsa yolcular bütün kapılardan binebilir „und wir wären viel schneller wieder unterwegs“; yani ücretsiz ulaşımla gecikmeler azalır, otobüsler daha dakik olur. Ronja (a) da otobüslerin geç kalmasından şikâyet ediyor ve dakiklik istiyor, ama bunu biletlerle ilişkilendirmiyor; tersine fiyatın onun için sorun olmadığını söylüyor („Am Preis liegt das nicht“). Sebastian (b) ücretsiz ulaşımın etkisini yolcuların kimler olacağı açısından değerlendiriyor, otobüslerin dakikliğinden söz etmiyor."
         },
         {
           "number": 27,

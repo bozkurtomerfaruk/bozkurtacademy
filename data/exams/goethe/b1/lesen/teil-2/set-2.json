@@ -16,7 +16,7 @@
           "id": "schulgarten",
           "title": "Vom Beet auf den Markt: Schüler verkaufen ihr eigenes Gemüse",
           "paragraphs": [
-            "Wenn Lehrer Hannes Wolter nach seinem Lieblingsfach gefragt wird, antwortet er nicht „Biologie“, sondern „Garten“. Seit drei Jahren gibt es an der Gesamtschule Eichental das Wahlfach „Schulgarten“. Jeden Mittwochnachmittag arbeiten dort rund 25 Schülerinnen und Schüler aus den Klassen 7 bis 9 auf einem Stück Land hinter der Sporthalle. Das Fach ist so beliebt, dass es inzwischen eine Warteliste gibt.",
+            "Wenn Lehrer Hannes Wolter nach seinem Lieblingsfach gefragt wird, antwortet er nicht „Biologie“, sondern „Garten“. Seit drei Jahren gibt es an der Gesamtschule Eichental das Wahlfach „Schulgarten“. Jeden Mittwochnachmittag arbeiten dort rund 25 Schülerinnen und Schüler auf einem Stück Land hinter der Sporthalle. Das Wahlfach gibt es nur für die Klassen 7 bis 9. Das Fach ist so beliebt, dass es inzwischen eine Warteliste gibt.",
             "Am Anfang war das Gelände nur eine Wiese. Die Jugendlichen haben die Beete selbst angelegt, einen Zaun gebaut und geplant, was wann gepflanzt wird. Werkzeug und Samen hat ihnen ein Gartencenter aus der Nachbarschaft geschenkt. „Die Schüler lernen hier Dinge, die man im Klassenzimmer nicht lernen kann“, sagt Wolter. „Zum Beispiel Geduld. Eine Kartoffel wächst nicht schneller, wenn man sie jeden Tag anschaut.“",
             "Seit letztem Sommer verkaufen die Schüler ihre Ernte. Jeden ersten Samstag im Monat stehen sie mit einem eigenen Stand auf dem Wochenmarkt. Von dem Geld kaufen sie neue Pflanzen, und was übrig bleibt, spenden sie an eine Organisation, die Lebensmittel an bedürftige Familien verteilt.",
             "In den Sommerferien kümmern sich Eltern und Nachbarn um den Garten, denn Tomaten und Bohnen brauchen auch im August Wasser. Für die Zukunft hat die Gruppe schon neue Pläne: Sie möchte Bienen halten und eigenen Honig verkaufen. Dafür muss Wolter aber zuerst einen Kurs bei einem Imkerverein machen. Und Wolter hat noch einen Wunsch: ein kleines Gewächshaus, damit die Gruppe auch im Winter etwas anbauen kann."
@@ -41,10 +41,14 @@
             },
             {
               "text": "schulgarten",
-              "quote": "Jeden Mittwochnachmittag arbeiten dort rund 25 Schülerinnen und Schüler aus den Klassen 7 bis 9"
+              "quote": "Das Wahlfach gibt es nur für die Klassen 7 bis 9."
+            },
+            {
+              "text": "schulgarten",
+              "quote": "Jeden Mittwochnachmittag arbeiten dort"
             }
           ],
-          "explanation": "Öğretmen Wolter, öğrencilerin bahçede sınıfta öğrenilemeyecek şeyler öğrendiğini söylüyor: „Zum Beispiel Geduld“ (örneğin sabır). b) yanlış: Sadece 7–9. sınıflardan öğrenciler katılıyor. c) yanlış: Bahçe çalışması her gün değil, sadece çarşamba öğleden sonraları."
+          "explanation": "Öğretmen Wolter, öğrencilerin bahçede sınıfta öğrenilemeyecek şeyler öğrendiğini söylüyor: „Zum Beispiel Geduld“ (örneğin sabır). b) yanlış: Metin bu dersin sadece 7–9. sınıflar için olduğunu söylüyor („nur für die Klassen 7 bis 9“). c) yanlış: Bahçe çalışması her gün değil, sadece çarşamba öğleden sonraları."
         },
         {
           "number": 8,
@@ -69,7 +73,7 @@
           "type": "abc",
           "prompt": "Mit dem Geld vom Wochenmarkt …",
           "options": {
-            "a": "bezahlen die Schüler ihre Klassenfahrt.",
+            "a": "haben die Schüler ein Gewächshaus gebaut.",
             "b": "kaufen die Schüler neue Pflanzen.",
             "c": "bezahlt die Schule den Imkerkurs."
           },
@@ -78,9 +82,13 @@
             {
               "text": "schulgarten",
               "quote": "Von dem Geld kaufen sie neue Pflanzen"
+            },
+            {
+              "text": "schulgarten",
+              "quote": "Und Wolter hat noch einen Wunsch: ein kleines Gewächshaus"
             }
           ],
-          "explanation": "Pazardan gelen parayla yeni bitkiler alıyorlar; kalanı ihtiyaç sahibi ailelere yiyecek dağıtan bir kuruluşa bağışlıyorlar. a) metinde geçmiyor. c) yanlış: Arıcılık kursundan söz ediliyor ama parasının pazar gelirinden ödendiği yazmıyor; kurs henüz yapılmadı bile."
+          "explanation": "Pazardan gelen parayla yeni bitkiler alıyorlar; kalanı ihtiyaç sahibi ailelere yiyecek dağıtan bir kuruluşa bağışlıyorlar. a) yanlış: Sera („Gewächshaus“) henüz yok; Wolter’in bir dileği olarak geçiyor („noch einen Wunsch“). c) yanlış: Arıcılık kursundan söz ediliyor ama parasının pazar gelirinden ödendiği yazmıyor; kurs henüz yapılmadı bile."
         }
       ]
     },

@@ -320,11 +320,41 @@ window.BA_EXAMS = {
               { title: null, exercises: [] }, // Teil 4
             ] },
             { id: 'lesen', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
-              { title: null, exercises: [] }, // Teil 3
-              { title: null, exercises: [] }, // Teil 4
-              { title: null, exercises: [] }, // Teil 5
+              {
+                title: { tr: 'Forum görüşleri · eşleştirme', de: 'Meinungen im Forum · Zuordnung', en: 'Forum opinions · matching' },
+                exercises: [
+                  { set: 'set-1', title: 'Digitale Auszeit' },
+                  { set: 'set-2', title: 'Lernen im Alter' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: 'Boşluklu metin · cümle yerleştirme', de: 'Lückentext · Sätze einsetzen', en: 'Gapped text · inserting sentences' },
+                exercises: [
+                  { set: 'set-1', title: 'Ein Dorf macht seinen Strom selbst' },
+                  { set: 'set-2', title: 'Roboter in der Pflege' },
+                ]
+              }, // Teil 2
+              {
+                title: { tr: 'Gazete makalesi · a/b/c', de: 'Zeitungsartikel · a/b/c', en: 'Newspaper article · a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Warum wir Dinge aufschieben' },
+                  { set: 'set-2', title: 'Stadtbäume in der Hitze' },
+                ]
+              }, // Teil 3
+              {
+                title: { tr: 'Okur görüşleri · eşleştirme', de: 'Leserbriefe · Zuordnung', en: 'Reader comments · matching' },
+                exercises: [
+                  { set: 'set-1', title: 'Die Vier-Tage-Woche' },
+                  { set: 'set-2', title: 'Kostenloser Nahverkehr' },
+                ]
+              }, // Teil 4
+              {
+                title: { tr: 'Kurallar · başlık eşleştirme', de: 'Regeln · Überschriften zuordnen', en: 'Rules · matching headings' },
+                exercises: [
+                  { set: 'set-1', title: 'Regeln im Gemeinschaftsbüro' },
+                  { set: 'set-2', title: 'Das Pflichtpraktikum' },
+                ]
+              }, // Teil 5
             ] },
             { id: 'schreiben', teile: [
               { title: null, exercises: [] }, // Teil 1

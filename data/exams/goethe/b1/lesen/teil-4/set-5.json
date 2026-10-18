@@ -1,0 +1,191 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-5",
+  "title": "Ein Pflichtjahr für alle?",
+  "minutes": 15,
+  "context": "In einer Zeitung lesen Sie Kommentare zu einem Artikel über die Idee, dass alle jungen Menschen nach der Schule ein Jahr lang zum Beispiel in Krankenhäusern, Altenheimen oder im Naturschutz arbeiten sollen.",
+  "instructions": "Lesen Sie die Texte 20 bis 26. Wählen Sie: Ist die Person für ein soziales Pflichtjahr für alle jungen Menschen?",
+  "groups": [
+    {
+      "layout": "comments",
+      "question": "Ist die Person für ein soziales Pflichtjahr für alle jungen Menschen?",
+      "texts": [
+        {
+          "id": "rita",
+          "label": "0",
+          "byline": "Rita, 58, Uhlenhorst",
+          "paragraphs": [
+            "Ich arbeite seit 30 Jahren in einem Altenheim, und wir finden kaum noch Personal. Wenn junge Leute ein Jahr bei uns helfen würden, hätten unsere Bewohner mehr Gesellschaft. Und die jungen Leute würden lernen, wie wichtig diese Arbeit ist. Ich finde die Idee eines Pflichtjahres deshalb sehr gut."
+          ]
+        },
+        {
+          "id": "stefan",
+          "label": "20",
+          "byline": "Stefan, 19, Wachtelberg",
+          "paragraphs": [
+            "Ich habe nach dem Abitur freiwillig ein Jahr in einem Krankenhaus gearbeitet. Vorher wusste ich nicht, was ich studieren soll, jetzt möchte ich Arzt werden. Viele meiner Freunde hätten so ein Jahr nie gemacht, weil sie gar nicht auf diese Idee gekommen wären. Gerade deshalb sollte es für alle Pflicht sein. Dann bekommt jeder die Chance, so etwas zu erleben."
+          ]
+        },
+        {
+          "id": "tanja",
+          "label": "21",
+          "byline": "Tanja, 44, Zederfeld",
+          "paragraphs": [
+            "Grundsätzlich bin ich dafür, aber nur, wenn die jungen Leute dafür auch ordentlich bezahlt werden. Ein Taschengeld von 300 Euro im Monat reicht nicht, wenn man in einer anderen Stadt ein Zimmer braucht. Wenn der Staat hier genug Geld gibt, kann so ein Jahr für alle eine gute Sache sein. Meine Tochter würde zum Beispiel gern im Naturschutz arbeiten."
+          ]
+        },
+        {
+          "id": "uwe",
+          "label": "22",
+          "byline": "Uwe, 63, Brunnwald",
+          "paragraphs": [
+            "Natürlich könnten Krankenhäuser und Altenheime mehr Hilfe gut gebrauchen. Aber dafür brauchen sie ausgebildete Fachkräfte und keine Schulabgänger, die keine Lust haben. Wer zu einer Arbeit gezwungen wird, macht sie selten gut, und darunter leiden am Ende die Patienten. Besser wäre es, die Pflegeberufe besser zu bezahlen. Von einem Pflichtjahr halte ich deshalb nichts."
+          ]
+        },
+        {
+          "id": "vera",
+          "label": "23",
+          "byline": "Vera, 36, Eschenrode",
+          "paragraphs": [
+            "Mein Sohn ist gerade 17 und findet die Idee schrecklich. Er möchte nach der Schule sofort studieren und keine Zeit verlieren. Ich kann ihn verstehen, sehe das aber anders. Ein Jahr mit alten oder kranken Menschen macht junge Leute selbstständiger und zeigt ihnen, dass es nicht nur um sie selbst geht. Ich würde mich freuen, wenn das Pflichtjahr kommt."
+          ]
+        },
+        {
+          "id": "wolfgang",
+          "label": "24",
+          "byline": "Wolfgang, 50, Hirschau",
+          "paragraphs": [
+            "Ich sehe schon, dass die Gesellschaft von so einem Jahr profitieren könnte. Trotzdem bin ich dagegen. Junge Menschen sollen selbst entscheiden, wie sie ihr Leben planen. Viele machen nach der Schule eine Ausbildung oder gehen ins Ausland, und das ist ihr gutes Recht. Wer helfen möchte, kann das schon heute freiwillig tun. Zwang ist hier der falsche Weg."
+          ]
+        },
+        {
+          "id": "zeynep",
+          "label": "25",
+          "byline": "Zeynep, 18, Krähenfeld",
+          "paragraphs": [
+            "Ich mache in diesem Jahr Abitur und trainiere schon seit drei Jahren ehrenamtlich eine Fußballmannschaft für Kinder. Viele meiner Freunde engagieren sich auch, ohne dass jemand sie dazu zwingt. Wir sind nicht so egoistisch, wie viele Erwachsene denken. Ein Pflichtjahr wäre für mich verlorene Zeit, denn ich habe schon einen Ausbildungsplatz als Mechatronikerin."
+          ]
+        },
+        {
+          "id": "arne",
+          "label": "26",
+          "byline": "Arne, 24, Lindenstedt",
+          "paragraphs": [
+            "Ich arbeite als Förster, und jedes Jahr fehlen uns Leute, die Bäume pflanzen oder Wege reparieren. Aber es geht nicht nur um die Arbeit. In so einem Jahr treffen sich junge Menschen aus ganz verschiedenen Familien, die sich sonst nie kennenlernen würden. Das tut unserer Gesellschaft gut. Ich hoffe sehr, dass die Politik das Pflichtjahr bald einführt."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "ja-nein",
+          "prompt": "Rita",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "rita",
+              "quote": "Ich finde die Idee eines Pflichtjahres deshalb sehr gut."
+            }
+          ],
+          "explanation": "Rita 30 yıldır bir huzurevinde çalışıyor ve neredeyse hiç personel bulamıyorlar. Gençler bir yıl yardım etse sakinlerin daha çok arkadaşlığı olur, gençler de bu işin ne kadar önemli olduğunu öğrenir. Zorunlu yıl fikrini çok iyi buluyor: ja."
+        },
+        {
+          "number": 20,
+          "type": "ja-nein",
+          "prompt": "Stefan",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "stefan",
+              "quote": "Gerade deshalb sollte es für alle Pflicht sein."
+            }
+          ],
+          "explanation": "Tuzak: Stefan bu yılı gönüllü („freiwillig“) yapmış; bu, zorunluluğa karşı olduğu anlamına gelmiyor. Hastanedeki yıl sayesinde doktor olmak istediğini anlamış. Arkadaşlarının çoğu böyle bir yılı akıllarına bile gelmediği için hiç yapmazmış; tam da bu yüzden herkes için zorunlu olmalı diyor. Yanında: ja."
+        },
+        {
+          "number": 21,
+          "type": "ja-nein",
+          "prompt": "Tanja",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "tanja",
+              "quote": "Grundsätzlich bin ich dafür, aber nur, wenn die jungen Leute dafür auch ordentlich bezahlt werden."
+            }
+          ],
+          "explanation": "Tanja „Grundsätzlich bin ich dafür“ – temelde yanında – diyor. Tek şartı gençlerin düzgün bir ücret alması; başka bir şehirde oda gerekiyorsa ayda 300 avroluk harçlık yetmez. Devlet yeterince para verirse böyle bir yıl herkes için iyi bir şey olabilir. Şart koyması karşı olduğu anlamına gelmiyor: ja."
+        },
+        {
+          "number": 22,
+          "type": "ja-nein",
+          "prompt": "Uwe",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "uwe",
+              "quote": "Von einem Pflichtjahr halte ich deshalb nichts."
+            }
+          ],
+          "explanation": "Tuzak: Uwe karşı tarafın argümanıyla başlıyor („Natürlich …“): Hastaneler ve huzurevleri daha fazla yardıma ihtiyaç duyabilir. Ama „Aber“ ile onların eğitimli uzman personele ihtiyacı olduğunu, zorla çalıştırılanların işi nadiren iyi yaptığını ve sonunda hastaların zarar göreceğini söylüyor. Bu yüzden zorunlu yılı hiç doğru bulmuyor („halte ich nichts“): nein."
+        },
+        {
+          "number": 23,
+          "type": "ja-nein",
+          "prompt": "Vera",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "vera",
+              "quote": "Ich würde mich freuen, wenn das Pflichtjahr kommt."
+            }
+          ],
+          "explanation": "Tuzak: Fikri korkunç bulan Vera'nın 17 yaşındaki oğlu. Vera onu anlıyor ama „sehe das aber anders“ – farklı düşünüyor. Yaşlı veya hasta insanlarla geçen bir yılın gençleri daha bağımsız yaptığını söylüyor ve zorunlu yıl gelirse sevineceğini belirtiyor. Yanında: ja."
+        },
+        {
+          "number": 24,
+          "type": "ja-nein",
+          "prompt": "Wolfgang",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "wolfgang",
+              "quote": "Trotzdem bin ich dagegen."
+            }
+          ],
+          "explanation": "Tuzak: Wolfgang toplumun böyle bir yıldan fayda görebileceğini kabul ediyor. Ama hemen ardından „Trotzdem bin ich dagegen“ – yine de karşıyım – diyor. Ona göre gençler hayatlarını kendileri planlamalı; yardım etmek isteyen bugün de gönüllü olarak yapabilir. Karşı: nein."
+        },
+        {
+          "number": 25,
+          "type": "ja-nein",
+          "prompt": "Zeynep",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "zeynep",
+              "quote": "Ein Pflichtjahr wäre für mich verlorene Zeit"
+            }
+          ],
+          "explanation": "Zeynep üç yıldır gönüllü olarak bir çocuk futbol takımını çalıştırıyor ve birçok arkadaşının da kimse zorlamadan yardım ettiğini söylüyor. Mekatronik alanında bir eğitim yeri zaten olduğu için zorunlu bir yılın onun için kayıp zaman olacağını belirtiyor. Karşı: nein."
+        },
+        {
+          "number": 26,
+          "type": "ja-nein",
+          "prompt": "Arne",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "arne",
+              "quote": "Ich hoffe sehr, dass die Politik das Pflichtjahr bald einführt."
+            }
+          ],
+          "explanation": "Arne orman memuru olarak çalışıyor; her yıl ağaç dikecek veya yolları onaracak insan eksik. Ama ona göre konu sadece iş değil: Böyle bir yılda çok farklı ailelerden gençler tanışıyor ve bu topluma iyi geliyor. Siyasetin zorunlu yılı yakında getirmesini çok umuyor: ja."
+        }
+      ]
+    }
+  ]
+}

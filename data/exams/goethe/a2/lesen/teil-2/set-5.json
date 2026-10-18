@@ -37,11 +37,11 @@
           "number": 0,
           "example": true,
           "type": "abc",
-          "prompt": "Sie möchten in der Kurspause etwas Warmes trinken.",
+          "prompt": "Sie haben in der Kurspause Hunger und möchten schnell eine Kleinigkeit essen.",
           "options": { "a": "Raum 003", "b": "Raum 002", "c": "anderer Raum" },
           "answer": "b",
           "evidence": [{ "text": "tafel", "quote": "Kaffee, Tee, Suppe, belegte Brötchen" }],
-          "explanation": "Raum 002'de bir kafe var: „Kaffee, Tee, Suppe, belegte Brötchen“. Orada kahve veya çay içilebilir. a) yanlış: Raum 003 yemek kursu yeri (Kochstudio), kafe değil."
+          "explanation": "Raum 002'de bir kafe var: „Kaffee, Tee, Suppe, belegte Brötchen“. Orada çorba veya sandviç yenebilir. a) yanlış: Raum 003 yemek kursu yeri (Kochstudio), kafe değil."
         },
         {
           "number": 6,
@@ -64,11 +64,11 @@
         {
           "number": 8,
           "type": "abc",
-          "prompt": "Sie möchten lernen, wie man selbst Brot und Kuchen macht.",
+          "prompt": "Sie haben sich schon angemeldet und bezahlt. Jetzt möchten Sie lernen, wie man selbst Brot und Kuchen macht.",
           "options": { "a": "Raum 002", "b": "Raum 001", "c": "anderer Raum" },
           "answer": "c",
           "evidence": [{ "text": "tafel", "quote": "Backen für Anfänger" }],
-          "explanation": "Ekmek ve pasta yapmak hamur işi pişirmektir (Backen). „Backen für Anfänger“ Raum 003'teki Kochstudio'da. Raum 003 seçeneklerde yok, bu yüzden c doğru. a) yanlış: Raum 002'deki kafede sandviç (belegte Brötchen) satılıyor; orada kurs yok. b) yanlış: Raum 001'de kurslar ayırtılıyor ve ödeniyor (Anmeldung); fırıncılık kursu orada değil."
+          "explanation": "Ekmek ve pasta yapmak hamur işi pişirmektir (Backen). „Backen für Anfänger“ Raum 003'teki Kochstudio'da. Raum 003 seçeneklerde yok, bu yüzden c doğru. a) yanlış: Raum 002'deki kafede sandviç (belegte Brötchen) satılıyor; kurs orada yazmıyor. b) yanlış: Raum 001'de kurslar ayırtılıyor ve ödeniyor (Anmeldung), ama siz kaydı ve ödemeyi zaten yaptınız: „Sie haben sich schon angemeldet und bezahlt“. Fırıncılık kursu orada değil."
         },
         {
           "number": 9,

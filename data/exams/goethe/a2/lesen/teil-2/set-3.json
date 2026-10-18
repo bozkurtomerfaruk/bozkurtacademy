@@ -18,11 +18,11 @@
           "paragraphs": [
             {
               "rows": [
-                ["3. Obergeschoss", "Parkplätze für Autos · Autovermietung"],
+                ["3. Obergeschoss", "Parkplätze für Autos · Autos mieten"],
                 ["2. Obergeschoss", "Apotheke · Arztpraxis · Fundbüro · Friseur"],
                 ["1. Obergeschoss", "Gleise 1–10 · Wartesaal · Kaffeebar „Abfahrt“"],
-                ["Erdgeschoss", "Reisezentrum: Fahrkarten und Beratung · Information · Drogerie: Kosmetik, Shampoo, Zahnbürsten · Reisebedarf: Koffer, Taschen, Kopfhörer · Geldautomat"],
-                ["1. Untergeschoss", "Gepäckaufbewahrung und Schließfächer · Toiletten und Duschen · Supermarkt · Fahrradstation: Fahrräder mieten und reparieren"],
+                ["Erdgeschoss", "Reisezentrum: Fahrkarten und Beratung · Information · Drogerie: Kosmetik, Shampoo, Zahnbürsten · Alles für die Reise: Koffer, Taschen, Kopfhörer · Geldautomat"],
+                ["1. Untergeschoss", "Gepäck abgeben: Schließfächer · Toiletten und Duschen · Supermarkt · Fahrradstation: Fahrräder mieten und reparieren"],
                 ["2. Untergeschoss", "U-Bahn: Linien U1 und U4 · S-Bahn: Gleise 21–24 · Fahrkartenautomaten"]
               ]
             },
@@ -56,8 +56,8 @@
           "prompt": "Sie möchten für drei Tage ein Auto leihen und damit in die Berge fahren.",
           "options": { "a": "Erdgeschoss", "b": "1. Untergeschoss", "c": "anderes Geschoss" },
           "answer": "c",
-          "evidence": [{ "text": "tafel", "quote": "Autovermietung" }],
-          "explanation": "Araba kiralama (Autovermietung) 3. üst katta. 3. üst kat seçeneklerde yok, bu yüzden c doğru. a) yanlış: Zemin katta bilet ve danışma (Reisezentrum) var, araba kiralama yok. b) yanlış: 1. alt katta da kiralama var, ama bisiklet kiralama: „Fahrräder mieten und reparieren“."
+          "evidence": [{ "text": "tafel", "quote": "Autos mieten" }],
+          "explanation": "Araba kiralama („Autos mieten“) 3. üst katta. 3. üst kat seçeneklerde yok, bu yüzden c doğru. a) yanlış: Zemin katta bilet ve danışma (Reisezentrum) var; araba kiralama orada yazmıyor. b) yanlış: 1. alt katta da kiralama var, ama bisiklet kiralama: „Fahrräder mieten und reparieren“."
         },
         {
           "number": 8,
@@ -65,8 +65,8 @@
           "prompt": "Ihr Zug fährt erst am Abend. Bis dahin möchten Sie ohne Ihren schweren Koffer in die Stadt gehen.",
           "options": { "a": "1. Untergeschoss", "b": "Erdgeschoss", "c": "anderes Geschoss" },
           "answer": "a",
-          "evidence": [{ "text": "tafel", "quote": "Gepäckaufbewahrung und Schließfächer" }],
-          "explanation": "Valizi birkaç saat bırakmak için emanet ve kilitli dolaplar gerekiyor: „Gepäckaufbewahrung und Schließfächer“. Bunlar 1. alt katta. b) yanlış: Zemin katta da valiz var, ama orada valiz satılıyor: „Reisebedarf: Koffer, Taschen, Kopfhörer“. c) yanlış: Emanet seçeneklerdeki 1. alt katta."
+          "evidence": [{ "text": "tafel", "quote": "Gepäck abgeben: Schließfächer" }],
+          "explanation": "Valizi birkaç saat bırakmak için kilitli dolaplar gerekiyor: „Gepäck abgeben: Schließfächer“. Bunlar 1. alt katta. b) yanlış: Zemin katta da valiz var, ama orada valiz satılıyor: „Alles für die Reise: Koffer, Taschen, Kopfhörer“. c) yanlış: Kilitli dolaplar seçeneklerdeki 1. alt katta."
         },
         {
           "number": 9,
@@ -75,7 +75,7 @@
           "options": { "a": "2. Untergeschoss", "b": "Erdgeschoss", "c": "anderes Geschoss" },
           "answer": "b",
           "evidence": [{ "text": "tafel", "quote": "Reisezentrum: Fahrkarten und Beratung" }],
-          "explanation": "Zemin katta „Reisezentrum: Fahrkarten und Beratung“ var: Orada bilet satılıyor ve danışmanlık (Beratung) yapılıyor. a) yanlış: 2. alt katta da bilet alınabilir, ama sadece otomatlardan: „Fahrkartenautomaten“. Bir otomatla konuşamazsınız. c) yanlış: Reisezentrum seçeneklerdeki zemin katta."
+          "explanation": "Zemin katta „Reisezentrum: Fahrkarten und Beratung“ var: Orada bilet satılıyor ve danışmanlık (Beratung) yapılıyor. a) yanlış: 2. alt katta da bilet alınabilir, ama orada bilet otomatları var: „Fahrkartenautomaten“. Bir otomatla konuşamazsınız; danışmanlık (Beratung) orada yazmıyor. c) yanlış: Reisezentrum seçeneklerdeki zemin katta."
         },
         {
           "number": 10,

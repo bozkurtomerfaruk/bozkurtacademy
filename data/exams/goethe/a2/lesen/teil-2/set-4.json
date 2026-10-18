@@ -23,7 +23,7 @@
                 ["2. Stock", "Elektronik: Fernseher, Computer, Handys · Spielwaren · Optiker: Brillen und Sehtest"],
                 ["1. Stock", "Mode für Damen, Herren und Kinder · Schuhe · Taschen"],
                 ["Erdgeschoss", "Kundenservice: Geschenkgutscheine, Kinderwagen ausleihen · Post: Briefmarken und Pakete · Reisebüro · Blumen"],
-                ["Untergeschoss", "Supermarkt · Getränkemarkt · Tierbedarf: Futter für Hund, Katze und Vogel · Schneiderei: Hosen und Röcke kürzer machen"]
+                ["Untergeschoss", "Supermarkt · Getränkemarkt · Für Tiere: Futter für Hund, Katze und Vogel · Schneiderei: Hosen und Röcke kürzer machen"]
               ]
             },
             "Das Sandwiesen-Center ist von Montag bis Samstag von 9 bis 21 Uhr geöffnet. Rolltreppen und Aufzüge finden Sie am Brunnen in der Mitte."
@@ -65,8 +65,8 @@
           "prompt": "Ihre Katze hat zu Hause nichts mehr zu fressen.",
           "options": { "a": "Untergeschoss", "b": "3. Stock", "c": "anderer Stock" },
           "answer": "a",
-          "evidence": [{ "text": "tafel", "quote": "Tierbedarf: Futter für Hund, Katze und Vogel" }],
-          "explanation": "Kedi maması alt katta: „Tierbedarf: Futter für Hund, Katze und Vogel“. b) yanlış: 3. katta da yemek var, ama insanlar için: pizza, makarna, döner, salata. c) yanlış: Kedi maması seçeneklerdeki alt katta."
+          "evidence": [{ "text": "tafel", "quote": "Für Tiere: Futter für Hund, Katze und Vogel" }],
+          "explanation": "Kedi maması alt katta: „Für Tiere: Futter für Hund, Katze und Vogel“. b) yanlış: 3. katta da yemek var, ama insanlar için: pizza, makarna, döner, salata. c) yanlış: Kedi maması seçeneklerdeki alt katta."
         },
         {
           "number": 9,
@@ -80,11 +80,11 @@
         {
           "number": 10,
           "type": "abc",
-          "prompt": "Sie möchten in Ruhe Schuhe kaufen. Ihr Sohn ist sechs und soll so lange mit anderen Kindern spielen.",
+          "prompt": "Ihr Sohn ist sechs. Er soll eine Stunde mit anderen Kindern spielen. In dieser Zeit gehen Sie allein einkaufen.",
           "options": { "a": "2. Stock", "b": "1. Stock", "c": "anderer Stock" },
           "answer": "c",
           "evidence": [{ "text": "tafel", "quote": "Kinderland: Kinder von 3 bis 10 Jahren spielen hier, die Eltern kaufen in Ruhe ein" }],
-          "explanation": "Altı yaşındaki oğul „Kinderland“da oynayabilir: „Kinder von 3 bis 10 Jahren spielen hier, die Eltern kaufen in Ruhe ein“. Kinderland 4. katta; 4. kat seçeneklerde yok, bu yüzden c doğru. a) yanlış: 2. katta oyuncak (Spielwaren) satılıyor, ama orası çocukların oynadığı bir yer değil. b) yanlış: Ayakkabılar 1. katta, ama orada çocuklar için oyun yeri yok."
+          "explanation": "Altı yaşındaki oğul „Kinderland“da oynayabilir: „Kinder von 3 bis 10 Jahren spielen hier, die Eltern kaufen in Ruhe ein“. Kinderland 4. katta; 4. kat seçeneklerde yok, bu yüzden c doğru. a) yanlış: 2. katta oyuncak (Spielwaren) satılıyor, ama orası çocukların oynadığı bir yer değil. b) yanlış: 1. katta giyim, ayakkabı ve çanta satılıyor; çocuklar için oyun yeri orada yazmıyor."
         }
       ]
     }

@@ -18,7 +18,7 @@
           "label": "a",
           "title": "Paddelwoche für Jugendliche",
           "paragraphs": [
-            "In den Sommerferien paddeln wir eine Woche lang mit dem Kanu über die Seen rund um Bergheide. Mitmachen können Jugendliche von 13 bis 17 Jahren, erfahrene Betreuerinnen und Betreuer sind immer dabei. Wir übernachten in der Jugendherberge Bergheide. Die Woche kostet 320 Euro mit Vollpension, Kanus und Schwimmwesten sind inklusive."
+            "In den Sommerferien paddeln wir eine Woche lang mit dem Kanu über die Seen rund um Lindmoor. Mitmachen können Jugendliche von 13 bis 17 Jahren, erfahrene Betreuerinnen und Betreuer sind immer dabei. Wir übernachten in der Jugendherberge Lindmoor. Die Woche kostet 320 Euro mit Vollpension, Kanus und Schwimmwesten sind inklusive."
           ]
         },
         {
@@ -26,7 +26,7 @@
           "label": "b",
           "title": "Altstadt zu Fuß entdecken",
           "paragraphs": [
-            "Lernen Sie mit den Gästeführern von „Stadtgeflüster“ die schönsten Ecken der Altstadt kennen! Der Rundgang dauert etwa zwei Stunden und führt über viele Treppen bis hinauf zur Burg. Treffpunkt ist täglich um 14 Uhr am Rathausbrunnen. Erwachsene zahlen 9 Euro, Kinder sind frei. Bitte tragen Sie bequeme Schuhe."
+            "Lernen Sie mit den Gästeführern von „Stadtgeflüster“ die schönsten Ecken der Altstadt kennen! Der Rundgang dauert etwa zwei Stunden und führt über viele Treppen bis hinauf zur Burg. Treffpunkt ist täglich um 14 Uhr am Rathausbrunnen. Erwachsene zahlen 9 Euro, Kinder zahlen nichts. Bitte tragen Sie bequeme Schuhe."
           ]
         },
         {
@@ -42,7 +42,7 @@
           "label": "d",
           "title": "Rundfahrt mit der „Seestern“",
           "paragraphs": [
-            "Erleben Sie den See vom Wasser aus! Unser Ausflugsschiff fährt von Mai bis Oktober täglich, auch an Sonn- und Feiertagen, um 11, 14 und 16 Uhr ab dem Anleger in Seeblick. Die Rundfahrt dauert 90 Minuten. An Bord gibt es Kaffee und Kuchen. Erwachsene zahlen 15 Euro, Kinder die Hälfte."
+            "Erleben Sie den See vom Wasser aus! Unser Ausflugsschiff fährt von Mai bis Oktober täglich, auch an Sonn- und Feiertagen, um 11, 14 und 16 Uhr ab dem Anleger in Möwenhafen. Die Rundfahrt dauert 90 Minuten. An Bord gibt es Kaffee und Kuchen. Erwachsene zahlen 15 Euro, Kinder die Hälfte."
           ]
         },
         {
@@ -82,7 +82,7 @@
           "label": "i",
           "title": "Bootsverleih Grünes Ufer",
           "paragraphs": [
-            "Kanus und Ruderboote stundenweise mieten: Am Nordufer des Bergheider Sees vermieten wir Boote von April bis September, täglich von 10 bis 19 Uhr. Ein Kanu kostet 12 Euro pro Stunde, Schwimmwesten bekommen Sie kostenlos dazu. Bitte beachten Sie: Boote vermieten wir nur an Personen ab 18 Jahren."
+            "Kanus und Ruderboote stundenweise mieten: Am Nordufer des Mühlensees vermieten wir Boote von April bis September, täglich von 10 bis 19 Uhr. Ein Kanu kostet 12 Euro pro Stunde, Schwimmwesten bekommen Sie kostenlos dazu. Bitte beachten Sie: Boote vermieten wir nur an Personen ab 18 Jahren."
           ]
         },
         {
@@ -146,7 +146,7 @@
         {
           "number": 15,
           "type": "zuordnung",
-          "prompt": "Ihr Nachbar muss nächste Woche um 4 Uhr morgens am Flughafen sein und möchte nicht mit dem eigenen Auto fahren.",
+          "prompt": "Ihr Nachbar muss in zehn Tagen um 4 Uhr morgens am Flughafen sein und möchte nicht mit dem eigenen Auto fahren.",
           "answer": "j",
           "evidence": [
             {
@@ -154,7 +154,7 @@
               "quote": "Wir holen Sie zu Hause ab und bringen Sie zum Flughafen – zu jeder Uhrzeit, auch mitten in der Nacht"
             }
           ],
-          "explanation": "j ilanındaki havaalanı taksisi sizi evden alıp havaalanına götürüyor, hem de „zu jeder Uhrzeit, auch mitten in der Nacht“ (her saatte, gecenin ortasında bile). Sabah saat 4'te havaalanında olması gereken ve kendi arabasını kullanmak istemeyen komşu için uygun. En az iki gün önceden rezervasyon şartı da „nächste Woche“ (gelecek hafta) için sorun değil."
+          "explanation": "j ilanındaki havaalanı taksisi sizi evden alıp havaalanına götürüyor, hem de „zu jeder Uhrzeit, auch mitten in der Nacht“ (her saatte, gecenin ortasında bile). Sabah saat 4'te havaalanında olması gereken ve kendi arabasını kullanmak istemeyen komşu için uygun. En az iki gün önceden rezervasyon şartı da „in zehn Tagen“ (on gün sonra) için sorun değil."
         },
         {
           "number": 16,
@@ -193,7 +193,7 @@
         {
           "number": 18,
           "type": "zuordnung",
-          "prompt": "Ein Freund möchte am Sonntag einen Ausflug mit dem Schiff machen.",
+          "prompt": "Ein Freund möchte an einem Sonntag im Juli einen Ausflug mit dem Schiff machen.",
           "answer": "d",
           "evidence": [
             {
@@ -201,7 +201,7 @@
               "quote": "fährt von Mai bis Oktober täglich, auch an Sonn- und Feiertagen"
             }
           ],
-          "explanation": "d ilanındaki gezi gemisi mayıstan ekime kadar her gün, pazar ve bayram günleri de („auch an Sonn- und Feiertagen“) sefer yapıyor. Pazar günü gemi gezisi yapmak isteyen arkadaş için uygun. i ilanında ise gemi gezisi yok, sadece saatlik kano ve kayık kiralanıyor."
+          "explanation": "d ilanındaki gezi gemisi mayıstan ekime kadar her gün, pazar ve bayram günleri de („auch an Sonn- und Feiertagen“) sefer yapıyor. Temmuzda bir pazar günü gemi gezisi yapmak isteyen arkadaş için uygun; temmuz da mayıs–ekim arasında. i ilanında ise gemi gezisi yok, sadece saatlik kano ve kayık kiralanıyor."
         },
         {
           "number": 19,

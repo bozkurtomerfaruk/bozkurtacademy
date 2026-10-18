@@ -18,8 +18,8 @@
           "paragraphs": [
             "Auf dem Sportplatz der Grundschule Kleinroden steht seit Montag ein großes rot-weißes Zelt. Der Familienzirkus „Stella Monti“ ist zu Gast, und für die 160 Kinder der Schule gibt es in dieser Woche keinen normalen Unterricht. Statt Mathe und Deutsch stehen Jonglieren, Akrobatik und Seiltanzen auf dem Stundenplan. Am Ende der Woche zeigen die Kinder ihr Können in zwei großen Vorstellungen.",
             "Die Idee kam von der Schulleiterin Frieda Wendt. Vor einigen Jahren hatte sie an einer anderen Schule ein ähnliches Projekt erlebt. „Im Zirkus kann jedes Kind etwas finden, das es gut kann“, sagt sie. „Wer nicht gern turnt, wird vielleicht Clown oder macht bei der Musik mit.“ Bezahlt wird das Projekt zum größten Teil vom Förderverein der Schule. Die Eltern geben nur 25 Euro pro Kind dazu.",
-            "Die Artisten des Zirkus trainieren jeden Vormittag mit den Kindern. Dabei achten sie sehr auf Sicherheit: Auf dem Trapez üben die Kinder nur knapp über dem Boden und immer über einer dicken Matte. Am Nachmittag proben die Gruppen dann für die Vorstellung. Die Lehrerinnen und Lehrer sind die ganze Zeit dabei und helfen, zum Beispiel beim Schminken oder bei den Kostümen.",
-            "Für die beiden Vorstellungen am Freitag und am Samstag gibt es schon fast keine Karten mehr. Das Geld aus dem Kartenverkauf ist für neue Spielgeräte auf dem Schulhof gedacht. Und nicht nur die Kinder sind begeistert. „Ich habe meinen Sohn noch nie so stolz gesehen“, erzählt eine Mutter. „Gestern hat er uns zu Hause gezeigt, wie man mit drei Bällen jongliert.“"
+            "Die Artisten des Zirkus trainieren jeden Vormittag mit den Kindern. Dabei achten sie sehr auf Sicherheit: Auf dem Trapez üben die Kinder nur knapp über dem Boden und immer über einer dicken Matte. Am Nachmittag proben die Gruppen dann ohne die Artisten für die Vorstellung. Die Lehrerinnen und Lehrer sind die ganze Zeit dabei und helfen, zum Beispiel beim Schminken oder bei den Kostümen. Die Eltern sehen ihre Kinder erst bei den Vorstellungen.",
+            "Nicht nur die Kinder sind begeistert. „Ich habe meinen Sohn noch nie so stolz gesehen“, erzählt eine Mutter. „Gestern hat er uns zu Hause gezeigt, wie man mit drei Bällen jongliert.“ Für die beiden Vorstellungen am Freitag und am Samstag gibt es schon fast keine Karten mehr. Das Geld aus dem Kartenverkauf ist für neue Spielgeräte auf dem Schulhof gedacht."
           ]
         }
       ],
@@ -31,7 +31,7 @@
           "options": {
             "a": "haben die Kinder keinen normalen Unterricht.",
             "b": "fahren die Kinder zu einem Zirkus in einer anderen Stadt.",
-            "c": "zeigen die Kinder jeden Tag eine Vorstellung."
+            "c": "zeigen die Kinder ihr Können in einer großen Vorstellung."
           },
           "answer": "a",
           "evidence": [
@@ -48,15 +48,15 @@
               "quote": "Am Ende der Woche zeigen die Kinder ihr Können in zwei großen Vorstellungen."
             }
           ],
-          "explanation": "Okuldaki 160 çocuk için bu hafta normal ders yok („keinen normalen Unterricht“); matematik ve Almanca yerine jonglörlük, akrobasi ve ip cambazlığı var. b) yanlış: Çocuklar başka bir şehre gitmiyor; sirk çadırı okulun spor sahasında duruyor („Auf dem Sportplatz der Grundschule“). c) yanlış: Her gün değil, haftanın sonunda iki büyük gösteri var („Am Ende der Woche … in zwei großen Vorstellungen“)."
+          "explanation": "Okuldaki 160 çocuk için bu hafta normal ders yok („keinen normalen Unterricht“); matematik ve Almanca yerine jonglörlük, akrobasi ve ip cambazlığı var. b) yanlış: Çocuklar başka bir şehre gitmiyor; sirk çadırı okulun spor sahasında duruyor („Auf dem Sportplatz der Grundschule“). c) yanlış: Çocuklar haftanın sonunda bir değil, iki büyük gösteri yapıyor („Am Ende der Woche … in zwei großen Vorstellungen“)."
         },
         {
           "number": 8,
           "type": "abc",
           "prompt": "Das Zirkusprojekt …",
           "options": {
-            "a": "wird ganz von den Eltern bezahlt.",
-            "b": "ist nur für Kinder, die gut turnen können.",
+            "a": "wird vor allem vom Zirkus „Stella Monti“ bezahlt.",
+            "b": "wird vor allem von den Eltern bezahlt.",
             "c": "wird vor allem vom Förderverein der Schule bezahlt."
           },
           "answer": "c",
@@ -71,36 +71,36 @@
             },
             {
               "text": "schulzirkus",
-              "quote": "Wer nicht gern turnt, wird vielleicht Clown oder macht bei der Musik mit."
+              "quote": "ist zu Gast"
             }
           ],
-          "explanation": "Projenin parasının büyük kısmını okulun destek derneği (Förderverein) ödüyor („zum größten Teil vom Förderverein“). a) yanlış: Veliler çocuk başına sadece 25 euro ekliyor („nur 25 Euro pro Kind“). b) yanlış: Okul müdürü her çocuğun iyi yaptığı bir şey bulabileceğini söylüyor: Jimnastiği sevmeyen belki palyaço olur ya da müzikte yer alır."
+          "explanation": "Projenin parasının büyük kısmını okulun destek derneği (Förderverein) ödüyor („zum größten Teil vom Förderverein“). a) yanlış: Projenin büyük kısmını sirk değil, okulun destek derneği ödüyor; sirk okulda misafir olarak bulunuyor („ist zu Gast“). b) yanlış: Veliler parayı büyük ölçüde ödemiyor; çocuk başına sadece 25 euro ekliyorlar („nur 25 Euro pro Kind dazu“)."
         },
         {
           "number": 9,
           "type": "abc",
           "prompt": "Während der Woche …",
           "options": {
-            "a": "üben die Kinder auf dem Trapez hoch über dem Boden.",
-            "b": "haben die Lehrerinnen und Lehrer frei.",
+            "a": "trainieren die Artisten auch am Nachmittag mit den Kindern.",
+            "b": "helfen die Eltern beim Schminken und bei den Kostümen.",
             "c": "proben die Kinder am Nachmittag für die Vorstellung."
           },
           "answer": "c",
           "evidence": [
             {
               "text": "schulzirkus",
-              "quote": "Am Nachmittag proben die Gruppen dann für die Vorstellung."
+              "quote": "Am Nachmittag proben die Gruppen dann ohne die Artisten für die Vorstellung."
             },
             {
               "text": "schulzirkus",
-              "quote": "Auf dem Trapez üben die Kinder nur knapp über dem Boden"
+              "quote": "Die Artisten des Zirkus trainieren jeden Vormittag mit den Kindern."
             },
             {
               "text": "schulzirkus",
-              "quote": "Die Lehrerinnen und Lehrer sind die ganze Zeit dabei"
+              "quote": "Die Lehrerinnen und Lehrer sind die ganze Zeit dabei und helfen, zum Beispiel beim Schminken oder bei den Kostümen. Die Eltern sehen ihre Kinder erst bei den Vorstellungen."
             }
           ],
-          "explanation": "Sabahları sirk sanatçıları çocuklarla antrenman yapıyor, öğleden sonra da gruplar gösteri için prova ediyor („Am Nachmittag proben die Gruppen“). a) yanlış: Çocuklar trapezde yüksekte değil, yere çok yakın ve her zaman kalın bir minderin üstünde çalışıyor („nur knapp über dem Boden“). b) yanlış: Öğretmenler bütün zaman orada ve yardım ediyor, örneğin makyajda veya kostümlerde („die ganze Zeit dabei“)."
+          "explanation": "Öğleden sonra gruplar gösteri için prova ediyor („Am Nachmittag proben die Gruppen“). a) yanlış: Sirk sanatçıları çocuklarla sabahları antrenman yapıyor („jeden Vormittag“); öğleden sonraki provalar sanatçılar olmadan yapılıyor („ohne die Artisten“). b) yanlış: Makyajda ve kostümlerde öğretmenler yardım ediyor („Die Lehrerinnen und Lehrer … helfen, zum Beispiel beim Schminken“); veliler çocuklarını ancak gösterilerde görüyor („Die Eltern sehen ihre Kinder erst bei den Vorstellungen“)."
         }
       ]
     },
@@ -111,10 +111,10 @@
           "id": "hotel",
           "title": "Ein Hotel, in dem Vielfalt zum Alltag gehört",
           "paragraphs": [
-            "Auf den ersten Blick ist das „Hotel Seerose“ in Sonnfeld ein ganz normales Hotel: 32 Zimmer, ein Restaurant mit Terrasse und ein kleiner Wellnessbereich. Der Unterschied liegt beim Personal. Von den 40 Mitarbeiterinnen und Mitarbeitern hat etwa die Hälfte eine Behinderung. Diese Kolleginnen und Kollegen arbeiten an der Rezeption, in der Küche, im Restaurant und bei der Zimmerreinigung, und zwar mit einem normalen Arbeitsvertrag und einem fairen Lohn.",
+            "Auf den ersten Blick ist das „Hotel Seerose“ in Sonnfeld ein ganz normales Hotel: 32 Zimmer, ein Restaurant mit Terrasse und ein kleiner Wellnessbereich. Der Unterschied liegt beim Personal. Von den 40 Mitarbeiterinnen und Mitarbeitern hat etwa die Hälfte eine Behinderung. Kolleginnen und Kollegen mit und ohne Behinderung arbeiten gemeinsam an der Rezeption, in der Küche, im Restaurant und bei der Zimmerreinigung. Alle haben einen normalen Arbeitsvertrag und bekommen einen fairen Lohn.",
             "Gegründet wurde das Hotel vor sechs Jahren von einem Verein, in dem sich Eltern von Kindern mit Behinderung engagieren. „Unsere Kinder sind erwachsen geworden und wollten arbeiten wie alle anderen auch“, erzählt Hotelleiterin Nadia Kaya. Damit die Zusammenarbeit gut klappt, gibt es einige Hilfen: Die Arbeitspläne hängen zum Beispiel nicht nur als Text, sondern auch mit Bildern an der Wand. Neue Mitarbeiter werden in den ersten Wochen von einer erfahrenen Kollegin oder einem erfahrenen Kollegen begleitet.",
-            "Kemal arbeitet seit drei Jahren an der Rezeption. Er nutzt einen Rollstuhl, deshalb wurde der Empfangstisch extra niedrig gebaut. „Viele Gäste merken gar nicht, dass hier etwas anders ist“, sagt er. „Und wenn doch, sind sie meistens positiv überrascht.“ Die meisten Gäste kommen nämlich nicht wegen des Konzepts, sondern wegen der schönen Lage direkt am See und wegen des guten Essens. Im Internet bekommt das Hotel sehr gute Bewertungen.",
-            "Ganz einfach ist der Alltag trotzdem nicht immer. „Manches dauert bei uns etwas länger, zum Beispiel die Einarbeitung“, sagt Nadia Kaya. „Aber dafür haben wir ein Team, das sehr gut zusammenhält.“ Im nächsten Jahr soll das Hotel um zehn Zimmer wachsen und damit auch neue Arbeitsplätze schaffen."
+            "Kemal arbeitet seit drei Jahren an der Rezeption. Er nutzt einen Rollstuhl, deshalb wurde der Empfangstisch extra niedrig gebaut. „Viele Gäste merken gar nicht, dass hier etwas anders ist“, sagt er. „Und wenn doch, sind sie meistens positiv überrascht.“",
+            "Ganz einfach ist der Alltag trotzdem nicht immer. „Manches dauert bei uns etwas länger, zum Beispiel die Einarbeitung“, sagt Nadia Kaya. „Aber dafür haben wir ein Team, das sehr gut zusammenhält.“ Die meisten Gäste kommen übrigens nicht wegen des Konzepts, sondern wegen der schönen Lage direkt am See und wegen des guten Essens. Im Internet bekommt das Hotel sehr gute Bewertungen."
           ]
         }
       ],
@@ -124,31 +124,35 @@
           "type": "abc",
           "prompt": "Im Hotel Seerose …",
           "options": {
-            "a": "arbeiten nur Menschen mit Behinderung.",
-            "b": "arbeiten Menschen mit und ohne Behinderung in verschiedenen Bereichen.",
-            "c": "arbeiten Menschen mit Behinderung nur in der Küche."
+            "a": "wurde der Empfangstisch für die Gäste extra niedrig gebaut.",
+            "b": "arbeiten Menschen mit und ohne Behinderung zusammen.",
+            "c": "arbeiten Menschen mit Behinderung ohne normalen Arbeitsvertrag."
           },
           "answer": "b",
           "evidence": [
             {
               "text": "hotel",
-              "quote": "Von den 40 Mitarbeiterinnen und Mitarbeitern hat etwa die Hälfte eine Behinderung."
+              "quote": "Kolleginnen und Kollegen mit und ohne Behinderung arbeiten gemeinsam an der Rezeption, in der Küche, im Restaurant und bei der Zimmerreinigung."
             },
             {
               "text": "hotel",
-              "quote": "Diese Kolleginnen und Kollegen arbeiten an der Rezeption, in der Küche, im Restaurant und bei der Zimmerreinigung"
+              "quote": "Er nutzt einen Rollstuhl, deshalb wurde der Empfangstisch extra niedrig gebaut."
+            },
+            {
+              "text": "hotel",
+              "quote": "Alle haben einen normalen Arbeitsvertrag"
             }
           ],
-          "explanation": "Otelin 40 çalışanının yaklaşık yarısı engelli insanlar („etwa die Hälfte Menschen mit Behinderung“); yani engelli olan ve olmayan insanlar birlikte çalışıyor. Engelli çalışanlar resepsiyonda, mutfakta, restoranda ve oda temizliğinde çalışıyor. a) yanlış: Çalışanların hepsi değil, yaklaşık yarısı engelli. c) yanlış: Sadece mutfakta değil, resepsiyon, restoran ve oda temizliği gibi farklı bölümlerde de çalışıyorlar."
+          "explanation": "Metin açıkça engelli olan ve olmayan çalışanların resepsiyonda, mutfakta, restoranda ve oda temizliğinde birlikte çalıştığını söylüyor („mit und ohne Behinderung arbeiten gemeinsam“). a) yanlış: Resepsiyon masası misafirler için değil, tekerlekli sandalye kullanan Kemal yüzünden özellikle alçak yapıldı („Er nutzt einen Rollstuhl, deshalb wurde der Empfangstisch extra niedrig gebaut.“). c) yanlış: Bütün çalışanların normal bir iş sözleşmesi var ve adil bir ücret alıyorlar („Alle haben einen normalen Arbeitsvertrag“)."
         },
         {
           "number": 11,
           "type": "abc",
           "prompt": "Damit die Zusammenarbeit gut klappt, …",
           "options": {
-            "a": "arbeiten neue Mitarbeiter in den ersten Wochen allein.",
-            "b": "gibt es Arbeitspläne mit Bildern.",
-            "c": "dauert die Einarbeitung neuer Mitarbeiter nur einen Tag."
+            "a": "werden neue Mitarbeiter von ihren Eltern begleitet.",
+            "b": "hängen die Arbeitspläne auch mit Bildern an der Wand.",
+            "c": "wird die Einarbeitung möglichst kurz gehalten."
           },
           "answer": "b",
           "evidence": [
@@ -165,7 +169,7 @@
               "quote": "Manches dauert bei uns etwas länger, zum Beispiel die Einarbeitung"
             }
           ],
-          "explanation": "İş planları duvarda sadece yazı olarak değil, resimlerle de asılı („auch mit Bildern“). a) yanlış: Yeni çalışanlar ilk haftalarda yalnız değil; deneyimli bir iş arkadaşı onlara eşlik ediyor („von einer erfahrenen Kollegin oder einem erfahrenen Kollegen begleitet“). c) yanlış: Yeni çalışanlara ilk haftalar boyunca eşlik ediliyor („in den ersten Wochen“) ve Nadia Kaya işe alıştırmanın (Einarbeitung) onlarda biraz daha uzun sürdüğünü söylüyor („Manches dauert bei uns etwas länger, zum Beispiel die Einarbeitung“)."
+          "explanation": "İş planları duvarda sadece yazı olarak değil, resimlerle de asılı („auch mit Bildern“). a) yanlış: Yeni çalışanlara ilk haftalarda anne babaları değil, deneyimli bir iş arkadaşı eşlik ediyor („von einer erfahrenen Kollegin oder einem erfahrenen Kollegen begleitet“). Metinde veliler sadece oteli kuran derneğin üyeleri olarak geçiyor. c) yanlış: Nadia Kaya işe alıştırmanın (Einarbeitung) onlarda kısa değil, biraz daha uzun sürdüğünü söylüyor („Manches dauert bei uns etwas länger, zum Beispiel die Einarbeitung“)."
         },
         {
           "number": 12,
@@ -174,20 +178,20 @@
           "options": {
             "a": "kommen wegen der Lage am See und wegen des Essens.",
             "b": "wählen das Hotel vor allem wegen des Konzepts.",
-            "c": "sind mit dem Hotel nicht zufrieden."
+            "c": "kommen vor allem wegen der guten Bewertungen im Internet."
           },
           "answer": "a",
           "evidence": [
             {
               "text": "hotel",
-              "quote": "Die meisten Gäste kommen nämlich nicht wegen des Konzepts, sondern wegen der schönen Lage direkt am See und wegen des guten Essens."
+              "quote": "Die meisten Gäste kommen übrigens nicht wegen des Konzepts, sondern wegen der schönen Lage direkt am See und wegen des guten Essens."
             },
             {
               "text": "hotel",
               "quote": "Im Internet bekommt das Hotel sehr gute Bewertungen."
             }
           ],
-          "explanation": "Misafirlerin çoğu otelin konsepti yüzünden değil, gölün hemen kenarındaki güzel konumu ve iyi yemekleri yüzünden geliyor („wegen der schönen Lage direkt am See und wegen des guten Essens“). b) yanlış: Aynı cümle açıkça „nicht wegen des Konzepts“ (konsept yüzünden değil) diyor. c) yanlış: Otel internette çok iyi değerlendirmeler alıyor („sehr gute Bewertungen“)."
+          "explanation": "Misafirlerin çoğu otelin konsepti yüzünden değil, gölün hemen kenarındaki güzel konumu ve iyi yemekleri yüzünden geliyor („wegen der schönen Lage direkt am See und wegen des guten Essens“). b) yanlış: Aynı cümle açıkça „nicht wegen des Konzepts“ (konsept yüzünden değil) diyor. c) yanlış: Otel internette çok iyi değerlendirmeler alıyor, ama metne göre misafirlerin çoğunun gelme nedeni bu değil, konum ve yemek."
         }
       ]
     }

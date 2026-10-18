@@ -14,7 +14,7 @@
       "texts": [
         {
           "id": "bibliothek",
-          "title": "Bücher, Spiele und Kaffee: Die Stadtbibliothek öffnet jetzt auch sonntags",
+          "title": "Bücher, Spiele und Kaffee: Neues Angebot in der Stadtbibliothek",
           "paragraphs": [
             "Seit Anfang des Jahres hat die Stadtbibliothek in Neuhagen auch am Sonntag geöffnet, und zwar von 11 bis 17 Uhr. Die Idee kam nicht von der Stadtverwaltung, sondern von den Bürgern selbst: Bei einer Umfrage im letzten Herbst hatten sich über 60 Prozent der Teilnehmer längere Öffnungszeiten am Wochenende gewünscht.",
             "„Viele Menschen arbeiten unter der Woche bis spät am Abend und haben nur am Sonntag Zeit“, erklärt Bibliotheksleiterin Martina Kessler. Weil die Bibliothek aber kein zusätzliches Personal bezahlen kann, helfen am Sonntag Ehrenamtliche. Sie beantworten Fragen, zeigen den Besuchern die Automaten und räumen Bücher in die Regale. Ausleihen und zurückgeben kann man am Sonntag nur an diesen Automaten, denn die Bibliothekarinnen arbeiten an diesem Tag nicht.",
@@ -49,7 +49,7 @@
           "options": {
             "a": "helfen Ehrenamtliche in der Bibliothek.",
             "b": "beraten die Bibliothekarinnen die Besucher.",
-            "c": "kann man keine Bücher ausleihen."
+            "c": "leihen die Ehrenamtlichen die Bücher aus."
           },
           "answer": "a",
           "evidence": [
@@ -62,15 +62,15 @@
               "quote": "Ausleihen und zurückgeben kann man am Sonntag nur an diesen Automaten"
             }
           ],
-          "explanation": "Pazar günü gönüllüler (Ehrenamtliche) yardım ediyor. b) yanlış: Metin kütüphanecilerin pazar günü çalışmadığını söylüyor („die Bibliothekarinnen arbeiten an diesem Tag nicht“). c) yanlış: Kitap ödünç almak mümkün, ama sadece otomatlardan („nur an diesen Automaten“)."
+          "explanation": "Pazar günü gönüllüler (Ehrenamtliche) yardım ediyor: soruları yanıtlıyor, ziyaretçilere otomatları gösteriyor ve kitapları raflara yerleştiriyor. b) yanlış: Metin kütüphanecilerin pazar günü çalışmadığını söylüyor („die Bibliothekarinnen arbeiten an diesem Tag nicht“). c) yanlış: Gönüllüler kitap ödünç vermiyor; pazar günü ödünç alma ve iade sadece otomatlardan yapılıyor („nur an diesen Automaten“)."
         },
         {
           "number": 9,
           "type": "abc",
           "prompt": "Das Café im Eingangsbereich …",
           "options": {
-            "a": "wird von der Bibliothek geführt.",
-            "b": "ist nur am Familiennachmittag geöffnet.",
+            "a": "verkauft Kaffee, um neue Brettspiele für den Spieleraum zu kaufen.",
+            "b": "wird von den Ehrenamtlichen der Bibliothek betrieben.",
             "c": "wird von Schülerinnen und Schülern betrieben."
           },
           "answer": "c",
@@ -78,9 +78,13 @@
             {
               "text": "bibliothek",
               "quote": "Es wird von Schülerinnen und Schülern des Gymnasiums am Stadtpark betrieben"
+            },
+            {
+              "text": "bibliothek",
+              "quote": "die mit dem Geld ihre Klassenfahrt finanzieren"
             }
           ],
-          "explanation": "Kafeyi Stadtpark Lisesi'nin öğrencileri işletiyor ve parayla sınıf gezisini finanse ediyor. a) yanlış: Kafeyi kütüphane değil öğrenciler işletiyor. b) yanlış: Aile öğleden sonrası iki haftada bir yapılan ayrı bir etkinlik; kafenin sadece o gün açık olduğu yazmıyor."
+          "explanation": "Kafeyi Stadtpark Lisesi'nin öğrencileri işletiyor („von Schülerinnen und Schülern … betrieben“). a) yanlış: Kafe, oyun odasına yeni kutu oyunları almak için kahve satmıyor; öğrenciler kafeden gelen parayla sınıf gezilerini finanse ediyor („mit dem Geld ihre Klassenfahrt finanzieren“). b) yanlış: Gönüllüler pazar günü yardım ediyor ve çocuklara hikâye okuyor, ama kafeyi onlar değil öğrenciler işletiyor."
         }
       ]
     },
@@ -89,7 +93,7 @@
       "texts": [
         {
           "id": "gruenkiste",
-          "title": "Gemüse aus der Region – geliefert mit dem Lastenrad",
+          "title": "Gemüsekisten – geliefert mit dem Lastenrad",
           "paragraphs": [
             "Wer bei „Grünkiste“ bestellt, bekommt sein Gemüse nicht aus einem Lieferwagen, sondern vom Fahrrad. Vor zwei Jahren haben die Freunde Jonas Brehm und Aylin Doğan das kleine Unternehmen in Talheim gegründet. Damals studierten beide noch Umwelttechnik und ärgerten sich darüber, dass im Supermarkt so viel Gemüse aus fernen Ländern liegt. Deshalb wollten sie Gemüse aus der Region verkaufen. Das Geld für die ersten Räder haben sie sich bei Freunden und Familie geliehen.",
             "Heute arbeiten sie mit zwölf Bauernhöfen aus der Region zusammen. Die Kunden bestellen bis Dienstagabend im Internet, und die Kiste kommt einmal pro Woche, immer am Donnerstag. Was in der Kiste ist, hängt von der Jahreszeit ab: Im Winter gibt es vor allem Kartoffeln, Kohl und Äpfel, im Sommer Salat, Tomaten und Beeren. „Manche Kunden waren am Anfang überrascht, dass es im Januar keine Erdbeeren gibt“, erzählt Aylin Doğan und lacht.",
@@ -104,12 +108,16 @@
           "type": "abc",
           "prompt": "Jonas Brehm und Aylin Doğan haben Grünkiste gegründet, weil sie …",
           "options": {
-            "a": "während des Studiums Geld verdienen wollten.",
+            "a": "mit ihrem Studium schon fertig waren.",
             "b": "mit dem Gemüse im Supermarkt unzufrieden waren.",
-            "c": "selbst einen Bauernhof hatten."
+            "c": "Gemüse aus fernen Ländern verkaufen wollten."
           },
           "answer": "b",
           "evidence": [
+            {
+              "text": "gruenkiste",
+              "quote": "Damals studierten beide noch Umwelttechnik"
+            },
             {
               "text": "gruenkiste",
               "quote": "ärgerten sich darüber, dass im Supermarkt so viel Gemüse aus fernen Ländern liegt"
@@ -119,7 +127,7 @@
               "quote": "Deshalb wollten sie Gemüse aus der Region verkaufen."
             }
           ],
-          "explanation": "Süpermarkette uzak ülkelerden gelen çok fazla sebze olmasına kızıyorlardı („ärgerten sich darüber“) ve metin devam ediyor: „Deshalb wollten sie Gemüse aus der Region verkaufen“ – bu yüzden bölgeden sebze satmak istediler. a) metinde geçmiyor: Metin, kurucuların para kazanmak isteyip istemediği hakkında bir şey söylemiyor. Metinde üniversite öğrencisi olarak geçenler kurucular değil, çalışanlar. c) yanlış: Metinde kendi çiftliklerinden söz edilmiyor; bölgedeki on iki çiftlikle çalıştıkları yazıyor."
+          "explanation": "Süpermarkette uzak ülkelerden gelen çok fazla sebze olmasına kızıyorlardı („ärgerten sich darüber“) ve metin devam ediyor: „Deshalb wollten sie Gemüse aus der Region verkaufen“ – bu yüzden bölgeden sebze satmak istediler. a) yanlış: Şirketi kurdukları zaman ikisi de hâlâ çevre teknolojisi okuyordu („Damals studierten beide noch Umwelttechnik“). c) yanlış: Tam tersi; uzak ülkelerden gelen sebzelere kızıyorlardı ve uzak ülkelerden değil, bölgeden sebze satmak istediler („Gemüse aus der Region“)."
         },
         {
           "number": 11,
@@ -153,7 +161,7 @@
           "prompt": "Bei Grünkiste …",
           "options": {
             "a": "fahren vor allem Studierende die Kisten aus.",
-            "b": "liefern die Fahrer bei jedem Wetter mit dem Fahrrad.",
+            "b": "liefern die Fahrer in der Altstadt mit dem Auto.",
             "c": "arbeiten acht Fahrer in Vollzeit."
           },
           "answer": "a",
@@ -164,10 +172,14 @@
             },
             {
               "text": "gruenkiste",
+              "quote": "In der engen Altstadt finden die Fahrer immer einen Platz zum Halten."
+            },
+            {
+              "text": "gruenkiste",
               "quote": "Bei Schnee und Eis müssen sie allerdings manchmal doch ein Auto nehmen."
             }
           ],
-          "explanation": "Sekiz çalışanın çoğu, okulun yanında haftada birkaç saat teslimat yapan üniversite öğrencileri. b) yanlış: Kar ve buzda bazen araba kullanmak zorundalar. c) yanlış: Metinde sekiz çalışan var ama çoğu öğrenci ve haftada sadece birkaç saat çalışıyor; tam zamanlı sekiz şoförden söz edilmiyor."
+          "explanation": "Sekiz çalışanın çoğu, üniversite eğitimlerinin yanında haftada birkaç saat teslimat yapan üniversite öğrencileri („Die meisten Mitarbeiter sind Studierende“). b) yanlış: Metin, yük bisikletlerinin dar eski şehirde pratik olduğunu söylüyor: Sürücüler orada her zaman duracak yer buluyor. Araba sadece kar ve buzda bazen kullanılıyor („Bei Schnee und Eis … manchmal doch ein Auto“), eski şehir için değil. c) yanlış: Metinde sekiz çalışan var ama çoğu öğrenci ve haftada sadece birkaç saat çalışıyor; tam zamanlı sekiz şoförden söz edilmiyor."
         }
       ]
     }

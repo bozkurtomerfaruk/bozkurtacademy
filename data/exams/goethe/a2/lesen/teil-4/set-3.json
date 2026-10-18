@@ -34,7 +34,7 @@
           "label": "c",
           "title": "Kletterhalle Gipfelglück",
           "paragraphs": [
-            "Klettern lernen in vier Wochen! Unser Kurs für Anfänger ist immer samstags von 10 bis 12 Uhr. Schuhe und Seile bekommen Sie bei uns. Mitmachen können alle ab 18 Jahren. Der ganze Kurs kostet 90 Euro."
+            "Klettern lernen in vier Wochen! Unser Kurs für Anfänger ist immer samstags von 10 bis 12 Uhr. Schuhe und Seile bekommen Sie bei uns. Dieser Kurs ist nur für Frauen – Männer können leider nicht mitmachen. Der ganze Kurs kostet 90 Euro."
           ]
         },
         {
@@ -75,10 +75,10 @@
         {
           "number": 16,
           "type": "zuordnung",
-          "prompt": "Bettina hat oft Rückenschmerzen, und die Ärztin sagt: Bewegung im Wasser hilft. Aber Bettina hat Angst vor tiefem Wasser.",
+          "prompt": "Bettina hat oft Schmerzen im Rücken, und die Ärztin sagt: Sport im Schwimmbad hilft. Aber Bettina kann nicht schwimmen.",
           "answer": "b",
-          "evidence": [{ "text": "b", "quote": "das ist gut für den Rücken" }, { "text": "b", "quote": "das Wasser ist nur 1,20 Meter tief" }],
-          "explanation": "b ilanında ılık suda jimnastik var; ilan „das ist gut für den Rücken“ diyor. Bettina derin sudan korkuyor; buradaki su sadece 1,20 metre derin: „das Wasser ist nur 1,20 Meter tief“. Bettina için uygun. Tuzak e: Orada da jimnastik var, ama bebekli anne ve babalar için ve suda değil."
+          "evidence": [{ "text": "b", "quote": "das ist gut für den Rücken" }, { "text": "b", "quote": "Sie müssen nicht schwimmen können" }],
+          "explanation": "b ilanında kapalı yüzme havuzunda ılık suda jimnastik var; ilan „das ist gut für den Rücken“ diyor. Bettina yüzme bilmiyor; burada yüzme bilmek gerekmiyor: „Sie müssen nicht schwimmen können“, çünkü su sadece 1,20 metre derin. Bettina için uygun. Tuzak e: Orada da jimnastik var, ama bebekli anne ve babalar için ve suda değil."
         },
         {
           "number": 17,
@@ -91,18 +91,18 @@
         {
           "number": 18,
           "type": "zuordnung",
-          "prompt": "Volker ist 68. Vormittags hilft er seiner Tochter im Geschäft, aber nachmittags hat er Zeit. Er möchte sich gern zu Musik bewegen, aber er hat keine Partnerin.",
+          "prompt": "Volker ist 68. Vormittags hilft er seiner Tochter im Geschäft, aber nachmittags hat er Zeit. Er möchte sich gern zu Musik bewegen, aber er muss allein hingehen, weil seine Frau keine Lust hat.",
           "answer": "a",
           "evidence": [{ "text": "a", "quote": "Jeden Mittwoch von 15 bis 16.30 Uhr" }, { "text": "a", "quote": "Sie brauchen keinen Partner – bei uns tanzen alle mit allen." }],
-          "explanation": "a ilanındaki dans kursu çarşamba öğleden sonra 15–16.30 arası. Partner gerekmiyor: „Sie brauchen keinen Partner“. Volker için uygun. Tuzak b: Orada da müzikle hareket var (Gymnastik mit Musik), ama saat 10'da, yani öğleden önce; Volker öğleden önce kızına dükkânda yardım ediyor: „Vormittags hilft er seiner Tochter im Geschäft“."
+          "explanation": "a ilanındaki dans kursu çarşamba öğleden sonra 15–16.30 arası. Partner gerekmiyor: „Sie brauchen keinen Partner“. Volker'in karısı gelmek istemiyor; Volker tek başına gidebilir. Bu ilan uygun. Tuzak b: Orada da müzikle hareket var (Gymnastik mit Musik), ama saat 10'da, yani öğleden önce; Volker öğleden önce kızına dükkânda yardım ediyor: „Vormittags hilft er seiner Tochter im Geschäft“."
         },
         {
           "number": 19,
           "type": "zuordnung",
-          "prompt": "Ferhat sucht für seinen Sohn einen Kletterkurs. Der Junge ist 15 Jahre alt und hat samstags immer Zeit.",
+          "prompt": "Ferhat war noch nie in einer Kletterhalle, aber er möchte das gern ausprobieren und alles von Anfang an lernen. Er hat samstags immer frei.",
           "answer": "x",
-          "evidence": [{ "text": "c", "quote": "Mitmachen können alle ab 18 Jahren." }],
-          "explanation": "Tuzak c: Tırmanma kursu cumartesi günü, ama „Mitmachen können alle ab 18 Jahren“, yani 18 yaşından itibaren katılınabiliyor. Ferhat'ın oğlu 15 yaşında. Başka bir ilanda tırmanma kursu yok: a dans, b su jimnastiği, d yürüyüş (örnekte kullanıldı), e bebekli jimnastik, f bisiklet grubu. Bu yüzden cevap X."
+          "evidence": [{ "text": "c", "quote": "Männer können leider nicht mitmachen" }],
+          "explanation": "Tuzak c: Tırmanma kursu yeni başlayanlar için ve cumartesi günü; Ferhat için uygun görünüyor. Ama kurs kadınlar için: „Männer können leider nicht mitmachen“, yani erkekler katılamıyor. Ferhat bir erkek („er“). Başka bir ilanda tırmanma kursu yok: a dans, b su jimnastiği, d yürüyüş (örnekte kullanıldı), e bebekli jimnastik, f bisiklet grubu. Bu yüzden cevap X."
         },
         {
           "number": 20,

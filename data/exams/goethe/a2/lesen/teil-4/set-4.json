@@ -26,7 +26,7 @@
           "label": "b",
           "title": "Apartment am Stadtpark Mühlbrück",
           "paragraphs": [
-            "Neues Apartment mit einem Zimmer, Küche, Bad und Waschmaschine – ideal für Leute, die in der Stadt arbeiten. Sie wohnen allein und ruhig, direkt am Park. Miete: 690 Euro im Monat. Wir vermieten nur für mindestens drei Monate."
+            "Neues Apartment mit einem Zimmer, Küche, Bad und Waschmaschine – ideal für Leute, die einige Wochen oder Monate hier arbeiten. Sie wohnen allein und ruhig. Das Haus liegt mitten in Mühlbrück, direkt am Stadtpark. Miete: 690 Euro im Monat."
           ]
         },
         {
@@ -83,10 +83,10 @@
         {
           "number": 17,
           "type": "zuordnung",
-          "prompt": "Ihr Kollege arbeitet im März und April sechs Wochen in Mühlbrück. In dieser Zeit möchte er allein wohnen und abends selbst kochen.",
+          "prompt": "Ihr Kollege arbeitet im März und April sechs Wochen bei einer Firma in Rosenau. Er möchte in dieser Zeit allein in Rosenau wohnen, damit er zu Fuß zur Arbeit gehen kann. Abends kocht er gern selbst.",
           "answer": "x",
-          "evidence": [{ "text": "b", "quote": "Wir vermieten nur für mindestens drei Monate." }],
-          "explanation": "Tuzak b: Daire Mühlbrück'te, mutfaklı ve tek kişilik, ama „Wir vermieten nur für mindestens drei Monate“, yani en az üç ay için kiralanıyor. Meslektaş sadece altı hafta kalıyor. Başka bir ilan da uymuyor: a'da odalarda yemek pişirilemiyor (ve örnekte kullanıldı), c ortak bir ev ve sadece temmuz–eylül boş, d ekimden itibaren ve başka biriyle aynı evde, e 8–14 kişilik gruplar için, f sadece hazirandan eylüle kadar. Bu yüzden cevap X."
+          "evidence": [{ "text": "b", "quote": "Das Haus liegt mitten in Mühlbrück, direkt am Stadtpark." }],
+          "explanation": "Tuzak b: Daire mutfaklı, tek kişilik ve birkaç hafta çalışan insanlar için; meslektaş için uygun görünüyor. Ama ev Mühlbrück'te: „Das Haus liegt mitten in Mühlbrück“. Meslektaş Rosenau'da çalışıyor ve işe yürüyerek gitmek için Rosenau'da oturmak istiyor. Başka bir ilan da uymuyor: a'da odalarda yemek pişirilemiyor (ve örnekte kullanıldı), c ortak bir ev, Eichtal'da ve temmuz–eylül boş, d Sandwiesen'de, ekimden itibaren ve başka biriyle aynı evde, e 8–14 kişilik gruplar için, f hazirandan eylüle kadar kiralanıyor. Bu yüzden cevap X."
         },
         {
           "number": 18,
@@ -99,7 +99,7 @@
         {
           "number": 19,
           "type": "zuordnung",
-          "prompt": "Elias beginnt im Oktober sein Studium in Sandwiesen. Er hat wenig Geld. Dafür arbeitet er gern mit Pflanzen und kann auch für andere einkaufen gehen.",
+          "prompt": "Elias beginnt im Oktober sein Studium in Sandwiesen. Er hat wenig Geld. Dafür arbeitet er gern mit Pflanzen und kann auch für andere zum Supermarkt gehen.",
           "answer": "d",
           "evidence": [{ "text": "d", "quote": "Die Miete ist nur 150 Euro im Monat, wenn Sie mir im Garten und beim Einkaufen helfen." }],
           "explanation": "d ilanındaki oda Sandwiesen'de ve ekimden itibaren boş; oda tercihen öğrencilere veriliyor („gern an Studenten“). Bahçede ve alışverişte yardım edilirse kira ayda sadece 150 euro. Elias için uygun. Tuzak c: Orada da genç insanlarla oturulabilir, ama oda sadece temmuzdan eylüle kadar boş ve ev Eichtal'da."
@@ -107,7 +107,7 @@
         {
           "number": 20,
           "type": "zuordnung",
-          "prompt": "Zwölf Freunde möchten im Mai ein langes Wochenende zusammen verbringen. Tagsüber möchten sie wandern und abends draußen zusammen grillen.",
+          "prompt": "Zwölf Freunde möchten im Mai ein langes Wochenende zusammen verbringen. Tagsüber möchten sie lange Spaziergänge in der Natur machen und abends draußen zusammen grillen.",
           "answer": "e",
           "evidence": [{ "text": "e", "quote": "genau richtig für Gruppen von 8 bis 14 Personen" }, { "text": "e", "quote": "Im Garten gibt es einen Grillplatz." }],
           "explanation": "e ilanındaki tatil evi 8–14 kişilik gruplar için; bahçede bir mangal yeri var ve yürüyüş yolları kapının önünde başlıyor. Ev hafta sonları için de kiralanıyor. On iki arkadaş için uygun. Tuzak f: Orada da bahçe var, ama sadece beş kişiye kadar yer var ve daire mayısta kiralanmıyor."

@@ -1,0 +1,137 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 5,
+  "set": "set-4",
+  "title": "Mit dem Fernbus unterwegs",
+  "minutes": 10,
+  "context": "Sie möchten mit dem Fernbus reisen und lesen die Informationen des Busunternehmens Wanderfalke.",
+  "instructions": "Lesen Sie die Aufgaben 27 bis 30 und den Text dazu. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "fernbus",
+          "title": "Wanderfalke Fernbus – Informationen für Fahrgäste",
+          "paragraphs": [
+            "Liebe Fahrgäste, vielen Dank, dass Sie mit Wanderfalke reisen. Hier finden Sie die wichtigsten Informationen für Ihre Fahrt.",
+            {
+              "heading": "Tickets"
+            },
+            "Am günstigsten kaufen Sie Ihr Ticket online oder in unserer App. Beim Fahrer bekommen Sie nur dann ein Ticket, wenn im Bus noch Plätze frei sind. Dort bezahlen Sie außerdem 2 Euro mehr. Bitte seien Sie spätestens 15 Minuten vor der Abfahrt an der Haltestelle und zeigen Sie beim Einsteigen Ihr Ticket und einen Ausweis vor.",
+            {
+              "heading": "Gepäck"
+            },
+            "Jeder Fahrgast darf ein großes Gepäckstück bis 20 Kilo und ein kleines Handgepäck mitnehmen. Für ein zweites großes Gepäckstück bezahlen Sie beim Ticketkauf 5 Euro extra. Wertsachen und Medikamente packen Sie bitte ins Handgepäck.",
+            {
+              "heading": "Fahrräder"
+            },
+            "Auf den meisten Linien gibt es hinten am Bus Platz für drei Fahrräder. Ein Fahrradplatz kostet 9 Euro und muss vorher online gebucht werden. E-Bikes können wir leider nicht mitnehmen, weil sie zu schwer sind.",
+            {
+              "heading": "Kinder und Jugendliche"
+            },
+            "Kinder unter 12 Jahren dürfen nur mit einer erwachsenen Begleitperson reisen. Jugendliche ab 12 Jahren können allein fahren, wenn sie eine schriftliche Erlaubnis der Eltern dabeihaben. Das Formular dafür finden Sie auf unserer Webseite.",
+            {
+              "heading": "Verspätungen"
+            },
+            "Staus oder schlechtes Wetter können wir leider nicht immer vermeiden. Wenn Ihr Bus mehr als 30 Minuten zu spät ist, informieren wir Sie per SMS. Bei einer Verspätung von mehr als zwei Stunden bekommen Sie die Hälfte des Fahrpreises zurück. Den Antrag stellen Sie bitte innerhalb von vier Wochen auf unserer Webseite.",
+            "Wir wünschen Ihnen eine gute Fahrt! Ihr Team von Wanderfalke"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 27,
+          "type": "abc",
+          "prompt": "Ein Ticket beim Fahrer …",
+          "options": {
+            "a": "ist billiger als ein Ticket im Internet.",
+            "b": "kann man immer kaufen, auch wenn der Bus voll ist.",
+            "c": "kostet mehr als ein Ticket in der App."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "fernbus",
+              "quote": "Dort bezahlen Sie außerdem 2 Euro mehr."
+            },
+            {
+              "text": "fernbus",
+              "quote": "Beim Fahrer bekommen Sie nur dann ein Ticket, wenn im Bus noch Plätze frei sind."
+            }
+          ],
+          "explanation": "Şoförden alınan bilet 2 euro daha pahalı: „Dort bezahlen Sie außerdem 2 Euro mehr.“ En ucuz bilet internette veya uygulamada (App) satılıyor. a) yanlış: Tam tersi; en ucuz yol internet veya uygulama („Am günstigsten … online oder in unserer App“). b) yanlış: Şoförden bilet sadece otobüste boş yer varsa alınabilir."
+        },
+        {
+          "number": 28,
+          "type": "abc",
+          "prompt": "Wer sein Fahrrad mitnehmen möchte, …",
+          "options": {
+            "a": "kann es einfach beim Einsteigen dem Fahrer geben.",
+            "b": "muss vorher online einen Platz buchen.",
+            "c": "kann auch ein E-Bike mitbringen."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "fernbus",
+              "quote": "Ein Fahrradplatz kostet 9 Euro und muss vorher online gebucht werden."
+            },
+            {
+              "text": "fernbus",
+              "quote": "E-Bikes können wir leider nicht mitnehmen"
+            }
+          ],
+          "explanation": "Bisiklet yeri 9 euro ve önceden internetten rezerve edilmek zorunda: „muss vorher online gebucht werden“ („muss“ – seçenekle aynı derece). a) yanlış: Bisiklet için yer önceden ayrılmalı; binerken şoföre vermek yeterli değil. c) yanlış: Elektrikli bisikletler çok ağır olduğu için taşınmıyor."
+        },
+        {
+          "number": 29,
+          "type": "abc",
+          "prompt": "Ein Mädchen mit 13 Jahren …",
+          "options": {
+            "a": "darf nur mit einem Erwachsenen fahren.",
+            "b": "kann mit einer Erlaubnis der Eltern allein reisen.",
+            "c": "kann auch ohne schriftliche Erlaubnis allein fahren."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "fernbus",
+              "quote": "Jugendliche ab 12 Jahren können allein fahren, wenn sie eine schriftliche Erlaubnis der Eltern dabeihaben."
+            },
+            {
+              "text": "fernbus",
+              "quote": "Kinder unter 12 Jahren dürfen nur mit einer erwachsenen Begleitperson reisen."
+            }
+          ],
+          "explanation": "13 yaşındaki kız 12 yaşından büyük. 12 yaş ve üstü gençler, yanlarında ebeveynlerinin yazılı izni varsa yalnız yolculuk edebilir: „können allein fahren, wenn sie eine schriftliche Erlaubnis der Eltern dabeihaben“. a) yanlış: Yetişkinle yolculuk kuralı sadece 12 yaşından küçük çocuklar için. c) yanlış: Yalnız yolculuk için yazılı izin gerekiyor („wenn“ = eğer … ise)."
+        },
+        {
+          "number": 30,
+          "type": "abc",
+          "prompt": "Wenn der Bus drei Stunden zu spät ankommt, …",
+          "options": {
+            "a": "bekommt man einen Teil des Fahrpreises zurück.",
+            "b": "bekommt man das ganze Geld für das Ticket zurück.",
+            "c": "muss man den Antrag sofort beim Fahrer stellen."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "fernbus",
+              "quote": "Bei einer Verspätung von mehr als zwei Stunden bekommen Sie die Hälfte des Fahrpreises zurück."
+            },
+            {
+              "text": "fernbus",
+              "quote": "Den Antrag stellen Sie bitte innerhalb von vier Wochen auf unserer Webseite."
+            }
+          ],
+          "explanation": "Üç saatlik gecikme iki saatten fazla. Bu durumda bilet ücretinin yarısı („die Hälfte des Fahrpreises“), yani bir kısmı geri ödeniyor. b) yanlış: Paranın tamamı değil, yarısı geri veriliyor. c) yanlış: Başvuru şoföre değil, dört hafta içinde internet sitesinden yapılıyor."
+        }
+      ]
+    }
+  ]
+}

@@ -16,7 +16,7 @@
         {
           "id": "a",
           "label": "a",
-          "title": "Tanzschule Taktgefühl",
+          "title": "Tanztreff Taktgefühl",
           "paragraphs": [
             "Tanzen macht Spaß und hält fit! Jeden Mittwoch von 15 bis 16.30 Uhr tanzen wir Walzer, Tango und Cha-Cha-Cha. Sie brauchen keinen Partner – bei uns tanzen alle mit allen. Danach trinken wir zusammen Kaffee. Die erste Stunde ist kostenlos."
           ]
@@ -67,34 +67,34 @@
           "number": 0,
           "example": true,
           "type": "zuordnung",
-          "prompt": "Hugo ist gern draußen in der Natur. Er sucht Leute, mit denen er am Wochenende viele Kilometer zu Fuß gehen kann.",
+          "prompt": "Gerhard ist gern draußen in der Natur. Er sucht Leute, mit denen er am Wochenende viele Kilometer zu Fuß gehen kann.",
           "answer": "d",
           "evidence": [{ "text": "d", "quote": "Jeden zweiten Samstag wandern wir 12 bis 15 Kilometer durch die Wälder um Eichtal." }],
-          "explanation": "d ilanındaki grup iki haftada bir cumartesi günü ormanlarda 12–15 kilometre yürüyüş yapıyor. Hugo için uygun. Bu ilan örnekte kullanıldığı için başka bir kişi için seçilemez."
+          "explanation": "d ilanındaki grup iki haftada bir cumartesi günü ormanlarda 12–15 kilometre yürüyüş yapıyor. Gerhard için uygun. Bu ilan örnekte kullanıldığı için başka bir kişi için seçilemez."
         },
         {
           "number": 16,
           "type": "zuordnung",
-          "prompt": "Bettina hat oft Schmerzen im Rücken. Ihre Ärztin sagt, Bewegung im Wasser hilft. Aber Bettina kann nicht schwimmen.",
+          "prompt": "Bettina hat oft Rückenschmerzen, und die Ärztin sagt: Bewegung im Wasser hilft. Aber Bettina hat Angst vor tiefem Wasser.",
           "answer": "b",
-          "evidence": [{ "text": "b", "quote": "das ist gut für den Rücken" }, { "text": "b", "quote": "Sie müssen nicht schwimmen können" }],
-          "explanation": "b ilanında ılık suda jimnastik var; ilan „das ist gut für den Rücken“ diyor. Yüzme bilmek de gerekmiyor: „Sie müssen nicht schwimmen können“, su sadece 1,20 metre derin. Bettina için uygun. Tuzak e: Orada da jimnastik var, ama bebekli anne ve babalar için ve suda değil."
+          "evidence": [{ "text": "b", "quote": "das ist gut für den Rücken" }, { "text": "b", "quote": "das Wasser ist nur 1,20 Meter tief" }],
+          "explanation": "b ilanında ılık suda jimnastik var; ilan „das ist gut für den Rücken“ diyor. Bettina derin sudan korkuyor; buradaki su sadece 1,20 metre derin: „das Wasser ist nur 1,20 Meter tief“. Bettina için uygun. Tuzak e: Orada da jimnastik var, ama bebekli anne ve babalar için ve suda değil."
         },
         {
           "number": 17,
           "type": "zuordnung",
-          "prompt": "Ihre Nachbarin hat vor fünf Monaten ein Kind bekommen. Sie möchte wieder Sport machen, aber sie hat niemanden, der auf das Baby aufpasst.",
+          "prompt": "Frauke hat vor fünf Monaten ein Kind bekommen. Jetzt möchte Frauke wieder Sport machen, und das Baby soll dabei sein.",
           "answer": "e",
           "evidence": [{ "text": "e", "quote": "Die Kleinen liegen neben Ihnen auf einer Decke oder machen mit." }],
-          "explanation": "e ilanı on iki aya kadar bebeği olan anne ve babalar için bir jimnastik kursu. Bebekler annenin yanında bir battaniyenin üstünde yatıyor. Beş aylık bebek de gelebilir. Tuzak b: Orada da sabah jimnastik var, ama „Leider nur für Erwachsene“; bebek oraya gelemez."
+          "explanation": "e ilanı on iki aya kadar bebeği olan anne ve babalar için bir jimnastik kursu. Bebekler anne veya babanın yanında bir battaniyenin üstünde yatıyor ya da katılıyor: „Die Kleinen liegen neben Ihnen auf einer Decke oder machen mit.“ Frauke'nin beş aylık bebeği de gelebilir. Tuzak b: Orada da sabah jimnastik var, ama „Leider nur für Erwachsene“; bebek oraya gelemez."
         },
         {
           "number": 18,
           "type": "zuordnung",
-          "prompt": "Lars ist 68 und hat nachmittags viel Zeit. Er möchte sich gern zu Musik bewegen, aber er hat keine Partnerin.",
+          "prompt": "Volker ist 68. Vormittags hilft er seiner Tochter im Geschäft, aber nachmittags hat er Zeit. Er möchte sich gern zu Musik bewegen, aber er hat keine Partnerin.",
           "answer": "a",
           "evidence": [{ "text": "a", "quote": "Jeden Mittwoch von 15 bis 16.30 Uhr" }, { "text": "a", "quote": "Sie brauchen keinen Partner – bei uns tanzen alle mit allen." }],
-          "explanation": "a ilanındaki dans kursu çarşamba öğleden sonra 15–16.30 arası. Partner gerekmiyor: „Sie brauchen keinen Partner“. Lars için uygun. Tuzak b: Orada da müzikle hareket var (Gymnastik mit Musik), ama saat 10'da, yani öğleden önce; Lars öğleden sonra vakit buluyor."
+          "explanation": "a ilanındaki dans kursu çarşamba öğleden sonra 15–16.30 arası. Partner gerekmiyor: „Sie brauchen keinen Partner“. Volker için uygun. Tuzak b: Orada da müzikle hareket var (Gymnastik mit Musik), ama saat 10'da, yani öğleden önce; Volker öğleden önce kızına dükkânda yardım ediyor: „Vormittags hilft er seiner Tochter im Geschäft“."
         },
         {
           "number": 19,
@@ -102,15 +102,15 @@
           "prompt": "Ferhat sucht für seinen Sohn einen Kletterkurs. Der Junge ist 15 Jahre alt und hat samstags immer Zeit.",
           "answer": "x",
           "evidence": [{ "text": "c", "quote": "Mitmachen können alle ab 18 Jahren." }],
-          "explanation": "Tuzak c: Tırmanma kursu cumartesi günü, ama „Mitmachen können alle ab 18 Jahren“, yani sadece 18 yaşından itibaren katılınabiliyor. Ferhat'ın oğlu 15 yaşında. Başka bir ilanda tırmanma kursu yok: a dans, b su jimnastiği, d yürüyüş (örnekte kullanıldı), e bebekli jimnastik, f bisiklet grubu. Bu yüzden cevap X."
+          "explanation": "Tuzak c: Tırmanma kursu cumartesi günü, ama „Mitmachen können alle ab 18 Jahren“, yani 18 yaşından itibaren katılınabiliyor. Ferhat'ın oğlu 15 yaşında. Başka bir ilanda tırmanma kursu yok: a dans, b su jimnastiği, d yürüyüş (örnekte kullanıldı), e bebekli jimnastik, f bisiklet grubu. Bu yüzden cevap X."
         },
         {
           "number": 20,
           "type": "zuordnung",
-          "prompt": "Ein Kollege hat sich ein schnelles Sportrad gekauft. Am Sonntagmorgen möchte er mit anderen zusammen lange Touren fahren.",
+          "prompt": "Edgar hat sich ein schnelles Sportrad gekauft. Am Sonntagmorgen möchte er mit anderen zusammen lange Touren fahren.",
           "answer": "f",
           "evidence": [{ "text": "f", "quote": "Wir fahren jeden Sonntag 70 bis 100 Kilometer mit dem Rennrad." }],
-          "explanation": "f ilanındaki grup her pazar yarış bisikletiyle (Rennrad) 70–100 kilometre sürüyor ve saat 8'de başlıyor. Meslektaşın kendi bisikleti de var. Tuzak d: Orada da hafta sonu bir grup uzun yol yapıyor, ama cumartesi günü ve yürüyerek."
+          "explanation": "f ilanındaki grup her pazar yarış bisikletiyle (Rennrad) 70–100 kilometre sürüyor ve saat 8'de başlıyor. Edgar'ın kendi bisikleti de var. Tuzak d: Orada da hafta sonu bir grup uzun yol yapıyor, ama cumartesi günü ve yürüyerek."
         }
       ]
     }

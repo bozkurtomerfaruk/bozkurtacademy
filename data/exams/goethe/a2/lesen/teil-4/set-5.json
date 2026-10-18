@@ -75,15 +75,15 @@
         {
           "number": 16,
           "type": "zuordnung",
-          "prompt": "Hugo möchte ein gebrauchtes Fahrrad kaufen. Er hat aber Angst, dass es schon nach ein paar Wochen kaputt ist.",
+          "prompt": "Matteo möchte ein gebrauchtes Fahrrad kaufen. Er hat aber Angst, dass es schon nach ein paar Wochen kaputt ist.",
           "answer": "e",
           "evidence": [{ "text": "e", "quote": "Deshalb bekommen Sie auf alle Räder sechs Monate Garantie." }],
-          "explanation": "e ilanındaki dükkân her bisikleti satmadan önce kontrol edip tamir ediyor ve altı ay garanti veriyor. Bisiklet birkaç hafta sonra bozulursa Hugo garantiden yararlanabilir. Tuzak d: Orada da ikinci el bisiklet var, ama „so, wie sie sind, ohne Reparatur“, yani tamir edilmeden satılıyor."
+          "explanation": "e ilanındaki dükkân her bisikleti satmadan önce kontrol edip tamir ediyor ve altı ay garanti veriyor. Bisiklet birkaç hafta sonra bozulursa Matteo garantiden yararlanabilir. Tuzak d: Orada da ikinci el bisiklet var, ama „so, wie sie sind, ohne Reparatur“, yani tamir edilmeden satılıyor."
         },
         {
           "number": 17,
           "type": "zuordnung",
-          "prompt": "Marens Enkel ist drei Jahre alt und fährt oft mit ihr im Auto mit. Sie sucht für ihn einen günstigen Sitz.",
+          "prompt": "Ilses Enkel ist drei Jahre alt und fährt oft mit ihr im Auto mit. Ilse braucht für ihn einen passenden Sitz.",
           "answer": "f",
           "evidence": [{ "text": "f", "quote": "einen Kindersitz fürs Auto für Kinder von etwa einem bis vier Jahren (40 Euro)" }],
           "explanation": "f ilanında yaklaşık bir ile dört yaş arası çocuklar için 40 euroya bir araba koltuğu satılıyor. Üç yaşındaki torun için uygun. Tuzak b: Orada da çocuklar için ikinci el eşyalar var, ama ilanda sadece kıyafet, ayakkabı ve çocuk kitapları yazıyor; araba koltuğu yazmıyor."
@@ -91,26 +91,26 @@
         {
           "number": 18,
           "type": "zuordnung",
-          "prompt": "Ein Kollege liest gern Krimis. Er hat viele Bücher zu Hause, die er schon kennt, und möchte sie gegen andere tauschen.",
+          "prompt": "Ingo liest gern Krimis. Er hat viele Bücher zu Hause, die er schon kennt, und möchte sie gegen andere tauschen.",
           "answer": "c",
           "evidence": [{ "text": "c", "quote": "Bringen Sie zwei Bücher, die Sie schon gelesen haben, und nehmen Sie ein anderes mit, ohne zu bezahlen." }],
-          "explanation": "c ilanındaki kitapçıda polisiye romanlar (Krimis) var ve bir takas rafı bulunuyor: Okunmuş iki kitap getiren, parasız başka bir kitap alabiliyor. Meslektaş için uygun. Tuzak b: Orada da kitap var, ama 0–12 yaş arası çocuklar için çocuk kitapları; takas da yazmıyor."
+          "explanation": "c ilanındaki kitapçıda polisiye romanlar (Krimis) var ve bir takas rafı bulunuyor: Okunmuş iki kitap getiren, parasız başka bir kitap alabiliyor. Ingo için uygun. Tuzak b: Orada da kitap var, ama 0–12 yaş arası çocuklar için çocuk kitapları; takas da yazmıyor."
         },
         {
           "number": 19,
           "type": "zuordnung",
-          "prompt": "Ihre Nachbarn ziehen in eine größere Wohnung und brauchen noch einen Kleiderschrank und einen Esstisch. Die beiden haben kein Auto.",
+          "prompt": "Nele und Ronja ziehen in eine größere Wohnung und brauchen noch einen Kleiderschrank und einen Esstisch. Die beiden haben kein Auto.",
           "answer": "d",
           "evidence": [{ "text": "d", "quote": "Gebrauchte Sofas, Schränke, Tische und Stühle" }, { "text": "d", "quote": "Für 25 Euro bringen wir die Möbel zu Ihnen nach Hause." }],
-          "explanation": "d ilanında ikinci el dolap ve masa var; mobilyalar 25 euroya eve getiriliyor. Arabası olmayan komşular için uygun. Tuzak f: Orada da bir mobilya (çocuk yatağı) var, ama eşyalar Sandwiesen'den alınmalı: „wir können nichts bringen“."
+          "explanation": "d ilanında ikinci el dolap ve masa var; mobilyalar 25 euroya eve getiriliyor. Arabası olmayan Nele ve Ronja için uygun. Tuzak f: Orada da bir mobilya (çocuk yatağı) var, ama eşyalar Sandwiesen'den alınmalı: „wir können nichts bringen“."
         },
         {
           "number": 20,
           "type": "zuordnung",
-          "prompt": "Anton möchte Gitarre spielen lernen und sucht dafür ein gebrauchtes Instrument. Er möchte höchstens 100 Euro bezahlen.",
+          "prompt": "Detlef möchte Gitarre spielen lernen und sucht dafür ein gebrauchtes Instrument. Er möchte höchstens 100 Euro bezahlen.",
           "answer": "x",
           "evidence": [{ "text": "a", "quote": "Gitarren gibt es bei uns ab 150 Euro." }],
-          "explanation": "Tuzak a: Müzik mağazasında ikinci el gitar var, ama „Gitarren gibt es bei uns ab 150 Euro“, yani gitarlar 150 eurodan başlıyor. Anton en fazla 100 euro ödemek istiyor. Başka bir ilanda müzik aleti yok: b çocuk eşyaları (örnekte kullanıldı), c kitap, d mobilya ve bisiklet, e bisiklet, f araba koltuğu ve çocuk yatağı. Bu yüzden cevap X."
+          "explanation": "Tuzak a: Müzik mağazasında ikinci el gitar var, ama „Gitarren gibt es bei uns ab 150 Euro“, yani gitarlar 150 eurodan başlıyor. Detlef en fazla 100 euro ödemek istiyor. Başka bir ilanda müzik aleti yok: b çocuk eşyaları (örnekte kullanıldı), c kitap, d mobilya ve bisiklet, e bisiklet, f araba koltuğu ve çocuk yatağı. Bu yüzden cevap X."
         }
       ]
     }

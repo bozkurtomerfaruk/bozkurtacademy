@@ -67,10 +67,10 @@
           "number": 0,
           "example": true,
           "type": "zuordnung",
-          "prompt": "Die Eltern von Lars kommen für drei Nächte zu Besuch. Die beiden möchten in einem kleinen Haus übernachten und morgens dort frühstücken.",
+          "prompt": "Die Eltern von Till kommen für drei Nächte zu Besuch. Die beiden suchen ein ruhiges Zimmer und möchten morgens im Haus frühstücken.",
           "answer": "a",
           "evidence": [{ "text": "a", "quote": "Kleine, ruhige Zimmer für eine oder zwei Personen, mit Frühstück." }],
-          "explanation": "a ilanındaki pansiyonda bir veya iki kişilik küçük odalar var, kahvaltı da dahil; bir gece de kalınabiliyor. Lars'ın annesi ve babası için uygun. Bu ilan örnekte kullanıldığı için başka bir kişi için seçilemez."
+          "explanation": "a ilanındaki pansiyonda bir veya iki kişilik küçük odalar var, kahvaltı da dahil; bir gece de kalınabiliyor. Till'in annesi ve babası için uygun. Bu ilan örnekte kullanıldığı için başka bir kişi için seçilemez."
         },
         {
           "number": 16,
@@ -78,7 +78,7 @@
           "prompt": "Jette macht im August und September ein Praktikum in Eichtal. Für diese Zeit sucht sie ein Zimmer und möchte gern mit anderen jungen Leuten zusammenwohnen.",
           "answer": "c",
           "evidence": [{ "text": "c", "quote": "Unsere Mitbewohnerin ist von Juli bis September in Spanien." }, { "text": "c", "quote": "wir sind alle Mitte zwanzig" }],
-          "explanation": "c ilanındaki öğrenci evinde (WG) bir oda temmuzdan eylüle kadar boş; Jette'nin ağustos ve eylül ayları bu zamanın içinde. Ev Eichtal'da ve diğer kişiler yirmili yaşlarının ortasında. Tuzak d: Orada da bir oda var, ama sadece ekimden itibaren ve 74 yaşındaki bir kadının evinde."
+          "explanation": "c ilanındaki ortak evde (WG) bir oda temmuzdan eylüle kadar boş; Jette'nin ağustos ve eylül ayları bu zamanın içinde. Ev Eichtal'da ve diğer kişiler yirmili yaşlarının ortasında. Tuzak d: Orada da bir oda var, ama ekimden itibaren ve Sandwiesen'de, 74 yaşındaki bir kişinin evinde."
         },
         {
           "number": 17,
@@ -91,18 +91,18 @@
         {
           "number": 18,
           "type": "zuordnung",
-          "prompt": "Maren möchte im Juli mit ihrem Mann, den zwei Kindern und dem Hund zwei Wochen Urlaub auf dem Land machen.",
+          "prompt": "Maren möchte im Juli mit ihrem Mann, den zwei Kindern und dem Hund zwei Wochen Urlaub machen. Die Familie möchte dort oft im See schwimmen.",
           "answer": "f",
-          "evidence": [{ "text": "f", "quote": "Platz für bis zu fünf Personen. Ihr Hund darf gern mitkommen." }],
-          "explanation": "f ilanındaki tatil dairesi beş kişiye kadar yer alıyor ve köpek de gelebiliyor. Haziran–eylül arası, en az bir hafta için kiralanıyor. Dört kişilik aile ve köpek için temmuzda iki hafta uygun. Tuzak a: Pansiyonda da köpekler kabul ediliyor, ama odalar sadece bir veya iki kişilik."
+          "evidence": [{ "text": "f", "quote": "Platz für bis zu fünf Personen. Ihr Hund darf gern mitkommen." }, { "text": "f", "quote": "Den Bäcker und den Badesee erreichen Sie zu Fuß." }],
+          "explanation": "f ilanındaki tatil dairesi beş kişiye kadar yer alıyor ve köpek de gelebiliyor. Yüzme gölüne (Badesee) yürüyerek gidilebiliyor. Haziran–eylül arası, en az bir hafta için kiralanıyor. Dört kişilik aile ve köpek için temmuzda iki hafta uygun. Tuzak a: Pansiyonda da köpekler kabul ediliyor, ama odalar sadece bir veya iki kişilik."
         },
         {
           "number": 19,
           "type": "zuordnung",
-          "prompt": "Anton beginnt im Oktober sein Studium in Sandwiesen. Er hat wenig Geld, aber er kann gut im Haus und im Garten mithelfen.",
+          "prompt": "Elias beginnt im Oktober sein Studium in Sandwiesen. Er hat wenig Geld. Dafür arbeitet er gern mit Pflanzen und kann auch für andere einkaufen gehen.",
           "answer": "d",
           "evidence": [{ "text": "d", "quote": "Die Miete ist nur 150 Euro im Monat, wenn Sie mir im Garten und beim Einkaufen helfen." }],
-          "explanation": "d ilanındaki oda Sandwiesen'de ve ekimden itibaren boş; öğrenciler isteniyor. Bahçede ve alışverişte yardım edilirse kira ayda sadece 150 euro. Anton için uygun. Tuzak c: Orada da genç insanlarla oturulabilir, ama oda sadece temmuzdan eylüle kadar boş ve ev Eichtal'da."
+          "explanation": "d ilanındaki oda Sandwiesen'de ve ekimden itibaren boş; oda tercihen öğrencilere veriliyor („gern an Studenten“). Bahçede ve alışverişte yardım edilirse kira ayda sadece 150 euro. Elias için uygun. Tuzak c: Orada da genç insanlarla oturulabilir, ama oda sadece temmuzdan eylüle kadar boş ve ev Eichtal'da."
         },
         {
           "number": 20,

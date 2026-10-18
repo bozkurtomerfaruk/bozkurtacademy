@@ -1,0 +1,125 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-4",
+  "title": "Neue Stelle am Meer",
+  "minutes": 10,
+  "instructions": "Lesen Sie den Text und die Aufgaben 1 bis 6. Wählen Sie: Sind die Aussagen richtig oder falsch?",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "mail",
+          "title": "Grüße von der Küste",
+          "byline": "E-Mail von Henrik an Merle",
+          "paragraphs": [
+            "Liebe Merle, vielen Dank für deine lange Nachricht! Jetzt bin ich schon fast einen Monat in Möwensand, und es wird wirklich Zeit, dass ich dir antworte.",
+            "Wie du weißt, arbeite ich seit dem 1. Mai an der Rezeption im Hotel „Seeschwalbe“. Das Hotel liegt direkt am Strand, und von meinem Schreibtisch aus kann ich das Meer sehen. Die Arbeit ist nicht immer leicht, denn viele Gäste kommen aus dem Ausland, und ich spreche fast den ganzen Tag Englisch. Aber dabei lerne ich jeden Tag etwas Neues.",
+            "Meine Kolleginnen und Kollegen sind sehr nett. Am Anfang hat mir besonders Elif geholfen, die schon seit fünf Jahren im Hotel arbeitet. Sie hat mir alles gezeigt und mir viele Tipps gegeben. Nur mit dem Koch verstehe ich mich nicht so gut, aber den sehe ich zum Glück nur selten.",
+            "Weniger schön sind die Arbeitszeiten. Ich arbeite im Schichtdienst: Manchmal fange ich schon um sechs Uhr morgens an, manchmal arbeite ich bis Mitternacht. Auch am Wochenende muss ich oft arbeiten. Dafür habe ich dann unter der Woche frei und kann an den leeren Strand gehen.",
+            "Eine Wohnung habe ich auch schon gefunden. Sie ist klein und ziemlich teuer, aber nur zehn Minuten zu Fuß vom Hotel entfernt. Ein Auto brauche ich hier also nicht. In den ersten Wochen hatte ich übrigens oft Heimweh und habe fast jeden Abend mit meinen Eltern in Ahornfeld telefoniert. Inzwischen habe ich kaum noch Heimweh, weil ich in einem Volleyballverein am Strand neue Leute kennengelernt habe.",
+            "Hast du nicht Lust, mich im Sommer zu besuchen? Vom 10. bis zum 16. Juli habe ich Urlaub. Auf meinem Sofa kannst du gern schlafen. Wir könnten zusammen schwimmen gehen oder mit dem Boot zu der kleinen Insel vor der Küste fahren. Schreib mir bald, ob es bei dir klappt! Liebe Grüße, dein Henrik"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Henrik lebt seit ungefähr vier Wochen in Möwensand.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Jetzt bin ich schon fast einen Monat in Möwensand"
+            }
+          ],
+          "explanation": "Henrik „schon fast einen Monat“ (neredeyse bir aydır) Möwensand'da olduğunu yazıyor. Bir ay yaklaşık dört hafta demektir; ifade doğru."
+        },
+        {
+          "number": 1,
+          "type": "richtig-falsch",
+          "prompt": "Henrik spricht bei der Arbeit viel in einer Fremdsprache.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "ich spreche fast den ganzen Tag Englisch"
+            }
+          ],
+          "explanation": "Birçok misafir yurt dışından geliyor ve Henrik „fast den ganzen Tag Englisch“ (neredeyse bütün gün İngilizce) konuşuyor. İngilizce onun için bir yabancı dil (Fremdsprache); ifade doğru."
+        },
+        {
+          "number": 2,
+          "type": "richtig-falsch",
+          "prompt": "Elif hat zur gleichen Zeit wie Henrik im Hotel angefangen.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "die schon seit fünf Jahren im Hotel arbeitet"
+            }
+          ],
+          "explanation": "Henrik 1 Mayıs'tan beri otelde çalışıyor, Elif ise „schon seit fünf Jahren“ (beş yıldır) orada çalışıyor. Bu yüzden başta Henrik'e her şeyi o gösterdi. Aynı zamanda başlamadılar; ifade yanlış."
+        },
+        {
+          "number": 3,
+          "type": "richtig-falsch",
+          "prompt": "Henrik beginnt nicht jeden Tag zur gleichen Uhrzeit mit der Arbeit.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Manchmal fange ich schon um sechs Uhr morgens an, manchmal arbeite ich bis Mitternacht."
+            }
+          ],
+          "explanation": "Henrik vardiyalı çalışıyor („im Schichtdienst“): Bazen sabah altıda başlıyor, bazen gece yarısına kadar çalışıyor. Yani işe her gün aynı saatte başlamıyor; ifade doğru."
+        },
+        {
+          "number": 4,
+          "type": "richtig-falsch",
+          "prompt": "Henrik kann von seiner Wohnung zu Fuß zur Arbeit gehen.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "aber nur zehn Minuten zu Fuß vom Hotel entfernt"
+            }
+          ],
+          "explanation": "Daire otele yürüyerek sadece on dakika uzaklıkta („nur zehn Minuten zu Fuß“). Henrik bu yüzden arabaya ihtiyacı olmadığını da yazıyor. İfade doğru."
+        },
+        {
+          "number": 5,
+          "type": "richtig-falsch",
+          "prompt": "Henrik hat im Moment noch oft Heimweh.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Inzwischen habe ich kaum noch Heimweh"
+            }
+          ],
+          "explanation": "Tuzak: İlk haftalarda Henrik sık sık sıla hasreti çekiyordu. Ama „Inzwischen habe ich kaum noch Heimweh“ – artık neredeyse hiç sıla hasreti yok, çünkü voleybol kulübünde yeni insanlarla tanıştı. İfade yanlış."
+        },
+        {
+          "number": 6,
+          "type": "richtig-falsch",
+          "prompt": "Henrik muss im Juli die ganze Zeit arbeiten.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Vom 10. bis zum 16. Juli habe ich Urlaub."
+            }
+          ],
+          "explanation": "Henrik „Vom 10. bis zum 16. Juli habe ich Urlaub“ yazıyor: Temmuzda bir hafta izni var ve Merle'yi o zaman ziyarete davet ediyor. Temmuzun tamamında çalışmıyor; ifade yanlış."
+        }
+      ]
+    }
+  ]
+}

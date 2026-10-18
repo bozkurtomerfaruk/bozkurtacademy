@@ -35,7 +35,7 @@
           "options": {
             "a": "ist seit Dienstag krank.",
             "b": "war heute beim Arzt.",
-            "c": "muss bis Sonntag im Krankenhaus bleiben."
+            "c": "soll bis Sonntag im Krankenhaus bleiben."
           },
           "answer": "a",
           "evidence": [
@@ -44,7 +44,7 @@
               "quote": "Seit Dienstag liege ich mit Fieber im Bett."
             }
           ],
-          "explanation": "Valentin salıdan beri ateşle yatakta yatıyor: „Seit Dienstag liege ich mit Fieber im Bett.“ b) yanlış: Doktora bugün değil, dün gitti: „Gestern war ich beim Arzt“. c) yanlış: Pazara kadar hastanede değil, evde kalması gerekiyor: „Ich soll bis Sonntag zu Hause bleiben.“"
+          "explanation": "Valentin salıdan beri ateşle yatakta yatıyor: „Seit Dienstag liege ich mit Fieber im Bett.“ b) yanlış: Doktora bugün değil, dün gitti: „Gestern war ich beim Arzt“. c) yanlış: Doktora göre pazara kadar hastanede değil, evde kalmalı: „Ich soll bis Sonntag zu Hause bleiben.“"
         },
         {
           "number": 12,
@@ -70,7 +70,7 @@
           "prompt": "Valentin fragt, ob Ida …",
           "options": {
             "a": "morgen für ihn einkaufen kann.",
-            "b": "ihm Geld geben kann.",
+            "b": "am Sonntag für ihn einkaufen kann.",
             "c": "ihm die Karten schicken kann."
           },
           "answer": "a",
@@ -80,7 +80,7 @@
               "quote": "Kannst du morgen nach der Arbeit für mich einkaufen"
             }
           ],
-          "explanation": "Valentin, Ida'ya yarın işten sonra onun için alışveriş yapıp yapamayacağını soruyor: „Kannst du morgen nach der Arbeit für mich einkaufen“. b) yanlış: Ida'dan para istemiyor; tersine, alışverişin parasını ona geri verecek: „Das Geld gebe ich dir natürlich zurück.“ c) yanlış: Biletleri Ida değil, Valentin gönderiyor: „Ich schicke dir die Karten heute noch als E-Mail.“"
+          "explanation": "Valentin, Ida'ya yarın işten sonra onun için alışveriş yapıp yapamayacağını soruyor: „Kannst du morgen nach der Arbeit für mich einkaufen“. b) yanlış: Pazar günü değil, yarın işten sonra alışveriş istiyor; pazar, Valentin'in evde kalması gereken son gün: „Ich soll bis Sonntag zu Hause bleiben.“ c) yanlış: Biletleri Ida değil, Valentin gönderiyor: „Ich schicke dir die Karten heute noch als E-Mail.“"
         },
         {
           "number": 14,
@@ -116,7 +116,7 @@
               "quote": "Hast du am Samstag, dem 24. Oktober, Zeit?"
             }
           ],
-          "explanation": "Valentin iyileşince Ida'yı yemeğe davet etmek istiyor ve 24 Ekim cumartesi günü vakti olup olmadığını soruyor: „Hast du am Samstag, dem 24. Oktober, Zeit?“ a) yanlış: Cuma günü konser vardı ve Valentin o gün hasta; yemek için cumartesi gününü öneriyor. c) yanlış: Evine değil, pazar yerindeki yeni restorana gitmeyi öneriyor: „in das neue Restaurant am Markt“."
+          "explanation": "Valentin iyileşince Ida'yı yemeğe davet etmek istiyor ve 24 Ekim cumartesi günü vakti olup olmadığını soruyor: „Hast du am Samstag, dem 24. Oktober, Zeit?“ a) yanlış: Cuma günü konser var ve Valentin o gün gelemiyor; yemek için 24 Ekim cumartesi gününü soruyor. c) yanlış: Evine değil, pazar yerindeki yeni restorana gitmeyi öneriyor: „in das neue Restaurant am Markt“."
         }
       ]
     }

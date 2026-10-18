@@ -1,0 +1,157 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b2",
+  "section": "lesen",
+  "teil": 5,
+  "set": "set-2",
+  "title": "Das Pflichtpraktikum",
+  "minutes": 6,
+  "context": "Sie studieren an der Hochschule Wernstadt und lesen die Richtlinien für das Pflichtpraktikum in Ihrem Studiengang.",
+  "instructions": "Lesen Sie die Überschriften a bis f und die Abschnitte. Welche Überschrift passt zu welchem Abschnitt? Zwei Überschriften bleiben übrig. Die Überschrift aus dem Beispiel können Sie nicht mehr wählen.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "abschnitt-0",
+          "title": "Abschnitt 0",
+          "paragraphs": [
+            "Um einen geeigneten Praktikumsbetrieb kümmern Sie sich grundsätzlich selbst. Eine gute Anlaufstelle ist die Online-Börse des Career Service, in der Unternehmen aus der Region laufend Angebote veröffentlichen. Bevor Sie einem Betrieb zusagen, lassen Sie die Stelle bitte von der oder dem Praktikumsbeauftragten Ihres Studiengangs genehmigen. Geprüft wird dabei vor allem, ob die vorgesehenen Tätigkeiten zu den Inhalten Ihres Studiums passen."
+          ]
+        },
+        {
+          "id": "abschnitt-28",
+          "title": "Abschnitt 28",
+          "paragraphs": [
+            "Das Praktikum umfasst insgesamt 18 Wochen in Vollzeit und ist für das fünfte Semester vorgesehen. Auf Antrag kann es in zwei Abschnitte von je neun Wochen aufgeteilt werden, sofern beide im selben Berufsfeld stattfinden. Fehlzeiten, die über fünf Arbeitstage hinausgehen, müssen nachgeholt werden. Eine Teilzeitregelung ist nur in begründeten Ausnahmefällen möglich, etwa bei der Betreuung eigener Kinder; die Gesamtdauer verlängert sich dann entsprechend."
+          ]
+        },
+        {
+          "id": "abschnitt-29",
+          "title": "Abschnitt 29",
+          "paragraphs": [
+            "Spätestens sechs Wochen nach Ihrem letzten Arbeitstag reichen Sie einen Bericht im Umfang von zehn bis fünfzehn Seiten ein. Darin stellen Sie den Betrieb vor, beschreiben Ihre Aufgaben und reflektieren, was Sie gelernt haben. Legen Sie außerdem eine Bescheinigung des Betriebs bei, aus der Zeitraum und Tätigkeiten hervorgehen. Die Leistungspunkte werden Ihnen erst gutgeschrieben, wenn beide Dokumente angenommen wurden."
+          ]
+        },
+        {
+          "id": "abschnitt-30",
+          "title": "Abschnitt 30",
+          "paragraphs": [
+            "Sie können das Praktikum auch im Ausland absolvieren; dies wird von der Hochschule ausdrücklich begrüßt. Planen Sie dafür mindestens ein Semester Vorlauf ein, weil Visum und Unterkunft oft viel Zeit in Anspruch nehmen. Das International Office informiert über Förderprogramme, die einen Teil der Reise- und Lebenshaltungskosten übernehmen. Für die Genehmigung gelten dieselben Regeln wie im Inland; der Bericht darf auch auf Englisch verfasst werden."
+          ]
+        },
+        {
+          "id": "a",
+          "label": "a",
+          "paragraphs": [
+            "Erfahrungen jenseits der Grenzen sammeln"
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "paragraphs": [
+            "Zum Schluss: Rückblick in schriftlicher Form"
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "paragraphs": [
+            "Rechte und Pflichten im Praktikumsvertrag"
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "paragraphs": [
+            "Der zeitliche Rahmen"
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "paragraphs": [
+            "Auf der Suche nach dem richtigen Arbeitgeber"
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "paragraphs": [
+            "Geschützt bei Unfällen und Schäden"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 0",
+          "answer": "e",
+          "evidence": [
+            {
+              "text": "abschnitt-0",
+              "quote": "Um einen geeigneten Praktikumsbetrieb kümmern Sie sich grundsätzlich selbst."
+            }
+          ],
+          "explanation": "Bölüm 0 staj yerini öğrencinin kendisinin bulması gerektiğini, bunun için Career Service'in ilan platformunun iyi bir başlangıç noktası olduğunu ve yere söz vermeden önce yerin staj sorumlusuna onaylatılmasının istendiğini anlatıyor. e başlığı („doğru işvereni ararken“) bu konuyu özetliyor. Bu başlık örnekte kullanıldığı için başka bir bölüm için seçilemez."
+        },
+        {
+          "number": 28,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 28",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "abschnitt-28",
+              "quote": "insgesamt 18 Wochen in Vollzeit"
+            },
+            {
+              "text": "abschnitt-28",
+              "quote": "die Gesamtdauer verlängert sich dann entsprechend"
+            }
+          ],
+          "explanation": "Bölüm 28 stajın ne kadar sürdüğünü ve ne zaman yapıldığını anlatıyor: toplam „18 Wochen in Vollzeit“, beşinci yarıyılda, isteğe bağlı olarak dokuzar haftalık iki parça; beş iş gününü aşan devamsızlık telafi edilir, yarı zamanlı yapılırsa toplam süre uzar. Bunların hepsi d başlığındaki zaman çerçevesine giriyor. Aldatıcı olan c başlığı: „Auf Antrag“ (başvuru üzerine) ve istisna kuralları resmî bir düzenleme gibi görünür, ama c başlığı staj sözleşmesindeki („Praktikumsvertrag“) hak ve görevlerden söz ediyor; bölümde bir sözleşmeden hiç söz edilmiyor, yalnızca stajın süresi ve zamanlaması anlatılıyor."
+        },
+        {
+          "number": 29,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 29",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "abschnitt-29",
+              "quote": "Spätestens sechs Wochen nach Ihrem letzten Arbeitstag reichen Sie einen Bericht"
+            },
+            {
+              "text": "abschnitt-29",
+              "quote": "reflektieren, was Sie gelernt haben"
+            }
+          ],
+          "explanation": "Bölüm 29 staj bittikten sonra yapılacakları anlatıyor: son iş gününden en geç altı hafta sonra 10–15 sayfalık bir rapor verilir; raporda işyeri, görevler ve öğrenilenler anlatılır, işyerinden bir belge eklenir. b başlığı („son olarak: yazılı bir geriye bakış“) bunu „Bericht“ kelimesini tekrar etmeden anlatıyor. Aldatıcı olan c başlığı: belge ve kredi kuralları resmî görünür, ama bölüm staj sözleşmesini („Praktikumsvertrag“) değil, stajdan sonraki raporu anlatıyor."
+        },
+        {
+          "number": 30,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 30",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "abschnitt-30",
+              "quote": "Sie können das Praktikum auch im Ausland absolvieren"
+            },
+            {
+              "text": "abschnitt-30",
+              "quote": "weil Visum und Unterkunft oft viel Zeit in Anspruch nehmen"
+            }
+          ],
+          "explanation": "Bölüm 30 stajın yurt dışında yapılmasını anlatıyor: „im Ausland“ staj üniversite tarafından memnuniyetle karşılanıyor, vize ve konaklama için en az bir yarıyıl önceden planlama gerekiyor, International Office destek programları hakkında bilgi veriyor. a başlığı („sınırların ötesinde deneyim kazanmak“) bunu farklı kelimelerle söylüyor. Aldatıcı olan b başlığı: bölümün sonunda raporun İngilizce yazılabileceği geçiyor, ama bu yalnızca yurt dışı stajı için bir ek bilgi; raporun kendisi 29. bölümde anlatılıyor."
+        }
+      ]
+    }
+  ]
+}

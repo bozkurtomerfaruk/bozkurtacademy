@@ -12,10 +12,10 @@ const TYPES = {
   'richtig-falsch': () => ['richtig', 'falsch'],
   'ja-nein': () => ['ja', 'nein'],
   abc: question => Object.keys(question.options || {}),
-  zuordnung: (question, group) => [...group.texts.map(text => text.label), group.none || '0']
+  zuordnung: (question, group) => [...group.texts.filter(text => text.label).map(text => text.label), ...(group.none === false ? [] : [group.none || '0'])]
 };
 const errors = [];
-const words = value => String(value).split(/\s+/).filter(Boolean).length;
+const words = value => String(value).replace(/\{\{\d+\}\}/g, ' ').replace(/\{\{0=|\}\}/g, ' ').split(/\s+/).filter(Boolean).length;
 // Searchable pieces of a text: plain paragraphs and the cells of { rows } tables, keyed by position.
 const pieces = text => (text.paragraphs || []).flatMap((p, i) => typeof p === 'string' ? [{ key: `${i}`, value: p }]
   : Array.isArray(p?.rows) ? p.rows.flatMap((row, r) => row.map((cell, c) => ({ key: `${i}:${r}:${c}`, value: cell }))) : []);
@@ -55,7 +55,14 @@ for (const exam of data.exams) for (const level of exam.levels || []) for (const
           const valid = p => (typeof p === 'string' && p.trim()) || (p && typeof p === 'object' && ((typeof p.heading === 'string' && p.heading.trim()) || cells(p.rows)));
           if (!Array.isArray(text.paragraphs) || !text.paragraphs.some(p => typeof p === 'string' || p?.rows) || !text.paragraphs.every(valid)) fail(`${where}: text ${text.id} needs paragraphs (text, { heading } or { rows: [[…, …]] })`);
         }
-        if (group.none !== undefined && (typeof group.none !== 'string' || !group.none.trim() || group.texts.some(text => text.label === group.none))) fail(`${where}: "none" must be a short label that is not an ad label`);
+        if (group.none !== undefined && group.none !== false && (typeof group.none !== 'string' || !group.none.trim() || group.texts.some(text => text.label === group.none))) fail(`${where}: "none" must be false or a short label that is not an ad label`);
+        // Gaps {{10}} (Goethe B2 Teil 2): every gap belongs to exactly one question of the group and vice versa.
+        const gaps = group.texts.flatMap(text => pieces(text).flatMap(piece => [...piece.value.matchAll(/\{\{(\d+)\}\}/g)].map(m => Number(m[1]))));
+        if (gaps.length) {
+          const asked = (group.questions || []).filter(q => !q.example).map(q => q.number);
+          if (gaps.length !== new Set(gaps).size) fail(`${where}: a gap number appears twice`);
+          if (gaps.slice().sort((a, b) => a - b).join() !== asked.slice().sort((a, b) => a - b).join()) fail(`${where}: gaps ${gaps.join(',')} do not match questions ${asked.join(',')}`);
+        }
         report.push(group.texts.map(text => `${text.label || text.id}:${words([text.title, ...pieces(text).map(piece => piece.value), ...(text.paragraphs || []).map(p => p?.heading || '')].join(' '))}`).join(' '));
 
         const spans = {};
@@ -64,7 +71,7 @@ for (const exam of data.exams) for (const level of exam.levels || []) for (const
           numbers.push(question.number);
           questions += question.example ? 0 : 1;
           if (!TYPES[question.type]) { fail(`${label}: unknown type ${question.type}`); continue; }
-          if (question.type === 'zuordnung' && group.texts.some(text => !text.label)) fail(`${where}: zuordnung needs a label on every text`);
+          if (question.type === 'zuordnung' && group.texts.filter(text => text.label).length < 2) fail(`${where}: zuordnung needs labelled texts to choose from`);
           if (question.type === 'abc' && Object.keys(question.options || {}).join() !== 'a,b,c') fail(`${label}: options must be a, b, c`);
           if (!TYPES[question.type](question, group).includes(question.answer)) fail(`${label}: answer ${JSON.stringify(question.answer)} is not an option`);
           if (!question.explanation || question.explanation.length < 40) fail(`${label}: explanation missing or too short`);
@@ -74,6 +81,7 @@ for (const exam of data.exams) for (const level of exam.levels || []) for (const
           for (const item of evidence) {
             const text = group.texts.find(entry => entry.id === item.text);
             if (!text) { fail(`${label}: evidence points to unknown text ${item.text}`); continue; }
+            if (item.quote.includes('{{') || item.quote.includes('}}')) { fail(`${label}: a quote must not contain a gap marker`); continue; }
             const hits = pieces(text).flatMap(({ key: p, value }) => {
               const found = [];
               for (let at = value.indexOf(item.quote); at >= 0; at = value.indexOf(item.quote, at + 1)) found.push({ p, at });

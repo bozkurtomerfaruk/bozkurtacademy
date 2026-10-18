@@ -2,6 +2,27 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-10-18 · Sınav setleri: sen yokken otomatik çalışma
+
+**Sıra:** (1) B1 ikinci tur + iş akışı, (2) A2 eklentileri + A2 Teil 1–4 ikişer set pilot, (3) A2'yi her Teil için 5 sete tamamlama, (4) Goethe B2 Lesen format tablosu (yalnızca tablo, içerik yok). Her aşama ayrı commit olarak main'e; testler geçmeden birleştirme yok.
+
+### Kaldığım yer
+
+- **Aşama:** 1 (B1 ikinci tur) ve 2 (A2 pilot) paralel sürüyor. Çalışma dalı: `claude/b1-ikinci-tur`.
+- **Biten:** İş akışı (`exam-sets.yml`: yalnızca main push'u, `actions/checkout@v7`) zaten main'de (`ed9d28b`). Dört yeni kural `docs/sinav-setleri.md`'de. 1.3'te „fikir kimden" sorusu ve 3.3'te Bergheide tekrarı düzeltildi. Oynatıcıya `none` (A2'de X) ve `{ rows }` tablo görünümü eklendi, check-exams uyumlu. A2 Lesen kayıtları `js/examsData.js`'de.
+- **Süren:** B1 Teil 2 ve Teil 4 revizyonu (alt ajanlar); A2 Teil 1–4 pilot setleri (alt ajanlar).
+- **Sıradaki adım:** Revizyonları kontrol et → değişen B1 setlerini kör çözdür → testler → main'e "B1 ikinci tur" commit'i. Sonra A2 pilot: açıklama taraması → kör çözüm → testler → main'e "A2 pilot" commit'i.
+
+### Kendi verdiğim kararlar
+
+- İş akışında `pull_request` tetikleyicisi bırakıldı: PR açılmadığı için yedek dallarda çalışmıyor; ileride PR açılırsa kontrol yine çalışır.
+- „Keine Lösung" seçeneği grup düzeyinde `none` alanıyla ayarlanıyor (varsayılan `0`, A2 Teil 4'te `x`, ekranda büyük X); B1 dosyalarında değişiklik gerekmiyor.
+- Teil 2 panosu ayrı bir düzen yerine metin içinde `{ "rows": [...] }` tablo paragrafı olarak tasarlandı: her metin türünde kullanılabilir, alıntı vurgusu hücrelerde de çalışıyor.
+- A2 Teil 1 ve Teil 3'te örnek soru (0) yok, Teil 2 ve Teil 4'te var: araştırmada Teil 2/4 örnekleri kesin, Teil 1/3 için örnek bulunamadı.
+- A2 süreleri (oynatıcıda gösterilen): Teil 1: 8, Teil 2: 6, Teil 3: 8, Teil 4: 8 dakika (toplam 30).
+- A2 pilot konuları: T1 „Die jüngste Bäckerin der Stadt", „Flohmarkt im Hinterhof"; T2 „Im Kaufhaus", „Im Klinikum"; T3 „Grüße aus dem Sprachkurs", „Die neue Wohnung"; T4 „Essen gehen", „Hilfe im Alltag".
+- Limit dolarsa: Bu ortamda `send_later` aracı var; limit sıfırlanınca bu oturuma „docs/durum.md'deki Kaldığım yer bölümünü oku ve devam et" mesajı zamanlanacak.
+
 ## 2026-10-17 · Ayrı iş: Sınav görevi oynatıcısı ve Goethe B1 Lesen pilotu
 
 **Yapılan:** Sınav bölümündeki "Başla" artık setleri sitenin içinde açıyor (`#exams/goethe/b1/lesen/1/set-1`). Oynatıcı `js/exam-task.js`, setler `data/exams/…/teil-N/set-N.json`, format `docs/sinav-setleri.md`, kontrol `node scripts/check-exams.mjs` (GitHub'da da çalışıyor). Pilot: Goethe B1 Lesen Teil 1–5, her biri 2 set (60 soru, 0 numaralı örnekler dahil), tamamen orijinal.

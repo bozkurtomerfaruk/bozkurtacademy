@@ -30,7 +30,7 @@
           "prompt": "Leni Vogel …",
           "options": {
             "a": "hat die Bäckerei von ihrer Mutter bekommen.",
-            "b": "führt die Bäckerei seit März.",
+            "b": "ist seit März Chefin von einer Bäckerei.",
             "c": "hat die Bäckerei 40 Jahre lang geführt."
           },
           "answer": "b",
@@ -40,7 +40,7 @@
               "quote": "hat seit März eine eigene Bäckerei in Fichtenau"
             }
           ],
-          "explanation": "Metnin başında Leni'nin mart ayından beri kendi fırını olduğu yazıyor: „hat seit März eine eigene Bäckerei“. a) yanlış: Fırın eskiden annesinin değil, dedesi Bernhard'ın: „hat früher ihrem Großvater Bernhard gehört“. c) yanlış: Fırını 40 yıl boyunca dedesi işletti, Leni değil: „Er hat das Geschäft 40 Jahre lang geführt.“"
+          "explanation": "Metinde Leni'nin mart ayından beri kendi fırını olduğu yazıyor: „hat seit März eine eigene Bäckerei“. Kendi fırını olan kişi o fırının patronudur: „eine eigene Bäckerei“ = „Chefin von einer Bäckerei“. a) yanlış: Fırın eskiden annesinin değil, dedesi Bernhard'ın: „hat früher ihrem Großvater Bernhard gehört“. c) yanlış: Fırını 40 yıl boyunca dedesi işletti, Leni değil: „Er hat das Geschäft 40 Jahre lang geführt.“"
         },
         {
           "number": 2,
@@ -49,7 +49,7 @@
           "options": {
             "a": "backt mit Leni in der Nacht Brot.",
             "b": "macht am Nachmittag die Bestellungen.",
-            "c": "arbeitet am Vormittag im Laden."
+            "c": "hilft Leni morgens im Geschäft."
           },
           "answer": "c",
           "evidence": [
@@ -58,14 +58,14 @@
               "quote": "dort hilft ihr am Vormittag ihre Mutter"
             }
           ],
-          "explanation": "Annesi öğleden önce dükkânda yardım ediyor: „dort hilft ihr am Vormittag ihre Mutter“. a) yanlış: Gece fırında Leni yalnız çalışıyor: „Beim Backen arbeitet sie allein.“ b) yanlış: Öğleden sonra siparişleri annesi değil, Leni hazırlıyor: „Am Nachmittag macht Leni dann die Bestellungen für den nächsten Tag.“"
+          "explanation": "Saat altıda dükkân açılıyor ve annesi öğleden önce orada Leni'ye yardım ediyor: „Um sechs Uhr öffnet der Laden, und dort hilft ihr am Vormittag ihre Mutter“. „am Vormittag“ = „morgens“ (sabahları), „Laden“ = „Geschäft“ (dükkân). a) yanlış: Gece fırında Leni yalnız çalışıyor: „Beim Backen arbeitet sie allein.“ b) yanlış: Öğleden sonra siparişleri annesi değil, Leni hazırlıyor: „Am Nachmittag macht Leni dann die Bestellungen für den nächsten Tag.“"
         },
         {
           "number": 3,
           "type": "abc",
           "prompt": "Neu in der Bäckerei ist, dass …",
           "options": {
-            "a": "die Kunden vor dem Laden Kaffee trinken können.",
+            "a": "es vor der Bäckerei jetzt Plätze für Gäste gibt.",
             "b": "Leni die Rezepte von ihrem Großvater nicht mehr benutzt.",
             "c": "es jeden Montag ein Brot mit Nüssen gibt."
           },
@@ -73,10 +73,14 @@
           "evidence": [
             {
               "text": "baeckerei",
+              "quote": "Vor dem Laden stehen jetzt drei kleine Tische"
+            },
+            {
+              "text": "baeckerei",
               "quote": "dort können die Kunden Kaffee trinken"
             }
           ],
-          "explanation": "Dükkânın önünde artık üç küçük masa var ve müşteriler orada kahve içebiliyor: „dort können die Kunden Kaffee trinken“. b) yanlış: Leni dedesinin tariflerini kullanmaya devam ediyor: „benutzt sie aber weiter“. c) yanlış: Kuruyemişli ekmek pazartesi değil, her cuma var; pazartesi fırın zaten kapalı."
+          "explanation": "Dükkânın önünde artık üç küçük masa var ve müşteriler orada kahve içebiliyor: „Vor dem Laden stehen jetzt drei kleine Tische, und dort können die Kunden Kaffee trinken.“ Üç küçük masa = müşteriler için oturacak yerler (Plätze für Gäste); „vor dem Laden“ = „vor der Bäckerei“. b) yanlış: Leni dedesinin tariflerini kullanmaya devam ediyor: „benutzt sie aber weiter“. c) yanlış: Kuruyemişli ekmek pazartesi değil, her cuma var: „jeden Freitag“; pazartesi fırın zaten kapalı."
         },
         {
           "number": 4,
@@ -85,7 +89,7 @@
           "options": {
             "a": "Viele finden die neuen Ideen nicht gut.",
             "b": "Manche möchten, dass die Bäckerei am Montag geöffnet ist.",
-            "c": "Einige ältere Kunden haben zuerst nach dem Chef gefragt."
+            "c": "Manche älteren Kunden haben zuerst den Chef gesucht."
           },
           "answer": "c",
           "evidence": [
@@ -94,19 +98,23 @@
               "quote": "Einige ältere Leute haben am Anfang aber gefragt"
             }
           ],
-          "explanation": "Bazı yaşlı müşteriler başta „Wo ist denn der Chef?“ (Patron nerede?) diye sormuş. a) yanlış: Müşterilerin çoğu değişiklikleri iyi buluyor: „Die meisten Kunden finden die Änderungen gut.“ b) yanlış: Bazı müşteriler fırının pazartesi değil, pazar günü açık olmasını istiyor: „dass die Bäckerei am Sonntag geöffnet ist“."
+          "explanation": "Bazı yaşlı müşteriler başta „Wo ist denn der Chef?“ (Patron nerede?) diye sormuş, yani patronu aramışlar: „Einige ältere Leute“ = „manche älteren Kunden“, „am Anfang“ = „zuerst“. a) yanlış: Müşterilerin çoğu değişiklikleri iyi buluyor: „Die meisten Kunden finden die Änderungen gut.“ b) yanlış: Bazı müşteriler fırının pazartesi değil, pazar günü açık olmasını istiyor: „dass die Bäckerei am Sonntag geöffnet ist“."
         },
         {
           "number": 5,
           "type": "abc",
           "prompt": "Lenis Großvater …",
           "options": {
-            "a": "frühstückt fast jeden Morgen in der Bäckerei.",
+            "a": "kommt morgens oft zum Essen in die Bäckerei.",
             "b": "hilft Leni am Vormittag im Laden.",
             "c": "hat aufgehört, weil er keine Lust mehr hatte."
           },
           "answer": "a",
           "evidence": [
+            {
+              "text": "baeckerei",
+              "quote": "Der Großvater kommt fast jeden Morgen in den Laden"
+            },
             {
               "text": "baeckerei",
               "quote": "sondern zum Frühstücken"
@@ -116,7 +124,7 @@
               "quote": "weil er Probleme mit dem Rücken hatte"
             }
           ],
-          "explanation": "Dedesi neredeyse her sabah dükkâna geliyor, ama çalışmak için değil, kahvaltı etmek için: „nicht zum Arbeiten, sondern zum Frühstücken“. b) yanlış: Öğleden önce dükkânda annesi yardım ediyor, dedesi orada çalışmıyor. c) yanlış: Dedesi sırtında sorunlar olduğu için bıraktı: „weil er Probleme mit dem Rücken hatte“."
+          "explanation": "Dedesi neredeyse her sabah dükkâna geliyor, ama çalışmak için değil, kahvaltı etmek için: „Der Großvater kommt fast jeden Morgen in den Laden – aber nicht zum Arbeiten, sondern zum Frühstücken.“ „fast jeden Morgen“ = „morgens oft“, „zum Frühstücken“ = sabah bir şey yemek için (zum Essen). b) yanlış: Öğleden önce dükkânda annesi yardım ediyor; dedesi oraya çalışmak için gelmiyor: „nicht zum Arbeiten“. c) yanlış: Dedesi sırtında sorunlar olduğu için bıraktı: „weil er Probleme mit dem Rücken hatte“."
         }
       ]
     }

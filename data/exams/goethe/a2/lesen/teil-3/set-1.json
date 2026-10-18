@@ -35,7 +35,7 @@
           "type": "abc",
           "prompt": "Ayşe …",
           "options": {
-            "a": "ist seit zwei Wochen in Rheinsdorf.",
+            "a": "fährt in vierzehn Tagen wieder nach Hause.",
             "b": "bleibt noch vier Wochen in Rheinsdorf.",
             "c": "wohnt in Rheinsdorf bei ihrer Lehrerin."
           },
@@ -43,10 +43,10 @@
           "evidence": [
             {
               "text": "mail",
-              "quote": "Ich bin jetzt schon zwei Wochen in Rheinsdorf"
+              "quote": "In zwei Wochen bin ich wieder zu Hause."
             }
           ],
-          "explanation": "Ayşe iki haftadır Rheinsdorf'ta: „Ich bin jetzt schon zwei Wochen in Rheinsdorf“. b) yanlış: İki hafta sonra eve dönüyor: „In zwei Wochen bin ich wieder zu Hause.“ Dört hafta kalmıyor. c) yanlış: Öğretmeninin yanında değil, Lutz ailesinin yanında kalıyor: „Ich wohne bei Familie Lutz.“"
+          "explanation": "Ayşe iki hafta sonra yeniden evinde olacak: „In zwei Wochen bin ich wieder zu Hause.“ İki hafta = on dört gün (vierzehn Tage). b) yanlış: Dört hafta daha kalmıyor; iki hafta sonra eve dönüyor. İki hafta, Ayşe'nin şimdiye kadar Rheinsdorf'ta geçirdiği süre: „Ich bin jetzt schon zwei Wochen in Rheinsdorf“. c) yanlış: Öğretmeninin yanında değil, Lutz ailesinin yanında kalıyor: „Ich wohne bei Familie Lutz.“"
         },
         {
           "number": 12,
@@ -55,7 +55,7 @@
           "options": {
             "a": "gibt es zwei Kinder und eine Katze.",
             "b": "isst Ayşe am Abend allein.",
-            "c": "muss Ayşe beim Essen viel Deutsch sprechen."
+            "c": "übt Ayşe beim Abendessen ihr Deutsch."
           },
           "answer": "c",
           "evidence": [
@@ -64,7 +64,7 @@
               "quote": "dabei muss ich viel Deutsch sprechen"
             }
           ],
-          "explanation": "Akşam yemeğinde Ayşe çok Almanca konuşmak zorunda: „Am Abend essen wir zusammen, und dabei muss ich viel Deutsch sprechen.“ a) yanlış: Ailenin iki çocuğu var, ama kedisi değil büyük bir köpeği var: „einen großen Hund“. b) yanlış: Ayşe akşam yemeğini yalnız değil, aileyle birlikte yiyor: „essen wir zusammen“."
+          "explanation": "Akşam aileyle birlikte yemek yerken Ayşe çok Almanca konuşuyor: „Am Abend essen wir zusammen, und dabei muss ich viel Deutsch sprechen. Das ist gut für mich!“ Akşam yemeğinde çok Almanca konuşmak = Almanca pratik yapmak (üben). a) yanlış: Ailenin iki çocuğu var, ama kedisi değil büyük bir köpeği var: „einen großen Hund“. b) yanlış: Ayşe akşam yemeğini yalnız değil, aileyle birlikte yiyor: „essen wir zusammen“."
         },
         {
           "number": 13,
@@ -72,8 +72,8 @@
           "prompt": "Im Sprachkurs …",
           "options": {
             "a": "hat Ayşe auch am Nachmittag Unterricht.",
-            "b": "sind Leute aus acht Ländern.",
-            "c": "gibt es wenig Hausaufgaben."
+            "b": "lernen Menschen aus verschiedenen Ländern.",
+            "c": "gibt es meistens wenig Hausaufgaben."
           },
           "answer": "b",
           "evidence": [
@@ -82,7 +82,7 @@
               "quote": "In meiner Klasse sind zwölf Leute aus acht Ländern."
             }
           ],
-          "explanation": "Sınıfta sekiz ülkeden on iki kişi var: „zwölf Leute aus acht Ländern“. a) yanlış: Kurs her gün saat 9'dan 13'e kadar ve saat 13'te bitiyor; öğleden sonra ders yok: „jeden Tag von 9 bis 13 Uhr“. c) yanlış: Ayşe çok ödev aldıklarını yazıyor: „wir bekommen viele Hausaufgaben“."
+          "explanation": "Sınıfta sekiz ülkeden on iki kişi var: „In meiner Klasse sind zwölf Leute aus acht Ländern.“ Sekiz ülke = farklı ülkeler (verschiedene Länder); bu insanlar aynı sınıfta öğreniyor. a) yanlış: Kurs her gün saat 9'dan 13'e kadar; öğleden sonra ders yok: „jeden Tag von 9 bis 13 Uhr“. c) yanlış: Ayşe çok ödev aldıklarını yazıyor: „wir bekommen viele Hausaufgaben“."
         },
         {
           "number": 14,
@@ -90,17 +90,21 @@
           "prompt": "Am nächsten Samstag …",
           "options": {
             "a": "fährt Ayşe mit der Sprachschule an den See.",
-            "b": "macht Ayşe einen Ausflug in die Berge.",
+            "b": "ist Ayşe mit der Sprachschule in den Bergen.",
             "c": "bringt Ayşe ihr Handy in ein Geschäft."
           },
           "answer": "b",
           "evidence": [
             {
               "text": "mail",
+              "quote": "Am Wochenende macht die Sprachschule Ausflüge."
+            },
+            {
+              "text": "mail",
               "quote": "nächsten Samstag fahren wir in die Berge"
             }
           ],
-          "explanation": "Gelecek cumartesi dil okulu ile dağlara gidiyorlar: „nächsten Samstag fahren wir in die Berge“. a) yanlış: Göle geçen cumartesi gittiler: „Letzten Samstag waren wir am See“. c) yanlış: Ayşe telefonunu cumartesi değil, pazartesi dükkâna götürüyor: „Ich bringe es am Montag in ein Geschäft.“"
+          "explanation": "Dil okulu hafta sonları gezi yapıyor: „Am Wochenende macht die Sprachschule Ausflüge.“ Gelecek cumartesi dağlara gidiyorlar: „nächsten Samstag fahren wir in die Berge“. Yani Ayşe gelecek cumartesi dil okuluyla dağlarda olacak. a) yanlış: Göle geçen cumartesi gittiler: „Letzten Samstag waren wir am See“. c) yanlış: Ayşe telefonunu cumartesi değil, pazartesi dükkâna götürüyor: „Ich bringe es am Montag in ein Geschäft.“"
         },
         {
           "number": 15,
@@ -108,8 +112,8 @@
           "prompt": "Ayşe möchte, dass Sanne …",
           "options": {
             "a": "ihr eine Nachricht aufs Handy schreibt.",
-            "b": "sie zum Essen einlädt.",
-            "c": "ihr sagt, ob sie am 11. Oktober Zeit hat."
+            "b": "sie am Sonntag zum Essen einlädt.",
+            "c": "ihr antwortet, ob sie am 11. Oktober frei ist."
           },
           "answer": "c",
           "evidence": [
@@ -122,7 +126,7 @@
               "quote": "Dann möchte ich dich gern zum Essen einladen"
             }
           ],
-          "explanation": "Ayşe, Sanne'ye 11 Ekim pazar günü vakti olup olmadığını soruyor: „Hast du am Sonntag, dem 11. Oktober, Zeit?“ a) yanlış: Telefonu bozuk, bu yüzden Sanne'den mesaj değil e-posta istiyor: „Bitte schreib mir also lieber eine E-Mail“. b) yanlış: Yemeğe Sanne değil, Ayşe davet etmek istiyor: „Dann möchte ich dich gern zum Essen einladen“."
+          "explanation": "Ayşe, Sanne'ye 11 Ekim pazar günü vakti olup olmadığını soruyor ve cevap bekliyor: „Hast du am Sonntag, dem 11. Oktober, Zeit?“ „Zeit haben“ = „frei sein“ (boş olmak). a) yanlış: Telefonu bozuk, bu yüzden Sanne'den mesaj değil e-posta istiyor: „Bitte schreib mir also lieber eine E-Mail“. b) yanlış: Yemeğe Sanne değil, Ayşe davet etmek istiyor: „Dann möchte ich dich gern zum Essen einladen“."
         }
       ]
     }

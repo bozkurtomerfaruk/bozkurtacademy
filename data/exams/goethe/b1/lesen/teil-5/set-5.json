@@ -33,7 +33,7 @@
             {
               "heading": "Absage"
             },
-            "Wenn Sie einen Termin nicht wahrnehmen können, sagen Sie ihn bitte mindestens 24 Stunden vorher ab. Das geht nur über den Link in Ihrer Bestätigungs-E-Mail, nicht per Telefon. Die Absage kostet nichts, und Ihr Termin kann an andere Bürger vergeben werden.",
+            "Wenn Sie zu einem Termin nicht kommen können, sagen Sie ihn bitte mindestens 24 Stunden vorher ab. Das geht nur über den Link in Ihrer Bestätigungs-E-Mail, nicht per Telefon. Die Absage kostet nichts, und Ihr Termin kann an andere Bürger vergeben werden.",
             {
               "heading": "Gebühren und Bezahlung"
             },
@@ -93,7 +93,7 @@
           "prompt": "Wer zu seinem Termin nicht kommen kann, …",
           "options": {
             "a": "muss für die Absage eine Gebühr bezahlen.",
-            "b": "soll im Bürgeramt anrufen.",
+            "b": "muss dafür persönlich ins Bürgeramt kommen.",
             "c": "soll den Termin spätestens einen Tag vorher absagen."
           },
           "answer": "c",
@@ -107,7 +107,7 @@
               "quote": "Das geht nur über den Link in Ihrer Bestätigungs-E-Mail, nicht per Telefon."
             }
           ],
-          "explanation": "Randevuya gelemeyecek kişi randevuyu en az 24 saat, yani bir gün önceden iptal etmeli: „sagen Sie ihn bitte mindestens 24 Stunden vorher ab“ (ricası „bitte“ – seçenekteki „soll“ ile uyumlu). a) yanlış: İptal ücretsiz („Die Absage kostet nichts“). b) yanlış: İptal telefonla değil, sadece onay e-postasındaki bağlantıyla yapılabiliyor."
+          "explanation": "Randevuya gelemeyecek kişi randevuyu en az 24 saat, yani bir gün önceden iptal etmeli: „sagen Sie ihn bitte mindestens 24 Stunden vorher ab“ („bitte“ ile yapılan rica – seçenekteki „soll“ ile uyumlu). a) yanlış: İptal ücretsiz („Die Absage kostet nichts“). b) yanlış: Bürgeramt'a gitmek gerekmiyor; iptal sadece onay e-postasındaki bağlantıyla yapılabiliyor."
         },
         {
           "number": 30,

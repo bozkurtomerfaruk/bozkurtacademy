@@ -50,7 +50,7 @@
           "label": "e",
           "title": "Reparaturdienst Schraubfix",
           "paragraphs": [
-            "Ist Ihre Waschmaschine, Ihr Kühlschrank oder Ihr Fernseher kaputt? Unsere Techniker kommen schnell zu Ihnen und reparieren auch ältere Geräte. Einen Termin bekommen Sie meistens schon am nächsten Tag. In Kranichfeld kostet die Anfahrt nichts."
+            "Ist Ihre Waschmaschine, Ihr Kühlschrank oder Ihr Fernseher kaputt? Unsere Techniker kommen schnell zu Ihnen und reparieren auch ältere Geräte. Einen Termin bekommen Sie meistens schon am nächsten Tag. In Kranichfeld kostet die Fahrt zu Ihnen nichts."
           ]
         },
         {
@@ -58,7 +58,7 @@
           "label": "f",
           "title": "Mobile Fahrradwerkstatt Speiche",
           "paragraphs": [
-            "Ihr Fahrrad ist kaputt, aber Sie haben keine Zeit für die Werkstatt? Wir kommen mit unserem Werkstattwagen zu Ihnen nach Hause oder an Ihren Arbeitsplatz und reparieren Bremsen, Licht und Reifen direkt vor Ort. Termine von Montag bis Samstag."
+            "Ihr Fahrrad ist kaputt, aber Sie haben keine Zeit für die Werkstatt? Wir kommen mit unserem Auto zu Ihnen nach Hause oder an Ihren Arbeitsplatz und reparieren Bremsen, Licht und Reifen direkt bei Ihnen. Termine von Montag bis Samstag."
           ]
         }
       ],
@@ -67,7 +67,7 @@
           "number": 0,
           "example": true,
           "type": "zuordnung",
-          "prompt": "Die Waschmaschine von Svea läuft seit gestern nicht mehr. Sie sucht jemanden, der sie repariert.",
+          "prompt": "Die Waschmaschine von Svea läuft seit gestern nicht mehr. Sie sucht jemanden, der die Maschine repariert.",
           "answer": "e",
           "evidence": [{ "text": "e", "quote": "Ist Ihre Waschmaschine, Ihr Kühlschrank oder Ihr Fernseher kaputt?" }],
           "explanation": "e ilanındaki tamir servisi çamaşır makinesi, buzdolabı ve televizyon tamir ediyor ve eve geliyor. Svea için uygun. Bu ilan örnekte kullanıldığı için başka bir kişi için seçilemez."
@@ -75,10 +75,10 @@
         {
           "number": 16,
           "type": "zuordnung",
-          "prompt": "Deniz möchte am Samstag ein Paket mit Büchern schnell zu seiner Schwester auf die andere Seite der Stadt schicken.",
+          "prompt": "Deniz möchte heute ein Paket mit Büchern – fast 15 Kilo – schnell zu seiner Schwester auf die andere Seite der Stadt schicken.",
           "answer": "x",
-          "evidence": [{ "text": "c", "quote": "Am Wochenende sind wir leider geschlossen." }],
-          "explanation": "Tuzak c: Bisikletli kurye paketleri hızlıca şehrin her yerine götürüyor, ama „Am Wochenende sind wir leider geschlossen“, yani cumartesi çalışmıyor. Başka bir ilan da paket götürmüyor: d sadece süpermarketten alışveriş getiriyor, a, b ve f başka hizmetler, e örnekte kullanıldı. Bu yüzden cevap X."
+          "evidence": [{ "text": "c", "quote": "Briefe und Pakete bis zehn Kilo" }],
+          "explanation": "Tuzak c: Bisikletli kurye paketleri hızlıca şehrin her yerine götürüyor, ama sadece on kiloya kadar: „Briefe und Pakete bis zehn Kilo“. Deniz'in paketi yaklaşık 15 kilo. Başka bir ilan da paket götürmüyor: d sadece süpermarketten alışveriş getiriyor, a, b ve f başka hizmetler, e örnekte kullanıldı. Bu yüzden cevap X."
         },
         {
           "number": 17,
@@ -94,7 +94,7 @@
           "prompt": "Frank und seine Frau sind am Samstagabend zu einer Hochzeit eingeladen. Sie suchen jemanden, der auf ihre zweijährige Tochter aufpasst.",
           "answer": "b",
           "evidence": [{ "text": "b", "quote": "Ich komme abends und am Wochenende zu Ihnen nach Hause, gern auch für Kinder ab einem Jahr." }],
-          "explanation": "b ilanındaki öğrenci akşamları ve hafta sonu eve gelip bir yaşından büyük çocuklara bakıyor. Cumartesi akşamı ve iki yaşındaki kız için uygun. Tuzak a: Cumartesi öğleden sonra çocuklar için bilgisayar kursu var, ama sadece on yaşından büyük çocuklar için ve bu bir çocuk bakımı değil."
+          "explanation": "b ilanındaki öğrenci akşamları ve hafta sonu eve gelip bir yaşından itibaren çocuklara bakıyor. Cumartesi akşamı ve iki yaşındaki kız için uygun. Tuzak a: Cumartesi öğleden sonra çocuklar için bilgisayar kursu var, ama sadece on yaşından itibaren çocuklar için ve bu bir çocuk bakımı değil."
         },
         {
           "number": 19,
@@ -109,7 +109,7 @@
           "type": "zuordnung",
           "prompt": "Eine Kollegin fährt jeden Tag mit dem Fahrrad zur Arbeit. Jetzt funktionieren die Bremsen nicht mehr, und sie hat keine Zeit, das Rad zu einer Werkstatt zu bringen.",
           "answer": "f",
-          "evidence": [{ "text": "f", "quote": "an Ihren Arbeitsplatz und reparieren Bremsen, Licht und Reifen direkt vor Ort" }],
+          "evidence": [{ "text": "f", "quote": "an Ihren Arbeitsplatz und reparieren Bremsen, Licht und Reifen direkt bei Ihnen" }],
           "explanation": "f ilanındaki gezici bisiklet atölyesi eve veya iş yerine geliyor ve frenleri orada tamir ediyor. Meslektaşın bisikleti atölyeye götürmesine gerek yok. Tuzak c: Orada da bisiklet var, ama bu bir kurye; bisiklet tamir etmiyor, sadece mektup ve paket götürüyor."
         }
       ]

@@ -34,18 +34,22 @@
           "type": "abc",
           "prompt": "Marcos neue Wohnung …",
           "options": {
-            "a": "hat drei Zimmer.",
-            "b": "hat einen Aufzug.",
-            "c": "hat einen Balkon."
+            "a": "hat drei Zimmer und einen Balkon.",
+            "b": "hat einen Aufzug im Haus.",
+            "c": "liegt in der Nähe vom Bahnhof."
           },
           "answer": "c",
           "evidence": [
             {
               "text": "mail",
+              "quote": "Die Wohnung ist nicht weit vom Bahnhof."
+            },
+            {
+              "text": "mail",
               "quote": "Sie hat zwei Zimmer, eine kleine Küche und einen Balkon."
             }
           ],
-          "explanation": "Yeni dairenin bir balkonu var: „Sie hat zwei Zimmer, eine kleine Küche und einen Balkon.“ a) yanlış: Dairede üç değil, iki oda var; „dritten“ kelimesi oda sayısı değil, kat: „im dritten Stock“. b) yanlış: Binada asansör yok: „leider gibt es keinen Aufzug“."
+          "explanation": "Marco'nun yeni dairesi istasyondan uzak değil: „Die Wohnung ist nicht weit vom Bahnhof.“ „nicht weit“ = „in der Nähe“ (yakında). a) yanlış: Dairenin balkonu var, ama üç değil, iki oda var: „Sie hat zwei Zimmer, eine kleine Küche und einen Balkon.“ „dritten“ kelimesi oda sayısı değil, kat: „im dritten Stock“. b) yanlış: Binada asansör yok: „leider gibt es keinen Aufzug“."
         },
         {
           "number": 12,
@@ -70,8 +74,8 @@
           "type": "abc",
           "prompt": "Die Nachbarn …",
           "options": {
-            "a": "haben zwei Kinder.",
-            "b": "haben Marco zum Tee eingeladen.",
+            "a": "haben zwei kleine Kinder.",
+            "b": "haben Marco nach dem Umzug eingeladen.",
             "c": "wohnen über Marco im vierten Stock."
           },
           "answer": "b",
@@ -81,14 +85,14 @@
               "quote": "Die beiden haben mich gleich am ersten Abend zum Tee eingeladen."
             }
           ],
-          "explanation": "Yan dairedeki genç çift Marco'yu ilk akşam çaya davet etti: „Die beiden haben mich gleich am ersten Abend zum Tee eingeladen.“ a) yanlış: Çiftin iki çocuğu değil, bir bebeği var: „ein junges Paar mit einem Baby“. c) yanlış: Komşular onun üstünde değil, yanında oturuyor: „Neben mir wohnt ein junges Paar“."
+          "explanation": "Yan dairedeki genç çift Marco'yu yeni dairedeki ilk akşamında çaya davet etti: „Die beiden haben mich gleich am ersten Abend zum Tee eingeladen.“ İlk akşam = taşınmadan hemen sonra (nach dem Umzug). a) yanlış: Çiftin iki çocuğu değil, bir bebeği var: „ein junges Paar mit einem Baby“. c) yanlış: Komşular onun üstünde değil, yanında oturuyor: „Neben mir wohnt ein junges Paar“."
         },
         {
           "number": 14,
           "type": "abc",
           "prompt": "Marco …",
           "options": {
-            "a": "hat noch keine Lampe im Wohnzimmer.",
+            "a": "braucht noch eine Lampe für das Wohnzimmer.",
             "b": "bekommt die Waschmaschine diese Woche.",
             "c": "hat sein altes Sofa in die neue Wohnung mitgenommen."
           },
@@ -96,10 +100,14 @@
           "evidence": [
             {
               "text": "mail",
+              "quote": "Ein paar Sachen fehlen noch."
+            },
+            {
+              "text": "mail",
               "quote": "Im Wohnzimmer habe ich noch keine Lampe"
             }
           ],
-          "explanation": "Oturma odasında henüz lamba yok: „Im Wohnzimmer habe ich noch keine Lampe“. b) yanlış: Çamaşır makinesi bu hafta değil, gelecek hafta geliyor: „kommt erst nächste Woche“. c) yanlış: Eski kanepe merdiven için çok büyüktü, bu yüzden Marco onu sattı: „deshalb habe ich es verkauft“."
+          "explanation": "Marco birkaç şeyin hâlâ eksik olduğunu yazıyor: „Ein paar Sachen fehlen noch. Im Wohnzimmer habe ich noch keine Lampe“. Oturma odasında henüz lamba yok, yani oturma odası için hâlâ bir lambaya ihtiyacı var (braucht). b) yanlış: Çamaşır makinesi bu hafta değil, gelecek hafta geliyor: „kommt erst nächste Woche“. c) yanlış: Eski kanepe merdiven için çok büyüktü, bu yüzden Marco onu sattı: „deshalb habe ich es verkauft“."
         },
         {
           "number": 15,

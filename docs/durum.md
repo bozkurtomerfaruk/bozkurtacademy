@@ -8,10 +8,10 @@
 
 ### Kaldığım yer
 
-- **Aşama:** 1 (B1 ikinci tur) ve 2 (A2 pilot) paralel sürüyor. Çalışma dalı: `claude/b1-ikinci-tur`.
-- **Biten:** İş akışı (`exam-sets.yml`: yalnızca main push'u, `actions/checkout@v7`) zaten main'de (`ed9d28b`). Dört yeni kural `docs/sinav-setleri.md`'de. 1.3'te „fikir kimden" sorusu ve 3.3'te Bergheide tekrarı düzeltildi. Oynatıcıya `none` (A2'de X) ve `{ rows }` tablo görünümü eklendi, check-exams uyumlu. A2 Lesen kayıtları `js/examsData.js`'de.
-- **Süren:** B1 Teil 2 ve Teil 4 revizyonu (alt ajanlar); A2 Teil 1–4 pilot setleri (alt ajanlar).
-- **Sıradaki adım:** Revizyonları kontrol et → değişen B1 setlerini kör çözdür → testler → main'e "B1 ikinci tur" commit'i. Sonra A2 pilot: açıklama taraması → kör çözüm → testler → main'e "A2 pilot" commit'i.
+- **Aşama:** 1 (B1 ikinci tur) ve 2 (A2 pilot), dal `claude/b1-ikinci-tur`.
+- **Biten:** B1 Teil 2 ve Teil 4 revizyonu (anahtarlar aynı), 1.3 ve 3.3 düzeltmeleri, kurallar, oynatıcı eklentileri (tarayıcıda test edildi: tablo, X, mobil, koyu tema). A2 pilot 8 set yazıldı, açıklama taraması yapıldı ve 35 düzeltme uygulandı.
+- **Süren:** B1 değişen setler için açıklama taraması (ajan); A2 pilot kör çözümü (ajan, kâğıt `/tmp/blind-a2/blatt.txt`).
+- **Sıradaki adım:** B1 tarama düzeltmeleri → B1 kör çözüm → testler → main'e „B1 ikinci tur" commit'i (A2 dosyaları hariç). Sonra A2 kör çözüm sonucuna göre düzelt → testler → main'e „A2 eklentileri ve pilot" commit'i → aşama 3.
 
 ### Kendi verdiğim kararlar
 

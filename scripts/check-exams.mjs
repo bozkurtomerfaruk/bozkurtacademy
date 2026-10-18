@@ -12,10 +12,13 @@ const TYPES = {
   'richtig-falsch': () => ['richtig', 'falsch'],
   'ja-nein': () => ['ja', 'nein'],
   abc: question => Object.keys(question.options || {}),
-  zuordnung: (question, group) => [...group.texts.map(text => text.label), '0']
+  zuordnung: (question, group) => [...group.texts.map(text => text.label), group.none || '0']
 };
 const errors = [];
 const words = value => String(value).split(/\s+/).filter(Boolean).length;
+// Searchable pieces of a text: plain paragraphs and the cells of { rows } tables, keyed by position.
+const pieces = text => (text.paragraphs || []).flatMap((p, i) => typeof p === 'string' ? [{ key: `${i}`, value: p }]
+  : Array.isArray(p?.rows) ? p.rows.flatMap((row, r) => row.map((cell, c) => ({ key: `${i}:${r}:${c}`, value: cell }))) : []);
 let sets = 0, questions = 0;
 
 for (const exam of data.exams) for (const level of exam.levels || []) for (const section of level.sections) {
@@ -48,10 +51,12 @@ for (const exam of data.exams) for (const level of exam.levels || []) for (const
         for (const text of group.texts || []) {
           if (!text.id || ids.has(text.id)) fail(`${where}: text id missing or repeated (${text.id})`);
           ids.add(text.id);
-          const valid = p => (typeof p === 'string' && p.trim()) || (p && typeof p === 'object' && typeof p.heading === 'string' && p.heading.trim());
-          if (!Array.isArray(text.paragraphs) || !text.paragraphs.some(p => typeof p === 'string') || !text.paragraphs.every(valid)) fail(`${where}: text ${text.id} needs paragraphs`);
+          const cells = rows => Array.isArray(rows) && rows.length && rows.every(row => Array.isArray(row) && row.length >= 2 && row.every(cell => typeof cell === 'string' && cell.trim()));
+          const valid = p => (typeof p === 'string' && p.trim()) || (p && typeof p === 'object' && ((typeof p.heading === 'string' && p.heading.trim()) || cells(p.rows)));
+          if (!Array.isArray(text.paragraphs) || !text.paragraphs.some(p => typeof p === 'string' || p?.rows) || !text.paragraphs.every(valid)) fail(`${where}: text ${text.id} needs paragraphs (text, { heading } or { rows: [[…, …]] })`);
         }
-        report.push(group.texts.map(text => `${text.label || text.id}:${words([text.title, ...(text.paragraphs || []).map(p => typeof p === 'string' ? p : p.heading)].join(' '))}`).join(' '));
+        if (group.none !== undefined && (typeof group.none !== 'string' || !group.none.trim() || group.texts.some(text => text.label === group.none))) fail(`${where}: "none" must be a short label that is not an ad label`);
+        report.push(group.texts.map(text => `${text.label || text.id}:${words([text.title, ...pieces(text).map(piece => piece.value), ...(text.paragraphs || []).map(p => p?.heading || '')].join(' '))}`).join(' '));
 
         const spans = {};
         for (const question of group.questions || []) {
@@ -65,14 +70,13 @@ for (const exam of data.exams) for (const level of exam.levels || []) for (const
           if (!question.explanation || question.explanation.length < 40) fail(`${label}: explanation missing or too short`);
           if (!question.example) answers[question.answer] = (answers[question.answer] || 0) + 1;
           const evidence = question.evidence || [];
-          if (!evidence.length && !(question.type === 'zuordnung' && question.answer === '0')) fail(`${label}: evidence missing`);
+          if (!evidence.length && !(question.type === 'zuordnung' && question.answer === (group.none || '0'))) fail(`${label}: evidence missing`);
           for (const item of evidence) {
             const text = group.texts.find(entry => entry.id === item.text);
             if (!text) { fail(`${label}: evidence points to unknown text ${item.text}`); continue; }
-            const hits = text.paragraphs.flatMap((paragraph, p) => {
+            const hits = pieces(text).flatMap(({ key: p, value }) => {
               const found = [];
-              if (typeof paragraph !== 'string') return found;
-              for (let at = paragraph.indexOf(item.quote); at >= 0; at = paragraph.indexOf(item.quote, at + 1)) found.push({ p, at });
+              for (let at = value.indexOf(item.quote); at >= 0; at = value.indexOf(item.quote, at + 1)) found.push({ p, at });
               return found;
             });
             if (hits.length !== 1) { fail(`${label}: quote found ${hits.length}× in ${item.text}: "${item.quote}"`); continue; }

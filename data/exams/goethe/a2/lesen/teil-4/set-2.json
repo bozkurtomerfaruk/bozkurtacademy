@@ -1,0 +1,118 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-2",
+  "title": "Hilfe im Alltag",
+  "minutes": 8,
+  "instructions": "Sechs Personen suchen im Internet nach Hilfe im Alltag. Lesen Sie die Aufgaben 16 bis 20 und die Anzeigen a bis f. Welche Anzeige passt zu welcher Person? Für eine Aufgabe gibt es keine passende Anzeige. In diesem Fall wählen Sie X. Die Anzeige aus dem Beispiel können Sie nicht mehr wählen.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": "x",
+      "texts": [
+        {
+          "id": "a",
+          "label": "a",
+          "title": "PC-Hilfe Mausklick",
+          "paragraphs": [
+            "Ihr Computer ist langsam oder das Internet funktioniert nicht? Wir kommen zu Ihnen nach Hause, von Montag bis Samstag, auch abends bis 21 Uhr. Die erste Stunde kostet 30 Euro. Neu: Computerkurse für Kinder ab zehn Jahren am Samstagnachmittag."
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "title": "Studentin passt auf Ihre Kinder auf",
+          "paragraphs": [
+            "Ich bin 23 Jahre alt, studiere in Waldheim und habe schon oft auf Kinder aufgepasst. Ich komme abends und am Wochenende zu Ihnen nach Hause, gern auch für Kinder ab einem Jahr. Ich nehme 12 Euro pro Stunde."
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "title": "Fahrradkurier Pedalpost",
+          "paragraphs": [
+            "Briefe und Pakete bis zehn Kilo bringen wir mit dem Fahrrad schnell durch die ganze Stadt – oft in weniger als einer Stunde. Wir fahren von Montag bis Freitag, 8 bis 18 Uhr. Am Wochenende sind wir leider geschlossen."
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "title": "Einkaufsservice Korb & Co.",
+          "paragraphs": [
+            "Sie können nicht mehr gut laufen oder sind krank? Wir kaufen für Sie im Supermarkt ein und bringen alles nach Hause. Rufen Sie bis 10 Uhr an, dann kommen wir noch am selben Tag. Montag bis Freitag, pro Einkauf 5 Euro."
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "title": "Reparaturdienst Schraubfix",
+          "paragraphs": [
+            "Ist Ihre Waschmaschine, Ihr Kühlschrank oder Ihr Fernseher kaputt? Unsere Techniker kommen schnell zu Ihnen und reparieren auch ältere Geräte. Einen Termin bekommen Sie meistens schon am nächsten Tag. In Rosenau kostet die Fahrt zu Ihnen nichts."
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "title": "Mobile Fahrradwerkstatt Speiche",
+          "paragraphs": [
+            "Ihr Fahrrad ist kaputt, aber Sie haben keine Zeit für die Werkstatt? Wir kommen mit unserem Auto zu Ihnen nach Hause oder an Ihren Arbeitsplatz und reparieren Bremsen, Licht und Reifen direkt bei Ihnen. Termine von Montag bis Samstag."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Die Waschmaschine von Svea läuft seit gestern nicht mehr. Sie sucht jemanden, der die Maschine repariert.",
+          "answer": "e",
+          "evidence": [{ "text": "e", "quote": "Ist Ihre Waschmaschine, Ihr Kühlschrank oder Ihr Fernseher kaputt?" }],
+          "explanation": "e ilanındaki tamir servisi çamaşır makinesi, buzdolabı ve televizyon tamir ediyor ve eve geliyor. Svea için uygun. Bu ilan örnekte kullanıldığı için başka bir kişi için seçilemez."
+        },
+        {
+          "number": 16,
+          "type": "zuordnung",
+          "prompt": "Deniz möchte heute ein Paket mit Büchern – fast 15 Kilo – schnell zu seiner Schwester auf die andere Seite der Stadt schicken.",
+          "answer": "x",
+          "evidence": [{ "text": "c", "quote": "Briefe und Pakete bis zehn Kilo" }],
+          "explanation": "Tuzak c: Bisikletli kurye paketleri hızlıca şehrin her yerine götürüyor, ama sadece on kiloya kadar: „Briefe und Pakete bis zehn Kilo“. Deniz'in paketi yaklaşık 15 kilo. Başka bir ilan da paket götürmüyor: d sadece süpermarketten alışveriş getiriyor, a, b ve f başka hizmetler, e örnekte kullanıldı. Bu yüzden cevap X."
+        },
+        {
+          "number": 17,
+          "type": "zuordnung",
+          "prompt": "Die Mutter von Carla ist 82 Jahre alt und kann nicht mehr gut laufen. Jemand soll für sie Lebensmittel einkaufen und nach Hause bringen.",
+          "answer": "d",
+          "evidence": [{ "text": "d", "quote": "Wir kaufen für Sie im Supermarkt ein und bringen alles nach Hause." }],
+          "explanation": "d ilanı iyi yürüyemeyen insanlar için bir alışveriş servisi: Süpermarketten alışveriş yapıp her şeyi eve getiriyorlar. Carla'nın annesi için uygun. Tuzak c: Kurye de eve bir şeyler getiriyor, ama sadece mektup ve paket taşıyor; alışveriş yapmıyor."
+        },
+        {
+          "number": 18,
+          "type": "zuordnung",
+          "prompt": "Frank und seine Frau sind am Samstagabend zu einer Hochzeit eingeladen. Sie suchen jemanden, der auf ihre zweijährige Tochter aufpasst.",
+          "answer": "b",
+          "evidence": [{ "text": "b", "quote": "Ich komme abends und am Wochenende zu Ihnen nach Hause, gern auch für Kinder ab einem Jahr." }],
+          "explanation": "b ilanındaki öğrenci akşamları ve hafta sonu eve gelip bir yaşından itibaren çocuklara bakıyor. Cumartesi akşamı ve iki yaşındaki kız için uygun. Tuzak a: Cumartesi öğleden sonra çocuklar için bilgisayar kursu var, ama sadece on yaşından itibaren çocuklar için ve bu bir çocuk bakımı değil."
+        },
+        {
+          "number": 19,
+          "type": "zuordnung",
+          "prompt": "Ihr Nachbar hat einen neuen Laptop, aber das Internet funktioniert nicht. Er hat nur abends Zeit.",
+          "answer": "a",
+          "evidence": [{ "text": "a", "quote": "Ihr Computer ist langsam oder das Internet funktioniert nicht?" }, { "text": "a", "quote": "auch abends bis 21 Uhr" }],
+          "explanation": "a ilanı internet çalışmadığında yardım ediyor ve akşam 21'e kadar eve geliyor. Komşu sadece akşamları vakit bulabiliyor; bu ilan uygun. Tuzak e: Bu servis de cihaz tamir ediyor, ama ilanda sadece çamaşır makinesi, buzdolabı ve televizyon yazıyor; bilgisayar ve internet yazmıyor."
+        },
+        {
+          "number": 20,
+          "type": "zuordnung",
+          "prompt": "Eine Kollegin fährt jeden Tag mit dem Fahrrad zur Arbeit. Jetzt funktionieren die Bremsen nicht mehr, und sie hat keine Zeit, das Rad zu einer Werkstatt zu bringen.",
+          "answer": "f",
+          "evidence": [{ "text": "f", "quote": "an Ihren Arbeitsplatz und reparieren Bremsen, Licht und Reifen direkt bei Ihnen" }],
+          "explanation": "f ilanındaki gezici bisiklet atölyesi eve veya iş yerine geliyor ve frenleri orada tamir ediyor. Meslektaşın bisikleti atölyeye götürmesine gerek yok. Tuzak c: Orada da bisiklet var, ama bu bir kurye; bisiklet tamir etmiyor, sadece mektup ve paket götürüyor."
+        }
+      ]
+    }
+  ]
+}

@@ -183,10 +183,34 @@ window.BA_EXAMS = {
               { title: null, exercises: [] }, // Teil 4
             ] },
             { id: 'lesen', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
-              { title: null, exercises: [] }, // Teil 3
-              { title: null, exercises: [] }, // Teil 4
+              {
+                title: { tr: 'Gazete haberi · a/b/c', de: 'Zeitungsartikel · a/b/c', en: 'Newspaper article · a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Die jüngste Bäckerin der Stadt' },
+                  { set: 'set-2', title: 'Flohmarkt im Hinterhof' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: 'Bilgi panosu · a/b/c', de: 'Informationstafel · a/b/c', en: 'Information board · a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Im Kaufhaus' },
+                  { set: 'set-2', title: 'Im Klinikum' },
+                ]
+              }, // Teil 2
+              {
+                title: { tr: 'E-posta · a/b/c', de: 'E-Mail · a/b/c', en: 'Email · a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Grüße aus dem Sprachkurs' },
+                  { set: 'set-2', title: 'Die neue Wohnung' },
+                ]
+              }, // Teil 3
+              {
+                title: { tr: 'İlanlar · eşleştirme', de: 'Anzeigen · Zuordnung', en: 'Adverts · matching' },
+                exercises: [
+                  { set: 'set-1', title: 'Essen gehen' },
+                  { set: 'set-2', title: 'Hilfe im Alltag' },
+                ]
+              }, // Teil 4
             ] },
             { id: 'schreiben', teile: [
               { title: null, exercises: [] }, // Teil 1

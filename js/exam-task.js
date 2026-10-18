@@ -33,14 +33,16 @@
   function optionsFor(question, group) {
     if (FIXED_OPTIONS[question.type]) return FIXED_OPTIONS[question.type].map(([value, label]) => ({ value, label }));
     if (question.type === 'abc') return Object.entries(question.options).map(([value, label]) => ({ value, label }));
-    // zuordnung: every text of the group (ads a–j) plus 0 for "no text fits"
-    return [...group.texts.map(text => ({ value: text.label, label: text.label })), { value: '0', label: '0' }];
+    // zuordnung: every text of the group (ads a–j) plus the "no text fits" option (group.none, 0 by default; X at A2)
+    return [...group.texts.map(text => ({ value: text.label, label: text.label })), { value: noneOf(group), label: noneOf(group) }];
   }
+
+  const noneOf = group => group.none || '0';
 
   function answerText(question, group, value) {
     if (question.type === 'abc') return `${value}) ${question.options[value]}`;
     if (question.type === 'zuordnung') {
-      if (value === '0') return `0 (${t('taskNoMatch')})`;
+      if (value === noneOf(group)) return `${value.toUpperCase()} (${t('taskNoMatch')})`;
       const text = group.texts.find(item => item.label === value);
       return text?.title ? `${value} – ${text.title}` : value;
     }
@@ -52,9 +54,7 @@
     const marks = group.questions.flatMap(question => (question.evidence || [])
       .filter(item => item.text === text.id)
       .map((item, index) => ({ quote: item.quote, number: question.number, id: `task-ev-${question.number}-${index}` })));
-    const paragraphs = text.paragraphs.map(paragraph => {
-      // { "heading": "Ruhezeiten" } is a subheading inside the text (rules, notices).
-      if (typeof paragraph === 'object') return `<h4 class="task-subhead">${esc(paragraph.heading)}</h4>`;
+    const mark = paragraph => {
       const found = marks
         .map(mark => ({ ...mark, at: paragraph.indexOf(mark.quote) }))
         .filter(mark => mark.at >= 0)
@@ -66,7 +66,15 @@
         html += `<span class="task-evidence" id="${mark.id}" data-q="${esc(mark.number)}" tabindex="-1">${esc(mark.quote)}</span>`;
         from = mark.at + mark.quote.length;
       }
-      return `<p>${html + esc(paragraph.slice(from))}</p>`;
+      return html + esc(paragraph.slice(from));
+    };
+    const paragraphs = text.paragraphs.map(paragraph => {
+      // { "heading": "Ruhezeiten" } is a subheading inside the text (rules, notices).
+      if (paragraph.heading) return `<h4 class="task-subhead">${esc(paragraph.heading)}</h4>`;
+      // { "rows": [["3. Stock", "Spielwaren, Bücher"], …] } is a board or directory, e.g. the floors of a department store.
+      if (paragraph.rows) return `<table class="task-table"><tbody>${paragraph.rows.map(row =>
+        `<tr>${row.map((cell, index) => index ? `<td>${mark(cell)}</td>` : `<th scope="row">${mark(cell)}</th>`).join('')}</tr>`).join('')}</tbody></table>`;
+      return `<p>${mark(paragraph)}</p>`;
     }).join('');
     return `<article class="task-text" id="task-text-${esc(text.id)}">
       ${text.label ? `<span class="task-text-label" aria-hidden="true">${esc(text.label)}</span>` : ''}
@@ -101,7 +109,7 @@
 
     if (question.type === 'zuordnung') {
       const options = optionsFor(question, group).map(option =>
-        `<option value="${esc(option.value)}"${given === option.value ? ' selected' : ''}>${esc(option.value === '0' ? `0 – ${t('taskNoMatch')}` : option.label)}</option>`).join('');
+        `<option value="${esc(option.value)}"${given === option.value ? ' selected' : ''}>${esc(option.value === noneOf(group) ? `${option.value.toUpperCase()} – ${t('taskNoMatch')}` : option.label)}</option>`).join('');
       return `<div class="task-q task-q--select${question.example ? ' is-example' : ''}${outcome}" data-q="${esc(number)}">
         <label class="task-q-head" for="${name}">${badge}${prompt}</label>
         ${note}

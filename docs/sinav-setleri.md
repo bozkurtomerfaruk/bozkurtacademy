@@ -54,6 +54,7 @@ Set şu adresten açılır: `#exams/goethe/b1/lesen/1/set-1`. DTZ gibi seviye ad
 
 - `layout`: `article` (normal metin), `ads` (ilanlar, iki sütun), `comments` (okur yorumları).
 - `question`: yalnızca Teil 4 gibi bütün soruların aynı olduğu durumlarda, soruların üstünde gösterilir.
+- `none`: eşleştirmede „uygun ilan yok“ seçeneğinin adı. Yazılmazsa `0` (Goethe B1); Goethe A2 Teil 4'te `"x"` (ekranda X). Cevap anahtarında da aynı değer kullanılır (`"answer": "x"`).
 
 ### Metin
 
@@ -73,7 +74,7 @@ Set şu adresten açılır: `#exams/goethe/b1/lesen/1/set-1`. DTZ gibi seviye ad
 
 - `id`: grup içinde benzersiz; açıklamalardaki alıntılar buna işaret eder.
 - `label`: ilan harfi (a–j) veya yorum numarası (0, 20…). Eşleştirme sorularında zorunludur.
-- `paragraphs`: düz metin; `{ "heading": "…" }` ara başlıktır (kurallar, duyurular).
+- `paragraphs`: düz metin; `{ "heading": "…" }` ara başlıktır (kurallar, duyurular); `{ "rows": [["3. Stock", "Spielwaren, Bücher"], …] }` bir tablodur (kat rehberi, bilgi panosu, program). Her satırda en az iki hücre olur, ilk hücre satır başlığı olarak gösterilir. Alıntılar (`evidence`) tablo hücrelerinde de aranır; bir alıntı tek bir hücrenin içinde kalmalıdır.
 
 ### Soru
 
@@ -93,9 +94,9 @@ Set şu adresten açılır: `#exams/goethe/b1/lesen/1/set-1`. DTZ gibi seviye ad
 | `richtig-falsch` | Richtig / Falsch | `richtig` veya `falsch` |
 | `ja-nein` | Ja / Nein | `ja` veya `nein` |
 | `abc` | `"options": { "a": "…", "b": "…", "c": "…" }` | `a`, `b` veya `c` |
-| `zuordnung` | grubun metinlerinin `label`'ları + `0` | ör. `e` veya `0` |
+| `zuordnung` | grubun metinlerinin `label`'ları + `0` (veya grubun `none` değeri) | ör. `e`, `0` veya `x` |
 
-- `number`: sınavdaki numara (Teil 1: 1–6, Teil 2: 7–12, Teil 3: 13–19, Teil 4: 20–26, Teil 5: 27–30). Numaralar ardışık olmalı.
+- `number`: sınavdaki numara (Teil 1: 1–6, Teil 2: 7–12, Teil 3: 13–19, Teil 4: 20–26, Teil 5: 27–30; Goethe A2: Teil 1: 1–5, Teil 2: 6–10, Teil 3: 11–15, Teil 4: 16–20). Numaralar ardışık olmalı.
 - `"example": true` ve `"number": 0`: örnek soru. Cevabı işaretli gösterilir, puana dahil değildir. Bir sette en fazla bir örnek olabilir.
 - `evidence`: cevabın dayandığı yerler. `quote`, `text` ile belirtilen metinde **harfi harfine ve yalnızca bir kez** geçmeli. Aynı metindeki alıntılar birbiriyle çakışmamalı. "Kontrol et"ten sonra bu yerler metinde soru numarasıyla vurgulanır. Cevabı `0` olan eşleştirme sorusunda boş bırakılabilir; tuzak ilanı göstermek için kullanılabilir.
 - `explanation`: Türkçe, en az 40 karakter.

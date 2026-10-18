@@ -10,8 +10,8 @@
 
 - **Aşama 1 bitti:** main `f6d5a7c` (B1 ikinci tur + dört kural). Kör çözüm 75/75; tek „UNSICHER“ (3.3 S18, mevsim yoktu) düzeltildi ve yeniden doğrulandı.
 - **Aşama 2 bitti:** main'de „A2 eklentileri ve pilot“ commit'i. Kör çözüm 40/40, hepsi emin.
-- **Aşama 3 sürüyor:** A2 set 3–5 (12 set) yazıldı, dosyalar yedek dal `claude/b1-ikinci-tur`'da. Sıradaki adım: açıklama taraması → kör çözüm → testler → main'e „A2 5 set“ commit'i.
-- **Aşama 4:** B2 format tablosu taslağı hazır, aşama 3'ten sonra buraya yazılacak.
+- **Aşama 3 bitti:** main'de „A2 Lesen 5 set“ commit'i. Açıklama taraması (12 SCHWER, ~25 LEICHT düzeltme), kör çözüm 60/60, hepsi emin.
+- **Aşama 4 sürüyor:** B2 tablosu bu dosyaya yazılıyor.
 
 ### Kendi verdiğim kararlar
 

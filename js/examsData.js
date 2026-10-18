@@ -215,6 +215,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Neu im Dorf' },
                   { set: 'set-2', title: 'Ferien im Tierheim' },
+                  { set: 'set-3', title: 'Radtour am Fluss' },
+                  { set: 'set-4', title: 'Neue Stelle am Meer' },
+                  { set: 'set-5', title: 'Schwimmen mit 40' },
                 ]
               }, // Teil 1
               {
@@ -222,6 +225,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Bibliothek und Gemüsekiste' },
                   { set: 'set-2', title: 'Schulgarten und Nachtbus' },
+                  { set: 'set-3', title: 'Reparatur-Café und Handykurs' },
+                  { set: 'set-4', title: 'Dorfladen und Müllsammler' },
+                  { set: 'set-5', title: 'Schulzirkus und Inklusionshotel' },
                 ]
               }, // Teil 2
               {
@@ -229,6 +235,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Freizeit und Kurse' },
                   { set: 'set-2', title: 'Wohnen, Arbeit und Hilfe' },
+                  { set: 'set-3', title: 'Reisen und Ausflüge' },
+                  { set: 'set-4', title: 'Gesundheit und Wohlbefinden' },
+                  { set: 'set-5', title: 'Feste und Veranstaltungen' },
                 ]
               }, // Teil 3
               {
@@ -236,6 +245,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Einkaufen am Sonntag?' },
                   { set: 'set-2', title: 'Handys in der Schule?' },
+                  { set: 'set-3', title: 'Autofreie Innenstadt?' },
+                  { set: 'set-4', title: 'Homeoffice für alle?' },
+                  { set: 'set-5', title: 'Ein Pflichtjahr für alle?' },
                 ]
               }, // Teil 4
               {
@@ -243,6 +255,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Die Hausordnung' },
                   { set: 'set-2', title: 'Kurse im Sportzentrum' },
+                  { set: 'set-3', title: 'Auf dem Campingplatz' },
+                  { set: 'set-4', title: 'Mit dem Fernbus unterwegs' },
+                  { set: 'set-5', title: 'Termin im Bürgeramt' },
                 ]
               }, // Teil 5
             ] },

@@ -1,0 +1,191 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-3",
+  "title": "Autofreie Innenstadt?",
+  "minutes": 15,
+  "context": "In einer Zeitung lesen Sie Kommentare zu einem Artikel über den Plan, die Innenstadt für Autos zu sperren.",
+  "instructions": "Lesen Sie die Texte 20 bis 26. Wählen Sie: Ist die Person für eine autofreie Innenstadt?",
+  "groups": [
+    {
+      "layout": "comments",
+      "question": "Ist die Person für eine autofreie Innenstadt?",
+      "texts": [
+        {
+          "id": "anke",
+          "label": "0",
+          "byline": "Anke, 34, Birkhausen",
+          "paragraphs": [
+            "Ich wohne direkt in der Altstadt und kann wegen des Verkehrs nachts oft nicht schlafen. Eine autofreie Innenstadt wäre für uns Anwohner ein echter Gewinn. Die Luft wäre besser, und die Kinder könnten sicher auf der Straße spielen. Zum Einkaufen und zur Arbeit gehe ich sowieso fast immer zu Fuß."
+          ]
+        },
+        {
+          "id": "bastian",
+          "label": "20",
+          "byline": "Bastian, 27, Dornfeld",
+          "paragraphs": [
+            "Natürlich gibt es Menschen, die auf das Auto angewiesen sind, zum Beispiel Handwerker oder ältere Leute mit Gehproblemen. Aber für sie kann man Ausnahmen machen. Ich fahre jeden Tag mit dem Fahrrad zur Arbeit, und zwischen parkenden Autos und Lieferwagen ist das oft gefährlich. Ohne Autos wäre die Innenstadt endlich sicher für Radfahrer. Deshalb sage ich ganz klar: Die Autos müssen raus."
+          ]
+        },
+        {
+          "id": "cem",
+          "label": "21",
+          "byline": "Cem, 45, Erlenstedt",
+          "paragraphs": [
+            "Für die Leute, die in der Innenstadt wohnen, wäre das sicher angenehm, das verstehe ich. Ich habe aber ein Lampengeschäft in der Hauptstraße. Meine Kunden kommen meistens mit dem Auto, weil sie große und schwere Sachen transportieren müssen. Wenn sie nicht mehr bis vor die Tür fahren dürfen, kaufen sie lieber im Einkaufszentrum am Stadtrand. Ich bin deshalb gegen diesen Plan."
+          ]
+        },
+        {
+          "id": "doris",
+          "label": "22",
+          "byline": "Doris, 68, Felsenau",
+          "paragraphs": [
+            "Ich habe kein Auto mehr und fahre mit dem Bus in die Stadt. Eine Innenstadt ohne Autos fände ich wunderbar. Die Busse müssten dann aber öfter fahren, auch am Abend. Im Moment kommt nach 19 Uhr nur noch einmal pro Stunde ein Bus. Das muss die Stadt verbessern, aber ich bin schon jetzt dafür. Dann könnte ich ohne Angst über den Marktplatz bummeln."
+          ]
+        },
+        {
+          "id": "erik",
+          "label": "23",
+          "byline": "Erik, 39, Ginsterhof",
+          "paragraphs": [
+            "Die Idee klingt zuerst schön: mehr Bäume, mehr Cafés, weniger Lärm. Aber ich wohne in einem Dorf ohne Bahnhof, und es gibt nur drei Busse am Tag. Wenn ich zum Arzt oder zum Bürgeramt in die Stadt muss, geht das nur mit dem Auto. Eine autofreie Innenstadt würde Leute wie mich einfach ausschließen. Das finde ich nicht gerecht."
+          ]
+        },
+        {
+          "id": "fatma",
+          "label": "24",
+          "byline": "Fatma, 31, Heideck",
+          "paragraphs": [
+            "Ich finde auch, dass in unserer Innenstadt zu viele Autos fahren. Man könnte die Parkgebühren erhöhen oder überall Tempo 30 einführen. Aber ein komplettes Autoverbot geht mir zu weit. Ich bringe meine Kinder morgens mit dem Auto zur Schule in der Altstadt, weil ich danach direkt zur Arbeit fahre. Mit dem Bus würde ich das zeitlich nie schaffen."
+          ]
+        },
+        {
+          "id": "gerd",
+          "label": "25",
+          "byline": "Gerd, 56, Ilmenrode",
+          "paragraphs": [
+            "Ich habe ein kleines Café am Marktplatz und höre oft, dass die Geschäftsleute gegen den Plan sind. Ich nicht. Letzten Sommer war unsere Straße wegen einer Baustelle drei Monate lang für Autos gesperrt, und ich hatte so viele Gäste wie nie. Die Leute sitzen gern draußen, wenn es ruhig ist. Von mir aus kann die Straße für immer autofrei bleiben."
+          ]
+        },
+        {
+          "id": "hanna",
+          "label": "26",
+          "byline": "Hanna, 22, Kastelbach",
+          "paragraphs": [
+            "Jedes Mal, wenn ich durch die Innenstadt gehe, stehen die Autos im Stau, und es riecht nach Abgasen. Warum muss man eigentlich mit dem Auto direkt vor das Geschäft fahren? Am Stadtrand gibt es große Parkplätze, und von dort fährt alle zehn Minuten ein Bus ins Zentrum. Ich verstehe nicht, warum wir nicht schon längst eine Innenstadt ohne Autos haben."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "ja-nein",
+          "prompt": "Anke",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "anke",
+              "quote": "Eine autofreie Innenstadt wäre für uns Anwohner ein echter Gewinn."
+            }
+          ],
+          "explanation": "Anke eski şehirde oturuyor ve trafik yüzünden geceleri sık sık uyuyamıyor. Arabasız bir şehir merkezinin oradaki sakinler için gerçek bir kazanç olacağını söylüyor. Yanında: ja."
+        },
+        {
+          "number": 20,
+          "type": "ja-nein",
+          "prompt": "Bastian",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "bastian",
+              "quote": "Deshalb sage ich ganz klar: Die Autos müssen raus."
+            }
+          ],
+          "explanation": "Tuzak: Bastian karşı tarafın argümanıyla başlıyor („Natürlich …“): Bazı insanlar, örneğin zanaatkârlar ve yürüme sorunu olan yaşlılar, arabaya muhtaç. Ama „Aber“ ile onlar için istisna yapılabileceğini söylüyor. Arabasız merkezin bisikletliler için güvenli olacağını düşünüyor ve „Die Autos müssen raus“ – arabalar çıkmalı – diyor. Yanında: ja."
+        },
+        {
+          "number": 21,
+          "type": "ja-nein",
+          "prompt": "Cem",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "cem",
+              "quote": "Ich bin deshalb gegen diesen Plan."
+            }
+          ],
+          "explanation": "Tuzak: Cem, merkezde oturanlar için bunun hoş olacağını kabul ediyor („das verstehe ich“). Ama kendisinin Hauptstraße'de bir lamba dükkânı var; müşterileri büyük ve ağır eşyalar taşıdığı için arabayla geliyor ve kapıya kadar gelemezlerse şehir kenarındaki alışveriş merkezine gideceklerini düşünüyor. „gegen diesen Plan“ – plana karşı: nein."
+        },
+        {
+          "number": 22,
+          "type": "ja-nein",
+          "prompt": "Doris",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "doris",
+              "quote": "aber ich bin schon jetzt dafür."
+            }
+          ],
+          "explanation": "Doris arabasız bir merkezi „wunderbar“ – harika – buluyor. Otobüslerin akşamları da daha sık çalışması gerektiğini söylüyor; ama bu bir karşı çıkma değil: „aber ich bin schon jetzt dafür“ – ama şimdiden yanındayım. Yanında: ja."
+        },
+        {
+          "number": 23,
+          "type": "ja-nein",
+          "prompt": "Erik",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "erik",
+              "quote": "Eine autofreie Innenstadt würde Leute wie mich einfach ausschließen."
+            }
+          ],
+          "explanation": "Tuzak: Erik önce fikrin güzel tarafını sayıyor (daha çok ağaç, kafe, daha az gürültü). Ama „Aber“ ile kendi durumunu anlatıyor: Tren istasyonu olmayan bir köyde oturuyor, otobüs günde sadece üç kez geliyor; doktora veya belediyeye ancak arabayla gidebiliyor. Arabasız merkezin kendisi gibi insanları dışarıda bırakacağını ve bunu adil bulmadığını söylüyor. Karşı: nein."
+        },
+        {
+          "number": 24,
+          "type": "ja-nein",
+          "prompt": "Fatma",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "fatma",
+              "quote": "Aber ein komplettes Autoverbot geht mir zu weit."
+            }
+          ],
+          "explanation": "Tuzak: Fatma da merkezde çok fazla araba olduğunu düşünüyor ve park ücretlerinin artırılmasını veya her yerde 30 km/s sınırını öneriyor. Ama tamamen araba yasağı ona göre fazla („geht mir zu weit“). Çocuklarını sabah arabayla okula götürüp oradan işe gidiyor; otobüsle buna zaman yetmez. Arabasız merkeze karşı: nein."
+        },
+        {
+          "number": 25,
+          "type": "ja-nein",
+          "prompt": "Gerd",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "gerd",
+              "quote": "Von mir aus kann die Straße für immer autofrei bleiben."
+            }
+          ],
+          "explanation": "Tuzak: Gerd, iş insanlarının plana karşı olduğunu sık sık duyduğunu söylüyor; ama kendisi „Ich nicht“ diyor. Geçen yaz sokağı bir inşaat yüzünden üç ay arabalara kapalıydı ve hiç olmadığı kadar çok misafiri oldu. Sokağın sonsuza kadar arabasız kalabileceğini söylüyor. Yanında: ja."
+        },
+        {
+          "number": 26,
+          "type": "ja-nein",
+          "prompt": "Hanna",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "hanna",
+              "quote": "Ich verstehe nicht, warum wir nicht schon längst eine Innenstadt ohne Autos haben."
+            }
+          ],
+          "explanation": "Hanna merkezdeki trafik sıkışıklığından ve egzoz kokusundan şikâyet ediyor. Şehir kenarında büyük otoparklar ve on dakikada bir merkeze giden otobüs olduğunu hatırlatıyor. Arabasız bir merkezin neden çoktan olmadığını anlamadığını söylüyor; yani bunu istiyor. Yanında: ja."
+        }
+      ]
+    }
+  ]
+}

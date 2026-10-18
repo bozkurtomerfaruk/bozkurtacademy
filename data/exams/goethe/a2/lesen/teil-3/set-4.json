@@ -52,7 +52,7 @@
           "prompt": "Am Freitag …",
           "options": {
             "a": "geht Valentin mit Ida ins Konzert.",
-            "b": "kann Ida mit einer anderen Person ins Konzert gehen.",
+            "b": "kann Ida eine andere Person ins Konzert mitnehmen.",
             "c": "kauft Valentin die Karten für das Konzert."
           },
           "answer": "b",
@@ -62,14 +62,14 @@
               "quote": "Vielleicht kannst du mit einer Kollegin gehen?"
             }
           ],
-          "explanation": "Valentin, Ida'nın konsere bir iş arkadaşıyla gidebileceğini yazıyor: „Vielleicht kannst du mit einer Kollegin gehen?“ a) yanlış: Valentin hasta olduğu için cuma günü konsere gidemiyor: „Deshalb kann ich am Freitag nicht mit dir ins Konzert gehen.“ c) yanlış: Biletleri zaten satın aldı: „Die Karten habe ich schon gekauft.“"
+          "explanation": "Valentin, Ida'nın konsere bir iş arkadaşıyla gidebileceğini yazıyor: „Vielleicht kannst du mit einer Kollegin gehen?“ İş arkadaşı (Kollegin) = başka bir kişi; Ida konsere Valentin yerine başka birini götürebilir (mitnehmen). a) yanlış: Valentin hasta olduğu için cuma günü konsere gidemiyor: „Deshalb kann ich am Freitag nicht mit dir ins Konzert gehen.“ c) yanlış: Biletleri zaten satın aldı: „Die Karten habe ich schon gekauft.“"
         },
         {
           "number": 13,
           "type": "abc",
           "prompt": "Valentin fragt, ob Ida …",
           "options": {
-            "a": "morgen für ihn einkaufen kann.",
+            "a": "morgen Essen und Tabletten zu ihm bringen kann.",
             "b": "am Sonntag für ihn einkaufen kann.",
             "c": "ihm die Karten schicken kann."
           },
@@ -77,10 +77,14 @@
           "evidence": [
             {
               "text": "mail",
-              "quote": "Kannst du morgen nach der Arbeit für mich einkaufen"
+              "quote": "Kannst du morgen nach der Arbeit für mich einkaufen und kurz zu mir kommen?"
+            },
+            {
+              "text": "mail",
+              "quote": "Ich brauche Tee und Tabletten gegen Fieber"
             }
           ],
-          "explanation": "Valentin, Ida'ya yarın işten sonra onun için alışveriş yapıp yapamayacağını soruyor: „Kannst du morgen nach der Arbeit für mich einkaufen“. b) yanlış: Pazar günü değil, yarın işten sonra alışveriş istiyor; pazar, Valentin'in evde kalması gereken son gün: „Ich soll bis Sonntag zu Hause bleiben.“ c) yanlış: Biletleri Ida değil, Valentin gönderiyor: „Ich schicke dir die Karten heute noch als E-Mail.“"
+          "explanation": "Valentin, Ida'ya yarın işten sonra onun için alışveriş yapıp kısa bir süre ona gelip gelemeyeceğini soruyor: „Kannst du morgen nach der Arbeit für mich einkaufen und kurz zu mir kommen?“ Çay, ateş için ilaç (Tabletten), biraz meyve ve ekmek istiyor. Yani yiyecek ve ilaçları ona getirmesini (zu ihm bringen) istiyor. b) yanlış: Pazar günü değil, yarın işten sonra alışveriş istiyor; pazar, Valentin'in evde kalması gereken son gün: „Ich soll bis Sonntag zu Hause bleiben.“ c) yanlış: Biletleri Ida değil, Valentin gönderiyor: „Ich schicke dir die Karten heute noch als E-Mail.“"
         },
         {
           "number": 14,
@@ -89,7 +93,7 @@
           "options": {
             "a": "zweimal zu klingeln.",
             "b": "die Karten bei ihm abzuholen.",
-            "c": "ihn kurz anzurufen."
+            "c": "ihm am Telefon Bescheid zu sagen."
           },
           "answer": "c",
           "evidence": [
@@ -98,7 +102,7 @@
               "quote": "Bitte ruf mich vorher kurz an, denn meine Klingel ist kaputt."
             }
           ],
-          "explanation": "Valentin, Ida'dan gelmeden önce kısaca aramasını rica ediyor, çünkü zili bozuk: „Bitte ruf mich vorher kurz an, denn meine Klingel ist kaputt.“ a) yanlış: Zil bozuk olduğu için zil çalmak işe yaramaz. b) yanlış: Ida'nın biletleri alması gerekmiyor; Valentin onları bugün e-postayla gönderiyor."
+          "explanation": "Valentin, Ida'dan gelmeden önce kısaca aramasını rica ediyor, çünkü zili bozuk: „Bitte ruf mich vorher kurz an, denn meine Klingel ist kaputt.“ „anrufen“ = telefonla haber vermek (am Telefon Bescheid sagen). a) yanlış: Zil bozuk olduğu için zil çalmak işe yaramaz. b) yanlış: Ida'nın biletleri alması gerekmiyor; Valentin onları bugün e-postayla gönderiyor."
         },
         {
           "number": 15,
@@ -106,17 +110,21 @@
           "prompt": "Valentin möchte Ida …",
           "options": {
             "a": "am Freitag in ein Restaurant einladen.",
-            "b": "am 24. Oktober zum Essen einladen.",
+            "b": "nach der Krankheit ins Restaurant einladen.",
             "c": "zu sich nach Hause zum Essen einladen."
           },
           "answer": "b",
           "evidence": [
             {
               "text": "mail",
-              "quote": "Hast du am Samstag, dem 24. Oktober, Zeit?"
+              "quote": "Wenn ich wieder gesund bin, lade ich dich zum Essen ein."
+            },
+            {
+              "text": "mail",
+              "quote": "Wir könnten in das neue Restaurant am Markt gehen."
             }
           ],
-          "explanation": "Valentin iyileşince Ida'yı yemeğe davet etmek istiyor ve 24 Ekim cumartesi günü vakti olup olmadığını soruyor: „Hast du am Samstag, dem 24. Oktober, Zeit?“ a) yanlış: Cuma günü konser var ve Valentin o gün gelemiyor; yemek için 24 Ekim cumartesi gününü soruyor. c) yanlış: Evine değil, pazar yerindeki yeni restorana gitmeyi öneriyor: „in das neue Restaurant am Markt“."
+          "explanation": "Valentin iyileşince Ida'yı yemeğe davet etmek istiyor: „Wenn ich wieder gesund bin, lade ich dich zum Essen ein.“ „wieder gesund“ = hastalıktan sonra (nach der Krankheit). Yemek için pazar yerindeki yeni restoranı öneriyor: „Wir könnten in das neue Restaurant am Markt gehen.“ a) yanlış: Cuma günü konser var ve Valentin pazara kadar evde kalmalı; yemek için 24 Ekim cumartesi gününü soruyor: „Hast du am Samstag, dem 24. Oktober, Zeit?“ c) yanlış: Evine değil, yeni restorana gitmeyi öneriyor."
         }
       ]
     }

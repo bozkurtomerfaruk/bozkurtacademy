@@ -30,24 +30,28 @@
           "prompt": "Konrad Pfeiffer …",
           "options": {
             "a": "läuft jeden Morgen zehn Kilometer.",
-            "b": "war früher Sportlehrer.",
-            "c": "hat wegen seines Herzens mit dem Laufen angefangen."
+            "b": "war früher Sportlehrer an einer Schule.",
+            "c": "hat wegen einer Krankheit mit Sport begonnen."
           },
           "answer": "c",
           "evidence": [
             {
               "text": "laeufer",
+              "quote": "Mit dem Laufen hat er erst mit 65 angefangen."
+            },
+            {
+              "text": "laeufer",
               "quote": "Damals hatte ich Probleme mit dem Herzen"
             }
           ],
-          "explanation": "Konrad Pfeiffer kalbinde sorunlar olduğu için koşmaya başladı; doktoru daha çok hareket etmesini söyledi: „Damals hatte ich Probleme mit dem Herzen, und mein Arzt hat gesagt: Sie müssen sich mehr bewegen“. a) yanlış: Her sabah on değil, beş kilometre koşuyor: „läuft ein Mann mit weißen Haaren fünf Kilometer“. b) yanlış: Eskiden spor öğretmeni değil, otobüs şoförüydü: „Früher war Konrad Pfeiffer Busfahrer.“"
+          "explanation": "Konrad Pfeiffer 65 yaşında koşmaya başladı: „Mit dem Laufen hat er erst mit 65 angefangen.“ O zaman kalbinde sorunlar vardı ve doktoru daha çok hareket etmesi gerektiğini söyledi: „Damals hatte ich Probleme mit dem Herzen, und mein Arzt hat gesagt: Sie müssen sich mehr bewegen“. Kalpte sorun = bir hastalık (Krankheit); koşmak = spor. a) yanlış: Her sabah on değil, beş kilometre koşuyor: „läuft ein Mann mit weißen Haaren fünf Kilometer“. b) yanlış: Eskiden spor öğretmeni değil, otobüs şoförüydü: „Früher war Konrad Pfeiffer Busfahrer.“"
         },
         {
           "number": 2,
           "type": "abc",
           "prompt": "Wenn es Eis auf den Wegen gibt, …",
           "options": {
-            "a": "macht Konrad Pfeiffer zu Hause Gymnastik.",
+            "a": "trainiert Konrad Pfeiffer nicht draußen, sondern zu Hause.",
             "b": "läuft Konrad Pfeiffer langsamer als sonst.",
             "c": "trainiert Konrad Pfeiffer mit seiner Gruppe im Park."
           },
@@ -58,7 +62,7 @@
               "quote": "bleibt er zu Hause und macht dort Gymnastik"
             }
           ],
-          "explanation": "Yollarda buz olunca Konrad Pfeiffer evde kalıyor ve orada jimnastik yapıyor: „bleibt er zu Hause und macht dort Gymnastik“. b) yanlış: Buzlu havada daha yavaş koşmuyor; evde kalıp jimnastik yapıyor. c) yanlış: Buzlu havada parka gitmiyor, evde kalıyor; grup antrenmanı da cumartesi günleri: „jeden Samstag“."
+          "explanation": "Yollarda buz olunca Konrad Pfeiffer dışarıda koşmuyor, evde kalıyor ve orada jimnastik yapıyor: „bleibt er zu Hause und macht dort Gymnastik“. „Gymnastik machen“ = antrenman yapmak (trainieren). b) yanlış: Buzlu havada daha yavaş koşmuyor; hiç koşmuyor, evde kalıp jimnastik yapıyor. c) yanlış: Buzlu havada parka gitmiyor, evde kalıyor; grup antrenmanı da cumartesi günleri: „jeden Samstag“."
         },
         {
           "number": 3,
@@ -66,7 +70,7 @@
           "prompt": "Konrads Enkelin …",
           "options": {
             "a": "ist die jüngste Läuferin in der Gruppe.",
-            "b": "hat im Internet Leute für die Gruppe gesucht.",
+            "b": "hat online Läufer für ihren Opa gesucht.",
             "c": "trainiert jeden Samstag zwölf Anfänger."
           },
           "answer": "b",
@@ -76,14 +80,14 @@
               "quote": "Mein Opa sucht Leute zum Laufen."
             }
           ],
-          "explanation": "Torunu internette dedesi için koşacak insanlar aradı. İnternete şunu yazdı: „Mein Opa sucht Leute zum Laufen.“ a) yanlış: Torunu grupta koşmuyor, çünkü başka bir şehirde üniversitede okuyor: „Die Enkelin läuft nicht mit, weil sie in einer anderen Stadt studiert.“ c) yanlış: Grubu torunu değil, Konrad Pfeiffer çalıştırıyor: „Seit letztem Frühling trainiert Konrad Pfeiffer auch eine Gruppe.“"
+          "explanation": "Torunu internete şunu yazdı: „Mein Opa sucht Leute zum Laufen.“ „im Internet“ = „online“, „Leute zum Laufen“ = koşacak insanlar (Läufer). Yani dedesi için internetten koşucu aradı. a) yanlış: Torunu grupta koşmuyor, çünkü başka bir şehirde üniversitede okuyor: „Die Enkelin läuft nicht mit, weil sie in einer anderen Stadt studiert.“ c) yanlış: Grubu torunu değil, Konrad Pfeiffer çalıştırıyor: „Seit letztem Frühling trainiert Konrad Pfeiffer auch eine Gruppe.“"
         },
         {
           "number": 4,
           "type": "abc",
           "prompt": "Die Laufgruppe …",
           "options": {
-            "a": "trifft sich jeden Samstag im Park.",
+            "a": "trainiert einmal pro Woche im Park.",
             "b": "kostet zwölf Euro im Monat.",
             "c": "läuft am Anfang ohne Pause."
           },
@@ -94,7 +98,7 @@
               "quote": "Jetzt kommen jeden Samstag zwölf Anfänger in den Park."
             }
           ],
-          "explanation": "Grup her cumartesi parkta buluşuyor: „Jetzt kommen jeden Samstag zwölf Anfänger in den Park.“ b) yanlış: On iki, katılımcı sayısı; antrenman ücretsiz: „Das Training ist kostenlos.“ c) yanlış: Başta on dakika koşuyorlar, sonra mola veriyorlar: „dann machen sie eine Pause“."
+          "explanation": "Grup her cumartesi parkta buluşuyor: „Jetzt kommen jeden Samstag zwölf Anfänger in den Park.“ Her cumartesi = haftada bir kez (einmal pro Woche). b) yanlış: On iki, katılımcı sayısı; antrenman ücretsiz: „Das Training ist kostenlos.“ c) yanlış: Başta on dakika koşuyorlar, sonra mola veriyorlar: „dann machen sie eine Pause“."
         },
         {
           "number": 5,
@@ -102,8 +106,8 @@
           "prompt": "Beim Lauf im September …",
           "options": {
             "a": "möchte Konrad Pfeiffer schneller sein als die anderen.",
-            "b": "läuft Konrad Pfeiffer nicht mit.",
-            "c": "will Konrad Pfeiffer mit seiner Gruppe ins Ziel kommen."
+            "b": "läuft Konrad Pfeiffer selbst nicht mit.",
+            "c": "will Konrad Pfeiffer gleichzeitig mit seiner Gruppe ankommen."
           },
           "answer": "c",
           "evidence": [
@@ -116,7 +120,7 @@
               "quote": "Konrad Pfeiffer läuft auch mit"
             }
           ],
-          "explanation": "Konrad Pfeiffer eylüldeki koşuda grubuyla birlikte bitiş çizgisine varmak istiyor: „Ich möchte zusammen mit meiner Gruppe ins Ziel kommen“. a) yanlış: Hızlı olmak istemiyor: „aber er will nicht schnell sein“. b) yanlış: Konrad Pfeiffer da koşuya katılıyor: „Konrad Pfeiffer läuft auch mit“."
+          "explanation": "Konrad Pfeiffer eylüldeki koşuda grubuyla birlikte bitiş çizgisine varmak istiyor: „Ich möchte zusammen mit meiner Gruppe ins Ziel kommen“. „zusammen mit meiner Gruppe ins Ziel kommen“ = grubuyla aynı anda varmak (gleichzeitig ankommen). a) yanlış: Hızlı olmak istemiyor: „aber er will nicht schnell sein“. b) yanlış: Konrad Pfeiffer da koşuya katılıyor: „Konrad Pfeiffer läuft auch mit“."
         }
       ]
     }

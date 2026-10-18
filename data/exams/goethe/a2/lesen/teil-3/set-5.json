@@ -34,18 +34,18 @@
           "type": "abc",
           "prompt": "Selma hat mit dem Tanzen angefangen, weil …",
           "options": {
-            "a": "sie im Mai geheiratet hat.",
+            "a": "sie im Mai selbst geheiratet hat.",
             "b": "Emil sie zu einem Tanzkurs eingeladen hat.",
-            "c": "sie auf einer Hochzeit nicht tanzen konnte."
+            "c": "sie auf einer Feier als Einzige nicht getanzt hat."
           },
           "answer": "c",
           "evidence": [
             {
               "text": "mail",
-              "quote": "nur ich habe am Tisch gesessen, weil ich nicht tanzen konnte"
+              "quote": "Alle haben getanzt, nur ich habe am Tisch gesessen, weil ich nicht tanzen konnte."
             }
           ],
-          "explanation": "Mayıs ayında kuzeninin düğününde herkes dans etti, Selma ise dans edemediği için masada oturdu: „nur ich habe am Tisch gesessen, weil ich nicht tanzen konnte“. Bunu değiştirmek istedi. a) yanlış: Mayıs ayında Selma değil, kuzeni evlendi: „auf der Hochzeit von meiner Cousine“. b) yanlış: Emil onu kursa davet etmedi; Emil ona perşembe akşamları ne yaptığını sordu: „du hast mich letzte Woche gefragt, was ich am Donnerstagabend immer mache“."
+          "explanation": "Mayıs ayında kuzeninin düğününde herkes dans etti, Selma ise dans edemediği için masada oturdu: „Alle haben getanzt, nur ich habe am Tisch gesessen, weil ich nicht tanzen konnte. Das wollte ich ändern.“ Düğün (Hochzeit) bir kutlama (Feier); herkes dans ediyor, sadece Selma oturuyor = dans etmeyen tek kişi (als Einzige). a) yanlış: Mayıs ayında Selma değil, kuzeni evlendi: „auf der Hochzeit von meiner Cousine“. b) yanlış: Emil onu kursa davet etmedi; Emil ona perşembe akşamları ne yaptığını sordu: „du hast mich letzte Woche gefragt, was ich am Donnerstagabend immer mache“."
         },
         {
           "number": 12,
@@ -54,7 +54,7 @@
           "options": {
             "a": "ist noch keine 60 Jahre alt.",
             "b": "tanzt nicht so gut wie die Kursteilnehmer.",
-            "c": "erklärt alles langsam."
+            "c": "nimmt sich beim Erklären viel Zeit."
           },
           "answer": "c",
           "evidence": [
@@ -63,16 +63,16 @@
               "quote": "Er erklärt alles langsam und hat viel Geduld mit uns."
             }
           ],
-          "explanation": "Öğretmen Herr Sommer her şeyi yavaş açıklıyor ve çok sabırlı: „Er erklärt alles langsam und hat viel Geduld mit uns.“ a) yanlış: Herr Sommer 60 yaşın üstünde: „Er ist schon über 60“. b) yanlış: Kurstakilerin hepsinden daha iyi dans ediyor: „aber er tanzt besser als wir alle!“"
+          "explanation": "Öğretmen Herr Sommer her şeyi yavaş açıklıyor ve çok sabırlı: „Er erklärt alles langsam und hat viel Geduld mit uns.“ Yavaş açıklamak = açıklarken kendine çok zaman ayırmak (sich viel Zeit nehmen). a) yanlış: Herr Sommer 60 yaşın üstünde: „Er ist schon über 60“. b) yanlış: Kurstakilerin hepsinden daha iyi dans ediyor: „aber er tanzt besser als wir alle!“"
         },
         {
           "number": 13,
           "type": "abc",
           "prompt": "Im Kurs …",
           "options": {
-            "a": "tanzt Selma jede Woche mit einem anderen Partner.",
+            "a": "wechselt Selma jede Woche ihren Tanzpartner.",
             "b": "sind die meisten Leute allein gekommen.",
-            "c": "sind zwölf Leute."
+            "c": "sind zwölf Personen in der Gruppe."
           },
           "answer": "a",
           "evidence": [
@@ -81,7 +81,7 @@
               "quote": "Deshalb tanze ich jede Woche mit einem anderen Partner."
             }
           ],
-          "explanation": "Selma kursa yalnız geldiği için her hafta başka bir partnerle dans ediyor: „Deshalb tanze ich jede Woche mit einem anderen Partner.“ b) yanlış: Kursa yalnız gelen Selma; çoğu kişi ikişer geliyor: „Die meisten kommen zu zweit“. c) yanlış: Grupta on iki değil, on kişi var: „In der Gruppe sind zehn Leute.“"
+          "explanation": "Selma kursa yalnız geldiği için her hafta başka bir partnerle dans ediyor: „Deshalb tanze ich jede Woche mit einem anderen Partner.“ Her hafta başka bir partner = partnerini her hafta değiştiriyor (wechseln). b) yanlış: Kursa yalnız gelen Selma; çoğu kişi ikişer geliyor: „Die meisten kommen zu zweit“. c) yanlış: Grupta on iki değil, on kişi var: „In der Gruppe sind zehn Leute.“"
         },
         {
           "number": 14,
@@ -89,7 +89,7 @@
           "prompt": "Selma …",
           "options": {
             "a": "hat schon neue Tanzschuhe gekauft.",
-            "b": "tanzt im Moment in alten Sportschuhen.",
+            "b": "trägt im Kurs noch ihre alten Turnschuhe.",
             "c": "kauft am Donnerstag neue Schuhe."
           },
           "answer": "b",
@@ -99,15 +99,15 @@
               "quote": "Ich tanze noch in alten Sportschuhen, weil ich keine Tanzschuhe habe."
             }
           ],
-          "explanation": "Selma dans ayakkabısı olmadığı için şu anda eski spor ayakkabılarla dans ediyor: „Ich tanze noch in alten Sportschuhen, weil ich keine Tanzschuhe habe.“ Kurstan sonra ayakları sık sık ağrıyor: „Nach dem Kurs tun mir oft die Füße weh.“ a) yanlış: Henüz dans ayakkabısı yok: „weil ich keine Tanzschuhe habe“. c) yanlış: Ayakkabıları perşembe değil, cumartesi almak istiyor: „Am Samstag will ich mir endlich Tanzschuhe kaufen.“ Perşembe akşamı onun kurs günü."
+          "explanation": "Selma dans ayakkabısı olmadığı için hâlâ eski spor ayakkabılarla dans ediyor: „Ich tanze noch in alten Sportschuhen, weil ich keine Tanzschuhe habe.“ „Sportschuhe“ = „Turnschuhe“ (spor ayakkabısı); kursta onları giyiyor (tragen). a) yanlış: Henüz dans ayakkabısı yok: „weil ich keine Tanzschuhe habe“. c) yanlış: Ayakkabıları perşembe değil, cumartesi almak istiyor: „Am Samstag will ich mir endlich Tanzschuhe kaufen.“ Perşembe akşamı onun kurs günü."
         },
         {
           "number": 15,
           "type": "abc",
           "prompt": "Wenn Emil zum Kursabend kommen möchte, …",
           "options": {
-            "a": "muss er eine Eintrittskarte kaufen.",
-            "b": "muss er sich bis zum 20. November bei Selma melden.",
+            "a": "muss er vorher eine Eintrittskarte kaufen.",
+            "b": "muss er Selma spätestens am 20. November Bescheid sagen.",
             "c": "muss er bis zum 27. November die Tanzschule anrufen."
           },
           "answer": "b",
@@ -117,7 +117,7 @@
               "quote": "du musst dich bis zum 20. November bei mir melden"
             }
           ],
-          "explanation": "Emil kurs akşamına gelmek isterse 20 Kasım'a kadar Selma'ya haber vermesi gerekiyor: „du musst dich bis zum 20. November bei mir melden“. a) yanlış: Giriş ücretsiz: „Der Eintritt ist frei“. c) yanlış: 27 Kasım kurs akşamının tarihi; Emil dans okulunu değil, 20 Kasım'a kadar Selma'yı bilgilendirmeli: „bei mir melden“."
+          "explanation": "Emil kurs akşamına gelmek isterse 20 Kasım'a kadar Selma'ya haber vermesi gerekiyor: „du musst dich bis zum 20. November bei mir melden“. „bis zum 20. November“ = en geç 20 Kasım'da (spätestens am 20. November); „sich bei mir melden“ = Selma'ya haber vermek (Bescheid sagen). a) yanlış: Giriş ücretsiz: „Der Eintritt ist frei“. c) yanlış: 27 Kasım kurs akşamının tarihi; Emil dans okulunu değil, 20 Kasım'a kadar Selma'yı bilgilendirmeli: „bei mir melden“."
         }
       ]
     }

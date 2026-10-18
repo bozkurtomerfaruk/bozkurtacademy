@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-5",
+  "title": "In der Volkshochschule",
+  "minutes": 6,
+  "instructions": "Sie sind in der Volkshochschule Eichtal. Lesen Sie die Aufgaben 6 bis 10 und den Raumplan. In welchen Raum gehen Sie? Wählen Sie die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "tafel",
+          "title": "Volkshochschule Eichtal – Raumplan",
+          "paragraphs": [
+            {
+              "rows": [
+                ["Raum 001", "Anmeldung: Kurse buchen und bezahlen · Programmhefte"],
+                ["Raum 002", "Café „Pausenbrot“: Kaffee, Tee, Suppe, belegte Brötchen"],
+                ["Raum 003", "Kochstudio: Kochen aus vielen Ländern · Backen für Anfänger"],
+                ["Raum 104", "Computerraum: Computer für Anfänger · Fotos am Computer ändern"],
+                ["Raum 105", "Deutschkurse A1 bis B1 am Vormittag · Test für neue Teilnehmer: Welcher Kurs passt?"],
+                ["Raum 106", "Englisch, Spanisch und Türkisch: Kurse am Abend"],
+                ["Raum 201", "Fotografie · Malen und Zeichnen"],
+                ["Raum 202", "Yoga, Gymnastik und Tanzen – bitte bequeme Kleidung mitbringen"]
+              ]
+            },
+            "Die Räume 001 bis 003 sind im Erdgeschoss, die Räume 104 bis 106 im 1. Stock und die Räume 201 und 202 im 2. Stock. Die Volkshochschule ist von Montag bis Freitag von 8 bis 21.30 Uhr geöffnet. Der Aufzug ist neben dem Café."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "abc",
+          "prompt": "Sie haben in der Kurspause Hunger und möchten schnell eine Kleinigkeit essen.",
+          "options": { "a": "Raum 003", "b": "Raum 002", "c": "anderer Raum" },
+          "answer": "b",
+          "evidence": [{ "text": "tafel", "quote": "Kaffee, Tee, Suppe, belegte Brötchen" }],
+          "explanation": "Raum 002'de bir kafe var: „Kaffee, Tee, Suppe, belegte Brötchen“. Orada çorba veya sandviç yenebilir. a) yanlış: Raum 003 yemek kursu yeri (Kochstudio), kafe değil."
+        },
+        {
+          "number": 6,
+          "type": "abc",
+          "prompt": "Sie haben eine neue Kamera und möchten lernen, wie man damit schöne Bilder macht.",
+          "options": { "a": "Raum 201", "b": "Raum 104", "c": "anderer Raum" },
+          "answer": "a",
+          "evidence": [{ "text": "tafel", "quote": "Fotografie" }],
+          "explanation": "Fotoğraf makinesiyle güzel fotoğraf çekmeyi öğrenmek için fotoğrafçılık (Fotografie) kursu gerekiyor. Bu kurs Raum 201'de. b) yanlış: Raum 104'te de fotoğraf var, ama orada fotoğraflar bilgisayarda değiştiriliyor: „Fotos am Computer ändern“. c) yanlış: Fotoğrafçılık kursu seçeneklerdeki Raum 201'de."
+        },
+        {
+          "number": 7,
+          "type": "abc",
+          "prompt": "Sie arbeiten bis 17 Uhr und möchten danach einen Englischkurs besuchen.",
+          "options": { "a": "Raum 105", "b": "Raum 106", "c": "anderer Raum" },
+          "answer": "b",
+          "evidence": [{ "text": "tafel", "quote": "Englisch, Spanisch und Türkisch: Kurse am Abend" }],
+          "explanation": "Raum 106'da „Englisch, Spanisch und Türkisch: Kurse am Abend“ var; İngilizce kursu akşam, yani işten sonra. a) yanlış: Raum 105'te de dil kursları var, ama Almanca ve öğleden önce: „Deutschkurse A1 bis B1 am Vormittag“. c) yanlış: İngilizce kursu seçeneklerdeki Raum 106'da."
+        },
+        {
+          "number": 8,
+          "type": "abc",
+          "prompt": "Sie haben sich schon angemeldet und bezahlt. Jetzt möchten Sie lernen, wie man selbst Brot und Kuchen macht.",
+          "options": { "a": "Raum 002", "b": "Raum 001", "c": "anderer Raum" },
+          "answer": "c",
+          "evidence": [{ "text": "tafel", "quote": "Backen für Anfänger" }],
+          "explanation": "Ekmek ve pasta yapmak hamur işi pişirmektir (Backen). „Backen für Anfänger“ Raum 003'teki Kochstudio'da. Raum 003 seçeneklerde yok, bu yüzden c doğru. a) yanlış: Raum 002'deki kafede sandviç (belegte Brötchen) satılıyor; kurs orada yazmıyor. b) yanlış: Raum 001'de kurslar ayırtılıyor ve ödeniyor (Anmeldung), ama siz kaydı ve ödemeyi zaten yaptınız: „Sie haben sich schon angemeldet und bezahlt“. Fırıncılık kursu orada değil."
+        },
+        {
+          "number": 9,
+          "type": "abc",
+          "prompt": "Sie arbeiten den ganzen Tag am Computer und möchten sich in der Freizeit mehr bewegen.",
+          "options": { "a": "Raum 104", "b": "Raum 202", "c": "anderer Raum" },
+          "answer": "b",
+          "evidence": [{ "text": "tafel", "quote": "Yoga, Gymnastik und Tanzen" }],
+          "explanation": "Daha çok hareket etmek için Raum 202'deki kurslar uygun: „Yoga, Gymnastik und Tanzen“. a) yanlış: Raum 104'te bilgisayar var, ama bu bir bilgisayar kursu; hareket ve spor orada yazmıyor. c) yanlış: Spor kursları seçeneklerdeki Raum 202'de."
+        },
+        {
+          "number": 10,
+          "type": "abc",
+          "prompt": "Sie sind neu in Eichtal und möchten Deutsch lernen. Sie wissen aber nicht, ob A1 oder A2 für Sie richtig ist.",
+          "options": { "a": "Raum 105", "b": "Raum 001", "c": "anderer Raum" },
+          "answer": "a",
+          "evidence": [{ "text": "tafel", "quote": "Test für neue Teilnehmer: Welcher Kurs passt?" }],
+          "explanation": "Raum 105'te Almanca kursları (A1 bis B1) ve yeni katılımcılar için bir test var: „Test für neue Teilnehmer: Welcher Kurs passt?“. Bu test hangi kursun uygun olduğunu gösteriyor. b) yanlış: Raum 001'de kurslar ayırtılıyor ve ödeniyor; test orada değil. c) yanlış: Test seçeneklerdeki Raum 105'te."
+        }
+      ]
+    }
+  ]
+}

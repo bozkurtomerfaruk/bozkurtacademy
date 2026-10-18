@@ -1,0 +1,128 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-4",
+  "title": "Kinoabend im Dorf",
+  "minutes": 8,
+  "instructions": "Sie lesen in einer Zeitung diesen Text. Wählen Sie für die Aufgaben 1 bis 5 die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "kino",
+          "title": "Kinoabend im Dorf",
+          "paragraphs": [
+            "In Lerchenau wohnen nur 900 Menschen. Ein Kino gibt es im Dorf nicht, das nächste Kino ist 25 Kilometer entfernt. Trotzdem können die Leute aus Lerchenau jetzt zusammen Filme sehen: Einmal im Monat, immer am ersten Freitag, gibt es einen Kinoabend in der alten Feuerwache.",
+            "Den Kinoabend organisiert Tilda Haas. Die 43-jährige Lehrerin hat früher in einer großen Stadt gewohnt und ist dort oft ins Kino gegangen. „Das hat mir hier gefehlt“, sagt sie. Die Feuerwehr hat seit zwei Jahren ein neues Haus, und die alte Feuerwache war leer. Der Bürgermeister hat sofort Ja gesagt. Den Beamer hat Tilda Haas von der Schule geliehen.",
+            "Die Tickets kosten 4 Euro, für Kinder 2 Euro. Man kann sie nicht im Internet kaufen, sondern nur am Abend an der Tür. Ruben, der 16-jährige Sohn von Tilda Haas, verkauft dort auch Popcorn und Getränke. Das Geld für Popcorn und Getränke bekommt der Sportverein. Wer möchte, kann ein Kissen mitbringen, denn die Stühle sind ziemlich hart.",
+            "Die Filme wählen die Besucher selbst: Am Ende von jedem Kinoabend schreiben sie ihren Wunsch auf einen Zettel. Der nächste Kinoabend ist am 6. November. Dann gibt es eine Komödie aus Frankreich. Der Film beginnt um 19.30 Uhr, die Tür ist ab 19 Uhr offen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "abc",
+          "prompt": "In Lerchenau …",
+          "options": {
+            "a": "gibt es kein Kino.",
+            "b": "gibt es jede Woche einen Kinoabend.",
+            "c": "ist das nächste Kino in der alten Feuerwache."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "kino",
+              "quote": "Ein Kino gibt es im Dorf nicht"
+            }
+          ],
+          "explanation": "Lerchenau köyünde sinema yok: „Ein Kino gibt es im Dorf nicht“. b) yanlış: Sinema akşamı her hafta değil, ayda bir kez, her ayın ilk cuması: „Einmal im Monat, immer am ersten Freitag“. c) yanlış: Eski itfaiye binasında ayda bir sinema akşamı var, ama orası sinema değil; en yakın sinema 25 kilometre uzakta: „das nächste Kino ist 25 Kilometer entfernt“."
+        },
+        {
+          "number": 2,
+          "type": "abc",
+          "prompt": "Tilda Haas …",
+          "options": {
+            "a": "ist die Bürgermeisterin von Lerchenau.",
+            "b": "hat den Beamer im Internet gekauft.",
+            "c": "ist früher in der Stadt oft ins Kino gegangen."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "kino",
+              "quote": "hat früher in einer großen Stadt gewohnt und ist dort oft ins Kino gegangen"
+            }
+          ],
+          "explanation": "Tilda Haas eskiden büyük bir şehirde yaşadı ve orada sık sık sinemaya gitti: „hat früher in einer großen Stadt gewohnt und ist dort oft ins Kino gegangen“. a) yanlış: Tilda Haas belediye başkanı değil, öğretmen: „Die 43-jährige Lehrerin“. Belediye başkanı ise hemen evet dedi: „Der Bürgermeister hat sofort Ja gesagt.“ b) yanlış: Projeksiyon cihazını (Beamer) satın almadı, okuldan ödünç aldı: „Den Beamer hat Tilda Haas von der Schule geliehen.“"
+        },
+        {
+          "number": 3,
+          "type": "abc",
+          "prompt": "Die Tickets für den Kinoabend …",
+          "options": {
+            "a": "kann man auch im Internet kaufen.",
+            "b": "kosten für Kinder weniger.",
+            "c": "kosten für Erwachsene 2 Euro."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "kino",
+              "quote": "Die Tickets kosten 4 Euro, für Kinder 2 Euro."
+            }
+          ],
+          "explanation": "Biletler 4 euro, çocuklar için 2 euro; yani çocuklar daha az ödüyor: „Die Tickets kosten 4 Euro, für Kinder 2 Euro.“ a) yanlış: Biletler internetten alınamıyor, sadece akşam kapıda satılıyor: „Man kann sie nicht im Internet kaufen, sondern nur am Abend an der Tür.“ c) yanlış: 2 euro çocuk bileti; yetişkinler 4 euro ödüyor."
+        },
+        {
+          "number": 4,
+          "type": "abc",
+          "prompt": "Ruben …",
+          "options": {
+            "a": "ist 43 Jahre alt.",
+            "b": "bekommt das Geld für Popcorn und Getränke.",
+            "c": "verkauft am Kinoabend Popcorn und Getränke."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "kino",
+              "quote": "verkauft dort auch Popcorn und Getränke"
+            },
+            {
+              "text": "kino",
+              "quote": "Das Geld für Popcorn und Getränke bekommt der Sportverein."
+            }
+          ],
+          "explanation": "Ruben sinema akşamında kapıda patlamış mısır ve içecek satıyor: „verkauft dort auch Popcorn und Getränke“. a) yanlış: 43 yaşında olan Ruben değil, annesi Tilda Haas; Ruben 16 yaşında: „der 16-jährige Sohn von Tilda Haas“. b) yanlış: Patlamış mısır ve içeceklerin parasını Ruben değil, spor kulübü alıyor: „Das Geld für Popcorn und Getränke bekommt der Sportverein.“"
+        },
+        {
+          "number": 5,
+          "type": "abc",
+          "prompt": "Beim nächsten Kinoabend …",
+          "options": {
+            "a": "beginnt der Film um 19 Uhr.",
+            "b": "zeigt man einen Film aus Frankreich.",
+            "c": "wählt Tilda Haas den Film."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "kino",
+              "quote": "Dann gibt es eine Komödie aus Frankreich."
+            },
+            {
+              "text": "kino",
+              "quote": "Die Filme wählen die Besucher selbst"
+            }
+          ],
+          "explanation": "6 Kasım'daki bir sonraki sinema akşamında Fransız bir komedi filmi gösteriliyor: „Dann gibt es eine Komödie aus Frankreich.“ a) yanlış: Saat 19'da kapı açılıyor; film ise 19.30'da başlıyor: „Der Film beginnt um 19.30 Uhr, die Tür ist ab 19 Uhr offen.“ c) yanlış: Filmleri Tilda Haas değil, izleyiciler kendileri seçiyor: „Die Filme wählen die Besucher selbst“."
+        }
+      ]
+    }
+  ]
+}

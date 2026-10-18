@@ -52,63 +52,84 @@
           "number": 0,
           "example": true,
           "type": "zuordnung",
-          "prompt": "… kennt ältere Studierende aus der eigenen Lehrtätigkeit.",
+          "prompt": "… trifft im Beruf regelmäßig auf Senioren, die an der Uni lernen.",
           "answer": "c",
           "evidence": [
-            { "text": "huelya", "quote": "Ich unterrichte seit zehn Jahren Soziologie an einer Hochschule" }
+            {
+              "text": "huelya",
+              "quote": "Ich unterrichte seit zehn Jahren Soziologie an einer Hochschule"
+            }
           ],
           "explanation": "Hülya (c) bir yüksekokulda ders veriyor: „Ich unterrichte seit zehn Jahren Soziologie an einer Hochschule“; seminerlerinde neredeyse her dönem altmış yaşın üzerinde öğrenciler oluyor. Elfriede (a) ve Ingmar (d) yaşlı öğrencileri öğretmen olarak değil, kendileri öğrenci olarak tanıyor."
         },
         {
           "number": 1,
           "type": "zuordnung",
-          "prompt": "… hat sich nach einem gescheiterten Versuch für eine unverbindlichere Form des Lernens entschieden.",
+          "prompt": "… hat sich nach einem gescheiterten Versuch für eine unverbindlichere Art der Weiterbildung entschieden.",
           "answer": "d",
           "evidence": [
-            { "text": "ingmar", "quote": "Nach zwei Semestern habe ich aufgegeben" },
-            { "text": "ingmar", "quote": "Heute besuche ich als Gasthörer Vorlesungen" }
+            {
+              "text": "ingmar",
+              "quote": "Nach zwei Semestern habe ich aufgegeben"
+            },
+            {
+              "text": "ingmar",
+              "quote": "Heute besuche ich als Gasthörer Vorlesungen"
+            }
           ],
           "explanation": "Ingmar (d) biyoloji okumayı iki dönem sonra bırakmış („Nach zwei Semestern habe ich aufgegeben“) ve şimdi sınavsız, tarihsiz olarak misafir dinleyici şeklinde derslere gidiyor: „Heute besuche ich als Gasthörer Vorlesungen“. Elfriede (a) başta yalnız kalmış ama okulu bırakmamış, lisans eğitimine devam ediyor. Gunnar (b) on bir ret almış ama sonunda çıraklığa başlamış; o da yarıda bırakmamış."
         },
         {
           "number": 2,
           "type": "zuordnung",
-          "prompt": "… hat erst durch eine gemeinsame Aufgabe Anschluss an Jüngere gefunden.",
+          "prompt": "… fand über ein gemeinsames Projekt Anschluss an die Mitstudierenden.",
           "answer": "a",
           "evidence": [
-            { "text": "elfriede", "quote": "Das änderte sich erst, als mich eine Kommilitonin fragte, ob ich bei einem Referat mitarbeiten wolle" }
+            {
+              "text": "elfriede",
+              "quote": "Das änderte sich erst, als mich eine Kommilitonin fragte, ob ich bei einem Referat mitarbeiten wolle"
+            }
           ],
           "explanation": "Elfriede (a) ilk haftalarda seminerlerde yalnız oturuyormuş. Durum ancak bir öğrenci onu bir sunuma katılmaya davet edince değişmiş: „Das änderte sich erst, als mich eine Kommilitonin fragte, ob ich bei einem Referat mitarbeiten wolle.“ Gunnar (b) da gençlerle birlikte okuyor, ama meslek okulunda gençler onu hemen kabul etmiş („sofort akzeptiert“); ortak bir göreve gerek kalmamış. Hülya (c) gençlerle yaşlıların ilişkisinden öğretmen olarak bahsediyor."
         },
         {
           "number": 3,
           "type": "zuordnung",
-          "prompt": "… weist darauf hin, dass die körperliche Verfassung entscheidend sein kann.",
+          "prompt": "… weist darauf hin, dass die körperliche Verfassung eine große Rolle spielen kann.",
           "answer": "b",
           "evidence": [
-            { "text": "gunnar", "quote": "Wer Probleme mit den Knien oder dem Rücken hat" }
+            {
+              "text": "gunnar",
+              "quote": "Wer Probleme mit den Knien oder dem Rücken hat"
+            }
           ],
           "explanation": "Gunnar (b) marangozluğun bütün gün ayakta durmayı ve ağır levha taşımayı gerektirdiğini yazıyor ve uyarıyor: „Wer Probleme mit den Knien oder dem Rücken hat, sollte sich das gründlich überlegen.“ Hülya (c) da bir uyarı yapıyor, ama onun uyarısı beden sağlığıyla değil, çalışma yüküyle ilgili. Ingmar (d) bıraktığı eğitimin sebebi olarak sağlığını değil, çevrim içi platformu gösteriyor."
         },
         {
           "number": 4,
           "type": "zuordnung",
-          "prompt": "… meint, dass auch die jüngeren Studierenden von den älteren etwas lernen können.",
+          "prompt": "… meint, dass der Nachwuchs im Hörsaal aus den Erinnerungen der Senioren Nutzen ziehen kann.",
           "answer": "c",
           "evidence": [
-            { "text": "huelya", "quote": "Davon profitieren auch die Jüngeren, die solche Zeiten nur aus Büchern kennen" }
+            {
+              "text": "huelya",
+              "quote": "Davon profitieren auch die Jüngeren, die solche Zeiten nur aus Büchern kennen"
+            }
           ],
           "explanation": "Hülya'ya (c) göre yaşlı öğrenciler kırk yıl önceki iş hayatını kendi deneyimlerinden anlatabiliyor ve „Davon profitieren auch die Jüngeren, die solche Zeiten nur aus Büchern kennen.“ Elfriede (a) gençlerle bir çalışma grubunda buluşuyor, ama gençlerin ondan bir şey öğrendiğini yazmıyor. Gunnar (b) meslek okulundaki gençlerden yalnızca onu kabul ettikleri için söz ediyor."
         },
         {
           "number": 5,
           "type": "zuordnung",
-          "prompt": "… hält einen Vorwurf, den man älteren Studierenden macht, in bestimmten Fällen für berechtigt.",
+          "prompt": "… hält eine häufig geäußerte Kritik an Senioren im Hörsaal in bestimmten Bereichen für nachvollziehbar.",
           "answer": "d",
           "evidence": [
-            { "text": "ingmar", "quote": "verstehe ich diesen Einwand durchaus" }
+            {
+              "text": "ingmar",
+              "quote": "verstehe ich diesen Einwand durchaus"
+            }
           ],
-          "explanation": "Ingmar (d) yaşlıların gençlerin üniversite kontenjanlarını aldığı yönündeki suçlamayı aktarıyor ve tıp gibi aday sayısının yer sayısından çok fazla olduğu bölümlerde „verstehe ich diesen Einwand durchaus“ diyor; biyolojide ise bunun sorun olmadığını ekliyor. Hülya (c) yaşlı öğrencilerin olumsuz bir davranışını anlatıyor, ama bu başkalarının yaptığı bir suçlama değil, kendi gözlemi. Gunnar'ın (b) duyduğu ret gerekçesi bir eleştiri değil, işletmelerin ret sebebi."
+          "explanation": "Ingmar (d) yaşlıların gençlerin üniversite kontenjanlarını aldığı yönündeki suçlamayı aktarıyor ve tıp gibi aday sayısının yer sayısından çok fazla olduğu bölümlerde „verstehe ich diesen Einwand durchaus“ diyor; biyolojide ise bunun sorun olmadığını ekliyor. „In bestimmten Bereichen“ (belirli alanlarda) Ingmar'ın tıp örneğine karşılık geliyor. Hülya (c) yaşlı öğrencilerin olumsuz bir davranışını anlatıyor, ama bu başkalarının yaptığı bir suçlama değil, kendi gözlemi. Gunnar'ın (b) duyduğu ret gerekçesi bir eleştiri değil, işletmelerin ret sebebi."
         },
         {
           "number": 6,
@@ -116,7 +137,10 @@
           "prompt": "… hat sich wiederholt vergeblich um einen Ausbildungsplatz bemüht.",
           "answer": "b",
           "evidence": [
-            { "text": "gunnar", "quote": "habe ich elf Absagen bekommen" }
+            {
+              "text": "gunnar",
+              "quote": "habe ich elf Absagen bekommen"
+            }
           ],
           "explanation": "Gunnar (b) küçük bir aile işletmesi onu almadan önce „habe ich elf Absagen bekommen“ diyor; işletmeler uzun yıllar kalacak birini arıyormuş. Elfriede (a) üniversiteye kaydın hiç sorun olmadığını yazıyor. Ingmar (d) da biyolojiye kaydolmuş; yer bulmakta zorlandığından söz etmiyor."
         },
@@ -126,30 +150,42 @@
           "prompt": "… strebt einen Abschluss an, ohne damit einen beruflichen Zweck zu verfolgen.",
           "answer": "a",
           "evidence": [
-            { "text": "elfriede", "quote": "Meine Antwort: gar nichts." }
+            {
+              "text": "elfriede",
+              "quote": "Meine Antwort: gar nichts."
+            }
           ],
           "explanation": "Elfriede'ye (a) lisans diplomasıyla ne yapacağı sorulunca cevabı „Meine Antwort: gar nichts.“; tarihin neden böyle geliştiğini anlamak istiyor. Gunnar (b) da bir sınava hazırlanıyor, ama kalfalık sınavından (Gesellenprüfung) sonra birkaç yıl marangoz olarak çalışmak istiyor, yani mesleki bir amacı var. Ingmar (d) artık misafir dinleyici olarak sınavsız derslere gidiyor; bir diploma hedeflemiyor."
         },
         {
           "number": 8,
           "type": "zuordnung",
-          "prompt": "… beobachtet, dass manche älteren Teilnehmer in Seminaren zu viel Raum einnehmen.",
+          "prompt": "… erlebt, dass einzelne Senioren in Lehrveranstaltungen zu viel Raum einnehmen.",
           "answer": "c",
           "evidence": [
-            { "text": "huelya", "quote": "dass die anderen kaum noch zu Wort kommen" }
+            {
+              "text": "huelya",
+              "quote": "dass die anderen kaum noch zu Wort kommen"
+            }
           ],
           "explanation": "Hülya (c) bazı yaşlı öğrencilerin kendi hayatlarını o kadar uzun anlattığını yazıyor ki „dass die anderen kaum noch zu Wort kommen“; o zaman müdahale etmesi gerekiyor. Ingmar (d) yaşlıların gençlerin üniversite kontenjanlarını aldığı suçlamasından söz ediyor, ama bu seminerdeki davranışla değil, bölümlere kabul edilmeyle ilgili. Elfriede (a) gençlerin başta mesafeli olduğunu anlatıyor; yaşlıların davranışını eleştirmiyor."
         },
         {
           "number": 9,
           "type": "zuordnung",
-          "prompt": "… sieht den Grund für den eigenen Abbruch nicht in den Inhalten, sondern in der Art, wie alles abgewickelt wurde.",
+          "prompt": "… führt den eigenen Abbruch nicht auf die Inhalte, sondern auf die Abwicklung zurück.",
           "answer": "d",
           "evidence": [
-            { "text": "ingmar", "quote": "Das lag weniger am Stoff als an der Organisation" },
-            { "text": "ingmar", "quote": "mit der ich einfach nicht zurechtkam" }
+            {
+              "text": "ingmar",
+              "quote": "Das lag weniger am Stoff als an der Organisation"
+            },
+            {
+              "text": "ingmar",
+              "quote": "mit der ich einfach nicht zurechtkam"
+            }
           ],
-          "explanation": "Ingmar (d) iki dönem sonra biyoloji eğitimini bırakmış ve sebebini şöyle açıklıyor: „Das lag weniger am Stoff als an der Organisation“; ders notları, teslim tarihleri ve sınav kayıtları bir çevrim içi platformdan yürüyormuş, „mit der ich einfach nicht zurechtkam“. İfadedeki „nicht in den Inhalten“ = „weniger am Stoff“, „wie alles abgewickelt wurde“ = „Organisation“. Gunnar (b) zorlukları anlatıyor (on bir ret, bedensel yük), ama o vazgeçmemiş, çıraklığını sürdürüyor. Hülya (c) iş yükünün hafife alındığını söylüyor, ama kendi bıraktığı bir eğitimden söz etmiyor; Elfriede (a) da bırakmamış."
+          "explanation": "Ingmar (d) iki dönem sonra biyoloji eğitimini bırakmış ve sebebini şöyle açıklıyor: „Das lag weniger am Stoff als an der Organisation“; ders notları, teslim tarihleri ve sınav kayıtları bir çevrim içi platformdan yürüyormuş, „mit der ich einfach nicht zurechtkam“. İfadedeki „nicht auf die Inhalte“ = „weniger am Stoff“, „auf die Abwicklung“ = „an der Organisation“. Gunnar (b) zorlukları anlatıyor (on bir ret, bedensel yük), ama o vazgeçmemiş, çıraklığını sürdürüyor. Hülya (c) iş yükünün hafife alındığını söylüyor, ama kendi bıraktığı bir eğitimden söz etmiyor; Elfriede (a) da bırakmamış."
         }
       ]
     }

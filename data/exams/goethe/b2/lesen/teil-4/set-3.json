@@ -1,0 +1,163 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b2",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-3",
+  "title": "Programmieren als Pflichtfach?",
+  "minutes": 12,
+  "context": "In einem Bildungsmagazin lesen Sie Kommentare zu der Frage: „Sollte Programmieren an allen Schulen Pflichtfach werden?“",
+  "instructions": "Lesen Sie die Texte a bis h und die Aussagen 22 bis 27. Welche Aussage passt zu welchem Text? Jeder Text passt höchstens einmal. Ein Text bleibt übrig. Der Text aus dem Beispiel kann nicht mehr gewählt werden.",
+  "groups": [
+    {
+      "layout": "comments",
+      "none": false,
+      "texts": [
+        {
+          "id": "adrian",
+          "label": "a",
+          "byline": "Adrian, Möwenstedt",
+          "paragraphs": [
+            "Ich unterrichte Mathematik an einer Gesamtschule. In unserem Kollegium hat genau eine Kollegin Informatik studiert, und sie geht im nächsten Sommer in Rente. An den Nachbarschulen sieht es ähnlich aus. Die wenigen Absolventen, die die Universitäten verlassen, landen meist in der Industrie, wo sie deutlich mehr verdienen. Bevor man also beschließt, dass alle Jugendlichen programmieren sollen, müsste man erst einmal klären, wer diese Stunden eigentlich übernimmt."
+          ]
+        },
+        {
+          "id": "bettina",
+          "label": "b",
+          "byline": "Bettina, Distelhausen",
+          "paragraphs": [
+            "Meine Tochter ist vierzehn und verbringt täglich Stunden auf Videoplattformen. Was ihr dort angezeigt wird, entscheiden Algorithmen, und sie merkt davon nichts. Ob sie selbst eine App bauen kann, ist mir ehrlich gesagt ziemlich egal. Viel dringender müsste sie lernen, hinter die Kulissen zu schauen: Warum sehe ich gerade diesen Beitrag? Wer verdient daran, wenn ich weiterklicke? Solche Fragen gehören in den Unterricht, und zwar in jeder Klassenstufe."
+          ]
+        },
+        {
+          "id": "cornelius",
+          "label": "c",
+          "byline": "Cornelius, Habichtsried",
+          "paragraphs": [
+            "Ich entwickle seit zwanzig Jahren Software. Die Sprache, mit der ich angefangen habe, nutzt heute kaum noch jemand, und auch die aktuellen Sprachen werden in zehn Jahren abgelöst sein. Wer in der siebten Klasse eine bestimmte Sprache paukt, kann damit bei seiner ersten Stelle wenig anfangen. Sinnvoll fände ich dagegen, strukturiertes Denken zu trainieren, also Probleme in kleine Schritte zu zerlegen. Diese Fähigkeit bleibt, egal welche Technik gerade in Mode ist."
+          ]
+        },
+        {
+          "id": "doreen",
+          "label": "d",
+          "byline": "Doreen, Kleewinkel",
+          "paragraphs": [
+            "Warum muss es denn gleich ein eigenes Fach sein? Als Physiklehrerin lasse ich meine Klassen schon heute Messwerte mit kleinen Programmen auswerten. In Mathematik könnte man Funktionen am Bildschirm darstellen, in Biologie Daten aus Experimenten sortieren. So erleben die Jugendlichen sofort, wozu das nützlich ist, statt es losgelöst zu üben. Mir wäre es lieber, die vorhandenen Lehrpläne um solche Elemente zu erweitern, als eine weitere Note ins Zeugnis zu schreiben."
+          ]
+        },
+        {
+          "id": "elias",
+          "label": "e",
+          "byline": "Elias, Otterbach",
+          "paragraphs": [
+            "Ich hätte nie gedacht, dass mir so etwas liegt. In der neunten Klasse mussten wir für ein Projekt eine kleine Wetterstation programmieren, und plötzlich saß ich nächtelang am Rechner. Heute studiere ich Informatik. Viele meiner früheren Mitschüler hätten sich von sich aus nie an dieses Gebiet gewagt, ich übrigens auch nicht. Genau aus diesem Grund finde ich es richtig, dass jeder einmal damit in Berührung kommt, ob er will oder nicht."
+          ]
+        },
+        {
+          "id": "frauke",
+          "label": "f",
+          "byline": "Frauke, Reiherfeld",
+          "paragraphs": [
+            "Mein Sohn hat schon jetzt an drei Tagen bis 16 Uhr Schule. Die Wochenstunden lassen sich nicht beliebig vermehren. Kommt Informatik verbindlich hinzu, muss also etwas anderes weichen, und erfahrungsgemäß trifft es dann Musik, Kunst oder Sport. Gerade diese Stunden sind für viele Kinder der Ausgleich zum langen Sitzen. Die Idee an sich halte ich keineswegs für schlecht. Man sollte den Eltern nur ehrlich sagen, was dafür wegfällt."
+          ]
+        },
+        {
+          "id": "goran",
+          "label": "g",
+          "byline": "Goran, Mispelau",
+          "paragraphs": [
+            "Im Gymnasium meiner Tochter teilen sich dreißig Kinder einen Raum mit zwölf Rechnern, von denen die Hälfte regelmäßig streikt. Das WLAN bricht zusammen, sobald mehr als eine Klasse gleichzeitig online ist. Wie soll unter solchen Bedingungen sinnvoller Programmierunterricht stattfinden? Ich bin grundsätzlich dafür, dass Kinder lernen, wie Computer funktionieren. Zuerst braucht es aber funktionierende Geräte und ein stabiles Netz, dann kann man über neue Pflichtfächer reden."
+          ]
+        },
+        {
+          "id": "rosemarie",
+          "label": "h",
+          "byline": "Rosemarie, Holunderbrück",
+          "paragraphs": [
+            "Vierzig Jahre lang habe ich an einer Hauptschule Deutsch und Mathematik unterrichtet. In meinen letzten Dienstjahren saßen in der siebten Klasse immer mehr Kinder, die kaum einen einfachen Text verstanden oder an der Prozentrechnung scheiterten. Wer nicht sicher lesen, schreiben und rechnen kann, dem nützt auch die modernste Programmiersprache nichts. Ich wünsche mir, dass wir zuerst dafür sorgen, dass das Fundament stimmt."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Bevor zusätzliche Inhalte kommen, sollten die elementaren Kompetenzen besser beherrscht werden.",
+          "answer": "h",
+          "evidence": [
+            { "text": "rosemarie", "quote": "Wer nicht sicher lesen, schreiben und rechnen kann" },
+            { "text": "rosemarie", "quote": "dass das Fundament stimmt" }
+          ],
+          "explanation": "Rosemarie (h) son çalışma yıllarında yedinci sınıfta giderek daha fazla çocuğun basit bir metni anlamakta ve yüzde hesabında zorlandığını anlatıyor. „Wer nicht sicher lesen, schreiben und rechnen kann“, ona en modern programlama dili de yardım etmez; önce „dass das Fundament stimmt“ sağlanmalı."
+        },
+        {
+          "number": 22,
+          "type": "zuordnung",
+          "prompt": "Konkrete Werkzeuge aus dem Schulalltag wären beim Berufseinstieg vermutlich schon veraltet.",
+          "answer": "c",
+          "evidence": [
+            { "text": "cornelius", "quote": "kann damit bei seiner ersten Stelle wenig anfangen" }
+          ],
+          "explanation": "Cornelius (c) başladığı programlama dilinin bugün neredeyse hiç kullanılmadığını, bugünkü dillerin de on yıl içinde yerini başkalarına bırakacağını yazıyor: yedinci sınıfta belirli bir dili ezberleyen kişi „kann damit bei seiner ersten Stelle wenig anfangen“. Doreen (d) de programlamanın nasıl öğretileceğini tartışıyor, ama onun konusu ayrı ders yerine mevcut derslere katmak; bilginin eskimesinden söz etmiyor. Rosemarie (h) modern bir programlama dilinin temel becerisi olmayana yaramayacağını söylüyor; iş hayatına girişte eskimiş olmasından bahsetmiyor."
+        },
+        {
+          "number": 23,
+          "type": "zuordnung",
+          "prompt": "Momentan mangelt es an Fachleuten, die das Fach lehren könnten.",
+          "answer": "a",
+          "evidence": [
+            { "text": "adrian", "quote": "hat genau eine Kollegin Informatik studiert" },
+            { "text": "adrian", "quote": "wer diese Stunden eigentlich übernimmt" }
+          ],
+          "explanation": "Adrian (a) okulunda yalnızca bir meslektaşın bilgisayar bilimi okuduğunu („hat genau eine Kollegin Informatik studiert“) ve onun da emekli olacağını yazıyor; mezunların çoğu daha çok kazandıkları sanayiye gidiyor. Bu yüzden önce „wer diese Stunden eigentlich übernimmt“ sorusu netleşmeli. Goran (g) de okuldaki koşulları eleştiriyor, ama onun sorunu bilgisayarlar ve internet, öğretmen eksikliği değil. Doreen (d) fizik öğretmeni olarak bugün bile küçük programlar kullandırıyor; personel eksikliğinden söz etmiyor."
+        },
+        {
+          "number": 24,
+          "type": "zuordnung",
+          "prompt": "Vielerorts müsste zunächst die technische Ausstattung verbessert werden.",
+          "answer": "g",
+          "evidence": [
+            { "text": "goran", "quote": "von denen die Hälfte regelmäßig streikt" },
+            { "text": "goran", "quote": "Zuerst braucht es aber funktionierende Geräte und ein stabiles Netz" }
+          ],
+          "explanation": "Goran (g) kızının okulunda otuz çocuğun on iki bilgisayarı paylaştığını, bunların yarısının sık sık bozulduğunu („von denen die Hälfte regelmäßig streikt“) ve WLAN'ın çöktüğünü anlatıyor. Sonuç: „Zuerst braucht es aber funktionierende Geräte und ein stabiles Netz“. Adrian (a) da önce bir ön koşulun çözülmesini istiyor, ama onun eksik gördüğü şey cihazlar değil, dersi verecek kişiler. Rosemarie (h) de „önce“ diyor, ama temel becerileri kastediyor."
+        },
+        {
+          "number": 25,
+          "type": "zuordnung",
+          "prompt": "Gerade ein verbindliches Angebot kann versteckte Begabungen ans Licht bringen.",
+          "answer": "e",
+          "evidence": [
+            { "text": "elias", "quote": "Ich hätte nie gedacht, dass mir so etwas liegt" },
+            { "text": "elias", "quote": "hätten sich von sich aus nie an dieses Gebiet gewagt" }
+          ],
+          "explanation": "Elias (e) dokuzuncu sınıftaki zorunlu bir proje sayesinde programlamanın kendisine uygun olduğunu keşfetmiş: „Ich hätte nie gedacht, dass mir so etwas liegt“. Bugün bilgisayar bilimi okuyor. Pek çok arkadaşı ve kendisi „hätten sich von sich aus nie an dieses Gebiet gewagt“; bu yüzden herkesin, istese de istemese de, bu alanla tanışmasını doğru buluyor. Cornelius (c) da bir yeteneği (yapılandırılmış düşünme) öne çıkarıyor, ama gizli kalmış yeteneklerin keşfinden söz etmiyor. Goran (g) çocukların bilgisayarı anlamasını istiyor; zorunluluğun yetenek ortaya çıkardığını söylemiyor."
+        },
+        {
+          "number": 26,
+          "type": "zuordnung",
+          "prompt": "Wichtiger als das Schreiben von Code wäre es, einen kritischen Umgang mit digitalen Medien zu vermitteln.",
+          "answer": "b",
+          "evidence": [
+            { "text": "bettina", "quote": "Ob sie selbst eine App bauen kann, ist mir ehrlich gesagt ziemlich egal" },
+            { "text": "bettina", "quote": "hinter die Kulissen zu schauen" }
+          ],
+          "explanation": "Bettina (b) kızının video platformlarında saatler geçirdiğini, neyin gösterileceğine algoritmaların karar verdiğini yazıyor. „Ob sie selbst eine App bauen kann, ist mir ehrlich gesagt ziemlich egal“; daha acil olan „hinter die Kulissen zu schauen“, yani bir paylaşımı neden gördüğünü ve bundan kimin kazandığını sorgulamak. Cornelius (c) da belirli bir dili öğrenmek yerine başka bir şeyi öneriyor, ama bu medyayı sorgulamak değil, problemleri küçük adımlara bölmek. Rosemarie (h) önceliği okuma, yazma ve hesaba veriyor; dijital medyadan söz etmiyor."
+        },
+        {
+          "number": 27,
+          "type": "zuordnung",
+          "prompt": "Ein neues Fach ginge zulasten bereits bestehender Fächer.",
+          "answer": "f",
+          "evidence": [
+            { "text": "frauke", "quote": "Die Wochenstunden lassen sich nicht beliebig vermehren" },
+            { "text": "frauke", "quote": "muss also etwas anderes weichen" }
+          ],
+          "explanation": "Frauke (f) oğlunun zaten haftada üç gün saat 16'ya kadar okulda olduğunu yazıyor: „Die Wochenstunden lassen sich nicht beliebig vermehren“. Bilgisayar bilimi zorunlu ders olursa „muss also etwas anderes weichen“; genellikle müzik, resim ya da spor. Doreen (d) de ayrı bir ders istemiyor, ama sebebi programlamanın mevcut derslerde daha anlamlı olması; başka derslerin saatinin kesileceğini söylemiyor. Rosemarie (h) önceliklerden söz ediyor, ders saatlerinden değil."
+        }
+      ]
+    }
+  ]
+}

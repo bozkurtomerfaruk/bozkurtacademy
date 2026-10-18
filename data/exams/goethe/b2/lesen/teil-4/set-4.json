@@ -1,0 +1,162 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b2",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-4",
+  "title": "Haustiere im Büro?",
+  "minutes": 12,
+  "context": "Auf der Website einer Wirtschaftszeitung lesen Sie Kommentare zu der Frage: „Sollten Hunde am Arbeitsplatz erlaubt sein?“",
+  "instructions": "Lesen Sie die Texte a bis h und die Aussagen 22 bis 27. Welche Aussage passt zu welchem Text? Jeder Text passt höchstens einmal. Ein Text bleibt übrig. Der Text aus dem Beispiel kann nicht mehr gewählt werden.",
+  "groups": [
+    {
+      "layout": "comments",
+      "none": false,
+      "texts": [
+        {
+          "id": "ingo",
+          "label": "a",
+          "byline": "Ingo, Dachsheim",
+          "paragraphs": [
+            "Bevor mein Arbeitgeber zugestimmt hat, musste ich jeden Monat rund 350 Euro für eine Gassigeherin ausgeben, damit mein Mischling Balu nicht neun Stunden allein in der Wohnung sitzt. Für jemanden, der in der Logistik arbeitet, ist das eine Menge Geld. Heute liegt Balu zufrieden neben meinem Schreibtisch, und in der Mittagspause drehen wir eine Runde um den Block. Den Betrag lege ich inzwischen für den nächsten Urlaub zur Seite."
+          ]
+        },
+        {
+          "id": "jolanda",
+          "label": "b",
+          "byline": "Jolanda, Wacholderstedt",
+          "paragraphs": [
+            "Ich mag Hunde, wirklich. Leider reagiere ich auf ihre Haare mit tränenden Augen und Atemnot. Als eine neue Kollegin ihren Labrador mitbrachte, konnte ich nach einer Stunde kaum noch Luft holen und musste nach Hause gehen. Seitdem arbeite ich an solchen Tagen im Homeoffice, was mir auf Dauer aber nicht gefällt. Wer über eine solche Erlaubnis entscheidet, sollte an Menschen wie mich denken."
+          ]
+        },
+        {
+          "id": "kai",
+          "label": "c",
+          "byline": "Kai, Falkenried",
+          "paragraphs": [
+            "Ich sitze mit zwanzig Leuten auf einer Etage ohne Trennwände. Zwei Kollegen bringen inzwischen ihre Terrier mit. Sobald der Paketbote klingelt, kläffen beide los, und in Videokonferenzen muss ich mich ständig bei meinen Gesprächspartnern entschuldigen. Danach dauert es jedes Mal eine Weile, bis ich wieder in meine Tabellen hineinfinde. In einem Einzelzimmer wäre das vielleicht kein Thema, bei uns aber leidet die Leistung des ganzen Teams."
+          ]
+        },
+        {
+          "id": "larissa",
+          "label": "d",
+          "byline": "Larissa, Brombachtal",
+          "paragraphs": [
+            "In unserer Werbeagentur wurde vor zwei Jahren darüber abgestimmt, ob Vierbeiner mitkommen dürfen. Jede Person im Team konnte anonym ihr Veto einlegen, und erst als niemand widersprochen hatte, wurde die Idee umgesetzt. Das fand ich fair, denn so musste keiner befürchten, als Spielverderber dazustehen. Wenig halte ich dagegen davon, wenn die Geschäftsführung so etwas einfach von oben anordnet, ohne die Leute zu fragen, die täglich damit zurechtkommen müssen."
+          ]
+        },
+        {
+          "id": "moritz",
+          "label": "e",
+          "byline": "Moritz, Eulenhagen",
+          "paragraphs": [
+            "Seit unser Chef seine Hündin Frieda mitbringt, ist bei uns etwas passiert, womit niemand gerechnet hat: Leute aus dem Vertrieb und der Buchhaltung, die sich früher bloß im Aufzug zugenickt haben, bleiben jetzt am Empfang stehen und plaudern. Frieda ist so etwas wie ein Eisbrecher geworden. Dabei reden wir übrigens nicht nur über sie, sondern oft auch über laufende Projekte. Manche Frage klärt sich so schneller als per Mail."
+          ]
+        },
+        {
+          "id": "nele",
+          "label": "f",
+          "byline": "Nele, Ginstermoor",
+          "paragraphs": [
+            "Früher habe ich mittags am Schreibtisch ein Brot gegessen und weitergetippt. Seit meine Hündin Mila mit ins Büro darf, zwingt sie mich, um zwölf Uhr nach draußen zu gehen. Eine halbe Stunde im Park, und ich komme mit einem freien Kopf zurück. Meine Rückenschmerzen sind deutlich besser geworden, und am Nachmittag erledige ich mehr als früher. Ich hätte nie gedacht, dass ausgerechnet ein Hund meine Arbeitsweise so verändert."
+          ]
+        },
+        {
+          "id": "oskar",
+          "label": "g",
+          "byline": "Oskar, Schwanenfurt",
+          "paragraphs": [
+            "In einem Start-up mit Sofaecke mag ein Vierbeiner unter dem Tisch gut ankommen. Ich arbeite jedoch am Schalter einer Bankfiliale. Wer zu uns kommt, will über seine Ersparnisse oder einen Kredit sprechen und erwartet Seriosität. Ein Tier, das hinter dem Tresen schnüffelt, passt da einfach nicht ins Bild. Einige Besucher fänden das vielleicht niedlich, viele würden sich aber fragen, ob man ihre Anliegen hier ernst nimmt."
+          ]
+        },
+        {
+          "id": "paula",
+          "label": "h",
+          "byline": "Paula, Quittenrode",
+          "paragraphs": [
+            "In meiner Tierarztpraxis sehe ich immer wieder Hunde mit Unruhe, Hecheln oder Appetitlosigkeit. Oft stellt sich heraus, dass sie ihre Halter täglich in die Firma begleiten. Telefone klingeln, Fremde kommen und gehen, und stundenlang liegen die Tiere unter dem Schreibtisch, ohne sich bewegen zu können. Was für die Menschen bequem ist, bedeutet für die Hunde häufig Stress. Viele Halter bemerken das erst, wenn die Symptome nicht mehr zu übersehen sind."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Für empfindliche Beschäftigte kann die Anwesenheit eines Vierbeiners gesundheitliche Folgen haben.",
+          "answer": "b",
+          "evidence": [
+            { "text": "jolanda", "quote": "reagiere ich auf ihre Haare mit tränenden Augen und Atemnot" }
+          ],
+          "explanation": "Jolanda (b) köpek tüylerine karşı „reagiere ich auf ihre Haare mit tränenden Augen und Atemnot“ diyor. Yeni bir meslektaş Labrador'unu getirdiğinde bir saat sonra zor nefes almış ve eve gitmek zorunda kalmış."
+        },
+        {
+          "number": 22,
+          "type": "zuordnung",
+          "prompt": "Ein Tier am Arbeitsplatz kann den Austausch zwischen Abteilungen fördern.",
+          "answer": "e",
+          "evidence": [
+            { "text": "moritz", "quote": "bleiben jetzt am Empfang stehen und plaudern" },
+            { "text": "moritz", "quote": "Frieda ist so etwas wie ein Eisbrecher geworden" }
+          ],
+          "explanation": "Moritz (e) şefinin köpeği Frieda geldiğinden beri satış ve muhasebe bölümlerinden insanların, eskiden asansörde sadece selamlaşırken şimdi resepsiyonda durup sohbet ettiğini („bleiben jetzt am Empfang stehen und plaudern“) anlatıyor; „Frieda ist so etwas wie ein Eisbrecher geworden“. Nele (f) de köpeği sayesinde değişen bir iş gününü anlatıyor, ama o köpeğiyle parka gidiyor; bölümler arası konuşmadan söz etmiyor. Larissa (d) ekipte oylama yapıldığını yazıyor; köpeğin iletişime etkisinden bahsetmiyor."
+        },
+        {
+          "number": 23,
+          "type": "zuordnung",
+          "prompt": "Für die Vierbeiner selbst kann der Alltag in einem Betrieb belastend sein.",
+          "answer": "h",
+          "evidence": [
+            { "text": "paula", "quote": "Was für die Menschen bequem ist, bedeutet für die Hunde häufig Stress" }
+          ],
+          "explanation": "Paula (h) veteriner muayenehanesinde huzursuzluk, soluma ve iştahsızlık gösteren köpekler görüyor; çoğu sahiplerine her gün işyerine eşlik ediyor. Telefonlar, gelip giden yabancılar ve masa altında saatlerce yatmak: „Was für die Menschen bequem ist, bedeutet für die Hunde häufig Stress“. Ingo (a) köpeğinin masasının yanında „zufrieden“ yattığını söylüyor; yani tersini anlatıyor. Kai (c) de stresli bir ortamdan bahsediyor, ama rahatsız olan köpekler değil, havlamalardan etkilenen çalışanlar."
+        },
+        {
+          "number": 24,
+          "type": "zuordnung",
+          "prompt": "Bevor man so etwas zulässt, sollten alle Betroffenen ein Mitspracherecht haben.",
+          "answer": "d",
+          "evidence": [
+            { "text": "larissa", "quote": "Jede Person im Team konnte anonym ihr Veto einlegen" },
+            { "text": "larissa", "quote": "ohne die Leute zu fragen, die täglich damit zurechtkommen müssen" }
+          ],
+          "explanation": "Larissa (d) ajansında oylama yapıldığını anlatıyor: „Jede Person im Team konnte anonym ihr Veto einlegen“ ve kimse itiraz etmeyince fikir uygulanmış. Yönetimin kararı „ohne die Leute zu fragen, die täglich damit zurechtkommen müssen“ vermesine karşı. Jolanda (b) da karar verenlerin kendisi gibi insanları düşünmesini istiyor, ama oylama ya da herkesin söz hakkı talep etmiyor. Kai (c) havlamalardan şikâyet ediyor; karar sürecinden söz etmiyor."
+        },
+        {
+          "number": 25,
+          "type": "zuordnung",
+          "prompt": "Für Halter kann eine solche Regelung eine spürbare finanzielle Entlastung bedeuten.",
+          "answer": "a",
+          "evidence": [
+            { "text": "ingo", "quote": "musste ich jeden Monat rund 350 Euro für eine Gassigeherin ausgeben" },
+            { "text": "ingo", "quote": "Den Betrag lege ich inzwischen für den nächsten Urlaub zur Seite" }
+          ],
+          "explanation": "Ingo (a) işvereni izin vermeden önce „musste ich jeden Monat rund 350 Euro für eine Gassigeherin ausgeben“ diyor; bu onun için çok para. Şimdi köpeği yanında ve „Den Betrag lege ich inzwischen für den nächsten Urlaub zur Seite“. Nele (f) de köpeğini işe getirmenin faydasını anlatıyor, ama bu fayda sağlık ve verimlilikle ilgili, parayla değil. Oskar (g) bankada çalışıyor ve kredilerden söz ediyor, ama bunlar müşterilerin konuları; köpek sahiplerinin tasarrufu değil."
+        },
+        {
+          "number": 26,
+          "type": "zuordnung",
+          "prompt": "Wo Publikum empfangen wird, könnte ein Hund unprofessionell wirken.",
+          "answer": "g",
+          "evidence": [
+            { "text": "oskar", "quote": "erwartet Seriosität" },
+            { "text": "oskar", "quote": "ob man ihre Anliegen hier ernst nimmt" }
+          ],
+          "explanation": "Oskar (g) bir banka şubesinin gişesinde çalışıyor. Gelenler birikimleri ya da kredileri hakkında konuşmak istiyor ve „erwartet Seriosität“; tezgâhın arkasında etrafı koklayan bir hayvan bu tabloya uymuyor. Birçok ziyaretçi „ob man ihre Anliegen hier ernst nimmt“ diye sorabilir. Moritz (e) de girişte (Empfang) duran insanlardan söz ediyor, ama bunlar çalışanlar ve köpek orada olumlu bir etki yaratıyor. Jolanda (b) olumsuz bir deneyim anlatıyor, ama sebebi sağlık, işyerinin dışarıya verdiği görüntü değil."
+        },
+        {
+          "number": 27,
+          "type": "zuordnung",
+          "prompt": "Lärm durch die Tiere kann in offenen Räumen die Produktivität beeinträchtigen.",
+          "answer": "c",
+          "evidence": [
+            { "text": "kai", "quote": "Ich sitze mit zwanzig Leuten auf einer Etage ohne Trennwände" },
+            { "text": "kai", "quote": "kläffen beide los" }
+          ],
+          "explanation": "Kai (c) „Ich sitze mit zwanzig Leuten auf einer Etage ohne Trennwände“ diyor. Kurye zili çalınca iki terrier „kläffen beide los“; video konferanslarda özür dilemek zorunda kalıyor ve sonra işine dönmesi zaman alıyor, bu yüzden bütün ekibin verimi düşüyor. Paula (h) da çalan telefonlardan ve gelip giden yabancılardan bahsediyor, ama bunun köpeklere verdiği zararı anlatıyor, çalışanlara değil. Nele (f) verimliliğinin arttığını söylüyor; yani tersini anlatıyor."
+        }
+      ]
+    }
+  ]
+}

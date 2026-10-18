@@ -52,52 +52,73 @@
           "number": 0,
           "example": true,
           "type": "zuordnung",
-          "prompt": "… sieht den Grund für den Druck, ständig erreichbar zu sein, vor allem in der Arbeitswelt.",
+          "prompt": "… führt den Zwang, jederzeit erreichbar zu sein, vor allem auf den Beruf zurück.",
           "answer": "b",
           "evidence": [
-            { "text": "bernie", "quote": "Angst, eine wichtige Nachricht vom Chef oder von Kunden zu verpassen" },
-            { "text": "bernie", "quote": "Deshalb müssten die Unternehmen klare Zeiten festlegen" }
+            {
+              "text": "bernie",
+              "quote": "Angst, eine wichtige Nachricht vom Chef oder von Kunden zu verpassen"
+            },
+            {
+              "text": "bernie",
+              "quote": "Deshalb müssten die Unternehmen klare Zeiten festlegen"
+            }
           ],
           "explanation": "Bernie_K (b), insanların akşamları telefona sürekli bakmasının sebebini işe bağlıyor: „Angst, eine wichtige Nachricht vom Chef oder von Kunden zu verpassen“ ve bu yüzden „müssten die Unternehmen klare Zeiten festlegen“. Cornelia (c) iş için telefona ihtiyaç olduğunu söylüyor ama sürekli ulaşılabilir olma baskısının sebebi olarak işi göstermiyor. Annika (a) baskının kaynağından değil, kendi kurallarından söz ediyor."
         },
         {
           "number": 1,
           "type": "zuordnung",
-          "prompt": "… hält eine kurze Zeit völligen Verzichts für wenig hilfreich, weil man danach umso mehr nachholen muss.",
+          "prompt": "… hält eine kurze komplette Auszeit für wenig sinnvoll, weil sich währenddessen zu viel ansammelt.",
           "answer": "a",
           "evidence": [
-            { "text": "annika", "quote": "Der Stress, dem ich entkommen wollte, war also doppelt zurück" }
+            {
+              "text": "annika",
+              "quote": "Der Stress, dem ich entkommen wollte, war also doppelt zurück"
+            }
           ],
-          "explanation": "Annika (a) telefonsuz bir hafta sonundan sonra iki yüzden fazla mesajla gecenin yarısını geçirdiğini anlatıyor: „Der Stress, dem ich entkommen wollte, war also doppelt zurück.“ Cornelia (c) de bütün bir gün telefonsuz kalıyor, ama bunu olumlu değerlendiriyor ve sonradan bir şey telafi etmekten bahsetmiyor. Dariusz (d) telefona ara vermeyi zaten istemiyor, ama sebebi biriken mesajlar değil, telefonda okuyup öğrenmesi."
+          "explanation": "Annika (a) kısa ve tam bir „Auszeit“ (mola) olan telefonsuz bir hafta sonundan sonra iki yüzden fazla mesajla gecenin yarısını geçirdiğini anlatıyor: „Der Stress, dem ich entkommen wollte, war also doppelt zurück.“ Cornelia (c) de bütün bir gün telefonsuz kalıyor, ama bunu olumlu değerlendiriyor ve sonradan bir şey telafi etmekten bahsetmiyor. Dariusz (d) telefona ara vermeyi zaten istemiyor, ama sebebi biriken mesajlar değil, telefonda okuyup öğrenmesi."
         },
         {
           "number": 2,
           "type": "zuordnung",
-          "prompt": "… erzählt, dass sich die anfängliche Ablehnung im eigenen Umfeld gewandelt hat.",
+          "prompt": "… berichtet, dass sich anfänglicher Widerstand im eigenen Umfeld ins Gegenteil verkehrt hat.",
           "answer": "c",
           "evidence": [
-            { "text": "cornelia", "quote": "waren unsere beiden Töchter (14 und 16) empört" },
-            { "text": "cornelia", "quote": "Heute ist es oft die Jüngere, die am Sonntagmorgen mit der Kiste vor uns steht" }
+            {
+              "text": "cornelia",
+              "quote": "waren unsere beiden Töchter (14 und 16) empört"
+            },
+            {
+              "text": "cornelia",
+              "quote": "Heute ist es oft die Jüngere, die am Sonntagmorgen mit der Kiste vor uns steht"
+            }
           ],
           "explanation": "Cornelia'nın (c) kızları öneriye önce kızmış („waren unsere beiden Töchter (14 und 16) empört“), bugün ise küçük kız pazar sabahı kutuyu kendisi getiriyor. Yani çevresindeki ilk itiraz değişmiş. Bernie_K (b) çevresinden söz ediyor ama orada fikir değişikliği yok, insanlar hâlâ mesaj kaçırmaktan korkuyor. Annika (a) yalnızca kendi deneyimini anlatıyor, başkalarının tepkisinden bahsetmiyor."
         },
         {
           "number": 3,
           "type": "zuordnung",
-          "prompt": "… bewertet nicht alle Funktionen des Smartphones gleich.",
+          "prompt": "… bewertet nicht jede Anwendung auf dem Telefon gleich.",
           "answer": "d",
           "evidence": [
-            { "text": "dariusz", "quote": "mache ich einen Unterschied zwischen Apps, die mich weiterbringen, und solchen, die mir nur die Zeit stehlen" }
+            {
+              "text": "dariusz",
+              "quote": "mache ich einen Unterschied zwischen Apps, die mich weiterbringen, und solchen, die mir nur die Zeit stehlen"
+            }
           ],
           "explanation": "Dariusz (d) uygulamaları ikiye ayırıyor: „mache ich einen Unterschied zwischen Apps, die mich weiterbringen, und solchen, die mir nur die Zeit stehlen“. Bu yüzden e-kitap ve dil öğrenmeyi sürdürüp Instagram'ı silmiş. Annika (a) ve Cornelia (c) telefonu belli saatlerde ya da günlerde bütünüyle bırakıyor; uygulamalar arasında bir ayrım yapmıyorlar."
         },
         {
           "number": 4,
           "type": "zuordnung",
-          "prompt": "… bezweifelt, dass gute Vorsätze allein genügen.",
+          "prompt": "… bezweifelt, dass bloße Vorsätze ausreichen.",
           "answer": "b",
           "evidence": [
-            { "text": "bernie", "quote": "hält das kaum jemand lange durch" }
+            {
+              "text": "bernie",
+              "quote": "hält das kaum jemand lange durch"
+            }
           ],
           "explanation": "Bernie_K (b) akşamları telefonu kapatmaya karar vermenin mümkün olduğunu kabul ediyor, ama ertesi sabah neden cevap verilmediği sorulduğu sürece „hält das kaum jemand lange durch“ diyor. Annika (a) bunun tersini yaşıyor: kendi koyduğu küçük kurallara her gün uyuyor ve bunlar ona yarıyor. Cornelia (c) hafta içi telefonsuz kalamamalarını iyi niyetin yetmemesine değil, okul, iş ve buluşmalar için telefona ihtiyaç duyulmasına bağlıyor."
         },
@@ -107,17 +128,23 @@
           "prompt": "… beurteilt ein bezahltes Angebot im Nachhinein kritisch.",
           "answer": "a",
           "evidence": [
-            { "text": "annika", "quote": "kommt mir heute ziemlich lächerlich vor" }
+            {
+              "text": "annika",
+              "quote": "kommt mir heute ziemlich lächerlich vor"
+            }
           ],
           "explanation": "Annika (a) Digital-Detox hafta sonu için çok para ödediğini ve bunun bugün ona „ziemlich lächerlich“ geldiğini yazıyor: „kommt mir heute ziemlich lächerlich vor“. Dariusz (d) de bir şeyi geride bırakmış (Instagram'ı silmiş), ama bunun için para ödediğinden söz etmiyor. Cornelia (c) evdeki kutu kuralını anlatıyor; ücretli bir hizmet yok."
         },
         {
           "number": 6,
           "type": "zuordnung",
-          "prompt": "… hält Warnungen vor einer weit verbreiteten Abhängigkeit für überzogen.",
+          "prompt": "… hält Warnungen vor einer verbreiteten Abhängigkeit für überzogen.",
           "answer": "d",
           "evidence": [
-            { "text": "dariusz", "quote": "halte ich das für maßlos übertrieben" }
+            {
+              "text": "dariusz",
+              "quote": "halte ich das für maßlos übertrieben"
+            }
           ],
           "explanation": "Dariusz (d) gazetelerde bütün bir neslin telefon bağımlısı olduğunu okuyunca „halte ich das für maßlos übertrieben“ diyor; tanıdıklarının çoğu telefonu makul kullanıyor. Bernie_K (b) akşamları telefona bakmanın sebebini iş baskısına bağlıyor; bağımlılık uyarıları hakkında bir değerlendirme yapmıyor. Cornelia (c) hafta içi herkesin telefona ihtiyaç duyduğunu yazıyor, ama bağımlılık uyarıları hakkında bir şey söylemiyor."
         },
@@ -127,30 +154,42 @@
           "prompt": "… stellt fest, dass eine gemeinsame Pause das Miteinander verbessert hat.",
           "answer": "c",
           "evidence": [
-            { "text": "cornelia", "quote": "die Mädchen erzählen plötzlich Dinge aus der Schule" },
-            { "text": "cornelia", "quote": "dieser eine Tag hat unser Familienleben verändert" }
+            {
+              "text": "cornelia",
+              "quote": "die Mädchen erzählen plötzlich Dinge aus der Schule"
+            },
+            {
+              "text": "cornelia",
+              "quote": "dieser eine Tag hat unser Familienleben verändert"
+            }
           ],
           "explanation": "Cornelia'nın (c) ailesinde telefonsuz pazar günü daha uzun kahvaltı, kart oyunu ve geziler getirmiş; kızlar okuldan bahsetmeye başlamış: „die Mädchen erzählen plötzlich Dinge aus der Schule“. Sonunda da „dieser eine Tag hat unser Familienleben verändert“ diyor. Annika'nın (a) telefonsuz hafta sonu ve günlük kuralları yalnızca kendisiyle ilgili. Bernie_K (b) ekibinden söz ediyor ama ortak bir moladan bahsetmiyor."
         },
         {
           "number": 8,
           "type": "zuordnung",
-          "prompt": "… räumt ein, den eigenen Ansprüchen selbst nicht immer gerecht zu werden.",
+          "prompt": "… räumt ein, den eigenen Ansprüchen nicht immer gerecht zu werden.",
           "answer": "b",
           "evidence": [
-            { "text": "bernie", "quote": "dass ich selbst kein gutes Vorbild bin" }
+            {
+              "text": "bernie",
+              "quote": "dass ich selbst kein gutes Vorbild bin"
+            }
           ],
           "explanation": "Bernie_K (b) şirketlerden iş mesajları için net saatler istiyor, ama kendisi gece geç saatte bile ekibine mesaj gönderiyor ve bunu kabul ediyor: „dass ich selbst kein gutes Vorbild bin“. Cornelia (c) kuralın kendisi ve eşi için de geçerli olduğunu yazıyor, yani kendi kuralına uyuyor; hafta içi telefonsuz kalmamalarını da bir eksiklik olarak değil, „auch in Ordnung so“ diye değerlendiriyor. Annika (a) da kendi kurallarına her gün uyduğunu söylüyor."
         },
         {
           "number": 9,
           "type": "zuordnung",
-          "prompt": "… verzichtet jeden Tag zu bestimmten Zeiten auf das Smartphone.",
+          "prompt": "… hält sich jeden Tag an feste persönliche Abmachungen, wann das Gerät nicht angerührt wird.",
           "answer": "a",
           "evidence": [
-            { "text": "annika", "quote": "Nachts bleibt das Smartphone in der Küche" }
+            {
+              "text": "annika",
+              "quote": "Nachts bleibt das Smartphone in der Küche"
+            }
           ],
-          "explanation": "Annika (a) her gün uyduğu kuralları anlatıyor: „Nachts bleibt das Smartphone in der Küche“ ve kalktıktan sonraki ilk saat telefona bakmıyor. Cornelia'nın (c) telefonsuz zamanı yalnızca pazar günü; hafta içi bunun mümkün olmadığını („nicht machbar“) yazıyor. Bernie_K (b) iş mesajlarına cevap verilmeyen saatleri şirketlerin belirlemesini istiyor; kendisi için telefonsuz saatler koyduğunu yazmıyor."
+          "explanation": "Annika (a) her gün uyduğu kuralları anlatıyor: „Nachts bleibt das Smartphone in der Küche“ ve kalktıktan sonraki ilk saat telefona bakmıyor; yani telefonun ne zaman kullanılmayacağına dair her gün uyduğu kişisel kuralları var. Cornelia'nın (c) telefonsuz zamanı yalnızca pazar günü; hafta içi bunun mümkün olmadığını („nicht machbar“) yazıyor. Bernie_K (b) iş mesajlarına cevap verilmeyen saatleri şirketlerin belirlemesini istiyor; kendisi için telefonsuz saatler koyduğunu yazmıyor."
         }
       ]
     }

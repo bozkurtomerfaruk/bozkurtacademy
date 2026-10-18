@@ -84,72 +84,99 @@
           "number": 0,
           "example": true,
           "type": "zuordnung",
-          "prompt": "Außerhalb der Städte wären häufigere Verbindungen wichtiger als ein kostenloses Angebot.",
+          "prompt": "Abseits der Ballungsräume würde ein dichterer Takt mehr bringen als Gratistickets.",
           "answer": "d",
           "evidence": [
-            { "text": "ulrich", "quote": "Ob die Fahrt dann etwas kostet oder nicht, ist mir ehrlich gesagt egal" },
-            { "text": "ulrich", "quote": "Solange die Verbindungen so selten sind" }
+            {
+              "text": "ulrich",
+              "quote": "Ob die Fahrt dann etwas kostet oder nicht, ist mir ehrlich gesagt egal"
+            },
+            {
+              "text": "ulrich",
+              "quote": "Solange die Verbindungen so selten sind"
+            }
           ],
           "explanation": "Ulrich (d) şehir dışındaki köyünde otobüsün günde yalnızca iki kez geçtiğini yazıyor. „Ob die Fahrt dann etwas kostet oder nicht, ist mir ehrlich gesagt egal“ diyor ve seferler bu kadar seyrek olduğu sürece („Solange die Verbindungen so selten sind“) kırsalda hiçbir şeyin değişmeyeceğini söylüyor."
         },
         {
           "number": 22,
           "type": "zuordnung",
-          "prompt": "Das Angebot würde eher Menschen anlocken, die schon bisher ohne Auto unterwegs sind.",
+          "prompt": "Ein kostenloses Angebot würde in erster Linie Personen gewinnen, die sich schon jetzt ohne eigenen Wagen fortbewegen.",
           "answer": "b",
           "evidence": [
-            { "text": "sebastian", "quote": "die heute zu Fuß gehen oder mit dem Fahrrad fahren" }
+            {
+              "text": "sebastian",
+              "quote": "die heute zu Fuß gehen oder mit dem Fahrrad fahren"
+            }
           ],
           "explanation": "Sebastian (b) ücretsiz otobüse daha çok „die heute zu Fuß gehen oder mit dem Fahrrad fahren“ kişilerin bineceğini, araba sevenlerin ise birkaç euro için vazgeçmeyeceğini yazıyor. Wilhelm (f) de kaç sürücünün gerçekten otobüse geçeceğini soruyor, ama cevabı bilmiyor ve önce ölçmek istiyor. Ronja (a) kendisi araba kullanıyor ve otobüs dakik olursa hemen geçeceğini söylüyor; yani sürücülerin geçmeyeceğini iddia etmiyor."
         },
         {
           "number": 23,
           "type": "zuordnung",
-          "prompt": "Für Haushalte mit geringem Einkommen würde ein Nulltarif mehr Möglichkeiten in der Freizeit bedeuten.",
+          "prompt": "Haushalte mit knappem Budget hätten bei einem Nulltarif mehr Spielraum für Ausflüge.",
           "answer": "g",
           "evidence": [
-            { "text": "yasemin", "quote": "dass wir wieder mehr unternehmen könnten, ohne jeden Euro umzudrehen" }
+            {
+              "text": "yasemin",
+              "quote": "dass wir wieder mehr unternehmen könnten, ohne jeden Euro umzudrehen"
+            }
           ],
           "explanation": "Yasemin (g) yarı zamanlı çalışıyor, eşi de az kazanıyor; üç kişilik aile bilete ayda neredeyse doksan euro veriyor ve hafta sonu yüzme havuzuna gitmeyi iki kez düşünüyorlar. Ücretsiz otobüs onun için „dass wir wieder mehr unternehmen könnten, ohne jeden Euro umzudrehen“ anlamına geliyor. Vanessa (e) da az kazananlardan söz ediyor, ama onlar için şehrinde zaten sosyal bilet olduğunu ve herkese ücretsiz ulaşımın yanlış olduğunu yazıyor. Zacharias (h) parayı kimin ödeyeceğini tartışıyor, gelir durumundan söz etmiyor."
         },
         {
           "number": 24,
           "type": "zuordnung",
-          "prompt": "Manche würden den Bus häufiger nutzen, wenn er zuverlässiger wäre.",
+          "prompt": "Manche würden öfter auf öffentliche Verkehrsmittel setzen, wenn diese pünktlich wären.",
           "answer": "a",
           "evidence": [
-            { "text": "ronja", "quote": "sobald ich mich auf den Fahrplan verlassen könnte" }
+            {
+              "text": "ronja",
+              "quote": "sobald ich mich auf den Fahrplan verlassen könnte"
+            }
           ],
           "explanation": "Ronja (a) için sorun fiyat değil (aylık bileti işvereni öderdi), otobüsün sık sık yirmi dakika gecikmesi. „Ich würde sofort umsteigen – sobald ich mich auf den Fahrplan verlassen könnte“ diyor. Theresa (c) da gecikmelerden söz ediyor, ama gecikmelerin sebebini anlatıyor; insanların otobüse daha çok bineceğini söylemiyor. Ulrich (d) örnekte kullanıldı; o da dakiklikten değil, seferlerin azlığından şikâyet ediyor."
         },
         {
           "number": 25,
           "type": "zuordnung",
-          "prompt": "Die Kosten sollten diejenigen tragen, die mit dem Auto in die Stadt fahren.",
+          "prompt": "Wer mit dem eigenen Wagen ins Zentrum kommt, sollte für die Gratisbeförderung aufkommen.",
           "answer": "h",
           "evidence": [
-            { "text": "zacharias", "quote": "über deutlich höhere Parkgebühren in der Innenstadt" }
+            {
+              "text": "zacharias",
+              "quote": "über deutlich höhere Parkgebühren in der Innenstadt"
+            }
           ],
           "explanation": "Zacharias (h) sokakları tıkayan ve havayı kirletenlerin ödemesini daha adil buluyor, örneğin „über deutlich höhere Parkgebühren in der Innenstadt“; bu gelirle otobüs ve trenler finanse edilebilir. Vanessa (e) de parayı tartışıyor, ama ona göre para okul ve havuz gibi başka yerlerde eksik kalır; sürücülerin ödemesini önermiyor. Wilhelm (f) maliyeti ölçmek istiyor, ama kimin ödemesi gerektiğini söylemiyor."
         },
         {
           "number": 26,
           "type": "zuordnung",
-          "prompt": "Mit einem Nulltarif würde der Busverkehr pünktlicher.",
+          "prompt": "Ein Nulltarif würde Verzögerungen im Nahverkehr verringern.",
           "answer": "c",
           "evidence": [
-            { "text": "theresa", "quote": "Ein großer Teil der Verspätungen entsteht an den Haltestellen" },
-            { "text": "theresa", "quote": "und wir wären viel schneller wieder unterwegs" }
+            {
+              "text": "theresa",
+              "quote": "Ein großer Teil der Verspätungen entsteht an den Haltestellen"
+            },
+            {
+              "text": "theresa",
+              "quote": "und wir wären viel schneller wieder unterwegs"
+            }
           ],
-          "explanation": "Otobüs şoförü Theresa (c) gecikmelerin büyük kısmının durakta bilet satmaktan kaynaklandığını yazıyor: „Ein großer Teil der Verspätungen entsteht an den Haltestellen“. Bilet olmazsa yolcular bütün kapılardan binebilir „und wir wären viel schneller wieder unterwegs“; yani ücretsiz ulaşımla gecikmeler azalır, otobüsler daha dakik olur. Ronja (a) da otobüslerin geç kalmasından şikâyet ediyor ve dakiklik istiyor, ama bunu biletlerle ilişkilendirmiyor; tersine fiyatın onun için sorun olmadığını söylüyor („Am Preis liegt das nicht“). Sebastian (b) ücretsiz ulaşımın etkisini yolcuların kimler olacağı açısından değerlendiriyor, otobüslerin dakikliğinden söz etmiyor."
+          "explanation": "Otobüs şoförü Theresa (c) gecikmelerin büyük kısmının durakta bilet satmaktan kaynaklandığını yazıyor: „Ein großer Teil der Verspätungen entsteht an den Haltestellen“. Bilet olmazsa yolcular bütün kapılardan binebilir „und wir wären viel schneller wieder unterwegs“; yani ücretsiz ulaşımla gecikmeler („Verzögerungen“) azalır. Ronja (a) da otobüslerin geç kalmasından şikâyet ediyor ama gecikmelerin azalmasını biletlerle ilişkilendirmiyor; tersine fiyatın onun için sorun olmadığını söylüyor („Am Preis liegt das nicht“). Sebastian (b) ücretsiz ulaşımın etkisini yolcuların kimler olacağı açısından değerlendiriyor, otobüslerin dakikliğinden söz etmiyor."
         },
         {
           "number": 27,
           "type": "zuordnung",
-          "prompt": "Bevor man sich festlegt, sollte man das Modell eine Zeit lang erproben.",
+          "prompt": "Bevor man sich festlegt, sollte man das Konzept befristet testen.",
           "answer": "f",
           "evidence": [
-            { "text": "wilhelm", "quote": "den Nulltarif zunächst für ein Jahr in unserer Stadt auszuprobieren" }
+            {
+              "text": "wilhelm",
+              "quote": "den Nulltarif zunächst für ein Jahr in unserer Stadt auszuprobieren"
+            }
           ],
           "explanation": "Wilhelm (f) iki tarafın da çoğunlukla tahminlere dayandığını düşünüyor ve „den Nulltarif zunächst für ein Jahr in unserer Stadt auszuprobieren“ öneriyor; karar ancak sonra verilmeli. Vanessa (e) şehrindeki sosyal bileti yıllardır işleyen bir örnek olarak anlatıyor, ama ücretsiz ulaşımı denemeyi önermiyor, doğrudan reddediyor. Zacharias (h) bir deneme değil, bir koşul öne sürüyor: park ücretleriyle finanse edilirse destekler."
         }

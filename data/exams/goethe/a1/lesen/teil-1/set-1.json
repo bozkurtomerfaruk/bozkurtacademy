@@ -58,7 +58,7 @@
           "title": "Notiz",
           "paragraphs": [
             "Liebe Frau Haverkamp,",
-            "ich bin ab morgen zwei Wochen im Urlaub in den Bergen. Können Sie bitte meinen Blumen Wasser geben? Zweimal in der Woche ist genug. Den Schlüssel bekommen Sie heute Abend von meinem Sohn Jaro. Bitte holen Sie auch meine Post.",
+            "ich bin ab morgen zwei Wochen im Urlaub in den Bergen. Können Sie bitte meinen Blumen Wasser geben? Zweimal in der Woche ist genug. Den Schlüssel bekommen Sie heute Abend von meinem Sohn Jaro. Bitte nehmen Sie auch meine Briefe aus dem Briefkasten.",
             "Vielen Dank! Kofi Amankwah"
           ]
         }
@@ -83,10 +83,10 @@
         {
           "number": 5,
           "type": "richtig-falsch",
-          "prompt": "Frau Haverkamp soll auch die Briefe von Herrn Amankwah nehmen.",
+          "prompt": "Frau Haverkamp soll auch die Post von Herrn Amankwah aus dem Briefkasten holen.",
           "answer": "richtig",
-          "evidence": [{ "text": "notiz", "quote": "Bitte holen Sie auch meine Post." }],
-          "explanation": "Herr Amankwah rica ediyor: „Bitte holen Sie auch meine Post“ (Lütfen postamı da alın). „Post“ = mektuplar („Briefe“). „Bitte“ bir rica, bu yüzden ifadede „soll“ (-meli, isteniyor) var. İfade doğru."
+          "evidence": [{ "text": "notiz", "quote": "Bitte nehmen Sie auch meine Briefe aus dem Briefkasten." }],
+          "explanation": "Herr Amankwah rica ediyor: „Bitte nehmen Sie auch meine Briefe aus dem Briefkasten“ (Lütfen mektuplarımı da posta kutusundan alın). „Briefe“ (mektuplar) = „Post“ (posta); „nehmen“ (almak) = „holen“ (alıp getirmek). „Bitte“ bir rica, bu yüzden ifadede „soll“ (-meli, isteniyor) var. İfade doğru."
         }
       ]
     }

@@ -18,7 +18,7 @@
           "byline": "Aushang im Bürgerbüro Hagenwald",
           "paragraphs": [
             "Ab dem 1. November ändern sich unsere Öffnungszeiten. Sie können uns dann montags, dienstags und freitags von 8 bis 13 Uhr besuchen, donnerstags von 13 bis 19 Uhr. Mittwochs bleibt das Bürgerbüro geschlossen.",
-            "Für einen neuen Personalausweis oder Reisepass brauchen Sie in Zukunft immer einen Termin. Diesen vereinbaren Sie auf unserer Internetseite www.hagenwald.de/termin oder telefonisch unter 0431 7782-0. Ohne Termin erledigen wir nur kurze Anliegen, zum Beispiel eine Meldebescheinigung.",
+            "Ab November brauchen Sie für einen neuen Personalausweis oder Reisepass immer einen Termin. Diesen vereinbaren Sie auf unserer Internetseite www.hagenwald.de/termin oder telefonisch unter 0431 7782-0. Ohne Termin erledigen wir nur kurze Anliegen, zum Beispiel eine Meldebescheinigung.",
             "Bitte bringen Sie zu Ihrem Termin ein aktuelles biometrisches Passfoto mit."
           ]
         }
@@ -29,8 +29,8 @@
           "type": "richtig-falsch",
           "prompt": "Wer ab November einen neuen Reisepass beantragen möchte, muss sich vorher einen Termin geben lassen.",
           "answer": "richtig",
-          "evidence": [{ "text": "buergerbuero", "quote": "Für einen neuen Personalausweis oder Reisepass brauchen Sie in Zukunft immer einen Termin." }],
-          "explanation": "Duyuruda yeni kimlik kartı veya pasaport için artık her zaman randevu gerektiği yazıyor: „Für einen neuen Personalausweis oder Reisepass brauchen Sie in Zukunft immer einen Termin.“ Yani pasaport için önceden randevu almak gerekiyor; ifade doğru. Randevusuz yalnızca kısa işler yapılıyor, örneğin „Meldebescheinigung“."
+          "evidence": [{ "text": "buergerbuero", "quote": "Ab November brauchen Sie für einen neuen Personalausweis oder Reisepass immer einen Termin." }],
+          "explanation": "Duyuruda kasımdan itibaren yeni kimlik kartı veya pasaport için her zaman randevu gerektiği yazıyor: „Ab November brauchen Sie für einen neuen Personalausweis oder Reisepass immer einen Termin.“ Yani pasaport için önceden randevu almak gerekiyor; ifade doğru. Randevusuz yalnızca kısa işler yapılıyor, örneğin „Meldebescheinigung“."
         },
         {
           "number": 32,
@@ -52,11 +52,11 @@
       "texts": [
         {
           "id": "zeitung",
-          "title": "Kostenlose Mietberatung im Südviertel",
+          "title": "Kostenlose Hilfe bei Formularen im Südviertel",
           "byline": "Hagenwalder Anzeiger, Lokalteil",
           "paragraphs": [
-            "Sie haben Fragen zu Ihrer Nebenkostenabrechnung oder Ärger mit Ihrem Vermieter? Der Verein Gemeinsam im Südviertel e. V. bietet ab Oktober eine kostenlose Beratung für Mieterinnen und Mieter an. Sie findet einmal im Monat statt, immer am ersten Dienstag von 16 bis 18 Uhr im Stadtteilzentrum Südviertel, Bergstraße 12.",
-            "Eine Anmeldung ist nicht nötig, und man muss auch nicht Mitglied im Verein sein. Bringen Sie bitte Ihren Mietvertrag und wichtige Briefe mit. Auf Wunsch hilft eine Dolmetscherin für Türkisch und Arabisch. In diesem Fall müssen Sie sich eine Woche vorher im Stadtteilzentrum melden."
+            "Sie verstehen einen Brief vom Amt nicht oder brauchen Hilfe bei einem Antrag, zum Beispiel für Kindergeld oder Wohngeld? Der Verein Gemeinsam im Südviertel e. V. bietet ab Oktober eine kostenlose Formularhilfe an. Sie findet einmal im Monat statt, immer am ersten Dienstag von 16 bis 18 Uhr im Stadtteilzentrum Südviertel, Bergstraße 12.",
+            "Eine Anmeldung ist nicht nötig, und man muss auch nicht Mitglied im Verein sein. Bringen Sie bitte die Formulare und wichtige Briefe mit. Auf Wunsch hilft eine Dolmetscherin für Türkisch und Arabisch. In diesem Fall müssen Sie sich eine Woche vorher im Stadtteilzentrum melden."
           ]
         }
       ],
@@ -64,15 +64,15 @@
         {
           "number": 33,
           "type": "richtig-falsch",
-          "prompt": "Die Mietberatung gibt es jeden Dienstag.",
+          "prompt": "Die Formularhilfe gibt es jeden Dienstag.",
           "answer": "falsch",
           "evidence": [{ "text": "zeitung", "quote": "Sie findet einmal im Monat statt, immer am ersten Dienstag" }],
-          "explanation": "Danışmanlık her salı değil, ayda bir kez, ayın ilk salı günü yapılıyor: „Sie findet einmal im Monat statt, immer am ersten Dienstag“. Bu yüzden ifade yanlış."
+          "explanation": "Form yardımı her salı değil, ayda bir kez, ayın ilk salı günü yapılıyor: „Sie findet einmal im Monat statt, immer am ersten Dienstag“. Bu yüzden ifade yanlış."
         },
         {
           "number": 34,
           "type": "abc",
-          "prompt": "Wer bei der Beratung eine Dolmetscherin braucht, …",
+          "prompt": "Wer bei der Formularhilfe eine Dolmetscherin braucht, …",
           "options": {
             "a": "muss vorher Mitglied im Verein werden.",
             "b": "kann ohne Anmeldung am ersten Dienstag kommen.",
@@ -80,7 +80,7 @@
           },
           "answer": "c",
           "evidence": [{ "text": "zeitung", "quote": "In diesem Fall müssen Sie sich eine Woche vorher im Stadtteilzentrum melden." }],
-          "explanation": "Tercüman isteyenler bir hafta önce Stadtteilzentrum'a haber vermeli: „In diesem Fall müssen Sie sich eine Woche vorher im Stadtteilzentrum melden.“ Bir hafta = yedi gün. a) yanlış: Derneğe üye olmak gerekmiyor: „man muss auch nicht Mitglied im Verein sein“. b) yanlış: „Eine Anmeldung ist nicht nötig“ bilgisi normal danışmanlık için geçerli; tercüman isteyen kişi bir hafta önceden haber vermek zorunda („müssen“)."
+          "explanation": "Tercüman isteyenler bir hafta önce Stadtteilzentrum'a haber vermeli: „In diesem Fall müssen Sie sich eine Woche vorher im Stadtteilzentrum melden.“ Bir hafta = yedi gün. a) yanlış: Derneğe üye olmak gerekmiyor: „man muss auch nicht Mitglied im Verein sein“. b) yanlış: „Eine Anmeldung ist nicht nötig“ bilgisi tercümansız gelenler için geçerli; tercüman isteyen kişi bir hafta önceden haber vermek zorunda („müssen“)."
         }
       ]
     },
@@ -94,7 +94,7 @@
           "paragraphs": [
             "Liebe Patientinnen und Patienten,",
             "unsere Praxis ist vom 22. Dezember bis zum 2. Januar geschlossen. In dieser Zeit vertritt uns die Praxis Dr. Markus Seidl, Lindenstraße 4, Telefon 0431 66 19 02. Bitte rufen Sie dort an, bevor Sie hingehen.",
-            "Sie brauchen regelmäßig Medikamente? Dann bestellen Sie Ihre Rezepte bitte bis spätestens 18. Dezember bei uns, am besten per E-Mail oder auf dem Anrufbeantworter. Sie können die Rezepte zwei Tage nach der Bestellung an der Anmeldung abholen.",
+            "Sie brauchen regelmäßig Medikamente? Dann bestellen Sie Ihre Rezepte bitte bis spätestens 18. Dezember bei uns, am besten per E-Mail oder auf dem Anrufbeantworter. Bestellungen nach diesem Datum können wir vor dem Urlaub nicht mehr bearbeiten. Sie können die Rezepte zwei Tage nach der Bestellung an der Anmeldung abholen.",
             "Nachts und am Wochenende erreichen Sie den ärztlichen Bereitschaftsdienst unter 116 117.",
             "Ihr Praxisteam"
           ]
@@ -106,21 +106,21 @@
           "type": "richtig-falsch",
           "prompt": "Rezepte kann man bei Frau Dr. Krüger-Sahin noch am 20. Dezember bestellen.",
           "answer": "falsch",
-          "evidence": [{ "text": "praxis", "quote": "bestellen Sie Ihre Rezepte bitte bis spätestens 18. Dezember bei uns" }],
-          "explanation": "Reçeteler en geç 18 Aralık'a kadar sipariş edilmeli: „bestellen Sie Ihre Rezepte bitte bis spätestens 18. Dezember bei uns“. 20 Aralık bu tarihten sonra; bu yüzden ifade yanlış."
+          "evidence": [{ "text": "praxis", "quote": "bestellen Sie Ihre Rezepte bitte bis spätestens 18. Dezember bei uns" }, { "text": "praxis", "quote": "Bestellungen nach diesem Datum können wir vor dem Urlaub nicht mehr bearbeiten." }],
+          "explanation": "Reçeteler en geç 18 Aralık'a kadar sipariş edilmeli: „bestellen Sie Ihre Rezepte bitte bis spätestens 18. Dezember bei uns“. Bu tarihten sonraki siparişler tatilden önce işleme alınamıyor: „Bestellungen nach diesem Datum können wir vor dem Urlaub nicht mehr bearbeiten.“ 20 Aralık bu tarihten sonra; bu yüzden ifade yanlış."
         },
         {
           "number": 36,
           "type": "abc",
-          "prompt": "Was sollen die Patientinnen und Patienten während des Urlaubs tun?",
+          "prompt": "Worum bittet die Praxis die Patientinnen und Patienten?",
           "options": {
             "a": "Vor einem Besuch bei Dr. Seidl in seiner Praxis anrufen.",
-            "b": "Ihre Rezepte in der Praxis von Dr. Seidl bestellen.",
+            "b": "Ihre Rezepte bis zum 18. Dezember bei Dr. Seidl bestellen.",
             "c": "Nachts die Telefonnummer der Vertretungspraxis wählen."
           },
           "answer": "a",
           "evidence": [{ "text": "praxis", "quote": "Bitte rufen Sie dort an, bevor Sie hingehen." }],
-          "explanation": "Tatil sırasında Dr. Seidl'in muayenehanesi vekalet ediyor ve oraya gitmeden önce telefon etmek isteniyor: „Bitte rufen Sie dort an, bevor Sie hingehen.“ b) yanlış: Reçeteler Dr. Seidl'den değil, Dr. Krüger-Sahin'in muayenehanesinden („bei uns“) 18 Aralık'a kadar sipariş ediliyor. c) yanlış: Geceleri vekil muayenehane değil, nöbetçi doktor hizmeti aranıyor: „Nachts und am Wochenende erreichen Sie den ärztlichen Bereitschaftsdienst unter 116 117.“"
+          "explanation": "Tatil sırasında Dr. Seidl'in muayenehanesi vekalet ediyor ve oraya gitmeden önce telefon etmek isteniyor: „Bitte rufen Sie dort an, bevor Sie hingehen.“ b) yanlış: 18 Aralık tarihi doğru, ama reçeteler Dr. Seidl'den değil, Dr. Krüger-Sahin'in muayenehanesinden sipariş ediliyor: „bestellen Sie Ihre Rezepte bitte bis spätestens 18. Dezember bei uns“. c) yanlış: Geceleri vekil muayenehane değil, nöbetçi doktor hizmeti aranıyor: „Nachts und am Wochenende erreichen Sie den ärztlichen Bereitschaftsdienst unter 116 117.“"
         }
       ]
     }

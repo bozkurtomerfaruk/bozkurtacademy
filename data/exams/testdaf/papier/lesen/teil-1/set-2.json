@@ -1,0 +1,248 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "papier",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Beratung an der Hochschule",
+  "minutes": 10,
+  "context": "Sie studieren an der Universität Lindenau. Bekannte und Kommilitonen fragen Sie, an welche Beratungsstelle der Hochschule sie sich mit ihren Anliegen wenden können. Auf der Website der Universität finden Sie die folgenden Angebote.",
+  "instructions": "Lesen Sie die Angebote A bis H und die Aufgaben 1 bis 10. Welches Angebot passt zu welcher Person? Jedes Angebot kann nur einmal gewählt werden. Gibt es für eine Person kein passendes Angebot, wählen Sie I. Das Angebot aus Beispiel 01 kann nicht mehr gewählt werden.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": "I",
+      "texts": [
+        {
+          "id": "a",
+          "label": "A",
+          "title": "Schreibzentrum: Gemeinsam zum guten Text",
+          "paragraphs": [
+            "Ob Themenfindung, Gliederung oder Umgang mit Quellen: Im Schreibzentrum der Universität Lindenau beraten geschulte studentische Schreibtutorinnen und -tutoren in 45-minütigen Einzelgesprächen zu allen Phasen einer Haus- oder Abschlussarbeit. Wer möchte, bringt einen Entwurf mit, an dem gemeinsam gearbeitet wird. Ein Lektorat oder Korrekturlesen bieten wir allerdings nicht an – Rechtschreibung und Zeichensetzung liegen in Ihrer Verantwortung. Termine buchen Sie online; zusätzlich gibt es jeden Mittwoch eine Schreibnacht in der Bibliothek."
+          ]
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "title": "Career Service: Den Berufseinstieg planen",
+          "paragraphs": [
+            "Lebenslauf-Check, Probe-Vorstellungsgespräche mit Videofeedback, Informationen zu Praktika im In- und Ausland: Der Career Service unterstützt Studierende aller Fakultäten dabei, den Übergang in den Beruf frühzeitig vorzubereiten. Unser Angebot steht auch Absolventinnen und Absolventen bis zu zwei Jahre nach dem Abschluss offen. Regelmäßig laden wir zudem Arbeitgeber aus der Region zu Firmenabenden auf den Campus ein. Termine vereinbaren Sie per E-Mail, kurze Fragen klären wir in der offenen Sprechstunde am Montagvormittag."
+          ]
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "title": "Psychologische Beratungsstelle",
+          "paragraphs": [
+            "Prüfungsangst, Antriebslosigkeit, Konflikte oder eine persönliche Krise: Die Psychologinnen und Psychologen der Beratungsstelle des Studierendenwerks hören zu und suchen gemeinsam mit Ihnen nach Wegen aus der Belastung. Die Gespräche sind kostenlos und vertraulich. Neben Einzelterminen bieten wir in jedem Semester Gruppen an, etwa „Gelassen in die Prüfung“, in denen sich Studierende mit ähnlichen Erfahrungen austauschen. Ist eine längerfristige Therapie nötig, helfen wir bei der Suche nach einem Therapieplatz."
+          ]
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "title": "Studienfinanzierung: Beratung des Studierendenwerks",
+          "paragraphs": [
+            "Haben Sie Anspruch auf BAföG? Welche Stipendien passen zu Ihrem Profil, und wann ist ein Studienkredit sinnvoll? Unser Team berät Sie unabhängig und hilft beim Ausfüllen der Anträge. Geraten Sie unverschuldet in eine finanzielle Notlage, können Sie ab dem zweiten Fachsemester bei unserer Darlehenskasse ein zinsloses Überbrückungsdarlehen von bis zu 1.000 Euro beantragen, das innerhalb von zwei Tagen ausgezahlt wird. Bitte bringen Sie dafür Kontoauszüge der letzten drei Monate mit."
+          ]
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "title": "Studieren mit Behinderung oder chronischer Erkrankung",
+          "paragraphs": [
+            "Die Beauftragte für Studierende mit Behinderung berät zu allen Fragen eines chancengleichen Studiums – etwa zu barrierefreien Lehrmaterialien, zur Studienassistenz oder zum Nachteilsausgleich. Ein solcher Ausgleich kann zum Beispiel eine verlängerte Bearbeitungszeit, zusätzliche Pausen oder einen separaten Prüfungsraum umfassen. Wir unterstützen Sie dabei, Ihren Antrag beim Prüfungsausschuss zu begründen. Die Beratung ist vertraulich; Gespräche sind auch in Gebärdensprache möglich."
+          ]
+        },
+        {
+          "id": "f",
+          "label": "F",
+          "title": "Sprachenzentrum: Sprachen lernen auf dem Campus",
+          "paragraphs": [
+            "Das Sprachenzentrum bietet Studierenden und Beschäftigten Kurse in vierzehn Sprachen an, darunter Deutsch als Fremdsprache auf allen Niveaus. Die Kurse finden ausschließlich in der Vorlesungszeit statt; in den Semesterferien ist auch das Selbstlernzentrum geschlossen. Wer lieber im Gespräch lernt, kann sich über unsere Tandembörse mit Muttersprachlerinnen und Muttersprachlern verabreden: Man unterrichtet sich gegenseitig, jeweils zur Hälfte in beiden Sprachen. Die Vermittlung ist kostenlos, Kurse kosten 40 Euro pro Semester."
+          ]
+        },
+        {
+          "id": "g",
+          "label": "G",
+          "title": "International Office: Ein Semester im Ausland",
+          "paragraphs": [
+            "Sie möchten während des Studiums Erfahrungen an einer anderen Hochschule sammeln? Das International Office informiert über das Programm Erasmus+ und unsere mehr als 120 europäischen Partnerhochschulen, hilft bei der Bewerbung und erklärt, wie Sie mit einem Learning Agreement schon vorab sicherstellen, dass Ihre Studienleistungen später anerkannt werden. Für Aufenthalte außerhalb Europas sind wir nicht zuständig; hier beraten die einzelnen Fakultäten. Informationsveranstaltungen finden jeweils im November statt."
+          ]
+        },
+        {
+          "id": "h",
+          "label": "H",
+          "title": "Zentrale Studienberatung",
+          "paragraphs": [
+            "Passt mein Fach noch zu mir? Soll ich wechseln oder das Studium ganz aufgeben? Die Zentrale Studienberatung begleitet Sie bei Zweifeln am Studium, bei der Wahl eines Masterstudiengangs und bei der Planung, wenn sich Ihr Studium durch Krankheit oder Familienaufgaben verlängert. Die Gespräche sind ergebnisoffen: Wir nehmen Ihnen keine Entscheidung ab, zeigen aber Alternativen auf. Neben persönlichen Terminen bieten wir Beratung per Telefon oder Videochat an."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": "01",
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "eine Kommilitonin, die gerade ihre erste Hausarbeit schreibt und nicht weiß, wie sie den Text aufbauen soll",
+          "answer": "A",
+          "evidence": [
+            {
+              "text": "a",
+              "quote": "Ob Themenfindung, Gliederung oder Umgang mit Quellen"
+            }
+          ],
+          "explanation": "A ilanında yazma merkezi ödev ve bitirme tezlerinin bütün aşamalarında birebir danışmanlık verir; konular arasında „Gliederung“ (metnin bölümlendirilmesi, yapısı) da sayılır. İlk ödevinin yapısını bilmeyen öğrenciye bu uyar. A örnekte kullanıldığı için başka bir kişiye seçilemez."
+        },
+        {
+          "number": "02",
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "ein Student im ersten Semester, dessen Ersparnisse schon aufgebraucht sind und der kurzfristig ein zinsloses Darlehen aufnehmen möchte",
+          "answer": "I",
+          "evidence": [
+            {
+              "text": "d",
+              "quote": "ab dem zweiten Fachsemester"
+            }
+          ],
+          "explanation": "D ilanında faizsiz bir köprü kredisi („zinsloses Überbrückungsdarlehen“) vardır, bu yüzden cazip görünür. Ama bu kredi yalnızca „ab dem zweiten Fachsemester“ (ikinci dönemden itibaren) alınabilir. Kişi birinci dönemde olduğu için D uymaz; cevap I."
+        },
+        {
+          "number": 1,
+          "type": "zuordnung",
+          "prompt": "eine Masterstudentin, die ihre fertige Abschlussarbeit vor der Abgabe von jemandem auf Tippfehler und Kommasetzung durchsehen lassen möchte",
+          "answer": "I",
+          "evidence": [
+            {
+              "text": "a",
+              "quote": "Ein Lektorat oder Korrekturlesen bieten wir allerdings nicht an"
+            }
+          ],
+          "explanation": "A ilanı bitirme tezleriyle ilgilendiği için cazip görünür. Ancak açıkça „Ein Lektorat oder Korrekturlesen bieten wir allerdings nicht an“ (redaksiyon veya düzeltme okuması sunmuyoruz) denir; yazım ve noktalama öğrencinin sorumluluğundadır. F de dil desteği verir ama metin düzeltmez. Uygun ilan yoktur, cevap I."
+        },
+        {
+          "number": 2,
+          "type": "zuordnung",
+          "prompt": "ein Student, der vor Klausuren so aufgeregt ist, dass er kaum noch schlafen kann, und gern mit anderen sprechen würde, denen es ähnlich geht",
+          "answer": "C",
+          "evidence": [
+            {
+              "text": "c",
+              "quote": "in denen sich Studierende mit ähnlichen Erfahrungen austauschen"
+            }
+          ],
+          "explanation": "C ilanı sınav kaygısı („Prüfungsangst“) konusunda psikolojik danışmanlık verir. Bireysel görüşmelerin yanında „Gelassen in die Prüfung“ gibi gruplar vardır; bu gruplarda „sich Studierende mit ähnlichen Erfahrungen austauschen“ (benzer deneyimleri olan öğrenciler fikir alışverişi yapar). Öğrencinin benzer durumdakilerle konuşma isteği buna uyar. E de sınavla ilgilidir ama engellilik veya kronik hastalık için sınav düzenlemesi sağlar."
+        },
+        {
+          "number": 3,
+          "type": "zuordnung",
+          "prompt": "eine Austauschstudentin aus Japan, die ihr Deutsch in Unterhaltungen verbessern und dafür im Gegenzug Japanisch weitergeben möchte",
+          "answer": "F",
+          "evidence": [
+            {
+              "text": "f",
+              "quote": "Man unterrichtet sich gegenseitig, jeweils zur Hälfte in beiden Sprachen."
+            }
+          ],
+          "explanation": "F ilanındaki tandem borsası, sohbet ederek öğrenmek isteyenleri anadili konuşanlarla buluşturur: „Man unterrichtet sich gegenseitig, jeweils zur Hälfte in beiden Sprachen“ (karşılıklı öğretilir, zamanın yarısı bir dilde, yarısı diğerinde). Öğrenci hem Almanca konuşmayı geliştirir hem de karşılığında Japonca öğretir."
+        },
+        {
+          "number": 4,
+          "type": "zuordnung",
+          "prompt": "eine Doktorandin aus Korea, die Anfang August, also in der vorlesungsfreien Zeit, ankommt und sofort an einem Deutschkurs teilnehmen möchte",
+          "answer": "I",
+          "evidence": [
+            {
+              "text": "f",
+              "quote": "Die Kurse finden ausschließlich in der Vorlesungszeit statt"
+            }
+          ],
+          "explanation": "F ilanı her düzeyde Almanca kursu sunduğu için cazip görünür. Ancak „Die Kurse finden ausschließlich in der Vorlesungszeit statt“ (kurslar yalnızca ders döneminde yapılır) ve tatilde kendi kendine öğrenme merkezi de kapalıdır. Doktora öğrencisi ağustosta, yani tatilde kurs istediği için F uymaz; cevap I."
+        },
+        {
+          "number": 5,
+          "type": "zuordnung",
+          "prompt": "ein Absolvent, der vor einem Jahr seinen Master abgeschlossen hat und sein Auftreten im Bewerbungsgespräch üben möchte",
+          "answer": "B",
+          "evidence": [
+            {
+              "text": "b",
+              "quote": "Probe-Vorstellungsgespräche mit Videofeedback"
+            },
+            {
+              "text": "b",
+              "quote": "bis zu zwei Jahre nach dem Abschluss"
+            }
+          ],
+          "explanation": "B ilanında kariyer merkezi „Probe-Vorstellungsgespräche mit Videofeedback“ (videolu geri bildirimle deneme iş görüşmeleri) sunar. Hizmet mezunlara da „bis zu zwei Jahre nach dem Abschluss“ (mezuniyetten sonra iki yıla kadar) açıktır. Bir yıl önce mezun olan kişi bu süre içindedir."
+        },
+        {
+          "number": 6,
+          "type": "zuordnung",
+          "prompt": "eine Studentin im dritten Semester, die überlegt, ob sie ein anderes Fach studieren soll, und dazu ein Gespräch führen möchte, ohne an den Campus zu kommen",
+          "answer": "H",
+          "evidence": [
+            {
+              "text": "h",
+              "quote": "Neben persönlichen Terminen bieten wir Beratung per Telefon oder Videochat an."
+            }
+          ],
+          "explanation": "H ilanı bölüm değiştirme düşüncesi gibi „Zweifeln am Studium“ (öğrenimle ilgili kuşkular) konusunda destek verir. Ayrıca „Beratung per Telefon oder Videochat“ (telefon veya görüntülü görüşmeyle danışmanlık) sunduğu için öğrenci kampüse gelmeden konuşabilir. C de kişisel sorunlara yardım eder ama bölüm seçimi konusunda değil."
+        },
+        {
+          "number": 7,
+          "type": "zuordnung",
+          "prompt": "eine Studentin im fünften Semester, deren Nebenjob plötzlich weggefallen ist und die rasch Geld braucht, um die Miete zu bezahlen",
+          "answer": "D",
+          "evidence": [
+            {
+              "text": "d",
+              "quote": "Geraten Sie unverschuldet in eine finanzielle Notlage"
+            }
+          ],
+          "explanation": "D ilanına göre „unverschuldet in eine finanzielle Notlage“ (kendi suçu olmadan maddi sıkıntıya) düşen öğrenciler faizsiz bir köprü kredisi alabilir; para iki gün içinde ödenir. Yarı zamanlı işini aniden kaybetmek böyle bir durumdur. Öğrenci beşinci dönemde olduğundan „ab dem zweiten Fachsemester“ koşulunu da karşılar."
+        },
+        {
+          "number": 8,
+          "type": "zuordnung",
+          "prompt": "ein Kommilitone, der ein Austauschjahr in Kanada plant und Unterstützung bei der Bewerbung an einer dortigen Universität sucht",
+          "answer": "I",
+          "evidence": [
+            {
+              "text": "g",
+              "quote": "Für Aufenthalte außerhalb Europas sind wir nicht zuständig"
+            }
+          ],
+          "explanation": "G ilanı başvuruda yardım ettiği için cazip görünür. Ancak yalnızca Erasmus+ ve Avrupa'daki ortak üniversitelerle ilgilenir: „Für Aufenthalte außerhalb Europas sind wir nicht zuständig“ (Avrupa dışındaki kalışlardan sorumlu değiliz). Kanada Avrupa dışında olduğu için G uymaz; metinde adı geçen fakülte danışmanlığı da ilanlar arasında yoktur. Cevap I."
+        },
+        {
+          "number": 9,
+          "type": "zuordnung",
+          "prompt": "ein Student, der ein Semester an einer Partnerhochschule in Portugal verbringen will und vorher klären möchte, ob ihm die dort belegten Kurse angerechnet werden",
+          "answer": "G",
+          "evidence": [
+            {
+              "text": "g",
+              "quote": "dass Ihre Studienleistungen später anerkannt werden"
+            }
+          ],
+          "explanation": "G ilanı Avrupa'daki ortak üniversiteler için danışmanlık verir ve bir „Learning Agreement“ ile önceden sağlanabileceğini açıklar: „dass Ihre Studienleistungen später anerkannt werden“ (ders başarılarınızın sonradan tanınması). Portekiz Avrupa'da olduğu için öğrencinin sorusu tam olarak buna uyar."
+        },
+        {
+          "number": 10,
+          "type": "zuordnung",
+          "prompt": "ein Kommilitone mit einer chronischen Darmerkrankung, der Klausuren gelegentlich unterbrechen muss und dafür eine Sonderregelung beantragen will",
+          "answer": "E",
+          "evidence": [
+            {
+              "text": "e",
+              "quote": "zusätzliche Pausen"
+            }
+          ],
+          "explanation": "E ilanı kronik hastalığı olan öğrencilere „Nachteilsausgleich“ (dezavantaj telafisi) konusunda danışmanlık verir; bu, örneğin „zusätzliche Pausen“ (ek molalar) içerebilir. Ayrıca sınav kuruluna yapılacak başvurunun gerekçelendirilmesine yardım edilir. C de sağlık ve sınavla ilgilidir ama psikolojik destek verir, sınav düzenlemesi değil."
+        }
+      ]
+    }
+  ]
+}

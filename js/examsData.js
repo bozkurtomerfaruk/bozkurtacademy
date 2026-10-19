@@ -759,9 +759,27 @@ window.BA_EXAMS = {
           },
           sections: [
             { id: 'lesen', teile: [
-              { title: null, exercises: [] }, // Aufgabe 1
-              { title: null, exercises: [] }, // Aufgabe 2
-              { title: null, exercises: [] }, // Aufgabe 3
+              {
+                title: { tr: 'Kısa metinler · eşleştirme', de: 'Kurztexte · Zuordnung', en: 'Short texts · matching' },
+                exercises: [
+                  { set: 'set-1', title: 'Sommerschulen für Studierende' },
+                  { set: 'set-2', title: 'Beratung an der Hochschule' },
+                ]
+              }, // Aufgabe 1
+              {
+                title: { tr: 'Makale · a/b/c', de: 'Artikel · a/b/c', en: 'Article · a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Grüne Dächer gegen Hitze' },
+                  { set: 'set-2', title: 'Wie wir Gesichter erkennen' },
+                ]
+              }, // Aufgabe 2
+              {
+                title: { tr: 'Bilimsel metin · Ja/Nein/Text sagt dazu nichts', de: 'Fachtext · Ja/Nein/Text sagt dazu nichts', en: 'Academic text · yes/no/not given' },
+                exercises: [
+                  { set: 'set-1', title: 'Bakterien als Baustoff' },
+                  { set: 'set-2', title: 'Wenn Sprachen verstummen' },
+                ]
+              }, // Aufgabe 3
             ] },
             { id: 'hoeren', teile: [
               { title: null, exercises: [] }, // Aufgabe 1

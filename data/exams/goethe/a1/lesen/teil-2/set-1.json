@@ -1,0 +1,224 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-1",
+  "title": "Einkaufen in der Stadt",
+  "minutes": 8,
+  "instructions": "Lesen Sie die Texte und die Aufgaben 6 bis 10. Wo finden Sie Informationen? Kreuzen Sie an: a oder b.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q0a",
+          "label": "a",
+          "title": "Bäckerei Kornblume",
+          "paragraphs": [
+            "Bei uns gibt es jeden Tag frisches Brot, Brötchen und Kuchen. Öffnungszeiten: Montag bis Samstag 6 bis 18 Uhr, Sonntag 7 bis 11 Uhr. Sie finden uns in der Bahnhofstraße 4."
+          ]
+        },
+        {
+          "id": "q0b",
+          "label": "b",
+          "title": "Backstube Weizenfeld",
+          "paragraphs": [
+            "Unser Brot backen wir selbst. Probieren Sie auch unsere Brötchen mit Käse! Geöffnet: Montag bis Freitag 6:30 bis 18:30 Uhr, Samstag 6:30 bis 13 Uhr. Sonntag geschlossen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Es ist Sonntag. Sie möchten frische Brötchen kaufen.",
+          "answer": "a",
+          "evidence": [
+            { "text": "q0a", "quote": "Sonntag 7 bis 11 Uhr" },
+            { "text": "q0b", "quote": "Sonntag geschlossen" }
+          ],
+          "explanation": "Bugün pazar (Sonntag). a ilanında „Sonntag 7 bis 11 Uhr“ yazıyor: Fırın pazar günü saat 7 ile 11 arası açık. b ilanında „Sonntag geschlossen“ yazıyor: Pazar günü kapalı. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q6a",
+          "label": "a",
+          "title": "Radladen Pedalo",
+          "paragraphs": [
+            "Wir verkaufen alte Fahrräder, aber sie fahren noch sehr gut. Kinderfahrräder kosten bei uns 50 bis 90 Euro. Kommen Sie am Samstag von 10 bis 14 Uhr in den Holunderweg 12."
+          ]
+        },
+        {
+          "id": "q6b",
+          "label": "b",
+          "title": "Zweirad Wendland",
+          "paragraphs": [
+            "Neue Fahrräder für Kinder und Erwachsene in vielen Farben. Kinderfahrräder gibt es ab 190 Euro. Wir sind Montag bis Samstag von 9 bis 19 Uhr für Sie da."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "zuordnung",
+          "prompt": "Ihr Sohn braucht ein Fahrrad. Sie haben aber nur 100 Euro.",
+          "answer": "a",
+          "evidence": [
+            { "text": "q6a", "quote": "Kinderfahrräder kosten bei uns 50 bis 90 Euro" },
+            { "text": "q6b", "quote": "Kinderfahrräder gibt es ab 190 Euro" }
+          ],
+          "explanation": "Sadece 100 euronuz var. a ilanında „Kinderfahrräder kosten bei uns 50 bis 90 Euro“ yazıyor: Çocuk bisikleti 50 ile 90 euro arası. Bu, 100 eurodan az. b ilanında „ab 190 Euro“ yazıyor: Çocuk bisikleti en az 190 euro. Bu çok pahalı. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q7a",
+          "label": "a",
+          "title": "Schuhhaus Lenz",
+          "paragraphs": [
+            "Schuhe für Damen, Herren und Kinder. Diese Woche sind die Sportschuhe billiger! Wir sind Montag bis Samstag von 9 bis 18 Uhr für Sie da. Brunnengasse 7."
+          ]
+        },
+        {
+          "id": "q7b",
+          "label": "b",
+          "title": "Schuh-Ecke am Bahnhof",
+          "paragraphs": [
+            "Stiefel, Sportschuhe und Sandalen zu guten Preisen. Wir haben Montag bis Samstag von 10 bis 21 Uhr geöffnet. Sie finden uns direkt neben dem Bahnhof."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 7,
+          "type": "zuordnung",
+          "prompt": "Sie möchten neue Schuhe kaufen. Sie haben aber erst am Abend um 19 Uhr Zeit.",
+          "answer": "b",
+          "evidence": [
+            { "text": "q7b", "quote": "von 10 bis 21 Uhr geöffnet" },
+            { "text": "q7a", "quote": "von 9 bis 18 Uhr für Sie da" }
+          ],
+          "explanation": "Saat 19'da (akşam 7'de) vaktiniz var. b ilanında „von 10 bis 21 Uhr geöffnet“ yazıyor: Dükkân saat 21'e kadar açık. a ilanında „von 9 bis 18 Uhr“ yazıyor: Dükkân saat 18'de kapanıyor. Saat 19'da kapalı. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q8a",
+          "label": "a",
+          "title": "Mode Hartwig",
+          "paragraphs": [
+            "Jacken, Pullover und Hosen für Jungen und Mädchen von 10 bis 16 Jahren. Im Winter haben wir viele warme Jacken. Tulpenweg 3."
+          ]
+        },
+        {
+          "id": "q8b",
+          "label": "b",
+          "title": "Kinderladen Pünktchen",
+          "paragraphs": [
+            "Kleidung für Babys und Kinder von 1 bis 8 Jahren: Hosen, T-Shirts und warme Jacken für den Winter. Wir sind am Marktplatz, neben der Apotheke."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 8,
+          "type": "zuordnung",
+          "prompt": "Ihre Tochter ist fünf Jahre alt und braucht eine Jacke für die kalten Monate.",
+          "answer": "b",
+          "evidence": [
+            { "text": "q8b", "quote": "für Babys und Kinder von 1 bis 8 Jahren" },
+            { "text": "q8a", "quote": "für Jungen und Mädchen von 10 bis 16 Jahren" }
+          ],
+          "explanation": "Kızınız beş yaşında. b ilanında „für Babys und Kinder von 1 bis 8 Jahren“ yazıyor: Giysiler 1 ile 8 yaş arası çocuklar için. Beş yaş buna uyuyor. a ilanında „von 10 bis 16 Jahren“ yazıyor: Giysiler 10 ile 16 yaş arası için. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q9a",
+          "label": "a",
+          "title": "Wochenmarkt",
+          "paragraphs": [
+            "Jeden Freitag von 8 bis 13 Uhr auf dem Rathausplatz in Talwiesen: frisches Obst, Gemüse, Käse und Eier. Alles kommt direkt vom Bauernhof."
+          ]
+        },
+        {
+          "id": "q9b",
+          "label": "b",
+          "title": "Bauernmarkt",
+          "paragraphs": [
+            "Am Freitag von 7 bis 12 Uhr am Bahnhof Rabenhain. Wir verkaufen Obst, Gemüse, Brot und Blumen. Es gibt auch Kaffee und Kuchen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 9,
+          "type": "zuordnung",
+          "prompt": "Sie wohnen in Talwiesen. Am Freitag möchten Sie dort auf dem Markt Äpfel und Bananen kaufen.",
+          "answer": "a",
+          "evidence": [
+            { "text": "q9a", "quote": "auf dem Rathausplatz in Talwiesen" },
+            { "text": "q9b", "quote": "am Bahnhof Rabenhain" }
+          ],
+          "explanation": "Talwiesen'de pazardan meyve (Obst) almak istiyorsunuz. a ilanında „auf dem Rathausplatz in Talwiesen“ yazıyor: Pazar Talwiesen'de, belediye binasının önündeki meydanda. b ilanında „am Bahnhof Rabenhain“ yazıyor: Bu pazar başka bir yerde, Rabenhain'de. İki pazar da cuma günü. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q10a",
+          "label": "a",
+          "title": "Blumen Rosengarten",
+          "paragraphs": [
+            "Schöne Blumen für jeden Tag und für Feste. Wir sind von Dienstag bis Samstag von 9 bis 18 Uhr da. Am Montag ist der Laden zu."
+          ]
+        },
+        {
+          "id": "q10b",
+          "label": "b",
+          "title": "Blumenstand Gänseblümchen",
+          "paragraphs": [
+            "Rosen, Tulpen und kleine Pflanzen. Wir haben von Montag bis Freitag von 8 bis 19 Uhr geöffnet. Sie finden uns vor dem Supermarkt in der Eschenstraße."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 10,
+          "type": "zuordnung",
+          "prompt": "Ihre Mutter hat am Montag Geburtstag. Sie möchten an diesem Tag Blumen kaufen.",
+          "answer": "b",
+          "evidence": [
+            { "text": "q10b", "quote": "von Montag bis Freitag von 8 bis 19 Uhr geöffnet" },
+            { "text": "q10a", "quote": "Am Montag ist der Laden zu." }
+          ],
+          "explanation": "Pazartesi (Montag) çiçek almak istiyorsunuz. b ilanında „von Montag bis Freitag … geöffnet“ yazıyor: Pazartesiden cumaya açık. a ilanında „Am Montag ist der Laden zu“ yazıyor: Dükkân pazartesi kapalı (zu = kapalı). Cevap b."
+        }
+      ]
+    }
+  ]
+}

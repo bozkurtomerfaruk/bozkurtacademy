@@ -57,11 +57,11 @@
         {
           "number": 23,
           "type": "abc",
-          "prompt": "Ihre WLAN-Firma nimmt jeden Monat mehr Geld von Ihnen, als vereinbart war. Sie suchen eine Stelle, die Ihnen in so einem Fall hilft.",
-          "options": { "a": "Kapitel 2", "b": "Kapitel 7", "c": "Kapitel 8" },
+          "prompt": "Für den WLAN-Anschluss in Ihrer Wohnung zahlen Sie jeden Monat. Seit März bucht die Firma mehr Geld ab, als vereinbart war. Sie suchen jemanden, der Sie bei diesem Problem berät.",
+          "options": { "a": "Kapitel 2", "b": "Kapitel 7", "c": "Kapitel 1" },
           "answer": "a",
           "evidence": [{ "text": "inhalt", "quote": "Verbraucherberatung bei Ärger mit Firmen und Rechnungen" }],
-          "explanation": "WLAN şirketiyle yaşanan para sorununda yardım Kapitel 2'de: „Verbraucherberatung bei Ärger mit Firmen und Rechnungen“. b) yanlış: Kapitel 7'deki kiracılar derneği (Mieterverein) konutla ilgili, WLAN şirketiyle değil. c) yanlış: Kapitel 8'de iş başvurusu için yardım (Bewerbungshilfe) var, faturalar için değil."
+          "explanation": "WLAN şirketi anlaşılandan fazla para çekiyor; bu bir şirketle yaşanan para sorunu. Danışmanlık Kapitel 2'de: „Verbraucherberatung bei Ärger mit Firmen und Rechnungen“. b) yanlış: Soruda „Wohnung“ geçiyor ve Kapitel 7'de bir danışma yeri, kiracılar derneği (Mieterverein) var; ama Kapitel 7 konutla ilgili, şirketlerle ve faturalarla ilgili danışmanlık orada yazmıyor. c) yanlış: Kapitel 1'de de her ay ödenen bir şey var, radyo-televizyon katkı payı (Rundfunkbeitrag); ama WLAN şirketiyle sorunlarda danışmanlık orada yazmıyor."
         },
         {
           "number": 24,
@@ -75,11 +75,11 @@
         {
           "number": 25,
           "type": "abc",
-          "prompt": "Ihre Firma hat Ihnen gekündigt. Sie möchten wissen, bei welchem Amt Sie sich jetzt melden müssen, damit man Ihnen bei der Suche nach einer neuen Stelle hilft.",
-          "options": { "a": "Kapitel 1", "b": "Kapitel 8", "c": "Kapitel 2" },
+          "prompt": "In Ihrem Heimatland haben Sie drei Jahre lang eine Ausbildung zur Krankenpflegerin gemacht. Sie möchten wissen, wie Ihr Zeugnis hier gültig wird, damit Sie wieder Patienten pflegen dürfen.",
+          "options": { "a": "Kapitel 1", "b": "Kapitel 8", "c": "Kapitel 4" },
           "answer": "b",
-          "evidence": [{ "text": "inhalt", "quote": "Arbeit und Beruf: Jobcenter und Agentur für Arbeit" }],
-          "explanation": "İşini kaybeden ve yeni iş aramak için yardım isteyen kişinin bilgiyi bulacağı yer Kapitel 8: „Arbeit und Beruf: Jobcenter und Agentur für Arbeit“. a) yanlış: Kapitel 1'de de bir daire var, ama orada Bürgeramt'ta ikamet kaydı (Wohnsitz anmelden) anlatılıyor, iş arama değil. c) yanlış: Kapitel 2 banka hesabı, telefon, elektrik ve tüketici danışmanlığı hakkında; iş arama orada yazmıyor."
+          "evidence": [{ "text": "inhalt", "quote": "ausländische Berufsabschlüsse anerkennen lassen" }],
+          "explanation": "Yurt dışında alınan hemşirelik diplomasının burada geçerli olması, yani yabancı bir meslek diplomasının tanınması Kapitel 8'de: „ausländische Berufsabschlüsse anerkennen lassen“. a) yanlış: Kapitel 1'de de resmi belgeler ve bir daire var (Bürgeramt, Meldebescheinigung), ama orada ikamet kaydı anlatılıyor, diploma tanınması değil. c) yanlış: Hasta bakımı sağlıkla ilgili ve Kapitel 4'te doktorlar ve muayenehaneler var; ama orada doktor bulmak anlatılıyor, diplomaların tanınması değil."
         }
       ]
     }

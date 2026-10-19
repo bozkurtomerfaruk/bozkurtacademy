@@ -445,7 +445,7 @@ window.BA_EXAMS = {
                   { set: 'set-1', title: 'Weniger Parkplätze, mehr Stadt' },
                   { set: 'set-2', title: 'Das Ende der Hausaufgaben?' },
                   { set: 'set-3', title: 'Warum das Bargeld bleiben sollte' },
-                  { set: 'set-4', title: 'Freier Eintritt für Museen' },
+                  { set: 'set-4', title: 'Volkshochschule ohne Gebühren' },
                   { set: 'set-5', title: 'Die Stadt gehört nicht den Touristen' },
                 ]
               }, // Teil 3

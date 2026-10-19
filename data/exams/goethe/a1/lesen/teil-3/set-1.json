@@ -1,0 +1,146 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-1",
+  "title": "In der Stadt",
+  "minutes": 9,
+  "instructions": "Lesen Sie die Texte und die Aufgaben 11 bis 15. Sind die Aussagen richtig oder falsch? Kreuzen Sie an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "baeckerei",
+          "title": "An der Tür: Bäckerei Krummbein",
+          "paragraphs": [
+            "Wir machen Urlaub! Vom 3. bis 17. August ist die Bäckerei geschlossen. Ab Montag, 18. August, sind wir wieder für Sie da."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Am 18. August ist die Bäckerei zu.",
+          "answer": "falsch",
+          "evidence": [{ "text": "baeckerei", "quote": "Ab Montag, 18. August, sind wir wieder für Sie da." }],
+          "explanation": "Fırın 3–17 Ağustos arası kapalı. Metin: „Ab Montag, 18. August, sind wir wieder für Sie da.“ (18 Ağustos pazartesiden itibaren yine buradayız). Yani 18 Ağustos'ta fırın açık, kapalı (zu) değil."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "post",
+          "title": "Post am Marktplatz",
+          "paragraphs": [
+            "Öffnungszeiten: Montag bis Freitag 9 bis 18 Uhr, Samstag 9 bis 12 Uhr. Am Sonntag ist die Post geschlossen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 11,
+          "type": "richtig-falsch",
+          "prompt": "Die Post ist am Samstag bis 18 Uhr offen.",
+          "answer": "falsch",
+          "evidence": [{ "text": "post", "quote": "Samstag 9 bis 12 Uhr" }],
+          "explanation": "18 Uhr (saat 18) metinde var, ama pazartesi–cuma için. Cumartesi için metin: „Samstag 9 bis 12 Uhr“ (cumartesi 9'dan 12'ye). Yani cumartesi postane saat 12'de kapanıyor."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "bahnhof",
+          "title": "Bahnhof Moosbrück",
+          "paragraphs": [
+            "Heute ist das Reisebüro im Bahnhof geschlossen. Fahrkarten gibt es nur am Automaten neben dem Eingang. Am Kiosk auf Gleis 2 bekommen Sie Zeitungen und Kaffee."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 12,
+          "type": "richtig-falsch",
+          "prompt": "Heute kann man am Kiosk ein Ticket kaufen.",
+          "answer": "falsch",
+          "evidence": [{ "text": "bahnhof", "quote": "Fahrkarten gibt es nur am Automaten neben dem Eingang." }],
+          "explanation": "Bilet (Fahrkarte / Ticket) bugün „nur am Automaten neben dem Eingang“ (sadece girişin yanındaki otomatta) var. Kioskta ise sadece „Zeitungen und Kaffee“ (gazete ve kahve) var. Yani kioskta bilet alınmıyor."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "bibliothek",
+          "title": "Stadtbibliothek Ulmenried",
+          "paragraphs": [
+            "Neu! Jeden Mittwoch um 15 Uhr: Geschichten für Kinder von 4 bis 7 Jahren. Wir sind im ersten Stock. Der Eintritt ist frei."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 13,
+          "type": "richtig-falsch",
+          "prompt": "Die Kinder müssen am Mittwoch nichts bezahlen.",
+          "answer": "richtig",
+          "evidence": [{ "text": "bibliothek", "quote": "Der Eintritt ist frei." }],
+          "explanation": "Metin: „Der Eintritt ist frei.“ (Giriş ücretsiz). Ücretsiz demek, para ödemek gerekmiyor demek. Yani çocuklar çarşamba günü hiçbir şey ödemiyor (nichts bezahlen)."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "hallenbad",
+          "title": "Hallenbad Kieselgrund",
+          "paragraphs": [
+            "Am Dienstag ist das Bad nur für Schwimmkurse da. Mittwoch bis Sonntag: 10 bis 20 Uhr geöffnet. Montag: geschlossen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 14,
+          "type": "richtig-falsch",
+          "prompt": "Am Freitag kann man um 19 Uhr schwimmen gehen.",
+          "answer": "richtig",
+          "evidence": [{ "text": "hallenbad", "quote": "Mittwoch bis Sonntag: 10 bis 20 Uhr geöffnet." }],
+          "explanation": "Metin: „Mittwoch bis Sonntag: 10 bis 20 Uhr geöffnet.“ (çarşambadan pazara 10'dan 20'ye açık). Cuma bu günlerin içinde. Saat 19 de 10 ile 20 arasında. Yani cuma saat 19'da yüzmeye gidilebilir."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "laden",
+          "title": "Maschenglück – Kleidung für Kinder",
+          "paragraphs": [
+            "Liebe Kunden, unser Laden ist jetzt in der Ahornstraße 14, neben der Apotheke. Am Marktplatz neben dem Supermarkt sind wir nicht mehr."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 15,
+          "type": "richtig-falsch",
+          "prompt": "Das Geschäft ist jetzt neben dem Supermarkt.",
+          "answer": "falsch",
+          "evidence": [{ "text": "laden", "quote": "unser Laden ist jetzt in der Ahornstraße 14, neben der Apotheke" }],
+          "explanation": "Dükkân (Laden / Geschäft) şimdi „in der Ahornstraße 14, neben der Apotheke“ (Ahornstraße 14'te, eczanenin yanında). Süpermarketin yanındaki eski yer için metin: „sind wir nicht mehr“ (artık orada değiliz). Yani ifade yanlış."
+        }
+      ]
+    }
+  ]
+}

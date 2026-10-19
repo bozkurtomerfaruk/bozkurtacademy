@@ -96,6 +96,9 @@ for (const exam of data.exams) for (const level of exam.levels || []) for (const
           }
         }
       });
+      // Text ids become element ids on the page, so they must be unique in the whole set (Goethe A1 Teil 2 has two texts per group).
+      const textIds = set.groups.flatMap(group => (group.texts || []).map(text => text.id));
+      if (textIds.length !== new Set(textIds).size) fail('a text id appears in more than one group');
       const examples = set.groups.flatMap(group => group.questions).filter(question => question.example);
       if (examples.length > 1) fail('more than one example');
       if (examples.length && examples[0].number !== 0) fail('the example must be number 0');

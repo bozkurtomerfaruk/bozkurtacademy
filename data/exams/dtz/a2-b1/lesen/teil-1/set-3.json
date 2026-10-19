@@ -47,7 +47,7 @@
         {
           "number": 22,
           "type": "abc",
-          "prompt": "Sie möchten in einer Kita als Küchenhilfe anfangen. Vorher möchte die Leiterin ein Papier vom Amt sehen, das zeigt, dass Sie nie wegen einer Straftat verurteilt wurden.",
+          "prompt": "Sie möchten in einer Kita als Küchenhilfe anfangen. Vorher möchte die Leiterin ein offizielles Papier sehen, das zeigt, dass Sie nie wegen einer Straftat verurteilt wurden.",
           "options": { "a": "Erdgeschoss A", "b": "2. Stock B", "c": "3. Stock A" },
           "answer": "a",
           "evidence": [{ "text": "inhalt", "quote": "Führungszeugnis" }],
@@ -56,7 +56,7 @@
         {
           "number": 23,
           "type": "abc",
-          "prompt": "Die Stadt schreibt Ihnen, dass Sie seit Monaten 240 Euro Abgaben schulden. So viel Geld haben Sie im Moment nicht. Sie möchten den Betrag in kleinen Teilen jeden Monat überweisen.",
+          "prompt": "Sie bekommen einen Brief vom Rathaus: Sie schulden seit Monaten 240 Euro Abgaben. So viel Geld haben Sie im Moment nicht. Sie möchten den Betrag in kleinen Teilen jeden Monat überweisen.",
           "options": { "a": "2. Stock A", "b": "Erdgeschoss B", "c": "2. Stock B" },
           "answer": "b",
           "evidence": [{ "text": "inhalt", "quote": "Mahnungen, Ratenzahlung vereinbaren" }],
@@ -74,7 +74,7 @@
         {
           "number": 25,
           "type": "abc",
-          "prompt": "Ihre Tochter ist vor einer Woche hier im Krankenhaus zur Welt gekommen. Jetzt brauchen Sie ein amtliches Dokument, auf dem steht, wann und wo das Baby auf die Welt kam.",
+          "prompt": "Ihre Tochter ist vor einer Woche hier im Krankenhaus zur Welt gekommen. Jetzt brauchen Sie ein offizielles Dokument, auf dem steht, wann und wo das Baby auf die Welt kam.",
           "options": { "a": "1. Stock A", "b": "2. Stock B", "c": "Erdgeschoss A" },
           "answer": "a",
           "evidence": [{ "text": "inhalt", "quote": "Geburtsurkunden" }],

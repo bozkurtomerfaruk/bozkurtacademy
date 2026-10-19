@@ -1,0 +1,193 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "papier",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-2",
+  "title": "Wenn Sprachen verstummen",
+  "minutes": 20,
+  "context": "Sie lesen in einem Hochschulmagazin einen Artikel über die Erforschung bedrohter Sprachen.",
+  "instructions": "Lesen Sie den Text und die Aussagen 21 bis 30. Entscheiden Sie: Stimmt die Aussage mit dem Text überein (Ja), widerspricht sie dem Text (Nein) oder sagt der Text dazu nichts?",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Wenn Sprachen verstummen",
+          "byline": "Von Jorinde Hasselbach",
+          "paragraphs": [
+            "Dass eine Sprache stirbt, geschieht nur selten über Nacht. Zwar gibt es Fälle, in denen eine kleine Sprechergemeinschaft durch Krieg, Seuchen oder Vertreibung ausgelöscht wurde; die weitaus meisten Sprachen verschwinden jedoch leise, über mehrere Generationen hinweg. Am Anfang steht meist eine nachvollziehbare Entscheidung: Eltern sprechen mit ihren Kindern nicht mehr die Sprache, in der sie selbst aufgewachsen sind, sondern die Sprache der Schule, der Behörden und des Arbeitsmarkts, weil sie sich davon bessere Chancen für den Nachwuchs versprechen. Die Kinder verstehen die Familiensprache oft noch, verwenden sie aber kaum, und deren eigene Kinder lernen sie schließlich gar nicht mehr.",
+            "Für die Linguistin Theresa Wennemann, die an der Universität Lindenau die Arbeitsstelle für Sprachdokumentation leitet, ist dieser Bruch zwischen den Generationen der eigentliche Gradmesser. „Die bloße Zahl der Sprecher sagt erstaunlich wenig“, erklärt sie. Eine Sprache mit 50 000 Sprechern, deren jüngste über vierzig sind, könne weitaus stärker gefährdet sein als eine mit wenigen Hundert Sprechern, in der Kinder ganz selbstverständlich aufwachsen. Entscheidend sei, ob eine Sprache noch im Alltag der Familien weitergegeben werde.",
+            "In der Spätphase verändert sich nicht nur die Zahl der Sprecher, sondern auch die Sprache selbst. Wer sie nur noch eingeschränkt beherrscht – die Forschung spricht von Semi-Sprechern –, vereinfacht häufig das Formensystem: Kasusendungen fallen weg, unregelmäßige Verben werden regelmäßig gebildet, Satzmuster der Mehrheitssprache dringen ein, und für ganze Lebensbereiche werden Wörter entlehnt. Wennemann warnt davor, darin bloßen Verfall zu sehen. Auch solche Varietäten seien vollwertige Sprachformen, die eine Dokumentation erfassen müsse, statt sie zugunsten eines idealisierten älteren Zustands auszublenden.",
+            "Was Dokumentation heute bedeutet, hat sich in den vergangenen Jahrzehnten grundlegend gewandelt. Frühere Generationen von Sprachforschern begnügten sich oft damit, eine einzelne Gewährsperson nach Wörtern und Formen zu befragen und daraus eine Grammatik und ein Wörterverzeichnis zu erstellen. Heutige Projekte zielen dagegen darauf, die Sprache möglichst so festzuhalten, wie sie tatsächlich gebraucht wird: in Gesprächen, Erzählungen und Liedern, beim Kochen oder bei der Feldarbeit. Wennemanns Team hat in fünf Jahren rund 140 Stunden Tirvanisch aufgezeichnet, eine Sprache, die in einigen abgelegenen Bergdörfern von kaum mehr als 300 Menschen gesprochen wird. Transkribiert und übersetzt ist davon bislang nicht einmal ein Viertel – für eine einzige Stunde Aufnahme veranschlagt die Gruppe 40 bis 60 Arbeitsstunden.",
+            "Verändert hat sich auch das Verhältnis zu den Sprechern. Lange galten sie vor allem als Datenquelle; heute bestimmen die Gemeinschaften in vielen Projekten mit, was aufgenommen wird und wer Zugang zu den Aufnahmen erhält. Manche tirvanischen Lieder etwa dürfen nach dem Willen der Dorfältesten nur von Angehörigen der Gemeinschaft angehört werden. Wennemanns Gruppe hat zudem junge Dorfbewohnerinnen und Dorfbewohner im Umgang mit Aufnahmegeräten geschult. Deren Aufnahmen seien häufig lebendiger als die des Forschungsteams, berichtet sie: Ohne fremde Zuhörer redeten die Menschen freier, fielen einander ins Wort, lachten und wechselten unvermittelt das Thema.",
+            "Ob Dokumentation eine Sprache retten kann, beurteilt Wennemann nüchtern. Ein Archiv gleiche einem Herbarium: Es bewahre die Pflanze, aber es lasse sie nicht wachsen. Lebendig bleibe eine Sprache nur, wenn Menschen sie im Alltag benutzten. Genau hier setzt die Kritik des Soziolinguisten Kasimir Ploetz von der Hochschule Brettenau an. Die Fördermittel für bedrohte Sprachen flössen zu einem großen Teil in Aufnahmetechnik, Server und Archive, gibt er zu bedenken, während Sprachnester für Kleinkinder oder Unterricht in der Minderheitensprache häufig an fehlenden Mitteln scheiterten. Ploetz plädiert deshalb dafür, einen festen Anteil jeder Förderung an Angebote für Familien zu binden.",
+            "Dass sich die Sprachwissenschaft dennoch so intensiv um das Festhalten bedrohter Sprachen bemüht, hat auch fachliche Gründe. Das Tirvanische etwa verlangt in jedem Satz, der von Vergangenem berichtet, eine Angabe darüber, ob der Sprecher das Geschehen selbst beobachtet, nur davon gehört oder es aus Spuren erschlossen hat. Solche Strukturen zeigen, welche Unterscheidungen menschliche Sprachen grammatisch verankern können, und sind damit ein Prüfstein für Theorien darüber, was allen Sprachen gemeinsam ist. Hinzu kommen Erzähltraditionen, Pflanzennamen und Flurbezeichnungen, in denen sich Wissen über Landschaft und Geschichte einer Region niedergeschlagen hat. „Mit jeder Sprache, die undokumentiert verschwindet, verlieren wir ein Stück Evidenz über den menschlichen Geist“, sagt Wennemann."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": "01",
+          "example": true,
+          "type": "ja-nein-nichts",
+          "prompt": "Die meisten Sprachen gehen verloren, weil ihre Sprecher gewaltsam ums Leben kommen oder vertrieben werden.",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "die weitaus meisten Sprachen verschwinden jedoch leise"
+            }
+          ],
+          "explanation": "Metin savaş, salgın veya sürgün yüzünden yok olan toplulukların var olduğunu kabul ediyor („Zwar gibt es Fälle …“), ama hemen ardından „die weitaus meisten Sprachen verschwinden jedoch leise, über mehrere Generationen hinweg“ diyor – dillerin büyük çoğunluğu sessizce, birkaç kuşak boyunca kayboluyor. İfade istisnayı kural yaptığı için metinle çelişiyor: Nein."
+        },
+        {
+          "number": "02",
+          "example": true,
+          "type": "ja-nein-nichts",
+          "prompt": "Viele Eltern bedauern später, ihren Kindern die eigene Herkunftssprache nicht weitergegeben zu haben.",
+          "answer": "nichts",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "weil sie sich davon bessere Chancen für den Nachwuchs versprechen"
+            }
+          ],
+          "explanation": "Metin yalnızca ebeveynlerin neden çocuklarıyla artık kendi dillerini konuşmadığını açıklıyor: „weil sie sich davon bessere Chancen für den Nachwuchs versprechen“ (çocukları için daha iyi fırsatlar bekledikleri için). Ebeveynlerin bu karardan sonradan pişmanlık duyup duymadığı hakkında hiçbir şey söylenmiyor: Text sagt dazu nichts."
+        },
+        {
+          "number": 21,
+          "type": "ja-nein-nichts",
+          "prompt": "Wennemann misst die Bedrohung einer Sprache in erster Linie daran, wie viele Menschen sie insgesamt sprechen.",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Die bloße Zahl der Sprecher sagt erstaunlich wenig"
+            }
+          ],
+          "explanation": "Wennemann’a göre „Die bloße Zahl der Sprecher sagt erstaunlich wenig“ – konuşur sayısı tek başına şaşırtıcı derecede az şey söylüyor. Asıl ölçüt kuşaklar arasındaki kopukluk, yani dilin ailelerde çocuklara aktarılıp aktarılmadığı; 50 000 konuşurlu bir dil birkaç yüz konuşurlu bir dilden daha fazla tehlikede olabilir. İfade metinle çelişiyor: Nein."
+        },
+        {
+          "number": 22,
+          "type": "ja-nein-nichts",
+          "prompt": "Gegen Ende ihres Bestehens wandelt sich bei einer Sprache häufig auch der Aufbau von Wörtern und Sätzen.",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "vereinfacht häufig das Formensystem"
+            }
+          ],
+          "explanation": "Metne göre son evrede yalnızca konuşur sayısı değil dilin kendisi de değişiyor: Yarı konuşurlar „vereinfacht häufig das Formensystem“ – biçim sistemini sıkça sadeleştiriyor; hâl ekleri düşüyor, düzensiz fiiller düzenli çekiliyor, çoğunluk dilinin cümle kalıpları giriyor. Bu, kelime ve cümle yapısındaki değişimdir: Ja."
+        },
+        {
+          "number": 23,
+          "type": "ja-nein-nichts",
+          "prompt": "Semi-Sprecher entlehnen besonders häufig Wörter für technische Neuerungen.",
+          "answer": "nichts",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "für ganze Lebensbereiche werden Wörter entlehnt"
+            }
+          ],
+          "explanation": "Metin yalnızca yarı konuşurların „für ganze Lebensbereiche“ (bütün yaşam alanları için) sözcük ödünç aldığını söylüyor. Bu alanların hangileri olduğu, özellikle teknik yeniliklerle ilgili sözcüklerin ödünç alınıp alınmadığı belirtilmiyor: Text sagt dazu nichts."
+        },
+        {
+          "number": 24,
+          "type": "ja-nein-nichts",
+          "prompt": "Ähnlich wie frühere Forschergenerationen setzen heutige Projekte vor allem darauf, einzelne Sprecher gezielt nach Vokabeln und grammatischen Formen auszufragen.",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Heutige Projekte zielen dagegen darauf"
+            }
+          ],
+          "explanation": "Tek bir kaynak kişiye sözcük ve biçim sormak, metne göre eski kuşak dilbilimcilerin yöntemiydi. „Heutige Projekte zielen dagegen darauf …“ – bugünkü projeler ise („dagegen“ = buna karşılık) dili gerçekten kullanıldığı gibi, sohbetlerde, anlatılarda, şarkılarda kaydetmeyi amaçlıyor. İfade eski ve yeni yöntemi aynı gösterdiği için metinle çelişiyor: Nein."
+        },
+        {
+          "number": 25,
+          "type": "ja-nein-nichts",
+          "prompt": "Der größte Teil der tirvanischen Aufnahmen liegt bisher noch nicht in schriftlicher Form vor.",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "nicht einmal ein Viertel"
+            }
+          ],
+          "explanation": "Yaklaşık 140 saatlik Tirvanca kaydın şimdiye kadar „nicht einmal ein Viertel“ – dörtte biri bile – yazıya geçirilip çevrilmiş. Demek ki kayıtların büyük bölümü henüz yazılı hâlde değil; metin bunun nedenini de veriyor: bir saatlik kayıt için 40–60 saatlik çalışma gerekiyor. Cevap: Ja."
+        },
+        {
+          "number": 26,
+          "type": "ja-nein-nichts",
+          "prompt": "Nach Wennemanns Beobachtung verlaufen Gespräche natürlicher, wenn Menschen aus den Dörfern selbst die Aufnahmen machen.",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Ohne fremde Zuhörer redeten die Menschen freier"
+            }
+          ],
+          "explanation": "Wennemann, eğitim verilen genç köylülerin kayıtlarının araştırma ekibininkilerden „häufig lebendiger“ (çoğu zaman daha canlı) olduğunu söylüyor, çünkü „Ohne fremde Zuhörer redeten die Menschen freier“ – yabancı dinleyici olmadan insanlar daha rahat konuşuyor, birbirinin sözünü kesiyor, gülüyor. İfade bu gözlemi başka sözcüklerle aktarıyor: Ja."
+        },
+        {
+          "number": 27,
+          "type": "ja-nein-nichts",
+          "prompt": "Die Sprachgemeinschaften werden an Einnahmen beteiligt, die sich aus der Nutzung der Aufnahmen ergeben.",
+          "answer": "nichts",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "wer Zugang zu den Aufnahmen erhält"
+            }
+          ],
+          "explanation": "Metne göre topluluklar bugün birçok projede neyin kaydedileceğine ve „wer Zugang zu den Aufnahmen erhält“ – kayıtlara kimin erişebileceğine birlikte karar veriyor. Kayıtlardan gelir elde edilip edilmediği ya da toplulukların böyle bir gelirden pay alıp almadığı hakkında bilgi yok: Text sagt dazu nichts."
+        },
+        {
+          "number": 28,
+          "type": "ja-nein-nichts",
+          "prompt": "Wennemann geht davon aus, dass eine sorgfältige Archivierung ausreicht, um den Fortbestand einer Sprache zu sichern.",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Es bewahre die Pflanze, aber es lasse sie nicht wachsen"
+            }
+          ],
+          "explanation": "Wennemann arşivi bir herbaryuma benzetiyor: „Es bewahre die Pflanze, aber es lasse sie nicht wachsen“ – bitkiyi koruyor ama büyütmüyor. Bir dil ancak insanlar onu günlük hayatta kullanırsa yaşıyor. Yani arşivleme tek başına dilin yaşamasını sağlamaz; ifade metinle çelişiyor: Nein."
+        },
+        {
+          "number": 29,
+          "type": "ja-nein-nichts",
+          "prompt": "Ploetz' Vorschlag, einen Teil der Fördergelder für Familienangebote zu reservieren, wird bereits von einigen Geldgebern umgesetzt.",
+          "answer": "nichts",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "einen festen Anteil jeder Förderung an Angebote für Familien zu binden"
+            }
+          ],
+          "explanation": "Metin yalnızca Ploetz’un önerisini aktarıyor: „einen festen Anteil jeder Förderung an Angebote für Familien zu binden“ – her desteğin sabit bir payını aileye yönelik hizmetlere bağlamak. Bu önerinin herhangi bir fon veren kurum tarafından uygulanıp uygulanmadığı söylenmiyor: Text sagt dazu nichts."
+        },
+        {
+          "number": 30,
+          "type": "ja-nein-nichts",
+          "prompt": "Seltene grammatische Merkmale bedrohter Sprachen können dazu beitragen, Annahmen über die Gemeinsamkeiten aller Sprachen zu überprüfen.",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "ein Prüfstein für Theorien darüber, was allen Sprachen gemeinsam ist"
+            }
+          ],
+          "explanation": "Tirvancadaki örnek (geçmişi anlatan her cümlede konuşanın olayı görüp görmediğini, duyup duymadığını veya çıkarıp çıkarmadığını belirtme zorunluluğu) gibi yapılar, metne göre „ein Prüfstein für Theorien darüber, was allen Sprachen gemeinsam ist“ – bütün dillerin ortak noktaları hakkındaki kuramlar için bir mihenk taşı. İfade bunu doğru aktarıyor: Ja."
+        }
+      ]
+    }
+  ]
+}

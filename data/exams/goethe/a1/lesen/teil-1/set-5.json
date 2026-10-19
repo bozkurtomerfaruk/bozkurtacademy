@@ -1,0 +1,92 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Treffen in der Stadt",
+  "minutes": 8,
+  "instructions": "Lesen Sie die zwei Texte und die Aufgaben 1 bis 5. Sind die Aussagen richtig oder falsch? Kreuzen Sie an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "email",
+          "title": "E-Mail",
+          "paragraphs": [
+            "Hallo Ingvild,",
+            "hast du am Donnerstag Zeit? Ich möchte mit dir in die Stadt gehen, denn ich brauche neue Schuhe. Wir können uns um 15 Uhr vor dem Café „Sonnenblume“ am Marktplatz treffen. Du kannst mit der U-Bahn fahren, Linie 4 bis zur Haltestelle „Rathaus“. Dann gehst du links und dann geradeaus. Nach fünf Minuten bist du am Marktplatz. Später können wir noch ein Eis essen.",
+            "Bis Donnerstag! Dario"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Dario möchte Schuhe kaufen.",
+          "answer": "richtig",
+          "evidence": [{ "text": "email", "quote": "denn ich brauche neue Schuhe" }],
+          "explanation": "Dario yazıyor: „ich brauche neue Schuhe“ (yeni ayakkabıya ihtiyacım var). Bu yüzden şehre gidip ayakkabı almak („kaufen“) istiyor. İfade doğru."
+        },
+        {
+          "number": 1,
+          "type": "richtig-falsch",
+          "prompt": "Von der Haltestelle zum Marktplatz ist es nicht weit.",
+          "answer": "richtig",
+          "evidence": [{ "text": "email", "quote": "Nach fünf Minuten bist du am Marktplatz." }],
+          "explanation": "Metinde: „Nach fünf Minuten bist du am Marktplatz“ (Beş dakika sonra Marktplatz'tasın). Duraktan beş dakika yol uzak değil („nicht weit“). İfade doğru."
+        },
+        {
+          "number": 2,
+          "type": "richtig-falsch",
+          "prompt": "Ingvild geht an der Haltestelle nach rechts.",
+          "answer": "falsch",
+          "evidence": [{ "text": "email", "quote": "Dann gehst du links und dann geradeaus." }],
+          "explanation": "Dario yazıyor: „Dann gehst du links“ (Sonra sola gidiyorsun). İfadede sağ („rechts“) var. Yön yanlış, ifade yanlış."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "sms",
+          "title": "SMS",
+          "paragraphs": [
+            "Hallo Ingvild, ich muss am Donnerstag bis drei Uhr arbeiten. Wir treffen uns also eine Stunde später, um 16 Uhr. Der Ort ist gleich: vor dem Café am Marktplatz. Meine Kollegin Edda kommt auch, aber erst um halb fünf. Bis dann! Dario"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 3,
+          "type": "richtig-falsch",
+          "prompt": "Dario und Ingvild treffen sich um vier Uhr nachmittags.",
+          "answer": "richtig",
+          "evidence": [{ "text": "sms", "quote": "Wir treffen uns also eine Stunde später, um 16 Uhr." }],
+          "explanation": "SMS'te: „Wir treffen uns also eine Stunde später, um 16 Uhr“ (Yani bir saat sonra, saat 16'da buluşuyoruz). Saat 16 = öğleden sonra dört („vier Uhr nachmittags“). İfade doğru."
+        },
+        {
+          "number": 4,
+          "type": "richtig-falsch",
+          "prompt": "Ingvild soll wieder zum Café „Sonnenblume“ kommen.",
+          "answer": "richtig",
+          "evidence": [{ "text": "sms", "quote": "Der Ort ist gleich: vor dem Café am Marktplatz." }],
+          "explanation": "Dario yazıyor: „Der Ort ist gleich“ (Yer aynı): Marktplatz'taki kafenin önü. E-postada bu kafenin adı „Sonnenblume“. Sadece saat değişti, yer değişmedi. İfade doğru."
+        },
+        {
+          "number": 5,
+          "type": "richtig-falsch",
+          "prompt": "Edda ist um 16 Uhr am Café.",
+          "answer": "falsch",
+          "evidence": [{ "text": "sms", "quote": "aber erst um halb fünf" }],
+          "explanation": "Edda „erst um halb fünf“ (ancak dört buçukta, yani 16.30'da) geliyor. Saat 16'da sadece Dario ve Ingvild buluşuyor. İfade yanlış."
+        }
+      ]
+    }
+  ]
+}

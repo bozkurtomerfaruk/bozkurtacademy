@@ -39,13 +39,13 @@
           "type": "abc",
           "prompt": "Was steht im Merkblatt über die Anmeldung?",
           "options": {
-            "a": "Man muss dafür selbst ins Büro kommen.",
+            "a": "Man kommt dafür selbst ins Büro.",
             "b": "Man braucht dafür auf jeden Fall schon eine Berechtigung.",
-            "c": "Man soll dazu eine Bescheinigung vom Arzt mitbringen."
+            "c": "Man kann sie auch am Telefon erledigen."
           },
           "answer": "a",
           "evidence": [{ "text": "blatt", "quote": "Bitte kommen Sie zur Anmeldung persönlich in unser Büro" }],
-          "explanation": "Kayıt için bizzat büroya gelmek gerekiyor: „Bitte kommen Sie zur Anmeldung persönlich in unser Büro“. Telefonla kayıt da mümkün değil: „Eine Anmeldung am Telefon ist leider nicht möglich.“ b) yanlış: Kurs belgesi (Berechtigung) yalnızca varsa getiriliyor, kayıt için şart değil: „wenn Sie schon eine haben, Ihre Berechtigung für den Kurs“. c) yanlış: Kayda pasaport veya kimlik getiriliyor; doktor belgesi hastalanınca, derse gelinemediğinde getiriliyor: „bringen Sie danach eine Bescheinigung vom Arzt mit“."
+          "explanation": "Kayıt için bizzat büroya gelinmesi rica ediliyor: „Bitte kommen Sie zur Anmeldung persönlich in unser Büro“. „persönlich“ = „selbst“. b) yanlış: Kurs belgesi (Berechtigung) yalnızca varsa getiriliyor, kayıt için şart değil: „wenn Sie schon eine haben, Ihre Berechtigung für den Kurs“. c) yanlış: Telefonla kayıt mümkün değil: „Eine Anmeldung am Telefon ist leider nicht möglich.“"
         },
         {
           "number": 38,
@@ -58,7 +58,7 @@
           },
           "answer": "c",
           "evidence": [{ "text": "blatt", "quote": "Nach dem Test sagen wir Ihnen persönlich, in welchem Kurs Sie anfangen." }],
-          "explanation": "Seviye testinden sonra kişiye hangi kursta başlayacağı söyleniyor: „Nach dem Test sagen wir Ihnen persönlich, in welchem Kurs Sie anfangen.“ b) yanlış: Test sonucu panoya asılmıyor, kişiye bizzat söyleniyor („persönlich“); panoya asılan, sınav tarihleri. a) yanlış: Seviye testi kurstan önce yapılıyor: „Vor dem Kurs machen alle Teilnehmenden einen Test.“ Kursun sonunda yapılan, sınav: „Am Ende des Kurses machen Sie die Prüfung bei uns im Haus.“"
+          "explanation": "Seviye testinden sonra kişiye hangi kursta başlayacağı söyleniyor: „Nach dem Test sagen wir Ihnen persönlich, in welchem Kurs Sie anfangen.“ a) yanlış: Seviye testi kurstan önce yapılıyor: „Vor dem Kurs machen alle Teilnehmenden einen Test.“ Kursun sonunda yapılan, sınav: „Am Ende des Kurses machen Sie die Prüfung bei uns im Haus.“ b) yanlış: Test sonucu panoya asılmıyor, kişiye bizzat söyleniyor („persönlich“); panoya asılan, sınav tarihleri."
         },
         {
           "number": 39,
@@ -67,11 +67,11 @@
           "options": {
             "a": "Die Bescheinigung vom Arzt noch vor dem Unterricht ins Büro bringen.",
             "b": "Vor dem Beginn des Unterrichts im Büro telefonisch Bescheid geben.",
-            "c": "In der Beratung einen Antrag stellen."
+            "c": "Erst am nächsten Kurstag im Büro Bescheid sagen."
           },
           "answer": "b",
           "evidence": [{ "text": "blatt", "quote": "rufen Sie bitte vor Kursbeginn im Büro an" }],
-          "explanation": "Hasta olan katılımcı ders başlamadan önce büroyu aramalı: „rufen Sie bitte vor Kursbeginn im Büro an“. a) yanlış: Doktor belgesi dersten önce değil, sonra („danach“) getiriliyor: „bringen Sie danach eine Bescheinigung vom Arzt mit“. c) yanlış: Danışma birimi hastalıkta değil, kurs ücreti için yapılan başvuruda yardım ediyor: „Unsere Beratung hilft Ihnen gern beim Antrag.“"
+          "explanation": "Hasta olan katılımcı ders başlamadan önce büroyu aramalı: „rufen Sie bitte vor Kursbeginn im Büro an“. a) yanlış: Doktor belgesi dersten önce değil, sonra („danach“) getiriliyor: „bringen Sie danach eine Bescheinigung vom Arzt mit“. c) yanlış: Büroya bir sonraki ders günü değil, ders başlamadan önce telefonla haber verilmeli: „vor Kursbeginn“."
         }
       ]
     }

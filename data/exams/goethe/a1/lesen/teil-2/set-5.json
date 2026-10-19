@@ -1,0 +1,260 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-5",
+  "title": "Reisen und Urlaub",
+  "minutes": 8,
+  "instructions": "Lesen Sie die Texte und die Aufgaben 6 bis 10. Wo finden Sie Informationen? Kreuzen Sie an: a oder b.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q0a",
+          "label": "a",
+          "title": "Hotel Möwenblick",
+          "paragraphs": [
+            "Unser Hotel liegt am Meer: Sie gehen nur zwei Minuten bis zum Wasser. Ein Doppelzimmer kostet 95 Euro pro Nacht."
+          ]
+        },
+        {
+          "id": "q0b",
+          "label": "b",
+          "title": "Pension Tannenzapfen",
+          "paragraphs": [
+            "Ruhige Zimmer mit Frühstück in einem kleinen Dorf. Bis zum Meer fahren Sie 30 Kilometer mit dem Auto oder mit dem Bus."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Sie suchen ein Hotel für den Urlaub. Sie möchten vom Hotel zu Fuß zum Meer gehen.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q0a",
+              "quote": "Sie gehen nur zwei Minuten bis zum Wasser."
+            },
+            {
+              "text": "q0b",
+              "quote": "Bis zum Meer fahren Sie 30 Kilometer"
+            }
+          ],
+          "explanation": "Otelden denize yürüyerek gitmek istiyorsunuz. a ilanında „Sie gehen nur zwei Minuten bis zum Wasser“ yazıyor: Suya kadar sadece iki dakika yürüyorsunuz. Otel denizin yanında. b ilanında „Bis zum Meer fahren Sie 30 Kilometer“ yazıyor: Deniz 30 kilometre uzakta, araba veya otobüsle gidiyorsunuz. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q6a",
+          "label": "a",
+          "title": "Reisen mit Blauweg",
+          "paragraphs": [
+            "Am Sonntag fahren wir mit dem Bus in die Berge. Abfahrt: 8 Uhr am Bahnhof. Die Fahrt mit Mittagessen kostet 42 Euro."
+          ]
+        },
+        {
+          "id": "q6b",
+          "label": "b",
+          "title": "Busreisen Bussard",
+          "paragraphs": [
+            "Ein Tag in den Bergen: Am Sonntag um 7:30 Uhr fährt unser Bus am Marktplatz ab. Preis: 26 Euro. Bitte bringen Sie Ihr Essen selbst mit."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "zuordnung",
+          "prompt": "Sie möchten am Sonntag mit dem Bus in die Berge fahren. Die Fahrt darf 30 Euro kosten, nicht mehr.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q6b",
+              "quote": "Preis: 26 Euro."
+            },
+            {
+              "text": "q6a",
+              "quote": "Die Fahrt mit Mittagessen kostet 42 Euro."
+            }
+          ],
+          "explanation": "Otobüs gezisi en fazla 30 euro olmalı. b ilanında „Preis: 26 Euro“ yazıyor: Gezinin fiyatı 26 euro. Bu, 30 eurodan az. a ilanında „Die Fahrt mit Mittagessen kostet 42 Euro“ yazıyor: Öğle yemeğiyle birlikte gezi 42 euro. Bu çok pahalı. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q7a",
+          "label": "a",
+          "title": "Radtour am See",
+          "paragraphs": [
+            "Wir fahren zusammen 25 Kilometer um den See. Start: Samstag um 14 Uhr am Rathaus. Bitte bringen Sie Ihr Fahrrad mit."
+          ]
+        },
+        {
+          "id": "q7b",
+          "label": "b",
+          "title": "Radtour für alle",
+          "paragraphs": [
+            "Wir treffen uns am Samstag um 9 Uhr am Bahnhof. Wir fahren drei Stunden und sind um 12 Uhr zurück. Ein Fahrrad bekommen Sie auch bei uns."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 7,
+          "type": "zuordnung",
+          "prompt": "Sie arbeiten am Samstag bis 12 Uhr. Danach möchten Sie mit einer Gruppe Rad fahren.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q7a",
+              "quote": "Start: Samstag um 14 Uhr am Rathaus."
+            },
+            {
+              "text": "q7b",
+              "quote": "Wir treffen uns am Samstag um 9 Uhr am Bahnhof"
+            }
+          ],
+          "explanation": "Cumartesi saat 12'ye kadar çalışıyorsunuz, sonra bisiklet turu yapmak istiyorsunuz. a ilanında „Start: Samstag um 14 Uhr“ yazıyor: Tur cumartesi saat 14'te başlıyor. Bu, saat 12'den sonra. b ilanında „Samstag um 9 Uhr“ yazıyor: Tur saat 9'da başlıyor ve saat 12'de bitiyor. O saatte çalışıyorsunuz. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q8a",
+          "label": "a",
+          "title": "Schiff Kormoran",
+          "paragraphs": [
+            "Unser Schiff fährt jeden Tag um 10 und um 15 Uhr über den See. Die Fahrt dauert eine Stunde. Erwachsene 9 Euro, Kinder 4 Euro."
+          ]
+        },
+        {
+          "id": "q8b",
+          "label": "b",
+          "title": "Boot Libelle",
+          "paragraphs": [
+            "Am Samstag und Sonntag fahren wir um 11 und um 16 Uhr mit dem Boot über den See. Auf dem Boot gibt es Kaffee und Kuchen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 8,
+          "type": "zuordnung",
+          "prompt": "Sie haben am Montag frei. An diesem Tag möchten Sie mit einem Schiff über den See fahren.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q8a",
+              "quote": "jeden Tag um 10 und um 15 Uhr"
+            },
+            {
+              "text": "q8b",
+              "quote": "Am Samstag und Sonntag fahren wir"
+            }
+          ],
+          "explanation": "Pazartesi günü gemiyle gölde gezmek istiyorsunuz. a ilanında „jeden Tag um 10 und um 15 Uhr“ yazıyor: Gemi her gün (jeden Tag) saat 10'da ve 15'te kalkıyor. Pazartesi de buna dahil. b ilanında „Am Samstag und Sonntag fahren wir“ yazıyor: Tekne sadece cumartesi ve pazar gidiyor. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q9a",
+          "label": "a",
+          "title": "Camping Igelwiese",
+          "paragraphs": [
+            "Kleiner Campingplatz für Zelte am Fluss. Eine Nacht kostet 12 Euro. Sie können bei uns bis zu sieben Nächte bleiben."
+          ]
+        },
+        {
+          "id": "q9b",
+          "label": "b",
+          "title": "Campingplatz Heckenrose",
+          "paragraphs": [
+            "Ein großer Campingplatz am See: Bleiben Sie zwei Tage oder vier Wochen, wie Sie möchten. Es gibt auch einen kleinen Supermarkt."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 9,
+          "type": "zuordnung",
+          "prompt": "Sie möchten mit Ihrem Zelt zehn Nächte auf einem Campingplatz bleiben.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q9b",
+              "quote": "Bleiben Sie zwei Tage oder vier Wochen, wie Sie möchten."
+            },
+            {
+              "text": "q9a",
+              "quote": "bis zu sieben Nächte bleiben"
+            }
+          ],
+          "explanation": "Kamp alanında on gece kalmak istiyorsunuz. b ilanında „Bleiben Sie zwei Tage oder vier Wochen, wie Sie möchten“ yazıyor: İki gün veya dört hafta, istediğiniz kadar kalabilirsiniz. On gece buna uyuyor. a ilanında „bis zu sieben Nächte“ yazıyor: En fazla yedi gece kalabilirsiniz. On gece olmuyor. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q10a",
+          "label": "a",
+          "title": "Ferienwohnung Haselnuss",
+          "paragraphs": [
+            "Unsere Ferienwohnung hat zwei Zimmer, eine Küche und einen Garten. Für Babys haben wir ein Kinderbett und einen Kinderstuhl."
+          ]
+        },
+        {
+          "id": "q10b",
+          "label": "b",
+          "title": "Ferienwohnung am Bach",
+          "paragraphs": [
+            "Zwei Zimmer, Küche und Balkon in einem ruhigen Haus. Die Wohnung ist für Erwachsene. Kinder unter 12 Jahren können leider nicht kommen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 10,
+          "type": "zuordnung",
+          "prompt": "Sie möchten mit Ihrer Tochter in einer Ferienwohnung Urlaub machen. Ihre Tochter ist ein Jahr alt.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q10a",
+              "quote": "Für Babys haben wir ein Kinderbett und einen Kinderstuhl."
+            },
+            {
+              "text": "q10b",
+              "quote": "Kinder unter 12 Jahren können leider nicht kommen."
+            }
+          ],
+          "explanation": "Bir yaşındaki kızınızla tatil yapmak istiyorsunuz. a ilanında „Für Babys haben wir ein Kinderbett und einen Kinderstuhl“ yazıyor: Bebekler için çocuk yatağı ve çocuk sandalyesi var. b ilanında „Kinder unter 12 Jahren können leider nicht kommen“ yazıyor: 12 yaşından küçük çocuklar maalesef gelemez. Kızınız bir yaşında. Cevap a."
+        }
+      ]
+    }
+  ]
+}

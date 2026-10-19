@@ -1,0 +1,260 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-3",
+  "title": "Essen und Trinken",
+  "minutes": 8,
+  "instructions": "Lesen Sie die Texte und die Aufgaben 6 bis 10. Wo finden Sie Informationen? Kreuzen Sie an: a oder b.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q0a",
+          "label": "a",
+          "title": "Café Morgenrot",
+          "paragraphs": [
+            "Bei uns gibt es Brötchen, Eier, Käse und Marmelade. Frühstück: Montag bis Sonntag von 7 bis 11 Uhr. Am Nachmittag gibt es Kaffee und Kuchen."
+          ]
+        },
+        {
+          "id": "q0b",
+          "label": "b",
+          "title": "Café Zitronenbaum",
+          "paragraphs": [
+            "Frühstücken Sie lange! Am Samstag und Sonntag gibt es bei uns Frühstück von 9 bis 15 Uhr. Preis: 11,50 Euro. Sie finden uns in der Lindenallee 8."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Sie möchten am Sonntag um 12 Uhr mit Freunden frühstücken.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q0b",
+              "quote": "Frühstück von 9 bis 15 Uhr"
+            },
+            {
+              "text": "q0a",
+              "quote": "von 7 bis 11 Uhr"
+            }
+          ],
+          "explanation": "Pazar günü saat 12'de kahvaltı yapmak istiyorsunuz. b ilanında „Am Samstag und Sonntag … Frühstück von 9 bis 15 Uhr“ yazıyor: Cumartesi ve pazar kahvaltı saat 9 ile 15 arası. Saat 12 buna uyuyor. a ilanında „von 7 bis 11 Uhr“ yazıyor: Kahvaltı saat 11'de bitiyor. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q6a",
+          "label": "a",
+          "title": "Pizzeria Fortunato",
+          "paragraphs": [
+            "Wir bringen Ihre Pizza schnell nach Hause. Bestellen Sie von Dienstag bis Sonntag zwischen 17 und 23 Uhr. Telefon 33 91 08."
+          ]
+        },
+        {
+          "id": "q6b",
+          "label": "b",
+          "title": "Pizza-Taxi Rondo",
+          "paragraphs": [
+            "Pizza, Nudeln und Salat bringen wir zu Ihnen nach Hause. Sie können jeden Tag von 11 bis 23 Uhr bei uns bestellen. Telefon 72 40 66."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "zuordnung",
+          "prompt": "Es ist Montagabend. Sie möchten eine Pizza bestellen und zu Hause essen.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q6b",
+              "quote": "jeden Tag von 11 bis 23 Uhr"
+            },
+            {
+              "text": "q6a",
+              "quote": "von Dienstag bis Sonntag"
+            }
+          ],
+          "explanation": "Pazartesi akşamı pizza sipariş etmek istiyorsunuz. b ilanında „jeden Tag von 11 bis 23 Uhr“ yazıyor: Her gün (jeden Tag) saat 11 ile 23 arası sipariş verebilirsiniz. Pazartesi de buna dahil. a ilanında „von Dienstag bis Sonntag“ yazıyor: Salıdan pazara. Pazartesi yok. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q7a",
+          "label": "a",
+          "title": "Kochschule Paprika",
+          "paragraphs": [
+            "Italienisch kochen am Freitag um 18 Uhr: Wir machen Nudeln und Fisch. Im Kurs sind nur noch zwei Plätze frei. Preis: 35 Euro."
+          ]
+        },
+        {
+          "id": "q7b",
+          "label": "b",
+          "title": "Kochstudio Salbei",
+          "paragraphs": [
+            "Zusammen kochen macht Spaß! Unsere Kochkurse sind für Gruppen von vier bis zehn Personen. Wir kochen Suppe, Fleisch und einen Kuchen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 7,
+          "type": "zuordnung",
+          "prompt": "Sie möchten mit drei Freundinnen zusammen einen Kochkurs machen.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q7b",
+              "quote": "für Gruppen von vier bis zehn Personen"
+            },
+            {
+              "text": "q7a",
+              "quote": "nur noch zwei Plätze frei"
+            }
+          ],
+          "explanation": "Siz ve üç arkadaşınız, yani toplam dört kişisiniz. b ilanında „für Gruppen von vier bis zehn Personen“ yazıyor: Kurslar dört ile on kişilik gruplar için. Dört kişi buna uyuyor. a ilanında „nur noch zwei Plätze frei“ yazıyor: Kursta sadece iki boş yer (Platz) kaldı. Dört kişi için yer yok. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q8a",
+          "label": "a",
+          "title": "Café Gleis 1",
+          "paragraphs": [
+            "Brötchen, Würstchen und Suppe. Wir sind im Bahnhof, direkt neben Gleis 1. Geöffnet jeden Tag von 5 bis 22 Uhr."
+          ]
+        },
+        {
+          "id": "q8b",
+          "label": "b",
+          "title": "Café Pusteblume",
+          "paragraphs": [
+            "Brötchen, Salat und Suppe für wenig Geld. Sie finden uns am Marktplatz. Vom Bahnhof gehen Sie 20 Minuten zu Fuß."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 8,
+          "type": "zuordnung",
+          "prompt": "Sie warten am Bahnhof auf Ihren Zug. Sie möchten dort noch schnell etwas essen.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q8a",
+              "quote": "Wir sind im Bahnhof, direkt neben Gleis 1."
+            },
+            {
+              "text": "q8b",
+              "quote": "Vom Bahnhof gehen Sie 20 Minuten zu Fuß."
+            }
+          ],
+          "explanation": "Garda (Bahnhof) trenizi bekliyorsunuz ve orada hızlıca bir şey yemek istiyorsunuz. a ilanında „Wir sind im Bahnhof, direkt neben Gleis 1“ yazıyor: Kafe garın içinde, 1. peronun (Gleis) hemen yanında. b ilanında „Vom Bahnhof gehen Sie 20 Minuten zu Fuß“ yazıyor: Kafe pazar meydanında, gardan yürüyerek 20 dakika. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q9a",
+          "label": "a",
+          "title": "Kaffeehaus Zimtstern",
+          "paragraphs": [
+            "Kaffee, Tee und frische Brötchen. Wir öffnen von Montag bis Freitag schon um 6:30 Uhr, am Samstag um 8 Uhr."
+          ]
+        },
+        {
+          "id": "q9b",
+          "label": "b",
+          "title": "Café Lavendel",
+          "paragraphs": [
+            "Kaffee, Tee und Kuchen in unserem schönen Garten. Montag bis Freitag von 10 bis 19 Uhr, am Wochenende von 11 bis 18 Uhr."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 9,
+          "type": "zuordnung",
+          "prompt": "Sie möchten am Dienstag vor der Arbeit, um 7:30 Uhr, einen Kaffee trinken.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q9a",
+              "quote": "von Montag bis Freitag schon um 6:30 Uhr"
+            },
+            {
+              "text": "q9b",
+              "quote": "Montag bis Freitag von 10 bis 19 Uhr"
+            }
+          ],
+          "explanation": "Salı günü saat 7:30'da kahve içmek istiyorsunuz. a ilanında „von Montag bis Freitag schon um 6:30 Uhr“ yazıyor: Kafe pazartesiden cumaya saat 6:30'da açılıyor. Saat 7:30'da açık. b ilanında „Montag bis Freitag von 10 bis 19 Uhr“ yazıyor: Kafe hafta içi saat 10'da açılıyor. Saat 7:30'da henüz kapalı. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q10a",
+          "label": "a",
+          "title": "Gasthaus Eichhorn",
+          "paragraphs": [
+            "Mittagessen von Montag bis Freitag, 11:30 bis 14 Uhr: Suppe, Fleisch mit Kartoffeln und ein Getränk für 14,90 Euro."
+          ]
+        },
+        {
+          "id": "q10b",
+          "label": "b",
+          "title": "Restaurant Olivia",
+          "paragraphs": [
+            "Jeden Mittag gibt es ein Essen mit Reis oder Nudeln für 8,50 Euro. Das Wasser kostet nichts. Wir sind in der Hauptstraße 21."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 10,
+          "type": "zuordnung",
+          "prompt": "Sie möchten mittags im Restaurant essen. Das Essen darf nicht mehr als 10 Euro kosten.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q10b",
+              "quote": "ein Essen mit Reis oder Nudeln für 8,50 Euro"
+            },
+            {
+              "text": "q10a",
+              "quote": "für 14,90 Euro"
+            }
+          ],
+          "explanation": "Öğle yemeği 10 eurodan pahalı olmamalı. b ilanında „ein Essen mit Reis oder Nudeln für 8,50 Euro“ yazıyor: Pilavlı veya makarnalı yemek 8,50 euro. Bu, 10 eurodan az. a ilanında „für 14,90 Euro“ yazıyor: Öğle yemeği 14,90 euro. Bu çok pahalı. Cevap b."
+        }
+      ]
+    }
+  ]
+}

@@ -11,6 +11,8 @@ const only = process.argv[2] || '';
 const TYPES = {
   'richtig-falsch': () => ['richtig', 'falsch'],
   'ja-nein': () => ['ja', 'nein'],
+  // TestDaF: Ja / Nein / Text sagt dazu nichts
+  'ja-nein-nichts': () => ['ja', 'nein', 'nichts'],
   abc: question => Object.keys(question.options || {}),
   zuordnung: (question, group) => [...group.texts.filter(text => text.label).map(text => text.label), ...(group.none === false ? [] : [group.none || '0'])]
 };
@@ -68,7 +70,7 @@ for (const exam of data.exams) for (const level of exam.levels || []) for (const
         const spans = {};
         for (const question of group.questions || []) {
           const label = `question ${question.number}`;
-          numbers.push(question.number);
+          if (!question.example) numbers.push(question.number);
           questions += question.example ? 0 : 1;
           if (!TYPES[question.type]) { fail(`${label}: unknown type ${question.type}`); continue; }
           if (question.type === 'zuordnung' && group.texts.filter(text => text.label).length < 2) fail(`${where}: zuordnung needs labelled texts to choose from`);
@@ -101,9 +103,10 @@ for (const exam of data.exams) for (const level of exam.levels || []) for (const
       const textIds = set.groups.flatMap(group => (group.texts || []).map(text => text.id));
       if (textIds.length !== new Set(textIds).size) fail('a text id appears in more than one group');
       const examples = set.groups.flatMap(group => group.questions).filter(question => question.example);
-      if (examples.length > 1) fail('more than one example');
-      if (examples.length && examples[0].number !== 0) fail('the example must be number 0');
-      const real = numbers.filter(n => n !== 0);
+      // One example numbered 0, or two numbered "01" and "02" (TestDaF).
+      const exampleNumbers = examples.map(question => String(question.number)).join();
+      if (examples.length && !['0', '01', '01,02'].includes(exampleNumbers)) fail(`examples must be 0, or "01" and "02" (found ${exampleNumbers})`);
+      const real = numbers;
       if (real.some((n, i) => i && n !== real[i - 1] + 1)) fail(`numbers are not consecutive: ${real.join(',')}`);
       console.log(`${path.padEnd(48)} ${String(real.length).padStart(2)} Aufgaben | Lösungen ${Object.entries(answers).sort().map(([k, v]) => `${k}×${v}`).join(' ')} | Wörter ${report.join(' / ')}`);
     }

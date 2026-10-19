@@ -14,7 +14,8 @@
   // Answer words stay German in every interface language, as on the exam paper.
   const FIXED_OPTIONS = {
     'richtig-falsch': [['richtig', 'Richtig'], ['falsch', 'Falsch']],
-    'ja-nein': [['ja', 'Ja'], ['nein', 'Nein']]
+    'ja-nein': [['ja', 'Ja'], ['nein', 'Nein']],
+    'ja-nein-nichts': [['ja', 'Ja'], ['nein', 'Nein'], ['nichts', 'Text sagt dazu nichts']]
   };
 
   const files = {};   // path -> Promise of the set

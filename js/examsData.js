@@ -764,6 +764,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Sommerschulen für Studierende' },
                   { set: 'set-2', title: 'Beratung an der Hochschule' },
+                  { set: 'set-3', title: 'Stipendien und Förderprogramme' },
+                  { set: 'set-4', title: 'Angebote der Universitätsbibliothek' },
+                  { set: 'set-5', title: 'Praktika in der Forschung' },
                 ]
               }, // Aufgabe 1
               {
@@ -771,6 +774,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Grüne Dächer gegen Hitze' },
                   { set: 'set-2', title: 'Wie wir Gesichter erkennen' },
+                  { set: 'set-3', title: 'Wenn Gletscher Wasser speichern' },
+                  { set: 'set-4', title: 'Die Mathematik des Vogelschwarms' },
+                  { set: 'set-5', title: 'Warum wir uns verhören' },
                 ]
               }, // Aufgabe 2
               {
@@ -778,6 +784,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Bakterien als Baustoff' },
                   { set: 'set-2', title: 'Wenn Sprachen verstummen' },
+                  { set: 'set-3', title: 'Das Gedächtnis der Böden' },
+                  { set: 'set-4', title: 'Placebo ohne Täuschung' },
+                  { set: 'set-5', title: 'Wie Städte nachts leuchten' },
                 ]
               }, // Aufgabe 3
             ] },

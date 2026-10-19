@@ -1,0 +1,146 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-5",
+  "title": "Unterwegs",
+  "minutes": 9,
+  "instructions": "Lesen Sie die Texte und die Aufgaben 11 bis 15. Sind die Aussagen richtig oder falsch? Kreuzen Sie an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "bus",
+          "title": "Haltestelle Mühlbachweg – Linie 7",
+          "paragraphs": [
+            "Von Montag bis Freitag fährt der Bus alle 20 Minuten. Am Wochenende kommt er nur jede Stunde."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Am Sonntag fährt der Bus einmal in der Stunde.",
+          "answer": "richtig",
+          "evidence": [{ "text": "bus", "quote": "Am Wochenende kommt er nur jede Stunde." }],
+          "explanation": "Metin: „Am Wochenende kommt er nur jede Stunde.“ (hafta sonu otobüs sadece saatte bir geliyor). Pazar (Sonntag) hafta sonudur. „jede Stunde“ ve „einmal in der Stunde“ aynı anlamda: saatte bir. Yani ifade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "gleis",
+          "title": "Bahnhof, Gleis 3",
+          "paragraphs": [
+            "Achtung! Der Zug nach Tannwiesel fährt heute nicht um 9:15 Uhr. Er fährt 15 Minuten später."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 11,
+          "type": "richtig-falsch",
+          "prompt": "Heute fährt der Zug nach Tannwiesel um 9:30 Uhr ab.",
+          "answer": "richtig",
+          "evidence": [{ "text": "gleis", "quote": "Der Zug nach Tannwiesel fährt heute nicht um 9:15 Uhr." }, { "text": "gleis", "quote": "Er fährt 15 Minuten später." }],
+          "explanation": "Metin: „fährt heute nicht um 9:15 Uhr“ (bugün 9:15'te kalkmıyor) ve „Er fährt 15 Minuten später.“ (15 dakika sonra kalkıyor). 9:15 + 15 dakika = 9:30. Yani tren bugün 9:30'da kalkıyor. İfade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "hotel",
+          "title": "Hotel Sternwiese – Frühstück",
+          "paragraphs": [
+            "Montag bis Freitag: 6:30 bis 10 Uhr. Samstag und Sonntag: 7:30 bis 11 Uhr. Das Frühstück ist im Restaurant im ersten Stock."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 12,
+          "type": "richtig-falsch",
+          "prompt": "Am Sonntag kann man im Hotel schon um 7 Uhr frühstücken.",
+          "answer": "falsch",
+          "evidence": [{ "text": "hotel", "quote": "Samstag und Sonntag: 7:30 bis 11 Uhr." }],
+          "explanation": "Saat 6:30 metinde var, ama pazartesi–cuma için. Metin: „Samstag und Sonntag: 7:30 bis 11 Uhr.“ (cumartesi ve pazar 7:30'dan 11'e). Yani pazar günü kahvaltı 7'de değil, 7:30'da başlıyor. İfade yanlış."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "museum",
+          "title": "Stadtmuseum",
+          "paragraphs": [
+            "Eintritt: Erwachsene 6 Euro, Kinder bis 14 Jahre 2 Euro. Dienstag bis Sonntag 10 bis 18 Uhr geöffnet, Montag geschlossen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 13,
+          "type": "richtig-falsch",
+          "prompt": "Ein Junge von 9 Jahren bezahlt im Museum 6 Euro.",
+          "answer": "falsch",
+          "evidence": [{ "text": "museum", "quote": "Kinder bis 14 Jahre 2 Euro" }],
+          "explanation": "6 euro metinde var, ama yetişkinler (Erwachsene) için. Metin: „Kinder bis 14 Jahre 2 Euro“ (14 yaşına kadar çocuklar 2 euro). 9 yaşında bir çocuk 6 değil, 2 euro ödüyor. İfade yanlış."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "information",
+          "title": "Touristeninformation am Marktplatz",
+          "paragraphs": [
+            "Heute ist unser Büro geschlossen. Stadtpläne und Informationen bekommen Sie heute im Rathaus, gleich am Eingang."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 14,
+          "type": "richtig-falsch",
+          "prompt": "Einen Plan von der Stadt gibt es heute im Rathaus.",
+          "answer": "richtig",
+          "evidence": [{ "text": "information", "quote": "Stadtpläne und Informationen bekommen Sie heute im Rathaus" }],
+          "explanation": "Turist danışma bürosu bugün kapalı. Metin: „Stadtpläne und Informationen bekommen Sie heute im Rathaus“ (şehir planlarını ve bilgileri bugün belediye binasında alırsınız). „Stadtplan“ = „Plan von der Stadt“ (şehir planı). Yani ifade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "parkplatz",
+          "title": "Parkplatz am Bahnhof",
+          "paragraphs": [
+            "Eine Stunde: 1,50 Euro. Ein Tag: 8 Euro. Von 20 bis 7 Uhr bezahlen Sie nichts."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 15,
+          "type": "richtig-falsch",
+          "prompt": "Um 22 Uhr kostet der Parkplatz Geld.",
+          "answer": "falsch",
+          "evidence": [{ "text": "parkplatz", "quote": "Von 20 bis 7 Uhr bezahlen Sie nichts." }],
+          "explanation": "Metin: „Von 20 bis 7 Uhr bezahlen Sie nichts.“ (saat 20'den 7'ye hiçbir şey ödemezsiniz). Saat 22 bu zamanın içinde. Yani saat 22'de otopark para tutmuyor, ücretsiz. İfade yanlış."
+        }
+      ]
+    }
+  ]
+}

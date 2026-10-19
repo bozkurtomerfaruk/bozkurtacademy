@@ -1,0 +1,146 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-2",
+  "title": "Schule und Arztpraxis",
+  "minutes": 9,
+  "instructions": "Lesen Sie die Texte und die Aufgaben 11 bis 15. Sind die Aussagen richtig oder falsch? Kreuzen Sie an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "praxis-bruennich",
+          "title": "Praxis Dr. Helga Brünnich",
+          "paragraphs": [
+            "Sprechzeiten: Montag, Dienstag und Donnerstag 8 bis 12 Uhr und 15 bis 18 Uhr. Mittwoch und Freitag 8 bis 12 Uhr."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Am Mittwochnachmittag ist die Praxis geschlossen.",
+          "answer": "richtig",
+          "evidence": [{ "text": "praxis-bruennich", "quote": "Mittwoch und Freitag 8 bis 12 Uhr." }],
+          "explanation": "Metin: „Mittwoch und Freitag 8 bis 12 Uhr.“ (çarşamba ve cuma 8'den 12'ye). Çarşamba öğleden sonra için saat yok. Yani muayenehane çarşamba öğleden sonra kapalı."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "wortwerk",
+          "title": "Sprachschule Wortwerk",
+          "paragraphs": [
+            "Achtung! Der Deutschkurs A1 ist diese Woche nicht in Raum 3. Wir sind in Raum 8 im zweiten Stock."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 11,
+          "type": "richtig-falsch",
+          "prompt": "Diese Woche lernen die A1-Schüler in Raum 8.",
+          "answer": "richtig",
+          "evidence": [{ "text": "wortwerk", "quote": "Wir sind in Raum 8 im zweiten Stock." }],
+          "explanation": "A1 kursu bu hafta „nicht in Raum 3“ (3 numaralı odada değil). Metin: „Wir sind in Raum 8 im zweiten Stock.“ (ikinci kattaki 8 numaralı odadayız). Yani öğrenciler bu hafta 8 numaralı odada."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "grundschule",
+          "title": "Grundschule am Lindenweg",
+          "paragraphs": [
+            "Liebe Eltern, die Weihnachtsferien sind vom 22. Dezember bis 5. Januar. Am Dienstag, 6. Januar, beginnt die Schule wieder um 8 Uhr."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 12,
+          "type": "richtig-falsch",
+          "prompt": "Die Kinder haben am 6. Januar noch frei.",
+          "answer": "falsch",
+          "evidence": [{ "text": "grundschule", "quote": "Am Dienstag, 6. Januar, beginnt die Schule wieder um 8 Uhr." }],
+          "explanation": "Tatil (Ferien) 5 Ocak'ta bitiyor. Metin: „Am Dienstag, 6. Januar, beginnt die Schule wieder“ (6 Ocak salı okul yeniden başlıyor). Yani 6 Ocak'ta çocuklar okula gidiyor, tatilde (frei) değil."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "praxis-ferrandi",
+          "title": "Praxis Dr. Lukas Ferrandi",
+          "paragraphs": [
+            "Liebe Patienten, Herr Dr. Ferrandi ist vom 4. bis 15. Mai im Urlaub. Bitte gehen Sie in dieser Zeit zu Frau Dr. Paulsen, Gartenweg 9."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 13,
+          "type": "richtig-falsch",
+          "prompt": "Am 10. Mai ist Dr. Ferrandi nicht in der Praxis.",
+          "answer": "richtig",
+          "evidence": [{ "text": "praxis-ferrandi", "quote": "Herr Dr. Ferrandi ist vom 4. bis 15. Mai im Urlaub." }],
+          "explanation": "Metin: „Herr Dr. Ferrandi ist vom 4. bis 15. Mai im Urlaub.“ (Dr. Ferrandi 4–15 Mayıs arası tatilde). 10 Mayıs bu tarihlerin içinde. Yani o gün doktor muayenehanede değil."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "lingoland",
+          "title": "Sprachschule Lingoland",
+          "paragraphs": [
+            "Anmeldung für neue Kurse: Montag bis Donnerstag 10 bis 17 Uhr im Büro im Erdgeschoss. Am Freitag ist das Büro zu. Sie können auch eine E-Mail schreiben."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 14,
+          "type": "richtig-falsch",
+          "prompt": "Am Freitag kann man im Büro einen Kurs buchen.",
+          "answer": "falsch",
+          "evidence": [{ "text": "lingoland", "quote": "Am Freitag ist das Büro zu." }],
+          "explanation": "Kursa kayıt (Anmeldung) ofiste „Montag bis Donnerstag“ (pazartesiden perşembeye). Metin: „Am Freitag ist das Büro zu.“ (cuma günü ofis kapalı). Yani cuma günü ofiste kurs alınamaz."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "kinderarzt",
+          "title": "Kinderarztpraxis Dr. Merve Aydoğan-Lenz",
+          "paragraphs": [
+            "Liebe Eltern, bitte rufen Sie vor Ihrem Besuch an und machen Sie einen Termin. Telefon: 0581 34 70. Ohne Termin warten Sie oft lange."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 15,
+          "type": "richtig-falsch",
+          "prompt": "Die Eltern sollen zuerst telefonieren.",
+          "answer": "richtig",
+          "evidence": [{ "text": "kinderarzt", "quote": "bitte rufen Sie vor Ihrem Besuch an und machen Sie einen Termin" }],
+          "explanation": "Metin: „bitte rufen Sie vor Ihrem Besuch an“ (lütfen gelmeden önce arayın) ve „machen Sie einen Termin“ (randevu alın). „anrufen“ ve „telefonieren“ aynı anlamda: telefon etmek. Yani ebeveynler önce telefon etmeli."
+        }
+      ]
+    }
+  ]
+}

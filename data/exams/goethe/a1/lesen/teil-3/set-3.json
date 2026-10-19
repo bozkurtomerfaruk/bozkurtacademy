@@ -1,0 +1,146 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-3",
+  "title": "Supermarkt und Restaurant",
+  "minutes": 9,
+  "instructions": "Lesen Sie die Texte und die Aufgaben 11 bis 15. Sind die Aussagen richtig oder falsch? Kreuzen Sie an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "cafe",
+          "title": "Café Wolkenrand",
+          "paragraphs": [
+            "Unser Angebot von 14 bis 17 Uhr: ein Stück Kuchen und eine Tasse Kaffee zusammen für 4 Euro."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Am Nachmittag bezahlt man für Kaffee und Kuchen 4 Euro.",
+          "answer": "richtig",
+          "evidence": [{ "text": "cafe", "quote": "ein Stück Kuchen und eine Tasse Kaffee zusammen für 4 Euro" }],
+          "explanation": "Metin: „von 14 bis 17 Uhr“ (14'ten 17'ye) ve „ein Stück Kuchen und eine Tasse Kaffee zusammen für 4 Euro“ (bir dilim pasta ve bir fincan kahve birlikte 4 euro). 14–17 arası öğleden sonradır (Nachmittag). Yani ifade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "kasse",
+          "title": "Supermarkt Krämerkorb",
+          "paragraphs": [
+            "Liebe Kunden, Kasse 4 ist heute kaputt. Bitte gehen Sie zu Kasse 1, 2 oder 3. Vielen Dank!"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 11,
+          "type": "richtig-falsch",
+          "prompt": "An Kasse 4 kann man heute nicht bezahlen.",
+          "answer": "richtig",
+          "evidence": [{ "text": "kasse", "quote": "Kasse 4 ist heute kaputt." }],
+          "explanation": "Metin: „Kasse 4 ist heute kaputt.“ (4 numaralı kasa bugün bozuk). Metin müşterilerden 1, 2 veya 3 numaralı kasaya gitmelerini rica ediyor („Bitte gehen Sie …“). Bozuk kasada ödeme yapılamaz (nicht bezahlen). Yani ifade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "markt",
+          "title": "Obst und Gemüse von Familie Pohlmann",
+          "paragraphs": [
+            "Sie finden uns jeden Donnerstag und jeden Samstag auf dem Marktplatz, von 7 bis 13 Uhr. Alles kommt aus unserem Garten."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 12,
+          "type": "richtig-falsch",
+          "prompt": "Familie Pohlmann verkauft zweimal in der Woche auf dem Markt.",
+          "answer": "richtig",
+          "evidence": [{ "text": "markt", "quote": "jeden Donnerstag und jeden Samstag auf dem Marktplatz" }],
+          "explanation": "Metin: „jeden Donnerstag und jeden Samstag auf dem Marktplatz“ (her perşembe ve her cumartesi pazar yerinde). Perşembe ve cumartesi, haftada iki gün demek: „zweimal in der Woche“ (haftada iki kez). Yani ifade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "baeckerei",
+          "title": "Bäckerei Ofenglück",
+          "paragraphs": [
+            "Am Sonntag von 7 bis 11 Uhr verkaufen wir nur Brötchen und Kuchen. Brot gibt es von Montag bis Samstag."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 13,
+          "type": "richtig-falsch",
+          "prompt": "Am Sonntag kann man in der Bäckerei Brot kaufen.",
+          "answer": "falsch",
+          "evidence": [{ "text": "baeckerei", "quote": "Brot gibt es von Montag bis Samstag." }],
+          "explanation": "Pazar günü fırın sadece „Brötchen und Kuchen“ (küçük ekmek ve pasta) satıyor. Metin: „Brot gibt es von Montag bis Samstag.“ (ekmek pazartesiden cumartesiye var). Yani pazar günü ekmek (Brot) alınamaz. İfade yanlış."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "restaurant",
+          "title": "Restaurant Zur Mondlaterne",
+          "paragraphs": [
+            "Mittagessen von Montag bis Freitag: Suppe und Fisch oder Fleisch für 9,50 Euro. Mit Eis kostet das Essen 11 Euro."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 14,
+          "type": "richtig-falsch",
+          "prompt": "Das Mittagessen mit Eis kostet 9,50 Euro.",
+          "answer": "falsch",
+          "evidence": [{ "text": "restaurant", "quote": "Mit Eis kostet das Essen 11 Euro." }],
+          "explanation": "9,50 euro metinde var, ama dondurmasız öğle yemeği için (çorba ve balık ya da et). Metin: „Mit Eis kostet das Essen 11 Euro.“ (dondurmayla yemek 11 euro). Yani dondurmalı öğle yemeği 9,50 değil, 11 euro."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "supermarkt",
+          "title": "Supermarkt Frischkorb – neue Öffnungszeiten",
+          "paragraphs": [
+            "Im Moment öffnen wir um 8 Uhr. Ab 1. März sind wir von Montag bis Samstag schon ab 7 Uhr für Sie da."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 15,
+          "type": "richtig-falsch",
+          "prompt": "Im März macht der Supermarkt eine Stunde früher auf.",
+          "answer": "richtig",
+          "evidence": [{ "text": "supermarkt", "quote": "Im Moment öffnen wir um 8 Uhr." }, { "text": "supermarkt", "quote": "Ab 1. März sind wir von Montag bis Samstag schon ab 7 Uhr für Sie da." }],
+          "explanation": "Metin: „Im Moment öffnen wir um 8 Uhr.“ (şu anda saat 8'de açıyoruz). „Ab 1. März … schon ab 7 Uhr“ (1 Mart'tan itibaren saat 7'den itibaren). 8 yerine 7: bir saat erken. „früher aufmachen“ = daha erken açmak. Yani ifade doğru."
+        }
+      ]
+    }
+  ]
+}

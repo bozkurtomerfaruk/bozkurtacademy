@@ -5,7 +5,8 @@
 ## 2026-10-19 · Lesen tamamlama: 8 aşama (Goethe C1 → TestDaF kâğıt → TestDaF dijital → telc B1, A1, A2, B2, C1 Hochschule)
 
 ### Kaldığım yer
-- Aşama 1, Goethe C1: pilotun 8 seti yazıldı ve `claude/c1-lesen` dalında. Sırada inceleme (Teil 1+2, Teil 3+4), kör çözüm, testler (tests/exams/c1.mjs, player.mjs) ve main'e birleştirme var. Ardından set 3–5.
+- Aşama 1, Goethe C1: Pilot main'de (b615c20). Set 3–5 yazılıyor (dal `claude/c1-full`; anahtarlar scratchpad'de c1keys2.txt). Sırada inceleme, kör çözüm, test ve birleştirme var.
+- Aşama 2, TestDaF kâğıt: Oynatıcı eklentisi (ja/nein/nichts, iki örnek "01"/"02") ve test hazır; dal `claude/testdaf-papier`, çalışma ağacı /tmp/wt-testdaf. Pilot yazılıyor. C1 birleşince bu dal main'e göre yeniden düzenlenecek; format tablosu da o zaman buraya eklenecek.
 - Güvenlik için 17:18 UTC'ye bir devam mesajı zamanlandı.
 
 ### Ekteki TestDaF modelltestleri

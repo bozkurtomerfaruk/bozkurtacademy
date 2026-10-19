@@ -17,7 +17,7 @@
           "title": "E-Mail",
           "paragraphs": [
             "Hallo Ingvild,",
-            "hast du am Donnerstag Zeit? Ich möchte mit dir in die Stadt gehen, denn ich brauche neue Schuhe. Wir können uns um 15 Uhr vor dem Café „Sonnenblume“ am Marktplatz treffen. Du kannst mit der U-Bahn fahren, Linie 4 bis zur Haltestelle „Rathaus“. Dann gehst du links und dann geradeaus. Nach fünf Minuten bist du am Marktplatz. Später können wir noch ein Eis essen.",
+            "hast du am Donnerstag Zeit? Ich möchte mit dir in die Stadt gehen, denn ich brauche neue Schuhe. Wir können uns um 15 Uhr vor dem Café „Sonnenblume“ am Marktplatz treffen. Du kannst mit der U-Bahn fahren, Linie 4 bis zur Haltestelle „Rathaus“. Dann gehst du nach links und dann geradeaus. Nach fünf Minuten bist du am Marktplatz. Später können wir noch ein Eis essen.",
             "Bis Donnerstag! Dario"
           ]
         }
@@ -45,8 +45,8 @@
           "type": "richtig-falsch",
           "prompt": "Ingvild geht an der Haltestelle nach rechts.",
           "answer": "falsch",
-          "evidence": [{ "text": "email", "quote": "Dann gehst du links und dann geradeaus." }],
-          "explanation": "Dario yazıyor: „Dann gehst du links“ (Sonra sola gidiyorsun). İfadede sağ („rechts“) var. Yön yanlış, ifade yanlış."
+          "evidence": [{ "text": "email", "quote": "Dann gehst du nach links und dann geradeaus." }],
+          "explanation": "Dario yazıyor: „Dann gehst du nach links“ (Sonra sola gidiyorsun). İfadede sağ („rechts“) var. Yön yanlış, ifade yanlış."
         }
       ]
     },
@@ -73,7 +73,7 @@
         {
           "number": 4,
           "type": "richtig-falsch",
-          "prompt": "Ingvild soll wieder zum Café „Sonnenblume“ kommen.",
+          "prompt": "Ingvild und Dario treffen sich am Café „Sonnenblume“.",
           "answer": "richtig",
           "evidence": [{ "text": "sms", "quote": "Der Ort ist gleich: vor dem Café am Marktplatz." }],
           "explanation": "Dario yazıyor: „Der Ort ist gleich“ (Yer aynı): Marktplatz'taki kafenin önü. E-postada bu kafenin adı „Sonnenblume“. Sadece saat değişti, yer değişmedi. İfade doğru."

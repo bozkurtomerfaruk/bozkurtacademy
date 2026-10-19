@@ -1,0 +1,135 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-1",
+  "title": "Eine Wohnung finden",
+  "minutes": 10,
+  "context": "Mehrere Personen suchen in der Zeitung „Lindbrücker Wochenblatt“ Hilfe rund ums Wohnen.",
+  "instructions": "Lesen Sie die Situationen 26 bis 30 und die Anzeigen a bis h. Welche Anzeige passt zu welcher Situation? Sie können jede Anzeige nur einmal wählen. Die Anzeige aus dem Beispiel können Sie nicht mehr wählen. Für eine Situation gibt es keine passende Anzeige. In diesem Fall wählen Sie X.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": "x",
+      "texts": [
+        {
+          "id": "a",
+          "label": "a",
+          "title": "Umzugsteam Flinke Kiste",
+          "paragraphs": [
+            "Sie ziehen um? Wir tragen Ihre Möbel und Kartons, bauen Schränke und Betten ab und in der neuen Wohnung wieder auf. Mit unserem Lkw bringen wir alles sicher an Ihre neue Adresse – auch in den 5. Stock ohne Aufzug. Auch samstags. Kostenloses Angebot nach einem Besuch bei Ihnen."
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "title": "Autovermietung Radlos",
+          "paragraphs": [
+            "Transporter für Ihren Umzug ab 49 Euro pro Tag! Decken, Gurte und Sackkarre bekommen Sie bei uns kostenlos dazu. Für unsere Transporter reicht der normale Führerschein (Klasse B). Abholung und Rückgabe direkt am Bahnhof Lindbrück, täglich von 7 bis 20 Uhr."
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "title": "Zimmer in netter WG frei",
+          "paragraphs": [
+            "Wir sind drei Azubis (19–23 Jahre) und suchen ab 1. Oktober eine Mitbewohnerin oder einen Mitbewohner. Das Zimmer hat 14 m² und kostet 320 Euro warm. Küche und Bad teilen wir. Zur Berufsschule sind es zehn Minuten mit dem Fahrrad. Meldet euch per SMS: 0176 4410 2283."
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "title": "Mieterhilfe Lindbrück e. V.",
+          "paragraphs": [
+            "Ihr Vermieter will die Miete erhöhen? Die Nebenkostenabrechnung kommt Ihnen zu hoch vor? Wir prüfen Ihre Unterlagen und sagen Ihnen, ob Sie wirklich zahlen müssen. Mitgliedsbeitrag 6 Euro im Monat. Beratung dienstags und donnerstags von 17 bis 19 Uhr, auch auf Türkisch, Polnisch und Arabisch."
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "title": "Nachbarschaftshilfe Kanalbrücke",
+          "paragraphs": [
+            "Die Lampe hängt noch nicht, das Regal steht schief? Unsere Ehrenamtlichen helfen Ihnen kostenlos bei kleinen Arbeiten in der Wohnung: Lampen anschließen, Regale und Bilder aufhängen, Vorhänge anbringen. Umzüge können wir leider nicht übernehmen. Anruf genügt: Mo–Fr 9–12 Uhr."
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "title": "3-Zimmer-Wohnung Am Kanal",
+          "paragraphs": [
+            "Helle Wohnung, 78 m², 2. Stock mit Aufzug, Balkon. Grundschule und Kita liegen nur fünf Minuten zu Fuß entfernt, ein Spielplatz ist direkt hinter dem Haus. Kaltmiete 690 Euro plus 180 Euro Nebenkosten. Frei ab 1. Dezember. Hausverwaltung Ostermann, Tel. 05431 77 820."
+          ]
+        },
+        {
+          "id": "g",
+          "label": "g",
+          "title": "Kleine Wohnung in Wehrheide",
+          "paragraphs": [
+            "Gemütliche 2-Zimmer-Wohnung, 46 m², Erdgeschoss, ideal für eine Person oder ein Paar. Neue Küche, kleiner Garten. Warmmiete 510 Euro. Wehrheide liegt acht Kilometer von Lindbrück entfernt, der Bus fährt alle 30 Minuten, nachts nicht. Besichtigung am Samstag, Tel. 05431 96 115."
+          ]
+        },
+        {
+          "id": "h",
+          "label": "h",
+          "title": "Sozialkaufhaus Zweite Chance",
+          "paragraphs": [
+            "Gebrauchte Möbel, Lampen, Geschirr und Küchengeräte zu kleinen Preisen – alles geprüft und sauber. Was Sie bei uns kaufen, bringen wir Ihnen für 15 Euro nach Hause, in ganz Lindbrück. Geöffnet Montag bis Samstag von 10 bis 18 Uhr, Hafenstraße 3."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Jovan beginnt im Herbst eine Ausbildung in Lindbrück. Er sucht ein günstiges Zimmer und möchte gern mit anderen jungen Leuten zusammenwohnen.",
+          "answer": "c",
+          "evidence": [{ "text": "c", "quote": "Wir sind drei Azubis (19–23 Jahre) und suchen ab 1. Oktober eine Mitbewohnerin oder einen Mitbewohner." }],
+          "explanation": "c ilanında üç genç çırak (Azubis) 1 Ekim'den itibaren ev arkadaşı arıyor; oda 320 Euro. Jovan sonbaharda meslek eğitimine başlıyor ve gençlerle birlikte oturmak istiyor. Bu ilan örnekte kullanıldığı için başka bir durum için seçilemez."
+        },
+        {
+          "number": 26,
+          "type": "zuordnung",
+          "prompt": "Oksana und ihr Mann haben zwei kleine Kinder und brauchen mehr Platz. Die neue Wohnung soll so liegen, dass die Kinder ohne Bus zur Schule kommen.",
+          "answer": "f",
+          "evidence": [{ "text": "f", "quote": "Grundschule und Kita liegen nur fünf Minuten zu Fuß entfernt" }],
+          "explanation": "f ilanındaki daire 3 odalı ve 78 m²; „Grundschule und Kita liegen nur fünf Minuten zu Fuß entfernt“, yani çocuklar okula otobüssüz, yürüyerek gidebilir. Tuzak g: O da bir daire, ama „ideal für eine Person oder ein Paar“ yazıyor ve okul yakınlığından söz edilmiyor."
+        },
+        {
+          "number": 27,
+          "type": "zuordnung",
+          "prompt": "Tomasz arbeitet in einer Bäckerei in der Nordstadt von Lindbrück und fängt jeden Tag um 4 Uhr an. Er sucht eine kleine Wohnung für sich allein. Sie muss in der Nordstadt liegen, damit er zu Fuß zur Arbeit gehen kann.",
+          "answer": "x",
+          "evidence": [{ "text": "g", "quote": "Wehrheide liegt acht Kilometer von Lindbrück entfernt" }],
+          "explanation": "Tuzak g: Küçük daire tek kişi için uygun görünüyor („ideal für eine Person oder ein Paar“). Ama „Wehrheide liegt acht Kilometer von Lindbrück entfernt“; Tomasz ise dairenin Nordstadt'ta olmasını istiyor. f de uymuyor: O daire Am Kanal semtinde ve 3 odalı. c örnekte kullanıldı ve bir daire değil, ortak evde bir oda. Diğer ilanlar daire sunmuyor. Bu yüzden cevap X."
+        },
+        {
+          "number": 28,
+          "type": "zuordnung",
+          "prompt": "Bilal zieht nächste Woche in eine Wohnung im 4. Stock. Seinen großen Kleiderschrank und die Waschmaschine kann er nicht allein transportieren. Einen Führerschein hat er nicht.",
+          "answer": "a",
+          "evidence": [{ "text": "a", "quote": "Mit unserem Lkw bringen wir alles sicher an Ihre neue Adresse" }],
+          "explanation": "a ilanındaki taşıma ekibi eşyaları kendisi taşıyor, dolapları söküp kuruyor ve „Mit unserem Lkw bringen wir alles sicher an Ihre neue Adresse“; asansörsüz 5. kata bile çıkıyor. Tuzak b: Orada da taşınma için kamyonet var, ama kamyoneti müşteri kendisi kiralayıp sürüyor; Bilal'in ehliyeti yok. Tuzak e: Gönüllüler evde küçük işlerde yardım ediyor, ama „Umzüge können wir leider nicht übernehmen“."
+        },
+        {
+          "number": 29,
+          "type": "zuordnung",
+          "prompt": "Marisol hat eine leere Wohnung gemietet. Sie braucht ein Bett und einen Tisch, möchte aber nicht viel Geld ausgeben. Ein Auto hat sie nicht.",
+          "answer": "h",
+          "evidence": [{ "text": "h", "quote": "Gebrauchte Möbel, Lampen, Geschirr und Küchengeräte zu kleinen Preisen" }, { "text": "h", "quote": "bringen wir Ihnen für 15 Euro nach Hause" }],
+          "explanation": "h ilanındaki mağazada „Gebrauchte Möbel … zu kleinen Preisen“ var, yani ucuz ikinci el mobilya. Satın alınan eşyaları 15 Euro'ya eve getiriyorlar; Marisol'ün arabası olmaması sorun değil. Tuzak b: Orada araç kiralanıyor, ama mobilya satılmıyor."
+        },
+        {
+          "number": 30,
+          "type": "zuordnung",
+          "prompt": "Farida soll nach der Abrechnung für das letzte Jahr 600 Euro für Heizung und Wasser nachzahlen. Sie glaubt, dass die Rechnung nicht stimmt, und möchte sie kontrollieren lassen.",
+          "answer": "d",
+          "evidence": [{ "text": "d", "quote": "Wir prüfen Ihre Unterlagen und sagen Ihnen, ob Sie wirklich zahlen müssen." }],
+          "explanation": "d ilanında kiracı derneği yan gider hesabının (Nebenkostenabrechnung) çok yüksek olduğu durumlarda yardım ediyor: „Wir prüfen Ihre Unterlagen und sagen Ihnen, ob Sie wirklich zahlen müssen.“ Farida da hesabın kontrol edilmesini istiyor. Tuzak e: Orada da ücretsiz yardım var, ama sadece evdeki küçük işler için (lamba, raf, perde)."
+        }
+      ]
+    }
+  ]
+}

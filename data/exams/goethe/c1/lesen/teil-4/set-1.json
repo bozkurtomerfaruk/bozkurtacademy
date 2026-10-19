@@ -60,7 +60,7 @@
           "number": 0,
           "example": true,
           "type": "zuordnung",
-          "prompt": "Ortsunabhängige Stellen eröffnen den Zugang zu Fachkräften, die außerhalb des bisherigen Einzugsgebiets eines Betriebs leben.",
+          "prompt": "Wer bei der Besetzung von Posten auf eine Präsenzpflicht verzichtet, erreicht Fachkräfte, die außerhalb des bisherigen Einzugsgebiets eines Betriebs leben.",
           "answer": "c",
           "evidence": [
             {
@@ -68,7 +68,7 @@
               "quote": "erhalten Zuschriften aus Gegenden, aus denen früher niemand zu uns gekommen wäre"
             }
           ],
-          "explanation": "Selin Aydemir (c), muhasebe ve controlling ilanlarını artık yer şartı olmadan („ohne Ortsbindung“) verdiklerini ve „erhalten Zuschriften aus Gegenden, aus denen früher niemand zu uns gekommen wäre“ (eskiden hiç kimsenin gelmeyeceği bölgelerden başvuru aldıklarını) yazıyor. Bu, ifadedeki „außerhalb des bisherigen Einzugsgebiets“ (şimdiye kadarki çekim alanının dışında) düşüncesinin karşılığı. Kettelhake (b) de insanların uzağa taşındığından söz ediyor, ama işverenin yeni çalışan bulmasından değil, çalışanların konut tercihinden bahsediyor."
+          "explanation": "Selin Aydemir (c), muhasebe ve controlling ilanlarını artık yer şartı olmadan („ohne Ortsbindung“) verdiklerini ve „erhalten Zuschriften aus Gegenden, aus denen früher niemand zu uns gekommen wäre“ (eskiden hiç kimsenin gelmeyeceği bölgelerden başvuru aldıklarını) yazıyor. İfadedeki „auf eine Präsenzpflicht verzichtet“ (iş yerinde bulunma zorunluluğundan vazgeçer) „ohne Ortsbindung“u, „außerhalb des bisherigen Einzugsgebiets“ (şimdiye kadarki çekim alanının dışında) da bu uzak bölgeleri karşılıyor. Kettelhake (b) de insanların uzağa taşındığından söz ediyor, ama işverenin yeni çalışan bulmasından değil, çalışanların konut tercihinden bahsediyor."
         },
         {
           "number": 24,
@@ -103,7 +103,7 @@
         {
           "number": 26,
           "type": "zuordnung",
-          "prompt": "Ohne klare räumliche Trennung von Beruf und Freizeit verlängert sich die Arbeitszeit schleichend – vor allem bei besonders gewissenhaften Menschen.",
+          "prompt": "Wo Beruf und Privatleben räumlich nicht getrennt sind, verlängert sich der Arbeitstag schleichend – zumal bei gewissenhaften Menschen.",
           "answer": "e",
           "evidence": [
             {
@@ -120,7 +120,7 @@
         {
           "number": 27,
           "type": "zuordnung",
-          "prompt": "Weil Angestellte seltener zum Arbeitsplatz fahren müssen, nehmen sie längere Wege in Kauf, sodass der Nutzen für die Umwelt geringer ausfällt als erwartet.",
+          "prompt": "Weil Angestellte nicht mehr täglich ins Büro müssen, nehmen sie größere Distanzen in Kauf, sodass die Umweltbilanz schlechter ist als vielfach angenommen.",
           "answer": "b",
           "evidence": [
             {
@@ -154,7 +154,7 @@
         {
           "number": 29,
           "type": "zuordnung",
-          "prompt": "Weil der Austausch zwischen den Abteilungen wegfällt, arbeiten viele im Homeoffice länger als vereinbart.",
+          "prompt": "Dass viele im Homeoffice länger arbeiten als vereinbart, liegt vor allem am fehlenden Austausch mit anderen Abteilungen.",
           "answer": "0",
           "evidence": [
             {
@@ -162,12 +162,12 @@
               "quote": "dass vielen der Heimweg fehlt, der früher den Feierabend markierte"
             }
           ],
-          "explanation": "Bu ifade iki yazarın düşüncesini yanlış bir sebep–sonuç ilişkisiyle birleştiriyor. Bölümler arası temasın kaybolmasından Groenewold (d) söz ediyor, ama bunun sonucunu yeni fikirlerin doğmaması olarak görüyor; çalışma süresinden bahsetmiyor. Daha uzun çalışmadan Hallmann (e) söz ediyor, ama sebebi başka: „dass vielen der Heimweg fehlt, der früher den Feierabend markierte“ (eskiden mesainin bittiğini gösteren eve dönüş yolunun eksik olması) ve bilgisayarın hep göz önünde durması. Hiçbir yazar bu iki şeyi birbirine bağlamıyor."
+          "explanation": "Bu ifade iki yazarın düşüncesini yanlış bir sebep–sonuç ilişkisiyle birleştiriyor. Bölümler arası temasın kaybolmasından Groenewold (d) söz ediyor, ama bunun sonucunu yeni fikirlerin doğmaması olarak görüyor; çalışma süresinden bahsetmiyor. Daha uzun çalışmadan Hallmann (e) söz ediyor, ama asıl sebep olarak başka bir şeyi gösteriyor: „Schwerer wiegt, dass vielen der Heimweg fehlt, der früher den Feierabend markierte“ (daha ağır basan, birçok kişide eskiden mesainin bittiğini gösteren eve dönüş yolunun eksik olması); ayrıca bilgisayar hep göz önünde duruyor. Hallmann bölümler arası temastan hiç söz etmiyor; hiçbir yazar bu iki şeyi birbirine bağlamıyor."
         },
         {
           "number": 30,
           "type": "zuordnung",
-          "prompt": "Dass nicht alle Tätigkeiten ortsunabhängig ausgeübt werden können, belastet den Zusammenhalt zwischen verschiedenen Beschäftigtengruppen eines Unternehmens.",
+          "prompt": "Dass sich nur ein Teil der Tätigkeiten aus der Ferne erledigen lässt, belastet den Zusammenhalt zwischen verschiedenen Beschäftigtengruppen eines Unternehmens.",
           "answer": "c",
           "evidence": [
             {

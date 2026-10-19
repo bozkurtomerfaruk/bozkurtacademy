@@ -1,0 +1,86 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-4",
+  "title": "Mappe für neue Patienten",
+  "minutes": 8,
+  "context": "Sie sind neu in einer Hausarztpraxis in Lindbrück. Beim ersten Besuch bekommen Sie eine Informationsmappe.",
+  "instructions": "Lesen Sie die Aufgaben 21 bis 25 und das Inhaltsverzeichnis. Wo finden Sie die Information? Wählen Sie die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "inhalt",
+          "title": "Hausarztpraxis am Lerchenplatz – Mappe für neue Patientinnen und Patienten",
+          "byline": "Dr. med. Ayla Brandt und Dr. med. Tobias Reimer, Lindbrück",
+          "paragraphs": [
+            {
+              "rows": [
+                ["Abschnitt 1", "Unser Team: Ärztinnen und Ärzte, medizinische Fachangestellte, Mitarbeiterinnen mit Türkisch-, Russisch- und Arabischkenntnissen"],
+                ["Abschnitt 2", "Termine: Sprechzeiten, Termin online oder per Telefon, offene Sprechstunde ohne Termin am Montag- und Donnerstagmorgen, Termin absagen"],
+                ["Abschnitt 3", "Rezepte und Überweisungen: Folgerezept für Dauermedikamente bestellen, Abholung am Empfang, Überweisung zum Facharzt"],
+                ["Abschnitt 4", "Krankmeldung: Arbeitsunfähigkeitsbescheinigung, Krankschreibung per Telefon bei leichten Erkältungen, Bescheinigung für den Arbeitgeber, Kinderkrankengeld"],
+                ["Abschnitt 5", "Vorsorge und Impfungen: Gesundheits-Check ab 35, Krebsvorsorge, Grippeimpfung im Herbst, Impfpass mitbringen"],
+                ["Abschnitt 6", "Hausbesuche: für Patientinnen und Patienten, die nicht in die Praxis kommen können, Anmeldung bis 10 Uhr"],
+                ["Abschnitt 7", "Labor: Blutabnahme nüchtern zwischen 7:30 und 9 Uhr, Urinproben, Ergebnisse besprechen"],
+                ["Abschnitt 8", "Außerhalb der Sprechzeiten: ärztlicher Bereitschaftsdienst 116 117, Notaufnahme im Kreiskrankenhaus, Vertretung im Urlaub"],
+                ["Abschnitt 9", "Ihre Daten: Versichertenkarte jedes Quartal einlesen, neue Adresse oder neue Krankenkasse melden, Datenschutz"]
+              ]
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 21,
+          "type": "abc",
+          "prompt": "Die Ärztin möchte Ihre Zuckerwerte kontrollieren lassen. Sie fragen sich, ob Sie vor dem Termin am Morgen etwas essen dürfen.",
+          "options": { "a": "Abschnitt 2", "b": "Abschnitt 7", "c": "Abschnitt 5" },
+          "answer": "b",
+          "evidence": [{ "text": "inhalt", "quote": "Blutabnahme nüchtern zwischen 7:30 und 9 Uhr" }],
+          "explanation": "Şeker değerleri kanda ölçülür ve kan vermeden önce bir şey yiyip yiyemeyeceğinizi soruyorsunuz. Aç karnına kan alma Abschnitt 7'de: „Blutabnahme nüchtern zwischen 7:30 und 9 Uhr“. a) yanlış: Abschnitt 2'de randevular (Termin) var, ama randevudan önce yemek yemek orada yazmıyor. c) yanlış: Abschnitt 5'te sağlık kontrolü var („Gesundheits-Check ab 35“), ama aç gelmek gerekip gerekmediği orada yazmıyor."
+        },
+        {
+          "number": 22,
+          "type": "abc",
+          "prompt": "Seit Jahren nehmen Sie jeden Tag Tabletten gegen hohen Blutdruck. Die Packung ist bald leer. Sie möchten wissen, wie Sie schnell eine neue Packung verschrieben bekommen.",
+          "options": { "a": "Abschnitt 7", "b": "Abschnitt 2", "c": "Abschnitt 3" },
+          "answer": "c",
+          "evidence": [{ "text": "inhalt", "quote": "Folgerezept für Dauermedikamente bestellen" }],
+          "explanation": "Yıllardır her gün aldığınız ilaç için yeni reçete istiyorsunuz. Sürekli kullanılan ilaçlar için tekrar reçetesi Abschnitt 3'te: „Folgerezept für Dauermedikamente bestellen“. a) yanlış: Abschnitt 7'de kan alma (Blutabnahme) var, ama tansiyon ilacı için reçete orada yazmıyor. b) yanlış: Abschnitt 2'de randevu almak var („Termin online oder per Telefon“), ama ilacın tekrar reçetesi orada yazmıyor."
+        },
+        {
+          "number": 23,
+          "type": "abc",
+          "prompt": "Ihr Sohn hat hohes Fieber. Sie bleiben drei Tage bei ihm zu Hause, statt in die Firma zu gehen. Sie möchten wissen, ob Sie für diese Tage trotzdem Einkommen bekommen.",
+          "options": { "a": "Abschnitt 9", "b": "Abschnitt 4", "c": "Abschnitt 6" },
+          "answer": "b",
+          "evidence": [{ "text": "inhalt", "quote": "Kinderkrankengeld" }],
+          "explanation": "Hasta çocuğunuz yüzünden işe gidemediğiniz günler için ödenen para hasta çocuk parasıdır. Bu Abschnitt 4'te: „Kinderkrankengeld“. a) yanlış: Abschnitt 9'da sağlık sigortası (Krankenkasse) geçiyor, ama orada sadece yeni sigortanın bildirilmesi anlatılıyor, para ödemesi değil. c) yanlış: Abschnitt 6'da evde hasta olanlar için ev ziyareti var, ama işe gidemediğiniz günlerin parası orada yazmıyor."
+        },
+        {
+          "number": 24,
+          "type": "abc",
+          "prompt": "Ihre Schwiegermutter wohnt seit Kurzem bei Ihnen und kann noch kaum Deutsch. Sie möchten wissen, ob jemand vom Personal mit ihr in einer anderen Sprache reden kann, damit Sie nicht jedes Mal zum Übersetzen mitkommen müssen.",
+          "options": { "a": "Abschnitt 1", "b": "Abschnitt 9", "c": "Abschnitt 6" },
+          "answer": "a",
+          "evidence": [{ "text": "inhalt", "quote": "Mitarbeiterinnen mit Türkisch-, Russisch- und Arabischkenntnissen" }],
+          "explanation": "Muayenehanede çalışanlardan birinin Almanca dışında başka bir dil bilip bilmediğini soruyorsunuz. Bu Abschnitt 1'de: „Mitarbeiterinnen mit Türkisch-, Russisch- und Arabischkenntnissen“. b) yanlış: Abschnitt 9'da yeni gelenler için bilgi var („neue Adresse oder neue Krankenkasse melden“), ama dillerden söz edilmiyor. c) yanlış: Abschnitt 6'da muayenehaneye gelemeyen hastalar için ev ziyareti var („die nicht in die Praxis kommen können“), ama tercümeden söz edilmiyor."
+        },
+        {
+          "number": 25,
+          "type": "abc",
+          "prompt": "Es ist Samstagabend. Ihre Tochter hat starke Ohrenschmerzen, und die Praxis ist geschlossen. Bis Montag möchten Sie nicht warten.",
+          "options": { "a": "Abschnitt 2", "b": "Abschnitt 6", "c": "Abschnitt 8" },
+          "answer": "c",
+          "evidence": [{ "text": "inhalt", "quote": "ärztlicher Bereitschaftsdienst 116 117" }],
+          "explanation": "Muayenehane kapalıyken hafta sonu yardım nereden alınır? Bu Abschnitt 8'de: „Außerhalb der Sprechzeiten“ ve „ärztlicher Bereitschaftsdienst 116 117“. a) yanlış: Abschnitt 2'de muayene saatleri ve pazartesi sabahı randevusuz muayene var („am Montag- und Donnerstagmorgen“), ama siz pazartesiyi beklemek istemiyorsunuz. b) yanlış: Abschnitt 6'da ev ziyareti var, ama sadece muayenehaneye gelemeyen hastalar için ve sabah 10'a kadar kayıtla; hafta sonu akşamı acil yardım orada yazmıyor."
+        }
+      ]
+    }
+  ]
+}

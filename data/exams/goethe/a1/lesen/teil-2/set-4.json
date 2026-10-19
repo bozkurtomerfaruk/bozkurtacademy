@@ -1,0 +1,260 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-4",
+  "title": "Wohnen und Möbel",
+  "minutes": 8,
+  "instructions": "Lesen Sie die Texte und die Aufgaben 6 bis 10. Wo finden Sie Informationen? Kreuzen Sie an: a oder b.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q0a",
+          "label": "a",
+          "title": "Wohnung im Hagebuttenweg",
+          "paragraphs": [
+            "Schöne 3-Zimmer-Wohnung, 78 m², mit Küche, Bad und Balkon. Miete: 690 Euro im Monat. Bitte rufen Sie ab 18 Uhr an: 41 26 73."
+          ]
+        },
+        {
+          "id": "q0b",
+          "label": "b",
+          "title": "Wohnung in der Birnbaumstraße",
+          "paragraphs": [
+            "Helle Wohnung mit zwei Zimmern, Küche und Bad, 55 m², im 3. Stock. Miete: 520 Euro. Die Wohnung ist ab 1. Juni frei."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Sie und Ihre Familie brauchen eine Wohnung mit drei Zimmern.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q0a",
+              "quote": "Schöne 3-Zimmer-Wohnung"
+            },
+            {
+              "text": "q0b",
+              "quote": "Helle Wohnung mit zwei Zimmern"
+            }
+          ],
+          "explanation": "Üç odalı bir daire arıyorsunuz. a ilanında „Schöne 3-Zimmer-Wohnung“ yazıyor: Güzel, üç odalı (Zimmer) bir daire. b ilanında „Wohnung mit zwei Zimmern“ yazıyor: Bu daire sadece iki odalı. b'deki „3. Stock“ oda sayısı değil, kat demek. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q6a",
+          "label": "a",
+          "title": "Möbelhaus Holzwurm",
+          "paragraphs": [
+            "Tische, Stühle, Schränke und Betten für jedes Zimmer. Geöffnet: Montag bis Samstag von 10 bis 19 Uhr. Wir sind in der Mühlstraße 15."
+          ]
+        },
+        {
+          "id": "q6b",
+          "label": "b",
+          "title": "Möbel Zaunkönig",
+          "paragraphs": [
+            "Schöne Tische und Stühle aus Holz. Wir sind Montag bis Freitag von 9 bis 18:30 Uhr für Sie da. Am Wochenende ist das Geschäft zu."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "zuordnung",
+          "prompt": "Sie arbeiten von Montag bis Freitag. Am Samstag möchten Sie einen Tisch und Stühle kaufen.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q6a",
+              "quote": "Montag bis Samstag von 10 bis 19 Uhr"
+            },
+            {
+              "text": "q6b",
+              "quote": "Am Wochenende ist das Geschäft zu."
+            }
+          ],
+          "explanation": "Cumartesi günü masa ve sandalye almak istiyorsunuz. a ilanında „Montag bis Samstag von 10 bis 19 Uhr“ yazıyor: Mağaza pazartesiden cumartesiye açık. b ilanında „Am Wochenende ist das Geschäft zu“ yazıyor: Mağaza hafta sonu kapalı (zu = kapalı). Cumartesi hafta sonudur. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q7a",
+          "label": "a",
+          "title": "Lampe zu verkaufen",
+          "paragraphs": [
+            "Ich verkaufe meine alte Lampe für das Wohnzimmer. Sie ist weiß und noch sehr schön. Preis: 15 Euro. Bitte rufen Sie an: 23 85 54."
+          ]
+        },
+        {
+          "id": "q7b",
+          "label": "b",
+          "title": "Lampe, fast neu",
+          "paragraphs": [
+            "Große schwarze Lampe, ein Jahr alt, für Wohnzimmer oder Schlafzimmer. Ich möchte 45 Euro. Sie können die Lampe am Samstag abholen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 7,
+          "type": "zuordnung",
+          "prompt": "Sie möchten eine Lampe für Ihr Wohnzimmer kaufen. Sie haben 20 Euro.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q7a",
+              "quote": "Preis: 15 Euro"
+            },
+            {
+              "text": "q7b",
+              "quote": "Ich möchte 45 Euro."
+            }
+          ],
+          "explanation": "Oturma odası için lamba almak istiyorsunuz ve 20 euronuz var. a ilanında „Preis: 15 Euro“ yazıyor: Lambanın fiyatı 15 euro. Bu, 20 eurodan az. b ilanında „Ich möchte 45 Euro“ yazıyor: Satıcı 45 euro istiyor. Bu çok pahalı. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q8a",
+          "label": "a",
+          "title": "Bett zu verkaufen",
+          "paragraphs": [
+            "Ich verkaufe ein Bett für eine Person. Es ist zwei Jahre alt und noch sehr gut. Preis: 60 Euro. Telefon 52 17 09."
+          ]
+        },
+        {
+          "id": "q8b",
+          "label": "b",
+          "title": "Großes Bett aus Holz",
+          "paragraphs": [
+            "Unser Bett ist zu groß für die neue Wohnung. Es ist für zwei Personen und erst drei Jahre alt. Sie bekommen es für 80 Euro. Telefon 64 30 82."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 8,
+          "type": "zuordnung",
+          "prompt": "Sie und Ihr Mann suchen ein Bett.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q8b",
+              "quote": "Es ist für zwei Personen"
+            },
+            {
+              "text": "q8a",
+              "quote": "ein Bett für eine Person"
+            }
+          ],
+          "explanation": "Siz ve eşiniz, yani iki kişi için yatak arıyorsunuz. b ilanında „Es ist für zwei Personen“ yazıyor: Yatak iki kişilik. a ilanında „ein Bett für eine Person“ yazıyor: Bu yatak tek kişilik. İki kişi için uygun değil. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q9a",
+          "label": "a",
+          "title": "Starke Hände",
+          "paragraphs": [
+            "Wir tragen Ihre Möbel in die neue Wohnung. Wir arbeiten von Montag bis Samstag, von 6 bis 20 Uhr. Telefon 28 19 45."
+          ]
+        },
+        {
+          "id": "q9b",
+          "label": "b",
+          "title": "Möbeltaxi Bär",
+          "paragraphs": [
+            "Wir bringen Schränke, Tische und Betten in Ihre neue Wohnung. Wir kommen Montag bis Samstag zwischen 10 und 16 Uhr."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 9,
+          "type": "zuordnung",
+          "prompt": "Am Samstag bringen Sie Ihre Möbel in eine neue Wohnung. Jemand soll schon um 7 Uhr helfen.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q9a",
+              "quote": "von Montag bis Samstag, von 6 bis 20 Uhr"
+            },
+            {
+              "text": "q9b",
+              "quote": "zwischen 10 und 16 Uhr"
+            }
+          ],
+          "explanation": "Cumartesi günü eşyalarınızı (Möbel) yeni eve götürüyorsunuz. Biri saat 7'de yardım etmeli. a ilanında „von Montag bis Samstag, von 6 bis 20 Uhr“ yazıyor: Firma cumartesi de saat 6 ile 20 arası çalışıyor. Saat 7 buna uyuyor. b ilanında „zwischen 10 und 16 Uhr“ yazıyor: Bu firma ancak saat 10'dan sonra geliyor. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q10a",
+          "label": "a",
+          "title": "Putzhilfe Funkel",
+          "paragraphs": [
+            "Wir putzen Ihre Wohnung oder Ihr Haus, auch die Fenster. Wir arbeiten in Distelbrunn und Mohnwiesen. Eine Stunde kostet 25 Euro."
+          ]
+        },
+        {
+          "id": "q10b",
+          "label": "b",
+          "title": "Sauber und schnell",
+          "paragraphs": [
+            "Brauchen Sie Hilfe in Ihrer Wohnung? Wir putzen für Sie in Kleetal und Quittenau: Küche, Bad und alle Zimmer. Preis: 24 Euro pro Stunde."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 10,
+          "type": "zuordnung",
+          "prompt": "Sie wohnen in Kleetal. Jemand soll Ihre Wohnung sauber machen.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q10b",
+              "quote": "Wir putzen für Sie in Kleetal und Quittenau"
+            },
+            {
+              "text": "q10a",
+              "quote": "Wir arbeiten in Distelbrunn und Mohnwiesen."
+            }
+          ],
+          "explanation": "Kleetal'de oturuyorsunuz ve evinizi temizleyecek birini arıyorsunuz. b ilanında „Wir putzen für Sie in Kleetal und Quittenau“ yazıyor: Kleetal ve Quittenau'da temizlik yapıyorlar (putzen = temizlemek). a ilanında „Wir arbeiten in Distelbrunn und Mohnwiesen“ yazıyor: Bu firma başka yerlerde çalışıyor. Kleetal yok. Cevap b."
+        }
+      ]
+    }
+  ]
+}

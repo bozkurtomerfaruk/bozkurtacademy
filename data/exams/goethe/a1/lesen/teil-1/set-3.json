@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-3",
+  "title": "Die neue Wohnung",
+  "minutes": 8,
+  "instructions": "Lesen Sie die zwei Texte und die Aufgaben 1 bis 5. Sind die Aussagen richtig oder falsch? Kreuzen Sie an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "email",
+          "title": "E-Mail",
+          "paragraphs": [
+            "Liebe Femke,",
+            "ich habe jetzt eine neue Wohnung! Die Wohnung ist im zweiten Stock und hat drei Zimmer: ein Wohnzimmer, ein Schlafzimmer und ein Arbeitszimmer. Die Küche ist klein, aber das Bad ist groß. Ich habe noch kein Sofa, aber ich habe schon einen Tisch und vier Stühle. Meine Nachbarn sind sehr nett. Kommst du am Sonntag zum Kaffee? Ich backe einen Kuchen.",
+            "Viele Grüße, Zdenka"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Zdenka wohnt jetzt in einer anderen Wohnung.",
+          "answer": "richtig",
+          "evidence": [{ "text": "email", "quote": "ich habe jetzt eine neue Wohnung!" }],
+          "explanation": "Zdenka yazıyor: „ich habe jetzt eine neue Wohnung!“ (Artık yeni bir dairem var!). Yeni daire = başka bir daire („eine andere Wohnung“). İfade doğru."
+        },
+        {
+          "number": 1,
+          "type": "richtig-falsch",
+          "prompt": "Das Badezimmer ist nicht klein.",
+          "answer": "richtig",
+          "evidence": [{ "text": "email", "quote": "aber das Bad ist groß" }],
+          "explanation": "Metinde: „das Bad ist groß“ (banyo büyük). Büyük olan bir şey küçük değildir („nicht klein“). Küçük olan mutfak („Küche“). İfade doğru."
+        },
+        {
+          "number": 2,
+          "type": "richtig-falsch",
+          "prompt": "Zdenka findet ihre Nachbarn freundlich.",
+          "answer": "richtig",
+          "evidence": [{ "text": "email", "quote": "Meine Nachbarn sind sehr nett." }],
+          "explanation": "Zdenka yazıyor: „Meine Nachbarn sind sehr nett“ (Komşularım çok iyi). „nett“ ve „freundlich“ aynı anlamda: iyi, kibar. İfade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "notiz",
+          "title": "Notiz",
+          "paragraphs": [
+            "Lieber Herr Brandstetter,",
+            "ich bin die neue Nachbarin aus Wohnung 5. Am Samstag kommt mein Sofa. Mein Bruder hilft mir, aber er kommt erst um 11 Uhr. Das Auto mit dem Sofa ist schon um 9 Uhr da. Können Sie mir vielleicht kurz helfen? Ich bin heute ab 18 Uhr zu Hause. Bitte klingeln Sie!",
+            "Vielen Dank! Zdenka Hruby"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 3,
+          "type": "richtig-falsch",
+          "prompt": "Das Sofa kommt am Sonntag.",
+          "answer": "falsch",
+          "evidence": [{ "text": "notiz", "quote": "Am Samstag kommt mein Sofa." }],
+          "explanation": "Notta: „Am Samstag kommt mein Sofa“ (Kanepem cumartesi geliyor). İfadede pazar (Sonntag) var. Pazar e-postada geçiyor: Zdenka Femke'yi pazar günü kahveye çağırıyor. Gün yanlış, ifade yanlış."
+        },
+        {
+          "number": 4,
+          "type": "richtig-falsch",
+          "prompt": "Der Bruder von Zdenka kommt um 9 Uhr.",
+          "answer": "falsch",
+          "evidence": [{ "text": "notiz", "quote": "aber er kommt erst um 11 Uhr" }],
+          "explanation": "Kardeşi „erst um 11 Uhr“ (ancak saat 11'de) geliyor. Saat 9'da gelen kardeşi değil, kanepeyi getiren araba („Das Auto mit dem Sofa“). İfade yanlış."
+        },
+        {
+          "number": 5,
+          "type": "richtig-falsch",
+          "prompt": "Zdenka ist heute ab sechs Uhr abends da.",
+          "answer": "richtig",
+          "evidence": [{ "text": "notiz", "quote": "Ich bin heute ab 18 Uhr zu Hause." }],
+          "explanation": "Zdenka yazıyor: „Ich bin heute ab 18 Uhr zu Hause“ (Bugün saat 18'den itibaren evdeyim). Saat 18 = akşam altı („sechs Uhr abends“). „zu Hause“ = „da“ (evde, orada). İfade doğru."
+        }
+      ]
+    }
+  ]
+}

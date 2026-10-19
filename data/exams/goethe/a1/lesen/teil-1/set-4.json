@@ -1,0 +1,92 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-4",
+  "title": "Meine Familie",
+  "minutes": 8,
+  "instructions": "Lesen Sie die zwei Texte und die Aufgaben 1 bis 5. Sind die Aussagen richtig oder falsch? Kreuzen Sie an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "email",
+          "title": "E-Mail",
+          "paragraphs": [
+            "Liebe Yolanda,",
+            "ich bin Anouk aus dem Deutschkurs. Ich sitze immer neben dir am Fenster. Heute schreibe ich über meine Familie. Ich bin 29 Jahre alt und verheiratet. Mein Mann heißt Tjark, er ist Koch. Unsere Tochter Mailin ist vier Jahre alt. Meine Eltern wohnen auf dem Land, 200 Kilometer von hier. Meine Schwester ist Ärztin und wohnt hier in der Stadt. Und deine Familie? Schreib mir bald!",
+            "Anouk"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Anouk ist ledig.",
+          "answer": "falsch",
+          "evidence": [{ "text": "email", "quote": "Ich bin 29 Jahre alt und verheiratet." }],
+          "explanation": "Anouk yazıyor: „verheiratet“ (evli). „ledig“ ise bekâr demek. Kocasının adı Tjark. İfade yanlış."
+        },
+        {
+          "number": 1,
+          "type": "richtig-falsch",
+          "prompt": "Mailin ist die Schwester von Anouk.",
+          "answer": "falsch",
+          "evidence": [{ "text": "email", "quote": "Unsere Tochter Mailin ist vier Jahre alt." }],
+          "explanation": "Metinde: „Unsere Tochter Mailin“ (kızımız Mailin). Mailin Anouk'un kız kardeşi („Schwester“) değil, kızı („Tochter“). Anouk'un kız kardeşi doktor. İfade yanlış."
+        },
+        {
+          "number": 2,
+          "type": "richtig-falsch",
+          "prompt": "Die Eltern von Anouk wohnen nicht in der Nähe.",
+          "answer": "richtig",
+          "evidence": [{ "text": "email", "quote": "Meine Eltern wohnen auf dem Land, 200 Kilometer von hier." }],
+          "explanation": "Anouk yazıyor: „Meine Eltern wohnen auf dem Land, 200 Kilometer von hier“ (Annem babam kırsalda, yani köyde oturuyor, buradan 200 kilometre uzakta). 200 kilometre yakın değil („nicht in der Nähe“). İfade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "sms",
+          "title": "SMS",
+          "paragraphs": [
+            "Hallo Yolanda, meine Mutter hat am Sonntag Geburtstag, sie wird 60. Am Samstag fahren wir zu meinen Eltern. Mein Mann und Mailin kommen auch mit. Wir bleiben bis Montag, und ich bin am Montag nicht im Kurs. Kannst du mir bitte die Hausaufgaben schicken? Danke! Anouk"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 3,
+          "type": "richtig-falsch",
+          "prompt": "Anouks Mutter hat am Wochenende Geburtstag.",
+          "answer": "richtig",
+          "evidence": [{ "text": "sms", "quote": "meine Mutter hat am Sonntag Geburtstag" }],
+          "explanation": "SMS'te: „meine Mutter hat am Sonntag Geburtstag“ (annemin pazar günü doğum günü). Pazar (Sonntag) hafta sonudur („am Wochenende“). İfade doğru."
+        },
+        {
+          "number": 4,
+          "type": "richtig-falsch",
+          "prompt": "Anouk fährt am Sonntag zu ihren Eltern.",
+          "answer": "falsch",
+          "evidence": [{ "text": "sms", "quote": "Am Samstag fahren wir zu meinen Eltern." }],
+          "explanation": "Metinde: „Am Samstag fahren wir zu meinen Eltern“ (Cumartesi annemlere gidiyoruz). Pazar günü doğum günü var, ama yolculuk cumartesi. Gün yanlış, ifade yanlış."
+        },
+        {
+          "number": 5,
+          "type": "richtig-falsch",
+          "prompt": "Anouks Mann bleibt zu Hause.",
+          "answer": "falsch",
+          "evidence": [{ "text": "sms", "quote": "Mein Mann und Mailin kommen auch mit." }],
+          "explanation": "Anouk yazıyor: „Mein Mann und Mailin kommen auch mit“ (Kocam ve Mailin de geliyor). Kocası evde kalmıyor, o da gidiyor. İfade yanlış."
+        }
+      ]
+    }
+  ]
+}

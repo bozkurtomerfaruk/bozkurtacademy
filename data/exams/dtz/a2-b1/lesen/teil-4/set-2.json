@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-2",
+  "title": "Anmeldung in der Grundschule",
+  "minutes": 7,
+  "instructions": "Lesen Sie den Text und die Aufgaben 37 bis 39. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "blatt",
+          "title": "Anmeldung für das Schuljahr 2027/28",
+          "byline": "Informationsblatt des Sekretariats der Grundschule Am Kastanienweg, Hagenwald",
+          "paragraphs": [
+            "Liebe Eltern,",
+            "Kinder, die bis zum 30. September 2027 sechs Jahre alt werden, kommen im Sommer 2027 in die Schule. Hier finden Sie alle wichtigen Informationen.",
+            { "heading": "Wann und wo?" },
+            "Die Anmeldung findet vom 11. bis 15. Januar 2027 im Schulsekretariat statt (Raum 104, erster Stock), jeweils von 8 bis 12 Uhr, am Donnerstag zusätzlich von 15 bis 18 Uhr. Bitte bringen Sie Ihr Kind mit. So kann es die Schule schon einmal kennenlernen.",
+            { "heading": "Unterlagen" },
+            "Bringen Sie bitte die Geburtsurkunde Ihres Kindes, Ihren Ausweis und die Bescheinigung über die Schuleingangsuntersuchung mit.",
+            { "heading": "Schulbus" },
+            "Kinder, die mehr als zwei Kilometer von der Schule entfernt wohnen, können kostenlos mit dem Schulbus fahren. Den Antrag dafür bekommen Sie bei der Anmeldung im Sekretariat.",
+            { "heading": "Betreuung nach dem Unterricht" },
+            "Unsere Nachmittagsbetreuung ist von Montag bis Freitag bis 16 Uhr geöffnet. Es gibt dort ein warmes Mittagessen und Hilfe bei den Hausaufgaben. Die Plätze sind begrenzt. Melden Sie Ihr Kind bitte bis zum 31. März dafür an.",
+            { "heading": "Sprachförderung" },
+            "Spricht Ihr Kind noch wenig Deutsch? Dann bekommt es ab der ersten Klasse vier Stunden Deutschunterricht pro Woche extra, in einer kleinen Gruppe. Für Eltern gibt es außerdem jeden Montag ein Elterncafé mit Dolmetscherinnen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 37,
+          "type": "abc",
+          "prompt": "Was steht im Informationsblatt über die Anmeldung?",
+          "options": {
+            "a": "Am Donnerstag kann man erst ab 15 Uhr ins Sekretariat kommen.",
+            "b": "Das Kind soll zur Anmeldung mitkommen.",
+            "c": "Man kann sein Kind bis zum 31. März für die Schule anmelden."
+          },
+          "answer": "b",
+          "evidence": [{ "text": "blatt", "quote": "Bitte bringen Sie Ihr Kind mit." }],
+          "explanation": "Velilerden kayda çocuklarını da getirmeleri isteniyor: „Bitte bringen Sie Ihr Kind mit.“ Böylece çocuk okulu tanıyabiliyor. a) yanlış: Kayıt her gün 8–12 arası yapılıyor; perşembe günü ayrıca („zusätzlich“) 15–18 arası da gelinebiliyor: „jeweils von 8 bis 12 Uhr, am Donnerstag zusätzlich von 15 bis 18 Uhr“. c) yanlış: 31 Mart okul kaydının değil, öğleden sonra bakımına (Nachmittagsbetreuung) kaydın son günü. Okul kaydı 11–15 Ocak arasında."
+        },
+        {
+          "number": 38,
+          "type": "abc",
+          "prompt": "Was gilt für den Schulbus?",
+          "options": {
+            "a": "Die Eltern zahlen für die Fahrt einen kleinen Beitrag.",
+            "b": "Den Antrag bekommt man im Elterncafé.",
+            "c": "Wer über zwei Kilometer von der Schule weg wohnt, kann ihn ohne Kosten nutzen."
+          },
+          "answer": "c",
+          "evidence": [{ "text": "blatt", "quote": "Kinder, die mehr als zwei Kilometer von der Schule entfernt wohnen, können kostenlos mit dem Schulbus fahren." }],
+          "explanation": "Okula iki kilometreden uzak oturan çocuklar okul servisini ücretsiz kullanabiliyor: „Kinder, die mehr als zwei Kilometer von der Schule entfernt wohnen, können kostenlos mit dem Schulbus fahren.“ a) yanlış: Servis ücretsiz („kostenlos“), veliler bir şey ödemiyor. b) yanlış: Başvuru formu veli kafesinde değil, kayıt sırasında sekreterlikte veriliyor: „Den Antrag dafür bekommen Sie bei der Anmeldung im Sekretariat.“"
+        },
+        {
+          "number": 39,
+          "type": "abc",
+          "prompt": "Was erfährt man über Kinder, die noch wenig Deutsch sprechen?",
+          "options": {
+            "a": "Sie lernen zusätzlich in einer kleinen Gruppe Deutsch.",
+            "b": "Sie haben jeden Tag vier Stunden mehr Unterricht.",
+            "c": "Für ihre Eltern gibt es freitags ein Elterncafé."
+          },
+          "answer": "a",
+          "evidence": [{ "text": "blatt", "quote": "vier Stunden Deutschunterricht pro Woche extra, in einer kleinen Gruppe" }],
+          "explanation": "Almancası zayıf çocuklar küçük bir grupta ek Almanca dersi alıyor: „vier Stunden Deutschunterricht pro Woche extra, in einer kleinen Gruppe“. b) yanlış: Ek ders her gün dört saat değil, haftada dört saat („pro Woche“). c) yanlış: Veli kafesi cuma değil, pazartesi günleri: „jeden Montag ein Elterncafé mit Dolmetscherinnen“."
+        }
+      ]
+    }
+  ]
+}

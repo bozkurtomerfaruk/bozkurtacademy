@@ -165,8 +165,9 @@
   function syncGaps(container, state, set) {
     container.querySelectorAll('.task-gap[data-gap]').forEach(gap => {
       const given = state.answers[gap.dataset.gap];
-      gap.querySelector('.task-gap-pick').textContent = given || '';
       const question = set && questionsOf(set).find(({ question }) => String(question.number) === gap.dataset.gap)?.question;
+      // A gap answered with a/b/c words (DTZ Teil 5) shows the chosen word; a gap filled with a sentence shows its letter.
+      gap.querySelector('.task-gap-pick').textContent = given ? (question?.type === 'abc' ? question.options[given] || given : given) : '';
       gap.classList.toggle('is-right', !!(state.checked && question && given === question.answer));
       gap.classList.toggle('is-wrong', !!(state.checked && question && given !== question.answer));
     });

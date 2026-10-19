@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-1",
+  "title": "Ihr Mietvertrag",
+  "minutes": 7,
+  "instructions": "Lesen Sie den Text und die Aufgaben 37 bis 39. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "blatt",
+          "title": "Ihr Mietvertrag – das Wichtigste in Kürze",
+          "byline": "Informationsblatt des Mietervereins Hagenwald e. V.",
+          "paragraphs": [
+            "Sie haben eine neue Wohnung gemietet? Hier finden Sie wichtige Antworten.",
+            { "heading": "Kaution" },
+            "Die Kaution darf höchstens drei Monatsmieten ohne Nebenkosten betragen. Sie dürfen die Kaution in drei Raten zahlen. Die erste Rate zahlen Sie zu Beginn des Mietverhältnisses. Nach dem Auszug bekommen Sie das Geld zurück, wenn die Wohnung keine Schäden hat.",
+            { "heading": "Nebenkosten" },
+            "Einmal im Jahr bekommen Sie eine Abrechnung der Nebenkosten, zum Beispiel für Heizung, Wasser und Müllabfuhr. Prüfen Sie die Abrechnung genau. Wenn Sie einen Fehler finden, haben Sie nach dem Erhalt der Abrechnung zwölf Monate Zeit, um zu widersprechen.",
+            { "heading": "Reparaturen" },
+            "Ist etwas in der Wohnung kaputt, zum Beispiel die Heizung oder ein Fenster, informieren Sie bitte sofort schriftlich Ihren Vermieter. Kleine Reparaturen bis etwa 100 Euro müssen Mieter manchmal selbst bezahlen. Ob das für Sie gilt, steht in Ihrem Mietvertrag.",
+            { "heading": "Hausordnung" },
+            "In den meisten Häusern gelten Ruhezeiten, oft von 22 bis 6 Uhr und am Sonntag. Hören Sie in dieser Zeit bitte keine laute Musik und benutzen Sie keine Waschmaschine.",
+            { "heading": "Kündigung" },
+            "Wenn Sie ausziehen möchten, müssen Sie schriftlich kündigen. Eine E-Mail reicht nicht, der Brief braucht Ihre Unterschrift. Die Kündigungsfrist beträgt für Mieter drei Monate.",
+            { "heading": "Beratung" },
+            "Unsere Mitglieder beraten wir kostenlos: montags und mittwochs von 15 bis 18 Uhr, Am Markt 5."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 37,
+          "type": "abc",
+          "prompt": "Was steht im Informationsblatt über die Kaution?",
+          "options": {
+            "a": "Man muss sie beim Einzug auf einmal bezahlen.",
+            "b": "Sie darf drei Monatsmieten mit Nebenkosten betragen.",
+            "c": "Man kann sie in mehreren Teilen bezahlen."
+          },
+          "answer": "c",
+          "evidence": [{ "text": "blatt", "quote": "Sie dürfen die Kaution in drei Raten zahlen." }],
+          "explanation": "Depozito üç taksitte ödenebiliyor: „Sie dürfen die Kaution in drei Raten zahlen.“ Taksit (Rate) = parça parça ödeme. a) yanlış: Taşınırken yalnızca ilk taksit ödeniyor: „Die erste Rate zahlen Sie zu Beginn des Mietverhältnisses.“ b) yanlış: Üst sınır yan giderler dahil değil, yan giderler hariç üç aylık kira: „höchstens drei Monatsmieten ohne Nebenkosten“."
+        },
+        {
+          "number": 38,
+          "type": "abc",
+          "prompt": "Was sollen Mieter tun, wenn die Heizung kaputt ist?",
+          "options": {
+            "a": "Dem Vermieter ohne Wartezeit schriftlich Bescheid geben.",
+            "b": "In der Hausordnung nachlesen, wer die Reparatur bezahlt.",
+            "c": "Den Vermieter sofort anrufen."
+          },
+          "answer": "a",
+          "evidence": [{ "text": "blatt", "quote": "informieren Sie bitte sofort schriftlich Ihren Vermieter" }],
+          "explanation": "Kalorifer bozulursa ev sahibine hemen yazılı olarak haber verilmeli: „informieren Sie bitte sofort schriftlich Ihren Vermieter“. „ohne Wartezeit“ = hemen (sofort). b) yanlış: Küçük tamirleri kiracının ödeyip ödemediği ev kurallarında (Hausordnung) değil, kira sözleşmesinde yazıyor: „Ob das für Sie gilt, steht in Ihrem Mietvertrag.“ c) yanlış: Ev sahibine hemen haber verilmeli, ama telefonla değil, yazılı olarak („schriftlich“)."
+        },
+        {
+          "number": 39,
+          "type": "abc",
+          "prompt": "Was gilt für die Kündigung der Wohnung?",
+          "options": {
+            "a": "Eine E-Mail an den Vermieter genügt.",
+            "b": "Mieter müssen das Kündigungsschreiben selbst unterschreiben.",
+            "c": "Die Kündigungsfrist für Mieter ist zwölf Monate lang."
+          },
+          "answer": "b",
+          "evidence": [{ "text": "blatt", "quote": "der Brief braucht Ihre Unterschrift" }],
+          "explanation": "Fesih mektubunu kiracı imzalamalı: „der Brief braucht Ihre Unterschrift“. a) yanlış: E-posta yeterli değil: „Eine E-Mail reicht nicht“. c) yanlış: Fesih süresi üç ay: „Die Kündigungsfrist beträgt für Mieter drei Monate.“ On iki ay, yan gider hesabına itiraz etme süresi: „haben Sie nach dem Erhalt der Abrechnung zwölf Monate Zeit, um zu widersprechen“."
+        }
+      ]
+    }
+  ]
+}

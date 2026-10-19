@@ -40,6 +40,7 @@
   }
 
   const noneOf = group => group.none || '0';
+  const pairTitle = (group, label) => group.texts.find(text => text.label === label)?.title || '';
 
   function answerText(question, group, value) {
     if (question.type === 'abc') return `${value}) ${question.options[value]}`;
@@ -114,7 +115,9 @@
     const result = done || question.example ? resultHtml(question, group, given) : '';
     const name = `task-q-${number}`;
 
-    if (question.type === 'zuordnung') {
+    // A choice between two texts without a "none" option (Goethe A1 Teil 2: a or b) is shown as radio buttons.
+    const pair = question.type === 'zuordnung' && group.none === false && group.texts.filter(text => text.label).length === 2;
+    if (question.type === 'zuordnung' && !pair) {
       const options = optionsFor(question, group).map(option =>
         `<option value="${esc(option.value)}"${given === option.value ? ' selected' : ''}>${esc(group.none !== false && option.value === noneOf(group) ? `${option.value.toUpperCase()} – ${t('taskNoMatch')}` : option.label)}</option>`).join('');
       return `<div class="task-q task-q--select${question.example ? ' is-example' : ''}${outcome}" data-q="${esc(number)}">
@@ -130,10 +133,11 @@
     const options = optionsFor(question, group).map(option => `
       <label class="task-option${given === option.value ? ' is-chosen' : ''}${done && option.value === question.answer ? ' is-answer' : ''}">
         <input type="radio" name="${name}" value="${esc(option.value)}" data-task-answer="${esc(number)}"${given === option.value ? ' checked' : ''}${locked}>
-        <span class="task-option-key">${esc(question.type === 'abc' ? option.value : option.label)}</span>
+        <span class="task-option-key">${esc(question.type === 'abc' || pair ? option.value : option.label)}</span>
         ${question.type === 'abc' ? `<span class="task-option-text" lang="de">${esc(option.label)}</span>` : ''}
+        ${pair && pairTitle(group, option.value) ? `<span class="task-option-text" lang="de">${esc(pairTitle(group, option.value))}</span>` : ''}
       </label>`).join('');
-    return `<fieldset class="task-q task-q--${question.type}${question.example ? ' is-example' : ''}${outcome}" data-q="${esc(number)}">
+    return `<fieldset class="task-q task-q--${pair ? 'pair' : question.type}${question.example ? ' is-example' : ''}${outcome}" data-q="${esc(number)}">
       <legend class="task-q-head">${badge}${prompt}</legend>
       ${note}
       <div class="task-options">${options}</div>

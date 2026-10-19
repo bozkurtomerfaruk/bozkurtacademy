@@ -1,0 +1,146 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-4",
+  "title": "Im Wohnhaus",
+  "minutes": 9,
+  "instructions": "Lesen Sie die Texte und die Aufgaben 11 bis 15. Sind die Aussagen richtig oder falsch? Kreuzen Sie an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "aufzug",
+          "title": "Im Eingang",
+          "paragraphs": [
+            "Achtung! Der Aufzug ist bis Mittwoch kaputt. Bitte nehmen Sie die Treppe. Ab Donnerstag fährt der Aufzug wieder."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Am Donnerstag geht der Aufzug noch nicht.",
+          "answer": "falsch",
+          "evidence": [{ "text": "aufzug", "quote": "Ab Donnerstag fährt der Aufzug wieder." }],
+          "explanation": "Asansör (Aufzug) „bis Mittwoch“ (çarşambaya kadar) bozuk. Metin: „Ab Donnerstag fährt der Aufzug wieder.“ (perşembeden itibaren asansör yine çalışıyor). Yani perşembe günü asansör çalışıyor. İfade yanlış."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "waschmaschinen",
+          "title": "Waschmaschinen im Keller",
+          "paragraphs": [
+            "Sie können hier von Montag bis Samstag waschen, von 7 bis 20 Uhr. Am Sonntag ist der Raum zu."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 11,
+          "type": "richtig-falsch",
+          "prompt": "Am Samstag kann man im Keller bis 22 Uhr waschen.",
+          "answer": "falsch",
+          "evidence": [{ "text": "waschmaschinen", "quote": "von 7 bis 20 Uhr" }],
+          "explanation": "Cumartesi günü bodrumda çamaşır yıkanabilir, çünkü metin „von Montag bis Samstag“ (pazartesiden cumartesiye) diyor. Ama saat: „von 7 bis 20 Uhr“ (7'den 20'ye). Yani 22'ye kadar değil, sadece 20'ye kadar yıkanabilir."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "party",
+          "title": "Liebe Nachbarn!",
+          "paragraphs": [
+            "Am Samstag, 14. Juni, feiere ich meinen 30. Geburtstag. Die Party beginnt um 19 Uhr. Es ist vielleicht ein bisschen laut. Kommen Sie doch auch! Jonas Wetterich, 3. Stock"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 12,
+          "type": "richtig-falsch",
+          "prompt": "Herr Wetterich lädt die Nachbarn zu seiner Feier ein.",
+          "answer": "richtig",
+          "evidence": [{ "text": "party", "quote": "Kommen Sie doch auch!" }],
+          "explanation": "Jonas Wetterich 14 Haziran cumartesi doğum günü partisi yapıyor. Komşulara: „Kommen Sie doch auch!“ (siz de gelin!) diyor. Bu bir davet: „einladen“ (davet etmek). Yani ifade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "katze",
+          "title": "Katze weg!",
+          "paragraphs": [
+            "Unsere Katze Minka ist seit Dienstag weg. Minka ist schwarz und weiß und drei Jahre alt. Bitte rufen Sie an: 0162 448 3107. Familie Osterkamp, 1. Stock"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 13,
+          "type": "richtig-falsch",
+          "prompt": "Minka ist ein Jahr alt.",
+          "answer": "falsch",
+          "evidence": [{ "text": "katze", "quote": "Minka ist schwarz und weiß und drei Jahre alt." }],
+          "explanation": "Metin: „Minka ist schwarz und weiß und drei Jahre alt.“ (Minka siyah beyaz ve üç yaşında). Yani kedi bir (ein) yaşında değil, üç (drei) yaşında. İfade yanlış."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "hausmeister",
+          "title": "Hausmeister Rolf Brodowski",
+          "paragraphs": [
+            "Mein Büro ist in Haus 2, Zimmer 1. Ich bin am Montag, Mittwoch und Freitag von 8 bis 10 Uhr da. Am Wochenende: Telefon 0170 553 2194."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 14,
+          "type": "richtig-falsch",
+          "prompt": "Am Samstag kann man Herrn Brodowski anrufen.",
+          "answer": "richtig",
+          "evidence": [{ "text": "hausmeister", "quote": "Am Wochenende: Telefon 0170 553 2194." }],
+          "explanation": "Metin: „Am Wochenende: Telefon …“ (hafta sonu: telefon numarası). Cumartesi (Samstag) hafta sonudur. Telefon numarası var, yani Herr Brodowski aranabilir (anrufen). İfade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "muell",
+          "title": "Neu im Hof: die braune Mülltonne",
+          "paragraphs": [
+            "Hier kommen nur Obst, Gemüse und Kaffee hinein. Kein Papier und kein Plastik, bitte!"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 15,
+          "type": "richtig-falsch",
+          "prompt": "Alte Äpfel und Bananen dürfen in die braune Tonne.",
+          "answer": "richtig",
+          "evidence": [{ "text": "muell", "quote": "Hier kommen nur Obst, Gemüse und Kaffee hinein." }],
+          "explanation": "Metin: „Hier kommen nur Obst, Gemüse und Kaffee hinein.“ (buraya sadece meyve, sebze ve kahve giriyor). Elma (Äpfel) ve muz (Bananen) meyvedir (Obst). Yani kahverengi çöp kutusuna atılabilir. İfade doğru."
+        }
+      ]
+    }
+  ]
+}

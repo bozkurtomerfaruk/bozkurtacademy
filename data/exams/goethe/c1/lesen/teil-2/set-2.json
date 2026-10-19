@@ -1,0 +1,162 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "c1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-2",
+  "title": "Wenn Algorithmen Bewerbungen lesen",
+  "minutes": 20,
+  "context": "Sie lesen in einem Wirtschaftsmagazin einen Artikel über automatisierte Personalauswahl.",
+  "instructions": "Lesen Sie den Text und die Aufgaben 9 bis 15. Wählen Sie bei jeder Aufgabe die richtige Lösung (a, b oder c).",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Wenn Algorithmen Bewerbungen lesen",
+          "byline": "Von Malte Reinholz",
+          "paragraphs": [
+            "Rund 9000 Bewerbungen gehen jedes Jahr beim Logistikdienstleister Varnhold ein, für etwa 120 offene Stellen. Bis vor drei Jahren sichteten drei Mitarbeiterinnen der Personalabteilung jede einzelne davon. Heute übernimmt das zunächst eine Software: Sie gleicht Lebensläufe mit den Anforderungen der Stellenanzeige ab und erstellt eine Rangliste. Personalchefin Ines Vollrath betont, dass es dabei nicht um Einsparungen gegangen sei – die drei Kolleginnen führten heute mehr Vorstellungsgespräche als früher. Auch die Zahl der Bewerbungen sei seit Jahren weitgehend stabil. Ausschlaggebend sei vielmehr ein unbequemes Eingeständnis gewesen: „Wir haben pro Lebenslauf im Schnitt weniger als eine Minute gebraucht, und abends waren wir erkennbar strenger als morgens.“",
+            "Die Anbieter solcher Programme werben mit einem Versprechen, das zunächst einleuchtet: Ein Algorithmus wird nicht müde, er lässt sich weder von einem sympathischen Foto noch von einem vertraut klingenden Namen beeinflussen. „Das stimmt – und genau darin liegt das Problem“, sagt die Arbeitswissenschaftlerin Marta Lindqvist von der Universität Wendelstedt. Die meisten Systeme lernen anhand der Einstellungsentscheidungen, die ein Unternehmen in der Vergangenheit getroffen hat. Hat es dabei bestimmte Profile bevorzugt, übernimmt die Software diese Vorlieben, versieht sie aber mit dem Anschein mathematischer Neutralität. Eine Personalerin, die einen Bewerber aus einer Laune heraus aussortiert, lasse sich zur Rede stellen, so Lindqvist; gegen eine Rangliste, deren Zustandekommen niemand nachvollziehen kann, sei das ungleich schwerer.",
+            "Wie sich das auswirken kann, hat Lindqvists Team untersucht. Die Forschenden schickten 2400 fiktive Lebensläufe durch fünf handelsübliche Systeme. Die Qualifikationen waren jeweils identisch, verändert wurden nur einzelne Details. Das Ergebnis fiel gemischt aus. Ob ein Name deutsch oder türkisch klang, hatte keinen messbaren Einfluss auf die Rangfolge. Lücken im Lebenslauf von mehr als einem Jahr hingegen führten bei drei der fünf Programme zu einer deutlich schlechteren Platzierung – unabhängig davon, ob die Pause mit einer Elternzeit, der Pflege eines Angehörigen oder einer Krankheit begründet war. Da Frauen solche Unterbrechungen nach wie vor häufiger aufweisen, werden sie benachteiligt, ohne dass das Geschlecht irgendwo als Kriterium auftaucht.",
+            "Bewerberinnen und Bewerber haben längst begonnen, sich auf die neuen Leser einzustellen. Die Maschinenbauingenieurin Yasemin Toprak verschickte im vergangenen Frühjahr rund vierzig Bewerbungen und erhielt fast ausschließlich automatisch erzeugte Absagen. Daraufhin übernahm sie auf eigene Faust die Formulierungen der jeweiligen Stellenanzeige in ihren Lebenslauf, Wort für Wort. Binnen zwei Wochen folgten sechs Einladungen. „Ich bin in dieser Zeit keine bessere Ingenieurin geworden“, sagt sie, „ich habe nur gelernt, wie man für eine Maschine schreibt.“ Um diese Erkenntnis hat sich inzwischen ein ganzer Markt gebildet: Coachingagenturen bieten „algorithmusoptimierte“ Lebensläufe an, zu Preisen von bis zu 300 Euro.",
+            "Lindqvist sieht darin den Beginn eines Wettrüstens. Wenn alle ihre Unterlagen nach denselben Schlagwörtern ausrichten, verlieren diese als Unterscheidungsmerkmal an Wert; belohnt wird dann nicht, wer am besten geeignet ist, sondern wer die Spielregeln kennt – und wer sich die entsprechende Beratung leisten kann. Die Anbieter reagieren darauf mit immer komplexeren Modellen, die nicht mehr nur Begriffe zählen, sondern Zusammenhänge zu erfassen versuchen. Deren Entscheidungen könnten selbst die Entwickler nur noch bruchstückhaft erklären, räumt einer von ihnen ein. Eine Rückkehr zur reinen Handarbeit hält Lindqvist dennoch weder für realistisch noch für wünschenswert.",
+            "Rechtlich bewegen sich die Unternehmen dabei auf einem schmalen Grat. Entscheidungen, die Menschen erheblich betreffen, dürften nach geltendem Datenschutzrecht grundsätzlich nicht allein von einer Maschine getroffen werden, erläutert der Jurist Tobias Hennig. Das Sortieren von Bewerbungen sei zwar zulässig, die eigentliche Entscheidung müsse aber bei einem Menschen liegen. In der Praxis, so Hennig, bekomme die zuständige Recruiterin jedoch oft nur die ersten fünfzig von neunhundert Kandidaten zu Gesicht. „Formal entscheidet ein Mensch. Tatsächlich hat die Vorauswahl die Entscheidung längst getroffen.“",
+            "Bei Varnhold hat man aus der Wendelstedter Studie Konsequenzen gezogen. Das Kriterium „lückenloser Lebenslauf“ wurde abgeschaltet, und jeden Monat prüfen zwei Mitarbeiterinnen eine zufällige Auswahl der abgelehnten Bewerbungen. Auf ein externes Gutachten, wie es manche Anbieter gegen Aufpreis offerieren, hat das Unternehmen bewusst verzichtet. Im ersten Quartal stießen die Prüferinnen auf elf Kandidaten, die sie zum Gespräch einluden; vier von ihnen arbeiten heute im Unternehmen, eine leitet inzwischen ein Disponententeam. Die Software wieder abzuschaffen, stand für Vollrath trotzdem nie zur Debatte: „Sie ist ein Werkzeug, kein Schiedsrichter.“",
+            "Am Ende, sagt Lindqvist, stelle sich weniger die Frage, ob Menschen oder Maschinen die besseren Personaler seien. Entscheidend sei, ob sich nachvollziehen lasse, wie eine Rangliste zustande komme, und ob jemand die Verantwortung übernehme, wenn sie systematisch danebenliege. Die Software, so viel lässt sich festhalten, ist weder die befürchtete Diskriminierungsmaschine noch der versprochene neutrale Richter. Sie verstärkt, was man ihr mitgibt – im Guten wie im Schlechten."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "abc",
+          "prompt": "Varnhold hat die Software eingeführt, weil …",
+          "options": {
+            "a": "das Unternehmen in der Vorauswahl Personal abbauen wollte.",
+            "b": "die Zahl der Bewerbungen deutlich zugenommen hatte.",
+            "c": "man an der Zuverlässigkeit der eigenen Vorauswahl zweifelte."
+          },
+          "answer": "c",
+          "evidence": [
+            { "text": "artikel", "quote": "abends waren wir erkennbar strenger als morgens" }
+          ],
+          "explanation": "Belirleyici olan „ein unbequemes Eingeständnis“ (rahatsız edici bir itiraf): Çalışanlar özgeçmiş başına bir dakikadan az harcamış ve akşamları sabahlara göre belirgin biçimde daha sert değerlendirmiş („abends … strenger als morgens“). Yani kendi ön elemelerinin güvenilirliğinden şüphe ettiler. a) yanlış: Amaç tasarruf değildi; üç çalışan bugün daha çok mülakat yapıyor. b) yanlış: Başvuru sayısı „seit Jahren weitgehend stabil“ (yıllardır büyük ölçüde sabit)."
+        },
+        {
+          "number": 9,
+          "type": "abc",
+          "prompt": "Was bemängelt Lindqvist an dem Versprechen der Anbieter?",
+          "options": {
+            "a": "Die Systeme übernähmen überkommene Präferenzen und ließen diese zugleich objektiv erscheinen.",
+            "b": "Die Programme ließen sich ebenso wie Menschen von Fotos und Namen leiten.",
+            "c": "Gegen menschliche Fehlentscheidungen könnten sich Bewerber schlechter wehren als gegen maschinelle."
+          },
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "übernimmt die Software diese Vorlieben" },
+            { "text": "artikel", "quote": "mit dem Anschein mathematischer Neutralität" }
+          ],
+          "explanation": "Lindqvist'e göre sistemler şirketin geçmişteki işe alım kararlarından öğreniyor; şirket belirli profilleri kayırdıysa yazılım bu tercihleri devralıyor („übernimmt … diese Vorlieben“) ve onlara „den Anschein mathematischer Neutralität“ (matematiksel tarafsızlık görüntüsü) veriyor. b) yanlış: Lindqvist, algoritmanın fotoğraf ve isimden etkilenmediğini kabul ediyor („Das stimmt“). c) yanlış: Durum tersine: Keyfi karar veren bir insan hesap verebilir, nasıl oluştuğu anlaşılmayan bir sıralamaya itiraz etmek ise „ungleich schwerer“ (çok daha zor)."
+        },
+        {
+          "number": 10,
+          "type": "abc",
+          "prompt": "Die Untersuchung von Lindqvists Team ergab, dass …",
+          "options": {
+            "a": "Bewerbungen mit türkisch klingenden Namen schlechter eingestuft wurden.",
+            "b": "einige Systeme eine Gruppe über ein scheinbar neutrales Merkmal benachteiligten.",
+            "c": "Unterbrechungen im Lebenslauf nur dann negativ zählten, wenn sie nicht begründet wurden."
+          },
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "führten bei drei der fünf Programme zu einer deutlich schlechteren Platzierung" },
+            { "text": "artikel", "quote": "ohne dass das Geschlecht irgendwo als Kriterium auftaucht" }
+          ],
+          "explanation": "Beş programdan üçü, bir yıldan uzun özgeçmiş boşluklarını belirgin biçimde daha kötü sıraladı. Kadınlarda bu tür aralar daha sık olduğu için kadınlar dezavantajlı duruma düşüyor, oysa cinsiyet hiçbir yerde ölçüt olarak geçmiyor („ohne dass das Geschlecht … als Kriterium auftaucht“). Yani dolaylı bir ayrımcılık söz konusu. a) yanlış: İsmin Almanca ya da Türkçe olması „keinen messbaren Einfluss“ (ölçülebilir bir etki) yaratmadı. c) yanlış: Boşluklar „unabhängig davon“ (gerekçeden bağımsız olarak), yani ebeveyn izni, bakım veya hastalık belirtilse de olumsuz değerlendirildi."
+        },
+        {
+          "number": 11,
+          "type": "abc",
+          "prompt": "Was verdeutlicht das Beispiel von Yasemin Toprak?",
+          "options": {
+            "a": "Erst durch zusätzliche Qualifikationen verbesserten sich ihre Chancen deutlich.",
+            "b": "Mithilfe einer Coachingagentur gelang es ihr, ihre Unterlagen passend zu gestalten.",
+            "c": "Über den Erfolg einer Bewerbung kann die sprachliche Anpassung an die Software maßgeblich mitentscheiden."
+          },
+          "answer": "c",
+          "evidence": [
+            { "text": "artikel", "quote": "Ich bin in dieser Zeit keine bessere Ingenieurin geworden" },
+            { "text": "artikel", "quote": "auf eigene Faust" }
+          ],
+          "explanation": "Toprak kırk başvurusuna neredeyse yalnızca otomatik ret aldı; ilanlardaki ifadeleri kelimesi kelimesine özgeçmişine aktardıktan sonra iki hafta içinde altı davet geldi. Kendisi „keine bessere Ingenieurin geworden“ (daha iyi bir mühendis olmadığını), yalnızca bir makine için yazmayı öğrendiğini söylüyor: Fark yaratan ifadelerin yazılıma uyarlanması. a) yanlış: Ek nitelik kazanmadı; aynı nitelikleri farklı ifade etti. b) yanlış: Bunu „auf eigene Faust“ (kendi başına) yaptı; koçluk ajansları paragrafın sonunda ayrı bir piyasa olarak anılıyor."
+        },
+        {
+          "number": 12,
+          "type": "abc",
+          "prompt": "Welche Gefahr sieht Lindqvist darin, dass sich Bewerber an die Software anpassen?",
+          "options": {
+            "a": "Unternehmen könnten sich gezwungen sehen, wieder vollständig von Hand auszuwählen.",
+            "b": "Den Ausschlag könnte zunehmend geben, wer die Funktionsweise der Systeme durchschaut und sich Unterstützung kaufen kann.",
+            "c": "Schlagwörter könnten für die Auswahl ein noch größeres Gewicht erhalten."
+          },
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "sondern wer die Spielregeln kennt" }
+          ],
+          "explanation": "Lindqvist bir „Wettrüsten“ (silahlanma yarışı) görüyor: Herkes aynı anahtar kelimeleri kullanırsa en uygun aday değil, „wer die Spielregeln kennt“ (oyunun kurallarını bilen) ve gerekli danışmanlığa parası yeten ödüllendirilir. c) yanlış: Tam tersi, anahtar kelimeler ayırt edici özellik olarak „an Wert“ (değer) kaybediyor. a) yanlış: Lindqvist tamamen elle seçime dönüşü bir tehlike olarak anmıyor; bunu „weder für realistisch noch für wünschenswert“ (ne gerçekçi ne de istenir) buluyor."
+        },
+        {
+          "number": 13,
+          "type": "abc",
+          "prompt": "Worauf macht der Jurist Tobias Hennig aufmerksam?",
+          "options": {
+            "a": "Die rechtlich geforderte Beteiligung eines Menschen kann in der Praxis zur bloßen Formsache werden.",
+            "b": "Unternehmen ist es grundsätzlich untersagt, Bewerbungen maschinell zu sortieren.",
+            "c": "Personalverantwortliche sehen sich die aussortierten Bewerbungen in der Regel noch einmal an."
+          },
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "oft nur die ersten fünfzig von neunhundert Kandidaten zu Gesicht" },
+            { "text": "artikel", "quote": "Tatsächlich hat die Vorauswahl die Entscheidung längst getroffen." }
+          ],
+          "explanation": "Hukuka göre asıl karar bir insana ait olmalı; ama uygulamada işe alım sorumlusu çoğu zaman dokuz yüz adaydan yalnızca ilk ellisini görüyor. Hennig'in deyişiyle „Formal entscheidet ein Mensch“ (biçimsel olarak insan karar veriyor), gerçekte ise kararı ön eleme çoktan vermiş. Yani insanın katılımı bir formaliteye dönüşebiliyor. b) yanlış: Başvuruları sıralamak „zulässig“ (izinli); yalnızca nihai kararın makineye bırakılması yasak. c) yanlış: Sorumlular elenen başvuruları değil, yalnızca listenin başındakileri görüyor."
+        },
+        {
+          "number": 14,
+          "type": "abc",
+          "prompt": "Wie reagiert Varnhold auf die Schwächen des Programms?",
+          "options": {
+            "a": "Das Unternehmen hat die Software nach Erscheinen der Studie wieder außer Betrieb genommen.",
+            "b": "Es lässt das System regelmäßig von einem externen Gutachter überprüfen.",
+            "c": "Mitarbeiterinnen kontrollieren stichprobenartig, wen das Programm aussortiert hat."
+          },
+          "answer": "c",
+          "evidence": [
+            { "text": "artikel", "quote": "eine zufällige Auswahl der abgelehnten Bewerbungen" }
+          ],
+          "explanation": "Varnhold'da her ay iki çalışan reddedilen başvurulardan rastgele seçilmiş bir kısmı inceliyor („eine zufällige Auswahl der abgelehnten Bewerbungen“); ilk çeyrekte on bir aday böylece mülakata çağrıldı. Ayrıca „lückenloser Lebenslauf“ ölçütü kapatıldı. a) yanlış: Yazılımı kaldırmak Vollrath için „nie zur Debatte“ (hiç tartışma konusu olmadı). b) yanlış: Dışarıdan bir bilirkişi raporundan şirket „bewusst verzichtet“ (bilerek vazgeçti)."
+        },
+        {
+          "number": 15,
+          "type": "abc",
+          "prompt": "Welche Schlussfolgerung legt der Text insgesamt nahe?",
+          "options": {
+            "a": "Wie fair eine automatisierte Vorauswahl ist, hängt maßgeblich davon ab, wie Menschen sie einrichten und kontrollieren.",
+            "b": "Maschinelle Verfahren sind menschlichen Entscheidungen bei der Personalauswahl grundsätzlich überlegen.",
+            "c": "Bewerber sind gut beraten, ihre Unterlagen konsequent auf die Systeme zuzuschneiden."
+          },
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "ob jemand die Verantwortung übernehme" },
+            { "text": "artikel", "quote": "Sie verstärkt, was man ihr mitgibt" }
+          ],
+          "explanation": "Metnin sonunda yazılımın ne korkulan bir ayrımcılık makinesi ne de vaat edilen tarafsız bir hakem olduğu, ona ne verilirse onu güçlendirdiği („Sie verstärkt, was man ihr mitgibt“) söyleniyor; Lindqvist'e göre önemli olan sıralamanın izlenebilir olması ve birinin sorumluluk alması. Varnhold örneği de (ölçütün kapatılması, örneklem kontrolleri) insan denetiminin sonucu değiştirdiğini gösteriyor. b) yanlış: Metin hem kayırmaları devralmayı hem de dolaylı ayrımcılığı gösteriyor; Lindqvist asıl sorunun makine mi insan mı olmadığını söylüyor. c) yanlış: Herkesin uyum sağlaması bir „Wettrüsten“ olarak, yani sorun olarak eleştiriliyor."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-2",
+  "title": "Freizeit und Termine",
+  "minutes": 8,
+  "instructions": "Lesen Sie die Texte und die Aufgaben 6 bis 10. Wo finden Sie Informationen? Kreuzen Sie an: a oder b.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q0a",
+          "label": "a",
+          "title": "Hallenbad am Park",
+          "paragraphs": [
+            "Bei uns können Sie auch im Winter im warmen Wasser schwimmen. Öffnungszeiten: Montag bis Freitag 7 bis 15 Uhr, Samstag 10 bis 18 Uhr. Eintritt: 4 Euro."
+          ]
+        },
+        {
+          "id": "q0b",
+          "label": "b",
+          "title": "Schwimmbad Blauwelle",
+          "paragraphs": [
+            "Schwimmen, Sauna und ein Café. Wir haben von Montag bis Freitag von 10 bis 22 Uhr geöffnet, am Wochenende von 9 bis 20 Uhr."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Sie haben am Mittwoch erst um 19 Uhr Zeit. Sie möchten schwimmen gehen.",
+          "answer": "b",
+          "evidence": [
+            { "text": "q0b", "quote": "von Montag bis Freitag von 10 bis 22 Uhr geöffnet" },
+            { "text": "q0a", "quote": "Montag bis Freitag 7 bis 15 Uhr" }
+          ],
+          "explanation": "Çarşamba saat 19'da vaktiniz var. b ilanında „von Montag bis Freitag von 10 bis 22 Uhr geöffnet“ yazıyor: Yüzme havuzu hafta içi saat 22'ye kadar açık. a ilanında „Montag bis Freitag 7 bis 15 Uhr“ yazıyor: Havuz hafta içi saat 15'te kapanıyor. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q6a",
+          "label": "a",
+          "title": "Zahnarztpraxis Dr. Quast",
+          "paragraphs": [
+            "Sprechstunde: Montag bis Freitag 8 bis 12 Uhr und 14 bis 18 Uhr. Bitte rufen Sie vorher an und machen Sie einen Termin: Telefon 46 21 30."
+          ]
+        },
+        {
+          "id": "q6b",
+          "label": "b",
+          "title": "Zahnarzt Dr. Ferenczi",
+          "paragraphs": [
+            "Sie haben in der Woche keine Zeit? Bei uns bekommen Sie auch am Samstag einen Termin, von 9 bis 13 Uhr. Telefon 58 07 14."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "zuordnung",
+          "prompt": "Sie haben Zahnschmerzen. Sie arbeiten von Montag bis Freitag. Sie können nur am Samstag zum Zahnarzt gehen.",
+          "answer": "b",
+          "evidence": [
+            { "text": "q6b", "quote": "auch am Samstag einen Termin" },
+            { "text": "q6a", "quote": "Sprechstunde: Montag bis Freitag" }
+          ],
+          "explanation": "Sadece cumartesi (Samstag) doktora gidebilirsiniz. b ilanında „auch am Samstag einen Termin“ yazıyor: Cumartesi günü de randevu var. a ilanında „Sprechstunde: Montag bis Freitag“ yazıyor: Muayene sadece pazartesiden cumaya. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q7a",
+          "label": "a",
+          "title": "Kino im Hof",
+          "paragraphs": [
+            "Jeden Abend um 20:30 Uhr zeigen wir einen Film. Eine Karte kostet 5 Euro. Sie können vorher im Hof etwas trinken."
+          ]
+        },
+        {
+          "id": "q7b",
+          "label": "b",
+          "title": "Filmpalast Sternchen",
+          "paragraphs": [
+            "Die neuen Filme sehen Sie bei uns zuerst! Jeden Abend um 18 und um 21 Uhr. Karten: 9,50 Euro."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 7,
+          "type": "zuordnung",
+          "prompt": "Sie möchten heute Abend einen Film sehen. Sie haben aber nur 6 Euro.",
+          "answer": "a",
+          "evidence": [
+            { "text": "q7a", "quote": "Eine Karte kostet 5 Euro." },
+            { "text": "q7b", "quote": "Karten: 9,50 Euro." }
+          ],
+          "explanation": "Sadece 6 euronuz var. a ilanında „Eine Karte kostet 5 Euro“ yazıyor: Bir bilet 5 euro. Bu, 6 eurodan az. b ilanında „Karten: 9,50 Euro“ yazıyor: Bilet 9,50 euro. Bu çok pahalı. İki sinema da her akşam açık. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q8a",
+          "label": "a",
+          "title": "Sprachschule Viva",
+          "paragraphs": [
+            "Spanisch für Anfänger: Montag und Mittwoch von 18 bis 19:30 Uhr in unserer Schule in der Kirchgasse 5, Raum 3. Bitte kommen Sie pünktlich."
+          ]
+        },
+        {
+          "id": "q8b",
+          "label": "b",
+          "title": "Spanisch am Abend",
+          "paragraphs": [
+            "Lernen Sie Spanisch online! Sie brauchen nur einen Computer und Internet. Der Kurs ist am Montag und Mittwoch von 19 bis 20:30 Uhr."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 8,
+          "type": "zuordnung",
+          "prompt": "Sie möchten Spanisch lernen. Sie möchten am Abend zu Hause bleiben und am Laptop lernen.",
+          "answer": "b",
+          "evidence": [
+            { "text": "q8b", "quote": "Lernen Sie Spanisch online!" },
+            { "text": "q8a", "quote": "in unserer Schule in der Kirchgasse 5" }
+          ],
+          "explanation": "Evde kalıp bilgisayarda (Laptop) öğrenmek istiyorsunuz. b ilanında „Lernen Sie Spanisch online!“ yazıyor: Kurs internette; sadece bilgisayar ve internet gerekiyor. a ilanında „in unserer Schule in der Kirchgasse 5“ yazıyor: Kurs okulda, Kirchgasse 5'te. Oraya gitmek gerekiyor. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q9a",
+          "label": "a",
+          "title": "Yoga im Sportverein",
+          "paragraphs": [
+            "Yoga für alle, auch für Anfänger. Wir treffen uns am Dienstag und Donnerstag von 19 bis 20 Uhr in der Turnhalle. Ein Monat kostet 25 Euro."
+          ]
+        },
+        {
+          "id": "q9b",
+          "label": "b",
+          "title": "Yoga-Studio Lotus",
+          "paragraphs": [
+            "Starten Sie gut in den Tag! Unser Yogakurs ist am Dienstag und Donnerstag von 6:30 bis 7:30 Uhr. Danach gibt es Tee."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 9,
+          "type": "zuordnung",
+          "prompt": "Sie möchten Yoga machen. Sie haben nur früh am Morgen Zeit, vor der Arbeit.",
+          "answer": "b",
+          "evidence": [
+            { "text": "q9b", "quote": "von 6:30 bis 7:30 Uhr" },
+            { "text": "q9a", "quote": "von 19 bis 20 Uhr" }
+          ],
+          "explanation": "Sadece sabah erken, işten önce vaktiniz var. b ilanında „von 6:30 bis 7:30 Uhr“ yazıyor: Yoga kursu sabah 6:30 ile 7:30 arası. a ilanında „von 19 bis 20 Uhr“ yazıyor: Bu kurs akşam saat 19 ile 20 arası. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q10a",
+          "label": "a",
+          "title": "Familientag im Museum am See",
+          "paragraphs": [
+            "Am Samstag um 14 Uhr malen Eltern und Kinder zusammen. Papier und Farben bekommen Sie bei uns. Der Eintritt ist frei."
+          ]
+        },
+        {
+          "id": "q10b",
+          "label": "b",
+          "title": "Malkurs im Kunstmuseum",
+          "paragraphs": [
+            "Am Samstag um 14 Uhr malen wir Bilder von Blumen und Bäumen. Der Kurs ist für Erwachsene ab 18 Jahren. Preis: 8 Euro."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 10,
+          "type": "zuordnung",
+          "prompt": "Sie möchten am Samstag mit Ihrer Tochter und Ihrem Sohn im Museum malen.",
+          "answer": "a",
+          "evidence": [
+            { "text": "q10a", "quote": "malen Eltern und Kinder zusammen" },
+            { "text": "q10b", "quote": "für Erwachsene ab 18 Jahren" }
+          ],
+          "explanation": "Cumartesi kızınız ve oğlunuzla resim yapmak istiyorsunuz. a ilanında „malen Eltern und Kinder zusammen“ yazıyor: Anne babalar ve çocuklar birlikte resim yapıyor. b ilanında „für Erwachsene ab 18 Jahren“ yazıyor: Kurs sadece 18 yaşından büyükler için. Cevap a."
+        }
+      ]
+    }
+  ]
+}

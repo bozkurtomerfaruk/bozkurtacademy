@@ -21,7 +21,7 @@
             "Betreff: Termin am 12. März, Kundennummer 517D2290",
             "Sehr geehrter Herr Wendeborn,",
             "Sie haben mich für Donnerstag, den 12. März, um 9:30 Uhr zu einem Gespräch ins Jobcenter eingeladen. Leider kann ich zu diesem Termin nicht kommen, {{40}} ich habe genau zur gleichen Zeit ein Vorstellungsgespräch.",
-            "Ich habe mich vor zwei Wochen bei {{41}} Firma Bruckhoff Haustechnik in Wehrheide als Lagerhelfer beworben. Gestern {{42}} mich der Chef, Herr Odenthal, angerufen und für Donnerstag eingeladen. Diese Chance möchte ich auf keinen Fall verpassen.",
+            "Ich habe mich vor zwei Wochen bei {{41}} Firma Bruckhoff Haustechnik in Wehrheide als Lagerhelfer beworben. Gestern {{42}} mich der Chef, Herr Ruppelt, angerufen und für Donnerstag eingeladen. Diese Chance möchte ich auf keinen Fall verpassen.",
             "Deshalb möchte ich Sie bitten, unser Gespräch {{43}}. Am Freitag, den 13. März, oder in der Woche danach habe ich jeden Vormittag Zeit.",
             "Außerdem haben Sie mir in Ihrem letzten Brief geschrieben, dass noch die Teilnahmebescheinigung von {{44}} Deutschkurs fehlt. Ich schicke Ihnen die Bescheinigung im Anhang, {{45}} meine Unterlagen vollständig sind.",
             "Mit freundlichen Grüßen",
@@ -61,9 +61,9 @@
           "options": { "a": "hat", "b": "ist", "c": "habe" },
           "answer": "a",
           "evidence": [
-            { "text": "mail", "quote": "mich der Chef, Herr Odenthal, angerufen" }
+            { "text": "mail", "quote": "mich der Chef, Herr Ruppelt, angerufen" }
           ],
-          "explanation": "Cümle dünü anlatıyor ve sonda Partizip II var: „angerufen“. Telefon eden kişi, yani özne, „der Chef, Herr Odenthal“dır (üçüncü tekil şahıs). „anrufen“ Perfekt'te „haben“ ile kurulur, üçüncü tekil şahısta „hat“: „Gestern hat mich der Chef … angerufen“. b) ist yanlış: „anrufen“ Perfekt'te „sein“ almaz; „sein“ ile çoğunlukla hareket fiilleri kurulur (ör. „ist gefahren“). c) habe yanlış: „haben“ doğru yardımcı fiildir, ama „habe“ birinci tekil şahıs (ich) biçimidir; burada telefon eden Rustam değil, şef."
+          "explanation": "Cümle dünü anlatıyor ve sonda Partizip II var: „angerufen“. Telefon eden kişi, yani özne, „der Chef, Herr Ruppelt“dır (üçüncü tekil şahıs). „anrufen“ Perfekt'te „haben“ ile kurulur, üçüncü tekil şahısta „hat“: „Gestern hat mich der Chef … angerufen“. b) ist yanlış: „anrufen“ Perfekt'te „sein“ almaz; „sein“ ile çoğunlukla hareket fiilleri kurulur (ör. „ist gefahren“). c) habe yanlış: „haben“ doğru yardımcı fiildir, ama „habe“ birinci tekil şahıs (ich) biçimidir; burada telefon eden Rustam değil, şef."
         },
         {
           "number": 43,
@@ -93,13 +93,13 @@
           "number": 45,
           "type": "abc",
           "prompt": "Lücke 45",
-          "options": { "a": "falls", "b": "damit", "c": "obwohl" },
+          "options": { "a": "sobald", "b": "damit", "c": "weil" },
           "answer": "b",
           "evidence": [
             { "text": "mail", "quote": "Ich schicke Ihnen die Bescheinigung im Anhang," },
             { "text": "mail", "quote": "meine Unterlagen vollständig sind" }
           ],
-          "explanation": "Rustam belgeyi neden gönderiyor? Bir önceki cümlede bu belgenin eksik olduğu yazıyor („fehlt“). Belgeyi, dosyası tamamlansın diye gönderiyor: „meine Unterlagen vollständig sind“. Amaç bildiren bağlaç „damit“tir (… sın diye). a) falls yanlış: „falls“ (… olursa) bir koşul bildirir; ama belgeler eksik, tam olmaları gönderme için bir koşul değil, göndermenin amacıdır. c) obwohl yanlış: „obwohl“ (-e rağmen) zıtlık bildirir; belgeler zaten tam olsaydı Rustam'ın bir şey göndermesine gerek kalmazdı, metinde ise belge eksik."
+          "explanation": "Rustam belgeyi neden gönderiyor? Bir önceki cümlede bu belgenin eksik olduğu yazıyor („fehlt“). Belgeyi, dosyası tamamlansın diye gönderiyor: „meine Unterlagen vollständig sind“. Amaç bildiren bağlaç „damit“tir (… sın diye). a) sobald yanlış: „sobald“ (… olur olmaz) Rustam'ın belgeyi ancak dosyası tamamlandıktan sonra göndereceği anlamına gelir; ama Rustam belgeyi şimdi gönderiyor („im Anhang“) ve dosya ancak bu belgeyle tamamlanıyor. c) weil yanlış: „weil“ (çünkü) dosyanın zaten tam olduğunu ve bunun göndermenin sebebi olduğunu söylerdi; ama metne göre belge hâlâ eksik: „dass noch die Teilnahmebescheinigung … fehlt“."
         }
       ]
     }

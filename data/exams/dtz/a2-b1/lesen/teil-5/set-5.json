@@ -15,14 +15,14 @@
       "texts": [
         {
           "id": "mail",
-          "title": "Termin am 8. Oktober",
+          "title": "Frage zu meinen Tabletten",
           "byline": "E-Mail von Natalia Wróbel an die Hausarztpraxis Dr. med. Wiebke Sander-Lohmann, Lindbrück",
           "paragraphs": [
-            "Betreff: Neuer Termin und Rezept",
+            "Betreff: Frage zu meinen Blutdrucktabletten",
             "Sehr geehrte Damen und Herren,",
-            "ich habe am Mittwoch, den 8. Oktober, um 10:15 Uhr einen Termin bei Frau Dr. Sander-Lohmann. Leider kann ich an diesem Tag nicht kommen. Mein Arbeitgeber hat mich kurzfristig zu einer Schulung geschickt, {{40}} bin ich am Mittwoch den ganzen Tag in Hagenwald.",
-            "Ich möchte den Termin aber nicht ganz absagen, sondern verschieben. Am Donnerstag und am Freitag {{41}} ich jederzeit in die Praxis kommen, nur nicht {{42}} 12 und 14 Uhr, denn dann hole ich meinen Sohn von der Kita ab.",
-            "Außerdem brauche ich ein neues {{43}} für meine Blutdrucktabletten. Die Packung reicht nur noch bis Sonntag. Ich weiß leider nicht, {{44}} ich es auch ohne Termin am Empfang abholen kann. Ist das möglich? Und muss ich dafür {{45}} Versichertenkarte mitbringen, oder haben Sie meine Daten schon?",
+            "ich bin seit drei Jahren Patientin bei Frau Dr. Sander-Lohmann. Zurzeit bin ich für meinen Arbeitgeber auf einer Schulung in Hagenwald und komme erst am Mittwochabend zurück nach Lindbrück. {{40}} ich wieder zu Hause bin, möchte ich gern kurz in die Praxis kommen.",
+            "Am Donnerstag und am Freitag {{41}} ich jederzeit vorbeikommen, nur nicht {{42}} 12 und 14 Uhr, denn dann hole ich meinen Sohn von der Kita ab.",
+            "Ich brauche nämlich ein neues {{43}} für meine Blutdrucktabletten. Die Packung reicht nur noch bis Sonntag. Ich weiß leider nicht, {{44}} ich es auch ohne Termin am Empfang abholen kann. Ist das möglich? Und muss ich dafür {{45}} Versichertenkarte mitbringen, oder haben Sie meine Daten schon?",
             "Mit freundlichen Grüßen",
             "Natalia Wróbel (geb. 14.03.1986)"
           ]
@@ -33,13 +33,13 @@
           "number": 40,
           "type": "abc",
           "prompt": "Lücke 40",
-          "options": { "a": "deshalb", "b": "trotzdem", "c": "sonst" },
+          "options": { "a": "Wenn", "b": "Bevor", "c": "Seit" },
           "answer": "a",
           "evidence": [
-            { "text": "mail", "quote": "Mein Arbeitgeber hat mich kurzfristig zu einer Schulung geschickt," },
-            { "text": "mail", "quote": "bin ich am Mittwoch den ganzen Tag in Hagenwald" }
+            { "text": "mail", "quote": "komme erst am Mittwochabend zurück nach Lindbrück" },
+            { "text": "mail", "quote": "ich wieder zu Hause bin, möchte ich gern kurz in die Praxis kommen" }
           ],
-          "explanation": "Üç sözcükten sonra da fiil hemen gelir („bin ich …“), bu yüzden anlam karar verir. İlk kısım sebep: İşvereni Natalia'yı bir eğitime gönderdi. İkinci kısım bunun sonucu: „bin ich am Mittwoch den ganzen Tag in Hagenwald“. Sonuç bildiren sözcük „deshalb“dır (bu yüzden). b) trotzdem yanlış: „trotzdem“ (yine de) zıtlık bildirir; eğitime gönderilmek ile bütün gün Hagenwald'da olmak arasında zıtlık yok, biri ötekinin sebebi. c) sonst yanlış: „sonst“ (yoksa, aksi hâlde) bir şey olmazsa ne olacağını söyler; ama Natalia eğitime gerçekten gönderildi, Hagenwald'da olması bunun sonucu."
+          "explanation": "Üç sözcük de bir yan cümle başlatır ve fiil sona gider („… zu Hause bin“), bu yüzden anlam karar verir. Natalia şu anda Hagenwald'da bir eğitimde ve „komme erst am Mittwochabend zurück nach Lindbrück“ diyor. Muayenehaneye eve döndükten sonra gelmek istiyor. Gelecekteki bir zamanı bildiren „wenn“ (-dığında) uyar: „Wenn ich wieder zu Hause bin, möchte ich gern kurz in die Praxis kommen“. b) Bevor yanlış: „bevor“ (-meden önce) eve dönmeden önce gelmek demektir; ama Natalia çarşamba akşamına kadar Hagenwald'da, muayenehane ise Lindbrück'te. c) Seit yanlış: „seit“ (-dığından beri) geçmişte başlamış ve hâlâ süren bir durum bildirir; ama Natalia henüz eve dönmedi, ancak çarşamba akşamı dönecek."
         },
         {
           "number": 41,
@@ -48,9 +48,9 @@
           "options": { "a": "kann", "b": "könnt", "c": "können" },
           "answer": "a",
           "evidence": [
-            { "text": "mail", "quote": "ich jederzeit in die Praxis kommen" }
+            { "text": "mail", "quote": "ich jederzeit vorbeikommen" }
           ],
-          "explanation": "Cümlenin öznesi „ich“tir (Natalia) ve sonda mastar var: „kommen“. „können“ birinci tekil şahısta „kann“ olur: „Am Donnerstag und am Freitag kann ich jederzeit in die Praxis kommen“ (perşembe ve cuma her zaman gelebilirim). b) könnt yanlış: „könnt“ ikinci çoğul şahıs (ihr) biçimidir; burada özne „ich“. c) können yanlış: „können“ çoğul (wir/sie/Sie) biçimidir; gelecek olan yalnızca Natalia: „ich“."
+          "explanation": "Cümlenin öznesi „ich“tir (Natalia) ve sonda mastar var: „vorbeikommen“. „können“ birinci tekil şahısta „kann“ olur: „Am Donnerstag und am Freitag kann ich jederzeit vorbeikommen“ (perşembe ve cuma her zaman uğrayabilirim). b) könnt yanlış: „könnt“ ikinci çoğul şahıs (ihr) biçimidir; burada özne „ich“. c) können yanlış: „können“ çoğul (wir/sie/Sie) biçimidir; gelecek olan yalnızca Natalia: „ich“."
         },
         {
           "number": 42,
@@ -70,7 +70,7 @@
           "options": { "a": "Attest", "b": "Rezept", "c": "Ergebnis" },
           "answer": "b",
           "evidence": [
-            { "text": "mail", "quote": "Außerdem brauche ich ein neues" },
+            { "text": "mail", "quote": "Ich brauche nämlich ein neues" },
             { "text": "mail", "quote": "für meine Blutdrucktabletten. Die Packung reicht nur noch bis Sonntag." }
           ],
           "explanation": "Natalia'nın tansiyon ilaçları bitmek üzere: „Die Packung reicht nur noch bis Sonntag“ (kutu ancak pazara kadar yetiyor). Yeni ilaç alabilmek için doktordan bir reçete gerekir: „ein neues Rezept für meine Blutdrucktabletten“. a) Attest yanlış: Biçim olarak uyar („ein neues Attest“), ama „Attest“ doktor raporu, örneğin hastalık belgesidir; Natalia hasta raporu değil, bitmek üzere olan ilaçları için bir şey istiyor. c) Ergebnis yanlış: Biçim olarak uyar, ama „Ergebnis“ bir tahlil sonucudur; metinde tahlilden söz edilmiyor, ilaç kutusunun bitmesinden söz ediliyor."

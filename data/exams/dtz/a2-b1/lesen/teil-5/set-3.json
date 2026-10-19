@@ -1,0 +1,107 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 5,
+  "set": "set-3",
+  "title": "Eine E-Mail an das Jobcenter",
+  "minutes": 8,
+  "context": "Ein Mann schreibt seinem Ansprechpartner im Jobcenter eine E-Mail.",
+  "instructions": "Lesen Sie die E-Mail. Wählen Sie für die Lücken 40 bis 45 die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "mail",
+          "title": "Termin am 12. März",
+          "byline": "E-Mail von Rustam Yusupov an Herrn Wendeborn, Jobcenter Lindbrück",
+          "paragraphs": [
+            "Betreff: Termin am 12. März, Kundennummer 517D2290",
+            "Sehr geehrter Herr Wendeborn,",
+            "Sie haben mich für Donnerstag, den 12. März, um 9:30 Uhr zu einem Gespräch ins Jobcenter eingeladen. Leider kann ich zu diesem Termin nicht kommen, {{40}} ich habe genau zur gleichen Zeit ein Vorstellungsgespräch.",
+            "Ich habe mich vor zwei Wochen bei {{41}} Firma Bruckhoff Haustechnik in Wehrheide als Lagerhelfer beworben. Gestern {{42}} mich der Chef, Herr Ruppelt, angerufen und für Donnerstag eingeladen. Diese Chance möchte ich auf keinen Fall verpassen.",
+            "Deshalb möchte ich Sie bitten, unser Gespräch {{43}}. Am Freitag, den 13. März, oder in der Woche danach habe ich jeden Vormittag Zeit.",
+            "Außerdem haben Sie mir in Ihrem letzten Brief geschrieben, dass noch die Teilnahmebescheinigung von {{44}} Deutschkurs fehlt. Ich schicke Ihnen die Bescheinigung im Anhang, {{45}} meine Unterlagen vollständig sind.",
+            "Mit freundlichen Grüßen",
+            "Rustam Yusupov"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 40,
+          "type": "abc",
+          "prompt": "Lücke 40",
+          "options": { "a": "aber", "b": "oder", "c": "denn" },
+          "answer": "c",
+          "evidence": [
+            { "text": "mail", "quote": "Leider kann ich zu diesem Termin nicht kommen," },
+            { "text": "mail", "quote": "ich habe genau zur gleichen Zeit ein Vorstellungsgespräch" }
+          ],
+          "explanation": "Üç bağlaç da arkasından normal ana cümle sırası alır („ich habe …“), bu yüzden burada anlam karar verir. Rustam randevuya gelemiyor; aynı saatte iş görüşmesi olması bunun sebebidir: „ich habe genau zur gleichen Zeit ein Vorstellungsgespräch“. Sebep bildiren bağlaç „denn“dir (çünkü). a) aber yanlış: „aber“ (ama) bir zıtlık bildirir; gelememek ile aynı saatte görüşmesi olmak arasında zıtlık yok, biri ötekinin sebebi. b) oder yanlış: „oder“ (veya) iki seçenek sunar; Rustam iki seçenekten birini değil, gelememesinin sebebini söylüyor."
+        },
+        {
+          "number": 41,
+          "type": "abc",
+          "prompt": "Lücke 41",
+          "options": { "a": "die", "b": "der", "c": "den" },
+          "answer": "b",
+          "evidence": [
+            { "text": "mail", "quote": "Ich habe mich vor zwei Wochen bei" },
+            { "text": "mail", "quote": "Firma Bruckhoff Haustechnik in Wehrheide als Lagerhelfer beworben" }
+          ],
+          "explanation": "„bei“ edatı her zaman Dativ ister. „die Firma“ dişil bir isimdir; dişil artikelin Dativ biçimi „der“dir: „bei der Firma Bruckhoff Haustechnik … beworben“ (Bruckhoff firmasına başvurdum). a) die yanlış: „die“ dişil ismin Nominativ veya Akkusativ biçimidir; „bei“den sonra Akkusativ gelmez. c) den yanlış: „den“ eril ismin Akkusativ biçimidir (ör. „den Chef“); „Firma“ eril değil, dişildir ve „bei“ Akkusativ almaz."
+        },
+        {
+          "number": 42,
+          "type": "abc",
+          "prompt": "Lücke 42",
+          "options": { "a": "hat", "b": "ist", "c": "habe" },
+          "answer": "a",
+          "evidence": [
+            { "text": "mail", "quote": "mich der Chef, Herr Ruppelt, angerufen" }
+          ],
+          "explanation": "Cümle dünü anlatıyor ve sonda Partizip II var: „angerufen“. Telefon eden kişi, yani özne, „der Chef, Herr Ruppelt“dır (üçüncü tekil şahıs). „anrufen“ Perfekt'te „haben“ ile kurulur, üçüncü tekil şahısta „hat“: „Gestern hat mich der Chef … angerufen“. b) ist yanlış: „anrufen“ Perfekt'te „sein“ almaz; „sein“ ile çoğunlukla hareket fiilleri kurulur (ör. „ist gefahren“). c) habe yanlış: „haben“ doğru yardımcı fiildir, ama „habe“ birinci tekil şahıs (ich) biçimidir; burada telefon eden Rustam değil, şef."
+        },
+        {
+          "number": 43,
+          "type": "abc",
+          "prompt": "Lücke 43",
+          "options": { "a": "abzusagen", "b": "zu beenden", "c": "zu verschieben" },
+          "answer": "c",
+          "evidence": [
+            { "text": "mail", "quote": "Deshalb möchte ich Sie bitten, unser Gespräch" },
+            { "text": "mail", "quote": "oder in der Woche danach habe ich jeden Vormittag Zeit" }
+          ],
+          "explanation": "Rustam 12 Mart'ta gelemiyor, ama başka günler öneriyor: „Am Freitag, den 13. März, oder in der Woche danach habe ich jeden Vormittag Zeit“. Yani görüşmeyi iptal etmek değil, başka bir güne almak istiyor: „unser Gespräch zu verschieben“ (görüşmemizi ertelemek). a) abzusagen yanlış: „absagen“ (iptal etmek) görüşmenin hiç olmamasıdır; ama Rustam yeni günler öneriyor, görüşme olsun istiyor. b) zu beenden yanlış: „beenden“ (bitirmek) başlamış bir şeyi sona erdirmektir; görüşme henüz yapılmadı, 12 Mart'a planlanmış."
+        },
+        {
+          "number": 44,
+          "type": "abc",
+          "prompt": "Lücke 44",
+          "options": { "a": "meinem", "b": "meinen", "c": "meiner" },
+          "answer": "a",
+          "evidence": [
+            { "text": "mail", "quote": "dass noch die Teilnahmebescheinigung von" },
+            { "text": "mail", "quote": "Deutschkurs fehlt" }
+          ],
+          "explanation": "„von“ edatı her zaman Dativ ister. „der Deutschkurs“ eril bir isimdir; „mein-“ eril Dativ'de „meinem“ olur: „die Teilnahmebescheinigung von meinem Deutschkurs“ (Almanca kursumun katılım belgesi). b) meinen yanlış: „meinen“ eril Akkusativ (ör. „ich besuche meinen Kurs“) veya çoğul Dativ biçimidir; „Deutschkurs“ tekil ve „von“ Akkusativ almaz. c) meiner yanlış: „meiner“ dişil bir ismin Dativ biçimidir (ör. „von meiner Lehrerin“); „Deutschkurs“ ise eril."
+        },
+        {
+          "number": 45,
+          "type": "abc",
+          "prompt": "Lücke 45",
+          "options": { "a": "sobald", "b": "damit", "c": "weil" },
+          "answer": "b",
+          "evidence": [
+            { "text": "mail", "quote": "Ich schicke Ihnen die Bescheinigung im Anhang," },
+            { "text": "mail", "quote": "meine Unterlagen vollständig sind" }
+          ],
+          "explanation": "Rustam belgeyi neden gönderiyor? Bir önceki cümlede bu belgenin eksik olduğu yazıyor („fehlt“). Belgeyi, dosyası tamamlansın diye gönderiyor: „meine Unterlagen vollständig sind“. Amaç bildiren bağlaç „damit“tir (… sın diye). a) sobald yanlış: „sobald“ (… olur olmaz) Rustam'ın belgeyi ancak dosyası tamamlandıktan sonra göndereceği anlamına gelir; ama Rustam belgeyi şimdi gönderiyor („im Anhang“) ve dosya ancak bu belgeyle tamamlanıyor. c) weil yanlış: „weil“ (çünkü) dosyanın zaten tam olduğunu ve bunun göndermenin sebebi olduğunu söylerdi; ama metne göre belge hâlâ eksik: „dass noch die Teilnahmebescheinigung … fehlt“."
+        }
+      ]
+    }
+  ]
+}

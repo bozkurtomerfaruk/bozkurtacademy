@@ -2,6 +2,14 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-10-19 · DTZ Lesen 5 sete tamamlandı
+
+**Yapılanlar:** Teil 1 (yakın çeldirici) ve Teil 5 (dilbilgisi + anlam boşlukları karışık) kuralları docs/sinav-setleri.md'ye eklendi. Pilotta 1.1/23, 1.1/25, 1.2/25 yeniden yazıldı; 2.1/28'de ilan çamaşır makinesini açıkça söylüyor. Her Teil'e 3 yeni set (toplam 15) yazıldı, iki inceleyici düzeltti, bağlamsız alt ajan kör çözdü: 51/51 uyuşma. Tarayıcı testleri `tests/exams/` altına taşındı; ekran görüntüleri `$S` yoksa repo dışında geçici bir klasöre kaydediliyor, `.gitignore`'da `undefined/` var.
+
+**Kararlar:** Teil 2'de X sebepleri setler arasında farklı: yer, saat (pilot), hedef kitle/yaş, süre, hizmet türü. Yer adları yalnızca kurgusal Lindbrück, Hagenwald, Wehrheide; kişi ve firma adları sitede tekrarlanmıyor.
+
+**Kör çözücünün düzeltmediğim notları:** Teil 1'de bazı doğru satırlar tek bir anahtar kelimeyle (Führungszeugnis, Geburtsurkunde, Folgerezept, Jobticket) bulunuyor; durum bu kelimeyi kullanmıyor ama kelimeyi bilen kolay çözüyor. 4.3/38, 4.4/37, 4.5/38'in doğru cevabı Almanya'da yaşayan biri için gündelik bilgiyle tahmin edilebilir; çeldiriciler metinle çürütülüyor.
+
 ## 2026-10-18 · DTZ Lesen pilotu
 
 **Kararlar:** Teil 2'de X seçeneği var, Teil 4 a/b/c (senin kararın). Resmi Übungssatz bu ortamdan açılamadığı için geri kalanlar kaynak taramasına göre: numaralar 21–45; Teil 1 içindekiler tablosu + a/b/c (örneksiz); Teil 2'de 8 ilan, örnek + 5 durum, bir X; Teil 3'te üç kısa metin, her birine bir richtig/falsch + bir a/b/c; Teil 4 broşür + 3 a/b/c; Teil 5 mektupta 6 boşluk, her boşluğa a/b/c. Süreler 8/10/12/7/8 dakika (toplam 45). Oynatıcıda a/b/c boşluklarında seçilen kelime görünüyor.

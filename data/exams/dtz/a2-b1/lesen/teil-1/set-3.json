@@ -1,0 +1,86 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-3",
+  "title": "Wegweiser im Rathaus",
+  "minutes": 8,
+  "context": "Sie müssen im Rathaus von Hagenwald verschiedene Dinge erledigen. Am Eingang hängt ein Wegweiser.",
+  "instructions": "Lesen Sie die Aufgaben 21 bis 25 und den Wegweiser. Wohin gehen Sie? Wählen Sie die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "inhalt",
+          "title": "Rathaus Hagenwald – Wegweiser",
+          "byline": "Rathaus Hagenwald, Glockenplatz 1",
+          "paragraphs": [
+            {
+              "rows": [
+                ["Untergeschoss", "Fundbüro: verlorene Schlüssel, Taschen und Fahrräder abholen; Fahrradgarage, Toiletten"],
+                ["Erdgeschoss A", "Information und Bürgeramt: Wohnsitz an- und abmelden, Personalausweis und Reisepass, Führungszeugnis, Beglaubigung von Kopien"],
+                ["Erdgeschoss B", "Stadtkasse: Gebühren bar oder mit Karte bezahlen, Hundesteuer, Mahnungen, Ratenzahlung vereinbaren"],
+                ["1. Stock A", "Standesamt: Eheschließung, Geburtsurkunden, Namensänderung, Sterbefälle"],
+                ["1. Stock B", "Ausländerbehörde: Aufenthaltstitel verlängern, Einbürgerung, Verpflichtungserklärung für Besuch aus dem Ausland; Termine nur online"],
+                ["2. Stock A", "Sozialamt: Grundsicherung im Alter, Hilfe bei Pflegekosten, Wohngeld, Bildungspaket für Schulkinder"],
+                ["2. Stock B", "Jugendamt: Elterngeld, Unterhaltsvorschuss, Erziehungsberatung, Kita-Gutscheine"],
+                ["3. Stock A", "Ordnungsamt: Gewerbe anmelden, Parkausweis für Anwohner, Lärmbeschwerden, Halteverbot für Umzugswagen beantragen"],
+                ["3. Stock B", "Bauamt: Baugenehmigungen, Schäden an Straßen und Gehwegen melden, Spielplätze und Grünanlagen"]
+              ]
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 21,
+          "type": "abc",
+          "prompt": "Ihre Schwester lebt in der Türkei und möchte im Sommer drei Wochen bei Ihnen wohnen. Für ihr Visum sollen Sie schriftlich versprechen, dass Sie in dieser Zeit alle Kosten für sie bezahlen.",
+          "options": { "a": "Erdgeschoss A", "b": "Erdgeschoss B", "c": "1. Stock B" },
+          "answer": "c",
+          "evidence": [{ "text": "inhalt", "quote": "Verpflichtungserklärung für Besuch aus dem Ausland" }],
+          "explanation": "Yurt dışından gelecek bir ziyaretçinin bütün masraflarını ödeyeceğinize yazılı olarak söz vermek bir taahhütnamedir. Bu 1. Stock B'de, yabancılar dairesinde: „Verpflichtungserklärung für Besuch aus dem Ausland“. a) yanlış: Erdgeschoss A'da pasaport (Reisepass) var, ama orada kimlik ve pasaport işleri yazıyor; yurt dışından gelen ziyaretçi için taahhütname orada geçmiyor. b) yanlış: Erdgeschoss B'de de ödeme var („Gebühren bar oder mit Karte bezahlen“), ama orada belediyeye harç ödeniyor; ziyaretçinin masraflarını ödeyeceğinize dair yazılı söz orada yazmıyor."
+        },
+        {
+          "number": 22,
+          "type": "abc",
+          "prompt": "Sie möchten in einer Kita als Küchenhilfe anfangen. Vorher möchte die Leiterin ein offizielles Papier sehen, das zeigt, dass Sie nie wegen einer Straftat verurteilt wurden.",
+          "options": { "a": "Erdgeschoss A", "b": "2. Stock B", "c": "3. Stock A" },
+          "answer": "a",
+          "evidence": [{ "text": "inhalt", "quote": "Führungszeugnis" }],
+          "explanation": "Hiç suç nedeniyle ceza almadığınızı gösteren resmi belge sabıka kaydı belgesidir (Führungszeugnis). Bu Erdgeschoss A'da, vatandaşlık bürosunda: „Führungszeugnis“. b) yanlış: 2. Stock B'de kreşle ilgili bir şey var („Kita-Gutscheine“), ama bu kreş yeri için kupon; kreşte çalışmak için gereken belge değil. c) yanlış: 3. Stock A'da da iş hayatıyla ilgili bir madde var („Gewerbe anmelden“), ama bu kendi işini açmak için; sabıka kaydı belgesi orada yazmıyor."
+        },
+        {
+          "number": 23,
+          "type": "abc",
+          "prompt": "Sie bekommen einen Brief vom Rathaus: Sie schulden seit Monaten 240 Euro für die Müllabfuhr. So viel Geld haben Sie im Moment nicht. Sie möchten den Betrag in kleinen Teilen jeden Monat überweisen.",
+          "options": { "a": "2. Stock A", "b": "Erdgeschoss B", "c": "2. Stock B" },
+          "answer": "b",
+          "evidence": [{ "text": "inhalt", "quote": "Mahnungen, Ratenzahlung vereinbaren" }],
+          "explanation": "Belediyeye olan borcu her ay küçük parçalar hâlinde ödemek taksitle ödemektir. Bu Erdgeschoss B'de, belediye veznesinde: „Mahnungen, Ratenzahlung vereinbaren“. a) yanlış: 2. Stock A'da az parası olanlar için yardımlar var („Grundsicherung im Alter“, „Wohngeld“), ama borcu taksitle ödemek orada yazmıyor. c) yanlış: 2. Stock B'de de para ödemeleri var („Elterngeld, Unterhaltsvorschuss“), ama bunlar ailelere verilen paralar; belediyeye olan borçla ilgili değil."
+        },
+        {
+          "number": 24,
+          "type": "abc",
+          "prompt": "Nächsten Samstag bringen Sie Ihre Möbel in eine neue Wohnung. Der Lkw soll direkt vor der Tür stehen. Deshalb soll die Stadt dort für einen Tag ein Schild aufstellen, damit niemand anderes sein Auto dort abstellt.",
+          "options": { "a": "Erdgeschoss A", "b": "3. Stock B", "c": "3. Stock A" },
+          "answer": "c",
+          "evidence": [{ "text": "inhalt", "quote": "Halteverbot für Umzugswagen beantragen" }],
+          "explanation": "Taşınma günü kamyonun kapının önünde durabilmesi için orada kimsenin park etmemesini sağlayan bir tabela gerekiyor; yani taşınma aracı için park yasağı. Bu 3. Stock A'da: „Halteverbot für Umzugswagen beantragen“. a) yanlış: Erdgeschoss A'da da taşınmayla ilgili bir madde var („Wohnsitz an- und abmelden“), ama orada adres kaydı yapılıyor, park yasağı değil. b) yanlış: 3. Stock B'de sokaklar geçiyor, ama sadece sokaklardaki hasarı bildirmek için („Schäden an Straßen und Gehwegen melden“)."
+        },
+        {
+          "number": 25,
+          "type": "abc",
+          "prompt": "Ihre Tochter ist vor einer Woche im Krankenhaus von Hagenwald zur Welt gekommen. Jetzt brauchen Sie ein offizielles Dokument, auf dem steht, wann und wo das Baby auf die Welt kam.",
+          "options": { "a": "1. Stock A", "b": "2. Stock B", "c": "Erdgeschoss A" },
+          "answer": "a",
+          "evidence": [{ "text": "inhalt", "quote": "Geburtsurkunden" }],
+          "explanation": "Bebeğin ne zaman ve nerede dünyaya geldiğini gösteren resmi belge doğum belgesidir. Bu 1. Stock A'da, nüfus ve evlendirme dairesinde: „Geburtsurkunden“. b) yanlış: 2. Stock B'de bebekli ailelerle ilgili bir madde var („Elterngeld“), ama bu ebeveyn parası; doğum belgesi değil. c) yanlış: Erdgeschoss A'da da resmi belgeler var („Personalausweis und Reisepass“), ama doğum belgesi orada yazmıyor."
+        }
+      ]
+    }
+  ]
+}

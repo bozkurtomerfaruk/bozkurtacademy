@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-3",
+  "title": "Der Integrationskurs",
+  "minutes": 7,
+  "instructions": "Lesen Sie den Text und die Aufgaben 37 bis 39. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "blatt",
+          "title": "Ihr Integrationskurs bei uns",
+          "byline": "Merkblatt des Bildungszentrums Mühlenkamp, Lindbrück",
+          "paragraphs": [
+            "Sie möchten bei uns einen Integrationskurs besuchen? Hier finden Sie die wichtigsten Informationen.",
+            { "heading": "Anmeldung" },
+            "Bitte kommen Sie zur Anmeldung persönlich in unser Büro in der Weidenstraße 12 (Erdgeschoss). Bringen Sie Ihren Pass oder Ausweis mit und, wenn Sie schon eine haben, Ihre Berechtigung für den Kurs. Eine Anmeldung am Telefon ist leider nicht möglich.",
+            { "heading": "Einstufungstest" },
+            "Vor dem Kurs machen alle Teilnehmenden einen Test. Er dauert etwa eine Stunde und ist kostenlos. Nach dem Test sagen wir Ihnen persönlich, in welchem Kurs Sie anfangen.",
+            { "heading": "Kurszeiten" },
+            "Vormittagskurse: Montag bis Freitag von 8:30 bis 12:15 Uhr. Für Berufstätige gibt es Abendkurse: Dienstag bis Donnerstag von 17:30 bis 20:45 Uhr.",
+            { "heading": "Kosten" },
+            "Wie viel Sie für den Kurs bezahlen, steht in Ihrer Berechtigung. Wenn Sie wenig verdienen, müssen Sie vielleicht weniger oder nichts bezahlen. Unsere Beratung hilft Ihnen gern beim Antrag.",
+            { "heading": "Fehlen im Unterricht" },
+            "Kommen Sie bitte regelmäßig zum Unterricht. Wenn Sie krank sind, rufen Sie bitte vor Kursbeginn im Büro an und bringen Sie danach eine Bescheinigung vom Arzt mit.",
+            { "heading": "Prüfung" },
+            "Am Ende des Kurses machen Sie die Prüfung bei uns im Haus. Die Termine hängen wir vier Wochen vorher am Schwarzen Brett aus. Zur Prüfung bringen Sie bitte wieder Ihren Pass oder Ausweis mit."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 37,
+          "type": "abc",
+          "prompt": "Was steht im Merkblatt über die Anmeldung?",
+          "options": {
+            "a": "Man kommt dafür selbst ins Büro.",
+            "b": "Man braucht dafür auf jeden Fall schon eine Berechtigung.",
+            "c": "Man kann sie auch am Telefon erledigen."
+          },
+          "answer": "a",
+          "evidence": [{ "text": "blatt", "quote": "Bitte kommen Sie zur Anmeldung persönlich in unser Büro" }],
+          "explanation": "Kayıt için bizzat büroya gelinmesi rica ediliyor: „Bitte kommen Sie zur Anmeldung persönlich in unser Büro“. „persönlich“ = „selbst“. b) yanlış: Kurs belgesi (Berechtigung) yalnızca varsa getiriliyor, kayıt için şart değil: „wenn Sie schon eine haben, Ihre Berechtigung für den Kurs“. c) yanlış: Telefonla kayıt mümkün değil: „Eine Anmeldung am Telefon ist leider nicht möglich.“"
+        },
+        {
+          "number": 38,
+          "type": "abc",
+          "prompt": "Was erfährt man über den Einstufungstest?",
+          "options": {
+            "a": "Man macht ihn am Ende des Kurses.",
+            "b": "Das Ergebnis steht am Schwarzen Brett.",
+            "c": "Danach weiß man, in welcher Gruppe man beginnt."
+          },
+          "answer": "c",
+          "evidence": [{ "text": "blatt", "quote": "Nach dem Test sagen wir Ihnen persönlich, in welchem Kurs Sie anfangen." }],
+          "explanation": "Seviye testinden sonra kişiye hangi kursta başlayacağı söyleniyor: „Nach dem Test sagen wir Ihnen persönlich, in welchem Kurs Sie anfangen.“ a) yanlış: Seviye testi kurstan önce yapılıyor: „Vor dem Kurs machen alle Teilnehmenden einen Test.“ Kursun sonunda yapılan, sınav: „Am Ende des Kurses machen Sie die Prüfung bei uns im Haus.“ b) yanlış: Test sonucu panoya asılmıyor, kişiye bizzat söyleniyor („persönlich“); panoya asılan, sınav tarihleri."
+        },
+        {
+          "number": 39,
+          "type": "abc",
+          "prompt": "Was sollen Teilnehmende tun, wenn sie krank sind?",
+          "options": {
+            "a": "Die Bescheinigung vom Arzt noch vor dem Unterricht ins Büro bringen.",
+            "b": "Vor dem Beginn des Unterrichts im Büro telefonisch Bescheid geben.",
+            "c": "Erst am nächsten Kurstag im Büro Bescheid sagen."
+          },
+          "answer": "b",
+          "evidence": [{ "text": "blatt", "quote": "rufen Sie bitte vor Kursbeginn im Büro an" }],
+          "explanation": "Hasta olan katılımcı ders başlamadan önce büroyu aramalı: „rufen Sie bitte vor Kursbeginn im Büro an“. a) yanlış: Doktor belgesi dersten önce değil, sonra („danach“) getiriliyor: „bringen Sie danach eine Bescheinigung vom Arzt mit“. c) yanlış: Büroya bir sonraki ders günü değil, ders başlamadan önce telefonla haber verilmeli: „vor Kursbeginn“."
+        }
+      ]
+    }
+  ]
+}

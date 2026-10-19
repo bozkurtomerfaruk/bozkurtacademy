@@ -1,0 +1,127 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-3",
+  "title": "Aus dem Rathaus",
+  "minutes": 12,
+  "instructions": "Lesen Sie die drei Texte und die Aufgaben 31 bis 36. Entscheiden Sie bei den Aufgaben 31, 33 und 35: Ist die Aussage richtig oder falsch? Wählen Sie bei den Aufgaben 32, 34 und 36 die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "behoerde",
+          "title": "Aufenthaltstitel schneller abholen",
+          "byline": "Aushang in der Ausländerbehörde Lindbrück",
+          "paragraphs": [
+            "Ab dem 3. Februar können Sie Ihren elektronischen Aufenthaltstitel schneller bei uns abholen. Wenn Ihre neue Karte fertig ist, bekommen Sie von uns eine SMS. Danach können Sie die Karte innerhalb von vier Wochen ohne Termin abholen, montags bis donnerstags von 8 bis 12 Uhr am Schalter 3 im Erdgeschoss. Bitte bringen Sie Ihren Pass und Ihre alte Karte mit.",
+            "Wir schicken die Karte nicht mit der Post. Wenn Sie nicht selbst kommen können, darf eine andere Person die Karte für Sie abholen. Diese Person braucht eine schriftliche Vollmacht von Ihnen und ihren eigenen Ausweis."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 31,
+          "type": "richtig-falsch",
+          "prompt": "Nach der SMS hat man zwei Monate Zeit, die neue Karte abzuholen.",
+          "answer": "falsch",
+          "evidence": [{ "text": "behoerde", "quote": "Danach können Sie die Karte innerhalb von vier Wochen ohne Termin abholen" }],
+          "explanation": "SMS geldikten sonra kart iki ay içinde değil, dört hafta içinde alınabiliyor: „Danach können Sie die Karte innerhalb von vier Wochen ohne Termin abholen“. Dört hafta yaklaşık bir aydır; bu yüzden ifade yanlış."
+        },
+        {
+          "number": 32,
+          "type": "abc",
+          "prompt": "Wer die neue Karte selbst abholt, …",
+          "options": {
+            "a": "braucht dafür vorher einen Termin.",
+            "b": "kann auch freitags zum Schalter 3 kommen.",
+            "c": "soll den Pass und die bisherige Karte dabeihaben."
+          },
+          "answer": "c",
+          "evidence": [{ "text": "behoerde", "quote": "Bitte bringen Sie Ihren Pass und Ihre alte Karte mit." }],
+          "explanation": "Kartı almaya gelen kişiden pasaportunu ve eski kartını getirmesi rica ediliyor: „Bitte bringen Sie Ihren Pass und Ihre alte Karte mit.“ „alte Karte“ = „bisherige Karte“, „mitbringen“ = „dabeihaben“. a) yanlış: Kart randevusuz alınabiliyor: „Danach können Sie die Karte innerhalb von vier Wochen ohne Termin abholen“. b) yanlış: Kartlar cuma günü değil, pazartesiden perşembeye veriliyor: „montags bis donnerstags von 8 bis 12 Uhr am Schalter 3“."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "zeitung",
+          "title": "Stadtbibliothek: Neue Zeiten und ein Treffpunkt zum Deutschüben",
+          "byline": "Lindbrücker Rundschau, Lokalteil",
+          "paragraphs": [
+            "Bisher war die Stadtbibliothek Lindbrück nur von Montag bis Freitag geöffnet. Ab März öffnet sie zusätzlich samstags von 10 bis 14 Uhr. Am Samstag gibt es dann auch ein neues Angebot: Von 10 bis 12 Uhr treffen sich Erwachsene, die ihr Deutsch verbessern möchten, zum Sprachtreff. Ehrenamtliche Helferinnen sprechen mit den Teilnehmenden über Alltagsthemen. Der Sprachtreff ist kostenlos, und man braucht dafür keinen Bibliotheksausweis.",
+            "Der Ausweis kostet für Erwachsene 10 Euro im Jahr, für Kinder und Jugendliche bis 18 Jahre ist er kostenlos. Mit dem Ausweis kann man jetzt auch E-Books ausleihen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 33,
+          "type": "richtig-falsch",
+          "prompt": "Für den Sprachtreff bezahlt man 10 Euro im Jahr.",
+          "answer": "falsch",
+          "evidence": [{ "text": "zeitung", "quote": "Der Sprachtreff ist kostenlos" }],
+          "explanation": "Dil buluşması ücretsiz: „Der Sprachtreff ist kostenlos“. Yılda 10 Euro, yetişkinler için kütüphane kartının fiyatı: „Der Ausweis kostet für Erwachsene 10 Euro im Jahr“. Dil buluşması için kart da gerekmiyor; bu yüzden ifade yanlış."
+        },
+        {
+          "number": 34,
+          "type": "abc",
+          "prompt": "Die Stadtbibliothek …",
+          "options": {
+            "a": "bietet den Sprachtreff am Samstagnachmittag an.",
+            "b": "ist ab März auch am Wochenende geöffnet.",
+            "c": "verlangt von Jugendlichen eine Gebühr für den Ausweis."
+          },
+          "answer": "b",
+          "evidence": [{ "text": "zeitung", "quote": "Ab März öffnet sie zusätzlich samstags von 10 bis 14 Uhr." }],
+          "explanation": "Kütüphane martan itibaren cumartesi günleri de açık: „Ab März öffnet sie zusätzlich samstags von 10 bis 14 Uhr.“ Cumartesi hafta sonudur. a) yanlış: Dil buluşması öğleden sonra değil, cumartesi sabahı yapılıyor: „Von 10 bis 12 Uhr treffen sich Erwachsene, die ihr Deutsch verbessern möchten, zum Sprachtreff.“ c) yanlış: 18 yaşına kadar çocuklar ve gençler için kart ücretsiz: „für Kinder und Jugendliche bis 18 Jahre ist er kostenlos“."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "brief",
+          "title": "Ihr Antrag auf den Lindbrück-Pass",
+          "byline": "Brief des Sozialamts der Stadt Lindbrück",
+          "paragraphs": [
+            "Sehr geehrte Frau Okonkwo,",
+            "wir haben Ihren Antrag auf den Lindbrück-Pass vom 12. Mai erhalten. Leider fehlt noch Ihr Bescheid über das Wohngeld. Bitte schicken Sie uns bis zum 15. Juni eine Kopie. Sie können die Kopie auch persönlich im Rathaus, Zimmer 214, abgeben. Ohne diesen Bescheid können wir Ihren Antrag nicht bearbeiten.",
+            "Mit dem Lindbrück-Pass zahlen Sie im Hallenbad und für Kurse an der Volkshochschule nur die Hälfte. Die Monatskarte für den Bus kostet 20 Euro statt 49 Euro. Der Pass gilt ein Jahr lang.",
+            "Mit freundlichen Grüßen",
+            "Jens Haberland, Sachbearbeiter"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 35,
+          "type": "richtig-falsch",
+          "prompt": "Frau Okonkwo darf das fehlende Dokument auch selbst im Rathaus vorbeibringen.",
+          "answer": "richtig",
+          "evidence": [{ "text": "brief", "quote": "Sie können die Kopie auch persönlich im Rathaus, Zimmer 214, abgeben." }],
+          "explanation": "Eksik belge, yani konut yardımı kararının kopyası, postayla gönderilebilir ya da belediye binasında bizzat teslim edilebilir: „Sie können die Kopie auch persönlich im Rathaus, Zimmer 214, abgeben.“ „persönlich abgeben“ = „selbst vorbeibringen“; ifade doğru."
+        },
+        {
+          "number": 36,
+          "type": "abc",
+          "prompt": "Mit dem Lindbrück-Pass …",
+          "options": {
+            "a": "ist ein Kurs an der Volkshochschule billiger.",
+            "b": "kostet die Monatskarte für den Bus 49 Euro.",
+            "c": "geht man ein Jahr lang kostenlos ins Hallenbad."
+          },
+          "answer": "a",
+          "evidence": [{ "text": "brief", "quote": "Mit dem Lindbrück-Pass zahlen Sie im Hallenbad und für Kurse an der Volkshochschule nur die Hälfte." }],
+          "explanation": "Lindbrück-Pass ile Volkshochschule kursları için yalnızca yarı fiyat ödeniyor: „Mit dem Lindbrück-Pass zahlen Sie im Hallenbad und für Kurse an der Volkshochschule nur die Hälfte.“ Yani kurs daha ucuz. b) yanlış: 49 Euro aylık otobüs kartının normal fiyatı; Lindbrück-Pass ile 20 Euro ödeniyor: „Die Monatskarte für den Bus kostet 20 Euro statt 49 Euro.“ c) yanlış: Kart bir yıl geçerli, ama kapalı yüzme havuzu ücretsiz değil; yarı fiyat ödeniyor: „zahlen Sie im Hallenbad und für Kurse an der Volkshochschule nur die Hälfte“."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-5",
+  "title": "Rund ums Wohnen",
+  "minutes": 12,
+  "instructions": "Lesen Sie die drei Texte und die Aufgaben 31 bis 36. Entscheiden Sie bei den Aufgaben 31, 33 und 35: Ist die Aussage richtig oder falsch? Wählen Sie bei den Aufgaben 32, 34 und 36 die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "aushang",
+          "title": "Wartung der Heizung",
+          "byline": "Aushang der Hausverwaltung Sonnleitner GmbH",
+          "paragraphs": [
+            "Am Dienstag, dem 7. Oktober, prüft die Firma Wärmetechnik Vosskamp die Heizungen in allen Wohnungen im Fichtenring 8 bis 12. Die Techniker kommen zwischen 8 und 14 Uhr. Bitte sorgen Sie dafür, dass an diesem Tag jemand in Ihrer Wohnung ist. Sie können Ihren Schlüssel aber auch bis Montag bei unserem Hausmeister, Herrn Szymański, abgeben (Erdgeschoss, Haus 10). Einen zweiten Termin gibt es nicht.",
+            "Während der Arbeiten haben Sie etwa zwei Stunden kein warmes Wasser. Die Kosten sind in Ihren Nebenkosten enthalten."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 31,
+          "type": "richtig-falsch",
+          "prompt": "Am 7. Oktober gibt es den ganzen Tag kein warmes Wasser.",
+          "answer": "falsch",
+          "evidence": [{ "text": "aushang", "quote": "Während der Arbeiten haben Sie etwa zwei Stunden kein warmes Wasser." }],
+          "explanation": "Sıcak su bütün gün değil, çalışmalar sırasında yaklaşık iki saat kesik: „Während der Arbeiten haben Sie etwa zwei Stunden kein warmes Wasser.“ Bu yüzden ifade yanlış."
+        },
+        {
+          "number": 32,
+          "type": "abc",
+          "prompt": "Wer am 7. Oktober nicht zu Hause sein kann, …",
+          "options": {
+            "a": "gibt den Schlüssel am Dienstag beim Hausmeister ab.",
+            "b": "kann den Schlüssel vorher beim Hausmeister lassen.",
+            "c": "vereinbart mit der Firma Vosskamp einen anderen Tag."
+          },
+          "answer": "b",
+          "evidence": [{ "text": "aushang", "quote": "Sie können Ihren Schlüssel aber auch bis Montag bei unserem Hausmeister, Herrn Szymański, abgeben" }],
+          "explanation": "Evde olamayan kişi anahtarını pazartesiye kadar kapıcı Bay Szymański'ye bırakabilir: „Sie können Ihren Schlüssel aber auch bis Montag bei unserem Hausmeister, Herrn Szymański, abgeben“. Pazartesi, salı gününden öncedir. a) yanlış: Anahtar kapıcıya salı günü değil, en geç pazartesi veriliyor: „bis Montag“. c) yanlış: Firma ile başka bir gün ayarlanamaz: „Einen zweiten Termin gibt es nicht.“"
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "zeitung",
+          "title": "Mieterberatung jetzt auch in der Birkenhöhe",
+          "byline": "Hagenwalder Wochenblatt, Aus den Stadtteilen",
+          "paragraphs": [
+            "Ab sofort bietet die Beratungsstelle „Dach überm Kopf“ jeden Mittwoch von 15 bis 18 Uhr eine Sprechstunde im Nachbarschaftshaus Birkenhöhe, Ulmenstraße 5, an. Die Beraterinnen helfen bei Fragen zur Nebenkostenabrechnung, zu Mieterhöhungen und bei Streit mit dem Vermieter. Einen Termin braucht man nicht. Eine Beratung am Telefon gibt es leider nicht.",
+            "Das erste Gespräch ist kostenlos. Wer danach weitere Hilfe braucht, zahlt einen Jahresbeitrag von 30 Euro. Bitte bringen Sie Ihren Mietvertrag und die Briefe Ihres Vermieters mit."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 33,
+          "type": "richtig-falsch",
+          "prompt": "Man kann ohne vorherige Anmeldung in die Sprechstunde kommen.",
+          "answer": "richtig",
+          "evidence": [{ "text": "zeitung", "quote": "Einen Termin braucht man nicht." }],
+          "explanation": "Danışma saatine gitmek için randevu gerekmiyor: „Einen Termin braucht man nicht.“ Yani önceden kayıt yaptırmadan gelinebilir; ifade doğru. Yalnızca telefonla danışmanlık yok: „Eine Beratung am Telefon gibt es leider nicht.“"
+        },
+        {
+          "number": 34,
+          "type": "abc",
+          "prompt": "Die Beratungsstelle „Dach überm Kopf“ …",
+          "options": {
+            "a": "berät auch, wenn man Fragen zur Abrechnung der Nebenkosten hat.",
+            "b": "berät Mieterinnen und Mieter auch telefonisch.",
+            "c": "verlangt nach dem ersten Gespräch 30 Euro für jeden Besuch."
+          },
+          "answer": "a",
+          "evidence": [{ "text": "zeitung", "quote": "Die Beraterinnen helfen bei Fragen zur Nebenkostenabrechnung" }],
+          "explanation": "Danışmanlar yan gider hesabıyla ilgili sorularda yardım ediyor: „Die Beraterinnen helfen bei Fragen zur Nebenkostenabrechnung“. „Fragen zur Abrechnung der Nebenkosten“ aynı anlama geliyor; bu yüzden a doğru. b) yanlış: Telefonla danışmanlık yok: „Eine Beratung am Telefon gibt es leider nicht.“ c) yanlış: 30 Euro her ziyaret için değil, yılda bir kez ödenen aidat: „zahlt einen Jahresbeitrag von 30 Euro“."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "einladung",
+          "title": "Einladung zum Hoffest",
+          "byline": "Brief des Mieterbeirats an alle Bewohnerinnen und Bewohner der Wohnanlage Am Erlengrund",
+          "paragraphs": [
+            "Liebe Nachbarinnen und Nachbarn,",
+            "am Samstag, dem 13. September, feiern wir ab 15 Uhr im Innenhof unser Hoffest. Für Getränke und Grillwürstchen sorgt die Hausverwaltung. Wir freuen uns, wenn Sie einen Salat oder einen Kuchen mitbringen. Bitte schreiben Sie bis zum 5. September in die Liste am Schwarzen Brett, was Sie mitbringen. Für Kinder gibt es eine Hüpfburg und um 17 Uhr ein Puppentheater. Bei Regen feiern wir im Gemeinschaftsraum im Keller von Haus 4.",
+            "Herzliche Grüße",
+            "Ihr Mieterbeirat, Dragana Jovanović und Lukas Hennig"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 35,
+          "type": "richtig-falsch",
+          "prompt": "Die Hausverwaltung bringt Salate und Kuchen zum Fest mit.",
+          "answer": "falsch",
+          "evidence": [{ "text": "einladung", "quote": "Für Getränke und Grillwürstchen sorgt die Hausverwaltung." }, { "text": "einladung", "quote": "Wir freuen uns, wenn Sie einen Salat oder einen Kuchen mitbringen." }],
+          "explanation": "Site yönetimi salata ve pasta değil, içecek ve ızgara sosisi getiriyor: „Für Getränke und Grillwürstchen sorgt die Hausverwaltung.“ Salata veya pastayı komşuların getirmesi rica ediliyor: „Wir freuen uns, wenn Sie einen Salat oder einen Kuchen mitbringen.“ Bu yüzden ifade yanlış."
+        },
+        {
+          "number": 36,
+          "type": "abc",
+          "prompt": "Beim Hoffest …",
+          "options": {
+            "a": "beginnt das Puppentheater um 15 Uhr.",
+            "b": "tragen sich die Gäste am 13. September in eine Liste ein.",
+            "c": "feiert man bei schlechtem Wetter in einem Raum im Untergeschoss."
+          },
+          "answer": "c",
+          "evidence": [{ "text": "einladung", "quote": "Bei Regen feiern wir im Gemeinschaftsraum im Keller von Haus 4." }],
+          "explanation": "Yağmur yağarsa kutlama 4 numaralı binanın bodrumundaki ortak odada yapılıyor: „Bei Regen feiern wir im Gemeinschaftsraum im Keller von Haus 4.“ „Keller“ = „Untergeschoss“, „Regen“ = „schlechtes Wetter“. a) yanlış: Saat 15'te kukla tiyatrosu değil, şenlik başlıyor; kukla tiyatrosu saat 17'de: „um 17 Uhr ein Puppentheater“. b) yanlış: Listeye 13 Eylül'de değil, 5 Eylül'e kadar yazılmalı: „Bitte schreiben Sie bis zum 5. September in die Liste am Schwarzen Brett“."
+        }
+      ]
+    }
+  ]
+}

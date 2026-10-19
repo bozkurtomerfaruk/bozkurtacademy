@@ -1,0 +1,135 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-3",
+  "title": "Familie und Kinderbetreuung",
+  "minutes": 10,
+  "context": "Mehrere Eltern in Lindbrück und Hagenwald suchen Angebote für ihre Kinder und ihre Familie. Die Anzeigen stehen im Elternheft „Kinderleicht“.",
+  "instructions": "Lesen Sie die Situationen 26 bis 30 und die Anzeigen a bis h. Welche Anzeige passt zu welcher Situation? Sie können jede Anzeige nur einmal wählen. Die Anzeige aus dem Beispiel können Sie nicht mehr wählen. Für eine Situation gibt es keine passende Anzeige. In diesem Fall wählen Sie X.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": "x",
+      "texts": [
+        {
+          "id": "a",
+          "label": "a",
+          "title": "Hebammenpraxis Morgenlicht",
+          "paragraphs": [
+            "Sie erwarten ein Baby? Wir begleiten Sie in der Schwangerschaft und in den ersten acht Wochen danach. Nach der Geburt besuchen wir Sie zu Hause, wiegen Ihr Kind und zeigen Ihnen, wie Sie es baden und wickeln. Die Kosten trägt Ihre Krankenkasse. Bitte melden Sie sich möglichst früh: Tel. 05431 72 418."
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "title": "Tagesmutter im Weidenviertel",
+          "paragraphs": [
+            "Ich bin ausgebildete Tagesmutter und betreue in meiner Wohnung mit Garten bis zu fünf Kinder zwischen einem und drei Jahren. Montag bis Freitag von 7.30 bis 16 Uhr, ein warmes Mittagessen koche ich selbst. Die Stadt Lindbrück bezahlt einen Teil der Kosten. Ab August habe ich zwei Plätze frei. Ilona Wettstein, Tel. 05431 58 902."
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "title": "Krabbelgruppe Wirbelwind",
+          "paragraphs": [
+            "Jeden Donnerstag von 9.30 bis 11 Uhr treffen sich im Familienzentrum Hasenwinkel Mütter und Väter mit Kindern bis drei Jahre. Wir singen, spielen und frühstücken zusammen. Bei Fragen zu Schlaf, Essen und Erziehung hilft unsere Sozialpädagogin. Die Eltern bleiben die ganze Zeit bei ihren Kindern. Kostenlos, ohne Anmeldung."
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "title": "Familienberatungsstelle Ankerplatz",
+          "paragraphs": [
+            "Es gibt oft Streit in Ihrer Familie, oder Ihr Kind spricht kaum noch mit Ihnen? Bei uns können Eltern, Kinder und Jugendliche offen über ihre Sorgen sprechen. Gemeinsam suchen wir nach Wegen, wie das Zusammenleben wieder besser klappt. Die Beratung ist kostenlos und vertraulich, auch auf Türkisch und Russisch. Termine unter Tel. 05431 64 330."
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "title": "Zuverlässige Babysitterin",
+          "paragraphs": [
+            "Ich heiße Tabea, bin 24 Jahre alt und studiere Pädagogik. Abends und am Wochenende passe ich gern auf Ihre Kinder auf, auch auf Babys. Ich habe einen Erste-Hilfe-Kurs für Kinder gemacht. 11 Euro pro Stunde. Ich wohne in Lindbrück-Mitte und komme mit dem Fahrrad zu Ihnen. Tel. 0157 3302 1846."
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "title": "Sommerwerkstatt im Jugendhaus Fuchsbau",
+          "paragraphs": [
+            "In den ersten drei Wochen der Sommerferien betreuen wir Grundschulkinder von 6 bis 10 Jahren, Montag bis Freitag von 8 bis 16 Uhr. Auf dem Programm stehen Ausflüge, Basteln und Spiele im Garten, das Mittagessen ist inklusive. 45 Euro pro Woche. Anmeldung bis 31. Mai im Jugendhaus, Fuchsbauweg 12, Lindbrück."
+          ]
+        },
+        {
+          "id": "g",
+          "label": "g",
+          "title": "SV Wellenreiter Hagenwald: Schwimmen lernen",
+          "paragraphs": [
+            "Ihr Kind kann noch nicht schwimmen? In unserem Anfängerkurs lernen Kinder von 5 bis 10 Jahren in kleinen Gruppen, sich sicher im Wasser zu bewegen. Zehn Termine, immer samstags von 10 bis 11 Uhr im Hallenbad Hagenwald. Kosten: 70 Euro, für Vereinsmitglieder 40 Euro. Anmeldung: kurse@wellenreiter-hagenwald.de"
+          ]
+        },
+        {
+          "id": "h",
+          "label": "h",
+          "title": "Babyschwimmen im Freizeitbad Wehrheide",
+          "paragraphs": [
+            "Wasser macht schon den Kleinsten Spaß! Babys von 4 bis 12 Monaten entdecken mit Mama oder Papa das warme Wasser (32 Grad). Wir singen, spielen und üben erste Bewegungen. Sechs Termine, samstags um 9 Uhr, 60 Euro. Bitte bringen Sie eine Schwimmwindel mit. Anmeldung an der Kasse des Freizeitbads."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Familie Adeyemi ist am Samstag zu einer Hochzeit eingeladen und kommt erst spät in der Nacht nach Hause. Für diesen Abend sucht sie jemanden, der sich um ihre kleine Tochter kümmert.",
+          "answer": "e",
+          "evidence": [{ "text": "e", "quote": "Abends und am Wochenende passe ich gern auf Ihre Kinder auf, auch auf Babys." }],
+          "explanation": "e ilanında Tabea akşamları ve hafta sonu çocuklara, bebeklere bile bakıyor: „Abends und am Wochenende passe ich gern auf Ihre Kinder auf“. Adeyemi ailesi cumartesi akşamı küçük kızları için birini arıyor. Bu ilan örnekte kullanıldığı için başka bir durum için seçilemez."
+        },
+        {
+          "number": 26,
+          "type": "zuordnung",
+          "prompt": "Mareks Tochter ist sieben. Im Freibad konnte sie im Sommer nicht mit ihren Freundinnen ins tiefe Becken, weil sie sich noch nicht allein über Wasser halten kann. Marek arbeitet unter der Woche und sucht deshalb für sie einen Kurs am Wochenende.",
+          "answer": "g",
+          "evidence": [{ "text": "g", "quote": "In unserem Anfängerkurs lernen Kinder von 5 bis 10 Jahren in kleinen Gruppen, sich sicher im Wasser zu bewegen." }, { "text": "g", "quote": "immer samstags von 10 bis 11 Uhr im Hallenbad Hagenwald" }],
+          "explanation": "g ilanında henüz yüzme bilmeyen çocuklar için başlangıç kursu var: „Anfängerkurs … Kinder von 5 bis 10 Jahren“. Marek'in kızı yedi yaşında, yani bu yaş grubunda. Kurs cumartesi: „immer samstags von 10 bis 11 Uhr“; Marek de hafta sonu bir kurs arıyor. Tuzak h: O da cumartesi ve suda, ama „Babys von 4 bis 12 Monaten“ için, anne veya babayla birlikte; yedi yaşında bir çocuk için değil."
+        },
+        {
+          "number": 27,
+          "type": "zuordnung",
+          "prompt": "Yasmin fängt im August wieder an zu arbeiten, montags bis freitags von 8 bis 15 Uhr. Für ihren Sohn (18 Monate) hat sie keinen Kita-Platz gefunden. Während sie arbeitet, soll sich jemand in einer kleinen Gruppe um ihn kümmern.",
+          "answer": "b",
+          "evidence": [{ "text": "b", "quote": "bis zu fünf Kinder zwischen einem und drei Jahren" }, { "text": "b", "quote": "Montag bis Freitag von 7.30 bis 16 Uhr" }, { "text": "b", "quote": "Ab August habe ich zwei Plätze frei." }],
+          "explanation": "b ilanındaki gündüz bakıcısı (Tagesmutter) „bis zu fünf Kinder zwischen einem und drei Jahren“ bakıyor; yani küçük bir grup ve 18 aylık bir çocuk için uygun. Saatler „Montag bis Freitag von 7.30 bis 16 Uhr“; Yasmin pazartesiden cumaya 8 ile 15 arası çalışıyor. Ayrıca „Ab August habe ich zwei Plätze frei“. Tuzak c: Orada da üç yaşına kadar çocuklar var, ama sadece perşembe sabahı ve „Die Eltern bleiben die ganze Zeit bei ihren Kindern“; Yasmin o sırada işte olacak."
+        },
+        {
+          "number": 28,
+          "type": "zuordnung",
+          "prompt": "Rania und ihre 14-jährige Tochter verstehen sich seit einigen Monaten nicht mehr gut, fast jeden Abend gibt es laute Diskussionen. Rania möchte mit einer Fachperson darüber reden, wie die Situation zu Hause wieder ruhiger werden kann.",
+          "answer": "d",
+          "evidence": [{ "text": "d", "quote": "Es gibt oft Streit in Ihrer Familie" }, { "text": "d", "quote": "Bei uns können Eltern, Kinder und Jugendliche offen über ihre Sorgen sprechen." }],
+          "explanation": "d ilanındaki aile danışma merkezi ailede sık tartışma olduğunda yardım ediyor: „Es gibt oft Streit in Ihrer Familie“. Orada „Eltern, Kinder und Jugendliche“ sorunlarını konuşabiliyor ve birlikte yaşamın nasıl düzeleceğine dair yollar aranıyor. Rania da 14 yaşındaki kızıyla yaşadığı tartışmalar için bir uzmanla konuşmak istiyor. Tuzak c: Orada bir sosyal pedagog eğitim (Erziehung) sorularına yardım ediyor, ama grup „Kindern bis drei Jahre“ ve ebeveynleri için; 14 yaşında bir genç için değil."
+        },
+        {
+          "number": 29,
+          "type": "zuordnung",
+          "prompt": "Samira bekommt im April ihr erstes Kind. In den Wochen nach der Geburt soll eine Fachfrau zu ihr in die Wohnung kommen und ihr zeigen, wie man ein Neugeborenes richtig pflegt.",
+          "answer": "a",
+          "evidence": [{ "text": "a", "quote": "Nach der Geburt besuchen wir Sie zu Hause, wiegen Ihr Kind und zeigen Ihnen, wie Sie es baden und wickeln." }],
+          "explanation": "a ilanındaki ebeler doğumdan sonraki ilk sekiz haftada eve geliyor: „Nach der Geburt besuchen wir Sie zu Hause“ ve bebeğin nasıl yıkanıp altının değiştirileceğini gösteriyor. Samira da doğumdan sonra evine gelip bebek bakımını gösterecek birini istiyor. Tuzak h: O da bebekler için, ama yüzme havuzunda ve „Babys von 4 bis 12 Monaten“ için; ilk haftalarda evde yardım değil."
+        },
+        {
+          "number": 30,
+          "type": "zuordnung",
+          "prompt": "Emre ist zwölf Jahre alt. In den Sommerferien müssen seine Eltern beide arbeiten. Die Eltern suchen deshalb ein Programm, bei dem Emre tagsüber mit anderen Kindern etwas unternimmt, zum Beispiel Ausflüge.",
+          "answer": "x",
+          "evidence": [{ "text": "f", "quote": "betreuen wir Grundschulkinder von 6 bis 10 Jahren" }],
+          "explanation": "Tuzak f: Yaz tatilinde gündüz bakım programı var, geziler ve oyunlar da yapılıyor. Ama „betreuen wir Grundschulkinder von 6 bis 10 Jahren“; Emre ise on iki yaşında. g de uymuyor: Yüzme kursu tatil programı değil ve „Kinder von 5 bis 10 Jahren“ için. b ve c üç yaşına kadar küçük çocuklar için. Bu yüzden cevap X."
+        }
+      ]
+    }
+  ]
+}

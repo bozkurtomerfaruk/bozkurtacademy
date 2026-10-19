@@ -1,0 +1,187 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "c1",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-1",
+  "title": "Arbeiten im Homeoffice",
+  "minutes": 15,
+  "context": "Eine Fachzeitschrift für Arbeit und Gesellschaft hat fünf Fachleute gefragt: Was macht das Homeoffice mit unserer Arbeitswelt?",
+  "instructions": "Lesen Sie die Beiträge a bis e und die Aussagen 24 bis 30. Welche Aussage passt zu welchem Beitrag? Die Beiträge können mehrmals gewählt werden. Zwei Aussagen passen zu keinem Beitrag; markieren Sie dann 0.",
+  "groups": [
+    {
+      "layout": "comments",
+      "none": "0",
+      "texts": [
+        {
+          "id": "vossberg",
+          "label": "a",
+          "title": "Prof. Dr. Henrike Vossberg, Arbeitspsychologin",
+          "paragraphs": [
+            "Dass konzentrierte Tätigkeiten am heimischen Schreibtisch oft besser gelingen als im Großraumbüro, ist inzwischen gut belegt; insofern war die Verlagerung für viele ein Gewinn. Übersehen wird dabei allerdings, wie sich berufliche Kompetenz eigentlich herausbildet. Ein erheblicher Teil dessen, was Fachkräfte können, wird nirgends gelehrt, sondern nebenher aufgeschnappt: indem man mithört, wie eine erfahrene Kollegin einen aufgebrachten Kunden beschwichtigt, oder am Nebentisch verfolgt, wie ein Problem Schritt für Schritt eingekreist wird. Wer nach zwanzig Jahren im Beruf zu Hause arbeitet, zehrt von diesem Fundus. Wer hingegen gerade erst eingestiegen ist und seine Kolleginnen und Kollegen fast nur als Kacheln in Videokonferenzen kennt, dem bleibt er weitgehend verschlossen – und keine noch so gründliche Onlineschulung vermag das zu ersetzen."
+          ]
+        },
+        {
+          "id": "kettelhake",
+          "label": "b",
+          "title": "Dr. Jonas Kettelhake, Stadt- und Regionalforscher",
+          "paragraphs": [
+            "Lange galt das Pendeln als unvermeidlicher Preis des Erwerbslebens. Seit viele Beschäftigte nur noch zwei- oder dreimal pro Woche im Betrieb erscheinen, verschieben sich die Kalküle: Ein Haus im Umland, eine Autostunde vom Firmensitz entfernt, erscheint plötzlich zumutbar. Kleinstädte, die jahrzehntelang Einwohner verloren, verzeichnen wieder Zuzug, was ihren Ortskernen guttut. Ökologisch fällt die Rechnung jedoch ernüchternder aus, als man meinen sollte. Wer statt an fünf Tagen je zwanzig Kilometer nun an zwei Tagen je fünfzig Kilometer fährt, legt unterm Strich kaum eine kürzere Strecke zurück. Und wer gehofft hatte, in den Metropolen werde sich die Lage auf dem Wohnungsmarkt entspannen, sieht sich getäuscht: Frei werdende Wohnungen sind dort schneller wieder vergeben, als sie inseriert werden können."
+          ]
+        },
+        {
+          "id": "aydemir",
+          "label": "c",
+          "title": "Selin Aydemir, Personalvorständin eines Logistikkonzerns",
+          "paragraphs": [
+            "Als wir vor drei Jahren das mobile Arbeiten für die Verwaltung einführten, rechnete ich mit Leistungseinbußen. Davon kann keine Rede sein; zudem schreiben wir Stellen in der Buchhaltung oder im Controlling inzwischen ohne Ortsbindung aus und erhalten Zuschriften aus Gegenden, aus denen früher niemand zu uns gekommen wäre. Was mich dagegen umtreibt, ist die Stimmung in unseren Lagern. Wer dort Sendungen kommissioniert oder Touren disponiert, kann seine Arbeit nicht mit nach Hause nehmen, und in der Kantine ist mittlerweile spöttisch von den „Laptop-Leuten“ die Rede. Wir haben Ausgleichsmodelle erprobt, etwa freie Schichtwahl oder zusätzliche Urlaubstage, doch das Gefühl, zweierlei Belegschaften zu haben, ist damit nicht verschwunden. Diese Spaltung halte ich für die eigentliche Herausforderung."
+          ]
+        },
+        {
+          "id": "groenewold",
+          "label": "d",
+          "title": "Prof. Dr. Malte Groenewold, Organisationssoziologe",
+          "paragraphs": [
+            "In der Debatte um Präsenzpflichten wird meist über Quoten gestritten: zwei Tage, drei Tage, vier? Damit verfehlt man den Kern. Teams, die sich ohnehin kennen, kooperieren auch über Videokonferenzen erstaunlich reibungslos. Was verloren geht, sind die losen Kontakte über Abteilungsgrenzen hinweg – das zufällige Gespräch an der Kaffeemaschine mit jemandem aus dem Vertrieb, aus dem gelegentlich eine Idee hervorgeht, auf die keine der beiden Seiten allein gekommen wäre. Solche Begegnungen lassen sich nicht per Dienstanweisung erzwingen. Wenn ein Unternehmen seine Leute zurückbeordert, sie dann aber den ganzen Tag allein am Schreibtisch sitzen und dieselben Onlinemeetings abhalten wie zuvor im Arbeitszimmer, ist nichts gewonnen. Die Frage ist also nicht, wie oft man kommt, sondern wofür."
+          ]
+        },
+        {
+          "id": "hallmann",
+          "label": "e",
+          "title": "Dr. Wiebke Hallmann, Arbeitsmedizinerin",
+          "paragraphs": [
+            "Auf den ersten Blick spricht aus medizinischer Sicht vieles für die Arbeit daheim: kein Stau, keine überfüllten Züge, mehr Schlaf am Morgen. In unseren Sprechstunden zeigt sich jedoch ein zwiespältigeres Bild. Rückenbeschwerden durch den improvisierten Platz am Küchentisch sind das kleinere Übel; ein vernünftiger Stuhl schafft hier rasch Abhilfe. Schwerer wiegt, dass vielen der Heimweg fehlt, der früher den Feierabend markierte. Der Rechner steht in Sichtweite, die Mails lassen sich „nur kurz“ noch prüfen, und aus acht Stunden werden unmerklich zehn. Ausgerechnet die Pflichtbewussten sind dafür besonders anfällig. Arbeitgeber, die ihre Fürsorgepflicht ernst nehmen, sollten daher weniger in Möbel als in klare Absprachen über Erreichbarkeit investieren."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Wer bei der Besetzung von Posten auf eine Präsenzpflicht verzichtet, erreicht Fachkräfte, die außerhalb des bisherigen Einzugsgebiets eines Betriebs leben.",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "aydemir",
+              "quote": "erhalten Zuschriften aus Gegenden, aus denen früher niemand zu uns gekommen wäre"
+            }
+          ],
+          "explanation": "Selin Aydemir (c), muhasebe ve controlling ilanlarını artık yer şartı olmadan („ohne Ortsbindung“) verdiklerini ve „erhalten Zuschriften aus Gegenden, aus denen früher niemand zu uns gekommen wäre“ (eskiden hiç kimsenin gelmeyeceği bölgelerden başvuru aldıklarını) yazıyor. İfadedeki „auf eine Präsenzpflicht verzichtet“ (iş yerinde bulunma zorunluluğundan vazgeçer) „ohne Ortsbindung“u, „außerhalb des bisherigen Einzugsgebiets“ (şimdiye kadarki çekim alanının dışında) da bu uzak bölgeleri karşılıyor. Kettelhake (b) de insanların uzağa taşındığından söz ediyor, ama işverenin yeni çalışan bulmasından değil, çalışanların konut tercihinden bahsediyor."
+        },
+        {
+          "number": 24,
+          "type": "zuordnung",
+          "prompt": "Wer am Anfang seiner Laufbahn steht, verpasst im Homeoffice Lerngelegenheiten, die sich durch geplante Weiterbildung nicht ausgleichen lassen.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "vossberg",
+              "quote": "Wer hingegen gerade erst eingestiegen ist"
+            },
+            {
+              "text": "vossberg",
+              "quote": "keine noch so gründliche Onlineschulung vermag das zu ersetzen"
+            }
+          ],
+          "explanation": "Vossberg (a), mesleki becerinin büyük kısmının öğretilmediğini, iş yerinde yan masadan izlenerek „nebenher aufgeschnappt“ (laf arasında kapılarak) edinildiğini söylüyor. Deneyimli çalışanlar bu birikimden yararlanabiliyor; ama „Wer hingegen gerade erst eingestiegen ist“ (işe yeni başlayan biri) için bu birikim kapalı kalıyor ve „keine noch so gründliche Onlineschulung vermag das zu ersetzen“ (ne kadar kapsamlı olursa olsun hiçbir çevrim içi eğitim bunun yerini tutamaz). Groenewold (d) de rastlantısal temasların kaybolduğunu yazıyor, ama yeni başlayanlardan değil, bölümler arası fikir alışverişinden söz ediyor."
+        },
+        {
+          "number": 25,
+          "type": "zuordnung",
+          "prompt": "In den großen Städten ist es seit der Ausbreitung des Homeoffice leichter geworden, eine Wohnung zu finden.",
+          "answer": "0",
+          "evidence": [
+            {
+              "text": "kettelhake",
+              "quote": "Frei werdende Wohnungen sind dort schneller wieder vergeben, als sie inseriert werden können"
+            }
+          ],
+          "explanation": "Bu ifade hiçbir yazara uymuyor. Konut piyasasından yalnızca Kettelhake (b) söz ediyor ve tam tersini söylüyor: büyük şehirlerde rahatlama bekleyenler yanılmış, çünkü „Frei werdende Wohnungen sind dort schneller wieder vergeben, als sie inseriert werden können“ (boşalan daireler ilan verilmeden yeniden kiralanıyor). Kettelhake'nin olumlu bulduğu gelişme küçük kasabalara yeniden göç edilmesi; büyük şehirlerde ev bulmanın kolaylaşması değil."
+        },
+        {
+          "number": 26,
+          "type": "zuordnung",
+          "prompt": "Wo Beruf und Privatleben räumlich nicht getrennt sind, verlängert sich der Arbeitstag schleichend – zumal bei gewissenhaften Menschen.",
+          "answer": "e",
+          "evidence": [
+            {
+              "text": "hallmann",
+              "quote": "aus acht Stunden werden unmerklich zehn"
+            },
+            {
+              "text": "hallmann",
+              "quote": "Ausgerechnet die Pflichtbewussten sind dafür besonders anfällig"
+            }
+          ],
+          "explanation": "Hallmann (e), birçok kişide eskiden mesaiyi bitiren eve dönüş yolunun eksik olduğunu, bilgisayarın göz önünde durduğunu ve „aus acht Stunden werden unmerklich zehn“ (sekiz saat fark edilmeden on saate çıkıyor) diye yazıyor. „Ausgerechnet die Pflichtbewussten sind dafür besonders anfällig“ (buna en çok da sorumluluk sahibi kişiler yatkın) cümlesi ifadedeki „gewissenhaften Menschen“ kısmını karşılıyor. Aydemir (c) de bir sorundan söz ediyor, ama çalışma süresinden değil, çalışan grupları arasındaki gerginlikten bahsediyor."
+        },
+        {
+          "number": 27,
+          "type": "zuordnung",
+          "prompt": "Weil Angestellte nicht mehr täglich ins Büro müssen, nehmen sie größere Distanzen in Kauf, sodass die Umweltbilanz schlechter ist als vielfach angenommen.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "kettelhake",
+              "quote": "Ökologisch fällt die Rechnung jedoch ernüchternder aus, als man meinen sollte"
+            },
+            {
+              "text": "kettelhake",
+              "quote": "legt unterm Strich kaum eine kürzere Strecke zurück"
+            }
+          ],
+          "explanation": "Kettelhake (b), haftada yalnızca iki üç gün iş yerine gidildiği için bir saat uzaklıktaki bir evin artık „zumutbar“ (katlanılabilir) göründüğünü yazıyor. Ama „Ökologisch fällt die Rechnung jedoch ernüchternder aus, als man meinen sollte“ (ekolojik hesap sanıldığından daha hayal kırıcı): beş gün 20 km yerine iki gün 50 km giden biri „unterm Strich kaum eine kürzere Strecke“ (sonuçta neredeyse hiç daha kısa olmayan bir yol) kat ediyor. Hallmann (e) de trafik ve kalabalık trenlerin ortadan kalkmasından söz ediyor, ama bunu çevre açısından değil, sağlık açısından değerlendiriyor."
+        },
+        {
+          "number": 28,
+          "type": "zuordnung",
+          "prompt": "Die Anordnung, im Betrieb zu erscheinen, bleibt wirkungslos, solange dort genauso gearbeitet wird wie zu Hause.",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "groenewold",
+              "quote": "dieselben Onlinemeetings abhalten wie zuvor im Arbeitszimmer, ist nichts gewonnen"
+            },
+            {
+              "text": "groenewold",
+              "quote": "Die Frage ist also nicht, wie oft man kommt, sondern wofür"
+            }
+          ],
+          "explanation": "Groenewold (d), bir şirket çalışanlarını geri çağırıp onları bütün gün masalarında yalnız oturtur ve evdekiyle aynı toplantıları yaptırırsa „ist nichts gewonnen“ (hiçbir şey kazanılmış olmaz) diyor. Sonuç cümlesi de bunu özetliyor: „Die Frage ist also nicht, wie oft man kommt, sondern wofür“ (soru ne sıklıkla gelindiği değil, ne için gelindiği). Vossberg (a) de ofisteki öğrenmeyi önemsiyor, ama iş yerine dönme talimatı hakkında bir değerlendirme yapmıyor. Aydemir (c) evden çalışmayı kaldırmaktan söz etmiyor."
+        },
+        {
+          "number": 29,
+          "type": "zuordnung",
+          "prompt": "Dass viele im Homeoffice länger arbeiten als vereinbart, liegt vor allem am fehlenden Austausch mit anderen Abteilungen.",
+          "answer": "0",
+          "evidence": [
+            {
+              "text": "hallmann",
+              "quote": "dass vielen der Heimweg fehlt, der früher den Feierabend markierte"
+            }
+          ],
+          "explanation": "Bu ifade iki yazarın düşüncesini yanlış bir sebep–sonuç ilişkisiyle birleştiriyor. Bölümler arası temasın kaybolmasından Groenewold (d) söz ediyor, ama bunun sonucunu yeni fikirlerin doğmaması olarak görüyor; çalışma süresinden bahsetmiyor. Daha uzun çalışmadan Hallmann (e) söz ediyor, ama asıl sebep olarak başka bir şeyi gösteriyor: „Schwerer wiegt, dass vielen der Heimweg fehlt, der früher den Feierabend markierte“ (daha ağır basan, birçok kişide eskiden mesainin bittiğini gösteren eve dönüş yolunun eksik olması); ayrıca bilgisayar hep göz önünde duruyor. Hallmann bölümler arası temastan hiç söz etmiyor; hiçbir yazar bu iki şeyi birbirine bağlamıyor."
+        },
+        {
+          "number": 30,
+          "type": "zuordnung",
+          "prompt": "Dass sich nur ein Teil der Tätigkeiten aus der Ferne erledigen lässt, belastet den Zusammenhalt zwischen verschiedenen Beschäftigtengruppen eines Unternehmens.",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "aydemir",
+              "quote": "kann seine Arbeit nicht mit nach Hause nehmen"
+            },
+            {
+              "text": "aydemir",
+              "quote": "das Gefühl, zweierlei Belegschaften zu haben, ist damit nicht verschwunden"
+            }
+          ],
+          "explanation": "Aydemir (c), verimlilik kaybı korkusunun gerçekleşmediğini, onu asıl kaygılandıran şeyin depolardaki hava olduğunu yazıyor: orada çalışan biri „kann seine Arbeit nicht mit nach Hause nehmen“ (işini eve götüremez), kantinde alaycı biçimde „Laptop-Leuten“ deniyor ve denenen telafi modellerine rağmen „das Gefühl, zweierlei Belegschaften zu haben, ist damit nicht verschwunden“ (iki ayrı çalışan kitlesi olduğu duygusu kaybolmadı). Groenewold (d) de bölümler arası bağların zayıfladığını söylüyor, ama sebebi evden çalışabilenlerle çalışamayanlar arasındaki fark değil, rastlantısal karşılaşmaların ortadan kalkması."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "c1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Die Sprache der Wale",
+  "minutes": 10,
+  "context": "Sie lesen auf der Wissenschaftsseite einer Wochenzeitung einen Beitrag über die Kommunikation von Walen.",
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welche Lösung (a, b, c oder d) in die Lücken 1 bis 8 passt.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Klicklaute mit System",
+          "paragraphs": [
+            "Grindwale verständigen sich unter Wasser mit Pfiffen und kurzen Folgen von Klicklauten. Wer ihnen mit einem Unterwassermikrofon lauscht, hört ein Knattern, das entfernt an das Ticken eines Geigerzählers erinnert. Lange galten diese Klickfolgen als vergleichsweise schlichtes Signalsystem, dessen Repertoire sich auf gut zwei Dutzend feste Muster {{0=beschränkt}} und das vor allem dazu dient, Mitglieder der eigenen Gruppe zu erkennen. Ein Team um den Bioakustiker Eirik Valtersen vom Meeresforschungsinstitut Kallmünde hat über sechs Jahre hinweg mehr als 9000 Lautfolgen einer Grindwalgruppe im Nordatlantik aufgezeichnet und mithilfe eines lernenden Algorithmus ausgewertet. Das Ergebnis {{1}} der bisherigen Lehrmeinung deutlich: Die Tiere variieren Tempo und Rhythmus ihrer Klickfolgen offenbar systematisch und kombinieren sie zu weit mehr Varianten als angenommen.",
+            "Je nachdem, ob die Gruppe gerade jagte, ruhte oder weiterzog, veränderten sich die Muster zudem in vorhersehbarer Weise. Die Laute transportieren {{2}} nicht nur die Zugehörigkeit zu einer Gruppe, sondern womöglich auch Informationen über die jeweilige Situation. Um dem naheliegenden Einwand {{3}} zu tragen, die Unterschiede spiegelten lediglich die körperliche Erregung der Tiere wider, glichen die Forschenden die Aufnahmen mit Messwerten zu Herzfrequenz und Tauchtiefe ab, die Sender an einzelnen Walen geliefert hatten. Die Variation hing allerdings allenfalls geringfügig {{4}} diesen Werten ab; ausschlaggebend war vielmehr, in welcher Lage sich die Gruppe befand. Dass ein und dieselbe Abfolge je nach Umständen leicht abgewandelt wurde, deuten die Forschenden als Hinweis auf eine gewisse Flexibilität im Gebrauch.",
+            "Aufschlussreich ist auch die Entwicklung der Jungtiere. Sie erwerben die komplexeren Varianten erst nach und nach, {{5}} sie die Grundmuster bereits im ersten Lebensjahr sicher beherrschen – ein Verlauf, der an den Spracherwerb von Kleinkindern denken lässt. Valtersen selbst übt bei solchen Vergleichen allerdings {{6}}. Von einer Sprache im eigentlichen Sinne könne erst dann die {{7}} sein, wenn sich zeigen lasse, dass die Wale einzelne Elemente nach festen Regeln zu neuen Bedeutungen verbinden. Dafür gebe es bislang keinen Beleg. Auch die Ähnlichkeit mit menschlichen Lernverläufen sei womöglich zum Teil der Methode geschuldet, da der Algorithmus auf Mustererkennung trainiert sei und Strukturen auch dort finden könne, wo die Tiere selbst keine wahrnähmen.",
+            "Gleichwohl hält der Forscher es für {{8}}, dass umfangreichere Aufnahmen solche Regeln eines Tages zutage fördern. Sein Team will die Messungen deshalb auf drei weitere Gruppen ausdehnen und dabei erstmals auch die Reaktionen der Tiere auf abgespielte Klickfolgen beobachten."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "type": "abc",
+          "example": true,
+          "prompt": "Beispiel: Lücke 0",
+          "options": { "a": "beruft", "b": "bezieht", "c": "besteht", "d": "beschränkt" },
+          "answer": "d",
+          "evidence": [
+            { "text": "artikel", "quote": "dessen Repertoire sich auf gut zwei Dutzend feste Muster" }
+          ],
+          "explanation": "Eski görüşe göre sistem „vergleichsweise schlicht“ (görece basit) idi; repertuvarı yalnızca yirmi küsur sabit kalıptan ibaretti. „sich auf etwas beschränken“ (… ile sınırlı olmak) bu anlamı verir. a) beruft yanlış: „sich auf etwas berufen“ bir şeye dayanarak konuşmak demektir; bir repertuvar kalıplara „dayanarak konuşmaz“. b) bezieht yanlış: „sich auf etwas beziehen“ bir şeye gönderme yapmak demektir; burada sayıca sınırlılık anlatılıyor, gönderme değil. c) besteht yanlış: „bestehen“ dönüşlü değildir ve „aus“ ister („besteht aus …“); „sich … auf … besteht“ dilbilgisi olarak yanlıştır."
+        },
+        {
+          "number": 1,
+          "type": "abc",
+          "prompt": "Lücke 1",
+          "options": { "a": "entspricht", "b": "widerspricht", "c": "bestätigt", "d": "entgegnet" },
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "der bisherigen Lehrmeinung deutlich" },
+            { "text": "artikel", "quote": "kombinieren sie zu weit mehr Varianten als angenommen" }
+          ],
+          "explanation": "Eski görüş basit, sınırlı bir sistemden söz ediyordu. İki noktadan sonra gelen sonuç ise bunun tersini gösteriyor: Balinalar sesleri sistemli biçimde değiştiriyor ve „weit mehr Varianten als angenommen“ (sanılandan çok daha fazla varyant) üretiyor. Bu yüzden sonuç önceki görüşle çelişiyor: „widerspricht der bisherigen Lehrmeinung“ (Dativ). a) entspricht yanlış: Dilbilgisi olarak uyar (Dativ alır), ama „uyuyor“ anlamı iki noktadan sonraki yeni bulguyla çelişir. c) bestätigt yanlış: Hem anlam olarak ters (doğruluyor) hem de Akkusativ ister („die bisherige Lehrmeinung“); metinde Dativ var. d) entgegnet yanlış: „entgegnen“ birine sözle cevap vermek demektir; bir araştırma sonucu bir görüşe „cevap vermez“."
+        },
+        {
+          "number": 2,
+          "type": "abc",
+          "prompt": "Lücke 2",
+          "options": { "a": "dennoch", "b": "andernfalls", "c": "gleichwohl", "d": "mithin" },
+          "answer": "d",
+          "evidence": [
+            { "text": "artikel", "quote": "veränderten sich die Muster zudem in vorhersehbarer Weise" },
+            { "text": "artikel", "quote": "nicht nur die Zugehörigkeit zu einer Gruppe, sondern womöglich auch Informationen über die jeweilige Situation" }
+          ],
+          "explanation": "Önceki cümle bir gözlem veriyor: Kalıplar grubun avlanmasına, dinlenmesine veya yol almasına göre öngörülebilir biçimde değişiyor. Boşluklu cümle bu gözlemden çıkan sonucu söylüyor: Sesler grup aidiyetinin yanında belki durum hakkında da bilgi taşıyor. Sonuç bildiren zarf „mithin“dir (dolayısıyla). a) dennoch ve c) gleichwohl yanlış: İkisi de „yine de“ anlamında bir karşıtlık bildirir; oysa iki cümle arasında karşıtlık yok, ikinci cümle birincinin sonucudur. b) andernfalls yanlış: „aksi takdirde“ demektir; önceki cümlede bir koşul yok ki onun tersi düşünülebilsin."
+        },
+        {
+          "number": 3,
+          "type": "abc",
+          "prompt": "Lücke 3",
+          "options": { "a": "Rechnung", "b": "Sorge", "c": "Beachtung", "d": "Bedenken" },
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "Um dem naheliegenden Einwand" },
+            { "text": "artikel", "quote": "glichen die Forschenden die Aufnahmen mit Messwerten zu Herzfrequenz und Tauchtiefe ab" }
+          ],
+          "explanation": "Araştırmacılar olası bir itirazı („Einwand“: farklılıklar yalnızca heyecanın yansıması olabilir) dikkate almak için kayıtları kalp atışı ve dalış derinliği verileriyle karşılaştırıyor. „einer Sache (Dativ) Rechnung tragen“ (bir şeyi hesaba katmak, dikkate almak) bu anlamı verir: „dem … Einwand Rechnung zu tragen“. b) Sorge yanlış: „Sorge tragen“ yalnızca „für“ ile kullanılır („für etwas Sorge tragen“ = bir şeyi sağlamak); Dativ nesneyle olmaz. c) Beachtung yanlış: „Beachtung“ „schenken/finden“ ile kullanılır, „tragen“ ile değil. d) Bedenken yanlış: „Bedenken tragen“ (tereddüt etmek) Dativ nesne almaz ve araştırmacılar tereddüt etmiyor, itirazı sınıyor."
+        },
+        {
+          "number": 4,
+          "type": "abc",
+          "prompt": "Lücke 4",
+          "options": { "a": "an", "b": "mit", "c": "von", "d": "aus" },
+          "answer": "c",
+          "evidence": [
+            { "text": "artikel", "quote": "Die Variation hing allerdings allenfalls geringfügig" },
+            { "text": "artikel", "quote": "ausschlaggebend war vielmehr, in welcher Lage sich die Gruppe befand" }
+          ],
+          "explanation": "Cümlenin fiili ayrılabilen „abhängen“dir: „hing … ab“. Bu fiil her zaman „von“ ister: „von etwas abhängen“ (bir şeye bağlı olmak) – „hing … von diesen Werten ab“. Anlam da uyuyor: Varyasyon kalp atışı ve dalış derinliğine çok az bağlıydı, belirleyici olan grubun içinde bulunduğu durumdu. a) an yanlış: „an etwas hängen“ (bir şeye bağlanmak, düşkün olmak) ayrı bir fiildir; „abhängen“ ile „an“ kullanılmaz. b) mit yanlış: „mit etwas zusammenhängen“ deriz, „abhängen“ ile „mit“ olmaz. d) aus yanlış: „aus“ ile „abhängen“ kalıbı yoktur."
+        },
+        {
+          "number": 5,
+          "type": "abc",
+          "prompt": "Lücke 5",
+          "options": { "a": "damit", "b": "indem", "c": "während", "d": "sodass" },
+          "answer": "c",
+          "evidence": [
+            { "text": "artikel", "quote": "Sie erwerben die komplexeren Varianten erst nach und nach" },
+            { "text": "artikel", "quote": "die Grundmuster bereits im ersten Lebensjahr sicher beherrschen" }
+          ],
+          "explanation": "İki şey karşılaştırılıyor: Yavrular karmaşık varyantları ancak yavaş yavaş öğreniyor („erst nach und nach“), temel kalıplara ise daha ilk yılında hâkim oluyor („bereits im ersten Lebensjahr“). „erst“ ile „bereits“ arasındaki karşıtlığı kuran bağlaç „während“dır (… iken, oysa). a) damit yanlış: „damit“ amaç bildirir; yavrular karmaşık varyantları temel kalıplara hâkim olmak için öğrenmiyor, temel kalıpları zaten erkenden biliyorlar. b) indem yanlış: „indem“ bir şeyin nasıl yapıldığını söyler; temel kalıplara hâkim olmak karmaşık varyantları edinme yöntemi değildir. d) sodass yanlış: Temel kalıpların erkenden öğrenilmesi, karmaşık varyantların geç öğrenilmesinin sonucu olamaz; zaman sırası buna ters düşer."
+        },
+        {
+          "number": 6,
+          "type": "abc",
+          "prompt": "Lücke 6",
+          "options": { "a": "Zurückhaltung", "b": "Abstand", "c": "Vorbehalt", "d": "Rücksicht" },
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "Valtersen selbst übt bei solchen Vergleichen allerdings" },
+            { "text": "artikel", "quote": "Dafür gebe es bislang keinen Beleg" }
+          ],
+          "explanation": "„allerdings“ önceki cümledeki çocukların dil edinimiyle yapılan karşılaştırmaya bir kısıtlama getiriyor: Valtersen'e göre ancak kurallı bir birleştirme kanıtlanırsa „dil“den söz edilebilir ve bunun için henüz kanıt yok. Yani o bu tür karşılaştırmalarda temkinli davranıyor: „Zurückhaltung üben“ (ölçülü, temkinli davranmak). b) Abstand yanlış: Anlamca yakın görünür, ama kalıp „Abstand nehmen“ veya „Abstand halten“dır; „Abstand üben“ denmez. c) Vorbehalt yanlış: „Vorbehalte haben/äußern“ deriz; „Vorbehalt üben“ diye bir kalıp yoktur. d) Rücksicht yanlış: „Rücksicht nehmen“ (birini gözetmek) kalıbıdır; ayrıca anlam olarak birine saygı göstermek değil, kendi yorumunda temkinli olmak anlatılıyor."
+        },
+        {
+          "number": 7,
+          "type": "abc",
+          "prompt": "Lücke 7",
+          "options": { "a": "Ansicht", "b": "Rede", "c": "Frage", "d": "Sache" },
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "Von einer Sprache im eigentlichen Sinne könne erst dann die" },
+            { "text": "artikel", "quote": "wenn sich zeigen lasse, dass die Wale einzelne Elemente nach festen Regeln" }
+          ],
+          "explanation": "„von etwas kann die Rede sein“ (bir şeyden söz edilebilir) sabit bir kalıptır: Ancak balinaların öğeleri sabit kurallarla yeni anlamlara birleştirdiği gösterilirse gerçek anlamda bir „dil“den söz edilebilir. a) Ansicht yanlış: „von etwas die Ansicht sein“ diye bir yapı yoktur; „der Ansicht sein, dass …“ ise kişinin görüşünü bildirir ve „von“ almaz. c) Frage yanlış: „Frage“ „die Frage sein, ob …“ biçiminde kullanılır; „von einer Sprache … die Frage sein“ dilbilgisi olarak kurulmaz. d) Sache yanlış: „von etwas die Sache sein“ kalıbı yoktur."
+        },
+        {
+          "number": 8,
+          "type": "abc",
+          "prompt": "Lücke 8",
+          "options": { "a": "ausgeschlossen", "b": "bewiesen", "c": "unerheblich", "d": "denkbar" },
+          "answer": "d",
+          "evidence": [
+            { "text": "artikel", "quote": "Gleichwohl hält der Forscher es für" },
+            { "text": "artikel", "quote": "Sein Team will die Messungen deshalb auf drei weitere Gruppen ausdehnen" }
+          ],
+          "explanation": "Önceki cümle: Kurallı bir dil için henüz kanıt yok („keinen Beleg“). „Gleichwohl“ (yine de) buna karşıt bir şey getiriyor: Daha kapsamlı kayıtların bir gün bu kuralları ortaya çıkarması mümkün. Ekip de bu yüzden („deshalb“) ölçümleri üç gruba daha genişletmek istiyor. Doğru kelime „denkbar“ (düşünülebilir, mümkün). a) ausgeschlossen yanlış: „imkânsız“ demektir; o zaman ekibin araştırmayı „deshalb“ genişletmesi anlamsız olurdu ve „Gleichwohl“ bir karşıtlık kurmazdı. b) bewiesen yanlış: Kurallar henüz bulunmadı („eines Tages“ = bir gün), bu yüzden kanıtlanmış olamaz. c) unerheblich yanlış: „önemsiz“ demektir; ekip ölçümleri tam da bu olasılık yüzünden genişletiyor, yani onu önemsiz görmüyor."
+        }
+      ]
+    }
+  ]
+}

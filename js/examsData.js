@@ -419,10 +419,34 @@ window.BA_EXAMS = {
               { title: null, exercises: [] }, // Teil 4
             ] },
             { id: 'lesen', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
-              { title: null, exercises: [] }, // Teil 3
-              { title: null, exercises: [] }, // Teil 4
+              {
+                title: { tr: 'Boşluklu metin · a/b/c/d', de: 'Lückentext · a/b/c/d', en: 'Gapped text · a/b/c/d' },
+                exercises: [
+                  { set: 'set-1', title: 'Schlaf und Gedächtnis' },
+                  { set: 'set-2', title: 'Die Sprache der Wale' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: 'Dergi makalesi · a/b/c', de: 'Zeitschriftenartikel · a/b/c', en: 'Magazine article · a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Die neue Lust am Reparieren' },
+                  { set: 'set-2', title: 'Wenn Algorithmen Bewerbungen lesen' },
+                ]
+              }, // Teil 2
+              {
+                title: { tr: 'Yorum yazısı · cümle yerleştirme', de: 'Kommentar · Sätze einfügen', en: 'Commentary · inserting sentences' },
+                exercises: [
+                  { set: 'set-1', title: 'Weniger Parkplätze, mehr Stadt' },
+                  { set: 'set-2', title: 'Das Ende der Hausaufgaben?' },
+                ]
+              }, // Teil 3
+              {
+                title: { tr: 'Uzman görüşleri · eşleştirme', de: 'Fachbeiträge · Zuordnung', en: 'Expert contributions · matching' },
+                exercises: [
+                  { set: 'set-1', title: 'Arbeiten im Homeoffice' },
+                  { set: 'set-2', title: 'Noten an Hochschulen' },
+                ]
+              }, // Teil 4
             ] },
             { id: 'schreiben', teile: [
               { title: null, exercises: [] }, // Teil 1

@@ -67,16 +67,16 @@
 #page-exams .task-q.is-example{background:transparent;box-shadow:inset 0 0 0 2px var(--ba-line)}
 
 #page-exams .task-options{display:flex;flex-wrap:wrap;gap:6px}
-#page-exams .task-q--abc .task-options{display:grid}
+#page-exams .task-q--abc .task-options,#page-exams .task-q--pair .task-options{display:grid}
 #page-exams .task-option{position:relative;display:flex;align-items:flex-start;gap:10px;min-height:44px;padding:10px 14px;border-radius:var(--ba-radius-small);background:var(--ba-paper-2);cursor:pointer;line-height:1.4;transition:background-color .2s}
 #page-exams .task-option:hover{background:var(--ba-line)}
 #page-exams .task-option input{position:absolute;opacity:0;width:1px;height:1px}
 #page-exams .task-option:has(input:focus-visible){outline:3px solid var(--ba-focus);outline-offset:2px}
 #page-exams .task-option-key{flex:none;font-weight:600}
-#page-exams .task-q--abc .task-option-key{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:999px;background:var(--ba-paper);font-size:var(--ba-small)}
+#page-exams .task-q--abc .task-option-key,#page-exams .task-q--pair .task-option-key{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:999px;background:var(--ba-paper);font-size:var(--ba-small)}
 #page-exams .task-option.is-chosen{background:var(--ba-accent);color:var(--ba-accent-ink)}
 #page-exams .task-option.is-chosen .task-option-key{color:inherit}
-#page-exams .task-q--abc .task-option.is-chosen .task-option-key{background:var(--ba-accent-ink);color:var(--ba-accent)}
+#page-exams .task-q--abc .task-option.is-chosen .task-option-key,#page-exams .task-q--pair .task-option.is-chosen .task-option-key{background:var(--ba-accent-ink);color:var(--ba-accent)}
 #page-exams .task-option:has(input:disabled){cursor:default}
 #page-exams .task-option:has(input:disabled):hover{background:var(--ba-paper-2)}
 #page-exams .task-option.is-chosen:has(input:disabled):hover{background:var(--ba-accent)}

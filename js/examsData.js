@@ -424,6 +424,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Schlaf und Gedächtnis' },
                   { set: 'set-2', title: 'Die Sprache der Wale' },
+                  { set: 'set-3', title: 'Mikroben im Darm' },
+                  { set: 'set-4', title: 'Wie Bäume sich verständigen' },
+                  { set: 'set-5', title: 'Die Psychologie des Aufschiebens' },
                 ]
               }, // Teil 1
               {
@@ -431,6 +434,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Die neue Lust am Reparieren' },
                   { set: 'set-2', title: 'Wenn Algorithmen Bewerbungen lesen' },
+                  { set: 'set-3', title: 'Das stille Comeback der Nachtzüge' },
+                  { set: 'set-4', title: 'Vom Wert der Langeweile' },
+                  { set: 'set-5', title: 'Wer bezahlt den Lokaljournalismus?' },
                 ]
               }, // Teil 2
               {
@@ -438,6 +444,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Weniger Parkplätze, mehr Stadt' },
                   { set: 'set-2', title: 'Das Ende der Hausaufgaben?' },
+                  { set: 'set-3', title: 'Warum das Bargeld bleiben sollte' },
+                  { set: 'set-4', title: 'Freier Eintritt für Museen' },
+                  { set: 'set-5', title: 'Die Stadt gehört nicht den Touristen' },
                 ]
               }, // Teil 3
               {
@@ -445,6 +454,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Arbeiten im Homeoffice' },
                   { set: 'set-2', title: 'Noten an Hochschulen' },
+                  { set: 'set-3', title: 'Künstliche Intelligenz im Unterricht' },
+                  { set: 'set-4', title: 'Mehrsprachigkeit in der Kita' },
+                  { set: 'set-5', title: 'Wissenschaft und Öffentlichkeit' },
                 ]
               }, // Teil 4
             ] },

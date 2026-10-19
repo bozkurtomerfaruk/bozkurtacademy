@@ -17,7 +17,7 @@
           "title": "E-Mail",
           "paragraphs": [
             "Liebe Gesine,",
-            "viele Grüße aus Sandeck! Ich bin seit Samstag hier am Meer. Das Wetter ist super, es ist warm und die Sonne scheint. Mein Hotel ist klein, aber schön. Mein Zimmer hat einen Balkon. Das Essen im Hotel ist nicht so gut. Ich esse am Abend im Restaurant am Hafen. Dort gibt es frischen Fisch. Am Freitag fahre ich wieder nach Hause.",
+            "viele Grüße aus Sandeck! Ich bin seit Samstag hier am Meer. Das Wetter ist super, es ist warm und die Sonne scheint. Mein Hotel ist klein, aber schön. Mein Zimmer hat einen Balkon. Das Essen im Hotel ist nicht so gut. Ich esse am Abend im Restaurant „Fischerhaus“. Dort gibt es frischen Fisch. Am Freitag fahre ich wieder nach Hause.",
             "Bis bald! Rieke"
           ]
         }
@@ -37,8 +37,8 @@
           "type": "richtig-falsch",
           "prompt": "Rieke isst am Abend im Hotel.",
           "answer": "falsch",
-          "evidence": [{ "text": "email", "quote": "Ich esse am Abend im Restaurant am Hafen." }],
-          "explanation": "Rieke akşam otelde yemiyor. Metinde: „im Restaurant am Hafen“ (limandaki restoranda). Otelin yemeği için „nicht so gut“ (pek iyi değil) diyor. İfade yanlış."
+          "evidence": [{ "text": "email", "quote": "Ich esse am Abend im Restaurant „Fischerhaus“." }],
+          "explanation": "Rieke akşam otelde yemiyor. Metinde: „im Restaurant Fischerhaus“ (Fischerhaus restoranında). Otelin yemeği için „nicht so gut“ (pek iyi değil) diyor. İfade yanlış."
         },
         {
           "number": 2,
@@ -58,7 +58,7 @@
           "title": "Notiz",
           "paragraphs": [
             "Liebe Frau Haverkamp,",
-            "ich bin ab morgen zwei Wochen im Urlaub in den Bergen. Können Sie bitte meinen Blumen Wasser geben? Zweimal in der Woche ist genug. Den Schlüssel bekommen Sie heute Abend von meinem Sohn Jaro. Bitte nehmen Sie auch meine Post aus dem Briefkasten.",
+            "ich bin ab morgen zwei Wochen im Urlaub in den Bergen. Können Sie bitte meinen Blumen Wasser geben? Zweimal in der Woche ist genug. Den Schlüssel bekommen Sie heute Abend von meinem Sohn Jaro. Bitte holen Sie auch meine Post.",
             "Vielen Dank! Kofi Amankwah"
           ]
         }
@@ -75,18 +75,18 @@
         {
           "number": 4,
           "type": "richtig-falsch",
-          "prompt": "Jaro bringt Frau Haverkamp den Schlüssel.",
+          "prompt": "Jaro gibt Frau Haverkamp den Schlüssel.",
           "answer": "richtig",
           "evidence": [{ "text": "notiz", "quote": "Den Schlüssel bekommen Sie heute Abend von meinem Sohn Jaro." }],
-          "explanation": "Metinde: „Den Schlüssel bekommen Sie heute Abend von meinem Sohn Jaro“ (Anahtarı bu akşam oğlum Jaro'dan alıyorsunuz). Yani anahtarı Jaro getiriyor. İfade doğru."
+          "explanation": "Metinde: „Den Schlüssel bekommen Sie heute Abend von meinem Sohn Jaro“ (Anahtarı bu akşam oğlum Jaro'dan alıyorsunuz). Frau Haverkamp anahtarı Jaro'dan alıyor, yani Jaro anahtarı ona veriyor („gibt“). İfade doğru."
         },
         {
           "number": 5,
           "type": "richtig-falsch",
-          "prompt": "Frau Haverkamp soll auch die Briefe für Herrn Amankwah holen.",
+          "prompt": "Frau Haverkamp soll auch die Briefe von Herrn Amankwah nehmen.",
           "answer": "richtig",
-          "evidence": [{ "text": "notiz", "quote": "Bitte nehmen Sie auch meine Post aus dem Briefkasten." }],
-          "explanation": "Herr Amankwah rica ediyor: „Bitte nehmen Sie auch meine Post aus dem Briefkasten“ (Lütfen postamı da posta kutusundan alın). „Post“ = mektuplar („Briefe“). İfade doğru."
+          "evidence": [{ "text": "notiz", "quote": "Bitte holen Sie auch meine Post." }],
+          "explanation": "Herr Amankwah rica ediyor: „Bitte holen Sie auch meine Post“ (Lütfen postamı da alın). „Post“ = mektuplar („Briefe“). „Bitte“ bir rica, bu yüzden ifadede „soll“ (-meli, isteniyor) var. İfade doğru."
         }
       ]
     }

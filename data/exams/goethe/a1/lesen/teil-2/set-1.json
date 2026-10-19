@@ -60,7 +60,7 @@
         {
           "id": "q6b",
           "label": "b",
-          "title": "Zweirad Wendland",
+          "title": "Fahrradhaus Pfeffer",
           "paragraphs": [
             "Neue Fahrräder für Kinder und Erwachsene in vielen Farben. Kinderfahrräder gibt es ab 190 Euro. Wir sind Montag bis Samstag von 9 bis 19 Uhr für Sie da."
           ]
@@ -87,7 +87,7 @@
         {
           "id": "q7a",
           "label": "a",
-          "title": "Schuhhaus Lenz",
+          "title": "Schuhhaus Wolkenbach",
           "paragraphs": [
             "Schuhe für Damen, Herren und Kinder. Diese Woche sind die Sportschuhe billiger! Wir sind Montag bis Samstag von 9 bis 18 Uhr für Sie da. Brunnengasse 7."
           ]
@@ -132,7 +132,7 @@
           "label": "b",
           "title": "Kinderladen Pünktchen",
           "paragraphs": [
-            "Kleidung für Babys und Kinder von 1 bis 8 Jahren: Hosen, T-Shirts und warme Jacken für den Winter. Wir sind am Marktplatz, neben der Apotheke."
+            "Kleidung für Babys und Kinder von 1 bis 8 Jahren: Hosen, T-Shirts und warme Jacken für den Winter. Wir sind am Marktplatz, neben dem Rathaus."
           ]
         }
       ],
@@ -146,7 +146,7 @@
             { "text": "q8b", "quote": "für Babys und Kinder von 1 bis 8 Jahren" },
             { "text": "q8a", "quote": "für Jungen und Mädchen von 10 bis 16 Jahren" }
           ],
-          "explanation": "Kızınız beş yaşında. b ilanında „für Babys und Kinder von 1 bis 8 Jahren“ yazıyor: Giysiler 1 ile 8 yaş arası çocuklar için. Beş yaş buna uyuyor. a ilanında „von 10 bis 16 Jahren“ yazıyor: Giysiler 10 ile 16 yaş arası için. Cevap b."
+          "explanation": "Kızınız beş yaşında. b ilanında „für Babys und Kinder von 1 bis 8 Jahren“ yazıyor: Giysiler 1 ile 8 yaş arası çocuklar için. Beş yaş buna uyuyor. Ayrıca „warme Jacken für den Winter“ (kış için sıcak montlar) var. a ilanında „von 10 bis 16 Jahren“ yazıyor: Giysiler 10 ile 16 yaş arası için. Cevap b."
         }
       ]
     },
@@ -175,13 +175,13 @@
         {
           "number": 9,
           "type": "zuordnung",
-          "prompt": "Sie wohnen in Talwiesen. Am Freitag möchten Sie dort auf dem Markt Äpfel und Bananen kaufen.",
+          "prompt": "Sie wohnen in Talwiesen. Am Freitag möchten Sie dort auf dem Markt Äpfel und Tomaten kaufen.",
           "answer": "a",
           "evidence": [
             { "text": "q9a", "quote": "auf dem Rathausplatz in Talwiesen" },
             { "text": "q9b", "quote": "am Bahnhof Rabenhain" }
           ],
-          "explanation": "Talwiesen'de pazardan meyve (Obst) almak istiyorsunuz. a ilanında „auf dem Rathausplatz in Talwiesen“ yazıyor: Pazar Talwiesen'de, belediye binasının önündeki meydanda. b ilanında „am Bahnhof Rabenhain“ yazıyor: Bu pazar başka bir yerde, Rabenhain'de. İki pazar da cuma günü. Cevap a."
+          "explanation": "Talwiesen'de pazardan elma ve domates almak istiyorsunuz. a ilanında „auf dem Rathausplatz in Talwiesen“ yazıyor: Pazar Talwiesen'de, „Rathausplatz“ (belediye meydanı) üzerinde. Orada „Obst, Gemüse“ (meyve, sebze) var. b ilanında „am Bahnhof Rabenhain“ yazıyor: Bu pazar başka bir yerde, Rabenhain'de. İki pazar da cuma günü. Cevap a."
         }
       ]
     },

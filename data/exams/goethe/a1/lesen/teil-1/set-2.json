@@ -57,7 +57,7 @@
           "id": "sms",
           "title": "SMS",
           "paragraphs": [
-            "Hallo Ilka, eine Änderung für Samstag: Meine Küche ist kaputt. Wir essen nicht bei mir, wir gehen ins Restaurant „Olivenbaum“ am Marktplatz. Wir treffen uns dort um halb acht, nicht um 19 Uhr. Du musst keinen Salat mitbringen. Mein Bruder Dawid kommt auch mit. Bis Samstag! Radek"
+            "Hallo Ilka, ich habe neue Informationen für Samstag: Meine Küche ist kaputt. Wir essen nicht bei mir, wir gehen ins Restaurant „Olivenbaum“ am Marktplatz. Wir treffen uns dort um halb acht, nicht um 19 Uhr. Du musst keinen Salat mitbringen. Mein Bruder Dawid kommt auch mit. Bis Samstag! Radek"
           ]
         }
       ],
@@ -76,7 +76,7 @@
           "prompt": "Radek kann zu Hause nicht kochen.",
           "answer": "richtig",
           "evidence": [{ "text": "sms", "quote": "Meine Küche ist kaputt." }],
-          "explanation": "Radek yazıyor: „Meine Küche ist kaputt“ (Mutfağım bozuk). Bu yüzden evde yemek yapamıyor, restorana gidiyorlar. İfade doğru."
+          "explanation": "Radek yazıyor: „Meine Küche ist kaputt“ (Mutfağım bozuk). Sonra: „Wir essen nicht bei mir“ (Bende yemiyoruz). Bozuk mutfakta yemek yapılamaz. İfade doğru."
         },
         {
           "number": 5,

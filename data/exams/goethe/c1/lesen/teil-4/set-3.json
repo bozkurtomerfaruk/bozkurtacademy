@@ -31,9 +31,9 @@
           ]
         },
         {
-          "id": "tannhaeuser",
+          "id": "tannenhorst",
           "label": "c",
-          "title": "Merle Tannhäuser, Gymnasiallehrerin für Deutsch und Geschichte",
+          "title": "Merle Tannenhorst, Gymnasiallehrerin für Deutsch und Geschichte",
           "paragraphs": [
             "Bei dreißig Aufsätzen pro Klasse kann ich jedem einzelnen Entwurf bestenfalls ein paar Randbemerkungen widmen. Seit unsere Schule ein KI-Werkzeug erprobt, erhalten die Jugendlichen zu jeder Fassung binnen Sekunden ausführliche Hinweise zu Aufbau und Ausdruck, und ich gewinne Zeit für Gespräche mit denen, die feststecken. So weit die erfreuliche Seite. Ernüchternd finde ich, was ich bei den Leistungsschwächeren beobachte: Sie übernehmen die vorgeschlagenen Änderungen Satz für Satz, ohne nachvollziehen zu können, warum die neue Version besser sein soll. Ihre Texte werden glatter, ihre Fähigkeiten wachsen nicht mit. Wer ohnehin gut schreibt, nutzt die Rückmeldungen dagegen als Anregung und verwirft manches davon bewusst. Insofern verstärkt das Werkzeug womöglich gerade die Unterschiede, die es ausgleichen sollte."
           ]
@@ -47,9 +47,9 @@
           ]
         },
         {
-          "id": "reischach",
+          "id": "wallerstedt",
           "label": "e",
-          "title": "Dr. Ilona Reischach, Juristin für Datenschutz im Bildungswesen",
+          "title": "Dr. Ilona Wallerstedt, Juristin für Datenschutz im Bildungswesen",
           "paragraphs": [
             "Wenn ein Zwölfjähriger einem Chatbot seinen Aufsatz über die Trennung seiner Eltern anvertraut, gelangen höchst persönliche Angaben auf Server, deren Betreiber sich die Nutzung für das Training künftiger Modelle häufig vorbehalten. Viele Lehrkräfte ahnen das, empfehlen die Programme aber trotzdem, weil es schlicht keine Alternative gibt, die von der Schulverwaltung freigegeben wäre. Damit bürden wir ausgerechnet ihnen ein rechtliches Risiko auf, das eigentlich der Dienstherr tragen müsste. Ich plädiere keineswegs dafür, die Technik aus den Schulen fernzuhalten. Bevor sie jedoch flächendeckend zum Einsatz kommt, sollten die Ministerien Anwendungen prüfen und bereitstellen, bei denen vertraglich ausgeschlossen ist, dass Eingaben weiterverwendet werden – notfalls auch zu höheren Kosten als bei den gängigen Angeboten."
           ]
@@ -68,24 +68,24 @@
               "quote": "vielmehr entsteht der Gedanke häufig erst im mühsamen Ringen um die passende Formulierung"
             }
           ],
-          "explanation": "Brüggenwirth (a), yazı yazarken insanın yalnızca zaten düşündüğünü kâğıda geçirmediğini, aksine „vielmehr entsteht der Gedanke häufig erst im mühsamen Ringen um die passende Formulierung“ (düşünce çoğu zaman ancak uygun ifadeyi bulmak için verilen zahmetli uğraşta ortaya çıkar) diye yazıyor. İfadedeki „nehmen die Überlegungen erst dabei Gestalt an“ (düşünceler ancak bu sırada şekillenir) bunu karşılıyor. Tannhäuser (c) de metinlerin daha düzgün olduğu hâlde becerilerin gelişmediğini söylüyor, ama düşüncenin yazarken oluşmasından söz etmiyor."
+          "explanation": "Brüggenwirth (a), yazı yazarken insanın yalnızca zaten düşündüğünü kâğıda geçirmediğini, aksine „vielmehr entsteht der Gedanke häufig erst im mühsamen Ringen um die passende Formulierung“ (düşünce çoğu zaman ancak uygun ifadeyi bulmak için verilen zahmetli uğraşta ortaya çıkar) diye yazıyor. İfadedeki „nehmen die Überlegungen erst dabei Gestalt an“ (düşünceler ancak bu sırada şekillenir) bunu karşılıyor. Tannenhorst (c) de metinlerin daha düzgün olduğu hâlde becerilerin gelişmediğini söylüyor, ama düşüncenin yazarken oluşmasından söz etmiyor."
         },
         {
           "number": 24,
           "type": "zuordnung",
-          "prompt": "Lernende, denen das Formulieren Mühe bereitet, ziehen aus maschinell erzeugten Verbesserungen kaum dauerhaften Gewinn, weil sie diese annehmen, ohne den Grund dafür zu durchschauen.",
+          "prompt": "Lernende, denen das Formulieren Mühe bereitet, ziehen aus maschinell erzeugten Korrekturen kaum dauerhaften Nutzen, weil sie diese annehmen, ohne den Grund dafür zu durchschauen.",
           "answer": "c",
           "evidence": [
             {
-              "text": "tannhaeuser",
+              "text": "tannenhorst",
               "quote": "ohne nachvollziehen zu können, warum die neue Version besser sein soll"
             },
             {
-              "text": "tannhaeuser",
+              "text": "tannenhorst",
               "quote": "ihre Fähigkeiten wachsen nicht mit"
             }
           ],
-          "explanation": "Tannhäuser (c), zayıf öğrencilerin („die Leistungsschwächeren“) KI aracının önerdiği değişiklikleri cümle cümle aldığını, ama „ohne nachvollziehen zu können, warum die neue Version besser sein soll“ (yeni hâlin neden daha iyi olduğunu anlayamadan) yaptıklarını yazıyor; sonuç: metinler düzgünleşiyor, ama „ihre Fähigkeiten wachsen nicht mit“ (becerileri onlarla birlikte büyümüyor). İfadedeki „kaum dauerhaften Gewinn“ (kalıcı kazanç yok denecek kadar az) bunu karşılıyor. Brüggenwirth (a) de hazır metni yalnızca düzelten öğrencinin düşünme işini yapmadığını söylüyor, ama zayıf öğrencilerden ve düzeltme önerilerinin nedenini anlamamaktan söz etmiyor."
+          "explanation": "Tannenhorst (c), zayıf öğrencilerin („die Leistungsschwächeren“) KI aracının önerdiği değişiklikleri cümle cümle aldığını, ama „ohne nachvollziehen zu können, warum die neue Version besser sein soll“ (yeni hâlin neden daha iyi olduğunu anlayamadan) yaptıklarını yazıyor; sonuç: metinler düzgünleşiyor, ama „ihre Fähigkeiten wachsen nicht mit“ (becerileri onlarla birlikte büyümüyor). İfadedeki „kaum dauerhaften Nutzen“ (kalıcı fayda yok denecek kadar az) bunu karşılıyor. Brüggenwirth (a) de hazır metni yalnızca düzelten öğrencinin düşünme işini yapmadığını söylüyor, ama zayıf öğrencilerden ve düzeltme önerilerinin nedenini anlamamaktan söz etmiyor."
         },
         {
           "number": 25,
@@ -98,11 +98,11 @@
               "quote": "Ein generelles Verbot halte ich gleichwohl für wirkungslos"
             },
             {
-              "text": "reischach",
+              "text": "wallerstedt",
               "quote": "Ich plädiere keineswegs dafür, die Technik aus den Schulen fernzuhalten"
             }
           ],
-          "explanation": "Bu ifade hiçbir yazara uymuyor; burada reddedilen bir çözüm söz konusu. Öğrencilerin kendi yazmasını en çok önemseyen Brüggenwirth (a), yasağı açıkça reddediyor: „Ein generelles Verbot halte ich gleichwohl für wirkungslos“ (genel bir yasağı yine de etkisiz buluyorum), çünkü sınıf dışında uygulanamaz; o, metinlerin derste yazılmasını öneriyor. Reischach (e) de „Ich plädiere keineswegs dafür, die Technik aus den Schulen fernzuhalten“ (teknolojiyi okullardan uzak tutmayı kesinlikle savunmuyorum) diyor. Diğer yazarlar yasak önermiyor."
+          "explanation": "Bu ifade hiçbir yazara uymuyor; burada reddedilen bir çözüm söz konusu. Öğrencilerin kendi yazmasını en çok önemseyen Brüggenwirth (a), yasağı açıkça reddediyor: „Ein generelles Verbot halte ich gleichwohl für wirkungslos“ (genel bir yasağı yine de etkisiz buluyorum), çünkü sınıf dışında uygulanamaz; o, metinlerin derste yazılmasını öneriyor. Wallerstedt (e) de „Ich plädiere keineswegs dafür, die Technik aus den Schulen fernzuhalten“ (teknolojiyi okullardan uzak tutmayı kesinlikle savunmuyorum) diyor. Diğer yazarlar yasak önermiyor."
         },
         {
           "number": 26,
@@ -119,29 +119,29 @@
               "quote": "prüften sie die Antworten kommerzieller Anwendungen merklich kritischer"
             }
           ],
-          "explanation": "Leuthold (b), bir proje haftasında dokuzuncu sınıf öğrencilerinin kendi metinleriyle küçük bir model beslediğini ve „welchen Unsinn es produziert, sobald die Datengrundlage dünn ist“ (veri temeli zayıf olunca modelin ne saçmalıklar ürettiğini) gözlemlediğini anlatıyor. Sonra öğrenciler „prüften sie die Antworten kommerzieller Anwendungen merklich kritischer“ (ticari uygulamaların cevaplarını belirgin biçimde daha eleştirel incelediler). Tannhäuser (c) de öğrencilerin KI önerileriyle nasıl çalıştığını anlatıyor, ama kendi eğitilmiş bir modelden ve bundan doğan şüpheden söz etmiyor."
+          "explanation": "Leuthold (b), bir proje haftasında dokuzuncu sınıf öğrencilerinin kendi metinleriyle küçük bir model beslediğini ve „welchen Unsinn es produziert, sobald die Datengrundlage dünn ist“ (veri temeli zayıf olunca modelin ne saçmalıklar ürettiğini) gözlemlediğini anlatıyor. Sonra öğrenciler „prüften sie die Antworten kommerzieller Anwendungen merklich kritischer“ (ticari uygulamaların cevaplarını belirgin biçimde daha eleştirel incelediler). Tannenhorst (c) de öğrencilerin KI önerileriyle nasıl çalıştığını anlatıyor, ama kendi eğitilmiş bir modelden ve bundan doğan şüpheden söz etmiyor."
         },
         {
           "number": 27,
           "type": "zuordnung",
-          "prompt": "Pädagoginnen und Pädagogen werden derzeit juristischen Gefahren ausgesetzt, für die genau genommen ihr Arbeitgeber einstehen sollte, weil von offizieller Seite keine genehmigten Werkzeuge angeboten werden.",
+          "prompt": "Pädagoginnen und Pädagogen werden derzeit juristischen Gefahren ausgesetzt, für die genau genommen ihr Arbeitgeber einstehen sollte, weil von offizieller Seite keine genehmigten Werkzeuge zur Verfügung stehen.",
           "answer": "e",
           "evidence": [
             {
-              "text": "reischach",
+              "text": "wallerstedt",
               "quote": "keine Alternative gibt, die von der Schulverwaltung freigegeben wäre"
             },
             {
-              "text": "reischach",
+              "text": "wallerstedt",
               "quote": "bürden wir ausgerechnet ihnen ein rechtliches Risiko auf, das eigentlich der Dienstherr tragen müsste"
             }
           ],
-          "explanation": "Reischach (e), öğretmenlerin veri sorununu sezdiği hâlde programları önerdiğini, çünkü „keine Alternative gibt, die von der Schulverwaltung freigegeben wäre“ (okul yönetiminin onayladığı bir alternatif olmadığını) yazıyor. Böylece „bürden wir ausgerechnet ihnen ein rechtliches Risiko auf, das eigentlich der Dienstherr tragen müsste“ (aslında işverenin taşıması gereken hukuki riski tam da onlara yüklüyoruz). Pellwitz (d) de devletin lisans almasını istiyor, ama gerekçesi öğretmenlerin hukuki riski değil, ailelerin gelir farkı."
+          "explanation": "Wallerstedt (e), öğretmenlerin veri sorununu sezdiği hâlde programları önerdiğini, çünkü „keine Alternative gibt, die von der Schulverwaltung freigegeben wäre“ (okul yönetiminin onayladığı bir alternatif olmadığını) yazıyor. Böylece „bürden wir ausgerechnet ihnen ein rechtliches Risiko auf, das eigentlich der Dienstherr tragen müsste“ (aslında işverenin taşıması gereken hukuki riski tam da onlara yüklüyoruz). Pellwitz (d) de devletin lisans almasını istiyor, ama gerekçesi öğretmenlerin hukuki riski değil, ailelerin gelir farkı."
         },
         {
           "number": 28,
           "type": "zuordnung",
-          "prompt": "Bei der Beurteilung schriftlicher Leistungen sollten auch Notizen und Entwürfe zählen, die die Lernenden später selbst wieder aufgegeben haben.",
+          "prompt": "Bei der Notengebung sollte nicht nur das Resultat zählen, sondern auch Notizen und Entwürfe, die die Lernenden unterwegs selbst wieder aufgegeben haben.",
           "answer": "a",
           "evidence": [
             {
@@ -149,7 +149,7 @@
               "quote": "auch Stichwortzettel und verworfene Fassungen in die Bewertung einzubeziehen"
             }
           ],
-          "explanation": "Brüggenwirth (a), yasak yerine uzun metinlerin derste yazılmasını ve yalnızca son ürünün değil, „auch Stichwortzettel und verworfene Fassungen in die Bewertung einzubeziehen“ (not kâğıtlarının ve vazgeçilen taslakların da değerlendirmeye katılmasını) öneriyor. İfadedeki „Notizen und Entwürfe, die … wieder aufgegeben“ bunu karşılıyor. Tannhäuser (c) de taslaklardan („Entwurf“, „Fassung“) söz ediyor ve iyi öğrencilerin bazı önerileri bilinçli olarak reddettiğini yazıyor, ama değerlendirme hakkında bir öneri yapmıyor."
+          "explanation": "Brüggenwirth (a), yasak yerine uzun metinlerin derste yazılmasını ve yalnızca son ürünün değil, „auch Stichwortzettel und verworfene Fassungen in die Bewertung einzubeziehen“ (not kâğıtlarının ve vazgeçilen taslakların da değerlendirmeye katılmasını) öneriyor. İfadedeki „nicht nur das Resultat“ (yalnızca sonuç değil) ve „Notizen und Entwürfe, die … wieder aufgegeben“ (sonradan vazgeçilen notlar ve taslaklar) bunu karşılıyor. Tannenhorst (c) de taslaklardan („Entwurf“, „Fassung“) söz ediyor ve iyi öğrencilerin bazı önerileri bilinçli olarak reddettiğini yazıyor, ama değerlendirme hakkında bir öneri yapmıyor."
         },
         {
           "number": 29,
@@ -158,7 +158,7 @@
           "answer": "0",
           "evidence": [
             {
-              "text": "tannhaeuser",
+              "text": "tannenhorst",
               "quote": "ich gewinne Zeit für Gespräche mit denen, die feststecken"
             },
             {
@@ -166,12 +166,12 @@
               "quote": "wird enttäuscht werden"
             }
           ],
-          "explanation": "Bu ifade hiçbir yazara uymuyor; iki yazarın bilgisini yanlış bir sebep–sonuç ilişkisiyle birleştiriyor. Tannhäuser (c), araç sayesinde „ich gewinne Zeit für Gespräche mit denen, die feststecken“ (takılan öğrencilerle konuşmaya zaman kazanıyorum) diyor, ama bunu öğretmen eksikliğiyle ilişkilendirmiyor. Öğretmen eksikliğinden söz eden tek yazar Pellwitz (d) ise bu beklentiyi reddediyor: KI ile öğretmen açığını hafifletmeyi uman „wird enttäuscht werden“ (hayal kırıklığına uğrayacak), çünkü giriş aşaması önce ek eğitim ve koordinasyon zamanı gerektiriyor."
+          "explanation": "Bu ifade hiçbir yazara uymuyor; iki yazarın bilgisini yanlış bir sebep–sonuç ilişkisiyle birleştiriyor. Tannenhorst (c), araç sayesinde „ich gewinne Zeit für Gespräche mit denen, die feststecken“ (takılan öğrencilerle konuşmaya zaman kazanıyorum) diyor, ama bunu öğretmen eksikliğiyle ilişkilendirmiyor. Öğretmen eksikliğinden söz eden tek yazar Pellwitz (d) ise bu beklentiyi reddediyor: KI ile öğretmen açığını hafifletmeyi uman „wird enttäuscht werden“ (hayal kırıklığına uğrayacak), çünkü giriş aşaması önce ek eğitim ve koordinasyon zamanı gerektiriyor."
         },
         {
           "number": 30,
           "type": "zuordnung",
-          "prompt": "Der Staat sollte dafür sorgen, dass sämtliche Kinder und Jugendlichen Zugriff auf dieselben hochwertigen Abonnements haben, gleich wie viel ihre Familien verdienen.",
+          "prompt": "Damit Kinder aus ärmeren Verhältnissen nicht ins Hintertreffen geraten, sollte die öffentliche Hand allen Schülerinnen und Schülern die gleichen hochwertigen Abonnements finanzieren.",
           "answer": "d",
           "evidence": [
             {
@@ -183,7 +183,7 @@
               "quote": "Die Länder sollten daher Lizenzen zentral beschaffen"
             }
           ],
-          "explanation": "Pellwitz (d), en iyi sürümlerin aylık ücretli olduğunu, bu yüzden okullar konuyu ailelere bıraktıkça „hängt der Nutzen also vom Geldbeutel der Eltern ab“ (fayda anne babanın cüzdanına bağlı) olduğunu yazıyor ve „Die Länder sollten daher Lizenzen zentral beschaffen“ (eyaletler lisansları merkezi olarak almalı) ve herkese aynı donanımı vermeli diyor. Reischach (e) de bakanlıkların uygulama sağlamasını istiyor, ama gerekçesi ailelerin geliri değil, veri koruması. Tannhäuser (c) aracın farkları artırabileceğini söylüyor, ama bu farklar gelirle değil, öğrencilerin başarısıyla ilgili."
+          "explanation": "Pellwitz (d), en iyi sürümlerin aylık ücretli olduğunu, bu yüzden okullar konuyu ailelere bıraktıkça „hängt der Nutzen also vom Geldbeutel der Eltern ab“ (fayda anne babanın cüzdanına bağlı) olduğunu yazıyor ve „Die Länder sollten daher Lizenzen zentral beschaffen“ (eyaletler lisansları merkezi olarak almalı) ve herkese aynı donanımı vermeli diyor. İfadedeki „Damit Kinder aus ärmeren Verhältnissen nicht ins Hintertreffen geraten“ (yoksul ailelerin çocukları geride kalmasın diye) bu gelir farkını karşılıyor. Wallerstedt (e) de bakanlıkların uygulama sağlamasını istiyor, ama gerekçesi ailelerin geliri değil, veri koruması. Tannenhorst (c) aracın farkları artırabileceğini söylüyor, ama bu farklar gelirle değil, öğrencilerin başarısıyla ilgili."
         }
       ]
     }

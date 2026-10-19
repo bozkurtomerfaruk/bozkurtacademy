@@ -1,0 +1,86 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Handbuch für neue Mitarbeiter",
+  "minutes": 8,
+  "context": "Sie haben eine Stelle im Lager einer Firma in Hagenwald bekommen. Am ersten Arbeitstag bekommen Sie ein Handbuch.",
+  "instructions": "Lesen Sie die Aufgaben 21 bis 25 und das Inhaltsverzeichnis. Wo finden Sie die Information? Wählen Sie die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "inhalt",
+          "title": "Handbuch für neue Mitarbeiterinnen und Mitarbeiter",
+          "byline": "Wellmer Verpackungen GmbH, Hagenwald-Ostring",
+          "paragraphs": [
+            {
+              "rows": [
+                ["Kapitel 1", "Willkommen: Geschichte der Firma, unsere Standorte, Ihre Ansprechpartner in den ersten Wochen, Probezeit"],
+                ["Kapitel 2", "Arbeitszeit: Schichtplan, Früh- und Spätschicht, Pausen, Zeiterfassung mit Chipkarte, Überstunden"],
+                ["Kapitel 3", "Urlaub: 28 Tage im Jahr, Urlaubsantrag über die Teamleitung, Urlaubssperre im Dezember"],
+                ["Kapitel 4", "Krankheit und Unfall: Krankmeldung bis 8 Uhr, ärztliches Attest ab dem dritten Tag, Unfall auf dem Weg zur Arbeit"],
+                ["Kapitel 5", "Lohn: Gehaltsabrechnung lesen, Auszahlung am Monatsende, Zuschläge für Nacht- und Sonntagsarbeit, Lohnsteuerklasse ändern"],
+                ["Kapitel 6", "Arbeitssicherheit: Sicherheitsschuhe und Arbeitskleidung, Erste Hilfe, Verhalten bei Feuer, Hautschutz"],
+                ["Kapitel 7", "Weiterbildung: Sprachkurse im Betrieb, Schulungen für Maschinen und Fahrzeuge, Aufstieg zur Vorarbeiterin"],
+                ["Kapitel 8", "Mitbestimmung: Betriebsrat, Sprechstunden, Beschwerden, Gleichbehandlung"],
+                ["Kapitel 9", "Service: Kantine und Speiseplan, Parkplätze für Mitarbeiter, Jobticket mit Rabatt, Spinde und Duschen"]
+              ]
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 21,
+          "type": "abc",
+          "prompt": "Im Oktober waren Sie oft zwischen 22 und 6 Uhr im Lager eingeteilt. Sie möchten wissen, ob Sie für diese Stunden mehr verdienen als in einer normalen Schicht.",
+          "options": { "a": "Kapitel 5", "b": "Kapitel 2", "c": "Kapitel 8" },
+          "answer": "a",
+          "evidence": [{ "text": "inhalt", "quote": "Zuschläge für Nacht- und Sonntagsarbeit" }],
+          "explanation": "Saat 22 ile 6 arası gece çalışmasıdır ve bunun için fazla para alıp almadığınızı soruyorsunuz. Gece çalışması için ek ücret Kapitel 5'te: „Zuschläge für Nacht- und Sonntagsarbeit“. b) yanlış: Kapitel 2'de vardiyalar ve fazla mesai var („Früh- und Spätschicht“, „Überstunden“), ama ek ücretten söz edilmiyor. c) yanlış: Kapitel 8'de eşit muamele (Gleichbehandlung) var, ama gece çalışmasının ücreti orada yazmıyor."
+        },
+        {
+          "number": 22,
+          "type": "abc",
+          "prompt": "Ihr Teamleiter ist seit Wochen unfreundlich zu Ihnen und gibt Ihnen immer die unangenehmsten Aufgaben. Sie möchten mit Personen reden, die von allen Kolleginnen und Kollegen gewählt wurden und ihre Interessen vertreten.",
+          "options": { "a": "Kapitel 1", "b": "Kapitel 8", "c": "Kapitel 3" },
+          "answer": "b",
+          "evidence": [{ "text": "inhalt", "quote": "Betriebsrat, Sprechstunden, Beschwerden" }],
+          "explanation": "Bütün çalışanların seçtiği ve onların haklarını savunan kurul işyeri temsilciliğidir (Betriebsrat). Kapitel 8'de işyeri temsilciliği, görüşme saatleri ve şikâyetler var: „Betriebsrat, Sprechstunden, Beschwerden“. a) yanlış: Kapitel 1'de de konuşabileceğiniz kişiler var („Ihre Ansprechpartner in den ersten Wochen“), ama bunlar sadece ilk haftalar için; seçilmiş temsilciler değil. c) yanlış: Kapitel 3'te ekip yönetimi geçiyor („Urlaubsantrag über die Teamleitung“), ama sadece izin başvurusu için."
+        },
+        {
+          "number": 23,
+          "type": "abc",
+          "prompt": "Sie wohnen in Wehrheide und fahren jeden Tag mit dem Bus von dort ins Lager. Sie möchten wissen, ob Sie über die Firma eine billigere Monatskarte bekommen können.",
+          "options": { "a": "Kapitel 5", "b": "Kapitel 4", "c": "Kapitel 9" },
+          "answer": "c",
+          "evidence": [{ "text": "inhalt", "quote": "Jobticket mit Rabatt" }],
+          "explanation": "Firma üzerinden daha ucuz aylık otobüs kartı almak indirimli iş biletidir. Bu Kapitel 9'da: „Jobticket mit Rabatt“. a) yanlış: Kapitel 5'te de her ay olan bir şey var („Auszahlung am Monatsende“), ama orada maaş anlatılıyor, otobüs kartı değil. b) yanlış: Kapitel 4'te işe gidiş yolu geçiyor („Unfall auf dem Weg zur Arbeit“), ama sadece yolda kaza olursa ne yapılacağı; ucuz bilet orada yazmıyor."
+        },
+        {
+          "number": 24,
+          "type": "abc",
+          "prompt": "Ihr Chef möchte, dass Sie in Zukunft auch Paletten mit dem Gabelstapler transportieren. Dafür müssen Sie zuerst lernen, wie man ihn sicher bedient.",
+          "options": { "a": "Kapitel 6", "b": "Kapitel 7", "c": "Kapitel 2" },
+          "answer": "b",
+          "evidence": [{ "text": "inhalt", "quote": "Schulungen für Maschinen und Fahrzeuge" }],
+          "explanation": "Forkliftin nasıl kullanılacağını öğrenmek için bir eğitime ihtiyacınız var. Makine ve araç eğitimleri Kapitel 7'de: „Schulungen für Maschinen und Fahrzeuge“. a) yanlış: Kapitel 6 iş güvenliğiyle ilgili, ama orada iş ayakkabıları, ilk yardım ve yangın anlatılıyor; araç kullanma eğitimi orada yazmıyor. c) yanlış: Kapitel 2'de çalışma saatleri ve vardiyalar var, eğitim yok."
+        },
+        {
+          "number": 25,
+          "type": "abc",
+          "prompt": "Ihr Vertrag hat am 1. September begonnen. Sie möchten wissen, wie lange es dauert, bis man Ihnen nicht mehr so einfach kündigen kann.",
+          "options": { "a": "Kapitel 1", "b": "Kapitel 8", "c": "Kapitel 3" },
+          "answer": "a",
+          "evidence": [{ "text": "inhalt", "quote": "Probezeit" }],
+          "explanation": "İşten kolayca çıkarılabileceğiniz ilk dönem deneme süresidir. Bu Kapitel 1'de: „Probezeit“. b) yanlış: Kapitel 8'de işyeri temsilciliği ve şikâyetler var („Betriebsrat“, „Beschwerden“), ama deneme süresinin ne kadar sürdüğü orada yazmıyor. c) yanlış: Kapitel 3'te de bir süre var („28 Tage im Jahr“), ama bu yıllık izin günleri; deneme süresi değil."
+        }
+      ]
+    }
+  ]
+}

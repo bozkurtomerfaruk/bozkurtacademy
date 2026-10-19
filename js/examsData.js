@@ -579,6 +579,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Ratgeber für Neuangekommene' },
                   { set: 'set-2', title: 'Infomappe der Kita' },
+                  { set: 'set-3', title: 'Wegweiser im Rathaus' },
+                  { set: 'set-4', title: 'Mappe für neue Patienten' },
+                  { set: 'set-5', title: 'Handbuch für neue Mitarbeiter' },
                 ]
               }, // Teil 1
               {
@@ -586,6 +589,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Eine Wohnung finden' },
                   { set: 'set-2', title: 'Arbeit finden' },
+                  { set: 'set-3', title: 'Familie und Kinderbetreuung' },
+                  { set: 'set-4', title: 'Kurse und Beratung' },
+                  { set: 'set-5', title: 'Hilfe im Alltag' },
                 ]
               }, // Teil 2
               {
@@ -593,6 +599,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Neues aus dem Stadtteil' },
                   { set: 'set-2', title: 'Schule und Gesundheit' },
+                  { set: 'set-3', title: 'Aus dem Rathaus' },
+                  { set: 'set-4', title: 'Arbeit und Ausbildung' },
+                  { set: 'set-5', title: 'Rund ums Wohnen' },
                 ]
               }, // Teil 3
               {
@@ -600,6 +609,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Ihr Mietvertrag' },
                   { set: 'set-2', title: 'Anmeldung in der Grundschule' },
+                  { set: 'set-3', title: 'Der Integrationskurs' },
+                  { set: 'set-4', title: 'Krank im Job' },
+                  { set: 'set-5', title: 'Hausordnung der Wohnanlage' },
                 ]
               }, // Teil 4
               {
@@ -607,6 +619,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Ein Brief an die Hausverwaltung' },
                   { set: 'set-2', title: 'Eine Nachricht an die Lehrerin' },
+                  { set: 'set-3', title: 'Eine E-Mail an das Jobcenter' },
+                  { set: 'set-4', title: 'Eine Nachricht an die Nachbarin' },
+                  { set: 'set-5', title: 'Eine E-Mail an die Arztpraxis' },
                 ]
               }, // Teil 5
             ] },

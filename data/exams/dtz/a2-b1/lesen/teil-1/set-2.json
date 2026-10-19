@@ -74,11 +74,11 @@
         {
           "number": 25,
           "type": "abc",
-          "prompt": "Ihre Familie hat nicht viel Geld. Sie fragen sich, ob Sie für den Kita-Platz weniger bezahlen können.",
-          "options": { "a": "Seite 8", "b": "Seite 23", "c": "Seite 17" },
+          "prompt": "Ihr Mann verdient wenig. Sie möchten wissen, ob Sie für das Mittagessen Ihres Sohnes in der Kita den vollen Preis zahlen müssen.",
+          "options": { "a": "Seite 8", "b": "Seite 26", "c": "Seite 17" },
           "answer": "c",
-          "evidence": [{ "text": "inhalt", "quote": "Ermäßigung für Familien mit geringem Einkommen" }],
-          "explanation": "Daha az ödemek Seite 17'de anlatılıyor: „Ermäßigung für Familien mit geringem Einkommen“ (geliri düşük ailelere indirim). a) yanlış: Seite 8'de yemek ve yemek listesi var; yemek ücreti (Essensgeld) ise Seite 17'de. b) yanlış: Seite 23'te veli toplantıları, veli kurulu ve şenlikler var."
+          "evidence": [{ "text": "inhalt", "quote": "Essensgeld, Ermäßigung für Familien mit geringem Einkommen" }],
+          "explanation": "Kocanız az kazanıyor ve oğlunuzun öğle yemeği için tam ücret ödeyip ödemeyeceğinizi soruyorsunuz. Bu Seite 17'de: yemek parası (Essensgeld) ve geliri düşük ailelere indirim („Ermäßigung für Familien mit geringem Einkommen“). a) yanlış: Seite 8'de öğle yemeği (Mittagessen) ve yemek listesi var, ama ücret ve indirim yok. b) yanlış: Seite 26'da telefon numaraları, hastalık bildirimi ve müdürün görüşme saatleri var; ücretlerden söz edilmiyor."
         }
       ]
     }

@@ -19,7 +19,7 @@
           "label": "a",
           "title": "Umzugsteam Flinke Kiste",
           "paragraphs": [
-            "Sie ziehen um? Wir tragen Ihre Möbel und Kartons, bauen Schränke und Betten ab und in der neuen Wohnung wieder auf. Mit unserem Lkw bringen wir alles sicher an Ihre neue Adresse – auch in den 5. Stock ohne Aufzug. Auch samstags. Kostenloses Angebot nach einem Besuch bei Ihnen."
+            "Sie ziehen um? Wir tragen Ihre Möbel, Kartons und schwere Haushaltsgeräte wie Waschmaschine oder Kühlschrank, bauen Schränke und Betten ab und in der neuen Wohnung wieder auf. Mit unserem Lkw bringen wir alles sicher an Ihre neue Adresse – auch in den 5. Stock ohne Aufzug. Auch samstags. Kostenloses Angebot nach einem Besuch bei Ihnen."
           ]
         },
         {
@@ -110,8 +110,8 @@
           "type": "zuordnung",
           "prompt": "Bilal zieht nächste Woche in eine Wohnung im 4. Stock. Seinen großen Kleiderschrank und die Waschmaschine kann er nicht allein transportieren. Einen Führerschein hat er nicht.",
           "answer": "a",
-          "evidence": [{ "text": "a", "quote": "Mit unserem Lkw bringen wir alles sicher an Ihre neue Adresse" }],
-          "explanation": "a ilanındaki taşıma ekibi eşyaları kendisi taşıyor, dolapları söküp kuruyor ve „Mit unserem Lkw bringen wir alles sicher an Ihre neue Adresse“; asansörsüz 5. kata bile çıkıyor. Tuzak b: Orada da taşınma için kamyonet var, ama kamyoneti müşteri kendisi kiralayıp sürüyor; Bilal'in ehliyeti yok. Tuzak e: Gönüllüler evde küçük işlerde yardım ediyor, ama „Umzüge können wir leider nicht übernehmen“."
+          "evidence": [{ "text": "a", "quote": "schwere Haushaltsgeräte wie Waschmaschine oder Kühlschrank" }, { "text": "a", "quote": "Mit unserem Lkw bringen wir alles sicher an Ihre neue Adresse" }],
+          "explanation": "a ilanındaki taşıma ekibi eşyaları kendisi taşıyor, çamaşır makinesi gibi ağır ev aletlerini de („schwere Haushaltsgeräte wie Waschmaschine oder Kühlschrank“), dolapları söküp kuruyor ve „Mit unserem Lkw bringen wir alles sicher an Ihre neue Adresse“; asansörsüz 5. kata bile çıkıyor. Tuzak b: Orada da taşınma için kamyonet var, ama kamyoneti müşteri kendisi kiralayıp sürüyor; Bilal'in ehliyeti yok. Tuzak e: Gönüllüler evde küçük işlerde yardım ediyor, ama „Umzüge können wir leider nicht übernehmen“."
         },
         {
           "number": 29,

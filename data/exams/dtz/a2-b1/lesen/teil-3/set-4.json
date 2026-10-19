@@ -1,0 +1,125 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-4",
+  "title": "Arbeit und Ausbildung",
+  "minutes": 12,
+  "instructions": "Lesen Sie die drei Texte und die Aufgaben 31 bis 36. Entscheiden Sie bei den Aufgaben 31, 33 und 35: Ist die Aussage richtig oder falsch? Wählen Sie bei den Aufgaben 32, 34 und 36 die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "jobcenter",
+          "title": "So geben Sie Ihre Unterlagen ab",
+          "byline": "Aushang im Jobcenter Hagenwald",
+          "paragraphs": [
+            "Ab dem 1. April können Sie Ihre Unterlagen, zum Beispiel Lohnabrechnungen oder Kontoauszüge, auf unserer Internetseite hochladen. Sie können Ihre Briefe auch in unseren Briefkasten neben dem Haupteingang werfen. Er ist Tag und Nacht für Sie da. Am Empfang nehmen wir Unterlagen nur noch dienstags und donnerstags von 8 bis 12 Uhr an.",
+            "Bitte schreiben Sie auf jede Seite Ihre Kundennummer. Geben Sie bitte keine Originale ab, sondern nur Kopien. Sind Sie an einem Tag mit Termin krank? Dann schicken Sie uns die Krankmeldung bitte spätestens an diesem Tag."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 31,
+          "type": "richtig-falsch",
+          "prompt": "Man kann Unterlagen auch am Abend in den Briefkasten des Jobcenters werfen.",
+          "answer": "richtig",
+          "evidence": [{ "text": "jobcenter", "quote": "Er ist Tag und Nacht für Sie da." }],
+          "explanation": "Ana girişin yanındaki posta kutusu gece gündüz kullanılabiliyor: „Er ist Tag und Nacht für Sie da.“ Yani belgeler akşam da kutuya atılabilir; ifade doğru. Saat sınırı yalnızca danışma için geçerli: „dienstags und donnerstags von 8 bis 12 Uhr“."
+        },
+        {
+          "number": 32,
+          "type": "abc",
+          "prompt": "Was sollen die Kundinnen und Kunden tun?",
+          "options": {
+            "a": "Auf allen Blättern ihre Kundennummer notieren.",
+            "b": "Ihre Originale am Empfang abgeben.",
+            "c": "Die Krankmeldung erst nach dem Termin schicken."
+          },
+          "answer": "a",
+          "evidence": [{ "text": "jobcenter", "quote": "Bitte schreiben Sie auf jede Seite Ihre Kundennummer." }],
+          "explanation": "Her sayfaya müşteri numarası yazılmalı: „Bitte schreiben Sie auf jede Seite Ihre Kundennummer.“ „auf jede Seite“ = „auf allen Blättern“. b) yanlış: Asıl belgeler değil, yalnızca kopyalar verilmeli: „Geben Sie bitte keine Originale ab, sondern nur Kopien.“ c) yanlış: Hastalık raporu randevudan sonra değil, en geç randevu günü gönderilmeli: „schicken Sie uns die Krankmeldung bitte spätestens an diesem Tag“."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "zeitung",
+          "title": "Ausbildungsmesse „Startklar“ in der Stadthalle",
+          "byline": "Lindbrücker Rundschau, Lokalteil",
+          "paragraphs": [
+            "Am Samstag, dem 14. März, findet von 10 bis 16 Uhr in der Stadthalle Lindbrück die Ausbildungsmesse „Startklar“ statt. Über 40 Betriebe aus der Region stellen ihre Ausbildungsberufe vor, zum Beispiel in der Pflege, im Handwerk und im Handel. Der Eintritt ist frei. Jugendliche können ihre Bewerbungsmappe mitbringen. Mitarbeiterinnen der Berufsberatung sehen sich die Mappen an und geben Tipps.",
+            "Neu ist in diesem Jahr ein Treffpunkt für Erwachsene, die eine Ausbildung in Teilzeit machen möchten. Vom Bahnhof fährt alle 30 Minuten ein kostenloser Bus zur Stadthalle."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 33,
+          "type": "richtig-falsch",
+          "prompt": "Für den Besuch der Messe muss man nichts bezahlen.",
+          "answer": "richtig",
+          "evidence": [{ "text": "zeitung", "quote": "Der Eintritt ist frei." }],
+          "explanation": "Fuara giriş ücretsiz: „Der Eintritt ist frei.“ Yani fuarı ziyaret etmek için para ödemek gerekmiyor; ifade doğru."
+        },
+        {
+          "number": 34,
+          "type": "abc",
+          "prompt": "Auf der Messe „Startklar“ …",
+          "options": {
+            "a": "fährt ein kostenloser Bus einmal pro Stunde vom Bahnhof ab.",
+            "b": "stellen über 40 Schulen aus der Region ihre Kurse vor.",
+            "c": "gibt es dieses Jahr zum ersten Mal einen Treffpunkt für Erwachsene, die eine Teilzeitausbildung suchen."
+          },
+          "answer": "c",
+          "evidence": [{ "text": "zeitung", "quote": "Neu ist in diesem Jahr ein Treffpunkt für Erwachsene, die eine Ausbildung in Teilzeit machen möchten." }],
+          "explanation": "Bu yıl ilk kez yarı zamanlı meslek eğitimi yapmak isteyen yetişkinler için bir buluşma noktası var: „Neu ist in diesem Jahr ein Treffpunkt für Erwachsene, die eine Ausbildung in Teilzeit machen möchten.“ „Neu ist in diesem Jahr“ = „zum ersten Mal“. a) yanlış: Ücretsiz otobüs saatte bir değil, 30 dakikada bir kalkıyor: „alle 30 Minuten“. b) yanlış: Fuarda okullar değil, 40'tan fazla işletme meslekleri tanıtıyor: „Über 40 Betriebe aus der Region stellen ihre Ausbildungsberufe vor“."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "firma",
+          "title": "Urlaubsplanung für den Sommer",
+          "byline": "Information an alle Mitarbeiterinnen und Mitarbeiter der Spedition Möwenkamp",
+          "paragraphs": [
+            "Bitte tragen Sie Ihre Urlaubswünsche für Juni bis September bis zum 31. März in die Liste im Pausenraum ein. Im Lager dürfen höchstens drei Personen zur gleichen Zeit Urlaub haben. Möchten mehrere Kolleginnen und Kollegen in derselben Zeit frei haben, haben Eltern mit Schulkindern in den Sommerferien Vorrang.",
+            "Nach dem 31. März prüft Ihre Teamleitung alle Wünsche. Bis zum 15. April sagt sie Ihnen, ob Sie den Urlaub bekommen. Spätere Wünsche können wir nur berücksichtigen, wenn dann noch Plätze frei sind.",
+            "Bei Fragen hilft Ihnen Frau Lindqvist im Personalbüro, Durchwahl 23."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 35,
+          "type": "richtig-falsch",
+          "prompt": "Die Teamleitung entscheidet bis Ende März über die Urlaubswünsche.",
+          "answer": "falsch",
+          "evidence": [{ "text": "firma", "quote": "Nach dem 31. März prüft Ihre Teamleitung alle Wünsche." }, { "text": "firma", "quote": "Bis zum 15. April sagt sie Ihnen, ob Sie den Urlaub bekommen." }],
+          "explanation": "Ekip yöneticisi istekleri mart sonuna kadar değil, 31 Mart'tan sonra inceliyor: „Nach dem 31. März prüft Ihre Teamleitung alle Wünsche.“ Cevabı 15 Nisan'a kadar veriyor: „Bis zum 15. April sagt sie Ihnen, ob Sie den Urlaub bekommen.“ 31 Mart, çalışanların isteklerini listeye yazmaları gereken son tarih: „bis zum 31. März in die Liste im Pausenraum ein“. Bu yüzden ifade yanlış."
+        },
+        {
+          "number": 36,
+          "type": "abc",
+          "prompt": "Was steht in der Information?",
+          "options": {
+            "a": "Im Lager können vier Personen gleichzeitig Urlaub machen.",
+            "b": "Wer Kinder im Schulalter hat, bekommt in den Sommerferien eher den gewünschten Urlaub.",
+            "c": "Urlaubswünsche nach dem 31. März lehnt das Personalbüro ab."
+          },
+          "answer": "b",
+          "evidence": [{ "text": "firma", "quote": "haben Eltern mit Schulkindern in den Sommerferien Vorrang" }],
+          "explanation": "Birçok çalışan aynı zamanda izin isterse, okul çağında çocuğu olan ebeveynler yaz tatilinde önceliklidir: „haben Eltern mit Schulkindern in den Sommerferien Vorrang“. „Vorrang haben“ = istedikleri izni „eher“ (daha büyük olasılıkla, öncelikli olarak) almak. a) yanlış: Depoda aynı anda en fazla üç kişi izinli olabilir: „Im Lager dürfen höchstens drei Personen zur gleichen Zeit Urlaub haben.“ c) yanlış: Geç gelen istekler doğrudan reddedilmiyor; hâlâ yer varsa dikkate alınabiliyor. Bu konuda personel bürosundan da söz edilmiyor; cevabı ekip yöneticisi veriyor: „Spätere Wünsche können wir nur berücksichtigen, wenn dann noch Plätze frei sind.“"
+        }
+      ]
+    }
+  ]
+}

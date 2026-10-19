@@ -1,0 +1,135 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-5",
+  "title": "Hilfe im Alltag",
+  "minutes": 10,
+  "context": "Mehrere Personen in Lindbrück, Hagenwald und Wehrheide brauchen Hilfe im Alltag. Die Anzeigen stehen in der Stadtteilzeitung „Nachbarn aktuell“.",
+  "instructions": "Lesen Sie die Situationen 26 bis 30 und die Anzeigen a bis h. Welche Anzeige passt zu welcher Situation? Sie können jede Anzeige nur einmal wählen. Die Anzeige aus dem Beispiel können Sie nicht mehr wählen. Für eine Situation gibt es keine passende Anzeige. In diesem Fall wählen Sie X.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": "x",
+      "texts": [
+        {
+          "id": "a",
+          "label": "a",
+          "title": "Reparatur-Café Schraubzwinge",
+          "paragraphs": [
+            "Ihr Toaster, Ihre Lampe oder Ihr Fahrrad ist kaputt? Nicht gleich wegwerfen! Jeden ersten Samstag im Monat reparieren ehrenamtliche Helfer mit Ihnen zusammen kleine Geräte, Kleidung und Fahrräder. Sie bezahlen nur die Ersatzteile, über eine Spende freuen wir uns. Bitte bringen Sie das Gerät mit. Gemeindehaus Distelfeld, Hagenwald, 10–14 Uhr."
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "title": "Elektro Hollerbeck – Haushaltsgeräte",
+          "paragraphs": [
+            "Ihre alte Waschmaschine macht nicht mehr mit? Bei uns finden Sie Waschmaschinen, Trockner und Kühlschränke von vielen Herstellern zu fairen Preisen. Wir liefern das neue Gerät, schließen es an und nehmen das alte mit. Reparaturen bieten wir leider nicht an. Montag bis Samstag von 9 bis 19 Uhr, Industriestraße 7, Lindbrück."
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "title": "Sprachmittler-Netzwerk Lindbrück",
+          "paragraphs": [
+            "Sie haben einen Termin beim Amt, beim Jobcenter oder in der Schule Ihrer Kinder und verstehen noch nicht gut Deutsch? Unsere ehrenamtlichen Sprachmittlerinnen und Sprachmittler gehen mit Ihnen hin und übersetzen das Gespräch mündlich, zum Beispiel auf Arabisch, Persisch (Farsi) oder Ukrainisch. Kostenlos. Bitte melden Sie sich mindestens eine Woche vorher: Tel. 05431 39 271."
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "title": "Einkaufshilfe Sonnenhang",
+          "paragraphs": [
+            "Sie können nach einer Operation oder wegen Ihres Alters nicht selbst einkaufen gehen? Geben Sie uns bis 10 Uhr Ihre Einkaufsliste telefonisch durch, am Nachmittag bringen wir Ihnen die Lebensmittel bis an die Wohnungstür. Sie bezahlen den Einkauf und 4 Euro pro Lieferung. Montag bis Freitag, nur in Hagenwald. Tel. 05431 21 090."
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "title": "Reinigungsservice Glanzpunkt",
+          "paragraphs": [
+            "Wir putzen Ihre Wohnung gründlich: Küche, Bad, Böden und Fenster. Auch Bügeln ist möglich. Unsere Mitarbeiterinnen kommen einmal pro Woche oder alle zwei Wochen, und zwar immer dieselbe Person. 24 Euro pro Stunde. Sie bekommen eine Rechnung, die Sie in Ihrer Steuererklärung angeben können. Tel. 05431 81 664."
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "title": "Übersetzungsbüro Wortlaut",
+          "paragraphs": [
+            "Wir übersetzen Ihre Dokumente schriftlich und beglaubigt: Geburtsurkunden, Heiratsurkunden, Zeugnisse und Führerscheine aus mehr als 30 Sprachen, auch aus dem Persischen. Unsere Übersetzungen werden von allen Ämtern in Deutschland anerkannt. Sie bekommen die Unterlagen nach etwa fünf Tagen per Post. Der Preis richtet sich nach der Zahl der Seiten."
+          ]
+        },
+        {
+          "id": "g",
+          "label": "g",
+          "title": "Winterdienst und Gartenhilfe Flinkbesen",
+          "paragraphs": [
+            "Schnee und Eis vor dem Haus? Wir räumen und streuen für Sie den Gehweg vor Ihrem Haus, jeden Morgen vor 7 Uhr, auch am Wochenende. Im Sommer mähen wir Ihren Rasen und schneiden Hecken. Preis für den ganzen Winter: ab 180 Euro. Wir arbeiten in Lindbrück, Hagenwald und Wehrheide."
+          ]
+        },
+        {
+          "id": "h",
+          "label": "h",
+          "title": "Computerhilfe Bit für Bit",
+          "paragraphs": [
+            "Ihr Drucker druckt nicht, das WLAN funktioniert nicht oder der Laptop ist sehr langsam? Wir kommen zu Ihnen nach Hause und lösen das Problem, meistens noch am selben Tag. Die erste halbe Stunde kostet 25 Euro. Wir erklären Ihnen alles in Ruhe. Tel. 05431 90 552, auch samstags."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Bei Familie Mensah geht seit gestern Abend das Internet nicht mehr. Die Familie möchte, dass ein Techniker zu ihr in die Wohnung kommt und den Fehler findet.",
+          "answer": "h",
+          "evidence": [{ "text": "h", "quote": "Wir kommen zu Ihnen nach Hause und lösen das Problem" }],
+          "explanation": "h ilanındaki bilgisayar servisi WLAN (kablosuz internet) çalışmadığında yardım ediyor: „Wir kommen zu Ihnen nach Hause und lösen das Problem“. Mensah ailesinin interneti çalışmıyor ve evine bir teknisyen gelmesini istiyor. Bu ilan örnekte kullanıldığı için başka bir durum için seçilemez."
+        },
+        {
+          "number": 26,
+          "type": "zuordnung",
+          "prompt": "Frau Zielińska wohnt in Hagenwald im dritten Stock ohne Aufzug. Vor einer Woche ist ihr Knie operiert worden, und noch einige Wochen kann sie keine schweren Taschen tragen. Deshalb sucht sie jemanden, der ihr Brot, Obst und Milch nach Hause bringt.",
+          "answer": "d",
+          "evidence": [{ "text": "d", "quote": "am Nachmittag bringen wir Ihnen die Lebensmittel bis an die Wohnungstür" }, { "text": "d", "quote": "Montag bis Freitag, nur in Hagenwald." }],
+          "explanation": "d ilanındaki alışveriş yardımı, ameliyattan sonra veya yaşlılık nedeniyle alışverişe gidemeyenler için: „am Nachmittag bringen wir Ihnen die Lebensmittel bis an die Wohnungstür“. Hizmet „nur in Hagenwald“, Bayan Zielińska da Hagenwald'da oturuyor, bir hafta önce dizinden ameliyat oldu ve ağır çanta taşıyamıyor. Tuzak e: Temizlikçi de düzenli olarak eve geliyor, ama yalnızca daireyi temizliyor ve ütü yapıyor; alışverişten söz edilmiyor."
+        },
+        {
+          "number": 27,
+          "type": "zuordnung",
+          "prompt": "Tareks Radio funktioniert nicht mehr. Ein neues möchte er nicht kaufen, denn das alte war ein Geschenk von seinem Vater. Tarek hat wenig Geld und würde gern selbst lernen, wie man so etwas wieder in Ordnung bringt.",
+          "answer": "a",
+          "evidence": [{ "text": "a", "quote": "reparieren ehrenamtliche Helfer mit Ihnen zusammen kleine Geräte, Kleidung und Fahrräder" }, { "text": "a", "quote": "Sie bezahlen nur die Ersatzteile" }],
+          "explanation": "a ilanındaki tamir kafesinde gönüllüler küçük aletleri „mit Ihnen zusammen“, yani sahibiyle birlikte tamir ediyor; Tarek de yanında olup öğrenmek istiyor. Ücret az: „Sie bezahlen nur die Ersatzteile“, Tarek'in de az parası var. Tuzak b: Orada elektrikli ev aletleri var, ama mağaza yeni cihaz satıyor ve „Reparaturen bieten wir leider nicht an“; Tarek ise yeni bir radyo almak istemiyor."
+        },
+        {
+          "number": 28,
+          "type": "zuordnung",
+          "prompt": "Gorans Waschmaschine ist erst zwei Jahre alt, aber seit gestern pumpt sie das Wasser nicht mehr ab. Goran möchte keine neue Maschine kaufen. Er sucht einen Fachmann, der zu ihm kommt und die Maschine repariert.",
+          "answer": "x",
+          "evidence": [{ "text": "b", "quote": "Reparaturen bieten wir leider nicht an." }],
+          "explanation": "Tuzak b: İlanın konusu çamaşır makineleri, eve teslim ediyorlar ve bağlıyorlar. Ama mağaza yalnızca yeni cihaz satıyor: „Reparaturen bieten wir leider nicht an.“ Goran ise makinesini tamir ettirmek istiyor. a da uymuyor: Orada „kleine Geräte“ tamir ediliyor ve „Bitte bringen Sie das Gerät mit“; kimse eve gelmiyor. h eve geliyor, ama yalnızca bilgisayar, yazıcı ve WLAN için; ayrıca örnekte kullanıldı. Bu yüzden cevap X."
+        },
+        {
+          "number": 29,
+          "type": "zuordnung",
+          "prompt": "Herr Mendes ist 79 und wohnt in einem kleinen Haus in Wehrheide. Im Winter muss er den Bürgersteig vor seinem Grundstück frei machen, aber mit seinem kranken Rücken schafft er das nicht mehr.",
+          "answer": "g",
+          "evidence": [{ "text": "g", "quote": "Wir räumen und streuen für Sie den Gehweg vor Ihrem Haus" }, { "text": "g", "quote": "Wir arbeiten in Lindbrück, Hagenwald und Wehrheide." }],
+          "explanation": "g ilanındaki firma kışın evin önündeki kaldırımı temizliyor: „Wir räumen und streuen für Sie den Gehweg vor Ihrem Haus“. Wehrheide'de de çalışıyor: „Wir arbeiten in Lindbrück, Hagenwald und Wehrheide.“ Bay Mendes Wehrheide'de oturuyor ve kaldırımı artık kendisi temizleyemiyor. Tuzak e: Temizlik firması da eve geliyor, ama yalnızca dairenin içini temizliyor (Küche, Bad, Böden und Fenster); evin önündeki kaldırımdan söz edilmiyor."
+        },
+        {
+          "number": 30,
+          "type": "zuordnung",
+          "prompt": "Nadia hat in drei Wochen einen Termin bei der Ausländerbehörde. Für ein so wichtiges Gespräch reicht ihr Deutsch noch nicht. Deshalb wünscht sie sich, dass eine Person dabei ist, die Persisch spricht und ihr dort alles erklärt.",
+          "answer": "c",
+          "evidence": [{ "text": "c", "quote": "gehen mit Ihnen hin und übersetzen das Gespräch mündlich, zum Beispiel auf Arabisch, Persisch (Farsi) oder Ukrainisch" }, { "text": "c", "quote": "Bitte melden Sie sich mindestens eine Woche vorher" }],
+          "explanation": "c ilanındaki gönüllü dil aracıları resmî bir randevuya (Termin beim Amt) birlikte gidiyor ve konuşmayı sözlü olarak çeviriyor, Farsça (Persisch) da: „gehen mit Ihnen hin und übersetzen das Gespräch mündlich“. Nadia'nın randevusu üç hafta sonra; „mindestens eine Woche vorher“ başvurmak için zamanı var. Tuzak f: Orada da Farsça var ve çeviriler resmî dairelerde geçerli, ama büro belgeleri yalnızca yazılı çeviriyor ve postayla gönderiyor; randevuya birlikte gitmiyor."
+        }
+      ]
+    }
+  ]
+}

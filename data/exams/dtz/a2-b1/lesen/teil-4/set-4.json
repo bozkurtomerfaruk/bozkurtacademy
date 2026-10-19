@@ -1,0 +1,77 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-4",
+  "title": "Krank im Job",
+  "minutes": 7,
+  "instructions": "Lesen Sie den Text und die Aufgaben 37 bis 39. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "blatt",
+          "title": "Krank – was muss ich bei der Arbeit beachten?",
+          "byline": "Informationsblatt der Krankenkasse Hagenwald",
+          "paragraphs": [
+            "Sie sind krank und können nicht arbeiten? Dann beachten Sie bitte diese Punkte.",
+            { "heading": "Den Arbeitgeber informieren" },
+            "Sagen Sie Ihrem Arbeitgeber am ersten Krankheitstag vor Arbeitsbeginn Bescheid, am besten am Telefon. Eine Nachricht an Kollegen reicht nicht. Welche Krankheit Sie haben, müssen Sie nicht sagen, aber wie lange Sie wahrscheinlich fehlen.",
+            { "heading": "Die Krankmeldung vom Arzt" },
+            "Wenn Sie länger als drei Tage krank sind, brauchen Sie eine Krankmeldung von Ihrer Ärztin oder Ihrem Arzt. Manche Arbeitgeber verlangen sie schon ab dem ersten Tag. Die Praxis schickt die Krankmeldung direkt an uns, und Ihr Arbeitgeber bekommt sie elektronisch von uns. Sie müssen also kein Papier zur Firma bringen.",
+            { "heading": "Lohn" },
+            "Ihr Arbeitgeber zahlt Ihren Lohn bis zu sechs Wochen weiter. Danach bekommen Sie Krankengeld von uns.",
+            { "heading": "Wenn Ihr Kind krank ist" },
+            "Ist Ihr Kind jünger als zwölf Jahre und krank, können Sie zu Hause bleiben und es pflegen. Dafür brauchen Sie eine Bescheinigung vom Kinderarzt. Informieren Sie Ihren Arbeitgeber auch in diesem Fall sofort. Den Antrag auf Kinderkrankengeld finden Sie auf unserer Internetseite.",
+            { "heading": "Zurück an den Arbeitsplatz" },
+            "Sind Sie früher wieder gesund? Dann dürfen Sie schon vor dem Ende der Krankmeldung arbeiten. Sagen Sie Ihrem Arbeitgeber bitte einen Tag vorher Bescheid."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 37,
+          "type": "abc",
+          "prompt": "Was sollen Beschäftigte am ersten Tag ihrer Krankheit tun?",
+          "options": {
+            "a": "Dem Arbeitgeber erklären, welche Krankheit sie haben.",
+            "b": "Einer Kollegin eine Nachricht für den Chef schreiben.",
+            "c": "Sich beim Arbeitgeber melden, bevor die Arbeit anfängt."
+          },
+          "answer": "c",
+          "evidence": [{ "text": "blatt", "quote": "Sagen Sie Ihrem Arbeitgeber am ersten Krankheitstag vor Arbeitsbeginn Bescheid" }],
+          "explanation": "Hastalığın ilk günü, iş başlamadan önce işverene haber verilmeli: „Sagen Sie Ihrem Arbeitgeber am ersten Krankheitstag vor Arbeitsbeginn Bescheid“. a) yanlış: Hangi hastalığın olduğu söylenmek zorunda değil, yalnızca ne kadar süre gelinemeyeceği söyleniyor: „Welche Krankheit Sie haben, müssen Sie nicht sagen“. b) yanlış: İş arkadaşlarına mesaj göndermek yeterli değil: „Eine Nachricht an Kollegen reicht nicht.“"
+        },
+        {
+          "number": 38,
+          "type": "abc",
+          "prompt": "Was steht im Informationsblatt über die Krankmeldung vom Arzt?",
+          "options": {
+            "a": "Man muss sie selbst in die Firma bringen.",
+            "b": "Manche Firmen möchten sie schon am ersten Krankheitstag haben.",
+            "c": "Man braucht sie erst nach sechs Wochen Krankheit."
+          },
+          "answer": "b",
+          "evidence": [{ "text": "blatt", "quote": "Manche Arbeitgeber verlangen sie schon ab dem ersten Tag." }],
+          "explanation": "Bazı işverenler doktor raporunu daha ilk günden istiyor: „Manche Arbeitgeber verlangen sie schon ab dem ersten Tag.“ a) yanlış: Raporu muayenehane doğrudan sağlık sigortasına gönderiyor, işveren de elektronik olarak alıyor: „Sie müssen also kein Papier zur Firma bringen.“ c) yanlış: Rapor üç günden uzun hastalıkta gerekiyor: „Wenn Sie länger als drei Tage krank sind“. Altı hafta, işverenin maaşı ödemeye devam ettiği süre: „Ihr Arbeitgeber zahlt Ihren Lohn bis zu sechs Wochen weiter.“"
+        },
+        {
+          "number": 39,
+          "type": "abc",
+          "prompt": "Was gilt für Eltern, wenn ihr Kind krank ist?",
+          "options": {
+            "a": "Die Eltern brauchen ein Attest aus der Kinderarztpraxis.",
+            "b": "Den Antrag auf Kinderkrankengeld bekommen die Eltern bei ihrem Arbeitgeber.",
+            "c": "Die Eltern sollen dem Arbeitgeber einen Tag vorher Bescheid sagen."
+          },
+          "answer": "a",
+          "evidence": [{ "text": "blatt", "quote": "Dafür brauchen Sie eine Bescheinigung vom Kinderarzt." }],
+          "explanation": "Hasta çocuğuna bakmak için evde kalan veli çocuk doktorundan bir belge almalı: „Dafür brauchen Sie eine Bescheinigung vom Kinderarzt.“ Attest = doktor belgesi. b) yanlış: Çocuk hastalık parası başvurusu işverende değil, sağlık sigortasının internet sitesinde: „Den Antrag auf Kinderkrankengeld finden Sie auf unserer Internetseite.“ c) yanlış: Çocuk hastalandığında işverene hemen haber verilmeli: „Informieren Sie Ihren Arbeitgeber auch in diesem Fall sofort.“ Bir gün önceden haber vermek, erken iyileşip işe dönmek için geçerli: „Sagen Sie Ihrem Arbeitgeber bitte einen Tag vorher Bescheid.“"
+        }
+      ]
+    }
+  ]
+}

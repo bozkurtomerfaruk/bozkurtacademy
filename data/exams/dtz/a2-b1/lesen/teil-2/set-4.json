@@ -1,0 +1,135 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-4",
+  "title": "Kurse und Beratung",
+  "minutes": 10,
+  "context": "Mehrere Personen suchen in Lindbrück und Hagenwald einen Kurs oder eine Beratung. Die Anzeigen stehen im Programmheft „Lernen und Leben“.",
+  "instructions": "Lesen Sie die Situationen 26 bis 30 und die Anzeigen a bis h. Welche Anzeige passt zu welcher Situation? Sie können jede Anzeige nur einmal wählen. Die Anzeige aus dem Beispiel können Sie nicht mehr wählen. Für eine Situation gibt es keine passende Anzeige. In diesem Fall wählen Sie X.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": "x",
+      "texts": [
+        {
+          "id": "a",
+          "label": "a",
+          "title": "Sprachschule Wortbrücke: Fit für den DTZ",
+          "paragraphs": [
+            "In unserem Vorbereitungskurs üben Sie alle Teile des Deutsch-Tests für Zuwanderer: Hören, Lesen, Schreiben und Sprechen. Am Ende schreiben Sie eine Probeprüfung. Der Kurs dauert zwölf Wochen, Unterricht dienstags und donnerstags von 18 bis 20 Uhr. Höchstens zehn Personen pro Gruppe, Preis: 220 Euro."
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "title": "Fahrschule Kurvenreich",
+          "paragraphs": [
+            "Den Führerschein in Lindbrück machen! Den Theorieunterricht bieten wir auch auf Arabisch, Türkisch und Russisch an. Die Fahrstunden finden auf Deutsch statt, unsere Fahrlehrer erklären aber alles langsam und deutlich. Anmeldung Montag bis Freitag von 15 bis 18 Uhr in unserem Büro, Am Brunnenplatz 4."
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "title": "Smartphone-Treff für Seniorinnen und Senioren",
+          "paragraphs": [
+            "Sie haben ein neues Handy und wissen nicht weiter? Im Seniorenbüro Hagenwald zeigen Ihnen junge Freiwillige, wie Sie Fotos verschicken, Videoanrufe machen oder Bustickets mit einer App kaufen. Jeden Mittwoch von 14 bis 16 Uhr, die Teilnahme ist kostenlos. Bitte bringen Sie Ihr Handy mit und laden Sie es vorher auf."
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "title": "Lerntreff Kompass",
+          "paragraphs": [
+            "Nachhilfe für Schülerinnen und Schüler der Klassen 5 bis 10 in Mathe, Deutsch und Englisch. Wir bereiten auch auf die Prüfungen zum Hauptschul- und Realschulabschluss vor. Unterricht in kleinen Gruppen, montags bis freitags von 14 bis 17 Uhr. 15 Euro pro Stunde. Hirtengasse 9, Lindbrück."
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "title": "Schuldnerberatung im Haus am Markt",
+          "paragraphs": [
+            "Sie bekommen Mahnungen und wissen nicht mehr, wie Sie Ihre Rechnungen bezahlen sollen? Wir verschaffen Ihnen einen Überblick über Ihre Schulden, sprechen mit den Firmen, denen Sie Geld schulden, und machen mit Ihnen einen Plan für die Rückzahlung. Die Beratung ist kostenlos und vertraulich. Bitte bringen Sie alle Briefe mit."
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "title": "Migrationsberatung im Stadtteilhaus Rabenhorst",
+          "paragraphs": [
+            "Sie leben noch nicht lange in Deutschland? Wir beraten Sie kostenlos zu Fragen rund um Aufenthalt, Arbeitserlaubnis und Familiennachzug. Wir erklären Ihnen, welche Unterlagen Sie brauchen, und helfen beim Ausfüllen von Anträgen für die Ausländerbehörde. Offene Sprechstunde dienstags von 9 bis 12 Uhr, sonst mit Termin."
+          ]
+        },
+        {
+          "id": "g",
+          "label": "g",
+          "title": "Lohnsteuerhilfe Rotdorn e. V.",
+          "paragraphs": [
+            "Holen Sie sich Ihr Geld vom Finanzamt zurück! Wir machen die Steuererklärung für Arbeitnehmer, Rentner und Familien. Sie bringen Ihre Lohnabrechnungen und Belege mit, wir erledigen den Rest. Jahresbeitrag je nach Einkommen ab 59 Euro. Beratungsstelle Elsterweg 21, Termine unter Tel. 05431 47 560."
+          ]
+        },
+        {
+          "id": "h",
+          "label": "h",
+          "title": "Abendschule Lindbrück",
+          "paragraphs": [
+            "Sie möchten einen deutschen Schulabschluss nachholen? An unserer Abendschule können Erwachsene ab 18 Jahren neben dem Beruf den Hauptschul- oder Realschulabschluss machen. Unterricht montags bis donnerstags von 18 bis 21.30 Uhr. Die Teilnahme ist kostenlos, Sie zahlen nur die Bücher. Neue Klassen beginnen im August und im Februar."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Karim möchte Auto fahren lernen. Die Verkehrsregeln für die Prüfung möchte er am liebsten zuerst in seiner Muttersprache Arabisch lernen.",
+          "answer": "b",
+          "evidence": [{ "text": "b", "quote": "Den Theorieunterricht bieten wir auch auf Arabisch, Türkisch und Russisch an." }],
+          "explanation": "b ilanındaki sürücü kursu teori derslerini Arapça da veriyor: „Den Theorieunterricht bieten wir auch auf Arabisch, Türkisch und Russisch an“. Karim trafik kurallarını önce ana dili Arapça ile öğrenmek istiyor. Bu ilan örnekte kullanıldığı için başka bir durum için seçilemez."
+        },
+        {
+          "number": 26,
+          "type": "zuordnung",
+          "prompt": "Ludmila schreibt in fünf Wochen die Prüfung am Ende ihres Integrationskurses. Bis dahin möchte sie in einem zusätzlichen Kurs noch einmal alle Prüfungsteile trainieren. Der Kurs muss also vor ihrem Prüfungstermin zu Ende sein.",
+          "answer": "x",
+          "evidence": [{ "text": "a", "quote": "Der Kurs dauert zwölf Wochen" }],
+          "explanation": "Tuzak a: Deutsch-Test für Zuwanderer'ın bütün bölümleri çalışılan bir hazırlık kursu var. Ama „Der Kurs dauert zwölf Wochen“; Ludmila'nın sınavı ise beş hafta sonra, kurs sınavdan önce bitmiş olmalı. d de uymuyor: Orada okul sınavlarına (Hauptschul- und Realschulabschluss) hazırlanılıyor ve kurs 5–10. sınıf öğrencileri için. h bir okul diploması için akşam okulu, bu sınav için bir hazırlık kursu değil. Bu yüzden cevap X."
+        },
+        {
+          "number": 27,
+          "type": "zuordnung",
+          "prompt": "Darius ist 26 und hat in seinem Heimatland nach der 8. Klasse aufgehört, zur Schule zu gehen. Tagsüber arbeitet er auf dem Bau. Nach der Arbeit möchte er noch einmal lernen und in Deutschland ein Schulzeugnis bekommen.",
+          "answer": "h",
+          "evidence": [{ "text": "h", "quote": "können Erwachsene ab 18 Jahren neben dem Beruf den Hauptschul- oder Realschulabschluss machen" }, { "text": "h", "quote": "Unterricht montags bis donnerstags von 18 bis 21.30 Uhr." }],
+          "explanation": "h ilanındaki akşam okulunda „Erwachsene ab 18 Jahren neben dem Beruf“ ortaokul diploması (Hauptschul- oder Realschulabschluss) alabiliyor. Dersler akşam: „montags bis donnerstags von 18 bis 21.30 Uhr“. Darius 26 yaşında, gündüz inşaatta çalışıyor ve işten sonra Almanya'da bir okul diploması almak istiyor. Tuzak d: Orada da Hauptschulabschluss sınavına hazırlık var, ama ders „Schülerinnen und Schüler der Klassen 5 bis 10“ için ve öğleden sonra 14–17 arası; Darius o saatlerde çalışıyor."
+        },
+        {
+          "number": 28,
+          "type": "zuordnung",
+          "prompt": "Herr Radovanović ist 68 Jahre alt. Zum Geburtstag haben ihm seine Kinder ein modernes Telefon geschenkt. Er möchte lernen, wie er damit seine Enkel in Serbien nicht nur hören, sondern beim Sprechen auch sehen kann.",
+          "answer": "c",
+          "evidence": [{ "text": "c", "quote": "zeigen Ihnen junge Freiwillige, wie Sie Fotos verschicken, Videoanrufe machen oder Bustickets mit einer App kaufen" }],
+          "explanation": "c ilanında yaşlılar için akıllı telefon buluşması var: Gönüllüler „wie Sie … Videoanrufe machen“ gösteriyor, yani görüntülü konuşmayı. Bay Radovanović 68 yaşında ve yeni telefonuyla torunlarını konuşurken görmek istiyor. Diğer ilanlarda telefon kullanmayı öğreten bir kurs yok: a Almanca sınavına, d okul derslerine, h okul diplomasına hazırlıyor."
+        },
+        {
+          "number": 29,
+          "type": "zuordnung",
+          "prompt": "Kemal arbeitet seit einem Jahr in Hagenwald. Seine Frau und die beiden Kinder leben noch in der Türkei. Er möchte, dass sie zu ihm nach Deutschland kommen, und fragt sich, welche Papiere er dafür vorbereiten muss.",
+          "answer": "f",
+          "evidence": [{ "text": "f", "quote": "Wir beraten Sie kostenlos zu Fragen rund um Aufenthalt, Arbeitserlaubnis und Familiennachzug." }, { "text": "f", "quote": "Wir erklären Ihnen, welche Unterlagen Sie brauchen" }],
+          "explanation": "f ilanındaki göçmen danışmanlığı „Familiennachzug“ (aile birleşimi) konusunda ücretsiz danışmanlık veriyor ve „welche Unterlagen Sie brauchen“ açıklıyor. Kemal da eşi ve çocuklarının Almanya'ya gelmesi için hangi belgeleri hazırlaması gerektiğini öğrenmek istiyor. Tuzak e: Orada da belgeler (Briefe) getiriliyor ve danışmanlık ücretsiz, ama konu borçlar ve ödenmeyen faturalar; aile birleşimi değil."
+        },
+        {
+          "number": 30,
+          "type": "zuordnung",
+          "prompt": "Seit Daniela ihre Arbeit verloren hat, kann sie die Raten für ihr Sofa und die Handyrechnung nicht mehr bezahlen. Jeden Monat kommen neue Zahlungserinnerungen. Daniela braucht Hilfe, damit sie ihre Geldprobleme wieder in den Griff bekommt.",
+          "answer": "e",
+          "evidence": [{ "text": "e", "quote": "Sie bekommen Mahnungen und wissen nicht mehr, wie Sie Ihre Rechnungen bezahlen sollen?" }, { "text": "e", "quote": "machen mit Ihnen einen Plan für die Rückzahlung" }],
+          "explanation": "e ilanındaki borç danışmanlığı ödeme hatırlatmaları (Mahnungen) alan ve faturalarını ödeyemeyen kişilere yardım ediyor: Borçlara genel bir bakış hazırlıyor, firmalarla konuşuyor ve „einen Plan für die Rückzahlung“ yapıyor. Daniela da taksitlerini ve telefon faturasını ödeyemiyor. Tuzak g: Orada da para konusu var, ama dernek vergi beyannamesi yapıyor („Holen Sie sich Ihr Geld vom Finanzamt zurück!“); borçlarla ilgili yardım değil."
+        }
+      ]
+    }
+  ]
+}

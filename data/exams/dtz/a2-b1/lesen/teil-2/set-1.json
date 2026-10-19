@@ -43,7 +43,7 @@
           "label": "d",
           "title": "Mieterhilfe Lindbrück e. V.",
           "paragraphs": [
-            "Ihr Vermieter will die Miete erhöhen? Die Nebenkostenabrechnung kommt Ihnen zu hoch vor? Wir prüfen Ihre Unterlagen und sagen Ihnen, ob Sie wirklich zahlen müssen. Mitgliedsbeitrag 6 Euro im Monat. Beratung dienstags und donnerstags von 17 bis 19 Uhr, auch auf Türkisch, Polnisch und Arabisch."
+            "Ihr Vermieter will die Miete erhöhen oder Ihnen die Wohnung kündigen? Wir prüfen Ihre Unterlagen und sagen Ihnen, ob er das wirklich darf. Mitgliedsbeitrag 6 Euro im Monat. Beratung dienstags und donnerstags von 17 bis 19 Uhr, auch auf Türkisch, Polnisch und Arabisch."
           ]
         },
         {
@@ -103,7 +103,7 @@
           "prompt": "Tomasz arbeitet in einer Bäckerei in der Nordstadt von Lindbrück und fängt jeden Tag um 4 Uhr an. Er sucht eine kleine Wohnung für sich allein. Sie muss in der Nordstadt liegen, damit er zu Fuß zur Arbeit gehen kann.",
           "answer": "x",
           "evidence": [{ "text": "g", "quote": "Wehrheide liegt acht Kilometer von Lindbrück entfernt" }],
-          "explanation": "Tuzak g: Küçük daire tek kişi için uygun görünüyor („ideal für eine Person oder ein Paar“). Ama „Wehrheide liegt acht Kilometer von Lindbrück entfernt“; Tomasz ise dairenin Nordstadt'ta olmasını istiyor. f de uymuyor: O daire Am Kanal semtinde ve 3 odalı. c örnekte kullanıldı ve bir daire değil, ortak evde bir oda. Diğer ilanlar daire sunmuyor. Bu yüzden cevap X."
+          "explanation": "Tuzak g: Küçük daire tek kişi için uygun görünüyor („ideal für eine Person oder ein Paar“). Ama „Wehrheide liegt acht Kilometer von Lindbrück entfernt“; Tomasz ise dairenin Lindbrück'ün Nordstadt semtinde olmasını istiyor. f de uymuyor: O daire 3 odalı ve 78 m², küçük bir daire değil; Nordstadt'ta olduğu da yazmıyor. c örnekte kullanıldı ve bir daire değil, ortak evde bir oda. Diğer ilanlar daire sunmuyor. Bu yüzden cevap X."
         },
         {
           "number": 28,
@@ -124,10 +124,10 @@
         {
           "number": 30,
           "type": "zuordnung",
-          "prompt": "Farida soll nach der Abrechnung für das letzte Jahr 600 Euro für Heizung und Wasser nachzahlen. Sie glaubt, dass die Rechnung nicht stimmt, und möchte sie kontrollieren lassen.",
+          "prompt": "Faridas Vermieter hat geschrieben, dass sie ab März jeden Monat 90 Euro mehr bezahlen soll. Farida weiß nicht, ob das erlaubt ist, und möchte sich beraten lassen.",
           "answer": "d",
-          "evidence": [{ "text": "d", "quote": "Wir prüfen Ihre Unterlagen und sagen Ihnen, ob Sie wirklich zahlen müssen." }],
-          "explanation": "d ilanında kiracı derneği yan gider hesabının (Nebenkostenabrechnung) çok yüksek olduğu durumlarda yardım ediyor: „Wir prüfen Ihre Unterlagen und sagen Ihnen, ob Sie wirklich zahlen müssen.“ Farida da hesabın kontrol edilmesini istiyor. Tuzak e: Orada da ücretsiz yardım var, ama sadece evdeki küçük işler için (lamba, raf, perde)."
+          "evidence": [{ "text": "d", "quote": "Ihr Vermieter will die Miete erhöhen" }, { "text": "d", "quote": "sagen Ihnen, ob er das wirklich darf" }],
+          "explanation": "d ilanındaki kiracı derneği ev sahibi kirayı artırmak istediğinde yardım ediyor: „Ihr Vermieter will die Miete erhöhen“ ve „sagen Ihnen, ob er das wirklich darf“. Farida da kira artışının yasal olup olmadığını öğrenmek istiyor. Tuzak e: Orada da ücretsiz yardım var, ama sadece evdeki küçük işler için (lamba, raf, perde)."
         }
       ]
     }

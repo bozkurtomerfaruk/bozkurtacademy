@@ -25,10 +25,10 @@
           "number": 0,
           "example": true,
           "type": "richtig-falsch",
-          "prompt": "Am Donnerstag geht der Aufzug noch nicht.",
+          "prompt": "Am Dienstag kann man mit dem Aufzug fahren.",
           "answer": "falsch",
-          "evidence": [{ "text": "aufzug", "quote": "Ab Donnerstag fährt der Aufzug wieder." }],
-          "explanation": "Asansör (Aufzug) „bis Mittwoch“ (çarşambaya kadar) bozuk. Metin: „Ab Donnerstag fährt der Aufzug wieder.“ (perşembeden itibaren asansör yine çalışıyor). Yani perşembe günü asansör çalışıyor. İfade yanlış."
+          "evidence": [{ "text": "aufzug", "quote": "Der Aufzug ist bis Mittwoch kaputt." }],
+          "explanation": "Metin: „Der Aufzug ist bis Mittwoch kaputt.“ (Asansör çarşambaya kadar bozuk). Salı (Dienstag) çarşambadan önce gelir; yani salı günü asansör bozuk. Metin bu yüzden „Bitte nehmen Sie die Treppe“ (lütfen merdiveni kullanın) diyor. İfade yanlış."
         }
       ]
     },

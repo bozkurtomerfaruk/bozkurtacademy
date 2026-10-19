@@ -37,7 +37,7 @@
       "texts": [
         {
           "id": "kasse",
-          "title": "Supermarkt Frischkorb",
+          "title": "Supermarkt Krämerkorb",
           "paragraphs": [
             "Liebe Kunden, Kasse 4 ist heute kaputt. Bitte gehen Sie zu Kasse 1, 2 oder 3. Vielen Dank!"
           ]
@@ -50,7 +50,7 @@
           "prompt": "An Kasse 4 kann man heute nicht bezahlen.",
           "answer": "richtig",
           "evidence": [{ "text": "kasse", "quote": "Kasse 4 ist heute kaputt." }],
-          "explanation": "Metin: „Kasse 4 ist heute kaputt.“ (4 numaralı kasa bugün bozuk). Müşteriler 1, 2 veya 3 numaralı kasaya gitmeli. Bozuk kasada ödeme yapılamaz (nicht bezahlen). Yani ifade doğru."
+          "explanation": "Metin: „Kasse 4 ist heute kaputt.“ (4 numaralı kasa bugün bozuk). Metin müşterilerden 1, 2 veya 3 numaralı kasaya gitmelerini rica ediyor („Bitte gehen Sie …“). Bozuk kasada ödeme yapılamaz (nicht bezahlen). Yani ifade doğru."
         }
       ]
     },

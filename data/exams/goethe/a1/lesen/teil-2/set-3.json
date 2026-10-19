@@ -26,7 +26,7 @@
           "label": "b",
           "title": "Café Zitronenbaum",
           "paragraphs": [
-            "Frühstücken Sie lange! Am Samstag und Sonntag gibt es bei uns Frühstück von 9 bis 15 Uhr. Preis: 11,50 Euro. Sie finden uns in der Lindenallee 8."
+            "Frühstücken Sie lange! Am Samstag und Sonntag gibt es bei uns Frühstück von 9 bis 15 Uhr. Preis: 11,50 Euro. Sie finden uns im Kastanienring 8."
           ]
         }
       ],
@@ -101,7 +101,7 @@
           "label": "a",
           "title": "Kochschule Paprika",
           "paragraphs": [
-            "Italienisch kochen am Freitag um 18 Uhr: Wir machen Nudeln und Fisch. Im Kurs sind nur noch zwei Plätze frei. Preis: 35 Euro."
+            "Italienischer Kochkurs am Freitag um 18 Uhr: Wir machen Nudeln und Fisch. Im Kurs sind nur noch zwei Plätze frei. Preis: 35 Euro."
           ]
         },
         {
@@ -117,7 +117,7 @@
         {
           "number": 7,
           "type": "zuordnung",
-          "prompt": "Sie möchten mit drei Freundinnen zusammen einen Kochkurs machen.",
+          "prompt": "Sie möchten mit drei Freundinnen einen Kochkurs machen.",
           "answer": "b",
           "evidence": [
             {
@@ -199,7 +199,7 @@
         {
           "number": 9,
           "type": "zuordnung",
-          "prompt": "Sie möchten am Dienstag vor der Arbeit, um 7:30 Uhr, einen Kaffee trinken.",
+          "prompt": "Sie möchten am Dienstag morgens um halb acht einen Kaffee trinken.",
           "answer": "a",
           "evidence": [
             {
@@ -211,7 +211,7 @@
               "quote": "Montag bis Freitag von 10 bis 19 Uhr"
             }
           ],
-          "explanation": "Salı günü saat 7:30'da kahve içmek istiyorsunuz. a ilanında „von Montag bis Freitag schon um 6:30 Uhr“ yazıyor: Kafe pazartesiden cumaya saat 6:30'da açılıyor. Saat 7:30'da açık. b ilanında „Montag bis Freitag von 10 bis 19 Uhr“ yazıyor: Kafe hafta içi saat 10'da açılıyor. Saat 7:30'da henüz kapalı. Cevap a."
+          "explanation": "Salı sabahı „halb acht“ (yedi buçuk), yani saat 7:30'da kahve içmek istiyorsunuz. a ilanında „von Montag bis Freitag schon um 6:30 Uhr“ yazıyor: Kafe pazartesiden cumaya saat 6:30'da açılıyor. Saat 7:30'da açık. b ilanında „Montag bis Freitag von 10 bis 19 Uhr“ yazıyor: Kafe hafta içi saat 10'da açılıyor. Saat 7:30'da henüz kapalı. Cevap a."
         }
       ]
     },
@@ -232,7 +232,7 @@
           "label": "b",
           "title": "Restaurant Olivia",
           "paragraphs": [
-            "Jeden Mittag gibt es ein Essen mit Reis oder Nudeln für 8,50 Euro. Das Wasser kostet nichts. Wir sind in der Hauptstraße 21."
+            "Jeden Mittag gibt es ein Essen mit Reis oder Nudeln für 8,50 Euro. Das Wasser kostet nichts. Wir sind im Fliederbogen 21."
           ]
         }
       ],
@@ -240,7 +240,7 @@
         {
           "number": 10,
           "type": "zuordnung",
-          "prompt": "Sie möchten mittags im Restaurant essen. Das Essen darf nicht mehr als 10 Euro kosten.",
+          "prompt": "Sie möchten mittags essen gehen. Das Essen darf nicht mehr als 10 Euro kosten.",
           "answer": "b",
           "evidence": [
             {

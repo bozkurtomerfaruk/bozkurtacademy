@@ -16,7 +16,7 @@
         {
           "id": "q0a",
           "label": "a",
-          "title": "Wohnung im Wacholderweg",
+          "title": "Wohnung im Hagebuttenweg",
           "paragraphs": [
             "Schöne 3-Zimmer-Wohnung, 78 m², mit Küche, Bad und Balkon. Miete: 690 Euro im Monat. Bitte rufen Sie ab 18 Uhr an: 41 26 73."
           ]
@@ -158,7 +158,7 @@
         {
           "number": 8,
           "type": "zuordnung",
-          "prompt": "Sie und Ihr Mann brauchen ein neues Bett.",
+          "prompt": "Sie und Ihr Mann suchen ein Bett.",
           "answer": "b",
           "evidence": [
             {
@@ -199,7 +199,7 @@
         {
           "number": 9,
           "type": "zuordnung",
-          "prompt": "Sie ziehen am Samstag in eine neue Wohnung. Die Helfer sollen schon um 7 Uhr kommen.",
+          "prompt": "Am Samstag bringen Sie Ihre Möbel in eine neue Wohnung. Jemand soll schon um 7 Uhr helfen.",
           "answer": "a",
           "evidence": [
             {
@@ -211,7 +211,7 @@
               "quote": "zwischen 10 und 16 Uhr"
             }
           ],
-          "explanation": "Cumartesi günü yeni eve taşınıyorsunuz. Yardımcılar saat 7'de gelmeli. a ilanında „von Montag bis Samstag, von 6 bis 20 Uhr“ yazıyor: Firma cumartesi de saat 6 ile 20 arası çalışıyor. Saat 7 buna uyuyor. b ilanında „zwischen 10 und 16 Uhr“ yazıyor: Bu firma ancak saat 10'dan sonra geliyor. Cevap a."
+          "explanation": "Cumartesi günü eşyalarınızı (Möbel) yeni eve götürüyorsunuz. Biri saat 7'de yardım etmeli. a ilanında „von Montag bis Samstag, von 6 bis 20 Uhr“ yazıyor: Firma cumartesi de saat 6 ile 20 arası çalışıyor. Saat 7 buna uyuyor. b ilanında „zwischen 10 und 16 Uhr“ yazıyor: Bu firma ancak saat 10'dan sonra geliyor. Cevap a."
         }
       ]
     },
@@ -232,7 +232,7 @@
           "label": "b",
           "title": "Sauber und schnell",
           "paragraphs": [
-            "Brauchen Sie Hilfe in der Küche und im Bad? Wir putzen für Sie in Kleetal und Quittenau. Preis: 24 Euro pro Stunde."
+            "Brauchen Sie Hilfe in Ihrer Wohnung? Wir putzen für Sie in Kleetal und Quittenau: Küche, Bad und alle Zimmer. Preis: 24 Euro pro Stunde."
           ]
         }
       ],
@@ -240,12 +240,12 @@
         {
           "number": 10,
           "type": "zuordnung",
-          "prompt": "Sie wohnen in Kleetal. Jemand soll einmal in der Woche Ihre Wohnung sauber machen.",
+          "prompt": "Sie wohnen in Kleetal. Jemand soll Ihre Wohnung sauber machen.",
           "answer": "b",
           "evidence": [
             {
               "text": "q10b",
-              "quote": "Wir putzen für Sie in Kleetal und Quittenau."
+              "quote": "Wir putzen für Sie in Kleetal und Quittenau"
             },
             {
               "text": "q10a",

@@ -1,0 +1,104 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 5,
+  "set": "set-4",
+  "title": "Eine Nachricht an die Nachbarin",
+  "minutes": 8,
+  "context": "Eine Frau schreibt ihrer Nachbarin vor einer Reise eine Nachricht.",
+  "instructions": "Lesen Sie die Nachricht. Wählen Sie für die Lücken 40 bis 45 die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "nachricht",
+          "title": "Eine Bitte",
+          "byline": "Nachricht von Mira Kovačević an ihre Nachbarin Hannelore",
+          "paragraphs": [
+            "Liebe Hannelore,",
+            "ich habe eine große Bitte an dich. Am Samstag fliege ich mit den Kindern {{40}} zehn Tage zu meiner Schwester nach Kroatien. Könntest du in dieser Zeit meine Blumen {{41}}? Die Pflanzen auf dem Balkon brauchen bei dem warmen Wetter jeden Tag Wasser, für die Pflanzen im Wohnzimmer reicht es zweimal pro Woche. Den Wohnungsschlüssel werfe ich dir am Freitagabend in den Briefkasten, {{42}} du in die Wohnung kannst.",
+            "Außerdem {{43}} am Dienstag ein Paket für mich kommen. Darin ist ein neuer Kindersitz für das Auto. Kannst du das Paket bitte annehmen und bis zu meiner Rückkehr in {{44}} Wohnung aufbewahren? Bei mir kann der Paketbote es ja nicht abgeben, weil niemand da ist.",
+            "Wenn etwas ist, kannst du mich jederzeit auf dem Handy {{45}}: 0157 3348 2190. Als Dankeschön bringe ich dir ein gutes Olivenöl mit!",
+            "Liebe Grüße",
+            "Mira (2. Stock)"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 40,
+          "type": "abc",
+          "prompt": "Lücke 40",
+          "options": { "a": "bis", "b": "für", "c": "in" },
+          "answer": "b",
+          "evidence": [
+            { "text": "nachricht", "quote": "Am Samstag fliege ich mit den Kindern" },
+            { "text": "nachricht", "quote": "zehn Tage zu meiner Schwester nach Kroatien" }
+          ],
+          "explanation": "Mira cumartesi uçuyor ve kız kardeşinin yanında on gün kalacak. Bir şeyin ne kadar süreceği „für“ ile söylenir: „für zehn Tage“ (on günlüğüne). „zehn Tage“ Akkusativ biçimindedir ve „für“ Akkusativ ister. a) bis yanlış: „bis“ bir bitiş zamanı bildirir (ör. „bis Sonntag“); „bis zehn Tage“ diye bir süre söylenmez. c) in yanlış: „in“ zaman bildirirken Dativ ister („in zehn Tagen“ = on gün sonra); „Tage“ biçimi buna uymaz, ayrıca Mira on gün sonra değil, cumartesi uçuyor: „Am Samstag fliege ich“."
+        },
+        {
+          "number": 41,
+          "type": "abc",
+          "prompt": "Lücke 41",
+          "options": { "a": "schneiden", "b": "kaufen", "c": "gießen" },
+          "answer": "c",
+          "evidence": [
+            { "text": "nachricht", "quote": "Könntest du in dieser Zeit meine Blumen" },
+            { "text": "nachricht", "quote": "brauchen bei dem warmen Wetter jeden Tag Wasser" }
+          ],
+          "explanation": "Sonraki cümle Hannelore'nın ne yapmasını istediğini açıklıyor: Balkondaki bitkilerin her gün suya ihtiyacı var („jeden Tag Wasser“), oturma odasındakiler için haftada iki kez yeterli. Çiçeklere su vermek „gießen“dir: „meine Blumen gießen“ (çiçeklerimi sulamak). a) schneiden yanlış: „schneiden“ (kesmek, budamak) çiçeklerle kullanılabilir, ama metin sudan söz ediyor, budamadan değil. b) kaufen yanlış: Çiçekler zaten Mira'nın: „meine Blumen“; Hannelore'nın yeni çiçek alması değil, var olan bitkilere su vermesi isteniyor."
+        },
+        {
+          "number": 42,
+          "type": "abc",
+          "prompt": "Lücke 42",
+          "options": { "a": "ob", "b": "als", "c": "damit" },
+          "answer": "c",
+          "evidence": [
+            { "text": "nachricht", "quote": "Den Wohnungsschlüssel werfe ich dir am Freitagabend in den Briefkasten," },
+            { "text": "nachricht", "quote": "du in die Wohnung kannst" }
+          ],
+          "explanation": "Mira anahtarı Hannelore'nın posta kutusuna neden atıyor? Hannelore daireye girip çiçekleri sulayabilsin diye: „du in die Wohnung kannst“. Amaç bildiren bağlaç „damit“tir: „…, damit du in die Wohnung kannst“. a) ob yanlış: „ob“ (-ip -mediği) bir soru veya belirsizlik bildirir (ör. „Ich weiß nicht, ob …“); Mira bir şey sormuyor. b) als yanlış: „als“ zaman bağlacı olarak geçmişte bir kez olan bir olay için kullanılır (ör. „als ich klein war“); burada ise cuma akşamı yapılacak bir şeyden, yani gelecekten söz ediliyor."
+        },
+        {
+          "number": 43,
+          "type": "abc",
+          "prompt": "Lücke 43",
+          "options": { "a": "soll", "b": "sollst", "c": "sollen" },
+          "answer": "a",
+          "evidence": [
+            { "text": "nachricht", "quote": "am Dienstag ein Paket für mich kommen" }
+          ],
+          "explanation": "Cümlenin öznesi „ein Paket“tir (üçüncü tekil şahıs): Salı günü bir paket gelecek. „sollen“ üçüncü tekil şahısta „soll“ olur: „Außerdem soll am Dienstag ein Paket für mich kommen“ (salı günü benim için bir paket gelmesi gerekiyor). b) sollst yanlış: „sollst“ ikinci tekil şahıs (du) biçimidir; ama gelen Hannelore değil, paket. c) sollen yanlış: „sollen“ çoğul (wir/sie/Sie) biçimidir; metinde yalnızca bir paket var: „ein Paket“."
+        },
+        {
+          "number": 44,
+          "type": "abc",
+          "prompt": "Lücke 44",
+          "options": { "a": "deine", "b": "deiner", "c": "deinem" },
+          "answer": "b",
+          "evidence": [
+            { "text": "nachricht", "quote": "bis zu meiner Rückkehr in" },
+            { "text": "nachricht", "quote": "Wohnung aufbewahren" }
+          ],
+          "explanation": "Paket Hannelore'nın dairesinde duracak; „aufbewahren“ (saklamak) bir yer bildirir, soru „nerede?“ (wo?) sorusudur. „in“ edatı „nerede?“ sorusunda Dativ ister. „die Wohnung“ dişildir; „dein-“ dişil Dativ'de „deiner“ olur: „in deiner Wohnung aufbewahren“. a) deine yanlış: „in deine Wohnung“ Akkusativ'dir ve „nereye?“ (wohin?) sorusuna cevap verir (ör. „Ich bringe das Paket in deine Wohnung“); „aufbewahren“ ise hareket değil, yer bildirir. c) deinem yanlış: Dativ biçimidir, ama eril veya nötr isimler içindir (ör. „in deinem Flur“); „Wohnung“ dişildir."
+        },
+        {
+          "number": 45,
+          "type": "abc",
+          "prompt": "Lücke 45",
+          "options": { "a": "erreichen", "b": "besuchen", "c": "abholen" },
+          "answer": "a",
+          "evidence": [
+            { "text": "nachricht", "quote": "Wenn etwas ist, kannst du mich jederzeit auf dem Handy" }
+          ],
+          "explanation": "Mira bir sorun olursa telefonla ulaşılabileceğini söylüyor ve numarasını yazıyor: „jederzeit auf dem Handy …: 0157 3348 2190“. Telefonla birine ulaşmak „erreichen“dir: „kannst du mich jederzeit auf dem Handy erreichen“ (beni her zaman cep telefonundan arayıp bulabilirsin). b) besuchen yanlış: „besuchen“ (ziyaret etmek) birinin yanına gitmektir; telefonla ziyaret edilmez, ayrıca Mira bu sırada Hırvatistan'da, kız kardeşinin yanında. c) abholen yanlış: „abholen“ (gidip almak) de birinin bulunduğu yere gitmeyi gerektirir; „auf dem Handy“ ile birlikte kullanılmaz."
+        }
+      ]
+    }
+  ]
+}

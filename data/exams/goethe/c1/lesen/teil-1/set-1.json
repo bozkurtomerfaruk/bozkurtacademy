@@ -1,0 +1,136 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "c1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-1",
+  "title": "Schlaf und Gedächtnis",
+  "minutes": 10,
+  "context": "Sie lesen in einem populärwissenschaftlichen Magazin einen Beitrag über Schlafforschung.",
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welche Lösung (a, b, c oder d) in die Lücken 1 bis 8 passt.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Das nächtliche Archiv",
+          "paragraphs": [
+            "Dass ausreichender Schlaf dem Lernen zugutekommt, gilt in der Forschung seit Langem als gesichert. Weit weniger klar war bislang, welche Vorgänge im Gehirn dieser Wirkung {{0=zugrunde}} liegen. Eine Arbeitsgruppe um die Neurobiologin Wiebke Asmussen von der Universität Arnsfeld hat nun Befunde vorgelegt, die eine verbreitete Annahme {{1}} Zweifel ziehen: Das schlafende Gehirn festigt offenbar keineswegs alles gleichermaßen, was es tagsüber aufgenommen hat, sondern trifft eine Auswahl. Welche Inhalte dabei bevorzugt werden, hängt den neuen Daten zufolge weniger davon ab, wie intensiv etwas gelernt wurde, als davon, welchen Nutzen man sich davon verspricht.",
+            "Für ihre Studie ließ das Team 64 Freiwillige am Abend Wortpaare und Wegbeschreibungen einprägen. Der Hälfte wurde dabei angekündigt, dass sie am nächsten Morgen geprüft werde, {{2}} die übrigen Teilnehmenden von einem solchen Test nichts ahnten. Nach einer Nacht im Schlaflabor schnitten die Vorgewarnten beim Abruf deutlich besser ab, obwohl beide Gruppen am Vorabend gleich gut gelernt hatten. Die während des Schlafs aufgezeichneten Hirnströme {{3}} Aufschluss über den Grund: Bei den informierten Probanden traten in den Tiefschlafphasen auffällig viele sogenannte Schlafspindeln auf – kurze Aktivitätsschübe, die mit der Übertragung von Inhalten aus dem Hippocampus in die Großhirnrinde {{4}} Verbindung gebracht werden.",
+            "Das Gehirn scheint Erinnerungen also danach zu gewichten, ob sie künftig von {{5}} sein könnten. „Der Schlaf ist kein passiver Speicher, sondern eher ein Redakteur, der darüber entscheidet, was ins Archiv wandert“, sagt Asmussen. Vor allzu weitreichenden Schlüssen warnt sie dennoch, {{6}} die Stichprobe ausschließlich aus Studierenden zwischen 19 und 27 Jahren bestand. Ob ältere Menschen, deren Tiefschlafphasen in der Regel kürzer ausfallen, in gleicher Weise profitieren, sei offen. Auch habe man lediglich einfache Gedächtnisinhalte geprüft; ob sich komplexes Wissen, etwa das Verständnis mathematischer Zusammenhänge, ähnlich verhalte, müsse eine Folgestudie klären. Ebenso wenig tauge der Befund als Freibrief für durchwachte Nächte vor Prüfungen: Ohne genügend Tiefschlaf komme die nächtliche Auswahl gar nicht erst {{7}} Zuge, und dann nütze auch die beste Absicht wenig.",
+            "Für den Unterricht folgt daraus eine ebenso schlichte wie {{8}} Empfehlung: Wer weiß, wozu er sich etwas einprägt, gibt seinem Gehirn womöglich genau den Hinweis, den es braucht, um zu entscheiden, was es über Nacht aufbewahren soll. Lehrkräfte, die zu Beginn einer Stunde erklären, wofür der neue Stoff später gebraucht wird, leisten demnach mehr als bloße Motivationsarbeit. Eine Garantie für bessere Noten ist das zwar nicht – wohl aber ein Grund, die Frage nach dem Sinn des Lernstoffs nicht länger als pädagogische Nebensache abzutun."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "type": "abc",
+          "example": true,
+          "prompt": "Beispiel: Lücke 0",
+          "options": { "a": "zuvor", "b": "zugrunde", "c": "zugute", "d": "voraus" },
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "welche Vorgänge im Gehirn dieser Wirkung" }
+          ],
+          "explanation": "Cümle, uykunun öğrenmeye olan etkisinin arkasında beyindeki hangi süreçlerin bulunduğunu soruyor. „einer Sache zugrunde liegen“ (bir şeyin temelinde yatmak) kalıbı tam buna uyar: „welche Vorgänge … dieser Wirkung zugrunde liegen“. a) zuvor yanlış: „zuvor liegen“ diye bir kalıp yoktur ve Dativ nesneyle („dieser Wirkung“) kurulamaz. c) zugute yanlış: İlk cümledeki „zugutekommt“ kelimesini hatırlatan bir tuzaktır; „zugute“ yalnızca „kommen“ ile kullanılır, „liegen“ ile değil. d) voraus yanlış: „vorausliegen“ zaman veya yer bakımından „önde olmak“ demektir; süreçler etkinin önünde değil, temelinde bulunuyor."
+        },
+        {
+          "number": 1,
+          "type": "abc",
+          "prompt": "Lücke 1",
+          "options": { "a": "unter", "b": "zu", "c": "in", "d": "auf" },
+          "answer": "c",
+          "evidence": [
+            { "text": "artikel", "quote": "hat nun Befunde vorgelegt, die eine verbreitete Annahme" }
+          ],
+          "explanation": "Boşluktan sonra „Zweifel ziehen“ geliyor. Sabit kalıp „etwas in Zweifel ziehen“dir (bir şeyden şüphe etmek, sorgulamak): „die eine verbreitete Annahme in Zweifel ziehen“. İki noktadan sonraki kısım da bunu doğruluyor: Yaygın kabulün aksine beyin her şeyi eşit biçimde pekiştirmiyor, „sondern trifft eine Auswahl“ (bir seçim yapıyor). a) unter, b) zu ve d) auf yanlış: „unter Zweifel“, „zu Zweifel“ veya „auf Zweifel ziehen“ diye bir kalıp yoktur; „Zweifel“ ile „ziehen“ yalnızca „in“ edatıyla birlikte kullanılır."
+        },
+        {
+          "number": 2,
+          "type": "abc",
+          "prompt": "Lücke 2",
+          "options": { "a": "wohingegen", "b": "sodass", "c": "zumal", "d": "sofern" },
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "Der Hälfte wurde dabei angekündigt, dass sie am nächsten Morgen geprüft werde" },
+            { "text": "artikel", "quote": "die übrigen Teilnehmenden von einem solchen Test nichts ahnten" }
+          ],
+          "explanation": "İki grup karşılaştırılıyor: Katılımcıların yarısına sabah sınav olacağı söyleniyor („Der Hälfte wurde … angekündigt“), geri kalanlar ise böyle bir testten habersiz („nichts ahnten“). İki durum arasındaki karşıtlığı yan cümleyle bildiren bağlaç „wohingegen“dir (oysa, buna karşın). b) sodass yanlış: Bir grubun haberdar olması diğer grubun habersiz olmasının sonucu değildir. c) zumal yanlış: „zumal“ ek bir gerekçe verir (hele ki, üstelik … olduğundan); diğer grubun habersizliği bir gerekçe değil, karşılaştırmanın öbür tarafıdır. d) sofern yanlış: „sofern“ koşul bildirir (… olduğu takdirde); deney düzeninde habersiz grup bir koşul değil, kesin olarak belirlenmiş ikinci gruptur."
+        },
+        {
+          "number": 3,
+          "type": "abc",
+          "prompt": "Lücke 3",
+          "options": { "a": "legten", "b": "machten", "c": "stellten", "d": "gaben" },
+          "answer": "d",
+          "evidence": [
+            { "text": "artikel", "quote": "Die während des Schlafs aufgezeichneten Hirnströme" },
+            { "text": "artikel", "quote": "Aufschluss über den Grund" }
+          ],
+          "explanation": "Boşluktan sonra „Aufschluss über den Grund“ geliyor. „Aufschluss geben über etwas“ (bir konuda bilgi vermek, aydınlatmak) sabit bir isim-fiil kalıbıdır: Uyku sırasında kaydedilen beyin dalgaları, haberdar grubun neden daha iyi sonuç aldığını açıklıyor. a) legten, b) machten ve c) stellten yanlış: Dördü de Präteritum çoğul ve dilbilgisi olarak cümleye oturur, ama „Aufschluss“ ismi „legen“, „machen“ veya „stellen“ ile kalıp oluşturmaz; bu fiillerle „bilgi vermek, aydınlatmak“ anlamı ortaya çıkmaz."
+        },
+        {
+          "number": 4,
+          "type": "abc",
+          "prompt": "Lücke 4",
+          "options": { "a": "zur", "b": "in", "c": "mit", "d": "unter" },
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "kurze Aktivitätsschübe, die mit der Übertragung von Inhalten" },
+            { "text": "artikel", "quote": "Verbindung gebracht werden" }
+          ],
+          "explanation": "Kalıp „etwas mit etwas in Verbindung bringen“dir (bir şeyi bir şeyle ilişkilendirmek). Cümlede „mit der Übertragung von Inhalten“ zaten var, boşluğa ise „Verbindung“dan önceki edat gelir: „die mit der Übertragung … in Verbindung gebracht werden“ (içeriklerin aktarılmasıyla ilişkilendirilen). a) zur yanlış: „zur Verbindung bringen“ diye bir kalıp yoktur. c) mit yanlış: „mit“ cümlede zaten „mit der Übertragung“ olarak kullanılmış; „mit Verbindung bringen“ kalıbı yoktur. d) unter yanlış: „unter Verbindung“ Almancada kullanılmaz."
+        },
+        {
+          "number": 5,
+          "type": "abc",
+          "prompt": "Lücke 5",
+          "options": { "a": "Belang", "b": "Anlass", "c": "Bezug", "d": "Ausmaß" },
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "Das Gehirn scheint Erinnerungen also danach zu gewichten, ob sie künftig" }
+          ],
+          "explanation": "Önceki paragrafta, sınav olacağını bilen grubun daha çok şey hatırladığı anlatıldı. Buradan çıkan sonuç: Beyin anıları ileride önemli olup olmayacaklarına göre tartıyor („danach zu gewichten, ob sie künftig …“). „von Belang sein“ (önemli olmak) bu anlamı verir. b) Anlass yanlış: „Anlass“ (vesile, sebep) „von“ ile „sein“ kalıbı oluşturmaz. c) Bezug yanlış: „Bezug“ „Bezug haben/nehmen auf“ biçiminde kullanılır, „von Bezug sein“ diye bir şey yoktur. d) Ausmaß yanlış: „Ausmaß“ (boyut, ölçü) bir niteliği belirtmek için „von … sein“ yapısında tek başına kullanılmaz ve „önem“ anlamı taşımaz."
+        },
+        {
+          "number": 6,
+          "type": "abc",
+          "prompt": "Lücke 6",
+          "options": { "a": "sodass", "b": "indem", "c": "zumal", "d": "sobald" },
+          "answer": "c",
+          "evidence": [
+            { "text": "artikel", "quote": "Vor allzu weitreichenden Schlüssen warnt sie dennoch" },
+            { "text": "artikel", "quote": "die Stichprobe ausschließlich aus Studierenden zwischen 19 und 27 Jahren bestand" }
+          ],
+          "explanation": "Asmussen aşırı genellemelere karşı uyarıyor („warnt sie dennoch“). Arkadan gelen bilgi bu uyarının ek bir gerekçesidir: Örneklem yalnızca 19–27 yaş arası öğrencilerden oluşuyordu. Bir iddiayı ek bir gerekçeyle destekleyen bağlaç „zumal“dır (hele ki, üstelik … olduğundan). a) sodass yanlış: Örneklemin genç olması uyarının sonucu değil, sebebidir; „sodass“ sebep ile sonucu ters çevirir. b) indem yanlış: „indem“ bir şeyin nasıl yapıldığını söyler; Asmussen örneklemin yapısıyla uyarmıyor, örneklem uyarının gerekçesi. d) sobald yanlış: „sobald“ zaman bildirir (… olur olmaz); örneklemin yapısı uyarının zamanı değildir ve „bestand“ geçmişte tamamlanmış bir durumu anlatır."
+        },
+        {
+          "number": 7,
+          "type": "abc",
+          "prompt": "Lücke 7",
+          "options": { "a": "im", "b": "beim", "c": "in", "d": "zum" },
+          "answer": "d",
+          "evidence": [
+            { "text": "artikel", "quote": "Ohne genügend Tiefschlaf komme die nächtliche Auswahl gar nicht erst" }
+          ],
+          "explanation": "Sabit kalıp „zum Zuge kommen“dir (devreye girmek, fırsat bulmak). Cümle şunu söylüyor: Yeterince derin uyku olmazsa beynin geceki seçimi hiç devreye giremez; bu yüzden sınav öncesi uykusuz geçen geceler için bulgu bir bahane olamaz („Freibrief für durchwachte Nächte“). a) im, b) beim ve c) in yanlış: „im Zuge“ ancak bir Genitiv ile „… sürecinde“ anlamında kullanılır („im Zuge der Reform“) ve „kommen“ ile kalıp oluşturmaz; „beim Zuge“ ve „in Zuge kommen“ diye kalıplar yoktur."
+        },
+        {
+          "number": 8,
+          "type": "abc",
+          "prompt": "Lücke 8",
+          "options": { "a": "entbehrliche", "b": "einleuchtende", "c": "widersprüchliche", "d": "beiläufige" },
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "Für den Unterricht folgt daraus eine ebenso schlichte wie" },
+            { "text": "artikel", "quote": "leisten demnach mehr als bloße Motivationsarbeit" }
+          ],
+          "explanation": "„folgt daraus“: Öneri doğrudan araştırmanın sonucundan çıkıyor ve yazar onu olumlu değerlendiriyor; son cümlede öğretmenlerin bu açıklamayla „mehr als bloße Motivationsarbeit“ (salt motivasyondan fazlası) yaptığı söyleniyor. „ebenso schlichte wie einleuchtende Empfehlung“ = hem basit hem de akla yatkın bir öneri. a) entbehrliche yanlış: „gereksiz“ demektir; yazar öneriyi öğretmenlere tavsiye ediyor, gereksiz görmüyor. c) widersprüchliche yanlış: Öneri bulgularla çelişmiyor, tam tersine onlardan çıkıyor („folgt daraus“). d) beiläufige yanlış: „önemsiz, laf arasında söylenen“ demektir; oysa son cümle önerinin ağırlığını vurguluyor."
+        }
+      ]
+    }
+  ]
+}

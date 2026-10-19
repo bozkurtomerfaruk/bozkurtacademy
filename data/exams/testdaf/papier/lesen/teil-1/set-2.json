@@ -7,7 +7,7 @@
   "set": "set-2",
   "title": "Beratung an der Hochschule",
   "minutes": 10,
-  "context": "Sie studieren an der Universität Lindenau. Bekannte und Kommilitonen fragen Sie, an welche Beratungsstelle der Hochschule sie sich mit ihren Anliegen wenden können. Auf der Website der Universität finden Sie die folgenden Angebote.",
+  "context": "Sie studieren an der Universität Hagenwerth. Bekannte und Kommilitonen fragen Sie, an welche Beratungsstelle der Hochschule sie sich mit ihren Anliegen wenden können. Auf der Website der Universität finden Sie die folgenden Angebote.",
   "instructions": "Lesen Sie die Angebote A bis H und die Aufgaben 1 bis 10. Welches Angebot passt zu welcher Person? Jedes Angebot kann nur einmal gewählt werden. Gibt es für eine Person kein passendes Angebot, wählen Sie I. Das Angebot aus Beispiel 01 kann nicht mehr gewählt werden.",
   "groups": [
     {
@@ -19,7 +19,7 @@
           "label": "A",
           "title": "Schreibzentrum: Gemeinsam zum guten Text",
           "paragraphs": [
-            "Ob Themenfindung, Gliederung oder Umgang mit Quellen: Im Schreibzentrum der Universität Lindenau beraten geschulte studentische Schreibtutorinnen und -tutoren in 45-minütigen Einzelgesprächen zu allen Phasen einer Haus- oder Abschlussarbeit. Wer möchte, bringt einen Entwurf mit, an dem gemeinsam gearbeitet wird. Ein Lektorat oder Korrekturlesen bieten wir allerdings nicht an – Rechtschreibung und Zeichensetzung liegen in Ihrer Verantwortung. Termine buchen Sie online; zusätzlich gibt es jeden Mittwoch eine Schreibnacht in der Bibliothek."
+            "Ob Themenfindung, Gliederung oder Umgang mit Quellen: Im Schreibzentrum der Universität Hagenwerth beraten geschulte studentische Schreibtutorinnen und -tutoren in 45-minütigen Einzelgesprächen zu allen Phasen einer Haus- oder Abschlussarbeit. Wer möchte, bringt einen Entwurf mit, an dem gemeinsam gearbeitet wird. Ein Lektorat oder Korrekturlesen bieten wir allerdings nicht an – Rechtschreibung und Zeichensetzung liegen in Ihrer Verantwortung. Termine buchen Sie online; zusätzlich gibt es jeden Mittwoch eine Schreibnacht in der Bibliothek."
           ]
         },
         {
@@ -119,12 +119,12 @@
               "quote": "Ein Lektorat oder Korrekturlesen bieten wir allerdings nicht an"
             }
           ],
-          "explanation": "A ilanı bitirme tezleriyle ilgilendiği için cazip görünür. Ancak açıkça „Ein Lektorat oder Korrekturlesen bieten wir allerdings nicht an“ (redaksiyon veya düzeltme okuması sunmuyoruz) denir; yazım ve noktalama öğrencinin sorumluluğundadır. F de dil desteği verir ama metin düzeltmez. Uygun ilan yoktur, cevap I."
+          "explanation": "A ilanı bitirme tezleriyle ilgilendiği için cazip görünür. Ancak açıkça „Ein Lektorat oder Korrekturlesen bieten wir allerdings nicht an“ (redaksiyon veya düzeltme okuması sunmuyoruz) denir; yazım ve noktalama öğrencinin sorumluluğundadır. Uygun ilan yoktur, cevap I."
         },
         {
           "number": 2,
           "type": "zuordnung",
-          "prompt": "ein Student, der vor Klausuren so aufgeregt ist, dass er kaum noch schlafen kann, und gern mit anderen sprechen würde, denen es ähnlich geht",
+          "prompt": "ein Student, der vor Klausuren so aufgeregt ist, dass er kaum noch schlafen kann, und gern mit anderen sprechen würde, die dasselbe Problem haben",
           "answer": "C",
           "evidence": [
             {
@@ -163,7 +163,7 @@
         {
           "number": 5,
           "type": "zuordnung",
-          "prompt": "ein Absolvent, der vor einem Jahr seinen Master abgeschlossen hat und sein Auftreten im Bewerbungsgespräch üben möchte",
+          "prompt": "ein Bekannter, der sein Masterstudium vor einem Jahr beendet hat und sein Auftreten im Bewerbungsgespräch üben möchte",
           "answer": "B",
           "evidence": [
             {
@@ -219,7 +219,7 @@
         {
           "number": 9,
           "type": "zuordnung",
-          "prompt": "ein Student, der ein Semester an einer Partnerhochschule in Portugal verbringen will und vorher klären möchte, ob ihm die dort belegten Kurse angerechnet werden",
+          "prompt": "ein Student, der für einige Monate an eine portugiesische Universität gehen will, mit der seine Hochschule eine Kooperation unterhält, und vorher klären möchte, ob ihm die dort belegten Kurse angerechnet werden",
           "answer": "G",
           "evidence": [
             {
@@ -227,12 +227,12 @@
               "quote": "dass Ihre Studienleistungen später anerkannt werden"
             }
           ],
-          "explanation": "G ilanı Avrupa'daki ortak üniversiteler için danışmanlık verir ve bir „Learning Agreement“ ile önceden sağlanabileceğini açıklar: „dass Ihre Studienleistungen später anerkannt werden“ (ders başarılarınızın sonradan tanınması). Portekiz Avrupa'da olduğu için öğrencinin sorusu tam olarak buna uyar."
+          "explanation": "G ilanı Avrupa'daki ortak üniversiteler için danışmanlık verir ve bir „Learning Agreement“ ile önceden sağlanabileceğini açıklar: „dass Ihre Studienleistungen später anerkannt werden“ (ders başarılarınızın sonradan tanınması). Portekiz Avrupa'da olduğu ve öğrencinin gideceği üniversite kendi üniversitesiyle işbirliği yaptığı için öğrencinin sorusu tam olarak buna uyar."
         },
         {
           "number": 10,
           "type": "zuordnung",
-          "prompt": "ein Kommilitone mit einer chronischen Darmerkrankung, der Klausuren gelegentlich unterbrechen muss und dafür eine Sonderregelung beantragen will",
+          "prompt": "ein Kommilitone, der seit seiner Kindheit mit einem dauerhaften Darmleiden lebt, Klausuren deshalb gelegentlich unterbrechen muss und dafür eine Sonderregelung erwirken will",
           "answer": "E",
           "evidence": [
             {
@@ -240,7 +240,7 @@
               "quote": "zusätzliche Pausen"
             }
           ],
-          "explanation": "E ilanı kronik hastalığı olan öğrencilere „Nachteilsausgleich“ (dezavantaj telafisi) konusunda danışmanlık verir; bu, örneğin „zusätzliche Pausen“ (ek molalar) içerebilir. Ayrıca sınav kuruluna yapılacak başvurunun gerekçelendirilmesine yardım edilir. C de sağlık ve sınavla ilgilidir ama psikolojik destek verir, sınav düzenlemesi değil."
+          "explanation": "E ilanı kronik hastalığı („chronische Erkrankung“) olan öğrencilere – çocukluğundan beri süren bağırsak rahatsızlığı („dauerhaftes Darmleiden“) da böyle bir hastalıktır – „Nachteilsausgleich“ (dezavantaj telafisi) konusunda danışmanlık verir; bu, örneğin „zusätzliche Pausen“ (ek molalar) içerebilir. Ayrıca sınav kuruluna yapılacak başvurunun gerekçelendirilmesine yardım edilir. C de sağlık ve sınavla ilgilidir ama psikolojik destek verir, sınav düzenlemesi değil."
         }
       ]
     }

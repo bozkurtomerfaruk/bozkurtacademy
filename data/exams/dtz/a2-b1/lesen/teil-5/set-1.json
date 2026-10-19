@@ -1,0 +1,107 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 5,
+  "set": "set-1",
+  "title": "Ein Brief an die Hausverwaltung",
+  "minutes": 8,
+  "context": "Eine Mieterin schreibt an ihre Hausverwaltung.",
+  "instructions": "Lesen Sie den Brief. Wählen Sie für die Lücken 40 bis 45 die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "brief",
+          "title": "Schimmel im Kinderzimmer",
+          "byline": "Brief von Svetlana Morozova an die Hausverwaltung Brenner & Partner",
+          "paragraphs": [
+            "Betreff: Schimmel im Kinderzimmer, Ahornweg 14, 2. Stock links",
+            "Sehr geehrte Damen und Herren,",
+            "ich wohne seit 2021 mit meinem Sohn Dmitri im Ahornweg 14 in Hagenwald. Leider gibt es im Kinderzimmer ein Problem: Unter dem Fenster ist Schimmel an der Wand, {{40}} das Fenster nicht mehr richtig schließt. Bei Regen läuft Wasser über die Fensterbank.",
+            "Ich habe Ihnen das Problem schon {{41}} drei Wochen am Telefon gemeldet. Ihr Mitarbeiter, Herr Ebeling, hat mir damals versprochen, dass sich ein Handwerker bei mir meldet. Bis heute hat mich aber niemand angerufen. Inzwischen ist der Schimmel größer geworden, und Dmitri schläft nicht mehr in {{42}} Zimmer, sondern bei mir im Wohnzimmer.",
+            "{{43}} Sie mir bitte so bald wie möglich einen Termin für die Reparatur nennen? Bitte schicken Sie mir bis spätestens 14. November eine schriftliche {{44}}.",
+            "Der Schimmel ist nicht gut für die Gesundheit, {{45}} ist die Reparatur für uns sehr dringend. Wenn ich bis dahin nichts von Ihnen höre, werde ich mich an den Mieterverein wenden.",
+            "Mit freundlichen Grüßen",
+            "Svetlana Morozova"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 40,
+          "type": "abc",
+          "prompt": "Lücke 40",
+          "options": { "a": "obwohl", "b": "weil", "c": "damit" },
+          "answer": "b",
+          "evidence": [
+            { "text": "brief", "quote": "Unter dem Fenster ist Schimmel an der Wand," },
+            { "text": "brief", "quote": "das Fenster nicht mehr richtig schließt" }
+          ],
+          "explanation": "Boşluktan sonra yan cümle geliyor, fiil sonda: „das Fenster nicht mehr richtig schließt“. Pencerenin iyi kapanmaması, duvardaki küfün sebebidir; sebep bildiren bağlaç „weil“dir: „Schimmel an der Wand, weil das Fenster nicht mehr richtig schließt“. a) obwohl yanlış: „obwohl“ (-e rağmen) bir zıtlık bildirir; ama kapanmayan pencere ile küf arasında zıtlık yok, sebep-sonuç var. c) damit yanlış: „damit“ amaç bildirir (… sın diye); pencerenin kapanmaması küfün amacı olamaz."
+        },
+        {
+          "number": 41,
+          "type": "abc",
+          "prompt": "Lücke 41",
+          "options": { "a": "vor", "b": "seit", "c": "für" },
+          "answer": "a",
+          "evidence": [
+            { "text": "brief", "quote": "drei Wochen am Telefon gemeldet" },
+            { "text": "brief", "quote": "hat mir damals versprochen" }
+          ],
+          "explanation": "Svetlana sorunu bir kez telefonla bildirdi ve bu iş bitti: „am Telefon gemeldet“ (Perfekt). Geçmişte bir kez olan bir olayın ne zaman olduğunu „vor“ (… önce) söyler: „vor drei Wochen“ = üç hafta önce. Arkadan gelen „damals“ (o zaman) da geçmişteki tek bir anı gösterir. b) seit yanlış: „seit“ hâlâ süren bir durum için kullanılır (ör. „ich wohne seit 2021“); bir kez yapılan telefon görüşmesi süren bir durum değildir. c) für yanlış: „für drei Wochen“ bir şeyin ne kadar süreceğini söyler (üç haftalığına); burada süre değil, bildirimin zamanı soruluyor."
+        },
+        {
+          "number": 42,
+          "type": "abc",
+          "prompt": "Lücke 42",
+          "options": { "a": "ihrem", "b": "seiner", "c": "seinem" },
+          "answer": "c",
+          "evidence": [
+            { "text": "brief", "quote": "und Dmitri schläft nicht mehr in" },
+            { "text": "brief", "quote": "Zimmer, sondern bei mir im Wohnzimmer" }
+          ],
+          "explanation": "Oda Dmitri'nin odası: Dmitri bir erkek çocuk (Svetlana'nın oğlu), bu yüzden iyelik sözcüğü „sein-“ olur. „in“ burada nerede? sorusuna cevap verir, yani Dativ ister; „das Zimmer“ nötr bir isimdir: „in seinem Zimmer“. a) ihrem yanlış: Dativ ve nötr olarak doğru biçimdedir, ama „ihr-“ bir kadına veya birden fazla kişiye ait olanı gösterir; oda ise Dmitri'nin. b) seiner yanlış: „seiner“ dişil bir ismin Dativ biçimidir (ör. „in seiner Wohnung“); „Zimmer“ dişil değil, nötr."
+        },
+        {
+          "number": 43,
+          "type": "abc",
+          "prompt": "Lücke 43",
+          "options": { "a": "Könnten", "b": "Konnten", "c": "Hätten" },
+          "answer": "a",
+          "evidence": [
+            { "text": "brief", "quote": "Sie mir bitte so bald wie möglich einen Termin für die Reparatur nennen?" }
+          ],
+          "explanation": "Svetlana kibarca bir ricada bulunuyor: „bitte so bald wie möglich einen Termin … nennen?“ Kibar rica Konjunktiv II ile yapılır: „Könnten Sie mir bitte … nennen?“ (… söyleyebilir misiniz?). Cümlenin sonundaki mastar „nennen“ bir modal fiille kullanılır. b) Konnten yanlış: Bu Präteritum (geçmiş zaman) biçimidir; ama rica gelecekle ilgilidir: „so bald wie möglich“ (mümkün olan en kısa sürede). c) Hätten yanlış: „haben“ ile cümle sonunda mastar değil, Partizip II gelmesi gerekirdi („genannt“); „Hätten Sie … nennen?“ dilbilgisi olarak yanlıştır."
+        },
+        {
+          "number": 44,
+          "type": "abc",
+          "prompt": "Lücke 44",
+          "options": { "a": "Rechnung", "b": "Termin", "c": "Antwort" },
+          "answer": "c",
+          "evidence": [
+            { "text": "brief", "quote": "Bitte schicken Sie mir bis spätestens 14. November eine schriftliche" },
+            { "text": "brief", "quote": "Wenn ich bis dahin nichts von Ihnen höre" }
+          ],
+          "explanation": "Svetlana 14 Kasım'a kadar yönetimden haber bekliyor; sonraki cümle bunu gösteriyor: „Wenn ich bis dahin nichts von Ihnen höre“ (o zamana kadar sizden bir şey duymazsam). Bu yüzden istediği şey yazılı bir cevaptır: „eine schriftliche Antwort“. a) Rechnung yanlış: Biçim olarak uyar („eine schriftliche Rechnung“), ama Svetlana fatura istemiyor; tamir henüz yapılmadı, o yönetimden haber bekliyor. b) Termin yanlış: „der Termin“ eril bir isimdir; „eine schriftliche“ ise dişil bir isim ister („einen schriftlichen Termin“ olması gerekirdi)."
+        },
+        {
+          "number": 45,
+          "type": "abc",
+          "prompt": "Lücke 45",
+          "options": { "a": "trotzdem", "b": "deshalb", "c": "denn" },
+          "answer": "b",
+          "evidence": [
+            { "text": "brief", "quote": "Der Schimmel ist nicht gut für die Gesundheit" },
+            { "text": "brief", "quote": "ist die Reparatur für uns sehr dringend" }
+          ],
+          "explanation": "İlk kısım sebep: Küf sağlığa iyi gelmiyor („Der Schimmel ist nicht gut für die Gesundheit“). İkinci kısım bunun sonucu: „ist die Reparatur für uns sehr dringend“ (tamir bizim için çok acil). Sonuç bildiren ve hemen ardından fiil alan sözcük „deshalb“dır (bu yüzden): „deshalb ist die Reparatur … dringend“. a) trotzdem yanlış: Fiil sırası uyar („trotzdem ist …“), ama „trotzdem“ (yine de) zıtlık bildirir; sağlığa zararlı küf ile acil tamir arasında zıtlık yok. c) denn yanlış: „denn“dan sonra önce özne gelir („denn die Reparatur ist …“), burada ise fiil „ist“ hemen geliyor; ayrıca „denn“ sebep bildirir, oysa arkadaki kısım sebep değil sonuçtur."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-2",
+  "title": "Schule und Gesundheit",
+  "minutes": 12,
+  "instructions": "Lesen Sie die drei Texte und die Aufgaben 31 bis 36. Entscheiden Sie bei den Aufgaben 31, 33 und 35: Ist die Aussage richtig oder falsch? Wählen Sie bei den Aufgaben 32, 34 und 36 die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "schule",
+          "title": "Projektwoche „Gesund leben“",
+          "byline": "Brief der Gesamtschule Am Wasserturm, Hagenwald",
+          "paragraphs": [
+            "Liebe Eltern der Klassen 6a und 6b,",
+            "vom 9. bis 13. März findet an unserer Schule die Projektwoche „Gesund leben“ statt. In dieser Woche gibt es keinen normalen Unterricht: Die Kinder kochen zusammen und machen Sport. Die Schule beginnt jeden Tag um 8.30 Uhr und endet um 13 Uhr. Eine Anmeldung ist nicht nötig, alle Kinder der beiden Klassen nehmen teil.",
+            "Am Donnerstag fahren wir mit dem Bus zum Biohof Wiesner. Die Fahrt kostet 6 Euro. Bitte geben Sie das Geld bis Freitag, den 27. Februar, der Klassenlehrerin. Ihr Kind braucht für den Ausflug feste Schuhe und Regenkleidung.",
+            "Mit freundlichen Grüßen",
+            "Andrea Wolff, Schulleiterin"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 31,
+          "type": "richtig-falsch",
+          "prompt": "Die Kinder fahren mit dem Zug zum Bauernhof.",
+          "answer": "falsch",
+          "evidence": [{ "text": "schule", "quote": "Am Donnerstag fahren wir mit dem Bus zum Biohof Wiesner." }],
+          "explanation": "Çocuklar çiftliğe trenle değil, otobüsle gidiyor: „Am Donnerstag fahren wir mit dem Bus zum Biohof Wiesner.“ Bu yüzden ifade yanlış."
+        },
+        {
+          "number": 32,
+          "type": "abc",
+          "prompt": "Was sollen die Eltern tun?",
+          "options": {
+            "a": "Der Klassenlehrerin bis Ende Februar 6 Euro geben.",
+            "b": "Ihrem Kind am Donnerstag das Geld für die Fahrt mitgeben.",
+            "c": "Ihr Kind für die Projektwoche anmelden."
+          },
+          "answer": "a",
+          "evidence": [{ "text": "schule", "quote": "Bitte geben Sie das Geld bis Freitag, den 27. Februar, der Klassenlehrerin." }],
+          "explanation": "Veliler gezi parasını (6 Euro) 27 Şubat'a kadar sınıf öğretmenine vermeli: „Bitte geben Sie das Geld bis Freitag, den 27. Februar, der Klassenlehrerin.“ b) yanlış: Perşembe gezinin günü; para gezi günü değil, 27 Şubat'a kadar verilmeli. c) yanlış: Kayıt gerekmiyor: „Eine Anmeldung ist nicht nötig, alle Kinder der beiden Klassen nehmen teil.“"
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "amt",
+          "title": "Kostenlose Impfungen für Kinder",
+          "byline": "Mitteilung des Gesundheitsamts Hagenwald",
+          "paragraphs": [
+            "Ist Ihr Kind gegen Masern geimpft? Im April bietet das Gesundheitsamt kostenlose Impfungen für Kinder und Jugendliche bis 17 Jahre an, jeden Mittwoch von 14 bis 17 Uhr im Gesundheitsamt, Schillerplatz 3. Sie brauchen keinen Termin. Bringen Sie bitte den Impfpass Ihres Kindes mit. Auch Familien ohne Krankenversicherung können das Angebot nutzen. Kinder unter 14 Jahren müssen von einem Elternteil begleitet werden.",
+            "Außerdem untersucht eine Kinderärztin im Gesundheitsamt alle Kinder, die im Sommer in die Schule kommen. Für diese Untersuchung bekommen Sie einen Brief mit einem Termin."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 33,
+          "type": "richtig-falsch",
+          "prompt": "Kinder, die nicht krankenversichert sind, können sich auch im Gesundheitsamt impfen lassen.",
+          "answer": "richtig",
+          "evidence": [{ "text": "amt", "quote": "Auch Familien ohne Krankenversicherung können das Angebot nutzen." }],
+          "explanation": "Sağlık sigortası olmayan aileler de ücretsiz aşıdan yararlanabiliyor: „Auch Familien ohne Krankenversicherung können das Angebot nutzen.“ Yani sigortası olmayan çocuklar da aşı olabilir; ifade doğru."
+        },
+        {
+          "number": 34,
+          "type": "abc",
+          "prompt": "Ein zwölfjähriges Kind …",
+          "options": {
+            "a": "darf ohne Begleitung zur Impfung ins Gesundheitsamt kommen.",
+            "b": "kommt zusammen mit der Mutter oder dem Vater zur Impfung.",
+            "c": "bekommt für die Impfung einen Brief mit einem Termin."
+          },
+          "answer": "b",
+          "evidence": [{ "text": "amt", "quote": "Kinder unter 14 Jahren müssen von einem Elternteil begleitet werden." }],
+          "explanation": "On iki yaşındaki bir çocuk 14 yaşın altında; bu yüzden anne veya babasıyla gelmeli: „Kinder unter 14 Jahren müssen von einem Elternteil begleitet werden.“ a) yanlış: 14 yaşından küçük çocuklar yalnız gelemez. c) yanlış: Aşı için randevu gerekmiyor („Sie brauchen keinen Termin.“). Randevulu mektup, yazın okula başlayacak çocukların muayenesi için gönderiliyor."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "kurs",
+          "title": "Zurück in den Beruf – ein Kurs für Mütter und Väter",
+          "byline": "Information der Beratungsstelle „Neustart“, Hagenwald",
+          "paragraphs": [
+            "Sie waren einige Jahre mit Ihren Kindern zu Hause und möchten jetzt wieder arbeiten? Ab dem 4. Mai bieten wir einen Kurs für Eltern an. Sie schreiben dort Ihren Lebenslauf, üben Vorstellungsgespräche und lernen, wie man im Internet nach Stellen sucht.",
+            "Der Kurs findet dienstags und donnerstags von 9 bis 12 Uhr statt. Für kleine Kinder gibt es im Haus eine kostenlose Kinderbetreuung. Wenn Sie Leistungen vom Jobcenter bekommen, ist der Kurs für Sie kostenlos. Alle anderen zahlen 40 Euro.",
+            "Anmeldung bis zum 20. April bei Frau Haddad, Telefon 0431 55 30 81."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 35,
+          "type": "richtig-falsch",
+          "prompt": "Während des Kurses können kleine Kinder im selben Gebäude betreut werden.",
+          "answer": "richtig",
+          "evidence": [{ "text": "kurs", "quote": "Für kleine Kinder gibt es im Haus eine kostenlose Kinderbetreuung." }],
+          "explanation": "Küçük çocuklar için binada ücretsiz çocuk bakımı var: „Für kleine Kinder gibt es im Haus eine kostenlose Kinderbetreuung.“ „im Haus“ aynı binada demek; ifade doğru."
+        },
+        {
+          "number": 36,
+          "type": "abc",
+          "prompt": "Der Kurs …",
+          "options": {
+            "a": "kostet 40 Euro, wenn man Geld vom Jobcenter bekommt.",
+            "b": "findet zweimal pro Woche am Nachmittag statt.",
+            "c": "zeigt, wie man online Stellenangebote findet."
+          },
+          "answer": "c",
+          "evidence": [{ "text": "kurs", "quote": "lernen, wie man im Internet nach Stellen sucht" }],
+          "explanation": "Kursta internette iş ilanı aramak öğretiliyor: „lernen, wie man im Internet nach Stellen sucht“. „online Stellenangebote finden“ aynı anlama geliyor. a) yanlış: Jobcenter'dan yardım alanlar için kurs ücretsiz; 40 Euro'yu diğerleri ödüyor: „Wenn Sie Leistungen vom Jobcenter bekommen, ist der Kurs für Sie kostenlos.“ b) yanlış: Kurs haftada iki gün ama öğleden sonra değil, sabah: „dienstags und donnerstags von 9 bis 12 Uhr“."
+        }
+      ]
+    }
+  ]
+}

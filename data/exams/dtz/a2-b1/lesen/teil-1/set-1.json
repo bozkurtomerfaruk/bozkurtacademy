@@ -1,0 +1,87 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-1",
+  "title": "Ratgeber für Neuangekommene",
+  "minutes": 8,
+  "context": "Sie sind neu in Lindbrück und haben im Willkommensbüro der Stadt einen Ratgeber bekommen.",
+  "instructions": "Lesen Sie die Aufgaben 21 bis 25 und das Inhaltsverzeichnis. Wo finden Sie die Information? Wählen Sie die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "inhalt",
+          "title": "Willkommen in Lindbrück – Ratgeber für Neuangekommene",
+          "byline": "Herausgegeben vom Willkommensbüro der Stadt Lindbrück",
+          "paragraphs": [
+            {
+              "rows": [
+                ["Kapitel 1 (S. 4)", "Ankommen: Wohnsitz beim Bürgeramt anmelden, Termin online buchen, Meldebescheinigung, Rundfunkbeitrag"],
+                ["Kapitel 2 (S. 10)", "Geld und Verträge: Girokonto eröffnen, Handy und Internet, Strom anmelden, Verbraucherberatung bei Ärger mit Firmen und Rechnungen"],
+                ["Kapitel 3 (S. 16)", "Krankenversicherung: gesetzliche Krankenkassen, Versichertenkarte, kostenlose Familienversicherung für Ehepartner und Kinder"],
+                ["Kapitel 4 (S. 22)", "Ärzte und Apotheken: einen Hausarzt finden, Kinderärzte, Termine beim Facharzt, Dolmetscher in der Praxis"],
+                ["Kapitel 5 (S. 30)", "Deutsch lernen: Integrationskurse, Kinderbetreuung während des Kurses, Sprachcafés, Stadtbibliothek"],
+                ["Kapitel 6 (S. 36)", "Kinder und Schule: Kita-Platz suchen, Anmeldung in der Grundschule, Hausaufgabenhilfe, Ferienprogramme für Schulkinder"],
+                ["Kapitel 7 (S. 44)", "Wohnen: Wohnungssuche, Wohnberechtigungsschein, Mieterverein, Mülltrennung und Hausordnung"],
+                ["Kapitel 8 (S. 52)", "Arbeit und Beruf: Jobcenter und Agentur für Arbeit, ausländische Berufsabschlüsse anerkennen lassen, Bewerbungshilfe"],
+                ["Kapitel 9 (S. 60)", "Freizeit: Sportvereine, Schwimmbäder, Feste in den Stadtteilen, Ehrenamt"],
+                ["Kapitel 10 (S. 66)", "Notfälle: Notruf 110 und 112, ärztlicher Bereitschaftsdienst nachts und am Wochenende, Giftnotruf, Fundbüro"]
+              ]
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 21,
+          "type": "abc",
+          "prompt": "Ihr Mann hat eine feste Stelle, Sie selbst arbeiten nicht. Sie möchten wissen, ob Sie und Ihre Kinder über ihn ohne eigene Kosten geschützt sind, wenn jemand krank wird.",
+          "options": { "a": "Kapitel 4", "b": "Kapitel 3", "c": "Kapitel 6" },
+          "answer": "b",
+          "evidence": [{ "text": "inhalt", "quote": "kostenlose Familienversicherung für Ehepartner und Kinder" }],
+          "explanation": "Eşin üzerinden eş ve çocukların ücretsiz sigortalı olması Kapitel 3'te anlatılıyor: „kostenlose Familienversicherung für Ehepartner und Kinder“. a) yanlış: Kapitel 4'te çocuk doktorları (Kinderärzte) var, sigorta değil. c) yanlış: Kapitel 6 çocuklarla ilgili, ama kreş ve okul hakkında; sigortadan söz etmiyor."
+        },
+        {
+          "number": 22,
+          "type": "abc",
+          "prompt": "Ihr Sohn ist zehn Jahre alt. Im Sommer hat er sechs Wochen frei. In dieser Zeit soll er nicht nur zu Hause sitzen. Sie suchen passende Angebote für ihn.",
+          "options": { "a": "Kapitel 5", "b": "Kapitel 4", "c": "Kapitel 6" },
+          "answer": "c",
+          "evidence": [{ "text": "inhalt", "quote": "Ferienprogramme für Schulkinder" }],
+          "explanation": "Okulun yaz tatilinde çocuklar için programlar Kapitel 6'da: „Ferienprogramme für Schulkinder“. a) yanlış: Kapitel 5'te de çocuk bakımı var, ama sadece anne babanın Almanca kursu sırasında: „Kinderbetreuung während des Kurses“. b) yanlış: Kapitel 4'te çocuk doktorları var, tatil programı yok."
+        },
+        {
+          "number": 23,
+          "type": "abc",
+          "prompt": "Ihre WLAN-Firma nimmt jeden Monat mehr Geld von Ihnen, als vereinbart war. Sie suchen eine Stelle, die Ihnen in so einem Fall hilft.",
+          "options": { "a": "Kapitel 2", "b": "Kapitel 7", "c": "Kapitel 8" },
+          "answer": "a",
+          "evidence": [{ "text": "inhalt", "quote": "Verbraucherberatung bei Ärger mit Firmen und Rechnungen" }],
+          "explanation": "WLAN şirketiyle yaşanan para sorununda yardım Kapitel 2'de: „Verbraucherberatung bei Ärger mit Firmen und Rechnungen“. b) yanlış: Kapitel 7'deki kiracılar derneği (Mieterverein) konutla ilgili, WLAN şirketiyle değil. c) yanlış: Kapitel 8'de iş başvurusu için yardım (Bewerbungshilfe) var, faturalar için değil."
+        },
+        {
+          "number": 24,
+          "type": "abc",
+          "prompt": "Ihr dreijähriger Sohn hat aus einer Flasche mit Putzmittel getrunken. Sie möchten sofort jemanden anrufen, der Ihnen sagt, was Sie jetzt tun sollen.",
+          "options": { "a": "Kapitel 4", "b": "Kapitel 3", "c": "Kapitel 10" },
+          "answer": "c",
+          "evidence": [{ "text": "inhalt", "quote": "Giftnotruf" }],
+          "explanation": "Çocuk temizlik maddesi içti; yani zehirlenme tehlikesi var. Zehirlenmede aranacak acil hat Kapitel 10'da: „Giftnotruf“. a) yanlış: Kapitel 4'te aile hekimi, çocuk doktoru ve uzman doktor randevusu bulmak anlatılıyor; zehirlenme acil hattı orada yazmıyor. b) yanlış: Kapitel 3 sağlık sigortası hakkında, acil durumlar hakkında değil."
+        },
+        {
+          "number": 25,
+          "type": "abc",
+          "prompt": "Ihre Firma hat Ihnen gekündigt. Sie möchten wissen, bei welchem Amt Sie sich jetzt melden müssen, damit man Ihnen bei der Suche nach einer neuen Stelle hilft.",
+          "options": { "a": "Kapitel 1", "b": "Kapitel 8", "c": "Kapitel 2" },
+          "answer": "b",
+          "evidence": [{ "text": "inhalt", "quote": "Arbeit und Beruf: Jobcenter und Agentur für Arbeit" }],
+          "explanation": "İşini kaybeden ve yeni iş aramak için yardım isteyen kişinin bilgiyi bulacağı yer Kapitel 8: „Arbeit und Beruf: Jobcenter und Agentur für Arbeit“. a) yanlış: Kapitel 1'de de bir daire var, ama orada Bürgeramt'ta ikamet kaydı (Wohnsitz anmelden) anlatılıyor, iş arama değil. c) yanlış: Kapitel 2 banka hesabı, telefon, elektrik ve tüketici danışmanlığı hakkında; iş arama orada yazmıyor."
+        }
+      ]
+    }
+  ]
+}

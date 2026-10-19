@@ -574,11 +574,41 @@ window.BA_EXAMS = {
               { title: null, exercises: [] }, // Teil 4
             ] },
             { id: 'lesen', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
-              { title: null, exercises: [] }, // Teil 3
-              { title: null, exercises: [] }, // Teil 4
-              { title: null, exercises: [] }, // Teil 5
+              {
+                title: { tr: 'İçindekiler · a/b/c', de: 'Inhaltsverzeichnis · a/b/c', en: 'Table of contents · a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Ratgeber für Neuangekommene' },
+                  { set: 'set-2', title: 'Infomappe der Kita' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: 'İlanlar · eşleştirme', de: 'Anzeigen · Zuordnung', en: 'Adverts · matching' },
+                exercises: [
+                  { set: 'set-1', title: 'Eine Wohnung finden' },
+                  { set: 'set-2', title: 'Arbeit finden' },
+                ]
+              }, // Teil 2
+              {
+                title: { tr: 'Kısa bilgi metinleri · richtig/falsch ve a/b/c', de: 'Kurze Informationstexte · richtig/falsch und a/b/c', en: 'Short information texts · true/false and a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Neues aus dem Stadtteil' },
+                  { set: 'set-2', title: 'Schule und Gesundheit' },
+                ]
+              }, // Teil 3
+              {
+                title: { tr: 'Bilgi broşürü · a/b/c', de: 'Informationsbroschüre · a/b/c', en: 'Information leaflet · a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Ihr Mietvertrag' },
+                  { set: 'set-2', title: 'Anmeldung in der Grundschule' },
+                ]
+              }, // Teil 4
+              {
+                title: { tr: 'Mektupta boşluk doldurma · a/b/c', de: 'Lückentext im Brief · a/b/c', en: 'Gapped letter · a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Ein Brief an die Hausverwaltung' },
+                  { set: 'set-2', title: 'Eine Nachricht an die Lehrerin' },
+                ]
+              }, // Teil 5
             ] },
             { id: 'schreiben', teile: [
               { title: null, exercises: [] }, // Teil 1

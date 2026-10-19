@@ -1,0 +1,135 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-2",
+  "title": "Arbeit finden",
+  "minutes": 10,
+  "context": "Mehrere Personen suchen in Lindbrück Arbeit oder Hilfe auf dem Weg in den Beruf. Sie lesen die Anzeigen im Internetportal „Lindbrück aktuell“.",
+  "instructions": "Lesen Sie die Situationen 26 bis 30 und die Anzeigen a bis h. Welche Anzeige passt zu welcher Situation? Sie können jede Anzeige nur einmal wählen. Die Anzeige aus dem Beispiel können Sie nicht mehr wählen. Für eine Situation gibt es keine passende Anzeige. In diesem Fall wählen Sie X.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": "x",
+      "texts": [
+        {
+          "id": "a",
+          "label": "a",
+          "title": "Beratungsstelle Brückenschlag",
+          "paragraphs": [
+            "Sie haben im Ausland einen Beruf gelernt oder studiert? Wir sagen Ihnen, welche Stelle in Deutschland Ihren Abschluss prüft, welche Unterlagen Sie dafür brauchen und wer die Kosten für Übersetzungen übernehmen kann. Die Beratung ist kostenlos. Termine nach Vereinbarung, auch per Video."
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "title": "Bewerbungswerkstatt im Stadtteilzentrum",
+          "paragraphs": [
+            "An vier Abenden lernen Sie, wie man Lebenslauf und Anschreiben auf Deutsch gestaltet. Außerdem üben wir in kleinen Rollenspielen, was man im Vorstellungsgespräch sagt. Bitte Zeugnisse mitbringen. Dienstags 18–20 Uhr, Teilnahme 10 Euro für alle vier Termine."
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "title": "Küchenhilfe (m/w/d) gesucht",
+          "paragraphs": [
+            "Die Kantine im Rathaus Lindbrück sucht ab sofort Verstärkung: Gemüse vorbereiten, Geschirr spülen, Essen ausgeben. Arbeitszeit Montag bis Freitag von 7 bis 13 Uhr, abends und am Wochenende ist die Kantine zu. Deutsch auf A2-Niveau reicht. Rufen Sie einfach an: 05431 60 214."
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "title": "Zusteller für Werbeprospekte",
+          "paragraphs": [
+            "Verdienen Sie am Samstagvormittag etwas dazu! Wir suchen zuverlässige Leute, die in Lindbrück und den umliegenden Dörfern Prospekte verteilen. Weil die Wege lang sind, brauchen Sie unbedingt ein eigenes Auto. Minijob, Bezahlung pro Tour. Vertrieb Hermsen, Tel. 05431 88 03."
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "title": "Lernwerk Lindbrück: Computer für den Beruf",
+          "paragraphs": [
+            "In acht Wochen lernen Sie, wie man Texte am Computer schreibt, Tabellen anlegt und E-Mails verschickt. Der Kurs ist für Berufstätige gedacht und findet deshalb abends statt: montags und mittwochs von 18.30 bis 21 Uhr. Kursgebühr 60 Euro, die Laptops bekommen Sie bei uns."
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "title": "Schreibbüro Federstrich",
+          "paragraphs": [
+            "Keine Zeit oder keine Lust zum Schreiben? Wir schreiben Ihre Bewerbung für Sie: Lebenslauf und Anschreiben, fehlerfrei und modern gestaltet. Sie schicken uns Ihre Daten per E-Mail, nach drei Tagen bekommen Sie die fertigen Unterlagen. Preis: 25 Euro."
+          ]
+        },
+        {
+          "id": "g",
+          "label": "g",
+          "title": "Getränkehandel Quellfrisch",
+          "paragraphs": [
+            "Wir suchen Fahrerinnen und Fahrer (m/w/d) in Vollzeit für die Lieferung von Getränken an Restaurants und Geschäfte. Sie brauchen einen Führerschein der Klasse C. Wir bieten einen unbefristeten Vertrag und pünktliche Bezahlung. Bewerbung an: personal@quellfrisch-lindbrueck.de"
+          ]
+        },
+        {
+          "id": "h",
+          "label": "h",
+          "title": "Gärtnerei Grünfink",
+          "paragraphs": [
+            "Für die Saison suchen wir Aushilfen für den Samstag (8–16 Uhr). Sie helfen beim Verkauf von Blumen und Pflanzen, tragen Erde zu den Autos der Kunden und gießen die Beete. Sie arbeiten fast immer im Freien. Minijob. Sie erreichen uns gut mit der Buslinie 4, Haltestelle direkt vor dem Tor."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Ahmad hat einen Lkw-Führerschein. Er sucht eine feste Stelle, in der er den ganzen Tag unterwegs ist.",
+          "answer": "g",
+          "evidence": [{ "text": "g", "quote": "Wir bieten einen unbefristeten Vertrag und pünktliche Bezahlung." }],
+          "explanation": "g ilanında içecek firması tam zamanlı şoför arıyor; C sınıfı (kamyon) ehliyet gerekiyor ve süresiz sözleşme (unbefristeter Vertrag) veriliyor. Ahmad'ın kamyon ehliyeti var ve kalıcı bir iş arıyor. Bu ilan örnekte kullanıldığı için başka bir durum için seçilemez."
+        },
+        {
+          "number": 26,
+          "type": "zuordnung",
+          "prompt": "Leyla hat noch nie auf Deutsch eine Bewerbung geschrieben. Sie möchte das selbst lernen und auch üben, wie sie sich bei einem Arbeitgeber vorstellt.",
+          "answer": "b",
+          "evidence": [{ "text": "b", "quote": "An vier Abenden lernen Sie, wie man Lebenslauf und Anschreiben auf Deutsch gestaltet." }, { "text": "b", "quote": "was man im Vorstellungsgespräch sagt" }],
+          "explanation": "b ilanındaki atölyede özgeçmiş ve başvuru mektubu yazmak öğretiliyor ve iş görüşmesi canlandırmalarla çalışılıyor: „was man im Vorstellungsgespräch sagt“. Leyla tam bunu kendisi öğrenmek istiyor. Tuzak f: Orada da özgeçmiş ve başvuru mektubu var, ama büro başvuruyu müşteri yerine yazıyor: „Wir schreiben Ihre Bewerbung für Sie“; Leyla ise kendisi öğrenmek istiyor."
+        },
+        {
+          "number": 27,
+          "type": "zuordnung",
+          "prompt": "Rosa arbeitet tagsüber in einer Reinigungsfirma. Sie möchte sicherer mit dem Computer umgehen können, hat aber erst ab 18 Uhr Zeit.",
+          "answer": "e",
+          "evidence": [{ "text": "e", "quote": "findet deshalb abends statt: montags und mittwochs von 18.30 bis 21 Uhr" }],
+          "explanation": "e ilanında bilgisayar kursu var (metin yazmak, tablo yapmak, e-posta göndermek) ve kurs akşamları: „findet deshalb abends statt: montags und mittwochs von 18.30 bis 21 Uhr“. Rosa da ancak saat 18'den sonra vakit bulabiliyor. Tuzak b: O kurs da akşam (salı 18–20), ama orada özgeçmiş, başvuru mektubu ve iş görüşmesi çalışılıyor; bilgisayar kursundan söz edilmiyor."
+        },
+        {
+          "number": 28,
+          "type": "zuordnung",
+          "prompt": "Wiktor arbeitet von Montag bis Freitag in einem Lager. Am Samstag hat er frei und möchte dann noch etwas Geld verdienen, gern draußen an der frischen Luft. Ein Auto hat er nicht.",
+          "answer": "h",
+          "evidence": [{ "text": "h", "quote": "Für die Saison suchen wir Aushilfen für den Samstag (8–16 Uhr)." }, { "text": "h", "quote": "Sie arbeiten fast immer im Freien." }],
+          "explanation": "h ilanında fidanlık cumartesi için yardımcı arıyor: „Aushilfen für den Samstag“. İş çoğunlukla açık havada: „Sie arbeiten fast immer im Freien“. Fidanlığa otobüsle gidilebiliyor: „Buslinie 4, Haltestelle direkt vor dem Tor“. Tuzak d: O da cumartesi günü bir mini iş, ama „brauchen Sie unbedingt ein eigenes Auto“; Wiktor'un arabası yok."
+        },
+        {
+          "number": 29,
+          "type": "zuordnung",
+          "prompt": "Ivana besucht jeden Vormittag einen Deutschkurs. Sie sucht eine Stelle als Küchenhilfe, kann aber nur nachmittags oder abends arbeiten.",
+          "answer": "x",
+          "evidence": [{ "text": "c", "quote": "Arbeitszeit Montag bis Freitag von 7 bis 13 Uhr" }],
+          "explanation": "Tuzak c: Kantinede mutfak yardımcısı (Küchenhilfe) aranıyor ve A2 Almanca yeterli. Ama „Arbeitszeit Montag bis Freitag von 7 bis 13 Uhr“ ve akşamları kantine kapalı; Ivana ise sabahları kursta, sadece öğleden sonra veya akşam çalışabiliyor. Başka mutfak işi ilanı da yok: d broşür dağıtma, h fidanlıkta yardım, g şoförlük ve örnekte kullanıldı. Bu yüzden cevap X."
+        },
+        {
+          "number": 30,
+          "type": "zuordnung",
+          "prompt": "Samir war in seinem Heimatland Elektriker. Er möchte wissen, was er tun muss, damit seine Ausbildung in Deutschland anerkannt wird.",
+          "answer": "a",
+          "evidence": [{ "text": "a", "quote": "welche Stelle in Deutschland Ihren Abschluss prüft, welche Unterlagen Sie dafür brauchen" }],
+          "explanation": "a ilanındaki danışma merkezi yurt dışında meslek öğrenmiş kişilere yardım ediyor: „welche Stelle in Deutschland Ihren Abschluss prüft, welche Unterlagen Sie dafür brauchen“. Samir da elektrikçi eğitiminin tanınması için ne yapması gerektiğini öğrenmek istiyor. Tuzak b: Orada karneler (Zeugnisse) getiriliyor, ama amaç başvuru yazmayı öğrenmek; diploma tanıma değil."
+        }
+      ]
+    }
+  ]
+}

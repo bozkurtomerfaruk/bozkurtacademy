@@ -1,0 +1,105 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 5,
+  "set": "set-2",
+  "title": "Eine Nachricht an die Lehrerin",
+  "minutes": 8,
+  "context": "Eine Mutter schreibt der Klassenlehrerin ihrer Tochter eine E-Mail.",
+  "instructions": "Lesen Sie die E-Mail. Wählen Sie für die Lücken 40 bis 45 die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "mail",
+          "title": "Elif Demir, Klasse 2b",
+          "byline": "E-Mail von Hatice Demir an Frau Wagner-Ott, Grundschule Am Lindenhain",
+          "paragraphs": [
+            "Liebe Frau Wagner-Ott,",
+            "meine Tochter Elif konnte von Montag bis Mittwoch nicht in die Schule kommen, {{40}} sie hohes Fieber und Halsschmerzen hatte. Die Entschuldigung mit meiner Unterschrift gebe ich ihr morgen mit. Heute ist sie noch zu Hause, aber {{41}} morgen kann sie wieder am Unterricht teilnehmen. Die Kinderärztin sagt, dass Elif nicht mehr ansteckend ist.",
+            "Könnten Sie mir bitte schreiben, welche Hausaufgaben die Klasse in dieser Woche bekommen hat? Ich möchte die Aufgaben am Wochenende mit {{42}} nachholen, damit sie nichts verpasst. Elif {{43}} gestern schon ein bisschen in ihrem Lesebuch gelesen, aber Mathe ist für sie allein noch schwer.",
+            "Außerdem hat Elif erzählt, dass die Eltern im November zu einem {{44}} in die Schule eingeladen sind. Leider ist der Zettel mit dem Datum in ihrer Schultasche verloren gegangen. Können Sie mir bitte sagen, an welchem Tag und um wie viel Uhr er beginnt? Ich arbeite bis 18 Uhr. {{45}} er erst danach anfängt, komme ich gern.",
+            "Vielen Dank und viele Grüße",
+            "Hatice Demir"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 40,
+          "type": "abc",
+          "prompt": "Lücke 40",
+          "options": { "a": "weil", "b": "ob", "c": "damit" },
+          "answer": "a",
+          "evidence": [
+            { "text": "mail", "quote": "nicht in die Schule kommen," },
+            { "text": "mail", "quote": "sie hohes Fieber und Halsschmerzen hatte" }
+          ],
+          "explanation": "Elif okula gelemedi; ateşi ve boğaz ağrısı bunun sebebidir: „sie hohes Fieber und Halsschmerzen hatte“. Sebep bildiren bağlaç „weil“dir: „nicht in die Schule kommen, weil sie hohes Fieber … hatte“. b) ob yanlış: „ob“ (-ip -mediği) bir soru veya belirsizlik bildirir (ör. „Ich weiß nicht, ob …“); ama Hatice ateşin olup olmadığını sormuyor, ateşin olduğunu biliyor. c) damit yanlış: „damit“ amaç bildirir (… sın diye); Elif ateşi olsun diye evde kalmadı."
+        },
+        {
+          "number": 41,
+          "type": "abc",
+          "prompt": "Lücke 41",
+          "options": { "a": "seit", "b": "bis", "c": "ab" },
+          "answer": "c",
+          "evidence": [
+            { "text": "mail", "quote": "Heute ist sie noch zu Hause, aber" },
+            { "text": "mail", "quote": "morgen kann sie wieder am Unterricht teilnehmen" }
+          ],
+          "explanation": "Elif bugün hâlâ evde, yarından itibaren yeniden derse gidebilir. Gelecekteki bir başlangıç noktası „ab“ (… den itibaren) ile söylenir: „ab morgen kann sie wieder am Unterricht teilnehmen“. a) seit yanlış: „seit“ geçmişte başlamış ve hâlâ süren bir durum içindir (ör. „seit Montag“); „morgen“ (yarın) gelecektedir, „seit morgen“ olmaz. b) bis yanlış: „bis morgen“ (yarına kadar) bir bitiş noktasıdır; „yarına kadar derse gidebilir“ anlamı metne uymaz, çünkü Elif bugün hâlâ evde: „Heute ist sie noch zu Hause“."
+        },
+        {
+          "number": 42,
+          "type": "abc",
+          "prompt": "Lücke 42",
+          "options": { "a": "sie", "b": "ihr", "c": "ihm" },
+          "answer": "b",
+          "evidence": [
+            { "text": "mail", "quote": "meine Tochter Elif" },
+            { "text": "mail", "quote": "Ich möchte die Aufgaben am Wochenende mit" }
+          ],
+          "explanation": "Hatice ödevleri kızı Elif ile birlikte yapmak istiyor; Elif bir kız: „meine Tochter Elif“. „mit“ edatı her zaman Dativ ister; „sie“ zamirinin Dativ biçimi „ihr“dir: „mit ihr nachholen“ (onunla telafi etmek). a) sie yanlış: Elif'e gönderme yapar, ama Nominativ/Akkusativ biçimidir; „mit“ten sonra Akkusativ gelmez. c) ihm yanlış: Dativ biçimidir, ama eril (veya nötr) bir kişi/şey için kullanılır; Elif ise kız çocuğu."
+        },
+        {
+          "number": 43,
+          "type": "abc",
+          "prompt": "Lücke 43",
+          "options": { "a": "ist", "b": "hat", "c": "wird" },
+          "answer": "b",
+          "evidence": [
+            { "text": "mail", "quote": "gestern schon ein bisschen in ihrem Lesebuch gelesen" }
+          ],
+          "explanation": "Cümle dünü anlatıyor („gestern“) ve sonda Partizip II var: „gelesen“. Geçmiş zaman (Perfekt) „lesen“ fiilinde „haben“ ile kurulur: „Elif hat gestern … gelesen“ (Elif dün biraz okudu). a) ist yanlış: „lesen“ Perfekt'te „sein“ almaz; „Elif ist gelesen“ „Elif okunmuş“ gibi anlamsız bir anlam verir. c) wird yanlış: „wird … gelesen“ edilgen yapıdır (okunuyor); Elif okunan değil, okuyan kişidir ve „wird“ şimdiki zaman olduğu için „gestern“ ile de uymaz."
+        },
+        {
+          "number": 44,
+          "type": "abc",
+          "prompt": "Lücke 44",
+          "options": { "a": "Elternabend", "b": "Ausflug", "c": "Arzttermin" },
+          "answer": "a",
+          "evidence": [
+            { "text": "mail", "quote": "dass die Eltern im November zu einem" },
+            { "text": "mail", "quote": "in die Schule eingeladen sind" }
+          ],
+          "explanation": "Veliler (die Eltern) okula davet ediliyor: „die Eltern … zu einem … in die Schule eingeladen“. Velilerin okulda katıldığı bu buluşma veli toplantısıdır: „zu einem Elternabend“. b) Ausflug yanlış: Biçim olarak uyar, ama gezi okuldan dışarı yapılır; metinde ise veliler okula davet ediliyor: „in die Schule eingeladen“. c) Arzttermin yanlış: Biçim olarak uyar, ama metinde doktor (Kinderärztin) yalnızca Elif'in hastalığıyla ilgili geçiyor; doktor randevusu okulda olmaz ve velilere davet edilmez."
+        },
+        {
+          "number": 45,
+          "type": "abc",
+          "prompt": "Lücke 45",
+          "options": { "a": "Obwohl", "b": "Weil", "c": "Wenn" },
+          "answer": "c",
+          "evidence": [
+            { "text": "mail", "quote": "um wie viel Uhr er beginnt? Ich arbeite bis 18 Uhr." },
+            { "text": "mail", "quote": "er erst danach anfängt, komme ich gern" }
+          ],
+          "explanation": "Hatice toplantının saatini henüz bilmiyor; az önce soruyor: „um wie viel Uhr er beginnt?“. 18'e kadar çalıştığı için gelip gelemeyeceği saate bağlı. Bu bir koşuldur, koşul bağlacı „wenn“dir: „Wenn er erst danach anfängt, komme ich gern“ (eğer ancak ondan sonra başlarsa, memnuniyetle gelirim). a) Obwohl yanlış: „obwohl“ zıtlık bildirir; ama geç başlaması Hatice'nin gelmesine engel değil, tam tersine gelmesini mümkün kılar. b) Weil yanlış: „weil“ bilinen bir sebebi bildirir; oysa Hatice saati bilmiyor, sorduğu şey tam olarak bu."
+        }
+      ]
+    }
+  ]
+}

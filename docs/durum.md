@@ -2,6 +2,10 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-10-18 · DTZ Lesen pilotu
+
+**Kararlar:** Teil 2'de X seçeneği var, Teil 4 a/b/c (senin kararın). Resmi Übungssatz bu ortamdan açılamadığı için geri kalanlar kaynak taramasına göre: numaralar 21–45; Teil 1 içindekiler tablosu + a/b/c (örneksiz); Teil 2'de 8 ilan, örnek + 5 durum, bir X; Teil 3'te üç kısa metin, her birine bir richtig/falsch + bir a/b/c; Teil 4 broşür + 3 a/b/c; Teil 5 mektupta 6 boşluk, her boşluğa a/b/c. Süreler 8/10/12/7/8 dakika (toplam 45). Oynatıcıda a/b/c boşluklarında seçilen kelime görünüyor.
+
 ## 2026-10-18 · Goethe B2 Lesen: boşluklu metin eklentisi ve pilot
 
 **Kendi verdiğim kararlar (Modellsatz bu ortamdan açılamadığı için):**

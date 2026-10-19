@@ -25,7 +25,9 @@ Kaynak: Goethe-Institut el kitabı ve Modellsatz açıklamaları (arama sonuçla
 | 3 | Yorum / köşe yazısı | 8 boşluğa cümle yerleştirme. Biz: örnek 0 metinde dolu, 10 cümle (a–j), 2 artan | 16–23 | ~20 dk | 8 boşluk doğrulandı. Cümle sayısı tahmin |
 | 4 | Beş yazarın akademik görüşü (A–E) | 7 ifade yazara eşleştirilir; ikisi hiçbir yazara uymaz (`0`), örnek 0 | 24–30 | ~15 dk | 5 yazar, 7 ifade, 2 eşleşmesiz doğrulandı. Örnek tahmin |
 
-Toplam 30 soru, 65 dk (cevap kâğıdına aktarma dahil; bazı kaynaklar 70 dk diyor). **Oynatıcı:** a/b/c/d seçenekleri için küçük eklenti. Teil 3, B2 Teil 2'deki boşluk düzeniyle; Teil 4, B2 Teil 1'deki yorum düzeni ve `"none": "0"` ile çalışıyor.
+Toplam 30 soru, 65 dk (cevap kâğıdına aktarma dahil; bazı kaynaklar 70 dk diyor).
+
+**Pilot (2 set × 4 Teil):** İki inceleyici ad tekrarlarını, deyim hâline gelmiş çeldiricileri (ör. „von großem Ausmaß sein“), aynı bağlacın iki boşlukta geçmesini ve B2 ile konu tekrarlarını düzeltti. Kör çözüm 60/60 uyuştu. Çözücünün düzeltmediğim notu: Teil 1 boşluklarının çoğu sabit söz öbekleriyle çözülüyor; set 3–5 brief'ine her sette en az üç içerik boşluğu kuralını ekledim. Teil 3 yorumları (doldurulmuş cümleler hariç) 400–425 kelime. **Oynatıcı:** a/b/c/d seçenekleri için küçük eklenti. Teil 3, B2 Teil 2'deki boşluk düzeniyle; Teil 4, B2 Teil 1'deki yorum düzeni ve `"none": "0"` ile çalışıyor.
 
 ## 2026-10-19 · Goethe A1 Lesen (Start Deutsch 1)
 

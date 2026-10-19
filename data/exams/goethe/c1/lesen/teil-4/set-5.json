@@ -1,0 +1,187 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "c1",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-5",
+  "title": "Wissenschaft und Öffentlichkeit",
+  "minutes": 15,
+  "context": "Eine Wochenzeitung hat fünf Fachleute gefragt: Wie sollten Wissenschaft und Öffentlichkeit miteinander ins Gespräch kommen?",
+  "instructions": "Lesen Sie die Beiträge a bis e und die Aussagen 24 bis 30. Welche Aussage passt zu welchem Beitrag? Die Beiträge können mehrmals gewählt werden. Zwei Aussagen passen zu keinem Beitrag; markieren Sie dann 0.",
+  "groups": [
+    {
+      "layout": "comments",
+      "none": "0",
+      "texts": [
+        {
+          "id": "moelders",
+          "label": "a",
+          "title": "Swantje Mölders, Wissenschaftsjournalistin",
+          "paragraphs": [
+            "Wenn in Zeitungen von einem „Durchbruch in der Demenzforschung“ die Rede ist und sich im Kleingedruckten herausstellt, dass es um zwölf Mäuse ging, liegt die Schuld scheinbar auf der Hand: bei uns Journalisten, die zuspitzen, um Klicks zu erzeugen. Ganz so einfach ist es nicht. Als wir in unserer Redaktion zweihundert Meldungen über medizinische Studien bis zu ihrer Quelle zurückverfolgten, fand sich die Übertreibung in mehr als der Hälfte der Fälle bereits in der Pressemitteilung des jeweiligen Instituts. Unter Zeitdruck übernehmen Kolleginnen und Kollegen solche Formulierungen nur allzu gern. Das entlastet uns nicht – Prüfen gehört zum Handwerk. Es zeigt aber, dass die Pressestellen der Forschungseinrichtungen, die um Aufmerksamkeit und Drittmittel konkurrieren, Teil des Problems sind."
+          ]
+        },
+        {
+          "id": "habersaat",
+          "label": "b",
+          "title": "Prof. Dr. Gernot Habersaat, Atmosphärenphysiker",
+          "paragraphs": [
+            "Viele meiner Kolleginnen und Kollegen fürchten, das Publikum werde sich enttäuscht abwenden, wenn sie einräumen, dass eine Frage noch offen ist. Meine Erfahrung aus Hunderten von Abendvorträgen ist eine andere. Wenn ich erkläre, warum unsere Modelle bei der Entwicklung regionaler Niederschläge weit auseinanderliegen, während sie beim Temperaturanstieg recht genau übereinstimmen, hören die Leute aufmerksamer zu als bei jeder Folie mit eindeutigen Zahlen. Misstrauisch werden sie eher, wenn man Gewissheit vorspielt und später zurückrudern muss. Dass sich trotzdem nur wenige Forschende auf solche Abende einlassen, wundert mich nicht: Bei Berufungen und Mittelanträgen zählen Publikationen, und wer seine Freitagabende in Gemeindesälen verbringt, hat dafür weniger Zeit, ohne dass es ihm irgendwo angerechnet würde."
+          ]
+        },
+        {
+          "id": "brennecke",
+          "label": "c",
+          "title": "Prof. Dr. Ottilie Brennecke, Wissenschaftssoziologin",
+          "paragraphs": [
+            "Seit Jahren lese ich von einer Vertrauenskrise der Wissenschaft. Unsere Erhebungen, die wir seit fünfzehn Jahren in gleicher Form durchführen, geben das nicht her: Der Anteil derer, die Forschenden eher oder voll vertrauen, schwankt kaum. Verändert hat sich etwas anderes – die Skepsis bündelt sich zunehmend in bestimmten Milieus, die sich auch sonst von Institutionen abgewandt haben. Wer darauf mit Aufklärungskampagnen reagiert, setzt voraus, das Misstrauen rühre aus mangelndem Wissen. Das ist ein Trugschluss. In unseren Interviews kennen gerade die entschiedenen Zweifler die Studienlage oft erstaunlich genau; sie halten sie nur für gekauft. Was sie umstimmen könnte, ist weniger eine weitere Broschüre als die glaubhafte Offenlegung, wer eine Untersuchung finanziert hat und welche Interessen im Spiel sind."
+          ]
+        },
+        {
+          "id": "rielaender",
+          "label": "d",
+          "title": "Dr. Tamo Rieländer, Koordinator eines Bürgerforschungsprojekts",
+          "paragraphs": [
+            "Rund dreitausend Freiwillige messen für unser Projekt monatlich die Wasserqualität kleiner Bäche. Viele berichten, sie hätten erst dabei begriffen, wie viel Sorgfalt hinter einer einzigen verlässlichen Zahl steckt – und warum zwei Messungen am selben Ort voneinander abweichen können, ohne dass jemand gepfuscht hat. Insofern leisten solche Vorhaben mehr für das Verständnis von Forschung als manche Ausstellung. Mit Sorge sehe ich allerdings, dass Bürgerinnen und Bürger in den meisten Projekten bloß als kostenlose Datensammler dienen. Welche Fragen untersucht werden, legen die Fachleute vorab fest. Dabei haben uns Teilnehmende, die ihre Gewässer seit Jahrzehnten kennen, mehrfach auf Zusammenhänge hingewiesen, an die im Institut niemand gedacht hatte. Sie sollten daher schon an der Planung beteiligt werden."
+          ]
+        },
+        {
+          "id": "zaunbrecher",
+          "label": "e",
+          "title": "Dr. Benedikt Zaunbrecher, Medizinethiker",
+          "paragraphs": [
+            "In der Pandemie hat die Öffentlichkeit gewissermaßen live verfolgt, wie Wissenschaft entsteht. Studien wurden als Vorabdrucke ins Netz gestellt, bevor unabhängige Gutachter sie geprüft hatten, und von Medien sofort aufgegriffen. Manches davon hielt späterer Überprüfung nicht stand und wurde zurückgenommen. Für Forschende ist das ein normaler Vorgang; viele Bürgerinnen und Bürger dagegen schlossen daraus, „die Wissenschaftler“ wüssten selbst nicht, was sie wollten. Vorabdrucke deshalb aus der Berichterstattung zu verbannen, hielte ich für falsch – in einer akuten Krise kann man nicht monatelang auf Begutachtungen warten. Wohl aber sollten Redaktionen jedes Mal deutlich machen, dass es sich um vorläufige Befunde handelt, und erklären, dass Korrekturen das System nicht diskreditieren, sondern seine Stärke ausmachen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Fachleute unterschätzen häufig, wie interessiert Laien reagieren, wenn man ihnen ehrlich mitteilt, was noch ungeklärt ist.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "habersaat",
+              "quote": "hören die Leute aufmerksamer zu als bei jeder Folie mit eindeutigen Zahlen"
+            }
+          ],
+          "explanation": "Habersaat (b), birçok meslektaşının bir sorunun henüz açık olduğunu kabul edince dinleyicinin hayal kırıklığıyla uzaklaşacağından korktuğunu, ama kendi deneyiminin farklı olduğunu yazıyor: modellerin yağış konusunda neden çok farklı sonuç verdiğini anlattığında „hören die Leute aufmerksamer zu als bei jeder Folie mit eindeutigen Zahlen“ (insanlar kesin rakamlı her slayttan daha dikkatli dinliyor). İfadedeki „unterschätzen“ (hafife alırlar) meslektaşlarının korkusunu karşılıyor. Zaunbrecher (e) de belirsiz bulgulardan söz ediyor, ama halkın bunlara ilgiyle değil, yanlış anlamayla tepki verdiğini anlatıyor."
+        },
+        {
+          "number": 24,
+          "type": "zuordnung",
+          "prompt": "Dass Fachleute ihre Aussagen nachträglich revidieren, missverstehen viele Menschen als Beleg für Planlosigkeit, obwohl es zum üblichen Ablauf gehört.",
+          "answer": "e",
+          "evidence": [
+            {
+              "text": "zaunbrecher",
+              "quote": "Für Forschende ist das ein normaler Vorgang"
+            },
+            {
+              "text": "zaunbrecher",
+              "quote": "wüssten selbst nicht, was sie wollten"
+            }
+          ],
+          "explanation": "Zaunbrecher (e), pandemide bazı ön baskıların sonradan geri çekildiğini yazıyor: „Für Forschende ist das ein normaler Vorgang“ (araştırmacılar için bu normal bir süreç), ama birçok vatandaş bundan bilim insanlarının „wüssten selbst nicht, was sie wollten“ (ne istediklerini kendileri de bilmediği) sonucunu çıkardı. İfadedeki „Planlosigkeit“ (plansızlık) bunu karşılıyor. Habersaat (b) de geri adım atmanın güvensizlik yarattığını söylüyor, ama ona göre sorun önce kesinlik taklidi yapmak; bu tepkiyi bir yanlış anlama olarak görmüyor."
+        },
+        {
+          "number": 25,
+          "type": "zuordnung",
+          "prompt": "Wer Wissenschaftlern grundsätzlich mit Argwohn begegnet, lässt sich durch zusätzliche Sachinformationen kaum zu einer anderen Haltung bewegen.",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brennecke",
+              "quote": "kennen gerade die entschiedenen Zweifler die Studienlage oft erstaunlich genau"
+            },
+            {
+              "text": "brennecke",
+              "quote": "weniger eine weitere Broschüre"
+            }
+          ],
+          "explanation": "Brennecke (c), güvensizliğin bilgi eksikliğinden kaynaklandığı varsayımını yanlış buluyor: görüşmelerde „kennen gerade die entschiedenen Zweifler die Studienlage oft erstaunlich genau“ (tam da kararlı şüpheciler araştırma durumunu çoğu zaman şaşırtıcı derecede iyi biliyor), yalnızca araştırmaların satın alındığını düşünüyorlar. Onları ikna edebilecek olan „weniger eine weitere Broschüre“ (bir broşür daha değil), finansmanın açıklanması. Mölders (a) de medyadaki abartıyı eleştiriyor, ama şüphecilerin nasıl ikna edilebileceğinden söz etmiyor."
+        },
+        {
+          "number": 26,
+          "type": "zuordnung",
+          "prompt": "Das Ansehen der Wissenschaft hat in den letzten Jahren vor allem deshalb gelitten, weil es breiten Bevölkerungsschichten an naturwissenschaftlicher Bildung fehlt.",
+          "answer": "0",
+          "evidence": [
+            {
+              "text": "brennecke",
+              "quote": "geben das nicht her"
+            },
+            {
+              "text": "brennecke",
+              "quote": "Das ist ein Trugschluss"
+            }
+          ],
+          "explanation": "Bu ifade hiçbir yazara uymuyor; burada reddedilen bir açıklama söz konusu. Güven konusunu yalnızca Brennecke (c) ele alıyor. Önce güvenin azaldığını kabul etmiyor: on beş yıllık anketler bir güven krizini „geben das nicht her“ (göstermiyor). Ardından güvensizliğin bilgi eksikliğinden doğduğu varsayımına „Das ist ein Trugschluss“ (bu bir yanılgı) diyor. Habersaat (b) ve Zaunbrecher (e) güvensizliğin başka sebeplerinden (kesinlik taklidi, düzeltmelerin yanlış anlaşılması) söz ediyor, eğitim eksikliğinden değil."
+        },
+        {
+          "number": 27,
+          "type": "zuordnung",
+          "prompt": "Laien sollten nicht bloß Beobachtungen zusammentragen, sondern von Anfang an mitentscheiden dürfen, welchen Problemen man sich überhaupt widmet.",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "rielaender",
+              "quote": "Welche Fragen untersucht werden, legen die Fachleute vorab fest"
+            },
+            {
+              "text": "rielaender",
+              "quote": "Sie sollten daher schon an der Planung beteiligt werden"
+            }
+          ],
+          "explanation": "Rieländer (d), çoğu projede vatandaşların yalnızca ücretsiz veri toplayıcı olarak kullanıldığından yakınıyor: „Welche Fragen untersucht werden, legen die Fachleute vorab fest“ (hangi soruların araştırılacağını uzmanlar önceden belirliyor). Oysa katılımcılar enstitüde kimsenin düşünmediği ilişkilere dikkat çekmiş; bu yüzden „Sie sollten daher schon an der Planung beteiligt werden“ (bu nedenle daha planlama aşamasında katılmalılar). Brennecke (c) de halkın güvenini konu ediyor, ama vatandaşların araştırmaya katılmasından söz etmiyor."
+        },
+        {
+          "number": 28,
+          "type": "zuordnung",
+          "prompt": "Über Studien sollte erst dann in den Medien berichtet werden, wenn unabhängige Prüfer sie begutachtet haben.",
+          "answer": "0",
+          "evidence": [
+            {
+              "text": "zaunbrecher",
+              "quote": "Vorabdrucke deshalb aus der Berichterstattung zu verbannen, hielte ich für falsch"
+            }
+          ],
+          "explanation": "Bu ifade hiçbir yazara uymuyor; burada reddedilen bir çözüm söz konusu. Henüz incelenmemiş çalışmalardan yalnızca Zaunbrecher (e) söz ediyor ve bu öneriyi açıkça reddediyor: „Vorabdrucke deshalb aus der Berichterstattung zu verbannen, hielte ich für falsch“ (ön baskıları bu yüzden haberlerden çıkarmayı yanlış bulurdum), çünkü akut bir krizde aylarca beklenemez; gazeteler yalnızca bulguların geçici olduğunu belirtmeli. Mölders (a) de gazetecilerin kontrol etmesi gerektiğini söylüyor, ama hakem incelemesini beklemekten söz etmiyor."
+        },
+        {
+          "number": 29,
+          "type": "zuordnung",
+          "prompt": "Aufgebauschte Darstellungen von Forschungsergebnissen in den Medien haben ihren Ursprung häufig bereits in dem, was die Forschungsstätten selbst verbreiten.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "moelders",
+              "quote": "bereits in der Pressemitteilung des jeweiligen Instituts"
+            }
+          ],
+          "explanation": "Mölders (a), abartılı haberlerin suçunun ilk bakışta gazetecilerde olduğunu düşündürdüğünü, ama durumun o kadar basit olmadığını yazıyor: iki yüz haberin kaynağını izlediklerinde abartı vakaların yarısından fazlasında „bereits in der Pressemitteilung des jeweiligen Instituts“ (zaten ilgili enstitünün basın bülteninde) bulunuyordu. İfadedeki „was die Forschungsstätten selbst verbreiten“ (araştırma kurumlarının kendilerinin yaydığı şey) bunu karşılıyor. Zaunbrecher (e) de medyanın ön baskıları hemen haberleştirdiğini yazıyor, ama abartının kaynağından söz etmiyor."
+        },
+        {
+          "number": 30,
+          "type": "zuordnung",
+          "prompt": "Wer sich darum bemüht, Laien Wissen näherzubringen, verschafft sich dadurch für das berufliche Fortkommen an der Hochschule keinerlei Vorteil.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "habersaat",
+              "quote": "Bei Berufungen und Mittelanträgen zählen Publikationen"
+            },
+            {
+              "text": "habersaat",
+              "quote": "ohne dass es ihm irgendwo angerechnet würde"
+            }
+          ],
+          "explanation": "Habersaat (b), az sayıda araştırmacının akşam konferanslarına katılmasını şaşırtıcı bulmuyor: „Bei Berufungen und Mittelanträgen zählen Publikationen“ (atamalarda ve fon başvurularında yayınlar sayılıyor) ve cuma akşamlarını toplum salonlarında geçiren kişi buna daha az zaman ayırıyor, „ohne dass es ihm irgendwo angerechnet würde“ (bu ona hiçbir yerde artı puan olarak yazılmadan). Rieländer (d) de vatandaşlarla çalışmayı anlatıyor, ama bunun araştırmacının kariyerine etkisinden söz etmiyor."
+        }
+      ]
+    }
+  ]
+}

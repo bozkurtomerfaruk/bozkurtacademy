@@ -59,9 +59,9 @@
       "texts": [
         {
           "id": "bahnhof",
-          "title": "Bahnhof Ostheide",
+          "title": "Bahnhof Moosbrück",
           "paragraphs": [
-            "Heute ist der Fahrkartenschalter geschlossen. Fahrkarten gibt es am Automaten neben dem Eingang. Am Kiosk auf Gleis 2 bekommen Sie Zeitungen und Kaffee."
+            "Heute ist das Reisebüro im Bahnhof geschlossen. Fahrkarten gibt es nur am Automaten neben dem Eingang. Am Kiosk auf Gleis 2 bekommen Sie Zeitungen und Kaffee."
           ]
         }
       ],
@@ -71,8 +71,8 @@
           "type": "richtig-falsch",
           "prompt": "Heute kann man am Kiosk ein Ticket kaufen.",
           "answer": "falsch",
-          "evidence": [{ "text": "bahnhof", "quote": "Fahrkarten gibt es am Automaten neben dem Eingang." }],
-          "explanation": "Bilet (Fahrkarte / Ticket) bugün „am Automaten neben dem Eingang“ (girişin yanındaki otomatta) var. Kioskta ise sadece „Zeitungen und Kaffee“ (gazete ve kahve) var. Yani kioskta bilet alınmıyor."
+          "evidence": [{ "text": "bahnhof", "quote": "Fahrkarten gibt es nur am Automaten neben dem Eingang." }],
+          "explanation": "Bilet (Fahrkarte / Ticket) bugün „nur am Automaten neben dem Eingang“ (sadece girişin yanındaki otomatta) var. Kioskta ise sadece „Zeitungen und Kaffee“ (gazete ve kahve) var. Yani kioskta bilet alınmıyor."
         }
       ]
     },
@@ -81,7 +81,7 @@
       "texts": [
         {
           "id": "bibliothek",
-          "title": "Stadtbibliothek Weidental",
+          "title": "Stadtbibliothek Ulmenried",
           "paragraphs": [
             "Neu! Jeden Mittwoch um 15 Uhr: Geschichten für Kinder von 4 bis 7 Jahren. Wir sind im ersten Stock. Der Eintritt ist frei."
           ]
@@ -103,9 +103,9 @@
       "texts": [
         {
           "id": "hallenbad",
-          "title": "Hallenbad Seewinkel",
+          "title": "Hallenbad Kieselgrund",
           "paragraphs": [
-            "Am Dienstag ist das Bad nur für Schwimmkurse da. Mittwoch bis Sonntag: 10 bis 20 Uhr geöffnet. Am Montag ist das Bad zu."
+            "Am Dienstag ist das Bad nur für Schwimmkurse da. Mittwoch bis Sonntag: 10 bis 20 Uhr geöffnet. Montag: geschlossen."
           ]
         }
       ],
@@ -127,7 +127,7 @@
           "id": "laden",
           "title": "Maschenglück – Kleidung für Kinder",
           "paragraphs": [
-            "Liebe Kunden, unser Laden ist jetzt in der Bergstraße 14, neben der Apotheke. Am Marktplatz neben dem Supermarkt sind wir nicht mehr."
+            "Liebe Kunden, unser Laden ist jetzt in der Ahornstraße 14, neben der Apotheke. Am Marktplatz neben dem Supermarkt sind wir nicht mehr."
           ]
         }
       ],
@@ -137,8 +137,8 @@
           "type": "richtig-falsch",
           "prompt": "Das Geschäft ist jetzt neben dem Supermarkt.",
           "answer": "falsch",
-          "evidence": [{ "text": "laden", "quote": "unser Laden ist jetzt in der Bergstraße 14, neben der Apotheke" }],
-          "explanation": "Dükkân (Laden / Geschäft) şimdi „in der Bergstraße 14, neben der Apotheke“ (Bergstraße 14'te, eczanenin yanında). Süpermarketin yanındaki eski yer için metin: „sind wir nicht mehr“ (artık orada değiliz). Yani ifade yanlış."
+          "evidence": [{ "text": "laden", "quote": "unser Laden ist jetzt in der Ahornstraße 14, neben der Apotheke" }],
+          "explanation": "Dükkân (Laden / Geschäft) şimdi „in der Ahornstraße 14, neben der Apotheke“ (Ahornstraße 14'te, eczanenin yanında). Süpermarketin yanındaki eski yer için metin: „sind wir nicht mehr“ (artık orada değiliz). Yani ifade yanlış."
         }
       ]
     }

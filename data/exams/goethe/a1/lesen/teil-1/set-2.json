@@ -1,0 +1,92 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Einladung zum Essen",
+  "minutes": 8,
+  "instructions": "Lesen Sie die zwei Texte und die Aufgaben 1 bis 5. Sind die Aussagen richtig oder falsch? Kreuzen Sie an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "einladung",
+          "title": "E-Mail",
+          "paragraphs": [
+            "Hallo Ilka,",
+            "am Samstag habe ich Geburtstag, und ich koche für ein paar Freunde. Kommst du auch? Wir essen um 19 Uhr bei mir. Ich mache eine Gemüsesuppe und Pizza. Kannst du bitte einen Salat mitbringen? Getränke habe ich. Meine Adresse ist Lindenweg 14, dritter Stock. Du kannst mit dem Bus Nummer 23 fahren. Die Haltestelle heißt „Am Teich“.",
+            "Liebe Grüße, Radek"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Radek feiert am Wochenende Geburtstag.",
+          "answer": "richtig",
+          "evidence": [{ "text": "einladung", "quote": "am Samstag habe ich Geburtstag" }],
+          "explanation": "Radek yazıyor: „am Samstag habe ich Geburtstag“ (cumartesi doğum günüm). Cumartesi hafta sonudur („Wochenende“). İfade doğru."
+        },
+        {
+          "number": 1,
+          "type": "richtig-falsch",
+          "prompt": "Radek hat schon etwas zu trinken.",
+          "answer": "richtig",
+          "evidence": [{ "text": "einladung", "quote": "Getränke habe ich." }],
+          "explanation": "Metinde: „Getränke habe ich“ (İçecekler bende var). „Getränke“ = içecek, „etwas zu trinken“ (içecek bir şey). İfade doğru."
+        },
+        {
+          "number": 2,
+          "type": "richtig-falsch",
+          "prompt": "Ilka steigt an der Haltestelle „Lindenweg“ aus.",
+          "answer": "falsch",
+          "evidence": [{ "text": "einladung", "quote": "Die Haltestelle heißt „Am Teich“." }],
+          "explanation": "Durağın adı „Am Teich“. „Lindenweg 14“ ise Radek'in adresi, yani sokağın adı. Durak yanlış, ifade yanlış."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "sms",
+          "title": "SMS",
+          "paragraphs": [
+            "Hallo Ilka, ich habe neue Informationen für Samstag: Meine Küche ist kaputt. Wir essen nicht bei mir, wir gehen ins Restaurant „Olivenbaum“ am Marktplatz. Wir treffen uns dort um halb acht, nicht um 19 Uhr. Du musst keinen Salat mitbringen. Mein Bruder Dawid kommt auch mit. Bis Samstag! Radek"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 3,
+          "type": "richtig-falsch",
+          "prompt": "Ilka und Radek treffen sich um 19 Uhr im Restaurant.",
+          "answer": "falsch",
+          "evidence": [{ "text": "sms", "quote": "Wir treffen uns dort um halb acht, nicht um 19 Uhr." }],
+          "explanation": "Saat değişti. SMS'te: „um halb acht, nicht um 19 Uhr“ (yedi buçukta, saat 19'da değil). Buluşma 19.30'da. İfade yanlış."
+        },
+        {
+          "number": 4,
+          "type": "richtig-falsch",
+          "prompt": "Radek kann zu Hause nicht kochen.",
+          "answer": "richtig",
+          "evidence": [{ "text": "sms", "quote": "Meine Küche ist kaputt." }],
+          "explanation": "Radek yazıyor: „Meine Küche ist kaputt“ (Mutfağım bozuk). Sonra: „Wir essen nicht bei mir“ (Bende yemiyoruz). Bozuk mutfakta yemek yapılamaz. İfade doğru."
+        },
+        {
+          "number": 5,
+          "type": "richtig-falsch",
+          "prompt": "Die Schwester von Radek kommt auch zum Essen.",
+          "answer": "falsch",
+          "evidence": [{ "text": "sms", "quote": "Mein Bruder Dawid kommt auch mit." }],
+          "explanation": "Metinde: „Mein Bruder Dawid“ (erkek kardeşim Dawid). Kız kardeş („Schwester“) değil, erkek kardeş („Bruder“) geliyor. İfade yanlış."
+        }
+      ]
+    }
+  ]
+}

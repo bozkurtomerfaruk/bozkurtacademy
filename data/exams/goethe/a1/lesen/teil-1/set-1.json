@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-1",
+  "title": "Grüße aus dem Urlaub",
+  "minutes": 8,
+  "instructions": "Lesen Sie die zwei Texte und die Aufgaben 1 bis 5. Sind die Aussagen richtig oder falsch? Kreuzen Sie an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "email",
+          "title": "E-Mail",
+          "paragraphs": [
+            "Liebe Gesine,",
+            "viele Grüße aus Sandeck! Ich bin seit Samstag hier am Meer. Das Wetter ist super, es ist warm und die Sonne scheint. Mein Hotel ist klein, aber schön. Mein Zimmer hat einen Balkon. Das Essen im Hotel ist nicht so gut. Ich esse am Abend im Restaurant „Fischerhaus“. Dort gibt es frischen Fisch. Am Freitag fahre ich wieder nach Hause.",
+            "Bis bald! Rieke"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Rieke ist seit Sonntag in Sandeck.",
+          "answer": "falsch",
+          "evidence": [{ "text": "email", "quote": "Ich bin seit Samstag hier am Meer." }],
+          "explanation": "Rieke yazıyor: „seit Samstag“ (cumartesiden beri). İfadede pazar (Sonntag) var. Gün yanlış, ifade yanlış."
+        },
+        {
+          "number": 1,
+          "type": "richtig-falsch",
+          "prompt": "Rieke isst am Abend im Hotel.",
+          "answer": "falsch",
+          "evidence": [{ "text": "email", "quote": "Ich esse am Abend im Restaurant „Fischerhaus“." }],
+          "explanation": "Rieke akşam otelde yemiyor. Metinde: „im Restaurant Fischerhaus“ (Fischerhaus restoranında). Otelin yemeği için „nicht so gut“ (pek iyi değil) diyor. İfade yanlış."
+        },
+        {
+          "number": 2,
+          "type": "richtig-falsch",
+          "prompt": "Rieke kommt am Freitag zurück.",
+          "answer": "richtig",
+          "evidence": [{ "text": "email", "quote": "Am Freitag fahre ich wieder nach Hause." }],
+          "explanation": "Metinde: „Am Freitag fahre ich wieder nach Hause“ (Cuma günü tekrar eve gidiyorum). Eve gitmek = geri gelmek („zurückkommen“). İfade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "notiz",
+          "title": "Notiz",
+          "paragraphs": [
+            "Liebe Frau Haverkamp,",
+            "ich bin ab morgen zwei Wochen im Urlaub in den Bergen. Können Sie bitte meinen Blumen Wasser geben? Zweimal in der Woche ist genug. Den Schlüssel bekommen Sie heute Abend von meinem Sohn Jaro. Bitte holen Sie auch meine Post.",
+            "Vielen Dank! Kofi Amankwah"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 3,
+          "type": "richtig-falsch",
+          "prompt": "Herr Amankwah ist eine Woche weg.",
+          "answer": "falsch",
+          "evidence": [{ "text": "notiz", "quote": "ich bin ab morgen zwei Wochen im Urlaub in den Bergen" }],
+          "explanation": "Herr Amankwah yazıyor: „zwei Wochen im Urlaub“ (iki hafta tatilde). İfadede bir hafta (eine Woche) var. Süre yanlış, ifade yanlış."
+        },
+        {
+          "number": 4,
+          "type": "richtig-falsch",
+          "prompt": "Jaro gibt Frau Haverkamp den Schlüssel.",
+          "answer": "richtig",
+          "evidence": [{ "text": "notiz", "quote": "Den Schlüssel bekommen Sie heute Abend von meinem Sohn Jaro." }],
+          "explanation": "Metinde: „Den Schlüssel bekommen Sie heute Abend von meinem Sohn Jaro“ (Anahtarı bu akşam oğlum Jaro'dan alıyorsunuz). Frau Haverkamp anahtarı Jaro'dan alıyor, yani Jaro anahtarı ona veriyor („gibt“). İfade doğru."
+        },
+        {
+          "number": 5,
+          "type": "richtig-falsch",
+          "prompt": "Frau Haverkamp soll auch die Briefe von Herrn Amankwah nehmen.",
+          "answer": "richtig",
+          "evidence": [{ "text": "notiz", "quote": "Bitte holen Sie auch meine Post." }],
+          "explanation": "Herr Amankwah rica ediyor: „Bitte holen Sie auch meine Post“ (Lütfen postamı da alın). „Post“ = mektuplar („Briefe“). „Bitte“ bir rica, bu yüzden ifadede „soll“ (-meli, isteniyor) var. İfade doğru."
+        }
+      ]
+    }
+  ]
+}

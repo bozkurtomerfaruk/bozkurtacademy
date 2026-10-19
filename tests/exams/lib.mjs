@@ -14,8 +14,8 @@ export const B = process.env.BASE || 'http://localhost:8765/index.html';
 export const shotDir = process.env.S || fs.mkdtempSync(path.join(os.tmpdir(), 'exam-shots-'));
 export const shot = name => path.join(shotDir, name);
 
-export const FOLDER = { b1: 'goethe/b1', a2: 'goethe/a2', b2: 'goethe/b2', dtz: 'dtz/a2-b1' };
-export const ROUTE = { b1: 'goethe/b1', a2: 'goethe/a2', b2: 'goethe/b2', dtz: 'dtz' };
+export const FOLDER = { a1: 'goethe/a1', b1: 'goethe/b1', a2: 'goethe/a2', b2: 'goethe/b2', dtz: 'dtz/a2-b1' };
+export const ROUTE = { a1: 'goethe/a1', b1: 'goethe/b1', a2: 'goethe/a2', b2: 'goethe/b2', dtz: 'dtz' };
 const dir = (level, t) => `data/exams/${FOLDER[level]}/lesen/teil-${t}`;
 export const teileOf = level => fs.readdirSync(`data/exams/${FOLDER[level]}/lesen`).filter(n => /^teil-\d+$/.test(n)).length;
 export const setsOf = (level, t) => fs.readdirSync(dir(level, t)).filter(n => /^set-\d+\.json$/.test(n)).length;

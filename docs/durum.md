@@ -2,6 +2,21 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-10-19 · Goethe A1 Lesen (Start Deutsch 1)
+
+**Format:** Senin verdiğin format kullanıldı (3 Teil, 1–15, her Teil'de örnek 0). Resmi Übungssatz PDF'i bu ortamdan açılamadı (vekil sunucu 403); bildiğim resmi formatla çelişen bir nokta yok.
+
+**Kararlar:**
+- Süreler 8/8/9 dakika (toplam 25).
+- Teil 1'de iki metin ayrı gruplarda: 0–2 birinci metne, 3–5 ikinci metne ait.
+- Teil 2'de her soru kendi grubunda iki ilanla (`a`/`b`, `"none": false`). Oynatıcı bu soruları açılır liste yerine a/b düğmeleriyle ve ilan başlıklarıyla gösteriyor (küçük eklenti). check-exams metin id'lerinin bütün sette tekil olmasını denetliyor.
+- Teil 3'te her tabela ve ifade ayrı grupta.
+- examsData.js önbellek sürümü v=4'e çıkarıldı; önceki birleştirmelerde artırılmamıştı.
+
+**Pilot:** Her Teil için 2 set; inceleyici A1 üstü kelimeleri ve gerçek yer adlarını değiştirdi, kör çözüm 30/30 uyuştu. Kör çözücünün notlarından 2.2/9 ("Guten Morgen" ipucu), 3.2/11 (metni tekrarlayan ifade) ve 3.2/14 ("buchen") düzeltildi.
+
+**Kör çözücünün düzeltmediğim notları (pilot):** 2.1/9'da doğru ilan durumdaki yer adıyla bulunuyor; yer ayrıntısı bu sorunun çeldirici mantığı. 2.2/8 ve 2.2/10 çok kolay. 1.1/5'te „die Briefe … nehmen“ biraz kaba ama A1'de doğru.
+
 ## 2026-10-19 · DTZ Lesen 5 sete tamamlandı
 
 **Yapılanlar:** Teil 1 (yakın çeldirici) ve Teil 5 (dilbilgisi + anlam boşlukları karışık) kuralları docs/sinav-setleri.md'ye eklendi. Pilotta 1.1/23, 1.1/25, 1.2/25 yeniden yazıldı; 2.1/28'de ilan çamaşır makinesini açıkça söylüyor. Her Teil'e 3 yeni set (toplam 15) yazıldı, iki inceleyici düzeltti, bağlamsız alt ajan kör çözdü: 51/51 uyuşma. Tarayıcı testleri `tests/exams/` altına taşındı; ekran görüntüleri `$S` yoksa repo dışında geçici bir klasöre kaydediliyor, `.gitignore`'da `undefined/` var.

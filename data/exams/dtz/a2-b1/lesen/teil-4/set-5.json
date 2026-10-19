@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-5",
+  "title": "Hausordnung der Wohnanlage",
+  "minutes": 7,
+  "instructions": "Lesen Sie den Text und die Aufgaben 37 bis 39. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "blatt",
+          "title": "Hausordnung der Wohnanlage Lerchenfeld",
+          "byline": "Hausverwaltung Brandhorst, Lindbrück",
+          "paragraphs": [
+            "Liebe Bewohnerinnen und Bewohner, damit sich alle in unserer Wohnanlage wohlfühlen, beachten Sie bitte diese Regeln.",
+            { "heading": "Ruhezeiten" },
+            "Mittagsruhe ist von 13 bis 15 Uhr, Nachtruhe von 22 bis 7 Uhr. Am Sonntag und an Feiertagen ist den ganzen Tag Ruhe.",
+            { "heading": "Treppenhaus und Keller" },
+            "Fahrräder, Kinderwagen und Schuhe dürfen nicht im Treppenhaus stehen. Für Kinderwagen gibt es einen Raum direkt neben dem Hauseingang, Fahrräder gehören in den Fahrradkeller. Die Kellertür muss immer abgeschlossen sein.",
+            { "heading": "Müll" },
+            "Bitte trennen Sie Ihren Müll: Papier in die blaue Tonne, Verpackungen in die gelbe Tonne, Essensreste in die braune Tonne. Alte Möbel stellen Sie bitte nicht neben die Tonnen. Fragen dazu beantwortet unser Hausmeister, Herr Petrović.",
+            { "heading": "Balkon und Grillen" },
+            "Mit Holzkohle dürfen Sie auf dem Balkon nicht grillen, ein Elektrogrill ist erlaubt. Für Feste können Sie den Grillplatz im Hof bei der Hausverwaltung reservieren.",
+            { "heading": "Spielplatz und Haustiere" },
+            "Der Spielplatz ist für Kinder bis zwölf Jahre und von 8 bis 20 Uhr geöffnet. Hunde dürfen nicht auf den Spielplatz. Wer einen Hund halten möchte, braucht die Erlaubnis der Hausverwaltung.",
+            { "heading": "Waschraum" },
+            "Die Waschmaschinen im Keller können Sie von 7 bis 21 Uhr benutzen. Tragen Sie sich bitte vorher mit Namen und Uhrzeit in den Plan an der Tür ein. Am Sonntag bleibt der Waschraum geschlossen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 37,
+          "type": "abc",
+          "prompt": "Was steht in der Hausordnung über das Treppenhaus und den Keller?",
+          "options": {
+            "a": "Fahrräder kann man im Raum neben dem Hauseingang abstellen.",
+            "b": "Kinderwagen haben einen eigenen Platz in der Nähe der Haustür.",
+            "c": "Schuhe darf man vor der Wohnungstür im Treppenhaus lassen."
+          },
+          "answer": "b",
+          "evidence": [{ "text": "blatt", "quote": "Für Kinderwagen gibt es einen Raum direkt neben dem Hauseingang" }],
+          "explanation": "Bebek arabaları için binanın girişinin hemen yanında bir oda var: „Für Kinderwagen gibt es einen Raum direkt neben dem Hauseingang“. a) yanlış: Girişin yanındaki oda bebek arabaları için; bisikletler bisiklet bodrumuna konuyor: „Fahrräder gehören in den Fahrradkeller“. c) yanlış: Ayakkabılar merdiven boşluğunda duramaz: „Fahrräder, Kinderwagen und Schuhe dürfen nicht im Treppenhaus stehen.“"
+        },
+        {
+          "number": 38,
+          "type": "abc",
+          "prompt": "Was gilt für das Grillen?",
+          "options": {
+            "a": "Mit einem elektrischen Grill darf man auf dem Balkon grillen.",
+            "b": "Den Grillplatz im Hof kann man beim Hausmeister reservieren.",
+            "c": "Grillen mit Holzkohle ist auf dem Balkon bis 20 Uhr erlaubt."
+          },
+          "answer": "a",
+          "evidence": [{ "text": "blatt", "quote": "ein Elektrogrill ist erlaubt" }],
+          "explanation": "Balkonda elektrikli mangal kullanmak serbest: „ein Elektrogrill ist erlaubt“. b) yanlış: Avludaki mangal yeri kapıcıdan değil, site yönetiminden ayırtılıyor: „bei der Hausverwaltung reservieren“. Kapıcı Bay Petrović çöple ilgili soruları yanıtlıyor. c) yanlış: Kömürle balkonda hiç mangal yapılamaz: „Mit Holzkohle dürfen Sie auf dem Balkon nicht grillen“. Saat 20, oyun parkının kapanış saati: „von 8 bis 20 Uhr geöffnet“."
+        },
+        {
+          "number": 39,
+          "type": "abc",
+          "prompt": "Was erfährt man über den Waschraum?",
+          "options": {
+            "a": "Man kann ihn an allen Tagen der Woche bis 21 Uhr benutzen.",
+            "b": "Man muss sich dafür bei der Hausverwaltung anmelden.",
+            "c": "Vor dem Waschen soll man seinen Namen und die Zeit auf einer Liste notieren."
+          },
+          "answer": "c",
+          "evidence": [{ "text": "blatt", "quote": "Tragen Sie sich bitte vorher mit Namen und Uhrzeit in den Plan an der Tür ein." }],
+          "explanation": "Çamaşır makinesini kullanmadan önce kapıdaki çizelgeye ad ve saat yazılmalı: „Tragen Sie sich bitte vorher mit Namen und Uhrzeit in den Plan an der Tür ein.“ a) yanlış: Çamaşırhane her gün açık değil, pazar günü kapalı: „Am Sonntag bleibt der Waschraum geschlossen.“ b) yanlış: Çamaşırhane için site yönetimine değil, kapıdaki çizelgeye yazılmak gerekiyor. Site yönetiminden izin, köpek beslemek için gerekiyor: „braucht die Erlaubnis der Hausverwaltung“."
+        }
+      ]
+    }
+  ]
+}

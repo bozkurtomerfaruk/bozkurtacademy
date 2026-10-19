@@ -7,7 +7,7 @@
   "set": "set-4",
   "title": "Kurse und Beratung",
   "minutes": 10,
-  "context": "Mehrere Personen suchen in Lindbrück und Hagenwald einen Kurs oder eine Beratung. Sie lesen die Anzeigen im Programmheft „Lernen und Leben“.",
+  "context": "Mehrere Personen suchen in Lindbrück und Hagenwald einen Kurs oder eine Beratung. Die Anzeigen stehen im Programmheft „Lernen und Leben“.",
   "instructions": "Lesen Sie die Situationen 26 bis 30 und die Anzeigen a bis h. Welche Anzeige passt zu welcher Situation? Sie können jede Anzeige nur einmal wählen. Die Anzeige aus dem Beispiel können Sie nicht mehr wählen. Für eine Situation gibt es keine passende Anzeige. In diesem Fall wählen Sie X.",
   "groups": [
     {
@@ -43,7 +43,7 @@
           "label": "d",
           "title": "Lerntreff Kompass",
           "paragraphs": [
-            "Nachhilfe für Schülerinnen und Schüler der Klassen 5 bis 10 in Mathe, Deutsch und Englisch. Wir bereiten auch auf die Prüfungen zum Hauptschul- und Realschulabschluss vor. Unterricht in kleinen Gruppen, montags bis freitags von 14 bis 17 Uhr. 15 Euro pro Stunde. Mühlenstraße 9, Lindbrück."
+            "Nachhilfe für Schülerinnen und Schüler der Klassen 5 bis 10 in Mathe, Deutsch und Englisch. Wir bereiten auch auf die Prüfungen zum Hauptschul- und Realschulabschluss vor. Unterricht in kleinen Gruppen, montags bis freitags von 14 bis 17 Uhr. 15 Euro pro Stunde. Hirtengasse 9, Lindbrück."
           ]
         },
         {
@@ -57,7 +57,7 @@
         {
           "id": "f",
           "label": "f",
-          "title": "Migrationsberatung im Stadtteilhaus Lerchenhof",
+          "title": "Migrationsberatung im Stadtteilhaus Rabenhorst",
           "paragraphs": [
             "Sie leben noch nicht lange in Deutschland? Wir beraten Sie kostenlos zu Fragen rund um Aufenthalt, Arbeitserlaubnis und Familiennachzug. Wir erklären Ihnen, welche Unterlagen Sie brauchen, und helfen beim Ausfüllen von Anträgen für die Ausländerbehörde. Offene Sprechstunde dienstags von 9 bis 12 Uhr, sonst mit Termin."
           ]
@@ -65,9 +65,9 @@
         {
           "id": "g",
           "label": "g",
-          "title": "Lohnsteuerhilfe Ostwall e. V.",
+          "title": "Lohnsteuerhilfe Rotdorn e. V.",
           "paragraphs": [
-            "Holen Sie sich Ihr Geld vom Finanzamt zurück! Wir machen die Steuererklärung für Arbeitnehmer, Rentner und Familien. Sie bringen Ihre Lohnabrechnungen und Belege mit, wir erledigen den Rest. Jahresbeitrag je nach Einkommen ab 59 Euro. Beratungsstelle Bahnhofstraße 21, Termine unter Tel. 05431 47 560."
+            "Holen Sie sich Ihr Geld vom Finanzamt zurück! Wir machen die Steuererklärung für Arbeitnehmer, Rentner und Familien. Sie bringen Ihre Lohnabrechnungen und Belege mit, wir erledigen den Rest. Jahresbeitrag je nach Einkommen ab 59 Euro. Beratungsstelle Elsterweg 21, Termine unter Tel. 05431 47 560."
           ]
         },
         {
@@ -100,18 +100,18 @@
         {
           "number": 27,
           "type": "zuordnung",
-          "prompt": "Darius ist 26 und hat in seinem Heimatland nach der 8. Klasse aufgehört, zur Schule zu gehen. Tagsüber arbeitet er auf dem Bau. Nach der Arbeit möchte er wieder lernen und ein Zeugnis bekommen, mit dem er eine Ausbildung beginnen kann.",
+          "prompt": "Darius ist 26 und hat in seinem Heimatland nach der 8. Klasse aufgehört, zur Schule zu gehen. Tagsüber arbeitet er auf dem Bau. Nach der Arbeit möchte er noch einmal lernen und in Deutschland ein Schulzeugnis bekommen.",
           "answer": "h",
           "evidence": [{ "text": "h", "quote": "können Erwachsene ab 18 Jahren neben dem Beruf den Hauptschul- oder Realschulabschluss machen" }, { "text": "h", "quote": "Unterricht montags bis donnerstags von 18 bis 21.30 Uhr." }],
-          "explanation": "h ilanındaki akşam okulunda „Erwachsene ab 18 Jahren neben dem Beruf“ ortaokul diploması (Hauptschul- oder Realschulabschluss) alabiliyor. Dersler akşam: „montags bis donnerstags von 18 bis 21.30 Uhr“. Darius 26 yaşında, gündüz inşaatta çalışıyor ve işten sonra bir diploma almak istiyor. Tuzak d: Orada da Hauptschulabschluss sınavına hazırlık var, ama ders „Schülerinnen und Schüler der Klassen 5 bis 10“ için ve öğleden sonra 14–17 arası; Darius o saatlerde çalışıyor."
+          "explanation": "h ilanındaki akşam okulunda „Erwachsene ab 18 Jahren neben dem Beruf“ ortaokul diploması (Hauptschul- oder Realschulabschluss) alabiliyor. Dersler akşam: „montags bis donnerstags von 18 bis 21.30 Uhr“. Darius 26 yaşında, gündüz inşaatta çalışıyor ve işten sonra Almanya'da bir okul diploması almak istiyor. Tuzak d: Orada da Hauptschulabschluss sınavına hazırlık var, ama ders „Schülerinnen und Schüler der Klassen 5 bis 10“ için ve öğleden sonra 14–17 arası; Darius o saatlerde çalışıyor."
         },
         {
           "number": 28,
           "type": "zuordnung",
-          "prompt": "Herr Petrović ist 68 Jahre alt. Zum Geburtstag haben ihm seine Kinder ein modernes Telefon geschenkt. Er möchte lernen, wie er damit seine Enkel in Serbien nicht nur hören, sondern beim Sprechen auch sehen kann.",
+          "prompt": "Herr Radovanović ist 68 Jahre alt. Zum Geburtstag haben ihm seine Kinder ein modernes Telefon geschenkt. Er möchte lernen, wie er damit seine Enkel in Serbien nicht nur hören, sondern beim Sprechen auch sehen kann.",
           "answer": "c",
           "evidence": [{ "text": "c", "quote": "zeigen Ihnen junge Freiwillige, wie Sie Fotos verschicken, Videoanrufe machen oder Bustickets mit einer App kaufen" }],
-          "explanation": "c ilanında yaşlılar için akıllı telefon buluşması var: Gönüllüler „wie Sie … Videoanrufe machen“ gösteriyor, yani görüntülü konuşmayı. Bay Petrović 68 yaşında ve yeni telefonuyla torunlarını konuşurken görmek istiyor. Diğer ilanlarda telefon kullanmayı öğreten bir kurs yok: a Almanca sınavına, d okul derslerine, h okul diplomasına hazırlıyor."
+          "explanation": "c ilanında yaşlılar için akıllı telefon buluşması var: Gönüllüler „wie Sie … Videoanrufe machen“ gösteriyor, yani görüntülü konuşmayı. Bay Radovanović 68 yaşında ve yeni telefonuyla torunlarını konuşurken görmek istiyor. Diğer ilanlarda telefon kullanmayı öğreten bir kurs yok: a Almanca sınavına, d okul derslerine, h okul diplomasına hazırlıyor."
         },
         {
           "number": 29,
@@ -124,7 +124,7 @@
         {
           "number": 30,
           "type": "zuordnung",
-          "prompt": "Seit Daniela ihre Arbeit verloren hat, kann sie die Raten für ihr Sofa und die Handyrechnung nicht mehr bezahlen. Jeden Monat kommen neue Zahlungserinnerungen. Sie braucht Hilfe, damit sie ihre Geldprobleme wieder in den Griff bekommt.",
+          "prompt": "Seit Daniela ihre Arbeit verloren hat, kann sie die Raten für ihr Sofa und die Handyrechnung nicht mehr bezahlen. Jeden Monat kommen neue Zahlungserinnerungen. Daniela braucht Hilfe, damit sie ihre Geldprobleme wieder in den Griff bekommt.",
           "answer": "e",
           "evidence": [{ "text": "e", "quote": "Sie bekommen Mahnungen und wissen nicht mehr, wie Sie Ihre Rechnungen bezahlen sollen?" }, { "text": "e", "quote": "machen mit Ihnen einen Plan für die Rückzahlung" }],
           "explanation": "e ilanındaki borç danışmanlığı ödeme hatırlatmaları (Mahnungen) alan ve faturalarını ödeyemeyen kişilere yardım ediyor: Borçlara genel bir bakış hazırlıyor, firmalarla konuşuyor ve „einen Plan für die Rückzahlung“ yapıyor. Daniela da taksitlerini ve telefon faturasını ödeyemiyor. Tuzak g: Orada da para konusu var, ama dernek vergi beyannamesi yapıyor („Holen Sie sich Ihr Geld vom Finanzamt zurück!“); borçlarla ilgili yardım değil."

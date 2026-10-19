@@ -7,7 +7,7 @@
   "set": "set-5",
   "title": "Hilfe im Alltag",
   "minutes": 10,
-  "context": "Mehrere Personen in Lindbrück, Hagenwald und Wehrheide brauchen Hilfe im Alltag. Sie lesen die Anzeigen in der Stadtteilzeitung „Nachbarn aktuell“.",
+  "context": "Mehrere Personen in Lindbrück, Hagenwald und Wehrheide brauchen Hilfe im Alltag. Die Anzeigen stehen in der Stadtteilzeitung „Nachbarn aktuell“.",
   "instructions": "Lesen Sie die Situationen 26 bis 30 und die Anzeigen a bis h. Welche Anzeige passt zu welcher Situation? Sie können jede Anzeige nur einmal wählen. Die Anzeige aus dem Beispiel können Sie nicht mehr wählen. Für eine Situation gibt es keine passende Anzeige. In diesem Fall wählen Sie X.",
   "groups": [
     {
@@ -19,13 +19,13 @@
           "label": "a",
           "title": "Reparatur-Café Schraubzwinge",
           "paragraphs": [
-            "Ihr Toaster, Ihre Lampe oder Ihr Fahrrad ist kaputt? Nicht gleich wegwerfen! Jeden ersten Samstag im Monat reparieren ehrenamtliche Helfer mit Ihnen zusammen kleine Geräte, Kleidung und Fahrräder. Sie bezahlen nur die Ersatzteile, über eine Spende freuen wir uns. Bitte bringen Sie das Gerät mit. Gemeindehaus Wiesengrund, Hagenwald, 10–14 Uhr."
+            "Ihr Toaster, Ihre Lampe oder Ihr Fahrrad ist kaputt? Nicht gleich wegwerfen! Jeden ersten Samstag im Monat reparieren ehrenamtliche Helfer mit Ihnen zusammen kleine Geräte, Kleidung und Fahrräder. Sie bezahlen nur die Ersatzteile, über eine Spende freuen wir uns. Bitte bringen Sie das Gerät mit. Gemeindehaus Distelfeld, Hagenwald, 10–14 Uhr."
           ]
         },
         {
           "id": "b",
           "label": "b",
-          "title": "Elektro Kaltenbach – Haushaltsgeräte",
+          "title": "Elektro Hollerbeck – Haushaltsgeräte",
           "paragraphs": [
             "Ihre alte Waschmaschine macht nicht mehr mit? Bei uns finden Sie Waschmaschinen, Trockner und Kühlschränke von vielen Herstellern zu fairen Preisen. Wir liefern das neue Gerät, schließen es an und nehmen das alte mit. Reparaturen bieten wir leider nicht an. Montag bis Samstag von 9 bis 19 Uhr, Industriestraße 7, Lindbrück."
           ]
@@ -35,7 +35,7 @@
           "label": "c",
           "title": "Sprachmittler-Netzwerk Lindbrück",
           "paragraphs": [
-            "Sie haben einen Termin beim Amt, beim Jobcenter oder in der Schule Ihrer Kinder und verstehen noch nicht gut Deutsch? Unsere ehrenamtlichen Sprachmittlerinnen und Sprachmittler gehen mit Ihnen hin und übersetzen das Gespräch mündlich, zum Beispiel auf Arabisch, Farsi oder Ukrainisch. Kostenlos. Bitte melden Sie sich mindestens eine Woche vorher: Tel. 05431 39 271."
+            "Sie haben einen Termin beim Amt, beim Jobcenter oder in der Schule Ihrer Kinder und verstehen noch nicht gut Deutsch? Unsere ehrenamtlichen Sprachmittlerinnen und Sprachmittler gehen mit Ihnen hin und übersetzen das Gespräch mündlich, zum Beispiel auf Arabisch, Persisch (Farsi) oder Ukrainisch. Kostenlos. Bitte melden Sie sich mindestens eine Woche vorher: Tel. 05431 39 271."
           ]
         },
         {
@@ -65,7 +65,7 @@
         {
           "id": "g",
           "label": "g",
-          "title": "Winterdienst und Gartenhilfe Kehrwieder",
+          "title": "Winterdienst und Gartenhilfe Flinkbesen",
           "paragraphs": [
             "Schnee und Eis vor dem Haus? Wir räumen und streuen für Sie den Gehweg vor Ihrem Haus, jeden Morgen vor 7 Uhr, auch am Wochenende. Im Sommer mähen wir Ihren Rasen und schneiden Hecken. Preis für den ganzen Winter: ab 180 Euro. Wir arbeiten in Lindbrück, Hagenwald und Wehrheide."
           ]
@@ -84,18 +84,18 @@
           "number": 0,
           "example": true,
           "type": "zuordnung",
-          "prompt": "Bei Familie Osei geht seit gestern Abend das Internet nicht mehr. Sie möchte, dass ein Techniker zu ihr in die Wohnung kommt und den Fehler findet.",
+          "prompt": "Bei Familie Mensah geht seit gestern Abend das Internet nicht mehr. Die Familie möchte, dass ein Techniker zu ihr in die Wohnung kommt und den Fehler findet.",
           "answer": "h",
           "evidence": [{ "text": "h", "quote": "Wir kommen zu Ihnen nach Hause und lösen das Problem" }],
-          "explanation": "h ilanındaki bilgisayar servisi WLAN (kablosuz internet) çalışmadığında yardım ediyor: „Wir kommen zu Ihnen nach Hause und lösen das Problem“. Osei ailesinin interneti çalışmıyor ve evine bir teknisyen gelmesini istiyor. Bu ilan örnekte kullanıldığı için başka bir durum için seçilemez."
+          "explanation": "h ilanındaki bilgisayar servisi WLAN (kablosuz internet) çalışmadığında yardım ediyor: „Wir kommen zu Ihnen nach Hause und lösen das Problem“. Mensah ailesinin interneti çalışmıyor ve evine bir teknisyen gelmesini istiyor. Bu ilan örnekte kullanıldığı için başka bir durum için seçilemez."
         },
         {
           "number": 26,
           "type": "zuordnung",
-          "prompt": "Frau Kowalczyk wohnt in Hagenwald im dritten Stock ohne Aufzug. Sie hat sich das Bein gebrochen und kann einige Wochen keine schweren Taschen tragen. Sie sucht jemanden, der ihr Brot, Obst und Milch nach Hause bringt.",
+          "prompt": "Frau Zielińska wohnt in Hagenwald im dritten Stock ohne Aufzug. Vor einer Woche ist ihr Knie operiert worden, und noch einige Wochen kann sie keine schweren Taschen tragen. Deshalb sucht sie jemanden, der ihr Brot, Obst und Milch nach Hause bringt.",
           "answer": "d",
           "evidence": [{ "text": "d", "quote": "am Nachmittag bringen wir Ihnen die Lebensmittel bis an die Wohnungstür" }, { "text": "d", "quote": "Montag bis Freitag, nur in Hagenwald." }],
-          "explanation": "d ilanındaki alışveriş yardımı, ameliyattan sonra veya yaşlılık nedeniyle alışverişe gidemeyenler için: „am Nachmittag bringen wir Ihnen die Lebensmittel bis an die Wohnungstür“. Hizmet „nur in Hagenwald“, Bayan Kowalczyk da Hagenwald'da oturuyor ve bacağı kırık olduğu için ağır çanta taşıyamıyor. Tuzak e: Temizlikçi de düzenli olarak eve geliyor, ama yalnızca daireyi temizliyor ve ütü yapıyor; alışverişten söz edilmiyor."
+          "explanation": "d ilanındaki alışveriş yardımı, ameliyattan sonra veya yaşlılık nedeniyle alışverişe gidemeyenler için: „am Nachmittag bringen wir Ihnen die Lebensmittel bis an die Wohnungstür“. Hizmet „nur in Hagenwald“, Bayan Zielińska da Hagenwald'da oturuyor, bir hafta önce dizinden ameliyat oldu ve ağır çanta taşıyamıyor. Tuzak e: Temizlikçi de düzenli olarak eve geliyor, ama yalnızca daireyi temizliyor ve ütü yapıyor; alışverişten söz edilmiyor."
         },
         {
           "number": 27,
@@ -124,9 +124,9 @@
         {
           "number": 30,
           "type": "zuordnung",
-          "prompt": "Nadia hat in drei Wochen einen Termin bei der Ausländerbehörde. Ihr Deutsch reicht für ein so wichtiges Gespräch noch nicht. Sie wünscht sich, dass eine Person dabei ist, die Persisch spricht und ihr dort alles erklärt.",
+          "prompt": "Nadia hat in drei Wochen einen Termin bei der Ausländerbehörde. Für ein so wichtiges Gespräch reicht ihr Deutsch noch nicht. Deshalb wünscht sie sich, dass eine Person dabei ist, die Persisch spricht und ihr dort alles erklärt.",
           "answer": "c",
-          "evidence": [{ "text": "c", "quote": "gehen mit Ihnen hin und übersetzen das Gespräch mündlich, zum Beispiel auf Arabisch, Farsi oder Ukrainisch" }, { "text": "c", "quote": "Bitte melden Sie sich mindestens eine Woche vorher" }],
+          "evidence": [{ "text": "c", "quote": "gehen mit Ihnen hin und übersetzen das Gespräch mündlich, zum Beispiel auf Arabisch, Persisch (Farsi) oder Ukrainisch" }, { "text": "c", "quote": "Bitte melden Sie sich mindestens eine Woche vorher" }],
           "explanation": "c ilanındaki gönüllü dil aracıları resmî bir randevuya (Termin beim Amt) birlikte gidiyor ve konuşmayı sözlü olarak çeviriyor, Farsça (Persisch) da: „gehen mit Ihnen hin und übersetzen das Gespräch mündlich“. Nadia'nın randevusu üç hafta sonra; „mindestens eine Woche vorher“ başvurmak için zamanı var. Tuzak f: Orada da Farsça var ve çeviriler resmî dairelerde geçerli, ama büro belgeleri yalnızca yazılı çeviriyor ve postayla gönderiyor; randevuya birlikte gitmiyor."
         }
       ]

@@ -44,13 +44,13 @@
           "number": 41,
           "type": "abc",
           "prompt": "Lücke 41",
-          "options": { "a": "schneiden", "b": "kaufen", "c": "gießen" },
+          "options": { "a": "schneiden", "b": "düngen", "c": "gießen" },
           "answer": "c",
           "evidence": [
             { "text": "nachricht", "quote": "Könntest du in dieser Zeit meine Blumen" },
             { "text": "nachricht", "quote": "brauchen bei dem warmen Wetter jeden Tag Wasser" }
           ],
-          "explanation": "Sonraki cümle Hannelore'nın ne yapmasını istediğini açıklıyor: Balkondaki bitkilerin her gün suya ihtiyacı var („jeden Tag Wasser“), oturma odasındakiler için haftada iki kez yeterli. Çiçeklere su vermek „gießen“dir: „meine Blumen gießen“ (çiçeklerimi sulamak). a) schneiden yanlış: „schneiden“ (kesmek, budamak) çiçeklerle kullanılabilir, ama metin sudan söz ediyor, budamadan değil. b) kaufen yanlış: Çiçekler zaten Mira'nın: „meine Blumen“; Hannelore'nın yeni çiçek alması değil, var olan bitkilere su vermesi isteniyor."
+          "explanation": "Sonraki cümle Hannelore'nın ne yapmasını istediğini açıklıyor: Balkondaki bitkilerin her gün suya ihtiyacı var („jeden Tag Wasser“), oturma odasındakiler için haftada iki kez yeterli. Çiçeklere su vermek „gießen“dir: „meine Blumen gießen“ (çiçeklerimi sulamak). a) schneiden yanlış: „schneiden“ (kesmek, budamak) de bir bitki bakımıdır ve çiçeklerle kullanılabilir, ama metin budamadan değil, sudan söz ediyor: „jeden Tag Wasser“. b) düngen yanlış: „düngen“ (gübrelemek) de bir bitki bakımıdır, ama Mira gübreden söz etmiyor; bitkilerin ihtiyacı su: „jeden Tag Wasser“, „zweimal pro Woche“."
         },
         {
           "number": 42,
@@ -91,12 +91,12 @@
           "number": 45,
           "type": "abc",
           "prompt": "Lücke 45",
-          "options": { "a": "erreichen", "b": "besuchen", "c": "abholen" },
+          "options": { "a": "erreichen", "b": "schreiben", "c": "besuchen" },
           "answer": "a",
           "evidence": [
             { "text": "nachricht", "quote": "Wenn etwas ist, kannst du mich jederzeit auf dem Handy" }
           ],
-          "explanation": "Mira bir sorun olursa telefonla ulaşılabileceğini söylüyor ve numarasını yazıyor: „jederzeit auf dem Handy …: 0157 3348 2190“. Telefonla birine ulaşmak „erreichen“dir: „kannst du mich jederzeit auf dem Handy erreichen“ (beni her zaman cep telefonundan arayıp bulabilirsin). b) besuchen yanlış: „besuchen“ (ziyaret etmek) birinin yanına gitmektir; telefonla ziyaret edilmez, ayrıca Mira bu sırada Hırvatistan'da, kız kardeşinin yanında. c) abholen yanlış: „abholen“ (gidip almak) de birinin bulunduğu yere gitmeyi gerektirir; „auf dem Handy“ ile birlikte kullanılmaz."
+          "explanation": "Mira bir sorun olursa telefonla ulaşılabileceğini söylüyor ve numarasını yazıyor: „jederzeit auf dem Handy …: 0157 3348 2190“. Telefonla birine ulaşmak „erreichen“dir: „kannst du mich jederzeit auf dem Handy erreichen“ (beni her zaman cep telefonundan arayıp bulabilirsin). b) schreiben yanlış: Anlam olarak yakın (telefona mesaj yazmak), ama „schreiben“ kişiyi Dativ ile alır: „kannst du mir schreiben“; boşluktan önce ise Akkusativ „mich“ var. c) besuchen yanlış: „besuchen“ (ziyaret etmek) birinin yanına gitmektir; telefonla ziyaret edilmez, ayrıca Mira bu sırada Hırvatistan'da, kız kardeşinin yanında."
         }
       ]
     }

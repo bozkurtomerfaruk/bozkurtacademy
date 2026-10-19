@@ -38,11 +38,11 @@
         {
           "number": 21,
           "type": "abc",
-          "prompt": "Ihre Schwester lebt in der Türkei und möchte im Sommer drei Wochen bei Ihnen verbringen. Für ihr Visum verlangt die deutsche Botschaft, dass Sie schriftlich versprechen, alle Kosten während dieser Zeit zu übernehmen.",
-          "options": { "a": "Erdgeschoss A", "b": "2. Stock A", "c": "1. Stock B" },
+          "prompt": "Ihre Schwester lebt in der Türkei und möchte im Sommer drei Wochen bei Ihnen wohnen. Für ihr Visum sollen Sie schriftlich versprechen, dass Sie in dieser Zeit alle Kosten für sie bezahlen.",
+          "options": { "a": "Erdgeschoss A", "b": "Erdgeschoss B", "c": "1. Stock B" },
           "answer": "c",
           "evidence": [{ "text": "inhalt", "quote": "Verpflichtungserklärung für Besuch aus dem Ausland" }],
-          "explanation": "Yurt dışından gelecek bir ziyaretçinin bütün masraflarını üstleneceğinizi yazılı olarak söz vermek bir taahhütnamedir. Bu 1. Stock B'de, yabancılar dairesinde: „Verpflichtungserklärung für Besuch aus dem Ausland“. a) yanlış: Erdgeschoss A'da pasaport (Reisepass) var, ama orada sizin kendi kimlik ve pasaportunuz için işlem yapılıyor; ziyaretçi için taahhütname orada yazmıyor. b) yanlış: 2. Stock A'da da masraflar geçiyor („Hilfe bei Pflegekosten“), ama orada bakım masraflarına yardım anlatılıyor, ziyaretçinin masraflarını üstlenmek değil."
+          "explanation": "Yurt dışından gelecek bir ziyaretçinin bütün masraflarını ödeyeceğinize yazılı olarak söz vermek bir taahhütnamedir. Bu 1. Stock B'de, yabancılar dairesinde: „Verpflichtungserklärung für Besuch aus dem Ausland“. a) yanlış: Erdgeschoss A'da pasaport (Reisepass) var, ama orada kimlik ve pasaport işleri yazıyor; yurt dışından gelen ziyaretçi için taahhütname orada geçmiyor. b) yanlış: Erdgeschoss B'de de ödeme var („Gebühren bar oder mit Karte bezahlen“), ama orada belediyeye harç ödeniyor; ziyaretçinin masraflarını ödeyeceğinize dair yazılı söz orada yazmıyor."
         },
         {
           "number": 22,

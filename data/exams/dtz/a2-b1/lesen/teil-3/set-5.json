@@ -36,13 +36,13 @@
           "type": "abc",
           "prompt": "Wer am 7. Oktober nicht zu Hause sein kann, …",
           "options": {
-            "a": "gibt den Technikern am Dienstagmorgen den Schlüssel.",
+            "a": "gibt den Schlüssel am Dienstag beim Hausmeister ab.",
             "b": "kann den Schlüssel vorher beim Hausmeister lassen.",
             "c": "vereinbart mit der Firma Vosskamp einen anderen Tag."
           },
           "answer": "b",
           "evidence": [{ "text": "aushang", "quote": "Sie können Ihren Schlüssel aber auch bis Montag bei unserem Hausmeister, Herrn Szymański, abgeben" }],
-          "explanation": "Evde olamayan kişi anahtarını pazartesiye kadar kapıcı Bay Szymański'ye bırakabilir: „Sie können Ihren Schlüssel aber auch bis Montag bei unserem Hausmeister, Herrn Szymański, abgeben“. Pazartesi, salı gününden öncedir. a) yanlış: Anahtar salı sabahı teknisyenlere değil, pazartesiye kadar kapıcıya veriliyor. c) yanlış: Firma ile başka bir gün ayarlanamaz: „Einen zweiten Termin gibt es nicht.“"
+          "explanation": "Evde olamayan kişi anahtarını pazartesiye kadar kapıcı Bay Szymański'ye bırakabilir: „Sie können Ihren Schlüssel aber auch bis Montag bei unserem Hausmeister, Herrn Szymański, abgeben“. Pazartesi, salı gününden öncedir. a) yanlış: Anahtar kapıcıya salı günü değil, en geç pazartesi veriliyor: „bis Montag“. c) yanlış: Firma ile başka bir gün ayarlanamaz: „Einen zweiten Termin gibt es nicht.“"
         }
       ]
     },
@@ -63,23 +63,23 @@
         {
           "number": 33,
           "type": "richtig-falsch",
-          "prompt": "Beim ersten Besuch in der Sprechstunde muss man nichts bezahlen.",
+          "prompt": "Man kann ohne vorherige Anmeldung in die Sprechstunde kommen.",
           "answer": "richtig",
-          "evidence": [{ "text": "zeitung", "quote": "Das erste Gespräch ist kostenlos." }],
-          "explanation": "İlk görüşme ücretsiz: „Das erste Gespräch ist kostenlos.“ Yani ilk ziyarette para ödenmiyor; ifade doğru. Yıllık 30 Euro, ancak daha sonra yeniden yardım isteyenler için geçerli."
+          "evidence": [{ "text": "zeitung", "quote": "Einen Termin braucht man nicht." }],
+          "explanation": "Danışma saatine gitmek için randevu gerekmiyor: „Einen Termin braucht man nicht.“ Yani önceden kayıt yaptırmadan gelinebilir; ifade doğru. Yalnızca telefonla danışmanlık yok: „Eine Beratung am Telefon gibt es leider nicht.“"
         },
         {
           "number": 34,
           "type": "abc",
           "prompt": "Die Beratungsstelle „Dach überm Kopf“ …",
           "options": {
-            "a": "hilft, wenn man die Abrechnung der Nebenkosten nicht versteht.",
+            "a": "berät auch, wenn man Fragen zur Abrechnung der Nebenkosten hat.",
             "b": "berät Mieterinnen und Mieter auch telefonisch.",
             "c": "verlangt nach dem ersten Gespräch 30 Euro für jeden Besuch."
           },
           "answer": "a",
           "evidence": [{ "text": "zeitung", "quote": "Die Beraterinnen helfen bei Fragen zur Nebenkostenabrechnung" }],
-          "explanation": "Danışmanlar yan gider hesabıyla ilgili sorularda yardım ediyor: „Die Beraterinnen helfen bei Fragen zur Nebenkostenabrechnung“. Hesabı anlamayan kişinin soruları vardır; bu yüzden a doğru. b) yanlış: Telefonla danışmanlık yok: „Eine Beratung am Telefon gibt es leider nicht.“ c) yanlış: 30 Euro her ziyaret için değil, yılda bir kez ödenen aidat: „zahlt einen Jahresbeitrag von 30 Euro“."
+          "explanation": "Danışmanlar yan gider hesabıyla ilgili sorularda yardım ediyor: „Die Beraterinnen helfen bei Fragen zur Nebenkostenabrechnung“. „Fragen zur Abrechnung der Nebenkosten“ aynı anlama geliyor; bu yüzden a doğru. b) yanlış: Telefonla danışmanlık yok: „Eine Beratung am Telefon gibt es leider nicht.“ c) yanlış: 30 Euro her ziyaret için değil, yılda bir kez ödenen aidat: „zahlt einen Jahresbeitrag von 30 Euro“."
         }
       ]
     },

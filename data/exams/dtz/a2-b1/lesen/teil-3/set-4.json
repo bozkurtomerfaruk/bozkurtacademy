@@ -54,7 +54,7 @@
           "title": "Ausbildungsmesse „Startklar“ in der Stadthalle",
           "byline": "Lindbrücker Rundschau, Lokalteil",
           "paragraphs": [
-            "Am Samstag, dem 14. März, findet von 10 bis 16 Uhr in der Stadthalle Lindbrück die Ausbildungsmesse „Startklar“ statt. Über 40 Betriebe aus der Region stellen ihre Ausbildungsberufe vor, zum Beispiel in der Pflege, im Handwerk und im Handel. Der Eintritt ist frei. Jugendliche können ihre Bewerbungsmappe mitbringen. Mitarbeiterinnen der Berufsberatung sehen sie sich an und geben Tipps.",
+            "Am Samstag, dem 14. März, findet von 10 bis 16 Uhr in der Stadthalle Lindbrück die Ausbildungsmesse „Startklar“ statt. Über 40 Betriebe aus der Region stellen ihre Ausbildungsberufe vor, zum Beispiel in der Pflege, im Handwerk und im Handel. Der Eintritt ist frei. Jugendliche können ihre Bewerbungsmappe mitbringen. Mitarbeiterinnen der Berufsberatung sehen sich die Mappen an und geben Tipps.",
             "Neu ist in diesem Jahr ein Treffpunkt für Erwachsene, die eine Ausbildung in Teilzeit machen möchten. Vom Bahnhof fährt alle 30 Minuten ein kostenloser Bus zur Stadthalle."
           ]
         }
@@ -75,7 +75,7 @@
           "options": {
             "a": "fährt ein kostenloser Bus einmal pro Stunde vom Bahnhof ab.",
             "b": "stellen über 40 Schulen aus der Region ihre Kurse vor.",
-            "c": "gibt es zum ersten Mal Informationen zur Ausbildung in Teilzeit."
+            "c": "gibt es dieses Jahr zum ersten Mal einen Treffpunkt für Erwachsene, die eine Teilzeitausbildung suchen."
           },
           "answer": "c",
           "evidence": [{ "text": "zeitung", "quote": "Neu ist in diesem Jahr ein Treffpunkt für Erwachsene, die eine Ausbildung in Teilzeit machen möchten." }],
@@ -92,7 +92,7 @@
           "byline": "Information an alle Mitarbeiterinnen und Mitarbeiter der Spedition Möwenkamp",
           "paragraphs": [
             "Bitte tragen Sie Ihre Urlaubswünsche für Juni bis September bis zum 31. März in die Liste im Pausenraum ein. Im Lager dürfen höchstens drei Personen zur gleichen Zeit Urlaub haben. Möchten mehrere Kolleginnen und Kollegen in derselben Zeit frei haben, haben Eltern mit Schulkindern in den Sommerferien Vorrang.",
-            "Bis zum 15. April sagt Ihnen Ihre Teamleitung, ob Sie den Urlaub bekommen. Spätere Wünsche können wir nur berücksichtigen, wenn dann noch Plätze frei sind.",
+            "Nach dem 31. März prüft Ihre Teamleitung alle Wünsche. Bis zum 15. April sagt sie Ihnen, ob Sie den Urlaub bekommen. Spätere Wünsche können wir nur berücksichtigen, wenn dann noch Plätze frei sind.",
             "Bei Fragen hilft Ihnen Frau Lindqvist im Personalbüro, Durchwahl 23."
           ]
         }
@@ -103,8 +103,8 @@
           "type": "richtig-falsch",
           "prompt": "Die Teamleitung entscheidet bis Ende März über die Urlaubswünsche.",
           "answer": "falsch",
-          "evidence": [{ "text": "firma", "quote": "Bis zum 15. April sagt Ihnen Ihre Teamleitung, ob Sie den Urlaub bekommen." }],
-          "explanation": "Ekip yöneticisi izin isteklerine mart sonuna kadar değil, 15 Nisan'a kadar cevap veriyor: „Bis zum 15. April sagt Ihnen Ihre Teamleitung, ob Sie den Urlaub bekommen.“ 31 Mart, çalışanların isteklerini listeye yazmaları gereken son tarih: „bis zum 31. März in die Liste im Pausenraum ein“. Bu yüzden ifade yanlış."
+          "evidence": [{ "text": "firma", "quote": "Nach dem 31. März prüft Ihre Teamleitung alle Wünsche." }, { "text": "firma", "quote": "Bis zum 15. April sagt sie Ihnen, ob Sie den Urlaub bekommen." }],
+          "explanation": "Ekip yöneticisi istekleri mart sonuna kadar değil, 31 Mart'tan sonra inceliyor: „Nach dem 31. März prüft Ihre Teamleitung alle Wünsche.“ Cevabı 15 Nisan'a kadar veriyor: „Bis zum 15. April sagt sie Ihnen, ob Sie den Urlaub bekommen.“ 31 Mart, çalışanların isteklerini listeye yazmaları gereken son tarih: „bis zum 31. März in die Liste im Pausenraum ein“. Bu yüzden ifade yanlış."
         },
         {
           "number": 36,
@@ -117,7 +117,7 @@
           },
           "answer": "b",
           "evidence": [{ "text": "firma", "quote": "haben Eltern mit Schulkindern in den Sommerferien Vorrang" }],
-          "explanation": "Birçok çalışan aynı zamanda izin isterse, okul çağında çocuğu olan ebeveynler yaz tatilinde önceliklidir: „haben Eltern mit Schulkindern in den Sommerferien Vorrang“. „Vorrang haben“ = istedikleri izni „eher“ (daha önce, öncelikle) almak. a) yanlış: Depoda aynı anda en fazla üç kişi izinli olabilir: „Im Lager dürfen höchstens drei Personen zur gleichen Zeit Urlaub haben.“ c) yanlış: Geç gelen istekler reddedilmiyor; hâlâ yer varsa dikkate alınıyor: „Spätere Wünsche können wir nur berücksichtigen, wenn dann noch Plätze frei sind.“"
+          "explanation": "Birçok çalışan aynı zamanda izin isterse, okul çağında çocuğu olan ebeveynler yaz tatilinde önceliklidir: „haben Eltern mit Schulkindern in den Sommerferien Vorrang“. „Vorrang haben“ = istedikleri izni „eher“ (daha büyük olasılıkla, öncelikli olarak) almak. a) yanlış: Depoda aynı anda en fazla üç kişi izinli olabilir: „Im Lager dürfen höchstens drei Personen zur gleichen Zeit Urlaub haben.“ c) yanlış: Geç gelen istekler doğrudan reddedilmiyor; hâlâ yer varsa dikkate alınabiliyor. Bu konuda personel bürosundan da söz edilmiyor; cevabı ekip yöneticisi veriyor: „Spätere Wünsche können wir nur berücksichtigen, wenn dann noch Plätze frei sind.“"
         }
       ]
     }

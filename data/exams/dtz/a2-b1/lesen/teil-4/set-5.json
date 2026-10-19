@@ -14,7 +14,7 @@
       "texts": [
         {
           "id": "blatt",
-          "title": "Hausordnung der Wohnanlage Lerchenfeld",
+          "title": "Hausordnung der Wohnanlage Ahornhof",
           "byline": "Hausverwaltung Brandhorst, Lindbrück",
           "paragraphs": [
             "Liebe Bewohnerinnen und Bewohner, damit sich alle in unserer Wohnanlage wohlfühlen, beachten Sie bitte diese Regeln.",
@@ -50,15 +50,15 @@
         {
           "number": 38,
           "type": "abc",
-          "prompt": "Was gilt für das Grillen?",
+          "prompt": "Was steht in der Hausordnung über den Müll?",
           "options": {
-            "a": "Mit einem elektrischen Grill darf man auf dem Balkon grillen.",
-            "b": "Den Grillplatz im Hof kann man beim Hausmeister reservieren.",
-            "c": "Grillen mit Holzkohle ist auf dem Balkon bis 20 Uhr erlaubt."
+            "a": "Reste vom Essen kommen in die braune Tonne.",
+            "b": "Alte Möbel darf man neben die Mülltonnen stellen.",
+            "c": "Papier gehört in die gelbe Tonne."
           },
           "answer": "a",
-          "evidence": [{ "text": "blatt", "quote": "ein Elektrogrill ist erlaubt" }],
-          "explanation": "Balkonda elektrikli mangal kullanmak serbest: „ein Elektrogrill ist erlaubt“. b) yanlış: Avludaki mangal yeri kapıcıdan değil, site yönetiminden ayırtılıyor: „bei der Hausverwaltung reservieren“. Kapıcı Bay Petrović çöple ilgili soruları yanıtlıyor. c) yanlış: Kömürle balkonda hiç mangal yapılamaz: „Mit Holzkohle dürfen Sie auf dem Balkon nicht grillen“. Saat 20, oyun parkının kapanış saati: „von 8 bis 20 Uhr geöffnet“."
+          "evidence": [{ "text": "blatt", "quote": "Essensreste in die braune Tonne" }],
+          "explanation": "Yemek artıkları kahverengi çöp kutusuna atılıyor: „Essensreste in die braune Tonne“. „Reste vom Essen“ = „Essensreste“. b) yanlış: Eski mobilyaların çöp kutularının yanına konmaması rica ediliyor: „Alte Möbel stellen Sie bitte nicht neben die Tonnen.“ c) yanlış: Sarı kutuya kâğıt değil, ambalajlar atılıyor; kâğıt mavi kutuya: „Papier in die blaue Tonne, Verpackungen in die gelbe Tonne“."
         },
         {
           "number": 39,
@@ -66,12 +66,12 @@
           "prompt": "Was erfährt man über den Waschraum?",
           "options": {
             "a": "Man kann ihn an allen Tagen der Woche bis 21 Uhr benutzen.",
-            "b": "Man muss sich dafür bei der Hausverwaltung anmelden.",
+            "b": "Man kann dort schon ab 6 Uhr morgens waschen.",
             "c": "Vor dem Waschen soll man seinen Namen und die Zeit auf einer Liste notieren."
           },
           "answer": "c",
           "evidence": [{ "text": "blatt", "quote": "Tragen Sie sich bitte vorher mit Namen und Uhrzeit in den Plan an der Tür ein." }],
-          "explanation": "Çamaşır makinesini kullanmadan önce kapıdaki çizelgeye ad ve saat yazılmalı: „Tragen Sie sich bitte vorher mit Namen und Uhrzeit in den Plan an der Tür ein.“ a) yanlış: Çamaşırhane her gün açık değil, pazar günü kapalı: „Am Sonntag bleibt der Waschraum geschlossen.“ b) yanlış: Çamaşırhane için site yönetimine değil, kapıdaki çizelgeye yazılmak gerekiyor. Site yönetiminden izin, köpek beslemek için gerekiyor: „braucht die Erlaubnis der Hausverwaltung“."
+          "explanation": "Çamaşır makinesini kullanmadan önce kapıdaki çizelgeye ad ve saat yazılmalı: „Tragen Sie sich bitte vorher mit Namen und Uhrzeit in den Plan an der Tür ein.“ a) yanlış: Çamaşırhane her gün açık değil, pazar günü kapalı: „Am Sonntag bleibt der Waschraum geschlossen.“ b) yanlış: Çamaşır makineleri sabah 6'dan değil, 7'den itibaren kullanılabiliyor: „Die Waschmaschinen im Keller können Sie von 7 bis 21 Uhr benutzen.“"
         }
       ]
     }

@@ -34,15 +34,15 @@
         {
           "number": 32,
           "type": "abc",
-          "prompt": "Wer die Karte nicht selbst abholen kann, …",
+          "prompt": "Wer die neue Karte selbst abholt, …",
           "options": {
-            "a": "schickt der Ausländerbehörde eine SMS.",
-            "b": "bekommt die Karte per Post nach Hause.",
-            "c": "kann jemanden mit einer schriftlichen Erlaubnis schicken."
+            "a": "braucht dafür vorher einen Termin.",
+            "b": "kann auch freitags zum Schalter 3 kommen.",
+            "c": "soll den Pass und die bisherige Karte dabeihaben."
           },
           "answer": "c",
-          "evidence": [{ "text": "behoerde", "quote": "Wenn Sie nicht selbst kommen können, darf eine andere Person die Karte für Sie abholen." }, { "text": "behoerde", "quote": "Diese Person braucht eine schriftliche Vollmacht von Ihnen" }],
-          "explanation": "Kendisi gelemeyen kişinin yerine başka biri kartı alabilir: „Wenn Sie nicht selbst kommen können, darf eine andere Person die Karte für Sie abholen.“ Bu kişinin yazılı vekaletnameye ihtiyacı var: „Diese Person braucht eine schriftliche Vollmacht von Ihnen“. „Vollmacht“ burada „schriftliche Erlaubnis“ ile anlatılıyor. a) yanlış: SMS'i kart sahibi göndermiyor; kart hazır olunca daire SMS gönderiyor: „bekommen Sie von uns eine SMS“. b) yanlış: Kart postayla gönderilmiyor: „Wir schicken die Karte nicht mit der Post.“"
+          "evidence": [{ "text": "behoerde", "quote": "Bitte bringen Sie Ihren Pass und Ihre alte Karte mit." }],
+          "explanation": "Kartı almaya gelen kişiden pasaportunu ve eski kartını getirmesi rica ediliyor: „Bitte bringen Sie Ihren Pass und Ihre alte Karte mit.“ „alte Karte“ = „bisherige Karte“, „mitbringen“ = „dabeihaben“. a) yanlış: Kart randevusuz alınabiliyor: „Danach können Sie die Karte innerhalb von vier Wochen ohne Termin abholen“. b) yanlış: Kartlar cuma günü değil, pazartesiden perşembeye veriliyor: „montags bis donnerstags von 8 bis 12 Uhr am Schalter 3“."
         }
       ]
     },
@@ -73,13 +73,13 @@
           "type": "abc",
           "prompt": "Die Stadtbibliothek …",
           "options": {
-            "a": "verleiht E-Books auch an Leute ohne Ausweis.",
+            "a": "bietet den Sprachtreff am Samstagnachmittag an.",
             "b": "ist ab März auch am Wochenende geöffnet.",
             "c": "verlangt von Jugendlichen eine Gebühr für den Ausweis."
           },
           "answer": "b",
           "evidence": [{ "text": "zeitung", "quote": "Ab März öffnet sie zusätzlich samstags von 10 bis 14 Uhr." }],
-          "explanation": "Kütüphane martan itibaren cumartesi günleri de açık: „Ab März öffnet sie zusätzlich samstags von 10 bis 14 Uhr.“ Cumartesi hafta sonudur. a) yanlış: E-kitaplar yalnızca kartla ödünç alınabiliyor: „Mit dem Ausweis kann man jetzt auch E-Books ausleihen.“ c) yanlış: 18 yaşına kadar çocuklar ve gençler için kart ücretsiz: „für Kinder und Jugendliche bis 18 Jahre ist er kostenlos“."
+          "explanation": "Kütüphane martan itibaren cumartesi günleri de açık: „Ab März öffnet sie zusätzlich samstags von 10 bis 14 Uhr.“ Cumartesi hafta sonudur. a) yanlış: Dil buluşması öğleden sonra değil, cumartesi sabahı yapılıyor: „Von 10 bis 12 Uhr treffen sich Erwachsene, die ihr Deutsch verbessern möchten, zum Sprachtreff.“ c) yanlış: 18 yaşına kadar çocuklar ve gençler için kart ücretsiz: „für Kinder und Jugendliche bis 18 Jahre ist er kostenlos“."
         }
       ]
     },
@@ -93,7 +93,7 @@
           "paragraphs": [
             "Sehr geehrte Frau Okonkwo,",
             "wir haben Ihren Antrag auf den Lindbrück-Pass vom 12. Mai erhalten. Leider fehlt noch Ihr Bescheid über das Wohngeld. Bitte schicken Sie uns bis zum 15. Juni eine Kopie. Sie können die Kopie auch persönlich im Rathaus, Zimmer 214, abgeben. Ohne diesen Bescheid können wir Ihren Antrag nicht bearbeiten.",
-            "Mit dem Lindbrück-Pass zahlen Sie im Hallenbad und für Kurse an der Volkshochschule nur die Hälfte. Die Monatskarte für den Bus kostet 20 Euro statt 49 Euro. Der Pass gilt jeweils für ein Jahr.",
+            "Mit dem Lindbrück-Pass zahlen Sie im Hallenbad und für Kurse an der Volkshochschule nur die Hälfte. Die Monatskarte für den Bus kostet 20 Euro statt 49 Euro. Der Pass gilt ein Jahr lang.",
             "Mit freundlichen Grüßen",
             "Jens Haberland, Sachbearbeiter"
           ]
@@ -114,12 +114,12 @@
           "prompt": "Mit dem Lindbrück-Pass …",
           "options": {
             "a": "ist ein Kurs an der Volkshochschule billiger.",
-            "b": "fährt man kostenlos mit dem Bus.",
-            "c": "geht man zwei Jahre lang günstiger ins Hallenbad."
+            "b": "kostet die Monatskarte für den Bus 49 Euro.",
+            "c": "geht man ein Jahr lang kostenlos ins Hallenbad."
           },
           "answer": "a",
           "evidence": [{ "text": "brief", "quote": "Mit dem Lindbrück-Pass zahlen Sie im Hallenbad und für Kurse an der Volkshochschule nur die Hälfte." }],
-          "explanation": "Lindbrück-Pass ile Volkshochschule kursları için yalnızca yarı fiyat ödeniyor: „Mit dem Lindbrück-Pass zahlen Sie im Hallenbad und für Kurse an der Volkshochschule nur die Hälfte.“ Yani kurs daha ucuz. b) yanlış: Otobüs ücretsiz değil; aylık bilet 49 yerine 20 Euro: „Die Monatskarte für den Bus kostet 20 Euro statt 49 Euro.“ c) yanlış: Kapalı yüzme havuzu daha ucuz, ama kart iki yıl değil, bir yıl geçerli: „Der Pass gilt jeweils für ein Jahr.“"
+          "explanation": "Lindbrück-Pass ile Volkshochschule kursları için yalnızca yarı fiyat ödeniyor: „Mit dem Lindbrück-Pass zahlen Sie im Hallenbad und für Kurse an der Volkshochschule nur die Hälfte.“ Yani kurs daha ucuz. b) yanlış: 49 Euro aylık otobüs kartının normal fiyatı; Lindbrück-Pass ile 20 Euro ödeniyor: „Die Monatskarte für den Bus kostet 20 Euro statt 49 Euro.“ c) yanlış: Kart bir yıl geçerli, ama kapalı yüzme havuzu ücretsiz değil; yarı fiyat ödeniyor: „zahlen Sie im Hallenbad und für Kurse an der Volkshochschule nur die Hälfte“."
         }
       ]
     }

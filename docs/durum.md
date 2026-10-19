@@ -17,6 +17,10 @@
 
 **Kör çözücünün düzeltmediğim notları (pilot):** 2.1/9'da doğru ilan durumdaki yer adıyla bulunuyor; yer ayrıntısı bu sorunun çeldirici mantığı. 2.2/8 ve 2.2/10 çok kolay. 1.1/5'te „die Briefe … nehmen“ biraz kaba ama A1'de doğru.
 
+**5 sete tamamlama:** Her Teil'e 3 set daha (toplam 15 set). İnceleyici 9 sette tekrar eden kalıpları, tek kelimeyle bulunan cevapları, A1 üstü kelimeleri ve sitede tekrar eden adları düzeltti. Kör çözüm 45/45 uyuştu. Çözücünün dil notlarından 1.4/3, 1.5 („nach links“, 4. soru) ve 3.3/15 düzeltildi.
+
+**Kör çözücünün düzeltmediğim notları (set 3–5):** 2.4/10'da doğru ilan yer adıyla (Kleetal) bulunuyor; iki ilanda da yer adı var ve yer ayrıntısı bu sorunun çeldirici mantığı. „maximal“, „Mülltonne“, „Feier“ A1/A2 sınırında. 2.5/7'de a ilanı kendi bisikletini istiyor, durum bunu söylemiyor; b saat yüzünden açıkça eleniyor.
+
 ## 2026-10-19 · DTZ Lesen 5 sete tamamlandı
 
 **Yapılanlar:** Teil 1 (yakın çeldirici) ve Teil 5 (dilbilgisi + anlam boşlukları karışık) kuralları docs/sinav-setleri.md'ye eklendi. Pilotta 1.1/23, 1.1/25, 1.2/25 yeniden yazıldı; 2.1/28'de ilan çamaşır makinesini açıkça söylüyor. Her Teil'e 3 yeni set (toplam 15) yazıldı, iki inceleyici düzeltti, bağlamsız alt ajan kör çözdü: 51/51 uyuşma. Tarayıcı testleri `tests/exams/` altına taşındı; ekran görüntüleri `$S` yoksa repo dışında geçici bir klasöre kaydediliyor, `.gitignore`'da `undefined/` var.

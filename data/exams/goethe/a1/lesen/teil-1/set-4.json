@@ -65,10 +65,10 @@
         {
           "number": 3,
           "type": "richtig-falsch",
-          "prompt": "Anouks Mutter wird am Sonntag 60 Jahre alt.",
+          "prompt": "Anouks Mutter hat am Wochenende Geburtstag.",
           "answer": "richtig",
-          "evidence": [{ "text": "sms", "quote": "meine Mutter hat am Sonntag Geburtstag, sie wird 60" }],
-          "explanation": "SMS'te: „meine Mutter hat am Sonntag Geburtstag, sie wird 60“ (annemin pazar günü doğum günü, 60 yaşına giriyor). Yani annesi pazar günü 60 yaşında oluyor („wird 60 Jahre alt“). İfade doğru."
+          "evidence": [{ "text": "sms", "quote": "meine Mutter hat am Sonntag Geburtstag" }],
+          "explanation": "SMS'te: „meine Mutter hat am Sonntag Geburtstag“ (annemin pazar günü doğum günü). Pazar (Sonntag) hafta sonudur („am Wochenende“). İfade doğru."
         },
         {
           "number": 4,

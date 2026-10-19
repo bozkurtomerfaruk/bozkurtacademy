@@ -57,7 +57,7 @@
           "id": "sms",
           "title": "SMS",
           "paragraphs": [
-            "Hallo Ingvild, ich muss am Donnerstag bis drei Uhr arbeiten. Wir treffen uns also eine Stunde später, um 16 Uhr. Der Ort ist gleich: vor dem Café am Marktplatz. Meine Kollegin Edda kommt auch, aber erst um halb fünf. Bis dann! Dario"
+            "Hallo Ingvild, ich muss am Donnerstag bis drei Uhr arbeiten. Wir treffen uns also eine Stunde später, um 16 Uhr. Der Ort ist gleich: vor dem Café am Marktplatz. Um 18 Uhr muss ich zum Arzt. Ein Eis essen wir dann am Samstag. Bis dann! Dario"
           ]
         }
       ],
@@ -81,10 +81,10 @@
         {
           "number": 5,
           "type": "richtig-falsch",
-          "prompt": "Edda ist um 16 Uhr am Café.",
+          "prompt": "Dario und Ingvild essen am Donnerstag ein Eis.",
           "answer": "falsch",
-          "evidence": [{ "text": "sms", "quote": "aber erst um halb fünf" }],
-          "explanation": "Edda „erst um halb fünf“ (ancak dört buçukta, yani 16.30'da) geliyor. Saat 16'da sadece Dario ve Ingvild buluşuyor. İfade yanlış."
+          "evidence": [{ "text": "sms", "quote": "Ein Eis essen wir dann am Samstag." }],
+          "explanation": "E-postada: „Später können wir noch ein Eis essen“ (Sonra bir de dondurma yiyebiliriz). Ama SMS'te: „Ein Eis essen wir dann am Samstag“ (Dondurmayı o zaman cumartesi yiyoruz). Dondurma perşembe değil, cumartesi. İfade yanlış."
         }
       ]
     }

@@ -27,10 +27,10 @@
           "number": 0,
           "example": true,
           "type": "richtig-falsch",
-          "prompt": "In Zdenkas Wohnung gibt es drei Räume.",
+          "prompt": "Zdenka wohnt jetzt in einer anderen Wohnung.",
           "answer": "richtig",
-          "evidence": [{ "text": "email", "quote": "hat drei Zimmer" }],
-          "explanation": "Zdenka yazıyor: „hat drei Zimmer“ (üç odası var). „Zimmer“ ve „Raum“ ikisi de oda demek. İfade doğru."
+          "evidence": [{ "text": "email", "quote": "ich habe jetzt eine neue Wohnung!" }],
+          "explanation": "Zdenka yazıyor: „ich habe jetzt eine neue Wohnung!“ (Artık yeni bir dairem var!). Yeni daire = başka bir daire („eine andere Wohnung“). İfade doğru."
         },
         {
           "number": 1,
@@ -43,10 +43,10 @@
         {
           "number": 2,
           "type": "richtig-falsch",
-          "prompt": "Zdenka findet die Leute im Haus freundlich.",
+          "prompt": "Zdenka findet ihre Nachbarn freundlich.",
           "answer": "richtig",
           "evidence": [{ "text": "email", "quote": "Meine Nachbarn sind sehr nett." }],
-          "explanation": "Zdenka yazıyor: „Meine Nachbarn sind sehr nett“ (Komşularım çok iyi). Komşular = evdeki insanlar („die Leute im Haus“). „nett“ = „freundlich“ (iyi, kibar). İfade doğru."
+          "explanation": "Zdenka yazıyor: „Meine Nachbarn sind sehr nett“ (Komşularım çok iyi). „nett“ ve „freundlich“ aynı anlamda: iyi, kibar. İfade doğru."
         }
       ]
     },
@@ -70,7 +70,7 @@
           "prompt": "Das Sofa kommt am Sonntag.",
           "answer": "falsch",
           "evidence": [{ "text": "notiz", "quote": "Am Samstag kommt mein Sofa." }],
-          "explanation": "Notta: „Am Samstag kommt mein Sofa“ (Kanepem cumartesi geliyor). İfadede pazar (Sonntag) var. Pazar günü Femke kahveye geliyor. Gün yanlış, ifade yanlış."
+          "explanation": "Notta: „Am Samstag kommt mein Sofa“ (Kanepem cumartesi geliyor). İfadede pazar (Sonntag) var. Pazar e-postada geçiyor: Zdenka Femke'yi pazar günü kahveye çağırıyor. Gün yanlış, ifade yanlış."
         },
         {
           "number": 4,

@@ -46,7 +46,7 @@
           "prompt": "Die Eltern von Anouk wohnen nicht in der Nähe.",
           "answer": "richtig",
           "evidence": [{ "text": "email", "quote": "Meine Eltern wohnen auf dem Land, 200 Kilometer von hier." }],
-          "explanation": "Anouk yazıyor: „Meine Eltern wohnen auf dem Land, 200 Kilometer von hier“ (Annem babam köyde oturuyor, buradan 200 kilometre uzakta). 200 kilometre yakın değil („nicht in der Nähe“). İfade doğru."
+          "explanation": "Anouk yazıyor: „Meine Eltern wohnen auf dem Land, 200 Kilometer von hier“ (Annem babam kırsalda, yani köyde oturuyor, buradan 200 kilometre uzakta). 200 kilometre yakın değil („nicht in der Nähe“). İfade doğru."
         }
       ]
     },
@@ -65,10 +65,10 @@
         {
           "number": 3,
           "type": "richtig-falsch",
-          "prompt": "Anouks Mutter feiert am Sonntag.",
+          "prompt": "Anouks Mutter wird am Sonntag 60 Jahre alt.",
           "answer": "richtig",
-          "evidence": [{ "text": "sms", "quote": "meine Mutter hat am Sonntag Geburtstag" }],
-          "explanation": "SMS'te: „meine Mutter hat am Sonntag Geburtstag“ (annemin pazar günü doğum günü). Doğum günü kutlanır („feiern“ = kutlamak). İfade doğru."
+          "evidence": [{ "text": "sms", "quote": "meine Mutter hat am Sonntag Geburtstag, sie wird 60" }],
+          "explanation": "SMS'te: „meine Mutter hat am Sonntag Geburtstag, sie wird 60“ (annemin pazar günü doğum günü, 60 yaşına giriyor). Yani annesi pazar günü 60 yaşında oluyor („wird 60 Jahre alt“). İfade doğru."
         },
         {
           "number": 4,

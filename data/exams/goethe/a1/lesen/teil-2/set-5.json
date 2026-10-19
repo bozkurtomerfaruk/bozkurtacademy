@@ -158,7 +158,7 @@
         {
           "number": 8,
           "type": "zuordnung",
-          "prompt": "Sie haben am Montag frei. An diesem Tag möchten Sie mit einem Schiff über den See fahren.",
+          "prompt": "Sie haben am Montag frei. An diesem Tag möchten Sie eine Fahrt über den See machen.",
           "answer": "a",
           "evidence": [
             {
@@ -170,7 +170,7 @@
               "quote": "Am Samstag und Sonntag fahren wir"
             }
           ],
-          "explanation": "Pazartesi günü gemiyle gölde gezmek istiyorsunuz. a ilanında „jeden Tag um 10 und um 15 Uhr“ yazıyor: Gemi her gün (jeden Tag) saat 10'da ve 15'te kalkıyor. Pazartesi de buna dahil. b ilanında „Am Samstag und Sonntag fahren wir“ yazıyor: Tekne sadece cumartesi ve pazar gidiyor. Cevap a."
+          "explanation": "Pazartesi günü göl üzerinde bir gezi (Fahrt) yapmak istiyorsunuz. a ilanında „jeden Tag um 10 und um 15 Uhr“ yazıyor: Gemi her gün (jeden Tag) saat 10'da ve 15'te kalkıyor. Pazartesi de buna dahil. b ilanında „Am Samstag und Sonntag fahren wir“ yazıyor: Tekne sadece cumartesi ve pazar gidiyor. Cevap a."
         }
       ]
     },
@@ -183,7 +183,7 @@
           "label": "a",
           "title": "Camping Igelwiese",
           "paragraphs": [
-            "Kleiner Campingplatz für Zelte am Fluss. Eine Nacht kostet 12 Euro. Sie können bei uns bis zu sieben Nächte bleiben."
+            "Kleiner Campingplatz für Zelte am Fluss. Eine Nacht kostet 12 Euro. Sie können bei uns maximal sieben Nächte bleiben."
           ]
         },
         {
@@ -191,7 +191,7 @@
           "label": "b",
           "title": "Campingplatz Heckenrose",
           "paragraphs": [
-            "Ein großer Campingplatz am See: Bleiben Sie zwei Tage oder vier Wochen, wie Sie möchten. Es gibt auch einen kleinen Supermarkt."
+            "Ein großer Campingplatz am See, auch für Zelte. Bleiben Sie zwei Tage oder vier Wochen, wie Sie möchten. Es gibt auch einen kleinen Supermarkt."
           ]
         }
       ],
@@ -208,10 +208,10 @@
             },
             {
               "text": "q9a",
-              "quote": "bis zu sieben Nächte bleiben"
+              "quote": "maximal sieben Nächte bleiben"
             }
           ],
-          "explanation": "Kamp alanında on gece kalmak istiyorsunuz. b ilanında „Bleiben Sie zwei Tage oder vier Wochen, wie Sie möchten“ yazıyor: İki gün veya dört hafta, istediğiniz kadar kalabilirsiniz. On gece buna uyuyor. a ilanında „bis zu sieben Nächte“ yazıyor: En fazla yedi gece kalabilirsiniz. On gece olmuyor. Cevap b."
+          "explanation": "Kamp alanında on gece kalmak istiyorsunuz. b ilanında „Bleiben Sie zwei Tage oder vier Wochen, wie Sie möchten“ yazıyor: İki gün veya dört hafta, istediğiniz kadar kalabilirsiniz. On gece buna uyuyor. „auch für Zelte“: Çadırlar (Zelte) için de yer var. a ilanında „maximal sieben Nächte“ yazıyor: En fazla yedi gece kalabilirsiniz. On gece olmuyor. Cevap b."
         }
       ]
     },

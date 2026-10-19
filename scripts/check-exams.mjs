@@ -72,7 +72,8 @@ for (const exam of data.exams) for (const level of exam.levels || []) for (const
           questions += question.example ? 0 : 1;
           if (!TYPES[question.type]) { fail(`${label}: unknown type ${question.type}`); continue; }
           if (question.type === 'zuordnung' && group.texts.filter(text => text.label).length < 2) fail(`${where}: zuordnung needs labelled texts to choose from`);
-          if (question.type === 'abc' && Object.keys(question.options || {}).join() !== 'a,b,c') fail(`${label}: options must be a, b, c`);
+          // a/b/c, or a/b/c/d for four-option gaps (Goethe C1 Teil 1)
+          if (question.type === 'abc' && !['a,b,c', 'a,b,c,d'].includes(Object.keys(question.options || {}).join())) fail(`${label}: options must be a, b, c (or a, b, c, d)`);
           if (!TYPES[question.type](question, group).includes(question.answer)) fail(`${label}: answer ${JSON.stringify(question.answer)} is not an option`);
           if (!question.explanation || question.explanation.length < 40) fail(`${label}: explanation missing or too short`);
           if (!question.example) answers[question.answer] = (answers[question.answer] || 0) + 1;

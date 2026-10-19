@@ -2,6 +2,31 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-10-19 · Lesen tamamlama: 8 aşama (Goethe C1 → TestDaF kâğıt → TestDaF dijital → telc B1, A1, A2, B2, C1 Hochschule)
+
+### Kaldığım yer
+- Aşama 1, Goethe C1: format tablosu yazıldı. Oynatıcı a–d seçeneklerini destekliyor. Pilot yazımı başlıyor (dal `claude/c1-lesen`).
+- Güvenlik için 17:18 UTC'ye bir devam mesajı zamanlandı.
+
+### Ekteki TestDaF modelltestleri
+Beş PDF'in hepsi **kâğıt tabanlı** TestDaF:
+- Modelltest 01: Leseverstehen, Schriftlicher Ausdruck, Hörverstehen.
+- Modelltest 02: Leseverstehen, Schriftlicher Ausdruck.
+
+**Dijital modelltest yok.** Belgeler yalnızca format için kullanılıyor; depoya eklenmiyor, TestDaF aşamalarından sonra silinecek.
+
+### Goethe-Zertifikat C1 (modüler) Lesen: format tablosu
+Kaynak: Goethe-Institut el kitabı ve Modellsatz açıklamaları (arama sonuçları üzerinden). PDF'ler bu ortamdan açılamadı (403).
+
+| Teil | Metin | Görev | Soru | Süre | Durum |
+|---|---|---|---|---|---|
+| 1 | Popüler bilim metni | 8 boşluk, her birine 4 seçenek (a–d), örnek 0 | 1–8 | ~10 dk | Doğrulandı. Örnek ve süre tahmin |
+| 2 | Dergi makalesi | 7 çoktan seçmeli soru (a/b/c), örnek 0 | 9–15 | ~20 dk | Doğrulandı. Örnek tahmin |
+| 3 | Yorum / köşe yazısı | 8 boşluğa cümle yerleştirme. Biz: örnek 0 metinde dolu, 10 cümle (a–j), 2 artan | 16–23 | ~20 dk | 8 boşluk doğrulandı. Cümle sayısı tahmin |
+| 4 | Beş yazarın akademik görüşü (A–E) | 7 ifade yazara eşleştirilir; ikisi hiçbir yazara uymaz (`0`), örnek 0 | 24–30 | ~15 dk | 5 yazar, 7 ifade, 2 eşleşmesiz doğrulandı. Örnek tahmin |
+
+Toplam 30 soru, 65 dk (cevap kâğıdına aktarma dahil; bazı kaynaklar 70 dk diyor). **Oynatıcı:** a/b/c/d seçenekleri için küçük eklenti. Teil 3, B2 Teil 2'deki boşluk düzeniyle; Teil 4, B2 Teil 1'deki yorum düzeni ve `"none": "0"` ile çalışıyor.
+
 ## 2026-10-19 · Goethe A1 Lesen (Start Deutsch 1)
 
 **Format:** Senin verdiğin format kullanıldı (3 Teil, 1–15, her Teil'de örnek 0). Resmi Übungssatz PDF'i bu ortamdan açılamadı (vekil sunucu 403); bildiğim resmi formatla çelişen bir nokta yok.

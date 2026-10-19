@@ -162,6 +162,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Grüße aus dem Urlaub' },
                   { set: 'set-2', title: 'Einladung zum Essen' },
+                  { set: 'set-3', title: 'Die neue Wohnung' },
+                  { set: 'set-4', title: 'Meine Familie' },
+                  { set: 'set-5', title: 'Treffen in der Stadt' },
                 ]
               }, // Teil 1
               {
@@ -169,6 +172,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Einkaufen in der Stadt' },
                   { set: 'set-2', title: 'Freizeit und Termine' },
+                  { set: 'set-3', title: 'Essen und Trinken' },
+                  { set: 'set-4', title: 'Wohnen und Möbel' },
+                  { set: 'set-5', title: 'Reisen und Urlaub' },
                 ]
               }, // Teil 2
               {
@@ -176,6 +182,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'In der Stadt' },
                   { set: 'set-2', title: 'Schule und Arztpraxis' },
+                  { set: 'set-3', title: 'Supermarkt und Restaurant' },
+                  { set: 'set-4', title: 'Im Wohnhaus' },
+                  { set: 'set-5', title: 'Unterwegs' },
                 ]
               }, // Teil 3
             ] },

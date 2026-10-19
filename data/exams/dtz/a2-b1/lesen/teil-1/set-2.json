@@ -1,0 +1,86 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Infomappe der Kita",
+  "minutes": 8,
+  "context": "Ihr Kind hat einen Platz in der Kita „Kanalspatzen“ bekommen. Am ersten Tag bekommen Sie eine Infomappe für Eltern.",
+  "instructions": "Lesen Sie die Aufgaben 21 bis 25 und das Inhaltsverzeichnis. Wo finden Sie die Information? Wählen Sie die richtige Lösung a, b oder c.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "inhalt",
+          "title": "Kita Kanalspatzen – Infomappe für Eltern",
+          "byline": "Kindertagesstätte Kanalspatzen, Lindbrück-Am Kanal",
+          "paragraphs": [
+            {
+              "rows": [
+                ["Seite 2", "Willkommen: unser Team, unsere Gruppen (Krippe 1–3 Jahre, Kindergarten 3–6 Jahre), die ersten Wochen in der Kita"],
+                ["Seite 5", "Bringen und Abholen: Bring- und Abholzeiten, Abholung durch andere Personen mit schriftlicher Vollmacht, wenn Sie sich verspäten"],
+                ["Seite 8", "Essen und Trinken: Frühstück und Mittagessen, Speiseplan, Allergien und Unverträglichkeiten, Essen ohne Schweinefleisch"],
+                ["Seite 11", "Gesundheit: Wann muss Ihr Kind zu Hause bleiben und wann darf es wiederkommen? Fieber, Läuse, ansteckende Krankheiten, Medikamente"],
+                ["Seite 14", "Was Ihr Kind mitbringen soll: Hausschuhe, Wechselkleidung, Regenjacke und Gummistiefel, Windeln"],
+                ["Seite 17", "Kosten: Elternbeitrag, Essensgeld, Ermäßigung für Familien mit geringem Einkommen, Antrag beim Jugendamt"],
+                ["Seite 20", "Ferien: drei Wochen Schließzeit im Sommer, Tage zwischen Weihnachten und Neujahr, Notbetreuung für berufstätige Eltern"],
+                ["Seite 23", "Mitmachen: Elternabende, Elternbeirat, Feste und Ausflüge"],
+                ["Seite 26", "Kontakt: Telefonnummern, Krankmeldung per Telefon oder Kita-App, Sprechzeiten der Leitung"]
+              ]
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 21,
+          "type": "abc",
+          "prompt": "Sie müssen morgen länger arbeiten. Deshalb soll Ihre Nachbarin Ihren Sohn aus der Kita holen. Sie möchten wissen, was Sie dafür tun müssen.",
+          "options": { "a": "Seite 5", "b": "Seite 2", "c": "Seite 26" },
+          "answer": "a",
+          "evidence": [{ "text": "inhalt", "quote": "Abholung durch andere Personen mit schriftlicher Vollmacht" }],
+          "explanation": "Çocuğu başka birinin alması Seite 5'te anlatılıyor: „Abholung durch andere Personen mit schriftlicher Vollmacht“. b) yanlış: Seite 2'de ekip ve gruplar tanıtılıyor. c) yanlış: Seite 26'da telefon numaraları ve hastalık bildirimi var; çocuğu başkasının alması orada yazmıyor."
+        },
+        {
+          "number": 22,
+          "type": "abc",
+          "prompt": "Ihre Tochter bekommt Bauchschmerzen, wenn sie Milch trinkt. Sie möchten wissen, ob die Kita beim Essen darauf Rücksicht nimmt.",
+          "options": { "a": "Seite 11", "b": "Seite 8", "c": "Seite 14" },
+          "answer": "b",
+          "evidence": [{ "text": "inhalt", "quote": "Allergien und Unverträglichkeiten" }],
+          "explanation": "Kızınız süt içince karnı ağrıyor, yani sütü kaldıramıyor. Bu konu yemek bölümünde, Seite 8'de: „Allergien und Unverträglichkeiten“. a) yanlış: Seite 11 de sağlıkla ilgili, ama orada ateş, bit, bulaşıcı hastalıklar ve ilaçlar var, yemek yok. c) yanlış: Seite 14'te çocuğun getireceği eşyalar (terlik, yedek kıyafet) yazıyor."
+        },
+        {
+          "number": 23,
+          "type": "abc",
+          "prompt": "Sie und Ihr Mann müssen beide im August arbeiten. Sie möchten wissen, ob jemand Ihr Kind betreut, wenn die Kita im Sommer zu ist.",
+          "options": { "a": "Seite 5", "b": "Seite 17", "c": "Seite 20" },
+          "answer": "c",
+          "evidence": [{ "text": "inhalt", "quote": "Notbetreuung für berufstätige Eltern" }],
+          "explanation": "Yaz kapanışında çalışan ebeveynler için bakım Seite 20'de: „Notbetreuung für berufstätige Eltern“. a) yanlış: Seite 5'te getirme ve alma saatleri var, yaz tatili yok. b) yanlış: Seite 17 ücretler hakkında."
+        },
+        {
+          "number": 24,
+          "type": "abc",
+          "prompt": "Ihr Kind hatte gestern Abend 39 Grad. Heute geht es ihm schon besser. Sie möchten wissen, ob es heute schon wieder in die Kita gehen darf.",
+          "options": { "a": "Seite 11", "b": "Seite 26", "c": "Seite 2" },
+          "answer": "a",
+          "evidence": [{ "text": "inhalt", "quote": "Wann muss Ihr Kind zu Hause bleiben und wann darf es wiederkommen?" }],
+          "explanation": "Hastalıktan sonra çocuğun ne zaman tekrar gelebileceği Seite 11'de: „Wann muss Ihr Kind zu Hause bleiben und wann darf es wiederkommen?“ Orada ateş (Fieber) de geçiyor. b) yanlış: Seite 26'da sadece hastalığın nasıl bildirileceği var („Krankmeldung per Telefon oder Kita-App“), ne zaman dönülebileceği değil. c) yanlış: Seite 2'de ekip ve gruplar tanıtılıyor."
+        },
+        {
+          "number": 25,
+          "type": "abc",
+          "prompt": "Ihre Familie hat nicht viel Geld. Sie fragen sich, ob Sie für den Kita-Platz weniger bezahlen können.",
+          "options": { "a": "Seite 8", "b": "Seite 23", "c": "Seite 17" },
+          "answer": "c",
+          "evidence": [{ "text": "inhalt", "quote": "Ermäßigung für Familien mit geringem Einkommen" }],
+          "explanation": "Daha az ödemek Seite 17'de anlatılıyor: „Ermäßigung für Familien mit geringem Einkommen“ (geliri düşük ailelere indirim). a) yanlış: Seite 8'de yemek ve yemek listesi var; yemek ücreti (Essensgeld) ise Seite 17'de. b) yanlış: Seite 23'te veli toplantıları, veli kurulu ve şenlikler var."
+        }
+      ]
+    }
+  ]
+}

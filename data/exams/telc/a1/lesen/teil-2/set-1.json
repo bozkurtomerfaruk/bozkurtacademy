@@ -140,17 +140,17 @@
         {
           "id": "q8a",
           "label": "a",
-          "title": "Minigolf Grashüpfer",
+          "title": "Basketball Korbjäger",
           "paragraphs": [
-            "Spielen Sie Minigolf im Garten vom Café Linde in Brombeerau. Samstag und Sonntag von 11 bis 19 Uhr geöffnet. Erwachsene 5 Euro, Kinder 3 Euro."
+            "Wir spielen jeden Samstag um 9 Uhr Basketball. Wir treffen uns in Brombeerau am Bahnhof. Von Mispelfeld fahren Sie mit dem Auto 20 Minuten."
           ]
         },
         {
           "id": "q8b",
           "label": "b",
-          "title": "Minigolf am Bach",
+          "title": "Basketball am Bach",
           "paragraphs": [
-            "Unser Minigolfplatz ist in Mispelfeld, direkt neben dem Sportplatz. Am Wochenende ist er von 10 bis 20 Uhr offen. Ein Spiel kostet 4 Euro."
+            "Jeden Samstag um 10 Uhr spielen wir zwei Stunden Basketball. Wir treffen uns in Mispelfeld, direkt neben dem Sportplatz. Alle können mitspielen."
           ]
         }
       ],
@@ -158,19 +158,19 @@
         {
           "number": 8,
           "type": "zuordnung",
-          "prompt": "Sie besuchen am Samstag Freunde in Mispelfeld. Dort möchten Sie zusammen Minigolf spielen.",
+          "prompt": "Sie besuchen am Samstag Freunde in Mispelfeld. Sie möchten dort mit einer Gruppe Basketball spielen.",
           "answer": "b",
           "evidence": [
             {
               "text": "q8b",
-              "quote": "Unser Minigolfplatz ist in Mispelfeld"
+              "quote": "Wir treffen uns in Mispelfeld, direkt neben dem Sportplatz."
             },
             {
               "text": "q8a",
-              "quote": "in Brombeerau"
+              "quote": "Wir treffen uns in Brombeerau am Bahnhof. Von Mispelfeld fahren Sie mit dem Auto 20 Minuten."
             }
           ],
-          "explanation": "Mispelfeld’de minigolf oynamak istiyorsunuz. b ilanında „Unser Minigolfplatz ist in Mispelfeld“ yazıyor: Minigolf sahası Mispelfeld’de. „Am Wochenende“ (hafta sonu) açık, cumartesi de açık. a ilanında „in Brombeerau“ yazıyor: Bu saha başka bir yerde, Brombeerau’da. Cevap b."
+          "explanation": "Cumartesi Mispelfeld’de bir grupla basketbol oynamak istiyorsunuz. İki ilanda da Mispelfeld yazıyor, dikkatli okuyun. b ilanında „Wir treffen uns in Mispelfeld“ yazıyor: Grup Mispelfeld’de buluşuyor, her cumartesi (jeden Samstag). a ilanında „Wir treffen uns in Brombeerau“ yazıyor: Bu grup Brombeerau’da buluşuyor. „Von Mispelfeld fahren Sie mit dem Auto 20 Minuten“: Mispelfeld’den arabayla 20 dakika. Cevap b."
         }
       ]
     },
@@ -181,9 +181,9 @@
         {
           "id": "q9a",
           "label": "a",
-          "title": "Fitnessstudio Muskelkater",
+          "title": "Sportstudio Muskelkater",
           "paragraphs": [
-            "Bei uns können Sie jeden Tag von 6 bis 23 Uhr Sport machen. Ein Monat kostet 22 Euro. Sie finden uns in der Gartenstraße 30."
+            "Bei uns können Sie jeden Tag von 6 bis 23 Uhr Sport machen. Ein Monat kostet 22 Euro. Sie finden uns im Mühlenweg 30."
           ]
         },
         {
@@ -199,7 +199,7 @@
         {
           "number": 9,
           "type": "zuordnung",
-          "prompt": "Sie möchten in ein Fitnessstudio gehen. Für einen Monat können Sie 25 Euro bezahlen.",
+          "prompt": "Sie möchten in einem Studio Sport machen. Für einen Monat können Sie 30 Euro bezahlen.",
           "answer": "a",
           "evidence": [
             {
@@ -211,7 +211,7 @@
               "quote": "Ein Monat kostet 45 Euro."
             }
           ],
-          "explanation": "Bir ay için 25 euro ödeyebilirsiniz. a ilanında „Ein Monat kostet 22 Euro“ yazıyor: Bir ay 22 euro. Bu, 25 eurodan az. b ilanında „Ein Monat kostet 45 Euro“ yazıyor: Bir ay 45 euro. Bu çok pahalı. Cevap a."
+          "explanation": "Bir ay için 30 euro ödeyebilirsiniz. a ilanında „Ein Monat kostet 22 Euro“ yazıyor: Bir ay 22 euro. Bu, 30 eurodan az. b ilanında „Ein Monat kostet 45 Euro“ yazıyor: Bir ay 45 euro. Bu çok pahalı. Cevap a."
         }
       ]
     },

@@ -16,7 +16,7 @@
           "id": "bankkarte",
           "title": "Bank am Rosenplatz – Ihre neue Karte",
           "paragraphs": [
-            "Ihre neue Bankkarte kommt in den nächsten Tagen mit der Post. Die PIN schicken wir Ihnen drei Tage später in einem anderen Brief."
+            "Ihre neue Bankkarte kommt in den nächsten Tagen mit der Post. Die Zahl für die Karte schicken wir Ihnen drei Tage später in einem anderen Brief."
           ]
         }
       ],
@@ -25,10 +25,10 @@
           "number": 0,
           "example": true,
           "type": "richtig-falsch",
-          "prompt": "Die Karte und die PIN kommen am gleichen Tag.",
+          "prompt": "Die Karte und die Zahl kommen am gleichen Tag.",
           "answer": "falsch",
-          "evidence": [{ "text": "bankkarte", "quote": "Die PIN schicken wir Ihnen drei Tage später in einem anderen Brief." }],
-          "explanation": "Metin: „Die PIN schicken wir Ihnen drei Tage später in einem anderen Brief.“ (PIN'i size üç gün sonra başka bir mektupla gönderiyoruz). Yani kart ve PIN aynı gün (am gleichen Tag) gelmiyor."
+          "evidence": [{ "text": "bankkarte", "quote": "Die Zahl für die Karte schicken wir Ihnen drei Tage später in einem anderen Brief." }],
+          "explanation": "Metin: „Die Zahl für die Karte schicken wir Ihnen drei Tage später in einem anderen Brief.“ (Kart için sayıyı size üç gün sonra başka bir mektupla gönderiyoruz). Yani kart ve sayı (Zahl) aynı gün (am gleichen Tag) gelmiyor."
         }
       ]
     },
@@ -94,7 +94,7 @@
           "prompt": "Frau Halvorsen kann ihr Paket heute noch in der Post holen.",
           "answer": "falsch",
           "evidence": [{ "text": "paket", "quote": "Ihr Paket ist ab morgen, 14 Uhr, in der Post in der Wacholdergasse 3." }],
-          "explanation": "Metin: „Ihr Paket ist ab morgen, 14 Uhr, in der Post“ (paketiniz yarın saat 14'ten itibaren postanede). „heute“ (bugün) metinde sadece postacının geldiği saat için var. Yani paket bugün alınamıyor, ancak yarın."
+          "explanation": "Metin: „Ihr Paket ist ab morgen, 14 Uhr, in der Post“ (paketiniz yarın saat 14'ten itibaren postanede). „heute“ (bugün) metinde sadece şu cümlede var: „heute um 10 Uhr waren Sie nicht zu Hause“ (bugün saat 10'da evde değildiniz). Yani paket bugün alınamıyor, ancak yarın."
         }
       ]
     },
@@ -105,7 +105,7 @@
           "id": "laden",
           "title": "Papier und Stift",
           "paragraphs": [
-            "Bei uns gibt es Hefte, Stifte und Zeitungen. Neu: Sie können bei uns jetzt auch Pakete abgeben. Montag bis Samstag 8 bis 19 Uhr."
+            "Bei uns gibt es Hefte, Stifte und Zeitungen. Neu: Sie möchten ein Paket schicken? Das geht jetzt auch bei uns. Montag bis Samstag 8 bis 19 Uhr."
           ]
         }
       ],
@@ -115,8 +115,8 @@
           "type": "richtig-falsch",
           "prompt": "In diesem Geschäft kann man ein Paket schicken.",
           "answer": "richtig",
-          "evidence": [{ "text": "laden", "quote": "Sie können bei uns jetzt auch Pakete abgeben." }],
-          "explanation": "Metin: „Sie können bei uns jetzt auch Pakete abgeben.“ (Artık bize paket de teslim edebilirsiniz). Paketi dükkâna veriyorsunuz, dükkân onu gönderiyor. Yani bu dükkândan (Geschäft) paket gönderilebiliyor (schicken). İfade doğru."
+          "evidence": [{ "text": "laden", "quote": "Sie möchten ein Paket schicken? Das geht jetzt auch bei uns." }],
+          "explanation": "Metin: „Sie möchten ein Paket schicken? Das geht jetzt auch bei uns.“ (Bir paket göndermek mi istiyorsunuz? Bu artık bizde de mümkün). Yani bu dükkândan (Geschäft) paket gönderilebiliyor (schicken). İfade doğru."
         }
       ]
     },
@@ -135,7 +135,7 @@
         {
           "number": 15,
           "type": "richtig-falsch",
-          "prompt": "Ein Paket in die Türkei ist drei oder vier Tage unterwegs.",
+          "prompt": "Ein Paket in die Türkei braucht drei oder vier Tage.",
           "answer": "falsch",
           "evidence": [{ "text": "pakettage", "quote": "7 bis 10 Tage" }],
           "explanation": "Tabloda Türkiye (In die Türkei) için „7 bis 10 Tage“ (7 ila 10 gün) yazıyor. „3 bis 4 Tage“ (3 ila 4 gün) Avusturya ve Polonya için. Yani Türkiye'ye paket üç dört günde gitmiyor."

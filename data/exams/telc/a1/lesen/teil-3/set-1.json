@@ -47,7 +47,7 @@
         {
           "number": 11,
           "type": "richtig-falsch",
-          "prompt": "Im Museum kann man mit dem Handy Fotos machen.",
+          "prompt": "Im Museum kann man Fotos machen.",
           "answer": "falsch",
           "evidence": [{ "text": "fotos", "quote": "bitte machen Sie in den Räumen keine Fotos" }],
           "explanation": "Metin: „bitte machen Sie in den Räumen keine Fotos“ (lütfen odalarda fotoğraf çekmeyin). Fotoğraf sadece „draußen im Garten“ (dışarıda, bahçede) serbest. Yani müzenin içinde fotoğraf çekilmiyor."
@@ -69,7 +69,7 @@
         {
           "number": 12,
           "type": "richtig-falsch",
-          "prompt": "Eine DVD muss man nach sieben Tagen wieder in die Bibliothek bringen.",
+          "prompt": "Eine DVD soll man nach sieben Tagen wieder in die Bibliothek bringen.",
           "answer": "richtig",
           "evidence": [{ "text": "ausleihe", "quote": "Filme auf DVD eine Woche" }],
           "explanation": "Metin: „Filme auf DVD eine Woche“ (DVD'deki filmler bir hafta). Bir hafta (eine Woche) yedi gün (sieben Tage) demek. Üç hafta (drei Wochen) sadece kitaplar için. İfade doğru."
@@ -83,7 +83,7 @@
           "id": "spielsachen",
           "title": "Museum an der Brücke",
           "paragraphs": [
-            "Neu bei uns: Spielsachen aus 100 Jahren! Die Puppen, Autos und Bälle sind im zweiten Stock. Im ersten Stock finden Sie wie immer alte Fotos von der Stadt."
+            "Neu bei uns: Puppen, Autos und Bälle für Kinder aus 100 Jahren! Das alles finden Sie im zweiten Stock. Im ersten Stock finden Sie wie immer alte Fotos von der Stadt."
           ]
         }
       ],
@@ -91,10 +91,10 @@
         {
           "number": 13,
           "type": "richtig-falsch",
-          "prompt": "Die alten Spielsachen sieht man im ersten Stock.",
+          "prompt": "Die alten Puppen sieht man im ersten Stock.",
           "answer": "falsch",
-          "evidence": [{ "text": "spielsachen", "quote": "Die Puppen, Autos und Bälle sind im zweiten Stock." }],
-          "explanation": "Metin: „Die Puppen, Autos und Bälle sind im zweiten Stock.“ (Bebekler, arabalar ve toplar ikinci katta). Birinci katta (im ersten Stock) ise eski şehir fotoğrafları var. Yani oyuncaklar birinci katta değil."
+          "evidence": [{ "text": "spielsachen", "quote": "Das alles finden Sie im zweiten Stock." }],
+          "explanation": "Metinde önce „Puppen, Autos und Bälle“ (bebekler, arabalar ve toplar) var, sonra: „Das alles finden Sie im zweiten Stock.“ (Bunların hepsini ikinci katta bulursunuz). Birinci katta (im ersten Stock) ise eski şehir fotoğrafları var. Yani bebekler birinci katta değil."
         }
       ]
     },

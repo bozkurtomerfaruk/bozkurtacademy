@@ -1,0 +1,220 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "sprachbausteine",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Ein Brief an die Gastfamilie",
+  "minutes": 12,
+  "context": "Ein Student schreibt vor seinem Sprachkurs an seine Gastfamilie.",
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort (a, b oder c) in die Lücken 21–30 passt.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "brief",
+          "title": "Bald bei Ihnen in Kellbrunn",
+          "byline": "Brief von Baran Karaböcek an Familie Haberkorn",
+          "paragraphs": [
+            "Liebe Frau Haberkorn, lieber Herr Haberkorn,",
+            "vielen Dank für Ihre freundliche E-Mail und die Fotos von Ihrem Haus. Ich freue mich sehr, {{21}} ich im Juli vier Wochen bei Ihnen wohnen darf. Heute möchte ich mich kurz vorstellen: Ich heiße Baran Karaböcek, bin 19 Jahre alt und studiere {{22}} einem Jahr Informatik in der Türkei. Sie haben geschrieben, dass es in der Nähe von Kellbrunn einen See gibt – das finde ich toll, denn ich schwimme sehr gern.",
+            "Ich komme am 5. Juli um 18:40 Uhr mit dem Zug in Kellbrunn an. Könnten Sie mich vielleicht {{23}} Bahnhof abholen? Wenn das nicht möglich ist, nehme ich ein Taxi.",
+            "Ich habe auch noch ein paar Fragen. Ich esse kein Schweinefleisch. Ist das ein Problem für Sie? Wenn es Ihnen lieber ist, kann ich {{24}} abends auch selbst etwas kochen. Gibt es in meinem Zimmer einen Schreibtisch? Ich brauche einen, {{25}} ich für den Sprachkurs jeden Tag Hausaufgaben machen muss. Und wie komme ich am besten von Ihrem Haus {{26}} meiner Sprachschule? Fährt dort ein Bus?",
+            "Für Ihre Tochter Merle habe ich schon ein kleines Geschenk: ein Buch mit {{27}} Bildern aus meiner Heimat.",
+            "Ich habe noch nie bei einer Familie im Ausland gewohnt und bin deshalb ein bisschen aufgeregt. Aber ich bin sicher, dass ich mich bei Ihnen schnell wohlfühlen {{28}}. Ich freue mich schon sehr {{29}} die Zeit in Kellbrunn!",
+            "Herzliche Grüße an Sie und {{30}} Kinder",
+            "Ihr Baran Karaböcek"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 21,
+          "type": "abc",
+          "prompt": "Lücke 21",
+          "options": {
+            "a": "ob",
+            "b": "damit",
+            "c": "dass"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Ich freue mich sehr,"
+            },
+            {
+              "text": "brief",
+              "quote": "ich im Juli vier Wochen bei Ihnen wohnen darf"
+            }
+          ],
+          "explanation": "Boşluktan sonra fiil sonda olan bir yan cümle geliyor: „ich im Juli vier Wochen bei Ihnen wohnen darf“. Baran'ın sevindiği şey bu bilginin kendisi; bir olguyu aktaran yan cümle „dass“ ile kurulur: „Ich freue mich sehr, dass ich … wohnen darf“ (… kalabileceğim için çok seviniyorum). a) ob yanlış: „ob“ (… mı, … mi) cevabı bilinmeyen bir soruyu aktarır; Baran ise ailede kalacağını zaten biliyor. b) damit yanlış: „damit“ bir amaç bildirir (… sın diye); ailede kalmak sevinmenin amacı değil, sevinmenin konusudur."
+        },
+        {
+          "number": 22,
+          "type": "abc",
+          "prompt": "Lücke 22",
+          "options": {
+            "a": "seit",
+            "b": "vor",
+            "c": "ab"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Informatik in der Türkei"
+            }
+          ],
+          "explanation": "Fiil şimdiki zamanda: „studiere“. Baran bir yıl önce başladı ve hâlâ okuyor; geçmişte başlayıp hâlâ süren durum „seit“ + Dativ ile anlatılır: „seit einem Jahr“ (bir yıldır). b) vor yanlış: „vor einem Jahr“ (bir yıl önce) geçmişteki bir anı gösterir ve geçmiş zamanla kullanılır (ör. „habe … angefangen“); şimdiki zamandaki „studiere“ ile uymaz. c) ab yanlış: „ab“ (… -den itibaren) bir başlangıç noktası gösterir (ör. „ab Montag“); „ab einem Jahr“ burada süre bildirmez."
+        },
+        {
+          "number": 23,
+          "type": "abc",
+          "prompt": "Lücke 23",
+          "options": {
+            "a": "auf",
+            "b": "am",
+            "c": "zum"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Bahnhof abholen?"
+            }
+          ],
+          "explanation": "Boşluktan sonra artikelsiz „Bahnhof“ geliyor; demek ki edat ile artikel birleşmiş olmalı. Birini istasyonda karşılamak „am Bahnhof abholen“ olarak söylenir (am = an dem, Dativ, nerede?). c) zum yanlış: „zum“ (= zu dem) bir yöne gidişi gösterir (istasyona); „abholen“ ise bir yerden almak demektir, yön değil. a) auf yanlış: „auf“ artikelle birleşmiş bir biçim değildir; „auf Bahnhof“ artikelsiz kurulamaz."
+        },
+        {
+          "number": 24,
+          "type": "abc",
+          "prompt": "Lücke 24",
+          "options": {
+            "a": "mir",
+            "b": "mich",
+            "c": "sich"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "abends auch selbst etwas kochen"
+            }
+          ],
+          "explanation": "Burada özne „ich“: „kann ich … abends auch selbst etwas kochen“. „etwas“ fiilin Akkusativ nesnesidir (bir şey pişirmek); kimin için pişirildiğini dönüşlü zamir Dativ olarak söyler: „ich koche mir etwas“ (kendime bir şey pişiririm). „ich“ için Dativ dönüşlü zamir „mir“dir. b) mich yanlış: Akkusativ biçimidir; Akkusativ yeri zaten „etwas“ tarafından dolu. c) sich yanlış: „sich“ yalnızca „er/sie/es/Sie/sie“ öznesiyle kullanılır; özne „ich“."
+        },
+        {
+          "number": 25,
+          "type": "abc",
+          "prompt": "Lücke 25",
+          "options": {
+            "a": "denn",
+            "b": "trotzdem",
+            "c": "weil"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "ich für den Sprachkurs jeden Tag Hausaufgaben machen muss"
+            }
+          ],
+          "explanation": "Baran masaya neden ihtiyacı olduğunu söylüyor: her gün ödev yapması gerekiyor. Boşluktan sonra çekimli fiil „muss“ cümlenin sonunda; bu bir yan cümledir. Sebep bildiren yan cümle bağlacı „weil“dir. a) denn yanlış: „denn“ de sebep bildirir, ama ondan sonra ana cümle düzeni gelir, fiil ikinci sıradadır („denn ich muss … machen“); burada fiil sonda. b) trotzdem yanlış: „trotzdem“ (yine de) zıtlık bildirir ve fiili hemen arkasına alır; ödev ile masa ihtiyacı arasında zıtlık yok."
+        },
+        {
+          "number": 26,
+          "type": "abc",
+          "prompt": "Lücke 26",
+          "options": {
+            "a": "nach",
+            "b": "zu",
+            "c": "bei"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "meiner Sprachschule? Fährt dort ein Bus?"
+            }
+          ],
+          "explanation": "Baran evden okula nasıl gideceğini soruyor: „von Ihrem Haus … meiner Sprachschule“. Bir binaya, kuruma veya kişiye gidiş „zu“ + Dativ ile söylenir: „zu meiner Sprachschule“ (dil okuluma). a) nach yanlış: „nach“ yön olarak şehir ve ülke adlarıyla (ör. „nach Kellbrunn“) veya „nach Hause“ kalıbında kullanılır; okul gibi bir yer için kullanılmaz. c) bei yanlış: „bei“ bir yerde bulunmayı anlatır (nerede?), gidişi (nereye?) değil."
+        },
+        {
+          "number": 27,
+          "type": "abc",
+          "prompt": "Lücke 27",
+          "options": {
+            "a": "schöner",
+            "b": "schönen",
+            "c": "schöne"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Bildern aus meiner Heimat"
+            }
+          ],
+          "explanation": "„mit“ edatı Dativ ister; „Bildern“ çoğul Dativ biçimidir (sondaki -n). Önünde artikel olmadığı için sıfat güçlü çekime girer; çoğul Dativ'de sıfat eki „-en“dir: „mit schönen Bildern“ (güzel resimlerle). a) schöner yanlış: „-er“ eki örneğin dişil Dativ tekilde kullanılır (ör. „mit schöner Musik“); çoğulda değil. c) schöne yanlış: „-e“ eki artikelsiz çoğulun Nominativ veya Akkusativ biçimidir (ör. „schöne Bilder“); „mit“ ise Dativ ister."
+        },
+        {
+          "number": 28,
+          "type": "abc",
+          "prompt": "Lücke 28",
+          "options": {
+            "a": "wurde",
+            "b": "würden",
+            "c": "werde"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Aber ich bin sicher, dass ich mich bei Ihnen schnell wohlfühlen"
+            }
+          ],
+          "explanation": "Yan cümlenin öznesi „ich“ ve cümle sonunda mastar „wohlfühlen“ var. Baran gelecekte olacak bir şeyden emin: „werden“ + mastar Futur kurar ve „ich“ için biçimi „werde“dir: „dass ich mich … schnell wohlfühlen werde“ (kendimi çabuk iyi hissedeceğim). a) wurde yanlış: Präteritum biçimidir (oldu); Baran henüz gelmedi, söz konusu olan gelecek. b) würden yanlış: Bu „wir/sie/Sie“ biçimidir; özne „ich“ olduğundan „würde“ olması gerekirdi."
+        },
+        {
+          "number": 29,
+          "type": "abc",
+          "prompt": "Lücke 29",
+          "options": {
+            "a": "auf",
+            "b": "über",
+            "c": "an"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "die Zeit in Kellbrunn!"
+            }
+          ],
+          "explanation": "„sich freuen“ iki edatla kullanılır: Gelecekte olacak bir şey için „sich freuen auf“ (dört gözle beklemek), şimdi olan veya olmuş bir şey için „sich freuen über“. Baran'ın Kellbrunn'daki zamanı henüz başlamadı (Temmuz'da gelecek), bu yüzden „Ich freue mich schon sehr auf die Zeit in Kellbrunn!“ doğru; „schon“ da beklentiyi gösterir. b) über yanlış: Olmuş veya şu anda olan bir şey için kullanılır (ör. „über Ihre E-Mail“). c) an yanlış: „sich freuen“ „an“ edatıyla bu anlamda kullanılmaz."
+        },
+        {
+          "number": 30,
+          "type": "abc",
+          "prompt": "Lücke 30",
+          "options": {
+            "a": "Ihren",
+            "b": "Ihre",
+            "c": "Ihrer"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Herzliche Grüße an Sie und"
+            }
+          ],
+          "explanation": "„Grüße an“ kalıbında „an“ Akkusativ ister: „Grüße an Sie und … Kinder“. „Kinder“ çoğuldur; Baran aileye „Sie“ diye hitap ettiği için iyelik sözcüğü büyük harfle „Ihr-“ olur, çoğul Akkusativ'de eki „-e“dir: „an Sie und Ihre Kinder“ (size ve çocuklarınıza). a) Ihren yanlış: „-en“ eki çoğulda Dativ biçimidir (ör. „mit Ihren Kindern“); „an“ burada Akkusativ ister ve isim de „Kindern“ değil „Kinder“. c) Ihrer yanlış: „-er“ eki dişil Dativ/Genitiv veya çoğul Genitiv biçimidir; „an“dan sonra Akkusativ çoğul gerekir."
+        }
+      ]
+    }
+  ]
+}

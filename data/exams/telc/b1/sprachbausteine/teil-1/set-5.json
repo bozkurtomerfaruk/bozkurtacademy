@@ -1,0 +1,217 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "sprachbausteine",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Eine Anfrage an die Stadtbibliothek",
+  "minutes": 12,
+  "context": "Eine Frau, die neu in der Stadt ist, schreibt an die Stadtbibliothek.",
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort (a, b oder c) in die Lücken 21–30 passt.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "brief",
+          "title": "Fragen zur Anmeldung",
+          "byline": "E-Mail von Derya Kuşçuoğlu an die Stadtbibliothek Gernsried",
+          "paragraphs": [
+            "Betreff: Fragen zur Anmeldung in der Bibliothek",
+            "Sehr geehrte Damen und Herren,",
+            "ich bin vor zwei Monaten nach Gernsried gezogen und interessiere mich {{21}} eine Mitgliedschaft in Ihrer Bibliothek. Bevor ich zu Ihnen komme, habe ich noch einige Fragen.",
+            "Auf Ihrer Internetseite steht, dass man zur Anmeldung einen Ausweis mitbringen {{22}}. Ich habe einen türkischen Reisepass und eine Meldebescheinigung der Stadt Gernsried. Reichen diese beiden Dokumente? Außerdem möchte ich wissen, {{23}} der Bibliotheksausweis im Jahr kostet. Ich studiere zurzeit an der Fachhochschule. Bekommen Studierende vielleicht einen {{24}} Preis?",
+            "Ich lese gern Romane auf Deutsch, aber manchmal auch in meiner Muttersprache. Haben Sie auch Bücher {{25}} türkischer Sprache? Mein Sohn ist acht Jahre alt und liest ebenfalls sehr gern. Kann er einen eigenen Ausweis bekommen, oder darf er Bücher nur mit {{26}} Ausweis ausleihen?",
+            "Ich arbeite montags bis freitags bis 18 Uhr, {{27}} kann ich nur am Wochenende zu Ihnen kommen. Ist die Bibliothek am Samstag auch {{28}} Nachmittag geöffnet? Und noch eine letzte Frage: Kann man ausgeliehene Bücher auch online {{29}}, wenn man sie länger braucht?",
+            "Vielen Dank {{30}} Voraus für Ihre Antwort.",
+            "Mit freundlichen Grüßen",
+            "Derya Kuşçuoğlu"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 21,
+          "type": "abc",
+          "prompt": "Lücke 21",
+          "options": {
+            "a": "für",
+            "b": "an",
+            "c": "auf"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "eine Mitgliedschaft in Ihrer Bibliothek"
+            }
+          ],
+          "explanation": "Boşluktan önce „interessiere mich“ var. „sich interessieren“ (ilgilenmek) fiili sabit olarak „für“ + Akkusativ ile kullanılır: „sich für etwas interessieren“. Burada: „ich interessiere mich für eine Mitgliedschaft“ = bir üyelikle ilgileniyorum. b) an yanlış: „an“ isimle kurulur („Interesse an etwas haben“), fiil „sich interessieren“ ile kullanılmaz. c) auf yanlış: „auf“ „sich freuen auf“, „warten auf“ gibi fiillerle kullanılır; „sich interessieren“ ile kurulmaz."
+        },
+        {
+          "number": 22,
+          "type": "abc",
+          "prompt": "Lücke 22",
+          "options": {
+            "a": "müssen",
+            "b": "musst",
+            "c": "muss"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "dass man zur Anmeldung einen Ausweis mitbringen"
+            }
+          ],
+          "explanation": "„dass“ yan cümlesinde özne „man“ (insan, kişi). „man“ her zaman üçüncü tekil kişi gibi çekilir (er/sie/es gibi). Yan cümlede çekimli fiil sona gelir: „dass man … mitbringen muss“ = (kişinin) kimlik getirmesi gerektiği. a) müssen yanlış: Mastar veya „wir/sie/Sie“ biçimidir; „man“ çoğul gibi çekilmez. b) musst yanlış: „du“ biçimidir; özne „du“ değil „man“."
+        },
+        {
+          "number": 23,
+          "type": "abc",
+          "prompt": "Lücke 23",
+          "options": {
+            "a": "wie",
+            "b": "was",
+            "c": "wo"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "der Bibliotheksausweis im Jahr kostet"
+            }
+          ],
+          "explanation": "Boşluktan sonra „kostet“ (tutuyor, fiyatı …) geliyor: „… der Bibliotheksausweis im Jahr kostet“. Fiyat sorusu Almancada „Was kostet …?“ ile sorulur; dolaylı soruda da aynı soru sözcüğü kalır: „ich möchte wissen, was der Ausweis kostet“ = kartın ne kadar tuttuğunu bilmek istiyorum. „kosten“ fiilinin bir Akkusativ tamlayıcısı gerekir, „was“ bu boşluğu doldurur. a) wie yanlış: „wie“ (nasıl) bir tamlayıcı değil, zarftır; „Wie kostet …?“ Almancada kurulmaz (doğrusu „Wie viel kostet …?“). c) wo yanlış: „wo“ (nerede) yer sorar; fiyatla ilgili bu cümlede anlamsızdır."
+        },
+        {
+          "number": 24,
+          "type": "abc",
+          "prompt": "Lücke 24",
+          "options": {
+            "a": "günstiger",
+            "b": "günstigeren",
+            "c": "günstigsten"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Bekommen Studierende vielleicht einen"
+            }
+          ],
+          "explanation": "Boşluk belirsiz artikel „einen“ ile „Preis“ (eril, Akkusativ) arasında bir sıfattır. Öğrenciler için normal fiyattan daha uygun bir fiyat soruluyor, yani Komparativ: „günstiger“. Sıfat ismin önünde olduğu için ek alır; „einen“den sonra eril Akkusativ eki „-en“dir: „einen günstigeren Preis“ = daha uygun bir fiyat. a) günstiger yanlış: Komparativ doğru ama isimden önce eksiz kalamaz; „einen günstiger Preis“ olmaz. c) günstigsten yanlış: Superlativ (en uygun) belirli artikel ister („den günstigsten Preis“); belirsiz artikel „einen“ ile kullanılmaz."
+        },
+        {
+          "number": 25,
+          "type": "abc",
+          "prompt": "Lücke 25",
+          "options": {
+            "a": "mit",
+            "b": "von",
+            "c": "in"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Haben Sie auch Bücher"
+            }
+          ],
+          "explanation": "Boşluktan sonra „türkischer Sprache“ geliyor (Dativ, dişil: „die Sprache“). Bir kitabın hangi dilde yazıldığı „in … Sprache“ ile söylenir: „Bücher in türkischer Sprache“ = Türkçe kitaplar (önceki cümledeki „in meiner Muttersprache“ gibi). a) mit yanlış: „mit“ birlikte olmayı veya araç bildirir („mit Bildern“ = resimli); kitabın yazıldığı dil „mit“ ile söylenmez, „Bücher mit türkischer Sprache“ olmaz. b) von yanlış: „von“ kaynak veya yazar bildirir („Bücher von einer bekannten Autorin“ = tanınmış bir yazarın kitapları); dil için kullanılmaz."
+        },
+        {
+          "number": 26,
+          "type": "abc",
+          "prompt": "Lücke 26",
+          "options": {
+            "a": "meinem",
+            "b": "meinen",
+            "c": "mein"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Ausweis ausleihen"
+            }
+          ],
+          "explanation": "Boşluktan önce „mit“ edatı var. „mit“ her zaman Dativ ister; „der Ausweis“ erildir. Eril Dativ'de iyelik zamiri „meinem“ olur: „mit meinem Ausweis“ = benim kartımla. b) meinen yanlış: Eril Akkusativ biçimidir; „mit“ Akkusativ almaz. c) mein yanlış: Eril Nominativ biçimidir; edattan sonra yalın hâl kullanılamaz."
+        },
+        {
+          "number": 27,
+          "type": "abc",
+          "prompt": "Lücke 27",
+          "options": {
+            "a": "weil",
+            "b": "deshalb",
+            "c": "obwohl"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "kann ich nur am Wochenende zu Ihnen kommen"
+            }
+          ],
+          "explanation": "Boşluktan hemen sonra çekimli fiil geliyor, sonra özne: „… kann ich nur am Wochenende …“. Bu ana cümle sırasıdır (fiil 2. yerde, bağlaç 1. yerde). İlk cümle sebep (hafta içi 18'e kadar çalışıyor), ikinci cümle sonuç (yalnızca hafta sonu gelebilir). Sonuç bildiren ve fiili hemen arkasına alan sözcük „deshalb“dır (bu yüzden). a) weil yanlış: „weil“ yan cümle kurar ve fiili sona atar („weil ich nur … kommen kann“); ayrıca ikinci cümle sebep değil sonuçtur. c) obwohl yanlış: „obwohl“ da fiili sona atar ve zıtlık (-e rağmen) bildirir; burada zıtlık yok."
+        },
+        {
+          "number": 28,
+          "type": "abc",
+          "prompt": "Lücke 28",
+          "options": {
+            "a": "am",
+            "b": "im",
+            "c": "um"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Nachmittag geöffnet?"
+            }
+          ],
+          "explanation": "Boşluktan sonra „Nachmittag“ (öğleden sonra) geliyor. Günün bölümleri („Morgen, Vormittag, Nachmittag, Abend“) „an“ + Dativ ile söylenir, „an dem“ kaynaşarak „am“ olur: „am Nachmittag“ = öğleden sonra. b) im yanlış: „im“ aylar, mevsimler ve yıllar için kullanılır („im November“, „im Sommer“); gün bölümleri için değil („in der Nacht“ istisna). c) um yanlış: „um“ saat bildirir („um 15 Uhr“); „um Nachmittag“ olmaz."
+        },
+        {
+          "number": 29,
+          "type": "abc",
+          "prompt": "Lücke 29",
+          "options": {
+            "a": "verlängert",
+            "b": "verlängerte",
+            "c": "verlängern"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Kann man ausgeliehene Bücher auch online"
+            }
+          ],
+          "explanation": "Cümlede modal fiil „kann“ var: „Kann man … Bücher auch online …?“. Modal fiil çekimli fiildir; ikinci fiil cümlenin sonunda mastar hâlinde gelir: „Kann man Bücher online verlängern?“ = kitapların süresi internetten uzatılabilir mi? a) verlängert yanlış: Partizip II veya „er/ihr“ biçimidir; modal fiilden sonra mastar gerekir. b) verlängerte yanlış: Präteritum çekimli biçimdir; cümlede zaten çekimli fiil „kann“ var."
+        },
+        {
+          "number": 30,
+          "type": "abc",
+          "prompt": "Lücke 30",
+          "options": {
+            "a": "am",
+            "b": "im",
+            "c": "vom"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Voraus für Ihre Antwort"
+            }
+          ],
+          "explanation": "„im Voraus“ (önceden, şimdiden) sabit bir kalıptır: „Vielen Dank im Voraus“ = şimdiden çok teşekkürler; cevap henüz gelmediği için teşekkür önceden ediliyor. Bu kalıpta yalnızca „im“ (in + dem) kullanılır. a) am yanlış: „am“ günler ve tarihler içindir; „am Voraus“ diye bir ifade yoktur. c) vom yanlış: „vom“ (von + dem) bir başlangıç noktası veya kaynak bildirir; „vom Voraus“ Almancada yoktur."
+        }
+      ]
+    }
+  ]
+}

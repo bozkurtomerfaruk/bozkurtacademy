@@ -171,8 +171,12 @@
     container.querySelectorAll('.task-gap[data-gap]').forEach(gap => {
       const given = state.answers[gap.dataset.gap];
       const question = set && questionsOf(set).find(({ question }) => String(question.number) === gap.dataset.gap)?.question;
-      // A gap answered with a/b/c words (DTZ Teil 5) shows the chosen word; a gap filled with a sentence shows its letter.
-      gap.querySelector('.task-gap-pick').textContent = given ? (question?.type === 'abc' ? question.options[given] || given : given) : '';
+      // A gap answered with a/b/c words (DTZ Teil 5) or with a word from a list (telc Sprachbausteine Teil 2)
+      // shows the chosen word; a gap filled with a sentence shows its letter.
+      const group = set && questionsOf(set).find(({ question }) => String(question.number) === gap.dataset.gap)?.group;
+      const word = group?.texts.find(text => text.label === given && !text.title)?.paragraphs?.[0];
+      gap.querySelector('.task-gap-pick').textContent = given ? (question?.type === 'abc' ? question.options[given] || given
+        : typeof word === 'string' && word.length <= 24 ? word : given) : '';
       gap.classList.toggle('is-right', !!(state.checked && question && given === question.answer));
       gap.classList.toggle('is-wrong', !!(state.checked && question && given !== question.answer));
     });

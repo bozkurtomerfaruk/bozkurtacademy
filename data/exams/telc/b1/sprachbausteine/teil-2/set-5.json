@@ -1,0 +1,268 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "sprachbausteine",
+  "teil": 2,
+  "set": "set-5",
+  "title": "Bericht über einen Ausflug",
+  "minutes": 13,
+  "context": "Im Kursbrief der Volkshochschule Brakenhausen berichtet eine Teilnehmerin über einen Ausflug ihres Deutschkurses.",
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort aus der Liste (a–o) in die Lücken 31–40 passt. Jedes Wort passt nur einmal. Fünf Wörter bleiben übrig.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "bericht",
+          "title": "Ein Tag am Lindmoorsee",
+          "byline": "Hilke Sommerhalder, Deutschkurs B1",
+          "paragraphs": [
+            "Am vergangenen Samstag hat unser Deutschkurs B1 einen Ausflug an den Lindmoorsee gemacht. Um acht Uhr trafen wir uns am Bahnhof. Alle waren pünktlich da, {{31}} der Bus zum Bahnhof am Samstag nur einmal in der Stunde fährt. Mit dem Zug fuhren wir dann eine Stunde {{32}} nach Wiltrup. Von dort aus ging es zu Fuß weiter.",
+            "Der Weg führte durch einen Wald und war ziemlich steil. Nach zwei anstrengenden Stunden kamen wir {{33}} am See an. Am Ufer gibt es ein kleines Restaurant, {{34}} wir zu Mittag aßen. Der Wirt, Herr Bramsiepe, erzählte uns beim Essen viel {{35}} die Geschichte des Sees.",
+            "Am Nachmittag nahmen wir an einer {{36}} durch das Naturschutzgebiet teil. Eine Rangerin, Frau Quandtmeier, zeigte uns seltene Vögel und erklärte uns die Regeln: Man darf die Wege nicht {{37}}, damit die Tiere nicht gestört werden.",
+            "Wir machten uns {{38}} 17 Uhr auf den Rückweg. Schon {{39}} wir in Wiltrup wieder in den Zug stiegen, war es dunkel. Der Tag war zwar anstrengend, aber alle hatten viel {{40}}. Im Frühling wollen wir wieder zusammen wandern."
+          ]
+        },
+        {
+          "id": "wort-a",
+          "label": "a",
+          "paragraphs": [
+            "gegen"
+          ]
+        },
+        {
+          "id": "wort-b",
+          "label": "b",
+          "paragraphs": [
+            "wo"
+          ]
+        },
+        {
+          "id": "wort-c",
+          "label": "c",
+          "paragraphs": [
+            "Spaß"
+          ]
+        },
+        {
+          "id": "wort-d",
+          "label": "d",
+          "paragraphs": [
+            "Führung"
+          ]
+        },
+        {
+          "id": "wort-e",
+          "label": "e",
+          "paragraphs": [
+            "obwohl"
+          ]
+        },
+        {
+          "id": "wort-f",
+          "label": "f",
+          "paragraphs": [
+            "Hunger"
+          ]
+        },
+        {
+          "id": "wort-g",
+          "label": "g",
+          "paragraphs": [
+            "endlich"
+          ]
+        },
+        {
+          "id": "wort-h",
+          "label": "h",
+          "paragraphs": [
+            "wenn"
+          ]
+        },
+        {
+          "id": "wort-i",
+          "label": "i",
+          "paragraphs": [
+            "verlassen"
+          ]
+        },
+        {
+          "id": "wort-j",
+          "label": "j",
+          "paragraphs": [
+            "verlieren"
+          ]
+        },
+        {
+          "id": "wort-k",
+          "label": "k",
+          "paragraphs": [
+            "von"
+          ]
+        },
+        {
+          "id": "wort-l",
+          "label": "l",
+          "paragraphs": [
+            "bis"
+          ]
+        },
+        {
+          "id": "wort-m",
+          "label": "m",
+          "paragraphs": [
+            "Prüfung"
+          ]
+        },
+        {
+          "id": "wort-n",
+          "label": "n",
+          "paragraphs": [
+            "als"
+          ]
+        },
+        {
+          "id": "wort-o",
+          "label": "o",
+          "paragraphs": [
+            "über"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 31,
+          "type": "zuordnung",
+          "prompt": "Lücke 31",
+          "answer": "e",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "der Bus zum Bahnhof am Samstag nur einmal in der Stunde fährt"
+            }
+          ],
+          "explanation": "Otobüs cumartesi günü istasyona saatte yalnızca bir kez gidiyor („nur einmal in der Stunde“); buna rağmen herkes dakikmiş („Alle waren pünktlich da“). Bu bir karşıtlıktır ve yan cümle bağlacı „obwohl“ (-e rağmen) ile kurulur; fiil „fährt“ sondadır. „als“ (-dığında) geçmişteki tek bir olay için kullanılır, burada fiil şimdiki zamandadır („fährt“). „wenn“ ve „bis“ de bu cümlede anlam vermez."
+        },
+        {
+          "number": 32,
+          "type": "zuordnung",
+          "prompt": "Lücke 32",
+          "answer": "l",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "nach Wiltrup. Von dort aus ging es zu Fuß weiter"
+            }
+          ],
+          "explanation": "Tren yolculuğunun hedefi söyleniyor: Bir hedefe kadar olan mesafeyi „bis“ (-e kadar) bildirir; yer adının önünde „bis nach Wiltrup“ (Wiltrup’a kadar) kullanılır. „über“, „von“ ve „gegen“ „nach“ ile birlikte bir yer adının önünde bu anlamı vermez."
+        },
+        {
+          "number": 33,
+          "type": "zuordnung",
+          "prompt": "Lücke 33",
+          "answer": "g",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "Nach zwei anstrengenden Stunden kamen wir"
+            }
+          ],
+          "explanation": "Yol dik ve yorucuydu; iki yorucu saatten sonra sonunda göle varmışlar. Uzun ve zor bir bekleyişten sonra olan şeyi „endlich“ (nihayet, sonunda) anlatır. Listede bu yere anlam olarak uyan başka bir zarf yok; „als“, „obwohl“ gibi bağlaçlar ise burada fiili sona atardı."
+        },
+        {
+          "number": 34,
+          "type": "zuordnung",
+          "prompt": "Lücke 34",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "wir zu Mittag aßen"
+            }
+          ],
+          "explanation": "Boşluk „ein kleines Restaurant“ ismine bağlanan bir ilgi cümlesi başlatır ve bir yer bildirir: Öğle yemeğini restoranda yemişler. Bir yer ismine bağlanan ilgi zarfı „wo“ (-dığı yer) olur: „ein Restaurant, wo wir zu Mittag aßen“. „als“ ve „wenn“ zaman bildirir, bir isme bağlanmaz; „obwohl“ ise karşıtlık kurar, burada karşıtlık yoktur."
+        },
+        {
+          "number": 35,
+          "type": "zuordnung",
+          "prompt": "Lücke 35",
+          "answer": "o",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "die Geschichte des Sees"
+            }
+          ],
+          "explanation": "Lokantacı gölün tarihi hakkında anlatmış: „erzählen“ fiili konuyu „über“ + akuzatif ile bağlar: „viel über die Geschichte des Sees erzählen“. „die Geschichte“ burada akuzatiftir. „von“ da „erzählen“ ile kullanılır, ama datif ister („von der Geschichte“); metinde „die“ yazdığı için „von“ uymaz."
+        },
+        {
+          "number": 36,
+          "type": "zuordnung",
+          "prompt": "Lücke 36",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "durch das Naturschutzgebiet teil"
+            }
+          ],
+          "explanation": "„an einer …“ dişil bir isim ister ve sonraki cümle bunun ne olduğunu gösteriyor: Bir korucu onlara nadir kuşları gösterip kuralları anlatmış, yani bir rehberli gezi yapılmış: „an einer Führung durch das Naturschutzgebiet teilnehmen“. „Prüfung“ (sınav) da dişildir, ama „durch das Naturschutzgebiet“ ile birlikte ve bir korucunun kuşları gösterdiği bir etkinlik olarak sınav anlam vermez."
+        },
+        {
+          "number": 37,
+          "type": "zuordnung",
+          "prompt": "Lücke 37",
+          "answer": "i",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "damit die Tiere nicht gestört werden"
+            }
+          ],
+          "explanation": "„darf … nicht“ bir yasak bildirir ve amacı arkadan geliyor: Hayvanlar rahatsız edilmesin diye yollardan çıkılmamalı: „die Wege nicht verlassen“ (yollardan ayrılmamak). „verlieren“ (kaybetmek) de mastardır, ama insanın isteyerek yapmadığı bir şeyi anlatır; „dürfen“ ile ve hayvanları korumak amacıyla bir yasak olarak anlam vermez."
+        },
+        {
+          "number": 38,
+          "type": "zuordnung",
+          "prompt": "Lücke 38",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "17 Uhr auf den Rückweg"
+            }
+          ],
+          "explanation": "Yaklaşık bir saat verilir: „gegen 17 Uhr“ (saat 17 sularında). „bis 17 Uhr“ (17’ye kadar) bir sürenin sonunu söyler; „dönüş yoluna koyulmak“ ise bir anda olan bir harekettir. „von“ ve „über“ saatle bu anlamı vermez."
+        },
+        {
+          "number": 39,
+          "type": "zuordnung",
+          "prompt": "Lücke 39",
+          "answer": "n",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "wir in Wiltrup wieder in den Zug stiegen, war es dunkel"
+            }
+          ],
+          "explanation": "Geçmişte bir kez olan bir olay anlatılıyor: Wiltrup’ta yeniden trene bindiklerinde hava zaten kararmıştı. Boşluk bir yan cümle başlatıyor (fiil „stiegen“ sonda, ana cümle „war es dunkel“ ile devam ediyor). Geçmişteki tek bir olay için zaman bağlacı „als“ (-dığında) kullanılır: „Schon als wir … in den Zug stiegen, war es dunkel“ (daha trene bindiğimizde hava karanlıktı). „wenn“ geçmişte yalnızca tekrarlanan olaylar için kullanılır („her … -dığında“); burada tek bir dönüş yolculuğu var. „obwohl“ karşıtlık kurar, ama trene binmek ile karanlık arasında karşıtlık yoktur. „wo“ ilgi zarfı olarak önünde bir yer ismi ister („ein Restaurant, wo …“ gibi); burada boşluk cümlenin başında, „Schon“ sözcüğünden sonra geliyor ve önünde bir yer ismi yok. „bis“ (-e kadar) bir sürenin sonunu bildirir; „Schon“ ise tek bir zaman noktasını vurgular, bu yüzden „Schon bis …“ denmez. Bu zaman noktasını bir yan cümleyle bağlayan „als“ olur."
+        },
+        {
+          "number": 40,
+          "type": "zuordnung",
+          "prompt": "Lücke 40",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "Im Frühling wollen wir wieder zusammen wandern"
+            }
+          ],
+          "explanation": "„zwar … aber“ bir karşıtlık kurar: Gün yorucuydu, ama herkes çok eğlendi: „viel Spaß haben“ (çok eğlenmek). Sonraki cümle de bunu destekliyor: İlkbaharda yine birlikte yürüyüş yapmak istiyorlar. „Hunger“ (açlık) da „viel“ ile yazılabilir, ama yorgunluk ile açlık arasında karşıtlık yoktur; „aber“ ile bağlanamaz."
+        }
+      ]
+    }
+  ]
+}

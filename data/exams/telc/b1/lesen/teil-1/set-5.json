@@ -1,0 +1,118 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Aus Verein und Nachbarschaft",
+  "minutes": 15,
+  "instructions": "Lesen Sie die Überschriften a–j und die Texte 1–5. Welche Überschrift passt am besten zu welchem Text? Jede Überschrift kann nur einmal verwendet werden. Fünf Überschriften bleiben übrig.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "text-1",
+          "title": "Text 1",
+          "paragraphs": [
+            "Der TSV Ottmarshöhe hat seit vielen Jahren Fußballmannschaften für Männer und Jungen – jetzt soll es auch eine Mannschaft für Frauen geben. Gesucht werden Spielerinnen ab 16 Jahren. Trainiert wird dienstags und donnerstags ab 18.30 Uhr auf dem Sportplatz an der Schule. Auch Frauen, die noch nie Fußball gespielt haben, sind herzlich willkommen. Trikots und Bälle bekommen die Spielerinnen vom Verein. Wer es zuerst ausprobieren möchte, kann zweimal kostenlos mittrainieren."
+          ]
+        },
+        {
+          "id": "text-2",
+          "title": "Text 2",
+          "paragraphs": [
+            "Die alte Telefonzelle an der Gerberstraße hat eine neue Aufgabe: Seit Montag stehen dort Regale mit Büchern. Jeder darf Bücher hineinstellen oder mitnehmen, ohne etwas zu bezahlen. Die Idee hatten zwei Nachbarinnen, die selbst sehr gern lesen. Die Kinderbücher stehen im unteren Regal, damit auch kleine Leser sie erreichen. Zeitschriften und kaputte Bücher sollen bitte nicht hineingestellt werden. Die Telefonzelle ist Tag und Nacht offen."
+          ]
+        },
+        {
+          "id": "text-3",
+          "title": "Text 3",
+          "paragraphs": [
+            "Der Chor „Frohe Stimmen“ wird in diesem Jahr 50 Jahre alt. Zum Geburtstag gibt er am Samstag, dem 18. Oktober, um 19 Uhr ein Konzert mit Volksliedern, aber auch mit bekannten Popsongs. Eigentlich wollte der Chor in der Kirche singen, aber dort wird zurzeit das Dach repariert. Deshalb findet das Konzert im Saal der Musikschule statt. Der Eintritt ist frei, über eine Spende freut sich der Chor. Neue Sängerinnen und Sänger sind jederzeit willkommen."
+          ]
+        },
+        {
+          "id": "text-4",
+          "title": "Text 4",
+          "paragraphs": [
+            "Der Gartenverein „Am Bachlauf“ hat in diesem Jahr zwölf freie Gärten. Früher mussten Interessierte oft zwei oder drei Jahre auf einen Garten warten. Jetzt ist das anders: Wer sich bis Ende März meldet, kann schon im April mit der Arbeit im eigenen Garten anfangen. Die Gärten gehen zuerst an Familien mit Kindern. Ein Garten kostet etwa 250 Euro im Jahr. Am Samstag zeigt die Vorsitzende Brigitte Ahlgrimm allen Interessierten die Gärten."
+          ]
+        },
+        {
+          "id": "text-5",
+          "title": "Text 5",
+          "paragraphs": [
+            "Jeden letzten Sonntag im Monat kochen Freiwillige im Stadtteiltreff Nordring ein Mittagessen für alle, die nicht allein essen möchten. Meistens kommen 30 bis 40 Gäste, viele davon ältere Menschen, die allein leben. Anmelden muss man sich nicht; man kommt einfach um 12 Uhr vorbei. Das Essen ist kostenlos, wer möchte, kann etwas Geld in eine Kasse legen. Die Gerichte sind immer vegetarisch. Das nächste Essen gibt es am 30. November."
+          ]
+        },
+        { "id": "a", "label": "a", "paragraphs": ["Frauenmannschaft sucht Spielerinnen mit Erfahrung"] },
+        { "id": "b", "label": "b", "paragraphs": ["Neu im Sportverein: Fußball für Frauen"] },
+        { "id": "c", "label": "c", "paragraphs": ["Platz für Familien: Gartenverein hat freie Gärten"] },
+        { "id": "d", "label": "d", "paragraphs": ["Gebrauchte Bücher für einen Euro in der Gerberstraße"] },
+        { "id": "e", "label": "e", "paragraphs": ["Bücher bringen und mitnehmen in einer alten Telefonzelle"] },
+        { "id": "f", "label": "f", "paragraphs": ["Geburtstagskonzert des Chors in der Kirche"] },
+        { "id": "g", "label": "g", "paragraphs": ["Gartenverein: Wer einen Garten möchte, muss lange warten"] },
+        { "id": "h", "label": "h", "paragraphs": ["Ein Chor feiert 50 Jahre mit Musik"] },
+        { "id": "i", "label": "i", "paragraphs": ["Gemeinsames Mittagessen nur mit Anmeldung"] },
+        { "id": "j", "label": "j", "paragraphs": ["Zusammen statt allein: Essen am Sonntag im Stadtteiltreff"] }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "zuordnung",
+          "prompt": "Text 1",
+          "answer": "b",
+          "evidence": [
+            { "text": "text-1", "quote": "jetzt soll es auch eine Mannschaft für Frauen geben" }
+          ],
+          "explanation": "Metin 1'de TSV Ottmarshöhe spor kulübünün uzun yıllardır erkekler ve erkek çocuklar için futbol takımları var; şimdi „auch eine Mannschaft für Frauen“ (kadınlar için de bir takım) kurulacak ve 16 yaşından itibaren oyuncular aranıyor. b başlığı („spor kulübünde yeni: kadınlar için futbol“) bunu anlatıyor. a başlığı („kadın takımı deneyimli oyuncular arıyor“) uymuyor: „Auch Frauen, die noch nie Fußball gespielt haben, sind herzlich willkommen“ (hiç futbol oynamamış kadınlar da memnuniyetle karşılanıyor)."
+        },
+        {
+          "number": 2,
+          "type": "zuordnung",
+          "prompt": "Text 2",
+          "answer": "e",
+          "evidence": [
+            { "text": "text-2", "quote": "Jeder darf Bücher hineinstellen oder mitnehmen, ohne etwas zu bezahlen." }
+          ],
+          "explanation": "Metin 2'de Gerberstraße'deki eski telefon kulübesine kitap rafları konmuş; herkes kitap „hineinstellen“ (içine koyabilir) ya da „mitnehmen“ (alıp götürebilir). e başlığı („eski bir telefon kulübesinde kitap getirmek ve almak“) bunu anlatıyor. d başlığı („Gerberstraße'de bir euroya ikinci el kitaplar“) uymuyor: kitaplar „ohne etwas zu bezahlen“ (hiçbir şey ödemeden) alınıyor, yani bir euro bile ödenmiyor."
+        },
+        {
+          "number": 3,
+          "type": "zuordnung",
+          "prompt": "Text 3",
+          "answer": "h",
+          "evidence": [
+            { "text": "text-3", "quote": "wird in diesem Jahr 50 Jahre alt" },
+            { "text": "text-3", "quote": "Zum Geburtstag gibt er am Samstag, dem 18. Oktober, um 19 Uhr ein Konzert" }
+          ],
+          "explanation": "Metin 3'te „Frohe Stimmen“ korosu bu yıl „50 Jahre alt“ (50 yaşında) oluyor ve doğum günü için 18 ekimde halk şarkıları ve pop şarkılarıyla bir konser veriyor. h başlığı („bir koro 50 yılı müzikle kutluyor“) bunu anlatıyor. f başlığı („koronun doğum günü konseri kilisede“) uymuyor: koro aslında kilisede şarkı söylemek istemişti, ama orada çatı onarılıyor; „Deshalb findet das Konzert im Saal der Musikschule statt“ (bu yüzden konser müzik okulunun salonunda yapılıyor)."
+        },
+        {
+          "number": 4,
+          "type": "zuordnung",
+          "prompt": "Text 4",
+          "answer": "c",
+          "evidence": [
+            { "text": "text-4", "quote": "hat in diesem Jahr zwölf freie Gärten" },
+            { "text": "text-4", "quote": "Die Gärten gehen zuerst an Familien mit Kindern." }
+          ],
+          "explanation": "Metin 4'te „Am Bachlauf“ bahçe derneğinin bu yıl „zwölf freie Gärten“ (on iki boş bahçesi) var ve bahçeler „zuerst an Familien mit Kindern“ (önce çocuklu ailelere) veriliyor. c başlığı („ailelere yer: bahçe derneğinin boş bahçeleri var“) bunu anlatıyor. g başlığı („bahçe derneği: bahçe isteyen uzun süre beklemek zorunda“) uymuyor: eskiden iki üç yıl bekleniyordu, ama „Jetzt ist das anders“ (şimdi durum farklı); mart sonuna kadar başvuran nisanda bahçesinde çalışmaya başlayabiliyor."
+        },
+        {
+          "number": 5,
+          "type": "zuordnung",
+          "prompt": "Text 5",
+          "answer": "j",
+          "evidence": [
+            { "text": "text-5", "quote": "ein Mittagessen für alle, die nicht allein essen möchten" }
+          ],
+          "explanation": "Metin 5'te gönüllüler her ayın son pazar günü Nordring mahalle merkezinde „für alle, die nicht allein essen möchten“ (yalnız yemek yemek istemeyen herkes için) öğle yemeği pişiriyor. j başlığı („yalnız değil birlikte: mahalle merkezinde pazar günü yemek“) bunu anlatıyor. i başlığı („ortak öğle yemeği yalnızca kayıtla“) uymuyor: „Anmelden muss man sich nicht“ (kayıt yaptırmak gerekmiyor); saat 12'de gelmek yeterli."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-4",
+  "title": "Kurz gemeldet",
+  "minutes": 15,
+  "instructions": "Lesen Sie die Überschriften a–j und die Texte 1–5. Welche Überschrift passt am besten zu welchem Text? Jede Überschrift kann nur einmal verwendet werden. Fünf Überschriften bleiben übrig.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "text-1",
+          "title": "Text 1",
+          "paragraphs": [
+            "Im Tierpark Gerlinghove ist Anfang Mai ein kleines Kamel zur Welt gekommen. Seit gestern hat das Tier auch einen Namen: Fast 4.000 Besucherinnen und Besucher haben auf der Internetseite des Tierparks zwischen drei Vorschlägen gewählt. Mit 51 Prozent der Stimmen hat der Name „Karla“ gewonnen. Zu sehen ist Karla aber erst ab Juli. Bis dahin bleibt sie mit ihrer Mutter im Stall, weil sie sich noch an die anderen Tiere gewöhnen muss, sagt Tierpflegerin Gesche Kühnel."
+          ]
+        },
+        {
+          "id": "text-2",
+          "title": "Text 2",
+          "paragraphs": [
+            "Wer im August zwischen Zissenbeck und Tessendrup unterwegs ist, braucht mehr Zeit. Vom 4. bis zum 24. August werden auf der Strecke neue Gleise gebaut, deshalb fahren dort keine Züge. Stattdessen fahren Busse. Sie halten an allen Bahnhöfen, brauchen aber etwa 20 Minuten länger als der Zug. Die Fahrkarten für den Zug gelten auch im Bus. Fahrräder dürfen in den Bussen allerdings nicht mitgenommen werden."
+          ]
+        },
+        {
+          "id": "text-3",
+          "title": "Text 3",
+          "paragraphs": [
+            "Der Freiwilligen Feuerwehr fehlen Helferinnen und Helfer. Von den 32 aktiven Mitgliedern sind viele schon über 50 Jahre alt, und tagsüber sind oft zu wenige im Ort. Deshalb lädt die Feuerwehr am Sonntag, dem 9. März, von 11 bis 16 Uhr alle Interessierten ins Feuerwehrhaus ein. Dort kann man die Fahrzeuge ansehen und mit den Mitgliedern sprechen. Mitmachen kann jeder ab 16 Jahren. Erfahrung braucht man nicht, denn neue Mitglieder werden bei der Feuerwehr ausgebildet."
+          ]
+        },
+        {
+          "id": "text-4",
+          "title": "Text 4",
+          "paragraphs": [
+            "Erdbeeren sind in diesem Jahr in der Region deutlich teurer als sonst. Weil es im Mai und Juni sehr viel geregnet hat, sind viele Früchte auf den Feldern kaputtgegangen. Ein Kilo kostet an den Ständen jetzt etwa 8 Euro, im letzten Jahr waren es 5 Euro. Wer seine Erdbeeren selbst pflücken möchte, kann das trotzdem tun: Die Felder des Obsthofs Gerdemeier öffnen am Samstag. Dort kostet das Kilo 4,50 Euro."
+          ]
+        },
+        {
+          "id": "text-5",
+          "title": "Text 5",
+          "paragraphs": [
+            "Seit einem Jahr schreiben die Kinder der Klasse 3b der Grundschule am Rosenhügel Briefe an Bewohnerinnen und Bewohner eines Seniorenheims. Jedes Kind hat einen festen Brieffreund oder eine feste Brieffreundin. E-Mails gibt es dabei nicht: Alle Briefe werden mit der Hand geschrieben. Letzte Woche haben sich die Kinder und die Senioren zum ersten Mal getroffen. Es gab Kuchen, und viele hatten Fotos mitgebracht. „Am Anfang waren die Kinder sehr aufgeregt, aber nach zehn Minuten haben alle erzählt und gelacht“, sagt Lehrerin Ina Tegeler."
+          ]
+        },
+        { "id": "a", "label": "a", "paragraphs": ["Wegen Bauarbeiten im August: Busse statt Züge"] },
+        { "id": "b", "label": "b", "paragraphs": ["Ab sofort für Besucher zu sehen: das kleine Kamel"] },
+        { "id": "c", "label": "c", "paragraphs": ["Im Bus statt im Zug: Auch Fahrräder können mitfahren"] },
+        { "id": "d", "label": "d", "paragraphs": ["Nach dem vielen Regen: Erdbeeren kosten mehr"] },
+        { "id": "e", "label": "e", "paragraphs": ["Feuerwehr sucht Helfer mit Erfahrung"] },
+        { "id": "f", "label": "f", "paragraphs": ["Erdbeeren selbst pflücken ist in diesem Jahr nicht möglich"] },
+        { "id": "g", "label": "g", "paragraphs": ["Nach einem Jahr Briefe: Schüler lernen ihre älteren Freunde kennen"] },
+        { "id": "h", "label": "h", "paragraphs": ["Besucher haben entschieden, wie das junge Tier heißt"] },
+        { "id": "i", "label": "i", "paragraphs": ["Neue Mitglieder gesucht: Feuerwehr lädt zum Kennenlernen ein"] },
+        { "id": "j", "label": "j", "paragraphs": ["Kinder und Senioren schreiben sich E-Mails"] }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "zuordnung",
+          "prompt": "Text 1",
+          "answer": "h",
+          "evidence": [
+            { "text": "text-1", "quote": "haben auf der Internetseite des Tierparks zwischen drei Vorschlägen gewählt" }
+          ],
+          "explanation": "Metin 1'de hayvanat bahçesinde mayıs başında doğan yavru deveye artık bir ad verilmiş: yaklaşık 4.000 ziyaretçi internet sitesinde üç öneri arasından „gewählt“ (seçmiş), „Karla“ adı kazanmış. h başlığı („ziyaretçiler yavru hayvanın adının ne olacağına karar verdi“) bunu anlatıyor. b başlığı („hemen şimdiden ziyaretçilere açık: küçük deve“) uymuyor: „Zu sehen ist Karla aber erst ab Juli“ (ama Karla ancak temmuzdan itibaren görülebilecek); o zamana kadar annesiyle ahırda kalıyor."
+        },
+        {
+          "number": 2,
+          "type": "zuordnung",
+          "prompt": "Text 2",
+          "answer": "a",
+          "evidence": [
+            { "text": "text-2", "quote": "werden auf der Strecke neue Gleise gebaut, deshalb fahren dort keine Züge" },
+            { "text": "text-2", "quote": "Stattdessen fahren Busse." }
+          ],
+          "explanation": "Metin 2'ye göre Zissenbeck ile Tessendrup arasında 4–24 ağustos arasında „neue Gleise gebaut“ (yeni raylar döşeniyor), bu yüzden „fahren dort keine Züge“ (orada tren çalışmıyor); „Stattdessen fahren Busse“ (onların yerine otobüsler çalışıyor). a başlığı („inşaat çalışmaları yüzünden ağustosta: tren yerine otobüs“) bunu anlatıyor; „Bauarbeiten“ (inşaat çalışmaları) metindeki ray yapımını özetliyor. c başlığı („tren yerine otobüste: bisikletler de gidebiliyor“) uymuyor: „Fahrräder dürfen in den Bussen allerdings nicht mitgenommen werden“ (bisikletler otobüslere alınamaz)."
+        },
+        {
+          "number": 3,
+          "type": "zuordnung",
+          "prompt": "Text 3",
+          "answer": "i",
+          "evidence": [
+            { "text": "text-3", "quote": "Der Freiwilligen Feuerwehr fehlen Helferinnen und Helfer." },
+            { "text": "text-3", "quote": "lädt die Feuerwehr am Sonntag, dem 9. März, von 11 bis 16 Uhr alle Interessierten ins Feuerwehrhaus ein" }
+          ],
+          "explanation": "Metin 3'te gönüllü itfaiyenin yardımcıları „fehlen“ (eksik); bu yüzden itfaiye 9 mart pazar günü ilgilenen herkesi itfaiye binasına „einladen“ (davet ediyor): araçlara bakılabiliyor, üyelerle konuşulabiliyor. i başlığı („yeni üyeler aranıyor: itfaiye tanışmaya davet ediyor“) bunu anlatıyor. e başlığı („itfaiye deneyimli yardımcılar arıyor“) uymuyor: „Erfahrung braucht man nicht“ (deneyim gerekmiyor), çünkü yeni üyeler itfaiyede „ausgebildet“ (eğitiliyor)."
+        },
+        {
+          "number": 4,
+          "type": "zuordnung",
+          "prompt": "Text 4",
+          "answer": "d",
+          "evidence": [
+            { "text": "text-4", "quote": "Erdbeeren sind in diesem Jahr in der Region deutlich teurer als sonst." },
+            { "text": "text-4", "quote": "Weil es im Mai und Juni sehr viel geregnet hat" }
+          ],
+          "explanation": "Metin 4'e göre çilekler bu yıl bölgede „deutlich teurer als sonst“ (her zamankinden belirgin şekilde daha pahalı): mayıs ve haziranda çok yağmur yağdığı için tarlalardaki birçok meyve bozulmuş; kilosu 5 yerine yaklaşık 8 euro. d başlığı („çok yağmurdan sonra: çilekler daha pahalı“) bunu anlatıyor. f başlığı („bu yıl çileği kendin toplamak mümkün değil“) uymuyor: kendi çileğini toplamak isteyen „kann das trotzdem tun“ (yine de yapabilir); Gerdemeier meyve çiftliğinin tarlaları cumartesi açılıyor."
+        },
+        {
+          "number": 5,
+          "type": "zuordnung",
+          "prompt": "Text 5",
+          "answer": "g",
+          "evidence": [
+            { "text": "text-5", "quote": "Seit einem Jahr schreiben die Kinder der Klasse 3b" },
+            { "text": "text-5", "quote": "Letzte Woche haben sich die Kinder und die Senioren zum ersten Mal getroffen." }
+          ],
+          "explanation": "Metin 5'te 3b sınıfının çocukları „seit einem Jahr“ (bir yıldır) bir huzurevinde yaşayanlara mektup yazıyor; geçen hafta çocuklar ve yaşlılar „zum ersten Mal“ (ilk kez) buluşmuş. g başlığı („bir yıllık mektuplaşmadan sonra: öğrenciler yaşlı arkadaşlarıyla tanışıyor“) bunu anlatıyor. j başlığı („çocuklar ve yaşlılar birbirine e-posta yazıyor“) uymuyor: „E-Mails gibt es dabei nicht“ (bunda e-posta yok); bütün mektuplar „mit der Hand“ (elle) yazılıyor."
+        }
+      ]
+    }
+  ]
+}

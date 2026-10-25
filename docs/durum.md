@@ -7,8 +7,33 @@
 ### Kaldığım yer
 - Aşama 1, Goethe C1: bitti, main'e birleştirildi (813927f).
 - Aşama 2, TestDaF kâğıt: bitti, main'e birleştirildi.
-- Aşama 3, TestDaF dijital: bitti, main'e birleştirildi (Aufgabe 2 ve 7 atlandı).
-- Sonra: Aşama 4, telc B1. Dal `claude/telc-b1`, çalışma ağacı /tmp/wt-telc. Pilot (5 Teil × 2 set) yazıldı, inceleniyor.
+- Aşama 3, TestDaF dijital: bitti, main'e birleştirildi (00feb1c; Aufgabe 2 ve 7 atlandı). Modelltest PDF'leri çalışma alanından silindi.
+- Aşama 4, telc B1: bitti, main'e birleştirildi.
+- Sonra: Aşama 5, telc A1.
+
+### telc Deutsch B1 (Zertifikat Deutsch) Leseverstehen + Sprachbausteine: format tablosu
+Kaynak: telc'in yayımladığı sınav yapısı ve örnek sınav açıklamaları (arama sonuçları). ✔ = kaynaklarda doğrulandı, ≈ = tahmin veya bizim kararımız. Lesen ve Sprachbausteine birlikte 90 dk (✔).
+
+| Bölüm | Metin | Görev | Soru | Süre |
+|---|---|---|---|---|
+| Lesen Teil 1 | 10 başlık a–j, 5 kısa gazete metni (✔), metin başına ~60–90 kelime (≈) | Her metne bir başlık, beş başlık artar (✔) | 1–5 (✔) | 15 dk (≈) |
+| Lesen Teil 2 | ~400 kelimelik gazete/dergi makalesi (≈) | a/b/c, metin sırasıyla (✔) | 6–10 (✔) | 20 dk (≈) |
+| Lesen Teil 3 | 12 ilan a–l (✔), ~30–50 kelime (≈) | 10 durum ilanlara eşleşir; bir durum için ilan yok: x (✔) | 11–20 (✔) | 30 dk (≈) |
+| Sprachbausteine Teil 1 | Yarı resmî/resmî mektup (✔), ~200 kelime (≈) | Her boşluk için a/b/c, dil bilgisi (✔) | 21–30 (✔) | 12 dk (≈) |
+| Sprachbausteine Teil 2 | Mektup/rapor/duyuru (✔) | 15 kelimelik listeden 10 boşluk, beş kelime artar (✔) | 31–40 (✔) | 13 dk (≈) |
+
+- **Oynatıcı eklentisi:** kelime listeli boşlukta seçilen kısa kelime boşluğun içinde görünüyor; testler Lesen dışındaki bölümleri (`sprachbausteine`) de dolaşıyor.
+- **Bizim kararlarımız (≈):** örnek soru yok; Teil 3'te x tuzağı her sette başka bir nedene dayanıyor (yaş, yer, tarih, üyelik, dil).
+
+**Aşama 4 bitti: Lesen 3 Teil + Sprachbausteine 2 Teil, her biri 5 set (25 set, 200 soru).**
+- Kör çözüm pilotta 80/80, set 3–5'te 120/120 uyuştu.
+- Çözücü SB2 set-4/39'da „damit“ yanında „darüber“ çeldiricisini de tartıştı; çeldirici „darauf“ ile değiştirildi, yeniden kör çözümde tek cevap çıktı.
+- İnceleyiciler gerçek yer/marka adlarını (Ostheide, Kesselbrink, Hornsee, Rossmeier vb.) ve sitede tekrar eden adları değiştirdi, B1 üstü belirleyici kelimeleri açıkladı (vorverlegt, Gabelstapler, Belastungs-EKG), cümle başındaki „Ihr/Sie“yi kaldırdı.
+
+**Düzeltmediğim notlar:**
+- SB2 set-3 (su boruları, anahtar bırakma) konu olarak SB2 set-2'ye (su sızıntısı) yakın.
+- Lesen T2 set-4 ve set-5 ikisi de meslek değiştirme portresi.
+- Sprachbausteine Teil 1 soruları doğası gereği çoğunlukla bağlamdan bağımsız dil bilgisi.
 
 ### Ekteki TestDaF modelltestleri
 Beş PDF'in hepsi **kâğıt tabanlı** TestDaF:

@@ -1,0 +1,161 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-5",
+  "title": "Ein Hobby wird zum Beruf",
+  "minutes": 20,
+  "instructions": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (a, b oder c) ist jeweils richtig?",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "hobby",
+          "title": "Ein Hobby wird zum Beruf",
+          "paragraphs": [
+            "Wer die Werkstatt von Theda Talmeier in der Altstadt von Hagelsried betritt, sieht zuerst Regale voller Tassen, Teller und Schüsseln in Blau und Grau. Hinten im Raum steht die Töpferscheibe, an der Talmeier fast jeden Tag arbeitet. Vor sechs Jahren hätte sie sich das nicht vorstellen können. Damals arbeitete die heute 38-Jährige als Steuerfachangestellte in einem Büro und saß acht Stunden am Tag vor dem Bildschirm. Mit Ton hatte sie bis dahin nie gearbeitet. Das Töpfern lernte sie in einem Abendkurs der Volkshochschule kennen. Den Kurs hatte ihr eine Kollegin zum Geburtstag geschenkt.",
+            "„Schon nach dem ersten Abend wusste ich: Das ist mein Ding“, erzählt sie. Bald kaufte sie sich eine gebrauchte Töpferscheibe und richtete im Keller eine kleine Werkstatt ein. Einen eigenen Brennofen hatte sie am Anfang nicht. Die fertigen Stücke brannte sie im Ofen der Volkshochschule und bezahlte dafür jedes Mal eine kleine Gebühr. Freunden und Verwandten schenkte sie zu Weihnachten Tassen und Vasen. Als eine Freundin sie überredete, auf dem Hagelsrieder Herbstmarkt einen Stand zu machen, war nach drei Stunden alles verkauft.",
+            "Trotzdem dauerte es noch zwei Jahre, bis sie ihre feste Stelle kündigte. „Ich habe zwei Kinder, und ohne sicheres Einkommen hatte ich Angst“, sagt sie. Zuerst arbeitete sie nur noch 25 Stunden pro Woche im Büro. An den freien Nachmittagen töpferte sie und verkaufte ihre Sachen über einen kleinen Onlineshop. Außerdem besuchte sie im Nachbarort einen Kurs über Glasuren, den die erfahrene Keramikerin Hiltrud Pfannstiehl leitete. Erst als Talmeier mit dem Töpfern ungefähr so viel verdiente wie im Büro, hörte sie dort auf.",
+            "Heute hat sie eine eigene Werkstatt mit Laden in einer ehemaligen Metzgerei. Geld verdient sie auf drei Wegen: Sie verkauft ihre Keramik im Laden, sie gibt zweimal pro Woche abends Kurse für bis zu acht Personen, und sie arbeitet für Restaurants. Die Kurse sind meistens Monate im Voraus ausgebucht. Den größten Teil ihrer Einnahmen bringen inzwischen aber drei Lokale aus der Region, die bei ihr Teller und Schalen bestellen. Diese Aufträge sind allerdings anstrengend, denn jedes Stück muss genau gleich aussehen.",
+            "Ist der Traum vom Hobby als Beruf also wahr geworden? Talmeier überlegt kurz. „Ja, aber anders, als ich dachte.“ Nur etwa die Hälfte ihrer Arbeitszeit sitzt sie an der Töpferscheibe. Den Rest verbringt sie mit Rechnungen, E-Mails, Fotos für den Onlineshop und dem Verpacken. Dabei nützt ihr das Wissen aus ihrem alten Beruf sehr, ihre Steuererklärung zum Beispiel macht sie selbst. Zum Entspannen töpfert sie übrigens nicht mehr. Stattdessen geht sie sonntags mit ihrem Hund wandern. „Wer sein Hobby zum Beruf macht, braucht ein neues Hobby“, sagt sie."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "abc",
+          "prompt": "Wie hat Theda Talmeier mit dem Töpfern angefangen?",
+          "options": {
+            "a": "Sie bekam die Teilnahme an einem Kurs als Geschenk.",
+            "b": "Sie hatte es schon früher in ihrer Freizeit ausprobiert.",
+            "c": "Sie hat an einem Wochenendkurs in einer Töpferei teilgenommen."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "hobby",
+              "quote": "Den Kurs hatte ihr eine Kollegin zum Geburtstag geschenkt."
+            },
+            {
+              "text": "hobby",
+              "quote": "Mit Ton hatte sie bis dahin nie gearbeitet."
+            },
+            {
+              "text": "hobby",
+              "quote": "in einem Abendkurs der Volkshochschule"
+            }
+          ],
+          "explanation": "Theda Talmeier çömlekçiliği halk eğitim merkezindeki bir akşam kursunda tanıdı; bu kursu ona bir iş arkadaşı doğum günü hediyesi olarak vermişti („zum Geburtstag geschenkt“ – doğum gününde hediye etmişti). a) bunu anlatıyor. b) yanlış: O zamana kadar hiç kille çalışmamıştı („nie gearbeitet“). c) yanlış: Kurs bir çömlek atölyesinde hafta sonu değil, Volkshochschule'de akşamları yapılıyordu („Abendkurs der Volkshochschule“)."
+        },
+        {
+          "number": 7,
+          "type": "abc",
+          "prompt": "In der ersten Zeit …",
+          "options": {
+            "a": "brannte Theda Talmeier ihre Stücke in einem eigenen Ofen im Keller.",
+            "b": "verkaufte Theda Talmeier ihre Tassen und Vasen an Freunde und Verwandte.",
+            "c": "zahlte Theda Talmeier Geld, um ihre Arbeiten in der Volkshochschule zu brennen."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "hobby",
+              "quote": "bezahlte dafür jedes Mal eine kleine Gebühr"
+            },
+            {
+              "text": "hobby",
+              "quote": "Einen eigenen Brennofen hatte sie am Anfang nicht."
+            },
+            {
+              "text": "hobby",
+              "quote": "Freunden und Verwandten schenkte sie zu Weihnachten Tassen und Vasen."
+            }
+          ],
+          "explanation": "Başlangıçta kendi fırını yoktu; parçalarını Volkshochschule'nin fırınında pişirtiyor ve her seferinde küçük bir ücret ödüyordu („bezahlte dafür jedes Mal eine kleine Gebühr“). c) bunu anlatıyor. a) yanlış: Bodrumda küçük bir atölye kurdu, ama başlangıçta kendi fırını yoktu („Einen eigenen Brennofen hatte sie am Anfang nicht“). b) yanlış: Fincan ve vazoları arkadaşlarına ve akrabalarına satmadı, Noel'de hediye etti („schenkte“ – hediye etti)."
+        },
+        {
+          "number": 8,
+          "type": "abc",
+          "prompt": "Bevor Theda Talmeier im Büro kündigte, …",
+          "options": {
+            "a": "verdiente sie mit dem Töpfern noch fast nichts.",
+            "b": "gab sie Hiltrud Pfannstiehl einen Kurs über Glasuren.",
+            "c": "verringerte sie ihre Arbeitszeit im Büro."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "hobby",
+              "quote": "Zuerst arbeitete sie nur noch 25 Stunden pro Woche im Büro."
+            },
+            {
+              "text": "hobby",
+              "quote": "den die erfahrene Keramikerin Hiltrud Pfannstiehl leitete"
+            },
+            {
+              "text": "hobby",
+              "quote": "ungefähr so viel verdiente wie im Büro"
+            }
+          ],
+          "explanation": "İşinden ayrılmadan önce büroda haftada yalnızca 25 saat çalışmaya başladı („nur noch 25 Stunden pro Woche“ – artık yalnızca haftada 25 saat). c) bunu anlatıyor. b) yanlış: Sırlar hakkındaki kursu Theda değil, deneyimli seramikçi Hiltrud Pfannstiehl yönetiyordu; Theda bu kursa katıldı („leitete“ – yönetiyordu). a) yanlış: Büroyu ancak çömlekçilikten aşağı yukarı bürodaki kadar kazanınca bıraktı („ungefähr so viel … wie im Büro“)."
+        },
+        {
+          "number": 9,
+          "type": "abc",
+          "prompt": "Was stimmt über Theda Talmeiers heutige Arbeit?",
+          "options": {
+            "a": "In ihren Kursen sind meistens noch Plätze frei.",
+            "b": "Am meisten verdient sie mit Bestellungen von Gaststätten.",
+            "c": "Für die Restaurants darf sie jedes Stück anders gestalten."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "hobby",
+              "quote": "Den größten Teil ihrer Einnahmen bringen inzwischen aber drei Lokale aus der Region"
+            },
+            {
+              "text": "hobby",
+              "quote": "Die Kurse sind meistens Monate im Voraus ausgebucht."
+            },
+            {
+              "text": "hobby",
+              "quote": "denn jedes Stück muss genau gleich aussehen"
+            }
+          ],
+          "explanation": "Gelirinin en büyük kısmını artık tabak ve kase sipariş eden bölgedeki üç lokanta getiriyor („Den größten Teil ihrer Einnahmen“ – gelirlerinin en büyük kısmı). b) bunu „Gaststätten“ kelimesiyle anlatıyor. a) yanlış: Kurslar çoğunlukla aylar öncesinden doluyor („ausgebucht“ – tamamen dolu). c) yanlış: Restoranlar için her parçanın tıpatıp aynı görünmesi gerekiyor („genau gleich aussehen“)."
+        },
+        {
+          "number": 10,
+          "type": "abc",
+          "prompt": "Was sagt Theda Talmeier über ihren Beruf heute?",
+          "options": {
+            "a": "Den größten Teil ihrer Arbeitszeit verbringt sie an der Töpferscheibe.",
+            "b": "Die Kenntnisse aus ihrer früheren Arbeit helfen ihr.",
+            "c": "In ihrer Freizeit töpfert sie weiterhin, um sich zu erholen."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "hobby",
+              "quote": "Dabei nützt ihr das Wissen aus ihrem alten Beruf sehr"
+            },
+            {
+              "text": "hobby",
+              "quote": "Nur etwa die Hälfte ihrer Arbeitszeit sitzt sie an der Töpferscheibe."
+            },
+            {
+              "text": "hobby",
+              "quote": "Zum Entspannen töpfert sie übrigens nicht mehr."
+            }
+          ],
+          "explanation": "Faturalar ve büro işlerinde eski mesleğinden (bir büroda „Steuerfachangestellte“, yani vergi işleri çalışanı) gelen bilgi ona çok yararlı oluyor; vergi beyannamesini bile kendisi yapıyor („nützt ihr das Wissen aus ihrem alten Beruf“ – eski mesleğinden gelen bilgi işine yarıyor). b) bunu anlatıyor. a) yanlış: Çalışma zamanının yalnızca yaklaşık yarısını çömlek tornasında geçiriyor („Nur etwa die Hälfte“). c) yanlış: Rahatlamak için artık çömlek yapmıyor, pazar günleri köpeğiyle yürüyüşe çıkıyor („nicht mehr“)."
+        }
+      ]
+    }
+  ]
+}

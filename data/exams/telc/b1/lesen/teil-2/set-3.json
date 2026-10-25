@@ -1,0 +1,161 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-3",
+  "title": "Ein Jahr ohne Auto",
+  "minutes": 20,
+  "instructions": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (a, b oder c) ist jeweils richtig?",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "auto",
+          "title": "Ein Jahr ohne Auto",
+          "paragraphs": [
+            "Vor einem Jahr hat Familie Brüggemeister aus Morlenstadt etwas getan, was viele Nachbarn für verrückt hielten: Sie hat ihr Auto verkauft. Der Wagen war zwölf Jahre alt, und die Werkstatt verlangte für eine Reparatur fast 2.000 Euro. „Wir hätten das Geld bezahlen können, aber wir wollten erst einmal ausprobieren, ob es auch ohne Auto geht“, erzählt Fenja Brüggemeister, die als Krankenpflegerin im Kreiskrankenhaus arbeitet. Hauke, ihr Mann, ist Grafiker und arbeitet meistens zu Hause. Die beiden haben zwei Kinder: Lotta ist neun, Joscha dreizehn Jahre alt.",
+            "Am Anfang war vieles schwierig. Ins Krankenhaus fährt Fenja jetzt mit dem Fahrrad, das sind sieben Kilometer. „In den ersten Wochen war ich abends total müde, inzwischen genieße ich die Fahrt“, sagt sie. Nur im Winter, wenn die Straßen glatt sind, nimmt sie den Bus. Dann muss sie allerdings zwanzig Minuten früher aufstehen, weil der Bus nur zweimal pro Stunde fährt. Den Wocheneinkauf erledigt Hauke mit einem Fahrradanhänger, den die Familie für 300 Euro gebraucht gekauft hat. Getränkekisten lässt sie sich von einem Lieferdienst bringen.",
+            "Für längere Strecken nutzt die Familie seit dem Frühjahr ein Carsharing-Angebot. Drei Straßen weiter stehen vier Autos eines Vereins, die man per App für einige Stunden oder Tage leihen kann. So ein Auto holen die Brüggemeisters zum Beispiel, wenn sie Haukes Mutter besuchen. Sie wohnt in einem Dorf, in das fast keine Busse fahren. Im Durchschnitt bezahlt die Familie für das Carsharing 60 Euro im Monat. In den Sommerurlaub an die Ostsee ist sie dagegen mit dem Zug gefahren. „Die Kinder fanden das sogar besser als die langen Autofahrten früher, weil sie unterwegs Karten spielen konnten“, erzählt Hauke.",
+            "Und die Kosten? Hauke hat alles genau aufgeschrieben. Früher hat das Auto mit Versicherung, Steuer, Benzin und Reparaturen rund 350 Euro im Monat gekostet. Heute gibt die Familie für Carsharing, Busfahrkarten, Zugtickets und Lieferdienst zusammen etwa 190 Euro aus. „Reich geworden sind wir dadurch nicht, aber es ist deutlich weniger“, sagt er. Wirklich überrascht hat ihn aber etwas anderes: Joscha fährt jetzt allein mit dem Rad zum Fußballtraining, früher hat ihn immer jemand mit dem Auto gebracht. „Er ist viel selbstständiger geworden“, sagt Hauke. Lotta dagegen vermisst das Auto manchmal, vor allem wenn es regnet und sie zur Musikschule laufen muss.",
+            "Nach dem Testjahr steht fest: Ein eigenes Auto kauft die Familie vorerst nicht. Ganz sicher ist diese Entscheidung aber nicht. Fenja hat sich auf eine Stelle in einer Klinik im 30 Kilometer entfernten Elsbergrode beworben. Falls sie die Stelle bekommt, wollen die Brüggemeisters noch einmal überlegen, denn dorthin gibt es keine direkte Zugverbindung. „Dann rechnen wir neu“, sagt Hauke. „Aber eins wissen wir schon jetzt: Wir brauchen das Auto viel seltener, als wir früher gedacht haben.“"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "abc",
+          "prompt": "Warum hat Familie Brüggemeister ihr Auto verkauft?",
+          "options": {
+            "a": "Sie hatte nicht genug Geld für die Reparatur.",
+            "b": "Die Nachbarn hatten ihr dazu geraten.",
+            "c": "Sie wollte testen, ob sie ohne Auto zurechtkommt."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "auto",
+              "quote": "wir wollten erst einmal ausprobieren, ob es auch ohne Auto geht"
+            },
+            {
+              "text": "auto",
+              "quote": "Wir hätten das Geld bezahlen können"
+            },
+            {
+              "text": "auto",
+              "quote": "was viele Nachbarn für verrückt hielten"
+            }
+          ],
+          "explanation": "Fenja Brüggemeister önce arabasız yaşamanın mümkün olup olmadığını denemek istediklerini söylüyor („ausprobieren, ob es auch ohne Auto geht“ – arabasız da olup olmadığını denemek). c) bunu başka kelimelerle anlatıyor. a) yanlış: Tamir parasını ödeyebilirlerdi („Wir hätten das Geld bezahlen können“ – parayı ödeyebilirdik). b) yanlış: Komşular bunu tavsiye etmedi, aksine birçoğu bu fikri çılgınca buldu („für verrückt hielten“)."
+        },
+        {
+          "number": 7,
+          "type": "abc",
+          "prompt": "Fenja Brüggemeister …",
+          "options": {
+            "a": "nutzt im Winter manchmal ein öffentliches Verkehrsmittel für den Weg zur Arbeit.",
+            "b": "macht den Wocheneinkauf mit dem Fahrradanhänger.",
+            "c": "kann im Winter später aufstehen als sonst."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "auto",
+              "quote": "Nur im Winter, wenn die Straßen glatt sind, nimmt sie den Bus."
+            },
+            {
+              "text": "auto",
+              "quote": "Den Wocheneinkauf erledigt Hauke"
+            },
+            {
+              "text": "auto",
+              "quote": "zwanzig Minuten früher aufstehen"
+            }
+          ],
+          "explanation": "Fenja işe normalde bisikletle gidiyor; yalnızca kışın yollar kaygan olduğunda otobüse biniyor („Nur im Winter, wenn die Straßen glatt sind, nimmt sie den Bus“ – yalnızca kışın, yollar kaygan olduğunda otobüse biniyor). a) bunu başka kelimelerle anlatıyor: otobüs bir „öffentliches Verkehrsmittel“ (toplu taşıma aracı); „manchmal“ (bazen), çünkü yalnızca yollar kaygan olduğunda. b) yanlış: Haftalık alışverişi bisiklet römorkuyla Fenja değil, eşi Hauke yapıyor („erledigt Hauke“). c) yanlış: Otobüse bindiği günlerde, otobüs saatte yalnızca iki kez gittiği için yirmi dakika daha erken kalkmak zorunda („zwanzig Minuten früher aufstehen“)."
+        },
+        {
+          "number": 8,
+          "type": "abc",
+          "prompt": "Das Carsharing-Auto …",
+          "options": {
+            "a": "hat die Familie für die Fahrt an die Ostsee benutzt.",
+            "b": "leiht sich die Familie, wenn sie zu Haukes Mutter fährt.",
+            "c": "muss man jeweils für mindestens eine Woche leihen."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "auto",
+              "quote": "So ein Auto holen die Brüggemeisters zum Beispiel, wenn sie Haukes Mutter besuchen."
+            },
+            {
+              "text": "auto",
+              "quote": "ist sie dagegen mit dem Zug gefahren"
+            },
+            {
+              "text": "auto",
+              "quote": "für einige Stunden oder Tage leihen"
+            }
+          ],
+          "explanation": "Aile paylaşımlı arabayı örneğin Hauke'yin annesini ziyaret ederken alıyor („wenn sie Haukes Mutter besuchen“); annesi neredeyse hiç otobüs gitmeyen bir köyde oturuyor. b) bunu anlatıyor. a) yanlış: Baltık Denizi'ne yaz tatiline arabayla değil, trenle gittiler („mit dem Zug gefahren“). c) yanlış: Arabalar uygulama üzerinden birkaç saatliğine veya birkaç günlüğüne kiralanabiliyor („für einige Stunden oder Tage“)."
+        },
+        {
+          "number": 9,
+          "type": "abc",
+          "prompt": "Was hat Hauke Brüggemeister nach dem Jahr festgestellt?",
+          "options": {
+            "a": "Die Familie gibt heute ungefähr so viel Geld aus wie mit dem Auto.",
+            "b": "Joscha ist ohne das Auto unabhängiger geworden.",
+            "c": "Beide Kinder vermissen das Auto, wenn das Wetter schlecht ist."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "auto",
+              "quote": "Er ist viel selbstständiger geworden"
+            },
+            {
+              "text": "auto",
+              "quote": "aber es ist deutlich weniger"
+            },
+            {
+              "text": "auto",
+              "quote": "Lotta dagegen vermisst das Auto manchmal"
+            }
+          ],
+          "explanation": "Hauke'yi asıl şaşırtan şey 13 yaşındaki Joscha'nın artık futbol antrenmanına tek başına bisikletle gitmesi; Hauke onun çok daha bağımsız olduğunu söylüyor („viel selbstständiger“ – çok daha bağımsız). b) bunu „unabhängiger“ kelimesiyle anlatıyor. a) yanlış: Eskiden araba ayda yaklaşık 350 Euro tutuyordu, bugün toplam yaklaşık 190 Euro harcıyorlar; Hauke bunun belirgin şekilde daha az olduğunu söylüyor („deutlich weniger“). c) yanlış: Joscha artık bisikletle bağımsız gidiyor; arabayı bazen özleyen ise Lotta, özellikle yağmurda müzik okuluna yürümesi gerektiğinde („Lotta dagegen vermisst das Auto manchmal“ – Lotta ise arabayı bazen özlüyor)."
+        },
+        {
+          "number": 10,
+          "type": "abc",
+          "prompt": "Wie geht es mit der Familie weiter?",
+          "options": {
+            "a": "Die Entscheidung der Familie kann sich ändern, wenn Fenja an einem anderen Ort arbeitet.",
+            "b": "Die Familie hat sich schon wieder ein eigenes Auto ausgesucht.",
+            "c": "Fenja hat bereits eine neue Stelle in Elsbergrode bekommen."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "auto",
+              "quote": "Falls sie die Stelle bekommt, wollen die Brüggemeisters noch einmal überlegen"
+            },
+            {
+              "text": "auto",
+              "quote": "Ein eigenes Auto kauft die Familie vorerst nicht."
+            },
+            {
+              "text": "auto",
+              "quote": "hat sich auf eine Stelle in einer Klinik im 30 Kilometer entfernten Elsbergrode beworben"
+            }
+          ],
+          "explanation": "Fenja Elsbergrode'daki bir klinikte bir işe başvurdu. İşi alırsa aile yeniden düşünmek istiyor, çünkü oraya doğrudan tren bağlantısı yok („Falls sie die Stelle bekommt, … noch einmal überlegen“ – işi alırsa yeniden düşünmek). a) bunu anlatıyor. b) yanlış: Aile şimdilik kendi arabasını almayacak („vorerst nicht“). c) yanlış: Fenja işi henüz almadı, yalnızca başvurdu („beworben“ – başvurdu)."
+        }
+      ]
+    }
+  ]
+}

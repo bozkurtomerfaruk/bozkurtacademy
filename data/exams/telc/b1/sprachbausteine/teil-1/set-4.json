@@ -1,0 +1,217 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "sprachbausteine",
+  "teil": 1,
+  "set": "set-4",
+  "title": "Kündigung im Fitnessstudio",
+  "minutes": 12,
+  "context": "Ein Mann kündigt seinen Vertrag in einem Fitnessstudio, weil er umzieht.",
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort (a, b oder c) in die Lücken 21–30 passt.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "brief",
+          "title": "Kündigung meiner Mitgliedschaft",
+          "byline": "Brief von Tarık Ballıkaya an das Fitnessstudio Lindenkraft",
+          "paragraphs": [
+            "Betreff: Kündigung meiner Mitgliedschaft (Mitgliedsnummer 20417)",
+            "Sehr geehrte Damen und Herren,",
+            "hiermit kündige ich meine Mitgliedschaft im Fitnessstudio Lindenkraft fristgerecht zum 31. Januar. Leider muss ich den Vertrag beenden, {{21}} ich ab Februar in einer anderen Stadt arbeite und dorthin umziehe.",
+            "Ich trainiere seit fast drei Jahren bei Ihnen und war immer sehr zufrieden. Besonders gut haben mir die Yogakurse am Abend gefallen, {{22}} ich regelmäßig besucht habe. Auch die Trainerinnen und Trainer waren immer hilfsbereit, und ich habe {{23}} bei Ihnen sehr wohlgefühlt.",
+            "Ich habe {{24}} November bereits 60 Euro für einen Pilateskurs bezahlt, der erst im Februar beginnt. An diesem Kurs kann ich nun leider nicht mehr teilnehmen. Ich wäre Ihnen deshalb dankbar, {{25}} Sie mir diesen Betrag zurücküberweisen könnten. Sie können dafür {{26}} Konto verwenden, von dem Sie auch meine Monatsbeiträge abbuchen.",
+            "Bitte bestätigen Sie mir die Kündigung schriftlich. Muss ich meine Mitgliedskarte persönlich {{27}} Ihnen abgeben, oder kann ich sie per Post schicken?",
+            "Ihr Studio war für mich das {{28}} in der ganzen Stadt, und ich werde es sicher vermissen. Vielen Dank {{29}} die schöne Zeit! Ich wünsche {{30}} ganzen Team weiterhin viel Erfolg.",
+            "Mit freundlichen Grüßen",
+            "Tarık Ballıkaya"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 21,
+          "type": "abc",
+          "prompt": "Lücke 21",
+          "options": {
+            "a": "deshalb",
+            "b": "denn",
+            "c": "da"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "ich ab Februar in einer anderen Stadt arbeite und dorthin umziehe"
+            }
+          ],
+          "explanation": "Boşluktan sonraki cümlede çekimli fiiller sonda: „… arbeite und dorthin umziehe“. Bu bir yan cümledir ve sözleşmeyi bitirmenin sebebini söyler (başka bir şehirde çalışacak ve oraya taşınacak). Sebep bildiren ve fiili sona atan bağlaç „da“dır (= weil). a) deshalb yanlış: „deshalb“ (bu yüzden) sonuç bildirir ve çekimli fiili hemen arkasına alır („deshalb arbeite ich …“); burada fiil sonda ve anlam da sebep. b) denn yanlış: „denn“ de sebep bildirir, ama ana cümle sırası ister: „denn ich arbeite ab Februar …“; burada fiil sonda olduğu için „denn“ uymaz."
+        },
+        {
+          "number": 22,
+          "type": "abc",
+          "prompt": "Lücke 22",
+          "options": {
+            "a": "denen",
+            "b": "die",
+            "c": "deren"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "ich regelmäßig besucht habe"
+            }
+          ],
+          "explanation": "Boşluktan sonra bir ilgi cümlesi geliyor (fiil sonda: „besucht habe“) ve önceki isim „die Yogakurse“yi (çoğul) anlatır. İlgi cümlesinde özne „ich“; kurslar „besuchen“ fiilinin nesnesidir, yani Akkusativ: „Ich habe die Yogakurse besucht.“ Çoğul Akkusativ ilgi zamiri „die“dir. a) denen yanlış: „denen“ çoğul Dativ'dir; „besuchen“ Dativ değil Akkusativ nesne alır. c) deren yanlış: „deren“ çoğul Genitiv'dir (ör. „deren Trainer“ = onların hocası); arkasında bir isim olmadan nesne olamaz."
+        },
+        {
+          "number": 23,
+          "type": "abc",
+          "prompt": "Lücke 23",
+          "options": {
+            "a": "mich",
+            "b": "mir",
+            "c": "sich"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "und ich habe"
+            }
+          ],
+          "explanation": "„sich wohlfühlen“ (kendini iyi hissetmek) dönüşlü bir fiildir ve Akkusativ dönüşlü zamir alır. Öznesi „ich“ olduğu için zamir „mich“tir: „ich habe mich bei Ihnen sehr wohlgefühlt“ = sizde kendimi çok iyi hissettim. b) mir yanlış: „mir“ Dativ biçimidir; „sich wohlfühlen“ fiilinde başka bir Akkusativ nesne olmadığı için dönüşlü zamir Akkusativ olur. c) sich yanlış: „sich“ yalnızca üçüncü kişi öznelerle (er/sie/es/sie/Sie) kullanılır; burada özne „ich“."
+        },
+        {
+          "number": 24,
+          "type": "abc",
+          "prompt": "Lücke 24",
+          "options": {
+            "a": "am",
+            "b": "um",
+            "c": "im"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "November bereits 60 Euro für einen Pilateskurs bezahlt"
+            }
+          ],
+          "explanation": "Boşluktan sonra bir ay adı geliyor: „November“. Aylarla zaman bildirirken „in“ + Dativ kullanılır, „in dem“ kaynaşarak „im“ olur: „im November“ = kasımda (metindeki „im Februar“ gibi). a) am yanlış: „am“ günler ve tarihler için kullanılır („am Montag“, „am 31. Januar“); ay adıyla tek başına kullanılmaz. b) um yanlış: „um“ saat bildirir („um acht Uhr“); ay için kullanılmaz."
+        },
+        {
+          "number": 25,
+          "type": "abc",
+          "prompt": "Lücke 25",
+          "options": {
+            "a": "wenn",
+            "b": "als",
+            "c": "ob"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Sie mir diesen Betrag zurücküberweisen könnten"
+            }
+          ],
+          "explanation": "Ana cümle „Ich wäre Ihnen deshalb dankbar“ (size minnettar olurdum) Konjunktiv II'dedir, yan cümlede de „könnten“ var. Bu kibar rica kalıbı bir koşul bildirir: „Ich wäre Ihnen dankbar, wenn Sie … könnten“ = … yapabilirseniz minnettar olurum. Koşul bağlacı „wenn“dir. b) als yanlış: „als“ geçmişte bir kez olan olayı veya karşılaştırmayı bildirir; parayı geri ödeme henüz olmamış bir istektir. c) ob yanlış: „ob“ dolaylı soru başlatır („Ich weiß nicht, ob …“); „dankbar sein“ arkasından dolaylı soru almaz."
+        },
+        {
+          "number": 26,
+          "type": "abc",
+          "prompt": "Lücke 26",
+          "options": {
+            "a": "denselben",
+            "b": "dasselbe",
+            "c": "derselbe"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "von dem Sie auch meine Monatsbeiträge abbuchen"
+            }
+          ],
+          "explanation": "Boşluktan sonraki isim „Konto“ (hesap) nötrdür: „das Konto“. „verwenden“ fiilinin nesnesi olduğu için Akkusativ gerekir; nötr Akkusativ biçimi „dasselbe“dir: „dasselbe Konto verwenden“ = aynı hesabı kullanmak. Sonraki ilgi zamiri „von dem“ da nötr/eril bir isme gönderme yapar. a) denselben yanlış: Bu eril Akkusativ biçimidir („denselben Vertrag“); „Konto“ eril değildir. c) derselbe yanlış: Bu eril Nominativ biçimidir; hem cinsiyet hem hâl yanlıştır."
+        },
+        {
+          "number": 27,
+          "type": "abc",
+          "prompt": "Lücke 27",
+          "options": {
+            "a": "bei",
+            "b": "zu",
+            "c": "an"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Ihnen abgeben, oder kann ich sie per Post schicken"
+            }
+          ],
+          "explanation": "Boşluktan sonra Dativ zamiri „Ihnen“ geliyor. Kartı bir kişinin yanında/yerinde teslim etmek „bei“ + Dativ ile söylenir: „bei Ihnen abgeben“ = sizde (sizin yerinizde) teslim etmek; „persönlich“ (şahsen) de kartı stüdyoya kendisinin getireceğini gösterir. b) zu yanlış: „zu“ hareket yönü bildirir („zu Ihnen kommen“ = size gelmek); „abgeben“ fiiliyle „zu Ihnen abgeben“ kurulmaz. c) an yanlış: Bir şeyi birine vermek anlamında „an“ Akkusativ ister („an Sie abgeben“); „an Ihnen“ Dativ olduğu için yanlıştır."
+        },
+        {
+          "number": 28,
+          "type": "abc",
+          "prompt": "Lücke 28",
+          "options": {
+            "a": "besser",
+            "b": "gut",
+            "c": "beste"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "in der ganzen Stadt, und ich werde es sicher vermissen"
+            }
+          ],
+          "explanation": "Boşluktan önce belirli artikel „das“ ve sonra „in der ganzen Stadt“ (bütün şehirde) geliyor: Stüdyo şehirdeki bütün stüdyolarla karşılaştırılıyor. Bu, en üstünlük derecesidir (Superlativ): „das beste (Studio) in der ganzen Stadt“ = bütün şehrin en iyisi. „das“ tekrar edilmeyen „Studio“yu gösterir. a) besser yanlış: Komparativ (daha iyi) „als“ ile karşılaştırma ister ve „das“ artikelinden sonra ek almadan duramaz. b) gut yanlış: Yalın biçim karşılaştırma yapmaz; „das gut“ ekli olmadığı için de yanlıştır."
+        },
+        {
+          "number": 29,
+          "type": "abc",
+          "prompt": "Lücke 29",
+          "options": {
+            "a": "über",
+            "b": "für",
+            "c": "auf"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "die schöne Zeit!"
+            }
+          ],
+          "explanation": "Boşluktan önce „Vielen Dank“ (çok teşekkürler) var. Bir şey için teşekkür etmek sabit olarak „für“ + Akkusativ ile söylenir: „Vielen Dank für die schöne Zeit“ = güzel zaman için çok teşekkürler. a) über yanlış: „über“ „sich freuen über“ gibi fiillerle kullanılır, „Dank“ ile değil. c) auf yanlış: „auf“ gelecekteki bir şeyi beklemek için kullanılır („sich freuen auf“); „Dank“ ile kurulmaz."
+        },
+        {
+          "number": 30,
+          "type": "abc",
+          "prompt": "Lücke 30",
+          "options": {
+            "a": "den",
+            "b": "das",
+            "c": "dem"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "ganzen Team weiterhin viel Erfolg"
+            }
+          ],
+          "explanation": "„wünschen“ fiili iki nesne alır: kime (Dativ) ve ne (Akkusativ): „jemandem etwas wünschen“. Ne dilendiği belli: „viel Erfolg“ (Akkusativ). Dilek „das Team“e (nötr) yapılıyor, bu yüzden Dativ: „dem ganzen Team“ = bütün ekibe. a) den yanlış: Eril Akkusativ veya çoğul Dativ'dir; „Team“ nötr ve tekildir. b) das yanlış: Nötr Nominativ/Akkusativ'dir; Akkusativ nesne zaten „viel Erfolg“, ekibin Dativ olması gerekir. Ayrıca „das“tan sonra sıfat „ganze“ olurdu, metindeki „ganzen“ değil."
+        }
+      ]
+    }
+  ]
+}

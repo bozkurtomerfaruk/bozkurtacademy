@@ -1,0 +1,120 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Meldungen aus Alltag und Freizeit",
+  "minutes": 15,
+  "instructions": "Lesen Sie die Überschriften a–j und die Texte 1–5. Welche Überschrift passt am besten zu welchem Text? Jede Überschrift kann nur einmal verwendet werden. Fünf Überschriften bleiben übrig.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "text-1",
+          "title": "Text 1",
+          "paragraphs": [
+            "Im Juli und August verwandelt sich der Stadtpark von Sonnfurt jeden Donnerstag in ein Kino. Sobald es dunkel wird, zeigt das Kulturamt auf einer großen Leinwand neben dem Teich Familienfilme und Komödien. Karten braucht man nicht, denn der Eintritt ist frei. Stühle gibt es allerdings nur wenige, deshalb bringen die Besucher am besten eine Decke mit. Bei Regen fällt die Vorstellung nicht aus, sondern findet in der Aula der Gesamtschule statt. Das Programm steht auf der Internetseite der Stadt."
+          ]
+        },
+        {
+          "id": "text-2",
+          "title": "Text 2",
+          "paragraphs": [
+            "Junge Erwachsene stehen wieder häufiger selbst am Herd. Das zeigt eine Umfrage der Verbraucherberatung Westhalde unter 1.200 Menschen zwischen 18 und 29 Jahren. Sechs von zehn Befragten bereiten mindestens viermal pro Woche ihr Essen selbst zu – vor fünf Jahren war es nur gut die Hälfte. Beim Lieferdienst bestellen die jungen Leute dagegen deutlich seltener als damals. Als wichtigsten Grund nannten die meisten die gestiegenen Preise, viele finden selbst gekochtes Essen aber auch gesünder."
+          ]
+        },
+        {
+          "id": "text-3",
+          "title": "Text 3",
+          "paragraphs": [
+            "Drei Wochen lang hatte Familie Szymaniak aus Eschenweiler ihre Katze Pünktchen gesucht. Das Tier war beim Umzug in die neue Wohnung durch eine offene Tür weggelaufen. Am vergangenen Dienstag entdeckten Spaziergänger die Katze vier Kilometer entfernt in einer Gartenhütte und brachten sie ins Tierheim. Dort las man den Chip unter ihrem Fell aus und konnte die Familie sofort anrufen. Tierheimleiterin Doris Kampmeier rät allen Katzenhaltern zu so einem Chip. „Leider ist er bisher keine Pflicht“, sagt sie."
+          ]
+        },
+        {
+          "id": "text-4",
+          "title": "Text 4",
+          "paragraphs": [
+            "So viele Läuferinnen und Läufer wie am Sonntag hat der Wimmelstedter Stadtlauf in seiner 25-jährigen Geschichte noch nie gesehen: 2.400 Menschen gingen an den Start, rund 500 mehr als im Vorjahr. Wegen der angekündigten Hitze begann der Lauf in diesem Jahr schon um 8 Uhr statt wie bisher um 10 Uhr. Die Strecke führte zum ersten Mal durch die Altstadt, was bei vielen gut ankam. Den Zehn-Kilometer-Lauf gewann Jonas Rehbeck in 33 Minuten."
+          ]
+        },
+        {
+          "id": "text-5",
+          "title": "Text 5",
+          "paragraphs": [
+            "Die Postfiliale in der Hauptstraße von Quendelsbruch schließt Ende März. Auf Briefmarken und Paketannahme müssen die Einwohner aber nicht verzichten: Ab dem 1. April übernimmt die Bäckerei Altenkirch am Kirchplatz diese Aufgaben. Dort kann man dann auch Sendungen abholen, die nicht zugestellt werden konnten. Ein Vorteil: Die Bäckerei hat länger geöffnet als die bisherige Filiale, auch am Samstagnachmittag. Bankgeschäfte sind dort allerdings nicht möglich."
+          ]
+        },
+        { "id": "a", "label": "a", "paragraphs": ["Kino im Park: Tickets nur im Vorverkauf"] },
+        { "id": "b", "label": "b", "paragraphs": ["Die Generation unter 30 entdeckt die eigene Küche neu"] },
+        { "id": "c", "label": "c", "paragraphs": ["Essen nach Hause bestellen wird immer beliebter"] },
+        { "id": "d", "label": "d", "paragraphs": ["Neue Regel: Katzen brauchen künftig einen Chip"] },
+        { "id": "e", "label": "e", "paragraphs": ["Teilnehmerrekord beim großen Rennen durch die Stadt"] },
+        { "id": "f", "label": "f", "paragraphs": ["Wegen der Hitze: Lauf beginnt später als sonst"] },
+        { "id": "g", "label": "g", "paragraphs": ["Sommerabende im Grünen: Filme gratis für alle"] },
+        { "id": "h", "label": "h", "paragraphs": ["Ab April keine Paketannahme mehr im Ort"] },
+        { "id": "i", "label": "i", "paragraphs": ["Brötchen kaufen und Briefe aufgeben am selben Ort"] },
+        { "id": "j", "label": "j", "paragraphs": ["Glückliches Ende: Verschwundenes Haustier ist wieder daheim"] }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "zuordnung",
+          "prompt": "Text 1",
+          "answer": "g",
+          "evidence": [
+            { "text": "text-1", "quote": "verwandelt sich der Stadtpark von Sonnfurt jeden Donnerstag in ein Kino" },
+            { "text": "text-1", "quote": "der Eintritt ist frei" }
+          ],
+          "explanation": "Metin 1, temmuz ve ağustosta her perşembe akşamı Sonnfurt şehir parkında büyük bir perdede film gösterildiğini anlatıyor; „der Eintritt ist frei“ (giriş ücretsiz). g başlığı („yeşillikte yaz akşamları: herkese bedava filmler“) bunu farklı kelimelerle söylüyor. a başlığı („parkta sinema: biletler yalnızca ön satışta“) uymuyor: metne göre „Karten braucht man nicht“ (bilete gerek yok)."
+        },
+        {
+          "number": 2,
+          "type": "zuordnung",
+          "prompt": "Text 2",
+          "answer": "b",
+          "evidence": [
+            { "text": "text-2", "quote": "Junge Erwachsene stehen wieder häufiger selbst am Herd." },
+            { "text": "text-2", "quote": "zwischen 18 und 29 Jahren" }
+          ],
+          "explanation": "Metin 2 bir anketi anlatıyor: 18–29 yaş arasındaki genç yetişkinler „wieder häufiger selbst am Herd“ (yine daha sık kendileri ocağın başında), yani daha sık yemek yapıyor; on kişiden altısı haftada en az dört kez kendi yemeğini hazırlıyor. b başlığı („30 yaş altı kuşak kendi mutfağını yeniden keşfediyor“) bunu anlatıyor. c başlığı („eve yemek sipariş etmek giderek daha popüler“) uymuyor: metne göre gençler „beim Lieferdienst … deutlich seltener“ (paket servisten belirgin şekilde daha az) sipariş ediyor."
+        },
+        {
+          "number": 3,
+          "type": "zuordnung",
+          "prompt": "Text 3",
+          "answer": "j",
+          "evidence": [
+            { "text": "text-3", "quote": "Drei Wochen lang hatte Familie Szymaniak aus Eschenweiler ihre Katze Pünktchen gesucht." },
+            { "text": "text-3", "quote": "konnte die Familie sofort anrufen" }
+          ],
+          "explanation": "Metin 3'te Szymaniak ailesinin taşınma sırasında kaçan kedisi üç hafta sonra yürüyüşçüler tarafından bulunuyor; hayvan barınağı çipi okuyup aileyi hemen arıyor. j başlığı („mutlu son: kaybolan evcil hayvan yeniden evinde“) bu olayı anlatıyor. d başlığı („yeni kural: kedilere bundan sonra çip gerekiyor“) uymuyor: barınak müdürü çipi tavsiye ediyor, ama „Leider ist er bisher keine Pflicht“ (ne yazık ki şimdiye kadar zorunlu değil) diyor."
+        },
+        {
+          "number": 4,
+          "type": "zuordnung",
+          "prompt": "Text 4",
+          "answer": "e",
+          "evidence": [
+            { "text": "text-4", "quote": "in seiner 25-jährigen Geschichte noch nie gesehen" },
+            { "text": "text-4", "quote": "rund 500 mehr als im Vorjahr" }
+          ],
+          "explanation": "Metin 4'e göre Wimmelstedt şehir koşusunda 25 yıllık tarihinde hiç bu kadar çok koşucu görülmedi: 2.400 kişi başladı, geçen yıldan yaklaşık 500 kişi fazla. e başlığı („şehirdeki büyük yarışta katılımcı rekoru“) bunu anlatıyor. f başlığı („sıcak yüzünden koşu her zamankinden geç başlıyor“) uymuyor: koşu bu yıl „schon um 8 Uhr statt wie bisher um 10 Uhr“ (eskisi gibi saat 10'da değil, daha saat 8'de) başladı, yani daha geç değil, daha erken başladı."
+        },
+        {
+          "number": 5,
+          "type": "zuordnung",
+          "prompt": "Text 5",
+          "answer": "i",
+          "evidence": [
+            { "text": "text-5", "quote": "übernimmt die Bäckerei Altenkirch am Kirchplatz diese Aufgaben" }
+          ],
+          "explanation": "Metin 5'te Quendelsbruch'taki postane mart sonunda kapanıyor; 1 nisandan itibaren pul satışı ve paket kabulünü Kirchplatz'daki Altenkirch fırını „übernimmt“ (üstleniyor). i başlığı („aynı yerde ekmek almak ve mektup göndermek“) bunu fırını ve postayı birleştirerek anlatıyor. h başlığı („nisandan itibaren yerleşim yerinde artık paket kabulü yok“) uymuyor: metne göre halk „auf Briefmarken und Paketannahme … nicht verzichten“ (pul ve paket kabulünden vazgeçmek zorunda değil); bu işler fırına geçiyor."
+        }
+      ]
+    }
+  ]
+}

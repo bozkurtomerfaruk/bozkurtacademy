@@ -1,0 +1,270 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "sprachbausteine",
+  "teil": 2,
+  "set": "set-3",
+  "title": "Aushang im Treppenhaus",
+  "minutes": 13,
+  "context": "Im Treppenhaus Ihres Wohnhauses in der Ulmenhofstraße hängt ein Aushang der Hausverwaltung.",
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort aus der Liste (a–o) in die Lücken 31–40 passt. Jedes Wort passt nur einmal. Fünf Wörter bleiben übrig.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "aushang",
+          "title": "Erneuerung der Wasserleitungen",
+          "byline": "Hausverwaltung Brunnecker",
+          "paragraphs": [
+            "Liebe Mieterinnen und Mieter,",
+            "ab Montag, dem 3. März, werden im Keller unseres Hauses die alten Wasserleitungen erneuert. Die Arbeiten dauern voraussichtlich zwei Wochen. Das Wasser muss {{31}} der Arbeiten an einigen Tagen für mehrere Stunden abgestellt werden. Die genauen Zeiten hängen wir immer zwei Tage {{32}} jeder Unterbrechung hier im Treppenhaus aus. So können Sie rechtzeitig Wasser in Flaschen abfüllen.",
+            "Die Handwerker müssen auch in die einzelnen Kellerräume, {{33}} die neuen Leitungen werden an deren Rückwand entlang verlegt. Bitte räumen Sie {{34}} bis zum 28. Februar alle Kisten und Möbel weg, die an dieser Wand stehen. Wer seinen Kellerraum mit einem eigenen Schloss abschließt, gibt bitte bis zu diesem Tag einen {{35}} bei unserem Hausmeister, Herrn Ostwaldt, ab, damit die Handwerker die Tür öffnen können.",
+            "Am 10. März wird außerdem der Strom im Keller für einen Tag abgeschaltet. Die Waschmaschinen im Waschkeller {{36}} an diesem Tag ausgeschaltet. Herr Ostwaldt prüft am 1. März, {{37}} an allen Rückwänden genug Platz ist. Sind Sie in der Zeit der Arbeiten verreist? Dann sagen Sie Herrn Ostwaldt bitte rechtzeitig {{38}}.",
+            "Wenden Sie sich {{39}} Fragen bitte direkt an Herrn Ostwaldt (Telefon 0171 4482095). Wir wissen, dass der Lärm und die Unterbrechungen für Sie unangenehm sind, und hoffen auf Ihr {{40}}.",
+            "Ihre Hausverwaltung Brunnecker"
+          ]
+        },
+        {
+          "id": "wort-a",
+          "label": "a",
+          "paragraphs": [
+            "denn"
+          ]
+        },
+        {
+          "id": "wort-b",
+          "label": "b",
+          "paragraphs": [
+            "Verständnis"
+          ]
+        },
+        {
+          "id": "wort-c",
+          "label": "c",
+          "paragraphs": [
+            "ob"
+          ]
+        },
+        {
+          "id": "wort-d",
+          "label": "d",
+          "paragraphs": [
+            "während"
+          ]
+        },
+        {
+          "id": "wort-e",
+          "label": "e",
+          "paragraphs": [
+            "trotzdem"
+          ]
+        },
+        {
+          "id": "wort-f",
+          "label": "f",
+          "paragraphs": [
+            "Schlüssel"
+          ]
+        },
+        {
+          "id": "wort-g",
+          "label": "g",
+          "paragraphs": [
+            "nach"
+          ]
+        },
+        {
+          "id": "wort-h",
+          "label": "h",
+          "paragraphs": [
+            "bei"
+          ]
+        },
+        {
+          "id": "wort-i",
+          "label": "i",
+          "paragraphs": [
+            "vor"
+          ]
+        },
+        {
+          "id": "wort-j",
+          "label": "j",
+          "paragraphs": [
+            "weil"
+          ]
+        },
+        {
+          "id": "wort-k",
+          "label": "k",
+          "paragraphs": [
+            "bleiben"
+          ]
+        },
+        {
+          "id": "wort-l",
+          "label": "l",
+          "paragraphs": [
+            "lassen"
+          ]
+        },
+        {
+          "id": "wort-m",
+          "label": "m",
+          "paragraphs": [
+            "deshalb"
+          ]
+        },
+        {
+          "id": "wort-n",
+          "label": "n",
+          "paragraphs": [
+            "Angebot"
+          ]
+        },
+        {
+          "id": "wort-o",
+          "label": "o",
+          "paragraphs": [
+            "Bescheid"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 31,
+          "type": "zuordnung",
+          "prompt": "Lücke 31",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "aushang",
+              "quote": "der Arbeiten an einigen Tagen für mehrere Stunden abgestellt"
+            }
+          ],
+          "explanation": "Su, iki hafta süren çalışmalar sırasında birkaç gün kesilecek: Bir şeyin başka bir olay süresince olduğunu genitif alan edat „während“ (sırasında) söyler: „während der Arbeiten“. „der Arbeiten“ burada çoğul genitiftir. „vor“, „nach“ ve „bei“ datif ister; datifte „vor/nach/bei den Arbeiten“ denirdi, „der Arbeiten“ değil. „trotzdem“, „deshalb“ gibi zarflar da bir isim grubunun önünde edat gibi duramaz."
+        },
+        {
+          "number": 32,
+          "type": "zuordnung",
+          "prompt": "Lücke 32",
+          "answer": "i",
+          "evidence": [
+            {
+              "text": "aushang",
+              "quote": "jeder Unterbrechung hier im Treppenhaus aus"
+            }
+          ],
+          "explanation": "Arkasından gelen cümle „So können Sie rechtzeitig Wasser in Flaschen abfüllen“ (Böylece zamanında şişelere su doldurabilirsiniz) diyor: Saatler kesintiden önce asılmalı. Bunu „vor“ + datif söyler: „zwei Tage vor jeder Unterbrechung“ (her kesintiden iki gün önce). „nach“ (sonra) dilbilgisi olarak uyar, ama kesintiden sonra asılan bir bilgiyle zamanında su doldurulamaz. „während“ (sırasında) da aynı sebeple olmaz; „bei“ ise „zwei Tage“ ile anlamlı bir zaman bildirmez."
+        },
+        {
+          "number": 33,
+          "type": "zuordnung",
+          "prompt": "Lücke 33",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "aushang",
+              "quote": "die neuen Leitungen werden an deren Rückwand entlang verlegt"
+            }
+          ],
+          "explanation": "Boşluktan sonra fiil „werden“ hemen öznenin arkasında, yani ikinci sıradadır (ana cümle düzeni) ve cümle, ustaların neden kilerlere girmesi gerektiğini açıklar. Sebebi ana cümle düzeniyle bağlayan bağlaç „denn“ (çünkü) olur. „weil“ de sebep bildirir, ama yan cümle kurar; o zaman çekimli fiil sonda olmalıydı („…, weil die neuen Leitungen … verlegt werden“). „deshalb“ ve „trotzdem“ gelseydi fiil hemen arkalarından gelmeliydi; „ob“ de fiili sona atar."
+        },
+        {
+          "number": 34,
+          "type": "zuordnung",
+          "prompt": "Lücke 34",
+          "answer": "m",
+          "evidence": [
+            {
+              "text": "aushang",
+              "quote": "bis zum 28. Februar alle Kisten und Möbel weg"
+            }
+          ],
+          "explanation": "Önceki cümle sebebi veriyor: Yeni borular kilerlerin arka duvarı boyunca döşenecek. Bu yüzden duvarın önündeki kutular kaldırılmalı. Sonuç bildiren zarf „deshalb“ (bu yüzden) olur: „Bitte räumen Sie deshalb … weg“. „trotzdem“ (yine de) bir karşıtlık ister; burada istek, önceki bilgiye karşı değil, ondan çıkan bir sonuçtur. „denn“ ve „weil“ cümlenin ortasında bu yerde duramaz."
+        },
+        {
+          "number": 35,
+          "type": "zuordnung",
+          "prompt": "Lücke 35",
+          "answer": "f",
+          "evidence": [
+            {
+              "text": "aushang",
+              "quote": "bei unserem Hausmeister, Herrn Ostwaldt, ab, damit die Handwerker die Tür öffnen können"
+            }
+          ],
+          "explanation": "„einen“ eril bir isim ister ve cümle amacını kendisi söylüyor: „damit die Handwerker die Tür öffnen können“ (ustalar kapıyı açabilsin diye). Kendi kilidiyle kilitlenen bir kiler kapısını açmak için anahtar gerekir: „einen Schlüssel abgeben“ (bir anahtar teslim etmek). „Bescheid“ da erildir, ama „Bescheid“ ile kapı açılmaz; ayrıca „Bescheid“ „sagen/geben“ ile kullanılır. „Angebot“ ve „Verständnis“ nötr isimlerdir („ein“), „einen“ ile kullanılamaz."
+        },
+        {
+          "number": 36,
+          "type": "zuordnung",
+          "prompt": "Lücke 36",
+          "answer": "k",
+          "evidence": [
+            {
+              "text": "aushang",
+              "quote": "an diesem Tag ausgeschaltet"
+            }
+          ],
+          "explanation": "Cümlede çekimli fiil eksik; özne „Die Waschmaschinen“ çoğul. Önceki cümleye göre o gün bodrumda elektrik yok, bu yüzden makineler o gün kapalı kalır: „bleiben … ausgeschaltet“ (kapalı kalırlar). „lassen“ de bir fiildir, ama bir nesne ister („etwas ausgeschaltet lassen“: bir şeyi kapalı bırakmak); burada makineler öznedir ve nesne yoktur, bu yüzden „Die Waschmaschinen lassen … ausgeschaltet“ dilbilgisi olarak olmaz."
+        },
+        {
+          "number": 37,
+          "type": "zuordnung",
+          "prompt": "Lücke 37",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "aushang",
+              "quote": "an allen Rückwänden genug Platz ist"
+            }
+          ],
+          "explanation": "„prüfen“ (kontrol etmek) fiilinden sonra bir şeyin doğru olup olmadığını soran dolaylı soru gelir: „Herr Ostwaldt prüft, ob … genug Platz ist“ (yeterli yer olup olmadığını kontrol ediyor). Fiil „ist“ sondadır. „weil“ de fiili sona atar, ama „yer olduğu için kontrol ediyor“ anlamsızdır: Ostwaldt yer olup olmadığını kontrol edecek, yani henüz bilmiyor. „während“ bağlaç olarak fiili sona atar, ama „yer varken kontrol ediyor“ da „prüfen“ fiilinin neyi kontrol ettiğini söylemez. „denn“ ile fiil ikinci sırada olmalıydı."
+        },
+        {
+          "number": 38,
+          "type": "zuordnung",
+          "prompt": "Lücke 38",
+          "answer": "o",
+          "evidence": [
+            {
+              "text": "aushang",
+              "quote": "Sind Sie in der Zeit der Arbeiten verreist?"
+            }
+          ],
+          "explanation": "Önceki soru „Sind Sie … verreist?“ (… seyahatte misiniz?) diyor; „Dann“ (o zaman) Herr Ostwaldt’a haber verilmesini istiyor. „sagen“ fiilinin burada bir nesnesi (ne söyleneceği) eksik; haber vermek kalıbı „jemandem Bescheid sagen“ (birine haber vermek) olur: „Dann sagen Sie Herrn Ostwaldt bitte rechtzeitig Bescheid“. „deshalb“ veya „trotzdem“ gelseydi „sagen“ nesnesiz kalırdı; ayrıca „Dann“ sonucu zaten bildiriyor ve bir karşıtlık da yok. „Schlüssel“, „Angebot“ ve „Verständnis“ söylenecek bir şey değildir; „Schlüssel sagen“ veya „Verständnis sagen“ denmez."
+        },
+        {
+          "number": 39,
+          "type": "zuordnung",
+          "prompt": "Lücke 39",
+          "answer": "h",
+          "evidence": [
+            {
+              "text": "aushang",
+              "quote": "Fragen bitte direkt an Herrn Ostwaldt"
+            }
+          ],
+          "explanation": "Soru olduğu durumlarda kime başvurulacağı söyleniyor. Bir durumu „bei“ + datif bildirir: „bei Fragen“ (sorularınız olursa). „während Fragen“ (sorular sırasında) ve „nach Fragen“ (sorulardan sonra) bir başvuru durumunu anlatmaz; „vor Fragen“ da anlam vermez."
+        },
+        {
+          "number": 40,
+          "type": "zuordnung",
+          "prompt": "Lücke 40",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "aushang",
+              "quote": "Wir wissen, dass der Lärm und die Unterbrechungen für Sie unangenehm sind"
+            }
+          ],
+          "explanation": "Bu cümlede gürültü ve kesintilerin („der Lärm und die Unterbrechungen“) kiracılar için „unangenehm“ (rahatsız edici) olduğu söyleniyor; böyle bir rahatsızlık karşısında umulan şey kiracıların anlayışıdır: „auf Ihr Verständnis hoffen“ (anlayışınızı ummak). „Angebot“ (teklif) da „Ihr“ ile dilbilgisi olarak uyar, ama metinde kiracıların yapacağı bir teklif yok ve bir teklif rahatsızlıkla ilgili değil. „Schlüssel“ ve „Bescheid“ eril olduğu için „auf Ihren …“ gerekirdi; ayrıca bir anahtar veya bir haber, rahatsızlık karşısında umulan bir şey değildir."
+        }
+      ]
+    }
+  ]
+}

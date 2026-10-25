@@ -1,0 +1,268 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "sprachbausteine",
+  "teil": 2,
+  "set": "set-1",
+  "title": "Bericht über ein Firmenfest",
+  "minutes": 13,
+  "context": "Sie lesen in der Mitarbeiterzeitung der Firma Brandacker Möbelbau einen Bericht über das Sommerfest.",
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort aus der Liste (a–o) in die Lücken 31–40 passt. Jedes Wort passt nur einmal. Fünf Wörter bleiben übrig.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "bericht",
+          "title": "Ein Fest zum Jubiläum",
+          "byline": "Mitarbeiterzeitung Brandacker Möbelbau",
+          "paragraphs": [
+            "Am vergangenen Freitag hat die Firma Brandacker Möbelbau ihr 25-jähriges Bestehen gefeiert. Ab 14 Uhr kamen {{31}} des Regens am Vormittag rund 150 Beschäftigte mit ihren Familien auf das Firmengelände. Geschäftsführerin Gudrun Quellmann eröffnete das Fest {{32}} einer kurzen Rede. Sie erinnerte daran, dass die Firma mit nur vier Tischlern begonnen hatte, und dankte allen Kolleginnen und Kollegen, {{33}} das Fest in ihrer Freizeit vorbereitet hatten.",
+            "Anschließend konnten die Gäste {{34}} verschiedenen Angeboten wählen. Viele Erwachsene nahmen an einer Führung durch die neue Lackiererei teil, {{35}} die Kinder in der Lehrwerkstatt kleine Vogelhäuser aus Holzresten bauten. Für das Essen sorgte das Team unserer Kantine. Es gab Salate, Würstchen vom Grill und Kuchen, den einige Kolleginnen und Kollegen zu Hause {{36}} hatten.",
+            "Am Abend spielte die Band von Levin Kessmann aus unserer Logistikabteilung. Die {{37}} war so gut, dass viele Gäste bis Mitternacht blieben. Bei der Tombola kamen 940 Euro zusammen. Das Geld geht an den Kindergarten in unserer Straße, {{38}} dort ein neues Klettergerüst gekauft werden kann.",
+            "Die Geschäftsführung hat {{39}} des großen Erfolgs beschlossen, das Sommerfest {{40}} jedes Jahr zu feiern. Fotos vom Fest finden Sie ab Montag im Intranet."
+          ]
+        },
+        {
+          "id": "wort-a",
+          "label": "a",
+          "paragraphs": [
+            "gebacken"
+          ]
+        },
+        {
+          "id": "wort-b",
+          "label": "b",
+          "paragraphs": [
+            "mit"
+          ]
+        },
+        {
+          "id": "wort-c",
+          "label": "c",
+          "paragraphs": [
+            "künftig"
+          ]
+        },
+        {
+          "id": "wort-d",
+          "label": "d",
+          "paragraphs": [
+            "zwischen"
+          ]
+        },
+        {
+          "id": "wort-e",
+          "label": "e",
+          "paragraphs": [
+            "damit"
+          ]
+        },
+        {
+          "id": "wort-f",
+          "label": "f",
+          "paragraphs": [
+            "obwohl"
+          ]
+        },
+        {
+          "id": "wort-g",
+          "label": "g",
+          "paragraphs": [
+            "trotz"
+          ]
+        },
+        {
+          "id": "wort-h",
+          "label": "h",
+          "paragraphs": [
+            "statt"
+          ]
+        },
+        {
+          "id": "wort-i",
+          "label": "i",
+          "paragraphs": [
+            "wegen"
+          ]
+        },
+        {
+          "id": "wort-j",
+          "label": "j",
+          "paragraphs": [
+            "damals"
+          ]
+        },
+        {
+          "id": "wort-k",
+          "label": "k",
+          "paragraphs": [
+            "während"
+          ]
+        },
+        {
+          "id": "wort-l",
+          "label": "l",
+          "paragraphs": [
+            "Wetter"
+          ]
+        },
+        {
+          "id": "wort-m",
+          "label": "m",
+          "paragraphs": [
+            "die"
+          ]
+        },
+        {
+          "id": "wort-n",
+          "label": "n",
+          "paragraphs": [
+            "backen"
+          ]
+        },
+        {
+          "id": "wort-o",
+          "label": "o",
+          "paragraphs": [
+            "Stimmung"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 31,
+          "type": "zuordnung",
+          "prompt": "Lücke 31",
+          "answer": "g",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "des Regens am Vormittag rund 150 Beschäftigte"
+            }
+          ],
+          "explanation": "Sabah yağmur yağmış, ama yine de yaklaşık 150 kişi gelmiş: Bu bir karşıtlıktır. Karşıtlığı genitif ile kuran edat „trotz“ (-e rağmen) olur: „trotz des Regens“. „wegen“ (yüzünden) anlamca uymaz, çünkü insanlar yağmur yüzünden gelmemiştir; „statt“ (yerine) da anlamsızdır. „während“ (sırasında) de olmaz: Yağmur sabah yağmış, insanlar ise saat 14’ten itibaren gelmiş. „obwohl“ bir yan cümle bağlacıdır, arkasından fiilli bir cümle ister, „des Regens“ gibi bir isim grubu değil."
+        },
+        {
+          "number": 32,
+          "type": "zuordnung",
+          "prompt": "Lücke 32",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "eröffnete das Fest"
+            }
+          ],
+          "explanation": "Fest kısa bir konuşmayla açılmış: Bir şeyi hangi araçla yaptığımızı „mit“ + datif söyler: „mit einer kurzen Rede“ (kısa bir konuşmayla). „einer“ burada datiftir. „zwischen“ (arasında) iki şey ister, „trotz“ ve „wegen“ ise anlamca uymaz (konuşmaya rağmen / konuşma yüzünden açmak). „statt“ (yerine) da olmaz: Konuşma açılışın yerine geçen bir şey değil, açılışın kendisidir; „während“ ise boşluk 35’te gerekir."
+        },
+        {
+          "number": 33,
+          "type": "zuordnung",
+          "prompt": "Lücke 33",
+          "answer": "m",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "das Fest in ihrer Freizeit vorbereitet hatten"
+            }
+          ],
+          "explanation": "Boşluktan sonraki yan cümlenin öznesi eksik ve fiil „hatten“ çoğul: Öznesi „allen Kolleginnen und Kollegen“ olan bir ilgi zamiri gerekir. Çoğul yalın hâl (Nominativ) ilgi zamiri „die“dir: „…, die das Fest vorbereitet hatten“ (şenliği hazırlamış olan herkese). „obwohl“ veya „damit“ gelirse cümlenin öznesi olmaz."
+        },
+        {
+          "number": 34,
+          "type": "zuordnung",
+          "prompt": "Lücke 34",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "verschiedenen Angeboten wählen"
+            }
+          ],
+          "explanation": "„wählen“ fiili seçenekler arasında seçim yapmayı „wählen zwischen“ + datif ile anlatır: „zwischen verschiedenen Angeboten wählen“ (çeşitli etkinlikler arasından seçmek). Sonraki cümleler de bu seçenekleri sayar (tur, çocuk atölyesi). „mit“ veya „trotz“ bu fiille anlam vermez."
+        },
+        {
+          "number": 35,
+          "type": "zuordnung",
+          "prompt": "Lücke 35",
+          "answer": "k",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "die Kinder in der Lehrwerkstatt kleine Vogelhäuser"
+            }
+          ],
+          "explanation": "Boşluk iki olayı birbirine bağlar: Yetişkinler boya bölümünü gezerken çocuklar kuş evi yapıyor. Aynı anda olan iki şeyi yan cümle bağlacı „während“ (-iken) bağlar; fiil „bauten“ sondadır. „obwohl“ (-e rağmen) uymaz, çünkü arada karşıtlık yoktur; „damit“ (-sın diye) de uymaz, çünkü yetişkinlerin turu çocukların kuş evi yapması için değildir."
+        },
+        {
+          "number": 36,
+          "type": "zuordnung",
+          "prompt": "Lücke 36",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "Kuchen, den einige Kolleginnen und Kollegen zu Hause"
+            }
+          ],
+          "explanation": "Yan cümlede „hatten“ yardımcı fiili var, sonunda Partizip II gerekir (Plusquamperfekt): „den … zu Hause gebacken hatten“ (evde pişirmiş oldukları kek). Mastar „backen“ biçim olarak uymaz, çünkü „hatten“ ile mastar değil „gebacken“ kullanılır."
+        },
+        {
+          "number": 37,
+          "type": "zuordnung",
+          "prompt": "Lücke 37",
+          "answer": "o",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "war so gut, dass viele Gäste bis Mitternacht blieben"
+            }
+          ],
+          "explanation": "„Die“ artikeli dişil bir isim ister ve cümle, konukların gece yarısına kadar kalmasının sebebini anlatır. Önceki cümle grubun çaldığını söylüyor; konukları gece yarısına kadar tutan şey akşamki ortamdır: „die Stimmung“ (ortam, atmosfer). „Wetter“ (hava durumu) nötrdür („das Wetter“), bu yüzden „Die“ artikeliyle kullanılamaz."
+        },
+        {
+          "number": 38,
+          "type": "zuordnung",
+          "prompt": "Lücke 38",
+          "answer": "e",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "dort ein neues Klettergerüst gekauft werden kann"
+            }
+          ],
+          "explanation": "Paranın anaokuluna gitmesinin amacı yeni bir tırmanma aleti alınabilmesidir. Amaç bildiren yan cümle bağlacı „damit“ (-sın diye) olur. „obwohl“ (-e rağmen) ve „während“ (-iken) bu amaç ilişkisini kurmaz."
+        },
+        {
+          "number": 39,
+          "type": "zuordnung",
+          "prompt": "Lücke 39",
+          "answer": "i",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "des großen Erfolgs beschlossen"
+            }
+          ],
+          "explanation": "Şenlik çok başarılı geçtiği için her yıl yapılmasına karar verilmiş: Bu bir sebeptir. Genitifle sebep bildiren edat „wegen“ (yüzünden, nedeniyle) olur: „wegen des großen Erfolgs“. „trotz“ (-e rağmen) de genitif alır, ama başarıyı karara engel olan bir şey gibi gösterir: „Başarıya rağmen her yıl kutlamaya karar verdi“ mantıksızdır, çünkü büyük başarı bu kararın sebebidir; ayrıca „trotz“ boşluk 31’de gerekir. „statt“ (yerine) da anlam vermez."
+        },
+        {
+          "number": 40,
+          "type": "zuordnung",
+          "prompt": "Lücke 40",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "jedes Jahr zu feiern"
+            }
+          ],
+          "explanation": "Karar şimdi verildi ve gelecekle ilgilidir: Şenlik bundan sonra her yıl kutlanacak. Gelecek için „künftig“ (bundan sonra, ileride) uyar. „damals“ (o zamanlar) geçmişi anlatır ve yeni bir kararla birlikte kullanılamaz."
+        }
+      ]
+    }
+  ]
+}

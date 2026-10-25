@@ -42,6 +42,16 @@ Kaynak: telc Übungstest açıklamaları ve hazırlık sitelerinin özetleri (ar
 - **Bizim kararlarımız (≈):** Teil 1 ve 2'de örnek yok; Teil 3'te x tuzağı her sette başka bir koşula dayanıyor (yaş, tarih …).
 - **Oynatıcı:** yeni eklenti gerekmedi (a/b/c, richtig/falsch, `"none": "x"` ve örnek 0 zaten var).
 
+**Aşama 6 bitti: 3 Teil × 5 set (15 set, 75 soru).**
+- Kör çözüm pilotta 30/30, set 3–5'te 45/45 uyuştu.
+- İnceleyiciler A2 üstü kelimeleri sadeleştirdi (Chatgruppe, Einzelfahrt, Klinik, Kursgebühr, Konditorei, Umfragen …), yalnızca „metinde yok“ olan çeldiricileri metinle çelişen çeldiricilere çevirdi, bütçeleri sayıyla verdi, gerçek marka adlarını ve paralel dallarla çakışan adları değiştirdi.
+- Teil 3'te x tuzakları her sette başka bir koşula dayanıyor: yaş, tarih, kendi ekipmanı, grup büyüklüğü, saat ücreti.
+
+**Düzeltmediğim notlar:**
+- Bazı Teil 3 durumları ilanla aynı anahtar kelimeyi paylaşıyor (Gitarre, Grill, Sonntag); çeldirici ilanlar yine de okumayı gerektiriyor.
+- Konu yakınlıkları: yetişkin yüzme kursu (Goethe B1'de bir cümle), aşçıyla yemek kursu (telc A2 T2 set-1'e yakın), yeniden açılan köy sineması (Goethe A2 „Kinoabend im Dorf“a yakın; başlık değiştirildi: „Das alte Kino ist wieder offen“).
+- T1 set-4 metni ~229 kelime, hedefin biraz üstünde.
+
 ### telc Deutsch B1 (Zertifikat Deutsch) Leseverstehen + Sprachbausteine: format tablosu
 Kaynak: telc'in yayımladığı sınav yapısı ve örnek sınav açıklamaları (arama sonuçları). ✔ = kaynaklarda doğrulandı, ≈ = tahmin veya bizim kararımız. Lesen ve Sprachbausteine birlikte 90 dk (✔).
 

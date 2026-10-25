@@ -1,0 +1,124 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-1",
+  "title": "Ein neuer Kollege",
+  "minutes": 8,
+  "instructions": "Lesen Sie die zwei Texte und die Aufgaben 1 bis 5. Sind die Aussagen richtig oder falsch? Kreuzen Sie an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "email",
+          "title": "E-Mail",
+          "paragraphs": [
+            "Liebe Kolleginnen und Kollegen,",
+            "ich heiße Bartek Wierzbicki und ich bin neu hier im Büro. Ich komme aus Polen, aber ich lebe schon sechs Jahre in Deutschland. Ich spreche Polnisch, Deutsch und ein bisschen Englisch. Mein Zimmer ist Nummer 12. Ich arbeite am Montag, Dienstag und Donnerstag von 8 bis 16 Uhr und am Mittwoch von 8 bis 12 Uhr. Am Freitag habe ich frei.",
+            "Bis bald! Bartek Wierzbicki"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Bartek kann drei Sprachen sprechen.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "email",
+              "quote": "Ich spreche Polnisch, Deutsch und ein bisschen Englisch."
+            }
+          ],
+          "explanation": "Bartek yazıyor: „Ich spreche Polnisch, Deutsch und ein bisschen Englisch“ (Lehçe, Almanca ve biraz İngilizce konuşuyorum). Bunlar üç dil (drei Sprachen). İfade doğru."
+        },
+        {
+          "number": 1,
+          "type": "richtig-falsch",
+          "prompt": "Am Mittwoch arbeitet Bartek bis 16 Uhr.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "email",
+              "quote": "am Mittwoch von 8 bis 12 Uhr"
+            }
+          ],
+          "explanation": "Bartek saat 16'ya kadar pazartesi, salı ve perşembe çalışıyor. Çarşamba için metinde: „am Mittwoch von 8 bis 12 Uhr“ (çarşamba 8'den 12'ye kadar). Saat yanlış, ifade yanlış."
+        },
+        {
+          "number": 2,
+          "type": "richtig-falsch",
+          "prompt": "Bartek arbeitet am Freitag nicht.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "email",
+              "quote": "Am Freitag habe ich frei."
+            }
+          ],
+          "explanation": "Metinde: „Am Freitag habe ich frei“ (Cuma günü boşum, izinliyim). „frei haben“ = çalışmamak („arbeitet nicht“). İfade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "sms",
+          "title": "SMS",
+          "paragraphs": [
+            "Hallo Bartek,",
+            "herzlich willkommen bei uns! Ich bin heute leider nicht im Büro, denn ich bin krank. Heute arbeitest du mit Mirella. Mirella ist in Zimmer 14. Deinen Computer bekommst du am Donnerstag. Morgen um 9 Uhr zeige ich dir unsere Büros.",
+            "Bis morgen! Grete Lohmeier"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 3,
+          "type": "richtig-falsch",
+          "prompt": "Grete kommt heute nicht zur Arbeit.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "sms",
+              "quote": "Ich bin heute leider nicht im Büro, denn ich bin krank."
+            }
+          ],
+          "explanation": "Grete yazıyor: „Ich bin heute leider nicht im Büro, denn ich bin krank“ (Bugün maalesef büroda değilim, çünkü hastayım). Yani Grete bugün işe gelmiyor. İfade doğru."
+        },
+        {
+          "number": 4,
+          "type": "richtig-falsch",
+          "prompt": "Mirellas Zimmer hat die Nummer 12.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "sms",
+              "quote": "Mirella ist in Zimmer 14."
+            }
+          ],
+          "explanation": "Metinde: „Mirella ist in Zimmer 14“ (Mirella 14 numaralı odada). 12 numaralı oda Bartek'in odası: „Mein Zimmer ist Nummer 12“. Oda numarası yanlış, ifade yanlış."
+        },
+        {
+          "number": 5,
+          "type": "richtig-falsch",
+          "prompt": "Grete zeigt Bartek morgen um zehn Uhr die Büros.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "sms",
+              "quote": "Morgen um 9 Uhr zeige ich dir unsere Büros."
+            }
+          ],
+          "explanation": "Grete yazıyor: „Morgen um 9 Uhr zeige ich dir unsere Büros“ (Yarın saat 9'da sana bürolarımızı gösteriyorum). İfadede saat 10 (zehn Uhr) var. Saat yanlış, ifade yanlış."
+        }
+      ]
+    }
+  ]
+}

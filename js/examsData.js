@@ -495,13 +495,13 @@ window.BA_EXAMS = {
                 title: { tr: 'Kısa mesajlar · richtig/falsch', de: 'Kurze Nachrichten · richtig/falsch', en: 'Short messages · true/false' },
                 exercises: [
                   { set: 'set-1', title: 'Ein neuer Kollege' },
-                  { set: 'set-2', title: 'Geburtstag im Park' },
+                  { set: 'set-2', title: 'Ein Kindergeburtstag' },
                 ]
               }, // Teil 1
               {
                 title: { tr: 'İki ilan · a/b', de: 'Zwei Anzeigen · a/b', en: 'Two adverts · a/b' },
                 exercises: [
-                  { set: 'set-1', title: 'Sport und Bewegung' },
+                  { set: 'set-1', title: 'Sport im Verein' },
                   { set: 'set-2', title: 'Kinder und Familie' },
                 ]
               }, // Teil 2

@@ -1,0 +1,260 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-1",
+  "title": "Sport im Verein",
+  "minutes": 8,
+  "instructions": "Lesen Sie die Texte und die Aufgaben 6 bis 10. Wo finden Sie Informationen? Kreuzen Sie an: a oder b.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q0a",
+          "label": "a",
+          "title": "Tennisclub Filzball",
+          "paragraphs": [
+            "Tenniskurse für Anfänger: Dienstag und Donnerstag von 17 bis 18:30 Uhr. Am Samstag und Sonntag gibt es bei uns keine Kurse. Telefon 37 52 18."
+          ]
+        },
+        {
+          "id": "q0b",
+          "label": "b",
+          "title": "Tennisschule Sandplatz",
+          "paragraphs": [
+            "Sie möchten Tennis spielen lernen? Unsere Kurse für Anfänger sind am Samstag und am Sonntag, immer von 10 bis 12 Uhr. Ein Kurs kostet 12 Euro."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Sie möchten Tennis lernen. Sie haben nur am Sonntag Zeit.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q0b",
+              "quote": "am Samstag und am Sonntag, immer von 10 bis 12 Uhr"
+            },
+            {
+              "text": "q0a",
+              "quote": "Am Samstag und Sonntag gibt es bei uns keine Kurse."
+            }
+          ],
+          "explanation": "Sadece pazar (Sonntag) günü vaktiniz var. b ilanında „am Samstag und am Sonntag, immer von 10 bis 12 Uhr“ yazıyor: Kurslar cumartesi ve pazar, saat 10 ile 12 arası. a ilanında „Am Samstag und Sonntag gibt es bei uns keine Kurse“ yazıyor: Cumartesi ve pazar kurs yok. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q6a",
+          "label": "a",
+          "title": "Volleyball im Park",
+          "paragraphs": [
+            "Frauen und Männer ab 18 Jahren spielen bei uns zusammen. Wir treffen uns jeden Dienstag um 18 Uhr im Park hinter dem Rathaus. Kommen Sie doch mal!"
+          ]
+        },
+        {
+          "id": "q6b",
+          "label": "b",
+          "title": "Volleyball-Gruppe Federleicht",
+          "paragraphs": [
+            "Wir spielen jeden Donnerstag um 19 Uhr in der Grundschule am Kirchplatz. Unsere Gruppe ist nur für Frauen. Bitte bringen Sie Sportschuhe mit."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "zuordnung",
+          "prompt": "Ihr Bruder ist 25 Jahre alt. Er möchte in einer Gruppe Volleyball spielen.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q6a",
+              "quote": "Frauen und Männer ab 18 Jahren spielen bei uns zusammen."
+            },
+            {
+              "text": "q6b",
+              "quote": "Unsere Gruppe ist nur für Frauen."
+            }
+          ],
+          "explanation": "Kardeşiniz bir erkek ve 25 yaşında. a ilanında „Frauen und Männer ab 18 Jahren“ yazıyor: Kadınlar ve erkekler (Männer), 18 yaşından itibaren birlikte oynuyor. 25 yaş buna uyuyor. b ilanında „Unsere Gruppe ist nur für Frauen“ yazıyor: Grup sadece kadınlar (Frauen) için. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q7a",
+          "label": "a",
+          "title": "Tischtennis am Abend",
+          "paragraphs": [
+            "Wir spielen jeden Dienstag und Freitag von 18 bis 21 Uhr in der Schule am Fluss. Neue Leute können gern mitspielen. Sie bezahlen nichts."
+          ]
+        },
+        {
+          "id": "q7b",
+          "label": "b",
+          "title": "Tischtennis-Treff Flinkball",
+          "paragraphs": [
+            "Am Montag und am Donnerstag spielen wir von 9:30 bis 11:30 Uhr Tischtennis im Haus am Marktplatz, 1. Stock. Eine Stunde kostet 2 Euro."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 7,
+          "type": "zuordnung",
+          "prompt": "Sie möchten am Vormittag Tischtennis spielen.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q7b",
+              "quote": "von 9:30 bis 11:30 Uhr"
+            },
+            {
+              "text": "q7a",
+              "quote": "von 18 bis 21 Uhr"
+            }
+          ],
+          "explanation": "Öğleden önce (Vormittag) masa tenisi oynamak istiyorsunuz. b ilanında „von 9:30 bis 11:30 Uhr“ yazıyor: Saat 9.30 ile 11.30 arası oynuyorlar. Bu, öğleden önce. a ilanında „von 18 bis 21 Uhr“ yazıyor: Saat 18 ile 21 arası. Bu akşam. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q8a",
+          "label": "a",
+          "title": "Minigolf Grashüpfer",
+          "paragraphs": [
+            "Spielen Sie Minigolf im Garten vom Café Linde in Brombeerau. Samstag und Sonntag von 11 bis 19 Uhr geöffnet. Erwachsene 5 Euro, Kinder 3 Euro."
+          ]
+        },
+        {
+          "id": "q8b",
+          "label": "b",
+          "title": "Minigolf am Bach",
+          "paragraphs": [
+            "Unser Minigolfplatz ist in Mispelfeld, direkt neben dem Sportplatz. Am Wochenende ist er von 10 bis 20 Uhr offen. Ein Spiel kostet 4 Euro."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 8,
+          "type": "zuordnung",
+          "prompt": "Sie besuchen am Samstag Freunde in Mispelfeld. Dort möchten Sie zusammen Minigolf spielen.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q8b",
+              "quote": "Unser Minigolfplatz ist in Mispelfeld"
+            },
+            {
+              "text": "q8a",
+              "quote": "in Brombeerau"
+            }
+          ],
+          "explanation": "Mispelfeld’de minigolf oynamak istiyorsunuz. b ilanında „Unser Minigolfplatz ist in Mispelfeld“ yazıyor: Minigolf sahası Mispelfeld’de. „Am Wochenende“ (hafta sonu) açık, cumartesi de açık. a ilanında „in Brombeerau“ yazıyor: Bu saha başka bir yerde, Brombeerau’da. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q9a",
+          "label": "a",
+          "title": "Fitnessstudio Muskelkater",
+          "paragraphs": [
+            "Bei uns können Sie jeden Tag von 6 bis 23 Uhr Sport machen. Ein Monat kostet 22 Euro. Sie finden uns in der Gartenstraße 30."
+          ]
+        },
+        {
+          "id": "q9b",
+          "label": "b",
+          "title": "Studio Kraftkiste",
+          "paragraphs": [
+            "Sport, Kurse und Duschen in einem neuen Haus. Wir sind von Montag bis Sonntag von 7 bis 22 Uhr für Sie da. Ein Monat kostet 45 Euro."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 9,
+          "type": "zuordnung",
+          "prompt": "Sie möchten in ein Fitnessstudio gehen. Für einen Monat können Sie 25 Euro bezahlen.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q9a",
+              "quote": "Ein Monat kostet 22 Euro."
+            },
+            {
+              "text": "q9b",
+              "quote": "Ein Monat kostet 45 Euro."
+            }
+          ],
+          "explanation": "Bir ay için 25 euro ödeyebilirsiniz. a ilanında „Ein Monat kostet 22 Euro“ yazıyor: Bir ay 22 euro. Bu, 25 eurodan az. b ilanında „Ein Monat kostet 45 Euro“ yazıyor: Bir ay 45 euro. Bu çok pahalı. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q10a",
+          "label": "a",
+          "title": "Tanzschule Drehwurm",
+          "paragraphs": [
+            "Tanzkurs für Anfänger: jeden Freitag von 19 bis 20:30 Uhr. Kommen Sie allein oder mit Partner. Zehn Abende kosten 80 Euro."
+          ]
+        },
+        {
+          "id": "q10b",
+          "label": "b",
+          "title": "Tanzstudio Wiegeschritt",
+          "paragraphs": [
+            "Neue Tanzkurse für Anfänger am Montag und am Mittwoch, immer von 18 bis 19:30 Uhr. Von Freitag bis Sonntag ist das Studio zu."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 10,
+          "type": "zuordnung",
+          "prompt": "Sie möchten tanzen lernen. Von Montag bis Donnerstag arbeiten Sie am Abend. Am Freitagabend haben Sie Zeit.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q10a",
+              "quote": "jeden Freitag von 19 bis 20:30 Uhr"
+            },
+            {
+              "text": "q10b",
+              "quote": "Von Freitag bis Sonntag ist das Studio zu."
+            }
+          ],
+          "explanation": "Sadece cuma akşamı (Freitagabend) vaktiniz var. a ilanında „jeden Freitag von 19 bis 20:30 Uhr“ yazıyor: Kurs her cuma, saat 19 ile 20.30 arası. b ilanında kurslar pazartesi ve çarşamba akşamı; o akşamlar çalışıyorsunuz. Ayrıca „Von Freitag bis Sonntag ist das Studio zu“ yazıyor: Cumadan pazara kapalı (zu = kapalı). Cevap a."
+        }
+      ]
+    }
+  ]
+}

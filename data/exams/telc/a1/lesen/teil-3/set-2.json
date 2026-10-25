@@ -1,0 +1,146 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-2",
+  "title": "Bank und Post",
+  "minutes": 9,
+  "instructions": "Lesen Sie die Texte und die Aufgaben 11 bis 15. Sind die Aussagen richtig oder falsch? Kreuzen Sie an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "bankkarte",
+          "title": "Bank am Rosenplatz – Ihre neue Karte",
+          "paragraphs": [
+            "Ihre neue Bankkarte kommt in den nächsten Tagen mit der Post. Die PIN schicken wir Ihnen drei Tage später in einem anderen Brief."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Die Karte und die PIN kommen am gleichen Tag.",
+          "answer": "falsch",
+          "evidence": [{ "text": "bankkarte", "quote": "Die PIN schicken wir Ihnen drei Tage später in einem anderen Brief." }],
+          "explanation": "Metin: „Die PIN schicken wir Ihnen drei Tage später in einem anderen Brief.“ (PIN'i size üç gün sonra başka bir mektupla gönderiyoruz). Yani kart ve PIN aynı gün (am gleichen Tag) gelmiyor."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "nummer",
+          "title": "Bank am Marktplatz",
+          "paragraphs": [
+            "Liebe Kunden, bitte nehmen Sie am Eingang eine Nummer und warten Sie hier. Wir rufen Ihre Nummer, dann kommen Sie bitte an Tisch 1, 2 oder 3."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 11,
+          "type": "richtig-falsch",
+          "prompt": "Zuerst holt man an der Tür eine Nummer.",
+          "answer": "richtig",
+          "evidence": [{ "text": "nummer", "quote": "bitte nehmen Sie am Eingang eine Nummer und warten Sie hier" }],
+          "explanation": "Metin: „bitte nehmen Sie am Eingang eine Nummer“ (lütfen girişte bir numara alın). Masaya (Tisch) ancak numaranız çağrılınca gidiyorsunuz. Yani önce (zuerst) kapıda (an der Tür) numara alınıyor. İfade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "kartenweg",
+          "title": "Bankkarte weg?",
+          "paragraphs": [
+            "Ihre Karte ist weg? Bitte rufen Sie gleich an: 0800 47 11 20. Wir sind jeden Tag 24 Stunden für Sie da. Der Anruf kostet nichts."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 12,
+          "type": "richtig-falsch",
+          "prompt": "Man kann diese Nummer auch um zwei Uhr in der Nacht anrufen.",
+          "answer": "richtig",
+          "evidence": [{ "text": "kartenweg", "quote": "Wir sind jeden Tag 24 Stunden für Sie da." }],
+          "explanation": "Metin: „Wir sind jeden Tag 24 Stunden für Sie da.“ (Her gün 24 saat sizin için buradayız). 24 saat demek, gece de (in der Nacht) açık demek. Yani gece saat ikide de telefon edilebilir. İfade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "paket",
+          "title": "Post – Wir waren da!",
+          "paragraphs": [
+            "Liebe Frau Halvorsen, heute um 10 Uhr waren Sie nicht zu Hause. Ihr Paket ist ab morgen, 14 Uhr, in der Post in der Wacholdergasse 3. Bitte bringen Sie Ihren Ausweis mit."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 13,
+          "type": "richtig-falsch",
+          "prompt": "Frau Halvorsen kann ihr Paket heute noch in der Post holen.",
+          "answer": "falsch",
+          "evidence": [{ "text": "paket", "quote": "Ihr Paket ist ab morgen, 14 Uhr, in der Post in der Wacholdergasse 3." }],
+          "explanation": "Metin: „Ihr Paket ist ab morgen, 14 Uhr, in der Post“ (paketiniz yarın saat 14'ten itibaren postanede). „heute“ (bugün) metinde sadece postacının geldiği saat için var. Yani paket bugün alınamıyor, ancak yarın."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "laden",
+          "title": "Papier und Stift",
+          "paragraphs": [
+            "Bei uns gibt es Hefte, Stifte und Zeitungen. Neu: Sie können bei uns jetzt auch Pakete abgeben. Montag bis Samstag 8 bis 19 Uhr."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 14,
+          "type": "richtig-falsch",
+          "prompt": "In diesem Geschäft kann man ein Paket schicken.",
+          "answer": "richtig",
+          "evidence": [{ "text": "laden", "quote": "Sie können bei uns jetzt auch Pakete abgeben." }],
+          "explanation": "Metin: „Sie können bei uns jetzt auch Pakete abgeben.“ (Artık bize paket de teslim edebilirsiniz). Paketi dükkâna veriyorsunuz, dükkân onu gönderiyor. Yani bu dükkândan (Geschäft) paket gönderilebiliyor (schicken). İfade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "pakettage",
+          "title": "Post am Bahnhof – Wie lange braucht Ihr Paket?",
+          "paragraphs": [
+            { "rows": [["In Deutschland", "1 bis 2 Tage"], ["Nach Österreich und Polen", "3 bis 4 Tage"], ["In die Türkei", "7 bis 10 Tage"]] }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 15,
+          "type": "richtig-falsch",
+          "prompt": "Ein Paket in die Türkei ist drei oder vier Tage unterwegs.",
+          "answer": "falsch",
+          "evidence": [{ "text": "pakettage", "quote": "7 bis 10 Tage" }],
+          "explanation": "Tabloda Türkiye (In die Türkei) için „7 bis 10 Tage“ (7 ila 10 gün) yazıyor. „3 bis 4 Tage“ (3 ila 4 gün) Avusturya ve Polonya için. Yani Türkiye'ye paket üç dört günde gitmiyor."
+        }
+      ]
+    }
+  ]
+}

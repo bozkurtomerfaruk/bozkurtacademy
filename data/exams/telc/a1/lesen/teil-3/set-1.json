@@ -1,0 +1,146 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-1",
+  "title": "Bibliothek und Museum",
+  "minutes": 9,
+  "instructions": "Lesen Sie die Texte und die Aufgaben 11 bis 15. Sind die Aussagen richtig oder falsch? Kreuzen Sie an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "computer",
+          "title": "Bibliothek am Rathaus",
+          "paragraphs": [
+            "Im zweiten Stock haben wir sechs Computer mit Internet. Eine Stunde kostet 1 Euro. Fragen Sie bitte unten an der Information."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Für das Internet in der Bibliothek muss man Geld bezahlen.",
+          "answer": "richtig",
+          "evidence": [{ "text": "computer", "quote": "Eine Stunde kostet 1 Euro." }],
+          "explanation": "Metin: „Eine Stunde kostet 1 Euro.“ (Bir saat 1 euro). Yani internet için para (Geld) ödemek (bezahlen) gerekiyor. İfade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "fotos",
+          "title": "Museum am Fluss",
+          "paragraphs": [
+            "Liebe Gäste, bitte machen Sie in den Räumen keine Fotos. Draußen im Garten können Sie gern fotografieren."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 11,
+          "type": "richtig-falsch",
+          "prompt": "Im Museum kann man mit dem Handy Fotos machen.",
+          "answer": "falsch",
+          "evidence": [{ "text": "fotos", "quote": "bitte machen Sie in den Räumen keine Fotos" }],
+          "explanation": "Metin: „bitte machen Sie in den Räumen keine Fotos“ (lütfen odalarda fotoğraf çekmeyin). Fotoğraf sadece „draußen im Garten“ (dışarıda, bahçede) serbest. Yani müzenin içinde fotoğraf çekilmiyor."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "ausleihe",
+          "title": "Stadtbibliothek – Bücher und Filme",
+          "paragraphs": [
+            "Bücher können Sie drei Wochen zu Hause haben, Filme auf DVD eine Woche. Dann bringen Sie bitte alles zurück."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 12,
+          "type": "richtig-falsch",
+          "prompt": "Eine DVD muss man nach sieben Tagen wieder in die Bibliothek bringen.",
+          "answer": "richtig",
+          "evidence": [{ "text": "ausleihe", "quote": "Filme auf DVD eine Woche" }],
+          "explanation": "Metin: „Filme auf DVD eine Woche“ (DVD'deki filmler bir hafta). Bir hafta (eine Woche) yedi gün (sieben Tage) demek. Üç hafta (drei Wochen) sadece kitaplar için. İfade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "spielsachen",
+          "title": "Museum an der Brücke",
+          "paragraphs": [
+            "Neu bei uns: Spielsachen aus 100 Jahren! Die Puppen, Autos und Bälle sind im zweiten Stock. Im ersten Stock finden Sie wie immer alte Fotos von der Stadt."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 13,
+          "type": "richtig-falsch",
+          "prompt": "Die alten Spielsachen sieht man im ersten Stock.",
+          "answer": "falsch",
+          "evidence": [{ "text": "spielsachen", "quote": "Die Puppen, Autos und Bälle sind im zweiten Stock." }],
+          "explanation": "Metin: „Die Puppen, Autos und Bälle sind im zweiten Stock.“ (Bebekler, arabalar ve toplar ikinci katta). Birinci katta (im ersten Stock) ise eski şehir fotoğrafları var. Yani oyuncaklar birinci katta değil."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "sommer",
+          "title": "Kinder- und Jugendbibliothek",
+          "paragraphs": [
+            "Im Juli und August sind wir nur am Vormittag für Sie da: Montag bis Freitag von 9 bis 13 Uhr. Ab September sind wir wieder bis 18 Uhr offen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 14,
+          "type": "richtig-falsch",
+          "prompt": "Im August kann man um 15 Uhr in der Bibliothek Bücher holen.",
+          "answer": "falsch",
+          "evidence": [{ "text": "sommer", "quote": "Im Juli und August sind wir nur am Vormittag für Sie da: Montag bis Freitag von 9 bis 13 Uhr." }],
+          "explanation": "Metin: „Im Juli und August … von 9 bis 13 Uhr“ (temmuz ve ağustosta saat 9'dan 13'e). Saat 15'te kütüphane kapalı. „bis 18 Uhr“ (saat 18'e kadar) sadece eylülden itibaren (ab September) geçerli."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "sprachen",
+          "title": "Museum am Schlossplatz",
+          "paragraphs": [
+            "Sie sprechen nicht gut Deutsch? An der Kasse bekommen Sie ein kleines Heft. Das Heft ist auf Englisch, Türkisch und Arabisch."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 15,
+          "type": "richtig-falsch",
+          "prompt": "Im Museum gibt es auch Texte auf Türkisch.",
+          "answer": "richtig",
+          "evidence": [{ "text": "sprachen", "quote": "Das Heft ist auf Englisch, Türkisch und Arabisch." }],
+          "explanation": "Metin: „Das Heft ist auf Englisch, Türkisch und Arabisch.“ (Kitapçık İngilizce, Türkçe ve Arapça). Bu küçük kitapçığı kasada (an der Kasse) alıyorsunuz. Yani müzede Türkçe metin de var."
+        }
+      ]
+    }
+  ]
+}

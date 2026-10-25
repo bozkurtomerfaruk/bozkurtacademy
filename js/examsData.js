@@ -496,6 +496,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Ein neuer Kollege' },
                   { set: 'set-2', title: 'Ein Kindergeburtstag' },
+                  { set: 'set-3', title: 'Der Sprachkurs' },
+                  { set: 'set-4', title: 'Besuch am Wochenende' },
+                  { set: 'set-5', title: 'Ein Tag am See' },
                 ]
               }, // Teil 1
               {
@@ -503,6 +506,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Sport im Verein' },
                   { set: 'set-2', title: 'Kinder und Familie' },
+                  { set: 'set-3', title: 'Arbeit und Jobs' },
+                  { set: 'set-4', title: 'Kleidung und Geschäfte' },
+                  { set: 'set-5', title: 'Bus und Bahn' },
                 ]
               }, // Teil 2
               {
@@ -510,6 +516,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Bibliothek und Museum' },
                   { set: 'set-2', title: 'Bank und Post' },
+                  { set: 'set-3', title: 'Im Hotel' },
+                  { set: 'set-4', title: 'Apotheke und Friseur' },
+                  { set: 'set-5', title: 'Im Büro' },
                 ]
               }, // Teil 3
             ] },

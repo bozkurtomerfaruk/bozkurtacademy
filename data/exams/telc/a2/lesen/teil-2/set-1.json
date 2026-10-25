@@ -19,7 +19,7 @@
           "paragraphs": [
             "An der Ahornschule in Erlenhagen gibt es seit Januar ein neues Projekt: Jeden Mittwoch kochen zwölf Schülerinnen und Schüler aus der achten Klasse das Mittagessen für ihre Mitschüler. An einem Tag machen sie etwa 80 Portionen.",
             "Die Idee hatte die Biologielehrerin Ingrid Distelkamp. „Viele Jugendliche essen mittags nur Chips oder Süßigkeiten“, sagt sie. „Ich wollte ihnen zeigen, dass gesundes Essen auch gut schmecken kann.“ Hilfe bekommt die Gruppe von Arno Kemmler. Er ist Koch im Restaurant „Zum Mohnfeld“ und kommt jede Woche in die Schulküche. Dafür bekommt er kein Geld.",
-            "Am Montag planen die Schüler zusammen das Essen für die Woche, am Dienstag kaufen zwei von ihnen auf dem Markt ein. Fleisch gibt es nur einmal im Monat. An den anderen Tagen kochen die Jugendlichen mit Gemüse, Reis oder Nudeln. Eine Portion kostet 2,50 Euro.",
+            "Am Montag planen die Schüler zusammen das Essen für den Mittwoch, am Dienstag kaufen zwei von ihnen auf dem Markt ein. Fleisch gibt es nur einmal im Monat. An den anderen Mittwochen kochen die Jugendlichen mit Gemüse, Reis oder Nudeln. Eine Portion kostet 2,50 Euro.",
             "Das Projekt ist sehr beliebt. Im Moment wollen mehr als 30 Schüler mitmachen, aber in der Küche ist nur Platz für zwölf Personen. Deshalb wechseln die Gruppen ab Herbst alle drei Monate. Im Juni möchte die Gruppe außerdem ein kleines Kochbuch mit ihren Lieblingsrezepten machen und beim Schulfest verkaufen."
           ]
         }
@@ -59,7 +59,7 @@
           "evidence": [
             {
               "text": "schulkueche",
-              "quote": "Am Montag planen die Schüler zusammen das Essen für die Woche, am Dienstag kaufen zwei von ihnen auf dem Markt ein."
+              "quote": "Am Montag planen die Schüler zusammen das Essen für den Mittwoch, am Dienstag kaufen zwei von ihnen auf dem Markt ein."
             }
           ],
           "explanation": "Pazartesi öğrenciler birlikte haftanın yemeğini planlıyor: „Am Montag planen die Schüler zusammen das Essen“. Pazardan alışveriş salı günü yapılıyor: „am Dienstag kaufen zwei von ihnen auf dem Markt ein“ (salı günü içlerinden ikisi pazardan alışveriş yapıyor). Gün yanlış, ifade yanlış."
@@ -67,7 +67,7 @@
         {
           "number": 9,
           "type": "richtig-falsch",
-          "prompt": "An den meisten Tagen gibt es ein Essen ohne Fleisch.",
+          "prompt": "An den meisten Mittwochen gibt es ein Essen ohne Fleisch.",
           "answer": "richtig",
           "evidence": [
             {
@@ -76,10 +76,10 @@
             },
             {
               "text": "schulkueche",
-              "quote": "An den anderen Tagen kochen die Jugendlichen mit Gemüse, Reis oder Nudeln."
+              "quote": "An den anderen Mittwochen kochen die Jugendlichen mit Gemüse, Reis oder Nudeln."
             }
           ],
-          "explanation": "Et ayda sadece bir kez var: „Fleisch gibt es nur einmal im Monat.“ Diğer günlerde gençler „mit Gemüse, Reis oder Nudeln“ (sebze, pirinç veya makarnayla) yemek yapıyor. Yani günlerin çoğunda etsiz yemek var. İfade doğru."
+          "explanation": "Et ayda sadece bir kez var: „Fleisch gibt es nur einmal im Monat.“ Diğer çarşambalarda gençler „mit Gemüse, Reis oder Nudeln“ (sebze, pirinç veya makarnayla) yemek yapıyor. Yani çarşambaların çoğunda etsiz yemek var. İfade doğru."
         },
         {
           "number": 10,

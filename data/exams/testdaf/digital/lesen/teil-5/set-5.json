@@ -1,0 +1,108 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 5,
+  "set": "set-5",
+  "title": "Drei Modelle der Hochschulzulassung",
+  "minutes": 10,
+  "context": "Sie lesen in einer Hochschulzeitschrift einen Bericht über Vorschläge, wie Studienplätze in stark nachgefragten Fächern vergeben werden könnten.",
+  "instructions": "Lesen Sie den Text. Zu welchem Ansatz (a, b oder c) passen die Aussagen 21 bis 27?",
+  "groups": [
+    {
+      "layout": "article",
+      "none": false,
+      "texts": [
+        {
+          "id": "bericht",
+          "title": "Drei Modelle der Hochschulzulassung",
+          "byline": "Von Folkert Rohwedder",
+          "paragraphs": [
+            "In begehrten Fächern wie Medizin, Psychologie oder Tiermedizin kommen auf einen Studienplatz oft fünf, zehn oder noch mehr Bewerbungen. Seit Jahrzehnten entscheidet darüber vor allem die Durchschnittsnote des Abiturs – ein Verfahren, das als einfach und transparent gilt, aber zunehmend in die Kritik gerät, weil Noten verschiedener Schulen kaum vergleichbar seien. Auf einer hochschulpolitischen Tagung wurden kürzlich drei Alternativen vorgestellt.",
+            "Die Bildungssoziologin Linnea Kuhlenkamp schlägt vor, Studienplätze künftig zu verlosen. Teilnehmen soll jeder, der einen festgelegten Abiturschnitt erreicht, welcher deutlich unter den derzeitigen Spitzenwerten liegt. Ob jemand diese Schwelle knapp überschreitet oder ein glänzendes Zeugnis vorlegt, spielt im Lostopf keine Rolle mehr. Kuhlenkamp verweist auf Untersuchungen, nach denen sich Bewerber mit sehr guten und mit guten Noten im Studienverlauf weit weniger unterscheiden, als die heutige Praxis unterstellt. Zudem erhofft sie sich ein Ende des Wettlaufs, bei dem Schulen ihre Noten immer großzügiger vergeben, um den eigenen Absolventinnen und Absolventen Vorteile zu verschaffen. Gegner halten dem entgegen, ein Losentscheid werde von Abgewiesenen als willkürlich empfunden.",
+            "Der Psychologe Corvin Schwanbeck, der seit Jahren Eignungstests entwickelt, hält dagegen am Leistungsprinzip fest, allerdings mit anderen Maßstäben. In seinem Modell absolvieren alle Bewerberinnen und Bewerber einen mehrstündigen, fachspezifischen Test, der etwa das Verständnis naturwissenschaftlicher Texte, räumliches Vorstellungsvermögen und den Umgang mit Diagrammen prüft. Das Ergebnis fließt zur Hälfte in die Auswahl ein, die andere Hälfte macht weiterhin die Abiturnote aus. Eine Begleitstudie an mehreren Fakultäten habe gezeigt, dass sich mit dieser Kombination deutlich zuverlässiger vorhersagen lasse, wer im ersten Studienjahr aufgebe, als mit Schulnoten allein. Bemängelt wird vielerorts, dass kommerzielle Vorbereitungskurse, die mehrere hundert Euro kosten, Kindern aus wohlhabenden Familien einen Vorsprung verschaffen könnten. Schwanbeck will deshalb umfangreiches Übungsmaterial samt Probetests frei im Netz zur Verfügung stellen.",
+            "Am weitesten entfernt sich ein Modell von der bisherigen Praxis, das die Universität Klarwasser seit drei Jahren im Fach Biologie erprobt. Dort nimmt jeder, der sich bewirbt, ganz gleich mit welcher Note, an einem zweisemestrigen Orientierungsstudium teil. Erst die Prüfungsergebnisse dieses ersten Jahres entscheiden, wer einen der regulären Plätze erhält. Wer nicht zum Zug kommt, kann sich die erworbenen Leistungspunkte in verwandten Studiengängen wie Agrarwissenschaften oder Chemie anrechnen lassen. Prorektorin Elodie Haberkorn spricht von einer Auswahl „nach dem, was jemand an der Hochschule tatsächlich zeigt“. Der Preis ist hoch: Im Orientierungsjahr sitzen dreimal so viele Studierende in den Lehrveranstaltungen wie früher, die Zahl der zu korrigierenden Klausuren hat sich vervielfacht, und die Lehrenden klagen über eine kaum noch zu bewältigende Arbeitslast.",
+            "Welches Modell sich durchsetzen wird, ist offen. Mehrere Teilnehmende regten an, Elemente zu kombinieren. Einig war man sich lediglich darin, dass die Abiturnote ihre Alleinherrschaft verlieren sollte."
+          ]
+        },
+        {
+          "id": "modell-a",
+          "label": "a",
+          "title": "Modell von Linnea Kuhlenkamp",
+          "paragraphs": ["Über die Vergabe der Plätze entscheidet das Los."]
+        },
+        {
+          "id": "modell-b",
+          "label": "b",
+          "title": "Modell von Corvin Schwanbeck",
+          "paragraphs": ["Bewerber legen einen fachbezogenen Test ab."]
+        },
+        {
+          "id": "modell-c",
+          "label": "c",
+          "title": "Modell der Universität Klarwasser",
+          "paragraphs": ["Bewerber absolvieren zunächst ein Orientierungsstudium."]
+        }
+      ],
+      "questions": [
+        {
+          "number": 21,
+          "type": "zuordnung",
+          "prompt": "Für den Zugang zur ersten Phase sind die Schulleistungen ohne Belang.",
+          "answer": "c",
+          "evidence": [{ "text": "bericht", "quote": "Dort nimmt jeder, der sich bewirbt, ganz gleich mit welcher Note, an einem zweisemestrigen Orientierungsstudium teil" }],
+          "explanation": "Klarwasser Üniversitesi'nde „Dort nimmt jeder, der sich bewirbt, ganz gleich mit welcher Note, an einem zweisemestrigen Orientierungsstudium teil“ (başvuran herkes, notu ne olursa olsun, iki dönemlik bir oryantasyon öğrenimine katılır). Kuhlenkamp'ın kurasına ise yalnızca belirli bir lise ortalamasına ulaşanlar katılabilir („einen festgelegten Abiturschnitt erreicht“). Schwanbeck'te lise notu seçimin yarısını oluşturur."
+        },
+        {
+          "number": 22,
+          "type": "zuordnung",
+          "prompt": "Wer beim Schulabschluss ein Mindestniveau erreicht hat, kann seine Aussichten durch noch bessere Leistungen nicht weiter erhöhen.",
+          "answer": "a",
+          "evidence": [{ "text": "bericht", "quote": "Ob jemand diese Schwelle knapp überschreitet oder ein glänzendes Zeugnis vorlegt, spielt im Lostopf keine Rolle mehr" }],
+          "explanation": "Kuhlenkamp'ın modelinde belirli bir ortalamaya ulaşan herkes kuraya katılır: „Ob jemand diese Schwelle knapp überschreitet oder ein glänzendes Zeugnis vorlegt, spielt im Lostopf keine Rolle mehr“ (birinin eşiği az farkla aşması ya da parlak bir karne sunması kurada artık önemli değil). Schwanbeck'te ise lise notu seçimin yarısıdır, yani daha iyi not şansı artırır. Klarwasser'de lise notu için bir alt sınır yoktur; orada belirleyici olan ilk yılın sınav sonuçlarıdır."
+        },
+        {
+          "number": 23,
+          "type": "zuordnung",
+          "prompt": "Man erhofft sich davon, dass Schulen nicht länger dazu neigen, ihre Bewertungen immer milder ausfallen zu lassen.",
+          "answer": "a",
+          "evidence": [{ "text": "bericht", "quote": "ein Ende des Wettlaufs, bei dem Schulen ihre Noten immer großzügiger vergeben" }],
+          "explanation": "Kuhlenkamp kura sisteminden „ein Ende des Wettlaufs, bei dem Schulen ihre Noten immer großzügiger vergeben“ (okulların notları giderek daha cömert verdiği yarışın sona ermesini) umuyor. „milder“ (daha yumuşak) burada „großzügiger“ın karşılığıdır. Schwanbeck'in modeli lise notlarının farklı okullardaki değerine değil, ilk yılda bırakmayı öngörmeye dayanır. Klarwasser'de beklenen yarar, üniversitede gösterilen başarıya göre seçmektir."
+        },
+        {
+          "number": 24,
+          "type": "zuordnung",
+          "prompt": "Untersuchungen zufolge lässt sich damit besser abschätzen, wer das Studium früh abbricht.",
+          "answer": "b",
+          "evidence": [{ "text": "bericht", "quote": "wer im ersten Studienjahr aufgebe, als mit Schulnoten allein" }],
+          "explanation": "Schwanbeck'e göre bir eşlik çalışması, test ile lise notunun birleşimiyle kimin „im ersten Studienjahr aufgebe“ (ilk yılda bırakacağının) yalnızca okul notlarına göre çok daha güvenilir şekilde tahmin edilebildiğini göstermiş. Kuhlenkamp'ın dayandığı araştırmalar ise çok iyi ve iyi notlu öğrencilerin öğrenimde pek farklılaşmadığını söyler; bırakma tahmini değil. Klarwasser'de bir araştırmadan söz edilmez."
+        },
+        {
+          "number": 25,
+          "type": "zuordnung",
+          "prompt": "Für die Dozierenden ist das Modell mit deutlich höherem Aufwand verbunden.",
+          "answer": "c",
+          "evidence": [{ "text": "bericht", "quote": "die Lehrenden klagen über eine kaum noch zu bewältigende Arbeitslast" }],
+          "explanation": "Klarwasser modelinde oryantasyon yılında derslerde eskisinin üç katı öğrenci var, okunacak sınav kâğıdı sayısı katlanmış ve „die Lehrenden klagen über eine kaum noch zu bewältigende Arbeitslast“ (öğretim elemanları neredeyse altından kalkılamayan bir iş yükünden yakınıyor). Kuhlenkamp'ın modeline yöneltilen eleştiri, kuranın keyfi bulunmasıdır. Schwanbeck'te eleştiri, pahalı hazırlık kurslarının varlıklı ailelere avantaj sağlamasıdır; öğretim elemanlarının yükü geçmez."
+        },
+        {
+          "number": 26,
+          "type": "zuordnung",
+          "prompt": "Damit die finanzielle Lage der Familie keinen Ausschlag gibt, soll sich jeder kostenlos auf das Verfahren einstellen können.",
+          "answer": "b",
+          "evidence": [{ "text": "bericht", "quote": "Schwanbeck will deshalb umfangreiches Übungsmaterial samt Probetests frei im Netz zur Verfügung stellen" }],
+          "explanation": "Yüzlerce euroluk ticari hazırlık kurslarının varlıklı ailelerin çocuklarına avantaj sağlayabileceği eleştirisine karşı „Schwanbeck will deshalb umfangreiches Übungsmaterial samt Probetests frei im Netz zur Verfügung stellen“ (Schwanbeck bu yüzden kapsamlı alıştırma malzemesini deneme testleriyle birlikte internette ücretsiz sunmak istiyor). Kuhlenkamp'ta ve Klarwasser'de hazırlanma ya da ailenin parası konu edilmez."
+        },
+        {
+          "number": 27,
+          "type": "zuordnung",
+          "prompt": "Wer letztlich abgewiesen wird, kann bereits Erreichtes für ein anderes Fach nutzen.",
+          "answer": "c",
+          "evidence": [{ "text": "bericht", "quote": "kann sich die erworbenen Leistungspunkte in verwandten Studiengängen wie Agrarwissenschaften oder Chemie anrechnen lassen" }],
+          "explanation": "Klarwasser'de düzenli bir yer alamayan kişi „kann sich die erworbenen Leistungspunkte in verwandten Studiengängen wie Agrarwissenschaften oder Chemie anrechnen lassen“ (kazandığı kredileri tarım bilimleri veya kimya gibi yakın bölümlerde saydırabilir). Kuhlenkamp'ın kurasında reddedilenler için yalnızca bunu keyfi bulacakları söylenir. Schwanbeck'te reddedilenlere ne olacağı anlatılmaz."
+        }
+      ]
+    }
+  ]
+}

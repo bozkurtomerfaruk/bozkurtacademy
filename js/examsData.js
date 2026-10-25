@@ -546,6 +546,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Kurznachrichten aus der Region' },
                   { set: 'set-2', title: 'Meldungen aus Alltag und Freizeit' },
+                  { set: 'set-3', title: 'Neues aus der Stadt' },
+                  { set: 'set-4', title: 'Kurz gemeldet' },
+                  { set: 'set-5', title: 'Aus Verein und Nachbarschaft' },
                 ]
               }, // Teil 1
               {
@@ -553,6 +556,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Ein Dorf rettet seinen Laden' },
                   { set: 'set-2', title: 'Großeltern im Internet' },
+                  { set: 'set-3', title: 'Ein Jahr ohne Auto' },
+                  { set: 'set-4', title: 'Ausbildung mit 40' },
+                  { set: 'set-5', title: 'Ein Hobby wird zum Beruf' },
                 ]
               }, // Teil 2
               {
@@ -560,6 +566,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Kurse und Freizeit' },
                   { set: 'set-2', title: 'Wohnen und Dienstleistungen' },
+                  { set: 'set-3', title: 'Reisen und Ausflüge' },
+                  { set: 'set-4', title: 'Gesundheit und Sport' },
+                  { set: 'set-5', title: 'Arbeit und Weiterbildung' },
                 ]
               }, // Teil 3
             ] },
@@ -569,6 +578,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Eine Bewerbung' },
                   { set: 'set-2', title: 'Ein Brief an die Gastfamilie' },
+                  { set: 'set-3', title: 'Eine Beschwerde an den Reiseveranstalter' },
+                  { set: 'set-4', title: 'Kündigung im Fitnessstudio' },
+                  { set: 'set-5', title: 'Eine Anfrage an die Stadtbibliothek' },
                 ]
               }, // Teil 1
               {
@@ -576,6 +588,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Bericht über ein Firmenfest' },
                   { set: 'set-2', title: 'Nachricht an die Vermieterin' },
+                  { set: 'set-3', title: 'Aushang im Treppenhaus' },
+                  { set: 'set-4', title: 'E-Mail an eine Kollegin' },
+                  { set: 'set-5', title: 'Bericht über einen Ausflug' },
                 ]
               }, // Teil 2
             ] },

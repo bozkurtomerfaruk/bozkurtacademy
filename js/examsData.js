@@ -728,13 +728,43 @@ window.BA_EXAMS = {
           },
           sections: [
             { id: 'lesen', teile: [
-              { title: null, exercises: [] }, // Aufgabe 1
-              { title: null, exercises: [] }, // Aufgabe 2
-              { title: null, exercises: [] }, // Aufgabe 3
-              { title: null, exercises: [] }, // Aufgabe 4
-              { title: null, exercises: [] }, // Aufgabe 5
-              { title: null, exercises: [] }, // Aufgabe 6
-              { title: null, exercises: [] }, // Aufgabe 7
+              {
+                title: { tr: 'Boşluklu metin · a/b/c/d', de: 'Lückentext · a/b/c/d', en: 'Gapped text · a/b/c/d' },
+                exercises: [
+                  { set: 'set-1', title: 'Ein Preis für junge Forschende' },
+                  { set: 'set-2', title: 'Studieren mit Kind' },
+                ]
+              }, // Aufgabe 1
+              { title: null, exercises: [] }, // Aufgabe 2 (Textabschnitte ordnen: sürükle-bırak, şimdilik yok)
+              {
+                title: { tr: 'Makale · a/b/c', de: 'Artikel · a/b/c', en: 'Article · a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Die Ökonomie des Teilens' },
+                  { set: 'set-2', title: 'Wie Ameisen Wege planen' },
+                ]
+              }, // Aufgabe 3
+              {
+                title: { tr: 'Dil eylemleri · eşleştirme', de: 'Sprachhandlungen · Zuordnung', en: 'Speech acts · matching' },
+                exercises: [
+                  { set: 'set-1', title: 'Brauchen wir mehr Präsenzlehre?' },
+                  { set: 'set-2', title: 'Offene Daten in der Forschung' },
+                ]
+              }, // Aufgabe 4
+              {
+                title: { tr: 'Kategoriler · eşleştirme', de: 'Kategorien · Zuordnung', en: 'Categories · matching' },
+                exercises: [
+                  { set: 'set-1', title: 'Drei Wege, Wasserstoff zu speichern' },
+                  { set: 'set-2', title: 'Modelle der Studienfinanzierung' },
+                ]
+              }, // Aufgabe 5
+              {
+                title: { tr: 'Kavram çifti · a/b', de: 'Begriffspaar · a/b', en: 'Pair of terms · a/b' },
+                exercises: [
+                  { set: 'set-1', title: 'Gelenke aus dem Drucker' },
+                  { set: 'set-2', title: 'Mikroalgen als Nahrungsquelle' },
+                ]
+              }, // Aufgabe 6
+              { title: null, exercises: [] }, // Aufgabe 7 (Fehler in der Zusammenfassung: tıklama, şimdilik yok)
             ] },
             { id: 'hoeren', teile: [
               { title: null, exercises: [] }, // Aufgabe 1

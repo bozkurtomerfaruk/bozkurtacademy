@@ -14,8 +14,8 @@ export const B = process.env.BASE || 'http://localhost:8765/index.html';
 export const shotDir = process.env.S || fs.mkdtempSync(path.join(os.tmpdir(), 'exam-shots-'));
 export const shot = name => path.join(shotDir, name);
 
-export const FOLDER = { a1: 'goethe/a1', b1: 'goethe/b1', a2: 'goethe/a2', b2: 'goethe/b2', c1: 'goethe/c1', dtz: 'dtz/a2-b1', tdp: 'testdaf/papier' };
-export const ROUTE = { a1: 'goethe/a1', b1: 'goethe/b1', a2: 'goethe/a2', b2: 'goethe/b2', c1: 'goethe/c1', dtz: 'dtz', tdp: 'testdaf/papier' };
+export const FOLDER = { a1: 'goethe/a1', b1: 'goethe/b1', a2: 'goethe/a2', b2: 'goethe/b2', c1: 'goethe/c1', dtz: 'dtz/a2-b1', tdp: 'testdaf/papier', tdd: 'testdaf/digital' };
+export const ROUTE = { a1: 'goethe/a1', b1: 'goethe/b1', a2: 'goethe/a2', b2: 'goethe/b2', c1: 'goethe/c1', dtz: 'dtz', tdp: 'testdaf/papier', tdd: 'testdaf/digital' };
 const dir = (level, t) => `data/exams/${FOLDER[level]}/lesen/teil-${t}`;
 export const teileOf = level => fs.readdirSync(`data/exams/${FOLDER[level]}/lesen`).filter(n => /^teil-\d+$/.test(n)).length;
 export const setsOf = (level, t) => fs.readdirSync(dir(level, t)).filter(n => /^set-\d+\.json$/.test(n)).length;

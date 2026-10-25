@@ -1,0 +1,124 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-3",
+  "title": "Der Sprachkurs",
+  "minutes": 8,
+  "instructions": "Lesen Sie die zwei Texte und die Aufgaben 1 bis 5. Sind die Aussagen richtig oder falsch? Kreuzen Sie an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "email",
+          "title": "E-Mail",
+          "paragraphs": [
+            "Lieber Fenno,",
+            "ich lerne jetzt Italienisch! Mein Kurs ist am Dienstag und am Donnerstag von 18 bis 19:30 Uhr. Wir sind zwölf Leute. Unsere Lehrerin heißt Chiara Bellandi. Chiara spricht im Kurs nur Italienisch, aber sehr langsam. Der Kurs kostet 120 Euro, und das Buch kostet 19 Euro. Im August möchte ich mit meiner Schwester nach Italien fahren.",
+            "Viele Grüße, Liesel"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Liesel lernt an drei Tagen in der Woche Italienisch.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "email",
+              "quote": "Mein Kurs ist am Dienstag und am Donnerstag"
+            }
+          ],
+          "explanation": "Metinde: „Mein Kurs ist am Dienstag und am Donnerstag“ (Kursum salı ve perşembe günü). Bu iki gün eder, üç gün (drei Tage) değil. İfade yanlış."
+        },
+        {
+          "number": 1,
+          "type": "richtig-falsch",
+          "prompt": "Die Lehrerin spricht im Kurs kein Deutsch.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "email",
+              "quote": "Chiara spricht im Kurs nur Italienisch"
+            }
+          ],
+          "explanation": "Lehrerin (öğretmen) Chiara Bellandi. Metinde: „Chiara spricht im Kurs nur Italienisch“ (Chiara kursta sadece İtalyanca konuşuyor). Yani kursta Almanca konuşmuyor (kein Deutsch). İfade doğru."
+        },
+        {
+          "number": 2,
+          "type": "richtig-falsch",
+          "prompt": "Das Buch für den Kurs kostet 120 Euro.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "email",
+              "quote": "das Buch kostet 19 Euro"
+            }
+          ],
+          "explanation": "120 Euro kursun fiyatı: „Der Kurs kostet 120 Euro“. Kitap için metinde: „das Buch kostet 19 Euro“ (kitap 19 avro). Fiyat yanlış, ifade yanlış."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "sms",
+          "title": "SMS",
+          "paragraphs": [
+            "Hallo Liesel,",
+            "hier ist Ravi aus dem Italienischkurs. Am Donnerstag fahre ich mit dem Auto zum Kurs. Ich nehme dich gern mit! Ich bin um 17:30 Uhr vor deinem Haus. Nach dem Kurs essen wir mit Chiara und der Gruppe Pizza, im Restaurant „Lampione“ am Marktplatz. Mein Wörterbuch ist leider kaputt. Bringst du bitte dein Wörterbuch mit?",
+            "Bis Donnerstag! Ravi"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 3,
+          "type": "richtig-falsch",
+          "prompt": "Ravi holt Liesel am Donnerstag zu Hause ab.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "sms",
+              "quote": "Ich nehme dich gern mit! Ich bin um 17:30 Uhr vor deinem Haus."
+            }
+          ],
+          "explanation": "Ravi yazıyor: „Ich nehme dich gern mit! Ich bin um 17:30 Uhr vor deinem Haus“ (Seni seve seve arabayla götürürüm! Saat 17:30'da evinin önündeyim). Yani Ravi perşembe günü Liesel'i evinden alıyor (abholen). İfade doğru."
+        },
+        {
+          "number": 4,
+          "type": "richtig-falsch",
+          "prompt": "Die Leute aus dem Kurs essen nach dem Kurs in einem Restaurant am Bahnhof.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "sms",
+              "quote": "im Restaurant „Lampione“ am Marktplatz"
+            }
+          ],
+          "explanation": "Kurstan sonra grup pizza yiyor, ama: „im Restaurant „Lampione“ am Marktplatz“ (Marktplatz'taki, yani pazar meydanındaki „Lampione“ restoranında). Restoran garın (Bahnhof) yanında değil. Yer yanlış, ifade yanlış."
+        },
+        {
+          "number": 5,
+          "type": "richtig-falsch",
+          "prompt": "Die Lehrerin geht nach dem Kurs mit ins Restaurant.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "sms",
+              "quote": "Nach dem Kurs essen wir mit Chiara und der Gruppe Pizza"
+            }
+          ],
+          "explanation": "Metinde: „Nach dem Kurs essen wir mit Chiara und der Gruppe Pizza“ (Kurstan sonra Chiara ve grupla pizza yiyoruz). Birinci metne göre Chiara kursun öğretmeni (Lehrerin). Yani öğretmen de restorana geliyor. İfade doğru."
+        }
+      ]
+    }
+  ]
+}

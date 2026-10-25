@@ -1,0 +1,146 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-5",
+  "title": "Im Büro",
+  "minutes": 9,
+  "instructions": "Lesen Sie die Texte und die Aufgaben 11 bis 15. Sind die Aussagen richtig oder falsch? Kreuzen Sie an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "tuer",
+          "title": "Zimmer 14 – Hanne Brockdorff",
+          "paragraphs": [
+            "Ich bin heute bis 11 Uhr bei einem Kunden. Ab 11:30 Uhr bin ich wieder hier. Bitte legen Sie Briefe auf meinen Tisch."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Frau Brockdorff ist heute um 10 Uhr in ihrem Büro.",
+          "answer": "falsch",
+          "evidence": [{ "text": "tuer", "quote": "Ich bin heute bis 11 Uhr bei einem Kunden." }],
+          "explanation": "Metin: „Ich bin heute bis 11 Uhr bei einem Kunden.“ (Bugün saat 11'e kadar bir müşterinin yanındayım). Ofise ancak „ab 11:30 Uhr“ (saat 11.30'dan itibaren) geliyor. Yani saat 10'da ofisinde (in ihrem Büro) değil."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "telefon",
+          "title": "Kurbelstein GmbH – Neue Telefonnummern",
+          "paragraphs": [
+            "Liebe Kunden, ab 1. April haben wir neue Telefonnummern. Die alten Nummern gehen noch bis 31. Mai."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 11,
+          "type": "richtig-falsch",
+          "prompt": "Am 15. April kann man noch mit der Nummer von früher anrufen.",
+          "answer": "richtig",
+          "evidence": [{ "text": "telefon", "quote": "Die alten Nummern gehen noch bis 31. Mai." }],
+          "explanation": "Metin: „Die alten Nummern gehen noch bis 31. Mai.“ (Eski numaralar 31 mayısa kadar hâlâ çalışıyor). 15 nisan, 31 mayıstan önce. Yani 15 nisanda eski numarayla (Nummer von früher) da aranabilir. İfade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "neu",
+          "title": "Willkommen!",
+          "paragraphs": [
+            "Ab Montag haben wir eine neue Kollegin: Frau Derya Bilgin. Frau Bilgin sitzt mit Herrn Toivonen in Zimmer 4. Die Telefonnummer von Frau Bilgin ist 218."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 12,
+          "type": "richtig-falsch",
+          "prompt": "Frau Bilgin und Herr Toivonen arbeiten im gleichen Büro.",
+          "answer": "richtig",
+          "evidence": [{ "text": "neu", "quote": "Frau Bilgin sitzt mit Herrn Toivonen in Zimmer 4." }],
+          "explanation": "Metin: „Frau Bilgin sitzt mit Herrn Toivonen in Zimmer 4.“ (Frau Bilgin, Herr Toivonen ile birlikte 4 numaralı odada oturuyor). Yani ikisi aynı odada (im gleichen Büro) çalışıyor. İfade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "pizza",
+          "title": "Pizza für alle!",
+          "paragraphs": [
+            "Am Freitag um 12 Uhr essen wir zusammen Pizza im großen Raum. Bitte schreiben Sie bis Mittwoch Ihren Namen auf die Liste an der Küchentür."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 13,
+          "type": "richtig-falsch",
+          "prompt": "Die Kollegen essen am Mittwoch zusammen Pizza.",
+          "answer": "falsch",
+          "evidence": [{ "text": "pizza", "quote": "Am Freitag um 12 Uhr essen wir zusammen Pizza im großen Raum." }],
+          "explanation": "Metin: „Am Freitag um 12 Uhr essen wir zusammen Pizza“ (cuma günü saat 12'de birlikte pizza yiyoruz). Çarşamba (Mittwoch) sadece listeye isim yazmak için son gün: „bis Mittwoch Ihren Namen auf die Liste“ (çarşambaya kadar isminizi listeye). Yani pizza çarşamba değil, cuma günü yeniyor."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "post",
+          "title": "Post für die Firma",
+          "paragraphs": [
+            "Ein Paket für die Firma? Bitte bringen Sie es zu Herrn Aaltonen in Zimmer 3. Briefe bekommt Frau Haugland in Zimmer 5."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 14,
+          "type": "richtig-falsch",
+          "prompt": "Pakete für die Firma soll man in Zimmer 5 bringen.",
+          "answer": "falsch",
+          "evidence": [{ "text": "post", "quote": "Bitte bringen Sie es zu Herrn Aaltonen in Zimmer 3." }],
+          "explanation": "Metin: „Ein Paket für die Firma? Bitte bringen Sie es zu Herrn Aaltonen in Zimmer 3.“ (Firma için bir paket mi? Lütfen onu 3 numaralı odaya, Herr Aaltonen'e getirin). 5 numaralı odaya sadece mektuplar (Briefe) gidiyor. Yani paketler 5 numaralı odaya değil, 3 numaralı odaya götürülür."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "computer",
+          "title": "Für Herrn Marković",
+          "paragraphs": [
+            "Lieber Herr Marković, Ihr neuer Computer ist da. Bitte kommen Sie morgen um 8 Uhr in Zimmer 9. Dann zeigt Ihnen Frau Oyelaran alles."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 15,
+          "type": "richtig-falsch",
+          "prompt": "Morgen früh erklärt Frau Oyelaran Herrn Marković den Computer.",
+          "answer": "richtig",
+          "evidence": [{ "text": "computer", "quote": "Dann zeigt Ihnen Frau Oyelaran alles." }],
+          "explanation": "Metin: „Ihr neuer Computer ist da“ (yeni bilgisayarınız geldi), „Bitte kommen Sie morgen um 8 Uhr“ (lütfen yarın saat 8'de gelin) ve „Dann zeigt Ihnen Frau Oyelaran alles.“ (Sonra Frau Oyelaran size her şeyi gösteriyor). Saat 8 sabah erken (früh). Yani yarın sabah Frau Oyelaran bilgisayarı anlatıyor (erklärt). İfade doğru."
+        }
+      ]
+    }
+  ]
+}

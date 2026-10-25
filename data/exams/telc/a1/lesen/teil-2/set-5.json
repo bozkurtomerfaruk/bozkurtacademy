@@ -1,0 +1,260 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-5",
+  "title": "Bus und Bahn",
+  "minutes": 8,
+  "instructions": "Lesen Sie die Texte und die Aufgaben 6 bis 10. Wo finden Sie Informationen? Kreuzen Sie an: a oder b.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q0a",
+          "label": "a",
+          "title": "Stadtbus Linie 2",
+          "paragraphs": [
+            "Unser Bus fährt jeden Tag von 5 bis 24 Uhr alle 20 Minuten vom Rathaus zum Bahnhof. Eine Fahrkarte kostet 2,40 Euro."
+          ]
+        },
+        {
+          "id": "q0b",
+          "label": "b",
+          "title": "Stadtbus Linie 9",
+          "paragraphs": [
+            "Von Montag bis Freitag fährt der Bus von 5 bis 23 Uhr alle 15 Minuten zum Bahnhof. Am Samstag und Sonntag fährt er erst ab 8 Uhr."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Am Sonntag fährt Ihr Zug um 6:45 Uhr. Sie möchten um 6 Uhr morgens mit dem Bus zum Bahnhof fahren.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q0a",
+              "quote": "Unser Bus fährt jeden Tag von 5 bis 24 Uhr"
+            },
+            {
+              "text": "q0b",
+              "quote": "Am Samstag und Sonntag fährt er erst ab 8 Uhr."
+            }
+          ],
+          "explanation": "Pazar günü saat 6’da otobüsle gara (Bahnhof) gitmek istiyorsunuz. a ilanında „jeden Tag von 5 bis 24 Uhr“ yazıyor: Otobüs her gün, saat 5 ile 24 arası gidiyor. Pazar sabahı 6 da buna uyuyor. b ilanında „Am Samstag und Sonntag fährt er erst ab 8 Uhr“ yazıyor: Cumartesi ve pazar otobüs ancak saat 8’den itibaren gidiyor. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q6a",
+          "label": "a",
+          "title": "Tageskarte Stadt",
+          "paragraphs": [
+            "Mit dieser Karte fahren Sie einen Tag mit allen Bussen und Straßenbahnen in der Stadt. Preis: 5,40 Euro. Sie bekommen die Karte im Bus."
+          ]
+        },
+        {
+          "id": "q6b",
+          "label": "b",
+          "title": "Tageskarte Stadt und Land",
+          "paragraphs": [
+            "Einen Tag mit Bus und Bahn fahren, in der Stadt und in allen Dörfern. Die Karte kostet 9,80 Euro. Sie bekommen sie am Automaten."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "zuordnung",
+          "prompt": "Sie möchten heute oft mit dem Bus in der Stadt fahren. Für eine Karte für den ganzen Tag möchten Sie nicht mehr als 6 Euro bezahlen.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q6a",
+              "quote": "Preis: 5,40 Euro."
+            },
+            {
+              "text": "q6b",
+              "quote": "Die Karte kostet 9,80 Euro."
+            }
+          ],
+          "explanation": "Bütün gün için bir kart istiyorsunuz ve 6 eurodan fazla ödemek istemiyorsunuz („nicht mehr als 6 Euro“). a ilanında „Preis: 5,40 Euro“ yazıyor: Fiyatı 5,40 euro. Bu, 6 eurodan az. b ilanında „Die Karte kostet 9,80 Euro“ yazıyor: Kart 9,80 euro. Bu çok pahalı. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q7a",
+          "label": "a",
+          "title": "Wanderbus Linie 12",
+          "paragraphs": [
+            "Am Samstag und Sonntag fährt der Bus um 9 Uhr vom Marktplatz in den Wald. Hunde dürfen leider nicht mitfahren."
+          ]
+        },
+        {
+          "id": "q7b",
+          "label": "b",
+          "title": "Wanderbus Linie 15",
+          "paragraphs": [
+            "Jeden Sonntag um 10 Uhr fährt unser Bus vom Bahnhof zum Wald. Ihr Hund kann gern mitfahren, er kostet 2 Euro."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 7,
+          "type": "zuordnung",
+          "prompt": "Sie möchten am Sonntag mit Ihrem Hund mit dem Bus in den Wald fahren und dort wandern.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q7b",
+              "quote": "Ihr Hund kann gern mitfahren, er kostet 2 Euro."
+            },
+            {
+              "text": "q7a",
+              "quote": "Hunde dürfen leider nicht mitfahren."
+            }
+          ],
+          "explanation": "Pazar günü köpeğinizle (Hund) ormana gitmek istiyorsunuz. İki otobüs de pazar günü gidiyor. b ilanında „Ihr Hund kann gern mitfahren“ yazıyor: Köpeğiniz de gelebilir, 2 euro ödüyor. a ilanında „Hunde dürfen leider nicht mitfahren“ yazıyor: Köpekler maalesef otobüse binemez. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q8a",
+          "label": "a",
+          "title": "Nachtbus N3",
+          "paragraphs": [
+            "Am Freitag und am Samstag fährt der N3 in der Nacht von 0:30 bis 4 Uhr jede Stunde vom Marktplatz nach Lavendelkamp. Nach Zinnienfeld fährt er nicht."
+          ]
+        },
+        {
+          "id": "q8b",
+          "label": "b",
+          "title": "Nachtbus N6",
+          "paragraphs": [
+            "In der Nacht von Samstag auf Sonntag fährt der N6 jede Stunde vom Marktplatz nach Zinnienfeld. Der erste Bus fährt um 0:45 Uhr, der letzte um 3:45 Uhr."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 8,
+          "type": "zuordnung",
+          "prompt": "Sie wohnen in Zinnienfeld. Am Samstag sind Sie bis 1 Uhr nachts bei Freunden am Marktplatz. Dann möchten Sie mit dem Bus nach Hause fahren.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q8b",
+              "quote": "fährt der N6 jede Stunde vom Marktplatz nach Zinnienfeld"
+            },
+            {
+              "text": "q8a",
+              "quote": "Nach Zinnienfeld fährt er nicht."
+            }
+          ],
+          "explanation": "Zinnienfeld’de oturuyorsunuz ve gece eve gitmek istiyorsunuz. İki ilanda da Zinnienfeld yazıyor, dikkatli okuyun. b ilanında „vom Marktplatz nach Zinnienfeld“ yazıyor: N6 otobüsü Marktplatz’dan Zinnienfeld’e gidiyor. a ilanında N3 Lavendelkamp’a gidiyor ve „Nach Zinnienfeld fährt er nicht“ yazıyor: Zinnienfeld’e gitmiyor. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q9a",
+          "label": "a",
+          "title": "Bahn Nord – Fahrrad im Zug",
+          "paragraphs": [
+            "In unseren Zügen können Sie Ihr Fahrrad jeden Tag von 5 bis 24 Uhr mitnehmen. Eine Karte für das Fahrrad kostet 3 Euro."
+          ]
+        },
+        {
+          "id": "q9b",
+          "label": "b",
+          "title": "Bahn Süd – Fahrrad im Zug",
+          "paragraphs": [
+            "Von Montag bis Freitag können Sie Ihr Fahrrad erst ab 9 Uhr mitnehmen. Am Wochenende geht das den ganzen Tag. Die Karte für das Fahrrad kostet nichts."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 9,
+          "type": "zuordnung",
+          "prompt": "Sie möchten am Dienstag um 7:30 Uhr mit Ihrem Fahrrad im Zug zur Arbeit fahren.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q9a",
+              "quote": "jeden Tag von 5 bis 24 Uhr mitnehmen"
+            },
+            {
+              "text": "q9b",
+              "quote": "Von Montag bis Freitag können Sie Ihr Fahrrad erst ab 9 Uhr mitnehmen."
+            }
+          ],
+          "explanation": "Salı günü saat 7.30’da bisikletinizle (Fahrrad) trene binmek istiyorsunuz. a ilanında „jeden Tag von 5 bis 24 Uhr“ yazıyor: Bisikleti her gün saat 5 ile 24 arası götürebilirsiniz. 7.30 buna uyuyor. b ilanında „Von Montag bis Freitag … erst ab 9 Uhr“ yazıyor: Pazartesiden cumaya ancak saat 9’dan itibaren. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q10a",
+          "label": "a",
+          "title": "Linie 34",
+          "paragraphs": [
+            "Von Montag bis Samstag fährt der Bus jede Stunde vom Bahnhof nach Kürbiswinkel. Am Sonntag fährt kein Bus."
+          ]
+        },
+        {
+          "id": "q10b",
+          "label": "b",
+          "title": "Linie 35",
+          "paragraphs": [
+            "Der Bus fährt am Samstag und am Sonntag um 9, 12, 15 und 18 Uhr vom Marktplatz nach Kürbiswinkel. Die Fahrt dauert 25 Minuten."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 10,
+          "type": "zuordnung",
+          "prompt": "Ihre Oma wohnt in Kürbiswinkel. Sie möchten Ihre Oma am Sonntag mit dem Bus besuchen.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q10b",
+              "quote": "am Samstag und am Sonntag um 9, 12, 15 und 18 Uhr"
+            },
+            {
+              "text": "q10a",
+              "quote": "Am Sonntag fährt kein Bus."
+            }
+          ],
+          "explanation": "Pazar günü (Sonntag) otobüsle Kürbiswinkel’e gitmek istiyorsunuz. İki otobüs de Kürbiswinkel’e gidiyor. b ilanında „am Samstag und am Sonntag um 9, 12, 15 und 18 Uhr“ yazıyor: Otobüs cumartesi ve pazar günleri 9, 12, 15 ve 18’de gidiyor. a ilanında „Am Sonntag fährt kein Bus“ yazıyor: Pazar günü otobüs yok. Cevap b."
+        }
+      ]
+    }
+  ]
+}

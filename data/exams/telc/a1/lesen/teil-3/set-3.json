@@ -1,0 +1,146 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-3",
+  "title": "Im Hotel",
+  "minutes": 9,
+  "instructions": "Lesen Sie die Texte und die Aufgaben 11 bis 15. Sind die Aussagen richtig oder falsch? Kreuzen Sie an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "schluessel",
+          "title": "Hotel Pappelglanz – Ihr letzter Tag",
+          "paragraphs": [
+            "Liebe Gäste, bitte bringen Sie am letzten Tag bis 11 Uhr Ihren Schlüssel an die Rezeption. Ihre Koffer können Sie gern bis 16 Uhr bei uns lassen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Den Schlüssel soll man am letzten Tag bis 16 Uhr zurückgeben.",
+          "answer": "falsch",
+          "evidence": [{ "text": "schluessel", "quote": "bis 11 Uhr Ihren Schlüssel an die Rezeption" }],
+          "explanation": "Metin: „bis 11 Uhr Ihren Schlüssel an die Rezeption“ (anahtarınızı saat 11'e kadar resepsiyona). Saat 16 sadece valizler (Koffer) için: „Ihre Koffer können Sie gern bis 16 Uhr bei uns lassen“ (valizlerinizi saat 16'ya kadar bizde bırakabilirsiniz). Yani anahtar 16'ya kadar değil, 11'e kadar geri verilir."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "fahrrad",
+          "title": "Hotel Ginsterhöhe – Fahrräder für Gäste",
+          "paragraphs": [
+            "Sie möchten die Stadt mit dem Fahrrad sehen? Ein Fahrrad kostet für Erwachsene 6 Euro am Tag, für Kinder 3 Euro. Bitte fragen Sie an der Rezeption."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 11,
+          "type": "richtig-falsch",
+          "prompt": "Für Kinder ist ein Fahrrad im Hotel billiger.",
+          "answer": "richtig",
+          "evidence": [{ "text": "fahrrad", "quote": "Ein Fahrrad kostet für Erwachsene 6 Euro am Tag, für Kinder 3 Euro." }],
+          "explanation": "Metin: „Ein Fahrrad kostet für Erwachsene 6 Euro am Tag, für Kinder 3 Euro.“ (Bir bisiklet yetişkinler için günde 6 euro, çocuklar için 3 euro). 3 euro, 6 eurodan az. Yani çocuklar için bisiklet daha ucuz (billiger). İfade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "schwimmbad",
+          "title": "Hotel Sternmoos – Schwimmbad",
+          "paragraphs": [
+            "Unser Schwimmbad im Keller ist jeden Tag von 7 bis 21 Uhr offen. Kinder unter 12 Jahren dürfen nur mit Mutter oder Vater ins Wasser."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 12,
+          "type": "richtig-falsch",
+          "prompt": "Ein Junge von 10 Jahren darf allein ins Schwimmbad.",
+          "answer": "falsch",
+          "evidence": [{ "text": "schwimmbad", "quote": "Kinder unter 12 Jahren dürfen nur mit Mutter oder Vater ins Wasser." }],
+          "explanation": "Metin: „Kinder unter 12 Jahren dürfen nur mit Mutter oder Vater ins Wasser.“ (12 yaşından küçük çocuklar suya sadece annesi veya babasıyla girebilir). 10 yaşındaki çocuk 12'den küçük. Yani yalnız (allein) yüzmeye giremez, annesi veya babası yanında olmalı."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "zimmer",
+          "title": "Hotel Schwanenfeder – Rezeption",
+          "paragraphs": [
+            "Lieber Herr Jeyakumar, Ihr Zimmer ist leider noch nicht fertig. Den Schlüssel bekommen Sie um 15 Uhr. Trinken Sie doch so lange im Café einen Kaffee – für Sie kostet er nichts."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 13,
+          "type": "richtig-falsch",
+          "prompt": "Herr Jeyakumar kann erst am Nachmittag in sein Zimmer.",
+          "answer": "richtig",
+          "evidence": [{ "text": "zimmer", "quote": "Den Schlüssel bekommen Sie um 15 Uhr." }],
+          "explanation": "Metin: „Ihr Zimmer ist leider noch nicht fertig“ (odanız maalesef henüz hazır değil) ve „Den Schlüssel bekommen Sie um 15 Uhr.“ (Anahtarı saat 15'te alıyorsunuz). Saat 15 öğleden sonra (am Nachmittag) demek. Yani Herr Jeyakumar odasına ancak öğleden sonra girebilir. İfade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "flughafen",
+          "title": "Hotel Fliederwind – Bus zum Flughafen",
+          "paragraphs": [
+            "Unser Hotelbus fährt jeden Tag um 6, 9 und 12 Uhr vor dem Eingang ab. Die Fahrt dauert 40 Minuten und kostet 8 Euro."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 14,
+          "type": "richtig-falsch",
+          "prompt": "Der Hotelbus fährt dreimal am Tag zum Flughafen.",
+          "answer": "richtig",
+          "evidence": [{ "text": "flughafen", "quote": "jeden Tag um 6, 9 und 12 Uhr" }],
+          "explanation": "Metin: „jeden Tag um 6, 9 und 12 Uhr“ (her gün saat 6'da, 9'da ve 12'de). Bunlar üç saat. Yani otel otobüsü havalimanına (Flughafen) günde üç kez (dreimal) gidiyor. İfade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "putzen",
+          "title": "Hotel Kiefernblau – Ihr Zimmer",
+          "paragraphs": [
+            "Liebe Gäste, wir machen Ihr Zimmer jeden Tag zwischen 10 und 14 Uhr sauber. Möchten Sie das nicht? Dann hängen Sie bitte das rote Schild an die Tür."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 15,
+          "type": "richtig-falsch",
+          "prompt": "Im Hotel putzt man die Zimmer am Abend.",
+          "answer": "falsch",
+          "evidence": [{ "text": "putzen", "quote": "zwischen 10 und 14 Uhr sauber" }],
+          "explanation": "Metin: „wir machen Ihr Zimmer jeden Tag zwischen 10 und 14 Uhr sauber“ (odanızı her gün saat 10 ile 14 arasında temizliyoruz). Bu saatler akşam (am Abend) değil, öğlen civarı. Yani odalar akşam temizlenmiyor."
+        }
+      ]
+    }
+  ]
+}

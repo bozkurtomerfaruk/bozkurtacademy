@@ -1,0 +1,270 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "sprachbausteine",
+  "teil": 2,
+  "set": "set-2",
+  "title": "Nachricht an die Vermieterin",
+  "minutes": 13,
+  "context": "Henrik Uhlenkamp schreibt seiner Vermieterin eine E-Mail.",
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort aus der Liste (a–o) in die Lücken 31–40 passt. Jedes Wort passt nur einmal. Fünf Wörter bleiben übrig.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "nachricht",
+          "title": "Wasserschaden im Bad",
+          "paragraphs": [
+            "Liebe Frau Dornbusch,",
+            "ich schreibe Ihnen, {{31}} es in meiner Wohnung leider ein Problem gibt. Seit Sonntag tropft im Badezimmer Wasser aus dem Rohr {{32}} dem Waschbecken. Ich habe einen Eimer daruntergestellt, aber der Boden ist schon feucht geworden. Den Hausmeister, Herrn Brökel, kann ich {{33}} nicht erreichen, denn er ist im Urlaub und kommt erst in zwei Wochen zurück.",
+            "Könnten Sie bitte möglichst schnell einen {{34}} mit einem Installateur vereinbaren? Ich bin {{35}} kommendem Montag für eine Woche auf Dienstreise. Ich habe {{36}} meiner Nachbarin, Frau Sedlak, einen Wohnungsschlüssel gegeben. Frau Sedlak wohnt im Erdgeschoss und ist fast immer zu Hause. Der Handwerker kann also auch kommen, {{37}} ich nicht da bin.",
+            "Außerdem funktioniert die Klingel an der Haustür {{38}} einigen Tagen nicht mehr. Gestern musste ein Paketbote wieder gehen, denn ich habe ihn nicht gehört. Vielleicht kann der Handwerker die Klingel bei dieser Gelegenheit gleich reparieren. Ich {{39}} mich freuen, wenn Sie mir kurz Bescheid geben, wann jemand kommt.",
+            "Vielen Dank im Voraus für Ihre {{40}}!",
+            "Mit freundlichen Grüßen",
+            "Henrik Uhlenkamp (Kranichweg 7, 2. Stock links)"
+          ]
+        },
+        {
+          "id": "wort-a",
+          "label": "a",
+          "paragraphs": [
+            "momentan"
+          ]
+        },
+        {
+          "id": "wort-b",
+          "label": "b",
+          "paragraphs": [
+            "würde"
+          ]
+        },
+        {
+          "id": "wort-c",
+          "label": "c",
+          "paragraphs": [
+            "ab"
+          ]
+        },
+        {
+          "id": "wort-d",
+          "label": "d",
+          "paragraphs": [
+            "bald"
+          ]
+        },
+        {
+          "id": "wort-e",
+          "label": "e",
+          "paragraphs": [
+            "unter"
+          ]
+        },
+        {
+          "id": "wort-f",
+          "label": "f",
+          "paragraphs": [
+            "seit"
+          ]
+        },
+        {
+          "id": "wort-g",
+          "label": "g",
+          "paragraphs": [
+            "sondern"
+          ]
+        },
+        {
+          "id": "wort-h",
+          "label": "h",
+          "paragraphs": [
+            "deshalb"
+          ]
+        },
+        {
+          "id": "wort-i",
+          "label": "i",
+          "paragraphs": [
+            "ob"
+          ]
+        },
+        {
+          "id": "wort-j",
+          "label": "j",
+          "paragraphs": [
+            "Termin"
+          ]
+        },
+        {
+          "id": "wort-k",
+          "label": "k",
+          "paragraphs": [
+            "Hilfe"
+          ]
+        },
+        {
+          "id": "wort-l",
+          "label": "l",
+          "paragraphs": [
+            "wenn"
+          ]
+        },
+        {
+          "id": "wort-m",
+          "label": "m",
+          "paragraphs": [
+            "Rechnung"
+          ]
+        },
+        {
+          "id": "wort-n",
+          "label": "n",
+          "paragraphs": [
+            "weil"
+          ]
+        },
+        {
+          "id": "wort-o",
+          "label": "o",
+          "paragraphs": [
+            "hätte"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 31,
+          "type": "zuordnung",
+          "prompt": "Lücke 31",
+          "answer": "n",
+          "evidence": [
+            {
+              "text": "nachricht",
+              "quote": "es in meiner Wohnung leider ein Problem gibt"
+            }
+          ],
+          "explanation": "Henrik yazma sebebini söylüyor: Dairesinde bir sorun var. Sebep bildiren yan cümle bağlacı „weil“ (çünkü, -diği için) olur; fiil „gibt“ sondadır. „ob“ (-ip -mediği) bir soru bildirir, ama sorunun var olduğu kesindir; „sondern“ (bilakis) önce olumsuz bir cümle ister ve fiili sona atmaz."
+        },
+        {
+          "number": 32,
+          "type": "zuordnung",
+          "prompt": "Lücke 32",
+          "answer": "e",
+          "evidence": [
+            {
+              "text": "nachricht",
+              "quote": "Ich habe einen Eimer daruntergestellt"
+            }
+          ],
+          "explanation": "Su lavabonun altındaki borudan damlıyor; sonraki cümlede kova da „darunter“ (altına) konuyor. Yer bildiren edat „unter“ + datif: „aus dem Rohr unter dem Waschbecken“ (lavabonun altındaki borudan). „seit“ ve „ab“ zaman bildirir, burada bir yer gerekir."
+        },
+        {
+          "number": 33,
+          "type": "zuordnung",
+          "prompt": "Lücke 33",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "nachricht",
+              "quote": "denn er ist im Urlaub"
+            }
+          ],
+          "explanation": "Kapıcı şu anda tatilde olduğu için Henrik ona ulaşamıyor: Şimdiki zamanla („kann … nicht erreichen“) şu anki durumu „momentan“ (şu anda) anlatır. „bald“ (yakında) uymaz, çünkü kapıcı zaten tatilde; „deshalb“ (bu yüzden) da uymaz, çünkü önceki cümledeki ıslak zemin kapıcıya ulaşamamanın sebebi değildir."
+        },
+        {
+          "number": 34,
+          "type": "zuordnung",
+          "prompt": "Lücke 34",
+          "answer": "j",
+          "evidence": [
+            {
+              "text": "nachricht",
+              "quote": "mit einem Installateur vereinbaren"
+            }
+          ],
+          "explanation": "„einen“ eril bir isim ister ve „vereinbaren“ ile tesisatçıyla ayarlanacak bir şey gerekir: „einen Termin vereinbaren“ (randevu ayarlamak). „Rechnung“ (fatura) ve „Hilfe“ (yardım) dişildir („eine“), „einen“ ile kullanılamaz; ayrıca faturayı tamirden önce ayarlamak anlamsızdır."
+        },
+        {
+          "number": 35,
+          "type": "zuordnung",
+          "prompt": "Lücke 35",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "nachricht",
+              "quote": "für eine Woche auf Dienstreise"
+            }
+          ],
+          "explanation": "Henrik önümüzdeki pazartesiden itibaren bir haftalığına iş seyahatinde olacak: Gelecekteki bir başlangıç noktası „ab“ + datif ile söylenir: „ab kommendem Montag“ (gelecek pazartesiden itibaren). „seit“ (-den beri) geçmişte başlamış bir durumu anlatır, „kommendem Montag“ (gelecek pazartesi) ile kullanılamaz."
+        },
+        {
+          "number": 36,
+          "type": "zuordnung",
+          "prompt": "Lücke 36",
+          "answer": "h",
+          "evidence": [
+            {
+              "text": "nachricht",
+              "quote": "meiner Nachbarin, Frau Sedlak"
+            }
+          ],
+          "explanation": "Henrik bir hafta evde olmayacak, bu nedenle anahtarı komşusuna vermiş. Sonuç bildiren zarf „deshalb“ (bu yüzden) olur ve cümlenin ortasında durabilir. „sondern“ cümlenin ortasında kullanılamaz ve önce olumsuz bir ifade ister; „bald“ (yakında) Perfekt cümleyle („habe … gegeben“) uymaz."
+        },
+        {
+          "number": 37,
+          "type": "zuordnung",
+          "prompt": "Lücke 37",
+          "answer": "l",
+          "evidence": [
+            {
+              "text": "nachricht",
+              "quote": "Der Handwerker kann also auch kommen"
+            }
+          ],
+          "explanation": "Komşuda anahtar olduğu için tamirci, Henrik evde olmadığı durumda da gelebilir. Bir koşulu/durumu yan cümle bağlacı „wenn“ (-diğinde, -se) bildirir. „weil“ (çünkü) anlamca uymaz, tamircinin gelme sebebi Henrik'in evde olmaması değildir; „ob“ (-ip -mediği) bir soru ister, burada soru yoktur."
+        },
+        {
+          "number": 38,
+          "type": "zuordnung",
+          "prompt": "Lücke 38",
+          "answer": "f",
+          "evidence": [
+            {
+              "text": "nachricht",
+              "quote": "Gestern musste ein Paketbote wieder gehen"
+            }
+          ],
+          "explanation": "Zil birkaç gündür çalışmıyor; dün de kargocu geri dönmek zorunda kalmış. Geçmişte başlayıp hâlâ süren durum „seit“ + datif ile söylenir: „seit einigen Tagen“ (birkaç gündür). „ab“ (-den itibaren) bir başlangıç noktasını, çoğunlukla geleceği gösterir ve „nicht mehr funktioniert“ ile uymaz."
+        },
+        {
+          "number": 39,
+          "type": "zuordnung",
+          "prompt": "Lücke 39",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "nachricht",
+              "quote": "mich freuen, wenn Sie mir kurz Bescheid geben"
+            }
+          ],
+          "explanation": "Cümlenin sonunda mastar „freuen“ var: Kibar bir istek „würde … freuen“ (sevinirim) ile kurulur, Konjunktiv II. „hätte“ ise Partizip II ile kullanılır („hätte mich gefreut“), mastar „freuen“ ile değil."
+        },
+        {
+          "number": 40,
+          "type": "zuordnung",
+          "prompt": "Lücke 40",
+          "answer": "k",
+          "evidence": [
+            {
+              "text": "nachricht",
+              "quote": "Vielen Dank im Voraus"
+            }
+          ],
+          "explanation": "„Ihre“ dişil (veya çoğul) bir isim ister ve Henrik ev sahibine önceden teşekkür ediyor: „für Ihre Hilfe“ (yardımınız için). „Rechnung“ (fatura) da dişildir, ama bir faturaya önceden teşekkür edilmez; „Termin“ erildir ve „Ihren Termin“ olması gerekirdi."
+        }
+      ]
+    }
+  ]
+}

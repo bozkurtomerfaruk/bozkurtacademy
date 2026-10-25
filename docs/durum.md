@@ -5,7 +5,9 @@
 ## 2026-10-19 · Lesen tamamlama: 8 aşama (Goethe C1 → TestDaF kâğıt → TestDaF dijital → telc B1, A1, A2, B2, C1 Hochschule)
 
 ### Kaldığım yer
-- Aşama 1, Goethe C1: bitti, main'e birleştirildi.
+- Aşama 1, Goethe C1: bitti, main'e birleştirildi (813927f).
+- Aşama 2, TestDaF kâğıt: Pilot (6 set) incelendi, kör çözüm 60/60. Set 3–5 yazılıyor (dal `claude/testdaf-papier`, çalışma ağacı /tmp/wt-testdaf, anahtarlar scratchpad'de tdpkeys2.txt). Pilot ve 5 set tek commit'le birleştirilecek.
+- Sonra: Aşama 3, TestDaF dijital (aşağıdaki karar tablosu).
 - Aşama 2, TestDaF kâğıt: Oynatıcı eklentisi (ja/nein/nichts, iki örnek "01"/"02") ve test hazır; dal `claude/testdaf-papier`, çalışma ağacı /tmp/wt-testdaf. Pilot yazılıyor. C1 birleşince bu dal main'e göre yeniden düzenlenecek; format tablosu da o zaman buraya eklenecek.
 - Güvenlik için 17:18 UTC'ye bir devam mesajı zamanlandı.
 
@@ -15,6 +17,32 @@ Beş PDF'in hepsi **kâğıt tabanlı** TestDaF:
 - Modelltest 02: Leseverstehen, Schriftlicher Ausdruck.
 
 **Dijital modelltest yok.** Belgeler yalnızca format için kullanılıyor; depoya eklenmiyor, TestDaF aşamalarından sonra silinecek.
+
+### TestDaF kâğıt tabanlı Leseverstehen: format tablosu
+Kaynak: ekteki Modelltest 01 ve 02 (Leseverstehen). ✔ = belgelerde doğrulandı, ≈ = tahmin veya bizim kararımız.
+
+| Bölüm | Metin | Görev | Soru | Süre |
+|---|---|---|---|---|
+| Lesetext 1 | Bir durum açıklaması ve 8 kısa metin A–H (✔). Biz: her biri ~55–85 kelime (≈) | 10 kişi/ihtiyaç metinlere eşleştirilir, her metin en fazla bir kez, uygun metin yoksa I (✔); iki örnek: 01 → A, 02 → I (✔) | 1–10 (✔) | ~10 dk (✔) |
+| Lesetext 2 | ~600–700 kelimelik makale (✔ ~85 satır) | 10 çoktan seçmeli soru A/B/C, örnek 0, metin sırasıyla; son soru metnin bütünü hakkında (✔) | 11–20 (✔) | ~20 dk (✔) |
+| Lesetext 3 | ~650–750 kelimelik daha akademik metin (✔ ~90 satır) | 10 ifade: Ja / Nein / Text sagt dazu nichts, iki örnek (01, 02), metin sırasıyla (✔) | 21–30 (✔) | ~20 dk (✔) |
+
+Toplam 60 dk, cevap kâğıdına 10 dk aktarma dahil (✔).
+- **Bizim kararlarımız (≈):** Lesetext 1'de A örnekte kullanılıyor; B–H birer kez, üç soru I. Lesetext 3'te ~4 ja / 3 nein / 3 nichts.
+- **Oynatıcı eklentisi:** `ja-nein-nichts` tipi, iki örnek (`"01"`, `"02"`), `"none": "I"`.
+
+### TestDaF dijital Lesen: format ve karar tablosu
+Dijital modelltest ekte yoktu. Kaynak: testdaf.de'deki test yapısı ve demo görevlerinin açıklamaları (arama sonuçları). Toplam 7 görev, 34 soru, ~55 dk (✔). Görev ayrıntıları ve süreler kısmen tahmin (≈).
+
+| Aufgabe | Görev (kaynak) | Soru | Bizim çözümümüz |
+|---|---|---|---|
+| 1 | Lückentext ergänzen: her boşluk için verilen seçeneklerden biri (✔), 4 seçenek (≈) | 5 | Var olan a/b/c/d boşluk soruları (C1 Teil 1 gibi). Yapılabilir |
+| 2 | Textabschnitte ordnen: paragrafları sürükleyerek sıralama (✔) | 4 | **Atlanıyor:** sürükle-bırak ile sıralama, büyük oynatıcı değişikliği |
+| 3 | Multiple Choice, uzun metin (✔) | 7 | a/b/c. Yapılabilir |
+| 4 | Sprachhandlungen zuordnen: metindeki bölümlere dil eylemi (eleştirmek, örneklemek …) atama (≈ ayrıntı) | 4 | Metinde numaralı bölümler, seçenekler etiketli kısa metinler (zuordnung). Yapılabilir |
+| 5 | Aussagen Kategorien zuordnen (✔ ad), kategori sayısı (≈ 3) | 7 | Kategoriler etiketli metin, her ifade için açılır liste. Yapılabilir |
+| 6 | Aussagen einem Begriffspaar zuordnen (✔ ad) | 4 | İki kategorili eşleştirme; A1 Teil 2'deki a/b düğmeleriyle. Yapılabilir |
+| 7 | Fehler in Zusammenfassung erkennen: özetteki 3 yanlış cümleye tıklama (✔) | 3 | **Atlanıyor:** metinde cümle seçme ve tıklama, büyük oynatıcı değişikliği |
 
 ### Goethe-Zertifikat C1 (modüler) Lesen: format tablosu
 Kaynak: Goethe-Institut el kitabı ve Modellsatz açıklamaları (arama sonuçları üzerinden). PDF'ler bu ortamdan açılamadı (403).

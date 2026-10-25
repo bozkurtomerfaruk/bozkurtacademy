@@ -1,0 +1,121 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Neue Busse in der Stadt",
+  "minutes": 10,
+  "instructions": "Lesen Sie den Zeitungstext und die Aufgaben 1–5. Welche Lösung ist richtig: a, b oder c?",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "busse",
+          "title": "Neue Busse in der Stadt",
+          "byline": "Rosenfurter Tageblatt",
+          "paragraphs": [
+            "Seit dem 1. Oktober fahren in Rosenfurt zwölf neue Busse. Die Busse fahren mit Strom und sind viel leiser als die alten. Die Stadt hat sie schon im März bestellt. Die alten Busse waren über 15 Jahre alt und oft kaputt. Im September hat die Stadt die alten Busse verkauft.",
+            "In den neuen Bussen gibt es kostenloses Internet. Auf Bildschirmen sehen die Fahrgäste, welche Haltestelle als Nächstes kommt. Fahrkarten kauft man aber weiter beim Fahrer oder mit dem Handy. Fahrräder darf man wie früher erst ab 19 Uhr mitnehmen.",
+            "Auch der Fahrplan ist neu. Die Linie 4 fährt jetzt bis zum neuen Krankenhaus am Stadtrand. Am Wochenende kommen die Busse alle 15 Minuten, früher war es alle 30 Minuten. Nachts fährt aber weiter kein Bus. Neu sind auch die Preise: Eine normale Einzelfahrt kostet jetzt 2,80 Euro statt 2,40 Euro. Für Schülerinnen und Schüler bleibt der Preis bei 1,50 Euro.",
+            "Busfahrerin Sevim Ölmez fährt seit 20 Jahren in Rosenfurt. Die neuen Busse gefallen ihr, aber sie sagt auch: „Die Busse sind so leise, dass manche Leute auf der Straße sie nicht hören. Ich muss deshalb besonders gut aufpassen.“ Sevim Ölmez und ihre Kollegen haben im September eine Woche lang einen Kurs für die neuen Busse gemacht."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "abc",
+          "prompt": "Die alten Busse …",
+          "options": {
+            "a": "haben oft nicht funktioniert.",
+            "b": "waren ungefähr zwölf Jahre alt.",
+            "c": "hat die Stadt im März verkauft."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "busse",
+              "quote": "Die alten Busse waren über 15 Jahre alt und oft kaputt"
+            }
+          ],
+          "explanation": "Metinde „Die alten Busse waren über 15 Jahre alt und oft kaputt“ (Eski otobüsler 15 yaşından fazlaydı ve sık sık bozuktu) yazıyor. „oft kaputt“ (sık sık bozuk) = „oft nicht funktioniert“ (sık sık çalışmadı). b) yanlış: Eski otobüsler 15 yaşından fazlaydı: „über 15 Jahre alt“; on iki (zwölf) yeni otobüslerin sayısı: „zwölf neue Busse“. c) yanlış: Şehir mart ayında yeni otobüsleri sipariş etti: „Die Stadt hat sie schon im März bestellt.“ Eski otobüsleri eylülde sattı: „Im September hat die Stadt die alten Busse verkauft.“"
+        },
+        {
+          "number": 2,
+          "type": "abc",
+          "prompt": "In den neuen Bussen …",
+          "options": {
+            "a": "darf man jetzt den ganzen Tag ein Fahrrad mitnehmen.",
+            "b": "zeigt ein Bildschirm, wo der Bus als Nächstes hält.",
+            "c": "kann man an einem Bildschirm Fahrkarten kaufen."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "busse",
+              "quote": "Auf Bildschirmen sehen die Fahrgäste, welche Haltestelle als Nächstes kommt"
+            }
+          ],
+          "explanation": "Yolcular ekranlarda sıradaki durağın hangisi olduğunu görüyor: „Auf Bildschirmen sehen die Fahrgäste, welche Haltestelle als Nächstes kommt.“ Yani ekran otobüsün bir sonraki durduğu yeri gösteriyor. a) yanlış: Bisiklet eskisi gibi saat 19'dan itibaren alınabiliyor: „Fahrräder darf man wie früher erst ab 19 Uhr mitnehmen.“ c) yanlış: Bilet ekranlardan alınmıyor, eskisi gibi şoförden veya cep telefonuyla alınıyor: „Fahrkarten kauft man aber weiter beim Fahrer oder mit dem Handy.“"
+        },
+        {
+          "number": 3,
+          "type": "abc",
+          "prompt": "Was ist im neuen Fahrplan anders?",
+          "options": {
+            "a": "Die Busse fahren jetzt auch in der Nacht.",
+            "b": "Am Wochenende fahren die Busse alle 30 Minuten.",
+            "c": "Man kann jetzt mit dem Bus zur neuen Klinik fahren."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "busse",
+              "quote": "Die Linie 4 fährt jetzt bis zum neuen Krankenhaus am Stadtrand"
+            }
+          ],
+          "explanation": "4 numaralı hat artık şehrin kenarındaki yeni hastaneye kadar gidiyor: „Die Linie 4 fährt jetzt bis zum neuen Krankenhaus am Stadtrand.“ „Krankenhaus“ = „Klinik“ (hastane). a) yanlış: Geceleri yine otobüs yok: „Nachts fährt aber weiter kein Bus.“ b) yanlış: 30 dakika eski sefer aralığı; hafta sonu otobüsler artık 15 dakikada bir geliyor: „Am Wochenende kommen die Busse alle 15 Minuten, früher war es alle 30 Minuten.“"
+        },
+        {
+          "number": 4,
+          "type": "abc",
+          "prompt": "Was steht im Text über die Preise?",
+          "options": {
+            "a": "Eine normale Fahrt kostet jetzt 40 Cent mehr.",
+            "b": "Eine normale Fahrt kostet jetzt 2,40 Euro.",
+            "c": "Für Schüler ist die Fahrt jetzt billiger."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "busse",
+              "quote": "Eine normale Einzelfahrt kostet jetzt 2,80 Euro statt 2,40 Euro"
+            }
+          ],
+          "explanation": "Normal tek yolculuk artık 2,40 euro yerine 2,80 euro: „Eine normale Einzelfahrt kostet jetzt 2,80 Euro statt 2,40 Euro.“ 2,80 − 2,40 = 0,40; yani 40 cent daha pahalı. b) yanlış: 2,40 euro eski fiyat; „statt 2,40 Euro“ (2,40 euro yerine). c) yanlış: Öğrenciler için fiyat ucuzlamadı, 1,50 euroda kalıyor: „Für Schülerinnen und Schüler bleibt der Preis bei 1,50 Euro.“"
+        },
+        {
+          "number": 5,
+          "type": "abc",
+          "prompt": "Sevim Ölmez …",
+          "options": {
+            "a": "hat im September einen Kurs für andere Fahrer gegeben.",
+            "b": "fährt seit zwei Jahren in Rosenfurt Bus.",
+            "c": "muss beim Fahren jetzt sehr vorsichtig sein."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "busse",
+              "quote": "Ich muss deshalb besonders gut aufpassen."
+            }
+          ],
+          "explanation": "Sevim Ölmez yeni otobüslerin çok sessiz olduğunu, sokaktaki bazı insanların onları duymadığını söylüyor: „manche Leute auf der Straße sie nicht hören“. Bu yüzden çok dikkat etmesi gerekiyor: „Ich muss deshalb besonders gut aufpassen.“ „besonders gut aufpassen“ (çok iyi dikkat etmek) = „sehr vorsichtig sein“ (çok dikkatli olmak). a) yanlış: Sevim Ölmez kurs vermedi; meslektaşlarıyla birlikte eylülde bir hafta kursa katıldı: „Sevim Ölmez und ihre Kollegen haben im September eine Woche lang einen Kurs für die neuen Busse gemacht.“ b) yanlış: İki yıldır değil, 20 yıldır Rosenfurt'ta otobüs kullanıyor: „seit 20 Jahren“."
+        }
+      ]
+    }
+  ]
+}

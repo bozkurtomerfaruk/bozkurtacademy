@@ -1,0 +1,100 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-2",
+  "title": "Ein Sommer auf dem Bauernhof",
+  "minutes": 10,
+  "instructions": "Lesen Sie den Text und die Aufgaben 6–10. Sind die Aussagen richtig oder falsch?",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "lerchenhof",
+          "title": "Ferienjob zwischen Kühen und Erdbeeren",
+          "byline": "Haselrieder Wochenblatt",
+          "paragraphs": [
+            "Mara Rabeneck ist 17 Jahre alt und wohnt mitten in der Stadt. In diesem Sommer hat sie aber sechs Wochen auf dem Lerchenhof bei Haselried gearbeitet. Den Hof hat die Familie Federsen schon seit über 100 Jahren.",
+            "Von dem Ferienjob hat Mara durch ihre Tante gehört. Die Tante kennt Bauer Jens Federsen schon lange. „Zuerst wollte ich nur zwei Wochen bleiben“, sagt Mara. „Aber dann hat es mir so gut gefallen, dass ich länger geblieben bin.“",
+            "Ihr Arbeitstag hat um sechs Uhr begonnen. Am Morgen hat Mara im Stall bei den Kühen geholfen, am Nachmittag hat sie Erdbeeren gepflückt oder im Hofladen verkauft. Am Wochenende hatte sie frei. Mara hat in einem kleinen Zimmer über dem Hofladen gewohnt und mit der Familie gegessen. Zimmer und Essen waren kostenlos, und außerdem hat sie jede Woche 150 Euro bekommen.",
+            "Am schwersten war für Mara das frühe Aufstehen. „In den ersten Tagen war ich am Abend sehr müde“, erzählt sie. Jetzt geht sie wieder zur Schule, aber im nächsten Sommer möchte sie zurückkommen. Jens Federsen freut sich darüber: „Mara hat schnell gelernt.“"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "richtig-falsch",
+          "prompt": "Die Familie Federsen hat den Lerchenhof erst seit wenigen Jahren.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "lerchenhof",
+              "quote": "Den Hof hat die Familie Federsen schon seit über 100 Jahren."
+            }
+          ],
+          "explanation": "Metinde çiftliğin Federsen ailesinde „schon seit über 100 Jahren“ (100 yıldan fazladır) olduğu yazıyor. Birkaç yıldır değil, çok uzun zamandır ailenin. İfade yanlış."
+        },
+        {
+          "number": 7,
+          "type": "richtig-falsch",
+          "prompt": "Mara hat länger auf dem Hof gearbeitet, als sie am Anfang wollte.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "lerchenhof",
+              "quote": "„Zuerst wollte ich nur zwei Wochen bleiben“"
+            },
+            {
+              "text": "lerchenhof",
+              "quote": "dass ich länger geblieben bin"
+            }
+          ],
+          "explanation": "Mara önce sadece iki hafta kalmak istiyordu: „Zuerst wollte ich nur zwei Wochen bleiben“. Ama çok hoşuna gittiği için „länger geblieben“ (daha uzun kaldı); çiftlikte altı hafta çalıştı („sechs Wochen“). İfade doğru."
+        },
+        {
+          "number": 8,
+          "type": "richtig-falsch",
+          "prompt": "Mara hat auch am Samstag und am Sonntag auf dem Hof gearbeitet.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "lerchenhof",
+              "quote": "Am Wochenende hatte sie frei."
+            }
+          ],
+          "explanation": "Metinde „Am Wochenende hatte sie frei.“ (Hafta sonu izinliydi.) yazıyor. Cumartesi ve pazar hafta sonudur; Mara o günlerde çalışmadı. İfade yanlış."
+        },
+        {
+          "number": 9,
+          "type": "richtig-falsch",
+          "prompt": "Mara musste für ihr Zimmer auf dem Hof nichts bezahlen.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "lerchenhof",
+              "quote": "Zimmer und Essen waren kostenlos"
+            }
+          ],
+          "explanation": "Mara çiftlik dükkânının üstündeki küçük bir odada kaldı. Metin „Zimmer und Essen waren kostenlos“ (oda ve yemek ücretsizdi) diyor. Yani oda için para ödemedi. İfade doğru."
+        },
+        {
+          "number": 10,
+          "type": "richtig-falsch",
+          "prompt": "Mara will im nächsten Jahr wieder auf den Lerchenhof kommen.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "lerchenhof",
+              "quote": "aber im nächsten Sommer möchte sie zurückkommen"
+            }
+          ],
+          "explanation": "Mara şimdi yine okula gidiyor, ama „im nächsten Sommer möchte sie zurückkommen“ (gelecek yaz geri gelmek istiyor). Gelecek yaz, gelecek yıl demektir; Jens Federsen de buna seviniyor. İfade doğru."
+        }
+      ]
+    }
+  ]
+}

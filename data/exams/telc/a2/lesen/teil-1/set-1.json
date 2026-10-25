@@ -1,0 +1,125 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-1",
+  "title": "Ein Fest für alle Nachbarn",
+  "minutes": 10,
+  "instructions": "Lesen Sie den Zeitungstext und die Aufgaben 1–5. Welche Lösung ist richtig: a, b oder c?",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "fest",
+          "title": "Ein Fest für alle Nachbarn",
+          "byline": "Talhausener Wochenpost",
+          "paragraphs": [
+            "Am letzten Samstag durften in der Zeisigstraße in Talhausen keine Autos fahren. Stattdessen haben dort ungefähr 300 Menschen zusammen gefeiert. Ein solches Fest hat es in der Straße bis jetzt noch nie gegeben. „Viele Leute hier kennen nur die Nachbarn im eigenen Haus“, sagt Liane Wendebach. Zusammen mit vier Familien hat sie das Fest geplant.",
+            "Die Planung hat drei Monate gedauert. Zuerst musste die Gruppe die Stadt fragen, ob man die Straße für einen Tag schließen darf. Auf die Antwort mussten die Nachbarn sechs Wochen warten. Tische und Bänke hat der Fußballverein Grün-Weiß Talhausen gebracht, und die Nachbarn mussten dafür nichts bezahlen.",
+            "Am Nachmittag haben die Kinder große Bilder auf die Straße gemalt. Ältere Nachbarn haben den Kindern Spiele von früher gezeigt. Am Abend hat dann eine Band aus der Musikschule gespielt. Herr Olbertz aus Nummer 14 hatte vorher Angst vor Lärm. Beim Fest hat er dann selbst Kaffee und Kuchen verkauft. Das Geld bekommt der Kindergarten in der Zeisigstraße: 250 Euro für neue Spielsachen im Garten.",
+            "Viele Gäste möchten jetzt jeden Monat so ein Fest. Liane Wendebach lacht: „Das ist viel zu viel Arbeit. Aber nächsten Sommer feiern wir wieder.“ Eine Chatgruppe für die Straße gibt es auch schon. Die hat Jonte, der Sohn von Liane Wendebach, gemacht."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "abc",
+          "prompt": "Das Fest in der Zeisigstraße …",
+          "options": {
+            "a": "hat Liane Wendebach ohne Hilfe vorbereitet.",
+            "b": "hat in dieser Straße zum ersten Mal stattgefunden.",
+            "c": "hatte ungefähr 300 Tische für die Gäste."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "fest",
+              "quote": "Ein solches Fest hat es in der Straße bis jetzt noch nie gegeben"
+            }
+          ],
+          "explanation": "Metinde „Ein solches Fest hat es in der Straße bis jetzt noch nie gegeben“ (Böyle bir şenlik bu sokakta şimdiye kadar hiç olmadı) yazıyor. Yani şenlik bu sokakta ilk kez yapıldı: „zum ersten Mal“ (ilk kez). a) yanlış: Liane Wendebach şenliği yalnız hazırlamadı, dört aileyle birlikte planladı: „Zusammen mit vier Familien hat sie das Fest geplant.“. c) yanlış: 300 sayısı masalar için değil, insanlar için: „ungefähr 300 Menschen zusammen gefeiert“ (yaklaşık 300 kişi birlikte kutladı). Masaların sayısı metinde yazmıyor."
+        },
+        {
+          "number": 2,
+          "type": "abc",
+          "prompt": "Bei der Planung …",
+          "options": {
+            "a": "mussten die Nachbarn drei Monate auf die Stadt warten.",
+            "b": "haben die Nachbarn Tische und Bänke gekauft.",
+            "c": "hat ein Sportverein den Nachbarn ohne Kosten geholfen."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "fest",
+              "quote": "Tische und Bänke hat der Fußballverein Grün-Weiß Talhausen gebracht"
+            },
+            {
+              "text": "fest",
+              "quote": "die Nachbarn mussten dafür nichts bezahlen"
+            }
+          ],
+          "explanation": "Masaları ve bankları futbol kulübü Grün-Weiß Talhausen getirdi ve komşular bunun için hiçbir şey ödemedi: „Tische und Bänke hat der Fußballverein Grün-Weiß Talhausen gebracht, und die Nachbarn mussten dafür nichts bezahlen.“ Futbol kulübü bir spor kulübüdür (Sportverein); „nichts bezahlen“ (hiçbir şey ödememek) = „ohne Kosten“ (ücretsiz). a) yanlış: Üç ay bütün planlamanın süresi: „Die Planung hat drei Monate gedauert.“ Şehrin cevabını komşular altı hafta beklediler: „sechs Wochen warten“. b) yanlış: Komşular masa ve bank satın almadı; bunları kulüp getirdi."
+        },
+        {
+          "number": 3,
+          "type": "abc",
+          "prompt": "Am Nachmittag …",
+          "options": {
+            "a": "konnten die Kinder auf der Straße zeichnen.",
+            "b": "hat eine Band aus der Musikschule Musik gemacht.",
+            "c": "haben die Kinder den älteren Leuten Spiele gezeigt."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "fest",
+              "quote": "Am Nachmittag haben die Kinder große Bilder auf die Straße gemalt"
+            }
+          ],
+          "explanation": "Öğleden sonra çocuklar sokağa büyük resimler yaptı: „Am Nachmittag haben die Kinder große Bilder auf die Straße gemalt.“ „Bilder malen“ (resim yapmak) = „zeichnen“ (çizmek). b) yanlış: Müzik okulunun grubu öğleden sonra değil, akşam çaldı: „Am Abend hat dann eine Band aus der Musikschule gespielt.“ c) yanlış: Oyunları çocuklar göstermedi; yaşlı komşular çocuklara eski oyunları gösterdi: „Ältere Nachbarn haben den Kindern Spiele von früher gezeigt.“"
+        },
+        {
+          "number": 4,
+          "type": "abc",
+          "prompt": "Mit dem Geld vom Kaffee- und Kuchenverkauf …",
+          "options": {
+            "a": "bezahlen die Nachbarn den Fußballverein.",
+            "b": "planen die Nachbarn das nächste Fest.",
+            "c": "kann der Kindergarten Spielzeug kaufen."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "fest",
+              "quote": "Das Geld bekommt der Kindergarten in der Zeisigstraße: 250 Euro für neue Spielsachen im Garten"
+            }
+          ],
+          "explanation": "Herr Olbertz kahve ve kek sattı. Bu para Zeisigstraße'deki anaokuluna gidiyor: „Das Geld bekommt der Kindergarten in der Zeisigstraße: 250 Euro für neue Spielsachen im Garten.“ (bahçe için yeni oyuncaklara 250 euro). „Spielsachen“ = „Spielzeug“ (oyuncak). a) yanlış: Komşular futbol kulübüne bir şey ödemiyor: „die Nachbarn mussten dafür nichts bezahlen“. b) yanlış: Para gelecek şenlik için değil, anaokulu için: „Das Geld bekommt der Kindergarten“."
+        },
+        {
+          "number": 5,
+          "type": "abc",
+          "prompt": "Liane Wendebach …",
+          "options": {
+            "a": "möchte das Fest jetzt jeden Monat machen.",
+            "b": "will im nächsten Jahr wieder mit den Nachbarn feiern.",
+            "c": "hat für die Nachbarn eine Chatgruppe gemacht."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "fest",
+              "quote": "Aber nächsten Sommer feiern wir wieder."
+            }
+          ],
+          "explanation": "Liane Wendebach „Aber nächsten Sommer feiern wir wieder.“ (Ama gelecek yaz yine kutlayacağız) diyor. „nächsten Sommer“ (gelecek yaz) = „im nächsten Jahr“ (gelecek yıl). a) yanlış: Her ay şenlik isteyenler misafirler: „Viele Gäste möchten jetzt jeden Monat so ein Fest.“ Liane Wendebach bunu çok fazla iş buluyor: „Das ist viel zu viel Arbeit.“ c) yanlış: Sohbet grubunu Liane Wendebach değil, oğlu Jonte kurdu: „Die hat Jonte, der Sohn von Liane Wendebach, gemacht.“"
+        }
+      ]
+    }
+  ]
+}

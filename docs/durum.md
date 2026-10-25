@@ -30,6 +30,18 @@ Toplam ~25 dk (✔).
 
 **Düzeltmediğim notlar:** Zirkus, Größe, Rezept gibi birkaç kelime A1 sınırında; Türkçe açıklamada çevrildikleri için bırakıldı. Bazı Teil 3 ifadeleri (ör. çocuklar daha az öder) genel bilgiyle tahmin edilebiliyor.
 
+### telc Deutsch A2 (Start Deutsch 2) Leseverstehen: format tablosu
+Kaynak: telc Übungstest açıklamaları ve hazırlık sitelerinin özetleri (arama sonuçları; resmî PDF'lere ağdan erişilemedi). ✔ = birden çok kaynakta doğrulandı, ≈ = tahmin veya bizim kararımız. Lesen ve Schreiben birlikte 50 dk (✔).
+
+| Teil | Metin | Görev | Soru | Süre |
+|---|---|---|---|---|
+| 1 | Kısa gazete metni (✔), ~170–210 kelime (≈) | a/b/c, metin sırasıyla (✔) | 1–5 (✔) | ~10 dk (≈) |
+| 2 | Basın metni, ~150 kelime (≈ tek kaynak) | richtig/falsch, metin sırasıyla (≈) | 6–10 (✔) | ~10 dk (≈) |
+| 3 | 8 ilan a–h (✔) | Örnek 0 + 5 durum; bir durum için ilan yok: x; üç ilan artar (✔) | 11–15 (✔) | ~10 dk (≈) |
+
+- **Bizim kararlarımız (≈):** Teil 1 ve 2'de örnek yok; Teil 3'te x tuzağı her sette başka bir koşula dayanıyor (yaş, tarih …).
+- **Oynatıcı:** yeni eklenti gerekmedi (a/b/c, richtig/falsch, `"none": "x"` ve örnek 0 zaten var).
+
 ### telc Deutsch B1 (Zertifikat Deutsch) Leseverstehen + Sprachbausteine: format tablosu
 Kaynak: telc'in yayımladığı sınav yapısı ve örnek sınav açıklamaları (arama sonuçları). ✔ = kaynaklarda doğrulandı, ≈ = tahmin veya bizim kararımız. Lesen ve Sprachbausteine birlikte 90 dk (✔).
 

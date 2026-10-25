@@ -24,7 +24,7 @@
         {
           "id": "b",
           "label": "b",
-          "title": "Kinderkochschule Kochlöffel",
+          "title": "Kinderkochschule Rührlöffel",
           "paragraphs": [
             "Pizza, Gemüsesuppe und ein süßer Nachtisch: Jeden Samstag von 10 bis 13 Uhr kochen Kinder in kleinen Gruppen und essen danach zusammen. Der Kurs ist für Kinder von 12 bis 15 Jahren. Preis: 25 Euro."
           ]
@@ -50,7 +50,7 @@
           "label": "e",
           "title": "Pflanzenmarkt im Klosterhof",
           "paragraphs": [
-            "Am Sonntag von 9 bis 15 Uhr verkaufen Gärtnereien aus der Region Blumen, Kräuter und junge Gemüsepflanzen. Sie können auch eigene Pflanzen mitbringen und mit anderen Besuchern tauschen. Es gibt auch Kaffee und Kuchen."
+            "Am Sonntag von 9 bis 15 Uhr verkaufen Gärtner aus der Region Blumen, Kräuter und junge Gemüsepflanzen. Sie können auch eigene Pflanzen mitbringen und mit anderen Besuchern tauschen. Es gibt auch Kaffee und Kuchen."
           ]
         },
         {
@@ -91,18 +91,18 @@
         {
           "number": 11,
           "type": "zuordnung",
-          "prompt": "Yusuf wohnt seit drei Wochen in der Stadt und kennt hier noch niemanden. Am Samstagabend möchte er neue Leute kennenlernen und mit ihnen würfeln oder Karten spielen.",
+          "prompt": "Joris wohnt seit drei Wochen in der Stadt und kennt hier noch niemanden. Am Samstagabend möchte er neue Leute kennenlernen und mit ihnen würfeln oder Karten spielen.",
           "answer": "f",
           "evidence": [{ "text": "f", "quote": "Sie kommen allein? Kein Problem – wir suchen nette Mitspieler für Sie." }],
-          "explanation": "f ilanındaki kafe cumartesi akşamı 18'den itibaren açık ve kutu ve kart oyunları var. Önemli cümle: „Sie kommen allein? Kein Problem – wir suchen nette Mitspieler für Sie.“ (Yalnız mı geliyorsunuz? Sorun değil, size iyi oyun arkadaşları buluyoruz.) Yusuf kimseyi tanımıyor, bu yüzden bu ilan uygun. Tuzak g: Bilgi yarışması da cumartesi akşamı, ama „in Teams mit vier bis sechs Personen“ (dört ile altı kişilik takımlar hâlinde) oynanıyor ve takım perşembeye kadar kaydedilmeli. Yusuf'un takımı yok."
+          "explanation": "f ilanındaki kafe cumartesi akşamı 18'den itibaren açık ve kutu ve kart oyunları var. Önemli cümle: „Sie kommen allein? Kein Problem – wir suchen nette Mitspieler für Sie.“ (Yalnız mı geliyorsunuz? Sorun değil, size iyi oyun arkadaşları buluyoruz.) Joris burada henüz kimseyi tanımıyor, bu yüzden bu ilan uygun. Tuzak g: Bilgi yarışması da cumartesi akşamı, ama orada zar veya kart oynanmıyor; „Fragen zu Musik, Sport, Filmen und Geografie“ (müzik, spor, film ve coğrafya soruları) soruluyor. Ayrıca „in Teams mit vier bis sechs Personen“ (dört ile altı kişilik takımlar hâlinde) oynanıyor ve takımı perşembeye kadar kaydettirmek isteniyor; Joris ise kimseyi tanımıyor."
         },
         {
           "number": 12,
           "type": "zuordnung",
-          "prompt": "Familie Mbeki möchte am Sonntagnachmittag mit ihren zwei kleinen Kindern einen Ausflug machen. Die Familie möchte nicht nur spazieren gehen, sondern selbst auf dem Wasser unterwegs sein.",
+          "prompt": "Familie Tembo möchte am Sonntagnachmittag mit ihren zwei kleinen Kindern einen Ausflug machen. Die Familie möchte nicht nur spazieren gehen, sondern selbst auf dem Wasser unterwegs sein.",
           "answer": "a",
           "evidence": [{ "text": "a", "quote": "Bei uns können Sie Ruderboote und Tretboote für zwei bis fünf Personen mieten." }],
-          "explanation": "a ilanında „Ruderboote und Tretboote für zwei bis fünf Personen“ (iki ile beş kişilik kürekli ve pedallı tekneler) kiralanabiliyor; pazar günü de 10–19 arası açık. Çocuklar için „Schwimmwesten“ (can yelekleri) de ücretsiz. Mbeki ailesi iki küçük çocukla kendisi suda gezmek istiyor. Tuzak c: Orada çocuklar ücretsiz, ama bu bir yürüyüş (Spaziergang) ve cumartesi günü; aile ise pazar günü suda gezmek istiyor."
+          "explanation": "a ilanında „Ruderboote und Tretboote für zwei bis fünf Personen“ (iki ile beş kişilik kürekli ve pedallı tekneler) kiralanabiliyor; pazar günü de 10–19 arası açık. Çocuklar için „Schwimmwesten“ (can yelekleri) de ücretsiz. Tembo ailesi iki küçük çocukla kendisi suda gezmek istiyor. Tuzak e: Bitki pazarı da pazar günü, ama orada çiçek ve bitki satılıyor („verkaufen … Blumen, Kräuter und junge Gemüsepflanzen“); suda gezme yok. Aile ise „selbst auf dem Wasser unterwegs sein“ (kendisi suda gezmek) istiyor."
         },
         {
           "number": 13,
@@ -123,10 +123,10 @@
         {
           "number": 15,
           "type": "zuordnung",
-          "prompt": "Malte möchte seiner Mutter zum Geburtstag etwas für ihre Küche schenken. Er will das Geschenk nicht kaufen, sondern selbst machen. Unter der Woche hat er keine Zeit.",
+          "prompt": "Bjarne möchte seiner Mutter zum Geburtstag etwas für ihre Küche schenken. Er will das Geschenk nicht kaufen, sondern selbst machen. Von Montag bis Freitag arbeitet er in einem Büro.",
           "answer": "d",
           "evidence": [{ "text": "d", "quote": "An einem Samstag und Sonntag lernen Sie, wie man Tassen, Teller und Schüsseln aus Ton macht." }],
-          "explanation": "d ilanındaki kurs cumartesi ve pazar günü: Katılanlar „Tassen, Teller und Schüsseln aus Ton“ (kilden fincan, tabak ve kâse) yapmayı öğreniyor ve „Am Ende nehmen Sie alles mit nach Hause“ (sonunda hepsini eve götürüyorsunuz). Malte annesinin mutfağı için kendi yaptığı bir hediye istiyor ve sadece hafta sonu boş. Tuzak b: Orada da mutfakta bir şey yapılıyor, ama kurs „für Kinder von 12 bis 15 Jahren“ (12–15 yaş arası çocuklar için)."
+          "explanation": "d ilanındaki kurs cumartesi ve pazar günü: Katılanlar „Tassen, Teller und Schüsseln aus Ton“ (kilden fincan, tabak ve kâse) yapmayı öğreniyor ve „Am Ende nehmen Sie alles mit nach Hause“ (sonunda hepsini eve götürüyorsunuz). Bjarne annesinin mutfağı için hediyeyi kendisi yapmak istiyor ve pazartesiden cumaya kadar bir ofiste çalışıyor; kurs ise hafta sonu. Tuzak e: Orada „Kräuter“ (otlar) var, ama bunlar satılıyor („verkaufen“) veya değiş tokuş ediliyor; Bjarne ise hediyeyi „nicht kaufen, sondern selbst machen“ (satın almak değil, kendisi yapmak) istiyor. b de uymuyor: Orada pişirilen yemek kursta birlikte yeniyor („essen danach zusammen“) ve kurs 12–15 yaş arası çocuklar için."
         }
       ]
     }

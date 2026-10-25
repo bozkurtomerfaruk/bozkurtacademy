@@ -548,6 +548,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Ein Fest für alle Nachbarn' },
                   { set: 'set-2', title: 'Neue Busse in der Stadt' },
+                  { set: 'set-3', title: 'Schwimmkurse für Erwachsene' },
+                  { set: 'set-4', title: 'Eine Leihoma für die Familie' },
+                  { set: 'set-5', title: 'Mit dem Zug in den Urlaub' },
                 ]
               }, // Teil 1
               {
@@ -555,6 +558,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Kochen in der Schule' },
                   { set: 'set-2', title: 'Ein Sommer auf dem Bauernhof' },
+                  { set: 'set-3', title: 'Ein Kochkurs für Männer' },
+                  { set: 'set-4', title: 'Ein Kino im Dorf' },
+                  { set: 'set-5', title: 'Jugendliche reparieren Fahrräder' },
                 ]
               }, // Teil 2
               {
@@ -562,6 +568,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Freizeit am Wochenende' },
                   { set: 'set-2', title: 'Wohnung und Umzug' },
+                  { set: 'set-3', title: 'Kurse und Lernen' },
+                  { set: 'set-4', title: 'Essen und Feiern' },
+                  { set: 'set-5', title: 'Arbeit und Nebenjobs' },
                 ]
               }, // Teil 3
             ] },

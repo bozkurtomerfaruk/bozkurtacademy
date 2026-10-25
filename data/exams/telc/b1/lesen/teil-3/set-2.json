@@ -7,7 +7,7 @@
   "set": "set-2",
   "title": "Wohnen und Dienstleistungen",
   "minutes": 30,
-  "context": "In der Lokalzeitung von Kornau finden Sie diese Anzeigen rund um Haus, Wohnung und Alltag.",
+  "context": "In der Lokalzeitung von Elmsweiler finden Sie diese Anzeigen rund um Haus, Wohnung und Alltag.",
   "instructions": "Lesen Sie die Situationen 11–20 und die Anzeigen a–l. Welche Anzeige passt zu welcher Situation? Jede Anzeige kann nur einmal verwendet werden. Für eine Situation gibt es keine passende Anzeige; markieren Sie dann x.",
   "groups": [
     {
@@ -89,7 +89,7 @@
         {
           "id": "j",
           "label": "j",
-          "title": "Verbraucherberatung Kornau: Energie sparen",
+          "title": "Verbraucherberatung Elmsweiler: Energie sparen",
           "paragraphs": [
             "Hohe Heizkosten? Wir schicken Ihnen eine Energieberaterin nach Hause. Sie prüft Heizung, Fenster und Stromverbrauch und zeigt Ihnen, wo Sie sparen können. Für Mieterinnen und Mieter ist der Besuch kostenlos. Termine unter Telefon 05612 40 718."
           ]
@@ -99,7 +99,7 @@
           "label": "k",
           "title": "Wäscherei Hemdglück",
           "paragraphs": [
-            "Keine Zeit zum Bügeln? Wir waschen und bügeln Ihre Hemden und Blusen und reinigen Anzüge und Kleider. Unser Fahrer holt alles bei Ihnen ab und bringt es nach zwei Tagen zurück – in allen Stadtteilen von Kornau. Für Kunden außerhalb der Stadt ist dieser Service leider nicht möglich."
+            "Keine Zeit zum Bügeln? Wir waschen und bügeln Ihre Hemden und Blusen und reinigen Anzüge und Kleider. Unser Fahrer holt alles bei Ihnen ab und bringt es nach zwei Tagen zurück – in allen Stadtteilen von Elmsweiler. Für Kunden außerhalb der Stadt ist dieser Service leider nicht möglich."
           ]
         },
         {
@@ -107,7 +107,7 @@
           "label": "l",
           "title": "Montageservice Schraubwerk",
           "paragraphs": [
-            "Möbel gekauft, aber keine Lust auf den Aufbau? Wir bauen Schränke, Betten, Regale und Küchen aus dem Möbelhaus oder aus dem Internet bei Ihnen zu Hause auf – mit eigenem Werkzeug. Auch Lampen schließen wir an. Einen Termin bekommen Sie innerhalb einer Woche."
+            "Möbel gekauft, aber keine Lust auf den Aufbau? Wir bauen Schränke, Betten, Regale und Küchen aus dem Möbelhaus oder aus dem Internet bei Ihnen zu Hause auf – mit eigenem Werkzeug. Auch Lampen schließen wir an. Bei einem Umzug bauen wir Ihre Möbel ab und in der neuen Wohnung wieder auf. Einen Termin bekommen Sie innerhalb einer Woche."
           ]
         }
       ],
@@ -118,7 +118,7 @@
           "prompt": "Familie Hellwig zieht Ende des Monats in eine andere Stadt. Die bisherige Wohnung soll sauber sein, wenn sie dem Vermieter übergeben wird, aber Herr und Frau Hellwig haben dafür keine Zeit.",
           "answer": "c",
           "evidence": [{ "text": "c", "quote": "Wir reinigen Ihre alte Wohnung gründlich" }, { "text": "c", "quote": "damit Sie sie ohne Ärger an den Vermieter zurückgeben können" }],
-          "explanation": "c ilanındaki temizlik şirketi taşınanların eski evini temizliyor: „Wir reinigen Ihre alte Wohnung gründlich“, böylece ev sahibine sorunsuz teslim edilebiliyor („ohne Ärger an den Vermieter zurückgeben“). Hellwig ailesi taşınıyor ve temizlik için zamanı yok. Tuzak k: Orada da temizlik var, ama sadece giysiler yıkanıyor ve ütüleniyor, ev temizlenmiyor."
+          "explanation": "c ilanındaki temizlik şirketi taşınanların eski evini temizliyor: „Wir reinigen Ihre alte Wohnung gründlich“, böylece ev sahibine sorunsuz teslim edilebiliyor („ohne Ärger an den Vermieter zurückgeben“). Hellwig ailesi taşınıyor ve temizlik için zamanı yok. Tuzak l: Bu servis de taşınmada yardım ediyor, ama sadece mobilyaları söküp yeni evde yeniden kuruyor („bauen wir Ihre Möbel ab und in der neuen Wohnung wieder auf“); eski evi temizlemiyor. Tuzak k: Orada da temizlik var, ama sadece giysiler yıkanıyor ve ütüleniyor, ev temizlenmiyor."
         },
         {
           "number": 12,
@@ -139,10 +139,10 @@
         {
           "number": 14,
           "type": "zuordnung",
-          "prompt": "Sie wohnen in Hohenmoor, einem Dorf etwa 15 Kilometer von Kornau entfernt. Sie suchen eine Reinigung, die Ihre Hemden bei Ihnen abholt und sauber wiederbringt.",
+          "prompt": "Sie wohnen in Krähenstedt, einem Dorf etwa 15 Kilometer von Elmsweiler entfernt. Sie suchen eine Reinigung, die Ihre Hemden bei Ihnen abholt und sauber wiederbringt.",
           "answer": "x",
           "evidence": [{ "text": "k", "quote": "Für Kunden außerhalb der Stadt ist dieser Service leider nicht möglich." }],
-          "explanation": "Tuzak k: Bu çamaşırhane gömlekleri yıkıyor, ütülüyor, evden alıp geri getiriyor; hizmet tam aranan şey. Ama bu servis yalnızca „in allen Stadtteilen von Kornau“ var ve „Für Kunden außerhalb der Stadt ist dieser Service leider nicht möglich.“ Hohenmoor ise Kornau'dan 15 km uzakta bir köy. c ilanı da uymuyor: Orada giysi değil, ev temizleniyor. Bu yüzden cevap x."
+          "explanation": "Tuzak k: Bu çamaşırhane gömlekleri yıkıyor, ütülüyor, evden alıp geri getiriyor; hizmet tam aranan şey. Ama bu servis yalnızca „in allen Stadtteilen von Elmsweiler“ var ve „Für Kunden außerhalb der Stadt ist dieser Service leider nicht möglich.“ Krähenstedt ise Elmsweiler'den 15 km uzakta bir köy. c ilanı da uymuyor: Orada giysi değil, ev temizleniyor. Bu yüzden cevap x."
         },
         {
           "number": 15,

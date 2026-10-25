@@ -35,7 +35,7 @@
           "label": "c",
           "title": "Fotoclub Silberkorn e. V.",
           "paragraphs": [
-            "Wir sind 25 Hobbyfotografen und treffen uns jeden Mittwoch um 19.30 Uhr im Gemeindehaus Kesselbrink. Wir besprechen unsere Bilder, machen gemeinsame Ausflüge und organisieren einmal im Jahr eine Ausstellung. Neue Mitglieder mit eigener Spiegelreflexkamera sind herzlich willkommen. Jahresbeitrag: 40 Euro."
+            "Wir sind 25 Hobbyfotografen und treffen uns jeden Mittwoch um 19.30 Uhr im Gemeindehaus am Ginsterweg. Wir besprechen unsere Bilder, machen gemeinsame Ausflüge und organisieren einmal im Jahr eine Ausstellung. Neue Mitglieder mit eigener Spiegelreflexkamera sind herzlich willkommen. Jahresbeitrag: 40 Euro."
           ]
         },
         {
@@ -43,7 +43,7 @@
           "label": "d",
           "title": "Schwimmschule Delfinbucht",
           "paragraphs": [
-            "Nie richtig schwimmen gelernt? Kein Problem! In unseren Kursen „Schwimmen ab 18“ sind Sie nur unter Erwachsenen. Wir beginnen im flachen Lehrbecken, damit Sie zuerst die Angst vor dem Wasser verlieren. Zehn Termine, dienstags um 20 Uhr im Hallenbad Ostheide."
+            "Nie richtig schwimmen gelernt? Kein Problem! In unseren Kursen „Schwimmen ab 18“ sind Sie nur unter Erwachsenen. Wir beginnen im flachen Lehrbecken, damit Sie zuerst die Angst vor dem Wasser verlieren. Zehn Termine, dienstags um 20 Uhr im Hallenbad am Kranichteich."
           ]
         },
         {
@@ -123,10 +123,10 @@
         {
           "number": 12,
           "type": "zuordnung",
-          "prompt": "Ihr Sohn Jannik ist 14 Jahre alt. In den Herbstferien möchte er lernen, wie man selbst ein Computerspiel programmiert.",
+          "prompt": "Ihr Sohn Lasse ist 14 Jahre alt. In den Herbstferien möchte er lernen, wie man selbst ein Computerspiel programmiert.",
           "answer": "x",
           "evidence": [{ "text": "g", "quote": "Das Angebot ist für Kinder von 8 bis 12 Jahren." }],
-          "explanation": "Tuzak g: Sonbahar tatilinde bilgisayar oyunu yapılan bir kurs var, konu ve zaman uyuyor. Ama „Das Angebot ist für Kinder von 8 bis 12 Jahren.“ – kurs 8–12 yaş arası çocuklar için; Jannik ise 14 yaşında. Diğer ilanlarda programlama yok. j ilanı 12 yaşından büyük gençleri de kabul ediyor, ama orada gitar dersi veriliyor. Bu yüzden cevap x."
+          "explanation": "Tuzak g: Sonbahar tatilinde bilgisayar oyunu yapılan bir kurs var, konu ve zaman uyuyor. Ama „Das Angebot ist für Kinder von 8 bis 12 Jahren.“ – kurs 8–12 yaş arası çocuklar için; Lasse ise 14 yaşında. Diğer ilanlarda programlama yok. j ilanı 12 yaşından büyük gençleri de kabul ediyor, ama orada gitar dersi veriliyor. Bu yüzden cevap x."
         },
         {
           "number": 13,
@@ -163,10 +163,10 @@
         {
           "number": 17,
           "type": "zuordnung",
-          "prompt": "Sie möchten Ihrem Mann zum Geburtstag einen gemeinsamen Kochabend schenken. Er soll sich dafür nicht für mehrere Wochen hintereinander verpflichten müssen.",
+          "prompt": "Sie möchten Ihrem Mann zum Geburtstag einen Kurs schenken, den Sie beide zusammen an einem einzigen Abend besuchen können.",
           "answer": "b",
-          "evidence": [{ "text": "b", "quote": "Jeder Abend ist ein eigener Kurs – Sie buchen also nur den Termin, der Ihnen passt." }, { "text": "b", "quote": "45 Euro pro Person" }],
-          "explanation": "b ilanında cuma akşamları birlikte makarna pişirip yeniyor. „Jeder Abend ist ein eigener Kurs“: her akşam ayrı bir kurs, sadece uygun olan tek bir akşamı rezerve ediyorsunuz; birkaç hafta üst üste gitmek gerekmiyor. Fiyat kişi başı („pro Person“), yani iki kişi birlikte katılabilir."
+          "evidence": [{ "text": "b", "quote": "Jeder Abend ist ein eigener Kurs – Sie buchen also nur den Termin, der Ihnen passt." }, { "text": "b", "quote": "45 Euro pro Person" }, { "text": "i", "quote": "Bald ist Hochzeit?" }],
+          "explanation": "b ilanında cuma akşamları birlikte makarna pişirip yeniyor. „Jeder Abend ist ein eigener Kurs“: her akşam ayrı bir kurs, sadece uygun olan tek bir akşamı rezerve ediyorsunuz. Fiyat kişi başı („pro Person“), yani iki kişi birlikte katılabilir. Tuzak i: Orada da ders yalnızca bir çift için („nur für Sie beide“), ama kurs „an vier Abenden“ (dört akşam) sürüyor ve evlenecek çiftler için („Bald ist Hochzeit?“). Tuzak a ve k: Bunlar da kurs, ama dört cumartesi sabahı veya sekiz pazartesi sürüyor."
         },
         {
           "number": 18,

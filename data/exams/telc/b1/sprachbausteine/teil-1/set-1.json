@@ -20,11 +20,11 @@
           "paragraphs": [
             "Betreff: Bewerbung als Rezeptionistin in Teilzeit – Ihre Anzeige vom 3. September",
             "Sehr geehrte Frau Rautenberg,",
-            "mit großem Interesse habe ich Ihre Anzeige in der „Ostervelder Rundschau“ gelesen, {{21}} Sie eine Rezeptionistin in Teilzeit suchen. Hiermit bewerbe ich mich um diese Stelle.",
-            "Ich bin 27 Jahre alt und komme aus der Türkei. Dort habe ich nach der Schule eine Ausbildung zur Hotelfachfrau {{22}}. Danach war ich vier Jahre an der Rezeption eines Hotels tätig. Dort war ich {{23}} den Empfang der Gäste und die Zimmerbuchungen zuständig. Seit zwei Jahren lebe ich in Ostervelden und arbeite zurzeit an der Kasse eines Supermarkts.",
+            "mit großem Interesse habe ich Ihre Anzeige in der „Talwerder Rundschau“ gelesen, {{21}} Sie eine Rezeptionistin in Teilzeit suchen. Hiermit bewerbe ich mich um diese Stelle.",
+            "Ich bin 27 Jahre alt und komme aus der Türkei. Dort habe ich nach der Schule eine Ausbildung zur Hotelfachfrau {{22}}. Danach war ich vier Jahre an der Rezeption eines Hotels tätig. Dort war ich {{23}} den Empfang der Gäste und die Zimmerbuchungen zuständig. Seit zwei Jahren lebe ich in Talwerden und arbeite zurzeit an der Kasse eines Supermarkts.",
             "Mit Buchungsprogrammen am Computer kann ich sicher umgehen, und ich spreche {{24}} Türkisch und Deutsch auch gut Englisch. Im Moment besuche ich einen Deutschkurs am Abend, {{25}} ich meine Sprachkenntnisse noch verbessern möchte.",
             "Die Arbeit mit Menschen macht mir viel Spaß, und ich bleibe auch ruhig, wenn es einmal stressig wird. Außerdem ist der Weg von meiner Wohnung zu Ihrem Hotel viel {{26}} als zu meiner jetzigen Arbeitsstelle. Ich kann ab dem 1. November bei Ihnen anfangen. Am Wochenende und an Feiertagen zu arbeiten, ist für {{27}} kein Problem.",
-            "Meinen Lebenslauf und meine Zeugnisse {{28}} ich Ihnen im Anhang. Über eine Einladung zu einem Vorstellungsgespräch würde ich {{29}} sehr freuen. Sie erreichen mich am besten nachmittags {{30}} der oben genannten Telefonnummer.",
+            "Meinen Lebenslauf und meine Zeugnisse {{28}} ich Ihnen im Anhang. Über eine Einladung zu einem Vorstellungsgespräch würde ich {{29}} sehr freuen. Sie erreichen mich am besten nachmittags {{30}} der Handynummer in meinem Lebenslauf.",
             "Mit freundlichen Grüßen",
             "Gülşen Tavşancıl"
           ]
@@ -90,7 +90,7 @@
           "type": "abc",
           "prompt": "Lücke 24",
           "options": {
-            "a": "sowohl",
+            "a": "statt",
             "b": "neben",
             "c": "zwischen"
           },
@@ -101,7 +101,7 @@
               "quote": "Türkisch und Deutsch auch gut Englisch"
             }
           ],
-          "explanation": "Gülşen üç dil sayıyor: „Türkisch und Deutsch auch gut Englisch“. „auch“ (ayrıca, -de) burada „neben“ ile birlikte kullanılır: „neben Türkisch und Deutsch auch gut Englisch“ = Türkçe ve Almancanın yanında İngilizceyi de iyi konuşuyorum. a) sowohl yanlış: „sowohl“ her zaman „als auch“ ile kullanılır („sowohl … als auch …“); metinde ise „und … auch“ var. c) zwischen yanlış: „zwischen“ (arasında) iki şeyin arasındaki yeri veya seçimi gösterir; dil bilmeyi anlatan bu cümlede anlamsızdır."
+          "explanation": "Gülşen üç dil sayıyor: „Türkisch und Deutsch auch gut Englisch“. „auch“ (ayrıca, -de) burada „neben“ ile birlikte kullanılır: „neben Türkisch und Deutsch auch gut Englisch“ = Türkçe ve Almancanın yanında İngilizceyi de iyi konuşuyorum. a) statt yanlış: „statt“ (yerine) bir şeyin yerine başka bir şeyi koyar; ama „auch“ (de) Türkçe ve Almancanın da konuşulduğunu, İngilizcenin bunlara eklendiğini gösterir. „Türkçe ve Almanca yerine İngilizceyi de konuşuyorum“ anlamsızdır. c) zwischen yanlış: „zwischen“ (arasında) iki şeyin arasındaki yeri veya seçimi gösterir; dil bilmeyi anlatan bu cümlede anlamsızdır."
         },
         {
           "number": 25,
@@ -206,10 +206,10 @@
           "evidence": [
             {
               "text": "brief",
-              "quote": "der oben genannten Telefonnummer"
+              "quote": "der Handynummer in meinem Lebenslauf"
             }
           ],
-          "explanation": "Telefon numarasıyla ulaşmak Almancada „unter“ edatıyla söylenir: „jemanden unter einer Telefonnummer erreichen“. Burada: „unter der oben genannten Telefonnummer“ = yukarıda belirtilen telefon numarasından. b) bei yanlış: „bei“ bir kişi veya yer için kullanılır (ör. „bei Ihnen anfangen“); bir numara için kullanılmaz. c) mit yanlış: „mit der Telefonnummer erreichen“ Almancada kalıplaşmış bir ifade değildir; numara için „unter“ gerekir."
+          "explanation": "Telefon numarasıyla ulaşmak Almancada „unter“ edatıyla söylenir: „jemanden unter einer Telefonnummer erreichen“. Burada: „unter der Handynummer in meinem Lebenslauf“ = özgeçmişimdeki cep telefonu numarasından. b) bei yanlış: „bei“ bir kişi veya yer için kullanılır (ör. „bei Ihnen anfangen“); bir numara için kullanılmaz. c) mit yanlış: „mit der Telefonnummer erreichen“ Almancada kalıplaşmış bir ifade değildir; numara için „unter“ gerekir."
         }
       ]
     }

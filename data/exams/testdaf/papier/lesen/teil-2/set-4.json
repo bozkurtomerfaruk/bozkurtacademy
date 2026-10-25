@@ -1,0 +1,237 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "papier",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-4",
+  "title": "Die Mathematik des Vogelschwarms",
+  "minutes": 20,
+  "context": "Sie lesen in einem populärwissenschaftlichen Magazin einen Artikel über die Erforschung von Vogelschwärmen.",
+  "instructions": "Lesen Sie den Text und die Aufgaben 11 bis 20. Wählen Sie bei jeder Aufgabe die richtige Lösung (a, b oder c).",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Die Mathematik des Vogelschwarms",
+          "byline": "Von Jana Liebscher",
+          "paragraphs": [
+            "Kurz vor Sonnenuntergang steigt über dem Schilfgürtel eine dunkle Wolke auf. Zehntausende Stare ziehen sich zusammen, dehnen sich zu einem langen Band, falten sich wie ein Tuch im Wind. Einen Anführer gibt es nicht, und kein Vogel überblickt das Ganze. Für den Physiker Tamino Werlach von der Universität Ostrinden ist das eines der elegantesten Rätsel der Statistik: Wie entsteht eine Ordnung, die Tausende Tiere umfasst, wenn jedes einzelne nur auf seine unmittelbare Umgebung reagiert?",
+            "Computersimulationen, die seit den 1980er-Jahren entwickelt wurden, kamen mit drei Regeln aus: Abstand zum Nachbarn halten, die eigene Flugrichtung an die der anderen angleichen, nicht den Anschluss verlieren. Die so erzeugten Bilder sahen täuschend echt aus. Ob wirkliche Vögel nach diesen Regeln fliegen, konnte allerdings niemand sagen, denn dreidimensionale Daten aus echten Schwärmen gab es nicht. Werlachs Team hat diese Lücke geschlossen. Mit mehreren synchronisierten Hochgeschwindigkeitskameras auf Hausdächern rekonstruierte es die Positionen von bis zu 3000 Vögeln, Bild für Bild.",
+            "Das wichtigste Ergebnis betrifft die Frage, nach wem sich ein Star richtet. Nicht nach allen Artgenossen innerhalb eines bestimmten Umkreises, wie viele Modelle angenommen hatten, sondern nach einer festen Zahl von Nachbarn – in Werlachs Daten meist fünf bis neun –, ganz gleich, ob diese dicht neben ihm fliegen oder in größerer Entfernung. „Ein Star zählt gewissermaßen, statt zu messen“, sagt Werlach. Der Vorteil zeige sich, wenn sich der Schwarm auflockere: Bei einer Regel, die auf Entfernung beruht, verlöre mancher Vogel plötzlich jeden Kontakt, und der Schwarm zerfiele. So aber bleibt jeder Vogel mit anderen verbunden, auch wenn die Lücken größer werden.",
+            "Bemerkenswert ist auch, wie schnell sich eine Richtungsänderung fortpflanzt. Schwenkt ein Vogel am Rand ab, erfasst die Bewegung binnen Sekundenbruchteilen den gesamten Schwarm, und zwar unabhängig von dessen Größe. Physikern ist diese Eigenschaft von Materialien bekannt, die sich an einem Phasenübergang befinden, etwa einem Magneten an der Grenze zwischen geordnetem und ungeordnetem Zustand. Auch der Schwarm hält sich offenbar genau in diesem Bereich: Eine kleine Störung kann ihn als Ganzes erreichen, ohne dass seine Ordnung erstarrt oder ins Chaos kippt.",
+            "Wozu das gut ist, zeigt sich, wenn ein Wanderfalke angreift. Dann laufen dunkle Bänder durch die Wolke, weil einzelne Vögel kurz zur Seite kippen und dabei ihre dunklere Flügelunterseite zeigen. Die Biologin Leonie Dornquist, die solche Angriffe seit Jahren filmt, hat gemessen, dass sich diese Wellen weit schneller durch den Schwarm bewegen, als ein Star fliegen könnte. Der Schwarm reißt dabei nicht auseinander, sondern weicht als Ganzes aus.",
+            "In großen Schwärmen, so Dornquists Beobachtungen, enden Angriffe deutlich seltener mit Beute. Dennoch warnt sie davor, das abendliche Schauspiel allein mit Greifvögeln zu erklären. Warum sich Stare überhaupt in der Dämmerung versammeln, sei weiterhin offen. Vermutet werde, dass sie Wärme suchen oder Informationen über ergiebige Futterplätze austauschen; belastbare Daten dazu gebe es bislang kaum.",
+            "Ingenieure interessieren sich vor allem für die Regeln selbst. Matteo Tavernaro von der Hochschule Brüggenau hat sie auf Drohnenschwärme übertragen, die etwa nach Überschwemmungen große Gebiete absuchen sollen. Drohnen, die sich nur mit ihren nächsten Nachbarn abstimmen, brauchen keine zentrale Funkverbindung zu einer Bodenstation, und fällt eine aus, fliegen die übrigen weiter. Anfangs geriet der Schwarm jedoch immer wieder ins Schlingern. Drohnen haben keine Augen; sie tauschen Positionsdaten per Funk aus, und schon eine Verzögerung von Sekundenbruchteilen brachte die Formation durcheinander. Stabil flogen die Geräte erst, als sie die Bewegung ihrer Nachbarn vorausberechneten.",
+            "Eine Grenze der Übertragbarkeit zeigen Werlachs Aufnahmen vom Rand des Schwarms. Stare, die außen fliegen, drängen häufiger nach innen, offenbar weil Greifvögel dort am ehesten zuschlagen. Die Flugrichtung des Schwarms bestimmen sie damit nicht, doch ihre Position ist alles andere als zufällig. Ein Schwarm, folgert Tavernaro, sei keine Maschine aus gleichartigen Bauteilen: Jeder Vogel versuche zugleich, selbst zu überleben. Seine Drohnen kennen einen solchen Konflikt nicht, sie sind untereinander austauschbar.",
+            "Manche Biologen werfen der Physik vor, Tiere wie Teilchen zu behandeln. Werlach weist das zurück. Das Modell behaupte nicht, dass ein Star denke wie ein Eisenatom; es zeige lediglich, wie wenige Regeln genügten, um ein solches Muster hervorzubringen. Was ein Vogel tatsächlich wahrnehme und wie er entscheide, müsse die Verhaltensbiologie klären.",
+            "Als Nächstes möchte Werlachs Gruppe die Methode auf Fischschwärme übertragen. Das Problem sei dabei nicht die Zahl der Tiere, sondern die Sicht: In trübem Wasser erfassen die Kameras nur einen kleinen Ausschnitt des Schwarms. Ob Fische denselben Regeln folgen wie Stare, ist deshalb noch völlig offen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "abc",
+          "prompt": "Was macht das Verhalten der Stare für Werlach wissenschaftlich so interessant?",
+          "options": {
+            "a": "Ein erfahrener Leitvogel gibt dem Schwarm die Richtung vor.",
+            "b": "Jeder Vogel behält den gesamten Schwarm im Blick.",
+            "c": "Ein geordnetes Gesamtmuster entsteht ohne zentrale Steuerung."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Einen Anführer gibt es nicht, und kein Vogel überblickt das Ganze"
+            }
+          ],
+          "explanation": "Sürünün bir lideri yok ve hiçbir kuş bütünü görmüyor („Einen Anführer gibt es nicht, und kein Vogel überblickt das Ganze“); yine de binlerce hayvanı kapsayan bir düzen oluşuyor. a) yanlış: Lider kuş yok. b) yanlış: Her kuş yalnızca yakın çevresine tepki veriyor („nur auf seine unmittelbare Umgebung“)."
+        },
+        {
+          "number": 11,
+          "type": "abc",
+          "prompt": "Die frühen Computermodelle hatten laut Text die Schwäche, dass …",
+          "options": {
+            "a": "sie keine realistisch wirkenden Flugbilder hervorbrachten.",
+            "b": "sie auf einer Vielzahl komplizierter Regeln beruhten.",
+            "c": "sich nicht prüfen ließ, ob echte Vögel tatsächlich so vorgehen."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "konnte allerdings niemand sagen, denn dreidimensionale Daten aus echten Schwärmen gab es nicht"
+            }
+          ],
+          "explanation": "Gerçek kuşların bu kurallara göre uçup uçmadığını kimse söyleyemiyordu, çünkü gerçek sürülerden üç boyutlu veri yoktu („dreidimensionale Daten aus echten Schwärmen gab es nicht“). a) yanlış: Üretilen görüntüler şaşırtıcı derecede gerçekçiydi („täuschend echt“). b) yanlış: Modeller yalnızca üç kuralla yetiniyordu („kamen mit drei Regeln aus“)."
+        },
+        {
+          "number": 12,
+          "type": "abc",
+          "prompt": "Welchen Vorteil hat es laut Werlach, dass sich ein Star an einer bestimmten Anzahl von Nachbarn orientiert?",
+          "options": {
+            "a": "Der Vogel nimmt dadurch auch weit entfernte Teile des Schwarms unmittelbar wahr.",
+            "b": "Der Zusammenhalt bleibt erhalten, selbst wenn der Schwarm weniger dicht wird.",
+            "c": "Der Vogel muss umso weniger Artgenossen beachten, je enger der Schwarm fliegt."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "So aber bleibt jeder Vogel mit anderen verbunden, auch wenn die Lücken größer werden"
+            }
+          ],
+          "explanation": "Sürü seyreldiğinde mesafeye dayalı bir kuralda bazı kuşlar bağlantıyı kaybeder ve sürü dağılırdı; sabit sayıda komşuya bakıldığında ise boşluklar büyüse de her kuş başkalarına bağlı kalıyor („auch wenn die Lücken größer werden“). a) yanlış: Kuş yalnızca beş ila dokuz komşuya ve yakın çevresine bakıyor, bütün sürüyü görmüyor. c) yanlış: Sayı, komşular yakında ya da uzakta olsun aynı kalıyor („ganz gleich, ob …“)."
+        },
+        {
+          "number": 13,
+          "type": "abc",
+          "prompt": "Der Vergleich mit Materialien an einem Phasenübergang soll verdeutlichen, dass …",
+          "options": {
+            "a": "eine geringfügige Störung in beiden Fällen das gesamte System erfassen kann.",
+            "b": "der Schwarm ähnlich wie ein Kristall eine starre Ordnung annimmt.",
+            "c": "sich Richtungswechsel in großen Schwärmen langsamer ausbreiten als in kleinen."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Eine kleine Störung kann ihn als Ganzes erreichen"
+            }
+          ],
+          "explanation": "Faz geçişindeki malzemeler gibi sürüde de küçük bir bozulma bütün sisteme ulaşabiliyor („Eine kleine Störung kann ihn als Ganzes erreichen“). b) yanlış: Düzen donup kalmıyor („ohne dass seine Ordnung erstarrt“). c) yanlış: Yön değişikliği sürünün büyüklüğünden bağımsız olarak saniyenin kesirleri içinde bütün sürüye yayılıyor („unabhängig von dessen Größe“)."
+        },
+        {
+          "number": 14,
+          "type": "abc",
+          "prompt": "Über die dunklen Bänder, die bei einem Falkenangriff durch den Schwarm laufen, erfährt man, dass …",
+          "options": {
+            "a": "sie entstehen, weil die Vögel an diesen Stellen enger zusammenrücken.",
+            "b": "sie sich rascher fortbewegen, als es einem einzelnen Vogel möglich wäre.",
+            "c": "sie ein Anzeichen dafür sind, dass der Schwarm auseinanderzubrechen droht."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "weit schneller durch den Schwarm bewegen, als ein Star fliegen könnte"
+            }
+          ],
+          "explanation": "Dornquist bu dalgaların sürü içinde bir sığırcığın uçabileceğinden çok daha hızlı ilerlediğini ölçmüş („weit schneller …, als ein Star fliegen könnte“). a) yanlış: Bantlar kuşların sıkışmasından değil, kısa süre yana yatıp koyu kanat altlarını göstermelerinden oluşuyor. c) yanlış: Sürü dağılmıyor, bütün olarak kaçıyor („reißt dabei nicht auseinander“)."
+        },
+        {
+          "number": 15,
+          "type": "abc",
+          "prompt": "Was ist nach Dornquist noch ungeklärt?",
+          "options": {
+            "a": "Weshalb Stare sich am Abend überhaupt zu Schwärmen zusammenfinden.",
+            "b": "Ob die Größe eines Schwarms den Jagderfolg der Falken beeinflusst.",
+            "c": "Ob sich die Bänder im Schwarm tatsächlich bei Angriffen von Greifvögeln bilden."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "sei weiterhin offen"
+            }
+          ],
+          "explanation": "Dornquist’e göre sığırcıkların neden alacakaranlıkta bir araya geldiği hâlâ açık („sei weiterhin offen“); sıcaklık ya da besin yeri bilgisi tahmin ediliyor ama güvenilir veri yok. b) yanlış: Büyük sürülerde saldırıların belirgin biçimde daha az av ile sonuçlandığını gözlemlemiş. c) yanlış: Bantların şahin saldırısında oluştuğunu yıllardır filme alıyor ve ölçüyor."
+        },
+        {
+          "number": 16,
+          "type": "abc",
+          "prompt": "Bei Tavernaros Drohnenschwärmen bestand anfangs das Problem, dass …",
+          "options": {
+            "a": "der Ausfall eines einzelnen Geräts den ganzen Schwarm lahmlegte.",
+            "b": "die Verbindung zur zentralen Bodenstation immer wieder abriss.",
+            "c": "die Angaben der benachbarten Drohnen zu spät eintrafen, um stabil zu fliegen."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "schon eine Verzögerung von Sekundenbruchteilen brachte die Formation durcheinander"
+            }
+          ],
+          "explanation": "Dronlar konum verilerini telsizle paylaşıyor ve saniyenin kesirleri kadar bir gecikme bile düzeni bozuyordu („schon eine Verzögerung von Sekundenbruchteilen …“). a) yanlış: Bir dron arızalanınca diğerleri uçmaya devam ediyor. b) yanlış: Bu dronlar yer istasyonuna merkezi bir telsiz bağlantısına ihtiyaç duymuyor („brauchen keine zentrale Funkverbindung“)."
+        },
+        {
+          "number": 17,
+          "type": "abc",
+          "prompt": "Aus den Aufnahmen vom Rand des Schwarms schließt Tavernaro, dass …",
+          "options": {
+            "a": "die außen fliegenden Vögel die Richtung des gesamten Schwarms festlegen.",
+            "b": "Stare ihre Position innerhalb des Schwarms dem Zufall überlassen.",
+            "c": "die Vögel neben den Schwarmregeln auch eigene Interessen verfolgen."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Jeder Vogel versuche zugleich, selbst zu überleben"
+            }
+          ],
+          "explanation": "Dışta uçan sığırcıklar daha sık içeri doğru itiyor; Tavernaro buradan sürünün aynı parçalardan oluşan bir makine olmadığı, her kuşun aynı zamanda kendi hayatta kalmaya çalıştığı sonucunu çıkarıyor („Jeder Vogel versuche zugleich, selbst zu überleben“). a) yanlış: Sürünün yönünü onlar belirlemiyor („bestimmen sie damit nicht“). b) yanlış: Konumları hiç de rastgele değil („alles andere als zufällig“)."
+        },
+        {
+          "number": 18,
+          "type": "abc",
+          "prompt": "Auf den Vorwurf, die Physik behandle Tiere wie Teilchen, entgegnet Werlach, dass …",
+          "options": {
+            "a": "das Modell nur zeigen wolle, mit welch geringem Regelwerk sich das Muster erzeugen lässt.",
+            "b": "Vögel tatsächlich nach ähnlich einfachen Prinzipien funktionierten wie Eisenatome.",
+            "c": "Wahrnehmung und Entscheidungen der Vögel für die Schwarmforschung unerheblich seien."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "es zeige lediglich, wie wenige Regeln genügten"
+            }
+          ],
+          "explanation": "Werlach’a göre model, böyle bir deseni oluşturmak için ne kadar az kuralın yettiğini gösteriyor, o kadar („es zeige lediglich, wie wenige Regeln genügten“). b) yanlış: Model bir sığırcığın demir atomu gibi düşündüğünü iddia etmiyor. c) yanlış: Kuşun ne algıladığını ve nasıl karar verdiğini davranış biyolojisinin açıklaması gerektiğini söylüyor; yani bu sorular önemli."
+        },
+        {
+          "number": 19,
+          "type": "abc",
+          "prompt": "Die Übertragung der Messmethode auf Fischschwärme ist schwierig, weil …",
+          "options": {
+            "a": "Fische nachweislich anderen Regeln folgen als Stare.",
+            "b": "die Kameras unter Wasser nur einen Teil der Tiere erfassen können.",
+            "c": "Fischschwärme aus zu vielen Tieren bestehen, um sie einzeln zu verfolgen."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "In trübem Wasser erfassen die Kameras nur einen kleinen Ausschnitt des Schwarms"
+            }
+          ],
+          "explanation": "Sorun görüş: Bulanık suda kameralar sürünün yalnızca küçük bir bölümünü kaydedebiliyor („nur einen kleinen Ausschnitt“). a) yanlış: Balıkların aynı kurallara uyup uymadığı henüz tamamen açık („noch völlig offen“). c) yanlış: Sorun hayvan sayısı değil („nicht die Zahl der Tiere“)."
+        },
+        {
+          "number": 20,
+          "type": "abc",
+          "prompt": "Was will der Text vor allem zeigen?",
+          "options": {
+            "a": "Die Schwarmforschung liefert zwar elegante Modelle, für technische Anwendungen hat sie bislang aber keinen Nutzen gebracht.",
+            "b": "Einfache Regeln für den Umgang mit wenigen Nachbarn erklären viel an der Ordnung im Schwarm, ohne alle Fragen zum Verhalten der Vögel zu beantworten.",
+            "c": "Stare richten sich im Schwarm nach einem erfahrenen Leittier, dessen Signale sich wellenartig ausbreiten."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "müsse die Verhaltensbiologie klären"
+            }
+          ],
+          "explanation": "Metin, her kuşun birkaç komşusuna göre davranmasının sürünün düzenini açıkladığını gösteriyor; ama sürülerin neden oluştuğu, kenardaki kuşların çıkarları veya kuşun ne algıladığı gibi soruların davranış biyolojisine kaldığını da vurguluyor („müsse die Verhaltensbiologie klären“). a) yanlış: Kurallar dron sürülerine aktarıldı ve dronlar sonunda istikrarlı uçtu. c) yanlış: Sürünün lideri yok; dalgalar şahin saldırısında yana yatan kuşlardan oluşuyor."
+        }
+      ]
+    }
+  ]
+}

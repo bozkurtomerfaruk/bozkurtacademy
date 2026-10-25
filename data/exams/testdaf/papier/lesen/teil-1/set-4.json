@@ -1,0 +1,260 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "papier",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-4",
+  "title": "Angebote der Universitätsbibliothek",
+  "minutes": 10,
+  "context": "Sie studieren an der Universität Kranzbühl und kennen sich in der Universitätsbibliothek gut aus. Bekannte und Kommilitonen fragen Sie, welches Angebot der Bibliothek ihnen weiterhelfen kann. Auf der Website der Bibliothek finden Sie die folgenden Informationen.",
+  "instructions": "Lesen Sie die Angebote A bis H und die Aufgaben 1 bis 10. Welches Angebot passt zu welcher Person? Jedes Angebot kann nur einmal gewählt werden. Gibt es für eine Person kein passendes Angebot, wählen Sie I. Das Angebot aus Beispiel 01 kann nicht mehr gewählt werden.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": "I",
+      "texts": [
+        {
+          "id": "a",
+          "label": "A",
+          "title": "Bibliothek kennenlernen: Rundgänge für Neue",
+          "paragraphs": [
+            "In den ersten beiden Wochen der Vorlesungszeit bietet die Universitätsbibliothek täglich um 11 und um 15 Uhr einstündige Rundgänge an. Sie erfahren, wo Sie welche Bestände finden, wie Sie Bücher ausleihen und verlängern und welche Lernplätze es gibt. Eine Anmeldung ist nicht nötig; Treffpunkt ist die Information im Erdgeschoss. Für internationale Studierende finden die Rundgänge mittwochs auch auf Englisch statt. Fachspezifische Einführungen vereinbaren Sie mit Ihrer Fachreferentin oder Ihrem Fachreferenten."
+          ]
+        },
+        {
+          "id": "b",
+          "label": "B",
+          "title": "Fernleihe: Literatur aus anderen Bibliotheken",
+          "paragraphs": [
+            "Ist ein Titel in unserem Bestand nicht vorhanden, können Sie ihn über die Fernleihe aus einer anderen Bibliothek in Deutschland bestellen. Pro Bestellung wird eine Gebühr von 1,50 Euro fällig; die Lieferzeit beträgt in der Regel ein bis drei Wochen. Bücher leihen Sie wie gewohnt aus, einzelne Zeitschriftenaufsätze erhalten Sie dagegen als Kopie, die Sie behalten dürfen. Vollständige Zeitschriftenjahrgänge und Zeitungen sind von der Fernleihe allerdings ausgeschlossen."
+          ]
+        },
+        {
+          "id": "c",
+          "label": "C",
+          "title": "Gruppenarbeitsräume",
+          "paragraphs": [
+            "Für gemeinsames Lernen stehen im zweiten Obergeschoss zwölf schallisolierte Räume für zwei bis sechs Personen zur Verfügung. Jeder Raum ist mit einem Whiteboard und einem großen Bildschirm ausgestattet, an den Sie Ihren Laptop anschließen können. Buchen können Sie die Räume über das Reservierungssystem bis zu sieben Tage im Voraus, höchstens drei Stunden pro Tag. Wird ein Raum nicht innerhalb von 15 Minuten nach Beginn der Buchung belegt, geben wir ihn für andere frei."
+          ]
+        },
+        {
+          "id": "d",
+          "label": "D",
+          "title": "Kurse: Literatur verwalten mit Software",
+          "paragraphs": [
+            "Wer für eine Abschlussarbeit Hunderte Quellen sammelt, verliert schnell den Überblick. In unseren 90-minütigen Kursen lernen Sie, wie Sie mit Literaturverwaltungsprogrammen Titel aus Katalogen und Datenbanken übernehmen, Notizen zuordnen und Literaturverzeichnisse in jedem gewünschten Zitierstil automatisch erstellen lassen. Die Kurse finden jeden Donnerstag im Schulungsraum statt und sind kostenlos; bitte bringen Sie einen eigenen Laptop mit. Unterrichtssprache ist ausschließlich Deutsch, eine englischsprachige Version ist derzeit nicht geplant."
+          ]
+        },
+        {
+          "id": "e",
+          "label": "E",
+          "title": "Lesesaal Historische Sammlungen",
+          "paragraphs": [
+            "Handschriften, Nachlässe und Drucke aus der Zeit vor 1850 können Sie im Lesesaal der Historischen Sammlungen einsehen. Bitte bestellen Sie die gewünschten Bände mindestens zwei Werktage vorher über den Katalog. Da es sich um wertvolle Einzelstücke handelt, dürfen sie nur im Lesesaal benutzt und nicht ausgeliehen werden. Fotografieren für private und wissenschaftliche Zwecke ist ohne Blitz erlaubt; hochauflösende Digitalisate fertigen wir gegen Gebühr an. Geöffnet ist der Lesesaal montags bis freitags von 9 bis 17 Uhr."
+          ]
+        },
+        {
+          "id": "f",
+          "label": "F",
+          "title": "Open Access: der Publikationsfonds",
+          "paragraphs": [
+            "Die Universitätsbibliothek unterstützt Angehörige der Universität Kranzbühl dabei, ihre Forschungsergebnisse frei zugänglich zu veröffentlichen. Aus dem Publikationsfonds übernehmen wir Gebühren für Aufsätze in Open-Access-Zeitschriften bis zu 2.000 Euro, sofern die Autorin oder der Autor für die Korrespondenz mit der Zeitschrift verantwortlich ist. Gefördert werden ausschließlich Zeitschriftenartikel; für Monografien und Sammelbände stehen keine Mittel zur Verfügung. Wir beraten Sie außerdem zu Verlagsverträgen und Zweitveröffentlichungsrechten."
+          ]
+        },
+        {
+          "id": "g",
+          "label": "G",
+          "title": "Barrierefreie Arbeitsplätze",
+          "paragraphs": [
+            "Im Erdgeschoss neben der Information befinden sich zwei Arbeitsplätze für Studierende mit Seh- oder Lesebeeinträchtigung. Sie sind mit Vergrößerungssoftware, einer Braillezeile und einem Programm ausgestattet, das Texte von eingescannten Seiten in gesprochene Sprache umwandelt. Die Plätze können stundenweise reserviert werden; den Schlüssel erhalten Sie an der Information gegen Vorlage Ihres Studierendenausweises. Auf Wunsch erklären Ihnen unsere Mitarbeiterinnen und Mitarbeiter die Geräte bei der ersten Nutzung."
+          ]
+        },
+        {
+          "id": "h",
+          "label": "H",
+          "title": "Medienwerkstatt im Untergeschoss",
+          "paragraphs": [
+            "In der Medienwerkstatt können Studierende eigene Medienprojekte umsetzen, etwa für Seminare oder Ausstellungen. Zur Verfügung stehen eine Aufnahmekabine mit professionellen Mikrofonen für Podcasts und Hörbeiträge, ein Videoschnittplatz sowie zwei 3D-Drucker. Vor der ersten Nutzung ist eine kurze Einweisung durch das Werkstattteam vorgeschrieben, die jeden Dienstagnachmittag angeboten wird. Die Nutzung der Geräte ist kostenlos, Druckmaterial wird zum Selbstkostenpreis abgerechnet."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": "01",
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "ein Kommilitone im ersten Semester, der sich im Gebäude noch nicht zurechtfindet und sich vor Ort zeigen lassen möchte, wie man Bücher mit nach Hause nehmen kann",
+          "answer": "A",
+          "evidence": [
+            {
+              "text": "a",
+              "quote": "wie Sie Bücher ausleihen und verlängern"
+            }
+          ],
+          "explanation": "A ilanında dönemin ilk iki haftasında kütüphane turları yapılır; katılanlar kaynakların nerede olduğunu ve „wie Sie Bücher ausleihen und verlängern“ (kitapları nasıl ödünç alıp süresini uzatacaklarını) öğrenir. Binayı henüz tanımayan ve ödünç almayı yerinde görmek isteyen birinci dönem öğrencisine bu uyar. A örnekte kullanıldığı için başka bir kişiye seçilemez."
+        },
+        {
+          "number": "02",
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "eine Masterstudentin der Medizingeschichte, die einen kompletten Jahrgang einer Ärztezeitschrift aus den 1970er-Jahren durchsehen muss, den es in Kranzbühl nicht gibt",
+          "answer": "I",
+          "evidence": [
+            {
+              "text": "b",
+              "quote": "Vollständige Zeitschriftenjahrgänge und Zeitungen sind von der Fernleihe allerdings ausgeschlossen."
+            }
+          ],
+          "explanation": "B ilanı kütüphanede olmayan kaynakları başka kütüphanelerden getirttiği için cazip görünür. Ama „Vollständige Zeitschriftenjahrgänge und Zeitungen sind von der Fernleihe allerdings ausgeschlossen“ (bir derginin tam yıllık ciltleri ve gazeteler kütüphaneler arası ödünç hizmetinin dışındadır). Öğrenci bir derginin bütün bir yılını istediği için B uymaz; cevap I."
+        },
+        {
+          "number": 1,
+          "type": "zuordnung",
+          "prompt": "ein Historiker, der ein Kräuterbuch aus dem 17. Jahrhundert aus dem Bestand der Bibliothek für einige Tage mit nach Hause nehmen möchte, um es dort in Ruhe zu studieren",
+          "answer": "I",
+          "evidence": [
+            {
+              "text": "e",
+              "quote": "dürfen sie nur im Lesesaal benutzt und nicht ausgeliehen werden"
+            }
+          ],
+          "explanation": "E ilanı 1850'den önceki baskıları sunduğu için cazip görünür; 17. yüzyıldan bir kitap da bunlardandır. Ama bu değerli parçalar „dürfen sie nur im Lesesaal benutzt und nicht ausgeliehen werden“ (yalnızca okuma salonunda kullanılabilir, ödünç verilmez). Tarihçi kitabı eve götürmek istediği için E uymaz; cevap I."
+        },
+        {
+          "number": 2,
+          "type": "zuordnung",
+          "prompt": "ein Student mit einer erheblichen Sehschwäche, der Fachtexte nur bewältigen kann, wenn die Schrift deutlich größer dargestellt wird oder er sie sich vorlesen lässt",
+          "answer": "G",
+          "evidence": [
+            {
+              "text": "g",
+              "quote": "Arbeitsplätze für Studierende mit Seh- oder Lesebeeinträchtigung"
+            },
+            {
+              "text": "g",
+              "quote": "das Texte von eingescannten Seiten in gesprochene Sprache umwandelt"
+            }
+          ],
+          "explanation": "G ilanında „Studierende mit Seh- oder Lesebeeinträchtigung“ (görme veya okuma güçlüğü olan öğrenciler) için çalışma yerleri vardır. Bu yerlerde büyütme yazılımı ve taranan sayfaları „in gesprochene Sprache umwandelt“ (sesli dile çeviren) bir program bulunur. Yazıyı büyük görmek veya metni dinlemek zorunda olan öğrenciye bu uyar."
+        },
+        {
+          "number": 3,
+          "type": "zuordnung",
+          "prompt": "ein Masterstudent kurz vor der Abgabe seiner Thesis, der die Angaben in seiner Bibliografie nicht mehr von Hand an die formalen Vorgaben seines Instituts anpassen möchte",
+          "answer": "D",
+          "evidence": [
+            {
+              "text": "d",
+              "quote": "Literaturverzeichnisse in jedem gewünschten Zitierstil automatisch erstellen lassen"
+            }
+          ],
+          "explanation": "D ilanındaki kurslarda kaynak yönetim programlarıyla „Literaturverzeichnisse in jedem gewünschten Zitierstil automatisch erstellen lassen“ (kaynakçayı istenen her atıf biçiminde otomatik oluşturmak) öğretilir. Kaynakçasını elle enstitüsünün kurallarına göre düzenlemek istemeyen öğrenciye bu uyar. Kurs Almanca olduğu için öğrencinin dili konusunda bir sorun da belirtilmemiştir."
+        },
+        {
+          "number": 4,
+          "type": "zuordnung",
+          "prompt": "eine Gastforscherin aus Chile, die kaum Deutsch versteht und sich zeigen lassen möchte, wie man Fachliteratur mithilfe eines Computerprogramms ordnet",
+          "answer": "I",
+          "evidence": [
+            {
+              "text": "d",
+              "quote": "Unterrichtssprache ist ausschließlich Deutsch"
+            }
+          ],
+          "explanation": "D ilanı kaynakları bir yazılımla düzenlemeyi öğrettiği için cazip görünür. Ancak „Unterrichtssprache ist ausschließlich Deutsch“ (ders dili yalnızca Almancadır) ve İngilizce bir kurs da planlanmamaktadır. Konuk araştırmacı Almanca neredeyse hiç anlamadığı için D uymaz; cevap I."
+        },
+        {
+          "number": 5,
+          "type": "zuordnung",
+          "prompt": "drei Kommilitoninnen, die ihr gemeinsames Referat proben und dabei ihre Präsentation auf einer großen Anzeige durchgehen möchten, ohne andere Lernende zu stören",
+          "answer": "C",
+          "evidence": [
+            {
+              "text": "c",
+              "quote": "zwölf schallisolierte Räume für zwei bis sechs Personen"
+            },
+            {
+              "text": "c",
+              "quote": "großen Bildschirm ausgestattet, an den Sie Ihren Laptop anschließen können"
+            }
+          ],
+          "explanation": "C ilanında iki ile altı kişilik „schallisolierte Räume“ (ses yalıtımlı odalar) vardır; her odada dizüstü bilgisayarın bağlanabildiği büyük bir ekran („großen Bildschirm“) bulunur. Üç kişi bu sayıya uyar; ses geçirmeyen odada başkalarını rahatsız etmeden sunumlarını ekranda prova edebilirler. H'de de ses kabini vardır ama ses kaydı için mikrofonlar sunar, grup sunumu için ekran değil."
+        },
+        {
+          "number": 6,
+          "type": "zuordnung",
+          "prompt": "eine Studentin der Kunstgeschichte, die für ihr Referat eine Reisebeschreibung von 1780 aus dem Bestand der Bibliothek genauer betrachten und einige Abbildungen mit ihrem Smartphone festhalten möchte",
+          "answer": "E",
+          "evidence": [
+            {
+              "text": "e",
+              "quote": "Drucke aus der Zeit vor 1850"
+            },
+            {
+              "text": "e",
+              "quote": "Fotografieren für private und wissenschaftliche Zwecke ist ohne Blitz erlaubt"
+            }
+          ],
+          "explanation": "E ilanında „Drucke aus der Zeit vor 1850“ (1850'den önceki baskılar) okuma salonunda incelenebilir; 1780 tarihli bir kitap da bunlardandır. Ayrıca „Fotografieren … ist ohne Blitz erlaubt“ (flaşsız fotoğraf çekmek serbesttir) denir. Kitabı yerinde inceleyip birkaç resmin fotoğrafını cep telefonuyla çekmek isteyen öğrenciye bu uyar; kitabı eve götürmek istemez."
+        },
+        {
+          "number": 7,
+          "type": "zuordnung",
+          "prompt": "ein wissenschaftlicher Mitarbeiter der Universität Kranzbühl, der seine Doktorarbeit als Buch kostenlos lesbar im Internet herausbringen will und dafür einen Zuschuss sucht",
+          "answer": "I",
+          "evidence": [
+            {
+              "text": "f",
+              "quote": "für Monografien und Sammelbände stehen keine Mittel zur Verfügung"
+            }
+          ],
+          "explanation": "F ilanı üniversite mensuplarının açık erişimli yayın masraflarını karşıladığı için cazip görünür. Ama yalnızca dergi makaleleri desteklenir: „für Monografien und Sammelbände stehen keine Mittel zur Verfügung“ (tek yazarlı kitaplar ve derleme kitaplar için para yoktur). Araştırma görevlisi tezini kitap olarak yayımlamak istediği için F uymaz; cevap I."
+        },
+        {
+          "number": 8,
+          "type": "zuordnung",
+          "prompt": "eine Studentin der Erziehungswissenschaft, die für ein Seminarprojekt eine Radiosendung über Kinderbücher aufzeichnen will und dafür eine ruhige Umgebung mit guter Tontechnik sucht",
+          "answer": "H",
+          "evidence": [
+            {
+              "text": "h",
+              "quote": "eine Aufnahmekabine mit professionellen Mikrofonen für Podcasts und Hörbeiträge"
+            }
+          ],
+          "explanation": "H ilanındaki medya atölyesinde öğrenciler kendi projelerini yapabilir; „eine Aufnahmekabine mit professionellen Mikrofonen für Podcasts und Hörbeiträge“ (podcast ve sesli yayınlar için profesyonel mikrofonlu bir kayıt kabini) vardır. Radyo yayını kaydetmek isteyen öğrenciye bu uyar. C'deki odalar da ses yalıtımlıdır ama orada mikrofon değil, ekran ve beyaz tahta bulunur."
+        },
+        {
+          "number": 9,
+          "type": "zuordnung",
+          "prompt": "ein Doktorand, der für seine Dissertation einen Beitrag aus einer polnischen Fachzeitschrift braucht, die in Kranzbühl nicht geführt wird, und den Text dauerhaft in seinen Unterlagen haben möchte",
+          "answer": "B",
+          "evidence": [
+            {
+              "text": "b",
+              "quote": "einzelne Zeitschriftenaufsätze erhalten Sie dagegen als Kopie, die Sie behalten dürfen"
+            }
+          ],
+          "explanation": "B ilanına göre kütüphanede olmayan bir kaynak başka bir kütüphaneden istenebilir; „einzelne Zeitschriftenaufsätze erhalten Sie dagegen als Kopie, die Sie behalten dürfen“ (tek tek dergi makaleleri, saklayabileceğiniz bir kopya olarak gelir). Doktora öğrencisi tek bir makaleye ihtiyaç duyduğu ve onu sürekli elinde tutmak istediği için B uyar. Örnek 02'deki gibi bütün bir yıllık cilt istenmediğinden kısıtlama ona uygulanmaz."
+        },
+        {
+          "number": 10,
+          "type": "zuordnung",
+          "prompt": "eine Postdoktorandin der Universität Kranzbühl, deren Beitrag von einer kostenlos lesbaren Fachzeitschrift angenommen wurde und die als Ansprechpartnerin der Redaktion die Veröffentlichungsgebühr nicht aus eigener Tasche bezahlen kann",
+          "answer": "F",
+          "evidence": [
+            {
+              "text": "f",
+              "quote": "übernehmen wir Gebühren für Aufsätze in Open-Access-Zeitschriften bis zu 2.000 Euro"
+            },
+            {
+              "text": "f",
+              "quote": "sofern die Autorin oder der Autor für die Korrespondenz mit der Zeitschrift verantwortlich ist"
+            }
+          ],
+          "explanation": "F ilanındaki yayın fonu, „Gebühren für Aufsätze in Open-Access-Zeitschriften“ (açık erişimli dergilerdeki makalelerin ücretlerini) 2.000 euroya kadar karşılar. Koşul, yazarın „für die Korrespondenz mit der Zeitschrift verantwortlich“ (dergiyle yazışmadan sorumlu) olmasıdır. Kranzbühl Üniversitesi'nde çalışan ve dergi editörlüğünün muhatabı olan doktora sonrası araştırmacı bu koşulları karşılar; yayımlanacak olan bir kitap değil, makaledir."
+        }
+      ]
+    }
+  ]
+}

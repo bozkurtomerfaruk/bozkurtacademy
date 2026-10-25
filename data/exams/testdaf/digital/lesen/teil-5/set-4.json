@@ -1,0 +1,108 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 5,
+  "set": "set-4",
+  "title": "Drei Strategien gegen Plastik im Meer",
+  "minutes": 10,
+  "context": "Sie lesen in einem Wissenschaftsmagazin einen Bericht über Forschung gegen die Verschmutzung der Meere durch Kunststoff.",
+  "instructions": "Lesen Sie den Text. Zu welchem Ansatz (a, b oder c) passen die Aussagen 21 bis 27?",
+  "groups": [
+    {
+      "layout": "article",
+      "none": false,
+      "texts": [
+        {
+          "id": "bericht",
+          "title": "Drei Strategien gegen Plastik im Meer",
+          "byline": "Von Tiberius Lübbering",
+          "paragraphs": [
+            "Jahr für Jahr gelangen Schätzungen zufolge mehrere Millionen Tonnen Kunststoff in die Ozeane. Dort zerfällt er über Jahrzehnte in immer kleinere Fragmente, die von Meerestieren aufgenommen werden und sich in Nahrungsketten anreichern. Wie dem Problem beizukommen ist, wurde kürzlich auf einem Symposium des Küsteninstituts Fennwerder erörtert. Drei Beiträge zeigten exemplarisch, an wie unterschiedlichen Stellen man ansetzen kann.",
+            "Die Wasserbauingenieurin Talvi Kurzrock setzt dort an, wo ein großer Teil des Mülls seinen Weg ins Meer beginnt: in den Flüssen. Ihr Team verlegt am Flussgrund einen perforierten Schlauch, durch den Druckluft gepresst wird. Der aufsteigende Blasenvorhang treibt schwimmende Abfälle an die Oberfläche und, weil er schräg zur Strömung verläuft, an ein Ufer, wo sie in einem Becken gesammelt werden. Anders als Netze oder schwimmende Sperren stellt der Vorhang kein Hindernis dar: Lastkähne fahren ungehindert hindurch, und auch Lachse auf dem Weg zu ihren Laichgründen können ihn passieren. Bei einer einjährigen Erprobung an einem Nebenarm hielt die Anlage gut zwei Drittel des sichtbaren Treibguts zurück. Fasern und Fragmente von weniger als einem Millimeter gleiten allerdings weitgehend hindurch, wie Kurzrock einräumt.",
+            "Einen biotechnologischen Weg verfolgt der Biochemiker Edvard Wehrstedt. Ausgangspunkt war ein auf einer Deponie entdecktes Bakterium, das ein Enzym bildet, welches PET – den Werkstoff der meisten Getränkeflaschen – in seine chemischen Grundbausteine zerlegt. Wehrstedts Gruppe hat das Enzym so verändert, dass es auch bei 70 Grad stabil bleibt und eine Flasche statt in Wochen in wenigen Stunden zersetzt. Aus den gewonnenen Bausteinen lässt sich erneut PET herstellen, das sich von fabrikneuem nicht unterscheidet; beim herkömmlichen Recycling büßt der Kunststoff dagegen mit jedem Durchlauf an Qualität ein. Gedacht ist das Verfahren ausdrücklich für Industrieanlagen. Eine Freisetzung des Enzyms oder veränderter Bakterien ins Meer lehnt Wehrstedt ab, da niemand absehen könne, welche Folgen dies für marine Lebensgemeinschaften hätte. An Polyethylen und Polypropylen, aus denen etwa Folien und Fischernetze bestehen, beißt sich das Enzym bislang die Zähne aus.",
+            "Die Umweltökonomin Annegret Ellmenreich schließlich hält technische Lösungen allein für unzureichend und setzt auf wirtschaftliche Anreize. Nach ihrem Konzept erhalten Fischer in Küstenregionen eine Prämie für jedes Kilogramm ausgedienter Netze sowie für Abfälle, die sie auf See einsammeln und im Hafen abliefern. Bezahlt werden soll die Prämie aus einer Abgabe, die Hersteller und Importeure von Kunststoffen pro Tonne entrichten. In einem Modellprojekt in drei Fischereihäfen sei die Menge der an Land gebrachten Netze binnen eines Jahres auf das Fünffache gestiegen. Kritiker geben jedoch zu bedenken, ein solches System verleite zu Missbrauch: Es könne lohnender sein, intakte Netze als Altnetze abzugeben oder Müll eigens vom Festland heranzuschaffen, als ihn wirklich aus dem Meer zu holen. Ellmenreich will dem mit Kontrollen in den Häfen begegnen.",
+            "Einig waren sich die Vortragenden darin, dass keine der Strategien das Problem allein lösen kann. Den größten Hebel, so das Resümee der Tagungsleitung, biete ohnehin ein geringerer Verbrauch von Kunststoff – doch auch dafür brauche es Zeit, die die Meere womöglich nicht haben."
+          ]
+        },
+        {
+          "id": "ansatz-a",
+          "label": "a",
+          "title": "Ansatz der Arbeitsgruppe Kurzrock",
+          "paragraphs": ["Abfälle werden auf dem Weg ins Meer abgefangen."]
+        },
+        {
+          "id": "ansatz-b",
+          "label": "b",
+          "title": "Ansatz der Arbeitsgruppe Wehrstedt",
+          "paragraphs": ["Kunststoff wird auf biologischem Weg zersetzt."]
+        },
+        {
+          "id": "ansatz-c",
+          "label": "c",
+          "title": "Ansatz der Arbeitsgruppe Ellmenreich",
+          "paragraphs": ["Fischereibetriebe werden in die Müllbeseitigung einbezogen."]
+        }
+      ],
+      "questions": [
+        {
+          "number": 21,
+          "type": "zuordnung",
+          "prompt": "Die Gruppe hält es für zu riskant, ihr Mittel unmittelbar in die Natur auszubringen.",
+          "answer": "b",
+          "evidence": [{ "text": "bericht", "quote": "Eine Freisetzung des Enzyms oder veränderter Bakterien ins Meer lehnt Wehrstedt ab" }],
+          "explanation": "Wehrstedt'in yöntemi sanayi tesisleri için düşünülmüş: „Eine Freisetzung des Enzyms oder veränderter Bakterien ins Meer lehnt Wehrstedt ab“ (enzimin veya değiştirilmiş bakterilerin denize salınmasını reddediyor), çünkü deniz canlı topluluklarına etkisini kimse öngöremez. „zu riskant“ (fazla riskli) bunun karşılığıdır. Kurzrock'un hava kabarcığı perdesi nehrin içinde çalışır; doğaya bir şey salmanın riskinden söz edilmez. Ellmenreich'te doğaya bir madde salınması söz konusu değildir."
+        },
+        {
+          "number": 22,
+          "type": "zuordnung",
+          "prompt": "Das zurückgewonnene Material ist ebenso hochwertig wie Neuware.",
+          "answer": "b",
+          "evidence": [{ "text": "bericht", "quote": "das sich von fabrikneuem nicht unterscheidet" }],
+          "explanation": "Wehrstedt'in grubunda elde edilen yapı taşlarından yeniden PET üretilir; bu PET „das sich von fabrikneuem nicht unterscheidet“ (fabrikadan yeni çıkmış olandan farksız). Geleneksel geri dönüşümde ise malzeme her turda kalite kaybeder. Kurzrock'un toplanan atıklarla ne yaptığı anlatılmaz. Ellmenreich'te ağlar ve atıklar limana getirilir, ama yeniden kullanılmaları ya da kaliteleri konu edilmez."
+        },
+        {
+          "number": 23,
+          "type": "zuordnung",
+          "prompt": "Die Kosten sollen diejenigen tragen, die den Werkstoff produzieren oder ins Land bringen.",
+          "answer": "c",
+          "evidence": [{ "text": "bericht", "quote": "aus einer Abgabe, die Hersteller und Importeure von Kunststoffen pro Tonne entrichten" }],
+          "explanation": "Ellmenreich'in modelinde balıkçılara ödenecek prim „aus einer Abgabe, die Hersteller und Importeure von Kunststoffen pro Tonne entrichten“ (plastik üreticilerinin ve ithalatçılarının ton başına ödediği bir harçtan) karşılanacak. „produzieren oder ins Land bringen“ = „Hersteller und Importeure“. Kurzrock'ta ve Wehrstedt'te maliyetin kim tarafından karşılanacağı hiç anlatılmaz."
+        },
+        {
+          "number": 24,
+          "type": "zuordnung",
+          "prompt": "Weder Frachtschiffe noch wandernde Fische werden durch die Maßnahme beeinträchtigt.",
+          "answer": "a",
+          "evidence": [{ "text": "bericht", "quote": "Lastkähne fahren ungehindert hindurch, und auch Lachse auf dem Weg zu ihren Laichgründen können ihn passieren" }],
+          "explanation": "Kurzrock'un kabarcık perdesi engel oluşturmaz: „Lastkähne fahren ungehindert hindurch, und auch Lachse auf dem Weg zu ihren Laichgründen können ihn passieren“ (yük mavnaları engelsiz geçer, yumurtlama yerlerine giden somonlar da geçebilir). Wehrstedt'in yöntemi sanayi tesislerinde uygulanır; gemilerden ya da balıklardan söz edilmez. Ellmenreich'te de böyle bir etki konu edilmez; balıkçılar atıkları limana getirir."
+        },
+        {
+          "number": 25,
+          "type": "zuordnung",
+          "prompt": "Es wird befürchtet, dass die Regelung Fehlanreize setzt, die das eigentliche Ziel unterlaufen.",
+          "answer": "c",
+          "evidence": [{ "text": "bericht", "quote": "Es könne lohnender sein, intakte Netze als Altnetze abzugeben oder Müll eigens vom Festland heranzuschaffen" }],
+          "explanation": "Ellmenreich'in prim sistemini eleştirenlere göre „Es könne lohnender sein, intakte Netze als Altnetze abzugeben oder Müll eigens vom Festland heranzuschaffen“ (sağlam ağları eski ağ diye teslim etmek ya da çöpü özellikle karadan getirmek daha kârlı olabilir), çöpü gerçekten denizden çıkarmaktan daha kârlı. Bu, asıl amacı boşa çıkaran yanlış teşviktir. Kurzrock ve Wehrstedt'in yöntemlerinde böyle bir kötüye kullanma kaygısı geçmez; onların sınırları teknik niteliktedir."
+        },
+        {
+          "number": 26,
+          "type": "zuordnung",
+          "prompt": "Winzige Kunststoffteilchen werden kaum erfasst.",
+          "answer": "a",
+          "evidence": [{ "text": "bericht", "quote": "Fasern und Fragmente von weniger als einem Millimeter gleiten allerdings weitgehend hindurch" }],
+          "explanation": "Kurzrock kabul ediyor: „Fasern und Fragmente von weniger als einem Millimeter gleiten allerdings weitgehend hindurch“ (bir milimetreden küçük lifler ve parçalar büyük ölçüde içinden geçip gidiyor); tesis yalnızca görünür yüzen atığın üçte ikisinden biraz fazlasını tutuyor. Wehrstedt'in sınırı parçaların büyüklüğü değil, plastik türüdür. Ellmenreich'te ağlar ve toplanan atıklar söz konusudur; parçacık büyüklüğünden söz edilmez."
+        },
+        {
+          "number": 27,
+          "type": "zuordnung",
+          "prompt": "Bisher wirkt die Methode nur bei einer bestimmten Kunststoffart.",
+          "answer": "b",
+          "evidence": [{ "text": "bericht", "quote": "beißt sich das Enzym bislang die Zähne aus" }],
+          "explanation": "Wehrstedt'in enzimi PET'i parçalıyor; ama folyo ve balık ağlarının yapıldığı polietilen ve polipropilende „beißt sich das Enzym bislang die Zähne aus“ (enzim şimdiye kadar başarısız oluyor, deyim: dişini kırıyor). Yani yöntem şimdilik tek bir plastik türünde işe yarıyor. Kurzrock'un perdesi yüzen atıkları kıyıya iter; malzeme türüne göre bir sınır anlatılmaz. Ellmenreich'in primi hem ağlar hem de denizden toplanan diğer atıklar için ödenir."
+        }
+      ]
+    }
+  ]
+}

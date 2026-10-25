@@ -1,0 +1,149 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-2",
+  "title": "Wie Ameisen Wege planen",
+  "minutes": 15,
+  "context": "Sie lesen in einem Wissenschaftsmagazin einen Artikel über eine Studie zur Orientierung von Ameisen.",
+  "instructions": "Lesen Sie den Text und die Aufgaben 10 bis 16. Wählen Sie bei jeder Aufgabe die richtige Lösung (a, b oder c).",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Wie Ameisen Wege planen",
+          "byline": "Von Raphael Duvenbeck",
+          "paragraphs": [
+            "Wer eine Ameisenstraße beobachtet, sieht scheinbar Planung ohne Planer. Tausende Tiere bewegen sich zwischen Nest und Futterquelle, und nach kurzer Zeit verläuft ihr Weg meist erstaunlich nah an der kürzesten Verbindung. Die Erklärung dafür galt lange als weitgehend gesichert: Jede Arbeiterin hinterlässt eine Duftspur, kürzere Wege werden in derselben Zeit häufiger begangen, die Markierung auf ihnen verstärkt sich schneller, und am Ende folgt die Kolonie dem intensivsten Signal. Das Prinzip ist so elegant, dass es seit Jahrzehnten Rechenverfahren inspiriert, mit denen etwa Lieferrouten optimiert werden.",
+            "Doch das Modell hat eine Schwäche, auf die die Biologin Lotte Pfeilsticker von der Universität Brendhagen aufmerksam macht. Eine Kolonie, die sich allein auf verstärkte Duftspuren verließe, wäre in ihren eigenen Gewohnheiten gefangen. Ist eine Route erst einmal stark markiert, zieht sie immer mehr Tiere an – selbst dann, wenn ein umgestürzter Halm sie längst zum Umweg gemacht hat. In der Natur, wo sich Hindernisse und Futterquellen ständig verschieben, müsste eine solche Kolonie fortwährend Energie verschwenden. Genau das beobachtet man jedoch kaum.",
+            "Um herauszufinden, wie die Tiere diesem Dilemma entgehen, ließ Pfeilsticker Kolonien der Schwarzen Wegameise in einem Labyrinth aus Plexiglas nach Zuckerlösung suchen. Hatten die Ameisen eine Route etabliert, versperrte das Team sie mit einer beweglichen Wand. Zur Überraschung der Forschenden dauerte es meist weniger als eine Viertelstunde, bis sich ein neuer, wiederum annähernd optimaler Weg durchgesetzt hatte. Mit der Duftspur allein ließ sich das nicht erklären, denn die alte Markierung verflüchtigt sich erst nach Stunden.",
+            "Videoanalysen, für die jedes Tier mit einem winzigen Farbpunkt gekennzeichnet worden war, lieferten die Erklärung: Nicht alle Arbeiterinnen verhalten sich gleich. Erfahrene Sammlerinnen, die die Strecke schon oft zurückgelegt haben, orientieren sich offenbar stärker an optischen Merkmalen und am eigenen Bewegungsgedächtnis als am Geruch. Stoßen sie auf eine Sperre, weichen sie ab und erkunden die Umgebung, während jüngere Tiere zunächst weiter der Spur folgen. Zudem setzten die erfahrenen Tiere an der Sperre einen zusätzlichen Duftstoff ab, der Artgenossen von der blockierten Route fernhielt. „Die Kolonie plant nicht, aber sie verfügt über so etwas wie ein Gedächtnis, das vergessen kann“, sagt Pfeilsticker.",
+            "Bemerkenswert ist, was das für die Leistungsfähigkeit der Kolonie bedeutet. Solange die Umgebung stabil bleibt, kosten die eigenwilligen Erkunderinnen Zeit: Diese laufen Umwege, statt Futter einzutragen. In Versuchsreihen, in denen das Labyrinth nie verändert wurde, schnitten Kolonien mit vielen erfahrenen Tieren deshalb sogar etwas schlechter ab als solche mit überwiegend jungen Arbeiterinnen. Sobald jedoch Wände versetzt wurden, kehrte sich das Verhältnis um. Pfeilsticker spricht von einer Versicherungsprämie: Die Kolonie verzichtet im Normalfall auf ein wenig Ertrag, um für Störungen gewappnet zu sein.",
+            "Für die Informatikerin Defne Okyar, die an der Technischen Hochschule Sötenbrück Schwärme kleiner Transportroboter entwickelt, sind diese Befunde mehr als eine biologische Kuriosität. Bisherige Ameisenalgorithmen behandelten sämtliche virtuellen Agenten als identisch, erläutert sie. In Simulationen ihrer Gruppe hätten sich Roboterschwärme, in denen ein kleiner Anteil der Einheiten bewusst von der etablierten Route abweiche, nach Ausfällen in einem Lagerhaus deutlich schneller erholt. Okyar räumt allerdings ein, dass sich der günstigste Anteil solcher Abweichler bislang nur durch Ausprobieren bestimmen lasse.",
+            "Zurückhaltender äußert sich der Verhaltensökologe Gerold Hallsiek vom Forschungszentrum Lauterholm. Ein Labyrinth aus Plexiglas sei kein Waldboden; dort spielten Temperatur, Feuchtigkeit und konkurrierende Kolonien eine Rolle, die das Verhalten der Tiere erheblich beeinflussen könnten. Er bezweifle nicht die Beobachtungen, wohl aber, dass sich aus ihnen schon allgemeine Gesetzmäßigkeiten ableiten ließen. Aufschluss darüber könnten erst Untersuchungen unter natürlichen Bedingungen geben. Pfeilsticker sieht das ähnlich und plant für den kommenden Sommer Freilandversuche, bei denen Futterstellen im Wald gezielt versetzt werden.",
+            "Ob Ameisen ihre Wege nun „planen“, ist am Ende auch eine Frage der Begriffe. Keine einzelne Arbeiterin kennt den Grundriss des Labyrinths, keine verfolgt ein Ziel jenseits der nächsten Schritte. Und doch entsteht aus dem Zusammenspiel von Gewohnheit und Abweichung ein Verhalten, das man bei einem Menschen ohne Zögern als vorausschauend bezeichnen würde. Gerade darin liegt der Reiz der neuen Studie, denn sie zeigt, dass Klugheit im Kollektiv nicht trotz, sondern wegen der Unterschiede zwischen seinen Mitgliedern entsteht."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 10,
+          "type": "abc",
+          "prompt": "Worin sieht Lotte Pfeilsticker die Schwäche des herkömmlichen Modells?",
+          "options": {
+            "a": "Es kann nicht erklären, wie sich Kolonien an veränderte Gegebenheiten anpassen.",
+            "b": "Es überschätzt, wie nah die Ameisen der kürzesten Verbindung tatsächlich kommen.",
+            "c": "Es ist zu kompliziert, um in technische Anwendungen übertragen zu werden."
+          },
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "wäre in ihren eigenen Gewohnheiten gefangen" },
+            { "text": "artikel", "quote": "Genau das beobachtet man jedoch kaum" }
+          ],
+          "explanation": "Yalnızca güçlenen koku izlerine dayanan bir koloni „wäre in ihren eigenen Gewohnheiten gefangen“ (kendi alışkanlıklarına hapsolurdu) ve değişen doğada sürekli enerji harcardı; „Genau das beobachtet man jedoch kaum“ – ama bu pek görülmüyor. Yani model uyum yeteneğini açıklayamıyor. b) yanlış: Karıncaların yolu gerçekten „erstaunlich nah an der kürzesten Verbindung“ (en kısa yola şaşırtıcı derecede yakın); modelin sorunu bu değil. c) yanlış: Model yıllardır teslimat rotalarını hesaplayan yöntemlere ilham veriyor."
+        },
+        {
+          "number": 11,
+          "type": "abc",
+          "prompt": "Was überraschte das Forschungsteam bei den Versuchen im Labyrinth?",
+          "options": {
+            "a": "Die Ameisen hielten nach der Sperrung noch stundenlang an der alten Route fest.",
+            "b": "Die alte Duftmarkierung verschwand nach der Sperrung schneller als angenommen.",
+            "c": "Die Kolonie fand rasch eine neue Route, obwohl die frühere Markierung noch vorhanden war."
+          },
+          "answer": "c",
+          "evidence": [
+            { "text": "artikel", "quote": "dauerte es meist weniger als eine Viertelstunde" },
+            { "text": "artikel", "quote": "die alte Markierung verflüchtigt sich erst nach Stunden" }
+          ],
+          "explanation": "Yeni ve yine neredeyse en uygun yolun yerleşmesi „meist weniger als eine Viertelstunde“ (çoğunlukla on beş dakikadan az) sürdü; oysa „die alte Markierung verflüchtigt sich erst nach Stunden“ – eski iz ancak saatler sonra kayboluyor. Yani eski iz hâlâ dururken koloni hızla yeni yol buldu. a) yanlış: Karıncalar saatlerce eski yola bağlı kalmadı. b) yanlış: Kokunun hızlı kaybolduğu değil, tam tersine saatlerce kaldığı söyleniyor."
+        },
+        {
+          "number": 12,
+          "type": "abc",
+          "prompt": "Die Auswertung der Videoaufnahmen zeigte, dass …",
+          "options": {
+            "a": "nach einer Sperrung zuerst die jüngeren Arbeiterinnen nach Alternativen suchten.",
+            "b": "die Anpassungsfähigkeit der Kolonie auf dem unterschiedlichen Verhalten ihrer Mitglieder beruht.",
+            "c": "sich erfahrene Sammlerinnen vor allem an der vorhandenen Duftspur ausrichteten."
+          },
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "Nicht alle Arbeiterinnen verhalten sich gleich" },
+            { "text": "artikel", "quote": "während jüngere Tiere zunächst weiter der Spur folgen" }
+          ],
+          "explanation": "Videolar „Nicht alle Arbeiterinnen verhalten sich gleich“ (bütün işçiler aynı davranmıyor) sonucunu verdi: Deneyimli toplayıcılar engelde sapıp çevreyi keşfediyor, gençler ise izi izliyor; koloninin hızlı uyumu bu farklılıktan geliyor. a) yanlış: Rol tersine çevrilmiş; „jüngere Tiere zunächst weiter der Spur folgen“ – gençler önce izi takip etmeye devam ediyor. c) yanlış: Deneyimliler kokudan çok „optischen Merkmalen“ (görsel işaretlere) ve hareket belleğine göre yön buluyor."
+        },
+        {
+          "number": 13,
+          "type": "abc",
+          "prompt": "Was lässt sich aus den Versuchsreihen mit unverändertem Labyrinth schließen?",
+          "options": {
+            "a": "Die Flexibilität einer Kolonie hat ihren Preis, solange keine Störungen auftreten.",
+            "b": "Kolonien mit vielen erfahrenen Tieren sind unter allen Bedingungen leistungsfähiger.",
+            "c": "Junge Arbeiterinnen kommen mit versetzten Wänden besser zurecht als erfahrene."
+          },
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "kosten die eigenwilligen Erkunderinnen Zeit" },
+            { "text": "artikel", "quote": "kehrte sich das Verhältnis um" }
+          ],
+          "explanation": "Ortam sabitken „kosten die eigenwilligen Erkunderinnen Zeit“ (kendi bildiğini yapan kâşifler zaman kaybettirir); değişmeyen labirentte çok deneyimli hayvanı olan koloniler biraz daha kötü sonuç aldı. Pfeilsticker bunu bir sigorta primine benzetiyor: Esneklik, bozulma yokken bir bedel taşır. b) yanlış: Sabit labirentte bu koloniler daha kötüydü. c) yanlış: Duvarlar yer değiştirince „kehrte sich das Verhältnis um“ – durum tersine döndü, yani deneyimli koloniler daha iyiydi."
+        },
+        {
+          "number": 14,
+          "type": "abc",
+          "prompt": "Was erfährt man über die Arbeit von Defne Okyar?",
+          "options": {
+            "a": "Okyars Transportroboter folgen sämtlich derselben Regel, damit es nicht zu Störungen kommt.",
+            "b": "Sie überträgt die Idee verschiedenartigen Verhaltens auf künstliche Schwärme, ohne die ideale Mischung schon zu kennen.",
+            "c": "Okyars Gruppe hat berechnet, wie viele Abweichler ein Roboterschwarm im Idealfall benötigt."
+          },
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "ein kleiner Anteil der Einheiten bewusst von der etablierten Route abweiche" },
+            { "text": "artikel", "quote": "nur durch Ausprobieren bestimmen lasse" }
+          ],
+          "explanation": "Okyar'ın simülasyonlarında birimlerin küçük bir kısmının „bewusst von der etablierten Route abweiche“ (bilerek yerleşik rotadan saptığı) sürüler arızalardan sonra daha hızlı toparlandı; ama en uygun oran şimdilik „nur durch Ausprobieren“ (yalnızca deneme yoluyla) bulunabiliyor. a) yanlış: Bütün birimlerin aynı davranması eski algoritmaların özelliği; Okyar tam da bundan uzaklaşıyor. c) yanlış: İdeal sapan sayısı hesaplanmış değil, deneyerek aranıyor."
+        },
+        {
+          "number": 15,
+          "type": "abc",
+          "prompt": "Welchen Einwand erhebt Gerold Hallsiek?",
+          "options": {
+            "a": "Er hält die Beobachtungen aus den Videoanalysen für methodisch unzuverlässig.",
+            "b": "Er meint, Versuche im Freiland könnten die offenen Fragen nicht klären.",
+            "c": "Er bezweifelt, dass sich die Laborergebnisse ohne Weiteres verallgemeinern lassen."
+          },
+          "answer": "c",
+          "evidence": [
+            { "text": "artikel", "quote": "dass sich aus ihnen schon allgemeine Gesetzmäßigkeiten ableiten ließen" },
+            { "text": "artikel", "quote": "Er bezweifle nicht die Beobachtungen" },
+            { "text": "artikel", "quote": "Aufschluss darüber könnten erst Untersuchungen unter natürlichen Bedingungen geben" }
+          ],
+          "explanation": "Hallsiek'e göre pleksiglas labirent orman zemini değildir; sıcaklık, nem ve rakip koloniler davranışı etkileyebilir. Bu yüzden gözlemlerden şimdiden „allgemeine Gesetzmäßigkeiten“ (genel yasalar) çıkarılabileceğinden şüphe ediyor. a) yanlış: „Er bezweifle nicht die Beobachtungen“ – gözlemlerin kendisinden şüphe etmiyor. b) yanlış: Hallsiek tam tersini söylüyor: „Aufschluss darüber könnten erst Untersuchungen unter natürlichen Bedingungen geben“ (bu konuda ancak doğal koşullardaki araştırmalar açıklık getirebilir). Pfeilsticker de ona katılarak ormanda arazi deneyleri planlıyor."
+        },
+        {
+          "number": 16,
+          "type": "abc",
+          "prompt": "Welche Schlussfolgerung zieht der Autor am Ende des Textes?",
+          "options": {
+            "a": "Die Kolonie handelt vorausschauend, obwohl sich ihre Mitglieder unterschiedlich verhalten.",
+            "b": "Das vorausschauende Verhalten einer Kolonie erwächst gerade aus der Verschiedenheit ihrer Mitglieder.",
+            "c": "Erfahrene Arbeiterinnen haben den Aufbau des gesamten Labyrinths im Kopf und lenken auf diese Weise die übrigen Tiere."
+          },
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "nicht trotz, sondern wegen der Unterschiede zwischen seinen Mitgliedern" },
+            { "text": "artikel", "quote": "Keine einzelne Arbeiterin kennt den Grundriss des Labyrinths" }
+          ],
+          "explanation": "Yazara göre topluluktaki zekâ „nicht trotz, sondern wegen der Unterschiede zwischen seinen Mitgliedern“ (üyeleri arasındaki farklara rağmen değil, tam da bu farklar sayesinde) ortaya çıkıyor; alışkanlık ve sapmanın birlikteliği öngörülü bir davranış doğuruyor. a) yanlış: Seçenek farklılığı bir engel gibi sunuyor („obwohl“ = -e rağmen); yazar ise açıkça „nicht trotz“ (rağmen değil) diyor. c) yanlış: „Keine einzelne Arbeiterin kennt den Grundriss des Labyrinths“ – deneyimliler dahil hiçbir işçi labirentin planını bilmiyor; deneyimlilerin yalnızca kendi hareket belleği („Bewegungsgedächtnis“) var."
+        }
+      ]
+    }
+  ]
+}

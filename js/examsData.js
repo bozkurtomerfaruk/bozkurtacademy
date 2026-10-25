@@ -728,13 +728,58 @@ window.BA_EXAMS = {
           },
           sections: [
             { id: 'lesen', teile: [
-              { title: null, exercises: [] }, // Aufgabe 1
-              { title: null, exercises: [] }, // Aufgabe 2
-              { title: null, exercises: [] }, // Aufgabe 3
-              { title: null, exercises: [] }, // Aufgabe 4
-              { title: null, exercises: [] }, // Aufgabe 5
-              { title: null, exercises: [] }, // Aufgabe 6
-              { title: null, exercises: [] }, // Aufgabe 7
+              {
+                title: { tr: 'Boşluklu metin · a/b/c/d', de: 'Lückentext · a/b/c/d', en: 'Gapped text · a/b/c/d' },
+                exercises: [
+                  { set: 'set-1', title: 'Ein Preis für junge Forschende' },
+                  { set: 'set-2', title: 'Studieren mit Kind' },
+                  { set: 'set-3', title: 'Neue Regeln für Abschlussarbeiten' },
+                  { set: 'set-4', title: 'Ein Lernzentrum für alle' },
+                  { set: 'set-5', title: 'Ein Forschungsschiff kehrt zurück' },
+                ]
+              }, // Aufgabe 1
+              { title: null, exercises: [] }, // Aufgabe 2 (Textabschnitte ordnen: sürükle-bırak, şimdilik yok)
+              {
+                title: { tr: 'Makale · a/b/c', de: 'Artikel · a/b/c', en: 'Article · a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Die Ökonomie des Teilens' },
+                  { set: 'set-2', title: 'Wie Ameisen Wege planen' },
+                  { set: 'set-3', title: 'Die Wiederentdeckung des Lehms' },
+                  { set: 'set-4', title: 'Wie Kinder Zahlen begreifen' },
+                  { set: 'set-5', title: 'Arzneimittel im Wasser' },
+                ]
+              }, // Aufgabe 3
+              {
+                title: { tr: 'Dil eylemleri · eşleştirme', de: 'Sprachhandlungen · Zuordnung', en: 'Speech acts · matching' },
+                exercises: [
+                  { set: 'set-1', title: 'Brauchen wir mehr Präsenzlehre?' },
+                  { set: 'set-2', title: 'Offene Daten in der Forschung' },
+                  { set: 'set-3', title: 'Pflichtpraktika für alle?' },
+                  { set: 'set-4', title: 'Englisch als Wissenschaftssprache' },
+                  { set: 'set-5', title: 'Gebühren für Langzeitstudierende' },
+                ]
+              }, // Aufgabe 4
+              {
+                title: { tr: 'Kategoriler · eşleştirme', de: 'Kategorien · Zuordnung', en: 'Categories · matching' },
+                exercises: [
+                  { set: 'set-1', title: 'Drei Wege, Wasserstoff zu speichern' },
+                  { set: 'set-2', title: 'Modelle der Studienfinanzierung' },
+                  { set: 'set-3', title: 'Drei Methoden der Altersbestimmung' },
+                  { set: 'set-4', title: 'Drei Strategien gegen Plastik im Meer' },
+                  { set: 'set-5', title: 'Drei Modelle der Hochschulzulassung' },
+                ]
+              }, // Aufgabe 5
+              {
+                title: { tr: 'Kavram çifti · a/b', de: 'Begriffspaar · a/b', en: 'Pair of terms · a/b' },
+                exercises: [
+                  { set: 'set-1', title: 'Gelenke aus dem Drucker' },
+                  { set: 'set-2', title: 'Mikroalgen als Nahrungsquelle' },
+                  { set: 'set-3', title: 'Versalzene Böden' },
+                  { set: 'set-4', title: 'Rätselhafte Kugelblitze' },
+                  { set: 'set-5', title: 'Wärme aus Rechenzentren' },
+                ]
+              }, // Aufgabe 6
+              { title: null, exercises: [] }, // Aufgabe 7 (Fehler in der Zusammenfassung: tıklama, şimdilik yok)
             ] },
             { id: 'hoeren', teile: [
               { title: null, exercises: [] }, // Aufgabe 1

@@ -1,0 +1,81 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-1",
+  "title": "Brauchen wir mehr Präsenzlehre?",
+  "minutes": 7,
+  "context": "Sie lesen im Diskussionsforum einer Universität einen Beitrag zur Zukunft der Lehre.",
+  "instructions": "Lesen Sie den Text. Welche Sprachhandlung (a–f) wird in den markierten Abschnitten 17 bis 20 vollzogen? Zwei Sprachhandlungen bleiben übrig.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "beitrag",
+          "title": "Brauchen wir mehr Präsenzlehre?",
+          "byline": "Diskussionsbeitrag von Dr. Lennart Malzahn, Institut für Erziehungswissenschaft, Universität Siegwarden",
+          "paragraphs": [
+            "Seit dem Ende der pandemiebedingten Ausnahmesemester wird an unserer Universität wieder lebhaft darüber gestritten, wie viel Präsenz die Lehre braucht. Im Senat liegt ein Antrag vor, künftig mindestens zwei Drittel aller Lehrveranstaltungen verpflichtend vor Ort abzuhalten. Gestützt wird er auf die Annahme, digitale Formate hätten sich zwar als Notlösung bewährt, Studierende lernten aber nur im Hörsaal wirklich etwas. {{17}}Ob das so pauschal zutrifft, darf man allerdings bezweifeln, denn gerade in großen Einführungsvorlesungen saß schon vor der Pandemie selten mehr als die Hälfte der eingeschriebenen Studierenden tatsächlich im Saal.",
+            "Zunächst lohnt es sich, genauer zu klären, worüber wir eigentlich sprechen. {{18}}Mit „Präsenzlehre“ meine ich im Folgenden nicht schon jede Veranstaltung, bei der Lehrende und Studierende zur selben Zeit im selben Raum sind, sondern nur solche, in denen diese Anwesenheit für das Lernen tatsächlich genutzt wird – etwa für Diskussionen, Laborübungen oder gemeinsame Textarbeit. Eine Vorlesung, in der dreihundert Personen einem Vortrag folgen, den sie ebenso gut als Aufzeichnung ansehen könnten, fällt nach diesem Verständnis nicht darunter.",
+            "Wer so unterscheidet, gelangt zu einer anderen Frage als der Senatsantrag: nicht, wie viele Veranstaltungen vor Ort stattfinden sollen, sondern welche. {{19}}Man wird mir entgegenhalten, eine solche Unterscheidung lasse sich in der Verwaltungspraxis kaum umsetzen, weil sich Lehrformate nicht sauber voneinander trennen ließen; doch die Modulhandbücher legen schon heute für jede Veranstaltung fest, ob sie als Vorlesung, Seminar oder Übung angeboten wird, und genau daran könnte man anknüpfen.",
+            "Hinzu kommt, dass eine starre Quote vor allem jene trifft, die ohnehin unter Druck stehen: Studierende, die neben dem Studium arbeiten, Angehörige pflegen oder lange Pendelwege haben. Für diese Gruppe kann eine aufgezeichnete Vorlesung den Unterschied ausmachen zwischen einem Abschluss in der Regelstudienzeit und einem Studium, das sich über Jahre hinzieht. {{20}}Ich plädiere deshalb dafür, dass der Senat den Antrag in seiner jetzigen Form zurückstellt und die Studiendekanate zunächst beauftragt, für jeden Studiengang zu prüfen, welche Veranstaltungen von gemeinsamer Anwesenheit wirklich profitieren."
+          ]
+        },
+        { "id": "a", "label": "a", "paragraphs": ["einen möglichen Einwand vorwegnehmen und entkräften"] },
+        { "id": "b", "label": "b", "paragraphs": ["die Folgen einer Regelung für eine bestimmte Gruppe aufzeigen"] },
+        { "id": "c", "label": "c", "paragraphs": ["die Begründung eines Vorschlags in Zweifel ziehen"] },
+        { "id": "d", "label": "d", "paragraphs": ["eine Vorhersage über die künftige Entwicklung treffen"] },
+        { "id": "e", "label": "e", "paragraphs": ["festlegen, wie ein zentraler Ausdruck zu verstehen ist"] },
+        { "id": "f", "label": "f", "paragraphs": ["von einem Gremium ein bestimmtes Vorgehen verlangen"] }
+      ],
+      "questions": [
+        {
+          "number": 17,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 17",
+          "answer": "c",
+          "evidence": [
+            { "text": "beitrag", "quote": "Gestützt wird er auf die Annahme" },
+            { "text": "beitrag", "quote": "Ob das so pauschal zutrifft, darf man allerdings bezweifeln" }
+          ],
+          "explanation": "Önceki cümle Senato önerisinin dayanağını veriyor: „Gestützt wird er auf die Annahme“ (öneri şu varsayıma dayanıyor): öğrenciler yalnızca amfide gerçekten öğrenir. İşaretli cümle bu dayanağı sorguluyor: „Ob das so pauschal zutrifft, darf man allerdings bezweifeln“ (bunun bu kadar genel olarak doğru olup olmadığından şüphe edilebilir) ve karşısına bir gözlem koyuyor: büyük giriş derslerinde pandemiden önce de kayıtlı öğrencilerin yarısından azı salondaydı. Bu yüzden c. a uymuyor: burada yazara yöneltilebilecek bir itiraz önceden ele alınmıyor; yazar başkasının önerisini eleştiriyor. d de uymuyor: „schon vor der Pandemie“ geçmişe ait bir durumu anlatıyor, geleceğe dair bir tahmin değil."
+        },
+        {
+          "number": 18,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 18",
+          "answer": "e",
+          "evidence": [
+            { "text": "beitrag", "quote": "Mit „Präsenzlehre“ meine ich im Folgenden nicht schon jede Veranstaltung" }
+          ],
+          "explanation": "Yazar önce „genauer zu klären, worüber wir eigentlich sprechen“ (aslında neyi konuştuğumuzu netleştirmek) gerektiğini söylüyor. İşaretli cümlede „Mit „Präsenzlehre“ meine ich im Folgenden …“ (aşağıda „yüz yüze ders“ derken … kastediyorum) diyerek bu kelimeyi nasıl kullanacağını belirliyor: aynı odada bulunmak yetmez, birlikte bulunmanın tartışma, laboratuvar veya ortak metin çalışması için kullanılması gerekir. Bu, e: merkezi bir ifadenin anlamını belirlemek. Cümlede örnekler de var, ama bunlar yalnızca tanımı açıklıyor. b uymuyor: burada bir düzenlemenin belirli bir grup için sonuçları değil, bir kavramın nasıl anlaşılacağı anlatılıyor; böyle sonuçlar ancak son paragrafta, işaretsiz cümlelerde geçiyor."
+        },
+        {
+          "number": 19,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 19",
+          "answer": "a",
+          "evidence": [
+            { "text": "beitrag", "quote": "Man wird mir entgegenhalten" },
+            { "text": "beitrag", "quote": "doch die Modulhandbücher legen schon heute für jede Veranstaltung fest" }
+          ],
+          "explanation": "„Man wird mir entgegenhalten“ (bana şöyle itiraz edilecek) ile yazar, henüz kimsenin yapmadığı ama beklediği bir itirazı dile getiriyor: bu ayrım idari uygulamada yapılamaz. Hemen ardından „doch“ (ama) ile bu itirazı çürütüyor: modül el kitapları bugün bile her dersin „Vorlesung, Seminar oder Übung“ olduğunu belirliyor, yani ayrım zaten var. Bu yüzden a. c uymuyor: burada başkasının önerisinin gerekçesi değil, yazarın kendi önerisine karşı olası bir itiraz ele alınıyor. d de uymuyor: „Man wird mir entgegenhalten“ gelecekteki gelişmeyle ilgili bir tahmin değil, yalnızca bir itirazı tanıtıyor."
+        },
+        {
+          "number": 20,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 20",
+          "answer": "f",
+          "evidence": [
+            { "text": "beitrag", "quote": "Ich plädiere deshalb dafür, dass der Senat den Antrag in seiner jetzigen Form zurückstellt" }
+          ],
+          "explanation": "„Ich plädiere deshalb dafür, dass der Senat …“ (bu yüzden Senato'nun … yapmasını savunuyorum) ile yazar bir kurula, yani Senato'ya, açık bir yol gösteriyor: öneriyi şimdiki hâliyle ertelemeli ve dekanlıklara her bölüm için hangi derslerin gerçekten yüz yüze yapılmaya değer olduğunu inceleme görevi vermeli. Bu, f: bir kuruldan belirli bir yöntem istemek. b uymuyor: Katı bir kotanın çalışan, yakınına bakan veya uzun yoldan gelen öğrencileri vurduğunu anlatan cümleler („eine starre Quote vor allem jene trifft“) işaretli cümleden önce geliyor; işaretli cümle bu sonuçlardan „deshalb“ (bu yüzden) ile bir talep çıkarıyor. d de uymuyor: yazar ne olacağını tahmin etmiyor, ne yapılması gerektiğini söylüyor."
+        }
+      ]
+    }
+  ]
+}

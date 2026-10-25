@@ -1,0 +1,90 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-1",
+  "title": "Ein Preis für junge Forschende",
+  "minutes": 5,
+  "context": "Sie lesen auf der Website einer Universität eine Meldung über eine Auszeichnung.",
+  "instructions": "Lesen Sie den Text. Welches Wort passt in die Lücken 1 bis 5? Wählen Sie jeweils die richtige Lösung (a, b, c oder d).",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "meldung",
+          "title": "Nachwuchspreis der Ostheimer-Stiftung geht an Bodenforscherin",
+          "paragraphs": [
+            "Die Ostheimer-Stiftung hat ihren diesjährigen Preis für herausragende Nachwuchsforschung an die Agrarwissenschaftlerin Dr. Theda Wendebrock von der Universität Quendelhain vergeben. Die mit 25 000 Euro {{1}} Auszeichnung würdigt Arbeiten, die Grundlagenforschung mit einem erkennbaren Nutzen für die Praxis verbinden. Bewerben können sich Forschende, deren Promotion nicht länger als fünf Jahre zurückliegt.",
+            "Wendebrock untersucht, wie sich ausgelaugte Ackerböden durch gezielt zusammengestellte Zwischenfrüchte regenerieren lassen. In mehrjährigen Feldversuchen konnte sie nachweisen, dass bestimmte Pflanzenmischungen den Humusgehalt deutlich steigern, {{2}} die Erträge der nachfolgenden Hauptkultur zurückgehen. Gerade dieser Befund dürfte für viele Betriebe von Bedeutung sein: Bislang verzichteten sie häufig auf Zwischenfrüchte, weil sie Einbußen bei der eigentlichen Ernte befürchteten.",
+            "In ihrer Begründung hob die Jury zudem hervor, dass Wendebrock ihre Versuche nicht auf universitätseigenen Versuchsflächen, sondern in enger {{3}} mit zwölf landwirtschaftlichen Betrieben durchgeführt habe. Die Preisträgerin selbst wertet diese Kooperation {{4}} als Voraussetzung ihres Erfolgs denn als bloße Ergänzung: Erst die Hinweise der Landwirtinnen und Landwirte hätten sie auf mehrere Pflanzenarten aufmerksam gemacht, die in der Fachliteratur bislang kaum Beachtung gefunden hätten.",
+            "Das Preisgeld will Wendebrock nutzen, um ihre Versuche auf trockenere Standorte auszuweiten. Ob sich die bisherigen Ergebnisse auf solche Böden {{5}} lassen, ist allerdings offen: Sämtliche Versuchsfelder lagen bislang in niederschlagsreichen Regionen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "abc",
+          "prompt": "Lücke 1",
+          "options": { "a": "bezahlte", "b": "vergütete", "c": "dotierte", "d": "entlohnte" },
+          "answer": "c",
+          "evidence": [
+            { "text": "meldung", "quote": "Die mit 25 000 Euro" }
+          ],
+          "explanation": "Bir ödülün para miktarı için sabit kalıp „mit … Euro dotiert sein“dir: „Die mit 25 000 Euro dotierte Auszeichnung“ (25.000 avro değerindeki ödül). a) bezahlte yanlış: „bezahlen“ bir mal veya hizmetin karşılığını ödemektir; ödül satın alınmaz. b) vergütete ve d) entlohnte yanlış: „vergüten“ ve „entlohnen“ bir iş veya emek için ücret ödemek demektir; nesneleri kişi ya da yapılan iştir („Arbeit vergüten“, „Mitarbeiter entlohnen“), bir ödül değil."
+        },
+        {
+          "number": 2,
+          "type": "abc",
+          "prompt": "Lücke 2",
+          "options": { "a": "ohne dass", "b": "sodass", "c": "sofern", "d": "damit" },
+          "answer": "a",
+          "evidence": [
+            { "text": "meldung", "quote": "Gerade dieser Befund dürfte für viele Betriebe von Bedeutung sein" },
+            { "text": "meldung", "quote": "weil sie Einbußen bei der eigentlichen Ernte befürchteten" }
+          ],
+          "explanation": "Sonraki cümle bulgunun çiftlikler için neden önemli olduğunu açıklıyor: Çiftlikler şimdiye kadar ara ürünlerden vazgeçiyordu, çünkü asıl hasatta kayıp olmasından korkuyorlardı („Einbußen bei der eigentlichen Ernte befürchteten“). Bulgu ancak bu korkuyu boşa çıkarıyorsa önemlidir: Humus artıyor, ama verim düşmüyor. Bunu „ohne dass“ (… -meden, … olmaksızın) anlatır. b) sodass yanlış: Verimin düşmesini humus artışının sonucu yapar; bu, çiftliklerin korkusunu doğrulardı. c) sofern yanlış: Humus artışını verimin düşmesi koşuluna bağlar; metinde böyle bir koşul yok. d) damit yanlış: Amaç bildirir; verimin düşmesi kimsenin amacı değildir."
+        },
+        {
+          "number": 3,
+          "type": "abc",
+          "prompt": "Lücke 3",
+          "options": { "a": "Anlehnung", "b": "Teilhabe", "c": "Mitwirkung", "d": "Zusammenarbeit" },
+          "answer": "d",
+          "evidence": [
+            { "text": "meldung", "quote": "nicht auf universitätseigenen Versuchsflächen, sondern in enger" },
+            { "text": "meldung", "quote": "Die Preisträgerin selbst wertet diese Kooperation" }
+          ],
+          "explanation": "Boşluktan sonra „mit zwölf landwirtschaftlichen Betrieben“ geliyor ve bir sonraki cümle bunu „diese Kooperation“ (bu işbirliği) diye özetliyor. „in enger Zusammenarbeit mit“ (… ile yakın işbirliği içinde) kalıbı buna uyar. a) Anlehnung yanlış: „in Anlehnung an“ (… -e dayanarak, … örnek alınarak) „an“ edatıyla kurulur, „mit“ ile değil. b) Teilhabe yanlış: „Teilhabe an“ bir şeye katılım hakkı demektir; „in enger Teilhabe mit“ kalıbı yoktur. c) Mitwirkung yanlış: Bu kelime „unter Mitwirkung von“ (… -in katkısıyla) biçiminde kullanılır; „in enger Mitwirkung mit“ denmez."
+        },
+        {
+          "number": 4,
+          "type": "abc",
+          "prompt": "Lücke 4",
+          "options": { "a": "kaum", "b": "eher", "c": "weniger", "d": "keineswegs" },
+          "answer": "b",
+          "evidence": [
+            { "text": "meldung", "quote": "als Voraussetzung ihres Erfolgs denn als bloße Ergänzung" },
+            { "text": "meldung", "quote": "Erst die Hinweise der Landwirtinnen und Landwirte hätten sie auf mehrere Pflanzenarten aufmerksam gemacht" }
+          ],
+          "explanation": "„… als A denn als B“ kalıbı iki değerlendirmeyi karşılaştırır. İki noktadan sonraki gerekçe hangisinin doğru olduğunu gösteriyor: Wendebrock'u literatürde neredeyse hiç dikkate alınmamış bitki türlerine ancak çiftçilerin ipuçları yöneltmiş („Erst die Hinweise … hätten sie … aufmerksam gemacht“). Demek ki işbirliği basit bir ek değil, başarının ön koşulu: „eher als Voraussetzung … denn als bloße Ergänzung“ (basit bir ekten çok bir ön koşul olarak). c) weniger yanlış: Dilbilgisi olarak uyar, ama anlamı tersine çevirir (ön koşuldan çok basit bir ek); bu, „Erst …“ gerekçesiyle çelişir. a) kaum ve d) keineswegs yanlış: „… denn als …“ yapısı bir karşılaştırma sözcüğü (eher, weniger, mehr gibi) ister; kaum ve keineswegs karşılaştırma değil olumsuzluk bildirir, bu yüzden cümle dilbilgisi olarak kurulamaz. Ayrıca ikisi de işbirliğinin ön koşul olduğunu reddeder."
+        },
+        {
+          "number": 5,
+          "type": "abc",
+          "prompt": "Lücke 5",
+          "options": { "a": "übertragen", "b": "beziffern", "c": "zurückführen", "d": "anrechnen" },
+          "answer": "a",
+          "evidence": [
+            { "text": "meldung", "quote": "um ihre Versuche auf trockenere Standorte auszuweiten" },
+            { "text": "meldung", "quote": "Sämtliche Versuchsfelder lagen bislang in niederschlagsreichen Regionen" }
+          ],
+          "explanation": "Sonuçlar şimdiye kadar yalnızca yağışlı bölgelerdeki tarlalardan elde edildi („Sämtliche Versuchsfelder lagen bislang in niederschlagsreichen Regionen“); Wendebrock denemelerini daha kurak yerlere genişletmek istiyor. Açık olan soru, sonuçların kurak topraklarda da geçerli olup olmadığıdır: „auf etwas übertragen“ (bir şeye aktarmak, uyarlamak). b) beziffern yanlış: „beziffern“ bir şeyi sayıyla ifade etmek demektir; „auf“ ile ancak bir miktar gelir („die Kosten auf 25 000 Euro beziffern“), bir toprak türü değil. c) zurückführen yanlış: „auf etwas zurückführen“ bir şeyin sebebini göstermek demektir; sonuçlar kurak topraklardan gelmediği için onlara dayandırılamaz. d) anrechnen yanlış: „anrechnen“ bir şeyi hesaba katmak, saymak demektir („jemandem etwas anrechnen“); topraklarla anlamlı bir kalıp oluşturmaz."
+        }
+      ]
+    }
+  ]
+}

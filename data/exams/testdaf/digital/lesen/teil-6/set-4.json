@@ -1,0 +1,87 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 6,
+  "set": "set-4",
+  "title": "Rätselhafte Kugelblitze",
+  "minutes": 5,
+  "instructions": "Lesen Sie den Text. Ordnen Sie die Aussagen 28 bis 31 einem der beiden Begriffe (a oder b) zu.",
+  "groups": [
+    {
+      "layout": "article",
+      "none": false,
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Rätselhafte Kugelblitze",
+          "paragraphs": [
+            "Seit Jahrhunderten berichten Menschen von leuchtenden Kugeln, die während eines Gewitters auftauchen, einige Sekunden durch die Luft schweben und dann lautlos verlöschen oder mit einem Knall zerplatzen. Lange galten solche Schilderungen als Sinnestäuschung. Inzwischen hat der Physiker Leander Quittkat mehr als 2.000 Augenzeugenberichte systematisch ausgewertet, und die Übereinstimmungen sind beachtlich: Meist wird ein Durchmesser zwischen dem eines Tennisballs und dem eines Fußballs angegeben, die Farbe als orange bis weißlich beschrieben. Auffällig häufig heißt es zudem, die Erscheinung sei durch geschlossene Fenster in einen Raum gelangt, ohne das Glas zu beschädigen.",
+            "Ein seltener Glücksfall gelang einer Forschungsgruppe, die eigentlich gewöhnliche Blitze untersuchte. Ihre Spektrometer zeichneten zufällig das Licht eines Kugelblitzes auf, der nach einem Einschlag in den Boden rund anderthalb Sekunden lang sichtbar blieb. Im Spektrum fanden sich die charakteristischen Linien von Silizium, Eisen und Calcium – Elementen, die in der Erdkruste reichlich vorkommen.",
+            "Um die Deutung dieser Daten konkurrieren mehrere Modelle. Nach einer verbreiteten Hypothese verdampft der Blitz beim Einschlag Silikatgestein; die entstehenden Partikel verbänden sich in der Luft zu einem feinen Geflecht, das langsam oxidiere und dabei Licht abgebe. Diese Annahme könnte die gemessenen Elemente erklären, nicht aber das scheinbare Durchdringen von Fensterglas. Die Atmosphärenforscherin Thekla Ohlbrecht hält deshalb einen anderen Ansatz für aussichtsreicher: Elektromagnetische Strahlung, die bei einer Entladung entsteht, könne sich hinter einer Scheibe bündeln und dort die Luft selbst zum Leuchten anregen. Ein Feuerball müsste das Glas in diesem Fall gar nicht passieren.",
+            "Experimentell ist die Frage schwer zu klären. Zwar ist es Laboren gelungen, mit starken Entladungen über feuchtem Silizium leuchtende Gebilde zu erzeugen; diese bestanden aber nur Bruchteile einer Sekunde. Quittkat plädiert daher für ein Netz automatischer Kameras in gewitterreichen Gebieten, um künftig mehr natürliche Exemplare zu dokumentieren."
+          ]
+        },
+        {
+          "id": "begriff-a",
+          "label": "a",
+          "title": "Beobachtung",
+          "paragraphs": [
+            "Die Aussage gibt wieder, was Zeugen oder Messgeräte festgehalten haben."
+          ]
+        },
+        {
+          "id": "begriff-b",
+          "label": "b",
+          "title": "Erklärungsversuch",
+          "paragraphs": [
+            "Die Aussage gibt eine Annahme darüber wieder, wie das Phänomen zustande kommt."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 28,
+          "type": "zuordnung",
+          "prompt": "Vielen Schilderungen zufolge drang die leuchtende Kugel in Innenräume ein, ohne dass dabei eine Scheibe zu Bruch ging.",
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "die Erscheinung sei durch geschlossene Fenster in einen Raum gelangt, ohne das Glas zu beschädigen" }
+          ],
+          "explanation": "Bu, Quittkat'ın incelediği görgü tanığı anlatımlarında sık geçen bir ayrıntıdır: „die Erscheinung sei durch geschlossene Fenster in einen Raum gelangt, ohne das Glas zu beschädigen“ (ışık topu camı kırmadan kapalı pencereden odaya girmiş). Ohlbrecht'in modeli bu anlatımı açıklamaya çalışıyor, ama ifadenin kendisi tanıkların gördüğünü aktarıyor. Bu yüzden cevap a (Beobachtung)."
+        },
+        {
+          "number": 29,
+          "type": "zuordnung",
+          "prompt": "Bei der Zerlegung des Lichts eines einzelnen Exemplars wurden Stoffe nachgewiesen, die im Gestein weit verbreitet sind.",
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "Im Spektrum fanden sich die charakteristischen Linien von Silizium, Eisen und Calcium" }
+          ],
+          "explanation": "Bir araştırma grubunun spektrometreleri tesadüfen bir yıldırım topunun ışığını kaydetmiş. „Im Spektrum fanden sich die charakteristischen Linien von Silizium, Eisen und Calcium“ (spektrumda silisyum, demir ve kalsiyumun çizgileri bulundu); bunlar yerkabuğunda bol bulunan elementler. Bu, ölçüm cihazlarının tespit ettiği bir veridir, bir varsayım değil. Bu yüzden cevap a (Beobachtung)."
+        },
+        {
+          "number": 30,
+          "type": "zuordnung",
+          "prompt": "Beim Einschlag freigesetzte mineralische Teilchen bilden ein Netzwerk, das sich nach und nach mit Sauerstoff verbindet und dabei leuchtet.",
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "die entstehenden Partikel verbänden sich in der Luft zu einem feinen Geflecht, das langsam oxidiere und dabei Licht abgebe" }
+          ],
+          "explanation": "Bu, metnin „Nach einer verbreiteten Hypothese“ (yaygın bir hipoteze göre) diye sunduğu modeldir: Parçacıklar havada bir ağ oluşturur, bu ağ „langsam oxidiere und dabei Licht abgebe“ (yavaşça oksitlenir ve ışık verir). Konjunktiv I biçimleri de bunun aktarılan bir varsayım olduğunu gösteriyor. Metin bu modelin ölçülen elementleri açıklayabileceğini söylüyor („könnte die gemessenen Elemente erklären“), ama onu yine de bir hipotez olarak sunuyor. Bu yüzden cevap b (Erklärungsversuch)."
+        },
+        {
+          "number": 31,
+          "type": "zuordnung",
+          "prompt": "Das Leuchten auf der Innenseite eines Fensters kommt dadurch zustande, dass sich dort von außen eintreffende Energie konzentriert.",
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "könne sich hinter einer Scheibe bündeln und dort die Luft selbst zum Leuchten anregen" }
+          ],
+          "explanation": "Ohlbrecht'in yaklaşımına göre bir boşalmada oluşan elektromanyetik ışınım „könne sich hinter einer Scheibe bündeln und dort die Luft selbst zum Leuchten anregen“ (camın arkasında yoğunlaşıp oradaki havayı parlatabilir). Metin bunu Ohlbrecht'in „aussichtsreicher“ (daha umut verici) bulduğu bir yaklaşım olarak sunuyor; kanıtlanmış değil. Tanıklar yalnızca topun camdan geçtiğini anlatıyor. Bu yüzden cevap b (Erklärungsversuch)."
+        }
+      ]
+    }
+  ]
+}

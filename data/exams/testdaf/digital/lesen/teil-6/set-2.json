@@ -1,0 +1,88 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 6,
+  "set": "set-2",
+  "title": "Mikroalgen als Nahrungsquelle",
+  "minutes": 5,
+  "instructions": "Lesen Sie den Text. Ordnen Sie die Aussagen 28 bis 31 einem der beiden Begriffe (a oder b) zu.",
+  "groups": [
+    {
+      "layout": "article",
+      "none": false,
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Mikroalgen als Nahrungsquelle",
+          "paragraphs": [
+            "Einzellige Algen, kaum größer als ein rotes Blutkörperchen, gelten in der Ernährungsforschung seit Längerem als Hoffnungsträger. Die Arbeitsgruppe der Bioverfahrenstechnikerin Margarete Sandweg untersucht, unter welchen Bedingungen sich solche Mikroalgen in großem Maßstab als Eiweißlieferanten nutzen ließen.",
+            "Was die Organismen so interessant macht, ist zunächst ihre Zusammensetzung: Je nach Art besteht ihre Trockenmasse bis zur Hälfte aus Protein, hinzu kommen Vitamine und mehrfach ungesättigte Fettsäuren, die sonst vor allem in Meeresfisch enthalten sind. Zudem konkurrieren die Kulturen nicht mit dem Ackerbau. Gezüchtet werden die Algen in geschlossenen Röhrensystemen, die auch auf versiegelten Flächen oder ehemaligen Industriegeländen Platz finden, und manche Stämme gedeihen sogar in salzhaltigem Wasser, das für die Bewässerung von Feldern unbrauchbar wäre. Unter günstigen Bedingungen verdoppelt sich die Biomasse zudem innerhalb eines einzigen Tages.",
+            "Dem stehen allerdings erhebliche technische Schwierigkeiten gegenüber. Damit die Algen gleichmäßig wachsen, müssen die Anlagen in den Wintermonaten beleuchtet und im Sommer gekühlt werden. Besonders aufwendig ist zudem die Ernte: Die winzigen Zellen müssen aus großen Wassermengen herausgefiltert oder zentrifugiert werden, was nach Sandwegs Berechnungen bis zu einem Drittel der gesamten Produktionskosten ausmacht. Hinzu kommt, dass die festen Zellwände vieler Arten vom menschlichen Darm kaum aufgeschlossen werden; ohne eine vorherige mechanische Zerkleinerung bleibt ein Großteil des Eiweißes für den Körper unerreichbar.",
+            "Schließlich stellt sich die Frage nach der Akzeptanz. Bei Verkostungen, die das Team gemeinsam mit der Lebensmittelwissenschaftlerin Jule Brümmerhoff durchführte, störten sich viele Teilnehmende am grasigen Beigeschmack und an der intensiv grünen Farbe der Produkte. Nudeln, denen nur geringe Mengen Algenpulver beigemischt waren, schnitten hingegen kaum schlechter ab als herkömmliche. Sandweg sieht darin einen gangbaren Weg: Algen müssten nicht als eigenständiges Lebensmittel überzeugen, sondern könnten zunächst unauffällig den Nährwert vertrauter Speisen erhöhen. Ob die Herstellung bis dahin wettbewerbsfähig wird, lässt die Arbeitsgruppe allerdings ausdrücklich offen."
+          ]
+        },
+        {
+          "id": "begriff-a",
+          "label": "a",
+          "title": "Vorteil",
+          "paragraphs": [
+            "Die Aussage beschreibt etwas, das für die Nutzung von Mikroalgen als Nahrung spricht."
+          ]
+        },
+        {
+          "id": "begriff-b",
+          "label": "b",
+          "title": "Hindernis",
+          "paragraphs": [
+            "Die Aussage beschreibt etwas, das einer Nutzung von Mikroalgen als Nahrung im Weg steht."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 28,
+          "type": "zuordnung",
+          "prompt": "Ein beträchtlicher Teil der Ausgaben entsteht dadurch, dass man die Mikroorganismen von der Flüssigkeit trennen muss, in der sie heranwachsen.",
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "was nach Sandwegs Berechnungen bis zu einem Drittel der gesamten Produktionskosten ausmacht" }
+          ],
+          "explanation": "Hasat sırasında küçücük hücrelerin büyük miktarda sudan süzülmesi veya santrifüjlenmesi gerekiyor ve bu, Sandweg'in hesaplarına göre „bis zu einem Drittel der gesamten Produktionskosten“ (toplam üretim maliyetinin üçte birine kadar) tutuyor. Metin bunu „erhebliche technische Schwierigkeiten“ (ciddi teknik zorluklar) arasında sayıyor. Bu yüzden cevap b (Hindernis)."
+        },
+        {
+          "number": 29,
+          "type": "zuordnung",
+          "prompt": "Für die Zucht wird kein Boden benötigt, auf dem sich Nutzpflanzen anbauen ließen.",
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "Zudem konkurrieren die Kulturen nicht mit dem Ackerbau" },
+            { "text": "artikel", "quote": "die auch auf versiegelten Flächen oder ehemaligen Industriegeländen Platz finden" }
+          ],
+          "explanation": "Metne göre algler tarımla rekabet etmiyor: „konkurrieren die Kulturen nicht mit dem Ackerbau“. Kapalı boru sistemleri betonlanmış alanlara veya eski sanayi arazilerine de kurulabiliyor („auf versiegelten Flächen oder ehemaligen Industriegeländen“). Yani tarla toprağı gerekmiyor; bu, algleri ilginç kılan bir özellik. Bu yüzden cevap a (Vorteil)."
+        },
+        {
+          "number": 30,
+          "type": "zuordnung",
+          "prompt": "Die Algen liefern bestimmte wertvolle Lipide, die man ansonsten in erster Linie über Seefisch aufnimmt.",
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "mehrfach ungesättigte Fettsäuren, die sonst vor allem in Meeresfisch enthalten sind" }
+          ],
+          "explanation": "Metin alglerin bileşimini olumlu özellikler arasında sayıyor („Was die Organismen so interessant macht …“) ve proteinin yanında „mehrfach ungesättigte Fettsäuren, die sonst vor allem in Meeresfisch enthalten sind“ (başka durumda özellikle deniz balığında bulunan çoklu doymamış yağ asitleri) içerdiklerini söylüyor. „Lipide“ burada yağları, yani bu yağ asitlerini karşılıyor. Bu yüzden cevap a (Vorteil)."
+        },
+        {
+          "number": 31,
+          "type": "zuordnung",
+          "prompt": "Werden die robusten Hüllen der Algen nicht zuvor aufgebrochen, kann der Verdauungstrakt nur wenig von ihrem Protein verwerten.",
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "ohne eine vorherige mechanische Zerkleinerung bleibt ein Großteil des Eiweißes für den Körper unerreichbar" }
+          ],
+          "explanation": "Yüksek protein oranı aslında bir avantaj, ama metin birçok türün sert hücre duvarlarının bağırsakta neredeyse parçalanmadığını söylüyor: „ohne eine vorherige mechanische Zerkleinerung bleibt ein Großteil des Eiweißes für den Körper unerreichbar“ (önceden mekanik olarak parçalanmazsa proteinin büyük kısmına vücut ulaşamıyor). Seçenekteki „Hüllen“ (kılıflar) bu hücre duvarlarıdır. Bu, metnin zorluklar bölümünde geçiyor. Bu yüzden cevap b (Hindernis)."
+        }
+      ]
+    }
+  ]
+}

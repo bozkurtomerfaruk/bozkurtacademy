@@ -1,0 +1,88 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Studieren mit Kind",
+  "minutes": 5,
+  "context": "Sie lesen im Online-Magazin einer Universität einen Bericht über eine Befragung.",
+  "instructions": "Lesen Sie den Text. Welches Wort passt in die Lücken 1 bis 5? Wählen Sie jeweils die richtige Lösung (a, b, c oder d).",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "bericht",
+          "title": "Zwischen Hörsaal und Kita: Erhebung zur Lage studierender Eltern",
+          "paragraphs": [
+            "An der Universität Tidekamp hat etwa jeder zwanzigste Studierende mindestens ein Kind. Wie diese Gruppe ihr Studium bewältigt, war bislang jedoch kaum untersucht. Eine Befragung des hochschuleigenen Zentrums für Studienforschung, an der sich gut 600 studierende Mütter und Väter {{1}}, liefert dazu nun erstmals belastbare Daten.",
+            "Das zentrale Ergebnis überrascht: Nicht der Lernstoff bereitet den Befragten die größten Schwierigkeiten, sondern die Organisation des Alltags. Fast zwei Drittel geben an, Pflichtveranstaltungen regelmäßig zu versäumen, weil diese erst am späten Nachmittag stattfinden – zu einer Zeit also, zu der die meisten Kindertagesstätten bereits {{2}} haben. Entsprechend langsamer kommen viele im Studium voran: Studierende Eltern benötigen der Erhebung {{3}} im Schnitt drei Semester länger bis zum Abschluss als ihre kinderlosen Kommilitoninnen und Kommilitonen.",
+            "Studienabbrüche seien dagegen seltener, als häufig angenommen werde, betont die Leiterin der Untersuchung, die Soziologin Dr. Rosalind Saalfrank. {{4}} berichte ein Großteil der Befragten von einer anhaltenden Überlastung: Wer tagsüber ein Kind betreue, verlege das Lernen oft in die Nacht und verzichte auf Erholungsphasen. Viele hielten nur durch, weil sie den einmal begonnenen Abschluss nicht aufgeben wollten.",
+            "Das Forschungsteam empfiehlt deshalb, Pflichtveranstaltungen nach Möglichkeit in die Vormittagsstunden zu legen und Vorlesungen aufzuzeichnen. Zudem solle die Hochschulleitung prüfen, ob Fristen für Prüfungen und Abschlussarbeiten bei Studierenden mit Kind {{5}} werden können – schließlich sei der längere Weg zum Abschluss weniger eine Frage der Leistung als der verfügbaren Zeit."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "abc",
+          "prompt": "Lücke 1",
+          "options": { "a": "teilnahmen", "b": "beteiligten", "c": "einsetzten", "d": "befassten" },
+          "answer": "b",
+          "evidence": [
+            { "text": "bericht", "quote": "Eine Befragung des hochschuleigenen Zentrums für Studienforschung, an der sich gut 600 studierende Mütter und Väter" }
+          ],
+          "explanation": "Yan cümlede hem „an der“ (anketine) hem de dönüşlü „sich“ var. Bu ikisini birlikte alan fiil „sich an etwas beteiligen“dir (bir şeye katılmak): „an der sich gut 600 … Mütter und Väter beteiligten“. a) teilnahmen yanlış: Anlam olarak yakındır, ama „an etwas teilnehmen“ dönüşlü değildir; „sich“ ile kullanılmaz. c) einsetzten yanlış: „sich für etwas einsetzen“ (bir şey için çaba göstermek) „für“ ister. d) befassten yanlış: „sich mit etwas befassen“ (bir şeyle uğraşmak) „mit“ ister; ayrıca anne babalar anketi incelemedi, ankete cevap verdi."
+        },
+        {
+          "number": 2,
+          "type": "abc",
+          "prompt": "Lücke 2",
+          "options": { "a": "geöffnet", "b": "gewartet", "c": "angefangen", "d": "geschlossen" },
+          "answer": "d",
+          "evidence": [
+            { "text": "bericht", "quote": "Pflichtveranstaltungen regelmäßig zu versäumen, weil diese erst am späten Nachmittag stattfinden" }
+          ],
+          "explanation": "Öğrenci anne babalar zorunlu dersleri düzenli olarak kaçırıyor, çünkü bu dersler ancak öğleden sonra geç saatlerde yapılıyor („erst am späten Nachmittag“). Bu ancak çocuk bakımı o saatte artık mümkün değilse bir sebep olur: Kreşlerin çoğu o saatte çoktan kapanmıştır („bereits geschlossen haben“). a) geöffnet yanlış: Kreşler açık olsaydı, geç saatteki dersler devamsızlığın sebebi olmazdı. b) gewartet yanlış: „Kreşler çoktan beklemiş“ anlamsız bir ifadedir ve devamsızlığın sebebini açıklamaz. c) angefangen yanlış: Kreşlerin „bereits angefangen haben“ (çoktan başlamış olması) geç saatteki dersleri neden kaçırdıklarını açıklamaz."
+        },
+        {
+          "number": 3,
+          "type": "abc",
+          "prompt": "Lücke 3",
+          "options": { "a": "zufolge", "b": "wegen", "c": "halber", "d": "zuliebe" },
+          "answer": "a",
+          "evidence": [
+            { "text": "bericht", "quote": "Studierende Eltern benötigen der Erhebung" }
+          ],
+          "explanation": "Cümle, üç dönemlik farkın hangi kaynağa dayandığını söylüyor: araştırmaya göre. Dört edat da isimden sonra gelebilir ve „der Erhebung“ hem Genitiv hem Dativ olabildiği için dördü de dilbilgisi olarak mümkündür; karar anlamdadır. Bir bilginin kaynağını bildiren edat „zufolge“dir (Dativ ile): „der Erhebung zufolge“ (ankete göre). b) wegen yanlış: Sebep bildirir; anne babaların daha uzun süre okumasının sebebi anket değildir, anket bu farkı yalnızca ölçmüştür. c) halber yanlış: „… uğruna, … için“ demektir („der Ordnung halber“); kaynak bildirmez. d) zuliebe yanlış: „… -in hatırı için“ demektir („dem Kind zuliebe“); anlam olarak uymaz."
+        },
+        {
+          "number": 4,
+          "type": "abc",
+          "prompt": "Lücke 4",
+          "options": { "a": "Folglich", "b": "Ebenso", "c": "Allerdings", "d": "Daher" },
+          "answer": "c",
+          "evidence": [
+            { "text": "bericht", "quote": "Studienabbrüche seien dagegen seltener, als häufig angenommen werde" },
+            { "text": "bericht", "quote": "berichte ein Großteil der Befragten von einer anhaltenden Überlastung" }
+          ],
+          "explanation": "Önceki cümle olumlu bir bilgi veriyor: Öğrenimi bırakanlar sanıldığından daha az („Studienabbrüche seien dagegen seltener“). Sonraki cümle bunu kısıtlıyor: Katılımcıların büyük kısmı sürekli bir aşırı yüklenmeden söz ediyor; birçoğu sadece başladığı öğrenimi yarıda bırakmak istemediği için dayanıyor. Bir bilgiyi olumsuz bir yönle sınırlayan bağlaç „Allerdings“dır (ancak, gerçi). a) Folglich ve d) Daher yanlış: Aşırı yüklenmeyi az sayıdaki bırakmaların sonucu yapar; metinde böyle bir sebep–sonuç ilişkisi yok. b) Ebenso yanlış: Aynı yönde bir ekleme bildirir; oysa olumlu bir bilgiden olumsuz bir bilgiye geçiliyor."
+        },
+        {
+          "number": 5,
+          "type": "abc",
+          "prompt": "Lücke 5",
+          "options": { "a": "verkürzt", "b": "vorgezogen", "c": "verschärft", "d": "verlängert" },
+          "answer": "d",
+          "evidence": [
+            { "text": "bericht", "quote": "im Schnitt drei Semester länger bis zum Abschluss" },
+            { "text": "bericht", "quote": "der längere Weg zum Abschluss weniger eine Frage der Leistung als der verfügbaren Zeit" }
+          ],
+          "explanation": "Öğrenci anne babalar mezuniyete kadar ortalama üç dönem daha fazla zamana ihtiyaç duyuyor ve araştırma ekibine göre bunun sebebi başarı değil, sahip oldukları zaman („weniger eine Frage der Leistung als der verfügbaren Zeit“). Bu yüzden önerilen, sınav ve bitirme tezi sürelerinin onlar için uzatılmasıdır: „verlängert werden“. a) verkürzt ve b) vorgezogen yanlış: Metin sorunun kaynağı olarak zaman eksikliğini gösteriyor; sürelerin kısaltılması veya öne alınması anne babalara daha da az zaman bırakır ve „schließlich …“ gerekçesiyle çelişir. c) verschärft yanlış: Süreleri sıkılaştırmak da aynı gerekçeyle bağdaşmaz."
+        }
+      ]
+    }
+  ]
+}

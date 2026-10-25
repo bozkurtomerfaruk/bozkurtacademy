@@ -1,0 +1,88 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 6,
+  "set": "set-1",
+  "title": "Gelenke aus dem Drucker",
+  "minutes": 5,
+  "instructions": "Lesen Sie den Text. Ordnen Sie die Aussagen 28 bis 31 einem der beiden Begriffe (a oder b) zu.",
+  "groups": [
+    {
+      "layout": "article",
+      "none": false,
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Gelenke aus dem Drucker",
+          "paragraphs": [
+            "Wer ein künstliches Kniegelenk benötigt, erhält bislang in aller Regel ein Serienprodukt, das aus einem Baukasten weniger Standardgrößen ausgewählt wird. Ein Forschungsverbund um die Orthopädin Hiltrud Lahnstedt und den Werkstoffwissenschaftler Rune Iversohn verfolgt einen anderen Weg: Auf der Grundlage computertomografischer Aufnahmen wird für jede Patientin und jeden Patienten ein Implantat aus Titanpulver gefertigt, das ein Laser Schicht für Schicht verschmilzt.",
+            "Der Nutzen des Verfahrens zeigt sich zunächst bei der Passform. In einer Pilotstudie mit 46 Operierten saßen die gedruckten Prothesen ausnahmslos so, wie es die Planung vorgesehen hatte; nachträgliche Korrekturen im Operationssaal entfielen, wodurch sich die Eingriffe im Schnitt um knapp zwanzig Minuten verkürzten. Darüber hinaus lässt sich die Oberfläche gezielt porös gestalten. Dass Knochenzellen in solche Gitterstrukturen einwachsen und das Implantat dadurch fest verankern, hat das Team zuvor sowohl an Zellkulturen als auch in Tierversuchen nachgewiesen.",
+            "Weit weniger klar ist, was diese Befunde für den Alltag der Betroffenen bedeuten. Lahnstedt rechnet damit, dass die bessere Verankerung die Lebensdauer der Prothesen verlängern werde und Wechseloperationen seltener nötig würden. Belastbare Daten dazu könne jedoch erst eine Beobachtung über zehn bis fünfzehn Jahre liefern. Ähnlich verhält es sich mit der Hoffnung, die porösen Strukturen könnten Infektionen vorbeugen, wenn man sie mit antibakteriellen Wirkstoffen befülle; entsprechende Laborversuche laufen erst seit wenigen Monaten. Ob sich deren Ergebnisse auf den menschlichen Körper übertragen lassen, ist noch völlig ungewiss.",
+            "Auch die wirtschaftliche Bilanz bleibt vorerst offen. Derzeit ist die Herstellung eines Einzelstücks noch etwa doppelt so teuer wie die eines Serienimplantats. Iversohn geht aber davon aus, dass die Kosten mit der Automatisierung der Druckanlagen deutlich sinken dürften – und dass die kürzeren Operationszeiten einen Teil der Mehrausgaben ausgleichen könnten. Die Krankenkassen wollen sich zu einer möglichen Erstattung erst äußern, wenn Ergebnisse aus größeren Studien vorliegen."
+          ]
+        },
+        {
+          "id": "begriff-a",
+          "label": "a",
+          "title": "gesichert",
+          "paragraphs": [
+            "Für diese Aussage nennt der Text bereits vorliegende Ergebnisse."
+          ]
+        },
+        {
+          "id": "begriff-b",
+          "label": "b",
+          "title": "vermutet",
+          "paragraphs": [
+            "Diese Aussage stellt der Text als Erwartung dar, die noch nicht belegt ist."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 28,
+          "type": "zuordnung",
+          "prompt": "Während der Eingriffe in der ersten Studie musste an den maßgefertigten Kunstgelenken nichts mehr nachgebessert werden.",
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "nachträgliche Korrekturen im Operationssaal entfielen" }
+          ],
+          "explanation": "Pilot çalışmada 46 hastada protezler planlandığı gibi oturmuş; metin „nachträgliche Korrekturen im Operationssaal entfielen“ (ameliyathanede sonradan düzeltme yapılmasına gerek kalmadı) diyor. Bu, çalışmada gerçekten görülmüş bir sonuçtur, bir beklenti değildir. Bu yüzden cevap a (gesichert)."
+        },
+        {
+          "number": 29,
+          "type": "zuordnung",
+          "prompt": "Gedruckte Implantate bleiben länger funktionsfähig, sodass Folgeeingriffe am selben Gelenk zurückgehen.",
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "Lahnstedt rechnet damit, dass die bessere Verankerung die Lebensdauer der Prothesen verlängern werde" },
+            { "text": "artikel", "quote": "Belastbare Daten dazu könne jedoch erst eine Beobachtung über zehn bis fünfzehn Jahre liefern" }
+          ],
+          "explanation": "Kemiğin implanta kaynaşması kanıtlanmış olsa da daha az protez değişimi gerekeceği yalnızca bir beklentidir: „Lahnstedt rechnet damit, dass … die Lebensdauer der Prothesen verlängern werde“ (Lahnstedt protezlerin ömrünün uzayacağını tahmin ediyor). Metne göre güvenilir veriyi ancak 10–15 yıllık bir gözlem verebilir („erst eine Beobachtung über zehn bis fünfzehn Jahre“). Bu yüzden cevap b (vermutet)."
+        },
+        {
+          "number": 30,
+          "type": "zuordnung",
+          "prompt": "Sobald die Herstellung stärker maschinell abläuft, werden die Sonderanfertigungen erheblich günstiger.",
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "Iversohn geht aber davon aus, dass die Kosten mit der Automatisierung der Druckanlagen deutlich sinken dürften" }
+          ],
+          "explanation": "Metinde kesin olan tek maliyet bilgisi, tek parça üretimin bugün yaklaşık iki kat pahalı olduğudur. Maliyetlerin otomasyonla düşeceği ise yalnızca Iversohn'un varsayımıdır: „Iversohn geht aber davon aus, dass die Kosten … deutlich sinken dürften“ (Iversohn maliyetlerin belirgin biçimde düşeceğini varsayıyor). Metin bu bölüme „bleibt vorerst offen“ (şimdilik belirsiz) diye başlıyor. Bu yüzden cevap b (vermutet)."
+        },
+        {
+          "number": 31,
+          "type": "zuordnung",
+          "prompt": "In Labor- und Tierversuchen wuchs Gewebe in die durchlässige Außenschicht der Prothese ein und gab ihr auf diese Weise Halt.",
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "hat das Team zuvor sowohl an Zellkulturen als auch in Tierversuchen nachgewiesen" }
+          ],
+          "explanation": "Metne göre kemik hücrelerinin gözenekli yüzeye yerleşip implantı sağlam biçimde sabitlediği daha önce hücre kültürlerinde ve hayvan deneylerinde gösterilmiştir: „hat das Team zuvor sowohl an Zellkulturen als auch in Tierversuchen nachgewiesen“ (ekip bunu kanıtladı). Belirsiz olan, bunun hastaların uzun vadeli günlük yaşamı için ne anlama geldiğidir; bu ifadenin kendisi değil. Bu yüzden cevap a (gesichert)."
+        }
+      ]
+    }
+  ]
+}

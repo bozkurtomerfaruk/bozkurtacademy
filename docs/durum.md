@@ -7,9 +7,8 @@
 ### Kaldığım yer
 - Aşama 1, Goethe C1: bitti, main'e birleştirildi (813927f).
 - Aşama 2, TestDaF kâğıt: bitti, main'e birleştirildi.
-- Sonra: Aşama 3, TestDaF dijital (aşağıdaki karar tablosu).
-- Aşama 2, TestDaF kâğıt: Oynatıcı eklentisi (ja/nein/nichts, iki örnek "01"/"02") ve test hazır; dal `claude/testdaf-papier`, çalışma ağacı /tmp/wt-testdaf. Pilot yazılıyor. C1 birleşince bu dal main'e göre yeniden düzenlenecek; format tablosu da o zaman buraya eklenecek.
-- Güvenlik için 17:18 UTC'ye bir devam mesajı zamanlandı.
+- Aşama 3, TestDaF dijital: bitti, main'e birleştirildi (Aufgabe 2 ve 7 atlandı).
+- Sonra: Aşama 4, telc B1. Dal `claude/telc-b1`, çalışma ağacı /tmp/wt-telc. Pilot (5 Teil × 2 set) yazıldı, inceleniyor.
 
 ### Ekteki TestDaF modelltestleri
 Beş PDF'in hepsi **kâğıt tabanlı** TestDaF:
@@ -56,6 +55,23 @@ Dijital modelltest ekte yoktu. Kaynak: testdaf.de'deki test yapısı ve demo gö
 | 5 | Aussagen Kategorien zuordnen (✔ ad), kategori sayısı (≈ 3) | 7 | Kategoriler etiketli metin, her ifade için açılır liste. Yapılabilir |
 | 6 | Aussagen einem Begriffspaar zuordnen (✔ ad) | 4 | İki kategorili eşleştirme; A1 Teil 2'deki a/b düğmeleriyle. Yapılabilir |
 | 7 | Fehler in Zusammenfassung erkennen: özetteki 3 yanlış cümleye tıklama (✔) | 3 | **Atlanıyor:** metinde cümle seçme ve tıklama, büyük oynatıcı değişikliği |
+
+**Aşama 3 bitti: 5 Aufgabe × 5 set (25 set, 135 soru).** Aufgabe 1, 3, 4, 5 ve 6 yapıldı.
+
+**Atlanan görevler:**
+- Aufgabe 2 (paragraf sıralama, sürükle-bırak)
+- Aufgabe 7 (özette yanlış cümleye tıklama)
+
+İkisi de oynatıcıda büyük değişiklik gerektiriyor; seçimde „şimdilik yok“ olarak görünüyor.
+
+**Kör çözüm:** pilotta 54/54, set 3–5'te 81/81 uyuştu. Çözücünün işaretlediği üç soru netleştirildi ve yeniden kör çözümde 3/3 uyuştu:
+- 1.3/2: „hingegen“ için açık bir karşıtlık eklendi (başka üniversiteler yasakladı).
+- 3.4/13: karşılaştırma grubu artık aynı sayılarla daire biçimli tahtada oynuyor; tek fark diziliş.
+- 3.3/12a: daha az iddialı yazıldı.
+
+**Düzeltmediğim notlar:**
+- Aufgabe 6'da neden/sonuç ve fırsat/risk ifadelerinin bir kısmı dilden tahmin edilebiliyor.
+- Aufgabe 4'te artan iki dil eylemi işaretsiz komşu cümlelerde duruyor.
 
 ### Goethe-Zertifikat C1 (modüler) Lesen: format tablosu
 Kaynak: Goethe-Institut el kitabı ve Modellsatz açıklamaları (arama sonuçları üzerinden). PDF'ler bu ortamdan açılamadı (403).

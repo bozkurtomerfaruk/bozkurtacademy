@@ -1,0 +1,91 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Ein Forschungsschiff kehrt zurück",
+  "minutes": 5,
+  "context": "Sie lesen in einem Wissenschaftsmagazin eine Meldung über das Ende einer Expedition.",
+  "instructions": "Lesen Sie den Text. Welches Wort passt in die Lücken 1 bis 5? Wählen Sie jeweils die richtige Lösung (a, b, c oder d).",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "meldung",
+          "title": "Nach elf Monaten im Südpolarmeer: „Tiefenlot“ wieder im Heimathafen",
+          "paragraphs": [
+            "Nach elf Monaten auf See ist das Forschungsschiff „Tiefenlot“ in seinen Heimathafen Wellmünde zurückgekehrt. An Bord befanden sich zuletzt 46 Wissenschaftlerinnen und Wissenschaftler aus neun Ländern. Das internationale Team hatte im Südpolarmeer untersucht, wie viel Kohlendioxid das Meer dort aus der Atmosphäre {{1}} und in tiefere Wasserschichten weiterleitet.",
+            "Die Expedition hatte unter schwierigen Bedingungen begonnen: Wegen eines Motorschadens musste die „Tiefenlot“ bereits nach drei Wochen eine Werft anlaufen, wodurch zwei der geplanten Messstationen {{2}} werden mussten. Den Zeitverlust habe man durch eine veränderte Route jedoch zum Teil {{3}} können, berichtet die Fahrtleiterin Dr. Sigrun Brodersen; insgesamt seien mehr als 300 Wasser- und Sedimentproben genommen worden.",
+            "Erste Analysen deuten darauf hin, dass das Südpolarmeer in den vergangenen Jahrzehnten mehr Kohlenstoff gebunden hat als bislang angenommen. {{4}} warnt Brodersen vor voreiligen Schlüssen: Die Messungen stammten überwiegend aus dem Südsommer; ob das Meer in den dunklen Wintermonaten ähnlich viel Kohlenstoff speichere, sei bislang völlig offen.",
+            "Um diese Lücke zu schließen, ist für das übernächste Jahr eine Winterexpedition geplant; bis dahin sollen sechs Messbojen, die die Besatzung vor der Rückfahrt im Packeis verankert hat, zumindest Temperatur und Salzgehalt des Wassers übermitteln. Bis die jetzt gesammelten Proben in den Laboren vollständig {{5}} sind, dürften allerdings ohnehin zwei bis drei Jahre vergehen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "abc",
+          "prompt": "Lücke 1",
+          "options": { "a": "abgibt", "b": "freisetzt", "c": "aufnimmt", "d": "verbraucht" },
+          "answer": "c",
+          "evidence": [
+            { "text": "meldung", "quote": "wie viel Kohlendioxid das Meer dort aus der Atmosphäre" },
+            { "text": "meldung", "quote": "und in tiefere Wasserschichten weiterleitet" }
+          ],
+          "explanation": "Gazın yönü „aus der Atmosphäre“ (atmosferden) ile belirleniyor: Deniz karbondioksiti havadan alıyor ve daha derin su katmanlarına iletiyor („in tiefere Wasserschichten weiterleitet“). Ancak önce alınan bir şey iletilebilir: „aus der Atmosphäre aufnimmt“ (atmosferden alıyor). Üçüncü paragraftaki „mehr Kohlenstoff gebunden“ (daha fazla karbon bağlamış) da bunu doğruluyor. a) abgibt ve b) freisetzt yanlış: İkisi de ters yönü, yani gazı dışarı vermeyi anlatır; bu anlamda „an die Atmosphäre“ (atmosfere) denmesi gerekirdi. Ayrıca deniz gazı bıraksaydı onu derin katmanlara iletemezdi. d) verbraucht yanlış: „verbrauchen“ bir şeyi tüketip bitirmektir; tüketilen gaz derin katmanlara iletilemez („weiterleitet“), metin de karbonun „gebunden“ (bağlanmış) olduğundan söz ediyor."
+        },
+        {
+          "number": 2,
+          "type": "abc",
+          "prompt": "Lücke 2",
+          "options": { "a": "gestrichen", "b": "ergänzt", "c": "bestätigt", "d": "erweitert" },
+          "answer": "a",
+          "evidence": [
+            { "text": "meldung", "quote": "Die Expedition hatte unter schwierigen Bedingungen begonnen" },
+            { "text": "meldung", "quote": "Wegen eines Motorschadens musste die „Tiefenlot“ bereits nach drei Wochen eine Werft anlaufen" }
+          ],
+          "explanation": "Motor arızası yüzünden gemi daha üçüncü haftada bir tersaneye gitmek zorunda kaldı ve zaman kaybetti („Zeitverlust“). „wodurch“ (bu yüzden) bu arızanın olumsuz bir sonucunu bağlıyor: Planlanan ölçüm istasyonlarından ikisi programdan çıkarılmak zorunda kalındı: „gestrichen werden mussten“. b) ergänzt ve d) erweitert yanlış: İstasyonların eklenmesi veya genişletilmesi zaman kaybının sonucu olamaz; „schwierige Bedingungen“ (zor koşullar) ile de çelişir. c) bestätigt yanlış: Planlanan istasyonların onaylanması bir arızanın sonucu değildir ve „mussten“ (zorunda kalındı) ile anlamlı bir zorunluluk oluşturmaz."
+        },
+        {
+          "number": 3,
+          "type": "abc",
+          "prompt": "Lücke 3",
+          "options": { "a": "beheben", "b": "verursachen", "c": "vergrößern", "d": "ausgleichen" },
+          "answer": "d",
+          "evidence": [
+            { "text": "meldung", "quote": "Den Zeitverlust habe man durch eine veränderte Route jedoch zum Teil" },
+            { "text": "meldung", "quote": "insgesamt seien mehr als 300 Wasser- und Sedimentproben genommen worden" }
+          ],
+          "explanation": "„jedoch“ (ancak) olumsuz başlangıca karşı olumlu bir gelişmeyi bildiriyor: Değiştirilen bir rota sayesinde kaybedilen zaman kısmen telafi edilmiş, sonunda 300'den fazla örnek alınmış. Kaybı telafi etmek „einen Zeitverlust ausgleichen“dir. a) beheben yanlış: „beheben“ bir arızayı veya hatayı gidermek için kullanılır („einen Schaden beheben“); motor arızası giderilebilir, ama kaybedilmiş zaman „behoben“ edilmez. b) verursachen ve c) vergrößern yanlış: Zaman kaybına yol açmak veya onu büyütmek „jedoch“ ile kurulan olumlu karşıtlıkla ve rotanın amacıyla çelişir; zaman kaybına motor arızası yol açmıştı."
+        },
+        {
+          "number": 4,
+          "type": "abc",
+          "prompt": "Lücke 4",
+          "options": { "a": "Somit", "b": "Gleichwohl", "c": "Infolgedessen", "d": "Überdies" },
+          "answer": "b",
+          "evidence": [
+            { "text": "meldung", "quote": "Erste Analysen deuten darauf hin" },
+            { "text": "meldung", "quote": "warnt Brodersen vor voreiligen Schlüssen" }
+          ],
+          "explanation": "Önceki cümle dikkat çekici bir ilk sonuç veriyor: Güney Okyanusu şimdiye kadar sanıldığından daha fazla karbon bağlamış görünüyor. Boşluklu cümle bu sonucu sınırlıyor: Brodersen aceleci sonuçlara karşı uyarıyor, çünkü ölçümler çoğunlukla yaz aylarından geliyor. Bir bilgiye rağmen onu kısıtlayan bir ifadeyi „Gleichwohl“ (buna rağmen, yine de) bağlar. a) Somit ve c) Infolgedessen yanlış: Uyarıyı ilk sonuçların mantıksal sonucu yapar; uyarının gerekçesi ise sonuçlar değil, ölçümlerin kış aylarını kapsamamasıdır. d) Überdies yanlış: Aynı yönde bir ek bilgi bildirir; oysa uyarı önceki cümlenin ifadesini zayıflatıyor."
+        },
+        {
+          "number": 5,
+          "type": "abc",
+          "prompt": "Lücke 5",
+          "options": { "a": "entnommen", "b": "verladen", "c": "verschickt", "d": "ausgewertet" },
+          "answer": "d",
+          "evidence": [
+            { "text": "meldung", "quote": "Bis die jetzt gesammelten Proben in den Laboren vollständig" },
+            { "text": "meldung", "quote": "dürften allerdings ohnehin zwei bis drei Jahre vergehen" }
+          ],
+          "explanation": "Örnekler zaten toplanmış („die jetzt gesammelten Proben“); geriye laboratuvarlarda incelenmeleri kalıyor. Şimdiye kadar yalnızca „erste Analysen“ (ilk analizler) var; örneklerin tamamen değerlendirilmesi iki üç yıl sürecek: „vollständig ausgewertet“ (tamamen değerlendirilmiş). a) entnommen yanlış: Örnekler seferde zaten alındı („seien … genommen worden“); bunun için yıllarca beklemek gerekmez. b) verladen ve c) verschickt yanlış: Gemi limana döndü; örneklerin yüklenmesi veya gönderilmesi iki üç yıl sürmez ve „in den Laboren“ (laboratuvarlarda) yapılan bir iş değildir."
+        }
+      ]
+    }
+  ]
+}

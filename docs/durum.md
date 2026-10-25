@@ -8,7 +8,6 @@
 - Aşama 1, Goethe C1: bitti, main'e birleştirildi (813927f).
 - Aşama 2, TestDaF kâğıt: bitti, main'e birleştirildi.
 - Aşama 3, TestDaF dijital: bitti, main'e birleştirildi (00feb1c; Aufgabe 2 ve 7 atlandı). Modelltest PDF'leri çalışma alanından silindi.
-- Aşama 4, telc B1: bitti, main'e birleştirildi.
 - Aşama 4, telc B1: bitti, main'e birleştirildi (49db897).
 - Aşama 5, telc A1: pilot yazılıyor; dal `claude/telc-a1`, çalışma ağacı /tmp/wt-ta1.
 

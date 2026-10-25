@@ -1,0 +1,154 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-5",
+  "title": "Arzneimittel im Wasser",
+  "minutes": 15,
+  "context": "Sie lesen in einem Wissenschaftsmagazin einen Artikel über Rückstände von Medikamenten in Gewässern.",
+  "instructions": "Lesen Sie den Text und die Aufgaben 10 bis 16. Wählen Sie bei jeder Aufgabe die richtige Lösung (a, b oder c).",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Arzneimittel im Wasser",
+          "byline": "Von Adelheid Grützmacher",
+          "paragraphs": [
+            "Schmerzmittel, Antibiotika, Blutdrucksenker, Hormone: In nahezu jedem größeren Fluss lassen sich heute Spuren von Medikamenten nachweisen. Meldungen darüber erscheinen inzwischen regelmäßig, und sie erwecken leicht den Eindruck, das Problem nehme rasant zu. Ob die Belastung tatsächlich gestiegen ist, lässt sich allerdings kaum sagen, weil verlässliche Vergleichsdaten aus früheren Jahrzehnten fehlen. Sicher ist nur, dass die Labore empfindlicher geworden sind. „Wir finden heute mehr, weil wir Konzentrationen erfassen, die vor zwanzig Jahren unterhalb jeder Nachweisgrenze lagen“, sagt der Hydrochemiker Burkhard Wiesmayer von der Hochschule Saalwinkel. Verbindliche Grenzwerte gibt es für die meisten Wirkstoffe bislang nicht.",
+            "Auf welchem Weg gelangen die Substanzen in die Gewässer? Häufig wird vermutet, die Hauptquelle seien Tabletten, die im Abfluss oder in der Toilette entsorgt werden. Das kommt vor und ist ärgerlich, macht nach Wiesmayers Schätzung aber nur einen kleineren Teil aus. Der weitaus größte Anteil wird von Patientinnen und Patienten schlicht wieder ausgeschieden. Die Kläranlagen sind für diese Fracht nicht gebaut: Sie entfernen Nährstoffe und leicht abbaubare organische Stoffe, doch viele Arzneien sind gerade so entwickelt, dass sie im Körper nicht vorzeitig zerfallen. Diese Stabilität, für die Therapie erwünscht, wird im Klärbecken zum Problem; selbst modern ausgestattete Anlagen lassen manche Wirkstoffe nahezu unverändert passieren.",
+            "Welche Folgen das haben kann, zeigt eine Untersuchung an einem Bach unterhalb der Kläranlage Hollmersbach. Ein beträchtlicher Teil der dort gefangenen männlichen Fische wies weibliche Geschlechtsmerkmale auf, während oberhalb der Einleitung kaum auffällige Tiere gefunden wurden. Als wahrscheinliche Ursache gilt ein synthetisches Hormon aus der Antibabypille, das schon in Mengen von wenigen Milliardstel Gramm pro Liter wirkt. Für ein verbreitetes Schmerzmittel wiederum belegten Laborversuche Nierenschäden bei Forellen.",
+            "Für den Menschen gibt die Toxikologin Valerie Nordhoff vom Institut für Umwelttoxikologie in Velmerstedt vorerst Entwarnung. Die Mengen, die im Trinkwasser gefunden werden, lägen um ein Vielfaches unter jeder therapeutischen Dosis; man müsste Tausende Liter trinken, um auf die Menge einer einzigen Tablette zu kommen. Offen sei jedoch, wie sich die lebenslange Aufnahme zahlreicher Stoffe gleichzeitig auswirke. Zu solchen Gemischen gebe es kaum Studien, weil jeder Wirkstoff einzeln zugelassen und geprüft werde.",
+            "Technisch ließe sich viel erreichen. Eine zusätzliche, sogenannte vierte Reinigungsstufe, bei der das Abwasser mit Ozon behandelt oder über Aktivkohle geleitet wird, hält einen Großteil der Rückstände zurück. Doch beide Verfahren haben ihren Preis. Die Ozonung kann neue Abbauprodukte erzeugen, deren Wirkung niemand kennt, und die Herstellung von Aktivkohle verbraucht viel Energie. Eine Nachrüstung jeder kleinen Dorfkläranlage hält Wiesmayer deshalb für unverhältnismäßig. Sinnvoll sei die Investition vor allem bei großen Anlagen und dort, wo das gereinigte Wasser in kleine, empfindliche Gewässer fließe.",
+            "Andere setzen früher an. Einige Forschungsgruppen arbeiten an Wirkstoffen, die ihre Aufgabe im Körper erfüllen und anschließend in der Umwelt rasch zerfallen. Das Vorhaben steckt in einem Dilemma, denn ein Medikament muss zugleich jahrelang lagerfähig sein und darf sich nicht schon im Magen zersetzen. Vorangetrieben wird diese Forschung bislang fast nur an Hochschulen; die großen Hersteller verhalten sich abwartend. Bis solche Präparate in den Apotheken stehen, dürften Jahrzehnte vergehen.",
+            "Kurzfristig ließe sich auch im Alltag einiges ändern. Nach einer Umfrage gießen viele Menschen Reste von Hustensaft oder Tropfen in den Ausguss, obwohl der Hausmüll, der in den meisten Regionen verbrannt wird, der bessere Weg wäre. Bei Schmerzgelen dringt nur ein kleiner Teil des Wirkstoffs durch die Haut, der Rest landet beim Duschen im Abwasser. Und nicht jede verschriebene Packung wäre nötig gewesen.",
+            "Auf Arzneimittel zu verzichten, ist keine Option. Die Rückstände einfach hinzunehmen, aber ebenso wenig. Eine einzelne Lösung, die das Problem beseitigt, ist nicht in Sicht. Weiterkommen wird nur, wer an allen Stellen zugleich ansetzt: bei der Entwicklung der Wirkstoffe, bei der Verschreibung, bei der Entsorgung und in den Kläranlagen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 10,
+          "type": "abc",
+          "prompt": "Dass heute häufiger über Arzneimittelrückstände berichtet wird, hängt laut Text auch damit zusammen, dass …",
+          "options": {
+            "a": "die Belastung der Gewässer in den letzten Jahrzehnten nachweislich gestiegen ist.",
+            "b": "sich mittlerweile auch sehr geringe Mengen der Stoffe feststellen lassen.",
+            "c": "neue gesetzliche Grenzwerte regelmäßige Messungen vorschreiben."
+          },
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "die vor zwanzig Jahren unterhalb jeder Nachweisgrenze lagen" },
+            { "text": "artikel", "quote": "weil verlässliche Vergleichsdaten aus früheren Jahrzehnten fehlen" },
+            { "text": "artikel", "quote": "Verbindliche Grenzwerte gibt es für die meisten Wirkstoffe bislang nicht" }
+          ],
+          "explanation": "Laboratuvarlar daha hassas hâle geldi; Wiesmayer'e göre bugün „die vor zwanzig Jahren unterhalb jeder Nachweisgrenze lagen“ (yirmi yıl önce her türlü tespit sınırının altında kalan) yoğunluklar da ölçülüyor. a) yanlış: Kirliliğin gerçekten artıp artmadığı söylenemiyor, „weil verlässliche Vergleichsdaten aus früheren Jahrzehnten fehlen“ (çünkü önceki on yıllardan güvenilir karşılaştırma verileri yok). c) yanlış: „Verbindliche Grenzwerte gibt es für die meisten Wirkstoffe bislang nicht“ – etken maddelerin çoğu için bağlayıcı sınır değerler henüz yok."
+        },
+        {
+          "number": 11,
+          "type": "abc",
+          "prompt": "Warum gelangen viele Wirkstoffe trotz Kläranlagen in die Flüsse?",
+          "options": {
+            "a": "Weil die meisten Rückstände von Tabletten stammen, die unsachgemäß entsorgt wurden.",
+            "b": "Weil vor allem veraltete Anlagen die Stoffe nicht zurückhalten können.",
+            "c": "Weil eine Eigenschaft, die für die Behandlung gewünscht ist, ihren Abbau erschwert."
+          },
+          "answer": "c",
+          "evidence": [
+            { "text": "artikel", "quote": "Diese Stabilität, für die Therapie erwünscht, wird im Klärbecken zum Problem" },
+            { "text": "artikel", "quote": "macht nach Wiesmayers Schätzung aber nur einen kleineren Teil aus" },
+            { "text": "artikel", "quote": "selbst modern ausgestattete Anlagen lassen manche Wirkstoffe nahezu unverändert passieren" }
+          ],
+          "explanation": "İlaçlar vücutta erken parçalanmayacak şekilde geliştiriliyor; „Diese Stabilität, für die Therapie erwünscht, wird im Klärbecken zum Problem“ (tedavi için istenen bu dayanıklılık arıtma havuzunda sorun oluyor). a) yanlış: Lavaboya veya tuvalete atılan tabletler Wiesmayer'in tahminine göre „nur einen kleineren Teil“ (yalnızca küçük bir kısım) oluşturuyor; en büyük pay hastaların vücudundan atılıyor. b) yanlış: Sorun yalnızca eski tesislerde değil; „selbst modern ausgestattete Anlagen“ (modern donanımlı tesisler bile) bazı maddeleri neredeyse değişmeden geçiriyor."
+        },
+        {
+          "number": 12,
+          "type": "abc",
+          "prompt": "Was lässt sich aus der Untersuchung unterhalb der Kläranlage Hollmersbach schließen?",
+          "options": {
+            "a": "Schon winzige Mengen eines Wirkstoffs können die Entwicklung von Fischen verändern.",
+            "b": "Die Veränderungen bei den Fischen gehen vermutlich auf ein Schmerzmittel zurück.",
+            "c": "Oberhalb und unterhalb der Einleitung waren ähnlich viele Fische betroffen."
+          },
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "das schon in Mengen von wenigen Milliardstel Gramm pro Liter wirkt" },
+            { "text": "artikel", "quote": "belegten Laborversuche Nierenschäden bei Forellen" },
+            { "text": "artikel", "quote": "während oberhalb der Einleitung kaum auffällige Tiere gefunden wurden" }
+          ],
+          "explanation": "Erkek balıklarda dişi özellikler görülüyor; olası sebep doğum kontrol hapındaki sentetik bir hormon, ki bu hormon „schon in Mengen von wenigen Milliardstel Gramm pro Liter wirkt“ (litrede birkaç milyarda bir gram kadar miktarlarda bile etki ediyor). b) yanlış: Ağrı kesiciyle ilgili bulgu başka bir şey: Laboratuvar deneylerinde alabalıklarda böbrek hasarı („Nierenschäden bei Forellen“). c) yanlış: Atık suyun verildiği yerin üst tarafında „kaum auffällige Tiere“ (neredeyse hiç dikkat çekici hayvan) bulunmadı."
+        },
+        {
+          "number": 13,
+          "type": "abc",
+          "prompt": "Wie schätzt Valerie Nordhoff das Risiko für Menschen ein?",
+          "options": {
+            "a": "Eine akute Gefahr sei nicht erkennbar, über das Zusammenwirken vieler Stoffe wisse man aber wenig.",
+            "b": "Bei einzelnen Wirkstoffen erreiche das Trinkwasser bereits wirksame Dosen.",
+            "c": "Menschen seien durch die Rückstände stärker gefährdet als Lebewesen in den Gewässern."
+          },
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "Offen sei jedoch, wie sich die lebenslange Aufnahme zahlreicher Stoffe gleichzeitig auswirke" },
+            { "text": "artikel", "quote": "lägen um ein Vielfaches unter jeder therapeutischen Dosis" },
+            { "text": "artikel", "quote": "gibt die Toxikologin Valerie Nordhoff vom Institut für Umwelttoxikologie in Velmerstedt vorerst Entwarnung" }
+          ],
+          "explanation": "Nordhoff şimdilik insanlar için tehlike görmüyor, ama „Offen sei jedoch, wie sich die lebenslange Aufnahme zahlreicher Stoffe gleichzeitig auswirke“ (birçok maddenin ömür boyu aynı anda alınmasının nasıl etki ettiği ise belirsiz). b) yanlış: İçme suyundaki miktarlar „um ein Vielfaches unter jeder therapeutischen Dosis“ (her türlü tedavi dozunun çok altında). c) yanlış: Balıklarda etkiler gözlendi (dişi özellikler, böbrek hasarı); insanlar için ise Nordhoff „vorerst Entwarnung“ (şimdilik tehlike yok) diyor."
+        },
+        {
+          "number": 14,
+          "type": "abc",
+          "prompt": "Welche Haltung nimmt Wiesmayer zur vierten Reinigungsstufe ein?",
+          "options": {
+            "a": "Er lehnt sie wegen ihrer unerwünschten Nebenwirkungen grundsätzlich ab.",
+            "b": "Er fordert, möglichst bald alle Kläranlagen damit auszustatten.",
+            "c": "Er empfiehlt, sie gezielt dort einzusetzen, wo sie am meisten bewirkt."
+          },
+          "answer": "c",
+          "evidence": [
+            { "text": "artikel", "quote": "Sinnvoll sei die Investition vor allem bei großen Anlagen" },
+            { "text": "artikel", "quote": "Eine Nachrüstung jeder kleinen Dorfkläranlage hält Wiesmayer deshalb für unverhältnismäßig" }
+          ],
+          "explanation": "Wiesmayer'e göre yatırım „vor allem bei großen Anlagen“ (özellikle büyük tesislerde) ve arıtılmış suyun küçük, hassas sulara aktığı yerlerde anlamlı; yani en çok fayda sağlayacağı yerlerde. a) yanlış: Ozon ve aktif karbonun dezavantajlarını sayıyor, ama yöntemi tamamen reddetmiyor; büyük tesisler için „sinnvoll“ (anlamlı) buluyor. b) yanlış: Her küçük köy arıtma tesisinin donatılmasını „unverhältnismäßig“ (orantısız) buluyor."
+        },
+        {
+          "number": 15,
+          "type": "abc",
+          "prompt": "Was gilt für die Entwicklung von Wirkstoffen, die in der Umwelt rasch zerfallen?",
+          "options": {
+            "a": "Erste Präparate dieser Art sind bereits in Apotheken erhältlich.",
+            "b": "Sie muss widersprüchliche Anforderungen an die Haltbarkeit miteinander vereinbaren.",
+            "c": "Sie wird vor allem von großen Pharmaunternehmen vorangetrieben."
+          },
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "denn ein Medikament muss zugleich jahrelang lagerfähig sein" },
+            { "text": "artikel", "quote": "dürften Jahrzehnte vergehen" },
+            { "text": "artikel", "quote": "die großen Hersteller verhalten sich abwartend" }
+          ],
+          "explanation": "Bu tür maddeler çevrede hızla parçalanmalı, ama aynı zamanda „ein Medikament muss zugleich jahrelang lagerfähig sein“ (bir ilaç yıllarca saklanabilmeli) ve midede çözünmemeli; metin bunu bir ikilem („Dilemma“) olarak anlatıyor. a) yanlış: Bu ilaçlar eczanelere gelene kadar „dürften Jahrzehnte vergehen“ (muhtemelen on yıllar geçecek). c) yanlış: Araştırma şimdiye kadar neredeyse yalnızca üniversitelerde yürütülüyor; „die großen Hersteller verhalten sich abwartend“ (büyük üreticiler bekleyici davranıyor)."
+        },
+        {
+          "number": 16,
+          "type": "abc",
+          "prompt": "Zu welchem Ergebnis kommt die Autorin?",
+          "options": {
+            "a": "Das Problem lässt sich nur durch ein Bündel von Maßnahmen auf verschiedenen Ebenen verringern.",
+            "b": "Mit dem Ausbau der Kläranlagen werde ein anderes Verhalten der Verbraucher überflüssig.",
+            "c": "Der Nutzen der Medikamente rechtfertige es, die Rückstände in Kauf zu nehmen."
+          },
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "Weiterkommen wird nur, wer an allen Stellen zugleich ansetzt" },
+            { "text": "artikel", "quote": "Eine einzelne Lösung, die das Problem beseitigt, ist nicht in Sicht" },
+            { "text": "artikel", "quote": "Die Rückstände einfach hinzunehmen, aber ebenso wenig" }
+          ],
+          "explanation": "Yazara göre „Weiterkommen wird nur, wer an allen Stellen zugleich ansetzt“ (ancak her noktada aynı anda harekete geçen ilerleyebilir): etken madde geliştirme, reçete yazma, atma ve arıtma tesisleri. b) yanlış: „Eine einzelne Lösung … ist nicht in Sicht“ – sorunu tek başına ortadan kaldıracak bir çözüm yok; günlük hayatta da değişiklik gerekiyor. c) yanlış: İlaçlardan vazgeçmek seçenek değil, ama „Die Rückstände einfach hinzunehmen, aber ebenso wenig“ (kalıntıları öylece kabullenmek de öyle)."
+        }
+      ]
+    }
+  ]
+}

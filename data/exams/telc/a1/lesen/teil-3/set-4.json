@@ -14,9 +14,9 @@
       "texts": [
         {
           "id": "zu",
-          "title": "Apotheke Kamillentau",
+          "title": "Apotheke am Markt",
           "paragraphs": [
-            "Liebe Kunden, heute ab 13 Uhr ist unsere Apotheke geschlossen. Am Nachmittag und am Abend hilft Ihnen die Apotheke am Bahnhof."
+            "Liebe Kunden, heute ab 13 Uhr ist unsere Apotheke geschlossen. Am Nachmittag und am Abend ist die Apotheke am Bahnhof offen."
           ]
         }
       ],
@@ -25,10 +25,10 @@
           "number": 0,
           "example": true,
           "type": "richtig-falsch",
-          "prompt": "Heute um 16 Uhr kann man in der Apotheke am Bahnhof Tabletten bekommen.",
+          "prompt": "Heute um 16 Uhr ist die Apotheke am Bahnhof geöffnet.",
           "answer": "richtig",
-          "evidence": [{ "text": "zu", "quote": "Am Nachmittag und am Abend hilft Ihnen die Apotheke am Bahnhof." }],
-          "explanation": "Metin: „Am Nachmittag und am Abend hilft Ihnen die Apotheke am Bahnhof.“ (Öğleden sonra ve akşam size istasyondaki eczane yardım ediyor). Saat 16 öğleden sonra. Apotheke Kamillentau saat 13'ten sonra kapalı, ama istasyondaki eczane açık. İfade doğru."
+          "evidence": [{ "text": "zu", "quote": "Am Nachmittag und am Abend ist die Apotheke am Bahnhof offen." }],
+          "explanation": "Metin: „Am Nachmittag und am Abend ist die Apotheke am Bahnhof offen.“ (Öğleden sonra ve akşam istasyondaki eczane açık). Saat 16 öğleden sonra. Apotheke am Markt saat 13'ten sonra kapalı, ama istasyondaki eczane açık („offen“ ve „geöffnet“ aynı anlama gelir: açık). İfade doğru."
         }
       ]
     },
@@ -37,7 +37,7 @@
       "texts": [
         {
           "id": "termin",
-          "title": "Friseur Spiegelkamm",
+          "title": "Friseur Friedl",
           "paragraphs": [
             "Von Montag bis Mittwoch schneiden wir Haare nur mit Termin. Von Donnerstag bis Samstag können Sie auch ohne Termin kommen. Telefon: 37 52 09."
           ]
@@ -59,7 +59,7 @@
       "texts": [
         {
           "id": "bringen",
-          "title": "Apotheke Arnikahof",
+          "title": "Apotheke im Zentrum",
           "paragraphs": [
             "Sie sind krank und können nicht zu uns kommen? Rufen Sie bis 12 Uhr an. Dann bringen wir Ihre Medikamente am Nachmittag zu Ihnen nach Hause."
           ]
@@ -81,7 +81,7 @@
       "texts": [
         {
           "id": "krank",
-          "title": "Friseur Wellenkamm",
+          "title": "Friseur Lemke",
           "paragraphs": [
             "Liebe Kunden, Frau Weidenbach ist diese Woche krank. Die Termine von Frau Weidenbach am Dienstag und Mittwoch macht Herr Castellano."
           ]
@@ -103,7 +103,7 @@
       "texts": [
         {
           "id": "rezept",
-          "title": "Apotheke Ringelblume",
+          "title": "Apotheke an der Kirche",
           "paragraphs": [
             "Haben Sie ein Rezept vom Arzt? Dann kommen Sie bitte an den Tisch am Fenster. Alle anderen Kunden gehen bitte an die Kasse neben der Tür."
           ]
@@ -125,7 +125,7 @@
       "texts": [
         {
           "id": "donnerstag",
-          "title": "Salon Kammfeder",
+          "title": "Salon Pfaff",
           "paragraphs": [
             "Neu: Am Donnerstag haben wir bis 21 Uhr für Sie geöffnet. Montag bis Mittwoch, Freitag und Samstag schließen wir um 18 Uhr."
           ]

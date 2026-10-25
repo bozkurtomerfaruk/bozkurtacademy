@@ -14,7 +14,7 @@
       "texts": [
         {
           "id": "tuer",
-          "title": "Zimmer 14 – Hanne Brockdorff",
+          "title": "Zimmer 14 – Brigitta Brockdorff",
           "paragraphs": [
             "Ich bin heute bis 11 Uhr bei einem Kunden. Ab 11:30 Uhr bin ich wieder hier. Bitte legen Sie Briefe auf meinen Tisch."
           ]
@@ -37,7 +37,7 @@
       "texts": [
         {
           "id": "telefon",
-          "title": "Kurbelstein GmbH – Neue Telefonnummern",
+          "title": "Firma Maibach – Neue Telefonnummern",
           "paragraphs": [
             "Liebe Kunden, ab 1. April haben wir neue Telefonnummern. Die alten Nummern gehen noch bis 31. Mai."
           ]
@@ -58,10 +58,10 @@
       "layout": "article",
       "texts": [
         {
-          "id": "neu",
-          "title": "Willkommen!",
+          "id": "kaffee",
+          "title": "Kaffee",
           "paragraphs": [
-            "Ab Montag haben wir eine neue Kollegin: Frau Derya Bilgin. Frau Bilgin sitzt mit Herrn Toivonen in Zimmer 4. Die Telefonnummer von Frau Bilgin ist 218."
+            "Liebe Kolleginnen und Kollegen, die Kaffeemaschine in der Küche ist kaputt. Herr Toivonen hat auch eine Maschine in Zimmer 4. Dort können Sie diese Woche Kaffee machen."
           ]
         }
       ],
@@ -69,10 +69,10 @@
         {
           "number": 12,
           "type": "richtig-falsch",
-          "prompt": "Frau Bilgin und Herr Toivonen arbeiten im gleichen Büro.",
+          "prompt": "Diese Woche kann man bei Herrn Toivonen Kaffee machen.",
           "answer": "richtig",
-          "evidence": [{ "text": "neu", "quote": "Frau Bilgin sitzt mit Herrn Toivonen in Zimmer 4." }],
-          "explanation": "Metin: „Frau Bilgin sitzt mit Herrn Toivonen in Zimmer 4.“ (Frau Bilgin, Herr Toivonen ile birlikte 4 numaralı odada oturuyor). Yani ikisi aynı odada (im gleichen Büro) çalışıyor. İfade doğru."
+          "evidence": [{ "text": "kaffee", "quote": "Herr Toivonen hat auch eine Maschine in Zimmer 4. Dort können Sie diese Woche Kaffee machen." }],
+          "explanation": "Metin: „die Kaffeemaschine in der Küche ist kaputt“ (mutfaktaki kahve makinesi bozuk). „Herr Toivonen hat auch eine Maschine in Zimmer 4“ (Herr Toivonen'in 4 numaralı odada da bir makinesi var). „Dort können Sie diese Woche Kaffee machen“ (Bu hafta orada kahve yapabilirsiniz). Yani bu hafta Herr Toivonen'in yanında (bei Herrn Toivonen) kahve yapılabilir. İfade doğru."
         }
       ]
     },
@@ -124,10 +124,10 @@
       "layout": "article",
       "texts": [
         {
-          "id": "computer",
+          "id": "gast",
           "title": "Für Herrn Marković",
           "paragraphs": [
-            "Lieber Herr Marković, Ihr neuer Computer ist da. Bitte kommen Sie morgen um 8 Uhr in Zimmer 9. Dann zeigt Ihnen Frau Oyelaran alles."
+            "Lieber Herr Marković, morgen um 8 Uhr kommt Frau Oyelaran zu uns. Bitte holen Sie Frau Oyelaran am Eingang ab. Wir sprechen dann in Zimmer 9."
           ]
         }
       ],
@@ -135,10 +135,10 @@
         {
           "number": 15,
           "type": "richtig-falsch",
-          "prompt": "Morgen früh erklärt Frau Oyelaran Herrn Marković den Computer.",
+          "prompt": "Morgen früh soll Herr Marković zum Eingang gehen und Frau Oyelaran treffen.",
           "answer": "richtig",
-          "evidence": [{ "text": "computer", "quote": "Dann zeigt Ihnen Frau Oyelaran alles." }],
-          "explanation": "Metin: „Ihr neuer Computer ist da“ (yeni bilgisayarınız geldi), „Bitte kommen Sie morgen um 8 Uhr“ (lütfen yarın saat 8'de gelin) ve „Dann zeigt Ihnen Frau Oyelaran alles.“ (Sonra Frau Oyelaran size her şeyi gösteriyor). Saat 8 sabah erken (früh). Yani yarın sabah Frau Oyelaran bilgisayarı anlatıyor (erklärt). İfade doğru."
+          "evidence": [{ "text": "gast", "quote": "Bitte holen Sie Frau Oyelaran am Eingang ab." }],
+          "explanation": "Metin: „morgen um 8 Uhr kommt Frau Oyelaran zu uns“ (yarın saat 8'de Frau Oyelaran bize geliyor) ve „Bitte holen Sie Frau Oyelaran am Eingang ab.“ (Lütfen Frau Oyelaran'ı girişte karşılayın). Saat 8 sabah erken (früh). Yani Herr Marković yarın sabah girişe (Eingang) gidip Frau Oyelaran'ı karşılamalı. „bitte“ (lütfen) burada „soll“ (-malı) anlamında. İfade doğru."
         }
       ]
     }

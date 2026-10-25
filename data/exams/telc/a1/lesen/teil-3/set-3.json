@@ -14,7 +14,7 @@
       "texts": [
         {
           "id": "schluessel",
-          "title": "Hotel Pappelglanz – Ihr letzter Tag",
+          "title": "Hotel Kuhnert – Ihr letzter Tag",
           "paragraphs": [
             "Liebe Gäste, bitte bringen Sie am letzten Tag bis 11 Uhr Ihren Schlüssel an die Rezeption. Ihre Koffer können Sie gern bis 16 Uhr bei uns lassen."
           ]
@@ -37,7 +37,7 @@
       "texts": [
         {
           "id": "fahrrad",
-          "title": "Hotel Ginsterhöhe – Fahrräder für Gäste",
+          "title": "Fahrräder für Hotelgäste",
           "paragraphs": [
             "Sie möchten die Stadt mit dem Fahrrad sehen? Ein Fahrrad kostet für Erwachsene 6 Euro am Tag, für Kinder 3 Euro. Bitte fragen Sie an der Rezeption."
           ]
@@ -59,7 +59,7 @@
       "texts": [
         {
           "id": "schwimmbad",
-          "title": "Hotel Sternmoos – Schwimmbad",
+          "title": "Schwimmbad im Hotel",
           "paragraphs": [
             "Unser Schwimmbad im Keller ist jeden Tag von 7 bis 21 Uhr offen. Kinder unter 12 Jahren dürfen nur mit Mutter oder Vater ins Wasser."
           ]
@@ -69,7 +69,7 @@
         {
           "number": 12,
           "type": "richtig-falsch",
-          "prompt": "Ein Junge von 10 Jahren darf allein ins Schwimmbad.",
+          "prompt": "Ein Junge von 10 Jahren darf allein schwimmen.",
           "answer": "falsch",
           "evidence": [{ "text": "schwimmbad", "quote": "Kinder unter 12 Jahren dürfen nur mit Mutter oder Vater ins Wasser." }],
           "explanation": "Metin: „Kinder unter 12 Jahren dürfen nur mit Mutter oder Vater ins Wasser.“ (12 yaşından küçük çocuklar suya sadece annesi veya babasıyla girebilir). 10 yaşındaki çocuk 12'den küçük. Yani yalnız (allein) yüzmeye giremez, annesi veya babası yanında olmalı."
@@ -81,7 +81,7 @@
       "texts": [
         {
           "id": "zimmer",
-          "title": "Hotel Schwanenfeder – Rezeption",
+          "title": "Nachricht von der Rezeption",
           "paragraphs": [
             "Lieber Herr Jeyakumar, Ihr Zimmer ist leider noch nicht fertig. Den Schlüssel bekommen Sie um 15 Uhr. Trinken Sie doch so lange im Café einen Kaffee – für Sie kostet er nichts."
           ]
@@ -103,7 +103,7 @@
       "texts": [
         {
           "id": "flughafen",
-          "title": "Hotel Fliederwind – Bus zum Flughafen",
+          "title": "Hotelbus zum Flughafen",
           "paragraphs": [
             "Unser Hotelbus fährt jeden Tag um 6, 9 und 12 Uhr vor dem Eingang ab. Die Fahrt dauert 40 Minuten und kostet 8 Euro."
           ]
@@ -125,9 +125,9 @@
       "texts": [
         {
           "id": "putzen",
-          "title": "Hotel Kiefernblau – Ihr Zimmer",
+          "title": "Hotel Haase – Ihr Zimmer",
           "paragraphs": [
-            "Liebe Gäste, wir machen Ihr Zimmer jeden Tag zwischen 10 und 14 Uhr sauber. Möchten Sie das nicht? Dann hängen Sie bitte das rote Schild an die Tür."
+            "Liebe Gäste, wir machen Ihr Zimmer jeden Tag zwischen 10 und 14 Uhr sauber. Möchten Sie das nicht? Dann sagen Sie es bitte an der Rezeption."
           ]
         }
       ],

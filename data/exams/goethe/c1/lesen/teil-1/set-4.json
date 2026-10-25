@@ -1,0 +1,133 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "c1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-4",
+  "title": "Wie Bäume sich verständigen",
+  "minutes": 10,
+  "context": "Sie lesen in einem populärwissenschaftlichen Magazin einen Beitrag über die Kommunikation von Bäumen.",
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welche Lösung (a, b, c oder d) in die Lücken 1 bis 8 passt.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Signale im Eichenwald",
+          "paragraphs": [
+            "Wälder gelten gemeinhin als Inbegriff der Ruhe. Tatsächlich aber herrscht zwischen den Stämmen ein reger Austausch, der sich dem menschlichen Auge weitgehend {{0=entzieht}}: Bäume geben Duftstoffe an die Luft ab, sobald Insekten an ihren Blättern fressen, und benachbarte Artgenossen scheinen darauf zu reagieren. Populäre Sachbücher haben daraus das Bild eines fürsorglichen Waldes gezeichnet, in dem sich die Bäume gegenseitig warnen und unterstützen. Unter Fachleuten {{1}} diese Deutung allerdings seit Jahren auf Skepsis – nicht weil die Beobachtungen falsch wären, sondern weil sie den Bäumen mehr Absicht unterstellt, als sich nachweisen lässt.",
+            "Ein Team um die Forstökologin Malin Kerkhoff von der Forstlichen Versuchsanstalt Grauenstein hat die Frage nun unter kontrollierten Bedingungen untersucht. In Klimakammern setzten die Forschenden junge Eichen den Raupen des Eichenwicklers aus und leiteten die Luft aus diesen Kammern zu unversehrten Bäumen weiter. Binnen weniger Stunden lagerten die Empfänger vermehrt Gerbstoffe in ihre Blätter ein, die das Laub für die Raupen schwer {{2}} machen. Erhielten die Bäume dagegen dieselbe Luft, nachdem sie durch einen Aktivkohlefilter geleitet worden war, blieb diese Reaktion aus. {{3}} spricht vieles dafür, dass tatsächlich die Duftstoffe das Signal übertragen und nicht etwa Feuchtigkeit oder Temperatur.",
+            "Ob man hier von einer Warnung sprechen sollte, ist jedoch eine andere Frage. Kerkhoff {{4}} vielmehr davon aus, dass der befallene Baum die Stoffe in erster Linie für sich selbst freisetze: Die Duftwolke erreiche entfernte Äste desselben Stammes schneller als Signale, die mühsam durch das Leitgewebe wanderten. Die Nachbarn {{5}} gewissermaßen nur mit – wie Fahrgäste, die im Zug unfreiwillig das Telefonat eines Fremden verfolgen. Ebenso skeptisch {{6}} die Forscherin der verbreiteten Vorstellung gegenüber, Bäume versorgten geschwächte Artgenossen über unterirdische Pilzgeflechte gezielt mit Zucker. Zwar sei belegt, dass solche Geflechte die Wurzeln verschiedener Bäume miteinander verbinden; dass die Bäume sie absichtlich als Versorgungsnetz nutzten, sei jedoch nicht mehr als eine {{7}}, für die es bislang an überzeugenden Messungen fehle.",
+            "Dass der Wald kein Ort selbstloser Nachbarschaftshilfe sei, mache ihn aus Sicht der Forscherin keineswegs weniger {{8}}. Gerade die Frage, wie Organismen ohne Nervensystem Informationen aus ihrer Umgebung aufnehmen und verwerten, biete Stoff für Jahrzehnte der Forschung. Als Nächstes will das Team prüfen, ob auch Buchen und Kiefern auf die Duftstoffe der Eichen ansprechen. Sollte sich das bestätigen, wäre dies ein weiteres Indiz gegen die Idee der Warnung, denn kaum ein Baum dürfte ein Interesse daran haben, seine Konkurrenten um Licht und Wasser zu schützen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "type": "abc",
+          "example": true,
+          "prompt": "Beispiel: Lücke 0",
+          "options": { "a": "enthält", "b": "entledigt", "c": "entzieht", "d": "entsagt" },
+          "answer": "c",
+          "evidence": [
+            { "text": "artikel", "quote": "ein reger Austausch, der sich dem menschlichen Auge weitgehend" }
+          ],
+          "explanation": "„sich dem Auge/dem Blick entziehen“ (gözden kaçmak, görünmemek) sabit bir kalıptır: Ağaçlar arasındaki canlı alışveriş, insan gözünün büyük ölçüde göremediği bir şeydir; çünkü kokularla gerçekleşir. a) enthält yanlış: „sich enthalten“ bir Genitiv ister ve „bir şeyden kaçınmak“ demektir („sich der Stimme enthalten“); Dativ „dem Auge“ ile kurulamaz. b) entledigt yanlış: „sich einer Sache entledigen“ bir şeyden kurtulmak demektir, yine Genitiv ister. d) entsagt yanlış: „entsagen“ bir şeyden vazgeçmek demektir ve dönüşlü kullanılmaz."
+        },
+        {
+          "number": 1,
+          "type": "abc",
+          "prompt": "Lücke 1",
+          "options": { "a": "stößt", "b": "gerät", "c": "fällt", "d": "bringt" },
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "diese Deutung allerdings seit Jahren auf Skepsis" }
+          ],
+          "explanation": "„auf Skepsis stoßen“ (kuşkuyla karşılanmak) sabit bir kalıptır: Ağaçların birbirini uyardığı yorumu uzmanlar arasında yıllardır kuşkuyla karşılanıyor, çünkü ağaçlara kanıtlanabilenden fazla niyet yüklüyor. b) gerät yanlış: „geraten“ „in“ ile kullanılır („in Kritik/in Verdacht geraten“); „auf Skepsis geraten“ diye bir kalıp yoktur. c) fällt yanlış: „fallen“ „auf Skepsis“ ile kalıp oluşturmaz. d) bringt yanlış: „bringen“ bir nesne ister; „die Deutung bringt auf Skepsis“ hem dilbilgisi hem anlam olarak kurulamaz."
+        },
+        {
+          "number": 2,
+          "type": "abc",
+          "prompt": "Lücke 2",
+          "options": { "a": "entflammbar", "b": "sichtbar", "c": "verdaulich", "d": "haltbar" },
+          "answer": "c",
+          "evidence": [
+            { "text": "artikel", "quote": "lagerten die Empfänger vermehrt Gerbstoffe in ihre Blätter ein" }
+          ],
+          "explanation": "Ağaçlar yapraklarına tanen („Gerbstoffe“) depoluyor; bu maddeler yaprakları tırtıllar için yenmesi zor hâle getiriyor. Tırtılların yaprağı yemesi söz konusu olduğu için uygun sıfat „verdaulich“tır (sindirilebilir): „schwer verdaulich“ = zor sindirilen. a) entflammbar yanlış: „schwer entflammbar“ (zor tutuşan) yangına dayanıklılık için kullanılır; yaprakların tırtıllar için („für die Raupen“) zor tutuşur olması anlamsızdır, metin yaprağın yenmesinden söz ediyor. b) sichtbar yanlış: „schwer sichtbar“ (zor görülen) yaprağın görünürlüğüyle ilgilidir; metin yaprağın görünmez hâle gelmesinden değil, yenmesinin zorlaşmasından söz ediyor. d) haltbar yanlış: „haltbar“ (dayanıklı, uzun süre bozulmayan) gıdalar için kullanılır; „schwer haltbar machen“ anlamlı bir ifade değildir ve tırtıllarla ilgisi yoktur."
+        },
+        {
+          "number": 3,
+          "type": "abc",
+          "prompt": "Lücke 3",
+          "options": { "a": "Dennoch", "b": "Somit", "c": "Hingegen", "d": "Allerdings" },
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "nachdem sie durch einen Aktivkohlefilter geleitet worden war, blieb diese Reaktion aus" },
+            { "text": "artikel", "quote": "spricht vieles dafür, dass tatsächlich die Duftstoffe das Signal übertragen" }
+          ],
+          "explanation": "Önceki iki cümle deneyin iki sonucunu veriyor: Normal hava gelince ağaçlar tepki gösteriyor, aynı hava aktif karbon filtresinden geçirilince tepki ortadan kalkıyor. Bu iki sonuçtan bir çıkarım yapılıyor: Sinyali taşıyan koku maddeleridir. Sonuç bildiren zarf „Somit“tir (böylece, dolayısıyla). a) Dennoch yanlış: Çıkarım deney sonuçlarına rağmen değil, tam da onlar sayesinde yapılıyor. c) Hingegen yanlış: Önceki cümleyle bir karşıtlık kurulmuyor; filtre deneyi koku maddeleri açıklamasını destekliyor. d) Allerdings yanlış: Bir kısıtlama veya itiraz getirmiyor, önceki bulguları özetleyip sonuca bağlıyor."
+        },
+        {
+          "number": 4,
+          "type": "abc",
+          "prompt": "Lücke 4",
+          "options": { "a": "hält", "b": "sieht", "c": "nimmt", "d": "geht" },
+          "answer": "d",
+          "evidence": [
+            { "text": "artikel", "quote": "vielmehr davon aus, dass der befallene Baum die Stoffe in erster Linie für sich selbst freisetze" }
+          ],
+          "explanation": "„von etwas ausgehen“ (bir şeyi varsaymak, bir şeyden yola çıkmak) ayrılabilen bir fiildir: „Kerkhoff geht davon aus, dass …“ = Kerkhoff … olduğunu varsayıyor. „vielmehr“ bu varsayımı, önceki cümledeki „uyarı“ yorumunun karşısına koyuyor. a) hält yanlış: „halten“ „von“ ile „bir şey hakkında düşünmek“ anlamında kullanılır („viel davon halten“), ama „aus“ ile değil. b) sieht yanlış: „aussehen“ görünmek demektir ve „davon“ ile bir varsayım bildirmez. c) nimmt yanlış: „ausnehmen“ birini bir şeyin dışında tutmak demektir ve bir nesne ister; varsayım anlamı vermez."
+        },
+        {
+          "number": 5,
+          "type": "abc",
+          "prompt": "Lücke 5",
+          "options": { "a": "redeten", "b": "hörten", "c": "fühlten", "d": "spielten" },
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "wie Fahrgäste, die im Zug unfreiwillig das Telefonat eines Fremden verfolgen" }
+          ],
+          "explanation": "Karşılaştırma ipucunu veriyor: Komşu ağaçlar, trende bir yabancının telefon konuşmasını istemeden dinleyen yolcular gibidir. Yani sinyal onlara gönderilmiyor, onlar yalnızca kulak misafiri oluyor: „mithören“ (kulak misafiri olmak). a) redeten yanlış: „mitreden“ söz sahibi olmak, konuşmaya katılmaktır; yolcular telefon konuşmasına katılmıyor, sadece duyuyor. c) fühlten yanlış: „mitfühlen“ birinin duygusunu paylaşmaktır; metin komşuların sinyali istemeden algıladığını anlatıyor, duygudaşlığı değil. d) spielten yanlış: „mitspielen“ oyuna katılmak veya bir şeye uymak demektir; bu da gönüllü bir katılımı anlatır, oysa vurgu „unfreiwillig“ (istemeden) kelimesindedir."
+        },
+        {
+          "number": 6,
+          "type": "abc",
+          "prompt": "Lücke 6",
+          "options": { "a": "steht", "b": "liegt", "c": "sitzt", "d": "läuft" },
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "die Forscherin der verbreiteten Vorstellung gegenüber" }
+          ],
+          "explanation": "„einer Sache skeptisch gegenüberstehen“ (bir şeye kuşkuyla bakmak) sabit bir kalıptır; „gegenüber“ cümlenin sonunda ayrılmış önektir. Araştırmacı, ağaçların mantar ağları üzerinden zayıf ağaçlara bilerek şeker gönderdiği düşüncesine de aynı şekilde kuşkuyla yaklaşıyor. b) liegt yanlış: „gegenüberliegen“ yalnızca mekânsal olarak karşıda bulunmayı anlatır („das Haus liegt dem Park gegenüber“), bir tutum bildirmez. c) sitzt yanlış: „gegenübersitzen“ birinin karşısında oturmaktır; bir düşünceye karşı tutum anlatmaz. d) läuft yanlış: „gegenüberlaufen“ diye bir fiil yoktur."
+        },
+        {
+          "number": 7,
+          "type": "abc",
+          "prompt": "Lücke 7",
+          "options": { "a": "Erkenntnis", "b": "Tatsache", "c": "Feststellung", "d": "Vermutung" },
+          "answer": "d",
+          "evidence": [
+            { "text": "artikel", "quote": "für die es bislang an überzeugenden Messungen fehle" }
+          ],
+          "explanation": "„Zwar sei belegt …; … sei jedoch nicht mehr als …“ yapısı kanıtlanmış olanla kanıtlanmamış olanı karşılaştırıyor: Mantar ağlarının kökleri bağladığı kanıtlanmış, ama ağaçların bunları bilerek kullandığı yalnızca bir tahmin; ikna edici ölçümler eksik („an überzeugenden Messungen fehle“). „Vermutung“ (tahmin, varsayım) buna uyar. a) Erkenntnis, b) Tatsache ve c) Feststellung yanlış: „bilgi/bulgu“, „gerçek“ ve „tespit“ anlamına gelen bu kelimeler zaten kanıtlanmış bir şeyi anlatır; „nicht mehr als“ (…den öte değil) ve eksik ölçümlerle çelişirler."
+        },
+        {
+          "number": 8,
+          "type": "abc",
+          "prompt": "Lücke 8",
+          "options": { "a": "eintönig", "b": "bedrohlich", "c": "reizvoll", "d": "überschaubar" },
+          "answer": "c",
+          "evidence": [
+            { "text": "artikel", "quote": "Dass der Wald kein Ort selbstloser Nachbarschaftshilfe sei, mache ihn aus Sicht der Forscherin keineswegs weniger" },
+            { "text": "artikel", "quote": "biete Stoff für Jahrzehnte der Forschung" }
+          ],
+          "explanation": "Araştırmacı, ormanın özverili bir yardımlaşma yeri olmamasının onu daha az … yapmadığını söylüyor; ardından gelen cümle gerekçeyi veriyor: Sinir sistemi olmayan canlıların bilgiyi nasıl işlediği sorusu on yıllarca araştırmaya konu olacak kadar ilginç. Uygun sıfat „reizvoll“dur (çekici, ilgi çekici). a) eintönig yanlış: „tekdüze“ demektir; „keineswegs weniger eintönig“, ormanın tekdüze olduğunu ima eder ve son cümleyle çelişir. b) bedrohlich yanlış: „tehditkâr“ demektir; metinde ormanın tehlikeli olduğuna dair hiçbir şey yok, araştırmacı bilimsel merakı vurguluyor. d) überschaubar yanlış: „kolay kavranır, sınırlı“ demektir; on yıllar sürecek bir araştırma alanı bunun tam tersidir."
+        }
+      ]
+    }
+  ]
+}

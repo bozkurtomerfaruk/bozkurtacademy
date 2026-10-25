@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "c1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Die Psychologie des Aufschiebens",
+  "minutes": 10,
+  "context": "Sie lesen in einem Psychologie-Magazin einen Beitrag über eine neue Erklärung für das Aufschieben.",
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welche Lösung (a, b, c oder d) in die Lücken 1 bis 8 passt.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Der Fremde von morgen",
+          "paragraphs": [
+            "Wer eine unangenehme Aufgabe auf später verschiebt, handelt selten aus Unwissenheit. Die meisten Menschen wissen genau, dass sie sich damit keinen Gefallen tun – und schieben {{0=trotzdem}} auf. Die psychologische Forschung hat dieses Verhalten lange vor allem als Problem der Gefühlsregulation beschrieben. Ein Team um den Psychologen Jarno Wellhöfer von der Universität Tannrode {{1}} nun eine Erklärung ins Spiel, die an anderer Stelle ansetzt: beim Verhältnis zur eigenen Zukunft. Viele Menschen, so die Annahme, nehmen ihr künftiges Ich ähnlich wahr wie einen Fremden – und bürden diesem Fremden bereitwillig Lasten auf, die sie selbst nicht tragen wollen. Dass Menschen die eigene Zukunft gering schätzen, ist an sich keine neue Beobachtung; neu ist der Versuch, diese Haltung messbar zu machen und mit konkretem Verhalten zu verknüpfen.",
+            "Um diese These zu {{2}}, befragten die Forschenden 230 Studierende zunächst danach, wie nahe sie sich der Person fühlten, die sie in zehn Jahren sein würden. Anschließend protokollierten die Teilnehmenden ein Semester lang, wann sie mit ihren Hausarbeiten begannen. Das Ergebnis fiel deutlich aus: Wer sich dem eigenen künftigen Selbst kaum verbunden fühlte, setzte sich im Schnitt elf Tage später an den Schreibtisch als jene, die eine große Nähe angegeben hatten. Der Zusammenhang {{3}} auch dann bestehen, als die Forschenden Faktoren wie Notendurchschnitt und Arbeitsbelastung herausrechneten.",
+            "Ein Fremder müsse das künftige Ich allerdings nicht {{4}} bleiben, betont Wellhöfer. In einem zweiten Schritt baten die Forschenden die Hälfte der Teilnehmenden, einen Brief aus der Sicht ihres zehn Jahre älteren Selbst zu verfassen; die übrigen schrieben über ihre Pläne für das kommende Wochenende. In den folgenden vier Wochen begannen die Briefschreiber ihre Aufgaben im Mittel zwei Tage früher als zuvor, {{5}} sich bei der Vergleichsgruppe kaum etwas veränderte. Verglichen mit dem Abstand aus der ersten Untersuchung nimmt sich dieser Effekt {{6}} aus; zudem ließ er gegen Ende des Beobachtungszeitraums spürbar nach. Wellhöfer sieht darin dennoch einen Hinweis darauf, dass die Distanz zum künftigen Selbst keine unveränderliche Eigenschaft ist, sondern sich beeinflussen lässt.",
+            "Für die Praxis {{7}} er daraus, dass kurze, regelmäßig wiederholte Übungen mehr versprechen als ein einmaliger Kraftakt zu Semesterbeginn. Ob sich der Befund auf Lebensbereiche übertragen lässt, in denen die Folgen des Aufschiebens erst nach Jahrzehnten spürbar werden – etwa auf die Altersvorsorge –, ist {{8}} offen; eine entsprechende Langzeitstudie hat das Team gerade erst begonnen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "type": "abc",
+          "example": true,
+          "prompt": "Beispiel: Lücke 0",
+          "options": { "a": "deswegen", "b": "trotzdem", "c": "demnach", "d": "insofern" },
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "Die meisten Menschen wissen genau, dass sie sich damit keinen Gefallen tun" }
+          ],
+          "explanation": "İnsanlar ertelemenin kendilerine iyilik olmadığını çok iyi biliyorlar, yine de erteliyorlar. Bilgi ile davranış arasındaki bu çelişkiyi bildiren zarf „trotzdem“dir (yine de, buna rağmen). a) deswegen ve c) demnach yanlış: İkisi de sonuç bildirir; ertelemenin zararlı olduğunu bilmek ertelemenin nedeni değildir. d) insofern yanlış: „insofern“ (bu bakımdan) bir sınırlama veya açıklama getirir; burada ise beklenenin tersine bir davranış anlatılıyor."
+        },
+        {
+          "number": 1,
+          "type": "abc",
+          "prompt": "Lücke 1",
+          "options": { "a": "setzt", "b": "bringt", "c": "nimmt", "d": "zieht" },
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "nun eine Erklärung ins Spiel, die an anderer Stelle ansetzt" }
+          ],
+          "explanation": "„etwas ins Spiel bringen“ (bir şeyi gündeme getirmek, öne sürmek) sabit bir kalıptır: Araştırma ekibi, duygu düzenlemesinden farklı bir noktadan, insanın kendi geleceğiyle ilişkisinden yola çıkan yeni bir açıklama öne sürüyor. a) setzt yanlış: „setzen“ „aufs Spiel setzen“ (tehlikeye atmak) kalıbında geçer, „ins Spiel setzen“ diye bir kalıp yoktur. c) nimmt ve d) zieht yanlış: „ins Spiel nehmen“ ve „ins Spiel ziehen“ Almancada kalıp değildir; „ziehen“ „in Betracht ziehen“ (göz önüne almak) gibi başka kalıplarda kullanılır."
+        },
+        {
+          "number": 2,
+          "type": "abc",
+          "prompt": "Lücke 2",
+          "options": { "a": "verwerfen", "b": "verbreiten", "c": "verschweigen", "d": "überprüfen" },
+          "answer": "d",
+          "evidence": [
+            { "text": "artikel", "quote": "befragten die Forschenden 230 Studierende zunächst danach" }
+          ],
+          "explanation": "Araştırmacılar tezi test etmek için bir anket ve bir dönem boyunca süren bir kayıt çalışması yapıyor; sonraki cümleler de verinin tezi doğrulayıp doğrulamadığını anlatıyor. Bir tezi veriyle sınamak „überprüfen“dir (kontrol etmek, sınamak). a) verwerfen yanlış: „reddetmek“ demektir; bir tezi reddetmek için önce onu sınamak gerekir, anket bir reddetme işlemi değildir ve sonuç tezi destekliyor. b) verbreiten yanlış: „yaymak“ demektir; öğrencilere sorular sormak bir tezi yaymanın yolu değildir. c) verschweigen yanlış: „gizlemek“ demektir; araştırma tezi gizlemiyor, tam tersine açıkça sunuyor."
+        },
+        {
+          "number": 3,
+          "type": "abc",
+          "prompt": "Lücke 3",
+          "options": { "a": "blieb", "b": "stand", "c": "hielt", "d": "fand" },
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "auch dann bestehen, als die Forschenden Faktoren wie Notendurchschnitt und Arbeitsbelastung herausrechneten" }
+          ],
+          "explanation": "„bestehen bleiben“ (varlığını sürdürmek, geçerli kalmak) bir kalıptır: Not ortalaması ve iş yükü hesaptan çıkarıldığında bile gelecekteki benliğe yakınlık ile erteleme arasındaki ilişki geçerliliğini koruyor. b) stand yanlış: „bestehen stehen“ diye bir yapı yoktur. c) hielt yanlış: „halten“ bir mastarla bu biçimde kullanılmaz; „bestehen halten“ anlamsızdır. d) fand yanlış: „finden“ bir nesne ister ve „bestehen“ ile birlikte bir şeyin devam ettiğini anlatamaz."
+        },
+        {
+          "number": 4,
+          "type": "abc",
+          "prompt": "Lücke 4",
+          "options": { "a": "vorübergehend", "b": "beiläufig", "c": "zwangsläufig", "d": "versehentlich" },
+          "answer": "c",
+          "evidence": [
+            { "text": "artikel", "quote": "Ein Fremder müsse das künftige Ich allerdings nicht" },
+            { "text": "artikel", "quote": "keine unveränderliche Eigenschaft ist, sondern sich beeinflussen lässt" }
+          ],
+          "explanation": "Wellhöfer, gelecekteki benliğin mutlaka yabancı kalması gerekmediğini söylüyor; paragrafın sonunda da bu mesafenin değişmez bir özellik olmadığı, etkilenebileceği belirtiliyor. „nicht zwangsläufig“ (illa ki değil, kaçınılmaz olarak değil) bu düşünceyi verir. a) vorübergehend yanlış: „geçici olarak“ demektir; „geçici olarak yabancı kalması gerekmez“ ifadesi, mesafenin kalıcı olduğunu ima eder ve paragrafın sonucuyla çelişir. b) beiläufig yanlış: „laf arasında, önemsiz biçimde“ demektir; bir durumun sürüp sürmemesiyle ilgisi yoktur. d) versehentlich yanlış: „yanlışlıkla“ demektir; gelecekteki benliğin yabancı kalması bir hata veya dikkatsizlik olarak anlatılmıyor."
+        },
+        {
+          "number": 5,
+          "type": "abc",
+          "prompt": "Lücke 5",
+          "options": { "a": "während", "b": "nachdem", "c": "sobald", "d": "indem" },
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "baten die Forschenden die Hälfte der Teilnehmenden" },
+            { "text": "artikel", "quote": "sich bei der Vergleichsgruppe kaum etwas veränderte" }
+          ],
+          "explanation": "İki grubun sonuçları karşılaştırılıyor: Katılımcıların yarısı on yıl sonraki benliğinin ağzından mektup yazdı, diğerleri hafta sonu planlarını; sonraki dört haftada mektup yazanlar işlerine ortalama iki gün daha erken başladı, karşılaştırma grubunda ise „kaum etwas“ (neredeyse hiçbir şey) değişmedi. Aynı dönemdeki iki durumu karşı karşıya koyan „während“ (… iken, oysa) bu ilişkiye uyar. b) nachdem ve c) sobald yanlış: İkisi de olayları zaman sırasına koyar; karşılaştırma grubundaki durum, erken başlamadan önce veya sonra gelen bir olay değil, aynı dört haftada gözlenen paralel sonuçtur. d) indem yanlış: „indem“ bir şeyin nasıl yapıldığını anlatır; karşılaştırma grubunda bir şeyin değişmemesi, mektup yazanların erken başlamasının yöntemi değildir."
+        },
+        {
+          "number": 6,
+          "type": "abc",
+          "prompt": "Lücke 6",
+          "options": { "a": "widersprüchlich", "b": "eindrucksvoll", "c": "ungewöhnlich", "d": "bescheiden" },
+          "answer": "d",
+          "evidence": [
+            { "text": "artikel", "quote": "begannen die Briefschreiber ihre Aufgaben im Mittel zwei Tage früher" },
+            { "text": "artikel", "quote": "zudem ließ er gegen Ende des Beobachtungszeitraums spürbar nach" }
+          ],
+          "explanation": "Mektup yazanlar işlerine ortalama yalnızca iki gün erken başlıyor; ilk araştırmadaki on bir günlük farkla karşılaştırıldığında bu küçük bir etki. „zudem“ ile eklenen ikinci olumsuz nokta da (etki zamanla belirgin biçimde azalıyor) aynı yönü gösteriyor. „sich bescheiden ausnehmen“ = mütevazı, küçük görünmek. a) widersprüchlich yanlış: Sonuç ilk araştırmayla çelişmiyor, aynı yönde ama daha zayıf. b) eindrucksvoll yanlış: „etkileyici“ demektir; iki gün on bir günün yanında etkileyici değildir ve „zudem“ ile gelen olumsuz ek buna uymaz. c) ungewöhnlich yanlış: Etkinin olağan dışı olduğuna dair bir şey söylenmiyor; vurgu boyutunun küçüklüğünde."
+        },
+        {
+          "number": 7,
+          "type": "abc",
+          "prompt": "Lücke 7",
+          "options": { "a": "beruft", "b": "fordert", "c": "folgert", "d": "fürchtet" },
+          "answer": "c",
+          "evidence": [
+            { "text": "artikel", "quote": "er daraus, dass kurze, regelmäßig wiederholte Übungen mehr versprechen als ein einmaliger Kraftakt" }
+          ],
+          "explanation": "„etwas aus etwas folgern“ (bir şeyden bir sonuç çıkarmak) kalıbı „daraus“ ile kullanılır: Wellhöfer, etkinin birkaç hafta sonra zayıflamasından, tek seferlik bir çaba yerine kısa ve düzenli tekrarlanan alıştırmaların daha umut verici olduğu sonucunu çıkarıyor. a) beruft yanlış: „sich berufen auf“ (bir şeye dayanmak) dönüşlüdür ve „auf“ ister, „daraus“ ile kurulamaz. b) fordert yanlış: „fordern“ (talep etmek) „daraus“ ile kullanılmaz; ayrıca Wellhöfer bir talepte değil, bir çıkarımda bulunuyor. d) fürchtet yanlış: „fürchten“ (korkmak) „daraus“ ile kurulmaz ve düzenli alıştırmaların daha umut verici olması korkulacak bir şey değildir."
+        },
+        {
+          "number": 8,
+          "type": "abc",
+          "prompt": "Lücke 8",
+          "options": { "a": "längst", "b": "vorerst", "c": "endgültig", "d": "bereits" },
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "eine entsprechende Langzeitstudie hat das Team gerade erst begonnen" }
+          ],
+          "explanation": "Bulgunun emeklilik birikimi gibi alanlara aktarılıp aktarılamayacağı şimdilik belirsiz; bunu araştıracak uzun süreli çalışma daha yeni başladı („gerade erst begonnen“). Yani soru ileride yanıtlanabilir: „vorerst offen“ = şimdilik açık. a) längst ve d) bereits yanlış: „çoktan, zaten“ anlamındadır ve „offen“ ile birlikte, sorunun uzun süredir açık olduğunu vurgular; oysa metin, yeni başlayan çalışmayla durumun geçici olduğunu anlatıyor. c) endgültig yanlış: „kesin olarak açık“ çelişkili bir ifadedir; ayrıca devam eden bir çalışma sorunun yanıtlanabileceğini gösteriyor."
+        }
+      ]
+    }
+  ]
+}

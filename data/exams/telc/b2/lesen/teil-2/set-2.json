@@ -1,0 +1,117 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b2",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-2",
+  "title": "Das Leben als Fernpendler",
+  "minutes": 20,
+  "instructions": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (a, b oder c) ist jeweils richtig?",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "pendeln",
+          "title": "Zwischen zwei Welten",
+          "byline": "Von Arno Ostermeyer",
+          "paragraphs": [
+            "Montagmorgen, 4.40 Uhr: Während in Bärwinkel noch alle Fenster dunkel sind, zieht Imme Wollenberg leise die Haustür hinter sich zu. Ihr Zug fährt um kurz nach fünf, gut drei Stunden später wird die 43-jährige Ingenieurin an ihrem Schreibtisch in einem Planungsbüro in Kranzhafen sitzen, rund 300 Kilometer von ihrer Familie entfernt. Zurück nach Hause kommt sie erst am Donnerstagabend. Bis dahin wohnt sie in einem möblierten Einzimmerapartment, zehn Gehminuten von ihrem Arbeitsplatz entfernt. Die Fahrt nutzt sie, um E-Mails zu lesen oder noch ein wenig zu schlafen – je nachdem, wie voll der Zug ist. Lediglich freitags arbeitet sie von zu Hause aus. So geht das seit vier Jahren.",
+            "Als ihr die Stelle angeboten wurde, hat die Familie lange über einen Umzug diskutiert. Ihr Mann, der als Lehrer arbeitet, hätte sich nach Kranzhafen versetzen lassen können, und auch die beiden Kinder hätten den Schulwechsel wohl verkraftet. Den Ausschlag gab am Ende etwas anderes: „Für das Geld, das unser Haus hier wert ist, hätten wir in Kranzhafen nicht einmal eine Dreizimmerwohnung bekommen“, sagt Wollenberg. Die Stelle selbst ist unbefristet, und dass sie sie nur vorübergehend annehmen wollte, war nie ein Thema. Ein vergleichbares Angebot in der Nähe von Bärwinkel gab es dagegen nicht.",
+            "Mit diesem Lebensmodell ist Imme Wollenberg keine Ausnahme. Nach Angaben des Mobilitätsforschers Lambert Achterkamp von der Universität Lorweiler ist die Zahl der Beschäftigten, die für ihre Arbeit regelmäßig weite Strecken zurücklegen, in den vergangenen zwanzig Jahren deutlich gestiegen. Anders als oft vermutet, handle es sich dabei keineswegs überwiegend um junge Singles am Anfang ihrer Karriere, sondern häufig um Mütter und Väter mittleren Alters, die ihr soziales Umfeld nicht aufgeben wollten. Auffällig sei, wie lange viele Betroffene die Belastung unterschätzten. „Die meisten erzählen mir in den ersten Monaten, sie hätten sich gut daran gewöhnt. Schlafstörungen oder Rückenschmerzen führen sie oft erst Jahre später auf das Pendeln zurück.“ Eine höhere Trennungsrate als bei anderen Paaren habe er in seinen Untersuchungen dagegen nicht festgestellt. Entscheidend sei vielmehr, wie Paare die gemeinsame Zeit gestalteten.",
+            "Bei den Wollenbergs gilt deshalb eine feste Regel: Das Wochenende gehört der Familie. Treffen mit Freunden, Vereinssitzungen oder Behördengänge werden, so gut es geht, auf den Freitag oder in die Woche gelegt. Ihr Mann kümmere sich von Montag bis Donnerstag um den Haushalt und fahre die Kinder zum Sport, erzählt Wollenberg; seine Stelle habe er dafür nicht reduziert, er unterrichte weiterhin in Vollzeit. Am Wochenende übernehme dafür sie das Kochen. Nach Kranzhafen kommen die Kinder nur selten – in dem kleinen Apartment sei schlicht kein Platz für Besuch. Unter der Woche telefoniert die Familie jeden Abend per Video, meist während des Abendessens. Am schwersten seien die Abende, an denen eines der Kinder krank sei oder Kummer habe. „Dann würde ich am liebsten sofort in den nächsten Zug steigen“, gesteht Wollenberg.",
+            "Wie lange sie dieses Leben noch führen will, weiß Imme Wollenberg nicht genau. Ein Umzug nach Kranzhafen komme jedenfalls nicht mehr in Frage, sagt sie, dafür seien die Kinder inzwischen zu fest in ihrem Umfeld verwurzelt. Auch nach einer neuen Stelle in der Region sucht sie vorerst nicht, da ihr die Arbeit im Planungsbüro viel Freude bereite. Ihre Hoffnung richtet sich auf ein Gespräch mit ihrer Vorgesetzten im Herbst: Dann soll geklärt werden, ob sie künftig auch montags von Bärwinkel aus arbeiten darf. „Ein Tag mehr zu Hause – das würde schon viel verändern.“"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "abc",
+          "prompt": "Von Montag bis Donnerstag …",
+          "options": {
+            "a": "fährt Imme Wollenberg jeden Tag zur Arbeit und wieder zurück.",
+            "b": "arbeitet sie überwiegend von zu Hause aus.",
+            "c": "übernachtet sie in der Nähe ihres Arbeitsplatzes."
+          },
+          "answer": "c",
+          "evidence": [
+            { "text": "pendeln", "quote": "Zurück nach Hause kommt sie erst am Donnerstagabend." },
+            { "text": "pendeln", "quote": "Bis dahin wohnt sie in einem möblierten Einzimmerapartment, zehn Gehminuten von ihrem Arbeitsplatz entfernt." },
+            { "text": "pendeln", "quote": "Lediglich freitags arbeitet sie von zu Hause aus." }
+          ],
+          "explanation": "Wollenberg pazartesi sabahı trenle Kranzhafen'e gidiyor ve eve ancak perşembe akşamı dönüyor; o zamana kadar işyerine on dakika yürüme mesafesindeki eşyalı tek odalı bir dairede („möbliertes Einzimmerapartment“) kalıyor. c) bunu anlatıyor. a) yanlış: her gün gidip gelmiyor, „erst am Donnerstagabend“ (ancak perşembe akşamı) eve dönüyor. b) yanlış: evden yalnızca cuma günleri çalışıyor („Lediglich freitags“: sadece cumaları)."
+        },
+        {
+          "number": 7,
+          "type": "abc",
+          "prompt": "Die Familie ist nicht nach Kranzhafen gezogen, weil …",
+          "options": {
+            "a": "der Ehemann dort keine Stelle bekommen hätte.",
+            "b": "Wohnraum in der Stadt für sie zu teuer gewesen wäre.",
+            "c": "Imme Wollenberg die Stelle nur für einige Jahre annehmen wollte."
+          },
+          "answer": "b",
+          "evidence": [
+            { "text": "pendeln", "quote": "hätte sich nach Kranzhafen versetzen lassen können" },
+            { "text": "pendeln", "quote": "„Für das Geld, das unser Haus hier wert ist, hätten wir in Kranzhafen nicht einmal eine Dreizimmerwohnung bekommen“" },
+            { "text": "pendeln", "quote": "dass sie sie nur vorübergehend annehmen wollte, war nie ein Thema" }
+          ],
+          "explanation": "Kararı belirleyen („Den Ausschlag gab“) şey fiyatlar oldu: Wollenberg'e göre evlerinin değeriyle Kranzhafen'de üç odalı bir daire bile alamazlardı. b) bunu genel olarak söylüyor („Wohnraum“: konut). a) yanlış: öğretmen olan kocası Kranzhafen'e tayinini isteyebilirdi („hätte sich … versetzen lassen können“). c) yanlış: iş süresiz („unbefristet“) ve işi yalnızca geçici olarak kabul etmek „nie ein Thema“ (hiç söz konusu olmadı)."
+        },
+        {
+          "number": 8,
+          "type": "abc",
+          "prompt": "Der Mobilitätsforscher Lambert Achterkamp hat beobachtet, dass Fernpendler …",
+          "options": {
+            "a": "die gesundheitlichen Folgen des Pendelns oft erst spät erkennen.",
+            "b": "meistens jung sind und keine Familie haben.",
+            "c": "sich häufiger von ihren Partnern trennen als andere."
+          },
+          "answer": "a",
+          "evidence": [
+            { "text": "pendeln", "quote": "Schlafstörungen oder Rückenschmerzen führen sie oft erst Jahre später auf das Pendeln zurück." },
+            { "text": "pendeln", "quote": "keineswegs überwiegend um junge Singles am Anfang ihrer Karriere" },
+            { "text": "pendeln", "quote": "Eine höhere Trennungsrate als bei anderen Paaren habe er in seinen Untersuchungen dagegen nicht festgestellt." }
+          ],
+          "explanation": "Achterkamp'a göre birçok kişi yükü uzun süre küçümsüyor („unterschätzten“); uyku bozukluklarını veya sırt ağrılarını ancak yıllar sonra yolculuğa bağlıyorlar („führen … zurück“). a) bunu anlatıyor. b) yanlış: uzak mesafeli çalışanlar „keineswegs überwiegend“ (asla çoğunlukla değil) genç bekârlar, sık sık orta yaşlı anne ve babalar. c) yanlış: diğer çiftlere göre daha yüksek bir ayrılık oranı („Trennungsrate“) tespit etmemiş."
+        },
+        {
+          "number": 9,
+          "type": "abc",
+          "prompt": "In der Familie Wollenberg …",
+          "options": {
+            "a": "besuchen die Kinder ihre Mutter häufig in Kranzhafen.",
+            "b": "hält man die Wochenenden möglichst frei von anderen Verpflichtungen.",
+            "c": "arbeitet der Ehemann inzwischen weniger als früher."
+          },
+          "answer": "b",
+          "evidence": [
+            { "text": "pendeln", "quote": "Das Wochenende gehört der Familie." },
+            { "text": "pendeln", "quote": "seine Stelle habe er dafür nicht reduziert, er unterrichte weiterhin in Vollzeit" },
+            { "text": "pendeln", "quote": "Nach Kranzhafen kommen die Kinder nur selten" }
+          ],
+          "explanation": "Ailenin sabit bir kuralı var: hafta sonu aileye ait („Das Wochenende gehört der Familie“); arkadaş buluşmaları, dernek toplantıları ve resmî işler mümkün olduğunca cumaya veya hafta içine konuyor. b) bunu anlatıyor. a) yanlış: çocuklar Kranzhafen'e „nur selten“ (yalnızca nadiren) geliyor, küçük dairede misafir için yer yok. c) yanlış: kocası çalışma süresini „nicht reduziert“ (azaltmadı), hâlâ tam zamanlı öğretmenlik yapıyor."
+        },
+        {
+          "number": 10,
+          "type": "abc",
+          "prompt": "Für die Zukunft …",
+          "options": {
+            "a": "plant Imme Wollenberg, sich eine Arbeit in der Nähe ihres Wohnorts zu suchen.",
+            "b": "überlegt die Familie, doch noch nach Kranzhafen zu ziehen.",
+            "c": "hofft Imme Wollenberg, öfter von zu Hause aus arbeiten zu dürfen."
+          },
+          "answer": "c",
+          "evidence": [
+            { "text": "pendeln", "quote": "Ein Umzug nach Kranzhafen komme jedenfalls nicht mehr in Frage" },
+            { "text": "pendeln", "quote": "Auch nach einer neuen Stelle in der Region sucht sie vorerst nicht" },
+            { "text": "pendeln", "quote": "ob sie künftig auch montags von Bärwinkel aus arbeiten darf" }
+          ],
+          "explanation": "Wollenberg'in umudu sonbahardaki bir görüşmede: o zaman gelecekte pazartesileri de Bärwinkel'den, yani evden çalışıp çalışamayacağı netleşecek („Ein Tag mehr zu Hause“: evde bir gün daha). c) bunu anlatıyor. a) yanlış: bölgede yeni bir iş „vorerst nicht“ (şimdilik) aramıyor, çünkü işini seviyor. b) yanlış: Kranzhafen'e taşınmak „nicht mehr in Frage“ (artık söz konusu değil), çocuklar çevrelerine çok bağlı."
+        }
+      ]
+    }
+  ]
+}

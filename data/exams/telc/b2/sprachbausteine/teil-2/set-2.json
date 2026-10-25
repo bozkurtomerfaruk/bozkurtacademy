@@ -1,0 +1,268 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b2",
+  "section": "sprachbausteine",
+  "teil": 2,
+  "set": "set-2",
+  "title": "Leserbrief zur Stadtplanung",
+  "minutes": 13,
+  "context": "Eine Leserin reagiert in der Lokalzeitung auf einen Artikel über ein geplantes Wohnviertel.",
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort aus der Liste (a–o) in die Lücken 31–40 passt. Jedes Wort passt nur einmal. Fünf Wörter bleiben übrig.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "leserbrief",
+          "title": "Wohnungen ja – aber nicht um jeden Preis",
+          "byline": "Leserbrief von Ortrud Haubach zum Artikel „Neues Wohnviertel auf dem Ziegeleigelände“",
+          "paragraphs": [
+            "Mit großem Interesse habe ich Ihren Artikel über die geplante Bebauung des ehemaligen Ziegeleigeländes gelesen. Dass in unserer Stadt bezahlbarer Wohnraum fehlt, stelle ich keineswegs in {{31}}. Ich halte es {{32}} für einen Fehler, das gesamte Gelände mit Wohnblöcken zu bebauen, {{33}} sich dort in den letzten zwanzig Jahren ein kleines Wäldchen entwickelt hat. Die Bäume sorgen im Sommer für Schatten und kühlere Luft im ganzen Viertel – ein Vorteil, der {{34}} der zunehmenden Hitzetage immer wichtiger wird.",
+            "Die Stadtverwaltung argumentiert, das Wäldchen sei ökologisch wertlos, weil es zum größten {{35}} aus jungen Birken bestehe. Dieser Behauptung hat der örtliche Naturschutzverein bereits {{36}}: Bei einer Zählung im Frühjahr wurden dort über 40 Vogelarten beobachtet, darunter mehrere seltene.",
+            "Ich schlage deshalb vor, die neuen Häuser nur auf dem östlichen Teil des Geländes zu errichten, {{37}} das Wäldchen erhalten bleibt. Auf diese Weise ließen sich {{38}} neue Wohnungen schaffen als auch ein Stück Natur bewahren. Dass dabei etwas weniger Wohnungen entstünden, ließe sich durch eine etwas höhere Bauweise ausgleichen.",
+            "Mich {{39}} vor allem, dass die Bürgerinnen und Bürger bisher kaum Gelegenheit hatten, sich zu den Plänen zu äußern. Ich fordere die Stadt daher auf, eine öffentliche Bürgerversammlung {{40}}, bevor der Stadtrat im Dezember endgültig entscheidet."
+          ]
+        },
+        {
+          "id": "wort-a",
+          "label": "a",
+          "paragraphs": [
+            "damit"
+          ]
+        },
+        {
+          "id": "wort-b",
+          "label": "b",
+          "paragraphs": [
+            "zumal"
+          ]
+        },
+        {
+          "id": "wort-c",
+          "label": "c",
+          "paragraphs": [
+            "stört"
+          ]
+        },
+        {
+          "id": "wort-d",
+          "label": "d",
+          "paragraphs": [
+            "Teil"
+          ]
+        },
+        {
+          "id": "wort-e",
+          "label": "e",
+          "paragraphs": [
+            "Kritik"
+          ]
+        },
+        {
+          "id": "wort-f",
+          "label": "f",
+          "paragraphs": [
+            "Frage"
+          ]
+        },
+        {
+          "id": "wort-g",
+          "label": "g",
+          "paragraphs": [
+            "trotz"
+          ]
+        },
+        {
+          "id": "wort-h",
+          "label": "h",
+          "paragraphs": [
+            "weder"
+          ]
+        },
+        {
+          "id": "wort-i",
+          "label": "i",
+          "paragraphs": [
+            "widersprochen"
+          ]
+        },
+        {
+          "id": "wort-j",
+          "label": "j",
+          "paragraphs": [
+            "zugestimmt"
+          ]
+        },
+        {
+          "id": "wort-k",
+          "label": "k",
+          "paragraphs": [
+            "jedoch"
+          ]
+        },
+        {
+          "id": "wort-l",
+          "label": "l",
+          "paragraphs": [
+            "abzuhalten"
+          ]
+        },
+        {
+          "id": "wort-m",
+          "label": "m",
+          "paragraphs": [
+            "sowohl"
+          ]
+        },
+        {
+          "id": "wort-n",
+          "label": "n",
+          "paragraphs": [
+            "angesichts"
+          ]
+        },
+        {
+          "id": "wort-o",
+          "label": "o",
+          "paragraphs": [
+            "gefällt"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 31,
+          "type": "zuordnung",
+          "prompt": "Lücke 31",
+          "answer": "f",
+          "evidence": [
+            {
+              "text": "leserbrief",
+              "quote": "stelle ich keineswegs in"
+            }
+          ],
+          "explanation": "„etwas in Frage stellen“ sabit bir isim-fiil kalıbıdır: bir şeyden şüphe etmek, bir şeye itiraz etmek. Ortrud şehirde uygun fiyatlı konut eksikliğine hiç itiraz etmiyor: „stelle ich keineswegs in Frage“. „Kritik“ „üben“ fiiliyle kullanılır („Kritik üben“), „in Kritik stellen“ diye bir kalıp yoktur. „Teil“ de „in … stellen“ yapısına uymaz."
+        },
+        {
+          "number": 32,
+          "type": "zuordnung",
+          "prompt": "Lücke 32",
+          "answer": "k",
+          "evidence": [
+            {
+              "text": "leserbrief",
+              "quote": "für einen Fehler, das gesamte Gelände mit Wohnblöcken zu bebauen"
+            }
+          ],
+          "explanation": "Önceki cümlede Ortrud konut ihtiyacını kabul ediyor, bu cümlede ise bütün alanın binalarla doldurulmasını hata olarak görüyor. Bu bir karşıtlıktır; cümle içinde fiilden sonra duran karşıtlık zarfı „jedoch“ (ancak, yine de) olur: „Ich halte es jedoch für einen Fehler …“. „damit“ amaç bağlacıdır ve fiili sona atar; „trotz“ bir isim ister; „weder“ ve „sowohl“ ikinci parçasız („noch“, „als auch“) kullanılamaz."
+        },
+        {
+          "number": 33,
+          "type": "zuordnung",
+          "prompt": "Lücke 33",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "leserbrief",
+              "quote": "sich dort in den letzten zwanzig Jahren ein kleines Wäldchen entwickelt hat"
+            }
+          ],
+          "explanation": "Boşluktan sonraki yan cümlede fiil sonda („entwickelt hat“) ve bu cümle Ortrud'nin bütün alanı bina yapmayı neden hata saydığına ek bir gerekçe veriyor: Orada yirmi yılda küçük bir koru oluşmuş. Ek ve güçlü bir sebep bildiren bağlaç „zumal“ (hele ki, üstelik … olduğu için) olur. „damit“ (-sın diye) uymaz: Korunun yirmi yıl önce oluşmuş olması bir amaç olamaz."
+        },
+        {
+          "number": 34,
+          "type": "zuordnung",
+          "prompt": "Lücke 34",
+          "answer": "n",
+          "evidence": [
+            {
+              "text": "leserbrief",
+              "quote": "der zunehmenden Hitzetage immer wichtiger wird"
+            }
+          ],
+          "explanation": "Boşluktan sonra Genitiv bir isim grubu geliyor: „der zunehmenden Hitzetage“ (artan sıcak günler). Ağaçların gölgesi sıcak günler arttığı için daha önemli hâle geliyor; bu bir sebep/bakış açısıdır. Genitiv alan „angesichts“ (… karşısında, … göz önünde bulundurulunca) bunu ifade eder. „trotz“ da Genitiv alır, ama „sıcak günlere rağmen daha önemli“ mantıksızdır, çünkü sıcak günler gölgeyi önemli kılan şeydir."
+        },
+        {
+          "number": 35,
+          "type": "zuordnung",
+          "prompt": "Lücke 35",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "leserbrief",
+              "quote": "weil es zum größten"
+            }
+          ],
+          "explanation": "„zum größten Teil“ sabit bir ifadedir: büyük ölçüde, çoğunlukla. Belediyeye göre koru çoğunlukla genç huş ağaçlarından oluşuyor. „zum“ (= zu dem) eril veya nötr bir isim ister; „der Teil“ erildir. „Frage“ ve „Kritik“ dişildir ve „zum größten …“ kalıbında anlam da vermez."
+        },
+        {
+          "number": 36,
+          "type": "zuordnung",
+          "prompt": "Lücke 36",
+          "answer": "i",
+          "evidence": [
+            {
+              "text": "leserbrief",
+              "quote": "Bei einer Zählung im Frühjahr wurden dort über 40 Vogelarten beobachtet"
+            }
+          ],
+          "explanation": "Boşluktan önce „Dieser Behauptung hat … bereits“ var: „hat“ ile Perfekt kurulur ve Dativ nesne („dieser Behauptung“) alan bir Partizip II gerekir. İki noktadan sonraki kanıt (40'tan fazla kuş türü) belediyenin „koru ekolojik olarak değersiz“ iddiasını çürütür; yani dernek bu iddiaya karşı çıkmıştır: „widersprochen“ (itiraz etmiş). „zugestimmt“ (katılmış) dilbilgisi olarak uyar, ama kuş sayımı iddiayı desteklemez, tersine onunla çelişir."
+        },
+        {
+          "number": 37,
+          "type": "zuordnung",
+          "prompt": "Lücke 37",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "leserbrief",
+              "quote": "das Wäldchen erhalten bleibt"
+            }
+          ],
+          "explanation": "Evlerin yalnızca doğu kısmına yapılmasının amacı korunun korunmasıdır. Amaç bildiren ve fiili sona atan yan cümle bağlacı „damit“ (-sın diye) olur: „…, damit das Wäldchen erhalten bleibt“. „zumal“ uymaz: „zumal“ zaten var olan bir gerçeği ek sebep olarak verir; korunun korunması ise önerinin hedefidir, henüz bir gerçek değildir."
+        },
+        {
+          "number": 38,
+          "type": "zuordnung",
+          "prompt": "Lücke 38",
+          "answer": "m",
+          "evidence": [
+            {
+              "text": "leserbrief",
+              "quote": "neue Wohnungen schaffen als auch ein Stück Natur bewahren"
+            }
+          ],
+          "explanation": "Boşluktan sonra „als auch“ geliyor: Bu, „sowohl … als auch“ (hem … hem de) bağlacının ikinci parçasıdır. Öneriyle hem yeni konut yapılabilir hem de doğanın bir parçası korunabilir. „weder“ de iki parçalı bir bağlaçtır, ama yalnızca „noch“ ile kullanılır („weder … noch“ = ne … ne de); „als auch“ ile birleşmez."
+        },
+        {
+          "number": 39,
+          "type": "zuordnung",
+          "prompt": "Lücke 39",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "leserbrief",
+              "quote": "vor allem, dass die Bürgerinnen und Bürger bisher kaum Gelegenheit hatten"
+            }
+          ],
+          "explanation": "Cümle Akkusativ „Mich“ ile başlıyor ve özne „dass“ cümlesidir (vatandaşların fikir bildirme fırsatı olmaması). „jemanden stören“ (birini rahatsız etmek) Akkusativ nesne alır: „Mich stört vor allem, dass …“ (beni en çok rahatsız eden …). „gefällt“ uymaz: „gefallen“ Dativ ister („mir gefällt“), „mich gefällt“ yanlıştır; ayrıca vatandaşlara sorulmaması Ortrud'nin hoşuna giden bir şey değil, eleştirdiği bir şeydir."
+        },
+        {
+          "number": 40,
+          "type": "zuordnung",
+          "prompt": "Lücke 40",
+          "answer": "l",
+          "evidence": [
+            {
+              "text": "leserbrief",
+              "quote": "bevor der Stadtrat im Dezember endgültig entscheidet"
+            }
+          ],
+          "explanation": "„jemanden auffordern, etwas zu tun“ (birinden bir şey yapmasını istemek) arkasından „zu“lu mastar ister. Ortrud, belediye meclisi aralıkta karar vermeden önce halka açık bir vatandaş toplantısı yapılmasını istiyor: „eine öffentliche Bürgerversammlung abzuhalten“ (toplantı düzenlemek). Listedeki öteki fiil biçimleri („stört“, „gefällt“, „widersprochen“, „zugestimmt“) „zu“lu mastar değildir ve „auffordern“dan sonra kullanılamaz."
+        }
+      ]
+    }
+  ]
+}

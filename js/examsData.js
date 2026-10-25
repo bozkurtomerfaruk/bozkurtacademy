@@ -541,13 +541,43 @@ window.BA_EXAMS = {
               { title: null, exercises: [] }, // Teil 3
             ] },
             { id: 'lesen', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
-              { title: null, exercises: [] }, // Teil 3
+              {
+                title: { tr: 'Kısa metinler ve başlıklar · eşleştirme', de: 'Kurztexte und Überschriften · Zuordnung', en: 'Short texts and headlines · matching' },
+                exercises: [
+                  { set: 'set-1', title: 'Kurznachrichten aus der Region' },
+                  { set: 'set-2', title: 'Meldungen aus Alltag und Freizeit' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: 'Gazete makalesi · a/b/c', de: 'Zeitungsartikel · a/b/c', en: 'Newspaper article · a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Ein Dorf rettet seinen Laden' },
+                  { set: 'set-2', title: 'Großeltern im Internet' },
+                ]
+              }, // Teil 2
+              {
+                title: { tr: 'Durumlar ve ilanlar · eşleştirme', de: 'Situationen und Anzeigen · Zuordnung', en: 'Situations and adverts · matching' },
+                exercises: [
+                  { set: 'set-1', title: 'Kurse und Freizeit' },
+                  { set: 'set-2', title: 'Wohnen und Dienstleistungen' },
+                ]
+              }, // Teil 3
             ] },
             { id: 'sprachbausteine', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
+              {
+                title: { tr: 'Mektupta boşluk · a/b/c', de: 'Lückentext im Brief · a/b/c', en: 'Gapped letter · a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Eine Bewerbung' },
+                  { set: 'set-2', title: 'Ein Brief an die Gastfamilie' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: 'Kelime listesiyle boşluk doldurma', de: 'Lückentext mit Wortliste', en: 'Gapped text with word list' },
+                exercises: [
+                  { set: 'set-1', title: 'Bericht über ein Firmenfest' },
+                  { set: 'set-2', title: 'Nachricht an die Vermieterin' },
+                ]
+              }, // Teil 2
             ] },
             { id: 'schreiben', teile: [
               { title: null, exercises: [] }, // Teil 1

@@ -1,5 +1,5 @@
 // Player behaviour on Goethe B1 Lesen 1/1, then every Lesen set of every exam: all right, then all wrong.
-import { chromium, B, ROUTE, teileOf, setsOf, readSet, checker } from './lib.mjs';
+import { chromium, B, ROUTE, sectionOf, teileOf, setsOf, readSet, checker } from './lib.mjs';
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
 const errors = []; page.on('pageerror', e => errors.push(e.message)); page.on('console', m => { if (m.type() === 'error') errors.push(m.text()); });
@@ -75,7 +75,7 @@ ok(hash() === 'exams/goethe/b1/lesen', '"Önceki adım" returns to the Teil list
 // 7. Every set: all right, then all wrong
 for (const level of Object.keys(ROUTE)) for (let t = 1; t <= teileOf(level); t++) for (let s = 1; s <= setsOf(level, t); s++) {
   const d = set(t, s, level); const qs = questions(d);
-  await page.goto('about:blank'); await page.goto(`${B}#exams/${ROUTE[level]}/lesen/${t}/set-${s}`); await page.waitForTimeout(1000);
+  await page.goto('about:blank'); await page.goto(`${B}#exams/${ROUTE[level]}/${sectionOf(level)}/${t}/set-${s}`); await page.waitForTimeout(1000);
   for (const { q } of qs) await answer(q.number, q.answer);
   await page.click('[data-task-check]'); await page.waitForTimeout(500);
   const allRight = await score();

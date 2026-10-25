@@ -491,9 +491,27 @@ window.BA_EXAMS = {
               { title: null, exercises: [] }, // Teil 3
             ] },
             { id: 'lesen', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
-              { title: null, exercises: [] }, // Teil 3
+              {
+                title: { tr: 'Kısa mesajlar · richtig/falsch', de: 'Kurze Nachrichten · richtig/falsch', en: 'Short messages · true/false' },
+                exercises: [
+                  { set: 'set-1', title: 'Ein neuer Kollege' },
+                  { set: 'set-2', title: 'Geburtstag im Park' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: 'İki ilan · a/b', de: 'Zwei Anzeigen · a/b', en: 'Two adverts · a/b' },
+                exercises: [
+                  { set: 'set-1', title: 'Sport und Bewegung' },
+                  { set: 'set-2', title: 'Kinder und Familie' },
+                ]
+              }, // Teil 2
+              {
+                title: { tr: 'Tabelalar ve notlar · richtig/falsch', de: 'Schilder und Aushänge · richtig/falsch', en: 'Signs and notices · true/false' },
+                exercises: [
+                  { set: 'set-1', title: 'Bibliothek und Museum' },
+                  { set: 'set-2', title: 'Bank und Post' },
+                ]
+              }, // Teil 3
             ] },
             { id: 'schreiben', teile: [
               { title: null, exercises: [] }, // Teil 1

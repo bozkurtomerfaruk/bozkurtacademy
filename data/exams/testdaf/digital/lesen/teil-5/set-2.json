@@ -1,0 +1,108 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 5,
+  "set": "set-2",
+  "title": "Modelle der Studienfinanzierung",
+  "minutes": 10,
+  "context": "Sie lesen in einer Hochschulzeitschrift einen Bericht über Vorschläge zur Finanzierung des Studiums.",
+  "instructions": "Lesen Sie den Text. Zu welchem Ansatz (a, b oder c) passen die Aussagen 21 bis 27?",
+  "groups": [
+    {
+      "layout": "article",
+      "none": false,
+      "texts": [
+        {
+          "id": "bericht",
+          "title": "Modelle der Studienfinanzierung",
+          "byline": "Von Tamsin Quandel",
+          "paragraphs": [
+            "Wie sollen Studierende ihren Lebensunterhalt bestreiten? Die Frage ist alt, gewinnt aber an Dringlichkeit, seit die Mieten in Hochschulstädten schneller steigen als jede staatliche Förderung. Eine Expertenkommission in Feldhusen hat jüngst drei Modelle verglichen, die in der Fachdiskussion derzeit besonders viel Beachtung finden. Grundlage war eine Befragung von rund 4.000 Studierenden, von denen fast ein Drittel angab, neben den Lehrveranstaltungen mehr als zwanzig Stunden pro Woche zu jobben.",
+            "Die Finanzwissenschaftlerin Fenja Voßkamp plädiert für ein staatliches Darlehen, dessen Rückzahlung sich an der späteren Einkommenssituation orientiert. Während des Studiums erhielten diejenigen, deren Familie den Unterhalt nicht aufbringen könne, einen monatlichen Betrag. Zurückgezahlt werde erst nach dem Abschluss, und zwar nur, sofern das Bruttogehalt eine Schwelle von 32.000 Euro im Jahr überschreite. Die Raten sollen automatisch zusammen mit der Einkommensteuer eingezogen werden, sodass weder Anträge noch gesonderte Bescheide nötig wären. Zinsen fielen nicht an; mehr als die ursprünglich ausgezahlte Summe müsse niemand erstatten. Voßkamp verspricht sich davon vor allem, dass junge Menschen aus Familien ohne akademischen Hintergrund ihre Scheu vor Schulden verlieren.",
+            "Weit über diesen Vorschlag hinaus geht der Bildungsforscher Thorben Dahlhoff. Er tritt für ein steuerfinanziertes Sockelstipendium ein, das alle Immatrikulierten erhalten, ohne dass die Vermögensverhältnisse des Elternhauses eine Rolle spielen, und das nicht zurückgezahlt werden muss. Ein Freibrief soll das Stipendium allerdings nicht sein: Wer nach vier Semestern weniger als die Hälfte der vorgesehenen Leistungspunkte vorweisen könne, verliere seinen Anspruch. Die Kommission beziffert die jährlichen Mehrkosten auf rund sieben Milliarden Euro, was Dahlhoff mit dem Argument rechtfertigt, viele Studierende müssten dann weniger jobben und kämen schneller zum Abschluss. Mehrere Mitglieder der Kommission bezweifeln allerdings, dass sich die Studienzeiten tatsächlich in diesem Maße verkürzen würden.",
+            "Einen privatwirtschaftlichen Ansatz verfolgt schließlich eine Initiative ehemaliger Studierender der Universität Mertensee. Ihr Bildungsfonds sammelt Kapital von Anlegern und finanziert damit ausgewählte Bewerberinnen und Bewerber, die zuvor einen Studien- und Berufsplan vorlegen müssen. Nach dem Examen führen die Geförderten zehn Jahre lang einen festen Prozentsatz ihres Einkommens an den Fonds ab, und zwar unabhängig von dessen Höhe. Für die Investoren hängt der Ertrag damit unmittelbar davon ab, was aus den Absolventinnen und Absolventen beruflich wird. Wer eine glänzende Karriere macht, überweist im Laufe der Jahre womöglich ein Mehrfaches der erhaltenen Summe. Die Kommission sieht darin ein Gerechtigkeitsproblem, warnt aber vor allem vor einem anderen Effekt: Ein Fonds, der auf Rendite angewiesen sei, werde Interessenten aus schlecht bezahlten Disziplinen wie Archäologie oder Sozialpädagogik eher abweisen.",
+            "Eine eindeutige Empfehlung gab die Kommission nicht ab. Sie regte jedoch an, einzelne Elemente der drei Modelle zu kombinieren und zunächst in einem Pilotversuch an ausgewählten Hochschulen zu erproben. Bis dahin, so das ernüchternde Fazit, bleibe es bei einem System, das vielen Studierenden zu wenig und zu spät helfe."
+          ]
+        },
+        {
+          "id": "modell-a",
+          "label": "a",
+          "title": "Vorschlag von Fenja Voßkamp",
+          "paragraphs": ["Studierende erhalten ein Darlehen vom Staat."]
+        },
+        {
+          "id": "modell-b",
+          "label": "b",
+          "title": "Vorschlag von Thorben Dahlhoff",
+          "paragraphs": ["Studierende erhalten eine staatliche Grundförderung."]
+        },
+        {
+          "id": "modell-c",
+          "label": "c",
+          "title": "Vorschlag der Initiative aus Mertensee",
+          "paragraphs": ["Studierende werden aus einem privaten Fonds finanziert."]
+        }
+      ],
+      "questions": [
+        {
+          "number": 21,
+          "type": "zuordnung",
+          "prompt": "Je besser die Teilnehmenden später verdienen, desto mehr gewinnen die Geldgeber.",
+          "answer": "c",
+          "evidence": [{ "text": "bericht", "quote": "Für die Investoren hängt der Ertrag damit unmittelbar davon ab, was aus den Absolventinnen und Absolventen beruflich wird" }],
+          "explanation": "Mertensee fonunda mezunlar gelirlerinin sabit bir yüzdesini öder; bu yüzden „Für die Investoren hängt der Ertrag damit unmittelbar davon ab, was aus den Absolventinnen und Absolventen beruflich wird“ (yatırımcıların kazancı doğrudan mezunların meslekte ne olduğuna bağlı). Voßkamp'ın kredisi devletten gelir, faiz yoktur, yani kazanan bir para veren yoktur. Dahlhoff'un bursu vergilerle finanse edilir ve geri ödenmez; geri ödenmediği için mezunların sonraki kazancına bağlı bir ödeme de yoktur."
+        },
+        {
+          "number": 22,
+          "type": "zuordnung",
+          "prompt": "Erst ab einem bestimmten Verdienstniveau muss man damit beginnen, die Schulden abzutragen.",
+          "answer": "a",
+          "evidence": [{ "text": "bericht", "quote": "nur, sofern das Bruttogehalt eine Schwelle von 32.000 Euro im Jahr überschreite" }],
+          "explanation": "Voßkamp'ın modelinde geri ödeme mezuniyetten sonra ve „nur, sofern das Bruttogehalt eine Schwelle von 32.000 Euro im Jahr überschreite“ (yalnızca brüt maaş yılda 32.000 euroluk eşiği aşarsa) başlar; eşiğin altında kazanan şimdilik borcunu ödemeye başlamaz. Mertensee fonunda ise yüzde, gelirin miktarından bağımsız olarak („unabhängig von dessen Höhe“) ödenir. Dahlhoff'un bursu ise borç değildir ve hiç geri ödenmez."
+        },
+        {
+          "number": 23,
+          "type": "zuordnung",
+          "prompt": "Alle Studierenden bekommen die Leistung, ohne dass geprüft wird, wie wohlhabend ihre Familie ist.",
+          "answer": "b",
+          "evidence": [{ "text": "bericht", "quote": "das alle Immatrikulierten erhalten, ohne dass die Vermögensverhältnisse des Elternhauses eine Rolle spielen" }],
+          "explanation": "Dahlhoff'un temel bursunu „alle Immatrikulierten erhalten, ohne dass die Vermögensverhältnisse des Elternhauses eine Rolle spielen“ (kayıtlı herkes alır, ailenin mali durumu rol oynamaz). Voßkamp'ta ise para yalnızca ailesi geçimi karşılayamayanlara verilir („deren Familie den Unterhalt nicht aufbringen könne“). Mertensee fonu da herkese değil, seçilmiş başvuru sahiplerine („ausgewählte Bewerberinnen und Bewerber“) ödeme yapar."
+        },
+        {
+          "number": 24,
+          "type": "zuordnung",
+          "prompt": "Die Förderung kann entzogen werden, wenn jemand im Studium deutlich hinter dem Regelpensum zurückbleibt.",
+          "answer": "b",
+          "evidence": [{ "text": "bericht", "quote": "Wer nach vier Semestern weniger als die Hälfte der vorgesehenen Leistungspunkte vorweisen könne, verliere seinen Anspruch" }],
+          "explanation": "Dahlhoff'un bursu sınırsız değildir: „Wer nach vier Semestern weniger als die Hälfte der vorgesehenen Leistungspunkte vorweisen könne, verliere seinen Anspruch“ (dört dönemden sonra öngörülen kredilerin yarısından azını gösterebilen hakkını kaybeder). Mertensee fonunda başvuru sırasında bir plan istenir, ama sonradan desteğin kesilmesinden söz edilmez. Voßkamp'ın modelinde ders başarısına bağlı bir şart yoktur."
+        },
+        {
+          "number": 25,
+          "type": "zuordnung",
+          "prompt": "Es wird befürchtet, dass Personen, die bestimmte Fächer studieren wollen, kaum Aussicht auf Unterstützung hätten.",
+          "answer": "c",
+          "evidence": [{ "text": "bericht", "quote": "werde Interessenten aus schlecht bezahlten Disziplinen wie Archäologie oder Sozialpädagogik eher abweisen" }],
+          "explanation": "Komisyon, kâra muhtaç bir fonun „Interessenten aus schlecht bezahlten Disziplinen wie Archäologie oder Sozialpädagogik eher abweisen“ (arkeoloji veya sosyal pedagoji gibi az kazandıran alanlardan gelenleri büyük olasılıkla geri çevireceği) uyarısını yapıyor; bu Mertensee fonuyla ilgilidir. Dahlhoff'un bursunu bütün kayıtlı öğrenciler alır, Voßkamp'ta ise ölçüt ailenin durumudur, okunan bölüm değil."
+        },
+        {
+          "number": 26,
+          "type": "zuordnung",
+          "prompt": "Die Begleichung der Schuld soll für die Betroffenen keinen zusätzlichen Verwaltungsaufwand bedeuten.",
+          "answer": "a",
+          "evidence": [{ "text": "bericht", "quote": "sodass weder Anträge noch gesonderte Bescheide nötig wären" }],
+          "explanation": "Voßkamp'ın modelinde taksitler gelir vergisiyle birlikte otomatik kesilir, „sodass weder Anträge noch gesonderte Bescheide nötig wären“ (böylece ne başvuru ne de ayrı bir bildirim gerekir). Mertensee fonunda mezunlar fona ödeme yapar, ama bunun nasıl işlediği anlatılmaz. Dahlhoff'un bursu geri ödenmediği için orada bir borç ödemesi yoktur."
+        },
+        {
+          "number": 27,
+          "type": "zuordnung",
+          "prompt": "Wer beruflich sehr erfolgreich ist, zahlt unter Umständen weit mehr zurück, als er bekommen hat.",
+          "answer": "c",
+          "evidence": [{ "text": "bericht", "quote": "überweist im Laufe der Jahre womöglich ein Mehrfaches der erhaltenen Summe" }],
+          "explanation": "Mertensee fonunda parlak bir kariyer yapan kişi „überweist im Laufe der Jahre womöglich ein Mehrfaches der erhaltenen Summe“ (yıllar içinde aldığı paranın belki birkaç katını öder). Voßkamp'ın kredisinde ise tam tersi geçerlidir: „mehr als die ursprünglich ausgezahlte Summe müsse niemand erstatten“ (kimse başlangıçta ödenen tutardan fazlasını geri vermek zorunda değil). Dahlhoff'un bursu hiç geri ödenmez."
+        }
+      ]
+    }
+  ]
+}

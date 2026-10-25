@@ -17,8 +17,9 @@ export const shot = name => path.join(shotDir, name);
 export const FOLDER = { a1: 'goethe/a1', b1: 'goethe/b1', a2: 'goethe/a2', b2: 'goethe/b2', c1: 'goethe/c1', dtz: 'dtz/a2-b1', tdp: 'testdaf/papier', tdd: 'testdaf/digital' };
 export const ROUTE = { a1: 'goethe/a1', b1: 'goethe/b1', a2: 'goethe/a2', b2: 'goethe/b2', c1: 'goethe/c1', dtz: 'dtz', tdp: 'testdaf/papier', tdd: 'testdaf/digital' };
 const dir = (level, t) => `data/exams/${FOLDER[level]}/lesen/teil-${t}`;
-export const teileOf = level => fs.readdirSync(`data/exams/${FOLDER[level]}/lesen`).filter(n => /^teil-\d+$/.test(n)).length;
-export const setsOf = (level, t) => fs.readdirSync(dir(level, t)).filter(n => /^set-\d+\.json$/.test(n)).length;
+// Highest Teil number with a folder; a Teil without sets (e.g. a skipped TestDaF Aufgabe) has 0 sets.
+export const teileOf = level => Math.max(...fs.readdirSync(`data/exams/${FOLDER[level]}/lesen`).filter(n => /^teil-\d+$/.test(n)).map(n => Number(n.slice(5))));
+export const setsOf = (level, t) => fs.existsSync(dir(level, t)) ? fs.readdirSync(dir(level, t)).filter(n => /^set-\d+\.json$/.test(n)).length : 0;
 export const readSet = (level, t, s) => JSON.parse(fs.readFileSync(`${dir(level, t)}/set-${s}.json`, 'utf8'));
 
 export function checker() {

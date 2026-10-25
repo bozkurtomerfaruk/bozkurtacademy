@@ -25,7 +25,7 @@
         {
           "id": "b",
           "label": "b",
-          "title": "Netzwerk Querdenkerinnen: Mentoring für Berufseinsteigerinnen",
+          "title": "Netzwerk Funkenflug: Mentoring für Berufseinsteigerinnen",
           "paragraphs": [
             "Junge Frauen aus Technik und Naturwissenschaften erhalten bei uns für ein Jahr eine persönliche Mentorin: eine Frau, die selbst seit vielen Jahren in einer Führungsposition ihrer Branche tätig ist. In monatlichen Gesprächen geht es um Karriereplanung, Gehaltsverhandlungen und den Umgang mit Vorurteilen. Die Teilnahme ist kostenlos; bewerben Sie sich bis zum 15. Mai mit einem kurzen Motivationsschreiben."
           ]
@@ -41,7 +41,7 @@
         {
           "id": "d",
           "label": "d",
-          "title": "Zellwerk: Aufbauseminar Tabellenkalkulation",
+          "title": "Spaltenreich: Aufbauseminar Tabellenkalkulation",
           "paragraphs": [
             "Pivot-Tabellen, Makros, automatisierte Berichte: In unserem zweitägigen Aufbauseminar lernen Mitarbeitende, umfangreiche Datenmengen schnell und fehlerfrei auszuwerten. Vorausgesetzt wird ein sicherer Umgang mit den Grundfunktionen. Auf Wunsch führen wir die Schulung auch direkt bei Ihnen im Betrieb durch – ab vier Teilnehmenden zum günstigen Firmenpreis."
           ]
@@ -91,7 +91,7 @@
           "label": "j",
           "title": "Fernhochschule Lernweg: Bachelor Kindheitspädagogik",
           "paragraphs": [
-            "Berufsbegleitend zum Hochschulabschluss: Sie lernen überwiegend von zu Hause aus mit Lernheften und Online-Seminaren und bestimmen Ihr Tempo selbst; nur die Prüfungen finden in unserem Studienzentrum statt. Ein Abitur ist nicht erforderlich: Wer eine pädagogische Berufsausbildung abgeschlossen und mindestens drei Jahre im Beruf gearbeitet hat, kann sich einschreiben."
+            "Berufsbegleitend zum Hochschulabschluss: Sie lernen überwiegend von zu Hause aus mit Lernheften und Online-Seminaren und bestimmen Lerntempo und Lernzeiten selbst; nur die Prüfungen finden in unserem Studienzentrum statt. Ein Abitur ist nicht erforderlich: Wer eine pädagogische Berufsausbildung abgeschlossen und mindestens drei Jahre im Beruf gearbeitet hat, kann sich einschreiben."
           ]
         },
         {
@@ -155,10 +155,10 @@
         {
           "number": 16,
           "type": "zuordnung",
-          "prompt": "Ihre Kollegin Silja hat vor Kurzem ihr Studium der Verfahrenstechnik abgeschlossen. Silja wünscht sich über einen längeren Zeitraum eine erfahrene Ansprechpartnerin aus dem eigenen Fachgebiet, die sie auf ihrem Berufsweg begleitet.",
+          "prompt": "Ihre Kollegin Silja hat vor Kurzem ihr Ingenieurstudium abgeschlossen. Silja wünscht sich über einen längeren Zeitraum eine erfahrene Ansprechpartnerin aus dem eigenen Fachgebiet, die sie auf ihrem Berufsweg begleitet.",
           "answer": "b",
           "evidence": [{ "text": "b", "quote": "Junge Frauen aus Technik und Naturwissenschaften erhalten bei uns für ein Jahr eine persönliche Mentorin" }, { "text": "b", "quote": "eine Frau, die selbst seit vielen Jahren in einer Führungsposition ihrer Branche tätig ist" }],
-          "explanation": "b ilanındaki program teknik ve doğa bilimlerinden genç kadınlara bir yıl boyunca („für ein Jahr“: uzun bir süre) kişisel bir mentor veriyor. Mentor, kendi sektöründe („ihrer Branche“) yıllardır yönetici olan bir kadın; Silja'nın aradığı „erfahrene Ansprechpartnerin aus dem eigenen Fachgebiet“ (kendi alanından deneyimli bir kadın) tam olarak bu. Tuzak e: Orada da kişisel görüşmeler var, ama bu danışmanlık, işinden memnun olmayıp başka bir meslek arayanlar için („berufliche Alternativen“); Silja meslek değiştirmek istemiyor."
+          "explanation": "b ilanındaki program teknik ve doğa bilimlerinden genç kadınlara bir yıl boyunca („für ein Jahr“: uzun bir süre) kişisel bir mentor veriyor; Silja mühendislik okumuş, yani teknik alandan geliyor. Mentor, kendi sektöründe („ihrer Branche“) yıllardır yönetici olan bir kadın; Silja'nın aradığı „erfahrene Ansprechpartnerin aus dem eigenen Fachgebiet“ (kendi alanından deneyimli bir kadın) tam olarak bu. Tuzak e: Orada da kişisel görüşmeler var, ama bu danışmanlık, işinden memnun olmayıp başka bir meslek arayanlar için („berufliche Alternativen“); Silja meslek değiştirmek istemiyor."
         },
         {
           "number": 17,
@@ -171,10 +171,10 @@
         {
           "number": 18,
           "type": "zuordnung",
-          "prompt": "Ihr Kollege Edvin ist ausgebildeter Tischler. In einigen Jahren möchte Edvin die Werkstatt seines Chefs übernehmen; dafür braucht er den Abschluss, der ihn berechtigt, einen eigenen Betrieb zu führen. Seine Stelle möchte er für die Vorbereitung nicht aufgeben.",
+          "prompt": "Ihr Kollege Edvin hat vor einigen Jahren seine Gesellenprüfung als Tischler bestanden. Später möchte Edvin die Werkstatt seines Chefs übernehmen; dafür braucht er die Qualifikation, mit der man sich im Handwerk selbstständig machen darf. Seine Stelle möchte er für die Vorbereitung nicht aufgeben.",
           "answer": "i",
           "evidence": [{ "text": "i", "quote": "dürfen Sie einen eigenen Betrieb führen und selbst ausbilden" }, { "text": "i", "quote": "sodass Sie weiterhin im Beruf bleiben können" }, { "text": "i", "quote": "Voraussetzung für die Teilnahme ist eine bestandene Gesellenprüfung im Tischlerhandwerk." }],
-          "explanation": "i ilanına göre ustalık unvanıyla („Meistertitel“) kendi işletmenizi yönetebilirsiniz („dürfen Sie einen eigenen Betrieb führen“); Edvin'in ihtiyaç duyduğu diploma bu. Kurs yarı zamanlı, cuma akşamları ve cumartesi; böylece işinizi bırakmadan devam edebilirsiniz („weiterhin im Beruf bleiben“). Ön koşul marangozlukta kalfalık sınavı; Edvin eğitimli bir marangoz („ausgebildeter Tischler“). Tuzak f: Orada da meslek eğitimi ön koşul, ama bahçe/ormancılık alanında ve konu ağaç bakımı."
+          "explanation": "i ilanına göre ustalık unvanıyla („Meistertitel“) kendi işletmenizi yönetebilirsiniz („dürfen Sie einen eigenen Betrieb führen“); durumdaki „sich selbstständig machen“ (kendi işini kurmak) bunun karşılığı, yani Edvin'in ihtiyaç duyduğu diploma bu. Kurs yarı zamanlı, cuma akşamları ve cumartesi; böylece işinizi bırakmadan devam edebilirsiniz („weiterhin im Beruf bleiben“). Ön koşul marangozlukta kalfalık sınavı („Gesellenprüfung“); Edvin bu sınavı birkaç yıl önce geçmiş. Tuzak f: Orada da meslek eğitimi ön koşul, ama bahçe/ormancılık alanında ve konu ağaç bakımı."
         },
         {
           "number": 19,
@@ -187,10 +187,10 @@
         {
           "number": 20,
           "type": "zuordnung",
-          "prompt": "Ihre Freundin Merit ist ausgebildete Erzieherin und arbeitet seit sieben Jahren in einer Kita. Merit hat kein Abitur, möchte aber neben dem Beruf ein Hochschulstudium absolvieren – am liebsten zu Hause und zu selbst gewählten Zeiten.",
+          "prompt": "Ihre Freundin Merit ist ausgebildete Erzieherin und arbeitet seit sieben Jahren in einer Kita. Merit hat kein Abitur, möchte aber neben dem Beruf ein Hochschulstudium absolvieren – am liebsten in den eigenen vier Wänden und dann, wenn es ihr zeitlich passt.",
           "answer": "j",
-          "evidence": [{ "text": "j", "quote": "Sie lernen überwiegend von zu Hause aus mit Lernheften und Online-Seminaren und bestimmen Ihr Tempo selbst" }, { "text": "j", "quote": "Ein Abitur ist nicht erforderlich" }, { "text": "j", "quote": "Wer eine pädagogische Berufsausbildung abgeschlossen und mindestens drei Jahre im Beruf gearbeitet hat, kann sich einschreiben." }],
-          "explanation": "j ilanındaki lisans programı işle birlikte yürütülüyor („Berufsbegleitend zum Hochschulabschluss“); çoğunlukla evden çalışılıyor ve hızınızı kendiniz belirliyorsunuz („bestimmen Ihr Tempo selbst“). Abitur gerekmiyor; pedagojik bir meslek eğitimini bitirmiş ve en az üç yıl çalışmış olmak yeterli. Merit eğitimli bir „Erzieherin“ (anaokulu öğretmeni) ve yedi yıldır çalışıyor, yani koşulları karşılıyor. Tuzak a: O da tamamen çevrim içi, ama bir yükseköğretim diploması değil, sabit akşam saatlerinde („dienstags und donnerstags von 19 bis 21 Uhr“) bir proje yönetimi kursu."
+          "evidence": [{ "text": "j", "quote": "Sie lernen überwiegend von zu Hause aus mit Lernheften und Online-Seminaren und bestimmen Lerntempo und Lernzeiten selbst" }, { "text": "j", "quote": "Ein Abitur ist nicht erforderlich" }, { "text": "j", "quote": "Wer eine pädagogische Berufsausbildung abgeschlossen und mindestens drei Jahre im Beruf gearbeitet hat, kann sich einschreiben." }],
+          "explanation": "j ilanındaki lisans programı işle birlikte yürütülüyor („Berufsbegleitend zum Hochschulabschluss“); çoğunlukla evden çalışılıyor ve öğrenme hızınızı ve zamanlarınızı kendiniz belirliyorsunuz („bestimmen Lerntempo und Lernzeiten selbst“). Abitur gerekmiyor; pedagojik bir meslek eğitimini bitirmiş ve en az üç yıl çalışmış olmak yeterli. Merit eğitimli bir „Erzieherin“ (anaokulu öğretmeni) ve yedi yıldır çalışıyor, yani koşulları karşılıyor. Tuzak a: O da tamamen çevrim içi, ama bir yükseköğretim diploması değil, sabit akşam saatlerinde („dienstags und donnerstags von 19 bis 21 Uhr“) bir proje yönetimi kursu."
         }
       ]
     }

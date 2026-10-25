@@ -36,7 +36,7 @@
           "type": "abc",
           "prompt": "Lücke 21",
           "options": {
-            "a": "dem",
+            "a": "auf dem",
             "b": "auf den",
             "c": "an den"
           },
@@ -47,7 +47,7 @@
               "quote": "ich durch einen Kollegen aufmerksam geworden bin"
             }
           ],
-          "explanation": "Boşluk bir ilgi cümlesi başlatıyor ve „Masterstudiengang“a (eril) gönderme yapıyor. Yan cümlenin fiili „aufmerksam werden“ (bir şeyin farkına varmak, bir şeyden haberdar olmak) sabit olarak „auf“ + Akkusativ ister: „auf etwas aufmerksam werden“. Bu yüzden edat ilgi zamirinin önüne gelir: „…, auf den ich durch einen Kollegen aufmerksam geworden bin“ (bir meslektaş sayesinde haberdar olduğum program). a) dem yanlış: Edat eksik kalır; „aufmerksam werden“ Dativ nesne almaz. c) an den yanlış: „aufmerksam werden“ „an“ ile kullanılmaz; doğru edat „auf“tur."
+          "explanation": "Boşluk bir ilgi cümlesi başlatıyor ve „Masterstudiengang“a (eril) gönderme yapıyor. Yan cümlenin fiili „aufmerksam werden“ (bir şeyin farkına varmak, bir şeyden haberdar olmak) sabit olarak „auf“ + Akkusativ ister: „auf etwas aufmerksam werden“. Bu yüzden edat ilgi zamirinin önüne gelir: „…, auf den ich durch einen Kollegen aufmerksam geworden bin“ (bir meslektaş sayesinde haberdar olduğum program). a) auf dem yanlış: Edat doğru, ama „dem“ Dativ'dir; „aufmerksam werden auf“ Akkusativ ister (eril Akkusativ ilgi zamiri „den“). c) an den yanlış: „aufmerksam werden“ „an“ ile kullanılmaz; doğru edat „auf“tur."
         },
         {
           "number": 22,
@@ -127,8 +127,8 @@
           "prompt": "Lücke 26",
           "options": {
             "a": "an wen",
-            "b": "wem",
-            "c": "wen"
+            "b": "an wem",
+            "c": "auf wen"
           },
           "answer": "a",
           "evidence": [
@@ -137,7 +137,7 @@
               "quote": "ich mich dafür wenden kann"
             }
           ],
-          "explanation": "Boşluk dolaylı bir soru cümlesi başlatıyor ve fiil „sich wenden an“ (birine başvurmak) sabit olarak „an“ + Akkusativ ister: „sich an jemanden wenden“. Kişiyi soran soru kelimesi edatla birlikte gelir: „an wen ich mich dafür wenden kann“ (bunun için kime başvurabileceğimi). b) wem yanlış: Dativ biçimidir ve edat eksik kalır; „sich wenden“ Dativ nesne almaz. c) wen yanlış: Akkusativ biçimi doğrudur, ama edat „an“ eksik kalır; „wen ich mich wenden kann“ olmaz."
+          "explanation": "Boşluk dolaylı bir soru cümlesi başlatıyor ve fiil „sich wenden an“ (birine başvurmak) sabit olarak „an“ + Akkusativ ister: „sich an jemanden wenden“. Kişiyi soran soru kelimesi edatla birlikte gelir: „an wen ich mich dafür wenden kann“ (bunun için kime başvurabileceğimi). b) an wem yanlış: Edat doğru, ama „wem“ Dativ'dir; „sich wenden an“ Akkusativ ister. c) auf wen yanlış: Akkusativ biçimi doğrudur, ama „sich wenden“ „auf“ ile kullanılmaz; doğru edat „an“dır."
         },
         {
           "number": 27,
@@ -200,7 +200,7 @@
           "options": {
             "a": "Sie",
             "b": "Ihnen",
-            "c": "Ihr"
+            "c": "sich"
           },
           "answer": "b",
           "evidence": [
@@ -209,7 +209,7 @@
               "quote": "Für eine kurze Rückmeldung wäre ich"
             }
           ],
-          "explanation": "Sıfat „dankbar“ (minnettar) kime minnettar olunduğunu Dativ ile söyler: „jemandem dankbar sein“. Resmî hitap „Sie“nin Dativ biçimi „Ihnen“dir: „wäre ich Ihnen sehr dankbar“ (size çok minnettar olurum). a) Sie yanlış: Nominativ veya Akkusativ biçimidir; „dankbar“ Akkusativ almaz. c) Ihr yanlış: „Ihr“ bir iyelik zamiridir (sizin) ve arkasından bir isim ister; burada isim yoktur."
+          "explanation": "Sıfat „dankbar“ (minnettar) kime minnettar olunduğunu Dativ ile söyler: „jemandem dankbar sein“. Resmî hitap „Sie“nin Dativ biçimi „Ihnen“dir: „wäre ich Ihnen sehr dankbar“ (size çok minnettar olurum). a) Sie yanlış: Nominativ veya Akkusativ biçimidir; „dankbar“ Akkusativ almaz. c) sich yanlış: „sich“ dönüşlü zamirdir ve yalnızca özne 3. şahıs (veya „Sie“) olduğunda özneyi geri gösterir; burada özne „ich“tir ve minnettar olunan kişi özne değil, mektubun muhatabıdır."
         }
       ]
     }

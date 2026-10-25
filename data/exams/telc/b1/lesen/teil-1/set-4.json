@@ -17,7 +17,7 @@
           "id": "text-1",
           "title": "Text 1",
           "paragraphs": [
-            "Im Tierpark Gerlinghove ist Anfang Mai ein kleines Kamel zur Welt gekommen. Seit gestern hat das Tier auch einen Namen: Fast 4.000 Besucherinnen und Besucher haben auf der Internetseite des Tierparks zwischen drei Vorschlägen gewählt. Mit 51 Prozent der Stimmen hat der Name „Karla“ gewonnen. Zu sehen ist Karla aber erst ab Juli. Bis dahin bleibt sie mit ihrer Mutter im Stall, weil sie sich noch an die anderen Tiere gewöhnen muss, sagt Tierpflegerin Hanne Kühnel."
+            "Im Tierpark Gerlinghove ist Anfang Mai ein kleines Kamel zur Welt gekommen. Seit gestern hat das Tier auch einen Namen: Fast 4.000 Besucherinnen und Besucher haben auf der Internetseite des Tierparks zwischen drei Vorschlägen gewählt. Mit 51 Prozent der Stimmen hat der Name „Karla“ gewonnen. Zu sehen ist Karla aber erst ab Juli. Bis dahin bleibt sie mit ihrer Mutter im Stall, weil sie sich noch an die anderen Tiere gewöhnen muss, sagt Tierpflegerin Gesche Kühnel."
           ]
         },
         {
@@ -38,7 +38,7 @@
           "id": "text-4",
           "title": "Text 4",
           "paragraphs": [
-            "Erdbeeren sind in diesem Jahr in der Region deutlich teurer als sonst. Weil es im Mai und Juni sehr viel geregnet hat, sind viele Früchte auf den Feldern kaputtgegangen. Ein Kilo kostet an den Ständen jetzt etwa 8 Euro, im letzten Jahr waren es 5 Euro. Wer seine Erdbeeren selbst pflücken möchte, kann das trotzdem tun: Die Felder des Obsthofs Rossmeier öffnen am Samstag. Dort kostet das Kilo 4,50 Euro."
+            "Erdbeeren sind in diesem Jahr in der Region deutlich teurer als sonst. Weil es im Mai und Juni sehr viel geregnet hat, sind viele Früchte auf den Feldern kaputtgegangen. Ein Kilo kostet an den Ständen jetzt etwa 8 Euro, im letzten Jahr waren es 5 Euro. Wer seine Erdbeeren selbst pflücken möchte, kann das trotzdem tun: Die Felder des Obsthofs Gerdemeier öffnen am Samstag. Dort kostet das Kilo 4,50 Euro."
           ]
         },
         {
@@ -48,7 +48,7 @@
             "Seit einem Jahr schreiben die Kinder der Klasse 3b der Grundschule am Rosenhügel Briefe an Bewohnerinnen und Bewohner eines Seniorenheims. Jedes Kind hat einen festen Brieffreund oder eine feste Brieffreundin. E-Mails gibt es dabei nicht: Alle Briefe werden mit der Hand geschrieben. Letzte Woche haben sich die Kinder und die Senioren zum ersten Mal getroffen. Es gab Kuchen, und viele hatten Fotos mitgebracht. „Am Anfang waren die Kinder sehr aufgeregt, aber nach zehn Minuten haben alle erzählt und gelacht“, sagt Lehrerin Ina Tegeler."
           ]
         },
-        { "id": "a", "label": "a", "paragraphs": ["Drei Wochen ohne Züge zwischen Zissenbeck und Tessendrup"] },
+        { "id": "a", "label": "a", "paragraphs": ["Wegen Bauarbeiten im August: Busse statt Züge"] },
         { "id": "b", "label": "b", "paragraphs": ["Ab sofort für Besucher zu sehen: das kleine Kamel"] },
         { "id": "c", "label": "c", "paragraphs": ["Im Bus statt im Zug: Auch Fahrräder können mitfahren"] },
         { "id": "d", "label": "d", "paragraphs": ["Nach dem vielen Regen: Erdbeeren kosten mehr"] },
@@ -76,9 +76,10 @@
           "prompt": "Text 2",
           "answer": "a",
           "evidence": [
-            { "text": "text-2", "quote": "Vom 4. bis zum 24. August werden auf der Strecke neue Gleise gebaut, deshalb fahren dort keine Züge." }
+            { "text": "text-2", "quote": "werden auf der Strecke neue Gleise gebaut, deshalb fahren dort keine Züge" },
+            { "text": "text-2", "quote": "Stattdessen fahren Busse." }
           ],
-          "explanation": "Metin 2'ye göre Zissenbeck ile Tessendrup arasında 4–24 ağustos arasında yeni raylar döşendiği için „fahren dort keine Züge“ (orada tren çalışmıyor); bu yaklaşık üç hafta. Trenin yerine otobüsler çalışıyor. a başlığı („Zissenbeck ile Tessendrup arasında üç hafta tren yok“) bunu anlatıyor. c başlığı („tren yerine otobüste: bisikletler de gidebiliyor“) uymuyor: „Fahrräder dürfen in den Bussen allerdings nicht mitgenommen werden“ (bisikletler otobüslere alınamaz)."
+          "explanation": "Metin 2'ye göre Zissenbeck ile Tessendrup arasında 4–24 ağustos arasında „neue Gleise gebaut“ (yeni raylar döşeniyor), bu yüzden „fahren dort keine Züge“ (orada tren çalışmıyor); „Stattdessen fahren Busse“ (onların yerine otobüsler çalışıyor). a başlığı („inşaat çalışmaları yüzünden ağustosta: tren yerine otobüs“) bunu anlatıyor; „Bauarbeiten“ (inşaat çalışmaları) metindeki ray yapımını özetliyor. c başlığı („tren yerine otobüste: bisikletler de gidebiliyor“) uymuyor: „Fahrräder dürfen in den Bussen allerdings nicht mitgenommen werden“ (bisikletler otobüslere alınamaz)."
         },
         {
           "number": 3,
@@ -100,7 +101,7 @@
             { "text": "text-4", "quote": "Erdbeeren sind in diesem Jahr in der Region deutlich teurer als sonst." },
             { "text": "text-4", "quote": "Weil es im Mai und Juni sehr viel geregnet hat" }
           ],
-          "explanation": "Metin 4'e göre çilekler bu yıl bölgede „deutlich teurer als sonst“ (her zamankinden belirgin şekilde daha pahalı): mayıs ve haziranda çok yağmur yağdığı için tarlalardaki birçok meyve bozulmuş; kilosu 5 yerine yaklaşık 8 euro. d başlığı („çok yağmurdan sonra: çilekler daha pahalı“) bunu anlatıyor. f başlığı („bu yıl çileği kendin toplamak mümkün değil“) uymuyor: kendi çileğini toplamak isteyen „kann das trotzdem tun“ (yine de yapabilir); Rossmeier meyve çiftliğinin tarlaları cumartesi açılıyor."
+          "explanation": "Metin 4'e göre çilekler bu yıl bölgede „deutlich teurer als sonst“ (her zamankinden belirgin şekilde daha pahalı): mayıs ve haziranda çok yağmur yağdığı için tarlalardaki birçok meyve bozulmuş; kilosu 5 yerine yaklaşık 8 euro. d başlığı („çok yağmurdan sonra: çilekler daha pahalı“) bunu anlatıyor. f başlığı („bu yıl çileği kendin toplamak mümkün değil“) uymuyor: kendi çileğini toplamak isteyen „kann das trotzdem tun“ (yine de yapabilir); Gerdemeier meyve çiftliğinin tarlaları cumartesi açılıyor."
         },
         {
           "number": 5,

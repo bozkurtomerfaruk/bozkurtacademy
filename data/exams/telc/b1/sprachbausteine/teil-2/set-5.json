@@ -7,7 +7,7 @@
   "set": "set-5",
   "title": "Bericht über einen Ausflug",
   "minutes": 13,
-  "context": "Im Kursbrief der Volkshochschule Talbach berichtet eine Teilnehmerin über einen Ausflug ihres Deutschkurses.",
+  "context": "Im Kursbrief der Volkshochschule Brakenhausen berichtet eine Teilnehmerin über einen Ausflug ihres Deutschkurses.",
   "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort aus der Liste (a–o) in die Lücken 31–40 passt. Jedes Wort passt nur einmal. Fünf Wörter bleiben übrig.",
   "groups": [
     {
@@ -16,13 +16,13 @@
       "texts": [
         {
           "id": "bericht",
-          "title": "Ein Tag am Hornsee",
-          "byline": "Ilka Sommerhalder, Deutschkurs B1",
+          "title": "Ein Tag am Lindmoorsee",
+          "byline": "Hilke Sommerhalder, Deutschkurs B1",
           "paragraphs": [
-            "Am vergangenen Samstag hat unser Deutschkurs B1 einen Ausflug an den Hornsee gemacht. Um acht Uhr trafen wir uns am Bahnhof. Alle waren pünktlich da, {{31}} der Bus zum Bahnhof am Samstag nur einmal in der Stunde fährt. Mit dem Zug fuhren wir dann eine Stunde {{32}} nach Wiltrup. Von dort aus ging es zu Fuß weiter.",
+            "Am vergangenen Samstag hat unser Deutschkurs B1 einen Ausflug an den Lindmoorsee gemacht. Um acht Uhr trafen wir uns am Bahnhof. Alle waren pünktlich da, {{31}} der Bus zum Bahnhof am Samstag nur einmal in der Stunde fährt. Mit dem Zug fuhren wir dann eine Stunde {{32}} nach Wiltrup. Von dort aus ging es zu Fuß weiter.",
             "Der Weg führte durch einen Wald und war ziemlich steil. Nach zwei anstrengenden Stunden kamen wir {{33}} am See an. Am Ufer gibt es ein kleines Restaurant, {{34}} wir zu Mittag aßen. Der Wirt, Herr Bramsiepe, erzählte uns beim Essen viel {{35}} die Geschichte des Sees.",
             "Am Nachmittag nahmen wir an einer {{36}} durch das Naturschutzgebiet teil. Eine Rangerin, Frau Quandtmeier, zeigte uns seltene Vögel und erklärte uns die Regeln: Man darf die Wege nicht {{37}}, damit die Tiere nicht gestört werden.",
-            "Wir machten uns {{38}} 17 Uhr auf den Rückweg. Es war schon dunkel, {{39}} wir wieder in Talbach ankamen. Der Tag war zwar anstrengend, aber alle hatten viel {{40}}. Im Frühling wollen wir wieder zusammen wandern."
+            "Wir machten uns {{38}} 17 Uhr auf den Rückweg. Schon {{39}} wir in Wiltrup wieder in den Zug stiegen, war es dunkel. Der Tag war zwar anstrengend, aber alle hatten viel {{40}}. Im Frühling wollen wir wieder zusammen wandern."
           ]
         },
         {
@@ -143,7 +143,7 @@
               "quote": "der Bus zum Bahnhof am Samstag nur einmal in der Stunde fährt"
             }
           ],
-          "explanation": "Otobüs cumartesi saatte yalnızca bir kez geliyor; bu, zamanında gelmeyi zorlaştırır. Ama herkes yine de dakikmiş: Bu bir karşıtlıktır ve yan cümle bağlacı „obwohl“ (-e rağmen) ile kurulur; fiil „fährt“ sondadır. „als“ (-dığında) geçmişteki tek bir olay için kullanılır, burada fiil şimdiki zamandadır („fährt“). „wenn“ ve „bis“ de bu cümlede anlam vermez."
+          "explanation": "Otobüs cumartesi günü istasyona saatte yalnızca bir kez gidiyor („nur einmal in der Stunde“); buna rağmen herkes dakikmiş („Alle waren pünktlich da“). Bu bir karşıtlıktır ve yan cümle bağlacı „obwohl“ (-e rağmen) ile kurulur; fiil „fährt“ sondadır. „als“ (-dığında) geçmişteki tek bir olay için kullanılır, burada fiil şimdiki zamandadır („fährt“). „wenn“ ve „bis“ de bu cümlede anlam vermez."
         },
         {
           "number": 32,
@@ -244,10 +244,10 @@
           "evidence": [
             {
               "text": "bericht",
-              "quote": "wir wieder in Talbach ankamen"
+              "quote": "wir in Wiltrup wieder in den Zug stiegen, war es dunkel"
             }
           ],
-          "explanation": "Geçmişte bir kez olan bir olay anlatılıyor: Talbach’a vardıklarında hava kararmıştı. Geçmişteki tek bir olay için zaman bağlacı „als“ (-dığında) kullanılır; fiil „ankamen“ sondadır. „wenn“ geçmişte yalnızca tekrarlanan olaylar için kullanılır („her … -dığında“). „obwohl“ karşıtlık kurar, ama varış ile karanlık arasında karşıtlık yoktur; „wo“ bir yer bildirir."
+          "explanation": "Geçmişte bir kez olan bir olay anlatılıyor: Wiltrup’ta yeniden trene bindiklerinde hava zaten kararmıştı. Boşluk bir yan cümle başlatıyor (fiil „stiegen“ sonda, ana cümle „war es dunkel“ ile devam ediyor). Geçmişteki tek bir olay için zaman bağlacı „als“ (-dığında) kullanılır: „Schon als wir … in den Zug stiegen, war es dunkel“ (daha trene bindiğimizde hava karanlıktı). „wenn“ geçmişte yalnızca tekrarlanan olaylar için kullanılır („her … -dığında“); burada tek bir dönüş yolculuğu var. „obwohl“ karşıtlık kurar, ama trene binmek ile karanlık arasında karşıtlık yoktur. „wo“ ilgi zarfı olarak önünde bir yer ismi ister („ein Restaurant, wo …“ gibi); burada boşluk cümlenin başında, „Schon“ sözcüğünden sonra geliyor ve önünde bir yer ismi yok. „bis“ (-e kadar) bir sürenin sonunu bildirir; „Schon“ ise tek bir zaman noktasını vurgular, bu yüzden „Schon bis …“ denmez. Bu zaman noktasını bir yan cümleyle bağlayan „als“ olur."
         },
         {
           "number": 40,

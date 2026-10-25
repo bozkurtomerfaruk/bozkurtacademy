@@ -17,7 +17,7 @@
           "id": "artikel",
           "title": "Gelenke aus dem Drucker",
           "paragraphs": [
-            "Wer ein künstliches Kniegelenk benötigt, erhält bislang in aller Regel ein Serienprodukt, das aus einem Baukasten weniger Standardgrößen ausgewählt wird. Ein Forschungsverbund um die Orthopädin Corinna Lahnstedt und den Werkstoffwissenschaftler Malte Iversohn verfolgt einen anderen Weg: Auf der Grundlage computertomografischer Aufnahmen wird für jede Patientin und jeden Patienten ein Implantat aus Titanpulver gefertigt, das ein Laser Schicht für Schicht verschmilzt.",
+            "Wer ein künstliches Kniegelenk benötigt, erhält bislang in aller Regel ein Serienprodukt, das aus einem Baukasten weniger Standardgrößen ausgewählt wird. Ein Forschungsverbund um die Orthopädin Hiltrud Lahnstedt und den Werkstoffwissenschaftler Rune Iversohn verfolgt einen anderen Weg: Auf der Grundlage computertomografischer Aufnahmen wird für jede Patientin und jeden Patienten ein Implantat aus Titanpulver gefertigt, das ein Laser Schicht für Schicht verschmilzt.",
             "Der Nutzen des Verfahrens zeigt sich zunächst bei der Passform. In einer Pilotstudie mit 46 Operierten saßen die gedruckten Prothesen ausnahmslos so, wie es die Planung vorgesehen hatte; nachträgliche Korrekturen im Operationssaal entfielen, wodurch sich die Eingriffe im Schnitt um knapp zwanzig Minuten verkürzten. Darüber hinaus lässt sich die Oberfläche gezielt porös gestalten. Dass Knochenzellen in solche Gitterstrukturen einwachsen und das Implantat dadurch fest verankern, hat das Team zuvor sowohl an Zellkulturen als auch in Tierversuchen nachgewiesen.",
             "Weit weniger klar ist, was diese Befunde für den Alltag der Betroffenen bedeuten. Lahnstedt rechnet damit, dass die bessere Verankerung die Lebensdauer der Prothesen verlängern werde und Wechseloperationen seltener nötig würden. Belastbare Daten dazu könne jedoch erst eine Beobachtung über zehn bis fünfzehn Jahre liefern. Ähnlich verhält es sich mit der Hoffnung, die porösen Strukturen könnten Infektionen vorbeugen, wenn man sie mit antibakteriellen Wirkstoffen befülle; entsprechende Laborversuche laufen erst seit wenigen Monaten. Ob sich deren Ergebnisse auf den menschlichen Körper übertragen lassen, ist noch völlig ungewiss.",
             "Auch die wirtschaftliche Bilanz bleibt vorerst offen. Derzeit ist die Herstellung eines Einzelstücks noch etwa doppelt so teuer wie die eines Serienimplantats. Iversohn geht aber davon aus, dass die Kosten mit der Automatisierung der Druckanlagen deutlich sinken dürften – und dass die kürzeren Operationszeiten einen Teil der Mehrausgaben ausgleichen könnten. Die Krankenkassen wollen sich zu einer möglichen Erstattung erst äußern, wenn Ergebnisse aus größeren Studien vorliegen."
@@ -54,7 +54,7 @@
         {
           "number": 29,
           "type": "zuordnung",
-          "prompt": "Wer ein gedrucktes Implantat erhält, muss sich später seltener einem erneuten Gelenkersatz unterziehen.",
+          "prompt": "Gedruckte Implantate bleiben länger funktionsfähig, sodass Folgeeingriffe am selben Gelenk zurückgehen.",
           "answer": "b",
           "evidence": [
             { "text": "artikel", "quote": "Lahnstedt rechnet damit, dass die bessere Verankerung die Lebensdauer der Prothesen verlängern werde" },
@@ -65,7 +65,7 @@
         {
           "number": 30,
           "type": "zuordnung",
-          "prompt": "Sobald die Herstellung stärker maschinell abläuft, werden Einzelanfertigungen erheblich billiger.",
+          "prompt": "Sobald die Herstellung stärker maschinell abläuft, werden die Sonderanfertigungen erheblich günstiger.",
           "answer": "b",
           "evidence": [
             { "text": "artikel", "quote": "Iversohn geht aber davon aus, dass die Kosten mit der Automatisierung der Druckanlagen deutlich sinken dürften" }

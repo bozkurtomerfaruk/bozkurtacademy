@@ -17,7 +17,7 @@
           "id": "artikel",
           "title": "Mikroalgen als Nahrungsquelle",
           "paragraphs": [
-            "Einzellige Algen, kaum größer als ein rotes Blutkörperchen, gelten in der Ernährungsforschung seit Längerem als Hoffnungsträger. Die Arbeitsgruppe der Bioverfahrenstechnikerin Henrike Sandweg untersucht, unter welchen Bedingungen sich solche Mikroalgen in großem Maßstab als Eiweißlieferanten nutzen ließen.",
+            "Einzellige Algen, kaum größer als ein rotes Blutkörperchen, gelten in der Ernährungsforschung seit Längerem als Hoffnungsträger. Die Arbeitsgruppe der Bioverfahrenstechnikerin Margarete Sandweg untersucht, unter welchen Bedingungen sich solche Mikroalgen in großem Maßstab als Eiweißlieferanten nutzen ließen.",
             "Was die Organismen so interessant macht, ist zunächst ihre Zusammensetzung: Je nach Art besteht ihre Trockenmasse bis zur Hälfte aus Protein, hinzu kommen Vitamine und mehrfach ungesättigte Fettsäuren, die sonst vor allem in Meeresfisch enthalten sind. Zudem konkurrieren die Kulturen nicht mit dem Ackerbau. Gezüchtet werden die Algen in geschlossenen Röhrensystemen, die auch auf versiegelten Flächen oder ehemaligen Industriegeländen Platz finden, und manche Stämme gedeihen sogar in salzhaltigem Wasser, das für die Bewässerung von Feldern unbrauchbar wäre. Unter günstigen Bedingungen verdoppelt sich die Biomasse zudem innerhalb eines einzigen Tages.",
             "Dem stehen allerdings erhebliche technische Schwierigkeiten gegenüber. Damit die Algen gleichmäßig wachsen, müssen die Anlagen in den Wintermonaten beleuchtet und im Sommer gekühlt werden. Besonders aufwendig ist zudem die Ernte: Die winzigen Zellen müssen aus großen Wassermengen herausgefiltert oder zentrifugiert werden, was nach Sandwegs Berechnungen bis zu einem Drittel der gesamten Produktionskosten ausmacht. Hinzu kommt, dass die festen Zellwände vieler Arten vom menschlichen Darm kaum aufgeschlossen werden; ohne eine vorherige mechanische Zerkleinerung bleibt ein Großteil des Eiweißes für den Körper unerreichbar.",
             "Schließlich stellt sich die Frage nach der Akzeptanz. Bei Verkostungen, die das Team gemeinsam mit der Lebensmittelwissenschaftlerin Jule Brümmerhoff durchführte, störten sich viele Teilnehmende am grasigen Beigeschmack und an der intensiv grünen Farbe der Produkte. Nudeln, denen nur geringe Mengen Algenpulver beigemischt waren, schnitten hingegen kaum schlechter ab als herkömmliche. Sandweg sieht darin einen gangbaren Weg: Algen müssten nicht als eigenständiges Lebensmittel überzeugen, sondern könnten zunächst unauffällig den Nährwert vertrauter Speisen erhöhen. Ob die Herstellung bis dahin wettbewerbsfähig wird, lässt die Arbeitsgruppe allerdings ausdrücklich offen."
@@ -65,22 +65,22 @@
         {
           "number": 30,
           "type": "zuordnung",
-          "prompt": "Bestimmte wertvolle Fette, für die man bislang vor allem auf Fischmahlzeiten angewiesen ist, sind auch in den Algen enthalten.",
+          "prompt": "Die Algen liefern bestimmte wertvolle Lipide, die man ansonsten in erster Linie über Seefisch aufnimmt.",
           "answer": "a",
           "evidence": [
             { "text": "artikel", "quote": "mehrfach ungesättigte Fettsäuren, die sonst vor allem in Meeresfisch enthalten sind" }
           ],
-          "explanation": "Metin alglerin bileşimini olumlu özellikler arasında sayıyor („Was die Organismen so interessant macht …“) ve proteinin yanında „mehrfach ungesättigte Fettsäuren, die sonst vor allem in Meeresfisch enthalten sind“ (başka durumda özellikle deniz balığında bulunan çoklu doymamış yağ asitleri) içerdiklerini söylüyor. Bu yüzden cevap a (Vorteil)."
+          "explanation": "Metin alglerin bileşimini olumlu özellikler arasında sayıyor („Was die Organismen so interessant macht …“) ve proteinin yanında „mehrfach ungesättigte Fettsäuren, die sonst vor allem in Meeresfisch enthalten sind“ (başka durumda özellikle deniz balığında bulunan çoklu doymamış yağ asitleri) içerdiklerini söylüyor. „Lipide“ burada yağları, yani bu yağ asitlerini karşılıyor. Bu yüzden cevap a (Vorteil)."
         },
         {
           "number": 31,
           "type": "zuordnung",
-          "prompt": "Ohne vorherige Aufbereitung kann die Verdauung den hohen Eiweißgehalt der Algen nur zu einem kleinen Teil ausschöpfen.",
+          "prompt": "Werden die robusten Hüllen der Algen nicht zuvor aufgebrochen, kann der Verdauungstrakt nur wenig von ihrem Protein verwerten.",
           "answer": "b",
           "evidence": [
             { "text": "artikel", "quote": "ohne eine vorherige mechanische Zerkleinerung bleibt ein Großteil des Eiweißes für den Körper unerreichbar" }
           ],
-          "explanation": "Yüksek protein oranı aslında bir avantaj, ama metin birçok türün sert hücre duvarlarının bağırsakta neredeyse parçalanmadığını söylüyor: „ohne eine vorherige mechanische Zerkleinerung bleibt ein Großteil des Eiweißes für den Körper unerreichbar“ (önceden mekanik olarak parçalanmazsa proteinin büyük kısmına vücut ulaşamıyor). Bu, metnin zorluklar bölümünde geçiyor. Bu yüzden cevap b (Hindernis)."
+          "explanation": "Yüksek protein oranı aslında bir avantaj, ama metin birçok türün sert hücre duvarlarının bağırsakta neredeyse parçalanmadığını söylüyor: „ohne eine vorherige mechanische Zerkleinerung bleibt ein Großteil des Eiweißes für den Körper unerreichbar“ (önceden mekanik olarak parçalanmazsa proteinin büyük kısmına vücut ulaşamıyor). Seçenekteki „Hüllen“ (kılıflar) bu hücre duvarlarıdır. Bu, metnin zorluklar bölümünde geçiyor. Bu yüzden cevap b (Hindernis)."
         }
       ]
     }

@@ -49,23 +49,23 @@
         {
           "number": 21,
           "type": "zuordnung",
-          "prompt": "Je besser die Teilnehmenden später verdienen, desto mehr gewinnen die Geldgeber.",
+          "prompt": "Wer Geld erhalten möchte, muss vorab skizzieren, wie Ausbildung und spätere Laufbahn aussehen sollen.",
           "answer": "c",
-          "evidence": [{ "text": "bericht", "quote": "Für die Investoren hängt der Ertrag damit unmittelbar davon ab, was aus den Absolventinnen und Absolventen beruflich wird" }],
-          "explanation": "Mertensee fonunda mezunlar gelirlerinin sabit bir yüzdesini öder; bu yüzden „Für die Investoren hängt der Ertrag damit unmittelbar davon ab, was aus den Absolventinnen und Absolventen beruflich wird“ (yatırımcıların kazancı doğrudan mezunların meslekte ne olduğuna bağlı). Voßkamp'ın kredisi devletten gelir, faiz yoktur, yani kazanan bir para veren yoktur. Dahlhoff'un bursu vergilerle finanse edilir ve geri ödenmez; geri ödenmediği için mezunların sonraki kazancına bağlı bir ödeme de yoktur."
+          "evidence": [{ "text": "bericht", "quote": "die zuvor einen Studien- und Berufsplan vorlegen müssen" }],
+          "explanation": "Mertensee fonu seçilmiş başvuru sahiplerini destekliyor ve bunlar „zuvor einen Studien- und Berufsplan vorlegen müssen“ (önceden bir öğrenim ve meslek planı sunmak zorunda). „vorab skizzieren“ (önceden ana hatlarıyla anlatmak) bunun karşılığıdır. Voßkamp'ta destek için tek ölçüt ailenin geçimi karşılayamamasıdır („deren Familie den Unterhalt nicht aufbringen könne“). Dahlhoff'un bursunu ise kayıtlı herkes alır („alle Immatrikulierten“); orada tek şart sonradan gösterilecek kredilerdir."
         },
         {
           "number": 22,
           "type": "zuordnung",
-          "prompt": "Erst ab einem bestimmten Verdienstniveau muss man damit beginnen, die Schulden abzutragen.",
+          "prompt": "Erst ab einem bestimmten Verdienstniveau werden Zahlungen an den Geldgeber fällig.",
           "answer": "a",
           "evidence": [{ "text": "bericht", "quote": "nur, sofern das Bruttogehalt eine Schwelle von 32.000 Euro im Jahr überschreite" }],
-          "explanation": "Voßkamp'ın modelinde geri ödeme mezuniyetten sonra ve „nur, sofern das Bruttogehalt eine Schwelle von 32.000 Euro im Jahr überschreite“ (yalnızca brüt maaş yılda 32.000 euroluk eşiği aşarsa) başlar; eşiğin altında kazanan şimdilik borcunu ödemeye başlamaz. Mertensee fonunda ise yüzde, gelirin miktarından bağımsız olarak („unabhängig von dessen Höhe“) ödenir. Dahlhoff'un bursu ise borç değildir ve hiç geri ödenmez."
+          "explanation": "Voßkamp'ın modelinde geri ödeme mezuniyetten sonra ve „nur, sofern das Bruttogehalt eine Schwelle von 32.000 Euro im Jahr überschreite“ (yalnızca brüt maaş yılda 32.000 euroluk eşiği aşarsa) başlar; eşiğin altında kazanan hiç ödeme yapmaz. Mertensee fonunda ise yüzde, gelirin miktarından bağımsız olarak („unabhängig von dessen Höhe“) ödenir. Dahlhoff'un bursu ise hiç geri ödenmez; hiçbir gelir düzeyinde ödeme söz konusu değildir."
         },
         {
           "number": 23,
           "type": "zuordnung",
-          "prompt": "Alle Studierenden bekommen die Leistung, ohne dass geprüft wird, wie wohlhabend ihre Familie ist.",
+          "prompt": "Die Unterstützung wird unabhängig vom finanziellen Hintergrund der Eltern gewährt.",
           "answer": "b",
           "evidence": [{ "text": "bericht", "quote": "das alle Immatrikulierten erhalten, ohne dass die Vermögensverhältnisse des Elternhauses eine Rolle spielen" }],
           "explanation": "Dahlhoff'un temel bursunu „alle Immatrikulierten erhalten, ohne dass die Vermögensverhältnisse des Elternhauses eine Rolle spielen“ (kayıtlı herkes alır, ailenin mali durumu rol oynamaz). Voßkamp'ta ise para yalnızca ailesi geçimi karşılayamayanlara verilir („deren Familie den Unterhalt nicht aufbringen könne“). Mertensee fonu da herkese değil, seçilmiş başvuru sahiplerine („ausgewählte Bewerberinnen und Bewerber“) ödeme yapar."
@@ -89,10 +89,10 @@
         {
           "number": 26,
           "type": "zuordnung",
-          "prompt": "Die Begleichung der Schuld soll für die Betroffenen keinen zusätzlichen Verwaltungsaufwand bedeuten.",
+          "prompt": "Für die späteren Zahlungen soll niemand eigens Formulare ausfüllen müssen.",
           "answer": "a",
           "evidence": [{ "text": "bericht", "quote": "sodass weder Anträge noch gesonderte Bescheide nötig wären" }],
-          "explanation": "Voßkamp'ın modelinde taksitler gelir vergisiyle birlikte otomatik kesilir, „sodass weder Anträge noch gesonderte Bescheide nötig wären“ (böylece ne başvuru ne de ayrı bir bildirim gerekir). Mertensee fonunda mezunlar fona ödeme yapar, ama bunun nasıl işlediği anlatılmaz. Dahlhoff'un bursu geri ödenmediği için orada bir borç ödemesi yoktur."
+          "explanation": "Voßkamp'ın modelinde taksitler gelir vergisiyle birlikte otomatik kesilir, „sodass weder Anträge noch gesonderte Bescheide nötig wären“ (böylece ne başvuru ne de ayrı bir bildirim gerekir). Mertensee fonunda mezunlar fona ödeme yapar, ama bunun nasıl işlediği anlatılmaz. Dahlhoff'un bursu geri ödenmediği için orada sonradan yapılacak bir ödeme yoktur."
         },
         {
           "number": 27,

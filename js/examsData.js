@@ -673,6 +673,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Meldungen aus Wissenschaft und Gesellschaft' },
                   { set: 'set-2', title: 'Nachrichten aus der Arbeitswelt' },
+                  { set: 'set-3', title: 'Neues aus Umwelt und Technik' },
+                  { set: 'set-4', title: 'Meldungen aus Bildung und Kultur' },
+                  { set: 'set-5', title: 'Kurzberichte aus Medizin und Ernährung' },
                 ]
               }, // Teil 1
               {
@@ -680,6 +683,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Eine Auszeit vom Beruf' },
                   { set: 'set-2', title: 'Das Leben als Fernpendler' },
+                  { set: 'set-3', title: 'Ein Jahr Freiwilligendienst' },
+                  { set: 'set-4', title: 'Die Rückkehr der Mundart' },
+                  { set: 'set-5', title: 'Leere Läden, neue Ideen' },
                 ]
               }, // Teil 2
               {
@@ -687,6 +693,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Weiterbildung und Beruf' },
                   { set: 'set-2', title: 'Kultur und Reisen' },
+                  { set: 'set-3', title: 'Haushalt und Finanzen' },
+                  { set: 'set-4', title: 'Freizeit und Ehrenamt' },
+                  { set: 'set-5', title: 'Medien und Technik' },
                 ]
               }, // Teil 3
             ] },
@@ -696,6 +705,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Eine Reklamation' },
                   { set: 'set-2', title: 'Anfrage an eine Hochschule' },
+                  { set: 'set-3', title: 'Bewerbung um ein Praktikum' },
+                  { set: 'set-4', title: 'Beschwerde bei der Hausverwaltung' },
+                  { set: 'set-5', title: 'Antrag auf Bildungsurlaub' },
                 ]
               }, // Teil 1
               {
@@ -703,6 +715,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Rundschreiben an die Belegschaft' },
                   { set: 'set-2', title: 'Leserbrief zur Stadtplanung' },
+                  { set: 'set-3', title: 'Bericht über eine Fachtagung' },
+                  { set: 'set-4', title: 'Mitteilung des Elternbeirats' },
+                  { set: 'set-5', title: 'Stellungnahme eines Vereins' },
                 ]
               }, // Teil 2
             ] },

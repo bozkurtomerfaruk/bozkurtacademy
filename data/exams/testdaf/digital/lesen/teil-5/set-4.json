@@ -52,7 +52,7 @@
           "prompt": "Die Gruppe hält es für zu riskant, ihr Mittel unmittelbar in die Natur auszubringen.",
           "answer": "b",
           "evidence": [{ "text": "bericht", "quote": "Eine Freisetzung des Enzyms oder veränderter Bakterien ins Meer lehnt Wehrstedt ab" }],
-          "explanation": "Wehrstedt'in yöntemi sanayi tesisleri için düşünülmüş: „Eine Freisetzung des Enzyms oder veränderter Bakterien ins Meer lehnt Wehrstedt ab“ (enzimin veya değiştirilmiş bakterilerin denize salınmasını reddediyor), çünkü deniz canlı topluluklarına etkisini kimse öngöremez. „zu riskant“ (fazla riskli) bunun karşılığıdır. Kurzrock'un hava kabarcığı perdesi zaten nehrin içinde çalışır ve riskli bulunmaz. Ellmenreich'te doğaya bir madde salınması söz konusu değildir."
+          "explanation": "Wehrstedt'in yöntemi sanayi tesisleri için düşünülmüş: „Eine Freisetzung des Enzyms oder veränderter Bakterien ins Meer lehnt Wehrstedt ab“ (enzimin veya değiştirilmiş bakterilerin denize salınmasını reddediyor), çünkü deniz canlı topluluklarına etkisini kimse öngöremez. „zu riskant“ (fazla riskli) bunun karşılığıdır. Kurzrock'un hava kabarcığı perdesi nehrin içinde çalışır; doğaya bir şey salmanın riskinden söz edilmez. Ellmenreich'te doğaya bir madde salınması söz konusu değildir."
         },
         {
           "number": 22,
@@ -73,15 +73,15 @@
         {
           "number": 24,
           "type": "zuordnung",
-          "prompt": "Die Vorrichtung bleibt für den Verkehr auf dem Wasser und für Tiere durchlässig.",
+          "prompt": "Weder Frachtschiffe noch wandernde Fische werden durch die Maßnahme beeinträchtigt.",
           "answer": "a",
           "evidence": [{ "text": "bericht", "quote": "Lastkähne fahren ungehindert hindurch, und auch Lachse auf dem Weg zu ihren Laichgründen können ihn passieren" }],
-          "explanation": "Kurzrock'un kabarcık perdesi engel oluşturmaz: „Lastkähne fahren ungehindert hindurch, und auch Lachse auf dem Weg zu ihren Laichgründen können ihn passieren“ (yük mavnaları engelsiz geçer, yumurtlama yerlerine giden somonlar da geçebilir). Wehrstedt'in yöntemi sanayi tesislerinde uygulanır, suyun içinde bir düzenek yoktur. Ellmenreich'te de nehirde ya da denizde kurulan bir düzenekten söz edilmez; balıkçılar atıkları limana getirir."
+          "explanation": "Kurzrock'un kabarcık perdesi engel oluşturmaz: „Lastkähne fahren ungehindert hindurch, und auch Lachse auf dem Weg zu ihren Laichgründen können ihn passieren“ (yük mavnaları engelsiz geçer, yumurtlama yerlerine giden somonlar da geçebilir). Wehrstedt'in yöntemi sanayi tesislerinde uygulanır; gemilerden ya da balıklardan söz edilmez. Ellmenreich'te de böyle bir etki konu edilmez; balıkçılar atıkları limana getirir."
         },
         {
           "number": 25,
           "type": "zuordnung",
-          "prompt": "Es wird befürchtet, dass das Modell Fehlanreize setzt, die das eigentliche Ziel unterlaufen.",
+          "prompt": "Es wird befürchtet, dass die Regelung Fehlanreize setzt, die das eigentliche Ziel unterlaufen.",
           "answer": "c",
           "evidence": [{ "text": "bericht", "quote": "Es könne lohnender sein, intakte Netze als Altnetze abzugeben oder Müll eigens vom Festland heranzuschaffen" }],
           "explanation": "Ellmenreich'in prim sistemini eleştirenlere göre „Es könne lohnender sein, intakte Netze als Altnetze abzugeben oder Müll eigens vom Festland heranzuschaffen“ (sağlam ağları eski ağ diye teslim etmek ya da çöpü özellikle karadan getirmek daha kârlı olabilir), çöpü gerçekten denizden çıkarmaktan daha kârlı. Bu, asıl amacı boşa çıkaran yanlış teşviktir. Kurzrock ve Wehrstedt'in yöntemlerinde böyle bir kötüye kullanma kaygısı geçmez; onların sınırları teknik niteliktedir."
@@ -97,10 +97,10 @@
         {
           "number": 27,
           "type": "zuordnung",
-          "prompt": "Bisher wirkt das Verfahren nur bei einem bestimmten Material.",
+          "prompt": "Bisher wirkt die Methode nur bei einer bestimmten Kunststoffart.",
           "answer": "b",
           "evidence": [{ "text": "bericht", "quote": "beißt sich das Enzym bislang die Zähne aus" }],
-          "explanation": "Wehrstedt'in enzimi PET'i parçalıyor; ama folyo ve balık ağlarının yapıldığı polietilen ve polipropilende „beißt sich das Enzym bislang die Zähne aus“ (enzim şimdiye kadar başarısız oluyor, deyim: dişini kırıyor). Yani yöntem şimdilik tek bir plastik türünde işe yarıyor. Kurzrock'un perdesi her türlü yüzen atığı kıyıya iter; malzeme türüne göre bir sınır anlatılmaz. Ellmenreich'in primi hem ağlar hem de denizden toplanan diğer atıklar için ödenir."
+          "explanation": "Wehrstedt'in enzimi PET'i parçalıyor; ama folyo ve balık ağlarının yapıldığı polietilen ve polipropilende „beißt sich das Enzym bislang die Zähne aus“ (enzim şimdiye kadar başarısız oluyor, deyim: dişini kırıyor). Yani yöntem şimdilik tek bir plastik türünde işe yarıyor. Kurzrock'un perdesi yüzen atıkları kıyıya iter; malzeme türüne göre bir sınır anlatılmaz. Ellmenreich'in primi hem ağlar hem de denizden toplanan diğer atıklar için ödenir."
         }
       ]
     }

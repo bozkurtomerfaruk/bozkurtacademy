@@ -8,7 +8,7 @@
   "title": "Pflichtpraktika für alle?",
   "minutes": 7,
   "context": "Sie lesen in der Hochschulzeitung einen Gastbeitrag zu einem Vorhaben der Universitätsleitung.",
-  "instructions": "Lesen Sie den Text. Welche Sprachhandlung (a–f) vollzieht die Autorin in den markierten Abschnitten 17 bis 20? Zwei Sprachhandlungen bleiben übrig.",
+  "instructions": "Lesen Sie den Text. Welche Sprachhandlung (a–f) wird in den markierten Abschnitten 17 bis 20 vollzogen? Zwei Sprachhandlungen bleiben übrig.",
   "groups": [
     {
       "layout": "gaps",
@@ -19,17 +19,17 @@
           "title": "Pflichtpraktika für alle?",
           "byline": "Gastbeitrag von Prof. Dr. Gerlinde Oberstedt, Seminar für Neuere deutsche Literatur",
           "paragraphs": [
-            "Das Präsidium unserer Universität möchte ab dem kommenden Wintersemester in sämtlichen Bachelorstudiengängen ein zwölfwöchiges Pflichtpraktikum einführen, das mit zwölf Leistungspunkten auf das Studium angerechnet werden soll. Begründet wird das Vorhaben mit dem Ziel, Studierenden früher als bisher Einblicke in mögliche Berufsfelder zu verschaffen; einer hausinternen Befragung zufolge wünschen sich fast zwei Drittel der Absolventinnen und Absolventen, sie hätten während des Studiums mehr praktische Erfahrungen gesammelt. Dass Praktika bei der Klärung beruflicher Wünsche helfen können, will ich gar nicht bestreiten. {{17}}Als ich vor einigen Jahren die Praktikumsbörse meines Seminars betreute, bewarben sich allerdings auf knapp vierzig Plätze in Verlagen, Archiven und Museen mehr als zweihundert Studierende, und viele von ihnen nahmen am Ende eine unbezahlte Stelle an, die mit ihrem Fach kaum etwas zu tun hatte.",
+            "Das Präsidium unserer Universität möchte ab dem kommenden Wintersemester in sämtlichen Bachelorstudiengängen ein zwölfwöchiges Pflichtpraktikum einführen, das mit zwölf Leistungspunkten auf das Studium angerechnet werden soll. Begründet wird das Vorhaben mit dem Ziel, Studierenden früher als bisher Einblicke in mögliche Berufsfelder zu verschaffen; einer hausinternen Befragung zufolge wünschen sich fast zwei Drittel der Absolventinnen und Absolventen, sie hätten während des Studiums mehr praktische Erfahrungen gesammelt. Dass Praktika bei der Klärung beruflicher Wünsche helfen können, will ich gar nicht bestreiten. {{17}}Als ich vor einigen Jahren die Praktikumsvermittlung meines Seminars betreute, bewarben sich allerdings auf knapp vierzig Plätze in Verlagen, Archiven und Museen mehr als zweihundert Studierende, und viele von ihnen nahmen am Ende eine unbezahlte Stelle an, die mit ihrem Fach kaum etwas zu tun hatte.",
             "Hinzu kommt eine organisatorische Schwierigkeit, über die in der Vorlage auffallend wenig zu lesen ist. {{18}}Wer soll künftig mehrere tausend Praktika im Jahr vermitteln, begleiten und anerkennen, wenn in den meisten Instituten schon heute eine einzige Teilzeitkraft für diese Aufgabe zuständig ist?",
             "Ebenso wenig berücksichtigt der Entwurf, wie verschieden die Ausgangslage der Fächer ist. Schon die Zahl der Betriebe und Einrichtungen, die überhaupt Praktikantinnen und Praktikanten aufnehmen, schwankt je nach Branche erheblich. In der Informatik oder im Maschinenbau gehören Praktika längst zum Studienalltag und werden von Unternehmen sogar aktiv beworben, während Studierende der Philosophie oder der Altorientalistik oft mühsam nach einer Stelle suchen müssen, die ihnen fachlich etwas bringt. {{19}}Sinnvoller wäre es, jedem Studiengang selbst die Wahl zu lassen, ob er ein Praktikum vorschreibt, ein Projektseminar mit externen Partnern anbietet oder beide Formen als gleichwertige Möglichkeiten nebeneinanderstellt.",
-            "Zu bedenken ist schließlich, dass ein Praktikum von zwölf Wochen, das meist in die vorlesungsfreie Zeit fällt, für viele Studierende genau den Nebenjob verdrängt, von dem sie ihre Miete bezahlen. {{20}}Eine einheitliche Pflicht würde den Mangel, den sie beheben soll, folglich nicht beseitigen, sondern ihn lediglich von der Hochschule auf diejenigen abwälzen, die sich unbezahlte Wochen am wenigsten leisten können."
+            "Zu bedenken ist schließlich, dass ein Praktikum von zwölf Wochen, das meist in die vorlesungsfreie Zeit fällt, für viele Studierende genau den Nebenjob verdrängt, von dem sie ihre Miete bezahlen. {{20}}Eine einheitliche Pflicht würde ihr Ziel folglich verfehlen und die Lasten der Praxisphase lediglich von der Hochschule auf diejenigen abwälzen, die sich unbezahlte Wochen am wenigsten leisten können."
           ]
         },
         { "id": "a", "label": "a", "paragraphs": ["aus den vorangegangenen Überlegungen ein Fazit ziehen"] },
         { "id": "b", "label": "b", "paragraphs": ["sich auf ein selbst erlebtes Beispiel berufen"] },
         { "id": "c", "label": "c", "paragraphs": ["den Inhalt eines geplanten Vorhabens umreißen"] },
         { "id": "d", "label": "d", "paragraphs": ["einen alternativen Weg vorschlagen"] },
-        { "id": "e", "label": "e", "paragraphs": ["einem Argument der Gegenseite grundsätzlich zustimmen"] },
+        { "id": "e", "label": "e", "paragraphs": ["die Begründung eines Vorhabens mit Umfragedaten wiedergeben"] },
         { "id": "f", "label": "f", "paragraphs": ["auf eine ungeklärte Frage der Umsetzung hinweisen"] }
       ],
       "questions": [
@@ -39,9 +39,9 @@
           "prompt": "Abschnitt 17",
           "answer": "b",
           "evidence": [
-            { "text": "beitrag", "quote": "Als ich vor einigen Jahren die Praktikumsbörse meines Seminars betreute" }
+            { "text": "beitrag", "quote": "Als ich vor einigen Jahren die Praktikumsvermittlung meines Seminars betreute" }
           ],
-          "explanation": "İşaretli cümlede yazar kendi yaşadığı bir durumu anlatıyor: „Als ich vor einigen Jahren die Praktikumsbörse meines Seminars betreute“ (birkaç yıl önce bölümümün staj borsasını yürütürken): yaklaşık kırk yere iki yüzden fazla öğrenci başvurmuş, birçoğu sonunda alanıyla pek ilgisi olmayan ücretsiz bir staja razı olmuş. Bu, b: kendi yaşadığı bir örneğe dayanmak. e uymuyor: Karşı tarafa ilke olarak hak verme hemen önceki, işaretsiz cümlede yapılıyor („will ich gar nicht bestreiten“ – hiç itiraz etmek istemem); işaretli cümle ise „allerdings“ (ancak) ile bunun karşısına bir deneyim koyuyor. c de uymuyor: Rektörlüğün planının içeriği (bütün lisans bölümlerinde on iki haftalık zorunlu staj) paragrafın ilk cümlesinde anlatılıyor; işaretli cümle planı değil, yazarın bir deneyimini aktarıyor."
+          "explanation": "İşaretli cümlede yazar kendi yaşadığı bir durumu anlatıyor: „Als ich vor einigen Jahren die Praktikumsvermittlung meines Seminars betreute“ (birkaç yıl önce bölümümün staj yerleştirme işini yürütürken): yaklaşık kırk yere iki yüzden fazla öğrenci başvurmuş, birçoğu sonunda alanıyla pek ilgisi olmayan ücretsiz bir staja razı olmuş. Bu, b: kendi yaşadığı bir örneğe dayanmak. e uymuyor: Planın gerekçesini bir anketle aktaran, paragrafın ikinci, işaretsiz cümlesi („einer hausinternen Befragung zufolge“ – üniversite içi bir ankete göre); işaretli cümle ise bir anketi değil, „allerdings“ (ancak) ile yazarın kendi deneyimini aktarıyor. c de uymuyor: Rektörlüğün planının içeriği (bütün lisans bölümlerinde on iki haftalık zorunlu staj) paragrafın ilk cümlesinde anlatılıyor; işaretli cümle planı değil, yazarın bir deneyimini aktarıyor."
         },
         {
           "number": 18,
@@ -70,9 +70,9 @@
           "prompt": "Abschnitt 20",
           "answer": "a",
           "evidence": [
-            { "text": "beitrag", "quote": "Eine einheitliche Pflicht würde den Mangel, den sie beheben soll, folglich nicht beseitigen" }
+            { "text": "beitrag", "quote": "Eine einheitliche Pflicht würde ihr Ziel folglich verfehlen" }
           ],
-          "explanation": "İşaretli cümle „folglich“ (dolayısıyla) ile önceki noktaları bir araya getiriyor: uygun staj yerleri az, birçok staj ücretsiz ve on iki haftalık staj kira parasını kazandıran yan işin yerini alıyor. Bunlardan şu sonuç çıkıyor: tek tip bir zorunluluk sorunu çözmez, yalnızca „von der Hochschule auf diejenigen abwälzen, die sich unbezahlte Wochen am wenigsten leisten können“ (üniversiteden, ücretsiz haftaları en az karşılayabilecek olanlara yükler). Bu, a: önceki düşüncelerden bir sonuç çıkarmak. d uymuyor: bu cümlede yeni bir çözüm önerilmiyor. e de uymuyor: yazar burada karşı tarafa hak vermiyor, aksine planın amacına ulaşmayacağını söylüyor."
+          "explanation": "İşaretli cümle „folglich“ (dolayısıyla) ile önceki noktaları bir araya getiriyor: yazarın deneyiminde staj yerleri başvurulara göre çok azdı ve birçok öğrenci alanıyla ilgisiz ücretsiz bir stajı kabul etti; bazı bölümlerde uygun yer bulmak zor; on iki haftalık staj kira parasını kazandıran yan işin yerini alıyor. Bunlardan şu sonuç çıkıyor: tek tip bir zorunluluk „ihr Ziel folglich verfehlen“ (dolayısıyla amacına ulaşamaz) ve yükü yalnızca „von der Hochschule auf diejenigen abwälzen, die sich unbezahlte Wochen am wenigsten leisten können“ (üniversiteden, ücretsiz haftaları en az karşılayabilecek olanlara yükler). Bu, a: önceki düşüncelerden bir sonuç çıkarmak. d uymuyor: bu cümlede yeni bir çözüm önerilmiyor. e de uymuyor: burada bir anket ya da planın gerekçesi aktarılmıyor; yazar kendi düşüncelerinden bir sonuç çıkarıyor."
         }
       ]
     }

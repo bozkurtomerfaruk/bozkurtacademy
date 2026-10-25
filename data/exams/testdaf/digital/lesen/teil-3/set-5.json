@@ -69,7 +69,7 @@
           "type": "abc",
           "prompt": "Was lässt sich aus der Untersuchung unterhalb der Kläranlage Hollmersbach schließen?",
           "options": {
-            "a": "Schon winzige Mengen eines Wirkstoffs können die Entwicklung von Fischen verändern.",
+            "a": "Bereits kleinste Wirkstoffmengen können die Entwicklung von Fischen stören.",
             "b": "Die Veränderungen bei den Fischen gehen vermutlich auf ein Schmerzmittel zurück.",
             "c": "Oberhalb und unterhalb der Einleitung waren ähnlich viele Fische betroffen."
           },
@@ -86,8 +86,8 @@
           "type": "abc",
           "prompt": "Wie schätzt Valerie Nordhoff das Risiko für Menschen ein?",
           "options": {
-            "a": "Eine akute Gefahr sei nicht erkennbar, über das Zusammenwirken vieler Stoffe wisse man aber wenig.",
-            "b": "Bei einzelnen Wirkstoffen erreiche das Trinkwasser bereits wirksame Dosen.",
+            "a": "Akut drohe keine Gefahr, Langzeitfolgen von Stoffkombinationen seien aber unklar.",
+            "b": "Bei einzelnen Wirkstoffen enthalte das Trinkwasser bereits therapeutisch wirksame Mengen.",
             "c": "Menschen seien durch die Rückstände stärker gefährdet als Lebewesen in den Gewässern."
           },
           "answer": "a",
@@ -103,8 +103,8 @@
           "type": "abc",
           "prompt": "Welche Haltung nimmt Wiesmayer zur vierten Reinigungsstufe ein?",
           "options": {
-            "a": "Er lehnt sie wegen ihrer unerwünschten Nebenwirkungen grundsätzlich ab.",
-            "b": "Er fordert, möglichst bald alle Kläranlagen damit auszustatten.",
+            "a": "Er rät wegen der Nebenwirkungen der Verfahren vorerst von ihr ab.",
+            "b": "Er hält sie vor allem für kleine Kläranlagen auf dem Land für dringlich.",
             "c": "Er empfiehlt, sie gezielt dort einzusetzen, wo sie am meisten bewirkt."
           },
           "answer": "c",
@@ -112,16 +112,16 @@
             { "text": "artikel", "quote": "Sinnvoll sei die Investition vor allem bei großen Anlagen" },
             { "text": "artikel", "quote": "Eine Nachrüstung jeder kleinen Dorfkläranlage hält Wiesmayer deshalb für unverhältnismäßig" }
           ],
-          "explanation": "Wiesmayer'e göre yatırım „vor allem bei großen Anlagen“ (özellikle büyük tesislerde) ve arıtılmış suyun küçük, hassas sulara aktığı yerlerde anlamlı; yani en çok fayda sağlayacağı yerlerde. a) yanlış: Ozon ve aktif karbonun dezavantajlarını sayıyor, ama yöntemi tamamen reddetmiyor; büyük tesisler için „sinnvoll“ (anlamlı) buluyor. b) yanlış: Her küçük köy arıtma tesisinin donatılmasını „unverhältnismäßig“ (orantısız) buluyor."
+          "explanation": "Wiesmayer'e göre yatırım „vor allem bei großen Anlagen“ (özellikle büyük tesislerde) ve arıtılmış suyun küçük, hassas sulara aktığı yerlerde anlamlı; yani en çok fayda sağlayacağı yerlerde. a) yanlış: Ozon ve aktif karbonun dezavantajlarını sayıyor, ama yatırımı büyük tesislerde „sinnvoll“ (anlamlı) buluyor; ondan şimdilik vazgeçilmesini önermiyor. b) yanlış: Yatırımı küçük tesislerde değil, „vor allem bei großen Anlagen“ anlamlı buluyor; her küçük köy arıtma tesisinin donatılmasını ise „unverhältnismäßig“ (orantısız) buluyor."
         },
         {
           "number": 15,
           "type": "abc",
           "prompt": "Was gilt für die Entwicklung von Wirkstoffen, die in der Umwelt rasch zerfallen?",
           "options": {
-            "a": "Erste Präparate dieser Art sind bereits in Apotheken erhältlich.",
-            "b": "Sie muss widersprüchliche Anforderungen an die Haltbarkeit miteinander vereinbaren.",
-            "c": "Sie wird vor allem von großen Pharmaunternehmen vorangetrieben."
+            "a": "Erste Präparate dieser Art werden in Apotheken bereits vereinzelt verkauft.",
+            "b": "Sie steht vor einander widersprechenden Anforderungen an die Haltbarkeit.",
+            "c": "Sie wird bislang vor allem von großen Pharmaunternehmen vorangetrieben."
           },
           "answer": "b",
           "evidence": [
@@ -136,7 +136,7 @@
           "type": "abc",
           "prompt": "Zu welchem Ergebnis kommt die Autorin?",
           "options": {
-            "a": "Das Problem lässt sich nur durch ein Bündel von Maßnahmen auf verschiedenen Ebenen verringern.",
+            "a": "Nötig sei ein Bündel abgestimmter Maßnahmen auf mehreren Ebenen.",
             "b": "Mit dem Ausbau der Kläranlagen werde ein anderes Verhalten der Verbraucher überflüssig.",
             "c": "Der Nutzen der Medikamente rechtfertige es, die Rückstände in Kauf zu nehmen."
           },

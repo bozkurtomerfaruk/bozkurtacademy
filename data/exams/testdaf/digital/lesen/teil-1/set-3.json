@@ -40,25 +40,25 @@
           "number": 2,
           "type": "abc",
           "prompt": "Lücke 2",
-          "options": { "a": "ebenfalls", "b": "hingegen", "c": "nämlich", "d": "demnach" },
+          "options": { "a": "ebenfalls", "b": "hingegen", "c": "keineswegs", "d": "demnach" },
           "answer": "b",
           "evidence": [
             { "text": "meldung", "quote": "wolle man künftig im Gespräch prüfen, ob die Studierenden ihr Thema tatsächlich durchdrungen hätten" },
             { "text": "meldung", "quote": "Ein generelles Verbot solcher Programme lehnt die Hochschulleitung" }
           ],
-          "explanation": "Önceki cümle üniversitenin benimsediği çözümü anlatıyor: Öğrencilerin konuyu gerçekten kavrayıp kavramadığı artık sözlü olarak sınanacak („im Gespräch prüfen“). Boşluklu cümle buna karşı olarak reddedilen bir çözümü veriyor: programların genel olarak yasaklanması. Kabul edilen ile reddedilen çözüm arasındaki karşıtlığı „hingegen“ (buna karşılık) anlatır. a) ebenfalls yanlış: „de, aynı şekilde“ demektir; daha önce reddedilen başka bir şey yok. c) nämlich yanlış: Önceki cümleyi gerekçelendirir; yasağın reddedilmesi sözlü savunmanın gerekçesi değildir. d) demnach yanlış: Önceki cümleden bir sonuç çıkarır; anlayışı sözlü olarak sınama isteğinden yasağın reddi sonucu çıkmaz – ret, iki noktadan sonra kendi gerekçesiyle (kontrol edilemez, anlamsız) açıklanıyor."
+          "explanation": "Önceki cümle üniversitenin benimsediği çözümü anlatıyor: Öğrencilerin konuyu gerçekten kavrayıp kavramadığı artık sözlü olarak sınanacak („im Gespräch prüfen“). Boşluklu cümle buna karşı olarak reddedilen bir çözümü veriyor: programların genel olarak yasaklanması. Kabul edilen ile reddedilen çözüm arasındaki karşıtlığı „hingegen“ (buna karşılık) anlatır. a) ebenfalls yanlış: „de, aynı şekilde“ demektir; daha önce reddedilen başka bir şey yok. c) keineswegs yanlış: „lehnt … keineswegs ab“ (hiç de reddetmiyor) anlamına gelir; oysa iki noktadan sonra yasağın neden istenmediği anlatılıyor: „weder kontrollierbar noch sinnvoll“ (ne kontrol edilebilir ne de anlamlı). d) demnach yanlış: Önceki cümleden bir sonuç çıkarır; anlayışı sözlü olarak sınama isteğinden yasağın reddi sonucu çıkmaz – ret, iki noktadan sonra kendi gerekçesiyle (kontrol edilemez, anlamsız) açıklanıyor."
         },
         {
           "number": 3,
           "type": "abc",
           "prompt": "Lücke 3",
-          "options": { "a": "angeben", "b": "zusagen", "c": "bescheinigen", "d": "beanstanden" },
+          "options": { "a": "angeben", "b": "zusagen", "c": "verschweigen", "d": "beanstanden" },
           "answer": "a",
           "evidence": [
             { "text": "meldung", "quote": "der Arbeit künftig eine Erklärung beifügen und darin" },
             { "text": "meldung", "quote": "welche Hilfsmittel sie für welche Arbeitsschritte genutzt haben" }
           ],
-          "explanation": "Öğrenciler tezlerine bir beyan ekleyecek ve orada hangi yardımcı araçları hangi çalışma adımlarında kullandıklarını belirtecek: „angeben, welche Hilfsmittel …“ (… -i belirtmek, bildirmek). Bu, Studierendenvertretung'un memnun olduğu „größere Transparenz“e (daha fazla şeffaflık) de uyar. b) zusagen yanlış: „zusagen“ gelecekte bir şey yapmayı vaat etmektir; oysa söz konusu olan geçmişte yapılan bir şey („genutzt haben“). c) bescheinigen yanlış: Bir başkasının bir durumu resmî olarak onaylamasıdır; öğrenciler kendi kullandıkları araçları belgelemiyor, bildiriyor. d) beanstanden yanlış: „beanstanden“ bir şeyden şikâyet etmek, kusur bulmaktır; öğrencilerin araçlardan şikâyet etmesi metinde yok."
+          "explanation": "Öğrenciler tezlerine bir beyan ekleyecek ve orada hangi yardımcı araçları hangi çalışma adımlarında kullandıklarını belirtecek: „angeben, welche Hilfsmittel …“ (… -i belirtmek, bildirmek). Bu, Studierendenvertretung'un memnun olduğu „größere Transparenz“e (daha fazla şeffaflık) de uyar. b) zusagen yanlış: „zusagen“ gelecekte bir şey yapmayı vaat etmektir; oysa söz konusu olan geçmişte yapılan bir şey („genutzt haben“). c) verschweigen yanlış: „verschweigen“ bir şeyi gizlemek, söylememektir; bir beyanda („Erklärung“) kullanılan araçları gizlemek, öğrenci temsilciliğinin memnun olduğu „größere Transparenz“ ile çelişir. d) beanstanden yanlış: „beanstanden“ bir şeyden şikâyet etmek, kusur bulmaktır; öğrencilerin araçlardan şikâyet etmesi metinde yok."
         },
         {
           "number": 4,

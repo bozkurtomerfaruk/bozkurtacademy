@@ -35,9 +35,9 @@
           "type": "abc",
           "prompt": "Die Versuche in den beiden Räumen zeigten, dass …",
           "options": {
-            "a": "der Lehmputz den Bedarf an Heizenergie spürbar verringerte.",
+            "a": "der Lehmputz den Bedarf an Heizenergie in den Versuchsräumen spürbar verringerte.",
             "b": "der Lehm Feuchtigkeit dauerhaft band und die Raumluft dadurch trockener machte.",
-            "c": "die ausgleichende Wirkung des Lehms von der Behandlung der Wandoberfläche abhängt."
+            "c": "die ausgleichende Wirkung des Lehms von der Wandbeschichtung abhängt."
           },
           "answer": "c",
           "evidence": [
@@ -45,7 +45,7 @@
             { "text": "artikel", "quote": "keinen nennenswerten Einfluss" },
             { "text": "artikel", "quote": "später wieder an die Raumluft abgaben" }
           ],
-          "explanation": "Lehm sıvalı odada nem daha az dalgalandı, ama „Der Effekt verschwand jedoch fast vollständig, sobald die Wände … gestrichen wurden“ (duvarlar piyasada satılan bir boyayla boyanınca etki neredeyse tamamen kayboldu). Yani dengeleyici etki duvar yüzeyinin nasıl işlendiğine bağlı. a) yanlış: Sıvanın ısıtma enerjisi üzerinde „keinen nennenswerten Einfluss“ (kayda değer bir etkisi) yoktu. b) yanlış: Duvarlar nemi kalıcı olarak tutmadı; fazla nemi alıp „später wieder an die Raumluft abgaben“ (sonra yeniden oda havasına verdiler)."
+          "explanation": "Lehm sıvalı odada nem daha az dalgalandı, ama „Der Effekt verschwand jedoch fast vollständig, sobald die Wände … gestrichen wurden“ (duvarlar piyasada satılan bir boyayla boyanınca etki neredeyse tamamen kayboldu). Yani dengeleyici etki duvar yüzeyinin kaplanıp kaplanmamasına (boyanmasına) bağlı. a) yanlış: Sıvanın ısıtma enerjisi üzerinde „keinen nennenswerten Einfluss“ (kayda değer bir etkisi) yoktu. b) yanlış: Duvarlar nemi kalıcı olarak tutmadı; fazla nemi alıp „später wieder an die Raumluft abgaben“ (sonra yeniden oda havasına verdiler)."
         },
         {
           "number": 11,
@@ -53,7 +53,7 @@
           "prompt": "Feldkötter lehnt es ab, Lehm mit Zement zu versetzen, weil …",
           "options": {
             "a": "dieser Zusatz die Kosten für den Rohbau erheblich erhöhe.",
-            "b": "sich das Material danach nicht mehr in den Kreislauf zurückführen lasse.",
+            "b": "sich das Material danach nicht mehr wiederverwerten lasse.",
             "c": "der Lehm auf diese Weise nicht ausreichend vor Nässe geschützt werde."
           },
           "answer": "b",
@@ -61,16 +61,16 @@
             { "text": "artikel", "quote": "stabilisierter dagegen lande als Bauschutt auf der Deponie" },
             { "text": "artikel", "quote": "Ein solcher Zusatz sei zwar billig und wirksam" }
           ],
-          "explanation": "Feldkötter'e göre işlenmemiş lehm yıkımdan sonra suyla yumuşatılıp yeniden kullanılabilir, çimentoyla sağlamlaştırılmış lehm ise „lande als Bauschutt auf der Deponie“ (moloz olarak çöplüğe gider). Yani malzeme döngüye geri kazandırılamaz. a) ve c) yanlış: Feldkötter katkı için „zwar billig und wirksam“ (gerçi ucuz ve etkili) diyor; sorun ne maliyet ne de nemden korumanın yetersizliği."
+          "explanation": "Feldkötter'e göre işlenmemiş lehm yıkımdan sonra suyla yumuşatılıp yeniden kullanılabilir, çimentoyla sağlamlaştırılmış lehm ise „lande als Bauschutt auf der Deponie“ (moloz olarak çöplüğe gider). Yani malzeme yeniden kullanılamaz. a) ve c) yanlış: Feldkötter katkı için „zwar billig und wirksam“ (gerçi ucuz ve etkili) diyor; sorun ne maliyet ne de nemden korumanın yetersizliği."
         },
         {
           "number": 12,
           "type": "abc",
           "prompt": "Was erfährt man über die Kosten des Lehmbaus?",
           "options": {
-            "a": "Der Vorteil des günstigen Ausgangsmaterials wird durch den hohen Aufwand beim Bauen aufgezehrt.",
+            "a": "Die Ersparnis beim Material geht durch die aufwendige Bauweise wieder verloren.",
             "b": "Dank der Vorfertigung war das Seminargebäude günstiger als ein vergleichbarer Betonbau.",
-            "c": "Den größten Posten bildet der Transport des Lehms zur Baustelle."
+            "c": "Den größten Kostenanteil verursacht in der Regel der Transport des Lehms zur Baustelle."
           },
           "answer": "a",
           "evidence": [
@@ -87,15 +87,16 @@
           "options": {
             "a": "Als Grund, das Material künftig nur noch aus wenigen geprüften Gruben zu beziehen.",
             "b": "Als Schwierigkeit, der sich mit schnelleren Prüfmethoden begegnen lässt.",
-            "c": "Als Vorwand der Bauindustrie, um verbindliche Regeln zu verhindern."
+            "c": "Als Anlass, jede Lieferung vor dem Einbau gründlich im Labor prüfen zu lassen."
           },
           "answer": "b",
           "evidence": [
             { "text": "artikel", "quote": "Pümpel hält die Schwankungen dennoch für beherrschbar" },
             { "text": "artikel", "quote": "innerhalb eines Tages direkt auf der Baustelle abschätzen lässt" },
-            { "text": "artikel", "quote": "rät ausdrücklich dazu, gerade den Aushub vor Ort zu nutzen" }
+            { "text": "artikel", "quote": "rät ausdrücklich dazu, gerade den Aushub vor Ort zu nutzen" },
+            { "text": "artikel", "quote": "Statt jede Lieferung wochenlang im Labor zu untersuchen" }
           ],
-          "explanation": "Pümpel farklılıkları bir sorun olarak görüyor, ama „hält die Schwankungen dennoch für beherrschbar“ (yine de kontrol edilebilir buluyor); ekibi dayanıklılığı „innerhalb eines Tages direkt auf der Baustelle“ (bir gün içinde doğrudan şantiyede) tahmin eden bir yöntem geliştiriyor. a) yanlış: Pümpel tam tersine „gerade den Aushub vor Ort zu nutzen“ (özellikle yerinde kazılan toprağı kullanmayı) öneriyor. c) yanlış: Pümpel normların azlığının sebebini malzemenin doğasında görüyor („in der Natur des Materials“); bunun sektörün bir bahanesi olduğunu söylemiyor."
+          "explanation": "Pümpel farklılıkları bir sorun olarak görüyor, ama „hält die Schwankungen dennoch für beherrschbar“ (yine de kontrol edilebilir buluyor); ekibi dayanıklılığı „innerhalb eines Tages direkt auf der Baustelle“ (bir gün içinde doğrudan şantiyede) tahmin eden bir yöntem geliştiriyor. a) yanlış: Pümpel tam tersine „gerade den Aushub vor Ort zu nutzen“ (özellikle yerinde kazılan toprağı kullanmayı) öneriyor. c) yanlış: Pümpel'in ekibi „Statt jede Lieferung wochenlang im Labor zu untersuchen“ (her teslimatı haftalarca laboratuvarda incelemek yerine) dayanıklılığı şantiyede bir günde tahmin eden bir yöntem geliştiriyor."
         },
         {
           "number": 14,
@@ -111,16 +112,16 @@
             { "text": "artikel", "quote": "weil ihnen Masse fehlt, die Wärme aufnehmen kann" },
             { "text": "artikel", "quote": "Für Fundamente, Hochhäuser oder Kellerräume bleibe der herkömmliche Baustoff unverzichtbar" }
           ],
-          "explanation": "Ahşap binalar yazın çabuk ısınıyor, „weil ihnen Masse fehlt, die Wärme aufnehmen kann“ (çünkü ısıyı alabilecek kütleden yoksunlar); iç mekândaki lehm duvarlar bu görevi üstlenebilir. Yani lehm ahşabın bir zayıflığını telafi ediyor. a) yanlış: Feldkötter lehmi betonun yerine geçecek bir malzeme olarak görmüyor; „Hochhäuser“ (yüksek binalar) için beton vazgeçilmez kalıyor. b) yanlış: „Kellerräume“ (bodrum katlar) da betonun vazgeçilmez olduğu yerler arasında; üstelik lehm „keine Nässe“ (ıslaklığa) dayanmıyor."
+          "explanation": "Ahşap binalar yazın çabuk ısınıyor, „weil ihnen Masse fehlt, die Wärme aufnehmen kann“ (çünkü ısıyı alabilecek kütleden yoksunlar); iç mekândaki lehm duvarlar bu görevi üstlenebilir. Yani lehm ahşabın bir zayıflığını telafi ediyor. a) yanlış: Feldkötter lehmi betonun yerine geçecek bir malzeme olarak görmüyor; „Hochhäuser“ (yüksek binalar) için beton vazgeçilmez kalıyor. b) yanlış: „Kellerräume“ (bodrum katlar) da betonun vazgeçilmez olduğu yerler arasında."
         },
         {
           "number": 15,
           "type": "abc",
           "prompt": "Was ergab die Befragung der Studierenden?",
           "options": {
-            "a": "Anfängliche Vorbehalte schwächten sich durch die Arbeit in den Räumen ab.",
+            "a": "Wer oft in den Räumen arbeitete, hatte am Ende weniger Bedenken.",
             "b": "Die Akustik der neuen Räume wurde als deutlichster Mangel empfunden.",
-            "c": "Die Sorge, die Wände könnten stauben, bestätigte sich teilweise."
+            "c": "Die Sorge, die Wände könnten stauben, bestätigte sich zumindest teilweise."
           },
           "answer": "a",
           "evidence": [
@@ -135,8 +136,8 @@
           "type": "abc",
           "prompt": "Welche Auffassung vertritt die Autorin am Ende des Textes?",
           "options": {
-            "a": "Lehm werde sich an Hochschulen bald als Standardbaustoff durchsetzen.",
-            "b": "Ein traditioneller Baustoff braucht zeitgemäße Bauweisen, um wettbewerbsfähig zu werden.",
+            "a": "Lehm werde sich zumindest im Hochschulbau schon bald als Standardbaustoff durchsetzen.",
+            "b": "Ein alter Baustoff werde erst durch moderne Verfahren wettbewerbsfähig.",
             "c": "Der Wert des Lehms liege vor allem darin, alte Handwerkstraditionen zu bewahren."
           },
           "answer": "b",

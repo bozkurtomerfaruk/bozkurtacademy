@@ -29,25 +29,25 @@
           "number": 1,
           "type": "abc",
           "prompt": "Lücke 1",
-          "options": { "a": "offen", "b": "bereit", "c": "frei", "d": "zugänglich" },
+          "options": { "a": "offen", "b": "nahe", "c": "frei", "d": "zugänglich" },
           "answer": "a",
           "evidence": [
             { "text": "meldung", "quote": "steht es nicht nur Hochschulangehörigen" },
             { "text": "meldung", "quote": "sondern allen Bürgerinnen und Bürgern der Region" }
           ],
-          "explanation": "„jemandem offenstehen“ (birine açık olmak, onun kullanımına açık olmak) kalıbı Dativ ile kurulur: „steht es nicht nur Hochschulangehörigen offen, sondern allen Bürgerinnen und Bürgern“ (yalnızca üniversite mensuplarına değil, bölgedeki tüm vatandaşlara açık). b) bereit yanlış: „bereitstehen“ bir şeyin hazır beklemesi demektir; kimlerin kullanabileceğini anlatmaz. c) frei yanlış: „es steht jemandem frei“ birinin bir şeyi yapıp yapmamakta serbest olması demektir (ör. „Es steht Ihnen frei, zu kommen.“); bir binanın kimlere açık olduğunu anlatmaz. d) zugänglich yanlış: Anlamca yakındır, ama „stehen“ ile değil, „sein“ ile kullanılır („ist … zugänglich“)."
+          "explanation": "„jemandem offenstehen“ (birine açık olmak, onun kullanımına açık olmak) kalıbı Dativ ile kurulur: „steht es nicht nur Hochschulangehörigen offen, sondern allen Bürgerinnen und Bürgern“ (yalnızca üniversite mensuplarına değil, bölgedeki tüm vatandaşlara açık). b) nahe yanlış: „jemandem nahestehen“ bir kişiye veya gruba fikir ya da ilişki bakımından yakın olmak demektir; binanın kimlerin kullanımına açık olduğunu anlatmaz. İkinci paragraf da konunun kullanım olduğunu gösteriyor: „für die Allgemeinheit nutzbar zu machen“ (herkesin kullanımına açmak). c) frei yanlış: „es steht jemandem frei“ birinin bir şeyi yapıp yapmamakta serbest olması demektir (ör. „Es steht Ihnen frei, zu kommen.“); bir binanın kimlere açık olduğunu anlatmaz. d) zugänglich yanlış: Anlamca yakındır, ama „stehen“ ile değil, „sein“ ile kullanılır („ist … zugänglich“)."
         },
         {
           "number": 2,
           "type": "abc",
           "prompt": "Lücke 2",
-          "options": { "a": "Nachhinein", "b": "Ganzen", "c": "Gegenzug", "d": "Zweifel" },
+          "options": { "a": "Gegenteil", "b": "Ganzen", "c": "Gegenzug", "d": "Zweifel" },
           "answer": "c",
           "evidence": [
             { "text": "meldung", "quote": "Der Neubau wurde zu einem erheblichen Teil von der Stadt mitfinanziert" },
             { "text": "meldung", "quote": "Diese Regelung ist kein Zufall." }
           ],
-          "explanation": "Metin, binanın halka açılmasının tesadüf olmadığını söylüyor („kein Zufall“) ve sebebini veriyor: Belediye inşaatın önemli bir kısmını finanse etti; buna karşılık üniversite mekânlarını ve kaynaklarını kalıcı olarak herkesin kullanımına açmayı üstlendi. Bir karşılık ilişkisini „im Gegenzug“ (karşılığında) anlatır. a) im Nachhinein yanlış: „sonradan, geriye dönüp bakınca“ demektir; bir yükümlülüğün sonradan fark edilmesi metindeki sebep ilişkisini kurmaz. b) im Ganzen yanlış: „genel olarak, toplamda“ demektir; finansman ile yükümlülük arasındaki bağı ifade etmez. d) im Zweifel yanlış: „şüphe halinde“ demektir; yükümlülük bir koşula bağlı değil, „dauerhaft“ (kalıcı)."
+          "explanation": "Metin, binanın halka açılmasının tesadüf olmadığını söylüyor („kein Zufall“) ve sebebini veriyor: Belediye inşaatın önemli bir kısmını finanse etti; buna karşılık üniversite mekânlarını ve kaynaklarını kalıcı olarak herkesin kullanımına açmayı üstlendi. Bir karşılık ilişkisini „im Gegenzug“ (karşılığında) anlatır. a) im Gegenteil yanlış: „tam tersine“ demektir ve önceki ifadeyle bir zıtlık kurar; oysa belediyenin finansmanı ile üniversitenin yükümlülüğü birbirine zıt değil, metne göre birbirine bağlı („kein Zufall“). b) im Ganzen yanlış: „genel olarak, toplamda“ demektir; finansman ile yükümlülük arasındaki bağı ifade etmez. d) im Zweifel yanlış: „şüphe halinde“ demektir; yükümlülük bir koşula bağlı değil, „dauerhaft“ (kalıcı)."
         },
         {
           "number": 3,

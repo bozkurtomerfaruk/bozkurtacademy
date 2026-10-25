@@ -35,7 +35,7 @@
           "type": "abc",
           "prompt": "Die Langzeitstudie von Hufnagl ergab, dass …",
           "options": {
-            "a": "das Verständnis dafür, was das Ergebnis des Zählens bedeutet, spätere Leistungen besser vorhersagte als das Schätzen.",
+            "a": "das Verständnis des Zählergebnisses spätere Leistungen besser vorhersagte als das Schätzen.",
             "b": "Kinder, die schon bis zwanzig zählen konnten, auch die Anzahl einer Menge sicher bestimmten.",
             "c": "sich die Fähigkeit, Mengen ungefähr zu vergleichen, erst im Grundschulalter entwickelt."
           },
@@ -46,7 +46,7 @@
             { "text": "artikel", "quote": "beginnen sie jedoch von vorn" },
             { "text": "artikel", "quote": "Schon wenige Monate alte Säuglinge schauen länger hin" }
           ],
-          "explanation": "Hızlı miktar karşılaştırma becerisi sonraki matematik başarısını „nur schwach“ (yalnızca zayıf biçimde) öngördü; çok daha belirleyici olan, çocuğun „dass das zuletzt genannte Zahlwort die Größe der gesamten Menge angibt“ (en son söylenen sayı sözcüğünün bütün kümenin büyüklüğünü verdiğini) anlayıp anlamadığıydı. b) yanlış: Birçok dört yaşındaki yirmiye kadar sayabiliyor, ama yedi tahtayı saydıktan sonra kaç tane olduğu sorulunca „beginnen sie jedoch von vorn“ (yeniden baştan başlıyorlar). c) yanlış: Metnin başına göre birkaç aylık bebekler bile nokta sayısının ikiye katlanmasını fark ediyor; bu beceri ilkokulda ortaya çıkmıyor."
+          "explanation": "Hızlı miktar karşılaştırma becerisi sonraki matematik başarısını „nur schwach“ (yalnızca zayıf biçimde) öngördü; çok daha belirleyici olan, çocuğun „dass das zuletzt genannte Zahlwort die Größe der gesamten Menge angibt“ (en son söylenen sayı sözcüğünün bütün kümenin büyüklüğünü verdiğini) anlayıp anlamadığıydı. b) yanlış: Birçok dört yaşındaki yirmiye kadar sayabiliyor, ama yedi tahtayı saydıktan sonra kaç tane olduğu sorulunca „beginnen sie jedoch von vorn“ (yeniden baştan başlıyorlar). c) yanlış: Metnin başına göre „Schon wenige Monate alte Säuglinge schauen länger hin“ (birkaç aylık bebekler bile nokta sayısı ikiye katlanınca daha uzun bakıyor) ve bu, miktar duygusunun doğuştan geldiğine kanıt sayılıyor; yani bu beceri ilkokulda ortaya çıkmıyor."
         },
         {
           "number": 11,
@@ -70,9 +70,9 @@
           "type": "abc",
           "prompt": "Wie steht Ollendiek zum Rechnen mit den Fingern?",
           "options": {
-            "a": "Er rät Lehrkräften, es spätestens im ersten Schuljahr zu unterbinden.",
-            "b": "Er sieht darin vor allem eine Beruhigung für unsichere Kinder, die das Verständnis kaum fördert.",
-            "c": "Er hält es für sinnvoll, solange Kinder sich nicht dauerhaft auf das einzelne Abzählen beschränken."
+            "a": "Er rät Lehrkräften, es spätestens am Ende des ersten Schuljahres zu unterbinden.",
+            "b": "Er sieht darin eher eine Beruhigung als eine echte Hilfe zum Verstehen.",
+            "c": "Er befürwortet es, sofern es nicht auf Dauer beim mühsamen Durchzählen bleibt."
           },
           "answer": "c",
           "evidence": [
@@ -121,8 +121,8 @@
           "type": "abc",
           "prompt": "Welche Folgerung ziehen Hufnagl und Ollendiek für die Kindertagesstätten?",
           "options": {
-            "a": "Erfahrungen mit Mengen und Zahlen sollten in gewöhnliche Tätigkeiten eingebettet werden.",
-            "b": "Vorschulkinder sollten regelmäßig Hefte mit Zählaufgaben bearbeiten.",
+            "a": "Der Umgang mit Zahlen sollte in übliche Tätigkeiten eingebunden werden.",
+            "b": "Vorschulkinder sollten regelmäßig Hefte mit kleinen Zählaufgaben bearbeiten.",
             "c": "Ein Teil des Mathematikunterrichts der Grundschule solle in die Kita verlagert werden."
           },
           "answer": "a",
@@ -138,8 +138,8 @@
           "prompt": "Welche Auffassung vertritt der Autor insgesamt?",
           "options": {
             "a": "Mathematische Begabung sei im Wesentlichen angeboren und lasse sich kaum beeinflussen.",
-            "b": "Eltern sollten möglichst früh mit einem systematischen Rechentraining beginnen.",
-            "c": "Das angeborene Gespür für Mengen ist nur der Ausgangspunkt für ein Verständnis, das erlernt werden muss."
+            "b": "Eltern sollten möglichst schon vor der Einschulung mit systematischem Rechentraining beginnen.",
+            "c": "Zahlenverständnis baue auf einer Anlage auf, müsse aber erst erlernt werden."
           },
           "answer": "c",
           "evidence": [

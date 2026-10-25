@@ -29,13 +29,13 @@
           "number": 1,
           "type": "abc",
           "prompt": "Lücke 1",
-          "options": { "a": "abgibt", "b": "freisetzt", "c": "aufnimmt", "d": "ausstößt" },
+          "options": { "a": "abgibt", "b": "freisetzt", "c": "aufnimmt", "d": "verbraucht" },
           "answer": "c",
           "evidence": [
             { "text": "meldung", "quote": "wie viel Kohlendioxid das Meer dort aus der Atmosphäre" },
             { "text": "meldung", "quote": "und in tiefere Wasserschichten weiterleitet" }
           ],
-          "explanation": "Gazın yönü „aus der Atmosphäre“ (atmosferden) ile belirleniyor: Deniz karbondioksiti havadan alıyor ve daha derin su katmanlarına iletiyor („in tiefere Wasserschichten weiterleitet“). Ancak önce alınan bir şey iletilebilir: „aus der Atmosphäre aufnimmt“ (atmosferden alıyor). Üçüncü paragraftaki „mehr Kohlenstoff gebunden“ (daha fazla karbon bağlamış) da bunu doğruluyor. a) abgibt, b) freisetzt ve d) ausstößt yanlış: Üçü de ters yönü, yani gazı dışarı vermeyi anlatır; bu anlamda „an die Atmosphäre“ (atmosfere) denmesi gerekirdi. Ayrıca deniz gazı bıraksaydı onu derin katmanlara iletemezdi."
+          "explanation": "Gazın yönü „aus der Atmosphäre“ (atmosferden) ile belirleniyor: Deniz karbondioksiti havadan alıyor ve daha derin su katmanlarına iletiyor („in tiefere Wasserschichten weiterleitet“). Ancak önce alınan bir şey iletilebilir: „aus der Atmosphäre aufnimmt“ (atmosferden alıyor). Üçüncü paragraftaki „mehr Kohlenstoff gebunden“ (daha fazla karbon bağlamış) da bunu doğruluyor. a) abgibt ve b) freisetzt yanlış: İkisi de ters yönü, yani gazı dışarı vermeyi anlatır; bu anlamda „an die Atmosphäre“ (atmosfere) denmesi gerekirdi. Ayrıca deniz gazı bıraksaydı onu derin katmanlara iletemezdi. d) verbraucht yanlış: „verbrauchen“ bir şeyi tüketip bitirmektir; tüketilen gaz derin katmanlara iletilemez („weiterleitet“), metin de karbonun „gebunden“ (bağlanmış) olduğundan söz ediyor."
         },
         {
           "number": 2,

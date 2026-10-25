@@ -150,7 +150,7 @@
           "label": "b",
           "title": "Spielhaus Rumpelkiste",
           "paragraphs": [
-            "Machen Sie den Geburtstag von Ihrem Kind bei uns! Zwei Stunden spielen, mit Kuchen und Saft. Preis: 70 Euro für zehn Kinder."
+            "Feiern Sie den Geburtstag von Ihrem Kind bei uns! Zwei Stunden spielen, mit Kuchen und Saft. Preis: 70 Euro für zehn Kinder."
           ]
         }
       ],
@@ -158,7 +158,7 @@
         {
           "number": 8,
           "type": "zuordnung",
-          "prompt": "Ihr Sohn hat bald Geburtstag. Sie möchten mit ihm und seinen Freunden spielen gehen. Sie können 80 Euro bezahlen.",
+          "prompt": "Ihr Sohn hat bald Geburtstag. Sie möchten mit ihm und seinen Freunden spielen gehen. Sie möchten nicht mehr als 80 Euro bezahlen.",
           "answer": "b",
           "evidence": [
             {
@@ -170,7 +170,7 @@
               "quote": "Für acht Kinder bezahlen Sie 130 Euro."
             }
           ],
-          "explanation": "80 euro ödeyebilirsiniz. b ilanında „Preis: 70 Euro für zehn Kinder“ yazıyor: On çocuk için fiyat 70 euro. Bu, 80 eurodan az. a ilanında „Für acht Kinder bezahlen Sie 130 Euro“ yazıyor: Sekiz çocuk için 130 euro ödüyorsunuz. Bu çok pahalı. Cevap b."
+          "explanation": "80 eurodan fazla ödemek istemiyorsunuz („nicht mehr als 80 Euro“). b ilanında „Preis: 70 Euro für zehn Kinder“ yazıyor: On çocuk için fiyat 70 euro. Bu, 80 eurodan az. a ilanında „Für acht Kinder bezahlen Sie 130 Euro“ yazıyor: Sekiz çocuk için 130 euro ödüyorsunuz. Bu çok pahalı. Cevap b."
         }
       ]
     },

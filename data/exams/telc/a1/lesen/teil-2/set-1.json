@@ -199,7 +199,7 @@
         {
           "number": 9,
           "type": "zuordnung",
-          "prompt": "Sie möchten in einem Studio Sport machen. Für einen Monat können Sie 30 Euro bezahlen.",
+          "prompt": "Sie möchten in einem Studio Sport machen. Für einen Monat möchten Sie nicht mehr als 30 Euro bezahlen.",
           "answer": "a",
           "evidence": [
             {
@@ -211,7 +211,7 @@
               "quote": "Ein Monat kostet 45 Euro."
             }
           ],
-          "explanation": "Bir ay için 30 euro ödeyebilirsiniz. a ilanında „Ein Monat kostet 22 Euro“ yazıyor: Bir ay 22 euro. Bu, 30 eurodan az. b ilanında „Ein Monat kostet 45 Euro“ yazıyor: Bir ay 45 euro. Bu çok pahalı. Cevap a."
+          "explanation": "Bir ay için 30 eurodan fazla ödemek istemiyorsunuz („nicht mehr als 30 Euro“). a ilanında „Ein Monat kostet 22 Euro“ yazıyor: Bir ay 22 euro. Bu, 30 eurodan az. b ilanında „Ein Monat kostet 45 Euro“ yazıyor: Bir ay 45 euro. Bu çok pahalı. Cevap a."
         }
       ]
     },

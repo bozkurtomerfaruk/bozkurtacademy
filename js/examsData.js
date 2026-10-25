@@ -543,9 +543,27 @@ window.BA_EXAMS = {
               { title: null, exercises: [] }, // Teil 3
             ] },
             { id: 'lesen', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
-              { title: null, exercises: [] }, // Teil 3
+              {
+                title: { tr: 'Gazete haberi · a/b/c', de: 'Zeitungsmeldung · a/b/c', en: 'News report · a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Ein Fest für alle Nachbarn' },
+                  { set: 'set-2', title: 'Neue Busse in der Stadt' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: 'Basın metni · richtig/falsch', de: 'Pressetext · richtig/falsch', en: 'Press text · true/false' },
+                exercises: [
+                  { set: 'set-1', title: 'Kochen in der Schule' },
+                  { set: 'set-2', title: 'Ein Sommer auf dem Bauernhof' },
+                ]
+              }, // Teil 2
+              {
+                title: { tr: 'Durumlar ve ilanlar · eşleştirme', de: 'Situationen und Anzeigen · Zuordnung', en: 'Situations and adverts · matching' },
+                exercises: [
+                  { set: 'set-1', title: 'Freizeit am Wochenende' },
+                  { set: 'set-2', title: 'Wohnung und Umzug' },
+                ]
+              }, // Teil 3
             ] },
             { id: 'schreiben', teile: [
               { title: null, exercises: [] }, // Teil 1

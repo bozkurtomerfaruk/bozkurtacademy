@@ -5,7 +5,7 @@
 ## 2026-10-19 · Lesen tamamlama: 8 aşama (Goethe C1 → TestDaF kâğıt → TestDaF dijital → telc B1, A1, A2, B2, C1 Hochschule)
 
 ### Kaldığım yer
-- Aşama 1, Goethe C1: Pilot main'de (b615c20). Set 3–5 yazılıyor (dal `claude/c1-full`; anahtarlar scratchpad'de c1keys2.txt). Sırada inceleme, kör çözüm, test ve birleştirme var.
+- Aşama 1, Goethe C1: bitti, main'e birleştirildi.
 - Aşama 2, TestDaF kâğıt: Oynatıcı eklentisi (ja/nein/nichts, iki örnek "01"/"02") ve test hazır; dal `claude/testdaf-papier`, çalışma ağacı /tmp/wt-testdaf. Pilot yazılıyor. C1 birleşince bu dal main'e göre yeniden düzenlenecek; format tablosu da o zaman buraya eklenecek.
 - Güvenlik için 17:18 UTC'ye bir devam mesajı zamanlandı.
 
@@ -28,7 +28,14 @@ Kaynak: Goethe-Institut el kitabı ve Modellsatz açıklamaları (arama sonuçla
 
 Toplam 30 soru, 65 dk (cevap kâğıdına aktarma dahil; bazı kaynaklar 70 dk diyor).
 
-**Pilot (2 set × 4 Teil):** İki inceleyici ad tekrarlarını, deyim hâline gelmiş çeldiricileri (ör. „von großem Ausmaß sein“), aynı bağlacın iki boşlukta geçmesini ve B2 ile konu tekrarlarını düzeltti. Kör çözüm 60/60 uyuştu. Çözücünün düzeltmediğim notu: Teil 1 boşluklarının çoğu sabit söz öbekleriyle çözülüyor; set 3–5 brief'ine her sette en az üç içerik boşluğu kuralını ekledim. Teil 3 yorumları (doldurulmuş cümleler hariç) 400–425 kelime. **Oynatıcı:** a/b/c/d seçenekleri için küçük eklenti. Teil 3, B2 Teil 2'deki boşluk düzeniyle; Teil 4, B2 Teil 1'deki yorum düzeni ve `"none": "0"` ile çalışıyor.
+**Pilot (2 set × 4 Teil):** İki inceleyici ad tekrarlarını, deyim hâline gelmiş çeldiricileri (ör. „von großem Ausmaß sein“), aynı bağlacın iki boşlukta geçmesini ve B2 ile konu tekrarlarını düzeltti. Kör çözüm 60/60 uyuştu. Çözücünün düzeltmediğim notu: Teil 1 boşluklarının çoğu sabit söz öbekleriyle çözülüyor; set 3–5 brief'ine her sette en az üç içerik boşluğu kuralını ekledim. Teil 3 yorumları (doldurulmuş cümleler hariç) 400–425 kelime.
+
+**Aşama 1 bitti: her Teil için 5 set (20 set, 150 soru).** Set 3–5'te iki inceleyici şunları düzeltti: gerçek ad ve yer adları (Ostheide, Lyon, Rastenfeld, Malmquist vb.), deyimleşmiş çeldiriciler, B2 ile çakışan argümanlar. Teil 3 set 4 B2'deki müze setinin konusunu tekrarlıyordu; „Volkshochschule ohne Gebühren“ olarak aynı anahtarla yeniden yazıldı. Kör çözüm 90/90 uyuştu. Çözücünün şüphelendiği 1.3/2 ve 1.4/2 boşlukları düzeltildi ve yeniden doğrulandı (16/16).
+
+**Düzeltmediğim notlar:**
+- „Die Psychologie des Aufschiebens“ (Teil 1 set 5) ve „Das stille Comeback der Nachtzüge“ (Teil 2 set 3) B2'deki birer setle aynı konuda. Argümanlar farklı, başlıkları ben seçmiştim.
+- Teil 1'deki bazı boşluklar yalnızca sabit söz öbekleriyle çözülüyor; her sette en az beş içerik boşluğu var.
+- „zumal“ ve „während“ iki farklı sette doğru cevap. **Oynatıcı:** a/b/c/d seçenekleri için küçük eklenti. Teil 3, B2 Teil 2'deki boşluk düzeniyle; Teil 4, B2 Teil 1'deki yorum düzeni ve `"none": "0"` ile çalışıyor.
 
 ## 2026-10-19 · Goethe A1 Lesen (Start Deutsch 1)
 

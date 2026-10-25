@@ -559,7 +559,7 @@ window.BA_EXAMS = {
                   { set: 'set-1', title: 'Kochen in der Schule' },
                   { set: 'set-2', title: 'Ein Sommer auf dem Bauernhof' },
                   { set: 'set-3', title: 'Ein Kochkurs für Männer' },
-                  { set: 'set-4', title: 'Ein Kino im Dorf' },
+                  { set: 'set-4', title: 'Das alte Kino ist wieder offen' },
                   { set: 'set-5', title: 'Jugendliche reparieren Fahrräder' },
                 ]
               }, // Teil 2

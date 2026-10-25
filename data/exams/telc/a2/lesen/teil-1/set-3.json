@@ -1,0 +1,125 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-3",
+  "title": "Schwimmkurse für Erwachsene",
+  "minutes": 10,
+  "instructions": "Lesen Sie den Zeitungstext und die Aufgaben 1–5. Welche Lösung ist richtig: a, b oder c?",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "kurse",
+          "title": "Schwimmkurse für Erwachsene",
+          "byline": "Birkenwalder Anzeiger",
+          "paragraphs": [
+            "Im Hallenbad von Birkenwalde lernen seit Januar auch Erwachsene schwimmen. Bisher hat das Bad nur Kurse für Kinder angeboten. Die Idee für die neuen Kurse hatte die Schwimmlehrerin Kathrin Sollmann. „Viele Eltern haben mir erzählt, dass sie selbst nicht schwimmen können. Aber in einem Kurs mit Kindern wollten sie nicht lernen“, sagt Kathrin Sollmann.",
+            "Ein Kurs hat zehn Termine und kostet 90 Euro. Er findet immer am Dienstagabend statt, weil dann keine Schulklassen im Bad sind. In einer Gruppe sind höchstens acht Personen. Die Teilnehmer sind zwischen 25 und 70 Jahre alt. Am Anfang üben alle im kleinen Becken, denn dort ist das Wasser nicht tief.",
+            "Davut Kolbeck ist 52 Jahre alt und macht gerade seinen zweiten Kurs. Als Kind hat er in einem Dorf ohne Schwimmbad gewohnt. „Im Urlaub am Meer habe ich immer nur am Strand gesessen. Meine Frau und meine Töchter waren im Wasser und ich nicht“, erzählt er. Jetzt kann er schon 25 Meter schwimmen. Im Sommer möchte er mit seiner Familie an einem See Urlaub machen.",
+            "Die Kurse sind sehr beliebt. Für den nächsten Kurs im April gibt es schon eine Warteliste. Deshalb sucht das Hallenbad jetzt eine zweite Lehrerin oder einen zweiten Lehrer. Dann kann es auch am Samstagvormittag einen Kurs geben. Anmelden kann man sich an der Kasse oder per Telefon."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "abc",
+          "prompt": "Im Hallenbad von Birkenwalde …",
+          "options": {
+            "a": "gab es früher nur Kurse für Erwachsene.",
+            "b": "finden die Kurse für Erwachsene am Wochenende statt.",
+            "c": "gibt es erst seit diesem Jahr Kurse für Erwachsene."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "kurse",
+              "quote": "lernen seit Januar auch Erwachsene schwimmen"
+            }
+          ],
+          "explanation": "Metinde „Im Hallenbad von Birkenwalde lernen seit Januar auch Erwachsene schwimmen“ (Birkenwalde kapalı yüzme havuzunda ocaktan beri yetişkinler de yüzme öğreniyor) yazıyor. Ocaktan beri = bu yıldan beri: „erst seit diesem Jahr“. a) yanlış: Eskiden yetişkinler için değil, sadece çocuklar için kurs vardı: „Bisher hat das Bad nur Kurse für Kinder angeboten.“ b) yanlış: Yetişkin kursları hafta sonu değil, salı akşamı yapılıyor: „Er findet immer am Dienstagabend statt.“ Cumartesi kursu ancak ikinci bir öğretmen bulununca olabilir."
+        },
+        {
+          "number": 2,
+          "type": "abc",
+          "prompt": "Im Kurs …",
+          "options": {
+            "a": "lernen nicht mehr als acht Personen zusammen.",
+            "b": "üben die Teilnehmer zuerst im tiefen Wasser.",
+            "c": "lernen Eltern und Kinder zusammen schwimmen."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "kurse",
+              "quote": "In einer Gruppe sind höchstens acht Personen"
+            }
+          ],
+          "explanation": "Metinde „In einer Gruppe sind höchstens acht Personen“ (Bir grupta en fazla sekiz kişi var) yazıyor. „höchstens acht“ (en fazla sekiz) = „nicht mehr als acht“ (sekizden fazla değil). b) yanlış: Başta herkes küçük havuzda çalışıyor, çünkü orada su derin değil: „Am Anfang üben alle im kleinen Becken, denn dort ist das Wasser nicht tief.“ c) yanlış: Katılımcılar 25 ile 70 yaş arasında: „Die Teilnehmer sind zwischen 25 und 70 Jahre alt.“ Ayrıca anne babalar çocuklarla bir kursta öğrenmek istemediler: „Aber in einem Kurs mit Kindern wollten sie nicht lernen.“"
+        },
+        {
+          "number": 3,
+          "type": "abc",
+          "prompt": "Davut Kolbeck …",
+          "options": {
+            "a": "hat als Kind in seinem Dorf schwimmen gelernt.",
+            "b": "ist früher im Urlaub nicht ins Meer gegangen.",
+            "c": "besucht im Moment seinen ersten Schwimmkurs."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "kurse",
+              "quote": "Im Urlaub am Meer habe ich immer nur am Strand gesessen."
+            },
+            {
+              "text": "kurse",
+              "quote": "Meine Frau und meine Töchter waren im Wasser und ich nicht"
+            }
+          ],
+          "explanation": "Davut Kolbeck „Im Urlaub am Meer habe ich immer nur am Strand gesessen. Meine Frau und meine Töchter waren im Wasser und ich nicht“ (Deniz tatilinde hep sadece kumsalda oturdum. Karım ve kızlarım sudaydı, ben değil) diyor. Yani eskiden tatilde denize girmedi. a) yanlış: Çocukken yüzme havuzu olmayan bir köyde yaşadı: „in einem Dorf ohne Schwimmbad“; yüzmeyi şimdi kursta öğreniyor. c) yanlış: Bu onun ilk kursu değil, ikinci kursu: „macht gerade seinen zweiten Kurs“."
+        },
+        {
+          "number": 4,
+          "type": "abc",
+          "prompt": "Im Sommer will Davut Kolbeck …",
+          "options": {
+            "a": "mit Frau und Töchtern Ferien an einem See machen.",
+            "b": "mit seiner Familie wieder ans Meer fahren.",
+            "c": "zum ersten Mal 25 Meter schwimmen."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "kurse",
+              "quote": "Im Sommer möchte er mit seiner Familie an einem See Urlaub machen."
+            }
+          ],
+          "explanation": "Metinde „Im Sommer möchte er mit seiner Familie an einem See Urlaub machen“ (Yazın ailesiyle bir gölde tatil yapmak istiyor) yazıyor. Ailesi karısı ve kızlarıdır („Meine Frau und meine Töchter“); „Urlaub“ = „Ferien“ (tatil). b) yanlış: Yaz tatili için deniz değil, göl planlıyor: „an einem See“. c) yanlış: 25 metreyi şimdiden yüzebiliyor: „Jetzt kann er schon 25 Meter schwimmen.“"
+        },
+        {
+          "number": 5,
+          "type": "abc",
+          "prompt": "Das Hallenbad …",
+          "options": {
+            "a": "hat für den Kurs im April noch viele freie Plätze.",
+            "b": "hat schon eine zweite Lehrerin für Samstag gefunden.",
+            "c": "möchte noch eine Person für den Unterricht finden."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "kurse",
+              "quote": "Deshalb sucht das Hallenbad jetzt eine zweite Lehrerin oder einen zweiten Lehrer."
+            }
+          ],
+          "explanation": "Metinde „Deshalb sucht das Hallenbad jetzt eine zweite Lehrerin oder einen zweiten Lehrer“ (Bu yüzden havuz şimdi ikinci bir kadın ya da erkek öğretmen arıyor) yazıyor. Yani havuz ders verecek bir kişi daha bulmak istiyor. a) yanlış: Nisan kursu için çok boş yer yok, şimdiden bekleme listesi var: „Für den nächsten Kurs im April gibt es schon eine Warteliste.“ b) yanlış: İkinci öğretmen henüz bulunmadı, hâlâ aranıyor („sucht jetzt“); cumartesi kursu ancak o zaman olabilir: „Dann kann es auch am Samstagvormittag einen Kurs geben.“"
+        }
+      ]
+    }
+  ]
+}

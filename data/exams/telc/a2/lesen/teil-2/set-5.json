@@ -1,0 +1,96 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-5",
+  "title": "Jugendliche reparieren Fahrräder",
+  "minutes": 10,
+  "instructions": "Lesen Sie den Text und die Aufgaben 6–10. Sind die Aussagen richtig oder falsch?",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "werkstatt",
+          "title": "Alte Räder, neues Glück",
+          "byline": "Hollenrieder Zeitung",
+          "paragraphs": [
+            "Im Jugendzentrum am Bahnhof in Hollenried riecht es jeden Freitagnachmittag nach Öl. Dann treffen sich dort zehn Jugendliche zwischen 13 und 17 Jahren und reparieren alte Fahrräder. Die Räder bekommen sie von Leuten aus der Stadt, die ihr Fahrrad nicht mehr brauchen.",
+            "Angefangen hat alles mit Burak Kaplanoğlu, 16. Sein Fahrrad war kaputt, und Geld für eine Werkstatt hatte er nicht. Florian Eckhoff, ein Mitarbeiter vom Jugendzentrum, hat ihm geholfen, und zusammen haben die beiden das Rad repariert. „Danach wollten auch meine Freunde mitmachen“, erzählt Burak.",
+            "Heute hat die Gruppe eine kleine Werkstatt im Keller. Das Werkzeug hat ein Fahrradgeschäft aus der Stadt geschenkt. Für neue Teile, zum Beispiel Bremsen oder Lampen, braucht die Gruppe aber Geld. Deshalb verkaufen die Jugendlichen die fertigen Fahrräder für 30 bis 60 Euro.",
+            "Ein paar Räder verkauft die Gruppe aber nicht. Diese Fahrräder bekommen Kinder aus Familien mit wenig Geld kostenlos. In diesem Jahr waren das schon 25 Räder. Im Mai möchten die Jugendlichen einen Kurs für Kinder machen. Dort sollen die Kinder lernen, wie man einen kaputten Reifen repariert."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "richtig-falsch",
+          "prompt": "Die Jugendlichen reparieren Fahrräder, die andere Leute nicht mehr wollen.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "werkstatt",
+              "quote": "Die Räder bekommen sie von Leuten aus der Stadt, die ihr Fahrrad nicht mehr brauchen."
+            }
+          ],
+          "explanation": "Gençler bisikletleri „von Leuten aus der Stadt, die ihr Fahrrad nicht mehr brauchen“ (bisikletine artık ihtiyacı olmayan şehirdeki insanlardan) alıyor. Yani tamir ettikleri bisikletler, başkalarının artık istemediği bisikletler. İfade doğru."
+        },
+        {
+          "number": 7,
+          "type": "richtig-falsch",
+          "prompt": "Burak konnte die Reparatur von seinem Fahrrad in einer Werkstatt nicht bezahlen.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "werkstatt",
+              "quote": "und Geld für eine Werkstatt hatte er nicht"
+            }
+          ],
+          "explanation": "Burak'ın bisikleti bozuktu ve metinde „Geld für eine Werkstatt hatte er nicht“ (tamirhane için parası yoktu) yazıyor. Bu yüzden bisikleti tamirhanede yaptıramadı; Florian Eckhoff ile birlikte kendileri tamir ettiler. İfade doğru."
+        },
+        {
+          "number": 8,
+          "type": "richtig-falsch",
+          "prompt": "Bei der Gruppe kostet ein fertiges Fahrrad mehr als 60 Euro.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "werkstatt",
+              "quote": "Deshalb verkaufen die Jugendlichen die fertigen Fahrräder für 30 bis 60 Euro."
+            }
+          ],
+          "explanation": "Gençler hazır bisikletleri „für 30 bis 60 Euro“ (30 ile 60 Euro arasında) satıyor. Yani bir bisiklet en fazla 60 Euro, 60 Euro'dan fazla değil. İfade yanlış."
+        },
+        {
+          "number": 9,
+          "type": "richtig-falsch",
+          "prompt": "Kinder aus Familien mit wenig Geld müssen für ein Fahrrad 30 Euro bezahlen.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "werkstatt",
+              "quote": "Diese Fahrräder bekommen Kinder aus Familien mit wenig Geld kostenlos."
+            }
+          ],
+          "explanation": "Grup bazı bisikletleri satmıyor: „Diese Fahrräder bekommen Kinder aus Familien mit wenig Geld kostenlos.“ (Bu bisikletleri az parası olan ailelerin çocukları ücretsiz alıyor.) 30 Euro, satılan bisikletlerin en düşük fiyatı. İfade yanlış."
+        },
+        {
+          "number": 10,
+          "type": "richtig-falsch",
+          "prompt": "Im Mai sollen Kinder bei den Jugendlichen etwas über Fahrräder lernen.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "werkstatt",
+              "quote": "Im Mai möchten die Jugendlichen einen Kurs für Kinder machen."
+            }
+          ],
+          "explanation": "Mayıs ayında gençler „einen Kurs für Kinder“ (çocuklar için bir kurs) yapmak istiyor. Bu kursta çocuklar „wie man einen kaputten Reifen repariert“ (patlak bir lastiğin nasıl tamir edildiğini) öğrenecek. Yani bisikletle ilgili bir şey öğrenecekler. İfade doğru."
+        }
+      ]
+    }
+  ]
+}

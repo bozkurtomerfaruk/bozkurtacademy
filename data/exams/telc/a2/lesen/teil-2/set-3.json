@@ -1,0 +1,96 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-3",
+  "title": "Ein Kochkurs für Männer",
+  "minutes": 10,
+  "instructions": "Lesen Sie den Text und die Aufgaben 6–10. Sind die Aussagen richtig oder falsch?",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "kochkurs",
+          "title": "Kochen lernen mit 70",
+          "byline": "Quellenroder Kurier",
+          "paragraphs": [
+            "Im Familienzentrum von Quellenrode gibt es seit März einen besonderen Kurs: Dort lernen nur Männer kochen. Die meisten Teilnehmer sind zwischen 60 und 80 Jahre alt. Der Kurs ist immer am Donnerstagabend und dauert zehn Wochen.",
+            "Die Idee hatte Gerda Wollmeier. Sie arbeitet im Familienzentrum. „Viele ältere Männer haben nie gekocht, weil das früher die Frauen gemacht haben“, sagt sie. „Wenn sie dann allein leben, essen sie oft nur Brot oder Suppe aus der Dose.“ Den Kurs leitet ihr Bruder Hubertus Wollmeier. Er war 30 Jahre lang Koch in einem Hotel und ist jetzt in Rente.",
+            "Im Kurs machen die Männer einfache Gerichte, zum Beispiel Kartoffelsalat, Gemüsesuppe oder Fisch mit Reis. Zuerst zeigt Hubertus Wollmeier jeden Schritt, dann kochen die Teilnehmer in Gruppen von drei Personen. Am Ende essen alle zusammen. Der Kurs kostet 60 Euro. Das Geld für die Lebensmittel ist im Preis schon dabei.",
+            "Einer der Teilnehmer ist Wilfried Kalinke, 74. „Am Anfang konnte ich nicht einmal Nudeln kochen“, erzählt er. „Heute koche ich am Sonntag manchmal für meine Enkel.“ Im Herbst soll es einen zweiten Kurs geben. Dafür haben sich schon 15 Männer angemeldet."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "richtig-falsch",
+          "prompt": "Der Kochkurs im Familienzentrum dauert ein halbes Jahr.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "kochkurs",
+              "quote": "Der Kurs ist immer am Donnerstagabend und dauert zehn Wochen."
+            }
+          ],
+          "explanation": "Metinde kursun „dauert zehn Wochen“ (on hafta sürüyor) olduğu yazıyor. On hafta yarım yıl (altı ay) değildir. Kurs mart ayında başladı ve her perşembe akşamı yapılıyor. İfade yanlış."
+        },
+        {
+          "number": 7,
+          "type": "richtig-falsch",
+          "prompt": "Hubertus Wollmeier hat früher als Koch gearbeitet.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "kochkurs",
+              "quote": "Er war 30 Jahre lang Koch in einem Hotel und ist jetzt in Rente."
+            }
+          ],
+          "explanation": "Kursu Gerda Wollmeier'in kardeşi Hubertus Wollmeier yönetiyor. Metinde „Er war 30 Jahre lang Koch in einem Hotel“ (30 yıl bir otelde aşçıydı) ve „ist jetzt in Rente“ (şimdi emekli) yazıyor. Yani eskiden aşçı olarak çalıştı. İfade doğru."
+        },
+        {
+          "number": 8,
+          "type": "richtig-falsch",
+          "prompt": "Im Kurs kochen die Männer nicht allein, sondern zusammen mit anderen Teilnehmern.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "kochkurs",
+              "quote": "dann kochen die Teilnehmer in Gruppen von drei Personen"
+            }
+          ],
+          "explanation": "Önce Hubertus Wollmeier her adımı gösteriyor, sonra „kochen die Teilnehmer in Gruppen von drei Personen“ (katılımcılar üç kişilik gruplar hâlinde yemek yapıyor). Yani erkekler tek başına değil, başka katılımcılarla birlikte pişiriyor. İfade doğru."
+        },
+        {
+          "number": 9,
+          "type": "richtig-falsch",
+          "prompt": "Für die Lebensmittel müssen die Teilnehmer extra Geld bezahlen.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "kochkurs",
+              "quote": "Das Geld für die Lebensmittel ist im Preis schon dabei."
+            }
+          ],
+          "explanation": "Kurs 60 Euro tutuyor. Metinde „Das Geld für die Lebensmittel ist im Preis schon dabei.“ (Yiyeceklerin parası fiyata zaten dahil.) yazıyor. Yani yiyecekler için ayrıca para ödenmiyor. İfade yanlış."
+        },
+        {
+          "number": 10,
+          "type": "richtig-falsch",
+          "prompt": "Wilfried Kalinke kocht jetzt ab und zu für seine Familie.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "kochkurs",
+              "quote": "„Heute koche ich am Sonntag manchmal für meine Enkel.“"
+            }
+          ],
+          "explanation": "Wilfried Kalinke başta makarna bile pişiremiyordu. Şimdi şöyle diyor: „Heute koche ich am Sonntag manchmal für meine Enkel.“ (Bugün pazar günleri bazen torunlarım için yemek yapıyorum.) Torunlar ailesidir, „manchmal“ (bazen) = „ab und zu“. İfade doğru."
+        }
+      ]
+    }
+  ]
+}

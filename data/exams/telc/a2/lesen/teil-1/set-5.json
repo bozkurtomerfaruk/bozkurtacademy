@@ -1,0 +1,121 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Mit dem Zug in den Urlaub",
+  "minutes": 10,
+  "instructions": "Lesen Sie den Zeitungstext und die Aufgaben 1–5. Welche Lösung ist richtig: a, b oder c?",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "zug",
+          "title": "Mit dem Zug in den Urlaub",
+          "byline": "Weidenthaler Zeitung",
+          "paragraphs": [
+            "Familie Habermann aus Weidenthal ist in diesem Sommer nicht mit dem Auto in den Urlaub gefahren, sondern mit dem Zug. Silke und Jörg Habermann und ihre zwei Söhne waren drei Wochen am Meer in Italien. Früher ist die Familie immer mit dem Auto gefahren. „Aber die Kinder waren auf der langen Fahrt immer müde und hatten keine Lust mehr“, erzählt Silke Habermann.",
+            "Die Reise hat zwei Tage gedauert. Am ersten Tag ist die Familie bis in die Schweiz gefahren und hat dort in einem Hotel am Bahnhof geschlafen. Im Zug haben die Jungen Karten gespielt, gelesen und aus dem Fenster geschaut. „Einmal mussten wir in sieben Minuten umsteigen, mit vier Koffern! Das war ziemlich stressig“, sagt Jörg Habermann.",
+            "Billiger als mit dem Auto war die Reise nicht. Silke Habermann hat die Fahrkarten schon im Februar im Internet gekauft, denn im Sommer sind die Züge sehr voll und die Preise höher.",
+            "Am Urlaubsort hatte die Familie kein Auto. Zum Strand ist sie zu Fuß gegangen, für Ausflüge hat sie den Bus genommen. Nächstes Jahr möchten die Habermanns wieder mit dem Zug fahren, dann aber nach Norwegen. Der ältere Sohn Fiete ist zwölf und hat schon einen Plan gemacht: „Wir fahren mit dem Nachtzug! Dann schlafen wir im Zug und brauchen kein Hotel.“"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "abc",
+          "prompt": "Familie Habermann …",
+          "options": {
+            "a": "hat früher für den Urlaub immer das Auto genommen.",
+            "b": "war drei Wochen in den Bergen in Italien.",
+            "c": "ist mit dem Zug gefahren, weil das billiger war."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "zug",
+              "quote": "Früher ist die Familie immer mit dem Auto gefahren."
+            }
+          ],
+          "explanation": "Metinde „Früher ist die Familie immer mit dem Auto gefahren“ (Eskiden aile hep arabayla gitti) yazıyor. Yani eskiden tatil için hep arabayı kullandı: „das Auto genommen“. b) yanlış: Aile üç hafta dağlarda değil, İtalya'da denizdeydi: „drei Wochen am Meer in Italien“. c) yanlış: Tren yolculuğu arabadan ucuz değildi: „Billiger als mit dem Auto war die Reise nicht.“ Sebep çocuklardı: Uzun araba yolculuğunda hep yorgundular ve hevesleri kalmıyordu: „immer müde und hatten keine Lust mehr“."
+        },
+        {
+          "number": 2,
+          "type": "abc",
+          "prompt": "Auf der Reise …",
+          "options": {
+            "a": "ist die Familie an einem Tag bis ans Meer gefahren.",
+            "b": "hat die Familie eine Nacht in der Schweiz verbracht.",
+            "c": "hatte die Familie beim Umsteigen viel Zeit."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "zug",
+              "quote": "Am ersten Tag ist die Familie bis in die Schweiz gefahren und hat dort in einem Hotel am Bahnhof geschlafen."
+            }
+          ],
+          "explanation": "Metinde „Am ersten Tag ist die Familie bis in die Schweiz gefahren und hat dort in einem Hotel am Bahnhof geschlafen“ (İlk gün aile İsviçre'ye kadar gitti ve orada garın yanındaki bir otelde uyudu) yazıyor. Yani bir geceyi İsviçre'de geçirdi: „eine Nacht verbracht“. a) yanlış: Yolculuk bir gün değil, iki gün sürdü: „Die Reise hat zwei Tage gedauert.“ c) yanlış: Bir kez dört bavulla yedi dakikada aktarma yapmaları gerekti ve bu oldukça stresliydi: „in sieben Minuten umsteigen … Das war ziemlich stressig.“"
+        },
+        {
+          "number": 3,
+          "type": "abc",
+          "prompt": "Die Fahrkarten …",
+          "options": {
+            "a": "hat Jörg Habermann im Internet bestellt.",
+            "b": "waren billiger als eine Fahrt mit dem Auto.",
+            "c": "hat die Familie einige Monate vor der Reise gekauft."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "zug",
+              "quote": "Silke Habermann hat die Fahrkarten schon im Februar im Internet gekauft"
+            }
+          ],
+          "explanation": "Metinde „Silke Habermann hat die Fahrkarten schon im Februar im Internet gekauft“ (Silke Habermann biletleri daha şubatta internetten aldı) yazıyor. Yolculuk yazın oldu („in diesem Sommer“); yani biletler yolculuktan birkaç ay önce alındı. a) yanlış: Biletleri Jörg Habermann değil, Silke Habermann aldı. b) yanlış: Yolculuk arabadan ucuz değildi: „Billiger als mit dem Auto war die Reise nicht.“"
+        },
+        {
+          "number": 4,
+          "type": "abc",
+          "prompt": "Am Urlaubsort …",
+          "options": {
+            "a": "hat die Familie ein Auto gemietet.",
+            "b": "ist die Familie mit dem Bus zum Strand gefahren.",
+            "c": "haben die Habermanns Ausflüge mit dem Bus gemacht."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "zug",
+              "quote": "für Ausflüge hat sie den Bus genommen"
+            }
+          ],
+          "explanation": "Metinde „für Ausflüge hat sie den Bus genommen“ (geziler için otobüse bindi) yazıyor. Yani Habermann ailesi gezilere otobüsle gitti. a) yanlış: Tatil yerinde ailenin arabası yoktu: „Am Urlaubsort hatte die Familie kein Auto.“ b) yanlış: Kumsala otobüsle değil, yürüyerek gittiler: „Zum Strand ist sie zu Fuß gegangen.“"
+        },
+        {
+          "number": 5,
+          "type": "abc",
+          "prompt": "Fiete …",
+          "options": {
+            "a": "möchte nächstes Jahr wieder nach Italien fahren.",
+            "b": "möchte, dass die Familie im Zug übernachtet.",
+            "c": "ist der jüngere Sohn von Silke und Jörg Habermann."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "zug",
+              "quote": "Dann schlafen wir im Zug und brauchen kein Hotel."
+            }
+          ],
+          "explanation": "Fiete „Wir fahren mit dem Nachtzug! Dann schlafen wir im Zug und brauchen kein Hotel.“ (Gece treniyle gidelim! O zaman trende uyuruz ve otele ihtiyacımız olmaz) diyor. „im Zug schlafen“ (trende uyumak) = „im Zug übernachten“ (geceyi trende geçirmek). a) yanlış: Gelecek yıl aile İtalya'ya değil, Norveç'e gitmek istiyor: „dann aber nach Norwegen“. c) yanlış: Fiete küçük değil, büyük oğul: „Der ältere Sohn Fiete ist zwölf“."
+        }
+      ]
+    }
+  ]
+}

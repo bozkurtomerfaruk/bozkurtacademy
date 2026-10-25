@@ -24,7 +24,7 @@
         {
           "id": "b",
           "label": "b",
-          "title": "Konditorei Weidemann",
+          "title": "Bäckerei Weidemann",
           "paragraphs": [
             "Torten für Geburtstag, Hochzeit und andere Feste – auf Wunsch mit Namen oder Foto. Bitte bestellen Sie drei Tage vorher. Sie möchten unsere Kuchen gleich probieren? Unser kleines Café ist von Montag bis Samstag von 14 bis 18 Uhr geöffnet."
           ]
@@ -58,7 +58,7 @@
           "label": "f",
           "title": "Sonntagsfrühstück im Café Ambrosi",
           "paragraphs": [
-            "Jeden Sonntag von 10 bis 14 Uhr: Brot, Eier, Käse, Obst und Kuchen, so viel Sie möchten. Erwachsene 19 Euro, Kinder bis 6 Jahre frei. Für die Kleinen gibt es eine Spielecke mit Büchern und Spielzeug."
+            "Jeden Sonntag von 10 bis 14 Uhr: Brot, Eier, Käse, Obst und Kuchen, so viel Sie möchten. Erwachsene 19 Euro, Kinder bis 6 Jahre frei. Bei schönem Wetter können Sie auch draußen sitzen."
           ]
         },
         {
@@ -72,9 +72,9 @@
         {
           "id": "h",
           "label": "h",
-          "title": "Grillplatz am Erlensee",
+          "title": "Grillplatz am Binsensee",
           "paragraphs": [
-            "Die Stadt vermietet den Grillplatz am Erlensee an Gruppen. Ein großer Grill, Tische und Bänke sind da, Kohle bringen Sie bitte selbst mit. Ab 22 Uhr muss es ruhig sein. Preis: 25 Euro pro Tag."
+            "Die Stadt vermietet den Grillplatz am Binsensee an Gruppen. Ein großer Grill, Tische und Bänke sind da, Fleisch und Getränke bringen Sie bitte selbst mit. Ab 22 Uhr muss es ruhig sein. Preis: 25 Euro pro Tag."
           ]
         }
       ],
@@ -83,7 +83,7 @@
           "number": 0,
           "example": true,
           "type": "zuordnung",
-          "prompt": "Ihre Eltern sind seit 40 Jahren verheiratet. Sie möchten das zu Hause mit 25 Gästen feiern, aber für die Küche haben Sie keine Zeit.",
+          "prompt": "Ihre Eltern sind seit 40 Jahren verheiratet. Das möchten Sie zu Hause mit 25 Gästen feiern, aber für die Küche haben Sie keine Zeit.",
           "answer": "a",
           "evidence": [{ "text": "a", "quote": "Wir bringen warmes und kaltes Essen zu Ihnen nach Hause – für Feiern ab 15 Personen." }],
           "explanation": "a ilanındaki firma yemeği eve getiriyor: „Wir bringen warmes und kaltes Essen zu Ihnen nach Hause – für Feiern ab 15 Personen.“ (Sıcak ve soğuk yemeği evinize getiriyoruz – 15 kişiden itibaren kutlamalar için.) Siz evde 25 misafirle kutlama yapmak istiyorsunuz ve mutfak için vaktiniz yok. Bu ilan örnekte kullanıldığı için başka bir durum için seçilemez."
@@ -107,10 +107,10 @@
         {
           "number": 13,
           "type": "zuordnung",
-          "prompt": "Mats möchte mit Freunden einen Nachmittag im Freien verbringen. Dabei wollen sie Fleisch und Gemüse auf dem Feuer machen. Einen eigenen Grill hat keiner von ihnen.",
+          "prompt": "Bennet möchte mit Freunden einen Nachmittag im Freien verbringen. Dabei wollen sie Fleisch und Gemüse auf dem Feuer machen. Einen eigenen Grill hat keiner von ihnen.",
           "answer": "h",
           "evidence": [{ "text": "h", "quote": "Ein großer Grill, Tische und Bänke sind da" }],
-          "explanation": "h ilanında şehir göl kenarındaki bir mangal yerini gruplara kiralıyor: „Ein großer Grill, Tische und Bänke sind da“ (Büyük bir mangal, masalar ve banklar var). Mats ve arkadaşları açık havada et ve sebze pişirmek istiyor, ama hiçbirinin mangalı yok. Tuzak c: Orada da yemek yapılabilir, çünkü bir „Küche“ (mutfak) var; ama oda „im Keller“ (bodrum katta), yani açık havada değil."
+          "explanation": "h ilanında şehir göl kenarındaki bir mangal yerini gruplara kiralıyor: „Ein großer Grill, Tische und Bänke sind da“ (Büyük bir mangal, masalar ve banklar var). Bennet ve arkadaşları açık havada et ve sebze pişirmek istiyor, ama hiçbirinin mangalı yok. Tuzak c: Orada da yemek yapılabilir, çünkü bir „Küche“ (mutfak) var; ama oda „im Keller“ (bodrum katta), yani açık havada değil."
         },
         {
           "number": 14,
@@ -123,10 +123,10 @@
         {
           "number": 15,
           "type": "zuordnung",
-          "prompt": "Familie Sundermann schläft am Sonntag gern lange. Danach möchte sie nicht zu Hause, sondern in einem Café frühstücken. Die zwei kleinen Kinder sollen dort auch spielen können.",
+          "prompt": "Familie Sundermann schläft am Sonntag gern lange. Danach möchte sie nicht zu Hause, sondern in einem Café frühstücken. Die Kinder sind vier und fünf Jahre alt. Für sie möchte die Familie nichts bezahlen.",
           "answer": "f",
-          "evidence": [{ "text": "f", "quote": "Für die Kleinen gibt es eine Spielecke mit Büchern und Spielzeug." }],
-          "explanation": "f ilanındaki kafede „Jeden Sonntag von 10 bis 14 Uhr“ (her pazar 10'dan 14'e kadar) kahvaltı var, yani geç kalkan bir aile de gidebilir. „Für die Kleinen gibt es eine Spielecke mit Büchern und Spielzeug.“ (Küçükler için kitaplı ve oyuncaklı bir oyun köşesi var.) Sundermann ailesinin iki küçük çocuğu orada oynayabilir. Tuzak b: Pastanenin de bir kafesi var, ama kafe „von Montag bis Samstag“ (pazartesiden cumartesiye kadar) açık. Sundermann ailesi ise pazar günü kahvaltı etmek istiyor."
+          "evidence": [{ "text": "f", "quote": "Kinder bis 6 Jahre frei" }],
+          "explanation": "f ilanındaki kafede „Jeden Sonntag von 10 bis 14 Uhr“ (her pazar 10'dan 14'e kadar) kahvaltı var, yani geç kalkan bir aile de gidebilir. Ayrıca „Kinder bis 6 Jahre frei“ (6 yaşına kadar çocuklar ücretsiz) yazıyor. Sundermann ailesinin çocukları dört ve beş yaşında, yani aile onlar için para ödemiyor. Tuzak b: Fırının da küçük bir kafesi var, ama kafe „von Montag bis Samstag“ (pazartesiden cumartesiye kadar) açık. Sundermann ailesi ise pazar günü kahvaltı etmek istiyor."
         }
       ]
     }

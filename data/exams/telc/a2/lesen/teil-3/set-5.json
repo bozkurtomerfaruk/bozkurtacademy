@@ -26,7 +26,7 @@
           "label": "b",
           "title": "Hilfe für meinen Hund",
           "paragraphs": [
-            "Ich bin 81 Jahre alt und kann nicht mehr weit laufen. Wer geht mit meinem Hund spazieren? Bitte jeden Morgen von 7 bis 8 Uhr, auch am Wochenende. Ich zahle 9 Euro pro Tag. Frau Kuhnert, Telefon 0176 4419 2803."
+            "Ich bin 81 Jahre alt und kann nicht mehr weit laufen. Wer geht mit meinem Hund spazieren? Bitte jeden Morgen von 7 bis 8 Uhr, auch am Wochenende. Ich zahle 9 Euro pro Tag. Frau Brakemeier, Telefon 0176 4419 2803."
           ]
         },
         {
@@ -40,9 +40,9 @@
         {
           "id": "d",
           "label": "d",
-          "title": "Umfragen am Telefon – Firma Iversen",
+          "title": "Firma Iversen sucht Mitarbeiter am Telefon",
           "paragraphs": [
-            "Für unsere Umfragen suchen wir freundliche Mitarbeiter mit guten Deutschkenntnissen. Sie rufen Menschen an und stellen Fragen – von zu Hause aus, mit Ihrem eigenen Computer. Wann und wie viele Stunden Sie arbeiten, entscheiden Sie selbst. 13 Euro pro Stunde."
+            "Wir suchen freundliche Mitarbeiter mit guten Deutschkenntnissen. Sie rufen Menschen an und stellen Fragen zu unseren Produkten – von zu Hause aus, mit Ihrem eigenen Computer. Wann und wie viele Stunden Sie arbeiten, entscheiden Sie selbst. 13 Euro pro Stunde."
           ]
         },
         {
@@ -50,7 +50,7 @@
           "label": "e",
           "title": "Seniorenheim Haus Kastanienhof",
           "paragraphs": [
-            "Unsere Bewohner freuen sich über Besuch! Für Samstag- und Sonntagnachmittag suchen wir Helfer: mit den alten Menschen spazieren gehen, vorlesen, Karten spielen. Sie brauchen keine Ausbildung. 13,50 Euro pro Stunde."
+            "Die alten Menschen in unserem Haus freuen sich über Besuch! Für Samstag- und Sonntagnachmittag suchen wir Helfer: mit ihnen und unserem Hund spazieren gehen, vorlesen, Karten spielen. Sie brauchen keine Ausbildung. 13,50 Euro pro Stunde."
           ]
         },
         {
@@ -64,7 +64,7 @@
         {
           "id": "g",
           "label": "g",
-          "title": "Kino Maibach sucht Aushilfen",
+          "title": "Kino Sonnenhof sucht Aushilfen",
           "paragraphs": [
             "Für Kasse und Getränkeverkauf suchen wir Aushilfen am Freitag- und Samstagabend von 18 bis 23 Uhr. Wir zahlen 13 Euro pro Stunde. Und das Beste: Bei uns können Sie alle neuen Filme kostenlos sehen!"
           ]
@@ -72,7 +72,7 @@
         {
           "id": "h",
           "label": "h",
-          "title": "Biergarten am Rosenweg",
+          "title": "Biergarten am Fliederweg",
           "paragraphs": [
             "Für die Sommermonate Mai bis September suchen wir freundliche Kellnerinnen und Kellner. Erfahrung ist gut, aber nicht nötig. Sie arbeiten abends und am Wochenende. Lohn: 12,50 Euro pro Stunde."
           ]
@@ -101,8 +101,8 @@
           "type": "zuordnung",
           "prompt": "Liv ist 19 und möchte im nächsten Jahr eine Ausbildung in der Altenpflege beginnen. Vorher möchte sie am Wochenende Zeit mit Senioren verbringen und dabei ein bisschen Geld verdienen.",
           "answer": "e",
-          "evidence": [{ "text": "e", "quote": "Für Samstag- und Sonntagnachmittag suchen wir Helfer: mit den alten Menschen spazieren gehen, vorlesen, Karten spielen." }],
-          "explanation": "e ilanında huzurevi „Für Samstag- und Sonntagnachmittag“ (cumartesi ve pazar öğleden sonraları için) yardımcı arıyor: Yaşlılarla yürüyüşe çıkmak, kitap okumak, kart oynamak. „Sie brauchen keine Ausbildung.“ (Mesleki eğitime ihtiyacınız yok.) Liv hafta sonu yaşlılarla vakit geçirmek istiyor ve mesleki eğitimine ancak gelecek yıl başlayacak. Tuzak f: Bakım servisi de yaşlılarla çalışıyor, ama „mit einer Ausbildung in der Pflege“ (bakım alanında mesleki eğitimi olan) kişiler arıyor ve çalışma günleri „von Montag bis Freitag“ (pazartesiden cumaya kadar)."
+          "evidence": [{ "text": "e", "quote": "Für Samstag- und Sonntagnachmittag suchen wir Helfer: mit ihnen und unserem Hund spazieren gehen, vorlesen, Karten spielen." }],
+          "explanation": "e ilanında huzurevi „Für Samstag- und Sonntagnachmittag“ (cumartesi ve pazar öğleden sonraları için) yardımcı arıyor: Yaşlılarla ve huzurevinin köpeğiyle yürüyüşe çıkmak, kitap okumak, kart oynamak. „Sie brauchen keine Ausbildung.“ (Mesleki eğitime ihtiyacınız yok.) Liv hafta sonu yaşlılarla vakit geçirmek istiyor ve mesleki eğitimine ancak gelecek yıl başlayacak. Tuzak f: Bakım servisi de yaşlılarla çalışıyor, ama „mit einer Ausbildung in der Pflege“ (bakım alanında mesleki eğitimi olan) kişiler arıyor ve çalışma günleri „von Montag bis Freitag“ (pazartesiden cumaya kadar)."
         },
         {
           "number": 13,
@@ -118,14 +118,14 @@
           "prompt": "Ihr Mitbewohner studiert und hat ab 9 Uhr Unterricht an der Uni. Er steht gern früh auf, ist gern draußen und liebt Tiere. Er möchte jeden Tag ein bisschen Geld verdienen.",
           "answer": "b",
           "evidence": [{ "text": "b", "quote": "Bitte jeden Morgen von 7 bis 8 Uhr, auch am Wochenende." }],
-          "explanation": "b ilanında yaşlı bir kadın köpeğini gezdirecek birini arıyor: „Bitte jeden Morgen von 7 bis 8 Uhr, auch am Wochenende.“ (Lütfen her sabah 7'den 8'e kadar, hafta sonu da.) Ödeme „9 Euro pro Tag“ (günde 9 euro). Ev arkadaşınız erken kalkmayı, dışarıda olmayı ve hayvanları seviyor; dersi saat 9'da başlıyor. Tuzak e: Orada da yürüyüşe çıkılıyor („spazieren gehen“), ama yaşlı insanlarla ve „Samstag- und Sonntagnachmittag“ (cumartesi ve pazar öğleden sonra). Ev arkadaşınız ise her gün ve sabah erken çalışmak istiyor."
+          "explanation": "b ilanında yaşlı bir kadın köpeğini gezdirecek birini arıyor: „Bitte jeden Morgen von 7 bis 8 Uhr, auch am Wochenende.“ (Lütfen her sabah 7'den 8'e kadar, hafta sonu da.) Ödeme „9 Euro pro Tag“ (günde 9 euro). Ev arkadaşınız erken kalkmayı, dışarıda olmayı ve hayvanları seviyor; dersi saat 9'da başlıyor. Tuzak e: Orada da bir köpekle yürüyüşe çıkılıyor („mit ihnen und unserem Hund spazieren gehen“), ama iş „Für Samstag- und Sonntagnachmittag“ (cumartesi ve pazar öğleden sonraları için). Ev arkadaşınız ise her gün („jeden Tag“) biraz para kazanmak istiyor."
         },
         {
           "number": 15,
           "type": "zuordnung",
           "prompt": "Frau Nowak war früher Englischlehrerin. Jetzt hat sie ein kleines Baby und möchte für die Arbeit nicht aus dem Haus gehen. Am Abend kann sie aber ein paar Stunden arbeiten.",
           "answer": "d",
-          "evidence": [{ "text": "d", "quote": "Sie rufen Menschen an und stellen Fragen – von zu Hause aus, mit Ihrem eigenen Computer." }],
+          "evidence": [{ "text": "d", "quote": "Sie rufen Menschen an und stellen Fragen zu unseren Produkten – von zu Hause aus, mit Ihrem eigenen Computer." }],
           "explanation": "d ilanındaki işte insanları arayıp soru soruyorsunuz: „von zu Hause aus, mit Ihrem eigenen Computer“ (evden, kendi bilgisayarınızla). „Wann und wie viele Stunden Sie arbeiten, entscheiden Sie selbst.“ (Ne zaman ve kaç saat çalışacağınıza kendiniz karar verirsiniz.) Bayan Nowak evden çıkmak istemiyor ve akşamları birkaç saat çalışabilir. Tuzak a: Orada İngilizce dersi verilebilir, ama ders „nachmittags in unseren Räumen in der Schillerstraße“ (öğleden sonra Schillerstraße'deki salonlarımızda) yapılıyor."
         }
       ]

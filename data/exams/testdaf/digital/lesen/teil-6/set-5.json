@@ -1,0 +1,88 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 6,
+  "set": "set-5",
+  "title": "Wärme aus Rechenzentren",
+  "minutes": 5,
+  "instructions": "Lesen Sie den Text. Ordnen Sie die Aussagen 28 bis 31 einem der beiden Begriffe (a oder b) zu.",
+  "groups": [
+    {
+      "layout": "article",
+      "none": false,
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Wärme aus Rechenzentren",
+          "paragraphs": [
+            "Rechenzentren verbrauchen enorme Mengen Strom, und nahezu die gesamte Energie wird am Ende in Wärme umgewandelt. Bislang blasen die meisten Betreiber diese Wärme mit großen Lüftungsanlagen ungenutzt in die Umgebung. Der Energietechniker Bendix Glasmacher untersucht im Auftrag mehrerer kommunaler Versorger, wie sie sich stattdessen in Fernwärmenetze einspeisen ließe.",
+            "Das Potenzial ist beträchtlich. Nach Glasmachers Berechnungen könnte ein einziges größeres Rechenzentrum den Heizbedarf von mehreren tausend Wohnungen decken. Weil die Server rund um die Uhr laufen, fällt die Wärme zudem gleichmäßig an – anders als bei der Solarthermie, die gerade im Winter wenig liefert. Für die Betreiber wiederum entsteht eine zusätzliche Einnahmequelle, und sie könnten einen Teil des Stroms für die Kühlung einsparen, wenn das Netz ihnen die Hitze abnimmt. Auch klimapolitisch wäre der Effekt spürbar, da in vielen Fernwärmenetzen bislang vorwiegend Erdgas verbrannt wird.",
+            "Allerdings verlässt das Kühlwasser die Serverräume mit lediglich 30 bis 40 Grad. Um Wohngebäude damit zu heizen, muss es mit Wärmepumpen weiter erhitzt werden, die ihrerseits Strom benötigen. Steigen die Strompreise, könnte sich die Bilanz daher rasch ins Negative kehren. Schwerer wiegt für die Stadtplanerin Philippa Vahrenkamp ein anderer Punkt: Die Lebensdauer von Wärmenetzen bemisst sich in Jahrzehnten, Verträge mit Rechenzentrumsbetreibern laufen dagegen häufig nur wenige Jahre. Verlagere ein Konzern seine Rechenkapazitäten an einen anderen Standort, stünden die angeschlossenen Haushalte im ungünstigsten Fall ohne Wärmequelle da. Vahrenkamp empfiehlt deshalb, jedes Netz zusätzlich an eine zweite, unabhängige Versorgung anzuschließen – was die Investitionen allerdings erhöht.",
+            "Trotz dieser Einwände sehen beide Fachleute vor allem bei Neubauprojekten Spielraum. Würden Rechenzentren von vornherein in der Nähe neuer Wohnquartiere errichtet, ließen sich die Leitungen kurz und die Verluste beim Transport gering halten. Zwei Pilotprojekte dieser Art befinden sich nach Glasmachers Angaben bereits in der Planung."
+          ]
+        },
+        {
+          "id": "begriff-a",
+          "label": "a",
+          "title": "Chance",
+          "paragraphs": [
+            "Die Aussage beschreibt einen möglichen Gewinn, den die Nutzung der Serverwärme bietet."
+          ]
+        },
+        {
+          "id": "begriff-b",
+          "label": "b",
+          "title": "Risiko",
+          "paragraphs": [
+            "Die Aussage beschreibt eine mögliche Gefahr, die mit dieser Nutzung verbunden ist."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 28,
+          "type": "zuordnung",
+          "prompt": "Wird elektrische Energie teurer, kann sich das Vorhaben nicht mehr rechnen, weil für die Aufbereitung der Wärme zusätzliche Geräte betrieben werden müssen.",
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "muss es mit Wärmepumpen weiter erhitzt werden, die ihrerseits Strom benötigen" },
+            { "text": "artikel", "quote": "Steigen die Strompreise, könnte sich die Bilanz daher rasch ins Negative kehren" }
+          ],
+          "explanation": "Sunuculardan çıkan su yalnızca 30–40 derece; evleri ısıtmak için „mit Wärmepumpen weiter erhitzt werden, die ihrerseits Strom benötigen“ (kendileri de elektrik harcayan ısı pompalarıyla daha da ısıtılması) gerekiyor. Bu yüzden „Steigen die Strompreise, könnte sich die Bilanz … ins Negative kehren“ (elektrik fiyatları artarsa hesap zarara dönebilir). Bu olası bir tehlikedir. Bu yüzden cevap b (Risiko)."
+        },
+        {
+          "number": 29,
+          "type": "zuordnung",
+          "prompt": "Zieht ein Unternehmen mit seinen Servern an einen anderen Ort, könnten angeschlossene Wohnungen schlimmstenfalls unbeheizt bleiben.",
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "stünden die angeschlossenen Haushalte im ungünstigsten Fall ohne Wärmequelle da" }
+          ],
+          "explanation": "Vahrenkamp'a göre ısı şebekeleri onlarca yıl kullanılıyor, veri merkezleriyle sözleşmeler ise çoğu zaman birkaç yıl sürüyor. Bir şirket hesaplama kapasitesini başka bir yere taşırsa „stünden die angeschlossenen Haushalte im ungünstigsten Fall ohne Wärmequelle da“ (bağlı haneler en kötü durumda ısı kaynağı olmadan kalır). Vahrenkamp bu yüzden ikinci bir bağımsız kaynak öneriyor. Bu bir tehlikedir. Bu yüzden cevap b (Risiko)."
+        },
+        {
+          "number": 30,
+          "type": "zuordnung",
+          "prompt": "Anders als bei der Nutzung von Sonnenwärme steht die Energie auch in der kalten Jahreszeit verlässlich zur Verfügung.",
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "Weil die Server rund um die Uhr laufen, fällt die Wärme zudem gleichmäßig an" }
+          ],
+          "explanation": "Metin bunu potansiyel paragrafında sayıyor: Sunucular gece gündüz çalıştığı için „fällt die Wärme zudem gleichmäßig an“ (ısı düzenli olarak oluşur), oysa güneş enerjisiyle ısı üretimi („Solarthermie“) özellikle kışın az ısı veriyor. İfadedeki „Sonnenwärme“ ve „kalte Jahreszeit“ bunu karşılıyor. Bu, kullanımın sağladığı bir kazançtır. Bu yüzden cevap a (Chance)."
+        },
+        {
+          "number": 31,
+          "type": "zuordnung",
+          "prompt": "Firmen, die Server betreiben, müssten weniger Energie aufwenden, um ihre Technik vor Überhitzung zu schützen, sofern ein Versorger ihnen die erzeugte Wärme abnimmt.",
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "sie könnten einen Teil des Stroms für die Kühlung einsparen" }
+          ],
+          "explanation": "Metne göre işletmeciler ek bir gelir elde etmenin yanı sıra, şebeke ısıyı onlardan aldığında „könnten einen Teil des Stroms für die Kühlung einsparen“ (soğutma için harcanan elektriğin bir kısmından tasarruf edebilirler). İfadedeki „vor Überhitzung schützen“ (aşırı ısınmaya karşı korumak) soğutmayı karşılıyor. Bu, kullanımın sağladığı bir kazançtır. Bu yüzden cevap a (Chance)."
+        }
+      ]
+    }
+  ]
+}

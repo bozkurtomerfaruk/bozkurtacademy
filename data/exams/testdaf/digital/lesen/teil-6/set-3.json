@@ -1,0 +1,87 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 6,
+  "set": "set-3",
+  "title": "Versalzene Böden",
+  "minutes": 5,
+  "instructions": "Lesen Sie den Text. Ordnen Sie die Aussagen 28 bis 31 einem der beiden Begriffe (a oder b) zu.",
+  "groups": [
+    {
+      "layout": "article",
+      "none": false,
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Versalzene Böden",
+          "paragraphs": [
+            "Weltweit büßen landwirtschaftliche Flächen in wachsendem Umfang an Fruchtbarkeit ein, weil sich im Oberboden Salze anreichern. Die Bodenkundlerin Roswitha Brökelmann und der Agrarökonom Eskil Grönholt haben in einer Übersichtsarbeit zusammengetragen, wie es dazu kommt und was daraus folgt.",
+            "Als Hauptauslöser benennen die beiden eine Bewässerungspraxis, die in trockenen Regionen über Jahrzehnte üblich war: Wird mehr Wasser auf die Felder geleitet, als die Pflanzen aufnehmen können, steigt der Grundwasserspiegel allmählich an. Liegt er schließlich nur noch knapp unter der Oberfläche, zieht die Verdunstung das Wasser kapillar nach oben; zurück bleiben die darin gelösten Mineralien. In Küstennähe kommt ein zweiter Mechanismus hinzu. Wo Brunnen stärker beansprucht werden, als Niederschläge sie wieder auffüllen, dringt Meerwasser seitlich in die Grundwasserleiter vor – ein Prozess, den der steigende Meeresspiegel zusätzlich beschleunigt.",
+            "Die Auswirkungen beschränken sich keineswegs auf geringere Ernten. Zwar leiden empfindliche Kulturen wie Bohnen oder Möhren als Erste: Ein hoher Salzgehalt erschwert es den Wurzeln, Wasser aufzunehmen, sodass die Pflanzen selbst auf feuchtem Boden welken. Für Weizen auf mäßig belasteten Feldern beziffert die Übersichtsarbeit die Ertragseinbußen auf rund ein Fünftel. Brökelmann verweist jedoch auch auf Schäden an der Bodenstruktur. Natrium verdrängt Calcium von den Tonpartikeln, die Krümel zerfallen, und der Boden verschlämmt bei Regen zu einer harten Kruste, die weder Luft noch Wasser durchlässt. Ist dieser Zustand erst erreicht, lässt er sich nur mit großem Aufwand rückgängig machen.",
+            "Grönholt richtet den Blick auf die wirtschaftlichen Konsequenzen. In mehreren der ausgewerteten Regionen hätten Betriebe die Bewirtschaftung ganzer Parzellen aufgegeben, und die Pachtpreise für betroffene Flächen seien teils um mehr als ein Drittel gefallen. Der Agrarökonom warnt allerdings davor, das Problem allein den Landwirten anzulasten: Vielerorts hätten staatlich festgelegte Wasserpreise, die kaum die Förderkosten deckten, einen sparsamen Umgang mit Wasser schlicht unattraktiv gemacht."
+          ]
+        },
+        {
+          "id": "begriff-a",
+          "label": "a",
+          "title": "Ursache",
+          "paragraphs": [
+            "Die Aussage nennt etwas, das zur Versalzung der Böden beiträgt."
+          ]
+        },
+        {
+          "id": "begriff-b",
+          "label": "b",
+          "title": "Folge",
+          "paragraphs": [
+            "Die Aussage beschreibt eine Auswirkung, die die Versalzung nach sich zieht."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 28,
+          "type": "zuordnung",
+          "prompt": "Nach Niederschlägen bildet sich an der Oberfläche eine dichte Schicht, durch die weder Gase noch Feuchtigkeit in den Untergrund gelangen.",
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "der Boden verschlämmt bei Regen zu einer harten Kruste, die weder Luft noch Wasser durchlässt" }
+          ],
+          "explanation": "Metne göre tuzdaki sodyum kalsiyumu kil parçacıklarından uzaklaştırıyor, toprak topakları dağılıyor ve toprak yağmurda „zu einer harten Kruste, die weder Luft noch Wasser durchlässt“ (ne hava ne su geçiren sert bir kabuğa) dönüşüyor. Bu kabuk tuzlanmanın sebebi değil, toprak yapısında ortaya çıkan bir hasar, yani sonucudur. Metin bunu „Die Auswirkungen …“ (etkiler) paragrafında anlatıyor. Bu yüzden cevap b (Folge)."
+        },
+        {
+          "number": 29,
+          "type": "zuordnung",
+          "prompt": "In Küstengebieten wird dem Untergrund mehr Wasser entnommen, als durch Regen nachfließt.",
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "Wo Brunnen stärker beansprucht werden, als Niederschläge sie wieder auffüllen" }
+          ],
+          "explanation": "Kıyıya yakın bölgelerde ikinci bir mekanizma var: „Wo Brunnen stärker beansprucht werden, als Niederschläge sie wieder auffüllen“ (kuyulardan yağışların yeniden doldurabileceğinden fazla su çekilen yerlerde) deniz suyu yeraltı suyu katmanlarına sızıyor. Yani aşırı su çekimi tuzlanmaya yol açan bir etkendir. Bu yüzden cevap a (Ursache)."
+        },
+        {
+          "number": 30,
+          "type": "zuordnung",
+          "prompt": "In einigen der untersuchten Gebiete bringt die Vermietung geschädigter Äcker den Eigentümern deutlich weniger ein als früher.",
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "die Pachtpreise für betroffene Flächen seien teils um mehr als ein Drittel gefallen" }
+          ],
+          "explanation": "Grönholt tuzlanmanın ekonomik sonuçlarını anlatıyor: Etkilenen arazilerin kira bedelleri bazı yerlerde üçte birden fazla düşmüş („die Pachtpreise für betroffene Flächen seien teils um mehr als ein Drittel gefallen“). İfadedeki „Vermietung geschädigter Äcker“ (zarar görmüş tarlaların kiraya verilmesi) bunu karşılıyor. Bu, tuzlanmanın ardından gelen bir etkidir. Bu yüzden cevap b (Folge)."
+        },
+        {
+          "number": 31,
+          "type": "zuordnung",
+          "prompt": "Weil Behörden Wasser zu sehr niedrigen Tarifen abgaben, hatten viele Betriebe wenig Anreiz, die ausgebrachten Mengen zu verringern.",
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "staatlich festgelegte Wasserpreise, die kaum die Förderkosten deckten" }
+          ],
+          "explanation": "Metne göre ana etken, bitkilerin alabileceğinden fazla suyla yapılan sulamadır. Grönholt'a göre bunun arkasında da „staatlich festgelegte Wasserpreise, die kaum die Förderkosten deckten“ (suyu çıkarma maliyetini bile zor karşılayan, devletin belirlediği su fiyatları) var; bu fiyatlar suyu tutumlu kullanmayı cazip olmaktan çıkarmış. Ucuz su böylece tuzlanmaya katkıda bulunuyor; bir sonucu değil. Bu yüzden cevap a (Ursache)."
+        }
+      ]
+    }
+  ]
+}

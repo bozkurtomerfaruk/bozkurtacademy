@@ -111,7 +111,7 @@
         {
           "number": 25,
           "type": "ja-nein-nichts",
-          "prompt": "Bei gleicher Helligkeit zogen die warmweißen Laternen im Feldversuch mehr Insekten an als die bläulich leuchtenden.",
+          "prompt": "Bei identischer Lichtstärke lockten im Freilandexperiment die Leuchten mit warmem Licht mehr Insekten an als die bläulich strahlenden.",
           "answer": "nein",
           "evidence": [
             {
@@ -137,33 +137,33 @@
         {
           "number": 27,
           "type": "ja-nein-nichts",
-          "prompt": "Lüttjohann hat die Erhebungen zu Schlafstörungen in hell beleuchteten Vierteln selbst durchgeführt.",
+          "prompt": "Nach Lüttjohann klagen in stark erhellten Stadtvierteln vor allem ältere Bewohner über Schlafprobleme.",
           "answer": "nichts",
           "evidence": [
             {
               "text": "artikel",
-              "quote": "verweist auf Erhebungen"
+              "quote": "nach denen Bewohner stark beleuchteter Viertel häufiger über Schlafstörungen klagen"
             }
           ],
-          "explanation": "Lüttjohann yalnızca aydınlık semtlerde oturanların daha sık uyku sorunu yaşadığını gösteren araştırmalara „verweist auf Erhebungen“ – atıfta bulunuyor. Bu araştırmaları kendisinin mi yoksa başkalarının mı yaptığı metinde belirtilmiyor: Text sagt dazu nichts."
+          "explanation": "Lüttjohann yalnızca araştırmalara atıfta bulunuyor; bunlara göre çok aydınlatılmış semtlerde oturanlar „häufiger über Schlafstörungen klagen“ – daha sık uyku sorunlarından yakınıyor. Bu kişilerin yaşı hakkında, yani özellikle yaşlıların mı etkilendiği konusunda metinde hiçbir bilgi yok: Text sagt dazu nichts."
         },
         {
           "number": 28,
           "type": "ja-nein-nichts",
-          "prompt": "Ravensfurt hat die nächtliche Absenkung der Straßenbeleuchtung auf Empfehlung von Vehrenkamps Arbeitsgruppe eingeführt.",
+          "prompt": "Bevor Ravensfurt die nächtliche Dämpfung der Laternen in Wohngebieten einführte, wurde sie zunächst in einigen Vierteln getestet.",
           "answer": "nichts",
           "evidence": [
             {
               "text": "artikel",
-              "quote": "Vehrenkamp begrüßt solche Schritte"
+              "quote": "Ravensfurt regelt seit zwei Jahren die Straßenbeleuchtung in Wohngebieten ab 23 Uhr auf ein Drittel der üblichen Leistung herunter"
             }
           ],
-          "explanation": "Metin Ravensfurt’un iki yıldır sokak aydınlatmasını saat 23’ten sonra azalttığını ve „Vehrenkamp begrüßt solche Schritte“ – Vehrenkamp’ın bu tür adımları memnuniyetle karşıladığını söylüyor. Kararın onun grubunun önerisiyle alınıp alınmadığı ise belirtilmiyor: Text sagt dazu nichts."
+          "explanation": "Metin yalnızca Ravensfurt’un iki yıldır konut bölgelerinde sokak aydınlatmasını saat 23’ten sonra normal gücün üçte birine indirdiğini söylüyor („Ravensfurt regelt seit zwei Jahren die Straßenbeleuchtung in Wohngebieten ab 23 Uhr auf ein Drittel der üblichen Leistung herunter“). Uygulamanın önce bazı semtlerde denenip denenmediği hakkında bilgi yok: Text sagt dazu nichts."
         },
         {
           "number": 29,
           "type": "ja-nein-nichts",
-          "prompt": "Vehrenkamp zufolge geht der größere Teil der nächtlichen Aufhellung über der Stadt auf andere Quellen als die Laternen an den Straßen zurück.",
+          "prompt": "Vehrenkamp zufolge stammt der überwiegende Teil der nächtlichen Himmelshelle über der Stadt nicht aus der kommunalen Wegbeleuchtung.",
           "answer": "ja",
           "evidence": [
             {
@@ -176,7 +176,7 @@
         {
           "number": 30,
           "type": "ja-nein-nichts",
-          "prompt": "Vehrenkamp ist der Ansicht, dass strengere Vorgaben für die öffentliche Straßenbeleuchtung genügen würden, um den Nachthimmel deutlich dunkler zu machen.",
+          "prompt": "Vehrenkamp ist der Ansicht, dass strengere Regeln für die kommunalen Laternen ausreichen würden, um den Himmel über der Stadt spürbar abzudunkeln.",
           "answer": "nein",
           "evidence": [
             {

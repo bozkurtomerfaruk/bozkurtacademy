@@ -15,7 +15,8 @@
   const FIXED_OPTIONS = {
     'richtig-falsch': [['richtig', 'Richtig'], ['falsch', 'Falsch']],
     'ja-nein': [['ja', 'Ja'], ['nein', 'Nein']],
-    'ja-nein-nichts': [['ja', 'Ja'], ['nein', 'Nein'], ['nichts', 'Text sagt dazu nichts']]
+    'ja-nein-nichts': [['ja', 'Ja'], ['nein', 'Nein'], ['nichts', 'Text sagt dazu nichts']],
+    'richtig-falsch-nichts': [['richtig', 'Richtig'], ['falsch', 'Falsch'], ['nichts', 'Nicht im Text']]
   };
 
   const files = {};   // path -> Promise of the set

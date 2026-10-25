@@ -1,0 +1,217 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "sprachbausteine",
+  "teil": 1,
+  "set": "set-3",
+  "title": "Eine Beschwerde an den Reiseveranstalter",
+  "minutes": 12,
+  "context": "Eine Frau beschwert sich nach ihrem Urlaub schriftlich beim Reiseveranstalter.",
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort (a, b oder c) in die Lücken 21–30 passt.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "brief",
+          "title": "Beschwerde über unsere Reise nach Calvadera",
+          "byline": "E-Mail von Nihan Çeliktaş an Sonnenkap Reisen",
+          "paragraphs": [
+            "Betreff: Beschwerde über unsere Pauschalreise nach Calvadera, Buchungsnummer 48713",
+            "Sehr geehrte Damen und Herren,",
+            "vom 2. bis 16. August haben mein Mann und ich mit Sonnenkap Reisen zwei Wochen im Hotel „Lagunenblick“ in Calvadera verbracht. Leider waren wir mit dieser Reise sehr unzufrieden, und deshalb möchte ich mich heute {{21}} Sie wenden.",
+            "In Ihrem Katalog stand, dass alle Zimmer einen Balkon {{22}} Meerblick haben. Unser Zimmer lag aber im Erdgeschoss, direkt neben einer Baustelle, {{23}} jeden Morgen schon um sieben Uhr laut war. Wir {{24}} gleich am ersten Tag an der Rezeption gefragt, ob wir ein anderes Zimmer bekommen können. Die Mitarbeiterin war zwar freundlich, {{25}} sie konnte uns nicht helfen, weil das Hotel ausgebucht war.",
+            "Auch mit dem Essen waren wir nicht zufrieden. Am Buffet gab es jeden Abend {{26}} gleichen Gerichte. Außerdem {{27}} der Pool während unseres Aufenthalts fünf Tage lang repariert, sodass wir ihn kaum nutzen konnten.",
+            "Im Katalog haben Sie auch einen Ausflug in die Altstadt versprochen, der im Reisepreis enthalten sein sollte. {{28}} wir am dritten Tag im Hotel nach diesem Ausflug gefragt haben, mussten wir aber 35 Euro pro Person extra bezahlen.",
+            "Ich bitte Sie deshalb, uns einen angemessenen Teil des Reisepreises {{29}}. Die Rechnung für den Ausflug und einige Fotos von {{30}} Zimmer schicke ich Ihnen im Anhang. Ich erwarte Ihre Antwort bis zum 30. September.",
+            "Mit freundlichen Grüßen",
+            "Nihan Çeliktaş"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 21,
+          "type": "abc",
+          "prompt": "Lücke 21",
+          "options": {
+            "a": "für",
+            "b": "an",
+            "c": "bei"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "deshalb möchte ich mich heute"
+            }
+          ],
+          "explanation": "Boşluktan sonra „Sie wenden“ geliyor. „sich wenden“ fiili (birine başvurmak) sabit olarak „an“ + Akkusativ ile kullanılır: „sich an jemanden wenden“. „Sie“ burada Akkusativ biçimdir: „mich an Sie wenden“ = size başvurmak istiyorum. a) für yanlış: „sich für jemanden wenden“ diye bir kalıp yoktur. c) bei yanlış: „bei“ Dativ ister („bei Ihnen“ olurdu) ve „sich wenden“ fiili „bei“ ile kurulmaz."
+        },
+        {
+          "number": 22,
+          "type": "abc",
+          "prompt": "Lücke 22",
+          "options": {
+            "a": "mit",
+            "b": "von",
+            "c": "aus"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "alle Zimmer einen Balkon"
+            }
+          ],
+          "explanation": "Boşluk „einen Balkon“ ile „Meerblick“ arasında: Balkonun bir özelliği anlatılıyor. Bir şeyin sahip olduğu özellik „mit“ + Dativ ile söylenir: „ein Balkon mit Meerblick“ = deniz manzaralı balkon (krş. „ein Zimmer mit Dusche“). b) von yanlış: „von“ kaynak veya sahip bildirir (bir şeyin kimden/nereden olduğu); „Balkon von Meerblick“ Almancada kurulmaz. c) aus yanlış: „aus“ malzeme veya çıkış yeri bildirir („aus Holz“, „aus der Türkei“); manzara için kullanılmaz."
+        },
+        {
+          "number": 23,
+          "type": "abc",
+          "prompt": "Lücke 23",
+          "options": {
+            "a": "der",
+            "b": "das",
+            "c": "die"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "jeden Morgen schon um sieben Uhr laut war"
+            }
+          ],
+          "explanation": "Boşluktan sonra fiil sonda: „… schon um sieben Uhr laut war“ – bu bir ilgi cümlesidir ve önceki isim „einer Baustelle“yi (inşaat alanı) anlatır. „die Baustelle“ dişildir; ilgi cümlesinde „war“ fiilinin öznesi olduğu için Nominativ gerekir: dişil Nominativ ilgi zamiri „die“. a) der yanlış: Dişil „der“ yalnızca Dativ olur; ama burada özne (Nominativ) gerekiyor, „war“ fiilinin başka öznesi yok. b) das yanlış: „das“ nötr isimler içindir; „Baustelle“ dişildir."
+        },
+        {
+          "number": 24,
+          "type": "abc",
+          "prompt": "Lücke 24",
+          "options": {
+            "a": "haben",
+            "b": "sind",
+            "c": "hat"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "gleich am ersten Tag an der Rezeption gefragt"
+            }
+          ],
+          "explanation": "Cümlenin sonunda Partizip II „gefragt“ var; yardımcı fiil boşlukta. „fragen“ fiili Perfekt'i „haben“ ile kurar; özne „wir“ olduğu için çekimli biçim „haben“dir: „Wir haben … gefragt“ = sorduk. b) sind yanlış: „fragen“ hareket veya durum değişikliği bildirmez, Perfekt'te „sein“ almaz. c) hat yanlış: „hat“ üçüncü tekil kişi (er/sie/es) biçimidir; özne „wir“ çoğuldur."
+        },
+        {
+          "number": 25,
+          "type": "abc",
+          "prompt": "Lücke 25",
+          "options": {
+            "a": "denn",
+            "b": "aber",
+            "c": "oder"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Die Mitarbeiterin war zwar freundlich"
+            }
+          ],
+          "explanation": "Cümlenin ilk yarısında „zwar“ var: „Die Mitarbeiterin war zwar freundlich“ (çalışan gerçi kibardı). „zwar“ her zaman bir karşıtlıkla devam eder: „zwar …, aber …“ (gerçi …, ama …). İkinci yarı gerçekten bir karşıtlık söylüyor: „sie konnte uns nicht helfen“ (bize yardım edemedi). a) denn yanlış: „denn“ sebep bildirir; yardım edememek kibar olmanın sebebi değildir ve „zwar“ ile „denn“ birlikte kullanılmaz. c) oder yanlış: „oder“ iki seçenek sunar; burada iki olgu bir arada geçerli, „zwar … oder“ kalıbı yoktur."
+        },
+        {
+          "number": 26,
+          "type": "abc",
+          "prompt": "Lücke 26",
+          "options": {
+            "a": "den",
+            "b": "dem",
+            "c": "die"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "gleichen Gerichte"
+            }
+          ],
+          "explanation": "Boşluktan sonraki isim çoğul: „Gerichte“ (yemekler). „es gibt“ Akkusativ ister; çoğul Akkusativ'de belirli artikel „die“dir: „es gab … die gleichen Gerichte“ = hep aynı yemekler vardı. Sıfat ekindeki „-en“ (gleichen) de belirli artikelden sonraki çoğul ekidir. a) den yanlış: „den“ eril tekil Akkusativ veya çoğul Dativ'dir; çoğul Dativ olsaydı isim „Gerichten“ olurdu, ayrıca „es gibt“ Dativ almaz. b) dem yanlış: „dem“ eril/nötr tekil Dativ'dir; isim çoğul ve Akkusativ gerekiyor."
+        },
+        {
+          "number": 27,
+          "type": "abc",
+          "prompt": "Lücke 27",
+          "options": {
+            "a": "werden",
+            "b": "worden",
+            "c": "wurde"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "der Pool während unseres Aufenthalts fünf Tage lang repariert"
+            }
+          ],
+          "explanation": "Cümlenin sonunda Partizip II „repariert“ var ve özne „der Pool“ (havuz) işi kendisi yapmıyor: Havuz tamir ediliyor. Bu bir edilgen (Passiv) cümledir: „werden“ + Partizip II. Olay geçmişte, tatil sırasında oldu („während unseres Aufenthalts“); tekil özne için Präteritum biçimi „wurde“: „der Pool wurde … repariert“ = havuz tamir edildi. a) werden yanlış: Çoğul veya mastar biçimidir; özne „der Pool“ tekildir. b) worden yanlış: „worden“ yalnızca „sein“ ile birlikte Perfekt Passiv kurar („ist repariert worden“); tek başına çekimli fiil olamaz."
+        },
+        {
+          "number": 28,
+          "type": "abc",
+          "prompt": "Lücke 28",
+          "options": {
+            "a": "Als",
+            "b": "Wenn",
+            "c": "Wann"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "wir am dritten Tag im Hotel nach diesem Ausflug gefragt haben"
+            }
+          ],
+          "explanation": "Boşluktan sonra fiil sonda („gefragt haben“): Bu bir zaman yan cümlesidir. Geçmişte tek bir kez olan olay anlatılıyor: „am dritten Tag“ (üçüncü gün) sorulmuş. Geçmişte bir kez olan olay için zaman bağlacı „als“dir: „Als wir … gefragt haben, mussten wir … bezahlen“ = sorduğumuzda ödemek zorunda kaldık. b) Wenn yanlış: Geçmişte „wenn“ yalnızca tekrarlanan olaylar için kullanılır („her … -diğinde“); burada belirli tek bir gün var. c) Wann yanlış: „wann“ soru sözcüğüdür (ne zaman?); zaman yan cümlesini cümle başında bağlaç olarak başlatamaz."
+        },
+        {
+          "number": 29,
+          "type": "abc",
+          "prompt": "Lücke 29",
+          "options": {
+            "a": "zurückzahlen",
+            "b": "zurückzuzahlen",
+            "c": "zurückgezahlt"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Ich bitte Sie deshalb, uns einen angemessenen Teil des Reisepreises"
+            }
+          ],
+          "explanation": "Ana cümle „Ich bitte Sie deshalb“ (bu yüzden sizden rica ediyorum), virgülden sonra kendi öznesi olmayan bir ek cümle geliyor. „bitten“ fiilinden sonra böyle bir cümle „zu“lu mastarla kurulur; ayrılabilen fiillerde „zu“ önek ile kök arasına girer: „zurückzuzahlen“. Anlamı: Bize seyahat ücretinin bir kısmını geri ödemenizi rica ediyorum. a) zurückzahlen yanlış: Mastar burada „zu“suz kalamaz; „bitten“ ile kurulan cümle „zu“ ister. c) zurückgezahlt yanlış: Partizip II'nin yardımcı fiili („haben“) yok ve rica cümlesinde anlam vermez."
+        },
+        {
+          "number": 30,
+          "type": "abc",
+          "prompt": "Lücke 30",
+          "options": {
+            "a": "unserem",
+            "b": "unser",
+            "c": "unseren"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "schicke ich Ihnen im Anhang"
+            }
+          ],
+          "explanation": "Boşluktan önce „von“ edatı var: „einige Fotos von … Zimmer“. „von“ her zaman Dativ ister; „das Zimmer“ nötrdür. Nötr Dativ'de iyelik zamiri „unserem“ olur: „Fotos von unserem Zimmer“ = odamızın fotoğrafları. b) unser yanlış: Bu Nominativ veya Akkusativ biçimidir; „von“dan sonra Dativ gerekir. c) unseren yanlış: „unseren“ eril Akkusativ veya çoğul Dativ'dir; çoğul olsaydı isim „Zimmern“ olurdu, ama burada tekil „Zimmer“ var."
+        }
+      ]
+    }
+  ]
+}

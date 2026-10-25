@@ -1,0 +1,119 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-3",
+  "title": "Neues aus der Stadt",
+  "minutes": 15,
+  "instructions": "Lesen Sie die Überschriften a–j und die Texte 1–5. Welche Überschrift passt am besten zu welchem Text? Jede Überschrift kann nur einmal verwendet werden. Fünf Überschriften bleiben übrig.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "text-1",
+          "title": "Text 1",
+          "paragraphs": [
+            "Wer in der Innenstadt von Ostrabrück Durst hat, muss seit dieser Woche kein Wasser mehr kaufen. Die Stadt hat vier Trinkbrunnen aufgestellt: am Bahnhof, auf dem Marktplatz, im Stadtpark und vor dem Theater. Dort kann man kostenlos frisches Leitungswasser trinken oder seine Flasche füllen. Das Wasser wird jede Woche kontrolliert. Die Brunnen laufen allerdings nur von April bis Oktober. Von November bis März wird das Wasser abgestellt, damit die Leitungen bei Frost nicht kaputtgehen."
+          ]
+        },
+        {
+          "id": "text-2",
+          "title": "Text 2",
+          "paragraphs": [
+            "Regenschirme, Schlüssel, Handys und sogar ein Kinderwagen: Jedes Jahr werden im Fundbüro der Stadt Hunderte Sachen abgegeben, die ihre Besitzer nie abholen. Was länger als sechs Monate dort liegt, wird am Samstag, dem 14. Juni, im Hof des Rathauses verkauft. Feste Preise gibt es nicht: Wer am meisten bietet, bekommt die Sache. Bezahlt wird sofort und nur bar. Jedes Jahr fragen Besucher, ob das Geld gespendet wird. Die Antwort ist nein: Es geht in die Stadtkasse."
+          ]
+        },
+        {
+          "id": "text-3",
+          "title": "Text 3",
+          "paragraphs": [
+            "Fünf Monate lang war der Spielplatz in der Feldstraße gesperrt, jetzt dürfen Kinder dort wieder spielen. Die neuen Spielgeräte haben sie sich selbst ausgesucht: Im Frühjahr konnten Kinder aus den Grundschulen des Stadtteils Bilder von ihrem Traumspielplatz malen. Die meisten wünschten sich ein Klettergerüst in Form eines Schiffes und eine lange Rutsche. Beides steht jetzt dort. Für die Eltern gibt es neue Bänke im Schatten. Eine Toilette gibt es aber weiterhin nicht – dafür hat das Geld nicht gereicht."
+          ]
+        },
+        {
+          "id": "text-4",
+          "title": "Text 4",
+          "paragraphs": [
+            "Die 35 Container für alte Kleidung im Stadtgebiet werden Ende Februar entfernt. Der Grund: Neben den Containern lag immer wieder Müll. Ab März kann man gut erhaltene Kleidung und Schuhe nur noch auf dem Recyclinghof am Güterbahnhof abgeben, montags bis samstags von 8 bis 16 Uhr. Die Sachen bekommt ein Secondhand-Laden der Stadt, der sie günstig verkauft. Kaputte Kleidung nimmt der Recyclinghof aber nicht an; sie gehört weiterhin in den Restmüll."
+          ]
+        },
+        {
+          "id": "text-5",
+          "title": "Text 5",
+          "paragraphs": [
+            "Hundehalter in Ostrabrück können ab Januar Geld sparen. Wer mit seinem Hund einen Kurs in einer Hundeschule besucht und am Ende eine Prüfung besteht, zahlt ein Jahr lang nur die halbe Hundesteuer: 60 statt 120 Euro. Die Stadt hofft, dass es so weniger Ärger mit Hunden gibt, die laut sind oder Menschen anspringen. Die Prüfung ist freiwillig. Den Kurs müssen die Hundehalter allerdings selbst bezahlen; er kostet je nach Schule zwischen 80 und 150 Euro."
+          ]
+        },
+        { "id": "a", "label": "a", "paragraphs": ["Wasser aus Brunnen in der Stadt jetzt das ganze Jahr"] },
+        { "id": "b", "label": "b", "paragraphs": ["Wieder offen: ein Spielplatz nach den Ideen der Kinder"] },
+        { "id": "c", "label": "c", "paragraphs": ["Unterwegs gratis trinken und Flaschen füllen"] },
+        { "id": "d", "label": "d", "paragraphs": ["Verkauf von Fundsachen: Das Geld wird gespendet"] },
+        { "id": "e", "label": "e", "paragraphs": ["Weniger Steuern für Hunde mit Prüfung"] },
+        { "id": "f", "label": "f", "paragraphs": ["Stadt verkauft Dinge, die niemand abgeholt hat"] },
+        { "id": "g", "label": "g", "paragraphs": ["Am Spielplatz gibt es jetzt auch eine Toilette"] },
+        { "id": "h", "label": "h", "paragraphs": ["Auch kaputte Kleidung kann man jetzt abgeben"] },
+        { "id": "i", "label": "i", "paragraphs": ["Stadt bezahlt Kurse in der Hundeschule"] },
+        { "id": "j", "label": "j", "paragraphs": ["Keine Container mehr: neuer Ort für alte Kleidung"] }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "zuordnung",
+          "prompt": "Text 1",
+          "answer": "c",
+          "evidence": [
+            { "text": "text-1", "quote": "Dort kann man kostenlos frisches Leitungswasser trinken oder seine Flasche füllen." }
+          ],
+          "explanation": "Metin 1'de Ostrabrück şehir merkezine dört içme çeşmesi („Trinkbrunnen“) konduğu anlatılıyor; orada „kostenlos“ (ücretsiz) musluk suyu içilebiliyor ya da şişe doldurulabiliyor. c başlığı („yolda bedava içmek ve şişe doldurmak“) bunu başka kelimelerle söylüyor: „gratis“ = „kostenlos“. a başlığı („şehirdeki çeşmelerden artık bütün yıl su“) uymuyor: çeşmeler „nur von April bis Oktober“ (yalnızca nisandan ekime kadar) çalışıyor; „Von November bis März wird das Wasser abgestellt“ (kasımdan marta kadar su kapatılıyor)."
+        },
+        {
+          "number": 2,
+          "type": "zuordnung",
+          "prompt": "Text 2",
+          "answer": "f",
+          "evidence": [
+            { "text": "text-2", "quote": "die ihre Besitzer nie abholen" },
+            { "text": "text-2", "quote": "im Hof des Rathauses verkauft" }
+          ],
+          "explanation": "Metin 2'de kayıp eşya bürosuna („Fundbüro“) bırakılan ve sahiplerinin „nie abholen“ (hiç almaya gelmediği) eşyalar, 14 haziranda belediye binasının avlusunda „verkauft“ (satılıyor). f başlığı („şehir, kimsenin almaya gelmediği şeyleri satıyor“) bunu anlatıyor. d başlığı („kayıp eşya satışı: para bağışlanıyor“) uymuyor: metinde paranın bağışlanıp bağışlanmadığı sorusuna „Die Antwort ist nein: Es geht in die Stadtkasse“ (cevap hayır: para belediye kasasına gidiyor) deniyor."
+        },
+        {
+          "number": 3,
+          "type": "zuordnung",
+          "prompt": "Text 3",
+          "answer": "b",
+          "evidence": [
+            { "text": "text-3", "quote": "jetzt dürfen Kinder dort wieder spielen" },
+            { "text": "text-3", "quote": "Die neuen Spielgeräte haben sie sich selbst ausgesucht" }
+          ],
+          "explanation": "Metin 3'te Feldstraße'deki oyun parkı beş ay kapalı kaldıktan sonra yeniden açılıyor: „jetzt dürfen Kinder dort wieder spielen“ (çocuklar şimdi orada yeniden oynayabiliyor). Yeni oyun aletlerini çocuklar „selbst ausgesucht“ (kendileri seçmiş): resim yapıp gemi şeklinde tırmanma aleti ve uzun kaydırak istemişler. b başlığı („yeniden açık: çocukların fikirlerine göre bir oyun parkı“) bunu anlatıyor. g başlığı („oyun parkında artık tuvalet de var“) uymuyor: „Eine Toilette gibt es aber weiterhin nicht“ (ama tuvalet hâlâ yok), çünkü para yetmemiş."
+        },
+        {
+          "number": 4,
+          "type": "zuordnung",
+          "prompt": "Text 4",
+          "answer": "j",
+          "evidence": [
+            { "text": "text-4", "quote": "Die 35 Container für alte Kleidung im Stadtgebiet werden Ende Februar entfernt." },
+            { "text": "text-4", "quote": "nur noch auf dem Recyclinghof am Güterbahnhof abgeben" }
+          ],
+          "explanation": "Metin 4'e göre şehirdeki eski giysi konteynerleri şubat sonunda „entfernt“ (kaldırılıyor); martan itibaren giysiler „nur noch auf dem Recyclinghof“ (artık yalnızca geri dönüşüm merkezine) bırakılabiliyor. j başlığı („artık konteyner yok: eski giysiler için yeni yer“) bunu anlatıyor. h başlığı („artık yırtık/bozuk giysiler de bırakılabiliyor“) uymuyor: „Kaputte Kleidung nimmt der Recyclinghof aber nicht an“ (geri dönüşüm merkezi bozuk giysileri kabul etmiyor); bunlar „weiterhin in den Restmüll“ (eskisi gibi çöpe) atılıyor."
+        },
+        {
+          "number": 5,
+          "type": "zuordnung",
+          "prompt": "Text 5",
+          "answer": "e",
+          "evidence": [
+            { "text": "text-5", "quote": "zahlt ein Jahr lang nur die halbe Hundesteuer" }
+          ],
+          "explanation": "Metin 5'te köpeğiyle köpek okulunda kursa gidip sonunda sınavı geçen kişi bir yıl boyunca „nur die halbe Hundesteuer“ (köpek vergisinin yalnızca yarısını), yani 120 yerine 60 euro ödüyor. e başlığı („sınavı olan köpekler için daha az vergi“) bunu anlatıyor. i başlığı („şehir köpek okulundaki kursları ödüyor“) uymuyor: „Den Kurs müssen die Hundehalter allerdings selbst bezahlen“ (kursu köpek sahipleri kendileri ödemek zorunda); kurs 80 ile 150 euro arasında tutuyor."
+        }
+      ]
+    }
+  ]
+}

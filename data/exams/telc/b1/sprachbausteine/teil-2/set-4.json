@@ -1,0 +1,272 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "sprachbausteine",
+  "teil": 2,
+  "set": "set-4",
+  "title": "E-Mail an eine Kollegin",
+  "minutes": 13,
+  "context": "Malte Kerstgens schreibt seiner Kollegin Ronja vor seinem Urlaub eine E-Mail.",
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort aus der Liste (a–o) in die Lücken 31–40 passt. Jedes Wort passt nur einmal. Fünf Wörter bleiben übrig.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "mail",
+          "title": null,
+          "byline": null,
+          "paragraphs": [
+            "Liebe Ronja,",
+            "wie du weißt, bin ich ab Montag drei Wochen im Urlaub. Vielen Dank noch einmal, {{31}} du in dieser Zeit meine Aufgaben übernimmst! Hier sind die wichtigsten Punkte.",
+            "Am wichtigsten sind die Bestellungen der Firma Velthausen, unseres größten Kunden. Bitte frag bei jeder Bestellung kurz nach, {{32}} der Kunde eine Expresslieferung möchte oder nicht. Gib die Bestellung danach so schnell {{33}} möglich an das Lager weiter. Unsere Lieferzeit beträgt nur zwei Tage, {{34}} darf keine Bestellung länger als einen Tag bei uns liegen bleiben.",
+            "Am 14. Oktober kommt Herr Lührs von der Firma Velthausen zu einem Gespräch {{35}} die neuen Preise. Ich habe dafür schon alles {{36}}: Die Unterlagen liegen in dem blauen {{37}} auf meinem Schreibtisch. Wenn du vorher Fragen zu den Preisen hast, wende dich bitte {{38}} Herrn Pfeilsticker. Er kennt sich {{39}} genauso gut aus wie ich, denn er hat die Preise mit mir zusammen berechnet.",
+            "Im Urlaub möchte ich eigentlich nicht an die Arbeit denken. Wenn etwas wirklich Dringendes passiert, kannst du mich {{40}} auf dem Handy anrufen.",
+            "Ich wünsche dir drei ruhige Wochen!",
+            "Viele Grüße",
+            "Malte"
+          ]
+        },
+        {
+          "id": "wort-a",
+          "label": "a",
+          "paragraphs": [
+            "über"
+          ]
+        },
+        {
+          "id": "wort-b",
+          "label": "b",
+          "paragraphs": [
+            "an"
+          ]
+        },
+        {
+          "id": "wort-c",
+          "label": "c",
+          "paragraphs": [
+            "ob"
+          ]
+        },
+        {
+          "id": "wort-d",
+          "label": "d",
+          "paragraphs": [
+            "obwohl"
+          ]
+        },
+        {
+          "id": "wort-e",
+          "label": "e",
+          "paragraphs": [
+            "deswegen"
+          ]
+        },
+        {
+          "id": "wort-f",
+          "label": "f",
+          "paragraphs": [
+            "trotzdem"
+          ]
+        },
+        {
+          "id": "wort-g",
+          "label": "g",
+          "paragraphs": [
+            "vorbereitet"
+          ]
+        },
+        {
+          "id": "wort-h",
+          "label": "h",
+          "paragraphs": [
+            "vergessen"
+          ]
+        },
+        {
+          "id": "wort-i",
+          "label": "i",
+          "paragraphs": [
+            "Termin"
+          ]
+        },
+        {
+          "id": "wort-j",
+          "label": "j",
+          "paragraphs": [
+            "dass"
+          ]
+        },
+        {
+          "id": "wort-k",
+          "label": "k",
+          "paragraphs": [
+            "damit"
+          ]
+        },
+        {
+          "id": "wort-l",
+          "label": "l",
+          "paragraphs": [
+            "Ordner"
+          ]
+        },
+        {
+          "id": "wort-m",
+          "label": "m",
+          "paragraphs": [
+            "darüber"
+          ]
+        },
+        {
+          "id": "wort-n",
+          "label": "n",
+          "paragraphs": [
+            "wie"
+          ]
+        },
+        {
+          "id": "wort-o",
+          "label": "o",
+          "paragraphs": [
+            "für"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 31,
+          "type": "zuordnung",
+          "prompt": "Lücke 31",
+          "answer": "j",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "du in dieser Zeit meine Aufgaben übernimmst"
+            }
+          ],
+          "explanation": "Malte, Ronja’nın izin süresince işlerini üstlenmesine teşekkür ediyor. Teşekkür edilen şey bir yan cümleyle „Danke, dass …“ kalıbında söylenir: „Vielen Dank, dass du … übernimmst“ (… üstlendiğin için teşekkürler); fiil „übernimmst“ sondadır. „ob“ (-ip -mediği) bir soru içerir, burada soru yok. „obwohl“ (-e rağmen) bir karşıtlık kurar, ama ortada karşıtlık yok; „damit“ (-sın diye) de amaç bildirir, teşekkür edilen şeyi değil."
+        },
+        {
+          "number": 32,
+          "type": "zuordnung",
+          "prompt": "Lücke 32",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "der Kunde eine Expresslieferung möchte oder nicht"
+            }
+          ],
+          "explanation": "„nachfragen“ (sormak) fiilinden sonra ve cümle sonundaki „oder nicht“ (ya da değil) ile iki ihtimal vardır: Bu bir dolaylı evet/hayır sorusudur ve „ob“ (-ip -mediğini) ile kurulur: „frag nach, ob der Kunde … möchte oder nicht“. „dass“ (-dığını) bir bilgiyi kesin olarak verir; „oder nicht“ ile birlikte kullanılamaz. „wie“ (nasıl) bir evet/hayır sorusu değil, bir yol sorar."
+        },
+        {
+          "number": 33,
+          "type": "zuordnung",
+          "prompt": "Lücke 33",
+          "answer": "n",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "möglich an das Lager weiter"
+            }
+          ],
+          "explanation": "Sabit kalıp „so schnell wie möglich“ (mümkün olduğu kadar hızlı) olur: „so“ + sıfat + „wie möglich“. Listedeki bağlaçlar („dass“, „ob“, „obwohl“) bir yan cümle ister; „möglich“ ise tek bir sıfattır, arkasında fiilli bir cümle yoktur."
+        },
+        {
+          "number": 34,
+          "type": "zuordnung",
+          "prompt": "Lücke 34",
+          "answer": "e",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "darf keine Bestellung länger als einen Tag bei uns liegen bleiben"
+            }
+          ],
+          "explanation": "Önce sebep geliyor: Teslim süresi yalnızca iki gün. Sonuç: Hiçbir sipariş bir günden fazla bekleyemez. Sonuç bildiren zarf „deswegen“ (bu yüzden) olur; arkasından çekimli fiil „darf“ gelir (fiil ikinci sırada). „trotzdem“ (yine de) de bu sıraya uyar, ama karşıtlık bildirir; kısa teslim süresi ile siparişin hızlı işlenmesi arasında karşıtlık yoktur. „obwohl“, „dass“ ve „damit“ (bağlaç olarak) fiili sona atardı."
+        },
+        {
+          "number": 35,
+          "type": "zuordnung",
+          "prompt": "Lücke 35",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "zu einem Gespräch"
+            }
+          ],
+          "explanation": "Görüşmenin konusu yeni fiyatlar: Bir konuşmanın konusunu „über“ + akuzatif söyler: „ein Gespräch über die neuen Preise“ (yeni fiyatlar hakkında bir görüşme). „für“ akuzatif alır, ama „ein Gespräch für die Preise“ (fiyatlar için bir görüşme) konuyu değil amacı anlatır ve bu kalıpta kullanılmaz. „an die neuen Preise“ ve „darüber die neuen Preise“ da dilbilgisi olarak olmaz."
+        },
+        {
+          "number": 36,
+          "type": "zuordnung",
+          "prompt": "Lücke 36",
+          "answer": "g",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Ich habe dafür schon alles"
+            }
+          ],
+          "explanation": "„habe“ yardımcı fiili cümle sonunda bir Partizip II ister (Perfekt). Arkasından gelen cümle, belgelerin hazır olarak masada durduğunu söylüyor: Malte görüşme için her şeyi hazırlamış: „Ich habe dafür schon alles vorbereitet“. „vergessen“ da bir Partizip II’dir, ama „her şeyi unuttum“ anlamı, belgelerin hazır olarak klasörde durmasıyla çelişir."
+        },
+        {
+          "number": 37,
+          "type": "zuordnung",
+          "prompt": "Lücke 37",
+          "answer": "l",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "auf meinem Schreibtisch"
+            }
+          ],
+          "explanation": "„in dem blauen …“ eril veya nötr bir isim ister ve içinde belgelerin („Die Unterlagen“) durduğu bir şey olmalıdır: „in dem blauen Ordner“ (mavi klasörün içinde). „Termin“ (randevu) de erildir, ama bir randevunun içinde belge durmaz. Diğer kelimeler isim değildir."
+        },
+        {
+          "number": 38,
+          "type": "zuordnung",
+          "prompt": "Lücke 38",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Herrn Pfeilsticker"
+            }
+          ],
+          "explanation": "Sorusu olan birinin birine başvurması „sich an jemanden wenden“ (birine başvurmak) kalıbıyla söylenir: „wende dich bitte an Herrn Pfeilsticker“. Bu fiil „an“ + akuzatif ister. „für Herrn Pfeilsticker“ (onun için) ve „über Herrn Pfeilsticker“ (onun hakkında / onun aracılığıyla) bu fiille başvurmak anlamını vermez."
+        },
+        {
+          "number": 39,
+          "type": "zuordnung",
+          "prompt": "Lücke 39",
+          "answer": "k",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "genauso gut aus wie ich, denn er hat die Preise mit mir zusammen berechnet"
+            }
+          ],
+          "explanation": "„sich mit etwas auskennen“ (bir konuyu iyi bilmek) kalıbı „mit“ ister; „mit den Preisen“ yerine „damit“ kullanılır: „Er kennt sich damit genauso gut aus wie ich“ (bu konuyu benim kadar iyi biliyor). „darüber“ bu fiille kullanılmaz. „deswegen“ (bu yüzden) da olmaz: Sebep önceki cümlede değil, arkadan gelen „denn er hat die Preise mit mir zusammen berechnet“ kısmındadır."
+        },
+        {
+          "number": 40,
+          "type": "zuordnung",
+          "prompt": "Lücke 40",
+          "answer": "f",
+          "evidence": [
+            {
+              "text": "mail",
+              "quote": "Im Urlaub möchte ich eigentlich nicht an die Arbeit denken"
+            }
+          ],
+          "explanation": "Önceki cümle bir karşıtlık hazırlıyor: Malte izinde aslında işi düşünmek istemiyor; acil bir şey olursa Ronja onu yine de arayabilir. Karşıtlığı bildiren zarf „trotzdem“ (yine de) olur. „deswegen“ (bu yüzden) yanlış bir sonuç ilişkisi kurar: İşi düşünmek istememesi aranmasının sebebi değildir. „damit“ burada anlam vermez."
+        }
+      ]
+    }
+  ]
+}

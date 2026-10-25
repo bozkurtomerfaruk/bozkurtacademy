@@ -1,0 +1,217 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "sprachbausteine",
+  "teil": 1,
+  "set": "set-1",
+  "title": "Eine Bewerbung",
+  "minutes": 12,
+  "context": "Eine Frau bewirbt sich schriftlich um eine Stelle in einem Hotel.",
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort (a, b oder c) in die Lücken 21–30 passt.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "brief",
+          "title": "Bewerbung als Rezeptionistin",
+          "byline": "Brief von Gülşen Tavşancıl an Frau Rautenberg, Hotel Am Mühlenteich",
+          "paragraphs": [
+            "Betreff: Bewerbung als Rezeptionistin in Teilzeit – Ihre Anzeige vom 3. September",
+            "Sehr geehrte Frau Rautenberg,",
+            "mit großem Interesse habe ich Ihre Anzeige in der „Ostervelder Rundschau“ gelesen, {{21}} Sie eine Rezeptionistin in Teilzeit suchen. Hiermit bewerbe ich mich um diese Stelle.",
+            "Ich bin 27 Jahre alt und komme aus der Türkei. Dort habe ich nach der Schule eine Ausbildung zur Hotelfachfrau {{22}}. Danach war ich vier Jahre an der Rezeption eines Hotels tätig. Dort war ich {{23}} den Empfang der Gäste und die Zimmerbuchungen zuständig. Seit zwei Jahren lebe ich in Ostervelden und arbeite zurzeit an der Kasse eines Supermarkts.",
+            "Mit Buchungsprogrammen am Computer kann ich sicher umgehen, und ich spreche {{24}} Türkisch und Deutsch auch gut Englisch. Im Moment besuche ich einen Deutschkurs am Abend, {{25}} ich meine Sprachkenntnisse noch verbessern möchte.",
+            "Die Arbeit mit Menschen macht mir viel Spaß, und ich bleibe auch ruhig, wenn es einmal stressig wird. Außerdem ist der Weg von meiner Wohnung zu Ihrem Hotel viel {{26}} als zu meiner jetzigen Arbeitsstelle. Ich kann ab dem 1. November bei Ihnen anfangen. Am Wochenende und an Feiertagen zu arbeiten, ist für {{27}} kein Problem.",
+            "Meinen Lebenslauf und meine Zeugnisse {{28}} ich Ihnen im Anhang. Über eine Einladung zu einem Vorstellungsgespräch würde ich {{29}} sehr freuen. Sie erreichen mich am besten nachmittags {{30}} der oben genannten Telefonnummer.",
+            "Mit freundlichen Grüßen",
+            "Gülşen Tavşancıl"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 21,
+          "type": "abc",
+          "prompt": "Lücke 21",
+          "options": {
+            "a": "in der",
+            "b": "die",
+            "c": "dem"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Sie eine Rezeptionistin in Teilzeit suchen"
+            }
+          ],
+          "explanation": "Boşluktan sonra bir yan cümle (ilgi cümlesi) geliyor, fiil sonda: „Sie eine Rezeptionistin in Teilzeit suchen“. İlgi zamiri „Ihre Anzeige“ye gönderme yapar; „die Anzeige“ dişildir. İlanın içinde bir şey aranıyor: „in der Anzeige suchen“ (ilanda arıyorsunuz). Bu yüzden edat + Dativ dişil: „Ihre Anzeige …, in der Sie … suchen“. b) die yanlış: „die“ Akkusativ nesne olurdu, ama „suchen“ fiilinin nesnesi zaten var: „eine Rezeptionistin“; edat „in“ eksik kalır. c) dem yanlış: „dem“ eril veya nötr bir isme gönderme yapar; „Anzeige“ ise dişildir ve yine edat eksiktir."
+        },
+        {
+          "number": 22,
+          "type": "abc",
+          "prompt": "Lücke 22",
+          "options": {
+            "a": "machte",
+            "b": "machen",
+            "c": "gemacht"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Dort habe ich nach der Schule eine Ausbildung zur Hotelfachfrau"
+            }
+          ],
+          "explanation": "Cümlede yardımcı fiil „habe“ var: „Dort habe ich … eine Ausbildung zur Hotelfachfrau“. „haben“ + cümle sonunda Partizip II, Perfekt zamanını kurar: „habe … gemacht“ (yaptım). a) machte yanlış: „machte“ Präteritum biçimidir ve kendi başına çekimli fiildir; „habe“ ile birlikte kullanılamaz. b) machen yanlış: Mastar; „haben“ yardımcı fiili mastarla Perfekt kurmaz („habe … machen“ olmaz)."
+        },
+        {
+          "number": 23,
+          "type": "abc",
+          "prompt": "Lücke 23",
+          "options": {
+            "a": "über",
+            "b": "für",
+            "c": "an"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "den Empfang der Gäste und die Zimmerbuchungen zuständig"
+            }
+          ],
+          "explanation": "Boşluktan sonraki sıfat „zuständig“ (sorumlu) sabit olarak „für“ edatıyla kullanılır: „für etwas zuständig sein“ (bir şeyden sorumlu olmak). Burada: „für den Empfang der Gäste und die Zimmerbuchungen zuständig“ = misafirlerin karşılanmasından ve oda rezervasyonlarından sorumlu. a) über yanlış: „zuständig“ „über“ ile kullanılmaz. c) an yanlış: „an den Empfang … zuständig“ da Almancada kurulmaz; „zuständig“ yalnızca „für“ alır."
+        },
+        {
+          "number": 24,
+          "type": "abc",
+          "prompt": "Lücke 24",
+          "options": {
+            "a": "sowohl",
+            "b": "neben",
+            "c": "zwischen"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Türkisch und Deutsch auch gut Englisch"
+            }
+          ],
+          "explanation": "Gülşen üç dil sayıyor: „Türkisch und Deutsch auch gut Englisch“. „auch“ (ayrıca, -de) burada „neben“ ile birlikte kullanılır: „neben Türkisch und Deutsch auch gut Englisch“ = Türkçe ve Almancanın yanında İngilizceyi de iyi konuşuyorum. a) sowohl yanlış: „sowohl“ her zaman „als auch“ ile kullanılır („sowohl … als auch …“); metinde ise „und … auch“ var. c) zwischen yanlış: „zwischen“ (arasında) iki şeyin arasındaki yeri veya seçimi gösterir; dil bilmeyi anlatan bu cümlede anlamsızdır."
+        },
+        {
+          "number": 25,
+          "type": "abc",
+          "prompt": "Lücke 25",
+          "options": {
+            "a": "weil",
+            "b": "deshalb",
+            "c": "trotzdem"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "ich meine Sprachkenntnisse noch verbessern möchte"
+            }
+          ],
+          "explanation": "Boşluktan sonra fiil sonda: „ich meine Sprachkenntnisse noch verbessern möchte“. Bu bir yan cümledir ve akşam kursuna gitmenin sebebini söyler (dil bilgisini geliştirmek istiyor). Sebep bildiren ve yan cümle kuran bağlaç „weil“dir. b) deshalb yanlış: „deshalb“ (bu yüzden) bir sonuç bildirir ve hemen arkasından çekimli fiil gelir („deshalb möchte ich …“); burada fiil sonda. c) trotzdem yanlış: „trotzdem“ (yine de) zıtlık bildirir ve o da fiili hemen arkasına alır; kurs ile dil geliştirme arasında zıtlık yok."
+        },
+        {
+          "number": 26,
+          "type": "abc",
+          "prompt": "Lücke 26",
+          "options": {
+            "a": "kurz",
+            "b": "am kürzesten",
+            "c": "kürzer"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "als zu meiner jetzigen Arbeitsstelle"
+            }
+          ],
+          "explanation": "Boşluktan sonra „als“ geliyor: „als zu meiner jetzigen Arbeitsstelle“. İki yol karşılaştırılıyor: Otele giden yol, şimdiki iş yerine giden yoldan daha kısa. „als“ ile karşılaştırmada sıfatın Komparativ biçimi kullanılır: „viel kürzer als“ (çok daha kısa). a) kurz yanlış: Yalın biçim „als“ ile karşılaştırma yapmaz („so kurz wie“ olurdu). b) am kürzesten yanlış: Superlativ (en kısa) „als“ ile kullanılmaz ve önündeki „viel“ ile de uymaz."
+        },
+        {
+          "number": 27,
+          "type": "abc",
+          "prompt": "Lücke 27",
+          "options": {
+            "a": "mich",
+            "b": "mir",
+            "c": "ich"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "kein Problem"
+            }
+          ],
+          "explanation": "Boşluktan önce „für“ edatı var: „ist für … kein Problem“ (… için sorun değil). „für“ her zaman Akkusativ ister; „ich“ zamirinin Akkusativ biçimi „mich“dir: „für mich“ (benim için). b) mir yanlış: „mir“ Dativ biçimidir; „für“ Dativ almaz. c) ich yanlış: „ich“ Nominativ biçimidir (özne); edattan sonra yalın hâl kullanılamaz."
+        },
+        {
+          "number": 28,
+          "type": "abc",
+          "prompt": "Lücke 28",
+          "options": {
+            "a": "sendet",
+            "b": "sende",
+            "c": "senden"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Meinen Lebenslauf und meine Zeugnisse"
+            }
+          ],
+          "explanation": "Cümlenin öznesi boşluktan sonra gelen „ich“dir; „Meinen Lebenslauf und meine Zeugnisse“ özne değil, Akkusativ nesnedir (bunu „Meinen“ eki gösterir). Fiil özneye göre çekilir: „ich sende“ (gönderiyorum). a) sendet yanlış: „er/sie/es“ veya „ihr“ biçimidir. c) senden yanlış: „wir/sie/Sie“ biçimidir; öne geçen iki nesne fiilin çoğul olmasına sebep olmaz, çünkü özne „ich“."
+        },
+        {
+          "number": 29,
+          "type": "abc",
+          "prompt": "Lücke 29",
+          "options": {
+            "a": "mir",
+            "b": "sich",
+            "c": "mich"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Über eine Einladung zu einem Vorstellungsgespräch würde ich"
+            }
+          ],
+          "explanation": "„sich freuen über“ (bir şeye sevinmek) dönüşlü bir fiildir; dönüşlü zamir özneye uyar. Özne „ich“ olduğuna göre Akkusativ dönüşlü zamir „mich“tir: „würde ich mich sehr freuen“ (çok sevinirim). a) mir yanlış: „mir“ Dativ biçimidir; „sich freuen“ Akkusativ zamir ister. b) sich yanlış: „sich“ yalnızca „er/sie/es/Sie/sie“ öznesiyle kullanılır; burada özne „ich“."
+        },
+        {
+          "number": 30,
+          "type": "abc",
+          "prompt": "Lücke 30",
+          "options": {
+            "a": "unter",
+            "b": "bei",
+            "c": "mit"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "der oben genannten Telefonnummer"
+            }
+          ],
+          "explanation": "Telefon numarasıyla ulaşmak Almancada „unter“ edatıyla söylenir: „jemanden unter einer Telefonnummer erreichen“. Burada: „unter der oben genannten Telefonnummer“ = yukarıda belirtilen telefon numarasından. b) bei yanlış: „bei“ bir kişi veya yer için kullanılır (ör. „bei Ihnen anfangen“); bir numara için kullanılmaz. c) mit yanlış: „mit der Telefonnummer erreichen“ Almancada kalıplaşmış bir ifade değildir; numara için „unter“ gerekir."
+        }
+      ]
+    }
+  ]
+}

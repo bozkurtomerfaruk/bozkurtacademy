@@ -1,0 +1,117 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-1",
+  "title": "Ein Dorf rettet seinen Laden",
+  "minutes": 20,
+  "instructions": "Lesen Sie den Text und die Aufgaben 6–10. Welche Lösung (a, b oder c) ist jeweils richtig?",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "laden",
+          "title": "Ein Dorf rettet seinen Laden",
+          "paragraphs": [
+            "Als im Frühjahr 2024 der letzte Lebensmittelladen in Oberlindach schließen sollte, war die Sorge im Dorf groß. Der Besitzer Ewald Kranzinger wollte nach 31 Jahren in Rente gehen. Kunden hatte er genug, aber trotz langer Suche wollte niemand das Geschäft übernehmen. Für die rund 900 Einwohner hätte das bedeutet, dass sie für jedes Brot und jede Packung Milch zwölf Kilometer in die nächste Stadt fahren müssen. „Für viele ältere Leute ohne Auto wäre das ein echtes Problem gewesen“, sagt Marlene Hufnagl. Sie hatte damals die Idee, den Laden gemeinsam weiterzuführen.",
+            "Hufnagl lud zu einer Versammlung in die Turnhalle ein, und mehr als 200 Menschen kamen. Ihr Plan: Die Dorfbewohner gründen eine Genossenschaft und kaufen Anteile. Ein Anteil kostet 250 Euro. Innerhalb von acht Wochen hatten 340 Menschen zusammen fast 110.000 Euro eingezahlt. Einen Kredit bei der Bank musste die Genossenschaft deshalb nicht aufnehmen. Mit dem Geld kaufte sie die Einrichtung und erneuerte die Kühltheken. Das Haus selbst mietet sie von Kranzinger, der weiter im Dorf wohnt und es nicht verkaufen wollte.",
+            "Seit Oktober 2024 ist der Laden wieder geöffnet, von Montag bis Samstag jeweils von 7 bis 12 Uhr und von 15 bis 18 Uhr. Zwei Verkäuferinnen sind fest angestellt, eine von ihnen hat schon bei Kranzinger gearbeitet. Außerdem helfen etwa 25 Freiwillige: Sie räumen Regale ein, holen Ware ab oder sitzen am Samstag an der Kasse. Bezahlt werden sie dafür nicht. Einer von ihnen ist der Rentner Gottfried Ambacher: „Hier treffe ich jede Woche Leute, die ich sonst kaum sehe.“",
+            "Auch das Angebot hat sich verändert. Neben den wichtigsten Lebensmitteln gibt es jetzt viele Produkte aus der Umgebung: Eier vom Hof Seidlmair, Honig von einem Imker aus dem Nachbarort und Brot von einer kleinen Bäckerei, die dreimal pro Woche liefert. Diese Produkte sind etwas teurer als im Supermarkt, werden aber gut gekauft. Neu ist auch eine Ecke mit drei Tischen, an denen man Kaffee trinken kann. „Am Vormittag sitzen dort oft ältere Leute und unterhalten sich, nach der Schule kommen Jugendliche auf einen Kakao“, erzählt Hufnagl. Wer nicht selbst kommen kann, bestellt telefonisch, und ein Freiwilliger bringt die Einkäufe am Donnerstag nach Hause.",
+            "Ganz ohne Probleme läuft es aber nicht. Im ersten Winter hat der Laden einen kleinen Verlust gemacht, weil die Heizkosten höher waren als geplant. Großen Gewinn soll der Laden ohnehin nicht machen: Wenn am Jahresende Geld übrig bleibt, wird es wieder in den Laden gesteckt. Die Mitglieder bekommen dafür drei Prozent Rabatt auf ihre Einkäufe. Für das nächste Jahr hat Hufnagl ein klares Ziel: Sie möchte mehr junge Familien als Kunden gewinnen. Viele von ihnen kaufen bisher auf dem Weg zur Arbeit im Supermarkt ein. Deshalb denkt die Genossenschaft darüber nach, schon um 6 Uhr morgens aufzumachen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "abc",
+          "prompt": "Der Laden in Oberlindach sollte schließen, weil …",
+          "options": {
+            "a": "zu wenige Leute dort einkauften.",
+            "b": "sich niemand fand, der ihn weiterführen wollte.",
+            "c": "Ewald Kranzinger in die Stadt ziehen wollte."
+          },
+          "answer": "b",
+          "evidence": [
+            { "text": "laden", "quote": "trotz langer Suche wollte niemand das Geschäft übernehmen" },
+            { "text": "laden", "quote": "Kunden hatte er genug" },
+            { "text": "laden", "quote": "der weiter im Dorf wohnt" }
+          ],
+          "explanation": "Sahibi Ewald Kranzinger emekli olmak istiyordu ve uzun aramaya rağmen dükkânı kimse devralmak istemedi („wollte niemand das Geschäft übernehmen“ – kimse işi devralmak istemedi). b) bunu başka kelimelerle söylüyor. a) yanlış: Metne göre müşterisi yeterliydi („Kunden hatte er genug“). c) yanlış: Kranzinger şehre taşınmıyor; metin onun hâlâ köyde oturduğunu söylüyor („der weiter im Dorf wohnt“)."
+        },
+        {
+          "number": 7,
+          "type": "abc",
+          "prompt": "Das Geld für den neuen Laden …",
+          "options": {
+            "a": "stammt zum größten Teil aus einem Bankkredit.",
+            "b": "wurde vor allem für den Kauf des Hauses gebraucht.",
+            "c": "haben viele Dorfbewohner gemeinsam aufgebracht."
+          },
+          "answer": "c",
+          "evidence": [
+            { "text": "laden", "quote": "Innerhalb von acht Wochen hatten 340 Menschen zusammen fast 110.000 Euro eingezahlt." },
+            { "text": "laden", "quote": "Einen Kredit bei der Bank musste die Genossenschaft deshalb nicht aufnehmen." },
+            { "text": "laden", "quote": "Das Haus selbst mietet sie von Kranzinger" }
+          ],
+          "explanation": "Köylüler bir kooperatif kurup pay („Anteile“) satın aldılar; sekiz haftada 340 kişi birlikte yaklaşık 110.000 Euro ödedi („340 Menschen zusammen“). c) bunu anlatıyor. a) yanlış: Kooperatif bu yüzden bankadan kredi almak zorunda kalmadı („musste … nicht aufnehmen“). b) yanlış: Para dükkânın donanımına ve soğutma tezgâhlarına harcandı; bina satın alınmadı, Kranzinger'den kiralanıyor („mietet sie von Kranzinger“)."
+        },
+        {
+          "number": 8,
+          "type": "abc",
+          "prompt": "Im neuen Laden …",
+          "options": {
+            "a": "helfen neben zwei Angestellten auch Leute ohne Bezahlung mit.",
+            "b": "arbeiten zwei Verkäuferinnen, die früher bei Kranzinger angestellt waren.",
+            "c": "kann man am Samstag nur vormittags einkaufen."
+          },
+          "answer": "a",
+          "evidence": [
+            { "text": "laden", "quote": "Zwei Verkäuferinnen sind fest angestellt" },
+            { "text": "laden", "quote": "Bezahlt werden sie dafür nicht." },
+            { "text": "laden", "quote": "eine von ihnen hat schon bei Kranzinger gearbeitet" },
+            { "text": "laden", "quote": "von Montag bis Samstag jeweils von 7 bis 12 Uhr und von 15 bis 18 Uhr" }
+          ],
+          "explanation": "İki satış elemanı kadrolu çalışıyor („fest angestellt“); ayrıca yaklaşık 25 gönüllü yardım ediyor ve bunun için para almıyorlar („Bezahlt werden sie dafür nicht“ – bunun için ücret almıyorlar). b) yanlış: İki satıcıdan yalnızca biri daha önce Kranzinger'in yanında çalıştı („eine von ihnen“ – onlardan biri). c) yanlış: Dükkân pazartesiden cumartesiye kadar her gün hem sabah hem de 15–18 arası açık („jeweils“ – her biri)."
+        },
+        {
+          "number": 9,
+          "type": "abc",
+          "prompt": "Was erfährt man über das Angebot des Ladens?",
+          "options": {
+            "a": "Die Produkte aus der Region kosten weniger als im Supermarkt.",
+            "b": "Das Brot wird von Freiwilligen im Laden gebacken.",
+            "c": "Wer nicht in den Laden kommen kann, bekommt die Waren gebracht."
+          },
+          "answer": "c",
+          "evidence": [
+            { "text": "laden", "quote": "Wer nicht selbst kommen kann, bestellt telefonisch, und ein Freiwilliger bringt die Einkäufe am Donnerstag nach Hause." },
+            { "text": "laden", "quote": "Diese Produkte sind etwas teurer als im Supermarkt" },
+            { "text": "laden", "quote": "Brot von einer kleinen Bäckerei, die dreimal pro Woche liefert" }
+          ],
+          "explanation": "Dükkâna kendisi gelemeyen telefonla sipariş veriyor ve bir gönüllü alışverişi perşembe günü eve getiriyor („bringt die Einkäufe … nach Hause“). c) bunu anlatıyor. a) yanlış: Yöresel ürünler süpermarkettekinden biraz daha pahalı („etwas teurer“). b) yanlış: Ekmeği gönüllüler pişirmiyor; haftada üç kez teslimat yapan küçük bir fırın getiriyor („von einer kleinen Bäckerei“)."
+        },
+        {
+          "number": 10,
+          "type": "abc",
+          "prompt": "Was hat die Genossenschaft für die Zukunft vor?",
+          "options": {
+            "a": "Sie will den Mitgliedern am Jahresende Geld auszahlen.",
+            "b": "Sie überlegt, den Laden früher am Morgen zu öffnen.",
+            "c": "Sie möchte vor allem mehr ältere Kunden gewinnen."
+          },
+          "answer": "b",
+          "evidence": [
+            { "text": "laden", "quote": "Deshalb denkt die Genossenschaft darüber nach, schon um 6 Uhr morgens aufzumachen." },
+            { "text": "laden", "quote": "wird es wieder in den Laden gesteckt" },
+            { "text": "laden", "quote": "Sie möchte mehr junge Familien als Kunden gewinnen." }
+          ],
+          "explanation": "Kooperatif dükkânı sabah saat 6'da açmayı düşünüyor („denkt … darüber nach“ – üzerinde düşünüyor); b) de kesin bir karar değil, bir düşünce olduğunu söylüyor („überlegt“). a) yanlış: Yıl sonunda para artarsa yeniden dükkâna yatırılıyor („wieder in den Laden gesteckt“); üyeler bunun yerine alışverişte yüzde üç indirim alıyor. c) yanlış: Hedef yaşlılar değil, genç aileleri müşteri olarak kazanmak („junge Familien“)."
+        }
+      ]
+    }
+  ]
+}

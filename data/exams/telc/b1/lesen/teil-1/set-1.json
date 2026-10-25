@@ -1,0 +1,118 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-1",
+  "title": "Kurznachrichten aus der Region",
+  "minutes": 15,
+  "instructions": "Lesen Sie die Überschriften a–j und die Texte 1–5. Welche Überschrift passt am besten zu welchem Text? Jede Überschrift kann nur einmal verwendet werden. Fünf Überschriften bleiben übrig.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "text-1",
+          "title": "Text 1",
+          "paragraphs": [
+            "Wer am Freitag- oder Samstagabend in Haldenstedt ausgeht, muss sich bald keine Sorgen mehr um den Heimweg machen. Ab dem 1. Dezember fährt die neue Linie N4 in den Nächten zum Samstag und zum Sonntag stündlich zwischen dem Bahnhof Haldenstedt und den Dörfern im Kerzenbachtal. Der erste Bus startet um 0.30 Uhr, der letzte um 4.30 Uhr. Für die Fahrt gelten die normalen Tickets, einen Nachtzuschlag gibt es nicht. Die Linie wird zunächst ein Jahr lang getestet."
+          ]
+        },
+        {
+          "id": "text-2",
+          "title": "Text 2",
+          "paragraphs": [
+            "Das Hallenbad in Linsbrück bleibt länger geschlossen als geplant. Eigentlich sollten Schwimmerinnen und Schwimmer schon im September wieder ihre Bahnen ziehen können. Weil die neue Heizungsanlage aber erst mit mehreren Wochen Verspätung geliefert wurde, rechnet die Stadt nun mit einer Wiedereröffnung Mitte November. Die zunächst geplante Sauna wird es nicht geben: Der Stadtrat hat sie im Frühjahr aus Kostengründen gestrichen. Schulklassen und Vereine dürfen bis zur Öffnung weiterhin das Bad im Nachbarort nutzen."
+          ]
+        },
+        {
+          "id": "text-3",
+          "title": "Text 3",
+          "paragraphs": [
+            "Ein Toaster, der nicht mehr warm wird, eine Lampe mit kaputtem Schalter oder ein Fahrrad mit platten Reifen – solche Dinge landen oft im Müll. Im Gemeindehaus von Ostervelde gibt es dafür jetzt eine andere Lösung: Jeden ersten Samstag im Monat helfen ehrenamtliche Handwerker den Besuchern dabei, ihre Sachen selbst zu reparieren. Die Hilfe ist kostenlos, nur Ersatzteile müssen bezahlt werden. Verkauft werden dort allerdings weder Fahrräder noch Geräte. „Beim ersten Treffen haben wir 23 Geräte gerettet“, freut sich Organisator Gerd Mahlstedt."
+          ]
+        },
+        {
+          "id": "text-4",
+          "title": "Text 4",
+          "paragraphs": [
+            "Wie viele Autos fahren morgens an der Lindenschule in Kerzenbach vorbei, und wie schnell sind sie? Das wollte die Klasse 7b genau wissen. Zwei Wochen lang standen die Schülerinnen und Schüler jeden Morgen zwischen 7.30 und 8.15 Uhr am Straßenrand und notierten jedes Fahrzeug. Mit einem geliehenen Messgerät stellten sie fest, dass fast jedes dritte Auto schneller als die erlaubten 50 km/h fuhr. Ihre Ergebnisse haben sie dem Bürgermeister übergeben. Ob vor der Schule künftig Tempo 30 gilt, will der Gemeinderat im Frühjahr entscheiden."
+          ]
+        },
+        {
+          "id": "text-5",
+          "title": "Text 5",
+          "paragraphs": [
+            "Ab Februar müssen sich die Kundinnen und Kunden des Wochenmarkts in Brakelfeld umgewöhnen. Weil der Marktplatz ein Jahr lang umgebaut wird, stellen die rund 30 Händler ihre Stände in dieser Zeit auf dem Parkplatz hinter dem Rathaus auf. An den Markttagen ändert sich nichts: Es bleibt beim Mittwoch und Samstag von 7 bis 13 Uhr. Der Marktplatz bekommt neues Pflaster, mehr Bänke und sechs Bäume. Die Parkplätze vor den Geschäften bleiben aber erhalten, betont Marktmeister Holger Tiedemann."
+          ]
+        },
+        { "id": "a", "label": "a", "paragraphs": ["Alte Sachen wieder heil machen – mit Unterstützung von Freiwilligen"] },
+        { "id": "b", "label": "b", "paragraphs": ["Wer nachts Bus fährt, zahlt bald mehr"] },
+        { "id": "c", "label": "c", "paragraphs": ["Frisches Obst und Gemüse für ein Jahr an einem anderen Ort"] },
+        { "id": "d", "label": "d", "paragraphs": ["Neue Verbindung für alle, die am Wochenende spät unterwegs sind"] },
+        { "id": "e", "label": "e", "paragraphs": ["Nach dem Umbau: Schwimmen und Saunieren unter einem Dach"] },
+        { "id": "f", "label": "f", "paragraphs": ["Jugendliche untersuchen den Verkehr vor ihrer Schule"] },
+        { "id": "g", "label": "g", "paragraphs": ["Gebrauchte Fahrräder und Elektrogeräte günstig abzugeben"] },
+        { "id": "h", "label": "h", "paragraphs": ["Badegäste müssen sich noch etwas gedulden"] },
+        { "id": "i", "label": "i", "paragraphs": ["Vor der Lindenschule darf man ab sofort nur noch 30 fahren"] },
+        { "id": "j", "label": "j", "paragraphs": ["Marktplatz wird autofrei"] }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "zuordnung",
+          "prompt": "Text 1",
+          "answer": "d",
+          "evidence": [
+            { "text": "text-1", "quote": "Wer am Freitag- oder Samstagabend in Haldenstedt ausgeht" },
+            { "text": "text-1", "quote": "fährt die neue Linie N4 in den Nächten zum Samstag und zum Sonntag" }
+          ],
+          "explanation": "Metin 1, cuma ve cumartesi akşamı dışarı çıkanlar („ausgeht“: dışarı çıkıp eğlenen) için yeni bir gece otobüs hattını anlatıyor: N4 hattı „in den Nächten zum Samstag und zum Sonntag“ (cumartesi ve pazara bağlanan gecelerde) gece 0.30 ile 4.30 arasında çalışıyor. d başlığı („hafta sonu geç saatte dışarıda olan herkes için yeni bir bağlantı“) bunu farklı kelimelerle söylüyor. b başlığı („gece otobüse binen yakında daha fazla ödeyecek“) uymuyor: metne göre „die normalen Tickets“ (normal biletler) geçerli ve „einen Nachtzuschlag gibt es nicht“ (gece ek ücreti yok)."
+        },
+        {
+          "number": 2,
+          "type": "zuordnung",
+          "prompt": "Text 2",
+          "answer": "h",
+          "evidence": [
+            { "text": "text-2", "quote": "bleibt länger geschlossen als geplant" },
+            { "text": "text-2", "quote": "rechnet die Stadt nun mit einer Wiedereröffnung Mitte November" }
+          ],
+          "explanation": "Metin 2'nin ana konusu kapalı yüzme havuzunun planlanandan geç açılması: havuz „länger geschlossen als geplant“ (planlanandan uzun süre kapalı) kalıyor, çünkü yeni ısıtma sistemi geç teslim edildi; açılış eylül yerine kasım ortasında bekleniyor. h başlığı („yüzmeye gelenler biraz daha sabretmeli“) bu gecikmeyi anlatıyor. e başlığı („tadilattan sonra yüzme ve sauna aynı çatı altında“) uymuyor: metne göre sauna olmayacak, belediye meclisi onu „aus Kostengründen gestrichen“ (maliyet yüzünden iptal etti)."
+        },
+        {
+          "number": 3,
+          "type": "zuordnung",
+          "prompt": "Text 3",
+          "answer": "a",
+          "evidence": [
+            { "text": "text-3", "quote": "helfen ehrenamtliche Handwerker den Besuchern dabei, ihre Sachen selbst zu reparieren" }
+          ],
+          "explanation": "Metin 3'te Ostervelde'deki cemaat evinde her ayın ilk cumartesi „ehrenamtliche Handwerker“ (gönüllü zanaatkârlar) ziyaretçilerin bozuk eşyalarını kendileri tamir etmelerine yardım ediyor. a başlığı („eski eşyaları gönüllülerin desteğiyle yeniden sağlam hâle getirmek“) aynı şeyi başka kelimelerle söylüyor. g başlığı („kullanılmış bisiklet ve elektrikli aletler ucuza verilecek“) uymuyor: metinde bisiklet geçiyor, ama „Verkauft werden dort allerdings weder Fahrräder noch Geräte“ (orada ne bisiklet ne alet satılıyor) yazıyor; yalnızca yedek parçalar ücretli."
+        },
+        {
+          "number": 4,
+          "type": "zuordnung",
+          "prompt": "Text 4",
+          "answer": "f",
+          "evidence": [
+            { "text": "text-4", "quote": "standen die Schülerinnen und Schüler jeden Morgen zwischen 7.30 und 8.15 Uhr am Straßenrand und notierten jedes Fahrzeug" }
+          ],
+          "explanation": "Metin 4'te 7b sınıfının öğrencileri iki hafta boyunca her sabah okulun önünde yol kenarında durup her aracı not ediyor ve bir ölçüm aletiyle hızları ölçüyor. f başlığı („gençler okullarının önündeki trafiği inceliyor“) bu projeyi anlatıyor. i başlığı („Lindenschule'nin önünde artık yalnızca 30 ile gidilebilir“) uymuyor: metnin sonunda okul önünde 30 sınırının gelip gelmeyeceğine belediye meclisinin „im Frühjahr entscheiden“ (ilkbaharda karar vermek) istediği yazıyor; yani henüz karar yok."
+        },
+        {
+          "number": 5,
+          "type": "zuordnung",
+          "prompt": "Text 5",
+          "answer": "c",
+          "evidence": [
+            { "text": "text-5", "quote": "stellen die rund 30 Händler ihre Stände in dieser Zeit auf dem Parkplatz hinter dem Rathaus auf" }
+          ],
+          "explanation": "Metin 5'te Brakelfeld'deki haftalık pazar, pazar meydanı „ein Jahr lang“ (bir yıl boyunca) yenilendiği için belediye binasının arkasındaki otoparka taşınıyor; günler ve saatler aynı kalıyor. c başlığı („taze meyve ve sebze bir yıl boyunca başka bir yerde“) bu geçici taşınmayı anlatıyor. j başlığı („pazar meydanı araçsız oluyor“) uymuyor: meydana yeni taş döşeme, bank ve ağaç geliyor, ama „Die Parkplätze vor den Geschäften bleiben aber erhalten“ (dükkânların önündeki park yerleri korunuyor) deniyor."
+        }
+      ]
+    }
+  ]
+}

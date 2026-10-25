@@ -1,0 +1,90 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-3",
+  "title": "Neue Regeln für Abschlussarbeiten",
+  "minutes": 5,
+  "context": "Sie lesen im Newsletter einer Universität eine Meldung über eine geänderte Prüfungsordnung.",
+  "instructions": "Lesen Sie den Text. Welches Wort passt in die Lücken 1 bis 5? Wählen Sie jeweils die richtige Lösung (a, b, c oder d).",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "meldung",
+          "title": "Abschlussarbeiten künftig mit mündlicher Verteidigung",
+          "paragraphs": [
+            "Ab dem kommenden Wintersemester gelten an der Universität Kolmerau neue Regeln für Bachelor- und Masterarbeiten. Der Akademische Senat hat in seiner jüngsten Sitzung eine Änderung der Rahmenprüfungsordnung {{1}}, nach der jede schriftliche Abschlussarbeit durch eine etwa halbstündige mündliche Verteidigung ergänzt wird. In die Gesamtnote geht diese Prüfung zu einem Viertel ein.",
+            "Anlass der Reform ist die rasche Verbreitung textgenerierender Programme. Da sich kaum noch zuverlässig feststellen lasse, ob ein Text eigenständig geschrieben worden sei, wolle man künftig im Gespräch prüfen, ob die Studierenden ihr Thema tatsächlich durchdrungen hätten, erläutert die Vizepräsidentin für Studium und Lehre, Prof. Dr. Almuth Morgenrath. Ein generelles Verbot solcher Programme lehnt die Hochschulleitung {{2}} ab: Es sei weder kontrollierbar noch sinnvoll, da entsprechende Werkzeuge im späteren Berufsleben längst zum Alltag gehörten.",
+            "Stattdessen müssen die Studierenden der Arbeit künftig eine Erklärung beifügen und darin {{3}}, welche Hilfsmittel sie für welche Arbeitsschritte genutzt haben. In der Verteidigung sollen die Prüfenden dann weniger Fakten abfragen als vielmehr Rückfragen zu Methode und Argumentation stellen – Fragen also, die sich nur souverän beantworten lassen, wenn man die Arbeit selbst {{4}} hat.",
+            "Die Studierendenvertretung begrüßt die größere Transparenz, sieht die neue Prüfungsform aber skeptisch. Gerade Studierende mit Prüfungsangst würden durch die mündliche Verteidigung {{5}}, obwohl ihre schriftliche Leistung womöglich hervorragend sei. Die Universität will deshalb Probeverteidigungen anbieten und in begründeten Fällen eine schriftliche Ersatzleistung zulassen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "abc",
+          "prompt": "Lücke 1",
+          "options": { "a": "entschieden", "b": "bestimmt", "c": "gefasst", "d": "beschlossen" },
+          "answer": "d",
+          "evidence": [
+            { "text": "meldung", "quote": "Der Akademische Senat hat in seiner jüngsten Sitzung eine Änderung der Rahmenprüfungsordnung" }
+          ],
+          "explanation": "Bir kurulun (Senat) toplantıda bir değişikliği kabul etmesi için kullanılan kalıp „eine Änderung beschließen“dir: „eine Änderung der Rahmenprüfungsordnung beschlossen“ (çerçeve sınav yönetmeliğinde bir değişikliğe karar verdi). a) entschieden yanlış: „entscheiden“ doğrudan bir değişikliği nesne olarak almaz; „über etwas entscheiden“ veya „sich für etwas entscheiden“ biçiminde kullanılır. b) bestimmt yanlış: „bestimmen“ bir şeyi belirlemek, tespit etmek demektir (ör. bir tarih); bir kurulun bir değişikliği kabul etmesini anlatmaz. c) gefasst yanlış: „fassen“ yalnızca „einen Beschluss fassen“ (karar almak) kalıbında bu anlama gelir; „eine Änderung fassen“ denmez."
+        },
+        {
+          "number": 2,
+          "type": "abc",
+          "prompt": "Lücke 2",
+          "options": { "a": "ebenfalls", "b": "hingegen", "c": "nämlich", "d": "demnach" },
+          "answer": "b",
+          "evidence": [
+            { "text": "meldung", "quote": "wolle man künftig im Gespräch prüfen, ob die Studierenden ihr Thema tatsächlich durchdrungen hätten" },
+            { "text": "meldung", "quote": "Ein generelles Verbot solcher Programme lehnt die Hochschulleitung" }
+          ],
+          "explanation": "Önceki cümle üniversitenin benimsediği çözümü anlatıyor: Öğrencilerin konuyu gerçekten kavrayıp kavramadığı artık sözlü olarak sınanacak („im Gespräch prüfen“). Boşluklu cümle buna karşı olarak reddedilen bir çözümü veriyor: programların genel olarak yasaklanması. Kabul edilen ile reddedilen çözüm arasındaki karşıtlığı „hingegen“ (buna karşılık) anlatır. a) ebenfalls yanlış: „de, aynı şekilde“ demektir; daha önce reddedilen başka bir şey yok. c) nämlich yanlış: Önceki cümleyi gerekçelendirir; yasağın reddedilmesi sözlü savunmanın gerekçesi değildir. d) demnach yanlış: Önceki cümleden bir sonuç çıkarır; anlayışı sözlü olarak sınama isteğinden yasağın reddi sonucu çıkmaz – ret, iki noktadan sonra kendi gerekçesiyle (kontrol edilemez, anlamsız) açıklanıyor."
+        },
+        {
+          "number": 3,
+          "type": "abc",
+          "prompt": "Lücke 3",
+          "options": { "a": "angeben", "b": "zusagen", "c": "bescheinigen", "d": "beanstanden" },
+          "answer": "a",
+          "evidence": [
+            { "text": "meldung", "quote": "der Arbeit künftig eine Erklärung beifügen und darin" },
+            { "text": "meldung", "quote": "welche Hilfsmittel sie für welche Arbeitsschritte genutzt haben" }
+          ],
+          "explanation": "Öğrenciler tezlerine bir beyan ekleyecek ve orada hangi yardımcı araçları hangi çalışma adımlarında kullandıklarını belirtecek: „angeben, welche Hilfsmittel …“ (… -i belirtmek, bildirmek). Bu, Studierendenvertretung'un memnun olduğu „größere Transparenz“e (daha fazla şeffaflık) de uyar. b) zusagen yanlış: „zusagen“ gelecekte bir şey yapmayı vaat etmektir; oysa söz konusu olan geçmişte yapılan bir şey („genutzt haben“). c) bescheinigen yanlış: Bir başkasının bir durumu resmî olarak onaylamasıdır; öğrenciler kendi kullandıkları araçları belgelemiyor, bildiriyor. d) beanstanden yanlış: „beanstanden“ bir şeyden şikâyet etmek, kusur bulmaktır; öğrencilerin araçlardan şikâyet etmesi metinde yok."
+        },
+        {
+          "number": 4,
+          "type": "abc",
+          "prompt": "Lücke 4",
+          "options": { "a": "gelesen", "b": "korrigiert", "c": "verfasst", "d": "eingereicht" },
+          "answer": "c",
+          "evidence": [
+            { "text": "meldung", "quote": "ob ein Text eigenständig geschrieben worden sei" },
+            { "text": "meldung", "quote": "Fragen also, die sich nur souverän beantworten lassen, wenn man die Arbeit selbst" }
+          ],
+          "explanation": "Reformun amacı, bir metnin öğrencinin kendisi tarafından yazılıp yazılmadığını („eigenständig geschrieben“) sözlü sınavla anlamaktır. Yöntem ve argümantasyon üzerine sorular ancak tezi gerçekten kendisi yazan biri tarafından rahatça cevaplanabilir: „wenn man die Arbeit selbst verfasst hat“ (tezi bizzat kendisi yazmışsa). a) gelesen yanlış: Tezi sadece okumuş olmak, metnin istediği güvenceyi vermez; bir program tarafından yazılmış bir metni de okumak mümkündür. b) korrigiert yanlış: Tezleri düzelten ve değerlendiren öğrenciler değil, sınav görevlileridir. d) eingereicht yanlış: Tezi teslim etmek, kimin yazdığı hakkında hiçbir şey söylemez; sözlü sınav da tam bu yüzden getiriliyor."
+        },
+        {
+          "number": 5,
+          "type": "abc",
+          "prompt": "Lücke 5",
+          "options": { "a": "begünstigt", "b": "benachteiligt", "c": "entlastet", "d": "befreit" },
+          "answer": "b",
+          "evidence": [
+            { "text": "meldung", "quote": "sieht die neue Prüfungsform aber skeptisch" },
+            { "text": "meldung", "quote": "obwohl ihre schriftliche Leistung womöglich hervorragend sei" }
+          ],
+          "explanation": "Öğrenci temsilciliği yeni sınav biçimine kuşkuyla bakıyor („skeptisch“). Sınav kaygısı olan öğrenciler, yazılı çalışmaları belki mükemmel olduğu halde („obwohl … hervorragend sei“) sözlü savunma yüzünden dezavantajlı duruma düşecek: „benachteiligt werden“. Üniversitenin deneme savunmaları ve yazılı telafi imkânı sunması da bir dezavantajı gidermeye yöneliktir. a) begünstigt yanlış: Avantaj sağlanması kuşkuyla ve „obwohl“ ile çelişir. c) entlastet ve d) befreit yanlış: Sözlü savunma ek bir sınavdır; öğrencilerin yükünü azaltmaz veya onları bir yükümlülükten kurtarmaz – yazılı telafi ancak gerekçeli durumlarda ayrıca tanınacak."
+        }
+      ]
+    }
+  ]
+}

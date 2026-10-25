@@ -1,0 +1,81 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-4",
+  "title": "Englisch als Wissenschaftssprache",
+  "minutes": 7,
+  "context": "Sie lesen den Auszug aus einem Vortrag, den eine Sprachwissenschaftlerin auf einer Tagung zur Hochschulpolitik gehalten hat.",
+  "instructions": "Lesen Sie den Text. Welche Sprachhandlung (a–f) vollzieht die Autorin in den markierten Abschnitten 17 bis 20? Zwei Sprachhandlungen bleiben übrig.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "vortrag",
+          "title": "Englisch als Wissenschaftssprache",
+          "byline": "Auszug aus einem Vortrag von Prof. Dr. Dorothee Wernsdörfer, Germanistische Sprachwissenschaft",
+          "paragraphs": [
+            "Wer heute in den Naturwissenschaften publizieren will, kommt um das Englische kaum herum. In vielen Disziplinen gilt es als selbstverständlich, dass Fachaufsätze, Tagungsbeiträge und zunehmend auch ganze Masterstudiengänge auf Englisch angeboten werden; nur so, heißt es, erreiche man die internationale Fachgemeinschaft. Eine gewisse Ausnahme bilden lediglich die Rechtswissenschaften, die schon wegen ihrer Bindung an die jeweilige nationale Rechtsordnung überwiegend in der Landessprache veröffentlichen. {{17}}Ich will gleich vorweg betonen, dass ich diese Entwicklung keineswegs rückgängig machen möchte und es für völlig vernünftig halte, wenn Physikerinnen ihre Messergebnisse auf Englisch zur Diskussion stellen.",
+            "Mich beschäftigt eine andere Frage, nämlich was mit einem Fach geschieht, dessen Erkenntnisse nur noch in einer Sprache formuliert werden, die außerhalb der Fachkreise wenig verbreitet ist. {{18}}Während sich ein Aufsatz über Quantenoptik an einige hundert Spezialisten weltweit richtet, die ohnehin dieselbe Terminologie teilen, muss die Erziehungswissenschaft ihre Befunde Lehrkräften, Eltern und Schulbehörden vermitteln, die darüber in ihrer eigenen Sprache beraten.",
+            "Dass diese Sorge nicht aus der Luft gegriffen ist, lässt sich belegen. {{19}}In den erziehungswissenschaftlichen Zeitschriften, die meine Arbeitsgruppe für die Jahre 2005 bis 2024 ausgewertet hat, stieg der Anteil englischsprachiger Beiträge von Autorinnen und Autoren aus dem deutschsprachigen Raum von knapp elf auf fast sechzig Prozent; im selben Zeitraum ging die Zahl der Übersichtsartikel für die schulische Praxis um ein Drittel zurück. Für Fächer, deren Gegenstand die eigene Gesellschaft ist, bedeutet das einen schleichenden Verlust an Wirkung.",
+            "{{20}}Förderorganisationen sollten daher verlangen, dass jedes geförderte Projekt neben den englischen Fachaufsätzen mindestens eine allgemein verständliche deutschsprachige Darstellung seiner Ergebnisse vorlegt, die in einem frei zugänglichen Archiv erscheint. Mehrsprachigkeit wäre dann nicht länger ein Hindernis für die wissenschaftliche Laufbahn, sondern ein selbstverständlicher Teil von ihr."
+          ]
+        },
+        { "id": "a", "label": "a", "paragraphs": ["das eigentliche Thema der eigenen Ausführungen benennen"] },
+        { "id": "b", "label": "b", "paragraphs": ["das Ausmaß eines Problems mit Zahlen verdeutlichen"] },
+        { "id": "c", "label": "c", "paragraphs": ["zwei Bereiche einander gegenüberstellen"] },
+        { "id": "d", "label": "d", "paragraphs": ["eine konkrete Maßnahme empfehlen"] },
+        { "id": "e", "label": "e", "paragraphs": ["deutlich machen, welche Position man nicht vertritt"] },
+        { "id": "f", "label": "f", "paragraphs": ["einen Fall nennen, auf den eine allgemeine Beobachtung nicht zutrifft"] }
+      ],
+      "questions": [
+        {
+          "number": 17,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 17",
+          "answer": "e",
+          "evidence": [
+            { "text": "vortrag", "quote": "Ich will gleich vorweg betonen, dass ich diese Entwicklung keineswegs rückgängig machen möchte" }
+          ],
+          "explanation": "„Ich will gleich vorweg betonen, dass ich diese Entwicklung keineswegs rückgängig machen möchte“ (en baştan vurgulamak isterim ki bu gelişmeyi asla geri çevirmek istemiyorum): konuşmacı, İngilizceye karşı olduğu sanılmasın diye savunmadığı görüşü açıkça dışarıda bırakıyor; fizikçilerin İngilizce yayın yapmasını da makul buluyor. Bu, e. a uymuyor: Konuşmacının asıl ele aldığı soru işaretli cümleden sonra, ikinci paragrafın başında geliyor („Mich beschäftigt eine andere Frage“ – beni başka bir soru meşgul ediyor); 17 yalnızca neyi savunmadığını söylüyor. f de uymuyor: Genel eğilimin geçerli olmadığı alan, hukuk bilimleri, hemen önceki cümlede adı geçiyor; işaretli cümle bir istisna değil, konuşmacının kendi tutumu."
+        },
+        {
+          "number": 18,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 18",
+          "answer": "c",
+          "evidence": [
+            { "text": "vortrag", "quote": "Während sich ein Aufsatz über Quantenoptik an einige hundert Spezialisten weltweit richtet" },
+            { "text": "vortrag", "quote": "muss die Erziehungswissenschaft ihre Befunde Lehrkräften, Eltern und Schulbehörden vermitteln" }
+          ],
+          "explanation": "İşaretli cümle „Während …“ (… iken) ile iki alanı karşılaştırıyor: kuantum optiği üzerine bir makale aynı terimleri zaten paylaşan birkaç yüz uzmana yöneliyor, eğitim bilimi ise sonuçlarını kendi dillerinde tartışan öğretmenlere, velilere ve okul yetkililerine aktarmak zorunda. Bu, c: iki alanı birbirinin karşısına koymak. f uymuyor: eğitim bilimi burada genel eğilimin dışında kalan bir alan olarak değil, eğilimden zarar gören bir alan olarak anlatılıyor; istisna olan hukuk ilk paragrafta. b de uymuyor: „einige hundert Spezialisten“ bir sorunun boyutunu gösteren bir ölçüm değil, yalnızca hedef kitleyi tarif ediyor; sayılarla kanıt 19'da geliyor."
+        },
+        {
+          "number": 19,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 19",
+          "answer": "b",
+          "evidence": [
+            { "text": "vortrag", "quote": "Dass diese Sorge nicht aus der Luft gegriffen ist, lässt sich belegen." },
+            { "text": "vortrag", "quote": "von knapp elf auf fast sechzig Prozent" }
+          ],
+          "explanation": "Konuşmacı önce endişesinin „nicht aus der Luft gegriffen“ (havadan uydurulmuş değil) olduğunu kanıtlayabileceğini söylüyor. İşaretli cümle bunu çalışma grubunun incelediği dergilerden sayılarla yapıyor: İngilizce makalelerin payı „von knapp elf auf fast sechzig Prozent“ (yüzde on birden yaklaşık altmışa) çıkmış, okul uygulamasına yönelik derleme makaleleri üçte bir azalmış. Bu, b: bir sorunun boyutunu rakamlarla göstermek. c uymuyor: cümle iki alanı değil, aynı alanda zaman içindeki değişimi anlatıyor. d de uymuyor: burada henüz bir önlem önerilmiyor; öneri 20'de."
+        },
+        {
+          "number": 20,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 20",
+          "answer": "d",
+          "evidence": [
+            { "text": "vortrag", "quote": "Förderorganisationen sollten daher verlangen" }
+          ],
+          "explanation": "„Förderorganisationen sollten daher verlangen, dass jedes geförderte Projekt …“ (bu yüzden destek kuruluşları her desteklenen projeden … istemeli): konuşmacı somut bir uygulama öneriyor: İngilizce makalelerin yanında sonuçların herkesin anlayacağı Almanca bir sunumu hazırlanmalı ve açık erişimli bir arşivde yayımlanmalı. Bu, d: somut bir önlem tavsiye etmek. e uymuyor: konuşmacı burada savunmadığı bir görüşü değil, ne yapılması gerektiğini söylüyor. a da uymuyor: konuşmanın konusu ikinci paragrafın başında belirlenmişti; bu cümle konuyu adlandırmıyor, ondan bir öneri çıkarıyor."
+        }
+      ]
+    }
+  ]
+}

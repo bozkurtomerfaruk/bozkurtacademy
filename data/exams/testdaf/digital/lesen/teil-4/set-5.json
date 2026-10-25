@@ -1,0 +1,80 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 4,
+  "set": "set-5",
+  "title": "Gebühren für Langzeitstudierende",
+  "minutes": 7,
+  "context": "Sie lesen in einem Hochschulmagazin einen Kommentar zu einem Gesetzentwurf der Landesregierung.",
+  "instructions": "Lesen Sie den Text. Welche Sprachhandlung (a–f) vollzieht der Autor in den markierten Abschnitten 17 bis 20? Zwei Sprachhandlungen bleiben übrig.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "kommentar",
+          "title": "Gebühren für Langzeitstudierende",
+          "byline": "Ein Kommentar von Dr. Eckhard Rützenhoff, Zentrale Studienberatung",
+          "paragraphs": [
+            "Die Landesregierung plant, von Studierenden, welche die Regelstudienzeit um mehr als vier Semester überschritten haben, künftig eine Abgabe von 500 Euro pro Semester zu erheben. Das Geld soll den Hochschulen zufließen; vor allem aber soll die Gebühr nach dem Willen des Wissenschaftsministeriums einen Anreiz schaffen, das Studium zügiger abzuschließen. {{17}}Wer die hochschulpolitischen Debatten der frühen 2000er-Jahre noch im Gedächtnis hat, dürfte hier ein Déjà-vu erleben, denn damals führten mehrere Länder nahezu identische Abgaben ein, nur um sie wenige Jahre später stillschweigend wieder abzuschaffen. Doch lassen wir die Geschichte beiseite und fragen, wen die Regelung heute träfe.",
+            "Das Ministerium geht offenbar davon aus, dass, wer lange studiert, schlicht zu wenig Ehrgeiz hat. Belastbare Zahlen über die Gründe langer Studienzeiten gibt es freilich kaum, und auch ich kann mich nur auf die Gespräche in meinen Sprechstunden stützen. {{18}}Gerade dort zeigt sich aber eine Folge, die der Entwurf nicht bedacht hat: Wer kurz vor dem Examen steht und die Gebühr nicht aufbringen kann, exmatrikuliert sich womöglich und gibt das Studium ganz auf, sodass dem Land ausgerechnet jene Absolventinnen und Absolventen verloren gehen, deren Zahl es eigentlich steigern möchte.",
+            "{{19}}Man sollte zudem nicht alle Langzeitstudierenden in einen Topf werfen, denn wer sein Studium aus Bequemlichkeit verschleppt, befindet sich in einer ganz anderen Lage als jemand, der nebenher seinen Lebensunterhalt verdient, ein Kind betreut oder wegen einer Krankheit ein Jahr verloren hat. Die zweite Gruppe ist nach meinem Eindruck die weitaus größere.",
+            "{{20}}Zustimmen könnte ich einer Gebühr allenfalls dann, wenn sie erst nach einer Prüfung des Einzelfalls erhoben würde und Studierende mit Kindern, Pflegeaufgaben oder längerer Krankheit ausdrücklich davon befreit blieben. Solange der Entwurf dazu schweigt, sollte er im Landtag keine Mehrheit finden."
+          ]
+        },
+        { "id": "a", "label": "a", "paragraphs": ["an frühere Erfahrungen mit einer vergleichbaren Regelung erinnern"] },
+        { "id": "b", "label": "b", "paragraphs": ["der Gegenseite eine unausgesprochene Annahme unterstellen"] },
+        { "id": "c", "label": "c", "paragraphs": ["eine Voraussetzung nennen, unter der man einen Plan billigen würde"] },
+        { "id": "d", "label": "d", "paragraphs": ["auf eine unbeabsichtigte Wirkung aufmerksam machen"] },
+        { "id": "e", "label": "e", "paragraphs": ["zwischen verschiedenen Arten von Betroffenen differenzieren"] },
+        { "id": "f", "label": "f", "paragraphs": ["einräumen, dass die eigenen Kenntnisse lückenhaft sind"] }
+      ],
+      "questions": [
+        {
+          "number": 17,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 17",
+          "answer": "a",
+          "evidence": [
+            { "text": "kommentar", "quote": "denn damals führten mehrere Länder nahezu identische Abgaben ein" }
+          ],
+          "explanation": "İşaretli cümle okuru 2000'li yılların başındaki tartışmalara götürüyor: „damals führten mehrere Länder nahezu identische Abgaben ein, nur um sie wenige Jahre später stillschweigend wieder abzuschaffen“ (o zaman birkaç eyalet neredeyse aynı harçları getirmiş, birkaç yıl sonra sessizce yeniden kaldırmıştı). Yazar planlanan düzenlemeyi geçmişteki benzer bir uygulamaya bağlıyor, yani a. Sonraki cümle „Doch lassen wir die Geschichte beiseite“ (ama tarihi bir kenara bırakalım) ile konuyu değiştiriyor. b uymuyor: Bakanlığa söylemediği bir varsayımı yükleme ikinci paragrafın ilk cümlesinde yapılıyor („geht offenbar davon aus“). d de uymuyor: cümle istenmeyen bir sonuçtan değil, harçların geçmişte kaldırılmasından söz ediyor; bunun nedeni metinde verilmiyor."
+        },
+        {
+          "number": 18,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 18",
+          "answer": "d",
+          "evidence": [
+            { "text": "kommentar", "quote": "eine Folge, die der Entwurf nicht bedacht hat" },
+            { "text": "kommentar", "quote": "deren Zahl es eigentlich steigern möchte" }
+          ],
+          "explanation": "Yazar „eine Folge, die der Entwurf nicht bedacht hat“ (taslağın hesaba katmadığı bir sonuç) olduğunu söylüyor: Sınava az kalmış ve harcı ödeyemeyen biri kaydını sildirip okulu bırakabilir; böylece eyalet tam da „deren Zahl es eigentlich steigern möchte“ (sayısını aslında artırmak istediği) mezunları kaybeder. Düzenleme amacının tersine bir etki yaratıyor, yani d. f uymuyor: Yazarın bilgisinin sınırlı olduğunu kabul etmesi bir önceki, işaretsiz cümlede („Belastbare Zahlen … gibt es freilich kaum“ – güvenilir rakam pek yok); işaretli cümle ise „aber“ ile bir sonucu gösteriyor. e de uymuyor: burada farklı öğrenci grupları ayrılmıyor; bu 19'da yapılıyor."
+        },
+        {
+          "number": 19,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 19",
+          "answer": "e",
+          "evidence": [
+            { "text": "kommentar", "quote": "Man sollte zudem nicht alle Langzeitstudierenden in einen Topf werfen" }
+          ],
+          "explanation": "„nicht alle Langzeitstudierenden in einen Topf werfen“ (uzun süre okuyan bütün öğrencileri aynı kefeye koymamak): yazar iki grubu ayırıyor: rahatlığından dolayı okulu uzatanlar ile yan işte çalışan, çocuğuna bakan ya da hastalık yüzünden bir yıl kaybedenler. Bu, e: etkilenenlerin farklı türlerini ayırt etmek. b uymuyor: burada bakanlığa bir varsayım yüklenmiyor; yazar kendi ayrımını yapıyor. c de uymuyor: hangi koşulda harcı kabul edeceğini yazar ancak son paragrafta söylüyor."
+        },
+        {
+          "number": 20,
+          "type": "zuordnung",
+          "prompt": "Abschnitt 20",
+          "answer": "c",
+          "evidence": [
+            { "text": "kommentar", "quote": "Zustimmen könnte ich einer Gebühr allenfalls dann, wenn" }
+          ],
+          "explanation": "„Zustimmen könnte ich einer Gebühr allenfalls dann, wenn …“ (bir harcı olsa olsa … durumunda onaylayabilirdim): yazar hangi şartla planı kabul edeceğini söylüyor: harç önce her durum tek tek incelendikten sonra alınmalı, çocuklu, bakım yükü olan veya uzun süre hasta olan öğrenciler açıkça muaf tutulmalı. Bu, c. e uymuyor: Gruplar arasındaki ayrım önceki paragrafta yapıldı; bu cümle o ayrımı bir onay şartına dönüştürüyor. d de uymuyor: burada istenmeyen bir etkiden değil, onay için gereken koşuldan söz ediliyor."
+        }
+      ]
+    }
+  ]
+}

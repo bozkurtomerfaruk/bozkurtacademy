@@ -1,0 +1,90 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-4",
+  "title": "Ein Lernzentrum für alle",
+  "minutes": 5,
+  "context": "Sie lesen auf der Website einer Hochschule eine Meldung über einen Neubau.",
+  "instructions": "Lesen Sie den Text. Welches Wort passt in die Lücken 1 bis 5? Wählen Sie jeweils die richtige Lösung (a, b, c oder d).",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "meldung",
+          "title": "Neues Lernzentrum: Arbeitsplätze auch für die Stadtgesellschaft",
+          "paragraphs": [
+            "Nach dreijähriger Bauzeit hat die Hochschule Fennwald ihr neues Lernzentrum in Betrieb genommen. Das Gebäude ersetzt die frühere Zentralbibliothek und bietet rund 900 Arbeitsplätze – vom schallgeschützten Einzelplatz bis zum Gruppenraum mit digitaler Präsentationstechnik. Anders als die alte Bibliothek steht es nicht nur Hochschulangehörigen {{1}}, sondern allen Bürgerinnen und Bürgern der Region.",
+            "Diese Regelung ist kein Zufall. Der Neubau wurde zu einem erheblichen Teil von der Stadt mitfinanziert; im {{2}} hat sich die Hochschule verpflichtet, Räume und Bestände dauerhaft auch für die Allgemeinheit nutzbar zu machen.",
+            "Unter Studierenden war das Konzept zunächst umstritten, viele befürchteten, in Prüfungsphasen keinen Platz mehr zu finden. Die Hochschule hat darauf reagiert: In den sechs Wochen vor den Klausuren ist das oberste Stockwerk für Studierende {{3}}, alle übrigen Bereiche bleiben frei zugänglich.",
+            "Die erste Bilanz fällt nach Angaben des Leiters, Dr. Edzard Kallweit, positiv aus. Täglich kämen rund 2 000 Menschen, darunter auffallend viele Schülerinnen und Schüler der umliegenden Gymnasien. In ihnen sieht Kallweit keine Konkurrenz für die Studierenden, {{4}} eine Chance: Wer schon während der Schulzeit regelmäßig auf dem Campus lerne, entscheide sich später womöglich eher für ein Studium in Fennwald. Ob sich diese Hoffnung erfüllt, lässt sich allerdings frühestens in einigen Jahren {{5}}, wenn die ersten dieser Jugendlichen ihr Studium aufnehmen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "abc",
+          "prompt": "Lücke 1",
+          "options": { "a": "offen", "b": "bereit", "c": "frei", "d": "zugänglich" },
+          "answer": "a",
+          "evidence": [
+            { "text": "meldung", "quote": "steht es nicht nur Hochschulangehörigen" },
+            { "text": "meldung", "quote": "sondern allen Bürgerinnen und Bürgern der Region" }
+          ],
+          "explanation": "„jemandem offenstehen“ (birine açık olmak, onun kullanımına açık olmak) kalıbı Dativ ile kurulur: „steht es nicht nur Hochschulangehörigen offen, sondern allen Bürgerinnen und Bürgern“ (yalnızca üniversite mensuplarına değil, bölgedeki tüm vatandaşlara açık). b) bereit yanlış: „bereitstehen“ bir şeyin hazır beklemesi demektir; kimlerin kullanabileceğini anlatmaz. c) frei yanlış: „es steht jemandem frei“ birinin bir şeyi yapıp yapmamakta serbest olması demektir (ör. „Es steht Ihnen frei, zu kommen.“); bir binanın kimlere açık olduğunu anlatmaz. d) zugänglich yanlış: Anlamca yakındır, ama „stehen“ ile değil, „sein“ ile kullanılır („ist … zugänglich“)."
+        },
+        {
+          "number": 2,
+          "type": "abc",
+          "prompt": "Lücke 2",
+          "options": { "a": "Nachhinein", "b": "Ganzen", "c": "Gegenzug", "d": "Zweifel" },
+          "answer": "c",
+          "evidence": [
+            { "text": "meldung", "quote": "Der Neubau wurde zu einem erheblichen Teil von der Stadt mitfinanziert" },
+            { "text": "meldung", "quote": "Diese Regelung ist kein Zufall." }
+          ],
+          "explanation": "Metin, binanın halka açılmasının tesadüf olmadığını söylüyor („kein Zufall“) ve sebebini veriyor: Belediye inşaatın önemli bir kısmını finanse etti; buna karşılık üniversite mekânlarını ve kaynaklarını kalıcı olarak herkesin kullanımına açmayı üstlendi. Bir karşılık ilişkisini „im Gegenzug“ (karşılığında) anlatır. a) im Nachhinein yanlış: „sonradan, geriye dönüp bakınca“ demektir; bir yükümlülüğün sonradan fark edilmesi metindeki sebep ilişkisini kurmaz. b) im Ganzen yanlış: „genel olarak, toplamda“ demektir; finansman ile yükümlülük arasındaki bağı ifade etmez. d) im Zweifel yanlış: „şüphe halinde“ demektir; yükümlülük bir koşula bağlı değil, „dauerhaft“ (kalıcı)."
+        },
+        {
+          "number": 3,
+          "type": "abc",
+          "prompt": "Lücke 3",
+          "options": { "a": "gesperrt", "b": "reserviert", "c": "untersagt", "d": "gekündigt" },
+          "answer": "b",
+          "evidence": [
+            { "text": "meldung", "quote": "viele befürchteten, in Prüfungsphasen keinen Platz mehr zu finden" },
+            { "text": "meldung", "quote": "alle übrigen Bereiche bleiben frei zugänglich" }
+          ],
+          "explanation": "Öğrenciler sınav dönemlerinde yer bulamamaktan korkuyordu; üniversite buna tepki olarak sınavlardan önceki altı haftada en üst katı yalnızca öğrencilere ayırıyor: „für Studierende reserviert“ (öğrencilere ayrılmış). Bunu „alle übrigen Bereiche bleiben frei zugänglich“ (diğer tüm alanlar herkese açık kalıyor) karşıtlığı da gösteriyor. a) gesperrt yanlış: Katın öğrencilere kapatılması onların korkusunu artırırdı; tepki bu korkuyu gidermeye yönelik. c) untersagt yanlış: „untersagen“ bir eylemi yasaklamaktır; bir kat „untersagt“ olamaz ve yasak da öğrencilerin işine yaramazdı. d) gekündigt yanlış: „kündigen“ bir sözleşmeyi feshetmektir; bir katla ilgili değildir."
+        },
+        {
+          "number": 4,
+          "type": "abc",
+          "prompt": "Lücke 4",
+          "options": { "a": "aber", "b": "jedoch", "c": "doch", "d": "sondern" },
+          "answer": "d",
+          "evidence": [
+            { "text": "meldung", "quote": "In ihnen sieht Kallweit keine Konkurrenz für die Studierenden" }
+          ],
+          "explanation": "Cümlenin ilk kısmında olumsuzluk var: „keine Konkurrenz“ (rekabet değil). Olumsuzlanan bir ifadenin yerine doğru olanı koyan bağlaç „sondern“dur: „keine Konkurrenz …, sondern eine Chance“ (rekabet değil, bir fırsat). Kallweit liselileri öğrencilere rakip olarak değil, ileride Fennwald'da okuyabilecek gençler olarak görüyor. a) aber, b) jedoch ve c) doch yanlış: Bu bağlaçlar da bir karşıtlık bildirir, ama bir şeyi kısıtlar veya ona bir itiraz ekler („keine Konkurrenz, aber …“ = rekabet değil, ama yine de …); burada ise reddedilen değerlendirmenin („Konkurrenz“) yerine yenisi („Chance“) konuyor."
+        },
+        {
+          "number": 5,
+          "type": "abc",
+          "prompt": "Lücke 5",
+          "options": { "a": "beurteilen", "b": "vermuten", "c": "bezweifeln", "d": "erwarten" },
+          "answer": "a",
+          "evidence": [
+            { "text": "meldung", "quote": "frühestens in einigen Jahren" },
+            { "text": "meldung", "quote": "wenn die ersten dieser Jugendlichen ihr Studium aufnehmen" }
+          ],
+          "explanation": "Kallweit'in umudu, liselilerin ileride Fennwald'da okumayı seçmesi. Bunun gerçekleşip gerçekleşmediği ancak bu gençlerin ilkleri üniversiteye başladığında, yani en erken birkaç yıl sonra değerlendirilebilir: „lässt sich … beurteilen“ (değerlendirilebilir). b) vermuten, c) bezweifeln ve d) erwarten yanlış: Tahmin etmek, kuşku duymak veya beklemek için verilere gerek yoktur; bunlar bugün de mümkündür. „frühestens in einigen Jahren … wenn die ersten dieser Jugendlichen ihr Studium aufnehmen“ ise ancak sonuçlar ortaya çıktığında yapılabilecek bir değerlendirmeyi gösterir. Kallweit zaten şimdiden bir umut dile getiriyor."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 5,
+  "set": "set-1",
+  "title": "Drei Wege, Wasserstoff zu speichern",
+  "minutes": 10,
+  "context": "Sie lesen in einem Wissenschaftsmagazin einen Bericht über Forschung zur Speicherung von Wasserstoff.",
+  "instructions": "Lesen Sie den Text. Zu welchem Ansatz (a, b oder c) passen die Aussagen 21 bis 27?",
+  "groups": [
+    {
+      "layout": "article",
+      "none": false,
+      "texts": [
+        {
+          "id": "bericht",
+          "title": "Drei Wege, Wasserstoff zu speichern",
+          "byline": "Von Ricarda Sturmfels",
+          "paragraphs": [
+            "Wer Wasserstoff für den Energieträger der Zukunft hält, stößt rasch auf ein unscheinbares, aber hartnäckiges Problem: Das leichteste aller Elemente beansprucht unter Normalbedingungen enorm viel Raum und entweicht selbst durch winzige Undichtigkeiten. Wie sich das Gas kompakt, sicher und bezahlbar aufbewahren lässt, gehört deshalb zu den zentralen Fragen der Energieforschung. Auf einer Fachtagung in Wellenbrück stellten kürzlich drei Arbeitsgruppen Zwischenergebnisse vor, die kaum unterschiedlicher sein könnten.",
+            "Das Team um den Verfahrenstechniker Joost Brenneisen von der Technischen Hochschule Aldersfeld bindet Wasserstoff chemisch an eine ölartige Trägerflüssigkeit. Der Charme dieser Lösung liegt darin, dass die beladene Substanz weder unter Druck gesetzt noch gekühlt werden muss: Sie lässt sich in gewöhnlichen Tanks lagern und per Tankwagen oder Schiff verschicken, ganz so wie Heizöl oder Diesel. Weniger elegant ist der Rückweg. Um das Gas wieder abzuspalten, muss die Flüssigkeit auf rund 300 Grad erwärmt werden, was einen beträchtlichen Teil der gespeicherten Energie aufzehrt. Brenneisen räumt denn auch ein, das Verfahren rechne sich vorerst nur dort, wo ohnehin große Mengen Abwärme anfielen, etwa in Stahlwerken oder Chemieparks.",
+            "Einen gänzlich anderen Weg schlägt die Materialwissenschaftlerin Aino Karvonen ein. Ihre Gruppe lässt Wasserstoff in feine Metallpulver eindringen, in deren Kristallgitter sich die Atome einlagern. Pro Liter Speichervolumen findet so mehr Wasserstoff Platz als in einem Hochdrucktank. Zudem gilt das Material als außergewöhnlich gutmütig: Wird ein Behälter beschädigt, strömt das Gas nicht schlagartig aus, sondern löst sich nur langsam aus dem Metall. Der Haken ist das Gewicht. Ein Speicher, der einem Pkw eine alltagstaugliche Reichweite verschaffte, brächte mehrere hundert Kilogramm auf die Waage. Karvonen sieht die Zukunft der Technik deshalb nicht auf der Straße, sondern in stationären Anlagen, etwa in der Notstromversorgung von Kliniken, wo die Masse keine Rolle spiele. Gegenwärtig versucht ihr Team, die bislang benötigten seltenen und teuren Legierungsbestandteile durch Magnesium und Eisen zu ersetzen.",
+            "Um ganz andere Größenordnungen geht es der Geologin Amrei Ostendorp. Sie untersucht, ob sich ausgeförderte Erdgaslagerstätten, also poröse Sandsteinschichten in über tausend Metern Tiefe, als Wasserstoffspeicher eignen. Ein einziges solches Reservoir könnte nach ihren Berechnungen den Bedarf einer Großstadt über Monate decken. Damit ließe sich Strom, den Solaranlagen im Sommer im Überfluss erzeugen, in Form von Wasserstoff bis in die dunkle Jahreszeit aufheben. Ungeklärt ist allerdings, wie das Gas mit dem Gestein und den darin lebenden Mikroorganismen wechselwirkt. In Laborversuchen beobachtete Ostendorps Team, dass bestimmte Bakterien Wasserstoff verstoffwechseln und dabei Methan bilden – ein Verlust, dessen Ausmaß sich bislang nicht abschätzen lasse. Vor einem Feldversuch will die Geologin daher Bohrkerne aus mehreren Lagerstätten analysieren.",
+            "Dass sich eine der drei Methoden auf breiter Front durchsetzen wird, erwartet keiner der Beteiligten. Wahrscheinlicher sei ein Nebeneinander, bei dem jede Technik die Nische besetze, in der ihre Schwächen am wenigsten ins Gewicht fielen, resümierte die Tagungsleitung zum Abschluss."
+          ]
+        },
+        {
+          "id": "ansatz-a",
+          "label": "a",
+          "title": "Ansatz der Arbeitsgruppe Brenneisen",
+          "paragraphs": ["Wasserstoff wird chemisch an eine Flüssigkeit gebunden."]
+        },
+        {
+          "id": "ansatz-b",
+          "label": "b",
+          "title": "Ansatz der Arbeitsgruppe Karvonen",
+          "paragraphs": ["Wasserstoff wird von einem festen Werkstoff aufgenommen."]
+        },
+        {
+          "id": "ansatz-c",
+          "label": "c",
+          "title": "Ansatz der Arbeitsgruppe Ostendorp",
+          "paragraphs": ["Wasserstoff wird in natürlichen Gesteinsformationen eingelagert."]
+        }
+      ],
+      "questions": [
+        {
+          "number": 21,
+          "type": "zuordnung",
+          "prompt": "Bei einem Leck tritt der Inhalt des Speichers nur allmählich aus.",
+          "answer": "b",
+          "evidence": [{ "text": "bericht", "quote": "strömt das Gas nicht schlagartig aus, sondern löst sich nur langsam aus dem Metall" }],
+          "explanation": "Karvonen grubunun metal tozlarında depo hasar görürse „strömt das Gas nicht schlagartig aus, sondern löst sich nur langsam aus dem Metall“ (gaz bir anda dışarı akmaz, metalden yavaş yavaş çözülür); „allmählich“ bu „langsam“ın karşılığıdır. Brenneisen'in sıvısı için yalnızca normal tanklarda depolanabildiği söylenir, sızıntıda ne olacağı anlatılmaz. Ostendorp'un yer altı deposunda bir hasar konusu hiç geçmez."
+        },
+        {
+          "number": 22,
+          "type": "zuordnung",
+          "prompt": "Das beladene Speichermedium kann mit denselben Mitteln befördert werden wie herkömmliche Kraftstoffe.",
+          "answer": "a",
+          "evidence": [{ "text": "bericht", "quote": "per Tankwagen oder Schiff verschicken, ganz so wie Heizöl oder Diesel" }],
+          "explanation": "Brenneisen'in yüklü taşıyıcı sıvısı „per Tankwagen oder Schiff verschicken, ganz so wie Heizöl oder Diesel“ (tanker veya gemiyle, tıpkı kalorifer yakıtı ya da dizel gibi gönderilebilir); „herkömmliche Kraftstoffe“ (alışılmış yakıtlar) bunu özetler. Karvonen'in metal tozu için taşıma değil, ağırlık sorunu anlatılır. Ostendorp'ta Wasserstoff yer altındaki kayaçlarda kalır, taşınmaz."
+        },
+        {
+          "number": 23,
+          "type": "zuordnung",
+          "prompt": "Mit dem Verfahren könnten saisonale Unterschiede zwischen Stromproduktion und -verbrauch ausgeglichen werden.",
+          "answer": "c",
+          "evidence": [{ "text": "bericht", "quote": "in Form von Wasserstoff bis in die dunkle Jahreszeit aufheben" }],
+          "explanation": "Ostendorp'a göre yazın güneş panellerinin fazlasıyla ürettiği elektrik Wasserstoff olarak „bis in die dunkle Jahreszeit aufheben“ (karanlık mevsime, yani kışa kadar saklanabilir); bu, mevsimler arası üretim–tüketim farkının dengelenmesi demektir. Karvonen'in örneği hastanelerde acil durum elektriğidir, mevsimlerle ilgili değildir. Brenneisen'de depolama süresinden hiç söz edilmez."
+        },
+        {
+          "number": 24,
+          "type": "zuordnung",
+          "prompt": "Der Gruppenleiter hält das Verfahren derzeit nur in Verbindung mit Industrieanlagen für wirtschaftlich, die überschüssige Hitze liefern.",
+          "answer": "a",
+          "evidence": [{ "text": "bericht", "quote": "das Verfahren rechne sich vorerst nur dort, wo ohnehin große Mengen Abwärme anfielen" }],
+          "explanation": "Brenneisen kabul ediyor: „das Verfahren rechne sich vorerst nur dort, wo ohnehin große Mengen Abwärme anfielen“ (yöntem şimdilik yalnızca zaten büyük miktarda atık ısı çıkan yerlerde kârlı), örneğin çelik fabrikaları ve kimya parklarında. Sebebi, gazı ayırmak için sıvının yaklaşık 300 dereceye ısıtılması gerekmesidir. Karvonen ve Ostendorp için ısı ya da kârlılık şartı geçmez; ayrıca „Gruppenleiter“ erkek yöneticiye işaret eder."
+        },
+        {
+          "number": 25,
+          "type": "zuordnung",
+          "prompt": "Die Forscherin hält ihre Methode für Fahrzeuge für ungeeignet und setzt auf ortsfeste Anwendungen.",
+          "answer": "b",
+          "evidence": [
+            { "text": "bericht", "quote": "brächte mehrere hundert Kilogramm auf die Waage" },
+            { "text": "bericht", "quote": "nicht auf der Straße, sondern in stationären Anlagen" }
+          ],
+          "explanation": "Bir otomobile yeterli menzil verecek bir metal depo „brächte mehrere hundert Kilogramm auf die Waage“ (birkaç yüz kilo gelirdi); bu yüzden Karvonen tekniğin geleceğini „nicht auf der Straße, sondern in stationären Anlagen“ (yolda değil, sabit tesislerde) görüyor. „ortsfest“ = „stationär“. Brenneisen'in sıvısı tanker ve gemiyle taşınır ama araç yakıtı olarak değerlendirilmez; Ostendorp da kadın araştırmacıdır, fakat araçlardan hiç söz etmez."
+        },
+        {
+          "number": 26,
+          "type": "zuordnung",
+          "prompt": "Es lässt sich noch nicht beziffern, welcher Anteil des eingelagerten Energieträgers durch Kleinstlebewesen umgewandelt wird.",
+          "answer": "c",
+          "evidence": [{ "text": "bericht", "quote": "bestimmte Bakterien Wasserstoff verstoffwechseln und dabei Methan bilden – ein Verlust, dessen Ausmaß sich bislang nicht abschätzen lasse" }],
+          "explanation": "Ostendorp'un laboratuvar deneylerinde „bestimmte Bakterien Wasserstoff verstoffwechseln und dabei Methan bilden – ein Verlust, dessen Ausmaß sich bislang nicht abschätzen lasse“ (bazı bakteriler Wasserstoff'u metabolize edip metan oluşturuyor; bu kaybın boyutu henüz tahmin edilemiyor). „Kleinstlebewesen“ bakterilerdir. Brenneisen'de enerji kaybı vardır ama sebebi ısıtmadır, canlılar değildir; Karvonen'de canlılardan söz edilmez."
+        },
+        {
+          "number": 27,
+          "type": "zuordnung",
+          "prompt": "Die Gruppe arbeitet daran, das Speichermaterial aus kostengünstigeren Rohstoffen herzustellen.",
+          "answer": "b",
+          "evidence": [{ "text": "bericht", "quote": "die bislang benötigten seltenen und teuren Legierungsbestandteile durch Magnesium und Eisen zu ersetzen" }],
+          "explanation": "Karvonen'in ekibi şu anda „die bislang benötigten seltenen und teuren Legierungsbestandteile durch Magnesium und Eisen zu ersetzen“ (şimdiye kadar gereken nadir ve pahalı alaşım bileşenlerini magnezyum ve demirle değiştirmeye) çalışıyor; yani daha ucuz hammaddeler arıyor. Brenneisen'de maliyet konusu atık ısıyla ilgilidir, malzemeyle değil; Ostendorp'un bir sonraki adımı farklı yataklardan sondaj örnekleri incelemektir."
+        }
+      ]
+    }
+  ]
+}

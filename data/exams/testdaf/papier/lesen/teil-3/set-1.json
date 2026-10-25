@@ -1,0 +1,197 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "papier",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-1",
+  "title": "Bakterien als Baustoff",
+  "minutes": 20,
+  "context": "Sie lesen in einer populärwissenschaftlichen Zeitschrift einen Artikel über die Forschung an selbstheilendem Beton.",
+  "instructions": "Lesen Sie den Text und die Aussagen 21 bis 30. Entscheiden Sie: Stimmt die Aussage mit dem Text überein (Ja), widerspricht sie dem Text (Nein) oder sagt der Text dazu nichts?",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Bakterien als Baustoff",
+          "byline": "Von Katrin Laufenberg",
+          "paragraphs": [
+            "Beton ist der Stoff, aus dem die moderne Welt gebaut ist – und zugleich einer, der unbemerkt altert. Haarfeine Risse, die beim Aushärten, durch Temperaturschwankungen oder unter Last entstehen, gelten unter Fachleuten nicht als Ausführungsfehler, sondern als unvermeidliche Eigenschaft des Materials. Zum Problem werden sie erst, wenn Wasser und darin gelöste Salze durch sie bis zur Stahlbewehrung vordringen. Der Stahl korrodiert, nimmt dabei an Volumen zu und sprengt das umgebende Gefüge weiter auf. Was als Spalt von wenigen Zehntelmillimetern beginnt, kann auf diese Weise nach Jahrzehnten die Standsicherheit einer Brücke infrage stellen – und die Instandhaltung solcher Bauwerke bindet in vielen Ländern einen erheblichen Teil der öffentlichen Bauetats.",
+            "An der Technischen Universität Hallerstadt arbeitet eine Forschungsgruppe um den Bauingenieur Jannik Overbeck und die Mikrobiologin Merle Sandvoß daran, dass Beton solche Schäden künftig selbst behebt. Dem Frischbeton werden dazu Sporen eines Bodenbakteriums beigemischt, gemeinsam mit einem Nährstoff auf Basis von Calciumlactat. Solange das Bauteil unversehrt bleibt, verharren die Sporen in einem Ruhezustand, den sie nach bisherigen Erkenntnissen über Jahre hinweg aufrechterhalten können. Erst wenn durch einen frischen Riss Feuchtigkeit eindringt, keimen sie aus, verstoffwechseln den Nährstoff und scheiden dabei Calciumcarbonat aus – jenen Kalk, der den Spalt nach und nach verfüllt. „Die Reparaturkolonne ist gewissermaßen schon eingebaut“, sagt Sandvoß. Ganz neu ist der Gedanke allerdings nicht: Erste Versuche mit bakterienhaltigem Beton liegen gut zwei Jahrzehnte zurück. Diese blieben jedoch weitgehend folgenlos, weil die Mikroorganismen das Anmischen kaum überstanden.",
+            "Genau hier setzt die Hallerstädter Gruppe an. Den entscheidenden Unterschied mache nicht der Bakterienstamm, betont Overbeck – man verwende ein seit Langem gut beschriebenes Bodenbakterium –, sondern dessen Verpackung. Die Sporen werden in die Poren winziger Blähtonkügelchen eingebracht, die anschließend mit einer dünnen Polymerschicht versiegelt werden. Diese Hülle schützt sie sowohl vor den mechanischen Kräften in der Mischtrommel als auch vor dem stark alkalischen Milieu des Zementsteins, das ungeschützte Sporen innerhalb weniger Wochen abtötet. Nach Messungen der Gruppe ist in den Kügelchen auch nach zwölf Monaten noch mehr als die Hälfte der Sporen keimfähig.",
+            "Im Labor sind die Ergebnisse vielversprechend: Probekörper, die gezielt angerissen und anschließend befeuchtet wurden, ließen danach rund neunzig Prozent weniger Wasser durch als unbehandelte Vergleichsproben. Sandvoß warnt dennoch davor, den Begriff der Selbstheilung zu wörtlich zu nehmen. Der Kalk verschließe den Spalt zwar zuverlässig, verbinde die Bruchflächen aber nicht so miteinander, dass das Bauteil seine ursprüngliche Belastbarkeit zurückerlange. Auch der Rissbreite sind Grenzen gesetzt. Spalten bis etwa 0,4 Millimeter füllten sich bei konstant 20 Grad innerhalb von sechs Wochen vollständig; bei breiteren Rissen blieb die Kalkschicht lückenhaft, einige schlossen sich gar nicht.",
+            "Ob sich diese Werte außerhalb des Labors bestätigen, prüft die Gruppe seit drei Jahren an einer Versuchswand in einem Regenrückhaltebecken der Hallerstädter Stadtwerke. Dort zeigt sich ein Muster, das im temperierten Labor nicht auftreten konnte: In den Wintermonaten kommt die Rissheilung nahezu zum Stillstand. Die Bakterien, so Sandvoß, würden erst wieder nennenswert aktiv, wenn die Temperatur im Bauteil über längere Zeit oberhalb von etwa zehn Grad liege. Bis zum Frühjahr könne Wasser daher weitgehend ungehindert eindringen – ein Befund, den die Gruppe nun bei der Auswahl geeigneter Einsatzorte berücksichtigen will.",
+            "Skeptischer äußert sich Ilse Wedekamp, die an der Materialprüfanstalt Nordwerth Zusatzstoffe für den Betonbau begutachtet. Der Bakterienbeton sei derzeit um 30 bis 40 Prozent teurer als herkömmlicher Beton, und ob sich der Aufpreis über eingesparte Sanierungen rechne, lasse sich erst nach Jahrzehnten seriös beurteilen. Zudem sei ungeklärt, was geschehe, wenn der Nährstoffvorrat an einer Stelle aufgebraucht sei. Overbeck widerspricht dem nicht. Ob ein bereits verschlossener Riss, der sich erneut öffnet, ein zweites Mal verheilt, könne man auf Grundlage der bisherigen Daten noch nicht sagen; entsprechende Versuchsreihen liefen gerade erst an.",
+            "Den größten Nutzen sieht Overbeck ohnehin nicht im gewöhnlichen Hochbau, sondern bei Bauteilen, die nach ihrer Fertigstellung kaum noch zugänglich sind: Tunnelschalen, Fundamente, Bauwerke im Grundwasser. Dort sei schon die Kontrolle aufwendig, eine Reparatur oft nur unter großem Aufwand möglich. Die regelmäßige Bauwerksprüfung soll der neue Werkstoff allerdings nicht ersetzen. „Wir wollen die Prüfingenieure nicht überflüssig machen“, sagt Sandvoß, „sondern ihnen Zeit verschaffen.“"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": "01",
+          "example": true,
+          "type": "ja-nein-nichts",
+          "prompt": "Die meisten Haarrisse im Beton entstehen bereits beim Aushärten.",
+          "answer": "nichts",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "beim Aushärten, durch Temperaturschwankungen oder unter Last"
+            }
+          ],
+          "explanation": "Metin kılcal çatlakların üç nedenini sayıyor: „beim Aushärten, durch Temperaturschwankungen oder unter Last“ (sertleşme sırasında, sıcaklık değişimleriyle veya yük altında). Ancak bunlardan hangisinin en sık görüldüğü hakkında hiçbir şey söylemiyor. Bu yüzden ifade ne doğrulanabilir ne de çürütülebilir: Text sagt dazu nichts."
+        },
+        {
+          "number": "02",
+          "example": true,
+          "type": "ja-nein-nichts",
+          "prompt": "Haarrisse deuten nach Ansicht von Fachleuten in der Regel auf eine mangelhafte Bauausführung hin.",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "nicht als Ausführungsfehler"
+            }
+          ],
+          "explanation": "Metne göre uzmanlar kılcal çatlakları „nicht als Ausführungsfehler, sondern als unvermeidliche Eigenschaft des Materials“ – bir uygulama hatası olarak değil, malzemenin kaçınılmaz bir özelliği olarak görüyor. İfade bunun tam tersini söylediği için cevap Nein."
+        },
+        {
+          "number": 21,
+          "type": "ja-nein-nichts",
+          "prompt": "Die Mikroorganismen bleiben so lange untätig, bis über eine Beschädigung des Bauteils Wasser zu ihnen gelangt.",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Erst wenn durch einen frischen Riss Feuchtigkeit eindringt, keimen sie aus"
+            }
+          ],
+          "explanation": "Metne göre sporlar yapı elemanı sağlam kaldığı sürece bir „Ruhezustand“ (dinlenme hâli) içinde bekliyor; „Erst wenn durch einen frischen Riss Feuchtigkeit eindringt, keimen sie aus“ – ancak yeni bir çatlaktan nem girdiğinde filizlenip faaliyete geçiyorlar. İfade bu ilişkiyi (hasar → su → etkinlik) başka sözcüklerle aktarıyor; cevap Ja."
+        },
+        {
+          "number": 22,
+          "type": "ja-nein-nichts",
+          "prompt": "Overbeck und Sandvoß waren bereits an den frühen Experimenten beteiligt, die vor rund zwanzig Jahren stattfanden.",
+          "answer": "nichts",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Erste Versuche mit bakterienhaltigem Beton liegen gut zwei Jahrzehnte zurück"
+            }
+          ],
+          "explanation": "Metin yalnızca bakterili betonla ilk denemelerin yaklaşık yirmi yıl önce yapıldığını („liegen gut zwei Jahrzehnte zurück“) ve bakteriler karıştırma işlemine dayanamadığı için sonuçsuz kaldığını söylüyor. Bu denemeleri kimin yaptığı ve Overbeck ile Sandvoß’un onlara katılıp katılmadığı hakkında bilgi yok. Cevap: Text sagt dazu nichts."
+        },
+        {
+          "number": 23,
+          "type": "ja-nein-nichts",
+          "prompt": "Den Fortschritt der Hallerstädter Gruppe führt Overbeck in erster Linie auf einen neu entdeckten, besonders robusten Bakterienstamm zurück.",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Den entscheidenden Unterschied mache nicht der Bakterienstamm"
+            }
+          ],
+          "explanation": "Overbeck açıkça „Den entscheidenden Unterschied mache nicht der Bakterienstamm“ diyor – belirleyici fark bakteri türünde değil, sporların „Verpackung“ (ambalajı), yani korumalı kapsüllerde. Üstelik kullanılan bakteri yeni keşfedilmiş değil, „seit Langem gut beschrieben“ (uzun zamandır iyi tanımlanmış). İfade metinle çelişiyor: Nein."
+        },
+        {
+          "number": 24,
+          "type": "ja-nein-nichts",
+          "prompt": "Nach Sandvoß' Darstellung schützt der gebildete Kalk den Beton vor allem vor eindringendem Wasser, ohne dessen frühere Tragfähigkeit wiederherzustellen.",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "verbinde die Bruchflächen aber nicht so miteinander"
+            }
+          ],
+          "explanation": "İki bilgi birleştiriliyor: Kireç çatlağı güvenilir biçimde kapatıyor (laboratuvarda yaklaşık yüzde doksan daha az su geçirgenliği), fakat Sandvoß’a göre „verbinde die Bruchflächen aber nicht so miteinander, dass das Bauteil seine ursprüngliche Belastbarkeit zurückerlange“ – kırık yüzeyleri, eleman eski taşıma gücünü geri kazanacak şekilde birleştirmiyor. Yani kireç sızdırmazlık sağlıyor ama dayanımı geri getirmiyor: Ja."
+        },
+        {
+          "number": 25,
+          "type": "ja-nein-nichts",
+          "prompt": "Im Labor wurden auch Risse von mehr als einem halben Millimeter Breite binnen weniger Wochen restlos verschlossen.",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "bei breiteren Rissen blieb die Kalkschicht lückenhaft"
+            }
+          ],
+          "explanation": "Laboratuvarda yalnızca yaklaşık 0,4 milimetreye kadar olan çatlaklar altı haftada tamamen doldu. Daha geniş çatlaklarda ise „blieb die Kalkschicht lückenhaft, einige schlossen sich gar nicht“ – kireç tabakası boşluklu kaldı, bazıları hiç kapanmadı. Yarım milimetreden geniş çatlaklar bu gruba girdiği için ifade metinle çelişiyor: Nein."
+        },
+        {
+          "number": 26,
+          "type": "ja-nein-nichts",
+          "prompt": "Die Kosten der Versuchswand werden zu einem großen Teil von den Stadtwerken übernommen.",
+          "answer": "nichts",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Regenrückhaltebecken der Hallerstädter Stadtwerke"
+            }
+          ],
+          "explanation": "Metin yalnızca deney duvarının Hallerstadt belediye işletmelerine ait bir yağmur suyu tutma havuzunda bulunduğunu söylüyor („in einem Regenrückhaltebecken der Hallerstädter Stadtwerke“). Deneyin masraflarını kimin karşıladığı hakkında hiçbir bilgi yok. Cevap: Text sagt dazu nichts."
+        },
+        {
+          "number": 27,
+          "type": "ja-nein-nichts",
+          "prompt": "Unter Freilandbedingungen verläuft die Selbstheilung bei kalter Witterung deutlich langsamer als bei den Laborversuchen.",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "bei konstant 20 Grad"
+            },
+            {
+              "text": "artikel",
+              "quote": "kommt die Rissheilung nahezu zum Stillstand"
+            }
+          ],
+          "explanation": "Laboratuvar deneyleri „bei konstant 20 Grad“ (sabit 20 derecede) yapıldı. Açık havadaki deney duvarında ise kış aylarında „kommt die Rissheilung nahezu zum Stillstand“ – çatlak iyileşmesi neredeyse duruyor; bakteriler ancak sıcaklık uzun süre yaklaşık on derecenin üzerine çıkınca yeniden etkinleşiyor. İki bilgi birlikte ifadeyi doğruluyor: Ja."
+        },
+        {
+          "number": 28,
+          "type": "ja-nein-nichts",
+          "prompt": "Wedekamp rechnet damit, dass der Bakterienbeton mit wachsender Nachfrage deutlich günstiger wird.",
+          "answer": "nichts",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "um 30 bis 40 Prozent teurer als herkömmlicher Beton"
+            }
+          ],
+          "explanation": "Wedekamp yalnızca bakterili betonun şu anda „um 30 bis 40 Prozent teurer als herkömmlicher Beton“ (geleneksel betondan yüzde 30–40 daha pahalı) olduğunu ve ek maliyetin kendini amorti edip etmeyeceğinin ancak on yıllar sonra değerlendirilebileceğini söylüyor. Fiyatın ileride düşüp düşmeyeceği hakkında bir beklentisi metinde yok: Text sagt dazu nichts."
+        },
+        {
+          "number": 29,
+          "type": "ja-nein-nichts",
+          "prompt": "Overbeck zufolge belegen die vorliegenden Daten bereits, dass sich ein verheilter Riss bei erneutem Aufbrechen wieder von selbst schließt.",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "könne man auf Grundlage der bisherigen Daten noch nicht sagen"
+            }
+          ],
+          "explanation": "Overbeck, kapanmış bir çatlak yeniden açılırsa ikinci kez iyileşip iyileşmeyeceğini „könne man auf Grundlage der bisherigen Daten noch nicht sagen“ – mevcut verilere dayanarak henüz söyleyemeyeceklerini belirtiyor; ilgili deney dizileri daha yeni başlıyor. İfade verilerin bunu zaten kanıtladığını iddia ettiği için metinle çelişiyor: Nein."
+        },
+        {
+          "number": 30,
+          "type": "ja-nein-nichts",
+          "prompt": "Overbeck hält den Bakterienbeton vor allem dort für sinnvoll, wo man an Schäden nur schwer herankommt.",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "die nach ihrer Fertigstellung kaum noch zugänglich sind"
+            }
+          ],
+          "explanation": "Overbeck en büyük faydayı sıradan bina inşaatında değil, „die nach ihrer Fertigstellung kaum noch zugänglich sind“ – tamamlandıktan sonra neredeyse hiç ulaşılamayan yapı elemanlarında (tünel kaplamaları, temeller, yeraltı suyundaki yapılar) görüyor; orada kontrol de onarım da çok zahmetli. İfade bunu başka sözcüklerle aktarıyor: Ja."
+        }
+      ]
+    }
+  ]
+}

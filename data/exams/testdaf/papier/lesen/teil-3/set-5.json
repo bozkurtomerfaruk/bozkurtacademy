@@ -1,0 +1,192 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "papier",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-5",
+  "title": "Wie Städte nachts leuchten",
+  "minutes": 20,
+  "context": "Sie lesen in einer Hochschulzeitschrift einen Artikel über die Erforschung künstlicher Beleuchtung bei Nacht.",
+  "instructions": "Lesen Sie den Text und die Aussagen 21 bis 30. Entscheiden Sie: Stimmt die Aussage mit dem Text überein (Ja), widerspricht sie dem Text (Nein) oder sagt der Text dazu nichts?",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Wie Städte nachts leuchten",
+          "byline": "Von Margit Sandkuhl",
+          "paragraphs": [
+            "Aus dem All betrachtet, verraten sich Städte nachts durch ihr Licht. Satellitenbilder der nächtlichen Erde zählen seit Langem zu den eindrücklichsten Darstellungen menschlicher Besiedlung, und lange dienten sie vor allem als Hilfsmittel der Wirtschaftsforschung: Wo es hell ist, so die Annahme, wird produziert und konsumiert. Erst in jüngerer Zeit hat sich daraus ein eigenständiges Forschungsfeld entwickelt, das künstliches Licht bei Nacht als Umweltfaktor begreift – mit Folgen für Tiere, Pflanzen und die menschliche Gesundheit. Schätzungen zufolge lebt ein großer Teil der Bevölkerung in Industrieländern inzwischen unter einem Himmel, an dem die Milchstraße nicht mehr zu erkennen ist. Der gängige Begriff der Lichtverschmutzung ist dabei nicht unumstritten; manche Forschende bevorzugen neutralere Bezeichnungen, weil Licht anders als Schadstoffe keine Rückstände hinterlasse.",
+            "Wie stark der Nachthimmel aufgehellt wird, lässt sich aus dem All allerdings nur unvollständig erfassen. Das liegt zum einen an den Sensoren: Die meisten Satelliten, die nächtliche Aufnahmen liefern, sind für blaues Licht kaum empfindlich. Gerade die weißen LED-Leuchten, die in vielen Städten die älteren orangefarbenen Natriumdampflampen ersetzt haben, strahlen aber einen erheblichen Blauanteil ab. Eine Stadt, die ihre Straßenbeleuchtung umrüstet, kann auf Satellitenbildern daher dunkler erscheinen, obwohl der Himmel über ihr heller geworden ist. Zum anderen erfassen Satelliten vor allem Licht, das senkrecht nach oben abgestrahlt wird, während für Lebewesen am Boden auch das seitlich gestreute Licht eine Rolle spielt.",
+            "Um diese Lücke zu schließen, setzt eine Arbeitsgruppe um den Physiker Matthis Vehrenkamp vom Zentrum für Umweltphotonik der Universität Ravensfurt auf Messungen am Boden. Seit vier Jahren zeichnen rund 60 fest installierte Lichtsensoren auf Dächern im Stadtgebiet und im Umland die Himmelshelligkeit auf. Ergänzt werden sie durch Beobachtungen von Freiwilligen, die über eine Smartphone-App angeben, wie viele Sterne eines bestimmten Sternbilds sie mit bloßem Auge erkennen. Einzeln betrachtet seien diese Angaben ungenau, räumt Vehrenkamp ein, in der Masse ergäben sie jedoch ein erstaunlich stimmiges Bild. Nach den bisherigen Auswertungen hat die Himmelshelligkeit im Raum Ravensfurt in diesem Zeitraum um durchschnittlich sieben Prozent pro Jahr zugenommen – deutlich stärker, als es die Satellitendaten nahelegen.",
+            "Den ökologischen Folgen geht die Biologin Isolde Wendehorst an derselben Universität nach. Nachtaktive Insekten werden von Lichtquellen angezogen, umkreisen sie oft bis zur Erschöpfung oder werden dort zur leichten Beute. Für Pflanzen, deren Bestäubung von nachtaktiven Insekten abhängt, kann das spürbare Folgen haben. In einem Feldversuch auf Wiesen am Stadtrand ließ ihre Gruppe Straßenlaternen unterschiedlicher Lichtfarbe aufstellen. An den Leuchten mit hohem Blauanteil wurden etwa doppelt so viele Insekten gezählt wie an warmweißen Leuchten gleicher Helligkeit. Wendehorst betont allerdings, dass die Lichtfarbe nicht der einzige Hebel sei. Auch das Ausschalten in den frühen Morgenstunden mindere die Auswirkungen erheblich, da viele Arten erst in der zweiten Nachthälfte ausschwärmten.",
+            "Weniger eindeutig ist die Lage beim Menschen. Gut belegt ist, dass Licht am Abend – blaues in besonderem Maße – die Ausschüttung des Schlafhormons Melatonin hemmt. Ob aber die Helligkeit, die von der Straße ins Schlafzimmer dringt, ausreicht, um die Gesundheit zu beeinträchtigen, ist offen. Der Epidemiologe Arvid Lüttjohann von der Hochschule Kerbstein verweist auf Erhebungen, nach denen Bewohner stark beleuchteter Viertel häufiger über Schlafstörungen klagen. Solche Zusammenhänge seien jedoch schwer zu deuten, räumt er ein: In hellen Innenstadtlagen sei es meist auch lauter, und die Menschen dort lebten oft anders als im Umland. Ein statistischer Zusammenhang allein belege daher noch keine Ursache. Lüttjohann plädiert deshalb für Untersuchungen, in denen die Lichtmenge unmittelbar am Schlafplatz gemessen wird.",
+            "Politisch hat das Thema inzwischen an Gewicht gewonnen. Einige Kommunen haben Leitlinien erlassen, die Leuchten mit geringem Blauanteil und nach unten gerichteter Abstrahlung vorschreiben. Ravensfurt regelt seit zwei Jahren die Straßenbeleuchtung in Wohngebieten ab 23 Uhr auf ein Drittel der üblichen Leistung herunter; andere Städte setzen auf Bewegungsmelder, die Wege nur dann beleuchten, wenn tatsächlich jemand unterwegs ist. Vehrenkamp begrüßt solche Schritte, gibt aber zu bedenken, dass Straßenlaternen nach seinen Messungen nur rund ein Drittel des Lichts ausmachen, das den Himmel über der Stadt aufhellt. Den Rest lieferten beleuchtete Werbeflächen, Schaufenster, Sportanlagen und angestrahlte Fassaden, die von den Leitlinien meist nicht erfasst würden. Ein dunklerer Nachthimmel, so Vehrenkamp, lasse sich über die öffentliche Beleuchtung allein nicht erreichen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": "01",
+          "example": true,
+          "type": "ja-nein-nichts",
+          "prompt": "Aufnahmen der nächtlichen Erde aus dem All wurden zunächst vor allem für ökologische Fragestellungen ausgewertet.",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "lange dienten sie vor allem als Hilfsmittel der Wirtschaftsforschung"
+            }
+          ],
+          "explanation": "Metne göre gece uydu görüntüleri „lange dienten sie vor allem als Hilfsmittel der Wirtschaftsforschung“ – uzun süre özellikle ekonomi araştırmalarına yardımcı oldu. Işığı bir çevre etkeni olarak gören araştırma alanı ancak „Erst in jüngerer Zeit“ (son zamanlarda) gelişti. İfade metinle çelişiyor: Nein."
+        },
+        {
+          "number": "02",
+          "example": true,
+          "type": "ja-nein-nichts",
+          "prompt": "Der Begriff „Lichtverschmutzung“ wurde ursprünglich von Astronomen geprägt.",
+          "answer": "nichts",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Der gängige Begriff der Lichtverschmutzung ist dabei nicht unumstritten"
+            }
+          ],
+          "explanation": "Metin yalnızca „Lichtverschmutzung“ teriminin tartışmalı olduğunu („nicht unumstritten“) ve bazı araştırmacıların daha tarafsız adları tercih ettiğini söylüyor. Terimi ilk kimin kullandığı hakkında bilgi yok: Text sagt dazu nichts."
+        },
+        {
+          "number": 21,
+          "type": "ja-nein-nichts",
+          "prompt": "Wirkt eine Stadt nach der Umstellung auf LED auf Satellitenbildern dunkler, spiegelt das eine tatsächlich geringere Aufhellung des Himmels wider.",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "obwohl der Himmel über ihr heller geworden ist"
+            }
+          ],
+          "explanation": "Uyduların çoğu mavi ışığa pek duyarlı değil; LED lambalar ise çok mavi ışık yayıyor. Bu yüzden lambalarını değiştiren bir şehir uydu görüntülerinde daha karanlık görünebilir, „obwohl der Himmel über ihr heller geworden ist“ – oysa üzerindeki gökyüzü daha aydınlık hâle gelmiştir. İfade metinle çelişiyor: Nein."
+        },
+        {
+          "number": 22,
+          "type": "ja-nein-nichts",
+          "prompt": "Viele Städte haben ihre Straßenbeleuchtung vor allem aus Kostengründen auf LED umgestellt.",
+          "answer": "nichts",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "die in vielen Städten die älteren orangefarbenen Natriumdampflampen ersetzt haben"
+            }
+          ],
+          "explanation": "Metin yalnızca beyaz LED lambaların „in vielen Städten die älteren orangefarbenen Natriumdampflampen ersetzt haben“ – birçok şehirde eski turuncu sodyum buharlı lambaların yerini aldığını söylüyor. Bu değişikliğin nedeni (maliyet vb.) metinde geçmiyor: Text sagt dazu nichts."
+        },
+        {
+          "number": 23,
+          "type": "ja-nein-nichts",
+          "prompt": "Nach Vehrenkamp liefern die Sternzählungen von Laien erst in ihrer Gesamtheit verlässliche Ergebnisse.",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "in der Masse ergäben sie jedoch ein erstaunlich stimmiges Bild"
+            }
+          ],
+          "explanation": "Vehrenkamp gönüllülerin verilerini tek tek ele alındığında kesin bulmuyor („Einzeln betrachtet seien diese Angaben ungenau“), ama „in der Masse ergäben sie jedoch ein erstaunlich stimmiges Bild“ – çok sayıda olunca şaşırtıcı derecede tutarlı bir tablo veriyorlar. İfade bunu başka sözcüklerle aktarıyor: Ja."
+        },
+        {
+          "number": 24,
+          "type": "ja-nein-nichts",
+          "prompt": "Die bodengestützten Messreihen weisen für die Region eine raschere Zunahme der nächtlichen Aufhellung aus, als die Bilder aus der Erdumlaufbahn erkennen lassen.",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "deutlich stärker, als es die Satellitendaten nahelegen"
+            }
+          ],
+          "explanation": "Yerdeki ölçümlere göre Ravensfurt bölgesinde gökyüzü parlaklığı yılda ortalama yüzde yedi arttı – „deutlich stärker, als es die Satellitendaten nahelegen“ (uydu verilerinin gösterdiğinden çok daha fazla). İfade bunu başka sözcüklerle aktarıyor: Ja."
+        },
+        {
+          "number": 25,
+          "type": "ja-nein-nichts",
+          "prompt": "Bei identischer Lichtstärke lockten im Freilandexperiment die Leuchten mit warmem Licht mehr Insekten an als die bläulich strahlenden.",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "etwa doppelt so viele Insekten gezählt wie an warmweißen Leuchten gleicher Helligkeit"
+            }
+          ],
+          "explanation": "Arazi deneyinde mavi oranı yüksek lambalarda „etwa doppelt so viele Insekten gezählt wie an warmweißen Leuchten gleicher Helligkeit“ – aynı parlaklıktaki sıcak beyaz lambalardakinin yaklaşık iki katı böcek sayıldı. İfade bunun tersini söylüyor: Nein."
+        },
+        {
+          "number": 26,
+          "type": "ja-nein-nichts",
+          "prompt": "Laut Wendehorst lässt sich der Schaden für Insekten auch verringern, indem Lampen in den Stunden vor der Morgendämmerung dunkel bleiben, weil zahlreiche Arten erst spät in der Nacht unterwegs sind.",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Auch das Ausschalten in den frühen Morgenstunden mindere die Auswirkungen erheblich"
+            }
+          ],
+          "explanation": "Wendehorst’a göre ışık rengi tek çare değil: „Auch das Ausschalten in den frühen Morgenstunden mindere die Auswirkungen erheblich“ – sabahın erken saatlerinde lambaları kapatmak da etkileri önemli ölçüde azaltıyor, çünkü birçok tür ancak gecenin ikinci yarısında uçuşa çıkıyor. İfade bunu başka sözcüklerle aktarıyor: Ja."
+        },
+        {
+          "number": 27,
+          "type": "ja-nein-nichts",
+          "prompt": "Nach Lüttjohann klagen in stark erhellten Stadtvierteln vor allem ältere Bewohner über Schlafprobleme.",
+          "answer": "nichts",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "nach denen Bewohner stark beleuchteter Viertel häufiger über Schlafstörungen klagen"
+            }
+          ],
+          "explanation": "Lüttjohann yalnızca araştırmalara atıfta bulunuyor; bunlara göre çok aydınlatılmış semtlerde oturanlar „häufiger über Schlafstörungen klagen“ – daha sık uyku sorunlarından yakınıyor. Bu kişilerin yaşı hakkında, yani özellikle yaşlıların mı etkilendiği konusunda metinde hiçbir bilgi yok: Text sagt dazu nichts."
+        },
+        {
+          "number": 28,
+          "type": "ja-nein-nichts",
+          "prompt": "Bevor Ravensfurt die nächtliche Dämpfung der Laternen in Wohngebieten einführte, wurde sie zunächst in einigen Vierteln getestet.",
+          "answer": "nichts",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Ravensfurt regelt seit zwei Jahren die Straßenbeleuchtung in Wohngebieten ab 23 Uhr auf ein Drittel der üblichen Leistung herunter"
+            }
+          ],
+          "explanation": "Metin yalnızca Ravensfurt’un iki yıldır konut bölgelerinde sokak aydınlatmasını saat 23’ten sonra normal gücün üçte birine indirdiğini söylüyor („Ravensfurt regelt seit zwei Jahren die Straßenbeleuchtung in Wohngebieten ab 23 Uhr auf ein Drittel der üblichen Leistung herunter“). Uygulamanın önce bazı semtlerde denenip denenmediği hakkında bilgi yok: Text sagt dazu nichts."
+        },
+        {
+          "number": 29,
+          "type": "ja-nein-nichts",
+          "prompt": "Vehrenkamp zufolge stammt der überwiegende Teil der nächtlichen Himmelshelle über der Stadt nicht aus der kommunalen Wegbeleuchtung.",
+          "answer": "ja",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "nur rund ein Drittel des Lichts ausmachen"
+            }
+          ],
+          "explanation": "Vehrenkamp’ın ölçümlerine göre sokak lambaları şehrin üzerindeki gökyüzünü aydınlatan ışığın „nur rund ein Drittel des Lichts ausmachen“ – yalnızca yaklaşık üçte birini oluşturuyor; geri kalanı reklam panoları, vitrinler, spor tesisleri ve aydınlatılan cepheler. Yani büyük kısmı başka kaynaklardan geliyor: Ja."
+        },
+        {
+          "number": 30,
+          "type": "ja-nein-nichts",
+          "prompt": "Vehrenkamp ist der Ansicht, dass strengere Regeln für die kommunalen Laternen ausreichen würden, um den Himmel über der Stadt spürbar abzudunkeln.",
+          "answer": "nein",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "lasse sich über die öffentliche Beleuchtung allein nicht erreichen"
+            }
+          ],
+          "explanation": "Vehrenkamp’a göre daha karanlık bir gece gökyüzü „lasse sich über die öffentliche Beleuchtung allein nicht erreichen“ – yalnızca kamusal aydınlatma üzerinden sağlanamaz, çünkü ışığın çoğu yönergelerin kapsamadığı kaynaklardan geliyor. İfade metinle çelişiyor: Nein."
+        }
+      ]
+    }
+  ]
+}

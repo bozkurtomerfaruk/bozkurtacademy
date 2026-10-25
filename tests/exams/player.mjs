@@ -8,7 +8,7 @@ const { ok, done } = checker();
 const hash = () => page.url().split('#')[1];
 const set = (t, s, level = 'b1') => readSet(level, t, s);
 const questions = d => d.groups.flatMap(g => g.questions.filter(q => !q.example).map(q => ({ q, g })));
-const optionsOf = (q, g) => q.type === 'richtig-falsch' ? ['richtig', 'falsch'] : q.type === 'ja-nein' ? ['ja', 'nein'] : q.type === 'abc' ? Object.keys(q.options) : [...g.texts.filter(t => t.label).map(t => t.label), ...(g.none === false ? [] : [g.none || '0'])];
+const optionsOf = (q, g) => q.type === 'richtig-falsch' ? ['richtig', 'falsch'] : q.type === 'ja-nein' ? ['ja', 'nein'] : q.type === 'ja-nein-nichts' ? ['ja', 'nein', 'nichts'] : q.type === 'abc' ? Object.keys(q.options) : [...g.texts.filter(t => t.label).map(t => t.label), ...(g.none === false ? [] : [g.none || '0'])];
 async function answer(number, value) {
   const select = await page.$(`select[data-task-answer="${number}"]`);
   if (select) await select.selectOption(value);

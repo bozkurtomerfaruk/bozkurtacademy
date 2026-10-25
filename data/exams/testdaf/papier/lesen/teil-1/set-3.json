@@ -73,9 +73,9 @@
         {
           "id": "h",
           "label": "H",
-          "title": "Promotionsstipendium der Clara-Varnholt-Stiftung",
+          "title": "Promotionsstipendium der Irmgard-Varnholt-Stiftung",
           "paragraphs": [
-            "Die Clara-Varnholt-Stiftung ermöglicht Absolventinnen und Absolventen von Hochschulen für angewandte Wissenschaften die Promotion an einer Universität. Das Stipendium beträgt 1.450 Euro monatlich und wird für bis zu drei Jahre gewährt; hinzu kommen Seminare, in denen sich die Stipendiatinnen und Stipendiaten über ihre Projekte austauschen. Bewerben kann sich, wer einen Masterabschluss mit mindestens der Note „gut“ vorweisen kann. Zum Bewerbungsschluss darf das 35. Lebensjahr noch nicht vollendet sein."
+            "Die Irmgard-Varnholt-Stiftung ermöglicht Absolventinnen und Absolventen von Hochschulen für angewandte Wissenschaften die Promotion an einer Universität. Das Stipendium beträgt 1.450 Euro monatlich und wird für bis zu drei Jahre gewährt; hinzu kommen Seminare, in denen sich die Stipendiatinnen und Stipendiaten über ihre Projekte austauschen. Bewerben kann sich, wer einen Masterabschluss mit mindestens der Note „gut“ vorweisen kann. Zum Bewerbungsschluss darf das 35. Lebensjahr noch nicht vollendet sein."
           ]
         }
       ],
@@ -123,7 +123,7 @@
               "quote": "Sechs Monate lang erhalten Sie 1.200 Euro monatlich."
             }
           ],
-          "explanation": "C ilanı, „Läuft Ihre Stelle oder Ihr Stipendium aus, bevor die Doktorarbeit fertig ist?“ (doktora tezi bitmeden işiniz veya bursunuz sona eriyor mu?) sorusuyla başlar ve son aşama için „Sechs Monate“ (altı ay) boyunca para verir. Sözleşmesi martta biten ve tezin son bölümleri için yaklaşık yarım yıla ihtiyacı olan doktora öğrencisine bu tam uyar. H de doktora için burs verir ama doktoraya yeni başlayan uygulamalı bilimler mezunları içindir."
+          "explanation": "C ilanı, „Läuft Ihre Stelle oder Ihr Stipendium aus, bevor die Doktorarbeit fertig ist?“ (doktora tezi bitmeden işiniz veya bursunuz sona eriyor mu?) sorusuyla başlar ve son aşama için „Sechs Monate“ (altı ay) boyunca para verir. Sözleşmesi martta biten ve tezin son bölümleri için yaklaşık yarım yıla ihtiyacı olan doktora öğrencisine bu tam uyar. H de doktora için burs verir ama uygulamalı bilimler üniversitesi mezunları içindir; kişinin böyle bir mezuniyeti olduğu yazmaz."
         },
         {
           "number": 2,
@@ -158,7 +158,7 @@
         {
           "number": 4,
           "type": "zuordnung",
-          "prompt": "eine 29-jährige Absolventin einer Fachhochschule, die ihren Master in Sozialer Arbeit mit sehr gutem Ergebnis abgeschlossen hat, an einer Universität den Doktortitel erwerben will und dafür eine Finanzierung über mehrere Jahre sucht",
+          "prompt": "eine 29-jährige Sozialarbeiterin, die an einer Fachhochschule nach dem Bachelor auch den weiterführenden Abschluss mit Bestnote erlangt hat, nun an einer Universität den Doktortitel anstrebt und dafür eine Finanzierung über mehrere Jahre sucht",
           "answer": "H",
           "evidence": [
             {
@@ -170,7 +170,7 @@
               "quote": "wird für bis zu drei Jahre gewährt"
             }
           ],
-          "explanation": "H ilanı „Hochschulen für angewandte Wissenschaften“ (uygulamalı bilimler üniversiteleri, yani Fachhochschule) mezunlarına üniversitede doktora imkânı verir; burs „für bis zu drei Jahre“ (üç yıla kadar) ödenir. Kişinin notu „gut“ koşulunu karşılar ve 29 yaşında olduğu için yaş sınırının altındadır. C de doktora öğrencilerine para verir ama yalnızca altı ay ve tezin son aşaması içindir."
+          "explanation": "H ilanı „Hochschulen für angewandte Wissenschaften“ (uygulamalı bilimler üniversiteleri, yani Fachhochschule) mezunlarına üniversitede doktora imkânı verir; burs „für bis zu drei Jahre“ (üç yıla kadar) ödenir. Kişi Fachhochschule'de lisanstan sonra yüksek lisans derecesini de en iyi notla („mit Bestnote“) almıştır; bu, en az „gut“ notlu yüksek lisans koşulunu karşılar. 29 yaşında olduğu için yaş sınırının da altındadır. C de doktora öğrencilerine para verir ama yalnızca altı ay ve tezin son aşaması içindir."
         },
         {
           "number": 5,
@@ -188,7 +188,7 @@
         {
           "number": 6,
           "type": "zuordnung",
-          "prompt": "eine Studentin mit einer dreijährigen Tochter, die bereits monatlich Geld von einem kirchlichen Begabtenförderungswerk bekommt und zusätzlich Unterstützung für die Kosten des Kindergartens bräuchte",
+          "prompt": "eine Studentin mit einer dreijährigen Tochter, die bereits ein monatliches Stipendium eines kirchlichen Begabtenförderungswerks bezieht und zusätzlich Unterstützung für die Kosten des Kindergartens bräuchte",
           "answer": "I",
           "evidence": [
             {
@@ -196,7 +196,7 @@
               "quote": "Ausgeschlossen sind jedoch Studierende, die bereits ein Stipendium einer anderen Einrichtung erhalten."
             }
           ],
-          "explanation": "D ilanı çocuklu öğrencilere kreş gibi bakım masrafları için destek verdiği için cazip görünür. Ama „Ausgeschlossen sind jedoch Studierende, die bereits ein Stipendium einer anderen Einrichtung erhalten“ (başka bir kurumdan zaten burs alan öğrenciler kapsam dışıdır). Öğrenci kilise kökenli bir burs kurumundan düzenli para aldığı için D uymaz; cevap I."
+          "explanation": "D ilanı çocuklu öğrencilere kreş gibi bakım masrafları için destek verdiği için cazip görünür. Ama „Ausgeschlossen sind jedoch Studierende, die bereits ein Stipendium einer anderen Einrichtung erhalten“ (başka bir kurumdan zaten burs alan öğrenciler kapsam dışıdır). Öğrenci kilise kökenli bir kurumdan zaten aylık burs („ein monatliches Stipendium“) aldığı için D uymaz; cevap I."
         },
         {
           "number": 7,
@@ -218,7 +218,7 @@
         {
           "number": 8,
           "type": "zuordnung",
-          "prompt": "eine Ethnologiestudentin, die für ihre Abschlussarbeit im Masterstudium acht Wochen lang in Ghana Interviews führen will und der ein Forschungsinstitut in Accra bereits schriftlich einen Arbeitsplatz zugesichert hat",
+          "prompt": "eine Ethnologiestudentin, die für ihre Masterthesis acht Wochen lang in Ghana Interviews führen will und die offizielle Einladung eines Forschungsinstituts in Ghana bereits in den Händen hält",
           "answer": "G",
           "evidence": [
             {
@@ -230,12 +230,12 @@
               "quote": "Voraussetzung ist eine schriftliche Zusage der aufnehmenden Einrichtung vor Ort"
             }
           ],
-          "explanation": "G ilanı yüksek lisans tezi için „Daten außerhalb Deutschlands erheben“ (Almanya dışında veri toplamak) isteyenleri bir ila üç ay destekler; sekiz hafta bu süreye uyar. Koşul „eine schriftliche Zusage der aufnehmenden Einrichtung“ (kabul eden kurumun yazılı onayı) olduğundan, Accra'daki enstitünün yazılı güvencesi bunu karşılar. E de veri toplama yolculuklarını öder ama yalnızca „innerhalb Deutschlands“ (Almanya içinde)."
+          "explanation": "G ilanı yüksek lisans tezi için „Daten außerhalb Deutschlands erheben“ (Almanya dışında veri toplamak) isteyenleri bir ila üç ay destekler; sekiz hafta bu süreye uyar. Koşul „eine schriftliche Zusage der aufnehmenden Einrichtung“ (kabul eden kurumun yazılı onayı) olduğundan, Gana'daki enstitünün elindeki resmî davet mektubu („offizielle Einladung … in den Händen hält“) bunu karşılar. E de veri toplama yolculuklarını öder ama yalnızca „innerhalb Deutschlands“ (Almanya içinde)."
         },
         {
           "number": 9,
           "type": "zuordnung",
-          "prompt": "eine Psychologiestudentin, die für das Experiment ihrer Masterarbeit achtzig Versuchspersonen benötigt und ihnen für die aufgewendete Zeit einen kleinen Betrag zahlen möchte",
+          "prompt": "eine Psychologiestudentin, die für die empirische Untersuchung ihrer Masterthesis achtzig Probandinnen und Probanden benötigt und sie für den Zeitaufwand mit einem kleinen Betrag entschädigen möchte",
           "answer": "E",
           "evidence": [
             {
@@ -243,7 +243,7 @@
               "quote": "Vergütungen für Teilnehmende an Studien"
             }
           ],
-          "explanation": "E ilanındaki fon, lisans ve yüksek lisans tezlerinin malzeme giderlerini 1.500 euroya kadar karşılar; bunlar arasında „Vergütungen für Teilnehmende an Studien“ (araştırmalara katılanlara ödenen ücretler) da sayılır. Tez deneyine katılan kişilere küçük bir ödeme yapmak isteyen öğrenciye bu uyar. G de yüksek lisans tezlerini destekler ama yalnızca yurt dışında veri toplamak için."
+          "explanation": "E ilanındaki fon, lisans ve yüksek lisans tezlerinin malzeme giderlerini 1.500 euroya kadar karşılar; bunlar arasında „Vergütungen für Teilnehmende an Studien“ (araştırmalara katılanlara ödenen ücretler) da sayılır. Tez araştırmasına katılan kişilere zaman kayıpları için küçük bir ödeme yapmak isteyen öğrenciye bu uyar. G de yüksek lisans tezlerini destekler ama yalnızca yurt dışında veri toplamak için."
         },
         {
           "number": 10,

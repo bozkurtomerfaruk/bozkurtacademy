@@ -124,7 +124,7 @@
         {
           "number": 2,
           "type": "zuordnung",
-          "prompt": "ein Student mit einer erheblichen Sehschwäche, der Fachtexte nur bewältigen kann, wenn die Schrift deutlich größer dargestellt wird oder er sie sich vorlesen lässt",
+          "prompt": "ein Student, dessen Augenlicht stark nachgelassen hat und der Fachliteratur nur bewältigen kann, wenn die Buchstaben am Bildschirm stark herangezoomt werden oder er sich den Inhalt vorlesen lässt",
           "answer": "G",
           "evidence": [
             {
@@ -136,7 +136,7 @@
               "quote": "das Texte von eingescannten Seiten in gesprochene Sprache umwandelt"
             }
           ],
-          "explanation": "G ilanında „Studierende mit Seh- oder Lesebeeinträchtigung“ (görme veya okuma güçlüğü olan öğrenciler) için çalışma yerleri vardır. Bu yerlerde büyütme yazılımı ve taranan sayfaları „in gesprochene Sprache umwandelt“ (sesli dile çeviren) bir program bulunur. Yazıyı büyük görmek veya metni dinlemek zorunda olan öğrenciye bu uyar."
+          "explanation": "G ilanında „Studierende mit Seh- oder Lesebeeinträchtigung“ (görme veya okuma güçlüğü olan öğrenciler) için çalışma yerleri vardır. Bu yerlerde büyütme yazılımı ve taranan sayfaları „in gesprochene Sprache umwandelt“ (sesli dile çeviren) bir program bulunur. Görme yeteneği çok azalmış ve harfleri ekranda büyütmek ya da içeriği sesli dinlemek zorunda olan öğrenciye bu uyar."
         },
         {
           "number": 3,
@@ -167,7 +167,7 @@
         {
           "number": 5,
           "type": "zuordnung",
-          "prompt": "drei Kommilitoninnen, die ihr gemeinsames Referat proben und dabei ihre Präsentation auf einer großen Anzeige durchgehen möchten, ohne andere Lernende zu stören",
+          "prompt": "drei Kommilitoninnen, die ihr gemeinsames Referat proben und dabei die Folien von einem Notebook auf einen Monitor übertragen möchten, auf dem alle drei gut mitlesen können, ohne andere im Haus zu stören",
           "answer": "C",
           "evidence": [
             {
@@ -196,7 +196,7 @@
               "quote": "Fotografieren für private und wissenschaftliche Zwecke ist ohne Blitz erlaubt"
             }
           ],
-          "explanation": "E ilanında „Drucke aus der Zeit vor 1850“ (1850'den önceki baskılar) okuma salonunda incelenebilir; 1780 tarihli bir kitap da bunlardandır. Ayrıca „Fotografieren … ist ohne Blitz erlaubt“ (flaşsız fotoğraf çekmek serbesttir) denir. Kitabı yerinde inceleyip birkaç resmin fotoğrafını cep telefonuyla çekmek isteyen öğrenciye bu uyar; kitabı eve götürmek istemez."
+          "explanation": "E ilanında „Drucke aus der Zeit vor 1850“ (1850'den önceki baskılar) okuma salonunda incelenebilir; 1780 tarihli bir kitap da bunlardandır. Ayrıca „Fotografieren … ist ohne Blitz erlaubt“ (flaşsız fotoğraf çekmek serbesttir) denir. Kitabı yerinde inceleyip birkaç resmin fotoğrafını cep telefonuyla çekmek isteyen öğrenciye bu uyar; kitabı eve götürmek istediği yazmaz."
         },
         {
           "number": 7,
@@ -209,12 +209,12 @@
               "quote": "für Monografien und Sammelbände stehen keine Mittel zur Verfügung"
             }
           ],
-          "explanation": "F ilanı üniversite mensuplarının açık erişimli yayın masraflarını karşıladığı için cazip görünür. Ama yalnızca dergi makaleleri desteklenir: „für Monografien und Sammelbände stehen keine Mittel zur Verfügung“ (tek yazarlı kitaplar ve derleme kitaplar için para yoktur). Araştırma görevlisi tezini kitap olarak yayımlamak istediği için F uymaz; cevap I."
+          "explanation": "F ilanı üniversite mensuplarının açık erişimli yayın masraflarını karşıladığı için cazip görünür. Ama yalnızca dergi makaleleri desteklenir: „für Monografien und Sammelbände stehen keine Mittel zur Verfügung“ (tek bir konuyu işleyen kitaplar, yani monografiler, ve derleme kitaplar için para yoktur). Araştırma görevlisi tezini kitap olarak yayımlamak istediği için F uymaz; cevap I."
         },
         {
           "number": 8,
           "type": "zuordnung",
-          "prompt": "eine Studentin der Erziehungswissenschaft, die für ein Seminarprojekt eine Radiosendung über Kinderbücher aufzeichnen will und dafür eine ruhige Umgebung mit guter Tontechnik sucht",
+          "prompt": "eine Studentin der Erziehungswissenschaft, die für eine Lehrveranstaltung eine Radiosendung über Kinderbücher aufzeichnen will und dafür eine ruhige Umgebung mit guter Tontechnik sucht",
           "answer": "H",
           "evidence": [
             {
@@ -227,7 +227,7 @@
         {
           "number": 9,
           "type": "zuordnung",
-          "prompt": "ein Doktorand, der für seine Dissertation einen Beitrag aus einer polnischen Fachzeitschrift braucht, die in Kranzbühl nicht geführt wird, und den Text dauerhaft in seinen Unterlagen haben möchte",
+          "prompt": "ein Doktorand, der für seine Dissertation einen einzelnen Artikel aus einem polnischen Fachjournal braucht, das es in Kranzbühl nicht gibt, wohl aber an mehreren anderen deutschen Hochschulen, und der den Text dauerhaft in seinen Unterlagen haben möchte",
           "answer": "B",
           "evidence": [
             {
@@ -235,12 +235,12 @@
               "quote": "einzelne Zeitschriftenaufsätze erhalten Sie dagegen als Kopie, die Sie behalten dürfen"
             }
           ],
-          "explanation": "B ilanına göre kütüphanede olmayan bir kaynak başka bir kütüphaneden istenebilir; „einzelne Zeitschriftenaufsätze erhalten Sie dagegen als Kopie, die Sie behalten dürfen“ (tek tek dergi makaleleri, saklayabileceğiniz bir kopya olarak gelir). Doktora öğrencisi tek bir makaleye ihtiyaç duyduğu ve onu sürekli elinde tutmak istediği için B uyar. Örnek 02'deki gibi bütün bir yıllık cilt istenmediğinden kısıtlama ona uygulanmaz."
+          "explanation": "B ilanına göre kütüphanede olmayan bir kaynak başka bir kütüphaneden istenebilir; „einzelne Zeitschriftenaufsätze erhalten Sie dagegen als Kopie, die Sie behalten dürfen“ (tek tek dergi makaleleri, saklayabileceğiniz bir kopya olarak gelir). Dergi Almanya'daki başka üniversitelerde bulunuyor; doktora öğrencisi yalnızca tek bir makaleye ihtiyaç duyuyor ve onu sürekli elinde tutmak istiyor. Bu yüzden B uyar. Örnek 02'deki gibi bütün bir yıllık cilt istenmediğinden kısıtlama ona uygulanmaz."
         },
         {
           "number": 10,
           "type": "zuordnung",
-          "prompt": "eine Postdoktorandin der Universität Kranzbühl, deren Beitrag von einer kostenlos lesbaren Fachzeitschrift angenommen wurde und die als Ansprechpartnerin der Redaktion die Veröffentlichungsgebühr nicht aus eigener Tasche bezahlen kann",
+          "prompt": "eine Postdoktorandin der Universität Kranzbühl, deren Artikel ein ohne Bezahlschranke im Netz erscheinendes Fachjournal angenommen hat und die als Ansprechpartnerin der Redaktion die fälligen 1.600 Euro für die Publikation nicht aus eigener Tasche bezahlen kann",
           "answer": "F",
           "evidence": [
             {
@@ -252,7 +252,7 @@
               "quote": "sofern die Autorin oder der Autor für die Korrespondenz mit der Zeitschrift verantwortlich ist"
             }
           ],
-          "explanation": "F ilanındaki yayın fonu, „Gebühren für Aufsätze in Open-Access-Zeitschriften“ (açık erişimli dergilerdeki makalelerin ücretlerini) 2.000 euroya kadar karşılar. Koşul, yazarın „für die Korrespondenz mit der Zeitschrift verantwortlich“ (dergiyle yazışmadan sorumlu) olmasıdır. Kranzbühl Üniversitesi'nde çalışan ve dergi editörlüğünün muhatabı olan doktora sonrası araştırmacı bu koşulları karşılar; yayımlanacak olan bir kitap değil, makaledir."
+          "explanation": "F ilanındaki yayın fonu, „Gebühren für Aufsätze in Open-Access-Zeitschriften“ (açık erişimli dergilerdeki makalelerin ücretlerini) 2.000 euroya kadar karşılar. Koşul, yazarın „für die Korrespondenz mit der Zeitschrift verantwortlich“ (dergiyle yazışmadan sorumlu) olmasıdır. Kranzbühl Üniversitesi'nde çalışan ve dergi editörlüğünün muhatabı olan doktora sonrası araştırmacı bu koşulları karşılar; 1.600 euro da 2.000 euroluk sınırın altındadır ve yayımlanacak olan bir kitap değil, makaledir."
         }
       ]
     }

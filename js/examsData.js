@@ -668,13 +668,43 @@ window.BA_EXAMS = {
               { title: null, exercises: [] }, // Teil 3
             ] },
             { id: 'lesen', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
-              { title: null, exercises: [] }, // Teil 3
+              {
+                title: { tr: 'Kısa metinler ve başlıklar · eşleştirme', de: 'Kurztexte und Überschriften · Zuordnung', en: 'Short texts and headlines · matching' },
+                exercises: [
+                  { set: 'set-1', title: 'Meldungen aus Wissenschaft und Gesellschaft' },
+                  { set: 'set-2', title: 'Nachrichten aus der Arbeitswelt' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: 'Gazete makalesi · a/b/c', de: 'Zeitungsartikel · a/b/c', en: 'Newspaper article · a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Eine Auszeit vom Beruf' },
+                  { set: 'set-2', title: 'Das Leben als Fernpendler' },
+                ]
+              }, // Teil 2
+              {
+                title: { tr: 'Durumlar ve ilanlar · eşleştirme', de: 'Situationen und Anzeigen · Zuordnung', en: 'Situations and adverts · matching' },
+                exercises: [
+                  { set: 'set-1', title: 'Weiterbildung und Beruf' },
+                  { set: 'set-2', title: 'Kultur und Reisen' },
+                ]
+              }, // Teil 3
             ] },
             { id: 'sprachbausteine', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
+              {
+                title: { tr: 'Mektupta boşluk · a/b/c', de: 'Lückentext im Brief · a/b/c', en: 'Gapped letter · a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Eine Reklamation' },
+                  { set: 'set-2', title: 'Anfrage an eine Hochschule' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: 'Kelime listesiyle boşluk doldurma', de: 'Lückentext mit Wortliste', en: 'Gapped text with word list' },
+                exercises: [
+                  { set: 'set-1', title: 'Rundschreiben an die Belegschaft' },
+                  { set: 'set-2', title: 'Leserbrief zur Stadtplanung' },
+                ]
+              }, // Teil 2
             ] },
             { id: 'schreiben', teile: [
               { title: null, exercises: [] }, // Teil 1

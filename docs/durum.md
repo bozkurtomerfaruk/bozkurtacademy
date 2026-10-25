@@ -6,7 +6,7 @@
 
 ### Kaldığım yer
 - Aşama 1, Goethe C1: bitti, main'e birleştirildi (813927f).
-- Aşama 2, TestDaF kâğıt: Pilot (6 set) incelendi, kör çözüm 60/60. Set 3–5 yazılıyor (dal `claude/testdaf-papier`, çalışma ağacı /tmp/wt-testdaf, anahtarlar scratchpad'de tdpkeys2.txt). Pilot ve 5 set tek commit'le birleştirilecek.
+- Aşama 2, TestDaF kâğıt: bitti, main'e birleştirildi.
 - Sonra: Aşama 3, TestDaF dijital (aşağıdaki karar tablosu).
 - Aşama 2, TestDaF kâğıt: Oynatıcı eklentisi (ja/nein/nichts, iki örnek "01"/"02") ve test hazır; dal `claude/testdaf-papier`, çalışma ağacı /tmp/wt-testdaf. Pilot yazılıyor. C1 birleşince bu dal main'e göre yeniden düzenlenecek; format tablosu da o zaman buraya eklenecek.
 - Güvenlik için 17:18 UTC'ye bir devam mesajı zamanlandı.
@@ -30,6 +30,19 @@ Kaynak: ekteki Modelltest 01 ve 02 (Leseverstehen). ✔ = belgelerde doğruland�
 Toplam 60 dk, cevap kâğıdına 10 dk aktarma dahil (✔).
 - **Bizim kararlarımız (≈):** Lesetext 1'de A örnekte kullanılıyor; B–H birer kez, üç soru I. Lesetext 3'te ~4 ja / 3 nein / 3 nichts.
 - **Oynatıcı eklentisi:** `ja-nein-nichts` tipi, iki örnek (`"01"`, `"02"`), `"none": "I"`.
+
+**Aşama 2 bitti: 3 Lesetext × 5 set (15 set, 150 soru).** Pilot ve set 3–5 incelendi; kör çözüm pilotta 60/60, set 3–5'te 90/90 uyuştu. İnceleyiciler şunları düzeltti:
+- metinle ortak anahtar kelimeler;
+- gerçek araştırma bulgularının uydurma araştırmacılara mal edilmesi (sığırcık sürüleri, fonem tamamlama vb.);
+- gerçek yer adları;
+- tekrar eden adlar.
+
+Çözücünün şüphe duyduğu 1.3/2'de F ilanının hedef kitlesi „in den ersten beiden Semestern“ olarak netleştirildi.
+
+**Düzeltmediğim notlar:**
+- Lesetext 2'nin bazı genel sorularında çeldiriciler kolayca eleniyor.
+- 3.4/26 ve 3.4/30 nichts sınırında; çözücü yine de doğru cevabı verdi.
+- „Grüne Dächer gegen Hitze“ konusu B2'deki „Stadtbäume in der Hitze“ setine yakın.
 
 ### TestDaF dijital Lesen: format ve karar tablosu
 Dijital modelltest ekte yoktu. Kaynak: testdaf.de'deki test yapısı ve demo görevlerinin açıklamaları (arama sonuçları). Toplam 7 görev, 34 soru, ~55 dk (✔). Görev ayrıntıları ve süreler kısmen tahmin (≈).

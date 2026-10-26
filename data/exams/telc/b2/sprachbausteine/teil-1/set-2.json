@@ -1,0 +1,217 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b2",
+  "section": "sprachbausteine",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Anfrage an eine Hochschule",
+  "minutes": 12,
+  "context": "Ein Ingenieur schreibt an die Studienberatung einer Hochschule, weil er sich für ein berufsbegleitendes Masterstudium interessiert.",
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort (a, b oder c) in die Lücken 21–30 passt.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "brief",
+          "title": "Anfrage zum Masterstudium",
+          "byline": "E-Mail von Serkan Karaduman an die Studienberatung der Hochschule Ostwaldau",
+          "paragraphs": [
+            "Betreff: Anfrage zum Masterstudiengang „Energie- und Gebäudetechnik“",
+            "Sehr geehrte Damen und Herren,",
+            "ich wende mich an Sie wegen des berufsbegleitenden Masterstudiengangs „Energie- und Gebäudetechnik“, {{21}} ich durch einen Kollegen aufmerksam geworden bin. Zunächst {{22}} ich gern, ob man den Studiengang {{23}} in Vollzeit als auch in Teilzeit absolvieren kann. Ich arbeite seit sechs Jahren als Elektroingenieur in einem Planungsbüro und möchte meine Stelle während des Studiums nicht aufgeben. Besonders interessiert mich der Schwerpunkt „Sanierung von Bestandsgebäuden“, da ich beruflich häufig mit älteren Gebäuden zu tun habe. Außerdem möchte ich erfahren, wie viele Präsenztage pro Semester vorgesehen sind.",
+            "Meinen Bachelorabschluss habe ich 2018 an einer {{24}} Universität erworben. Mir ist nicht klar, ob dieser Abschluss in Deutschland zuerst offiziell anerkannt {{25}} muss, bevor ich mich bei Ihnen bewerben kann. Falls ja, teilen Sie mir bitte mit, {{26}} ich mich dafür wenden kann.",
+            "Ich könnte das Studium zum Wintersemester aufnehmen, {{27}} mein Arbeitgeber mir einen freien Tag pro Woche gewährt. Bisher hat er dem nur mündlich zugestimmt. Je früher ich die genauen Vorlesungszeiten kenne, {{28}} besser kann ich diese Frage mit ihm klären.",
+            "Ein ehemaliger Kommilitone erzählte mir allerdings, die Bewerbungsfrist für das kommende Semester {{29}} bereits abgelaufen. Sollte das zutreffen, möchte ich mich für das darauffolgende Sommersemester bewerben.",
+            "Für eine kurze Rückmeldung wäre ich {{30}} sehr dankbar.",
+            "Mit freundlichen Grüßen",
+            "Serkan Karaduman"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 21,
+          "type": "abc",
+          "prompt": "Lücke 21",
+          "options": {
+            "a": "auf dem",
+            "b": "auf den",
+            "c": "an den"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "ich durch einen Kollegen aufmerksam geworden bin"
+            }
+          ],
+          "explanation": "Boşluk bir ilgi cümlesi başlatıyor ve „Masterstudiengang“a (eril) gönderme yapıyor. Yan cümlenin fiili „aufmerksam werden“ (bir şeyin farkına varmak, bir şeyden haberdar olmak) sabit olarak „auf“ + Akkusativ ister: „auf etwas aufmerksam werden“. Bu yüzden edat ilgi zamirinin önüne gelir: „…, auf den ich durch einen Kollegen aufmerksam geworden bin“ (bir meslektaş sayesinde haberdar olduğum program). a) auf dem yanlış: Edat doğru, ama „dem“ Dativ'dir; „aufmerksam werden auf“ Akkusativ ister (eril Akkusativ ilgi zamiri „den“). c) an den yanlış: „aufmerksam werden“ „an“ ile kullanılmaz; doğru edat „auf“tur."
+        },
+        {
+          "number": 22,
+          "type": "abc",
+          "prompt": "Lücke 22",
+          "options": {
+            "a": "wollte",
+            "b": "hätten",
+            "c": "wüsste"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "ich gern, ob man den Studiengang"
+            }
+          ],
+          "explanation": "Boşluktan sonra özne „ich“ ve bir „ob“ yan cümlesi geliyor; cümlede ayrıca mastar yok. Kibar bir soru için „wissen“in Konjunktiv II biçimi kullanılır: „Zunächst wüsste ich gern, ob …“ (öncelikle … bilmek isterdim). a) wollte yanlış: „wollen“ bir mastar veya „dass“ cümlesi ister („wollte … wissen“); „wollte ich gern, ob …“ eksik ve yanlıştır. b) hätten yanlış: „wir/sie/Sie“ biçimidir, özne „ich“tir; ayrıca „gern haben, ob …“ diye bir yapı yoktur."
+        },
+        {
+          "number": 23,
+          "type": "abc",
+          "prompt": "Lücke 23",
+          "options": {
+            "a": "sowohl",
+            "b": "weder",
+            "c": "entweder"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "in Vollzeit als auch in Teilzeit absolvieren kann"
+            }
+          ],
+          "explanation": "Boşluktan sonra „als auch“ geliyor; bu iki parçalı bağlacın ikinci parçasıdır: „sowohl … als auch“ (hem … hem de). Serkan programın hem tam zamanlı hem yarı zamanlı okunup okunamayacağını soruyor. b) weder yanlış: „weder“ yalnızca „noch“ ile kullanılır („weder … noch“). c) entweder yanlış: „entweder“ yalnızca „oder“ ile kullanılır („entweder … oder“)."
+        },
+        {
+          "number": 24,
+          "type": "abc",
+          "prompt": "Lücke 24",
+          "options": {
+            "a": "türkischer",
+            "b": "türkischen",
+            "c": "türkische"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Universität erworben"
+            }
+          ],
+          "explanation": "Boşluktaki sıfat „an einer … Universität“ grubundadır. „an“ burada yer bildirir (nerede?) ve Dativ ister; „einer“ dişil tekil Dativ belirsiz artikelidir. Belirsiz artikel çekim ekini zaten gösterdiği için sıfat Dativ'de „-en“ alır: „an einer türkischen Universität“ (bir Türk üniversitesinde). a) türkischer yanlış: „-er“ eki artikelsiz dişil Dativ'de olur („an türkischer Universität“); artikelden sonra kullanılmaz. c) türkische yanlış: „-e“ eki dişil Nominativ/Akkusativ'dir („eine türkische Universität“), Dativ'de değil."
+        },
+        {
+          "number": 25,
+          "type": "abc",
+          "prompt": "Lücke 25",
+          "options": {
+            "a": "wird",
+            "b": "worden",
+            "c": "werden"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "ob dieser Abschluss in Deutschland zuerst offiziell anerkannt"
+            }
+          ],
+          "explanation": "Yan cümle edilgendir: Diploma kendisi bir şey yapmıyor, resmî olarak tanınıyor. Kip fiili „muss“ cümlenin sonundaki çekimli fiildir; ondan önce edilgen mastar gelir: Partizip II + „werden“ → „anerkannt werden muss“ (tanınması gerekir). a) wird yanlış: Çekimli fiil zaten „muss“tur; iki çekimli fiil yan yana gelemez („anerkannt wird muss“ olmaz). b) worden yanlış: „worden“ yalnızca „sein“ ile geçmiş edilgende kullanılır; kip fiiliyle „anerkannt worden sein muss“ gerekirdi ve anlam da geçmiş olurdu."
+        },
+        {
+          "number": 26,
+          "type": "abc",
+          "prompt": "Lücke 26",
+          "options": {
+            "a": "an wen",
+            "b": "an wem",
+            "c": "auf wen"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "ich mich dafür wenden kann"
+            }
+          ],
+          "explanation": "Boşluk dolaylı bir soru cümlesi başlatıyor ve fiil „sich wenden an“ (birine başvurmak) sabit olarak „an“ + Akkusativ ister: „sich an jemanden wenden“. Kişiyi soran soru kelimesi edatla birlikte gelir: „an wen ich mich dafür wenden kann“ (bunun için kime başvurabileceğimi). b) an wem yanlış: Edat doğru, ama „wem“ Dativ'dir; „sich wenden an“ Akkusativ ister. c) auf wen yanlış: Akkusativ biçimi doğrudur, ama „sich wenden“ „auf“ ile kullanılmaz; doğru edat „an“dır."
+        },
+        {
+          "number": 27,
+          "type": "abc",
+          "prompt": "Lücke 27",
+          "options": {
+            "a": "obwohl",
+            "b": "damit",
+            "c": "sofern"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Bisher hat er dem nur mündlich zugestimmt"
+            }
+          ],
+          "explanation": "Serkan'ın kış döneminde başlayabilmesi bir koşula bağlıdır: İşvereninin ona haftada bir gün izin vermesi. Metin bunun henüz kesin olmadığını da söylüyor: „Bisher hat er dem nur mündlich zugestimmt“ (şimdiye kadar yalnızca sözlü onay verdi). Koşul bildiren yan cümle bağlacı „sofern“ (-diği takdirde, eğer) olur. a) obwohl yanlış: „obwohl“ (-e rağmen) bir karşıtlık bildirir; boş gün, başlamayı engelleyen değil, mümkün kılan bir şeydir. b) damit yanlış: „damit“ (-sın diye) amaç bildirir; Serkan işvereni izin versin diye okula başlamaz, tersine iznin okul için gerekli olduğunu söyler."
+        },
+        {
+          "number": 28,
+          "type": "abc",
+          "prompt": "Lücke 28",
+          "options": {
+            "a": "desto",
+            "b": "als",
+            "c": "denn"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "besser kann ich diese Frage mit ihm klären"
+            }
+          ],
+          "explanation": "Cümle „Je früher …“ ile başlıyor; bu iki parçalı karşılaştırmanın ilk parçasıdır. İkinci parça „desto“ (veya „umso“) + Komparativ olur: „Je früher ich die genauen Vorlesungszeiten kenne, desto besser kann ich …“ (ders saatlerini ne kadar erken bilirsem, bu konuyu onunla o kadar iyi konuşabilirim). b) als yanlış: „als“ bir karşılaştırmada ikinci öğeyi bağlar („besser als …“); „je“ ile kullanılmaz. c) denn yanlış: „denn“ (çünkü) sebep bildirir ve arkasından fiil hemen değil, özne gelir; „je“ yapısını tamamlamaz."
+        },
+        {
+          "number": 29,
+          "type": "abc",
+          "prompt": "Lücke 29",
+          "options": {
+            "a": "habe",
+            "b": "sei",
+            "c": "werde"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "die Bewerbungsfrist für das kommende Semester"
+            }
+          ],
+          "explanation": "Burada başka birinin sözü aktarılıyor: „Ein ehemaliger Kommilitone erzählte mir …, die Bewerbungsfrist … bereits abgelaufen“. Dolaylı anlatımda yazılı dilde Konjunktiv I kullanılır. „ablaufen“ (süresi dolmak) hâl değişimi bildirdiği için Perfekt'i „sein“ ile kurar („die Frist ist abgelaufen“); Konjunktiv I'de bu „sei abgelaufen“ olur. a) habe yanlış: „ablaufen“ „haben“ ile çekilmez. c) werde yanlış: „werde abgelaufen“ edilgen veya gelecek zaman olurdu; „ablaufen“ nesnesiz bir fiil olduğu için edilgeni kurulamaz ve gelecek zaman mastar („werde ablaufen“) isterdi."
+        },
+        {
+          "number": 30,
+          "type": "abc",
+          "prompt": "Lücke 30",
+          "options": {
+            "a": "Sie",
+            "b": "Ihnen",
+            "c": "sich"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Für eine kurze Rückmeldung wäre ich"
+            }
+          ],
+          "explanation": "Sıfat „dankbar“ (minnettar) kime minnettar olunduğunu Dativ ile söyler: „jemandem dankbar sein“. Resmî hitap „Sie“nin Dativ biçimi „Ihnen“dir: „wäre ich Ihnen sehr dankbar“ (size çok minnettar olurum). a) Sie yanlış: Nominativ veya Akkusativ biçimidir; „dankbar“ Akkusativ almaz. c) sich yanlış: „sich“ dönüşlü zamirdir ve yalnızca özne 3. şahıs (veya „Sie“) olduğunda özneyi geri gösterir; burada özne „ich“tir ve minnettar olunan kişi özne değil, mektubun muhatabıdır."
+        }
+      ]
+    }
+  ]
+}

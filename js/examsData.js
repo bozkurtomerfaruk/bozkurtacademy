@@ -668,13 +668,58 @@ window.BA_EXAMS = {
               { title: null, exercises: [] }, // Teil 3
             ] },
             { id: 'lesen', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
-              { title: null, exercises: [] }, // Teil 3
+              {
+                title: { tr: 'Kısa metinler ve başlıklar · eşleştirme', de: 'Kurztexte und Überschriften · Zuordnung', en: 'Short texts and headlines · matching' },
+                exercises: [
+                  { set: 'set-1', title: 'Meldungen aus Wissenschaft und Gesellschaft' },
+                  { set: 'set-2', title: 'Nachrichten aus der Arbeitswelt' },
+                  { set: 'set-3', title: 'Neues aus Umwelt und Technik' },
+                  { set: 'set-4', title: 'Meldungen aus Bildung und Kultur' },
+                  { set: 'set-5', title: 'Kurzberichte aus Medizin und Ernährung' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: 'Gazete makalesi · a/b/c', de: 'Zeitungsartikel · a/b/c', en: 'Newspaper article · a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Eine Auszeit vom Beruf' },
+                  { set: 'set-2', title: 'Das Leben als Fernpendler' },
+                  { set: 'set-3', title: 'Ein Jahr Freiwilligendienst' },
+                  { set: 'set-4', title: 'Die Rückkehr der Mundart' },
+                  { set: 'set-5', title: 'Leere Läden, neue Ideen' },
+                ]
+              }, // Teil 2
+              {
+                title: { tr: 'Durumlar ve ilanlar · eşleştirme', de: 'Situationen und Anzeigen · Zuordnung', en: 'Situations and adverts · matching' },
+                exercises: [
+                  { set: 'set-1', title: 'Weiterbildung und Beruf' },
+                  { set: 'set-2', title: 'Kultur und Reisen' },
+                  { set: 'set-3', title: 'Haushalt und Finanzen' },
+                  { set: 'set-4', title: 'Freizeit und Ehrenamt' },
+                  { set: 'set-5', title: 'Medien und Technik' },
+                ]
+              }, // Teil 3
             ] },
             { id: 'sprachbausteine', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
+              {
+                title: { tr: 'Mektupta boşluk · a/b/c', de: 'Lückentext im Brief · a/b/c', en: 'Gapped letter · a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Eine Reklamation' },
+                  { set: 'set-2', title: 'Anfrage an eine Hochschule' },
+                  { set: 'set-3', title: 'Bewerbung um ein Praktikum' },
+                  { set: 'set-4', title: 'Beschwerde bei der Hausverwaltung' },
+                  { set: 'set-5', title: 'Antrag auf Bildungsurlaub' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: 'Kelime listesiyle boşluk doldurma', de: 'Lückentext mit Wortliste', en: 'Gapped text with word list' },
+                exercises: [
+                  { set: 'set-1', title: 'Rundschreiben an die Belegschaft' },
+                  { set: 'set-2', title: 'Leserbrief zur Stadtplanung' },
+                  { set: 'set-3', title: 'Bericht über eine Fachtagung' },
+                  { set: 'set-4', title: 'Mitteilung des Elternbeirats' },
+                  { set: 'set-5', title: 'Offener Brief eines Vereins' },
+                ]
+              }, // Teil 2
             ] },
             { id: 'schreiben', teile: [
               { title: null, exercises: [] }, // Teil 1

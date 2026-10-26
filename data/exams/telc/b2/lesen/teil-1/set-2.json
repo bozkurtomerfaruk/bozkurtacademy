@@ -1,0 +1,122 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b2",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Nachrichten aus der Arbeitswelt",
+  "minutes": 15,
+  "instructions": "Lesen Sie die Überschriften a–j und die Texte 1–5. Welche Überschrift passt am besten zu welchem Text? Jede Überschrift kann nur einmal verwendet werden. Fünf Überschriften bleiben übrig.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "text-1",
+          "title": "Text 1",
+          "paragraphs": [
+            "Das Handwerk wird für Abiturientinnen und Abiturienten attraktiver. Wie die Handwerkskammer Ellerbrügge mitteilt, hatte im vergangenen Jahr fast jeder vierte neue Auszubildende die Hochschulreife – vor zehn Jahren war es nur jeder zehnte. Besonders gefragt seien technische Berufe wie Elektroniker oder Anlagenmechaniker, aber auch das Tischlerhandwerk. Kammersprecherin Marlis Sandhövel führt die Entwicklung unter anderem darauf zurück, dass viele Betriebe inzwischen gezielt an Gymnasien werben und Aufstiegsmöglichkeiten bis zum Meistertitel aufzeigen. Um den Nachwuchs muss sich die Branche in der Region ohnehin weniger Sorgen machen als anderswo: Die Gesamtzahl der neu abgeschlossenen Ausbildungsverträge ist im Vergleich zum Vorjahr leicht gestiegen."
+          ]
+        },
+        {
+          "id": "text-2",
+          "title": "Text 2",
+          "paragraphs": [
+            "Wenn erfahrene Fachkräfte in Rente gehen, geht oft auch wertvolles Wissen verloren. Die Firma Hollrieder Antriebstechnik will das verhindern: Seit dem Frühjahr begleiten frühere Beschäftigte, die bereits im Ruhestand sind, junge Kolleginnen und Kollegen in ihren ersten Berufsjahren. Sie zeigen ihnen Kniffe an den Maschinen, beantworten Fragen und helfen bei schwierigen Aufträgen. Eine Rückkehr in den regulären Betrieb ist damit nicht verbunden: Die Mentoren kommen lediglich ein- bis zweimal im Monat ins Werk und erhalten dafür eine Aufwandsentschädigung. „Ich habe 41 Jahre hier gearbeitet – da gebe ich gern etwas zurück“, sagt der frühere Werkzeugmacher Hinnerk Quackenbusch, der derzeit zwei Auszubildende betreut."
+          ]
+        },
+        {
+          "id": "text-3",
+          "title": "Text 3",
+          "paragraphs": [
+            "Bei der Softwarefirma Kantblick in Sörwinkel kann seit Jahresbeginn jeder nachsehen, was die anderen verdienen: Alle Gehälter der 120 Beschäftigten sind im firmeninternen Netz einsehbar, vom Auszubildenden bis zum Geschäftsführer. Grundlage ist ein Modell, in dem sich die Bezahlung nach Erfahrung und Verantwortung richtet und nicht mehr frei verhandelt wird. Geschäftsführer Quentin Wittkämper will damit vor allem Ungerechtigkeiten zwischen Frauen und Männern beseitigen. Die Befürchtung, die Offenlegung werde eine Welle von Forderungen nach mehr Geld auslösen, hat sich bisher nicht bewahrheitet. Einige Beschäftigte hätten zwar nachgefragt, wie ihre Einstufung zustande gekommen sei, berichtet Wittkämper; eine Gehaltserhöhung hätten aber nur wenige verlangt."
+          ]
+        },
+        {
+          "id": "text-4",
+          "title": "Text 4",
+          "paragraphs": [
+            "Wer die Mittagspause am Schreibtisch verbringt und nebenbei E-Mails beantwortet, ist am Nachmittag weniger leistungsfähig. Das legt eine Untersuchung des Arbeitspsychologen Jannes Frahmstedt nahe, der mit seinem Team rund 400 Angestellte zwei Wochen lang begleitet hat. Teilnehmer, die ihre Pause in der Kantine, im Park oder bei einem kurzen Spaziergang verbrachten, machten nachmittags weniger Fehler und fühlten sich seltener erschöpft. Eine längere Pause sei dafür nicht nötig, betont Frahmstedt: Schon zwanzig Minuten reichten aus. Entscheidend sei vielmehr, dass man den Arbeitsplatz tatsächlich verlasse und gedanklich abschalte."
+          ]
+        },
+        {
+          "id": "text-5",
+          "title": "Text 5",
+          "paragraphs": [
+            "Bei den Stadtwerken Morlanden teilen sich seit zwei Jahren zwei Frauen die Leitung der Abteilung Kundenservice. Gülay Ökten und Okka Vahlhaus arbeiten jeweils drei Tage pro Woche; mittwochs sind beide im Haus und stimmen sich ab. Entscheidungen treffen sie gemeinsam, für die 35 Mitarbeiterinnen und Mitarbeiter sind beide gleichermaßen ansprechbar. Anfangs habe es im Team Zweifel gegeben, ob das funktionieren könne, räumt Ökten ein. Inzwischen fällt die Bilanz jedoch so positiv aus, dass das Unternehmen das Modell auf zwei weitere Abteilungen ausgeweitet hat. Bewerben können sich dafür ausdrücklich auch Männer."
+          ]
+        },
+        { "id": "a", "label": "a", "paragraphs": ["Handwerksbetriebe melden weniger neue Lehrlinge"] },
+        { "id": "b", "label": "b", "paragraphs": ["Vom Gymnasium in die Werkstatt: Lehre im Handwerk immer beliebter"] },
+        { "id": "c", "label": "c", "paragraphs": ["Doppelspitze scheitert an Zweifeln im Team"] },
+        { "id": "d", "label": "d", "paragraphs": ["Kein Geheimnis mehr: Löhne für alle offen"] },
+        { "id": "e", "label": "e", "paragraphs": ["Nach der Offenlegung: Belegschaft fordert höhere Löhne"] },
+        { "id": "f", "label": "f", "paragraphs": ["Eine Führungsposition, zwei Chefinnen"] },
+        { "id": "g", "label": "g", "paragraphs": ["Pensionierte Fachleute als Begleiter für Berufsanfänger"] },
+        { "id": "h", "label": "h", "paragraphs": ["Firma holt Ruheständler als Vollzeitkräfte zurück"] },
+        { "id": "i", "label": "i", "paragraphs": ["Psychologen fordern längere Mittagspausen"] },
+        { "id": "j", "label": "j", "paragraphs": ["Wer in der Pause wirklich Abstand nimmt, arbeitet danach besser"] }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "zuordnung",
+          "prompt": "Text 1",
+          "answer": "b",
+          "evidence": [
+            { "text": "text-1", "quote": "hatte im vergangenen Jahr fast jeder vierte neue Auszubildende die Hochschulreife – vor zehn Jahren war es nur jeder zehnte" },
+            { "text": "text-1", "quote": "Die Gesamtzahl der neu abgeschlossenen Ausbildungsverträge ist im Vergleich zum Vorjahr leicht gestiegen." }
+          ],
+          "explanation": "Metin 1'in konusu, zanaat (Handwerk) mesleklerinin lise mezunları için daha çekici hâle gelmesi: geçen yıl yeni çırakların neredeyse dörtte biri „die Hochschulreife“ (üniversiteye giriş hakkı, Abitur) sahibiydi, on yıl önce yalnızca onda biri. b başlığı („liseden atölyeye: zanaatta çıraklık giderek daha sevilen“) bunu anlatıyor. a başlığı („zanaat işletmeleri daha az yeni çırak bildiriyor“) uymuyor: yeni imzalanan çıraklık sözleşmelerinin toplam sayısı önceki yıla göre „leicht gestiegen“ (biraz arttı)."
+        },
+        {
+          "number": 2,
+          "type": "zuordnung",
+          "prompt": "Text 2",
+          "answer": "g",
+          "evidence": [
+            { "text": "text-2", "quote": "begleiten frühere Beschäftigte, die bereits im Ruhestand sind, junge Kolleginnen und Kollegen in ihren ersten Berufsjahren" },
+            { "text": "text-2", "quote": "Eine Rückkehr in den regulären Betrieb ist damit nicht verbunden" }
+          ],
+          "explanation": "Metin 2'de Hollrieder firmasında emekli olmuş („im Ruhestand“) eski çalışanlar, mesleğin ilk yıllarındaki gençlere eşlik ediyor; makinelerdeki püf noktalarını gösteriyor ve sorularını yanıtlıyorlar. g başlığı („emekli uzmanlar meslekte yeni olanlara rehber“) bu programı anlatıyor. h başlığı („firma emeklileri tam zamanlı çalışan olarak geri alıyor“) uymuyor: bu, normal işe dönüş anlamına gelmiyor („Eine Rückkehr in den regulären Betrieb ist damit nicht verbunden“); mentorlar ayda yalnızca bir iki kez fabrikaya geliyor."
+        },
+        {
+          "number": 3,
+          "type": "zuordnung",
+          "prompt": "Text 3",
+          "answer": "d",
+          "evidence": [
+            { "text": "text-3", "quote": "Alle Gehälter der 120 Beschäftigten sind im firmeninternen Netz einsehbar" },
+            { "text": "text-3", "quote": "hat sich bisher nicht bewahrheitet" }
+          ],
+          "explanation": "Metin 3'te Kantblick firmasında 120 çalışanın bütün maaşları şirket içi ağda görülebiliyor („einsehbar“: bakılabilir); herkes başkalarının ne kazandığına bakabiliyor. d başlığı („artık sır değil: ücretler herkese açık“) bunu anlatıyor. e başlığı („açıklamadan sonra çalışanlar daha yüksek ücret istiyor“) uymuyor: maaş taleplerinin artacağı korkusu şimdiye kadar „nicht bewahrheitet“ (gerçekleşmedi); bazı çalışanlar yalnızca kademelerinin nasıl belirlendiğini sordu, zam isteyen az oldu."
+        },
+        {
+          "number": 4,
+          "type": "zuordnung",
+          "prompt": "Text 4",
+          "answer": "j",
+          "evidence": [
+            { "text": "text-4", "quote": "machten nachmittags weniger Fehler und fühlten sich seltener erschöpft" },
+            { "text": "text-4", "quote": "Eine längere Pause sei dafür nicht nötig" },
+            { "text": "text-4", "quote": "dass man den Arbeitsplatz tatsächlich verlasse und gedanklich abschalte" }
+          ],
+          "explanation": "Metin 4'teki araştırmaya göre öğle molasını kantinde, parkta veya kısa bir yürüyüşte geçirenler öğleden sonra daha az hata yapıyor ve daha az yorgun hissediyor; önemli olan işyerinden gerçekten ayrılmak ve zihnen kopmak („gedanklich abschalten“). j başlığı („molada gerçekten uzaklaşan, sonra daha iyi çalışır“) bunu anlatıyor; „Abstand nehmen“ (uzaklaşmak, mesafe koymak) hem işyerinden ayrılmayı hem de zihnen kopmayı karşılıyor. i başlığı („psikologlar daha uzun öğle molaları talep ediyor“) uymuyor: Frahmstedt'e göre daha uzun bir mola gerekli değil („nicht nötig“), yirmi dakika yetiyor."
+        },
+        {
+          "number": 5,
+          "type": "zuordnung",
+          "prompt": "Text 5",
+          "answer": "f",
+          "evidence": [
+            { "text": "text-5", "quote": "teilen sich seit zwei Jahren zwei Frauen die Leitung der Abteilung Kundenservice" },
+            { "text": "text-5", "quote": "dass das Unternehmen das Modell auf zwei weitere Abteilungen ausgeweitet hat" }
+          ],
+          "explanation": "Metin 5'te Morlanden belediye şirketinde iki kadın, Gülay Ökten ve Okka Vahlhaus, müşteri hizmetleri bölümünün yönetimini („die Leitung“) paylaşıyor; kararları birlikte alıyorlar. f başlığı („bir yöneticilik pozisyonu, iki kadın şef“) bunu anlatıyor. c başlığı („ikili yönetim ekipteki şüpheler yüzünden başarısız oluyor“) uymuyor: başta ekipte şüpheler vardı, ama sonuç o kadar olumlu ki şirket modeli iki bölüme daha „ausgeweitet“ (genişletti)."
+        }
+      ]
+    }
+  ]
+}

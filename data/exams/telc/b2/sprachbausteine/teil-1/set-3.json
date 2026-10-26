@@ -1,0 +1,216 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b2",
+  "section": "sprachbausteine",
+  "teil": 1,
+  "set": "set-3",
+  "title": "Bewerbung um ein Praktikum",
+  "minutes": 12,
+  "context": "Eine Studentin bewirbt sich per E-Mail bei einem Büro für Landschaftsarchitektur um einen Praktikumsplatz.",
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort (a, b oder c) in die Lücken 21–30 passt.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "brief",
+          "title": "Bewerbung um einen Praktikumsplatz",
+          "byline": "E-Mail von Sevda Taşdelen an das Büro Lohstöter Landschaftsarchitektur",
+          "paragraphs": [
+            "Betreff: Bewerbung um einen Praktikumsplatz für das Praxissemester",
+            "Sehr geehrte Damen und Herren,",
+            "ich studiere im fünften Semester Landschaftsarchitektur und muss {{21}} des Sommersemesters 2027 ein Praxissemester von mindestens 20 Wochen absolvieren. Auf Ihrer Internetseite habe ich gelesen, dass Sie Schulhöfe gemeinsam mit Kindern und Lehrkräften planen – etwas, {{22}} ich mich bereits in meiner letzten Projektarbeit intensiv beschäftigt habe. Diese Arbeit ist von meinen Dozenten mit der Note 1,3 bewertet {{23}}.",
+            "Praktische Erfahrungen habe ich bereits gesammelt, {{24}} ich zwei Sommer lang in einer Gärtnerei mitgearbeitet habe. Dort habe ich unter anderem Pflanzpläne für Privatgärten entworfen und bei der Pflege öffentlicher Grünflächen geholfen. Vor zwei Wochen habe ich auf einer Fachmesse mit einem ehemaligen {{25}} Ihres Büros gesprochen. Er erzählte mir, dass in Ihrem Team großer Wert {{26}} selbstständiges Arbeiten gelegt werde. Genau diese Arbeitsweise wünsche ich mir für mein Praktikum.",
+            "Der Zeitraum von Anfang März bis Ende Juli {{27}} sich gut mit meinem Studienplan vereinbaren. Ich habe {{28}} noch keine Erfahrung in der Bauleitung, arbeite aber sicher mit den gängigen Zeichenprogrammen und arbeite mich schnell in neue Aufgaben ein.",
+            "Über die Gelegenheit, mich bei Ihnen persönlich vorzustellen, {{29}} ich mich sehr freuen. Meinen Lebenslauf, mein Notenblatt und zwei Arbeitsproben habe ich dieser E-Mail {{30}}.",
+            "Mit freundlichen Grüßen",
+            "Sevda Taşdelen"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 21,
+          "type": "abc",
+          "prompt": "Lücke 21",
+          "options": {
+            "a": "während",
+            "b": "seit",
+            "c": "ab"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "ein Praxissemester von mindestens 20 Wochen absolvieren"
+            }
+          ],
+          "explanation": "Boşluktan sonra Genitiv bir isim grubu geliyor: „des Sommersemesters 2027“ (2027 yaz döneminin). Sevda staj dönemini bu yarıyıl boyunca yapmak zorunda; „süresince, sırasında“ anlamındaki Genitiv edatı „während“dır: „während des Sommersemesters 2027“. b) seit yanlış: „seit“ Dativ ister („seit dem Sommersemester“) ve geçmişte başlayıp süren bir durumu anlatır; „des“ ile kullanılamaz. c) ab yanlış: „ab“ da Dativ ister („ab dem Sommersemester“); „ab des Sommersemesters“ kurulamaz."
+        },
+        {
+          "number": 22,
+          "type": "abc",
+          "prompt": "Lücke 22",
+          "options": {
+            "a": "woran",
+            "b": "womit",
+            "c": "wofür"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "ich mich bereits in meiner letzten Projektarbeit intensiv beschäftigt habe"
+            }
+          ],
+          "explanation": "Boşluk „etwas“ kelimesine bağlanan bir ilgi cümlesi başlatıyor; „etwas, alles, nichts“ gibi belirsiz kelimelerden sonra edatlı ilgi zamiri „wo(r)- + edat“ biçiminde kurulur. Hangi edatın geleceğini yan cümlenin fiili belirler: „sich beschäftigen mit“ (bir şeyle uğraşmak). Bu yüzden „etwas, womit ich mich … beschäftigt habe“ (… uğraştığım bir şey) olur. a) woran yanlış: „an“ edatı „denken an, arbeiten an“ gibi fiillerle gelir; „sich beschäftigen“ „an“ almaz. c) wofür yanlış: „für“ „sich interessieren für“ gibi fiillerle gelir; „sich beschäftigen für“ diye bir yapı yoktur."
+        },
+        {
+          "number": 23,
+          "type": "abc",
+          "prompt": "Lücke 23",
+          "options": {
+            "a": "geworden",
+            "b": "werden",
+            "c": "worden"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Diese Arbeit ist von meinen Dozenten mit der Note 1,3 bewertet"
+            }
+          ],
+          "explanation": "Cümle edilgendir: Projeyi hocalar değerlendirmiş („von meinen Dozenten“), proje kendisi bir şey yapmamış. Yardımcı fiil „ist“ ve Partizip II „bewertet“ geçmiş zaman edilgenini (Passiv Perfekt) kurar; bu yapıda „werden“in Partizip II'si ön eksiz „worden“ olur: „ist … bewertet worden“ (değerlendirildi). a) geworden yanlış: „geworden“ yalnızca „werden“ tek başına asıl fiil olduğunda kullanılır („Sie ist Ärztin geworden“); başka bir Partizip II'nin yanında „worden“ gerekir. b) werden yanlış: Mastar „werden“ „ist“ ile birlikte bir zaman kurmaz; „ist bewertet werden“ yanlıştır."
+        },
+        {
+          "number": 24,
+          "type": "abc",
+          "prompt": "Lücke 24",
+          "options": {
+            "a": "indem",
+            "b": "sodass",
+            "c": "damit"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "ich zwei Sommer lang in einer Gärtnerei mitgearbeitet habe"
+            }
+          ],
+          "explanation": "Yan cümle, Sevda'nın pratik deneyimi nasıl, hangi yolla edindiğini anlatıyor: iki yaz boyunca bir fidanlıkta („Gärtnerei“) çalışarak. Yol ve yöntem bildiren bağlaç „indem“dir (-erek, -arak): „Erfahrungen gesammelt, indem ich … mitgearbeitet habe“. b) sodass yanlış: „sodass“ (böylece, o yüzden) sonuç bildirir; o zaman fidanlıkta çalışmak deneyim edinmenin sonucu olurdu. Oysa sıra tersidir: Sevda önce çalışmış, deneyimi bu çalışmayla edinmiş. c) damit yanlış: „damit“ (-sın diye) henüz gerçekleşmemiş bir amacı anlatır; „damit ich … mitgearbeitet habe“ geçmişte tamamlanmış bir eylemi amaç yapamaz. Ayrıca deneyim edinmenin amacı fidanlıkta çalışmak değildir, çalışma deneyimin kaynağıdır."
+        },
+        {
+          "number": 25,
+          "type": "abc",
+          "prompt": "Lücke 25",
+          "options": {
+            "a": "Praktikant",
+            "b": "Praktikants",
+            "c": "Praktikanten"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Ihres Büros gesprochen"
+            }
+          ],
+          "explanation": "Boşluktaki isim „mit einem ehemaligen …“ grubunda: „mit“ Dativ ister, „einem ehemaligen“ eril tekil Dativ'dir. „Praktikant“ (stajyer) n-Deklination'a giren bir isimdir: Nominativ dışındaki bütün hâllerde „-en“ eki alır. Bu yüzden „mit einem ehemaligen Praktikanten“ (eski bir stajyerle) olur. a) Praktikant yanlış: Ekisiz biçim yalnızca Nominativ'dir („der Praktikant“). b) Praktikants yanlış: Bu isimler Genitiv'de bile „-s“ değil, „-en“ alır („des Praktikanten“); Dativ'de „-s“ hiç olmaz."
+        },
+        {
+          "number": 26,
+          "type": "abc",
+          "prompt": "Lücke 26",
+          "options": {
+            "a": "für",
+            "b": "auf",
+            "c": "an"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "selbstständiges Arbeiten gelegt werde"
+            }
+          ],
+          "explanation": "Cümlede sabit bir isim-fiil kalıbı var: „Wert auf etwas legen“ (bir şeye önem vermek). Edilgen ve aktarılan sözde de edat değişmez: „dass in Ihrem Team großer Wert auf selbstständiges Arbeiten gelegt werde“ (ekibinizde bağımsız çalışmaya büyük önem verildiği). a) für yanlış: „Wert für“ diye bir kalıp yoktur; „für“ ancak „wichtig für“ gibi başka ifadelerle gelir. c) an yanlış: „Wert legen an“ da yoktur; kalıp yalnızca „auf“ + Akkusativ ile kurulur."
+        },
+        {
+          "number": 27,
+          "type": "abc",
+          "prompt": "Lücke 27",
+          "options": {
+            "a": "muss",
+            "b": "kann",
+            "c": "lässt"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "sich gut mit meinem Studienplan vereinbaren"
+            }
+          ],
+          "explanation": "Boşluktan sonra „sich“ ve sonda mastar „vereinbaren“ geliyor. „vereinbaren“ (bağdaştırmak) dönüşlü bir fiil değildir; „sich“ burada „sich lassen + Infinitiv“ yapısına aittir. Bu yapı edilgen anlam taşır ve „können“li edilgenin yerine geçer: „Der Zeitraum lässt sich gut … vereinbaren“ = „kann gut vereinbart werden“ (bu dönem ders planımla iyi bağdaştırılabilir). a) muss yanlış: „muss sich vereinbaren“ olmaz, çünkü „sich vereinbaren“ diye dönüşlü bir fiil yoktur; „muss“ ile edilgen „muss vereinbart werden“ gerekirdi. b) kann yanlış: Aynı sebeple „kann sich vereinbaren“ kurulamaz; doğrusu „kann vereinbart werden“ olurdu."
+        },
+        {
+          "number": 28,
+          "type": "abc",
+          "prompt": "Lücke 28",
+          "options": {
+            "a": "zwar",
+            "b": "weder",
+            "c": "entweder"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "arbeite aber sicher mit den gängigen Zeichenprogrammen"
+            }
+          ],
+          "explanation": "Cümlenin ikinci yarısında „aber“ geliyor: Sevda'nın şantiye yönetiminde („Bauleitung“) deneyimi yok, ama çizim programlarını iyi kullanıyor. Bir eksikliği kabul edip ardından bir karşıtlık getiren iki parçalı bağlaç „zwar … aber“dir (gerçi … ama): „Ich habe zwar noch keine Erfahrung …, arbeite aber sicher …“. b) weder yanlış: „weder“ yalnızca „noch“ ile kullanılır ve kendisi olumsuzdur; „keine“ ve „aber“ ile birleşmez. c) entweder yanlış: „entweder“ yalnızca „oder“ ile kullanılır (ya … ya da); burada iki seçenek değil, bir karşıtlık var."
+        },
+        {
+          "number": 29,
+          "type": "abc",
+          "prompt": "Lücke 29",
+          "options": {
+            "a": "wäre",
+            "b": "würde",
+            "c": "hätte"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "mich bei Ihnen persönlich vorzustellen"
+            }
+          ],
+          "explanation": "Boşluktan sonra özne „ich“, dönüşlü zamir „mich“ ve sonda mastar „freuen“ geliyor: „sich freuen über“ (bir şeye sevinmek). Kibar bir dilek Konjunktiv II ile söylenir; mastarla birlikte kullanılan Konjunktiv II yardımcı fiili „würde“dir: „Über die Gelegenheit … würde ich mich sehr freuen“ (… fırsatına çok sevinirim). a) wäre yanlış: „wäre“ bir sıfat veya Partizip II ile kullanılır („wäre froh“); mastar „freuen“ ile birleşmez. c) hätte yanlış: „hätte“ de mastarla değil, Partizip II ile kullanılır („hätte mich gefreut“); „hätte … freuen“ olmaz."
+        },
+        {
+          "number": 30,
+          "type": "abc",
+          "prompt": "Lücke 30",
+          "options": {
+            "a": "beifügen",
+            "b": "beifügte",
+            "c": "beigefügt"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Meinen Lebenslauf, mein Notenblatt und zwei Arbeitsproben habe ich dieser E-Mail"
+            }
+          ],
+          "explanation": "Cümlenin çekimli fiili „habe“dir; „haben“ ile geçmiş zaman (Perfekt) kurulur ve cümlenin sonuna Partizip II gelir. „beifügen“ (ekine koymak) ayrılabilen bir fiildir; Partizip II'de „-ge-“ önek ile kökün arasına girer: „habe ich dieser E-Mail beigefügt“ (bu e-postanın ekine koydum). a) beifügen yanlış: „haben“ mastarla zaman kurmaz; mastar ancak kip fiilinden sonra gelir („möchte … beifügen“). b) beifügte yanlış: „beifügte“ Präteritum biçimidir ve kendisi çekimli fiildir („ich fügte … bei“); cümlede çekimli fiil zaten „habe“ olduğu için sona ikinci bir çekimli fiil gelemez."
+        }
+      ]
+    }
+  ]
+}

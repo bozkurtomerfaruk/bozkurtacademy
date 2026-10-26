@@ -10,8 +10,9 @@
 - Aşama 3, TestDaF dijital: bitti, main'e birleştirildi (00feb1c; Aufgabe 2 ve 7 atlandı). Modelltest PDF'leri çalışma alanından silindi.
 - Aşama 4, telc B1: bitti, main'e birleştirildi (49db897).
 - Aşama 5, telc A1: bitti, main'e birleştirildi (7c9acb2).
-- Aşama 6, telc A2: bitti, main'e birleştirildi.
-- Aşama 7–8, telc B2 ve C1 Hochschule: ayrı dallarda (`claude/telc-b2`, `claude/telc-c1h`; çalışma ağaçları /tmp/wt-tb2, /tmp/wt-tc1) paralel sürüyor.
+- Aşama 6, telc A2: bitti, main'e birleştirildi (cfb9104).
+- Aşama 7, telc B2: bitti, main'e birleştirildi.
+- Aşama 8, telc C1 Hochschule: pilot onaylandı, set 3–5 yazılıyor; dal `claude/telc-c1h`, çalışma ağacı /tmp/wt-tc1.
 
 ### telc Deutsch A1 (Start Deutsch 1) Lesen: format tablosu
 Start Deutsch 1, Goethe-Institut ile telc'in ortak geliştirdiği sınav; telc A1 ile Goethe A1'in formatı aynı (✔). Bu yüzden tablo Goethe A1 tablomuzla aynı; içerik tamamen yeni (Goethe A1'in hiçbir konusu, durumu, adı veya tabelası tekrar edilmiyor).
@@ -52,6 +53,24 @@ Kaynak: telc Übungstest açıklamaları ve hazırlık sitelerinin özetleri (ar
 - Bazı Teil 3 durumları ilanla aynı anahtar kelimeyi paylaşıyor (Gitarre, Grill, Sonntag); çeldirici ilanlar yine de okumayı gerektiriyor.
 - Konu yakınlıkları: yetişkin yüzme kursu (Goethe B1'de bir cümle), aşçıyla yemek kursu (telc A2 T2 set-1'e yakın), yeniden açılan köy sineması (Goethe A2 „Kinoabend im Dorf“a yakın; başlık değiştirildi: „Das alte Kino ist wieder offen“).
 - T1 set-4 metni ~229 kelime, hedefin biraz üstünde.
+
+### telc Deutsch B2 Leseverstehen + Sprachbausteine: format tablosu
+Kaynak: hazırlık sitelerinin ve telc ipucu belgelerinin özetleri (arama sonuçları; resmî PDF'lere ağdan erişilemedi). ✔ = birden çok kaynakta doğrulandı, ≈ = tahmin veya bizim kararımız. Görev türleri telc B1 ile aynı, metinler daha uzun ve dil daha zor. Lesen ve Sprachbausteine birlikte ~90 dk (✔).
+
+| Bölüm | Metin | Görev | Soru | Süre |
+|---|---|---|---|---|
+| Lesen Teil 1 | 10 başlık a–j, 5 metin (✔), metin başına ~90–140 kelime (≈) | Her metne bir başlık, beş başlık artar (✔) | 1–5 (✔) | ~15 dk (✔) |
+| Lesen Teil 2 | Uzun makale, ~550–650 kelime (≈; kaynaklar 500–900 arası veriyor) | a/b/c (✔) | 6–10 (✔) | ~20 dk (✔) |
+| Lesen Teil 3 | 12 ilan a–l (≈) | 10 durum; bir durum için ilan yok: x (≈) | 11–20 (✔) | ~30 dk (≈) |
+| Sprachbausteine Teil 1 | Resmî mektup, ~200–260 kelime (≈) | Her boşluk için a/b/c, dil bilgisi (✔ bir kaynak; diğeri farklı) | 21–30 (✔) | ~12 dk (≈) |
+| Sprachbausteine Teil 2 | Rapor, duyuru, okur mektubu (≈) | 15 kelimelik listeden 10 boşluk (✔) | 31–40 (✔) | ~13 dk (≈) |
+
+**Aşama 7 bitti: Lesen 3 Teil + Sprachbausteine 2 Teil, her biri 5 set (25 set, 200 soru).**
+- Kör çözüm pilotta 80/80 (bir yanlış çözücünün kendi dikkatsizliğiydi, sorulunca düzeltti), set 3–5'te 120/120.
+- İnceleyiciler birbirine veya gerçek yerlere benzeyen 20'yi aşkın uydurma yer adını değiştirdi, başlıklardaki metin kelimelerini kaldırdı, Sprachbausteine'de ikinci doğru olabilecek seçenekleri değiştirdi („über die“, „allerdings“, „wodurch“, „entweder“), aynı sınavda iki kez geçen Plattdeutsch konusunu satranç dersiyle değiştirdi.
+- Teil 3'teki x tuzakları her sette farklı: zorunlu meslek eğitimi, grup büyüklüğü, sözleşme süresi, erişilebilirlik, cihaz şartı.
+
+**Düzeltmediğim notlar:** Vejetaryen kantin ve „ne istersen öde“ tiyatrosu Goethe B2'deki bazı konulara yakın (farklı bakış açısıyla). Sprachbausteine Teil 1 doğası gereği çoğunlukla bağlamdan bağımsız dil bilgisi.
 
 ### telc Deutsch B1 (Zertifikat Deutsch) Leseverstehen + Sprachbausteine: format tablosu
 Kaynak: telc'in yayımladığı sınav yapısı ve örnek sınav açıklamaları (arama sonuçları). ✔ = kaynaklarda doğrulandı, ≈ = tahmin veya bizim kararımız. Lesen ve Sprachbausteine birlikte 90 dk (✔).

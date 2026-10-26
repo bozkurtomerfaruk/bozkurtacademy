@@ -1,0 +1,270 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b2",
+  "section": "sprachbausteine",
+  "teil": 2,
+  "set": "set-3",
+  "title": "Bericht über eine Fachtagung",
+  "minutes": 13,
+  "context": "Im Mitgliedermagazin eines Gastronomieverbands erscheint ein Bericht über eine Fachtagung zum Thema Lebensmittelverschwendung.",
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort aus der Liste (a–o) in die Lücken 31–40 passt. Jedes Wort passt nur einmal. Fünf Wörter bleiben übrig.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "bericht",
+          "title": "Volle Teller, leere Tonnen",
+          "byline": "Mitgliedermagazin des Landesverbands Gastronomie",
+          "paragraphs": [
+            "Rund 300 Köchinnen, Köche und Betriebsleitungen nahmen in der vergangenen Woche an unserer Fachtagung zur Lebensmittelverschwendung teil. Einer aktuellen Studie {{31}} landet in Restaurants und Kantinen fast ein Viertel aller eingekauften Lebensmittel im Müll. Welche {{32}} dabei die Größe der Portionen spielt, erläuterte die Ernährungswissenschaftlerin Dr. Alke Tammerling im Eröffnungsvortrag: Vor allem Beilagen wie Reis oder Kartoffeln blieben häufig auf den Tellern zurück.",
+            "Wie Betriebe gegensteuern können, zeigten mehrere Beispiele aus der Praxis. So berichtete der Küchenchef einer großen Betriebskantine, sein Team habe die Abfallmenge innerhalb eines Jahres halbiert, {{33}} es die Beilagen nur noch in kleinen Mengen ausgebe und auf Wunsch kostenlos nachreiche. Die Gäste hätten sich schnell an die kleineren Portionen {{34}}.",
+            "Ein Tagungshotel setzt dagegen auf eine digitale Waage, die jeden weggeworfenen Rest erfasst. Die Auswertung zeige genau, welche Gerichte zu großzügig geplant würden, und habe den Einkauf deutlich günstiger gemacht. Die teure Anschaffung habe sich {{35}} erst nach zwei Jahren bezahlt gemacht, räumte die Hoteldirektorin ein.",
+            "Besonders viel {{36}} legten mehrere Rednerinnen und Redner auf die Schulung der Beschäftigten. Je besser das Küchenpersonal über Lagerung und Resteverwertung Bescheid wisse, {{37}} weniger Lebensmittel müssten entsorgt werden.",
+            "Am zweiten Tag ging es um die Frage, ob Gäste ihre Reste mitnehmen dürfen. Rechtlich sei das unproblematisch, {{38}} die Behälter sauber seien und die Gäste auf die nötige Kühlung hingewiesen würden. Viele Betriebe bieten diese Möglichkeit {{39}} jedoch nicht aktiv an, wie eine Umfrage unter den Teilnehmenden ergab.",
+            "Unser Verband will seine Mitglieder künftig mit kostenlosen Beratungen unterstützen und so dazu {{40}}, dass die Abfallmenge in der Gastronomie bis 2030 um die Hälfte sinkt."
+          ]
+        },
+        {
+          "id": "wort-a",
+          "label": "a",
+          "paragraphs": [
+            "Rolle"
+          ]
+        },
+        {
+          "id": "wort-b",
+          "label": "b",
+          "paragraphs": [
+            "bislang"
+          ]
+        },
+        {
+          "id": "wort-c",
+          "label": "c",
+          "paragraphs": [
+            "allerdings"
+          ]
+        },
+        {
+          "id": "wort-d",
+          "label": "d",
+          "paragraphs": [
+            "desto"
+          ]
+        },
+        {
+          "id": "wort-e",
+          "label": "e",
+          "paragraphs": [
+            "wegen"
+          ]
+        },
+        {
+          "id": "wort-f",
+          "label": "f",
+          "paragraphs": [
+            "indem"
+          ]
+        },
+        {
+          "id": "wort-g",
+          "label": "g",
+          "paragraphs": [
+            "Bedeutung"
+          ]
+        },
+        {
+          "id": "wort-h",
+          "label": "h",
+          "paragraphs": [
+            "zwar"
+          ]
+        },
+        {
+          "id": "wort-i",
+          "label": "i",
+          "paragraphs": [
+            "Wert"
+          ]
+        },
+        {
+          "id": "wort-j",
+          "label": "j",
+          "paragraphs": [
+            "obwohl"
+          ]
+        },
+        {
+          "id": "wort-k",
+          "label": "k",
+          "paragraphs": [
+            "zufolge"
+          ]
+        },
+        {
+          "id": "wort-l",
+          "label": "l",
+          "paragraphs": [
+            "sofern"
+          ]
+        },
+        {
+          "id": "wort-m",
+          "label": "m",
+          "paragraphs": [
+            "beschwert"
+          ]
+        },
+        {
+          "id": "wort-n",
+          "label": "n",
+          "paragraphs": [
+            "gewöhnt"
+          ]
+        },
+        {
+          "id": "wort-o",
+          "label": "o",
+          "paragraphs": [
+            "beitragen"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 31,
+          "type": "zuordnung",
+          "prompt": "Lücke 31",
+          "answer": "k",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "Einer aktuellen Studie"
+            }
+          ],
+          "explanation": "Boşluktan önce Dativ bir isim grubu var: „Einer aktuellen Studie“ (güncel bir araştırma). Bilginin kaynağını, isimden sonra gelen ve Dativ alan edat „zufolge“ (-e göre) verir: „Einer aktuellen Studie zufolge landet …“ (güncel bir araştırmaya göre … çöpe gidiyor). „wegen“ (yüzünden) de isimden sonra gelebilir ve „einer Studie“ Genitiv olarak da okunabilir; ama anlam bozulur: Yiyecekler bir araştırma yüzünden çöpe gitmiyor, araştırma yalnızca bunu tespit ediyor."
+        },
+        {
+          "number": 32,
+          "type": "zuordnung",
+          "prompt": "Lücke 32",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "dabei die Größe der Portionen spielt"
+            }
+          ],
+          "explanation": "„eine Rolle spielen“ sabit bir isim-fiil kalıbıdır: bir şeyde rol oynamak, etkili olmak. Soru biçiminde: „Welche Rolle … die Größe der Portionen spielt“ (porsiyon büyüklüğünün bunda nasıl bir rol oynadığı). „Bedeutung“ (önem) anlamca yakın görünür, ama „spielen“ fiiliyle kullanılmaz; doğru kalıp „Bedeutung haben“dır. Ayrıca „Wert“ eril bir isimdir („Welchen Wert“ olurdu) ve „spielen“ ile değil, „legen auf“ ile kullanılır."
+        },
+        {
+          "number": 33,
+          "type": "zuordnung",
+          "prompt": "Lücke 33",
+          "answer": "f",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "es die Beilagen nur noch in kleinen Mengen ausgebe"
+            }
+          ],
+          "explanation": "Yan cümle, mutfak ekibinin atık miktarını nasıl yarıya indirdiğini, yani yöntemi anlatıyor: garnitürleri artık küçük miktarlarda vererek. Yöntem bildiren ve fiili sona atan bağlaç „indem“ (-erek, -arak) olur. „obwohl“ (-e rağmen) uymaz, çünkü küçük porsiyonlar atığın azalmasının sebebidir, engeli değil. „sofern“ (şartıyla) da uymaz: Atığın yarıya inmesi bir yıl içinde gerçekleşmiş bir olgudur, bir şarta bağlanamaz; küçük porsiyonlar bir şart değil, ekibin uyguladığı yöntemdir."
+        },
+        {
+          "number": 34,
+          "type": "zuordnung",
+          "prompt": "Lücke 34",
+          "answer": "n",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "Die Gäste hätten sich schnell an die kleineren Portionen"
+            }
+          ],
+          "explanation": "„sich an etwas gewöhnen“ (bir şeye alışmak) dönüşlü bir fiildir ve „an“ + Akkusativ ister: „hätten sich schnell an die kleineren Portionen gewöhnt“ (misafirler küçük porsiyonlara çabuk alışmış). „hätten“ ile Perfekt kurulduğu için cümle sonunda Partizip II gerekir. „beschwert“ da dönüşlü bir Partizip II'dir, ama „sich beschweren“ „über“ edatıyla kurulur („sich über etwas beschweren“); „an die Portionen beschwert“ yanlış Almancadır."
+        },
+        {
+          "number": 35,
+          "type": "zuordnung",
+          "prompt": "Lücke 35",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "räumte die Hoteldirektorin ein"
+            }
+          ],
+          "explanation": "Önceki cümle dijital terazinin avantajlarını sayıyor (alışveriş çok daha ucuzlamış). Bu cümle ise bir kısıtlama getiriyor: Pahalı alet ancak iki yıl sonra kendini amorti etmiş; „räumte … ein“ (kabul etti) de bunun bir itiraf olduğunu gösterir. Kısıtlama/karşıtlık bildiren zarf „allerdings“ (ancak, gerçi) olur. „bislang“ (şimdiye kadar) „erst nach zwei Jahren bezahlt gemacht“ (ancak iki yıl sonra amorti oldu) ile anlamsızdır. „zwar“ ise arkasından „aber/doch“ ister; cümlede böyle bir devam yoktur."
+        },
+        {
+          "number": 36,
+          "type": "zuordnung",
+          "prompt": "Lücke 36",
+          "answer": "i",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "legten mehrere Rednerinnen und Redner auf die Schulung der Beschäftigten"
+            }
+          ],
+          "explanation": "Boşluktan sonra fiil „legten“ ve edat „auf“ geliyor: „Wert auf etwas legen“ (bir şeye önem vermek) sabit bir kalıptır. „Besonders viel Wert legten … auf die Schulung der Beschäftigten“ (birçok konuşmacı çalışanların eğitimine özellikle çok önem verdi). „Bedeutung“ (önem) anlamca yakın görünür, ama „legen auf“ ile kullanılmaz; „Bedeutung haben“ veya „einer Sache Bedeutung beimessen“ denir. „Rolle“ yalnızca „eine Rolle spielen“ kalıbında geçer ve sayılabilen bir isim olduğu için „viel Rolle“ de olmaz."
+        },
+        {
+          "number": 37,
+          "type": "zuordnung",
+          "prompt": "Lücke 37",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "Je besser das Küchenpersonal über Lagerung und Resteverwertung Bescheid wisse"
+            }
+          ],
+          "explanation": "Cümle „Je besser …“ ile başlıyor; bu iki parçalı bağlacın ikinci parçası „desto“dur: „Je besser …, desto weniger Lebensmittel müssten entsorgt werden“ (personel ne kadar iyi bilirse, o kadar az yiyecek atılır). „desto“dan sonra karşılaştırma sıfatı („weniger“) ve çekimli fiil gelir. „zwar“ da iki parçalı bir bağlacın parçasıdır, ama „zwar … aber“ biçiminde; „je“ ile kullanılmaz."
+        },
+        {
+          "number": 38,
+          "type": "zuordnung",
+          "prompt": "Lücke 38",
+          "answer": "l",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "die Behälter sauber seien und die Gäste auf die nötige Kühlung hingewiesen würden"
+            }
+          ],
+          "explanation": "Artanları götürmenin hukuken sorunsuz olması iki şarta bağlanıyor: kapların temiz olması ve misafirlere soğutma gereğinin söylenmesi. Şart bildiren ve fiili sona atan bağlaç „sofern“ (-mesi şartıyla, eğer) olur. „indem“ (-erek) bir kişinin yaptığı bir eylemi yöntem olarak ister; kapların temiz olması, sorunsuzluğu sağlayan bir yöntem değil, bir şarttır. „obwohl“ (-e rağmen) mantıksızdır, çünkü temiz kaplar sorunsuzluğun ön koşuludur, karşıtı değil."
+        },
+        {
+          "number": 39,
+          "type": "zuordnung",
+          "prompt": "Lücke 39",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "Viele Betriebe bieten diese Möglichkeit"
+            }
+          ],
+          "explanation": "Ankete göre birçok işletme bu imkânı şu ana kadar aktif olarak sunmuyor. Şimdiye kadarki durumu anlatan zarf „bislang“ (şimdiye kadar, şu ana kadar) olur: „bieten diese Möglichkeit bislang jedoch nicht aktiv an“. Karşıtlık zaten „jedoch“ ile kurulmuş; „allerdings“ ikinci bir karşıtlık zarfı olurdu ve „allerdings jedoch“ yan yana kullanılmaz. „zwar“ ise arkasından „aber“ ister."
+        },
+        {
+          "number": 40,
+          "type": "zuordnung",
+          "prompt": "Lücke 40",
+          "answer": "o",
+          "evidence": [
+            {
+              "text": "bericht",
+              "quote": "dass die Abfallmenge in der Gastronomie bis 2030 um die Hälfte sinkt"
+            }
+          ],
+          "explanation": "„zu etwas beitragen“ (bir şeye katkıda bulunmak) „zu“ edatıyla kurulur; burada „dazu …, dass“ biçiminde: „und so dazu beitragen, dass die Abfallmenge … sinkt“ (atık miktarının düşmesine katkıda bulunmak). „will“ modal fiiliyle ikinci fiil de mastar olmalıdır („will … unterstützen und … beitragen“). Listede başka mastar yoktur; „gewöhnt“ ve „beschwert“ Partizip II biçimindedir ve „wollen“dan sonra kullanılamaz."
+        }
+      ]
+    }
+  ]
+}

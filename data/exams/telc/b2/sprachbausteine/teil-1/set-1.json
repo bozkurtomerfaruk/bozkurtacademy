@@ -1,0 +1,216 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b2",
+  "section": "sprachbausteine",
+  "teil": 1,
+  "set": "set-1",
+  "title": "Eine Reklamation",
+  "minutes": 12,
+  "context": "Eine Kundin beschwert sich per E-Mail bei einem Versandhändler über eine verspätete und beschädigte Lieferung.",
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort (a, b oder c) in die Lücken 21–30 passt.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "brief",
+          "title": "Reklamation einer Bestellung",
+          "byline": "E-Mail von Lioba Wolkenhauer an den Kundenservice der Regalhaus Quernberg GmbH",
+          "paragraphs": [
+            "Betreff: Reklamation – Bestellung Nr. 48-2297 vom 12. September",
+            "Sehr geehrte Damen und Herren,",
+            "am 12. September habe ich in Ihrem Onlineshop zwei Bücherregale aus Eichenholz bestellt, {{21}} Lieferung Sie mir innerhalb von fünf Werktagen zugesagt hatten. Tatsächlich trafen die Regale erst am 6. Oktober bei mir ein, obwohl ich mir bereits für den 18. September einen Tag Urlaub genommen hatte, um die Sendung entgegenzunehmen. In der Zwischenzeit habe ich {{22}} eine Versandbestätigung noch eine Sendungsnummer erhalten, und das {{23}} mehrfacher Nachfrage bei Ihrer Kundenhotline.",
+            "Beim Auspacken musste ich zudem feststellen, dass an einem der beiden Regale die Seitenwand gesprungen ist und zwei der {{24}} Schrauben fehlen. Der Karton war lediglich mit etwas Packpapier gefüllt. Wäre die Ware sorgfältiger verpackt gewesen, {{25}} dieser Schaden sicher nicht entstanden.",
+            "Ich bestehe daher {{26}} einer kostenlosen Ersatzlieferung der beschädigten Seitenwand und der fehlenden Schrauben. Das defekte Teil kann gern von Ihrem Paketdienst bei mir abgeholt {{27}}. Angesichts der langen Wartezeit {{28}} ich es außerdem angemessen, wenn Sie mir die Versandkosten in Höhe von 19,90 Euro erstatten würden. Fotos des Schadens sowie eine Kopie der Rechnung habe ich dieser E-Mail beigefügt.",
+            "Sollte ich bis zum 31. Oktober keine Antwort von Ihnen erhalten haben, behalte ich {{29}} vor, vom Kaufvertrag {{30}}.",
+            "Mit freundlichen Grüßen",
+            "Lioba Wolkenhauer"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 21,
+          "type": "abc",
+          "prompt": "Lücke 21",
+          "options": {
+            "a": "denen",
+            "b": "die",
+            "c": "deren"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Lieferung Sie mir innerhalb von fünf Werktagen zugesagt hatten"
+            }
+          ],
+          "explanation": "Boşluk bir ilgi cümlesi başlatıyor (fiil sonda: „zugesagt hatten“) ve „Lieferung“ (teslimat) kimin teslimatı olduğunu söyleyen bir iyelik ister: Teslimatı söz verilen şey „zwei Bücherregale“dir (iki kitaplık). Gönderme yapılan isim çoğul olduğu için ilgi zamirinin Genitiv biçimi „deren“ olur: „zwei Bücherregale, deren Lieferung …“ (teslimatı … olan iki kitaplık). a) denen yanlış: „denen“ çoğul Dativ'dir; „denen Lieferung“ bir iyelik bildirmez ve „Lieferung“ artikelsiz kalır. b) die yanlış: „die“ cümlede özne veya nesne olurdu, ama nesne zaten „Lieferung“dur; „die Lieferung Sie … zugesagt hatten“ yapı olarak kurulamaz."
+        },
+        {
+          "number": 22,
+          "type": "abc",
+          "prompt": "Lücke 22",
+          "options": {
+            "a": "weder",
+            "b": "entweder",
+            "c": "sowohl"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "eine Versandbestätigung noch eine Sendungsnummer erhalten"
+            }
+          ],
+          "explanation": "Boşluktan sonra gelen „noch“ iki parçalı bir bağlacın ikinci parçasıdır: „weder … noch“ (ne … ne de). Lioba ne gönderim onayı ne de takip numarası almış: „weder eine Versandbestätigung noch eine Sendungsnummer“. b) entweder yanlış: „entweder“ yalnızca „oder“ ile kullanılır („entweder … oder“ = ya … ya da). c) sowohl yanlış: „sowohl“ yalnızca „als auch“ ile kullanılır („sowohl … als auch“ = hem … hem de); „noch“ ile birleşmez."
+        },
+        {
+          "number": 23,
+          "type": "abc",
+          "prompt": "Lücke 23",
+          "options": {
+            "a": "wegen",
+            "b": "trotz",
+            "c": "statt"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "mehrfacher Nachfrage bei Ihrer Kundenhotline"
+            }
+          ],
+          "explanation": "Boşluktan sonra Genitiv bir isim grubu var: „mehrfacher Nachfrage“ (birçok kez sorma). Lioba müşteri hattını defalarca aramış, ama yine de hiçbir bilgi almamış; bu bir karşıtlıktır. Karşıtlık bildiren Genitiv edatı „trotz“ (-e rağmen) olur: „und das trotz mehrfacher Nachfrage“. a) wegen yanlış: „wegen“ (yüzünden) sebep bildirir; sormak, bilgi alamamanın sebebi değildir. c) statt yanlış: „statt“ (yerine) bir şeyin yerine başka bir şey olduğunu söyler; oysa Lioba gerçekten sormuştur, sorması bir şeyin yerine geçmez."
+        },
+        {
+          "number": 24,
+          "type": "abc",
+          "prompt": "Lücke 24",
+          "options": {
+            "a": "mitgeliefert",
+            "b": "mitgelieferte",
+            "c": "mitgelieferten"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Schrauben fehlen"
+            }
+          ],
+          "explanation": "Boşluk „zwei der … Schrauben“ grubunda bir sıfat ister: „der“ burada çoğul Genitiv artikelidir (vidaların ikisi). Belirli artikelden sonra çoğulda sıfat her hâlde „-en“ eki alır: „zwei der mitgelieferten Schrauben“ (birlikte gönderilen vidalardan ikisi). a) mitgeliefert yanlış: Eksiz biçim yalnızca yüklem olarak kullanılır („die Schrauben wurden mitgeliefert“), isimden önce kullanılamaz. b) mitgelieferte yanlış: „-e“ eki artikelsiz çoğulda veya tekil Nominativ/Akkusativ'de olur; „der“den sonra çoğul Genitiv'de „-en“ gerekir."
+        },
+        {
+          "number": 25,
+          "type": "abc",
+          "prompt": "Lücke 25",
+          "options": {
+            "a": "wäre",
+            "b": "hätte",
+            "c": "würde"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "dieser Schaden sicher nicht entstanden"
+            }
+          ],
+          "explanation": "Cümle gerçekleşmemiş bir koşulu anlatıyor: „Wäre die Ware sorgfältiger verpackt gewesen“ (ürün daha özenli paketlenmiş olsaydı). Ana cümle de geçmişte gerçek dışı bir sonucu anlatır, bu yüzden Konjunktiv II geçmiş zaman gerekir: yardımcı fiil + Partizip II „entstanden“. „entstehen“ (oluşmak) bir hâl değişimi fiilidir ve Perfekt'i „sein“ ile kurar („ist entstanden“); Konjunktiv II'de bu „wäre … entstanden“ olur. b) hätte yanlış: „entstehen“ „haben“ ile çekilmez. c) würde yanlış: „würde“ mastarla kullanılır („würde entstehen“), Partizip II „entstanden“ ile geçmiş zaman kurmaz."
+        },
+        {
+          "number": 26,
+          "type": "abc",
+          "prompt": "Lücke 26",
+          "options": {
+            "a": "in",
+            "b": "auf",
+            "c": "an"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "einer kostenlosen Ersatzlieferung der beschädigten Seitenwand"
+            }
+          ],
+          "explanation": "Fiil „bestehen“ burada bir talepte ısrar etmek anlamındadır ve sabit olarak „auf“ edatını alır: „auf etwas bestehen“ (bir şeyde ısrar etmek). Lioba ücretsiz yedek parça gönderilmesinde ısrar ediyor: „Ich bestehe daher auf einer kostenlosen Ersatzlieferung“. a) in yanlış: „bestehen in“ „bir şeyden ibaret olmak“ demektir ve öznesi bir şeydir (ör. „Das Problem besteht in …“); özne „ich“ olunca anlamsızdır. c) an yanlış: „bestehen“ „an“ edatıyla kullanılmaz."
+        },
+        {
+          "number": 27,
+          "type": "abc",
+          "prompt": "Lücke 27",
+          "options": {
+            "a": "worden",
+            "b": "werden",
+            "c": "wird"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Das defekte Teil kann gern von Ihrem Paketdienst bei mir abgeholt"
+            }
+          ],
+          "explanation": "Cümle edilgendir: Parçayı kargo şirketi alacak („von Ihrem Paketdienst“). Kip fiili „kann“ ile edilgen mastar kurulur: Partizip II + „werden“ → „kann … abgeholt werden“ (alınabilir). a) worden yanlış: „worden“ yalnızca „sein“ ile geçmiş zaman edilgeninde kullanılır („ist abgeholt worden“); kip fiilinden sonra „abgeholt worden“ tek başına eksik kalır. c) wird yanlış: Cümlede çekimli fiil zaten „kann“dır; ikinci bir çekimli fiil („wird“) sona gelemez."
+        },
+        {
+          "number": 28,
+          "type": "abc",
+          "prompt": "Lücke 28",
+          "options": {
+            "a": "findet",
+            "b": "fänden",
+            "c": "fände"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "ich es außerdem angemessen"
+            }
+          ],
+          "explanation": "Boşluktan sonra özne „ich“ geliyor: „… ich es außerdem angemessen, wenn Sie mir die Versandkosten … erstatten würden“. „wenn … würden“ kibar bir dilek bildirdiği için ana cümlede de Konjunktiv II kullanılır; „finden“in „ich“ için Konjunktiv II biçimi „fände“dir: „fände ich es angemessen“ (uygun bulurdum). a) findet yanlış: „er/sie/es“ veya „ihr“ biçimidir; özne „ich“. b) fänden yanlış: „wir/sie/Sie“ biçimidir; fiil „ich“ öznesine uymalıdır."
+        },
+        {
+          "number": 29,
+          "type": "abc",
+          "prompt": "Lücke 29",
+          "options": {
+            "a": "mir",
+            "b": "mich",
+            "c": "sich"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "vom Kaufvertrag"
+            }
+          ],
+          "explanation": "„sich etwas vorbehalten“ (bir hakkı saklı tutmak) dönüşlü bir fiildir ve dönüşlü zamiri Dativ'dedir, çünkü Akkusativ nesne ayrıca vardır (burada mastar cümlesi: „vom Kaufvertrag zurückzutreten“). Özne „ich“ olduğu için Dativ dönüşlü zamir „mir“ olur: „behalte ich mir vor“ (… hakkımı saklı tutarım). b) mich yanlış: Akkusativ biçimidir; bu fiilde dönüşlü zamir Dativ'dir. c) sich yanlış: „sich“ yalnızca „er/sie/es/Sie/sie“ öznesiyle kullanılır; burada özne „ich“."
+        },
+        {
+          "number": 30,
+          "type": "abc",
+          "prompt": "Lücke 30",
+          "options": {
+            "a": "zurückzutreten",
+            "b": "zurücktreten",
+            "c": "zurückgetreten"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Sollte ich bis zum 31. Oktober keine Antwort von Ihnen erhalten haben"
+            }
+          ],
+          "explanation": "„sich vorbehalten“ fiilinden sonra virgülle ayrılmış bir mastar cümlesi gelir ve bu cümle „zu“lu mastar ister: „behalte ich mir vor, vom Kaufvertrag zurückzutreten“ (satış sözleşmesinden cayma hakkımı saklı tutarım). Ayrılabilen fiillerde „zu“ önek ile kökün arasına girer: „zurück-zu-treten“. b) zurücktreten yanlış: „zu“suz mastar yalnızca kip fiilleriyle olur („ich kann zurücktreten“); burada kip fiili yok. c) zurückgetreten yanlış: Partizip II yardımcı fiil („bin zurückgetreten“) ister; virgülden sonra tek başına mastar cümlesi kuramaz."
+        }
+      ]
+    }
+  ]
+}

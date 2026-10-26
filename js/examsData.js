@@ -741,12 +741,48 @@ window.BA_EXAMS = {
               { title: null, exercises: [] }, // Teil 3
             ] },
             { id: 'lesen', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
-              { title: null, exercises: [] }, // Teil 3
+              {
+                title: { tr: 'Metni yeniden kurma · cümle yerleştirme', de: 'Textrekonstruktion · Sätze einsetzen', en: 'Text reconstruction · inserting sentences' },
+                exercises: [
+                  { set: 'set-1', title: 'Wie Zugvögel ihren Weg finden' },
+                  { set: 'set-2', title: 'Die Geschichte der Kartografie' },
+                  { set: 'set-3', title: 'Wie Vulkane das Klima beeinflussen' },
+                  { set: 'set-4', title: 'Die Wissenschaft des Humors' },
+                  { set: 'set-5', title: 'Korallenriffe im Wandel' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: 'Seçici okuma · eşleştirme', de: 'Selektives Lesen · Zuordnung', en: 'Selective reading · matching' },
+                exercises: [
+                  { set: 'set-1', title: 'Forschungsprojekte im Überblick' },
+                  { set: 'set-2', title: 'Neue Studiengänge vorgestellt' },
+                  { set: 'set-3', title: 'Sommerschulen im Ausland' },
+                  { set: 'set-4', title: 'Neue Promotionsprogramme' },
+                  { set: 'set-5', title: 'Angebote für Studienanfänger' },
+                ]
+              }, // Teil 2
+              {
+                title: { tr: 'Akademik metin · richtig/falsch/nicht im Text', de: 'Wissenschaftlicher Text · richtig/falsch/nicht im Text', en: 'Academic text · true/false/not in text' },
+                exercises: [
+                  { set: 'set-1', title: 'Macht Musizieren klüger?' },
+                  { set: 'set-2', title: 'Wiesen unter Wasser' },
+                  { set: 'set-3', title: 'Lassen sich Erdbeben vorhersagen?' },
+                  { set: 'set-4', title: 'Kooperation im Tierreich' },
+                  { set: 'set-5', title: 'Die Psychologie des Wartens' },
+                ]
+              }, // Teil 3
             ] },
             { id: 'sprachbausteine', teile: [
-              { title: null, exercises: [] }, // Teil 1
+              {
+                title: { tr: 'Boşluklu akademik metin · a/b/c/d', de: 'Wissenschaftlicher Lückentext · a/b/c/d', en: 'Academic gap text · a/b/c/d' },
+                exercises: [
+                  { set: 'set-1', title: 'Die Entstehung der Universitäten' },
+                  { set: 'set-2', title: 'Plagiate in der Wissenschaft' },
+                  { set: 'set-3', title: 'Die Geschichte der Statistik' },
+                  { set: 'set-4', title: 'Peer-Review in der Kritik' },
+                  { set: 'set-5', title: 'Die Entwicklung des Mikroskops' },
+                ]
+              }, // Teil 1
             ] },
             { id: 'schreiben', teile: [
               { title: null, exercises: [] }, // Teil 1

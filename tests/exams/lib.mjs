@@ -14,10 +14,10 @@ export const B = process.env.BASE || 'http://localhost:8765/index.html';
 export const shotDir = process.env.S || fs.mkdtempSync(path.join(os.tmpdir(), 'exam-shots-'));
 export const shot = name => path.join(shotDir, name);
 
-export const FOLDER = { a1: 'goethe/a1', b1: 'goethe/b1', a2: 'goethe/a2', b2: 'goethe/b2', c1: 'goethe/c1', dtz: 'dtz/a2-b1', tdp: 'testdaf/papier', tdd: 'testdaf/digital', tb1: 'telc/b1', tb1s: 'telc/b1', ta1: 'telc/a1', ta2: 'telc/a2', tb2: 'telc/b2', tb2s: 'telc/b2' };
-export const ROUTE = { a1: 'goethe/a1', b1: 'goethe/b1', a2: 'goethe/a2', b2: 'goethe/b2', c1: 'goethe/c1', dtz: 'dtz', tdp: 'testdaf/papier', tdd: 'testdaf/digital', tb1: 'telc/b1', tb1s: 'telc/b1', ta1: 'telc/a1', ta2: 'telc/a2', tb2: 'telc/b2', tb2s: 'telc/b2' };
+export const FOLDER = { a1: 'goethe/a1', b1: 'goethe/b1', a2: 'goethe/a2', b2: 'goethe/b2', c1: 'goethe/c1', dtz: 'dtz/a2-b1', tdp: 'testdaf/papier', tdd: 'testdaf/digital', tb1: 'telc/b1', tb1s: 'telc/b1', ta1: 'telc/a1', ta2: 'telc/a2', tb2: 'telc/b2', tb2s: 'telc/b2', tc1: 'telc/c1', tc1s: 'telc/c1' };
+export const ROUTE = { a1: 'goethe/a1', b1: 'goethe/b1', a2: 'goethe/a2', b2: 'goethe/b2', c1: 'goethe/c1', dtz: 'dtz', tdp: 'testdaf/papier', tdd: 'testdaf/digital', tb1: 'telc/b1', tb1s: 'telc/b1', ta1: 'telc/a1', ta2: 'telc/a2', tb2: 'telc/b2', tb2s: 'telc/b2', tc1: 'telc/c1', tc1s: 'telc/c1' };
 // Section of each key; Lesen unless listed (telc Sprachbausteine are separate keys).
-export const SECTION = { tb1s: 'sprachbausteine', tb2s: 'sprachbausteine' };
+export const SECTION = { tb1s: 'sprachbausteine', tb2s: 'sprachbausteine', tc1s: 'sprachbausteine' };
 export const sectionOf = level => SECTION[level] || 'lesen';
 const dir = (level, t) => `data/exams/${FOLDER[level]}/${sectionOf(level)}/teil-${t}`;
 // Highest Teil number with a folder; a Teil without sets (e.g. a skipped TestDaF Aufgabe) has 0 sets.

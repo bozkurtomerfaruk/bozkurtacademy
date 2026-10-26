@@ -1,0 +1,136 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "c1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-5",
+  "title": "Angebote für Studienanfänger",
+  "minutes": 15,
+  "context": "In der Begrüßungsbroschüre einer Universität werden vier Angebote vorgestellt, die sich an Studierende im ersten Semester richten.",
+  "instructions": "Lesen Sie die Texte a–d und die Aussagen 7–12. Zu welchem Text passt welche Aussage? Die Texte können mehrmals gewählt werden.",
+  "groups": [
+    {
+      "layout": "comments",
+      "none": false,
+      "texts": [
+        {
+          "id": "vorkurs",
+          "label": "a",
+          "title": "Vorkurs Mathematik",
+          "paragraphs": [
+            "Gerade in den ersten Semestern der Natur- und Ingenieurwissenschaften scheitern viele Studierende weniger an neuen Inhalten als an Lücken im Schulstoff. Der Vorkurs Mathematik soll diese schließen, bevor die Vorlesungen beginnen. Er wird in zwei Varianten angeboten: als dreiwöchiger Präsenzkurs im September mit täglichen Übungen in Kleingruppen oder als betreuter Onlinekurs, der ab Anfang August freigeschaltet ist und im eigenen Tempo bearbeitet werden kann. Am Anfang steht ein freiwilliger Einstufungstest, der anzeigt, welche Themen man wiederholen sollte. Das Ergebnis sehen nur die Teilnehmenden selbst; es wird weder an die Fakultäten weitergeleitet noch auf das Studium angerechnet. Beide Varianten sind kostenfrei, für den Präsenzkurs ist allerdings eine Anmeldung bis Ende Juli erforderlich. Organisiert wird der Vorkurs vom Mathematischen Institut unter der Leitung von Dr. Baldur Engelhorst."
+          ]
+        },
+        {
+          "id": "lotsen",
+          "label": "b",
+          "title": "Studienlotsen",
+          "paragraphs": [
+            "Wie stelle ich meinen Stundenplan zusammen? Welche Lehrveranstaltungen sind tatsächlich Pflicht? Gerade in den ersten Wochen sind es oft solche praktischen Kleinigkeiten, die verunsichern. Antworten darauf geben im Programm „Studienlotsen“ Studierende höherer Semester. Wer sich anmeldet, bekommt eine Lotsin oder einen Lotsen aus dem eigenen Studiengang zugeteilt; auf Wunsch achtet die Koordinatorin Ilvana Kasperczyk zusätzlich darauf, dass beide auf einem ähnlichen Weg an die Hochschule gekommen sind, etwa nach einer Berufsausbildung. Die Tandems treffen sich im ersten Semester mindestens viermal, Ort und Zeit legen sie selbst fest. Die Lotsinnen und Lotsen werden vorab in einem zweitägigen Workshop geschult und erhalten für ihren Einsatz eine kleine Aufwandsentschädigung. Zum Semesterende lädt das Programm alle Tandems zu einem gemeinsamen Abschlussfest ein. Eine Anmeldung ist bis zwei Wochen nach Vorlesungsbeginn möglich."
+          ]
+        },
+        {
+          "id": "international",
+          "label": "c",
+          "title": "Studienstart international",
+          "paragraphs": [
+            "Wer seine Hochschulzugangsberechtigung im Ausland erworben hat, kennt die Gepflogenheiten deutscher Universitäten oft nur vom Hörensagen. Das einsemestrige Programm „Studienstart international“ richtet sich an Erstsemester mit ausländischem Schulabschluss, die bereits für ein Fach zugelassen sind. Neben Kursen zur Wissenschaftssprache Deutsch und zum Aufbau von Hausarbeiten besuchen die Teilnehmenden ein reguläres Einführungsmodul ihres Fachs, das von einem zusätzlichen Tutorium begleitet wird. Wird die Modulprüfung bestanden, kann sie auf Antrag in den Studienverlauf übernommen werden; die Sprachkurse hingegen bleiben ohne Leistungspunkte. Einige Vorlesungen stehen zusätzlich als Aufzeichnung zur Verfügung, ersetzen aber nicht die Anwesenheit im Tutorium. Zum Abschluss des Semesters führt jede Teilnehmerin und jeder Teilnehmer ein Einzelgespräch mit einer Studienberaterin oder einem Studienberater, in dem ein Plan für die folgenden Semester erarbeitet wird. Die Teilnahme ist kostenfrei; das Programm ist auf 40 Plätze begrenzt."
+          ]
+        },
+        {
+          "id": "wohnen",
+          "label": "d",
+          "title": "Wohnen für Hilfe",
+          "paragraphs": [
+            "Bezahlbarer Wohnraum ist zu Semesterbeginn knapp. Das Projekt „Wohnen für Hilfe“, das das Studierendenwerk gemeinsam mit dem städtischen Seniorenbüro betreibt, vermittelt Studierende an ältere Menschen, die in ihrer Wohnung ein Zimmer frei haben. Statt Miete zu zahlen, unterstützen die Studierenden ihre Gastgeberinnen und Gastgeber im Alltag – beim Einkaufen, im Garten oder bei der Behördenpost. Als Faustregel gilt eine Stunde Hilfe pro Monat und Quadratmeter Wohnfläche; lediglich die Nebenkosten werden anteilig bezahlt. Pflegerische Tätigkeiten sind ausdrücklich ausgeschlossen. Vor der Vermittlung führen Mitarbeitende des Projekts mit beiden Seiten ein Gespräch, um Erwartungen und Gewohnheiten zu klären; anschließend wird ein schriftlicher Vertrag geschlossen. Da die Zahl der Zimmer begrenzt ist, empfiehlt es sich, sich bereits nach Erhalt des Zulassungsbescheids zu melden."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 7,
+          "type": "zuordnung",
+          "prompt": "Bei einem Angebot lässt sich unter bestimmten Bedingungen eine dort erbrachte Leistung in das reguläre Studium einbringen.",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "international",
+              "quote": "Wird die Modulprüfung bestanden, kann sie auf Antrag in den Studienverlauf übernommen werden"
+            }
+          ],
+          "explanation": "Metin c'de giriş modülünün sınavı „bestanden“ (geçilmiş) olursa „auf Antrag“ (başvuru üzerine) normal öğrenime aktarılabiliyor; „unter bestimmten Bedingungen“ bu iki koşula karşılık gelir. Dil kursları ise kredisiz kalıyor. Metin a'da da bir test var, ama sonucu „weder an die Fakultäten weitergeleitet noch auf das Studium angerechnet“ (ne fakültelere iletiliyor ne de öğrenime sayılıyor). Metin b'de lotsenler yalnızca küçük bir ücret alıyor; kredi veya öğrenime sayılan bir başarıdan söz edilmiyor."
+        },
+        {
+          "number": 8,
+          "type": "zuordnung",
+          "prompt": "Bei einem Angebot kann man zwischen einer Teilnahme vor Ort und einer digitalen Form wählen.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "vorkurs",
+              "quote": "Er wird in zwei Varianten angeboten"
+            }
+          ],
+          "explanation": "Metin a'daki ön kurs „in zwei Varianten“ (iki biçimde) sunuluyor: eylülde üç haftalık „Präsenzkurs“ (yüz yüze kurs) veya ağustostan itibaren kendi hızında yapılan „betreuter Onlinekurs“ (rehberli çevrim içi kurs). Metin c'de de bazı dersler kayıt olarak izlenebiliyor, ama bunlar „ersetzen aber nicht die Anwesenheit im Tutorium“ (öğretici derse katılımın yerini tutmuyor); yani gerçek bir seçim yok. Metin b'de buluşma yeri ve zamanı serbest, ama dijital bir seçenek anılmıyor."
+        },
+        {
+          "number": 9,
+          "type": "zuordnung",
+          "prompt": "Bei einem Angebot werden Neue gezielt mit erfahreneren Personen aus demselben Fach zusammengebracht.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "lotsen",
+              "quote": "bekommt eine Lotsin oder einen Lotsen aus dem eigenen Studiengang zugeteilt"
+            }
+          ],
+          "explanation": "Metin b'de yeni öğrencilere üst dönem öğrencilerinden „aus dem eigenen Studiengang“ (kendi bölümünden) bir rehber („Lotsin/Lotse“) atanıyor; istenirse benzer bir yoldan üniversiteye gelmiş olmaları da gözetiliyor. Metin d'de de bir eşleştirme var: öğrenciler yaşlı insanlarla, önceden yapılan bir „Gespräch“ (görüşme) sonrasında bir araya getiriliyor; ama ölçüt aynı bölüm değil, „Erwartungen und Gewohnheiten“ (beklentiler ve alışkanlıklar). Metin c'deki „Tutorium“ ise kimin yürüttüğü belirtilmeyen ek bir derstir, kişisel bir eşleştirme değildir."
+        },
+        {
+          "number": 10,
+          "type": "zuordnung",
+          "prompt": "Bei einem Angebot wird eine übliche Zahlung durch tatkräftige Unterstützung ersetzt.",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "wohnen",
+              "quote": "Statt Miete zu zahlen, unterstützen die Studierenden ihre Gastgeberinnen und Gastgeber im Alltag"
+            }
+          ],
+          "explanation": "Metin d'de öğrenciler „statt Miete zu zahlen“ (kira ödemek yerine) ev sahiplerine günlük işlerde yardım ediyor; kira, ifadedeki „eine übliche Zahlung“ (alışılmış bir ödeme) yerine geçen yardımla karşılanıyor; yalnızca „die Nebenkosten“ (yan giderler) kısmen ödeniyor. Metin b'de lotsenler yardım ediyor ve karşılığında küçük bir „Aufwandsentschädigung“ (emek ücreti) alıyor; ama burada bir ödemenin yerine geçen yardım yok, tersine yardım için para veriliyor. Metin a ve c ücretsiz; ödenecek bir şey yok."
+        },
+        {
+          "number": 11,
+          "type": "zuordnung",
+          "prompt": "Bei einem Angebot erfahren die Teilnehmenden, wo sie fachlich stehen, ohne dass dies Folgen für ihr Studium hat.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "vorkurs",
+              "quote": "Am Anfang steht ein freiwilliger Einstufungstest, der anzeigt, welche Themen man wiederholen sollte"
+            },
+            {
+              "text": "vorkurs",
+              "quote": "Das Ergebnis sehen nur die Teilnehmenden selbst"
+            }
+          ],
+          "explanation": "Metin a'daki isteğe bağlı „Einstufungstest“ (seviye testi), hangi konuların tekrar edilmesi gerektiğini gösteriyor; yani katılımcı bilgi düzeyini öğreniyor. Sonucu „nur die Teilnehmenden selbst“ (yalnızca katılımcıların kendisi) görüyor; fakültelere iletilmiyor ve öğrenime sayılmıyor, yani sonuçları yok. Metin c'de de bir sınav var, ama oradaki modül sınavı geçilirse öğrenime aktarılabiliyor, yani bir etkisi olabilir. Metin c'nin sonundaki görüşme ise bilgi düzeyini değil, sonraki dönemlerin planını konu alıyor."
+        },
+        {
+          "number": 12,
+          "type": "zuordnung",
+          "prompt": "Ein Angebot endet mit einer individuellen Beratung, in der der weitere Studienverlauf geplant wird.",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "international",
+              "quote": "in dem ein Plan für die folgenden Semester erarbeitet wird"
+            }
+          ],
+          "explanation": "Metin c'de dönemin sonunda her katılımcı bir öğrenim danışmanıyla „Einzelgespräch“ (bire bir görüşme) yapıyor ve bu görüşmede „ein Plan für die folgenden Semester“ (sonraki dönemler için bir plan) hazırlanıyor. Metin b de dönem sonunda bir etkinlikle bitiyor, ama bu tüm ikililerin katıldığı bir „Abschlussfest“ (kapanış şenliği), kişisel bir danışmanlık değil. Metin d'deki görüşme ise eşleştirmeden önce yapılıyor ve konusu öğrenim değil, birlikte yaşamaya ilişkin beklentiler."
+        }
+      ]
+    }
+  ]
+}

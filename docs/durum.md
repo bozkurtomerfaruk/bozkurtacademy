@@ -11,8 +11,8 @@
 - Aşama 4, telc B1: bitti, main'e birleştirildi (49db897).
 - Aşama 5, telc A1: bitti, main'e birleştirildi (7c9acb2).
 - Aşama 6, telc A2: bitti, main'e birleştirildi (cfb9104).
-- Aşama 7, telc B2: bitti, main'e birleştirildi.
-- Aşama 8, telc C1 Hochschule: pilot onaylandı, set 3–5 yazılıyor; dal `claude/telc-c1h`, çalışma ağacı /tmp/wt-tc1.
+- Aşama 7, telc B2: bitti, main'e birleştirildi (3e625fc).
+- Aşama 8, telc C1 Hochschule: bitti, main'e birleştirildi. **8 aşamanın hepsi tamamlandı.**
 
 ### telc Deutsch A1 (Start Deutsch 1) Lesen: format tablosu
 Start Deutsch 1, Goethe-Institut ile telc'in ortak geliştirdiği sınav; telc A1 ile Goethe A1'in formatı aynı (✔). Bu yüzden tablo Goethe A1 tablomuzla aynı; içerik tamamen yeni (Goethe A1'in hiçbir konusu, durumu, adı veya tabelası tekrar edilmiyor).
@@ -71,6 +71,28 @@ Kaynak: hazırlık sitelerinin ve telc ipucu belgelerinin özetleri (arama sonu�
 - Teil 3'teki x tuzakları her sette farklı: zorunlu meslek eğitimi, grup büyüklüğü, sözleşme süresi, erişilebilirlik, cihaz şartı.
 
 **Düzeltmediğim notlar:** Vejetaryen kantin ve „ne istersen öde“ tiyatrosu Goethe B2'deki bazı konulara yakın (farklı bakış açısıyla). Sprachbausteine Teil 1 doğası gereği çoğunlukla bağlamdan bağımsız dil bilgisi.
+
+### telc Deutsch C1 Hochschule Leseverstehen + Sprachbausteine: format tablosu
+Kaynak: telc'in C1 Hochschule el kitabının özeti (arama sonuçları; resmî PDF'e ağdan erişilemedi). ✔ = kaynaklarda doğrulandı, ≈ = tahmin veya bizim kararımız. Leseverstehen ve Sprachbausteine birlikte 90 dk; bölüm süreleri yalnızca öneri (✔).
+
+| Bölüm | Metin | Görev | Soru | Süre |
+|---|---|---|---|---|
+| Lesen Teil 1 · Textrekonstruktion | Akademik/popüler bilim metni ~450–550 kelime (≈) | Metinden çıkarılmış 6 cümle yerine konur (✔); 8 cümleden 2'si artar (≈) | 1–6 (✔) | ~20 dk (≈) |
+| Lesen Teil 2 · Selektives Lesen | 4 kısa metin a–d (≈) | 6 ifade metinlere eşleşir (✔); bir metin birden çok kez seçilebilir (≈) | 7–12 (✔) | ~15 dk (≈) |
+| Lesen Teil 3 · Detail- und Globalverstehen | Uzun akademik metin ~750–900 kelime (≈) | 11 ifade richtig/falsch/nicht im Text + 1 ana fikir sorusu (✔), ana fikir a–d (≈) | 13–24 (✔ sayı) | ~30 dk (≈) |
+| Sprachbausteine | Tek metin (✔), ~380–450 kelime (≈) | 22 boşluk, her biri 4 seçenek, dil bilgisi ve sözcük (✔) | 25–46 (≈ numara) | ~25 dk (≈) |
+
+- **Oynatıcı eklentisi:** yeni soru tipi `richtig-falsch-nichts` (Richtig / Falsch / Nicht im Text).
+
+**Aşama 8 bitti: Lesen 3 Teil + Sprachbausteine, her biri 5 set (20 set, 230 soru).**
+- Kör çözüm pilotta 91/92 (SB set-2 boşluk 29'daki ikinci okunabilen seçenek değiştirildi, yeniden çözümde doğru), set 3–5'te 157/157 (değişen pilot set de dahil).
+- İnceleyiciler Goethe'deki konuları tekrar eden iki pilot metni (erteleme, can sıkıntısı) tamamen yeniden yazdı, ikinci okunabilen Sprachbausteine seçeneklerini değiştirdi („über die“, „allerdings“, „dessen“, „als“, „schauen“ …), uydurma kelimeli çeldiricileri gerçek kelimelerle değiştirdi, tarihsel ve bilimsel ifadeleri yumuşattı (Tambora, Pinatubo, Graunt 1662, Leeuwenhoek, Abbe).
+- Başlık değişiklikleri: „Der Wert der Langeweile“ → „Wiesen unter Wasser“, „Prokrastination unter Studierenden“ → „Macht Musizieren klüger?“.
+
+**Düzeltmediğim notlar:**
+- Teil 3'teki ana fikir sorusunda (24) çeldiriciler aşırı genellemelerle elenebiliyor.
+- Teil 2 set-3 („Sommerschulen im Ausland“) TestDaF'taki yaz okulu ilanlarıyla aynı metin türünde; konular farklı.
+- Bazı popüler bilim arka planları gerçek araştırma alanlarını anımsatıyor (yön bulma deneyleri, lagün mercanları); veriler ve adlar uydurma.
 
 ### telc Deutsch B1 (Zertifikat Deutsch) Leseverstehen + Sprachbausteine: format tablosu
 Kaynak: telc'in yayımladığı sınav yapısı ve örnek sınav açıklamaları (arama sonuçları). ✔ = kaynaklarda doğrulandı, ≈ = tahmin veya bizim kararımız. Lesen ve Sprachbausteine birlikte 90 dk (✔).

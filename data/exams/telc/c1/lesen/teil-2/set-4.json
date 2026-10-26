@@ -1,0 +1,132 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "c1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-4",
+  "title": "Neue Promotionsprogramme",
+  "minutes": 15,
+  "context": "Auf der Website einer Graduiertenakademie werden vier strukturierte Promotionsprogramme vorgestellt, die im kommenden Jahr starten.",
+  "instructions": "Lesen Sie die Texte a–d und die Aussagen 7–12. Zu welchem Text passt welche Aussage? Die Texte können mehrmals gewählt werden.",
+  "groups": [
+    {
+      "layout": "comments",
+      "none": false,
+      "texts": [
+        {
+          "id": "wildtier",
+          "label": "a",
+          "title": "Wildtiergesundheit im Klimawandel",
+          "paragraphs": [
+            "Mildere Winter begünstigen die Ausbreitung von Zecken und Parasiten in Regionen, in denen sie bislang kaum vorkamen – mit noch weitgehend unbekannten Folgen für die Wildtierbestände. Das neue Graduiertenkolleg unter der Sprecherschaft der Veterinärmedizinerin Prof. Thordis Lüttgerding vergibt sechs Promotionsstellen, deren Themen bereits feststehen; untersucht werden unter anderem Rothirsche, Feldhasen und Fledermäuse. Da sich Proben vieler Arten nur zu bestimmten Jahreszeiten gewinnen lassen und ein misslungener Feldsommer sonst kaum aufzuholen wäre, sind die Stellen auf vier statt der sonst üblichen drei Jahre angelegt. Die Feldarbeit erfolgt in enger Abstimmung mit den Forstämtern der Region; ein Führerschein ist daher Einstellungsvoraussetzung. Begleitend belegen alle Promovierenden Kurse in Statistik und Wissenschaftskommunikation. Bewerben können sich Absolventinnen und Absolventen der Veterinärmedizin, der Biologie oder der Ökologie."
+          ]
+        },
+        {
+          "id": "werkstoff",
+          "label": "b",
+          "title": "Werkstoffe für die Kreislaufwirtschaft",
+          "paragraphs": [
+            "Viele moderne Verbundwerkstoffe sind leicht und belastbar, lassen sich aber am Ende ihrer Lebensdauer kaum wieder in ihre Bestandteile zerlegen. Das Promotionsprogramm, das die Chemie und der Maschinenbau gemeinsam tragen, will Materialien entwickeln, die sich nach dem Gebrauch sortenrein trennen lassen. Ungewöhnlich ist der Einstieg: Alle zwölf Promovierenden beginnen gemeinsam im Oktober und arbeiten im ersten Semester nacheinander in drei verschiedenen Laboren, bevor sie sich auf ein Thema festlegen. Jede Arbeit wird anschließend von einem Tandem betreut, in dem jeweils eine Person aus der Chemie und eine aus dem Maschinenbau vertreten ist. Mehrere Recyclingunternehmen stellen dem Programm Materialproben aus ihrer Praxis zur Verfügung. Workshops zu Patentrecht und Unternehmensgründung werden angeboten, die Teilnahme daran ist freiwillig. Sprecher des Programms ist Prof. Detmar Kühnhold."
+          ]
+        },
+        {
+          "id": "uebersetzen",
+          "label": "c",
+          "title": "Übersetzen in der Frühen Neuzeit",
+          "paragraphs": [
+            "Wer übertrug im 16. und 17. Jahrhundert naturkundliche und medizinische Werke ins Deutsche, und wie veränderten sich die Texte dabei? Das geisteswissenschaftliche Promotionsprogramm unter Leitung von Prof. Edeltraud Wennekamp geht diesen Fragen anhand der Altbestände der Universitätsbibliothek nach, von denen ein Teil bereits digitalisiert ist. Anders als in vielen strukturierten Programmen schlagen die Bewerberinnen und Bewerber ihr Dissertationsvorhaben selbst vor; einzureichen ist ein Exposé von etwa acht Seiten. Ausdrücklich angesprochen sind auch Personen, die bereits im Berufsleben stehen, etwa als Übersetzerinnen oder im Verlagswesen: Die Promotion kann in Teilzeit absolviert werden und erstreckt sich dann über bis zu sechs Jahre. Betreut wird jede Arbeit von einer Professorin oder einem Professor des Fachs; hinzu kommt ein Mentoring durch Promovierende, die sich bereits in der Abschlussphase befinden."
+          ]
+        },
+        {
+          "id": "robotik",
+          "label": "d",
+          "title": "Robotik im Operationssaal",
+          "paragraphs": [
+            "Roboterassistierte Eingriffe gehören in vielen Kliniken längst zum Alltag, doch das Zusammenspiel von Operationsteam und Maschine ist bislang kaum systematisch erforscht. Das Promotionsprogramm, dessen Sprecherin Prof. Annelore Fricksen ist, verbindet Informatik, Medizintechnik und Arbeitspsychologie; untersucht wird unter anderem, wie sich Zeitdruck und Ermüdung im Team auf die Bedienung der Systeme auswirken. Alle Promovierenden verbringen mindestens vier Monate bei einem der beteiligten Medizintechnikhersteller, wo sie an der Entwicklung von Bedienoberflächen mitwirken. Im ersten Jahr ist zudem ein Kurs zur Medizinethik und zum Recht der Medizinprodukte verpflichtend, da die entwickelten Systeme später an Patientinnen und Patienten zum Einsatz kommen sollen. Die Stellen sind auf drei Jahre befristet; bei Elternzeit oder der Pflege von Angehörigen verlängert sich der Vertrag entsprechend. Bewerbungen sind bis zum 15. März möglich, die Auswahlgespräche finden im April statt."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 7,
+          "type": "zuordnung",
+          "prompt": "In einem Programm müssen die Promovierenden eine Zeit lang außerhalb der Hochschule in einem Unternehmen tätig sein.",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "robotik",
+              "quote": "Alle Promovierenden verbringen mindestens vier Monate bei einem der beteiligten Medizintechnikhersteller"
+            }
+          ],
+          "explanation": "Metin d'de bütün doktora öğrencileri en az dört ayı „bei einem der beteiligten Medizintechnikhersteller“ (programa katılan tıbbi teknoloji üreticilerinden birinde) geçiriyor ve orada kullanıcı arayüzlerinin geliştirilmesinde çalışıyor; „alle“ bunun herkes için geçerli olduğunu gösterir. Metin b'de de şirketler var, ama geri dönüşüm şirketleri yalnızca „Materialproben … zur Verfügung“ (malzeme numuneleri sağlıyor); öğrenciler orada çalışmıyor. Metin a'daki saha çalışması üniversite dışında, ama bir şirkette değil; „Forstämter“ (orman idareleri) ile koordineli yürütülüyor."
+        },
+        {
+          "number": 8,
+          "type": "zuordnung",
+          "prompt": "Jede Doktorarbeit wird in einem Programm von zwei Personen unterschiedlicher fachlicher Herkunft begleitet.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "werkstoff",
+              "quote": "in dem jeweils eine Person aus der Chemie und eine aus dem Maschinenbau vertreten ist"
+            }
+          ],
+          "explanation": "Metin b'de her tez bir „Tandem“ (ikili) tarafından yönetiliyor: bu ikilide „eine Person aus der Chemie und eine aus dem Maschinenbau“ (biri kimyadan, biri makine mühendisliğinden) bulunuyor; yani iki farklı alandan iki kişi. Metin c'de de iki tür destek var: bir profesör ve ayrıca son aşamadaki doktora öğrencilerinden „Mentoring“; ama profesör „des Fachs“ (aynı alandan) ve mentorlar da aynı programın öğrencileri, farklı bir disiplinden söz edilmiyor. Metin d programı birkaç alanı birleştiriyor, ama tezlerin kaç kişi tarafından yönetildiği yazmıyor."
+        },
+        {
+          "number": 9,
+          "type": "zuordnung",
+          "prompt": "Ein Programm sieht wegen der jahreszeitlich gebundenen Datenerhebung längere Vertragslaufzeiten vor.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "wildtier",
+              "quote": "sind die Stellen auf vier statt der sonst üblichen drei Jahre angelegt"
+            }
+          ],
+          "explanation": "Metin a'da birçok türden numune „nur zu bestimmten Jahreszeiten“ (yalnızca belirli mevsimlerde) alınabildiği ve başarısız bir saha yazı telafi edilemeyeceği için kadrolar „auf vier statt der sonst üblichen drei Jahre“ (alışılmış üç yerine dört yıl) olarak planlanmış. Metin d'de de sözleşme uzayabiliyor, ama sebep „Elternzeit oder der Pflege von Angehörigen“ (ebeveyn izni veya yakınların bakımı), veri toplama değil. Metin c'de altı yıl yarı zamanlı doktora içindir, mevsimle ilgisi yoktur."
+        },
+        {
+          "number": 10,
+          "type": "zuordnung",
+          "prompt": "Ein Programm erlaubt es, die Promotion mit geringerem zeitlichem Aufwand über einen längeren Zeitraum zu verfolgen.",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "uebersetzen",
+              "quote": "Die Promotion kann in Teilzeit absolviert werden und erstreckt sich dann über bis zu sechs Jahre"
+            }
+          ],
+          "explanation": "Metin c'de doktora „in Teilzeit“ (yarı zamanlı) yapılabiliyor ve bu durumda „bis zu sechs Jahre“ (altı yıla kadar) sürüyor; bu, özellikle çalışan kişilere yönelik. Metin a'da da süre daha uzun (dört yıl), ama bu tam zamanlı kadrolar için ve sebebi mevsimlik saha çalışması; daha az çalışma saati söz konusu değil. Metin d'deki uzatma da yalnızca ebeveyn izni veya bakım durumunda geçerli."
+        },
+        {
+          "number": 11,
+          "type": "zuordnung",
+          "prompt": "In einem Programm ist die Auseinandersetzung mit ethischen und rechtlichen Fragen für alle vorgeschrieben.",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "robotik",
+              "quote": "Im ersten Jahr ist zudem ein Kurs zur Medizinethik und zum Recht der Medizinprodukte verpflichtend"
+            }
+          ],
+          "explanation": "Metin d'de ilk yıl „ein Kurs zur Medizinethik und zum Recht der Medizinprodukte“ (tıp etiği ve tıbbi ürünler hukuku dersi) „verpflichtend“ (zorunlu); sebebi geliştirilen sistemlerin hastalarda kullanılacak olması. Metin b'de patent hukuku atölyeleri var, ama „die Teilnahme daran ist freiwillig“ (katılım isteğe bağlı). Metin a'da dersler herkes için zorunlu („alle Promovierenden“), ama konuları istatistik ve bilim iletişimi, etik veya hukuk değil."
+        },
+        {
+          "number": 12,
+          "type": "zuordnung",
+          "prompt": "In einem Programm entscheiden die Promovierenden erst nach einer Phase des Ausprobierens, woran sie forschen.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "werkstoff",
+              "quote": "arbeiten im ersten Semester nacheinander in drei verschiedenen Laboren, bevor sie sich auf ein Thema festlegen"
+            }
+          ],
+          "explanation": "Metin b'de doktora öğrencileri ilk dönemde art arda üç farklı laboratuvarda çalışıyor ve konularını ancak bundan sonra seçiyor: „bevor sie sich auf ein Thema festlegen“ (bir konuya karar vermeden önce). Metin a'da ise altı kadronun konuları „bereits feststehen“ (önceden belirlenmiş). Metin c'de adaylar tez konusunu başvuru sırasında kendileri öneriyor ve bir „Exposé“ (araştırma taslağı) sunuyor; yani konu en baştan belli, deneme aşaması yok."
+        }
+      ]
+    }
+  ]
+}

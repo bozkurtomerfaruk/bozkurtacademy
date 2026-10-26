@@ -1,0 +1,450 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "c1",
+  "section": "sprachbausteine",
+  "teil": 1,
+  "set": "set-3",
+  "title": "Die Geschichte der Statistik",
+  "minutes": 25,
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort (a, b, c oder d) in die Lücken 25–46 passt.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "text",
+          "title": "Die Geschichte der Statistik",
+          "byline": "Aus einem Begleittext zur Vorlesung „Einführung in die empirische Sozialforschung“",
+          "paragraphs": [
+            "Statistische Angaben begegnen uns heute {{25}} Schritt und Tritt – in Wahlprognosen ebenso wie in Arzneimittelstudien oder Verkehrsplanungen. Weniger bekannt ist, dass der Begriff ursprünglich kaum etwas mit Zahlen zu tun hatte. Er ist – über das Neulateinische – vom lateinischen „status“ {{26}}, das „Zustand“, später auch „Staat“ bedeutete. Als der Göttinger Professor Gottfried Achenwall um die Mitte des 18. Jahrhunderts von „Statistik“ sprach, meinte er eine Staatenkunde: die möglichst vollständige Beschreibung aller für das Regieren {{27}} Kenntnisse über ein Land, von der Verfassung bis zu Handel und Gewerbe. Diese Göttinger Schule arbeitete überwiegend beschreibend und in Worten, {{28}} in England schon fast ein Jahrhundert zuvor ein ganz anderer Zugang entstanden war.",
+            "Der Londoner Kurzwarenhändler John Graunt hatte in einer 1662 erschienenen Schrift die wöchentlichen Tauf- und Sterbelisten seiner Stadt systematisch {{29}} und war dabei auf Regelmäßigkeiten gestoßen, mit denen niemand gerechnet hatte: So kamen Jahr für Jahr etwas mehr Jungen als Mädchen zur Welt. Einzelne Todesfälle ließen sich nicht vorhersagen; über viele Fälle hinweg {{30}} sich jedoch erstaunlich stabile Verhältnisse. Diese „politische Arithmetik“, wie Graunts Freund William Petty das neue Vorgehen nannte, verfolgte von Beginn an praktische Zwecke: Regierende sollten {{31}} verlässlicher Zahlen über Bevölkerung, Steuern und Heeresstärke entscheiden können.",
+            "Im deutschen Sprachraum {{32}} der preußische Geistliche Johann Peter Süßmilch diesen Ansatz auf. In seinem 1741 erschienenen Werk „Die göttliche Ordnung“ deutete er die Beständigkeit der Geburten- und Sterbeziffern als Beweis {{33}} das Wirken des Schöpfers. Im 19. Jahrhundert ging der belgische Astronom Adolphe Quetelet noch weiter. Er {{34}} Verfahren, die ursprünglich zur Auswertung astronomischer Messfehler entwickelt worden waren, auf menschliche Merkmale wie die Körpergröße und konstruierte daraus den „mittleren Menschen“, {{35}} er als eine Art Idealtyp seiner Gesellschaft ansah. Kritiker wandten ein, er {{36}} die Vielfalt individueller Lebensläufe auf einen bloßen Mittelwert.",
+            "Der Gedanke, gesellschaftliche Vorgänge ließen sich in Zahlen fassen, setzte sich {{37}} solcher Einwände durch: Im Laufe des 19. Jahrhunderts wurden in vielen europäischen Staaten statistische Ämter {{38}}, die regelmäßig Volkszählungen durchführten. Zugleich {{39}} sich der Schwerpunkt allmählich von der bloßen Beschreibung hin zur Schlussfolgerung. Im 20. Jahrhundert entstanden Verfahren, mit {{40}} sich aus einer Stichprobe Aussagen über eine ganze Bevölkerung gewinnen lassen – freilich stets {{41}} einer angebbaren Unsicherheit. Damit {{42}} die Statistik zu einem Instrument, auf das heute kaum eine empirische Wissenschaft verzichten kann.",
+            "Ihre Geschichte lehrt {{43}} auch, dass Zahlen nie für sich sprechen. Welche Merkmale erhoben und wie sie gedeutet wurden, hing stets {{44}} den Fragen und Überzeugungen der jeweiligen Zeit ab: Süßmilch {{45}} in ähnlichen Regelmäßigkeiten Gottes Plan, Quetelet ein gesellschaftliches Ideal. Wer Statistiken liest, sollte daher nicht nur nach den Ergebnissen fragen, sondern auch nach den Annahmen, {{46}} sie beruhen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 25,
+          "type": "abc",
+          "prompt": "Lücke 25",
+          "options": {
+            "a": "bei",
+            "b": "in",
+            "c": "auf",
+            "d": "unter"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Schritt und Tritt"
+            }
+          ],
+          "explanation": "Sabit kalıp: „auf Schritt und Tritt“ (her adımda, her yerde). İstatistiksel bilgilerle seçim tahminlerinde, ilaç araştırmalarında, trafik planlamasında, yani her yerde karşılaşıyoruz. Bu deyim yalnızca „auf“ edatıyla kurulur; a) bei, b) in ve d) unter ile „Schritt und Tritt“ bir anlam oluşturmaz."
+        },
+        {
+          "number": 26,
+          "type": "abc",
+          "prompt": "Lücke 26",
+          "options": {
+            "a": "abgeleitet",
+            "b": "abgelenkt",
+            "c": "abgeleistet",
+            "d": "abgelegt"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "vom lateinischen „status“"
+            }
+          ],
+          "explanation": "Anlam boşluğu: Bir kelimenin başka bir kelimeden türediği „von etwas abgeleitet sein“ ile söylenir: „Statistik“ kelimesi Latince „status“tan „türetilmiştir“. Yapı „ist … abgeleitet“ (durum edilgeni). b) abgelenkt (dikkati dağıtılmış, saptırılmış), c) abgeleistet (yerine getirilmiş, ör. askerlik) ve d) abgelegt (bırakılmış, çıkarılmış; sınav için „verilmiş“) aynı biçimde ama kelime kökeni anlamı vermez."
+        },
+        {
+          "number": 27,
+          "type": "abc",
+          "prompt": "Lücke 27",
+          "options": {
+            "a": "wichtiger",
+            "b": "wichtige",
+            "c": "wichtigem",
+            "d": "wichtigen"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Kenntnisse über ein Land"
+            }
+          ],
+          "explanation": "Sıfat çekimi: „die Beschreibung aller … Kenntnisse“ – „aller“ burada çoğul Genitiv'dir (bütün bilgilerin tanımı) ve „der/dieser“ gibi çekimli bir belirleyicidir. Böyle bir belirleyiciden sonra sıfat zayıf çekimle „-en“ alır: „aller für das Regieren wichtigen Kenntnisse“. a) -er artikelsiz çoğul Genitiv içindir; burada „aller“ çekimi zaten taşıyor. b) -e Nominativ/Akkusativ çoğul, c) -em eril/nötr Dativ'dir."
+        },
+        {
+          "number": 28,
+          "type": "abc",
+          "prompt": "Lücke 28",
+          "options": {
+            "a": "damit",
+            "b": "während",
+            "c": "sodass",
+            "d": "indem"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "ein ganz anderer Zugang entstanden war"
+            }
+          ],
+          "explanation": "Anlam/bağlaç boşluğu: İki yaklaşım karşılaştırılıyor: Göttingen okulu „beschreibend und in Worten“ (betimleyerek, sözcüklerle) çalışıyordu; İngiltere'de ise „ein ganz anderer Zugang“ (bambaşka bir yaklaşım) vardı. Karşıtlık bildiren „während“ (oysa, -diği hâlde) gerekir. a) damit amaç bildirir; Göttingen'in çalışma biçiminin amacı İngiltere'deki gelişme değildir. c) sodass sonuç bildirir; İngiltere'deki yaklaşım „zuvor“ (daha önce) doğmuştu, sonuç olamaz. d) indem bir eylemin nasıl yapıldığını anlatır; burada yöntem değil, iki ayrı ülke karşılaştırılıyor."
+        },
+        {
+          "number": 29,
+          "type": "abc",
+          "prompt": "Lücke 29",
+          "options": {
+            "a": "ausgelassen",
+            "b": "ausgestellt",
+            "c": "ausgeliefert",
+            "d": "ausgewertet"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "die wöchentlichen Tauf- und Sterbelisten seiner Stadt systematisch"
+            }
+          ],
+          "explanation": "Anlam boşluğu: Graunt listeleri „systematisch“ (sistemli biçimde) işledi ve „dabei“ (bunu yaparken) beklenmedik düzenliliklere rastladı. Düzenlilik bulmak için verileri „değerlendirmek, analiz etmek“ gerekir: „Listen auswerten“. a) ausgelassen (atlamış, dışarıda bırakmış) ile bir şey keşfedilemez. b) ausgestellt (sergilemiş; belge düzenlemiş) ve c) ausgeliefert (teslim etmiş) analiz anlamı taşımaz; „dabei … gestoßen“ ile kurulan keşif mantığına uymaz."
+        },
+        {
+          "number": 30,
+          "type": "abc",
+          "prompt": "Lücke 30",
+          "options": {
+            "a": "zeigt",
+            "b": "zeigte",
+            "c": "zeigten",
+            "d": "gezeigt"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "erstaunlich stabile Verhältnisse"
+            }
+          ],
+          "explanation": "Fiil biçimi: Cümlenin öznesi „erstaunlich stabile Verhältnisse“dir (çoğul); „über viele Fälle hinweg“ (çok sayıda vakaya bakıldığında) özne değil, edatlı bir ifadedir. Anlatım geçmiş zamanda („ließen sich nicht vorhersagen“), bu yüzden çoğul Präteritum „zeigten“ gerekir: „über viele Fälle hinweg zeigten sich … Verhältnisse“. a) zeigt ve b) zeigte tekildir. d) gezeigt yardımcı fiil olmadan çekimli fiilin yerini tutamaz."
+        },
+        {
+          "number": 31,
+          "type": "abc",
+          "prompt": "Lücke 31",
+          "options": {
+            "a": "anhand",
+            "b": "anstatt",
+            "c": "ungeachtet",
+            "d": "unweit"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "über Bevölkerung, Steuern und Heeresstärke entscheiden können"
+            }
+          ],
+          "explanation": "Anlam boşluğu: „Politik aritmetiğin“ pratik amacı, yöneticilerin güvenilir sayılara „dayanarak“ karar verebilmesiydi: „anhand + Genitiv“ (… -e bakarak, … temelinde). b) anstatt (yerine) ve c) ungeachtet (… -e aldırmadan, rağmen) da Genitiv alır ve dilbilgisi olarak uyar, ama amacı tersine çevirir: Sayıların yerine ya da sayıları hiç dikkate almadan karar vermek, sayı toplamayı „praktische Zwecke“ için yapan politik aritmetiğin anlatılan amacına aykırıdır. d) unweit (… -in yakınında) yer bildirir ve karar vermekle bağlanamaz."
+        },
+        {
+          "number": 32,
+          "type": "abc",
+          "prompt": "Lücke 32",
+          "options": {
+            "a": "schlug",
+            "b": "griff",
+            "c": "legte",
+            "d": "stieß"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "diesen Ansatz auf"
+            }
+          ],
+          "explanation": "Ayrılabilen fiil: Cümle sonundaki „auf“ fiilin parçasıdır. Bir düşünceyi/yaklaşımı „ele alıp sürdürmek“ „einen Ansatz aufgreifen“ ile söylenir: Süßmilch, Graunt'un yaklaşımını Almanca konuşulan bölgede devraldı. a) aufschlagen (kitap açmak, çarpmak), c) auflegen (üstüne koymak; telefonu kapatmak) ve d) aufstoßen (itip açmak) bir yaklaşımla birlikte kullanılmaz."
+        },
+        {
+          "number": 33,
+          "type": "abc",
+          "prompt": "Lücke 33",
+          "options": {
+            "a": "um",
+            "b": "aus",
+            "c": "für",
+            "d": "nach"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "das Wirken des Schöpfers"
+            }
+          ],
+          "explanation": "Edat ve hâl: „Beweis für + Akkusativ“ (bir şeyin kanıtı). Süßmilch sayıların sabitliğini Yaratıcı'nın etkisinin „kanıtı“ olarak yorumladı; arkadaki „das Wirken“ Akkusativ'tir. b) aus ve d) nach Dativ ister („dem Wirken“) ve „Beweis“ ile bu anlamda kullanılmaz. a) um Akkusativ alır, ama „Beweis um“ diye bir kullanım yoktur."
+        },
+        {
+          "number": 34,
+          "type": "abc",
+          "prompt": "Lücke 34",
+          "options": {
+            "a": "übersetzte",
+            "b": "überließ",
+            "c": "überwies",
+            "d": "übertrug"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "menschliche Merkmale wie die Körpergröße"
+            }
+          ],
+          "explanation": "Fiil ve edat: Cümlenin sonunda „auf menschliche Merkmale“ var; „etwas auf etwas übertragen“ bir yöntemi başka bir alana aktarmak, uygulamak demektir. Quetelet astronomideki ölçüm hatası yöntemlerini boy gibi insan özelliklerine „aktardı“. a) übersetzte (çevirdi) „in eine Sprache“ ile kurulur. b) „überlassen“ (bırakmak) bir kişiye Dativ ile yapılır („jemandem etwas überlassen“). c) „überweisen“ para havalesi ya da hastayı sevk etmek için kullanılır („Geld auf ein Konto überweisen“); bir yöntemle anlam vermez."
+        },
+        {
+          "number": 35,
+          "type": "abc",
+          "prompt": "Lücke 35",
+          "options": {
+            "a": "den",
+            "b": "welchem",
+            "c": "dessen",
+            "d": "der"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "er als eine Art Idealtyp seiner Gesellschaft ansah"
+            }
+          ],
+          "explanation": "İlgi zamiri: Gönderme yapılan isim „den mittleren Menschen“dir (eril). İlgi cümlesinin öznesi „er“ (Quetelet), fiil „jemanden als etwas ansehen“ Akkusativ nesne ister: „den“. b) welchem Dativ'dir; „ansehen“ Dativ almaz. d) der Nominativ olurdu, ama yan cümlenin öznesi zaten „er“dir. c) dessen iyelik bildirir ve ardından bir isim ister („dessen Größe“)."
+        },
+        {
+          "number": 36,
+          "type": "abc",
+          "prompt": "Lücke 36",
+          "options": {
+            "a": "reduzierten",
+            "b": "reduziere",
+            "c": "reduzierst",
+            "d": "reduziertet"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "die Vielfalt individueller Lebensläufe"
+            }
+          ],
+          "explanation": "Dolaylı anlatım: „Kritiker wandten ein, er …“ – eleştirmenlerin sözü aktarılıyor, bu yüzden Konjunktiv I kullanılır. Özne „er“ (3. tekil): „er reduziere“ (… -e indirgiyormuş). a) reduzierten çoğuldur (sie/wir). c) reduzierst 2. tekil (du), d) reduziertet 2. çoğul (ihr) biçimidir; hiçbiri „er“ öznesine uymaz."
+        },
+        {
+          "number": 37,
+          "type": "abc",
+          "prompt": "Lücke 37",
+          "options": {
+            "a": "wegen",
+            "b": "infolge",
+            "c": "dank",
+            "d": "trotz"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Einwände durch"
+            }
+          ],
+          "explanation": "Anlam/edat boşluğu: Önceki paragrafta eleştiri („Kritiker wandten ein“) vardı; yine de toplumsal olayların sayılarla ifade edilebileceği düşüncesi kabul gördü („setzte sich … durch“) ve istatistik daireleri kuruldu. Bu bir karşıtlıktır: „trotz solcher Einwände“ (bu itirazlara rağmen). a) wegen (yüzünden), b) infolge (sonucunda) ve c) dank (sayesinde) itirazları kabulün nedeni yapar; eleştiri bir düşüncenin yaygınlaşmasına neden olmaz."
+        },
+        {
+          "number": 38,
+          "type": "abc",
+          "prompt": "Lücke 38",
+          "options": {
+            "a": "gegründet",
+            "b": "ergründet",
+            "c": "verkündet",
+            "d": "entzündet"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "die regelmäßig Volkszählungen durchführten"
+            }
+          ],
+          "explanation": "Anlam boşluğu: Düşüncenin yerleştiğinin kanıtı olarak birçok devlette düzenli nüfus sayımı yapan istatistik daireleri „kuruldu“: „Ämter wurden gegründet“ (edilgen). b) ergründet (derinlemesine araştırılmış), c) verkündet (ilan edilmiş) ve d) entzündet (tutuşturulmuş; iltihaplanmış) dilbilgisi olarak aynı biçimdedir ama bir kurum için anlam vermez."
+        },
+        {
+          "number": 39,
+          "type": "abc",
+          "prompt": "Lücke 39",
+          "options": {
+            "a": "verkehrte",
+            "b": "verhielt",
+            "c": "verlagerte",
+            "d": "vertagte"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "von der bloßen Beschreibung hin zur Schlussfolgerung"
+            }
+          ],
+          "explanation": "Anlam boşluğu: Ağırlık noktası bir yerden („von … “) başka bir yere („hin zur …“) „kaydı“: „der Schwerpunkt verlagerte sich“. a) „sich verkehren“ ancak „ins Gegenteil“ gibi bir ifadeyle (tersine dönmek) kullanılır. b) „sich verhalten“ (davranmak) yön bildirmez. d) „sich vertagen“ (oturuma ara vermek, ertelemek) bir topluluk için kullanılır; „von … hin zu“ ile bir değişimi anlatamaz."
+        },
+        {
+          "number": 40,
+          "type": "abc",
+          "prompt": "Lücke 40",
+          "options": {
+            "a": "deren",
+            "b": "denen",
+            "c": "dem",
+            "d": "welcher"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "aus einer Stichprobe Aussagen über eine ganze Bevölkerung gewinnen lassen"
+            }
+          ],
+          "explanation": "İlgi zamiri: Gönderme yapılan isim „Verfahren“dir ve burada çoğuldur („entstanden Verfahren“ – fiil çoğul). „mit“ Dativ ister; çoğul Dativ ilgi zamiri „denen“: „Verfahren, mit denen …“ (… yöntemler ki onlarla). c) dem tekildir (eril/nötr). d) welcher tekil dişil Dativ'dir. a) deren iyelik bildirir ve ardından bir isim gerekirdi („mit deren Hilfe“); burada „sich“ geliyor."
+        },
+        {
+          "number": 41,
+          "type": "abc",
+          "prompt": "Lücke 41",
+          "options": {
+            "a": "mit",
+            "b": "durch",
+            "c": "gegen",
+            "d": "seit"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "angebbaren Unsicherheit"
+            }
+          ],
+          "explanation": "Edat ve hâl: Örneklemden yapılan çıkarımlar her zaman belirtilebilir bir belirsizlik payı „ile“ birlikte gelir: „mit einer angebbaren Unsicherheit“. „einer“ Dativ'dir ve „mit“ Dativ ister. b) durch ve c) gegen Akkusativ ister („eine …“); hâl uyuşmaz. d) seit Dativ alır ama zaman bildirir; „belirsizlikten beri“ anlamsızdır."
+        },
+        {
+          "number": 42,
+          "type": "abc",
+          "prompt": "Lücke 42",
+          "options": {
+            "a": "machte",
+            "b": "entstand",
+            "c": "wurde",
+            "d": "bildete"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "zu einem Instrument, auf das heute"
+            }
+          ],
+          "explanation": "Fiil ve yapı: „zu etwas werden“ (… hâline gelmek). Özne „die Statistik“, cümlede başka nesne yok: „Damit wurde die Statistik zu einem Instrument“. a) „machen … zu“ geçişlidir; birinin bir şeyi bir şeye dönüştürmesi için hem özne hem nesne gerekir („X machte die Statistik zu …“), burada ikinci öğe eksik. b) „entstehen“ „zu“ ile kurulmaz. d) „bilden“ de nesne ister; „zu“ ile özne-dönüşüm anlamı vermez."
+        },
+        {
+          "number": 43,
+          "type": "abc",
+          "prompt": "Lücke 43",
+          "options": {
+            "a": "nämlich",
+            "b": "keineswegs",
+            "c": "erstmals",
+            "d": "jedoch"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "dass Zahlen nie für sich sprechen"
+            }
+          ],
+          "explanation": "Anlam/bağlaç boşluğu: Önceki cümle olumlu bir sonuç bildiriyor: İstatistik bugün vazgeçilmez bir araçtır. Bu cümle ise bir uyarı ekliyor: Sayılar hiçbir zaman kendi başına konuşmaz. Olumluya karşı bir sınırlama getirildiği için „jedoch“ (ancak) gerekir. a) nämlich (çünkü, zira) bir gerekçe bildirir; sayıların kendi başına konuşmaması, istatistiğin vazgeçilmez olmasının gerekçesi değildir. b) keineswegs (hiç de … değil) dersi olumsuzlar; oysa sonraki cümle tam bu dersi örneklerle açıklıyor (Süßmilch Tanrı'nın planını, Quetelet bir toplumsal ideal gördü). c) erstmals (ilk kez) bir zaman bildirir; istatistiğin tarihinin bir dersi „ilk kez“ öğretmesi bağlamda anlam vermez."
+        },
+        {
+          "number": 44,
+          "type": "abc",
+          "prompt": "Lücke 44",
+          "options": {
+            "a": "vor",
+            "b": "von",
+            "c": "hinter",
+            "d": "neben"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "den Fragen und Überzeugungen der jeweiligen Zeit ab"
+            }
+          ],
+          "explanation": "Ayrılabilen fiil ve edat: Cümle sonundaki „ab“ ile fiil „abhängen“dir; bu fiil her zaman „von + Dativ“ ile kurulur: „hing stets von den Fragen … ab“ (… -e bağlıydı). a) vor, c) hinter ve d) neben yer bildiren edatlardır ve „abhängen“ ile bu anlamda birleşmez."
+        },
+        {
+          "number": 45,
+          "type": "abc",
+          "prompt": "Lücke 45",
+          "options": {
+            "a": "blickte",
+            "b": "hielt",
+            "c": "sah",
+            "d": "betrachtete"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "in ähnlichen Regelmäßigkeiten Gottes Plan"
+            }
+          ],
+          "explanation": "Fiil yapısı: „etwas in etwas sehen“ (bir şeyde bir şey görmek, onu öyle yorumlamak). Süßmilch düzenliliklerde Tanrı'nın planını „gördü“; ikinci bölümde fiil tekrar edilmeden aynı yapı sürüyor („Quetelet [sah darin] ein gesellschaftliches Ideal“). a) blicken Akkusativ nesne almaz („in etwas blicken“ = bir şeyin içine bakmak). b) „halten“ bu anlamda „für“ ile kurulur („etwas für etwas halten“), d) „betrachten“ de „als“ ile kurulur („etwas als … betrachten“); ikisi de „in … etwas“ yapısıyla kullanılmaz."
+        },
+        {
+          "number": 46,
+          "type": "abc",
+          "prompt": "Lücke 46",
+          "options": {
+            "a": "auf denen",
+            "b": "auf die",
+            "c": "von denen",
+            "d": "an denen"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Wer Statistiken liest, sollte daher"
+            }
+          ],
+          "explanation": "Edat ve hâl: „beruhen auf + Dativ“ (… -e dayanmak). Sonuçların dayandığı varsayımlar: „die Annahmen, auf denen sie beruhen“ – „Annahmen“ çoğul, Dativ ilgi zamiri „denen“. b) auf die Akkusativ'tir; „beruhen“ Dativ ister. c) von ve d) an „beruhen“ ile kullanılmaz."
+        }
+      ]
+    }
+  ]
+}

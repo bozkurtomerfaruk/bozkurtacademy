@@ -1,0 +1,136 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "c1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-1",
+  "title": "Forschungsprojekte im Überblick",
+  "minutes": 15,
+  "context": "Im Forschungsnewsletter der Universität Holmgarten werden vier Projekte vorgestellt, die in diesem Jahr neu gefördert werden.",
+  "instructions": "Lesen Sie die Texte a–d und die Aussagen 7–12. Zu welchem Text passt welche Aussage? Die Texte können mehrmals gewählt werden.",
+  "groups": [
+    {
+      "layout": "comments",
+      "none": false,
+      "texts": [
+        {
+          "id": "tinte",
+          "label": "a",
+          "title": "Tinte als Zeitzeugin",
+          "paragraphs": [
+            "Wie sorgfältig führten spätmittelalterliche Stadtschreiber ihre Bücher? Dieser Frage geht ein Team um die Historikerin Prof. Adelgund Saßnick anhand der Rechnungsbücher der ehemaligen Hansestadt Wettmarsch nach, die heute im dortigen Stadtarchiv aufbewahrt werden. Da sich Nachträge und spätere Korrekturen mit bloßem Auge kaum von der ursprünglichen Eintragung unterscheiden lassen, bestimmt die Gruppe die chemische Zusammensetzung der Tinten mittels Röntgenfluoreszenz. Das Verfahren hat den Vorteil, dass den empfindlichen Pergamentseiten keinerlei Material entnommen werden muss – eine Bedingung, auf der das Archiv bei der Genehmigung des Vorhabens ausdrücklich bestanden hatte. Weichen die Eisen- und Kupferanteile einer Zeile deutlich von denen ihrer Umgebung ab, deutet dies auf eine spätere Hand hin. Für die Transkription der Einträge werden derzeit noch zwei Hilfskräfte gesucht; bewerben können sich Studierende aller Fächer, sofern sie Latein mindestens auf dem Niveau des Latinums beherrschen."
+          ]
+        },
+        {
+          "id": "hecken",
+          "label": "b",
+          "title": "Hecken als Wasserspeicher?",
+          "paragraphs": [
+            "Feldhecken gelten in der Landwirtschaft vielfach als Konkurrenten der Nutzpflanzen: Ihre Wurzeln, so die verbreitete Annahme, entziehen den angrenzenden Äckern Wasser. Genau diesen Effekt wollte die Agrarwissenschaftlerin Dr. Juna Hollwedel mit ihrem Team auf zwölf Versuchsflächen bei Ölkenbüttel quantifizieren. Dazu werden die Felder regelmäßig mit Wärmebildkameras überflogen; zusätzlich entnimmt das Team in festgelegten Abständen zur Hecke Bodenproben. Die Auswertung des ersten trockenen Sommers fiel jedoch anders aus als erwartet: In einem Streifen von bis zu zwanzig Metern entlang der Hecken blieb der Boden feuchter als auf offener Fläche. Vermutlich bremsen die Gehölze den Wind und verringern so die Verdunstung. Ob sich der Befund in Jahren mit anderer Witterung wiederholt, soll die zweite Projektphase zeigen. Die beteiligten Landwirtinnen und Landwirte stellen dafür ihre Flächen weiterhin zur Verfügung."
+          ]
+        },
+        {
+          "id": "saal",
+          "label": "c",
+          "title": "Ein Saal, der nur noch digital erklingt",
+          "paragraphs": [
+            "Bis zu seinem Abriss im Jahr 1971 galt der Konzertsaal im Haus Albrechtshof in Mirlingen als einer der akustisch herausragenden Säle seiner Zeit. Ein interdisziplinäres Team aus Musikwissenschaft und Bauphysik unter Leitung von Dr. Ortlieb Ollbrecht will seinen Raumklang nun in einer Computersimulation rekonstruieren. Da die Baupläne nur lückenhaft überliefert sind, stützt sich die Gruppe vor allem auf Rundfunkmitschnitte, aus denen sich der Nachhall des Saals annähernd berechnen lässt. Darüber hinaus ruft das Projekt Bürgerinnen und Bürger dazu auf, Fotos, Programmhefte oder private Tonbandaufnahmen aus dem Saal, die sich noch in Familienbesitz befinden, für die Dauer der Untersuchung auszuleihen. Weil das Team international besetzt ist, wird intern auf Englisch kommuniziert. Langfristig soll der Klang des Saals in einer begehbaren Installation wieder erfahrbar werden."
+          ]
+        },
+        {
+          "id": "laeden",
+          "label": "d",
+          "title": "Was Dorfläden am Leben hält",
+          "paragraphs": [
+            "In zahlreichen ländlichen Gemeinden haben Bürgerinnen und Bürger in den vergangenen Jahren selbst die Initiative ergriffen und genossenschaftlich organisierte Lebensmittelläden gegründet. Während manche dieser Geschäfte seit über einem Jahrzehnt bestehen, mussten andere bereits nach kurzer Zeit wieder schließen. Woran das liegt, untersucht der Wirtschaftsgeograf Prof. Thilo Stellmacher am Beispiel von vierzehn Läden in der Region. Ausgewertet werden die Umsatzzahlen der vergangenen fünf Jahre, ergänzt durch ausführliche Gespräche mit den Vorständen; einen Teil dieser Interviews führen Studierende eines begleitenden Masterseminars. Die bisherigen Gespräche scheinen die Vermutung zu stützen, dass weniger die Lage als vielmehr die Zahl der ehrenamtlich Mitarbeitenden ausschlaggebend ist. Am Ende soll ein Leitfaden stehen, der Gemeinden bei der Gründung eines eigenen Ladens Schritt für Schritt begleitet."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 7,
+          "type": "zuordnung",
+          "prompt": "In einem Projekt widersprechen die ersten Messergebnisse dem, was das Team ursprünglich nachweisen wollte.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "hecken",
+              "quote": "Genau diesen Effekt wollte die Agrarwissenschaftlerin Dr. Juna Hollwedel mit ihrem Team auf zwölf Versuchsflächen bei Ölkenbüttel quantifizieren"
+            },
+            {
+              "text": "hecken",
+              "quote": "fiel jedoch anders aus als erwartet"
+            }
+          ],
+          "explanation": "Metin b'de ekip, çitlerin tarlalardan su çektiği etkisini ölçmek istiyordu: „Genau diesen Effekt wollte … quantifizieren“ (tam da bu etkiyi sayısal olarak belirlemek istiyordu). İlk kurak yazın değerlendirmesi ise „anders aus als erwartet“ (beklenenden farklı) çıktı: çitlerin yanındaki toprak daha nemli kaldı. Metin d'de ilk görüşmeler bir varsayımı „scheinen … zu stützen“ (destekliyor gibi görünüyor), yani çelişki yok; üstelik orada ölçüm değil görüşme var. Metin c'de henüz bir sonuç bildirilmiyor."
+        },
+        {
+          "number": 8,
+          "type": "zuordnung",
+          "prompt": "Aus einem Projekt soll eine praktische Hilfe für Initiativen hervorgehen, die Ähnliches vorhaben.",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "laeden",
+              "quote": "Am Ende soll ein Leitfaden stehen, der Gemeinden bei der Gründung eines eigenen Ladens Schritt für Schritt begleitet"
+            }
+          ],
+          "explanation": "Metin d'nin sonunda projenin ürünü belirtiliyor: „ein Leitfaden …, der Gemeinden bei der Gründung eines eigenen Ladens Schritt für Schritt begleitet“ (kendi dükkânını kurmak isteyen belediyelere adım adım yol gösteren bir kılavuz). Bu, benzer bir girişim planlayanlara pratik bir yardımdır. Metin c de bir sonuç ürününden söz ediyor, ama „eine begehbare Installation“ (içinde gezilebilen bir enstalasyon) salonun sesini deneyimlemeye yarar, benzer bir proje planlayanlara yol göstermez."
+        },
+        {
+          "number": 9,
+          "type": "zuordnung",
+          "prompt": "Ein Projekt verwendet bewusst eine Methode, bei der das untersuchte Objekt unversehrt bleibt.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "tinte",
+              "quote": "dass den empfindlichen Pergamentseiten keinerlei Material entnommen werden muss"
+            }
+          ],
+          "explanation": "Metin a'daki Röntgen floresans yönteminin avantajı, hassas parşömen sayfalarından „keinerlei Material entnommen werden muss“ (hiç malzeme alınması gerekmemesi), yani belgelerin zarar görmemesidir; arşiv de bunu açıkça şart koşmuştu („ausdrücklich bestanden hatte“). Bu yüzden yöntem bilinçli olarak seçilmiştir. Metin b'de ise ekip tam tersine „Bodenproben“ (toprak numuneleri) alıyor; metin c'de ise incelenen salon 1971'deki „Abriss“ (yıkım) yüzünden artık yok; ekip yalnızca kayıtlara ve ödünç alınan belgelere dayanıyor, korunacak bir nesneden söz edilmiyor."
+        },
+        {
+          "number": 10,
+          "type": "zuordnung",
+          "prompt": "Ein Projektteam bittet die Öffentlichkeit, ihm persönliche Erinnerungsstücke vorübergehend zu überlassen.",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "saal",
+              "quote": "ruft das Projekt Bürgerinnen und Bürger dazu auf"
+            }
+          ],
+          "explanation": "Metin c'deki proje vatandaşlara çağrıda bulunuyor („ruft … Bürgerinnen und Bürger dazu auf“): aile elindeki fotoğrafları, konser programlarını veya özel ses kayıtlarını araştırma süresince „auszuleihen“ (ödünç vermeleri) isteniyor; „vorübergehend überlassen“ bunun karşılığıdır. Metin b'de çiftçiler de bir şey sağlıyor, ama bu kişisel hatıra eşyası değil, deneme için „ihre Flächen“ (arazileri). Metin a'da belgeler bir kurumdan, şehir arşivinden geliyor."
+        },
+        {
+          "number": 11,
+          "type": "zuordnung",
+          "prompt": "In einem Projekt ist die Mitarbeit von Studierenden an bestimmte Sprachkenntnisse geknüpft.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "tinte",
+              "quote": "sofern sie Latein mindestens auf dem Niveau des Latinums beherrschen"
+            }
+          ],
+          "explanation": "Metin a'da kayıtların transkripsiyonu için iki yardımcı aranıyor; her bölümden öğrenciler başvurabilir, ama yalnızca „sofern sie Latein mindestens auf dem Niveau des Latinums beherrschen“ (en az Latinum düzeyinde Latince biliyorlarsa). Metin c'de de bir dil geçiyor, ama „intern auf Englisch kommuniziert“ yalnızca uluslararası ekibin kendi iletişim dilidir, öğrencilerin katılımı için bir şart değildir. Metin d'de öğrenciler görüşme yapıyor, ama bir dil koşulu belirtilmiyor."
+        },
+        {
+          "number": 12,
+          "type": "zuordnung",
+          "prompt": "Ein Projekt geht der Frage nach, warum sich vergleichbare Einrichtungen unterschiedlich lange halten.",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "laeden",
+              "quote": "Während manche dieser Geschäfte seit über einem Jahrzehnt bestehen, mussten andere bereits nach kurzer Zeit wieder schließen. Woran das liegt"
+            }
+          ],
+          "explanation": "Metin d'de kooperatif köy dükkânlarından bazıları „seit über einem Jahrzehnt bestehen“ (on yıldan uzun süredir varlığını sürdürüyor), diğerleri ise „nach kurzer Zeit wieder schließen“ (kısa sürede kapanmak) zorunda kaldı; proje tam olarak „Woran das liegt“ (bunun nedenini) araştırıyor. Metin b'de de karşılaştırma var (çitin yanı ile açık alan), ama bunlar kurumlar değil, toprak alanlarıdır. Metin c'deki salonun „akustisch herausragend“ olması da kurumların ne kadar dayandığıyla ilgili değil."
+        }
+      ]
+    }
+  ]
+}

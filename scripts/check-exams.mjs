@@ -13,6 +13,8 @@ const TYPES = {
   'ja-nein': () => ['ja', 'nein'],
   // TestDaF: Ja / Nein / Text sagt dazu nichts
   'ja-nein-nichts': () => ['ja', 'nein', 'nichts'],
+  // telc C1 Hochschule: Richtig / Falsch / Nicht im Text
+  'richtig-falsch-nichts': () => ['richtig', 'falsch', 'nichts'],
   abc: question => Object.keys(question.options || {}),
   zuordnung: (question, group) => [...group.texts.filter(text => text.label).map(text => text.label), ...(group.none === false ? [] : [group.none || '0'])]
 };

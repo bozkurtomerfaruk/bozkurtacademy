@@ -43,6 +43,15 @@ Firestore "üretim modunda" oluşturulduğu için kurallar yayınlanana kadar he
 
 Google Apps Script ile, senin Google hesabında: adım adım kurulum `apps-script/README.md`'de. Kısaca: script.google.com → yeni proje → `Code.gs` ve `appsscript.json`'ı yapıştır → Google Calendar API hizmetini ekle → `dryRun` → `installTrigger`.
 
+### Seviye testi
+
+Ayrıntılar ve adım adım kurulum: `docs/seviye-testi.md`. Kısaca:
+1. Authentication → Sign-in method → **Anonim**'i aç.
+2. `firestore.rules`'u yayınla.
+3. `placementTests` koleksiyonunda `expireAt` alanı için TTL politikası oluştur.
+
+Yönetim sayfası: `https://bozkurtacademy.com/#yonetim/seviye-testleri`. Önce `giris.html`'den öğretmen hesabıyla giriş yap. Testler: `npm run test:placement` (emülatörde).
+
 ### Kurallar her değiştiğinde
 
 `firestore.rules` değişen her birleştirmeden sonra (ör. Aşama 2: öğrencinin ödevi "tamamladım" olarak işaretleyebilmesi) dosyanın güncel hâlini Firebase Console → Firestore → Kurallar'a yapıştırıp **Yayınla**. Yayınlanmazsa yeni özellikler canlıda "izin yok" hatası verir.
@@ -102,3 +111,7 @@ curl -X POST -H 'Authorization: Bearer owner' -H 'Content-Type: application/json
 | `tests/apps-script.test.mjs` | Apps Script birim testleri (sahte Google servisleriyle) |
 | `js/account/i18n.js` | Öğrenci sayfalarının TR/DE/EN metinleri |
 | `css/account.css` | Bu sayfaların yerleşimi |
+| `js/placement.js`, `css/placement.css` | Seviye testi (`#seviye-testi`) ve yönetim sayfasının yönlendirmesi |
+| `js/account/placement-submit.js`, `js/account/placement-admin.js` | Seviye testi sonucunu gönderme, yönetim sayfası (`#yonetim/seviye-testleri`) |
+| `data/seviye-testi/sorular.json` | Seviye testi soru bankası |
+| `tests/seviye-testi/placement.mjs` | Seviye testi tarayıcı testleri (`npm run test:placement`) |

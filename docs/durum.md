@@ -2,11 +2,72 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
-## 2026-10-26 · Seviye tespit sınavı (#seviye-testi) ve yönetim sayfası — devam ediyor
+## 2026-10-26 · Seviye tespit sınavı (#seviye-testi) ve yönetim sayfası
 
-### Kaldığım yer
-- Dal: `claude/seviye-testi`. Bitti: soru bankası `data/seviye-testi/sorular.json` (5 blok × 10 soru, kör çözüm 50/50 + değişen 9 soru 9/9), `firestore.rules` (placementTests, placementLimits), kural testleri (`npm test` 100/100).
-- Sırada: `js/placement.js` + `css/placement.css` (test sayfası), `js/account/placement-submit.js`, `js/account/placement-admin.js` (yönetim), `index.html` bağlantıları, `analytics.js`, Playwright testleri, gizlilik önerisi, birleştirme.
+**Canlıda çalışması için senin yapman gerekenler** (ayrıntılar: `docs/seviye-testi.md`):
+1. Firebase Console → Authentication → Sign-in method → **Anonim**'i aç.
+2. `firestore.rules`'u yayınla.
+3. `placementTests` / `expireAt` için **TTL politikası** oluştur.
+
+1 ve 2 yapılmadan sonuç gönderilemez. Öğrenci "gönderilemedi" mesajını ve e-posta adresini görür.
+
+**Adresler:**
+- Test: `https://bozkurtacademy.com/#seviye-testi`
+- Yönetim: `https://bozkurtacademy.com/#yonetim/seviye-testleri`; önce `giris.html`'den öğretmen hesabıyla giriş.
+
+**Yapılanlar:**
+- **Soru bankası** (`data/seviye-testi/sorular.json`): 5 blok (A1, A2, B1, B2, C1). Her blokta 7 dilbilgisi/kelime sorusu (çoğu seçenekli boşluk doldurma, birkaçı çoktan seçmeli) ve bir okuma metniyle 3 soru, toplam 50 soru. Her sorunun `id`, `topic` (sitedeki konu kimlikleri) ve bloğu üzerinden seviyesi var.
+- **Akış:**
+  - Giriş ekranı → A1 → … Bir blokta ≥ 6/10 doğru yapan sonraki bloğa geçer, yapamayanda test biter.
+  - Sonrasında isteğe bağlı yazma görevi; seviyeye göre beklenen uzunluk gösteriliyor.
+  - Sonuç ekranı: tahmini seviye, açıklama, bloklara göre doğru sayısı, zorlandığı konular ve bağlantıları, "tahmini sonuç" notu.
+  - Ardından form → teşekkür ekranı.
+  - "Hiç Almanca bilmiyorum" testi atlayıp A0 ile doğrudan forma geçiyor.
+- **Bağlantılar:**
+  - Dersler sayfasının altında kart.
+  - İletişim sayfasında "Almanca seviyen" maddesinin yanında not. İletişim formunda ayrı bir seviye alanı olmadığı için, seviyenin sorulduğu yer bu madde.
+  - Ana sayfada, butonların altında küçük "Seviyeni ölç".
+  - Menüde öğe yok.
+- **Yönetim sayfası:**
+  - Liste: tarih, ad, seviye, hedef; en yeni üstte, okunmamışlar "Yeni" işaretli ve solda yeşil çizgi.
+  - Arama (ad/e-posta) ve seviye filtresi.
+  - Detay: form bilgileri, bloklar, konu bazında hatalar, yanlış sorular (soru metni, öğrencinin cevabı, doğru cevap), yazma metni, süre, otomatik silinme tarihi.
+  - Okundu/okunmadı, kendi notun, onaylı silme.
+- **Firestore:** `placementTests` ve `placementLimits` kuralları, 18 yeni kural testi (`npm test` 100/100). TTL için `firestore.indexes.json`'a `fieldOverrides` eklendi.
+- **Sayaç:** Test `/#seviye-testi` olarak ayrı sayılıyor, `#yonetim/…` hiç sayılmıyor (`js/analytics.js`).
+- **Testler:** `npm run test:placement` (Playwright + emülatör, 146 kontrol, hepsi geçti). Mevcut testler: kural testleri, `check-grammar`, `check-exams`, `tests/exams/*` geçti.
+- **Önbellek sürümleri:** `app.js` v23, `analytics.js` v4; yeni dosyalar v1.
+
+**Kör çözüm ve seviye değerlendirmesi** (bağlamsız alt ajan, cevapsız ve karışık kopya):
+- 50/50 uyuştu.
+- Ajan her soruya ve metne ayrıca kendi tahmini CEFR seviyesini verdi; bloklar A1 → C1 düzgün basamaklanıyor.
+- Ajanın işaretleriyle değiştirilenler:
+  - A2-perfekt'te Plusquamperfekt olabilen „waren“, B1-passiv'de „ist“ ve C1-satzstellung'da bölgesel varyantlar çıkarıldı.
+  - Dünya bilgisiyle çözülen A1/A2 kelime soruları değişti (Glas → Wasser, Ärztin → Rezept).
+  - B1 okuma başlığı ilk soruyu ele veriyordu („Ausleihen statt kaufen“ → „Ein Laden der anderen Art“).
+  - B2'de B1 düzeyinde kalan Partizip I, je–desto ve Nominalisierung soruları zorlaştırıldı.
+  - B1'deki B2 kelimesi „Zweck“ çıkarıldı.
+- Değişen 9 soru yeniden kör çözüldü: 9/9.
+- Doğru cevabın belirgin biçimde en uzun olduğu okuma seçenekleri dengelendi.
+
+**Kararlar ve gerekçeler:**
+- **Sayfa yapısı:** Test ve yönetim `index.html` içinde hash sayfası olarak duruyor (`BA_PAGES`'e eklendi), çünkü istenen adresler bunlardı. Firebase sadece "Sonucu gönder"de (`js/account/placement-submit.js`) ve yönetim sayfasında yükleniyor; ziyaretçi için gizlilik metnindeki "Firebase yüklenmez" durumu teste kadar korunuyor.
+- **"Bilmiyorum" seçeneği:** Her soruda var ve yanlış sayılıyor. Tahmini azaltır, sonuç daha doğru olur.
+- **Seviye hesabı:** Geçilen en yüksek blok. Geçilemeyen blokta 4–5 doğru varsa "X – Y'ye yakın". Hiçbir blok geçilmezse A0.
+- **Yazma görevinde beklenen uzunluk:** A0/A1 20–40, A2 40–70, B1 80–120, B2 120–160, C1 150–200 kelime.
+- **Seçenek sırası:** Her yeni denemede karışıyor. Aynı deneme içinde yenilemede sıra korunuyor, yoksa seçilen cevap yer değiştirirdi.
+- **Süre:** Sayaç gösterilmiyor. Sadece test ekranı açık ve görünürken sayılıyor (sekme arka plandayken veya ertesi gün devam edilirse bekleme süresi eklenmiyor); en fazla 6 saat.
+- **Yanlış cevaplar ve konu hataları neden metin alanı:** Kurallar liste/harita içindeki değerleri tek tek denetleyemiyor. Metin olunca biçim (regex) ve boyut sınırı kesin uygulanıyor. Yönetim sayfası bunları ayrıştırıyor.
+- **expireAt:** Tarayıcı sunucu saatini bilemediği için kurallar `createdAt` (= sunucu saati) + 183 gün ± 1 gün kontrol ediyor; testte fark 183,00 gün çıktı.
+- **Bekleme süresi:** Sonuç ile `placementLimits/{uid}` aynı batch'te yazılmak zorunda. Bekleme belgesi sonucun kimliğini taşıdığı için tek batch'te iki sonuç yazılamıyor; belge 10 dakikadan önce güncellenemiyor.
+- **Yönetim sayfası dili:** Öğretmen paneli gibi sadece Türkçe. "Erişimin yok" mesajı üç dilde.
+- **Yetki:** Mevcut `isTeacher()` (UID) kullanıldı; ayrı bir admin rolü (custom claim) eklenmedi, çünkü Admin SDK gerektirir.
+- **CI:** Tarayıcı testleri CI'a eklenmedi (Playwright tarayıcısı ve emülatör ister). Kural testleri mevcut iş akışında çalışıyor.
+
+**Bilinen sınırlar:**
+- **Anonim hesaplar ve bekleme süresi:** Anonim hesaplar sınırsız açılabildiği için kararlı biri her gönderimde yeni anonim hesap açarak 10 dakikalık bekleme süresini aşabilir. Kurallar alan ve boyut sınırlarını yine uygular. Gerekirse ileride **Firebase App Check** (reCAPTCHA Enterprise) eklenebilir; şimdilik eklenmedi.
+- **Soru bankası herkese açık:** `data/seviye-testi/sorular.json` cevaplarla birlikte açık; statik sitede başka yolu yok. Seviye testi için kabul edilebilir.
+- **Gizlilik metni:** `privacy.html` değiştirilmedi. Önerilen ekler `docs/seviye-testi.md` sonunda: Firebase'de (Google) işleme, 6 ay saklama, e-postayla silme talebi, localStorage anahtarları, GoatCounter listesi. `docs/privacy-policy.md` (olgu listesi) güncellendi.
 
 ## 2026-10-26 · Lesen son tur: TestDaF Aufgabe 7 gerçek formatta, telc C1 cevap biçimi
 

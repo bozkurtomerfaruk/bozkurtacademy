@@ -1,0 +1,142 @@
+/* Seviye testi (#seviye-testi), yönetim sayfası (#yonetim/seviye-testleri) ve bu sayfalara giden bağlantılar.
+   Sadece yerleşim; renk, yazı tipi ve bileşenler css/base.css'teki --ba-* token'larından. */
+
+/* Bağlantılar: Dersler sayfasındaki kart, iletişim notu, ana sayfa bağlantısı */
+#page-lessons .pl-promo{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px 40px;align-items:center;padding:clamp(24px,4vw,48px)}
+#page-lessons .pl-promo h2{margin:0 0 10px;color:var(--ba-field-ink)}
+#page-lessons .pl-promo p{margin:0;max-width:52ch;color:var(--ba-field-ink)}
+.academy-theme .pl-promo .pl-promo-button{background:var(--ba-field-ink);color:var(--ba-field)}
+.academy-theme .pl-promo .pl-promo-button:hover{background:var(--ba-paper-2);color:var(--ba-ink)}
+.academy-theme .ba-field .pl-promo-button:focus-visible{outline-color:var(--ba-field-ink)!important}
+#page-home .home-level-link{font-size:var(--ba-small);min-height:44px}
+#page-contact .contact-level-link{display:inline;color:var(--ba-ink);font-weight:600;font-size:var(--ba-small);text-decoration:underline;text-underline-offset:4px}
+@media(max-width:700px){#page-lessons .pl-promo{grid-template-columns:1fr}#page-lessons .pl-promo .btn{justify-self:start}}
+
+/* Test sayfası */
+#page-seviye-testi .pl-wrap,#page-yonetim .admin-wrap{padding:clamp(32px,5vw,64px) 0;max-width:860px}
+#page-seviye-testi h1{font-size:var(--ba-head);margin:0 0 16px}
+#page-seviye-testi h2{font-size:clamp(1.5rem,1.2rem + 1vw,2rem);margin:0 0 12px}
+#page-seviye-testi .pl-card-body h2.pl-h3{font-family:var(--ba-serif);font-size:var(--ba-lead);font-weight:600;letter-spacing:0;margin:24px 0 10px}
+#page-seviye-testi .pl-lead{font-size:var(--ba-lead);line-height:1.5;max-width:44ch}
+#page-seviye-testi .pl-hero{margin-bottom:28px}
+#page-seviye-testi .pl-muted,#page-yonetim .admin-muted{color:var(--ba-muted);font-size:var(--ba-small)}
+#page-seviye-testi .pl-card{margin:0 0 24px}
+#page-seviye-testi .pl-card-body{padding:clamp(20px,4vw,44px)}
+#page-seviye-testi .pl-info{margin:0 0 28px}
+#page-seviye-testi .pl-actions{display:flex;flex-wrap:wrap;align-items:flex-start;gap:12px 16px;margin-top:20px}
+#page-seviye-testi .pl-skip p{margin:8px 0 0;max-width:30ch}
+#page-seviye-testi .pl-block-head{margin-bottom:24px}
+#page-seviye-testi .pl-kicker{margin:0 0 8px;color:var(--ba-muted);font-weight:600;font-size:var(--ba-small)}
+#page-seviye-testi .pl-progress{height:8px;margin:0 0 14px;background:var(--ba-paper-2);border-radius:999px;overflow:hidden}
+#page-seviye-testi .pl-progress span{display:block;height:100%;background:var(--ba-accent)}
+#page-seviye-testi .pl-questions{display:grid;gap:14px}
+#page-seviye-testi .pl-q{margin:0;padding:18px clamp(16px,3vw,24px) 20px;border:0;border-radius:var(--ba-radius);background:var(--ba-paper);min-width:0}
+#page-seviye-testi .pl-q.is-missing{box-shadow:inset 0 0 0 3px var(--ba-wrong)}
+#page-seviye-testi .pl-q-prompt{float:left;width:100%;margin:0 0 14px;padding:0;font-size:var(--ba-body);font-weight:500;line-height:1.5;overflow-wrap:anywhere}
+#page-seviye-testi .pl-q-prompt+*{clear:both}
+#page-seviye-testi .pl-q-number{font-weight:700;margin-right:4px}
+#page-seviye-testi .pl-gap{display:inline-block;min-width:4.5em;padding:0 8px;border-bottom:2px solid var(--ba-line-strong);color:var(--ba-accent);font-weight:600;text-align:center}
+#page-seviye-testi .pl-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+#page-seviye-testi .pl-option{position:relative;display:flex;align-items:center;gap:10px;min-height:48px;padding:10px 14px;border-radius:var(--ba-radius-small);background:var(--ba-paper-2);cursor:pointer;line-height:1.35;overflow-wrap:anywhere;transition:background-color .2s}
+#page-seviye-testi .pl-option:hover{background:var(--ba-line)}
+#page-seviye-testi .pl-option input{position:absolute;opacity:0;width:1px;height:1px}
+#page-seviye-testi .pl-option::before{content:"";flex:none;width:18px;height:18px;border:2px solid var(--ba-line-strong);border-radius:999px;background:var(--ba-paper)}
+#page-seviye-testi .pl-option:has(input:focus-visible){outline:3px solid var(--ba-focus);outline-offset:2px}
+#page-seviye-testi .pl-option.is-chosen{background:var(--ba-accent);color:var(--ba-accent-ink)}
+#page-seviye-testi .pl-option.is-chosen::before{border-color:var(--ba-accent-ink);background:var(--ba-accent-ink);box-shadow:inset 0 0 0 3px var(--ba-accent)}
+#page-seviye-testi .pl-option--unknown{grid-column:1/-1;background:transparent;box-shadow:inset 0 0 0 2px var(--ba-paper-2);color:var(--ba-muted);font-size:var(--ba-small)}
+#page-seviye-testi .pl-option--unknown.is-chosen{background:var(--ba-paper-2);color:var(--ba-ink);box-shadow:inset 0 0 0 2px var(--ba-line-strong)}
+#page-seviye-testi .pl-option--unknown.is-chosen::before{border-color:var(--ba-ink);background:var(--ba-ink);box-shadow:inset 0 0 0 3px var(--ba-paper-2)}
+#page-seviye-testi .pl-reading{margin-top:36px}
+#page-seviye-testi .pl-text{margin:0 0 16px;padding:clamp(20px,3vw,32px);border-radius:var(--ba-radius);background:var(--ba-paper);border-left:6px solid var(--ba-accent)}
+#page-seviye-testi .pl-text h3{margin:0 0 12px;font-size:var(--ba-lead)}
+#page-seviye-testi .pl-text p{white-space:pre-line;margin:0 0 12px;max-width:68ch}
+#page-seviye-testi .pl-status{min-height:1.5em;margin:16px 0 0;font-weight:600}
+#page-seviye-testi .pl-status:empty{display:none}
+#page-seviye-testi .pl-status.is-error{color:var(--ba-wrong)}
+#page-seviye-testi .pl-writing-prompt{font-family:var(--ba-serif);font-size:var(--ba-lead);margin:0 0 12px}
+#page-seviye-testi textarea,#page-yonetim textarea{width:100%;min-height:140px;padding:12px 14px;resize:vertical;line-height:1.5}
+#page-seviye-testi .field label,#page-yonetim .field label{display:block;margin:0 0 6px}
+
+/* Sonuç */
+#page-seviye-testi .pl-result{margin-bottom:24px}
+#page-seviye-testi .pl-result-title{font-size:var(--ba-lead)!important;font-family:var(--ba-sans)!important;font-weight:600!important;color:var(--ba-muted)!important;margin:0 0 6px}
+#page-seviye-testi .pl-level{margin:0 0 12px;font-family:var(--ba-serif);font-size:var(--ba-display);line-height:1.05;letter-spacing:-.02em}
+#page-seviye-testi .pl-blocks{--ba-stub-cols:5;padding-top:16px}
+#page-seviye-testi .pl-weak{display:grid;gap:8px;margin:0;padding-left:20px}
+#page-seviye-testi .pl-disclaimer{margin:24px 0 0;padding:14px 16px;font-weight:500}
+
+/* Form */
+#page-seviye-testi .pl-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 20px}
+#page-seviye-testi .pl-field{margin:0 0 16px}
+#page-seviye-testi .pl-form-grid .pl-field{margin:0}
+#page-seviye-testi .pl-form :is(input:not([type=checkbox]),select){width:100%;min-height:52px;padding:0 14px}
+#page-seviye-testi .pl-form .pl-form-grid{margin-bottom:16px}
+#page-seviye-testi .pl-error{margin:6px 0 0;color:var(--ba-wrong);font-size:var(--ba-small);font-weight:600}
+#page-seviye-testi .pl-error:empty{display:none}
+#page-seviye-testi .is-invalid :is(input,select,textarea){border-color:var(--ba-wrong)}
+#page-seviye-testi .pl-check{display:flex;gap:12px;align-items:flex-start;font-weight:400!important;font-size:var(--ba-body)!important;line-height:1.5;cursor:pointer}
+#page-seviye-testi .pl-check input{flex:none;width:22px;height:22px;margin-top:3px;accent-color:var(--ba-accent)}
+#page-seviye-testi .pl-form .btn{margin-top:8px}
+#page-seviye-testi .contact-honey{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+@media(max-width:640px){
+  #page-seviye-testi .pl-options,#page-seviye-testi .pl-form-grid{grid-template-columns:1fr}
+  #page-seviye-testi .pl-blocks{--ba-stub-cols:3}
+  #page-seviye-testi .pl-actions .btn{width:100%}
+}
+
+/* Yönetim */
+#page-yonetim h1{font-size:var(--ba-head);margin:0 0 10px;overflow-wrap:anywhere}
+#page-yonetim .admin-section h2{font-size:var(--ba-lead)!important;font-family:var(--ba-serif);font-weight:600!important;margin:0 0 14px}
+#page-yonetim .admin-denied{padding:24px;border-radius:var(--ba-radius);background:var(--ba-paper);font-size:var(--ba-lead);font-weight:600}
+#page-yonetim .admin-head{margin:12px 0 20px}
+#page-yonetim .admin-toolbar{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:12px 16px;margin-bottom:12px}
+#page-yonetim .admin-toolbar :is(input,select){width:100%;min-height:48px;padding:0 12px}
+#page-yonetim .admin-list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
+#page-yonetim .admin-row a{display:grid;grid-template-columns:150px minmax(0,1fr) auto auto;gap:4px 16px;align-items:center;padding:14px 18px;border-radius:var(--ba-radius-small);background:var(--ba-paper);color:var(--ba-ink);text-decoration:none}
+#page-yonetim .admin-row a:hover{background:var(--ba-paper-2)}
+#page-yonetim .admin-row-date,#page-yonetim .admin-row-goal{color:var(--ba-muted);font-size:var(--ba-small)}
+#page-yonetim .admin-row-name{font-weight:500;overflow-wrap:anywhere}
+#page-yonetim .admin-row.is-unread .admin-row-name{font-weight:700}
+#page-yonetim .admin-row.is-unread a{box-shadow:inset 6px 0 0 var(--ba-accent)}
+#page-yonetim .admin-row-level{font-family:var(--ba-serif);font-weight:600}
+#page-yonetim .admin-badge{grid-column:4;grid-row:1;justify-self:end;padding:2px 8px;border-radius:999px;background:var(--ba-accent);color:var(--ba-accent-ink);font-size:13px;font-weight:700}
+#page-yonetim .admin-row.is-unread .admin-row-goal{grid-column:3}
+#page-yonetim .admin-empty{padding:24px;background:var(--ba-paper);border-radius:var(--ba-radius-small)}
+#page-yonetim .admin-back{display:inline-flex;min-height:44px;align-items:center}
+#page-yonetim .admin-level{font-size:var(--ba-lead);margin:0}
+#page-yonetim .admin-actions{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 16px}
+#page-yonetim .admin-confirm{margin:0 0 16px;padding:16px 18px;border-radius:var(--ba-radius-small);background:var(--ba-wrong-bg);color:var(--ba-ink)}
+#page-yonetim .admin-confirm p{margin:0 0 12px;font-weight:600}
+#page-yonetim .admin-confirm .admin-actions{margin:0}
+#page-yonetim .admin-danger{box-shadow:inset 0 0 0 2px var(--ba-wrong)!important;color:var(--ba-wrong)!important}
+#page-yonetim .admin-danger-fill{background:var(--ba-wrong)!important;color:var(--ba-paper)!important}
+#page-yonetim .admin-status{min-height:1.4em;margin:0 0 12px;font-weight:600}
+#page-yonetim .admin-status:empty{display:none}
+#page-yonetim .admin-section{margin:0 0 16px}
+#page-yonetim .admin-section-body{padding:clamp(18px,3vw,28px)}
+#page-yonetim .admin-dl{display:grid;gap:10px;margin:0}
+#page-yonetim .admin-dl>div{display:grid;grid-template-columns:200px minmax(0,1fr);gap:4px 16px}
+#page-yonetim .admin-dl dt{color:var(--ba-muted);font-size:var(--ba-small);font-weight:600}
+#page-yonetim .admin-dl dd{margin:0;overflow-wrap:anywhere}
+#page-yonetim .admin-pre{white-space:pre-wrap}
+#page-yonetim .admin-writing{padding:16px;border-radius:var(--ba-radius-small);background:var(--ba-paper-2);line-height:1.6}
+#page-yonetim .admin-table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+#page-yonetim .admin-table :is(th,td){padding:10px 8px;border-bottom:2px solid var(--ba-paper-2);text-align:left}
+#page-yonetim .admin-topics{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}
+#page-yonetim .admin-topics li{display:flex;justify-content:space-between;gap:12px;padding:10px 14px;border-radius:var(--ba-radius-small);background:var(--ba-paper-2)}
+#page-yonetim .admin-wrong{margin:0;padding-left:22px;display:grid;gap:18px}
+#page-yonetim .admin-wrong .admin-muted{margin:0 0 4px}
+#page-yonetim .admin-q{margin:0 0 10px;font-weight:500}
+#page-yonetim .admin-answer{display:inline-block;padding:2px 8px;border-radius:4px;font-weight:600}
+#page-yonetim .admin-answer.is-wrong{background:var(--ba-wrong-bg);color:var(--ba-wrong)}
+#page-yonetim .admin-answer.is-right{background:var(--ba-right-bg);color:var(--ba-right)}
+#page-yonetim .btn{margin-top:4px}
+@media(max-width:700px){
+  #page-yonetim .admin-toolbar{grid-template-columns:1fr}
+  #page-yonetim .admin-row a{grid-template-columns:minmax(0,1fr) auto}
+  #page-yonetim .admin-row-date{grid-column:1/-1}
+  #page-yonetim .admin-row.is-unread .admin-row-goal{grid-column:auto}
+  #page-yonetim .admin-badge{grid-column:2;grid-row:1}
+  #page-yonetim .admin-dl>div{grid-template-columns:1fr}
+}

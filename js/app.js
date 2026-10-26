@@ -1320,7 +1320,7 @@ function applyLanguage(lang){
   window.dispatchEvent(new CustomEvent('ba:languagechange', {detail:{lang}}));
 }
 
-const BA_PAGES = ['home','lessons','grammar','exercises','exams','about','contact'];
+const BA_PAGES = ['home','lessons','grammar','exercises','exams','about','contact','seviye-testi','yonetim'];
 
 function pageFromHash(){
   const raw=(location.hash || '#home').slice(1).split('/')[0];

@@ -16,6 +16,8 @@
   function currentPath(){
     const parts = location.hash.replace(/^#/, '').split(/[/?]/).filter(Boolean);
     if(!parts.length || parts[0] === 'home') return '/';
+    // The admin page (#yonetim/…) is never counted; the placement test counts as "/#seviye-testi".
+    if(parts[0] === 'yonetim') return null;
     return '/#' + parts.slice(0, DEPTH[parts[0]] || 1).join('/');
   }
 
@@ -25,7 +27,7 @@
 
   function countIfChanged(){
     const path = currentPath();
-    if(path === last) return;
+    if(path === null || path === last) return;
     last = path;
     // The external referrer belongs to the first page only; later pages are internal navigation.
     gc.count({ path, referrer: first ? document.referrer : '' });

@@ -27,6 +27,7 @@
   <link rel="stylesheet" id="grammarHubCss" href="css/grammar.css?v=5" />
   <link rel="stylesheet" href="css/a1-lessons.css?v=5" />
   <link rel="stylesheet" id="exerciseHubCss" href="css/exercises-hub.css?v=6" />
+  <link rel="stylesheet" href="css/placement.css?v=1" />
 </head>
 <body class="academy-theme">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
@@ -71,6 +72,7 @@
               <div class="home-actions">
                 <a class="home-button" href="#contact" data-page="contact" data-i18n="homeContact">İlk ders için iletişim</a>
                 <a class="home-text-link" href="#exercises" data-page="exercises"><span data-i18n="homeExercises">Alıştırmaları keşfet</span><span aria-hidden="true">→</span></a>
+                <a class="home-text-link home-level-link" href="#seviye-testi" data-page="seviye-testi"><span data-i18n="plLinkHome">Seviyeni ölç</span><span aria-hidden="true">→</span></a>
               </div>
               <dl class="home-stub">
                 <div><dt data-i18n="homeStubLevel">Seviye</dt><dd>A1 → B2</dd></div>
@@ -228,6 +230,16 @@
             </div>
             <a class="btn gold lesson-cta-button" href="#contact" data-page="contact" data-i18n="lessonCtaButton">İletişime geç</a>
             </div>
+          </div>
+        </section>
+
+        <section class="block lesson-page-block">
+          <div class="pl-promo ba-field">
+            <div>
+              <h2 data-i18n="plPromoTitle">Ders almadan önce seviyeni ölç</h2>
+              <p data-i18n="plPromoText">5–25 dakikalık seviye testi: sonuç bana ulaşır, ilk dersi buna göre planlarım.</p>
+            </div>
+            <a class="btn pl-promo-button" href="#seviye-testi" data-page="seviye-testi" data-i18n="plPromoButton">Seviye testine başla</a>
           </div>
         </section>
       </section>
@@ -509,7 +521,7 @@
               <div class="contact-guide-slip ba-slip">
                 <p class="contact-guide-title" data-i18n="contactGuideTitle">Mesajında paylaşabileceğin bilgiler:</p>
                 <ul class="contact-guide-list ba-checklist">
-                <li data-i18n="contactGuide1">Almanca seviyen (biliyorsan A1–B2)</li>
+                <li><span data-i18n="contactGuide1">Almanca seviyen (biliyorsan A1–B2)</span> <a class="contact-level-link" href="#seviye-testi" data-page="seviye-testi" data-i18n="plLinkContact">Seviyeni bilmiyor musun? Önce seviye testini çöz.</a></li>
                 <li data-i18n="contactGuide2">Hedefin: günlük Almanca, sınav, iş veya okul</li>
                 <li data-i18n="contactGuide3">Zorlandığın konu veya beceri</li>
                 <li data-i18n="contactGuide4">Sınavın varsa sınav adı ve tarihi</li>
@@ -552,6 +564,15 @@
           </div>
         </section>
       </section>
+
+      <section class="page" id="page-seviye-testi" aria-label="Seviye testi">
+        <div class="block pl-wrap" id="placementApp"><noscript><p>Seviye testi için tarayıcında JavaScript’i etkinleştir.</p></noscript></div>
+      </section>
+
+      <!-- Yönetim: sitenin hiçbir yerinden bağlantı yok; yetkiyi firestore.rules belirler. -->
+      <section class="page" id="page-yonetim" aria-label="Yönetim">
+        <div class="block admin-wrap" id="adminApp"></div>
+      </section>
     </main>
 
     <footer>
@@ -564,7 +585,7 @@
       </div>
     </footer>
   </div>
-  <script src="js/app.js?v=22"></script>
+  <script src="js/app.js?v=23"></script>
   <script src="js/quiz.js?v=23"></script>
   <script src="js/exercise-links.js?v=5"></script>
   <script src="js/a1-lessons.js?v=10"></script>
@@ -574,8 +595,9 @@
   <script src="js/examsData.js?v=15"></script>
   <script src="js/exam-task.js?v=10"></script>
   <script src="js/exams.js?v=5"></script>
+  <script src="js/placement.js?v=1"></script>
   <script type="module" src="js/account/session.js?v=1"></script>
   <script defer data-goatcounter="https://bozkurtacademy.goatcounter.com/count" data-goatcounter-settings='{"no_onload": true}' src="js/vendor/count.js?v=2.7.0"></script>
-  <script defer src="js/analytics.js?v=3"></script>
+  <script defer src="js/analytics.js?v=4"></script>
 </body>
 </html>

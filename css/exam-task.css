@@ -90,6 +90,7 @@
 #page-exams .task-q--fehlersatz .task-option:hover{background:var(--ba-paper-2)}
 #page-exams .task-q--fehlersatz .task-option:has(input:disabled):hover{background:transparent}
 #page-exams .task-q--fehlersatz .task-option:not(.is-chosen) .task-option-text{text-decoration:underline dotted var(--ba-muted);text-underline-offset:4px}
+#page-exams .task-q--fehlersatz .task-option.is-chosen,#page-exams .task-q--fehlersatz .task-option.is-chosen:has(input:disabled):hover{background:var(--ba-accent);color:var(--ba-accent-ink)}
 
 /* After checking */
 #page-exams .task-q.is-right{box-shadow:inset 4px 0 0 var(--ba-right)}

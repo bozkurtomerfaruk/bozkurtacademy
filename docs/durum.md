@@ -2,6 +2,14 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-10-26 · Lesen ekleri: TestDaF dijital Aufgabe 2 ve 7, telc C1 ana fikir soruları, telc A2 set değişikliği
+
+- **TestDaF dijital Aufgabe 2 (Textabschnitte ordnen):** 5 set. Giriş paragrafı sabit; A–D paragraflarına sıra numarası (2–5) seçilir. Yeni soru tipi `reihenfolge`: sayı düğmeleri en az 44 px, telefonda tek satır.
+- **TestDaF dijital Aufgabe 7 (Fehler in der Zusammenfassung):** 5 set. Özet üç paragrafa bölündü; her paragraftaki cümleler akan metin olarak tıklanır, öğrenci yanlış olanı seçer. Yeni soru tipi `fehlersatz`. Resmî sınavda özetteki üç yanlış cümle tek metinde aranıyor (≈); bizde her paragrafta bir tane.
+- **telc C1 Hochschule Teil 3, soru 24:** beş setteki çeldiriciler aşırı genellemeler yerine metinle ilişkili ama ana fikri kaçıran ifadelerle değiştirildi (ikincil ayrıntı, eleştirmenin görüşü, metnin çürüttüğü ilk varsayım, vurguyu kaydıran sonuç).
+- **telc A2 Teil 2 set-4:** köy sineması yerine „Vogelhäuser für den Stadtpark“ (bir sınıfın parka kuş evi yapması); anahtar aynı.
+- İnceleme ve kör çözüm sonuçları aşağıda, aşama sonunda.
+
 ## 2026-10-19 · Lesen tamamlama: 8 aşama (Goethe C1 → TestDaF kâğıt → TestDaF dijital → telc B1, A1, A2, B2, C1 Hochschule)
 
 ### Kaldığım yer
@@ -157,20 +165,16 @@ Dijital modelltest ekte yoktu. Kaynak: testdaf.de'deki test yapısı ve demo gö
 | Aufgabe | Görev (kaynak) | Soru | Bizim çözümümüz |
 |---|---|---|---|
 | 1 | Lückentext ergänzen: her boşluk için verilen seçeneklerden biri (✔), 4 seçenek (≈) | 5 | Var olan a/b/c/d boşluk soruları (C1 Teil 1 gibi). Yapılabilir |
-| 2 | Textabschnitte ordnen: paragrafları sürükleyerek sıralama (✔) | 4 | **Atlanıyor:** sürükle-bırak ile sıralama, büyük oynatıcı değişikliği |
+| 2 | Textabschnitte ordnen: paragrafları sürükleyerek sıralama (✔) | 4 | Sürükle-bırak yerine her paragrafa sıra numarası (2–5) seçilir; telefonda da rahat sayı düğmeleri (`reihenfolge`). Eklendi (2026-10-26) |
 | 3 | Multiple Choice, uzun metin (✔) | 7 | a/b/c. Yapılabilir |
 | 4 | Sprachhandlungen zuordnen: metindeki bölümlere dil eylemi (eleştirmek, örneklemek …) atama (≈ ayrıntı) | 4 | Metinde numaralı bölümler, seçenekler etiketli kısa metinler (zuordnung). Yapılabilir |
 | 5 | Aussagen Kategorien zuordnen (✔ ad), kategori sayısı (≈ 3) | 7 | Kategoriler etiketli metin, her ifade için açılır liste. Yapılabilir |
 | 6 | Aussagen einem Begriffspaar zuordnen (✔ ad) | 4 | İki kategorili eşleştirme; A1 Teil 2'deki a/b düğmeleriyle. Yapılabilir |
-| 7 | Fehler in Zusammenfassung erkennen: özetteki 3 yanlış cümleye tıklama (✔) | 3 | **Atlanıyor:** metinde cümle seçme ve tıklama, büyük oynatıcı değişikliği |
+| 7 | Fehler in Zusammenfassung erkennen: özetteki 3 yanlış cümleye tıklama (✔) | 3 | Özet üç paragrafa bölünür, her paragraftaki cümleler tıklanır ve yanlış olan seçilir (`fehlersatz`). Eklendi (2026-10-26) |
 
 **Aşama 3 bitti: 5 Aufgabe × 5 set (25 set, 135 soru).** Aufgabe 1, 3, 4, 5 ve 6 yapıldı.
 
-**Atlanan görevler:**
-- Aufgabe 2 (paragraf sıralama, sürükle-bırak)
-- Aufgabe 7 (özette yanlış cümleye tıklama)
-
-İkisi de oynatıcıda büyük değişiklik gerektiriyor; seçimde „şimdilik yok“ olarak görünüyor.
+**Atlanan görevler (sonradan eklendi):** Aufgabe 2 ve 7 ilk turda atlanmıştı; 2026-10-26'da basit yöntemlerle eklendi (aşağıdaki not).
 
 **Kör çözüm:** pilotta 54/54, set 3–5'te 81/81 uyuştu. Çözücünün işaretlediği üç soru netleştirildi ve yeniden kör çözümde 3/3 uyuştu:
 - 1.3/2: „hingegen“ için açık bir karşıtlık eklendi (başka üniversiteler yasakladı).

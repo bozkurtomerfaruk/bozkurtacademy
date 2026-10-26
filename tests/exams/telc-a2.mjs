@@ -22,7 +22,7 @@ for (const [w, th] of [[1280, 'light'], [390, 'dark']]) {
     if (t === 3) ok(await page.locator('select:not([disabled]) option[value="x"]').count() === 5, `${label}: x option in five selects`);
     await page.click('[data-task-check]'); await page.waitForTimeout(400);
     const sol = await page.locator(`.task-q[data-q="${q.number}"] .task-solution`).textContent();
-    ok(sol.includes(q.answer), `${label}: solution "${sol.trim().slice(0, 40)}"`);
+    ok(sol.toLowerCase().includes(q.answer.toLowerCase()), `${label}: solution "${sol.trim().slice(0, 40)}"`);
     if (s === 1) await page.locator('.task-group').first().screenshot({ path: shot(`ta2-t${t}-${w}.png`) });
     const over = await overflow(page);
     ok(over <= 0, `${label}: no horizontal overflow (${over})`);

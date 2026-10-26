@@ -7,7 +7,7 @@
   "set": "set-5",
   "title": "Die Erfindung des Kalenders",
   "minutes": 10,
-  "instructions": "Lesen Sie den Text und die Zusammenfassung. In jedem Absatz der Zusammenfassung ist ein Satz falsch. Klicken Sie den falschen Satz an.",
+  "instructions": "Lesen Sie den Text und die Zusammenfassung. In der Zusammenfassung sind drei Sätze falsch. Klicken Sie die drei falschen Sätze an.",
   "groups": [
     {
       "layout": "article",
@@ -29,62 +29,48 @@
       "questions": [
         {
           "number": 32,
-          "type": "fehlersatz",
-          "prompt": "Zusammenfassung, Absatz 1",
+          "type": "fehlerauswahl",
+          "prompt": "Zusammenfassung",
           "options": {
-            "a": "Dass Kalender stets nur Näherungen sind, liegt dem Text zufolge vor allem daran, dass frühe Kulturen die Bewegungen der Himmelskörper nicht genau genug messen konnten.",
-            "b": "Zwölf Mondumläufe von Neumond zu Neumond ergeben ein Jahr, das rund elf Tage kürzer ist als der Kreislauf der Jahreszeiten.",
-            "c": "In Ägypten verzichtete der amtliche Kalender auf einen Ausgleichstag, weshalb sich seine Daten allmählich gegenüber den Jahreszeiten verschoben.",
-            "d": "Quednau zufolge duldete man diese Drift lange, weil man sich in der Landwirtschaft an natürlichen Signalen wie dem Nilhochwasser orientierte, während die Verwaltung vor allem gleich lange, einfach zu berechnende Jahre benötigte.",
-            "e": "Bei den Babyloniern behielt man hingegen Mondmonate bei und glich den Rückstand durch gelegentliche Zusatzmonate aus, die man später regelmäßig einfügte."
+            "a": "Ein Kalender muss den Wechsel von Tag und Nacht, den Mondumlauf und die Jahreszeiten aufeinander abstimmen, obwohl diese Rhythmen nicht glatt ineinander aufgehen.",
+            "b": "So ergeben zwölf Mondmonate rund elf Tage weniger als ein Sonnenjahr, weshalb jede Kalenderordnung ein Kompromiss bleibt.",
+            "c": "Der ägyptische Verwaltungskalender kam ohne Schalttag aus, sodass seine Daten über Jahrhunderte langsam durch die Jahreszeiten wanderten.",
+            "d": "Die Wissenschaftshistorikerin Quednau erklärt die lange Duldung dieser Drift damit, dass sich die Verschiebung innerhalb eines Menschenlebens kaum bemerkbar machte.",
+            "e": "In Babylon dagegen begann ein Monat erst, wenn nach dem Neumond die erste schmale Mondsichel am Abendhimmel zu sehen war.",
+            "f": "Den Rückstand zum Sonnenjahr glich man dort mit einem dreizehnten Monat aus, der zunächst auf Anordnung des Königs, später nach einem festen Schema eingefügt wurde.",
+            "g": "Im republikanischen Rom bestimmte ein Priesterkollegium über die Schaltmonate, wobei antiken Autoren zufolge häufig politische Motive mitspielten.",
+            "h": "Caesar glich 46 v. Chr. eine Abweichung von rund drei Monaten durch ein Jahr mit 445 Tagen aus und führte danach alle vier Jahre einen Schalttag ein.",
+            "i": "Doch auch das julianische Jahr war um gut elf Minuten zu lang, sodass der Frühlingsbeginn im 16. Jahrhundert rund zehn Tage vor dem 21. März lag.",
+            "j": "Das störte vor allem die Kirche, deren Osterberechnung an diesen Termin gebunden war.",
+            "k": "Papst Gregor XIII. ließ deshalb 1582 zehn Tage überspringen und schränkte die Schaltjahre bei vollen Jahrhunderten ein.",
+            "l": "Mehrere katholische Länder übernahmen die Reform noch im selben Jahr, die meisten protestantischen Gebiete des Reiches erst rund fünfzig Jahre später.",
+            "m": "Viele Protestanten befürchteten nach Quednau, mit der päpstlichen Zählung auch die katholischen Feiertage übernehmen zu müssen.",
+            "n": "Auch der gregorianische Kalender ist nicht vollkommen, weicht aber nur um etwa einen Tag in gut 3.000 Jahren vom Sonnenjahr ab."
           },
-          "answer": "a",
+          "breaks": [
+            "f",
+            "k"
+          ],
+          "answer": [
+            "d",
+            "l",
+            "m"
+          ],
           "evidence": [
             {
               "text": "artikel",
-              "quote": "die sich nicht ohne Rest ineinander umrechnen lassen"
-            }
-          ],
-          "explanation": "Metne göre sorun ölçüm hatası değil, doğal döngülerin kendisi: gün, ay ve yıl „sich nicht ohne Rest ineinander umrechnen lassen“ (birbirine artıksız çevrilemiyor). Bu yüzden „Jede Kalenderordnung ist daher ein Kompromiss“ (her takvim bir uzlaşmadır). a cümlesi nedeni eski kültürlerin yetersiz gözlemine bağladığı için yanlış; Quednau Mısır örneğinde kaymanın hoş görülmesini bile açıkça „nicht als Unwissen“ (bilgisizlik değil) diye yorumluyor. b (12 ay döngüsü yaklaşık 11 gün kısa), c (artık gün yok, tarihler kayıyor), d (tarımda Nil taşkını gibi doğa olaylarına bakılıyordu, idari takvimden ise eşit uzunlukta, kolay hesaplanan yıllar bekleniyordu) ve e (Babil'de ek ay, sonra sabit düzen) metinle uyuşuyor."
-        },
-        {
-          "number": 33,
-          "type": "fehlersatz",
-          "prompt": "Zusammenfassung, Absatz 2",
-          "options": {
-            "a": "Im republikanischen Rom entschied ein Gremium von Priestern über Schaltmonate, wobei nach antiken Quellen oft auch politische Interessen im Spiel waren.",
-            "b": "Caesar behob die aufgelaufene Verschiebung, indem er ein einzelnes Jahr stark verlängerte, und führte danach einen regelmäßigen Schalttag ein.",
-            "c": "Weil das julianische Jahr geringfügig zu kurz bemessen war, wich der Kalender im Lauf der Jahrhunderte um etwa zehn Tage vom Frühlingsbeginn ab.",
-            "d": "Das störte vor allem die Kirche, weil sie das Osterdatum von diesem Tag aus berechnete.",
-            "e": "Mit der Reform von 1582 wurden einmalig zehn Tage ausgelassen und die Schaltregel für Jahrhundertjahre eingeschränkt."
-          },
-          "answer": "c",
-          "evidence": [
+              "quote": "Dass man diese Drift über Jahrhunderte duldete, deutet Quednau nicht als Unwissen."
+            },
             {
               "text": "artikel",
-              "quote": "Doch auch das julianische Jahr war um gut elf Minuten zu lang."
-            }
-          ],
-          "explanation": "Metin açıkça „das julianische Jahr war um gut elf Minuten zu lang“ (Jülyen yılı on bir dakikadan biraz fazla uzundu) diyor; bu fark yüzyıllar içinde birikmiş ve ilkbaharın başlangıcı 16. yüzyılda 21 Mart'tan yaklaşık on gün önceye düşmüş. c cümlesi yılın „zu kurz“ (fazla kısa) olduğunu söyleyerek yönü tersine çeviriyor; bu yüzden yanlış. Not: Mısır takviminin yılı kısaydı, Jülyen takviminin yılı ise uzundu. a (rahiplerden oluşan bir kurul; antik yazarlara göre kararlar sık sık siyasi amaçlıydı), b (445 günlük yıl, her dört yılda bir ek gün), d (Paskalya hesabı 21 Mart'a bağlı olduğu için özellikle Kilise rahatsızdı) ve e (on gün atlandı, 400 kuralı) metinle uyuşuyor."
-        },
-        {
-          "number": 34,
-          "type": "fehlersatz",
-          "prompt": "Zusammenfassung, Absatz 3",
-          "options": {
-            "a": "Mehrere katholische Länder übernahmen die Reform noch im selben Jahr, die meisten protestantischen Gebiete des Reiches dagegen erst über ein Jahrhundert später.",
-            "b": "Viele Protestanten zögerten, weil sie die astronomischen Grundlagen der päpstlichen Reform für unzuverlässig hielten.",
-            "c": "Großbritannien schloss sich der neuen Zeitrechnung erst 170 Jahre nach ihrer Einführung an.",
-            "d": "Auch das heute gebräuchliche System stimmt nicht exakt mit dem Sonnenjahr überein, der Fehler ist allerdings sehr gering."
-          },
-          "answer": "b",
-          "evidence": [
+              "quote": "stellten die meisten protestantischen Territorien des Reiches erst 1700 um"
+            },
             {
               "text": "artikel",
               "quote": "erkannte damit – so die Befürchtung vieler Protestanten – auch die Autorität Roms an"
             }
           ],
-          "explanation": "Metne göre birçok Protestanın kaygısı astronomik değil, dinî-siyasiydi: Papanın takvimini benimseyen „erkannte damit … auch die Autorität Roms an“ (böylece Roma'nın otoritesini de tanımış olurdu). b cümlesi gecikmenin nedenini hesapların güvenilmez bulunmasına bağladığı için yanlış: Metin Protestanların çekincesinin nedeni olarak açıkça Roma'nın otoritesini tanıma kaygısını gösteriyor; Quednau da takvim konusunda „nie allein die Astronomie“ (hiçbir zaman yalnızca astronomi) karar vermediğini vurguluyor. a (birçok Katolik ülke 1582'de, Reich'taki Protestan toprakların çoğu ancak 1700'de geçti), c (Büyük Britanya ancak 1752'de, yani 170 yıl sonra) ve d (yaklaşık 3.000 yılda bir gün sapma) metinle uyuşuyor."
+          "explanation": "d yanlış: Quednau, Mısır'da kaymanın yüzyıllarca hoş görülmesini fark edilmemesine bağlamıyor; tersine „Dass man diese Drift über Jahrhunderte duldete, deutet Quednau nicht als Unwissen“ (bilgisizlik olarak yorumlamıyor). Ona göre tarımda Nil taşkını gibi doğa olaylarına bakılıyordu, idari takvimden ise eşit uzunlukta, kolay hesaplanan yıllar bekleniyordu; yani kayma bilinçli olarak kabul edildi. l yanlış: Katolik ülkelerin birçoğu reformu gerçekten 1582'de benimsedi, ama Reich'taki Protestan toprakların çoğu „erst 1700“ (ancak 1700'de), yani yaklaşık 118 yıl sonra geçti; yaklaşık elli yıl değil. m yanlış: Birçok Protestanın kaygısı Katolik bayramlarını üstlenmek değildi; metne göre papanın takvimini benimseyen „erkannte damit – so die Befürchtung vieler Protestanten – auch die Autorität Roms an“ (böylece Roma'nın otoritesini de tanımış olurdu). Cümle kaygının konusunu değiştiriyor. Diğer cümleler metinle uyuşuyor: a ve b (üç ritim birbirine artıksız çevrilemiyor; 12 kameri ay güneş yılından yaklaşık 11 gün kısa, bu yüzden her takvim bir uzlaşma), c (Mısır'ın idari takviminde artık gün yoktu, tarihler mevsimler içinde kaydı), e ve f (Babil'de ay ilk hilalle başlıyordu; 13. ay önce kral emriyle, sonra sabit bir düzene göre eklendi), g (Roma'da rahip kurulu; antik yazarlara göre sık sık siyasi amaçlar), h (Caesar MÖ 46'da üç aylık farkı 445 günlük bir yılla giderdi, sonra her dört yılda bir ek gün), i ve j (Jülyen yılı on bir dakikadan fazla uzundu; ilkbahar başlangıcı 21 Mart'tan yaklaşık on gün önceye kaydı; Paskalya hesabı yüzünden özellikle Kilise rahatsızdı), k (1582'de on gün atlandı, yüzyıl yılları için artık yıl kuralı daraltıldı) ve n (Gregoryen takvim de kusursuz değil, ama yaklaşık 3.000 yılda bir gün sapıyor)."
         }
       ]
     }

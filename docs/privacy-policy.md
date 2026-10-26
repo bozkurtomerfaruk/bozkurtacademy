@@ -108,5 +108,7 @@ Guests who never sign in load nothing from Google, unless they send a placement-
 2. Then remove the "Bu metin hukuki olarak kontrol edilmektedir" note and the `noindex` meta tag, and
    show the "Giriş" menu link in `index.html` again (it is `hidden` for the quiet launch).
 
+`privacy.html` is available in Turkish, German and English (one block per language, `js/privacy.js`).
+
 If you teach from Germany as a business, also check whether you need an Impressum; the same
-footer nav can hold that link.
+footer nav can hold that link. (Checked 26 October 2026: the site has no Impressum yet; waiting for the owner's details.)

@@ -50,11 +50,12 @@
     </header>
 
     <main id="main" tabindex="-1" class="acc-main">
-      <article class="acc-wrap acc-legal" aria-labelledby="privacyTitle">
+      <article class="acc-wrap acc-legal">
+        <div class="privacy-lang" data-privacy-lang="tr" lang="tr">
         <p class="acc-status warning" role="note">Bu metin hukuki olarak kontrol edilmektedir.</p>
         <header class="acc-head">
-          <p class="acc-eyebrow" data-privacy="updated">Son güncelleme: 26 Ekim 2026</p>
-          <h1 id="privacyTitle">Gizlilik politikası</h1>
+          <p class="acc-eyebrow">Son güncelleme: 26 Ekim 2026</p>
+          <h1 id="privacyTitle-tr">Gizlilik politikası</h1>
           <p class="acc-lead">Bu sayfa, Bozkurt Academy sitesini kullanırken ve öğrenci hesabı açtığında hangi kişisel verilerin işlendiğini, nerede saklandığını ve haklarını açıklar.</p>
         </header>
 
@@ -69,14 +70,14 @@
             <li><strong>Barındırma:</strong> Site GitHub Pages (GitHub Inc., ABD) üzerinde çalışır. Her sayfa isteğinde IP adresi, tarayıcı ve cihaz bilgisi, tarih ve istenen sayfa GitHub'ın sunucu kayıtlarına düşer. Hukuki dayanak: sitenin güvenli ve çalışır şekilde sunulmasındaki meşru menfaat (DSGVO md. 6/1-f).</li>
             <li><strong>Çerez yok:</strong> Site çerez kullanmaz.</li>
             <li><strong>Tarayıcıda saklanan ayarlar (localStorage):</strong> tema (<code>ba-theme</code>), dil (<code>baLang</code>), alıştırmalardaki en iyi skor (<code>baBestScore:…</code>) ve giriş yapmış olup olmadığın için bir ipucu (<code>baAccount</code>, sadece “student” ya da “teacher”). Bunlar cihazından dışarı gönderilmez.</li>
-            <li data-privacy="storagePlacement"><strong>Seviye testi (localStorage):</strong> testteki ilerlemen (<code>baPlacement</code>: cevaplar, seçeneklerin sırası, form taslağı) ve son gönderim zamanı (<code>baPlacementSent</code>). Bunlar sen gönderene kadar cihazından çıkmaz; gönderimden sonra ilerleme silinir.</li>
-            <li data-privacy="firebaseLoad">Giriş yapmamış ziyaretçiler için Firebase yüklenmez. Tek istisna: Seviye testinin sonucunu göndermek için “Sonucu gönder”e bastığında Firebase yüklenir (bkz. 5a).</li>
+            <li><strong>Seviye testi (localStorage):</strong> testteki ilerlemen (<code>baPlacement</code>: cevaplar, seçeneklerin sırası, form taslağı) ve son gönderim zamanı (<code>baPlacementSent</code>). Bunlar sen gönderene kadar cihazından çıkmaz; gönderimden sonra ilerleme silinir.</li>
+            <li>Giriş yapmamış ziyaretçiler için Firebase yüklenmez. Tek istisna: Seviye testinin sonucunu göndermek için “Sonucu gönder”e bastığında Firebase yüklenir (bkz. 5a).</li>
           </ul>
         </section>
 
         <section>
           <h2>3. Ziyaretçi istatistiği (GoatCounter)</h2>
-          <p data-privacy="goatcounter">Herkese açık sayfalarda (ana sayfa, dersler, gramer, alıştırmalar, sınav hazırlığı, seviye testi, hakkımda, iletişim) hangi sayfaların ne sıklıkla açıldığını görmek için GoatCounter kullanılır. Giriş, kayıt, öğrenci paneli ve öğretmen paneli sayfalarında GoatCounter yoktur.</p>
+          <p>Herkese açık sayfalarda (ana sayfa, dersler, gramer, alıştırmalar, sınav hazırlığı, seviye testi, hakkımda, iletişim) hangi sayfaların ne sıklıkla açıldığını görmek için GoatCounter kullanılır. Giriş, kayıt, öğrenci paneli ve öğretmen paneli sayfalarında GoatCounter yoktur.</p>
           <ul>
             <li>Sayım isteği <code>bozkurtacademy.goatcounter.com</code> adresine gider. GoatCounter'ın kodu bu siteden yüklenir, başka bir adresten değil.</li>
             <li>Gönderilenler: sayfa adresi (ör. <code>/#grammar/A1/artikel</code>; alıştırmalardaki soru numarası gönderilmez), ziyaretin ilk sayfasında hangi siteden gelindiği (referrer), sayfa başlığı, tarayıcı bilgisi ve ekran genişliği. GoatCounter IP adresinden ülkeyi belirler; IP adresini saklamaz.</li>
@@ -105,21 +106,21 @@
           <p>Kayıttan sonra hesap öğretmen onayıyla açılır. Öğretmen dışında kimse başka bir öğrencinin verisini göremez.</p>
         </section>
 
-        <section id="seviye-testi">
-          <h2 data-privacy="placementTitle">5a. Seviye testi</h2>
-          <p data-privacy="placementData">Seviye testini çözüp sonucunu gönderdiğinde şu bilgiler kaydedilir: adın, e-posta adresin, hedefin, varsa sınavının adı ve tarihi, daha önce ne kadar süre Almanca öğrendiğin, notun, test sonucun (tahmini seviye, bölümlere göre doğru sayısı, konu bazında hatalar, yanlış cevapladığın sorular ve cevapların), yazma görevine yazdığın metin, testin süresi ve gönderim tarihi.</p>
-          <p data-privacy="placementPurpose">Bu bilgileri sadece ders planlaması ve seninle ilk ders için iletişim kurmak amacıyla kullanırım; yalnızca ben görebilirim.</p>
-          <p data-privacy="placementFirebase">Veriler Google Firebase’de (Google Ireland Ltd. / Google LLC) işlenir: Cloud Firestore’da Frankfurt’taki (europe-west3) sunucularda saklanır. Gönderim için Firebase Authentication üzerinden anonim, geçici bir oturum açılır ve gönderimden hemen sonra kapatılır; bu sırada Google cihazının IP adresini ve tarayıcı bilgilerini işler ve bu işleme ABD’de de olabilir (AB-ABD Veri Gizliliği Çerçevesi ve standart sözleşme maddeleri). Firebase’in program dosyaları gstatic.com’dan yüklenir.</p>
-          <p data-privacy="placementBasis">Hukuki dayanak: senin talebin üzerine sözleşme öncesi adımlar (DSGVO md. 6/1-b) ve gönderirken verdiğin onay (DSGVO md. 6/1-a).</p>
-          <p data-privacy="placementRetention">Saklama süresi: Sonuç gönderimden 6 ay sonra otomatik olarak silinir. Derslere başlarsak ilgili bilgiler öğrenci kaydına aktarılabilir; o zaman 10. bölüm geçerlidir.</p>
-          <p data-privacy="placementDelete">Kaydının daha önce silinmesini istediğinde <a class="ba-link" href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a> adresine yazman yeterli; onayını istediğin zaman geri alabilirsin.</p>
+        <section id="seviye-testi" data-anchor="seviye-testi">
+          <h2>5a. Seviye testi</h2>
+          <p>Seviye testini çözüp sonucunu gönderdiğinde şu bilgiler kaydedilir: adın, e-posta adresin, hedefin, varsa sınavının adı ve tarihi, daha önce ne kadar süre Almanca öğrendiğin, notun, test sonucun (tahmini seviye, bölümlere göre doğru sayısı, konu bazında hatalar, yanlış cevapladığın sorular ve cevapların), yazma görevine yazdığın metin, testin süresi ve gönderim tarihi.</p>
+          <p>Bu bilgileri sadece ders planlaması ve seninle ilk ders için iletişim kurmak amacıyla kullanırım; yalnızca ben görebilirim.</p>
+          <p>Veriler Google Firebase’de (Google Ireland Ltd. / Google LLC) işlenir: Cloud Firestore’da Frankfurt’taki (europe-west3) sunucularda saklanır. Gönderim için Firebase Authentication üzerinden anonim, geçici bir oturum açılır ve gönderimden hemen sonra kapatılır; bu sırada Google cihazının IP adresini ve tarayıcı bilgilerini işler ve bu işleme ABD’de de olabilir (AB-ABD Veri Gizliliği Çerçevesi ve standart sözleşme maddeleri). Firebase’in program dosyaları gstatic.com’dan yüklenir.</p>
+          <p>Hukuki dayanak: senin talebin üzerine sözleşme öncesi adımlar (DSGVO md. 6/1-b) ve gönderirken verdiğin onay (DSGVO md. 6/1-a).</p>
+          <p>Saklama süresi: Sonuç gönderimden 6 ay sonra otomatik olarak silinir. Derslere başlarsak ilgili bilgiler öğrenci kaydına aktarılabilir; o zaman 10. bölüm geçerlidir.</p>
+          <p>Kaydının daha önce silinmesini istediğinde <a class="ba-link" href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a> adresine yazman yeterli; onayını istediğin zaman geri alabilirsin.</p>
         </section>
 
         <section>
           <h2>6. Firebase (Google)</h2>
           <ul>
-            <li data-privacy="firebaseIntro">Giriş, öğrenci ve seviye testi verileri Google Firebase ile işlenir (Google Ireland Ltd. / Google LLC).</li>
-            <li data-privacy="firestore"><strong>Cloud Firestore:</strong> Öğrenci ve seviye testi verileri Frankfurt’taki (europe-west3) sunucularda saklanır.</li>
+            <li>Giriş, öğrenci ve seviye testi verileri Google Firebase ile işlenir (Google Ireland Ltd. / Google LLC).</li>
+            <li><strong>Cloud Firestore:</strong> Öğrenci ve seviye testi verileri Frankfurt’taki (europe-west3) sunucularda saklanır.</li>
             <li><strong>Firebase Authentication:</strong> Giriş hesabı (e-posta adresi, şifrenin şifrelenmiş özeti, Google ile girişte Google'dan gelen ad, e-posta ve profil fotoğrafı adresi) Google tarafından AB dışında, özellikle ABD'de de işlenebilir. ABD'ye aktarım, AB-ABD Veri Gizliliği Çerçevesi (EU-U.S. Data Privacy Framework) ve AB Komisyonu'nun standart sözleşme maddeleri dayanağıyla yapılır.</li>
             <li>E-posta ve şifreyle kayıt olduğunda Firebase, e-posta adresini doğrulaman için bir e-posta gönderir.</li>
             <li>Firebase, giriş durumunu tarayıcında (IndexedDB) saklar. Bu, girişin çalışması için teknik olarak gereklidir.</li>
@@ -159,9 +160,236 @@
         <section>
           <h2>11. Hakların</h2>
           <p>Verilerine erişme, düzeltilmesini, silinmesini, işlenmesinin kısıtlanmasını ve taşınmasını isteme, meşru menfaate dayanan işlemeye itiraz etme ve verdiğin onayı geri alma hakkın var. Bunun için <a class="ba-link" href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a> adresine yazabilirsin; öğrenci panelindeki “Verilerimin silinmesini iste” bağlantısı da bu adrese bir e-posta hazırlar.</p>
-          <p data-privacy="rightsPlacement">Seviye testi sonucunun silinmesini <a class="ba-link" href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a> adresine e-postayla isteyebilirsin.</p>
+          <p>Seviye testi sonucunun silinmesini <a class="ba-link" href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a> adresine e-postayla isteyebilirsin.</p>
           <p>Ayrıca bir veri koruma denetim makamına şikâyette bulunabilirsin. Sorumlu için yetkili makam: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW), <a class="ba-link" href="https://www.ldi.nrw.de" target="_blank" rel="noopener noreferrer">www.ldi.nrw.de</a>.</p>
         </section>
+        </div>
+        <div class="privacy-lang" data-privacy-lang="de" lang="de" hidden>
+        <p class="acc-status warning" role="note">Dieser Text wird derzeit rechtlich geprüft.</p>
+        <header class="acc-head">
+          <p class="acc-eyebrow">Stand: 26. Oktober 2026</p>
+          <h1 id="privacyTitle-de">Datenschutzerklärung</h1>
+          <p class="acc-lead">Diese Datenschutzerklärung informiert Sie darüber, welche personenbezogenen Daten bei der Nutzung der Website von Bozkurt Academy und bei der Eröffnung eines Schülerkontos verarbeitet werden, wo sie gespeichert werden und welche Rechte Sie haben.</p>
+        </header>
+
+        <section>
+          <h2>1. Verantwortlicher</h2>
+          <p>Ömer Faruk Bozkurt<br>[adres kaldırıldı], Deutschland<br>E-Mail: <a class="ba-link" href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a></p>
+        </section>
+
+        <section>
+          <h2>2. Beim Besuch der Website</h2>
+          <ul>
+            <li><strong>Hosting:</strong> Die Website wird bei GitHub Pages (GitHub Inc., USA) gehostet. Bei jedem Seitenaufruf werden IP-Adresse, Browser- und Geräteinformationen, Datum und Uhrzeit sowie die aufgerufene Seite in den Server-Logfiles von GitHub erfasst. Rechtsgrundlage ist das berechtigte Interesse an einer sicheren und funktionsfähigen Bereitstellung der Website (Art. 6 Abs. 1 lit. f DSGVO).</li>
+            <li><strong>Keine Cookies:</strong> Diese Website verwendet keine Cookies.</li>
+            <li><strong>Im Browser gespeicherte Einstellungen (localStorage):</strong> Farbschema (<code>ba-theme</code>), Sprache (<code>baLang</code>), bester Punktestand in den Übungen (<code>baBestScore:…</code>) sowie ein Hinweis darauf, ob Sie angemeldet sind (<code>baAccount</code>, nur „student“ oder „teacher“). Diese Angaben verlassen Ihr Gerät nicht.</li>
+            <li><strong>Einstufungstest (localStorage):</strong> Ihr Fortschritt im Test (<code>baPlacement</code>: Antworten, Reihenfolge der Antwortmöglichkeiten, Formularentwurf) und der Zeitpunkt der letzten Übermittlung (<code>baPlacementSent</code>). Diese Daten verlassen Ihr Gerät erst, wenn Sie sie absenden; nach dem Absenden wird der Fortschritt gelöscht.</li>
+            <li>Für nicht angemeldete Besucherinnen und Besucher wird Firebase nicht geladen. Einzige Ausnahme: Wenn Sie nach dem Einstufungstest auf „Ergebnis senden“ klicken, wird Firebase geladen, um das Ergebnis zu übermitteln (siehe Abschnitt 5a).</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>3. Besucherstatistik (GoatCounter)</h2>
+          <p>Auf den öffentlichen Seiten (Startseite, Unterricht, Grammatik, Übungen, Prüfungsvorbereitung, Einstufungstest, Über mich, Kontakt) wird GoatCounter eingesetzt, um zu erfahren, welche Seiten wie häufig aufgerufen werden. Auf den Seiten für Anmeldung, Registrierung, Schülerbereich und Lehrerbereich wird GoatCounter nicht verwendet.</p>
+          <ul>
+            <li>Die Zählanfrage wird an <code>bozkurtacademy.goatcounter.com</code> gesendet. Das Skript von GoatCounter wird von dieser Website selbst geladen, nicht von einem fremden Server.</li>
+            <li>Übermittelt werden: die Seitenadresse (z.&nbsp;B. <code>/#grammar/A1/artikel</code>; Fragenummern in Übungen werden nicht übermittelt), beim ersten Seitenaufruf eines Besuchs die verweisende Website (Referrer), der Seitentitel, Browserinformationen und die Bildschirmbreite. GoatCounter ermittelt aus der IP-Adresse das Land, speichert die IP-Adresse jedoch nicht.</li>
+            <li>Es werden weder Cookies noch localStorage verwendet; es wird keine Kennung erzeugt, mit der Sie über mehrere Seiten oder Tage hinweg wiedererkannt werden könnten.</li>
+            <li>Rechtsgrundlage ist das berechtigte Interesse an einer nicht personenbezogenen Nutzungsstatistik zur Verbesserung der Website (Art. 6 Abs. 1 lit. f DSGVO).</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. Kontaktformular und Kommentare</h2>
+          <p>Wenn Sie das Kontaktformular oder das Kommentarformular in den Grammatiklektionen absenden, werden Ihr Name, Ihre E-Mail-Adresse und Ihre Nachricht über FormSubmit (formsubmit.co) an das Gmail-Postfach des Lehrers weitergeleitet. Bei freigegebenen Kommentaren werden nur Name, Datum und Kommentar veröffentlicht, nicht jedoch die E-Mail-Adresse.</p>
+        </section>
+
+        <section>
+          <h2>5. Schülerkonto</h2>
+          <p>Das Schülerkonto dient der Durchführung des Unterrichts und der Verfolgung des Lernfortschritts. Es werden nur die hierfür erforderlichen Daten erhoben:</p>
+          <ul>
+            <li>Vor- und Nachname, E-Mail-Adresse, Geburtsjahr (nicht das vollständige Geburtsdatum),</li>
+            <li>Kontostatus (Freischaltung ausstehend, aktiv, inaktiv), Datum der Freischaltung und die Angabe, ob die E-Mail-Adresse bestätigt wurde,</li>
+            <li>Ergebnisse der Übungen, die Sie im angemeldeten Zustand bearbeiten: Thema, Niveau, Punktzahl und Zeitpunkt,</li>
+            <li>Bearbeitungsstand der Hausaufgaben und der Google-Docs-Link, den Sie einer Hausaufgabe hinzufügen,</li>
+            <li>Unterrichtsdaten: Datum, Uhrzeit, Dauer, Notiz zur Stunde und Google-Meet-Link,</li>
+            <li>bei Schülerinnen und Schülern unter 16 Jahren zusätzlich Name und E-Mail-Adresse eines Elternteils sowie Datum und Art der elterlichen Einwilligung.</li>
+          </ul>
+          <p>Rechtsgrundlage ist die Durchführung des Unterrichtsvertrags (Art. 6 Abs. 1 lit. b DSGVO), bei Schülerinnen und Schülern unter 16 Jahren die Einwilligung der Eltern (Art. 6 Abs. 1 lit. a und Art. 8 DSGVO). Für technische Maßnahmen wie das Führen von Löschvermerken und die Vermeidung doppelt versandter E-Mails ist Rechtsgrundlage das berechtigte Interesse (Art. 6 Abs. 1 lit. f DSGVO).</p>
+          <p>Nach der Registrierung wird das Konto durch den Lehrer freigeschaltet. Außer dem Lehrer kann niemand die Daten anderer Schülerinnen und Schüler einsehen.</p>
+        </section>
+
+        <section id="seviye-testi-de" data-anchor="seviye-testi">
+          <h2>5a. Einstufungstest</h2>
+          <p>Wenn Sie den Einstufungstest bearbeiten und das Ergebnis absenden, werden folgende Angaben gespeichert: Ihr Name, Ihre E-Mail-Adresse, Ihr Lernziel, gegebenenfalls Name und Datum Ihrer Prüfung, wie lange Sie bereits Deutsch lernen, Ihre Notiz, Ihr Testergebnis (geschätztes Niveau, richtige Antworten je Teil, Fehler nach Themen, falsch beantwortete Fragen und Ihre Antworten), der Text aus der Schreibaufgabe, die Bearbeitungsdauer und das Datum der Übermittlung.</p>
+          <p>Diese Angaben verwende ich ausschließlich zur Unterrichtsplanung und um Sie wegen der ersten Unterrichtsstunde zu kontaktieren; nur ich habe Zugriff darauf.</p>
+          <p>Die Daten werden mit Google Firebase (Google Ireland Ltd. / Google LLC) verarbeitet und in Cloud Firestore auf Servern in Frankfurt am Main (europe-west3) gespeichert. Für die Übermittlung wird über Firebase Authentication eine anonyme, vorübergehende Sitzung eröffnet und unmittelbar danach wieder beendet. Dabei verarbeitet Google die IP-Adresse und Browserinformationen Ihres Geräts, gegebenenfalls auch in den USA (auf Grundlage des EU-U.S. Data Privacy Framework und der Standardvertragsklauseln). Die Programmdateien von Firebase werden von gstatic.com geladen.</p>
+          <p>Rechtsgrundlage sind die Durchführung vorvertraglicher Maßnahmen auf Ihre Anfrage (Art. 6 Abs. 1 lit. b DSGVO) und Ihre beim Absenden erteilte Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</p>
+          <p>Speicherdauer: Das Ergebnis wird sechs Monate nach der Übermittlung automatisch gelöscht. Beginnen wir mit dem Unterricht, können die relevanten Angaben in Ihr Schülerkonto übernommen werden; dann gilt Abschnitt 10.</p>
+          <p>Wenn Ihr Eintrag früher gelöscht werden soll, genügt eine E-Mail an <a class="ba-link" href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a>. Ihre Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen.</p>
+        </section>
+
+        <section>
+          <h2>6. Firebase (Google)</h2>
+          <ul>
+            <li>Anmelde-, Schüler- und Einstufungstestdaten werden mit Google Firebase verarbeitet (Google Ireland Ltd. / Google LLC).</li>
+            <li><strong>Cloud Firestore:</strong> Schüler- und Einstufungstestdaten werden auf Servern in Frankfurt am Main (europe-west3) gespeichert.</li>
+            <li><strong>Firebase Authentication:</strong> Das Anmeldekonto (E-Mail-Adresse, Hashwert des Passworts, bei der Anmeldung mit Google der von Google übermittelte Name, die E-Mail-Adresse und die Adresse des Profilbilds) kann von Google auch außerhalb der EU, insbesondere in den USA, verarbeitet werden. Die Übermittlung in die USA erfolgt auf Grundlage des EU-U.S. Data Privacy Framework sowie der Standardvertragsklauseln der Europäischen Kommission.</li>
+            <li>Bei der Registrierung mit E-Mail-Adresse und Passwort sendet Firebase eine E-Mail zur Bestätigung Ihrer E-Mail-Adresse.</li>
+            <li>Firebase speichert den Anmeldestatus in Ihrem Browser (IndexedDB). Dies ist für die Anmeldung technisch erforderlich.</li>
+            <li><strong>Die Anmeldung mit Google</strong> ist nur für Schülerinnen und Schüler ab 16 Jahren möglich. Die Website verwendet aus dem Google-Konto ausschließlich Ihren Namen und Ihre E-Mail-Adresse.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>7. Google Calendar und Google Meet</h2>
+          <p>Jede Unterrichtsstunde wird als Termin im Google Calendar des Lehrers angelegt und automatisch mit einem Google-Meet-Link versehen. Für die Einladung werden Name, E-Mail-Adresse und Unterrichtszeit an Google übermittelt; bei Schülerinnen und Schülern unter 16 Jahren wird (sofern aktiviert) auch die E-Mail-Adresse eines Elternteils zur Einladung hinzugefügt. Einladungen und Änderungsmitteilungen versendet Google. Während der Videositzung gelten die Datenschutzbestimmungen von Google Meet.</p>
+        </section>
+
+        <section>
+          <h2>8. Erinnerungs-E-Mails</h2>
+          <p>Einen Tag vor der Unterrichtsstunde erhalten Schülerinnen und Schüler (und gegebenenfalls ein Elternteil) eine Erinnerung per Gmail, die über ein Google Apps Script im Google-Konto des Lehrers versendet wird. Damit dieselbe E-Mail nicht zweimal versendet wird, wird ein kryptografischer Hashwert (SHA-256) der E-Mail-Adresse 14 Tage lang gespeichert.</p>
+        </section>
+
+        <section>
+          <h2>9. Schülerinnen und Schüler unter 16 Jahren</h2>
+          <ul>
+            <li>Konten von Schülerinnen und Schülern unter 16 Jahren werden erst nach Freigabe durch den Lehrer und mit Einwilligung eines Elternteils freigeschaltet. Da nur das Geburtsjahr bekannt ist, gilt dies auch für Schülerinnen und Schüler, die im laufenden Jahr 16 Jahre alt werden.</li>
+            <li>Die Einwilligung der Eltern wird außerhalb der Website eingeholt (unterschriebenes Formular oder E-Mail eines Elternteils). Auf der Website werden nur Datum und Art der Einwilligung gespeichert. Unterschriebene Einwilligungsformulare werden aufbewahrt, bis die Einwilligung widerrufen oder das Schülerkonto gelöscht wird: Papierformulare in einem verschlossenen Schrank, digitale Formulare (eingescanntes Formular oder E-Mail eines Elternteils) in einem verschlüsselten Ordner.</li>
+            <li>Name und E-Mail-Adresse des Elternteils werden für die Einwilligung und (sofern aktiviert) für Unterrichtseinladungen gespeichert.</li>
+            <li>Eltern können ihre Einwilligung jederzeit widerrufen. Nach einem Widerruf werden sämtliche Daten der Schülerin bzw. des Schülers gelöscht. Der Widerruf berührt nicht die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>10. Speicherdauer</h2>
+          <ul>
+            <li>Schülerdaten werden zwölf Monate nach der letzten Unterrichtsstunde gelöscht (hat keine Stunde stattgefunden, zwölf Monate nach Freischaltung des Kontos).</li>
+            <li>Nicht freigeschaltete Registrierungen werden innerhalb von 30 Tagen gelöscht.</li>
+            <li>Die Löschung nimmt der Lehrer vor. Anschließend werden auch versendete E-Mails in Gmail und Termine im Papierkorb von Google Calendar (höchstens 30 Tage) entfernt.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>11. Ihre Rechte</h2>
+          <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Datenübertragbarkeit, das Recht, einer auf berechtigten Interessen beruhenden Verarbeitung zu widersprechen, sowie das Recht, eine erteilte Einwilligung zu widerrufen. Wenden Sie sich hierfür an <a class="ba-link" href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a>; auch der Link „Löschung meiner Daten anfragen“ im Schülerbereich erstellt eine E-Mail an diese Adresse.</p>
+          <p>Die Löschung Ihres Einstufungstest-Ergebnisses können Sie per E-Mail an <a class="ba-link" href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a> verlangen.</p>
+          <p>Darüber hinaus haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständig für den Verantwortlichen ist die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW), <a class="ba-link" href="https://www.ldi.nrw.de" target="_blank" rel="noopener noreferrer">www.ldi.nrw.de</a>.</p>
+        </section>
+        </div>
+        <div class="privacy-lang" data-privacy-lang="en" lang="en" hidden>
+        <p class="acc-status warning" role="note">This text is currently under legal review.</p>
+        <header class="acc-head">
+          <p class="acc-eyebrow">Last updated: 26 October 2026</p>
+          <h1 id="privacyTitle-en">Privacy policy</h1>
+          <p class="acc-lead">This page explains which personal data are processed when you use the Bozkurt Academy website and when you open a student account, where they are stored, and what your rights are.</p>
+        </header>
+
+        <section>
+          <h2>1. Controller</h2>
+          <p>Ömer Faruk Bozkurt<br>[adres kaldırıldı], Germany<br>Email: <a class="ba-link" href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a></p>
+        </section>
+
+        <section>
+          <h2>2. When you visit the website</h2>
+          <ul>
+            <li><strong>Hosting:</strong> The website runs on GitHub Pages (GitHub Inc., USA). With every page request, the IP address, browser and device details, the date and time, and the requested page are recorded in GitHub’s server logs. Legal basis: legitimate interest in providing the website securely and reliably (Art. 6(1)(f) GDPR).</li>
+            <li><strong>No cookies:</strong> The website does not use cookies.</li>
+            <li><strong>Settings stored in your browser (localStorage):</strong> colour theme (<code>ba-theme</code>), language (<code>baLang</code>), your best score in the exercises (<code>baBestScore:…</code>) and a hint whether you are signed in (<code>baAccount</code>, only “student” or “teacher”). These are never sent from your device.</li>
+            <li><strong>Placement test (localStorage):</strong> your progress in the test (<code>baPlacement</code>: answers, order of the options, form draft) and the time of your last submission (<code>baPlacementSent</code>). This stays on your device until you send it; your progress is deleted after sending.</li>
+            <li>Firebase is not loaded for visitors who are not signed in. The only exception: when you press “Send result” after the placement test, Firebase is loaded to send the result (see section 5a).</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>3. Visitor statistics (GoatCounter)</h2>
+          <p>On the public pages (home, lessons, grammar, exercises, exam preparation, placement test, about, contact) GoatCounter is used to see which pages are opened and how often. There is no GoatCounter on the login, registration, student panel and teacher panel pages.</p>
+          <ul>
+            <li>The counting request goes to <code>bozkurtacademy.goatcounter.com</code>. GoatCounter’s script is loaded from this website itself, not from another server.</li>
+            <li>What is sent: the page address (e.g. <code>/#grammar/A1/artikel</code>; question numbers in exercises are not sent), on the first page of a visit the website you came from (referrer), the page title, browser details and screen width. GoatCounter derives the country from the IP address but does not store the IP address.</li>
+            <li>No cookies and no localStorage are used; no identifier is created that recognises you across pages or days.</li>
+            <li>Legal basis: legitimate interest in usage statistics that are not linked to a person, in order to improve the website (Art. 6(1)(f) GDPR).</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. Contact form and comments</h2>
+          <p>When you send the contact form or the comment form on the grammar lessons, your name, email address and message are forwarded via FormSubmit (formsubmit.co) to the teacher’s Gmail account. For approved comments, only the name, date and comment are published; the email address is never published.</p>
+        </section>
+
+        <section>
+          <h2>5. Student account</h2>
+          <p>The student account is used to run the lessons and track your progress. Only the necessary data are collected:</p>
+          <ul>
+            <li>full name, email address, year of birth (not the full date of birth),</li>
+            <li>account status (pending approval, active, inactive), approval date and whether the email address has been verified,</li>
+            <li>results of the exercises you complete while signed in: topic, level, score and time,</li>
+            <li>the status of your homework and the Google Docs link you add to a homework task,</li>
+            <li>lesson details: date, time, duration, lesson note and Google Meet link,</li>
+            <li>for students under 16, also a parent’s name and email address and the date and method of the parent’s consent.</li>
+          </ul>
+          <p>Legal basis: performance of the lesson contract (Art. 6(1)(b) GDPR). For students under 16, the parent’s consent (Art. 6(1)(a) and Art. 8 GDPR). For technical measures such as keeping deletion records and avoiding sending the same email twice: legitimate interest (Art. 6(1)(f) GDPR).</p>
+          <p>After registration, the account is opened once the teacher approves it. Nobody except the teacher can see another student’s data.</p>
+        </section>
+
+        <section id="seviye-testi-en" data-anchor="seviye-testi">
+          <h2>5a. Placement test</h2>
+          <p>When you take the placement test and send your result, the following is stored: your name, email address, goal, the name and date of your exam if any, how long you have been learning German, your note, your test result (estimated level, correct answers per part, errors by topic, the questions you answered incorrectly and your answers), the text you wrote in the writing task, the duration of the test and the date you sent it.</p>
+          <p>I use this information only to plan lessons and to contact you about your first lesson; only I can see it.</p>
+          <p>The data are processed with Google Firebase (Google Ireland Ltd. / Google LLC) and stored in Cloud Firestore on servers in Frankfurt (europe-west3). To send them, a temporary anonymous session is opened via Firebase Authentication and closed immediately afterwards; during this, Google processes your device’s IP address and browser details, possibly also in the USA (EU-U.S. Data Privacy Framework and standard contractual clauses). Firebase’s program files are loaded from gstatic.com.</p>
+          <p>Legal basis: steps taken at your request prior to entering into a contract (Art. 6(1)(b) GDPR) and the consent you give when sending (Art. 6(1)(a) GDPR).</p>
+          <p>Retention: the result is deleted automatically six months after it was sent. If we start lessons, the relevant details may be transferred to your student account; section 10 then applies.</p>
+          <p>If you would like your entry deleted earlier, just write to <a class="ba-link" href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a>. You can withdraw your consent at any time.</p>
+        </section>
+
+        <section>
+          <h2>6. Firebase (Google)</h2>
+          <ul>
+            <li>Login, student and placement test data are processed with Google Firebase (Google Ireland Ltd. / Google LLC).</li>
+            <li><strong>Cloud Firestore:</strong> student and placement test data are stored on servers in Frankfurt (europe-west3).</li>
+            <li><strong>Firebase Authentication:</strong> The login account (email address, a hash of the password and, when signing in with Google, the name, email address and profile picture address provided by Google) may also be processed by Google outside the EU, in particular in the USA. Transfers to the USA are based on the EU-U.S. Data Privacy Framework and the European Commission’s standard contractual clauses.</li>
+            <li>When you register with email and password, Firebase sends you an email so that you can verify your email address.</li>
+            <li>Firebase stores your sign-in state in your browser (IndexedDB). This is technically necessary for signing in to work.</li>
+            <li><strong>Signing in with Google</strong> is only for students aged 16 and over. The website uses only your name and email address from your Google account.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>7. Google Calendar and Google Meet</h2>
+          <p>Each lesson is created as an event in the teacher’s Google Calendar, and a Google Meet link is added automatically. For the invitation, the student’s name, email address and lesson time are passed to Google; for students under 16 (if the setting is on), the parent’s email address is also added to the invitation. Google sends the invitation and update emails. During the call, Google Meet’s own privacy terms apply.</p>
+        </section>
+
+        <section>
+          <h2>8. Reminder emails</h2>
+          <p>One day before a lesson, the student (and the parent, if applicable) receives a reminder email via Gmail, sent by a Google Apps Script running in the teacher’s Google account. To avoid sending the same email twice, a cryptographic hash (SHA-256) of the email address is stored for 14 days.</p>
+        </section>
+
+        <section>
+          <h2>9. Students under 16</h2>
+          <ul>
+            <li>Accounts of students under 16 are not opened without the teacher’s approval and a parent’s consent. Because only the year of birth is known, students who turn 16 this year also need a parent’s consent.</li>
+            <li>The parent’s consent is obtained outside the website (signed form or the parent’s email). The website only records the date and method of consent. Signed consent forms are kept until consent is withdrawn or the student is deleted: paper forms in a locked cabinet, digital ones (scanned form or the parent’s email) in an encrypted folder.</li>
+            <li>The parent’s name and email address are stored for the consent and (if the setting is on) for lesson invitations.</li>
+            <li>A parent can withdraw consent at any time. If consent is withdrawn, all of the student’s data are deleted. Withdrawal does not affect the lawfulness of processing carried out before it.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>10. Retention period</h2>
+          <ul>
+            <li>Student data are deleted 12 months after the last lesson (if there was no lesson, 12 months after the account was approved).</li>
+            <li>Registrations that are not approved are deleted within 30 days.</li>
+            <li>Deletion is carried out by the teacher. Afterwards, sent emails in Gmail and events in Google Calendar’s bin (at most 30 days) are also cleared.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>11. Your rights</h2>
+          <p>You have the right to access your data and to request its rectification, erasure, restriction of processing and portability, the right to object to processing based on legitimate interest, and the right to withdraw any consent you have given. To do so, write to <a class="ba-link" href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a>; the “Request deletion of my data” link in the student panel also prepares an email to this address.</p>
+          <p>You can ask for your placement test result to be deleted by emailing <a class="ba-link" href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a>.</p>
+          <p>You also have the right to lodge a complaint with a data protection supervisory authority. The competent authority for the controller is the Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW), <a class="ba-link" href="https://www.ldi.nrw.de" target="_blank" rel="noopener noreferrer">www.ldi.nrw.de</a>.</p>
+        </section>
+        </div>
       </article>
     </main>
 
@@ -177,6 +405,6 @@
   </div>
   <script src="js/app.js?v=23"></script>
   <script src="js/theme.js?v=9"></script>
-  <script src="js/privacy.js?v=1"></script>
+  <script src="js/privacy.js?v=2"></script>
 </body>
 </html>

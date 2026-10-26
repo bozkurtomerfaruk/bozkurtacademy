@@ -2,6 +2,19 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-10-26 · Gizlilik politikası tamamen TR/DE/EN; Impressum kontrolü
+
+- **Diller:** `privacy.html`'deki metnin tamamı üç dilde, üç ayrı blokta (`data-privacy-lang`). Dil düğmesine göre yalnızca biri görünüyor. Sayfa başlığı ve açıklaması da dile göre değişiyor. JavaScript kapalıyken Türkçe görünüyor.
+- **Metinler:**
+  - Türkçe metin değişmedi.
+  - Almanca resmî Datenschutzerklärung dilinde, „Sie“ hitabıyla; hukuki dayanaklar „Art. 6 Abs. 1 lit. … DSGVO“ biçiminde.
+  - İngilizce „Art. 6(1)(…) GDPR“ biçiminde.
+  - „şifrelenmiş özet“ ifadesi DE/EN'de teknik olarak doğru karşılığıyla çevrildi: „Hashwert“ / „hash“.
+- **Bağlantılar:** `privacy.html#seviye-testi` gibi bağlantılar hangi dil seçiliyse o dildeki 5a bölümüne gidiyor (`data-anchor`, `js/privacy.js` v2).
+- **Testler:** `npm run test:placement` 217 kontrol, hepsi geçti; gizlilik sayfası için 71 kontrol (üç dil, iki tema, 390 px, tek dil görünürlüğü, bağlantılar, JavaScript kapalı).
+- **Impressum:** Sitede yok. Gerekli bilgilerin listesi sana iletildi. Bilgiler gelene kadar sayfa oluşturulmayacak.
+- **Hukuki kontrol:** „Bu metin hukuki olarak kontrol edilmektedir“ notu üç dilde de duruyor. Almanca ve İngilizce metinler de hukuki kontrolden geçmeli.
+
 ## 2026-10-26 · Gizlilik politikası: seviye testi bölümü (TR/DE/EN)
 
 - **Senin onayınla `privacy.html`'e eklenenler:**

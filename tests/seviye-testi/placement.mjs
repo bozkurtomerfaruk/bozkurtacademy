@@ -415,40 +415,53 @@ for(const [lang, title] of [['tr', 'Seviye tespit sınavı'], ['de', 'Einstufung
   await ctx.close();
 }
 
-// 11. Gizlilik sayfası: seviye testi bölümü üç dilde, Firebase cümlesi düzeltildi, tarih güncel
-for(const [lang, title, firebase, updated] of [
-  ['tr', '5a. Seviye testi', 'Tek istisna: Seviye testinin sonucunu göndermek', 'Son güncelleme: 26 Ekim 2026'],
-  ['de', '5a. Einstufungstest', 'Einzige Ausnahme: Wenn du beim Einstufungstest', 'Zuletzt aktualisiert: 26. Oktober 2026'],
-  ['en', '5a. Placement test', 'The only exception: when you press “Send result”', 'Last updated: 26 October 2026']
-]){
+// 11. Gizlilik sayfası: metnin tamamı TR/DE/EN; dil düğmesine göre tek dil görünür
+const PRIVACY = {
+  tr: { h1: 'Gizlilik politikası', title: '5a. Seviye testi', firebase: 'Tek istisna: Seviye testinin sonucunu göndermek', updated: 'Son güncelleme: 26 Ekim 2026', foreign: ['Verantwortlicher', 'Controller'], doc: 'Gizlilik politikası | Bozkurt Academy' },
+  de: { h1: 'Datenschutzerklärung', title: '5a. Einstufungstest', firebase: 'Einzige Ausnahme: Wenn Sie nach dem Einstufungstest', updated: 'Stand: 26. Oktober 2026', foreign: ['Sorumlu', 'Controller', 'Siteyi ziyaret'], doc: 'Datenschutzerklärung | Bozkurt Academy' },
+  en: { h1: 'Privacy policy', title: '5a. Placement test', firebase: 'The only exception: when you press “Send result”', updated: 'Last updated: 26 October 2026', foreign: ['Sorumlu', 'Verantwortlicher', 'Siteyi ziyaret'], doc: 'Privacy policy | Bozkurt Academy' }
+};
+const visibleText = (page) => page.evaluate(() => document.querySelector('.acc-legal').innerText);
+for(const [lang, x] of Object.entries(PRIVACY)){
   for(const [width, theme] of [[1280, 'light'], [390, 'dark']]){
     const { ctx, page } = await newPage({ width, theme, lang, emulator: false });
-    await page.goto(B.replace('index.html', 'privacy.html#seviye-testi')); await page.waitForTimeout(500);
+    await page.goto(B.replace('index.html', 'privacy.html#seviye-testi')); await page.waitForTimeout(600);
     const label = `gizlilik ${lang} ${width} ${theme}`;
-    ok((await page.locator('#seviye-testi h2').textContent()) === title, `${label}: başlık "${title}"`);
-    ok((await page.locator('[data-privacy="firebaseLoad"]').textContent()).includes(firebase), `${label}: Firebase cümlesi`);
-    ok((await page.locator('[data-privacy="updated"]').textContent()) === updated, `${label}: tarih`);
-    ok(await page.locator('#seviye-testi a[href="mailto:bozkurtt.omerfaruk@gmail.com"]').count() === 1, `${label}: silme talebi için e-posta bağlantısı`);
-    ok(await page.locator('[data-privacy="rightsPlacement"] a[href^="mailto:"]').count() === 1, `${label}: Haklar bölümünde silme talebi`);
-    ok((await page.locator('#seviye-testi').textContent()).match(/6 (ay|Monate|months)/) && (await page.locator('#seviye-testi').textContent()).includes('Firebase'), `${label}: Firebase ve 6 ay`);
-    ok(await page.locator('[data-privacy="storagePlacement"] code').count() === 2, `${label}: localStorage anahtarları`);
-    ok(await page.locator('#seviye-testi').getAttribute('lang') === null && await page.locator('[data-privacy="placementData"]').getAttribute('lang') === lang, `${label}: lang özniteliği`);
+    const block = page.locator(`[data-privacy-lang="${lang}"]`);
+    ok(await page.locator('[data-privacy-lang]:not([hidden])').count() === 1 && await block.isVisible(), `${label}: tek dil bloğu görünüyor`);
+    ok(await block.getAttribute('lang') === lang && await page.evaluate(() => document.documentElement.lang) === lang, `${label}: lang öznitelikleri`);
+    ok((await block.locator('h1').textContent()) === x.h1 && await page.title() === x.doc, `${label}: başlık "${x.h1}"`);
+    ok(await block.locator('section h2').count() === 12, `${label}: 12 bölüm (1–11 ve 5a)`);
+    const text = await visibleText(page);
+    ok(x.foreign.every((w) => !text.includes(w)), `${label}: görünen metinde başka dil yok`);
+    ok(text.includes(x.title) && text.includes(x.firebase) && text.includes(x.updated), `${label}: 5a, Firebase cümlesi ve tarih`);
+    ok(/6 (ay|Monate|months)|sechs Monate|six months/.test(text), `${label}: 6 ay saklama`);
+    ok(await block.locator('a[href="mailto:bozkurtt.omerfaruk@gmail.com"]').count() === 4, `${label}: e-posta bağlantıları (sorumlu, 5a, haklar ×2)`);
+    ok(await block.locator('code').count() === 8, `${label}: localStorage anahtarları ve örnek adresler`);
+    const anchor = await page.evaluate(() => { const el = [...document.querySelectorAll('[data-anchor="seviye-testi"]')].find((e) => !e.closest('[hidden]')); const r = el.getBoundingClientRect(); return r.top >= -5 && r.top < innerHeight; });
+    ok(anchor, `${label}: #seviye-testi bağlantısı görünen dildeki 5a bölümüne gidiyor`);
     ok(await overflow(page) <= 0, `${label}: taşma yok`);
     if(width === 390) await page.screenshot({ path: path.join(shotDir, `privacy-${lang}-${width}-${theme}.png`), fullPage: true });
     await ctx.close();
   }
 }
-// Dil sayfadayken de değişiyor; formdaki bağlantı yeni bölüme gidiyor
+// Dil sayfadayken de değişiyor; JavaScript yokken Türkçe görünüyor; formdaki bağlantı 5a'ya gidiyor
 {
   const { ctx, page } = await newPage({ emulator: false });
   await page.goto(B.replace('index.html', 'privacy.html')); await page.waitForTimeout(400);
-  await page.click('.lang button[data-lang="en"]'); await page.waitForTimeout(200);
-  ok((await page.locator('#seviye-testi h2').textContent()) === '5a. Placement test', 'gizlilik: dil düğmesi bölümü çeviriyor');
-  await page.click('.lang button[data-lang="tr"]'); await page.waitForTimeout(200);
-  ok((await page.locator('#seviye-testi h2').textContent()) === '5a. Seviye testi', 'gizlilik: Türkçeye geri dönüyor');
+  for(const lang of ['de', 'en', 'tr']){
+    await page.click(`.lang button[data-lang="${lang}"]`); await page.waitForTimeout(200);
+    ok(await page.locator(`[data-privacy-lang="${lang}"]`).isVisible() && await page.locator('[data-privacy-lang]:not([hidden])').count() === 1
+      && await page.title() === PRIVACY[lang].doc, `gizlilik: ${lang} düğmesi sayfanın tamamını değiştiriyor`);
+  }
   await start(page); await page.click('[data-pl-skip]'); await page.waitForTimeout(200);
   ok(await page.locator('.pl-consent a').getAttribute('href') === 'privacy.html#seviye-testi', 'onay kutusundaki bağlantı 5a bölümüne gidiyor');
   await ctx.close();
+  const noJs = await browser.newContext({ javaScriptEnabled: false });
+  const p2 = await noJs.newPage();
+  await p2.goto(B.replace('index.html', 'privacy.html'));
+  ok(await p2.locator('[data-privacy-lang="tr"]').isVisible() && !(await p2.locator('[data-privacy-lang="de"]').isVisible()), 'JavaScript kapalıyken Türkçe metin görünüyor');
+  await noJs.close();
 }
 
 await browser.close();

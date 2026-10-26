@@ -1,0 +1,124 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Ein Kindergeburtstag",
+  "minutes": 8,
+  "instructions": "Lesen Sie die zwei Texte und die Aufgaben 1 bis 5. Sind die Aussagen richtig oder falsch? Kreuzen Sie an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "email",
+          "title": "E-Mail",
+          "paragraphs": [
+            "Liebe Familie Ezeh,",
+            "unser Sohn Jonte wird am Freitag sieben Jahre alt. Wir feiern aber erst am Sonntag im Park am Fluss. Wir sind von 14 bis 17 Uhr dort, bei den großen Bäumen am Eingang. Kann Nia auch kommen? Wir spielen Fußball und essen Kuchen und Obst. Bitte geben Sie Nia Sportschuhe mit.",
+            "Viele Grüße, Vreni Heckmann"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Jonte wird acht Jahre alt.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "email",
+              "quote": "unser Sohn Jonte wird am Freitag sieben Jahre alt"
+            }
+          ],
+          "explanation": "Metinde: „Jonte wird am Freitag sieben Jahre alt“ (Jonte cuma günü yedi yaşına giriyor). İfadede sekiz (acht) var. Yaş yanlış, ifade yanlış."
+        },
+        {
+          "number": 1,
+          "type": "richtig-falsch",
+          "prompt": "Die Party im Park ist am Nachmittag.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "email",
+              "quote": "Wir sind von 14 bis 17 Uhr dort"
+            }
+          ],
+          "explanation": "Metinde: „von 14 bis 17 Uhr“ (saat 14'ten 17'ye kadar) parktalar. Bu saatler öğleden sonra (am Nachmittag). İfade doğru."
+        },
+        {
+          "number": 2,
+          "type": "richtig-falsch",
+          "prompt": "Die Kinder feiern am Freitag im Park.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "email",
+              "quote": "Wir feiern aber erst am Sonntag im Park am Fluss."
+            }
+          ],
+          "explanation": "Cuma (Freitag) Jonte'nin doğum günü. Ama parktaki kutlama başka bir gün: „Wir feiern aber erst am Sonntag im Park“ (Ama parkta ancak pazar günü kutluyoruz). Gün yanlış, ifade yanlış."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "sms",
+          "title": "SMS",
+          "paragraphs": [
+            "Hallo Frau Heckmann,",
+            "danke für die Einladung! Nia kommt sehr gern. Ich bringe Nia um 14 Uhr in den Park, aber ich kann nicht bleiben, denn ich muss arbeiten. Um 17 Uhr holt meine Frau Ifeoma unsere Tochter ab. Nia darf keine Schokolade essen. Ich gebe ihr einen Apfelkuchen mit.",
+            "Viele Grüße, Nnamdi Ezeh"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 3,
+          "type": "richtig-falsch",
+          "prompt": "Herr Ezeh ist bis 17 Uhr mit Nia im Park.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "sms",
+              "quote": "aber ich kann nicht bleiben, denn ich muss arbeiten"
+            }
+          ],
+          "explanation": "Herr Ezeh Nia'yı saat 14'te parka getiriyor, ama: „ich kann nicht bleiben, denn ich muss arbeiten“ (kalamam, çünkü çalışmam gerekiyor). Saat 17'de karısı Ifeoma kızlarını alıyor. İfade yanlış."
+        },
+        {
+          "number": 4,
+          "type": "richtig-falsch",
+          "prompt": "Nias Mutter kommt um fünf Uhr nachmittags in den Park.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "sms",
+              "quote": "Um 17 Uhr holt meine Frau Ifeoma unsere Tochter ab."
+            }
+          ],
+          "explanation": "Herr Ezeh yazıyor: „Um 17 Uhr holt meine Frau Ifeoma unsere Tochter ab“ (Saat 17'de eşim Ifeoma kızımızı alıyor). „unsere Tochter“ (kızımız) = Nia. Yani Ifeoma, Nia'nın annesi. 17 Uhr = öğleden sonra saat beş (fünf Uhr nachmittags). İfade doğru."
+        },
+        {
+          "number": 5,
+          "type": "richtig-falsch",
+          "prompt": "Nia bringt einen Kuchen mit.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "sms",
+              "quote": "Ich gebe ihr einen Apfelkuchen mit."
+            }
+          ],
+          "explanation": "Herr Ezeh yazıyor: „Ich gebe ihr einen Apfelkuchen mit“ (Ona yanında bir elmalı kek veriyorum). Yani Nia yanında bir kek getiriyor (bringt mit). İfade doğru."
+        }
+      ]
+    }
+  ]
+}

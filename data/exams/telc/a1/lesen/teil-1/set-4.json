@@ -1,0 +1,124 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-4",
+  "title": "Besuch am Wochenende",
+  "minutes": 8,
+  "instructions": "Lesen Sie die zwei Texte und die Aufgaben 1 bis 5. Sind die Aussagen richtig oder falsch? Kreuzen Sie an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "email",
+          "title": "E-Mail",
+          "paragraphs": [
+            "Liebe Wanda,",
+            "danke für deine Einladung! Ich komme gern am Wochenende zu dir. Ich fahre am Freitag mit dem Zug und bin um 18:40 Uhr am Bahnhof. Kannst du mich dort abholen? Mein Hund Pippo kommt auch mit. Er ist klein und sehr lieb. Am Sonntag um 15 Uhr fahre ich wieder nach Hause, denn am Montag muss ich früh arbeiten.",
+            "Bis Freitag! Ornella"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Ornella reist am Freitag mit der Bahn.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "email",
+              "quote": "Ich fahre am Freitag mit dem Zug"
+            }
+          ],
+          "explanation": "Ornella yazıyor: „Ich fahre am Freitag mit dem Zug“ (Cuma günü trenle geliyorum). „mit dem Zug“ ve „mit der Bahn“ aynı anlama gelir: trenle. İfade doğru."
+        },
+        {
+          "number": 1,
+          "type": "richtig-falsch",
+          "prompt": "Ornella bringt ein Tier mit.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "email",
+              "quote": "Mein Hund Pippo kommt auch mit."
+            }
+          ],
+          "explanation": "Metinde: „Mein Hund Pippo kommt auch mit“ (Köpeğim Pippo da benimle geliyor). Köpek (Hund) bir hayvandır (Tier). İfade doğru."
+        },
+        {
+          "number": 2,
+          "type": "richtig-falsch",
+          "prompt": "Ornella fährt am Sonntagvormittag nach Hause.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "email",
+              "quote": "Am Sonntag um 15 Uhr fahre ich wieder nach Hause"
+            }
+          ],
+          "explanation": "Metinde: „Am Sonntag um 15 Uhr fahre ich wieder nach Hause“ (Pazar günü saat 15'te eve dönüyorum). Saat 15 öğleden sonradır, öğleden önce (Vormittag) değil. İfade yanlış."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "sms",
+          "title": "SMS",
+          "paragraphs": [
+            "Hallo Ornella,",
+            "super, ich freue mich sehr! Am Freitag arbeite ich leider bis 19 Uhr. Mein Mann Bodo holt dich am Bahnhof ab. Bodo hat ein rotes Auto. Pippo ist kein Problem, wir haben einen großen Garten. Am Samstag gehen wir in den Zoo und am Abend in den Zirkus. Die Karten für den Zirkus habe ich schon gekauft.",
+            "Liebe Grüße, Wanda"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 3,
+          "type": "richtig-falsch",
+          "prompt": "Wanda holt Ornella am Freitag vom Bahnhof ab.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "sms",
+              "quote": "Mein Mann Bodo holt dich am Bahnhof ab."
+            }
+          ],
+          "explanation": "Wanda cuma günü saat 19'a kadar çalışıyor. Metinde: „Mein Mann Bodo holt dich am Bahnhof ab“ (Kocam Bodo seni garda karşılıyor). Ornella'yı Wanda değil, Bodo alıyor. İfade yanlış."
+        },
+        {
+          "number": 4,
+          "type": "richtig-falsch",
+          "prompt": "Wanda muss die Karten für den Zirkus nicht mehr kaufen.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "sms",
+              "quote": "Die Karten für den Zirkus habe ich schon gekauft."
+            }
+          ],
+          "explanation": "Wanda yazıyor: „Die Karten für den Zirkus habe ich schon gekauft“ (Sirk biletlerini ben zaten aldım). Biletler hazır, Wanda'nın onları artık almasına gerek yok. İfade doğru."
+        },
+        {
+          "number": 5,
+          "type": "richtig-falsch",
+          "prompt": "Ornella und Wanda gehen am Samstagabend in den Zoo.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "sms",
+              "quote": "Am Samstag gehen wir in den Zoo und am Abend in den Zirkus."
+            }
+          ],
+          "explanation": "Metinde: „Am Samstag gehen wir in den Zoo und am Abend in den Zirkus“ (Cumartesi hayvanat bahçesine, akşam da sirke gidiyoruz). Akşam (Abend) sirke gidiyorlar, hayvanat bahçesine (Zoo) değil. İfade yanlış."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-4",
+  "title": "Apotheke und Friseur",
+  "minutes": 9,
+  "instructions": "Lesen Sie die Texte und die Aufgaben 11 bis 15. Sind die Aussagen richtig oder falsch? Kreuzen Sie an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "zu",
+          "title": "Apotheke am Markt",
+          "paragraphs": [
+            "Liebe Kunden, heute ab 13 Uhr ist unsere Apotheke geschlossen. Am Nachmittag und am Abend ist die Apotheke am Bahnhof offen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Heute um 16 Uhr ist die Apotheke am Bahnhof geöffnet.",
+          "answer": "richtig",
+          "evidence": [{ "text": "zu", "quote": "Am Nachmittag und am Abend ist die Apotheke am Bahnhof offen." }],
+          "explanation": "Metin: „Am Nachmittag und am Abend ist die Apotheke am Bahnhof offen.“ (Öğleden sonra ve akşam istasyondaki eczane açık). Saat 16 öğleden sonra. Apotheke am Markt saat 13'ten sonra kapalı, ama istasyondaki eczane açık („offen“ ve „geöffnet“ aynı anlama gelir: açık). İfade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "termin",
+          "title": "Friseur Friedl",
+          "paragraphs": [
+            "Von Montag bis Mittwoch schneiden wir Haare nur mit Termin. Von Donnerstag bis Samstag können Sie auch ohne Termin kommen. Telefon: 37 52 09."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 11,
+          "type": "richtig-falsch",
+          "prompt": "Am Dienstag kann man ohne Termin zum Friseur gehen.",
+          "answer": "falsch",
+          "evidence": [{ "text": "termin", "quote": "Von Montag bis Mittwoch schneiden wir Haare nur mit Termin." }],
+          "explanation": "Metin: „Von Montag bis Mittwoch schneiden wir Haare nur mit Termin.“ (Pazartesiden çarşambaya kadar saçı sadece randevuyla kesiyoruz). Salı (Dienstag) bu günlerin içinde. Randevusuz (ohne Termin) gelmek sadece perşembeden cumartesiye kadar mümkün."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "bringen",
+          "title": "Apotheke im Zentrum",
+          "paragraphs": [
+            "Sie sind krank und können nicht zu uns kommen? Rufen Sie bis 12 Uhr an. Dann bringen wir Ihre Medikamente am Nachmittag zu Ihnen nach Hause."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 12,
+          "type": "richtig-falsch",
+          "prompt": "Die Apotheke bringt die Medikamente am Vormittag zu den Kunden.",
+          "answer": "falsch",
+          "evidence": [{ "text": "bringen", "quote": "Dann bringen wir Ihre Medikamente am Nachmittag zu Ihnen nach Hause." }],
+          "explanation": "Metin: „Dann bringen wir Ihre Medikamente am Nachmittag zu Ihnen nach Hause.“ (Sonra ilaçlarınızı öğleden sonra evinize getiriyoruz). Öğleden önce (am Vormittag) sadece telefon ediliyor: „Rufen Sie bis 12 Uhr an“ (saat 12'ye kadar arayın). Yani ilaçlar öğleden önce değil, öğleden sonra geliyor."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "krank",
+          "title": "Friseur Lemke",
+          "paragraphs": [
+            "Liebe Kunden, Frau Weidenbach ist diese Woche krank. Die Termine von Frau Weidenbach am Dienstag und Mittwoch macht Herr Castellano."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 13,
+          "type": "richtig-falsch",
+          "prompt": "Am Mittwoch arbeitet Herr Castellano für Frau Weidenbach.",
+          "answer": "richtig",
+          "evidence": [{ "text": "krank", "quote": "Die Termine von Frau Weidenbach am Dienstag und Mittwoch macht Herr Castellano." }],
+          "explanation": "Metin: „Frau Weidenbach ist diese Woche krank“ (Frau Weidenbach bu hafta hasta) ve „Die Termine von Frau Weidenbach am Dienstag und Mittwoch macht Herr Castellano.“ (Frau Weidenbach'ın salı ve çarşamba randevularını Herr Castellano yapıyor). Yani çarşamba günü Herr Castellano onun yerine çalışıyor. İfade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "rezept",
+          "title": "Apotheke an der Kirche",
+          "paragraphs": [
+            "Haben Sie ein Rezept vom Arzt? Dann kommen Sie bitte an den Tisch am Fenster. Alle anderen Kunden gehen bitte an die Kasse neben der Tür."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 14,
+          "type": "richtig-falsch",
+          "prompt": "Mit einem Rezept soll man an die Kasse neben der Tür gehen.",
+          "answer": "falsch",
+          "evidence": [{ "text": "rezept", "quote": "Dann kommen Sie bitte an den Tisch am Fenster." }],
+          "explanation": "Metin: „Haben Sie ein Rezept vom Arzt? Dann kommen Sie bitte an den Tisch am Fenster.“ (Doktordan reçeteniz var mı? O zaman lütfen pencerenin yanındaki masaya gelin). Kapının yanındaki kasaya (Kasse neben der Tür) reçetesi olmayan diğer müşteriler gidiyor. Yani reçeteyle kasaya değil, pencere yanındaki masaya gidilir."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "donnerstag",
+          "title": "Salon Pfaff",
+          "paragraphs": [
+            "Neu: Am Donnerstag haben wir bis 21 Uhr für Sie geöffnet. Montag bis Mittwoch, Freitag und Samstag schließen wir um 18 Uhr."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 15,
+          "type": "richtig-falsch",
+          "prompt": "Am Donnerstag kann man um 20 Uhr noch zum Friseur gehen.",
+          "answer": "richtig",
+          "evidence": [{ "text": "donnerstag", "quote": "Am Donnerstag haben wir bis 21 Uhr für Sie geöffnet." }],
+          "explanation": "Metin: „Am Donnerstag haben wir bis 21 Uhr für Sie geöffnet.“ (Perşembe günü saat 21'e kadar açığız). Saat 20, 21'den önce. Diğer günlerde kuaför saat 18'de kapanıyor, ama perşembe günü saat 20'de hâlâ açık. İfade doğru."
+        }
+      ]
+    }
+  ]
+}

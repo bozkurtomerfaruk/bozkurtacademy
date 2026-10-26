@@ -1,0 +1,260 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-3",
+  "title": "Arbeit und Jobs",
+  "minutes": 8,
+  "instructions": "Lesen Sie die Texte und die Aufgaben 6 bis 10. Wo finden Sie Informationen? Kreuzen Sie an: a oder b.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q0a",
+          "label": "a",
+          "title": "Restaurant am Teich",
+          "paragraphs": [
+            "Wir suchen Hilfe für Samstag und Sonntag, immer von 11 bis 17 Uhr. Rufen Sie an: 38 14 92."
+          ]
+        },
+        {
+          "id": "q0b",
+          "label": "b",
+          "title": "Restaurant zur Mühle",
+          "paragraphs": [
+            "Hilfe gesucht! Sie arbeiten bei uns von Montag bis Freitag, von 17 bis 22 Uhr. Am Samstag und Sonntag ist das Restaurant zu."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Von Montag bis Freitag besuchen Sie eine Schule. Sie möchten nur am Wochenende in einem Restaurant arbeiten.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q0a",
+              "quote": "für Samstag und Sonntag, immer von 11 bis 17 Uhr"
+            },
+            {
+              "text": "q0b",
+              "quote": "Am Samstag und Sonntag ist das Restaurant zu."
+            }
+          ],
+          "explanation": "Sadece hafta sonu (Wochenende) çalışmak istiyorsunuz. a ilanında „für Samstag und Sonntag“ yazıyor: Cumartesi ve pazar için yardım (Hilfe) aranıyor. b ilanında iş pazartesiden cumaya. Ayrıca „Am Samstag und Sonntag ist das Restaurant zu“ yazıyor: Cumartesi ve pazar restoran kapalı (zu = kapalı). Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q6a",
+          "label": "a",
+          "title": "Firma Bredow",
+          "paragraphs": [
+            "Wir putzen Büros im Stadtzentrum und suchen Frauen und Männer. Arbeitszeit: Montag bis Freitag von 6 bis 9 Uhr am Morgen. Telefon 52 70 33."
+          ]
+        },
+        {
+          "id": "q6b",
+          "label": "b",
+          "title": "Putzfirma Stöver",
+          "paragraphs": [
+            "Wir putzen Büros und Schulen und suchen neue Kolleginnen und Kollegen. Sie arbeiten von Montag bis Freitag, immer von 18 bis 21 Uhr."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "zuordnung",
+          "prompt": "Sie möchten Büros putzen. Sie können aber nur nach 17 Uhr arbeiten.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q6b",
+              "quote": "immer von 18 bis 21 Uhr"
+            },
+            {
+              "text": "q6a",
+              "quote": "von 6 bis 9 Uhr am Morgen"
+            }
+          ],
+          "explanation": "Sadece saat 17’den sonra (nach 17 Uhr) çalışabiliyorsunuz. b ilanında „immer von 18 bis 21 Uhr“ yazıyor: Her zaman saat 18 ile 21 arası. Bu, 17’den sonra. a ilanında „von 6 bis 9 Uhr am Morgen“ yazıyor: Sabah 6 ile 9 arası. O saatte çalışamazsınız. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q7a",
+          "label": "a",
+          "title": "Hotel Rosenhof",
+          "paragraphs": [
+            "Für unser Hotel in Lupinenhain suchen wir Hilfe für die Zimmer und die Küche. Sie finden uns direkt am Marktplatz. Telefon 47 20 85."
+          ]
+        },
+        {
+          "id": "q7b",
+          "label": "b",
+          "title": "Hotel Waldblick",
+          "paragraphs": [
+            "Wir suchen Hilfe für die Zimmer. Unser Hotel ist in Pflaumenbach. Von Lupinenhain fahren Sie mit dem Bus 40 Minuten."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 7,
+          "type": "zuordnung",
+          "prompt": "Sie wohnen in Lupinenhain und möchten auch dort arbeiten. Sie suchen Arbeit in einem Hotel.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q7a",
+              "quote": "Für unser Hotel in Lupinenhain suchen wir Hilfe"
+            },
+            {
+              "text": "q7b",
+              "quote": "Unser Hotel ist in Pflaumenbach. Von Lupinenhain fahren Sie mit dem Bus 40 Minuten."
+            }
+          ],
+          "explanation": "Lupinenhain’de oturuyorsunuz ve orada (dort) çalışmak istiyorsunuz. İki ilanda da Lupinenhain yazıyor, dikkatli okuyun. a ilanında „Für unser Hotel in Lupinenhain“ yazıyor: Otel Lupinenhain’de. b ilanında „Unser Hotel ist in Pflaumenbach“ yazıyor: Bu otel Pflaumenbach’de. „Von Lupinenhain fahren Sie mit dem Bus 40 Minuten“: Lupinenhain’den otobüsle 40 dakika. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q8a",
+          "label": "a",
+          "title": "Taxi Kowalczyk",
+          "paragraphs": [
+            "Wir suchen Fahrerinnen und Fahrer für den Tag und für die Nacht. Sie bekommen bei uns 15,50 Euro in der Stunde. Telefon 0171 284 9053."
+          ]
+        },
+        {
+          "id": "q8b",
+          "label": "b",
+          "title": "Taxi am Bahnhof",
+          "paragraphs": [
+            "Sie fahren gern Auto und kennen die Stadt gut? Dann kommen Sie zu uns! Wir bezahlen 13 Euro für eine Stunde."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 8,
+          "type": "zuordnung",
+          "prompt": "Sie möchten Taxi fahren. Für eine Stunde möchten Sie nicht weniger als 15 Euro bekommen.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q8a",
+              "quote": "Sie bekommen bei uns 15,50 Euro in der Stunde."
+            },
+            {
+              "text": "q8b",
+              "quote": "Wir bezahlen 13 Euro für eine Stunde."
+            }
+          ],
+          "explanation": "Bir saat için 15 eurodan az almak istemiyorsunuz („nicht weniger als 15 Euro“). a ilanında „Sie bekommen bei uns 15,50 Euro in der Stunde“ yazıyor: Saatte 15,50 euro alırsınız. Bu, 15 eurodan fazla. b ilanında „Wir bezahlen 13 Euro für eine Stunde“ yazıyor: Saatte 13 euro ödüyorlar. Bu az. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q9a",
+          "label": "a",
+          "title": "Reisebüro Gerdes",
+          "paragraphs": [
+            "Wir suchen eine Kollegin oder einen Kollegen für unser Büro. Sie sprechen gut Deutsch, Englisch und Französisch. Arbeitszeit: 9 bis 17 Uhr."
+          ]
+        },
+        {
+          "id": "q9b",
+          "label": "b",
+          "title": "Reisebüro am Rathaus",
+          "paragraphs": [
+            "Neue Kollegin oder neuer Kollege gesucht! Sie sprechen Deutsch und Englisch und arbeiten gern am Computer. Wir sind von 8:30 bis 16 Uhr im Büro."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 9,
+          "type": "zuordnung",
+          "prompt": "Sie sprechen Deutsch und Englisch. Französisch sprechen Sie nicht. Sie möchten in einem Reisebüro arbeiten.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q9b",
+              "quote": "Sie sprechen Deutsch und Englisch und arbeiten gern am Computer."
+            },
+            {
+              "text": "q9a",
+              "quote": "Sie sprechen gut Deutsch, Englisch und Französisch."
+            }
+          ],
+          "explanation": "Almanca (Deutsch) ve İngilizce (Englisch) konuşuyorsunuz, Fransızca (Französisch) konuşmuyorsunuz. b ilanında „Sie sprechen Deutsch und Englisch“ yazıyor: Almanca ve İngilizce konuşan biri aranıyor. a ilanında „Deutsch, Englisch und Französisch“ yazıyor: Bu işte Fransızca da gerekiyor. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q10a",
+          "label": "a",
+          "title": "Bücher Thielemann",
+          "paragraphs": [
+            "Wir suchen eine Verkäuferin oder einen Verkäufer. Sie arbeiten bei uns von Montag bis Freitag, jeden Tag von 8 bis 13 Uhr."
+          ]
+        },
+        {
+          "id": "q10b",
+          "label": "b",
+          "title": "Buchladen am Park",
+          "paragraphs": [
+            "Verkäuferin oder Verkäufer gesucht! Sie arbeiten bei uns am Freitag und am Samstag, immer von 10 bis 18 Uhr. Telefon 61 08 27."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 10,
+          "type": "zuordnung",
+          "prompt": "Sie studieren. Sie möchten in einem Geschäft für Bücher arbeiten, aber nur an zwei Tagen in der Woche.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q10b",
+              "quote": "Sie arbeiten bei uns am Freitag und am Samstag"
+            },
+            {
+              "text": "q10a",
+              "quote": "von Montag bis Freitag, jeden Tag von 8 bis 13 Uhr"
+            }
+          ],
+          "explanation": "Haftada sadece iki gün (zwei Tage) çalışmak istiyorsunuz. b ilanında „am Freitag und am Samstag“ yazıyor: Cuma ve cumartesi, yani iki gün çalışıyorsunuz. a ilanında „von Montag bis Freitag, jeden Tag“ yazıyor: Pazartesiden cumaya, her gün. Bu beş gün. Cevap b."
+        }
+      ]
+    }
+  ]
+}

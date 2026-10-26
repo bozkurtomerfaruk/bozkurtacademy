@@ -1,0 +1,124 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Ein Tag am See",
+  "minutes": 8,
+  "instructions": "Lesen Sie die zwei Texte und die Aufgaben 1 bis 5. Sind die Aussagen richtig oder falsch? Kreuzen Sie an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "email",
+          "title": "E-Mail",
+          "paragraphs": [
+            "Liebe Marit,",
+            "hast du am Sonntag Zeit? Joris und ich fahren an den See. Wir nehmen um 10:15 Uhr den Bus Nummer 8 an der Haltestelle „Kirche“. Die Fahrt dauert nur eine halbe Stunde. Joris möchte im See schwimmen, aber das Wasser ist noch sehr kalt. Am Mittag essen wir im Café am See. Um 18 Uhr sind wir wieder zu Hause.",
+            "Komm doch mit! Malene"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "richtig-falsch",
+          "prompt": "Malene und Joris fahren mit dem Auto an den See.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "email",
+              "quote": "Wir nehmen um 10:15 Uhr den Bus Nummer 8"
+            }
+          ],
+          "explanation": "Metinde: „Wir nehmen um 10:15 Uhr den Bus Nummer 8“ (Saat 10:15'te 8 numaralı otobüse biniyoruz). Malene ve Joris arabayla (Auto) değil, otobüsle (Bus) gidiyor. İfade yanlış."
+        },
+        {
+          "number": 1,
+          "type": "richtig-falsch",
+          "prompt": "Malene und Joris sind eine Stunde im Bus.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "email",
+              "quote": "Die Fahrt dauert nur eine halbe Stunde."
+            }
+          ],
+          "explanation": "Metinde: „Die Fahrt dauert nur eine halbe Stunde“ (Yolculuk sadece yarım saat sürüyor). Bir saat (eine Stunde) değil. Süre yanlış, ifade yanlış."
+        },
+        {
+          "number": 2,
+          "type": "richtig-falsch",
+          "prompt": "Das Wasser im See ist nicht warm.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "email",
+              "quote": "das Wasser ist noch sehr kalt"
+            }
+          ],
+          "explanation": "Metinde: „das Wasser ist noch sehr kalt“ (su henüz çok soğuk). Çok soğuk su, sıcak değildir (nicht warm). İfade doğru."
+        }
+      ]
+    },
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "sms",
+          "title": "SMS",
+          "paragraphs": [
+            "Hallo Malene,",
+            "ja, ich komme gern! Aber ich nehme nicht den Bus, ich fahre mit dem Fahrrad. Ich bin um 11 Uhr am See. Meine kleine Schwester Ylvi kommt auch mit. Ylvi ist neun Jahre alt und spielt gern im Wasser. Am Sonntag muss ich um 17 Uhr zu Hause sein, denn meine Oma kommt zum Abendessen.",
+            "Bis Sonntag! Marit"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 3,
+          "type": "richtig-falsch",
+          "prompt": "Marit fährt mit dem Rad an den See.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "sms",
+              "quote": "ich fahre mit dem Fahrrad"
+            }
+          ],
+          "explanation": "Marit yazıyor: „Aber ich nehme nicht den Bus, ich fahre mit dem Fahrrad“ (Ama otobüse binmiyorum, bisikletle geliyorum). „Rad“ ve „Fahrrad“ aynı şey: bisiklet. İfade doğru."
+        },
+        {
+          "number": 4,
+          "type": "richtig-falsch",
+          "prompt": "Marit muss am Sonntag um sechs Uhr abends zu Hause sein.",
+          "answer": "falsch",
+          "evidence": [
+            {
+              "text": "sms",
+              "quote": "Am Sonntag muss ich um 17 Uhr zu Hause sein"
+            }
+          ],
+          "explanation": "Metinde: „Am Sonntag muss ich um 17 Uhr zu Hause sein“ (Pazar günü saat 17'de evde olmam gerekiyor). 17 Uhr = akşam beş, altı değil. Saat 18'de evde olanlar Malene ve Joris: „Um 18 Uhr sind wir wieder zu Hause“. İfade yanlış."
+        },
+        {
+          "number": 5,
+          "type": "richtig-falsch",
+          "prompt": "Marits Großmutter kommt am Sonntag zum Essen.",
+          "answer": "richtig",
+          "evidence": [
+            {
+              "text": "sms",
+              "quote": "meine Oma kommt zum Abendessen"
+            }
+          ],
+          "explanation": "Marit pazar günü için yazıyor: „meine Oma kommt zum Abendessen“ (babaannem/anneannem akşam yemeğine geliyor). „Oma“ ve „Großmutter“ aynı anlama gelir: büyükanne. „Abendessen“ akşam yemeği, yani bir yemek (Essen). İfade doğru."
+        }
+      ]
+    }
+  ]
+}

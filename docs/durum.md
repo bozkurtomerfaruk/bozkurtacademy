@@ -8,8 +8,27 @@
 - Aşama 1, Goethe C1: bitti, main'e birleştirildi (813927f).
 - Aşama 2, TestDaF kâğıt: bitti, main'e birleştirildi.
 - Aşama 3, TestDaF dijital: bitti, main'e birleştirildi (00feb1c; Aufgabe 2 ve 7 atlandı). Modelltest PDF'leri çalışma alanından silindi.
-- Aşama 4, telc B1: bitti, main'e birleştirildi.
-- Sonra: Aşama 5, telc A1.
+- Aşama 4, telc B1: bitti, main'e birleştirildi (49db897).
+- Aşama 5, telc A1: bitti, main'e birleştirildi.
+- Aşama 6–7, telc A2 ve B2: ayrı dallarda (`claude/telc-a2`, `claude/telc-b2`) paralel sürüyor.
+
+### telc Deutsch A1 (Start Deutsch 1) Lesen: format tablosu
+Start Deutsch 1, Goethe-Institut ile telc'in ortak geliştirdiği sınav; telc A1 ile Goethe A1'in formatı aynı (✔). Bu yüzden tablo Goethe A1 tablomuzla aynı; içerik tamamen yeni (Goethe A1'in hiçbir konusu, durumu, adı veya tabelası tekrar edilmiyor).
+
+| Teil | Metin | Görev | Soru | Süre |
+|---|---|---|---|---|
+| 1 | İki kısa kişisel metin (e-posta, not, SMS) (✔) | richtig/falsch, örnek 0 (✔) | 1–5 (✔) | ~8 dk (≈) |
+| 2 | Her soru için iki kısa ilan/web sayfası a ve b (✔) | Duruma uyan ilan: a veya b, örnek 0 (✔) | 6–10 (✔) | ~8 dk (≈) |
+| 3 | Kısa tabela, duyuru, not (✔) | richtig/falsch, örnek 0 (✔) | 11–15 (✔) | ~9 dk (≈) |
+
+Toplam ~25 dk (✔).
+
+**Aşama 5 bitti: 3 Teil × 5 set (15 set, 75 soru).** İçerik Goethe A1'den tamamen bağımsız; konular, durumlar, adlar ve tabelalar tekrar edilmiyor.
+- Kör çözüm pilotta 30/30, set 3–5'te 50/50 uyuştu (değişen pilot T3 set-1 de yeniden çözüldü).
+- İnceleyiciler A1 üstü kelimeleri sadeleştirdi (Minigolf, Fitnessstudio, PIN, Spielsachen, Kellner …), kelime gibi görünen süslü işletme adlarını basit adlarla değiştirdi, yer belirleyiciyse iki ilanda da yer adı geçirdi, kısmen doğru olabilen yanlış ifadeleri netleştirdi („In den Räumen vom Museum …“).
+- İki başlık sitede zaten vardı, değiştirildi: „Ein Kindergeburtstag“, „Sport im Verein“.
+
+**Düzeltmediğim notlar:** Zirkus, Größe, Rezept gibi birkaç kelime A1 sınırında; Türkçe açıklamada çevrildikleri için bırakıldı. Bazı Teil 3 ifadeleri (ör. çocuklar daha az öder) genel bilgiyle tahmin edilebiliyor.
 
 ### telc Deutsch B1 (Zertifikat Deutsch) Leseverstehen + Sprachbausteine: format tablosu
 Kaynak: telc'in yayımladığı sınav yapısı ve örnek sınav açıklamaları (arama sonuçları). ✔ = kaynaklarda doğrulandı, ≈ = tahmin veya bizim kararımız. Lesen ve Sprachbausteine birlikte 90 dk (✔).

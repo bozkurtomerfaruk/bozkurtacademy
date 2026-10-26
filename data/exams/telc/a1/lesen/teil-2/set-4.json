@@ -1,0 +1,260 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-4",
+  "title": "Kleidung und Geschäfte",
+  "minutes": 8,
+  "instructions": "Lesen Sie die Texte und die Aufgaben 6 bis 10. Wo finden Sie Informationen? Kreuzen Sie an: a oder b.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q0a",
+          "label": "a",
+          "title": "Hüte und Schirme Kraus",
+          "paragraphs": [
+            "Hüte, Mützen und Regenschirme für Damen und Herren. Montag bis Samstag 9 bis 18 Uhr, am Mittwoch nur bis 12 Uhr."
+          ]
+        },
+        {
+          "id": "q0b",
+          "label": "b",
+          "title": "Kaufhaus Jansen",
+          "paragraphs": [
+            "Im ersten Stock finden Sie Regenschirme in vielen Farben. Wir sind Montag bis Samstag von 9:30 bis 20 Uhr für Sie da."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Sie möchten am Mittwochnachmittag einen Regenschirm kaufen.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q0b",
+              "quote": "Wir sind Montag bis Samstag von 9:30 bis 20 Uhr für Sie da."
+            },
+            {
+              "text": "q0a",
+              "quote": "am Mittwoch nur bis 12 Uhr"
+            }
+          ],
+          "explanation": "Çarşamba öğleden sonra (Mittwochnachmittag) şemsiye almak istiyorsunuz. b ilanında „Montag bis Samstag von 9:30 bis 20 Uhr“ yazıyor: Pazartesiden cumartesiye 9.30 ile 20 arası açık. Çarşamba da açık. a ilanında „am Mittwoch nur bis 12 Uhr“ yazıyor: Çarşamba sadece saat 12’ye kadar açık. Öğleden sonra kapalı. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q6a",
+          "label": "a",
+          "title": "Hosen Oswald",
+          "paragraphs": [
+            "Jeans und Hosen für Frauen und Männer. Unser Geschäft ist in der Altstadt, in der Schulgasse 6. Montag bis Samstag 10 bis 19 Uhr."
+          ]
+        },
+        {
+          "id": "q6b",
+          "label": "b",
+          "title": "Jeans-Laden Moreno",
+          "paragraphs": [
+            "Viele Jeans für wenig Geld! Sie finden uns in der Neustadt, neben der Post. Von der Altstadt fahren Sie mit dem Bus 20 Minuten."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "zuordnung",
+          "prompt": "Sie wohnen in der Altstadt. Sie möchten zu Fuß in ein Geschäft gehen und eine neue Jeans kaufen.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q6a",
+              "quote": "Unser Geschäft ist in der Altstadt, in der Schulgasse 6."
+            },
+            {
+              "text": "q6b",
+              "quote": "Sie finden uns in der Neustadt, neben der Post. Von der Altstadt fahren Sie mit dem Bus 20 Minuten."
+            }
+          ],
+          "explanation": "Eski şehirde (Altstadt) oturuyorsunuz ve yürüyerek (zu Fuß) gitmek istiyorsunuz. İki ilanda da „Altstadt“ yazıyor, dikkatli okuyun. a ilanında „Unser Geschäft ist in der Altstadt“ yazıyor: Mağaza eski şehirde. b ilanında „in der Neustadt“ (yeni şehirde) ve „Von der Altstadt fahren Sie mit dem Bus 20 Minuten“ yazıyor: Eski şehirden otobüsle 20 dakika. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q7a",
+          "label": "a",
+          "title": "Mode Wieland",
+          "paragraphs": [
+            "Blusen, Röcke und Kleider in den Größen 34 bis 42. Diese Woche sind alle Blusen billiger. Dienstag bis Samstag 10 bis 18 Uhr."
+          ]
+        },
+        {
+          "id": "q7b",
+          "label": "b",
+          "title": "Mode Hofmann",
+          "paragraphs": [
+            "Schöne Kleidung für Frauen in den Größen 44 bis 56: Blusen, Hosen und Pullover. Sie finden uns am Marktplatz 3."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 7,
+          "type": "zuordnung",
+          "prompt": "Sie brauchen eine neue Bluse. Sie tragen Größe 48.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q7b",
+              "quote": "in den Größen 44 bis 56"
+            },
+            {
+              "text": "q7a",
+              "quote": "in den Größen 34 bis 42"
+            }
+          ],
+          "explanation": "48 beden (Größe 48) giyiyorsunuz. b ilanında „in den Größen 44 bis 56“ yazıyor: 44 ile 56 arası bedenler var. 48 buna uyuyor. a ilanında „in den Größen 34 bis 42“ yazıyor: Sadece 34 ile 42 arası bedenler var. 48 yok. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q8a",
+          "label": "a",
+          "title": "Kleidermarkt im Rathaus",
+          "paragraphs": [
+            "Am Sonntag, 9. März, von 10 bis 16 Uhr verkaufen Familien alte Kinderkleidung und Spiele. Alles ist sehr billig."
+          ]
+        },
+        {
+          "id": "q8b",
+          "label": "b",
+          "title": "Kleidermarkt in der Schule am See",
+          "paragraphs": [
+            "Am Samstag, 8. März, von 9 bis 14 Uhr verkaufen Eltern Kleidung und Schuhe für Kinder. Bei uns kostet nichts mehr als 5 Euro."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 8,
+          "type": "zuordnung",
+          "prompt": "Sie brauchen Kleidung für Ihren Sohn. Sie möchten nicht viel Geld bezahlen. Am Samstag arbeiten Sie den ganzen Tag.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q8a",
+              "quote": "Am Sonntag, 9. März, von 10 bis 16 Uhr"
+            },
+            {
+              "text": "q8b",
+              "quote": "Am Samstag, 8. März, von 9 bis 14 Uhr"
+            }
+          ],
+          "explanation": "Cumartesi (Samstag) bütün gün çalışıyorsunuz. Yani sadece başka bir gün gidebilirsiniz. a ilanında „Am Sonntag, 9. März“ yazıyor: Pazar günü, 9 Mart. b ilanında „Am Samstag, 8. März“ yazıyor: Cumartesi günü, 8 Mart. O gün çalışıyorsunuz. İki pazar da ucuz. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q9a",
+          "label": "a",
+          "title": "Nesrin Ekinci – Kleidung reparieren",
+          "paragraphs": [
+            "Ich repariere Jacken, Hosen und Kleider. Sie finden mich im Buchenweg 11. Montag bis Freitag von 9 bis 19 Uhr."
+          ]
+        },
+        {
+          "id": "q9b",
+          "label": "b",
+          "title": "Nordmann – Kleidung reparieren",
+          "paragraphs": [
+            "Wir reparieren Hosen, Röcke und Jacken schnell und billig. Geöffnet: Montag bis Freitag von 8 bis 17 Uhr."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 9,
+          "type": "zuordnung",
+          "prompt": "Ihre Jacke ist kaputt. Sie arbeiten jeden Tag bis 18 Uhr. Danach möchten Sie die Jacke in ein Geschäft bringen.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q9a",
+              "quote": "Montag bis Freitag von 9 bis 19 Uhr."
+            },
+            {
+              "text": "q9b",
+              "quote": "Geöffnet: Montag bis Freitag von 8 bis 17 Uhr."
+            }
+          ],
+          "explanation": "Her gün saat 18’e kadar çalışıyorsunuz. Ceketi ondan sonra götürmek istiyorsunuz. a ilanında „von 9 bis 19 Uhr“ yazıyor: Saat 19’a kadar açık. Saat 18’den sonra gidebilirsiniz. b ilanında „von 8 bis 17 Uhr“ yazıyor: Saat 17’de kapanıyor. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q10a",
+          "label": "a",
+          "title": "Taschen Grabowski",
+          "paragraphs": [
+            "Schöne Taschen für die Arbeit und für die Reise. Alle Taschen kommen aus Italien. Preise: 90 bis 160 Euro."
+          ]
+        },
+        {
+          "id": "q10b",
+          "label": "b",
+          "title": "Taschen-Ecke am Markt",
+          "paragraphs": [
+            "Große und kleine Taschen in vielen Farben. Bei uns kostet eine Tasche 15 bis 35 Euro. Montag bis Samstag 9 bis 18 Uhr."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 10,
+          "type": "zuordnung",
+          "prompt": "Sie brauchen eine Tasche. Sie möchten nicht mehr als 40 Euro bezahlen.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q10b",
+              "quote": "Bei uns kostet eine Tasche 15 bis 35 Euro."
+            },
+            {
+              "text": "q10a",
+              "quote": "Preise: 90 bis 160 Euro."
+            }
+          ],
+          "explanation": "40 eurodan fazla ödemek istemiyorsunuz („nicht mehr als 40 Euro“). b ilanında „kostet eine Tasche 15 bis 35 Euro“ yazıyor: Bir çanta 15 ile 35 euro arası. Bu, 40 eurodan az. a ilanında „Preise: 90 bis 160 Euro“ yazıyor: Fiyatlar 90 ile 160 euro arası. Bu çok pahalı. Cevap b."
+        }
+      ]
+    }
+  ]
+}

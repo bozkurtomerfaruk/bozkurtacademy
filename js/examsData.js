@@ -491,9 +491,36 @@ window.BA_EXAMS = {
               { title: null, exercises: [] }, // Teil 3
             ] },
             { id: 'lesen', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
-              { title: null, exercises: [] }, // Teil 3
+              {
+                title: { tr: 'Kısa mesajlar · richtig/falsch', de: 'Kurze Nachrichten · richtig/falsch', en: 'Short messages · true/false' },
+                exercises: [
+                  { set: 'set-1', title: 'Ein neuer Kollege' },
+                  { set: 'set-2', title: 'Ein Kindergeburtstag' },
+                  { set: 'set-3', title: 'Der Sprachkurs' },
+                  { set: 'set-4', title: 'Besuch am Wochenende' },
+                  { set: 'set-5', title: 'Ein Tag am See' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: 'İki ilan · a/b', de: 'Zwei Anzeigen · a/b', en: 'Two adverts · a/b' },
+                exercises: [
+                  { set: 'set-1', title: 'Sport im Verein' },
+                  { set: 'set-2', title: 'Kinder und Familie' },
+                  { set: 'set-3', title: 'Arbeit und Jobs' },
+                  { set: 'set-4', title: 'Kleidung und Geschäfte' },
+                  { set: 'set-5', title: 'Bus und Bahn' },
+                ]
+              }, // Teil 2
+              {
+                title: { tr: 'Tabelalar ve notlar · richtig/falsch', de: 'Schilder und Aushänge · richtig/falsch', en: 'Signs and notices · true/false' },
+                exercises: [
+                  { set: 'set-1', title: 'Bibliothek und Museum' },
+                  { set: 'set-2', title: 'Bank und Post' },
+                  { set: 'set-3', title: 'Im Hotel' },
+                  { set: 'set-4', title: 'Apotheke und Friseur' },
+                  { set: 'set-5', title: 'Im Büro' },
+                ]
+              }, // Teil 3
             ] },
             { id: 'schreiben', teile: [
               { title: null, exercises: [] }, // Teil 1

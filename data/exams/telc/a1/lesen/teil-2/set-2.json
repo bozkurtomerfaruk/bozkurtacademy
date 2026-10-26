@@ -1,0 +1,260 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-2",
+  "title": "Kinder und Familie",
+  "minutes": 8,
+  "instructions": "Lesen Sie die Texte und die Aufgaben 6 bis 10. Wo finden Sie Informationen? Kreuzen Sie an: a oder b.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q0a",
+          "label": "a",
+          "title": "Theater Zwergenmütze",
+          "paragraphs": [
+            "Am Sonntag spielen wir für Kinder „Der kleine Bär“. Wir beginnen um 15 Uhr. Karten: Kinder 5 Euro, Erwachsene 8 Euro."
+          ]
+        },
+        {
+          "id": "q0b",
+          "label": "b",
+          "title": "Theater Sternschnuppe",
+          "paragraphs": [
+            "„Die rote Katze“ – ein Theater für Kinder und Eltern. Am Sonntag um 19:30 Uhr. Eine Karte kostet 7 Euro."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Sie möchten am Sonntagnachmittag mit Ihren Kindern ins Theater gehen.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q0a",
+              "quote": "Wir beginnen um 15 Uhr."
+            },
+            {
+              "text": "q0b",
+              "quote": "Am Sonntag um 19:30 Uhr."
+            }
+          ],
+          "explanation": "Pazar öğleden sonra (Sonntagnachmittag) tiyatroya gitmek istiyorsunuz. a ilanında „Wir beginnen um 15 Uhr“ yazıyor: Saat 15’te başlıyor. Bu, öğleden sonra. b ilanında „Am Sonntag um 19:30 Uhr“ yazıyor: Saat 19.30’da. Bu akşam. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q6a",
+          "label": "a",
+          "title": "Musikschule Notenbaum",
+          "paragraphs": [
+            "Kurse für Kinder ab 6 Jahren. Gitarre: Montag und Freitag um 16 Uhr. Klavier: Mittwoch um 16 Uhr. Telefon 29 63 04."
+          ]
+        },
+        {
+          "id": "q6b",
+          "label": "b",
+          "title": "Musikschule Taktstock",
+          "paragraphs": [
+            "Ihr Kind möchte Gitarre spielen? Unser Kurs für Kinder ist jeden Mittwoch von 15:30 bis 16:30 Uhr. Ein Monat kostet 30 Euro."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "zuordnung",
+          "prompt": "Ihre Tochter ist neun und möchte Gitarre lernen. Am Mittwoch hat Ihre Tochter Zeit, an den anderen Tagen nicht.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q6b",
+              "quote": "jeden Mittwoch von 15:30 bis 16:30 Uhr"
+            },
+            {
+              "text": "q6a",
+              "quote": "Gitarre: Montag und Freitag um 16 Uhr."
+            }
+          ],
+          "explanation": "Kızınız gitar öğrenmek istiyor ve sadece çarşamba (Mittwoch) vakti var. b ilanında gitar kursu „jeden Mittwoch von 15:30 bis 16:30 Uhr“: Her çarşamba, 15.30 ile 16.30 arası. a ilanında „Gitarre: Montag und Freitag“ yazıyor: Gitar pazartesi ve cuma. Çarşamba günü orada sadece „Klavier“ (piyano) var. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q7a",
+          "label": "a",
+          "title": "Spieltreff Marienkäfer",
+          "paragraphs": [
+            "Für Kinder bis drei Jahre und ihre Eltern: Wir spielen und singen zusammen. Jeden Dienstag von 10 bis 11:30 Uhr im Rosenweg 2."
+          ]
+        },
+        {
+          "id": "q7b",
+          "label": "b",
+          "title": "Spielnachmittag Zappelino",
+          "paragraphs": [
+            "Kinder ab vier Jahren spielen bei uns zwei Stunden mit unseren Lehrerinnen. Die Eltern warten im Café. Donnerstag von 15 bis 17 Uhr."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 7,
+          "type": "zuordnung",
+          "prompt": "Ihr Sohn ist zwei Jahre alt. Er soll mit anderen Kindern spielen.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q7a",
+              "quote": "Für Kinder bis drei Jahre und ihre Eltern"
+            },
+            {
+              "text": "q7b",
+              "quote": "Kinder ab vier Jahren"
+            }
+          ],
+          "explanation": "Oğlunuz iki yaşında. a ilanında „Für Kinder bis drei Jahre“ yazıyor: Üç yaşına kadar çocuklar için. İki yaş buna uyuyor. b ilanında „Kinder ab vier Jahren“ yazıyor: Dört yaşından itibaren çocuklar için. Oğlunuz daha küçük. Cevap a."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q8a",
+          "label": "a",
+          "title": "Spielpark Kängurusprung",
+          "paragraphs": [
+            "Kindergeburtstag bei uns: drei Stunden spielen, danach gibt es Pizza und Saft. Für acht Kinder bezahlen Sie 130 Euro."
+          ]
+        },
+        {
+          "id": "q8b",
+          "label": "b",
+          "title": "Spielhaus Rumpelkiste",
+          "paragraphs": [
+            "Feiern Sie den Geburtstag von Ihrem Kind bei uns! Zwei Stunden spielen, mit Kuchen und Saft. Preis: 70 Euro für zehn Kinder."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 8,
+          "type": "zuordnung",
+          "prompt": "Ihr Sohn hat bald Geburtstag. Sie möchten mit ihm und seinen Freunden spielen gehen. Sie möchten nicht mehr als 80 Euro bezahlen.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q8b",
+              "quote": "Preis: 70 Euro für zehn Kinder."
+            },
+            {
+              "text": "q8a",
+              "quote": "Für acht Kinder bezahlen Sie 130 Euro."
+            }
+          ],
+          "explanation": "80 eurodan fazla ödemek istemiyorsunuz („nicht mehr als 80 Euro“). b ilanında „Preis: 70 Euro für zehn Kinder“ yazıyor: On çocuk için fiyat 70 euro. Bu, 80 eurodan az. a ilanında „Für acht Kinder bezahlen Sie 130 Euro“ yazıyor: Sekiz çocuk için 130 euro ödüyorsunuz. Bu çok pahalı. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q9a",
+          "label": "a",
+          "title": "Tierpark Nord",
+          "paragraphs": [
+            "Bei uns leben Pferde, Kühe und Hunde. Unser Tierpark liegt im Norden der Stadt, direkt am Wald. Vom Süden fahren Sie mit dem Bus 40 Minuten."
+          ]
+        },
+        {
+          "id": "q9b",
+          "label": "b",
+          "title": "Bauernhof Meckerle",
+          "paragraphs": [
+            "Auf unserem Bauernhof sehen Kinder Kühe, Schweine und Katzen. Sie finden uns im Süden der Stadt, in der Wiesenstraße 12. Kinder bezahlen 2 Euro."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 9,
+          "type": "zuordnung",
+          "prompt": "Sie wohnen im Süden der Stadt. Sie möchten mit Ihren Kindern Tiere sehen, aber nicht lange fahren.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "q9b",
+              "quote": "Sie finden uns im Süden der Stadt"
+            },
+            {
+              "text": "q9a",
+              "quote": "Unser Tierpark liegt im Norden der Stadt, direkt am Wald. Vom Süden fahren Sie mit dem Bus 40 Minuten."
+            }
+          ],
+          "explanation": "Şehrin güneyinde (Süden) oturuyorsunuz ve uzun süre yol gitmek istemiyorsunuz. İki ilanda da „Süden“ kelimesi var, dikkatli okuyun. b ilanında „Sie finden uns im Süden der Stadt“ yazıyor: Çiftlik şehrin güneyinde, yani sizin oturduğunuz yerde. a ilanında „im Norden der Stadt“ (şehrin kuzeyinde) ve „Vom Süden fahren Sie mit dem Bus 40 Minuten“ yazıyor: Güneyden otobüsle 40 dakika. Cevap b."
+        }
+      ]
+    },
+    {
+      "layout": "ads",
+      "none": false,
+      "texts": [
+        {
+          "id": "q10a",
+          "label": "a",
+          "title": "Babysitterin",
+          "paragraphs": [
+            "Ich bin Studentin, 23 Jahre alt, und habe zwei kleine Brüder. Am Freitag und Samstag habe ich von 18 bis 24 Uhr Zeit. Telefon 0157 382 1640."
+          ]
+        },
+        {
+          "id": "q10b",
+          "label": "b",
+          "title": "Babysitter",
+          "paragraphs": [
+            "Ich bin 17 und spiele gern mit Kindern. Von Montag bis Samstag kann ich von 14 bis 21 Uhr kommen. Eine Stunde kostet 9 Euro."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 10,
+          "type": "zuordnung",
+          "prompt": "Am Samstag sind Sie von 19 bis 23 Uhr im Konzert. Sie suchen einen Babysitter für Ihre Kinder.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "q10a",
+              "quote": "Am Freitag und Samstag habe ich von 18 bis 24 Uhr Zeit."
+            },
+            {
+              "text": "q10b",
+              "quote": "von 14 bis 21 Uhr"
+            }
+          ],
+          "explanation": "Cumartesi saat 19 ile 23 arası konserdesiniz. a ilanında „Am Freitag und Samstag habe ich von 18 bis 24 Uhr Zeit“ yazıyor: Cuma ve cumartesi saat 18 ile 24 arası vakti var. b ilanında „von 14 bis 21 Uhr“ yazıyor: Sadece saat 21’e kadar gelebilir. Konser 23’te bitiyor. Cevap a."
+        }
+      ]
+    }
+  ]
+}

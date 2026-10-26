@@ -99,7 +99,9 @@ Yönetim sayfası soru metnini ve doğru cevabı soru kimliğiyle `data/seviye-t
   - Gerçek Firestore'a hiçbir şey yazılmaz.
   - Kapsam: blok geçişleri, erken bitiş, "Hiç Almanca bilmiyorum", sonuç hesaplama, form doğrulama, gönderim, bekleme süresi, yenileme sonrası devam, yönetimde yetkili/yetkisiz erişim, okundu/not/sil, üç dil, iki tema, 390 px.
 
-## Gizlilik politikası için öneri (privacy.html değiştirilmedi, onayını bekliyor)
+## Gizlilik politikası (onaylandı ve 26.10.2026'da privacy.html'e eklendi)
+
+Aşağıdaki öneri senin onayınla `privacy.html`'e TR/DE/EN olarak eklendi (bölüm 2, 3, 5a, 6, 11 ve son güncelleme tarihi). Çeviriler `js/privacy.js`'de. Önerinin ilk hâli kayıt için aşağıda.
 
 `privacy.html`'de seviye testinden hiç söz edilmiyor. Ayrıca 2. bölümdeki "Giriş yapmamış ziyaretçiler için Firebase yüklenmez" cümlesi artık tam doğru değil. Önerilen değişiklikler:
 

@@ -2,6 +2,24 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-10-26 · Gizlilik politikası: seviye testi bölümü (TR/DE/EN)
+
+- **Senin onayınla `privacy.html`'e eklenenler:**
+  - Yeni bölüm „5a. Seviye testi“: hangi veriler, amaç, Firebase (Google) ve ABD aktarımı, hukuki dayanak, 6 ay saklama, e-postayla silme talebi.
+  - Bölüm 2'de yeni localStorage maddesi (`baPlacement`, `baPlacementSent`).
+  - Bölüm 3'te GoatCounter sayfa listesine seviye testi.
+  - Bölüm 6'da "öğrenci ve seviye testi verileri".
+  - Bölüm 11'de silme talebi.
+  - Son güncelleme: 26 Ekim 2026.
+- **Firebase cümlesi:** "Giriş yapmamış ziyaretçiler için Firebase yüklenmez" yerine, seviye testinde "Sonucu gönder"e basınca yüklendiğini söyleyen cümle geldi.
+- **Diller:**
+  - Değişen ve yeni kısımlar dil düğmesine göre TR/DE/EN değişiyor. Metinler `js/privacy.js`'de; `data-privacy` işaretli öğelere yazılıyor, çünkü `app.js`'in çevirisi bağlantı ve `<code>` içeren metinleri düz yazıya çevirirdi.
+  - Sayfanın geri kalanı eskisi gibi sadece Türkçe. DE/EN seçildiğinde sayfa karışık dilde görünüyor; bütün sayfanın çevirisi ayrı bir iş.
+- **Diğer:**
+  - Testteki onay kutusunun bağlantısı artık doğrudan `privacy.html#seviye-testi`'ye gidiyor (`placement.js` v2).
+  - `privacy.html` artık `app.js` v23'ü yüklüyor.
+- **Test:** `npm run test:placement` 203 kontrol, hepsi geçti; bunların 57'si gizlilik sayfası için (üç dil, iki tema, 390 px, tarih, bağlantılar, dil değiştirme).
+
 ## 2026-10-26 · Seviye tespit sınavı (#seviye-testi) ve yönetim sayfası
 
 **Canlıda çalışması için senin yapman gerekenler** (ayrıntılar: `docs/seviye-testi.md`):

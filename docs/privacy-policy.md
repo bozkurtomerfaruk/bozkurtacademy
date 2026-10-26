@@ -7,7 +7,7 @@ actually does today, so you can answer a privacy-policy generator correctly. It 
 checklist of facts, not the policy text itself.
 
 Last checked: student accounts stage 1 (Firebase login, registration, teacher panel, email
-verification) and GoatCounter visitor statistics on the public pages.
+verification) and GoatCounter visitor statistics on the public pages, and the placement test (`#seviye-testi`, section 5a of `privacy.html`, 26 October 2026).
 
 ## Third-party services that receive visitors' personal data
 

@@ -415,6 +415,42 @@ for(const [lang, title] of [['tr', 'Seviye tespit sınavı'], ['de', 'Einstufung
   await ctx.close();
 }
 
+// 11. Gizlilik sayfası: seviye testi bölümü üç dilde, Firebase cümlesi düzeltildi, tarih güncel
+for(const [lang, title, firebase, updated] of [
+  ['tr', '5a. Seviye testi', 'Tek istisna: Seviye testinin sonucunu göndermek', 'Son güncelleme: 26 Ekim 2026'],
+  ['de', '5a. Einstufungstest', 'Einzige Ausnahme: Wenn du beim Einstufungstest', 'Zuletzt aktualisiert: 26. Oktober 2026'],
+  ['en', '5a. Placement test', 'The only exception: when you press “Send result”', 'Last updated: 26 October 2026']
+]){
+  for(const [width, theme] of [[1280, 'light'], [390, 'dark']]){
+    const { ctx, page } = await newPage({ width, theme, lang, emulator: false });
+    await page.goto(B.replace('index.html', 'privacy.html#seviye-testi')); await page.waitForTimeout(500);
+    const label = `gizlilik ${lang} ${width} ${theme}`;
+    ok((await page.locator('#seviye-testi h2').textContent()) === title, `${label}: başlık "${title}"`);
+    ok((await page.locator('[data-privacy="firebaseLoad"]').textContent()).includes(firebase), `${label}: Firebase cümlesi`);
+    ok((await page.locator('[data-privacy="updated"]').textContent()) === updated, `${label}: tarih`);
+    ok(await page.locator('#seviye-testi a[href="mailto:bozkurtt.omerfaruk@gmail.com"]').count() === 1, `${label}: silme talebi için e-posta bağlantısı`);
+    ok(await page.locator('[data-privacy="rightsPlacement"] a[href^="mailto:"]').count() === 1, `${label}: Haklar bölümünde silme talebi`);
+    ok((await page.locator('#seviye-testi').textContent()).match(/6 (ay|Monate|months)/) && (await page.locator('#seviye-testi').textContent()).includes('Firebase'), `${label}: Firebase ve 6 ay`);
+    ok(await page.locator('[data-privacy="storagePlacement"] code').count() === 2, `${label}: localStorage anahtarları`);
+    ok(await page.locator('#seviye-testi').getAttribute('lang') === null && await page.locator('[data-privacy="placementData"]').getAttribute('lang') === lang, `${label}: lang özniteliği`);
+    ok(await overflow(page) <= 0, `${label}: taşma yok`);
+    if(width === 390) await page.screenshot({ path: path.join(shotDir, `privacy-${lang}-${width}-${theme}.png`), fullPage: true });
+    await ctx.close();
+  }
+}
+// Dil sayfadayken de değişiyor; formdaki bağlantı yeni bölüme gidiyor
+{
+  const { ctx, page } = await newPage({ emulator: false });
+  await page.goto(B.replace('index.html', 'privacy.html')); await page.waitForTimeout(400);
+  await page.click('.lang button[data-lang="en"]'); await page.waitForTimeout(200);
+  ok((await page.locator('#seviye-testi h2').textContent()) === '5a. Placement test', 'gizlilik: dil düğmesi bölümü çeviriyor');
+  await page.click('.lang button[data-lang="tr"]'); await page.waitForTimeout(200);
+  ok((await page.locator('#seviye-testi h2').textContent()) === '5a. Seviye testi', 'gizlilik: Türkçeye geri dönüyor');
+  await start(page); await page.click('[data-pl-skip]'); await page.waitForTimeout(200);
+  ok(await page.locator('.pl-consent a').getAttribute('href') === 'privacy.html#seviye-testi', 'onay kutusundaki bağlantı 5a bölümüne gidiyor');
+  await ctx.close();
+}
+
 await browser.close();
 server.close();
 console.log('screenshots', shotDir);

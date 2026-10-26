@@ -656,7 +656,7 @@
       field('plNote', 'plNote', note, { optional: true }),
       el('div', { class: 'pl-field pl-consent', 'data-field': 'plConsent' },
         el('label', { class: 'pl-check', for: 'plConsent' }, consent,
-          el('span', {}, t('plConsentBefore'), el('a', { href: 'privacy.html', target: '_blank', rel: 'noopener', class: 'ba-link', text: t('plConsentLink') }))),
+          el('span', {}, t('plConsentBefore'), el('a', { href: 'privacy.html#seviye-testi', target: '_blank', rel: 'noopener', class: 'ba-link', text: t('plConsentLink') }))),
         el('p', { class: 'pl-error', id: 'plConsentError' })),
       el('input', { class: 'contact-honey', type: 'text', name: 'website', id: 'plWebsite', tabindex: '-1', autocomplete: 'off', 'aria-hidden': 'true' }),
       submit, status);

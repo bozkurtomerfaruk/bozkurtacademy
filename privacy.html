@@ -53,7 +53,7 @@
       <article class="acc-wrap acc-legal" aria-labelledby="privacyTitle">
         <p class="acc-status warning" role="note">Bu metin hukuki olarak kontrol edilmektedir.</p>
         <header class="acc-head">
-          <p class="acc-eyebrow">Son güncelleme: 15 Ekim 2026</p>
+          <p class="acc-eyebrow" data-privacy="updated">Son güncelleme: 26 Ekim 2026</p>
           <h1 id="privacyTitle">Gizlilik politikası</h1>
           <p class="acc-lead">Bu sayfa, Bozkurt Academy sitesini kullanırken ve öğrenci hesabı açtığında hangi kişisel verilerin işlendiğini, nerede saklandığını ve haklarını açıklar.</p>
         </header>
@@ -69,13 +69,14 @@
             <li><strong>Barındırma:</strong> Site GitHub Pages (GitHub Inc., ABD) üzerinde çalışır. Her sayfa isteğinde IP adresi, tarayıcı ve cihaz bilgisi, tarih ve istenen sayfa GitHub'ın sunucu kayıtlarına düşer. Hukuki dayanak: sitenin güvenli ve çalışır şekilde sunulmasındaki meşru menfaat (DSGVO md. 6/1-f).</li>
             <li><strong>Çerez yok:</strong> Site çerez kullanmaz.</li>
             <li><strong>Tarayıcıda saklanan ayarlar (localStorage):</strong> tema (<code>ba-theme</code>), dil (<code>baLang</code>), alıştırmalardaki en iyi skor (<code>baBestScore:…</code>) ve giriş yapmış olup olmadığın için bir ipucu (<code>baAccount</code>, sadece “student” ya da “teacher”). Bunlar cihazından dışarı gönderilmez.</li>
-            <li>Giriş yapmamış ziyaretçiler için Firebase yüklenmez.</li>
+            <li data-privacy="storagePlacement"><strong>Seviye testi (localStorage):</strong> testteki ilerlemen (<code>baPlacement</code>: cevaplar, seçeneklerin sırası, form taslağı) ve son gönderim zamanı (<code>baPlacementSent</code>). Bunlar sen gönderene kadar cihazından çıkmaz; gönderimden sonra ilerleme silinir.</li>
+            <li data-privacy="firebaseLoad">Giriş yapmamış ziyaretçiler için Firebase yüklenmez. Tek istisna: Seviye testinin sonucunu göndermek için “Sonucu gönder”e bastığında Firebase yüklenir (bkz. 5a).</li>
           </ul>
         </section>
 
         <section>
           <h2>3. Ziyaretçi istatistiği (GoatCounter)</h2>
-          <p>Herkese açık sayfalarda (ana sayfa, dersler, gramer, alıştırmalar, sınav hazırlığı, hakkımda, iletişim) hangi sayfaların ne sıklıkla açıldığını görmek için GoatCounter kullanılır. Giriş, kayıt, öğrenci paneli ve öğretmen paneli sayfalarında GoatCounter yoktur.</p>
+          <p data-privacy="goatcounter">Herkese açık sayfalarda (ana sayfa, dersler, gramer, alıştırmalar, sınav hazırlığı, seviye testi, hakkımda, iletişim) hangi sayfaların ne sıklıkla açıldığını görmek için GoatCounter kullanılır. Giriş, kayıt, öğrenci paneli ve öğretmen paneli sayfalarında GoatCounter yoktur.</p>
           <ul>
             <li>Sayım isteği <code>bozkurtacademy.goatcounter.com</code> adresine gider. GoatCounter'ın kodu bu siteden yüklenir, başka bir adresten değil.</li>
             <li>Gönderilenler: sayfa adresi (ör. <code>/#grammar/A1/artikel</code>; alıştırmalardaki soru numarası gönderilmez), ziyaretin ilk sayfasında hangi siteden gelindiği (referrer), sayfa başlığı, tarayıcı bilgisi ve ekran genişliği. GoatCounter IP adresinden ülkeyi belirler; IP adresini saklamaz.</li>
@@ -104,11 +105,21 @@
           <p>Kayıttan sonra hesap öğretmen onayıyla açılır. Öğretmen dışında kimse başka bir öğrencinin verisini göremez.</p>
         </section>
 
+        <section id="seviye-testi">
+          <h2 data-privacy="placementTitle">5a. Seviye testi</h2>
+          <p data-privacy="placementData">Seviye testini çözüp sonucunu gönderdiğinde şu bilgiler kaydedilir: adın, e-posta adresin, hedefin, varsa sınavının adı ve tarihi, daha önce ne kadar süre Almanca öğrendiğin, notun, test sonucun (tahmini seviye, bölümlere göre doğru sayısı, konu bazında hatalar, yanlış cevapladığın sorular ve cevapların), yazma görevine yazdığın metin, testin süresi ve gönderim tarihi.</p>
+          <p data-privacy="placementPurpose">Bu bilgileri sadece ders planlaması ve seninle ilk ders için iletişim kurmak amacıyla kullanırım; yalnızca ben görebilirim.</p>
+          <p data-privacy="placementFirebase">Veriler Google Firebase’de (Google Ireland Ltd. / Google LLC) işlenir: Cloud Firestore’da Frankfurt’taki (europe-west3) sunucularda saklanır. Gönderim için Firebase Authentication üzerinden anonim, geçici bir oturum açılır ve gönderimden hemen sonra kapatılır; bu sırada Google cihazının IP adresini ve tarayıcı bilgilerini işler ve bu işleme ABD’de de olabilir (AB-ABD Veri Gizliliği Çerçevesi ve standart sözleşme maddeleri). Firebase’in program dosyaları gstatic.com’dan yüklenir.</p>
+          <p data-privacy="placementBasis">Hukuki dayanak: senin talebin üzerine sözleşme öncesi adımlar (DSGVO md. 6/1-b) ve gönderirken verdiğin onay (DSGVO md. 6/1-a).</p>
+          <p data-privacy="placementRetention">Saklama süresi: Sonuç gönderimden 6 ay sonra otomatik olarak silinir. Derslere başlarsak ilgili bilgiler öğrenci kaydına aktarılabilir; o zaman 10. bölüm geçerlidir.</p>
+          <p data-privacy="placementDelete">Kaydının daha önce silinmesini istediğinde <a class="ba-link" href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a> adresine yazman yeterli; onayını istediğin zaman geri alabilirsin.</p>
+        </section>
+
         <section>
           <h2>6. Firebase (Google)</h2>
           <ul>
-            <li>Giriş ve öğrenci verileri Google Firebase ile işlenir (Google Ireland Ltd. / Google LLC).</li>
-            <li><strong>Cloud Firestore:</strong> Öğrenci verileri Frankfurt'taki (europe-west3) sunucularda saklanır.</li>
+            <li data-privacy="firebaseIntro">Giriş, öğrenci ve seviye testi verileri Google Firebase ile işlenir (Google Ireland Ltd. / Google LLC).</li>
+            <li data-privacy="firestore"><strong>Cloud Firestore:</strong> Öğrenci ve seviye testi verileri Frankfurt’taki (europe-west3) sunucularda saklanır.</li>
             <li><strong>Firebase Authentication:</strong> Giriş hesabı (e-posta adresi, şifrenin şifrelenmiş özeti, Google ile girişte Google'dan gelen ad, e-posta ve profil fotoğrafı adresi) Google tarafından AB dışında, özellikle ABD'de de işlenebilir. ABD'ye aktarım, AB-ABD Veri Gizliliği Çerçevesi (EU-U.S. Data Privacy Framework) ve AB Komisyonu'nun standart sözleşme maddeleri dayanağıyla yapılır.</li>
             <li>E-posta ve şifreyle kayıt olduğunda Firebase, e-posta adresini doğrulaman için bir e-posta gönderir.</li>
             <li>Firebase, giriş durumunu tarayıcında (IndexedDB) saklar. Bu, girişin çalışması için teknik olarak gereklidir.</li>
@@ -148,6 +159,7 @@
         <section>
           <h2>11. Hakların</h2>
           <p>Verilerine erişme, düzeltilmesini, silinmesini, işlenmesinin kısıtlanmasını ve taşınmasını isteme, meşru menfaate dayanan işlemeye itiraz etme ve verdiğin onayı geri alma hakkın var. Bunun için <a class="ba-link" href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a> adresine yazabilirsin; öğrenci panelindeki “Verilerimin silinmesini iste” bağlantısı da bu adrese bir e-posta hazırlar.</p>
+          <p data-privacy="rightsPlacement">Seviye testi sonucunun silinmesini <a class="ba-link" href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a> adresine e-postayla isteyebilirsin.</p>
           <p>Ayrıca bir veri koruma denetim makamına şikâyette bulunabilirsin. Sorumlu için yetkili makam: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW), <a class="ba-link" href="https://www.ldi.nrw.de" target="_blank" rel="noopener noreferrer">www.ldi.nrw.de</a>.</p>
         </section>
       </article>
@@ -163,7 +175,8 @@
       </div>
     </footer>
   </div>
-  <script src="js/app.js?v=22"></script>
+  <script src="js/app.js?v=23"></script>
   <script src="js/theme.js?v=9"></script>
+  <script src="js/privacy.js?v=1"></script>
 </body>
 </html>

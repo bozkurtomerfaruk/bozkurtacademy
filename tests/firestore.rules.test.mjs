@@ -18,7 +18,8 @@ import {
   setDoc,
   setLogLevel,
   Timestamp,
-  updateDoc
+  updateDoc,
+  writeBatch
 } from 'firebase/firestore';
 
 const rules = readFileSync(new URL('../firestore.rules', import.meta.url), 'utf8');
@@ -576,5 +577,166 @@ describe('Öğretmen', () => {
     const fake = as(TEACHER + 'x', googleToken('ogretmen@example.com'));
     await assertFails(getDocs(collection(fake, 'users')));
     await assertFails(updateDoc(doc(fake, 'users/ayse'), { status: 'active' }));
+  });
+});
+
+// Seviye testi: herkes (anonim giriş dahil) sadece ekleyebilir; okuma/güncelleme/silme sadece öğretmen.
+describe('Seviye testi (placementTests)', () => {
+  const DAY = 24 * 60 * 60 * 1000;
+  const anonToken = { firebase: { sign_in_provider: 'anonymous' } };
+  const anon = (uid = 'anon1') => as(uid, anonToken);
+
+  function placement(uid, overrides = {}) {
+    return {
+      uid,
+      name: 'Deniz Kaya',
+      email: 'deniz@example.com',
+      goal: 'exam',
+      examName: 'Goethe B1',
+      examDate: '2027-03-15',
+      experience: '6to12m',
+      note: '',
+      level: 'A2',
+      near: 'B1',
+      skipped: false,
+      blocks: { A1: { correct: 9, total: 10 }, A2: { correct: 7, total: 10 }, B1: { correct: 5, total: 10 } },
+      topicErrors: 'perfekt:1,relativsaetze:1,lesen:2',
+      wrong: 'a2-perfekt\thaben\nb1-relativ\tdie',
+      writing: 'Ich heiße Deniz und lerne Deutsch.',
+      durationSec: 840,
+      bank: 1,
+      lang: 'tr',
+      consent: true,
+      read: false,
+      createdAt: serverTimestamp(),
+      expireAt: Timestamp.fromMillis(Date.now() + 183 * DAY),
+      ...overrides
+    };
+  }
+
+  // Uygulamanın yaptığı gibi: sonuç ve bekleme belgesi aynı batch içinde.
+  function submit(db, uid, data, { id = 'Res' + Math.random().toString(36).slice(2, 12), limit } = {}) {
+    const batch = writeBatch(db);
+    batch.set(doc(db, `placementTests/${id}`), data);
+    batch.set(doc(db, `placementLimits/${uid}`), limit || { lastAt: serverTimestamp(), lastId: id });
+    return batch.commit();
+  }
+
+  test('anonim ziyaretçi sonuç ekleyebilir', async () => {
+    await assertSucceeds(submit(anon(), 'anon1', placement('anon1')));
+  });
+
+  test('giriş yapmış öğrenci de kendi kimliğiyle sonuç ekleyebilir', async () => {
+    await assertSucceeds(submit(ayse(), 'ayse', placement('ayse')));
+  });
+
+  test('giriş yapmamış biri sonuç ekleyemez', async () => {
+    await assertFails(submit(guestDb(), 'x', placement('x')));
+  });
+
+  test('bekleme belgesi olmadan sonuç eklenemez', async () => {
+    await assertFails(setDoc(doc(anon(), 'placementTests/ResAbcdefghij'), placement('anon1')));
+  });
+
+  test('bekleme belgesi başka bir sonucu gösteriyorsa eklenemez (aynı batch ile iki sonuç yok)', async () => {
+    const db = anon();
+    const batch = writeBatch(db);
+    batch.set(doc(db, 'placementTests/ResFirst00001'), placement('anon1'));
+    batch.set(doc(db, 'placementTests/ResSecond0001'), placement('anon1'));
+    batch.set(doc(db, 'placementLimits/anon1'), { lastAt: serverTimestamp(), lastId: 'ResFirst00001' });
+    await assertFails(batch.commit());
+  });
+
+  test('10 dakika dolmadan ikinci sonuç eklenemez, sonra eklenebilir', async () => {
+    await assertSucceeds(submit(anon(), 'anon1', placement('anon1')));
+    await assertFails(submit(anon(), 'anon1', placement('anon1')));
+    await seed('placementLimits/anon1', { lastAt: Timestamp.fromMillis(Date.now() - 11 * 60 * 1000), lastId: 'ResOld000001' });
+    await assertSucceeds(submit(anon(), 'anon1', placement('anon1')));
+  });
+
+  test('bekleme belgesi tek başına sıfırlanamaz veya silinemez', async () => {
+    await assertSucceeds(submit(anon(), 'anon1', placement('anon1')));
+    await assertFails(setDoc(doc(anon(), 'placementLimits/anon1'), { lastAt: serverTimestamp(), lastId: 'ResNew000001' }));
+    await assertFails(deleteDoc(doc(anon(), 'placementLimits/anon1')));
+    await assertFails(getDoc(doc(anon(), 'placementLimits/anon1')));
+  });
+
+  test('başkasının kimliğiyle (uid alanı) sonuç eklenemez', async () => {
+    await assertFails(submit(anon(), 'anon1', placement('anon2')));
+    await assertFails(submit(anon(), 'anon2', placement('anon1')));
+  });
+
+  test('ziyaretçi sonuçları okuyamaz, listeleyemez, değiştiremez, silemez', async () => {
+    await seed('placementTests/ResSeed00001', { ...placement('anon1'), createdAt: Timestamp.now() });
+    await assertFails(getDoc(doc(anon(), 'placementTests/ResSeed00001')));
+    await assertFails(getDocs(collection(anon(), 'placementTests')));
+    await assertFails(getDocs(collection(guestDb(), 'placementTests')));
+    await assertFails(getDocs(collection(ayse(), 'placementTests')));
+    await assertFails(updateDoc(doc(anon(), 'placementTests/ResSeed00001'), { read: true }));
+    await assertFails(deleteDoc(doc(anon(), 'placementTests/ResSeed00001')));
+  });
+
+  test('öğretmen okuyabilir, okundu/not ekleyebilir ve silebilir', async () => {
+    await seed('placementTests/ResSeed00001', { ...placement('anon1'), createdAt: Timestamp.now() });
+    const db = teacherDb();
+    await assertSucceeds(getDocs(collection(db, 'placementTests')));
+    await assertSucceeds(updateDoc(doc(db, 'placementTests/ResSeed00001'), { read: true, adminNote: 'Perfekt tekrar.' }));
+    await assertSucceeds(deleteDoc(doc(db, 'placementTests/ResSeed00001')));
+  });
+
+  test('öğretmene benzeyen UID ile okunamaz', async () => {
+    await seed('placementTests/ResSeed00001', { ...placement('anon1'), createdAt: Timestamp.now() });
+    await assertFails(getDocs(collection(as(TEACHER + 'x', anonToken), 'placementTests')));
+  });
+
+  test('yeni kayıt okunmuş veya yönetici notuyla eklenemez', async () => {
+    await assertFails(submit(anon(), 'anon1', placement('anon1', { read: true })));
+    await assertFails(submit(anon(), 'anon1', placement('anon1', { adminNote: 'x' })));
+  });
+
+  test('onay kutusu işaretlenmeden eklenemez', async () => {
+    await assertFails(submit(anon(), 'anon1', placement('anon1', { consent: false })));
+  });
+
+  test('sunucu saati dışında bir tarih yazılamaz', async () => {
+    await assertFails(submit(anon(), 'anon1', placement('anon1', { createdAt: Timestamp.fromMillis(Date.now() - DAY) })));
+  });
+
+  test('expireAt yaklaşık 6 ay (183 gün ± 1 gün) olmalı', async () => {
+    await assertFails(submit(anon(), 'anon1', placement('anon1', { expireAt: Timestamp.fromMillis(Date.now() + 365 * DAY) })));
+    await assertFails(submit(anon(), 'anon2', placement('anon2', { expireAt: Timestamp.fromMillis(Date.now() + 30 * DAY) })));
+    await assertFails(submit(anon(), 'anon3', placement('anon3', { expireAt: '2027-05-01' })));
+    const noExpire = placement('anon4'); delete noExpire.expireAt;
+    await assertFails(submit(anon('anon4'), 'anon4', noExpire));
+    await assertSucceeds(submit(anon('anon5'), 'anon5', placement('anon5', { expireAt: Timestamp.fromMillis(Date.now() + 182.5 * DAY) })));
+  });
+
+  test('fazladan veya eksik alan kabul edilmez', async () => {
+    await assertFails(submit(anon(), 'anon1', placement('anon1', { phone: '0170' })));
+    const missing = placement('anon1'); delete missing.writing;
+    await assertFails(submit(anon(), 'anon1', missing));
+  });
+
+  test('boyut ve biçim sınırları', async () => {
+    const cases = {
+      name: 'x'.repeat(81), email: 'kein-email', goal: 'tourism', examName: 'x'.repeat(81), examDate: '15.03.2027',
+      experience: '10y', note: 'x'.repeat(1001), level: 'C2', near: 'X1', skipped: 'no', writing: 'x'.repeat(3001),
+      durationSec: 99999, bank: 0, lang: 'fr', topicErrors: 'Artikel=2', wrong: 'a1-artikel ' + 'x'.repeat(10),
+      blocks: { A1: { correct: 11, total: 10 } }
+    };
+    let i = 0;
+    for (const [field, value] of Object.entries(cases)) {
+      const uid = 'anon' + (i++);
+      await assertFails(submit(anon(uid), uid, placement(uid, { [field]: value })), field);
+    }
+    await assertFails(submit(anon('big'), 'big', placement('big', { wrong: ('a1-artikel\t' + 'x'.repeat(190) + '\n').repeat(45) })));
+    await assertFails(submit(anon('blk'), 'blk', placement('blk', { blocks: { C2: { correct: 1, total: 2 } } })));
+  });
+
+  test('sınav bilgisi ve not boş olabilir, "Hiç Almanca bilmiyorum" kaydı geçerli', async () => {
+    await assertSucceeds(submit(anon(), 'anon1', placement('anon1', {
+      goal: 'daily', examName: '', examDate: '', experience: 'none', level: 'A0', near: '', skipped: true,
+      blocks: {}, topicErrors: '', wrong: '', writing: ''
+    })));
   });
 });

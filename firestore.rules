@@ -158,5 +158,93 @@ service cloud.firestore {
     }
 
     // deleted/{uid}: sadece öğretmen (genel kural). Öğrenci okuyamaz.
+
+    // Seviye testi sonuçları (#seviye-testi). Herkes (anonim giriş dahil) yalnızca yeni sonuç
+    // ekleyebilir; okuma, güncelleme ve silme sadece öğretmen (yukarıdaki genel kural).
+    // Bekleme süresi: aynı batch içinde placementLimits/{uid} belgesi bu sonucun kimliğiyle
+    // yazılmak zorunda; o belge en fazla 10 dakikada bir güncellenebilir.
+    function placementLimitPath(uid) {
+      return /databases/$(database)/documents/placementLimits/$(uid);
+    }
+
+    function validLevel(value) {
+      return value in ['A0', 'A1', 'A2', 'B1', 'B2', 'C1'];
+    }
+
+    function validBlock(block) {
+      return block == null || (block is map
+        && block.keys().hasOnly(['correct', 'total'])
+        && block.keys().hasAll(['correct', 'total'])
+        && block.total is int && block.total >= 1 && block.total <= 20
+        && block.correct is int && block.correct >= 0 && block.correct <= block.total);
+    }
+
+    function validBlocks(b) {
+      return b is map && b.keys().hasOnly(['A1', 'A2', 'B1', 'B2', 'C1'])
+        && validBlock(b.get('A1', null)) && validBlock(b.get('A2', null)) && validBlock(b.get('B1', null))
+        && validBlock(b.get('B2', null)) && validBlock(b.get('C1', null));
+    }
+
+    function shortText(value, max) {
+      return value is string && value.size() <= max;
+    }
+
+    function validPlacement(id) {
+      let d = request.resource.data;
+      return d.keys().hasOnly(['uid', 'name', 'email', 'goal', 'examName', 'examDate', 'experience', 'note',
+          'level', 'near', 'skipped', 'blocks', 'topicErrors', 'wrong', 'writing', 'durationSec', 'bank',
+          'lang', 'consent', 'read', 'createdAt', 'expireAt'])
+        && d.keys().hasAll(['uid', 'name', 'email', 'goal', 'examName', 'examDate', 'experience', 'note',
+          'level', 'near', 'skipped', 'blocks', 'topicErrors', 'wrong', 'writing', 'durationSec', 'bank',
+          'lang', 'consent', 'read', 'createdAt', 'expireAt'])
+        && d.uid == request.auth.uid
+        && validName(d.name)
+        && validEmail(d.email)
+        && d.goal in ['daily', 'exam', 'work', 'school', 'other']
+        && shortText(d.examName, 80)
+        && d.examDate is string && (d.examDate == '' || d.examDate.matches('^20[0-9]{2}-[01][0-9]-[0-3][0-9]$'))
+        && d.experience in ['none', 'lt6m', '6to12m', '1to2y', 'gt2y']
+        && shortText(d.note, 1000)
+        && validLevel(d.level)
+        && (d.near == '' || validLevel(d.near))
+        && d.skipped is bool
+        && validBlocks(d.blocks)
+        // Konu bazında hatalar: "artikel:2,perfekt:1"
+        && shortText(d.topicErrors, 1500) && d.topicErrors.matches('^([a-z0-9-]{1,40}:[0-9]{1,2}(,|$))*$')
+        // Yanlış cevaplar: her satır "soru-kimliği<TAB>öğrencinin cevabı"
+        && shortText(d.wrong, 8000) && d.wrong.matches('^([a-z0-9-]{1,40}\\t[^\\t\\n]{1,200}(\\n|$))*$')
+        && shortText(d.writing, 3000)
+        && d.durationSec is int && d.durationSec >= 0 && d.durationSec <= 21600
+        && d.bank is int && d.bank >= 1 && d.bank <= 100
+        && d.lang in ['tr', 'de', 'en']
+        && d.consent == true
+        && d.read == false
+        && d.createdAt == request.time
+        // TTL (Firestore → Time-to-live, alan: expireAt): oluşturulduktan 183 gün (6 ay) sonra.
+        // Tarayıcı sunucu saatini bilemediği için ±1 gün saat farkı kabul edilir.
+        && d.expireAt is timestamp
+        && d.expireAt >= request.time + duration.value(182, 'd')
+        && d.expireAt <= request.time + duration.value(184, 'd')
+        && getAfter(placementLimitPath(request.auth.uid)).data.lastAt == request.time
+        && getAfter(placementLimitPath(request.auth.uid)).data.lastId == id;
+    }
+
+    function validPlacementLimit() {
+      let d = request.resource.data;
+      return d.keys().hasOnly(['lastAt', 'lastId'])
+        && d.lastAt == request.time
+        && d.lastId is string && d.lastId.matches('^[A-Za-z0-9]{10,40}$')
+        && existsAfter(/databases/$(database)/documents/placementTests/$(d.lastId));
+    }
+
+    match /placementTests/{id} {
+      allow create: if signedIn() && validPlacement(id);
+    }
+
+    match /placementLimits/{uid} {
+      allow create: if isSelf(uid) && validPlacementLimit();
+      allow update: if isSelf(uid) && validPlacementLimit()
+        && request.time >= resource.data.lastAt + duration.value(10, 'm');
+    }
   }
 }

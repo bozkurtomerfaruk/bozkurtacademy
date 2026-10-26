@@ -2,6 +2,12 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-10-26 · Seviye tespit sınavı (#seviye-testi) ve yönetim sayfası — devam ediyor
+
+### Kaldığım yer
+- Dal: `claude/seviye-testi`. Bitti: soru bankası `data/seviye-testi/sorular.json` (5 blok × 10 soru, kör çözüm 50/50 + değişen 9 soru 9/9), `firestore.rules` (placementTests, placementLimits), kural testleri (`npm test` 100/100).
+- Sırada: `js/placement.js` + `css/placement.css` (test sayfası), `js/account/placement-submit.js`, `js/account/placement-admin.js` (yönetim), `index.html` bağlantıları, `analytics.js`, Playwright testleri, gizlilik önerisi, birleştirme.
+
 ## 2026-10-26 · Lesen son tur: TestDaF Aufgabe 7 gerçek formatta, telc C1 cevap biçimi
 
 - **TestDaF dijital Aufgabe 7:** Her set artık tek özet (14 cümle, üç paragraf) ve içinde üç yanlış cümle. Öğrenci üç cümle seçer, en fazla üç seçilebilir; her doğru seçim 1 puan (soru 32 = 32–34). Yanlış cümlelerin yeri setlere göre değişiyor; bazı setlerde ikisi aynı paragrafta. `fehlersatz` tipi yerine çoklu seçimli `fehlerauswahl` geldi (oynatıcı, puanlama, `check-exams` ve testler güncellendi).

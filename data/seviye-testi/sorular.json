@@ -1,0 +1,735 @@
+{
+  "version": 1,
+  "passCorrect": 6,
+  "blocks": [
+    {
+      "level": "A1",
+      "questions": [
+        {
+          "id": "a1-praesens",
+          "topic": "praesens",
+          "type": "gap",
+          "prompt": "Woher ___ du? – Ich komme aus Antalya.",
+          "options": [
+            "kommst",
+            "kommt",
+            "komme",
+            "kommen"
+          ],
+          "answer": "kommst"
+        },
+        {
+          "id": "a1-haben",
+          "topic": "sein-haben",
+          "type": "gap",
+          "prompt": "Wir ___ heute leider keine Zeit.",
+          "options": [
+            "haben",
+            "sind",
+            "hat",
+            "seid"
+          ],
+          "answer": "haben"
+        },
+        {
+          "id": "a1-artikel",
+          "topic": "artikel",
+          "type": "gap",
+          "prompt": "___ Kind spielt im Garten.",
+          "options": [
+            "Das",
+            "Der",
+            "Die",
+            "Den"
+          ],
+          "answer": "Das"
+        },
+        {
+          "id": "a1-akkusativ",
+          "topic": "akkusativ",
+          "type": "gap",
+          "prompt": "Ich kaufe ___ Rock für meine Schwester.",
+          "options": [
+            "einen",
+            "ein",
+            "eine",
+            "einem"
+          ],
+          "answer": "einen"
+        },
+        {
+          "id": "a1-negation",
+          "topic": "negation",
+          "type": "gap",
+          "prompt": "Ich fahre mit dem Bus. Ich habe ___ Auto.",
+          "options": [
+            "kein",
+            "nicht",
+            "keine",
+            "nichts"
+          ],
+          "answer": "kein"
+        },
+        {
+          "id": "a1-modalverben",
+          "topic": "modalverben",
+          "type": "gap",
+          "prompt": "Hier ___ man nicht rauchen.",
+          "options": [
+            "darf",
+            "dürfen",
+            "darfst",
+            "dürft"
+          ],
+          "answer": "darf"
+        },
+        {
+          "id": "a1-wortschatz",
+          "topic": "wortschatz",
+          "type": "gap",
+          "prompt": "Mein Vater und meine Mutter sind meine ___.",
+          "options": [
+            "Eltern",
+            "Geschwister",
+            "Kinder",
+            "Freunde"
+          ],
+          "answer": "Eltern"
+        }
+      ],
+      "reading": {
+        "id": "a1-lesen",
+        "title": "Eine E-Mail von Deniz",
+        "text": [
+          "Hallo Jana,",
+          "ich wohne jetzt in einer neuen Stadt. Meine Wohnung ist klein, aber schön. Sie hat ein Zimmer, eine Küche und ein Bad. Am Montag beginnt mein Deutschkurs. Der Kurs ist am Vormittag, von 9 bis 12 Uhr. Am Nachmittag arbeite ich in einem Café. Am Wochenende habe ich frei. Besuchst du mich im Mai?",
+          "Viele Grüße\nDeniz"
+        ],
+        "questions": [
+          {
+            "id": "a1-lesen-1",
+            "topic": "lesen",
+            "type": "mc",
+            "prompt": "Wie ist die Wohnung?",
+            "options": [
+              "nicht groß, aber schön",
+              "groß und schön",
+              "klein und nicht schön",
+              "groß, aber nicht schön"
+            ],
+            "answer": "nicht groß, aber schön"
+          },
+          {
+            "id": "a1-lesen-2",
+            "topic": "lesen",
+            "type": "mc",
+            "prompt": "Was macht Deniz am Vormittag?",
+            "options": [
+              "Deniz lernt Deutsch.",
+              "Deniz arbeitet im Café.",
+              "Deniz hat frei.",
+              "Deniz besucht Jana."
+            ],
+            "answer": "Deniz lernt Deutsch."
+          },
+          {
+            "id": "a1-lesen-3",
+            "topic": "lesen",
+            "type": "mc",
+            "prompt": "Was fragt Deniz?",
+            "options": [
+              "Kommst du im Mai?",
+              "Hast du im Mai frei?",
+              "Arbeitest du im Café?",
+              "Lernst du auch Deutsch?"
+            ],
+            "answer": "Kommst du im Mai?"
+          }
+        ]
+      }
+    },
+    {
+      "level": "A2",
+      "questions": [
+        {
+          "id": "a2-perfekt",
+          "topic": "perfekt",
+          "type": "gap",
+          "prompt": "Gestern ___ wir mit dem Zug nach Hause gefahren.",
+          "options": [
+            "sind",
+            "haben",
+            "wurden",
+            "hatten"
+          ],
+          "answer": "sind"
+        },
+        {
+          "id": "a2-dativ",
+          "topic": "dativ",
+          "type": "gap",
+          "prompt": "Am Samstag helfe ich ___ Nachbarin beim Umzug.",
+          "options": [
+            "der",
+            "die",
+            "den",
+            "dem"
+          ],
+          "answer": "der"
+        },
+        {
+          "id": "a2-wechsel",
+          "topic": "wechselpraepositionen",
+          "type": "gap",
+          "prompt": "Ich hänge das Bild an ___ Wand neben dem Fenster.",
+          "options": [
+            "die",
+            "der",
+            "dem",
+            "den"
+          ],
+          "answer": "die"
+        },
+        {
+          "id": "a2-nebensatz",
+          "topic": "nebensaetze",
+          "type": "gap",
+          "prompt": "Ich hoffe, dass ___.",
+          "options": [
+            "du bald wieder gesund bist",
+            "du bist bald wieder gesund",
+            "bist du bald wieder gesund",
+            "du bald bist wieder gesund"
+          ],
+          "answer": "du bald wieder gesund bist"
+        },
+        {
+          "id": "a2-komparativ",
+          "topic": "komparativ-superlativ",
+          "type": "gap",
+          "prompt": "Mein Bruder ist zwei Jahre ___ als ich.",
+          "options": [
+            "älter",
+            "alt",
+            "am ältesten",
+            "ältesten"
+          ],
+          "answer": "älter"
+        },
+        {
+          "id": "a2-reflexiv",
+          "topic": "reflexive-verben",
+          "type": "gap",
+          "prompt": "Wir freuen ___ schon auf die Ferien.",
+          "options": [
+            "uns",
+            "euch",
+            "sich",
+            "wir"
+          ],
+          "answer": "uns"
+        },
+        {
+          "id": "a2-wortschatz",
+          "topic": "wortschatz",
+          "type": "gap",
+          "prompt": "Ich kann heute nicht zur Arbeit kommen. Ich bin krank und habe um 10 Uhr einen ___ beim Arzt.",
+          "options": [
+            "Termin",
+            "Vertrag",
+            "Ausweis",
+            "Zeugnis"
+          ],
+          "answer": "Termin"
+        }
+      ],
+      "reading": {
+        "id": "a2-lesen",
+        "title": "Eine Nachricht an alle Kollegen",
+        "text": [
+          "Liebe Kolleginnen und Kollegen,",
+          "nächsten Freitag feiern wir den zehnten Geburtstag unserer Firma. Die Feier beginnt um 17 Uhr in der Kantine. Wir wollten zuerst im Garten feiern, aber das Wetter soll schlecht werden. Essen und Getränke bezahlt die Firma. Wer möchte, kann einen Kuchen mitbringen. Bitte sagen Sie dann bis Mittwoch Frau Albers Bescheid. Ihre Familie ist auch herzlich eingeladen. Am Freitag schließt das Büro schon um 15 Uhr.",
+          "Viele Grüße\nThomas Weber"
+        ],
+        "questions": [
+          {
+            "id": "a2-lesen-1",
+            "topic": "lesen",
+            "type": "mc",
+            "prompt": "Warum ist die Feier in der Kantine?",
+            "options": [
+              "Weil man schlechtes Wetter erwartet.",
+              "Weil der Garten zu klein ist.",
+              "Weil die Kantine näher am Büro ist.",
+              "Weil es nur dort Essen und Getränke gibt."
+            ],
+            "answer": "Weil man schlechtes Wetter erwartet."
+          },
+          {
+            "id": "a2-lesen-2",
+            "topic": "lesen",
+            "type": "mc",
+            "prompt": "Was sollen Kollegen tun, die einen Kuchen mitbringen?",
+            "options": [
+              "Sie melden sich bis Mittwoch bei Frau Albers.",
+              "Sie bringen den Kuchen am Mittwoch ins Büro.",
+              "Sie kaufen auch Getränke für die Feier.",
+              "Sie kommen am Freitag schon um 15 Uhr."
+            ],
+            "answer": "Sie melden sich bis Mittwoch bei Frau Albers."
+          },
+          {
+            "id": "a2-lesen-3",
+            "topic": "lesen",
+            "type": "mc",
+            "prompt": "Was ist richtig?",
+            "options": [
+              "Man kann mit der Familie kommen.",
+              "Das Büro ist am Freitag geschlossen.",
+              "Die Feier beginnt um 15 Uhr.",
+              "Die Kollegen bezahlen die Getränke."
+            ],
+            "answer": "Man kann mit der Familie kommen."
+          }
+        ]
+      }
+    },
+    {
+      "level": "B1",
+      "questions": [
+        {
+          "id": "b1-relativ",
+          "topic": "relativsaetze",
+          "type": "gap",
+          "prompt": "Das ist die Kollegin, ___ ich gestern beim Umzug geholfen habe.",
+          "options": [
+            "der",
+            "die",
+            "deren",
+            "denen"
+          ],
+          "answer": "der"
+        },
+        {
+          "id": "b1-passiv",
+          "topic": "passiv",
+          "type": "gap",
+          "prompt": "Die alte Brücke ___ im nächsten Jahr renoviert.",
+          "options": [
+            "wird",
+            "wurde",
+            "hat",
+            "werden"
+          ],
+          "answer": "wird"
+        },
+        {
+          "id": "b1-konjunktiv",
+          "topic": "konjunktiv-ii-b1",
+          "type": "gap",
+          "prompt": "Wenn ich mehr Zeit ___, würde ich öfter selbst kochen.",
+          "options": [
+            "hätte",
+            "habe",
+            "hatte",
+            "hätten"
+          ],
+          "answer": "hätte"
+        },
+        {
+          "id": "b1-konnektor",
+          "topic": "konnektoren",
+          "type": "gap",
+          "prompt": "Es hat den ganzen Tag geregnet. ___ sind wir spazieren gegangen.",
+          "options": [
+            "Trotzdem",
+            "Obwohl",
+            "Deshalb",
+            "Weil"
+          ],
+          "answer": "Trotzdem"
+        },
+        {
+          "id": "b1-infinitiv",
+          "topic": "infinitiv-zu",
+          "type": "gap",
+          "prompt": "Entschuldige, ich habe vergessen, ___.",
+          "options": [
+            "dich anzurufen",
+            "dich anrufen",
+            "dich zu anrufen",
+            "anzurufen dich"
+          ],
+          "answer": "dich anzurufen"
+        },
+        {
+          "id": "b1-indirekt",
+          "topic": "indirekte-fragen",
+          "type": "gap",
+          "prompt": "Können Sie mir sagen, ___?",
+          "options": [
+            "wann der nächste Bus fährt",
+            "wann fährt der nächste Bus",
+            "ob fährt der nächste Bus",
+            "wann der nächste Bus fahren"
+          ],
+          "answer": "wann der nächste Bus fährt"
+        },
+        {
+          "id": "b1-wortschatz",
+          "topic": "wortschatz",
+          "type": "gap",
+          "prompt": "Ich weiß nicht, welche Wohnung ich nehmen soll. Kannst du mir einen ___ geben?",
+          "options": [
+            "Rat",
+            "Grund",
+            "Platz",
+            "Fehler"
+          ],
+          "answer": "Rat"
+        }
+      ],
+      "reading": {
+        "id": "b1-lesen",
+        "title": "Ein Laden der anderen Art",
+        "text": [
+          "Seit einem halben Jahr gibt es im Stadtteil Kornfeld einen „Leihladen“. Wer eine Bohrmaschine, ein Zelt oder eine Nähmaschine nur ein paar Mal im Jahr braucht, muss sie nicht kaufen, sondern kann sie dort für eine Woche ausleihen. Die Mitgliedschaft kostet zwölf Euro im Jahr, Studierende zahlen die Hälfte.",
+          "Die Idee hatte Petra Lindner, die früher in einem Baumarkt gearbeitet hat. „Viele Leute haben mir erzählt, dass ihre Geräte fast nur im Keller stehen“, sagt sie. Am Anfang kamen die meisten Dinge aus ihrer eigenen Wohnung, inzwischen bringen auch Nachbarn Sachen vorbei. Probleme gibt es selten: Nur zweimal kam bisher etwas kaputt zurück.",
+          "Weil im Laden nur Freiwillige arbeiten, ist er bis jetzt nur am Dienstag und am Samstag geöffnet. Lindner sucht deshalb noch Helferinnen und Helfer, damit der Laden auch donnerstags öffnen kann."
+        ],
+        "questions": [
+          {
+            "id": "b1-lesen-1",
+            "topic": "lesen",
+            "type": "mc",
+            "prompt": "Was ist die Idee des Leihladens?",
+            "options": [
+              "Man leiht Dinge aus, die man nur selten braucht.",
+              "Man kann dort gebrauchte Geräte zu günstigen Preisen kaufen.",
+              "Man lernt dort, kaputte Geräte zu Hause selbst zu reparieren.",
+              "Man gibt alte Geräte ab und bekommt dafür etwas Geld zurück."
+            ],
+            "answer": "Man leiht Dinge aus, die man nur selten braucht."
+          },
+          {
+            "id": "b1-lesen-2",
+            "topic": "lesen",
+            "type": "mc",
+            "prompt": "Woher kamen die Sachen am Anfang?",
+            "options": [
+              "Vor allem aus Lindners Wohnung.",
+              "Vor allem aus einem Baumarkt.",
+              "Vor allem von den Nachbarn.",
+              "Vor allem von Studierenden."
+            ],
+            "answer": "Vor allem aus Lindners Wohnung."
+          },
+          {
+            "id": "b1-lesen-3",
+            "topic": "lesen",
+            "type": "mc",
+            "prompt": "Warum sucht Petra Lindner Helfer?",
+            "options": [
+              "Weil der Laden auch donnerstags öffnen soll.",
+              "Weil viele Geräte kaputt zurückkommen.",
+              "Weil sie selbst weniger arbeiten möchte.",
+              "Weil im Laden noch viele Geräte fehlen."
+            ],
+            "answer": "Weil der Laden auch donnerstags öffnen soll."
+          }
+        ]
+      }
+    },
+    {
+      "level": "B2",
+      "questions": [
+        {
+          "id": "b2-konjunktiv-i",
+          "topic": "konjunktiv-i",
+          "type": "mc",
+          "prompt": "In welchem Satz steht das Verb im Konjunktiv I?",
+          "options": [
+            "Er sagt, er habe keine Zeit.",
+            "Er sagt, er hätte keine Zeit.",
+            "Er sagt, er hat keine Zeit.",
+            "Er sagt, er hatte keine Zeit."
+          ],
+          "answer": "Er sagt, er habe keine Zeit."
+        },
+        {
+          "id": "b2-passiversatz",
+          "topic": "passiv-varianten",
+          "type": "gap",
+          "prompt": "Das Problem lässt sich mit etwas Geduld leicht ___.",
+          "options": [
+            "lösen",
+            "gelöst",
+            "zu lösen",
+            "löst"
+          ],
+          "answer": "lösen"
+        },
+        {
+          "id": "b2-partizip-i",
+          "topic": "partizip-i",
+          "type": "gap",
+          "prompt": "Der ___ Zug hatte zwanzig Minuten Verspätung.",
+          "options": [
+            "in Berlin ankommende",
+            "in Berlin ankommenden",
+            "in Berlin ankommend",
+            "in Berlin angekommende"
+          ],
+          "answer": "in Berlin ankommende"
+        },
+        {
+          "id": "b2-genitiv",
+          "topic": "genitivpraepositionen",
+          "type": "gap",
+          "prompt": "___ des Regens fand das Konzert wie geplant im Freien statt.",
+          "options": [
+            "Trotz",
+            "Wegen",
+            "Infolge",
+            "Anstatt"
+          ],
+          "answer": "Trotz"
+        },
+        {
+          "id": "b2-je-desto",
+          "topic": "je-desto",
+          "type": "gap",
+          "prompt": "Je mehr Menschen das Angebot nutzen, ___.",
+          "options": [
+            "desto günstiger wird es für alle",
+            "desto wird es günstiger für alle",
+            "desto es wird günstiger für alle",
+            "desto günstiger es wird für alle"
+          ],
+          "answer": "desto günstiger wird es für alle"
+        },
+        {
+          "id": "b2-nominal",
+          "topic": "nominalisierung",
+          "type": "mc",
+          "prompt": "Welcher Ausdruck bedeutet dasselbe wie „Weil die Nachfrage gestiegen ist, …“?",
+          "options": [
+            "Aufgrund der gestiegenen Nachfrage …",
+            "Trotz der gestiegenen Nachfrage …",
+            "Aufgrund der gestiegene Nachfrage …",
+            "Trotz der gestiegene Nachfrage …"
+          ],
+          "answer": "Aufgrund der gestiegenen Nachfrage …"
+        },
+        {
+          "id": "b2-wortschatz",
+          "topic": "wortschatz",
+          "type": "gap",
+          "prompt": "Die Regierung will gegen die hohen Mieten neue Maßnahmen ___.",
+          "options": [
+            "ergreifen",
+            "greifen",
+            "fassen",
+            "nehmen"
+          ],
+          "answer": "ergreifen"
+        }
+      ],
+      "reading": {
+        "id": "b2-lesen",
+        "title": "Bibliothek ohne Personal",
+        "text": [
+          "Seit dem Frühjahr können Leserinnen und Leser die Stadtbibliothek von Neuweiler auch dann betreten, wenn kein Personal anwesend ist: Mit ihrem Bibliotheksausweis öffnen sie zwischen sieben und zweiundzwanzig Uhr die Tür, leihen Bücher an Automaten aus und geben sie dort wieder zurück. Befürchtungen, dass dabei viele Medien verschwinden würden, haben sich bislang nicht bestätigt; die Verluste liegen sogar etwas unter denen der Vorjahre.",
+          "Bibliotheksleiterin Svenja Rohde sieht den Hauptgewinn allerdings nicht in den längeren Öffnungszeiten an sich. Seit die Routinearbeit an der Ausleihtheke wegfalle, habe ihr Team endlich Zeit für Leseförderung in Schulen und für Sprechstunden, in denen ältere Menschen den Umgang mit Tablets lernen.",
+          "Kritik kommt vom Personalrat: Er befürchtet, die Stadt könnte das Modell nutzen, um langfristig Stellen einzusparen. Rohde hält das für unbegründet, räumt aber ein, dass sie darüber nicht allein entscheiden könne. Ob das Angebot nach der zweijährigen Testphase bestehen bleibt, will der Gemeinderat im Herbst nächsten Jahres festlegen."
+        ],
+        "questions": [
+          {
+            "id": "b2-lesen-1",
+            "topic": "lesen",
+            "type": "mc",
+            "prompt": "Was sagt der Text über verlorene Bücher und Medien?",
+            "options": [
+              "Es geht weniger verloren als früher.",
+              "Es geht mehr verloren als erwartet.",
+              "Die Verluste sind gestiegen, aber noch gering.",
+              "Darüber gibt es noch keine Zahlen."
+            ],
+            "answer": "Es geht weniger verloren als früher."
+          },
+          {
+            "id": "b2-lesen-2",
+            "topic": "lesen",
+            "type": "mc",
+            "prompt": "Worin sieht Svenja Rohde den wichtigsten Vorteil des Modells?",
+            "options": [
+              "Ihr Team gewinnt Zeit für neue Angebote.",
+              "Die Leser können auch morgens und abends kommen.",
+              "Die Ausleihe am Automaten geht schneller.",
+              "Die Bibliothek braucht weniger Personal."
+            ],
+            "answer": "Ihr Team gewinnt Zeit für neue Angebote."
+          },
+          {
+            "id": "b2-lesen-3",
+            "topic": "lesen",
+            "type": "mc",
+            "prompt": "Wie reagiert Svenja Rohde auf die Kritik des Personalrats?",
+            "options": [
+              "Sie widerspricht, hat aber nicht das letzte Wort.",
+              "Sie teilt die Sorge, hofft aber auf eine Lösung mit der Stadt.",
+              "Sie verspricht, dass keine Stellen gestrichen werden.",
+              "Sie verweist auf die Entscheidung des Gemeinderats im Herbst."
+            ],
+            "answer": "Sie widerspricht, hat aber nicht das letzte Wort."
+          }
+        ]
+      }
+    },
+    {
+      "level": "C1",
+      "questions": [
+        {
+          "id": "c1-konjunktiv",
+          "topic": "konjunktiv-ii-b1",
+          "type": "gap",
+          "prompt": "Du ___ mir früher Bescheid sagen müssen, dann hätte ich den Termin verschoben.",
+          "options": [
+            "hättest",
+            "hast",
+            "hattest",
+            "würdest"
+          ],
+          "answer": "hättest"
+        },
+        {
+          "id": "c1-modal-subjektiv",
+          "topic": "modalverben-subjektiv",
+          "type": "mc",
+          "prompt": "„Der Schauspieler soll das Haus für zwei Millionen Euro gekauft haben.“ Was bedeutet der Satz?",
+          "options": [
+            "Es wird berichtet, dass er das Haus gekauft hat.",
+            "Er behauptet selbst, das Haus gekauft zu haben.",
+            "Er hätte das Haus kaufen sollen.",
+            "Er hatte vor, das Haus zu kaufen."
+          ],
+          "answer": "Es wird berichtet, dass er das Haus gekauft hat."
+        },
+        {
+          "id": "c1-funktionsverb",
+          "topic": "funktionsverbgefuege",
+          "type": "gap",
+          "prompt": "Die neuen Regeln treten am 1. Januar in ___.",
+          "options": [
+            "Kraft",
+            "Wirkung",
+            "Geltung",
+            "Macht"
+          ],
+          "answer": "Kraft"
+        },
+        {
+          "id": "c1-konnektor",
+          "topic": "konnektoren-b2",
+          "type": "gap",
+          "prompt": "Ich nehme die Stelle nicht an, ___ die Bezahlung schlecht und der Arbeitsweg sehr lang ist.",
+          "options": [
+            "zumal",
+            "sofern",
+            "sodass",
+            "indem"
+          ],
+          "answer": "zumal"
+        },
+        {
+          "id": "c1-partizip",
+          "topic": "partizip-ii",
+          "type": "gap",
+          "prompt": "Die ___ Maßnahmen haben bisher kaum Wirkung gezeigt.",
+          "options": [
+            "von der Regierung im Frühjahr beschlossenen",
+            "von der Regierung im Frühjahr beschließenden",
+            "von der Regierung im Frühjahr beschlossene",
+            "die Regierung im Frühjahr beschlossenen"
+          ],
+          "answer": "von der Regierung im Frühjahr beschlossenen"
+        },
+        {
+          "id": "c1-satzstellung",
+          "topic": "satzstellung-b1",
+          "type": "gap",
+          "prompt": "Es tut mir leid, dass ich gestern nicht ___.",
+          "options": [
+            "habe kommen können",
+            "kommen hat können",
+            "kommen gekonnt habe",
+            "gekommen können habe"
+          ],
+          "answer": "habe kommen können"
+        },
+        {
+          "id": "c1-wortschatz",
+          "topic": "wortschatz",
+          "type": "gap",
+          "prompt": "Die Ergebnisse der Studie lassen sich nicht ohne Weiteres auf andere Länder ___.",
+          "options": [
+            "übertragen",
+            "übersetzen",
+            "überweisen",
+            "überliefern"
+          ],
+          "answer": "übertragen"
+        }
+      ],
+      "reading": {
+        "id": "c1-lesen",
+        "title": "Parkplätze und Ladenkassen",
+        "text": [
+          "Kaum eine Maßnahme der Verkehrsplanung ruft so verlässlich Widerstand hervor wie die Umwandlung von Parkplätzen in Rad- oder Fußwege. Vor allem der Einzelhandel warnt regelmäßig vor Umsatzeinbußen, da ein Großteil der Kundschaft mit dem Auto anreise. Befragungen in mehreren mittelgroßen Städten zeichnen jedoch ein anderes Bild: Die Ladeninhaber schätzten den Anteil der Autofahrer unter ihrer Kundschaft im Schnitt fast doppelt so hoch ein, wie er tatsächlich war. Zudem zeigte sich, dass Kundinnen und Kunden, die zu Fuß oder mit dem Rad kommen, pro Einkauf zwar weniger ausgeben, die Geschäfte dafür aber deutlich häufiger aufsuchen, sodass sie im Monatsverlauf keineswegs weniger Umsatz bringen.",
+          "Daraus zu folgern, Autos seien für den Handel generell entbehrlich, wäre allerdings voreilig. Die untersuchten Straßen lagen ausnahmslos in dicht bebauten Innenstädten mit gutem Nahverkehr. Für Geschäfte in ländlichen Regionen, deren Kundschaft oft weite Strecken zurücklegt, lassen sich die Befunde kaum verallgemeinern. Auch Läden, die sperrige Waren verkaufen, dürften eher auf Parkmöglichkeiten angewiesen sein. Sinnvoller als ein pauschales Für oder Wider erscheint es daher, vor jeder Umgestaltung zu erheben, wie die Kundschaft einer bestimmten Straße tatsächlich anreist – eine Frage, die sich mit vergleichsweise geringem Aufwand beantworten ließe."
+        ],
+        "questions": [
+          {
+            "id": "c1-lesen-1",
+            "topic": "lesen",
+            "type": "mc",
+            "prompt": "Was ergaben die Befragungen über die Einschätzung der Ladeninhaber?",
+            "options": [
+              "Sie überschätzten, wie viele Kunden mit dem Auto kommen.",
+              "Sie unterschätzten, wie viel Rad- und Fußkunden ausgeben.",
+              "Sie schätzten den Anteil der Autofahrer recht genau ein.",
+              "Sie hielten Rad- und Fußkunden für die wichtigere Gruppe."
+            ],
+            "answer": "Sie überschätzten, wie viele Kunden mit dem Auto kommen."
+          },
+          {
+            "id": "c1-lesen-2",
+            "topic": "lesen",
+            "type": "mc",
+            "prompt": "Was trifft laut Text auf Kunden zu, die ohne Auto kommen?",
+            "options": [
+              "Über einen Monat gerechnet bringen sie nicht weniger Umsatz.",
+              "Sie geben bei jedem Einkauf mehr Geld aus als Autofahrer.",
+              "Sie kommen seltener, kaufen dann aber mehr auf einmal.",
+              "Sie bilden in den untersuchten Straßen die Mehrheit."
+            ],
+            "answer": "Über einen Monat gerechnet bringen sie nicht weniger Umsatz."
+          },
+          {
+            "id": "c1-lesen-3",
+            "topic": "lesen",
+            "type": "mc",
+            "prompt": "Welche Haltung vertritt der Autor?",
+            "options": [
+              "Er hält eine Prüfung im Einzelfall für sinnvoller als eine allgemeine Regel.",
+              "Er spricht sich grundsätzlich für autofreie Einkaufsstraßen aus.",
+              "Er hält die Befragungen für methodisch wenig zuverlässig.",
+              "Er meint, Geschäfte auf dem Land sollten sich mehr auf Radfahrer einstellen."
+            ],
+            "answer": "Er hält eine Prüfung im Einzelfall für sinnvoller als eine allgemeine Regel."
+          }
+        ]
+      }
+    }
+  ]
+}

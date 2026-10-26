@@ -1,0 +1,450 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "c1",
+  "section": "sprachbausteine",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Die Entwicklung des Mikroskops",
+  "minutes": 25,
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort (a, b, c oder d) in die Lücken 25–46 passt.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "text",
+          "title": "Die Entwicklung des Mikroskops",
+          "byline": "Aus einer populärwissenschaftlichen Zeitschrift",
+          "paragraphs": [
+            "Kaum ein Instrument hat unser Bild von der belebten Natur so tiefgreifend verändert wie das Mikroskop. Wer es erfunden hat, lässt sich jedoch nicht mehr {{25}} klären. Fest steht nur, dass um 1600 in den Niederlanden Brillenmacher damit experimentierten, mehrere Linsen in einer Röhre {{26}} zu kombinieren. Die frühen Geräte vergrößerten allerdings kaum stärker als eine gute Lupe und lieferten zudem {{27}} Bilder mit farbigen Rändern.",
+            "Einem breiteren Publikum wurde die Welt des Kleinen erst 1665 {{28}}, als der Engländer Robert Hooke seine „Micrographia“ veröffentlichte. Das reich bebilderte Werk zeigte unter anderem Flöhe, Schimmelpilze und dünne Korkscheiben, {{29}} Hooke winzige Kammern erkannte, die er „cells“ nannte. Noch erstaunlichere Entdeckungen gelangen einem Mann, {{30}} keine wissenschaftliche Ausbildung besaß: dem Delfter Tuchhändler Antoni van Leeuwenhoek. Er schliff winzige Einzellinsen, die bis zu etwa 270-fach vergrößerten, und war damit den Mehrlinsengeräten seiner Zeit {{31}} überlegen. Ab 1673 schickte er zahlreiche Briefe an die Londoner Royal Society, in denen er unter anderem von „kleinen Tierchen“ im Regenwasser {{32}}. In London stieß dies zunächst {{33}} Skepsis; erst als Mitglieder der Gesellschaft die Beobachtungen {{34}} konnten, wurden sie anerkannt.",
+            "Die Verbesserung der Mehrlinsenmikroskope {{35}} danach lange Zeit nur langsam voran. Ein Hauptproblem war der sogenannte Farbfehler: Weil Glas Licht unterschiedlicher Wellenlänge verschieden stark bricht, {{36}} um die betrachteten Objekte farbige Säume. Erst im frühen 19. Jahrhundert gelang es, Linsen aus verschiedenen Glassorten so zu kombinieren, dass dieser Fehler weitgehend {{37}} wurde.",
+            "Einen entscheidenden Schritt vollzog in den 1870er-Jahren der Jenaer Physiker Ernst Abbe. Er zeigte, dass das Auflösungsvermögen eines Lichtmikroskops nicht {{38}} von der Qualität der Linsen abhängt, sondern grundsätzlich durch die Wellenlänge des Lichts begrenzt ist. Strukturen, die kleiner sind als etwa die Hälfte dieser Wellenlänge, lassen sich demnach selbst mit {{39}} Optik nicht mehr getrennt wahrnehmen. Abbes Berechnungen ermöglichten es außerdem, Objektive nicht länger {{40}} bloßes Ausprobieren, sondern nach theoretischen Vorgaben zu konstruieren.",
+            "Anfang der 1930er-Jahre {{41}} in Berlin das erste Elektronenmikroskop gebaut. Da Elektronen eine weitaus kürzere Wellenlänge {{42}} als sichtbares Licht, lassen sich damit Strukturen bis hinab zu einzelnen Molekülen abbilden. Die Proben müssen jedoch im Vakuum untersucht werden, {{43}} sich lebende Zellen auf diese Weise nicht beobachten lassen. Seit den 1990er-Jahren wurden schließlich fluoreszenzbasierte Verfahren entwickelt, {{44}} sich Abbes Grenze geschickt umgehen lässt; für diese Arbeiten wurde 2014 der Nobelpreis für Chemie {{45}}. Die Geschichte des Mikroskops zeigt damit, dass selbst scheinbar unumstößliche Grenzen bisweilen nur so lange {{46}}, bis jemand einen Weg findet, sie zu umgehen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 25,
+          "type": "abc",
+          "prompt": "Lücke 25",
+          "options": {
+            "a": "zweifelhaft",
+            "b": "bezweifelt",
+            "c": "zweifelnd",
+            "d": "zweifelsfrei"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Fest steht nur, dass um 1600"
+            }
+          ],
+          "explanation": "Anlam ve sözcük türü: Boşluk „klären“ fiilini niteleyen bir zarf ister. Sonraki cümle „Fest steht nur …“ (kesin olan yalnızca …) mucidin kesin olarak belirlenemediğini gösterir: „nicht mehr zweifelsfrei klären“ (artık şüpheye yer bırakmadan açıklığa kavuşturulamıyor). a) zweifelhaft (şüpheli) bir şeyin niteliğidir; „şüpheli biçimde açıklığa kavuşturmak“ anlamsızdır. b) bezweifelt (şüphe edilen) Partizip II'dir ve zarf olarak „klären“i nitelemez. c) zweifelnd (şüphe ederek) kişinin tavrını anlatır; „lässt sich … klären“ yapısında öyle bir kişi yoktur."
+        },
+        {
+          "number": 26,
+          "type": "abc",
+          "prompt": "Lücke 26",
+          "options": {
+            "a": "gegeneinander",
+            "b": "miteinander",
+            "c": "voneinander",
+            "d": "auseinander"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "mehrere Linsen in einer Röhre"
+            }
+          ],
+          "explanation": "Anlam boşluğu: Gözlükçüler birden fazla merceği bir tüpte „birbiriyle“ birleştirmeyi denedi: „Linsen miteinander kombinieren“. „kombinieren“ bir araya getirmek demektir ve „miteinander“ ile kurulur. a) gegeneinander (birbirine karşı), c) voneinander (birbirinden) ve d) auseinander (birbirinden ayrı) ayırma ya da karşıtlık bildirir; „kombinieren“ ile çelişir."
+        },
+        {
+          "number": 27,
+          "type": "abc",
+          "prompt": "Lücke 27",
+          "options": {
+            "a": "unscharfen",
+            "b": "unscharfer",
+            "c": "unscharfe",
+            "d": "unscharfes"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Bilder mit farbigen Rändern"
+            }
+          ],
+          "explanation": "Sıfat çekimi: „Bilder“ çoğul ve Akkusativ'tir („lieferten“ fiilinin nesnesi), önünde artikel yok. Artikelsiz çoğul Akkusativ'de sıfat güçlü çekimle „-e“ alır: „unscharfe Bilder“. a) -en artikelli çoğul ya da Dativ çoğul („mit unscharfen Bildern“) içindir. b) -er artikelsiz çoğul Genitiv ya da eril Nominativ, d) -es nötr tekil Nominativ/Akkusativ'tir."
+        },
+        {
+          "number": 28,
+          "type": "abc",
+          "prompt": "Lücke 28",
+          "options": {
+            "a": "zugänglich",
+            "b": "zuständig",
+            "c": "zulässig",
+            "d": "zugehörig"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "als der Engländer Robert Hooke seine „Micrographia“ veröffentlichte"
+            }
+          ],
+          "explanation": "Anlam boşluğu: Hooke'un resimli kitabıyla küçük canlılar dünyası geniş bir okur kitlesine „ulaşılabilir, erişilebilir“ oldu: „jemandem zugänglich werden“ (Dativ „einem breiteren Publikum“). b) zuständig (yetkili, sorumlu) ve d) zugehörig (ait) bir kişi ya da kurumun görev veya aidiyetini anlatır; c) zulässig (izin verilen) yasal izin bildirir. Hiçbiri bir kitabın yayımlanmasıyla gelen erişimi anlatmaz."
+        },
+        {
+          "number": 29,
+          "type": "abc",
+          "prompt": "Lücke 29",
+          "options": {
+            "a": "in deren",
+            "b": "in dem",
+            "c": "in denen",
+            "d": "in die"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Hooke winzige Kammern erkannte"
+            }
+          ],
+          "explanation": "İlgi zamiri ve edat: Gönderme yapılan isim „dünne Korkscheiben“dir (çoğul). Hooke küçük odacıkları bu dilimlerin „içinde“ gördü: yer bildiren „in + Dativ“, çoğul Dativ ilgi zamiri „denen“. b) in dem tekildir (eril/nötr). d) in die Akkusativ'tir ve yön bildirir; „erkennen“ yön istemez. a) in deren iyelik bildirir ve ardından sahip olunan bir isim gerekirdi; burada özne „Hooke“ geliyor."
+        },
+        {
+          "number": 30,
+          "type": "abc",
+          "prompt": "Lücke 30",
+          "options": {
+            "a": "dem",
+            "b": "denen",
+            "c": "dessen",
+            "d": "der"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "keine wissenschaftliche Ausbildung besaß"
+            }
+          ],
+          "explanation": "İlgi zamiri: Gönderme yapılan isim „einem Mann“dır (eril, tekil). Yan cümlede bu adam eğitime „sahip olmayan“ kişidir, yani öznedir; nesne „keine wissenschaftliche Ausbildung“tır. Eril Nominativ ilgi zamiri „der“. a) dem Dativ'dir; „besitzen“ Dativ almaz ve cümlede özne kalmaz. b) denen çoğuldur. c) dessen iyelik bildirir ve ardından sahip olunan bir isim ister."
+        },
+        {
+          "number": 31,
+          "type": "abc",
+          "prompt": "Lücke 31",
+          "options": {
+            "a": "deutliche",
+            "b": "deutlich",
+            "c": "deutlichen",
+            "d": "deutlichem"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "den Mehrlinsengeräten seiner Zeit"
+            }
+          ],
+          "explanation": "Sözcük türü: Boşluk „überlegen“ (üstün) sıfatını niteleyen bir zarf ister: „deutlich überlegen“ (açıkça üstün). Zarf görevindeki sıfat çekim almaz. a) deutliche, c) deutlichen ve d) deutlichem çekimli sıfat biçimleridir ve ardından nitelenen bir isim gerekirdi; burada isim yoktur."
+        },
+        {
+          "number": 32,
+          "type": "abc",
+          "prompt": "Lücke 32",
+          "options": {
+            "a": "berichtete",
+            "b": "meldete",
+            "c": "teilte",
+            "d": "zeigte"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "von „kleinen Tierchen“ im Regenwasser"
+            }
+          ],
+          "explanation": "Fiil ve edat: Mektuplarda Leeuwenhoek yağmur suyundaki „küçük hayvancıklar“dan „söz etti, bunları anlattı“: „von etwas berichten“. Boşluktan önceki „von“ fiilin edatıdır. b) melden (bildirmek) doğrudan nesne ister („etwas melden“), „von“ ile kurulmaz. c) teilen (bölmek, paylaşmak) ve d) zeigen (göstermek) de nesne ister ve „von“ ile bu anlamı vermez."
+        },
+        {
+          "number": 33,
+          "type": "abc",
+          "prompt": "Lücke 33",
+          "options": {
+            "a": "mit",
+            "b": "an",
+            "c": "zu",
+            "d": "auf"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "In London stieß dies zunächst"
+            }
+          ],
+          "explanation": "Kalıp: „auf Skepsis stoßen“ (kuşkuyla karşılanmak). Londra'da bu gözlemler ilk başta kuşkuyla karşılandı; „erst als …“ (ancak … olduğunda) bu kuşkunun sonra giderildiğini gösterir. „stoßen“ bu anlamda yalnızca „auf“ ile kurulur. a) mit, b) an ve c) zu „Skepsis stoßen“ ile kalıp oluşturmaz."
+        },
+        {
+          "number": 34,
+          "type": "abc",
+          "prompt": "Lücke 34",
+          "options": {
+            "a": "nachgeben",
+            "b": "nachsagen",
+            "c": "nachvollziehen",
+            "d": "nachlassen"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "wurden sie anerkannt"
+            }
+          ],
+          "explanation": "Anlam boşluğu: Gözlemler, Royal Society üyeleri onları „tekrarlayıp doğrulayabildiğinde“ kabul gördü: „Beobachtungen nachvollziehen“ (bir gözlemi izleyip aynısını elde etmek, anlayıp doğrulamak). a) nachgeben (boyun eğmek) ve d) nachlassen (azalmak) nesne almaz. b) nachsagen (birine bir şey yakıştırmak, dedikodusunu yapmak) bir kişiyle Dativ ister; gözlemlerin doğrulanmasını anlatmaz."
+        },
+        {
+          "number": 35,
+          "type": "abc",
+          "prompt": "Lücke 35",
+          "options": {
+            "a": "stand",
+            "b": "ging",
+            "c": "trat",
+            "d": "fiel"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "danach lange Zeit nur langsam voran"
+            }
+          ],
+          "explanation": "Ayrılabilen fiil: Cümle sonundaki „voran“ ile „vorangehen“ (ilerlemek) oluşur: „Die Verbesserung ging … nur langsam voran“ (iyileştirme yavaş ilerledi). a) „voranstehen“ (başta durmak) ilerleme bildirmez. c) „vorantreten“ ve d) „voranfallen“ bu anlamda kullanılmaz."
+        },
+        {
+          "number": 36,
+          "type": "abc",
+          "prompt": "Lücke 36",
+          "options": {
+            "a": "entstanden",
+            "b": "entstand",
+            "c": "entsteht",
+            "d": "entstehend"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "farbige Säume"
+            }
+          ],
+          "explanation": "Fiil biçimi: Ana cümlenin öznesi „farbige Säume“dir (çoğul); „weil“ cümlesi önde olduğu için çekimli fiil hemen virgülden sonra gelir. Anlatım tarihsel ve geçmiş zamanda („war der sogenannte Farbfehler“), bu yüzden çoğul Präteritum „entstanden“. b) entstand ve c) entsteht tekildir. d) entstehend Partizip I'dir ve çekimli fiilin yerini tutamaz."
+        },
+        {
+          "number": 37,
+          "type": "abc",
+          "prompt": "Lücke 37",
+          "options": {
+            "a": "gehoben",
+            "b": "erhoben",
+            "c": "behoben",
+            "d": "enthoben"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Linsen aus verschiedenen Glassorten"
+            }
+          ],
+          "explanation": "Anlam boşluğu: Renk hatası bir kusurdur; farklı cam türlerinden mercekler birleştirilerek bu hata büyük ölçüde „giderildi“: „einen Fehler beheben“ – edilgen „behoben wurde“. a) gehoben (kaldırılmış, yükseltilmiş), b) erhoben (yükseltilmiş; veri olarak toplanmış; vergi alınmış) ve d) enthoben (görevden alınmış) bir kusurun düzeltilmesini anlatmaz."
+        },
+        {
+          "number": 38,
+          "type": "abc",
+          "prompt": "Lücke 38",
+          "options": {
+            "a": "erst",
+            "b": "allein",
+            "c": "bereits",
+            "d": "noch"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "sondern grundsätzlich durch die Wellenlänge des Lichts begrenzt ist"
+            }
+          ],
+          "explanation": "Anlam/bağlaç boşluğu: „nicht …, sondern …“ yapısı iki etkeni karşılaştırıyor: Çözünürlük yalnızca merceklerin kalitesine bağlı değildir, ilke olarak ışığın dalga boyuyla da sınırlıdır. „nicht allein“ (yalnızca … değil) bu anlamı verir. a) erst (ancak, ilk), c) bereits (zaten) ve d) noch (henüz, hâlâ) zaman bildirir; „nicht … sondern“ ile iki etken arasındaki karşıtlığı kuramaz."
+        },
+        {
+          "number": 39,
+          "type": "abc",
+          "prompt": "Lücke 39",
+          "options": {
+            "a": "perfekte",
+            "b": "perfekten",
+            "c": "perfektem",
+            "d": "perfekter"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Optik nicht mehr getrennt wahrnehmen"
+            }
+          ],
+          "explanation": "Sıfat çekimi: „mit“ Dativ ister; „Optik“ dişil tekildir ve artikel yoktur. Artikelsiz dişil Dativ'de sıfat güçlü çekimle „-er“ alır: „mit perfekter Optik“. c) -em artikelsiz eril/nötr Dativ içindir. a) -e ve b) -en bu konumda (artikelsiz dişil Dativ) kullanılmaz; „-en“ ancak artikelden sonra gelir („mit einer perfekten Optik“)."
+        },
+        {
+          "number": 40,
+          "type": "abc",
+          "prompt": "Lücke 40",
+          "options": {
+            "a": "durch",
+            "b": "von",
+            "c": "aus",
+            "d": "bei"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "sondern nach theoretischen Vorgaben zu konstruieren"
+            }
+          ],
+          "explanation": "Edat ve hâl: „bloßes Ausprobieren“ Akkusativ'tir (nötr, artikelsiz: „bloßes“). Yöntemi/aracı bildiren ve Akkusativ alan edat „durch“: Objektifler artık „deneme yanılma yoluyla“ değil, teorik hesaplara göre yapılabiliyordu. b) von, c) aus ve d) bei Dativ ister („bloßem Ausprobieren“); hâl uyuşmaz."
+        },
+        {
+          "number": 41,
+          "type": "abc",
+          "prompt": "Lücke 41",
+          "options": {
+            "a": "hat",
+            "b": "wurde",
+            "c": "habe",
+            "d": "hätte"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "das erste Elektronenmikroskop gebaut"
+            }
+          ],
+          "explanation": "Edilgen: Özne „das erste Elektronenmikroskop“tur; mikroskop kendisi bir şey yapmıyor, „yapılıyor“. Geçmişteki bir olay için edilgen Präteritum: „wurde … gebaut“. a) hat ve d) hätte etken Perfekt kurar ve bir nesne gerektirirdi; „Mikroskop hat gebaut“ mikroskobun bir şey inşa ettiği anlamına gelir. c) habe Konjunktiv I'dir ve dolaylı anlatım yoktur."
+        },
+        {
+          "number": 42,
+          "type": "abc",
+          "prompt": "Lücke 42",
+          "options": {
+            "a": "besetzen",
+            "b": "beseitigen",
+            "c": "besiegen",
+            "d": "besitzen"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "als sichtbares Licht"
+            }
+          ],
+          "explanation": "Anlam boşluğu: Elektronların görünür ışıktan çok daha kısa bir dalga boyu „vardır“: „eine Wellenlänge besitzen“ (bir özelliğe sahip olmak). Bu, Abbe'nin anlattığı sınırla bağlantılıdır: Daha kısa dalga boyu daha ince yapıları gösterir. a) besetzen (işgal etmek, doldurmak), b) beseitigen (ortadan kaldırmak) ve c) besiegen (yenmek) bir özelliğe sahip olmayı anlatmaz."
+        },
+        {
+          "number": 43,
+          "type": "abc",
+          "prompt": "Lücke 43",
+          "options": {
+            "a": "obwohl",
+            "b": "damit",
+            "c": "weshalb",
+            "d": "falls"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "sich lebende Zellen auf diese Weise nicht beobachten lassen"
+            }
+          ],
+          "explanation": "Anlam/bağlaç boşluğu: Örneklerin vakumda incelenmesi gerekir; bunun sonucu, canlı hücrelerin bu yolla gözlemlenememesidir. Önceki cümlenin tamamına bağlanan ve sonuç bildiren ilgi bağlacı „weshalb“ (bu yüzden). a) obwohl (… -e rağmen) karşıtlık kurar; vakum ile canlı hücrelerin gözlemlenememesi çelişmez, biri ötekinin nedenidir. b) damit amaç bildirir; kimse hücrelerin gözlemlenememesini amaçlamaz. d) falls (eğer) koşul bildirir; vakum zorunluluğu bir koşula bağlı değildir."
+        },
+        {
+          "number": 44,
+          "type": "abc",
+          "prompt": "Lücke 44",
+          "options": {
+            "a": "mit denen",
+            "b": "mit dem",
+            "c": "mit deren",
+            "d": "mit welchem"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Abbes Grenze geschickt umgehen lässt"
+            }
+          ],
+          "explanation": "İlgi zamiri: Gönderme yapılan isim „fluoreszenzbasierte Verfahren“dir (çoğul; sıfat „-e“ ile çoğul çekimde). Yan cümlenin öznesi „Abbes Grenze“dir; yöntemler aracı olduğu için „mit + Dativ“, çoğul: „mit denen“. b) mit dem ve d) mit welchem tekildir (eril/nötr). c) mit deren iyelik bildirir ve ardından sahip olunan bir isim ister („mit deren Hilfe“)."
+        },
+        {
+          "number": 45,
+          "type": "abc",
+          "prompt": "Lücke 45",
+          "options": {
+            "a": "verlegt",
+            "b": "verlassen",
+            "c": "verlautet",
+            "d": "verliehen"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "für diese Arbeiten wurde 2014 der Nobelpreis für Chemie"
+            }
+          ],
+          "explanation": "Kalıp: Ödüller „verilir“: „einen Preis verleihen“ – edilgen „der Nobelpreis wurde … verliehen“. a) verlegt (yeri ya da tarihi değiştirilmiş; yayımlanmış), b) verlassen (terk edilmiş) ve c) verlautet (duyurulmuş; edilgen yapılmaz) bir ödülün verilmesini anlatmaz."
+        },
+        {
+          "number": 46,
+          "type": "abc",
+          "prompt": "Lücke 46",
+          "options": {
+            "a": "geltend",
+            "b": "gelten",
+            "c": "gilt",
+            "d": "gegolten"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "bis jemand einen Weg findet, sie zu umgehen"
+            }
+          ],
+          "explanation": "Fiil biçimi: „dass“ yan cümlesinin öznesi „selbst scheinbar unumstößliche Grenzen“dir (çoğul); çekimli fiil yan cümlenin sonunda gelir ve genel bir doğruyu anlattığı için şimdiki zamandadır: „nur so lange gelten, bis …“ (… -e kadar geçerlidir). c) gilt tekildir. a) geltend Partizip I, d) gegolten Partizip II'dir; yardımcı fiil olmadan çekimli fiil yerine geçemez."
+        }
+      ]
+    }
+  ]
+}

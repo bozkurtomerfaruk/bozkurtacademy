@@ -31,11 +31,19 @@
 
   const questionsOf = set => set.groups.flatMap(group => group.questions.map(question => ({ question, group })));
   const scored = set => questionsOf(set).filter(({ question }) => !question.example);
+  // fehlerauswahl (TestDaF digital Aufgabe 7): several wrong sentences are chosen in one summary; each one is a point.
+  const multi = question => question.type === 'fehlerauswahl';
+  const weight = question => multi(question) ? question.answer.length : 1;
+  const points = (question, given) => multi(question)
+    ? (Array.isArray(given) ? given.filter(value => question.answer.includes(value)).length : 0)
+    : given === question.answer ? 1 : 0;
+  const isEmpty = given => given == null || (Array.isArray(given) && !given.length);
+  const total = set => scored(set).reduce((sum, { question }) => sum + weight(question), 0);
 
   function optionsFor(question, group) {
     if (FIXED_OPTIONS[question.type]) return FIXED_OPTIONS[question.type].map(([value, label]) => ({ value, label }));
-    // fehlersatz: the sentences of a summary paragraph, one of them wrong (TestDaF digital Aufgabe 7).
-    if (question.type === 'abc' || question.type === 'fehlersatz') return Object.entries(question.options).map(([value, label]) => ({ value, label }));
+    // fehlerauswahl: the sentences of a summary, some of them wrong (TestDaF digital Aufgabe 7).
+    if (question.type === 'abc' || multi(question)) return Object.entries(question.options).map(([value, label]) => ({ value, label }));
     // reihenfolge: the position numbers a paragraph can take (TestDaF digital Aufgabe 2).
     if (question.type === 'reihenfolge') return question.options.map(value => ({ value: String(value), label: String(value) }));
     // zuordnung: every labelled text of the group (ads a–j, sentences a–h) plus the "no text fits" option
@@ -49,7 +57,7 @@
 
   function answerText(question, group, value) {
     if (question.type === 'abc') return `${value}) ${question.options[value]}`;
-    if (question.type === 'fehlersatz') return `„${question.options[value]}“`;
+    if (multi(question)) return [].concat(value).map(item => `„${question.options[item]}“`).join(' · ');
     if (question.type === 'reihenfolge') return `Position ${value}`;
     if (question.type === 'zuordnung') {
       if (group.none !== false && value === noneOf(group)) return `${value.toUpperCase()} (${t('taskNoMatch')})`;
@@ -100,8 +108,9 @@
   }
 
   function resultHtml(question, group, given) {
-    const right = given === question.answer;
-    const status = question.example ? '' : `<p class="task-result-status">${esc(t(given == null ? 'taskUnanswered' : right ? 'taskRight' : 'taskWrong'))}</p>`;
+    const right = points(question, given) === weight(question);
+    const partial = multi(question) && !right && !isEmpty(given) ? ` (${points(question, given)} / ${weight(question)})` : '';
+    const status = question.example ? '' : `<p class="task-result-status">${esc(t(isEmpty(given) ? 'taskUnanswered' : right ? 'taskRight' : 'taskWrong'))}${esc(partial)}</p>`;
     const solution = right && !question.example ? '' : `<p class="task-solution">${esc(fill('taskCorrectAnswer', { answer: answerText(question, group, question.answer) }))}</p>`;
     const evidence = (question.evidence || []).length
       ? `<button class="task-show" type="button" data-task-show="${esc(question.number)}">${esc(t('taskShowInText'))}</button>` : '';
@@ -112,7 +121,7 @@
     const number = String(question.number);
     const given = question.example ? question.answer : state.answers[number];
     const done = state.checked;
-    const outcome = !done || question.example ? '' : given == null ? ' is-empty' : given === question.answer ? ' is-right' : ' is-wrong';
+    const outcome = !done || question.example ? '' : isEmpty(given) ? ' is-empty' : points(question, given) === weight(question) ? ' is-right' : ' is-wrong';
     const locked = question.example || done ? ' disabled' : '';
     const badge = question.example
       ? `<span class="task-q-no is-example">${esc(t('taskExample'))}</span>`
@@ -137,11 +146,14 @@
       </div>`;
     }
 
-    const options = optionsFor(question, group).map(option => `
-      <label class="task-option${given === option.value ? ' is-chosen' : ''}${done && option.value === question.answer ? ' is-answer' : ''}">
-        <input type="radio" name="${name}" value="${esc(option.value)}" data-task-answer="${esc(number)}"${given === option.value ? ' checked' : ''}${locked}>
-        ${question.type === 'fehlersatz' ? '' : `<span class="task-option-key">${esc(question.type === 'abc' || pair ? option.value : option.label)}</span>`}
-        ${question.type === 'abc' || question.type === 'fehlersatz' ? `<span class="task-option-text" lang="de">${esc(option.label)}</span>` : ''}
+    // fehlerauswahl: checkboxes, at most as many as there are wrong sentences; "breaks" starts a new summary paragraph.
+    const chosen = value => multi(question) ? [].concat(given || []).includes(value) : given === value;
+    const full = multi(question) && [].concat(given || []).length >= weight(question);
+    const options = optionsFor(question, group).map(option => `${multi(question) && (question.breaks || []).includes(option.value) ? '<span class="task-break" aria-hidden="true"></span>' : ''}
+      <label class="task-option${chosen(option.value) ? ' is-chosen' : ''}${done && [].concat(question.answer).includes(option.value) ? ' is-answer' : ''}">
+        <input type="${multi(question) ? 'checkbox' : 'radio'}" name="${name}" value="${esc(option.value)}" data-task-answer="${esc(number)}"${chosen(option.value) ? ' checked' : ''}${locked || (full && !chosen(option.value) ? ' disabled' : '')}>
+        ${multi(question) ? '' : `<span class="task-option-key">${esc(question.type === 'abc' || pair ? option.value : option.label)}</span>`}
+        ${question.type === 'abc' || multi(question) ? `<span class="task-option-text" lang="de">${esc(option.label)}</span>` : ''}
         ${pair && pairTitle(group, option.value) ? `<span class="task-option-text" lang="de">${esc(pairTitle(group, option.value))}</span>` : ''}
       </label>`).join('');
     return `<fieldset class="task-q task-q--${pair ? 'pair' : question.type}${question.example ? ' is-example' : ''}${outcome}" data-q="${esc(number)}">
@@ -164,10 +176,9 @@
 
   function summaryHtml(set, state) {
     if (!state.checked) return '';
-    const items = scored(set);
-    const correct = items.filter(({ question }) => state.answers[String(question.number)] === question.answer).length;
+    const correct = scored(set).reduce((sum, { question }) => sum + points(question, state.answers[String(question.number)]), 0);
     return `<div class="task-summary" tabindex="-1">
-      <p class="task-score">${esc(fill('taskScore', { correct, total: items.length }))}</p>
+      <p class="task-score">${esc(fill('taskScore', { correct, total: total(set) }))}</p>
       <p>${esc(t('taskResultHint'))}</p>
     </div>`;
   }
@@ -190,7 +201,7 @@
 
   function draw(container, set, path) {
     const state = states[path];
-    const meta = [fill('taskMinutes', { n: set.minutes }), fill('taskQuestionCount', { n: scored(set).length })];
+    const meta = [fill('taskMinutes', { n: set.minutes }), fill('taskQuestionCount', { n: total(set) })];
     if (lang() !== 'tr') meta.push(t('taskExplanationsTr'));
     container.innerHTML = `<div class="task${state.checked ? ' is-checked' : ''}">
       <div class="task-head">
@@ -217,6 +228,18 @@
       const input = event.target.closest('[data-task-answer]');
       const state = states[container.dataset.taskPath];
       if (!input || !state || state.checked) return;
+      if (input.type === 'checkbox') {
+        // Several sentences of one summary (fehlerauswahl): keep the chosen ones, at most as many as there are errors.
+        const question = questionsOf(set).find(({ question }) => String(question.number) === input.dataset.taskAnswer)?.question;
+        const list = [].concat(state.answers[input.dataset.taskAnswer] || []).filter(value => value !== input.value);
+        if (input.checked) list.push(input.value);
+        state.answers[input.dataset.taskAnswer] = list;
+        const options = input.closest('.task-options');
+        options?.querySelectorAll('.task-option').forEach(option => option.classList.toggle('is-chosen', option.querySelector('input').checked));
+        const full = question && list.length >= weight(question);
+        options?.querySelectorAll('input').forEach(box => { if (!box.checked) box.disabled = !!full; });
+        return;
+      }
       if (input.value === '') delete state.answers[input.dataset.taskAnswer];
       else state.answers[input.dataset.taskAnswer] = input.value;
       syncGaps(container, state, set);

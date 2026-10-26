@@ -8,8 +8,9 @@ const { ok, done } = checker();
 const hash = () => page.url().split('#')[1];
 const set = (t, s, level = 'b1') => readSet(level, t, s);
 const questions = d => d.groups.flatMap(g => g.questions.filter(q => !q.example).map(q => ({ q, g })));
-const optionsOf = (q, g) => q.type === 'richtig-falsch' ? ['richtig', 'falsch'] : q.type === 'ja-nein' ? ['ja', 'nein'] : q.type === 'ja-nein-nichts' ? ['ja', 'nein', 'nichts'] : q.type === 'richtig-falsch-nichts' ? ['richtig', 'falsch', 'nichts'] : q.type === 'abc' || q.type === 'fehlersatz' ? Object.keys(q.options) : q.type === 'reihenfolge' ? q.options.map(String) : [...g.texts.filter(t => t.label).map(t => t.label), ...(g.none === false ? [] : [g.none || '0'])];
+const optionsOf = (q, g) => q.type === 'richtig-falsch' ? ['richtig', 'falsch'] : q.type === 'ja-nein' ? ['ja', 'nein'] : q.type === 'ja-nein-nichts' ? ['ja', 'nein', 'nichts'] : q.type === 'richtig-falsch-nichts' ? ['richtig', 'falsch', 'nichts'] : q.type === 'abc' || q.type === 'fehlerauswahl' ? Object.keys(q.options) : q.type === 'reihenfolge' ? q.options.map(String) : [...g.texts.filter(t => t.label).map(t => t.label), ...(g.none === false ? [] : [g.none || '0'])];
 async function answer(number, value) {
+  if (Array.isArray(value)) { for (const v of value) await page.check(`input[data-task-answer="${number}"][value="${v}"]`); return; }
   const select = await page.$(`select[data-task-answer="${number}"]`);
   if (select) await select.selectOption(value);
   else await page.check(`input[data-task-answer="${number}"][value="${value}"]`);
@@ -81,10 +82,11 @@ for (const level of Object.keys(ROUTE)) for (let t = 1; t <= teileOf(level); t++
   const allRight = await score();
   const marks = await page.locator('.task-evidence').count();
   await page.click('[data-task-retry]'); await page.waitForTimeout(500);
-  for (const { q, g } of qs) await answer(q.number, optionsOf(q, g).find(v => v !== q.answer));
+  for (const { q, g } of qs) await answer(q.number, Array.isArray(q.answer) ? optionsOf(q, g).filter(v => !q.answer.includes(v)).slice(0, q.answer.length) : optionsOf(q, g).find(v => v !== q.answer));
   await page.click('[data-task-check]'); await page.waitForTimeout(500);
   const allWrong = await score();
-  ok(allRight === `${qs.length} / ${qs.length} doğru` && allWrong === `0 / ${qs.length} doğru` && marks > 0, `${level} teil-${t}/set-${s}: ${allRight} | ${allWrong} | ${marks} highlighted`);
+  const n = qs.reduce((sum, { q }) => sum + (Array.isArray(q.answer) ? q.answer.length : 1), 0);
+  ok(allRight === `${n} / ${n} doğru` && allWrong === `0 / ${n} doğru` && marks > 0, `${level} teil-${t}/set-${s}: ${allRight} | ${allWrong} | ${marks} highlighted`);
 }
 
 // 8. Invalid set addresses

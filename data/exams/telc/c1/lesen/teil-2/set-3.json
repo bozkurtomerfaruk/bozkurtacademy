@@ -1,0 +1,136 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "c1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-3",
+  "title": "Sommerschulen im Ausland",
+  "minutes": 15,
+  "context": "Das International Office stellt in seinem Rundbrief vier Sommerschulen an Partnerhochschulen im Ausland vor, für die sich Studierende ab sofort bewerben können.",
+  "instructions": "Lesen Sie die Texte a–d und die Aussagen 7–12. Zu welchem Text passt welche Aussage? Die Texte können mehrmals gewählt werden.",
+  "groups": [
+    {
+      "layout": "comments",
+      "none": false,
+      "texts": [
+        {
+          "id": "orgel",
+          "label": "a",
+          "title": "Orgelrestaurierung in Schweden",
+          "paragraphs": [
+            "Seit mehr als vierzig Jahren ist die Orgel einer Dorfkirche in der Nähe unserer schwedischen Partnereinrichtung, der Brannqvist-Musikakademie, verstummt: Feuchtigkeit hat die Holzpfeifen verzogen, Teile der Mechanik sind vom Holzwurm befallen. In der zweiwöchigen Sommerschule unter Leitung der Organologin Dr. Solveig Liljeborg dokumentieren die Teilnehmenden zunächst den Zustand des Instruments, ehe sie unter Anleitung zweier Orgelbaumeister Pfeifen reinigen, Lederteile ersetzen und die Windversorgung instand setzen. Ziel ist es, dass das Instrument beim Abschlusskonzert für die Gemeinde zumindest in Teilen wieder erklingt. Angesprochen sind Studierende der Musikwissenschaft, der Restaurierung und der Kirchenmusik; handwerkliche Vorerfahrung ist erwünscht, aber keine Bedingung. Die Unterbringung im Gemeindehaus ist kostenlos, für Material und Verpflegung wird ein Beitrag von 180 Euro erhoben. Arbeitssprache ist Englisch. Da der Platz in der Kirche begrenzt ist, können höchstens zwölf Personen teilnehmen."
+          ]
+        },
+        {
+          "id": "seerecht",
+          "label": "b",
+          "title": "Internationales Seerecht in Griechenland",
+          "paragraphs": [
+            "Wem gehören die Rohstoffe am Meeresboden, und wer haftet, wenn ein Frachter auf hoher See Öl verliert? Mit solchen Fragen befasst sich die dreiwöchige Sommerschule der Juristischen Fakultät unserer griechischen Partneruniversität. Vormittags vermitteln Vorlesungen die Grundlagen des Seevölkerrechts; nachmittags bereiten sich die Teilnehmenden in Kleingruppen auf den Höhepunkt des Programms vor: eine simulierte Gerichtsverhandlung, in der sie vor erfahrenen Richterinnen und Richtern einen fiktiven Streitfall zwischen zwei Küstenstaaten austragen. Rund vier Wochen vor Beginn erhalten alle Teilnehmenden den Sachverhalt; bis zur Anreise ist in Zweierteams ein Schriftsatz von höchstens zehn Seiten einzureichen. Die Sommerschule richtet sich an Studierende der Rechtswissenschaft ab dem fünften Semester und ist mit vier Leistungspunkten anrechenbar. Unterkunft und Verpflegung übernimmt die Ioanna-Marangou-Stiftung, sodass lediglich die Reisekosten selbst zu tragen sind."
+          ]
+        },
+        {
+          "id": "ferment",
+          "label": "c",
+          "title": "Fermentation und Lebensmittelsicherheit in Südkorea",
+          "paragraphs": [
+            "Fermentierte Lebensmittel erleben weltweit eine Renaissance – doch was in der heimischen Küche gelingt, wirft in der industriellen Herstellung Fragen der Haltbarkeit und Hygiene auf. Die vierwöchige Sommerschule am lebensmitteltechnologischen Institut unserer südkoreanischen Partneruniversität, geleitet von Prof. Byeon Haeun, verbindet mikrobiologische Laborpraxis mit Einblicken in die Produktion: In der dritten Woche arbeiten die Teilnehmenden mehrere Tage in einer Sojasaucenbrauerei und in einem Familienbetrieb, der Kimchi herstellt, und begleiten dort die Qualitätskontrolle. Vorausgesetzt werden Grundkenntnisse in Mikrobiologie oder Lebensmittelchemie; zudem ist vor Beginn eine Hygieneschulung nachzuweisen. Von den 24 Plätzen sind acht für Studierende aus Ländern vorgesehen, in denen es ein vergleichbares Studienangebot bislang nicht gibt. Die Teilnahmegebühr schließt die Unterkunft im Gästehaus der Universität ein; für die Reise kann beim International Office ein Zuschuss beantragt werden."
+          ]
+        },
+        {
+          "id": "cholera",
+          "label": "d",
+          "title": "Epidemiologie mit historischen Daten in Irland",
+          "paragraphs": [
+            "Wie lassen sich aus lückenhaften Daten belastbare Aussagen über die Ausbreitung einer Krankheit gewinnen? Die zweiwöchige Sommerschule des Instituts für Public Health unserer irischen Partneruniversität geht dieser Frage an ungewöhnlichem Material nach: an den Sterberegistern einer Choleraepidemie aus dem 19. Jahrhundert, die kürzlich digitalisiert wurden und bislang kaum ausgewertet sind. Unter Anleitung von Dr. Fionnuala Garrety rekonstruieren die Teilnehmenden in Kleingruppen den Verlauf der Epidemie und prüfen, inwieweit sich heutige statistische Modelle auf historische Quellen übertragen lassen. Erwartet werden Kenntnisse in deskriptiver Statistik; wer sie auffrischen möchte, dem wird ein Onlinekurs empfohlen, der einige Wochen vor Beginn freigeschaltet wird. Die Teilnahme wird bescheinigt; fünf Leistungspunkte erhält jedoch nur, wer innerhalb von sechs Wochen nach Ende der Sommerschule einen Projektbericht vorlegt. Bewerbungen werden in der Reihenfolge ihres Eingangs berücksichtigt."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 7,
+          "type": "zuordnung",
+          "prompt": "Am Ende einer Sommerschule soll ein Gegenstand, der lange nicht mehr benutzt werden konnte, wieder zum Einsatz kommen.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "orgel",
+              "quote": "Seit mehr als vierzig Jahren ist die Orgel einer Dorfkirche"
+            },
+            {
+              "text": "orgel",
+              "quote": "Ziel ist es, dass das Instrument beim Abschlusskonzert für die Gemeinde zumindest in Teilen wieder erklingt"
+            }
+          ],
+          "explanation": "Metin a'daki köy kilisesinin orgu kırk yılı aşkın süredir „verstummt“ (susmuş, çalınamıyor). Yaz okulunun hedefi, enstrümanın „beim Abschlusskonzert … zumindest in Teilen wieder erklingt“ (kapanış konserinde en azından kısmen yeniden çalması); yani uzun süre kullanılamayan bir nesne yeniden kullanılacak. Metin d'de de eski bir malzeme var: 19. yüzyıldan kalan ölüm kayıtları „bislang kaum ausgewertet“ (şimdiye kadar pek incelenmemiş). Ama bunlar onarılıp yeniden kullanılan bir nesne değil, analiz edilen verilerdir. Metin b'nin sonunda da bir etkinlik var (canlandırılmış duruşma), ama orada eski bir nesne yok."
+        },
+        {
+          "number": 8,
+          "type": "zuordnung",
+          "prompt": "Ein Teil einer Sommerschule wird direkt in produzierenden Betrieben verbracht.",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "ferment",
+              "quote": "arbeiten die Teilnehmenden mehrere Tage in einer Sojasaucenbrauerei und in einem Familienbetrieb, der Kimchi herstellt"
+            }
+          ],
+          "explanation": "Metin c'de katılımcılar üçüncü haftada birkaç gün „in einer Sojasaucenbrauerei und in einem Familienbetrieb, der Kimchi herstellt“ (bir soya sosu imalathanesinde ve kimchi üreten bir aile işletmesinde) çalışıyor ve kalite kontrolüne eşlik ediyor; bunlar üretim yapan işletmelerdir. Metin a'da da çalışma üniversitenin dışında, bir köy kilisesinde ve iki „Orgelbaumeister“in (org yapım ustası) gözetiminde yapılıyor; ama bir kilise üretim yapan bir işletme değildir. Metin b ve d'de işletmelerde geçirilen bir süreden hiç söz edilmiyor."
+        },
+        {
+          "number": 9,
+          "type": "zuordnung",
+          "prompt": "Schon bevor eine Sommerschule beginnt, müssen die Teilnehmenden zusammen mit einer weiteren Person einen Text verfassen.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "seerecht",
+              "quote": "bis zur Anreise ist in Zweierteams ein Schriftsatz von höchstens zehn Seiten einzureichen"
+            }
+          ],
+          "explanation": "Metin b'de katılımcılar başlangıçtan yaklaşık dört hafta önce dava olayını alıyor ve „bis zur Anreise“ (gelişe kadar) „in Zweierteams ein Schriftsatz“ (ikili ekipler hâlinde bir dilekçe) teslim etmek zorunda: „einzureichen ist“ bir zorunluluktur. Metin d'de başlangıçtan önce bir çevrim içi kurs yalnızca „empfohlen“ (tavsiye ediliyor) ve yazılı bir metin istenmiyor; oradaki yazılı rapor ise yaz okulundan „nach Ende“ (sonra) teslim edilir. Metin c'de başlangıçtan önce bir „Hygieneschulung“ (hijyen eğitimi) belgelenmeli, ama bu birlikte yazılan bir metin değildir."
+        },
+        {
+          "number": 10,
+          "type": "zuordnung",
+          "prompt": "Wer in einer Sommerschule Leistungspunkte erwerben möchte, muss im Anschluss noch eine schriftliche Arbeit abgeben.",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "cholera",
+              "quote": "fünf Leistungspunkte erhält jedoch nur, wer innerhalb von sechs Wochen nach Ende der Sommerschule einen Projektbericht vorlegt"
+            }
+          ],
+          "explanation": "Metin d'de katılım belgesi herkese veriliyor, ama beş kredi yalnızca yaz okulu bittikten sonra altı hafta içinde „einen Projektbericht vorlegt“ (bir proje raporu sunan) kişiye veriliyor; „nur, wer …“ bunun bir koşul olduğunu gösterir. Metin b'de de kredi var („mit vier Leistungspunkten anrechenbar“), ama oradaki yazılı çalışma yaz okulundan önce, „bis zur Anreise“ teslim edilir; sonradan bir şey istenmiyor. Metin a ve c'de kredilerden hiç söz edilmiyor."
+        },
+        {
+          "number": 11,
+          "type": "zuordnung",
+          "prompt": "Bei einer Sommerschule kommen auf die Teilnehmenden nur die Ausgaben für die Fahrt zu.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "seerecht",
+              "quote": "Unterkunft und Verpflegung übernimmt die Ioanna-Marangou-Stiftung, sodass lediglich die Reisekosten selbst zu tragen sind"
+            }
+          ],
+          "explanation": "Metin b'de konaklama ve yemeği bir vakıf üstleniyor; katılımcılar „lediglich die Reisekosten“ (yalnızca yol masraflarını) kendileri karşılıyor. Metin a'da konaklama ücretsiz, ama malzeme ve yemek için 180 euro „Beitrag“ (katkı payı) alınıyor; yani yol dışında da masraf var. Metin c'de bir „Teilnahmegebühr“ (katılım ücreti) ödeniyor; konaklama bu ücrete dahil, yol için ise yalnızca destek başvurusu yapılabiliyor."
+        },
+        {
+          "number": 12,
+          "type": "zuordnung",
+          "prompt": "In einer Sommerschule wird ein Kontingent an Plätzen für eine bestimmte Gruppe von Bewerbenden freigehalten.",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "ferment",
+              "quote": "Von den 24 Plätzen sind acht für Studierende aus Ländern vorgesehen, in denen es ein vergleichbares Studienangebot bislang nicht gibt"
+            }
+          ],
+          "explanation": "Metin c'de 24 kontenjandan sekizi, benzer bir eğitim olanağının henüz bulunmadığı ülkelerden gelen öğrenciler için „vorgesehen“ (ayrılmış); yani belli bir başvuran grubuna kontenjan var. Metin a'da da yer sınırlı („höchstens zwölf Personen“, en fazla on iki kişi), ama belli bir gruba ayrılmış yer yok. Metin d'de başvurular „in der Reihenfolge ihres Eingangs“ (geliş sırasına göre) değerlendiriliyor; bu da herkes için aynı kuraldır, bir gruba öncelik değildir."
+        }
+      ]
+    }
+  ]
+}

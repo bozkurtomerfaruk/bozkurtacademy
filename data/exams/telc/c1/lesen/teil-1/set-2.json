@@ -1,0 +1,192 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "c1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Die Geschichte der Kartografie",
+  "minutes": 20,
+  "context": "Sie lesen in einem Hochschulmagazin einen Überblicksbeitrag zur Geschichte der Kartografie.",
+  "instructions": "Lesen Sie den Text. In den Text wurden sechs Sätze entfernt. Welcher der Sätze a–h passt in welche Lücke 1–6? Zwei Sätze passen nicht.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "text",
+          "title": "Die Geschichte der Kartografie",
+          "paragraphs": [
+            "Karten gelten gemeinhin als nüchterne Abbilder der Wirklichkeit: Man schlägt sie auf, um zu erfahren, wo ein Ort liegt und wie weit es bis zum nächsten ist. Die Geschichte der Kartografie legt indes nahe, dass diese Vorstellung zu kurz greift. Jede Karte wählt aus, vereinfacht und gewichtet, und sie verrät damit mindestens ebenso viel über die Absichten ihrer Urheber wie über das dargestellte Gebiet. {{1}} Mit der Frage, wie man von einem Ort zum anderen gelangt, hatten diese frühen Darstellungen also wenig zu tun; sie hielten vielmehr fest, wem ein Stück Land zustand und welche Abgaben darauf lasteten.",
+            "Einen grundlegend anderen Anspruch verfolgten griechische Gelehrte. Sie gingen von einer kugelförmigen Erde aus und versuchten, die Lage von Orten mithilfe eines Gitters aus Längen- und Breitengraden mathematisch zu bestimmen. Im zweiten Jahrhundert n. Chr. stellte Ptolemäus in seiner „Geographie“ Koordinaten für mehrere Tausend Orte zusammen und beschrieb, wie sich die gekrümmte Erdoberfläche auf eine ebene Fläche übertragen lässt. {{2}} Erst als griechische Handschriften um 1400 nach Italien gelangten und ins Lateinische übersetzt wurden, entfaltete das Werk dort seine Wirkung – mehr als ein Jahrtausend nach seiner Entstehung.",
+            "Die mittelalterlichen Weltkarten Europas, die sogenannten Mappae mundi, folgten ohnehin einer anderen Logik. Sie rückten Jerusalem in den Mittelpunkt, verorteten das Paradies am östlichen Rand und verknüpften Geografie mit biblischer Geschichte. {{3}} Etwa zur selben Zeit entstanden im Mittelmeerraum die Portolankarten, auf denen Seeleute Küstenlinien und Häfen mit erstaunlicher Genauigkeit verzeichneten, das Landesinnere hingegen nahezu leer ließen.",
+            "Die Fahrten über die offenen Ozeane stellten die Kartografie vor neue Aufgaben. 1569 veröffentlichte Gerhard Mercator eine Weltkarte, deren Projektion winkeltreu ist: Ein Kurs, der stets denselben Winkel zur Nordrichtung hält, erscheint auf ihr als gerade Linie, was die Navigation erheblich vereinfachte. {{4}} Grönland etwa wirkt auf ihr annähernd so groß wie Afrika, obwohl es in Wirklichkeit nur rund ein Vierzehntel von dessen Fläche einnimmt.",
+            "Im 18. und 19. Jahrhundert wurde die Landesaufnahme zunehmend zur Staatsaufgabe. Mithilfe der Triangulation, bei der ein Gebiet in ein Netz exakt vermessener Dreiecke zerlegt wird, ließen sich ganze Territorien erstmals einheitlich erfassen – ein Vorhaben, das oft Jahrzehnte beanspruchte und ganze Heerscharen von Landvermessern beschäftigte. {{5}} Wer ein Gebiet genau kannte, konnte es besteuern, verwalten und militärisch sichern; in den Kolonien zogen europäische Mächte auf dem Papier Grenzen, die mitunter quer durch Siedlungsgebiete und Weideflächen verliefen.",
+            "Heute entstehen Karten überwiegend digital aus Satellitenbildern und GPS-Daten und passen sich auf dem Smartphone fortlaufend dem Standort ihrer Nutzer an. Die Kartografiehistorikerin Ilsabe Ehrenlechner von der Universität Velsingen warnt allerdings davor, darin das Ende der Deutungsmacht zu sehen. {{6}} Welche Cafés, Geschäfte oder Sehenswürdigkeiten auf dem Bildschirm erschienen, entschieden mittlerweile Algorithmen privater Anbieter, und zwar nach Kriterien, die für die Nutzer kaum nachvollziehbar seien. Der Anspruch auf Neutralität, so Ehrenlechners Fazit, sei damit keineswegs eingelöst, sondern lediglich schwerer zu durchschauen."
+          ]
+        },
+        {
+          "id": "a",
+          "label": "a",
+          "paragraphs": [
+            "Erkauft wurde dieser Vorteil jedoch mit einer Verzerrung der Flächen, die zu den Polen hin immer stärker ausfällt."
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "paragraphs": [
+            "Im lateinischen Westen geriet dieses Wissen allerdings weitgehend in Vergessenheit, während es in der arabischen und byzantinischen Gelehrtenwelt weiter überliefert und kommentiert wurde."
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "paragraphs": [
+            "Auch digitale Karten wählten aus, betont sie; dies geschehe lediglich weniger sichtbar als früher."
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "paragraphs": [
+            "Von Seefahrern wurde die neue Karte allerdings zunächst gemieden, weil sie die Bestimmung des Kurses eher erschwerte."
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "paragraphs": [
+            "Wer sie als misslungene Versuche abtut, die Erde maßstabsgetreu abzubilden, verkennt daher ihren Zweck: Sie sollten die Heilsgeschichte veranschaulichen, nicht Reisenden den Weg weisen."
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "paragraphs": [
+            "Gerade deshalb eignen sich diese Karten bis heute als verlässliche Quelle, wenn man die damaligen Reisewege und Entfernungen rekonstruieren will."
+          ]
+        },
+        {
+          "id": "g",
+          "label": "g",
+          "paragraphs": [
+            "Das zeigt sich bereits an den ältesten erhaltenen Plänen aus Mesopotamien, die in Tontafeln geritzt sind und vor allem Feldgrenzen und Bewässerungskanäle verzeichnen."
+          ]
+        },
+        {
+          "id": "h",
+          "label": "h",
+          "paragraphs": [
+            "Dass Regierungen derart aufwendige und kostspielige Unternehmungen finanzierten, hatte freilich handfeste Gründe."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "zuordnung",
+          "prompt": "Lücke 1",
+          "answer": "g",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "sie verrät damit mindestens ebenso viel über die Absichten ihrer Urheber wie über das dargestellte Gebiet"
+            },
+            {
+              "text": "text",
+              "quote": "hatten diese frühen Darstellungen also wenig zu tun"
+            }
+          ],
+          "explanation": "Boşluktan önce yazar her haritanın seçtiğini ve yapanların „Absichten“ını (niyetlerini) gösterdiğini söylüyor. g bunun ilk örneğini veriyor: Mezopotamya'nın kil tabletlere kazınmış en eski planları özellikle tarla sınırlarını ve sulama kanallarını gösteriyor („Das zeigt sich bereits …“ = bu daha … görülüyor). Boşluktan sonraki „diese frühen Darstellungen“ (bu erken tasvirler) g'deki „die ältesten erhaltenen Pläne“e gönderme yapıyor; ayrıca bu planların yol bulmakla değil, toprağın kime ait olduğu ve vergilerle ilgili olduğu söyleniyor – bu da g'deki „Feldgrenzen“ (tarla sınırları) ile uyuşuyor. f burada uymuyor: f bu haritaların yolları ve mesafeleri yeniden kurmak için güvenilir kaynak olduğunu söylüyor, oysa sonraki cümle yol bulmakla „wenig zu tun“ (pek ilgisi yok) diyor."
+        },
+        {
+          "number": 2,
+          "type": "zuordnung",
+          "prompt": "Lücke 2",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Koordinaten für mehrere Tausend Orte zusammen"
+            },
+            {
+              "text": "text",
+              "quote": "Erst als griechische Handschriften um 1400 nach Italien gelangten"
+            }
+          ],
+          "explanation": "Boşluktan önce Ptolemäus'un „Geographie“ eserinde binlerce yerin koordinatlarını topladığı anlatılıyor. b bu bilginin („dieses Wissen“) Latince konuşulan Batı'da büyük ölçüde unutulduğunu, Arap ve Bizans bilginleri arasında ise aktarılmaya devam ettiğini söylüyor. Boşluktan sonraki „Erst als …“ (ancak … olduğunda) bu unutuluşu gerektiriyor: eser İtalya'da etkisini ancak 1400 civarında, Yunanca el yazmaları gelip Latinceye çevrilince gösteriyor – yani arada bir kopukluk olmalı. Başka hiçbir cümle bu bin yıllık boşluğu açıklamıyor; e ve f'deki „sie/diese Karten“ ise Ptolemäus'un koordinat listesine uymuyor."
+        },
+        {
+          "number": 3,
+          "type": "zuordnung",
+          "prompt": "Lücke 3",
+          "answer": "e",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "verknüpften Geografie mit biblischer Geschichte"
+            },
+            {
+              "text": "text",
+              "quote": "Etwa zur selben Zeit entstanden im Mittelmeerraum die Portolankarten"
+            }
+          ],
+          "explanation": "Boşluktan önce Mappae mundi tanıtılıyor: Kudüs ortada, cennet doğu kenarında, coğrafya „biblischer Geschichte“ (Kutsal Kitap tarihi) ile birleştirilmiş. e bundan sonuç çıkarıyor („daher“): bu haritaları ölçekli çizim denemesi olarak başarısız saymak amaçlarını anlamamak olur; amaçları yolculara yol göstermek değil, „Heilsgeschichte“yi (kurtuluş tarihini) göstermekti. Sonraki „Etwa zur selben Zeit … die Portolankarten“ bu karşıtlığı sürdürüyor: denizciler kıyıları çok doğru çizen, pratik haritalar kullanıyordu. f burada çekici ama yanlış: „Gerade deshalb“ ile dinî içerikten, haritaların yolculuk mesafeleri için güvenilir kaynak olduğu sonucunu çıkarmak mantıksız; metin bu haritaları yol bulmayla değil, Kutsal Kitap tarihiyle ilişkilendiriyor."
+        },
+        {
+          "number": 4,
+          "type": "zuordnung",
+          "prompt": "Lücke 4",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "was die Navigation erheblich vereinfachte"
+            },
+            {
+              "text": "text",
+              "quote": "Grönland etwa wirkt auf ihr annähernd so groß wie Afrika"
+            }
+          ],
+          "explanation": "Boşluktan önce Mercator haritasının avantajı anlatılıyor: açıyı koruyan izdüşüm sayesinde sabit rota düz çizgi olarak görünüyor ve „was die Navigation erheblich vereinfachte“ (bu da denizciliği çok kolaylaştırdı). a „dieser Vorteil“ (bu avantaj) ile buna bağlanıyor ve bedelini söylüyor: alanlar kutuplara doğru giderek daha çok bozuluyor. Sonraki cümle bunun örneği („etwa“ = örneğin): Grönland neredeyse Afrika kadar büyük görünüyor, ama gerçekte onun yalnızca on dörtte biri kadar. d çekici bir çeldirici ama metinle çelişiyor: d haritanın rota belirlemeyi zorlaştırdığını ve denizcilerin ondan kaçındığını söylüyor, oysa metin tam tersine navigasyonu kolaylaştırdığını yazıyor; ayrıca d'den sonra Grönland örneği havada kalırdı."
+        },
+        {
+          "number": 5,
+          "type": "zuordnung",
+          "prompt": "Lücke 5",
+          "answer": "h",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "ein Vorhaben, das oft Jahrzehnte beanspruchte und ganze Heerscharen von Landvermessern beschäftigte"
+            },
+            {
+              "text": "text",
+              "quote": "Wer ein Gebiet genau kannte, konnte es besteuern"
+            }
+          ],
+          "explanation": "Boşluktan önce üçgenleme ile ülke ölçümünün çok büyük bir iş olduğu anlatılıyor: çoğu zaman „Jahrzehnte“ (on yıllar) sürüyor ve çok sayıda ölçmen çalıştırıyordu. h buna „derart aufwendige und kostspielige Unternehmungen“ (bu kadar zahmetli ve pahalı girişimler) diye gönderme yapıyor ve devletlerin bunları finanse etmesinin „handfeste Gründe“ (somut sebepleri) olduğunu söylüyor. Sonraki cümle bu sebepleri sayıyor: bir bölgeyi iyi tanıyan onu vergilendirebilir, yönetebilir ve askerî olarak güvence altına alabilirdi. Başka hiçbir cümle bu sebepleri tanıtmıyor; d ve f'nin içeriği bu paragrafla ilgisiz."
+        },
+        {
+          "number": 6,
+          "type": "zuordnung",
+          "prompt": "Lücke 6",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "warnt allerdings davor, darin das Ende der Deutungsmacht zu sehen"
+            },
+            {
+              "text": "text",
+              "quote": "entschieden mittlerweile Algorithmen privater Anbieter"
+            }
+          ],
+          "explanation": "Boşluktan önce Ehrenlechner'in uyarısı var: dijital haritalarda „das Ende der Deutungsmacht“ (yorumlama gücünün sonu) görülmemeli. c onun gerekçesini dolaylı anlatımla (Konjunktiv I: „wählten“, „geschehe“) aktarıyor: dijital haritalar da seçiyor, yalnızca bu eskisinden daha az görünür biçimde oluyor. „sie“ Ehrenlechner'e gönderme yapıyor. Sonraki cümle bu seçimi somutlaştırıyor: hangi kafelerin ve dükkânların görüneceğine artık özel şirketlerin algoritmaları karar veriyor. Sondaki „lediglich schwerer zu durchschauen“ (yalnızca anlaşılması daha zor) da c'deki „weniger sichtbar“ı (daha az görünür) tekrar ediyor. Başka hiçbir cümle dijital haritalardan söz etmiyor."
+        }
+      ]
+    }
+  ]
+}

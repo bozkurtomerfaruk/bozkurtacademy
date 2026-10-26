@@ -1,0 +1,192 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "c1",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-1",
+  "title": "Wie Zugvögel ihren Weg finden",
+  "minutes": 20,
+  "context": "Sie lesen in einem populärwissenschaftlichen Magazin einen Beitrag über die Orientierung von Zugvögeln.",
+  "instructions": "Lesen Sie den Text. In den Text wurden sechs Sätze entfernt. Welcher der Sätze a–h passt in welche Lücke 1–6? Zwei Sätze passen nicht.",
+  "groups": [
+    {
+      "layout": "gaps",
+      "none": false,
+      "texts": [
+        {
+          "id": "text",
+          "title": "Wie Zugvögel ihren Weg finden",
+          "paragraphs": [
+            "Jeden Herbst brechen in Mitteleuropa Millionen kleiner Singvögel zu einer Reise auf, die sie bis südlich der Sahara führt. Die meisten von ihnen ziehen nachts und allein, und viele Jungvögel unternehmen den Flug, ohne ihn je zuvor gemeinsam mit erfahrenen Artgenossen absolviert zu haben. Dennoch kehren beringte Gartenrotschwänze im Frühjahr nicht selten in genau jene Hecke zurück, in der sie geschlüpft sind. {{1}} Nach heutigem Kenntnisstand verlassen sich die Tiere dabei nicht auf einen einzelnen Sinn, sondern greifen auf mehrere Orientierungssysteme zurück, die einander ergänzen und bei Bedarf gegenseitig korrigieren.",
+            "Am längsten bekannt ist der Sonnenkompass, den tagsüber ziehende Arten nutzen. Da die Sonne im Tagesverlauf über den Himmel wandert, müssen die Vögel ihren Stand mit der inneren Uhr verrechnen. Nachtzieher orientieren sich zusätzlich an den Sternen. In Versuchen mit handaufgezogenen Grasmücken unter einer Planetariumskuppel wählten die Tiere selbst dann die passende Zugrichtung, wenn man einzelne Sternbilder ausblendete. {{2}} Diesen Fixpunkt prägen sich Jungvögel offenbar in ihren ersten Lebenswochen ein: Ließ man den künstlichen Himmel um einen anderen Stern rotieren, richteten sie sich im Herbst nach diesem falschen Pol aus.",
+            "Bei bedecktem Himmel helfen jedoch weder Sonne noch Sterne. Seit Langem gilt als gesichert, dass Vögel auch das Erdmagnetfeld wahrnehmen. Bemerkenswert ist die Funktionsweise dieses Magnetkompasses: Er reagiert nicht auf die Polarität des Feldes, sondern auf den Winkel, in dem die Feldlinien zur Erdoberfläche geneigt sind. {{3}} Wo die Linien nahezu waagerecht verlaufen, wie in der Nähe des magnetischen Äquators, geht diese Information verloren – Vögel, die diese Zone überqueren, müssen sich daher vorübergehend auf andere Hinweise stützen.",
+            "Wo genau der Magnetsinn sitzt, ist umstritten. Lange galten winzige eisenhaltige Partikel im Schnabelbereich als aussichtsreichste Erklärung. Inzwischen favorisieren viele Fachleute ein lichtabhängiges Protein in der Netzhaut, dessen chemische Reaktionen von der Ausrichtung des Magnetfelds beeinflusst werden. Gestützt wird diese Annahme unter anderem durch eine Studie der Arbeitsgruppe um die Biophysikerin Talke Quernhövel an der Universität Kalmerstedt: Rotkehlchen in Holzhütten auf dem Campus verloren ihre Orientierung, sobald die Forschenden ein schwaches elektromagnetisches Rauschen erzeugten, wie es von elektrischen Geräten in jeder Stadt ausgeht. Schirmte man die Hütten mit geerdetem Aluminiumblech ab, fanden die Tiere ihre Richtung wieder. {{4}} Ganz entschieden ist der Streit damit freilich nicht, denn das Protein wurde zwar in der Netzhaut nachgewiesen, seine Funktion als Sensor im lebenden Tier aber bislang nicht direkt belegt.",
+            "Ein Kompass allein reicht allerdings nicht aus, um ein Ziel zu finden; er zeigt lediglich eine Richtung an. Wie wichtig zusätzlich eine Art Positionssinn ist, belegt ein Verfrachtungsversuch der Vogelwarte Hellmersand. Die Forschenden fingen während des Herbstzugs Teichrohrsänger, transportierten sie rund tausend Kilometer nach Osten und ließen sie dort wieder frei. Altvögel korrigierten ihren Kurs und steuerten ihr gewohntes Winterquartier an, während die diesjährigen Jungvögel unbeirrt in der ursprünglichen Richtung weiterflogen – und damit weit am Ziel vorbei. {{5}} Worauf diese Karte beruht, ist weitgehend offen; diskutiert werden etwa regionale Unterschiede in der Stärke des Magnetfelds sowie Gerüche.",
+            "Die Befunde sind nicht nur für die Grundlagenforschung von Belang. Wenn schon das alltägliche elektromagnetische Rauschen den Magnetkompass stört, könnten Vögel über Ballungsräumen verstärkt auf ihre übrigen Orientierungssysteme angewiesen sein – der Sternenhimmel jedoch ist dort wegen der künstlichen Beleuchtung oft kaum noch zu erkennen. {{6}} Um diese Wissenslücke zu schließen, stattet Quernhövels Team derzeit 48 Rotkehlchen mit Sendern aus, die ihre Flugroute über mehrere Wochen aufzeichnen."
+          ]
+        },
+        {
+          "id": "a",
+          "label": "a",
+          "paragraphs": [
+            "Ein Vogel erkennt auf diese Weise lediglich, ob er sich in Richtung eines Pols oder in Richtung des Äquators bewegt, nicht aber, ob es sich dabei um den Nord- oder den Südpol handelt."
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "paragraphs": [
+            "Ob sich beide Effekte tatsächlich zu einer ernsthaften Gefahr für die Bestände summieren, lässt sich bislang allerdings nicht beziffern."
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "paragraphs": [
+            "Wie ein Gehirn, das kaum größer ist als eine Haselnuss, eine solche Navigationsleistung vollbringt, beschäftigt die Verhaltensbiologie seit mehr als einem Jahrhundert."
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "paragraphs": [
+            "Die erfahrenen Tiere verfügen demnach offenbar über eine erlernte innere Karte, während die Jungvögel zunächst nur einem angeborenen Programm aus Richtung und Flugdauer folgen."
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "paragraphs": [
+            "Solche Abweichungen gleichen Jungvögel offenbar schon auf ihrem ersten Zug aus, indem sie sich den erfahrenen Artgenossen anschließen."
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "paragraphs": [
+            "Maßgeblich war offenbar nicht die Gestalt bestimmter Sternbilder, sondern der Punkt am Himmel, um den sich das gesamte Sternenfeld im Laufe der Nacht scheinbar dreht."
+          ]
+        },
+        {
+          "id": "g",
+          "label": "g",
+          "paragraphs": [
+            "Für Arten, die tagsüber ziehen, spielt dieser Kompass dagegen keine Rolle, da sie ihn jederzeit durch die Sonne ersetzen können."
+          ]
+        },
+        {
+          "id": "h",
+          "label": "h",
+          "paragraphs": [
+            "Dass bereits ein derart schwaches Signal genügte, deutet nach Einschätzung des Teams auf einen Sensor hin, der auf chemischen Vorgängen beruht, denn Eisenpartikel würden erst auf weitaus stärkere Felder ansprechen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "zuordnung",
+          "prompt": "Lücke 1",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "in genau jene Hecke zurück, in der sie geschlüpft sind"
+            },
+            {
+              "text": "text",
+              "quote": "Nach heutigem Kenntnisstand verlassen sich die Tiere dabei"
+            }
+          ],
+          "explanation": "Boşluktan önce kuşların olağanüstü bir başarısı anlatılıyor: geceleri, yalnız uçuyorlar ve yine de „in genau jene Hecke zurück“ (tam da doğdukları çalılığa) dönüyorlar. c cümlesi bu başarıyı „eine solche Navigationsleistung“ (böyle bir yön bulma başarısı) diye özetliyor ve bunun nasıl mümkün olduğunun bilimi uzun zamandır meşgul ettiğini söylüyor. Boşluktan sonraki cümle bu soruya cevap veriyor: „Nach heutigem Kenntnisstand …“ (bugünkü bilgiye göre) ve „dabei“ (bunu yaparken) c'deki yön bulmaya gönderme yapıyor. e burada uymuyor: „Solche Abweichungen“ (bu tür sapmalar) için önceki cümlede bir sapma yok; ayrıca metin kuşların „allein“ (yalnız) uçtuğunu söylüyor."
+        },
+        {
+          "number": 2,
+          "type": "zuordnung",
+          "prompt": "Lücke 2",
+          "answer": "f",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "wenn man einzelne Sternbilder ausblendete"
+            },
+            {
+              "text": "text",
+              "quote": "Diesen Fixpunkt prägen sich Jungvögel offenbar"
+            }
+          ],
+          "explanation": "Boşluktan önce kuşların bazı takımyıldızlar gizlendiğinde bile („wenn man einzelne Sternbilder ausblendete“) doğru yönü seçtiği anlatılıyor. f bunun açıklamasını veriyor: belirleyici olan takımyıldızların şekli değil, bütün yıldız alanının etrafında döner göründüğü nokta („der Punkt …, um den sich das gesamte Sternenfeld … scheinbar dreht“). Boşluktan sonraki „Diesen Fixpunkt“ (bu sabit noktayı) tam da f'deki bu noktaya gönderme yapıyor; sonra gökyüzü başka bir yıldızın etrafında döndürülünce kuşların bu „falschen Pol“a (yanlış kutba) yöneldiği söyleniyor. Başka hiçbir cümle böyle bir nokta adlandırmıyor; bu yüzden „Diesen Fixpunkt“ yalnızca f'den sonra anlam kazanıyor."
+        },
+        {
+          "number": 3,
+          "type": "zuordnung",
+          "prompt": "Lücke 3",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "sondern auf den Winkel, in dem die Feldlinien zur Erdoberfläche geneigt sind"
+            },
+            {
+              "text": "text",
+              "quote": "geht diese Information verloren"
+            }
+          ],
+          "explanation": "Boşluktan önce manyetik pusulanın kutupluluğa (kuzey/güney farkına) değil, alan çizgilerinin yeryüzüne olan eğim açısına („Winkel“) tepki verdiği anlatılıyor. a bundan çıkan sonucu söylüyor: kuş yalnızca bir kutba mı yoksa ekvatora mı doğru gittiğini anlar, ama kuzey mi güney mi olduğunu bilemez. Boşluktan sonraki „diese Information“ (bu bilgi) a'daki „kutba mı ekvatora mı“ bilgisine gönderme yapıyor: çizgiler yatay olduğunda bu bilgi kaybolur. g burada uymuyor: g gündüz göç eden türlerin bu pusulaya hiç ihtiyaç duymadığını söylüyor, ama paragraf „Bei bedecktem Himmel helfen jedoch weder Sonne noch Sterne“ (bulutlu havada ne güneş ne yıldızlar yardım eder) diye başlıyor; yani güneş her zaman yerine geçemez. Ayrıca g'den sonra „diese Information“ havada kalırdı."
+        },
+        {
+          "number": 4,
+          "type": "zuordnung",
+          "prompt": "Lücke 4",
+          "answer": "h",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "ein schwaches elektromagnetisches Rauschen"
+            },
+            {
+              "text": "text",
+              "quote": "Ganz entschieden ist der Streit damit freilich nicht"
+            }
+          ],
+          "explanation": "Boşluktan önce Kalmerstedt'teki deney anlatılıyor: kızılgerdanlar „ein schwaches elektromagnetisches Rauschen“ (zayıf bir elektromanyetik gürültü) yüzünden yönlerini kaybediyor. h bu sonucu yorumluyor: bu kadar zayıf bir sinyalin yetmesi, kimyasal süreçlere dayanan bir algılayıcıya işaret ediyor („deutet … hin“), çünkü demir parçacıkları ancak çok daha güçlü alanlara tepki verirdi. Böylece h paragrafın başındaki iki açıklamayı (demir parçacıkları – ışığa bağlı protein) deneye bağlıyor. Sonraki „Ganz entschieden ist der Streit damit freilich nicht“ (tartışma bununla tamamen çözülmüş değil) h'deki bu yoruma sınır koyuyor; „der Streit“, paragrafın başındaki „umstritten“a dönüyor. g burada uymuyor: deneyle ve sensör tartışmasıyla hiçbir bağı yok."
+        },
+        {
+          "number": 5,
+          "type": "zuordnung",
+          "prompt": "Lücke 5",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "während die diesjährigen Jungvögel unbeirrt in der ursprünglichen Richtung weiterflogen"
+            },
+            {
+              "text": "text",
+              "quote": "Worauf diese Karte beruht"
+            }
+          ],
+          "explanation": "Boşluktan önce taşıma deneyinin sonucu var: yaşlı kuşlar rotalarını düzeltiyor, bu yılın genç kuşları ise eski yönde uçmaya devam edip hedefi çok geçiyor. d bundan sonucu çıkarıyor („demnach“ = buna göre): deneyimli kuşların öğrenilmiş bir iç haritası var, gençler ise yalnızca doğuştan gelen bir yön ve uçuş süresi programına uyuyor. Sonraki „Worauf diese Karte beruht“ (bu haritanın neye dayandığı) d'deki „innere Karte“ye gönderme yapıyor; metinde daha önce harita sözü geçmiyor. e çekici bir çeldirici ama metinle çelişiyor: e gençlerin sapmaları daha ilk göçte düzelttiğini söylüyor, oysa deneyde gençler „weit am Ziel vorbei“ (hedefin çok ötesine) uçuyor."
+        },
+        {
+          "number": 6,
+          "type": "zuordnung",
+          "prompt": "Lücke 6",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "der Sternenhimmel jedoch ist dort wegen der künstlichen Beleuchtung oft kaum noch zu erkennen"
+            },
+            {
+              "text": "text",
+              "quote": "Um diese Wissenslücke zu schließen"
+            }
+          ],
+          "explanation": "Boşluktan önce şehirlerin üzerinde iki olumsuz etki sayılıyor: elektromanyetik gürültü manyetik pusulayı bozuyor ve yapay aydınlatma yüzünden yıldızlar „kaum noch zu erkennen“ (neredeyse görünmüyor). b bu ikisini „beide Effekte“ (her iki etki) diye topluyor ve bunların popülasyonlar için ciddi bir tehlikeye dönüşüp dönüşmediğinin henüz „nicht beziffern“ (sayıyla ölçülemediğini) söylüyor. Sonraki „Um diese Wissenslücke zu schließen“ (bu bilgi boşluğunu kapatmak için) tam da b'deki bilinmeyene gönderme yapıyor: ekip bu yüzden kızılgerdanlara verici takıyor. Başka hiçbir cümle bir bilgi eksikliğinden söz etmiyor; g ve e bu bağlama hiç uymuyor."
+        }
+      ]
+    }
+  ]
+}

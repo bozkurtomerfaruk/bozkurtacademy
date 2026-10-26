@@ -1,0 +1,132 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "c1",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-2",
+  "title": "Neue Studiengänge vorgestellt",
+  "minutes": 15,
+  "context": "Ein Hochschulmagazin stellt vier Studiengänge vor, die zum kommenden Wintersemester erstmals angeboten werden.",
+  "instructions": "Lesen Sie die Texte a–d und die Aussagen 7–12. Zu welchem Text passt welche Aussage? Die Texte können mehrmals gewählt werden.",
+  "groups": [
+    {
+      "layout": "comments",
+      "none": false,
+      "texts": [
+        {
+          "id": "bestand",
+          "label": "a",
+          "title": "Master „Digitale Bestandserhaltung“",
+          "paragraphs": [
+            "Digitale Dokumente gelten als dauerhaft – tatsächlich sind viele Dateiformate schon nach wenigen Jahrzehnten nicht mehr lesbar. Der neue Masterstudiengang der Universität Brenzlingen bildet Fachleute aus, die Archive, Bibliotheken und Museen bei der langfristigen Sicherung ihrer Bestände beraten. Zugelassen werden Absolventinnen und Absolventen der Informatik ebenso wie solche geistes- oder kulturwissenschaftlicher Fächer. Damit beide Gruppen rasch auf einem gemeinsamen Stand arbeiten können, belegen sie im ersten Semester je nach Vorbildung unterschiedliche Brückenmodule – die einen zu Programmierung und Datenbanken, die anderen zu Archivkunde und Quellenkritik. Einige Seminare werden von Mitarbeitenden des Landesarchivs gestaltet. Der Studiengang startet als Pilotprojekt mit zwanzig Plätzen pro Jahrgang; nach drei Jahren entscheidet der Senat auf Grundlage einer Evaluation, ob er dauerhaft eingerichtet wird."
+          ]
+        },
+        {
+          "id": "gebaerden",
+          "label": "b",
+          "title": "Bachelor „Gebärdensprachdolmetschen“",
+          "paragraphs": [
+            "Seit gehörlose Menschen gesetzlich das Recht haben, bei Behördengängen und Arztbesuchen kostenfrei eine Dolmetscherin oder einen Dolmetscher hinzuzuziehen, übersteigt die Nachfrage das Angebot bei Weitem. Die Hochschule Trellmoor reagiert darauf mit einem siebensemestrigen Bachelorstudiengang. Kenntnisse der Deutschen Gebärdensprache werden nicht vorausgesetzt; vor der Zulassung findet jedoch ein Eignungsgespräch statt, in dem unter anderem das visuelle Gedächtnis geprüft wird. Neben intensivem Sprachunterricht stehen Linguistik, die Kulturgeschichte der Gehörlosengemeinschaft und Dolmetschtechniken auf dem Lehrplan. Im fünften Semester absolvieren die Studierenden ein zwölfwöchiges Praktikum bei einem Dolmetschdienst. Jährlich werden dreißig Bewerberinnen und Bewerber aufgenommen. Die Lehre findet ausschließlich in Präsenz statt, da sich eine visuelle Sprache nach Auffassung der Studiengangsleiterin Prof. Merschfeld am Bildschirm nur unzureichend vermitteln lässt. Nach dem Abschluss sind sowohl eine freiberufliche Tätigkeit als auch eine Anstellung bei Gerichten oder Sozialträgern denkbar."
+          ]
+        },
+        {
+          "id": "kueste",
+          "label": "c",
+          "title": "Master „Küstenresilienz“",
+          "paragraphs": [
+            "Steigende Meeresspiegel und häufigere Sturmfluten stellen Küstengemeinden vor Planungsaufgaben, für die ihnen oft das Fachpersonal fehlt. Die Universität Hallerbrück und die Technische Hochschule Kaltensiel bieten deshalb gemeinsam einen Masterstudiengang an, der sich an Ingenieurinnen, Geografen und Planerinnen mit mindestens einem Jahr Berufserfahrung richtet. Das Studium ist berufsbegleitend konzipiert: Der größte Teil der Lehre erfolgt online und lässt sich zeitlich flexibel einteilen. Eingeschrieben wird man wahlweise an einer der beiden Hochschulen; in drei Präsenzwochen pro Jahr, die abwechselnd an beiden Standorten stattfinden, bearbeiten die Studierenden beider Einrichtungen gemeinsam Fallstudien. Die Regelstudienzeit beträgt fünf Semester. Für die Masterarbeit wird empfohlen, eine Fragestellung aus dem eigenen Arbeitsumfeld zu wählen. Anders als ein grundständiges Studium ist das Angebot gebührenpflichtig; viele Arbeitgeber übernehmen die Kosten jedoch ganz oder teilweise."
+          ]
+        },
+        {
+          "id": "alter",
+          "label": "d",
+          "title": "Bachelor „Technik und Alter“",
+          "paragraphs": [
+            "Assistenzsysteme, die älteren Menschen ein selbstständiges Leben in der eigenen Wohnung ermöglichen sollen, scheitern häufig nicht an der Technik, sondern daran, dass sie an den Bedürfnissen ihrer Zielgruppe vorbei entwickelt werden. Hier setzt der interdisziplinäre Studiengang der Hochschule Wendrichsau an, der Grundlagen der Elektrotechnik und Informatik mit Gerontologie und Pflegewissenschaft verbindet. Kern des Studiums ist ein Reallabor: eine Musterwohnung auf dem Campus, in der Seniorinnen und Senioren aus der Nachbarschaft die von Studierenden entworfenen Prototypen erproben und deren Weiterentwicklung in regelmäßigen Workshops mitbestimmen. Für das sechste Semester ist ein Aufenthalt an einer ausländischen Partnerhochschule vorgesehen. Eine Zulassungsbeschränkung gibt es vorerst nicht; die Einschreibung ist sowohl zum Winter- als auch zum Sommersemester möglich. Unterrichtet wird überwiegend auf Deutsch, einzelne Wahlmodule finden auf Englisch statt."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 7,
+          "type": "zuordnung",
+          "prompt": "Ein Studiengang ist so angelegt, dass man ihn neben einer Erwerbstätigkeit absolvieren kann.",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "kueste",
+              "quote": "Das Studium ist berufsbegleitend konzipiert"
+            }
+          ],
+          "explanation": "Metin c'de program „berufsbegleitend konzipiert“ (işle birlikte yürütülecek şekilde tasarlanmış): derslerin çoğu çevrim içi ve „zeitlich flexibel“ (zamanı esnek) düzenlenebiliyor; yılda yalnızca üç yüz yüze hafta var. Metin b'de ise ders „ausschließlich in Präsenz“ (yalnızca yüz yüze) yapılıyor. Metin d'de hem kış hem yaz döneminde kayıt mümkün, ama bu esneklik çalışmayla birleştirmeyle ilgili değil."
+        },
+        {
+          "number": 8,
+          "type": "zuordnung",
+          "prompt": "Ein Studiengang gleicht die unterschiedlichen Vorkenntnisse seiner Studierenden zu Studienbeginn gezielt aus.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "bestand",
+              "quote": "belegen sie im ersten Semester je nach Vorbildung unterschiedliche Brückenmodule"
+            }
+          ],
+          "explanation": "Metin a'da hem bilişim hem de beşerî bilimler mezunları kabul ediliyor; iki grubun ortak bir düzeye gelmesi için ilk dönemde „je nach Vorbildung unterschiedliche Brückenmodule“ (önceki eğitime göre farklı köprü modülleri) alınıyor. Metin b'de işaret dili bilgisi „nicht vorausgesetzt“ (şart değil) ve kabul öncesinde bir „Eignungsgespräch“ (yetenek görüşmesi) var; ama farklı ön bilgileri dengeleyen özel bir başlangıç modülünden söz edilmiyor."
+        },
+        {
+          "number": 9,
+          "type": "zuordnung",
+          "prompt": "In einem Studiengang nehmen die Menschen, für die etwas entwickelt wird, selbst Einfluss auf dessen Gestaltung.",
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "alter",
+              "quote": "deren Weiterentwicklung in regelmäßigen Workshops mitbestimmen"
+            }
+          ],
+          "explanation": "Metin d'deki gerçek yaşam laboratuvarında („Reallabor“) mahalledeki yaşlılar öğrencilerin tasarladığı prototipleri deniyor ve bunların geliştirilmesini düzenli atölyelerde „mitbestimmen“ (birlikte belirliyor). Yani ürünlerin kullanıcıları tasarımı etkiliyor. Metin c'de öğrenciler „Fallstudien“ (vaka çalışmaları) üzerinde çalışıyor, metin a'da arşiv çalışanları seminer veriyor; ama hiçbirinde hedef kullanıcıların geliştirmeye katılımı yok."
+        },
+        {
+          "number": 10,
+          "type": "zuordnung",
+          "prompt": "Ein Studiengang reagiert auf einen Bedarf, der sich aus einem rechtlich garantierten Anspruch ergibt.",
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "gebaerden",
+              "quote": "Seit gehörlose Menschen gesetzlich das Recht haben"
+            }
+          ],
+          "explanation": "Metin b'ye göre işitme engelliler „gesetzlich das Recht haben“ (yasal olarak hakka sahip), resmî işlerde ve doktor ziyaretlerinde ücretsiz tercüman isteyebilir; bu yüzden talep arzı çok aşıyor ve üniversite „reagiert darauf“ (buna tepki veriyor). Metin c'de de bir ihtiyaç var (kıyı belediyelerinde uzman eksikliği), ama nedeni bir yasa değil, „steigende Meeresspiegel und häufigere Sturmfluten“ (yükselen deniz seviyesi ve sıklaşan fırtına kabarmaları)."
+        },
+        {
+          "number": 11,
+          "type": "zuordnung",
+          "prompt": "In einem Studiengang lernen Studierende verschiedener Hochschulen zeitweise zusammen.",
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "kueste",
+              "quote": "bearbeiten die Studierenden beider Einrichtungen gemeinsam Fallstudien"
+            }
+          ],
+          "explanation": "Metin c'de program iki üniversite tarafından birlikte sunuluyor; öğrenciler birine kaydoluyor, ama yüz yüze haftalarda „die Studierenden beider Einrichtungen gemeinsam“ (iki kurumun öğrencileri birlikte) vaka çalışmaları yapıyor. „zeitweise“ (zaman zaman) yılda üç haftaya karşılık geliyor. Metin d'de öğrenciler altıncı dönemde yurt dışındaki bir ortak üniversiteye gidiyor, ama orada başka öğrencilerle ortak bir ders yapısından söz edilmiyor. Metin a'da yalnızca dışarıdan öğretim görevlileri (arşiv çalışanları) var."
+        },
+        {
+          "number": 12,
+          "type": "zuordnung",
+          "prompt": "Ein Studiengang wird vorerst auf Probe angeboten; über seine Fortführung wird später befunden.",
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "bestand",
+              "quote": "Der Studiengang startet als Pilotprojekt mit zwanzig Plätzen pro Jahrgang"
+            }
+          ],
+          "explanation": "Metin a'daki program „als Pilotprojekt“ (pilot proje olarak) başlıyor; üç yıl sonra senato bir değerlendirmeye dayanarak programın „dauerhaft“ (kalıcı olarak) kurulup kurulmayacağına karar verecek. Metin d'de de „vorerst“ (şimdilik) kelimesi geçiyor, ama yalnızca kontenjan sınırlaması olmadığını anlatıyor, programın geleceği hakkında değil. Metin b'de yılda otuz kişilik sabit bir kontenjan var; deneme süresinden söz edilmiyor."
+        }
+      ]
+    }
+  ]
+}

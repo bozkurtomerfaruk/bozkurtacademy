@@ -1,0 +1,451 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "c1",
+  "section": "sprachbausteine",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Plagiate in der Wissenschaft",
+  "minutes": 25,
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort (a, b, c oder d) in die Lücken 25–46 passt.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "text",
+          "title": "Plagiate in der Wissenschaft",
+          "byline": "Aus dem Magazin einer Hochschule",
+          "paragraphs": [
+            "Kaum ein Vorwurf wiegt im Wissenschaftsbetrieb so schwer wie der des Plagiats. Wer fremde Gedanken oder Formulierungen übernimmt, ohne {{25}} Quelle anzugeben, verstößt gegen ein Grundprinzip wissenschaftlichen Arbeitens: die Nachprüfbarkeit. Denn nur wenn offengelegt wird, {{26}} welchen Vorarbeiten eine Erkenntnis beruht, können andere sie überprüfen und weiterentwickeln.",
+            "Dabei ist der Begriff {{27}} gefasst, als viele Studierende annehmen. Als Plagiat gilt {{28}} die wörtliche Übernahme ganzer Absätze als auch die Paraphrase ohne Beleg und das sogenannte Selbstplagiat, {{29}} Forschende eigene, bereits veröffentlichte Ergebnisse als neu ausgeben.",
+            "Wie verbreitet solche Praktiken tatsächlich sind, lässt sich nur schwer {{30}}. Eine Befragung, die eine Arbeitsgruppe um die Soziologin Eilika Brümmerling an der Universität Hagmersfeld unter rund 3.000 Promovierenden durchgeführt hat, {{31}} darauf hin, dass knapp ein Fünftel der Befragten schon einmal Textpassagen ohne ausreichende Kennzeichnung übernommen hat – meist jedoch nicht aus Täuschungsabsicht, {{32}} aus Unsicherheit über die geltenden Regeln. Die Autorinnen {{33}} allerdings zu bedenken, dass Selbstauskünfte zu heiklen Themen die tatsächliche Häufigkeit eher unterschätzen dürften.",
+            "Seit einigen Jahren setzen viele Hochschulen Software ein, {{34}} eingereichte Arbeiten mit Milliarden von Online-Dokumenten abgleicht. Solche Programme liefern jedoch {{35}} einen Hinweis, keinen Beweis: Sie markieren Übereinstimmungen, können aber nicht erkennen, ob ein Zitat korrekt {{36}} wurde. Ob tatsächlich ein Plagiat vorliegt, muss daher {{37}} von Fachleuten beurteilt werden. Hinzu kommt, dass geschickte Täuscher fremde Texte inzwischen mithilfe automatischer Programme so {{38}}, dass die Software die Übereinstimmungen nicht mehr erkennt.",
+            "Die Folgen eines nachgewiesenen Plagiats können erheblich sein: Studierenden droht die Bewertung der Arbeit als „nicht bestanden“, in schweren Fällen sogar die Exmatrikulation; Promovierten kann der Doktorgrad nachträglich {{39}} werden. Mindestens {{40}} schwer wiegt der Vertrauensverlust, {{41}} betroffene Institutionen und ganze Fachgebiete erleiden. Denn jede Arbeit, die auf plagiierten Ergebnissen {{42}}, gefährdet die Glaubwürdigkeit der Forschung insgesamt.",
+            "Fachgesellschaften fordern deshalb, die Regeln guter wissenschaftlicher Praxis nicht erst kurz {{43}} der Abschlussarbeit, sondern bereits im ersten Semester zu vermitteln. Viele Fälle ließen sich vermeiden, {{44}} Studierende frühzeitig lernten, eigene Überlegungen sauber von übernommenen {{45}}. Eine reine Kontrollkultur, so die Hagmersfelder Forscherinnen, {{46}} das Problem dagegen kaum lösen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 25,
+          "type": "abc",
+          "prompt": "Lücke 25",
+          "options": {
+            "a": "ihrer",
+            "b": "ihrem",
+            "c": "ihren",
+            "d": "deren"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Quelle anzugeben, verstößt gegen ein Grundprinzip"
+            }
+          ],
+          "explanation": "„ohne“ Akkusativ ister ve „Quelle“ dişildir; boşluk, „fremde Gedanken oder Formulierungen“in (çoğul) kaynağını gösteren bir iyelik sözcüğü olmalı. Çekimsiz „deren“ (onların) her hâlde kullanılabilir ve gönderme yaptığı öğeyi açıkça gösterir: „ohne deren Quelle anzugeben“. a) ihrer dişil Genitiv/Dativ'dir, „ohne“ ise Akkusativ ister. b) ihrem eril/nötr Dativ'dir. c) ihren eril Akkusativ'dir; „Quelle“ dişil olduğu için hiçbiri uymaz."
+        },
+        {
+          "number": 26,
+          "type": "abc",
+          "prompt": "Lücke 26",
+          "options": {
+            "a": "auf",
+            "b": "an",
+            "c": "in",
+            "d": "von"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "welchen Vorarbeiten eine Erkenntnis beruht"
+            }
+          ],
+          "explanation": "Yan cümlenin fiili „beruht“: „auf etwas (Dativ) beruhen“ (bir şeye dayanmak). Dolaylı soru edatla başlar: „auf welchen Vorarbeiten eine Erkenntnis beruht“ (bir bulgunun hangi ön çalışmalara dayandığı). b) an, c) in ve d) von „beruhen“ fiiliyle kullanılmaz."
+        },
+        {
+          "number": 27,
+          "type": "abc",
+          "prompt": "Lücke 27",
+          "options": {
+            "a": "enger",
+            "b": "knapper",
+            "c": "weiter",
+            "d": "schmaler"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "als viele Studierende annehmen"
+            }
+          ],
+          "explanation": "Anlam boşluğu: Bir sonraki cümle, kelimesi kelimesine kopyalamanın yanında kaynaksız paraphrase'ı ve „Selbstplagiat“ı da intihal sayıyor; yani kavram pek çok öğrencinin sandığından „daha geniş“ tanımlanmıştır: „weiter gefasst“. a) enger, b) knapper ve d) schmaler (daha dar) dilbilgisi olarak „als“ ile uyar, ama anlamı tersine çevirir: Metin kavramın kapsamını daraltmıyor, genişletiyor."
+        },
+        {
+          "number": 28,
+          "type": "abc",
+          "prompt": "Lücke 28",
+          "options": {
+            "a": "weder",
+            "b": "sowohl",
+            "c": "entweder",
+            "d": "zwar"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "die wörtliche Übernahme ganzer Absätze als auch"
+            }
+          ],
+          "explanation": "İki parçalı bağlaç: Devamında „als auch“ geliyor; bu yalnızca „sowohl … als auch“ (hem … hem de) ile tamamlanır. Böylece kopyalama da paraphrase da intihal sayılır. a) weder „noch“ ile, c) entweder „oder“ ile, d) zwar „aber“ ile kurulur; hiçbiri „als auch“ ile birleşmez."
+        },
+        {
+          "number": 29,
+          "type": "abc",
+          "prompt": "Lücke 29",
+          "options": {
+            "a": "an dem",
+            "b": "dessen",
+            "c": "bei dem",
+            "d": "denen"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Forschende eigene, bereits veröffentlichte Ergebnisse als neu ausgeben"
+            }
+          ],
+          "explanation": "İlgi zamiri „das sogenannte Selbstplagiat“ (nötr, tekil) sözcüğüne gönderme yapar. Kendi intihalinde araştırmacılar eski sonuçlarını yeni gibi sunar: Bu, „bei + Dativ“ ile ifade edilir („bu durumda, bunda“) – „das Selbstplagiat, bei dem …“. a) an dem burada bir anlam kurmaz; „ausgeben“ fiili „an“ ile kullanılmaz. b) dessen iyelik bildirir ve ardından sahip olunan bir isim ister; „Forschende“ ise özne olur. d) denen çoğuldur, „Selbstplagiat“ tekildir."
+        },
+        {
+          "number": 30,
+          "type": "abc",
+          "prompt": "Lücke 30",
+          "options": {
+            "a": "verbreiten",
+            "b": "bezichtigen",
+            "c": "befürchten",
+            "d": "beziffern"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Wie verbreitet solche Praktiken tatsächlich sind"
+            }
+          ],
+          "explanation": "Anlam boşluğu: Konu, intihalin ne kadar yaygın olduğu; bu soruya bir sayı ile cevap vermek zordur: „etwas beziffern“ (sayıyla ifade etmek). Ardından gelen anket sonucu („knapp ein Fünftel“) da bunu destekler. a) verbreiten (yaymak) anlamca uymaz: Yaygınlık „yayılmaz“, ölçülür. b) bezichtigen (suçlamak) bir kişi (Akkusativ) ve suç (Genitiv) ister. c) befürchten (korkmak) bir soruyu („Wie verbreitet …“) nesne olarak alıp „schwer“ ile anlamlı bir cümle kuramaz."
+        },
+        {
+          "number": 31,
+          "type": "abc",
+          "prompt": "Lücke 31",
+          "options": {
+            "a": "deutet",
+            "b": "schließt",
+            "c": "beruft",
+            "d": "folgert"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "darauf hin, dass knapp ein Fünftel der Befragten"
+            }
+          ],
+          "explanation": "Kalıp: „darauf hindeuten, dass …“ (… -e işaret etmek). Bilimsel dilde bir çalışmanın kesin bir şey kanıtlamadan bir sonuca işaret ettiğini söyler; özne „Eine Befragung“ (tekil) – „deutet … hin“. b) „schließen“ „aus etwas auf etwas“ ile kurulur, „hin“ ile değil. c) „sich berufen auf“ dönüşlüdür ve „hin“ almaz. d) „folgern“ „aus etwas“ ile kullanılır; hiçbiri „darauf hin“ ile birleşmez."
+        },
+        {
+          "number": 32,
+          "type": "abc",
+          "prompt": "Lücke 32",
+          "options": {
+            "a": "aber",
+            "b": "sondern",
+            "c": "sowie",
+            "d": "oder"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "meist jedoch nicht aus Täuschungsabsicht"
+            }
+          ],
+          "explanation": "Önceki kısımda „nicht“ ile bir sebep reddediliyor („nicht aus Täuschungsabsicht“), boşluktan sonra doğru sebep veriliyor („aus Unsicherheit“). Olumsuzlanan bir öğenin yerine düzeltme getiren bağlaç „sondern“dur (… değil, … -den). a) aber olumsuzlamadan sonra düzeltme değil, kısıtlama bildirir; bu yapıda yanlıştır. c) sowie (ve ayrıca) iki sebebi birlikte sayar, ama biri reddedilmiştir. d) oder iki seçenek sunar ve „nicht“ ile kurulan düzeltmeyi veremez."
+        },
+        {
+          "number": 33,
+          "type": "abc",
+          "prompt": "Lücke 33",
+          "options": {
+            "a": "stellen",
+            "b": "nehmen",
+            "c": "bringen",
+            "d": "geben"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "zu bedenken, dass Selbstauskünfte zu heiklen Themen"
+            }
+          ],
+          "explanation": "Kalıp (Funktionsverbgefüge): „etwas zu bedenken geben“ (bir şeyi dikkate sunmak, uyarıda bulunmak). Yazarlar, kişisel beyanların gerçek sıklığı olduğundan düşük gösterebileceğine dikkat çekiyor. a) stellen, b) nehmen ve c) bringen „zu bedenken“ ile birleşmez."
+        },
+        {
+          "number": 34,
+          "type": "abc",
+          "prompt": "Lücke 34",
+          "options": {
+            "a": "die",
+            "b": "welches",
+            "c": "das",
+            "d": "der"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "eingereichte Arbeiten mit Milliarden von Online-Dokumenten abgleicht"
+            }
+          ],
+          "explanation": "İlgi zamiri „Software“ sözcüğüne gönderme yapar; „die Software“ dişildir ve yan cümlede öznedir (fiil tekil: „abgleicht“). Bu yüzden dişil Nominativ „die“. b) welches ve c) das nötrdür. d) der eril Nominativ ya da dişil Dativ/Genitiv'dir; burada özne gerektiği için uymaz."
+        },
+        {
+          "number": 35,
+          "type": "abc",
+          "prompt": "Lücke 35",
+          "options": {
+            "a": "kaum",
+            "b": "nie",
+            "c": "lediglich",
+            "d": "sogar"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "einen Hinweis, keinen Beweis"
+            }
+          ],
+          "explanation": "Anlam boşluğu: Cümle programların sınırını anlatıyor: „bir ipucu, kanıt değil“. „lediglich“ (yalnızca, sadece) bu kısıtlamayı verir. „jedoch“ da önceki cümledeki yazılım kullanımına karşı bir sınırlama getirir. a) kaum (neredeyse hiç) ipucu bile vermediklerini söyler; oysa ardından „Übereinstimmungen markieren“ geliyor. b) nie (asla) aynı nedenle çelişir. d) sogar (hatta) beklenenden fazlasını vurgular; „keinen Beweis“ ile kurulan kısıtlamaya ters düşer."
+        },
+        {
+          "number": 36,
+          "type": "abc",
+          "prompt": "Lücke 36",
+          "options": {
+            "a": "belegen",
+            "b": "belegt",
+            "c": "belegte",
+            "d": "belegend"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "ob ein Zitat korrekt"
+            }
+          ],
+          "explanation": "Fiil biçimi: „wurde“ edilgen (Passiv Präteritum) kurar; „werden“ ile birlikte Partizip II gelir: „ob ein Zitat korrekt belegt wurde“ (bir alıntının doğru kaynak gösterilip gösterilmediği). a) belegen mastardır, „wurde“ ile gelecek/edilgen kuramaz. c) belegte çekimli bir geçmiş zaman fiilidir; bir yan cümlede iki çekimli fiil olamaz. d) belegend Partizip I'dir ve edilgen yapamaz."
+        },
+        {
+          "number": 37,
+          "type": "abc",
+          "prompt": "Lücke 37",
+          "options": {
+            "a": "ausnahmsweise",
+            "b": "selten",
+            "c": "stets",
+            "d": "keinesfalls"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Ob tatsächlich ein Plagiat vorliegt, muss daher"
+            }
+          ],
+          "explanation": "Anlam boşluğu: „daher“ önceki cümleye bağlanır: Yazılım yalnızca ipucu verir, kanıt sunmaz. Bu yüzden intihal olup olmadığına „her zaman“ uzmanlar karar vermelidir: „stets“. b) selten (nadiren) ve d) keinesfalls (hiçbir şekilde) uzman kararını gereksiz gösterir; „daher“ ile kurulan sonuca ters düşer. a) ausnahmsweise (istisna olarak) da uzman kararını yalnızca istisnai durumlara indirger; oysa yazılımın hiçbir sonucu tek başına kanıt değildir."
+        },
+        {
+          "number": 38,
+          "type": "abc",
+          "prompt": "Lücke 38",
+          "options": {
+            "a": "umschreiben",
+            "b": "beschreiben",
+            "c": "verschreiben",
+            "d": "zuschreiben"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "dass die Software die Übereinstimmungen nicht mehr erkennt"
+            }
+          ],
+          "explanation": "Anlam boşluğu: Hileciler yabancı metinleri yazılımın benzerlikleri tanıyamayacağı şekilde „yeniden yazıyor“: „einen Text umschreiben“ (başka kelimelerle yeniden yazmak). b) beschreiben (betimlemek) metni değiştirmez. c) verschreiben (reçete yazmak; „sich verschreiben“: yanlış yazmak) anlam vermez. d) zuschreiben (birine atfetmek) Dativ bir kişi ister ve metni değiştirmeyi anlatmaz."
+        },
+        {
+          "number": 39,
+          "type": "abc",
+          "prompt": "Lücke 39",
+          "options": {
+            "a": "entnommen",
+            "b": "enthoben",
+            "c": "entbunden",
+            "d": "entzogen"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Promovierten kann der Doktorgrad nachträglich"
+            }
+          ],
+          "explanation": "Kalıp: „jemandem einen Titel / den Doktorgrad entziehen“ (birinin unvanını geri almak); edilgen: „Promovierten (Dativ) kann der Doktorgrad entzogen werden“. a) entnommen (bir yerden alınmış, çıkarılmış: „einem Text entnommen“) unvan için kullanılmaz. b) „entheben“ bir kişiyi Akkusativ'de ve bir görevi Genitiv'de ister („jemanden seines Amtes entheben“). c) „entbinden“ de kişi + Genitiv/„von“ ile kurulur („von einer Pflicht entbinden“); özne „der Doktorgrad“ olamaz."
+        },
+        {
+          "number": 40,
+          "type": "abc",
+          "prompt": "Lücke 40",
+          "options": {
+            "a": "wie",
+            "b": "ebenso",
+            "c": "als",
+            "d": "desto"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "schwer wiegt der Vertrauensverlust"
+            }
+          ],
+          "explanation": "Karşılaştırma: Güven kaybı en az önceki cümledeki cezalar „kadar“ ağırdır. Karşılaştırılan şey önceki cümlede olduğu için „ebenso“ (aynı ölçüde) tek başına kullanılır: „Mindestens ebenso schwer wiegt …“. a) wie burada soru sözcüğü gibi okunur ya da „so … wie“ yapısında ikinci parça olmalıdır. c) als karşılaştırma için sıfatın üstünlük derecesini ister („schwerer als“). d) desto yalnızca üstünlük derecesiyle ve „je … desto“ yapısında kullanılır."
+        },
+        {
+          "number": 41,
+          "type": "abc",
+          "prompt": "Lücke 41",
+          "options": {
+            "a": "den",
+            "b": "dem",
+            "c": "der",
+            "d": "dessen"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "betroffene Institutionen und ganze Fachgebiete erleiden"
+            }
+          ],
+          "explanation": "İlgi zamiri „der Vertrauensverlust“ (eril) sözcüğüne gönderme yapar. Yan cümlede özne „betroffene Institutionen und ganze Fachgebiete“, fiil „erleiden“ ise Akkusativ nesne ister (bir şeye uğramak): eril Akkusativ „den“. b) dem Dativ'dir, „erleiden“ Dativ almaz. c) der eril Nominativ'dir; özne zaten var. d) dessen iyelik bildirir ve ardından bir isim gerektirir."
+        },
+        {
+          "number": 42,
+          "type": "abc",
+          "prompt": "Lücke 42",
+          "options": {
+            "a": "achtet",
+            "b": "bezieht",
+            "c": "verweist",
+            "d": "aufbaut"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "die auf plagiierten Ergebnissen"
+            }
+          ],
+          "explanation": "Fiilin edatı ve hâli: „auf etwas (Dativ) aufbauen“ (bir şeyin üzerine kurmak, bir şeye dayanmak) – „auf plagiierten Ergebnissen“ Dativ'dir. Yan cümlede ayrılabilen fiil sona birleşik gelir: „aufbaut“. a) „achten auf“ Akkusativ ister („auf plagiierte Ergebnisse“). b) „sich beziehen auf“ dönüşlüdür ve Akkusativ ister; „sich“ eksik. c) „verweisen auf“ da Akkusativ ister."
+        },
+        {
+          "number": 43,
+          "type": "abc",
+          "prompt": "Lücke 43",
+          "options": {
+            "a": "seit",
+            "b": "vor",
+            "c": "ab",
+            "d": "bis"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "der Abschlussarbeit, sondern bereits im ersten Semester"
+            }
+          ],
+          "explanation": "Anlam ve edat: „nicht erst kurz …, sondern bereits im ersten Semester“ (… -den hemen önce değil, daha ilk dönemde) iki zaman noktasını karşılaştırır; kurallar bitirme tezinden „kısa süre önce“ değil, çok daha erken öğretilmeli: „kurz vor der Abschlussarbeit“ (vor + Dativ). a) seit bir süreç başlangıcı bildirir; „kurz seit“ kurulamaz ve öğretim bitirme tezinden beri sürmez. c) ab de başlangıç bildirir; „kurz ab“ olmaz. d) bis artikelden önce tek başına kullanılmaz („bis zur“) ve „kurz“ ile birleşmez."
+        },
+        {
+          "number": 44,
+          "type": "abc",
+          "prompt": "Lücke 44",
+          "options": {
+            "a": "als",
+            "b": "ob",
+            "c": "wenn",
+            "d": "damit"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Viele Fälle ließen sich vermeiden"
+            }
+          ],
+          "explanation": "Ana cümle Konjunktiv II'de („ließen sich vermeiden“) ve gerçek olmayan bir durumu anlatıyor; yan cümledeki „lernten“ de Konjunktiv II'dir. Gerçek dışı koşul „wenn“ ile kurulur: Öğrenciler erken öğrenseydi birçok vaka önlenebilirdi. a) als geçmişte tek bir olayın zamanını bildirir; koşul kuramaz. b) ob dolaylı soru açar; „vermeiden“ bir soru tamamlayıcısı istemez. d) damit amaç bildirir; öğrencilerin öğrenmesi vakaların önlenmesinin amacı değil, koşuludur."
+        },
+        {
+          "number": 45,
+          "type": "abc",
+          "prompt": "Lücke 45",
+          "options": {
+            "a": "abgrenzen",
+            "b": "abgegrenzt",
+            "c": "grenzen ab",
+            "d": "abzugrenzen"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "eigene Überlegungen sauber von übernommenen"
+            }
+          ],
+          "explanation": "Fiil biçimi: „lernten“ fiilinden sonra virgülle ayrılmış ve genişletilmiş bir mastar grubu geliyor; bu durumda „zu“lu mastar gerekir: „lernten, eigene Überlegungen … abzugrenzen“ (ayırmayı öğrenmek). Ayrılabilen fiilde „zu“ önek ile kök arasına girer. a) abgrenzen „zu“ almadığı için virgüllü mastar grubunda yanlıştır. b) abgegrenzt Partizip II'dir ve tek başına mastar grubu kuramaz. c) grenzen ab çekimli bir fiildir; özne yoktur."
+        },
+        {
+          "number": 46,
+          "type": "abc",
+          "prompt": "Lücke 46",
+          "options": {
+            "a": "könne",
+            "b": "können",
+            "c": "konnten",
+            "d": "gekonnt"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "das Problem dagegen kaum lösen"
+            }
+          ],
+          "explanation": "„so die Hagmersfelder Forscherinnen“ araştırmacıların görüşünü aktarıyor; dolaylı anlatımda Konjunktiv I kullanılır. Öznesi „Eine reine Kontrollkultur“ (tekil) – „könne“. b) können ve c) konnten çoğuldur; özne tekildir (ayrıca c) geçmiş zamandır). d) gekonnt Partizip II'dir ve „lösen“ mastarıyla birlikte tek başına çekimli fiil olamaz."
+        }
+      ]
+    }
+  ]
+}

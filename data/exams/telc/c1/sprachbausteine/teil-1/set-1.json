@@ -1,0 +1,450 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "c1",
+  "section": "sprachbausteine",
+  "teil": 1,
+  "set": "set-1",
+  "title": "Die Entstehung der Universitäten",
+  "minutes": 25,
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort (a, b, c oder d) in die Lücken 25–46 passt.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "text",
+          "title": "Die Entstehung der Universitäten",
+          "byline": "Aus einer Einführung in die Wissenschaftsgeschichte",
+          "paragraphs": [
+            "Wer heute an einer Hochschule studiert, bewegt sich in einer Institution, {{25}} Wurzeln bis ins hohe Mittelalter zurückreichen. Anders als häufig angenommen, wurden die ersten Universitäten nicht von Königen oder Päpsten gegründet; sie gingen vielmehr {{26}} freiwilligen Zusammenschlüssen von Lehrenden und Lernenden hervor, die ihre Interessen gemeinsam vertreten wollten. Der lateinische Begriff „universitas“ bezeichnete dementsprechend {{27}} die Gesamtheit der Wissenschaften noch ein bestimmtes Gebäude, sondern eine Körperschaft im rechtlichen Sinne.",
+            "Als älteste Universität Europas gilt gemeinhin Bologna. Dort schlossen sich im Laufe des 12. Jahrhunderts auswärtige Studenten zusammen, um sich gegen überhöhte Mieten und die Willkür der städtischen Behörden zu {{28}}. Sie wählten aus ihren Reihen einen Rektor und handelten mit den Lehrern Verträge aus, {{29}} Vergütung und Pflichten genau festgelegt waren. Ein Lehrer, der seine Vorlesung verspätet begann, konnte sogar mit einer Geldbuße {{30}} werden.",
+            "In Paris bildete sich {{31}} um 1200 eine Gemeinschaft der Magister, also der Lehrenden, die ihre Selbstständigkeit erst in jahrzehntelangen Konflikten mit dem Bischof und seinem Kanzler {{32}} musste. Den entscheidenden Schritt zur dauerhaften Absicherung dieser Autonomie bildeten päpstliche und königliche Privilegien, {{33}} die Gelehrten etwa der städtischen Gerichtsbarkeit entzogen wurden. Zudem konnten die Universitäten mit dem Auszug in eine andere Stadt drohen, {{34}} ihre Rechte missachtet wurden – ein Druckmittel, von dem sie mehrfach {{35}} machten.",
+            "Auch die Inhalte des Studiums waren weitgehend einheitlich geregelt. Zunächst {{36}} alle Studenten die sieben freien Künste durchlaufen, bevor sie an einer der höheren Fakultäten Theologie, Recht oder Medizin studieren durften. Unterrichtet wurde ausschließlich auf Latein, {{37}} Studenten aus ganz Europa ohne Sprachbarrieren von einer Hochschule zur anderen wechseln konnten. Die wichtigste Lehrform war die Vorlesung, in der ein Magister einen kanonischen Text Satz für Satz {{38}} und anschließend kommentierte. Ergänzt wurde sie durch die Disputation, ein streng geregeltes Streitgespräch, {{39}} die Studierenden lernen sollten, Argumente für und gegen eine These abzuwägen. Diese Methode prägte das europäische Denken nachhaltig, auch wenn humanistische Kritiker später einwandten, sie {{40}} sich in spitzfindigen Wortgefechten.",
+            "Trotz zahlreicher Reformen hat sich das Grundmodell einer {{41}} Körperschaft von Gelehrten bis heute erstaunlich gut {{42}}. Akademische Grade, Fakultäten und gewählte Rektoren sind {{43}} keine Erfindungen der Moderne, sondern gehen unmittelbar auf jene mittelalterlichen Genossenschaften zurück. Selbst die Frage, {{44}} Hochschulen eher der Bildung der Persönlichkeit oder der Vorbereitung auf einen Beruf dienen sollen, reicht {{45}} in die Gründungszeit zurück. Wer diese Geschichte kennt, wird aktuelle Reformdebatten daher mit {{46}} Gelassenheit verfolgen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 25,
+          "type": "abc",
+          "prompt": "Lücke 25",
+          "options": {
+            "a": "die",
+            "b": "deren",
+            "c": "dessen",
+            "d": "denen"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Wurzeln bis ins hohe Mittelalter zurückreichen"
+            }
+          ],
+          "explanation": "Boşluk bir ilgi cümlesi başlatıyor ve iyelik bildiriyor: Kökleri kime ait? „einer Institution“ (dişil) – „kurumun kökleri“. Dişil (ve çoğul) bir öğeye ait olanı gösteren ilgi zamiri „deren“dir: „eine Institution, deren Wurzeln … zurückreichen“. c) dessen yalnızca eril/nötr bir öğeye gönderme yapar; „Institution“ dişildir. a) die ile cümlede „Wurzeln“ yanında ikinci bir özne/nesne kalır, yapı bozulur. d) denen çoğul Dativ'dir; „zurückreichen“ fiili Dativ istemez ve iyelik anlamı vermez."
+        },
+        {
+          "number": 26,
+          "type": "abc",
+          "prompt": "Lücke 26",
+          "options": {
+            "a": "von",
+            "b": "zu",
+            "c": "nach",
+            "d": "aus"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "freiwilligen Zusammenschlüssen von Lehrenden und Lernenden hervor"
+            }
+          ],
+          "explanation": "Cümlenin sonundaki „hervor“ fiilin ayrılan parçasıdır: „hervorgehen aus + Dativ“ (bir şeyden doğmak, ortaya çıkmak). Üniversiteler gönüllü birliklerden „doğdu“: „gingen … aus freiwilligen Zusammenschlüssen … hervor“. a) von, b) zu ve c) nach „hervorgehen“ fiiliyle bu anlamda kullanılmaz; köken bildiren tek edat „aus“tur."
+        },
+        {
+          "number": 27,
+          "type": "abc",
+          "prompt": "Lücke 27",
+          "options": {
+            "a": "weder",
+            "b": "entweder",
+            "c": "sowohl",
+            "d": "zwar"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "die Gesamtheit der Wissenschaften noch ein bestimmtes Gebäude"
+            }
+          ],
+          "explanation": "İki parçalı bağlaç: Boşluktan sonra „noch“ geliyor, sonra da „sondern“ ile doğru anlam veriliyor. „weder … noch“ (ne … ne de) iki şeyi birden reddeder: Kelime ne bilimlerin bütününü ne de bir binayı, „sondern“ hukuki bir birliği anlatıyordu. b) entweder „oder“ ile, c) sowohl „als auch“ ile, d) zwar „aber“ ile tamamlanır; hiçbiri „noch“ ile kurulmaz."
+        },
+        {
+          "number": 28,
+          "type": "abc",
+          "prompt": "Lücke 28",
+          "options": {
+            "a": "beschweren",
+            "b": "widersetzen",
+            "c": "wehren",
+            "d": "erwehren"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "gegen überhöhte Mieten und die Willkür der städtischen Behörden"
+            }
+          ],
+          "explanation": "Boşluktaki fiil „sich“ ve „gegen + Akkusativ“ ile kuruluyor: „sich gegen etwas wehren“ (bir şeye karşı kendini savunmak, direnmek). Öğrenciler yüksek kiralara ve keyfî uygulamalara karşı direnmek için birleşti. a) „sich beschweren“ „über“ ile kurulur (bir şeyden şikâyet etmek), „gegen“ ile değil. b) „sich widersetzen“ edatsız Dativ ister („den Behörden widersetzen“). d) „sich erwehren“ Genitiv ister („sich der Willkür erwehren“); „gegen“ ile kullanılmaz."
+        },
+        {
+          "number": 29,
+          "type": "abc",
+          "prompt": "Lücke 29",
+          "options": {
+            "a": "in denen",
+            "b": "in deren",
+            "c": "in die",
+            "d": "in welchem"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Vergütung und Pflichten genau festgelegt waren"
+            }
+          ],
+          "explanation": "İlgi zamiri „Verträge“ye (çoğul) gönderme yapar. Ücret ve görevler sözleşmelerin „içinde“ belirlenmişti: „in + Dativ“ (yer, durum) – çoğul Dativ ilgi zamiri „denen“: „Verträge, in denen … festgelegt waren“. b) in deren iyelik bildirir („sözleşmelerin …'inde“), ardından sahip olunan bir isim gerekir; „Vergütung“ özne olduğu için yapı bozulur. c) in die Akkusativ'tir, yön bildirir; „festgelegt sein“ yön istemez. d) in welchem tekildir (eril/nötr), „Verträge“ ise çoğuldur."
+        },
+        {
+          "number": 30,
+          "type": "abc",
+          "prompt": "Lücke 30",
+          "options": {
+            "a": "verhängt",
+            "b": "belegt",
+            "c": "auferlegt",
+            "d": "verurteilt"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Ein Lehrer, der seine Vorlesung verspätet begann"
+            }
+          ],
+          "explanation": "Edilgen yapıda özne cezayı alan kişidir („ein Lehrer“) ve ceza „mit“ ile verilir: „jemanden mit einer Geldbuße belegen“ (birine para cezası vermek) – edilgen: „mit einer Geldbuße belegt werden“. a) verhängt: Cezanın kendisi „verhängt“ edilir („eine Geldbuße wird verhängt“), kişi değil. d) verurteilt: „zu einer Geldbuße verurteilt werden“ – edat „zu“ olmalı, „mit“ değil. c) auferlegt: „jemandem wird eine Geldbuße auferlegt“ – kişi Dativ'de olur, ceza özne; „mit“ ile kurulmaz."
+        },
+        {
+          "number": 31,
+          "type": "abc",
+          "prompt": "Lücke 31",
+          "options": {
+            "a": "folglich",
+            "b": "demnach",
+            "c": "dagegen",
+            "d": "somit"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "eine Gemeinschaft der Magister, also der Lehrenden"
+            }
+          ],
+          "explanation": "Anlam/bağlaç boşluğu: Bologna'da birliği „auswärtige Studenten“ (öğrenciler) kurmuştu; Paris'te ise birlik „der Magister, also der Lehrenden“ (öğretenlerin) birliğidir. İki şehir karşılaştırılıyor, bu yüzden karşıtlık bildiren „dagegen“ (buna karşılık) gerekir. a) folglich, b) demnach ve d) somit „bu yüzden, dolayısıyla“ anlamında sonuç bildirir; Paris'teki gelişme Bologna'dakinin sonucu olarak anlatılmıyor."
+        },
+        {
+          "number": 32,
+          "type": "abc",
+          "prompt": "Lücke 32",
+          "options": {
+            "a": "aufgeben",
+            "b": "einbüßen",
+            "c": "abtreten",
+            "d": "durchsetzen"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Den entscheidenden Schritt zur dauerhaften Absicherung dieser Autonomie"
+            }
+          ],
+          "explanation": "Anlam boşluğu: Bir sonraki cümle bu bağımsızlığın („dieser Autonomie“) daha sonra kalıcı olarak güvence altına alındığını söylüyor; demek ki hocalar bağımsızlıklarını piskoposa karşı uzun çatışmalarla „kabul ettirdiler“: „seine Selbstständigkeit durchsetzen“. „erst in jahrzehntelangen Konflikten“ (ancak onlarca yıllık çatışmalar sonunda) de bir kazanımı anlatır. a) aufgeben (vazgeçmek), b) einbüßen (kaybetmek) ve c) abtreten (devretmek) dilbilgisi olarak uyar, ama bağımsızlığın kaybedildiğini söyler; bu, güvence altına alınan „Autonomie“ ile çelişir."
+        },
+        {
+          "number": 33,
+          "type": "abc",
+          "prompt": "Lücke 33",
+          "options": {
+            "a": "durch die",
+            "b": "durch deren",
+            "c": "für deren",
+            "d": "über die"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "die Gelehrten etwa der städtischen Gerichtsbarkeit entzogen wurden"
+            }
+          ],
+          "explanation": "Edilgen cümlede („entzogen wurden“) hukuki kararın aracı/vasıtası „durch + Akkusativ“ ile verilir: Ayrıcalıklar „sayesinde“ âlimler şehir yargısından çıkarıldı. „Privilegien“ çoğul, Akkusativ ilgi zamiri „die“: „Privilegien, durch die …“. b) durch deren ve c) für deren iyelik bildirir; ardından sahip olunan bir isim gelmesi gerekirdi, oysa „die Gelehrten“ geliyor. d) über die: „über“ burada vasıta bildirmez; „entziehen“ fiiliyle bu anlamda kurulmaz."
+        },
+        {
+          "number": 34,
+          "type": "abc",
+          "prompt": "Lücke 34",
+          "options": {
+            "a": "obwohl",
+            "b": "damit",
+            "c": "ehe",
+            "d": "sobald"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "mit dem Auszug in eine andere Stadt drohen"
+            }
+          ],
+          "explanation": "Anlam/bağlaç boşluğu: Başka şehre taşınma tehdidi, haklar çiğnendiği anda kullanılan bir baskı aracıydı („Druckmittel“). Koşul ve zaman bildiren „sobald“ (… olur olmaz) bunu anlatır. a) obwohl (… -e rağmen) mantığı tersine çevirir: Tehdit hakların çiğnenmesine rağmen değil, onun yüzünden yapılır. b) damit amaç bildirir; üniversiteler haklarının çiğnenmesini amaçlamaz. c) ehe (… -den önce) zamanı yanlış kurar: Tehdit haklar çiğnenmeden önce değil, çiğnendiğinde gelir."
+        },
+        {
+          "number": 35,
+          "type": "abc",
+          "prompt": "Lücke 35",
+          "options": {
+            "a": "Anwendung",
+            "b": "Gebrauch",
+            "c": "Nutzen",
+            "d": "Verwendung"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "ein Druckmittel, von dem sie mehrfach"
+            }
+          ],
+          "explanation": "Kalıp: „von etwas Gebrauch machen“ (bir şeyden yararlanmak, bir şeyi kullanmak). Boşluktan önce „von dem“, sonra „machten“ geliyor; bu üçlü yalnızca „Gebrauch“ ile tamamlanır. a) Anwendung „finden“ veya „zur Anwendung bringen“ ile kullanılır. c) Nutzen „aus etwas ziehen“ ile kurulur. d) Verwendung „finden“ veya „für etwas Verwendung haben“ ile kullanılır; hiçbiri „von … machen“ ile birleşmez."
+        },
+        {
+          "number": 36,
+          "type": "abc",
+          "prompt": "Lücke 36",
+          "options": {
+            "a": "musste",
+            "b": "müssten",
+            "c": "mussten",
+            "d": "muss"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "alle Studenten die sieben freien Künste durchlaufen"
+            }
+          ],
+          "explanation": "Fiil biçimi: Öznesi „alle Studenten“ (çoğul) ve anlatım geçmiş zamanda, gerçek bir durumu bildiriyor („waren … geregelt“, „studieren durften“). Bu yüzden çoğul Präteritum „mussten“ gerekir. a) musste tekildir. d) muss hem tekil hem de şimdiki zamandır. b) müssten Konjunktiv II'dir ve varsayımsal bir durum anlatır; metin ise Orta Çağ'daki gerçek düzeni anlatıyor."
+        },
+        {
+          "number": 37,
+          "type": "abc",
+          "prompt": "Lücke 37",
+          "options": {
+            "a": "sodass",
+            "b": "wohingegen",
+            "c": "obgleich",
+            "d": "indem"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "ohne Sprachbarrieren von einer Hochschule zur anderen wechseln konnten"
+            }
+          ],
+          "explanation": "Anlam/bağlaç boşluğu: Derslerin hep Latince yapılmasının sonucu, öğrencilerin dil engeli olmadan üniversite değiştirebilmesiydi. Sonuç bildiren „sodass“ (böylece, öyle ki) gerekir. c) obgleich (… -e rağmen) karşıtlık kurar; ortak dil, değişimi engellemez, kolaylaştırır. b) wohingegen (oysa) iki farklı durumu karşılaştırır; burada karşıtlık yoktur. d) indem bir eylemin nasıl yapıldığını (… -erek) bildirir; öğrencilerin üniversite değiştirmesi, Latince ders yapmanın yolu değil, sonucudur."
+        },
+        {
+          "number": 38,
+          "type": "abc",
+          "prompt": "Lücke 38",
+          "options": {
+            "a": "verfasste",
+            "b": "verwarf",
+            "c": "vortrug",
+            "d": "widerrief"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "einen kanonischen Text Satz für Satz"
+            }
+          ],
+          "explanation": "Anlam boşluğu: Derste („Vorlesung“) hoca, otoritesi kabul edilmiş („kanonisch“) bir metni cümle cümle „okuyup sunuyor“ ve sonra yorumluyordu: „einen Text vortragen“. b) verwarf (reddetti) ve d) widerrief (geri aldı) „kanonisch“ ile çelişir; ders metni reddetmek değil, onu açıklamak için yapılıyordu. a) verfasste (yazdı) da uymaz: Kanonik metin zaten vardır, hoca onu derste yazmaz, sunar."
+        },
+        {
+          "number": 39,
+          "type": "abc",
+          "prompt": "Lücke 39",
+          "options": {
+            "a": "in das",
+            "b": "bei dem",
+            "c": "durch dessen",
+            "d": "dem"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Argumente für und gegen eine These abzuwägen"
+            }
+          ],
+          "explanation": "İlgi zamiri „ein … Streitgespräch“ (nötr) sözcüğüne gönderme yapar. Öğrenciler tartışma „sırasında, tartışmada“ öğrenirdi: „bei + Dativ“ – „ein Streitgespräch, bei dem …“. a) in das Akkusativ'tir ve yön bildirir; „lernen“ yön istemez. d) dem tek başına Dativ nesne olur, ama „lernen sollten“ fiili Dativ nesne almaz. c) durch dessen iyelik bildirir ve ardından bir isim ister; burada „die Studierenden“ gelir, yapı bozulur."
+        },
+        {
+          "number": 40,
+          "type": "abc",
+          "prompt": "Lücke 40",
+          "options": {
+            "a": "beschränke",
+            "b": "befasse",
+            "c": "begnüge",
+            "d": "erschöpfe"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "sich in spitzfindigen Wortgefechten"
+            }
+          ],
+          "explanation": "Dolaylı anlatım („einwandten, sie …“) Konjunktiv I gerektirir; dört seçenek de Konjunktiv I'dir. Karar edat „in“ ile verilir: „sich in etwas erschöpfen“ (yalnızca …'dan ibaret olmak, …'da tükenmek) – eleştirmenlere göre yöntem kılı kırk yaran söz düellolarından ibaretti. a) „sich beschränken“ „auf“ ile kurulur. c) „sich begnügen“ „mit“ ile kurulur. b) „sich befassen“ de „mit“ ister; hiçbiri „in“ ile kullanılmaz."
+        },
+        {
+          "number": 41,
+          "type": "abc",
+          "prompt": "Lücke 41",
+          "options": {
+            "a": "selbstverwaltetem",
+            "b": "selbstverwaltete",
+            "c": "selbstverwalteten",
+            "d": "selbstverwalteter"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Körperschaft von Gelehrten bis heute erstaunlich gut"
+            }
+          ],
+          "explanation": "Sıfat çekimi: „das Grundmodell einer … Körperschaft“ – „einer“ burada dişil Genitiv belirsiz artikeldir (bir … birliğin modeli). Belirsiz artikelden sonra Genitiv'de sıfat „-en“ alır: „einer selbstverwalteten Körperschaft“. b) -e Nominativ/Akkusativ dişildir. a) -em eril/nötr Dativ'dir (artikelsiz). d) -er artikel olmadan gelen dişil Genitiv/Dativ içindir; burada „einer“ artikeli zaten bu bilgiyi taşıdığı için sıfat „-en“ alır."
+        },
+        {
+          "number": 42,
+          "type": "abc",
+          "prompt": "Lücke 42",
+          "options": {
+            "a": "behauptet",
+            "b": "bestanden",
+            "c": "überdauert",
+            "d": "verblieben"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Trotz zahlreicher Reformen hat sich das Grundmodell"
+            }
+          ],
+          "explanation": "Cümlede dönüşlü zamir „sich“ ve yardımcı fiil „hat“ var: „hat sich … behauptet“ – „sich behaupten“ (tutunmak, varlığını korumak). Reformlara rağmen model ayakta kaldı. c) „überdauern“ geçişlidir ve dönüşlü kullanılmaz („Das Modell hat die Reformen überdauert“). b) „bestehen“ (var olmak) dönüşlü değildir. d) „verbleiben“ „sein“ ile çekilir ve dönüşlü değildir („ist verblieben“); bu yüzden „hat sich“ ile kurulamaz."
+        },
+        {
+          "number": 43,
+          "type": "abc",
+          "prompt": "Lücke 43",
+          "options": {
+            "a": "allerdings",
+            "b": "hingegen",
+            "c": "dennoch",
+            "d": "somit"
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "keine Erfindungen der Moderne, sondern gehen unmittelbar"
+            }
+          ],
+          "explanation": "Anlam/bağlaç boşluğu: Önceki cümle temel modelin bugüne kadar korunduğunu söylüyor; bu cümle bundan bir sonuç çıkarıyor: Akademik unvanlar, fakülteler ve seçilmiş rektörler „dolayısıyla“ modern buluşlar değil, Orta Çağ birliklerinden geliyor. Sonuç bildiren „somit“ gerekir. b) hingegen, c) dennoch ve a) allerdings karşıtlık veya kısıtlama bildirir; ama iki cümle birbiriyle çelişmiyor, ikincisi birincisini doğruluyor."
+        },
+        {
+          "number": 44,
+          "type": "abc",
+          "prompt": "Lücke 44",
+          "options": {
+            "a": "dass",
+            "b": "ob",
+            "c": "wie",
+            "d": "wenn"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "eher der Bildung der Persönlichkeit oder der Vorbereitung auf einen Beruf dienen sollen"
+            }
+          ],
+          "explanation": "„die Frage“ sözcüğünden sonra iki seçenek arasında bir soru geliyor: „eher … oder …“ (daha çok kişilik eğitimine mi, yoksa meslek hazırlığına mı). Evet/hayır veya seçenekli dolaylı soru „ob“ ile kurulur. a) dass bir olguyu bildirir, soru açmaz; „eher … oder“ ile çelişir. c) wie „nasıl“ diye sorar; burada yöntem değil, iki amaçtan hangisi sorulur. d) wenn koşul bildirir ve „die Frage“ yı açıklayamaz."
+        },
+        {
+          "number": 45,
+          "type": "abc",
+          "prompt": "Lücke 45",
+          "options": {
+            "a": "bis",
+            "b": "seit",
+            "c": "ab",
+            "d": "von"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "in die Gründungszeit zurück"
+            }
+          ],
+          "explanation": "Kalıp: „bis in etwas zurückreichen“ (… -e kadar uzanmak). „bis“ burada başka bir edatla („in die Gründungszeit“) birleşerek bir sınır noktası belirtir: Tartışma kuruluş dönemine kadar uzanır. b) seit, c) ab ve d) von kendi başına bir isim ister (seit dem Mittelalter) ve „in“ edatının önüne gelip „zurückreichen“ ile birleşemez."
+        },
+        {
+          "number": 46,
+          "type": "abc",
+          "prompt": "Lücke 46",
+          "options": {
+            "a": "geringerer",
+            "b": "mangelnder",
+            "c": "größerer",
+            "d": "fehlender"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "text",
+              "quote": "Wer diese Geschichte kennt, wird aktuelle Reformdebatten daher"
+            }
+          ],
+          "explanation": "Anlam boşluğu: Dört seçenek de „mit“ + artikelsiz dişil Dativ çekimiyle (-er) doğrudur; karar anlamla verilir. „daher“ önceki cümleye bağlanır: Üniversitenin amacı tartışması kuruluşundan beri vardır. Bunu bilen biri bugünkü reform tartışmalarını „daha büyük bir soğukkanlılıkla“ izler: „mit größerer Gelassenheit“. a) geringerer (daha az), b) mangelnder (eksik) ve d) fehlender (olmayan) soğukkanlılığın azaldığını söyler; „daher“ ile kurulan mantığa ters düşer."
+        }
+      ]
+    }
+  ]
+}

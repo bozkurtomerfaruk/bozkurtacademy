@@ -1,0 +1,216 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b2",
+  "section": "sprachbausteine",
+  "teil": 1,
+  "set": "set-4",
+  "title": "Beschwerde bei der Hausverwaltung",
+  "minutes": 12,
+  "context": "Eine Mieterin beschwert sich per E-Mail bei ihrer Hausverwaltung über mehrere Mängel in ihrer Wohnung und im Haus.",
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort (a, b oder c) in die Lücken 21–30 passt.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "brief",
+          "title": "Mängel in meiner Wohnung",
+          "byline": "E-Mail von Damaris Hinrichsen an die Strietzel Immobilienverwaltung GmbH",
+          "paragraphs": [
+            "Betreff: Heizung, Baulärm und Schimmel – Wohnung Mispelweg 7, 3. Obergeschoss rechts",
+            "Sehr geehrte Damen und Herren,",
+            "leider muss ich mich erneut an Sie wenden. Seit Anfang Oktober fällt die Heizung in meinem Wohnzimmer immer wieder aus, vor allem bei {{21}} Wetter. Die beiden Monteure, {{22}} ich am 14. Oktober die Wohnung aufgeschlossen habe, tauschten ein Ventil aus, konnten die eigentliche Ursache jedoch nicht finden. Seitdem zeigt das Thermometer im Wohnzimmer morgens oft nur 16 Grad an. Ich habe mir deshalb einen elektrischen Heizlüfter kaufen {{23}}. Das ist nicht nur unbequem, {{24}} auch teuer, denn das Gerät verbraucht sehr viel Strom.",
+            "Außerdem wird im Erdgeschoss unseres Hauses seit September eine Arztpraxis umgebaut. Werktags ab sieben Uhr klingt es in meiner Wohnung, {{25}} würde direkt neben meinem Schreibtisch gebohrt. Laut Hausordnung sind laute Arbeiten jedoch erst ab acht Uhr erlaubt. Ich habe die Handwerker bereits {{26}} mehr Rücksicht gebeten, leider ohne Erfolg. Ob ich weiterhin von zu Hause aus arbeiten kann, hängt vor allem {{27}} ab, wann die Bohrarbeiten morgens beginnen.",
+            "An der Außenwand des Kinderzimmers, {{28}} meine siebenjährige Tochter schläft, hat sich inzwischen Schimmel gebildet. Ich bitte Sie daher, die Wand so bald {{29}} möglich von einer Fachfirma prüfen zu lassen.",
+            "Sollten die Mängel bis zum 30. November nicht behoben sein, sehe ich {{30}} gezwungen, die Miete zu mindern.",
+            "Mit freundlichen Grüßen",
+            "Damaris Hinrichsen"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 21,
+          "type": "abc",
+          "prompt": "Lücke 21",
+          "options": {
+            "a": "kalten",
+            "b": "kaltem",
+            "c": "kaltes"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "fällt die Heizung in meinem Wohnzimmer immer wieder aus"
+            }
+          ],
+          "explanation": "Boşluktaki sıfat „bei … Wetter“ grubunda: „bei“ her zaman Dativ ister, „Wetter“ (hava) nötr bir isimdir ve önünde artikel yoktur. Artikel olmadığında hâli sıfat gösterir (güçlü çekim); nötr tekil Dativ'de bu ek „-em“dir: „bei kaltem Wetter“ (soğuk havada). a) kalten yanlış: „-en“ eki Dativ'de ancak artikelden sonra gelir („bei dem kalten Wetter“); artikelsiz grupta hâli gösteremez. c) kaltes yanlış: „-es“ artikelsiz nötr Nominativ/Akkusativ ekidir („kaltes Wetter ist …“); „bei“den sonra kullanılamaz."
+        },
+        {
+          "number": 22,
+          "type": "abc",
+          "prompt": "Lücke 22",
+          "options": {
+            "a": "denen",
+            "b": "die",
+            "c": "deren"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "ich am 14. Oktober die Wohnung aufgeschlossen habe"
+            }
+          ],
+          "explanation": "Boşluk „Die beiden Monteure“ (iki tesisatçı, çoğul) kelimesine bağlanan bir ilgi cümlesi başlatıyor. Yan cümlenin fiili „jemandem etwas aufschließen“ (birine bir yeri açmak) iki nesne alır: Akkusativ nesne „die Wohnung“ zaten cümlede var, kişiye ise Dativ gerekir. Çoğul Dativ ilgi zamiri „denen“dir: „die Monteure, denen ich … die Wohnung aufgeschlossen habe“ (dairenin kapısını açtığım tesisatçılar). b) die yanlış: „die“ çoğul Nominativ/Akkusativ'dir; Akkusativ nesne „die Wohnung“ olduğu için ikinci bir Akkusativ kurulamaz. c) deren yanlış: „deren“ bir iyelik bildirir ve arkasından ait olunan isim gelir („deren Auto“); burada „ich“ bir isim değil, öznedir."
+        },
+        {
+          "number": 23,
+          "type": "abc",
+          "prompt": "Lücke 23",
+          "options": {
+            "a": "gemusst",
+            "b": "muss",
+            "c": "müssen"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Ich habe mir deshalb einen elektrischen Heizlüfter kaufen"
+            }
+          ],
+          "explanation": "Cümle „haben“ ile geçmiş zamanda (Perfekt) ve içinde bir kip fiili ile başka bir mastar („kaufen“) var. Kip fiili başka bir mastarla birlikte kullanıldığında Perfekt'te Partizip II yerine mastar biçiminde kalır (Ersatzinfinitiv): „Ich habe … kaufen müssen“ (… satın almak zorunda kaldım). a) gemusst yanlış: „gemusst“ yalnızca kip fiili tek başına kullanıldığında olur („Ich habe es gemusst“); yanında „kaufen“ olduğunda kullanılamaz. b) muss yanlış: „muss“ çekimli bir fiildir; cümlede çekimli fiil zaten „habe“dir, sona ikinci bir çekimli fiil gelemez."
+        },
+        {
+          "number": 24,
+          "type": "abc",
+          "prompt": "Lücke 24",
+          "options": {
+            "a": "aber",
+            "b": "und",
+            "c": "sondern"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "auch teuer, denn das Gerät verbraucht sehr viel Strom"
+            }
+          ],
+          "explanation": "Cümlenin başında „nicht nur“ var ve boşluktan sonra „auch“ geliyor. Bu iki parçalı bağlaç „nicht nur …, sondern auch …“ biçimindedir (yalnızca … değil, aynı zamanda … da): „Das ist nicht nur unbequem, sondern auch teuer“. Damaris için ısıtıcı hem rahatsız edici hem de pahalı. a) aber yanlış: „nicht nur“ ile birlikte „aber auch“ değil, yalnızca „sondern auch“ kullanılır. b) und yanlış: „und“ iki öğeyi bağlar, ama „nicht nur“ olumsuzluğunu tamamlamaz; „nicht nur …, und auch“ yanlış bir yapıdır."
+        },
+        {
+          "number": 25,
+          "type": "abc",
+          "prompt": "Lücke 25",
+          "options": {
+            "a": "ob",
+            "b": "als",
+            "c": "wenn"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "würde direkt neben meinem Schreibtisch gebohrt"
+            }
+          ],
+          "explanation": "Boşluktan hemen sonra çekimli fiil „würde“ geliyor: Damaris gürültünün nasıl duyulduğunu gerçek olmayan bir karşılaştırmayla anlatıyor (sanki masamın hemen yanında delik açılıyormuş gibi). Gerçek dışı karşılaştırma „als“ + Konjunktiv II ile kurulur ve çekimli fiil doğrudan „als“tan sonra gelir: „…, als würde direkt neben meinem Schreibtisch gebohrt“. a) ob yanlış: „ob“ (-ip -mediği) bir yan cümle başlatır ve fiili sona gönderir; „ob würde“ olmaz, ayrıca „klingen“ bir soru bildirmez. c) wenn yanlış: „wenn“ de fiili sona gönderir; „wenn würde …“ diye bir sıralama yoktur ve „wenn“ tek başına karşılaştırma bildirmez."
+        },
+        {
+          "number": 26,
+          "type": "abc",
+          "prompt": "Lücke 26",
+          "options": {
+            "a": "um",
+            "b": "für",
+            "c": "nach"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "mehr Rücksicht gebeten, leider ohne Erfolg"
+            }
+          ],
+          "explanation": "Cümlenin fiili „bitten“ (rica etmek), Partizip II olarak sonda: „gebeten“. İstenen şey sabit olarak „um“ + Akkusativ ile söylenir: „jemanden um etwas bitten“. Damaris ustalardan daha fazla anlayış göstermelerini rica etmiş: „Ich habe die Handwerker bereits um mehr Rücksicht gebeten“. b) für yanlış: „bitten für“ istenen şeyi değil, olsa olsa kimin adına rica edildiğini bildirir; „für mehr Rücksicht bitten“ yanlıştır. c) nach yanlış: „nach“ „fragen nach“ (bir şeyi sormak) ile gelir, „bitten“ ile değil."
+        },
+        {
+          "number": 27,
+          "type": "abc",
+          "prompt": "Lücke 27",
+          "options": {
+            "a": "darauf",
+            "b": "davon",
+            "c": "daran"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "wann die Bohrarbeiten morgens beginnen"
+            }
+          ],
+          "explanation": "Fiil „abhängen“ (bir şeye bağlı olmak) sabit olarak „von“ edatını alır: „von etwas abhängen“. Bağlı olunan şey bir yan cümle olduğunda („wann die Bohrarbeiten morgens beginnen“), ana cümlede edat „da(r)-“ ile birleşir ve yan cümleyi önceden gösterir: „hängt vor allem davon ab, wann …“ (her şeyden önce delme işlerinin sabah ne zaman başladığına bağlı). a) darauf yanlış: „auf“ „warten auf, achten auf“ gibi fiillerle gelir; „abhängen auf“ yoktur. c) daran yanlış: „an“ „denken an, liegen an“ gibi fiillerle gelir; „abhängen“ „an“ almaz."
+        },
+        {
+          "number": 28,
+          "type": "abc",
+          "prompt": "Lücke 28",
+          "options": {
+            "a": "wohin",
+            "b": "woher",
+            "c": "wo"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "meine siebenjährige Tochter schläft"
+            }
+          ],
+          "explanation": "Boşluk „Kinderzimmer“ (çocuk odası) kelimesine bağlanan bir ilgi cümlesi başlatıyor ve bir yer bildiriyor. Yan cümlenin fiili „schlafen“ (uyumak) bir hareket değil, bir yerde bulunmayı anlatır (nerede?); bu yüzden yer bildiren „wo“ kullanılır: „das Kinderzimmer, wo meine siebenjährige Tochter schläft“ (yedi yaşındaki kızımın uyuduğu oda). a) wohin yanlış: „wohin“ (nereye) bir yöne hareket ister („wohin sie geht“); „schlafen“ hareket bildirmez. b) woher yanlış: „woher“ (nereden) bir çıkış noktası ister („woher sie kommt“); bu da „schlafen“ ile uyuşmaz."
+        },
+        {
+          "number": 29,
+          "type": "abc",
+          "prompt": "Lücke 29",
+          "options": {
+            "a": "wie",
+            "b": "wenn",
+            "c": "dass"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "von einer Fachfirma prüfen zu lassen"
+            }
+          ],
+          "explanation": "Boşluk „so bald … möglich“ kalıbının içinde: „so + sıfat/zarf + wie möglich“ (mümkün olduğunca …) yapısında karşılaştırma „wie“ ile kurulur: „so bald wie möglich“ (mümkün olan en kısa sürede). Damaris duvarın bir an önce kontrol edilmesini istiyor. b) wenn yanlış: „wenn“ bir koşul veya zaman yan cümlesi başlatır ve arkasından çekimli fiil ister; „so bald wenn möglich“ bir karşılaştırma kurmaz. c) dass yanlış: „so … dass“ bir sonuç cümlesi kurar ve arkasından tam bir yan cümle (özne + fiil) gelir; burada yalnızca „möglich“ var."
+        },
+        {
+          "number": 30,
+          "type": "abc",
+          "prompt": "Lücke 30",
+          "options": {
+            "a": "mir",
+            "b": "mich",
+            "c": "sich"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "die Miete zu mindern"
+            }
+          ],
+          "explanation": "Kalıp „sich gezwungen sehen, etwas zu tun“dur (bir şeyi yapmak zorunda kalmak). Dönüşlü zamir burada Akkusativ'dir, çünkü cümlede başka bir Akkusativ nesne yoktur; „gezwungen“ dönüşlü zamir hakkında söylenir. Özne „ich“ olduğu için Akkusativ dönüşlü zamir „mich“ olur: „sehe ich mich gezwungen, die Miete zu mindern“ (kirayı düşürmek zorunda kalacağım). a) mir yanlış: „mir“ Dativ'dir; „sich gezwungen sehen“ Dativ almaz. c) sich yanlış: „sich“ yalnızca 3. şahıs ve „Sie“ öznesiyle kullanılır; burada özne „ich“tir."
+        }
+      ]
+    }
+  ]
+}

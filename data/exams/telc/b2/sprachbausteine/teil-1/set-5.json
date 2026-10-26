@@ -1,0 +1,217 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b2",
+  "section": "sprachbausteine",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Antrag auf Bildungsurlaub",
+  "minutes": 12,
+  "context": "Ein Schichtleiter beantragt per E-Mail bei der Personalabteilung seines Arbeitgebers eine Woche Bildungsurlaub.",
+  "instructions": "Lesen Sie den Text und entscheiden Sie, welches Wort (a, b oder c) in die Lücken 21–30 passt.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "brief",
+          "title": "Antrag auf Bildungsurlaub",
+          "byline": "E-Mail von Eike Oltmanns an Frau Wübbena, Personalabteilung der Tjarks Fördertechnik GmbH",
+          "paragraphs": [
+            "Betreff: Antrag auf Bildungsurlaub vom 8. bis 12. März 2027",
+            "Sehr geehrte Frau Wübbena,",
+            "hiermit beantrage ich fünf Tage Bildungsurlaub für die Woche vom 8. bis 12. März 2027. In dieser Zeit möchte ich an dem von der Heimvolkshochschule Sonnwiek {{21}} Seminar „Konflikte im Team lösen“ teilnehmen. Es handelt sich {{22}} eine vom Land anerkannte Bildungsveranstaltung; die Bescheinigung über die Anerkennung habe ich angehängt.",
+            "Ich habe dieses Seminar gewählt, {{23}} mich gezielt auf meine Aufgaben als Schichtleiter vorzubereiten. Diese Funktion habe ich erst im vergangenen Sommer übernommen. Das Seminar ist für mich umso wichtiger, {{24}} es in meinem Team in den letzten Monaten mehrmals zu Spannungen gekommen ist.",
+            "Die Schichtpläne für März sind bereits mit meiner Stellvertreterin {{25}}, sodass der Betrieb in meiner Abwesenheit ohne Einschränkungen weiterlaufen kann. Nach dem Bildungsurlaubsgesetz habe ich Anspruch {{26}} fünf Arbeitstage pro Kalenderjahr. Die Teilnahmebescheinigung, die ich am letzten Seminartag erhalte, reiche ich nach, {{27}} ich wieder im Betrieb bin. Eine Übersicht über die Inhalte des {{28}} finden Sie ebenfalls im Anhang.",
+            "Die Heimvolkshochschule bietet das Seminar im Juni noch einmal an. Falls der Termin im März aus betrieblichen Gründen nicht möglich ist, geben Sie mir bitte kurz Bescheid, damit ich mich rechtzeitig für einen {{29}} Termin anmelden kann.",
+            "Ich bedanke mich im Voraus {{30}} Ihre Unterstützung.",
+            "Mit freundlichen Grüßen",
+            "Eike Oltmanns"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 21,
+          "type": "abc",
+          "prompt": "Lücke 21",
+          "options": {
+            "a": "angeboten",
+            "b": "anbietenden",
+            "c": "angebotenen"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Seminar „Konflikte im Team lösen“ teilnehmen"
+            }
+          ],
+          "explanation": "Boşluk, „an dem … Seminar“ arasındaki genişletilmiş bir sıfat grubunun (erweitertes Partizipialattribut) parçası: „von der Heimvolkshochschule Sonnwiek“ semineri kimin sunduğunu söylüyor. Semineri halk eğitim merkezi sunuyor, seminer kendisi bir şey sunmuyor; bu edilgen anlam Partizip II ile kurulur. İsimden önce gelen Partizip II sıfat gibi çekilir; „an dem“ (Dativ, belirli artikel) sonrasında ek „-en“dir: „an dem von der Heimvolkshochschule Sonnwiek angebotenen Seminar“ (… tarafından sunulan seminere). a) angeboten yanlış: Eksiz biçim isimden önce kullanılamaz, yalnızca yüklem olur („das Seminar wird angeboten“). b) anbietenden yanlış: Partizip I etken anlam taşır („sunan“); seminer bir şey sunmaz, „von der Heimvolkshochschule“ sunanın kim olduğunu zaten söylüyor."
+        },
+        {
+          "number": 22,
+          "type": "abc",
+          "prompt": "Lücke 22",
+          "options": {
+            "a": "über",
+            "b": "von",
+            "c": "um"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "eine vom Land anerkannte Bildungsveranstaltung"
+            }
+          ],
+          "explanation": "Kalıp „es handelt sich um etwas“tur (söz konusu olan … dır, … dır). Özne her zaman „es“tir ve edat sabit olarak „um“ + Akkusativ'dir: „Es handelt sich um eine vom Land anerkannte Bildungsveranstaltung“ (eyalet tarafından tanınmış bir eğitim etkinliğidir). a) über yanlış: „über“ „sprechen über“ gibi fiillerle konuyu bildirir; „sich handeln über“ yoktur. b) von yanlış: „handeln von“ yalnızca dönüşsüz olarak bir kitabın veya filmin konusunu anlatır („Das Buch handelt von …“); „es handelt sich von“ yanlıştır."
+        },
+        {
+          "number": 23,
+          "type": "abc",
+          "prompt": "Lücke 23",
+          "options": {
+            "a": "um",
+            "b": "damit",
+            "c": "dass"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "mich gezielt auf meine Aufgaben als Schichtleiter vorzubereiten"
+            }
+          ],
+          "explanation": "Boşluktan sonra öznesiz bir „zu“lu mastar geliyor: „mich … vorzubereiten“. Eike semineri bir amaçla seçmiş: yeni görevlerine hazırlanmak için. Ana cümlenin öznesi („ich“) ile amacın öznesi aynı olduğunda amaç „um … zu“ ile kurulur: „…, um mich gezielt auf meine Aufgaben … vorzubereiten“. b) damit yanlış: „damit“ de amaç bildirir, ama arkasından öznesi ve çekimli fiili olan tam bir yan cümle ister („damit ich mich … vorbereite“); „zu“lu mastarla kullanılmaz. c) dass yanlış: „dass“ da tam bir yan cümle ister ve tek başına amaç bildirmez."
+        },
+        {
+          "number": 24,
+          "type": "abc",
+          "prompt": "Lücke 24",
+          "options": {
+            "a": "dass",
+            "b": "als",
+            "c": "wie"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "es in meinem Team in den letzten Monaten mehrmals zu Spannungen gekommen ist"
+            }
+          ],
+          "explanation": "Boşluktan önce „umso wichtiger“ var. „umso + Komparativ“ tek başına geldiğinde gerekçe „als“ ile başlayan bir yan cümleyle verilir: „umso wichtiger, als …“ (… olduğu için daha da önemli). Eike'nin ekibinde son aylarda birkaç kez gerginlik çıkmış; bu yüzden seminer onun için daha da önemli. a) dass yanlış: „dass“ cümlesi burada bir yere bağlanamaz, çünkü ana cümlenin öznesi zaten „das Seminar“dır; „umso“nun gerekçesi „dass“ ile verilmez. c) wie yanlış: „wie“ eşitlik karşılaştırması kurar („so wichtig wie“); Komparativ „wichtiger“ ile kullanılmaz."
+        },
+        {
+          "number": 25,
+          "type": "abc",
+          "prompt": "Lücke 25",
+          "options": {
+            "a": "abgestimmt",
+            "b": "abstimmen",
+            "c": "abgestimmte"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Die Schichtpläne für März sind bereits mit meiner Stellvertreterin"
+            }
+          ],
+          "explanation": "Cümle bir durumu anlatıyor: Vardiya planları üzerinde anlaşılmış ve iş bitmiş. Bu „sein + Partizip II“ ile kurulan durum edilgenidir (Zustandspassiv): „Die Schichtpläne … sind bereits … abgestimmt“ (vardiya planları yardımcımla çoktan kararlaştırıldı). Yüklem olarak kullanılan Partizip II ek almaz. b) abstimmen yanlış: „sein“ yalın mastarla kullanılmaz; „sind … abstimmen“ diye bir yapı yoktur. c) abgestimmte yanlış: „-e“ eki yalnızca isimden önce gelen sıfatta olur („die abgestimmten Pläne“); „sein“den sonra yüklem olarak ek alınmaz."
+        },
+        {
+          "number": 26,
+          "type": "abc",
+          "prompt": "Lücke 26",
+          "options": {
+            "a": "für",
+            "b": "auf",
+            "c": "an"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "fünf Arbeitstage pro Kalenderjahr"
+            }
+          ],
+          "explanation": "İsim „Anspruch“ (hak, talep hakkı) sabit olarak „auf“ + Akkusativ ile kullanılır: „Anspruch auf etwas haben“ (bir şeye hakkı olmak). Eike yasaya göre yılda beş iş günü eğitim iznine hak sahibi: „habe ich Anspruch auf fünf Arbeitstage“. a) für yanlış: „Anspruch für“ diye bir kalıp yoktur. c) an yanlış: „an“ „Interesse an, Mangel an“ gibi isimlerle gelir; „Anspruch“ „an“ almaz."
+        },
+        {
+          "number": 27,
+          "type": "abc",
+          "prompt": "Lücke 27",
+          "options": {
+            "a": "sobald",
+            "b": "seitdem",
+            "c": "nachdem"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "ich wieder im Betrieb bin"
+            }
+          ],
+          "explanation": "Ana cümle geleceği anlatıyor: Eike belgeyi sonradan teslim edecek („reiche ich nach“). Yan cümle bunun ne zaman olacağını söylüyor: işe döndüğü anda. Gelecekte bir olayın hemen ardından gelen bir şeyi anlatan bağlaç „sobald“dır (-ir -mez): „…, sobald ich wieder im Betrieb bin“. b) seitdem yanlış: „seitdem“ geçmişte başlayıp hâlâ süren bir durumu anlatır („seitdem ich hier arbeite“); gelecekteki bir teslimle kullanılmaz. c) nachdem yanlış: „nachdem“ yan cümlede ana cümleden daha önceki bir zaman ister (ör. Perfekt: „nachdem ich zurückgekehrt bin“); şimdiki zamandaki „bin“ ile kurulmaz."
+        },
+        {
+          "number": 28,
+          "type": "abc",
+          "prompt": "Lücke 28",
+          "options": {
+            "a": "Seminar",
+            "b": "Seminare",
+            "c": "Seminars"
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "finden Sie ebenfalls im Anhang"
+            }
+          ],
+          "explanation": "Boşluktaki isim „die Inhalte des …“ grubunda: „des“ eril veya nötr tekil Genitiv artikelidir (seminerin içerikleri). „Seminar“ nötr bir isimdir ve tekil Genitiv'de „-s“ eki alır: „die Inhalte des Seminars“. a) Seminar yanlış: Ekisiz biçim Nominativ, Akkusativ veya Dativ'dir; „des“ten sonra Genitiv eki eksik kalır. b) Seminare yanlış: „Seminare“ çoğuldur; çoğul Genitiv artikeli „der“ olurdu („der Seminare“), „des“ ile kullanılmaz; ayrıca Eike tek bir seminerden söz ediyor."
+        },
+        {
+          "number": 29,
+          "type": "abc",
+          "prompt": "Lücke 29",
+          "options": {
+            "a": "spätere",
+            "b": "späteren",
+            "c": "späterer"
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Termin anmelden kann"
+            }
+          ],
+          "explanation": "Boşluktaki sıfat „für einen … Termin“ grubunda: „für“ Akkusativ ister, „einen“ eril tekil Akkusativ belirsiz artikelidir. Eril Akkusativ'de sıfat, belirsiz artikelden sonra da „-en“ alır: „für einen späteren Termin“ (daha sonraki bir tarih için). Metne göre seminer Haziran'da bir kez daha veriliyor. a) spätere yanlış: „-e“ eki belirli artikelden sonra tekil Nominativ'de („der spätere Termin“) veya dişil „eine“den sonra („eine spätere Gruppe“) görülür; „einen“den sonra eril Akkusativ'de kullanılmaz. c) späterer yanlış: „-er“ eki „ein“den sonra eril Nominativ'dir („ein späterer Termin ist …“); „einen“ ile birlikte Akkusativ'de olmaz."
+        },
+        {
+          "number": 30,
+          "type": "abc",
+          "prompt": "Lücke 30",
+          "options": {
+            "a": "für",
+            "b": "über",
+            "c": "auf"
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "brief",
+              "quote": "Ihre Unterstützung"
+            }
+          ],
+          "explanation": "Fiil „sich bedanken“ (teşekkür etmek), neye teşekkür edildiğini sabit olarak „für“ + Akkusativ ile söyler: „sich für etwas bedanken“. Eike desteği için şimdiden teşekkür ediyor: „Ich bedanke mich im Voraus für Ihre Unterstützung“. b) über yanlış: „über“ „sich freuen über“ (bir şeye sevinmek) gibi fiillerle gelir; „sich bedanken über“ yoktur. c) auf yanlış: „auf“ „sich freuen auf“ (dört gözle beklemek) ile gelir; „sich bedanken auf“ yanlıştır."
+        }
+      ]
+    }
+  ]
+}

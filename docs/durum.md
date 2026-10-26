@@ -9,8 +9,9 @@
 - Aşama 2, TestDaF kâğıt: bitti, main'e birleştirildi.
 - Aşama 3, TestDaF dijital: bitti, main'e birleştirildi (00feb1c; Aufgabe 2 ve 7 atlandı). Modelltest PDF'leri çalışma alanından silindi.
 - Aşama 4, telc B1: bitti, main'e birleştirildi (49db897).
-- Aşama 5, telc A1: bitti, main'e birleştirildi.
-- Aşama 6–7, telc A2 ve B2: ayrı dallarda (`claude/telc-a2`, `claude/telc-b2`) paralel sürüyor.
+- Aşama 5, telc A1: bitti, main'e birleştirildi (7c9acb2).
+- Aşama 6, telc A2: bitti, main'e birleştirildi.
+- Aşama 7–8, telc B2 ve C1 Hochschule: ayrı dallarda (`claude/telc-b2`, `claude/telc-c1h`; çalışma ağaçları /tmp/wt-tb2, /tmp/wt-tc1) paralel sürüyor.
 
 ### telc Deutsch A1 (Start Deutsch 1) Lesen: format tablosu
 Start Deutsch 1, Goethe-Institut ile telc'in ortak geliştirdiği sınav; telc A1 ile Goethe A1'in formatı aynı (✔). Bu yüzden tablo Goethe A1 tablomuzla aynı; içerik tamamen yeni (Goethe A1'in hiçbir konusu, durumu, adı veya tabelası tekrar edilmiyor).

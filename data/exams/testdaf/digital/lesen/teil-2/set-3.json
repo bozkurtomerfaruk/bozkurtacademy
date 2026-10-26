@@ -1,0 +1,149 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-3",
+  "title": "Die Geschichte der Narkose",
+  "minutes": 8,
+  "context": "Sie lesen in einem Wissenschaftsmagazin einen Artikel über die Geschichte der Medizin.",
+  "instructions": "Die Abschnitte A–D des Textes sind durcheinandergeraten. Lesen Sie zuerst den Anfang des Textes und dann die Abschnitte A–D. An welcher Stelle (2–5) stehen sie im Originaltext? Wählen Sie für jeden Abschnitt eine Position; jede Position kommt nur einmal vor.",
+  "groups": [
+    {
+      "layout": "comments",
+      "none": false,
+      "texts": [
+        {
+          "id": "einleitung",
+          "title": "Die Geschichte der Narkose",
+          "paragraphs": [
+            "Bis weit ins 19. Jahrhundert hinein bedeutete jede größere Operation für die Patienten kaum erträgliche Schmerzen. Chirurgen wurden deshalb nicht zuletzt nach ihrer Schnelligkeit beurteilt: Wer ein Bein in wenigen Minuten amputieren konnte, ersparte dem Kranken zumindest einen Teil der Qualen. Längere Eingriffe, etwa im Bauchraum, kamen unter diesen Bedingungen kaum infrage. Zwar hatte man seit jeher versucht, Schmerzen mit Alkohol, Opium oder pflanzlichen Mitteln zu lindern, doch deren Wirkung war unzuverlässig und reichte für ausgedehnte Operationen nicht aus."
+          ]
+        },
+        {
+          "id": "A",
+          "label": "A",
+          "paragraphs": [
+            "Schlömerkamp sieht darin einen Hinweis, dass die Gefahren der frühen Narkose nicht allein von den verwendeten Substanzen ausgingen, sondern auch davon, wie und von wem sie verabreicht wurden. Die Betäubung habe lange als Nebentätigkeit gegolten, die man dem jüngsten Mitglied des Teams überlassen könne, während die Aufmerksamkeit des Chirurgen ganz dem Eingriff gegolten habe. Wie langsam sich diese Sichtweise wandelte, zeigt ein Blick auf die Fachgeschichte: In Deutschland wurde die Anästhesiologie erst in den 1950er-Jahren zu einem eigenständigen ärztlichen Fachgebiet. Die Geschichte der Narkose, so der Historiker, sei daher nicht nur eine Geschichte neuer Mittel, sondern ebenso eine ihrer Anwendung."
+          ]
+        },
+        {
+          "id": "B",
+          "label": "B",
+          "paragraphs": [
+            "Die anfängliche Begeisterung wich jedoch bald einer gewissen Ernüchterung. Äther reizte die Atemwege, löste häufig Übelkeit aus und war leicht entzündlich – ein beträchtliches Risiko in Operationssälen, die mit offenen Flammen beleuchtet wurden. Viele Ärzte griffen daher zu Chloroform, das ab Ende 1847 als Alternative verwendet wurde. Es wirkte rascher, ließ sich angenehmer einatmen und brannte nicht. Doch auch das neue Mittel hatte seinen Preis: Immer wieder kam es zu plötzlichen Todesfällen, mitunter schon kurz nach Beginn der Betäubung und bei Patienten, die zuvor als gesund gegolten hatten."
+          ]
+        },
+        {
+          "id": "C",
+          "label": "C",
+          "paragraphs": [
+            "Worauf diese Todesfälle zurückzuführen waren, blieb über Jahrzehnte umstritten; häufig suchte man die Ursache in der Substanz selbst oder in einer verborgenen Schwäche der Patienten. Der Medizinhistoriker Valerian Schlömerkamp hat nun die Operationsbücher zweier deutscher Universitätskliniken aus der zweiten Hälfte des 19. Jahrhunderts ausgewertet. Darin ist neben dem Operateur in der Regel auch vermerkt, wer die Betäubung vornahm. Wie sich zeigte, übernahmen dies in der großen Mehrzahl der Fälle junge Assistenten oder sogar Studierende, die häufig wechselten und das Mittel nach Augenmaß auf ein Tuch träufelten. Tödliche Zwischenfälle häuften sich auffällig bei jenen, die nur selten narkotisierten."
+          ]
+        },
+        {
+          "id": "D",
+          "label": "D",
+          "paragraphs": [
+            "Als Wendepunkt gilt eine öffentliche Vorführung im Oktober 1846: In einem Krankenhaus in den Vereinigten Staaten ließ ein Zahnarzt einen Patienten Ätherdampf einatmen, bevor ein Chirurg ihm eine Geschwulst am Hals entfernte. Der Patient zeigte während des Eingriffs keine Anzeichen heftiger Schmerzen. Ganz neu war der Gedanke nicht – einzelne Ärzte und Zahnärzte hatten schon zuvor mit betäubenden Gasen experimentiert –, doch erst diese Demonstration fand ein breites Echo. Die Nachricht gelangte mit Postschiffen über den Atlantik, und bereits wenige Monate später wurde auch in zahlreichen europäischen Kliniken unter Äther operiert."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "reihenfolge",
+          "prompt": "Abschnitt A",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "5",
+          "evidence": [
+            {
+              "text": "A",
+              "quote": "Schlömerkamp sieht darin einen Hinweis"
+            },
+            {
+              "text": "A",
+              "quote": "nicht nur eine Geschichte neuer Mittel, sondern ebenso eine ihrer Anwendung"
+            }
+          ],
+          "explanation": "A, son paragraftır (5). „Schlömerkamp sieht darin einen Hinweis“ (Schlömerkamp bunda bir işaret görüyor) cümlesindeki soyadı ve „darin“ (bunda), C'de tanıtılan tarihçiye ve onun bulgusuna gönderme yapar: Narkozu çoğunlukla genç asistanlar ve öğrenciler uygulamış, ölümler nadiren narkoz yapanlarda yoğunlaşmıştır. Schlömerkamp'ın adı yalnızca C'de tam olarak tanıtıldığı için A, C'den sonra gelmelidir. A bu bulgudan genel bir sonuç çıkarır: Narkozun tarihi „nicht nur eine Geschichte neuer Mittel, sondern ebenso eine ihrer Anwendung“ (yalnızca yeni maddelerin değil, onların uygulanışının da tarihi). Bu, yazıyı kapatan değerlendirmedir."
+        },
+        {
+          "number": 7,
+          "type": "reihenfolge",
+          "prompt": "Abschnitt B",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "3",
+          "evidence": [
+            {
+              "text": "B",
+              "quote": "Die anfängliche Begeisterung wich jedoch bald einer gewissen Ernüchterung"
+            },
+            {
+              "text": "B",
+              "quote": "Immer wieder kam es zu plötzlichen Todesfällen"
+            }
+          ],
+          "explanation": "B, 3. sıradadır. „Die anfängliche Begeisterung wich jedoch bald einer gewissen Ernüchterung“ (ilk coşku yerini kısa sürede bir hayal kırıklığına bıraktı) cümlesi, D'de anlatılan başarıya ve eterin Avrupa'ya hızla yayılmasına gönderme yapar; eter ilk kez D'de anılır. Girişte henüz bir coşkudan söz edilmediği için B 2. sırada olamaz. B'nin sonundaki „plötzlichen Todesfällen“ (ani ölümler), C'nin başındaki „diese Todesfälle“ (bu ölümler) ifadesinin gönderme yaptığı olaylardır; bu yüzden B, C'den hemen önce gelir."
+        },
+        {
+          "number": 8,
+          "type": "reihenfolge",
+          "prompt": "Abschnitt C",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "4",
+          "evidence": [
+            {
+              "text": "C",
+              "quote": "Worauf diese Todesfälle zurückzuführen waren"
+            },
+            {
+              "text": "C",
+              "quote": "Der Medizinhistoriker Valerian Schlömerkamp hat nun"
+            }
+          ],
+          "explanation": "C, 4. sıradadır. „Worauf diese Todesfälle zurückzuführen waren“ (bu ölümlerin neye bağlı olduğu) ifadesi, B'de anlatılan kloroformla ilgili ani ölümlere gönderme yapar; ne giriş ne de D ölümlerden söz eder. C, „Der Medizinhistoriker Valerian Schlömerkamp“ ifadesiyle tarihçiyi ilk kez tam adı ve mesleğiyle tanıtır ve onun ameliyat defterlerindeki bulgusunu anlatır. A ise yalnızca „Schlömerkamp sieht darin …“ der, yani tarihçiyi ve bulguyu bilinen bir şey olarak kullanır; bu yüzden C, A'dan önce gelmelidir."
+        },
+        {
+          "number": 9,
+          "type": "reihenfolge",
+          "prompt": "Abschnitt D",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "2",
+          "evidence": [
+            {
+              "text": "D",
+              "quote": "Als Wendepunkt gilt eine öffentliche Vorführung im Oktober 1846"
+            },
+            {
+              "text": "D",
+              "quote": "unter Äther operiert"
+            }
+          ],
+          "explanation": "D, girişten hemen sonra gelir (2). Girişte narkozdan önceki durum anlatılır: ameliyatlar çok acılıydı ve alkol, afyon gibi eski yöntemler yetersizdi. „Als Wendepunkt gilt eine öffentliche Vorführung im Oktober 1846“ (Ekim 1846'daki halka açık bir gösteri dönüm noktası sayılır) bu durumdan çıkışı anlatır; olaylar zaman sırasıyla ilerler. D, eteri ilk kez tanıtır ve Avrupa'da da kısa sürede „unter Äther operiert“ (eter altında ameliyat edildi) diye biter. B'deki „Die anfängliche Begeisterung“ (ilk coşku) ve eterin sakıncaları bu başarıya dayanır; bu yüzden D, B'den önce gelir."
+        }
+      ]
+    }
+  ]
+}

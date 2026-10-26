@@ -1,0 +1,149 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-2",
+  "title": "Wie neue Sprachen entstehen",
+  "minutes": 8,
+  "context": "Sie lesen in einer Hochschulzeitschrift einen Artikel über ein sprachwissenschaftliches Forschungsprojekt.",
+  "instructions": "Die Abschnitte A–D des Textes sind durcheinandergeraten. Lesen Sie zuerst den Anfang des Textes und dann die Abschnitte A–D. An welcher Stelle (2–5) stehen sie im Originaltext? Wählen Sie für jeden Abschnitt eine Position; jede Position kommt nur einmal vor.",
+  "groups": [
+    {
+      "layout": "comments",
+      "none": false,
+      "texts": [
+        {
+          "id": "einleitung",
+          "title": "Wie neue Sprachen entstehen",
+          "paragraphs": [
+            "Die meisten Sprachen, die heute gesprochen werden, sind aus älteren hervorgegangen, und zwar in einem Prozess, der sich über viele Jahrhunderte hinzieht: So entwickelten sich aus dem gesprochenen Latein nach und nach Sprachen wie das Französische, das Italienische oder das Rumänische. Daneben gibt es jedoch einen zweiten, ungleich schnelleren Weg. Er öffnet sich dort, wo Menschen ohne gemeinsame Sprache über längere Zeit eng zusammenleben oder zusammenarbeiten müssen. Für diesen Fall hat die Sprachwissenschaft ein Modell entwickelt, das bis heute in vielen Lehrbüchern zu finden ist."
+          ]
+        },
+        {
+          "id": "A",
+          "label": "A",
+          "paragraphs": [
+            "Die Aufnahmen zeigen, dass sich bereits nach wenigen Monaten erstaunlich feste Regeln herausbildeten. So setzte sich eine einheitliche Wortstellung durch, obwohl die Erstsprachen der Arbeiter in diesem Punkt stark voneinander abweichen. Um abgeschlossene Handlungen zu kennzeichnen, hängten nahezu alle Sprecher an das Verb ein Wort an, das ursprünglich „fertig“ bedeutete. Zugleich blieb die neue Verkehrssprache auf einen engen Bereich beschränkt: Über Werkzeuge, Arbeitsabläufe und Schichtpläne konnte man sich in ihr mühelos verständigen, über Familie oder persönliche Sorgen hingegen kaum. Außerhalb des Betriebsgeländes, so stellte das Team fest, wurde sie so gut wie nie gesprochen."
+          ]
+        },
+        {
+          "id": "B",
+          "label": "B",
+          "paragraphs": [
+            "Nach diesem Modell verläuft die Entstehung in zwei Stufen. Zunächst bildet sich ein sogenanntes Pidgin heraus: eine Behelfssprache mit kleinem Wortschatz, der überwiegend aus der Sprache der einflussreichsten Gruppe stammt, und mit stark vereinfachter Grammatik. Ein Pidgin hat keine Muttersprachler; man erlernt es zusätzlich zur eigenen Erstsprache. Erst wenn eine Generation von Kindern damit aufwächst, wird es dieser Vorstellung zufolge zu einer vollwertigen Kreolsprache ausgebaut. Empirisch ist dieser Übergang allerdings nur lückenhaft belegt. Die meisten bekannten Kreolsprachen entstanden in der Kolonialzeit, und aus ihrer Frühphase sind vorwiegend Aufzeichnungen von Beobachtern überliefert, die die betreffende Sprache selbst nicht beherrschten."
+          ]
+        },
+        {
+          "id": "C",
+          "label": "C",
+          "paragraphs": [
+            "Dass aus diesem Werftjargon je eine Kreolsprache hervorgeht, hält Ruhwedel dennoch für äußerst unwahrscheinlich. Dafür fehle die entscheidende Voraussetzung: Kinder, die ihn als Erstsprache erwerben. Die meisten Arbeiter kehrten nach Ablauf ihrer Verträge in ihre Herkunftsländer zurück, und in den Familien werde ohnehin eine andere Sprache gesprochen. Bedeutsam seien die Beobachtungen trotzdem. Dass erwachsene Lernende innerhalb kurzer Zeit eine derart regelhafte Grammatik hervorgebracht hätten, stelle eine verbreitete Annahme infrage, nämlich dass systematische Strukturen in solchen Sprachen erst durch die nachwachsende Generation entstünden."
+          ]
+        },
+        {
+          "id": "D",
+          "label": "D",
+          "paragraphs": [
+            "Diese Lücke zumindest teilweise zu schließen, ist das Ziel der Sprachwissenschaftlerin Maren Ruhwedel. Sechs Jahre lang begleitete sie mit ihrem Team die Belegschaft einer großen Werft, auf der Arbeiter aus mehr als einem Dutzend Ländern beschäftigt sind. Viele von ihnen verständigten sich anfangs nur mit Gesten und Brocken aus verschiedenen Sprachen. Mit Einverständnis der Beteiligten zeichneten die Forschenden in regelmäßigen Abständen Gespräche bei der Arbeit und in den Pausen auf. So ließ sich, wie Ruhwedel sagt, gewissermaßen in Echtzeit verfolgen, wie ein Pidgin entsteht – also genau jene erste Stufe, über die man bislang vor allem aus zweiter Hand Bescheid wusste."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "reihenfolge",
+          "prompt": "Abschnitt A",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "4",
+          "evidence": [
+            {
+              "text": "A",
+              "quote": "Die Aufnahmen zeigen"
+            },
+            {
+              "text": "A",
+              "quote": "bereits nach wenigen Monaten erstaunlich feste Regeln"
+            }
+          ],
+          "explanation": "A, 4. sıradadır. Belirli artikelli „Die Aufnahmen zeigen“ (kayıtlar gösteriyor ki), D'de anlatılan ses kayıtlarına gönderme yapar: Araştırmacılar tersanede konuşmaları düzenli aralıklarla kaydetmiştir („zeichneten … Gespräche … auf“). B'de kayıttan söz edilmez; bu yüzden A, D'den sonra gelmelidir. A'nın bulguları da C'ye zemin hazırlar: „erstaunlich feste Regeln“ (şaşırtıcı derecede sabit kurallar) C'de „eine derart regelhafte Grammatik“ (bu kadar kurallı bir dilbilgisi) olarak yeniden ele alınır, ve dilin işyeri dışında neredeyse hiç konuşulmaması C'deki aile argümanıyla uyumludur. Bu yüzden A, C'den önce durur."
+        },
+        {
+          "number": 7,
+          "type": "reihenfolge",
+          "prompt": "Abschnitt B",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "2",
+          "evidence": [
+            {
+              "text": "B",
+              "quote": "Nach diesem Modell verläuft die Entstehung in zwei Stufen"
+            },
+            {
+              "text": "B",
+              "quote": "Empirisch ist dieser Übergang allerdings nur lückenhaft belegt"
+            }
+          ],
+          "explanation": "B, girişten hemen sonra gelir (2). „Nach diesem Modell“ (bu modele göre), girişin son cümlesindeki „ein Modell …, das bis heute in vielen Lehrbüchern zu finden ist“ ifadesine bağlanır; B bu modeli ilk kez açıklar ve „Pidgin“ ile „Kreolsprache“ kavramlarını tanımlar. B'nin sonundaki sorun – geçişin „nur lückenhaft belegt“ (yalnızca eksik biçimde belgelenmiş) olması – D'nin başındaki „Diese Lücke“ (bu boşluk) ifadesinin gönderme yaptığı boşluktur. D, A ve C bu kavramları bilinen şeyler olarak kullandığı için B hepsinden önce gelir."
+        },
+        {
+          "number": 8,
+          "type": "reihenfolge",
+          "prompt": "Abschnitt C",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "5",
+          "evidence": [
+            {
+              "text": "C",
+              "quote": "Dass aus diesem Werftjargon je eine Kreolsprache hervorgeht"
+            },
+            {
+              "text": "C",
+              "quote": "eine derart regelhafte Grammatik"
+            }
+          ],
+          "explanation": "C, son paragraftır (5). „diesem Werftjargon“ (bu tersane jargonu), D'de tanıtılan tersaneye ve orada oluşan dile gönderme yapar. „dennoch“ (yine de) ve „eine derart regelhafte Grammatik“ (bu kadar kurallı bir dilbilgisi) ise A'daki bulguyu, yani birkaç ay içinde oluşan sabit kuralları önceden bilinen bir şey olarak kullanır. Bu yüzden C, hem D'den hem A'dan sonra gelmelidir. C, Ruhwedel'in genel değerlendirmesiyle (bu dilden muhtemelen hiçbir zaman bir Kreol dil çıkmayacak, ama gözlemler yine de önemli) yazıyı kapatır."
+        },
+        {
+          "number": 9,
+          "type": "reihenfolge",
+          "prompt": "Abschnitt D",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "3",
+          "evidence": [
+            {
+              "text": "D",
+              "quote": "Diese Lücke zumindest teilweise zu schließen"
+            },
+            {
+              "text": "D",
+              "quote": "genau jene erste Stufe"
+            }
+          ],
+          "explanation": "D, 3. sıradadır. „Diese Lücke“ (bu boşluk), B'nin sonundaki tespite gönderme yapar: Pidgin'den Kreol dile geçiş yalnızca eksik biçimde belgelenmiştir. „genau jene erste Stufe“ (tam da o ilk aşama) ifadesi de B'deki iki aşamalı modeli bilinen bir şey olarak kullanır. Girişte henüz bir boşluktan veya aşamalardan söz edilmediği için D 2. sırada olamaz. D, araştırmacıyı, tersaneyi ve kayıtları tanıtır; A'daki „Die Aufnahmen“ (kayıtlar) ve C'deki „diesem Werftjargon“ ancak bundan sonra anlaşılır."
+        }
+      ]
+    }
+  ]
+}

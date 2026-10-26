@@ -8,7 +8,8 @@
 - **TestDaF dijital Aufgabe 7 (Fehler in der Zusammenfassung):** 5 set. Özet üç paragrafa bölündü; her paragraftaki cümleler akan metin olarak tıklanır, öğrenci yanlış olanı seçer. Yeni soru tipi `fehlersatz`. Resmî sınavda özetteki üç yanlış cümle tek metinde aranıyor (≈); bizde her paragrafta bir tane.
 - **telc C1 Hochschule Teil 3, soru 24:** beş setteki çeldiriciler aşırı genellemeler yerine metinle ilişkili ama ana fikri kaçıran ifadelerle değiştirildi (ikincil ayrıntı, eleştirmenin görüşü, metnin çürüttüğü ilk varsayım, vurguyu kaydıran sonuç).
 - **telc A2 Teil 2 set-4:** köy sineması yerine „Vogelhäuser für den Stadtpark“ (bir sınıfın parka kuş evi yapması); anahtar aynı.
-- İnceleme ve kör çözüm sonuçları aşağıda, aşama sonunda.
+- **İnceleme ve kör çözüm:** TestDaF Aufgabe 2 ve 7 için 35/35, değişen telc C1 ve A2 soruları için 66/66 uyuştu. İnceleyiciler Aufgabe 2 set-4'te olası ikinci sıralamayı kapattı, Aufgabe 7'de doğru sayılan ama metinde olmayan çıkarımları düzeltti. Kör çözücü bazı özetlerde yanlış cümlenin başka bir özet cümlesiyle ele verildiğini buldu; bu cümleler değiştirildi (set-2, set-3, set-5) ve yeniden kör çözümde tutarlı çıktı. Seçili cümle koyu temada görünmüyordu; CSS düzeltildi.
+- **Düzeltmediğim notlar:** Aufgabe 7'deki bazı yanlış cümleler genel bilgiyle tahmin edilebiliyor (ör. koyun sahiplerinin kurtları „sevinçle karşılaması“, jülyen yılının „çok kısa“ olması). C1 ana fikir sorularında doğru seçenek genellikle iki parçalı ve dengeli; birkaç çeldirici de öyle yazıldı.
 
 ## 2026-10-19 · Lesen tamamlama: 8 aşama (Goethe C1 → TestDaF kâğıt → TestDaF dijital → telc B1, A1, A2, B2, C1 Hochschule)
 

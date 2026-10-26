@@ -43,7 +43,7 @@
           "label": "d",
           "title": "Bachelor „Technik und Alter“",
           "paragraphs": [
-            "Assistenzsysteme, die älteren Menschen ein selbstständiges Leben in der eigenen Wohnung ermöglichen sollen, scheitern häufig nicht an der Technik, sondern daran, dass sie an den Bedürfnissen ihrer Zielgruppe vorbei entwickelt werden. Hier setzt der interdisziplinäre Studiengang der Hochschule Wendrichsau an, der Grundlagen der Elektrotechnik und Informatik mit Gerontologie und Pflegewissenschaft verbindet. Kern des Studiums ist ein Reallabor: eine Musterwohnung auf dem Campus, in der Seniorinnen und Senioren aus der Nachbarschaft die von Studierenden entworfenen Prototypen erproben und deren Weiterentwicklung in regelmäßigen Workshops mitbestimmen. Für das sechste Semester ist ein Aufenthalt an einer ausländischen Partnerhochschule vorgesehen. Eine Zulassungsbeschränkung gibt es vorerst nicht; die Einschreibung ist sowohl zum Winter- als auch zum Sommersemester möglich. Unterrichtet wird überwiegend auf Deutsch, einzelne Wahlmodule finden auf Englisch statt."
+            "Assistenzsysteme, die älteren Menschen ein selbstständiges Leben in der eigenen Wohnung ermöglichen sollen, scheitern häufig nicht an der Technik, sondern daran, dass sie an den Bedürfnissen ihrer Zielgruppe vorbei entwickelt werden. Hier setzt der interdisziplinäre Studiengang der Hochschule Rabenwiesen an, der Grundlagen der Elektrotechnik und Informatik mit Gerontologie und Pflegewissenschaft verbindet. Kern des Studiums ist ein Reallabor: eine Musterwohnung auf dem Campus, in der Seniorinnen und Senioren aus der Nachbarschaft die von Studierenden entworfenen Prototypen erproben und deren Weiterentwicklung in regelmäßigen Workshops mitbestimmen. Für das sechste Semester ist ein Aufenthalt an einer ausländischen Partnerhochschule vorgesehen. Eine Zulassungsbeschränkung gibt es vorerst nicht; die Einschreibung ist sowohl zum Winter- als auch zum Sommersemester möglich. Unterrichtet wird überwiegend auf Deutsch, einzelne Wahlmodule finden auf Englisch statt."
           ]
         }
       ],
@@ -103,7 +103,7 @@
         {
           "number": 11,
           "type": "zuordnung",
-          "prompt": "In einem Studiengang lernen Studierende verschiedener Hochschulen zeitweise zusammen.",
+          "prompt": "Ein Studiengang wird von zwei Hochschulen getragen, deren Studierende phasenweise zusammen lernen.",
           "answer": "c",
           "evidence": [
             {
@@ -111,7 +111,7 @@
               "quote": "bearbeiten die Studierenden beider Einrichtungen gemeinsam Fallstudien"
             }
           ],
-          "explanation": "Metin c'de program iki üniversite tarafından birlikte sunuluyor; öğrenciler birine kaydoluyor, ama yüz yüze haftalarda „die Studierenden beider Einrichtungen gemeinsam“ (iki kurumun öğrencileri birlikte) vaka çalışmaları yapıyor. „zeitweise“ (zaman zaman) yılda üç haftaya karşılık geliyor. Metin d'de öğrenciler altıncı dönemde yurt dışındaki bir ortak üniversiteye gidiyor, ama orada başka öğrencilerle ortak bir ders yapısından söz edilmiyor. Metin a'da yalnızca dışarıdan öğretim görevlileri (arşiv çalışanları) var."
+          "explanation": "Metin c'de program iki yükseköğretim kurumu tarafından birlikte sunuluyor („bieten deshalb gemeinsam … an“); öğrenciler birine kaydoluyor, ama yüz yüze haftalarda „die Studierenden beider Einrichtungen gemeinsam“ (iki kurumun öğrencileri birlikte) vaka çalışmaları yapıyor. „phasenweise“ (dönem dönem) yılda üç haftaya karşılık geliyor. Metin d'de öğrenciler altıncı dönemde yurt dışındaki bir „Partnerhochschule“ye (ortak üniversiteye) gidiyor, ama program o üniversiteyle birlikte yürütülmüyor: metin onu yalnızca „der interdisziplinäre Studiengang der Hochschule Rabenwiesen“ olarak tanıtıyor. Metin a'da seminerlerin bir kısmını Landesarchiv çalışanları veriyor; ikinci bir yükseköğretim kurumu yok."
         },
         {
           "number": 12,

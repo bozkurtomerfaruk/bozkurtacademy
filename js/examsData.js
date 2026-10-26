@@ -758,8 +758,8 @@ window.BA_EXAMS = {
               {
                 title: { tr: 'Akademik metin · richtig/falsch/nicht im Text', de: 'Wissenschaftlicher Text · richtig/falsch/nicht im Text', en: 'Academic text · true/false/not in text' },
                 exercises: [
-                  { set: 'set-1', title: 'Prokrastination unter Studierenden' },
-                  { set: 'set-2', title: 'Langeweile im Hörsaal' },
+                  { set: 'set-1', title: 'Macht Musizieren klüger?' },
+                  { set: 'set-2', title: 'Wiesen unter Wasser' },
                 ]
               }, // Teil 3
             ] },

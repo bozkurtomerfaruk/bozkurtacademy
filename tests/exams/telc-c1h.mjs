@@ -21,7 +21,7 @@ for (const [w, th] of [[1280, 'light'], [390, 'dark']]) {
       const set = readSet(key, t, s), qs = set.groups.flatMap(g => g.questions);
       if (key === 'tc1' && t === 3) {
         ok(await page.locator('.task-q--richtig-falsch-nichts').count() === 11, `${label}: eleven richtig/falsch/nicht im Text`);
-        ok(await page.locator('.task-q--richtig-falsch-nichts .task-option-text', { hasText: 'Nicht im Text' }).count() === 11, `${label}: "Nicht im Text" option`);
+        ok(await page.locator('.task-q--richtig-falsch-nichts .task-option-key', { hasText: 'Nicht im Text' }).count() === 11, `${label}: "Nicht im Text" option`);
         const macro = qs.find(q => q.type === 'abc');
         ok(macro && await page.locator(`input[data-task-answer="${macro.number}"]`).count() === 4, `${label}: main-idea item a–d`);
       }

@@ -746,6 +746,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Wie Zugvögel ihren Weg finden' },
                   { set: 'set-2', title: 'Die Geschichte der Kartografie' },
+                  { set: 'set-3', title: 'Wie Vulkane das Klima beeinflussen' },
+                  { set: 'set-4', title: 'Die Wissenschaft des Humors' },
+                  { set: 'set-5', title: 'Korallenriffe im Wandel' },
                 ]
               }, // Teil 1
               {
@@ -753,6 +756,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Forschungsprojekte im Überblick' },
                   { set: 'set-2', title: 'Neue Studiengänge vorgestellt' },
+                  { set: 'set-3', title: 'Sommerschulen im Ausland' },
+                  { set: 'set-4', title: 'Neue Promotionsprogramme' },
+                  { set: 'set-5', title: 'Angebote für Studienanfänger' },
                 ]
               }, // Teil 2
               {
@@ -760,6 +766,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Macht Musizieren klüger?' },
                   { set: 'set-2', title: 'Wiesen unter Wasser' },
+                  { set: 'set-3', title: 'Lassen sich Erdbeben vorhersagen?' },
+                  { set: 'set-4', title: 'Kooperation im Tierreich' },
+                  { set: 'set-5', title: 'Die Psychologie des Wartens' },
                 ]
               }, // Teil 3
             ] },
@@ -769,6 +778,9 @@ window.BA_EXAMS = {
                 exercises: [
                   { set: 'set-1', title: 'Die Entstehung der Universitäten' },
                   { set: 'set-2', title: 'Plagiate in der Wissenschaft' },
+                  { set: 'set-3', title: 'Die Geschichte der Statistik' },
+                  { set: 'set-4', title: 'Peer-Review in der Kritik' },
+                  { set: 'set-5', title: 'Die Entwicklung des Mikroskops' },
                 ]
               }, // Teil 1
             ] },

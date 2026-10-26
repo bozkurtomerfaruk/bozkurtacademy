@@ -16,6 +16,9 @@ const TYPES = {
   // telc C1 Hochschule: Richtig / Falsch / Nicht im Text
   'richtig-falsch-nichts': () => ['richtig', 'falsch', 'nichts'],
   abc: question => Object.keys(question.options || {}),
+  // TestDaF digital Aufgabe 7: one wrong sentence in a summary paragraph; Aufgabe 2: position of a paragraph.
+  fehlersatz: question => Object.keys(question.options || {}),
+  reihenfolge: question => (Array.isArray(question.options) ? question.options : []).map(String),
   zuordnung: (question, group) => [...group.texts.filter(text => text.label).map(text => text.label), ...(group.none === false ? [] : [group.none || '0'])]
 };
 const errors = [];
@@ -78,6 +81,8 @@ for (const exam of data.exams) for (const level of exam.levels || []) for (const
           if (question.type === 'zuordnung' && group.texts.filter(text => text.label).length < 2) fail(`${where}: zuordnung needs labelled texts to choose from`);
           // a/b/c, or a/b/c/d for four-option gaps (Goethe C1 Teil 1)
           if (question.type === 'abc' && !['a,b,c', 'a,b,c,d'].includes(Object.keys(question.options || {}).join())) fail(`${label}: options must be a, b, c (or a, b, c, d)`);
+          if (question.type === 'fehlersatz' && !['a,b,c', 'a,b,c,d', 'a,b,c,d,e', 'a,b,c,d,e,f'].includes(Object.keys(question.options || {}).join())) fail(`${label}: summary sentences must be a, b, c … (3–6)`);
+          if (question.type === 'reihenfolge' && !(Array.isArray(question.options) && question.options.length >= 3)) fail(`${label}: positions must be a list of at least three numbers`);
           if (!TYPES[question.type](question, group).includes(question.answer)) fail(`${label}: answer ${JSON.stringify(question.answer)} is not an option`);
           if (!question.explanation || question.explanation.length < 40) fail(`${label}: explanation missing or too short`);
           if (!question.example) answers[question.answer] = (answers[question.answer] || 0) + 1;

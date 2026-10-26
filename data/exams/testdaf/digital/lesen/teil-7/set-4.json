@@ -1,0 +1,91 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 7,
+  "set": "set-4",
+  "title": "Fleisch aus dem Labor",
+  "minutes": 10,
+  "instructions": "Lesen Sie den Text und die Zusammenfassung. In jedem Absatz der Zusammenfassung ist ein Satz falsch. Klicken Sie den falschen Satz an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Fleisch aus dem Labor",
+          "byline": "Von Lene Hachmeister",
+          "paragraphs": [
+            "Kaum ein Lebensmittel wird derzeit so kontrovers diskutiert wie Fleisch, das nicht von geschlachteten Tieren stammt, sondern in Zellkulturen heranwächst. Das Grundprinzip klingt einfach: Einem lebenden Rind werden per Biopsie wenige Muskelstammzellen entnommen, die sich anschließend in Bioreaktoren, umgeben von einer Nährlösung, vielfach teilen. Aus einer einzigen Probe ließen sich theoretisch Tonnen von Gewebe gewinnen, sagt die Zellbiologin Swaantje Sältzer von der Technischen Universität Brakelsiek. Zwischen dieser Rechnung und einem bezahlbaren Produkt im Supermarktregal lägen allerdings noch erhebliche Hürden.",
+            "Die erste betrifft die Nährlösung. Lange war man auf fötales Kälberserum angewiesen, das aus dem Blut ungeborener Kälber gewonnen wird – ein offenkundiger Widerspruch zum Anspruch, ohne Schlachtung auszukommen. Inzwischen existieren serumfreie Medien, doch die darin enthaltenen Wachstumsfaktoren sind so teuer, dass sie den größten Teil der Produktionskosten ausmachen. Sältzers Arbeitsgruppe versucht deshalb, diese Signalproteine von gentechnisch veränderten Hefen herstellen zu lassen. Erste Versuche verliefen vielversprechend, im industriellen Maßstab erprobt ist das Verfahren jedoch noch nicht.",
+            "Das zweite Problem ist die Struktur. Produkte nach Art von Hackfleisch, bei denen lose Zellmasse mit pflanzlichen Bestandteilen vermengt wird, lassen sich bereits herstellen. Ein Steak hingegen besteht aus Muskelfasern, Fett und Bindegewebe in charakteristischer Anordnung. Da Zellen ohne durchziehende Blutgefäße nur bis in eine Tiefe von wenigen Zehntelmillimetern mit Nährstoffen versorgt werden, sterben sie im Inneren dickerer Gewebestücke ab. Mehrere Labore experimentieren daher mit essbaren Gerüsten aus Pflanzenfasern, durch deren feine Kanäle die Nährlösung zirkulieren kann. Solche Gerüste müssen allerdings mehreren Anforderungen zugleich genügen: Den Zellen sollen sie Halt bieten, beim Braten aber weder die Konsistenz noch den Geschmack verfälschen. Bislang, räumt Sältzer ein, gelinge das allenfalls bei dünnen Scheiben.",
+            "Umstritten ist auch der ökologische Nutzen. Zwar benötigt Zellkulturfleisch nach übereinstimmenden Schätzungen deutlich weniger Fläche als die konventionelle Rinderhaltung. Bei der Klimabilanz gehen die Ergebnisse vorliegender Studien jedoch weit auseinander, zumal bislang keine Anlage im großtechnischen Maßstab arbeitet und sich die Berechnungen daher auf Hochrechnungen aus dem Labor stützen müssen. Der Ökobilanzierer Okko Wulfekuhl hält das für wenig überraschend: Bioreaktoren müssten steril gehalten und konstant auf Körpertemperatur geheizt werden, und auch die aufwendige Reinigung der Nährmedien schlage zu Buche. Stamme der Strom dafür aus fossilen Quellen, könne der Vorteil gegenüber Rindfleisch erheblich schrumpfen; gegenüber Geflügel, das ohnehin vergleichsweise wenige Treibhausgase verursache, sei er womöglich gar nicht mehr vorhanden. Entscheidend sei daher weniger das Verfahren selbst als die Energieversorgung der Anlagen.",
+            "Ob Verbraucherinnen und Verbraucher das neue Produkt annehmen, ist eine weitere offene Frage. In einer Studie der Konsumforscherin Sieghild Rautenstrauch kosteten Testpersonen zwei Proben, von denen die eine als „Laborfleisch“, die andere als „kultiviertes Fleisch“ ausgewiesen war; teilgenommen hatten ausschließlich Personen, die regelmäßig Fleisch essen. Obwohl beide Proben identisch waren, erhielt die zweite im Geschmack deutlich bessere Noten. Rautenstrauch schließt daraus, dass die Bezeichnung die Akzeptanz womöglich stärker beeinflusst als die Technik. Ob sich dieser Effekt auch beim tatsächlichen Einkauf zeigt, will sie in einem Folgeprojekt untersuchen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 32,
+          "type": "fehlersatz",
+          "prompt": "Zusammenfassung, Absatz 1",
+          "options": {
+            "a": "Für das Verfahren werden einem lebenden Tier einige Stammzellen entnommen, aus denen sich nach Sältzer schon heute große Fleischmengen herstellen lassen.",
+            "b": "Bis daraus ein erschwingliches Lebensmittel wird, sind aber noch beträchtliche Schwierigkeiten zu überwinden.",
+            "c": "So war die Zellvermehrung lange von einem Serum aus dem Blut von Kalbsföten abhängig, was dem Ziel eines schlachtfreien Fleisches widersprach.",
+            "d": "In den mittlerweile verfügbaren Nährmedien ohne Serum entfällt der größte Teil der Herstellungskosten auf bestimmte Proteine, die das Wachstum anregen.",
+            "e": "Sältzers Team will diese Stoffe von Mikroorganismen produzieren lassen, hat den Ansatz aber noch nicht in großem Umfang getestet."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "Aus einer einzigen Probe ließen sich theoretisch Tonnen von Gewebe gewinnen"
+            }
+          ],
+          "explanation": "Sältzer yalnızca kuramsal bir hesaptan söz ediyor: „Aus einer einzigen Probe ließen sich theoretisch Tonnen von Gewebe gewinnen“ (tek bir örnekten kuramsal olarak tonlarca doku elde edilebilir) ve hemen ardından bu hesapla satın alınabilir bir ürün arasında „erhebliche Hürden“ (ciddi engeller) olduğunu ekliyor. a cümlesi bu olasılığı „schon heute“ (bugün bile) gerçekleşen bir durum gibi sunduğu için yanlış. b (engeller), c (uzun süre doğmamış buzağıların kanından elde edilen seruma bağımlılık, kesimsiz üretim iddiasıyla çelişki), d (serumsuz ortamlarda üretim maliyetinin büyük kısmı büyüme faktörlerinden) ve e (maya ile üretim, henüz endüstriyel ölçekte denenmedi) metinle uyuşuyor."
+        },
+        {
+          "number": 33,
+          "type": "fehlersatz",
+          "prompt": "Zusammenfassung, Absatz 2",
+          "options": {
+            "a": "Hackfleischähnliche Erzeugnisse sind technisch bereits machbar, ein Steak mit seinem gegliederten Aufbau aus Fasern, Fett und Bindegewebe ist dagegen ein Problem.",
+            "b": "Ohne Blutgefäße erreichen die Nährstoffe nämlich nur die äußersten Zellschichten, sodass Zellen im Inneren dickerer Stücke absterben.",
+            "c": "Beim Flächenbedarf schneidet das Zellkulturfleisch nach den bisherigen Schätzungen besser ab als die Rinderhaltung.",
+            "d": "Wulfekuhl zufolge verursacht Zellkulturfleisch bei Strom aus Kohle oder Gas mehr Treibhausgase als Rindfleisch.",
+            "e": "Für die Klimabilanz ist seiner Ansicht nach vor allem ausschlaggebend, woher die Energie stammt."
+          },
+          "answer": "d",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "könne der Vorteil gegenüber Rindfleisch erheblich schrumpfen"
+            }
+          ],
+          "explanation": "Wulfekuhl'a göre elektrik fosil kaynaklardan gelirse „könne der Vorteil gegenüber Rindfleisch erheblich schrumpfen“ (sığır etine karşı avantaj ciddi ölçüde küçülebilir). Avantajın belki tamamen ortadan kalkacağını yalnızca kanatlı eti (Geflügel) için söylüyor. d cümlesi ise hücre kültürü etinin sığır etinden daha fazla sera gazı ürettiğini iddia ediyor; bu, karşılaştırmayı yanlış hayvana bağlıyor ve olasılığı kesinlik gibi sunuyor. a ve b (kıyma benzeri ürünler mümkün, biftekte yapı sorunu var; damar olmadan kalın doku parçalarının içindeki hücreler beslenemeyip ölüyor), c (daha az alan) ve e (belirleyici olan enerji kaynağı) metinle uyuşuyor."
+        },
+        {
+          "number": 34,
+          "type": "fehlersatz",
+          "prompt": "Zusammenfassung, Absatz 3",
+          "options": {
+            "a": "In einem Geschmackstest bewerteten die Teilnehmenden von zwei gleichen Proben jene besser, die als kultiviertes Fleisch bezeichnet war.",
+            "b": "Rautenstrauch sieht damit belegt, dass der Name eines solchen Produkts über dessen Erfolg mehr entscheidet als das Herstellungsverfahren.",
+            "c": "Ungeklärt ist bislang, ob sich das Ergebnis auf reale Kaufentscheidungen übertragen lässt.",
+            "d": "Dieser Frage möchte die Forscherin in einer weiteren Untersuchung nachgehen."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "artikel",
+              "quote": "dass die Bezeichnung die Akzeptanz womöglich stärker beeinflusst als die Technik"
+            }
+          ],
+          "explanation": "Rautenstrauch sonucunu temkinli ifade ediyor: „dass die Bezeichnung die Akzeptanz womöglich stärker beeinflusst als die Technik“ (adlandırma kabulü belki teknikten daha güçlü etkiliyor). „womöglich“ (belki) bunun bir varsayım olduğunu gösteriyor; ayrıca gerçek alışverişte bu etkinin görülüp görülmediği henüz araştırılmadı. b cümlesi ise bunu „belegt“ (kanıtlanmış) bir sonuç gibi sunduğu için yanlış. a (aynı iki örnekten „kultiviertes Fleisch“ adlı olan daha iyi not aldı), c (satın alma davranışına aktarılıp aktarılamayacağı açık) ve d (bir sonraki projede incelenecek) metinle uyuşuyor."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-5",
+  "title": "Bakterien als Baumeister",
+  "minutes": 8,
+  "context": "Sie lesen in einem Wissenschaftsmagazin einen Artikel über die Erforschung früher Lebensspuren.",
+  "instructions": "Die Abschnitte A–D des Textes sind durcheinandergeraten. Lesen Sie zuerst den Anfang des Textes und dann die Abschnitte A–D. An welcher Stelle (2–5) stehen sie im Originaltext? Wählen Sie für jeden Abschnitt eine Position; jede Position kommt nur einmal vor.",
+  "groups": [
+    {
+      "layout": "comments",
+      "texts": [
+        {
+          "id": "einleitung",
+          "title": "Bakterien als Baumeister",
+          "paragraphs": [
+            "Zu den ältesten mutmaßlichen Spuren des Lebens auf der Erde zählen Stromatolithen: kuppel- oder säulenförmige Gesteinskörper aus zahllosen hauchdünnen Lagen, von denen manche über drei Milliarden Jahre alt sind. Errichtet wurden solche Strukturen nach gängiger Vorstellung von Matten aus Mikroorganismen, vor allem Cyanobakterien. Deren klebrige Oberfläche hält Sedimentkörner fest, zugleich fällt Kalk aus; wird die Matte überdeckt, wächst sie nach oben durch die neue Schicht hindurch und hinterlässt so Lage um Lage. Ob ein bestimmter fossiler Stromatolith tatsächlich auf diese Weise entstanden ist, lässt sich allerdings oft nur schwer beweisen."
+          ]
+        },
+        {
+          "id": "abschnitt-a",
+          "label": "A",
+          "paragraphs": [
+            "Dazu wurden zwölf flache Becken mit Meerwasser gefüllt, dessen Kalkgehalt künstlich erhöht worden war. In sechs von ihnen setzten die Forschenden Mikrobenmatten aus einer Salzlagune ein, die übrigen sechs blieben steril; dort konnte sich Kalk nur auf chemischem Weg abscheiden. Lampen simulierten einen Wechsel von Tag und Nacht, und alle zwei Wochen wurde eine dünne Schicht feinen Sandes eingestreut, wie sie Strömungen auch in natürlichen Gewässern ablagern. Nach vierzehn Monaten entnahm das Team aus jedem Becken Proben und fertigte daraus Dünnschliffe an, also Gesteinsscheiben, die so fein geschliffen sind, dass sie sich unter dem Mikroskop durchleuchten lassen."
+          ]
+        },
+        {
+          "id": "abschnitt-b",
+          "label": "B",
+          "paragraphs": [
+            "Denn geschichtete Kalkkrusten können auch ganz ohne Beteiligung von Lebewesen entstehen, etwa wenn Minerale aus übersättigtem Wasser ausfallen. In den ältesten Gesteinen sind zudem keine Zellen erhalten geblieben, die eine biologische Herkunft belegen würden. Gesucht werden deshalb Merkmale der Schichtung selbst, die nur eine lebende Matte hervorbringen kann. Einen ungewöhnlichen Weg schlägt dabei der Geobiologe Gerwin Wöbbeking vom Institut für Geobiologie in Aldwerden ein: Statt weitere Fossilien zu untersuchen, lässt seine Arbeitsgruppe Stromatolithen im Labor heranwachsen und vergleicht sie mit Krusten, die unter denselben Bedingungen ohne Mikroben entstehen."
+          ]
+        },
+        {
+          "id": "abschnitt-c",
+          "label": "C",
+          "paragraphs": [
+            "Ob sich diese Hohlräume als Erkennungszeichen für fossile Stromatolithen eignen, ist damit allerdings noch nicht entschieden. Die Sedimentologin Margund Venholt gibt zu bedenken, dass Gestein im Laufe von Jahrmilliarden unter Druck und Wärme umkristallisiert; feine Poren könnten dabei verschwinden oder auch nachträglich entstehen. Wöbbeking räumt ein, dass vierzehn Monate kaum mit den Zeiträumen vergleichbar seien, um die es in der Erdgeschichte gehe. In einem nächsten Schritt sollen die Laborproben daher hohen Temperaturen und Drücken ausgesetzt werden. Erst dann werde sich zeigen, welche Spuren eine solche Belastung überstehen."
+          ]
+        },
+        {
+          "id": "abschnitt-d",
+          "label": "D",
+          "paragraphs": [
+            "Schon auf den ersten Blick unterschieden sich die beiden Versuchsreihen deutlich. In den sterilen Becken waren gleichmäßig dicke, glatte Kalklagen entstanden, die den eingestreuten Sand lediglich überdeckten. Die Lagen aus den besiedelten Becken dagegen wechselten zwischen hellen, kalkreichen und dunkleren, sandhaltigen Schichten und verliefen leicht gewellt. Vor allem aber enthielten sie zahllose winzige Poren. Wöbbeking führt diese auf Gasbläschen zurück, die bei der Photosynthese der Cyanobakterien entstehen und in der zähen Matte festgehalten werden, bevor der Kalk sie umschließt. In keinem der sterilen Becken fanden sich vergleichbare Strukturen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "reihenfolge",
+          "prompt": "Abschnitt A",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "3",
+          "evidence": [
+            {
+              "text": "abschnitt-a",
+              "quote": "Dazu wurden zwölf flache Becken mit Meerwasser gefüllt"
+            },
+            {
+              "text": "abschnitt-b",
+              "quote": "lässt seine Arbeitsgruppe Stromatolithen im Labor heranwachsen"
+            },
+            {
+              "text": "abschnitt-a",
+              "quote": "die übrigen sechs blieben steril"
+            }
+          ],
+          "explanation": "A, deneyin nasıl kurulduğunu anlatır ve „Dazu …“ (bunun için …) diye başlar. Bu gönderme, B'nin sonundaki plana bağlanır: Wöbbeking'in ekibi „lässt … Stromatolithen im Labor heranwachsen“ (stromatolitleri laboratuvarda büyütüyor) ve onları mikropsuz oluşan kabuklarla karşılaştırıyor. A'daki „die Forschenden“ ve „das Team“ ancak bu ekip tanıtıldıktan sonra anlaşılır; bu yüzden A 2. sırada olamaz. A iki deney dizisini kurar (mikrop matlı havuzlar ve „die übrigen sechs blieben steril“ – kalan altısı steril kaldı); D bu iki diziyi „die beiden Versuchsreihen“ diye karşılaştırır. Bu yüzden A 3. sıradadır."
+        },
+        {
+          "number": 7,
+          "type": "reihenfolge",
+          "prompt": "Abschnitt B",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "2",
+          "evidence": [
+            {
+              "text": "abschnitt-b",
+              "quote": "Denn geschichtete Kalkkrusten können auch ganz ohne Beteiligung von Lebewesen entstehen"
+            },
+            {
+              "text": "einleitung",
+              "quote": "lässt sich allerdings oft nur schwer beweisen"
+            },
+            {
+              "text": "abschnitt-b",
+              "quote": "Einen ungewöhnlichen Weg schlägt dabei der Geobiologe Gerwin Wöbbeking"
+            }
+          ],
+          "explanation": "Giriş, fosil bir stromatolitin gerçekten mikroplarca oluşturulduğunun „oft nur schwer beweisen“ (çoğu zaman zor kanıtlanır) olduğunu söyleyerek biter. B bunun nedenini „Denn …“ (çünkü …) ile verir: Katmanlı kireç kabukları „auch ganz ohne Beteiligung von Lebewesen“ (canlıların hiç katkısı olmadan da) oluşabilir. B ayrıca jeobiyolog Gerwin Wöbbeking'i tam adıyla ve laboratuvar yaklaşımını tanıtır; A'daki „Dazu“ bu yaklaşıma, C ve D'deki kısa „Wöbbeking“ adı da bu tanıtıma dayanır. Bu yüzden B 2. sıradadır."
+        },
+        {
+          "number": 8,
+          "type": "reihenfolge",
+          "prompt": "Abschnitt C",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "5",
+          "evidence": [
+            {
+              "text": "abschnitt-c",
+              "quote": "Ob sich diese Hohlräume als Erkennungszeichen für fossile Stromatolithen eignen"
+            },
+            {
+              "text": "abschnitt-d",
+              "quote": "Vor allem aber enthielten sie zahllose winzige Poren"
+            },
+            {
+              "text": "abschnitt-c",
+              "quote": "In einem nächsten Schritt sollen die Laborproben daher hohen Temperaturen und Drücken ausgesetzt werden"
+            }
+          ],
+          "explanation": "C, bulguyu değerlendirir: „Ob sich diese Hohlräume als Erkennungszeichen … eignen“ (bu boşlukların tanıma işareti olarak işe yarayıp yaramadığı) henüz belli değil. „diese Hohlräume“ D'de ilk kez bildirilen gözeneklere gönderme yapar („zahllose winzige Poren“ – sayısız küçük gözenek); bu yüzden C, D'den sonra gelir. Venholt'un itirazı, Wöbbeking'in deneyin kısa süresine dair kabulü ve „In einem nächsten Schritt …“ (bir sonraki adımda …) diye anlatılan plan metni kapatır. Bu yüzden C 5. sıradadır."
+        },
+        {
+          "number": 9,
+          "type": "reihenfolge",
+          "prompt": "Abschnitt D",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "4",
+          "evidence": [
+            {
+              "text": "abschnitt-d",
+              "quote": "Schon auf den ersten Blick unterschieden sich die beiden Versuchsreihen deutlich"
+            },
+            {
+              "text": "abschnitt-a",
+              "quote": "In sechs von ihnen setzten die Forschenden Mikrobenmatten aus einer Salzlagune ein"
+            }
+          ],
+          "explanation": "D, deneyin sonucunu verir: „Schon auf den ersten Blick unterschieden sich die beiden Versuchsreihen deutlich“ (iki deney dizisi ilk bakışta belirgin biçimde farklıydı). „die beiden Versuchsreihen“, „den sterilen Becken“ ve „den besiedelten Becken“ ifadeleri, A'da kurulan iki havuz grubuna gönderme yapar (mikrop matı konan altı havuz ve steril altı havuz); bu yüzden D, A'dan sonra gelir. D'nin bildirdiği küçük gözenekler, C'nin „diese Hohlräume“ diye tartıştığı bulgudur. Bu yüzden D 4. sıradadır."
+        }
+      ]
+    }
+  ]
+}

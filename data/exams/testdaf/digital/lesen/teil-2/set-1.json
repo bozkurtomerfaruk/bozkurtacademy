@@ -1,0 +1,149 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-1",
+  "title": "Die Erforschung der Tiefsee",
+  "minutes": 8,
+  "context": "Sie lesen in einem Wissenschaftsmagazin einen Artikel über neue Methoden der Meeresforschung.",
+  "instructions": "Die Abschnitte A–D des Textes sind durcheinandergeraten. Lesen Sie zuerst den Anfang des Textes und dann die Abschnitte A–D. An welcher Stelle (2–5) stehen sie im Originaltext? Wählen Sie für jeden Abschnitt eine Position; jede Position kommt nur einmal vor.",
+  "groups": [
+    {
+      "layout": "comments",
+      "none": false,
+      "texts": [
+        {
+          "id": "einleitung",
+          "title": "Die Erforschung der Tiefsee",
+          "paragraphs": [
+            "Unterhalb von etwa 200 Metern beginnt nach einer gängigen Definition die Tiefsee – der größte Lebensraum der Erde und zugleich einer der am wenigsten erforschten. Wer wissen wollte, welche Tiere dort leben, war lange auf Schleppnetze und Tauchfahrzeuge angewiesen. Beide Verfahren liefern wertvolle Einblicke, teilen aber einen gravierenden Nachteil: Sie erfassen jeweils nur einen winzigen Ausschnitt des Meeresbodens, und jede einzelne Probenahme bindet ein Forschungsschiff mitsamt Besatzung oft tagelang. Die Meeresbiologin Rotraut Vorderbrügge verfolgt deshalb seit einigen Jahren einen grundlegend anderen Ansatz."
+          ]
+        },
+        {
+          "id": "A",
+          "label": "A",
+          "paragraphs": [
+            "Erprobt wurde das Verfahren zunächst an einem Tiefseeberg im Nordatlantik, dessen Tierwelt frühere Expeditionen bereits mit Netzen und Kameras ausführlich dokumentiert hatten. Damit stand ein Vergleichsmaßstab zur Verfügung, an dem sich die Erbgutanalyse messen lassen musste. Das Ergebnis überraschte selbst die Beteiligten: In den Wasserproben fanden sich Hinweise auf annähernd doppelt so viele Tiergruppen wie in sämtlichen Netzfängen zuvor – darunter zahlreiche kleine, gallertartige oder auf andere Weise empfindliche Organismen, die beim Heraufholen gewöhnlich zerfallen und deshalb in den älteren Bestandsaufnahmen kaum auftauchen."
+          ]
+        },
+        {
+          "id": "B",
+          "label": "B",
+          "paragraphs": [
+            "Gerade diese Grenzen der Erbgutanalyse sprechen aus Sicht des Teams jedoch nicht gegen das Verfahren, sondern für seine Verbindung mit den klassischen Methoden. Künftig sollen die Proben vor allem dazu dienen, gezielt jene Stellen ausfindig zu machen, an denen sich ein aufwendiger Tauchgang lohnt – etwa weil dort Erbgut unbekannter Herkunft besonders gehäuft auftritt. Netze und Kameras würden so nicht ersetzt, sondern dort eingesetzt, wo sie am meisten leisten. Ob diese Arbeitsteilung die Erkundung der Tiefsee tatsächlich beschleunigt, soll eine mehrjährige Folgestudie zeigen, die im kommenden Frühjahr beginnt."
+          ]
+        },
+        {
+          "id": "C",
+          "label": "C",
+          "paragraphs": [
+            "Dieser Ansatz macht sich zunutze, dass Lebewesen fortwährend Spuren ihres Erbguts an die Umgebung abgeben, etwa über Schleim, abgestoßene Zellen oder Ausscheidungen. Statt Tiere zu fangen oder zu filmen, entnimmt Vorderbrügges Team deshalb Wasserproben, die ein unbemannter Tauchroboter in verschiedenen Tiefen automatisch abfüllt. Im Labor werden die darin enthaltenen DNA-Bruchstücke vervielfältigt, ausgelesen und mit Referenzdatenbanken abgeglichen, in denen die Erbgutsequenzen bereits beschriebener Arten hinterlegt sind. Da ein einziger Roboter während einer Fahrt Hunderte solcher Proben sammeln kann, lässt sich auf diese Weise ein weitaus größeres Gebiet abdecken als mit herkömmlichen Mitteln."
+          ]
+        },
+        {
+          "id": "D",
+          "label": "D",
+          "paragraphs": [
+            "Diesen Befund will Vorderbrügge allerdings nicht als Beleg dafür verstanden wissen, dass Netze und Kameras ausgedient hätten. Denn die Erbgutspuren verraten weder, wie viele Exemplare einer Art vorkommen, noch, ob die Tiere, von denen sie stammen, überhaupt noch leben. Hinzu kommt, dass Strömungen DNA-Bruchstücke über beträchtliche Strecken verfrachten können, sodass der Fundort einer Probe nicht zwingend mit dem Lebensraum der betreffenden Art übereinstimmt. Schließlich ließ sich ein erheblicher Teil der ausgelesenen Sequenzen keiner bekannten Art zuordnen, weil die Referenzdatenbanken gerade für Tiefseebewohner noch große Lücken aufweisen."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "reihenfolge",
+          "prompt": "Abschnitt A",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "3",
+          "evidence": [
+            {
+              "text": "A",
+              "quote": "Erprobt wurde das Verfahren zunächst"
+            },
+            {
+              "text": "A",
+              "quote": "In den Wasserproben fanden sich Hinweise auf annähernd doppelt so viele Tiergruppen"
+            }
+          ],
+          "explanation": "A, 3. sırada durur. „Erprobt wurde das Verfahren zunächst“ (yöntem önce … denendi) ve belirli artikelli „In den Wasserproben“ (su örneklerinde) ifadeleri, yöntemin ve su örneklerinin daha önce tanıtılmış olmasını gerektirir; bunu C yapar („entnimmt Vorderbrügges Team deshalb Wasserproben“). Girişte yalnızca „einen grundlegend anderen Ansatz“ (bambaşka bir yaklaşım) denir, ne olduğu söylenmez; bu yüzden A 2. sırada olamaz. A'daki sonuç – ağlardakinin yaklaşık iki katı hayvan grubu – D'nin „Diesen Befund“ (bu bulgu) ifadesinin gönderme yaptığı bulgudur; A, D'den önce gelmelidir."
+        },
+        {
+          "number": 7,
+          "type": "reihenfolge",
+          "prompt": "Abschnitt B",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "5",
+          "evidence": [
+            {
+              "text": "B",
+              "quote": "Gerade diese Grenzen der Erbgutanalyse"
+            },
+            {
+              "text": "B",
+              "quote": "Ob diese Arbeitsteilung die Erkundung der Tiefsee tatsächlich beschleunigt, soll eine mehrjährige Folgestudie zeigen"
+            }
+          ],
+          "explanation": "B, son paragraftır (5). „Gerade diese Grenzen der Erbgutanalyse“ (genetik analizin tam da bu sınırları) ifadesi, D'de sayılan sınırlara gönderme yapar: DNA izleri hayvan sayısını göstermez, akıntılar DNA'yı taşır, birçok dizi bilinen bir türe atanamaz. D'de bilinen hiçbir türe atanamayan diziler, B'de „Erbgut unbekannter Herkunft“ (kökeni bilinmeyen genetik materyal) olarak yeniden geçer. A ve C'de bu sınırlardan söz edilmez; bu yüzden B, D'den hemen sonra gelir. B ileriye bakarak yazıyı kapatır: „Künftig“ (gelecekte) ve gelecek baharda başlayacak bir takip çalışması („Folgestudie“)."
+        },
+        {
+          "number": 8,
+          "type": "reihenfolge",
+          "prompt": "Abschnitt C",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "2",
+          "evidence": [
+            {
+              "text": "C",
+              "quote": "Dieser Ansatz macht sich zunutze"
+            },
+            {
+              "text": "C",
+              "quote": "entnimmt Vorderbrügges Team deshalb Wasserproben"
+            }
+          ],
+          "explanation": "C, girişten hemen sonra gelir (2). „Dieser Ansatz“ (bu yaklaşım), girişin son cümlesindeki „einen grundlegend anderen Ansatz“ ifadesine bağlanır; C bu yaklaşımı ilk kez açıklar: Canlılar çevreye genetik iz bırakır, ekip hayvan yakalamak yerine su örnekleri alır. A'daki „das Verfahren“ (yöntem) ve „den Wasserproben“ (su örnekleri) ancak bu açıklamadan sonra anlaşılır. C'de henüz bir sonuç ya da sınır yoktur; bu yüzden C, A, D ve B'den önce durmalıdır."
+        },
+        {
+          "number": 9,
+          "type": "reihenfolge",
+          "prompt": "Abschnitt D",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "4",
+          "evidence": [
+            {
+              "text": "D",
+              "quote": "Diesen Befund will Vorderbrügge allerdings nicht als Beleg dafür verstanden wissen"
+            },
+            {
+              "text": "D",
+              "quote": "keiner bekannten Art zuordnen"
+            }
+          ],
+          "explanation": "D, 4. sıradadır. „Diesen Befund“ (bu bulgu) A'daki sonuca gönderme yapar: Su örneklerinde ağlardakinin yaklaşık iki katı hayvan grubu bulunmuştur. Vorderbrügge bunun ağları ve kameraları gereksiz kılmadığını söyler ve yöntemin zayıf yanlarını sayar (ör. birçok dizi „keiner bekannten Art zuordnen“ – hiçbir bilinen türe atanamadı). C'de henüz bir bulgu olmadığı için D, C'den hemen sonra gelemez. Bu sınırlar da B'nin „diese Grenzen der Erbgutanalyse“ ifadesiyle ele alınır; D bu yüzden B'den önce gelir."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 7,
+  "set": "set-2",
+  "title": "Die Rückkehr der Wölfe",
+  "minutes": 10,
+  "instructions": "Lesen Sie den Text und die Zusammenfassung. In jedem Absatz der Zusammenfassung ist ein Satz falsch. Klicken Sie den falschen Satz an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Die Rückkehr der Wölfe",
+          "byline": "Von Gunhild Strelow",
+          "paragraphs": [
+            "Mehr als hundert Jahre lang galt der Wolf in weiten Teilen Mitteleuropas als ausgerottet. Seit etwa zwei Jahrzehnten wandern wieder Tiere aus östlichen Populationen ein und gründen Rudel, inzwischen auch in dicht besiedelten Agrarlandschaften. Kaum ein anderes Wildtier löst so heftige Debatten aus: Während Naturschutzverbände die Rückkehr als Erfolg werten, sehen viele Schaf- und Ziegenhalter ihre Existenz bedroht. Eine Arbeitsgruppe um den Wildtierökologen Siegmar Thielmeyer vom Institut für Landschaftsökologie in Fennacker hat nun Daten aus zwölf Jahren ausgewertet, um die Diskussion zu versachlichen. Grundlage waren Meldungen über getötete Nutztiere, genetische Analysen von Kotproben und Aufnahmen aus mehreren Hundert Wildkameras.",
+            "Im Zentrum steht die Frage, wovon die Häufigkeit von Übergriffen auf Nutztiere abhängt. Entgegen einer verbreiteten Annahme fand das Team keinen engen Zusammenhang mit der Zahl der Wölfe in einer Region. Entscheidend war vielmehr, wie die Herden geschützt wurden. Ausgewertet wurden dazu gut 2.400 dokumentierte Vorfälle, bei denen jeweils festgehalten worden war, welche Vorkehrungen auf der betroffenen Weide bestanden. Wo Weiden mit ausreichend hohen Elektrozäunen gesichert waren oder Herdenschutzhunde eingesetzt wurden, gingen die Risse um bis zu neunzig Prozent zurück. Ein großer Teil der verbleibenden Schäden entfiel zudem auf wenige Rudel, die offenbar gelernt hatten, auch solche Hindernisse zu überwinden.",
+            "Diese Befunde haben politische Brisanz. Für Thielmeyer zeigen sie, dass der Abschuss einzelner auffälliger Tiere in bestimmten Fällen gerechtfertigt sein könne, eine pauschale Verringerung des Bestandes aber wenig bewirke. Die Agrarökonomin Ermelinde Ostrander, die an der Studie nicht beteiligt war, lenkt den Blick auf eine andere Seite: Wirksamer Herdenschutz verursache erhebliche Kosten und vor allem zusätzlichen Arbeitsaufwand, den die staatlichen Förderprogramme bislang nur teilweise ausglichen. Gerade kleine Betriebe, die die Tierhaltung im Nebenerwerb betrieben, könnten diese Last kaum tragen; manche hätten ihre Herden bereits verkleinert oder ganz aufgegeben.",
+            "Umstrittener ist ein zweiter Teil der Untersuchung, der sich mit den ökologischen Folgen befasst. In Waldgebieten mit Wolfsvorkommen hielten sich Rehe und Rothirsche seltener lange an denselben Stellen auf, und in einigen dieser Gebiete wuchsen junge Bäume, deren Triebe zuvor regelmäßig abgefressen worden waren, wieder besser nach. Thielmeyer betont jedoch, dass sich ein ursächlicher Zusammenhang daraus noch nicht ableiten lasse: Im selben Zeitraum sei in mehreren Regionen auch die Jagd verstärkt worden, was die Wildbestände ebenfalls beeinflusst haben könne. Zudem hätten trockene Sommer das Wachstum der Bäume in manchen Jahren stark gebremst.",
+            "Die Forschenden plädieren deshalb für ein langfristiges Monitoring, bei dem Wildbestände, Vegetation und Jagdstrecken nach einheitlichen Methoden erfasst werden. Bisher sammeln die zuständigen Behörden ihre Daten nach unterschiedlichen Standards, was Vergleiche zwischen Regionen erschwert. Ein erster Schritt sei getan, seit sich zwei benachbarte Landkreise auf ein gemeinsames Erhebungsprotokoll verständigt hätten. Nur auf einer solchen Grundlage, so Thielmeyer, lasse sich beurteilen, welche Rolle der Wolf in mitteleuropäischen Ökosystemen tatsächlich spiele – und ob die Hoffnungen, die manche Forstleute mit seiner Rückkehr verbinden, berechtigt seien."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 32,
+          "type": "fehlersatz",
+          "prompt": "Zusammenfassung, Absatz 1",
+          "options": {
+            "a": "Nach langer Abwesenheit siedeln sich Wölfe seit rund zwanzig Jahren wieder in Mitteleuropa an, auch in landwirtschaftlich geprägten Gegenden mit vielen Einwohnern.",
+            "b": "Neben Naturschutzverbänden begrüßen auch viele Halter von Schafen und Ziegen die Rückkehr der Raubtiere.",
+            "c": "Thielmeyers Team hat Material aus mehr als einem Jahrzehnt untersucht, um die Auseinandersetzung auf eine sachliche Basis zu stellen.",
+            "d": "Wie oft Weidetiere angegriffen werden, hängt der Studie zufolge weniger von der Größe des örtlichen Wolfsbestands ab als von den Schutzvorkehrungen."
+          },
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "sehen viele Schaf- und Ziegenhalter ihre Existenz bedroht" }
+          ],
+          "explanation": "Metne göre kurtların dönüşünü başarı olarak görenler doğa koruma dernekleri; birçok „Schaf- und Ziegenhalter“ (koyun ve keçi yetiştiricisi) ise „ihre Existenz bedroht“ (varlığını tehdit altında) görüyor. b cümlesi bu yetiştiricilerin de dönüşü memnuniyetle karşıladığını söyleyerek tutumlarını tersine çeviriyor; bu yüzden yanlış. a (yaklaşık yirmi yıldır, yoğun nüfuslu tarım alanlarında da), c (on iki yıllık veri, tartışmayı nesnelleştirmek için) ve d (saldırılar kurt sayısından çok korumaya bağlı) metinle uyuşuyor."
+        },
+        {
+          "number": 33,
+          "type": "fehlersatz",
+          "prompt": "Zusammenfassung, Absatz 2",
+          "options": {
+            "a": "Mit genügend hohen Stromzäunen oder Hunden, die die Herden bewachen, ließen sich die Verluste um bis zu neun Zehntel senken.",
+            "b": "Ein erheblicher Teil der übrigen Angriffe ging auf einzelne Rudel zurück, die offenbar Wege gefunden hatten, auch solche Barrieren zu überwinden.",
+            "c": "Thielmeyer leitet daraus ab, dass es unter bestimmten Umständen berechtigt sein könne, einzelne auffällig gewordene Wölfe zu erlegen, eine generelle Verkleinerung der Population aber kaum etwas bringe.",
+            "d": "Ostrander gibt dagegen zu bedenken, dass vor allem größere Betriebe den Aufwand für den Herdenschutz kaum bewältigen könnten.",
+            "e": "Der Ökonomin zufolge haben einige Tierhalter ihre Bestände bereits reduziert oder die Haltung eingestellt."
+          },
+          "answer": "d",
+          "evidence": [
+            { "text": "artikel", "quote": "Gerade kleine Betriebe, die die Tierhaltung im Nebenerwerb betrieben, könnten diese Last kaum tragen" }
+          ],
+          "explanation": "Ostrander'e göre bu yükü özellikle „kleine Betriebe“ (küçük işletmeler), yani hayvancılığı yan gelir olarak yapanlar taşıyamıyor. d cümlesi bunu „größere Betriebe“ (daha büyük işletmeler) olarak veriyor; karşılaştırma ters çevrilmiş. a (yeterince yüksek elektrikli çit veya sürü koruma köpekleriyle kayıplar %90'a kadar azaldı), b (kalan zararların büyük kısmı, engelleri aşmayı anlaşılan o ki öğrenmiş birkaç sürüden), c (göze batan tek tek hayvanları vurmak belirli durumlarda haklı olabilir, genel azaltma pek etkili değil) ve e (bazıları sürüsünü küçülttü veya bıraktı) metne uygun."
+        },
+        {
+          "number": 34,
+          "type": "fehlersatz",
+          "prompt": "Zusammenfassung, Absatz 3",
+          "options": {
+            "a": "Dass das Wild in Wäldern mit Wölfen junge Bäume weniger schädigte, führen die Forschenden darauf zurück, dass es sich dort nicht mehr so lange an einer Stelle aufhielt.",
+            "b": "Dieser Teil der Studie ist stärker umstritten als die Ergebnisse zum Schutz der Herden.",
+            "c": "Die Forschenden fordern deshalb eine dauerhafte Beobachtung von Wild, Pflanzenwuchs und Abschusszahlen nach gemeinsamen Kriterien.",
+            "d": "Gegenwärtig erschweren uneinheitliche Erhebungsverfahren der Behörden den Vergleich verschiedener Gebiete."
+          },
+          "answer": "a",
+          "evidence": [
+            { "text": "artikel", "quote": "Thielmeyer betont jedoch, dass sich ein ursächlicher Zusammenhang daraus noch nicht ableiten lasse" }
+          ],
+          "explanation": "Metin kurtlu ormanlarda geyiklerin daha az yerinde durduğunu ve bazı bölgelerde genç ağaçların yeniden iyi büyüdüğünü yalnızca gözlem olarak aktarıyor; Thielmeyer bundan „ein ursächlicher Zusammenhang“ (bir neden-sonuç ilişkisi) henüz çıkarılamayacağını vurguluyor. a cümlesi ise araştırmacıların zarardaki azalmayı bu davranışa „führen … darauf zurück“ (buna bağlıyorlar) diyerek bir neden-sonuç ilişkisi kurduklarını söylüyor; metne göre böyle bir ilişki henüz kurulamıyor, bu yüzden yanlış. b (çalışmanın bu bölümü „Umstrittener“, yani sürü korumayla ilgili sonuçlardan daha tartışmalı), c (tek tip yöntemlerle uzun süreli izleme) ve d (kurumların farklı standartları karşılaştırmayı zorlaştırıyor) metinle uyuşuyor."
+        }
+      ]
+    }
+  ]
+}

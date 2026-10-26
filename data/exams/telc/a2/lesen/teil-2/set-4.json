@@ -5,7 +5,7 @@
   "section": "lesen",
   "teil": 2,
   "set": "set-4",
-  "title": "Das alte Kino ist wieder offen",
+  "title": "Vogelhäuser für den Stadtpark",
   "minutes": 10,
   "instructions": "Lesen Sie den Text und die Aufgaben 6–10. Sind die Aussagen richtig oder falsch?",
   "groups": [
@@ -13,14 +13,14 @@
       "layout": "article",
       "texts": [
         {
-          "id": "kino",
-          "title": "Das alte Kino ist wieder offen",
-          "byline": "Dornwiesener Wochenspiegel",
+          "id": "vogelhaeuser",
+          "title": "Vogelhäuser für den Stadtpark",
+          "byline": "Brakenbütteler Nachrichten",
           "paragraphs": [
-            "Fast zehn Jahre war das kleine Kino in der Hauptstraße von Dornwiesen geschlossen. Seit September kann man dort wieder Filme sehen. Das haben Dietmar und Marlies Brettschneider möglich gemacht. Das Ehepaar hat das alte Haus im letzten Jahr gekauft.",
-            "Zuerst gab es viel Arbeit: Das Dach war kaputt, und die alten Stühle waren nicht mehr gut. Viele Nachbarn haben bei der Arbeit geholfen. Ein Möbelgeschäft aus der Nachbarstadt hat dem Kino 70 neue Stühle geschenkt. „Allein konnten wir das nicht schaffen“, sagt Marlies Brettschneider.",
-            "Das Kino ist von Donnerstag bis Sonntag geöffnet. Am Abend laufen Filme für Erwachsene, und am Sonntagnachmittag gibt es immer einen Kinderfilm. Eine Karte kostet 7 Euro, für Kinder 4 Euro.",
-            "Viele Besucher kommen aus den Dörfern in der Nähe. Für ältere Menschen ohne Auto gibt es seit Oktober einen kleinen Bus. Der Bus fährt nur am Samstagabend: Er holt die Leute vor dem Film zu Hause ab und bringt sie danach wieder zurück. Die Fahrt ist kostenlos. Den Bus fährt Ottokar Brinkhege, ein Nachbar der Brettschneiders. „Ich fahre gern“, sagt der 69-Jährige, „und den Film sehe ich auch.“"
+            "Im Stadtpark von Brakenbüttel hängen seit April 40 neue Vogelhäuser in den Bäumen. Gebaut haben sie die Kinder der Klasse 4a von der Grundschule am Weiher. Die Idee hatte ihre Lehrerin Edeltraut Thorbrügge: „Im Park gibt es nur noch wenige alte Bäume. Deshalb finden viele Vögel keinen Platz mehr für ein Nest.“",
+            "Von Januar bis März haben die Kinder jeden Freitag nach dem Unterricht an den Häusern gearbeitet. Geholfen hat ihnen Waldemar Pötschke, der Großvater von einem Schüler. Er war früher 30 Jahre lang Tischler. „Ohne Herrn Pötschke wäre das nicht möglich gewesen“, sagt Frau Thorbrügge. „Ich selbst kann nicht gut mit Holz arbeiten.“",
+            "Jedes Kind hat zwei Vogelhäuser gebaut, und auf jedem Haus steht sein Name. Einmal im Monat geht die Klasse in den Park und schaut nach: Wohnt schon ein Vogel im Haus? In 25 Häusern wohnen schon Vögel, 15 sind noch leer.",
+            "Die Stadt findet das Projekt sehr gut. Im nächsten Jahr möchten auch zwei andere Schulen mitmachen. Ihre Vogelhäuser kommen aber nicht in den Stadtpark, denn dort gibt es jetzt genug Häuser. Sie sollen an den Bäumen am Fluss hängen."
           ]
         }
       ],
@@ -28,67 +28,71 @@
         {
           "number": 6,
           "type": "richtig-falsch",
-          "prompt": "Vor September konnte man in Dornwiesen lange Zeit nicht ins Kino gehen.",
+          "prompt": "Die neuen Vogelhäuser im Park haben Schulkinder gemacht.",
           "answer": "richtig",
           "evidence": [
             {
-              "text": "kino",
-              "quote": "Fast zehn Jahre war das kleine Kino in der Hauptstraße von Dornwiesen geschlossen."
+              "text": "vogelhaeuser",
+              "quote": "Gebaut haben sie die Kinder der Klasse 4a von der Grundschule am Weiher."
             }
           ],
-          "explanation": "Metinde Dornwiesen'deki küçük sinemanın „Fast zehn Jahre … geschlossen“ (neredeyse on yıl kapalı) olduğu yazıyor. „Seit September“ (eylülden beri) yeniden film izlenebiliyor. Yani eylülden önce uzun süre sinemaya gidilemiyordu. İfade doğru."
+          "explanation": "Metinde parktaki 40 yeni kuş evi için „Gebaut haben sie die Kinder der Klasse 4a von der Grundschule am Weiher.“ (Onları Grundschule am Weiher'in 4a sınıfındaki çocuklar yaptı.) yazıyor. Yani kuş evlerini okul çocukları yaptı. İfade doğru."
         },
         {
           "number": 7,
           "type": "richtig-falsch",
-          "prompt": "Die neuen Stühle für das Kino haben die Brettschneiders selbst gekauft.",
+          "prompt": "Frau Thorbrügge hat früher in einem Beruf mit Holz gearbeitet.",
           "answer": "falsch",
           "evidence": [
             {
-              "text": "kino",
-              "quote": "Ein Möbelgeschäft aus der Nachbarstadt hat dem Kino 70 neue Stühle geschenkt."
+              "text": "vogelhaeuser",
+              "quote": "Er war früher 30 Jahre lang Tischler."
+            },
+            {
+              "text": "vogelhaeuser",
+              "quote": "„Ich selbst kann nicht gut mit Holz arbeiten.“"
             }
           ],
-          "explanation": "Brettschneider çifti binayı satın aldı, ama yeni sandalyeleri almadı. Metinde „Ein Möbelgeschäft aus der Nachbarstadt hat dem Kino 70 neue Stühle geschenkt.“ (Komşu şehirden bir mobilya mağazası sinemaya 70 yeni sandalye hediye etti.) yazıyor. İfade yanlış."
+          "explanation": "Eskiden marangoz olan kişi öğretmen değil, çocuklara yardım eden dede Waldemar Pötschke: „Er war früher 30 Jahre lang Tischler.“ (Eskiden 30 yıl marangozdu.) Öğretmen Thorbrügge ise „Ich selbst kann nicht gut mit Holz arbeiten.“ (Ben kendim ahşapla iyi çalışamam.) diyor. İfade yanlış."
         },
         {
           "number": 8,
           "type": "richtig-falsch",
-          "prompt": "Am Sonntag zeigt das Kino auch einen Film für Kinder.",
+          "prompt": "Die Kinder kontrollieren jeden Monat ihre Vogelhäuser im Park.",
           "answer": "richtig",
           "evidence": [
             {
-              "text": "kino",
-              "quote": "am Sonntagnachmittag gibt es immer einen Kinderfilm"
+              "text": "vogelhaeuser",
+              "quote": "Einmal im Monat geht die Klasse in den Park und schaut nach: Wohnt schon ein Vogel im Haus?"
             }
           ],
-          "explanation": "Akşamları yetişkinler için filmler var. Ayrıca „am Sonntagnachmittag gibt es immer einen Kinderfilm“ (pazar öğleden sonraları her zaman bir çocuk filmi var). Yani pazar günü çocuklar için de film gösteriliyor. İfade doğru."
+          "explanation": "Metinde „Einmal im Monat geht die Klasse in den Park und schaut nach“ (Sınıf ayda bir parka gidip bakıyor) yazıyor. Çocuklar evlerde kuş yaşayıp yaşamadığını kontrol ediyor. İfade doğru."
         },
         {
           "number": 9,
           "type": "richtig-falsch",
-          "prompt": "Für Erwachsene kostet eine Kinokarte 4 Euro.",
+          "prompt": "In 15 Vogelhäusern wohnen schon Vögel.",
           "answer": "falsch",
           "evidence": [
             {
-              "text": "kino",
-              "quote": "Eine Karte kostet 7 Euro, für Kinder 4 Euro."
+              "text": "vogelhaeuser",
+              "quote": "In 25 Häusern wohnen schon Vögel, 15 sind noch leer."
             }
           ],
-          "explanation": "Metinde „Eine Karte kostet 7 Euro, für Kinder 4 Euro.“ (Bir bilet 7 Euro, çocuklar için 4 Euro.) yazıyor. 4 Euro çocuk bileti; yetişkinler 7 Euro ödüyor. İfade yanlış."
+          "explanation": "Metinde „In 25 Häusern wohnen schon Vögel, 15 sind noch leer.“ (25 evde artık kuşlar yaşıyor, 15 ev hâlâ boş.) yazıyor. 15 sayısı kuş yaşayan evlerin değil, boş evlerin sayısı. İfade yanlış."
         },
         {
           "number": 10,
           "type": "richtig-falsch",
-          "prompt": "Ältere Besucher können auch am Sonntag mit dem Bus zum Kino fahren.",
+          "prompt": "Im nächsten Jahr kommen noch mehr Vogelhäuser in den Stadtpark.",
           "answer": "falsch",
           "evidence": [
             {
-              "text": "kino",
-              "quote": "Der Bus fährt nur am Samstagabend"
+              "text": "vogelhaeuser",
+              "quote": "Ihre Vogelhäuser kommen aber nicht in den Stadtpark, denn dort gibt es jetzt genug Häuser. Sie sollen an den Bäumen am Fluss hängen."
             }
           ],
-          "explanation": "Sinema perşembeden pazara kadar açık, ama küçük otobüs için metin „Der Bus fährt nur am Samstagabend“ (Otobüs sadece cumartesi akşamı çalışıyor) diyor. Pazar günü otobüs yok. İfade yanlış."
+          "explanation": "Gelecek yıl iki okul daha katılmak istiyor, ama metinde „Ihre Vogelhäuser kommen aber nicht in den Stadtpark“ (Onların kuş evleri şehir parkına gelmiyor) yazıyor, çünkü orada artık yeterince ev var. Yeni evler „an den Bäumen am Fluss“ (nehir kenarındaki ağaçlarda) asılacak. İfade yanlış."
         }
       ]
     }

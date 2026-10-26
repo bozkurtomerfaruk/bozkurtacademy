@@ -1,0 +1,82 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 7,
+  "set": "set-3",
+  "title": "Wie Kinder lesen lernen",
+  "minutes": 10,
+  "instructions": "Lesen Sie den Text und die Zusammenfassung. In jedem Absatz der Zusammenfassung ist ein Satz falsch. Klicken Sie den falschen Satz an.",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "artikel",
+          "title": "Wie Kinder lesen lernen",
+          "byline": "Von Leopoldine Ebbighaus",
+          "paragraphs": [
+            "Wie man Kindern das Lesen am besten beibringt, gehört zu den ältesten Streitfragen der Grundschulpädagogik. Auf der einen Seite stehen Ansätze, die zunächst die Zuordnung von Buchstaben und Lauten systematisch einüben; auf der anderen Seite solche, die Kinder von Anfang an mit ganzen Wörtern und kurzen Texten umgehen lassen und darauf vertrauen, dass sich die Regeln der Schrift dabei gleichsam von selbst erschließen. Eine Längsschnittstudie unter Leitung der Bildungsforscherin Benedikta Dürrholz von der Pädagogischen Hochschule Kerstwalde hat nun rund 1.100 Kinder in 52 Klassen vom ersten bis zum Ende des vierten Schuljahres begleitet.",
+            "Am Ende der ersten Klasse lagen die Kinder, die nach einem lautorientierten Lehrgang unterrichtet worden waren, beim Erlesen einzelner Wörter deutlich vorn. Besonders profitierten Kinder, die zu Schulbeginn über einen geringen Wortschatz verfügten oder zu Hause überwiegend eine andere Sprache als Deutsch sprachen. Bei Kindern mit günstigen Ausgangsbedingungen war der Vorsprung dagegen gering. Dürrholz erklärt das damit, dass viele von ihnen die Beziehung zwischen Schrift und Lauten schon vor der Einschulung, etwa beim gemeinsamen Betrachten von Bilderbüchern, teilweise durchschaut hätten. Für die Schule bedeute dies, dass gerade jene Kinder, die von zu Hause wenig mitbringen, auf einen gut strukturierten Anfangsunterricht angewiesen seien.",
+            "Im weiteren Verlauf schrumpften die Unterschiede zwischen den Methoden. In der dritten Klasse waren sie beim Wortlesen statistisch nicht mehr nachweisbar. Für das Textverständnis am Ende der Grundschulzeit spielte die Methode des Anfangsunterrichts kaum eine Rolle; ausschlaggebend waren hier vor allem der Wortschatz der Kinder und die Frage, wie viel sie außerhalb des Unterrichts lasen. Kinder, die regelmäßig freiwillig zu Büchern griffen, verstanden komplexe Texte merklich besser – unabhängig davon, auf welchem Weg sie das Lesen gelernt hatten. Erfasst wurde das Leseverhalten in der Freizeit über Lesetagebücher, die die Kinder gemeinsam mit ihren Eltern führten.",
+            "Bemerkenswert fand das Team zudem die großen Unterschiede innerhalb derselben Methode. Klassen, die mit identischem Material arbeiteten, erzielten teils sehr unterschiedliche Ergebnisse. Eine Analyse von Unterrichtsvideos legt nahe, dass dabei eine Rolle spielt, wie häufig Lehrkräfte den Kindern zurückmelden, wo ihnen Fehler unterlaufen sind, und wie viel echte Lesezeit in einer Stunde bleibt. Dürrholz betont allerdings, dass diese Auswertung auf einer kleinen Stichprobe von 14 Klassen beruhe und die Befunde daher vorläufig seien.",
+            "Der Grundschuldidaktiker Volkhard Abendroth, der die Studie für eine Fachzeitschrift begutachtet hat, versteht die Ergebnisse als Mahnung an beide Lager. Wer allein auf die Methode schaue, übersehe, dass Lesefreude und Wortschatz langfristig schwerer wögen. Zugleich, so Abendroth, sprächen die Daten dafür, Kindern mit ungünstigen Voraussetzungen im ersten Schuljahr einen strukturierten Zugang zur Schrift nicht vorzuenthalten. Dürrholz selbst warnt davor, die Studie als Plädoyer für ein bestimmtes Lehrwerk zu lesen. Wichtiger als die Wahl des Buches sei es, Lehrkräfte darin fortzubilden, den Lernstand ihrer Schülerinnen und Schüler genau zu beobachten und den Unterricht danach auszurichten."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 32,
+          "type": "fehlersatz",
+          "prompt": "Zusammenfassung, Absatz 1",
+          "options": {
+            "a": "Über den geeignetsten Weg zum Lesenlernen wird in der Grundschulpädagogik seit Langem gestritten.",
+            "b": "Manche Konzepte trainieren zuerst gezielt, welche Laute zu welchen Schriftzeichen gehören, andere setzen darauf, dass Kinder diese Zusammenhänge beim Umgang mit vollständigen Wörtern und kleinen Texten selbst entdecken.",
+            "c": "Dürrholz und ihr Team haben über 1.000 Kinder von der ersten Klasse bis zum Abschluss der vierten Klasse begleitet.",
+            "d": "Den größten Vorsprung erzielten nach dem ersten Schuljahr lautorientiert unterrichtete Kinder, die zu Hause vor allem Deutsch sprachen."
+          },
+          "answer": "d",
+          "evidence": [
+            { "text": "artikel", "quote": "oder zu Hause überwiegend eine andere Sprache als Deutsch sprachen" }
+          ],
+          "explanation": "Metne göre ses odaklı yöntemden özellikle kelime dağarcığı zayıf olan veya „zu Hause überwiegend eine andere Sprache als Deutsch sprachen“ (evde çoğunlukla Almancadan başka bir dil konuşan) çocuklar yararlandı. d cümlesi en büyük üstünlüğü evde Almanca konuşan çocuklara bağlıyor; bu, metindeki ilişkiyi tersine çeviriyor. a (eski bir tartışma), b (iki yaklaşım: önce harf-ses eşleşmesi ya da baştan bütün kelime ve metinler) ve c (yaklaşık 1.100 çocuk, birinci sınıftan dördüncü sınıf sonuna kadar) metinle uyuşuyor."
+        },
+        {
+          "number": 33,
+          "type": "fehlersatz",
+          "prompt": "Zusammenfassung, Absatz 2",
+          "options": {
+            "a": "Für Kinder, die von zu Hause wenig mitbringen, ist nach Dürrholz ein gut strukturierter Anfangsunterricht besonders wichtig.",
+            "b": "Beim Lesen einzelner Wörter blieb der Vorteil der lautorientierten Methode bis zum Ende der Grundschulzeit deutlich messbar.",
+            "c": "Wie gut die Kinder in der vierten Klasse Texte verstanden, hing in erster Linie von ihrem Wortschatz und ihrer Lektüre in der Freizeit ab.",
+            "d": "Wer aus eigenem Antrieb regelmäßig las, kam mit anspruchsvollen Texten besser zurecht.",
+            "e": "Selbst Klassen, die dasselbe Lehrmaterial verwendeten, unterschieden sich in ihren Leistungen zum Teil erheblich."
+          },
+          "answer": "b",
+          "evidence": [
+            { "text": "artikel", "quote": "In der dritten Klasse waren sie beim Wortlesen statistisch nicht mehr nachweisbar." }
+          ],
+          "explanation": "Metin yöntemler arasındaki farkların zamanla küçüldüğünü ve kelime okumada üçüncü sınıfta artık „statistisch nicht mehr nachweisbar“ (istatistiksel olarak saptanamaz) olduğunu söylüyor. b cümlesi ise üstünlüğün ilkokulun sonuna kadar açıkça ölçülebilir kaldığını iddia ediyor; bu yanlış. a (Dürrholz'a göre evden az şey getiren çocuklar „auf einen gut strukturierten Anfangsunterricht angewiesen“, yani iyi yapılandırılmış bir başlangıç dersine muhtaç), c (dördüncü sınıfta metin anlama kelime dağarcığına ve okul dışı okumaya bağlı), d (gönüllü okuyanlar zor metinleri daha iyi anladı) ve e (aynı materyalle çalışan sınıflar arasında büyük farklar) metne uygun."
+        },
+        {
+          "number": 34,
+          "type": "fehlersatz",
+          "prompt": "Zusammenfassung, Absatz 3",
+          "options": {
+            "a": "Videoaufnahmen deuten darauf hin, dass Rückmeldungen zu Fehlern und die tatsächlich zum Lesen genutzte Unterrichtszeit für diese Unterschiede von Bedeutung sein könnten.",
+            "b": "Dieser Teil der Untersuchung stützt sich allerdings nur auf wenige Klassen, weshalb Dürrholz die Ergebnisse als vorläufig bezeichnet.",
+            "c": "Der Gutachter Abendroth sieht in den Ergebnissen vor allem eine Bestätigung der lautorientierten Ansätze.",
+            "d": "Zugleich sprechen die Daten seiner Ansicht nach dagegen, Kindern mit ungünstigeren Startbedingungen im ersten Schuljahr einen systematisch aufgebauten Einstieg in die Schrift zu verwehren.",
+            "e": "Dürrholz hält es für wichtiger, Lehrkräfte im genauen Beobachten des Lernstands zu schulen, als sich für ein bestimmtes Lehrbuch zu entscheiden."
+          },
+          "answer": "c",
+          "evidence": [
+            { "text": "artikel", "quote": "versteht die Ergebnisse als Mahnung an beide Lager" }
+          ],
+          "explanation": "Abendroth sonuçları „als Mahnung an beide Lager“ (her iki kampa da bir uyarı olarak) anlıyor: Yalnızca yönteme bakan, okuma sevgisini ve kelime dağarcığını gözden kaçırır. c cümlesi ise onun sonuçları özellikle ses odaklı yaklaşımların bir doğrulaması olarak gördüğünü söylüyor; bu, görüşünü tek bir tarafa indirgiyor. a (geri bildirim ve gerçek okuma süresi rol oynayabilir), b (14 sınıflık küçük örneklem, bulgular geçici), d (Abendroth'a göre veriler, koşulları zayıf çocuklardan birinci sınıfta yapılandırılmış bir girişin esirgenmemesi gerektiğini gösteriyor) ve e (kitap seçiminden çok öğretmen eğitimi) metinle uyuşuyor."
+        }
+      ]
+    }
+  ]
+}

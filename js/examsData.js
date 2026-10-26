@@ -543,9 +543,36 @@ window.BA_EXAMS = {
               { title: null, exercises: [] }, // Teil 3
             ] },
             { id: 'lesen', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
-              { title: null, exercises: [] }, // Teil 3
+              {
+                title: { tr: 'Gazete haberi · a/b/c', de: 'Zeitungsmeldung · a/b/c', en: 'News report · a/b/c' },
+                exercises: [
+                  { set: 'set-1', title: 'Ein Fest für alle Nachbarn' },
+                  { set: 'set-2', title: 'Neue Busse in der Stadt' },
+                  { set: 'set-3', title: 'Schwimmkurse für Erwachsene' },
+                  { set: 'set-4', title: 'Eine Leihoma für die Familie' },
+                  { set: 'set-5', title: 'Mit dem Zug in den Urlaub' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: 'Basın metni · richtig/falsch', de: 'Pressetext · richtig/falsch', en: 'Press text · true/false' },
+                exercises: [
+                  { set: 'set-1', title: 'Kochen in der Schule' },
+                  { set: 'set-2', title: 'Ein Sommer auf dem Bauernhof' },
+                  { set: 'set-3', title: 'Ein Kochkurs für Männer' },
+                  { set: 'set-4', title: 'Das alte Kino ist wieder offen' },
+                  { set: 'set-5', title: 'Jugendliche reparieren Fahrräder' },
+                ]
+              }, // Teil 2
+              {
+                title: { tr: 'Durumlar ve ilanlar · eşleştirme', de: 'Situationen und Anzeigen · Zuordnung', en: 'Situations and adverts · matching' },
+                exercises: [
+                  { set: 'set-1', title: 'Freizeit am Wochenende' },
+                  { set: 'set-2', title: 'Wohnung und Umzug' },
+                  { set: 'set-3', title: 'Kurse und Lernen' },
+                  { set: 'set-4', title: 'Essen und Feiern' },
+                  { set: 'set-5', title: 'Arbeit und Nebenjobs' },
+                ]
+              }, // Teil 3
             ] },
             { id: 'schreiben', teile: [
               { title: null, exercises: [] }, // Teil 1

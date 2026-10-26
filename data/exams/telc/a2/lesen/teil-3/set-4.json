@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-4",
+  "title": "Essen und Feiern",
+  "minutes": 10,
+  "instructions": "Lesen Sie die Situationen 11–15 und die Anzeigen a–h. Welche Anzeige passt zu welcher Situation? Jede Anzeige können Sie nur einmal wählen. Die Anzeige aus dem Beispiel können Sie nicht mehr wählen. Für eine Situation gibt es keine passende Anzeige; wählen Sie dann x.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": "x",
+      "texts": [
+        {
+          "id": "a",
+          "label": "a",
+          "title": "Partyservice Holtkamp",
+          "paragraphs": [
+            "Sie feiern und haben keine Zeit zum Kochen? Wir bringen warmes und kaltes Essen zu Ihnen nach Hause – für Feiern ab 15 Personen. Salate, Fleisch, Fisch und Gemüse: Sie wählen aus. Bitte bestellen Sie eine Woche vorher."
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "title": "Bäckerei Weidemann",
+          "paragraphs": [
+            "Torten für Geburtstag, Hochzeit und andere Feste – auf Wunsch mit Namen oder Foto. Bitte bestellen Sie drei Tage vorher. Sie möchten unsere Kuchen gleich probieren? Unser kleines Café ist von Montag bis Samstag von 14 bis 18 Uhr geöffnet."
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "title": "Partyraum im Vereinsheim am Sportplatz",
+          "paragraphs": [
+            "Unser Raum im Keller ist für Feiern mit bis zu 40 Personen. Es gibt eine Küche, Tische und Stühle. Essen und Getränke bringen Sie selbst mit. Laute Musik ist bis 24 Uhr erlaubt. Preis: 90 Euro pro Abend."
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "title": "Faltin – alles für Ihren Tisch",
+          "paragraphs": [
+            "Für Ihr Fest leihen wir Ihnen Teller, Tassen, Gläser, Messer und Gabeln – für 10 bis 200 Gäste. Nach dem Fest bringen Sie alles zurück. Spülen müssen Sie nicht, das machen wir für Sie."
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "title": "Getränkemarkt Kranz",
+          "paragraphs": [
+            "Getränke für Ihr Fest: Wir bringen Wasser, Saft, Limonade und Bier bis vor Ihre Tür. Gläser leihen wir Ihnen kostenlos dazu. Teller und Besteck haben wir leider nicht. Bestellungen bis Donnerstag für das Wochenende."
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "title": "Sonntagsfrühstück im Café Ambrosi",
+          "paragraphs": [
+            "Jeden Sonntag von 10 bis 14 Uhr: Brot, Eier, Käse, Obst und Kuchen, so viel Sie möchten. Erwachsene 19 Euro, Kinder bis 6 Jahre frei. Bei schönem Wetter können Sie auch draußen sitzen."
+          ]
+        },
+        {
+          "id": "g",
+          "label": "g",
+          "title": "Gasthaus Gerlach",
+          "paragraphs": [
+            "Deutsche Küche und Gerichte aus der Region, täglich ab 17 Uhr. Für Familienfeiern haben wir einen eigenen, schönen Raum mit Platz für bis zu 25 Gäste. Bitte reservieren Sie früh, besonders für Samstage."
+          ]
+        },
+        {
+          "id": "h",
+          "label": "h",
+          "title": "Grillplatz am Binsensee",
+          "paragraphs": [
+            "Die Stadt vermietet den Grillplatz am Binsensee an Gruppen. Ein großer Grill, Tische und Bänke sind da, Fleisch und Getränke bringen Sie bitte selbst mit. Ab 22 Uhr muss es ruhig sein. Preis: 25 Euro pro Tag."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Ihre Eltern sind seit 40 Jahren verheiratet. Das möchten Sie zu Hause mit 25 Gästen feiern, aber für die Küche haben Sie keine Zeit.",
+          "answer": "a",
+          "evidence": [{ "text": "a", "quote": "Wir bringen warmes und kaltes Essen zu Ihnen nach Hause – für Feiern ab 15 Personen." }],
+          "explanation": "a ilanındaki firma yemeği eve getiriyor: „Wir bringen warmes und kaltes Essen zu Ihnen nach Hause – für Feiern ab 15 Personen.“ (Sıcak ve soğuk yemeği evinize getiriyoruz – 15 kişiden itibaren kutlamalar için.) Siz evde 25 misafirle kutlama yapmak istiyorsunuz ve mutfak için vaktiniz yok. Bu ilan örnekte kullanıldığı için başka bir durum için seçilemez."
+        },
+        {
+          "number": 11,
+          "type": "zuordnung",
+          "prompt": "Herr Hollmann wird 70. Seine Familie möchte am Samstagabend mit 35 Gästen in einem Restaurant feiern. Alle sollen dort zusammen essen, und niemand möchte selbst kochen.",
+          "answer": "x",
+          "evidence": [{ "text": "g", "quote": "Für Familienfeiern haben wir einen eigenen, schönen Raum mit Platz für bis zu 25 Gäste." }],
+          "explanation": "Tuzak g: Bu bir lokanta, akşamları açık ve aile kutlamaları için ayrı bir odası var; ilk bakışta uygun görünüyor. Ama odada „Platz für bis zu 25 Gäste“ (en fazla 25 misafirlik yer) var. Hollmann ailesi ise 35 misafirle kutlamak istiyor. c'deki oda 40 kişilik, ama orası bir lokanta değil: „Essen und Getränke bringen Sie selbst mit.“ (Yemek ve içecekleri kendiniz getirirsiniz.) f'deki kafede pazar günü 10–14 arası kahvaltı var; Hollmann ailesi ise cumartesi akşamı kutlamak istiyor. Bu yüzden cevap x."
+        },
+        {
+          "number": 12,
+          "type": "zuordnung",
+          "prompt": "Der Kindergarten Ihrer Tochter feiert ein Sommerfest mit 120 Gästen. Die Eltern möchten keine Plastikteller benutzen. Aber im Kindergarten gibt es nicht genug Teller, Gläser und Besteck.",
+          "answer": "d",
+          "evidence": [{ "text": "d", "quote": "Für Ihr Fest leihen wir Ihnen Teller, Tassen, Gläser, Messer und Gabeln – für 10 bis 200 Gäste." }],
+          "explanation": "d ilanında şöyle yazıyor: „Für Ihr Fest leihen wir Ihnen Teller, Tassen, Gläser, Messer und Gabeln – für 10 bis 200 Gäste.“ (Kutlamanız için size tabak, fincan, bardak, bıçak ve çatal ödünç veriyoruz – 10 ile 200 misafir için.) Anaokulunda 120 misafir olacak ve yeterli tabak, bardak ve çatal bıçak yok. Tuzak e: İçecek marketi de bardakları ücretsiz ödünç veriyor („Gläser leihen wir Ihnen kostenlos dazu“), ama „Teller und Besteck haben wir leider nicht.“ (Tabak ve çatal bıçağımız maalesef yok.)"
+        },
+        {
+          "number": 13,
+          "type": "zuordnung",
+          "prompt": "Bennet möchte mit Freunden einen Nachmittag im Freien verbringen. Dabei wollen sie Fleisch und Gemüse grillen. Einen eigenen Grill hat keiner von ihnen.",
+          "answer": "h",
+          "evidence": [{ "text": "h", "quote": "Ein großer Grill, Tische und Bänke sind da" }],
+          "explanation": "h ilanında şehir göl kenarındaki bir mangal yerini gruplara kiralıyor: „Ein großer Grill, Tische und Bänke sind da“ (Büyük bir mangal, masalar ve banklar var). Bennet ve arkadaşları açık havada et ve sebze pişirmek istiyor, ama hiçbirinin mangalı yok. Tuzak c: Orada da yemek yapılabilir, çünkü bir „Küche“ (mutfak) var; ama oda „im Keller“ (bodrum katta), yani açık havada değil."
+        },
+        {
+          "number": 14,
+          "type": "zuordnung",
+          "prompt": "Vito wird 18 und möchte mit 30 Freunden feiern und bis Mitternacht tanzen. Die Wohnung seiner Eltern ist dafür zu klein. Das Essen kochen Vitos Mutter und seine Tante selbst.",
+          "answer": "c",
+          "evidence": [{ "text": "c", "quote": "Unser Raum im Keller ist für Feiern mit bis zu 40 Personen." }],
+          "explanation": "c ilanındaki oda „für Feiern mit bis zu 40 Personen“ (en fazla 40 kişilik kutlamalar için); Vito 30 arkadaşıyla kutlamak istiyor. „Essen und Getränke bringen Sie selbst mit“ (Yemek ve içecekleri kendiniz getirirsiniz) yazıyor; Vito'nun annesi ve teyzesi/halası yemeği zaten kendisi pişiriyor. „Laute Musik ist bis 24 Uhr erlaubt“ (Yüksek sesli müziğe saat 24'e kadar izin var), yani gece yarısına kadar dans edilebilir. Tuzak g: Lokantanın odası sadece 25 kişilik. Tuzak h: Mangal yerinde „Ab 22 Uhr muss es ruhig sein“ (Saat 22'den sonra sessiz olmalı)."
+        },
+        {
+          "number": 15,
+          "type": "zuordnung",
+          "prompt": "Familie Sundermann schläft am Sonntag gern lange. Danach möchte sie nicht zu Hause, sondern in einem Café frühstücken. Die Kinder sind vier und fünf Jahre alt. Für sie möchte die Familie nichts bezahlen.",
+          "answer": "f",
+          "evidence": [{ "text": "f", "quote": "Kinder bis 6 Jahre frei" }],
+          "explanation": "f ilanındaki kafede „Jeden Sonntag von 10 bis 14 Uhr“ (her pazar 10'dan 14'e kadar) kahvaltı var, yani geç kalkan bir aile de gidebilir. Ayrıca „Kinder bis 6 Jahre frei“ (6 yaşına kadar çocuklar ücretsiz) yazıyor. Sundermann ailesinin çocukları dört ve beş yaşında, yani aile onlar için para ödemiyor. Tuzak b: Fırının da küçük bir kafesi var, ama kafe „von Montag bis Samstag“ (pazartesiden cumartesiye kadar) açık. Sundermann ailesi ise pazar günü kahvaltı etmek istiyor."
+        }
+      ]
+    }
+  ]
+}

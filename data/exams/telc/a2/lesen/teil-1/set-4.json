@@ -1,0 +1,121 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 1,
+  "set": "set-4",
+  "title": "Eine Leihoma für die Familie",
+  "minutes": 10,
+  "instructions": "Lesen Sie den Zeitungstext und die Aufgaben 1–5. Welche Lösung ist richtig: a, b oder c?",
+  "groups": [
+    {
+      "layout": "article",
+      "texts": [
+        {
+          "id": "leihoma",
+          "title": "Eine Leihoma für die Familie",
+          "byline": "Moosbrunner Rundschau",
+          "paragraphs": [
+            "Gerda Lindhorst ist 68 Jahre alt und hat keine eigenen Enkel. Der Sohn von Gerda Lindhorst wohnt mit seiner Frau in Australien, also sehr weit weg. Trotzdem holt Gerda Lindhorst jeden Mittwoch zwei Kinder vom Kindergarten ab: Jannis ist fünf, sein Bruder Mats drei Jahre alt. Gerda Lindhorst ist die Leihoma von den beiden.",
+            "Die Mutter, Jasmin Wiesenthal, arbeitet als Krankenschwester, oft auch am Nachmittag. Der Vater ist für seine Firma oft lange unterwegs. Die Großeltern von Jannis und Mats wohnen 400 Kilometer weit weg. „Wir haben lange eine Hilfe gesucht“, sagt Jasmin Wiesenthal. Dann hat sie im Familienbüro der Stadt von dem Projekt „Leihgroßeltern“ gehört.",
+            "Das Familienbüro bringt seit zwei Jahren Familien und ältere Menschen zusammen. Am Anfang haben die Familie und die Leihoma oder der Leihopa vier Wochen Zeit zum Kennenlernen. Geld bekommen die Leihgroßeltern nicht. Nur die Fahrkarten für den Bus bezahlen die Familien. Zurzeit machen 23 Familien mit, aber es fehlen ältere Leute: 15 Familien warten noch.",
+            "Bei schönem Wetter spielt Gerda Lindhorst mit den Kindern im Park, bei Regen backt sie mit ihnen Kekse. Fernsehen gibt es am Mittwoch nicht, das hat sie mit den Eltern so besprochen. Am Mittwochabend isst sie oft noch mit der Familie zusammen. „Früher war ich nach der Arbeit oft allein. Jetzt freue ich mich die ganze Woche auf den Mittwoch“, sagt Gerda Lindhorst."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "type": "abc",
+          "prompt": "Gerda Lindhorst …",
+          "options": {
+            "a": "holt ihre eigenen Enkel vom Kindergarten ab.",
+            "b": "kümmert sich einmal pro Woche um zwei Kinder.",
+            "c": "wohnt zusammen mit ihrem Sohn in Australien."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "leihoma",
+              "quote": "holt Gerda Lindhorst jeden Mittwoch zwei Kinder vom Kindergarten ab"
+            }
+          ],
+          "explanation": "Metinde „Trotzdem holt Gerda Lindhorst jeden Mittwoch zwei Kinder vom Kindergarten ab“ (Yine de Gerda Lindhorst her çarşamba iki çocuğu anaokulundan alıyor) yazıyor. „jeden Mittwoch“ (her çarşamba) = „einmal pro Woche“ (haftada bir). a) yanlış: Gerda Lindhorst'un kendi torunu yok: „hat keine eigenen Enkel“; Jannis ve Mats'ın kiralık (ödünç) büyükannesi: „Leihoma“. c) yanlış: Avustralya'da onun oğlu ve gelini yaşıyor, yani ondan çok uzakta: „Der Sohn von Gerda Lindhorst wohnt mit seiner Frau in Australien, also sehr weit weg.“"
+        },
+        {
+          "number": 2,
+          "type": "abc",
+          "prompt": "Jasmin Wiesenthal …",
+          "options": {
+            "a": "ist beruflich oft lange unterwegs.",
+            "b": "musste nicht lange nach einer Hilfe suchen.",
+            "c": "hat in einem Büro der Stadt von dem Projekt erfahren."
+          },
+          "answer": "c",
+          "evidence": [
+            {
+              "text": "leihoma",
+              "quote": "Dann hat sie im Familienbüro der Stadt von dem Projekt „Leihgroßeltern“ gehört."
+            }
+          ],
+          "explanation": "Metinde „Dann hat sie im Familienbüro der Stadt von dem Projekt „Leihgroßeltern“ gehört“ (Sonra belediyenin aile bürosunda „Kiralık büyükanne-büyükbaba“ projesini duydu) yazıyor. „gehört“ (duydu) = „erfahren“ (öğrendi). a) yanlış: İş için sık sık uzun süre yolda olan babadır: „Der Vater ist für seine Firma oft lange unterwegs.“ Jasmin Wiesenthal hemşire: „arbeitet als Krankenschwester“. b) yanlış: Uzun süre yardım aradılar: „Wir haben lange eine Hilfe gesucht.“"
+        },
+        {
+          "number": 3,
+          "type": "abc",
+          "prompt": "Beim Projekt „Leihgroßeltern“ …",
+          "options": {
+            "a": "bekommen die älteren Leute Geld für ihre Hilfe.",
+            "b": "können sich Familie und Leihoma einen Monat lang kennenlernen.",
+            "c": "gibt es mehr ältere Menschen als Familien."
+          },
+          "answer": "b",
+          "evidence": [
+            {
+              "text": "leihoma",
+              "quote": "vier Wochen Zeit zum Kennenlernen"
+            }
+          ],
+          "explanation": "Başta aile ve kiralık büyükannenin tanışmak için dört haftası var: „Am Anfang haben die Familie und die Leihoma oder der Leihopa vier Wochen Zeit zum Kennenlernen.“ „vier Wochen“ (dört hafta) = „einen Monat“ (bir ay). a) yanlış: Kiralık büyükanne ve büyükbabalar para almıyor: „Geld bekommen die Leihgroßeltern nicht“; aileler sadece otobüs biletlerini ödüyor: „Nur die Fahrkarten für den Bus bezahlen die Familien.“ c) yanlış: Yaşlı insanlar eksik, 15 aile hâlâ bekliyor: „es fehlen ältere Leute: 15 Familien warten noch.“"
+        },
+        {
+          "number": 4,
+          "type": "abc",
+          "prompt": "Mit Jannis und Mats …",
+          "options": {
+            "a": "macht Gerda Lindhorst Kekse, wenn das Wetter schlecht ist.",
+            "b": "sieht Gerda Lindhorst am Mittwoch gern fern.",
+            "c": "geht Gerda Lindhorst auch bei Regen in den Park."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "leihoma",
+              "quote": "bei Regen backt sie mit ihnen Kekse"
+            }
+          ],
+          "explanation": "Metinde „bei Regen backt sie mit ihnen Kekse“ (yağmurda onlarla kurabiye pişiriyor) yazıyor. „bei Regen“ (yağmurda) = „wenn das Wetter schlecht ist“ (hava kötü olduğunda). b) yanlış: Gerda Lindhorst çocuklarla çarşamba günleri birlikte ve çarşamba günü televizyon yok: „Fernsehen gibt es am Mittwoch nicht, das hat sie mit den Eltern so besprochen.“ c) yanlış: Parka güzel havada gidiyor: „Bei schönem Wetter spielt Gerda Lindhorst mit den Kindern im Park“; yağmurda kurabiye yapıyorlar."
+        },
+        {
+          "number": 5,
+          "type": "abc",
+          "prompt": "Gerda Lindhorst …",
+          "options": {
+            "a": "freut sich jede Woche auf den Tag mit Jannis und Mats.",
+            "b": "war früher nach der Arbeit oft mit Freunden zusammen.",
+            "c": "isst am Mittwochabend meistens allein zu Hause."
+          },
+          "answer": "a",
+          "evidence": [
+            {
+              "text": "leihoma",
+              "quote": "Jetzt freue ich mich die ganze Woche auf den Mittwoch"
+            }
+          ],
+          "explanation": "Gerda Lindhorst „Jetzt freue ich mich die ganze Woche auf den Mittwoch“ (Şimdi bütün hafta çarşambayı sevinçle bekliyorum) diyor. Çarşamba, Jannis ve Mats'la birlikte olduğu gün: „jeden Mittwoch“. b) yanlış: Eskiden işten sonra arkadaşlarıyla değil, çoğu zaman yalnızdı: „Früher war ich nach der Arbeit oft allein.“ c) yanlış: Çarşamba akşamı sık sık aileyle birlikte yemek yiyor: „Am Mittwochabend isst sie oft noch mit der Familie zusammen.“"
+        }
+      ]
+    }
+  ]
+}

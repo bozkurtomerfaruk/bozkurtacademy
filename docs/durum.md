@@ -9,8 +9,9 @@
 - Aşama 2, TestDaF kâğıt: bitti, main'e birleştirildi.
 - Aşama 3, TestDaF dijital: bitti, main'e birleştirildi (00feb1c; Aufgabe 2 ve 7 atlandı). Modelltest PDF'leri çalışma alanından silindi.
 - Aşama 4, telc B1: bitti, main'e birleştirildi (49db897).
-- Aşama 5, telc A1: bitti, main'e birleştirildi.
-- Aşama 6–7, telc A2 ve B2: ayrı dallarda (`claude/telc-a2`, `claude/telc-b2`) paralel sürüyor.
+- Aşama 5, telc A1: bitti, main'e birleştirildi (7c9acb2).
+- Aşama 6, telc A2: bitti, main'e birleştirildi.
+- Aşama 7–8, telc B2 ve C1 Hochschule: ayrı dallarda (`claude/telc-b2`, `claude/telc-c1h`; çalışma ağaçları /tmp/wt-tb2, /tmp/wt-tc1) paralel sürüyor.
 
 ### telc Deutsch A1 (Start Deutsch 1) Lesen: format tablosu
 Start Deutsch 1, Goethe-Institut ile telc'in ortak geliştirdiği sınav; telc A1 ile Goethe A1'in formatı aynı (✔). Bu yüzden tablo Goethe A1 tablomuzla aynı; içerik tamamen yeni (Goethe A1'in hiçbir konusu, durumu, adı veya tabelası tekrar edilmiyor).
@@ -29,6 +30,28 @@ Toplam ~25 dk (✔).
 - İki başlık sitede zaten vardı, değiştirildi: „Ein Kindergeburtstag“, „Sport im Verein“.
 
 **Düzeltmediğim notlar:** Zirkus, Größe, Rezept gibi birkaç kelime A1 sınırında; Türkçe açıklamada çevrildikleri için bırakıldı. Bazı Teil 3 ifadeleri (ör. çocuklar daha az öder) genel bilgiyle tahmin edilebiliyor.
+
+### telc Deutsch A2 (Start Deutsch 2) Leseverstehen: format tablosu
+Kaynak: telc Übungstest açıklamaları ve hazırlık sitelerinin özetleri (arama sonuçları; resmî PDF'lere ağdan erişilemedi). ✔ = birden çok kaynakta doğrulandı, ≈ = tahmin veya bizim kararımız. Lesen ve Schreiben birlikte 50 dk (✔).
+
+| Teil | Metin | Görev | Soru | Süre |
+|---|---|---|---|---|
+| 1 | Kısa gazete metni (✔), ~170–210 kelime (≈) | a/b/c, metin sırasıyla (✔) | 1–5 (✔) | ~10 dk (≈) |
+| 2 | Basın metni, ~150 kelime (≈ tek kaynak) | richtig/falsch, metin sırasıyla (≈) | 6–10 (✔) | ~10 dk (≈) |
+| 3 | 8 ilan a–h (✔) | Örnek 0 + 5 durum; bir durum için ilan yok: x; üç ilan artar (✔) | 11–15 (✔) | ~10 dk (≈) |
+
+- **Bizim kararlarımız (≈):** Teil 1 ve 2'de örnek yok; Teil 3'te x tuzağı her sette başka bir koşula dayanıyor (yaş, tarih …).
+- **Oynatıcı:** yeni eklenti gerekmedi (a/b/c, richtig/falsch, `"none": "x"` ve örnek 0 zaten var).
+
+**Aşama 6 bitti: 3 Teil × 5 set (15 set, 75 soru).**
+- Kör çözüm pilotta 30/30, set 3–5'te 45/45 uyuştu.
+- İnceleyiciler A2 üstü kelimeleri sadeleştirdi (Chatgruppe, Einzelfahrt, Klinik, Kursgebühr, Konditorei, Umfragen …), yalnızca „metinde yok“ olan çeldiricileri metinle çelişen çeldiricilere çevirdi, bütçeleri sayıyla verdi, gerçek marka adlarını ve paralel dallarla çakışan adları değiştirdi.
+- Teil 3'te x tuzakları her sette başka bir koşula dayanıyor: yaş, tarih, kendi ekipmanı, grup büyüklüğü, saat ücreti.
+
+**Düzeltmediğim notlar:**
+- Bazı Teil 3 durumları ilanla aynı anahtar kelimeyi paylaşıyor (Gitarre, Grill, Sonntag); çeldirici ilanlar yine de okumayı gerektiriyor.
+- Konu yakınlıkları: yetişkin yüzme kursu (Goethe B1'de bir cümle), aşçıyla yemek kursu (telc A2 T2 set-1'e yakın), yeniden açılan köy sineması (Goethe A2 „Kinoabend im Dorf“a yakın; başlık değiştirildi: „Das alte Kino ist wieder offen“).
+- T1 set-4 metni ~229 kelime, hedefin biraz üstünde.
 
 ### telc Deutsch B1 (Zertifikat Deutsch) Leseverstehen + Sprachbausteine: format tablosu
 Kaynak: telc'in yayımladığı sınav yapısı ve örnek sınav açıklamaları (arama sonuçları). ✔ = kaynaklarda doğrulandı, ≈ = tahmin veya bizim kararımız. Lesen ve Sprachbausteine birlikte 90 dk (✔).

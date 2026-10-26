@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-2",
+  "title": "Wohnung und Umzug",
+  "minutes": 10,
+  "instructions": "Lesen Sie die Situationen 11–15 und die Anzeigen a–h. Welche Anzeige passt zu welcher Situation? Jede Anzeige können Sie nur einmal wählen. Die Anzeige aus dem Beispiel können Sie nicht mehr wählen. Für eine Situation gibt es keine passende Anzeige; wählen Sie dann x.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": "x",
+      "texts": [
+        {
+          "id": "a",
+          "label": "a",
+          "title": "Kistenfuchs – leihen statt kaufen",
+          "paragraphs": [
+            "Stabile Kisten aus Plastik sind besser als Kartons, denn sie werden auch bei Regen nicht weich. 40 Kisten für zwei Wochen kosten 35 Euro. Wir bringen die Kisten zu Ihnen nach Hause und holen sie nach dem Umzug wieder ab."
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "title": "Tastenträger – Klaviertransporte",
+          "paragraphs": [
+            "Ein Klavier wiegt bis zu 300 Kilo. Unser Team trägt Ihr Instrument sicher die Treppe hoch oder runter, auch in Häusern ohne Aufzug. Wir stellen es in der neuen Wohnung dort hin, wo Sie es haben möchten. Der Preis hängt vom Stockwerk ab."
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "title": "Möbellager Sicherraum",
+          "paragraphs": [
+            "Sie müssen aus Ihrer alten Wohnung raus, aber die neue ist noch nicht frei? Wir holen Ihre Möbel ab, und sie bleiben in unseren trockenen, sauberen Räumen – eine Woche, einen Monat oder länger. Ab 59 Euro im Monat."
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "title": "Umzugskartons zu verschenken",
+          "paragraphs": [
+            "Wir sind gerade umgezogen und brauchen unsere 30 Umzugskartons nicht mehr. Sie sind fast wie neu. Wer sie haben möchte, bekommt sie kostenlos. Bitte holen Sie die Kartons selbst bei uns ab. Telefon: 0157 3382 9046."
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "title": "Bürgerbüro Ginsterbach – jetzt auch samstags",
+          "paragraphs": [
+            "Sie sind umgezogen? Dann melden Sie bitte in den ersten zwei Wochen Ihre neue Adresse bei uns. Neu: Das Bürgerbüro im Rathaus hat jetzt auch samstags von 9 bis 12 Uhr geöffnet. Einen Termin bekommen Sie online oder am Telefon."
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "title": "Malerin Elske Thalbach",
+          "paragraphs": [
+            "Ich streiche Wände, Decken und Türen – sauber, schnell und günstig. Farbe und Werkzeug bringe ich mit. Bitte stellen Sie die Möbel vorher in die Mitte des Zimmers. Im März und April habe ich leider keine Zeit, neue Termine gibt es ab Mai."
+          ]
+        },
+        {
+          "id": "g",
+          "label": "g",
+          "title": "Küche zu verkaufen",
+          "paragraphs": [
+            "Wir ziehen ins Ausland und verkaufen unsere weiße Küche. Sie ist drei Jahre alt, mit Herd, Kühlschrank und Spülmaschine. Preis: 350 Euro. Sie müssen die Küche selbst abbauen und abholen. Bitte rufen Sie abends an: 0162 7710 4583."
+          ]
+        },
+        {
+          "id": "h",
+          "label": "h",
+          "title": "Küchenstudio Pfannenglück",
+          "paragraphs": [
+            "Wir planen Ihre neue Küche genau für Ihre Wohnung – mit Ihren Lieblingsfarben. Lieferung und Aufbau sind im Preis dabei, Sie müssen nichts selbst machen. Küchen gibt es bei uns ab 4.500 Euro. Beratung Montag bis Samstag von 10 bis 19 Uhr."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Sie wohnen seit einer Woche in einer anderen Wohnung und müssen das der Stadt sagen. Von Montag bis Freitag arbeiten Sie den ganzen Tag.",
+          "answer": "e",
+          "evidence": [{ "text": "e", "quote": "Das Bürgerbüro im Rathaus hat jetzt auch samstags von 9 bis 12 Uhr geöffnet." }],
+          "explanation": "e ilanında taşınan kişilerin yeni adreslerini ilk iki hafta içinde bildirmesi isteniyor ve vatandaş bürosu artık „auch samstags von 9 bis 12 Uhr“ (cumartesi günleri de 9'dan 12'ye kadar) açık. Bu kişi hafta içi bütün gün çalışıyor; cumartesi gidebilir. Bu ilan örnekte kullanıldığı için başka bir durum için seçilemez."
+        },
+        {
+          "number": 11,
+          "type": "zuordnung",
+          "prompt": "Herr Kolbinger zieht in eine Wohnung im 3. Stock. Kartons und kleine Möbel trägt er mit Freunden selbst. Aber das Klavier seiner Tochter ist sehr schwer, und dafür möchte er starke Helfer mit Erfahrung.",
+          "answer": "b",
+          "evidence": [{ "text": "b", "quote": "Unser Team trägt Ihr Instrument sicher die Treppe hoch oder runter" }],
+          "explanation": "b ilanındaki ekip piyano taşıyor: „Unser Team trägt Ihr Instrument sicher die Treppe hoch oder runter“ (Ekibimiz enstrümanınızı merdivenden güvenle yukarı veya aşağı taşır). Bay Kolbinger 3. kata taşınıyor ve kızının çok ağır „Klavier“ (piyano) için deneyimli, güçlü yardımcılar arıyor. Tuzak c: Bu firma da eşyaları alıyor („Wir holen Ihre Möbel ab“), ama onları yeni eve götürmüyor, kendi depolarında saklıyor."
+        },
+        {
+          "number": 12,
+          "type": "zuordnung",
+          "prompt": "Ihre Freundin bekommt am 1. März die Schlüssel für ihre neue Wohnung und zieht am 15. März ein. In diesen zwei Wochen soll jemand die Wände in allen Zimmern neu streichen.",
+          "answer": "x",
+          "evidence": [{ "text": "f", "quote": "Im März und April habe ich leider keine Zeit, neue Termine gibt es ab Mai." }],
+          "explanation": "Tuzak f: Elske Thalbach duvarları boyuyor („Ich streiche Wände“), bu yüzden ilan ilk bakışta uygun görünüyor. Ama „Im März und April habe ich leider keine Zeit, neue Termine gibt es ab Mai.“ (Mart ve nisanda maalesef vaktim yok, yeni randevular mayıstan itibaren.) Arkadaşınız ise duvarların 1–15 mart arasında boyanmasını istiyor. Diğer ilanlarda duvar boyama işi geçmiyor. Bu yüzden cevap x."
+        },
+        {
+          "number": 13,
+          "type": "zuordnung",
+          "prompt": "Jelka hat eine Wohnung ohne Küche gemietet. Für eine Küche kann sie höchstens 500 Euro bezahlen. Jelkas Bruder hat ein großes Auto und kann gut mit Werkzeug arbeiten. Er hilft ihr gern.",
+          "answer": "g",
+          "evidence": [{ "text": "g", "quote": "Sie müssen die Küche selbst abbauen und abholen." }],
+          "explanation": "g ilanında üç yıllık bir mutfak 350 euroya satılıyor; ama „Sie müssen die Küche selbst abbauen und abholen“ (Mutfağı kendiniz sökmeli ve almalısınız). Jelka mutfak için en fazla 500 euro ödeyebilir („höchstens 500 Euro“); 350 euro bu sınırın altında. Erkek kardeşinin („Bruder“) büyük bir arabası var ve aletlerle iyi çalışabiliyor, yani mutfağı söküp getirebilir. Tuzak h: Orada da mutfak var ve kurulum fiyata dahil, ama mutfaklar „ab 4.500 Euro“ (4.500 eurodan başlayan fiyatlarla); bu, Jelka'nın 500 euroluk sınırından çok fazla."
+        },
+        {
+          "number": 14,
+          "type": "zuordnung",
+          "prompt": "Nuria braucht für ihren Umzug viele Kisten. Nuria möchte keine kaufen, sondern sie nur ein paar Tage benutzen und danach zurückgeben. Ein Auto hat sie nicht.",
+          "answer": "a",
+          "evidence": [{ "text": "a", "quote": "Wir bringen die Kisten zu Ihnen nach Hause und holen sie nach dem Umzug wieder ab." }],
+          "explanation": "a ilanında plastik kasalar iki haftalığına kiralanıyor ve firma şunu yazıyor: „Wir bringen die Kisten zu Ihnen nach Hause und holen sie nach dem Umzug wieder ab.“ (Kasaları evinize getiriyor ve taşınmadan sonra geri alıyoruz.) Nuria kasaları satın almak istemiyor, sonra geri vermek istiyor ve arabası yok. Tuzak d: Koliler ücretsiz, ama hediye ediliyor, geri verilmiyor; ayrıca „Bitte holen Sie die Kartons selbst bei uns ab“ (Kolileri kendiniz gelip alın) yazıyor."
+        },
+        {
+          "number": 15,
+          "type": "zuordnung",
+          "prompt": "Familie Szabó muss am 31. Mai aus der alten Wohnung ausziehen, aber in die neue Wohnung darf sie erst am 1. Juli. Im Juni wohnt die Familie bei den Großeltern. Dort ist kein Platz für Schränke, Betten und Sofa.",
+          "answer": "c",
+          "evidence": [{ "text": "c", "quote": "Wir holen Ihre Möbel ab, und sie bleiben in unseren trockenen, sauberen Räumen" }],
+          "explanation": "c ilanı tam bu durum için: Eski evden çıkmak gerekiyor ama yeni ev henüz boş değil. Firma „Wir holen Ihre Möbel ab, und sie bleiben in unseren trockenen, sauberen Räumen“ (Eşyalarınızı alıyoruz, kuru ve temiz odalarımızda kalıyorlar) diyor; „einen Monat“ (bir ay) da mümkün. Szabó ailesinin eşyaları haziran ayında bir yerde durmalı. Tuzak b: O ekip de ağır bir şey taşıyor, ama piyano taşıyor („Klaviertransporte“) ve piyanoyu yeni evde istenen yere koyuyor: „Wir stellen es in der neuen Wohnung dort hin“. Szabó ailesi ise yeni eve ancak 1 temmuzda girebiliyor („erst am 1. Juli“)."
+        }
+      ]
+    }
+  ]
+}

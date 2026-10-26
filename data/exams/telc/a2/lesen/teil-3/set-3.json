@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-3",
+  "title": "Kurse und Lernen",
+  "minutes": 10,
+  "instructions": "Lesen Sie die Situationen 11–15 und die Anzeigen a–h. Welche Anzeige passt zu welcher Situation? Jede Anzeige können Sie nur einmal wählen. Die Anzeige aus dem Beispiel können Sie nicht mehr wählen. Für eine Situation gibt es keine passende Anzeige; wählen Sie dann x.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": "x",
+      "texts": [
+        {
+          "id": "a",
+          "label": "a",
+          "title": "Schöne Bilder mit dem Handy",
+          "paragraphs": [
+            "Sie brauchen keine teure Kamera, Ihr Handy reicht! An zwei Abenden lernen Sie, wie Ihre Fotos auch bei wenig Licht hell und klar werden. Mittwoch und Donnerstag von 18 bis 20 Uhr. Preis: 30 Euro."
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "title": "Erste Hilfe am Samstag",
+          "paragraphs": [
+            "In diesem Kurs lernen Sie, was Sie bei einem Unfall tun müssen. Wer den Führerschein machen will, braucht diesen Kurs. Samstag von 9 bis 17 Uhr im Haus der Vereine. Preis: 45 Euro. Bitte melden Sie sich online an."
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "title": "Italienisch am Abend",
+          "paragraphs": [
+            "Die Volkshochschule bietet einen neuen Kurs an: Italienisch für Menschen, die noch kein Wort Italienisch sprechen. Zehn Abende, immer dienstags von 19 bis 20.30 Uhr. Unsere Lehrerin kommt aus Italien. Preis: 120 Euro."
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "title": "Singen Sie mit!",
+          "paragraphs": [
+            "Unser Chor sucht neue Mitglieder. Wir singen Pop und alte Volkslieder. Sie brauchen kein Instrument und müssen keine Noten lesen können – nur Freude am Singen. Wir treffen uns montags um 19 Uhr in der Grundschule am Ulmenweg."
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "title": "Sprachtandem im Stadtteilcafé",
+          "paragraphs": [
+            "Zwei Menschen lernen zusammen: Eine halbe Stunde sprechen Sie Deutsch, eine halbe Stunde die Sprache der anderen Person, zum Beispiel Türkisch, Englisch oder Italienisch. Jeden Donnerstag um 18 Uhr. Die Teilnahme ist kostenlos."
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "title": "Nähen für Anfänger",
+          "paragraphs": [
+            "Eine Hose kürzer machen, einen Rock nähen: In unserem Kurs lernen Sie es Schritt für Schritt. Vier Samstage, immer von 10 bis 13 Uhr, 60 Euro. Wichtig: Bitte bringen Sie Ihre eigene Nähmaschine mit."
+          ]
+        },
+        {
+          "id": "g",
+          "label": "g",
+          "title": "Musikschule Bendixen: Gitarre für Erwachsene",
+          "paragraphs": [
+            "Sie wollten schon immer Gitarre spielen? In unserem Kurs für Anfänger lernen Sie einfache Lieder – ganz ohne Noten. Kleine Gruppen, immer freitags von 18 bis 19 Uhr. Sie haben noch keine Gitarre? Dann leihen wir Ihnen eine."
+          ]
+        },
+        {
+          "id": "h",
+          "label": "h",
+          "title": "Radfahren für Erwachsene",
+          "paragraphs": [
+            "Sie haben als Kind nie Rad fahren gelernt? Kein Problem! Bei uns üben Erwachsene in kleinen Gruppen auf einem ruhigen Platz ohne Autos. Fahrräder und Helme bekommen Sie von uns. Fünf Termine, sonntags von 10 bis 12 Uhr, 40 Euro."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Sie möchten Auto fahren lernen. Vorher müssen Sie einen Kurs machen und lernen, wie man nach einem Unfall hilft.",
+          "answer": "b",
+          "evidence": [{ "text": "b", "quote": "Wer den Führerschein machen will, braucht diesen Kurs." }],
+          "explanation": "b ilanındaki kursta „was Sie bei einem Unfall tun müssen“ (bir kazada ne yapmanız gerektiği) öğretiliyor ve „Wer den Führerschein machen will, braucht diesen Kurs.“ (Ehliyet almak isteyen bu kursa ihtiyaç duyar.) yazıyor. Siz araba kullanmayı öğrenmek istiyorsunuz ve önce kazada yardım etmeyi öğrenmelisiniz. Bu ilan örnekte kullanıldığı için başka bir durum için seçilemez."
+        },
+        {
+          "number": 11,
+          "type": "zuordnung",
+          "prompt": "Kian hat zwei Jahre in Italien gelebt und möchte sein Italienisch nicht vergessen. Für einen Kurs möchte er kein Geld bezahlen. Dafür hilft er gern anderen Menschen beim Deutschlernen.",
+          "answer": "e",
+          "evidence": [{ "text": "e", "quote": "Eine halbe Stunde sprechen Sie Deutsch, eine halbe Stunde die Sprache der anderen Person" }],
+          "explanation": "e ilanında iki kişi birlikte öğreniyor: „Eine halbe Stunde sprechen Sie Deutsch, eine halbe Stunde die Sprache der anderen Person“ (Yarım saat Almanca, yarım saat diğer kişinin dilini konuşuyorsunuz); örnek dillerden biri „Italienisch“ (İtalyanca). Katılım „kostenlos“ (ücretsiz). Kian para ödemek istemiyor ve karşılığında başkalarına Almanca konusunda yardım edebilir. Tuzak c: Orada da İtalyanca var, ama kurs „für Menschen, die noch kein Wort Italienisch sprechen“ (henüz hiç İtalyanca konuşmayan insanlar için) ve „Preis: 120 Euro“ (fiyat: 120 euro). Kian ise iki yıl İtalya'da yaşadı ve para ödemek istemiyor."
+        },
+        {
+          "number": 12,
+          "type": "zuordnung",
+          "prompt": "Herr Mertens hat zum 50. Geburtstag eine Gitarre bekommen. Er hat noch nie ein Instrument gespielt und kann keine Noten lesen. Jetzt möchte er bekannte Lieder auf der Gitarre spielen.",
+          "answer": "g",
+          "evidence": [{ "text": "g", "quote": "In unserem Kurs für Anfänger lernen Sie einfache Lieder – ganz ohne Noten." }],
+          "explanation": "g ilanında yetişkinler için gitar kursu var: „In unserem Kurs für Anfänger lernen Sie einfache Lieder – ganz ohne Noten.“ (Yeni başlayanlar kursumuzda nota olmadan basit şarkılar öğrenirsiniz.) Bay Mertens daha önce hiç enstrüman çalmadı, nota okuyamıyor ve gitarla şarkı çalmak istiyor. Tuzak d: Korda da nota bilmek gerekmiyor ve şarkılar var, ama orada şarkı söyleniyor: „Sie brauchen kein Instrument“ (Enstrümana ihtiyacınız yok). Bay Mertens ise gitar çalmak istiyor."
+        },
+        {
+          "number": 13,
+          "type": "zuordnung",
+          "prompt": "Ihre Mutter macht im Urlaub viele Bilder mit ihrem Smartphone. Leider sind die Bilder oft zu dunkel. Eine Kamera hat sie nicht.",
+          "answer": "a",
+          "evidence": [{ "text": "a", "quote": "An zwei Abenden lernen Sie, wie Ihre Fotos auch bei wenig Licht hell und klar werden." }],
+          "explanation": "a ilanında şöyle yazıyor: „Sie brauchen keine teure Kamera, Ihr Handy reicht!“ (Pahalı bir kameraya ihtiyacınız yok, cep telefonunuz yeterli!) ve iki akşamda fotoğrafların „auch bei wenig Licht hell und klar“ (az ışıkta da aydınlık ve net) olmasını öğreniyorsunuz. Anneniz fotoğraflarını akıllı telefonla çekiyor, fotoğraflar çoğu zaman çok karanlık oluyor ve kamerası yok. Başka hiçbir ilan fotoğrafla ilgili değil."
+        },
+        {
+          "number": 14,
+          "type": "zuordnung",
+          "prompt": "Esra möchte nähen lernen. Sie hat keine Nähmaschine. Esra möchte zuerst im Kurs ausprobieren, ob ihr das Nähen Spaß macht, und erst danach vielleicht eine kaufen.",
+          "answer": "x",
+          "evidence": [{ "text": "f", "quote": "Wichtig: Bitte bringen Sie Ihre eigene Nähmaschine mit." }],
+          "explanation": "Tuzak f: Bu kurs yeni başlayanlar için bir dikiş kursu, bu yüzden ilk bakışta uygun görünüyor. Ama „Wichtig: Bitte bringen Sie Ihre eigene Nähmaschine mit.“ (Önemli: Lütfen kendi dikiş makinenizi getirin.) yazıyor. Esra'nın dikiş makinesi yok ve önce kursta denemek, ancak sonra belki bir makine almak istiyor. Diğer ilanlarda dikiş öğretilmiyor: g'de gitar, h'de bisiklet, a'da fotoğraf kursu var. Bu yüzden cevap x."
+        },
+        {
+          "number": 15,
+          "type": "zuordnung",
+          "prompt": "Am Wochenende machen Frau Dorns Kinder oft Ausflüge mit dem Rad. Frau Dorn kommt nie mit, denn sie konnte es als Kind nicht lernen. Das möchte sie jetzt ändern. Zeit hat sie nur am Sonntag.",
+          "answer": "h",
+          "evidence": [{ "text": "h", "quote": "Sie haben als Kind nie Rad fahren gelernt? Kein Problem!" }],
+          "explanation": "h ilanı şöyle başlıyor: „Sie haben als Kind nie Rad fahren gelernt? Kein Problem!“ (Çocukken hiç bisiklet sürmeyi öğrenmediniz mi? Sorun değil!) Yetişkinler küçük gruplar hâlinde arabasız, sakin bir alanda çalışıyor ve kurs „sonntags von 10 bis 12 Uhr“ (pazar günleri 10'dan 12'ye kadar). Bayan Dorn çocukken bisiklet sürmeyi öğrenemedi ve sadece pazar günü vakti var. Tuzak f: Dikiş kursu da hafta sonu, ama cumartesi günleri („Vier Samstage“) ve orada bisiklet değil dikiş öğretiliyor."
+        }
+      ]
+    }
+  ]
+}

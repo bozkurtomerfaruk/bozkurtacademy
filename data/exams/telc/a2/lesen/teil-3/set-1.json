@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "lesen",
+  "teil": 3,
+  "set": "set-1",
+  "title": "Freizeit am Wochenende",
+  "minutes": 10,
+  "instructions": "Lesen Sie die Situationen 11–15 und die Anzeigen a–h. Welche Anzeige passt zu welcher Situation? Jede Anzeige können Sie nur einmal wählen. Die Anzeige aus dem Beispiel können Sie nicht mehr wählen. Für eine Situation gibt es keine passende Anzeige; wählen Sie dann x.",
+  "groups": [
+    {
+      "layout": "ads",
+      "none": "x",
+      "texts": [
+        {
+          "id": "a",
+          "label": "a",
+          "title": "Bootsverleih am Weidensee",
+          "paragraphs": [
+            "Bei uns können Sie Ruderboote und Tretboote für zwei bis fünf Personen mieten. Samstags und sonntags von 10 bis 19 Uhr. Eine Stunde kostet 12 Euro. Schwimmwesten für Kinder bekommen Sie kostenlos dazu."
+          ]
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "title": "Kinderkochschule Rührlöffel",
+          "paragraphs": [
+            "Pizza, Gemüsesuppe und ein süßer Nachtisch: Jeden Samstag von 10 bis 13 Uhr kochen Kinder in kleinen Gruppen und essen danach zusammen. Der Kurs ist für Kinder von 12 bis 15 Jahren. Preis: 25 Euro."
+          ]
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "title": "Spaziergang durch die Altstadt",
+          "paragraphs": [
+            "Jeden Samstag um 14 Uhr gehen wir zwei Stunden durch die alten Straßen und erzählen, wie die Menschen hier vor 500 Jahren gelebt haben. Treffpunkt ist der Brunnen am Marktplatz. Erwachsene 8 Euro, Kinder frei."
+          ]
+        },
+        {
+          "id": "d",
+          "label": "d",
+          "title": "Töpferei Drehscheibe – Kurs am Wochenende",
+          "paragraphs": [
+            "An einem Samstag und Sonntag lernen Sie, wie man Tassen, Teller und Schüsseln aus Ton macht. Am Ende nehmen Sie alles mit nach Hause. Kurszeit an beiden Tagen: 10 bis 16 Uhr. Preis mit Material: 80 Euro. Für Anfänger."
+          ]
+        },
+        {
+          "id": "e",
+          "label": "e",
+          "title": "Pflanzenmarkt im Klosterhof",
+          "paragraphs": [
+            "Am Sonntag von 9 bis 15 Uhr verkaufen Gärtner aus der Region Blumen, Kräuter und junge Gemüsepflanzen. Sie können auch eigene Pflanzen mitbringen und mit anderen Besuchern tauschen. Es gibt auch Kaffee und Kuchen."
+          ]
+        },
+        {
+          "id": "f",
+          "label": "f",
+          "title": "Spielecafé Glückswurf",
+          "paragraphs": [
+            "Über 300 Brett- und Kartenspiele warten auf Sie! Geöffnet freitags und samstags ab 18 Uhr. Unser Team erklärt Ihnen die Regeln. Sie kommen allein? Kein Problem – wir suchen nette Mitspieler für Sie. Eintritt: 4 Euro."
+          ]
+        },
+        {
+          "id": "g",
+          "label": "g",
+          "title": "Quizabend im Gasthaus Hopfenblüte",
+          "paragraphs": [
+            "Jeden Samstag um 20 Uhr: Fragen zu Musik, Sport, Filmen und Geografie. Sie spielen in Teams mit vier bis sechs Personen. Bitte melden Sie Ihr Team bis Donnerstag an. Das beste Team bekommt einen Gutschein für ein Abendessen."
+          ]
+        },
+        {
+          "id": "h",
+          "label": "h",
+          "title": "Garten für alle am Schwanenteich",
+          "paragraphs": [
+            "Hier wachsen Tomaten, Salat und Blumen – und alle können mitmachen! Jeden Samstag von 9 bis 12 Uhr pflanzen, gießen und ernten wir zusammen. Werkzeug ist da, Sie brauchen keine Erfahrung. Das Gemüse teilen wir unter allen Helfern."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 0,
+          "example": true,
+          "type": "zuordnung",
+          "prompt": "Ihre Tante besucht Sie am Wochenende. Sie möchte wissen, wie man früher in Ihrer Stadt gelebt hat, und sie geht gern zu Fuß.",
+          "answer": "c",
+          "evidence": [{ "text": "c", "quote": "gehen wir zwei Stunden durch die alten Straßen und erzählen, wie die Menschen hier vor 500 Jahren gelebt haben" }],
+          "explanation": "c ilanında cumartesi günü iki saatlik bir yürüyüş var: „durch die alten Straßen“ (eski sokaklarda) yürünüyor ve insanların „vor 500 Jahren“ (500 yıl önce) burada nasıl yaşadığı anlatılıyor. Teyze hem şehrin eski hayatını öğrenmek hem de yürümek istiyor. Bu ilan örnekte kullanıldığı için başka bir durum için seçilemez."
+        },
+        {
+          "number": 11,
+          "type": "zuordnung",
+          "prompt": "Joris wohnt seit drei Wochen in der Stadt und kennt hier noch niemanden. Am Samstagabend möchte er neue Leute kennenlernen und mit ihnen würfeln oder Karten spielen.",
+          "answer": "f",
+          "evidence": [{ "text": "f", "quote": "Sie kommen allein? Kein Problem – wir suchen nette Mitspieler für Sie." }],
+          "explanation": "f ilanındaki kafe cumartesi akşamı 18'den itibaren açık ve kutu ve kart oyunları var. Önemli cümle: „Sie kommen allein? Kein Problem – wir suchen nette Mitspieler für Sie.“ (Yalnız mı geliyorsunuz? Sorun değil, size iyi oyun arkadaşları buluyoruz.) Joris burada henüz kimseyi tanımıyor, bu yüzden bu ilan uygun. Tuzak g: Bilgi yarışması da cumartesi akşamı, ama orada zar veya kart oynanmıyor; „Fragen zu Musik, Sport, Filmen und Geografie“ (müzik, spor, film ve coğrafya soruları) soruluyor. Ayrıca „in Teams mit vier bis sechs Personen“ (dört ile altı kişilik takımlar hâlinde) oynanıyor ve takımı perşembeye kadar kaydettirmek isteniyor; Joris ise kimseyi tanımıyor."
+        },
+        {
+          "number": 12,
+          "type": "zuordnung",
+          "prompt": "Familie Tembo möchte am Sonntagnachmittag mit ihren zwei kleinen Kindern einen Ausflug machen. Die Familie möchte nicht nur spazieren gehen, sondern selbst auf dem Wasser unterwegs sein.",
+          "answer": "a",
+          "evidence": [{ "text": "a", "quote": "Bei uns können Sie Ruderboote und Tretboote für zwei bis fünf Personen mieten." }],
+          "explanation": "a ilanında „Ruderboote und Tretboote für zwei bis fünf Personen“ (iki ile beş kişilik kürekli ve pedallı tekneler) kiralanabiliyor; pazar günü de 10–19 arası açık. Çocuklar için „Schwimmwesten“ (can yelekleri) de ücretsiz. Tembo ailesi iki küçük çocukla kendisi suda gezmek istiyor. Tuzak e: Bitki pazarı da pazar günü, ama orada çiçek ve bitki satılıyor („verkaufen … Blumen, Kräuter und junge Gemüsepflanzen“); suda gezme yok. Aile ise „selbst auf dem Wasser unterwegs sein“ (kendisi suda gezmek) istiyor."
+        },
+        {
+          "number": 13,
+          "type": "zuordnung",
+          "prompt": "Ihr Neffe ist zehn Jahre alt und hilft gern in der Küche. Seine Eltern suchen für ihn einen Kurs am Samstag, in dem er mit anderen Kindern kochen kann.",
+          "answer": "x",
+          "evidence": [{ "text": "b", "quote": "Der Kurs ist für Kinder von 12 bis 15 Jahren." }],
+          "explanation": "Tuzak b: Bu yemek okulunda çocuklar cumartesi günü birlikte yemek pişiriyor; ilk bakışta uygun görünüyor. Ama „Der Kurs ist für Kinder von 12 bis 15 Jahren.“ (Kurs 12 ile 15 yaş arası çocuklar için.) Yeğen ise on yaşında, yani bu kursa katılamaz. Diğer ilanlar da uymuyor: d'de kilden fincan ve tabak yapılıyor, e bir bitki pazarı, h bir bahçe, g bir bilgi yarışması. Bu yüzden cevap x."
+        },
+        {
+          "number": 14,
+          "type": "zuordnung",
+          "prompt": "Ihre Nachbarin hat keinen Balkon und keinen Garten. Am Wochenende möchte sie gern draußen in der Erde arbeiten und dabei andere Menschen kennenlernen.",
+          "answer": "h",
+          "evidence": [{ "text": "h", "quote": "Jeden Samstag von 9 bis 12 Uhr pflanzen, gießen und ernten wir zusammen." }],
+          "explanation": "h ilanındaki bahçede herkes katılabiliyor: „Jeden Samstag von 9 bis 12 Uhr pflanzen, gießen und ernten wir zusammen.“ (Her cumartesi 9'dan 12'ye kadar birlikte ekiyor, suluyor ve hasat ediyoruz.) Komşu dışarıda toprakla çalışmak ve insanlarla tanışmak istiyor. Tuzak e: Orada da bitkiler var, ama bu bir pazar: Bitkiler satılıyor veya „tauschen“ (değiş tokuş) ediliyor; bahçede çalışma yok."
+        },
+        {
+          "number": 15,
+          "type": "zuordnung",
+          "prompt": "Bjarne möchte seiner Mutter zum Geburtstag etwas für ihre Küche schenken. Er will das Geschenk nicht kaufen, sondern selbst machen. Von Montag bis Freitag arbeitet er in einem Büro.",
+          "answer": "d",
+          "evidence": [{ "text": "d", "quote": "An einem Samstag und Sonntag lernen Sie, wie man Tassen, Teller und Schüsseln aus Ton macht." }],
+          "explanation": "d ilanındaki kurs cumartesi ve pazar günü: Katılanlar „Tassen, Teller und Schüsseln aus Ton“ (kilden fincan, tabak ve kâse) yapmayı öğreniyor ve „Am Ende nehmen Sie alles mit nach Hause“ (sonunda hepsini eve götürüyorsunuz). Bjarne annesinin mutfağı için hediyeyi kendisi yapmak istiyor ve pazartesiden cumaya kadar bir ofiste çalışıyor; kurs ise hafta sonu. Tuzak e: Orada „Kräuter“ (otlar) var, ama bunlar satılıyor („verkaufen“) veya değiş tokuş ediliyor; Bjarne ise hediyeyi „nicht kaufen, sondern selbst machen“ (satın almak değil, kendisi yapmak) istiyor. b de uymuyor: Orada pişirilen yemek kursta birlikte yeniyor („essen danach zusammen“) ve kurs 12–15 yaş arası çocuklar için."
+        }
+      ]
+    }
+  ]
+}

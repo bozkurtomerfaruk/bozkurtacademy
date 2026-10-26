@@ -34,7 +34,10 @@
 
   function optionsFor(question, group) {
     if (FIXED_OPTIONS[question.type]) return FIXED_OPTIONS[question.type].map(([value, label]) => ({ value, label }));
-    if (question.type === 'abc') return Object.entries(question.options).map(([value, label]) => ({ value, label }));
+    // fehlersatz: the sentences of a summary paragraph, one of them wrong (TestDaF digital Aufgabe 7).
+    if (question.type === 'abc' || question.type === 'fehlersatz') return Object.entries(question.options).map(([value, label]) => ({ value, label }));
+    // reihenfolge: the position numbers a paragraph can take (TestDaF digital Aufgabe 2).
+    if (question.type === 'reihenfolge') return question.options.map(value => ({ value: String(value), label: String(value) }));
     // zuordnung: every labelled text of the group (ads a–j, sentences a–h) plus the "no text fits" option
     // (group.none: 0 by default, X at A2, false when there is none, e.g. Goethe B2)
     const options = group.texts.filter(text => text.label).map(text => ({ value: text.label, label: text.label }));
@@ -46,6 +49,8 @@
 
   function answerText(question, group, value) {
     if (question.type === 'abc') return `${value}) ${question.options[value]}`;
+    if (question.type === 'fehlersatz') return `„${question.options[value]}“`;
+    if (question.type === 'reihenfolge') return `Position ${value}`;
     if (question.type === 'zuordnung') {
       if (group.none !== false && value === noneOf(group)) return `${value.toUpperCase()} (${t('taskNoMatch')})`;
       const text = group.texts.find(item => item.label === value);
@@ -135,8 +140,8 @@
     const options = optionsFor(question, group).map(option => `
       <label class="task-option${given === option.value ? ' is-chosen' : ''}${done && option.value === question.answer ? ' is-answer' : ''}">
         <input type="radio" name="${name}" value="${esc(option.value)}" data-task-answer="${esc(number)}"${given === option.value ? ' checked' : ''}${locked}>
-        <span class="task-option-key">${esc(question.type === 'abc' || pair ? option.value : option.label)}</span>
-        ${question.type === 'abc' ? `<span class="task-option-text" lang="de">${esc(option.label)}</span>` : ''}
+        ${question.type === 'fehlersatz' ? '' : `<span class="task-option-key">${esc(question.type === 'abc' || pair ? option.value : option.label)}</span>`}
+        ${question.type === 'abc' || question.type === 'fehlersatz' ? `<span class="task-option-text" lang="de">${esc(option.label)}</span>` : ''}
         ${pair && pairTitle(group, option.value) ? `<span class="task-option-text" lang="de">${esc(pairTitle(group, option.value))}</span>` : ''}
       </label>`).join('');
     return `<fieldset class="task-q task-q--${pair ? 'pair' : question.type}${question.example ? ' is-example' : ''}${outcome}" data-q="${esc(number)}">

@@ -1,5 +1,6 @@
-// Digital TestDaF Lesen: start links (Aufgabe 2 and 7 have none yet), Aufgabe 1 a–d gaps,
-// Aufgabe 4 marked passages, Aufgabe 6 a/b buttons, overflow on every set, light and dark.
+// Digital TestDaF Lesen: start links, Aufgabe 1 a–d gaps, Aufgabe 2 position buttons per paragraph,
+// Aufgabe 4 marked passages, Aufgabe 6 a/b buttons, Aufgabe 7 clickable summary sentences,
+// overflow on every set, light and dark.
 import { chromium, B, shot, shotDir, teileOf, setsOf, readSet, checker } from './lib.mjs';
 const browser = await chromium.launch();
 const { ok, done } = checker();
@@ -24,6 +25,17 @@ for (const [w, th] of [[1280, 'light'], [390, 'dark']]) {
       ok(pick === qs[0].options.d, `${label}: gap shows "${pick}"`);
     }
     if (t === 4) ok(await page.locator('.task-gap[data-gap]').count() === 4, `${label}: four marked passages`);
+    if (t === 2) {
+      ok(await page.locator('.task-q--reihenfolge').count() === 4 && await page.locator('select').count() === 0, `${label}: four paragraphs with position buttons`);
+      const box = await page.locator('.task-q--reihenfolge .task-option').first().boundingBox();
+      ok(box && box.height >= 44 && box.width >= 44, `${label}: position buttons are large enough to tap`);
+    }
+    if (t === 7) {
+      const q = qs.find(x => x.type === 'fehlersatz');
+      ok(await page.locator('.task-q--fehlersatz').count() === 3, `${label}: three summary paragraphs`);
+      await page.locator(`.task-q[data-q="${q.number}"] .task-option-text`).first().click();
+      ok(await page.locator(`.task-q[data-q="${q.number}"] .task-option.is-chosen`).count() === 1, `${label}: clicking a sentence selects it`);
+    }
     if (t === 6) ok(await page.locator('.task-q--pair').count() === 4 && await page.locator('select').count() === 0, `${label}: four a/b questions`);
     await page.click('[data-task-check]'); await page.waitForTimeout(400);
     if (s === 1) await page.locator('.task-group').first().screenshot({ path: shot(`tdd-a${t}-${w}.png`) });

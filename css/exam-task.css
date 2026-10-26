@@ -82,6 +82,14 @@
 #page-exams .task-option.is-chosen:has(input:disabled):hover{background:var(--ba-accent)}
 
 #page-exams .task-q select{width:100%;min-height:48px;padding:0 12px}
+/* TestDaF digital Aufgabe 2: one position number per paragraph, large enough to tap. */
+#page-exams .task-q--reihenfolge .task-option{justify-content:center;min-width:52px}
+/* TestDaF digital Aufgabe 7: the sentences of a summary paragraph read as running text; tapping one selects it. */
+#page-exams .task-q--fehlersatz .task-options{display:block;line-height:1.7}
+#page-exams .task-q--fehlersatz .task-option{display:inline;min-height:0;margin:0 2px 0 0;padding:2px 4px;border-radius:4px;background:transparent;line-height:inherit;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+#page-exams .task-q--fehlersatz .task-option:hover{background:var(--ba-paper-2)}
+#page-exams .task-q--fehlersatz .task-option:has(input:disabled):hover{background:transparent}
+#page-exams .task-q--fehlersatz .task-option:not(.is-chosen) .task-option-text{text-decoration:underline dotted var(--ba-muted);text-underline-offset:4px}
 
 /* After checking */
 #page-exams .task-q.is-right{box-shadow:inset 4px 0 0 var(--ba-right)}

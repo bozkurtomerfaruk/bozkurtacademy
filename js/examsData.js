@@ -918,7 +918,16 @@ window.BA_EXAMS = {
                   { set: 'set-5', title: 'Ein Forschungsschiff kehrt zurück' },
                 ]
               }, // Aufgabe 1
-              { title: null, exercises: [] }, // Aufgabe 2 (Textabschnitte ordnen: sürükle-bırak, şimdilik yok)
+              {
+                title: { tr: 'Paragrafları sıralama', de: 'Textabschnitte ordnen', en: 'Ordering paragraphs' },
+                exercises: [
+                  { set: 'set-1', title: 'Die Erforschung der Tiefsee' },
+                  { set: 'set-2', title: 'Wie neue Sprachen entstehen' },
+                  { set: 'set-3', title: 'Die Geschichte der Narkose' },
+                  { set: 'set-4', title: 'Die Vermessung der Erde' },
+                  { set: 'set-5', title: 'Bakterien als Baumeister' },
+                ]
+              }, // Aufgabe 2
               {
                 title: { tr: 'Makale · a/b/c', de: 'Artikel · a/b/c', en: 'Article · a/b/c' },
                 exercises: [
@@ -959,7 +968,16 @@ window.BA_EXAMS = {
                   { set: 'set-5', title: 'Wärme aus Rechenzentren' },
                 ]
               }, // Aufgabe 6
-              { title: null, exercises: [] }, // Aufgabe 7 (Fehler in der Zusammenfassung: tıklama, şimdilik yok)
+              {
+                title: { tr: 'Özetteki hatalı cümle', de: 'Fehler in der Zusammenfassung', en: 'Errors in the summary' },
+                exercises: [
+                  { set: 'set-1', title: 'Pflegeroboter im Test' },
+                  { set: 'set-2', title: 'Die Rückkehr der Wölfe' },
+                  { set: 'set-3', title: 'Wie Kinder lesen lernen' },
+                  { set: 'set-4', title: 'Fleisch aus dem Labor' },
+                  { set: 'set-5', title: 'Die Erfindung des Kalenders' },
+                ]
+              }, // Aufgabe 7
             ] },
             { id: 'hoeren', teile: [
               { title: null, exercises: [] }, // Aufgabe 1

@@ -142,7 +142,7 @@
           "prompt": "Ihre Tante Wilma und ihr Mann sind seit Kurzem im Ruhestand. Die eigenen Enkelkinder des Paares leben im Ausland. Wilma und ihr Mann möchten für ein kleines Kind aus der Umgebung eine feste Bezugsperson werden und es über längere Zeit begleiten.",
           "answer": "e",
           "evidence": [{ "text": "e", "quote": "Wir bringen sie mit älteren Menschen zusammen, die Lust haben, regelmäßig Zeit mit einem Kind zu verbringen" }, { "text": "e", "quote": "Die Patenschaft sollte mindestens ein Jahr dauern." }],
-          "explanation": "e ilanı büyükanne ve büyükbabası uzakta yaşayan aileleri, düzenli olarak bir çocukla vakit geçirmek isteyen yaşlı insanlarla buluşturuyor. Bu ilişki en az bir yıl sürmeli („mindestens ein Jahr“); durumdaki „feste Bezugsperson … über längere Zeit“ (uzun süre sabit bir yakın kişi) bunun karşılığı. Tuzak b: Orada da çocuklarla çalışılıyor, ama okulda değişen küçük gruplara kitap okunuyor; belirli bir çocukla sürekli bir bağ kurulmuyor."
+          "explanation": "e ilanı büyükanne ve büyükbabası uzakta yaşayan aileleri, düzenli olarak bir çocukla vakit geçirmek isteyen yaşlı insanlarla buluşturuyor. Bu ilişki en az bir yıl sürmeli („mindestens ein Jahr“); durumdaki „feste Bezugsperson … über längere Zeit“ (uzun süre sabit bir yakın kişi) bunun karşılığı. Tuzak b: Orada da çocuklarla çalışılıyor, ama okulda üç dört çocuktan oluşan küçük gruplara kitap okunuyor; tek bir çocukla uzun süreli bir bağdan söz edilmiyor."
         },
         {
           "number": 15,
@@ -158,7 +158,7 @@
           "prompt": "Ihr Nachbar Meinrad streift seit Jahrzehnten im Herbst mit dem Korb durch die Wälder. Meinrad möchte sein Wissen durch einen offiziellen Nachweis bestätigen lassen und anschließend anderen ehrenamtlich zeigen, welche ihrer Funde essbar sind.",
           "answer": "l",
           "evidence": [{ "text": "l", "quote": "legen am Ende eine Prüfung ab" }, { "text": "l", "quote": "kontrollieren Sie ehrenamtlich in unserer kostenlosen Beratungsstelle auf dem Wochenmarkt die Körbe von Sammlerinnen und Sammlern und erklären, was in die Pfanne darf und was nicht" }],
-          "explanation": "l ilanındaki eğitim bir sınavla („Prüfung“) bitiyor; bu, Meinrad'ın istediği resmî belge („offiziellen Nachweis“). Sonra gönüllü olarak pazardaki danışma yerinde toplayıcıların sepetlerini kontrol ediyor ve neyin tavaya girebileceğini („was in die Pfanne darf“), yani neyin yenebileceğini açıklıyorsunuz. Tuzak c: Orada da doğada çalışılıyor ve hasat yapılıyor, ama elma hasadı; ne sınav ne de başkalarına danışmanlık var."
+          "explanation": "l ilanındaki eğitim bir sınavla („Prüfung“) bitiyor; bu, Meinrad'ın istediği resmî belge („offiziellen Nachweis“). Sonra gönüllüler pazardaki danışma yerinde toplayıcıların sepetlerini kontrol ediyor ve neyin tavaya girebileceğini („was in die Pfanne darf“), yani neyin yenebileceğini açıklıyor. Tuzak c: Orada da doğada çalışılıyor ve hasat yapılıyor, ama elma hasadı; ne sınav ne de başkalarına danışmanlık var."
         },
         {
           "number": 17,
@@ -182,12 +182,12 @@
           "prompt": "Ihr 31-jähriger Mitbewohner Ruven ist ein ausgesprochener Nachtmensch und kann gut zuhören. Ruven möchte Menschen beistehen, die in einer schwierigen Lebenslage stecken, ohne dass sie ihm ihren Namen nennen müssen.",
           "answer": "k",
           "evidence": [{ "text": "k", "quote": "nehmen sich Ehrenamtliche Zeit für Menschen in Krisen – anonym und vertraulich" }, { "text": "k", "quote": "Unsere Einsätze finden vor allem zwischen 22 und 6 Uhr in unserer Dienststelle statt." }, { "text": "k", "quote": "Sie sollten mindestens 25 Jahre alt sein." }],
-          "explanation": "k ilanındaki gönüllüler kriz içindeki insanlarla („Menschen in Krisen“) isimsiz („anonym“) konuşuyor; yani arayanlar adını söylemek zorunda değil. Görevler çoğunlukla 22 ile 6 arasında, yani gece; Ruven bir gece insanı („Nachtmensch“). Ruven 31 yaşında, en az 25 yaş koşulunu karşılıyor. Tuzak a: Orada da zor durumdaki insanlara eşlik ediliyor, ama kişiler evlerinde veya bakımevinde ziyaret ediliyor, isimsiz değil."
+          "explanation": "k ilanındaki gönüllüler kriz içindeki insanlarla („Menschen in Krisen“) isimsiz („anonym“) konuşuyor; yani arayanlar adını söylemek zorunda değil. Görevler çoğunlukla 22 ile 6 arasında, yani gece; Ruven bir gece insanı („Nachtmensch“). Ruven 31 yaşında, en az 25 yaş koşulunu karşılıyor. Tuzak a: Orada da zor durumdaki insanlara eşlik ediliyor, ama gönüllüler hastaları evlerinde veya bakımevinde yüz yüze ziyaret ediyor; isimsiz görüşmelerden ve gece görevinden söz edilmiyor."
         },
         {
           "number": 20,
           "type": "zuordnung",
-          "prompt": "Ihr Kollege Hanno ist neu in der Stadt und kennt noch niemanden. Am Ende der Arbeitswoche würde Hanno abends gern Leute kennenlernen, mit denen er bei anspruchsvollen Brett- und Kartenpartien taktieren kann.",
+          "prompt": "Ihr Kollege Hanno ist neu in der Stadt und kennt noch niemanden. Am Ende der Arbeitswoche würde Hanno abends gern Leute kennenlernen, mit denen er bei anspruchsvollen Partien am Spieltisch taktieren kann.",
           "answer": "d",
           "evidence": [{ "text": "d", "quote": "Sie lieben knifflige Strategiespiele" }, { "text": "d", "quote": "jeden Freitagabend" }, { "text": "d", "quote": "Neue Gesichter sind jederzeit willkommen" }],
           "explanation": "d ilanında yetişkinler her cuma akşamı („jeden Freitagabend“, yani iş haftasının sonunda) zorlu strateji oyunları („knifflige Strategiespiele“) oynamak için buluşuyor; durumdaki „anspruchsvollen … Partien“ ve „taktieren“ bunun karşılığı. Yeni yüzler her zaman hoş karşılanıyor, kayıt gerekmiyor. Tuzak g: Orada da kart oynanıyor, ama yaşlılar ziyaret ediliyor ve özellikle gündüz ve hafta sonu misafir bekleniyor."

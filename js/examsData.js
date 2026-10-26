@@ -717,7 +717,7 @@ window.BA_EXAMS = {
                   { set: 'set-2', title: 'Leserbrief zur Stadtplanung' },
                   { set: 'set-3', title: 'Bericht über eine Fachtagung' },
                   { set: 'set-4', title: 'Mitteilung des Elternbeirats' },
-                  { set: 'set-5', title: 'Stellungnahme eines Vereins' },
+                  { set: 'set-5', title: 'Offener Brief eines Vereins' },
                 ]
               }, // Teil 2
             ] },

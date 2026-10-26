@@ -32,8 +32,8 @@
           "prompt": "Zusammenfassung, Absatz 1",
           "options": {
             "a": "Über den geeignetsten Weg zum Lesenlernen wird in der Grundschulpädagogik seit Langem gestritten.",
-            "b": "Manche Konzepte trainieren zuerst gezielt, welche Laute zu welchen Schriftzeichen gehören, andere setzen darauf, dass Kinder diese Zusammenhänge im Umgang mit ganzen Texten entdecken.",
-            "c": "Dürrholz und ihr Team haben über 1.000 Kinder während ihrer gesamten Grundschulzeit untersucht.",
+            "b": "Manche Konzepte trainieren zuerst gezielt, welche Laute zu welchen Schriftzeichen gehören, andere setzen darauf, dass Kinder diese Zusammenhänge beim Umgang mit vollständigen Wörtern und kleinen Texten selbst entdecken.",
+            "c": "Dürrholz und ihr Team haben über 1.000 Kinder von der ersten Klasse bis zum Abschluss der vierten Klasse begleitet.",
             "d": "Nach dem ersten Schuljahr schnitten die lautorientiert unterrichteten Kinder vor allem dann besser ab, wenn sie bereits gute Voraussetzungen mitbrachten."
           },
           "answer": "d",
@@ -47,7 +47,7 @@
           "type": "fehlersatz",
           "prompt": "Zusammenfassung, Absatz 2",
           "options": {
-            "a": "Dürrholz führt den geringen Vorsprung bei begünstigten Kindern darauf zurück, dass diese manche Regeln der Schrift schon vor Schulbeginn erfasst hätten.",
+            "a": "Dürrholz führt den geringen Vorsprung bei begünstigten Kindern darauf zurück, dass viele von ihnen den Zusammenhang von Buchstaben und Lauten schon vor Schulbeginn zum Teil erfasst hätten.",
             "b": "Beim Lesen einzelner Wörter blieb der Vorteil der lautorientierten Methode bis zum Ende der Grundschulzeit deutlich messbar.",
             "c": "Wie gut die Kinder in der vierten Klasse Texte verstanden, hing in erster Linie von ihrem Wortschatz und ihrer Lektüre in der Freizeit ab.",
             "d": "Wer aus eigenem Antrieb regelmäßig las, kam mit anspruchsvollen Texten besser zurecht.",
@@ -57,24 +57,24 @@
           "evidence": [
             { "text": "artikel", "quote": "In der dritten Klasse waren sie beim Wortlesen statistisch nicht mehr nachweisbar." }
           ],
-          "explanation": "Metin yöntemler arasındaki farkların zamanla küçüldüğünü ve kelime okumada üçüncü sınıfta artık „statistisch nicht mehr nachweisbar“ (istatistiksel olarak saptanamaz) olduğunu söylüyor. b cümlesi ise üstünlüğün ilkokulun sonuna kadar açıkça ölçülebilir kaldığını iddia ediyor; bu yanlış. a (iyi koşullu çocuklar kuralları okuldan önce kısmen kavramıştı), c (dördüncü sınıfta metin anlama kelime dağarcığına ve okul dışı okumaya bağlı), d (gönüllü okuyanlar zor metinleri daha iyi anladı) ve e (aynı materyalle çalışan sınıflar arasında büyük farklar) metne uygun."
+          "explanation": "Metin yöntemler arasındaki farkların zamanla küçüldüğünü ve kelime okumada üçüncü sınıfta artık „statistisch nicht mehr nachweisbar“ (istatistiksel olarak saptanamaz) olduğunu söylüyor. b cümlesi ise üstünlüğün ilkokulun sonuna kadar açıkça ölçülebilir kaldığını iddia ediyor; bu yanlış. a (iyi koşullu çocukların çoğu harf-ses ilişkisini okuldan önce kısmen kavramıştı), c (dördüncü sınıfta metin anlama kelime dağarcığına ve okul dışı okumaya bağlı), d (gönüllü okuyanlar zor metinleri daha iyi anladı) ve e (aynı materyalle çalışan sınıflar arasında büyük farklar) metne uygun."
         },
         {
           "number": 34,
           "type": "fehlersatz",
           "prompt": "Zusammenfassung, Absatz 3",
           "options": {
-            "a": "Videoaufnahmen deuten darauf hin, dass Rückmeldungen zu Fehlern und die tatsächlich zum Lesen genutzte Unterrichtszeit dabei von Bedeutung sein könnten.",
-            "b": "Dieser Teil der Untersuchung stützt sich allerdings nur auf wenige Klassen und gilt deshalb als vorläufig.",
+            "a": "Videoaufnahmen deuten darauf hin, dass Rückmeldungen zu Fehlern und die tatsächlich zum Lesen genutzte Unterrichtszeit für diese Unterschiede von Bedeutung sein könnten.",
+            "b": "Dieser Teil der Untersuchung stützt sich allerdings nur auf wenige Klassen, weshalb Dürrholz die Ergebnisse als vorläufig bezeichnet.",
             "c": "Der Gutachter Abendroth sieht in den Ergebnissen vor allem eine Bestätigung der lautorientierten Ansätze.",
-            "d": "Kindern mit schlechteren Startbedingungen sollte nach seiner Auffassung im ersten Schuljahr zugleich ein systematischer Einstieg in die Schrift ermöglicht werden.",
+            "d": "Zugleich sprechen die Daten seiner Ansicht nach dagegen, Kindern mit ungünstigeren Startbedingungen im ersten Schuljahr einen systematisch aufgebauten Einstieg in die Schrift zu verwehren.",
             "e": "Dürrholz hält es für wichtiger, Lehrkräfte im genauen Beobachten des Lernstands zu schulen, als sich für ein bestimmtes Lehrbuch zu entscheiden."
           },
           "answer": "c",
           "evidence": [
             { "text": "artikel", "quote": "versteht die Ergebnisse als Mahnung an beide Lager" }
           ],
-          "explanation": "Abendroth sonuçları „als Mahnung an beide Lager“ (her iki kampa da bir uyarı olarak) anlıyor: Yalnızca yönteme bakan, okuma sevgisini ve kelime dağarcığını gözden kaçırır. c cümlesi ise onun sonuçları özellikle ses odaklı yaklaşımların bir doğrulaması olarak gördüğünü söylüyor; bu, görüşünü tek bir tarafa indirgiyor. a (geri bildirim ve gerçek okuma süresi rol oynayabilir), b (14 sınıflık küçük örneklem, bulgular geçici), d (koşulları zayıf çocuklara yapılandırılmış giriş verilmeli) ve e (kitap seçiminden çok öğretmen eğitimi) metinle uyuşuyor."
+          "explanation": "Abendroth sonuçları „als Mahnung an beide Lager“ (her iki kampa da bir uyarı olarak) anlıyor: Yalnızca yönteme bakan, okuma sevgisini ve kelime dağarcığını gözden kaçırır. c cümlesi ise onun sonuçları özellikle ses odaklı yaklaşımların bir doğrulaması olarak gördüğünü söylüyor; bu, görüşünü tek bir tarafa indirgiyor. a (geri bildirim ve gerçek okuma süresi rol oynayabilir), b (14 sınıflık küçük örneklem, bulgular geçici), d (Abendroth'a göre veriler, koşulları zayıf çocuklardan birinci sınıfta yapılandırılmış bir girişin esirgenmemesi gerektiğini gösteriyor) ve e (kitap seçiminden çok öğretmen eğitimi) metinle uyuşuyor."
         }
       ]
     }

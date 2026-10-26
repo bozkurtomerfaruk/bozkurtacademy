@@ -11,8 +11,8 @@
 - Aşama 4, telc B1: bitti, main'e birleştirildi (49db897).
 - Aşama 5, telc A1: bitti, main'e birleştirildi (7c9acb2).
 - Aşama 6, telc A2: bitti, main'e birleştirildi (cfb9104).
-- Aşama 7, telc B2: bitti, main'e birleştirildi.
-- Aşama 8, telc C1 Hochschule: pilot onaylandı, set 3–5 yazılıyor; dal `claude/telc-c1h`, çalışma ağacı /tmp/wt-tc1.
+- Aşama 7, telc B2: bitti, main'e birleştirildi (3e625fc).
+- Aşama 8, telc C1 Hochschule: bitti, main'e birleştirildi. **8 aşamanın hepsi tamamlandı.**
 
 ### telc Deutsch A1 (Start Deutsch 1) Lesen: format tablosu
 Start Deutsch 1, Goethe-Institut ile telc'in ortak geliştirdiği sınav; telc A1 ile Goethe A1'in formatı aynı (✔). Bu yüzden tablo Goethe A1 tablomuzla aynı; içerik tamamen yeni (Goethe A1'in hiçbir konusu, durumu, adı veya tabelası tekrar edilmiyor).

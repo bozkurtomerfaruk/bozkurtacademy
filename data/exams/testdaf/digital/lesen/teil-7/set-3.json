@@ -7,7 +7,7 @@
   "set": "set-3",
   "title": "Wie Kinder lesen lernen",
   "minutes": 10,
-  "instructions": "Lesen Sie den Text und die Zusammenfassung. In jedem Absatz der Zusammenfassung ist ein Satz falsch. Klicken Sie den falschen Satz an.",
+  "instructions": "Lesen Sie den Text und die Zusammenfassung. In der Zusammenfassung sind drei Sätze falsch. Klicken Sie die drei falschen Sätze an.",
   "groups": [
     {
       "layout": "article",
@@ -28,53 +28,48 @@
       "questions": [
         {
           "number": 32,
-          "type": "fehlersatz",
-          "prompt": "Zusammenfassung, Absatz 1",
+          "type": "fehlerauswahl",
+          "prompt": "Zusammenfassung",
           "options": {
-            "a": "Über den geeignetsten Weg zum Lesenlernen wird in der Grundschulpädagogik seit Langem gestritten.",
-            "b": "Manche Konzepte trainieren zuerst gezielt, welche Laute zu welchen Schriftzeichen gehören, andere setzen darauf, dass Kinder diese Zusammenhänge beim Umgang mit vollständigen Wörtern und kleinen Texten selbst entdecken.",
-            "c": "Dürrholz und ihr Team haben über 1.000 Kinder von der ersten Klasse bis zum Abschluss der vierten Klasse begleitet.",
-            "d": "Den größten Vorsprung erzielten nach dem ersten Schuljahr lautorientiert unterrichtete Kinder, die zu Hause vor allem Deutsch sprachen."
+            "a": "Wie Kinder am besten lesen lernen, ist in der Grundschulpädagogik seit Langem umstritten.",
+            "b": "Einige Ansätze üben zuerst systematisch die Zuordnung von Lauten und Buchstaben, andere lassen Kinder gleich mit ganzen Wörtern und Texten arbeiten und vertrauen darauf, dass sie die Regeln dabei selbst entdecken.",
+            "c": "Ein Team um Benedikta Dürrholz hat rund 1.100 Kinder aus 52 Klassen über alle vier Grundschuljahre hinweg begleitet.",
+            "d": "Nach dem ersten Schuljahr lasen lautorientiert unterrichtete Kinder einzelne Wörter deutlich besser, vor allem solche mit kleinem Wortschatz oder einer anderen Familiensprache.",
+            "e": "Dass Kinder mit günstigen Voraussetzungen nur einen geringen Vorsprung hatten, erklärt Dürrholz damit, dass viele von ihnen schon vor der Einschulung lesen gelernt hätten.",
+            "f": "Kinder, die von zu Hause wenig mitbringen, sind ihr zufolge auf einen klar aufgebauten Anfangsunterricht angewiesen.",
+            "g": "Später wurden die Unterschiede zwischen den Methoden kleiner und waren beim Wortlesen in der dritten Klasse statistisch nicht mehr nachweisbar.",
+            "h": "Für das Textverständnis am Ende der Grundschule waren in erster Linie der Wortschatz und das Lesen außerhalb des Unterrichts maßgeblich, kaum dagegen die Methode.",
+            "i": "Wer regelmäßig aus eigenem Antrieb las, verstand anspruchsvolle Texte deutlich besser, gleich auf welchem Weg er das Lesen gelernt hatte.",
+            "j": "Selbst Klassen, die mit demselben Material arbeiteten, erzielten teilweise stark voneinander abweichende Ergebnisse.",
+            "k": "Eine Videoanalyse in 14 Klassen deutet darauf hin, dass dabei die Klassengröße und die Zusammensetzung der Lerngruppen eine Rolle spielen.",
+            "l": "Der Gutachter Abendroth versteht die Ergebnisse als Warnung an beide Seiten, da Lesefreude und Wortschatz auf Dauer mehr zählten als die Methode.",
+            "m": "Zugleich sprechen die Daten seiner Ansicht nach dafür, Kindern mit ungünstigen Startbedingungen in den ersten beiden Schuljahren einen strukturierten Zugang zur Schrift zu sichern.",
+            "n": "Dürrholz hält es für wichtiger, Lehrkräfte im genauen Beobachten des Lernstands fortzubilden, als sich auf ein bestimmtes Lehrwerk festzulegen."
           },
-          "answer": "d",
-          "evidence": [
-            { "text": "artikel", "quote": "oder zu Hause überwiegend eine andere Sprache als Deutsch sprachen" }
+          "breaks": [
+            "f",
+            "k"
           ],
-          "explanation": "Metne göre ses odaklı yöntemden özellikle kelime dağarcığı zayıf olan veya „zu Hause überwiegend eine andere Sprache als Deutsch sprachen“ (evde çoğunlukla Almancadan başka bir dil konuşan) çocuklar yararlandı. d cümlesi en büyük üstünlüğü evde Almanca konuşan çocuklara bağlıyor; bu, metindeki ilişkiyi tersine çeviriyor. a (eski bir tartışma), b (iki yaklaşım: önce harf-ses eşleşmesi ya da baştan bütün kelime ve metinler) ve c (yaklaşık 1.100 çocuk, birinci sınıftan dördüncü sınıf sonuna kadar) metinle uyuşuyor."
-        },
-        {
-          "number": 33,
-          "type": "fehlersatz",
-          "prompt": "Zusammenfassung, Absatz 2",
-          "options": {
-            "a": "Für Kinder, die von zu Hause wenig mitbringen, ist nach Dürrholz ein gut strukturierter Anfangsunterricht besonders wichtig.",
-            "b": "Beim Lesen einzelner Wörter blieb der Vorteil der lautorientierten Methode bis zum Ende der Grundschulzeit deutlich messbar.",
-            "c": "Wie gut die Kinder in der vierten Klasse Texte verstanden, hing in erster Linie von ihrem Wortschatz und ihrer Lektüre in der Freizeit ab.",
-            "d": "Wer aus eigenem Antrieb regelmäßig las, kam mit anspruchsvollen Texten besser zurecht.",
-            "e": "Selbst Klassen, die dasselbe Lehrmaterial verwendeten, unterschieden sich in ihren Leistungen zum Teil erheblich."
-          },
-          "answer": "b",
-          "evidence": [
-            { "text": "artikel", "quote": "In der dritten Klasse waren sie beim Wortlesen statistisch nicht mehr nachweisbar." }
+          "answer": [
+            "e",
+            "k",
+            "m"
           ],
-          "explanation": "Metin yöntemler arasındaki farkların zamanla küçüldüğünü ve kelime okumada üçüncü sınıfta artık „statistisch nicht mehr nachweisbar“ (istatistiksel olarak saptanamaz) olduğunu söylüyor. b cümlesi ise üstünlüğün ilkokulun sonuna kadar açıkça ölçülebilir kaldığını iddia ediyor; bu yanlış. a (Dürrholz'a göre evden az şey getiren çocuklar „auf einen gut strukturierten Anfangsunterricht angewiesen“, yani iyi yapılandırılmış bir başlangıç dersine muhtaç), c (dördüncü sınıfta metin anlama kelime dağarcığına ve okul dışı okumaya bağlı), d (gönüllü okuyanlar zor metinleri daha iyi anladı) ve e (aynı materyalle çalışan sınıflar arasında büyük farklar) metne uygun."
-        },
-        {
-          "number": 34,
-          "type": "fehlersatz",
-          "prompt": "Zusammenfassung, Absatz 3",
-          "options": {
-            "a": "Videoaufnahmen deuten darauf hin, dass Rückmeldungen zu Fehlern und die tatsächlich zum Lesen genutzte Unterrichtszeit für diese Unterschiede von Bedeutung sein könnten.",
-            "b": "Dieser Teil der Untersuchung stützt sich allerdings nur auf wenige Klassen, weshalb Dürrholz die Ergebnisse als vorläufig bezeichnet.",
-            "c": "Der Gutachter Abendroth sieht in den Ergebnissen vor allem eine Bestätigung der lautorientierten Ansätze.",
-            "d": "Zugleich sprechen die Daten seiner Ansicht nach dagegen, Kindern mit ungünstigeren Startbedingungen im ersten Schuljahr einen systematisch aufgebauten Einstieg in die Schrift zu verwehren.",
-            "e": "Dürrholz hält es für wichtiger, Lehrkräfte im genauen Beobachten des Lernstands zu schulen, als sich für ein bestimmtes Lehrbuch zu entscheiden."
-          },
-          "answer": "c",
           "evidence": [
-            { "text": "artikel", "quote": "versteht die Ergebnisse als Mahnung an beide Lager" }
+            {
+              "text": "artikel",
+              "quote": "die Beziehung zwischen Schrift und Lauten schon vor der Einschulung, etwa beim gemeinsamen Betrachten von Bilderbüchern, teilweise durchschaut hätten"
+            },
+            {
+              "text": "artikel",
+              "quote": "wie häufig Lehrkräfte den Kindern zurückmelden, wo ihnen Fehler unterlaufen sind, und wie viel echte Lesezeit in einer Stunde bleibt"
+            },
+            {
+              "text": "artikel",
+              "quote": "Kindern mit ungünstigen Voraussetzungen im ersten Schuljahr einen strukturierten Zugang zur Schrift nicht vorzuenthalten"
+            }
           ],
-          "explanation": "Abendroth sonuçları „als Mahnung an beide Lager“ (her iki kampa da bir uyarı olarak) anlıyor: Yalnızca yönteme bakan, okuma sevgisini ve kelime dağarcığını gözden kaçırır. c cümlesi ise onun sonuçları özellikle ses odaklı yaklaşımların bir doğrulaması olarak gördüğünü söylüyor; bu, görüşünü tek bir tarafa indirgiyor. a (geri bildirim ve gerçek okuma süresi rol oynayabilir), b (14 sınıflık küçük örneklem, bulgular geçici), d (Abendroth'a göre veriler, koşulları zayıf çocuklardan birinci sınıfta yapılandırılmış bir girişin esirgenmemesi gerektiğini gösteriyor) ve e (kitap seçiminden çok öğretmen eğitimi) metinle uyuşuyor."
+          "explanation": "Üç yanlış cümle e, k ve m. e: Dürrholz, koşulları iyi olan çocukların farkının küçük olmasını, birçoğunun okula başlamadan önce (ör. birlikte resimli kitaplara bakarken) yazı ile sesler arasındaki ilişkiyi „teilweise durchschaut“ (kısmen kavramış) olmasıyla açıklıyor. e cümlesi bu çocukların okula başlamadan önce okumayı öğrenmiş olduğunu söylüyor; „kısmen kavramak“ ile „okumayı öğrenmiş olmak“ aynı şey değil. k: Video analizine göre aynı materyalle çalışan sınıflar arasındaki farklarda öğretmenlerin hatalar hakkında ne sıklıkla geri bildirim verdiği ve derste ne kadar gerçek okuma süresi kaldığı rol oynuyor olabilir. k cümlesindeki 14 sınıf ve temkinli ifade doğru, ama sebepler (sınıf büyüklüğü, grubun bileşimi) metinde geçmiyor. m: Abendroth'a göre veriler, koşulları elverişsiz çocuklardan „im ersten Schuljahr“ (birinci sınıfta) yapılandırılmış bir girişin esirgenmemesi gerektiğini gösteriyor. m cümlesi bunu ilk iki okul yılına genişletiyor; bu yanlış. Diğer cümleler metinle uyuşuyor: a (eski bir tartışma), b (önce harf-ses eşleşmesi ya da baştan bütün kelime ve metinler), c (yaklaşık 1.100 çocuk, 52 sınıf, dört yıl), d (birinci sınıf sonunda ses odaklı yöntemle öğrenenler kelime okumada önde; özellikle kelime dağarcığı küçük ya da evde başka dil konuşanlar), f (evden az şey getiren çocuklar iyi yapılandırılmış başlangıç dersine muhtaç), g (fark küçüldü, üçüncü sınıfta saptanamıyor), h (metin anlamada yöntem değil, kelime dağarcığı ve okul dışı okuma belirleyici), i (gönüllü okuyanlar karmaşık metinleri yöntemden bağımsız olarak daha iyi anladı), j (aynı materyalle çalışan sınıflar arasında büyük farklar), l (her iki kampa uyarı; uzun vadede okuma sevgisi ve kelime dağarcığı daha ağır basıyor) ve n (kitap seçiminden çok öğretmenlerin öğrenme durumunu gözlemlemeye yönelik eğitimi)."
         }
       ]
     }

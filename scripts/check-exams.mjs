@@ -16,8 +16,8 @@ const TYPES = {
   // telc C1 Hochschule: Richtig / Falsch / Nicht im Text
   'richtig-falsch-nichts': () => ['richtig', 'falsch', 'nichts'],
   abc: question => Object.keys(question.options || {}),
-  // TestDaF digital Aufgabe 7: one wrong sentence in a summary paragraph; Aufgabe 2: position of a paragraph.
-  fehlersatz: question => Object.keys(question.options || {}),
+  // TestDaF digital Aufgabe 7: the wrong sentences of a summary (answer is a list); Aufgabe 2: position of a paragraph.
+  fehlerauswahl: question => Object.keys(question.options || {}),
   reihenfolge: question => (Array.isArray(question.options) ? question.options : []).map(String),
   zuordnung: (question, group) => [...group.texts.filter(text => text.label).map(text => text.label), ...(group.none === false ? [] : [group.none || '0'])]
 };
@@ -81,11 +81,16 @@ for (const exam of data.exams) for (const level of exam.levels || []) for (const
           if (question.type === 'zuordnung' && group.texts.filter(text => text.label).length < 2) fail(`${where}: zuordnung needs labelled texts to choose from`);
           // a/b/c, or a/b/c/d for four-option gaps (Goethe C1 Teil 1)
           if (question.type === 'abc' && !['a,b,c', 'a,b,c,d'].includes(Object.keys(question.options || {}).join())) fail(`${label}: options must be a, b, c (or a, b, c, d)`);
-          if (question.type === 'fehlersatz' && !['a,b,c', 'a,b,c,d', 'a,b,c,d,e', 'a,b,c,d,e,f'].includes(Object.keys(question.options || {}).join())) fail(`${label}: summary sentences must be a, b, c … (3–6)`);
+          if (question.type === 'fehlerauswahl') {
+            const keys = Object.keys(question.options || {});
+            if (keys.join() !== 'abcdefghijklmnopqrstuvwxyz'.slice(0, keys.length).split('').join() || keys.length < 6) fail(`${label}: summary sentences must be a, b, c … (at least 6)`);
+            if (!Array.isArray(question.answer) || question.answer.length !== 3 || new Set(question.answer).size !== 3) fail(`${label}: answer must list three different wrong sentences`);
+            if ((question.breaks || []).some(key => !keys.includes(key))) fail(`${label}: breaks must be sentence letters`);
+          }
           if (question.type === 'reihenfolge' && !(Array.isArray(question.options) && question.options.length >= 3)) fail(`${label}: positions must be a list of at least three numbers`);
-          if (!TYPES[question.type](question, group).includes(question.answer)) fail(`${label}: answer ${JSON.stringify(question.answer)} is not an option`);
+          if (![].concat(question.answer).every(value => TYPES[question.type](question, group).includes(value))) fail(`${label}: answer ${JSON.stringify(question.answer)} is not an option`);
           if (!question.explanation || question.explanation.length < 40) fail(`${label}: explanation missing or too short`);
-          if (!question.example) answers[question.answer] = (answers[question.answer] || 0) + 1;
+          if (!question.example) [].concat(question.answer).forEach(value => { answers[value] = (answers[value] || 0) + 1; });
           const evidence = question.evidence || [];
           if (!evidence.length && !(question.type === 'zuordnung' && question.answer === (group.none || '0'))) fail(`${label}: evidence missing`);
           for (const item of evidence) {

@@ -7,7 +7,7 @@
   "set": "set-1",
   "title": "Pflegeroboter im Test",
   "minutes": 10,
-  "instructions": "Lesen Sie den Text und die Zusammenfassung. In jedem Absatz der Zusammenfassung ist ein Satz falsch. Klicken Sie den falschen Satz an.",
+  "instructions": "Lesen Sie den Text und die Zusammenfassung. In der Zusammenfassung sind drei Sätze falsch. Klicken Sie die drei falschen Sätze an.",
   "groups": [
     {
       "layout": "article",
@@ -28,53 +28,48 @@
       "questions": [
         {
           "number": 32,
-          "type": "fehlersatz",
-          "prompt": "Zusammenfassung, Absatz 1",
+          "type": "fehlerauswahl",
+          "prompt": "Zusammenfassung",
           "options": {
-            "a": "Ob Roboter dem Mangel an Pflegepersonal in der Altenpflege abhelfen können, ist seit Langem umstritten.",
-            "b": "Frühere Untersuchungen erstreckten sich meist nur über kurze Zeiträume und fanden in künstlichen Versuchsumgebungen statt.",
-            "c": "Ein Forschungsteam verfolgte deshalb zwölf Monate lang, wie sich zwei Robotersysteme im Alltag eines einzelnen Heims bewährten.",
-            "d": "Eines der Geräte erledigte Botengänge zwischen Lager und Wohnbereichen, das andere war zur Unterhaltung und Anregung der Bewohner gedacht.",
-            "e": "Erfasst wurden etwa die Strecken, die die Beschäftigten zurücklegten, wie oft diese mit den Bewohnern in Kontakt kamen und wie es den Bewohnern ging."
+            "a": "Ob Roboter den Personalmangel in der Altenpflege mildern können, wird seit Jahren kontrovers diskutiert.",
+            "b": "Verlässliche Erkenntnisse aus der Praxis fehlten bisher weitgehend, weil die meisten Studien im Labor stattfanden und nur wenige Tage dauerten.",
+            "c": "Ein Forschungsteam der Hochschule Kalvenau begleitete deshalb ein Jahr lang den Einsatz von zwei Robotersystemen in vier Pflegeheimen.",
+            "d": "Das eine System, ein fahrbarer Assistent, beförderte Wäsche und Mahlzeiten auf die Stationen, während Medikamente weiterhin vom Personal verteilt wurden.",
+            "e": "Das andere, ein sprechender Roboter, sollte die Bewohnerinnen und Bewohner mit Gesprächen und Gedächtnisspielen beschäftigen.",
+            "f": "Untersucht wurden unter anderem die Laufwege des Personals, seine Kontakte zu den Bewohnern und deren Wohlbefinden, jeweils im Vergleich mit Heimen ohne technische Hilfe.",
+            "g": "Dank des Transportroboters legten die Pflegekräfte täglich im Durchschnitt etwa einen Kilometer weniger zurück.",
+            "h": "Die so gewonnene Zeit kam laut den Aufzeichnungen des Teams größtenteils der direkten Betreuung der Bewohner zugute.",
+            "i": "Dieser Gewinn stellte sich allerdings erst nach rund drei Monaten ein, zuvor kosteten Störungen und Einweisungen sogar zusätzliche Zeit.",
+            "j": "Beim Unterhaltungsroboter ließ das anfängliche Interesse dagegen bald nach, und Menschen mit fortgeschrittener Demenz reagierten teils beruhigt, teils verängstigt.",
+            "k": "Der Technikethiker Grevenkort, der die Studie gemeinsam mit der Pflegewissenschaftlerin Velbeck leitete, sieht seine These bestätigt, dass Roboter eher Routinearbeit abnehmen als Beziehungen stiften sollten.",
+            "l": "Velbeck will aus den Daten keine allgemeine Empfehlung ableiten, hält soziale Roboter aber künftig für denkbar, wenn sie gezielter auf einzelne Bewohner zugeschnitten werden.",
+            "m": "Einig sind sich beide, dass nicht die Heimleitung allein über eine Anschaffung entscheiden sollte, sondern das Personal von Beginn an einbezogen werden muss.",
+            "n": "Ungeklärt ist außerdem die Finanzierung, da die Pflegekassen nicht zahlen und sich die meisten Heime die Geräte ohne Fördergeld kaum leisten können."
           },
-          "answer": "c",
-          "evidence": [
-            { "text": "artikel", "quote": "Ein Jahr lang begleitete es den Einsatz zweier Robotersysteme in sechs Pflegeheimen." }
+          "breaks": [
+            "f",
+            "k"
           ],
-          "explanation": "Metne göre ekip iki robot sistemini bir yıl boyunca „in sechs Pflegeheimen“ (altı bakımevinde) izledi. c cümlesi süreyi (zwölf Monate) ve iki sistemi doğru veriyor, ama araştırmayı „eines einzelnen Heims“ (tek bir bakımevi) ile sınırlıyor; kapsam yanlış. a (tartışma uzun süredir sürüyor), b (önceki çalışmaların çoğu laboratuvarda yapıldı ve birkaç gün sürdü), d (taşıma robotu ve sohbet/oyun robotu) ve e (yürünen yollar, temas sayısı, sakinlerin iyiliği ölçüldü) metinle uyuşuyor."
-        },
-        {
-          "number": 33,
-          "type": "fehlersatz",
-          "prompt": "Zusammenfassung, Absatz 2",
-          "options": {
-            "a": "Der Transportroboter entlastete das Personal schon in den ersten Wochen spürbar.",
-            "b": "Die eingesparte Zeit kam laut den Aufzeichnungen des Teams vor allem der unmittelbaren Versorgung der Bewohner zugute.",
-            "c": "Bewohner mit geringen geistigen Beeinträchtigungen beschäftigten sich zunächst oft mit dem Unterhaltungsroboter, verloren aber nach einer Weile die Lust daran.",
-            "d": "Auf schwer demenzkranke Menschen wirkte das Gerät sehr unterschiedlich."
-          },
-          "answer": "a",
-          "evidence": [
-            { "text": "artikel", "quote": "Allerdings zeigte sich dieser Effekt erst nach etwa drei Monaten; in der Anfangsphase banden technische Störungen und Einweisungen sogar zusätzliche Arbeitszeit." }
+          "answer": [
+            "c",
+            "d",
+            "k"
           ],
-          "explanation": "Metin taşıma robotunun yararının „erst nach etwa drei Monaten“ (ancak yaklaşık üç ay sonra) görüldüğünü, başlangıçta arızalar ve eğitimler yüzünden „sogar zusätzliche Arbeitszeit“ (hatta ek çalışma zamanı) gerektiğini söylüyor. a cümlesindeki „schon in den ersten Wochen“ (daha ilk haftalarda) bu yüzden yanlış: İlk dönemde personelin yükü azalmadı, aksine arttı. b (kazanılan zaman doğrudan bakıma gitti), c (önce ilgi, sonra azalma) ve d (ileri demansta bazen sakinleştirici, bazen korkutucu) metne uygun."
-        },
-        {
-          "number": 34,
-          "type": "fehlersatz",
-          "prompt": "Zusammenfassung, Absatz 3",
-          "options": {
-            "a": "Velbeck hält die Befunde zum Unterhaltungsroboter nicht für verallgemeinerbar, da sein Nutzen von Mensch zu Mensch verschieden sei.",
-            "b": "Grevenkort sieht sich durch die Studie in seiner Annahme bestätigt, dass sich Roboter eher dazu eignen, Beschäftigten Routineaufgaben abzunehmen, als soziale Bindungen herzustellen.",
-            "c": "Velbeck schließt dagegen nicht aus, dass soziale Roboter in einer stärker individualisierten Form künftig nützlich sein könnten.",
-            "d": "Beide Fachleute empfehlen, das Pflegepersonal erst einzubeziehen, wenn die Entscheidung für ein Gerät gefallen ist.",
-            "e": "Ungeklärt ist auch, wer die Kosten trägt, da die Pflegekassen bisher nicht zahlen und viele Heime auf Zuschüsse angewiesen wären."
-          },
-          "answer": "d",
           "evidence": [
-            { "text": "artikel", "quote": "das Personal müsse von Beginn an beteiligt werden" }
+            {
+              "text": "artikel",
+              "quote": "Ein Jahr lang begleitete es den Einsatz zweier Robotersysteme in sechs Pflegeheimen."
+            },
+            {
+              "text": "artikel",
+              "quote": "Es brachte Wäsche, Mahlzeiten und Medikamente – Letztere in verschlossenen Fächern – von den Lagerräumen auf die Stationen."
+            },
+            {
+              "text": "artikel",
+              "quote": "Der Technikethiker Ortwin Grevenkort, der die Studie beratend begleitete"
+            }
           ],
-          "explanation": "İki uzman da satın alma kararını yalnızca yönetimlerin vermemesi gerektiğinde birleşiyor: Personel „von Beginn an beteiligt werden“ (en başından sürece katılmalı). d cümlesi personelin ancak karar verildikten sonra dahil edilmesini önerdiğini söylüyor; bu metnin tersidir. a (etki kişiden kişiye değişiyor), b (Grevenkort sonuçlarda kendi tezinin doğrulandığını görüyor: robotlar ilişki kurmaktan çok rutin işleri devralmakta anlamlı), c (Velbeck: kişiye göre uyarlanırsa olabilir) ve e (bakım sigortası ödemiyor, destek olmadan pahalı) metinle uyuşuyor."
+          "explanation": "Üç yanlış cümle c, d ve k. c: Metne göre Velbeck'in ekibi iki robot sistemini bir yıl boyunca „in sechs Pflegeheimen“ (altı bakımevinde) izledi. c cümlesinde süre ve sistem sayısı doğru, ama bakımevi sayısı „vier“ (dört) olarak verilmiş; dört sayısı metinde yalnızca karşılaştırma için kullanılan, robotsuz çalışan bakımevleri için geçiyor. d: Metne göre taşıma robotu çamaşır ve yemeklerle birlikte ilaçları da („Medikamente“) depodan servislere taşıdı; ilaçlar kilitli bölmelerde („in verschlossenen Fächern“) taşındı. d cümlesi ilaçların yine personel tarafından dağıtıldığını söylüyor; bu yanlış. k: Grevenkort metinde çalışmaya yalnızca danışman olarak eşlik etti („beratend begleitete“); çalışmayı Velbeck ile birlikte yönetmedi. Tezinin doğrulandığını görmesi doğru, ama rolü yanlış verilmiş. Diğer cümleler metinle uyuşuyor: a (tartışma yıllardır sürüyor), b (önceki çalışmalar laboratuvarda ve birkaç gün), e (konuşan robot oyun ve sohbetle meşgul etmek için), f (yürüme yolları, temaslar, iyi oluş; robotsuz bakımevleriyle karşılaştırma), g (günde ortalama yaklaşık bir kilometre daha az yol), h (kazanılan zaman çoğunlukla doğrudan bakıma), i (etki ancak yaklaşık üç ay sonra; başta arızalar ve eğitimler ek zaman aldı), j (ilgi birkaç hafta sonra azaldı; ileri demansta bazen sakinleştirici, bazen korkutucu), l (Velbeck genel öneri çıkarmıyor ama kişiye göre uyarlanırsa olabilir), m (karar yalnızca yönetimin değil, personel en baştan katılmalı) ve n (bakım sigortası ödemiyor, destek olmadan çoğu bakımevi karşılayamıyor)."
         }
       ]
     }

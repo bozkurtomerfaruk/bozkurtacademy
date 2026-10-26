@@ -1,5 +1,5 @@
 // Digital TestDaF Lesen: start links, Aufgabe 1 a–d gaps, Aufgabe 2 position buttons per paragraph,
-// Aufgabe 4 marked passages, Aufgabe 6 a/b buttons, Aufgabe 7 clickable summary sentences,
+// Aufgabe 4 marked passages, Aufgabe 6 a/b buttons, Aufgabe 7 three clickable sentences in one summary,
 // overflow on every set, light and dark.
 import { chromium, B, shot, shotDir, teileOf, setsOf, readSet, checker } from './lib.mjs';
 const browser = await chromium.launch();
@@ -31,10 +31,13 @@ for (const [w, th] of [[1280, 'light'], [390, 'dark']]) {
       ok(box && box.height >= 44 && box.width >= 44, `${label}: position buttons are large enough to tap`);
     }
     if (t === 7) {
-      const q = qs.find(x => x.type === 'fehlersatz');
-      ok(await page.locator('.task-q--fehlersatz').count() === 3, `${label}: three summary paragraphs`);
-      await page.locator(`.task-q[data-q="${q.number}"] .task-option-text`).first().click();
-      ok(await page.locator(`.task-q[data-q="${q.number}"] .task-option.is-chosen`).count() === 1, `${label}: clicking a sentence selects it`);
+      const q = qs.find(x => x.type === 'fehlerauswahl'), sel = `.task-q[data-q="${q.number}"]`;
+      ok(await page.locator('.task-q--fehlerauswahl').count() === 1, `${label}: one summary`);
+      for (let i = 0; i < 3; i++) await page.locator(`${sel} .task-option-text`).nth(i).click();
+      ok(await page.locator(`${sel} .task-option.is-chosen`).count() === 3, `${label}: three sentences chosen`);
+      ok(await page.locator(`${sel} input:not(:checked):disabled`).count() === Object.keys(q.options).length - 3, `${label}: no fourth sentence can be chosen`);
+      await page.locator(`${sel} .task-option-text`).nth(0).click();
+      ok(await page.locator(`${sel} input:disabled`).count() === 0, `${label}: unchoosing frees the other sentences`);
     }
     if (t === 6) ok(await page.locator('.task-q--pair').count() === 4 && await page.locator('select').count() === 0, `${label}: four a/b questions`);
     await page.click('[data-task-check]'); await page.waitForTimeout(400);

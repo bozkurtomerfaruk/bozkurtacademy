@@ -7,7 +7,7 @@
   "set": "set-2",
   "title": "Die Rückkehr der Wölfe",
   "minutes": 10,
-  "instructions": "Lesen Sie den Text und die Zusammenfassung. In jedem Absatz der Zusammenfassung ist ein Satz falsch. Klicken Sie den falschen Satz an.",
+  "instructions": "Lesen Sie den Text und die Zusammenfassung. In der Zusammenfassung sind drei Sätze falsch. Klicken Sie die drei falschen Sätze an.",
   "groups": [
     {
       "layout": "article",
@@ -28,52 +28,48 @@
       "questions": [
         {
           "number": 32,
-          "type": "fehlersatz",
-          "prompt": "Zusammenfassung, Absatz 1",
+          "type": "fehlerauswahl",
+          "prompt": "Zusammenfassung",
           "options": {
-            "a": "Nach langer Abwesenheit siedeln sich Wölfe seit rund zwanzig Jahren wieder in Mitteleuropa an, auch in landwirtschaftlich geprägten Gegenden mit vielen Einwohnern.",
-            "b": "Neben Naturschutzverbänden begrüßen auch viele Halter von Schafen und Ziegen die Rückkehr der Raubtiere.",
-            "c": "Thielmeyers Team hat Material aus mehr als einem Jahrzehnt untersucht, um die Auseinandersetzung auf eine sachliche Basis zu stellen.",
-            "d": "Wie oft Weidetiere angegriffen werden, hängt der Studie zufolge weniger von der Größe des örtlichen Wolfsbestands ab als von den Schutzvorkehrungen."
+            "a": "Nachdem der Wolf in weiten Teilen Mitteleuropas über ein Jahrhundert lang als ausgerottet galt, wandern seit rund zwanzig Jahren wieder Tiere aus dem Osten ein.",
+            "b": "Die Zuwanderer gründen neue Rudel, meiden dabei aber bislang Gegenden, in denen viele Menschen leben.",
+            "c": "Während Naturschutzverbände diese Entwicklung als Erfolg betrachten, fürchten viele Schaf- und Ziegenhalter um ihre wirtschaftliche Grundlage.",
+            "d": "Um die Debatte zu versachlichen, hat das Team um Thielmeyer Rissmeldungen, genetische Proben und Wildkamerabilder aus zwölf Jahren ausgewertet.",
+            "e": "Wie oft Nutztiere angegriffen werden, hängt demnach weniger von der Zahl der Wölfe in einer Region ab als davon, wie die Herden geschützt sind.",
+            "f": "Für rund 2.400 erfasste Übergriffe war jeweils festgehalten worden, welche Schutzvorkehrungen auf der betroffenen Weide bestanden.",
+            "g": "Wo ausreichend hohe Elektrozäune oder Herdenschutzhunde eingesetzt wurden, sank die Zahl der gerissenen Tiere um bis zu neunzig Prozent.",
+            "h": "Thielmeyer hält eine pauschale Verkleinerung des Wolfsbestandes für wenig wirksam und auch den Abschuss einzelner auffälliger Tiere nicht für gerechtfertigt.",
+            "i": "Die an der Studie nicht beteiligte Agrarökonomin Ostrander betont, beim Herdenschutz falle weniger der zusätzliche Arbeitsaufwand als vielmehr die Anschaffung ins Gewicht, die der Staat nur teilweise erstatte.",
+            "j": "Gerade kleine Nebenerwerbsbetriebe könnten diese Belastung kaum schultern; manche hätten ihre Herden bereits verkleinert oder ganz aufgegeben.",
+            "k": "Umstrittener ist der ökologische Teil der Studie: In Wolfsgebieten hielten sich Rehe und Hirsche seltener lange an einer Stelle auf, und stellenweise wuchsen junge Bäume wieder besser.",
+            "l": "Einen ursächlichen Zusammenhang leitet Thielmeyer daraus noch nicht ab, weil mancherorts zugleich stärker gejagt wurde und trockene Sommer das Wachstum bremsten.",
+            "m": "Die Forschenden fordern daher eine langfristige Erfassung von Wild, Pflanzenwuchs und Jagdstrecken nach einheitlichen Methoden, da die Behörden bisher unterschiedlich vorgehen.",
+            "n": "Als ersten Schritt sehen sie, dass sich zwei benachbarte Landkreise auf ein gemeinsames Verfahren zur Datenerhebung geeinigt haben."
           },
-          "answer": "b",
-          "evidence": [
-            { "text": "artikel", "quote": "sehen viele Schaf- und Ziegenhalter ihre Existenz bedroht" }
+          "breaks": [
+            "f",
+            "k"
           ],
-          "explanation": "Metne göre kurtların dönüşünü başarı olarak görenler doğa koruma dernekleri; birçok „Schaf- und Ziegenhalter“ (koyun ve keçi yetiştiricisi) ise „ihre Existenz bedroht“ (varlığını tehdit altında) görüyor. b cümlesi bu yetiştiricilerin de dönüşü memnuniyetle karşıladığını söyleyerek tutumlarını tersine çeviriyor; bu yüzden yanlış. a (yaklaşık yirmi yıldır, yoğun nüfuslu tarım alanlarında da), c (on iki yıllık veri, tartışmayı nesnelleştirmek için) ve d (saldırılar kurt sayısından çok korumaya bağlı) metinle uyuşuyor."
-        },
-        {
-          "number": 33,
-          "type": "fehlersatz",
-          "prompt": "Zusammenfassung, Absatz 2",
-          "options": {
-            "a": "Mit genügend hohen Stromzäunen oder Hunden, die die Herden bewachen, ließen sich die Verluste um bis zu neun Zehntel senken.",
-            "b": "Ein erheblicher Teil der übrigen Angriffe ging auf einzelne Rudel zurück, die offenbar Wege gefunden hatten, auch solche Barrieren zu überwinden.",
-            "c": "Thielmeyer leitet daraus ab, dass es unter bestimmten Umständen berechtigt sein könne, einzelne auffällig gewordene Wölfe zu erlegen, eine generelle Verkleinerung der Population aber kaum etwas bringe.",
-            "d": "Ostrander gibt dagegen zu bedenken, dass vor allem größere Betriebe den Aufwand für den Herdenschutz kaum bewältigen könnten.",
-            "e": "Der Ökonomin zufolge haben einige Tierhalter ihre Bestände bereits reduziert oder die Haltung eingestellt."
-          },
-          "answer": "d",
-          "evidence": [
-            { "text": "artikel", "quote": "Gerade kleine Betriebe, die die Tierhaltung im Nebenerwerb betrieben, könnten diese Last kaum tragen" }
+          "answer": [
+            "b",
+            "h",
+            "i"
           ],
-          "explanation": "Ostrander'e göre bu yükü özellikle „kleine Betriebe“ (küçük işletmeler), yani hayvancılığı yan gelir olarak yapanlar taşıyamıyor. d cümlesi bunu „größere Betriebe“ (daha büyük işletmeler) olarak veriyor; karşılaştırma ters çevrilmiş. a (yeterince yüksek elektrikli çit veya sürü koruma köpekleriyle kayıplar %90'a kadar azaldı), b (kalan zararların büyük kısmı, engelleri aşmayı anlaşılan o ki öğrenmiş birkaç sürüden), c (göze batan tek tek hayvanları vurmak belirli durumlarda haklı olabilir, genel azaltma pek etkili değil) ve e (bazıları sürüsünü küçülttü veya bıraktı) metne uygun."
-        },
-        {
-          "number": 34,
-          "type": "fehlersatz",
-          "prompt": "Zusammenfassung, Absatz 3",
-          "options": {
-            "a": "Dass das Wild in Wäldern mit Wölfen junge Bäume weniger schädigte, führen die Forschenden darauf zurück, dass es sich dort nicht mehr so lange an einer Stelle aufhielt.",
-            "b": "Dieser Teil der Studie ist stärker umstritten als die Ergebnisse zum Schutz der Herden.",
-            "c": "Die Forschenden fordern deshalb eine dauerhafte Beobachtung von Wild, Pflanzenwuchs und Abschusszahlen nach gemeinsamen Kriterien.",
-            "d": "Gegenwärtig erschweren uneinheitliche Erhebungsverfahren der Behörden den Vergleich verschiedener Gebiete."
-          },
-          "answer": "a",
           "evidence": [
-            { "text": "artikel", "quote": "Thielmeyer betont jedoch, dass sich ein ursächlicher Zusammenhang daraus noch nicht ableiten lasse" }
+            {
+              "text": "artikel",
+              "quote": "inzwischen auch in dicht besiedelten Agrarlandschaften"
+            },
+            {
+              "text": "artikel",
+              "quote": "dass der Abschuss einzelner auffälliger Tiere in bestimmten Fällen gerechtfertigt sein könne"
+            },
+            {
+              "text": "artikel",
+              "quote": "Wirksamer Herdenschutz verursache erhebliche Kosten und vor allem zusätzlichen Arbeitsaufwand"
+            }
           ],
-          "explanation": "Metin kurtlu ormanlarda geyiklerin daha az yerinde durduğunu ve bazı bölgelerde genç ağaçların yeniden iyi büyüdüğünü yalnızca gözlem olarak aktarıyor; Thielmeyer bundan „ein ursächlicher Zusammenhang“ (bir neden-sonuç ilişkisi) henüz çıkarılamayacağını vurguluyor. a cümlesi ise araştırmacıların zarardaki azalmayı bu davranışa „führen … darauf zurück“ (buna bağlıyorlar) diyerek bir neden-sonuç ilişkisi kurduklarını söylüyor; metne göre böyle bir ilişki henüz kurulamıyor, bu yüzden yanlış. b (çalışmanın bu bölümü „Umstrittener“, yani sürü korumayla ilgili sonuçlardan daha tartışmalı), c (tek tip yöntemlerle uzun süreli izleme) ve d (kurumların farklı standartları karşılaştırmayı zorlaştırıyor) metinle uyuşuyor."
+          "explanation": "Üç yanlış cümle b, h ve i. b: Metne göre doğudan gelen kurtlar sürü kuruyor, „inzwischen auch in dicht besiedelten Agrarlandschaften“ (artık yoğun nüfuslu tarım bölgelerinde de). b cümlesi kurtların insanların yoğun yaşadığı yerlerden şimdiye kadar uzak durduğunu söylüyor; bu metnin tersi. h: Thielmeyer'e göre bestenin toptan azaltılması pek işe yaramıyor; ama göze batan tek tek hayvanların vurulması „in bestimmten Fällen gerechtfertigt sein könne“ (belirli durumlarda haklı olabilir). h cümlesinin ilk yarısı doğru, ikinci yarısı Thielmeyer'in görüşünü tersine çeviriyor. i: Ostrander'e göre sürü koruma önemli maliyetlere ve „vor allem zusätzlichen Arbeitsaufwand“ (özellikle ek iş yüküne) yol açıyor; devlet programları bunu yalnızca kısmen karşılıyor. i cümlesi ise ek iş yükünün asıl sorun olmadığını, ağırlığın satın almada olduğunu söylüyor; metin tam tersini, yani „vor allem zusätzlichen Arbeitsaufwand“ı vurguluyor. Diğer cümleler metinle uyuşuyor: a (yüz yılı aşkın süre yok sayıldı, yaklaşık yirmi yıldır doğudan geliyorlar), c (doğa koruma dernekleri başarı olarak görüyor, birçok koyun ve keçi yetiştiricisi varlığını tehdit altında görüyor), d (tartışmayı nesnelleştirmek için on iki yıllık veri: bildirimler, genetik analizler, fotokapanlar), e (saldırılar kurt sayısından çok korumaya bağlı), f (yaklaşık 2.400 olayda alınan önlemler kayıtlı), g (çit veya köpeklerle %90'a kadar azalma), j (özellikle yan gelir olarak hayvancılık yapan küçük işletmeler; bazıları küçüldü ya da bıraktı), k (ekolojik bölüm daha tartışmalı; geyikler daha az uzun süre kalıyor, bazı yerlerde ağaçlar daha iyi büyüyor), l (avlanma ve kurak yazlar yüzünden neden-sonuç ilişkisi henüz çıkarılamıyor), m (tek tip yöntemlerle uzun süreli izleme; kurumların standartları farklı) ve n (iki komşu ilçe ortak protokolde anlaştı)."
         }
       ]
     }

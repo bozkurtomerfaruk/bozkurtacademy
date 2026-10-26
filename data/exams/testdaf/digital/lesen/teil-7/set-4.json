@@ -7,7 +7,7 @@
   "set": "set-4",
   "title": "Fleisch aus dem Labor",
   "minutes": 10,
-  "instructions": "Lesen Sie den Text und die Zusammenfassung. In jedem Absatz der Zusammenfassung ist ein Satz falsch. Klicken Sie den falschen Satz an.",
+  "instructions": "Lesen Sie den Text und die Zusammenfassung. In der Zusammenfassung sind drei Sätze falsch. Klicken Sie die drei falschen Sätze an.",
   "groups": [
     {
       "layout": "article",
@@ -28,62 +28,48 @@
       "questions": [
         {
           "number": 32,
-          "type": "fehlersatz",
-          "prompt": "Zusammenfassung, Absatz 1",
+          "type": "fehlerauswahl",
+          "prompt": "Zusammenfassung",
           "options": {
-            "a": "Für das Verfahren werden einem lebenden Tier einige Stammzellen entnommen, aus denen sich nach Sältzer schon heute große Fleischmengen herstellen lassen.",
-            "b": "Bis daraus ein erschwingliches Lebensmittel wird, sind aber noch beträchtliche Schwierigkeiten zu überwinden.",
-            "c": "So war die Zellvermehrung lange von einem Serum aus dem Blut von Kalbsföten abhängig, was dem Ziel eines schlachtfreien Fleisches widersprach.",
-            "d": "In den mittlerweile verfügbaren Nährmedien ohne Serum entfällt der größte Teil der Herstellungskosten auf bestimmte Proteine, die das Wachstum anregen.",
-            "e": "Sältzers Team will diese Stoffe von Mikroorganismen produzieren lassen, hat den Ansatz aber noch nicht in großem Umfang getestet."
+            "a": "Nach Sältzers Rechnung ließen sich aus den wenigen Muskelstammzellen eines lebenden Rindes theoretisch einige Kilogramm Gewebe züchten.",
+            "b": "Bis daraus ein bezahlbares Produkt im Supermarkt wird, sind nach Ansicht der Zellbiologin Sältzer aber noch erhebliche Hürden zu überwinden.",
+            "c": "Lange war die Zellvermehrung auf ein Serum aus dem Blut ungeborener Kälber angewiesen, was dem Anspruch einer schlachtfreien Herstellung widersprach.",
+            "d": "In den inzwischen verfügbaren serumfreien Nährmedien verursachen Wachstumsfaktoren den größten Teil der Produktionskosten.",
+            "e": "Sältzer und ihr Team wollen diese Proteine von gentechnisch veränderten Hefen herstellen lassen, haben das Verfahren aber noch nicht industriell erprobt.",
+            "f": "Hackfleischähnliche Produkte lassen sich bereits herstellen, bei einem Steak aber sterben die Zellen im Inneren dickerer Stücke ab, weil sie ohne Blutgefäße nicht versorgt werden.",
+            "g": "Um das zu lösen, erproben mehrere Labore essbare Gerüste aus Pilzgeflecht, durch deren feine Kanäle die Nährlösung fließen kann.",
+            "h": "Diese Gerüste sollen den Zellen Halt geben, ohne beim Braten Konsistenz oder Geschmack zu verfälschen.",
+            "i": "Das gelingt nach Sältzers Worten bislang höchstens bei dünnen Scheiben.",
+            "j": "Ökologisch braucht Zellkulturfleisch nach übereinstimmenden Schätzungen deutlich weniger Fläche als die Rinderhaltung, zur Klimabilanz kommen Studien jedoch zu sehr unterschiedlichen Ergebnissen.",
+            "k": "Wulfekuhl zufolge entscheidet über die Klimabilanz vor allem, woher die Energie für die beheizten, sterilen Bioreaktoren stammt.",
+            "l": "An Rautenstrauchs Geschmackstest nahmen sowohl Fleischesser als auch Menschen teil, die sonst auf Fleisch verzichten.",
+            "m": "Von zwei identischen Proben schnitt bei ihnen die als „kultiviertes Fleisch“ bezeichnete deutlich besser ab als das „Laborfleisch“.",
+            "n": "Die Forscherin vermutet, dass die Bezeichnung die Akzeptanz stärker prägen könnte als die Technik, und will prüfen, ob sich das auch beim Einkauf zeigt."
           },
-          "answer": "a",
+          "breaks": [
+            "f",
+            "k"
+          ],
+          "answer": [
+            "a",
+            "g",
+            "l"
+          ],
           "evidence": [
             {
               "text": "artikel",
-              "quote": "Aus einer einzigen Probe ließen sich theoretisch Tonnen von Gewebe gewinnen"
-            }
-          ],
-          "explanation": "Sältzer yalnızca kuramsal bir hesaptan söz ediyor: „Aus einer einzigen Probe ließen sich theoretisch Tonnen von Gewebe gewinnen“ (tek bir örnekten kuramsal olarak tonlarca doku elde edilebilir) ve hemen ardından bu hesapla satın alınabilir bir ürün arasında „erhebliche Hürden“ (ciddi engeller) olduğunu ekliyor. a cümlesi bu olasılığı „schon heute“ (bugün bile) gerçekleşen bir durum gibi sunduğu için yanlış. b (engeller), c (uzun süre doğmamış buzağıların kanından elde edilen seruma bağımlılık, kesimsiz üretim iddiasıyla çelişki), d (serumsuz ortamlarda üretim maliyetinin büyük kısmı büyüme faktörlerinden) ve e (maya ile üretim, henüz endüstriyel ölçekte denenmedi) metinle uyuşuyor."
-        },
-        {
-          "number": 33,
-          "type": "fehlersatz",
-          "prompt": "Zusammenfassung, Absatz 2",
-          "options": {
-            "a": "Hackfleischähnliche Erzeugnisse sind technisch bereits machbar, ein Steak mit seinem gegliederten Aufbau aus Fasern, Fett und Bindegewebe ist dagegen ein Problem.",
-            "b": "Ohne Blutgefäße erreichen die Nährstoffe nämlich nur die äußersten Zellschichten, sodass Zellen im Inneren dickerer Stücke absterben.",
-            "c": "Beim Flächenbedarf schneidet das Zellkulturfleisch nach den bisherigen Schätzungen besser ab als die Rinderhaltung.",
-            "d": "Wulfekuhl zufolge verursacht Zellkulturfleisch bei Strom aus Kohle oder Gas mehr Treibhausgase als Rindfleisch.",
-            "e": "Für die Klimabilanz ist seiner Ansicht nach vor allem ausschlaggebend, woher die Energie stammt."
-          },
-          "answer": "d",
-          "evidence": [
+              "quote": "Aus einer einzigen Probe ließen sich theoretisch Tonnen von Gewebe gewinnen, sagt die Zellbiologin Swaantje Sältzer"
+            },
             {
               "text": "artikel",
-              "quote": "könne der Vorteil gegenüber Rindfleisch erheblich schrumpfen"
-            }
-          ],
-          "explanation": "Wulfekuhl'a göre elektrik fosil kaynaklardan gelirse „könne der Vorteil gegenüber Rindfleisch erheblich schrumpfen“ (sığır etine karşı avantaj ciddi ölçüde küçülebilir). Avantajın belki tamamen ortadan kalkacağını yalnızca kanatlı eti (Geflügel) için söylüyor. d cümlesi ise hücre kültürü etinin sığır etinden daha fazla sera gazı ürettiğini iddia ediyor; bu, karşılaştırmayı yanlış hayvana bağlıyor ve olasılığı kesinlik gibi sunuyor. a ve b (kıyma benzeri ürünler mümkün, biftekte yapı sorunu var; damar olmadan kalın doku parçalarının içindeki hücreler beslenemeyip ölüyor), c (daha az alan) ve e (belirleyici olan enerji kaynağı) metinle uyuşuyor."
-        },
-        {
-          "number": 34,
-          "type": "fehlersatz",
-          "prompt": "Zusammenfassung, Absatz 3",
-          "options": {
-            "a": "In einem Geschmackstest bewerteten die Teilnehmenden von zwei gleichen Proben jene besser, die als kultiviertes Fleisch bezeichnet war.",
-            "b": "Rautenstrauch sieht damit belegt, dass der Name eines solchen Produkts über dessen Erfolg mehr entscheidet als das Herstellungsverfahren.",
-            "c": "Ungeklärt ist bislang, ob sich das Ergebnis auf reale Kaufentscheidungen übertragen lässt.",
-            "d": "Dieser Frage möchte die Forscherin in einer weiteren Untersuchung nachgehen."
-          },
-          "answer": "b",
-          "evidence": [
+              "quote": "Mehrere Labore experimentieren daher mit essbaren Gerüsten aus Pflanzenfasern"
+            },
             {
               "text": "artikel",
-              "quote": "dass die Bezeichnung die Akzeptanz womöglich stärker beeinflusst als die Technik"
+              "quote": "teilgenommen hatten ausschließlich Personen, die regelmäßig Fleisch essen"
             }
           ],
-          "explanation": "Rautenstrauch sonucunu temkinli ifade ediyor: „dass die Bezeichnung die Akzeptanz womöglich stärker beeinflusst als die Technik“ (adlandırma kabulü belki teknikten daha güçlü etkiliyor). „womöglich“ (belki) bunun bir varsayım olduğunu gösteriyor; ayrıca gerçek alışverişte bu etkinin görülüp görülmediği henüz araştırılmadı. b cümlesi ise bunu „belegt“ (kanıtlanmış) bir sonuç gibi sunduğu için yanlış. a (aynı iki örnekten „kultiviertes Fleisch“ adlı olan daha iyi not aldı), c (satın alma davranışına aktarılıp aktarılamayacağı açık) ve d (bir sonraki projede incelenecek) metinle uyuşuyor."
+          "explanation": "a yanlış: Metne göre tek bir örnekten kuramsal olarak „Tonnen von Gewebe“ (tonlarca doku) elde edilebilir: „Aus einer einzigen Probe ließen sich theoretisch Tonnen von Gewebe gewinnen, sagt die Zellbiologin Swaantje Sältzer“. a cümlesi miktarı „einige Kilogramm“ (birkaç kilogram) olarak veriyor; miktar yanlış. g yanlış: Metne göre laboratuvarlar „Gerüsten aus Pflanzenfasern“ (bitki liflerinden iskeletler) ile deney yapıyor: „Mehrere Labore experimentieren daher mit essbaren Gerüsten aus Pflanzenfasern“. g cümlesi iskeletlerin „Pilzgeflecht“ten (mantar miselinden) yapıldığını söylüyor; malzeme yanlış. l yanlış: Rautenstrauch'un tadım testine et yemeyenler katılmadı; metne göre „teilgenommen hatten ausschließlich Personen, die regelmäßig Fleisch essen“ (yalnızca düzenli et yiyen kişiler katıldı). Cümle katılımcı grubunu genişletiyor. Diğer cümleler metinle uyuşuyor: b (satın alınabilir bir ürüne kadar ciddi engeller), c (doğmamış buzağıların kanından elde edilen seruma bağımlılık, kesimsiz üretim iddiasıyla çelişki), d (serumsuz ortamlarda maliyetin büyük kısmı büyüme faktörlerinden), e (gen teknolojisiyle değiştirilmiş mayalar, henüz endüstriyel ölçekte denenmedi), f (kıyma benzeri ürünler mümkün; damar olmadan kalın parçaların içindeki hücreler ölüyor), h ve i (iskeletler hücrelere destek olmalı, kıvamı ve tadı bozmamalı; şimdilik en fazla ince dilimlerde başarılı), j (daha az alan, iklim dengesinde çok farklı sonuçlar), k (Wulfekuhl'a göre belirleyici olan tesislerin enerji kaynağı), m (aynı iki örnekten „kultiviertes Fleisch“ adlı olan daha iyi not aldı) ve n (ad kabulü belki teknikten daha çok etkiliyor; gerçek alışverişte ayrıca incelenecek)."
         }
       ]
     }

@@ -2,6 +2,15 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-10-26 · Lesen son tur: TestDaF Aufgabe 7 gerçek formatta, telc C1 cevap biçimi
+
+- **TestDaF dijital Aufgabe 7:** Her set artık tek özet (14 cümle, üç paragraf) ve içinde üç yanlış cümle. Öğrenci üç cümle seçer, en fazla üç seçilebilir; her doğru seçim 1 puan (soru 32 = 32–34). Yanlış cümlelerin yeri setlere göre değişiyor; bazı setlerde ikisi aynı paragrafta. `fehlersatz` tipi yerine çoklu seçimli `fehlerauswahl` geldi (oynatıcı, puanlama, `check-exams` ve testler güncellendi).
+- **Tahmin edilebilir yanlış cümleler:** Genel bilgiyle ya da özetin başka bir cümlesiyle anlaşılan yanlışlar kaldırıldı. Yeni yanlışlar tek bir somut ayrıntıyı (miktar, malzeme, kişi, katılımcı grubu, neden) değiştiriyor ve ancak metne bakınca anlaşılıyor.
+- **telc C1 Hochschule soru 24:** Doğru cevap 1, 3 ve 5. setlerde kısa ve tek parçalı, 2 ve 4. setlerde iki parçalı. Her sette bir çeldirici daha uzun ve iki parçalı; doğru cevap hiçbir sette en uzun değil, yalnız birinde en kısa. Yalnız çeldiricilerde görülen „daher“ bağlacı azaltıldı.
+- **Yeni kural (`docs/sinav-setleri.md`):** Doğru cevap biçim ve uzunluk bakımından öne çıkmaz (tüm seviyeler, tüm seçmeli görevler).
+- **Kör çözüm:** Aufgabe 7 15/15, telc C1 soru 24 ve set soruları 60/60. Kör çözücü biçim stratejileriyle (en kısa / en uzun) doğruya ulaşamadı. Değişen set-4 özeti ayrıca yeniden kör çözüldü (3/3).
+- **Not:** Aufgabe 7 set-5'teki bir yanlış yıl (1700) metinsiz de uzmanlık bilgisiyle bulunabilir; sıradan öğrenci için metin gerekli.
+
 ## 2026-10-26 · Lesen ekleri: TestDaF dijital Aufgabe 2 ve 7, telc C1 ana fikir soruları, telc A2 set değişikliği
 
 - **TestDaF dijital Aufgabe 2 (Textabschnitte ordnen):** 5 set. Giriş paragrafı sabit; A–D paragraflarına sıra numarası (2–5) seçilir. Yeni soru tipi `reihenfolge`: sayı düğmeleri en az 44 px, telefonda tek satır.

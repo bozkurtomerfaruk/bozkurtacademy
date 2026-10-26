@@ -1,0 +1,156 @@
+{
+  "format": 1,
+  "exam": "testdaf",
+  "level": "digital",
+  "section": "lesen",
+  "teil": 2,
+  "set": "set-4",
+  "title": "Die Vermessung der Erde",
+  "minutes": 8,
+  "context": "Sie lesen in einem Wissenschaftsmagazin einen Artikel über Geodäsie.",
+  "instructions": "Die Abschnitte A–D des Textes sind durcheinandergeraten. Lesen Sie zuerst den Anfang des Textes und dann die Abschnitte A–D. An welcher Stelle (2–5) stehen sie im Originaltext? Wählen Sie für jeden Abschnitt eine Position; jede Position kommt nur einmal vor.",
+  "groups": [
+    {
+      "layout": "comments",
+      "texts": [
+        {
+          "id": "einleitung",
+          "title": "Die Vermessung der Erde",
+          "paragraphs": [
+            "Wer an Landvermessung denkt, hat meist Grenzsteine und Katasterpläne vor Augen. Die moderne Geodäsie verfolgt ein weit grundsätzlicheres Ziel: Bestimmt werden Form, Schwerefeld und Rotation der gesamten Erde, und zwar mit einer Genauigkeit von wenigen Millimetern. Satellitennavigation und die Beobachtung des Meeresspiegels sind auf ein solches globales Bezugssystem angewiesen. Dessen Fixpunkte liegen allerdings auf einem Untergrund, der niemals stillhält: Kontinentalplatten verschieben sich um einige Zentimeter pro Jahr, Regionen, die in der letzten Eiszeit unter mächtigen Eisschilden lagen, heben sich noch heute, und die Gezeiten verformen täglich sogar den festen Boden."
+          ]
+        },
+        {
+          "id": "abschnitt-a",
+          "label": "A",
+          "paragraphs": [
+            "Gelöst wird dieser Widerspruch bislang, indem man mehrere unabhängige Messverfahren miteinander kombiniert. Radioteleskope empfangen die Signale von Quasaren, die so weit entfernt sind, dass sie als praktisch unbewegliche Orientierungspunkte am Himmel dienen können. Laserstationen messen die Laufzeit von Lichtpulsen zu Satelliten, und zahlreiche Empfänger für Navigationssignale registrieren die Bewegungen der Erdoberfläche nahezu lückenlos. Da jedes Verfahren eigene Stärken und systematische Fehler hat, entsteht ein verlässliches Gesamtbild erst durch ihre Verknüpfung. Diese erfolgt an einigen wenigen Observatorien weltweit, an denen mehrere solcher Instrumente in unmittelbarer Nachbarschaft betrieben werden. Ausgerechnet an diesen Knotenpunkten aber liegt nach Ansicht der Geodätin Almut Elmerhaus eine bislang unterschätzte Schwachstelle."
+          ]
+        },
+        {
+          "id": "abschnitt-b",
+          "label": "B",
+          "paragraphs": [
+            "Um zu prüfen, ob sich die Geräte zwischen den Kampagnen tatsächlich bewegen, ließ Elmerhaus am eigenen Observatorium ein automatisches Messsystem installieren. Vierzehn Monate lang bestimmten motorisierte Präzisionsinstrumente stündlich die Position von Markierungen, die an Teleskop, Laserstation und den Antennen der Navigationsempfänger angebracht waren. Die Auswertung bestätigte den Verdacht: Der Referenzpunkt des Radioteleskops verlagerte sich im Tagesverlauf um bis zu zwei Millimeter, an heißen Sommertagen stärker als im Winter. Hinzu kam eine langsame Absenkung des Teleskopsockels um insgesamt knapp einen Millimeter, die keine der bisherigen Vermessungen erfasst hatte. Bei einzelnen Messterminen im Abstand mehrerer Jahre, so Elmerhaus, hänge es letztlich vom Zufall ab, in welchem Zustand man ein Instrument antreffe."
+          ]
+        },
+        {
+          "id": "abschnitt-c",
+          "label": "C",
+          "paragraphs": [
+            "Um die Daten benachbarter Instrumente zusammenführen zu können, muss man nämlich wissen, wie deren Messpunkte räumlich zueinander liegen, und zwar auf den Millimeter genau. Ermittelt werden diese Abstände mit klassischen Vermessungsmethoden, allerdings nur in größeren Zeitabständen, an manchen Stationen lediglich alle paar Jahre. Zwischen zwei solchen Kampagnen gilt die Lage der Geräte als unverändert. Elmerhaus, die am Observatorium Hollerwiek forscht, hält diese Annahme für fragwürdig. Ein Radioteleskop mit einem Spiegel von zwanzig Metern Durchmesser sei schließlich kein starrer Körper: Sonneneinstrahlung erwärme Stahlkonstruktion und Sockel ungleichmäßig, das Fundament könne sich im Laufe der Jahre setzen. Schon geringe Verschiebungen würden sich dann unbemerkt auf die Verknüpfung der Messreihen auswirken."
+          ]
+        },
+        {
+          "id": "abschnitt-d",
+          "label": "D",
+          "paragraphs": [
+            "Welche Bedeutung dieser Befund über Hollerwiek hinaus hat, ist umstritten. Da das globale Bezugssystem auf nur wenigen Knotenpunkten beruht, könnten unerkannte Verschiebungen an einer einzigen Station grundsätzlich das gesamte Netz verzerren, mit Folgen etwa für die Berechnung des Meeresspiegelanstiegs, bei der es um Veränderungen von wenigen Millimetern pro Jahr geht. Elmerhaus selbst warnt jedoch davor, von einem Observatorium auf alle anderen zu schließen; Bauweise und Untergrund unterschieden sich von Ort zu Ort erheblich. Das Team will das Messsystem deshalb zunächst an zwei weiteren Stationen erproben. Ob sich der Aufwand auch flächendeckend lohnt, soll erst danach entschieden werden."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "number": 6,
+          "type": "reihenfolge",
+          "prompt": "Abschnitt A",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "2",
+          "evidence": [
+            {
+              "text": "abschnitt-a",
+              "quote": "Gelöst wird dieser Widerspruch bislang"
+            },
+            {
+              "text": "einleitung",
+              "quote": "Dessen Fixpunkte liegen allerdings auf einem Untergrund, der niemals stillhält"
+            },
+            {
+              "text": "abschnitt-a",
+              "quote": "Ausgerechnet an diesen Knotenpunkten aber liegt nach Ansicht der Geodätin Almut Elmerhaus eine bislang unterschätzte Schwachstelle"
+            }
+          ],
+          "explanation": "A, girişin son cümlesindeki çelişkiye doğrudan bağlanır: Sabit noktalar „auf einem Untergrund, der niemals stillhält“ (hiç durmayan bir zeminde) duruyor; A „Gelöst wird dieser Widerspruch bislang …“ (bu çelişki şimdiye kadar … çözülüyor) diye başlar. Ölçüm yöntemlerini, onların birleştirildiği gözlemevlerini ve jeodezist Almut Elmerhaus'u ilk kez tam adıyla tanıtan da bu bölümdür; diğer bölümler yalnızca „Elmerhaus“ der. A'nın son cümlesi bu düğüm noktalarında bir „Schwachstelle“ (zayıf nokta) olduğunu haber verir; C bunu „nämlich“ (yani) ile açıklar. Bu yüzden A 2. sıradadır."
+        },
+        {
+          "number": 7,
+          "type": "reihenfolge",
+          "prompt": "Abschnitt B",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "4",
+          "evidence": [
+            {
+              "text": "abschnitt-b",
+              "quote": "Um zu prüfen, ob sich die Geräte zwischen den Kampagnen tatsächlich bewegen"
+            },
+            {
+              "text": "abschnitt-c",
+              "quote": "Zwischen zwei solchen Kampagnen gilt die Lage der Geräte als unverändert"
+            },
+            {
+              "text": "abschnitt-b",
+              "quote": "Die Auswertung bestätigte den Verdacht"
+            }
+          ],
+          "explanation": "B, C'deki varsayımı test eder: C'ye göre „Zwischen zwei solchen Kampagnen gilt die Lage der Geräte als unverändert“ (iki ölçüm kampanyası arasında cihazların yerinin değişmediği kabul ediliyor) ve Elmerhaus buna kuşkuyla bakıyor. B „Um zu prüfen, ob sich die Geräte zwischen den Kampagnen tatsächlich bewegen“ (cihazların kampanyalar arasında gerçekten hareket edip etmediğini sınamak için) diye başlar; „den Kampagnen“ belirli artikeli bu kampanyaların daha önce anlatıldığını gösterir. B ölçümün sonucunu verir („Die Auswertung bestätigte den Verdacht“ – değerlendirme şüpheyi doğruladı); D bu sonucu „dieser Befund“ diye ele alıp değerlendirir. Bu yüzden B, C'den sonra ve D'den önce, 4. sıradadır."
+        },
+        {
+          "number": 8,
+          "type": "reihenfolge",
+          "prompt": "Abschnitt C",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "3",
+          "evidence": [
+            {
+              "text": "abschnitt-c",
+              "quote": "muss man nämlich wissen, wie deren Messpunkte räumlich zueinander liegen"
+            },
+            {
+              "text": "abschnitt-c",
+              "quote": "hält diese Annahme für fragwürdig"
+            }
+          ],
+          "explanation": "C, A'nın sonunda yalnızca adı geçen zayıf noktayı açıklar: Komşu cihazların verilerini birleştirmek için „muss man nämlich wissen, wie deren Messpunkte räumlich zueinander liegen“ (yani ölçüm noktalarının birbirine göre nasıl konumlandığını bilmek gerekir). „nämlich“ ve „benachbarter Instrumente“ ifadeleri, A'da anlatılan yan yana duran cihazları gerektirir; bu yüzden C, A'dan önce gelemez. C ayrıca seyrek yapılan „Kampagnen“ (ölçüm kampanyaları) kavramını getirir ve Elmerhaus'un „hält diese Annahme für fragwürdig“ (bu varsayımı şüpheli buluyor) dediği varsayımı ortaya koyar; B bu varsayımı ölçerek sınar. Bu yüzden C 3. sıradadır."
+        },
+        {
+          "number": 9,
+          "type": "reihenfolge",
+          "prompt": "Abschnitt D",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "5",
+          "evidence": [
+            {
+              "text": "abschnitt-d",
+              "quote": "Welche Bedeutung dieser Befund über Hollerwiek hinaus hat, ist umstritten"
+            },
+            {
+              "text": "abschnitt-d",
+              "quote": "Das Team will das Messsystem deshalb zunächst an zwei weiteren Stationen erproben"
+            }
+          ],
+          "explanation": "D bir değerlendirme ve ileriye bakış bölümüdür: „Welche Bedeutung dieser Befund über Hollerwiek hinaus hat, ist umstritten“ (bu bulgunun Hollerwiek dışında ne anlam taşıdığı tartışmalı). „dieser Befund“ B'de anlatılan ölçüm sonucuna (teleskobun kayması ve çökmesi) gönderme yapar; „das Messsystem“ de B'de kurulan otomatik ölçüm sistemidir. Bölüm, sistemin önce iki istasyonda daha denenmesi planıyla biter; arkasından gelecek bir bölüm yoktur. Bu yüzden D 5. sıradadır."
+        }
+      ]
+    }
+  ]
+}

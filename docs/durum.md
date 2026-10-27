@@ -2,6 +2,15 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-10-27 · Gizlilik politikasından adres kaldırıldı
+
+- **Senin isteğinle:** `privacy.html`'in "Sorumlu" bölümünden posta adresi üç dilde de kaldırıldı. Kalan iletişim bilgisi: ad ve e-posta.
+- **Son güncelleme:** 27 Ekim 2026.
+- **Test:** `npm run test:placement` 223 kontrol, hepsi geçti; sayfada adres olmadığı da kontrol ediliyor.
+- **Adresin hâlâ geçtiği yerler:**
+  - `docs/veli-onay-formu.md`: Bu dosya da sitenin adresinden açılabiliyor. Velilere verilen form olduğu için kendiliğimden değiştirmedim.
+  - Git geçmişi: Herkese açık depoda eski sürümlerde adres hâlâ okunabilir.
+
 ## 2026-10-26 · Gizlilik politikası tamamen TR/DE/EN; Impressum kontrolü
 
 - **Diller:** `privacy.html`'deki metnin tamamı üç dilde, üç ayrı blokta (`data-privacy-lang`). Dil düğmesine göre yalnızca biri görünüyor. Sayfa başlığı ve açıklaması da dile göre değişiyor. JavaScript kapalıyken Türkçe görünüyor.

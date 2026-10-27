@@ -417,9 +417,9 @@ for(const [lang, title] of [['tr', 'Seviye tespit sınavı'], ['de', 'Einstufung
 
 // 11. Gizlilik sayfası: metnin tamamı TR/DE/EN; dil düğmesine göre tek dil görünür
 const PRIVACY = {
-  tr: { h1: 'Gizlilik politikası', title: '5a. Seviye testi', firebase: 'Tek istisna: Seviye testinin sonucunu göndermek', updated: 'Son güncelleme: 26 Ekim 2026', foreign: ['Verantwortlicher', 'Controller'], doc: 'Gizlilik politikası | Bozkurt Academy' },
-  de: { h1: 'Datenschutzerklärung', title: '5a. Einstufungstest', firebase: 'Einzige Ausnahme: Wenn Sie nach dem Einstufungstest', updated: 'Stand: 26. Oktober 2026', foreign: ['Sorumlu', 'Controller', 'Siteyi ziyaret'], doc: 'Datenschutzerklärung | Bozkurt Academy' },
-  en: { h1: 'Privacy policy', title: '5a. Placement test', firebase: 'The only exception: when you press “Send result”', updated: 'Last updated: 26 October 2026', foreign: ['Sorumlu', 'Verantwortlicher', 'Siteyi ziyaret'], doc: 'Privacy policy | Bozkurt Academy' }
+  tr: { h1: 'Gizlilik politikası', title: '5a. Seviye testi', firebase: 'Tek istisna: Seviye testinin sonucunu göndermek', updated: 'Son güncelleme: 27 Ekim 2026', foreign: ['Verantwortlicher', 'Controller'], doc: 'Gizlilik politikası | Bozkurt Academy' },
+  de: { h1: 'Datenschutzerklärung', title: '5a. Einstufungstest', firebase: 'Einzige Ausnahme: Wenn Sie nach dem Einstufungstest', updated: 'Stand: 27. Oktober 2026', foreign: ['Sorumlu', 'Controller', 'Siteyi ziyaret'], doc: 'Datenschutzerklärung | Bozkurt Academy' },
+  en: { h1: 'Privacy policy', title: '5a. Placement test', firebase: 'The only exception: when you press “Send result”', updated: 'Last updated: 27 October 2026', foreign: ['Sorumlu', 'Verantwortlicher', 'Siteyi ziyaret'], doc: 'Privacy policy | Bozkurt Academy' }
 };
 const visibleText = (page) => page.evaluate(() => document.querySelector('.acc-legal').innerText);
 for(const [lang, x] of Object.entries(PRIVACY)){
@@ -437,6 +437,7 @@ for(const [lang, x] of Object.entries(PRIVACY)){
     ok(text.includes(x.title) && text.includes(x.firebase) && text.includes(x.updated), `${label}: 5a, Firebase cümlesi ve tarih`);
     ok(/6 (ay|Monate|months)|sechs Monate|six months/.test(text), `${label}: 6 ay saklama`);
     ok(await block.locator('a[href="mailto:bozkurtt.omerfaruk@gmail.com"]').count() === 4, `${label}: e-posta bağlantıları (sorumlu, 5a, haklar ×2)`);
+    ok(!/Gielen|41460|Neuss/.test(text), `${label}: adres yok`);
     ok(await block.locator('code').count() === 8, `${label}: localStorage anahtarları ve örnek adresler`);
     const anchor = await page.evaluate(() => { const el = [...document.querySelectorAll('[data-anchor="seviye-testi"]')].find((e) => !e.closest('[hidden]')); const r = el.getBoundingClientRect(); return r.top >= -5 && r.top < innerHeight; });
     ok(anchor, `${label}: #seviye-testi bağlantısı görünen dildeki 5a bölümüne gidiyor`);

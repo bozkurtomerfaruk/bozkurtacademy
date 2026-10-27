@@ -12,6 +12,33 @@ const EXPERIENCE = { none: 'Hiç', lt6m: '6 aydan az', '6to12m': '6–12 ay', '1
 const LANGS = { tr: 'Türkçe', de: 'Almanca', en: 'İngilizce' };
 
 let cache = null;   // { docs: [...], bank }
+let cleanup = null; // { deleted } ya da { error }: süresi dolan kayıtların silinmesi
+
+// Saklama süresi: Spark planında Firestore TTL kullanılamadığı için süresi dolan kayıtları (expireAt ≤ şimdi)
+// yönetim sayfası her açıldığında öğretmen siler (kurallar silmeye sadece öğretmene izin verir).
+// expireAt alanı kalıyor; faturalandırma açılırsa aynı alanla TTL politikası da çalışır.
+async function purgeExpired(){
+  let deleted = 0;
+  for(;;){
+    const snap = await fs.getDocs(fs.query(fs.collection(db, 'placementTests'),
+      fs.where('expireAt', '<=', fs.Timestamp.now()), fs.limit(200)));
+    if(snap.empty) break;
+    const batch = fs.writeBatch(db);
+    snap.docs.forEach((d) => batch.delete(d.ref));
+    await batch.commit();
+    deleted += snap.size;
+    if(snap.size < 200) break;
+  }
+  return deleted;
+}
+
+function cleanupNotice(){
+  if(!cleanup) return null;
+  const text = cleanup.error ? 'Süresi dolan sonuçlar silinemedi. Sayfayı yenileyip tekrar dene.'
+    : cleanup.deleted ? `Saklama süresi (6 ay) dolan ${cleanup.deleted} sonuç silindi.`
+    : 'Saklama süresi dolmuş sonuç yok.';
+  return el('p', { class: cleanup.error ? 'admin-notice is-error' : 'admin-notice', role: 'status', 'data-admin-cleanup': true, text });
+}
 let filters = { q: '', level: '' };
 
 const el = (tag, attrs = {}, ...children) => {
@@ -52,6 +79,8 @@ function currentUser(){
 }
 
 async function loadAll(){
+  try{ cleanup = { deleted: await purgeExpired() }; }
+  catch(error){ console.error(error); cleanup = { error: true }; }
   const [snap, bank] = await Promise.all([
     fs.getDocs(fs.query(fs.collection(db, 'placementTests'), fs.orderBy('createdAt', 'desc'), fs.limit(500))),
     fetch('data/seviye-testi/sorular.json?v=1').then((r) => r.json())
@@ -117,14 +146,15 @@ function renderList(box){
   search.addEventListener('input', () => { filters.q = search.value; draw(); });
   level.addEventListener('change', () => { filters.level = level.value; draw(); });
 
-  box.replaceChildren(
+  box.replaceChildren(...[
+    cleanupNotice(),
     el('header', { class: 'admin-head' },
       el('h1', { text: 'Seviye testleri' }),
-      el('p', { class: 'admin-muted', text: 'Bu sayfa sadece öğretmen hesabıyla açılır. Kayıtlar 6 ay sonra otomatik silinir.' })),
+      el('p', { class: 'admin-muted', text: 'Bu sayfa sadece öğretmen hesabıyla açılır. Saklama süresi (6 ay) dolan sonuçlar bu sayfa her açıldığında silinir.' })),
     el('div', { class: 'admin-toolbar' },
       el('div', { class: 'field' }, el('label', { for: 'adminSearch', text: 'Ara' }), search),
       el('div', { class: 'field' }, el('label', { for: 'adminLevel', text: 'Seviye' }), level)),
-    count, list);
+    count, list].filter(Boolean));
   draw();
 }
 
@@ -193,7 +223,8 @@ function renderDetail(box, d){
   const wrong = parseWrong(d.wrong);
   const back = el('a', { class: 'ba-link admin-back', href: BASE, onclick: (e) => { e.preventDefault(); navigate(box, BASE); }, text: '← Tüm sonuçlar' });
 
-  box.replaceChildren(
+  box.replaceChildren(...[
+    cleanupNotice(),
     back,
     el('header', { class: 'admin-head' },
       el('h1', { text: d.name }),
@@ -234,5 +265,5 @@ function renderDetail(box, d){
       ? [el('p', { class: 'admin-muted', text: `${words(d.writing)} kelime` }), el('div', { class: 'admin-pre admin-writing', lang: 'de', 'data-admin-writing': true, text: d.writing })]
       : el('p', { text: 'Yazma görevi boş bırakıldı.' })),
     section('Notum', el('div', { class: 'field' }, el('label', { for: 'adminNote', text: 'Sadece sen görürsün' }), note), saveNote, noteStatus)
-  );
+  ].flat().filter(Boolean));
 }

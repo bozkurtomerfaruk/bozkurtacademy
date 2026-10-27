@@ -801,7 +801,7 @@
     if(location.hash !== full) history.replaceState({ baPage: 'yonetim' }, '', full);
     box.replaceChildren(el('p', { class: 'pl-muted', role: 'status', text: t('adminLoading') }));
     try{
-      const admin = await import('./account/placement-admin.js?v=1');
+      const admin = await import('./account/placement-admin.js?v=2');
       await admin.open(box, full.split('/').slice(1));
     }catch(error){
       console.error(error);

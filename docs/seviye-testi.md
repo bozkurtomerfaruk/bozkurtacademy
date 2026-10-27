@@ -7,7 +7,7 @@
 
 ## Canlıya alma: yapman gerekenler (sırayla)
 
-Bu üç adımdan ilk ikisi yapılmadan sonuç gönderilemez. Öğrenci "Sonuç gönderilemedi" mesajını ve e-posta adresini görür; test sayfasının kendisi yine çalışır.
+İlk iki adım yapılmadan sonuç gönderilemez. Öğrenci "Sonuç gönderilemedi" mesajını ve e-posta adresini görür; test sayfasının kendisi yine çalışır.
 
 ### 1. Anonim girişi aç
 
@@ -30,22 +30,23 @@ Neden gerekli: Öğrencinin hesap açmasına gerek yok. Bekleme süresi kurallar
 - Kontrol etmek için: Firebase Console → **Authentication** → **Users** → kendi Google hesabının satırındaki **Kullanıcı UID'si** sütunu. Ya da `giris.html`'de öğretmen olmayan bir hesapla giriş yaptığında ekranda görünen UID.
 - UID değişirse `firestore.rules` → `teacherUid()` ile `js/account/config.js` → `TEACHER_UID` birlikte güncellenmeli.
 
-### 3. 6 ay sonra otomatik silme (TTL politikası)
+### 3. 6 ay sonra silme: yönetim sayfası (TTL yok)
 
-Her kayıtta `expireAt` alanı var: oluşturulma + 183 gün. Kurallar bu değeri ±1 gün tolerans ile kontrol eder; tolerans, öğrencinin bilgisayar saatindeki küçük farklar için.
+Firestore TTL politikası faturalandırma ister. Proje ücretsiz Spark planında olduğu için TTL açılamıyor. Bunun yerine:
 
-**Konsoldan:**
-1. Google Cloud Console → proje `bozkurtacademy-8ab85` → **Firestore** → **Time-to-live (TTL)**: https://console.cloud.google.com/firestore/databases/-default-/ttl?project=bozkurtacademy-8ab85
-2. **Create policy** (Politika oluştur): Collection group `placementTests`, Timestamp field `expireAt` → **Create**.
-3. Durum birkaç dakika içinde "Serving" olur.
+- **Silme:** Yönetim sayfası her açıldığında `expireAt` tarihi geçmiş `placementTests` kayıtları otomatik olarak silinir.
+  - Silmeye kurallar sadece öğretmene izin verir.
+  - Silinen kayıt sayısı sayfanın en üstünde gösterilir: "Saklama süresi (6 ay) dolan N sonuç silindi." Silinecek kayıt yoksa: "Saklama süresi dolmuş sonuç yok."
+- **Senin yapman gereken:** Yönetim sayfasını düzenli aç. Sayfa açılmadıkça süresi dolan kayıtlar silinmez. Gizlilik metnindeki silme süresi, bu sayfayı ne sıklıkla açtığına bağlı.
+- **`expireAt` alanı:** Her kayıtta duruyor: oluşturulma + 183 gün. Kurallar bu değeri ±1 gün toleransla kontrol eder; tolerans, öğrencinin bilgisayar saatindeki küçük farklar için.
+- **İndeks:** Silme sorgusu (`expireAt <= şimdi`) Firestore'un otomatik tek alan indeksini kullanır. `firestore.indexes.json`'a `expireAt` için indeksi kapatan bir ayar (`"indexes": []`) eklenmemeli. Önceki TTL ayarı tam olarak bunu yapıyordu, o yüzden dosyadan çıkarıldı.
 
-**Komutla (alternatif):** `gcloud firestore fields ttls update expireAt --collection-group=placementTests --enable-ttl --project=bozkurtacademy-8ab85`
+**İleride faturalandırmayı (Blaze) açarsan TTL politikası** aynı alanla doğrudan çalışır; kodda değişiklik gerekmez.
+- **Konsoldan:** Google Cloud Console → proje `bozkurtacademy-8ab85` → **Firestore** → **Time-to-live (TTL)** (https://console.cloud.google.com/firestore/databases/-default-/ttl?project=bozkurtacademy-8ab85) → **Create policy**. Collection group `placementTests`, Timestamp field `expireAt`.
+- **Komutla:** `gcloud firestore fields ttls update expireAt --collection-group=placementTests --enable-ttl --project=bozkurtacademy-8ab85`
+- Google süresi dolan belgeleri genellikle sonraki 24 saat içinde siler. Yönetim sayfasındaki silme de çalışmaya devam eder; ikisi birbirini engellemez.
 
-Bilinmesi gerekenler:
-- `firestore.indexes.json` dosyasında aynı politika `fieldOverrides` olarak duruyor. `npx firebase deploy --only firestore` komutu kuralları ve TTL'yi birlikte yayınlar.
-  - Dikkat: Bu komut Firestore'daki ama dosyada olmayan bileşik indeksleri silmek isteyebilir. Silmeden önce sorar; "hayır" de.
-- Google, süresi dolan belgeleri hemen değil, genellikle süre dolduktan sonraki 24 saat içinde siler.
-- Bekleme belgeleri (`placementLimits/{uid}`) yalnızca anonim kimlik ve son gönderim zamanını tutar; kişisel veri içermez ve silinmez.
+**Bekleme belgeleri** (`placementLimits/{uid}`): Yalnızca anonim kimlik ve son gönderim zamanını tutar. Kişisel veri içermez ve silinmez.
 
 ## Veri
 

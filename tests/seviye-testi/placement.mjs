@@ -315,8 +315,23 @@ for(const who of ['guest', 'student']){
       topicErrors: 'lesen:2', wrong: '', writing: '', durationSec: 1320, bank: 1, lang: 'de', consent: true, read: true,
       createdAt: fs.Timestamp.fromMillis(Date.now() - 864e5), expireAt: fs.Timestamp.fromMillis(Date.now() + 182 * 864e5)
     });
+    // Saklama süresi dolmuş iki kayıt (biri 1 dakika, biri 20 gün önce): sayfa açılınca silinmeli.
+    for(const [name, ago] of [['Eski Bir', 60e3], ['Daha Eski', 20 * 864e5]]){
+      await fs.addDoc(fs.collection(db, 'placementTests'), {
+        uid: 'y', name, email: 'eski@example.com', goal: 'daily', examName: '', examDate: '', experience: 'none', note: '',
+        level: 'A1', near: '', skipped: false, blocks: { A1: { correct: 6, total: 10 } }, topicErrors: '', wrong: '', writing: '',
+        durationSec: 300, bank: 1, lang: 'tr', consent: true, read: true,
+        createdAt: fs.Timestamp.fromMillis(Date.now() - 183 * 864e5 - ago), expireAt: fs.Timestamp.fromMillis(Date.now() - ago)
+      });
+    }
   });
+  ok((await listDocs('placementTests')).length === 4, 'yönetim açılmadan önce 4 kayıt (2’si süresi dolmuş)');
   await page.goto(B + '#yonetim/seviye-testleri'); await page.waitForSelector('[data-admin-list] li');
+  ok((await page.locator('[data-admin-cleanup]').textContent()) === 'Saklama süresi (6 ay) dolan 2 sonuç silindi.', 'süresi dolan kayıtlar silindi, sayısı üstte gösteriliyor');
+  ok(await page.locator('#adminApp > *').first().getAttribute('data-admin-cleanup') !== null, 'bilgi notu sayfanın en üstünde');
+  const remaining = await listDocs('placementTests');
+  ok(remaining.length === 2 && remaining.every((d) => !['Eski Bir', 'Daha Eski'].includes(d.fields.name.stringValue)), 'emülatörde sadece süresi dolanlar silindi');
+  ok(remaining.every((d) => 'expireAt' in d.fields), 'kalan kayıtlarda expireAt duruyor');
   const names = await page.locator('.admin-row-name').allTextContents();
   ok(names.join() === 'Deniz Kaya,Ayla Demir', `liste en yeni üstte (${names.join(', ')})`);
   ok(await page.locator('.admin-row.is-unread').count() === 1 && (await page.locator('.admin-row.is-unread .admin-row-name').textContent()) === 'Deniz Kaya', 'okunmamış işaretli');
@@ -402,6 +417,29 @@ for(const [lang, title] of [['tr', 'Seviye tespit sınavı'], ['de', 'Einstufung
   ok((await page.locator('.pl-q-prompt').first().textContent()).includes(bank.blocks[0].questions[0].prompt.split('___')[0].trim()), 'sorular Almanca kalıyor');
   await ctx.close();
 }
+// 9b. Yönetim tekrar açılınca: silinecek kayıt yoksa bilgi; süresi dolmak üzere olan kayıt kalır; testi atlayan öğrencinin detayı
+{
+  const { ctx, page } = await newPage({ width: 1280 });
+  await page.goto(B + '#home'); await page.waitForTimeout(300);
+  await signIn(page, 'ogretmen@example.com', 'ogretmen123');
+  await page.evaluate(async () => {
+    const { db, fs } = await import('/js/account/firebase.js');
+    await fs.addDoc(fs.collection(db, 'placementTests'), {
+      uid: 'z', name: 'Can Yıldız', email: 'can@example.com', goal: 'daily', examName: '', examDate: '', experience: 'none', note: '',
+      level: 'A0', near: '', skipped: true, blocks: {}, topicErrors: '', wrong: '', writing: '', durationSec: 0, bank: 1, lang: 'tr',
+      consent: true, read: false, createdAt: fs.Timestamp.fromMillis(Date.now() - 183 * 864e5 + 36e5), expireAt: fs.Timestamp.fromMillis(Date.now() + 36e5)
+    });
+  });
+  await page.goto(B + '#yonetim/seviye-testleri'); await page.waitForSelector('[data-admin-list] li');
+  ok((await page.locator('[data-admin-cleanup]').textContent()) === 'Saklama süresi dolmuş sonuç yok.', 'silinecek kayıt yoksa kısa bilgi');
+  ok(await page.locator('.admin-row-name', { hasText: 'Can Yıldız' }).count() === 1, 'süresi 1 saat sonra dolacak kayıt silinmedi');
+  await page.locator('[data-admin-open]', { hasText: 'Can Yıldız' }).click(); await page.waitForSelector('[data-admin-level]');
+  const detail = await page.locator('#adminApp').textContent();
+  ok(!detail.includes('null') && detail.includes('testi atladı') && detail.includes('Yazma görevi boş bırakıldı.'), 'testi atlayan öğrencinin detayı ("null" yazmıyor)');
+  ok(await page.locator('[data-admin-cleanup]').count() === 1, 'bilgi notu detay sayfasında da üstte');
+  await ctx.close();
+}
+
 // Yönetim sayfası mobil + koyu tema
 {
   const { ctx, page } = await newPage({ width: 390, theme: 'dark' });

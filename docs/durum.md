@@ -2,6 +2,25 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-10-27 · Seviye testi: TTL yerine yönetim sayfasında silme
+
+- **Neden:** Firestore TTL faturalandırma istiyor; proje Spark planında. Yukarıdaki "TTL politikası oluştur" adımı geçersiz.
+- **Yeni yöntem:**
+  - Yönetim sayfası her açıldığında `expireAt ≤ şimdi` olan sonuçları siliyor (sorgu 200'erli gruplar hâlinde, batch ile).
+  - Sayfanın üstünde kısa bir bilgi çıkıyor: kaç sonuç silindi, silinecek sonuç yoksa "yok", hata olursa uyarı.
+  - Silmeye kurallar zaten sadece öğretmene izin veriyor; kural değişikliği yok.
+- **`expireAt`:** Kayıtlarda kalıyor; faturalandırma açılırsa TTL politikası doğrudan çalışır (`docs/seviye-testi.md`).
+  - `firestore.indexes.json`'daki TTL ayarı çıkarıldı. O ayar `expireAt` indeksini kapatıyordu, bu da silme sorgusunu canlıda bozardı. Ayrıca Spark planında yayınlanamazdı.
+- **Hata düzeltmesi:** Testi atlayan ("Hiç Almanca bilmiyorum") öğrencinin yönetim detayında, boş bölümler yüzünden ekrana "null" yazısı çıkıyordu; düzeltildi.
+- **Önbellek sürümleri:** `placement.js` v3, `placement.css` v2, `placement-admin.js` v2.
+- **Test:** `npm run test:placement` 232 kontrol, hepsi geçti. Yeni kontroller:
+  - süresi dolmuş 2 kaydın silinmesi ve bilgi notunun sayfanın en üstünde görünmesi,
+  - süresi 1 saat sonra dolacak kaydın kalması,
+  - kalan kayıtlarda `expireAt`'in durması,
+  - "yok" bilgisi,
+  - "null" hatası.
+- **Bekliyor:** Gizlilik metnindeki saklama süresi ifadesi ve testteki onay kutusu ("en fazla 6 ay"). Önerim sana iletildi; onayını bekliyor.
+
 ## 2026-10-27 · Gizlilik politikasından adres kaldırıldı
 
 - **Senin isteğinle:** `privacy.html`'in "Sorumlu" bölümünden posta adresi üç dilde de kaldırıldı. Kalan iletişim bilgisi: ad ve e-posta.

@@ -48,7 +48,7 @@ Google Apps Script ile, senin Google hesabında: adım adım kurulum `apps-scrip
 Ayrıntılar ve adım adım kurulum: `docs/seviye-testi.md`. Kısaca:
 1. Authentication → Sign-in method → **Anonim**'i aç.
 2. `firestore.rules`'u yayınla.
-3. `placementTests` koleksiyonunda `expireAt` alanı için TTL politikası oluştur.
+3. Yönetim sayfasını düzenli aç. Spark planında TTL olmadığı için süresi dolan (`expireAt`) sonuçlar bu sayfa açıldığında silinir.
 
 Yönetim sayfası: `https://bozkurtacademy.com/#yonetim/seviye-testleri`. Önce `giris.html`'den öğretmen hesabıyla giriş yap. Testler: `npm run test:placement` (emülatörde).
 

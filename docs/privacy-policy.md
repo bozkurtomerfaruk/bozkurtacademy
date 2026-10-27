@@ -1,6 +1,6 @@
 # Privacy policy: what the site does with personal data
 
-The footer links to `privacy.html`. Its details are filled in (controller address, legal bases,
+The footer links to `privacy.html`. Its details are filled in (controller name and email — the owner's home address is deliberately not published anywhere, legal bases,
 supervisory authority LDI NRW, US transfers, consent form storage, GoatCounter); the text is being
 legally checked. This file lists what the site
 actually does today, so you can answer a privacy-policy generator correctly. It is a

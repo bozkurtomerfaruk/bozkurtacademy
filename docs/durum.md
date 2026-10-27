@@ -7,9 +7,11 @@
 - **Senin isteğinle:** `privacy.html`'in "Sorumlu" bölümünden posta adresi üç dilde de kaldırıldı. Kalan iletişim bilgisi: ad ve e-posta.
 - **Son güncelleme:** 27 Ekim 2026.
 - **Test:** `npm run test:placement` 223 kontrol, hepsi geçti; sayfada adres olmadığı da kontrol ediliyor.
-- **Adresin hâlâ geçtiği yerler:**
-  - `docs/veli-onay-formu.md`: Bu dosya da sitenin adresinden açılabiliyor. Velilere verilen form olduğu için kendiliğimden değiştirmedim.
-  - Git geçmişi: Herkese açık depoda eski sürümlerde adres hâlâ okunabilir.
+- **Kalıcı karar (senin isteğin):** Ev adresin hiçbir yerde yayınlanmayacak.
+  - `docs/veli-onay-formu.md`'den de (TR ve DE) kaldırıldı; orada da sadece ad ve e-posta kaldı.
+  - Depodaki dosyalarda (PDF ve görseller dahil) adres artık geçmiyor.
+  - İleride bir Impressum yapılırsa ev adresi değil, tebligat alınabilen bir hizmet adresi (Impressum-Service / c/o) kullanılacak.
+- **Git geçmişi:** Adres 9e363ad'den (15.10.2026) beri eski commit'lerde duruyor. Silmek için geçmişin yeniden yazılması gerekiyor; ayrıca senin onayını bekliyor.
 
 ## 2026-10-26 · Gizlilik politikası tamamen TR/DE/EN; Impressum kontrolü
 

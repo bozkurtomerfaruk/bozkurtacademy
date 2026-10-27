@@ -5,7 +5,7 @@
 
 # Veli onay formu: Bozkurt Academy öğrenci hesabı
 
-**Sorumlu:** Ömer Faruk Bozkurt, [adres kaldırıldı], Almanya, bozkurtt.omerfaruk@gmail.com
+**Sorumlu:** Ömer Faruk Bozkurt, bozkurtt.omerfaruk@gmail.com
 
 Çocuğunuz Bozkurt Academy'nin online Almanca derslerine katılmak için bozkurtacademy.com sitesinde bir öğrenci hesabı açmak istiyor. 16 yaşından küçük öğrencilerin hesabı sizin onayınız olmadan açılmaz. Bu form, hangi verilerin neden işlendiğini açıklar.
 
@@ -68,7 +68,7 @@ Velinin imzası: ______________________________
 
 # Einwilligungserklärung der Eltern: Schülerkonto bei Bozkurt Academy
 
-**Verantwortlicher:** Ömer Faruk Bozkurt, [adres kaldırıldı], Deutschland, bozkurtt.omerfaruk@gmail.com
+**Verantwortlicher:** Ömer Faruk Bozkurt, bozkurtt.omerfaruk@gmail.com
 
 Ihr Kind möchte für den Online-Deutschunterricht bei Bozkurt Academy ein Schülerkonto auf bozkurtacademy.com anlegen. Konten von Schülerinnen und Schülern unter 16 Jahren werden nur mit Ihrer Einwilligung freigeschaltet. Dieses Formular erklärt, welche Daten zu welchem Zweck verarbeitet werden.
 

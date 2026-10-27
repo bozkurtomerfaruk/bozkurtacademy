@@ -13,3 +13,7 @@ Run node scripts/check-grammar.mjs and browser checks for the lesson, correct ex
 Publish through the existing GitHub Pages workflow when the user has authorized publishing. Do not claim the coverage check writes educational content automatically or verifies email delivery.
 
 Shared design tokens and components (colours, fonts, buttons, focus, header, footer, ba-* pieces) live in css/base.css; page stylesheets only add layout and must use the --ba-* tokens. Design skills live in .claude/skills (web-design-guidelines for UI audits, taste-skill for visual direction, redesign-existing-projects for upgrading existing pages). docs/design/claude-DESIGN.md is a reference design system from getdesign.md; use it for inspiration only and keep the site's existing theme, dark mode and Turkish learner focus unless the user asks for a redesign.
+
+# Token-saving chat voice
+
+Chat replies follow the caveman skill (.claude/skills/caveman, from github.com/JuliusBrussee/caveman, Apache-2.0) by default: answer first, no filler, every technical fact kept, Turkish when the user writes Turkish. It applies to chat only; lesson content, code, comments, commits and PRs stay in normal full prose. /ultracave or /megacave switch to stronger compression; "stop caveman" or "normal mode" turns it off.

@@ -11,7 +11,11 @@
   - `docs/veli-onay-formu.md`'den de (TR ve DE) kaldırıldı; orada da sadece ad ve e-posta kaldı.
   - Depodaki dosyalarda (PDF ve görseller dahil) adres artık geçmiyor.
   - İleride bir Impressum yapılırsa ev adresi değil, tebligat alınabilen bir hizmet adresi (Impressum-Service / c/o) kullanılacak.
-- **Git geçmişi:** Adres 9e363ad'den (15.10.2026) beri eski commit'lerde duruyor. Silmek için geçmişin yeniden yazılması gerekiyor; ayrıca senin onayını bekliyor.
+- **Git geçmişi temizlendi (onayınla, 27.10.2026):**
+  - `git filter-repo --replace-text` ile adres bütün geçmişten silindi; main ve 33 `claude/…` dalı `--force-with-lease` ile gönderildi. Dal silinmedi.
+  - Bugünkü dosyalar birebir aynı; main'in dosya ağacı değişmedi.
+  - Bütün commit kimlikleri değişti. Bu belgede ve eski raporlarda geçen kısa commit kimlikleri (ör. 444f4eb, 5e80ce3) artık eski geçmişe ait.
+- **Hâlâ kalan:** GitHub'ın PR'lar için sakladığı eski kopyalar. Şu PR'larda adres var: #16, #18–25, #27–31. Eski commit'ler kimlikleriyle (ör. `9e363ad`) GitHub'da açılabiliyor. Bunları ancak GitHub Destek silebilir; talep adımları sana iletildi.
 
 ## 2026-10-26 · Gizlilik politikası tamamen TR/DE/EN; Impressum kontrolü
 

@@ -2,6 +2,18 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-02 · Sınav setlerinde "Sonraki alıştırma" (madde 1)
+
+- **Ne değişti:** Bir set kontrol edilince sonuç kutusunda ve sayfa sonunda "Sonraki alıştırma" çıkıyor; altında sıradaki setin adı yazıyor (ör. "Teil 1 · Ferien im Tierheim").
+  - Sıra: aynı Teil içinde set sırasıyla, son setten sonra bir sonraki Teil'in ilk seti (Teil 1 set 1 → … → set 5 → Teil 2 set 1). Sadece sitede çözülen setler sayılıyor; dışarıya giden bağlantılar atlanıyor.
+  - Bölümün son setinde: "Bu bölümün son setine geldin…" notu, "Bölüm listesine dön" ve "Teil listesine dön" (TestDaF'ta "Aufgabe listesine dön").
+  - "Tekrar çöz" duruyor, ikincil düğme oldu. Kontrol etmeden önce sonraki bağlantısı görünmüyor.
+  - Bütün sınavlarda ve bölümlerde çalışıyor: Lesen, telc Sprachbausteine, DTZ (seviye adımı yok), TestDaF.
+- **Diller:** Yeni metinler TR/DE/EN (`task…` anahtarları, `js/app.js`).
+- **Önbellek sürümleri:** `app.js` v24 (index.html ve privacy.html), `exam-task.js` v11, `exams.js` v6, `exam-task.css` v9.
+- **Test:** Yeni `tests/exams/next.mjs` (32 kontrol, hepsi geçti): sıra, Teil geçişi, bölüm sonu, Sprachbausteine, DTZ, TestDaF, dil değişimi, odak, sayfa yenilenmemesi, geri tuşu, 390/1440 px açık/koyu taşma. Mevcut sınav testleri, `check-grammar` ve `check-exams` de çalıştırıldı (sonuçlar PR'da).
+- **Senin yapman gereken:** Yok. PR'ı inceleyip "birleştir" demen.
+
 ## 2026-10-27 · Seviye testi: TTL yerine yönetim sayfasında silme
 
 - **Neden:** Firestore TTL faturalandırma istiyor; proje Spark planında. Yukarıdaki "TTL politikası oluştur" adımı geçersiz.

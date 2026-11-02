@@ -27,6 +27,52 @@
     return value[lang()] || value.tr || value.de || value.en || '';
   };
 
+  // Search: case, accents and Turkish dotted/dotless i are ignored ("Übung" = "ubung", "İsim" = "isim").
+  const fold = (value) => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .toLocaleLowerCase('de-DE').replace(/ı/g, 'i').replace(/ß/g, 'ss');
+
+  // Sub-results match at the start of a word, so that "isim" does not find "değişim" once letters are folded.
+  const startsWord = (text, query) => { const at = text.indexOf(query); if (at < 0) return false;
+    for (let i = at; i >= 0; i = text.indexOf(query, i + 1)) if (i === 0 || !/[a-z0-9]/.test(text[i - 1])) return true;
+    return false; };
+  // Exercise packages (sub-headings) for the search: data/search-index.json, built by
+  // scripts/build-search-index.mjs and loaded only when the learner starts typing.
+  const searchIndex = { status:'idle', exercises:[] };
+  function loadSearchIndex(){
+    if(searchIndex.status !== 'idle') return;
+    searchIndex.status = 'loading';
+    fetch('data/search-index.json?v=1')
+      .then(response => { if(!response.ok) throw new Error(response.status); return response.json(); })
+      .then(data => { searchIndex.exercises = data.exercises || []; searchIndex.status = 'ready'; })
+      .catch(() => { searchIndex.status = 'failed'; })
+      .finally(() => { if(state.hubSearch && state.catalog) renderLevelsKeepFocus(); });
+  }
+  // Redraw the hub without losing the cursor in the search box.
+  function renderLevelsKeepFocus(){
+    const active = document.activeElement?.id === 'exerciseHubSearch';
+    const caret = active ? document.activeElement.selectionStart : null;
+    renderLevels();
+    if(active){
+      const input = $('exerciseHubSearch');
+      input?.focus();
+      if(caret != null) input?.setSelectionRange(caret, caret);
+    }
+  }
+
+  function packageMatches(query, matchedTopics){
+    if(searchIndex.status !== 'ready') return [];
+    const rows = [];
+    for(const item of searchIndex.exercises){
+      // A topic that already matched is shown as a card; its packages are reached from there.
+      if(matchedTopics.has(item.level + '/' + item.topic)) continue;
+      if(!startsWord(fold(localize(item.title)), query)) continue;
+      const level = state.catalog.levels.find(l => l.id === item.level);
+      const topic = level?.topics.find(tp => tp.id === item.topic && tp.status === 'ready');
+      if(topic) rows.push({ ...item, topicTitle: localize(topic.title) });
+    }
+    return rows;
+  }
+
   function normalizeWritten(value){
     return String(value ?? '')
       .normalize('NFC')
@@ -232,20 +278,21 @@
       state.level=state.catalog.levels[0] || null;
     }
 
-    const query=(state.hubSearch || '').trim().toLocaleLowerCase('de-DE');
+    const query=fold((state.hubSearch || '').trim());
     const rows=[];
 
     if(query){
       state.catalog.levels.forEach(level=>{
         level.topics.forEach(topic=>{
-          const haystack=[
+          const haystack=fold([
             level.id,
             localize(topic.title),
             localize(topic.description)
-          ].join(' ').toLocaleLowerCase('de-DE');
+          ].join(' '));
           if(haystack.includes(query)) rows.push({level,topic});
         });
       });
+      loadSearchIndex();
     }else if(state.level){
       state.level.topics.forEach(topic=>rows.push({level:state.level,topic}));
     }
@@ -257,6 +304,29 @@
     <span class="exercise-discovery-level-meta ba-level-meta">${level.topics.length} ${escapeHtml(t('hubTotal'))}</span>
   </button>`;
 }).join('');
+
+    const SUB_LIMIT=40;
+    const packages=query ? packageMatches(query, new Set(rows.map(({level,topic})=>level.id+'/'+topic.id))) : [];
+    const subNote=query && searchIndex.status==='loading' ? t('hubPackagesLoading')
+      : query && searchIndex.status==='failed' ? t('hubPackagesFailed') : '';
+    const subResults=packages.length ? `
+      <section class="ba-subresults" aria-labelledby="hubPackagesTitle">
+        <div class="ba-subresults-head">
+          <h3 id="hubPackagesTitle">${escapeHtml(t('hubPackagesTitle'))}</h3>
+          <span>${packages.length} ${escapeHtml(t('hubPackagesCount'))}</span>
+        </div>
+        <p class="ba-subresults-sub">${escapeHtml(t('hubPackagesSub'))}</p>
+        <div class="ba-toc">${packages.slice(0,SUB_LIMIT).map(item=>`
+          <a class="ba-toc-item" href="#exercises/${encodeURIComponent(item.level)}/${encodeURIComponent(item.topic)}/${encodeURIComponent(item.id)}" data-hub-package>
+            <span class="ba-toc-top"><span class="ba-toc-level">${escapeHtml(item.level)}</span></span>
+            <h4>${escapeHtml(localize(item.title))}</h4>
+            <p>${escapeHtml(item.topicTitle)}</p>
+            <span class="ba-toc-action">${escapeHtml(t('hubPackageOpen'))}</span>
+            <span class="ba-toc-arrow" aria-hidden="true">→</span>
+          </a>`).join('')}
+        </div>
+        ${packages.length>SUB_LIMIT ? `<p class="ba-subresults-more">${escapeHtml(fill('hubPackagesMore',{n:packages.length-SUB_LIMIT}))}</p>` : ''}
+      </section>` : '';
 
     const cards=rows.length ? rows.map(({level,topic})=>{
       const ready=topic.status==='ready';
@@ -271,7 +341,7 @@
         <div class="exercise-discovery-topic-action ba-toc-action">${ready?escapeHtml(t('hubOpen')):escapeHtml(t('hubSoon'))}</div>
         ${ready?'<span class="ba-toc-arrow" aria-hidden="true">→</span>':''}
       </button>`;
-    }).join('') : `<div class="exercise-discovery-empty ba-toc-empty">
+    }).join('') : packages.length ? '' : `<div class="exercise-discovery-empty ba-toc-empty">
       <strong>${escapeHtml(t('hubEmptyTitle'))}</strong>
       <p>${escapeHtml(t('hubEmptySub'))}</p>
     </div>`;
@@ -305,7 +375,9 @@
         <span>${rows.length} ${escapeHtml(t('hubResult'))}</span>
       </div>
 
-      <div class="exercise-discovery-grid ba-toc">${cards}</div>
+      ${cards ? `<div class="exercise-discovery-grid ba-toc">${cards}</div>` : ''}
+      ${subNote ? `<p class="ba-subresults-note" role="status">${escapeHtml(subNote)}</p>` : ''}
+      ${subResults}
     `;
 
     view.querySelectorAll('[data-hub-level]').forEach(btn=>btn.addEventListener('click',()=>{

@@ -194,6 +194,16 @@
   let activeTopic = null;
   let currentLevel = 'A1';
   let searchTerm = '';
+  // Section titles of the written lessons, for the search: { level: [{ id, index, title, lesson }] }.
+  const SECTIONS = {};
+  // Sub-results match at the start of a word, so that "isim" does not find "değişim" once letters are folded.
+  const startsWord = (text, query) => { const at = text.indexOf(query); if (at < 0) return false;
+    for (let i = at; i >= 0; i = text.indexOf(query, i + 1)) if (i === 0 || !/[a-z0-9]/.test(text[i - 1])) return true;
+    return false; };
+  const SECTION_LIMIT = 40;
+  // Search: case, accents and Turkish dotted/dotless i are ignored ("Übung" = "ubung", "İsim" = "isim").
+  const fold = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .toLocaleLowerCase('de-DE').replace(/ı/g, 'i').replace(/ß/g, 'ss');
 
   function lang() {
     return window.BA?.lang || 'tr';
@@ -451,6 +461,7 @@
             </div>
 
             <div class="grammar-topic-grid ba-toc" id="grammarTopicGrid"></div>
+            <div id="grammarSubresults"></div>
           </div>
 
           <div class="grammar-detail" id="grammarDetailView"></div>
@@ -513,7 +524,7 @@
   }
 
   function matchedTopics() {
-    const query = searchTerm.toLocaleLowerCase('de-DE');
+    const query = fold(searchTerm);
 
     if (!query) {
       return TOPICS[currentLevel].map(topic => ({
@@ -526,11 +537,46 @@
     Object.entries(TOPICS).forEach(([level, topics]) => {
       topics.forEach(topic => {
         const item = localizeTopic(topic);
-        const haystack = `${item.title} ${item.description} ${level}`.toLocaleLowerCase('de-DE');
+        const haystack = fold(`${item.title} ${item.description} ${level}`);
         if (haystack.includes(query)) rows.push({...item, level});
       });
     });
     return rows;
+  }
+
+  // Lesson sections whose title matches; sections of a lesson that already matched are reached from its card.
+  function matchedSections(rows) {
+    const query = fold(searchTerm);
+    if (!query) return [];
+    const shown = new Set(rows.map(row => row.level + '/' + row.id));
+    return Object.entries(SECTIONS).flatMap(([level, list]) => list
+      .filter(item => !shown.has(level + '/' + item.id) && TOPICS[level]?.some(topic => topic[0] === item.id) && startsWord(fold(item.title), query))
+      .map(item => ({ ...item, level })));
+  }
+
+  function renderSections(rows) {
+    const box = document.getElementById('grammarSubresults');
+    if (!box) return;
+    const sections = matchedSections(rows);
+    box.innerHTML = sections.length ? `
+      <section class="ba-subresults" aria-labelledby="grammarSectionsTitle">
+        <div class="ba-subresults-head">
+          <h3 id="grammarSectionsTitle">${escapeHtml(t('grammarSectionsTitle'))}</h3>
+          <span>${sections.length} ${escapeHtml(t('grammarSectionsCount'))}</span>
+        </div>
+        <p class="ba-subresults-sub">${escapeHtml(t('grammarSectionsSub'))}</p>
+        <div class="ba-toc">${sections.slice(0, SECTION_LIMIT).map(item => `
+          <a class="ba-toc-item" href="#grammar/${escapeHtml(item.level)}/${encodeURIComponent(item.id)}/${item.index + 1}" data-grammar-section>
+            <span class="ba-toc-top"><span class="ba-toc-level">${escapeHtml(item.level)}</span></span>
+            <h4>${escapeHtml(item.title)}</h4>
+            <p>${escapeHtml(item.lesson)}</p>
+            <span class="ba-toc-action">${escapeHtml(t('grammarSectionOpen'))}</span>
+            <span class="ba-toc-arrow" aria-hidden="true">→</span>
+          </a>`).join('')}
+        </div>
+        ${sections.length > SECTION_LIMIT ? `<p class="ba-subresults-more">${escapeHtml(fill('grammarSectionsMore', { n: sections.length - SECTION_LIMIT }))}</p>` : ''}
+      </section>` : '';
+    return sections.length;
   }
 
   function renderTopics() {
@@ -538,6 +584,7 @@
     if (!grid) return;
 
     const rows = matchedTopics();
+    const sectionCount = renderSections(rows) || 0;
     const sectionTitle = document.getElementById('grammarSectionTitle');
     const sectionSub = document.getElementById('grammarSectionSub');
     const count = document.getElementById('grammarResultCount');
@@ -551,8 +598,10 @@
     }
     if (count) count.textContent = `${rows.length} ${t('grammarResult')}`;
 
+    // Only sections matched: no empty topic box above them.
+    grid.style.display = !rows.length && sectionCount > 0 ? 'none' : '';
     if (!rows.length) {
-      grid.innerHTML = `
+      grid.innerHTML = sectionCount ? '' : `
         <div class="grammar-empty ba-toc-empty">
           <strong>${escapeHtml(t('grammarNoResultTitle'))}</strong>
           <p>${escapeHtml(t('grammarNoResultSub'))}</p>
@@ -606,6 +655,9 @@
         if (activeTopic?.id !== id || activeTopic?.level !== level) return;
         detail.querySelectorAll('[data-a1-back]').forEach(button=>button.addEventListener('click',()=>closeA1()));
         addReturnLinks(detail);
+        if (options.section) {
+          if (scrollToSection(detail, options.section)) return;
+        }
         detail.querySelector('.a1-article-header h2')?.focus({preventScroll:true});
       } catch (_) {
         if (activeTopic?.id !== id || activeTopic?.level !== level) return;
@@ -697,6 +749,17 @@
     detail.querySelector('[data-a1-practice]')?.before(link());
   }
 
+  // #grammar/A1/artikel/3 opens the lesson at its third section (1-based), as the search results link.
+  function scrollToSection(detail, number) {
+    const section = detail.querySelector('#a1-step-' + (number - 1));
+    const heading = section?.querySelector('h3');
+    if (!heading) return false;
+    heading.setAttribute('tabindex', '-1');
+    heading.focus({ preventScroll: true });
+    section.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
+    return true;
+  }
+
   function closeA1(writeHistory=true) {
     currentLevel=activeTopic?.level || currentLevel;
     activeTopic=null;
@@ -717,12 +780,14 @@
   let ready=false;
   function restoreRoute(hash=location.hash) {
     if(!ready)return;
-    const match=String(hash).match(/^#grammar\/(A1|A2|B1|B2)(?:\/([^/]+))?$/);
+    const match=String(hash).match(/^#grammar\/(A1|A2|B1|B2)(?:\/([^/]+))?(?:\/(\d{1,2}))?$/);
     if(match){
       currentLevel=match[1];
       if(!match[2]){if(activeTopic)closeA1(false);renderLevels();renderTopics();return;}
       let id;try{id=decodeURIComponent(match[2]);}catch(_){return;}
-      if(findTopic(currentLevel,id) && (activeTopic?.id!==id || activeTopic?.level!==currentLevel))openTopic(currentLevel,id,{restore:true});
+      const section=match[3] ? Number(match[3]) : 0;
+      if(findTopic(currentLevel,id) && (activeTopic?.id!==id || activeTopic?.level!==currentLevel))openTopic(currentLevel,id,{restore:true,section});
+      else if(section && activeTopic?.id===id){const detail=document.getElementById('grammarDetailView');if(detail?.dataset.lesson===currentLevel+'/'+id)scrollToSection(detail,section);}
       return;
     }
     if(hash==='#grammar' && activeTopic)closeA1(false);
@@ -740,6 +805,7 @@
       for(const level of catalog.levels){
         const lessons=datasets.find(([key])=>key===level.id)?.[1].lessons || [];
         TOPICS[level.id]=level.topics.map(t=>{const lesson=lessons.find(l=>l.id===t.id);return [t.id,lesson?.title || t.title.tr,lesson?.description || t.description];});
+        SECTIONS[level.id]=lessons.filter(l=>level.topics.some(t=>t.id===l.id)).flatMap(l=>(l.sections||[]).map((sec,index)=>({id:l.id,index,title:sec.title,lesson:l.title})));
       }
     }catch(error){console.warn('Gramer kataloğu yüklenemedi',error);}
     ready=true;renderLevels();renderTopics();

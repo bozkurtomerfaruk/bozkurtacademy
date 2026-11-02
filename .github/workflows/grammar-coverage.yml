@@ -1,12 +1,13 @@
 name: Grammar coverage
 on:
   push:
-    paths: ['data/**', 'scripts/check-grammar.mjs', '.github/workflows/grammar-coverage.yml']
+    paths: ['data/**', 'scripts/check-grammar.mjs', 'scripts/build-search-index.mjs', '.github/workflows/grammar-coverage.yml']
   pull_request:
-    paths: ['data/**', 'scripts/check-grammar.mjs', '.github/workflows/grammar-coverage.yml']
+    paths: ['data/**', 'scripts/check-grammar.mjs', 'scripts/build-search-index.mjs', '.github/workflows/grammar-coverage.yml']
 jobs:
   coverage:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: node scripts/check-grammar.mjs
+      - run: node scripts/build-search-index.mjs --check

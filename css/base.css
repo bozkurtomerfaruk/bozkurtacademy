@@ -135,6 +135,14 @@ body.academy-theme{
 .academy-theme .ba-toc-empty{grid-column:1/-1;padding:40px 8px;text-align:center;border:0;background:none}
 .academy-theme .ba-toc-empty strong{display:block;margin-bottom:8px;font-family:var(--ba-serif);font-size:var(--ba-lead)}
 .academy-theme .ba-toc-empty p{margin:0}
+/* Search sub-results (exercise packages, lesson sections) below the topic list; the rows reuse .ba-toc-item. */
+.academy-theme a.ba-toc-item{text-decoration:none}
+.academy-theme .ba-subresults{margin-top:clamp(24px,4vw,40px)}
+.academy-theme .ba-subresults-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px}
+.academy-theme .ba-subresults-head h3{margin:0;font-family:var(--ba-serif);font-weight:600;font-size:var(--ba-lead);color:var(--ba-ink)}
+.academy-theme .ba-subresults-head span{color:var(--ba-muted);font-size:var(--ba-small);font-weight:600}
+.academy-theme .ba-subresults-sub{margin:4px 0 12px;color:var(--ba-ink)}
+.academy-theme .ba-subresults-more,.academy-theme .ba-subresults-note{margin:12px 0 0;color:var(--ba-muted);font-size:var(--ba-small)}
 @media(max-width:900px){.academy-theme .ba-level-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.academy-theme .ba-toc{grid-template-columns:1fr}}
 @media(max-width:620px){.academy-theme .ba-level-tab{min-height:64px;padding:12px 14px}}
 [hidden]{display:none!important}

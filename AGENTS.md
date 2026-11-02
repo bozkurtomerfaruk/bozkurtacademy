@@ -10,6 +10,8 @@ Write simple Turkish for a first-time learner, German examples with Turkish tran
 
 After adding or renaming exercise packages, run node scripts/build-search-index.mjs so the exercise search finds them (CI runs it with --check).
 
+Word lists: questions may list their nouns in "vocab" (keys of data/sozluk.json: article + Turkish meaning, also shown in the German and English interface). Mark entries you are not sure about with "unsure": true; they stay hidden until the teacher sets "checked". After changing vocab or the dictionary, run node scripts/sozluk.mjs to refresh docs/sozluk-kontrol.csv (CI runs it with --check). Exam sets never show word lists.
+
 Run node scripts/check-grammar.mjs and browser checks for the lesson, correct exercise destination, mobile overflow, dark mode and deep links. New exercise topics require actual authored explanations; a card or placeholder is insufficient. data/grammar-legacy.json only records existing B1/B2 gaps and must not be expanded to bypass coverage.
 
 Publish through the existing GitHub Pages workflow when the user has authorized publishing. Do not claim the coverage check writes educational content automatically or verifies email delivery.

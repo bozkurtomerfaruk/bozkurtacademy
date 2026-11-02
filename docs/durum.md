@@ -2,8 +2,23 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-02 · Alt başlıklarda arama (madde 2)
+
+- **Alıştırmalar:** Arama artık konuların yanında alıştırma paketlerinin başlıklarında da arıyor. Eşleşen paketler konu kartlarının altında "Alıştırma paketleri" başlığıyla listeleniyor (seviye, paket adı, hangi konuda olduğu). Tıklayınca alıştırma ilk sorusuyla doğrudan açılıyor; geri tuşu listeye döndürüyor.
+  - Paket başlıkları küçük bir dizinde: `data/search-index.json` (856 paket, ~100 KB). Sadece arama kutusuna yazmaya başlayınca yükleniyor. Dizin yüklenemezse konular yine aranıyor, kısa bir not çıkıyor.
+  - **Yeni paket eklenince:** `node scripts/build-search-index.mjs` çalıştırılmalı. GitHub'daki "Grammar coverage" kontrolü dizin eskiyse hata veriyor (`--check`). AGENTS.md'ye de yazıldı.
+- **Gramer:** Arama ders bölümlerinin başlıklarında da arıyor ("Ders bölümleri"). Tıklayınca ders o bölümden açılıyor ve bölüm başlığı odaklanıyor. Yeni adres biçimi: `#grammar/A1/artikel/3` (3. bölüm). Eski `#grammar/A1/artikel` adresleri aynen çalışıyor. B2'de henüz yazılı ders olmadığı için B2 bölümü yok.
+- **Kararlar:**
+  - Konusu zaten eşleşen paketler/bölümler ayrıca listelenmiyor (ör. "artikel" araması Artikel konusunun 12 paketini tekrar göstermiyor); o konuya kartından gidiliyor. Liste en fazla 40 sonuç gösteriyor, kalanı için "aramayı daralt" notu var.
+  - Büyük/küçük harf, Almanca ve Türkçe özel harfler fark etmiyor ("baglam" = "bağlam", "ubung" = "Übung", "İsim" = "isim"). Alt başlık sonuçlarında eşleşme kelime başında aranıyor; yoksa "isim" araması "değişim"i de buluyordu.
+  - Arama kutularının metni: "Konu veya alıştırma ara…" ve "Konu veya ders bölümü ara…". Yeni metinler TR/DE/EN.
+- **Önbellek sürümleri:** `base.css` v8 (bütün sayfalar), `app.js` v25, `quiz.js` v24, `grammar.js` v17.
+- **Test:** Yeni `tests/search.mjs` (36 kontrol, hepsi geçti). `check-grammar`, `check-exams`, `build-search-index --check`, `tests/exams/next.mjs` ve `npm run test:placement` de çalıştırıldı.
+- **Durum:** PR #35 birleştirildi (2026-11-02).
+
 ## 2026-11-02 · Seviye testi: her gün otomatik silme (GitHub Actions, madde 7)
 
+- **Durum:** PR #34 birleştirildi (2026-11-02). Kuralların Firebase Console'da yayınlanması ve ilk deneme bekliyor.
 - **Neden:** Silme şu ana kadar sadece yönetim sayfası açılınca oluyordu. Senin isteğinle artık senden bağımsız.
 - **Nasıl:** `.github/workflows/placement-cleanup.yml` her gün 03:23 UTC'de `scripts/placement-cleanup.mjs`'i çalıştırır; `expireAt` tarihi geçmiş sonuçları siler.
   - **Servis hesabı anahtarı yok.** Servis hesabı kurallardan geçmediği ve Firestore'da tek bir koleksiyonla sınırlanamadığı için, sızarsa bütün öğrenci verisi açılırdı. Onun yerine Firebase Authentication'da ayrı bir "temizlik hesabı" var; script bu hesapla giriş yapıyor ve kurallardan geçiyor.

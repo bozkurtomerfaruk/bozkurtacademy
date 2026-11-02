@@ -14,11 +14,14 @@ import {
   doc,
   getDoc,
   getDocs,
+  limit,
+  query,
   serverTimestamp,
   setDoc,
   setLogLevel,
   Timestamp,
   updateDoc,
+  where,
   writeBatch
 } from 'firebase/firestore';
 
@@ -692,6 +695,45 @@ describe('Seviye testi (placementTests)', () => {
   test('yeni kayıt okunmuş veya yönetici notuyla eklenemez', async () => {
     await assertFails(submit(anon(), 'anon1', placement('anon1', { read: true })));
     await assertFails(submit(anon(), 'anon1', placement('anon1', { adminNote: 'x' })));
+  });
+
+  describe('temizlik hesabı (GitHub Actions)', () => {
+    const CLEANUP = rules.match(/function cleanupUid\(\)\s*{\s*return '([^']+)'/)[1];
+    const bot = () => as(CLEANUP, passwordToken('temizlik@example.com'));
+    const expired = () => query(collection(bot(), 'placementTests'), where('expireAt', '<=', Timestamp.fromMillis(Date.now() - 60 * 1000)), limit(200));
+
+    beforeEach(async () => {
+      await seed('placementTests/ResOld000001', { ...placement('anon1'), createdAt: Timestamp.fromMillis(Date.now() - 190 * DAY), expireAt: Timestamp.fromMillis(Date.now() - 7 * DAY) });
+      await seed('placementTests/ResNew000001', { ...placement('anon2'), createdAt: Timestamp.now(), expireAt: Timestamp.fromMillis(Date.now() + 183 * DAY) });
+    });
+
+    test('süresi dolmuş sonuçları listeleyip silebilir', async () => {
+      const snap = await assertSucceeds(getDocs(expired()));
+      if (snap.docs.map((d) => d.id).join() !== 'ResOld000001') throw new Error('yanlış sonuçlar: ' + snap.docs.map((d) => d.id));
+      await assertSucceeds(deleteDoc(doc(bot(), 'placementTests/ResOld000001')));
+    });
+
+    test('süresi dolmamış sonucu silemez, bütün listeyi ve tek belgeyi okuyamaz', async () => {
+      await assertFails(deleteDoc(doc(bot(), 'placementTests/ResNew000001')));
+      await assertFails(getDocs(collection(bot(), 'placementTests')));
+      await assertFails(getDocs(query(collection(bot(), 'placementTests'), where('expireAt', '<=', Timestamp.fromMillis(Date.now() + 3600 * 1000)))));
+      await assertFails(getDoc(doc(bot(), 'placementTests/ResOld000001')));
+      await assertFails(updateDoc(doc(bot(), 'placementTests/ResOld000001'), { read: true }));
+    });
+
+    test('başka hiçbir veriye erişemez, profil ve sonuç oluşturamaz', async () => {
+      await seed('users/ayse', adultProfile({ createdAt: Timestamp.now(), status: 'active' }));
+      await assertFails(getDocs(collection(bot(), 'users')));
+      await assertFails(getDoc(doc(bot(), 'users/ayse')));
+      await assertFails(getDocs(collection(bot(), 'placementLimits')));
+      await assertFails(setDoc(doc(bot(), `users/${CLEANUP}`), adultProfile({ email: 'temizlik@example.com' })));
+      await assertFails(submit(bot(), CLEANUP, placement(CLEANUP)));
+    });
+
+    test('başka bir hesap temizlik yetkisini kullanamaz', async () => {
+      await assertFails(getDocs(query(collection(anon(), 'placementTests'), where('expireAt', '<=', Timestamp.fromMillis(Date.now() - 60 * 1000)))));
+      await assertFails(deleteDoc(doc(anon(), 'placementTests/ResOld000001')));
+    });
   });
 
   test('onay kutusu işaretlenmeden eklenemez', async () => {

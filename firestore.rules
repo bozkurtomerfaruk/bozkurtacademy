@@ -10,6 +10,17 @@ service cloud.firestore {
       return 'IoTwBV5HjRUaoLoj0SCI0VVGkfk2';
     }
 
+    // Seviye testi temizlik hesabı: GitHub Actions'ta her gün çalışan iş (scripts/placement-cleanup.mjs) bu
+    // e-posta/şifre hesabıyla giriş yapar. Tek yetkisi: süresi dolmuş seviye testi sonuçlarını listeleyip silmek.
+    // Kurulum: Firebase Console → Authentication → Kullanıcı ekle; çıkan UID'i buraya yaz (docs/seviye-testi.md).
+    function cleanupUid() {
+      return 'temizlik-hesabi-henuz-yok';
+    }
+
+    function isCleanup() {
+      return request.auth != null && request.auth.uid == cleanupUid();
+    }
+
     function signedIn() {
       return request.auth != null;
     }
@@ -128,7 +139,7 @@ service cloud.firestore {
       // Kendi profil belgesi: "onay bekleniyor" ekranı için onaysızken de okunabilir.
       allow get: if isSelf(uid);
       // Silinmiş hesap yeniden profil açamaz.
-      allow create: if isSelf(uid)
+      allow create: if isSelf(uid) && !isCleanup()
         && !exists(/databases/$(database)/documents/deleted/$(uid))
         && validNewProfile();
       // Öğrenci kendi profilinde sadece "e-posta doğrulandı" bilgisini ekleyebilir (Firebase
@@ -238,11 +249,14 @@ service cloud.firestore {
     }
 
     match /placementTests/{id} {
-      allow create: if signedIn() && validPlacement(id);
+      allow create: if signedIn() && !isCleanup() && validPlacement(id);
+      // Temizlik hesabı: sadece süresi dolmuş sonuçlar. Sorgu da "expireAt <= şimdi" ile sınırlı olmak zorunda;
+      // tek belge okuma (get), değiştirme ve süresi dolmamış sonuçları silme yok.
+      allow list, delete: if isCleanup() && resource.data.expireAt <= request.time;
     }
 
     match /placementLimits/{uid} {
-      allow create: if isSelf(uid) && validPlacementLimit();
+      allow create: if isSelf(uid) && !isCleanup() && validPlacementLimit();
       allow update: if isSelf(uid) && validPlacementLimit()
         && request.time >= resource.data.lastAt + duration.value(10, 'm');
     }

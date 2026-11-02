@@ -21,6 +21,7 @@
 
   const files = {};   // path -> Promise of the set
   const states = {};  // path -> { answers: {number: value}, checked }
+  const navs = {};    // path -> what comes after this set, from js/exams.js: { next: {href, label} } or { finished: {sections, teile} }
 
   function load(path) {
     files[path] ||= fetch(path, { cache: 'no-store' })
@@ -174,13 +175,29 @@
     </section>`;
   }
 
-  function summaryHtml(set, state) {
+  function summaryHtml(set, state, path) {
     if (!state.checked) return '';
     const correct = scored(set).reduce((sum, { question }) => sum + points(question, state.answers[String(question.number)]), 0);
     return `<div class="task-summary" tabindex="-1">
       <p class="task-score">${esc(fill('taskScore', { correct, total: total(set) }))}</p>
       <p>${esc(t('taskResultHint'))}</p>
+      ${navs[path]?.finished ? `<p class="task-finished">${esc(t('taskFinished'))}</p>` : ''}
+      ${navs[path]?.next ? `<p class="task-summary-next"><a class="ba-link" href="${esc(navs[path].next.href)}">${esc(fill('taskNextShort', { name: navs[path].next.label }))} <span aria-hidden="true">→</span></a></p>` : ''}
     </div>`;
+  }
+
+  // After checking: "Sonraki alıştırma" (next set), or after the last set of the section the way back.
+  function navActions(path) {
+    const nav = navs[path];
+    if (nav?.next) {
+      return `<a class="btn primary task-next" href="${esc(nav.next.href)}" aria-label="${esc(fill('taskNextLabel', { name: nav.next.label }))}">
+        <span class="task-next-text"><span>${esc(t('taskNext'))}</span><small>${esc(nav.next.label)}</small></span> <span aria-hidden="true">→</span></a>`;
+    }
+    if (nav?.finished) {
+      return `<a class="btn primary" href="${esc(nav.finished.sections)}">${esc(t('taskBackToSections'))}</a>
+        <a class="btn ghost" href="${esc(nav.finished.teile)}">${esc(t(nav.finished.teileLabel || 'taskBackToTeile'))}</a>`;
+    }
+    return '';
   }
 
   // Gaps in a text show the sentence letter chosen for them.
@@ -208,12 +225,12 @@
         <p class="task-meta">${meta.map(item => `<span>${esc(item)}</span>`).join('')}</p>
         ${set.context ? `<p class="task-context" lang="de">${esc(set.context)}</p>` : ''}
         <p class="task-instructions" lang="de">${esc(set.instructions)}</p>
-        <div aria-live="polite">${summaryHtml(set, state)}</div>
+        <div aria-live="polite">${summaryHtml(set, state, path)}</div>
       </div>
       ${set.groups.map(group => groupHtml(group, state)).join('')}
       <div class="task-actions">
         ${state.checked
-          ? `<button class="btn primary" type="button" data-task-retry>${esc(t('taskRetry'))}</button>`
+          ? `${navActions(path)}<button class="btn ${navs[path] ? 'ghost' : 'primary'}" type="button" data-task-retry>${esc(t('taskRetry'))}</button>`
           : `<button class="btn primary" type="button" data-task-check>${esc(t('taskCheck'))}</button>`}
       </div>
     </div>`;
@@ -281,8 +298,9 @@
   }
 
   // preserve: keep the answers (used when only the interface language changed).
-  function render(container, { path, preserve = false } = {}) {
+  function render(container, { path, preserve = false, nav = null } = {}) {
     container.dataset.taskPath = path;
+    if (nav) navs[path] = nav; else delete navs[path];
     if (!preserve || !states[path]) states[path] = { answers: {}, checked: false };
     container.innerHTML = `<p class="task-status" role="status">${esc(t('taskLoading'))}</p>`;
     return load(path).then(set => {

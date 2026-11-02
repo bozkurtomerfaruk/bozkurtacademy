@@ -279,6 +279,23 @@
       + `<ul class="exam-grid exam-teil-grid" role="list">${cards}</ul>`;
   }
 
+  /* What comes after a checked set: the next set of the same Teil, then the first set of the following
+     Teile (Teil 1 set 1 → … → last set → Teil 2 set 1). Only sets played here count; links to other pages are skipped.
+     After the last set of the section: a closing note with links to the section list and the Teil list. */
+  function nextStep(route) {
+    const { exam, section } = route;
+    for (let n = route.teil; n <= section.teile.length; n++) {
+      const sets = (section.teile[n - 1].exercises || []).filter(item => item?.set);
+      const from = n === route.teil ? sets.indexOf(route.set) + 1 : 0;
+      const set = sets[from];
+      if (set) {
+        const index = section.teile[n - 1].exercises.indexOf(set);
+        return { next: { href: routeHash({ ...route, teil: n, set }), label: `${partName(exam, n)} · ${setTitle(set, index)}` } };
+      }
+    }
+    return { finished: { sections: routeHash({ ...route, section: null, teil: null, set: null }), teile: routeHash({ ...route, teil: null, set: null }), teileLabel: partKey(exam, 'taskBackToTeile', 'taskBackToAufgaben') } };
+  }
+
   /* One exam set: the heading from here, the task itself from js/exam-task.js */
   function renderTask(route) {
     const { exam, level, section } = route;
@@ -314,7 +331,7 @@
     root.querySelector('#examSteps').innerHTML = renderSteps(route);
     root.querySelector('#examView').innerHTML = views[current]();
     root.dataset.step = route.set ? 'task' : String(current);
-    if (route.set) window.BAExamTask?.render(root.querySelector('#examTask'), { path: setPath(route), preserve: sameRoute });
+    if (route.set) window.BAExamTask?.render(root.querySelector('#examTask'), { path: setPath(route), preserve: sameRoute, nav: nextStep(route) });
 
     const behavior = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
     if (focusNext) {
@@ -338,6 +355,7 @@
     // Clicks on step links and cards change the hash; move focus to the new heading afterwards.
     // Links to #exercises/... and #grammar/... are opened by exercise-links.js and grammar.js.
     root.addEventListener('click', event => {
+      // "Sonraki alıştırma" and the links after the last set also move focus to the new heading.
       const link = event.target.closest('a[href^="#exams"]');
       if (link && !(event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)) focusNext = true;
     });

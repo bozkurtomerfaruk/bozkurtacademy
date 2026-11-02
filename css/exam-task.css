@@ -123,3 +123,11 @@
   #page-exams .task-group--ads .task-texts{grid-template-columns:1fr}
   #page-exams .task-actions .btn{width:100%}
 }
+
+/* After checking: the next set (title under the label) or, after the last set, the way back. */
+#page-exams .task-summary .task-finished{margin-top:8px;font-weight:600}
+#page-exams .task-summary .task-summary-next{margin-top:8px}
+#page-exams .task-summary .task-summary-next a{color:var(--ba-field-ink)}
+#page-exams .task-next{gap:10px;text-align:left}
+#page-exams .task-next-text{display:grid;gap:2px;line-height:1.2}
+#page-exams .task-next-text small{font-size:var(--ba-small);font-weight:500;opacity:.85}

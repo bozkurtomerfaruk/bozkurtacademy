@@ -46,7 +46,7 @@ Firestore TTL politikası faturalandırma ister. Proje ücretsiz Spark planında
 1. **Temizlik hesabı:** Firebase Console → **Authentication** → **Users** → **Add user**.
    - E-posta: gerçek olması gerekmez, ör. `temizlik@bozkurtacademy.com` (bu adrese posta gitmez).
    - Şifre: en az 24 karakterlik rastgele bir şifre (bir şifre yöneticisiyle üret). Başka hiçbir yerde kullanma.
-   - Oluşan satırdaki **Kullanıcı UID'si**'ni bana gönder. `firestore.rules` → `cleanupUid()` içine ben yazarım.
+   - Oluşan satırdaki **Kullanıcı UID'si** `firestore.rules` → `cleanupUid()` içine yazılır (şu an: `EUQMPh6R4SM8SKDuxZyZodvCBp43`). Hesabı silip yeniden açarsan UID değişir; kuralı da güncelle.
 2. **Kuralları yayınla:** UID'li kurallar birleştikten sonra Firebase Console → **Firestore** → **Kurallar**'a `firestore.rules`'u yapıştır → **Yayınla**.
 3. **GitHub Secrets:** GitHub → depo → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**:
    - `CLEANUP_EMAIL` = temizlik hesabının e-postası

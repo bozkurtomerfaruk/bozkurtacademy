@@ -12,9 +12,9 @@ service cloud.firestore {
 
     // Seviye testi temizlik hesabı: GitHub Actions'ta her gün çalışan iş (scripts/placement-cleanup.mjs) bu
     // e-posta/şifre hesabıyla giriş yapar. Tek yetkisi: süresi dolmuş seviye testi sonuçlarını listeleyip silmek.
-    // Kurulum: Firebase Console → Authentication → Kullanıcı ekle; çıkan UID'i buraya yaz (docs/seviye-testi.md).
+    // Hesap Firebase Console → Authentication'da açıldı (2026-11-02); UID değişirse buraya yaz (docs/seviye-testi.md).
     function cleanupUid() {
-      return 'temizlik-hesabi-henuz-yok';
+      return 'EUQMPh6R4SM8SKDuxZyZodvCBp43';
     }
 
     function isCleanup() {

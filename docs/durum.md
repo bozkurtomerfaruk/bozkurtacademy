@@ -13,10 +13,10 @@
 - **Gizlilik metni:** Değişmedi ("6 ay sonra otomatik olarak silinir"). Kurulum bitince bu ifade doğru olacak; kurulum bitene kadar silme yine sadece yönetim sayfasında oluyor.
 - **Test:** `npm test` 104/104 (4 yeni kural testi), yeni `npm run test:cleanup` 8/8 (emülatörde uçtan uca: 205 sonuç 200'lük gruplarla siliniyor, süresi dolmamışlar kalıyor, sorgu cevabında kişisel veri yok, yanlış şifrede hata kodu, secrets boşken hata yok), `npm run test:placement` geçti. GitHub'daki kural testleri iş akışına `test:cleanup` eklendi.
 - **Senin yapman gerekenler** (ayrıntı: `docs/seviye-testi.md` → "6 ay sonra silme"):
-  1. Firebase Console → Authentication → Users → **Add user**: e-posta ör. `temizlik@bozkurtacademy.com`, en az 24 karakterlik rastgele şifre. Çıkan **UID**'i bana gönder.
-  2. UID'i `firestore.rules`'a ben yazıp PR'ı güncelleyeceğim. Birleştikten sonra kuralları Firebase Console → Firestore → Kurallar'da **yayınla**.
-  3. GitHub → Settings → Secrets and variables → Actions: `CLEANUP_EMAIL` ve `CLEANUP_PASSWORD`.
-  4. GitHub → Actions → "Seviye testi otomatik silme" → **Run workflow** ile dene.
+  1. ✔ Temizlik hesabı açıldı; UID `EUQMPh6R4SM8SKDuxZyZodvCBp43` `firestore.rules` → `cleanupUid()`'e yazıldı.
+  2. ✔ GitHub Secrets: `CLEANUP_EMAIL` ve `CLEANUP_PASSWORD` eklendi.
+  3. Kuralları Firebase Console → Firestore → Kurallar'da **yayınla** (PR #34 birleştikten sonra).
+  4. GitHub → Actions → "Seviye testi otomatik silme" → **Run workflow** ile ilk deneme.
 
 ## 2026-11-02 · Sınav setlerinde "Sonraki alıştırma" (madde 1)
 

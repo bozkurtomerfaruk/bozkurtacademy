@@ -2,6 +2,22 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-02 · Seviye testi: her gün otomatik silme (GitHub Actions, madde 7)
+
+- **Neden:** Silme şu ana kadar sadece yönetim sayfası açılınca oluyordu. Senin isteğinle artık senden bağımsız.
+- **Nasıl:** `.github/workflows/placement-cleanup.yml` her gün 03:23 UTC'de `scripts/placement-cleanup.mjs`'i çalıştırır; `expireAt` tarihi geçmiş sonuçları siler.
+  - **Servis hesabı anahtarı yok.** Servis hesabı kurallardan geçmediği ve Firestore'da tek bir koleksiyonla sınırlanamadığı için, sızarsa bütün öğrenci verisi açılırdı. Onun yerine Firebase Authentication'da ayrı bir "temizlik hesabı" var; script bu hesapla giriş yapıyor ve kurallardan geçiyor.
+  - **Kurallar (`cleanupUid()`):** Bu hesap sadece `expireAt <= şimdi` ile sınırlı sorgu yapıp süresi dolmuş sonucu silebilir. Tek belge okuma, değiştirme, süresi dolmamış sonucu silme, öğrenci verisi okuma, profil ya da seviye testi sonucu oluşturma yok.
+  - **Kişisel veri GitHub'a gelmiyor:** Sorgu sadece belge kimliklerini istiyor; ad ve e-posta indirilmiyor. Günlükte sadece silinen sayı var.
+  - **Yedek:** Yönetim sayfasındaki silme duruyor.
+- **Gizlilik metni:** Değişmedi ("6 ay sonra otomatik olarak silinir"). Kurulum bitince bu ifade doğru olacak; kurulum bitene kadar silme yine sadece yönetim sayfasında oluyor.
+- **Test:** `npm test` 104/104 (4 yeni kural testi), yeni `npm run test:cleanup` 8/8 (emülatörde uçtan uca: 205 sonuç 200'lük gruplarla siliniyor, süresi dolmamışlar kalıyor, sorgu cevabında kişisel veri yok, yanlış şifrede hata kodu, secrets boşken hata yok), `npm run test:placement` geçti. GitHub'daki kural testleri iş akışına `test:cleanup` eklendi.
+- **Senin yapman gerekenler** (ayrıntı: `docs/seviye-testi.md` → "6 ay sonra silme"):
+  1. ✔ Temizlik hesabı açıldı; UID `EUQMPh6R4SM8SKDuxZyZodvCBp43` `firestore.rules` → `cleanupUid()`'e yazıldı.
+  2. ✔ GitHub Secrets: `CLEANUP_EMAIL` ve `CLEANUP_PASSWORD` eklendi.
+  3. Kuralları Firebase Console → Firestore → Kurallar'da **yayınla** (PR #34 birleştikten sonra).
+  4. GitHub → Actions → "Seviye testi otomatik silme" → **Run workflow** ile ilk deneme.
+
 ## 2026-11-02 · Sınav setlerinde "Sonraki alıştırma" (madde 1)
 
 - **Ne değişti:** Bir set kontrol edilince sonuç kutusunda ve sayfa sonunda "Sonraki alıştırma" çıkıyor; altında sıradaki setin adı yazıyor (ör. "Teil 1 · Ferien im Tierheim").
@@ -12,7 +28,7 @@
 - **Diller:** Yeni metinler TR/DE/EN (`task…` anahtarları, `js/app.js`).
 - **Önbellek sürümleri:** `app.js` v24 (index.html ve privacy.html), `exam-task.js` v11, `exams.js` v6, `exam-task.css` v9.
 - **Test:** Yeni `tests/exams/next.mjs` (32 kontrol, hepsi geçti): sıra, Teil geçişi, bölüm sonu, Sprachbausteine, DTZ, TestDaF, dil değişimi, odak, sayfa yenilenmemesi, geri tuşu, 390/1440 px açık/koyu taşma. Mevcut sınav testleri, `check-grammar` ve `check-exams` de çalıştırıldı (sonuçlar PR'da).
-- **Senin yapman gereken:** Yok. PR'ı inceleyip "birleştir" demen.
+- **Durum:** PR #33 birleştirildi (2026-11-02).
 
 ## 2026-10-27 · Seviye testi: TTL yerine yönetim sayfasında silme
 

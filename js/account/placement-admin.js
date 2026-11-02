@@ -15,7 +15,8 @@ let cache = null;   // { docs: [...], bank }
 let cleanup = null; // { deleted } ya da { error }: süresi dolan kayıtların silinmesi
 
 // Saklama süresi: Spark planında Firestore TTL kullanılamadığı için süresi dolan kayıtları (expireAt ≤ şimdi)
-// yönetim sayfası her açıldığında öğretmen siler (kurallar silmeye sadece öğretmene izin verir).
+// her gün GitHub Actions'taki iş siler (scripts/placement-cleanup.mjs). Yönetim sayfası açılınca aynı silme
+// yedek olarak burada da yapılır; iş çalışıyorsa burada silinecek bir şey kalmaz.
 // expireAt alanı kalıyor; faturalandırma açılırsa aynı alanla TTL politikası da çalışır.
 async function purgeExpired(){
   let deleted = 0;

@@ -30,21 +30,38 @@ Neden gerekli: Öğrencinin hesap açmasına gerek yok. Bekleme süresi kurallar
 - Kontrol etmek için: Firebase Console → **Authentication** → **Users** → kendi Google hesabının satırındaki **Kullanıcı UID'si** sütunu. Ya da `giris.html`'de öğretmen olmayan bir hesapla giriş yaptığında ekranda görünen UID.
 - UID değişirse `firestore.rules` → `teacherUid()` ile `js/account/config.js` → `TEACHER_UID` birlikte güncellenmeli.
 
-### 3. 6 ay sonra silme: yönetim sayfası (TTL yok)
+### 3. 6 ay sonra silme: her gün GitHub Actions (TTL yok)
 
 Firestore TTL politikası faturalandırma ister. Proje ücretsiz Spark planında olduğu için TTL açılamıyor. Bunun yerine:
 
-- **Silme:** Yönetim sayfası her açıldığında `expireAt` tarihi geçmiş `placementTests` kayıtları otomatik olarak silinir.
-  - Silmeye kurallar sadece öğretmene izin verir.
-  - Silinen kayıt sayısı sayfanın en üstünde gösterilir: "Saklama süresi (6 ay) dolan N sonuç silindi." Silinecek kayıt yoksa: "Saklama süresi dolmuş sonuç yok."
-- **Senin yapman gereken:** Yönetim sayfasını düzenli aç. Sayfa açılmadıkça süresi dolan kayıtlar silinmez. Gizlilik metnindeki silme süresi, bu sayfayı ne sıklıkla açtığına bağlı.
+- **Otomatik silme:** `.github/workflows/placement-cleanup.yml` her gün 03:23 UTC'de `scripts/placement-cleanup.mjs`'i çalıştırır. Script `expireAt` tarihi geçmiş `placementTests` kayıtlarını siler; günlüğe sadece silinen sayıyı yazar.
+- **Servis hesabı anahtarı yok.** Script Firebase Authentication'daki ayrı bir e-posta/şifre hesabıyla ("temizlik hesabı") giriş yapar ve normal bir kullanıcı gibi `firestore.rules`'tan geçer. Kurallar bu hesaba (`cleanupUid()`) sadece şunu izin verir: `expireAt <= şimdi` ile sınırlı sorgu ve süresi dolmuş sonucu silme. Tek belge okuma, değiştirme, süresi dolmamış sonucu silme, öğrenci verisi, profil veya sonuç oluşturma yok.
+- **Şifre sızarsa:** Bilen biri en fazla süresi zaten dolmuş sonuçları silebilir ve kimliklerini görebilir. Firebase Console'dan şifreyi değiştirmek (ya da hesabı kapatmak) ve GitHub Secret'ı güncellemek yeterli.
+- **Yedek:** Yönetim sayfası açıldığında aynı silme orada da yapılır. İş çalışıyorsa sayfa "Saklama süresi dolmuş sonuç yok" der; bir gün "N sonuç silindi" derse iş çalışmıyor demektir, GitHub → Actions'a bak.
+- **Hata olursa:** İş başarısız olur ve GitHub sana e-posta gönderir.
+- **60 gün kuralı:** Herkese açık depolarda GitHub, 60 gün boyunca hiç commit olmazsa zamanlanmış işleri kapatır. O zaman GitHub → **Actions** → "Seviye testi otomatik silme" → **Enable workflow**.
+- **Maliyet:** Herkese açık depoda GitHub Actions ücretsiz. Firestore'da her silme bir yazma, her silinen belge bir okuma sayılır; Spark planının günlük ücretsiz kotası içinde kalır, kota dolarsa ücret çıkmaz, işlem durur.
+
+**Kurulum (bir kez, senin yapman gereken):**
+1. **Temizlik hesabı:** Firebase Console → **Authentication** → **Users** → **Add user**.
+   - E-posta: gerçek olması gerekmez, ör. `temizlik@bozkurtacademy.com` (bu adrese posta gitmez).
+   - Şifre: en az 24 karakterlik rastgele bir şifre (bir şifre yöneticisiyle üret). Başka hiçbir yerde kullanma.
+   - Oluşan satırdaki **Kullanıcı UID'si** `firestore.rules` → `cleanupUid()` içine yazılır (şu an: `EUQMPh6R4SM8SKDuxZyZodvCBp43`). Hesabı silip yeniden açarsan UID değişir; kuralı da güncelle.
+2. **Kuralları yayınla:** UID'li kurallar birleştikten sonra Firebase Console → **Firestore** → **Kurallar**'a `firestore.rules`'u yapıştır → **Yayınla**.
+3. **GitHub Secrets:** GitHub → depo → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**:
+   - `CLEANUP_EMAIL` = temizlik hesabının e-postası
+   - `CLEANUP_PASSWORD` = şifresi
+4. **Deneme:** GitHub → **Actions** → "Seviye testi otomatik silme" → **Run workflow**. Günlükte "Saklama süresi dolan N seviye testi sonucu silindi." görünmeli.
+
+Kurulum bitene kadar iş hata vermeden "kurulum tamamlanmamış" yazıp çıkar; o süre boyunca silme sadece yönetim sayfasında olur.
+
 - **`expireAt` alanı:** Her kayıtta duruyor: oluşturulma + 183 gün. Kurallar bu değeri ±1 gün toleransla kontrol eder; tolerans, öğrencinin bilgisayar saatindeki küçük farklar için.
 - **İndeks:** Silme sorgusu (`expireAt <= şimdi`) Firestore'un otomatik tek alan indeksini kullanır. `firestore.indexes.json`'a `expireAt` için indeksi kapatan bir ayar (`"indexes": []`) eklenmemeli. Önceki TTL ayarı tam olarak bunu yapıyordu, o yüzden dosyadan çıkarıldı.
 
 **İleride faturalandırmayı (Blaze) açarsan TTL politikası** aynı alanla doğrudan çalışır; kodda değişiklik gerekmez.
 - **Konsoldan:** Google Cloud Console → proje `bozkurtacademy-8ab85` → **Firestore** → **Time-to-live (TTL)** (https://console.cloud.google.com/firestore/databases/-default-/ttl?project=bozkurtacademy-8ab85) → **Create policy**. Collection group `placementTests`, Timestamp field `expireAt`.
 - **Komutla:** `gcloud firestore fields ttls update expireAt --collection-group=placementTests --enable-ttl --project=bozkurtacademy-8ab85`
-- Google süresi dolan belgeleri genellikle sonraki 24 saat içinde siler. Yönetim sayfasındaki silme de çalışmaya devam eder; ikisi birbirini engellemez.
+- Google süresi dolan belgeleri genellikle sonraki 24 saat içinde siler. GitHub Actions işi ve yönetim sayfasındaki silme de çalışmaya devam eder; birbirlerini engellemezler.
 
 **Bekleme belgeleri** (`placementLimits/{uid}`): Yalnızca anonim kimlik ve son gönderim zamanını tutar. Kişisel veri içermez ve silinmez.
 

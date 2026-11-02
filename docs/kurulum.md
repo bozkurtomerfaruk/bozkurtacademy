@@ -48,7 +48,7 @@ Google Apps Script ile, senin Google hesabında: adım adım kurulum `apps-scrip
 Ayrıntılar ve adım adım kurulum: `docs/seviye-testi.md`. Kısaca:
 1. Authentication → Sign-in method → **Anonim**'i aç.
 2. `firestore.rules`'u yayınla.
-3. Yönetim sayfasını düzenli aç. Spark planında TTL olmadığı için süresi dolan (`expireAt`) sonuçlar bu sayfa açıldığında silinir.
+3. Seviye testi otomatik silme işini kur (bir kez): `docs/seviye-testi.md` → "6 ay sonra silme". Spark planında TTL olmadığı için süresi dolan (`expireAt`) sonuçları her gün GitHub Actions siler; yönetim sayfası açılınca da silinir.
 
 Yönetim sayfası: `https://bozkurtacademy.com/#yonetim/seviye-testleri`. Önce `giris.html`'den öğretmen hesabıyla giriş yap. Testler: `npm run test:placement` (emülatörde).
 

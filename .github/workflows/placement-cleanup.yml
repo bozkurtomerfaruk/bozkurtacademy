@@ -1,0 +1,34 @@
+name: Seviye testi otomatik silme
+# Her gün saklama süresi (6 ay) dolan seviye testi sonuçlarını siler: scripts/placement-cleanup.mjs.
+# Giriş bilgileri GitHub Secrets'ta: CLEANUP_EMAIL, CLEANUP_PASSWORD (docs/seviye-testi.md).
+# Sadece zamanlanmış ve elle başlatılan çalışma; PR'larda ve çatallarda (fork) çalışmaz, secrets oraya verilmez.
+on:
+  schedule:
+    - cron: '23 3 * * *'   # her gün 03:23 UTC (GitHub yoğunlukta birkaç dakika geciktirebilir)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: placement-cleanup
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    if: github.repository == 'bozkurtomerfaruk/bozkurtacademy'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: node scripts/placement-cleanup.mjs
+        env:
+          CLEANUP_EMAIL: ${{ secrets.CLEANUP_EMAIL }}
+          CLEANUP_PASSWORD: ${{ secrets.CLEANUP_PASSWORD }}

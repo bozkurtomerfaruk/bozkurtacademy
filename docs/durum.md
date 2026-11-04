@@ -2,6 +2,38 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-04 · Seviye sonu sınavı: A1 (madde 4)
+
+- **Sayfa:** `#seviye-sonu/A1`. Alıştırmalar sayfasında A1 konu listesinin sonunda bir kart var ("A1 seviyesini bitirdin mi?").
+  - Giriş ekranı: 30 soru, geçme sınırı %60 (18 doğru), süre yok.
+  - 30 soru tek sayfada; her soruda 4 seçenek, "Bilmiyorum" yok. Cevapsız soru kalırsa sınav bitmiyor, cevapsızlar işaretleniyor.
+  - Yarım kalan deneme tarayıcıda saklanıyor (`baLevelExam:A1`); sayfa kapanırsa kaldığı yerden devam ediliyor.
+- **Soru havuzu:** `data/seviye-sonu/a1.json`, 60 soru. Her konu için dağılımdaki sayının iki katı soru var ve her sorunun kendi Türkçe açıklaması var.
+  - Her denemede aynı dağılımla rastgele 30 soru seçiliyor, seçeneklerin sırası da karışıyor. Böylece ikinci denemede öğrenci cevapları ezberden bilemez.
+  - Dağılım (onayladığın): Präsens 3; sein & haben, Artikel, Plural, Akkusativ, Negation, W-Fragen, Modalverben, Trennbare Verben, Perfekt, Zahlen/Uhrzeit/Datum, Temporale Präpositionen 2'şer; Personalpronomen (Akk./Dat.), Possessivartikel, Imperativ, Lokale Präpositionen 1'er.
+  - `node scripts/check-level-exams.mjs` havuzu denetliyor (GitHub'da da çalışıyor): dağılım toplamı 30, her konuda en az iki kat soru, 4 farklı seçenek, doğru cevap seçeneklerde, açıklama var.
+- **Sonuç ekranı (onayladığın taslak):** puan, yüzde ve sınır, "Geçtin / Henüz geçemedin" etiketi.
+  - 17 konunun tablosu; hatalı konular üstte. Yanlarında "Konu anlatımı" ve "Alıştırmalar" bağlantıları var; telefonda bunlar konu adının altına geliyor.
+  - Yanlış cevaplar: öğrencinin cevabı, doğru cevap ve açıklama.
+  - Alt kısımda "alıştırma sınavı" notu ve şu düğmeler: Tekrar çöz (yeni sorularla), Zayıf konulara git, Alıştırmalara dön.
+  - Giriş yapmamış ziyaretçiye "sonucun kaydedilmedi" notu çıkıyor.
+- **Kayıt:** Giriş yapmış ve onaylı öğrencide `users/{uid}/results`'a şu bilgiler yazılıyor: `level: A1`, `topic: seviye-sonu`, `exercise: a1`, puan, 30 ve `topicErrors` (ör. `perfekt:2,akkusativ:1`). Hangi soruların çıktığı yazılmıyor. Dil değiştirmek ya da sayfayı yenilemek sonucu ikinci kez yazmıyor.
+- **Öğretmen detayı:** Sonuç tablosuna "İlk skor" sütunu eklendi (bütün alıştırmalar için). Sınav satırında deneme sayısı, ilk, son ve en iyi puan ile "Son denemedeki hatalar: Perfekt 2, …" görünüyor.
+- **Ödev:** Ödev ekranında A1'in konuları arasında "Seviye sonu sınavı" var. Öğrenci panelindeki ödev bağlantısı sınavı açıyor. `#exercises/A1/seviye-sonu` gibi eski biçimli bağlantılar da sınava yönleniyor.
+- **Kurallar:** `firestore.rules` → `validResult()` isteğe bağlı `topicErrors` alanını kabul ediyor; bu alan sadece `topic == 'seviye-sonu'` ise geçerli, en fazla 600 karakter ve "konu:sayı" biçiminde olmak zorunda. Kural testleri: `npm test` 106/106 (2 yeni).
+- **Diller:** Yeni metinler TR/DE/EN. Sorular Almanca, açıklamalar Türkçe (DE/EN arayüzde "Açıklamalar Türkçedir" notu var).
+- **Önbellek sürümleri:** `app.js` v31 (bütün sayfalar), `quiz.js` v27, `exercise-links.js` v6, `grammar.js` v18, `analytics.js` v6, `session.js` v2; yeni `level-exam.js` v1, `level-exam.css` v1. Sayaç sınavı `/#seviye-sonu/A1` olarak ayrı sayıyor.
+- **Test:**
+  - Yeni `tests/level-exam.mjs` (40 kontrol, hepsi geçti): dağılım, rastgelelik, devam etme, puan ve sınır (17 → geçemedi, 18 → geçti), konu hataları, yanlışlar, diller, eski bağlantı, 390/1440 px açık/koyu.
+  - Yeni `npm run test:level-exam` (emülatörde uçtan uca, 11 kontrol, hepsi geçti): öğrenci iki kez çözüyor → kayıtlar doğru → öğretmen detayında ilk 15/30, son 25/30, 2 deneme → ödev veriliyor → panel bağlantısı sınavı açıyor.
+  - `tests/vocab.mjs`, `tests/search.mjs`, `tests/result-message.mjs`, `tests/exams/next.mjs`, `check-grammar`, `check-exams`, `build-search-index --check`, `sozluk --check` geçti.
+- **Bilinen sınırlar:** Seviye testinde olduğu gibi, sorular ve cevaplar herkese açık bir dosyada ve puan tarayıcıda hesaplanıyor.
+- **Benden önce bozulmuş bir test:** `npm run test:placement` ilk bölümünde duruyor. Başka bir oturumun değişikliğiyle (#39/#43) "Dersler" ve "İletişim" ayrı sayfalara taşındı; testin bu bölümü hâlâ eski yerlerine bakıyor. Testin geri kalanını geçici bir kopyayla çalıştırdım, hepsi geçti. Ayrı küçük bir işte düzeltilmeli.
+- **Senin yapman gerekenler:**
+  1. PR'ı inceleyip "birleştir" de.
+  2. Birleştikten sonra `firestore.rules`'u Firebase Console → Firestore → **Kurallar**'da yayınla. Yayınlamadan önce kaydedilen sınav sonuçları kurallarca reddedilir; öğrenci "Sonuç paneline kaydedilemedi" notunu görür.
+  3. Sonra A2 ve B1 için onayın.
+
 ## 2026-11-04 · Kelime listesi: B2 (7 konu)
 
 - **Kapsam:** B2'nin alıştırması olan 7 konusu (Konjunktiv I, Passiv-Varianten, Nominalisierung, Partizip I, Partizip II, Genitivpräpositionen, je … desto). B2'deki 1400 sorunun 1160'ında artık kelime listesi var. Hazırlanmakta olan 3 B2 konusunda henüz alıştırma olmadığı için liste de yok. Böylece kelime listesi alıştırması olan bütün konularda (A1–B2) var.

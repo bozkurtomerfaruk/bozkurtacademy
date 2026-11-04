@@ -411,6 +411,14 @@
       </div>
 
       ${cards ? `<div class="exercise-discovery-grid ba-toc">${cards}</div>` : ''}
+      ${!query && state.level?.levelExam ? `<section class="le-card" aria-labelledby="leCardTitle">
+        <div>
+          <p class="le-card-kicker">${escapeHtml(fill('leCardKicker',{level:state.level.id}))}</p>
+          <h3 id="leCardTitle">${escapeHtml(fill('leCardTitle',{level:state.level.id}))}</h3>
+          <p>${escapeHtml(fill('leCardText',{level:state.level.id}))}</p>
+        </div>
+        <a class="btn primary" href="#seviye-sonu/${escapeHtml(state.level.id)}" data-level-exam>${escapeHtml(t('leCardButton'))} <span aria-hidden="true">→</span></a>
+      </section>` : ''}
       ${subNote ? `<p class="ba-subresults-note" role="status">${escapeHtml(subNote)}</p>` : ''}
       ${subResults}
     `;

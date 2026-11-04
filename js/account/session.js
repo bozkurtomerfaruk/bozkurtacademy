@@ -24,8 +24,9 @@ window.addEventListener('ba:exercise-finished', (event) => {
   else if(hint === 'student') queue.push(event.detail);
 });
 
-function showNote(key, type){
-  const box = document.querySelector('#quizResult .result-box');
+// The note goes under the result: the exercise result box, or the end-of-level test result (detail.noteIn).
+function showNote(key, type, where){
+  const box = document.querySelector(where || '#quizResult .result-box');
   if(!box) return;
   box.querySelector('.result-saved-note')?.remove();
   const note = document.createElement('p');
@@ -66,12 +67,14 @@ async function connect(){
         exercise: detail.exercise,
         score: detail.score,
         total: detail.total,
+        // End-of-level test: wrong answers per topic ("perfekt:2,akkusativ:1"); which questions came up is not saved.
+        ...(typeof detail.topicErrors === 'string' ? { topicErrors: detail.topicErrors } : {}),
         at: fs.serverTimestamp()
       });
-      showNote('resultSaved', 'success');
+      showNote('resultSaved', 'success', detail.noteIn);
     }catch(error){
       console.error(error);
-      showNote('resultSaveFailed', 'error');
+      showNote('resultSaveFailed', 'error', detail.noteIn);
     }
   };
   queue.splice(0).forEach(save);

@@ -12,6 +12,8 @@ After adding or renaming exercise packages, run node scripts/build-search-index.
 
 Word lists: questions may list their nouns in "vocab" (keys of data/sozluk.json: article + Turkish meaning, also shown in the German and English interface). Mark entries you are not sure about with "unsure": true; they stay hidden until the teacher sets "checked". After changing vocab or the dictionary, run node scripts/sozluk.mjs to refresh docs/sozluk-kontrol.csv and docs/sozluk-bekleyen.csv, the table of words not yet checked that the teacher reviews for each pull request (CI runs it with --check). Skip Turkish hints, German instructions, grammar terms (Subjekt, Kasus, Hauptsatz …), names and imperatives; a word like Essen or Morgen counts as a noun only after an article or preposition. Exam sets never show word lists.
 
+End-of-level tests: data/seviye-sonu/<level>.json, linked from data/catalog.json with "levelExam". 30 questions per attempt with a fixed topic distribution; the pool needs at least twice as many questions per topic, each with four options and its own Turkish explanation (node scripts/check-level-exams.mjs). Results go to results with topic "seviye-sonu" and topicErrors; never store which questions were shown.
+
 Run node scripts/check-grammar.mjs and browser checks for the lesson, correct exercise destination, mobile overflow, dark mode and deep links. New exercise topics require actual authored explanations; a card or placeholder is insufficient. data/grammar-legacy.json only records existing B1/B2 gaps and must not be expanded to bypass coverage.
 
 Publish through the existing GitHub Pages workflow when the user has authorized publishing. Do not claim the coverage check writes educational content automatically or verifies email delivery.

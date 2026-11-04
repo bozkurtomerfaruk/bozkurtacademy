@@ -1,0 +1,65 @@
+/* Seviye sonu sınavı (#seviye-sonu/A1, js/level-exam.js) ve alıştırmalar sayfasındaki kartı.
+   Sadece yerleşim; renk, yazı tipi ve bileşenler css/base.css'teki --ba-* token'larından. */
+#page-seviye-sonu .le-wrap{max-width:980px;margin:0 auto;padding-top:clamp(24px,4vw,48px);padding-bottom:clamp(32px,5vw,64px)}
+#page-seviye-sonu .le-head{display:grid;gap:8px;margin:0 0 20px}
+#page-seviye-sonu .le-kicker{margin:0;color:var(--ba-muted);font-size:var(--ba-small);font-weight:600}
+#page-seviye-sonu h1{margin:0;font-family:var(--ba-serif);font-weight:600;font-size:clamp(28px,4vw,42px);line-height:1.15;color:var(--ba-ink)}
+#page-seviye-sonu h1:focus{outline:none}
+#page-seviye-sonu h2{margin:28px 0 10px;font-family:var(--ba-serif);font-weight:600;font-size:var(--ba-lead);color:var(--ba-ink)}
+#page-seviye-sonu .le-lead{margin:0;color:var(--ba-ink);font-size:var(--ba-lead);line-height:1.5;max-width:70ch}
+#page-seviye-sonu .le-info{display:grid;gap:8px;margin:0 0 24px;padding:18px 22px 18px 40px;border-radius:var(--ba-radius);background:var(--ba-paper);color:var(--ba-ink);line-height:1.5}
+#page-seviye-sonu .le-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+#page-seviye-sonu .le-status{margin:12px 0 0;color:var(--ba-wrong);font-weight:600}
+#page-seviye-sonu .le-status:empty{display:none}
+#page-seviye-sonu .le-progress{margin:0;color:var(--ba-muted);font-size:var(--ba-small);font-weight:600}
+
+/* Questions */
+#page-seviye-sonu .le-questions{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+#page-seviye-sonu .le-q{padding:16px 18px;border-radius:var(--ba-radius);background:var(--ba-paper);border-left:5px solid transparent}
+#page-seviye-sonu .le-q.is-missing{border-left-color:var(--ba-wrong)}
+#page-seviye-sonu .le-q fieldset{margin:0;padding:0;border:0;min-width:0}
+#page-seviye-sonu .le-q legend{padding:0;margin:0 0 10px;color:var(--ba-ink);font-size:var(--ba-body);line-height:1.5}
+#page-seviye-sonu .le-q-no{font-weight:700}
+#page-seviye-sonu .le-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+#page-seviye-sonu .le-option{display:flex;align-items:center;gap:10px;min-height:44px;padding:8px 12px;border-radius:var(--ba-radius-small);background:var(--ba-paper-2);color:var(--ba-ink);cursor:pointer;line-height:1.35}
+#page-seviye-sonu .le-option input{flex:none;width:18px;height:18px;margin:0;accent-color:var(--ba-accent)}
+#page-seviye-sonu .le-option:has(input:checked){outline:2px solid var(--ba-accent);outline-offset:-2px}
+#page-seviye-sonu .le-option:has(input:focus-visible){outline:3px solid var(--ba-focus, var(--ba-accent));outline-offset:2px}
+
+/* Result */
+#page-seviye-sonu .le-result{display:grid;gap:8px}
+#page-seviye-sonu .le-score{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin:12px 0}
+#page-seviye-sonu .le-score-box{padding:18px 22px;border-radius:var(--ba-radius);background:var(--ba-field);color:var(--ba-field-ink)}
+#page-seviye-sonu .le-score-box strong{display:block;font-family:var(--ba-serif);font-size:40px;line-height:1.05}
+#page-seviye-sonu .le-score-box span{font-size:var(--ba-small)}
+#page-seviye-sonu .le-badge{display:inline-block;padding:6px 14px;border-radius:999px;font-weight:700}
+#page-seviye-sonu .le-badge.is-pass{background:var(--ba-right-bg);color:var(--ba-right)}
+#page-seviye-sonu .le-badge.is-fail{background:var(--ba-wrong-bg);color:var(--ba-wrong)}
+#page-seviye-sonu .le-note{margin:0;padding:12px 14px;border-radius:var(--ba-radius-small);background:var(--ba-paper-2);color:var(--ba-ink)}
+#page-seviye-sonu .result-saved-note{margin:4px 0 0}
+#page-seviye-sonu .le-topics{display:grid;margin:0;padding:4px 16px;list-style:none;border-radius:var(--ba-radius-small);background:var(--ba-paper)}
+#page-seviye-sonu .le-topics li{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1.2fr);gap:4px 16px;align-items:center;padding:10px 0;border-bottom:2px dotted var(--ba-paper-2);color:var(--ba-ink)}
+#page-seviye-sonu .le-topics li:last-child{border-bottom:0}
+#page-seviye-sonu .le-topic-score{font-weight:600;white-space:nowrap}
+#page-seviye-sonu .le-topics li.is-weak .le-topic-score{color:var(--ba-wrong)}
+#page-seviye-sonu .le-topic-links{display:flex;flex-wrap:wrap;gap:4px 16px}
+#page-seviye-sonu .le-wrong{display:grid;gap:10px}
+#page-seviye-sonu .le-wrong-item{padding:12px 14px;border-radius:var(--ba-radius-small);background:var(--ba-paper);border-left:5px solid var(--ba-wrong);color:var(--ba-ink)}
+#page-seviye-sonu .le-wrong-item p{margin:4px 0}
+#page-seviye-sonu .le-expl{color:var(--ba-muted);font-size:var(--ba-small);line-height:1.5}
+#page-seviye-sonu .le-disclaimer{margin:16px 0 0;padding:12px 14px}
+
+@media(max-width:620px){
+  #page-seviye-sonu .le-options{grid-template-columns:1fr}
+  /* Phones: score next to the topic name, the lesson and exercise links on their own line below. */
+  #page-seviye-sonu .le-topics li{grid-template-columns:minmax(0,1fr) auto}
+  #page-seviye-sonu .le-topic-links{grid-column:1/-1}
+  #page-seviye-sonu .le-actions .btn{width:100%}
+}
+
+/* Card at the end of a level's topic list (#exercises, js/quiz.js). */
+#page-exercises .le-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 32px;align-items:center;margin-top:clamp(20px,3vw,32px);padding:clamp(20px,3vw,32px);border-radius:var(--ba-radius);background:var(--ba-field);color:var(--ba-field-ink)}
+#page-exercises .le-card p{margin:0;color:var(--ba-field-ink)}
+#page-exercises .le-card .le-card-kicker{font-size:var(--ba-small);font-weight:600;opacity:.85}
+#page-exercises .le-card h3{margin:4px 0 6px;font-family:var(--ba-serif);font-weight:600;font-size:var(--ba-lead);color:var(--ba-field-ink)}
+@media(max-width:620px){#page-exercises .le-card{grid-template-columns:1fr}#page-exercises .le-card .btn{width:100%}}

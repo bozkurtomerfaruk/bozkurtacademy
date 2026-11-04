@@ -8,6 +8,7 @@
     "emulators": "firebase emulators:start --only auth,firestore --project demo-bozkurtacademy",
     "test:apps-script": "node --test tests/apps-script.test.mjs",
     "test:cleanup": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/placement-cleanup.mjs\"",
+    "test:level-exam": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/level-exam-account.mjs\"",
     "test:placement": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/seviye-testi/placement.mjs\""
   },
   "devDependencies": {

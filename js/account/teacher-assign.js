@@ -1,7 +1,7 @@
 // ogretmen-odev.html: yeni ödev. Başlık, açıklama, teslim tarihi (Berlin), sitedeki alıştırmalar,
 // isteğe bağlı Google Docs linki ("her öğrenciye kopya" → /copy) ve bir ya da birden fazla öğrenci.
 import {
-  $, berlinInputToDate, dateToBerlinInput, docsCopyUrl, h, loadCatalogLevels, loadTopicExercises, localize, setStatus,
+  $, berlinInputToDate, dateToBerlinInput, docsCopyUrl, h, LEVEL_EXAM, levelExamTopic, loadCatalogLevels, loadTopicExercises, localize, setStatus,
   validHttpsUrl
 } from './common.js';
 import { fs } from './firebase.js';
@@ -59,7 +59,11 @@ async function renderExercises(){
 function renderTopics(){
   const level = levels.find((l) => l.id === $('aLevel').value);
   const topics = (level?.topics || []).filter((t) => t.path);
-  fillSelect($('aTopic'), topics.map((t) => ({ value: t.id, label: localize(t.title, 'tr') })));
+  // The level's end-of-level test (data/catalog.json → levelExam) is chosen like a topic.
+  fillSelect($('aTopic'), [
+    ...topics.map((t) => ({ value: t.id, label: localize(t.title, 'tr') })),
+    ...(level?.levelExam ? [{ value: LEVEL_EXAM, label: levelExamTopic('tr') }] : [])
+  ]);
   renderExercises();
 }
 

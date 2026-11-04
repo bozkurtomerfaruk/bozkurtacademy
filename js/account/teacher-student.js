@@ -1,7 +1,7 @@
 // ogretmen-ogrenci.html?id=UID: öğrenci detayı, onay işlemleri, veli onayı, alıştırma sonuçları.
 import {
   $, bestResultSince, consentGiven, currentYear, exerciseNames, formatDateTime, h, BERLIN, loadAssignments, loadProfile,
-  loadResources, loadResults, safeLink, scoreText, summarizeResults, toDate, validEmail, validHttpsUrl
+  loadResources, loadResults, safeLink, scoreText, summarizeResults, toDate, validEmail, validHttpsUrl, LEVEL_EXAM, topicErrorsText
 } from './common.js';
 import {
   addResource, approve, deleteAssignment, deleteResource, emailVerified, fmtDate, isEnabled, openDeleteDialog,
@@ -296,19 +296,26 @@ async function renderResults(results){
     return;
   }
   const names = await exerciseNames(results, 'tr');
-  const cols = ['Alıştırma', 'Seviye', 'Son skor', 'En iyi', 'Deneme', 'Son deneme'];
-  const rows = summarizeResults(results).map((g) => {
+  const cols = ['Alıştırma', 'Seviye', 'İlk skor', 'Son skor', 'En iyi', 'Deneme', 'Son deneme'];
+  const groups = summarizeResults(results);
+  // End-of-level test: wrong answers per topic in the last attempt.
+  const errors = await Promise.all(groups.map((g) => g.topic === LEVEL_EXAM ? topicErrorsText(g.level, g.last?.topicErrors, 'tr') : ''));
+  const rows = groups.map((g, i) => {
     const name = names[g.key];
+    const examNote = g.topic === LEVEL_EXAM
+      ? h('span', { class: 'acc-sub', 'data-level-exam-errors': '' }, g.last?.topicErrors === undefined ? '' : (errors[i] ? `Son denemedeki hatalar: ${errors[i]}` : 'Son denemede hata yok.'))
+      : null;
     const attempts = h('details', { class: 'acc-details acc-attempts' },
       h('summary', {}, `${g.attempts.length} deneme`),
       h('ul', {}, g.attempts.map((a) => h('li', {}, h('span', {}, fmtDateTime(a.at)), h('strong', {}, scoreText(a))))));
     return h('tr', {},
-      h('td', { 'data-label': cols[0] }, h('strong', {}, name.exercise), h('span', { class: 'acc-sub' }, name.topic)),
+      h('td', { 'data-label': cols[0] }, h('strong', {}, name.exercise), h('span', { class: 'acc-sub' }, name.topic), examNote),
       h('td', { 'data-label': cols[1] }, g.level),
-      h('td', { 'data-label': cols[2], class: 'acc-num' }, scoreText(g.last)),
-      h('td', { 'data-label': cols[3], class: 'acc-num' }, scoreText(g.best)),
-      h('td', { 'data-label': cols[4] }, attempts),
-      h('td', { 'data-label': cols[5] }, fmtDateTime(g.last.at))
+      h('td', { 'data-label': cols[2], class: 'acc-num' }, scoreText(g.first)),
+      h('td', { 'data-label': cols[3], class: 'acc-num' }, scoreText(g.last)),
+      h('td', { 'data-label': cols[4], class: 'acc-num' }, scoreText(g.best)),
+      h('td', { 'data-label': cols[5] }, attempts),
+      h('td', { 'data-label': cols[6] }, fmtDateTime(g.last.at))
     );
   });
   box.replaceChildren(

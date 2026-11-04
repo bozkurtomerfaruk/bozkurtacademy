@@ -2,6 +2,20 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-04 · Kelime listesi: B1'in kalan 12 konusu
+
+- **Kapsam:** B1'in Relativsätze dışındaki 12 konusu. B1'deki 2274 sorunun 1847'sinde artık kelime listesi var.
+- **Sözlük:** 290 yeni kelime, toplam 963. Önceden kontrol edilen 673 kelimeye dokunulmadı.
+- **Kontrol tablosu bu PR için:** `docs/sozluk-bekleyen.csv` (sadece bu 290 kelime; emin olmadıklarım en üstte).
+  - **Emin olmadığım 2 kelime (öğrenciye gizli):** Bube (cümlede iskambildeki vale; güneyde "oğlan"), Marathon (der; das da kullanılıyor).
+  - **İki artikelli girişler (der/die):** Reisende, Verletzte (sıfattan türemiş isim; Jugendliche ile aynı not biçimi).
+  - **Not düştüğüm:** der Pole = Polonyalı erkek (die Polin = kadın).
+  - N-Deklination konusundaki tamlayan ve çoğul biçimler sözlük biçimine çevrildi (des Präsidenten → der Präsident, des Herzens → das Herz, des Willens → der Wille).
+- **Ayıklama:** Önceki kurallar aynen. Ek olarak "Tipp: …" ipuçları, "Aktiv:/Passiv:/Direkt:" etiketleri, "→ Passiv/von-Form", "Ausgangssatz:", "Behalte/Verschiebe/Nenne/Forme …" yönergeleri ve "Berichte. Beginne: …" alınmıyor; "Wissen Sie …" ve "Zahlen Sie …" gibi kullanımlar isim sayılmıyor.
+- **Değişmeyenler:** Sorularda sadece `vocab` eklendi (12 dosya otomatik karşılaştırıldı). Sınav setlerinde liste yok.
+- **Test:** `tests/vocab.mjs` (kelime listesi olan 41 konunun ilk sorusu tarayıcıda), `check-grammar`, `check-exams`, `build-search-index --check`, `sozluk --check` geçti; herkese açık sayfalarda konsol hatası yok.
+- **Senin yapman gereken:** `docs/sozluk-bekleyen.csv`'yi kontrol et. Uygunsa "birleştir" de; kelimeleri "kontrol edildi" yapıp B2'ye geçerim.
+
 ## 2026-11-04 · Kelime listesi: A2'nin kalan 10 konusu
 
 - **Kapsam:** A2'nin Dativ dışındaki 10 konusu. A2'deki 1710 sorunun 1469'unda artık kelime listesi var.

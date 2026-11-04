@@ -15,7 +15,9 @@ verification) and GoatCounter visitor statistics on the public pages, and the pl
 | --- | --- | --- | --- |
 | **GitHub Pages** (GitHub Inc., hosting of bozkurtacademy.com) | Every page view | IP address, browser and device details, time and page requested (server logs) | Whole site; `CNAME` points the domain at GitHub Pages |
 | **Web3Forms** (web3forms.com) | Only when someone sends the contact form | Name, email address, message text, plus IP address and browser details of the request | `js/app.js`, `fetch('https://api.web3forms.com/submit')` |
-| **Web3Forms** (web3forms.com) | Only when someone sends a comment on a grammar lesson | Name, email address, comment text, the lesson and level, publication consent, plus IP address and browser details | `js/a1-lessons.js`, comment form |
+| **Web3Forms** (web3forms.com) | Only when someone sends a comment on a grammar lesson | Name, email address, comment text, the lesson and level, publication consent, plus IP address and browser details | `js/comments.js`, comment form (notification email to the teacher) |
+| **Firebase (Auth + Firestore), grammar comments** (`comments`) | When a visitor sends a comment (anonymous session, closed right after) | Lesson key, name, comment text, server time, status `pending`; no email address | `js/comments.js`, rules in `firestore.rules` |
+| **Cloud Firestore REST read** (`firestore.googleapis.com`) | When a visitor scrolls near the comment section of a grammar lesson | IP address and browser details (request only; no sign-in, no cookie) | `js/comments.js` `loadApproved` |
 | **Gmail / Google** (Google Ireland Ltd.) | After Web3Forms forwards a form | Everything Web3Forms received, stored in the bozkurtt.omerfaruk@gmail.com mailbox | Web3Forms delivers to that address |
 | **GoatCounter** (bozkurtacademy.goatcounter.com) | Every page change on the public pages in `index.html` (home, lessons, grammar, exercises, exam prep, about, contact). Not on login, registration or panel pages, and never on localhost | Page address (path and hash, e.g. `/#grammar/A1/artikel`; exercise question numbers are dropped), referrer (first page of a visit only), page title, browser details (user agent) and screen width, country derived from the IP address. GoatCounter does not store the IP address. No cookies, no localStorage | `js/analytics.js`, `js/vendor/count.js` (served from this site, not from gc.zgo.at) |
 | **Firebase Authentication** (Google Ireland Ltd. / Google LLC) | When a student registers or signs in, and on every later visit of a signed-in student | Email address, password hash; with Google sign-in (16+ only) also the Google name, email and photo URL. Not region-bound: may be processed in the USA | `js/account/firebase.js`, `login.js`, `register.js` |
@@ -76,10 +78,11 @@ Guests who never sign in load nothing from Google, unless they send a placement-
   - Firebase keeps the sign-in session in the browser's IndexedDB (technically necessary for login).
 
   These are only read by the page on the visitor's own device.
-- **Published comments:** when you approve a comment, you add it to `data/grammar-comments.json`,
-  which is public. The page shows the commenter's name, the date, the comment and your reply.
-  Email addresses are never published. The form asks for consent to this before sending. The file
-  is empty today.
+- **Published comments:** comments are stored in Firestore (`comments`) with status `pending`. Only
+  the teacher can read pending comments and approve, answer, unpublish or delete them
+  (`/yonetim/yorumlar/`). Approved comments are public: the lesson page shows the commenter's name,
+  the date, the comment and the teacher's reply. Email addresses are never stored in Firestore or
+  published; they only arrive in the Web3Forms notification email. The form asks for consent before sending.
 - **Email links:** the `mailto:` links open the visitor's own email program. Nothing is sent
   through the site.
 - **Links to other websites:** some grammar lessons link to deutsch-mit-anna.de and

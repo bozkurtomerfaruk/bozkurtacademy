@@ -5,63 +5,50 @@ Search Console, backlink ve aylık kontrol listesi bölümleri SEO planının 5.
 
 ---
 
-## 1. Gramer derslerine gelen yorumları yayınlama
+## 1. Gramer derslerine gelen yorumları onaylama
 
 Bir öğrenci bir gramer dersinin altındaki formdan yorum gönderdiğinde yorum **otomatik yayınlanmaz**.
-Önce sana e-postayla gelir. Sen onaylarsan yorum o dersin sayfasında **"Öğrenci yorumları"** başlığı altında,
-formun üstünde görünür. Bir derste onaylı yorum yoksa bu bölüm hiç görünmez.
+Yorum Firebase'e "onay bekliyor" (`pending`) olarak kaydedilir ve sana bir bildirim e-postası gelir.
+Sen onaylayınca yorum o dersin sayfasında **"Öğrenci yorumları"** başlığı altında, formun üstünde görünür.
+Bir derste onaylı yorum yoksa bu bölüm hiç görünmez.
 
 ### Gelen e-postada neler var?
 
 - **Konu:** `Bozkurt Academy – A1 yorum incelemesi: Artikel – der, die, das`
-- **name:** öğrencinin yazdığı ad
-- **email:** öğrencinin e-postası (**sadece senin için**, siteye asla yazılmaz)
-- **message:** yorum metni
-- **ders:** seviye ve ders adı (ör. `A1 · Artikel – der, die, das`)
-- **ders_linki:** dersin sayfası
-- **yorum_anahtari:** yorumun JSON dosyasında yazılacağı anahtar (ör. `A1/artikel`)
-- **yayin_onayi:** öğrencinin, yorumunun adıyla yayınlanmasını kabul ettiği bilgisi
+- **name**, **message:** öğrencinin adı ve yorumu
+- **email:** öğrencinin e-postası. Sadece senin için; "Yanıtla"ya basınca öğrenciye yazarsın. Siteye ve Firebase'e yazılmaz.
+- **ders**, **ders_linki:** seviye, ders adı ve dersin sayfası
+- **onay_paneli:** onay sayfasının linki
 
-### Yorumu yayınlamak için
+### Yöntem A: Onay paneli (önerilen)
 
-1. Yorumu oku. Spam, hakaret veya kişisel bilgi (telefon, e-posta, adres) varsa yayınlama.
-2. GitHub'da `data/grammar-comments.json` dosyasını aç ve kalem simgesiyle (Edit) düzenle.
-3. E-postadaki `yorum_anahtari` değerini anahtar olarak kullan. Yorumu şu biçimde ekle:
+1. E-postadaki **onay_paneli** linkini aç: `https://bozkurtacademy.com/yonetim/yorumlar/`.
+   Bu sayfa menüde yok ve arama motorlarına kapalı.
+2. Giriş yapmadıysan **Giriş yap**'a bas ve öğretmen hesabınla gir. Giriş sonrası panele geri dönersin.
+3. En üstte **bekleyen yorum sayısı** görünür. Her yorumun üstünde ders adı (tıklayınca ders açılır), tarih ve isim var.
+   - **Onayla:** Yorum yayınlanır. Ders sayfasında birkaç saniye içinde görünür (sayfayı yenile).
+   - **Cevap yaz:** Yorumun altında "Ömer Faruk Bozkurt" adıyla görünecek cevabını yaz ve **Cevabı kaydet**'e bas.
+     Cevabı silmek için metni boşaltıp kaydet.
+   - **Sil:** Yorum kalıcı olarak silinir (onay sorulur). Spam ve kişisel bilgi içeren yorumlar için kullan.
+4. **Yayındaki yorumlar** bölümünde **Yayından kaldır** yorumu tekrar "onay bekliyor" durumuna alır; sayfada görünmez olur.
 
-```json
-{
-  "A1/artikel": [
-    {
-      "name": "Öğrencinin formda yazdığı ad",
-      "date": "2026-11-04",
-      "comment": "Yorum metni, öğrencinin yazdığı gibi"
-    }
-  ]
-}
-```
+Öğretmen hesabıyla giriş yapmamış biri bu sayfayı açarsa hiçbir yorum göremez; Firestore kuralları buna izin vermez.
 
-- `name`: Öğrencinin yazdığı adı aynen kullan.
-- `date`: Yorumun geldiği tarih, `YYYY-AA-GG` biçiminde. Sayfada "4 Kasım 2026" olarak görünür.
-- `comment`: Yorum metni. Satır sonları korunur. HTML yazılsa bile düz metin olarak görünür.
-- İstersen `"reply": "Senin cevabın"` ekleyebilirsin. Yorumun altında "Ömer Faruk Bozkurt" adıyla görünür.
-- **E-posta adresini bu dosyaya asla ekleme.** Denetim scripti e-posta veya telefon numarası görürse hata verir.
+### Yöntem B: Firebase Console'dan onaylama
 
-4. Aynı derse ikinci bir yorum eklerken listeye virgülle yeni bir kayıt ekle:
-   `"A1/artikel": [ { …ilk yorum… }, { …ikinci yorum… } ]`.
-   Farklı bir ders için yeni bir anahtar aç: `"A2/dativ": [ … ]`.
-5. Değişikliği commit et. GitHub'daki "Grammar coverage" kontrolü (`node scripts/check-comments.mjs`) dosyayı denetler:
-   ders anahtarı gerçekten var mı, tarih doğru mu, izin verilmeyen alan veya e-posta adresi var mı.
-6. Kontrol yeşil olunca `main`'e birleştir. Yorum birkaç dakika içinde ders sayfasında görünür.
+1. [Firebase Console](https://console.firebase.google.com) → **bozkurtacademy-8ab85** → **Firestore Database** → **Veriler**.
+2. **comments** koleksiyonunu aç. Her belge bir yorumdur: `lesson` (ör. `A1/artikel`), `name`, `comment`, `createdAt`, `status`.
+3. Onaylamak için `status` alanının değerini `pending` yerine `approved` yap (kalem simgesi → değer → **Güncelle**).
+4. Cevap eklemek için **Alan ekle** → alan adı `reply`, tür `string`, değer cevabın.
+5. Yayından kaldırmak için `status` değerini tekrar `pending` yap. Silmek için belgenin menüsünden **Belgeyi sil**.
 
-**Yorumu kaldırmak için:** İlgili kaydı dosyadan sil. Dersin son yorumunu silersen anahtarı tamamen kaldırabilir
-ya da boş liste (`[]`) bırakabilirsin.
+Yorumlara asla e-posta adresi, telefon veya başka kişisel bilgi ekleme. Yıldız veya puan şeması (Review, AggregateRating)
+kullanılmaz.
 
-**Claude'a vermek için:** "Şu yorumu şu derse ekle" dediğinde e-postadaki **ad, tarih, yorum metni ve
-yorum_anahtari** bilgilerini gönder. E-posta adresini göndermene gerek yok. Claude yorumu
-`data/grammar-comments.json` dosyasına ekler, `node scripts/check-comments.mjs` ile denetler ve
-tarayıcıda dersin sayfasında görünüp görünmediğini kontrol eder.
+### Kurallar değiştiğinde
 
-Bu yorumlar için Review veya AggregateRating şeması (yıldız) kullanılmaz.
+`firestore.rules` dosyası değişen her birleştirmeden sonra dosyanın tamamını Firebase Console → **Firestore Database** →
+**Kurallar** sekmesine yapıştırıp **Yayınla**'ya basman gerekir. Yayınlanmazsa yorum gönderme ve onay paneli "izin yok" hatası verir.
 
 ---
 

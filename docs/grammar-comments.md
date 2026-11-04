@@ -1,27 +1,35 @@
 # Gramer yorumlarının yönetimi
 
-Öğrenci, konu altındaki isim/e-posta formundan yorum gönderir. Web3Forms (genel erişim anahtarıyla) yorumu `bozkurtt.omerfaruk@gmail.com` adresine iletir. E-postanın konusu hangi anlatımla ilgili olduğunu gösterir. E-postada ders adı (`ders`), ders bağlantısı (`ders_linki`), JSON anahtarı (`yorum_anahtari`, ör. `A1/artikel`) ve yayın onayı da bulunur.
+Öğrenci, ders sayfasının altındaki formdan ad, e-posta ve yorum gönderir (`js/a1-lessons.js` → `js/comments.js`).
 
-Yorumlar otomatik olarak herkese açık yayımlanmaz. Spam veya kişisel bilgi içeren yorumları yayımlamadan önce inceleyin. Onaylanan yorumu `data/grammar-comments.json` dosyasında `SEVİYE/ders-kimliği` anahtarının (ör. `A1/artikel`) altına ekleyip GitHub Pages ile yayımlayın. Adım adım anlatım: `SEO-YAPILACAKLAR.md`, bölüm 1. Bu dosyaya e-posta adresi, özel iletişim bilgisi veya henüz onaylanmamış yorum eklemeyin.
+1. **Kayıt:** Firebase SDK'sı yalnızca gönderimde yüklenir. Anonim, geçici bir oturumla Firestore'daki `comments`
+   koleksiyonuna şu alanlar yazılır: `lesson` (ör. `A1/artikel`), `name`, `comment`, `status: "pending"`,
+   `createdAt` (sunucu saati). Aynı batch'te `commentLimits/{uid}` yazılır: aynı oturumdan dakikada en fazla bir yorum.
+   **E-posta adresi Firestore'a yazılmaz.**
+2. **Bildirim:** Kayıttan sonra Web3Forms öğretmene e-posta gönderir. E-postada ad, e-posta (yanıtla adresi), yorum,
+   `ders`, `ders_linki` ve `onay_paneli` (`https://bozkurtacademy.com/yonetim/yorumlar/`) alanları bulunur.
+   Bildirim gönderilemezse yorum yine kayıtlıdır ve panelde görünür.
+3. **Onay:** Öğretmen `/yonetim/yorumlar/` sayfasında giriş yapar. Bekleyen yorum sayısı en üstte görünür.
+   Her yorum için: Onayla, Cevap yaz / Cevabı düzenle, Sil. Yayındaki yorumlar için: Yayından kaldır (bekleyene döner).
+4. **Gösterim:** Ders sayfası, ziyaretçi yorum bölümüne yaklaşınca (IntersectionObserver, 600 px önce) Firestore REST API ile
+   `lesson == anahtar` ve `status == "approved"` olan yorumları okur. SDK yüklenmez. Ad, tarih, yorum ve cevap `textContent`
+   ile düz metin olarak yazılır. Onaylı yorum yoksa "Öğrenci yorumları" bölümü hiç görünmez.
 
-Örnek şema (örnek kişiyi gerçek yorum olarak yayımlamayın):
+## Güvenlik kuralları (`firestore.rules`, "Gramer dersi yorumları")
 
-```json
-{
-  "A1/praesens": [
-    {
-      "name": "Öğrencinin yayımlamayı onayladığı adı",
-      "date": "2026-10-07",
-      "comment": "İncelenmiş yorum metni",
-      "reply": "İsteğe bağlı eğitmen yanıtı"
-    }
-  ]
-}
-```
+- Oluşturma: oturum (anonim de olur) gerekir. Yalnızca 5 alan; `status == "pending"`, `createdAt == request.time`,
+  ad 1–60, yorum 10–2000 karakter, `lesson` biçimi `^(A1|A2|B1|B2)/[a-z0-9-]{1,40}$`. Bekleme belgesi aynı batch'te.
+- Okuma: herkes yalnızca `status == "approved"` olanları; sorgu da bu filtreyle sınırlı olmalı.
+- Onay, cevap, düzenleme, silme, bekleyenleri görme: yalnızca öğretmen (`isTeacher()`).
+- Testler: `tests/firestore.rules.test.mjs` → "Gramer dersi yorumları (comments)".
 
-`reply` alanı isteğe bağlıdır. Ders kimlikleri `data/<seviye>-grammar.json` içindeki `id` alanlarıyla aynıdır. `node scripts/check-comments.mjs` (CI: Grammar coverage) anahtarları, tarihleri ve alanları denetler; e-posta adresi veya telefon numarası içeren kaydı reddeder. Yorumu kaldırmak için ilgili kaydı bu dosyadan silip yeniden yayımlayın. Sayfa metinleri HTML olarak çalıştırmaz; isim, yorum ve yanıtlar `textContent` ile düz metin olarak gösterilir. Onaylı yorum yoksa "Öğrenci yorumları" bölümü hiç görünmez.
+**Kurallar değiştiğinde** `firestore.rules` dosyasının tamamını Firebase Console → Firestore Database → Kurallar'a
+yapıştırıp **Yayınla** (docs/kurulum.md). Yayınlanmazsa yorum gönderme ve onay sayfası "izin yok" hatası verir.
 
-Web3Forms, sitenin iletişim formuyla aynı erişim anahtarını ve alıcıyı kullanır. Erişim anahtarı Web3Forms panelinde bu alıcı adresi için oluşturulmuştur. Sitenin tarayıcı kontrolleri gerçek kişilere deneme e-postası göndermez; testler gönderim uç noktasını taklit eder. Canlı ortamda e-posta teslimi sağlayıcının çalışmasına ve alıcı aktivasyonuna bağlıdır.
+## Notlar
 
-Bu sürüm manuel moderasyon kullanır; tarayıcıda herkese açık bir yönetim paneli veya otomatik yayımlama özelliği yoktur. Özel bir yorum veritabanına geçilirse gönderim ve moderasyonun sunucuda uygulanması gerekir. Tarayıcıdaki gizli alan ve kısa bekleme yalnızca basit tekrar gönderimleri azaltır.
-
+- Review / AggregateRating şeması kullanılmaz.
+- Tarayıcı kontrolleri gerçek kişilere deneme e-postası göndermez; testler Web3Forms uç noktasını taklit eder ve Firestore
+  için emülatör kullanır (`?emulator=1`, docs/kurulum.md).
+- Tarayıcıdaki gizli alan, oturum başına bekleme süresi ve "onaysız hiçbir şey yayınlanmaz" kuralı spam'i sınırlar. Çok
+  sayıda anonim oturumla bekleyen listesi doldurulabilir; bu yorumlar panelden silinir. App Check (reCAPTCHA) şimdilik yok.

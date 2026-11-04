@@ -23,7 +23,10 @@ function showError(error){
 async function route(user){
   if(user.uid === TEACHER_UID){
     setHint('teacher');
-    location.replace('ogretmen.html');
+    // Yönetim sayfalarından gelindiyse oraya dön (ör. giris.html?next=/yonetim/yorumlar/). Yalnızca bu sitenin
+    // /yonetim/ yolları kabul edilir, başka adreslere yönlendirme yapılmaz.
+    const next = new URLSearchParams(location.search).get('next') || '';
+    location.replace(/^\/yonetim\/[a-z-]+\/$/.test(next) ? next : 'ogretmen.html');
     return;
   }
   // Kurallar henüz yayınlanmamışsa okuma reddedilir; o zaman da kayıt yok sayılır ve UID gösterilir.

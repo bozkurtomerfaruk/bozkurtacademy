@@ -71,7 +71,8 @@
             <li><strong>Çerez yok:</strong> Site çerez kullanmaz.</li>
             <li><strong>Tarayıcıda saklanan ayarlar (localStorage):</strong> tema (<code>ba-theme</code>), dil (<code>baLang</code>), alıştırmalardaki en iyi skor (<code>baBestScore:…</code>) ve giriş yapmış olup olmadığın için bir ipucu (<code>baAccount</code>, sadece “student” ya da “teacher”). Bunlar cihazından dışarı gönderilmez.</li>
             <li><strong>Seviye testi (localStorage):</strong> testteki ilerlemen (<code>baPlacement</code>: cevaplar, seçeneklerin sırası, form taslağı) ve son gönderim zamanı (<code>baPlacementSent</code>). Bunlar sen gönderene kadar cihazından çıkmaz; gönderimden sonra ilerleme silinir.</li>
-            <li>Giriş yapmamış ziyaretçiler için Firebase yüklenmez. Tek istisna: Seviye testinin sonucunu göndermek için “Sonucu gönder”e bastığında Firebase yüklenir (bkz. 5a).</li>
+            <li>Giriş yapmamış ziyaretçiler için Firebase yüklenmez. İki istisna var: Seviye testinin sonucunu göndermek için “Sonucu gönder”e bastığında (bkz. 5a) ve bir gramer dersinde yorum gönderdiğinde (bkz. 4) Firebase yüklenir.</li>
+            <li>Bir gramer dersinde sayfanın yorum bölümüne yaklaştığında, onaylanmış yorumları göstermek için tarayıcın Google’ın Cloud Firestore sunucusuna (<code>firestore.googleapis.com</code>) tek bir okuma isteği gönderir. Bu istekte IP adresin ve tarayıcı bilgilerin Google’a ulaşır; oturum açılmaz ve çerez kullanılmaz. Yorum bölümüne gelmezsen bu istek gönderilmez.</li>
           </ul>
         </section>
 
@@ -88,7 +89,14 @@
 
         <section>
           <h2>4. İletişim formu ve yorumlar</h2>
-          <p>İletişim formunu ya da gramer derslerindeki yorum formunu gönderdiğinde adın, e-posta adresin ve mesajın e-posta iletimi için Web3Forms (web3forms.com) üzerinden işlenir ve öğretmenin Gmail hesabına iletilir. Onaylanan yorumlarda sadece ad, tarih ve yorum yayınlanır; e-posta adresi yayınlanmaz.</p>
+          <p>İletişim formunu gönderdiğinde adın, e-posta adresin ve mesajın e-posta iletimi için Web3Forms (web3forms.com) üzerinden işlenir ve öğretmenin Gmail hesabına iletilir.</p>
+          <p>Gramer derslerindeki yorum formunu gönderdiğinde:</p>
+          <ul>
+            <li>Adın, yorumun, dersin adı ve gönderim zamanı Google Firebase’de (Cloud Firestore, Frankfurt / europe-west3) “onay bekliyor” durumuyla saklanır. Gönderim için anonim, geçici bir Firebase oturumu açılır ve hemen kapatılır. E-posta adresin Firebase’de saklanmaz.</li>
+            <li>Öğretmene haber vermek için adın, e-posta adresin, yorumun ve dersin adı Web3Forms üzerinden öğretmenin Gmail hesabına iletilir. E-posta adresin yalnızca yorumun hakkında seninle iletişim için kullanılabilir.</li>
+            <li>Yorum, öğretmen inceleyip onaylayana kadar yayınlanmaz. Onaylanınca adın, tarih ve yorumun (varsa öğretmenin cevabıyla) o dersin sayfasında herkese açık görünür. E-posta adresin hiçbir zaman yayınlanmaz.</li>
+            <li>Yorumunun silinmesini istersen iletişim formundan veya <a href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a> adresine yaz. Yorumun yayından kaldırılır ve Firebase’den silinir.</li>
+          </ul>
         </section>
 
         <section>
@@ -119,7 +127,7 @@
         <section>
           <h2>6. Firebase (Google)</h2>
           <ul>
-            <li>Giriş, öğrenci ve seviye testi verileri Google Firebase ile işlenir (Google Ireland Ltd. / Google LLC).</li>
+            <li>Giriş, öğrenci, seviye testi ve gramer dersi yorumu verileri Google Firebase ile işlenir (Google Ireland Ltd. / Google LLC).</li>
             <li><strong>Cloud Firestore:</strong> Öğrenci ve seviye testi verileri Frankfurt’taki (europe-west3) sunucularda saklanır.</li>
             <li><strong>Firebase Authentication:</strong> Giriş hesabı (e-posta adresi, şifrenin şifrelenmiş özeti, Google ile girişte Google'dan gelen ad, e-posta ve profil fotoğrafı adresi) Google tarafından AB dışında, özellikle ABD'de de işlenebilir. ABD'ye aktarım, AB-ABD Veri Gizliliği Çerçevesi (EU-U.S. Data Privacy Framework) ve AB Komisyonu'nun standart sözleşme maddeleri dayanağıyla yapılır.</li>
             <li>E-posta ve şifreyle kayıt olduğunda Firebase, e-posta adresini doğrulaman için bir e-posta gönderir.</li>
@@ -153,6 +161,7 @@
           <ul>
             <li>Öğrenci verileri son dersten 12 ay sonra silinir (hiç ders yoksa hesabın onaylanmasından 12 ay sonra).</li>
             <li>Onaylanmamış kayıtlar 30 gün içinde silinir.</li>
+            <li>Gramer dersi yorumları, silinmeleri istenene veya öğretmen kaldırana kadar saklanır. Onaylanmayan yorumlar öğretmen tarafından silinir.</li>
             <li>Silme işlemi öğretmen tarafından yapılır. Silmeden sonra Gmail'de gönderilmiş e-postalar ve Google Calendar'ın çöp kutusundaki etkinlikler (en fazla 30 gün) ayrıca temizlenir.</li>
           </ul>
         </section>
@@ -184,7 +193,8 @@
             <li><strong>Keine Cookies:</strong> Diese Website verwendet keine Cookies.</li>
             <li><strong>Im Browser gespeicherte Einstellungen (localStorage):</strong> Farbschema (<code>ba-theme</code>), Sprache (<code>baLang</code>), bester Punktestand in den Übungen (<code>baBestScore:…</code>) sowie ein Hinweis darauf, ob Sie angemeldet sind (<code>baAccount</code>, nur „student“ oder „teacher“). Diese Angaben verlassen Ihr Gerät nicht.</li>
             <li><strong>Einstufungstest (localStorage):</strong> Ihr Fortschritt im Test (<code>baPlacement</code>: Antworten, Reihenfolge der Antwortmöglichkeiten, Formularentwurf) und der Zeitpunkt der letzten Übermittlung (<code>baPlacementSent</code>). Diese Daten verlassen Ihr Gerät erst, wenn Sie sie absenden; nach dem Absenden wird der Fortschritt gelöscht.</li>
-            <li>Für nicht angemeldete Besucherinnen und Besucher wird Firebase nicht geladen. Einzige Ausnahme: Wenn Sie nach dem Einstufungstest auf „Ergebnis senden“ klicken, wird Firebase geladen, um das Ergebnis zu übermitteln (siehe Abschnitt 5a).</li>
+            <li>Für nicht angemeldete Besucherinnen und Besucher wird Firebase nicht geladen. Zwei Ausnahmen: Wenn Sie nach dem Einstufungstest auf „Ergebnis senden“ klicken (siehe Abschnitt 5a) und wenn Sie in einer Grammatiklektion einen Kommentar senden (siehe Abschnitt 4), wird Firebase geladen.</li>
+            <li>Wenn Sie in einer Grammatiklektion in die Nähe des Kommentarbereichs scrollen, sendet Ihr Browser eine einzelne Leseanfrage an den Cloud-Firestore-Server von Google (<code>firestore.googleapis.com</code>), um freigegebene Kommentare anzuzeigen. Dabei erreichen Ihre IP-Adresse und Browserangaben Google; es wird keine Anmeldung geöffnet und kein Cookie verwendet. Erreichen Sie den Kommentarbereich nicht, wird diese Anfrage nicht gesendet.</li>
           </ul>
         </section>
 
@@ -201,7 +211,14 @@
 
         <section>
           <h2>4. Kontaktformular und Kommentare</h2>
-          <p>Wenn Sie das Kontaktformular oder das Kommentarformular in den Grammatiklektionen absenden, werden Ihr Name, Ihre E-Mail-Adresse und Ihre Nachricht zur E-Mail-Zustellung über Web3Forms (web3forms.com) verarbeitet und an das Gmail-Postfach des Lehrers weitergeleitet. Bei freigegebenen Kommentaren werden nur Name, Datum und Kommentar veröffentlicht, nicht jedoch die E-Mail-Adresse.</p>
+          <p>Wenn Sie das Kontaktformular absenden, werden Ihr Name, Ihre E-Mail-Adresse und Ihre Nachricht zur E-Mail-Zustellung über Web3Forms (web3forms.com) verarbeitet und an das Gmail-Postfach des Lehrers weitergeleitet.</p>
+          <p>Wenn Sie das Kommentarformular in einer Grammatiklektion absenden:</p>
+          <ul>
+            <li>Ihr Name, Ihr Kommentar, die Lektion und der Zeitpunkt werden in Google Firebase (Cloud Firestore, Frankfurt / europe-west3) mit dem Status „wartet auf Freigabe“ gespeichert. Dafür wird eine anonyme, vorübergehende Firebase-Sitzung geöffnet und sofort wieder geschlossen. Ihre E-Mail-Adresse wird nicht in Firebase gespeichert.</li>
+            <li>Zur Benachrichtigung des Lehrers werden Ihr Name, Ihre E-Mail-Adresse, Ihr Kommentar und die Lektion über Web3Forms an sein Gmail-Postfach weitergeleitet. Die E-Mail-Adresse wird nur für Rückfragen zu Ihrem Kommentar verwendet.</li>
+            <li>Der Kommentar wird erst veröffentlicht, wenn der Lehrer ihn geprüft und freigegeben hat. Danach sind Ihr Name, das Datum und der Kommentar (gegebenenfalls mit der Antwort des Lehrers) auf der Seite der Lektion öffentlich sichtbar. Die E-Mail-Adresse wird nie veröffentlicht.</li>
+            <li>Wenn Sie die Löschung Ihres Kommentars wünschen, schreiben Sie über das Kontaktformular oder an <a href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a>. Der Kommentar wird dann entfernt und in Firebase gelöscht.</li>
+          </ul>
         </section>
 
         <section>
@@ -232,7 +249,7 @@
         <section>
           <h2>6. Firebase (Google)</h2>
           <ul>
-            <li>Anmelde-, Schüler- und Einstufungstestdaten werden mit Google Firebase verarbeitet (Google Ireland Ltd. / Google LLC).</li>
+            <li>Anmelde-, Schüler-, Einstufungstest- und Kommentardaten der Grammatiklektionen werden mit Google Firebase verarbeitet (Google Ireland Ltd. / Google LLC).</li>
             <li><strong>Cloud Firestore:</strong> Schüler- und Einstufungstestdaten werden auf Servern in Frankfurt am Main (europe-west3) gespeichert.</li>
             <li><strong>Firebase Authentication:</strong> Das Anmeldekonto (E-Mail-Adresse, Hashwert des Passworts, bei der Anmeldung mit Google der von Google übermittelte Name, die E-Mail-Adresse und die Adresse des Profilbilds) kann von Google auch außerhalb der EU, insbesondere in den USA, verarbeitet werden. Die Übermittlung in die USA erfolgt auf Grundlage des EU-U.S. Data Privacy Framework sowie der Standardvertragsklauseln der Europäischen Kommission.</li>
             <li>Bei der Registrierung mit E-Mail-Adresse und Passwort sendet Firebase eine E-Mail zur Bestätigung Ihrer E-Mail-Adresse.</li>
@@ -266,6 +283,7 @@
           <ul>
             <li>Schülerdaten werden zwölf Monate nach der letzten Unterrichtsstunde gelöscht (hat keine Stunde stattgefunden, zwölf Monate nach Freischaltung des Kontos).</li>
             <li>Nicht freigeschaltete Registrierungen werden innerhalb von 30 Tagen gelöscht.</li>
+            <li>Kommentare zu Grammatiklektionen werden gespeichert, bis ihre Löschung verlangt wird oder der Lehrer sie entfernt. Nicht freigegebene Kommentare löscht der Lehrer.</li>
             <li>Die Löschung nimmt der Lehrer vor. Anschließend werden auch versendete E-Mails in Gmail und Termine im Papierkorb von Google Calendar (höchstens 30 Tage) entfernt.</li>
           </ul>
         </section>
@@ -297,7 +315,8 @@
             <li><strong>No cookies:</strong> The website does not use cookies.</li>
             <li><strong>Settings stored in your browser (localStorage):</strong> colour theme (<code>ba-theme</code>), language (<code>baLang</code>), your best score in the exercises (<code>baBestScore:…</code>) and a hint whether you are signed in (<code>baAccount</code>, only “student” or “teacher”). These are never sent from your device.</li>
             <li><strong>Placement test (localStorage):</strong> your progress in the test (<code>baPlacement</code>: answers, order of the options, form draft) and the time of your last submission (<code>baPlacementSent</code>). This stays on your device until you send it; your progress is deleted after sending.</li>
-            <li>Firebase is not loaded for visitors who are not signed in. The only exception: when you press “Send result” after the placement test, Firebase is loaded to send the result (see section 5a).</li>
+            <li>Firebase is not loaded for visitors who are not signed in. There are two exceptions: when you press “Send result” after the placement test (see section 5a) and when you send a comment on a grammar lesson (see section 4), Firebase is loaded.</li>
+            <li>When you scroll near the comment section of a grammar lesson, your browser sends a single read request to Google’s Cloud Firestore server (<code>firestore.googleapis.com</code>) to show approved comments. Your IP address and browser details reach Google with this request; no sign-in is opened and no cookie is used. If you do not reach the comment section, this request is not sent.</li>
           </ul>
         </section>
 
@@ -314,7 +333,14 @@
 
         <section>
           <h2>4. Contact form and comments</h2>
-          <p>When you send the contact form or the comment form on the grammar lessons, your name, email address and message are processed by Web3Forms (web3forms.com) for email delivery and forwarded to the teacher’s Gmail account. For approved comments, only the name, date and comment are published; the email address is never published.</p>
+          <p>When you send the contact form, your name, email address and message are processed by Web3Forms (web3forms.com) for email delivery and forwarded to the teacher’s Gmail account.</p>
+          <p>When you send the comment form on a grammar lesson:</p>
+          <ul>
+            <li>Your name, your comment, the lesson and the time are stored in Google Firebase (Cloud Firestore, Frankfurt / europe-west3) with the status “awaiting approval”. A temporary anonymous Firebase session is opened for this and closed immediately. Your email address is not stored in Firebase.</li>
+            <li>To notify the teacher, your name, email address, comment and the lesson are forwarded via Web3Forms to the teacher’s Gmail account. The email address is only used to contact you about your comment.</li>
+            <li>The comment is not published until the teacher has reviewed and approved it. After approval, your name, the date and the comment (with the teacher’s reply, if any) are publicly visible on the lesson page. The email address is never published.</li>
+            <li>If you want your comment deleted, write via the contact form or to <a href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a>. The comment is then removed and deleted from Firebase.</li>
+          </ul>
         </section>
 
         <section>
@@ -345,7 +371,7 @@
         <section>
           <h2>6. Firebase (Google)</h2>
           <ul>
-            <li>Login, student and placement test data are processed with Google Firebase (Google Ireland Ltd. / Google LLC).</li>
+            <li>Login, student, placement test and grammar lesson comment data are processed with Google Firebase (Google Ireland Ltd. / Google LLC).</li>
             <li><strong>Cloud Firestore:</strong> student and placement test data are stored on servers in Frankfurt (europe-west3).</li>
             <li><strong>Firebase Authentication:</strong> The login account (email address, a hash of the password and, when signing in with Google, the name, email address and profile picture address provided by Google) may also be processed by Google outside the EU, in particular in the USA. Transfers to the USA are based on the EU-U.S. Data Privacy Framework and the European Commission’s standard contractual clauses.</li>
             <li>When you register with email and password, Firebase sends you an email so that you can verify your email address.</li>
@@ -379,6 +405,7 @@
           <ul>
             <li>Student data are deleted 12 months after the last lesson (if there was no lesson, 12 months after the account was approved).</li>
             <li>Registrations that are not approved are deleted within 30 days.</li>
+            <li>Grammar lesson comments are kept until their deletion is requested or the teacher removes them. Comments that are not approved are deleted by the teacher.</li>
             <li>Deletion is carried out by the teacher. Afterwards, sent emails in Gmail and events in Google Calendar’s bin (at most 30 days) are also cleared.</li>
           </ul>
         </section>

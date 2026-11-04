@@ -1,274 +1,510 @@
 ﻿Kelime;Artikel;Türkçe anlam;Sadece çoğul;Emin değilim;Not;Kontrol edildi;Soru sayısı;Konular;Örnek cümle
-Bank;die;"banka; bank (oturak)";hayır;evet;İki anlamı var, ikisi de die. Cümlede (Neben der Bank ist der Supermarkt) büyük ihtimalle banka.;evet;1;A1 artikel;Schreibe Artikel + Nomen: Neben der Bank ist der Supermarkt. (Supermarkt)
+Bank;die;"banka; bank (oturak)";hayır;evet;İki anlamı var, ikisi de die. Cümlede (Neben der Bank ist der Supermarkt) büyük ihtimalle banka.;evet;4;A1 artikel, A1 plural, A1 possessivartikel, A1 lokale-praepositionen;Schreibe Artikel + Nomen: Neben der Bank ist der Supermarkt. (Supermarkt)
+Bonbon;das;şeker (bonbon);hayır;evet;"Almanya’da das Bonbon; Avusturya’da der Bonbon da denir.";hayır;1;A1 personalpronomen-dativ;Ersetze: Sie gibt den Kindern die Bonbons. → Sie gibt ___ ___. → Sie gibt sie ihnen
 Karte;die;"bilet; kart; harita";hayır;evet;"Anlamı bağlama göre değişiyor; cümlede (Ich kaufe dir die Karte) büyük ihtimalle bilet.";evet;1;A2 dativ;Ersetze: Ich kaufe dir die Karte. → Ich kaufe sie dir
-Laptop;der;dizüstü bilgisayar;hayır;evet;"Duden der ve das ikisini de kabul ediyor; der daha yaygın. Alıştırmada der kullanılıyor.";evet;1;A2 dativ;Der Laptop gehört meiner Schwester. Welche Frage passt? → Wem gehört der Laptop?
-Abend;der;akşam;hayır;hayır;;evet;1;B1 relativsaetze;Welche Variante ist richtig? → Der Autor, dessen neues Buch morgen erscheint, liest heute Abend.
-Adresse;die;adres;hayır;hayır;;evet;1;B1 relativsaetze;Ergänze: Das Mädchen, dem ich die Adresse gegeben habe, ist meine Cousine.
-Antwort;die;cevap;hayır;hayır;;evet;2;A1 artikel, B1 relativsaetze;Schreibe Artikel + Nomen: die Antwort ist richtig. (Antwort)
-Apotheke;die;eczane;hayır;hayır;;evet;3;A1 artikel, A2 dativ;Schreibe Artikel + Nomen: Vor uns ist die Apotheke. (Apotheke)
-Arbeit;die;iş;hayır;hayır;;evet;3;A2 dativ;A: Wie kommst du zur Arbeit? B: Mit dem Fahrrad.
-Arzt;der;doktor (erkek);hayır;hayır;;evet;9;A1 artikel, A2 dativ, B1 relativsaetze;Schreibe Artikel + Nomen: Dort arbeitet der Arzt. (Arzt)
-Ärztin;die;doktor (kadın);hayır;hayır;;evet;8;A2 dativ, B1 relativsaetze;Schreibe nur das Fragewort: Wem antwortet die Ärztin?
-Aufgabe;die;görev, ödev;hayır;hayır;;evet;4;A2 dativ, B1 relativsaetze;Die Lehrerin erklärt dem Kind die Aufgabe.
-August;der;ağustos;hayır;hayır;;evet;1;A1 artikel;Schreibe Artikel + Nomen: August → der August
+Laptop;der;dizüstü bilgisayar;hayır;evet;"Duden der ve das ikisini de kabul ediyor; der daha yaygın. Alıştırmada der kullanılıyor.";evet;9;A1 personalpronomen-akkusativ, A1 trennbare-verben, A1 perfekt, A2 dativ;Ich habe den Laptop. Ich brauche ihn jetzt.
+Poster;das;poster;hayır;evet;"Duden: das oder der Poster; das daha yaygın.";hayır;1;A1 lokale-praepositionen;Das Poster hängt an der Wand. Es hängt an der Wand.
+Abend;der;akşam;hayır;hayır;;evet;46;A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 sein-haben, A1 praesens, A1 negation, A1 w-fragen, A1 temporale-praepositionen, A1 modalverben, A1 trennbare-verben, A1 perfekt, A1 lokale-praepositionen, B1 relativsaetze;A: Ruft ihr uns heute Abend an? B: Ja, wir rufen euch an.
+Abendessen;das;akşam yemeği;hayır;hayır;;hayır;1;A1 trennbare-verben;Bilde: wir / nach dem Abendessen / fernsehen → Wir sehen nach dem Abendessen fern
+Abteilung;die;bölüm, departman;hayır;hayır;;hayır;1;A1 sein-haben;Frau Braun, sind Sie neu in unserer Abteilung?
+Adresse;die;adres;hayır;hayır;;evet;11;A1 personalpronomen-akkusativ, A1 praesens, A1 akkusativ, A1 trennbare-verben, A1 imperativ, B1 relativsaetze;Ich schreibe die Adresse auf. → Ich schreibe sie auf.
+Ahnung;die;fikir (keine Ahnung: hiçbir fikrim yok);hayır;hayır;;hayır;5;A1 sein-haben, A1 negation;Ich habe gerade keine Ahnung.
+Altstadt;die;eski şehir, tarihî merkez;hayır;hayır;;hayır;2;A1 perfekt;Bilde: wir / die Altstadt / fotografieren → Wir haben die Altstadt fotografiert
+Angebot;das;"teklif; indirim, kampanya";hayır;hayır;;hayır;2;A1 akkusativ, A1 imperativ;Ich kaufe den Mantel im Angebot.
+Angst;die;korku;hayır;hayır;;hayır;2;A1 sein-haben;Hast du Angst vor der Prüfung?
+Anmeldung;die;kayıt, başvuru;hayır;hayır;;hayır;1;A1 personalpronomen-dativ;Meine Mutter versteht die App nicht. Ich helfe ihr bei der Anmeldung.
+Antwort;die;cevap;hayır;hayır;;evet;9;A1 artikel, A1 praesens, A1 negation, A1 w-fragen, A1 imperativ, B1 relativsaetze;Schreibe Artikel + Nomen: die Antwort ist richtig. (Antwort)
+Apfel;der;elma;hayır;hayır;;hayır;6;A1 plural, A1 praesens, A1 akkusativ;Schreibe den Plural: der Apfel → Äpfel
+Apotheke;die;eczane;hayır;hayır;;evet;6;A1 artikel, A1 sein-haben, A1 temporale-praepositionen, A1 lokale-praepositionen, A2 dativ;Schreibe Artikel + Nomen: Vor uns ist die Apotheke. (Apotheke)
+App;die;uygulama (telefon);hayır;hayır;;hayır;1;A1 personalpronomen-dativ;Meine Mutter versteht die App nicht. Ich helfe ihr bei der Anmeldung.
+April;der;nisan;hayır;hayır;;hayır;7;A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen;Welcher Monat kommt nach März? → April
+Arbeit;die;iş;hayır;hayır;;evet;22;A1 personalpronomen-akkusativ, A1 sein-haben, A1 negation, A1 w-fragen, A1 temporale-praepositionen, A1 akkusativ, A1 trennbare-verben, A1 lokale-praepositionen, A2 dativ;Rufst du Frau Weber heute an? – Ja, ich rufe sie nach der Arbeit an.
+Arbeitskleidung;die;iş kıyafeti;hayır;hayır;;hayır;1;A1 trennbare-verben;Nach der Arbeit ___ ihr die Arbeitskleidung ___. → zieht / aus
+Arzt;der;doktor (erkek);hayır;hayır;;evet;31;A1 artikel, A1 plural, A1 personalpronomen-dativ, A1 temporale-praepositionen, A1 modalverben, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;Schreibe Artikel + Nomen: Dort arbeitet der Arzt. (Arzt)
+Ärztin;die;doktor (kadın);hayır;hayır;;evet;10;A1 plural, A2 dativ, B1 relativsaetze;Schreibe den Plural: die Ärztin → Ärztinnen
+Arzttermin;der;doktor randevusu;hayır;hayır;;hayır;2;A1 zahlen-uhrzeit-datum;Schreibe vollständig: „Arzttermin / 11.03.“ → Mein Arzttermin ist am elften März.
+Aufgabe;die;görev, ödev;hayır;hayır;;evet;33;A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 sein-haben, A1 praesens, A1 negation, A1 w-fragen, A1 modalverben, A1 trennbare-verben, A1 imperativ, A1 perfekt, A2 dativ, B1 relativsaetze;Die Aufgabe ist schwer, aber ich verstehe sie jetzt.
+Auge;das;göz;hayır;hayır;;hayır;1;A1 plural;Schreibe den Plural: das Auge → Augen
+August;der;ağustos;hayır;hayır;;evet;8;A1 artikel, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen;Schreibe Artikel + Nomen: August → der August
+Ausgang;der;çıkış;hayır;hayır;;hayır;1;A1 lokale-praepositionen;Wir gehen durch den Park: am Eingang hinein, am anderen Ausgang hinaus. (durch / um / bei)
 Ausland;das;yurt dışı;hayır;hayır;;evet;2;B1 relativsaetze;Die Leute, denen das Haus gehört, wohnen im Ausland.
 Ausstellung;die;sergi;hayır;hayır;;evet;1;B1 relativsaetze;Ergänze: Das Museum, in dem die Ausstellung stattfindet, ist am Markt.
-Auto;das;araba;hayır;hayır;;evet;8;A1 artikel, A2 dativ, B1 relativsaetze;die Autos stehen vor dem Haus.
+Ausweis;der;kimlik kartı;hayır;hayır;;hayır;1;A1 akkusativ;Bilde: Sie / Ihr Ausweis / nehmen → Sie nehmen Ihren Ausweis
+Auto;das;araba;hayır;hayır;;evet;49;A1 artikel, A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 sein-haben, A1 negation, A1 w-fragen, A1 temporale-praepositionen, A1 akkusativ, A1 modalverben, A1 imperativ, A1 possessivartikel, A1 perfekt, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;die Autos stehen vor dem Haus.
+Automat;der;otomat, makine;hayır;hayır;;hayır;1;A1 modalverben;A: Kann ich hier ein Ticket kaufen? B: Ja, am Automaten.
 Autor;der;yazar (erkek);hayır;hayır;;evet;2;B1 relativsaetze;Der Autor, dessen Roman einen Preis bekommen hat, kommt aus Österreich.
+Baby;das;bebek;hayır;hayır;;hayır;6;A1 personalpronomen-dativ, A1 praesens, A1 trennbare-verben, A1 perfekt;Die Musik gefällt dem Baby. Sie gefällt ihm.
 Bäcker;der;fırıncı (erkek);hayır;hayır;;evet;1;A2 dativ;Ergänze: Sie arbeitet beim Bäcker Bäcker.
-Bäckerei;die;fırın (ekmek dükkânı);hayır;hayır;;evet;3;A1 artikel;die Bäckerei an der Ecke ist schon offen.
+Bäckerei;die;fırın (ekmek dükkânı);hayır;hayır;;evet;4;A1 artikel, A1 lokale-praepositionen;die Bäckerei an der Ecke ist schon offen.
+Bad;das;banyo;hayır;hayır;;hayır;1;A1 plural;Ergänze: „Im Bad gibt es zwei Spiegel.“ (Spiegel)
 Bahn;die;tren, demiryolu;hayır;hayır;;evet;1;B1 relativsaetze;Welche Variante ist richtig? → Der Mann, der neben uns wohnt, arbeitet bei der Bahn.
-Bahnhof;der;tren istasyonu;hayır;hayır;;evet;6;A1 artikel, A2 dativ;der Bahnhof ist gleich neben dem Hotel.
-Ball;der;top;hayır;hayır;;evet;3;A2 dativ;Der Ball gehört dem Kind. Er gehört ihm.
+Bahnhof;der;tren istasyonu;hayır;hayır;;evet;25;A1 artikel, A1 plural, A1 personalpronomen-akkusativ, A1 praesens, A1 w-fragen, A1 akkusativ, A1 trennbare-verben, A1 imperativ, A1 perfekt, A1 lokale-praepositionen, A2 dativ;der Bahnhof ist gleich neben dem Hotel.
+Balkon;der;balkon;hayır;hayır;;hayır;1;A1 plural;Ergänze: „Auf dem Balkon stehen drei Stühle.“ (Stuhl)
+Ball;der;top;hayır;hayır;;evet;8;A1 plural, A1 sein-haben, A1 praesens, A1 lokale-praepositionen, A2 dativ;Schreibe den Plural: der Ball → Bälle
+Banane;die;muz;hayır;hayır;;hayır;3;A1 plural, A1 praesens;Ergänze: „Ich kaufe sechs Bananen.“ (Banane)
+Baum;der;ağaç;hayır;hayır;;hayır;4;A1 plural, A1 akkusativ;Schreibe den Plural: der Baum → Bäume
 Befund;der;(tıbbi) bulgu, tahlil sonucu;hayır;hayır;;evet;1;B1 relativsaetze;Die Ärztin, der ich meine Befunde gezeigt habe, kennt den Fall.
-Behandlung;die;tedavi;hayır;hayır;;evet;1;A2 dativ;Die Ärztin erklärt dem / die Patienten dem / die Behandlung.
+Behandlung;die;tedavi;hayır;hayır;;evet;1;A2 dativ;Die Ärztin erklärt ___ Patienten ___ Behandlung. → dem / die
 Berg;der;dağ;hayır;hayır;;evet;1;B1 relativsaetze;Das Dorf, wohin wir am Wochenende fahren, liegt in den Bergen.
+Besprechung;die;toplantı, görüşme;hayır;hayır;;hayır;1;A1 modalverben;Bilde: müdür / toplantıya gelmek istiyor / wollen → Der Chef will zur Besprechung kommen
 Beste;das;en iyi şey;hayır;hayır;;evet;2;B1 relativsaetze;Das Beste, was mir dieses Jahr passiert ist, war die neue Stelle.
-Besuch;der;ziyaret;hayır;hayır;;evet;1;A2 dativ;Ergänze: Wir danken den Gästen für ihren Besuch. (die Gäste)
-Bett;das;yatak;hayır;hayır;;evet;1;A1 artikel;das Bett ist sehr bequem.
-Bibliothek;die;kütüphane;hayır;hayır;;evet;2;A1 artikel, B1 relativsaetze;Schreibe Artikel + Nomen: Links ist die Bibliothek. (Bibliothek)
-Blume;die;çiçek;hayır;hayır;;evet;3;A2 dativ;Wir schenken unserer / die Mutter unserer / die Blumen.
-Brötchen;das;küçük ekmek;hayır;hayır;;evet;3;A1 artikel;das Brötchen kostet einen Euro.
-Bruder;der;erkek kardeş;hayır;hayır;;evet;12;A1 artikel, A2 dativ, B1 relativsaetze;Schreibe Artikel + Nomen: Bruder → der Bruder
-Buch;das;kitap;hayır;hayır;;evet;22;A1 artikel, A2 dativ, B1 relativsaetze;das Buch ist interessant.
-Büro;das;ofis, büro;hayır;hayır;;evet;4;A1 artikel, A2 dativ, B1 relativsaetze;Schreibe Artikel + Nomen: Im ersten Stock ist das Büro. (Büro)
-Bus;der;otobüs;hayır;hayır;;evet;6;A1 artikel, A2 dativ, B1 relativsaetze;Schreibe Artikel + Nomen: der Bus kommt in fünf Minuten. (Bus)
-Café;das;kafe;hayır;hayır;;evet;2;B1 relativsaetze;Das ist das Café, wo wir uns jeden Freitag treffen.
-Chef;der;şef, patron (erkek);hayır;hayır;;evet;10;A2 dativ, B1 relativsaetze;Ich spreche mit dem Chef.
-Chefin;die;şef, patron (kadın);hayır;hayır;;evet;3;B1 relativsaetze;Die Frau, die dort telefoniert, ist meine Chefin.
-Computer;der;bilgisayar;hayır;hayır;;evet;1;B1 relativsaetze;Ergänze: Der Computer, den wir reparieren lassen, ist sehr alt.
+Besuch;der;ziyaret;hayır;hayır;;evet;5;A1 personalpronomen-akkusativ, A1 w-fragen, A1 lokale-praepositionen, A2 dativ;Ersetze: Besuch deine Oma! → Besuch sie
+Bett;das;yatak;hayır;hayır;;evet;3;A1 artikel, A1 sein-haben, A1 lokale-praepositionen;das Bett ist sehr bequem.
+Bibliothek;die;kütüphane;hayır;hayır;;evet;6;A1 artikel, A1 w-fragen, A1 temporale-praepositionen, A1 perfekt, A1 lokale-praepositionen, B1 relativsaetze;Schreibe Artikel + Nomen: Links ist die Bibliothek. (Bibliothek)
+Bild;das;resim, fotoğraf;hayır;hayır;;hayır;6;A1 plural, A1 akkusativ, A1 possessivartikel, A1 lokale-praepositionen;Schreibe den Plural: das Bild → Bilder
+Blatt;das;"yaprak; kâğıt sayfası";hayır;hayır;;hayır;1;A1 plural;Schreibe den Plural: das Blatt → Blätter
+Bleistift;der;kurşun kalem;hayır;hayır;;hayır;2;A1 akkusativ;Welche Variante ist korrekt? → Der Junge sucht einen Bleistift.
+Blume;die;çiçek;hayır;hayır;;evet;8;A1 plural, A1 personalpronomen-dativ, A1 akkusativ, A2 dativ;Schreibe den Plural: die Blume → Blumen
+Bluse;die;bluz;hayır;hayır;;hayır;1;A1 personalpronomen-dativ;Die Bluse passt meiner Mutter. Sie passt ihr.
+Boden;der;yer, zemin;hayır;hayır;;hayır;1;A1 perfekt;Bilde: das Glas / auf den Boden / fallen → Das Glas ist auf den Boden gefallen
+Brief;der;mektup;hayır;hayır;;hayır;2;A1 plural, A1 perfekt;Schreibe den Plural: der Brief → Briefe
+Briefmarke;die;pul;hayır;hayır;;hayır;1;A1 praesens;Ich sammle Briefmarken.
+Brille;die;gözlük;hayır;hayır;;hayır;1;A1 w-fragen;Antwort: Der Mann sucht seine Brille. – Bilde die Frage. → Was sucht der Mann?
+Brot;das;ekmek;hayır;hayır;;hayır;8;A1 plural, A1 personalpronomen-akkusativ, A1 praesens, A1 w-fragen, A1 akkusativ, A1 trennbare-verben, A1 imperativ;Ergänze: „Sie kauft drei Brote.“ (Brot)
+Brötchen;das;küçük ekmek;hayır;hayır;;evet;5;A1 artikel, A1 plural;das Brötchen kostet einen Euro.
+Brücke;die;köprü;hayır;hayır;;hayır;1;A1 imperativ;Bilde (du): „Du gehst über die Brücke.“ → Geh über die Brücke
+Bruder;der;erkek kardeş;hayır;hayır;;evet;70;A1 artikel, A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 sein-haben, A1 praesens, A1 w-fragen, A1 akkusativ, A1 modalverben, A1 trennbare-verben, A1 possessivartikel, A1 perfekt, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;Schreibe Artikel + Nomen: Bruder → der Bruder
+Buch;das;kitap;hayır;hayır;;evet;81;A1 artikel, A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 sein-haben, A1 praesens, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen, A1 akkusativ, A1 modalverben, A1 trennbare-verben, A1 imperativ, A1 possessivartikel, A1 perfekt, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;das Buch ist interessant.
+Büro;das;ofis, büro;hayır;hayır;;evet;25;A1 artikel, A1 plural, A1 personalpronomen-akkusativ, A1 sein-haben, A1 negation, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 modalverben, A1 possessivartikel, A1 perfekt, A2 dativ, B1 relativsaetze;Schreibe Artikel + Nomen: Im ersten Stock ist das Büro. (Büro)
+Bus;der;otobüs;hayır;hayır;;evet;49;A1 artikel, A1 plural, A1 sein-haben, A1 praesens, A1 negation, A1 w-fragen, A1 temporale-praepositionen, A1 akkusativ, A1 modalverben, A1 trennbare-verben, A1 imperativ, A1 perfekt, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;Schreibe Artikel + Nomen: der Bus kommt in fünf Minuten. (Bus)
+Busfahrer;der;otobüs şoförü (erkek);hayır;hayır;;hayır;1;A1 modalverben;Der Busfahrer muss heute länger arbeiten. (müssen)
+Bushaltestelle;die;otobüs durağı;hayır;hayır;;hayır;1;A1 lokale-praepositionen;Lisa fährt zur Bushaltestelle. (zur / bei der / von der)
+Café;das;kafe;hayır;hayır;;evet;8;A1 plural, A1 praesens, A1 negation, A1 temporale-praepositionen, B1 relativsaetze;Schreibe den Plural: das Café → Cafés
+CD;die;CD;hayır;hayır;;hayır;1;A1 akkusativ;Ergänze: Holst du die CD?
+Cent;der;sent;hayır;hayır;;hayır;1;A1 zahlen-uhrzeit-datum;Schreibe den Preis mit Worten: 0,80 € → achtzig Cent
+Chef;der;şef, patron (erkek);hayır;hayır;;evet;20;A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 akkusativ, A1 modalverben, A1 possessivartikel, A1 perfekt, A2 dativ, B1 relativsaetze;Ich treffe meinen Chef. Ich treffe ihn.
+Chefin;die;şef, patron (kadın);hayır;hayır;;evet;4;A1 possessivartikel, B1 relativsaetze;Welche Variante ist richtig?        → Wie ist eure neue Chefin?
+Computer;der;bilgisayar;hayır;hayır;;evet;13;A1 plural, A1 personalpronomen-akkusativ, A1 akkusativ, A1 modalverben, A1 trennbare-verben, A1 possessivartikel, B1 relativsaetze;Schreibe den Plural: der Computer → Computer
 Computerraum;der;bilgisayar odası;hayır;hayır;;evet;1;A1 artikel;der Computerraum ist im zweiten Stock.
 Cousine;die;kuzen (kadın);hayır;hayır;;evet;2;B1 relativsaetze;Ergänze: Das Mädchen, das dort wartet, ist meine Cousine.
-Dach;das;çatı;hayır;hayır;;evet;1;B1 relativsaetze;Das ist das Haus, dessen Dach repariert werden muss.
-Datei;die;dosya;hayır;hayır;;evet;1;B1 relativsaetze;Welcher Satz ist richtig? → Das ist die Datei, die ich gestern geschickt habe.
+Dach;das;çatı;hayır;hayır;;evet;2;A1 plural, B1 relativsaetze;Schreibe den Plural: das Dach → Dächer
+Datei;die;dosya;hayır;hayır;;evet;5;A1 personalpronomen-dativ, A1 modalverben, A1 imperativ, B1 relativsaetze;Bilde formell: ich / Sie / die Datei schicken → Ich schicke Ihnen die Datei
+Datum;das;tarih (gün);hayır;hayır;;hayır;1;A1 plural;Schreibe den Plural: das Datum → Daten
+Deutschkurs;der;Almanca kursu;hayır;hayır;;hayır;3;A1 w-fragen, A1 temporale-praepositionen, A1 possessivartikel;Wann beginnt dein Deutschkurs? – Um 18 Uhr.
+Deutschlehrer;der;Almanca öğretmeni (erkek);hayır;hayır;;hayır;1;A1 w-fragen;Wer ist dein Deutschlehrer? – Herr Becker.
+Deutschunterricht;der;Almanca dersi;hayır;hayır;;hayır;1;A1 w-fragen;Wie oft hast du Deutschunterricht? – Dreimal pro Woche.
+Dezember;der;aralık (ay);hayır;hayır;;hayır;6;A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen;Schreibe den letzten Monat des Jahres. → Dezember
 Dienst;der;görev, nöbet;hayır;hayır;;evet;1;B1 relativsaetze;Die Ärztin, die heute Dienst hat, kommt später.
+Dienstag;der;salı;hayır;hayır;;hayır;4;A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen;Frage nach „am Dienstag“: Der Kurs beginnt am Dienstag. → Wann beginnt der Kurs?
+Diktat;das;dikte;hayır;hayır;;hayır;2;A1 imperativ;Bilde: „Du schreibst das Diktat mit.“ → Schreib das Diktat mit
+Dokument;das;belge;hayır;hayır;;hayır;1;A1 personalpronomen-akkusativ;Das Dokument ist für Sie. (Sie, formell)
+Donnerstag;der;perşembe;hayır;hayır;;hayır;2;A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen;Welcher Wochentag kommt vor Freitag? → Donnerstag
 Dorf;das;köy;hayır;hayır;;evet;2;B1 relativsaetze;Das Dorf, wo meine Großeltern wohnen, ist sehr klein.
+Dose;die;kutu, teneke kutu;hayır;hayır;;hayır;3;A1 akkusativ, A1 imperativ;Öffnest du bitte die Dose?
 Dozent;der;öğretim görevlisi (erkek);hayır;hayır;;evet;2;B1 relativsaetze;Der Mann, der vor dem Eingang steht, ist unser Dozent.
-E-Mail;die;e-posta;hayır;hayır;;evet;3;A2 dativ;Wir schreiben ihnen morgen eine E-Mail.
+Drucker;der;yazıcı;hayır;hayır;;hayır;3;A1 w-fragen, A1 akkusativ, A1 modalverben;Was ist kaputt? – Der Drucker.
+Durst;der;susuzluk (Durst haben: susamak);hayır;hayır;;hayır;3;A1 sein-haben;Warum hast du keinen Durst?
+E-Mail;die;e-posta;hayır;hayır;;evet;19;A1 plural, A1 personalpronomen-dativ, A1 praesens, A1 w-fragen, A1 akkusativ, A1 modalverben, A1 perfekt, A2 dativ;Ergänze: „Alle Kunden bekommen eine E-Mail.“ (Kunde)
+E-Mail-Adresse;die;e-posta adresi;hayır;hayır;;hayır;1;A1 possessivartikel;Können Sie mir bitte Ihre neue E-Mail-Adresse schicken? (Sie)
 Ecke;die;köşe;hayır;hayır;;evet;1;A1 artikel;die Bäckerei an der Ecke ist schon offen.
+Ei;das;yumurta;hayır;hayır;;hayır;4;A1 plural;Schreibe den Plural: das Ei → Eier
 Eigentum;das;mülk;hayır;hayır;;evet;1;A2 dativ;Das Handy ist Eigentum von Paul. Welcher Satz passt? → Das Handy gehört Paul.
-Eingang;der;giriş, giriş kapısı;hayır;hayır;;evet;2;B1 relativsaetze;Der Mann, der vor dem Eingang steht, ist unser Dozent.
+Eingang;der;giriş, giriş kapısı;hayır;hayır;;evet;6;A1 personalpronomen-akkusativ, A1 imperativ, A1 lokale-praepositionen, B1 relativsaetze;Ersetze: Wir begrüßen die Gäste am Eingang. → Wir begrüßen sie am Eingang
+Einkauf;der;alışveriş;hayır;hayır;;hayır;2;A1 personalpronomen-dativ;Ich helfe meiner Oma beim Einkauf. → Ich helfe ihr.
 Einladung;die;davet;hayır;hayır;;evet;1;A1 artikel;die Einladung liegt auf dem Tisch.
-Eis;das;"dondurma; buz";hayır;hayır;;evet;1;A2 dativ;Bilde: ich / mein Sohn / ein Eis / kaufen. → Ich kaufe meinem Sohn ein Eis
-Eltern;die;anne baba;evet;hayır;;evet;6;A2 dativ, B1 relativsaetze;Ich wohne bei den Eltern.
+Eis;das;"dondurma; buz";hayır;hayır;;evet;2;A1 negation, A2 dativ;Schreibe das Gegenteil: „Peter isst Eis.“ → Peter isst kein Eis.
+Eltern;die;anne baba;evet;hayır;;evet;44;A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 sein-haben, A1 praesens, A1 w-fragen, A1 temporale-praepositionen, A1 akkusativ, A1 modalverben, A1 trennbare-verben, A1 possessivartikel, A1 perfekt, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;Meine Eltern kommen morgen. Ich hole sie vom Bahnhof ab.
 Entscheidung;die;karar;hayır;hayır;;evet;1;A1 artikel;die Entscheidung war nicht einfach.
+Entschuldigung;die;özür;hayır;hayır;;hayır;1;A1 sein-haben;Ergänze mit Subjekt und Verb (wir / sein): Entschuldigung, wir sind heute etwas spät.
 Erdgeschoss;das;zemin kat;hayır;hayır;;evet;1;B1 relativsaetze;Welcher Satz ist richtig? → Die Frau, die im Erdgeschoss wohnt, ist Ärztin.
 Erfahrung;die;deneyim;hayır;hayır;;evet;1;A1 artikel;Für diese Stelle ist die Erfahrung sehr wichtig.
-Ergebnis;das;sonuç;hayır;hayır;;evet;1;B1 relativsaetze;Die Teilnehmer, denen wir die Ergebnisse geschickt haben, warten noch.
-Essen;das;yemek;hayır;hayır;;evet;2;A1 artikel, A2 dativ;Schreibe Artikel + Nomen: Essen (isim olarak) → das Essen
-Euro;der;avro;hayır;hayır;;evet;1;A1 artikel;das Brötchen kostet einen Euro.
-Fahrrad;das;bisiklet;hayır;hayır;;evet;9;A1 artikel, A2 dativ, B1 relativsaetze;das Fahrrad steht vor dem Haus.
+Ergebnis;das;sonuç;hayır;hayır;;evet;4;A1 personalpronomen-dativ, B1 relativsaetze;Der Arzt erklärt Frau Berger die Ergebnisse. Er erklärt ihr alles langsam.
+Ersatzschlüssel;der;yedek anahtar;hayır;hayır;;hayır;1;A1 sein-haben;Wo ist eigentlich der Ersatzschlüssel?
+Essen;das;yemek;hayır;hayır;;evet;22;A1 artikel, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 sein-haben, A1 negation, A1 w-fragen, A1 temporale-praepositionen, A1 trennbare-verben, A1 imperativ, A1 possessivartikel, A2 dativ;Schreibe Artikel + Nomen: Essen (isim olarak) → das Essen
+Euro;der;avro;hayır;hayır;;evet;19;A1 artikel, A1 praesens, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 akkusativ;das Brötchen kostet einen Euro.
+Fähigkeit;die;yetenek;hayır;hayır;;hayır;1;A1 modalverben;Ich habe Zeit und Fähigkeiten. Ich kann dir helfen.
+Fahrer;der;şoför (erkek);hayır;hayır;;hayır;1;A1 personalpronomen-akkusativ;Der Fahrer holt uns ab. → Objektpronomen bleibt → Der Fahrer holt uns ab
+Fahrerin;die;şoför (kadın);hayır;hayır;;hayır;1;A1 plural;Schreibe den Plural: die Fahrerin → Fahrerinnen
+Fahrgast;der;yolcu;hayır;hayır;;hayır;1;A1 trennbare-verben;Bilde: die Fahrgäste / in den Bus / einsteigen → Die Fahrgäste steigen in den Bus ein
+Fahrkarte;die;bilet (ulaşım);hayır;hayır;;hayır;1;A1 temporale-praepositionen;Zuerst kaufe ich eine Fahrkarte, dann beginnt die Reise. Ich kaufe die Fahrkarte vor der Reise.
+Fahrrad;das;bisiklet;hayır;hayır;;evet;37;A1 artikel, A1 plural, A1 personalpronomen-dativ, A1 sein-haben, A1 praesens, A1 negation, A1 w-fragen, A1 temporale-praepositionen, A1 akkusativ, A1 modalverben, A1 perfekt, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;das Fahrrad steht vor dem Haus.
+Fahrt;die;yolculuk;hayır;hayır;;hayır;6;A1 w-fragen, A1 temporale-praepositionen, A1 imperativ, A1 lokale-praepositionen;A: Wie lange dauert die Fahrt?? B: 45 Minuten. (die Fahrt / dauern)
 Fall;der;vaka, durum;hayır;hayır;;evet;1;B1 relativsaetze;Die Ärztin, der ich meine Befunde gezeigt habe, kennt den Fall.
-Familie;die;aile;hayır;hayır;;evet;4;A2 dativ, B1 relativsaetze;Meine Familie fehlt mir sehr.
-Fenster;das;pencere;hayır;hayır;;evet;2;A1 artikel;Schreibe Artikel + Nomen: das Fenster ist offen. (Fenster)
-Film;der;film;hayır;hayır;;evet;5;A2 dativ, B1 relativsaetze;Schreibe nur das Fragewort: Wem gefällt der Film?
-Firma;die;firma, şirket;hayır;hayır;;evet;5;A2 dativ, B1 relativsaetze;Er arbeitet bei der Firma Siemens.
-Fitnessstudio;das;spor salonu;hayır;hayır;;evet;1;B1 relativsaetze;Das Fitnessstudio, wo ich trainiere, schließt um zehn.
-Flughafen;der;havalimanı;hayır;hayır;;evet;1;B1 relativsaetze;Welcher Satz ist richtig? → Dort steht der Bus, der zum Flughafen fährt.
-Formular;das;form;hayır;hayır;;evet;1;B1 relativsaetze;Das Formular, das Sie ausfüllen müssen, liegt hier.
+Familie;die;aile;hayır;hayır;;evet;10;A1 sein-haben, A1 praesens, A1 akkusativ, A1 possessivartikel, A1 perfekt, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;Die Familie hat ein Auto.
+Fan;der;hayran, taraftar;hayır;hayır;;hayır;1;A1 plural;Schreibe den Plural: der Fan → Fans
+Farbe;die;renk;hayır;hayır;;hayır;2;A1 personalpronomen-dativ;Bilde: diese Farbe / du / gut stehen → Diese Farbe steht dir gut
+Februar;der;şubat;hayır;hayır;;hayır;2;A1 zahlen-uhrzeit-datum;Schreibe vollständig: „Geburtstag / 14.02.“ → Mein Geburtstag ist am vierzehnten Februar.
+Fehler;der;hata;hayır;hayır;;hayır;1;A1 imperativ;Ersetze: „Streich den Fehler durch!“ → Streich ihn durch
+Fenster;das;pencere;hayır;hayır;;evet;30;A1 artikel, A1 plural, A1 personalpronomen-akkusativ, A1 praesens, A1 modalverben, A1 trennbare-verben, A1 imperativ, A1 perfekt;Schreibe Artikel + Nomen: das Fenster ist offen. (Fenster)
+Fernseher;der;televizyon;hayır;hayır;;hayır;1;A1 trennbare-verben;Bilde: ich / den Fernseher / ausmachen → Ich mache den Fernseher aus
+Film;der;film;hayır;hayır;;evet;40;A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 praesens, A1 negation, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen, A1 akkusativ, A1 trennbare-verben, A1 perfekt, A2 dativ, B1 relativsaetze;Ergänze den Plural: ein Film → viele Filme
+Firma;die;firma, şirket;hayır;hayır;;evet;8;A1 plural, A1 negation, A1 temporale-praepositionen, A2 dativ, B1 relativsaetze;Ergänze: „Die Firma hat drei Büros.“ (Büro)
+Fisch;der;balık;hayır;hayır;;hayır;1;A1 perfekt;Wir haben im Restaurant Fisch gegessen.
+Fitnessraum;der;spor odası;hayır;hayır;;hayır;1;A1 sein-haben;Das Hotel hat einen kleinen Fitnessraum.
+Fitnessstudio;das;spor salonu;hayır;hayır;;evet;2;A1 w-fragen, B1 relativsaetze;Wie oft gehst du ins Fitnessstudio? – Dreimal pro Woche.
+Flasche;die;şişe;hayır;hayır;;hayır;5;A1 plural, A1 personalpronomen-akkusativ, A1 w-fragen, A1 imperativ;Ergänze: „Ich brauche noch zwei Flaschen.“ (Flasche)
+Fleisch;das;et;hayır;hayır;;hayır;2;A1 akkusativ;Bilde negativ: er / kein Fleisch / essen → Er isst kein Fleisch
+Flughafen;der;havalimanı;hayır;hayır;;evet;2;A1 trennbare-verben, B1 relativsaetze;Bilde: ich / meine Eltern / vom Flughafen / abholen → Ich hole meine Eltern vom Flughafen ab
+Flur;der;koridor;hayır;hayır;;hayır;1;A1 imperativ;Ersetze: „Putzt den Flur!“ → Putzt ihn
+Formular;das;form;hayır;hayır;;evet;3;A1 imperativ, B1 relativsaetze;Bilde (Sie): „Sie füllen das Formular aus.“ → Füllen Sie das Formular aus
 Forscherin;die;araştırmacı (kadın);hayır;hayır;;evet;1;B1 relativsaetze;Die Forscherin, deren Artikel heute erschienen ist, arbeitet in Berlin.
-Foto;das;fotoğraf;hayır;hayır;;evet;7;A2 dativ, B1 relativsaetze;Ich zeige euch gleich die Fotos.
-Frage;die;soru;hayır;hayır;;evet;2;A2 dativ, B1 relativsaetze;Die Kundin schreibt eine Frage und ich reagiere. Welcher Satz passt? → Ich antworte der Kundin.
-Frau;die;"kadın; hanım";hayır;hayır;;evet;16;A1 artikel, A2 dativ, B1 relativsaetze;die Frauen warten vor dem Kino.
+Foto;das;fotoğraf;hayır;hayır;;evet;21;A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 imperativ, A1 perfekt, A2 dativ, B1 relativsaetze;Schreibe den Plural: das Foto → Fotos
+Frage;die;soru;hayır;hayır;;evet;31;A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 sein-haben, A1 praesens, A1 negation, A1 w-fragen, A1 trennbare-verben, A2 dativ, B1 relativsaetze;Schreibe den Plural: die Frage → Fragen
+Frau;die;"kadın; hanım";hayır;hayır;;evet;27;A1 artikel, A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 akkusativ, A1 possessivartikel, A2 dativ, B1 relativsaetze;die Frauen warten vor dem Kino.
 Fräulein;das;küçük hanım (eskimiş);hayır;hayır;"Bugün pek kullanılmıyor; artikeli kelime sonundaki -lein yüzünden das.";evet;1;A1 artikel;Schreibe Artikel + Nomen: Fräulein → das Fräulein
 Freiheit;die;özgürlük;hayır;hayır;;evet;1;A1 artikel;Schreibe Artikel + Nomen: Freiheit → die Freiheit
-Freitag;der;cuma;hayır;hayır;;evet;3;A1 artikel, B1 relativsaetze;Schreibe Artikel + Nomen: Freitag → der Freitag
-Freund;der;"arkadaş (erkek); erkek arkadaş";hayır;hayır;;evet;14;A2 dativ, B1 relativsaetze;Ich fahre mit einem Freund nach Köln.
-Freundin;die;"arkadaş (kadın); kız arkadaş";hayır;hayır;;evet;5;A2 dativ, B1 relativsaetze;Sie wohnt bei einer Freundin.
+Freitag;der;cuma;hayır;hayır;;evet;15;A1 artikel, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen, A1 modalverben, A1 trennbare-verben, B1 relativsaetze;Schreibe Artikel + Nomen: Freitag → der Freitag
+Freund;der;"arkadaş (erkek); erkek arkadaş";hayır;hayır;;evet;80;A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 sein-haben, A1 praesens, A1 negation, A1 w-fragen, A1 akkusativ, A1 modalverben, A1 trennbare-verben, A1 possessivartikel, A1 perfekt, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;Ergänze: „Unsere Freunde kommen am Wochenende.“ (Freund)
+Freundin;die;"arkadaş (kadın); kız arkadaş";hayır;hayır;;evet;18;A1 plural, A1 sein-haben, A1 praesens, A1 negation, A1 akkusativ, A1 trennbare-verben, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;Schreibe den Plural: die Freundin → Freundinnen
 Freundschaft;die;arkadaşlık;hayır;hayır;;evet;3;A1 artikel;die Freundschaft ist wichtig.
-Frühling;der;ilkbahar;hayır;hayır;;evet;2;A1 artikel;der Frühling beginnt im März.
-Fußball;der;"futbol; futbol topu";hayır;hayır;;evet;1;B1 relativsaetze;Ist das der Kollege, mit dessen Bruder du Fußball spielst?
-Garage;die;garaj;hayır;hayır;;evet;1;B1 relativsaetze;Setze die Kommas: „Das Auto das wir gestern gekauft haben steht in der Garage.“ → Das Auto, das wir gestern gekauft haben, steht in der Garage.
-Garten;der;bahçe;hayır;hayır;;evet;2;A2 dativ, B1 relativsaetze;Ich zeige meiner / den Nachbarin meiner / den Garten.
-Gast;der;misafir;hayır;hayır;;evet;4;A2 dativ, B1 relativsaetze;Wir geben den / die Gästen den / die Speisekarte.
+Frühling;der;ilkbahar;hayır;hayır;;evet;3;A1 artikel, A1 temporale-praepositionen;der Frühling beginnt im März.
+Frühstück;das;kahvaltı;hayır;hayır;;hayır;3;A1 temporale-praepositionen, A1 perfekt;Zuerst dusche ich, dann frühstücke ich. Ich dusche vor dem Frühstück.
+Frühstücken;das;kahvaltı etme;hayır;hayır;;hayır;1;A1 temporale-praepositionen;Ich frühstücke und lese gleichzeitig. Ich lese beim Frühstücken.
+Fuß;der;ayak (zu Fuß: yürüyerek);hayır;hayır;;hayır;1;A1 perfekt;Meine Schwester ist zu Fuß zur Uni gegangen.
+Fußball;der;"futbol; futbol topu";hayır;hayır;;evet;7;A1 praesens, A1 w-fragen, A1 modalverben, A1 perfekt, B1 relativsaetze;A: Was machen wir heute? B: Wir spielen Fußball.
+Garage;die;garaj;hayır;hayır;;evet;4;A1 w-fragen, A1 akkusativ, A1 lokale-praepositionen, B1 relativsaetze;Wo steht dein Auto? – In der Garage.
+Garten;der;bahçe;hayır;hayır;;evet;13;A1 plural, A1 sein-haben, A1 praesens, A1 w-fragen, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;Ergänze: „Die Töchter spielen im Garten.“ (Tochter)
+Gast;der;misafir;hayır;hayır;;evet;17;A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 sein-haben, A1 praesens, A1 akkusativ, A1 trennbare-verben, A1 perfekt, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;Ergänze: „Die Gäste sind schon im Hotel.“ (Gast)
 Gaststudent;der;misafir öğrenci (erkek);hayır;hayır;;evet;1;B1 relativsaetze;Das ist die Universität, woher unsere Gaststudenten kommen.
-Gebäude;das;bina;hayır;hayır;;evet;1;A1 artikel;das Gebäude dort ist sehr alt.
-Geburtstag;der;doğum günü;hayır;hayır;;evet;4;A2 dativ, B1 relativsaetze;Heute hat Lara Geburtstag. Wir gratulieren ihr.
+Gebäude;das;bina;hayır;hayır;;evet;2;A1 artikel, A1 plural;das Gebäude dort ist sehr alt.
+Geburtstag;der;doğum günü;hayır;hayır;;evet;13;A1 personalpronomen-dativ, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen, A2 dativ, B1 relativsaetze;A: Ich habe heute Geburtstag. B: Dann schenke ich dir etwas!
+Geburtstagsfeier;die;doğum günü partisi;hayır;hayır;;hayır;1;A1 lokale-praepositionen;Wir kommen von einer Geburtstagsfeier.
+Geburtstagsgeschenk;das;doğum günü hediyesi;hayır;hayır;;hayır;1;A1 personalpronomen-dativ;Durum: Kız kardeşine doğum günü hediyesi veriyorsun. → Ich schenke ihr ein Geburtstagsgeschenk
 Geduld;die;sabır;hayır;hayır;;evet;1;B1 relativsaetze;Ergänze: Das Wichtigste, was du brauchst, ist Geduld.
 Gegend;die;bölge, çevre;hayır;hayır;;evet;1;B1 relativsaetze;Die Gegend, wo wir Urlaub machen, ist sehr ruhig.
-Geld;das;para;hayır;hayır;;evet;1;B1 relativsaetze;Ergänze: Der Mann, dem ich das Geld zurückgegeben habe, wartet draußen.
-Gemüse;das;sebze;hayır;hayır;;evet;1;B1 relativsaetze;Ergänze: Das Gemüse, das ich heute gekauft habe, ist frisch.
+Geld;das;para;hayır;hayır;;evet;6;A1 personalpronomen-akkusativ, A1 w-fragen, A1 imperativ, A1 possessivartikel, B1 relativsaetze;Bilde: ich / das Geld / haben → Pronomen → Ich habe es
+Gemüse;das;sebze;hayır;hayır;;evet;2;A1 w-fragen, B1 relativsaetze;Antwort: Du kaufst Gemüse. – Bilde die Frage. → Was kaufst du?
 Gerät;das;cihaz, alet;hayır;hayır;;evet;2;B1 relativsaetze;Das Gerät, das auf dem Tisch liegt, gehört mir.
-Geschenk;das;hediye;hayır;hayır;;evet;5;A2 dativ;Das Geschenk gehört der Kollegin.
-Geschichte;die;"hikâye; tarih";hayır;hayır;;evet;4;A2 dativ;Die Oma erzählt den Kindern eine Geschichte.
+Geschäft;das;"dükkân, mağaza; iş";hayır;hayır;;hayır;4;A1 plural, A1 sein-haben, A1 zahlen-uhrzeit-datum;Schreibe den Plural: das Geschäft → Geschäfte
+Geschenk;das;hediye;hayır;hayır;;evet;14;A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 akkusativ, A2 dativ;Das Geschenk ist für mich. (ich)
+Geschichte;die;"hikâye; tarih";hayır;hayır;;evet;9;A1 personalpronomen-dativ, A1 trennbare-verben, A1 perfekt, A2 dativ;Bilde: die Mutter / das Kind / die Geschichte / vorlesen → Pronomen → Die Mutter liest ihm die Geschichte vor
+Geschwister;die;kardeşler;evet;hayır;;hayır;4;A1 negation, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 akkusativ;Verneine: „Mara hat Geschwister.“ → Mara hat keine Geschwister.
+Gespräch;das;konuşma, görüşme;hayır;hayır;;hayır;1;A1 sein-haben;Ergänze mit Verb und Subjekt (du / sein): Warum bist du vor dem Gespräch so nervös?
 Gesundheit;die;sağlık;hayır;hayır;;evet;1;A1 artikel;die Gesundheit ist wichtig.
-Gleis;das;peron, hat;hayır;hayır;;evet;1;B1 relativsaetze;Verbinde: „Der Zug fährt nach Hamburg. Der Zug steht auf Gleis 4.“ → Der Zug, der nach Hamburg fährt, steht auf Gleis 4.
+Getränk;das;içecek;hayır;hayır;;hayır;4;A1 akkusativ, A1 trennbare-verben, A1 perfekt;Bilde: wir / zwei Getränke / bestellen → Wir bestellen zwei Getränke
+Gitarre;die;gitar;hayır;hayır;;hayır;1;A1 modalverben;Ergänze: Ich kann ein bisschen Gitarre spielen.
+Glas;das;"bardak; cam";hayır;hayır;;hayır;3;A1 plural, A1 perfekt;Ergänze den Plural: ein Glas → vier Gläser
+Gleis;das;peron, hat;hayır;hayır;;evet;2;A1 w-fragen, B1 relativsaetze;Antwort: Der Zug kommt an Gleis 5 an. – Frage nach dem Ort. → Wo kommt der Zug an?
+Glück;das;"şans; mutluluk";hayır;hayır;;hayır;3;A1 sein-haben;Wir haben Glück: Der Zug wartet noch.
 Grammatik;die;dil bilgisi;hayır;hayır;;evet;2;A2 dativ;Der Lehrer erklärt uns die Grammatik.
 Größe;die;beden, boy, büyüklük;hayır;hayır;;evet;1;A2 dativ;Die Schuhe haben die richtige Größe. Welcher Satz passt? → Die Schuhe passen mir.
-Großeltern;die;büyükanne ve büyükbaba;evet;hayır;;evet;1;B1 relativsaetze;Das Dorf, wo meine Großeltern wohnen, ist sehr klein.
+Großeltern;die;büyükanne ve büyükbaba;evet;hayır;;evet;8;A1 akkusativ, A1 modalverben, A1 possessivartikel, A1 perfekt, A1 lokale-praepositionen, B1 relativsaetze;Stelle die Frage: Sie besucht ihre Großeltern. → Wen besucht sie
 Gruppe;die;grup;hayır;hayır;;evet;1;B1 relativsaetze;Ergänze: Die Leute, die vor der Tür warten, gehören zur Gruppe.
-Haltestelle;die;durak;hayır;hayır;;evet;1;A1 artikel;Schreibe Artikel + Nomen: Hier ist die Haltestelle. (Haltestelle)
-Handy;das;cep telefonu;hayır;hayır;;evet;4;A1 artikel, A2 dativ;das Handy ist schon wieder leer.
-Haus;das;ev;hayır;hayır;;evet;6;A1 artikel, B1 relativsaetze;das Fahrrad steht vor dem Haus.
+Haltestelle;die;durak;hayır;hayır;;evet;4;A1 artikel, A1 trennbare-verben, A1 imperativ;Schreibe Artikel + Nomen: Hier ist die Haltestelle. (Haltestelle)
+Hamburger;der;hamburger;hayır;hayır;;hayır;1;A1 akkusativ;Ergänze: Peter möchte einen Hamburger.
+Hand;die;el;hayır;hayır;;hayır;3;A1 temporale-praepositionen, A1 imperativ;Zuerst wasche ich die Hände, dann esse ich. Ich wasche die Hände vor dem Essen.
+Handy;das;cep telefonu;hayır;hayır;;evet;31;A1 artikel, A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 praesens, A1 negation, A1 w-fragen, A1 akkusativ, A1 modalverben, A1 imperativ, A1 possessivartikel, A1 lokale-praepositionen, A2 dativ;das Handy ist schon wieder leer.
+Hauptbahnhof;der;ana tren istasyonu, gar;hayır;hayır;;hayır;4;A1 w-fragen, A1 trennbare-verben, A1 imperativ;Antwort: Wir steigen am Hauptbahnhof ein. – Frage nach dem Ort. → Wo steigt ihr ein?
+Haus;das;ev;hayır;hayır;;evet;20;A1 artikel, A1 plural, A1 personalpronomen-dativ, A1 w-fragen, A1 akkusativ, A1 imperativ, A1 possessivartikel, A1 lokale-praepositionen, B1 relativsaetze;das Fahrrad steht vor dem Haus.
+Hausaufgabe;die;ev ödevi;hayır;hayır;;hayır;13;A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 praesens, A1 akkusativ, A1 modalverben, A1 trennbare-verben, A1 perfekt;Wir fragen die Lehrerin nach der Hausaufgabe. → Wir fragen sie.
 Häuschen;das;küçük ev;hayır;hayır;;evet;2;A1 artikel;das Häuschen ist alt.
 Haustier;das;evcil hayvan;hayır;hayır;;evet;1;A1 artikel;das Haustier schläft.
 Haustür;die;evin dış kapısı;hayır;hayır;;evet;2;A1 artikel;Wo ist der Schlüssel für die Haustür?
+Heft;das;defter;hayır;hayır;;hayır;4;A1 plural, A1 personalpronomen-dativ, A1 w-fragen;Ergänze: „Auf den Tischen liegen Hefte.“ (Heft)
+Hemd;das;gömlek;hayır;hayır;;hayır;4;A1 personalpronomen-dativ, A1 akkusativ, A1 imperativ;Das Hemd passt dem Kind nicht. → Es passt ihm nicht.
 Herbst;der;sonbahar;hayır;hayır;;evet;1;A1 artikel;Schreibe Artikel + Nomen: Herbst → der Herbst
-Herr;der;bey, beyefendi;hayır;hayır;;evet;1;B1 relativsaetze;Der Mann, den ich zurückrufen soll, heißt Herr Vogt.
-Hilfe;die;yardım;hayır;hayır;;evet;2;A2 dativ;Wir danken der Frau für ihre Hilfe.
+Herr;der;bey, beyefendi;hayır;hayır;;evet;2;A1 personalpronomen-akkusativ, B1 relativsaetze;A: Seht ihr Herrn und Frau Koch? B: Ja, wir sehen sie dort.
+Hilfe;die;yardım;hayır;hayır;;evet;6;A1 personalpronomen-dativ, A1 negation, A2 dativ;Ich danke Frau Klein für die Hilfe. Ich danke ihr später noch einmal.
+Hobby;das;hobi;hayır;hayır;;hayır;1;A1 plural;Schreibe den Plural: das Hobby → Hobbys
 Hof;der;avlu, bahçe;hayır;hayır;;evet;2;B1 relativsaetze;Die Kinder, die im Hof spielen, wohnen nebenan.
 Holz;das;tahta, odun;hayır;hayır;;evet;1;A2 dativ;Ergänze: Der Tisch ist aus Holz Holz.
-Hotel;das;otel;hayır;hayır;;evet;7;A1 artikel, A2 dativ, B1 relativsaetze;der Bahnhof ist gleich neben dem Hotel.
-Hund;der;köpek;hayır;hayır;;evet;1;B1 relativsaetze;Das Mädchen, dem der Hund gehört, wohnt nebenan.
+Hose;die;pantolon;hayır;hayır;;hayır;2;A1 plural, A1 imperativ;Ergänze: „Im Schrank sind ___ und ___.“ (Jacke / Hose) → Jacken und Hosen
+Hotel;das;otel;hayır;hayır;;evet;22;A1 artikel, A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 sein-haben, A1 temporale-praepositionen, A1 akkusativ, A1 perfekt, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;der Bahnhof ist gleich neben dem Hotel.
+Hund;der;köpek;hayır;hayır;;evet;20;A1 plural, A1 sein-haben, A1 praesens, A1 negation, A1 w-fragen, A1 akkusativ, A1 lokale-praepositionen, B1 relativsaetze;Schreibe den Plural: der Hund → Hunde
+Hunger;der;açlık (Hunger haben: acıkmak);hayır;hayır;;hayır;13;A1 sein-haben, A1 praesens, A1 negation, A1 w-fragen;Nach dem Sport habe ich großen Hunger.
+Idee;die;fikir;hayır;hayır;;hayır;2;A1 personalpronomen-dativ, A1 negation;Die Idee gefällt meinen Eltern. Sie gefällt ihnen.
 Information;die;bilgi;hayır;hayır;;evet;3;A1 artikel;die Information ist sehr wichtig.
 Insel;die;ada;hayır;hayır;;evet;1;B1 relativsaetze;Die Insel, auf der wir wohnen, ist sehr klein.
 Interessanteste;das;en ilginç şey;hayır;hayır;;evet;1;B1 relativsaetze;Das war das Interessanteste, was ich heute gelernt habe.
-Jacke;die;ceket, mont;hayır;hayır;;evet;6;A1 artikel, A2 dativ, B1 relativsaetze;die Jacke ist zu groß.
-Jahr;das;yıl;hayır;hayır;;evet;8;A2 dativ, B1 relativsaetze;Ich wohne seit einem Jahr in Berlin.
-Januar;der;ocak (ay);hayır;hayır;;evet;3;A1 artikel;der Januar ist oft kalt.
-Junge;der;erkek çocuk;hayır;hayır;;evet;1;B1 relativsaetze;Ergänze: Der Junge, dessen Fahrrad vor der Schule steht, wartet draußen.
-Juni;der;haziran;hayır;hayır;;evet;2;B1 relativsaetze;Die Prüfung, auf die wir uns vorbereiten, ist im Juni.
-Kaffee;der;kahve;hayır;hayır;;evet;5;A1 artikel, A2 dativ;Schreibe Artikel + Nomen: der Kaffee ist noch heiß. (Kaffee)
+Jacke;die;ceket, mont;hayır;hayır;;evet;29;A1 artikel, A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 praesens, A1 w-fragen, A1 akkusativ, A1 trennbare-verben, A1 perfekt, A2 dativ, B1 relativsaetze;die Jacke ist zu groß.
+Jahr;das;yıl;hayır;hayır;;evet;34;A1 plural, A1 sein-haben, A1 praesens, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen, A1 possessivartikel, A1 perfekt, A2 dativ, B1 relativsaetze;Schreibe den Plural: das Jahr → Jahre
+Januar;der;ocak (ay);hayır;hayır;;evet;9;A1 artikel, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen;der Januar ist oft kalt.
+Job;der;iş;hayır;hayır;;hayır;2;A1 plural, A1 possessivartikel;Schreibe den Plural: der Job → Jobs
+Juli;der;temmuz;hayır;hayır;;hayır;6;A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen;Welcher Monat kommt vor Juli? → Juni
+Junge;der;erkek çocuk;hayır;hayır;;evet;3;A1 akkusativ, B1 relativsaetze;Welche Variante ist korrekt? → Der Junge sucht einen Bleistift.
+Juni;der;haziran;hayır;hayır;;evet;11;A1 w-fragen, A1 zahlen-uhrzeit-datum, B1 relativsaetze;Antwort: Mein Geburtstag ist im Juni. → Wann ist dein Geburtstag?
+Kaffee;der;kahve;hayır;hayır;;evet;42;A1 artikel, A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 praesens, A1 negation, A1 w-fragen, A1 akkusativ, A1 modalverben, A1 perfekt, A2 dativ;Schreibe Artikel + Nomen: der Kaffee ist noch heiß. (Kaffee)
+Karton;der;karton kutu;hayır;hayır;;hayır;1;A1 lokale-praepositionen;Die Katze springt aus dem Karton heraus.
+Katze;die;kedi;hayır;hayır;;hayır;16;A1 plural, A1 sein-haben, A1 negation, A1 akkusativ, A1 imperativ, A1 possessivartikel, A1 lokale-praepositionen;Schreibe den Plural: die Katze → Katzen
+Kerze;die;mum;hayır;hayır;;hayır;1;A1 imperativ;Bilde: „Ihr zündet die Kerzen an.“ → Zündet die Kerzen an
 KI;die;yapay zekâ (Künstliche Intelligenz);hayır;hayır;;evet;1;B1 relativsaetze;Die Professorin, deren Seminar ich besuche, forscht zu KI.
-Kind;das;çocuk;hayır;hayır;;evet;31;A1 artikel, A2 dativ, B1 relativsaetze;Schreibe Artikel + Nomen: Kind → das Kind
+Kilometer;der;kilometre;hayır;hayır;;hayır;3;A1 w-fragen;Wie weit ist der Bahnhof? – Zwei Kilometer.
+Kind;das;çocuk;hayır;hayır;;evet;141;A1 artikel, A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 sein-haben, A1 praesens, A1 negation, A1 w-fragen, A1 akkusativ, A1 modalverben, A1 trennbare-verben, A1 possessivartikel, A1 perfekt, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;Schreibe Artikel + Nomen: Kind → das Kind
 Kinderzimmer;das;çocuk odası;hayır;hayır;;evet;2;A1 artikel;das Kinderzimmer ist hell.
-Kino;das;sinema;hayır;hayır;;evet;2;A1 artikel, A2 dativ;die Frauen warten vor dem Kino.
+Kino;das;sinema;hayır;hayır;;evet;17;A1 artikel, A1 plural, A1 personalpronomen-akkusativ, A1 w-fragen, A1 modalverben, A1 perfekt, A2 dativ;die Frauen warten vor dem Kino.
+Kirche;die;kilise;hayır;hayır;;hayır;2;A1 perfekt;Er hat die Kirche fotografiert.
 Kiste;die;kasa, sandık;hayır;hayır;;evet;1;A2 dativ;Der Nachbar trägt meine Kisten. Welcher Satz passt? → Der Nachbar hilft mir.
 Klasse;die;sınıf;hayır;hayır;;evet;1;B1 relativsaetze;Das ist der Mann, dessen Tochter in meiner Klasse ist.
+Kleid;das;elbise;hayır;hayır;;hayır;3;A1 plural, A1 personalpronomen-dativ;Schreibe den Plural: das Kleid → Kleider
 Kleidung;die;giysi, kıyafet;hayır;hayır;;evet;1;B1 relativsaetze;Das ist der Laden, wohin ich alte Kleidung bringe.
 Knie;das;diz;hayır;hayır;;evet;1;A2 dativ;Ich habe Schmerzen am Knie. Welcher Satz passt? → Das Knie tut mir weh.
-Kollege;der;iş arkadaşı (erkek);hayır;hayır;;evet;12;A2 dativ, B1 relativsaetze;Sie spricht mit ihren Kollegen über das Projekt.
-Kollegin;die;iş arkadaşı (kadın);hayır;hayır;;evet;12;A2 dativ, B1 relativsaetze;Das Geschenk gehört der Kollegin.
+Kochen;das;yemek yapma;hayır;hayır;;hayır;1;A1 temporale-praepositionen;Ich koche und höre gleichzeitig Radio. Ich höre beim Kochen Radio.
+Koffer;der;bavul;hayır;hayır;;hayır;1;A1 personalpronomen-dativ;A: Meine Eltern kommen. B: Bringst du ihnen die Koffer?
+Kollege;der;iş arkadaşı (erkek);hayır;hayır;;evet;17;A1 personalpronomen-akkusativ, A1 sein-haben, A1 trennbare-verben, A1 possessivartikel, A1 perfekt, A2 dativ, B1 relativsaetze;A: Kennst du die neuen Kollegen? B: Nein, ich kenne sie noch nicht.
+Kollegin;die;iş arkadaşı (kadın);hayır;hayır;;evet;19;A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 sein-haben, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;Schreibe den Plural: die Kollegin → Kolleginnen
 Konferenz;die;konferans;hayır;hayır;;evet;2;B1 relativsaetze;Verbinde: „Die Kollegen wohnen in Bonn. Ich fahre mit ihnen zur Konferenz.“ → Die Kollegen, mit denen ich zur Konferenz fahre, wohnen in Bonn.
-Krankenhaus;das;hastane;hayır;hayır;;evet;2;A1 artikel, B1 relativsaetze;Schreibe Artikel + Nomen: Dort ist das Krankenhaus. (Krankenhaus)
-Küche;die;mutfak;hayır;hayır;;evet;1;A1 artikel;Schreibe Artikel + Nomen: die Küche ist klein. (Küche)
+Kontakt;der;iletişim, bağlantı;hayır;hayır;;hayır;2;A1 negation;Ergänze: „Wir haben keinen Kontakt mehr.“ (artık değil)
+Konto;das;(banka) hesap;hayır;hayır;;hayır;1;A1 plural;Schreibe den Plural: das Konto → Konten
+Konzert;das;konser;hayır;hayır;;hayır;4;A1 w-fragen, A1 zahlen-uhrzeit-datum;Was passiert heute? – Ein Konzert findet statt.
+Kopfschmerz;der;baş ağrısı (çoğu zaman çoğul: die Kopfschmerzen);hayır;hayır;;hayır;1;A1 sein-haben;Meine Schwester hat seit gestern Kopfschmerzen.
+Korb;der;sepet;hayır;hayır;;hayır;1;A1 plural;Ergänze: „Im Korb liegen rote Äpfel.“ (Apfel)
+Kosten;die;masraflar, ücret;evet;hayır;;hayır;1;A1 personalpronomen-dativ;Die Verkäuferin erklärt dem Kunden den Vertrag. Sie erklärt ihm auch die Kosten.
+Krankenhaus;das;hastane;hayır;hayır;;evet;5;A1 artikel, A1 plural, A1 praesens, A1 w-fragen, B1 relativsaetze;Schreibe Artikel + Nomen: Dort ist das Krankenhaus. (Krankenhaus)
+Kreis;der;daire, çember;hayır;hayır;;hayır;1;A1 plural;Schreibe den Plural: der Kreis → Kreise
+Küche;die;mutfak;hayır;hayır;;evet;9;A1 artikel, A1 plural, A1 praesens, A1 w-fragen, A1 trennbare-verben, A1 lokale-praepositionen;Schreibe Artikel + Nomen: die Küche ist klein. (Küche)
+Kuchen;der;kek, pasta;hayır;hayır;;hayır;6;A1 praesens, A1 negation, A1 trennbare-verben, A1 imperativ, A1 perfekt;Ihr bringt einen Kuchen.
 Küchentisch;der;mutfak masası;hayır;hayır;;evet;1;A1 artikel;der Küchentisch ist neu.
-Kunde;der;müşteri (erkek);hayır;hayır;;evet;5;A2 dativ, B1 relativsaetze;Der Verkäufer antwortet keinem Kunden.
+Kühlschrank;der;buzdolabı;hayır;hayır;;hayır;3;A1 plural, A1 w-fragen, A1 trennbare-verben;Ergänze: „Im Kühlschrank liegen ___ und ___.“ (Apfel / Ei) → Äpfel und Eier
+Kuli;der;tükenmez kalem;hayır;hayır;;hayır;1;A1 personalpronomen-dativ;Ersetze: Bringst du mir den Kuli? → Bringst du ___ ___? → Bringst du ihn mir
+Kunde;der;müşteri (erkek);hayır;hayır;;evet;17;A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 trennbare-verben, A1 imperativ, A1 perfekt, A2 dativ, B1 relativsaetze;Schreibe den Plural: der Kunde → Kunden
 Kundin;die;müşteri (kadın);hayır;hayır;;evet;4;A2 dativ, B1 relativsaetze;Welche Variante ist richtig?  → Sie zeigt der Kundin den Vertrag.
-Kurs;der;kurs;hayır;hayır;;evet;6;A2 dativ, B1 relativsaetze;Der neue Kurs ist interessant. Welcher Satz passt? → Der Kurs gefällt mir.
-Laden;der;dükkân;hayır;hayır;;evet;2;B1 relativsaetze;Ergänze: Der Laden, wo ich immer einkaufe, hat heute geschlossen.
-Lampe;die;lamba;hayır;hayır;;evet;1;A1 artikel;die Lampe ist neu.
+Kurs;der;kurs;hayır;hayır;;evet;49;A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 sein-haben, A1 praesens, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen, A1 modalverben, A1 trennbare-verben, A1 possessivartikel, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;Ergänze: „Im Kurs benutzen wir viele Bücher.“ (Buch)
+Kursbeginn;der;kursun başlangıcı;hayır;hayır;;hayır;1;A1 zahlen-uhrzeit-datum;Schreibe vollständig: „Kursbeginn / 01.09.“ → Der Kurs beginnt am ersten September.
+Kursraum;der;kurs odası;hayır;hayır;;hayır;1;A1 plural;Ergänze: „Die Schüler sitzen im Kursraum.“ (Schüler)
+Laden;der;dükkân;hayır;hayır;;evet;5;A1 plural, A1 temporale-praepositionen, B1 relativsaetze;Schreibe den Plural: der Laden → Läden
+Lampe;die;lamba;hayır;hayır;;evet;5;A1 artikel, A1 plural, A1 w-fragen, A1 lokale-praepositionen;die Lampe ist neu.
 Land;das;"ülke; kır, taşra";hayır;hayır;;evet;1;B1 relativsaetze;Spanien ist das Land, woher meine Nachbarin kommt.
-Lehrer;der;öğretmen (erkek);hayır;hayır;;evet;14;A1 artikel, A2 dativ, B1 relativsaetze;die Lehrer sind schon da.
-Lehrerin;die;öğretmen (kadın);hayır;hayır;;evet;6;A2 dativ;Die Lehrerin erklärt dem Kind die Aufgabe.
+Lebensmittel;das;gıda, yiyecek;hayır;hayır;;hayır;1;A1 perfekt;Bilde: ich / Lebensmittel / einkaufen → Ich habe Lebensmittel eingekauft
+Lehrer;der;öğretmen (erkek);hayır;hayır;;evet;60;A1 artikel, A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 sein-haben, A1 praesens, A1 w-fragen, A1 akkusativ, A1 modalverben, A1 trennbare-verben, A1 imperativ, A1 possessivartikel, A1 perfekt, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;die Lehrer sind schon da.
+Lehrerin;die;öğretmen (kadın);hayır;hayır;;evet;27;A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 praesens, A1 modalverben, A1 trennbare-verben, A1 possessivartikel, A1 perfekt, A2 dativ;Schreibe den Plural: die Lehrerin → Lehrerinnen
+Leiter|die;die;merdiven (seyyar);hayır;hayır;"der Leiter = yönetici; burada die Leiter = merdiven.";hayır;1;A1 imperativ;Bilde: „Sie bringen die Leiter zurück.“ → Bringen Sie die Leiter zurück
 Lernen;das;öğrenme, ders çalışma;hayır;hayır;;evet;2;A1 artikel, A2 dativ;Schreibe Artikel + Nomen: Lernen (isim olarak) → das Lernen
 Lesen;das;okuma;hayır;hayır;;evet;1;A1 artikel;Schreibe Artikel + Nomen: Lesen (isim olarak) → das Lesen
-Leute;die;insanlar;evet;hayır;;evet;6;B1 relativsaetze;Ergänze: Die Leute, die vor der Tür warten, gehören zur Gruppe.
+Leute;die;insanlar;evet;hayır;;evet;7;A1 perfekt, B1 relativsaetze;Bilde: ich / neue Leute / kennenlernen → Ich habe neue Leute kennengelernt
+Licht;das;ışık;hayır;hayır;;hayır;15;A1 modalverben, A1 trennbare-verben, A1 imperativ;Bilde: ich / das Licht / anmachen / dürfen → Ich darf das Licht anmachen
+Liter;der;litre;hayır;hayır;;hayır;4;A1 w-fragen;Wie viel Wasser trinkst du am Tag? – Zwei Liter.
 Lobby;die;lobi;hayır;hayır;;evet;1;B1 relativsaetze;Die Gäste, die gerade angekommen sind, warten in der Lobby.
-Lösung;die;çözüm;hayır;hayır;;evet;1;A2 dativ;Der Lehrer zeigt den / die Schülern den / die Lösung.
-Mädchen;das;kız çocuk;hayır;hayır;;evet;8;A1 artikel, B1 relativsaetze;das Mädchen wartet vor der Schule.
-Mann;der;"adam; erkek";hayır;hayır;;evet;25;A2 dativ, B1 relativsaetze;Ich helfe dem Mann.
+Lösung;die;çözüm;hayır;hayır;;evet;1;A2 dativ;Der Lehrer zeigt ___ Schülern ___ Lösung. → den / die
+Lust;die;istek, heves (Lust haben: canı istemek);hayır;hayır;;hayır;2;A1 sein-haben, A1 modalverben;Heute habe ich keine Lust, lange zu kochen.
+Mädchen;das;kız çocuk;hayır;hayır;;evet;9;A1 artikel, A1 plural, B1 relativsaetze;das Mädchen wartet vor der Schule.
+Mai;der;mayıs;hayır;hayır;;hayır;10;A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen, A1 trennbare-verben;Wann ist dein Geburtstag? – Am 14. Mai.
+Mal;das;kez, sefer;hayır;hayır;;hayır;1;A1 sein-haben;Meine Kollegen kommen aus Hamburg. Sie sind heute zum ersten Mal hier.
+Mann;der;"adam; erkek";hayır;hayır;;evet;52;A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 praesens, A1 w-fragen, A1 akkusativ, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;Schreibe den Plural: der Mann → Männer
+Mannschaft;die;takım;hayır;hayır;;hayır;1;A1 personalpronomen-akkusativ;Unsere Mannschaft spielt gegen euch. (ihr)
+Mantel;der;palto;hayır;hayır;;hayır;10;A1 personalpronomen-dativ, A1 akkusativ, A1 trennbare-verben, A1 imperativ;Bilde negativ: der Mantel / ich / nicht passen → Der Mantel passt mir nicht
 Markt;der;pazar;hayır;hayır;;evet;3;A1 artikel, B1 relativsaetze;Schreibe Artikel + Nomen: Heute ist der Markt. (Markt)
-März;der;mart;hayır;hayır;;evet;1;A1 artikel;der Frühling beginnt im März.
-Medikament;das;ilaç;hayır;hayır;;evet;1;B1 relativsaetze;Ergänze: Der Patient, dem die Ärztin das Medikament empfohlen hat, wartet draußen.
-Meer;das;deniz;hayır;hayır;;evet;1;B1 relativsaetze;Die Stadt, in die wir nächste Woche fahren, liegt am Meer.
-Minute;die;dakika;hayır;hayır;;evet;2;A1 artikel, B1 relativsaetze;Schreibe Artikel + Nomen: der Bus kommt in fünf Minuten. (Bus)
-Mitarbeiter;der;çalışan (erkek);hayır;hayır;;evet;1;A2 dativ;Bilde: der Chef / die Mitarbeiter / die Regel / erklären. → Der Chef erklärt den Mitarbeitern die Regel
-Mitarbeiterin;die;çalışan (kadın);hayır;hayır;;evet;2;A2 dativ, B1 relativsaetze;Welche Variante ist richtig?      → Der Chef gibt der Mitarbeiterin den Schlüssel.
+März;der;mart;hayır;hayır;;evet;9;A1 artikel, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen;der Frühling beginnt im März.
+Medikament;das;ilaç;hayır;hayır;;evet;4;A1 modalverben, B1 relativsaetze;Ergänze: Mein Vater muss jeden Tag Medikamente nehmen.
+Medizin;die;"tıp; ilaç";hayır;hayır;;hayır;2;A1 modalverben, A1 possessivartikel;Korrigiere: Wann du musst die Medizin nehmen? → Wann musst du die Medizin nehmen
+Meer;das;deniz;hayır;hayır;;evet;3;A1 temporale-praepositionen, A1 modalverben, B1 relativsaetze;Wir fahren im August ans Meer.
+Meeting;das;toplantı;hayır;hayır;;hayır;6;A1 plural, A1 zahlen-uhrzeit-datum, A1 possessivartikel;Ergänze: „Die Meetings beginnen um neun Uhr.“ (Meeting)
+Meter;der;metre;hayır;hayır;;hayır;2;A1 w-fragen;Wie groß bist du? – 1,80 Meter.
+Milch;die;süt;hayır;hayır;;hayır;5;A1 w-fragen, A1 akkusativ, A1 trennbare-verben, A1 lokale-praepositionen;Antwort: Ich kaufe Brot und Milch. – Schreibe die passende Frage. → Was kaufst du?
+Minute;die;dakika;hayır;hayır;;evet;15;A1 artikel, A1 plural, A1 sein-haben, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen, A1 akkusativ, A1 trennbare-verben, B1 relativsaetze;Schreibe Artikel + Nomen: der Bus kommt in fünf Minuten. (Bus)
+Mitarbeiter;der;çalışan (erkek);hayır;hayır;;evet;2;A1 modalverben, A2 dativ;Bilde: çalışanlar / burada sigara içemez / dürfen + nicht → Die Mitarbeiter dürfen hier nicht rauchen
+Mitarbeiterin;die;çalışan (kadın);hayır;hayır;;evet;3;A1 plural, A2 dativ, B1 relativsaetze;Schreibe den Plural: die Mitarbeiterin → Mitarbeiterinnen
+Mittag;der;öğle;hayır;hayır;;hayır;1;A1 temporale-praepositionen;Wir essen am Mittag zusammen.
+Mittagspause;die;öğle arası;hayır;hayır;;hayır;2;A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen;Schreibe vollständig: „Wir / 12:15 / Mittagspause haben“ → Wir haben um zwölf Uhr fünfzehn Mittagspause.
+Mittwoch;der;çarşamba;hayır;hayır;;hayır;2;A1 temporale-praepositionen;Wir treffen uns am Mittwoch.
 Möglichkeit;die;olanak, imkân;hayır;hayır;;evet;3;A1 artikel;die Möglichkeit klingt interessant.
-Monat;der;ay;hayır;hayır;;evet;4;A2 dativ, B1 relativsaetze;Seit zwei Monaten lerne ich Deutsch.
-Montag;der;pazartesi;hayır;hayır;;evet;2;A1 artikel, B1 relativsaetze;Schreibe Artikel + Nomen: Montag → der Montag
+Moment;der;an;hayır;hayır;;hayır;1;A1 imperativ;Welche Form passt zu „Sie“? → Warten Sie einen Moment.
+Monat;der;ay;hayır;hayır;;evet;19;A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen, A1 trennbare-verben, A1 perfekt, A2 dativ, B1 relativsaetze;Wie lange lernst du schon Deutsch? – Seit sechs Monaten.
+Montag;der;pazartesi;hayır;hayır;;evet;17;A1 artikel, A1 sein-haben, A1 praesens, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen, A1 trennbare-verben, B1 relativsaetze;Schreibe Artikel + Nomen: Montag → der Montag
 Motorrad;das;motosiklet;hayır;hayır;;evet;1;A2 dativ;Ergänze: Zwischen den Autos steht ein Motorrad. (die Autos)
-Museum;das;müze;hayır;hayır;;evet;5;A1 artikel, B1 relativsaetze;das Museum öffnet um zehn Uhr.
-Musik;die;müzik;hayır;hayır;;evet;1;A2 dativ;Ersetze 'Lisa': Die Musik gefällt Lisa. → Die Musik gefällt ihr.
-Mutter;die;anne;hayır;hayır;;evet;12;A2 dativ, B1 relativsaetze;Die Suppe schmeckt meiner Mutter sehr gut.
-Nachbar;der;komşu (erkek);hayır;hayır;;evet;8;A2 dativ, B1 relativsaetze;Die Nachbarn helfen uns. Welche Frage passt? → Wem helfen die Nachbarn?
-Nachbarin;die;komşu (kadın);hayır;hayır;;evet;5;A2 dativ, B1 relativsaetze;Ich zeige meiner / den Nachbarin meiner / den Garten.
-Nachricht;die;"mesaj; haber";hayır;hayır;;evet;5;A2 dativ, B1 relativsaetze;Ich habe eine Nachricht von meinem Chef bekommen.
+Mülleimer;der;çöp kovası;hayır;hayır;;hayır;1;A1 plural;Schreibe den Plural: der Mülleimer → Mülleimer
+Museum;das;müze;hayır;hayır;;evet;15;A1 artikel, A1 plural, A1 sein-haben, A1 temporale-praepositionen, A1 akkusativ, A1 modalverben, B1 relativsaetze;das Museum öffnet um zehn Uhr.
+Musik;die;müzik;hayır;hayır;;evet;9;A1 personalpronomen-dativ, A1 praesens, A1 w-fragen, A1 imperativ, A1 perfekt, A2 dativ;Die Musik gefällt uns.
+Mutter;die;anne;hayır;hayır;;evet;52;A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 sein-haben, A1 praesens, A1 w-fragen, A1 akkusativ, A1 modalverben, A1 trennbare-verben, A1 possessivartikel, A1 perfekt, A2 dativ, B1 relativsaetze;Welche Pluralform ist richtig? die Mutter → Mütter
+Nachbar;der;komşu (erkek);hayır;hayır;;evet;25;A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 negation, A1 akkusativ, A1 trennbare-verben, A1 possessivartikel, A2 dativ, B1 relativsaetze;Ergänze: „Die Nachbarn wohnen nebenan.“ (Nachbar)
+Nachbarin;die;komşu (kadın);hayır;hayır;;evet;8;A1 plural, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;Schreibe den Plural: die Nachbarin → Nachbarinnen
+Nachmittag;der;öğleden sonra;hayır;hayır;;hayır;5;A1 sein-haben, A1 praesens, A1 w-fragen, A1 temporale-praepositionen, A1 perfekt;Am Nachmittag hast du Zeit.
+Nachricht;die;"mesaj; haber";hayır;hayır;;evet;9;A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 imperativ, A1 perfekt, A2 dativ, B1 relativsaetze;Ersetze: Ich verstehe die Nachricht nicht. → Ich verstehe sie nicht
+Nacht;die;gece;hayır;hayır;;hayır;5;A1 plural, A1 temporale-praepositionen;Schreibe den Plural: die Nacht → Nächte
 Nachtdienst;der;gece nöbeti;hayır;hayır;;evet;1;B1 relativsaetze;Kennst du den Arzt, der heute Nachtdienst hat?
+Nähe;die;yakınlık (in der Nähe: yakında);hayır;hayır;;hayır;1;A1 trennbare-verben;Meine Freunde sind in der Nähe. Sie ___ kurz ___. → kommen / vorbei
+Name;der;ad, isim;hayır;hayır;;hayır;5;A1 negation, A1 w-fragen, A1 imperativ, A1 possessivartikel;Verneine: „Der Name steht überall.“ → Der Name steht nirgendwo.
 Neffe;der;erkek yeğen;hayır;hayır;;evet;1;B1 relativsaetze;Das Kind, das so laut lacht, ist mein Neffe.
+Nichte;die;kız yeğen;hayır;hayır;;hayır;1;A1 personalpronomen-dativ;Ersetze beide Objekte: Ich kaufe meiner Nichte die Puppe. → Ich kaufe ___ ___. → Ich kaufe sie ihr
 Notiz;die;not;hayır;hayır;;evet;1;A2 dativ;Ergänze: Die Notizen liegen neben den Büchern . (die Bücher)
-Oma;die;büyükanne, nine;hayır;hayır;;evet;1;A2 dativ;Die Oma erzählt den Kindern eine Geschichte.
-Paket;das;paket;hayır;hayır;;evet;5;A2 dativ, B1 relativsaetze;Ergänze: Das Paket ist vom neuen Nachbarn neuen Nachbarn. (der neue Nachbar)
-Park;der;park;hayır;hayır;;evet;1;B1 relativsaetze;Dort ist der Park, wo wir oft joggen.
-Patient;der;hasta (erkek);hayır;hayır;;evet;2;A2 dativ, B1 relativsaetze;Die Ärztin erklärt dem / die Patienten dem / die Behandlung.
+November;der;kasım;hayır;hayır;;hayır;6;A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen;Schreibe den 11. Monat des Jahres. → November
+Nudel;die;makarna (çoğu zaman çoğul: die Nudeln);hayır;hayır;;hayır;2;A1 praesens;A: Was essen die Kinder? B: Nudeln.
+Nummer;die;numara;hayır;hayır;;hayır;2;A1 sein-haben, A1 perfekt;A: Hast du ein Problem mit der Aufgabe? B: Ja, Nummer vier verstehe ich nicht.
+Nuss;die;fındık, ceviz (kuruyemiş);hayır;hayır;;hayır;3;A1 plural;Schreibe den Plural: die Nuss → Nüsse
+Ohr;das;kulak;hayır;hayır;;hayır;1;A1 plural;Schreibe den Plural: das Ohr → Ohren
+Oktober;der;ekim (ay);hayır;hayır;;hayır;6;A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen;Schreibe als Wortgruppe: 10. Oktober → der zehnte Oktober
+Oma;die;büyükanne, nine;hayır;hayır;;evet;20;A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 praesens, A1 akkusativ, A1 modalverben, A1 trennbare-verben, A1 perfekt, A1 lokale-praepositionen, A2 dativ;Bilde: er / seine Oma / besuchen → Pronomen → Er besucht sie
+Onkel;der;amca, dayı;hayır;hayır;;hayır;1;A1 plural;Schreibe den Plural: der Onkel → Onkel
+Operation;die;ameliyat;hayır;hayır;;hayır;1;A1 personalpronomen-dativ;Ergänze: Wie geht es ihr nach der Operation? (sie)
+Päckchen;das;küçük paket;hayır;hayır;;hayır;1;A1 imperativ;Bilde: „Sie geben das Päckchen ab.“ → Geben Sie das Päckchen ab
+Paket;das;paket;hayır;hayır;;evet;8;A1 personalpronomen-akkusativ, A1 w-fragen, A1 imperativ, A2 dativ, B1 relativsaetze;Das Paket ist schon da. Kannst du es bitte öffnen?
+Park;der;park;hayır;hayır;;evet;13;A1 plural, A1 sein-haben, A1 praesens, A1 temporale-praepositionen, A1 akkusativ, A1 modalverben, A1 perfekt, A1 lokale-praepositionen, B1 relativsaetze;Ergänze: „Im Park spielen viele Kinder.“ (Kind)
+Parkplatz;der;otopark, park yeri;hayır;hayır;;hayır;7;A1 personalpronomen-akkusativ, A1 negation, A1 akkusativ;Bilde: er / der Parkplatz / finden → Pronomen → Er findet ihn
+Party;die;parti;hayır;hayır;;hayır;7;A1 personalpronomen-akkusativ, A1 negation, A1 w-fragen, A1 zahlen-uhrzeit-datum;Wir laden dich zur Party ein. (du)
+Pass;der;pasaport;hayır;hayır;;hayır;6;A1 personalpronomen-akkusativ, A1 akkusativ;Ersetze: Ich muss meinen Pass zeigen. → Ich muss ihn zeigen
+Patient;der;hasta (erkek);hayır;hayır;;evet;6;A1 plural, A1 akkusativ, A1 imperativ, A2 dativ, B1 relativsaetze;Schreibe im Plural: „Der Arzt spricht mit dem Patienten.“ → Die Ärzte sprechen mit den Patienten.
+Pause;die;mola, teneffüs;hayır;hayır;;hayır;7;A1 sein-haben, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen, A1 akkusativ, A1 imperativ;Wir haben heute leider keine Pause.
+Pech;das;şanssızlık;hayır;hayır;;hayır;1;A1 sein-haben;Ihr habt wirklich Pech mit dem Wetter.
+Person;die;kişi;hayır;hayır;;hayır;2;A1 zahlen-uhrzeit-datum, A1 modalverben;Antworte vollständig: „Wie viele Personen kommen?“ – 5 → Fünf Personen kommen.
 Personal;das;personel;hayır;hayır;;evet;3;B1 relativsaetze;Die Firma, die neben unserem Büro liegt, sucht Personal.
-Pizza;die;pizza;hayır;hayır;;evet;2;A2 dativ;Die Pizza schmeckt Paul. Welche Frage passt? → Wem schmeckt die Pizza?
-Preis;der;"fiyat; ödül";hayır;hayır;;evet;1;B1 relativsaetze;Der Autor, dessen Roman einen Preis bekommen hat, kommt aus Österreich.
-Problem;das;sorun;hayır;hayır;;evet;4;A1 artikel, A2 dativ, B1 relativsaetze;das Problem ist noch nicht gelöst.
+Pfirsich;der;şeftali;hayır;hayır;;hayır;1;A1 plural;Schreibe den Plural: der Pfirsich → Pfirsiche
+Physik;die;fizik;hayır;hayır;;hayır;1;A1 possessivartikel;Welche Variante ist richtig?       → Unser Sohn studiert Physik.
+Pizza;die;pizza;hayır;hayır;;evet;22;A1 praesens, A1 w-fragen, A1 akkusativ, A1 modalverben, A1 imperativ, A1 perfekt, A2 dativ;Beginne mit „Zu Hause“: zu Hause / du / eine Pizza / essen → Zu Hause isst du eine Pizza.
+Plan;der;plan;hayır;hayır;;hayır;1;A1 temporale-praepositionen;Ab wann gilt der neue Plan? – ab morgen.
+Platz;der;"yer; meydan";hayır;hayır;;hayır;3;A1 imperativ;Bilde: „Sie nehmen Platz.“ → Nehmen Sie Platz
+Podcast;der;podcast;hayır;hayır;;hayır;1;A1 perfekt;Jetzt ___ ich Musik. Gestern ___ ich einen Podcast ___. → höre / habe / gehört
+Post;die;"postane; posta";hayır;hayır;;hayır;1;A1 lokale-praepositionen;Sara geht zur Post. (zur / bei der / aus der)
+Präsentation;die;sunum;hayır;hayır;;hayır;2;A1 perfekt;Bilde: der Chef / die Präsentation / vorbereiten → Der Chef hat die Präsentation vorbereitet
+Preis;der;"fiyat; ödül";hayır;hayır;;evet;2;A1 plural, B1 relativsaetze;Schreibe den Plural: der Preis → Preise
+Problem;das;sorun;hayır;hayır;;evet;11;A1 artikel, A1 personalpronomen-akkusativ, A1 sein-haben, A1 negation, A1 modalverben, A1 perfekt, A2 dativ, B1 relativsaetze;das Problem ist noch nicht gelöst.
 Produkt;das;ürün;hayır;hayır;;evet;2;B1 relativsaetze;Ergänze: Die Kundinnen, denen wir die neuen Produkte gezeigt haben, waren interessiert.
 Professor;der;profesör (erkek);hayır;hayır;;evet;6;A2 dativ, B1 relativsaetze;Der Professor hilft den Studentinnen.
 Professorin;die;profesör (kadın);hayır;hayır;;evet;1;B1 relativsaetze;Die Professorin, deren Seminar ich besuche, forscht zu KI.
-Projekt;das;proje;hayır;hayır;;evet;5;A2 dativ, B1 relativsaetze;Sie spricht mit ihren Kollegen über das Projekt.
-Prüfung;die;sınav;hayır;hayır;;evet;3;B1 relativsaetze;Die Teilnehmer, die die Prüfung bestanden haben, bekommen ein Zertifikat.
-Pullover;der;kazak;hayır;hayır;;evet;1;A2 dativ;Ich schenke meinem / einen Bruder meinem / einen Pullover.
+Projekt;das;proje;hayır;hayır;;evet;6;A1 plural, A2 dativ, B1 relativsaetze;Ergänze: „Wir arbeiten an zwei Projekten.“ (Projekt)
+Prüfung;die;sınav;hayır;hayır;;evet;20;A1 personalpronomen-dativ, A1 sein-haben, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen, A1 modalverben, B1 relativsaetze;Ergänze: Wie geht es dir nach der Prüfung? (du)
+Pullover;der;kazak;hayır;hayır;;evet;3;A1 akkusativ, A2 dativ;Welches Objekt passt? „Ich kaufe einen Pullover.“
+Punkt;der;"nokta; madde";hayır;hayır;;hayır;1;A1 sein-haben;Haben Sie noch eine Frage zu diesem Punkt?
+Puppe;die;oyuncak bebek;hayır;hayır;;hayır;1;A1 personalpronomen-dativ;Ersetze beide Objekte: Ich kaufe meiner Nichte die Puppe. → Ich kaufe ___ ___. → Ich kaufe sie ihr
 Qualität;die;kalite;hayır;hayır;;evet;1;A1 artikel;Schreibe Artikel + Nomen: Qualität → die Qualität
-Rechnung;die;fatura, hesap;hayır;hayır;;evet;3;A1 artikel, A2 dativ, B1 relativsaetze;die Rechnung liegt noch auf dem Tisch.
-Regal;das;raf;hayır;hayır;;evet;1;B1 relativsaetze;Die Bücher, die im Regal stehen, sind neu.
-Regel;die;kural;hayır;hayır;;evet;4;A2 dativ;Kannst du dem / die Kind dem / die Regel erklären?
-Restaurant;das;restoran;hayır;hayır;;evet;4;A1 artikel, B1 relativsaetze;das Restaurant gegenüber ist heute voll.
+Rad;das;"tekerlek; bisiklet";hayır;hayır;;hayır;1;A1 plural;Schreibe den Plural: das Rad → Räder
+Radio;das;radyo;hayır;hayır;;hayır;3;A1 temporale-praepositionen, A1 trennbare-verben;Ich koche und höre gleichzeitig Radio. Ich höre beim Kochen Radio.
+Rauchen;das;sigara içme;hayır;hayır;;hayır;1;A1 imperativ;Ersetze: „Verbieten Sie das Rauchen!“ → Verbieten Sie es
+Raum;der;oda, salon;hayır;hayır;;hayır;2;A1 sein-haben, A1 imperativ;Die beiden Räume sind ungefähr gleich groß.
+Rechnung;die;fatura, hesap;hayır;hayır;;evet;6;A1 artikel, A1 imperativ, A1 perfekt, A2 dativ, B1 relativsaetze;die Rechnung liegt noch auf dem Tisch.
+Regal;das;raf;hayır;hayır;;evet;2;A1 akkusativ, B1 relativsaetze;Petra holt das Buch aus dem Regal.
+Regel;die;kural;hayır;hayır;;evet;7;A1 personalpronomen-dativ, A1 perfekt, A2 dativ;Der Lehrer erklärt uns die Regel.
+Regen;der;yağmur;hayır;hayır;;hayır;1;A1 trennbare-verben;Bilde: der Regen / um zehn Uhr / aufhören → Der Regen hört um zehn Uhr auf
+Regenschirm;der;şemsiye;hayır;hayır;;hayır;4;A1 w-fragen, A1 akkusativ, A1 trennbare-verben;Antwort: Mia nimmt einen Regenschirm mit, es regnet. → Warum nimmt Mia einen Regenschirm mit?
+Region;die;bölge;hayır;hayır;;hayır;1;A1 personalpronomen-dativ;Bilde: die Region / meine Eltern / gefallen → Pronomen → Die Region gefällt ihnen
+Reise;die;seyahat, gezi;hayır;hayır;;hayır;8;A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen, A1 trennbare-verben, A1 imperativ, A1 perfekt;Ordne: wie lange / die Reise / dauern → Wie lange dauert die Reise?
+Restaurant;das;restoran;hayır;hayır;;evet;8;A1 artikel, A1 negation, A1 akkusativ, A1 perfekt, B1 relativsaetze;das Restaurant gegenüber ist heute voll.
 Roman;der;roman;hayır;hayır;;evet;3;B1 relativsaetze;Ergänze passend: Der Roman, der auf dem Tisch liegt, gehört Anna.
 Router;der;modem, yönlendirici;hayır;hayır;;evet;1;B1 relativsaetze;Das ist der Techniker, der heute unseren Router repariert.
 Rücken;der;sırt;hayır;hayır;;evet;1;A2 dativ;Schreibe richtig: Der Rücken / ich / wehtun. → Der Rücken tut mir weh
-Rucksack;der;sırt çantası;hayır;hayır;;evet;1;A1 artikel;der Rucksack ist schwer.
-Samstag;der;cumartesi;hayır;hayır;;evet;1;A2 dativ;Wir ziehen am Samstag um. Kannst du uns helfen?
+Rückfahrt;die;dönüş yolculuğu;hayır;hayır;;hayır;1;A1 akkusativ;Wir brauchen das Ticket für die Rückfahrt.
+Rucksack;der;sırt çantası;hayır;hayır;;evet;2;A1 artikel, A1 akkusativ;der Rucksack ist schwer.
+Salat;der;salata;hayır;hayır;;hayır;3;A1 w-fragen, A1 akkusativ;Antwort: Einen Salat. – Verb: essen / du → Was isst du?
+Samstag;der;cumartesi;hayır;hayır;;evet;31;A1 personalpronomen-akkusativ, A1 praesens, A1 negation, A1 w-fragen, A1 temporale-praepositionen, A1 modalverben, A1 trennbare-verben, A1 perfekt, A1 lokale-praepositionen, A2 dativ;Wir besuchen euch am Samstag. (ihr)
+Satz;der;cümle;hayır;hayır;;hayır;4;A1 plural, A1 imperativ;Schreibe den Plural: der Satz → Sätze
+Schal;der;atkı, şal;hayır;hayır;;hayır;1;A1 personalpronomen-dativ;Ersetze: Anna schenkt ihrer Mutter den Schal. → Anna schenkt ___ ___. → Anna schenkt ihn ihr
+Schlafen;das;uyuma;hayır;hayır;;hayır;1;A1 trennbare-verben;Welche Variante ist richtig? → Sie schaltet vor dem Schlafen das Licht aus.
 Schlafzimmer;das;yatak odası;hayır;hayır;;evet;1;A1 artikel;das Schlafzimmer ist groß.
-Schlüssel;der;anahtar;hayır;hayır;;evet;3;A1 artikel, A2 dativ;Wo ist der Schlüssel für die Haustür?
+Schloss;das;"şato; kilit";hayır;hayır;;hayır;1;A1 plural;Schreibe den Plural: das Schloss → Schlösser
+Schlüssel;der;anahtar;hayır;hayır;;evet;41;A1 artikel, A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 praesens, A1 negation, A1 w-fragen, A1 akkusativ, A1 trennbare-verben, A1 imperativ, A1 possessivartikel, A1 perfekt, A1 lokale-praepositionen, A2 dativ;Wo ist der Schlüssel für die Haustür?
 Schmerz;der;ağrı;hayır;hayır;;evet;1;A2 dativ;Ich habe Schmerzen am Knie. Welcher Satz passt? → Das Knie tut mir weh.
+Schmutz;der;kir;hayır;hayır;;hayır;1;A1 imperativ;Bilde: „Ihr wischt den Schmutz ab.“ → Wischt den Schmutz ab
 Schönste;das;en güzel şey;hayır;hayır;;evet;1;B1 relativsaetze;Das Schönste, was wir im Urlaub gesehen haben, war der Sonnenuntergang.
-Schuh;der;ayakkabı;hayır;hayır;;evet;1;A2 dativ;Die Schuhe haben die richtige Größe. Welcher Satz passt? → Die Schuhe passen mir.
-Schule;die;okul;hayır;hayır;;evet;5;A1 artikel, B1 relativsaetze;das Mädchen wartet vor der Schule.
-Schüler;der;öğrenci (erkek);hayır;hayır;;evet;7;A2 dativ;Der Schüler antwortet dem Lehrer.
+Schrank;der;dolap;hayır;hayır;;hayır;3;A1 plural;Ergänze: „Im Schrank hängen viele Jacken.“ (Jacke)
+Schreibtisch;der;çalışma masası;hayır;hayır;;hayır;2;A1 possessivartikel;Wo hast du deinen Schreibtisch gekauft?
+Schuh;der;ayakkabı;hayır;hayır;;evet;16;A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 akkusativ, A1 trennbare-verben, A1 imperativ, A1 possessivartikel, A2 dativ;Schreibe den Plural: der Schuh → Schuhe
+Schule;die;okul;hayır;hayır;;evet;20;A1 artikel, A1 sein-haben, A1 praesens, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 possessivartikel, A1 perfekt, A1 lokale-praepositionen, B1 relativsaetze;das Mädchen wartet vor der Schule.
+Schüler;der;öğrenci (erkek);hayır;hayır;;evet;25;A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 sein-haben, A1 praesens, A1 akkusativ, A1 modalverben, A1 trennbare-verben, A2 dativ;Ergänze: „Die Schüler sitzen im Kursraum.“ (Schüler)
+Schülerin;die;öğrenci (kadın);hayır;hayır;;hayır;1;A1 plural;Schreibe den Plural: die Schülerin → Schülerinnen
 Schultasche;die;okul çantası;hayır;hayır;;evet;1;A1 artikel;die Schultasche ist schwer.
-Schweiz;die;İsviçre;hayır;hayır;;evet;2;A2 dativ;Der Zug kommt aus der Schweiz.
-Schwester;die;kız kardeş;hayır;hayır;;evet;14;A2 dativ, B1 relativsaetze;Das Fahrrad gehört meiner Schwester.
+Schüssel;die;kâse;hayır;hayır;;hayır;1;A1 plural;Ergänze: „In der Küche stehen viele Schüsseln.“ (Schüssel)
+Schweiz;die;İsviçre;hayır;hayır;;evet;3;A1 w-fragen, A2 dativ;Antwort: Anna fliegt in die Schweiz. → Wohin fliegt Anna?
+Schwester;die;kız kardeş;hayır;hayır;;evet;57;A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 sein-haben, A1 praesens, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 akkusativ, A1 modalverben, A1 trennbare-verben, A1 imperativ, A1 possessivartikel, A1 perfekt, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;Meine Schwester wohnt in Köln. Ich besuche sie am Wochenende.
+Schwimmbad;das;yüzme havuzu;hayır;hayır;;hayır;1;A1 modalverben;A: Was macht ihr heute? B: Wir wollen ins Schwimmbad gehen.
 Schwimmen;das;yüzme;hayır;hayır;;evet;1;A1 artikel;Schreibe Artikel + Nomen: Schwimmen (isim olarak) → das Schwimmen
-See;der;göl;hayır;hayır;"die See = deniz; bu cümlelerde (am See, zum See) der See = göl.";evet;2;A2 dativ, B1 relativsaetze;Ergänze: Am Wochenende fahren wir zum See See.
+See;der;göl;hayır;hayır;"die See = deniz; bu cümlelerde (am See, zum See) der See = göl.";evet;5;A1 akkusativ, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;Ergänze: Wir gehen um den See den See.
+Seite;die;"sayfa; yan, taraf";hayır;hayır;;hayır;3;A1 modalverben, A1 lokale-praepositionen;Ihr sollt zuerst Seite zehn lesen. (sollen)
+Sekretärin;die;sekreter (kadın);hayır;hayır;;hayır;1;A1 akkusativ;Bilde: Sekreter bir randevu ayarlıyor. (ein Termin) → Die Sekretärin macht einen Termin
 Seminar;das;seminer;hayır;hayır;;evet;2;B1 relativsaetze;Die Kolleginnen, mit denen wir zum Seminar fahren, kommen später.
-Sohn;der;oğul;hayır;hayır;;evet;3;A2 dativ, B1 relativsaetze;Bilde: ich / mein Sohn / ein Eis / kaufen. → Ich kaufe meinem Sohn ein Eis
-Sommer;der;yaz;hayır;hayır;;evet;2;A1 artikel;Schreibe Artikel + Nomen: Sommer → der Sommer
+Sender;der;(TV/radyo) kanal;hayır;hayır;;hayır;1;A1 imperativ;Ersetze: „Ändere den Sender!“ → Ändere ihn
+September;der;eylül;hayır;hayır;;hayır;8;A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen;Schreibe den 9. Monat des Jahres. → September
+Sofa;das;kanepe;hayır;hayır;;hayır;6;A1 plural, A1 w-fragen, A1 lokale-praepositionen;Ergänze: „Im Wohnzimmer stehen zwei Sofas.“ (Sofa)
+Sohn;der;oğul;hayır;hayır;;evet;10;A1 plural, A1 personalpronomen-dativ, A1 akkusativ, A1 possessivartikel, A2 dativ, B1 relativsaetze;Ergänze: „Ihre drei Söhne studieren noch.“ (Sohn)
+Sommer;der;yaz;hayır;hayır;;evet;11;A1 artikel, A1 plural, A1 praesens, A1 w-fragen, A1 temporale-praepositionen, A1 modalverben, A1 lokale-praepositionen;Schreibe Artikel + Nomen: Sommer → der Sommer
+Sonne;die;güneş;hayır;hayır;;hayır;2;A1 negation, A1 modalverben;Schreibe das Gegenteil: „Die Sonne scheint.“ → Die Sonne scheint nicht.
 Sonnenuntergang;der;gün batımı;hayır;hayır;;evet;1;B1 relativsaetze;Das Schönste, was wir im Urlaub gesehen haben, war der Sonnenuntergang.
-Sonntag;der;pazar (gün);hayır;hayır;;evet;1;B1 relativsaetze;Welcher Satz ist richtig? → Das ist ein Restaurant, das am Sonntag geöffnet ist.
-Speisekarte;die;yemek listesi, menü;hayır;hayır;;evet;1;A2 dativ;Wir geben den / die Gästen den / die Speisekarte.
-Spiel;das;"oyun; maç";hayır;hayır;;evet;1;A2 dativ;Ersetze: Das Spiel gefällt dem Kind. → Das Spiel gefällt ihm.
-Stadt;die;şehir;hayır;hayır;;evet;11;A1 artikel, A2 dativ, B1 relativsaetze;die Städte sind sehr alt.
+Sonntag;der;pazar (gün);hayır;hayır;;evet;20;A1 plural, A1 personalpronomen-akkusativ, A1 negation, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen, A1 akkusativ, A1 trennbare-verben, A1 perfekt, A1 lokale-praepositionen, B1 relativsaetze;Ergänze: „Die Banken sind am Sonntag geschlossen.“ (Bank)
+Speisekarte;die;yemek listesi, menü;hayır;hayır;;evet;1;A2 dativ;Wir geben ___ Gästen ___ Speisekarte. → den / die
+Spiegel;der;ayna;hayır;hayır;;hayır;1;A1 plural;Ergänze: „Im Bad gibt es zwei Spiegel.“ (Spiegel)
+Spiel;das;"oyun; maç";hayır;hayır;;evet;4;A1 personalpronomen-dativ, A1 trennbare-verben, A2 dativ;Das Spiel gefällt dem Kind. Es gefällt ihm.
+Spielplatz;der;oyun parkı;hayır;hayır;;hayır;1;A1 plural;Ergänze: „Auf dem Spielplatz sind ___ und ___.“ (Kind / Mutter) → Kinder und Mütter
+Spielsachen;die;oyuncaklar;evet;hayır;;hayır;1;A1 personalpronomen-dativ;Bilde: wir / die Kinder / die Spielsachen / zurückgeben → Pronomen → Wir geben ihnen die Spielsachen zurück
+Sport;der;spor;hayır;hayır;;hayır;7;A1 sein-haben, A1 w-fragen, A1 modalverben;Nach dem Sport habe ich großen Hunger.
+Sprachkurs;der;dil kursu;hayır;hayır;;hayır;1;A1 temporale-praepositionen;Wie lange buchst du den Sprachkurs? – für zwei Wochen.
+Stadion;das;stadyum;hayır;hayır;;hayır;2;A1 plural;Schreibe den Plural: das Stadion → Stadien
+Stadt;die;şehir;hayır;hayır;;evet;16;A1 artikel, A1 plural, A2 dativ, B1 relativsaetze;die Städte sind sehr alt.
 Stadtzentrum;das;şehir merkezi;hayır;hayır;;evet;1;A1 artikel;die Universität liegt im Stadtzentrum.
-Station;die;"istasyon; (hastanede) servis";hayır;hayır;;evet;1;A1 artikel;Schreibe Artikel + Nomen: Station → die Station
+Station;die;"istasyon; (hastanede) servis";hayır;hayır;;evet;2;A1 artikel, A1 trennbare-verben;Schreibe Artikel + Nomen: Station → die Station
 Stelle;die;"iş, pozisyon; yer";hayır;hayır;;evet;2;A1 artikel, B1 relativsaetze;Für diese Stelle ist die Erfahrung sehr wichtig.
-Stift;der;kalem;hayır;hayır;;evet;1;A2 dativ;A: Wo ist mein Stift? B: Ich gebe ihn dir gleich ihn dir.
+Stift;der;kalem;hayır;hayır;;evet;8;A1 personalpronomen-dativ, A1 sein-haben, A1 praesens, A1 w-fragen, A1 imperativ, A2 dativ;Bilde: die Stifte / die Kinder / gehören → Pronomen → Die Stifte gehören ihnen
 Stipendium;das;burs;hayır;hayır;;evet;1;B1 relativsaetze;Die Studentin, die der Professor gelobt hat, bekommt ein Stipendium.
 Stock;der;kat;hayır;hayır;;evet;4;A1 artikel, B1 relativsaetze;die Wohnung im dritten Stock ist sehr hell.
-Straße;die;cadde, sokak;hayır;hayır;;evet;2;A1 artikel, B1 relativsaetze;Schreibe Artikel + Nomen: die Straße ist heute gesperrt. (Straße)
-Student;der;üniversite öğrencisi (erkek);hayır;hayır;;evet;5;A2 dativ, B1 relativsaetze;Bilde die Frage zum Dativobjekt: Der Lehrer hilft den Studenten. → Wem hilft der Lehrer?
-Studentin;die;üniversite öğrencisi (kadın);hayır;hayır;;evet;3;A2 dativ, B1 relativsaetze;Der Professor hilft den Studentinnen.
-Stuhl;der;sandalye;hayır;hayır;;evet;1;A1 artikel;der Stuhl ist kaputt.
-Supermarkt;der;süpermarket;hayır;hayır;;evet;1;A1 artikel;Schreibe Artikel + Nomen: Neben der Bank ist der Supermarkt. (Supermarkt)
-Suppe;die;çorba;hayır;hayır;;evet;5;A2 dativ, B1 relativsaetze;A: Schmeckt den Kindern die Suppe? B: Ja, sie schmeckt ihnen.
+Straße;die;cadde, sokak;hayır;hayır;;evet;7;A1 artikel, A1 plural, A1 akkusativ, A1 imperativ, B1 relativsaetze;Schreibe Artikel + Nomen: die Straße ist heute gesperrt. (Straße)
+Straßenseite;die;yolun tarafı;hayır;hayır;;hayır;2;A1 lokale-praepositionen;Die Bank liegt auf der anderen Straßenseite, direkt gegenüber der Schule. (gegenüber / durch / um)
+Student;der;üniversite öğrencisi (erkek);hayır;hayır;;evet;11;A1 plural, A1 personalpronomen-dativ, A1 sein-haben, A1 zahlen-uhrzeit-datum, A2 dativ, B1 relativsaetze;Schreibe den Plural: der Student → Studenten
+Studentin;die;üniversite öğrencisi (kadın);hayır;hayır;;evet;6;A1 plural, A2 dativ, B1 relativsaetze;Schreibe den Plural: die Studentin → Studentinnen
+Studium;das;üniversite eğitimi;hayır;hayır;;hayır;1;A1 w-fragen;Antwort: Ich lerne Deutsch für mein Studium. → Warum lernst du Deutsch?
+Stuhl;der;sandalye;hayır;hayır;;evet;9;A1 artikel, A1 plural, A1 perfekt, A1 lokale-praepositionen;der Stuhl ist kaputt.
+Stunde;die;"saat (süre); ders saati";hayır;hayır;;hayır;11;A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen, A1 perfekt;Wie lange dauert der Film? – Zwei Stunden.
+Stundenplan;der;ders programı;hayır;hayır;;hayır;1;A1 temporale-praepositionen;Ab wann gilt der neue Stundenplan? – Ab nächstem Montag.
+Supermarkt;der;süpermarket;hayır;hayır;;evet;5;A1 artikel, A1 plural, A1 w-fragen, A1 trennbare-verben;Schreibe Artikel + Nomen: Neben der Bank ist der Supermarkt. (Supermarkt)
+Suppe;die;çorba;hayır;hayır;;evet;21;A1 personalpronomen-dativ, A1 praesens, A1 akkusativ, A1 imperativ, A1 perfekt, A2 dativ, B1 relativsaetze;Die Suppe schmeckt den Kindern nicht. Sie schmeckt ihnen zu salzig.
 System;das;sistem;hayır;hayır;;evet;1;A2 dativ;Formell ersetzen: Ich erkläre Ihnen das System. → Ich erkläre es Ihnen
-Tante;die;teyze, hala;hayır;hayır;;evet;1;B1 relativsaetze;Die Frau, der ich zum Geburtstag gratuliert habe, ist meine Tante.
-Tasche;die;çanta;hayır;hayır;;evet;3;A2 dativ;A: Gehört die Tasche der Frau? B: Ja, sie gehört ihr.
-Team;das;takım, ekip;hayır;hayır;;evet;1;A2 dativ;Ergänze: Wir arbeiten mit den Teams zusammen. (die Teams)
-Techniker;der;teknisyen (erkek);hayır;hayır;;evet;1;B1 relativsaetze;Das ist der Techniker, der heute unseren Router repariert.
-Teilnehmer;der;katılımcı (erkek);hayır;hayır;;evet;2;B1 relativsaetze;Die Teilnehmer, die die Prüfung bestanden haben, bekommen ein Zertifikat.
+Tag;der;gün;hayır;hayır;;hayır;23;A1 plural, A1 personalpronomen-akkusativ, A1 sein-haben, A1 praesens, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen, A1 akkusativ, A1 modalverben, A1 trennbare-verben, A1 perfekt;Schreibe den Plural: der Tag → Tage
+Tante;die;teyze, hala;hayır;hayır;;evet;7;A1 personalpronomen-akkusativ, A1 w-fragen, A1 akkusativ, A1 perfekt, A1 lokale-praepositionen, B1 relativsaetze;Ich besuche sie. → Ich besuche die Tante . (die Tante)
+Tasche;die;çanta;hayır;hayır;;evet;21;A1 plural, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 sein-haben, A1 praesens, A1 negation, A1 w-fragen, A1 akkusativ, A1 trennbare-verben, A1 lokale-praepositionen, A2 dativ;Ergänze den Plural: eine Tasche → zwei Taschen
+Taschenlampe;die;el feneri;hayır;hayır;;hayır;3;A1 negation;Verneine: „Ich habe eine Taschenlampe.“ → Ich habe keine Taschenlampe.
+Tasse;die;fincan;hayır;hayır;;hayır;1;A1 akkusativ;Ergänze: Paul stellt die Tasse auf den Tisch.
+Taxi;das;taksi;hayır;hayır;;hayır;7;A1 plural, A1 akkusativ, A1 imperativ;Schreibe den Plural: das Taxi → Taxis
+Team;das;takım, ekip;hayır;hayır;;evet;2;A1 plural, A2 dativ;Schreibe den Plural: das Team → Teams
+Techniker;der;teknisyen (erkek);hayır;hayır;;evet;2;A1 perfekt, B1 relativsaetze;Der Techniker hat meinen Laptop repariert.
+Tee;der;çay;hayır;hayır;;hayır;10;A1 praesens, A1 w-fragen, A1 temporale-praepositionen, A1 akkusativ, A1 imperativ;A: Was trinkst du? B: Einen Tee.
+Teilnehmer;der;katılımcı (erkek);hayır;hayır;;evet;3;A1 sein-haben, B1 relativsaetze;Die Teilnehmer haben noch einige Fragen.
+Telefon;das;telefon;hayır;hayır;;hayır;1;A1 personalpronomen-akkusativ;A: Frau Meier ist am Telefon. B: Ich spreche gleich mit ihr. A: Rufst du sie später zurück?
+Telefonnummer;die;telefon numarası;hayır;hayır;;hayır;1;A1 possessivartikel;Frau Weber, wie ist Ihre Telefonnummer?
+Teller;der;tabak;hayır;hayır;;hayır;3;A1 plural, A1 imperativ;Ergänze: „Im Schrank sind viele Teller.“ (Teller)
 Temperatur;die;sıcaklık;hayır;hayır;;evet;1;B1 relativsaetze;Das Gerät, mit dem man die Temperatur misst, ist neu.
+Tennis;das;tenis;hayır;hayır;;hayır;1;A1 modalverben;A: Kannst du gut Tennis spielen? B: Ja, ziemlich gut.
 Teppich;der;halı;hayır;hayır;;evet;1;A1 artikel;der Teppich im Wohnzimmer ist neu.
-Termin;der;randevu;hayır;hayır;;evet;1;B1 relativsaetze;Der Mann, der vorhin angerufen hat, möchte einen Termin.
+Termin;der;randevu;hayır;hayır;;evet;43;A1 personalpronomen-akkusativ, A1 sein-haben, A1 negation, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen, A1 akkusativ, A1 modalverben, A1 trennbare-verben, A1 imperativ, B1 relativsaetze;Ich habe den Termin. Ich brauche ihn jetzt.
 Terminplanung;die;randevu planlaması;hayır;hayır;;evet;1;A2 dativ;Formell: Ich helfe Ihnen bei Ihrer Terminplanung Terminplanung. (Ihr)
-Thema;das;konu;hayır;hayır;;evet;2;B1 relativsaetze;Das Thema, über das wir gestern gesprochen haben, ist kompliziert.
-Tisch;der;masa;hayır;hayır;;evet;11;A1 artikel, A2 dativ, B1 relativsaetze;die Rechnung liegt noch auf dem Tisch.
-Tochter;die;kız evlat;hayır;hayır;;evet;3;B1 relativsaetze;Das ist der Mann, dessen Tochter in meiner Klasse ist.
+Test;der;test;hayır;hayır;;hayır;3;A1 plural, A1 sein-haben, A1 perfekt;Ergänze: „Die Schüler schreiben einen Test.“ (Schüler)
+Text;der;metin;hayır;hayır;;hayır;19;A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 praesens, A1 akkusativ, A1 modalverben, A1 imperativ, A1 perfekt;Antworte: Was liest du? – den Text. → Ich lese ihn
+Thema;das;konu;hayır;hayır;;evet;3;A1 plural, B1 relativsaetze;Schreibe den Plural: das Thema → Themen
+Ticket;das;bilet;hayır;hayır;;hayır;22;A1 plural, A1 personalpronomen-akkusativ, A1 w-fragen, A1 akkusativ, A1 modalverben, A1 perfekt;Ergänze: „Wir kaufen drei Tickets.“ (Ticket)
+Tisch;der;masa;hayır;hayır;;evet;37;A1 artikel, A1 plural, A1 personalpronomen-akkusativ, A1 w-fragen, A1 akkusativ, A1 modalverben, A1 trennbare-verben, A1 imperativ, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;die Rechnung liegt noch auf dem Tisch.
+Tischplatte;die;masa tablası;hayır;hayır;;hayır;1;A1 lokale-praepositionen;Das Buch liegt oben auf der Tischplatte. Es liegt auf dem Tisch.
+Tochter;die;kız evlat;hayır;hayır;;evet;10;A1 plural, A1 possessivartikel, B1 relativsaetze;Ergänze: „Die Töchter spielen im Garten.“ (Tochter)
 Toilette;die;tuvalet;hayır;hayır;;evet;1;A1 artikel;Schreibe Artikel + Nomen: Wo ist die Toilette? (Toilette)
-Trainer;der;antrenör (erkek);hayır;hayır;;evet;3;B1 relativsaetze;Das ist der Trainer, der jeden Montag den Kurs leitet.
-Tür;die;kapı;hayır;hayır;;evet;3;A1 artikel, B1 relativsaetze;die Tür ist offen.
-Türkei;die;Türkiye;hayır;hayır;;evet;1;A2 dativ;Sie kommt aus der Türkei.
-Uhr;die;saat;hayır;hayır;;evet;5;A1 artikel, A2 dativ, B1 relativsaetze;das Museum öffnet um zehn Uhr.
+Tomate;die;domates;hayır;hayır;;hayır;1;A1 plural;Ergänze: „Wir brauchen zwei Tomaten.“ (Tomate)
+Tor;das;"kapı (bahçe, garaj); gol";hayır;hayır;;hayır;2;A1 imperativ;Bilde: „Sie schließen das Tor auf.“ → Schließen Sie das Tor auf
+Tourist;der;turist (erkek);hayır;hayır;;hayır;1;A1 negation;Schreibe das Gegenteil: „Die Touristen gehen schwimmen.“ → Die Touristen gehen nicht schwimmen.
+Trainer;der;antrenör (erkek);hayır;hayır;;evet;4;A1 possessivartikel, B1 relativsaetze;Wir kennen euren neuen Trainer noch nicht.
+Tunnel;der;tünel;hayır;hayır;;hayır;2;A1 lokale-praepositionen;Der Bus fährt durch den Tunnel: auf einer Seite hinein, auf der anderen hinaus. (durch / um / bei)
+Tür;die;kapı;hayır;hayır;;evet;23;A1 artikel, A1 plural, A1 personalpronomen-akkusativ, A1 praesens, A1 negation, A1 modalverben, A1 trennbare-verben, A1 imperativ, A1 perfekt, A1 lokale-praepositionen, B1 relativsaetze;die Tür ist offen.
+Türkei;die;Türkiye;hayır;hayır;;evet;3;A1 w-fragen, A1 lokale-praepositionen, A2 dativ;Woher kommst du? – Aus der Türkei.
+Übung;die;alıştırma;hayır;hayır;;hayır;1;A1 personalpronomen-dativ;Der Lehrer gibt mir eine zusätzliche Übung.
+Uhr;die;saat;hayır;hayır;;evet;145;A1 artikel, A1 plural, A1 sein-haben, A1 praesens, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen, A1 modalverben, A1 trennbare-verben, A1 perfekt, A2 dativ, B1 relativsaetze;das Museum öffnet um zehn Uhr.
 Umzug;der;taşınma;hayır;hayır;;evet;1;A2 dativ;Ich helfe meinem Bruder beim Umzug.
+Uni;die;üniversite (kısaca);hayır;hayır;;hayır;2;A1 w-fragen, A1 perfekt;Antwort: Ich fahre mit dem Fahrrad zur Uni. – Schreibe die passende Frage. → Wie fährst du zur Uni?
 Universität;die;üniversite;hayır;hayır;;evet;4;A1 artikel, B1 relativsaetze;die Universität liegt im Stadtzentrum.
 Unsinn;der;saçmalık;hayır;hayır;;evet;1;A2 dativ;Er erzählt oft Unsinn. Ich glaube ihm nicht.
-Unterlagen;die;belgeler, evrak;evet;hayır;;evet;1;B1 relativsaetze;Der Mann, dem ich die Unterlagen geschickt habe, wartet auf Antwort.
+Unterlagen;die;belgeler, evrak;evet;hayır;;evet;5;A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, B1 relativsaetze;Ersetze: Sie bringt die Unterlagen mit. → Sie bringt sie mit
 Unternehmen;das;şirket, işletme;hayır;hayır;;evet;2;B1 relativsaetze;Das Unternehmen, dessen Produkte weltweit verkauft werden, wächst schnell.
-Unterricht;der;ders;hayır;hayır;;evet;2;A1 artikel, A2 dativ;der Unterricht beginnt um neun Uhr.
+Unterricht;der;ders;hayır;hayır;;evet;14;A1 artikel, A1 sein-haben, A1 w-fragen, A1 temporale-praepositionen, A1 trennbare-verben, A2 dativ;der Unterricht beginnt um neun Uhr.
 Unterstützung;die;destek;hayır;hayır;;evet;1;A2 dativ;Ich danke Ihnen für Ihre Unterstützung.
-Urlaub;der;tatil;hayır;hayır;;evet;3;B1 relativsaetze;Ergänze: Die Nachbarn, denen ich manchmal die Pakete bringe, sind im Urlaub.
-Vater;der;baba;hayır;hayır;;evet;4;A1 artikel, A2 dativ;Schreibe Artikel + Nomen: Vater → der Vater
+Urlaub;der;tatil;hayır;hayır;;evet;12;A1 negation, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen, A1 trennbare-verben, B1 relativsaetze;Verneine: „Anna hat Urlaub.“ → Anna hat keinen Urlaub.
+Vase;die;vazo;hayır;hayır;;hayır;1;A1 imperativ;Ersetze: „Verkauft die Vase!“ → Verkauft sie
+Vater;der;baba;hayır;hayır;;evet;32;A1 artikel, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 sein-haben, A1 praesens, A1 w-fragen, A1 akkusativ, A1 modalverben, A1 trennbare-verben, A1 possessivartikel, A2 dativ;Schreibe Artikel + Nomen: Vater → der Vater
+Verkauf;der;satış;hayır;hayır;;hayır;1;A1 temporale-praepositionen;Ab wann beginnt der Verkauf? – ab nächster Woche.
 Verkäufer;der;satıcı (erkek);hayır;hayır;;evet;1;A2 dativ;Der Verkäufer antwortet keinem Kunden.
+Verkäuferin;die;satıcı (kadın);hayır;hayır;;hayır;2;A1 plural, A1 personalpronomen-dativ;Schreibe den Plural: die Verkäuferin → Verkäuferinnen
 Verkehr;der;trafik;hayır;hayır;;evet;1;A1 artikel;der Verkehr ist heute sehr stark.
-Vertrag;der;sözleşme;hayır;hayır;;evet;2;A2 dativ;Welche Variante ist richtig?  → Sie zeigt der Kundin den Vertrag.
-Wasser;das;su;hayır;hayır;;evet;1;A1 artikel;Schreibe Artikel + Nomen: Wasser → das Wasser
+Vertrag;der;sözleşme;hayır;hayır;;evet;7;A1 personalpronomen-dativ, A1 zahlen-uhrzeit-datum, A1 modalverben, A1 imperativ, A2 dativ;Die Verkäuferin erklärt dem Kunden den Vertrag. Sie erklärt ihm auch die Kosten.
+Video;das;video;hayır;hayır;;hayır;1;A1 personalpronomen-dativ;Ich zeige meiner Schwester die Fotos. Ich zeige ihr auch das Video.
+Viertel;das;"çeyrek; semt";hayır;hayır;;hayır;10;A1 plural, A1 w-fragen, A1 zahlen-uhrzeit-datum;Ergänze: „In diesem Viertel gibt es viele Läden.“ (Laden)
+Vogel;der;kuş;hayır;hayır;;hayır;1;A1 plural;Ergänze: „Im Wald sehen wir ___ und ___.“ (Baum / Vogel) → Bäume und Vögel
+Vormittag;der;öğleden önce;hayır;hayır;;hayır;1;A1 sein-haben;A: Haben Sie morgen Vormittag Zeit? B: Ja, um zehn Uhr.
+Wagen;der;araba;hayır;hayır;;hayır;2;A1 imperativ;Ersetze das Objekt: „Kaufen Sie den Wagen!“ → Kaufen Sie ihn
+Wald;der;orman;hayır;hayır;;hayır;3;A1 plural;Schreibe den Plural: der Wald → Wälder
+Wand;die;duvar;hayır;hayır;;hayır;5;A1 akkusativ, A1 lokale-praepositionen;Ergänze: Wir hängen das Bild an die Wand.
+Wasser;das;su;hayır;hayır;;evet;14;A1 artikel, A1 personalpronomen-dativ, A1 praesens, A1 w-fragen, A1 modalverben;Schreibe Artikel + Nomen: Wasser → das Wasser
 Wasserflasche;die;su şişesi;hayır;hayır;;evet;1;A1 artikel;die Wasserflasche ist leer.
-Weg;der;yol;hayır;hayır;;evet;2;A2 dativ;Welche Variante ist richtig?    → Kannst du uns den Weg zeigen?
+Wecker;der;çalar saat;hayır;hayır;;hayır;1;A1 trennbare-verben;Mein Wecker klingelt um sechs. Dann ___ ich sofort ___. → stehe / auf
+Weg;der;yol;hayır;hayır;;evet;7;A1 personalpronomen-dativ, A1 negation, A2 dativ;Kannst du uns bitte den Weg zeigen?
+Wein;der;şarap;hayır;hayır;;hayır;1;A1 imperativ;Ersetze: „Probiert den Wein!“ → Probiert ihn
 Werkstatt;die;atölye, tamirhane;hayır;hayır;;evet;1;B1 relativsaetze;Dort ist die Werkstatt, wohin ich mein Fahrrad bringe.
-Wetter;das;hava (durumu);hayır;hayır;;evet;1;A2 dativ;Ergänze: Bei schlechtem Wetter schlechtem Wetter bleiben wir zu Hause.
+Werkzeug;das;alet, alet takımı;hayır;hayır;;hayır;2;A1 personalpronomen-dativ, A1 imperativ;Das Werkzeug gehört dem Nachbarn. → Es gehört ihm.
+Wetter;das;hava (durumu);hayır;hayır;;evet;4;A1 sein-haben, A1 w-fragen, A2 dativ;Ihr habt wirklich Pech mit dem Wetter.
 Wichtigste;das;en önemli şey;hayır;hayır;;evet;1;B1 relativsaetze;Ergänze: Das Wichtigste, was du brauchst, ist Geduld.
-Winter;der;kış;hayır;hayır;;evet;1;A1 artikel;Schreibe Artikel + Nomen: Winter → der Winter
-Woche;die;hafta;hayır;hayır;;evet;3;B1 relativsaetze;Der Kurs, an dem ich teilnehme, dauert acht Wochen.
-Wochenende;das;hafta sonu;hayır;hayır;;evet;3;A2 dativ, B1 relativsaetze;Ergänze: Am Wochenende fahren wir zum See See.
-Wohnung;die;daire, ev;hayır;hayır;;evet;6;A1 artikel, A2 dativ, B1 relativsaetze;die Wohnung im dritten Stock ist sehr hell.
-Wohnzimmer;das;oturma odası;hayır;hayır;;evet;2;A1 artikel;der Teppich im Wohnzimmer ist neu.
-Wörterbuch;das;sözlük;hayır;hayır;;evet;2;A1 artikel;das Wörterbuch ist auf dem Tisch.
+Wiederholung;die;tekrar;hayır;hayır;;hayır;1;A1 sein-haben;Heute haben wir genug Zeit für eine Wiederholung.
+Winter;der;kış;hayır;hayır;;evet;3;A1 artikel, A1 temporale-praepositionen;Schreibe Artikel + Nomen: Winter → der Winter
+Woche;die;hafta;hayır;hayır;;evet;27;A1 plural, A1 personalpronomen-akkusativ, A1 sein-haben, A1 w-fragen, A1 temporale-praepositionen, A1 modalverben, A1 perfekt, B1 relativsaetze;Schreibe den Plural: die Woche → Wochen
+Wochenende;das;hafta sonu;hayır;hayır;;evet;22;A1 plural, A1 personalpronomen-akkusativ, A1 w-fragen, A1 temporale-praepositionen, A1 akkusativ, A1 modalverben, A1 perfekt, A2 dativ, B1 relativsaetze;Ergänze: „Unsere Freunde kommen am Wochenende.“ (Freund)
+Wochentag;der;hafta içi gün, haftanın günü;hayır;hayır;;hayır;2;A1 zahlen-uhrzeit-datum;Welcher Wochentag kommt nach Montag? → Dienstag
+Wohnung;die;daire, ev;hayır;hayır;;evet;19;A1 artikel, A1 plural, A1 personalpronomen-dativ, A1 temporale-praepositionen, A1 trennbare-verben, A1 possessivartikel, A1 perfekt, A2 dativ, B1 relativsaetze;die Wohnung im dritten Stock ist sehr hell.
+Wohnzimmer;das;oturma odası;hayır;hayır;;evet;3;A1 artikel, A1 plural;der Teppich im Wohnzimmer ist neu.
+Workshop;der;atölye çalışması;hayır;hayır;;hayır;1;A1 zahlen-uhrzeit-datum;Schreibe den Workshop vollständig: 25.11., 16:40 → Der Workshop beginnt am fünfundzwanzigsten November um sechzehn Uhr vierzig.
+Wort;das;kelime;hayır;hayır;;hayır;7;A1 plural, A1 praesens, A1 modalverben, A1 imperativ;Ergänze: „Sie schreibt ___ und ___.“ (Wort / Satz) → Wörter und Sätze
+Wörterbuch;das;sözlük;hayır;hayır;;evet;5;A1 artikel, A1 personalpronomen-akkusativ, A1 personalpronomen-dativ, A1 akkusativ;das Wörterbuch ist auf dem Tisch.
 Zahnarzt;der;diş hekimi (erkek);hayır;hayır;;evet;2;A2 dativ;Ich muss heute zum Zahnarzt.
-Zeitung;die;gazete;hayır;hayır;;evet;2;A1 artikel;die Zeitung liegt auf dem Tisch.
-Zentrum;das;merkez;hayır;hayır;;evet;1;B1 relativsaetze;Das Büro, in dem mein Bruder arbeitet, ist im Zentrum.
+Zeit;die;zaman;hayır;hayır;;hayır;27;A1 sein-haben, A1 praesens, A1 negation, A1 w-fragen, A1 akkusativ, A1 modalverben, A1 perfekt;Hast du morgen nach dem Kurs noch Zeit?
+Zeitung;die;gazete;hayır;hayır;;evet;12;A1 artikel, A1 plural, A1 personalpronomen-akkusativ, A1 praesens, A1 akkusativ, A1 perfekt;die Zeitung liegt auf dem Tisch.
+Zentrum;das;merkez;hayır;hayır;;evet;3;A1 plural, A1 w-fragen, B1 relativsaetze;Schreibe den Plural: das Zentrum → Zentren
 Zertifikat;das;sertifika;hayır;hayır;;evet;1;B1 relativsaetze;Die Teilnehmer, die die Prüfung bestanden haben, bekommen ein Zertifikat.
-Zimmer;das;oda;hayır;hayır;;evet;1;A1 artikel;Schreibe Artikel + Nomen: das Zimmer ist schon frei. (Zimmer)
-Zug;der;tren;hayır;hayır;;evet;3;A2 dativ, B1 relativsaetze;Der Zug kommt aus der Schweiz.
+Zimmer;das;oda;hayır;hayır;;evet;30;A1 artikel, A1 plural, A1 personalpronomen-dativ, A1 sein-haben, A1 w-fragen, A1 temporale-praepositionen, A1 modalverben, A1 trennbare-verben, A1 imperativ, A1 perfekt, A1 lokale-praepositionen;Schreibe Artikel + Nomen: das Zimmer ist schon frei. (Zimmer)
+Zucker;der;şeker;hayır;hayır;;hayır;2;A1 akkusativ;Paul bestellt einen Kaffee ohne Zucker.
+Zug;der;tren;hayır;hayır;;evet;41;A1 plural, A1 sein-haben, A1 praesens, A1 w-fragen, A1 zahlen-uhrzeit-datum, A1 temporale-praepositionen, A1 modalverben, A1 trennbare-verben, A1 perfekt, A1 lokale-praepositionen, A2 dativ, B1 relativsaetze;Schreibe den Plural: der Zug → Züge

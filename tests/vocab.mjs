@@ -24,10 +24,13 @@ const open = async (hash) => { await page.goto('about:blank'); await page.goto(B
 const items = (sel) => page.locator(`${sel} .quiz-vocab li`).allTextContents().then(list => list.map(x => x.replace(/\s+/g, ' ').trim()));
 const choose = async (value) => { await page.click(`#quizOptions .quiz-option[data-answer="${value}"]`); await page.click('#checkAnswerBtn'); await page.waitForTimeout(300); };
 
-// Konu sözlüğü kullanmıyorsa hiçbir şey yüklenmiyor.
-await open('exercises/A1/perfekt');
-await open('exercises/A1/perfekt/' + JSON.parse(fs.readFileSync('data/a1/perfekt.json', 'utf8')).exercises[0].id + '/q1');
-ok(dictRequests === 0, 'sözlüksüz konuda data/sozluk.json yüklenmiyor');
+// Kelime listesi olmayan bir alıştırmada sözlük yüklenmiyor (bütün konular listelendiyse bu kontrol atlanır).
+const noVocab = JSON.parse(fs.readFileSync('data/catalog.json', 'utf8')).levels.flatMap(l => l.topics.filter(t => t.path).map(t => [l.id, t]))
+  .map(([level, t]) => [level, t, JSON.parse(fs.readFileSync(t.path, 'utf8')).exercises.find(e => e.questions.every(q => !q.vocab))]).find(([, , e]) => e);
+if (noVocab) {
+  await open(`exercises/${noVocab[0]}/${noVocab[1].id}/${noVocab[2].id}/q1`);
+  ok(dictRequests === 0, `kelime listesi olmayan alıştırmada (${noVocab[0]} ${noVocab[1].id}) data/sozluk.json yüklenmiyor`);
+} else console.log('skip kelime listesi olmayan alıştırma kalmadı');
 
 // Doğru cevap: "der Bahnhof – tren istasyonu" ve "das Hotel – otel".
 const q1 = artikel.exercises[0].questions[0];
@@ -99,6 +102,26 @@ await open('exercises/A2/dativ/wem-fragen-6/q4');
 await choose(lq.correct);
 ok((await items('#quizFeedback')).join(' | ') === 'der Laptop – dizüstü bilgisayar | die Schwester – kız kardeş', 'emin olunmayan kelime kontrol edilince görünüyor');
 await page.unroute('**/sozluk.json*');
+
+// Kelime listesi olan her konu: ilk alıştırmanın ilk sorusu kontrol edilince beklenen kelimeler görünüyor.
+const catalog = JSON.parse(fs.readFileSync('data/catalog.json', 'utf8'));
+const words = JSON.parse(fs.readFileSync('data/sozluk.json', 'utf8')).words;
+let covered = 0;
+for (const level of catalog.levels) for (const topic of level.topics) {
+  if (!topic.path) continue;
+  const data = JSON.parse(fs.readFileSync(topic.path, 'utf8'));
+  const exercise = data.exercises.find(e => e.questions[0]?.vocab);
+  if (!exercise) continue;
+  const q = exercise.questions[0];
+  await open(`exercises/${level.id}/${topic.id}/${exercise.id}/q1`);
+  if (q.type === 'text') { await page.fill('#writtenAnswerInput', 'x'); await page.press('#writtenAnswerInput', 'Enter'); await page.waitForTimeout(300); }
+  else await choose(q.options[0]);
+  const expected = q.vocab.filter(k => !words[k].unsure || words[k].checked).map(k => `${words[k].article} ${words[k].word || k.split('|')[0]}${words[k].pluralOnly ? ' (sadece çoğul)' : ''} – ${words[k].tr}`);
+  const got = await items('#quizFeedback');
+  if (got.join('|') !== expected.join('|')) ok(false, `${level.id} ${topic.id}: ${got.join(' | ')} ≠ ${expected.join(' | ')}`);
+  else covered++;
+}
+ok(covered > 0, `${covered} konuda ilk sorunun kelime listesi doğru`);
 
 // Sınav setlerinde liste yok.
 await open('exams/goethe/b1/lesen/1/set-1');

@@ -6,9 +6,44 @@
       "tr": "akşam",
       "checked": true
     },
+    "Abendessen": {
+      "article": "das",
+      "tr": "akşam yemeği",
+      "checked": true
+    },
+    "Abteilung": {
+      "article": "die",
+      "tr": "bölüm, departman",
+      "checked": true
+    },
     "Adresse": {
       "article": "die",
       "tr": "adres",
+      "checked": true
+    },
+    "Ahnung": {
+      "article": "die",
+      "tr": "fikir (keine Ahnung: hiçbir fikrim yok)",
+      "checked": true
+    },
+    "Altstadt": {
+      "article": "die",
+      "tr": "eski şehir, tarihî merkez",
+      "checked": true
+    },
+    "Angebot": {
+      "article": "das",
+      "tr": "teklif; indirim, kampanya",
+      "checked": true
+    },
+    "Angst": {
+      "article": "die",
+      "tr": "korku",
+      "checked": true
+    },
+    "Anmeldung": {
+      "article": "die",
+      "tr": "kayıt, başvuru",
       "checked": true
     },
     "Antwort": {
@@ -16,9 +51,24 @@
       "tr": "cevap",
       "checked": true
     },
+    "Apfel": {
+      "article": "der",
+      "tr": "elma",
+      "checked": true
+    },
     "Apotheke": {
       "article": "die",
       "tr": "eczane",
+      "checked": true
+    },
+    "App": {
+      "article": "die",
+      "tr": "uygulama (telefon)",
+      "checked": true
+    },
+    "April": {
+      "article": "der",
+      "tr": "nisan",
       "checked": true
     },
     "Arbeit": {
@@ -26,9 +76,19 @@
       "tr": "iş",
       "checked": true
     },
+    "Arbeitskleidung": {
+      "article": "die",
+      "tr": "iş kıyafeti",
+      "checked": true
+    },
     "Arzt": {
       "article": "der",
       "tr": "doktor (erkek)",
+      "checked": true
+    },
+    "Arzttermin": {
+      "article": "der",
+      "tr": "doktor randevusu",
       "checked": true
     },
     "Aufgabe": {
@@ -36,9 +96,19 @@
       "tr": "görev, ödev",
       "checked": true
     },
+    "Auge": {
+      "article": "das",
+      "tr": "göz",
+      "checked": true
+    },
     "August": {
       "article": "der",
       "tr": "ağustos",
+      "checked": true
+    },
+    "Ausgang": {
+      "article": "der",
+      "tr": "çıkış",
       "checked": true
     },
     "Ausland": {
@@ -51,14 +121,34 @@
       "tr": "sergi",
       "checked": true
     },
+    "Ausweis": {
+      "article": "der",
+      "tr": "kimlik kartı",
+      "checked": true
+    },
     "Auto": {
       "article": "das",
       "tr": "araba",
       "checked": true
     },
+    "Automat": {
+      "article": "der",
+      "tr": "otomat, makine",
+      "checked": true
+    },
     "Autor": {
       "article": "der",
       "tr": "yazar (erkek)",
+      "checked": true
+    },
+    "Baby": {
+      "article": "das",
+      "tr": "bebek",
+      "checked": true
+    },
+    "Bad": {
+      "article": "das",
+      "tr": "banyo",
       "checked": true
     },
     "Bahn": {
@@ -71,9 +161,19 @@
       "tr": "tren istasyonu",
       "checked": true
     },
+    "Balkon": {
+      "article": "der",
+      "tr": "balkon",
+      "checked": true
+    },
     "Ball": {
       "article": "der",
       "tr": "top",
+      "checked": true
+    },
+    "Banane": {
+      "article": "die",
+      "tr": "muz",
       "checked": true
     },
     "Bank": {
@@ -81,6 +181,11 @@
       "tr": "banka; bank (oturak)",
       "unsure": true,
       "note": "İki anlamı var, ikisi de die. Cümlede (Neben der Bank ist der Supermarkt) büyük ihtimalle banka.",
+      "checked": true
+    },
+    "Baum": {
+      "article": "der",
+      "tr": "ağaç",
       "checked": true
     },
     "Befund": {
@@ -96,6 +201,11 @@
     "Berg": {
       "article": "der",
       "tr": "dağ",
+      "checked": true
+    },
+    "Besprechung": {
+      "article": "die",
+      "tr": "toplantı, görüşme",
       "checked": true
     },
     "Beste": {
@@ -118,9 +228,61 @@
       "tr": "kütüphane",
       "checked": true
     },
+    "Bild": {
+      "article": "das",
+      "tr": "resim, fotoğraf",
+      "checked": true
+    },
+    "Blatt": {
+      "article": "das",
+      "tr": "yaprak; kâğıt sayfası",
+      "checked": true
+    },
+    "Bleistift": {
+      "article": "der",
+      "tr": "kurşun kalem",
+      "checked": true
+    },
     "Blume": {
       "article": "die",
       "tr": "çiçek",
+      "checked": true
+    },
+    "Bluse": {
+      "article": "die",
+      "tr": "bluz",
+      "checked": true
+    },
+    "Boden": {
+      "article": "der",
+      "tr": "yer, zemin",
+      "checked": true
+    },
+    "Bonbon": {
+      "article": "das",
+      "tr": "şeker (bonbon)",
+      "unsure": true,
+      "note": "Duden: der oder das; ikisi de doğru. Avusturya'da das kullanılır.",
+      "checked": true
+    },
+    "Brief": {
+      "article": "der",
+      "tr": "mektup",
+      "checked": true
+    },
+    "Briefmarke": {
+      "article": "die",
+      "tr": "pul",
+      "checked": true
+    },
+    "Brille": {
+      "article": "die",
+      "tr": "gözlük",
+      "checked": true
+    },
+    "Brot": {
+      "article": "das",
+      "tr": "ekmek",
       "checked": true
     },
     "Bruder": {
@@ -133,6 +295,11 @@
       "tr": "küçük ekmek",
       "checked": true
     },
+    "Brücke": {
+      "article": "die",
+      "tr": "köprü",
+      "checked": true
+    },
     "Buch": {
       "article": "das",
       "tr": "kitap",
@@ -141,6 +308,16 @@
     "Bus": {
       "article": "der",
       "tr": "otobüs",
+      "checked": true
+    },
+    "Busfahrer": {
+      "article": "der",
+      "tr": "otobüs şoförü (erkek)",
+      "checked": true
+    },
+    "Bushaltestelle": {
+      "article": "die",
+      "tr": "otobüs durağı",
       "checked": true
     },
     "Bäcker": {
@@ -161,6 +338,16 @@
     "Café": {
       "article": "das",
       "tr": "kafe",
+      "checked": true
+    },
+    "CD": {
+      "article": "die",
+      "tr": "CD",
+      "checked": true
+    },
+    "Cent": {
+      "article": "der",
+      "tr": "sent",
       "checked": true
     },
     "Chef": {
@@ -198,9 +385,54 @@
       "tr": "dosya",
       "checked": true
     },
+    "Datum": {
+      "article": "das",
+      "tr": "tarih (gün)",
+      "checked": true
+    },
+    "Deutschkurs": {
+      "article": "der",
+      "tr": "Almanca kursu",
+      "checked": true
+    },
+    "Deutschlehrer": {
+      "article": "der",
+      "tr": "Almanca öğretmeni (erkek)",
+      "checked": true
+    },
+    "Deutschunterricht": {
+      "article": "der",
+      "tr": "Almanca dersi",
+      "checked": true
+    },
+    "Dezember": {
+      "article": "der",
+      "tr": "aralık (ay)",
+      "checked": true
+    },
     "Dienst": {
       "article": "der",
       "tr": "görev, nöbet",
+      "checked": true
+    },
+    "Dienstag": {
+      "article": "der",
+      "tr": "salı",
+      "checked": true
+    },
+    "Diktat": {
+      "article": "das",
+      "tr": "dikte",
+      "checked": true
+    },
+    "Dokument": {
+      "article": "das",
+      "tr": "belge",
+      "checked": true
+    },
+    "Donnerstag": {
+      "article": "der",
+      "tr": "perşembe",
       "checked": true
     },
     "Dorf": {
@@ -208,9 +440,24 @@
       "tr": "köy",
       "checked": true
     },
+    "Dose": {
+      "article": "die",
+      "tr": "kutu, teneke kutu",
+      "checked": true
+    },
     "Dozent": {
       "article": "der",
       "tr": "öğretim görevlisi (erkek)",
+      "checked": true
+    },
+    "Drucker": {
+      "article": "der",
+      "tr": "yazıcı",
+      "checked": true
+    },
+    "Durst": {
+      "article": "der",
+      "tr": "susuzluk (Durst haben: susamak)",
       "checked": true
     },
     "E-Mail": {
@@ -218,9 +465,19 @@
       "tr": "e-posta",
       "checked": true
     },
+    "E-Mail-Adresse": {
+      "article": "die",
+      "tr": "e-posta adresi",
+      "checked": true
+    },
     "Ecke": {
       "article": "die",
       "tr": "köşe",
+      "checked": true
+    },
+    "Ei": {
+      "article": "das",
+      "tr": "yumurta",
       "checked": true
     },
     "Eigentum": {
@@ -231,6 +488,11 @@
     "Eingang": {
       "article": "der",
       "tr": "giriş, giriş kapısı",
+      "checked": true
+    },
+    "Einkauf": {
+      "article": "der",
+      "tr": "alışveriş",
       "checked": true
     },
     "Einladung": {
@@ -254,6 +516,11 @@
       "tr": "karar",
       "checked": true
     },
+    "Entschuldigung": {
+      "article": "die",
+      "tr": "özür",
+      "checked": true
+    },
     "Erdgeschoss": {
       "article": "das",
       "tr": "zemin kat",
@@ -269,6 +536,11 @@
       "tr": "sonuç",
       "checked": true
     },
+    "Ersatzschlüssel": {
+      "article": "der",
+      "tr": "yedek anahtar",
+      "checked": true
+    },
     "Essen": {
       "article": "das",
       "tr": "yemek",
@@ -279,9 +551,34 @@
       "tr": "avro",
       "checked": true
     },
+    "Fahrer": {
+      "article": "der",
+      "tr": "şoför (erkek)",
+      "checked": true
+    },
+    "Fahrerin": {
+      "article": "die",
+      "tr": "şoför (kadın)",
+      "checked": true
+    },
+    "Fahrgast": {
+      "article": "der",
+      "tr": "yolcu",
+      "checked": true
+    },
+    "Fahrkarte": {
+      "article": "die",
+      "tr": "bilet (ulaşım)",
+      "checked": true
+    },
     "Fahrrad": {
       "article": "das",
       "tr": "bisiklet",
+      "checked": true
+    },
+    "Fahrt": {
+      "article": "die",
+      "tr": "yolculuk",
       "checked": true
     },
     "Fall": {
@@ -294,9 +591,34 @@
       "tr": "aile",
       "checked": true
     },
+    "Fan": {
+      "article": "der",
+      "tr": "hayran, taraftar",
+      "checked": true
+    },
+    "Farbe": {
+      "article": "die",
+      "tr": "renk",
+      "checked": true
+    },
+    "Februar": {
+      "article": "der",
+      "tr": "şubat",
+      "checked": true
+    },
+    "Fehler": {
+      "article": "der",
+      "tr": "hata",
+      "checked": true
+    },
     "Fenster": {
       "article": "das",
       "tr": "pencere",
+      "checked": true
+    },
+    "Fernseher": {
+      "article": "der",
+      "tr": "televizyon",
       "checked": true
     },
     "Film": {
@@ -309,14 +631,39 @@
       "tr": "firma, şirket",
       "checked": true
     },
+    "Fisch": {
+      "article": "der",
+      "tr": "balık",
+      "checked": true
+    },
+    "Fitnessraum": {
+      "article": "der",
+      "tr": "spor odası",
+      "checked": true
+    },
     "Fitnessstudio": {
       "article": "das",
       "tr": "spor salonu",
       "checked": true
     },
+    "Flasche": {
+      "article": "die",
+      "tr": "şişe",
+      "checked": true
+    },
+    "Fleisch": {
+      "article": "das",
+      "tr": "et",
+      "checked": true
+    },
     "Flughafen": {
       "article": "der",
       "tr": "havalimanı",
+      "checked": true
+    },
+    "Flur": {
+      "article": "der",
+      "tr": "koridor",
       "checked": true
     },
     "Formular": {
@@ -380,9 +727,29 @@
       "tr": "ilkbahar",
       "checked": true
     },
+    "Frühstück": {
+      "article": "das",
+      "tr": "kahvaltı",
+      "checked": true
+    },
+    "Frühstücken": {
+      "article": "das",
+      "tr": "kahvaltı etme",
+      "checked": true
+    },
+    "Fuß": {
+      "article": "der",
+      "tr": "ayak (zu Fuß: yürüyerek)",
+      "checked": true
+    },
     "Fußball": {
       "article": "der",
       "tr": "futbol; futbol topu",
+      "checked": true
+    },
+    "Fähigkeit": {
+      "article": "die",
+      "tr": "yetenek",
       "checked": true
     },
     "Garage": {
@@ -408,6 +775,16 @@
     "Geburtstag": {
       "article": "der",
       "tr": "doğum günü",
+      "checked": true
+    },
+    "Geburtstagsfeier": {
+      "article": "die",
+      "tr": "doğum günü partisi",
+      "checked": true
+    },
+    "Geburtstagsgeschenk": {
+      "article": "das",
+      "tr": "doğum günü hediyesi",
       "checked": true
     },
     "Gebäude": {
@@ -450,14 +827,50 @@
       "tr": "hikâye; tarih",
       "checked": true
     },
+    "Geschwister": {
+      "article": "die",
+      "tr": "kardeşler",
+      "pluralOnly": true,
+      "checked": true
+    },
+    "Geschäft": {
+      "article": "das",
+      "tr": "dükkân, mağaza; iş",
+      "checked": true
+    },
+    "Gespräch": {
+      "article": "das",
+      "tr": "konuşma, görüşme",
+      "checked": true
+    },
     "Gesundheit": {
       "article": "die",
       "tr": "sağlık",
       "checked": true
     },
+    "Getränk": {
+      "article": "das",
+      "tr": "içecek",
+      "checked": true
+    },
+    "Gitarre": {
+      "article": "die",
+      "tr": "gitar",
+      "checked": true
+    },
+    "Glas": {
+      "article": "das",
+      "tr": "bardak; cam",
+      "checked": true
+    },
     "Gleis": {
       "article": "das",
       "tr": "peron, hat",
+      "checked": true
+    },
+    "Glück": {
+      "article": "das",
+      "tr": "şans; mutluluk",
       "checked": true
     },
     "Grammatik": {
@@ -486,14 +899,34 @@
       "tr": "durak",
       "checked": true
     },
+    "Hamburger": {
+      "article": "der",
+      "tr": "hamburger",
+      "checked": true
+    },
+    "Hand": {
+      "article": "die",
+      "tr": "el",
+      "checked": true
+    },
     "Handy": {
       "article": "das",
       "tr": "cep telefonu",
       "checked": true
     },
+    "Hauptbahnhof": {
+      "article": "der",
+      "tr": "ana tren istasyonu, gar",
+      "checked": true
+    },
     "Haus": {
       "article": "das",
       "tr": "ev",
+      "checked": true
+    },
+    "Hausaufgabe": {
+      "article": "die",
+      "tr": "ev ödevi",
       "checked": true
     },
     "Haustier": {
@@ -504,6 +937,16 @@
     "Haustür": {
       "article": "die",
       "tr": "evin dış kapısı",
+      "checked": true
+    },
+    "Heft": {
+      "article": "das",
+      "tr": "defter",
+      "checked": true
+    },
+    "Hemd": {
+      "article": "das",
+      "tr": "gömlek",
       "checked": true
     },
     "Herbst": {
@@ -521,6 +964,11 @@
       "tr": "yardım",
       "checked": true
     },
+    "Hobby": {
+      "article": "das",
+      "tr": "hobi",
+      "checked": true
+    },
     "Hof": {
       "article": "der",
       "tr": "avlu, bahçe",
@@ -529,6 +977,11 @@
     "Holz": {
       "article": "das",
       "tr": "tahta, odun",
+      "checked": true
+    },
+    "Hose": {
+      "article": "die",
+      "tr": "pantolon",
       "checked": true
     },
     "Hotel": {
@@ -541,9 +994,19 @@
       "tr": "köpek",
       "checked": true
     },
+    "Hunger": {
+      "article": "der",
+      "tr": "açlık (Hunger haben: acıkmak)",
+      "checked": true
+    },
     "Häuschen": {
       "article": "das",
       "tr": "küçük ev",
+      "checked": true
+    },
+    "Idee": {
+      "article": "die",
+      "tr": "fikir",
       "checked": true
     },
     "Information": {
@@ -576,6 +1039,16 @@
       "tr": "ocak (ay)",
       "checked": true
     },
+    "Job": {
+      "article": "der",
+      "tr": "iş",
+      "checked": true
+    },
+    "Juli": {
+      "article": "der",
+      "tr": "temmuz",
+      "checked": true
+    },
     "Junge": {
       "article": "der",
       "tr": "erkek çocuk",
@@ -598,9 +1071,29 @@
       "note": "Anlamı bağlama göre değişiyor; cümlede (Ich kaufe dir die Karte) büyük ihtimalle bilet.",
       "checked": true
     },
+    "Karton": {
+      "article": "der",
+      "tr": "karton kutu",
+      "checked": true
+    },
+    "Katze": {
+      "article": "die",
+      "tr": "kedi",
+      "checked": true
+    },
+    "Kerze": {
+      "article": "die",
+      "tr": "mum",
+      "checked": true
+    },
     "KI": {
       "article": "die",
       "tr": "yapay zekâ (Künstliche Intelligenz)",
+      "checked": true
+    },
+    "Kilometer": {
+      "article": "der",
+      "tr": "kilometre",
       "checked": true
     },
     "Kind": {
@@ -618,6 +1111,11 @@
       "tr": "sinema",
       "checked": true
     },
+    "Kirche": {
+      "article": "die",
+      "tr": "kilise",
+      "checked": true
+    },
     "Kiste": {
       "article": "die",
       "tr": "kasa, sandık",
@@ -628,6 +1126,11 @@
       "tr": "sınıf",
       "checked": true
     },
+    "Kleid": {
+      "article": "das",
+      "tr": "elbise",
+      "checked": true
+    },
     "Kleidung": {
       "article": "die",
       "tr": "giysi, kıyafet",
@@ -636,6 +1139,16 @@
     "Knie": {
       "article": "das",
       "tr": "diz",
+      "checked": true
+    },
+    "Kochen": {
+      "article": "das",
+      "tr": "yemek yapma",
+      "checked": true
+    },
+    "Koffer": {
+      "article": "der",
+      "tr": "bavul",
       "checked": true
     },
     "Kollege": {
@@ -653,9 +1166,55 @@
       "tr": "konferans",
       "checked": true
     },
+    "Kontakt": {
+      "article": "der",
+      "tr": "iletişim, bağlantı",
+      "checked": true
+    },
+    "Konto": {
+      "article": "das",
+      "tr": "(banka) hesap",
+      "checked": true
+    },
+    "Konzert": {
+      "article": "das",
+      "tr": "konser",
+      "checked": true
+    },
+    "Kopfschmerz": {
+      "article": "der",
+      "tr": "baş ağrısı (çoğu zaman çoğul: die Kopfschmerzen)",
+      "checked": true
+    },
+    "Korb": {
+      "article": "der",
+      "tr": "sepet",
+      "checked": true
+    },
+    "Kosten": {
+      "article": "die",
+      "tr": "masraflar, ücret",
+      "pluralOnly": true,
+      "checked": true
+    },
     "Krankenhaus": {
       "article": "das",
       "tr": "hastane",
+      "checked": true
+    },
+    "Kreis": {
+      "article": "der",
+      "tr": "daire, çember",
+      "checked": true
+    },
+    "Kuchen": {
+      "article": "der",
+      "tr": "kek, pasta",
+      "checked": true
+    },
+    "Kuli": {
+      "article": "der",
+      "tr": "tükenmez kalem",
       "checked": true
     },
     "Kunde": {
@@ -673,6 +1232,16 @@
       "tr": "kurs",
       "checked": true
     },
+    "Kursbeginn": {
+      "article": "der",
+      "tr": "kursun başlangıcı",
+      "checked": true
+    },
+    "Kursraum": {
+      "article": "der",
+      "tr": "kurs odası",
+      "checked": true
+    },
     "Küche": {
       "article": "die",
       "tr": "mutfak",
@@ -681,6 +1250,11 @@
     "Küchentisch": {
       "article": "der",
       "tr": "mutfak masası",
+      "checked": true
+    },
+    "Kühlschrank": {
+      "article": "der",
+      "tr": "buzdolabı",
       "checked": true
     },
     "Laden": {
@@ -705,6 +1279,11 @@
       "note": "Duden der ve das ikisini de kabul ediyor; der daha yaygın. Alıştırmada der kullanılıyor.",
       "checked": true
     },
+    "Lebensmittel": {
+      "article": "das",
+      "tr": "gıda, yiyecek",
+      "checked": true
+    },
     "Lehrer": {
       "article": "der",
       "tr": "öğretmen (erkek)",
@@ -713,6 +1292,13 @@
     "Lehrerin": {
       "article": "die",
       "tr": "öğretmen (kadın)",
+      "checked": true
+    },
+    "Leiter|die": {
+      "word": "Leiter",
+      "article": "die",
+      "tr": "merdiven (seyyar)",
+      "note": "der Leiter = yönetici; burada die Leiter = merdiven.",
       "checked": true
     },
     "Lernen": {
@@ -731,9 +1317,24 @@
       "pluralOnly": true,
       "checked": true
     },
+    "Licht": {
+      "article": "das",
+      "tr": "ışık",
+      "checked": true
+    },
+    "Liter": {
+      "article": "der",
+      "tr": "litre",
+      "checked": true
+    },
     "Lobby": {
       "article": "die",
       "tr": "lobi",
+      "checked": true
+    },
+    "Lust": {
+      "article": "die",
+      "tr": "istek, heves (Lust haben: canı istemek)",
       "checked": true
     },
     "Lösung": {
@@ -741,9 +1342,29 @@
       "tr": "çözüm",
       "checked": true
     },
+    "Mai": {
+      "article": "der",
+      "tr": "mayıs",
+      "checked": true
+    },
+    "Mal": {
+      "article": "das",
+      "tr": "kez, sefer",
+      "checked": true
+    },
     "Mann": {
       "article": "der",
       "tr": "adam; erkek",
+      "checked": true
+    },
+    "Mannschaft": {
+      "article": "die",
+      "tr": "takım",
+      "checked": true
+    },
+    "Mantel": {
+      "article": "der",
+      "tr": "palto",
       "checked": true
     },
     "Markt": {
@@ -756,9 +1377,29 @@
       "tr": "ilaç",
       "checked": true
     },
+    "Medizin": {
+      "article": "die",
+      "tr": "tıp; ilaç",
+      "checked": true
+    },
     "Meer": {
       "article": "das",
       "tr": "deniz",
+      "checked": true
+    },
+    "Meeting": {
+      "article": "das",
+      "tr": "toplantı",
+      "checked": true
+    },
+    "Meter": {
+      "article": "der",
+      "tr": "metre",
+      "checked": true
+    },
+    "Milch": {
+      "article": "die",
+      "tr": "süt",
       "checked": true
     },
     "Minute": {
@@ -774,6 +1415,26 @@
     "Mitarbeiterin": {
       "article": "die",
       "tr": "çalışan (kadın)",
+      "checked": true
+    },
+    "Mittag": {
+      "article": "der",
+      "tr": "öğle",
+      "checked": true
+    },
+    "Mittagspause": {
+      "article": "die",
+      "tr": "öğle arası",
+      "checked": true
+    },
+    "Mittwoch": {
+      "article": "der",
+      "tr": "çarşamba",
+      "checked": true
+    },
+    "Moment": {
+      "article": "der",
+      "tr": "an",
       "checked": true
     },
     "Monat": {
@@ -821,6 +1482,11 @@
       "tr": "olanak, imkân",
       "checked": true
     },
+    "Mülleimer": {
+      "article": "der",
+      "tr": "çöp kovası",
+      "checked": true
+    },
     "Nachbar": {
       "article": "der",
       "tr": "komşu (erkek)",
@@ -831,9 +1497,19 @@
       "tr": "komşu (kadın)",
       "checked": true
     },
+    "Nachmittag": {
+      "article": "der",
+      "tr": "öğleden sonra",
+      "checked": true
+    },
     "Nachricht": {
       "article": "die",
       "tr": "mesaj; haber",
+      "checked": true
+    },
+    "Nacht": {
+      "article": "die",
+      "tr": "gece",
       "checked": true
     },
     "Nachtdienst": {
@@ -841,9 +1517,19 @@
       "tr": "gece nöbeti",
       "checked": true
     },
+    "Name": {
+      "article": "der",
+      "tr": "ad, isim",
+      "checked": true
+    },
     "Neffe": {
       "article": "der",
       "tr": "erkek yeğen",
+      "checked": true
+    },
+    "Nichte": {
+      "article": "die",
+      "tr": "kız yeğen",
       "checked": true
     },
     "Notiz": {
@@ -851,9 +1537,54 @@
       "tr": "not",
       "checked": true
     },
+    "November": {
+      "article": "der",
+      "tr": "kasım",
+      "checked": true
+    },
+    "Nudel": {
+      "article": "die",
+      "tr": "makarna (çoğu zaman çoğul: die Nudeln)",
+      "checked": true
+    },
+    "Nummer": {
+      "article": "die",
+      "tr": "numara",
+      "checked": true
+    },
+    "Nuss": {
+      "article": "die",
+      "tr": "fındık, ceviz (kuruyemiş)",
+      "checked": true
+    },
+    "Nähe": {
+      "article": "die",
+      "tr": "yakınlık (in der Nähe: yakında)",
+      "checked": true
+    },
+    "Ohr": {
+      "article": "das",
+      "tr": "kulak",
+      "checked": true
+    },
+    "Oktober": {
+      "article": "der",
+      "tr": "ekim (ay)",
+      "checked": true
+    },
     "Oma": {
       "article": "die",
       "tr": "büyükanne, nine",
+      "checked": true
+    },
+    "Onkel": {
+      "article": "der",
+      "tr": "amca, dayı",
+      "checked": true
+    },
+    "Operation": {
+      "article": "die",
+      "tr": "ameliyat",
       "checked": true
     },
     "Paket": {
@@ -866,9 +1597,39 @@
       "tr": "park",
       "checked": true
     },
+    "Parkplatz": {
+      "article": "der",
+      "tr": "otopark, park yeri",
+      "checked": true
+    },
+    "Party": {
+      "article": "die",
+      "tr": "parti",
+      "checked": true
+    },
+    "Pass": {
+      "article": "der",
+      "tr": "pasaport",
+      "checked": true
+    },
     "Patient": {
       "article": "der",
       "tr": "hasta (erkek)",
+      "checked": true
+    },
+    "Pause": {
+      "article": "die",
+      "tr": "mola, teneffüs",
+      "checked": true
+    },
+    "Pech": {
+      "article": "das",
+      "tr": "şanssızlık",
+      "checked": true
+    },
+    "Person": {
+      "article": "die",
+      "tr": "kişi",
       "checked": true
     },
     "Personal": {
@@ -876,9 +1637,46 @@
       "tr": "personel",
       "checked": true
     },
+    "Pfirsich": {
+      "article": "der",
+      "tr": "şeftali",
+      "checked": true
+    },
+    "Physik": {
+      "article": "die",
+      "tr": "fizik",
+      "checked": true
+    },
     "Pizza": {
       "article": "die",
       "tr": "pizza",
+      "checked": true
+    },
+    "Plan": {
+      "article": "der",
+      "tr": "plan",
+      "checked": true
+    },
+    "Platz": {
+      "article": "der",
+      "tr": "yer; meydan",
+      "checked": true
+    },
+    "Podcast": {
+      "article": "der",
+      "tr": "podcast",
+      "checked": true
+    },
+    "Post": {
+      "article": "die",
+      "tr": "postane; posta",
+      "checked": true
+    },
+    "Poster": {
+      "article": "das",
+      "tr": "poster",
+      "unsure": true,
+      "note": "Duden: das oder der Poster; das daha yaygın.",
       "checked": true
     },
     "Preis": {
@@ -911,6 +1709,11 @@
       "tr": "proje",
       "checked": true
     },
+    "Präsentation": {
+      "article": "die",
+      "tr": "sunum",
+      "checked": true
+    },
     "Prüfung": {
       "article": "die",
       "tr": "sınav",
@@ -921,9 +1724,44 @@
       "tr": "kazak",
       "checked": true
     },
+    "Punkt": {
+      "article": "der",
+      "tr": "nokta; madde",
+      "checked": true
+    },
+    "Puppe": {
+      "article": "die",
+      "tr": "oyuncak bebek",
+      "checked": true
+    },
+    "Päckchen": {
+      "article": "das",
+      "tr": "küçük paket",
+      "checked": true
+    },
     "Qualität": {
       "article": "die",
       "tr": "kalite",
+      "checked": true
+    },
+    "Rad": {
+      "article": "das",
+      "tr": "tekerlek; bisiklet",
+      "checked": true
+    },
+    "Radio": {
+      "article": "das",
+      "tr": "radyo",
+      "checked": true
+    },
+    "Rauchen": {
+      "article": "das",
+      "tr": "sigara içme",
+      "checked": true
+    },
+    "Raum": {
+      "article": "der",
+      "tr": "oda, salon",
       "checked": true
     },
     "Rechnung": {
@@ -939,6 +1777,26 @@
     "Regel": {
       "article": "die",
       "tr": "kural",
+      "checked": true
+    },
+    "Regen": {
+      "article": "der",
+      "tr": "yağmur",
+      "checked": true
+    },
+    "Regenschirm": {
+      "article": "der",
+      "tr": "şemsiye",
+      "checked": true
+    },
+    "Region": {
+      "article": "die",
+      "tr": "bölge",
+      "checked": true
+    },
+    "Reise": {
+      "article": "die",
+      "tr": "seyahat, gezi",
       "checked": true
     },
     "Restaurant": {
@@ -966,14 +1824,44 @@
       "tr": "sırt",
       "checked": true
     },
+    "Rückfahrt": {
+      "article": "die",
+      "tr": "dönüş yolculuğu",
+      "checked": true
+    },
+    "Salat": {
+      "article": "der",
+      "tr": "salata",
+      "checked": true
+    },
     "Samstag": {
       "article": "der",
       "tr": "cumartesi",
       "checked": true
     },
+    "Satz": {
+      "article": "der",
+      "tr": "cümle",
+      "checked": true
+    },
+    "Schal": {
+      "article": "der",
+      "tr": "atkı, şal",
+      "checked": true
+    },
+    "Schlafen": {
+      "article": "das",
+      "tr": "uyuma",
+      "checked": true
+    },
     "Schlafzimmer": {
       "article": "das",
       "tr": "yatak odası",
+      "checked": true
+    },
+    "Schloss": {
+      "article": "das",
+      "tr": "şato; kilit",
       "checked": true
     },
     "Schlüssel": {
@@ -984,6 +1872,21 @@
     "Schmerz": {
       "article": "der",
       "tr": "ağrı",
+      "checked": true
+    },
+    "Schmutz": {
+      "article": "der",
+      "tr": "kir",
+      "checked": true
+    },
+    "Schrank": {
+      "article": "der",
+      "tr": "dolap",
+      "checked": true
+    },
+    "Schreibtisch": {
+      "article": "der",
+      "tr": "çalışma masası",
       "checked": true
     },
     "Schuh": {
@@ -1011,6 +1914,11 @@
       "tr": "kız kardeş",
       "checked": true
     },
+    "Schwimmbad": {
+      "article": "das",
+      "tr": "yüzme havuzu",
+      "checked": true
+    },
     "Schwimmen": {
       "article": "das",
       "tr": "yüzme",
@@ -1026,15 +1934,50 @@
       "tr": "öğrenci (erkek)",
       "checked": true
     },
+    "Schülerin": {
+      "article": "die",
+      "tr": "öğrenci (kadın)",
+      "checked": true
+    },
+    "Schüssel": {
+      "article": "die",
+      "tr": "kâse",
+      "checked": true
+    },
     "See": {
       "article": "der",
       "tr": "göl",
       "note": "die See = deniz; bu cümlelerde (am See, zum See) der See = göl.",
       "checked": true
     },
+    "Seite": {
+      "article": "die",
+      "tr": "sayfa; yan, taraf",
+      "checked": true
+    },
+    "Sekretärin": {
+      "article": "die",
+      "tr": "sekreter (kadın)",
+      "checked": true
+    },
     "Seminar": {
       "article": "das",
       "tr": "seminer",
+      "checked": true
+    },
+    "Sender": {
+      "article": "der",
+      "tr": "(TV/radyo) kanal",
+      "checked": true
+    },
+    "September": {
+      "article": "der",
+      "tr": "eylül",
+      "checked": true
+    },
+    "Sofa": {
+      "article": "das",
+      "tr": "kanepe",
       "checked": true
     },
     "Sohn": {
@@ -1045,6 +1988,11 @@
     "Sommer": {
       "article": "der",
       "tr": "yaz",
+      "checked": true
+    },
+    "Sonne": {
+      "article": "die",
+      "tr": "güneş",
       "checked": true
     },
     "Sonnenuntergang": {
@@ -1062,9 +2010,40 @@
       "tr": "yemek listesi, menü",
       "checked": true
     },
+    "Spiegel": {
+      "article": "der",
+      "tr": "ayna",
+      "checked": true
+    },
     "Spiel": {
       "article": "das",
       "tr": "oyun; maç",
+      "checked": true
+    },
+    "Spielplatz": {
+      "article": "der",
+      "tr": "oyun parkı",
+      "checked": true
+    },
+    "Spielsachen": {
+      "article": "die",
+      "tr": "oyuncaklar",
+      "pluralOnly": true,
+      "checked": true
+    },
+    "Sport": {
+      "article": "der",
+      "tr": "spor",
+      "checked": true
+    },
+    "Sprachkurs": {
+      "article": "der",
+      "tr": "dil kursu",
+      "checked": true
+    },
+    "Stadion": {
+      "article": "das",
+      "tr": "stadyum",
       "checked": true
     },
     "Stadt": {
@@ -1107,6 +2086,11 @@
       "tr": "cadde, sokak",
       "checked": true
     },
+    "Straßenseite": {
+      "article": "die",
+      "tr": "yolun tarafı",
+      "checked": true
+    },
     "Student": {
       "article": "der",
       "tr": "üniversite öğrencisi (erkek)",
@@ -1117,9 +2101,24 @@
       "tr": "üniversite öğrencisi (kadın)",
       "checked": true
     },
+    "Studium": {
+      "article": "das",
+      "tr": "üniversite eğitimi",
+      "checked": true
+    },
     "Stuhl": {
       "article": "der",
       "tr": "sandalye",
+      "checked": true
+    },
+    "Stunde": {
+      "article": "die",
+      "tr": "saat (süre); ders saati",
+      "checked": true
+    },
+    "Stundenplan": {
+      "article": "der",
+      "tr": "ders programı",
       "checked": true
     },
     "Supermarkt": {
@@ -1137,6 +2136,11 @@
       "tr": "sistem",
       "checked": true
     },
+    "Tag": {
+      "article": "der",
+      "tr": "gün",
+      "checked": true
+    },
     "Tante": {
       "article": "die",
       "tr": "teyze, hala",
@@ -1145,6 +2149,21 @@
     "Tasche": {
       "article": "die",
       "tr": "çanta",
+      "checked": true
+    },
+    "Taschenlampe": {
+      "article": "die",
+      "tr": "el feneri",
+      "checked": true
+    },
+    "Tasse": {
+      "article": "die",
+      "tr": "fincan",
+      "checked": true
+    },
+    "Taxi": {
+      "article": "das",
+      "tr": "taksi",
       "checked": true
     },
     "Team": {
@@ -1157,14 +2176,39 @@
       "tr": "teknisyen (erkek)",
       "checked": true
     },
+    "Tee": {
+      "article": "der",
+      "tr": "çay",
+      "checked": true
+    },
     "Teilnehmer": {
       "article": "der",
       "tr": "katılımcı (erkek)",
       "checked": true
     },
+    "Telefon": {
+      "article": "das",
+      "tr": "telefon",
+      "checked": true
+    },
+    "Telefonnummer": {
+      "article": "die",
+      "tr": "telefon numarası",
+      "checked": true
+    },
+    "Teller": {
+      "article": "der",
+      "tr": "tabak",
+      "checked": true
+    },
     "Temperatur": {
       "article": "die",
       "tr": "sıcaklık",
+      "checked": true
+    },
+    "Tennis": {
+      "article": "das",
+      "tr": "tenis",
       "checked": true
     },
     "Teppich": {
@@ -1182,14 +2226,34 @@
       "tr": "randevu planlaması",
       "checked": true
     },
+    "Test": {
+      "article": "der",
+      "tr": "test",
+      "checked": true
+    },
+    "Text": {
+      "article": "der",
+      "tr": "metin",
+      "checked": true
+    },
     "Thema": {
       "article": "das",
       "tr": "konu",
       "checked": true
     },
+    "Ticket": {
+      "article": "das",
+      "tr": "bilet",
+      "checked": true
+    },
     "Tisch": {
       "article": "der",
       "tr": "masa",
+      "checked": true
+    },
+    "Tischplatte": {
+      "article": "die",
+      "tr": "masa tablası",
       "checked": true
     },
     "Tochter": {
@@ -1202,9 +2266,29 @@
       "tr": "tuvalet",
       "checked": true
     },
+    "Tomate": {
+      "article": "die",
+      "tr": "domates",
+      "checked": true
+    },
+    "Tor": {
+      "article": "das",
+      "tr": "kapı (bahçe, garaj); gol",
+      "checked": true
+    },
+    "Tourist": {
+      "article": "der",
+      "tr": "turist (erkek)",
+      "checked": true
+    },
     "Trainer": {
       "article": "der",
       "tr": "antrenör (erkek)",
+      "checked": true
+    },
+    "Tunnel": {
+      "article": "der",
+      "tr": "tünel",
       "checked": true
     },
     "Tür": {
@@ -1225,6 +2309,11 @@
     "Umzug": {
       "article": "der",
       "tr": "taşınma",
+      "checked": true
+    },
+    "Uni": {
+      "article": "die",
+      "tr": "üniversite (kısaca)",
       "checked": true
     },
     "Universität": {
@@ -1263,9 +2352,19 @@
       "tr": "tatil",
       "checked": true
     },
+    "Vase": {
+      "article": "die",
+      "tr": "vazo",
+      "checked": true
+    },
     "Vater": {
       "article": "der",
       "tr": "baba",
+      "checked": true
+    },
+    "Verkauf": {
+      "article": "der",
+      "tr": "satış",
       "checked": true
     },
     "Verkehr": {
@@ -1278,9 +2377,49 @@
       "tr": "satıcı (erkek)",
       "checked": true
     },
+    "Verkäuferin": {
+      "article": "die",
+      "tr": "satıcı (kadın)",
+      "checked": true
+    },
     "Vertrag": {
       "article": "der",
       "tr": "sözleşme",
+      "checked": true
+    },
+    "Video": {
+      "article": "das",
+      "tr": "video",
+      "checked": true
+    },
+    "Viertel": {
+      "article": "das",
+      "tr": "çeyrek; semt",
+      "checked": true
+    },
+    "Vogel": {
+      "article": "der",
+      "tr": "kuş",
+      "checked": true
+    },
+    "Vormittag": {
+      "article": "der",
+      "tr": "öğleden önce",
+      "checked": true
+    },
+    "Wagen": {
+      "article": "der",
+      "tr": "araba",
+      "checked": true
+    },
+    "Wald": {
+      "article": "der",
+      "tr": "orman",
+      "checked": true
+    },
+    "Wand": {
+      "article": "die",
+      "tr": "duvar",
       "checked": true
     },
     "Wasser": {
@@ -1293,14 +2432,29 @@
       "tr": "su şişesi",
       "checked": true
     },
+    "Wecker": {
+      "article": "der",
+      "tr": "çalar saat",
+      "checked": true
+    },
     "Weg": {
       "article": "der",
       "tr": "yol",
       "checked": true
     },
+    "Wein": {
+      "article": "der",
+      "tr": "şarap",
+      "checked": true
+    },
     "Werkstatt": {
       "article": "die",
       "tr": "atölye, tamirhane",
+      "checked": true
+    },
+    "Werkzeug": {
+      "article": "das",
+      "tr": "alet, alet takımı",
       "checked": true
     },
     "Wetter": {
@@ -1311,6 +2465,11 @@
     "Wichtigste": {
       "article": "das",
       "tr": "en önemli şey",
+      "checked": true
+    },
+    "Wiederholung": {
+      "article": "die",
+      "tr": "tekrar",
       "checked": true
     },
     "Winter": {
@@ -1328,6 +2487,11 @@
       "tr": "hafta sonu",
       "checked": true
     },
+    "Wochentag": {
+      "article": "der",
+      "tr": "hafta içi gün, haftanın günü",
+      "checked": true
+    },
     "Wohnung": {
       "article": "die",
       "tr": "daire, ev",
@@ -1338,6 +2502,16 @@
       "tr": "oturma odası",
       "checked": true
     },
+    "Workshop": {
+      "article": "der",
+      "tr": "atölye çalışması",
+      "checked": true
+    },
+    "Wort": {
+      "article": "das",
+      "tr": "kelime",
+      "checked": true
+    },
     "Wörterbuch": {
       "article": "das",
       "tr": "sözlük",
@@ -1346,6 +2520,11 @@
     "Zahnarzt": {
       "article": "der",
       "tr": "diş hekimi (erkek)",
+      "checked": true
+    },
+    "Zeit": {
+      "article": "die",
+      "tr": "zaman",
       "checked": true
     },
     "Zeitung": {
@@ -1368,6 +2547,11 @@
       "tr": "oda",
       "checked": true
     },
+    "Zucker": {
+      "article": "der",
+      "tr": "şeker",
+      "checked": true
+    },
     "Zug": {
       "article": "der",
       "tr": "tren",
@@ -1376,6 +2560,11 @@
     "Ärztin": {
       "article": "die",
       "tr": "doktor (kadın)",
+      "checked": true
+    },
+    "Übung": {
+      "article": "die",
+      "tr": "alıştırma",
       "checked": true
     }
   }

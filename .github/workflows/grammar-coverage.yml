@@ -1,9 +1,9 @@
 name: Grammar coverage
 on:
   push:
-    paths: ['data/**', 'scripts/check-grammar.mjs', 'scripts/build-search-index.mjs', 'scripts/sozluk.mjs', 'docs/sozluk-kontrol.csv', '.github/workflows/grammar-coverage.yml']
+    paths: ['data/**', 'scripts/check-grammar.mjs', 'scripts/build-search-index.mjs', 'scripts/sozluk.mjs', 'docs/sozluk-kontrol.csv', 'docs/sozluk-bekleyen.csv', '.github/workflows/grammar-coverage.yml']
   pull_request:
-    paths: ['data/**', 'scripts/check-grammar.mjs', 'scripts/build-search-index.mjs', 'scripts/sozluk.mjs', 'docs/sozluk-kontrol.csv', '.github/workflows/grammar-coverage.yml']
+    paths: ['data/**', 'scripts/check-grammar.mjs', 'scripts/build-search-index.mjs', 'scripts/sozluk.mjs', 'docs/sozluk-kontrol.csv', 'docs/sozluk-bekleyen.csv', '.github/workflows/grammar-coverage.yml']
 jobs:
   coverage:
     runs-on: ubuntu-latest

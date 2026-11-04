@@ -1,6 +1,7 @@
 // Alıştırmalardaki kelime listesi: data/sozluk.json (artikel + Türkçe anlam) ve soruların "vocab" anahtarları.
 //
-//   node scripts/sozluk.mjs                   denetler ve kontrol tablosunu yazar: docs/sozluk-kontrol.csv
+//   node scripts/sozluk.mjs                   denetler ve kontrol tablolarını yazar: docs/sozluk-kontrol.csv (bütün
+//                                             sözlük) ve docs/sozluk-bekleyen.csv (sadece henüz kontrol edilmemiş kelimeler)
 //   node scripts/sozluk.mjs --check           denetler; tablo güncel değilse hata verir (GitHub'da çalışır)
 //   node scripts/sozluk.mjs --import tablo.csv  Excel'de düzeltilmiş tabloyu sözlüğe geri yazar, sonra tabloyu yeniler
 //
@@ -13,6 +14,8 @@ import { readFileSync, writeFileSync } from 'node:fs';
 
 const DICT = 'data/sozluk.json';
 const CSV = 'docs/sozluk-kontrol.csv';
+// Words added since the last check: the table to look at for a new pull request.
+const PENDING = 'docs/sozluk-bekleyen.csv';
 const ARTICLES = ['der', 'die', 'das'];
 const HEAD = ['Kelime', 'Artikel', 'Türkçe anlam', 'Sadece çoğul', 'Emin değilim', 'Not', 'Kontrol edildi', 'Soru sayısı', 'Konular', 'Örnek cümle'];
 
@@ -41,7 +44,7 @@ for (const level of catalog.levels) {
           u.topics.add(`${level.id} ${topic.id}`);
           if (!u.example) {
             const correct = Array.isArray(q.correct) ? q.correct[0] : q.correct || '';
-            u.example = q.sentence.includes('___') ? q.sentence.replaceAll('___', correct) : `${q.sentence} → ${correct}`;
+            u.example = q.sentence.split('___').length === 2 ? q.sentence.replace('___', correct) : `${q.sentence} → ${correct}`;
           }
           usage.set(key, u);
         }
@@ -69,9 +72,9 @@ const cell = (value) => {
   return /[;"\n\r]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
 };
 
-function csvText() {
+function csvText(onlyPending = false) {
   // Unsure words first, then alphabetical: the ones that most need a look are at the top.
-  const keys = Object.keys(dict.words).sort((a, b) =>
+  const keys = Object.keys(dict.words).filter((key) => !onlyPending || !dict.words[key].checked).sort((a, b) =>
     Number(Boolean(dict.words[b].unsure)) - Number(Boolean(dict.words[a].unsure)) || a.localeCompare(b, 'de'));
   const rows = keys.map((key) => {
     const w = dict.words[key];
@@ -147,15 +150,19 @@ if (errors.length) {
   process.exit(1);
 }
 const text = csvText();
+const pending = csvText(true);
 const words = Object.values(dict.words);
 const summary = `${words.length} kelime, ${words.filter((w) => w.checked).length} kontrol edildi, ${words.filter((w) => w.unsure && !w.checked).length} emin olunmayan (gizli)`;
 if (args[0] === '--check') {
   let current = '';
   try { current = readFileSync(CSV, 'utf8'); } catch (_) {}
-  if (current !== text) { console.error(`FAIL: ${CSV} güncel değil. Çalıştır: node scripts/sozluk.mjs`); process.exit(1); }
-  console.log(`PASS: sözlük ve ${CSV} güncel (${summary}).`);
+  let currentPending = '';
+  try { currentPending = readFileSync(PENDING, 'utf8'); } catch (_) {}
+  if (current !== text || currentPending !== pending) { console.error(`FAIL: ${CSV} ya da ${PENDING} güncel değil. Çalıştır: node scripts/sozluk.mjs`); process.exit(1); }
+  console.log(`PASS: sözlük, ${CSV} ve ${PENDING} güncel (${summary}).`);
 } else {
   if (imported !== null) writeFileSync(DICT, JSON.stringify(dict, null, 2) + '\n');
   writeFileSync(CSV, text);
+  writeFileSync(PENDING, pending);
   console.log(`${imported !== null ? `${imported} kelime güncellendi. ` : ''}${CSV} yazıldı: ${summary}.`);
 }

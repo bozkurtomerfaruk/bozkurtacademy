@@ -1486,11 +1486,21 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const formStatus = document.getElementById('formStatus');
   const submitBtn = document.getElementById('contactSubmitBtn');
 
+  const CONTACT_EMAIL = 'bozkurtt.omerfaruk@gmail.com';
   function setFormStatus(type, message){
     if(!formStatus) return;
     formStatus.className = `contact-form-status show ${type}`;
     formStatus.textContent = message;
+    // On an error the visitor can still write directly; the address is already shown on the page.
+    if(type === 'error' && message === t('sendError')){
+      const link = document.createElement('a');
+      link.href = 'mailto:' + CONTACT_EMAIL;
+      link.textContent = CONTACT_EMAIL;
+      formStatus.append(' ', link);
+    }
   }
+  // Without JavaScript the form posts to FormSubmit directly and comes back with ?gonderildi=1.
+  if(form && new URLSearchParams(location.search).has('gonderildi')) setFormStatus('success', t('sentMessage'));
 
   form?.addEventListener('submit', async e=>{
     e.preventDefault();
@@ -1532,9 +1542,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
         })
       });
 
+      // FormSubmit answers {"success":"true"} once the address is activated. Anything else (an activation
+      // notice, an HTML page, a network error) is shown as an error, never as a sent message.
       const result = await response.json().catch(()=>({}));
-      if(!response.ok || result.success === false || result.success === 'false'){
-        throw new Error(result.message || 'Form submit failed');
+      if(!response.ok || String(result.success) !== 'true'){
+        throw new Error(result.message || `FormSubmit HTTP ${response.status}`);
       }
 
       form.reset();

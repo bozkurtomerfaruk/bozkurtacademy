@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="css/style.css?v=11" />
   <link rel="stylesheet" href="css/base.css?v=9" />
   <link rel="stylesheet" href="css/account.css?v=3" />
+  <link rel="stylesheet" href="/css/comments-admin.css?v=2" />
 </head>
 <body class="academy-theme account-page teacher-page">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
@@ -68,6 +69,7 @@
             <button class="acc-tab" role="tab" type="button" id="tab-veli" aria-controls="panel-veli" data-tab="veli">Veli onayı bekleyenler <span class="acc-count" data-count="veli"></span></button>
             <button class="acc-tab" role="tab" type="button" id="tab-odevler" aria-controls="panel-odevler" data-tab="odevler">Ödevler <span class="acc-count" data-count="odevler"></span></button>
             <button class="acc-tab" role="tab" type="button" id="tab-silinecek" aria-controls="panel-silinecek" data-tab="silinecek">Silinmesi gereken kayıtlar <span class="acc-count" data-count="silinecek"></span></button>
+            <button class="acc-tab" role="tab" type="button" id="tab-yorumlar" aria-controls="panel-yorumlar" data-tab="yorumlar">Yorumlar <span class="acc-count" data-count="yorumlar"></span></button>
           </div>
 
           <section class="acc-tabpanel" role="tabpanel" id="panel-ogrenciler" aria-labelledby="tab-ogrenciler">
@@ -98,6 +100,17 @@
             <p class="acc-hint">Gizlilik politikasındaki saklama süreleri: son dersten 12 ay sonra (hiç ders yoksa onay tarihinden), onaylanmamış kayıtlar 30 gün sonra silinir. Sunucu olmadığı için silme otomatik değil; buradan başlatılır.</p>
             <div class="acc-list" id="list-silinecek"></div>
           </section>
+          <section class="acc-tabpanel" role="tabpanel" id="panel-yorumlar" aria-labelledby="tab-yorumlar" hidden>
+            <div class="acc-tabpanel-head">
+              <p class="acc-hint">Gramer derslerine gelen yorumlar. Onaylanan yorumlar ilgili dersin sayfasında görünür. Sekmedeki sayı onay bekleyen yorumları gösterir.</p>
+              <a class="btn ghost" href="/yonetim/yorumlar/">Ayrı sayfada aç</a>
+            </div>
+            <p class="acc-status" id="commentsStatus" role="status" hidden></p>
+            <h2 class="ca-subhead">Onay bekleyen yorumlar</h2>
+            <div class="ca-list" id="commentsPending"></div>
+            <h2 class="ca-subhead">Yayındaki yorumlar</h2>
+            <div class="ca-list" id="commentsApproved"></div>
+          </section>
         </div>
       </section>
       <dialog class="acc-dialog" id="deleteDialog" aria-labelledby="deleteDialogTitle"></dialog>
@@ -113,8 +126,8 @@
       </div>
     </footer>
   </div>
-  <script src="js/app.js?v=22"></script>
+  <script src="js/app.js?v=31"></script>
   <script src="js/theme.js?v=9"></script>
-  <script type="module" src="js/account/teacher.js"></script>
+  <script type="module" src="js/account/teacher.js?v=2"></script>
 </body>
 </html>

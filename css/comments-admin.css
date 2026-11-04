@@ -19,3 +19,5 @@
 .academy-theme .ca-reply-form{display:grid;gap:10px;margin:14px 0 0}
 .academy-theme .ca-reply-form textarea{width:100%;min-height:110px;padding:12px 14px;box-sizing:border-box;resize:vertical}
 @media(max-width:620px){.academy-theme .ca-actions .btn{flex:1 1 auto}}
+/* Öğretmen paneli → Yorumlar sekmesi */
+.academy-theme .ca-subhead{font-family:var(--ba-serif);font-weight:400;font-size:var(--ba-lead);margin:24px 0 12px}

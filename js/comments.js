@@ -24,6 +24,15 @@ function restBase(){
 
 const text = (field) => field?.stringValue ?? '';
 
+// Her adım konsola "[yorum]" önekiyle yazılır; bir sorun olduğunda nedeni (ör. permission-denied) hemen görünür.
+export const COMMENTS_VERSION = 2;
+const log = (step, extra) => console.info(`[yorum] ${step}`, extra ?? '');
+const fail = (step, error) => {
+  console.error(`[yorum] HATA: ${step}`, error?.code || '', error?.message || error);
+  error.step = step;
+  return error;
+};
+
 // Onaylı yorumlar, en yenisi önce: [{ name, comment, reply, date: Date }]
 export async function loadApproved(lessonKey){
   const where = (field, value) => ({ fieldFilter: { field: { fieldPath: field }, op: 'EQUAL', value: { stringValue: value } } });
@@ -40,8 +49,12 @@ export async function loadApproved(lessonKey){
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body)
   });
-  if(!response.ok) throw new Error(`Firestore HTTP ${response.status}`);
+  if(!response.ok){
+    const detail = await response.text().catch(() => '');
+    throw fail('onaylı yorumları okuma', new Error(`Firestore HTTP ${response.status} ${detail.slice(0, 300)}`));
+  }
   const rows = await response.json();
+  log(`onaylı yorumlar okundu (${lessonKey})`, rows.filter((row) => row.document).length);
   return rows
     .filter((row) => row.document)
     .map((row) => {
@@ -54,19 +67,37 @@ export async function loadApproved(lessonKey){
 
 // Yorumu kaydeder; kayıt başarısızsa hata fırlatır. Bildirim e-postası başarısız olsa da yorum kayıtlı kalır.
 export async function submitComment({ lesson, title, link, name, email, comment }){
-  const { auth, configured, db, fa, fs } = await import('./account/firebase.js');
-  if(!configured) throw new Error('Firebase is not configured');
+  log(`gönderim başladı (modül sürümü ${COMMENTS_VERSION})`, lesson);
+  let firebase;
+  try{ firebase = await import('./account/firebase.js'); }
+  catch(error){ throw fail('Firebase yüklenemedi (gstatic.com engellenmiş olabilir)', error); }
+  const { auth, configured, db, fa, fs, projectId } = firebase;
+  if(!configured) throw fail('Firebase yapılandırılmamış', new Error('js/account/config.js'));
+  log('Firebase yüklendi', projectId);
   let user = auth.currentUser || await new Promise((resolve) => {
     const stop = auth.onAuthStateChanged((u) => { stop(); resolve(u); });
   });
-  if(!user) user = (await fa.signInAnonymously(auth)).user;
+  if(!user){
+    try{ user = (await fa.signInAnonymously(auth)).user; }
+    catch(error){ throw fail('anonim giriş (Authentication → Anonim açık mı?)', error); }
+    log('anonim giriş yapıldı', user.uid);
+  } else log(user.isAnonymous ? 'mevcut anonim oturum' : 'giriş yapmış kullanıcıyla', user.uid);
   const ref = fs.doc(fs.collection(db, 'comments'));
   const batch = fs.writeBatch(db);
   batch.set(ref, { lesson, name, comment, status: 'pending', createdAt: fs.serverTimestamp() });
   // Bekleme süresi: kurallar bu belgenin aynı batch'te bu yorumun kimliğiyle yazılmasını ister.
   batch.set(fs.doc(db, 'commentLimits', user.uid), { lastAt: fs.serverTimestamp(), lastId: ref.id });
   try{
-    await batch.commit();
+    // Firestore'a ulaşılamazsa (ağ, engelleyici eklenti) SDK yazımı süresiz bekletebilir; 20 saniye sonra hata gösterilir.
+    let timer;
+    const timeout = new Promise((_, reject) => {
+      timer = setTimeout(() => reject(Object.assign(new Error('Firestore 20 saniyede cevap vermedi'), { code: 'timeout' })), 20000);
+    });
+    await Promise.race([batch.commit(), timeout]).finally(() => clearTimeout(timer));
+    log('Firestore kaydı yazıldı', `comments/${ref.id}`);
+  }catch(error){
+    // permission-denied: kurallar yayınlanmamış, 60 saniye dolmamış veya alanlar kurala uymuyor.
+    throw fail('Firestore yazımı', error);
   }finally{
     if(user.isAnonymous) await fa.signOut(auth).catch(() => {});
   }
@@ -86,13 +117,15 @@ export async function submitComment({ lesson, title, link, name, email, comment 
         ders: `${level} · ${title}`,
         ders_linki: link,
         onay_paneli: ADMIN_URL,
-        durum: 'Onay bekliyor. Onaylamak için onay panelini aç.'
+        kayit_no: ref.id,
+        durum: 'Firestore\'a kaydedildi, onay bekliyor. Onaylamak için onay panelini aç.'
       })
     });
     const result = await response.json().catch(() => ({}));
     if(!response.ok || result.success !== true) throw new Error(result.message || `Web3Forms HTTP ${response.status}`);
+    log('bildirim e-postası gönderildi (Web3Forms)');
   }catch(error){
-    console.warn('Yorum kaydedildi, ancak bildirim e-postası gönderilemedi:', error);
+    console.warn('[yorum] Yorum kaydedildi, ancak bildirim e-postası gönderilemedi:', error);
   }
   return ref.id;
 }

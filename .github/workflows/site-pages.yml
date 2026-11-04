@@ -3,12 +3,13 @@ name: Static pages
 # Yerelde düzeltmek için: node scripts/build-pages.mjs
 on:
   push:
-    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/site-pages.mjs', '.github/workflows/site-pages.yml']
+    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', '**/*.html', 'js/**', 'css/**', '.github/workflows/site-pages.yml']
   pull_request:
-    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/site-pages.mjs', '.github/workflows/site-pages.yml']
+    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', '**/*.html', 'js/**', 'css/**', '.github/workflows/site-pages.yml']
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: node scripts/build-pages.mjs --check
+      - run: node scripts/check-versions.mjs

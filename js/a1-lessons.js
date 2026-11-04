@@ -59,7 +59,7 @@
  // Comments: approved ones come from Firestore (js/comments.js), loaded only when the visitor scrolls near the
  // comment section. Every value is written with textContent, never as HTML. Without approved comments the
  // "Öğrenci yorumları" section stays hidden. New comments are saved as "pending" and approved at /yonetim/yorumlar/.
- const COMMENTS_MODULE='/js/comments.js?v=1';
+ const COMMENTS_MODULE='/js/comments.js?v=2';
  const MONTHS=['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
  const formatDate=d=>d instanceof Date && !Number.isNaN(d.getTime())?`${d.getDate()} ${MONTHS[d.getMonth()]} ${d.getFullYear()}`:'';
  const isoDate=d=>d instanceof Date && !Number.isNaN(d.getTime())?d.toISOString().slice(0,10):'';
@@ -102,7 +102,7 @@
        const {submitComment}=await import(COMMENTS_MODULE);
        await submitComment({lesson:key,title:lesson.title,link:lessonLink(level,lesson.id),name,email,comment});
        form.reset();lastSent=Date.now();status.textContent=t('grammarCommentSent');status.classList.add('success');
-     }catch(error){console.error('Yorum gönderim hatası:',error);status.textContent=t('grammarCommentSendError');status.classList.add('error');}
+     }catch(error){console.error('[yorum] Yorum gönderilemedi'+(error?.step?' ('+error.step+')':'')+':',error?.code||'',error);status.textContent=t('grammarCommentSendError');status.classList.add('error');}
      finally{submitting=false;button.disabled=false;}
    });
  }

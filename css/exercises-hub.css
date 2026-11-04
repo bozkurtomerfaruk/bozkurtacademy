@@ -138,3 +138,14 @@ textarea.written-answer-input{resize:vertical;min-height:110px;line-height:1.55}
 .academy-theme .result-saved-note{margin:16px 0 0}
 .academy-theme .result-saved-note.success{background:var(--ba-right-bg);color:var(--ba-right)}
 .academy-theme .result-saved-note.error{background:var(--ba-wrong-bg);color:var(--ba-wrong)}
+
+/* Word list (js/quiz.js, data/sozluk.json): under a checked question and on the result screen. */
+#page-exercises .quiz-vocab{display:grid;gap:4px;margin-top:12px;padding-top:12px;border-top:2px dotted color-mix(in srgb,currentColor 35%,transparent)}
+#page-exercises .quiz-vocab>strong{font-size:var(--ba-body);font-weight:600;color:var(--ba-ink)}
+#page-exercises .quiz-vocab>small{color:var(--ba-muted);font-size:var(--ba-small)}
+#page-exercises .quiz-vocab ul{display:grid;gap:2px;margin:4px 0 0;padding:0;list-style:none;color:var(--ba-ink)}
+#page-exercises .quiz-vocab li{line-height:1.5}
+#page-exercises .quiz-vocab li small{color:var(--ba-muted);font-size:var(--ba-small)}
+#page-exercises .result-box .quiz-vocab{margin-top:20px;padding:12px 14px;border:0;border-radius:var(--ba-radius-small);background:var(--ba-paper-2)}
+#page-exercises .result-box .quiz-vocab>strong{font-family:var(--ba-serif);font-size:var(--ba-lead)}
+#page-exercises .result-box .quiz-vocab ul{grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));column-gap:24px}

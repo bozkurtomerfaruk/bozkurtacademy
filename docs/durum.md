@@ -2,6 +2,58 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-04 · Kelime listesi: A1'in kalan 16 konusu
+
+- **Kapsam:** A1'in Artikel dışındaki 16 konusu (3098 soru). 2429 A1 sorusunda artık kelime listesi var; kalan sorularda isim yok (ör. sadece zamir, sayı ya da fiil soruları).
+- **Sözlük:** 236 yeni kelime, toplam 509. Pilottaki 273 kelimeye dokunulmadı.
+- **Kontrol tablosu bu PR için:** `docs/sozluk-bekleyen.csv`. Sadece henüz kontrol edilmemiş, yani bu PR'da gelen 236 kelime var; emin olmadıklarım en üstte. Bütün sözlük yine `docs/sozluk-kontrol.csv`'de.
+  - **Emin olmadığım 2 kelime:** Bonbon ve Poster (das/der); kontrolden sonra das olarak görünüyor.
+  - **Not düştüklerim (görünüyor):** die Leiter = merdiven (der Leiter = yönetici), Kopfschmerz ve Nudel (çoğu zaman çoğul), Viertel (çeyrek; semt), Schloss (şato; kilit).
+- **Ayıklama kuralları (pilottan farklı olarak eklenenler):**
+  - Türkçe durum ve çeviri cümleleri ("Durum: …", "Telefonun yeni. Onu her gün kullanıyorsun.") listeye girmiyor; içlerindeki Almanca alıntılar („…“) giriyor.
+  - "Korrigiere"/"Hatalı" sorularında sadece doğru cümleye bakılıyor, yanlış biçimler alınmıyor.
+  - "Herr/Frau + soyadı" (Frau Keller, Herr Koch) listeye girmiyor; soyadı da unvan da alınmıyor.
+  - Essen, Lesen, Morgen gibi kelimeler sadece önlerinde artikel veya edat varsa isim sayılıyor ("beim Kochen", "jeden Morgen"); "Lesen Sie …" ve "Morgen habt ihr Zeit" alınmıyor.
+  - Emir kipleri, kişi ve şehir adları, artikelsiz ülkeler, dil adları (Englisch, Spanisch) alınmıyor.
+- **Değişmeyenler:** Sorularda sadece `vocab` eklendi; başka hiçbir alan değişmedi (16 dosya otomatik karşılaştırıldı). Sınav setlerinde liste yok.
+- **Test:** `tests/vocab.mjs` genişletildi: kelime listesi olan her konunun ilk sorusu tarayıcıda kontrol ediliyor (19 konu); hepsi geçti. `tests/search.mjs`, `check-grammar`, `check-exams`, `build-search-index --check`, `sozluk --check` de geçti.
+- **Durum:** Tabloyu kontrol ettin (2026-11-04), hepsi uygun. Bonbon ve Poster das olarak gösteriliyor; Bonbon'un notu düzeltildi ("Duden: der oder das; ikisi de doğru. Avusturya'da das kullanılır."). 509 kelimenin hepsi `checked: true`. PR #38 birleştirildi.
+
+## 2026-11-04 · Alıştırma sonuç ekranı: konuya uyan övgü metni
+
+- **Hata:** Sonuç ekranı her konuda "Harika! Artikel konusunda çok iyi gidiyorsun." diyordu; düşük puanda da artık olmayan "soldaki kısa özet"e yönlendiriyordu.
+- **Yeni metinler (TR/DE/EN):**
+  - %90 ve üstü: „{konu adı}“ konusunda çok iyi gidiyorsun.
+  - %70–89: Yanlış yaptığın soruların açıklamalarını aşağıda bir kez daha oku.
+  - %70'in altı: Aşağıdaki açıklamaları oku, sonra alıştırmayı yeniden çöz.
+  - DE/EN'deki "Diese Wörter solltest du wiederholen" / "Review these words" başlığı da konudan bağımsız oldu: "Das solltest du wiederholen" / "Worth reviewing".
+- **Önbellek sürümleri:** `app.js` v27, `quiz.js` v26.
+- **Test:** Yeni `tests/result-message.mjs` (14 kontrol, hepsi geçti): üç puan aralığı, üç dil, metinlerde "Artikel"/"soldaki özet" kalmaması, 390/1440 px açık/koyu. `tests/vocab.mjs`, `tests/search.mjs`, `check-grammar` de geçti.
+- **Durum:** PR #37 birleştirildi (2026-11-04).
+
+## 2026-11-02 · Alıştırmalarda kelime listesi: pilot (madde 3)
+
+- **Ne değişti:** Pilot konularda (A1 Artikel, A2 Dativ, B1 Relativsätze; 54 paket, 540 soru) her soru kontrol edilince, doğru da olsa yanlış da olsa, altında "Bu sorudaki kelimeler" çıkıyor: ör. **der** Bahnhof – tren istasyonu. Sonuç ekranında "Bu alıştırmadaki kelimeler" paketin bütün kelimelerini gösteriyor (tekrarsız, cümlelerdeki sırayla).
+  - Sadece alıştırmalarda; sınav setlerinde yok.
+  - DE/EN arayüzde de anlam Türkçe; başlık o dilde ve altında "Anlamlar Türkçe" notu.
+  - Sadece çoğul kullanılan isimler işaretli: die Eltern (sadece çoğul) – anne baba.
+  - Sözlük (`data/sozluk.json`, ~30 KB) sadece kelime listesi olan bir alıştırma açılınca yükleniyor. Yüklenemezse alıştırma listesiz çalışıyor.
+- **Veri formatı (onayladığın):** Merkezi sözlük + sorularda anahtar.
+  - `data/sozluk.json`: `"Bahnhof": { "article": "der", "tr": "tren istasyonu", "checked": false }`. İsteğe bağlı alanlar: `pluralOnly`, `unsure`, `note`. Aynı yazılışlı iki isim için `"See|die"` gibi bir anahtar ve `"word": "See"`.
+  - Sorularda: `"vocab": ["Bahnhof", "Hotel"]`. Cümledeki çekimli ve çoğul biçimler sözlük biçimine çevrildi (den Kindern → das Kind, die Bücher → das Buch).
+  - Alınmayanlar: Almanca yönergelerdeki kelimeler (Satz, Variante, Frage passt …), kişi ve şehir adları, artikelsiz ülkeler (Spanien, Österreich), "nach Hause" gibi kalıplar. Artikelli ülkeler (die Schweiz, die Türkei) listede.
+  - Sorulardaki başka hiçbir alan değişmedi (otomatik karşılaştırmayla doğrulandı).
+- **Sözlük:** 273 kelime, artikel ve anlamları ben yazdım; hepsi `checked: false`.
+  - **Emin olmadığım 3 kelime (öğrenciye gizli, kontrolünü bekliyor):** Bank (banka mı bank mı), Karte (bilet / kart / harita), Laptop (der ve das ikisi de doğru). Kontrol edince görünür olurlar.
+  - Not düştüğüm diğerleri (görünüyor): See (der See = göl, die See = deniz), Fräulein (eskimiş).
+- **Kontrol tablosu:** `docs/sozluk-kontrol.csv` (Excel'de açılır; noktalı virgülle ayrılmış, Türkçe harfler doğru). Emin olmadıklarım en üstte. Sütunlar: Kelime, Artikel, Türkçe anlam, Sadece çoğul, Emin değilim, Not, Kontrol edildi, Soru sayısı, Konular, Örnek cümle.
+  - **Düzeltme yolu:** Tabloda Artikel, Türkçe anlam, Not ve evet/hayır sütunlarını değiştirip bana geri gönder. `node scripts/sozluk.mjs --import tablo.csv` sözlüğe işler.
+  - `node scripts/sozluk.mjs --check` GitHub'da çalışıyor: sözlükte olmayan anahtar, yanlış artikel veya eski tablo hata veriyor.
+- **Diller:** Yeni metinler TR/DE/EN. **Önbellek sürümleri:** `app.js` v26, `quiz.js` v25, `exercises-hub.css` v7.
+- **Test:** Yeni `tests/vocab.mjs` (24 kontrol, hepsi geçti): doğru ve yanlış cevap, Enter ile yazmalı yanlış cevap, dil değişimi, sonuç listesi, gizli kelimeler, sadece çoğul, sınav setinde liste olmaması, sözlük yüklenemezse çalışma, 390/1440 px açık/koyu. `tests/search.mjs`, `tests/exams/next.mjs`, `check-grammar`, `check-exams`, `build-search-index --check`, `sozluk --check`, `npm run test:placement` de geçti.
+- **Durum:** Tabloyu kontrol ettin (2026-11-04): Bank, Karte, Laptop doğru; 273 kelimenin hepsi `checked: true`, emin olunmayanlar artık görünüyor. PR #36 birleştirildi.
+- **Fark ettiğim ama dokunmadığım:** Sonuç ekranındaki övgü metinleri (`resultPerfect` vb.) her konuda "Artikel konusunda çok iyi gidiyorsun" diyor ve kapalı olan "soldaki özet"ten bahsediyor. Ayrı küçük bir iş.
+
 ## 2026-11-02 · Alt başlıklarda arama (madde 2)
 
 - **Alıştırmalar:** Arama artık konuların yanında alıştırma paketlerinin başlıklarında da arıyor. Eşleşen paketler konu kartlarının altında "Alıştırma paketleri" başlığıyla listeleniyor (seviye, paket adı, hangi konuda olduğu). Tıklayınca alıştırma ilk sorusuyla doğrudan açılıyor; geri tuşu listeye döndürüyor.
@@ -18,7 +70,7 @@
 
 ## 2026-11-02 · Seviye testi: her gün otomatik silme (GitHub Actions, madde 7)
 
-- **Durum:** PR #34 birleştirildi (2026-11-02). Kuralların Firebase Console'da yayınlanması ve ilk deneme bekliyor.
+- **Durum:** PR #34 birleştirildi (2026-11-02). Kuralları yayınladın, elle çalıştırılan ilk deneme başarılı (yeşil ✓). 3 Kasım'daki zamanlanmış çalışma, kurallar o sırada henüz yayınlanmadığı için hata vermişti; bundan sonra her gün çalışacak.
 - **Neden:** Silme şu ana kadar sadece yönetim sayfası açılınca oluyordu. Senin isteğinle artık senden bağımsız.
 - **Nasıl:** `.github/workflows/placement-cleanup.yml` her gün 03:23 UTC'de `scripts/placement-cleanup.mjs`'i çalıştırır; `expireAt` tarihi geçmiş sonuçları siler.
   - **Servis hesabı anahtarı yok.** Servis hesabı kurallardan geçmediği ve Firestore'da tek bir koleksiyonla sınırlanamadığı için, sızarsa bütün öğrenci verisi açılırdı. Onun yerine Firebase Authentication'da ayrı bir "temizlik hesabı" var; script bu hesapla giriş yapıyor ve kurallardan geçiyor.

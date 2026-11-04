@@ -73,6 +73,41 @@
     return rows;
   }
 
+  // Word list under each checked question and on the result screen: nouns with their article and Turkish
+  // meaning (also in the German and English interface). Each question lists its words in "vocab"; the
+  // entries are in data/sozluk.json (scripts/sozluk.mjs). Words marked unsure stay hidden until checked.
+  // Exam sets (js/exam-task.js) do not use this.
+  const vocab = { status:'idle', words:{}, promise:null };
+  function loadVocab(){
+    if(vocab.status === 'idle'){
+      vocab.status = 'loading';
+      vocab.promise = fetch('data/sozluk.json?v=1')
+        .then(response => { if(!response.ok) throw new Error(response.status); return response.json(); })
+        .then(data => { vocab.words = data.words || {}; vocab.status = 'ready'; })
+        .catch(() => { vocab.status = 'failed'; });
+    }
+    return vocab.promise || Promise.resolve();
+  }
+  const exerciseVocab = () => [...new Set((state.exercise?.questions || []).flatMap(q => q.vocab || []))];
+  function vocabHtml(keys, titleKey){
+    if(vocab.status !== 'ready' || !keys?.length) return '';
+    const items = [...new Set(keys)].map(key => [key, vocab.words[key]]).filter(([, w]) => w && (!w.unsure || w.checked));
+    if(!items.length) return '';
+    return `<div class="quiz-vocab" data-vocab>
+      <strong>${escapeHtml(t(titleKey))}</strong>
+      ${lang() !== 'tr' ? `<small>${escapeHtml(t('vocabTurkishNote'))}</small>` : ''}
+      <ul>${items.map(([key, w]) => `<li><span lang="de"><b>${escapeHtml(w.article)}</b> ${escapeHtml(w.word || key.split('|')[0])}${w.pluralOnly ? ` <small>(${escapeHtml(t('vocabPluralOnly'))})</small>` : ''}</span> <span aria-hidden="true">–</span> <span lang="tr">${escapeHtml(w.tr)}</span></li>`).join('')}</ul>
+    </div>`;
+  }
+  // The dictionary may arrive after the answer was checked or the result was shown: add the lists then.
+  function fillVocab(){
+    const q = state.pool[state.index];
+    const feedback = $('quizFeedback');
+    if(state.checked && q?.vocab && feedback && !feedback.querySelector('[data-vocab]')) feedback.insertAdjacentHTML('beforeend', vocabHtml(q.vocab, 'vocabQuestion'));
+    const slot = document.querySelector('#quizResult [data-vocab-slot]');
+    if(slot && !slot.innerHTML.trim()) slot.innerHTML = vocabHtml(exerciseVocab(), 'vocabExercise');
+  }
+
   function normalizeWritten(value){
     return String(value ?? '')
       .normalize('NFC')
@@ -136,7 +171,7 @@
     const link=document.createElement('link');
     link.id='exerciseHubCss';
     link.rel='stylesheet';
-    link.href='css/exercises-hub.css?v=6';
+    link.href='css/exercises-hub.css?v=7';
     document.head.appendChild(link);
   }
 
@@ -606,6 +641,7 @@
     state.exercise=state.topicData.exercises.find(ex=>ex.id===exerciseId);
     if(!state.exercise) return;
     resetQuiz(state.exercise.questions || []);
+    if(exerciseVocab().length) loadVocab().then(fillVocab);
     renderLesson();
     updateStudyButtons();
     showOnly('exerciseQuizView');
@@ -783,6 +819,8 @@ function renderCheckedQuestion(q, response){
     `;
   }
 
+  if(q.vocab) feedback.insertAdjacentHTML('beforeend', vocabHtml(q.vocab, 'vocabQuestion'));
+
   if(isWritten(q)){
     const input=$('writtenAnswerInput');
     if(input) input.disabled=true;
@@ -931,6 +969,7 @@ function startNextExercise(){
       <div class="result-score"><div><strong>${state.score}/${total}</strong><span>${percent}% ${t('scoreLabel')}</span></div></div>
       <p class="result-message">${message}</p>
       ${wrongHtml}
+      <div data-vocab-slot>${vocabHtml(exerciseVocab(), 'vocabExercise')}</div>
       <div class="quiz-actions result-actions">
   <button class="btn primary" type="button" id="restartQuizBtn">
     ${t('restartQuiz')}

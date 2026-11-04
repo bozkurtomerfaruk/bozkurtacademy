@@ -2,6 +2,16 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-04 · Seviye testi tarayıcı testi yeni sayfa yapısına uyarlandı
+
+- **Neden:** "Dersler" ve "İletişim" ayrı sayfalara taşındı (`/online-almanca-dersi/`, `/iletisim/`); `npm run test:placement` hâlâ eski `#lessons` ve `#contact` bölümlerine bakıp duruyordu. Gizlilik sayfasının tarihi de (Web3Forms değişikliği) 4 Kasım oldu.
+- **Değişen:** Sadece `tests/seviye-testi/placement.mjs`.
+  - Ders ve iletişim sayfalarındaki `/#seviye-testi` bağlantıları deneniyor; eski `#contact` adresinin `/iletisim/`'e yönlendiği de kontrol ediliyor.
+  - Testin küçük sunucusu klasör adreslerinde `index.html`'i açıyor.
+  - Sayaç kontrolü ana sayfadan açılışın hemen ardına alındı.
+  - Gizlilik tarihleri güncellendi.
+- **Test:** `npm run test:placement` tamamen geçti.
+
 ## 2026-11-04 · Seviye sonu sınavı: A1 (madde 4)
 
 - **Sayfa:** `#seviye-sonu/A1`. Alıştırmalar sayfasında A1 konu listesinin sonunda bir kart var ("A1 seviyesini bitirdin mi?").

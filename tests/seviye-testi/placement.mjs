@@ -21,7 +21,9 @@ const shotDir = process.env.S || fs.mkdtempSync(path.join(os.tmpdir(), 'placemen
 // ---------- statik sunucu ----------
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.woff2': 'font/woff2', '.ico': 'image/x-icon' };
 const server = http.createServer((req, res) => {
-  const file = path.join(ROOT, decodeURIComponent(new URL(req.url, 'http://x').pathname));
+  let file = path.join(ROOT, decodeURIComponent(new URL(req.url, 'http://x').pathname));
+  // Static pages live in folders (/iletisim/, /online-almanca-dersi/): serve their index.html.
+  if(file.startsWith(ROOT) && fs.existsSync(file) && fs.statSync(file).isDirectory()) file = path.join(file, 'index.html');
   if(!file.startsWith(ROOT) || !fs.existsSync(file) || fs.statSync(file).isDirectory()){ res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'Content-Type': TYPES[path.extname(file)] || 'application/octet-stream' });
   fs.createReadStream(file).pipe(res);
@@ -121,16 +123,24 @@ await resetEmulators();
   ok(await page.locator('a[href*="yonetim"]').count() === 0, 'sitede yönetim sayfasına bağlantı yok');
   await page.click('#page-home a[href="#seviye-testi"]'); await page.waitForTimeout(400);
   ok(await page.locator('#page-seviye-testi.active [data-pl-start]').isVisible(), 'ana sayfadaki "Seviyeni ölç" testi açıyor');
-  await page.goto(B + '#lessons'); await page.waitForTimeout(400);
-  ok((await page.locator('#page-lessons .pl-promo h2').textContent()).includes('seviyeni ölç'), 'Dersler sayfasında kart var');
-  await page.click('#page-lessons .pl-promo a'); await page.waitForTimeout(400);
-  ok(page.url().endsWith('#seviye-testi') && await page.locator('[data-pl-start]').isVisible(), 'Dersler kartı testi açıyor');
-  await page.goto(B + '#contact'); await page.waitForTimeout(400);
-  ok((await page.locator('#page-contact .contact-level-link').textContent()).includes('Seviyeni bilmiyor musun?'), 'İletişim sayfasında not var');
-  await page.click('#page-contact .contact-level-link'); await page.waitForTimeout(400);
-  ok(await page.locator('[data-pl-start]').isVisible(), 'İletişim bağlantısı testi açıyor');
+  // Sayaç: test ayrı sayfa olarak sayılıyor (ana sayfadan açılınca; sonraki sayfalar ayrı yükleniyor).
   const counted = await page.evaluate(() => window.__counted);
   ok(counted.includes('/#seviye-testi'), `sayaç testi ayrı sayfa sayıyor (${counted.join(' ')})`);
+  // Dersler ve İletişim artık ayrı sayfalar (/online-almanca-dersi/, /iletisim/); bağlantılar /#seviye-testi'ye gider.
+  const ORIGIN = new URL(B).origin;
+  await page.goto(ORIGIN + '/online-almanca-dersi/'); await page.waitForTimeout(400);
+  const lessonsLink = page.locator('main a[href="/#seviye-testi"]').first();
+  ok((await lessonsLink.textContent()).includes('seviyeni ölç'), 'Dersler sayfasında "Önce seviyeni ölç" bağlantısı var');
+  await lessonsLink.click(); await page.waitForTimeout(1200);
+  ok(page.url().endsWith('#seviye-testi') && await page.locator('#page-seviye-testi.active [data-pl-start]').isVisible(), 'Dersler sayfasındaki bağlantı testi açıyor');
+  await page.goto(ORIGIN + '/iletisim/'); await page.waitForTimeout(400);
+  const contactLink = page.locator('main a[href="/#seviye-testi"]').first();
+  ok((await contactLink.textContent()).includes('seviye testini'), 'İletişim sayfasında seviye testi bağlantısı var');
+  await contactLink.click(); await page.waitForTimeout(1200);
+  ok(await page.locator('#page-seviye-testi.active [data-pl-start]').isVisible(), 'İletişim sayfasındaki bağlantı testi açıyor');
+  // Eski adresler (#lessons, #contact) yeni sayfalara yönleniyor.
+  await page.goto(B + '#contact'); await page.waitForTimeout(1200);
+  ok(new URL(page.url()).pathname === '/iletisim/', `eski #contact adresi /iletisim/ sayfasını açıyor (${page.url()})`);
   await ctx.close();
 }
 
@@ -455,9 +465,9 @@ for(const [lang, title] of [['tr', 'Seviye tespit sınavı'], ['de', 'Einstufung
 
 // 11. Gizlilik sayfası: metnin tamamı TR/DE/EN; dil düğmesine göre tek dil görünür
 const PRIVACY = {
-  tr: { h1: 'Gizlilik politikası', title: '5a. Seviye testi', firebase: 'Tek istisna: Seviye testinin sonucunu göndermek', updated: 'Son güncelleme: 27 Ekim 2026', foreign: ['Verantwortlicher', 'Controller'], doc: 'Gizlilik politikası | Bozkurt Academy' },
-  de: { h1: 'Datenschutzerklärung', title: '5a. Einstufungstest', firebase: 'Einzige Ausnahme: Wenn Sie nach dem Einstufungstest', updated: 'Stand: 27. Oktober 2026', foreign: ['Sorumlu', 'Controller', 'Siteyi ziyaret'], doc: 'Datenschutzerklärung | Bozkurt Academy' },
-  en: { h1: 'Privacy policy', title: '5a. Placement test', firebase: 'The only exception: when you press “Send result”', updated: 'Last updated: 27 October 2026', foreign: ['Sorumlu', 'Verantwortlicher', 'Siteyi ziyaret'], doc: 'Privacy policy | Bozkurt Academy' }
+  tr: { h1: 'Gizlilik politikası', title: '5a. Seviye testi', firebase: 'Tek istisna: Seviye testinin sonucunu göndermek', updated: 'Son güncelleme: 4 Kasım 2026', foreign: ['Verantwortlicher', 'Controller'], doc: 'Gizlilik politikası | Bozkurt Academy' },
+  de: { h1: 'Datenschutzerklärung', title: '5a. Einstufungstest', firebase: 'Einzige Ausnahme: Wenn Sie nach dem Einstufungstest', updated: 'Stand: 4. November 2026', foreign: ['Sorumlu', 'Controller', 'Siteyi ziyaret'], doc: 'Datenschutzerklärung | Bozkurt Academy' },
+  en: { h1: 'Privacy policy', title: '5a. Placement test', firebase: 'The only exception: when you press “Send result”', updated: 'Last updated: 4 November 2026', foreign: ['Sorumlu', 'Verantwortlicher', 'Siteyi ziyaret'], doc: 'Privacy policy | Bozkurt Academy' }
 };
 const visibleText = (page) => page.evaluate(() => document.querySelector('.acc-legal').innerText);
 for(const [lang, x] of Object.entries(PRIVACY)){

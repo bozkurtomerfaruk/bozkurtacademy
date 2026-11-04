@@ -14,7 +14,7 @@
 - **Ayıklama:** Önceki kurallar aynen. Ek olarak "Tipp: …" ipuçları, "Aktiv:/Passiv:/Direkt:" etiketleri, "→ Passiv/von-Form", "Ausgangssatz:", "Behalte/Verschiebe/Nenne/Forme …" yönergeleri ve "Berichte. Beginne: …" alınmıyor; "Wissen Sie …" ve "Zahlen Sie …" gibi kullanımlar isim sayılmıyor.
 - **Değişmeyenler:** Sorularda sadece `vocab` eklendi (12 dosya otomatik karşılaştırıldı). Sınav setlerinde liste yok.
 - **Test:** `tests/vocab.mjs` (kelime listesi olan 41 konunun ilk sorusu tarayıcıda), `check-grammar`, `check-exams`, `build-search-index --check`, `sozluk --check` geçti; herkese açık sayfalarda konsol hatası yok.
-- **Senin yapman gereken:** `docs/sozluk-bekleyen.csv`'yi kontrol et. Uygunsa "birleştir" de; kelimeleri "kontrol edildi" yapıp B2'ye geçerim.
+- **Durum:** Tabloyu kontrol ettin (2026-11-04), hepsi uygun. Bube "der Bube – vale (iskambil)", Marathon der olarak görünüyor; Akku'nun anlamı "şarjlı pil, batarya" oldu. 963 kelimenin hepsi `checked: true`. PR #41 birleştirildi.
 
 ## 2026-11-04 · Kelime listesi: A2'nin kalan 10 konusu
 

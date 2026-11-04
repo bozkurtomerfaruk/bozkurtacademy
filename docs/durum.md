@@ -2,6 +2,19 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-04 · Kelime listesi: B2 (7 konu)
+
+- **Kapsam:** B2'nin alıştırması olan 7 konusu (Konjunktiv I, Passiv-Varianten, Nominalisierung, Partizip I, Partizip II, Genitivpräpositionen, je … desto). B2'deki 1400 sorunun 1160'ında artık kelime listesi var. Hazırlanmakta olan 3 B2 konusunda henüz alıştırma olmadığı için liste de yok. Böylece kelime listesi alıştırması olan bütün konularda (A1–B2) var.
+- **Sözlük:** 286 yeni kelime, toplam 1249. Önceden kontrol edilen 963 kelimeye dokunulmadı.
+- **Kontrol tablosu bu PR için:** `docs/sozluk-bekleyen.csv` (sadece bu 286 kelime; emin olmadığım en üstte).
+  - **Emin olmadığım 1 kelime (öğrenciye gizli):** Bedenken (çoğu zaman çoğul die Bedenken; tekili das Bedenken da var).
+  - **İki artikelli girişler (der/die, sıfattan türemiş isimler):** Alte, Ältere, Jüngere, Angestellte, Arbeitslose, Bekannte, Beteiligte, Betroffene, Deutsche, Fremde, Kranke, Mitarbeitende, Obdachlose, Studierende, Teilnehmende, Unbekannte, Unzufriedene, Verantwortliche, Verdächtige; ayrıca "der/die Junge – genç (kişi)" (die Jungen und die Alten). der Junge = erkek çocuk ayrı giriş olarak kalıyor.
+  - **Renkler ve fiilden isimler:** das Blau, das Grün …; das Betreten, das Verlassen, das Warten … (sadece önlerinde artikel/edat varsa).
+- **Ayıklama:** Önceki kurallar aynen. Ek olarak "etwas Neues / alles Gute / das Wesentliche" gibi soyut sıfat-isimleri, cümle başındaki sıfat-fiiller (Lachende Kinder …) ve dil bilgisi terimleri (Konjunktiv, Partizip, Modalverb …) alınmıyor.
+- **Değişmeyenler:** Sorularda sadece `vocab` eklendi (7 dosya otomatik karşılaştırıldı). Sınav setlerinde liste yok.
+- **Test:** `tests/vocab.mjs` (kelime listesi olan 48 konunun ilk sorusu tarayıcıda), `check-grammar`, `check-exams`, `build-search-index --check`, `sozluk --check` geçti; herkese açık sayfalarda konsol hatası yok.
+- **Durum:** Tabloyu kontrol ettin (2026-11-04), hepsi uygun. Bedenken "die Bedenken (sadece çoğul) – endişeler, kaygılar" olarak görünüyor; Datenbasis'in anlamı "veri temeli, dayanak alınan veriler" oldu. 1249 kelimenin hepsi `checked: true`. PR #42 birleştirildi; **madde 3 tamamlandı.**
+
 ## 2026-11-04 · Kelime listesi: B1'in kalan 12 konusu
 
 - **Kapsam:** B1'in Relativsätze dışındaki 12 konusu. B1'deki 2274 sorunun 1847'sinde artık kelime listesi var.

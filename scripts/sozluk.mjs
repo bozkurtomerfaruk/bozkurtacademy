@@ -5,6 +5,7 @@
 //   node scripts/sozluk.mjs --check           denetler; tablo güncel değilse hata verir (GitHub'da çalışır)
 //   node scripts/sozluk.mjs --import tablo.csv  Excel'de düzeltilmiş tabloyu sözlüğe geri yazar, sonra tabloyu yeniler
 //
+// İki cinsiyetli isimlerde artikel "der/die" yazılabilir.
 // Tablo Excel için noktalı virgülle ayrılmış ve UTF-8 BOM'lu. Düzeltilebilen sütunlar: Artikel, Türkçe anlam,
 // Sadece çoğul, Emin değilim, Not, Kontrol edildi (evet/hayır). "Emin değilim = evet" olan kelimeler,
 // "Kontrol edildi = evet" yapılana kadar öğrenciye gösterilmez.
@@ -55,7 +56,9 @@ for (const level of catalog.levels) {
 
 function validate() {
   for (const [key, w] of Object.entries(dict.words)) {
-    if (!ARTICLES.includes(w.article)) errors.push(`${key}: artikel der/die/das olmalı (${w.article})`);
+    // Two articles for nouns made from adjectives or with two genders: "der/die" (Jugendliche).
+    const parts = String(w.article).split('/');
+    if (parts.length > 2 || !parts.every((a) => ARTICLES.includes(a)) || new Set(parts).size !== parts.length) errors.push(`${key}: artikel der/die/das ya da der/die gibi iki artikel olmalı (${w.article})`);
     if (typeof w.tr !== 'string' || !w.tr.trim()) errors.push(`${key}: Türkçe anlam boş`);
     if (w.pluralOnly && w.article !== 'die') errors.push(`${key}: sadece çoğul olan kelimenin artikeli die olmalı`);
     for (const flag of ['pluralOnly', 'unsure', 'checked']) {

@@ -12,7 +12,7 @@
 - **Ayıklama:** A1'deki kurallar aynen. Ek olarak "Ja/Nein-Frage:", "W-Frage:", "Gib einen Rat:" yönergeleri ve dil bilgisi terimleri (Subjekt, Akkusativ, Kasus, Hauptsatz, Futur I, Gegenwart/Vergangenheit/Zukunft …) alınmıyor.
 - **Değişmeyenler:** Sorularda sadece `vocab` eklendi (10 dosya otomatik karşılaştırıldı). Sınav setlerinde liste yok.
 - **Test:** `tests/vocab.mjs` (kelime listesi olan 29 konunun ilk sorusu tarayıcıda), `check-grammar`, `check-exams`, `build-search-index --check`, `sozluk --check` geçti; herkese açık sayfalarda konsol hatası yok.
-- **Senin yapman gereken:** `docs/sozluk-bekleyen.csv`'yi kontrol et. Uygunsa "birleştir" de; kelimeleri "kontrol edildi" yapıp B1'e geçerim.
+- **Durum:** Tabloyu kontrol ettin (2026-11-04), hepsi uygun. Golf, Sandwich, Service önerilen artikellerle görünüyor. Jugendliche "der/die Jugendliche – genç" olarak gösteriliyor (sözlükte artık iki artikelli giriş yazılabiliyor: `"article": "der/die"`); notu düzeltildi. 673 kelimenin hepsi `checked: true`. PR #40 birleştirildi.
 
 ## 2026-11-04 · Kelime listesi: A1'in kalan 16 konusu
 

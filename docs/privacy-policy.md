@@ -14,9 +14,9 @@ verification) and GoatCounter visitor statistics on the public pages, and the pl
 | Service | When | What it receives | Where to look in the code |
 | --- | --- | --- | --- |
 | **GitHub Pages** (GitHub Inc., hosting of bozkurtacademy.com) | Every page view | IP address, browser and device details, time and page requested (server logs) | Whole site; `CNAME` points the domain at GitHub Pages |
-| **FormSubmit** (formsubmit.co) | Only when someone sends the contact form | Name, email address, message text, plus IP address and browser details of the request | `js/app.js`, `fetch('https://formsubmit.co/ajax/…')` |
-| **FormSubmit** (formsubmit.co) | Only when someone sends a comment on a grammar lesson | Name, email address, comment text, the lesson and level, publication consent, plus IP address and browser details | `js/a1-lessons.js`, comment form |
-| **Gmail / Google** (Google Ireland Ltd.) | After FormSubmit forwards a form | Everything FormSubmit received, stored in the bozkurtt.omerfaruk@gmail.com mailbox | FormSubmit delivers to that address |
+| **Web3Forms** (web3forms.com) | Only when someone sends the contact form | Name, email address, message text, plus IP address and browser details of the request | `js/app.js`, `fetch('https://api.web3forms.com/submit')` |
+| **Web3Forms** (web3forms.com) | Only when someone sends a comment on a grammar lesson | Name, email address, comment text, the lesson and level, publication consent, plus IP address and browser details | `js/a1-lessons.js`, comment form |
+| **Gmail / Google** (Google Ireland Ltd.) | After Web3Forms forwards a form | Everything Web3Forms received, stored in the bozkurtt.omerfaruk@gmail.com mailbox | Web3Forms delivers to that address |
 | **GoatCounter** (bozkurtacademy.goatcounter.com) | Every page change on the public pages in `index.html` (home, lessons, grammar, exercises, exam prep, about, contact). Not on login, registration or panel pages, and never on localhost | Page address (path and hash, e.g. `/#grammar/A1/artikel`; exercise question numbers are dropped), referrer (first page of a visit only), page title, browser details (user agent) and screen width, country derived from the IP address. GoatCounter does not store the IP address. No cookies, no localStorage | `js/analytics.js`, `js/vendor/count.js` (served from this site, not from gc.zgo.at) |
 | **Firebase Authentication** (Google Ireland Ltd. / Google LLC) | When a student registers or signs in, and on every later visit of a signed-in student | Email address, password hash; with Google sign-in (16+ only) also the Google name, email and photo URL. Not region-bound: may be processed in the USA | `js/account/firebase.js`, `login.js`, `register.js` |
 | **Cloud Firestore** (Google, europe-west3 Frankfurt) | Student accounts only | Name, email, birth year, account status, exercise results (level, topic, exercise, score, time); for under-16s also parent name and email, consent date and method | `firestore.rules`, `js/account/*.js` |
@@ -93,7 +93,7 @@ Guests who never sign in load nothing from Google, unless they send a placement-
 ## What to select in a generator (e.g. eRecht24, Datenschutz-Generator.de)
 
 - Hosting: GitHub Pages (provider outside the EU/EEA, USA).
-- Contact form: yes, sent through a third-party form service (FormSubmit), delivered by email (Gmail).
+- Contact form: yes, sent through a third-party form service (Web3Forms), delivered by email (Gmail).
 - Comment function: yes, moderated, name and email required, name and comment published with consent.
 - Cookies: none. Local storage: yes, for settings only (theme, language, scores), no tracking.
 - Web fonts: locally hosted (no external font service).

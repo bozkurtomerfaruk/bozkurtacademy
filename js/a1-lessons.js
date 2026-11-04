@@ -73,8 +73,9 @@
      if(Date.now()-lastSent<30000){status.textContent=t('grammarCommentWait');return;}
      submitting=true;const button=form.querySelector('[type="submit"]');button.disabled=true;status.textContent=t('grammarCommentSending');
      try {
-       const response=await fetch('https://formsubmit.co/ajax/bozkurtt.omerfaruk@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name,email,message:comment,topic:lesson.title,topic_id:lesson.id,level,publication_consent:'Öğrenci yorumunun adıyla yayımlanmasına onay verdi.',_subject:'Bozkurt Academy - '+level+' yorum incelemesi: '+lesson.title,_replyto:email,_url:'https://bozkurtacademy.com/#grammar/'+level+'/'+lesson.id,_template:'table'})});
-       const result=await response.json();if(!response.ok || result.success===false || result.success==='false')throw Error('send');
+       // Web3Forms, same public access key as the contact form in js/app.js; only success: true counts as sent.
+       const response=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({access_key:'21c1c876-3c08-4019-a29d-8181b1f640f0',subject:'Bozkurt Academy – '+level+' yorum incelemesi: '+lesson.title,from_name:'Bozkurt Academy Web Sitesi',replyto:email,name,email,message:comment,topic:lesson.title,topic_id:lesson.id,level,publication_consent:'Öğrenci yorumunun adıyla yayımlanmasına onay verdi.',page:'https://bozkurtacademy.com/#grammar/'+level+'/'+lesson.id})});
+       const result=await response.json().catch(()=>({}));if(!response.ok || result.success!==true)throw Error(result.message||'send');
        form.reset();lastSent=Date.now();status.textContent=t('grammarCommentSent');status.classList.add('success');
      }catch(_){status.textContent=t('grammarCommentSendError');status.classList.add('error');}
      finally{submitting=false;button.disabled=false;}

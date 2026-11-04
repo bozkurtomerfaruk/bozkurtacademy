@@ -804,3 +804,121 @@ describe('Seviye testi (placementTests)', () => {
     })));
   });
 });
+
+describe('Gramer dersi yorumları (comments)', () => {
+  const anonToken = { firebase: { sign_in_provider: 'anonymous' } };
+  const anon = (uid = 'anon1') => as(uid, anonToken);
+  const comment = (overrides = {}) => ({
+    lesson: 'A1/artikel',
+    name: 'Ayşe',
+    comment: 'Artikel konusunu bu anlatımla anladım.',
+    status: 'pending',
+    createdAt: serverTimestamp(),
+    ...overrides
+  });
+  // Uygulamanın yaptığı gibi: yorum ve bekleme belgesi aynı batch içinde.
+  function submit(db, uid, data, { id = 'Com' + Math.random().toString(36).slice(2, 12), limit } = {}) {
+    const batch = writeBatch(db);
+    batch.set(doc(db, `comments/${id}`), data);
+    batch.set(doc(db, `commentLimits/${uid}`), limit || { lastAt: serverTimestamp(), lastId: id });
+    return batch.commit();
+  }
+  const seeded = (status, extra = {}) => ({ ...comment({ status, createdAt: Timestamp.now() }), ...extra });
+
+  test('anonim ziyaretçi ve öğrenci bekleyen yorum ekleyebilir', async () => {
+    await assertSucceeds(submit(anon(), 'anon1', comment()));
+    await assertSucceeds(submit(ayse(), 'ayse', comment({ lesson: 'B1/passiv' })));
+  });
+
+  test('giriş yapmamış biri yorum ekleyemez', async () => {
+    await assertFails(submit(guestDb(), 'x', comment()));
+  });
+
+  test('yorum onaylı veya başka bir durumla oluşturulamaz', async () => {
+    await assertFails(submit(anon('a'), 'a', comment({ status: 'approved' })));
+    await assertFails(submit(anon('b'), 'b', comment({ status: 'hidden' })));
+  });
+
+  test('fazladan alan (e-posta, cevap) veya eksik alan kabul edilmez', async () => {
+    await assertFails(submit(anon('a'), 'a', comment({ email: 'ayse@example.com' })));
+    await assertFails(submit(anon('b'), 'b', comment({ reply: 'Kendi cevabım' })));
+    const { name, ...noName } = comment();
+    await assertFails(submit(anon('c'), 'c', noName));
+  });
+
+  test('isim, yorum, ders anahtarı ve tarih sınırları', async () => {
+    const cases = {
+      name: ['', '   ', 'x'.repeat(61), 42],
+      comment: ['kısa', ' '.repeat(12), 'x'.repeat(2001)],
+      lesson: ['artikel', 'C1/artikel', 'A1/Artikel', 'A1/<b>', 'A1/' + 'x'.repeat(41)],
+      createdAt: [Timestamp.fromMillis(Date.now() - 60000)]
+    };
+    let i = 0;
+    for (const [field, values] of Object.entries(cases)) for (const value of values) {
+      const uid = 'v' + (i++);
+      await assertFails(submit(anon(uid), uid, comment({ [field]: value })), `${field}=${String(value).slice(0, 20)}`);
+    }
+    await assertSucceeds(submit(anon('max'), 'max', comment({ name: 'x'.repeat(60), comment: 'y'.repeat(2000) })));
+  });
+
+  test('bekleme belgesi olmadan yorum eklenemez; 60 saniye dolmadan ikinci yorum eklenemez', async () => {
+    await assertFails(setDoc(doc(anon(), 'comments/ComAbcdefghij'), comment()));
+    await assertSucceeds(submit(anon(), 'anon1', comment()));
+    await assertFails(submit(anon(), 'anon1', comment()));
+    await seed('commentLimits/anon1', { lastAt: Timestamp.fromMillis(Date.now() - 61 * 1000), lastId: 'ComOld000001' });
+    await assertSucceeds(submit(anon(), 'anon1', comment()));
+  });
+
+  test('bekleme belgesi tek başına sıfırlanamaz, okunamaz veya silinemez', async () => {
+    await assertSucceeds(submit(anon(), 'anon1', comment()));
+    await assertFails(setDoc(doc(anon(), 'commentLimits/anon1'), { lastAt: serverTimestamp(), lastId: 'ComNew000001' }));
+    await assertFails(getDoc(doc(anon(), 'commentLimits/anon1')));
+    await assertFails(deleteDoc(doc(anon(), 'commentLimits/anon1')));
+  });
+
+  test('herkes yalnızca onaylı yorumları okuyabilir', async () => {
+    await seed('comments/ComOk00000001', seeded('approved', { reply: 'Teşekkürler!' }));
+    await seed('comments/ComWait0000001', seeded('pending'));
+    for (const db of [guestDb(), anon(), ayse()]) {
+      await assertSucceeds(getDoc(doc(db, 'comments/ComOk00000001')));
+      await assertFails(getDoc(doc(db, 'comments/ComWait0000001')));
+      await assertSucceeds(getDocs(query(collection(db, 'comments'), where('lesson', '==', 'A1/artikel'), where('status', '==', 'approved'))));
+      // Durum filtresi olmayan veya bekleyenleri isteyen sorgu reddedilir.
+      await assertFails(getDocs(collection(db, 'comments')));
+      await assertFails(getDocs(query(collection(db, 'comments'), where('lesson', '==', 'A1/artikel'))));
+      await assertFails(getDocs(query(collection(db, 'comments'), where('status', '==', 'pending'))));
+    }
+  });
+
+  test('öğretmen olmayan biri onaylayamaz, düzenleyemez, cevap yazamaz, silemez', async () => {
+    await seed('comments/ComWait0000001', seeded('pending'));
+    await seed('comments/ComOk00000001', seeded('approved'));
+    for (const db of [guestDb(), anon(), ayse()]) {
+      await assertFails(updateDoc(doc(db, 'comments/ComWait0000001'), { status: 'approved' }));
+      await assertFails(updateDoc(doc(db, 'comments/ComOk00000001'), { comment: 'Değiştirilmiş yorum metni' }));
+      await assertFails(updateDoc(doc(db, 'comments/ComOk00000001'), { reply: 'Sahte cevap' }));
+      await assertFails(updateDoc(doc(db, 'comments/ComOk00000001'), { status: 'pending' }));
+      await assertFails(deleteDoc(doc(db, 'comments/ComWait0000001')));
+      await assertFails(deleteDoc(doc(db, 'comments/ComOk00000001')));
+    }
+  });
+
+  test('kendi yazdığı bekleyen yorumu da okuyamaz veya onaylayamaz', async () => {
+    const db = anon();
+    await assertSucceeds(submit(db, 'anon1', comment(), { id: 'ComMine000001' }));
+    await assertFails(getDoc(doc(db, 'comments/ComMine000001')));
+    await assertFails(updateDoc(doc(db, 'comments/ComMine000001'), { status: 'approved' }));
+  });
+
+  test('öğretmen bekleyenleri görür, onaylar, cevap yazar, yayından kaldırır ve siler', async () => {
+    await seed('comments/ComWait0000001', seeded('pending'));
+    const t = teacherDb();
+    await assertSucceeds(getDocs(query(collection(t, 'comments'), where('status', '==', 'pending'))));
+    await assertSucceeds(updateDoc(doc(t, 'comments/ComWait0000001'), { status: 'approved', approvedAt: serverTimestamp() }));
+    await assertSucceeds(getDoc(doc(guestDb(), 'comments/ComWait0000001')));
+    await assertSucceeds(updateDoc(doc(t, 'comments/ComWait0000001'), { reply: 'Teşekkürler Ayşe!' }));
+    await assertSucceeds(updateDoc(doc(t, 'comments/ComWait0000001'), { status: 'pending' }));
+    await assertFails(getDoc(doc(guestDb(), 'comments/ComWait0000001')));
+    await assertSucceeds(deleteDoc(doc(t, 'comments/ComWait0000001')));
+  });
+});

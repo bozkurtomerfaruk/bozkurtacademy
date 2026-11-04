@@ -265,5 +265,48 @@ service cloud.firestore {
       allow update: if isSelf(uid) && validPlacementLimit()
         && request.time >= resource.data.lastAt + duration.value(10, 'm');
     }
+
+    // ---------- Gramer dersi yorumları (comments) ----------
+    // Ziyaretçi (anonim oturum da olur) yalnızca "pending" durumunda yorum oluşturabilir; e-posta saklanmaz.
+    // Herkes yalnızca "approved" yorumları okur (sorgu da status == "approved" ile sınırlı olmak zorunda).
+    // Onaylama, cevap, düzenleme, silme ve bekleyenleri görme: sadece öğretmen (en üstteki isTeacher kuralı).
+    // Yönetim sayfası: /yonetim/yorumlar/ (js/account/comments-admin.js).
+    function commentLimitPath(uid) {
+      return /databases/$(database)/documents/commentLimits/$(uid);
+    }
+
+    function validComment(id) {
+      let d = request.resource.data;
+      return d.keys().hasOnly(['lesson', 'name', 'comment', 'status', 'createdAt'])
+        && d.keys().hasAll(['lesson', 'name', 'comment', 'status', 'createdAt'])
+        // Ders anahtarı: "A1/artikel" (seviye/ders kimliği)
+        && d.lesson is string && d.lesson.matches('^(A1|A2|B1|B2)/[a-z0-9-]{1,40}$')
+        && d.name is string && d.name.trim().size() >= 1 && d.name.size() <= 60
+        && d.comment is string && d.comment.trim().size() >= 10 && d.comment.size() <= 2000
+        && d.status == 'pending'
+        && d.createdAt == request.time
+        && getAfter(commentLimitPath(request.auth.uid)).data.lastAt == request.time
+        && getAfter(commentLimitPath(request.auth.uid)).data.lastId == id;
+    }
+
+    function validCommentLimit() {
+      let d = request.resource.data;
+      return d.keys().hasOnly(['lastAt', 'lastId'])
+        && d.lastAt == request.time
+        && d.lastId is string && d.lastId.matches('^[A-Za-z0-9]{10,40}$')
+        && existsAfter(/databases/$(database)/documents/comments/$(d.lastId));
+    }
+
+    match /comments/{id} {
+      allow create: if signedIn() && !isCleanup() && validComment(id);
+      allow get, list: if resource.data.status == 'approved';
+    }
+
+    // Aynı oturumdan en fazla dakikada bir yorum.
+    match /commentLimits/{uid} {
+      allow create: if isSelf(uid) && !isCleanup() && validCommentLimit();
+      allow update: if isSelf(uid) && validCommentLimit()
+        && request.time >= resource.data.lastAt + duration.value(60, 's');
+    }
   }
 }

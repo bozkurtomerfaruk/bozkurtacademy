@@ -1,14 +1,15 @@
 name: Grammar coverage
 on:
   push:
-    paths: ['data/**', 'scripts/check-grammar.mjs', 'scripts/build-search-index.mjs', 'scripts/sozluk.mjs', 'docs/sozluk-kontrol.csv', 'docs/sozluk-bekleyen.csv', '.github/workflows/grammar-coverage.yml']
+    paths: ['data/**', 'scripts/check-grammar.mjs', 'scripts/check-comments.mjs', 'scripts/build-search-index.mjs', 'scripts/sozluk.mjs', 'docs/sozluk-kontrol.csv', 'docs/sozluk-bekleyen.csv', '.github/workflows/grammar-coverage.yml']
   pull_request:
-    paths: ['data/**', 'scripts/check-grammar.mjs', 'scripts/build-search-index.mjs', 'scripts/sozluk.mjs', 'docs/sozluk-kontrol.csv', 'docs/sozluk-bekleyen.csv', '.github/workflows/grammar-coverage.yml']
+    paths: ['data/**', 'scripts/check-grammar.mjs', 'scripts/check-comments.mjs', 'scripts/build-search-index.mjs', 'scripts/sozluk.mjs', 'docs/sozluk-kontrol.csv', 'docs/sozluk-bekleyen.csv', '.github/workflows/grammar-coverage.yml']
 jobs:
   coverage:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: node scripts/check-grammar.mjs
+      - run: node scripts/check-comments.mjs
       - run: node scripts/build-search-index.mjs --check
       - run: node scripts/sozluk.mjs --check

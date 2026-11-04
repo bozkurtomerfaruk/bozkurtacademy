@@ -13,7 +13,7 @@
 - **Ayıklama:** Önceki kurallar aynen. Ek olarak "etwas Neues / alles Gute / das Wesentliche" gibi soyut sıfat-isimleri, cümle başındaki sıfat-fiiller (Lachende Kinder …) ve dil bilgisi terimleri (Konjunktiv, Partizip, Modalverb …) alınmıyor.
 - **Değişmeyenler:** Sorularda sadece `vocab` eklendi (7 dosya otomatik karşılaştırıldı). Sınav setlerinde liste yok.
 - **Test:** `tests/vocab.mjs` (kelime listesi olan 48 konunun ilk sorusu tarayıcıda), `check-grammar`, `check-exams`, `build-search-index --check`, `sozluk --check` geçti; herkese açık sayfalarda konsol hatası yok.
-- **Senin yapman gereken:** `docs/sozluk-bekleyen.csv`'yi kontrol et. Uygunsa "birleştir" de; kelimeleri "kontrol edildi" yaparım. Böylece madde 3 tamamlanır.
+- **Durum:** Tabloyu kontrol ettin (2026-11-04), hepsi uygun. Bedenken "die Bedenken (sadece çoğul) – endişeler, kaygılar" olarak görünüyor; Datenbasis'in anlamı "veri temeli, dayanak alınan veriler" oldu. 1249 kelimenin hepsi `checked: true`. PR #42 birleştirildi; **madde 3 tamamlandı.**
 
 ## 2026-11-04 · Kelime listesi: B1'in kalan 12 konusu
 

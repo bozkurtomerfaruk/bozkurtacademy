@@ -2,6 +2,18 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-04 · Kelime listesi: A2'nin kalan 10 konusu
+
+- **Kapsam:** A2'nin Dativ dışındaki 10 konusu. A2'deki 1710 sorunun 1469'unda artık kelime listesi var.
+- **Sözlük:** 164 yeni kelime, toplam 673. Önceden kontrol edilen 509 kelimeye dokunulmadı.
+- **Kontrol tablosu bu PR için:** `docs/sozluk-bekleyen.csv` (sadece bu 164 kelime; emin olmadıklarım en üstte).
+  - **Emin olmadığım 4 kelime (öğrenciye gizli):** Golf (cümlede VW Golf araba; spor olarak das Golf), Jugendliche (der/die, sıfattan isim; cümlede çoğul), Sandwich (das/der), Service (der/das; das Service = yemek takımı).
+  - **Not düştüklerim (görünüyor):** Rückenschmerz (çoğu zaman çoğul), Gericht (yemek; mahkeme), Pension (pansiyon; emekli maaşı), Strom (elektrik; akıntı), Decke (battaniye; tavan).
+- **Ayıklama:** A1'deki kurallar aynen. Ek olarak "Ja/Nein-Frage:", "W-Frage:", "Gib einen Rat:" yönergeleri ve dil bilgisi terimleri (Subjekt, Akkusativ, Kasus, Hauptsatz, Futur I, Gegenwart/Vergangenheit/Zukunft …) alınmıyor.
+- **Değişmeyenler:** Sorularda sadece `vocab` eklendi (10 dosya otomatik karşılaştırıldı). Sınav setlerinde liste yok.
+- **Test:** `tests/vocab.mjs` (kelime listesi olan 29 konunun ilk sorusu tarayıcıda), `check-grammar`, `check-exams`, `build-search-index --check`, `sozluk --check` geçti; herkese açık sayfalarda konsol hatası yok.
+- **Durum:** Tabloyu kontrol ettin (2026-11-04), hepsi uygun. Golf, Sandwich, Service önerilen artikellerle görünüyor. Jugendliche "der/die Jugendliche – genç" olarak gösteriliyor (sözlükte artık iki artikelli giriş yazılabiliyor: `"article": "der/die"`); notu düzeltildi. 673 kelimenin hepsi `checked: true`. PR #40 birleştirildi.
+
 ## 2026-11-04 · Kelime listesi: A1'in kalan 16 konusu
 
 - **Kapsam:** A1'in Artikel dışındaki 16 konusu (3098 soru). 2429 A1 sorusunda artık kelime listesi var; kalan sorularda isim yok (ör. sadece zamir, sayı ya da fiil soruları).

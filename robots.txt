@@ -1,0 +1,12 @@
+# Bozkurt Academy – https://bozkurtacademy.com
+User-agent: *
+Allow: /
+# İç belgeler, testler ve yardımcı dosyalar arama sonuçlarında görünmesin.
+Disallow: /docs/
+Disallow: /tests/
+Disallow: /scripts/
+Disallow: /apps-script/
+Disallow: /Material/
+Disallow: /ALISTIRMA_DUZELTMELERI.md
+
+Sitemap: https://bozkurtacademy.com/sitemap.xml

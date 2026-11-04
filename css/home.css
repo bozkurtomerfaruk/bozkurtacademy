@@ -26,6 +26,7 @@
 .home-stub dd{margin:2px 0 0;font-family:var(--ba-serif);font-size:var(--ba-lead);font-weight:600;line-height:1.25}
 .home-portrait{position:relative;margin:0;border-radius:var(--ba-radius);overflow:hidden;min-width:0;background:var(--ba-paper-2)}
 .home-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 36%;display:block}
+.home-portrait picture{display:block;width:100%;height:100%}
 .home-portrait figcaption{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:12px;padding:14px 22px;background:var(--ba-paper);font-size:var(--ba-small);color:var(--ba-ink)}
 .home-portrait figcaption span:first-child{font-weight:600}
 

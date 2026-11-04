@@ -19,7 +19,7 @@
 - **Önbellek:** `level-exam.js` v3 (katalog v9).
 - **Test:** `tests/level-exam.mjs` B1'i de kapsıyor (kart, 30 soru ve dağılım, 18/30 geçer; toplam 46 kontrol, hepsi geçti). `check-level-exams` (3 sınav, 180 soru), `check-grammar`, `build-pages --check`, `sozluk --check` geçti.
 - **Madde 4:** Bu PR birleşince A1, A2 ve B1 sınavları tamam. B2 sınavını, kararın gereği B2 gramer dersleri tamamlanınca yapacağız.
-- **Senin yapman gereken:** Soruları kontrol edip "birleştir" demen. Sonra madde 5 (çocuk oyunu taslakları) için onayın.
+- **Durum:** Soruları kontrol ettin, hepsi uygun. PR #51 birleştirildi (2026-11-04); **madde 4 tamamlandı.**
 
 ## 2026-11-04 · Seviye sonu sınavı: A2
 

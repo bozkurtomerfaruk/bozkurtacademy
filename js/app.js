@@ -11,6 +11,7 @@ const translations = {
     navExams:'Sınav Hazırlığı',
     navAbout:'Hakkımda',
     navContact:'İletişim',
+    ctaFreeInfo:'Ücretsiz bilgi al',
     founderRole:'Kurucu & Eğitmen',
     founderRole2:'Kurucu & Eğitmen',
     founderRole3:'Almanca eğitmeni',
@@ -463,6 +464,7 @@ const translations = {
     navExams:'Prüfungsvorbereitung',
     navAbout:'Über mich',
     navContact:'Kontakt',
+    ctaFreeInfo:'Kostenlos anfragen',
     founderRole:'Gründer & Dozent',
     founderRole2:'Gründer & Dozent',
     founderRole3:'Deutschlehrer',
@@ -915,6 +917,7 @@ const translations = {
     navExams:'Exam preparation',
     navAbout:'About Me',
     navContact:'Contact',
+    ctaFreeInfo:'Get free info',
     founderRole:'Founder & Instructor',
     founderRole2:'Founder & Instructor',
     founderRole3:'German teacher',
@@ -1360,15 +1363,18 @@ const translations = {
   }
 };
 
-let currentLang = localStorage.getItem('baLang') || 'tr';
+// Statik Türkçe sayfalar (<html data-ba-fixed-lang="tr">) dil seçimini değiştirmez ve kaydetmez.
+const BA_FIXED_LANG = document.documentElement.dataset.baFixedLang || '';
+let currentLang = BA_FIXED_LANG || localStorage.getItem('baLang') || 'tr';
 
 function t(key){
   return translations[currentLang]?.[key] || translations.tr[key] || key;
 }
 
 function applyLanguage(lang){
+  if(BA_FIXED_LANG) lang = BA_FIXED_LANG;
   currentLang = lang;
-  localStorage.setItem('baLang', lang);
+  if(!BA_FIXED_LANG) localStorage.setItem('baLang', lang);
   document.documentElement.lang = lang;
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const key = el.getAttribute('data-i18n');
@@ -1403,8 +1409,13 @@ function writePageHistory(page, mode='push'){
   else if(mode==='push') history.pushState(state, '', '#'+page);
 }
 
+// Bu bölümler artık ayrı sayfalar; eski bağlantılar ve showPage('contact') gibi çağrılar oraya gider.
+const BA_MOVED = {lessons:'/online-almanca-dersi/', about:'/hakkimda/', contact:'/iletisim/'};
+
 function showPage(page, options={}){
+  if(BA_MOVED[page]){ location.assign(BA_MOVED[page]); return; }
   const {historyMode='push', scroll=true} = options;
+  document.body.dataset.baPage = page;
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   const target = document.getElementById('page-'+page);
   if(target) target.classList.add('active');
@@ -1517,7 +1528,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
           _subject:'Bozkurt Academy - Yeni iletişim mesajı',
           _replyto:email,
           _template:'table',
-          _url:'https://bozkurtacademy.com/#contact'
+          _url:'https://bozkurtacademy.com' + location.pathname
         })
       });
 

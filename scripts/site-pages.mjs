@@ -1,0 +1,140 @@
+// Statik sayfaların listesi: adres, başlık, açıklama, sayfa yolu (breadcrumb) ve sayfaya özel şema.
+// Başlığı veya açıklamayı değiştirdikten sonra: node scripts/build-pages.mjs
+// İçerik metinleri sayfaların kendi dosyalarında (ör. online-almanca-dersi/index.html) durur.
+//
+// Kurallar: fiyat, telefon, adres yok; şemalarda offers/price/priceRange/telephone yok.
+
+export const SITE = 'https://bozkurtacademy.com';
+
+const provider = { '@id': `${SITE}/#organization` };
+const instructor = { '@id': `${SITE}/#person` };
+
+function course(path, name, description, level) {
+  return {
+    '@type': 'Course',
+    '@id': `${SITE}${path}#course`,
+    name,
+    description,
+    url: `${SITE}${path}`,
+    inLanguage: 'tr',
+    educationalLevel: level,
+    provider,
+    about: { '@type': 'Thing', name: 'Almanca' },
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      courseMode: 'online',
+      instructor
+    }
+  };
+}
+
+function service(path, name, description, serviceType) {
+  return {
+    '@type': 'Service',
+    '@id': `${SITE}${path}#service`,
+    name,
+    description,
+    serviceType,
+    url: `${SITE}${path}`,
+    provider,
+    areaServed: { '@type': 'Country', name: 'Türkiye' },
+    availableChannel: { '@type': 'ServiceChannel', serviceUrl: `${SITE}/iletisim/` }
+  };
+}
+
+export const PAGES = [
+  {
+    path: '/online-almanca-dersi/',
+    nav: 'lessons',
+    crumb: 'Online Almanca Dersi',
+    title: 'Online Almanca Dersi A1–B2 | Bozkurt Academy',
+    description: 'Online Almanca dersi: Almanya’da yaşayan eğitmenle A1’den B2’ye birebir veya grup dersleri, 50 dakikalık oturumlar ve ücretsiz ilk ders.',
+    schema: [service('/online-almanca-dersi/', 'Online Almanca Dersi', 'A1–B2 seviyelerinde Zoom veya Google Meet üzerinden online Almanca dersleri.', 'Online Almanca dersi')]
+  },
+  {
+    path: '/almanca-ozel-ders/',
+    parent: '/online-almanca-dersi/',
+    nav: 'lessons',
+    crumb: 'Almanca Özel Ders',
+    title: 'Almanca Özel Ders (Birebir, Online) | Bozkurt Academy',
+    description: 'Birebir Almanca özel ders: seviyene, hedefine ve zamanına göre planlanan online dersler. A1–B2, sınav hazırlığı ve konuşma pratiği. İlk ders ücretsiz.',
+    schema: [service('/almanca-ozel-ders/', 'Almanca Özel Ders (Birebir)', 'Seviye ve hedefe göre planlanan birebir online Almanca dersleri.', 'Birebir Almanca özel ders')]
+  },
+  {
+    path: '/almanca-grup-dersi/',
+    parent: '/online-almanca-dersi/',
+    nav: 'lessons',
+    crumb: 'Almanca Grup Dersi',
+    title: 'Almanca Grup Dersi (Online) A1–B2 | Bozkurt Academy',
+    description: 'Online Almanca grup dersi: aynı seviyedeki öğrencilerle konuşma pratiği, düzenli program ve konu tekrarı. A1–B2 grupları hakkında bilgi al.',
+    schema: [service('/almanca-grup-dersi/', 'Almanca Grup Dersi (Online)', 'Aynı seviyedeki öğrencilerden oluşan online Almanca grup dersleri.', 'Online Almanca grup dersi')]
+  },
+  {
+    path: '/a1-almanca-kursu/',
+    parent: '/online-almanca-dersi/',
+    nav: 'lessons',
+    crumb: 'A1 Almanca Kursu',
+    title: 'A1 Almanca Kursu: Vize ve Aile Birleşimi | Bozkurt Academy',
+    description: 'A1 Almanca kursu: sıfırdan başlayanlar, aile birleşimi ve vize için gereken A1 sınavına hazırlık. Online birebir veya grup dersleri, ücretsiz ilk ders.',
+    schema: [course('/a1-almanca-kursu/', 'A1 Almanca Kursu', 'Sıfırdan başlayanlar için A1 Almanca: temel dil bilgisi, günlük iletişim ve A1 sınavına (Goethe, telc, ÖSD) hazırlık.', 'A1 (Başlangıç)')]
+  },
+  {
+    path: '/a2-almanca-kursu/',
+    parent: '/online-almanca-dersi/',
+    nav: 'lessons',
+    crumb: 'A2 Almanca Kursu',
+    title: 'A2 Almanca Kursu (Online) | Bozkurt Academy',
+    description: 'A2 Almanca kursu: geçmiş zaman, yan cümleler ve günlük yaşam iletişimi. A1’i bitirenler için online birebir veya grup dersleri ve A2 sınav hazırlığı.',
+    schema: [course('/a2-almanca-kursu/', 'A2 Almanca Kursu', 'A1’i tamamlayanlar için A2 Almanca: Perfekt, Dativ, yan cümleler, günlük yaşam iletişimi ve A2 sınavına hazırlık.', 'A2 (Temel)')]
+  },
+  {
+    path: '/b1-almanca-kursu/',
+    parent: '/online-almanca-dersi/',
+    nav: 'lessons',
+    crumb: 'B1 Almanca Kursu',
+    title: 'B1 Almanca Kursu ve Sınav Hazırlığı | Bozkurt Academy',
+    description: 'B1 Almanca kursu: Almanya’da iş, Ausbildung ve günlük yaşam için B1 seviyesi. Online birebir veya grup dersleri, Goethe, telc ve DTZ B1 hazırlığı.',
+    schema: [course('/b1-almanca-kursu/', 'B1 Almanca Kursu', 'Bağımsız kullanıcı seviyesi B1: yan cümleler, Passiv, Konjunktiv II girişi, iş ve günlük yaşam iletişimi, B1 sınav hazırlığı.', 'B1 (Orta)')]
+  },
+  {
+    path: '/b2-almanca-kursu/',
+    parent: '/online-almanca-dersi/',
+    nav: 'lessons',
+    crumb: 'B2 Almanca Kursu',
+    title: 'B2 Almanca Kursu: İş, Üniversite, Meslek | Bozkurt Academy',
+    description: 'B2 Almanca kursu: iş hayatı, üniversite ve meslek için akıcı Almanca. Tartışma, resmi yazışma, karmaşık dil bilgisi ve B2 sınav hazırlığı, online.',
+    schema: [course('/b2-almanca-kursu/', 'B2 Almanca Kursu', 'B2 seviyesi: karmaşık cümle yapıları, Passiv ve Konjunktiv, iş ve akademik iletişim, Goethe ve telc B2 hazırlığı.', 'B2 (Orta üstü)')]
+  },
+  {
+    path: '/almanca-sinav-hazirlik/',
+    nav: 'exams',
+    crumb: 'Almanca Sınav Hazırlık',
+    title: 'Goethe ve telc Almanca Sınav Hazırlık | Bozkurt Academy',
+    description: 'Goethe, telc, ÖSD, DTZ ve TestDaF sınav hazırlık: görev türleri, okuma, dinleme, yazma ve konuşma çalışması. Online birebir ders ve ücretsiz deneme setleri.',
+    schema: [service('/almanca-sinav-hazirlik/', 'Almanca Sınav Hazırlık', 'Goethe, telc, ÖSD, DTZ ve TestDaF sınavlarına yönelik online hazırlık dersleri.', 'Almanca sınav hazırlık')]
+  },
+  {
+    path: '/hakkimda/',
+    nav: 'about',
+    crumb: 'Hakkımda',
+    title: 'Hakkımda: Almanca Eğitmeni Ömer Faruk Bozkurt',
+    description: 'Almanya’da yaşayan Almanca eğitmeni Ömer Faruk Bozkurt: eğitim geçmişi, Almanya deneyimi ve derslerde açıklama, uygulama ve tekrar yöntemi.',
+    type: 'ProfilePage',
+    ogType: 'profile'
+  },
+  {
+    path: '/iletisim/',
+    nav: 'contact',
+    crumb: 'İletişim',
+    title: 'İletişim: Ücretsiz İlk Almanca Dersi | Bozkurt Academy',
+    description: 'Bozkurt Academy iletişim: online Almanca dersleri ve ücretsiz ilk ders için formu doldur. Seviyeni, hedefini ve uygun zamanlarını yaz.',
+    type: 'ContactPage',
+    noStickyCta: true
+  },
+  {
+    path: '/sss/',
+    crumb: 'Sıkça Sorulan Sorular',
+    title: 'Almanca Dersi Sıkça Sorulan Sorular | Bozkurt Academy',
+    description: 'Online Almanca dersleri hakkında sık sorulanlar: ilk ders, ders süresi, birebir ve grup dersi, ücretin nasıl belirlendiği, sınavlar ve seviye testi.',
+  }
+];

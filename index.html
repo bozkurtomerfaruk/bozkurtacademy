@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#f8f7f3" />
+  <script>/* Eski adresler: #lessons, #about, #contact artık ayrı sayfalar */(function(){var m={lessons:'/online-almanca-dersi/',about:'/hakkimda/',contact:'/iletisim/'},h=(location.hash||'').slice(1).split('/')[0];if(m[h])location.replace(m[h]);})();</script>
   <script>try{document.documentElement.dataset.theme=localStorage.getItem('ba-theme')==='dark'?'dark':'light'}catch(_){document.documentElement.dataset.theme='light'}</script>
-  <title>Bozkurt Academy | Almanca Dersleri</title>
+  <title>Online Almanca Dersi: Birebir ve Grup | Bozkurt Academy</title>
   <link rel="canonical" href="https://bozkurtacademy.com/" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3">
@@ -13,44 +14,123 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3">
 <link rel="manifest" href="/site.webmanifest">
-  <meta name="description" content="Bozkurt Academy ile Almanca dersleri, gramer konuları, seviye bazlı alıştırmalar ve sınav hazırlığı. Bireysel ders, grup dersi ve akademik danışmanlık." />
-  <meta name="keywords" content="Almanca ders, Almanca özel ders, Almanca gramer, Almanca alıştırmalar, Goethe sınavı, telc, DTZ, TestDaF, ÖSD, A1 Almanca, A2 Almanca, B1 Almanca, B2 Almanca" />
+  <meta name="description" content="Almanya’da yaşayan eğitmenle A1–B2 online Almanca dersi: birebir ders, grup dersi ve sınav hazırlığı. Ücretsiz gramer anlatımları ve alıştırmalar." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Bozkurt Academy" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="og:url" content="https://bozkurtacademy.com/" />
+  <meta property="og:title" content="Online Almanca Dersi: Birebir ve Grup | Bozkurt Academy" />
+  <meta property="og:description" content="Almanya’da yaşayan eğitmenle A1–B2 online Almanca dersi: birebir ders, grup dersi ve sınav hazırlığı. İlk ders ücretsiz." />
+  <meta property="og:image" content="https://bozkurtacademy.com/images/og-bozkurt-academy.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Bozkurt Academy: A1’den B2’ye online Almanca dersi, eğitmen Ömer Faruk Bozkurt" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Online Almanca Dersi: Birebir ve Grup | Bozkurt Academy" />
+  <meta name="twitter:description" content="Almanya’da yaşayan eğitmenle A1–B2 online Almanca dersi: birebir ders, grup dersi ve sınav hazırlığı. İlk ders ücretsiz." />
+  <meta name="twitter:image" content="https://bozkurtacademy.com/images/og-bozkurt-academy.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://bozkurtacademy.com/#website",
+        "url": "https://bozkurtacademy.com/",
+        "name": "Bozkurt Academy",
+        "inLanguage": "tr-TR",
+        "publisher": {
+          "@id": "https://bozkurtacademy.com/#organization"
+        }
+      },
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://bozkurtacademy.com/#organization",
+        "name": "Bozkurt Academy",
+        "url": "https://bozkurtacademy.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://bozkurtacademy.com/android-chrome-512x512.png",
+          "width": 512,
+          "height": 512
+        },
+        "image": "https://bozkurtacademy.com/images/og-bozkurt-academy.jpg",
+        "description": "A1–B2 seviyelerinde online Almanca dersleri: birebir ders, grup dersi ve sınav hazırlığı.",
+        "founder": {
+          "@id": "https://bozkurtacademy.com/#person"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Türkiye"
+        },
+        "knowsAbout": [
+          "Almanca",
+          "Almanca dil bilgisi",
+          "Goethe sınavı hazırlığı",
+          "telc sınavı hazırlığı"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://bozkurtacademy.com/#person",
+        "name": "Ömer Faruk Bozkurt",
+        "jobTitle": "Almanca eğitmeni",
+        "image": "https://bozkurtacademy.com/images/omer-faruk-768.jpg",
+        "url": "https://bozkurtacademy.com/hakkimda/",
+        "worksFor": {
+          "@id": "https://bozkurtacademy.com/#organization"
+        },
+        "homeLocation": {
+          "@type": "Country",
+          "name": "Almanya"
+        },
+        "knowsLanguage": [
+          "tr",
+          "de",
+          "en"
+        ]
+      }
+    ]
+  }
+  </script>
   <meta name="author" content="Bozkurt Academy" />
   <link rel="preload" href="fonts/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=11" />
-  <link rel="stylesheet" href="css/base.css?v=8" />
-  <link rel="stylesheet" href="css/home.css?v=5" />
+  <link rel="stylesheet" href="css/base.css?v=9" />
+  <link rel="stylesheet" href="css/home.css?v=6" />
   <link rel="stylesheet" href="css/lessons.css?v=3" />
-  <link rel="stylesheet" href="css/pages.css?v=7" />
+  <link rel="stylesheet" href="css/pages.css?v=8" />
   <link rel="stylesheet" href="css/exam-task.css?v=9" />
   <link rel="stylesheet" id="grammarHubCss" href="css/grammar.css?v=5" />
-  <link rel="stylesheet" href="css/a1-lessons.css?v=5" />
+  <link rel="stylesheet" href="css/a1-lessons.css?v=6" />
   <link rel="stylesheet" id="exerciseHubCss" href="css/exercises-hub.css?v=7" />
   <link rel="stylesheet" href="css/placement.css?v=2" />
 </head>
 <body class="academy-theme">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
   <div class="shell">
+    <!-- ba:header -->
     <header class="topbar">
       <nav class="nav" aria-label="Site menüsü">
         <a class="brand" href="#home" data-page="home" aria-label="Bozkurt Academy ana sayfa">
-           <img src="images/logo-mark.svg" width="64" height="64" alt="" class="brand-logo brand-logo-light"><img src="images/logo-mark-dark.svg" width="64" height="64" alt="" class="brand-logo brand-logo-dark">
+          <img src="/images/logo-mark.svg" width="64" height="64" alt="" class="brand-logo brand-logo-light"><img src="/images/logo-mark-dark.svg" width="64" height="64" alt="" class="brand-logo brand-logo-dark">
           <div><div class="brand-title">Bozkurt Academy</div><div class="brand-sub" data-i18n="brandSub">Almancada net ilerleme</div></div>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteMenu" data-i18n="menuOpen">Menü</button>
         <div class="nav-links" id="siteMenu">
           <a class="nav-link active" href="#home" data-page="home" data-i18n="navHome">Ana Sayfa</a>
-          <a class="nav-link" href="#lessons" data-page="lessons" data-i18n="navLessons">Almanca Dersleri</a>
+          <a class="nav-link" href="/online-almanca-dersi/" data-i18n="navLessons">Almanca Dersleri</a>
           <a class="nav-link" href="#grammar" data-page="grammar" data-i18n="navGrammar">Gramer</a>
           <a class="nav-link" href="#exercises" data-page="exercises" data-i18n="navExercises">Alıştırmalar</a>
-          <a class="nav-link" href="#exams" data-page="exams" data-i18n="navExams">Sınav Hazırlığı</a>
-          <a class="nav-link" href="#about" data-page="about" data-i18n="navAbout">Hakkımda</a>
-          <a class="nav-link" href="#contact" data-page="contact" data-i18n="navContact">İletişim</a>
+          <a class="nav-link" href="/almanca-sinav-hazirlik/" data-i18n="navExams">Sınav Hazırlığı</a>
+          <a class="nav-link" href="/hakkimda/" data-i18n="navAbout">Hakkımda</a>
+          <a class="nav-link" href="/iletisim/" data-i18n="navContact">İletişim</a>
           <!-- Quiet launch: the account link stays hidden until the privacy policy is final. Login pages still open by URL. -->
-          <a class="nav-link nav-account" href="giris.html" id="navAccount" data-i18n="navLogin" hidden>Giriş</a>
+          <a class="nav-link nav-account" href="/giris.html" id="navAccount" data-i18n="navLogin" hidden>Giriş</a>
         </div>
         <div class="nav-actions">
+        <a class="btn primary nav-cta" href="/iletisim/" data-i18n="ctaFreeInfo">Ücretsiz bilgi al</a>
         <button id="themeToggle" class="theme-toggle" type="button" aria-label="Koyu temaya geç" aria-pressed="false"><svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="currentColor"/></svg><svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
         <div class="lang" aria-label="Dil seçimi">
           <button data-lang="tr" class="active">TR</button>
@@ -60,6 +140,7 @@
         </div>
       </nav>
     </header>
+    <!-- /ba:header -->
 
     <main id="main" tabindex="-1">
       <section class="page active home-page" id="page-home">
@@ -70,7 +151,7 @@
               <h1 id="home-title" data-i18n="homeTitle">Hedeflerine uygun Almanca eğitimi</h1>
               <p class="home-lead" data-i18n="homeIntro">A1’den B2’ye online Almanca dersleri, sınav hazırlığı ve günlük kullanım için dil desteği. Ömer Faruk Bozkurt ile seviyene ve öğrenme hedeflerine uygun bir ders planı.</p>
               <div class="home-actions">
-                <a class="home-button" href="#contact" data-page="contact" data-i18n="homeContact">İlk ders için iletişim</a>
+                <a class="home-button" href="/iletisim/" data-i18n="homeContact">İlk ders için iletişim</a>
                 <a class="home-text-link" href="#exercises" data-page="exercises"><span data-i18n="homeExercises">Alıştırmaları keşfet</span><span aria-hidden="true">→</span></a>
                 <a class="home-text-link home-level-link" href="#seviye-testi" data-page="seviye-testi"><span data-i18n="plLinkHome">Seviyeni ölç</span><span aria-hidden="true">→</span></a>
               </div>
@@ -83,7 +164,7 @@
             </div>
           </div>
           <figure class="home-portrait" data-home-reveal>
-            <img src="images/omer-faruk.jpg" width="1151" height="2048" alt="Ömer Faruk Bozkurt" fetchpriority="high">
+            <picture><source type="image/avif" srcset="images/omer-faruk-480.avif 480w, images/omer-faruk-768.avif 768w, images/omer-faruk-1151.avif 1151w" sizes="(max-width: 1020px) 100vw, 50vw"><source type="image/webp" srcset="images/omer-faruk-480.webp 480w, images/omer-faruk-768.webp 768w, images/omer-faruk-1151.webp 1151w" sizes="(max-width: 1020px) 100vw, 50vw"><img src="images/omer-faruk-768.jpg" srcset="images/omer-faruk-480.jpg 480w, images/omer-faruk-768.jpg 768w, images/omer-faruk-1151.jpg 1151w" sizes="(max-width: 1020px) 100vw, 50vw" width="1151" height="2048" alt="Almanca eğitmeni Ömer Faruk Bozkurt" fetchpriority="high"></picture>
             <figcaption><span>Ömer Faruk Bozkurt</span><span data-i18n="homePortraitCaption">Almanca eğitmeni</span></figcaption>
           </figure>
         </section>
@@ -92,7 +173,7 @@
           <div class="home-section-heading" data-home-reveal>
             <h2 id="home-lessons-title" data-i18n="homeLessonTitle">Konu anlatımından uygulamaya</h2>
             <p data-i18n="homeLessonIntro">Her ders aynı düzende ilerler: önce seviyen ve hedefin, sonra konu ve uygulama, ardından tekrar.</p>
-            <a class="home-text-link" href="#lessons" data-page="lessons"><span data-i18n="homeLessonLink">Dersler hakkında</span><span aria-hidden="true">→</span></a>
+            <a class="home-text-link" href="/online-almanca-dersi/"><span data-i18n="homeLessonLink">Dersler hakkında</span><span aria-hidden="true">→</span></a>
           </div>
           <div class="home-slip" data-home-reveal>
             <ol class="home-steps">
@@ -124,126 +205,29 @@
           </div>
         </section>
 
+        <!-- ÖĞRENCİ YORUMLARI: Yayın izni alınana kadar gizli (hidden). Nasıl açılacağı SEO-YAPILACAKLAR.md içinde.
+             Her yorum için aşağıdaki şablonu <ul> içine kopyala; uydurma veya örnek yorum ekleme.
+             <li><figure class="ba-review"><blockquote><p>Yorum metni</p></blockquote><figcaption><strong>Ad veya baş harfler</strong> · Seviye / hedef</figcaption></figure></li>
+        -->
+        <section class="home-section home-reviews" id="ogrenci-yorumlari" aria-labelledby="home-reviews-title" hidden>
+          <div class="home-section-heading">
+            <h2 id="home-reviews-title">Öğrenciler ne diyor?</h2>
+          </div>
+          <ul class="ba-reviews-list">
+          </ul>
+        </section>
+
         <section class="home-closing" aria-labelledby="home-closing-title" data-home-reveal>
           <div class="home-stripe" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
           <div class="home-closing-body">
             <div><h2 id="home-closing-title" data-i18n="homeClosingTitle">Almanca eğitimini birlikte planlayalım</h2><p data-i18n="homeClosingText">Seviyeni ve ne için Almanca öğrenmek istediğini yaz. İlk ders ücretsiz.</p></div>
             <div class="home-closing-actions">
-              <a class="home-button" href="#contact" data-page="contact" data-i18n="homeContact">İlk ders için iletişim</a>
+              <a class="home-button" href="/iletisim/" data-i18n="homeContact">İlk ders için iletişim</a>
               <a class="home-mail" href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a>
             </div>
           </div>
         </section>
       </section>
-      <section class="page" id="page-lessons">
-        <section class="lesson-hero-pro ba-card">
-          <div class="ba-stripe ba-stripe--bold" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-          <div class="lesson-hero-copy">
-            <h1 data-i18n="lessonsTitle">Online Almanca dersleri</h1>
-            <p data-i18n="lessonsSub">A1’den B2’ye bireysel dersler, konuşma pratiği ve sınav hazırlığı. Ders içeriği seviyene ve öğrenme hedeflerine göre belirlenir.</p>
-            <div class="lesson-hero-actions">
-              <a class="btn gold" href="#contact" data-page="contact" data-i18n="lessonContactCta">İlk ders için iletişim</a>
-              <button class="lesson-inline-link ba-link" type="button" data-scroll-to="lesson-details" data-i18n="lessonExplore">Ders içeriği ↓</button>
-            </div>
-          </div>
-          <div class="lesson-hero-stats ba-stub" aria-label="Ders bilgileri">
-            <article><strong>A1–B2</strong><span data-i18n="lessonStatLevels">Seviye aralığı</span></article>
-            <article><strong>50 dk</strong><span data-i18n="lessonStatDuration">Ders süresi</span></article>
-            <article><strong>%100 Online</strong><span data-i18n="lessonStatOnline">Zoom / Google Meet</span></article>
-            <article><strong data-i18n="homeStubFirstValue">Ücretsiz</strong><span data-i18n="homeStubFirst">İlk ders</span></article>
-          </div>
-        </section>
-
-        <section class="block lesson-page-block" id="lesson-details">
-          <div class="lesson-intro-grid">
-            <article class="lesson-feature-card lesson-feature-highlight ba-field">
-              <h2 data-i18n="lessonFirstTitle">Seviye değerlendirmesi ve ders planı</h2>
-              <p data-i18n="lessonFirstText">İlk derste mevcut seviyen, hedeflerin ve çalışma ihtiyaçların değerlendirilir. Sonraki derslerin içeriği bu görüşmeye göre planlanır.</p>
-            </article>
-            <article class="lesson-feature-card">
-                            <h3 data-i18n="lessonPlanTitle">Seviyene uygun içerik</h3>
-              <p data-i18n="lessonPlanText">Konuların sırası ve çalışma temposu, mevcut bilgine ve ilerlemene göre düzenlenir.</p>
-            </article>
-            <article class="lesson-feature-card">
-                            <h3 data-i18n="lessonPracticalTitle">Konuşma ve yazma pratiği</h3>
-              <p data-i18n="lessonPracticalText">Dil bilgisi; örnek cümleler, kısa diyaloglar ve yazma çalışmalarıyla uygulanır.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="block lesson-page-block">
-          <div class="lesson-section-head">
-            <h2 data-i18n="lessonOfferTitle">Ders içerikleri</h2>
-          </div>
-          <div class="lesson-offer-grid">
-            <article class="lesson-offer"><h3 data-i18n="offer1Title">A1’den B2’ye bireysel Almanca</h3><p data-i18n="offer1Text">Başlangıçtan B2’ye kadar kelime, dil bilgisi ve iletişim becerileri üzerine birebir çalışma.</p></article>
-            <article class="lesson-offer"><h3 data-i18n="offer2Title">Teknik Almanca</h3><p data-i18n="offer2Text">Mühendislik ve iş ortamlarında kullanılan kelimeler, metinler ve iletişim örnekleri.</p></article>
-            <article class="lesson-offer"><h3 data-i18n="offer3Title">Dil bilgisi, konuşma ve yazma</h3><p data-i18n="offer3Text">Gramer konularını sözlü ve yazılı ifadeye dönüştüren uygulamalar.</p></article>
-            <article class="lesson-offer"><h3 data-i18n="offer4Title">Sınav hazırlığı</h3><p data-i18n="offer4Text">Hedef sınavın görev türlerine yönelik okuma, dinleme, yazma ve konuşma çalışmaları.</p></article>
-            <article class="lesson-offer"><h3 data-i18n="offer5Title">Almanya’da eğitim ve iş</h3><p data-i18n="offer5Text">Üniversite, Ausbildung ve iş başvurularında kullanılan Almanca üzerine çalışma.</p></article>
-            <article class="lesson-offer"><h3 data-i18n="offer6Title">Günlük yaşamda Almanca</h3><p data-i18n="offer6Text">Randevu, alışveriş, telefon görüşmesi ve resmi işlemler için iletişim pratiği.</p></article>
-          </div>
-        </section>
-
-        <section class="block lesson-page-block">
-          <div class="lesson-audience-wrap">
-            <div class="lesson-section-head lesson-section-head-left">
-              <h2 data-i18n="lessonAudienceTitle">Kimler için uygun</h2>
-              <p data-i18n="lessonAudienceSub">Dersler, Almancayı eğitimde, işte veya günlük yaşamda kullanmak isteyen öğrencilere yöneliktir.</p>
-            </div>
-            <div class="lesson-check-list ba-slip ba-checklist">
-              <div data-i18n="aud1">Almanya’ya taşınmak isteyenler</div>
-              <div data-i18n="aud2">Almanya’da üniversite okumayı hedefleyen öğrenciler</div>
-              <div data-i18n="aud3">Almanya’da Ausbildung yapmayı hedefleyenler</div>
-              <div data-i18n="aud4">Doktor veya hemşire olarak çalışmak isteyenler</div>
-              <div data-i18n="aud5">Aile birleşimi sınavlarına hazırlananlar</div>
-              <div data-i18n="aud6">Mühendislik / teknik alanlarda Almanca geliştirmek isteyenler</div>
-              <div data-i18n="aud7">Goethe, TELC ve benzeri sınavlara hazırlananlar</div>
-              <div data-i18n="aud8">Konuşma pratiği yapmak isteyenler</div>
-              <div data-i18n="aud9">A1’den B2’ye düzenli ilerlemek isteyenler</div>
-              <div data-i18n="aud10">Vize, iş başvurusu ve günlük yaşam için dil desteği arayanlar</div>
-            </div>
-          </div>
-        </section>
-
-        <section class="block lesson-page-block">
-          <div class="lesson-why-grid">
-            <div class="lesson-section-head lesson-section-head-left">
-              <h2 data-i18n="lessonWhyTitle">Derslerin işleyişi</h2>
-            </div>
-            <div class="lesson-why-cards">
-              <article><h3 data-i18n="why1Title">Adım adım konu anlatımı</h3><p data-i18n="why1Text">Yeni konular örneklerle açıklanır; anlaşılmayan noktalar uygulama sırasında tekrar ele alınır.</p></article>
-              <article><h3 data-i18n="why2Title">Düzenli tekrar</h3><p data-i18n="why2Text">Önceki konular kısa tekrarlarla korunur ve yeni konularla bağlantı kurulur.</p></article>
-              <article><h3 data-i18n="why3Title">Ders materyalleri</h3><p data-i18n="why3Text">Konu anlatımları ve alıştırmalar, ders içindeki çalışmaların tekrarında kullanılır.</p></article>
-              <article><h3 data-i18n="why4Title">Online ders</h3><p data-i18n="why4Text">Dersler Zoom veya Google Meet üzerinden, 50 dakikalık oturumlar hâlinde yapılır.</p></article>
-            </div>
-          </div>
-        </section>
-
-        <section class="block lesson-page-block lesson-final-cta-wrap">
-          <div class="lesson-final-cta ba-card">
-            <div class="ba-stripe ba-stripe--bold" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-            <div class="lesson-final-cta-body">
-            <div>
-              <h2 data-i18n="lessonCtaTitle">İlk ders için iletişim</h2>
-              <p data-i18n="lessonCtaText">Seviyeni ve öğrenme hedefini mesajında paylaşabilirsin. İlk ders ücretsizdir.</p>
-            </div>
-            <a class="btn gold lesson-cta-button" href="#contact" data-page="contact" data-i18n="lessonCtaButton">İletişime geç</a>
-            </div>
-          </div>
-        </section>
-
-        <section class="block lesson-page-block">
-          <div class="pl-promo ba-field">
-            <div>
-              <h2 data-i18n="plPromoTitle">Ders almadan önce seviyeni ölç</h2>
-              <p data-i18n="plPromoText">5–25 dakikalık seviye testi: sonuç bana ulaşır, ilk dersi buna göre planlarım.</p>
-            </div>
-            <a class="btn pl-promo-button" href="#seviye-testi" data-page="seviye-testi" data-i18n="plPromoButton">Seviye testine başla</a>
-          </div>
-        </section>
-      </section>
-
       <section class="page" id="page-grammar">
         <div class="page-hero"><div class="page-hero-inner"><h1 data-i18n="grammarTitle">Almanca gramer konuları</h1><p data-i18n="grammarSub">A1–B2 seviyelerine göre gramer başlıkları ve ilgili alıştırmalara erişim.</p></div></div>
         <section class="block"><div class="grid-2">
@@ -354,213 +338,8 @@
             <div class="ba-stripe ba-stripe--bold" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
             <div class="exam-plan-body">
             <div><h2 data-i18n="examProcessTitle">Sınava yönelik çalışma planı</h2><p data-i18n="examProcessText">İlk görüşmede sınavın, mevcut seviyen ve sınav tarihin değerlendirilir. Çalışma planı, geliştirilmesi gereken becerilere ve hazırlık süresine göre oluşturulur.</p></div>
-            <a class="btn primary" href="#contact" data-page="contact" data-i18n="examContact">Sınav hazırlığı için iletişim</a>
+            <a class="btn primary" href="/iletisim/" data-i18n="examContact">Sınav hazırlığı için iletişim</a>
             </div>
-          </div>
-        </section>
-      </section>
-
-      <section class="page" id="page-about">
-
-  <div class="page-hero">
-    <div class="page-hero-inner">
-
-      <h1 data-i18n="aboutTitle">Ömer Faruk Bozkurt</h1>
-
-      <p data-i18n="aboutSub">Almanya’da yaşayan, online Almanca dersleri veren bir Makine Mühendisliği öğrencisiyim.</p>
-    </div>
-  </div>
-
-
-  <section class="block">
-    <div class="about-box">
-
-      <div class="about-photo">
-        <img src="images/omer-faruk.jpg" width="1151" height="2048" loading="lazy" alt="Ömer Faruk Bozkurt" />
-      </div>
-
-      <div class="about-text ba-card">
-        <div class="ba-stripe" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-        <div class="about-letter">
-
-
-
-        <h2>Ömer Faruk Bozkurt</h2>
-        <p class="about-role" data-i18n="founderRole3">Almanca eğitmeni</p>
-
-        <p class="founder-bio" data-i18n="founderBio">Yabancı dil öğretmeye lise yıllarında özel ders vererek başladım. Derslerimde açık konu anlatımı, düzenli tekrar ve sözlü uygulamaya önem veriyorum.</p>
-
-        <p class="founder-bio" data-i18n="founderBio2">Almanya’daki eğitim ve günlük yaşam deneyimimi, öğrencilerin karşılaşabileceği iletişim durumlarına yönelik örneklerle derslere taşıyorum.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <section class="block">
-
-    <div class="section-head center">
-
-      <h2 data-i18n="aboutJourneyTitle">Eğitim ve çalışma geçmişim</h2>
-
-      <p class="sub" data-i18n="aboutJourneySub">Dil öğretimi, mühendislik eğitimi ve Almanya’daki yaşam deneyimim.</p>
-    </div>
-
-
-    <div class="cards about-journey ba-slip">
-
-      <article class="about-item">
-
-        <h3 data-i18n="aboutTeachingTitle">Özel ders deneyimi</h3>
-
-        <p data-i18n="aboutTeachingText">Lise yıllarından beri farklı seviyelerde öğrencilere yabancı dil dersleri veriyorum.</p>
-      </article>
-
-
-      <article class="about-item">
-
-        <h3 data-i18n="aboutEducationTitle">Mühendislik eğitimi</h3>
-
-        <p data-i18n="aboutEducationText">İstanbul Teknik Üniversitesi’nde başlayan mühendislik eğitimimin ardından Erasmus+ kapsamında Hochschule Düsseldorf’ta eğitim aldım. Universität Duisburg-Essen’da Makine Mühendisliği eğitimime devam ediyorum.</p>
-      </article>
-
-
-      <article class="about-item">
-
-        <h3 data-i18n="aboutLanguagesTitle">Dil bilgisi</h3>
-
-        <p data-i18n="aboutLanguagesText">Ana dilim Türkçe. Almanca ve İngilizceyi akıcı biçimde kullanıyorum; derslerde gerektiğinde diller arasında karşılaştırmalar yapıyorum.</p>
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <section class="block">
-
-    <div class="grid-2 about-work ba-field">
-
-      <article class="about-item">
-
-        <h3 data-i18n="aboutEngineeringTitle">Profesyonel deneyim</h3>
-
-        <p data-i18n="aboutEngineeringText">Mercedes-Benz, Aluminium Norf, Ford ve TÜBİTAK’ta üretim, kalite, süreç geliştirme, veri analizi ve teknik projeler üzerine deneyim kazandım.</p>
-
-      </article>
-
-
-      <article class="about-item">
-
-        <h3 data-i18n="aboutGermanyTitle">Almanya’da yaşam</h3>
-
-        <p data-i18n="aboutGermanyText">Derslerde üniversite, iş başvuruları ve günlük iletişimden örnekler kullanıyorum.</p>
-
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <section class="block">
-
-    <div class="section-head center">
-
-      <h2 data-i18n="aboutMethodTitle">Açıklama, uygulama ve tekrar</h2>
-    </div>
-
-
-    <div class="cards about-method">
-
-      <article class="about-item">
-        <h3 data-i18n="method1Title">Ders planı</h3>
-
-        <p data-i18n="method1Text">Derslerin içeriği öğrencinin seviyesine, hedeflerine ve çalışma ihtiyaçlarına göre düzenlenir.</p>
-      </article>
-
-
-      <article class="about-item">
-        <h3 data-i18n="method2Title">Dil pratiği</h3>
-
-        <p data-i18n="method2Text">Öğrenilen yapılar cümleler, diyaloglar ve yazma çalışmalarıyla kullanılır.</p>
-      </article>
-
-
-      <article class="about-item">
-        <h3 data-i18n="method3Title">Konu tekrarı</h3>
-
-        <p data-i18n="method3Text">Zorlanılan konular yeni örnekler ve kısa alıştırmalarla tekrar ele alınır.</p>
-      </article>
-
-    </div>
-
-  </section>
-
-</section>
-
-      <section class="page" id="page-contact">
-        <div class="page-hero">
-          <div class="page-hero-inner">
-            <h1 data-i18n="contactTitle">Dersler ve ilk görüşme için iletişim</h1>
-            <p data-i18n="contactSub">Dersler hakkında bilgi almak için mesaj gönderebilir veya e-posta adresimden ulaşabilirsin.</p>
-          </div>
-        </div>
-
-        <section class="block">
-          <div class="contact-form-shell">
-            <aside class="contact-guide">
-              <div class="contact-mail-row">
-                <span class="contact-mail-icon" aria-hidden="true">✉</span>
-                <div>
-                  <small data-i18n="contactMailLabel">E-posta</small>
-                  <a href="mailto:bozkurtt.omerfaruk@gmail.com">bozkurtt.omerfaruk@gmail.com</a>
-                </div>
-              </div>
-              <div class="contact-guide-slip ba-slip">
-                <p class="contact-guide-title" data-i18n="contactGuideTitle">Mesajında paylaşabileceğin bilgiler:</p>
-                <ul class="contact-guide-list ba-checklist">
-                <li><span data-i18n="contactGuide1">Almanca seviyen (biliyorsan A1–B2)</span> <a class="contact-level-link" href="#seviye-testi" data-page="seviye-testi" data-i18n="plLinkContact">Seviyeni bilmiyor musun? Önce seviye testini çöz.</a></li>
-                <li data-i18n="contactGuide2">Hedefin: günlük Almanca, sınav, iş veya okul</li>
-                <li data-i18n="contactGuide3">Zorlandığın konu veya beceri</li>
-                <li data-i18n="contactGuide4">Sınavın varsa sınav adı ve tarihi</li>
-                <li data-i18n="contactGuide5">Bireysel / grup ders tercihin</li>
-                <li data-i18n="contactGuide6">Varsa eklemek istediğin özel bir not</li>
-              </ul>
-              </div>
-            </aside>
-            <article class="contact-main-card ba-card">
-              <div class="ba-stripe" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-              <div class="contact-card-body">
-              <div class="contact-heading-row">
-                <span class="contact-heading-line" aria-hidden="true"></span>
-                <h2 data-i18n="formTitle">İletişim formu</h2>
-              </div>
-              <form id="contactForm" class="contact-message-form" novalidate>
-                <div class="contact-form-grid">
-                  <div class="field">
-                    <label for="name" data-i18n="nameLabel">Ad Soyad</label>
-                    <input id="name" name="name" autocomplete="name" required data-i18n-placeholder="namePlaceholder" placeholder="Adınız" />
-                  </div>
-                  <div class="field">
-                    <label for="email" data-i18n="emailLabel">E-posta</label>
-                    <input id="email" name="email" type="email" autocomplete="email" spellcheck="false" required data-i18n-placeholder="emailPlaceholder" placeholder="ornek@email.com" />
-                  </div>
-                </div>
-
-                <div class="field">
-                  <label for="message" data-i18n="messageLabel">Mesaj</label>
-                  <textarea id="message" name="message" required data-i18n-placeholder="messagePlaceholder" placeholder="Seviyem A2. B1 sınavına hazırlanıyorum ve özellikle konuşmada zorlanıyorum."></textarea>
-                </div>
-
-                <input class="contact-honey" type="text" id="companyWebsite" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
-
-                <button id="contactSubmitBtn" class="btn primary block contact-submit" type="submit" data-i18n="sendMessage">Mesaj gönder</button>
-                <div id="formStatus" class="contact-form-status" role="status" aria-live="polite"></div>
-              </form>
-              </div>
-            </article>
           </div>
         </section>
       </section>
@@ -575,29 +354,38 @@
       </section>
     </main>
 
+    <!-- ba:footer -->
     <footer>
-      <div class="footer-brand"><img src="images/logo-mark.svg" width="64" height="64" alt="" class="footer-logo brand-logo-light"><img src="images/logo-mark-dark.svg" width="64" height="64" alt="" class="footer-logo brand-logo-dark"><div><strong>Bozkurt Academy</strong><br><span data-i18n="footerText">Online Almanca dersleri ve öğrenme materyalleri</span></div></div>
+      <div class="footer-brand"><img src="/images/logo-mark.svg" width="64" height="64" alt="" class="footer-logo brand-logo-light"><img src="/images/logo-mark-dark.svg" width="64" height="64" alt="" class="footer-logo brand-logo-dark"><div><strong>Bozkurt Academy</strong><br><span data-i18n="footerText">Online Almanca dersleri ve öğrenme materyalleri</span></div></div>
+      <nav class="footer-pages" aria-label="Site sayfaları">
+          <div class="footer-group"><p class="footer-group-title">Dersler</p><ul><li><a href="/online-almanca-dersi/">Online Almanca dersi</a></li><li><a href="/almanca-ozel-ders/">Almanca özel ders</a></li><li><a href="/almanca-grup-dersi/">Almanca grup dersi</a></li><li><a href="/almanca-sinav-hazirlik/">Sınav hazırlık</a></li></ul></div>
+          <div class="footer-group"><p class="footer-group-title">Seviyeler</p><ul><li><a href="/a1-almanca-kursu/">A1 Almanca kursu</a></li><li><a href="/a2-almanca-kursu/">A2 Almanca kursu</a></li><li><a href="/b1-almanca-kursu/">B1 Almanca kursu</a></li><li><a href="/b2-almanca-kursu/">B2 Almanca kursu</a></li></ul></div>
+          <div class="footer-group"><p class="footer-group-title">Ücretsiz çalış</p><ul><li><a href="/#grammar">Gramer konuları</a></li><li><a href="/#exercises">Alıştırmalar</a></li><li><a href="/#exams">Sınav deneme setleri</a></li><li><a href="/#seviye-testi">Seviye testi</a></li></ul></div>
+          <div class="footer-group"><p class="footer-group-title">Bozkurt Academy</p><ul><li><a href="/hakkimda/">Hakkımda</a></li><li><a href="/sss/">Sıkça sorulan sorular</a></li><li><a href="/iletisim/">İletişim</a></li></ul></div>
+      </nav>
       <div class="footer-meta">
         <nav class="footer-links" aria-label="Yasal bilgiler" data-i18n-aria="footerLegal">
-          <a href="privacy.html" data-i18n="footerPrivacy">Gizlilik politikası</a>
+          <a href="/privacy.html" data-i18n="footerPrivacy">Gizlilik politikası</a>
         </nav>
         <span>© 2026 Bozkurt Academy</span>
       </div>
     </footer>
+    <a class="ba-sticky-cta btn primary" href="/iletisim/" data-i18n="ctaFreeInfo">Ücretsiz bilgi al</a>
+    <!-- /ba:footer -->
   </div>
-  <script src="js/app.js?v=27"></script>
+  <script src="js/app.js?v=28"></script>
   <script src="js/quiz.js?v=26"></script>
   <script src="js/exercise-links.js?v=5"></script>
-  <script src="js/a1-lessons.js?v=10"></script>
+  <script src="js/a1-lessons.js?v=12"></script>
   <script src="js/grammar.js?v=17"></script>
   <script src="js/theme.js?v=9"></script>
   <script src="js/home.js?v=7"></script>
   <script src="js/examsData.js?v=15"></script>
   <script src="js/exam-task.js?v=11"></script>
   <script src="js/exams.js?v=6"></script>
-  <script src="js/placement.js?v=3"></script>
+  <script src="js/placement.js?v=4"></script>
   <script type="module" src="js/account/session.js?v=1"></script>
   <script defer data-goatcounter="https://bozkurtacademy.goatcounter.com/count" data-goatcounter-settings='{"no_onload": true}' src="js/vendor/count.js?v=2.7.0"></script>
-  <script defer src="js/analytics.js?v=4"></script>
+  <script defer src="js/analytics.js?v=5"></script>
 </body>
 </html>

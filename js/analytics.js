@@ -1,4 +1,4 @@
-// GoatCounter visitor statistics for the public pages (index.html only; never on the login,
+// GoatCounter visitor statistics for the public pages (index.html and the static course pages; never on the login,
 // registration or panel pages). No cookies, no localStorage. js/vendor/count.js does the sending
 // and skips localhost by itself; see js/vendor/README.md and docs/privacy-policy.md.
 //
@@ -14,6 +14,8 @@
   const DEPTH = { exercises: 4, grammar: 3, exams: 6 };
 
   function currentPath(){
+    // Static pages (/online-almanca-dersi/, /hakkimda/ …) are counted by their own path.
+    if(location.pathname !== '/' && location.pathname !== '/index.html') return location.pathname;
     const parts = location.hash.replace(/^#/, '').split(/[/?]/).filter(Boolean);
     if(!parts.length || parts[0] === 'home') return '/';
     // The admin page (#yonetim/…) is never counted; the placement test counts as "/#seviye-testi".

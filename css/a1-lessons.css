@@ -85,6 +85,7 @@
 /* Author */
 .a1-author{display:flex;gap:22px;align-items:flex-start;margin:0 0 32px;padding:24px;background:var(--ba-paper-2);border:0;border-radius:var(--ba-radius-small)}
 .a1-author img{width:84px;height:84px;object-fit:cover;object-position:center 30%;border-radius:var(--ba-radius-small);flex-shrink:0}
+.a1-author picture{display:block;flex-shrink:0;line-height:0}
 .a1-author p{font-size:var(--ba-body);color:var(--ba-ink);margin:0 0 10px}
 #page-grammar .a1-author h3{margin:0 0 2px;font-size:var(--ba-lead)}
 .a1-author-role{font-size:var(--ba-small)!important;color:var(--ba-muted)!important;margin:0 0 10px!important}

@@ -2,6 +2,18 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-04 · Alıştırma sonuç ekranı: konuya uyan övgü metni
+
+- **Hata:** Sonuç ekranı her konuda "Harika! Artikel konusunda çok iyi gidiyorsun." diyordu; düşük puanda da artık olmayan "soldaki kısa özet"e yönlendiriyordu.
+- **Yeni metinler (TR/DE/EN):**
+  - %90 ve üstü: „{konu adı}“ konusunda çok iyi gidiyorsun.
+  - %70–89: Yanlış yaptığın soruların açıklamalarını aşağıda bir kez daha oku.
+  - %70'in altı: Aşağıdaki açıklamaları oku, sonra alıştırmayı yeniden çöz.
+  - DE/EN'deki "Diese Wörter solltest du wiederholen" / "Review these words" başlığı da konudan bağımsız oldu: "Das solltest du wiederholen" / "Worth reviewing".
+- **Önbellek sürümleri:** `app.js` v27, `quiz.js` v26.
+- **Test:** Yeni `tests/result-message.mjs` (14 kontrol, hepsi geçti): üç puan aralığı, üç dil, metinlerde "Artikel"/"soldaki özet" kalmaması, 390/1440 px açık/koyu. `tests/vocab.mjs`, `tests/search.mjs`, `check-grammar` de geçti.
+- **Senin yapman gereken:** PR'ı inceleyip "birleştir" demen.
+
 ## 2026-11-02 · Alıştırmalarda kelime listesi: pilot (madde 3)
 
 - **Ne değişti:** Pilot konularda (A1 Artikel, A2 Dativ, B1 Relativsätze; 54 paket, 540 soru) her soru kontrol edilince, doğru da olsa yanlış da olsa, altında "Bu sorudaki kelimeler" çıkıyor: ör. **der** Bahnhof – tren istasyonu. Sonuç ekranında "Bu alıştırmadaki kelimeler" paketin bütün kelimelerini gösteriyor (tekrarsız, cümlelerdeki sırayla).

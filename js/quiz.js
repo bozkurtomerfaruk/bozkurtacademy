@@ -959,7 +959,8 @@ function startNextExercise(){
     const percent=Math.round((state.score/total)*100);
     const currentBest=Number(localStorage.getItem(bestScoreKey()) || 0);
     if(state.score>currentBest) localStorage.setItem(bestScoreKey(), String(state.score));
-    const message=percent>=90?t('resultPerfect'):percent>=70?t('resultGood'):t('resultPractice');
+    // The topic title goes into the message; the texts must fit every topic (js/app.js result…).
+    const message=fill(percent>=90?'resultPerfect':percent>=70?'resultGood':'resultPractice', {topic:localize(state.topicData?.title || state.topicMeta?.title)});
     const nextExercise=getNextExercise();
     const wrongHtml=state.wrong.length
       ? `<div class="wrong-summary"><strong>${t('wrongAnswersTitle')}</strong>${state.wrong.map(q=>`<div><strong>${escapeHtml(q.correct || q.answers?.[0] || '')} ${escapeHtml(q.word || '')}</strong><br><small>${escapeHtml(localize(q.explanations))}</small></div>`).join('')}</div>`
@@ -967,7 +968,7 @@ function startNextExercise(){
     result.innerHTML=`<div class="result-box">
       <h3>${escapeHtml(localize(state.exercise.title))}</h3>
       <div class="result-score"><div><strong>${state.score}/${total}</strong><span>${percent}% ${t('scoreLabel')}</span></div></div>
-      <p class="result-message">${message}</p>
+      <p class="result-message">${escapeHtml(message)}</p>
       ${wrongHtml}
       <div data-vocab-slot>${vocabHtml(exerciseVocab(), 'vocabExercise')}</div>
       <div class="quiz-actions result-actions">

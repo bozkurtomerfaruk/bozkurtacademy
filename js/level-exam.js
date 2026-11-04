@@ -62,7 +62,7 @@
   const questionsOf = () => attempt.ids.map((id) => exams[level].questions.find((q) => q.id === id)).filter(Boolean);
 
   async function load(levelId) {
-    catalog ||= await fetch('data/catalog.json?v=7').then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
+    catalog ||= await fetch('data/catalog.json?v=8').then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
     const info = catalog.levels.find((l) => l.id === levelId);
     if (!info?.levelExam) return null;
     exams[levelId] ||= await fetch(info.levelExam + '?v=1').then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });

@@ -2,6 +2,21 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-04 · Seviye sonu sınavı: A2
+
+- **Sayfa:** `#seviye-sonu/A2`, A2 konu listesinin sonundaki karttan açılıyor. Ekran, kayıt, öğretmen detayı ve ödev A1'deki gibi çalışıyor; kod ve kural değişikliği yok.
+- **Dağılım (onayladığın):** Dativ, Adjektivdeklination, Nebensätze, Präteritum, Wechselpräpositionen, Verben mit Präpositionen, Reflexive Verben, Komparativ & Superlativ 3'er; Konjunktiv II, Verben mit Dativ und Akkusativ, Futur I 2'şer.
+- **Havuz:** `data/seviye-sonu/a2.json`, 60 soru (dağılımın iki katı), her birinde kendi Türkçe açıklaması var.
+- **İkinci doğru cevap kontrolü (senin işaret ettiklerin ve fazlası):**
+  - **Wechselpräpositionen:** Her soruda fiil Wo/Wohin'i belirliyor (legen/liegen, stellen, gehen, schlafen, hängt). "Hängst du das Bild an …" sorusu çıkarıldı, çünkü "an der Wand aufhängen" da kullanılıyor; yerine stellen geldi.
+  - **Nebensätze:** Ana fiil bağlacı tek seçeneğe indiriyor: fragen → ob, hoffen → dass, koşul → wenn. "Weil das Wetter morgen schön ist" de olabileceği için o soruda weil yerine obwohl seçeneği var.
+  - **Adjektivdeklination:** Bütün isimler tekil ve artikel açık (einen, ein, die …, fiil ist). Tek çoğul soru (mit guten Freunden) çoğulluğu isimle belli ediyor.
+  - **Ek olarak bulunan:** Dönüşlü fiillerde "Wir treffen euch", "Du putzt mir die Zähne", "Er erinnert ihn …" da doğru cümleler kuruyordu. Bu şıklar kesin yanlış olanlarla değiştirildi (wir, unser, deine, er, sein …).
+  - **Präteritum:** Şimdiki zamanın da doğru olabileceği iki cümleye zaman belirteci eklendi (früher, gestern Abend). Konjunktiv II'de "Können Sie …?" da doğru olduğu için o şık çıkarıldı.
+- **Önbellek:** `level-exam.js` v2 (katalog v8).
+- **Test:** `tests/level-exam.mjs` genişletildi (A2: kart, 30 soru ve dağılım, 18/30 geçer; toplam 43 kontrol, hepsi geçti). `check-level-exams` (2 sınav, 120 soru), `check-grammar`, `build-search-index --check`, `sozluk --check`, `build-pages --check`, `tests/vocab.mjs` geçti.
+- **Senin yapman gereken:** Soruları kontrol edip "birleştir" demen. Kural değişikliği olmadığı için Firebase'de yapılacak bir şey yok.
+
 ## 2026-11-04 · Seviye testi tarayıcı testi yeni sayfa yapısına uyarlandı
 
 - **Neden:** "Dersler" ve "İletişim" ayrı sayfalara taşındı (`/online-almanca-dersi/`, `/iletisim/`); `npm run test:placement` hâlâ eski `#lessons` ve `#contact` bölümlerine bakıp duruyordu. Gizlilik sayfasının tarihi de (Web3Forms değişikliği) 4 Kasım oldu.
@@ -43,7 +58,7 @@
 - **Durum:** PR #46 birleştirildi (2026-11-04).
 - **Senin yapman gerekenler:**
   1. ✔ PR birleştirildi.
-  2. `firestore.rules`'u Firebase Console → Firestore → **Kurallar**'da yayınla. Yayınlamadan önce kaydedilen sınav sonuçları kurallarca reddedilir; öğrenci "Sonuç paneline kaydedilemedi" notunu görür.
+  2. ✔ Kuralları yayınladın (2026-11-04). Yayınlamadan önce kaydedilen sınav sonuçları kurallarca reddedilir; öğrenci "Sonuç paneline kaydedilemedi" notunu görür.
   3. Sonra A2 ve B1 için onayın.
 
 ## 2026-11-04 · Kelime listesi: B2 (7 konu)

@@ -115,6 +115,29 @@ await page.goto('about:blank'); await page.goto(B + '#seviye-sonu/B2'); await pa
 ok((await page.textContent('#levelExamApp')).includes('henüz bir seviye sonu sınavı yok'), 'sınavı olmayan seviyede not');
 await ctx.close();
 
+// Diğer seviyeler (data/catalog.json → levelExam): kart, 30 soru, dağılım, puan.
+for (const level of JSON.parse(fs.readFileSync('data/catalog.json', 'utf8')).levels.filter((l) => l.levelExam && l.id !== 'A1')) {
+  const data = JSON.parse(fs.readFileSync(level.levelExam, 'utf8'));
+  const ids_ = Object.fromEntries(data.questions.map((q) => [q.id, q]));
+  const { ctx: c, page: p } = await newPage();
+  await p.goto(B + '#exercises/' + level.id); await p.waitForTimeout(1500);
+  ok(await p.locator(`.le-card [data-level-exam][href="#seviye-sonu/${level.id}"]`).count() === 1, `${level.id}: konu listesinin sonunda sınav kartı`);
+  await p.click('[data-level-exam]'); await p.waitForTimeout(1200);
+  await p.click('[data-le-start]'); await p.waitForTimeout(400);
+  const ids = await shownIds(p);
+  const got = ids.reduce((m, id) => (m[ids_[id].topic] = (m[ids_[id].topic] || 0) + 1, m), {});
+  ok(ids.length === 30 && JSON.stringify(got) === JSON.stringify(Object.fromEntries(data.distribution.map((d) => [d.topic, d.count]))), `${level.id}: 30 soru, dağılım tablodaki gibi`);
+  for (const [i, id] of ids.entries()) {
+    const q = ids_[id];
+    await p.locator(`.le-q[data-q="${id}"] input[value="${css(i < 18 ? q.answer : q.options.find((o) => o !== q.answer))}"]`).check();
+  }
+  await p.click('[data-le-finish]'); await p.waitForTimeout(500);
+  ok((await p.textContent('[data-le-score]')) === '18 / 30' && await p.getAttribute('[data-le-passed]', 'data-le-passed') === 'true'
+    && (await p.textContent('#levelExamApp h1')).includes(level.id) && await p.locator('.le-topics li').count() === data.distribution.length, `${level.id}: 18/30 geçti, ${data.distribution.length} konu tablosu`);
+  await p.screenshot({ path: path.join(shotDir, `sinav-sonuc-${level.id}-1280.png`), fullPage: true });
+  await c.close();
+}
+
 // 390 ve 1440 px, açık ve koyu: sorular ve sonuç; telefonda da bağlantılar görünüyor.
 for (const [w, th] of [[390, 'light'], [390, 'dark'], [1440, 'light'], [1440, 'dark']]) {
   const { ctx: c, page: p } = await newPage(w, th);

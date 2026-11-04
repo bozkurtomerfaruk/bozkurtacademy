@@ -1,0 +1,833 @@
+{
+  "version": 1,
+  "level": "A2",
+  "passPercent": 60,
+  "distribution": [
+    {
+      "topic": "dativ",
+      "count": 3
+    },
+    {
+      "topic": "verben-dativ-akkusativ",
+      "count": 2
+    },
+    {
+      "topic": "wechselpraepositionen",
+      "count": 3
+    },
+    {
+      "topic": "reflexive-verben",
+      "count": 3
+    },
+    {
+      "topic": "konjunktiv-ii",
+      "count": 2
+    },
+    {
+      "topic": "nebensaetze",
+      "count": 3
+    },
+    {
+      "topic": "komparativ-superlativ",
+      "count": 3
+    },
+    {
+      "topic": "adjektivdeklination",
+      "count": 3
+    },
+    {
+      "topic": "verben-praepositionen",
+      "count": 3
+    },
+    {
+      "topic": "praeteritum",
+      "count": 3
+    },
+    {
+      "topic": "futur-i",
+      "count": 2
+    }
+  ],
+  "questions": [
+    {
+      "id": "a2-dativ-1",
+      "topic": "dativ",
+      "prompt": "Ich helfe ___ Nachbarin beim Umzug.",
+      "options": [
+        "der",
+        "die",
+        "den",
+        "dem"
+      ],
+      "answer": "der",
+      "explanation": "helfen fiili Dativ ister. die Nachbarin dişil; Dativ’de die → der."
+    },
+    {
+      "id": "a2-dativ-2",
+      "topic": "dativ",
+      "prompt": "Wir fahren mit ___ Bus zur Arbeit.",
+      "options": [
+        "dem",
+        "den",
+        "der",
+        "das"
+      ],
+      "answer": "dem",
+      "explanation": "mit her zaman Dativ ister. der Bus eril; Dativ’de der → dem."
+    },
+    {
+      "id": "a2-dativ-3",
+      "topic": "dativ",
+      "prompt": "Ich gebe ___ Kindern Schokolade.",
+      "options": [
+        "den",
+        "die",
+        "dem",
+        "der"
+      ],
+      "answer": "den",
+      "explanation": "Kime verildiği Dativ’dir. Kindern çoğul; Dativ çoğulda artikel den ve isim -n alır: den Kindern."
+    },
+    {
+      "id": "a2-dativ-4",
+      "topic": "dativ",
+      "prompt": "Nach ___ Unterricht gehen wir ins Café.",
+      "options": [
+        "dem",
+        "den",
+        "der",
+        "das"
+      ],
+      "answer": "dem",
+      "explanation": "nach her zaman Dativ ister. der Unterricht eril: nach dem Unterricht."
+    },
+    {
+      "id": "a2-dativ-5",
+      "topic": "dativ",
+      "prompt": "Die Jacke gefällt ___ Freundin sehr.",
+      "options": [
+        "meiner",
+        "meine",
+        "meinen",
+        "meinem"
+      ],
+      "answer": "meiner",
+      "explanation": "gefallen fiili Dativ ister (kime hoş geliyor?). die Freundin dişil; Dativ’de meine → meiner."
+    },
+    {
+      "id": "a2-dativ-6",
+      "topic": "dativ",
+      "prompt": "Er wohnt seit einem Jahr bei ___ Onkel.",
+      "options": [
+        "seinem",
+        "seinen",
+        "sein",
+        "seiner"
+      ],
+      "answer": "seinem",
+      "explanation": "bei her zaman Dativ ister. der Onkel eril; Dativ’de sein → seinem."
+    },
+    {
+      "id": "a2-adjektivdeklination-1",
+      "topic": "adjektivdeklination",
+      "prompt": "Ich trinke gern einen ___ Kaffee.",
+      "options": [
+        "heißen",
+        "heiße",
+        "heißer",
+        "heißes"
+      ],
+      "answer": "heißen",
+      "explanation": "einen Kaffee: eril, Akkusativ (trinken). ein- artikelinden sonra eril Akkusativ’de sıfat -en alır: einen heißen Kaffee."
+    },
+    {
+      "id": "a2-adjektivdeklination-2",
+      "topic": "adjektivdeklination",
+      "prompt": "Das ist ein ___ Auto.",
+      "options": [
+        "neues",
+        "neue",
+        "neuen",
+        "neuer"
+      ],
+      "answer": "neues",
+      "explanation": "das Auto nötr, Nominativ. ein artikeli cinsiyeti göstermediği için sıfat -es alır: ein neues Auto."
+    },
+    {
+      "id": "a2-adjektivdeklination-3",
+      "topic": "adjektivdeklination",
+      "prompt": "Sie trägt heute die ___ Jacke.",
+      "options": [
+        "rote",
+        "roten",
+        "roter",
+        "rotes"
+      ],
+      "answer": "rote",
+      "explanation": "die Jacke tekil, dişil, Akkusativ (tragen). Belirli artikelden (die) sonra dişil Akkusativ’de sıfat -e alır. Çoğul olsaydı isim Jacken olurdu."
+    },
+    {
+      "id": "a2-adjektivdeklination-4",
+      "topic": "adjektivdeklination",
+      "prompt": "Wir wohnen in einem ___ Haus.",
+      "options": [
+        "kleinen",
+        "kleines",
+        "kleine",
+        "kleiner"
+      ],
+      "answer": "kleinen",
+      "explanation": "in + wohnen (Wo?) → Dativ: in einem Haus. Dativ’de sıfat her zaman -en alır: in einem kleinen Haus."
+    },
+    {
+      "id": "a2-adjektivdeklination-5",
+      "topic": "adjektivdeklination",
+      "prompt": "Der ___ Mann dort ist mein Lehrer.",
+      "options": [
+        "alte",
+        "alten",
+        "alter",
+        "altes"
+      ],
+      "answer": "alte",
+      "explanation": "der Mann tekil, eril, Nominativ (fiil ist). Belirli artikelden sonra Nominativ tekilde sıfat -e alır: der alte Mann."
+    },
+    {
+      "id": "a2-adjektivdeklination-6",
+      "topic": "adjektivdeklination",
+      "prompt": "Mit ___ Freunden fahre ich ans Meer.",
+      "options": [
+        "guten",
+        "gute",
+        "guter",
+        "gutes"
+      ],
+      "answer": "guten",
+      "explanation": "mit Dativ ister; Freunden çoğul ve artikelsiz. Dativ’de sıfat -en alır: mit guten Freunden."
+    },
+    {
+      "id": "a2-nebensaetze-1",
+      "topic": "nebensaetze",
+      "prompt": "Ich bleibe heute zu Hause, ___ ich krank bin.",
+      "options": [
+        "weil",
+        "obwohl",
+        "ob",
+        "dass"
+      ],
+      "answer": "weil",
+      "explanation": "Yan cümle evde kalmanın nedenini veriyor (hastayım). Neden bildiren bağlaç weil; obwohl \"-e rağmen\" demektir ve anlamı bozar."
+    },
+    {
+      "id": "a2-nebensaetze-2",
+      "topic": "nebensaetze",
+      "prompt": "Ich frage den Verkäufer, ___ es die Jacke auch in Blau gibt.",
+      "options": [
+        "ob",
+        "dass",
+        "weil",
+        "wenn"
+      ],
+      "answer": "ob",
+      "explanation": "fragen fiilinden sonra evet/hayır sorusu yan cümleye ob ile girer: Ich frage, ob … dass fragen ile kullanılmaz."
+    },
+    {
+      "id": "a2-nebensaetze-3",
+      "topic": "nebensaetze",
+      "prompt": "___ das Wetter morgen schön ist, machen wir ein Picknick.",
+      "options": [
+        "Wenn",
+        "Dass",
+        "Ob",
+        "Obwohl"
+      ],
+      "answer": "Wenn",
+      "explanation": "Piknik bir koşula bağlı (hava güzel olursa). Koşul bağlacı wenn. Obwohl \"-e rağmen\" anlamına gelir ve burada anlam vermez."
+    },
+    {
+      "id": "a2-nebensaetze-4",
+      "topic": "nebensaetze",
+      "prompt": "Welcher Satz ist richtig?",
+      "options": [
+        "Ich glaube, dass er heute nicht kommt.",
+        "Ich glaube, dass er kommt heute nicht.",
+        "Ich glaube, dass kommt er heute nicht.",
+        "Ich glaube, er dass heute nicht kommt."
+      ],
+      "answer": "Ich glaube, dass er heute nicht kommt.",
+      "explanation": "dass ile başlayan yan cümlede çekimli fiil (kommt) en sona gider; özne bağlaçtan hemen sonra gelir."
+    },
+    {
+      "id": "a2-nebensaetze-5",
+      "topic": "nebensaetze",
+      "prompt": "Ich hoffe, ___ du bald wieder gesund wirst.",
+      "options": [
+        "dass",
+        "ob",
+        "wenn",
+        "weil"
+      ],
+      "answer": "dass",
+      "explanation": "hoffen fiilinden sonra umulan şey dass ile anlatılır. ob soru için, weil neden için kullanılır."
+    },
+    {
+      "id": "a2-nebensaetze-6",
+      "topic": "nebensaetze",
+      "prompt": "Welcher Satz ist richtig? (weil)",
+      "options": [
+        "Wir gehen nicht spazieren, weil es regnet.",
+        "Wir gehen nicht spazieren, weil regnet es.",
+        "Wir gehen nicht spazieren, weil es regnen.",
+        "Wir gehen nicht spazieren, weil es hat geregnet."
+      ],
+      "answer": "Wir gehen nicht spazieren, weil es regnet.",
+      "explanation": "weil’li yan cümlede çekimli fiil en sondadır ve özneye uyar: weil es regnet. Perfekt’te de çekimli fiil sona gider: weil es geregnet hat."
+    },
+    {
+      "id": "a2-praeteritum-1",
+      "topic": "praeteritum",
+      "prompt": "Gestern ___ ich sehr müde.",
+      "options": [
+        "war",
+        "bin",
+        "wäre",
+        "warst"
+      ],
+      "answer": "war",
+      "explanation": "Gestern geçmişi gösterir. sein fiilinin Präteritum’u ich için war. warst du içindir, wäre Konjunktiv II’dir."
+    },
+    {
+      "id": "a2-praeteritum-2",
+      "topic": "praeteritum",
+      "prompt": "Als Kind ___ ich keinen Hund.",
+      "options": [
+        "hatte",
+        "habe",
+        "hattest",
+        "hätte"
+      ],
+      "answer": "hatte",
+      "explanation": "Als Kind (çocukken) geçmişi gösterir. haben fiilinin Präteritum’u ich için hatte."
+    },
+    {
+      "id": "a2-praeteritum-3",
+      "topic": "praeteritum",
+      "prompt": "Früher ___ wir jeden Sommer nach Italien.",
+      "options": [
+        "fuhren",
+        "fahren",
+        "fuhr",
+        "gefahren"
+      ],
+      "answer": "fuhren",
+      "explanation": "Früher geçmişi gösterir. fahren düzensizdir: Präteritum kökü fuhr-, wir için fuhren."
+    },
+    {
+      "id": "a2-praeteritum-4",
+      "topic": "praeteritum",
+      "prompt": "Mein Opa ___ früher sehr gut kochen.",
+      "options": [
+        "konnte",
+        "kann",
+        "könnte",
+        "konnten"
+      ],
+      "answer": "konnte",
+      "explanation": "früher geçmişi gösterir. können’in Präteritum’u er için konnte (Umlaut yok). könnte Konjunktiv II’dir."
+    },
+    {
+      "id": "a2-praeteritum-5",
+      "topic": "praeteritum",
+      "prompt": "Ihr ___ gestern nicht zur Party kommen.",
+      "options": [
+        "wolltet",
+        "wollt",
+        "wollte",
+        "wolltest"
+      ],
+      "answer": "wolltet",
+      "explanation": "gestern geçmişi gösterir. wollen’in Präteritum’u ihr için wolltet."
+    },
+    {
+      "id": "a2-praeteritum-6",
+      "topic": "praeteritum",
+      "prompt": "Gestern Abend ___ plötzlich das Telefon.",
+      "options": [
+        "klingelte",
+        "klingelt",
+        "klingelten",
+        "geklingelt"
+      ],
+      "answer": "klingelte",
+      "explanation": "Gestern Abend geçmişi gösterir. klingeln düzenlidir: kök + -te. Özne das Telefon (tekil): es klingelte."
+    },
+    {
+      "id": "a2-wechselpraepositionen-1",
+      "topic": "wechselpraepositionen",
+      "prompt": "Ich lege das Buch auf ___ Tisch.",
+      "options": [
+        "den",
+        "dem",
+        "der",
+        "das"
+      ],
+      "answer": "den",
+      "explanation": "legen bir yöne koymayı anlatır (Wohin?), bu yüzden Akkusativ. der Tisch eril: auf den Tisch."
+    },
+    {
+      "id": "a2-wechselpraepositionen-2",
+      "topic": "wechselpraepositionen",
+      "prompt": "Das Buch liegt jetzt auf ___ Tisch.",
+      "options": [
+        "dem",
+        "den",
+        "der",
+        "das"
+      ],
+      "answer": "dem",
+      "explanation": "liegen bir yerde durmayı anlatır (Wo?), bu yüzden Dativ. der Tisch eril: auf dem Tisch."
+    },
+    {
+      "id": "a2-wechselpraepositionen-3",
+      "topic": "wechselpraepositionen",
+      "prompt": "Wir gehen heute Abend in ___ Kino.",
+      "options": [
+        "das",
+        "dem",
+        "den",
+        "der"
+      ],
+      "answer": "das",
+      "explanation": "gehen bir yöne gitmeyi anlatır (Wohin?), bu yüzden Akkusativ. das Kino nötr: in das Kino (kısaca ins Kino)."
+    },
+    {
+      "id": "a2-wechselpraepositionen-4",
+      "topic": "wechselpraepositionen",
+      "prompt": "Die Katze schläft unter ___ Bett.",
+      "options": [
+        "dem",
+        "das",
+        "den",
+        "der"
+      ],
+      "answer": "dem",
+      "explanation": "schlafen bir yerde olmayı anlatır (Wo?), bu yüzden Dativ. das Bett nötr: unter dem Bett."
+    },
+    {
+      "id": "a2-wechselpraepositionen-5",
+      "topic": "wechselpraepositionen",
+      "prompt": "Stell die Flaschen bitte in ___ Kühlschrank.",
+      "options": [
+        "den",
+        "dem",
+        "der",
+        "das"
+      ],
+      "answer": "den",
+      "explanation": "stellen bir yöne koymayı anlatır (Wohin?), bu yüzden Akkusativ. der Kühlschrank eril: in den Kühlschrank."
+    },
+    {
+      "id": "a2-wechselpraepositionen-6",
+      "topic": "wechselpraepositionen",
+      "prompt": "Das Bild hängt schon an ___ Wand.",
+      "options": [
+        "der",
+        "die",
+        "den",
+        "dem"
+      ],
+      "answer": "der",
+      "explanation": "hängen burada bir yerde asılı durmayı anlatır (Wo?), bu yüzden Dativ. die Wand dişil: an der Wand."
+    },
+    {
+      "id": "a2-verben-praepositionen-1",
+      "topic": "verben-praepositionen",
+      "prompt": "Ich warte schon lange ___ den Bus.",
+      "options": [
+        "auf",
+        "für",
+        "an",
+        "über"
+      ],
+      "answer": "auf",
+      "explanation": "warten her zaman auf + Akkusativ ile kullanılır: auf den Bus warten."
+    },
+    {
+      "id": "a2-verben-praepositionen-2",
+      "topic": "verben-praepositionen",
+      "prompt": "Sie interessiert sich sehr ___ Musik.",
+      "options": [
+        "für",
+        "auf",
+        "an",
+        "mit"
+      ],
+      "answer": "für",
+      "explanation": "sich interessieren für + Akkusativ: sich für Musik interessieren."
+    },
+    {
+      "id": "a2-verben-praepositionen-3",
+      "topic": "verben-praepositionen",
+      "prompt": "Wir freuen uns schon ___ die Ferien nächsten Monat.",
+      "options": [
+        "auf",
+        "über",
+        "für",
+        "an"
+      ],
+      "answer": "auf",
+      "explanation": "Tatil gelecekte (nächsten Monat): ileride olacak bir şeyi sabırsızlıkla beklemek sich freuen auf. sich freuen über olmuş bir şeye sevinmektir."
+    },
+    {
+      "id": "a2-verben-praepositionen-4",
+      "topic": "verben-praepositionen",
+      "prompt": "Denkst du oft ___ deine Familie in der Türkei?",
+      "options": [
+        "an",
+        "auf",
+        "für",
+        "von"
+      ],
+      "answer": "an",
+      "explanation": "denken an + Akkusativ = birini düşünmek, aklına gelmek: an deine Familie denken."
+    },
+    {
+      "id": "a2-verben-praepositionen-5",
+      "topic": "verben-praepositionen",
+      "prompt": "Er ärgert sich ___ den Lärm der Nachbarn.",
+      "options": [
+        "über",
+        "auf",
+        "an",
+        "für"
+      ],
+      "answer": "über",
+      "explanation": "sich ärgern über + Akkusativ = bir şeye kızmak: sich über den Lärm ärgern."
+    },
+    {
+      "id": "a2-verben-praepositionen-6",
+      "topic": "verben-praepositionen",
+      "prompt": "Ich spreche morgen ___ meinem Chef über das Problem.",
+      "options": [
+        "mit",
+        "bei",
+        "an",
+        "für"
+      ],
+      "answer": "mit",
+      "explanation": "sprechen mit + Dativ = biriyle konuşmak (konusu über ile verilir): mit meinem Chef sprechen."
+    },
+    {
+      "id": "a2-reflexive-verben-1",
+      "topic": "reflexive-verben",
+      "prompt": "Ich wasche ___ jeden Morgen mit kaltem Wasser.",
+      "options": [
+        "mich",
+        "mir",
+        "sich",
+        "mein"
+      ],
+      "answer": "mich",
+      "explanation": "Kişi kendini yıkıyor ve cümlede başka nesne yok; dönüşlü zamir Akkusativ: ich wasche mich."
+    },
+    {
+      "id": "a2-reflexive-verben-2",
+      "topic": "reflexive-verben",
+      "prompt": "Du putzt ___ die Zähne.",
+      "options": [
+        "dir",
+        "dich",
+        "sich",
+        "deine"
+      ],
+      "answer": "dir",
+      "explanation": "Cümlede zaten bir Akkusativ nesne var (die Zähne); bu yüzden dönüşlü zamir Dativ olur: du putzt dir die Zähne."
+    },
+    {
+      "id": "a2-reflexive-verben-3",
+      "topic": "reflexive-verben",
+      "prompt": "Wir treffen ___ am Samstag im Park.",
+      "options": [
+        "uns",
+        "sich",
+        "wir",
+        "unser"
+      ],
+      "answer": "uns",
+      "explanation": "Özne wir; wir’in dönüşlü zamiri uns: wir treffen uns (buluşuyoruz). sich sadece er/sie/es, sie (çoğul) ve Sie içindir."
+    },
+    {
+      "id": "a2-reflexive-verben-4",
+      "topic": "reflexive-verben",
+      "prompt": "Setzt ___ bitte! Der Kurs beginnt.",
+      "options": [
+        "euch",
+        "sich",
+        "ihr",
+        "euer"
+      ],
+      "answer": "euch",
+      "explanation": "Setzt ihr’e verilen bir emir (fiil -t ile). ihr’in dönüşlü zamiri euch: Setzt euch! sich ihr ile kullanılmaz."
+    },
+    {
+      "id": "a2-reflexive-verben-5",
+      "topic": "reflexive-verben",
+      "prompt": "Er erinnert ___ nicht an den Namen.",
+      "options": [
+        "sich",
+        "er",
+        "sein",
+        "ihr"
+      ],
+      "answer": "sich",
+      "explanation": "Özne er ve fiil kendisine dönüyor: sich erinnern an = hatırlamak. 3. kişinin dönüşlü zamiri sich: er erinnert sich."
+    },
+    {
+      "id": "a2-reflexive-verben-6",
+      "topic": "reflexive-verben",
+      "prompt": "Ich ziehe ___ eine warme Jacke an.",
+      "options": [
+        "mir",
+        "mich",
+        "sich",
+        "mein"
+      ],
+      "answer": "mir",
+      "explanation": "Cümlede Akkusativ nesne var (eine warme Jacke); bu yüzden dönüşlü zamir Dativ: ich ziehe mir eine Jacke an."
+    },
+    {
+      "id": "a2-komparativ-superlativ-1",
+      "topic": "komparativ-superlativ",
+      "prompt": "Mein Bruder ist ___ als ich.",
+      "options": [
+        "älter",
+        "alter",
+        "ältester",
+        "mehr alt"
+      ],
+      "answer": "älter",
+      "explanation": "als ile karşılaştırma Komparativ ister. alt → älter (Umlaut alır). Almancada \"mehr alt\" denmez."
+    },
+    {
+      "id": "a2-komparativ-superlativ-2",
+      "topic": "komparativ-superlativ",
+      "prompt": "Im Sommer sind die Tage ___ als im Winter.",
+      "options": [
+        "länger",
+        "langer",
+        "am längsten",
+        "lang"
+      ],
+      "answer": "länger",
+      "explanation": "als ile karşılaştırma Komparativ ister. lang → länger."
+    },
+    {
+      "id": "a2-komparativ-superlativ-3",
+      "topic": "komparativ-superlativ",
+      "prompt": "Das ist der ___ Berg in Deutschland.",
+      "options": [
+        "höchste",
+        "höchster",
+        "höher",
+        "hochste"
+      ],
+      "answer": "höchste",
+      "explanation": "En yüksek (Superlativ) ve belirli artikel der: der höchste Berg. hoch düzensizdir: höher, am höchsten."
+    },
+    {
+      "id": "a2-komparativ-superlativ-4",
+      "topic": "komparativ-superlativ",
+      "prompt": "Ich trinke ___ Tee als Kaffee.",
+      "options": [
+        "lieber",
+        "gerner",
+        "mehr gern",
+        "am liebsten"
+      ],
+      "answer": "lieber",
+      "explanation": "gern’in Komparativ’i düzensizdir: gern → lieber → am liebsten. als ile Komparativ gerekir: lieber."
+    },
+    {
+      "id": "a2-komparativ-superlativ-5",
+      "topic": "komparativ-superlativ",
+      "prompt": "Anna läuft am ___ von allen.",
+      "options": [
+        "schnellsten",
+        "schneller",
+        "schnellste",
+        "schnell"
+      ],
+      "answer": "schnellsten",
+      "explanation": "von allen (hepsinden) en üstünlüğü gösterir. Fiille Superlativ am … -sten biçimindedir: am schnellsten."
+    },
+    {
+      "id": "a2-komparativ-superlativ-6",
+      "topic": "komparativ-superlativ",
+      "prompt": "Der Zug ist genauso schnell ___ das Auto.",
+      "options": [
+        "wie",
+        "als",
+        "so",
+        "dann"
+      ],
+      "answer": "wie",
+      "explanation": "Eşitlik (genauso … wie) karşılaştırması wie ile yapılır. als sadece Komparativ’le kullanılır (schneller als)."
+    },
+    {
+      "id": "a2-konjunktiv-ii-1",
+      "topic": "konjunktiv-ii",
+      "prompt": "Wenn ich mehr Zeit ___, würde ich öfter Sport machen.",
+      "options": [
+        "hätte",
+        "habe",
+        "hatte",
+        "hättest"
+      ],
+      "answer": "hätte",
+      "explanation": "Gerçek olmayan koşul (vaktim yok): Konjunktiv II. haben → ich hätte. hattest du içindir, hatte geçmiş zamandır."
+    },
+    {
+      "id": "a2-konjunktiv-ii-2",
+      "topic": "konjunktiv-ii",
+      "prompt": "___ Sie mir bitte helfen?",
+      "options": [
+        "Könnten",
+        "Konnten",
+        "Könnte",
+        "Könntest"
+      ],
+      "answer": "Könnten",
+      "explanation": "Kibar rica için Konjunktiv II. Özne Sie: Könnten Sie …? Konnten (Umlautsuz) geçmiş zamandır."
+    },
+    {
+      "id": "a2-konjunktiv-ii-3",
+      "topic": "konjunktiv-ii",
+      "prompt": "Wenn ich reich ___, würde ich ein Haus am Meer kaufen.",
+      "options": [
+        "wäre",
+        "war",
+        "bin",
+        "wären"
+      ],
+      "answer": "wäre",
+      "explanation": "Gerçek olmayan koşul (zengin değilim): Konjunktiv II. sein → ich wäre. war geçmiş zamandır."
+    },
+    {
+      "id": "a2-konjunktiv-ii-4",
+      "topic": "konjunktiv-ii",
+      "prompt": "Ich ___ gern einen Kaffee, bitte.",
+      "options": [
+        "hätte",
+        "hatte",
+        "hast",
+        "hätten"
+      ],
+      "answer": "hätte",
+      "explanation": "Kibarca bir şey istemek: ich hätte gern … (Konjunktiv II). hatte geçmiş zamandır, hätten wir/sie içindir."
+    },
+    {
+      "id": "a2-verben-dativ-akkusativ-1",
+      "topic": "verben-dativ-akkusativ",
+      "prompt": "Ich schenke ___ Mutter einen Schal.",
+      "options": [
+        "meiner",
+        "meine",
+        "meinen",
+        "mein"
+      ],
+      "answer": "meiner",
+      "explanation": "schenken iki nesne alır: kime (Dativ) ve ne (Akkusativ: einen Schal). die Mutter dişil, Dativ: meiner Mutter."
+    },
+    {
+      "id": "a2-verben-dativ-akkusativ-2",
+      "topic": "verben-dativ-akkusativ",
+      "prompt": "Er zeigt ___ Gast das Zimmer.",
+      "options": [
+        "dem",
+        "den",
+        "der",
+        "das"
+      ],
+      "answer": "dem",
+      "explanation": "zeigen: kime (Dativ) neyi (Akkusativ: das Zimmer). der Gast eril, Dativ: dem Gast."
+    },
+    {
+      "id": "a2-verben-dativ-akkusativ-3",
+      "topic": "verben-dativ-akkusativ",
+      "prompt": "Welcher Satz ist richtig?",
+      "options": [
+        "Ich gebe es dir morgen.",
+        "Ich gebe dir es morgen.",
+        "Ich gebe dich es morgen.",
+        "Ich gebe es dich morgen."
+      ],
+      "answer": "Ich gebe es dir morgen.",
+      "explanation": "İki nesne de zamir olunca önce Akkusativ (es), sonra Dativ (dir) gelir: Ich gebe es dir. dich Akkusativ’dir, kime sorusuna cevap olmaz."
+    },
+    {
+      "id": "a2-verben-dativ-akkusativ-4",
+      "topic": "verben-dativ-akkusativ",
+      "prompt": "Kannst du ___ bitte das Salz geben?",
+      "options": [
+        "mir",
+        "mich",
+        "ich",
+        "mein"
+      ],
+      "answer": "mir",
+      "explanation": "geben: kime (Dativ) neyi (Akkusativ: das Salz). ich’in Dativ biçimi mir."
+    },
+    {
+      "id": "a2-futur-i-1",
+      "topic": "futur-i",
+      "prompt": "Morgen ___ es bestimmt regnen.",
+      "options": [
+        "wird",
+        "werden",
+        "wirst",
+        "würde"
+      ],
+      "answer": "wird",
+      "explanation": "Futur I: werden + mastar. Özne es (3. tekil): es wird regnen. würde Konjunktiv II’dir."
+    },
+    {
+      "id": "a2-futur-i-2",
+      "topic": "futur-i",
+      "prompt": "Wir ___ nächstes Jahr nach Berlin ziehen.",
+      "options": [
+        "werden",
+        "wird",
+        "werdet",
+        "wurden"
+      ],
+      "answer": "werden",
+      "explanation": "Futur I: werden + mastar. Özne wir: wir werden ziehen. wurden geçmiş zamandır."
+    },
+    {
+      "id": "a2-futur-i-3",
+      "topic": "futur-i",
+      "prompt": "Du wirst den Test sicher ___.",
+      "options": [
+        "bestehen",
+        "bestehst",
+        "bestanden",
+        "bestand"
+      ],
+      "answer": "bestehen",
+      "explanation": "Futur I’de werden çekimlenir, asıl fiil sonda mastar olarak kalır: du wirst … bestehen."
+    },
+    {
+      "id": "a2-futur-i-4",
+      "topic": "futur-i",
+      "prompt": "___ ihr am Wochenende zu Hause bleiben?",
+      "options": [
+        "Werdet",
+        "Werden",
+        "Wird",
+        "Wirst"
+      ],
+      "answer": "Werdet",
+      "explanation": "Futur I sorusu: werden başa gelir. Özne ihr: Werdet ihr … bleiben?"
+    }
+  ]
+}

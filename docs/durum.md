@@ -15,7 +15,8 @@
   - **Präteritum:** Şimdiki zamanın da doğru olabileceği iki cümleye zaman belirteci eklendi (früher, gestern Abend). Konjunktiv II'de "Können Sie …?" da doğru olduğu için o şık çıkarıldı.
 - **Önbellek:** `level-exam.js` v2 (katalog v8).
 - **Test:** `tests/level-exam.mjs` genişletildi (A2: kart, 30 soru ve dağılım, 18/30 geçer; toplam 43 kontrol, hepsi geçti). `check-level-exams` (2 sınav, 120 soru), `check-grammar`, `build-search-index --check`, `sozluk --check`, `build-pages --check`, `tests/vocab.mjs` geçti.
-- **Senin yapman gereken:** Soruları kontrol edip "birleştir" demen. Kural değişikliği olmadığı için Firebase'de yapılacak bir şey yok.
+- **Düzeltme (senin kontrolünden sonra):** a2-futur-i-1'de („Morgen ___ es bestimmt regnen.“) "würde" koşul bağlamında savunulabildiği için yerine "wurde" geldi.
+- **Durum:** PR #49 birleştirildi (2026-11-04).
 
 ## 2026-11-04 · Seviye testi tarayıcı testi yeni sayfa yapısına uyarlandı
 

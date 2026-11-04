@@ -88,7 +88,12 @@ export async function submitComment({ lesson, title, link, name, email, comment 
   // Bekleme süresi: kurallar bu belgenin aynı batch'te bu yorumun kimliğiyle yazılmasını ister.
   batch.set(fs.doc(db, 'commentLimits', user.uid), { lastAt: fs.serverTimestamp(), lastId: ref.id });
   try{
-    await batch.commit();
+    // Firestore'a ulaşılamazsa (ağ, engelleyici eklenti) SDK yazımı süresiz bekletebilir; 20 saniye sonra hata gösterilir.
+    let timer;
+    const timeout = new Promise((_, reject) => {
+      timer = setTimeout(() => reject(Object.assign(new Error('Firestore 20 saniyede cevap vermedi'), { code: 'timeout' })), 20000);
+    });
+    await Promise.race([batch.commit(), timeout]).finally(() => clearTimeout(timer));
     log('Firestore kaydı yazıldı', `comments/${ref.id}`);
   }catch(error){
     // permission-denied: kurallar yayınlanmamış, 60 saniye dolmamış veya alanlar kurala uymuyor.

@@ -65,9 +65,9 @@ export const PAGES = [
     parent: '/online-almanca-dersi/',
     nav: 'lessons',
     crumb: 'Almanca Grup Dersi',
-    title: 'Almanca Grup Dersi (Online) A1–B2 | Bozkurt Academy',
-    description: 'Online Almanca grup dersi: aynı seviyedeki öğrencilerle konuşma pratiği, düzenli program ve konu tekrarı. A1–B2 grupları hakkında bilgi al.',
-    schema: [service('/almanca-grup-dersi/', 'Almanca Grup Dersi (Online)', 'Aynı seviyedeki öğrencilerden oluşan online Almanca grup dersleri.', 'Online Almanca grup dersi')]
+    title: 'Almanca Grup Dersi: Online, En Fazla 6 Kişi | Bozkurt Academy',
+    description: 'Online Almanca grup dersi: en fazla 6 kişilik gruplarda aynı seviyedeki öğrencilerle konuşma pratiği ve düzenli program. A1–B2 grupları hakkında bilgi al.',
+    schema: [service('/almanca-grup-dersi/', 'Almanca Grup Dersi (Online)', 'Aynı seviyedeki en fazla 6 öğrenciden oluşan online Almanca grup dersleri.', 'Online Almanca grup dersi')]
   },
   {
     path: '/a1-almanca-kursu/',

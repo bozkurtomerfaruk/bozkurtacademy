@@ -107,7 +107,6 @@
       <nav class="lp-breadcrumb" aria-label="Sayfa yolu"><ol><li><a href="/">Ana sayfa</a></li><li aria-current="page">İletişim</li></ol></nav>
       <!-- /ba:breadcrumb --><!--
   İÇERİK BAŞLANGICI: Bu satırın altındaki metni serbestçe düzenleyebilirsin.
-  "DÜZENLE" yazan yorumlar, senin kontrol etmen veya doldurman gereken yerleri gösterir.
   Başlık (title) ve açıklama (description) scripts/site-pages.mjs dosyasında; değiştirince: node scripts/build-pages.mjs
 -->
       <section class="lp-prose" aria-labelledby="lp-title">
@@ -130,7 +129,10 @@
         </aside>
         <div class="lp-form">
           <h2 class="lp-card-title">İletişim formu</h2>
-          <form id="contactForm" class="contact-message-form" novalidate>
+          <form id="contactForm" class="contact-message-form" action="https://formsubmit.co/bozkurtt.omerfaruk@gmail.com" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="Bozkurt Academy - Yeni iletişim mesajı" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://bozkurtacademy.com/iletisim/?gonderildi=1" />
             <div class="lp-form-grid">
               <div class="field">
                 <label for="name">Ad Soyad</label>
@@ -156,11 +158,10 @@
       <section class="lp-section lp-prose" aria-labelledby="sonra">
         <h2 id="sonra">Mesajından sonra ne olur?</h2>
         <ol>
-          <li>Mesajını okur ve sana e-postayla dönerim.</li>
+          <li>Mesajını okur ve sana e-postayla dönerim. Mesajlara en kısa sürede cevap verilir.</li>
           <li>Birlikte ücretsiz ilk ders için bir gün ve saat belirleriz.</li>
           <li>İlk derste seviyeni ve hedefini konuşur, sana uygun ders türünü ve planı belirleriz. Ücret bilgisini de bu aşamada paylaşırım.</li>
         </ol>
-        <!-- DÜZENLE: Genellikle ne kadar sürede cevap verdiğini (ör. "aynı gün", "48 saat içinde") yazmak istersen buraya ekle. -->
         <p>Aklındaki soru burada yoksa <a href="/sss/">sıkça sorulan sorular</a> sayfasına da bakabilirsin.</p>
       </section>
       <!-- İÇERİK SONU -->
@@ -181,7 +182,7 @@
       </div>
     </footer>
     <!-- /ba:footer --></div><!-- ba:scripts -->
-  <script src="/js/app.js?v=28"></script>
+  <script src="/js/app.js?v=29"></script>
   <script src="/js/theme.js?v=9"></script>
   <script defer data-goatcounter="https://bozkurtacademy.goatcounter.com/count" data-goatcounter-settings='{"no_onload": true}' src="/js/vendor/count.js?v=2.7.0"></script>
   <script defer src="/js/analytics.js?v=5"></script>

@@ -13,7 +13,7 @@ import { SITE, PAGES } from './site-pages.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const check = process.argv.includes('--check');
 const SITEMAP_DATE = '2026-11-04';
-const V = { style: 11, base: 9, landing: 1, app: 28, theme: 9, analytics: 5 };
+const V = { style: 11, base: 9, landing: 1, app: 29, theme: 9, analytics: 5 };
 const OG_IMAGE = `${SITE}/images/og-bozkurt-academy.jpg`;
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');

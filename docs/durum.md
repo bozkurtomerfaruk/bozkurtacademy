@@ -2,6 +2,25 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-04 · Seviye sonu sınavı: B1 (madde 4'ün son adımı)
+
+- **Sayfa:** `#seviye-sonu/B1`, B1 konu listesinin sonundaki karttan açılıyor. Kod ve kural değişikliği yok; ekran, kayıt, öğretmen detayı ve ödev A1/A2 gibi çalışıyor.
+- **Dağılım (onayladığın):** Relativsätze, Passiv, Konjunktiv II, Konnektoren 3'er; Kausalsätze, Infinitiv mit zu, Genitiv, N-Deklination, Präteritum vertieft, Plusquamperfekt, Indirekte Fragen, Pronominaladverbien, Satzstellung 2'şer.
+- **Havuz:** `data/seviye-sonu/b1.json`, 60 soru (dağılımın iki katı), her birinde kendi Türkçe açıklaması var.
+- **İkinci doğru cevap kontrolü:**
+  - **Konjunktiv II:** Hiçbir soruda hem "würde + Infinitiv" hem "hätte/wäre" doğru değil (würde sadece "an deiner Stelle … schlafen" tavsiyesinde; "Würden Sie …?" kibar soruda şık değil). "als ob + Indikativ" konuşma dilinde kabul edildiği için o tür soru konmadı.
+  - **Konnektoren:** Aynı soruda eş anlamlı bağlaç (deshalb/deswegen/darum) yok. Her soruda fiilin yeri ya da çift bağlacın ikinci parçası tek seçeneğe indiriyor.
+  - **Kausalsätze:** denn / weil / da fiilin yeriyle ayrılıyor; aynı soruda weil ile da birlikte doğru olamıyor.
+  - **Relativsätze:** Hâli yan cümledeki fiil ya da edat belirliyor (helfen → der, mit → denen, in + Wo → der); "wo" ve "welche" şık değil.
+  - **Passiv:** Zustandspassiv'in de savunulabileceği şıklar (ist … geliefert, muss … übersetzt sein) çıkarıldı.
+  - **Indirekte Fragen:** ob/wann karışmasın diye her soruda asıl soru ya da cevap veriliyor.
+  - **Pronominaladverbien:** "Wovon sprecht ihr?" de doğru olduğu için o şık çıkarıldı.
+  - **Präteritum / Plusquamperfekt:** Şimdiki zamanın ya da Perfekt'in de kabul edilebileceği cümlelere zaman belirteci eklendi; konuşma dilinde kabul edilen "weil sie schlecht geschlafen hat" şıkkı çıkarıldı.
+- **Önbellek:** `level-exam.js` v3 (katalog v9).
+- **Test:** `tests/level-exam.mjs` B1'i de kapsıyor (kart, 30 soru ve dağılım, 18/30 geçer; toplam 46 kontrol, hepsi geçti). `check-level-exams` (3 sınav, 180 soru), `check-grammar`, `build-pages --check`, `sozluk --check` geçti.
+- **Madde 4:** Bu PR birleşince A1, A2 ve B1 sınavları tamam. B2 sınavını, kararın gereği B2 gramer dersleri tamamlanınca yapacağız.
+- **Senin yapman gereken:** Soruları kontrol edip "birleştir" demen. Sonra madde 5 (çocuk oyunu taslakları) için onayın.
+
 ## 2026-11-04 · Seviye sonu sınavı: A2
 
 - **Sayfa:** `#seviye-sonu/A2`, A2 konu listesinin sonundaki karttan açılıyor. Ekran, kayıt, öğretmen detayı ve ödev A1'deki gibi çalışıyor; kod ve kural değişikliği yok.

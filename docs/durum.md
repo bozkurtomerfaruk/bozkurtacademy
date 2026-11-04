@@ -29,9 +29,11 @@
   - `tests/vocab.mjs`, `tests/search.mjs`, `tests/result-message.mjs`, `tests/exams/next.mjs`, `check-grammar`, `check-exams`, `build-search-index --check`, `sozluk --check` geçti.
 - **Bilinen sınırlar:** Seviye testinde olduğu gibi, sorular ve cevaplar herkese açık bir dosyada ve puan tarayıcıda hesaplanıyor.
 - **Benden önce bozulmuş bir test:** `npm run test:placement` ilk bölümünde duruyor. Başka bir oturumun değişikliğiyle (#39/#43) "Dersler" ve "İletişim" ayrı sayfalara taşındı; testin bu bölümü hâlâ eski yerlerine bakıyor. Testin geri kalanını geçici bir kopyayla çalıştırdım, hepsi geçti. Ayrı küçük bir işte düzeltilmeli.
+- **Düzeltme (senin kontrolünden sonra):** a1-possessivartikel-2'de („Frau Demir sucht ___ Schlüssel.“) "ihre" seçeneği çoğul okumayla (ihre Schlüssel) doğru olabiliyordu; yerine "ihrem" geldi. Diğer 59 soru aynı belirsizlik için tarandı: tekil/çoğul aynı yazılan isim geçen 4 soruda (Fenster ×2, Löffel, Mädchen) fiil ya da artikel tekili belli ediyor.
+- **Durum:** PR #46 birleştirildi (2026-11-04).
 - **Senin yapman gerekenler:**
-  1. PR'ı inceleyip "birleştir" de.
-  2. Birleştikten sonra `firestore.rules`'u Firebase Console → Firestore → **Kurallar**'da yayınla. Yayınlamadan önce kaydedilen sınav sonuçları kurallarca reddedilir; öğrenci "Sonuç paneline kaydedilemedi" notunu görür.
+  1. ✔ PR birleştirildi.
+  2. `firestore.rules`'u Firebase Console → Firestore → **Kurallar**'da yayınla. Yayınlamadan önce kaydedilen sınav sonuçları kurallarca reddedilir; öğrenci "Sonuç paneline kaydedilemedi" notunu görür.
   3. Sonra A2 ve B1 için onayın.
 
 ## 2026-11-04 · Kelime listesi: B2 (7 konu)

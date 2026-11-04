@@ -19,11 +19,13 @@ Bir derste onaylı yorum yoksa bu bölüm hiç görünmez.
 - **email:** öğrencinin e-postası. Sadece senin için; "Yanıtla"ya basınca öğrenciye yazarsın. Siteye ve Firebase'e yazılmaz.
 - **ders**, **ders_linki:** seviye, ders adı ve dersin sayfası
 - **onay_paneli:** onay sayfasının linki
+- **kayit_no:** yorumun Firebase'deki kayıt numarası. Bu alan e-postada varsa yorum kaydedilmiştir ve panelde görünür.
 
 ### Yöntem A: Onay paneli (önerilen)
 
-1. E-postadaki **onay_paneli** linkini aç: `https://bozkurtacademy.com/yonetim/yorumlar/`.
-   Bu sayfa menüde yok ve arama motorlarına kapalı.
+1. Öğretmen panelinde **Yorumlar** sekmesini aç (sekmedeki sayı onay bekleyen yorumlardır) ya da e-postadaki
+   **onay_paneli** linkini aç: `https://bozkurtacademy.com/yonetim/yorumlar/`. İkisi aynı onay ekranıdır.
+   Bu sayfa menüde yok ve arama motorlarına kapalı; üstündeki **← Öğretmen paneli** ile panele dönersin.
 2. Giriş yapmadıysan **Giriş yap**'a bas ve öğretmen hesabınla gir. Giriş sonrası panele geri dönersin.
 3. En üstte **bekleyen yorum sayısı** görünür. Her yorumun üstünde ders adı (tıklayınca ders açılır), tarih ve isim var.
    - **Onayla:** Yorum yayınlanır. Ders sayfasında birkaç saniye içinde görünür (sayfayı yenile).

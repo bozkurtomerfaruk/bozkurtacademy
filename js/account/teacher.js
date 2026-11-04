@@ -4,8 +4,9 @@ import {
   approve, categorize, deleteAssignmentCopies, emailVerified, fmtDate, lastLessonByStudent, listStudents,
   loadAssignmentGroups, openDeleteDialog, requireTeacher, statusBadges, UNVERIFIED_WARNING
 } from './teacher-common.js';
+import { createModeration, permissionMessage } from './comments-moderation.js?v=1';
 
-const TABS = ['ogrenciler', 'onay', 'veli', 'odevler', 'silinecek'];
+const TABS = ['ogrenciler', 'onay', 'veli', 'odevler', 'silinecek', 'yorumlar'];
 let lists = null;
 let groups = [];
 let studentsById = new Map();
@@ -141,6 +142,7 @@ async function renderAssignments(){
 
 function renderCounts(){
   for(const tab of TABS){
+    if(tab === 'yorumlar') continue; // yorum sayısını loadComments yazar
     const el = document.querySelector(`[data-count="${tab}"]`);
     el.textContent = String(tab === 'odevler' ? groups.length : lists[tab].length);
   }
@@ -225,5 +227,27 @@ if(user){
     history.replaceState(null, '', `ogretmen.html${location.hash}`);
   }
   showTab(location.hash.slice(1));
+  loadComments();
   await load();
+}
+
+// "Yorumlar" sekmesi: /yonetim/yorumlar/ ile aynı onay ekranı (js/account/comments-moderation.js).
+// Öğrenci listesi yüklenemese bile yorumlar ayrı yüklenir; sekmedeki sayı onay bekleyenlerdir.
+function loadComments(){
+  const status = $('commentsStatus');
+  const setStatus = (type, message) => {
+    status.hidden = !message;
+    status.className = 'acc-status' + (type ? ' ' + type : '');
+    status.textContent = message || '';
+  };
+  const moderation = createModeration({
+    pendingList: $('commentsPending'),
+    approvedList: $('commentsApproved'),
+    onStatus: setStatus,
+    onCounts: ({ pending }) => { document.querySelector('[data-count="yorumlar"]').textContent = String(pending); }
+  });
+  moderation.load().catch((error) => {
+    console.error('[yorum onayı] Yorumlar okunamadı:', error?.code || '', error);
+    setStatus('error', 'Yorumlar okunamadı: ' + permissionMessage(error));
+  });
 }

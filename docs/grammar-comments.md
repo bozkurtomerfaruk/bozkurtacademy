@@ -7,10 +7,12 @@
    `createdAt` (sunucu saati). Aynı batch'te `commentLimits/{uid}` yazılır: aynı oturumdan dakikada en fazla bir yorum.
    **E-posta adresi Firestore'a yazılmaz.**
 2. **Bildirim:** Kayıttan sonra Web3Forms öğretmene e-posta gönderir. E-postada ad, e-posta (yanıtla adresi), yorum,
-   `ders`, `ders_linki` ve `onay_paneli` (`https://bozkurtacademy.com/yonetim/yorumlar/`) alanları bulunur.
+   `ders`, `ders_linki`, `onay_paneli` (`https://bozkurtacademy.com/yonetim/yorumlar/`) ve `kayit_no` (Firestore belge kimliği)
+   alanları bulunur. E-postada `kayit_no` varsa yorum Firestore'a yazılmıştır.
    Bildirim gönderilemezse yorum yine kayıtlıdır ve panelde görünür.
-3. **Onay:** Öğretmen `/yonetim/yorumlar/` sayfasında giriş yapar. Bekleyen yorum sayısı en üstte görünür.
-   Her yorum için: Onayla, Cevap yaz / Cevabı düzenle, Sil. Yayındaki yorumlar için: Yayından kaldır (bekleyene döner).
+3. **Onay:** Öğretmen panelinde (`ogretmen.html#yorumlar`) **Yorumlar** sekmesi veya `/yonetim/yorumlar/` sayfası.
+   İkisi aynı onay ekranını kullanır (`js/account/comments-moderation.js`). Sekmedeki ve sayfanın üstündeki sayı onay bekleyen
+   yorumlardır. Her yorum için: Onayla, Cevap yaz / Cevabı düzenle, Sil. Yayındaki yorumlar için: Yayından kaldır (bekleyene döner).
 4. **Gösterim:** Ders sayfası, ziyaretçi yorum bölümüne yaklaşınca (IntersectionObserver, 600 px önce) Firestore REST API ile
    `lesson == anahtar` ve `status == "approved"` olan yorumları okur. SDK yüklenmez. Ad, tarih, yorum ve cevap `textContent`
    ile düz metin olarak yazılır. Onaylı yorum yoksa "Öğrenci yorumları" bölümü hiç görünmez.
@@ -25,6 +27,13 @@
 
 **Kurallar değiştiğinde** `firestore.rules` dosyasının tamamını Firebase Console → Firestore Database → Kurallar'a
 yapıştırıp **Yayınla** (docs/kurulum.md). Yayınlanmazsa yorum gönderme ve onay sayfası "izin yok" hatası verir.
+
+## Sorun giderme
+
+Tarayıcı konsolunda (F12 → Console) her adım `[yorum]` önekiyle yazılır: Firebase yüklendi, anonim giriş, Firestore kaydı,
+bildirim e-postası. Hata olursa adım ve kod görünür, ör. `[yorum] HATA: Firestore yazımı permission-denied` (kurallar
+yayınlanmamış veya 60 saniye dolmamış) ya da `timeout` (Firestore'a 20 saniyede ulaşılamadı). Firestore kaydı başarısız
+olursa bildirim e-postası gönderilmez ve öğrenci hata mesajı görür. Onay ekranı `[yorum onayı]` önekini kullanır.
 
 ## Notlar
 

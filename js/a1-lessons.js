@@ -42,7 +42,8 @@
      <section class="a1-section"><h3>Benzer ve bağlantılı konular</h3><div class="a1-related">${lesson.related.map(key=>{const item=data.lessons.find(l=>l.id===key);return `<a href="#grammar/${h(level)}/${h(key)}" data-a1-related="${h(key)}">${h(item.title)} <span aria-hidden="true">→</span></a>`}).join('')}</div></section>
      <aside class="a1-author"><picture><source type="image/webp" srcset="images/omer-faruk-avatar.webp"><img src="images/omer-faruk-avatar.jpg" width="84" height="84" loading="lazy" decoding="async" alt="Almanca eğitmeni Ömer Faruk Bozkurt" onerror="this.onerror=null;this.parentNode.querySelectorAll('source').forEach(function(s){s.remove()})"></picture><div><h3>Ömer Faruk Bozkurt</h3><p class="a1-author-role">Almanca eğitmeni</p><p>Almanya’da yaşıyor, online Almanca dersleri veriyorum. Derslerimde konuları açık örnekler, düzenli tekrar ve günlük kullanım üzerinden ele alıyorum.</p><a href="/hakkimda/">Hakkımda daha fazla bilgi →</a></div></aside>
      ${lesson.reading?`<p class="a1-reading">Ek okuma: <a href="${h(lesson.reading)}" target="_blank" rel="noopener noreferrer">${h(lesson.readingTitle || 'Deutsch mit Anna · '+lesson.title)}</a> (Almanca). Bu sayfadaki Türkçe anlatım ve örnekler Bozkurt Academy için hazırlanmıştır.</p>`:''}
-     <section class="a1-section a1-comments"><h3>Soru ve yorumlar</h3><p>Konuda takıldığın yeri veya öğrenme deneyimini paylaşabilirsin. Yorumlar incelemeden sonra yayımlanır; e-posta adresin gösterilmez.</p><div class="a1-comment-list" aria-live="polite"><p>Yorumlar yükleniyor…</p></div>
+     <section class="a1-section a1-comments-published" hidden><h3>Öğrenci yorumları</h3><div class="a1-comment-list"></div></section>
+     <section class="a1-section a1-comments"><h3>Soru ve yorumlar</h3><p>Konuda takıldığın yeri veya öğrenme deneyimini paylaşabilirsin. Yorumlar incelemeden sonra yayımlanır; e-posta adresin gösterilmez.</p>
        <form class="a1-comment-form" novalidate><div class="a1-comment-fields"><label>Adın<input name="name" autocomplete="name" maxlength="60" required></label><label>E-posta adresin<input name="email" type="email" autocomplete="email" maxlength="254" required></label></div><label>Yorumun<textarea name="comment" rows="5" minlength="10" maxlength="2000" required></textarea></label><div class="a1-honeypot" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div><label class="a1-consent"><input name="consent" type="checkbox" required><span>Yorumumun incelenip adımla bu konuda yayımlanmasını kabul ediyorum. E-posta adresim yalnızca yorumum hakkında iletişim için kullanılabilir.</span></label><button class="btn primary" type="submit">Yorumu gönder</button><p class="a1-comment-status" role="status" aria-live="polite"></p></form>
      </section><button class="btn ghost" type="button" data-a1-back>← ${h(level)} gramer konularına dön</button>
    </article>`;
@@ -55,13 +56,27 @@
    setupComments(container,lesson,level);
    return lesson;
  }
+ // Approved comments: data/grammar-comments.json, key "A1/artikel" (level/lesson id), entries {name, date, comment, reply?}.
+ // Every value is written with textContent, never as HTML. Without approved comments the section stays hidden.
+ const MONTHS=['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+ const formatDate=iso=>{const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(String(iso||''));return m?`${Number(m[3])} ${MONTHS[Number(m[2])-1]} ${m[1]}`:String(iso||'');};
+ function commentElement(row){
+   const el=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=text;return node;};
+   const article=el('article','a1-comment');const header=el('header');header.append(el('strong','',String(row.name||'')));
+   if(row.date){const time=el('time','',formatDate(row.date));time.dateTime=String(row.date);header.append(' ',time);}
+   article.append(header,el('p','',String(row.comment||'')));
+   if(row.reply){const reply=el('div','a1-comment-reply');reply.append(el('strong','','Ömer Faruk Bozkurt'),el('p','',String(row.reply)));article.append(reply);}
+   return article;
+ }
  async function setupComments(container,lesson,level) {
-   const list=container.querySelector('.a1-comment-list');
+   const published=container.querySelector('.a1-comments-published');const list=published.querySelector('.a1-comment-list');
    (async () => {try {
      const response=await fetch('data/grammar-comments.json',{cache:'no-store'});if(!response.ok)throw Error('comments');
-     const data=await response.json();const rows=Array.isArray(data[level+'/'+lesson.id] || data[lesson.id])?(data[level+'/'+lesson.id] || data[lesson.id]):[];
-     list.innerHTML=rows.length?rows.map(row=>`<article class="a1-comment"><header><strong>${h(row.name)}</strong> <time>${h(row.date)}</time></header><p>${h(row.comment)}</p>${row.reply?`<div class="a1-comment-reply"><strong>Ömer Faruk Bozkurt</strong><p>${h(row.reply)}</p></div>`:''}</article>`).join(''):`<p>${h(t('grammarCommentsEmpty'))}</p>`;
-   } catch(_) {list.innerHTML=`<p>${h(t('grammarCommentsLoadError'))}</p>`;}})();
+     const data=await response.json();const rows=data[level+'/'+lesson.id];
+     const valid=Array.isArray(rows)?rows.filter(row=>row && row.name && row.comment):[];
+     if(!valid.length)return;
+     list.replaceChildren(...valid.map(commentElement));published.hidden=false;
+   } catch(error) {console.warn('Onaylı yorumlar yüklenemedi:',error);}})();
    const form=container.querySelector('.a1-comment-form');const status=container.querySelector('.a1-comment-status');
    let submitting=false,lastSent=0;
    form.addEventListener('submit',async event=>{
@@ -74,7 +89,7 @@
      submitting=true;const button=form.querySelector('[type="submit"]');button.disabled=true;status.textContent=t('grammarCommentSending');
      try {
        // Web3Forms, same public access key as the contact form in js/app.js; only success: true counts as sent.
-       const response=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({access_key:'21c1c876-3c08-4019-a29d-8181b1f640f0',subject:'Bozkurt Academy – '+level+' yorum incelemesi: '+lesson.title,from_name:'Bozkurt Academy Web Sitesi',replyto:email,name,email,message:comment,topic:lesson.title,topic_id:lesson.id,level,publication_consent:'Öğrenci yorumunun adıyla yayımlanmasına onay verdi.',page:'https://bozkurtacademy.com/#grammar/'+level+'/'+lesson.id})});
+       const response=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({access_key:'21c1c876-3c08-4019-a29d-8181b1f640f0',subject:'Bozkurt Academy – '+level+' yorum incelemesi: '+lesson.title,from_name:'Bozkurt Academy Web Sitesi',replyto:email,name,email,message:comment,ders:level+' · '+lesson.title,ders_linki:'https://bozkurtacademy.com/#grammar/'+level+'/'+lesson.id,yorum_anahtari:level+'/'+lesson.id,yayin_onayi:'Öğrenci yorumunun adıyla yayımlanmasına onay verdi.'})});
        const result=await response.json().catch(()=>({}));if(!response.ok || result.success!==true)throw Error(result.message||'send');
        form.reset();lastSent=Date.now();status.textContent=t('grammarCommentSent');status.classList.add('success');
      }catch(_){status.textContent=t('grammarCommentSendError');status.classList.add('error');}

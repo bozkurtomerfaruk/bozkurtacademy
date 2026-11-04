@@ -100,6 +100,7 @@
 .a1-comment time{font-size:var(--ba-small);color:var(--ba-muted)}
 .a1-comment p{white-space:pre-wrap;overflow-wrap:anywhere}
 .a1-comment-reply{margin:16px 0 0 16px;padding:14px 16px;background:var(--ba-paper-2);border-radius:var(--ba-radius-small)}
+.a1-comment-reply p:last-child{margin-bottom:0}
 .a1-comment-form{position:relative;padding:clamp(20px,4vw,32px);background:var(--ba-paper-2);border:0;border-radius:var(--ba-radius-small)}
 .a1-comment-form label{display:flex;flex-direction:column;gap:8px;margin-bottom:18px;font-size:var(--ba-small);font-weight:600}
 .a1-comment-form input:not([type=checkbox]),.a1-comment-form textarea{width:100%;min-height:52px;padding:12px 14px;font:inherit;font-weight:400;box-sizing:border-box}

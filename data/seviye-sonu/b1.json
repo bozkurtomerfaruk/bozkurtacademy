@@ -1,0 +1,841 @@
+{
+  "version": 1,
+  "level": "B1",
+  "passPercent": 60,
+  "distribution": [
+    {
+      "topic": "konnektoren",
+      "count": 3
+    },
+    {
+      "topic": "kausalsaetze",
+      "count": 2
+    },
+    {
+      "topic": "relativsaetze",
+      "count": 3
+    },
+    {
+      "topic": "passiv",
+      "count": 3
+    },
+    {
+      "topic": "konjunktiv-ii-b1",
+      "count": 3
+    },
+    {
+      "topic": "genitiv",
+      "count": 2
+    },
+    {
+      "topic": "n-deklination",
+      "count": 2
+    },
+    {
+      "topic": "infinitiv-zu",
+      "count": 2
+    },
+    {
+      "topic": "praeteritum-b1",
+      "count": 2
+    },
+    {
+      "topic": "plusquamperfekt",
+      "count": 2
+    },
+    {
+      "topic": "indirekte-fragen",
+      "count": 2
+    },
+    {
+      "topic": "pronominaladverbien",
+      "count": 2
+    },
+    {
+      "topic": "satzstellung-b1",
+      "count": 2
+    }
+  ],
+  "questions": [
+    {
+      "id": "b1-relativsaetze-1",
+      "topic": "relativsaetze",
+      "prompt": "Der Mann, ___ dort steht, ist mein Nachbar.",
+      "options": [
+        "der",
+        "den",
+        "dem",
+        "dessen"
+      ],
+      "answer": "der",
+      "explanation": "İlgi zamiri yan cümlenin öznesi (kim duruyor? der Mann). Eril Nominativ: der."
+    },
+    {
+      "id": "b1-relativsaetze-2",
+      "topic": "relativsaetze",
+      "prompt": "Die Frau, ___ ich gestern geholfen habe, ruft mich heute an.",
+      "options": [
+        "der",
+        "die",
+        "den",
+        "deren"
+      ],
+      "answer": "der",
+      "explanation": "helfen Dativ ister: ich habe der Frau geholfen. Dişil Dativ ilgi zamiri: der."
+    },
+    {
+      "id": "b1-relativsaetze-3",
+      "topic": "relativsaetze",
+      "prompt": "Das Buch, ___ du mir empfohlen hast, ist sehr spannend.",
+      "options": [
+        "das",
+        "dem",
+        "den",
+        "dessen"
+      ],
+      "answer": "das",
+      "explanation": "empfehlen neyi? sorusuna Akkusativ ister: du hast das Buch empfohlen. Nötr Akkusativ: das."
+    },
+    {
+      "id": "b1-relativsaetze-4",
+      "topic": "relativsaetze",
+      "prompt": "Der Kollege, ___ Auto kaputt ist, kommt heute mit dem Bus.",
+      "options": [
+        "dessen",
+        "deren",
+        "der",
+        "den"
+      ],
+      "answer": "dessen",
+      "explanation": "Araba meslektaşa ait (sahiplik): Genitiv ilgi zamiri. Kollege eril → dessen. deren dişil ve çoğul içindir."
+    },
+    {
+      "id": "b1-relativsaetze-5",
+      "topic": "relativsaetze",
+      "prompt": "Die Kinder, mit ___ ich spiele, sind meine Neffen.",
+      "options": [
+        "denen",
+        "die",
+        "den",
+        "deren"
+      ],
+      "answer": "denen",
+      "explanation": "mit Dativ ister; Kinder çoğul. Çoğul Dativ ilgi zamiri denen’dir (den değil)."
+    },
+    {
+      "id": "b1-relativsaetze-6",
+      "topic": "relativsaetze",
+      "prompt": "Das ist die Stadt, in ___ ich geboren bin.",
+      "options": [
+        "der",
+        "die",
+        "dem",
+        "den"
+      ],
+      "answer": "der",
+      "explanation": "in burada bir yeri gösteriyor (Wo? doğduğum yer), bu yüzden Dativ. die Stadt dişil: in der."
+    },
+    {
+      "id": "b1-passiv-1",
+      "topic": "passiv",
+      "prompt": "Das Paket ___ morgen geliefert.",
+      "options": [
+        "wird",
+        "werden",
+        "hat",
+        "wurden"
+      ],
+      "answer": "wird",
+      "explanation": "Vorgangspassiv: werden + Partizip II. Özne das Paket (tekil) ve zaman gelecek/şimdiki: es wird geliefert."
+    },
+    {
+      "id": "b1-passiv-2",
+      "topic": "passiv",
+      "prompt": "Das Haus ___ im Jahr 1990 gebaut.",
+      "options": [
+        "wurde",
+        "wird",
+        "würde",
+        "hat"
+      ],
+      "answer": "wurde",
+      "explanation": "1990 geçmişte: Passiv Präteritum = wurde + Partizip II. Özne das Haus tekil: wurde."
+    },
+    {
+      "id": "b1-passiv-3",
+      "topic": "passiv",
+      "prompt": "Die Briefe ___ gestern verschickt.",
+      "options": [
+        "wurden",
+        "wurde",
+        "werden",
+        "wird"
+      ],
+      "answer": "wurden",
+      "explanation": "gestern geçmişi gösterir: Präteritum Passiv. Özne die Briefe çoğul: wurden."
+    },
+    {
+      "id": "b1-passiv-4",
+      "topic": "passiv",
+      "prompt": "Der Patient wird ___ einem erfahrenen Arzt operiert.",
+      "options": [
+        "von",
+        "durch",
+        "mit",
+        "bei"
+      ],
+      "answer": "von",
+      "explanation": "Passiv’de işi yapan kişi von + Dativ ile verilir: von einem Arzt. durch Akkusativ ister ve daha çok araç/aracı için kullanılır."
+    },
+    {
+      "id": "b1-passiv-5",
+      "topic": "passiv",
+      "prompt": "Der Text muss bis Freitag übersetzt ___.",
+      "options": [
+        "werden",
+        "wird",
+        "worden",
+        "wurde"
+      ],
+      "answer": "werden",
+      "explanation": "Modal fiille Passiv: Modal + Partizip II + werden (mastar): muss übersetzt werden."
+    },
+    {
+      "id": "b1-passiv-6",
+      "topic": "passiv",
+      "prompt": "Die Rechnung ist schon bezahlt ___.",
+      "options": [
+        "worden",
+        "geworden",
+        "werden",
+        "wurde"
+      ],
+      "answer": "worden",
+      "explanation": "Passiv Perfekt: sein + Partizip II + worden. Passiv’de geworden değil worden kullanılır."
+    },
+    {
+      "id": "b1-konjunktiv-ii-b1-1",
+      "topic": "konjunktiv-ii-b1",
+      "prompt": "Wenn ich mehr Geld ___, würde ich eine größere Wohnung mieten.",
+      "options": [
+        "hätte",
+        "hatte",
+        "hättest",
+        "habe"
+      ],
+      "answer": "hätte",
+      "explanation": "Gerçek olmayan koşul (param yok): Konjunktiv II. haben → ich hätte. hatte geçmiş zamandır, hättest du içindir."
+    },
+    {
+      "id": "b1-konjunktiv-ii-b1-2",
+      "topic": "konjunktiv-ii-b1",
+      "prompt": "Wenn du früher gekommen ___, hättest du den Film gesehen.",
+      "options": [
+        "wärst",
+        "hättest",
+        "würdest",
+        "warst"
+      ],
+      "answer": "wärst",
+      "explanation": "Geçmişte gerçekleşmemiş koşul: Konjunktiv II geçmiş = wäre/hätte + Partizip II. kommen Perfekt’i sein ile kurar: du wärst gekommen."
+    },
+    {
+      "id": "b1-konjunktiv-ii-b1-3",
+      "topic": "konjunktiv-ii-b1",
+      "prompt": "Ich ___ an deiner Stelle mehr schlafen.",
+      "options": [
+        "würde",
+        "wäre",
+        "hätte",
+        "wurde"
+      ],
+      "answer": "würde",
+      "explanation": "Tavsiye: würde + mastar (schlafen). wäre ve hätte mastarla kullanılmaz; wurde geçmiş zamandır."
+    },
+    {
+      "id": "b1-konjunktiv-ii-b1-4",
+      "topic": "konjunktiv-ii-b1",
+      "prompt": "___ Sie mir bitte sagen, wo der Bahnhof ist?",
+      "options": [
+        "Könnten",
+        "Konnten",
+        "Hätten",
+        "Wären"
+      ],
+      "answer": "Könnten",
+      "explanation": "Kibar soru: können’in Konjunktiv II’si + mastar: Könnten Sie mir sagen …? Konnten (Umlautsuz) geçmiş zamandır."
+    },
+    {
+      "id": "b1-konjunktiv-ii-b1-5",
+      "topic": "konjunktiv-ii-b1",
+      "prompt": "Wenn ich doch nur mehr Zeit ___!",
+      "options": [
+        "hätte",
+        "habe",
+        "hatte",
+        "hätten"
+      ],
+      "answer": "hätte",
+      "explanation": "Gerçek olmayan dilek: Konjunktiv II. haben → ich hätte. hatte geçmiş zamandır, hätten wir/sie içindir."
+    },
+    {
+      "id": "b1-konjunktiv-ii-b1-6",
+      "topic": "konjunktiv-ii-b1",
+      "prompt": "Du ___ mehr lernen sollen. Jetzt ist die Prüfung schwer.",
+      "options": [
+        "hättest",
+        "wärst",
+        "würdest",
+        "hattest"
+      ],
+      "answer": "hättest",
+      "explanation": "Geçmişe yönelik sitem/tavsiye: hätte + mastar + modal mastarı (sollen): du hättest lernen sollen."
+    },
+    {
+      "id": "b1-konnektoren-1",
+      "topic": "konnektoren",
+      "prompt": "Es regnet, ___ gehen wir spazieren.",
+      "options": [
+        "trotzdem",
+        "denn",
+        "obwohl",
+        "weil"
+      ],
+      "answer": "trotzdem",
+      "explanation": "Bağlaçtan sonra fiil geliyor (gehen wir): bağlaç cümlenin ilk sırasında bir zarf. Anlam \"buna rağmen\": trotzdem. denn sonrası fiil ikinci sıraya gelmez; obwohl ve weil fiili sona atar."
+    },
+    {
+      "id": "b1-konnektoren-2",
+      "topic": "konnektoren",
+      "prompt": "Ich habe großen Hunger, ___ esse ich jetzt ein Brot.",
+      "options": [
+        "deshalb",
+        "trotzdem",
+        "aber",
+        "sondern"
+      ],
+      "answer": "deshalb",
+      "explanation": "Sonuç bildiriliyor (acıktığım için) ve bağlaçtan sonra fiil geliyor: deshalb. aber’den sonra özne gelirdi (aber ich esse); trotzdem anlamı tersine çevirir."
+    },
+    {
+      "id": "b1-konnektoren-3",
+      "topic": "konnektoren",
+      "prompt": "Er spricht ___ Deutsch als auch Englisch.",
+      "options": [
+        "sowohl",
+        "weder",
+        "entweder",
+        "nicht nur"
+      ],
+      "answer": "sowohl",
+      "explanation": "als auch ile çift bağlaç: sowohl … als auch (hem … hem de). weder noch ile, entweder oder ile, nicht nur sondern auch ile kullanılır."
+    },
+    {
+      "id": "b1-konnektoren-4",
+      "topic": "konnektoren",
+      "prompt": "Wir können entweder heute ___ morgen kommen.",
+      "options": [
+        "oder",
+        "noch",
+        "als auch",
+        "aber"
+      ],
+      "answer": "oder",
+      "explanation": "entweder … oder (ya … ya da) çift bağlacı. noch weder ile, als auch sowohl ile kullanılır."
+    },
+    {
+      "id": "b1-konnektoren-5",
+      "topic": "konnektoren",
+      "prompt": "Sie ist nicht nur klug, ___ auch sehr nett.",
+      "options": [
+        "sondern",
+        "aber",
+        "oder",
+        "denn"
+      ],
+      "answer": "sondern",
+      "explanation": "nicht nur … sondern auch (sadece … değil, aynı zamanda …) çift bağlacı."
+    },
+    {
+      "id": "b1-konnektoren-6",
+      "topic": "konnektoren",
+      "prompt": "Ich habe ___ Zeit noch Lust, heute ins Kino zu gehen.",
+      "options": [
+        "weder",
+        "entweder",
+        "sowohl",
+        "nicht"
+      ],
+      "answer": "weder",
+      "explanation": "noch ile çift bağlaç: weder … noch (ne … ne de)."
+    },
+    {
+      "id": "b1-kausalsaetze-1",
+      "topic": "kausalsaetze",
+      "prompt": "Ich komme heute nicht, ___ ich krank bin.",
+      "options": [
+        "weil",
+        "denn",
+        "deshalb",
+        "trotzdem"
+      ],
+      "answer": "weil",
+      "explanation": "Yan cümlede fiil (bin) en sonda: neden bildiren yan cümle bağlacı weil. denn’den sonra fiil ikinci sırada olurdu (denn ich bin krank)."
+    },
+    {
+      "id": "b1-kausalsaetze-2",
+      "topic": "kausalsaetze",
+      "prompt": "Ich komme heute nicht, ___ ich bin krank.",
+      "options": [
+        "denn",
+        "weil",
+        "da",
+        "deshalb"
+      ],
+      "answer": "denn",
+      "explanation": "Neden cümlesinde fiil ikinci sırada (ich bin): denn ana cümle bağlacıdır ve sıralamayı değiştirmez. weil ve da fiili sona atar."
+    },
+    {
+      "id": "b1-kausalsaetze-3",
+      "topic": "kausalsaetze",
+      "prompt": "___ der Zug Verspätung hatte, kam ich zu spät zur Arbeit.",
+      "options": [
+        "Da",
+        "Denn",
+        "Deshalb",
+        "Trotzdem"
+      ],
+      "answer": "Da",
+      "explanation": "Neden cümlesi başta ve fiil (hatte) sonda: yan cümle bağlacı da. denn cümle başında yan cümle kuramaz; deshalb/trotzdem’den sonra fiil gelirdi."
+    },
+    {
+      "id": "b1-kausalsaetze-4",
+      "topic": "kausalsaetze",
+      "prompt": "Welcher Satz ist richtig?",
+      "options": [
+        "Wir bleiben zu Hause, weil es stark regnet.",
+        "Wir bleiben zu Hause, weil es regnet stark.",
+        "Wir bleiben zu Hause, denn regnet es stark.",
+        "Wir bleiben zu Hause, da regnet es stark."
+      ],
+      "answer": "Wir bleiben zu Hause, weil es stark regnet.",
+      "explanation": "weil ve da’dan sonra fiil en sona gider (weil es stark regnet). denn’den sonra sıra özne + fiil olur (denn es regnet stark)."
+    },
+    {
+      "id": "b1-infinitiv-zu-1",
+      "topic": "infinitiv-zu",
+      "prompt": "Ich habe keine Lust, heute ___.",
+      "options": [
+        "aufzuräumen",
+        "zu aufräumen",
+        "aufräumen",
+        "aufgeräumt"
+      ],
+      "answer": "aufzuräumen",
+      "explanation": "keine Lust haben + zu-Infinitiv. Ayrılabilen fiillerde zu, ön ek ile kökün arasına girer: auf-zu-räumen."
+    },
+    {
+      "id": "b1-infinitiv-zu-2",
+      "topic": "infinitiv-zu",
+      "prompt": "Es ist wichtig, jeden Tag genug Wasser ___.",
+      "options": [
+        "zu trinken",
+        "trinken",
+        "getrunken",
+        "zu trinkt"
+      ],
+      "answer": "zu trinken",
+      "explanation": "Es ist wichtig, … kalıbından sonra zu + mastar gelir: zu trinken."
+    },
+    {
+      "id": "b1-infinitiv-zu-3",
+      "topic": "infinitiv-zu",
+      "prompt": "Ich muss heute lange ___.",
+      "options": [
+        "arbeiten",
+        "zu arbeiten",
+        "gearbeitet",
+        "arbeite"
+      ],
+      "answer": "arbeiten",
+      "explanation": "Modal fiillerden (müssen) sonra mastar zu olmadan gelir: Ich muss arbeiten."
+    },
+    {
+      "id": "b1-infinitiv-zu-4",
+      "topic": "infinitiv-zu",
+      "prompt": "Ich spare Geld, ___ mir ein neues Fahrrad zu kaufen.",
+      "options": [
+        "um",
+        "damit",
+        "dass",
+        "weil"
+      ],
+      "answer": "um",
+      "explanation": "Amaç bildiren zu-Infinitiv: um … zu (… için). damit, dass ve weil’den sonra zu-Infinitiv değil, çekimli fiilli bir yan cümle gelir."
+    },
+    {
+      "id": "b1-genitiv-1",
+      "topic": "genitiv",
+      "prompt": "Das ist das Auto ___ Nachbarn.",
+      "options": [
+        "meines",
+        "meinem",
+        "meinen",
+        "mein"
+      ],
+      "answer": "meines",
+      "explanation": "Sahiplik Genitiv ile: wessen Auto? der Nachbar eril → Genitiv’de meines Nachbarn (Nachbar N-Deklination alır)."
+    },
+    {
+      "id": "b1-genitiv-2",
+      "topic": "genitiv",
+      "prompt": "Die Farbe ___ Jacke gefällt mir sehr.",
+      "options": [
+        "der",
+        "die",
+        "des",
+        "dem"
+      ],
+      "answer": "der",
+      "explanation": "Sahiplik (ceketin rengi): Genitiv. die Jacke dişil; dişil Genitiv artikeli der."
+    },
+    {
+      "id": "b1-genitiv-3",
+      "topic": "genitiv",
+      "prompt": "Wegen ___ Regens bleiben wir heute zu Hause.",
+      "options": [
+        "des",
+        "dem",
+        "den",
+        "der"
+      ],
+      "answer": "des",
+      "explanation": "wegen Genitiv ister ve isim Genitiv biçiminde: des Regens. dem ile isim Regen olurdu (konuşma dili)."
+    },
+    {
+      "id": "b1-genitiv-4",
+      "topic": "genitiv",
+      "prompt": "Das Ende ___ Films war überraschend.",
+      "options": [
+        "des",
+        "dem",
+        "den",
+        "der"
+      ],
+      "answer": "des",
+      "explanation": "Sahiplik (filmin sonu): Genitiv. der Film eril → des Films (isim -s alır)."
+    },
+    {
+      "id": "b1-n-deklination-1",
+      "topic": "n-deklination",
+      "prompt": "Ich habe gestern einen ___ aus Japan kennengelernt.",
+      "options": [
+        "Studenten",
+        "Student",
+        "Studentes",
+        "Studente"
+      ],
+      "answer": "Studenten",
+      "explanation": "der Student N-Deklination’dır: Nominativ dışındaki bütün hâllerde -en alır. kennenlernen Akkusativ: einen Studenten."
+    },
+    {
+      "id": "b1-n-deklination-2",
+      "topic": "n-deklination",
+      "prompt": "Der Arzt spricht lange mit dem ___.",
+      "options": [
+        "Patienten",
+        "Patient",
+        "Patients",
+        "Patiente"
+      ],
+      "answer": "Patienten",
+      "explanation": "mit Dativ ister; der Patient N-Deklination’dır ve Dativ’de -en alır: mit dem Patienten."
+    },
+    {
+      "id": "b1-n-deklination-3",
+      "topic": "n-deklination",
+      "prompt": "Kennst du den ___ von Anna?",
+      "options": [
+        "Kollegen",
+        "Kollege",
+        "Kollegs",
+        "Kollegem"
+      ],
+      "answer": "Kollegen",
+      "explanation": "kennen Akkusativ ister. der Kollege N-Deklination’dır: Akkusativ’de -n alır: den Kollegen."
+    },
+    {
+      "id": "b1-n-deklination-4",
+      "topic": "n-deklination",
+      "prompt": "Das ist das Büro des ___.",
+      "options": [
+        "Präsidenten",
+        "Präsidents",
+        "Präsident",
+        "Präsidentes"
+      ],
+      "answer": "Präsidenten",
+      "explanation": "Genitiv (des); der Präsident N-Deklination’dır ve Genitiv’de -s değil -en alır: des Präsidenten."
+    },
+    {
+      "id": "b1-praeteritum-b1-1",
+      "topic": "praeteritum-b1",
+      "prompt": "Als ich klein war, ___ ich oft bei meiner Oma.",
+      "options": [
+        "blieb",
+        "bleibte",
+        "bleib",
+        "blieben"
+      ],
+      "answer": "blieb",
+      "explanation": "bleiben düzensizdir: Präteritum’da kök blieb-; ich için ek yok: ich blieb."
+    },
+    {
+      "id": "b1-praeteritum-b1-2",
+      "topic": "praeteritum-b1",
+      "prompt": "Er ___ den Brief und lächelte.",
+      "options": [
+        "las",
+        "lest",
+        "lies",
+        "laste"
+      ],
+      "answer": "las",
+      "explanation": "İkinci fiil lächelte Präteritum’da; lesen düzensizdir: er las."
+    },
+    {
+      "id": "b1-praeteritum-b1-3",
+      "topic": "praeteritum-b1",
+      "prompt": "Letzten Sommer ___ wir uns im Urlaub sehr gut.",
+      "options": [
+        "erholten",
+        "erholen",
+        "erholt",
+        "erholtet"
+      ],
+      "answer": "erholten",
+      "explanation": "Letzten Sommer geçmişi gösterir. sich erholen düzenlidir: wir erholten uns."
+    },
+    {
+      "id": "b1-praeteritum-b1-4",
+      "topic": "praeteritum-b1",
+      "prompt": "Plötzlich ___ im ganzen Haus das Licht aus.",
+      "options": [
+        "ging",
+        "gang",
+        "gehte",
+        "gingen"
+      ],
+      "answer": "ging",
+      "explanation": "ausgehen ayrılabilen ve düzensiz: Präteritum ging … aus. Özne das Licht tekil: es ging aus."
+    },
+    {
+      "id": "b1-plusquamperfekt-1",
+      "topic": "plusquamperfekt",
+      "prompt": "Nachdem wir gegessen ___, gingen wir spazieren.",
+      "options": [
+        "hatten",
+        "haben",
+        "hätten",
+        "waren"
+      ],
+      "answer": "hatten",
+      "explanation": "Ana cümle Präteritum’da (gingen); nachdem ile önce olan iş Plusquamperfekt’tir: hatten + gegessen (essen haben ile kurulur)."
+    },
+    {
+      "id": "b1-plusquamperfekt-2",
+      "topic": "plusquamperfekt",
+      "prompt": "Als ich am Bahnhof ankam, ___ der Zug schon abgefahren.",
+      "options": [
+        "war",
+        "hatte",
+        "ist",
+        "wurde"
+      ],
+      "answer": "war",
+      "explanation": "Tren, ben varmadan önce kalkmıştı: Plusquamperfekt. abfahren hareket fiilidir, sein ile kurulur: war abgefahren."
+    },
+    {
+      "id": "b1-plusquamperfekt-3",
+      "topic": "plusquamperfekt",
+      "prompt": "Sie war sehr müde, weil sie schlecht geschlafen ___.",
+      "options": [
+        "hatte",
+        "hätte",
+        "war",
+        "habe"
+      ],
+      "answer": "hatte",
+      "explanation": "Kötü uyumak yorgunluktan önce oldu: Plusquamperfekt. schlafen haben ile kurulur: hatte geschlafen."
+    },
+    {
+      "id": "b1-plusquamperfekt-4",
+      "topic": "plusquamperfekt",
+      "prompt": "Nachdem er die Prüfung ___, feierte er mit seinen Freunden.",
+      "options": [
+        "bestanden hatte",
+        "bestanden hat",
+        "bestand",
+        "bestehen hatte"
+      ],
+      "answer": "bestanden hatte",
+      "explanation": "Ana cümle Präteritum’da (feierte); nachdem’li cümle bir zaman öncesini anlatır: Plusquamperfekt (hatte + bestanden)."
+    },
+    {
+      "id": "b1-indirekte-fragen-1",
+      "topic": "indirekte-fragen",
+      "prompt": "Weißt du, ___ der Kurs beginnt? – Um neun Uhr.",
+      "options": [
+        "wann",
+        "ob",
+        "dass",
+        "wer"
+      ],
+      "answer": "wann",
+      "explanation": "Cevap bir saat; soru wann ile soruluyor. Dolaylı soruda soru kelimesi kalır ve fiil sona gider: wann der Kurs beginnt."
+    },
+    {
+      "id": "b1-indirekte-fragen-2",
+      "topic": "indirekte-fragen",
+      "prompt": "„Hast du morgen Zeit?“ – Ich möchte wissen, ___ du morgen Zeit hast.",
+      "options": [
+        "ob",
+        "wann",
+        "dass",
+        "was"
+      ],
+      "answer": "ob",
+      "explanation": "Asıl soru evet/hayır sorusu (Hast du …?). Böyle sorular dolaylı soruda ob ile kurulur."
+    },
+    {
+      "id": "b1-indirekte-fragen-3",
+      "topic": "indirekte-fragen",
+      "prompt": "Können Sie mir sagen, wo ___?",
+      "options": [
+        "der Bahnhof ist",
+        "ist der Bahnhof",
+        "der Bahnhof sein",
+        "ist es der Bahnhof"
+      ],
+      "answer": "der Bahnhof ist",
+      "explanation": "Dolaylı soru bir yan cümledir: soru kelimesi (wo) + özne + çekimli fiil sonda: wo der Bahnhof ist."
+    },
+    {
+      "id": "b1-indirekte-fragen-4",
+      "topic": "indirekte-fragen",
+      "prompt": "„Wo wohnt Lena?“ – Ich weiß nicht, ___ Lena wohnt.",
+      "options": [
+        "wo",
+        "ob",
+        "wohin",
+        "dass"
+      ],
+      "answer": "wo",
+      "explanation": "Asıl soru wo ile soruluyor; dolaylı soruda aynı soru kelimesi kalır: wo Lena wohnt. wohin yön sorar."
+    },
+    {
+      "id": "b1-pronominaladverbien-1",
+      "topic": "pronominaladverbien",
+      "prompt": "Ich warte auf den Bus. – Ich warte schon lange ___.",
+      "options": [
+        "darauf",
+        "dafür",
+        "daran",
+        "worauf"
+      ],
+      "answer": "darauf",
+      "explanation": "warten auf: şey için auf + es → darauf. worauf soru için kullanılır."
+    },
+    {
+      "id": "b1-pronominaladverbien-2",
+      "topic": "pronominaladverbien",
+      "prompt": "___ denkst du gerade? – An meinen Urlaub.",
+      "options": [
+        "Woran",
+        "Wofür",
+        "Worauf",
+        "Daran"
+      ],
+      "answer": "Woran",
+      "explanation": "denken an: şey hakkında soru wo + an → woran (r arada). Daran soru değil cevap biçimidir."
+    },
+    {
+      "id": "b1-pronominaladverbien-3",
+      "topic": "pronominaladverbien",
+      "prompt": "Sie interessiert sich für Kunst. Ich interessiere mich auch ___.",
+      "options": [
+        "dafür",
+        "darauf",
+        "davon",
+        "wofür"
+      ],
+      "answer": "dafür",
+      "explanation": "sich interessieren für: şey için da + für → dafür."
+    },
+    {
+      "id": "b1-pronominaladverbien-4",
+      "topic": "pronominaladverbien",
+      "prompt": "___ sprecht ihr? – Über das Konzert.",
+      "options": [
+        "Worüber",
+        "Woran",
+        "Darüber",
+        "Wofür"
+      ],
+      "answer": "Worüber",
+      "explanation": "Cevap über ile (über das Konzert): soru wo + über → worüber. Darüber cevap biçimidir."
+    },
+    {
+      "id": "b1-satzstellung-b1-1",
+      "topic": "satzstellung-b1",
+      "prompt": "Welcher Satz ist richtig?",
+      "options": [
+        "Morgen fahre ich mit dem Zug nach Berlin.",
+        "Morgen ich fahre mit dem Zug nach Berlin.",
+        "Morgen fahre mit dem Zug ich nach Berlin.",
+        "Morgen ich mit dem Zug fahre nach Berlin."
+      ],
+      "answer": "Morgen fahre ich mit dem Zug nach Berlin.",
+      "explanation": "Ana cümlede çekimli fiil ikinci sıradadır. Cümle Morgen ile başlayınca fiil (fahre) ikinci sıraya, özne (ich) fiilden sonraya gelir."
+    },
+    {
+      "id": "b1-satzstellung-b1-2",
+      "topic": "satzstellung-b1",
+      "prompt": "Welcher Satz ist richtig?",
+      "options": [
+        "Wenn ich Zeit habe, besuche ich dich.",
+        "Wenn ich Zeit habe, ich besuche dich.",
+        "Wenn ich habe Zeit, besuche ich dich.",
+        "Wenn habe ich Zeit, ich besuche dich."
+      ],
+      "answer": "Wenn ich Zeit habe, besuche ich dich.",
+      "explanation": "Yan cümle başta ise ilk sırayı o kaplar; ana cümlenin fiili (besuche) hemen ardından gelir. Yan cümlede fiil (habe) sondadır."
+    },
+    {
+      "id": "b1-satzstellung-b1-3",
+      "topic": "satzstellung-b1",
+      "prompt": "Das Buch? Ich habe ___ gestern gegeben. (meinem Bruder)",
+      "options": [
+        "es ihm",
+        "ihm es",
+        "es er",
+        "ihn es"
+      ],
+      "answer": "es ihm",
+      "explanation": "İki nesne de zamir olunca önce Akkusativ (es = das Buch), sonra Dativ (ihm = meinem Bruder) gelir: es ihm."
+    },
+    {
+      "id": "b1-satzstellung-b1-4",
+      "topic": "satzstellung-b1",
+      "prompt": "Welcher Satz ist richtig?",
+      "options": [
+        "Ich habe das Buch noch nicht gelesen.",
+        "Ich habe nicht das Buch noch gelesen.",
+        "Ich habe das Buch gelesen noch nicht.",
+        "Ich nicht habe das Buch noch gelesen."
+      ],
+      "answer": "Ich habe das Buch noch nicht gelesen.",
+      "explanation": "nicht (noch nicht) cümlenin sonundaki fiil kısmının (gelesen) önüne gelir; çekimli fiil (habe) ikinci sırada kalır."
+    }
+  ]
+}

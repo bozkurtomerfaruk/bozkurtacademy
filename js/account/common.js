@@ -140,9 +140,32 @@ export async function loadCatalogLevels(){
   return (await loadCatalog()).levels || [];
 }
 
+// Seviye sonu sınavı (#seviye-sonu/A1, js/level-exam.js): sonuçlarda konu "seviye-sonu", alıştırma "a1".
+// Seviyenin sınavı data/catalog.json'da "levelExam" ile bağlı.
+export const LEVEL_EXAM = 'seviye-sonu';
+const LEVEL_EXAM_NAMES = {
+  topic: { tr: 'Seviye sonu sınavı', de: 'Abschlusstest', en: 'End-of-level test' },
+  exercise: (level) => ({ tr: `${level} seviye sonu sınavı`, de: `Abschlusstest ${level}`, en: `${level} end-of-level test` })
+};
+export const levelExamTopic = (lang = 'tr') => localize(LEVEL_EXAM_NAMES.topic, lang);
+
+// "perfekt:2,akkusativ:1" → "Perfekt 2, Akkusativ 1" (konu adları katalogdan).
+export async function topicErrorsText(levelId, value, lang = 'tr'){
+  if(!value) return '';
+  const level = (await loadCatalogLevels().catch(() => [])).find((l) => l.id === levelId);
+  return value.split(',').filter(Boolean).map((part) => {
+    const [id, n] = part.split(':');
+    return `${localize(level?.topics?.find((t) => t.id === id)?.title, lang) || id} ${n}`;
+  }).join(', ');
+}
+
 // Ödev oluştururken: bir konunun alıştırmaları (data/<seviye>/<konu>.json).
 export async function loadTopicExercises(levelId, topicId){
   const levels = await loadCatalogLevels();
+  if(topicId === LEVEL_EXAM){
+    const level = levels.find((l) => l.id === levelId);
+    return level?.levelExam ? [{ id: levelId.toLowerCase(), title: LEVEL_EXAM_NAMES.exercise(levelId) }] : [];
+  }
   const topic = levels.find((l) => l.id === levelId)?.topics?.find((t) => t.id === topicId);
   if(!topic?.path) return [];
   const data = await loadTopic(topic.path);
@@ -173,6 +196,10 @@ export async function exerciseNames(results, lang = 'tr'){
   for(const r of results){
     const key = `${r.level}/${r.topic}/${r.exercise}`;
     if(names[key]) continue;
+    if(r.topic === LEVEL_EXAM){
+      names[key] = { topic: localize(LEVEL_EXAM_NAMES.topic, lang), exercise: localize(LEVEL_EXAM_NAMES.exercise(r.level), lang) };
+      continue;
+    }
     const topic = levels.find((l) => l.id === r.level)?.topics?.find((tp) => tp.id === r.topic);
     const data = topic?.path ? await loadTopic(topic.path) : null;
     const exercise = data?.exercises?.find((e) => e.id === r.exercise);
@@ -184,17 +211,18 @@ export async function exerciseNames(results, lang = 'tr'){
   return names;
 }
 
-// Denemeleri alıştırma başına özetler: deneme sayısı, son skor, en iyi skor, son tarih.
+// Denemeleri alıştırma başına özetler: deneme sayısı, ilk, son ve en iyi skor, son tarih.
 export function summarizeResults(results){
   const groups = new Map();
   for(const r of results){
     const key = `${r.level}/${r.topic}/${r.exercise}`;
     const at = toDate(r.at);
-    const g = groups.get(key) || { key, level: r.level, topic: r.topic, exercise: r.exercise, attempts: [], best: null, last: null };
-    const attempt = { score: r.score, total: r.total, at };
+    const g = groups.get(key) || { key, level: r.level, topic: r.topic, exercise: r.exercise, attempts: [], best: null, last: null, first: null };
+    const attempt = { score: r.score, total: r.total, at, topicErrors: r.topicErrors };
     g.attempts.push(attempt);
     if(!g.best || r.score / r.total > g.best.score / g.best.total) g.best = attempt;
     if(!g.last || (at && at > g.last.at)) g.last = attempt;
+    if(!g.first || (at && g.first.at && at < g.first.at)) g.first = attempt;
     groups.set(key, g);
   }
   const list = [...groups.values()];
@@ -233,6 +261,7 @@ export const validHttpsUrl = (url) => {
 
 // Sitedeki alıştırmaya doğrudan bağlantı (js/exercise-links.js'teki adres biçimi).
 export function exerciseUrl({ level, topic, exercise }){
+  if(topic === LEVEL_EXAM) return `index.html#seviye-sonu/${encodeURIComponent(level)}`;
   return `index.html#exercises/${[level, topic, exercise].map(encodeURIComponent).join('/')}`;
 }
 

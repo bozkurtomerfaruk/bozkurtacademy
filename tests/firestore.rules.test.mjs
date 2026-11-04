@@ -331,6 +331,28 @@ describe('Alıştırma sonuçları', () => {
     await assertFails(addDoc(results, result({ extra: true })));
   });
 
+  test('seviye sonu sınavı: konu bazında hatalar kaydedilebilir', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    const results = collection(ayse(), 'users/ayse/results');
+    const exam = (overrides = {}) => result({ level: 'A1', topic: 'seviye-sonu', exercise: 'a1', score: 22, total: 30, ...overrides });
+    await assertSucceeds(addDoc(results, exam({ topicErrors: 'perfekt:2,akkusativ:1,trennbare-verben:1' })));
+    await assertSucceeds(addDoc(results, exam({ topicErrors: '', score: 30 })));
+    await assertSucceeds(addDoc(results, exam()));
+  });
+
+  test('seviye sonu sınavı: konu hataları biçim ve boyut dışına çıkamaz, başka alıştırmada olamaz', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    const results = collection(ayse(), 'users/ayse/results');
+    const exam = (topicErrors, overrides = {}) => result({ level: 'A1', topic: 'seviye-sonu', exercise: 'a1', score: 22, total: 30, topicErrors, ...overrides });
+    await assertFails(addDoc(results, exam('perfekt=2')));
+    await assertFails(addDoc(results, exam('Perfekt:2')));
+    await assertFails(addDoc(results, exam('perfekt:200')));
+    await assertFails(addDoc(results, exam('<b>:1')));
+    await assertFails(addDoc(results, exam(['perfekt:2'])));
+    await assertFails(addDoc(results, exam('perfekt:1,'.repeat(70))));
+    await assertFails(addDoc(results, result({ topicErrors: 'artikel:1' })));
+  });
+
   test('öğrenci başka öğrenciye sonuç ekleyemez ve sonuçlarını okuyamaz', async () => {
     await seed('users/ayse', seededAdult('active'));
     await seed('users/can', seededMinor('active', consentGiven));

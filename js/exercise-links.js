@@ -223,11 +223,15 @@ return {
     if (history.state?.baExerciseView) return;
     const hash = location.hash;
     const target = parseExerciseHash(hash);
+    // #exercises/A1/seviye-sonu[/a1] (end-of-level test, e.g. from an assignment) opens #seviye-sonu/A1.
+    if (target?.topic === 'seviye-sonu') { location.replace('#seviye-sonu/' + target.level); return; }
     if (target?.level) openDeepLink(target, hash);
   });
 
   document.addEventListener('DOMContentLoaded', () => {
-    if (deepTarget?.level) {
+    if (deepTarget?.topic === 'seviye-sonu') {
+      location.replace('#seviye-sonu/' + deepTarget.level);
+    } else if (deepTarget?.level) {
       setTimeout(() => openDeepLink(deepTarget, originalHash), 0);
     } else {
       scheduleUrlSync();

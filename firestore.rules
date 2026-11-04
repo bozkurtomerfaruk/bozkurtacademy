@@ -97,16 +97,21 @@ service cloud.firestore {
       return value == true && request.auth.token.email_verified == true;
     }
 
+    // topicErrors: sadece seviye sonu sınavında (topic "seviye-sonu"), konu başına yanlış sayısı: "perfekt:2,akkusativ:1".
+    // Hangi soruların çıktığı kaydedilmez.
     function validResult() {
       let d = request.resource.data;
-      return d.keys().hasOnly(['level', 'topic', 'exercise', 'score', 'total', 'at'])
+      return d.keys().hasOnly(['level', 'topic', 'exercise', 'score', 'total', 'at', 'topicErrors'])
         && d.keys().hasAll(['level', 'topic', 'exercise', 'score', 'total', 'at'])
         && d.level is string && d.level.matches('^[A-C][12]$')
         && d.topic is string && d.topic.matches('^[a-z0-9-]{1,60}$')
         && d.exercise is string && d.exercise.matches('^[a-z0-9-]{1,60}$')
         && d.total is int && d.total >= 1 && d.total <= 200
         && d.score is int && d.score >= 0 && d.score <= d.total
-        && d.at == request.time;
+        && d.at == request.time
+        && (!('topicErrors' in d) || (d.topic == 'seviye-sonu'
+          && d.topicErrors is string && d.topicErrors.size() <= 600
+          && d.topicErrors.matches('^([a-z0-9-]{1,40}:[0-9]{1,2}(,|$))*$')));
     }
 
     // Öğrencinin ödeve eklediği kendi dokümanı: sadece Google Docs / Drive linki.

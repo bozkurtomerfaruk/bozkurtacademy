@@ -1,0 +1,857 @@
+{
+  "version": 1,
+  "level": "A1",
+  "passPercent": 60,
+  "distribution": [
+    {
+      "topic": "praesens",
+      "count": 3
+    },
+    {
+      "topic": "sein-haben",
+      "count": 2
+    },
+    {
+      "topic": "artikel",
+      "count": 2
+    },
+    {
+      "topic": "plural",
+      "count": 2
+    },
+    {
+      "topic": "akkusativ",
+      "count": 2
+    },
+    {
+      "topic": "negation",
+      "count": 2
+    },
+    {
+      "topic": "w-fragen",
+      "count": 2
+    },
+    {
+      "topic": "modalverben",
+      "count": 2
+    },
+    {
+      "topic": "trennbare-verben",
+      "count": 2
+    },
+    {
+      "topic": "perfekt",
+      "count": 2
+    },
+    {
+      "topic": "zahlen-uhrzeit-datum",
+      "count": 2
+    },
+    {
+      "topic": "temporale-praepositionen",
+      "count": 2
+    },
+    {
+      "topic": "personalpronomen-akkusativ",
+      "count": 1
+    },
+    {
+      "topic": "personalpronomen-dativ",
+      "count": 1
+    },
+    {
+      "topic": "possessivartikel",
+      "count": 1
+    },
+    {
+      "topic": "imperativ",
+      "count": 1
+    },
+    {
+      "topic": "lokale-praepositionen",
+      "count": 1
+    }
+  ],
+  "questions": [
+    {
+      "id": "a1-praesens-1",
+      "topic": "praesens",
+      "prompt": "Am Wochenende ___ Lena mit ihrer Oma.",
+      "options": [
+        "kocht",
+        "kochen",
+        "kochst",
+        "koche"
+      ],
+      "answer": "kocht",
+      "explanation": "Özne Lena, yani sie (3. tekil kişi). Düzenli fiilde sie için kök + -t: sie kocht."
+    },
+    {
+      "id": "a1-praesens-2",
+      "topic": "praesens",
+      "prompt": "Ihr ___ schon sehr gut Deutsch.",
+      "options": [
+        "sprecht",
+        "spricht",
+        "sprechen",
+        "sprichst"
+      ],
+      "answer": "sprecht",
+      "explanation": "Özne ihr. sprechen fiilindeki e → i değişimi sadece du ve er/sie/es için; ihr ile kök değişmez: ihr sprecht."
+    },
+    {
+      "id": "a1-praesens-3",
+      "topic": "praesens",
+      "prompt": "Mein Bruder ___ jeden Morgen die Zeitung.",
+      "options": [
+        "liest",
+        "lest",
+        "lesen",
+        "liesst"
+      ],
+      "answer": "liest",
+      "explanation": "Özne mein Bruder (er). lesen fiilinde er için e → ie değişir ve kök s ile bittiği için sadece -t eklenir: er liest."
+    },
+    {
+      "id": "a1-praesens-4",
+      "topic": "praesens",
+      "prompt": "Wir ___ in einer kleinen Wohnung in Köln.",
+      "options": [
+        "wohnen",
+        "wohnt",
+        "wohnst",
+        "wohne"
+      ],
+      "answer": "wohnen",
+      "explanation": "Özne wir. wir ile fiil mastar biçimindedir: wir wohnen."
+    },
+    {
+      "id": "a1-praesens-5",
+      "topic": "praesens",
+      "prompt": "Was ___ ihr am Samstag?",
+      "options": [
+        "macht",
+        "machen",
+        "machst",
+        "mache"
+      ],
+      "answer": "macht",
+      "explanation": "Özne ihr (soru sözcüğünden sonra fiil, sonra özne gelir). ihr için kök + -t: ihr macht."
+    },
+    {
+      "id": "a1-praesens-6",
+      "topic": "praesens",
+      "prompt": "Du ___ zu schnell. Fahr bitte langsamer!",
+      "options": [
+        "fährst",
+        "fahrst",
+        "fährt",
+        "fahren"
+      ],
+      "answer": "fährst",
+      "explanation": "Özne du. fahren fiilinde du ve er/sie/es için a → ä değişir: du fährst. fährt er/sie/es içindir."
+    },
+    {
+      "id": "a1-sein-haben-1",
+      "topic": "sein-haben",
+      "prompt": "___ ihr müde?",
+      "options": [
+        "Seid",
+        "Sind",
+        "Seit",
+        "Habt"
+      ],
+      "answer": "Seid",
+      "explanation": "müde bir sıfat; durum anlatırken sein kullanılır. Özne ihr: ihr seid. Seit ise \"-den beri\" anlamında bir edattır."
+    },
+    {
+      "id": "a1-sein-haben-2",
+      "topic": "sein-haben",
+      "prompt": "Meine Schwester ___ zwei Kinder.",
+      "options": [
+        "hat",
+        "ist",
+        "habt",
+        "hast"
+      ],
+      "answer": "hat",
+      "explanation": "Sahip olmayı haben anlatır. Özne meine Schwester (sie): sie hat."
+    },
+    {
+      "id": "a1-sein-haben-3",
+      "topic": "sein-haben",
+      "prompt": "Ich ___ heute leider keine Zeit.",
+      "options": [
+        "habe",
+        "bin",
+        "hat",
+        "hast"
+      ],
+      "answer": "habe",
+      "explanation": "Zeit haben = vakti olmak. Özne ich: ich habe."
+    },
+    {
+      "id": "a1-sein-haben-4",
+      "topic": "sein-haben",
+      "prompt": "Herr und Frau Kaya ___ aus Izmir.",
+      "options": [
+        "sind",
+        "seid",
+        "haben",
+        "ist"
+      ],
+      "answer": "sind",
+      "explanation": "Nereli olduğunu söylerken sein + aus kullanılır. Özne iki kişi (sie, çoğul): sie sind."
+    },
+    {
+      "id": "a1-artikel-1",
+      "topic": "artikel",
+      "prompt": "___ Fenster ist offen.",
+      "options": [
+        "Das",
+        "Der",
+        "Die",
+        "Den"
+      ],
+      "answer": "Das",
+      "explanation": "Fenster nötr bir isimdir: das Fenster. Cümlenin öznesi olduğu için Nominativ: das."
+    },
+    {
+      "id": "a1-artikel-2",
+      "topic": "artikel",
+      "prompt": "___ Zeitung liegt auf dem Tisch.",
+      "options": [
+        "Die",
+        "Der",
+        "Das",
+        "Den"
+      ],
+      "answer": "Die",
+      "explanation": "-ung ile biten isimler dişildir: die Zeitung. Özne olduğu için Nominativ: die."
+    },
+    {
+      "id": "a1-artikel-3",
+      "topic": "artikel",
+      "prompt": "___ Löffel ist schmutzig.",
+      "options": [
+        "Der",
+        "Die",
+        "Das",
+        "Dem"
+      ],
+      "answer": "Der",
+      "explanation": "Löffel (kaşık) eril bir isimdir: der Löffel. Bu kelimenin artikeli tahmin edilemez, artikeliyle ezberle."
+    },
+    {
+      "id": "a1-artikel-4",
+      "topic": "artikel",
+      "prompt": "___ Mädchen heißt Ela.",
+      "options": [
+        "Das",
+        "Die",
+        "Der",
+        "Den"
+      ],
+      "answer": "Das",
+      "explanation": "-chen ile biten isimler her zaman nötrdür: das Mädchen. Anlamı \"kız\" olsa da artikel das."
+    },
+    {
+      "id": "a1-plural-1",
+      "topic": "plural",
+      "prompt": "Ich habe zwei ___. (der Bruder)",
+      "options": [
+        "Brüder",
+        "Bruders",
+        "Brudern",
+        "Bruderen"
+      ],
+      "answer": "Brüder",
+      "explanation": "der Bruder kelimesinin çoğulu ek almaz, sadece u → ü olur: die Brüder."
+    },
+    {
+      "id": "a1-plural-2",
+      "topic": "plural",
+      "prompt": "Im Regal stehen viele ___. (das Buch)",
+      "options": [
+        "Bücher",
+        "Buchs",
+        "Buche",
+        "Büchen"
+      ],
+      "answer": "Bücher",
+      "explanation": "das Buch kelimesinin çoğulu -er ve Umlaut alır: die Bücher."
+    },
+    {
+      "id": "a1-plural-3",
+      "topic": "plural",
+      "prompt": "Wir kaufen drei ___. (die Banane)",
+      "options": [
+        "Bananen",
+        "Bananes",
+        "Banane",
+        "Bananer"
+      ],
+      "answer": "Bananen",
+      "explanation": "-e ile biten dişil isimler çoğulda -n alır: die Banane → die Bananen."
+    },
+    {
+      "id": "a1-plural-4",
+      "topic": "plural",
+      "prompt": "Die ___ spielen im Park. (das Kind)",
+      "options": [
+        "Kinder",
+        "Kinden",
+        "Kinds",
+        "Kindes"
+      ],
+      "answer": "Kinder",
+      "explanation": "das Kind kelimesinin çoğulu -er alır: die Kinder."
+    },
+    {
+      "id": "a1-akkusativ-1",
+      "topic": "akkusativ",
+      "prompt": "Ich brauche ___ neuen Stift.",
+      "options": [
+        "einen",
+        "ein",
+        "eine",
+        "einem"
+      ],
+      "answer": "einen",
+      "explanation": "brauchen fiili doğrudan nesne (Akkusativ) ister. der Stift eril: ein → einen."
+    },
+    {
+      "id": "a1-akkusativ-2",
+      "topic": "akkusativ",
+      "prompt": "Siehst du ___ Hund dort?",
+      "options": [
+        "den",
+        "der",
+        "dem",
+        "die"
+      ],
+      "answer": "den",
+      "explanation": "sehen fiili Akkusativ ister. der Hund eril; Akkusativ’de der → den."
+    },
+    {
+      "id": "a1-akkusativ-3",
+      "topic": "akkusativ",
+      "prompt": "Wir besuchen heute ___ Museum.",
+      "options": [
+        "das",
+        "den",
+        "dem",
+        "der"
+      ],
+      "answer": "das",
+      "explanation": "besuchen fiili Akkusativ ister. das Museum nötr; nötr isimlerde Akkusativ artikeli değişmez: das."
+    },
+    {
+      "id": "a1-akkusativ-4",
+      "topic": "akkusativ",
+      "prompt": "Er kauft ___ Tasche für seine Mutter.",
+      "options": [
+        "eine",
+        "einen",
+        "einer",
+        "ein"
+      ],
+      "answer": "eine",
+      "explanation": "kaufen fiili Akkusativ ister. die Tasche dişil; dişil isimlerde Akkusativ değişmez: eine."
+    },
+    {
+      "id": "a1-negation-1",
+      "topic": "negation",
+      "prompt": "Das ist ___ Tee, das ist Kaffee.",
+      "options": [
+        "kein",
+        "keiner",
+        "keine",
+        "keinen"
+      ],
+      "answer": "kein",
+      "explanation": "Artikelsiz ya da ein’li bir ismi olumsuz yaparken kein kullanılır. der Tee eril ve Nominativ: kein."
+    },
+    {
+      "id": "a1-negation-2",
+      "topic": "negation",
+      "prompt": "Ich komme heute ___.",
+      "options": [
+        "nicht",
+        "kein",
+        "keine",
+        "nichts"
+      ],
+      "answer": "nicht",
+      "explanation": "Burada fiil (kommen) olumsuz yapılıyor, isim değil. Fiili ya da cümleyi olumsuz yapmak için nicht kullanılır."
+    },
+    {
+      "id": "a1-negation-3",
+      "topic": "negation",
+      "prompt": "Wir haben ___ Kinder.",
+      "options": [
+        "keine",
+        "kein",
+        "nicht",
+        "keinen"
+      ],
+      "answer": "keine",
+      "explanation": "Kinder çoğul ve artikelsiz bir isim. Çoğul isimlerde kein → keine."
+    },
+    {
+      "id": "a1-negation-4",
+      "topic": "negation",
+      "prompt": "Anna wohnt ___ in Berlin, sie wohnt in Hamburg.",
+      "options": [
+        "nicht",
+        "kein",
+        "keine",
+        "keinen"
+      ],
+      "answer": "nicht",
+      "explanation": "Olumsuz yapılan şey bir isim değil, yer bilgisi (in Berlin). Böyle durumlarda nicht kullanılır; kein sadece isimlerin önüne gelir."
+    },
+    {
+      "id": "a1-w-fragen-1",
+      "topic": "w-fragen",
+      "prompt": "___ wohnst du? – In Ankara.",
+      "options": [
+        "Wo",
+        "Wohin",
+        "Woher",
+        "Wer"
+      ],
+      "answer": "Wo",
+      "explanation": "Cevap bir yer (In Ankara: Ankara’da). Bulunulan yeri Wo? sorar. Wohin? yön, Woher? nereden geldiğini sorar."
+    },
+    {
+      "id": "a1-w-fragen-2",
+      "topic": "w-fragen",
+      "prompt": "___ kommt ihr? – Aus Spanien.",
+      "options": [
+        "Woher",
+        "Wo",
+        "Wohin",
+        "Wann"
+      ],
+      "answer": "Woher",
+      "explanation": "Cevap aus ile başlıyor (Aus Spanien: İspanya’dan). Nereden geldiğini Woher? sorar."
+    },
+    {
+      "id": "a1-w-fragen-3",
+      "topic": "w-fragen",
+      "prompt": "___ kostet die Jacke? – 40 Euro.",
+      "options": [
+        "Wie viel",
+        "Wie lange",
+        "Wann",
+        "Wo"
+      ],
+      "answer": "Wie viel",
+      "explanation": "Cevap bir fiyat (40 Euro). Fiyat ve miktar Wie viel? ile sorulur."
+    },
+    {
+      "id": "a1-w-fragen-4",
+      "topic": "w-fragen",
+      "prompt": "___ fängt der Kurs an? – Um neun Uhr.",
+      "options": [
+        "Wann",
+        "Wo",
+        "Wer",
+        "Wie"
+      ],
+      "answer": "Wann",
+      "explanation": "Cevap bir zaman (Um neun Uhr: saat dokuzda). Zamanı Wann? sorar."
+    },
+    {
+      "id": "a1-modalverben-1",
+      "topic": "modalverben",
+      "prompt": "Ich ___ heute lange arbeiten. Ich habe viele Termine.",
+      "options": [
+        "muss",
+        "müssen",
+        "musst",
+        "müsst"
+      ],
+      "answer": "muss",
+      "explanation": "Özne ich. Modal fiiller ich ve er/sie/es ile ek almaz ve ü → u olur: ich muss."
+    },
+    {
+      "id": "a1-modalverben-2",
+      "topic": "modalverben",
+      "prompt": "___ du Gitarre spielen?",
+      "options": [
+        "Kannst",
+        "Kann",
+        "Könnt",
+        "Können"
+      ],
+      "answer": "Kannst",
+      "explanation": "Özne du. können fiilinde du için: du kannst. Soru cümlesinde fiil başa gelir."
+    },
+    {
+      "id": "a1-modalverben-3",
+      "topic": "modalverben",
+      "prompt": "Im Museum ___ man nicht fotografieren.",
+      "options": [
+        "darf",
+        "dürfen",
+        "darfst",
+        "dürft"
+      ],
+      "answer": "darf",
+      "explanation": "Yasak anlatan dürfen + nicht kullanılır. Özne man, er/sie/es gibi çekimlenir: man darf."
+    },
+    {
+      "id": "a1-modalverben-4",
+      "topic": "modalverben",
+      "prompt": "Was ___ ihr trinken? – Wir möchten Wasser.",
+      "options": [
+        "möchtet",
+        "möchte",
+        "möchtest",
+        "möchten"
+      ],
+      "answer": "möchtet",
+      "explanation": "Özne ihr. möchten fiilinde ihr için: ihr möchtet. Cevaptaki wir möchten ise wir içindir."
+    },
+    {
+      "id": "a1-trennbare-verben-1",
+      "topic": "trennbare-verben",
+      "prompt": "Welcher Satz ist richtig? (einkaufen)",
+      "options": [
+        "Ich kaufe heute im Supermarkt ein.",
+        "Ich einkaufe heute im Supermarkt.",
+        "Ich kaufe ein heute im Supermarkt.",
+        "Ich kaufe heute ein im Supermarkt."
+      ],
+      "answer": "Ich kaufe heute im Supermarkt ein.",
+      "explanation": "einkaufen ayrılabilen bir fiildir: çekimli kısım (kaufe) ikinci sıraya, ön ek (ein) cümlenin en sonuna gider."
+    },
+    {
+      "id": "a1-trennbare-verben-2",
+      "topic": "trennbare-verben",
+      "prompt": "Ich ___ jeden Tag um sieben Uhr auf.",
+      "options": [
+        "stehe",
+        "stehst",
+        "steht",
+        "aufstehe"
+      ],
+      "answer": "stehe",
+      "explanation": "aufstehen ayrılır: ön ek auf cümlenin sonunda duruyor, boşluğa sadece çekimli kısım gelir. Özne ich: ich stehe … auf."
+    },
+    {
+      "id": "a1-trennbare-verben-3",
+      "topic": "trennbare-verben",
+      "prompt": "Es ist kalt. Mach bitte das Fenster ___!",
+      "options": [
+        "zu",
+        "an",
+        "aus",
+        "ein"
+      ],
+      "answer": "zu",
+      "explanation": "zumachen = kapatmak. Soğuk olduğu için pencere kapatılmalı; emir cümlesinde ön ek zu sona gider."
+    },
+    {
+      "id": "a1-trennbare-verben-4",
+      "topic": "trennbare-verben",
+      "prompt": "Welcher Satz ist richtig? (fernsehen)",
+      "options": [
+        "Wir sehen am Abend fern.",
+        "Wir fernsehen am Abend.",
+        "Wir sehen fern am Abend.",
+        "Am Abend wir sehen fern."
+      ],
+      "answer": "Wir sehen am Abend fern.",
+      "explanation": "fernsehen ayrılır: sehen ikinci sıraya, fern sona gider. Cümle Am Abend ile başlasaydı fiil yine ikinci sırada olurdu (Am Abend sehen wir fern)."
+    },
+    {
+      "id": "a1-perfekt-1",
+      "topic": "perfekt",
+      "prompt": "Gestern ___ ich mit meiner Mutter telefoniert.",
+      "options": [
+        "habe",
+        "bin",
+        "hat",
+        "hast"
+      ],
+      "answer": "habe",
+      "explanation": "telefonieren yer değiştirme bildirmez; Perfekt’i haben ile kurar. Özne ich: ich habe … telefoniert."
+    },
+    {
+      "id": "a1-perfekt-2",
+      "topic": "perfekt",
+      "prompt": "Wir ___ am Sonntag nach Hamburg gefahren.",
+      "options": [
+        "sind",
+        "haben",
+        "seid",
+        "hat"
+      ],
+      "answer": "sind",
+      "explanation": "fahren bir yerden bir yere gitmeyi anlatır; böyle fiiller Perfekt’te sein alır. Özne wir: wir sind … gefahren."
+    },
+    {
+      "id": "a1-perfekt-3",
+      "topic": "perfekt",
+      "prompt": "Hast du die E-Mail schon ___?",
+      "options": [
+        "geschrieben",
+        "geschreibt",
+        "schrieb",
+        "schreiben"
+      ],
+      "answer": "geschrieben",
+      "explanation": "schreiben düzensiz bir fiildir; Partizip II: geschrieben (ge- … -en)."
+    },
+    {
+      "id": "a1-perfekt-4",
+      "topic": "perfekt",
+      "prompt": "Lena ist heute um sieben Uhr ___.",
+      "options": [
+        "aufgestanden",
+        "aufgesteht",
+        "geaufstanden",
+        "aufstehen"
+      ],
+      "answer": "aufgestanden",
+      "explanation": "aufstehen ayrılabilen bir fiildir: ge- ön ek ile kökün arasına girer: auf-ge-standen."
+    },
+    {
+      "id": "a1-zahlen-uhrzeit-datum-1",
+      "topic": "zahlen-uhrzeit-datum",
+      "prompt": "Es ist 7:30 Uhr. Es ist halb ___.",
+      "options": [
+        "acht",
+        "sieben",
+        "neun",
+        "sechs"
+      ],
+      "answer": "acht",
+      "explanation": "Almancada halb, bir sonraki saate göre söylenir: 7:30 = halb acht (sekize yarım var)."
+    },
+    {
+      "id": "a1-zahlen-uhrzeit-datum-2",
+      "topic": "zahlen-uhrzeit-datum",
+      "prompt": "20 + 7 = ___",
+      "options": [
+        "siebenundzwanzig",
+        "zwanzigsieben",
+        "siebzwanzig",
+        "siebenzwanzig"
+      ],
+      "answer": "siebenundzwanzig",
+      "explanation": "21–99 arası sayılarda önce birler, sonra und, sonra onlar söylenir: sieben + und + zwanzig."
+    },
+    {
+      "id": "a1-zahlen-uhrzeit-datum-3",
+      "topic": "zahlen-uhrzeit-datum",
+      "prompt": "Heute ist der ___ Mai. (3.)",
+      "options": [
+        "dritte",
+        "dreite",
+        "drei",
+        "dritter"
+      ],
+      "answer": "dritte",
+      "explanation": "Tarihte sıra sayısı kullanılır. 3. → dritte (düzensiz). der ile birlikte: der dritte Mai."
+    },
+    {
+      "id": "a1-zahlen-uhrzeit-datum-4",
+      "topic": "zahlen-uhrzeit-datum",
+      "prompt": "Es ist 9:15 Uhr. Es ist Viertel ___ neun.",
+      "options": [
+        "nach",
+        "vor",
+        "um",
+        "halb"
+      ],
+      "answer": "nach",
+      "explanation": "9:15 dokuzu çeyrek geçiyor: Viertel nach neun. Viertel vor neun 8:45 olurdu."
+    },
+    {
+      "id": "a1-temporale-praepositionen-1",
+      "topic": "temporale-praepositionen",
+      "prompt": "Der Kurs beginnt ___ Montag.",
+      "options": [
+        "am",
+        "im",
+        "um",
+        "in"
+      ],
+      "answer": "am",
+      "explanation": "Günlerle am kullanılır: am Montag."
+    },
+    {
+      "id": "a1-temporale-praepositionen-2",
+      "topic": "temporale-praepositionen",
+      "prompt": "Wir fahren ___ August in den Urlaub.",
+      "options": [
+        "im",
+        "am",
+        "um",
+        "an"
+      ],
+      "answer": "im",
+      "explanation": "Aylarla (ve mevsimlerle) im kullanılır: im August."
+    },
+    {
+      "id": "a1-temporale-praepositionen-3",
+      "topic": "temporale-praepositionen",
+      "prompt": "Das Konzert beginnt ___ 20 Uhr.",
+      "options": [
+        "um",
+        "am",
+        "im",
+        "in"
+      ],
+      "answer": "um",
+      "explanation": "Saatlerle um kullanılır: um 20 Uhr."
+    },
+    {
+      "id": "a1-temporale-praepositionen-4",
+      "topic": "temporale-praepositionen",
+      "prompt": "Ich lerne ___ drei Monaten Deutsch.",
+      "options": [
+        "seit",
+        "vor",
+        "im",
+        "am"
+      ],
+      "answer": "seit",
+      "explanation": "Geçmişte başlayıp hâlâ süren bir durum: seit + Dativ (seit drei Monaten). Fiil Präsens’te kalır."
+    },
+    {
+      "id": "a1-personalpronomen-akkusativ-1",
+      "topic": "personalpronomen-akkusativ",
+      "prompt": "Kennst du Herrn Schulz? – Ja, ich kenne ___.",
+      "options": [
+        "ihn",
+        "ihm",
+        "er",
+        "sie"
+      ],
+      "answer": "ihn",
+      "explanation": "kennen Akkusativ ister. Herr Schulz eril (er); er’in Akkusativ biçimi ihn."
+    },
+    {
+      "id": "a1-personalpronomen-akkusativ-2",
+      "topic": "personalpronomen-akkusativ",
+      "prompt": "Wo ist meine Brille? Ich finde ___ nicht.",
+      "options": [
+        "sie",
+        "ihr",
+        "ihn",
+        "es"
+      ],
+      "answer": "sie",
+      "explanation": "finden Akkusativ ister. die Brille dişil (sie); dişilde Akkusativ biçimi değişmez: sie."
+    },
+    {
+      "id": "a1-personalpronomen-dativ-1",
+      "topic": "personalpronomen-dativ",
+      "prompt": "Das Fahrrad gehört meinem Bruder. Es gehört ___.",
+      "options": [
+        "ihm",
+        "ihn",
+        "er",
+        "ihr"
+      ],
+      "answer": "ihm",
+      "explanation": "gehören Dativ ister. mein Bruder eril (er); er’in Dativ biçimi ihm."
+    },
+    {
+      "id": "a1-personalpronomen-dativ-2",
+      "topic": "personalpronomen-dativ",
+      "prompt": "Kannst du ___ bitte helfen? (ich)",
+      "options": [
+        "mir",
+        "mich",
+        "ich",
+        "mein"
+      ],
+      "answer": "mir",
+      "explanation": "helfen Dativ ister. ich’in Dativ biçimi mir. mich Akkusativ’dir."
+    },
+    {
+      "id": "a1-possessivartikel-1",
+      "topic": "possessivartikel",
+      "prompt": "Das ist Tom und das ist ___ Hund.",
+      "options": [
+        "sein",
+        "seine",
+        "ihr",
+        "ihre"
+      ],
+      "answer": "sein",
+      "explanation": "Hund Tom’a ait; Tom eril olduğu için sein-. der Hund eril ve Nominativ: sein Hund."
+    },
+    {
+      "id": "a1-possessivartikel-2",
+      "topic": "possessivartikel",
+      "prompt": "Frau Demir sucht ___ Schlüssel.",
+      "options": [
+        "ihren",
+        "ihr",
+        "seinen",
+        "ihrem"
+      ],
+      "answer": "ihren",
+      "explanation": "Anahtar Frau Demir’e ait: ihr-. suchen Akkusativ ister ve der Schlüssel eril: ihren Schlüssel. ihrem Dativ’dir, seinen ise bir erkeğe ait olanı gösterir."
+    },
+    {
+      "id": "a1-imperativ-1",
+      "topic": "imperativ",
+      "prompt": "___ bitte langsam! (du, sprechen)",
+      "options": [
+        "Sprich",
+        "Sprechst",
+        "Sprecht",
+        "Sprechen"
+      ],
+      "answer": "Sprich",
+      "explanation": "du ile emir: du sprichst → -st düşer: Sprich! (e → i değişimi kalır). Sprecht ihr içindir."
+    },
+    {
+      "id": "a1-imperativ-2",
+      "topic": "imperativ",
+      "prompt": "Herr Weber, ___ Sie bitte hier!",
+      "options": [
+        "unterschreiben",
+        "unterschreibt",
+        "unterschreib",
+        "unterschreibst"
+      ],
+      "answer": "unterschreiben",
+      "explanation": "Sie ile (resmî) emirde fiil mastar biçimindedir ve Sie fiilden sonra gelir: Unterschreiben Sie bitte hier!"
+    },
+    {
+      "id": "a1-lokale-praepositionen-1",
+      "topic": "lokale-praepositionen",
+      "prompt": "Das Buch liegt ___ Tisch.",
+      "options": [
+        "auf dem",
+        "auf den",
+        "in den",
+        "an das"
+      ],
+      "answer": "auf dem",
+      "explanation": "liegen bir yerde durmayı anlatır (Wo?), bu yüzden Dativ. der Tisch → auf dem Tisch."
+    },
+    {
+      "id": "a1-lokale-praepositionen-2",
+      "topic": "lokale-praepositionen",
+      "prompt": "Mein Auto steht ___ Garage.",
+      "options": [
+        "in der",
+        "in die",
+        "auf die",
+        "im"
+      ],
+      "answer": "in der",
+      "explanation": "stehen bir yerde durmayı anlatır (Wo?), bu yüzden Dativ. die Garage dişil: in der Garage."
+    }
+  ]
+}

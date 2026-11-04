@@ -56,27 +56,38 @@
    setupComments(container,lesson,level);
    return lesson;
  }
- // Approved comments: data/grammar-comments.json, key "A1/artikel" (level/lesson id), entries {name, date, comment, reply?}.
- // Every value is written with textContent, never as HTML. Without approved comments the section stays hidden.
+ // Comments: approved ones come from Firestore (js/comments.js), loaded only when the visitor scrolls near the
+ // comment section. Every value is written with textContent, never as HTML. Without approved comments the
+ // "Öğrenci yorumları" section stays hidden. New comments are saved as "pending" and approved at /yonetim/yorumlar/.
+ const COMMENTS_MODULE='/js/comments.js?v=1';
  const MONTHS=['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
- const formatDate=iso=>{const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(String(iso||''));return m?`${Number(m[3])} ${MONTHS[Number(m[2])-1]} ${m[1]}`:String(iso||'');};
+ const formatDate=d=>d instanceof Date && !Number.isNaN(d.getTime())?`${d.getDate()} ${MONTHS[d.getMonth()]} ${d.getFullYear()}`:'';
+ const isoDate=d=>d instanceof Date && !Number.isNaN(d.getTime())?d.toISOString().slice(0,10):'';
  function commentElement(row){
    const el=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=text;return node;};
    const article=el('article','a1-comment');const header=el('header');header.append(el('strong','',String(row.name||'')));
-   if(row.date){const time=el('time','',formatDate(row.date));time.dateTime=String(row.date);header.append(' ',time);}
+   if(row.date){const time=el('time','',formatDate(row.date));time.dateTime=isoDate(row.date);header.append(' ',time);}
    article.append(header,el('p','',String(row.comment||'')));
    if(row.reply){const reply=el('div','a1-comment-reply');reply.append(el('strong','','Ömer Faruk Bozkurt'),el('p','',String(row.reply)));article.append(reply);}
    return article;
  }
+ function lessonLink(level,id){return 'https://bozkurtacademy.com/#grammar/'+level+'/'+id;}
  async function setupComments(container,lesson,level) {
    const published=container.querySelector('.a1-comments-published');const list=published.querySelector('.a1-comment-list');
-   (async () => {try {
-     const response=await fetch('data/grammar-comments.json',{cache:'no-store'});if(!response.ok)throw Error('comments');
-     const data=await response.json();const rows=data[level+'/'+lesson.id];
-     const valid=Array.isArray(rows)?rows.filter(row=>row && row.name && row.comment):[];
-     if(!valid.length)return;
-     list.replaceChildren(...valid.map(commentElement));published.hidden=false;
-   } catch(error) {console.warn('Onaylı yorumlar yüklenemedi:',error);}})();
+   const commentsSection=container.querySelector('.a1-comments');
+   const key=level+'/'+lesson.id;let loaded=false;
+   const show=async()=>{
+     if(loaded)return;loaded=true;
+     try{
+       const {loadApproved}=await import(COMMENTS_MODULE);const rows=await loadApproved(key);
+       if(container.dataset.lesson!==key||!rows.length)return;
+       list.replaceChildren(...rows.map(commentElement));published.hidden=false;
+     }catch(error){console.warn('Onaylı yorumlar yüklenemedi:',error);}
+   };
+   if('IntersectionObserver' in window){
+     const observer=new IntersectionObserver(entries=>{if(entries.some(entry=>entry.isIntersecting)){observer.disconnect();show();}},{rootMargin:'600px 0px'});
+     observer.observe(commentsSection);
+   } else show();
    const form=container.querySelector('.a1-comment-form');const status=container.querySelector('.a1-comment-status');
    let submitting=false,lastSent=0;
    form.addEventListener('submit',async event=>{
@@ -85,14 +96,13 @@
      status.className='a1-comment-status';
      if(values.get('website'))return;
      if(!name || name.length>60 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length>254 || comment.length<10 || comment.length>2000 || !values.get('consent')){status.textContent=t('grammarCommentInvalid');status.classList.add('error');return;}
-     if(Date.now()-lastSent<30000){status.textContent=t('grammarCommentWait');return;}
+     if(Date.now()-lastSent<60000){status.textContent=t('grammarCommentWait');return;}
      submitting=true;const button=form.querySelector('[type="submit"]');button.disabled=true;status.textContent=t('grammarCommentSending');
      try {
-       // Web3Forms, same public access key as the contact form in js/app.js; only success: true counts as sent.
-       const response=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({access_key:'21c1c876-3c08-4019-a29d-8181b1f640f0',subject:'Bozkurt Academy – '+level+' yorum incelemesi: '+lesson.title,from_name:'Bozkurt Academy Web Sitesi',replyto:email,name,email,message:comment,ders:level+' · '+lesson.title,ders_linki:'https://bozkurtacademy.com/#grammar/'+level+'/'+lesson.id,yorum_anahtari:level+'/'+lesson.id,yayin_onayi:'Öğrenci yorumunun adıyla yayımlanmasına onay verdi.'})});
-       const result=await response.json().catch(()=>({}));if(!response.ok || result.success!==true)throw Error(result.message||'send');
+       const {submitComment}=await import(COMMENTS_MODULE);
+       await submitComment({lesson:key,title:lesson.title,link:lessonLink(level,lesson.id),name,email,comment});
        form.reset();lastSent=Date.now();status.textContent=t('grammarCommentSent');status.classList.add('success');
-     }catch(_){status.textContent=t('grammarCommentSendError');status.classList.add('error');}
+     }catch(error){console.error('Yorum gönderim hatası:',error);status.textContent=t('grammarCommentSendError');status.classList.add('error');}
      finally{submitting=false;button.disabled=false;}
    });
  }

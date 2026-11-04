@@ -1,0 +1,21 @@
+/* Yorum onay sayfası (/yonetim/yorumlar/). Yalnızca yerleşim; renkler ve düğmeler css/base.css (--ba-*). */
+.academy-theme .ca-summary{display:flex;align-items:baseline;gap:12px;margin:0 0 20px;padding:18px 22px;background:var(--ba-paper);border-radius:var(--ba-radius)}
+.academy-theme .ca-summary strong{font-family:var(--ba-serif);font-size:var(--ba-head);line-height:1;color:var(--ba-accent)}
+.academy-theme .ca-summary span{font-size:var(--ba-lead);font-weight:600}
+.academy-theme .ca-section{margin:0 0 clamp(32px,5vw,56px)}
+.academy-theme .ca-section h2{font-family:var(--ba-serif);font-weight:400;font-size:clamp(1.5rem,1.2rem + 1.2vw,2.25rem);margin:0 0 16px}
+.academy-theme .ca-list{display:grid;gap:12px}
+.academy-theme .ca-empty{margin:0;color:var(--ba-muted)}
+.academy-theme .ca-item{padding:clamp(18px,3vw,28px);background:var(--ba-paper);border-radius:var(--ba-radius)}
+.academy-theme .ca-meta{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline;margin:0 0 10px;font-size:var(--ba-small);color:var(--ba-muted)}
+.academy-theme .ca-meta a{color:var(--ba-ink);font-weight:600}
+.academy-theme .ca-name{margin:0 0 6px;font-weight:600;font-size:var(--ba-lead)}
+.academy-theme .ca-text{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.55}
+.academy-theme .ca-reply{margin:14px 0 0;padding:12px 16px;background:var(--ba-paper-2);border-radius:var(--ba-radius-small);white-space:pre-wrap;overflow-wrap:anywhere}
+.academy-theme .ca-reply strong{display:block;margin-bottom:4px}
+.academy-theme .ca-actions{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.academy-theme .ca-actions .btn{min-height:44px;padding:0 16px;font-size:var(--ba-small)}
+.academy-theme .ca-actions .ca-danger{color:var(--ba-wrong);box-shadow:inset 0 0 0 2px var(--ba-wrong)}
+.academy-theme .ca-reply-form{display:grid;gap:10px;margin:14px 0 0}
+.academy-theme .ca-reply-form textarea{width:100%;min-height:110px;padding:12px 14px;box-sizing:border-box;resize:vertical}
+@media(max-width:620px){.academy-theme .ca-actions .btn{flex:1 1 auto}}

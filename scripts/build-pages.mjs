@@ -217,11 +217,12 @@ for (const page of PAGES) {
   html = fill(html, 'scripts', scripts(), file);
   outputs.push([file, html]);
 }
-for (const [name, opts] of [['index.html', { spa: true }], ['404.html', {}]]) {
+// Menü ve footer'ı paylaşan diğer sayfalar (sitemap'e girmez). Yönetim sayfası: sabit iletişim düğmesi yok.
+for (const [name, opts, footerOpts] of [['index.html', { spa: true }, {}], ['404.html', {}, {}], ['yonetim/yorumlar/index.html', {}, { sticky: false }]]) {
   const file = path.join(root, name);
   let html = fs.readFileSync(file, 'utf8');
   html = fill(html, 'header', header(opts), file);
-  html = fill(html, 'footer', footer(), file);
+  html = fill(html, 'footer', footer(footerOpts), file);
   outputs.push([file, html]);
 }
 const urls = [{ path: '/' }, ...PAGES].map(p => `  <url>\n    <loc>${SITE}${p.path}</loc>\n    <lastmod>${p.updated || SITEMAP_DATE}</lastmod>\n  </url>`).join('\n');

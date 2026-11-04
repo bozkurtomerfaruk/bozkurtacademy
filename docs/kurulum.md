@@ -97,6 +97,7 @@ curl -X POST -H 'Authorization: Bearer owner' -H 'Content-Type: application/json
 |---|---|
 | `firestore.rules` | Bütün yetki kuralları (öğretmen UID'i burada) |
 | `tests/firestore.rules.test.mjs` | Kural testleri |
+| `js/comments.js`, `js/account/comments-admin.js` | Gramer dersi yorumları ve onay sayfası `/yonetim/yorumlar/` (docs/grammar-comments.md) |
 | `js/account/config.js` | Firebase yapılandırması, öğretmen UID'i |
 | `js/account/firebase.js` | SDK'yı CDN'den (gstatic, sabit sürüm) yükler, emülatör bağlantısı |
 | `js/account/session.js` | `index.html`: menüdeki Giriş/Panelim bağlantısı, alıştırma sonucu kaydı |

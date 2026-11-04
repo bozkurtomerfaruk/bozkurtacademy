@@ -7,7 +7,7 @@
 - **Kapsam:** A1'in Artikel dışındaki 16 konusu (3098 soru). 2429 A1 sorusunda artık kelime listesi var; kalan sorularda isim yok (ör. sadece zamir, sayı ya da fiil soruları).
 - **Sözlük:** 236 yeni kelime, toplam 509. Pilottaki 273 kelimeye dokunulmadı.
 - **Kontrol tablosu bu PR için:** `docs/sozluk-bekleyen.csv`. Sadece henüz kontrol edilmemiş, yani bu PR'da gelen 236 kelime var; emin olmadıklarım en üstte. Bütün sözlük yine `docs/sozluk-kontrol.csv`'de.
-  - **Emin olmadığım 2 kelime (öğrenciye gizli):** Bonbon (das; Avusturya'da der), Poster (das/der).
+  - **Emin olmadığım 2 kelime:** Bonbon ve Poster (das/der); kontrolden sonra das olarak görünüyor.
   - **Not düştüklerim (görünüyor):** die Leiter = merdiven (der Leiter = yönetici), Kopfschmerz ve Nudel (çoğu zaman çoğul), Viertel (çeyrek; semt), Schloss (şato; kilit).
 - **Ayıklama kuralları (pilottan farklı olarak eklenenler):**
   - Türkçe durum ve çeviri cümleleri ("Durum: …", "Telefonun yeni. Onu her gün kullanıyorsun.") listeye girmiyor; içlerindeki Almanca alıntılar („…“) giriyor.
@@ -17,7 +17,8 @@
   - Emir kipleri, kişi ve şehir adları, artikelsiz ülkeler, dil adları (Englisch, Spanisch) alınmıyor.
 - **Değişmeyenler:** Sorularda sadece `vocab` eklendi; başka hiçbir alan değişmedi (16 dosya otomatik karşılaştırıldı). Sınav setlerinde liste yok.
 - **Test:** `tests/vocab.mjs` genişletildi: kelime listesi olan her konunun ilk sorusu tarayıcıda kontrol ediliyor (19 konu); hepsi geçti. `tests/search.mjs`, `check-grammar`, `check-exams`, `build-search-index --check`, `sozluk --check` de geçti.
-- **Senin yapman gereken:** `docs/sozluk-bekleyen.csv`'yi kontrol et. Uygunsa "birleştir" de; kelimeleri ben "kontrol edildi" yaparım. Sonra A2'ye geçerim.
+- **Durum:** Tabloyu kontrol ettin (2026-11-04), hepsi uygun. Bonbon ve Poster das olarak gösteriliyor; Bonbon'un notu düzeltildi ("Duden: der oder das; ikisi de doğru. Avusturya'da das kullanılır."). 509 kelimenin hepsi `checked: true`. PR #38 birleştirildi.
+
 ## 2026-11-04 · Alıştırma sonuç ekranı: konuya uyan övgü metni
 
 - **Hata:** Sonuç ekranı her konuda "Harika! Artikel konusunda çok iyi gidiyorsun." diyordu; düşük puanda da artık olmayan "soldaki kısa özet"e yönlendiriyordu.

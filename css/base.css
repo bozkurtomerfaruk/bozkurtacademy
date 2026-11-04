@@ -255,6 +255,34 @@ html[data-theme="dark"] .academy-theme .brand-logo-dark{display:block}
 .academy-theme .footer-links[hidden]{display:none}
 .academy-theme .footer-links a{color:var(--ba-ink);text-decoration:underline;text-underline-offset:4px;min-height:44px;display:inline-flex;align-items:center}
 @media(max-width:767px){.academy-theme .footer-meta{align-items:flex-start}}
+/* Footer site map: four short link groups between brand and legal links */
+.academy-theme .footer-pages{display:grid;grid-template-columns:repeat(4,minmax(0,auto));gap:20px clamp(24px,4vw,56px);flex:1 1 560px;justify-content:center}
+.academy-theme .footer-group-title{margin:0 0 6px;color:var(--ba-ink);font-weight:600}
+.academy-theme .footer-group ul{list-style:none;margin:0;padding:0}
+.academy-theme .footer-group a{display:inline-flex;align-items:center;min-height:36px;color:var(--ba-muted);text-decoration:none}
+.academy-theme .footer-group a:hover,.academy-theme .footer-group a[aria-current]{color:var(--ba-ink);text-decoration:underline;text-underline-offset:4px}
+.academy-theme footer:has(.footer-pages){align-items:flex-start}
+.academy-theme .footer-pages~.footer-meta{flex-basis:100%;flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:center;padding-top:16px;border-top:2px solid var(--ba-line)}
+@media(max-width:900px){.academy-theme .footer-pages{grid-template-columns:repeat(2,minmax(0,1fr));justify-content:start;flex-basis:100%;order:2}.academy-theme .footer-meta{order:3}}
+
+/* Student reviews: the section stays hidden until students allow publishing (see SEO-YAPILACAKLAR.md) */
+.academy-theme .ba-reviews-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:var(--ba-gutter);list-style:none;margin:24px 0 0;padding:0}
+.academy-theme .ba-review{margin:0;height:100%;padding:clamp(20px,3vw,32px);background:var(--ba-paper);border-radius:var(--ba-radius)}
+.academy-theme .ba-review blockquote{margin:0 0 16px;font-family:var(--ba-serif);font-size:var(--ba-lead);line-height:1.45;color:var(--ba-ink)}
+.academy-theme .ba-review figcaption{color:var(--ba-muted);font-size:var(--ba-small)}
+.academy-theme .ba-review figcaption strong{color:var(--ba-ink)}
+
+/* Contact call to action: a header button on wide screens, a bar fixed to the bottom on phones */
+.academy-theme .nav-cta{display:none;min-height:40px;padding:0 16px;font-size:15px;white-space:nowrap}
+@media(min-width:1200px){.academy-theme .nav-cta{display:inline-flex}}
+.academy-theme .ba-sticky-cta{display:none}
+@media(max-width:767px){
+  .academy-theme .ba-sticky-cta{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:40;min-height:52px}
+  .academy-theme:has(.ba-sticky-cta){padding-bottom:84px}
+  /* Not over the exercise, exam and placement test controls, and not while the menu is open */
+  .academy-theme:is([data-ba-page="exercises"],[data-ba-page="exams"],[data-ba-page="seviye-testi"],[data-ba-page="yonetim"],.menu-open) .ba-sticky-cta{display:none}
+  .academy-theme:is([data-ba-page="exercises"],[data-ba-page="exams"],[data-ba-page="seviye-testi"],[data-ba-page="yonetim"]){padding-bottom:0}
+}
 
 /* Motion: page fade and section reveals, never needed to read */
 .academy-theme .page:not(#page-home){animation:fade .45s var(--ba-ease) both}

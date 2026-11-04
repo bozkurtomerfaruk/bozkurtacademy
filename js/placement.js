@@ -756,7 +756,7 @@
         el('p', { class: 'pl-lead', 'data-pl-done': true, text: t('plDoneText') }),
         el('p', {}, t('plDoneContact'), ' ', el('a', { class: 'ba-link', href: 'mailto:bozkurtt.omerfaruk@gmail.com', text: 'bozkurtt.omerfaruk@gmail.com' })),
         el('div', { class: 'pl-actions' },
-          el('a', { class: 'btn primary', href: '#contact', 'data-page': 'contact', text: t('plDoneContactPage'), onclick: (e) => { e.preventDefault(); window.BA?.showPage('contact'); } }),
+          el('a', { class: 'btn primary', href: '/iletisim/', text: t('plDoneContactPage') }),
           el('button', { class: 'btn ghost', type: 'button', text: t('plDoneAgain'), onclick: () => { state = fresh(); render({ focus: true }); } })))));
   }
 

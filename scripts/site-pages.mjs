@@ -3,6 +3,7 @@
 // İçerik metinleri sayfaların kendi dosyalarında (ör. online-almanca-dersi/index.html) durur.
 //
 // Kurallar: fiyat, telefon, adres yok; şemalarda offers/price/priceRange/telephone yok.
+// Şemalara yalnızca sayfada görünür biçimde yazan bilgiler girer.
 
 export const SITE = 'https://bozkurtacademy.com';
 
@@ -37,7 +38,6 @@ function service(path, name, description, serviceType) {
     serviceType,
     url: `${SITE}${path}`,
     provider,
-    areaServed: { '@type': 'Country', name: 'Türkiye' },
     availableChannel: { '@type': 'ServiceChannel', serviceUrl: `${SITE}/iletisim/` }
   };
 }

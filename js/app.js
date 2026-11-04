@@ -1487,6 +1487,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const submitBtn = document.getElementById('contactSubmitBtn');
 
   const CONTACT_EMAIL = 'bozkurtt.omerfaruk@gmail.com';
+  // Web3Forms (https://web3forms.com): the access key is public by design and only allows sending to the
+  // inbox it was created for. The same key is used by the comment form in js/a1-lessons.js.
+  const WEB3FORMS_URL = 'https://api.web3forms.com/submit';
+  const WEB3FORMS_KEY = '21c1c876-3c08-4019-a29d-8181b1f640f0';
   function setFormStatus(type, message){
     if(!formStatus) return;
     formStatus.className = `contact-form-status show ${type}`;
@@ -1499,7 +1503,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
       formStatus.append(' ', link);
     }
   }
-  // Without JavaScript the form posts to FormSubmit directly and comes back with ?gonderildi=1.
+  // Without JavaScript the form posts to Web3Forms directly and comes back with ?gonderildi=1.
   if(form && new URLSearchParams(location.search).has('gonderildi')) setFormStatus('success', t('sentMessage'));
 
   form?.addEventListener('submit', async e=>{
@@ -1508,7 +1512,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const name = document.getElementById('name')?.value.trim() || '';
     const email = document.getElementById('email')?.value.trim() || '';
     const message = document.getElementById('message')?.value.trim() || '';
-    const honey = document.getElementById('companyWebsite')?.value || '';
+    // Web3Forms honeypot: a hidden checkbox that only bots tick.
+    const honey = document.getElementById('botcheck')?.checked || false;
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
     if(honey) return;
@@ -1525,28 +1530,29 @@ document.addEventListener('DOMContentLoaded', ()=>{
     if(formStatus) formStatus.className = 'contact-form-status';
 
     try{
-      const response = await fetch('https://formsubmit.co/ajax/bozkurtt.omerfaruk@gmail.com', {
+      const response = await fetch(WEB3FORMS_URL, {
         method:'POST',
         headers:{
           'Content-Type':'application/json',
           'Accept':'application/json'
         },
         body:JSON.stringify({
+          access_key:WEB3FORMS_KEY,
+          subject:'Bozkurt Academy – Yeni iletişim mesajı',
+          from_name:'Bozkurt Academy Web Sitesi',
+          replyto:email,
           name,
           email,
           message,
-          _subject:'Bozkurt Academy - Yeni iletişim mesajı',
-          _replyto:email,
-          _template:'table',
-          _url:'https://bozkurtacademy.com' + location.pathname
+          page:'https://bozkurtacademy.com' + location.pathname
         })
       });
 
-      // FormSubmit answers {"success":"true"} once the address is activated. Anything else (an activation
-      // notice, an HTML page, a network error) is shown as an error, never as a sent message.
+      // Only {"success": true} from Web3Forms counts as sent. Anything else (an error answer, an HTML
+      // page, a network error) is shown as an error and the visitor's input stays in the form.
       const result = await response.json().catch(()=>({}));
-      if(!response.ok || String(result.success) !== 'true'){
-        throw new Error(result.message || `FormSubmit HTTP ${response.status}`);
+      if(!response.ok || result.success !== true){
+        throw new Error(result.message || `Web3Forms HTTP ${response.status}`);
       }
 
       form.reset();

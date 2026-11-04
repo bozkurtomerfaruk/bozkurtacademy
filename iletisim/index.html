@@ -129,10 +129,12 @@
         </aside>
         <div class="lp-form">
           <h2 class="lp-card-title">İletişim formu</h2>
-          <form id="contactForm" class="contact-message-form" action="https://formsubmit.co/bozkurtt.omerfaruk@gmail.com" method="POST" novalidate>
-            <input type="hidden" name="_subject" value="Bozkurt Academy - Yeni iletişim mesajı" />
-            <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_next" value="https://bozkurtacademy.com/iletisim/?gonderildi=1" />
+          <form id="contactForm" class="contact-message-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <!-- Web3Forms: genel (herkese açık) erişim anahtarı ve JavaScript kapalıyken kullanılan alanlar -->
+            <input type="hidden" name="access_key" value="21c1c876-3c08-4019-a29d-8181b1f640f0" />
+            <input type="hidden" name="subject" value="Bozkurt Academy – Yeni iletişim mesajı" />
+            <input type="hidden" name="from_name" value="Bozkurt Academy Web Sitesi" />
+            <input type="hidden" name="redirect" value="https://bozkurtacademy.com/iletisim/?gonderildi=1" />
             <div class="lp-form-grid">
               <div class="field">
                 <label for="name">Ad Soyad</label>
@@ -147,11 +149,11 @@
               <label for="message">Mesaj</label>
               <textarea id="message" name="message" required placeholder="Seviyem A2. B1 sınavına hazırlanıyorum ve özellikle konuşmada zorlanıyorum."></textarea>
             </div>
-            <input class="contact-honey" type="text" id="companyWebsite" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <input class="contact-honey" type="checkbox" id="botcheck" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <button id="contactSubmitBtn" class="btn primary contact-submit" type="submit" data-i18n="sendMessage">Mesaj gönder</button>
             <div id="formStatus" class="contact-form-status" role="status" aria-live="polite"></div>
           </form>
-          <p class="lp-form-note">Adın, e-posta adresin ve mesajın FormSubmit (formsubmit.co) üzerinden bana iletilir. Ayrıntılar <a href="/privacy.html">gizlilik politikasında</a>.</p>
+          <p class="lp-form-note">Adın, e-posta adresin ve mesajın Web3Forms (web3forms.com) üzerinden bana e-postayla iletilir. Ayrıntılar <a href="/privacy.html">gizlilik politikasında</a>.</p>
         </div>
       </section>
 
@@ -182,7 +184,7 @@
       </div>
     </footer>
     <!-- /ba:footer --></div><!-- ba:scripts -->
-  <script src="/js/app.js?v=29"></script>
+  <script src="/js/app.js?v=30"></script>
   <script src="/js/theme.js?v=9"></script>
   <script defer data-goatcounter="https://bozkurtacademy.goatcounter.com/count" data-goatcounter-settings='{"no_onload": true}' src="/js/vendor/count.js?v=2.7.0"></script>
   <script defer src="/js/analytics.js?v=5"></script>

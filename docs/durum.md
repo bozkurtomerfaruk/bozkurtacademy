@@ -21,8 +21,8 @@
   - **Düzeltme yolu:** Tabloda Artikel, Türkçe anlam, Not ve evet/hayır sütunlarını değiştirip bana geri gönder. `node scripts/sozluk.mjs --import tablo.csv` sözlüğe işler.
   - `node scripts/sozluk.mjs --check` GitHub'da çalışıyor: sözlükte olmayan anahtar, yanlış artikel veya eski tablo hata veriyor.
 - **Diller:** Yeni metinler TR/DE/EN. **Önbellek sürümleri:** `app.js` v26, `quiz.js` v25, `exercises-hub.css` v7.
-- **Test:** Yeni `tests/vocab.mjs` (23 kontrol, hepsi geçti): doğru ve yanlış cevap, Enter ile yazmalı yanlış cevap, dil değişimi, sonuç listesi, gizli kelimeler, sadece çoğul, sınav setinde liste olmaması, sözlük yüklenemezse çalışma, 390/1440 px açık/koyu. `tests/search.mjs`, `tests/exams/next.mjs`, `check-grammar`, `check-exams`, `build-search-index --check`, `sozluk --check`, `npm run test:placement` de geçti.
-- **Senin yapman gereken:** CSV'yi kontrol et (özellikle ilk 3 satır). Sonra "birleştir" de; onayından sonra diğer konulara yayarım.
+- **Test:** Yeni `tests/vocab.mjs` (24 kontrol, hepsi geçti): doğru ve yanlış cevap, Enter ile yazmalı yanlış cevap, dil değişimi, sonuç listesi, gizli kelimeler, sadece çoğul, sınav setinde liste olmaması, sözlük yüklenemezse çalışma, 390/1440 px açık/koyu. `tests/search.mjs`, `tests/exams/next.mjs`, `check-grammar`, `check-exams`, `build-search-index --check`, `sozluk --check`, `npm run test:placement` de geçti.
+- **Durum:** Tabloyu kontrol ettin (2026-11-04): Bank, Karte, Laptop doğru; 273 kelimenin hepsi `checked: true`, emin olunmayanlar artık görünüyor. PR #36 birleştirildi.
 - **Fark ettiğim ama dokunmadığım:** Sonuç ekranındaki övgü metinleri (`resultPerfect` vb.) her konuda "Artikel konusunda çok iyi gidiyorsun" diyor ve kapalı olan "soldaki özet"ten bahsediyor. Ayrı küçük bir iş.
 
 ## 2026-11-02 · Alt başlıklarda arama (madde 2)
@@ -41,7 +41,7 @@
 
 ## 2026-11-02 · Seviye testi: her gün otomatik silme (GitHub Actions, madde 7)
 
-- **Durum:** PR #34 birleştirildi (2026-11-02). Kuralların Firebase Console'da yayınlanması ve ilk deneme bekliyor.
+- **Durum:** PR #34 birleştirildi (2026-11-02). Kuralları yayınladın, elle çalıştırılan ilk deneme başarılı (yeşil ✓). 3 Kasım'daki zamanlanmış çalışma, kurallar o sırada henüz yayınlanmadığı için hata vermişti; bundan sonra her gün çalışacak.
 - **Neden:** Silme şu ana kadar sadece yönetim sayfası açılınca oluyordu. Senin isteğinle artık senden bağımsız.
 - **Nasıl:** `.github/workflows/placement-cleanup.yml` her gün 03:23 UTC'de `scripts/placement-cleanup.mjs`'i çalıştırır; `expireAt` tarihi geçmiş sonuçları siler.
   - **Servis hesabı anahtarı yok.** Servis hesabı kurallardan geçmediği ve Firestore'da tek bir koleksiyonla sınırlanamadığı için, sızarsa bütün öğrenci verisi açılırdı. Onun yerine Firebase Authentication'da ayrı bir "temizlik hesabı" var; script bu hesapla giriş yapıyor ve kurallardan geçiyor.

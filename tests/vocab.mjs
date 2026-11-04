@@ -8,7 +8,6 @@ const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.PW || 'playwright');
 const B = process.env.BASE || 'http://localhost:8765/index.html';
 const shotDir = process.env.S || fs.mkdtempSync(path.join(os.tmpdir(), 'vocab-shots-'));
-const dict = JSON.parse(fs.readFileSync('data/sozluk.json', 'utf8')).words;
 const artikel = JSON.parse(fs.readFileSync('data/a1/artikel.json', 'utf8'));
 
 const fails = [];
@@ -74,10 +73,14 @@ ok(list.length === expected.length && await page.textContent('#quizResult .quiz-
 ok(new Set(list).size === list.length, 'sonuç listesinde tekrar yok');
 await page.screenshot({ path: path.join(shotDir, 'vocab-sonuc-1280.png'), fullPage: false });
 
-// Emin olunmayan kelime (Karte) kontrol edilene kadar gizli; diğerleri görünüyor. Sadece çoğul: die Eltern.
+// Emin olunmayan kelime kontrol edilene kadar gizli; diğerleri görünüyor. Sözlüğün bir kopyasında Karte ve Laptop
+// "emin değilim, kontrol edilmedi" yapılır (gerçek verideki işaretlerden bağımsız). Sadece çoğul: die Eltern.
+const testDict = JSON.parse(fs.readFileSync('data/sozluk.json', 'utf8'));
+for (const key of ['Karte', 'Laptop']) Object.assign(testDict.words[key], { unsure: true, checked: false });
+await page.route('**/sozluk.json*', r => r.fulfill({ contentType: 'application/json', body: JSON.stringify(testDict) }));
 await open('exercises/A2/dativ/zwei-pronomen-22/q6');
 await page.fill('#writtenAnswerInput', 'Ich kaufe sie dir'); await page.click('#checkAnswerBtn'); await page.waitForTimeout(400);
-ok(dict.Karte.unsure && !dict.Karte.checked && await page.locator('#quizFeedback .quiz-vocab').count() === 0, 'emin olunmayan "Karte" gizli (bu soruda başka kelime yok, liste çıkmıyor)');
+ok(await page.locator('#quizFeedback .quiz-vocab').count() === 0, 'emin olunmayan "Karte" gizli (bu soruda başka kelime yok, liste çıkmıyor)');
 await open('exercises/A2/dativ/wem-fragen-6/q4');
 const lq = JSON.parse(fs.readFileSync('data/a2/dativ.json', 'utf8')).exercises.find(e => e.id === 'wem-fragen-6').questions[3];
 await choose(lq.correct);
@@ -85,7 +88,17 @@ list = await items('#quizFeedback');
 ok(list.join(' | ') === 'die Schwester – kız kardeş', `"Laptop" gizli, "Schwester" görünüyor: ${list.join(' | ')}`);
 await open('exercises/B1/relativsaetze/genitiv-10/q4');
 await choose('deren');
+await page.unroute('**/sozluk.json*');
 ok((await items('#quizFeedback'))[0] === 'die Eltern (sadece çoğul) – anne baba', 'sadece çoğul olan kelime işaretli');
+
+// Emin olunmayan ama kontrol edilmiş kelime görünüyor.
+const shownDict = JSON.parse(fs.readFileSync('data/sozluk.json', 'utf8'));
+Object.assign(shownDict.words.Laptop, { unsure: true, checked: true });
+await page.route('**/sozluk.json*', r => r.fulfill({ contentType: 'application/json', body: JSON.stringify(shownDict) }));
+await open('exercises/A2/dativ/wem-fragen-6/q4');
+await choose(lq.correct);
+ok((await items('#quizFeedback')).join(' | ') === 'der Laptop – dizüstü bilgisayar | die Schwester – kız kardeş', 'emin olunmayan kelime kontrol edilince görünüyor');
+await page.unroute('**/sozluk.json*');
 
 // Sınav setlerinde liste yok.
 await open('exams/goethe/b1/lesen/1/set-1');

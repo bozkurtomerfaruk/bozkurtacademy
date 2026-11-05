@@ -86,3 +86,40 @@ Ana sayfada (`index.html`) öğrenci yorumları için bir alan hazır, ama şu a
 >
 > Sevgiler,
 > Ömer Faruk
+
+## 3. Blog
+
+Blog sayfaları `scripts/build-pages.mjs` ile üretilir. Kaynaklar `_blog/` klasöründedir (alt çizgili klasör GitHub Pages'te yayınlanmaz, sadece kaynak olarak durur):
+
+- `_blog/posts.json`: yazı listesi (adres, başlık, açıklama, giriş cümlesi, tarih, durum, ilgili sayfalar).
+- `_blog/<adres>.html`: yazının metni (H2 başlıklarla başlar; H1 şablondan gelir).
+
+### Taslak ve yayın
+
+- `"status": "draft"`: sayfa `noindex`, sitemap'te yok, üstte "Taslak" notu var. Adresi bilen görebilir ama Google'a kapalıdır.
+- `"status": "published"`: sayfa indekslenir, sitemap'e girer, BlogPosting şeması eklenir.
+- Blog ana sayfası (`/blog/`) yayınlanmış yazı olmadıkça `noindex` kalır ve sitemap'e girmez. İlk yazı yayınlanınca otomatik olarak açılır.
+- Blog menüde yoktur. İlk yazılar yayınlandıktan sonra menüye eklemek ayrı bir değişiklik olarak yapılacak.
+- Yayından önce metindeki `<!-- KONTROL ET -->` notlarının bulunduğu yerleri resmî kaynaklardan kontrol et. Bu notlar sayfada görünmez ama kaynak kodda durur.
+- Değişiklikten sonra: `node scripts/build-pages.mjs`. Yayın tarihi (`date`) yayın gününe göre güncellenmeli; sonradan güncelleme yapılırsa `"updated": "YYYY-AA-GG"` eklenebilir.
+
+### 12 haftalık blog takvimi (haftada 1 yazı)
+
+Arama hacimleri Search Console verisi geldikçe gözden geçirilmeli. Resmî şartlar, ücretler ve sınav kuralları kesin rakamla yazılmaz; resmî kaynağa yönlendirilir ve `<!-- KONTROL ET -->` ile işaretlenir.
+
+| Hafta | Hedef arama | Başlık önerisi | Link verilecek sayfalar | Durum |
+|---|---|---|---|---|
+| 1 (12 Kasım 2026) | almanca nasıl öğrenilir | Almanca Nasıl Öğrenilir? Sıfırdan Başlayanlar İçin Yol Haritası | /a1-almanca-kursu/, /almanca-gramer/a1/ (artikel, praesens, w-fragen), /almanca-ozel-ders/ | Taslak yazıldı |
+| 2 (19 Kasım 2026) | almanca günlük kalıplar | Almanca Günlük Kalıplar: Her Gün İşine Yarayacak 40 İfade | /almanca-gramer/a1/w-fragen/, /almanca-gramer/a1/modalverben/, /almanca-gramer/a2/konjunktiv-ii/, /online-almanca-dersi/ | Taslak yazıldı |
+| 3 (26 Kasım 2026) | a1 almanca sınavı nasıl geçilir | A1 Almanca Sınavı Nasıl Geçilir? Bölüm Bölüm Hazırlık Rehberi | /a1-almanca-kursu/, /almanca-sinav-hazirlik/, /#exams, /almanca-gramer/a1/ | Taslak yazıldı |
+| 4 (3 Aralık 2026) | goethe telc farkı | Goethe mi telc mi? Almanca Sınavları Arasındaki Farklar | /almanca-sinav-hazirlik/, /b1-almanca-kursu/ | Planlandı |
+| 5 (10 Aralık 2026) | aile birleşimi için almanca | Aile Birleşimi İçin Almanca: Nereden Başlamalı? | /a1-almanca-kursu/, /almanca-gramer/a1/, /iletisim/ (resmî şartlar için yalnızca yönlendirme) | Planlandı |
+| 6 (17 Aralık 2026) | almanya'da çalışmak için hangi seviye almanca | Almanya'da Çalışmak İçin Hangi Seviye Almanca Gerekir? | /b1-almanca-kursu/, /b2-almanca-kursu/ (seviye şartları için resmî kaynağa yönlendirme) | Planlandı |
+| 7 (24 Aralık 2026) | almanca artikel nasıl öğrenilir | der, die, das: Almanca Artikeller Nasıl Akılda Kalır? | /almanca-gramer/a1/artikel/, /almanca-gramer/a1/plural/ | Planlandı |
+| 8 (31 Aralık 2026) | almanca konuşma pratiği | Almanca Konuşma Pratiği: Evde ve Derste Neler Yapılabilir? | /almanca-grup-dersi/, /almanca-ozel-ders/ | Planlandı |
+| 9 (7 Ocak 2027) | a2 almanca sınavı / dtz | A2 Seviyesinde Neler Öğrenilir? A2 Sınavına Hazırlık | /a2-almanca-kursu/, /almanca-gramer/a2/ (perfekt, dativ, nebensaetze) | Planlandı |
+| 10 (14 Ocak 2027) | almanca perfekt | Almancada Geçmiş Zaman: Perfekt ve Präteritum Ne Zaman Kullanılır? | /almanca-gramer/a1/perfekt/, /almanca-gramer/a2/praeteritum/ | Planlandı |
+| 11 (21 Ocak 2027) | almanca e-posta yazma / resmi mektup | Almanca E-posta ve Resmî Mektup Nasıl Yazılır? Örneklerle | /b1-almanca-kursu/, /almanca-sinav-hazirlik/ | Planlandı |
+| 12 (28 Ocak 2027) | b1 almanca sınavı | B1 Almanca Sınavına Nasıl Hazırlanılır? | /b1-almanca-kursu/, /almanca-sinav-hazirlik/, /almanca-gramer/b1/ | Planlandı |
+
+Her yazı en az bir kurs sayfasına, ilgili gramer derslerine ve sonunda iletişim sayfasına link verir. Kişisel deneyim veya başarı iddiası (öğrenci sayısı, geçme oranı vb.) yazılmaz.

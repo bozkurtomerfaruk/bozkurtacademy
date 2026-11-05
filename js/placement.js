@@ -468,7 +468,7 @@
   function renderIntro(){
     root.append(
       el('header', { class: 'pl-hero' },
-        el('h1', { text: t('plTitle') }),
+        el('h2', { class: 'page-title', text: t('plTitle') }),
         el('p', { class: 'pl-lead', text: t('plLead') })),
       el('div', { class: 'pl-card ba-card' },
         el('div', { class: 'ba-stripe', 'aria-hidden': 'true' }, Array.from({ length: 60 }, () => el('i'))),
@@ -519,7 +519,7 @@
     root.append(
       el('header', { class: 'pl-block-head' },
         el('p', { class: 'pl-kicker', text: t('plBlock', { n: state.block + 1, total: bank.blocks.length }) }),
-        el('h1', { text: `${t('plTitle')} · ${block.level}` }),
+        el('h2', { class: 'page-title', text: `${t('plTitle')} · ${block.level}` }),
         el('div', { class: 'pl-progress', role: 'progressbar', 'aria-valuemin': '0', 'aria-valuemax': String(bank.blocks.length), 'aria-valuenow': String(state.block + 1), 'aria-label': t('plBlock', { n: state.block + 1, total: bank.blocks.length }) },
           el('span', { style: `width:${((state.block + 1) / bank.blocks.length) * 100}%` })),
         el('p', { class: 'pl-muted', text: t('plBlockHint') })),
@@ -573,7 +573,7 @@
     area.addEventListener('input', () => { state.writing = area.value; counter.textContent = t('plWords', { n: wordCount(area.value) }); save(); });
     root.append(
       el('header', { class: 'pl-block-head' },
-        el('h1', { text: t('plWritingTitle') }),
+        el('h2', { class: 'page-title', text: t('plWritingTitle') }),
         el('p', { class: 'pl-lead', text: t('plWritingLead') })),
       el('div', { class: 'pl-card ba-card' }, el('div', { class: 'pl-card-body' },
         el('p', { class: 'pl-writing-prompt', lang: 'de', text: t('plWritingPrompt') }),
@@ -598,7 +598,7 @@
     const resultCard = el('section', { class: 'pl-result ba-card', 'aria-labelledby': 'plResultTitle' },
       el('div', { class: 'ba-stripe ba-stripe--bold', 'aria-hidden': 'true' }, Array.from({ length: 60 }, () => el('i'))),
       el('div', { class: 'pl-card-body' },
-        el('h1', { id: 'plResultTitle', class: 'pl-result-title', text: t('plResultTitle') }),
+        el('h2', { id: 'plResultTitle', class: 'page-title pl-result-title', text: t('plResultTitle') }),
         el('p', { class: 'pl-level', 'data-pl-level': true, text: levelLabel(r.level, r.near) }),
         el('p', { class: 'pl-lead', text: t('plDesc' + r.level) }),
         Object.keys(r.blocks).length ? el('div', {},
@@ -752,7 +752,7 @@
     root.append(el('section', { class: 'pl-card ba-card pl-done', 'aria-labelledby': 'plDoneTitle' },
       el('div', { class: 'ba-stripe ba-stripe--bold', 'aria-hidden': 'true' }, Array.from({ length: 60 }, () => el('i'))),
       el('div', { class: 'pl-card-body' },
-        el('h1', { id: 'plDoneTitle', text: t('plDoneTitle') }),
+        el('h2', { class: 'page-title', id: 'plDoneTitle', text: t('plDoneTitle') }),
         el('p', { class: 'pl-lead', 'data-pl-done': true, text: t('plDoneText') }),
         el('p', {}, t('plDoneContact'), ' ', el('a', { class: 'ba-link', href: 'mailto:bozkurtt.omerfaruk@gmail.com', text: 'bozkurtt.omerfaruk@gmail.com' })),
         el('div', { class: 'pl-actions' },
@@ -801,7 +801,7 @@
     if(location.hash !== full) history.replaceState({ baPage: 'yonetim' }, '', full);
     box.replaceChildren(el('p', { class: 'pl-muted', role: 'status', text: t('adminLoading') }));
     try{
-      const admin = await import('./account/placement-admin.js?v=2');
+      const admin = await import('./account/placement-admin.js?v=3');
       await admin.open(box, full.split('/').slice(1));
     }catch(error){
       console.error(error);

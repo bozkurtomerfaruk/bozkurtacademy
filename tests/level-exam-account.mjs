@@ -133,7 +133,7 @@ const link = panel.locator('a[href="index.html#seviye-sonu/A1"]');
 ok(await link.count() >= 1, 'öğrenci panelinde ödev bağlantısı #seviye-sonu/A1');
 await panel.screenshot({ path: path.join(shotDir, 'panel-odev-390.png'), fullPage: true });
 await link.first().click(); await panel.waitForTimeout(2000);
-ok(panel.url().endsWith('#seviye-sonu/A1') && (await panel.textContent('#levelExamApp h1')).includes('A1'), 'bağlantı sınavı açıyor');
+ok(panel.url().endsWith('#seviye-sonu/A1') && (await panel.textContent('#levelExamApp .page-title')).includes('A1'), 'bağlantı sınavı açıyor');
 await s2.close();
 
 await browser.close();

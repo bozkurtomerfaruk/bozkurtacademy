@@ -46,7 +46,7 @@ await page.addInitScript(() => addEventListener('ba:exercise-finished', (e) => w
 await page.goto(B + '#exercises/A1'); await page.waitForTimeout(1500);
 ok(await page.locator('.le-card [data-level-exam][href="#seviye-sonu/A1"]').count() === 1, 'A1 konu listesinin sonunda sınav kartı var');
 await page.click('[data-level-exam]'); await page.waitForTimeout(1200);
-ok(page.url().endsWith('#seviye-sonu/A1') && (await page.textContent('#levelExamApp h1')).includes('A1 seviye sonu sınavı'), 'kart sınavı açıyor');
+ok(page.url().endsWith('#seviye-sonu/A1') && (await page.textContent('#levelExamApp .page-title')).includes('A1 seviye sonu sınavı'), 'kart sınavı açıyor');
 ok(await page.locator('.le-info li').count() === 4, 'giriş ekranında bilgiler');
 
 // Rastgele 30 soru, dağılım her denemede aynı.
@@ -85,7 +85,7 @@ const weakRows = page.locator('.le-topics li.is-weak');
 ok(await weakRows.count() === Object.keys(wrongTopics).length && await page.locator('.le-topics li').count() === 17, 'konu tablosu: 17 konu, hatalı olanlar işaretli');
 ok(await weakRows.first().locator('a').count() === 2, 'hatalı konuda anlatım ve alıştırma bağlantısı');
 await page.click('.lang button[data-lang="de"]'); await page.waitForTimeout(500);
-ok((await page.textContent('#levelExamApp h1')).includes('Abschlusstest A1') && (await page.textContent('.le-badge')).includes('Noch nicht bestanden'), 'Almanca');
+ok((await page.textContent('#levelExamApp .page-title')).includes('Abschlusstest A1') && (await page.textContent('.le-badge')).includes('Noch nicht bestanden'), 'Almanca');
 await page.click('.lang button[data-lang="en"]'); await page.waitForTimeout(500);
 ok((await page.textContent('.le-badge')).includes('Not passed yet') && finished.length === 1, 'İngilizce; dil değişince ikinci kez gönderilmiyor');
 await page.click('.lang button[data-lang="tr"]'); await page.waitForTimeout(500);
@@ -133,7 +133,7 @@ for (const level of JSON.parse(fs.readFileSync('data/catalog.json', 'utf8')).lev
   }
   await p.click('[data-le-finish]'); await p.waitForTimeout(500);
   ok((await p.textContent('[data-le-score]')) === '18 / 30' && await p.getAttribute('[data-le-passed]', 'data-le-passed') === 'true'
-    && (await p.textContent('#levelExamApp h1')).includes(level.id) && await p.locator('.le-topics li').count() === data.distribution.length, `${level.id}: 18/30 geçti, ${data.distribution.length} konu tablosu`);
+    && (await p.textContent('#levelExamApp .page-title')).includes(level.id) && await p.locator('.le-topics li').count() === data.distribution.length, `${level.id}: 18/30 geçti, ${data.distribution.length} konu tablosu`);
   await p.screenshot({ path: path.join(shotDir, `sinav-sonuc-${level.id}-1280.png`), fullPage: true });
   await c.close();
 }

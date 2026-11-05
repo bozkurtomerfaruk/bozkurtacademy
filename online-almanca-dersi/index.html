@@ -29,8 +29,8 @@
   <meta name="twitter:image" content="https://bozkurtacademy.com/images/og-bozkurt-academy.jpg" />
   <link rel="preload" href="/fonts/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/style.css?v=11" />
-  <link rel="stylesheet" href="/css/base.css?v=9" />
+  <link rel="stylesheet" href="/css/style.css?v=12" />
+  <link rel="stylesheet" href="/css/base.css?v=10" />
   <link rel="stylesheet" href="/css/landing.css?v=1" />
   <script type="application/ld+json">
   {
@@ -104,7 +104,7 @@
             "name": "Hiç Almanca bilmiyorum, online derse başlayabilir miyim?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Evet. A1 sıfırdan başlayanlar içindir ve gerektiğinde açıklamaları Türkçe yaparım."
+              "text": "Evet. A1 seviyesi sıfırdan başlayanlar içindir."
             }
           },
           {
@@ -121,6 +121,38 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Sitedeki ücretsiz seviye testini 5 ile 25 dakikada çözebilirsin; sonuç bana ulaşır. İstersen seviyeni ilk derste birlikte de belirleriz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Birebir ders mi, grup dersi mi seçmeliyim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Belirli bir sınav tarihin veya özel bir hedefin varsa birebir ders genellikle daha uygun olur. Düzenli bir program ve birlikte öğrenme ortamı istiyorsan en fazla 6 kişilik grup dersleri iyi bir seçimdir. Ayrıntılar özel ders ve grup dersi sayfalarında."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bir dersi ertelemem veya iptal etmem gerekirse ne olur?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Önceden haber vermen yeterli, yeni bir gün ve saat belirleriz. Dersten önceki son 24 saat içinde yapılan erteleme ve iptallerde o dersin ücreti talep edilir; ücret ödenmediği sürece derslere devam edemiyoruz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hangi sınavlara hazırlanabilirim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Goethe, telc, ÖSD, DTZ ve TestDaF sınavlarına ve okul sınavlarına hazırlanabilirsin. Ayrıntılar sınav hazırlık sayfasında."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Dersler arasında nasıl tekrar yaparım?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sitedeki gramer konu anlatımlarını okuyabilir, alıştırmaları çözebilirsin. Her alıştırma sorusunun cevabında bir açıklama var."
             }
           }
         ]
@@ -209,13 +241,14 @@
 
       <section class="lp-section" aria-labelledby="seviyeler">
         <h2 id="seviyeler">Seviyelere göre online Almanca kursları</h2>
-        <p class="lp-prose">Dersler A1’den B2’ye kadar her seviyeye yöneliktir. Her seviyede neler öğreneceğini kendi sayfasında bulabilirsin.</p>
+        <p class="lp-prose">Avrupa Ortak Dil Çerçevesi’ne (GER/CEFR) göre Almanca seviyeleri A1’den C2’ye kadar ilerler. Dersler A1’den B2’ye kadar her seviyeye yöneliktir. Her seviyede neler öğreneceğini kendi sayfasında bulabilirsin.</p>
         <div class="lp-cards">
-          <a class="lp-card lp-card-link" href="/a1-almanca-kursu/"><span class="lp-card-kicker">A1 · Başlangıç</span><h3>A1 Almanca kursu</h3><p>Sıfırdan başlayanlar, aile birleşimi ve vize için A1 sınavı.</p></a>
+          <a class="lp-card lp-card-link" href="/a1-almanca-kursu/"><span class="lp-card-kicker">A1 · Başlangıç</span><h3>A1 Almanca kursu</h3><p>Sıfırdan başlayanlar ve A1 sınavına hazırlananlar.</p></a>
           <a class="lp-card lp-card-link" href="/a2-almanca-kursu/"><span class="lp-card-kicker">A2 · Temel</span><h3>A2 Almanca kursu</h3><p>Geçmiş zaman, yan cümleler ve günlük yaşamda daha rahat iletişim.</p></a>
           <a class="lp-card lp-card-link" href="/b1-almanca-kursu/"><span class="lp-card-kicker">B1 · Orta</span><h3>B1 Almanca kursu</h3><p>Almanya’da iş, Ausbildung ve günlük yaşam için bağımsız Almanca.</p></a>
           <a class="lp-card lp-card-link" href="/b2-almanca-kursu/"><span class="lp-card-kicker">B2 · Orta üstü</span><h3>B2 Almanca kursu</h3><p>İş hayatı, meslek ve üniversite için akıcı ve doğru Almanca.</p></a>
         </div>
+        <p class="lp-prose lp-after">Seviyelerin gramer konularını ücretsiz okuyabilirsin: <a href="/almanca-gramer/a1/">A1 gramer</a>, <a href="/almanca-gramer/a2/">A2 gramer</a>, <a href="/almanca-gramer/b1/">B1 gramer</a>.</p>
       </section>
 
       <section class="lp-section" aria-labelledby="tur">
@@ -224,6 +257,17 @@
           <p><a href="/almanca-ozel-ders/">Birebir Almanca özel ders</a> tamamen senin hedefine ve hızına göre ilerler; sınav tarihin varsa genellikle en uygun seçenektir. <a href="/almanca-grup-dersi/">Almanca grup dersi</a> ise aynı seviyedeki öğrencilerle yapılır ve düzenli konuşma pratiği sağlar.</p>
           <p>Emin değilsen ilk ücretsiz derste birlikte karar veririz.</p>
         </div>
+        <div class="lp-table-wrap">
+          <table class="lp-table">
+            <thead><tr><th scope="col"><span class="visually-hidden">Özellik</span></th><th scope="col"><a href="/almanca-ozel-ders/">Birebir özel ders</a></th><th scope="col"><a href="/almanca-grup-dersi/">Grup dersi</a></th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Kimlerle</th><td>Sadece eğitmenle</td><td>En fazla 6 kişilik, aynı seviyedeki grupla</td></tr>
+              <tr><th scope="row">Tempo ve içerik</th><td>Hedefine ve hızına göre</td><td>Seviyenin ortak programı</td></tr>
+              <tr><th scope="row">Ders saatleri</th><td>Birlikte esnek planlanır</td><td>Grubun sabit saatleri</td></tr>
+              <tr><th scope="row">En uygun olduğu durum</th><td>Sınav tarihi, özel hedef</td><td>Düzenli pratik, birlikte öğrenme</td></tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section class="lp-section" aria-labelledby="kimler">
@@ -231,7 +275,7 @@
         <div class="lp-split">
           <div class="lp-card"><ul class="ba-checklist">
             <li>Almanya’ya taşınmayı planlayanlar</li>
-            <li>Aile birleşimi için A1 sınavına hazırlananlar</li>
+            <li>Aile birleşimi veya vize başvurusu için Almanca sınavına hazırlananlar</li>
             <li>Almanya’da üniversite okumak isteyen öğrenciler</li>
             <li>Ausbildung yapmayı düşünenler</li>
             <li>Erasmus veya değişim programıyla Almanya’ya gidecek öğrenciler</li>
@@ -266,7 +310,7 @@
           </details>
           <details class="lp-faq-item">
             <summary>Hiç Almanca bilmiyorum, online derse başlayabilir miyim?</summary>
-            <div class="lp-faq-answer"><p>Evet. A1 sıfırdan başlayanlar içindir ve gerektiğinde açıklamaları Türkçe yaparım.</p></div>
+            <div class="lp-faq-answer"><p>Evet. A1 seviyesi sıfırdan başlayanlar içindir.</p></div>
           </details>
           <details class="lp-faq-item">
             <summary>Dersler kaç dakika ve hangi programla yapılıyor?</summary>
@@ -275,6 +319,22 @@
           <details class="lp-faq-item">
             <summary>Seviyemi bilmiyorum, ne yapmalıyım?</summary>
             <div class="lp-faq-answer"><p>Sitedeki ücretsiz seviye testini 5 ile 25 dakikada çözebilirsin; sonuç bana ulaşır. İstersen seviyeni ilk derste birlikte de belirleriz.</p></div>
+          </details>
+          <details class="lp-faq-item">
+            <summary>Birebir ders mi, grup dersi mi seçmeliyim?</summary>
+            <div class="lp-faq-answer"><p>Belirli bir sınav tarihin veya özel bir hedefin varsa birebir ders genellikle daha uygun olur. Düzenli bir program ve birlikte öğrenme ortamı istiyorsan en fazla 6 kişilik grup dersleri iyi bir seçimdir. Ayrıntılar <a href="/almanca-ozel-ders/">özel ders</a> ve <a href="/almanca-grup-dersi/">grup dersi</a> sayfalarında.</p></div>
+          </details>
+          <details class="lp-faq-item">
+            <summary>Bir dersi ertelemem veya iptal etmem gerekirse ne olur?</summary>
+            <div class="lp-faq-answer"><p>Önceden haber vermen yeterli, yeni bir gün ve saat belirleriz. Dersten önceki son 24 saat içinde yapılan erteleme ve iptallerde o dersin ücreti talep edilir; ücret ödenmediği sürece derslere devam edemiyoruz.</p></div>
+          </details>
+          <details class="lp-faq-item">
+            <summary>Hangi sınavlara hazırlanabilirim?</summary>
+            <div class="lp-faq-answer"><p>Goethe, telc, ÖSD, DTZ ve TestDaF sınavlarına ve okul sınavlarına hazırlanabilirsin. Ayrıntılar <a href="/almanca-sinav-hazirlik/">sınav hazırlık</a> sayfasında.</p></div>
+          </details>
+          <details class="lp-faq-item">
+            <summary>Dersler arasında nasıl tekrar yaparım?</summary>
+            <div class="lp-faq-answer"><p>Sitedeki <a href="/almanca-gramer/">gramer konu anlatımlarını</a> okuyabilir, <a href="/#exercises">alıştırmaları</a> çözebilirsin. Her alıştırma sorusunun cevabında bir açıklama var.</p></div>
           </details>
         </div>
         <p class="lp-prose lp-after">Diğer sorular için <a href="/sss/">sıkça sorulan sorular</a> sayfasına bakabilirsin.</p>

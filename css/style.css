@@ -404,7 +404,7 @@
   box-sizing: border-box;
 }
 
-#page-grammar .grammar-hero-copy h1 {
+#page-grammar .grammar-hero-copy :is(h1,.page-title) {
   max-width: 900px;
 }
 

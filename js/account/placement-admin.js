@@ -150,7 +150,7 @@ function renderList(box){
   box.replaceChildren(...[
     cleanupNotice(),
     el('header', { class: 'admin-head' },
-      el('h1', { text: 'Seviye testleri' }),
+      el('h2', { class: 'page-title', text: 'Seviye testleri' }),
       el('p', { class: 'admin-muted', text: 'Bu sayfa sadece öğretmen hesabıyla açılır. Saklama süresi (6 ay) dolan sonuçlar bu sayfa her açıldığında silinir.' })),
     el('div', { class: 'admin-toolbar' },
       el('div', { class: 'field' }, el('label', { for: 'adminSearch', text: 'Ara' }), search),
@@ -228,7 +228,7 @@ function renderDetail(box, d){
     cleanupNotice(),
     back,
     el('header', { class: 'admin-head' },
-      el('h1', { text: d.name }),
+      el('h2', { class: 'page-title', text: d.name }),
       el('p', { class: 'admin-level', 'data-admin-level': true }, 'Tahmini seviye: ', el('strong', { text: levelText(d) }), d.skipped ? ' (testi atladı: “Hiç Almanca bilmiyorum”)' : '')),
     el('div', { class: 'admin-actions' }, readBtn, delBtn),
     confirmBox, status,

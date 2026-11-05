@@ -1,0 +1,22 @@
+/* Blog (/blog/ ve /blog/<yazı>/). Yalnızca yerleşim; renkler ve fontlar css/base.css --ba-* değişkenlerinden. */
+.academy-theme .bl-article{max-width:760px;margin:0 auto}
+.academy-theme .bl-header{margin:0 0 clamp(24px,4vw,40px)}
+.academy-theme .bl-meta{margin:0 0 12px;color:var(--ba-muted);font-size:var(--ba-small);font-weight:600}
+.academy-theme .bl-body{max-width:none}
+.academy-theme .lp-main .bl-body h2{font-size:clamp(1.75rem,1.3rem + 1.6vw,2.5rem);margin:clamp(32px,5vw,48px) 0 16px}
+.academy-theme .lp-main .bl-body h3{margin:24px 0 8px}
+.academy-theme .bl-body :is(p,li){line-height:1.7}
+.academy-theme .bl-body table{width:100%;border-collapse:collapse;margin:16px 0 24px;background:var(--ba-paper);border-radius:var(--ba-radius-small);overflow:hidden}
+.academy-theme .bl-body :is(th,td){padding:10px 14px;text-align:left;vertical-align:top;border-bottom:2px solid var(--ba-ground)}
+.academy-theme .bl-body .bl-table-wrap{overflow-x:auto}
+.academy-theme .bl-body [lang="de"]{font-weight:600}
+.academy-theme .bl-draft{margin:0 0 20px;padding:12px 16px;background:var(--ba-paper-2);border-left:4px solid var(--ba-accent);border-radius:var(--ba-radius-small);font-weight:600}
+.academy-theme .bl-badge{display:inline-block;padding:1px 8px;border-radius:999px;background:var(--ba-accent);color:var(--ba-accent-ink);font-size:var(--ba-small);font-weight:600}
+.academy-theme .bl-list{list-style:none;margin:0;padding:0;display:grid;gap:var(--ba-gutter);max-width:860px}
+.academy-theme .lp-main .bl-list a{display:grid;gap:6px;padding:20px 24px;background:var(--ba-paper);border-radius:var(--ba-radius);color:var(--ba-ink);text-decoration:none;font-weight:400}
+.academy-theme .lp-main .bl-list a:hover{background:var(--ba-paper-2)}
+.academy-theme .bl-list strong{font-family:var(--ba-serif);font-size:var(--ba-lead);font-weight:600;line-height:1.3}
+.academy-theme .lp-main .bl-list a:hover strong{text-decoration:underline;text-underline-offset:4px}
+.academy-theme .bl-list span{color:var(--ba-muted);font-size:var(--ba-small);line-height:1.5}
+.academy-theme .bl-item-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.academy-theme .lp-main .lp-cta p a:not(.btn){color:var(--ba-field-ink)}

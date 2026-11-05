@@ -97,6 +97,7 @@ curl -X POST -H 'Authorization: Bearer owner' -H 'Content-Type: application/json
 |---|---|
 | `firestore.rules` | Bütün yetki kuralları (öğretmen UID'i burada) |
 | `tests/firestore.rules.test.mjs` | Kural testleri |
+| `scripts/build-pages.mjs`, `scripts/grammar-pages.mjs` | Statik sayfalar ve sitemap. Gramer sayfaları (`/almanca-gramer/…`) `data/<seviye>-grammar.json` ve `data/catalog.json`'dan, SPA ile aynı şablonla (`js/a1-lessons.js` → `articleHtml`) üretilir; ders verisi değişince `node scripts/build-pages.mjs` çalıştır (CI: `--check`) |
 | `js/comments.js`, `js/account/comments-admin.js` | Gramer dersi yorumları ve onay sayfası `/yonetim/yorumlar/` (docs/grammar-comments.md) |
 | `js/account/config.js` | Firebase yapılandırması, öğretmen UID'i |
 | `js/account/firebase.js` | SDK'yı CDN'den (gstatic, sabit sürüm) yükler, emülatör bağlantısı |

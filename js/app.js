@@ -1535,8 +1535,29 @@ function writePageHistory(page, mode='push'){
 // Bu bölümler artık ayrı sayfalar; eski bağlantılar ve showPage('contact') gibi çağrılar oraya gider.
 const BA_MOVED = {lessons:'/online-almanca-dersi/', about:'/hakkimda/', contact:'/iletisim/'};
 
+// Gramer dersleri statik sayfalarda: #grammar/A1 → /almanca-gramer/a1/,
+// #grammar/A1/artikel/3 → /almanca-gramer/a1/artikel/#a1-step-2 (3. bölüm). index.html'deki ilk yönlendirmeyle aynı kural.
+function baGrammarUrl(hash){
+  const p=String(hash||'').replace(/^#/,'').split('/');
+  // Yalın #grammar SPA'da kalır (konu ve ders bölümü araması); yalnızca #grammar/... adresleri yönlenir.
+  if(p[0]!=='grammar' || p.length<2) return null;
+  let url='/almanca-gramer/';
+  const level=(p[1]||'').toLowerCase();
+  if(/^(a1|a2|b1)$/.test(level)){
+    url+=level+'/';
+    if(p[2]){
+      url+=encodeURIComponent(decodeURIComponent(p[2]))+'/';
+      if(/^[0-9]{1,2}$/.test(p[3]||'') && Number(p[3])>0) url+='#a1-step-'+(Number(p[3])-1);
+    }
+  }
+  return url;
+}
+// Uygulamanın içinden açılan #grammar/... bağlantıları (alıştırma, sınav, seviye testi, arama) da statik sayfaya gider.
+window.addEventListener('hashchange',()=>{const url=baGrammarUrl(location.hash);if(url)location.replace(url);});
+
 function showPage(page, options={}){
   if(BA_MOVED[page]){ location.assign(BA_MOVED[page]); return; }
+  if(page==='grammar'){ const url=baGrammarUrl(location.hash); if(url){ location.assign(url); return; } }
   const {historyMode='push', scroll=true} = options;
   document.body.dataset.baPage = page;
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));

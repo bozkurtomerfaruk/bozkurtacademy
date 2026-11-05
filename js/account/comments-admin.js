@@ -3,7 +3,7 @@
 // Asıl koruma firestore.rules içindedir. Bu sayfa öğretmen olmayan bir hesapla açılırsa hiçbir sorgu çalıştırmaz.
 import { auth, configured, fa } from './firebase.js';
 import { TEACHER_UID } from './config.js';
-import { createModeration, permissionMessage } from './comments-moderation.js?v=1';
+import { createModeration, permissionMessage } from './comments-moderation.js?v=2';
 
 const $ = (id) => document.getElementById(id);
 

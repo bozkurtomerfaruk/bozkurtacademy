@@ -6,7 +6,7 @@
  const dataPromises={};
  function load(level='A1') {
    if (!/^[AB][12]$/.test(level)) return Promise.reject(Error('Geçersiz seviye'));
-   if (!dataPromises[level]) dataPromises[level] = fetch('data/'+level.toLowerCase()+'-grammar.json?v=6').then(r=>{if(!r.ok)throw Error('Dersler yüklenemedi');return r.json();}).catch(e=>{delete dataPromises[level];throw e;});
+   if (!dataPromises[level]) dataPromises[level] = fetch('/data/'+level.toLowerCase()+'-grammar.json?v=6').then(r=>{if(!r.ok)throw Error('Dersler yüklenemedi');return r.json();}).catch(e=>{delete dataPromises[level];throw e;});
    return dataPromises[level];
  }
  const tiles = (items,cls='') => `<div class="lesson-diagram-tiles ${cls}">${items.map(([main,sub])=>`<div><strong lang="de">${h(main)}</strong><span>${h(sub)}</span></div>`).join('')}</div>`;
@@ -24,29 +24,38 @@
    if(f.type==='comparison') {body='<svg viewBox="0 0 480 230" role="img" aria-label="Üç sütun: klein, kleiner, am kleinsten"><rect x="40" y="35" width="90" height="125"/><rect x="195" y="75" width="90" height="85"/><rect x="350" y="115" width="90" height="45"/><text x="85" y="195">klein</text><text x="240" y="195">kleiner</text><text x="395" y="195">am kleinsten</text></svg>';caption='Soldan sağa boy küçülür: küçük → daha küçük → en küçük.';}
    return body?`<figure class="a1-figure ${h(f.type)}">${body}<figcaption>${h(caption)}</figcaption></figure>`:'';
  }
- function section(s,i) {
-   return `<section class="a1-section" id="a1-step-${i}"><h3>${h(s.title)}</h3>${s.paragraphs.map(p=>`<p>${h(p)}</p>`).join('')}${s.table?`<div class="a1-table-wrap" tabindex="0" role="region" aria-label="${h(s.title)} tablosu"><table><thead><tr>${s.table.headers.map(x=>`<th scope="col">${h(x)}</th>`).join('')}</tr></thead><tbody>${s.table.rows.map(row=>`<tr>${row.map((x,j)=>j===0?`<th scope="row">${h(x)}</th>`:`<td>${h(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`:''}${s.figure?figure(s.figure):''}${s.examples?`<div class="a1-examples">${s.examples.map(e=>`<div class="a1-example"><p lang="de">${h(e.de)}</p><p>${h(e.tr)}</p>${e.note?`<small>${h(e.note)}</small>`:''}</div>`).join('')}</div>`:''}</section>`;
+ function section(s,i,H='h3') {
+   return `<section class="a1-section" id="a1-step-${i}"><${H}>${h(s.title)}</${H}>${s.paragraphs.map(p=>`<p>${h(p)}</p>`).join('')}${s.table?`<div class="a1-table-wrap" tabindex="0" role="region" aria-label="${h(s.title)} tablosu"><table><thead><tr>${s.table.headers.map(x=>`<th scope="col">${h(x)}</th>`).join('')}</tr></thead><tbody>${s.table.rows.map(row=>`<tr>${row.map((x,j)=>j===0?`<th scope="row">${h(x)}</th>`:`<td>${h(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`:''}${s.figure?figure(s.figure):''}${s.examples?`<div class="a1-examples">${s.examples.map(e=>`<div class="a1-example"><p lang="de">${h(e.de)}</p><p>${h(e.tr)}</p>${e.note?`<small>${h(e.note)}</small>`:''}</div>`).join('')}</div>`:''}</section>`;
+ }
+
+ // Lesson pages: the SPA (#grammar, render) and the static pages /almanca-gramer/<level>/<id>/ built by
+ // scripts/build-pages.mjs share this template, so both show the same text from data/<level>-grammar.json.
+ // opts.static: H1 title, H2 section headings, real page links, no in-article breadcrumb (the page has one).
+ const lessonPath=(level,id)=>'/almanca-gramer/'+String(level).toLowerCase()+'/'+(id?id+'/':'');
+ function articleHtml(lesson,data,level,opts={}) {
+   const S=Boolean(opts.static),H=S?'h2':'h3',id=lesson.id,key=level+'/'+id;
+   return `<article class="a1-article${S?' a1-article--static':''}" lang="tr"${S?` data-static-lesson="${h(key)}" data-title="${h(lesson.title)}"`:''}>
+     ${S?'':`<div class="a1-breadcrumb"><button type="button" data-a1-back>Gramer</button><span>› ${h(level)} › ${h(lesson.title)}</span></div>`}
+     <header class="a1-article-header">${S?`<h1>${h(lesson.title)}</h1>`:`<h2 tabindex="-1">${h(lesson.title)}</h2>`}<p class="a1-lead">${h(lesson.lead)}</p></header>
+     <nav class="a1-contents" aria-label="Bu anlatımda"><strong>Bu anlatımda</strong>${lesson.sections.map((s,i)=>`<a href="#a1-step-${i}" data-a1-scroll="a1-step-${i}">${h(s.title)}</a>`).join('')}<a href="#a1-faq" data-a1-scroll="a1-faq">Sık sorulan sorular</a></nav>
+     ${lesson.sections.map((s,i)=>section(s,i,H)).join('')}
+     <section class="a1-section a1-summary"><${H}>Kısa tekrar</${H}><ul>${lesson.summary.map(x=>`<li>${h(x)}</li>`).join('')}</ul><details class="a1-check"><summary>Kendini kontrol et: ${h(lesson.check.question)}</summary><p><strong lang="de">${h(lesson.check.answer)}</strong></p><p>${h(lesson.check.why)}</p></details></section>
+     <section class="a1-practice"><${H}>Konuyu alıştırmalarla pekiştir</${H}><p>Örnekleri anladıysan kısa sorularla devam et. Yanlış yaptığında cevap açıklamasını okuyup bu anlatıma dönebilirsin.</p><a class="btn primary" data-a1-practice href="${S?'/':''}#exercises/${h(level)}/${h(id)}">${h(lesson.title)} alıştırmaları →</a><p class="a1-practice-status" role="status"></p></section>
+     <section class="a1-section" id="a1-faq"><${H}>Sık sorulan sorular</${H}>${lesson.faq.map(f=>`<details class="a1-faq"><summary>${h(f.question)}</summary><p>${h(f.answer)}</p></details>`).join('')}</section>
+     <section class="a1-section"><${H}>Benzer ve bağlantılı konular</${H}><div class="a1-related">${lesson.related.map(key=>{const item=data.lessons.find(l=>l.id===key);return `<a href="${S?lessonPath(level,key):`#grammar/${h(level)}/${h(key)}`}" data-a1-related="${h(key)}">${h(item.title)} <span aria-hidden="true">→</span></a>`}).join('')}</div></section>
+     <aside class="a1-author"><picture><source type="image/webp" srcset="/images/omer-faruk-avatar.webp"><img src="/images/omer-faruk-avatar.jpg" width="84" height="84" loading="lazy" decoding="async" alt="Almanca eğitmeni Ömer Faruk Bozkurt" onerror="this.onerror=null;this.parentNode.querySelectorAll('source').forEach(function(s){s.remove()})"></picture><div><${H}>Ömer Faruk Bozkurt</${H}><p class="a1-author-role">Almanca eğitmeni</p><p>Almanya’da yaşıyor, online Almanca dersleri veriyorum. Derslerimde konuları açık örnekler, düzenli tekrar ve günlük kullanım üzerinden ele alıyorum.</p><a href="/hakkimda/">Hakkımda daha fazla bilgi →</a></div></aside>
+     ${lesson.reading?`<p class="a1-reading">Ek okuma: <a href="${h(lesson.reading)}" target="_blank" rel="noopener noreferrer">${h(lesson.readingTitle || 'Deutsch mit Anna · '+lesson.title)}</a> (Almanca). Bu sayfadaki Türkçe anlatım ve örnekler Bozkurt Academy için hazırlanmıştır.</p>`:''}
+     <section class="a1-section a1-comments-published" hidden><${H}>Öğrenci yorumları</${H}><div class="a1-comment-list"></div></section>
+     <section class="a1-section a1-comments"><${H}>Soru ve yorumlar</${H}><p>Konuda takıldığın yeri veya öğrenme deneyimini paylaşabilirsin. Yorumlar incelemeden sonra yayımlanır; e-posta adresin gösterilmez.</p>
+       <form class="a1-comment-form" novalidate><div class="a1-comment-fields"><label>Adın<input name="name" autocomplete="name" maxlength="60" required></label><label>E-posta adresin<input name="email" type="email" autocomplete="email" maxlength="254" required></label></div><label>Yorumun<textarea name="comment" rows="5" minlength="10" maxlength="2000" required></textarea></label><div class="a1-honeypot" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div><label class="a1-consent"><input name="consent" type="checkbox" required><span>Yorumumun incelenip adımla bu konuda yayımlanmasını kabul ediyorum. E-posta adresim yalnızca yorumum hakkında iletişim için kullanılabilir.</span></label><button class="btn primary" type="submit">Yorumu gönder</button><p class="a1-comment-status" role="status" aria-live="polite"></p></form>
+     </section>${S?`<a class="btn ghost" href="${lessonPath(level)}">← ${h(level)} gramer konularına dön</a>`:`<button class="btn ghost" type="button" data-a1-back>← ${h(level)} gramer konularına dön</button>`}
+   </article>`;
  }
  async function render(container,id,openRelated,level='A1') {
    const data=await load(level);const lesson=data.lessons.find(l=>l.id===id);
    if(container.dataset.lesson!==level+'/'+id)return null;
    if(!lesson)throw Error('Konu bulunamadı');
-   container.innerHTML=`<article class="a1-article" lang="tr">
-     <div class="a1-breadcrumb"><button type="button" data-a1-back>Gramer</button><span>› ${h(level)} › ${h(lesson.title)}</span></div>
-     <header class="a1-article-header"><h2 tabindex="-1">${h(lesson.title)}</h2><p class="a1-lead">${h(lesson.lead)}</p></header>
-     <nav class="a1-contents" aria-label="Bu anlatımda"><strong>Bu anlatımda</strong>${lesson.sections.map((s,i)=>`<a href="#a1-step-${i}" data-a1-scroll="a1-step-${i}">${h(s.title)}</a>`).join('')}<a href="#a1-faq" data-a1-scroll="a1-faq">Sık sorulan sorular</a></nav>
-     ${lesson.sections.map(section).join('')}
-     <section class="a1-section a1-summary"><h3>Kısa tekrar</h3><ul>${lesson.summary.map(x=>`<li>${h(x)}</li>`).join('')}</ul><details class="a1-check"><summary>Kendini kontrol et: ${h(lesson.check.question)}</summary><p><strong lang="de">${h(lesson.check.answer)}</strong></p><p>${h(lesson.check.why)}</p></details></section>
-     <section class="a1-practice"><h3>Konuyu alıştırmalarla pekiştir</h3><p>Örnekleri anladıysan kısa sorularla devam et. Yanlış yaptığında cevap açıklamasını okuyup bu anlatıma dönebilirsin.</p><a class="btn primary" data-a1-practice href="#exercises/${h(level)}/${h(id)}">${h(lesson.title)} alıştırmaları →</a><p class="a1-practice-status" role="status"></p></section>
-     <section class="a1-section" id="a1-faq"><h3>Sık sorulan sorular</h3>${lesson.faq.map(f=>`<details class="a1-faq"><summary>${h(f.question)}</summary><p>${h(f.answer)}</p></details>`).join('')}</section>
-     <section class="a1-section"><h3>Benzer ve bağlantılı konular</h3><div class="a1-related">${lesson.related.map(key=>{const item=data.lessons.find(l=>l.id===key);return `<a href="#grammar/${h(level)}/${h(key)}" data-a1-related="${h(key)}">${h(item.title)} <span aria-hidden="true">→</span></a>`}).join('')}</div></section>
-     <aside class="a1-author"><picture><source type="image/webp" srcset="images/omer-faruk-avatar.webp"><img src="images/omer-faruk-avatar.jpg" width="84" height="84" loading="lazy" decoding="async" alt="Almanca eğitmeni Ömer Faruk Bozkurt" onerror="this.onerror=null;this.parentNode.querySelectorAll('source').forEach(function(s){s.remove()})"></picture><div><h3>Ömer Faruk Bozkurt</h3><p class="a1-author-role">Almanca eğitmeni</p><p>Almanya’da yaşıyor, online Almanca dersleri veriyorum. Derslerimde konuları açık örnekler, düzenli tekrar ve günlük kullanım üzerinden ele alıyorum.</p><a href="/hakkimda/">Hakkımda daha fazla bilgi →</a></div></aside>
-     ${lesson.reading?`<p class="a1-reading">Ek okuma: <a href="${h(lesson.reading)}" target="_blank" rel="noopener noreferrer">${h(lesson.readingTitle || 'Deutsch mit Anna · '+lesson.title)}</a> (Almanca). Bu sayfadaki Türkçe anlatım ve örnekler Bozkurt Academy için hazırlanmıştır.</p>`:''}
-     <section class="a1-section a1-comments-published" hidden><h3>Öğrenci yorumları</h3><div class="a1-comment-list"></div></section>
-     <section class="a1-section a1-comments"><h3>Soru ve yorumlar</h3><p>Konuda takıldığın yeri veya öğrenme deneyimini paylaşabilirsin. Yorumlar incelemeden sonra yayımlanır; e-posta adresin gösterilmez.</p>
-       <form class="a1-comment-form" novalidate><div class="a1-comment-fields"><label>Adın<input name="name" autocomplete="name" maxlength="60" required></label><label>E-posta adresin<input name="email" type="email" autocomplete="email" maxlength="254" required></label></div><label>Yorumun<textarea name="comment" rows="5" minlength="10" maxlength="2000" required></textarea></label><div class="a1-honeypot" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div><label class="a1-consent"><input name="consent" type="checkbox" required><span>Yorumumun incelenip adımla bu konuda yayımlanmasını kabul ediyorum. E-posta adresim yalnızca yorumum hakkında iletişim için kullanılabilir.</span></label><button class="btn primary" type="submit">Yorumu gönder</button><p class="a1-comment-status" role="status" aria-live="polite"></p></form>
-     </section><button class="btn ghost" type="button" data-a1-back>← ${h(level)} gramer konularına dön</button>
-   </article>`;
+   container.innerHTML=articleHtml(lesson,data,level);
    container.querySelectorAll('[data-a1-related]').forEach(link=>link.addEventListener('click',e=>{e.preventDefault();openRelated(link.dataset.a1Related);}));
    container.querySelectorAll('[data-a1-scroll]').forEach(link=>link.addEventListener('click',e=>{e.preventDefault();container.querySelector('#'+link.dataset.a1Scroll)?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});}));
    container.querySelector('[data-a1-practice]').addEventListener('click',async e=>{
@@ -71,7 +80,7 @@
    if(row.reply){const reply=el('div','a1-comment-reply');reply.append(el('strong','','Ömer Faruk Bozkurt'),el('p','',String(row.reply)));article.append(reply);}
    return article;
  }
- function lessonLink(level,id){return 'https://bozkurtacademy.com/#grammar/'+level+'/'+id;}
+ function lessonLink(level,id){return 'https://bozkurtacademy.com'+lessonPath(level,id);}
  async function setupComments(container,lesson,level) {
    const published=container.querySelector('.a1-comments-published');const list=published.querySelector('.a1-comment-list');
    const commentsSection=container.querySelector('.a1-comments');
@@ -106,5 +115,19 @@
      finally{submitting=false;button.disabled=false;}
    });
  }
- window.BAA1Lessons={load,render};
+ // Static lesson pages: the article is already in the HTML; wire the contents links and the comments.
+ function enhanceStatic(){
+   const article=document.querySelector('[data-static-lesson]');if(!article)return;
+   const [level,id]=article.dataset.staticLesson.split('/');
+   article.dataset.lesson=article.dataset.staticLesson;
+   article.querySelectorAll('[data-a1-scroll]').forEach(link=>link.addEventListener('click',e=>{e.preventDefault();const target=article.querySelector('#'+link.dataset.a1Scroll);if(!target)return;target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});history.replaceState(null,'','#'+link.dataset.a1Scroll);}));
+   setupComments(article,{id,title:article.dataset.title},level);
+   // Arama sonucundan veya eski #grammar/A1/artikel/3 bağlantısından gelindiyse o bölümün başlığına odaklan.
+   const target=/^#a1-(step-\d{1,2}|faq)$/.test(location.hash)?article.querySelector(location.hash):null;
+   const heading=target?.querySelector('h2,h3');
+   // Tarayıcı yükleme sonunda adresteki bölüme kendisi kaydırır ve odağı sıfırlar; bu yüzden yüklemeden sonra odaklanılır.
+   if(heading){const go=()=>setTimeout(()=>{heading.tabIndex=-1;target.scrollIntoView({block:'start'});heading.focus({preventScroll:true});},0);if(document.readyState==='complete')go();else window.addEventListener('load',go,{once:true});}
+ }
+ if(typeof document!=='undefined'){if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',enhanceStatic);else enhanceStatic();}
+ window.BAA1Lessons={load,render,articleHtml,lessonPath};
 })();

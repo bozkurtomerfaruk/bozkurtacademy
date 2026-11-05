@@ -130,3 +130,12 @@
 .grammar-return{margin:-12px 0 28px}
 .a1-article .grammar-return-link{text-decoration:none;white-space:normal;text-align:left}
 .a1-practice .grammar-return-link{margin:0 10px 10px 0}
+
+/* Static lesson pages (/almanca-gramer/<level>/<id>/): the same sheet with H1 title and H2 section headings.
+   Selectors carry .academy-theme so they win over the generic .page h1/h2 rules in base.css. */
+.academy-theme #page-grammar .a1-article--static .a1-article-header h1{font-family:var(--ba-serif);font-weight:400;font-size:clamp(2.125rem,1.4rem + 3vw,3.5rem);line-height:1.08;letter-spacing:-.022em;margin:0 0 20px;max-width:none;overflow-wrap:anywhere}
+.academy-theme #page-grammar .a1-article--static h2{font-family:var(--ba-serif);font-size:clamp(1.5rem,1.2rem + 1vw,1.875rem);font-weight:600;line-height:1.25;letter-spacing:-.012em;margin:0 0 18px;max-width:none;color:var(--ba-ink)}
+.academy-theme #page-grammar .a1-article--static .a1-summary h2{color:var(--ba-field-ink)}
+.academy-theme #page-grammar .a1-article--static .a1-practice h2{margin-top:0}
+.academy-theme #page-grammar .a1-article--static .a1-author h2{margin:0 0 2px;font-size:var(--ba-lead)}
+.a1-article--static :is(.a1-section,.a1-practice){scroll-margin-top:96px}

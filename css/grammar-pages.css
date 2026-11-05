@@ -1,0 +1,33 @@
+/* Statik gramer sayfaları (/almanca-gramer/…): konu listeleri, ders sayfası düzeni, önceki/sonraki ders.
+   Yalnızca yerleşim; renkler ve fontlar css/base.css içindeki --ba-* değişkenlerinden gelir. */
+.academy-theme .gr-main{margin:0 auto;padding:clamp(16px,3vw,32px) 0 0}
+.academy-theme .gr-main .lp-breadcrumb ol{max-width:860px;margin-left:auto;margin-right:auto}
+.academy-theme .gr-main #page-grammar{display:block}
+
+/* Konu listesi */
+.academy-theme .gr-list{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:8px}
+.academy-theme .gr-list a{display:flex;gap:16px;align-items:flex-start;height:100%;padding:16px 20px;background:var(--ba-paper);border-radius:var(--ba-radius-small);color:var(--ba-ink);text-decoration:none;transition:background-color .2s}
+.academy-theme .gr-list a:hover{background:var(--ba-paper-2)}
+.academy-theme .gr-list a:hover strong{text-decoration:underline;text-underline-offset:4px}
+.academy-theme .gr-num{flex:none;min-width:2ch;font-family:var(--ba-serif);font-size:var(--ba-lead);line-height:1.3;color:var(--ba-accent)}
+.academy-theme .gr-text{display:grid;gap:4px}
+.academy-theme .gr-text strong{font-weight:600;line-height:1.35}
+.academy-theme .gr-text span{color:var(--ba-muted);font-size:var(--ba-small);line-height:1.5}
+.academy-theme .gr-level-head{max-width:70ch}
+.academy-theme .gr-level-head h2 a{color:inherit;text-decoration:none}
+.academy-theme .gr-level-head h2 a:hover{text-decoration:underline;text-underline-offset:6px}
+.academy-theme .gr-level-links{display:flex;flex-wrap:wrap;gap:8px 24px}
+
+/* Önceki / sonraki ders */
+.academy-theme .gr-pager{display:grid;grid-template-columns:1fr 1fr;gap:var(--ba-gutter);max-width:860px;margin:var(--ba-gutter) auto 0}
+.academy-theme .gr-pager a{display:grid;gap:4px;padding:18px 22px;background:var(--ba-paper);border-radius:var(--ba-radius-small);color:var(--ba-ink);text-decoration:none}
+.academy-theme .gr-pager a:hover{background:var(--ba-paper-2)}
+.academy-theme .gr-pager span{color:var(--ba-muted);font-size:var(--ba-small);font-weight:600}
+.academy-theme .gr-pager strong{font-weight:600;line-height:1.35}
+.academy-theme .gr-next{text-align:right}
+.academy-theme .gr-cta{max-width:860px;margin-left:auto;margin-right:auto;box-sizing:border-box}
+.academy-theme .gr-cta a:not(.btn){color:var(--ba-field-ink);font-weight:600;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:620px){.academy-theme .gr-pager{grid-template-columns:1fr}.academy-theme .gr-next{text-align:left}}
+/* .lp-main içindeki liste linklerinin alt çizgisi kart gibi görünen konu listesinde kullanılmaz */
+.academy-theme .lp-main .gr-list li a:not(.btn){text-decoration:none;font-weight:400;color:var(--ba-ink)}
+.academy-theme .lp-main .gr-list li a:not(.btn):hover strong{text-decoration:underline;text-underline-offset:4px}

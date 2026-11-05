@@ -92,7 +92,7 @@ export function createModeration({ pendingList, approvedList, onCounts = () => {
     const meta = el('p', 'ca-meta');
     const [level, id] = String(data.lesson || '').split('/');
     const link = el('a', '', `${level} · ${titles[data.lesson] || id || data.lesson}`);
-    link.href = `/#grammar/${level}/${id}`;
+    link.href = `/almanca-gramer/${String(level).toLowerCase()}/${id}/`;
     link.target = '_blank';
     link.rel = 'noopener';
     meta.append(link, el('span', '', fmt(data.createdAt)));

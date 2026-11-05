@@ -1,13 +1,13 @@
 # Gramer yorumlarının yönetimi
 
-Öğrenci, ders sayfasının altındaki formdan ad, e-posta ve yorum gönderir (`js/a1-lessons.js` → `js/comments.js`).
+Öğrenci, ders sayfasının altındaki formdan ad, e-posta ve yorum gönderir (`js/a1-lessons.js` → `js/comments.js`). Ders sayfaları statiktir: `/almanca-gramer/<seviye>/<ders>/`; eski `#grammar/A1/artikel` bağlantıları oraya yönlenir. Firestore'daki ders anahtarı değişmez: `A1/artikel`.
 
 1. **Kayıt:** Firebase SDK'sı yalnızca gönderimde yüklenir. Anonim, geçici bir oturumla Firestore'daki `comments`
    koleksiyonuna şu alanlar yazılır: `lesson` (ör. `A1/artikel`), `name`, `comment`, `status: "pending"`,
    `createdAt` (sunucu saati). Aynı batch'te `commentLimits/{uid}` yazılır: aynı oturumdan dakikada en fazla bir yorum.
    **E-posta adresi Firestore'a yazılmaz.**
 2. **Bildirim:** Kayıttan sonra Web3Forms öğretmene e-posta gönderir. E-postada ad, e-posta (yanıtla adresi), yorum,
-   `ders`, `ders_linki`, `onay_paneli` (`https://bozkurtacademy.com/yonetim/yorumlar/`) ve `kayit_no` (Firestore belge kimliği)
+   `ders`, `ders_linki` (statik ders sayfası), `onay_paneli` (`https://bozkurtacademy.com/yonetim/yorumlar/`) ve `kayit_no` (Firestore belge kimliği)
    alanları bulunur. E-postada `kayit_no` varsa yorum Firestore'a yazılmıştır.
    Bildirim gönderilemezse yorum yine kayıtlıdır ve panelde görünür.
 3. **Onay:** Öğretmen panelinde (`ogretmen.html#yorumlar`) **Yorumlar** sekmesi veya `/yonetim/yorumlar/` sayfası.

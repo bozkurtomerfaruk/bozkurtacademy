@@ -42,6 +42,7 @@
   - Dinle, ses kapalı, ses yok;
   - derin bağlantı, kayıt yazılamazken oyun, dışarıya gönderim yok;
   - TR/DE/EN, 390/1440 açık/koyu, taşma.
+- **Seviye testi testi:** `npm run test:placement` gramer yorumları değişikliğinden (`3fc5be1`) beri gizlilik bölümünde 18 kontrolde kalıyordu ("İki istisna" cümlesi, yorum silme için eklenen 5. e-posta bağlantısı). Beklentiler metnin bugünkü hâline göre düzeltildi; 233 kontrol geçti.
 - **Durum:** PR açıldı, onayını bekliyor. Kayıp Harf Treni sonra ikinci oyun olarak eklenecek.
 
 ## 2026-11-04 · Seviye sonu sınavı: B1 (madde 4'ün son adımı)

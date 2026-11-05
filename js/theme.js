@@ -1,5 +1,10 @@
 (() => {
  'use strict';
+ // Site PWA olarak kurulmasın diye service worker kullanmıyor. Daha önce bir worker kaydetmiş
+ // tarayıcılarda kalan kayıtları temizler. (Manifest notu: README.md › "PWA / uygulama kurulumu")
+ if ('serviceWorker' in navigator) {
+   navigator.serviceWorker.getRegistrations().then(rs => rs.forEach(r => r.unregister())).catch(() => {});
+ }
  document.addEventListener('DOMContentLoaded', () => {
    const themeButton = document.getElementById('themeToggle');
    function updateThemeButton() {

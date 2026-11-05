@@ -14,7 +14,7 @@ import { GRAMMAR_DATE, grammarPages, grammarBody, lessonSchema, lessonFaq } from
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const check = process.argv.includes('--check');
 const SITEMAP_DATE = '2026-11-04';
-const V = { style: 12, base: 10, landing: 1, app: 32, theme: 9, analytics: 6, a1lessons: 18, a1css: 8, grammarPages: 1 };
+const V = { style: 12, base: 10, landing: 1, app: 32, theme: 10, analytics: 6, a1lessons: 18, a1css: 8, grammarPages: 1 };
 const OG_IMAGE = `${SITE}/images/og-bozkurt-academy.jpg`;
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -171,7 +171,7 @@ function head(page, html) {
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3">
-  <link rel="manifest" href="/site.webmanifest">
+  <!-- Manifest bilerek yok (PWA kurulumu kapalı). Play Store uygulaması çıkınca geri eklenecek: README.md › "PWA / uygulama kurulumu". -->
   <meta property="og:type" content="${page.ogType || 'website'}" />
   <meta property="og:site_name" content="Bozkurt Academy" />
   <meta property="og:locale" content="tr_TR" />

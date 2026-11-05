@@ -1,9 +1,9 @@
 name: Grammar coverage
 on:
   push:
-    paths: ['data/**', 'scripts/check-grammar.mjs', 'scripts/build-search-index.mjs', 'scripts/sozluk.mjs', 'scripts/check-level-exams.mjs', 'docs/sozluk-kontrol.csv', 'docs/sozluk-bekleyen.csv', '.github/workflows/grammar-coverage.yml']
+    paths: ['data/**', 'scripts/check-grammar.mjs', 'scripts/build-search-index.mjs', 'scripts/sozluk.mjs', 'scripts/check-level-exams.mjs', 'scripts/check-kids-games.mjs', 'docs/sozluk-kontrol.csv', 'docs/sozluk-bekleyen.csv', '.github/workflows/grammar-coverage.yml']
   pull_request:
-    paths: ['data/**', 'scripts/check-grammar.mjs', 'scripts/build-search-index.mjs', 'scripts/sozluk.mjs', 'scripts/check-level-exams.mjs', 'docs/sozluk-kontrol.csv', 'docs/sozluk-bekleyen.csv', '.github/workflows/grammar-coverage.yml']
+    paths: ['data/**', 'scripts/check-grammar.mjs', 'scripts/build-search-index.mjs', 'scripts/sozluk.mjs', 'scripts/check-level-exams.mjs', 'scripts/check-kids-games.mjs', 'docs/sozluk-kontrol.csv', 'docs/sozluk-bekleyen.csv', '.github/workflows/grammar-coverage.yml']
 jobs:
   coverage:
     runs-on: ubuntu-latest
@@ -13,3 +13,4 @@ jobs:
       - run: node scripts/build-search-index.mjs --check
       - run: node scripts/sozluk.mjs --check
       - run: node scripts/check-level-exams.mjs
+      - run: node scripts/check-kids-games.mjs

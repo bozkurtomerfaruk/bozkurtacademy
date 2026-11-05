@@ -3,8 +3,8 @@
 #page-seviye-sonu .le-wrap{max-width:980px;margin:0 auto;padding-top:clamp(24px,4vw,48px);padding-bottom:clamp(32px,5vw,64px)}
 #page-seviye-sonu .le-head{display:grid;gap:8px;margin:0 0 20px}
 #page-seviye-sonu .le-kicker{margin:0;color:var(--ba-muted);font-size:var(--ba-small);font-weight:600}
-#page-seviye-sonu h1{margin:0;font-family:var(--ba-serif);font-weight:600;font-size:clamp(28px,4vw,42px);line-height:1.15;color:var(--ba-ink)}
-#page-seviye-sonu h1:focus{outline:none}
+#page-seviye-sonu :is(h1,.page-title){margin:0;font-family:var(--ba-serif);font-weight:600;font-size:clamp(28px,4vw,42px);line-height:1.15;color:var(--ba-ink)}
+#page-seviye-sonu :is(h1,.page-title):focus{outline:none}
 #page-seviye-sonu h2{margin:28px 0 10px;font-family:var(--ba-serif);font-weight:600;font-size:var(--ba-lead);color:var(--ba-ink)}
 #page-seviye-sonu .le-lead{margin:0;color:var(--ba-ink);font-size:var(--ba-lead);line-height:1.5;max-width:70ch}
 #page-seviye-sonu .le-info{display:grid;gap:8px;margin:0 0 24px;padding:18px 22px 18px 40px;border-radius:var(--ba-radius);background:var(--ba-paper);color:var(--ba-ink);line-height:1.5}

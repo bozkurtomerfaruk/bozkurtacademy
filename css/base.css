@@ -55,6 +55,8 @@ body.academy-theme{
 /* Page headings and the hero every inner page starts with */
 .academy-theme .page:not(#page-home) :is(h1,h2){font-family:var(--ba-serif);font-weight:400;letter-spacing:-.022em;line-height:1.08}
 .academy-theme .page:not(#page-home) h1{font-size:var(--ba-display);max-width:16em}
+/* SPA bölüm başlıkları H2 (ana sayfa belgesinde tek H1 kalsın) ama H1 gibi görünür */
+.academy-theme .page:not(#page-home) .page-title{font-size:var(--ba-display);max-width:16em}
 .academy-theme .page:not(#page-home) h2{font-size:var(--ba-head)}
 .academy-theme .page:not(#page-home) :is(h3,h4){font-family:var(--ba-serif);font-weight:600;letter-spacing:-.01em;line-height:1.25}
 .academy-theme .page:not(#page-home) p{line-height:1.6}
@@ -62,7 +64,7 @@ body.academy-theme{
 .academy-theme .page-hero{padding:clamp(40px,6vw,88px) 0 clamp(20px,3vw,40px)}
 .academy-theme .page-hero-inner{background:none;color:var(--ba-ink);box-shadow:none;border-radius:0;padding:0}
 .academy-theme .page-hero-inner::after{display:none}
-.academy-theme .page-hero-inner h1{margin:0 0 20px}
+.academy-theme .page-hero-inner :is(h1,.page-title){margin:0 0 20px}
 .academy-theme .page-hero-inner p{color:var(--ba-ink);font-size:var(--ba-lead);line-height:1.5;max-width:40ch}
 .academy-theme .page:not(#page-home)>section.block{padding:clamp(32px,5vw,64px) 0}
 .academy-theme .sub{color:var(--ba-muted);font-size:var(--ba-body)}

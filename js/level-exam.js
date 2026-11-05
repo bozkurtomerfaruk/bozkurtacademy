@@ -107,7 +107,7 @@
     else if (view === 'result') renderResult();
     else renderIntro();
     if (focus) {
-      root.querySelector('h1')?.focus({ preventScroll: true });
+      root.querySelector('.page-title')?.focus({ preventScroll: true });
       root.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
     }
   }
@@ -120,7 +120,7 @@
     root.append(
       el('header', { class: 'le-head' },
         el('p', { class: 'le-kicker', text: fill('leKicker', { level }) }),
-        el('h1', { tabindex: '-1', text: fill('leTitle', { level }) }),
+        el('h2', { class: 'page-title', tabindex: '-1', text: fill('leTitle', { level }) }),
         el('p', { class: 'le-lead', text: fill('leLead', { level }) })),
       el('ul', { class: 'le-info' },
         [fill('leInfo1', { n: exam().distribution.length }), fill('leInfo2', { pass: passCount() }), t('leInfo3'), t('leInfo4'),
@@ -150,7 +150,7 @@
     root.append(
       el('header', { class: 'le-head' },
         el('p', { class: 'le-kicker', text: fill('leKicker', { level }) }),
-        el('h1', { tabindex: '-1', text: fill('leTitle', { level }) }),
+        el('h2', { class: 'page-title', tabindex: '-1', text: fill('leTitle', { level }) }),
         el('p', { class: 'le-lead', text: fill('leQuestionsLead', { pass: passCount() }) }),
         progress),
       el('ol', { class: 'le-questions' }, qs.map((q, i) => {
@@ -215,7 +215,7 @@
     const loggedIn = (() => { try { return localStorage.getItem('baAccount') === 'student'; } catch (_) { return false; } })();
     root.append(el('section', { class: 'le-result', id: 'levelExamResult', 'aria-labelledby': 'leResultTitle' },
       el('p', { class: 'le-kicker', text: fill('leKicker', { level }) }),
-      el('h1', { id: 'leResultTitle', tabindex: '-1', text: fill('leResultTitle', { level }) }),
+      el('h2', { class: 'page-title', id: 'leResultTitle', tabindex: '-1', text: fill('leResultTitle', { level }) }),
       el('div', { class: 'le-score' },
         el('div', { class: 'le-score-box' }, el('strong', { 'data-le-score': true, text: `${r.score} / ${r.total}` }),
           el('span', { text: fill('leScoreLine', { percent, pass: passCount() }) })),

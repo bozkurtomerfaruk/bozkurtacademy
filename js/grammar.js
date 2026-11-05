@@ -423,7 +423,7 @@
     el.innerHTML = `
       <div class="page-hero">
         <div class="page-hero-inner grammar-hero-copy">
-          <h1 id="grammarHeroTitle">${escapeHtml(t('grammarTitle'))}</h1>
+          <h2 class="page-title" id="grammarHeroTitle">${escapeHtml(t('grammarTitle'))}</h2>
           <p id="grammarHeroSub">${escapeHtml(t('grammarSub'))}</p>
         </div>
       </div>

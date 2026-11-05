@@ -4,7 +4,7 @@ import {
   approve, categorize, deleteAssignmentCopies, emailVerified, fmtDate, lastLessonByStudent, listStudents,
   loadAssignmentGroups, openDeleteDialog, requireTeacher, statusBadges, UNVERIFIED_WARNING
 } from './teacher-common.js';
-import { createModeration, permissionMessage } from './comments-moderation.js?v=1';
+import { createModeration, permissionMessage } from './comments-moderation.js?v=2';
 
 const TABS = ['ogrenciler', 'onay', 'veli', 'odevler', 'silinecek', 'yorumlar'];
 let lists = null;

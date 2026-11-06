@@ -126,7 +126,7 @@ Arama hacimleri Search Console verisi geldikçe gözden geçirilmeli. Resmî şa
 | 1 (6 Kasım 2026) | almanca nasıl öğrenilir | Almanca Nasıl Öğrenilir? Sıfırdan Başlayanlar İçin Yol Haritası | /a1-almanca-kursu/, /almanca-gramer/a1/ (artikel, praesens, w-fragen), /almanca-ozel-ders/ | Yayında |
 | 2 (6 Kasım 2026) | almanca günlük kalıplar | Almanca Günlük Kalıplar: Her Gün İşine Yarayacak 40 İfade | /almanca-gramer/a1/w-fragen/, /almanca-gramer/a1/modalverben/, /almanca-gramer/a2/konjunktiv-ii/, /online-almanca-dersi/ | Yayında |
 | 3 (6 Kasım 2026) | a1 almanca sınavı nasıl geçilir | A1 Almanca Sınavı Nasıl Geçilir? Bölüm Bölüm Hazırlık Rehberi | /a1-almanca-kursu/, /almanca-sinav-hazirlik/, /#exams, /almanca-gramer/a1/ | Yayında |
-| 4 (13 Kasım 2026) | goethe telc farkı | Goethe mi telc mi? Almanca Sınavları Arasındaki Farklar | /almanca-sinav-hazirlik/, /b1-almanca-kursu/, /almanca-gramer/b1/ | Taslak yazıldı |
+| 4 (6 Kasım 2026) | goethe telc farkı | Goethe mi telc mi? Almanca Sınavları Arasındaki Farklar | /almanca-sinav-hazirlik/, /b1-almanca-kursu/, /almanca-gramer/b1/ | Yayınlandı |
 | 5 (10 Aralık 2026) | aile birleşimi için almanca | Aile Birleşimi İçin Almanca: Nereden Başlamalı? | /a1-almanca-kursu/, /almanca-gramer/a1/, /iletisim/ (resmî şartlar için yalnızca yönlendirme) | Planlandı |
 | 6 (17 Aralık 2026) | almanya'da çalışmak için hangi seviye almanca | Almanya'da Çalışmak İçin Hangi Seviye Almanca Gerekir? | /b1-almanca-kursu/, /b2-almanca-kursu/ (seviye şartları için resmî kaynağa yönlendirme) | Planlandı |
 | 7 (24 Aralık 2026) | almanca artikel nasıl öğrenilir | der, die, das: Almanca Artikeller Nasıl Akılda Kalır? | /almanca-gramer/a1/artikel/, /almanca-gramer/a1/plural/ | Planlandı |

@@ -1,7 +1,20 @@
 # SEO yapılacaklar
 
 Bu dosya, sitenin kodu dışında senin yapman gereken işleri adım adım anlatır.
-Search Console, backlink ve aylık kontrol listesi bölümleri SEO planının 5. adımında eklenecek.
+Hiçbiri ücretli değil. Hepsini aynı anda yapman gerekmiyor; aşağıdaki sırayla ilerleyebilirsin.
+
+**İçindekiler**
+
+1. Gramer derslerine gelen yorumları onaylama
+2. Ana sayfadaki "Öğrenciler ne diyor?" alanı
+3. Blog (yayın adımları ve 12 haftalık takvim)
+4. Google Search Console
+5. Yeni blog yazısı yayınlama: adım adım
+6. Ücretsiz backlink (dış bağlantı) fırsatları
+7. Öğrencilerden yorum toplama
+8. Google İşletme Profili (isteğe bağlı)
+9. Google Analytics 4 (isteğe bağlı)
+10. Aylık kontrol listesi
 
 ---
 
@@ -124,3 +137,178 @@ Arama hacimleri Search Console verisi geldikçe gözden geçirilmeli. Resmî şa
 | 12 (28 Ocak 2027) | b1 almanca sınavı | B1 Almanca Sınavına Nasıl Hazırlanılır? | /b1-almanca-kursu/, /almanca-sinav-hazirlik/, /almanca-gramer/b1/ | Planlandı |
 
 Her yazı en az bir kurs sayfasına, ilgili gramer derslerine ve sonunda iletişim sayfasına link verir. Kişisel deneyim veya başarı iddiası (öğrenci sayısı, geçme oranı vb.) yazılmaz.
+
+---
+
+## 4. Google Search Console
+
+Search Console, Google'ın sitende neyi gördüğünü gösteren ücretsiz araçtır: hangi aramalarda göründüğün,
+kaç kişinin tıkladığı, hangi sayfaların Google'da olduğu ve sorun olup olmadığı.
+
+### İlk kurulum (bir kez)
+
+Sitede doğrulama dosyası (`google4cc3144aaa693325.html`) zaten var. Yani mülk büyük ihtimalle doğrulanmış durumda.
+
+1. https://search.google.com/search-console adresine Google hesabınla gir.
+2. Sol üstte `bozkurtacademy.com` mülkünü seç. Yoksa "Mülk ekle" → "URL ön eki" → `https://bozkurtacademy.com/` yaz ve "HTML dosyası" ile doğrula (dosya sitede duruyor, silme).
+3. Soldaki menüden **Site haritaları**'na gir, `sitemap.xml` yaz ve **Gönder**'e bas. Durum "Başarılı" olmalı.
+4. İsteğe bağlı: "Ayarlar → Kullanıcılar ve izinler" bölümünden e-posta bildirimlerinin açık olduğunu kontrol et.
+
+### Neye, ne sıklıkla bakacaksın?
+
+| Ne zaman | Nereye bak | Ne anlama gelir, ne yapmalı |
+|---|---|---|
+| Her hafta (5 dk) | **Performans → Arama sonuçları** | "Toplam tıklama" ve "Toplam gösterim" yükseliyor mu? Tarih aralığını "Son 28 gün" seç. |
+| Her hafta | Aynı sayfada **Sorgular** sekmesi | İnsanlar seni hangi kelimelerle buluyor? Gösterimi çok ama tıklaması az olan sorgular, başlık ve açıklaması iyileştirilecek sayfaları gösterir. |
+| Her ay | **Performans → Sayfalar** sekmesi | En çok gösterilen sayfalar hangileri? Hiç görünmeyen sayfa var mı? |
+| Her ay | **Dizine ekleme → Sayfalar** | "Dizine eklenmemiş" listesi. "Yönlendirmeli sayfa", "noindex etiketiyle hariç tutuldu" (ör. giriş/panel sayfaları) normaldir. "Bulunamadı (404)" veya "Sunucu hatası" varsa bana yaz. |
+| Her ay | **Deneyim → Önemli Web Verileri** ve **HTTPS** | "Kötü" veya "İyileştirme gerekiyor" görünürse bana yaz. |
+| Her ay | **Geliştirmeler** (Breadcrumb, SSS vb.) | Şema hataları burada çıkar. Kırmızı hata varsa bana yaz. |
+| E-posta gelince | Bildirimin içindeki bağlantı | Google bir sorun bulursa e-posta atar. Paniğe gerek yok; bağlantıyı aç, ekran görüntüsünü bana gönder. |
+
+### Yeni veya değişen bir sayfayı Google'a bildirmek
+
+1. Search Console'un en üstündeki arama kutusuna sayfanın tam adresini yapıştır (ör. `https://bozkurtacademy.com/blog/almanca-nasil-ogrenilir/`).
+2. Sonuç gelince **Dizine eklenmesini iste**'ye bas.
+3. Bunu yalnızca yeni yazılar ve önemli değişiklikler için yap. Aynı sayfa için tekrar tekrar basmana gerek yok.
+
+**Sabırlı ol:** Yeni bir sitenin aramalarda yükselmesi genellikle haftalar, bazen aylar sürer. Günlük dalgalanmalar normaldir; ay ay karşılaştır.
+
+---
+
+## 5. Yeni blog yazısı yayınlama: adım adım
+
+1. **Konuyu seç:** Bölüm 3'teki takvimden sıradaki konuyu al ya da Search Console'daki "Sorgular" listesinde sık görünen bir soruyu seç.
+2. **Yazıyı yaz:** `_blog/<adres>.html` adında bir dosya oluştur. Adres yalnızca küçük harf, rakam ve tire içerir (ör. `goethe-telc-farki`). Metin H2 başlıklarla başlar; ana başlığı (H1) yazma.
+3. **Listeye ekle:** `_blog/posts.json` içine yeni bir kayıt ekle. Önce `"status": "draft"` yaz:
+   ```json
+   {
+     "slug": "goethe-telc-farki",
+     "title": "Goethe mi telc mi? Almanca Sınavları Arasındaki Farklar",
+     "description": "Arama sonuçlarında görünecek 1–2 cümlelik özet (en fazla ~155 karakter).",
+     "lead": "Başlığın altındaki giriş cümlesi.",
+     "teaser": "Ana sayfadaki kısa tanıtım cümlesi.",
+     "date": "2026-12-03",
+     "status": "draft",
+     "related": [["/almanca-sinav-hazirlik/", "Almanca sınav hazırlık"]]
+   }
+   ```
+4. **Sayfaları üret:** `node scripts/build-pages.mjs` çalıştır. Taslağı `https://bozkurtacademy.com/blog/<adres>/` adresinde görürsün (Google'a kapalı).
+5. **Kontrol et:** Linkler çalışıyor mu? `<!-- KONTROL ET -->` notlu yerleri resmî kaynaktan kontrol ettin mi? Kişisel başarı iddiası veya uydurma bilgi yok mu? Sınav ücreti, şart, süre gibi değişebilen bilgiler kesin rakamla yazılmadı mı?
+6. **Yayınla:** `"status": "published"` yap, `date` alanını yayın gününe ayarla ve tekrar `node scripts/build-pages.mjs` çalıştır. Yazı otomatik olarak blog listesine, ana sayfaya, sitemap'e ve link verdiği gramer derslerine eklenir.
+7. **Geri dönüş linki:** Yazının en ilgili kurs sayfasına (ör. A1 kurs sayfası) doğal bir cümleyle yazıya link ekle.
+8. **Google'a bildir:** Bölüm 4'teki "Dizine eklenmesini iste" adımını yap.
+9. **Paylaş:** Yazının linkini sosyal medya profillerinde paylaş (Bölüm 6).
+
+Bunu benimle yapıyorsan, "şu konuda yeni yazı" demen yeterli; dosyaları ben hazırlarım, sen okuyup onaylarsın.
+
+---
+
+## 6. Ücretsiz backlink (dış bağlantı) fırsatları
+
+Başka sitelerden seninkine verilen linkler, Google'a sitenin güvenilir olduğunu gösterir.
+Az ama **gerçek ve ilgili** link, çok sayıda alakasız linkten iyidir.
+
+**Yapma:** Link satın alma, "1000 backlink" paketleri, link değişim çiftlikleri, alakasız forumlara toplu reklam yazma. Bunlar Google'da cezaya yol açabilir.
+
+### a) Kendi profillerin (en kolay, ilk hafta)
+
+Her profilde aynı adı (Bozkurt Academy), aynı kısa açıklamayı ve `https://bozkurtacademy.com/` adresini kullan.
+Telefon, adres, şehir ve fiyat yazma.
+
+- **YouTube kanalı:** Kanal açıklamasına ve "Bağlantılar" bölümüne site adresini ekle. Kısa gramer videolarının açıklamasına ilgili dersin linkini koy (ör. Artikel videosu → `/almanca-gramer/a1/artikel/`).
+- **Instagram:** Biyografideki bağlantıya site adresini ekle. Gönderilerde "linki biyografide" diyebilirsin.
+- **LinkedIn:** Kişisel profilinde "İletişim bilgileri → Web sitesi" bölümüne ekle. İstersen bir şirket sayfası da açabilirsin.
+- **Facebook sayfası, X (Twitter), Pinterest, TikTok:** Hangisini kullanıyorsan, profil linkine site adresini ekle. Kullanmadığın platforma açmak zorunda değilsin.
+- **GitHub:** Site zaten GitHub'da; depo açıklamasındaki "Website" alanına adresi yaz.
+
+### b) Eğitim ve öğretmen dizinleri
+
+Ücretsiz profil açabildiğin öğretmen ve ders platformlarında profilinde web siteni belirt
+(platform izin veriyorsa). Profilde yalnızca gerçek bilgiler olsun; sertifika, yıl veya öğrenci sayısı uydurma.
+Ücretli üyelik isteyen dizinlere gerek yok.
+
+### c) Faydalı içerikle doğal link
+
+- **Forumlar ve soru-cevap siteleri** (ör. Ekşi Sözlük, Reddit'in Almanca öğrenme toplulukları, Quora Türkçe): Almanca öğrenme sorularına gerçekten faydalı bir cevap yaz; konu tam uyuyorsa ilgili gramer dersine link ver. Her cevaba link koyma; önce yardım et.
+- **Facebook ve Telegram grupları** (Almanya'da yaşayan Türkler, Almanca öğrenenler): Grup kurallarına uy. Reklam yerine "artikeller için ücretsiz anlatım hazırladım" gibi faydalı paylaşım yap.
+- **Okulun / üniversiten:** Öğrenci kulüpleri veya mezun sayfaları bazen öğrencilerin projelerine link verir. Sorabilirsin.
+- **Tanıdığın öğretmenler ve blog yazarları:** Gramer anlatımların veya ücretsiz alıştırmalar kendi öğrencilerine faydalı olacaksa, linki onlara gönderebilirsin.
+
+Bir ayda 2–3 kaliteli link hedeflemek yeterli.
+
+---
+
+## 7. Öğrencilerden yorum toplama
+
+Gerçek öğrenci yorumları hem ziyaretçilere güven verir hem de ileride ana sayfadaki yorum alanında kullanılabilir.
+
+1. **Ne zaman sor:** Öğrenci bir hedefe ulaştığında (ör. sınavı geçtiğinde, bir seviyeyi bitirdiğinde) veya birkaç ders sonra memnun olduğunu söylediğinde.
+2. **Nasıl sor:** Kısa ve baskısız. Örnek mesaj:
+   > Merhaba [Ad], derslerimiz hakkında birkaç cümlelik görüşünü yazmak ister misin? Neyin işine yaradığını ve
+   > nelerin daha iyi olabileceğini merak ediyorum. Yazmak istemezsen hiç sorun değil.
+3. **Yayın izni:** Yorumu sitede kullanmak istiyorsan Bölüm 2'deki izin şablonunu gönder. İzin yoksa yayınlama.
+4. **Kaydet:** Gelen yorumları ve izinleri (tarih, izin verilen ad biçimi) kendin için bir dosyada sakla.
+5. **Yerleştir:** İzin alınan yorumları Bölüm 2'deki adımlarla ana sayfaya ekle (veya bana gönder).
+
+**Kurallar:** Yorumu değiştirme (yazım hatası düzeltmesi için bile izin iste), uydurma veya karşılığında indirim/hediye verme.
+Puan veya yıldız şeması eklenmez.
+
+---
+
+## 8. Google İşletme Profili (isteğe bağlı)
+
+Google İşletme Profili, Google Haritalar ve yerel aramalar için kullanılır. Dersler online olduğu ve sitede
+adres/şehir bulunmadığı için **zorunlu değil**.
+
+Açmak istersen:
+
+- Adres göstermeyen "hizmet bölgesi işletmesi" seçeneğini kullan. Adresin profilde herkese açık görünmemeli.
+- Google doğrulama için posta, video veya telefonla kod isteyebilir; bu bilgiler herkese gösterilmez.
+- Profile site adresini ekle; telefon numarası alanını boş bırakabilirsin.
+- Sitedeki kurala uygun olarak profilde fiyat yazma.
+
+Kararsızsan şimdilik açma; Search Console ve blog çok daha önemli.
+
+---
+
+## 9. Google Analytics 4 (isteğe bağlı)
+
+Sitede şu an gizlilik dostu, çerezsiz **GoatCounter** sayacı var: hangi sayfaların kaç kez açıldığını gösterir.
+Başlangıç için bu ve Search Console yeterlidir.
+
+GA4 kurmak istersen ayrıca bir çerez onay bandı ve gizlilik metninde güncelleme gerekir. Bu yüzden
+şu an önerilmiyor. İleride istersen bana söyle, ayrı bir adım olarak planlarız.
+
+---
+
+## 10. Aylık kontrol listesi
+
+Her ayın ilk haftası yaklaşık 30–45 dakika ayır. Kutucukları bu dosyanın bir kopyasında veya not defterinde işaretleyebilirsin.
+
+**Search Console**
+- [ ] Son 28 günün tıklama ve gösterimlerini bir önceki ayla karşılaştır (Performans → "Karşılaştır").
+- [ ] En çok gösterim alan 5 sorguyu not et. Bunlardan biri yeni bir blog yazısı konusu olabilir mi?
+- [ ] Gösterimi yüksek ama tıklama oranı (TO) düşük sayfaları not et; başlık ve açıklamalarını gözden geçirelim.
+- [ ] "Dizine ekleme → Sayfalar"da yeni bir hata var mı?
+- [ ] Önemli Web Verileri ve Geliştirmeler bölümünde kırmızı uyarı var mı?
+
+**İçerik**
+- [ ] Bu ay planlanan blog yazıları yayınlandı mı? (Bölüm 3'teki takvimde durumu güncelle.)
+- [ ] Eski bir yazıyı veya kurs sayfasını gözden geçir: bilgiler hâlâ doğru mu? Kırık link var mı?
+- [ ] Yazılardaki `<!-- KONTROL ET -->` notlu resmî bilgiler değişmiş mi? (sınav kuralları, şartlar)
+
+**Yorumlar ve güven**
+- [ ] Gramer derslerinde onay bekleyen yorum var mı? (Bölüm 1)
+- [ ] Bu ay en az bir öğrenciden yorum istedin mi? (Bölüm 7)
+
+**Görünürlük**
+- [ ] Bu ay yayınlanan yazıları sosyal medya profillerinde paylaştın mı?
+- [ ] Yeni bir faydalı backlink fırsatı denedin mi? (Bölüm 6)
+
+**Teknik (hızlı bakış)**
+- [ ] Ana sayfa, iletişim formu ve bir gramer dersi telefonda düzgün açılıyor mu?
+- [ ] İletişim formundan kendine bir test mesajı gönder; e-posta geliyor mu?
+- [ ] GoatCounter'da beklenmedik bir düşüş var mı?
+
+Bir sorun görürsen ekran görüntüsünü ve sayfa adresini bana göndermen yeterli.

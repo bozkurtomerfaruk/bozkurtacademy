@@ -26,7 +26,8 @@ export function blogPages(root) {
       noindex: p.status !== 'published', ogType: 'article'
     };
   });
-  const published = posts.filter(p => !p.draft).sort((a, b) => b.date.localeCompare(a.date));
+  // Yeniden eskiye; aynı tarihli yazılarda posts.json'da sonra eklenen önce gelir.
+  const published = posts.map((p, i) => [p, i]).filter(([p]) => !p.draft).sort(([a, i], [b, j]) => b.date.localeCompare(a.date) || j - i).map(([p]) => p);
   const index = {
     path: '/blog/', crumb: 'Blog', kind: 'blog-index',
     title: 'Almanca Öğrenme Blogu | Bozkurt Academy',

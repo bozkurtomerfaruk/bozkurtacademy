@@ -2,6 +2,49 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-05 · Çocuklar için: Artikel Evleri (madde 5, ilk oyun)
+
+- **Sayfa:** `#artikel-evleri`. Alıştırmalar sayfasında A1 konu listesinin sonunda "Çocuklar için" kartı var. Bir konu seçilince `#artikel-evleri/<konu>` açılıyor; bu bağlantı doğrudan paylaşılabiliyor.
+- **Oyun:** Resim, kelime (artikelsiz) ve Türkçe anlamı ekranda. Çocuk der, die ya da das evine dokunuyor.
+  - Doğru cevapta o evin bir penceresi yanıyor ve "Evet! der Hund – köpek" yazıyor.
+  - Yanlış cevapta ev sallanıyor, "der değil. Başka bir ev dene." yazıyor ve o ev kapanıyor.
+- **Skor (kararın):** Sadece ilk denemede doğru bilinen kelimeler sayılıyor. Bitiş ekranında "12 kelimeden 9'unu ilk denemede bildin." yazıyor. Konu başına en iyi skor bu sayıya göre tutuluyor; daha iyi bir oyunda "Yeni rekor!" çıkıyor.
+- **Dinle (kararın):** Düğme sadece kelimeyi okuyor. Artikel ancak doğru cevaptan sonra okunuyor ("der Hund").
+- **Ses:**
+  - Sesi tarayıcının cihazdaki Almanca sesi üretiyor; ses açma/kapama düğmesi var ve ayar saklanıyor.
+  - Sadece cihazda çalışan sesler kullanılıyor. İnternet üzerinden çalışan sesler (ör. bilgisayardaki Chrome'un "Google Deutsch" sesi) okunacak kelimeyi Google'a gönderdiği için kullanılmıyor.
+  - Almanca ses yoksa küçük bir not çıkıyor, "Dinle" düğmesi gizleniyor ve oyun sessiz, hatasız devam ediyor.
+- **Kelimeler (kararın):** 4 konu, her biri 12 kelime ve 4 der / 4 die / 4 das.
+  - Yiyecekler: Apfel, Kuchen, Käse, Salat · Banane, Erdbeere, Tomate, Pizza · Brot, Ei, Eis, Wasser
+  - Evde: Tisch, Stuhl, Schrank, Fernseher · Lampe, Tür, Uhr, Kerze · Haus, Bett, Fenster, Sofa
+  - Okul ve oyun: Ball, Bleistift, Rucksack, Computer · Puppe, Gitarre, Schule, Tasche · Buch, Heft, Bild, Geschenk
+  - Dışarıda: Hund, Vogel, Baum, Bus · Katze, Blume, Sonne, Brücke · Auto, Flugzeug, Schiff, Fahrrad
+  - Hepsi kontrol ettiğin sözlükten geliyor. Artikel ve anlam `data/sozluk.json`'dan okunuyor; birden çok anlamı olan kelimede ilk anlam gösteriliyor (Eis → dondurma).
+  - Sözlükte die ile biten hayvan sadece Katze olduğu için "Hayvanlar" yerine "Dışarıda" konusu yapıldı. Sözlüğe yeni kelime eklenmedi. Schwein, aileler için hassas olabileceği için alınmadı.
+- **Resimler:** 48 kelimenin hepsi elle çizilmiş sade SVG; emoji yok. Resimler `data/cocuk/resimler.json`'da, Kayıp Harf Treni için Fisch de hazır.
+- **Kontrol:** `node scripts/check-kids-games.mjs` (CI'da da çalışıyor) şunları denetliyor:
+  - her kelime sözlükte var, kontrol edilmiş, "emin değilim" değil ve tek artikelli;
+  - her konuda der/die/das sayısı eşit;
+  - her kelimenin resmi var ve resimlerde sadece çizim var.
+- **Veri:**
+  - Hesap yok, form yok, sunucuya gönderim yok.
+  - Tarayıcıda sadece `baKelimeOyunlari` (ses ayarı ve konu başına en iyi skor) duruyor.
+  - "Hesap yok, form yok…" notu oyunun altında duruyor.
+- **Gizlilik metni:** localStorage listesine `baKelimeOyunlari` ve cihazdaki sesle okuma eklendi (TR/DE/EN). Madde 4'te eksik kalan `baLevelExam:…` (yarım kalan sınav denemesi) da eklendi. Tarih 5 Kasım 2026 oldu.
+- **Telefon:** Evler en az 88×88 px. Sitenin alttaki "Ücretsiz bilgi al" çubuğu oyunda ve seviye sonu sınavında artık gizli, çünkü "Sonraki kelime" düğmesinin üstüne biniyordu.
+- **Renkler:** der/die/das renkleri `css/base.css`'e token olarak eklendi (`--ba-der`, `--ba-die`, `--ba-das`, açık ve koyu tema).
+- **Önbellek:**
+  - `app.js` v32, `base.css` v10 ve `analytics.js` v7 (bütün sayfalarda);
+  - `quiz.js` v28;
+  - yeni dosyalar `artikel-evleri.js` v1 ve `artikel-evleri.css` v1.
+- **Test:** `tests/artikel-evleri.mjs`, 75 kontrol, hepsi geçti. Kapsadıkları:
+  - kart, konular, ilk deneme skoru ("11'ini", "12'sini", "3'ünü"), en iyi skor ve rekor;
+  - Dinle, ses kapalı, ses yok;
+  - derin bağlantı, kayıt yazılamazken oyun, dışarıya gönderim yok;
+  - TR/DE/EN, 390/1440 açık/koyu, taşma.
+- **Seviye testi testi:** `npm run test:placement` gramer yorumları değişikliğinden (`3fc5be1`) beri gizlilik bölümünde 18 kontrolde kalıyordu ("İki istisna" cümlesi, yorum silme için eklenen 5. e-posta bağlantısı). Beklentiler metnin bugünkü hâline göre düzeltildi; 233 kontrol geçti.
+- **Durum:** PR açıldı, onayını bekliyor. Kayıp Harf Treni sonra ikinci oyun olarak eklenecek.
+
 ## 2026-11-04 · Seviye sonu sınavı: B1 (madde 4'ün son adımı)
 
 - **Sayfa:** `#seviye-sonu/B1`, B1 konu listesinin sonundaki karttan açılıyor. Kod ve kural değişikliği yok; ekran, kayıt, öğretmen detayı ve ödev A1/A2 gibi çalışıyor.

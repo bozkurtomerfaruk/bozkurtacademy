@@ -11,12 +11,19 @@ import { fileURLToPath } from 'node:url';
 import { SITE, PAGES } from './site-pages.mjs';
 import { GRAMMAR_DATE, grammarPages, grammarBody, lessonSchema, lessonFaq } from './grammar-pages.mjs';
 import { blogPages, blogBody, blogSchema } from './blog-pages.mjs';
+import { CSP } from './csp.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const check = process.argv.includes('--check');
 const SITEMAP_DATE = '2026-11-04';
-const V = { style: 12, base: 11, landing: 1, app: 33, theme: 10, analytics: 7, a1lessons: 18, a1css: 8, grammarPages: 1, blog: 1 };
+const V = { themeInit: 1, style: 12, base: 11, landing: 1, app: 33, theme: 10, analytics: 7, a1lessons: 19, a1css: 8, grammarPages: 1, blog: 1 };
 const OG_IMAGE = `${SITE}/images/og-bozkurt-academy.jpg`;
+
+const SECURITY = `
+  <meta http-equiv="Content-Security-Policy" content="${CSP}" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <script src="/js/theme-init.js?v=${V.themeInit}"></script>
+  `;
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const root0 = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -165,8 +172,8 @@ function head(page, html) {
   return `
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ba:security -->${SECURITY}<!-- /ba:security -->
   <meta name="theme-color" content="#f8f7f3" />
-  <script>try{document.documentElement.dataset.theme=localStorage.getItem('ba-theme')==='dark'?'dark':'light'}catch(_){document.documentElement.dataset.theme='light'}</script>
   <title>${esc(page.title)}</title>
   <meta name="description" content="${esc(page.description)}" />${page.noindex ? `
   <meta name="robots" content="noindex" />` : ''}
@@ -230,9 +237,15 @@ for (const page of PAGES) {
   outputs.push([file, html]);
 }
 // Menü ve footer'ı paylaşan diğer sayfalar (sitemap'e girmez). Yönetim sayfası: sabit iletişim düğmesi yok.
+// Ortak <head> kullanmayan, elle yazılmış sayfalar: yalnızca güvenlik bölümü (CSP, referrer, tema başlatıcı).
+for (const name of ['giris.html', 'kayit.html', 'panel.html', 'privacy.html', 'ogretmen.html', 'ogretmen-odev.html', 'ogretmen-ogrenci.html', 'ogretmen-takvim.html']) {
+  const file = path.join(root, name);
+  outputs.push([file, fill(fs.readFileSync(file, 'utf8'), 'security', SECURITY, file)]);
+}
 for (const [name, opts, footerOpts] of [['index.html', { spa: true }, {}], ['404.html', {}, {}], ['yonetim/yorumlar/index.html', {}, { sticky: false }]]) {
   const file = path.join(root, name);
   let html = fs.readFileSync(file, 'utf8');
+  html = fill(html, 'security', SECURITY, file);
   html = fill(html, 'header', header(opts), file);
   html = fill(html, 'footer', footer(footerOpts), file);
   outputs.push([file, html]);
@@ -272,6 +285,26 @@ const blogUrls = BLOG.published.length ? [{ path: BLOG.index.path, updated: BLOG
 
 const urls = [{ path: '/' }, ...PAGES, ...GRAMMAR.pages.map(p => ({ path: p.path, updated: GRAMMAR_DATE })), ...blogUrls].map(p => `  <url>\n    <loc>${SITE}${p.path}</loc>\n    <lastmod>${p.updated || SITEMAP_DATE}</lastmod>\n  </url>`).join('\n');
 outputs.push([path.join(root, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`]);
+
+// Her HTML sayfası CSP'yi taşımalı: listede unutulan yeni bir sayfa (ör. ogretmen-yeni.html) burada yakalanır.
+{
+  const produced = new Map(outputs);
+  const skip = new Set(['node_modules', '.git', 'docs', 'tests', '.claude', 'Material', '_blog']);
+  const missing = [];
+  (function walk(dir) {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (skip.has(entry.name)) continue;
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) walk(full);
+      else if (entry.name.endsWith('.html') && !/^google[0-9a-f]+\.html$/.test(entry.name)) {
+        const html = produced.get(full) ?? fs.readFileSync(full, 'utf8');
+        if (!html.includes('<!-- ba:security -->') || !html.includes('http-equiv="Content-Security-Policy"')) missing.push(path.relative(root, full));
+        if (/<script(?![^>]*\bsrc=)(?![^>]*type="application\/ld\+json")[^>]*>/.test(html) || /\son[a-z]+="/.test(html)) missing.push(path.relative(root, full) + ' (satır içi betik veya on…= niteliği)');
+      }
+    }
+  })(root);
+  if (missing.length) { console.error('CSP eksik:\n  ' + missing.join('\n  ') + '\nSayfayı yukarıdaki listelere ekle; satır içi betiği js/ altına taşı.'); process.exit(1); }
+}
 
 let stale = 0;
 for (const [file, html] of outputs) {

@@ -2,6 +2,35 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-06 · Artikel Evleri: kayıtlı ses dosyaları
+
+- **Ne değişti:** Kelimeler önce sitenin kendi MP3 dosyalarıyla okunuyor. Dosya yoksa ya da çalınamazsa cihazın Almanca sesine, o da yoksa sessiz moda geçiliyor. İnternet üzerinden çalışan sesler (Google Deutsch vb.) kararın gereği kapalı.
+- **Ses ve lisans:**
+  - Ses Thorsten-Voice'tan (Thorsten Müller); kayıtların lisansı CC0, yani kamu malı.
+  - Model Coqui TTS'nin Thorsten modelleri (VITS; bazı kelimelerde Tacotron2 + HiFi-GAN); lisansları Apache 2.0, kaynak Coqui'nin resmî model listesi.
+  - Ticari kullanım serbest; atıf ve lisans metni `data/cocuk/ses/LISANS.md` ve `LICENSE-Apache-2.0.txt` dosyalarında. Oyunun altında kısa bir atıf satırı var (TR/DE/EN).
+  - Kullanılmayanlar: Piper'ın Almanca sesleri (ticari kullanımı yasak Ryan sesinden türetilmiş ya da lisansı doğrulanamadı), pavoque, XTTS ve YourTTS (ticari kullanım yasak).
+- **Dosyalar:**
+  - `data/cocuk/ses/` klasöründe her kelime için iki dosya var: "hund.mp3" (Dinle düğmesi) ve "der-hund.mp3" (doğru cevaptan sonra).
+  - 96 dosya, yaklaşık 427 KB; seslerin hepsi en fazla 6 KB. Dosyalar kelime ekrana gelince yükleniyor.
+  - Hangi kelimenin dosyası olduğu `data/cocuk/sesler.json` listesinde; bu listeyi `node scripts/kids-audio.mjs` üretiyor ve `check-kids-games` CI'da denetliyor.
+- **Sorunlu 7 kelime (Wasser, Tisch, Stuhl, Uhr, Ball, Puppe, Tasche):**
+  - İlk sürümleri beğenmedin. 238 aday ürettim: noktalama, "Das ist der Tisch." cümlesinden kesme, yavaş konuşma, Tacotron2 ve Puppe için doğru okunuş ("pʊpə").
+  - Her biri için en iyi iki adayı dinledin ve seçtin. Tisch'te taşıyıcı cümleden kesilen sürümü, diğerlerinde B'yi aldın: çoğu Tacotron2, Uhr/Ball/Tasche artikelli hâli yavaş VITS, Tasche tek başına cümleden kesilmiş. Ayrıntı `scripts/cocuk-ses/README.md`'de.
+  - Böylece 48 kelimenin 96 sesinin hepsi dosyadan çalıyor (toplam 427 KB); cihaz sesi sadece yedek.
+- **Üretim betikleri:** `scripts/cocuk-ses/` (README'de kurulum, modellerin adresleri ve yöntem). Seslerin hiçbiri sitede üretilmiyor.
+- **Gizlilik:** Oyunun dosyaları bu siteden (GitHub Pages) yüklendiği ve cihaz sesinin sadece yedek olduğu yazıldı (TR/DE/EN); tarih 6 Kasım 2026. Yeni bir veri ya da üçüncü taraf yok.
+- **Test:**
+  - `tests/artikel-evleri.mjs` 107 kontrolün hepsini geçti. Yeni kontroller:
+    - dosya çalıyor ve Dinle artikeli söylemiyor;
+    - dosyası olmayan ya da bozuk dosyada cihaz sesine geçiliyor;
+    - cihaz sesi yokken dosya yine çalıyor;
+    - dosyalar sadece bu siteden yükleniyor;
+    - atıf satırı görünüyor.
+  - `test:placement` geçti. Gizlilik sayfasındaki bağlantı kontrolü artık kaydırmanın bitmesini bekliyor; Almanca metin uzayınca telefonda 600 ms yetmiyordu.
+- **Önbellek:** `app.js` v35, `artikel-evleri.js` v2.
+- **Durum:** Seçtiğin 14 ses eklendi; PR #61 birleştirildi (2026-11-06). **Madde 5'in ilk oyunu tamamlandı.**
+
 ## 2026-11-05 · Çocuklar için: Artikel Evleri (madde 5, ilk oyun)
 
 - **Sayfa:** `#artikel-evleri`. Alıştırmalar sayfasında A1 konu listesinin sonunda "Çocuklar için" kartı var. Bir konu seçilince `#artikel-evleri/<konu>` açılıyor; bu bağlantı doğrudan paylaşılabiliyor.
@@ -43,7 +72,7 @@
   - derin bağlantı, kayıt yazılamazken oyun, dışarıya gönderim yok;
   - TR/DE/EN, 390/1440 açık/koyu, taşma.
 - **Seviye testi testi:** `npm run test:placement` gramer yorumları değişikliğinden (`3fc5be1`) beri gizlilik bölümünde 18 kontrolde kalıyordu ("İki istisna" cümlesi, yorum silme için eklenen 5. e-posta bağlantısı). Beklentiler metnin bugünkü hâline göre düzeltildi; 233 kontrol geçti.
-- **Durum:** PR açıldı, onayını bekliyor. Kayıp Harf Treni sonra ikinci oyun olarak eklenecek.
+- **Durum:** PR #54 birleştirildi (2026-11-06). Kayıp Harf Treni sonra ikinci oyun olarak eklenecek.
 
 ## 2026-11-04 · Seviye sonu sınavı: B1 (madde 4'ün son adımı)
 

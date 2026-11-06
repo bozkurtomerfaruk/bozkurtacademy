@@ -465,9 +465,9 @@ for(const [lang, title] of [['tr', 'Seviye tespit sınavı'], ['de', 'Einstufung
 
 // 11. Gizlilik sayfası: metnin tamamı TR/DE/EN; dil düğmesine göre tek dil görünür
 const PRIVACY = {
-  tr: { h1: 'Gizlilik politikası', title: '5a. Seviye testi', firebase: 'İki istisna var: Seviye testinin sonucunu göndermek', updated: 'Son güncelleme: 5 Kasım 2026', foreign: ['Verantwortlicher', 'Controller'], doc: 'Gizlilik politikası | Bozkurt Academy' },
-  de: { h1: 'Datenschutzerklärung', title: '5a. Einstufungstest', firebase: 'Zwei Ausnahmen: Wenn Sie nach dem Einstufungstest', updated: 'Stand: 5. November 2026', foreign: ['Sorumlu', 'Controller', 'Siteyi ziyaret'], doc: 'Datenschutzerklärung | Bozkurt Academy' },
-  en: { h1: 'Privacy policy', title: '5a. Placement test', firebase: 'There are two exceptions: when you press “Send result”', updated: 'Last updated: 5 November 2026', foreign: ['Sorumlu', 'Verantwortlicher', 'Siteyi ziyaret'], doc: 'Privacy policy | Bozkurt Academy' }
+  tr: { h1: 'Gizlilik politikası', title: '5a. Seviye testi', firebase: 'İki istisna var: Seviye testinin sonucunu göndermek', updated: 'Son güncelleme: 6 Kasım 2026', foreign: ['Verantwortlicher', 'Controller'], doc: 'Gizlilik politikası | Bozkurt Academy' },
+  de: { h1: 'Datenschutzerklärung', title: '5a. Einstufungstest', firebase: 'Zwei Ausnahmen: Wenn Sie nach dem Einstufungstest', updated: 'Stand: 6. November 2026', foreign: ['Sorumlu', 'Controller', 'Siteyi ziyaret'], doc: 'Datenschutzerklärung | Bozkurt Academy' },
+  en: { h1: 'Privacy policy', title: '5a. Placement test', firebase: 'There are two exceptions: when you press “Send result”', updated: 'Last updated: 6 November 2026', foreign: ['Sorumlu', 'Verantwortlicher', 'Siteyi ziyaret'], doc: 'Privacy policy | Bozkurt Academy' }
 };
 const visibleText = (page) => page.evaluate(() => document.querySelector('.acc-legal').innerText);
 for(const [lang, x] of Object.entries(PRIVACY)){
@@ -487,7 +487,8 @@ for(const [lang, x] of Object.entries(PRIVACY)){
     ok(await block.locator('a[href="mailto:bozkurtt.omerfaruk@gmail.com"]').count() === 5, `${label}: e-posta bağlantıları (sorumlu, 4 yorum silme, 5a, haklar ×2)`);
     ok(!/Gielen|41460|Neuss/.test(text), `${label}: adres yok`);
     ok(await block.locator('code').count() === 11, `${label}: localStorage anahtarları, firestore.googleapis.com ve örnek adresler`);
-    const anchor = await page.evaluate(() => { const el = [...document.querySelectorAll('[data-anchor="seviye-testi"]')].find((e) => !e.closest('[hidden]')); const r = el.getBoundingClientRect(); return r.top >= -5 && r.top < innerHeight; });
+    // Smooth scrolling takes longer on a long page (phone, German): wait until it arrives, at most 3 s.
+    const anchor = await page.waitForFunction(() => { const el = [...document.querySelectorAll('[data-anchor="seviye-testi"]')].find((e) => !e.closest('[hidden]')); const r = el.getBoundingClientRect(); return r.top >= -5 && r.top < innerHeight; }, null, { timeout: 3000 }).then(() => true, () => false);
     ok(anchor, `${label}: #seviye-testi bağlantısı görünen dildeki 5a bölümüne gidiyor`);
     ok(await overflow(page) <= 0, `${label}: taşma yok`);
     if(width === 390) await page.screenshot({ path: path.join(shotDir, `privacy-${lang}-${width}-${theme}.png`), fullPage: true });

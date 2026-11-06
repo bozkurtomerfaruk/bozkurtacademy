@@ -132,7 +132,7 @@ ${page.levels.map(lv => `
       </section>
       <section class="lp-section" aria-label="${lv.level} konuları">
         ${lessonList(lv, lessonPath, { full: true })}
-      </section>
+      </section>${page.blogNote || ''}
       <section class="lp-cta" aria-labelledby="gr-cta">
         <div>
           <h2 id="gr-cta">${lv.level} konularını birlikte çalışalım</h2>
@@ -150,7 +150,7 @@ ${page.levels.map(lv => `
         </nav>`;
   return `
       <section class="page active" id="page-grammar">
-        ${page.article}
+        ${page.article}${page.blogNote || ''}
 ${pager}
         <section class="lp-cta gr-cta" aria-labelledby="gr-cta">
           <div>

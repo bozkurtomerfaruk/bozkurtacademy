@@ -172,7 +172,7 @@
     const link=document.createElement('link');
     link.id='exerciseHubCss';
     link.rel='stylesheet';
-    link.href='css/exercises-hub.css?v=7';
+    link.href='css/exercises-hub.css?v=8';
     document.head.appendChild(link);
   }
 

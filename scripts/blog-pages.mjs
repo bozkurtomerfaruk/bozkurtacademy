@@ -26,7 +26,8 @@ export function blogPages(root) {
       noindex: p.status !== 'published', ogType: 'article'
     };
   });
-  const published = posts.filter(p => !p.draft).sort((a, b) => b.date.localeCompare(a.date));
+  // Yeniden eskiye; aynı tarihli yazılarda posts.json'da sonra eklenen önce gelir.
+  const published = posts.map((p, i) => [p, i]).filter(([p]) => !p.draft).sort(([a, i], [b, j]) => b.date.localeCompare(a.date) || j - i).map(([p]) => p);
   const index = {
     path: '/blog/', crumb: 'Blog', kind: 'blog-index',
     title: 'Almanca Öğrenme Blogu | Bozkurt Academy',
@@ -34,7 +35,38 @@ export function blogPages(root) {
     noindex: published.length === 0,
     list: published.length ? published : posts
   };
-  return { index, posts, published };
+  // Geri dönüş linkleri: yayınlanmış yazıların gövdesinde ve "related" listesinde link verdiği sayfalar → o yazılar.
+  const linkedFrom = {};
+  for (const p of published) {
+    const targets = new Set([...p.body.matchAll(/href="(\/[^"#?]*)"/g)].map(m => m[1]).concat((p.related || []).map(r => r[0])));
+    for (const t of targets) (linkedFrom[t] ||= []).push(p);
+  }
+  return { index, posts, published, linkedFrom };
+}
+
+// Ana sayfadaki "Blogdan son yazılar" bölümü (index.html, <!-- ba:home-blog -->). Yayınlanmış yazı yoksa boş.
+export function homeBlog(published) {
+  if (!published.length) return '\n        ';
+  const items = published.slice(0, 3).map(p => `
+              <li><a href="${p.path}"><strong>${esc(p.h1)}</strong><span>${esc(p.teaser || p.lead.split(/(?<=[.?!])\s/)[0])}</span></a></li>`).join('');
+  return `
+        <section class="home-section home-blog" aria-labelledby="home-blog-title">
+          <div class="home-section-heading" data-home-reveal>
+            <h2 id="home-blog-title" data-i18n="homeBlogTitle">Blogdan son yazılar</h2>
+            <p data-i18n="homeBlogIntro">Almanca öğrenmeye ve sınavlara dair Türkçe yazılar.</p>
+            <a class="home-text-link" href="/blog/"><span data-i18n="homeBlogLink">Bütün yazılar</span><span aria-hidden="true">→</span></a>
+          </div>
+          <ul class="home-blog-list" data-home-reveal lang="tr">${items}
+          </ul>
+        </section>
+        `;
+}
+
+// Gramer ve kurs sayfalarındaki "Blog'da bu konu" notu.
+export function blogBacklinks(posts) {
+  if (!posts?.length) return '';
+  return `
+        <aside class="gr-blog" aria-label="Blog yazıları"><p><strong>Blogda bu konu:</strong> ${posts.map(p => `<a href="${p.path}">${esc(p.h1)}</a>`).join(' · ')}</p></aside>`;
 }
 
 export function blogSchema(page, SITE) {
@@ -45,8 +77,7 @@ export function blogSchema(page, SITE) {
     inLanguage: 'tr-TR', datePublished: page.date, dateModified: page.updated || page.date,
     author: { '@type': 'Person', name: AUTHOR },
     publisher: { '@id': `${SITE}/#organization` },
-    mainEntityOfPage: { '@id': `${url}#webpage` },
-    image: `${SITE}/images/og-bozkurt-academy.jpg`
+    mainEntityOfPage: { '@id': `${url}#webpage` }
   }];
 }
 

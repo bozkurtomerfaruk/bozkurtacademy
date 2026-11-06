@@ -6,7 +6,10 @@
 // - Her konuda der, die ve das sayısı eşit; bir kelime iki konuda birden yok; konu kimlikleri benzersiz.
 // - Her kelimenin data/cocuk/resimler.json'da resmi var. Resimler sadece çizim içerir
 //   (script, bağlantı, olay işleyici ya da dış adres yok).
+// - data/cocuk/sesler.json data/cocuk/ses klasörüyle aynı; her ses dosyası oyundaki bir kelimeye ait ve 20 KB'tan küçük
+//   (node scripts/kids-audio.mjs). Dosyası olmayan kelimeler hata değil: oyun orada cihazın sesine geçer.
 import { readFileSync } from 'node:fs';
+import { build as buildAudio } from './kids-audio.mjs';
 
 const errors = [];
 const dict = JSON.parse(readFileSync('data/sozluk.json', 'utf8')).words;
@@ -52,9 +55,16 @@ for (const theme of game.themes || []) {
 }
 if (themeIds.size < 1) errors.push('artikel-evleri.json: konu yok');
 
+const audio = buildAudio();
+errors.push(...audio.errors);
+let audioList = '';
+try { audioList = readFileSync('data/cocuk/sesler.json', 'utf8'); } catch (_) {}
+if (audioList !== audio.json) errors.push('data/cocuk/sesler.json güncel değil: node scripts/kids-audio.mjs');
+
 if (errors.length) {
   console.error(errors.join('\n'));
   console.error(`\n${errors.length} hata`);
   process.exit(1);
 }
-console.log(`Artikel Evleri: ${themeIds.size} konu, ${seen.size} kelime, ${Object.keys(pictures).length} resim; hepsi uygun.`);
+console.log(`Artikel Evleri: ${themeIds.size} konu, ${seen.size} kelime, ${Object.keys(pictures).length} resim, ${audio.count} ses dosyası; hepsi uygun.`
+  + (audio.missing.length ? `\nDosyası olmayan (cihaz sesi): ${audio.missing.join(', ')}` : ''));

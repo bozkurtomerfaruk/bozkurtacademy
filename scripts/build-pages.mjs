@@ -10,18 +10,19 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SITE, PAGES } from './site-pages.mjs';
 import { GRAMMAR_DATE, grammarPages, grammarBody, lessonSchema, lessonFaq } from './grammar-pages.mjs';
-import { blogPages, blogBody, blogSchema } from './blog-pages.mjs';
+import { blogPages, blogBody, blogSchema, homeBlog, blogBacklinks } from './blog-pages.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const check = process.argv.includes('--check');
 const SITEMAP_DATE = '2026-11-04';
-const V = { style: 12, base: 10, landing: 1, app: 32, theme: 10, analytics: 6, a1lessons: 18, a1css: 8, grammarPages: 1, blog: 1 };
+const V = { style: 12, base: 11, landing: 1, app: 33, theme: 10, analytics: 6, a1lessons: 18, a1css: 8, grammarPages: 3, blog: 2 };
 const OG_IMAGE = `${SITE}/images/og-bozkurt-academy.jpg`;
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const root0 = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const GRAMMAR = grammarPages(root0);
 const BLOG = blogPages(root0);
+for (const p of GRAMMAR.pages) if (p.kind !== 'hub') p.blogNote = blogBacklinks(BLOG.linkedFrom[p.path]);
 const byPath = Object.fromEntries([...PAGES, ...GRAMMAR.pages, BLOG.index, ...BLOG.posts].map(p => [p.path, p]));
 
 const NAV = [
@@ -30,6 +31,7 @@ const NAV = [
   { key: 'grammar', label: 'Gramer', i18n: 'navGrammar', href: '/almanca-gramer/' },
   { key: 'exercises', label: 'Alıştırmalar', i18n: 'navExercises', href: '/#exercises', spa: '#exercises' },
   { key: 'exams', label: 'Sınav Hazırlığı', i18n: 'navExams', href: '/almanca-sinav-hazirlik/' },
+  { key: 'blog', label: 'Blog', i18n: 'navBlog', href: '/blog/' },
   { key: 'about', label: 'Hakkımda', i18n: 'navAbout', href: '/hakkimda/' },
   { key: 'contact', label: 'İletişim', i18n: 'navContact', href: '/iletisim/' }
 ];
@@ -79,7 +81,7 @@ const FOOTER_GROUPS = [
   ['Dersler', [['/online-almanca-dersi/', 'Online Almanca dersi'], ['/almanca-ozel-ders/', 'Almanca özel ders'], ['/almanca-grup-dersi/', 'Almanca grup dersi'], ['/almanca-sinav-hazirlik/', 'Sınav hazırlık']]],
   ['Seviyeler', [['/a1-almanca-kursu/', 'A1 Almanca kursu'], ['/a2-almanca-kursu/', 'A2 Almanca kursu'], ['/b1-almanca-kursu/', 'B1 Almanca kursu'], ['/b2-almanca-kursu/', 'B2 Almanca kursu']]],
   ['Ücretsiz çalış', [['/almanca-gramer/', 'Gramer konuları'], ['/#exercises', 'Alıştırmalar'], ['/#exams', 'Sınav deneme setleri'], ['/#seviye-testi', 'Seviye testi']]],
-  ['Bozkurt Academy', [['/hakkimda/', 'Hakkımda'], ['/sss/', 'Sıkça sorulan sorular'], ['/iletisim/', 'İletişim']]]
+  ['Bozkurt Academy', [['/hakkimda/', 'Hakkımda'], ['/blog/', 'Blog'], ['/sss/', 'Sıkça sorulan sorular'], ['/iletisim/', 'İletişim']]]
 ];
 
 function footer({ current = null, sticky = true } = {}) {
@@ -235,6 +237,7 @@ for (const [name, opts, footerOpts] of [['index.html', { spa: true }, {}], ['404
   let html = fs.readFileSync(file, 'utf8');
   html = fill(html, 'header', header(opts), file);
   html = fill(html, 'footer', footer(footerOpts), file);
+  if (name === 'index.html') html = fill(html, 'home-blog', homeBlog(BLOG.published), file);
   outputs.push([file, html]);
 }
 // Gramer sayfaları: dosyanın tamamı üretilir (elle düzenleme yapılmaz; içerik data/<seviye>-grammar.json'da).
@@ -262,7 +265,7 @@ for (const page of [BLOG.index, ...BLOG.posts]) {
 <head>${head(page, '')}</head>
 <body class="academy-theme lp-page bl-page">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
-  <div class="shell">${header({})}<main id="main" tabindex="-1" class="lp-main">${breadcrumb(page)}${blogBody(page)}    </main>${footer({ current: page.path })}</div>${scripts(page)}
+  <div class="shell">${header({ current: 'blog' })}<main id="main" tabindex="-1" class="lp-main">${breadcrumb(page)}${blogBody(page)}    </main>${footer({ current: page.path })}</div>${scripts(page)}
 </body>
 </html>
 `;

@@ -31,3 +31,8 @@
 /* .lp-main içindeki liste linklerinin alt çizgisi kart gibi görünen konu listesinde kullanılmaz */
 .academy-theme .lp-main .gr-list li a:not(.btn){text-decoration:none;font-weight:400;color:var(--ba-ink)}
 .academy-theme .lp-main .gr-list li a:not(.btn):hover strong{text-decoration:underline;text-underline-offset:4px}
+
+/* "Blogda bu konu" notu */
+.gr-blog{max-width:760px;margin:32px auto 0;padding:16px 20px;border-left:4px solid var(--ba-accent);background:var(--ba-paper);border-radius:var(--ba-radius-small)}
+.gr-blog p{margin:0}
+.academy-theme .gr-blog a{color:var(--ba-ink);font-weight:600;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}

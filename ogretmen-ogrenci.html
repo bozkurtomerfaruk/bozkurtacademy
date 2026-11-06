@@ -20,7 +20,7 @@
   <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13" />
   <link rel="stylesheet" href="css/base.css?v=12" />
-  <link rel="stylesheet" href="css/account.css?v=3" />
+  <link rel="stylesheet" href="css/account.css?v=5" />
 </head>
 <body class="academy-theme account-page teacher-page">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
@@ -79,6 +79,14 @@
                 <a class="btn ghost acc-row-action" id="newAssignmentLink" href="ogretmen-odev.html">Bu öğrenciye ödev ver</a>
               </div>
               <div id="assignmentsList"></div>
+            </section>
+
+            <section class="acc-section" id="yazilar" aria-labelledby="writingsTitle">
+              <div class="acc-section-head">
+                <h2 id="writingsTitle">Yazma görevleri</h2>
+                <span class="acc-badge warning" id="writingsCount" hidden></span>
+              </div>
+              <div id="writingsList"></div>
             </section>
 
             <section class="acc-section" aria-labelledby="resourcesTitle">
@@ -142,7 +150,7 @@
       </div>
     </footer>
   </div>
-  <script src="js/app.js?v=35"></script>
+  <script src="js/app.js?v=36"></script>
   <script src="js/theme.js?v=10"></script>
   <script type="module" src="js/account/teacher-student.js"></script>
 </body>

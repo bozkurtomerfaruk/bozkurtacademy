@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-4",
+  "title": "Zurück vom Urlaub",
+  "minutes": 20,
+  "kind": "writing",
+  "register": "du",
+  "situation": "Sie sind gerade aus dem Urlaub am Meer zurückgekommen. Ihr Freund Mehmet war noch nie dort.",
+  "task": "Schreiben Sie Mehmet eine E-Mail:",
+  "points": [
+    "Erzählen Sie: Wie war der Urlaub?",
+    "Was hat Ihnen am besten gefallen? Begründen Sie.",
+    "Fragen Sie Mehmet nach seinen Plänen für den Sommer."
+  ],
+  "instructions": "Schreiben Sie eine E-Mail (circa 80 Wörter). Schreiben Sie etwas zu allen drei Punkten. Achten Sie auf den Textaufbau (Anrede, Einleitung, Reihenfolge der Inhaltspunkte, Schluss).",
+  "words": {
+    "target": 80,
+    "min": 70,
+    "max": 100
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Üç maddenin hepsine yazdım (tatil nasıldı, en çok neyi sevdin ve neden, yaz planları sorusu)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Hitap ve kapanış var (ör. Liebe … / Lieber …, Liebe Grüße)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Arkadaşa du ile yazdım (dir, dich, dein …)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kısa bir girişle başladım; maddeleri görevdeki sırayla yazdım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümleleri bağladım (weil, aber, deshalb, dann, trotzdem …)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Ana cümlede çekimli fiil 2. sırada (Gestern habe ich …, Jetzt wohne ich …)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "weil / dass / wenn'den sonra çekimli fiil cümlenin sonunda."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Geçmiş için Perfekt: Wir sind geschwommen, wir haben gegessen (fiile göre sein / haben)."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Einleitung",
+      "items": [
+        {
+          "de": "Liebe …, / Lieber …,",
+          "tr": "Sevgili … (kadına / erkeğe)"
+        },
+        {
+          "de": "Wie geht es dir?",
+          "tr": "Nasılsın?"
+        }
+      ]
+    },
+    {
+      "group": "Erzählen",
+      "items": [
+        {
+          "de": "Wir waren zwei Wochen in …",
+          "tr": "İki hafta …'daydık."
+        },
+        {
+          "de": "Das Wetter war …, und wir sind jeden Tag …",
+          "tr": "Hava … idi ve her gün …"
+        }
+      ]
+    },
+    {
+      "group": "Am besten",
+      "items": [
+        {
+          "de": "Am besten hat mir … gefallen, weil …",
+          "tr": "En çok … hoşuma gitti, çünkü …"
+        },
+        {
+          "de": "Besonders schön war …",
+          "tr": "Özellikle güzel olan …"
+        }
+      ]
+    },
+    {
+      "group": "Fragen",
+      "items": [
+        {
+          "de": "Was hast du im Sommer vor?",
+          "tr": "Yazın ne yapmayı planlıyorsun?"
+        },
+        {
+          "de": "Fährst du auch weg?",
+          "tr": "Sen de bir yere gidiyor musun?"
+        }
+      ]
+    },
+    {
+      "group": "Schluss",
+      "items": [
+        {
+          "de": "Ich freue mich auf deine Antwort.",
+          "tr": "Cevabını bekliyorum."
+        },
+        {
+          "de": "Liebe Grüße / Viele Grüße",
+          "tr": "Sevgiler / Selamlar"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Lieber Mehmet,\nich bin gestern aus dem Urlaub zurückgekommen! Wir waren zwei Wochen in einem kleinen Dorf am Meer. Das Wetter war fantastisch, und wir sind jeden Tag geschwommen. Am besten hat mir der Markt am Hafen gefallen, weil man dort frischen Fisch kaufen kann und die Leute sehr freundlich sind. Du musst unbedingt auch einmal hinfahren! Und was hast du im Sommer vor? Bleibst du in der Stadt oder fährst du auch weg?\nViele Grüße\nKerem",
+    "notes": [
+      "Perfekt'te hareket fiilleri sein ile: bin zurückgekommen, sind geschwommen.",
+      "weil'den sonra iki yan cümle: … kaufen kann und … freundlich sind (fiiller sonda).",
+      "Sonda iki soru: Mehmet'in cevap yazması kolaylaşıyor."
+    ]
+  }
+}

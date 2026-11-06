@@ -2,7 +2,7 @@
 import { $, exerciseNames, formatDateTime, BERLIN, h, safeLink } from './common.js';
 import {
   approve, categorize, deleteAssignmentCopies, emailVerified, fmtDate, lastLessonByStudent, listStudents,
-  loadAssignmentGroups, openDeleteDialog, requireTeacher, statusBadges, UNVERIFIED_WARNING
+  loadAssignmentGroups, openDeleteDialog, pendingWritingsByStudent, requireTeacher, statusBadges, UNVERIFIED_WARNING
 } from './teacher-common.js';
 import { createModeration, permissionMessage } from './comments-moderation.js?v=2';
 
@@ -10,6 +10,7 @@ const TABS = ['ogrenciler', 'onay', 'veli', 'odevler', 'silinecek', 'yorumlar'];
 let lists = null;
 let groups = [];
 let studentsById = new Map();
+let pendingWritings = new Map(); // uid → geri bildirim bekleyen Schreiben metni sayısı
 const fmtDateTime = (value) => formatDateTime(value, { lang: 'tr', timeZone: BERLIN });
 
 const detailLink = (s) => h('a', { class: 'btn ghost acc-row-action', href: `ogretmen-ogrenci.html?id=${encodeURIComponent(s.id)}` }, 'Detay');
@@ -39,8 +40,26 @@ function renderStudents(){
   const items = lists.ogrenciler.filter((s) =>
     !query || s.name?.toLocaleLowerCase('tr').includes(query) || s.email?.toLocaleLowerCase('tr').includes(query));
   $('list-ogrenciler').replaceChildren(...(items.length
-    ? items.map((s) => row(s, [['Kayıt', fmtDate(s.createdAt)], ['Onay', fmtDate(s.approvedAt)]], [detailLink(s)]))
+    ? items.map((s) => row(s, [['Kayıt', fmtDate(s.createdAt)], ['Onay', fmtDate(s.approvedAt)], ['Yazılar', writingBadge(s)]], [detailLink(s)]))
     : [empty(query ? 'Aramaya uyan öğrenci yok.' : 'Henüz onaylanmış öğrenci yok.')]));
+}
+
+// Schreiben: geri bildirim bekleyen metin varsa öğrencinin detayındaki "Yazma görevleri" bölümüne giden işaret.
+function writingBadge(s){
+  const n = pendingWritings.get(s.id) || 0;
+  if(!n) return '—';
+  return h('a', { class: 'acc-badge warning', href: `ogretmen-ogrenci.html?id=${encodeURIComponent(s.id)}#yazilar`, 'data-pending-writings': String(n) },
+    `${n} geri bildirim bekliyor`);
+}
+
+function renderWritingNotice(){
+  const total = [...pendingWritings.values()].reduce((a, b) => a + b, 0);
+  const notice = $('writingNotice');
+  notice.hidden = total === 0;
+  if(total){
+    notice.replaceChildren(`Geri bildirim bekleyen ${total} yazı var (${pendingWritings.size} öğrenci). `,
+      h('a', { class: 'ba-link', href: '#ogrenciler' }, 'Öğrenci listesinde işaretli'));
+  }
 }
 
 function renderPending(){
@@ -178,15 +197,18 @@ function showError(message){
 async function load(){
   try{
     // Ödevler okunamasa bile öğrenci listesi açılsın.
-    const [students, lastLessons, assignmentGroups] = await Promise.all([
+    const [students, lastLessons, assignmentGroups, writings] = await Promise.all([
       listStudents(),
       lastLessonByStudent(),
-      loadAssignmentGroups().catch((error) => { console.warn(error); return []; })
+      loadAssignmentGroups().catch((error) => { console.warn(error); return []; }),
+      pendingWritingsByStudent()
     ]);
+    pendingWritings = writings;
     lists = categorize(students, lastLessons);
     groups = assignmentGroups;
     studentsById = new Map(students.map((st) => [st.id, st]));
     renderCounts();
+    renderWritingNotice();
     renderStudents();
     renderPending();
     renderParent();

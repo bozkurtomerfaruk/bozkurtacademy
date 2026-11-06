@@ -10,7 +10,8 @@
     "test:cleanup": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/placement-cleanup.mjs\"",
     "test:level-exam": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/level-exam-account.mjs\"",
     "test:placement": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/seviye-testi/placement.mjs\"",
-    "test:csp": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/csp.mjs\""
+    "test:csp": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/csp.mjs\"",
+    "test:schreiben": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/schreiben-account.mjs\""
   },
   "devDependencies": {
     "@firebase/rules-unit-testing": "5.0.2",

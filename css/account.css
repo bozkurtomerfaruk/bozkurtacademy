@@ -314,3 +314,19 @@
 .acc-invite{display:grid;gap:8px;margin:16px 0}
 .acc-invite .btn{justify-self:start}
 .acc-lesson-time .acc-sub{font-family:var(--ba-sans);font-weight:400}
+
+/* Schreiben metinleri: öğretmenin öğrenci detayı (geri bildirim yazar) ve öğrenci paneli (geri bildirimi okur). */
+.acc-writing{margin:0 0 12px;padding:0}
+.acc-writing>summary{display:block;padding:14px 18px;cursor:pointer;list-style:none}
+.acc-writing>summary::-webkit-details-marker{display:none}
+.acc-writing>summary::before{content:"▸";display:inline-block;width:1.1em;color:var(--ba-muted)}
+.acc-writing[open]>summary::before{content:"▾"}
+.acc-writing>summary .acc-badges{margin-top:8px}
+#writingAlert{margin:0 0 24px}
+.acc-writing-title{font-weight:600}
+.acc-writing .acc-card-body{display:grid;gap:10px;padding:0 18px 18px}
+.acc-writing-text{white-space:pre-wrap;overflow-wrap:anywhere;padding:12px 14px;border-radius:var(--ba-radius-small);background:var(--ba-paper-2);line-height:1.6}
+.acc-writing textarea{width:100%;min-height:110px;resize:vertical;padding:10px 12px;border:2px solid var(--ba-line-strong);border-radius:var(--ba-radius-small);background:var(--ba-paper);color:var(--ba-ink);font:inherit;line-height:1.5}
+.acc-writing textarea:focus-visible{outline:3px solid var(--ba-focus);outline-offset:2px}
+.acc-feedback{margin:0;padding:12px 14px;border-left:5px solid var(--ba-accent);border-radius:0 var(--ba-radius-small) var(--ba-radius-small) 0;background:var(--ba-paper-2);line-height:1.55;white-space:pre-wrap}
+.acc-new-dot{display:inline-block;width:10px;height:10px;margin-right:6px;border-radius:50%;background:var(--ba-wrong);vertical-align:middle}

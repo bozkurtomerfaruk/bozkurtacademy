@@ -922,3 +922,135 @@ describe('Gramer dersi yorumları (comments)', () => {
     await assertSucceeds(deleteDoc(doc(t, 'comments/ComWait0000001')));
   });
 });
+
+// Schreiben (js/writing-task.js → js/account/session.js): users/{uid}/writings + users/{uid}/limits/writing.
+function writing(overrides = {}) {
+  return { exam: 'goethe', level: 'b1', teil: 1, set: 'set-1', text: 'Liebe Lena, wie geht es dir?', words: 6, at: serverTimestamp(), ...overrides };
+}
+// Uygulamadaki gibi: metin ve sınır belgesi aynı batch'te. window: mevcut pencerenin başlangıcı (yoksa yeni pencere).
+function submitWriting(db, uid, { data = {}, count = 1, windowStart, withLimit = true, limitExtra = {} } = {}) {
+  const batch = writeBatch(db);
+  const ref = doc(collection(db, `users/${uid}/writings`));
+  batch.set(ref, writing(data));
+  if (withLimit) {
+    batch.set(doc(db, `users/${uid}/limits/writing`), {
+      windowStart: windowStart || serverTimestamp(), count, lastAt: serverTimestamp(), lastId: ref.id, ...limitExtra
+    });
+  }
+  return batch.commit();
+}
+const hoursAgo = (h) => Timestamp.fromMillis(Date.now() - h * 3600 * 1000);
+const seededWriting = (overrides = {}) => ({ ...writing(), at: Timestamp.now(), ...overrides });
+
+describe('Schreiben metinleri', () => {
+  test('onaylı öğrenci ilk metnini gönderir ve kendi metinlerini okur', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await assertSucceeds(submitWriting(ayse(), 'ayse'));
+    await assertSucceeds(getDocs(collection(ayse(), 'users/ayse/writings')));
+    await assertSucceeds(getDoc(doc(ayse(), 'users/ayse/limits/writing')));
+  });
+
+  test('onaylanmamış öğrenci metin gönderemez', async () => {
+    await seed('users/ayse', seededAdult('pending'));
+    await assertFails(submitWriting(ayse(), 'ayse'));
+  });
+
+  test('16 yaş altı: veli onayı yoksa gönderemez, varsa gönderir', async () => {
+    await seed('users/can', seededMinor('active'));
+    await assertFails(submitWriting(can(), 'can'));
+    await seed('users/can', seededMinor('active', consentGiven));
+    await assertSucceeds(submitWriting(can(), 'can'));
+  });
+
+  test('sınır belgesi olmadan metin eklenemez', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await assertFails(submitWriting(ayse(), 'ayse', { withLimit: false }));
+  });
+
+  test('metin en fazla 4000 karakter ve boş olamaz', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await assertSucceeds(submitWriting(ayse(), 'ayse', { data: { text: 'a'.repeat(4000) } }));
+    await seed('users/ayse/limits/writing', { windowStart: hoursAgo(30), count: 1, lastAt: hoursAgo(30), lastId: 'eskimetin0000001' });
+    await assertFails(submitWriting(ayse(), 'ayse', { data: { text: 'a'.repeat(4001) } }));
+    await assertFails(submitWriting(ayse(), 'ayse', { data: { text: '   \n ' } }));
+  });
+
+  test('öğrenci geri bildirim ya da başka alan yazamaz, zaman sunucu saati olmalı', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await assertFails(submitWriting(ayse(), 'ayse', { data: { feedback: 'Çok iyi!' } }));
+    await assertFails(submitWriting(ayse(), 'ayse', { data: { at: Timestamp.now() } }));
+    await assertFails(submitWriting(ayse(), 'ayse', { data: { teil: 0 } }));
+    await assertFails(submitWriting(ayse(), 'ayse', { data: { set: '../x' } }));
+    await assertFails(submitWriting(ayse(), 'ayse', { data: { words: 1001 } }));
+  });
+
+  test('aynı 24 saatte ikinci metin: sayaç bir artar', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    const start = hoursAgo(2);
+    await seed('users/ayse/limits/writing', { windowStart: start, count: 1, lastAt: start, lastId: 'eskimetin0000001' });
+    await assertSucceeds(submitWriting(ayse(), 'ayse', { windowStart: start, count: 2 }));
+  });
+
+  test('pencere bitmeden yeni pencere başlatılamaz, sayaç atlanamaz', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    const start = hoursAgo(2);
+    await seed('users/ayse/limits/writing', { windowStart: start, count: 3, lastAt: start, lastId: 'eskimetin0000001' });
+    await assertFails(submitWriting(ayse(), 'ayse', { count: 1 }));
+    await assertFails(submitWriting(ayse(), 'ayse', { windowStart: start, count: 3 }));
+    await assertFails(submitWriting(ayse(), 'ayse', { windowStart: start, count: 5 }));
+  });
+
+  test('24 saatte en fazla 10 metin', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    const start = hoursAgo(5);
+    await seed('users/ayse/limits/writing', { windowStart: start, count: 9, lastAt: start, lastId: 'eskimetin0000001' });
+    await assertSucceeds(submitWriting(ayse(), 'ayse', { windowStart: start, count: 10 }));
+    await assertFails(submitWriting(ayse(), 'ayse', { windowStart: start, count: 11 }));
+  });
+
+  test('24 saat geçince yeni pencere başlar', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    const start = hoursAgo(25);
+    await seed('users/ayse/limits/writing', { windowStart: start, count: 10, lastAt: start, lastId: 'eskimetin0000001' });
+    await assertFails(submitWriting(ayse(), 'ayse', { windowStart: start, count: 11 }));
+    await assertSucceeds(submitWriting(ayse(), 'ayse', { count: 1 }));
+  });
+
+  test('sınır belgesine metin olmadan sayı yazılamaz', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await assertFails(setDoc(doc(ayse(), 'users/ayse/limits/writing'),
+      { windowStart: serverTimestamp(), count: 1, lastAt: serverTimestamp(), lastId: 'olmayanmetin000001' }));
+    await assertFails(setDoc(doc(ayse(), 'users/ayse/limits/baska'),
+      { windowStart: serverTimestamp(), count: 1, lastAt: serverTimestamp(), lastId: 'olmayanmetin000001' }));
+  });
+
+  test('öğrenci gönderdiği metni değiştiremez ve silemez; sadece "görüldü" işaretler', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await seed('users/ayse/writings/w1', seededWriting({ feedback: 'İyi', feedbackAt: Timestamp.now() }));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse/writings/w1'), { text: 'değişti' }));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse/writings/w1'), { feedback: 'Harika' }));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse/writings/w1'), { seenAt: Timestamp.now() }));
+    await assertFails(deleteDoc(doc(ayse(), 'users/ayse/writings/w1')));
+    await assertSucceeds(updateDoc(doc(ayse(), 'users/ayse/writings/w1'), { seenAt: serverTimestamp() }));
+  });
+
+  test('başka öğrenci metinleri okuyamaz ve başkası adına gönderemez', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await seed('users/can', seededMinor('active', consentGiven));
+    await seed('users/ayse/writings/w1', seededWriting());
+    await assertFails(getDoc(doc(can(), 'users/ayse/writings/w1')));
+    await assertFails(getDocs(collection(can(), 'users/ayse/writings')));
+    await assertFails(submitWriting(can(), 'ayse'));
+    await assertFails(getDocs(collectionGroup(ayse(), 'writings')));
+    await assertFails(getDocs(collection(guestDb(), 'users/ayse/writings')));
+  });
+
+  test('öğretmen bütün metinleri okur, geri bildirim yazar ve siler', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await seed('users/ayse/writings/w1', seededWriting());
+    await assertSucceeds(getDocs(collectionGroup(teacherDb(), 'writings')));
+    await assertSucceeds(updateDoc(doc(teacherDb(), 'users/ayse/writings/w1'), { feedback: 'Üç madde de var.', feedbackAt: serverTimestamp() }));
+    await assertSucceeds(deleteDoc(doc(teacherDb(), 'users/ayse/limits/writing')));
+    await assertSucceeds(deleteDoc(doc(teacherDb(), 'users/ayse/writings/w1')));
+  });
+});

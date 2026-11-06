@@ -2,13 +2,14 @@
 // isteğe bağlı Google Docs linki ("her öğrenciye kopya" → /copy) ve bir ya da birden fazla öğrenci.
 import {
   $, berlinInputToDate, dateToBerlinInput, docsCopyUrl, h, LEVEL_EXAM, levelExamTopic, loadCatalogLevels, loadTopicExercises, localize, setStatus,
-  validHttpsUrl
+  validHttpsUrl, WRITING, writingTasks
 } from './common.js';
 import { fs } from './firebase.js';
 import { createAssignments, isEnabled, listStudents, requireTeacher } from './teacher-common.js';
 
 const chosen = []; // [{ level, topic, exercise, label }]
 let levels = [];
+let writingLevels = new Set(); // catalog levels that have Schreiben tasks (js/examsData.js)
 
 const key = (e) => `${e.level}/${e.topic}/${e.exercise}`;
 
@@ -62,7 +63,9 @@ function renderTopics(){
   // The level's end-of-level test (data/catalog.json → levelExam) is chosen like a topic.
   fillSelect($('aTopic'), [
     ...topics.map((t) => ({ value: t.id, label: localize(t.title, 'tr') })),
-    ...(level?.levelExam ? [{ value: LEVEL_EXAM, label: levelExamTopic('tr') }] : [])
+    ...(level?.levelExam ? [{ value: LEVEL_EXAM, label: levelExamTopic('tr') }] : []),
+    // Sınav hazırlığındaki yazma görevleri (Schreiben): öğrenci metnini yazar, öğretmen geri bildirim verir.
+    ...(writingLevels.has(level?.id) ? [{ value: WRITING, label: 'Schreiben (sınav hazırlığı)' }] : [])
   ]);
   renderExercises();
 }
@@ -163,8 +166,9 @@ async function submit(event){
 const user = await requireTeacher({ loadingId: 'assignLoading', errorId: 'assignError' });
 if(user){
   try{
-    const [catalogLevels, students] = await Promise.all([loadCatalogLevels(), listStudents()]);
+    const [catalogLevels, students, writing] = await Promise.all([loadCatalogLevels(), listStudents(), writingTasks().catch(() => [])]);
     levels = catalogLevels;
+    writingLevels = new Set(writing.map((w) => w.catalogLevel));
     fillSelect($('aLevel'), levels.map((l) => ({ value: l.id, label: `${l.id} · ${localize(l.title, 'tr')}` })));
     renderTopics();
     renderChosen();

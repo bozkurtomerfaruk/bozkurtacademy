@@ -1,6 +1,7 @@
 // Sınav Hazırlığı (#exams): exam → level → section → Teil, built entirely from js/examsData.js.
 // Addresses: #exams, #exams/goethe, #exams/goethe/b1, #exams/goethe/b1/lesen (DTZ: #exams/dtz/lesen),
-// and one exam set: #exams/goethe/b1/lesen/1/set-1 (Teil 1, set-1), played by js/exam-task.js.
+// and one exam set: #exams/goethe/b1/lesen/1/set-1 (Teil 1, set-1), played by js/exam-task.js
+// (Schreiben sets, e.g. #exams/goethe/b1/schreiben/1/set-1, by js/writing-task.js).
 // Cards are ordinary links, so the browser keeps the history; this file only listens for the hash.
 (() => {
   'use strict';
@@ -330,7 +331,9 @@
     root.querySelector('#examSteps').innerHTML = renderSteps(route);
     root.querySelector('#examView').innerHTML = views[current]();
     root.dataset.step = route.set ? 'task' : String(current);
-    if (route.set) window.BAExamTask?.render(root.querySelector('#examTask'), { path: setPath(route), preserve: sameRoute, nav: nextStep(route) });
+    // Schreiben sets are writing tasks (js/writing-task.js); every other section plays questions (js/exam-task.js).
+    const player = route.section?.id === 'schreiben' ? window.BAWritingTask : window.BAExamTask;
+    if (route.set) player?.render(root.querySelector('#examTask'), { path: setPath(route), preserve: sameRoute, nav: nextStep(route) });
 
     const behavior = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
     if (focusNext) {

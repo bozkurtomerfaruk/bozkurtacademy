@@ -109,13 +109,38 @@ Set şu adresten açılır: `#exams/goethe/b1/lesen/1/set-1`. DTZ gibi seviye ad
 - `evidence`: cevabın dayandığı yerler. `quote`, `text` ile belirtilen metinde **harfi harfine ve yalnızca bir kez** geçmeli. Aynı metindeki alıntılar birbiriyle çakışmamalı. "Kontrol et"ten sonra bu yerler metinde soru numarasıyla vurgulanır. Cevabı `0` olan eşleştirme sorusunda boş bırakılabilir; tuzak ilanı göstermek için kullanılabilir.
 - `explanation`: Türkçe, en az 40 karakter.
 
+## 2b. Schreiben setleri (yazma görevi)
+
+`section` `"schreiben"` olan setlerde soru yoktur; öğrenci metin yazar (`js/writing-task.js`). Örnek: `data/exams/goethe/b1/schreiben/teil-1/set-1.json`.
+
+```json
+{
+  "format": 1, "exam": "goethe", "level": "b1", "section": "schreiben", "teil": 1, "set": "set-1",
+  "title": "Neue Wohnung", "minutes": 20, "kind": "writing", "register": "du",
+  "situation": "Sie sind vor zwei Wochen …",
+  "task": "Schreiben Sie Lena eine E-Mail:",
+  "points": ["Beschreiben Sie: …", "Begründen Sie: …", "Machen Sie einen Vorschlag …"],
+  "instructions": "Schreiben Sie eine E-Mail (circa 80 Wörter). …",
+  "words": { "target": 80, "min": 70, "max": 100 },
+  "checklist": [{ "criterion": "aufgabe", "tr": "Üç maddenin hepsine yazdım (…)." }],
+  "redemittel": [{ "group": "Begründen", "items": [{ "de": "Ich bin umgezogen, weil …", "tr": "Taşındım, çünkü …" }] }],
+  "model": { "text": "Liebe Lena,\n…", "notes": ["Üç madde görevdeki sırayla …"] }
+}
+```
+
+- `words`: kelime sayacı `min`–`max` arasını iyi sayar; dışında uyarır ama göndermeyi engellemez. Sayaç harf ve rakam dizilerini sayar; `-` ya da `'` ile birleşenler tek kelimedir (B1-Prüfung).
+- `checklist`: sınav kriterlerine göre (`aufgabe`: görevi yerine getirme, `aufbau`: metin düzeni, `sprache`: kelime ve dil bilgisi) öğrencinin kendi kendini kontrol listesi; Türkçe, en az 5 madde, her kriterden en az biri. Kaydedilmez.
+- `redemittel`: konuya uygun kalıplar, Almanca ve Türkçe; en az 3 grup.
+- `model`: örnek cevap (`min`–`max` kelime) ve kısa Türkçe notlar; gönderdikten sonra açılır. Tek doğru cevap değil, bir örnektir.
+- Giriş yapmış öğrencinin metni `users/{uid}/writings`'e kaydedilir, öğretmen geri bildirim yazar (`firestore.rules`); ziyaretçinin metni sadece kendi cihazında taslak olarak durur.
+
 ## 3. Kontrol
 
 ```
 node scripts/check-exams.mjs
 ```
 
-Betik bütün setleri açar (yalnızca bazılarını kontrol etmek için: `node scripts/check-exams.mjs teil-3/set-4`); dosya yolu, soru türleri, cevaplar, alıntılar ve numaralar için hata verir; her setin cevap dağılımını ve kelime sayılarını yazar. GitHub'da `data/exams/**` veya `js/examsData.js` değişince otomatik çalışır.
+Betik bütün setleri açar (yalnızca bazılarını kontrol etmek için: `node scripts/check-exams.mjs teil-3/set-4`); dosya yolu, soru türleri, cevaplar, alıntılar ve numaralar için (Schreiben setlerinde görev, kelime hedefi, kontrol listesi, Redemittel ve örnek cevabın uzunluğu için) hata verir; her setin cevap dağılımını ve kelime sayılarını yazar. GitHub'da `data/exams/**` veya `js/examsData.js` değişince otomatik çalışır.
 
 ## 4. İçerik kuralları
 

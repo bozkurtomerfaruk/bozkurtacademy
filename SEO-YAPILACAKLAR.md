@@ -126,7 +126,7 @@ Arama hacimleri Search Console verisi geldikçe gözden geçirilmeli. Resmî şa
 | 1 (6 Kasım 2026) | almanca nasıl öğrenilir | Almanca Nasıl Öğrenilir? Sıfırdan Başlayanlar İçin Yol Haritası | /a1-almanca-kursu/, /almanca-gramer/a1/ (artikel, praesens, w-fragen), /almanca-ozel-ders/ | Yayında |
 | 2 (6 Kasım 2026) | almanca günlük kalıplar | Almanca Günlük Kalıplar: Her Gün İşine Yarayacak 40 İfade | /almanca-gramer/a1/w-fragen/, /almanca-gramer/a1/modalverben/, /almanca-gramer/a2/konjunktiv-ii/, /online-almanca-dersi/ | Yayında |
 | 3 (6 Kasım 2026) | a1 almanca sınavı nasıl geçilir | A1 Almanca Sınavı Nasıl Geçilir? Bölüm Bölüm Hazırlık Rehberi | /a1-almanca-kursu/, /almanca-sinav-hazirlik/, /#exams, /almanca-gramer/a1/ | Yayında |
-| 4 (3 Aralık 2026) | goethe telc farkı | Goethe mi telc mi? Almanca Sınavları Arasındaki Farklar | /almanca-sinav-hazirlik/, /b1-almanca-kursu/ | Planlandı |
+| 4 (13 Kasım 2026) | goethe telc farkı | Goethe mi telc mi? Almanca Sınavları Arasındaki Farklar | /almanca-sinav-hazirlik/, /b1-almanca-kursu/, /almanca-gramer/b1/ | Taslak yazıldı |
 | 5 (10 Aralık 2026) | aile birleşimi için almanca | Aile Birleşimi İçin Almanca: Nereden Başlamalı? | /a1-almanca-kursu/, /almanca-gramer/a1/, /iletisim/ (resmî şartlar için yalnızca yönlendirme) | Planlandı |
 | 6 (17 Aralık 2026) | almanya'da çalışmak için hangi seviye almanca | Almanya'da Çalışmak İçin Hangi Seviye Almanca Gerekir? | /b1-almanca-kursu/, /b2-almanca-kursu/ (seviye şartları için resmî kaynağa yönlendirme) | Planlandı |
 | 7 (24 Aralık 2026) | almanca artikel nasıl öğrenilir | der, die, das: Almanca Artikeller Nasıl Akılda Kalır? | /almanca-gramer/a1/artikel/, /almanca-gramer/a1/plural/ | Planlandı |
@@ -196,7 +196,8 @@ Sitede doğrulama dosyası (`google4cc3144aaa693325.html`) zaten var. Yani mülk
 4. **Sayfaları üret:** `node scripts/build-pages.mjs` çalıştır. Taslağı `https://bozkurtacademy.com/blog/<adres>/` adresinde görürsün (Google'a kapalı).
 5. **Kontrol et:** Linkler çalışıyor mu? `<!-- KONTROL ET -->` notlu yerleri resmî kaynaktan kontrol ettin mi? Kişisel başarı iddiası veya uydurma bilgi yok mu? Sınav ücreti, şart, süre gibi değişebilen bilgiler kesin rakamla yazılmadı mı?
 6. **Yayınla:** `"status": "published"` yap, `date` alanını yayın gününe ayarla ve tekrar `node scripts/build-pages.mjs` çalıştır. Yazı otomatik olarak blog listesine, ana sayfaya, sitemap'e ve link verdiği gramer derslerine eklenir.
-7. **Geri dönüş linki:** Yazının en ilgili kurs sayfasına (ör. A1 kurs sayfası) doğal bir cümleyle yazıya link ekle.
+7. **Geri dönüş linki:** Kurs sayfasında uygun cümlenin sonuna `<!-- ba:blog:<adres> --><!-- /ba:blog:<adres> -->` işaretini koy ve `posts.json` kaydına cümleyi ekle:
+   `"backlinks": {"/b1-almanca-kursu/": "… için {link} yazısına bakabilirsin."}`. Cümle yazı yayınlanınca otomatik görünür; taslakken boş kalır. Gramer derslerindeki "Blogda bu konu" notu zaten otomatiktir.
 8. **Google'a bildir:** Bölüm 4'teki "Dizine eklenmesini iste" adımını yap.
 9. **Paylaş:** Yazının linkini sosyal medya profillerinde paylaş (Bölüm 6).
 

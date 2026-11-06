@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "note": "Artikel Evleri konu setleri. Kelimeler data/sozluk.json anahtarları (artikel ve Türkçe anlam oradan gelir); her konuda der, die ve das sayısı eşit. Kontrol: node scripts/check-kids-games.mjs",
+  "themes": [
+    {
+      "id": "yiyecekler",
+      "title": {
+        "tr": "Yiyecekler",
+        "de": "Essen und Trinken",
+        "en": "Food and drink"
+      },
+      "cover": "Apfel",
+      "words": [
+        "Apfel",
+        "Kuchen",
+        "Käse",
+        "Salat",
+        "Banane",
+        "Erdbeere",
+        "Tomate",
+        "Pizza",
+        "Brot",
+        "Ei",
+        "Eis",
+        "Wasser"
+      ]
+    },
+    {
+      "id": "evde",
+      "title": {
+        "tr": "Evde",
+        "de": "Zu Hause",
+        "en": "At home"
+      },
+      "cover": "Sofa",
+      "words": [
+        "Tisch",
+        "Stuhl",
+        "Schrank",
+        "Fernseher",
+        "Lampe",
+        "Tür",
+        "Uhr",
+        "Kerze",
+        "Haus",
+        "Bett",
+        "Fenster",
+        "Sofa"
+      ]
+    },
+    {
+      "id": "okul-ve-oyun",
+      "title": {
+        "tr": "Okul ve oyun",
+        "de": "Schule und Spiel",
+        "en": "School and play"
+      },
+      "cover": "Ball",
+      "words": [
+        "Ball",
+        "Bleistift",
+        "Rucksack",
+        "Computer",
+        "Puppe",
+        "Gitarre",
+        "Schule",
+        "Tasche",
+        "Buch",
+        "Heft",
+        "Bild",
+        "Geschenk"
+      ]
+    },
+    {
+      "id": "disarida",
+      "title": {
+        "tr": "Dışarıda",
+        "de": "Draußen",
+        "en": "Outdoors"
+      },
+      "cover": "Baum",
+      "words": [
+        "Hund",
+        "Vogel",
+        "Baum",
+        "Bus",
+        "Katze",
+        "Blume",
+        "Sonne",
+        "Brücke",
+        "Auto",
+        "Flugzeug",
+        "Schiff",
+        "Fahrrad"
+      ]
+    }
+  ]
+}

@@ -14,6 +14,9 @@
   --ba-field:#34452a;--ba-field-ink:#f3f0e8;
   --ba-right:#2f5d34;--ba-right-bg:#e2ecd9;--ba-wrong:#9a3328;--ba-wrong-bg:#f6e2dc;
   --ba-focus:#2a2a26;
+  /* Article colours for the children's game (css/artikel-evleri.css); the picture tile stays light in both themes. */
+  --ba-der:#2c5f9e;--ba-der-bg:#dbe5f1;--ba-die:#a3352c;--ba-die-bg:#f4e0dc;--ba-das:#35703e;--ba-das-bg:#dde9d7;
+  --ba-lamp:#e8ae2f;--ba-pic:#fbf8ef;
   --ba-radius:14px;--ba-radius-small:6px;--ba-gutter:12px;--ba-content:1180px;
   --ba-serif:"STIX Two Text",Georgia,"Times New Roman",serif;
   --ba-sans:"Albert Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
@@ -33,6 +36,8 @@ html[data-theme="dark"]{
   --ba-field:#26331e;--ba-field-ink:#ece6d6;
   --ba-right:#b9dfb0;--ba-right-bg:#24361f;--ba-wrong:#f0a89c;--ba-wrong-bg:#3d2622;
   --ba-focus:#ece6d6;
+  --ba-der:#93b8e6;--ba-der-bg:#1f2b3a;--ba-die:#f0a89c;--ba-die-bg:#3d2622;--ba-das:#a9d6a0;--ba-das-bg:#22341f;
+  --ba-lamp:#f0c55a;--ba-pic:#ece6d6;
   color-scheme:dark;background:var(--ba-ground)!important;
 }
 html{background:var(--ba-ground)}
@@ -282,8 +287,8 @@ html[data-theme="dark"] .academy-theme .brand-logo-dark{display:block}
   .academy-theme .ba-sticky-cta{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:40;min-height:52px}
   .academy-theme:has(.ba-sticky-cta){padding-bottom:84px}
   /* Not over the exercise, exam and placement test controls, and not while the menu is open */
-  .academy-theme:is([data-ba-page="exercises"],[data-ba-page="exams"],[data-ba-page="seviye-testi"],[data-ba-page="yonetim"],.menu-open) .ba-sticky-cta{display:none}
-  .academy-theme:is([data-ba-page="exercises"],[data-ba-page="exams"],[data-ba-page="seviye-testi"],[data-ba-page="yonetim"]){padding-bottom:0}
+  .academy-theme:is([data-ba-page="exercises"],[data-ba-page="exams"],[data-ba-page="seviye-testi"],[data-ba-page="seviye-sonu"],[data-ba-page="artikel-evleri"],[data-ba-page="yonetim"],.menu-open) .ba-sticky-cta{display:none}
+  .academy-theme:is([data-ba-page="exercises"],[data-ba-page="exams"],[data-ba-page="seviye-testi"],[data-ba-page="seviye-sonu"],[data-ba-page="artikel-evleri"],[data-ba-page="yonetim"]){padding-bottom:0}
 }
 
 /* Motion: page fade and section reveals, never needed to read */

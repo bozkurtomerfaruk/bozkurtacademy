@@ -15,7 +15,7 @@
   <link rel="preload" href="fonts/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=12" />
-  <link rel="stylesheet" href="css/base.css?v=10" />
+  <link rel="stylesheet" href="css/base.css?v=11" />
   <link rel="stylesheet" href="css/account.css?v=3" />
 </head>
 <body class="academy-theme account-page">
@@ -54,7 +54,7 @@
         <div class="privacy-lang" data-privacy-lang="tr" lang="tr">
         <p class="acc-status warning" role="note">Bu metin hukuki olarak kontrol edilmektedir.</p>
         <header class="acc-head">
-          <p class="acc-eyebrow">Son güncelleme: 4 Kasım 2026</p>
+          <p class="acc-eyebrow">Son güncelleme: 5 Kasım 2026</p>
           <h1 id="privacyTitle-tr">Gizlilik politikası</h1>
           <p class="acc-lead">Bu sayfa, Bozkurt Academy sitesini kullanırken ve öğrenci hesabı açtığında hangi kişisel verilerin işlendiğini, nerede saklandığını ve haklarını açıklar.</p>
         </header>
@@ -71,6 +71,7 @@
             <li><strong>Çerez yok:</strong> Site çerez kullanmaz.</li>
             <li><strong>Tarayıcıda saklanan ayarlar (localStorage):</strong> tema (<code>ba-theme</code>), dil (<code>baLang</code>), alıştırmalardaki en iyi skor (<code>baBestScore:…</code>) ve giriş yapmış olup olmadığın için bir ipucu (<code>baAccount</code>, sadece “student” ya da “teacher”). Bunlar cihazından dışarı gönderilmez.</li>
             <li><strong>Seviye testi (localStorage):</strong> testteki ilerlemen (<code>baPlacement</code>: cevaplar, seçeneklerin sırası, form taslağı) ve son gönderim zamanı (<code>baPlacementSent</code>). Bunlar sen gönderene kadar cihazından çıkmaz; gönderimden sonra ilerleme silinir.</li>
+            <li><strong>Seviye sonu sınavı ve Artikel Evleri oyunu (localStorage):</strong> yarım kalan sınav denemesi (<code>baLevelExam:…</code>: çıkan sorular, seçeneklerin sırası, cevaplar ve sonuç) ile oyunun ses ayarı ve konu başına en iyi skoru (<code>baKelimeOyunlari</code>). Bunlar cihazından dışarı gönderilmez. Oyunda kelimeler cihazındaki Almanca sesle okunur; sadece cihazın kendisinde çalışan sesler kullanılır, okunan kelimeler hiçbir sunucuya gönderilmez.</li>
             <li>Giriş yapmamış ziyaretçiler için Firebase yüklenmez. İki istisna var: Seviye testinin sonucunu göndermek için “Sonucu gönder”e bastığında (bkz. 5a) ve bir gramer dersinde yorum gönderdiğinde (bkz. 4) Firebase yüklenir.</li>
             <li>Bir gramer dersinde sayfanın yorum bölümüne yaklaştığında, onaylanmış yorumları göstermek için tarayıcın Google’ın Cloud Firestore sunucusuna (<code>firestore.googleapis.com</code>) tek bir okuma isteği gönderir. Bu istekte IP adresin ve tarayıcı bilgilerin Google’a ulaşır; oturum açılmaz ve çerez kullanılmaz. Yorum bölümüne gelmezsen bu istek gönderilmez.</li>
           </ul>
@@ -176,7 +177,7 @@
         <div class="privacy-lang" data-privacy-lang="de" lang="de" hidden>
         <p class="acc-status warning" role="note">Dieser Text wird derzeit rechtlich geprüft.</p>
         <header class="acc-head">
-          <p class="acc-eyebrow">Stand: 4. November 2026</p>
+          <p class="acc-eyebrow">Stand: 5. November 2026</p>
           <h1 id="privacyTitle-de">Datenschutzerklärung</h1>
           <p class="acc-lead">Diese Datenschutzerklärung informiert Sie darüber, welche personenbezogenen Daten bei der Nutzung der Website von Bozkurt Academy und bei der Eröffnung eines Schülerkontos verarbeitet werden, wo sie gespeichert werden und welche Rechte Sie haben.</p>
         </header>
@@ -193,6 +194,7 @@
             <li><strong>Keine Cookies:</strong> Diese Website verwendet keine Cookies.</li>
             <li><strong>Im Browser gespeicherte Einstellungen (localStorage):</strong> Farbschema (<code>ba-theme</code>), Sprache (<code>baLang</code>), bester Punktestand in den Übungen (<code>baBestScore:…</code>) sowie ein Hinweis darauf, ob Sie angemeldet sind (<code>baAccount</code>, nur „student“ oder „teacher“). Diese Angaben verlassen Ihr Gerät nicht.</li>
             <li><strong>Einstufungstest (localStorage):</strong> Ihr Fortschritt im Test (<code>baPlacement</code>: Antworten, Reihenfolge der Antwortmöglichkeiten, Formularentwurf) und der Zeitpunkt der letzten Übermittlung (<code>baPlacementSent</code>). Diese Daten verlassen Ihr Gerät erst, wenn Sie sie absenden; nach dem Absenden wird der Fortschritt gelöscht.</li>
+            <li><strong>Abschlusstest und Spiel „Artikelhäuser“ (localStorage):</strong> ein nicht beendeter Testversuch (<code>baLevelExam:…</code>: gezogene Fragen, Reihenfolge der Antwortmöglichkeiten, Antworten und Ergebnis) sowie die Toneinstellung und der Bestwert je Thema im Spiel (<code>baKelimeOyunlari</code>). Diese Angaben verlassen Ihr Gerät nicht. Im Spiel werden die Wörter mit der deutschen Stimme Ihres Geräts vorgelesen; dabei werden nur Stimmen verwendet, die auf dem Gerät selbst laufen, und die Wörter werden an keinen Server gesendet.</li>
             <li>Für nicht angemeldete Besucherinnen und Besucher wird Firebase nicht geladen. Zwei Ausnahmen: Wenn Sie nach dem Einstufungstest auf „Ergebnis senden“ klicken (siehe Abschnitt 5a) und wenn Sie in einer Grammatiklektion einen Kommentar senden (siehe Abschnitt 4), wird Firebase geladen.</li>
             <li>Wenn Sie in einer Grammatiklektion in die Nähe des Kommentarbereichs scrollen, sendet Ihr Browser eine einzelne Leseanfrage an den Cloud-Firestore-Server von Google (<code>firestore.googleapis.com</code>), um freigegebene Kommentare anzuzeigen. Dabei erreichen Ihre IP-Adresse und Browserangaben Google; es wird keine Anmeldung geöffnet und kein Cookie verwendet. Erreichen Sie den Kommentarbereich nicht, wird diese Anfrage nicht gesendet.</li>
           </ul>
@@ -298,7 +300,7 @@
         <div class="privacy-lang" data-privacy-lang="en" lang="en" hidden>
         <p class="acc-status warning" role="note">This text is currently under legal review.</p>
         <header class="acc-head">
-          <p class="acc-eyebrow">Last updated: 4 November 2026</p>
+          <p class="acc-eyebrow">Last updated: 5 November 2026</p>
           <h1 id="privacyTitle-en">Privacy policy</h1>
           <p class="acc-lead">This page explains which personal data are processed when you use the Bozkurt Academy website and when you open a student account, where they are stored, and what your rights are.</p>
         </header>
@@ -315,6 +317,7 @@
             <li><strong>No cookies:</strong> The website does not use cookies.</li>
             <li><strong>Settings stored in your browser (localStorage):</strong> colour theme (<code>ba-theme</code>), language (<code>baLang</code>), your best score in the exercises (<code>baBestScore:…</code>) and a hint whether you are signed in (<code>baAccount</code>, only “student” or “teacher”). These are never sent from your device.</li>
             <li><strong>Placement test (localStorage):</strong> your progress in the test (<code>baPlacement</code>: answers, order of the options, form draft) and the time of your last submission (<code>baPlacementSent</code>). This stays on your device until you send it; your progress is deleted after sending.</li>
+            <li><strong>End-of-level test and the “Article Houses” game (localStorage):</strong> an unfinished test attempt (<code>baLevelExam:…</code>: the questions drawn, the order of the options, your answers and the result) and, for the game, the sound setting and the best score per topic (<code>baKelimeOyunlari</code>). These are never sent from your device. In the game, words are read aloud by your device’s German voice; only voices that run on the device itself are used, and the words are not sent to any server.</li>
             <li>Firebase is not loaded for visitors who are not signed in. There are two exceptions: when you press “Send result” after the placement test (see section 5a) and when you send a comment on a grammar lesson (see section 4), Firebase is loaded.</li>
             <li>When you scroll near the comment section of a grammar lesson, your browser sends a single read request to Google’s Cloud Firestore server (<code>firestore.googleapis.com</code>) to show approved comments. Your IP address and browser details reach Google with this request; no sign-in is opened and no cookie is used. If you do not reach the comment section, this request is not sent.</li>
           </ul>
@@ -430,7 +433,7 @@
       </div>
     </footer>
   </div>
-  <script src="js/app.js?v=32"></script>
+  <script src="js/app.js?v=33"></script>
   <script src="js/theme.js?v=10"></script>
   <script src="js/privacy.js?v=2"></script>
 </body>

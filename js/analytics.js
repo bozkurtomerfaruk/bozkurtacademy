@@ -10,8 +10,8 @@
   if(!gc?.count || gc.filter()) return;
 
   // How many hash segments identify a page: exercises/level/topic/exercise, grammar/level/topic,
-  // exams/exam/level/section/teil/set, seviye-sonu/level.
-  const DEPTH = { exercises: 4, grammar: 3, exams: 6, 'seviye-sonu': 2 };
+  // exams/exam/level/section/teil/set, seviye-sonu/level, artikel-evleri/topic.
+  const DEPTH = { exercises: 4, grammar: 3, exams: 6, 'seviye-sonu': 2, 'artikel-evleri': 2 };
 
   function currentPath(){
     // Static pages (/online-almanca-dersi/, /hakkimda/ …) are counted by their own path.

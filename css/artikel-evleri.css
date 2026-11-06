@@ -1,0 +1,105 @@
+/* Artikel Evleri (#artikel-evleri, js/artikel-evleri.js) and its card on the exercises page.
+   Layout only; colours and type come from the --ba-* tokens in css/base.css (article colours: --ba-der/-die/-das). */
+#page-artikel-evleri .ae-wrap{max-width:820px;margin:0 auto;padding-top:clamp(24px,4vw,48px);padding-bottom:clamp(32px,5vw,64px);display:grid;gap:18px}
+#page-artikel-evleri .ae-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 20px}
+#page-artikel-evleri .ae-kicker{margin:0;color:var(--ba-muted);font-size:var(--ba-small);font-weight:600}
+#page-artikel-evleri h1{margin:4px 0 0;font-family:var(--ba-serif);font-weight:600;font-size:clamp(30px,5vw,44px);line-height:1.1;color:var(--ba-ink)}
+#page-artikel-evleri h1:focus,#page-artikel-evleri h2:focus{outline:none}
+#page-artikel-evleri h2{margin:6px 0 0;font-family:var(--ba-serif);font-weight:600;font-size:var(--ba-lead);color:var(--ba-ink);text-wrap:balance}
+#page-artikel-evleri .ae-tools{display:flex;flex-wrap:wrap;gap:8px}
+#page-artikel-evleri .ae-tools .btn,#page-artikel-evleri .ae-listen{display:inline-flex;align-items:center;gap:8px;min-height:44px}
+#page-artikel-evleri .ae-sound svg,#page-artikel-evleri .ae-listen svg{width:22px;height:22px;flex:none}
+#page-artikel-evleri .ae-sound[aria-pressed="false"]{color:var(--ba-muted)}
+#page-artikel-evleri .ae-sound[aria-pressed="false"] .ae-waves{opacity:.2}
+#page-artikel-evleri .ae-lead{margin:0;color:var(--ba-ink);font-size:var(--ba-lead);line-height:1.5;max-width:62ch}
+#page-artikel-evleri .ae-note,#page-artikel-evleri .ae-privacy{margin:0;color:var(--ba-muted);font-size:var(--ba-small);line-height:1.5}
+#page-artikel-evleri .ae-note{padding:10px 14px;border-radius:var(--ba-radius-small);background:var(--ba-paper-2);color:var(--ba-ink)}
+#page-artikel-evleri .ae-status-line{margin:0;color:var(--ba-muted);font-weight:600}
+
+/* Topic choice */
+#page-artikel-evleri .ae-themes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
+#page-artikel-evleri .ae-theme{display:flex;align-items:center;gap:16px;min-height:96px;padding:14px 16px;border-radius:var(--ba-radius);background:var(--ba-paper);color:var(--ba-ink);text-decoration:none;box-shadow:inset 0 0 0 2px transparent;transition:box-shadow .15s var(--ba-ease)}
+#page-artikel-evleri .ae-theme:hover{box-shadow:inset 0 0 0 2px var(--ba-line-strong)}
+#page-artikel-evleri .ae-theme:focus-visible{outline:3px solid var(--ba-focus);outline-offset:3px}
+#page-artikel-evleri .ae-theme-text{display:grid;gap:4px;min-width:0}
+#page-artikel-evleri .ae-theme strong{font-family:var(--ba-serif);font-weight:600;font-size:var(--ba-lead);line-height:1.2}
+#page-artikel-evleri .ae-theme-text span{color:var(--ba-muted);font-size:var(--ba-small)}
+
+/* Picture tile: light in both themes so the drawings keep their colours. */
+#page-artikel-evleri .ae-pic{flex:none;display:grid;place-items:center;width:clamp(120px,30vw,160px);aspect-ratio:1;max-width:100%;border-radius:18px;background:var(--ba-pic);box-shadow:inset 0 0 0 3px var(--ba-line)}
+#page-artikel-evleri .ae-pic--small{width:68px;border-radius:12px}
+#page-artikel-evleri .ae-pic svg{width:82%;height:82%}
+
+/* Board */
+#page-artikel-evleri .ae-board{display:grid;gap:18px;padding:clamp(16px,4vw,28px);border-radius:var(--ba-radius);background:var(--ba-paper)}
+#page-artikel-evleri .ae-status{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;color:var(--ba-muted);font-size:var(--ba-small);font-weight:600;font-variant-numeric:tabular-nums}
+#page-artikel-evleri .ae-card{display:grid;grid-template-columns:auto minmax(0,1fr);gap:20px;align-items:center}
+#page-artikel-evleri .ae-card-text{display:grid;gap:6px;justify-items:start;min-width:0}
+#page-artikel-evleri .ae-word{margin:0;font-family:var(--ba-serif);font-weight:600;font-size:clamp(36px,9vw,56px);line-height:1.05;color:var(--ba-ink);overflow-wrap:anywhere}
+#page-artikel-evleri .ae-art{font-size:.62em}
+#page-artikel-evleri .ae-art.is-der{color:var(--ba-der)}
+#page-artikel-evleri .ae-art.is-die{color:var(--ba-die)}
+#page-artikel-evleri .ae-art.is-das{color:var(--ba-das)}
+#page-artikel-evleri .ae-tr{margin:0;color:var(--ba-muted);font-size:var(--ba-lead)}
+#page-artikel-evleri .ae-feedback{min-height:1.5em;margin:0;font-weight:600;font-size:var(--ba-body);line-height:1.4}
+#page-artikel-evleri .ae-feedback.is-right{color:var(--ba-right)}
+#page-artikel-evleri .ae-feedback.is-wrong{color:var(--ba-wrong)}
+
+/* Houses: big finger-sized targets. */
+#page-artikel-evleri .ae-houses{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,2.5vw,20px)}
+#page-artikel-evleri .ae-house{display:grid;justify-items:center;align-content:start;gap:4px;min-height:44px;margin:0;padding:6px 4px 10px;border:0;border-radius:var(--ba-radius);background:transparent;color:var(--ba-ink);font:inherit;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+#page-artikel-evleri div.ae-house{cursor:default}
+#page-artikel-evleri .ae-house svg{display:block;width:100%;max-width:170px;height:auto;transition:transform .15s var(--ba-ease)}
+#page-artikel-evleri button.ae-house:not([disabled]):hover svg{transform:translateY(-3px)}
+#page-artikel-evleri button.ae-house:active svg{transform:scale(.96)}
+#page-artikel-evleri .ae-house:focus-visible{outline:3px solid var(--ba-focus);outline-offset:2px}
+#page-artikel-evleri .ae-house[disabled]{cursor:default}
+#page-artikel-evleri .ae-house.is-tried{opacity:.45}
+#page-artikel-evleri .ae-house-label{font-family:var(--ba-serif);font-weight:600;font-size:clamp(26px,6vw,34px);line-height:1}
+#page-artikel-evleri .ae-house.is-der .ae-house-label{color:var(--ba-der)}
+#page-artikel-evleri .ae-house.is-die .ae-house-label{color:var(--ba-die)}
+#page-artikel-evleri .ae-house.is-das .ae-house-label{color:var(--ba-das)}
+#page-artikel-evleri .ae-roof,#page-artikel-evleri .ae-wall{stroke:var(--ba-ink);stroke-width:3;stroke-linejoin:round}
+#page-artikel-evleri .is-der .ae-roof{fill:var(--ba-der)}#page-artikel-evleri .is-der .ae-wall{fill:var(--ba-der-bg)}
+#page-artikel-evleri .is-die .ae-roof{fill:var(--ba-die)}#page-artikel-evleri .is-die .ae-wall{fill:var(--ba-die-bg)}
+#page-artikel-evleri .is-das .ae-roof{fill:var(--ba-das)}#page-artikel-evleri .is-das .ae-wall{fill:var(--ba-das-bg)}
+#page-artikel-evleri .ae-win{fill:var(--ba-paper);stroke:var(--ba-ink);stroke-width:2;transition:fill .3s}
+#page-artikel-evleri .ae-win.is-on{fill:var(--ba-lamp)}
+#page-artikel-evleri .ae-house.is-shaking svg{animation:ae-shake .35s}
+@keyframes ae-shake{25%{transform:translateX(-6px)}50%{transform:translateX(6px)}75%{transform:translateX(-3px)}}
+#page-artikel-evleri .ae-actions{display:flex;flex-wrap:wrap;gap:10px}
+#page-artikel-evleri .ae-actions .btn{min-height:52px}
+
+/* End */
+#page-artikel-evleri .ae-end{text-align:center;justify-items:center}
+#page-artikel-evleri .ae-end .ae-houses{width:100%}
+#page-artikel-evleri .ae-end h2{font-size:clamp(28px,6vw,38px)}
+#page-artikel-evleri .ae-end p{margin:0;color:var(--ba-ink);font-size:var(--ba-lead)}
+#page-artikel-evleri .ae-end .ae-end-best{color:var(--ba-muted);font-size:var(--ba-body)}
+#page-artikel-evleri .ae-end .ae-actions{justify-content:center}
+
+@media(max-width:620px){
+  #page-artikel-evleri .ae-themes{grid-template-columns:1fr}
+  #page-artikel-evleri .ae-actions .btn{flex:1 1 100%}
+}
+@media(max-width:440px){
+  #page-artikel-evleri .ae-card{grid-template-columns:1fr;justify-items:center;text-align:center}
+  #page-artikel-evleri .ae-card-text{justify-items:center}
+}
+@media(prefers-reduced-motion:reduce){
+  #page-artikel-evleri .ae-house svg,#page-artikel-evleri .ae-win,#page-artikel-evleri .ae-theme{transition:none}
+}
+
+/* "Çocuklar için" card on the exercises page (A1, js/quiz.js). */
+#page-exercises .kids-card{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px 24px;align-items:center;margin-top:clamp(16px,2.5vw,24px);padding:clamp(18px,3vw,28px);border-radius:var(--ba-radius);background:var(--ba-paper);color:var(--ba-ink)}
+#page-exercises .kids-card p{margin:0}
+#page-exercises .kids-card .kids-card-kicker{color:var(--ba-muted);font-size:var(--ba-small);font-weight:600}
+#page-exercises .kids-card h3{margin:4px 0 6px;font-family:var(--ba-serif);font-weight:600;font-size:var(--ba-lead);color:var(--ba-ink)}
+#page-exercises .kids-card-houses{display:flex;gap:4px}
+#page-exercises .kids-card-houses svg{width:34px;height:auto;display:block}
+#page-exercises .kids-card .k-roof,#page-exercises .kids-card .k-wall{stroke:var(--ba-ink);stroke-width:4;stroke-linejoin:round}
+#page-exercises .kids-card .k-win{fill:var(--ba-lamp);stroke:var(--ba-ink);stroke-width:3}
+#page-exercises .kids-card .is-der .k-roof{fill:var(--ba-der)}#page-exercises .kids-card .is-der .k-wall{fill:var(--ba-der-bg)}
+#page-exercises .kids-card .is-die .k-roof{fill:var(--ba-die)}#page-exercises .kids-card .is-die .k-wall{fill:var(--ba-die-bg)}
+#page-exercises .kids-card .is-das .k-roof{fill:var(--ba-das)}#page-exercises .kids-card .is-das .k-wall{fill:var(--ba-das-bg)}
+@media(max-width:620px){#page-exercises .kids-card{grid-template-columns:1fr}#page-exercises .kids-card .btn{width:100%}}

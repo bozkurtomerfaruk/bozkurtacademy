@@ -419,6 +419,15 @@
         </div>
         <a class="btn primary" href="#seviye-sonu/${escapeHtml(state.level.id)}" data-level-exam>${escapeHtml(t('leCardButton'))} <span aria-hidden="true">→</span></a>
       </section>` : ''}
+      ${!query && state.level?.id==='A1' ? `<section class="kids-card" aria-labelledby="kidsCardTitle">
+        <div class="kids-card-houses" aria-hidden="true">${['der','die','das'].map(a=>`<svg class="is-${a}" viewBox="0 0 100 110"><path class="k-roof" d="M8 50L50 12l42 38z"/><rect class="k-wall" x="16" y="48" width="68" height="56"/><rect class="k-win" x="38" y="64" width="24" height="22" rx="3"/></svg>`).join('')}</div>
+        <div>
+          <p class="kids-card-kicker">${escapeHtml(t('kidsCardKicker'))}</p>
+          <h3 id="kidsCardTitle">${escapeHtml(t('kidsCardTitle'))}</h3>
+          <p>${escapeHtml(t('kidsCardText'))}</p>
+        </div>
+        <a class="btn primary" href="#artikel-evleri" data-kids-game>${escapeHtml(t('kidsCardButton'))} <span aria-hidden="true">→</span></a>
+      </section>` : ''}
       ${subNote ? `<p class="ba-subresults-note" role="status">${escapeHtml(subNote)}</p>` : ''}
       ${subResults}
     `;

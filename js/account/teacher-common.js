@@ -176,7 +176,26 @@ export function addResource(uid, { title, url, note }){
 
 export const deleteResource = (uid, id) => fs.deleteDoc(fs.doc(db, 'users', uid, 'resources', id));
 
-const SUBCOLLECTIONS = ['results', 'assignments', 'resources', 'lessons'];
+// writings: Schreiben metinleri ve geri bildirimler; limits: günlük gönderim sınırı. Gizlilik politikasındaki saklama
+// süresi (son dersten 12 ay) bunlar için de geçerli: öğrenci silinince hepsi birlikte silinir.
+const SUBCOLLECTIONS = ['results', 'assignments', 'resources', 'lessons', 'writings', 'limits'];
+
+// Geri bildirim bekleyen Schreiben metinleri, öğrenci başına: Map(uid → sayı). Bütün metinler tek sorguda okunur
+// (filtresiz collectionGroup için ek indeks gerekmez).
+export async function pendingWritingsByStudent(){
+  const snap = await fs.getDocs(fs.collectionGroup(db, 'writings')).catch((error) => { console.warn(error); return { docs: [] }; });
+  const counts = new Map();
+  for(const d of snap.docs){
+    if(d.data().feedbackAt) continue;
+    const uid = d.ref.parent.parent?.id;
+    if(uid) counts.set(uid, (counts.get(uid) || 0) + 1);
+  }
+  return counts;
+}
+
+export function saveWritingFeedback(uid, id, feedback){
+  return fs.updateDoc(fs.doc(db, 'users', uid, 'writings', id), { feedback, feedbackAt: fs.serverTimestamp() });
+}
 
 // Öğrencinin Firestore'daki bütün verilerini siler. Önce silme işareti yazılır ki
 // silme yarıda kalsa bile aynı hesap yeniden profil açamasın.

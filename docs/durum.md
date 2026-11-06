@@ -2,6 +2,52 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-07 · Madde 7 Aşama A: Schreiben (yapay zekâsız), pilot Goethe B1 Teil 1
+
+- **Görevler:** `#exams/goethe/b1/schreiben/1/set-1` … `set-5`; sınav hazırlığında Goethe B1 › Schreiben › Teil 1. Beş özgün görev:
+  - Neue Wohnung
+  - Geburtstag verpasst
+  - Neue Arbeit
+  - Zurück vom Urlaub
+  - Abendkurs
+- **Her görevde:**
+  - Almanca durum ve 3 madde; "circa 80 Wörter" talimatı.
+  - Canlı kelime sayacı: 70–100 arası iyi; altında ve üstünde uyarı verir ama göndermeyi engellemez.
+  - Sınav kriterlerine göre Türkçe kontrol listesi (görevi yerine getirme, metnin düzeni, kelime ve dil bilgisi); kaydedilmez.
+  - Konuya özel Redemittel (Almanca ve Türkçe).
+  - Gönderince açılan örnek cevap (73–80 kelime) ve kısa Türkçe notlar.
+  - Yazım denetimi kapalı (sınavdaki gibi). Taslak, sayfa kapanırsa kaybolmasın diye bu cihazda (`baWriting:…`) duruyor.
+- **Ziyaretçi:** Görevi çözüp örnek cevabı görebiliyor; Firebase hiç yüklenmiyor, metin hiçbir yere gitmiyor; "kaydedilmedi, giriş yap" notu çıkıyor.
+- **Giriş yapmış ve onaylı öğrenci:** Metni `users/{uid}/writings`'e kaydediliyor.
+  - Kayıtta görev, metin, kelime sayısı ve sunucu zamanı var. Metin en fazla 4.000 karakter.
+  - Gönderilen metin değiştirilemez ve silinemez; öğrenci sadece "geri bildirimi gördüm" zamanını işaretleyebilir.
+  - Her gönderim ayrı bir deneme olarak kaydediliyor.
+  - Günde en fazla 10 gönderim: ilk gönderimden başlayan 24 saatlik pencerede 10 metin (`users/{uid}/limits/writing`). Kurallar sunucunun takvim gününü bilemediği için sınır 24 saatlik pencere olarak uygulanıyor; öğrenci "bugünlük sınır doldu" mesajını görüyor.
+  - Onaylanmamış hesapta metin kaydedilmiyor; bilgi notu çıkıyor.
+- **Öğretmen:**
+  - Panelin üstünde "Geri bildirim bekleyen N yazı (M öğrenci)" yazıyor.
+  - Öğrenci satırında "N geri bildirim bekliyor" işareti var; işaret detaydaki **Yazma görevleri** bölümüne gidiyor.
+  - Detayda metin olduğu gibi görünüyor. Geri bildirim yazılıp kaydedilebiliyor ya da sonradan güncellenebiliyor (en fazla 2.000 karakter). Öğrenci okuyunca "Öğrenci okudu" çıkıyor.
+- **Öğrenci paneli:** Yeni geri bildirim gelince panelin üstünde "Öğretmeninden N yeni geri bildirim var" yazıyor; bölüm başlığında sayaç, metnin yanında kırmızı nokta görünüyor. Öğrenci açınca işaret kalkıyor.
+- **Ödev:** Ödev ekranında B1 için "Schreiben (sınav hazırlığı)" konusu çıkıyor ve 5 görev seçilebiliyor. Öğrencinin ödevindeki bağlantı doğrudan göreve gidiyor.
+- **Saklama (kararın):** Metinler ve geri bildirimler, öğrencinin diğer verileriyle birlikte son dersten 12 ay sonra siliniyor. Öğretmen panelindeki "Silinmesi gereken kayıtlar" ile öğrenci silindiğinde `writings` ve `limits` de siliniyor.
+- **Gizlilik metni (TR/DE/EN):** Yazma görevleri öğrenci hesabı verilerine, saklama süresine ve tarayıcıda tutulanlara (`baWriting:…`) eklendi. Tarih 7 Kasım 2026.
+- **Kurallar:** `firestore.rules`'a `writings` ve `limits` eklendi. Kural testleri 138/138 geçti; bunların 14'ü yeni.
+- **Testler:**
+  - `tests/schreiben.mjs` (ziyaretçi): 39/39.
+  - `npm run test:schreiben` (emülatörde hesap akışı): 29/29.
+  - Önceki testler de geçti: seviye sonu sınavı hesabı ve seviye testi.
+- **Denetim:** `check-exams` Schreiben setlerini de denetliyor:
+  - görev ve kelime hedefi;
+  - kontrol listesi kriterleri;
+  - Redemittel'in Almanca ve Türkçe karşılıkları;
+  - örnek cevabın 70–100 kelime aralığında olması.
+- **Önbellek:**
+  - `app.js` v36, `account.css` v5, `session.js` v3 (bütün sayfalarda);
+  - `examsData.js` v16, `exams.js` v8;
+  - yeni dosyalar `writing-task.js` v1 ve `writing-task.css` v1.
+- **Durum:** PR açık. Birleştirildikten sonra **Firestore kurallarının Firebase Console'da yayınlanması** gerekiyor; o zamana kadar canlıda kayıt reddedilir, öğrenci "kaydedilemedi" notunu görür.
+
 ## 2026-11-06 · Yeni öncelik sırası ve madde 6 (yapay zekâ araştırması, Schreiben)
 
 **Öncelik sırası (öğretmenin kararı, 2026-11-06).** Her iş yine ayrı dal ve ayrı PR olarak yapılıyor; öğretmen onaylamadan birleştirilmiyor.

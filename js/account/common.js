@@ -162,8 +162,60 @@ export async function topicErrorsText(levelId, value, lang = 'tr'){
   }).join(', ');
 }
 
+// Schreiben (sınav hazırlığı): yazma görevleri js/examsData.js'teki "schreiben" bölümlerinden okunur.
+// Ödevde konu "schreiben", alıştırma "goethe-b1-1-set-1" (sınav-seviye-teil-set); metinler users/{uid}/writings'te.
+export const WRITING = 'schreiben';
+const EXAMS_DATA = 'js/examsData.js?v=16'; // index.html'deki sürümle aynı tutulmalı
+let examsData = null;
+export function loadExamsData(){
+  examsData ||= new Promise((resolve, reject) => {
+    if(window.BA_EXAMS) return resolve(window.BA_EXAMS);
+    const script = document.createElement('script');
+    script.src = EXAMS_DATA;
+    script.onload = () => resolve(window.BA_EXAMS);
+    script.onerror = () => { examsData = null; reject(new Error('examsData')); };
+    document.head.append(script);
+  });
+  return examsData;
+}
+
+// [{ id: 'goethe-b1-1-set-1', exam, level, teil, set, title: 'Goethe B1 · Teil 1 · Neue Wohnung', catalogLevel: 'B1' }]
+export async function writingTasks(){
+  const data = await loadExamsData();
+  const list = [];
+  for(const exam of data?.exams || []) for(const level of exam.levels || []) for(const section of level.sections || []){
+    if(section.id !== WRITING) continue;
+    section.teile.forEach((teil, index) => (teil.exercises || []).filter((e) => e?.set).forEach((e) => {
+      const code = data.levels?.[level.id]?.code || level.id.toUpperCase();
+      list.push({
+        id: `${exam.id}-${level.id}-${index + 1}-${e.set}`, exam: exam.id, level: level.id, teil: index + 1, set: e.set,
+        title: `${exam.shortName || exam.name.replace(/-Zertifikat$/, '')} ${localize(code)} · Teil ${index + 1} · ${localize(e.title)}`,
+        catalogLevel: String(localize(code)).toUpperCase()
+      });
+    }));
+  }
+  return list;
+}
+export const writingId = (w) => `${w.exam}-${w.level}-${w.teil}-${w.set}`;
+export async function writingTitle(w){
+  return (await writingTasks().catch(() => [])).find((x) => x.id === writingId(w))?.title || `${w.exam} ${w.level} · Teil ${w.teil} · ${w.set}`;
+}
+export function writingUrl({ exam, level, teil, set }){
+  return `index.html#exams/${[exam, level, WRITING, String(teil), set].map(encodeURIComponent).join('/')}`;
+}
+// Öğrenci geri bildirimi henüz açmadıysa yeni sayılır.
+export const unseenFeedback = (w) => Boolean(w.feedbackAt) && (!w.seenAt || toDate(w.seenAt) < toDate(w.feedbackAt));
+
+export async function loadWritings(uid){
+  const snap = await fs.getDocs(fs.collection(db, 'users', uid, 'writings'));
+  return snap.docs.map((d) => ({ id: d.id, ...d.data() })).sort((a, b) => (toDate(b.at) || 0) - (toDate(a.at) || 0));
+}
+
 // Ödev oluştururken: bir konunun alıştırmaları (data/<seviye>/<konu>.json).
 export async function loadTopicExercises(levelId, topicId){
+  if(topicId === WRITING){
+    return (await writingTasks()).filter((w) => w.catalogLevel === levelId).map((w) => ({ id: w.id, title: w.title }));
+  }
   const levels = await loadCatalogLevels();
   if(topicId === LEVEL_EXAM){
     const level = levels.find((l) => l.id === levelId);
@@ -201,6 +253,11 @@ export async function exerciseNames(results, lang = 'tr'){
     if(names[key]) continue;
     if(r.topic === LEVEL_EXAM){
       names[key] = { topic: localize(LEVEL_EXAM_NAMES.topic, lang), exercise: localize(LEVEL_EXAM_NAMES.exercise(r.level), lang) };
+      continue;
+    }
+    if(r.topic === WRITING){
+      const task = (await writingTasks().catch(() => [])).find((w) => w.id === r.exercise);
+      names[key] = { topic: 'Schreiben', exercise: task?.title || r.exercise };
       continue;
     }
     const topic = levels.find((l) => l.id === r.level)?.topics?.find((tp) => tp.id === r.topic);
@@ -265,6 +322,10 @@ export const validHttpsUrl = (url) => {
 // Sitedeki alıştırmaya doğrudan bağlantı (js/exercise-links.js'teki adres biçimi).
 export function exerciseUrl({ level, topic, exercise }){
   if(topic === LEVEL_EXAM) return `index.html#seviye-sonu/${encodeURIComponent(level)}`;
+  if(topic === WRITING){
+    const m = /^([a-z0-9]+)-([a-z0-9]+)-(\d+)-(set-\d+)$/.exec(exercise || '');
+    if(m) return writingUrl({ exam: m[1], level: m[2], teil: m[3], set: m[4] });
+  }
   return `index.html#exercises/${[level, topic, exercise].map(encodeURIComponent).join('/')}`;
 }
 

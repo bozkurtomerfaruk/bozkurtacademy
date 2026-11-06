@@ -325,7 +325,16 @@ window.BA_EXAMS = {
               }, // Teil 5
             ] },
             { id: 'schreiben', teile: [
-              { title: null, exercises: [] }, // Teil 1
+              {
+                title: { tr: 'Arkadaşa e-posta · yaklaşık 80 kelime', de: 'E-Mail an einen Freund · circa 80 Wörter', en: 'Email to a friend · about 80 words' },
+                exercises: [
+                  { set: 'set-1', title: 'Neue Wohnung' },
+                  { set: 'set-2', title: 'Geburtstag verpasst' },
+                  { set: 'set-3', title: 'Neue Arbeit' },
+                  { set: 'set-4', title: 'Zurück vom Urlaub' },
+                  { set: 'set-5', title: 'Abendkurs' },
+                ]
+              }, // Teil 1
               { title: null, exercises: [] }, // Teil 2
               { title: null, exercises: [] }, // Teil 3
             ] },

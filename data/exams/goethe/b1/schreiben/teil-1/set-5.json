@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Abendkurs",
+  "minutes": 20,
+  "kind": "writing",
+  "register": "du",
+  "situation": "Sie besuchen seit drei Wochen einen Deutschkurs am Abend. Ihr Freund Paul möchte auch besser Deutsch lernen.",
+  "task": "Schreiben Sie Paul eine E-Mail:",
+  "points": [
+    "Beschreiben Sie den Kurs (Lehrerin, Gruppe, Unterricht).",
+    "Begründen Sie: Warum besuchen Sie den Kurs?",
+    "Machen Sie Paul einen Vorschlag."
+  ],
+  "instructions": "Schreiben Sie eine E-Mail (circa 80 Wörter). Schreiben Sie etwas zu allen drei Punkten. Achten Sie auf den Textaufbau (Anrede, Einleitung, Reihenfolge der Inhaltspunkte, Schluss).",
+  "words": {
+    "target": 80,
+    "min": 70,
+    "max": 100
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Üç maddenin hepsine yazdım (kurs (öğretmen, grup, ders), neden kursa gittiğin, Paul'e öneri)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Hitap ve kapanış var (ör. Liebe … / Lieber …, Liebe Grüße)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Arkadaşa du ile yazdım (dir, dich, dein …)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kısa bir girişle başladım; maddeleri görevdeki sırayla yazdım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümleleri bağladım (weil, aber, deshalb, dann, trotzdem …)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Ana cümlede çekimli fiil 2. sırada (Gestern habe ich …, Jetzt wohne ich …)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "weil / dass / wenn'den sonra çekimli fiil cümlenin sonunda."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Sıfat çekimi: eine nette Lehrerin, mit einer kleinen Gruppe."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Einleitung",
+      "items": [
+        {
+          "de": "Liebe …, / Lieber …,",
+          "tr": "Sevgili … (kadına / erkeğe)"
+        },
+        {
+          "de": "Wie geht es dir?",
+          "tr": "Nasılsın?"
+        }
+      ]
+    },
+    {
+      "group": "Beschreiben",
+      "items": [
+        {
+          "de": "Der Kurs findet zweimal pro Woche statt.",
+          "tr": "Kurs haftada iki kez yapılıyor."
+        },
+        {
+          "de": "Die Lehrerin erklärt alles sehr geduldig.",
+          "tr": "Öğretmen her şeyi çok sabırla anlatıyor."
+        }
+      ]
+    },
+    {
+      "group": "Begründen",
+      "items": [
+        {
+          "de": "Ich mache den Kurs, weil ich … möchte.",
+          "tr": "Kursa gidiyorum, çünkü … istiyorum."
+        },
+        {
+          "de": "Für meine Arbeit brauche ich …",
+          "tr": "İşim için … gerekiyor."
+        }
+      ]
+    },
+    {
+      "group": "Vorschlag",
+      "items": [
+        {
+          "de": "Komm doch einfach mal mit!",
+          "tr": "Bir kere benimle gel!"
+        },
+        {
+          "de": "Wir könnten zusammen …",
+          "tr": "Birlikte … yapabiliriz."
+        }
+      ]
+    },
+    {
+      "group": "Schluss",
+      "items": [
+        {
+          "de": "Ich freue mich auf deine Antwort.",
+          "tr": "Cevabını bekliyorum."
+        },
+        {
+          "de": "Liebe Grüße / Viele Grüße",
+          "tr": "Sevgiler / Selamlar"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Lieber Paul,\nwie geht es dir? Seit drei Wochen besuche ich jetzt einen Deutschkurs an der Volkshochschule. Der Kurs findet zweimal pro Woche am Abend statt. Wir sind nur acht Leute, und die Lehrerin erklärt alles sehr geduldig. Ich mache den Kurs, weil ich im Sommer die B1-Prüfung schreiben möchte. Für meine Arbeit brauche ich nämlich ein Zertifikat. Komm doch am Dienstag einfach mal mit! Danach könnten wir zusammen Hausaufgaben machen.\nViele Grüße\nDeniz",
+    "notes": [
+      "stattfinden ayrılan fiil: Der Kurs findet … statt.",
+      "nämlich ikinci cümlede sebebi açıklıyor (fiil 2. sırada kalır).",
+      "Öneri somut bir gün içeriyor: am Dienstag."
+    ]
+  }
+}

@@ -26,7 +26,31 @@ const words = value => String(value).replace(/\{\{\d+\}\}/g, ' ').replace(/\{\{0
 // Searchable pieces of a text: plain paragraphs and the cells of { rows } tables, keyed by position.
 const pieces = text => (text.paragraphs || []).flatMap((p, i) => typeof p === 'string' ? [{ key: `${i}`, value: p }]
   : Array.isArray(p?.rows) ? p.rows.flatMap((row, r) => row.map((cell, c) => ({ key: `${i}:${r}:${c}`, value: cell }))) : []);
-let sets = 0, questions = 0;
+let sets = 0, questions = 0, writings = 0;
+
+// Same word count as the counter in js/writing-task.js: letters/digits, joined by - or ' (B1-Prüfung is one word).
+const countWords = value => (String(value).match(/[\p{L}\p{N}]+(?:[-'’][\p{L}\p{N}]+)*/gu) || []).length;
+const CRITERIA = ['aufgabe', 'aufbau', 'sprache'];
+function checkWriting(set, fail) {
+  const text = value => typeof value === 'string' && value.trim();
+  if (set.kind !== 'writing') fail('"kind" must be "writing" in a Schreiben set');
+  for (const key of ['title', 'situation', 'task']) if (!text(set[key])) fail(`"${key}" missing`);
+  if (!['du', 'Sie'].includes(set.register)) fail('"register" must be "du" or "Sie"');
+  if (!Array.isArray(set.points) || set.points.length < 2 || !set.points.every(text)) fail('"points" needs at least two content points');
+  const w = set.words || {};
+  if (!(Number.isInteger(w.min) && Number.isInteger(w.target) && Number.isInteger(w.max) && w.min > 0 && w.min <= w.target && w.target <= w.max)) fail('"words" needs min <= target <= max');
+  const list = Array.isArray(set.checklist) ? set.checklist : [];
+  if (list.length < 5 || !list.every(item => CRITERIA.includes(item?.criterion) && text(item.tr))) fail(`"checklist" needs at least 5 items with criterion (${CRITERIA.join(', ')}) and tr`);
+  for (const c of CRITERIA) if (!list.some(item => item?.criterion === c)) fail(`"checklist" has no item for ${c}`);
+  const groups = Array.isArray(set.redemittel) ? set.redemittel : [];
+  if (groups.length < 3 || !groups.every(g => text(g?.group) && Array.isArray(g.items) && g.items.length && g.items.every(i => text(i?.de) && text(i?.tr)))) fail('"redemittel" needs at least 3 groups of { de, tr } items');
+  if (!text(set.model?.text)) fail('"model.text" missing');
+  else {
+    const n = countWords(set.model.text);
+    if (n < w.min || n > w.max) fail(`model answer has ${n} words, expected ${w.min}–${w.max}`);
+  }
+  if (!Array.isArray(set.model?.notes) || !set.model.notes.length || !set.model.notes.every(text)) fail('"model.notes" needs at least one note (Turkish)');
+}
 
 for (const exam of data.exams) for (const level of exam.levels || []) for (const section of level.sections) {
   section.teile.forEach((teil, index) => {
@@ -45,6 +69,8 @@ for (const exam of data.exams) for (const level of exam.levels || []) for (const
       for (const [key, value] of Object.entries(expect)) if (set[key] !== value) fail(`"${key}" is ${JSON.stringify(set[key])}, expected ${JSON.stringify(value)}`);
       if (!(set.minutes > 0)) fail('"minutes" must be a positive number');
       if (!set.instructions) fail('"instructions" missing');
+      // Schreiben (kind "writing"): a task, a word target, a checklist, Redemittel and a model answer; no questions.
+      if (section.id === 'schreiben') { checkWriting(set, fail); writings++; continue; }
       if (!Array.isArray(set.groups) || !set.groups.length) { fail('"groups" missing'); continue; }
 
       const numbers = [];
@@ -129,4 +155,4 @@ if (errors.length) {
   console.error(`\nFAIL: ${errors.length} problem(s)\n` + errors.map(error => ' - ' + error).join('\n'));
   process.exit(1);
 }
-console.log(`\nPASS: ${sets} sets, ${questions} questions`);
+console.log(`\nPASS: ${sets} sets, ${questions} questions, ${writings} writing tasks`);

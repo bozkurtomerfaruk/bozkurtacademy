@@ -1,0 +1,138 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-3",
+  "title": "Neue Arbeit",
+  "minutes": 20,
+  "kind": "writing",
+  "register": "du",
+  "situation": "Sie haben vor einem Monat eine neue Arbeitsstelle angefangen. Ihre Freundin Sara möchte wissen, wie es Ihnen dort geht.",
+  "task": "Schreiben Sie Sara eine E-Mail:",
+  "points": [
+    "Beschreiben Sie: Was machen Sie bei der Arbeit?",
+    "Was gefällt Ihnen nicht so gut? Begründen Sie.",
+    "Laden Sie Sara ein, Sie am Wochenende zu besuchen."
+  ],
+  "instructions": "Schreiben Sie eine E-Mail (circa 80 Wörter). Schreiben Sie etwas zu allen drei Punkten. Achten Sie auf den Textaufbau (Anrede, Einleitung, Reihenfolge der Inhaltspunkte, Schluss).",
+  "words": {
+    "target": 80,
+    "min": 70,
+    "max": 100
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Üç maddenin hepsine yazdım (işte ne yaptığın, neyin hoşuna gitmediği ve neden, hafta sonu daveti)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Hitap ve kapanış var (ör. Liebe … / Lieber …, Liebe Grüße)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Arkadaşa du ile yazdım (dir, dich, dein …)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kısa bir girişle başladım; maddeleri görevdeki sırayla yazdım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümleleri bağladım (weil, aber, deshalb, dann, trotzdem …)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Ana cümlede çekimli fiil 2. sırada (Gestern habe ich …, Jetzt wohne ich …)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "weil / dass / wenn'den sonra çekimli fiil cümlenin sonunda."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Modal fiille mastar cümlenin sonunda: Ich muss um vier Uhr aufstehen."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Einleitung",
+      "items": [
+        {
+          "de": "Liebe …, / Lieber …,",
+          "tr": "Sevgili … (kadına / erkeğe)"
+        },
+        {
+          "de": "Wie geht es dir?",
+          "tr": "Nasılsın?"
+        },
+        {
+          "de": "Danke für deine Nachricht.",
+          "tr": "Mesajın için teşekkürler."
+        }
+      ]
+    },
+    {
+      "group": "Beschreiben",
+      "items": [
+        {
+          "de": "Ich arbeite als … bei …",
+          "tr": "… şirketinde … olarak çalışıyorum."
+        },
+        {
+          "de": "Meine Aufgabe ist es, … zu …",
+          "tr": "Görevim … yapmak."
+        }
+      ]
+    },
+    {
+      "group": "Kritik und Grund",
+      "items": [
+        {
+          "de": "Nicht so gut gefällt mir, dass …",
+          "tr": "… olması pek hoşuma gitmiyor."
+        },
+        {
+          "de": "Das ist anstrengend, weil …",
+          "tr": "Bu yorucu, çünkü …"
+        }
+      ]
+    },
+    {
+      "group": "Einladen",
+      "items": [
+        {
+          "de": "Hast du Lust, mich am Wochenende zu besuchen?",
+          "tr": "Hafta sonu bana gelmek ister misin?"
+        },
+        {
+          "de": "Du kannst gern bei mir übernachten.",
+          "tr": "Bende kalabilirsin."
+        }
+      ]
+    },
+    {
+      "group": "Schluss",
+      "items": [
+        {
+          "de": "Ich freue mich auf deine Antwort.",
+          "tr": "Cevabını bekliyorum."
+        },
+        {
+          "de": "Liebe Grüße / Viele Grüße",
+          "tr": "Sevgiler / Selamlar"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Liebe Sara,\ndanke für deine Nachricht! Seit einem Monat arbeite ich jetzt in einer Bäckerei im Zentrum. Morgens backe ich Brot und Brötchen, und am Nachmittag verkaufe ich Kuchen. Die Kollegen sind sehr nett. Nicht so gut gefällt mir, dass ich schon um vier Uhr aufstehen muss. Deshalb bin ich abends oft sehr müde. Hast du Lust, mich am Wochenende zu besuchen? Dann bekommst du den besten Kuchen der Stadt!\nLiebe Grüße\nDeniz",
+    "notes": [
+      "Üç madde sırayla; ikinci maddede hem eleştiri hem sebep var (dass … muss, Deshalb …).",
+      "Morgens / am Nachmittag ile gün içindeki işler düzenli anlatılıyor.",
+      "Davet esprili bir cümleyle kapanıyor; kişisel ve doğal."
+    ]
+  }
+}

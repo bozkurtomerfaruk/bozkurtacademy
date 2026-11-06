@@ -1,11 +1,12 @@
 // ogretmen-ogrenci.html?id=UID: öğrenci detayı, onay işlemleri, veli onayı, alıştırma sonuçları.
 import {
   $, bestResultSince, consentGiven, currentYear, exerciseNames, formatDateTime, h, BERLIN, loadAssignments, loadProfile,
-  loadResources, loadResults, safeLink, scoreText, summarizeResults, toDate, validEmail, validHttpsUrl, LEVEL_EXAM, topicErrorsText
+  loadResources, loadResults, loadWritings, safeLink, scoreText, summarizeResults, toDate, validEmail, validHttpsUrl, LEVEL_EXAM, topicErrorsText,
+  setStatus, writingTitle, writingUrl
 } from './common.js';
 import {
   addResource, approve, deleteAssignment, deleteResource, emailVerified, fmtDate, isEnabled, openDeleteDialog,
-  recordConsent, requireTeacher, setActive, setInactive, statusBadges, UNVERIFIED_WARNING, updateParent
+  recordConsent, requireTeacher, saveWritingFeedback, setActive, setInactive, statusBadges, UNVERIFIED_WARNING, updateParent
 } from './teacher-common.js';
 import * as cal from './calendar.js';
 import { db, fs } from './firebase.js';
@@ -287,6 +288,55 @@ async function renderResources(){
     : [h('p', { class: 'acc-hint' }, 'Henüz kaynak eklenmedi.')]));
 }
 
+// Schreiben metinleri: en yeni üstte; geri bildirim bekleyenler işaretli. Öğretmen geri bildirim yazar ya da düzeltir
+// (en fazla 2000 karakter, firestore.rules); öğrenci kendi panelinde görür.
+const FEEDBACK_MAX = 2000;
+async function renderWritings(){
+  const box = $('writingsList');
+  const writings = await loadWritings(uid);
+  const pending = writings.filter((w) => !w.feedbackAt).length;
+  $('writingsCount').textContent = pending ? `${pending} geri bildirim bekliyor` : '';
+  $('writingsCount').hidden = !pending;
+  if(!writings.length){
+    box.replaceChildren(h('p', { class: 'acc-empty' }, 'Henüz gönderilmiş yazı yok.'));
+    return;
+  }
+  const titles = await Promise.all(writings.map(writingTitle));
+  box.replaceChildren(...writings.map((w, i) => {
+    const area = h('textarea', { id: `fb-${w.id}`, maxlength: String(FEEDBACK_MAX), rows: '4' });
+    area.value = w.feedback || '';
+    const status = h('p', { class: 'acc-status', role: 'status', hidden: true });
+    const save = h('button', { class: 'btn primary', type: 'button' }, w.feedbackAt ? 'Geri bildirimi güncelle' : 'Geri bildirimi kaydet');
+    save.addEventListener('click', async () => {
+      const text = area.value.trim();
+      if(!text){ setStatus(status, 'error', 'Önce bir geri bildirim yaz.'); area.focus(); return; }
+      save.disabled = true;
+      try{
+        await saveWritingFeedback(uid, w.id, text.slice(0, FEEDBACK_MAX));
+        await renderWritings();
+        setActionStatus('success', 'Geri bildirim kaydedildi; öğrenci panelinde görecek.');
+      }catch(error){
+        console.error(error);
+        setStatus(status, 'error', 'Geri bildirim kaydedilemedi. Tekrar dene.');
+        save.disabled = false;
+      }
+    });
+    const badge = w.feedbackAt
+      ? h('span', { class: 'acc-badge success' }, `Geri bildirim verildi · ${fmtDateTime(w.feedbackAt)}`)
+      : h('span', { class: 'acc-badge warning' }, 'Geri bildirim bekliyor');
+    const seen = w.feedbackAt && w.seenAt ? h('span', { class: 'acc-badge' }, 'Öğrenci okudu') : null;
+    return h('details', { class: 'ba-card acc-card acc-writing', open: !w.feedbackAt, 'data-writing': w.id },
+      h('summary', {},
+        h('span', { class: 'acc-writing-title' }, `${fmtDateTime(w.at)} · ${titles[i]}`),
+        h('span', { class: 'acc-badges' }, h('span', { class: 'acc-badge' }, `${w.words} kelime`), badge, seen)),
+      h('div', { class: 'acc-card-body' },
+        h('div', { class: 'acc-writing-text', lang: 'de' }, w.text),
+        h('p', { class: 'acc-sub' }, h('a', { class: 'ba-link', href: writingUrl(w), target: '_blank', rel: 'noopener noreferrer' }, 'Görevi ve örnek cevabı aç')),
+        h('label', { for: `fb-${w.id}` }, h('strong', {}, 'Geri bildirimin'), h('span', { class: 'acc-sub' }, ` en fazla ${FEEDBACK_MAX} karakter; öğrenci kendi panelinde görür`)),
+        area, h('div', { class: 'acc-actions' }, save), status));
+  }));
+}
+
 async function renderResults(results){
   const box = $('resultsList');
   if(!results.length){
@@ -345,9 +395,11 @@ async function reload(){
   const [results, studentLessons] = await Promise.all([loadResults(uid), loadStudentLessons(uid)]);
   lessons = studentLessons;
   renderLessons();
-  await Promise.all([renderAssignments(results), renderResources(), renderResults(results)]);
+  await Promise.all([renderAssignments(results), renderResources(), renderResults(results), renderWritings()]);
   $('studentLoading').hidden = true;
   $('studentApp').hidden = false;
+  // Öğretmen panelindeki "geri bildirim bekliyor" işareti #yazilar ile buraya gelir.
+  if(location.hash === '#yazilar') $('yazilar').scrollIntoView({ block: 'start' });
 }
 
 $('resourceForm').addEventListener('submit', async (event) => {

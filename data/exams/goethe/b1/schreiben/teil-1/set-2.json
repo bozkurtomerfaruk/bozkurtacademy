@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Geburtstag verpasst",
+  "minutes": 20,
+  "kind": "writing",
+  "register": "du",
+  "situation": "Ihr Freund Jonas hat am Samstag seinen Geburtstag gefeiert. Sie waren eingeladen, konnten aber nicht kommen.",
+  "task": "Schreiben Sie Jonas eine E-Mail:",
+  "points": [
+    "Entschuldigen Sie sich und erklären Sie, warum Sie nicht kommen konnten.",
+    "Fragen Sie, wie die Party war.",
+    "Machen Sie einen Vorschlag, wie Sie seinen Geburtstag nachfeiern können."
+  ],
+  "instructions": "Schreiben Sie eine E-Mail (circa 80 Wörter). Schreiben Sie etwas zu allen drei Punkten. Achten Sie auf den Textaufbau (Anrede, Einleitung, Reihenfolge der Inhaltspunkte, Schluss).",
+  "words": {
+    "target": 80,
+    "min": 70,
+    "max": 100
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Üç maddenin hepsine yazdım (özür ve sebep, partinin nasıl geçtiği, sonradan kutlama önerisi)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Hitap ve kapanış var (ör. Liebe … / Lieber …, Liebe Grüße)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Arkadaşa du ile yazdım (dir, dich, dein …)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kısa bir girişle başladım; maddeleri görevdeki sırayla yazdım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümleleri bağladım (weil, aber, deshalb, dann, trotzdem …)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Ana cümlede çekimli fiil 2. sırada (Gestern habe ich …, Jetzt wohne ich …)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "weil / dass / wenn'den sonra çekimli fiil cümlenin sonunda."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "können'in geçmişi: Ich konnte nicht kommen (Präteritum)."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Einleitung",
+      "items": [
+        {
+          "de": "Liebe …, / Lieber …,",
+          "tr": "Sevgili … (kadına / erkeğe)"
+        },
+        {
+          "de": "Wie geht es dir?",
+          "tr": "Nasılsın?"
+        }
+      ]
+    },
+    {
+      "group": "Entschuldigen und erklären",
+      "items": [
+        {
+          "de": "Es tut mir wirklich leid, dass ich nicht kommen konnte.",
+          "tr": "Gelemediğim için gerçekten üzgünüm."
+        },
+        {
+          "de": "Leider musste ich …",
+          "tr": "Maalesef … zorundaydım."
+        }
+      ]
+    },
+    {
+      "group": "Fragen",
+      "items": [
+        {
+          "de": "Wie war die Party?",
+          "tr": "Parti nasıldı?"
+        },
+        {
+          "de": "Wer war alles da?",
+          "tr": "Kimler vardı?"
+        }
+      ]
+    },
+    {
+      "group": "Vorschlag",
+      "items": [
+        {
+          "de": "Darf ich dich zum Essen einladen?",
+          "tr": "Seni yemeğe davet edebilir miyim?"
+        },
+        {
+          "de": "Was hältst du von …?",
+          "tr": "… hakkında ne düşünürsün?"
+        }
+      ]
+    },
+    {
+      "group": "Schluss",
+      "items": [
+        {
+          "de": "Ich freue mich auf deine Antwort.",
+          "tr": "Cevabını bekliyorum."
+        },
+        {
+          "de": "Liebe Grüße / Viele Grüße",
+          "tr": "Sevgiler / Selamlar"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Lieber Jonas,\nnachträglich alles Gute zum Geburtstag! Es tut mir wirklich leid, dass ich am Samstag nicht kommen konnte. Meine Schwester hatte einen Unfall mit dem Fahrrad, deshalb war ich den ganzen Abend mit ihr im Krankenhaus. Zum Glück geht es ihr schon besser. Wie war die Party? Habt ihr lange getanzt? Ich möchte deinen Geburtstag gern nachfeiern. Darf ich dich am Freitag zum Essen einladen? Ich kenne ein tolles türkisches Restaurant in der Stadt.\nViele Grüße\nAylin",
+    "notes": [
+      "Özür ve sebep tek paragrafta: Es tut mir leid, dass … + deshalb.",
+      "deshalb'tan sonra fiil hemen gelir: deshalb war ich …",
+      "Öneri somut: gün (am Freitag) ve yer (Restaurant)."
+    ]
+  }
+}

@@ -20,7 +20,7 @@
   <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13" />
   <link rel="stylesheet" href="css/base.css?v=12" />
-  <link rel="stylesheet" href="css/account.css?v=3" />
+  <link rel="stylesheet" href="css/account.css?v=5" />
 </head>
 <body class="academy-theme account-page">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
@@ -74,6 +74,8 @@
               </div>
             </section>
 
+            <p class="acc-status success" id="writingAlert" role="status" hidden><span id="writingAlertText"></span> <a class="ba-link" href="#writingSection" data-i18n="panelWritingAlertLink">Göster</a></p>
+
             <section class="ba-card acc-card acc-state" id="stateCard" hidden aria-live="polite">
               <div class="ba-card-body">
                 <h2 id="stateTitle"></h2>
@@ -99,6 +101,14 @@
             <section class="acc-section" id="resourceSection" hidden aria-labelledby="resourceTitle">
               <h2 id="resourceTitle" data-i18n="panelResourcesTitle">Kaynaklar</h2>
               <div id="resourceList"></div>
+            </section>
+
+            <section class="acc-section" id="writingSection" hidden aria-labelledby="writingTitle">
+              <div class="acc-section-head">
+                <h2 id="writingTitle" data-i18n="panelWritingTitle">Yazma görevlerim</h2>
+                <span class="acc-badge warning" id="writingNew" hidden></span>
+              </div>
+              <div id="writingList"></div>
             </section>
 
             <section class="acc-section" id="historySection" hidden aria-labelledby="historyTitle">
@@ -136,7 +146,7 @@
       </div>
     </footer>
   </div>
-  <script src="js/app.js?v=35"></script>
+  <script src="js/app.js?v=36"></script>
   <script src="js/theme.js?v=10"></script>
   <script type="module" src="js/account/student.js"></script>
 </body>

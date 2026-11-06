@@ -4,8 +4,8 @@ import { TEACHER_EMAIL, TEACHER_UID } from './config.js';
 import { registerStrings, t, lang } from './i18n.js';
 import {
   $, accountState, bestResultSince, clearHint, currentUser, exerciseNames, exerciseUrl, formatDateTime, h,
-  loadAssignments, loadProfile, loadResources, loadResults, safeLink, scoreText, sendVerification, setHint, setStatus,
-  summarizeResults, syncEmailVerified, toDate, validStudentDocUrl
+  loadAssignments, loadProfile, loadResources, loadResults, loadWritings, safeLink, scoreText, sendVerification, setHint, setStatus,
+  summarizeResults, syncEmailVerified, toDate, unseenFeedback, validStudentDocUrl, writingTitle, writingUrl
 } from './common.js';
 
 registerStrings();
@@ -15,6 +15,7 @@ let results = [];
 let assignments = [];
 let lessons = [];
 let resources = [];
+let writings = [];
 let currentAuthUser = null;
 
 const STATES = {
@@ -67,6 +68,70 @@ async function renderHistory(){
 }
 
 const fmt = (value) => formatDateTime(value, { lang: lang() });
+
+// Schreiben: gönderdiğin metinler ve öğretmenin geri bildirimi. Yeni geri bildirim, açılana kadar işaretli kalır;
+// açınca "görüldü" zamanı yazılır (firestore.rules: öğrenci sadece seenAt'i değiştirebilir).
+async function markSeen(w){
+  if(!unseenFeedback(w)) return;
+  try{
+    await fs.updateDoc(fs.doc(db, 'users', currentAuthUser.uid, 'writings', w.id), { seenAt: fs.serverTimestamp() });
+    w.seenAt = new Date();
+    renderWritingBadges();
+  }catch(error){ console.warn(error); }
+}
+
+function renderWritingBadges(){
+  const fresh = writings.filter(unseenFeedback).length;
+  $('writingNew').hidden = !fresh;
+  $('writingNew').textContent = fresh ? t('panelWritingNewCount').replace('{n}', String(fresh)) : '';
+  $('writingAlert').hidden = !fresh;
+  $('writingAlertText').textContent = fresh ? t('panelWritingAlert').replace('{n}', String(fresh)) : '';
+  document.querySelectorAll('[data-writing-new]').forEach((el) => {
+    const w = writings.find((x) => x.id === el.dataset.writingNew);
+    el.hidden = !w || !unseenFeedback(w);
+  });
+}
+
+async function renderWritings(){
+  const box = $('writingList');
+  if(!writings.length){
+    box.replaceChildren(h('div', { class: 'acc-empty' },
+      h('p', {}, t('panelWritingEmpty')),
+      h('a', { class: 'btn primary', href: 'index.html#exams/goethe/b1/schreiben' }, t('panelWritingLink'))));
+    renderWritingBadges();
+    return;
+  }
+  const titles = await Promise.all(writings.map(writingTitle));
+  box.replaceChildren(...writings.map((w, i) => {
+    const feedback = w.feedbackAt
+      ? h('div', {}, h('p', { class: 'acc-sub' }, t('panelWritingFeedbackFrom').replace('{date}', fmt(w.feedbackAt))),
+        h('p', { class: 'acc-feedback', lang: 'tr' }, w.feedback || ''))
+      : h('p', { class: 'acc-sub' }, t('panelWritingWaiting'));
+    const item = h('details', { class: 'ba-card acc-card acc-writing', 'data-writing': w.id },
+      h('summary', {},
+        h('span', { class: 'acc-writing-title' }, h('span', { class: 'acc-new-dot', 'data-writing-new': w.id, 'aria-hidden': 'true', hidden: !unseenFeedback(w) }),
+          `${fmt(w.at)} · ${titles[i]}`),
+        h('span', { class: 'acc-badges' },
+          h('span', { class: 'acc-badge' }, t('panelWritingWords').replace('{n}', String(w.words))),
+          w.feedbackAt
+            ? h('span', { class: `acc-badge ${unseenFeedback(w) ? 'warning' : 'success'}`, 'data-writing-state': w.id }, t(unseenFeedback(w) ? 'panelWritingNew' : 'panelWritingDone'))
+            : h('span', { class: 'acc-badge' }, t('panelWritingPending')))),
+      h('div', { class: 'acc-card-body' },
+        feedback,
+        h('p', { class: 'acc-sub' }, t('panelWritingMine')),
+        h('div', { class: 'acc-writing-text', lang: 'de' }, w.text),
+        h('a', { class: 'ba-link', href: writingUrl(w) }, t('panelWritingOpenTask'))));
+    item.addEventListener('toggle', () => {
+      if(!item.open || !unseenFeedback(w)) return;
+      markSeen(w).then(() => {
+        const state = item.querySelector(`[data-writing-state="${CSS.escape(w.id)}"]`);
+        if(state){ state.className = 'acc-badge success'; state.textContent = t('panelWritingDone'); }
+      });
+    });
+    return item;
+  }));
+  renderWritingBadges();
+}
 
 async function loadLessons(uid){
   const snap = await fs.getDocs(fs.collection(db, 'users', uid, 'lessons'));
@@ -229,11 +294,12 @@ async function render(){
   renderAccount();
   renderState();
   const active = accountState(profile) === 'active';
-  for(const id of ['lessonSection', 'assignSection', 'doneSection', 'resourceSection']) $(id).hidden = !active;
+  for(const id of ['lessonSection', 'assignSection', 'doneSection', 'resourceSection', 'writingSection']) $(id).hidden = !active;
   if(active){
     renderLessons();
     await renderAssignments();
     renderResources();
+    await renderWritings();
     await renderHistory();
   }
 }
@@ -260,8 +326,9 @@ async function start(){
     const verified = await syncEmailVerified(user, profile).catch((error) => { console.warn(error); return false; });
     $('verifyCard').hidden = verified;
     if(accountState(profile) === 'active'){
-      [results, assignments, resources, lessons] = await Promise.all([
-        loadResults(user.uid), loadAssignments(user.uid), loadResources(user.uid), loadLessons(user.uid)
+      [results, assignments, resources, lessons, writings] = await Promise.all([
+        loadResults(user.uid), loadAssignments(user.uid), loadResources(user.uid), loadLessons(user.uid),
+        loadWritings(user.uid).catch((error) => { console.warn(error); return []; })
       ]);
       // "Görüşmeye katıl" düğmesinin durumu zamanla değişir.
       setInterval(() => { if(!document.hidden) renderLessons(); }, 30000);

@@ -1,0 +1,138 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-1",
+  "title": "Neue Wohnung",
+  "minutes": 20,
+  "kind": "writing",
+  "register": "du",
+  "situation": "Sie sind vor zwei Wochen in eine neue Wohnung umgezogen. Ihre Freundin Lena konnte beim Umzug nicht helfen, weil sie krank war.",
+  "task": "Schreiben Sie Lena eine E-Mail:",
+  "points": [
+    "Beschreiben Sie: Wie ist die neue Wohnung?",
+    "Begründen Sie: Warum sind Sie umgezogen?",
+    "Machen Sie einen Vorschlag für ein Treffen."
+  ],
+  "instructions": "Schreiben Sie eine E-Mail (circa 80 Wörter). Schreiben Sie etwas zu allen drei Punkten. Achten Sie auf den Textaufbau (Anrede, Einleitung, Reihenfolge der Inhaltspunkte, Schluss).",
+  "words": {
+    "target": 80,
+    "min": 70,
+    "max": 100
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Üç maddenin hepsine yazdım (daire, taşınma sebebi, buluşma önerisi)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Hitap ve kapanış var (ör. Liebe … / Lieber …, Liebe Grüße)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Arkadaşa du ile yazdım (dir, dich, dein …)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kısa bir girişle başladım; maddeleri görevdeki sırayla yazdım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümleleri bağladım (weil, aber, deshalb, dann, trotzdem …)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Ana cümlede çekimli fiil 2. sırada (Gestern habe ich …, Jetzt wohne ich …)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "weil / dass / wenn'den sonra çekimli fiil cümlenin sonunda."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Geçmiş için Perfekt kullandım; umziehen sein ile: Ich bin umgezogen."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Einleitung",
+      "items": [
+        {
+          "de": "Liebe …, / Lieber …,",
+          "tr": "Sevgili … (kadına / erkeğe)"
+        },
+        {
+          "de": "Wie geht es dir?",
+          "tr": "Nasılsın?"
+        },
+        {
+          "de": "Ich hoffe, du bist wieder gesund!",
+          "tr": "Umarım iyileşmişsindir!"
+        }
+      ]
+    },
+    {
+      "group": "Beschreiben",
+      "items": [
+        {
+          "de": "Die Wohnung ist zwar klein, aber sehr hell.",
+          "tr": "Daire küçük ama çok aydınlık."
+        },
+        {
+          "de": "Am besten gefällt mir …",
+          "tr": "En çok … hoşuma gidiyor."
+        }
+      ]
+    },
+    {
+      "group": "Begründen",
+      "items": [
+        {
+          "de": "Ich bin umgezogen, weil …",
+          "tr": "Taşındım, çünkü …"
+        },
+        {
+          "de": "Der Grund ist, dass …",
+          "tr": "Sebebi şu: …"
+        }
+      ]
+    },
+    {
+      "group": "Vorschlag",
+      "items": [
+        {
+          "de": "Hast du am Samstag Zeit?",
+          "tr": "Cumartesi vaktin var mı?"
+        },
+        {
+          "de": "Wie wäre es mit …? / Wollen wir zusammen …?",
+          "tr": "… nasıl olur? / Birlikte … ister misin?"
+        }
+      ]
+    },
+    {
+      "group": "Schluss",
+      "items": [
+        {
+          "de": "Ich freue mich auf deine Antwort.",
+          "tr": "Cevabını bekliyorum."
+        },
+        {
+          "de": "Liebe Grüße / Viele Grüße",
+          "tr": "Sevgiler / Selamlar"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Liebe Lena,\nwie geht es dir? Ich hoffe, du bist wieder gesund! Seit zwei Wochen wohne ich jetzt in meiner neuen Wohnung. Sie ist zwar nicht groß, aber hell und ruhig, und vom Balkon sehe ich einen kleinen Park. Ich bin umgezogen, weil meine alte Wohnung zu weit von meiner Arbeit entfernt war. Jetzt brauche ich nur zehn Minuten mit dem Fahrrad. Hast du am Samstag Zeit? Dann zeige ich dir die Wohnung und wir kochen zusammen.\nLiebe Grüße\nDeniz",
+    "notes": [
+      "Üç madde görevdeki sırayla: daire → taşınma sebebi → buluşma önerisi.",
+      "zwar … aber, weil (fiil sonda) ve dann (fiil 2. sırada) cümleleri bağlıyor.",
+      "Giriş cümlesi Lena'nın hastalığına değiniyor; durumu hatırlamak iyi bir başlangıç."
+    ]
+  }
+}

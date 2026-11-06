@@ -114,6 +114,50 @@ service cloud.firestore {
           && d.topicErrors.matches('^([a-z0-9-]{1,40}:[0-9]{1,2}(,|$))*$')));
     }
 
+    // Schreiben (sınav hazırlığı, js/writing-task.js): öğrencinin yazdığı metin. Sadece eklenebilir; öğrenci
+    // sonradan değiştiremez ve silemez (öğretmen aslını görür). Geri bildirimi (feedback, feedbackAt) sadece öğretmen yazar.
+    // Aynı batch içinde users/{uid}/limits/writing belgesi bu metnin kimliğiyle güncellenmek zorunda (günlük sınır).
+    function writingLimitPath(uid) {
+      return /databases/$(database)/documents/users/$(uid)/limits/writing;
+    }
+
+    function validWriting(uid, id) {
+      let d = request.resource.data;
+      return d.keys().hasOnly(['exam', 'level', 'teil', 'set', 'text', 'words', 'at'])
+        && d.keys().hasAll(['exam', 'level', 'teil', 'set', 'text', 'words', 'at'])
+        && d.exam is string && d.exam.matches('^[a-z0-9-]{2,20}$')
+        && d.level is string && d.level.matches('^[a-z0-9-]{1,20}$')
+        && d.teil is int && d.teil >= 1 && d.teil <= 10
+        && d.set is string && d.set.matches('^set-[0-9]{1,2}$')
+        && d.text is string && d.text.size() <= 4000 && d.text.trim().size() >= 1
+        && d.words is int && d.words >= 0 && d.words <= 1000
+        && d.at == request.time
+        && getAfter(writingLimitPath(uid)).data.lastAt == request.time
+        && getAfter(writingLimitPath(uid)).data.lastId == id;
+    }
+
+    // Öğrenci geri bildirimi gördüğünde sadece "görüldü" zamanını işaretleyebilir.
+    function validWritingSeen() {
+      return request.resource.data.diff(resource.data).affectedKeys().hasOnly(['seenAt'])
+        && request.resource.data.seenAt == request.time;
+    }
+
+    // Günlük sınır: ilk gönderimle başlayan 24 saatlik pencerede en fazla 10 metin.
+    // Yeni pencere: windowStart == şimdi, count == 1. Aynı pencere: windowStart aynı, count bir fazla (en fazla 10).
+    function validWritingLimit(uid) {
+      let d = request.resource.data;
+      let fresh = resource == null || request.time >= resource.data.windowStart + duration.value(24, 'h');
+      return d.keys().hasOnly(['windowStart', 'count', 'lastAt', 'lastId'])
+        && d.keys().hasAll(['windowStart', 'count', 'lastAt', 'lastId'])
+        && d.lastAt == request.time
+        && d.lastId is string && d.lastId.matches('^[A-Za-z0-9]{10,40}$')
+        && existsAfter(/databases/$(database)/documents/users/$(uid)/writings/$(d.lastId))
+        && (
+          (fresh && d.windowStart == request.time && d.count == 1)
+          || (!fresh && d.windowStart == resource.data.windowStart && d.count == resource.data.count + 1 && d.count <= 10)
+        );
+    }
+
     // Öğrencinin ödeve eklediği kendi dokümanı: sadece Google Docs / Drive linki.
     function validStudentDoc(value) {
       return value is string
@@ -170,6 +214,19 @@ service cloud.firestore {
 
       match /lessons/{lessonId} {
         allow read: if ownActive(uid);
+      }
+
+      // Schreiben metinleri: sadece onaylı (aktif) hesap; ekleme ve kendi metnini okuma.
+      match /writings/{writingId} {
+        allow read: if ownActive(uid);
+        allow create: if ownActive(uid) && validWriting(uid, writingId);
+        allow update: if ownActive(uid) && validWritingSeen();
+      }
+
+      // Günlük gönderim sınırı (şimdilik sadece "writing").
+      match /limits/{name} {
+        allow get: if ownActive(uid);
+        allow create, update: if ownActive(uid) && name == 'writing' && validWritingLimit(uid);
       }
     }
 

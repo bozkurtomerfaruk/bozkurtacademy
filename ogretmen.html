@@ -20,7 +20,7 @@
   <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13" />
   <link rel="stylesheet" href="css/base.css?v=12" />
-  <link rel="stylesheet" href="css/account.css?v=3" />
+  <link rel="stylesheet" href="css/account.css?v=5" />
   <link rel="stylesheet" href="/css/comments-admin.css?v=2" />
 </head>
 <body class="academy-theme account-page teacher-page">
@@ -65,6 +65,7 @@
         <p class="acc-status" id="teacherLoading">Yükleniyor…</p>
         <p class="acc-status error" id="teacherError" role="alert" hidden></p>
         <div class="acc-status warning" id="staleWarning" role="status" hidden></div>
+        <div class="acc-status" id="writingNotice" role="status" hidden></div>
 
         <div id="teacherApp" hidden>
           <div class="acc-tabs" role="tablist" aria-label="Öğrenci listeleri">
@@ -130,7 +131,7 @@
       </div>
     </footer>
   </div>
-  <script src="js/app.js?v=35"></script>
+  <script src="js/app.js?v=36"></script>
   <script src="js/theme.js?v=10"></script>
   <script type="module" src="js/account/teacher.js?v=3"></script>
 </body>

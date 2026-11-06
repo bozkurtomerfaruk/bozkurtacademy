@@ -224,6 +224,11 @@ const outputs = [];
 for (const page of PAGES) {
   const file = path.join(root, page.path, 'index.html');
   let html = fs.readFileSync(file, 'utf8');
+  // Blogdan geri dönüş cümleleri (_blog/posts.json "backlinks"): yalnızca yazı yayınlanınca görünür.
+  for (const post of BLOG.posts) {
+    const sentence = post.backlinks?.[page.path];
+    if (sentence) html = fill(html, `blog:${post.slug}`, post.draft ? '' : ' ' + sentence.replace('{link}', `<a href="${post.path}">${esc(post.h1)}</a>`), file);
+  }
   html = fill(html, 'head', head(page, html), file);
   html = fill(html, 'header', header({ current: page.nav }), file);
   html = fill(html, 'breadcrumb', breadcrumb(page), file);

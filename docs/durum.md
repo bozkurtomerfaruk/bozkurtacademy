@@ -12,11 +12,12 @@
   - Kullanılmayanlar: Piper'ın Almanca sesleri (ticari kullanımı yasak Ryan sesinden türetilmiş ya da lisansı doğrulanamadı), pavoque, XTTS ve YourTTS (ticari kullanım yasak).
 - **Dosyalar:**
   - `data/cocuk/ses/` klasöründe her kelime için iki dosya var: "hund.mp3" (Dinle düğmesi) ve "der-hund.mp3" (doğru cevaptan sonra).
-  - 82 dosya, yaklaşık 360 KB; seslerin hepsi en fazla 6 KB. Dosyalar kelime ekrana gelince yükleniyor.
+  - 96 dosya, yaklaşık 427 KB; seslerin hepsi en fazla 6 KB. Dosyalar kelime ekrana gelince yükleniyor.
   - Hangi kelimenin dosyası olduğu `data/cocuk/sesler.json` listesinde; bu listeyi `node scripts/kids-audio.mjs` üretiyor ve `check-kids-games` CI'da denetliyor.
 - **Sorunlu 7 kelime (Wasser, Tisch, Stuhl, Uhr, Ball, Puppe, Tasche):**
   - İlk sürümleri beğenmedin. 238 aday ürettim: noktalama, "Das ist der Tisch." cümlesinden kesme, yavaş konuşma, Tacotron2 ve Puppe için doğru okunuş ("pʊpə").
-  - Her biri için en iyi iki aday seçim sayfasında seni bekliyor. Seçim gelene kadar bu 14 seste cihazın sesi kullanılıyor.
+  - Her biri için en iyi iki adayı dinledin ve seçtin. Tisch'te taşıyıcı cümleden kesilen sürümü, diğerlerinde B'yi aldın: çoğu Tacotron2, Uhr/Ball/Tasche artikelli hâli yavaş VITS, Tasche tek başına cümleden kesilmiş. Ayrıntı `scripts/cocuk-ses/README.md`'de.
+  - Böylece 48 kelimenin 96 sesinin hepsi dosyadan çalıyor (toplam 427 KB); cihaz sesi sadece yedek.
 - **Üretim betikleri:** `scripts/cocuk-ses/` (README'de kurulum, modellerin adresleri ve yöntem). Seslerin hiçbiri sitede üretilmiyor.
 - **Gizlilik:** Oyunun dosyaları bu siteden (GitHub Pages) yüklendiği ve cihaz sesinin sadece yedek olduğu yazıldı (TR/DE/EN); tarih 6 Kasım 2026. Yeni bir veri ya da üçüncü taraf yok.
 - **Test:**
@@ -28,7 +29,7 @@
     - atıf satırı görünüyor.
   - `test:placement` geçti. Gizlilik sayfasındaki bağlantı kontrolü artık kaydırmanın bitmesini bekliyor; Almanca metin uzayınca telefonda 600 ms yetmiyordu.
 - **Önbellek:** `app.js` v35, `artikel-evleri.js` v2.
-- **Durum:** PR açık. 14 sesin seçimini bekliyor; seçtiklerinle dosyaları ekleyip birleştirmeden önce sana haber vereceğim.
+- **Durum:** Seçtiğin 14 ses eklendi; PR #61 birleştirildi (2026-11-06). **Madde 5'in ilk oyunu tamamlandı.**
 
 ## 2026-11-05 · Çocuklar için: Artikel Evleri (madde 5, ilk oyun)
 

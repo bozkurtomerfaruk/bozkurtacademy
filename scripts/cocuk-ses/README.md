@@ -38,4 +38,14 @@ THORSTEN_TACO=/yol/tacotron2-DDC THORSTEN_HIFIGAN=/yol/hifigan_v1 venv/bin/pytho
 
 - 41 kelime: `vits` yöntemi (iki biçimde de).
 - Wasser, Tisch, Stuhl, Uhr, Ball, Puppe, Tasche: ilk sürümler beğenilmedi; `cumle`, `taco` ve yavaş VITS ile
-  238 aday üretildi, her biri için en iyi iki aday öğretmene dinletildi (seçilenler `docs/durum.md`'de).
+  238 aday üretildi, her biri için en iyi iki aday öğretmene dinletildi. Öğretmenin seçtikleri:
+
+  | Kelime | tek başına | artikelle |
+  | --- | --- | --- |
+  | Wasser | taco | taco |
+  | Tisch | cumle ("Hier ist der Tisch.", SEED=2) | cumle ("Hier ist der Tisch.", SEED=0) |
+  | Stuhl | taco | taco |
+  | Uhr | taco | vits, yavaş (length_scale 1.15) |
+  | Ball | taco | vits, yavaş (length_scale 1.15) |
+  | Puppe | taco, ünlemle ("Puppe!") | taco |
+  | Tasche | cumle ("Das ist die Tasche.", SEED=0) | vits, yavaş (length_scale 1.15, SEED=1) |

@@ -26,6 +26,7 @@ const sentence = text => { const t = String(text).trim(); return t && !/[.!?…]
 export function loadGrammar(root) {
   const ctx = { window: {} };
   vm.createContext(ctx);
+  vm.runInContext(fs.readFileSync(path.join(root, 'js/html.js'), 'utf8'), ctx); // escapeHtml/safeUrl (window.baHtml)
   vm.runInContext(fs.readFileSync(path.join(root, 'js/a1-lessons.js'), 'utf8'), ctx);
   const { articleHtml, lessonPath } = ctx.window.BAA1Lessons;
   const catalog = JSON.parse(fs.readFileSync(path.join(root, 'data/catalog.json'), 'utf8'));

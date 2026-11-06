@@ -1,0 +1,26 @@
+# Dependabot: GitHub Actions (commit SHA'ya sabitlenmiş; sürüm yorumu da güncellenir) ve npm geliştirme paketleri.
+# Site çalışma zamanında npm paketi kullanmaz; Firebase SDK'sı gstatic'ten sabit sürümle gelir (js/account/firebase.js).
+# Firebase npm sürümü yükselirse firebase.js'teki CDN adreslerini de aynı sürüme çek.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      actions:
+        patterns: ['*']
+    commit-message:
+      prefix: ci
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    groups:
+      firebase:
+        patterns: ['firebase', 'firebase-tools', '@firebase/*']
+    commit-message:
+      prefix: deps

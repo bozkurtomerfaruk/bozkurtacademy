@@ -1,0 +1,5 @@
+# GitHub Pages (Jekyll) ayarı. Site Jekyll şablonu kullanmaz; dosyalar olduğu gibi yayımlanır.
+# Jekyll noktayla başlayan klasörleri varsayılan olarak yayımlamaz: /.well-known/security.txt için açıkça dahil edilir.
+# _blog/ (yazı kaynakları) alt çizgiyle başladığı için yayımlanmamaya devam eder.
+include:
+  - .well-known

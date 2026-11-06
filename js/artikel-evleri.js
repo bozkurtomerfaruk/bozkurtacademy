@@ -19,7 +19,8 @@
   const t = (key) => window.BA?.t ? window.BA.t(key) : key;
   const fill = (key, values) => t(key).replace(/\{(\w+)\}/g, (_, name) => values[name] ?? '');
   const lang = () => window.BA?.lang || 'tr';
-  const esc = (v) => String(v).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const esc = (v) => window.baHtml.escapeHtml(v); // ortak kaçışlayıcı: js/html.js
+  // html-safe-names: cls x y wins inner houseSvg() picHtml()
   const reduceMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // Only the sound setting and the best score per topic; the game works when storage is blocked.
@@ -145,7 +146,8 @@
 
   const shuffle = (list) => { const a = list.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
   const title = (th) => th.title[lang()] || th.title.tr;
-  const picHtml = (svg, cls = 'ae-pic') => `<div class="${cls}" aria-hidden="true"><svg viewBox="0 0 100 100" focusable="false">${svg}</svg></div>`;
+  // Çizimler data/cocuk/resimler.json'dan gelir: yalnızca izinli SVG öğeleri kalır (js/html.js → sanitizeSvg).
+  const picHtml = (svg, cls = 'ae-pic') => `<div class="${cls}" aria-hidden="true"><svg viewBox="0 0 100 100" focusable="false">${window.baHtml.sanitizeSvg(svg)}</svg></div>`;
   function houseSvg(a, lit, total) {
     const spots = [[26, 58], [54, 58], [26, 86], [54, 86], [40, 30]].slice(0, Math.max(4, total));
     const wins = spots.map(([x, y], i) => `<rect class="ae-win${i < lit ? ' is-on' : ''}" x="${x}" y="${y}" width="20" height="18" rx="3"/>`).join('');
@@ -220,7 +222,7 @@
         <div class="ae-card">
           ${picHtml(w.pic)}
           <div class="ae-card-text">
-            <p class="ae-word" id="aeWord" lang="de">${g.answered ? `<span class="ae-art is-${w.article}">${w.article}</span> ` : ''}${esc(w.word)}</p>
+            <p class="ae-word" id="aeWord" lang="de">${g.answered ? `<span class="ae-art is-${esc(w.article)}">${esc(w.article)}</span> ` : ''}${esc(w.word)}</p>
             <p class="ae-tr" lang="tr">${esc(w.tr)}</p>
             <button class="btn ghost ae-listen" type="button" data-ae-listen aria-label="${esc(fill('aeListenLabel', { word: w.word }))}" hidden>
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -228,11 +230,11 @@
             </button>
           </div>
         </div>
-        <p class="ae-feedback${fb ? ' is-' + fb.type : ''}" role="status" data-ae-feedback>${fb ? esc(fb.text) : ''}</p>
+        <p class="ae-feedback${fb ? ' is-' + esc(fb.type) : ''}" role="status" data-ae-feedback>${fb ? esc(fb.text) : ''}</p>
         <div class="ae-houses">${ARTS.map((a) => {
           const tried = g.tried.includes(a);
-          return `<button class="ae-house is-${a}${tried ? ' is-tried' : ''}" type="button" data-ae-house="${a}" aria-label="${esc(fill('aeHouse', { art: a }))}"${g.answered || tried ? ' disabled' : ''}>
-            ${houseSvg(a, g.lit[a], perHouse)}<span class="ae-house-label" lang="de">${a}</span></button>`;
+          return `<button class="ae-house is-${esc(a)}${tried ? ' is-tried' : ''}" type="button" data-ae-house="${esc(a)}" aria-label="${esc(fill('aeHouse', { art: a }))}"${g.answered || tried ? ' disabled' : ''}>
+            ${houseSvg(a, g.lit[a], perHouse)}<span class="ae-house-label" lang="de">${esc(a)}</span></button>`;
         }).join('')}</div>
         ${g.answered ? `<div class="ae-actions"><button class="btn primary" type="button" data-ae-next>${esc(t(g.i + 1 < total ? 'aeNext' : 'aeShowResult'))} <span aria-hidden="true">→</span></button></div>` : ''}
       </section>`, { back: true });
@@ -263,7 +265,7 @@
       g.tried.push(a);
       g.feedback = { type: 'wrong', text: fill('aeWrong', { art: a }) };
       renderWord({ focus: 'house' });
-      const house = root.querySelector(`[data-ae-house="${a}"]`);
+      const house = root.querySelector(`[data-ae-house="${esc(a)}"]`);
       if (house && !reduceMotion()) house.classList.add('is-shaking');
     }
   }
@@ -283,7 +285,7 @@
     const perHouse = Math.ceil(n / 3);
     shell(`
       <section class="ae-board ae-end" aria-labelledby="aeEndTitle">
-        <div class="ae-houses" aria-hidden="true">${ARTS.map((a) => `<div class="ae-house is-${a}">${houseSvg(a, g.lit[a], perHouse)}<span class="ae-house-label" lang="de">${a}</span></div>`).join('')}</div>
+        <div class="ae-houses" aria-hidden="true">${ARTS.map((a) => `<div class="ae-house is-${esc(a)}">${houseSvg(a, g.lit[a], perHouse)}<span class="ae-house-label" lang="de">${esc(a)}</span></div>`).join('')}</div>
         <h2 id="aeEndTitle" tabindex="-1">${esc(t('aeEndTitle'))}</h2>
         <p class="ae-end-score" data-ae-end-score>${esc(k ? fill('aeEndScore', { n, k, kk: lang() === 'tr' ? trAcc(k) : k }) : t('aeEndNone'))}</p>
         <p class="ae-end-best">${record ? `<strong>${esc(t('aeNewBest'))}</strong> ` : ''}${esc(fill('aeEndBest', { best, n }))}</p>

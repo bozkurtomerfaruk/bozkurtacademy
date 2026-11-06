@@ -4,12 +4,13 @@
   "description": "Site needs no build. These packages only run the Firestore rule tests, the Apps Script tests, the placement test browser tests, the placement cleanup job and the local emulator.",
   "type": "module",
   "scripts": {
-    "test": "firebase emulators:exec --only firestore --project demo-bozkurtacademy \"node --test tests/firestore.rules.test.mjs tests/apps-script.test.mjs\"",
+    "test": "firebase emulators:exec --only firestore --project demo-bozkurtacademy \"node --test tests/firestore.rules.test.mjs tests/apps-script.test.mjs tests/html.test.mjs\"",
     "emulators": "firebase emulators:start --only auth,firestore --project demo-bozkurtacademy",
     "test:apps-script": "node --test tests/apps-script.test.mjs",
     "test:cleanup": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/placement-cleanup.mjs\"",
     "test:level-exam": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/level-exam-account.mjs\"",
-    "test:placement": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/seviye-testi/placement.mjs\""
+    "test:placement": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/seviye-testi/placement.mjs\"",
+    "test:csp": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/csp.mjs\""
   },
   "devDependencies": {
     "@firebase/rules-unit-testing": "5.0.2",

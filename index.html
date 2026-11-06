@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ba:security -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com/firebasejs/ https://apis.google.com https://accounts.google.com/gsi/client https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; connect-src 'self' https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://content-firebaseappcheck.googleapis.com https://www.googleapis.com https://accounts.google.com/gsi/ https://www.google.com/recaptcha/ https://api.web3forms.com https://bozkurtacademy.goatcounter.com http://127.0.0.1:8080 http://127.0.0.1:9099; frame-src https://accounts.google.com https://bozkurtacademy-8ab85.firebaseapp.com https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <script src="/js/theme-init.js?v=1"></script>
+  <!-- /ba:security -->
+  <script src="/js/legacy-hash.js?v=1"></script>
   <meta name="theme-color" content="#f8f7f3" />
-  <script>/* Eski adresler artık ayrı sayfalar: #lessons, #about, #contact ve #grammar/A1/artikel/3 → /almanca-gramer/a1/artikel/#a1-step-2 (js/app.js: baGrammarUrl); yalın #grammar (arama) burada kalır */(function(){var m={lessons:'/online-almanca-dersi/',about:'/hakkimda/',contact:'/iletisim/'},p=(location.hash||'').slice(1).split('/'),u=m[p[0]];if(p[0]==='grammar'&&p.length>1){u='/almanca-gramer/';var l=(p[1]||'').toLowerCase();if(/^(a1|a2|b1)$/.test(l)){u+=l+'/';if(p[2]){u+=encodeURIComponent(decodeURIComponent(p[2]))+'/';if(/^[0-9]{1,2}$/.test(p[3]||'')&&p[3]>0)u+='#a1-step-'+(p[3]-1);}}}if(u)location.replace(u);})();</script>
-  <script>try{document.documentElement.dataset.theme=localStorage.getItem('ba-theme')==='dark'?'dark':'light'}catch(_){document.documentElement.dataset.theme='light'}</script>
   <title>Online Almanca Dersi: Birebir ve Grup | Bozkurt Academy</title>
   <link rel="canonical" href="https://bozkurtacademy.com/" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
@@ -153,7 +157,7 @@
             </div>
           </div>
           <figure class="home-portrait" data-home-reveal>
-            <picture><source type="image/webp" srcset="images/omer-faruk-480.webp 480w, images/omer-faruk-768.webp 768w, images/omer-faruk-1151.webp 1151w" sizes="(max-width: 1020px) 100vw, 50vw"><img src="images/omer-faruk-768.jpg" srcset="images/omer-faruk-480.jpg 480w, images/omer-faruk-768.jpg 768w, images/omer-faruk-1151.jpg 1151w" sizes="(max-width: 1020px) 100vw, 50vw" width="1151" height="2048" alt="Almanca eğitmeni Ömer Faruk Bozkurt" onerror="this.onerror=null;this.parentNode.querySelectorAll('source').forEach(function(s){s.remove()})" fetchpriority="high"></picture>
+            <picture><source type="image/webp" srcset="images/omer-faruk-480.webp 480w, images/omer-faruk-768.webp 768w, images/omer-faruk-1151.webp 1151w" sizes="(max-width: 1020px) 100vw, 50vw"><img src="images/omer-faruk-768.jpg" srcset="images/omer-faruk-480.jpg 480w, images/omer-faruk-768.jpg 768w, images/omer-faruk-1151.jpg 1151w" sizes="(max-width: 1020px) 100vw, 50vw" width="1151" height="2048" alt="Almanca eğitmeni Ömer Faruk Bozkurt" data-picture-fallback fetchpriority="high"></picture>
             <figcaption><span>Ömer Faruk Bozkurt</span><span data-i18n="homePortraitCaption">Almanca eğitmeni</span></figcaption>
           </figure>
         </section>
@@ -383,17 +387,18 @@
     <a class="ba-sticky-cta btn primary" href="/iletisim/" data-i18n="ctaFreeInfo">Ücretsiz bilgi al</a>
     <!-- /ba:footer -->
   </div>
+  <script src="js/html.js?v=1"></script>
   <script src="js/app.js?v=35"></script>
-  <script src="js/quiz.js?v=28"></script>
+  <script src="js/quiz.js?v=30"></script>
   <script src="js/exercise-links.js?v=6"></script>
-  <script src="js/a1-lessons.js?v=18"></script>
-  <script src="js/grammar.js?v=20"></script>
+  <script src="js/a1-lessons.js?v=19"></script>
+  <script src="js/grammar.js?v=21"></script>
   <script src="js/theme.js?v=10"></script>
   <script src="js/home.js?v=7"></script>
   <script src="js/examsData.js?v=15"></script>
-  <script src="js/exam-task.js?v=11"></script>
-  <script src="js/exams.js?v=6"></script>
-  <script src="js/placement.js?v=5"></script>
+  <script src="js/exam-task.js?v=12"></script>
+  <script src="js/exams.js?v=7"></script>
+  <script src="js/placement.js?v=6"></script>
   <script src="js/level-exam.js?v=4"></script>
   <script src="js/artikel-evleri.js?v=2"></script>
   <script type="module" src="js/account/session.js?v=2"></script>

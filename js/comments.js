@@ -3,7 +3,9 @@
 // - submitComment: "Yorumu gönder"e basılınca Firebase SDK'sını yükler, anonim oturumla yorumu "pending" olarak kaydeder
 //   ve Web3Forms ile öğretmene bildirim gönderir. E-posta adresi Firestore'a yazılmaz, yalnızca bildirim e-postasında bulunur.
 // Kurallar: firestore.rules → "Gramer dersi yorumları". Onay sayfası: /yonetim/yorumlar/.
-import { firebaseConfig } from './account/config.js';
+import * as config from './account/config.js';
+const { firebaseConfig } = config;
+const APPCHECK_SITE_KEY = config.APPCHECK_SITE_KEY || ''; // eski önbellekli config.js'te yoksa: App Check yok
 
 const SITE = 'https://bozkurtacademy.com';
 const ADMIN_URL = SITE + '/yonetim/yorumlar/';
@@ -25,7 +27,7 @@ function restBase(){
 const text = (field) => field?.stringValue ?? '';
 
 // Her adım konsola "[yorum]" önekiyle yazılır; bir sorun olduğunda nedeni (ör. permission-denied) hemen görünür.
-export const COMMENTS_VERSION = 2;
+export const COMMENTS_VERSION = 3;
 const log = (step, extra) => console.info(`[yorum] ${step}`, extra ?? '');
 const fail = (step, error) => {
   console.error(`[yorum] HATA: ${step}`, error?.code || '', error?.message || error);
@@ -44,9 +46,15 @@ export async function loadApproved(lessonKey){
     }
   };
   const key = emulatorMode() ? '' : `?key=${encodeURIComponent(firebaseConfig.apiKey)}`;
+  const headers = { 'Content-Type': 'application/json' };
+  // App Check Firestore'da zorunluysa REST okuması da belirteç ister; yalnızca anahtar tanımlıyken SDK yüklenir.
+  if(APPCHECK_SITE_KEY && !emulatorMode()){
+    const token = await import('./account/firebase.js').then((m) => m.appCheckToken()).catch(() => null);
+    if(token) headers['X-Firebase-AppCheck'] = token;
+  }
   const response = await fetch(`${restBase()}:runQuery${key}`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers,
     body: JSON.stringify(body)
   });
   if(!response.ok){

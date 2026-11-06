@@ -4,6 +4,11 @@
 import { addDaysToKey, berlinAt, berlinParts } from './common.js';
 import { CalendarError } from './calendar.js';
 
+// Savunma: calendar.js bu dosyayı yalnızca emülatör modunda (localhost/127.0.0.1) yükler; localStorage bunu canlıda
+// açamaz (js/account/firebase.js → emulatorMode önce adres adını denetler). Yine de başka bir yoldan içe aktarılırsa
+// canlı adreste hiç çalışmasın.
+if(!['localhost', '127.0.0.1'].includes(location.hostname)) throw new Error('calendar-mock.js yalnızca yerel emülatörde çalışır');
+
 const STORE = 'baCalendarMock';
 const CALLS = 'baCalendarMockCalls';
 

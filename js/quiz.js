@@ -1,4 +1,5 @@
 
+  // html-safe-names: levelTabs cards subResults rules examples correctDisplay detailedExplanation
 (() => {
   const $ = (id) => document.getElementById(id);
   const state = {
@@ -210,7 +211,7 @@
     const parts = [];
     parts.push(`<button type="button" data-crumb="levels">${t('navExercises')}</button>`);
     if(state.level){
-      parts.push(`<span class="sep">›</span><button type="button" data-crumb="topics">${state.level.id}</button>`);
+      parts.push(`<span class="sep">›</span><button type="button" data-crumb="topics">${escapeHtml(state.level.id)}</button>`);
     }
     if(state.topicMeta){
       parts.push(`<span class="sep">›</span><button type="button" data-crumb="sets">${escapeHtml(localize(state.topicMeta.title))}</button>`);
@@ -227,11 +228,8 @@
     }));
   }
 
-  function escapeHtml(value){
-    return String(value ?? '').replace(/[&<>"']/g, ch=>({
-      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'
-    })[ch]);
-  }
+  // Ortak kaçışlayıcı: js/html.js (bu dosyadan önce yüklenir).
+  function escapeHtml(value){ return window.baHtml.escapeHtml(value); }
 
   function exerciseHistoryState(view){
   return {
@@ -333,8 +331,8 @@
     }
 
    const levelTabs=state.catalog.levels.map(level=>{
-  return `<button class="exercise-discovery-level ba-level-tab ${state.level?.id===level.id && !query?'active':''}" type="button" aria-pressed="${state.level?.id===level.id && !query}" data-hub-level="${level.id}">
-    <span class="exercise-discovery-level-code ba-level-code">${level.id}</span>
+  return `<button class="exercise-discovery-level ba-level-tab ${state.level?.id===level.id && !query?'active':''}" type="button" aria-pressed="${state.level?.id===level.id && !query}" data-hub-level="${escapeHtml(level.id)}">
+    <span class="exercise-discovery-level-code ba-level-code">${escapeHtml(level.id)}</span>
     <span class="exercise-discovery-level-name ba-level-name">${escapeHtml(localize(level.title))}</span>
     <span class="exercise-discovery-level-meta ba-level-meta">${level.topics.length} ${escapeHtml(t('hubTotal'))}</span>
   </button>`;
@@ -366,9 +364,9 @@
     const cards=rows.length ? rows.map(({level,topic})=>{
       const ready=topic.status==='ready';
       return `<button class="exercise-discovery-topic ba-toc-item ${ready?'ready':'soon'}" type="button"
-        data-hub-topic="${topic.id}" data-hub-topic-level="${level.id}" ${ready?'':'disabled'}>
+        data-hub-topic="${escapeHtml(topic.id)}" data-hub-topic-level="${escapeHtml(level.id)}" ${ready?'':'disabled'}>
         <div class="exercise-discovery-topic-top ba-toc-top">
-          <span class="exercise-discovery-topic-level ba-toc-level">${level.id}</span>
+          <span class="exercise-discovery-topic-level ba-toc-level">${escapeHtml(level.id)}</span>
           ${ready ? '' : `<span class="exercise-discovery-status soon">${escapeHtml(t('hubSoon'))}</span>`}
         </div>
         <h3>${escapeHtml(localize(topic.title))}</h3>
@@ -420,7 +418,7 @@
         <a class="btn primary" href="#seviye-sonu/${escapeHtml(state.level.id)}" data-level-exam>${escapeHtml(t('leCardButton'))} <span aria-hidden="true">→</span></a>
       </section>` : ''}
       ${!query && state.level?.id==='A1' ? `<section class="kids-card" aria-labelledby="kidsCardTitle">
-        <div class="kids-card-houses" aria-hidden="true">${['der','die','das'].map(a=>`<svg class="is-${a}" viewBox="0 0 100 110"><path class="k-roof" d="M8 50L50 12l42 38z"/><rect class="k-wall" x="16" y="48" width="68" height="56"/><rect class="k-win" x="38" y="64" width="24" height="22" rx="3"/></svg>`).join('')}</div>
+        <div class="kids-card-houses" aria-hidden="true">${['der','die','das'].map(a=>`<svg class="is-${escapeHtml(a)}" viewBox="0 0 100 110"><path class="k-roof" d="M8 50L50 12l42 38z"/><rect class="k-wall" x="16" y="48" width="68" height="56"/><rect class="k-win" x="38" y="64" width="24" height="22" rx="3"/></svg>`).join('')}</div>
         <div>
           <p class="kids-card-kicker">${escapeHtml(t('kidsCardKicker'))}</p>
           <h3 id="kidsCardTitle">${escapeHtml(t('kidsCardTitle'))}</h3>
@@ -545,7 +543,7 @@
       <h3>${escapeHtml(localize(ex.title))}</h3>
       <p>${escapeHtml(localize(ex.description))}</p>
       </div>
-      <button class="btn primary" type="button" data-exercise="${ex.id}">${t('openExercise')} <span aria-hidden="true">→</span></button>
+      <button class="btn primary" type="button" data-exercise="${escapeHtml(ex.id)}">${t('openExercise')} <span aria-hidden="true">→</span></button>
     </article>`}).join('');
     grid.querySelectorAll('[data-exercise]').forEach(btn=>btn.addEventListener('click',()=>startExercise(btn.dataset.exercise)));
   }
@@ -984,7 +982,7 @@ function startNextExercise(){
       : `<div class="notice result-notice">${t('noWrongAnswers')}</div>`;
     result.innerHTML=`<div class="result-box">
       <h3>${escapeHtml(localize(state.exercise.title))}</h3>
-      <div class="result-score"><div><strong>${state.score}/${total}</strong><span>${percent}% ${t('scoreLabel')}</span></div></div>
+      <div class="result-score"><div><strong>${Number(state.score)}/${Number(total)}</strong><span>${Number(percent)}% ${t('scoreLabel')}</span></div></div>
       <p class="result-message">${escapeHtml(message)}</p>
       ${wrongHtml}
       <div data-vocab-slot>${vocabHtml(exerciseVocab(), 'vocabExercise')}</div>

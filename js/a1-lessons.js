@@ -2,7 +2,10 @@
  'use strict';
  // Status and error texts live in js/app.js (grammarLesson…, grammarComment…); the lesson itself is Turkish.
  const t = key => window.BA?.t ? window.BA.t(key) : key;
- const h = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+ // Ortak kaçışlayıcı ve adres denetimi: js/html.js (bu dosyadan önce yüklenir; statik sayfa üretiminde de).
+ // html-safe-names: cls body caption figure() section() tiles()
+ const h = value => window.baHtml.escapeHtml(value);
+ const safeUrl = value => window.baHtml.safeUrl(value);
  const dataPromises={};
  function load(level='A1') {
    if (!/^[AB][12]$/.test(level)) return Promise.reject(Error('Geçersiz seviye'));
@@ -42,13 +45,13 @@
      <section class="a1-section a1-summary"><${H}>Kısa tekrar</${H}><ul>${lesson.summary.map(x=>`<li>${h(x)}</li>`).join('')}</ul><details class="a1-check"><summary>Kendini kontrol et: ${h(lesson.check.question)}</summary><p><strong lang="de">${h(lesson.check.answer)}</strong></p><p>${h(lesson.check.why)}</p></details></section>
      <section class="a1-practice"><${H}>Konuyu alıştırmalarla pekiştir</${H}><p>Örnekleri anladıysan kısa sorularla devam et. Yanlış yaptığında cevap açıklamasını okuyup bu anlatıma dönebilirsin.</p><a class="btn primary" data-a1-practice href="${S?'/':''}#exercises/${h(level)}/${h(id)}">${h(lesson.title)} alıştırmaları →</a><p class="a1-practice-status" role="status"></p></section>
      <section class="a1-section" id="a1-faq"><${H}>Sık sorulan sorular</${H}>${lesson.faq.map(f=>`<details class="a1-faq"><summary>${h(f.question)}</summary><p>${h(f.answer)}</p></details>`).join('')}</section>
-     <section class="a1-section"><${H}>Benzer ve bağlantılı konular</${H}><div class="a1-related">${lesson.related.map(key=>{const item=data.lessons.find(l=>l.id===key);return `<a href="${S?lessonPath(level,key):`#grammar/${h(level)}/${h(key)}`}" data-a1-related="${h(key)}">${h(item.title)} <span aria-hidden="true">→</span></a>`}).join('')}</div></section>
-     <aside class="a1-author"><picture><source type="image/webp" srcset="/images/omer-faruk-avatar.webp"><img src="/images/omer-faruk-avatar.jpg" width="84" height="84" loading="lazy" decoding="async" alt="Almanca eğitmeni Ömer Faruk Bozkurt" onerror="this.onerror=null;this.parentNode.querySelectorAll('source').forEach(function(s){s.remove()})"></picture><div><${H}>Ömer Faruk Bozkurt</${H}><p class="a1-author-role">Almanca eğitmeni</p><p>Almanya’da yaşıyor, online Almanca dersleri veriyorum. Derslerimde konuları açık örnekler, düzenli tekrar ve günlük kullanım üzerinden ele alıyorum.</p><a href="/hakkimda/">Hakkımda daha fazla bilgi →</a></div></aside>
-     ${lesson.reading?`<p class="a1-reading">Ek okuma: <a href="${h(lesson.reading)}" target="_blank" rel="noopener noreferrer">${h(lesson.readingTitle || 'Deutsch mit Anna · '+lesson.title)}</a> (Almanca). Bu sayfadaki Türkçe anlatım ve örnekler Bozkurt Academy için hazırlanmıştır.</p>`:''}
+     <section class="a1-section"><${H}>Benzer ve bağlantılı konular</${H}><div class="a1-related">${lesson.related.map(key=>{const item=data.lessons.find(l=>l.id===key);return `<a href="${S?h(lessonPath(level,key)):`#grammar/${h(level)}/${h(key)}`}" data-a1-related="${h(key)}">${h(item.title)} <span aria-hidden="true">→</span></a>`}).join('')}</div></section>
+     <aside class="a1-author"><picture><source type="image/webp" srcset="/images/omer-faruk-avatar.webp"><img src="/images/omer-faruk-avatar.jpg" width="84" height="84" loading="lazy" decoding="async" alt="Almanca eğitmeni Ömer Faruk Bozkurt" data-picture-fallback></picture><div><${H}>Ömer Faruk Bozkurt</${H}><p class="a1-author-role">Almanca eğitmeni</p><p>Almanya’da yaşıyor, online Almanca dersleri veriyorum. Derslerimde konuları açık örnekler, düzenli tekrar ve günlük kullanım üzerinden ele alıyorum.</p><a href="/hakkimda/">Hakkımda daha fazla bilgi →</a></div></aside>
+     ${safeUrl(lesson.reading)?`<p class="a1-reading">Ek okuma: <a href="${h(safeUrl(lesson.reading))}" target="_blank" rel="noopener noreferrer">${h(lesson.readingTitle || 'Deutsch mit Anna · '+lesson.title)}</a> (Almanca). Bu sayfadaki Türkçe anlatım ve örnekler Bozkurt Academy için hazırlanmıştır.</p>`:''}
      <section class="a1-section a1-comments-published" hidden><${H}>Öğrenci yorumları</${H}><div class="a1-comment-list"></div></section>
      <section class="a1-section a1-comments"><${H}>Soru ve yorumlar</${H}><p>Konuda takıldığın yeri veya öğrenme deneyimini paylaşabilirsin. Yorumlar incelemeden sonra yayımlanır; e-posta adresin gösterilmez.</p>
        <form class="a1-comment-form" novalidate><div class="a1-comment-fields"><label>Adın<input name="name" autocomplete="name" maxlength="60" required></label><label>E-posta adresin<input name="email" type="email" autocomplete="email" maxlength="254" required></label></div><label>Yorumun<textarea name="comment" rows="5" minlength="10" maxlength="2000" required></textarea></label><div class="a1-honeypot" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div><label class="a1-consent"><input name="consent" type="checkbox" required><span>Yorumumun incelenip adımla bu konuda yayımlanmasını kabul ediyorum. E-posta adresim yalnızca yorumum hakkında iletişim için kullanılabilir.</span></label><button class="btn primary" type="submit">Yorumu gönder</button><p class="a1-comment-status" role="status" aria-live="polite"></p></form>
-     </section>${S?`<a class="btn ghost" href="${lessonPath(level)}">← ${h(level)} gramer konularına dön</a>`:`<button class="btn ghost" type="button" data-a1-back>← ${h(level)} gramer konularına dön</button>`}
+     </section>${S?`<a class="btn ghost" href="${h(lessonPath(level))}">← ${h(level)} gramer konularına dön</a>`:`<button class="btn ghost" type="button" data-a1-back>← ${h(level)} gramer konularına dön</button>`}
    </article>`;
  }
  async function render(container,id,openRelated,level='A1') {
@@ -68,7 +71,7 @@
  // Comments: approved ones come from Firestore (js/comments.js), loaded only when the visitor scrolls near the
  // comment section. Every value is written with textContent, never as HTML. Without approved comments the
  // "Öğrenci yorumları" section stays hidden. New comments are saved as "pending" and approved at /yonetim/yorumlar/.
- const COMMENTS_MODULE='/js/comments.js?v=2';
+ const COMMENTS_MODULE='/js/comments.js?v=3';
  const MONTHS=['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
  const formatDate=d=>d instanceof Date && !Number.isNaN(d.getTime())?`${d.getDate()} ${MONTHS[d.getMonth()]} ${d.getFullYear()}`:'';
  const isoDate=d=>d instanceof Date && !Number.isNaN(d.getTime())?d.toISOString().slice(0,10):'';
@@ -98,12 +101,14 @@
      observer.observe(commentsSection);
    } else show();
    const form=container.querySelector('.a1-comment-form');const status=container.querySelector('.a1-comment-status');
-   let submitting=false,lastSent=0;
+   // Bot önlemleri (App Check'e ek): gizli "website" alanı (a1-honeypot) ve süre tuzağı. Form açıldıktan sonraki
+   // ilk 3 saniyede gelen ya da gizli alanı dolu gönderim hiçbir yere gönderilmez, ama bota başarı gibi görünür.
+   let submitting=false,lastSent=0;const shownAt=Date.now();
    form.addEventListener('submit',async event=>{
      event.preventDefault();if(submitting)return;
      const values=new FormData(form);const name=String(values.get('name')||'').trim(),email=String(values.get('email')||'').trim(),comment=String(values.get('comment')||'').trim();
      status.className='a1-comment-status';
-     if(values.get('website'))return;
+     if(values.get('website') || Date.now()-shownAt<3000){form.reset();status.textContent=t('grammarCommentSent');status.classList.add('success');return;}
      if(!name || name.length>60 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length>254 || comment.length<10 || comment.length>2000 || !values.get('consent')){status.textContent=t('grammarCommentInvalid');status.classList.add('error');return;}
      if(Date.now()-lastSent<60000){status.textContent=t('grammarCommentWait');return;}
      submitting=true;const button=form.querySelector('[type="submit"]');button.disabled=true;status.textContent=t('grammarCommentSending');

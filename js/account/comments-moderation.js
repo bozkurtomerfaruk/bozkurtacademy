@@ -94,7 +94,7 @@ export function createModeration({ pendingList, approvedList, onCounts = () => {
     const link = el('a', '', `${level} · ${titles[data.lesson] || id || data.lesson}`);
     link.href = `/almanca-gramer/${String(level).toLowerCase()}/${id}/`;
     link.target = '_blank';
-    link.rel = 'noopener';
+    link.rel = 'noopener noreferrer';
     meta.append(link, el('span', '', fmt(data.createdAt)));
     if(approved && data.approvedAt) meta.append(el('span', '', 'Onay: ' + fmt(data.approvedAt)));
     item.append(meta, el('p', 'ca-name', String(data.name || '')), el('p', 'ca-text', String(data.comment || '')));

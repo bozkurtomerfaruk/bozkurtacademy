@@ -1,15 +1,21 @@
 name: Static pages
 # Statik sayfaların ortak parçaları (head, menü, footer, şema) ve sitemap.xml güncel mi?
 # Yerelde düzeltmek için: node scripts/build-pages.mjs
+permissions:
+  contents: read
+
 on:
   push:
-    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', 'scripts/grammar-pages.mjs', 'scripts/blog-pages.mjs', '_blog/**', 'data/catalog.json', 'data/grammar-index.json', 'data/*-grammar.json', '**/*.html', 'js/**', 'css/**', '.github/workflows/site-pages.yml']
+    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/csp.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', 'scripts/check-html-escape.mjs', 'scripts/grammar-pages.mjs', 'scripts/blog-pages.mjs', '_blog/**', 'data/catalog.json', 'data/grammar-index.json', 'data/*-grammar.json', '**/*.html', 'js/**', 'css/**', '.github/workflows/site-pages.yml']
   pull_request:
-    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', 'scripts/grammar-pages.mjs', 'scripts/blog-pages.mjs', '_blog/**', 'data/catalog.json', 'data/grammar-index.json', 'data/*-grammar.json', '**/*.html', 'js/**', 'css/**', '.github/workflows/site-pages.yml']
+    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/csp.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', 'scripts/check-html-escape.mjs', 'scripts/grammar-pages.mjs', 'scripts/blog-pages.mjs', '_blog/**', 'data/catalog.json', 'data/grammar-index.json', 'data/*-grammar.json', '**/*.html', 'js/**', 'css/**', '.github/workflows/site-pages.yml']
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
       - run: node scripts/build-pages.mjs --check
       - run: node scripts/check-versions.mjs
+      - run: node scripts/check-html-escape.mjs

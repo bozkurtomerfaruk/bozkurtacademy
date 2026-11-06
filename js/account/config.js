@@ -16,6 +16,10 @@ export const TEACHER_UID = 'IoTwBV5HjRUaoLoj0SCI0VVGkfk2';
 // Öğrencilerin veri silme talebi gönderebileceği adres (iletişim sayfasındakiyle aynı).
 export const TEACHER_EMAIL = 'bozkurtt.omerfaruk@gmail.com';
 
+// Firebase App Check (reCAPTCHA Enterprise): Google Cloud → Security → reCAPTCHA → Anahtar (web, puan tabanlı).
+// Gizli değildir. Boşken App Check hiç başlatılmaz (bugünkü davranış). Kurulum ve zorunlu kılma: docs/app-check.md.
+export const APPCHECK_SITE_KEY = '';
+
 // Google Calendar (sadece öğretmen): Google Cloud → Google Auth Platform → İstemciler → Web uygulaması.
 // Gizli anahtar (secret) gerekmez. Boşken canlı sitede Takvim bağlantısı kurulmaz, dersler yine Firestore'a kaydedilir.
 export const GOOGLE_CLIENT_ID = '8848854838-71mdsvir8jgidnqfnsl67ff357mgbdip.apps.googleusercontent.com';

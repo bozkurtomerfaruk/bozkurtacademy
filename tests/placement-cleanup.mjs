@@ -1,7 +1,8 @@
 // scripts/placement-cleanup.mjs uçtan uca: Auth + Firestore emülatöründe temizlik hesabıyla giriş, süresi dolan
 // sonuçların silinmesi, diğerlerinin kalması, yanlış şifrede hata kodu. Çalıştırma: npm run test:cleanup
 import { readFileSync } from 'node:fs';
-import { execFileSync } from 'node:child_process';
+import { execFile, execFileSync } from 'node:child_process';
+import http from 'node:http';
 import { initializeTestEnvironment } from '@firebase/rules-unit-testing';
 import { doc, getDoc, setDoc, setLogLevel, Timestamp } from 'firebase/firestore';
 
@@ -64,6 +65,28 @@ ok(probe.length === 1 && probe[0].document?.name.endsWith('/ResOldProbe1') && !J
 
 r = run({ CLEANUP_EMAIL: email, CLEANUP_PASSWORD: 'yanlis-sifre' });
 ok(r.code === 1 && r.out.includes('Silme başarısız (giriş: 400'), `yanlış şifre: çıkış kodu 1 (${r.out.trim()})`);
+
+// Referer: API anahtarının web sitesi kısıtlaması için her REST isteği https://bozkurtacademy.com/ yönlendirenini taşır.
+// Emülatörün önüne başlıkları kaydeden küçük bir aracı konur (betik ayrı süreçte, eşzamansız çalışır).
+{
+  const seen = [];
+  const relay = (target) => http.createServer(async (req, res) => {
+    seen.push({ url: req.url, referer: req.headers.referer });
+    const chunks = []; for await (const c of req) chunks.push(c);
+    const upstream = await fetch(`http://${target}${req.url}`, { method: req.method, headers: { 'content-type': req.headers['content-type'] || 'application/json', ...(req.headers.authorization ? { authorization: req.headers.authorization } : {}) }, body: chunks.length ? Buffer.concat(chunks) : undefined });
+    res.writeHead(upstream.status, { 'content-type': upstream.headers.get('content-type') || 'application/json' });
+    res.end(Buffer.from(await upstream.arrayBuffer()));
+  });
+  const [authRelay, fsRelay] = [relay(AUTH), relay(FS)];
+  await Promise.all([authRelay, fsRelay].map((s) => new Promise((resolve) => s.listen(0, '127.0.0.1', resolve))));
+  await seed('ResOldRef001', Date.now() - DAY);
+  const out = await new Promise((resolve) => execFile('node', ['scripts/placement-cleanup.mjs'], {
+    env: { ...process.env, FIREBASE_AUTH_EMULATOR_HOST: `127.0.0.1:${authRelay.address().port}`, FIRESTORE_EMULATOR_HOST: `127.0.0.1:${fsRelay.address().port}`, GCLOUD_PROJECT: PROJECT, CLEANUP_EMAIL: email, CLEANUP_PASSWORD: password }
+  }, (error, stdout, stderr) => resolve({ code: error ? error.code : 0, out: stdout + stderr })));
+  authRelay.close(); fsRelay.close();
+  ok(out.code === 0 && !(await exists('ResOldRef001')), `aracı üzerinden emülatörde silme çalıştı (${out.out.trim()})`);
+  ok(seen.length >= 3 && seen.every((x) => x.referer === 'https://bozkurtacademy.com/'), `bütün REST istekleri Referer: https://bozkurtacademy.com/ taşıyor (${seen.length} istek)`);
+}
 
 r = run({ CLEANUP_EMAIL: '', CLEANUP_PASSWORD: '' });
 ok(r.code === 0 && r.out.includes('kurulum tamamlanmamış'), 'secrets boşken iş başarısız sayılmıyor');

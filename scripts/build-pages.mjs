@@ -9,20 +9,25 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SITE, PAGES } from './site-pages.mjs';
+import { GRAMMAR_DATE, grammarPages, grammarBody, lessonSchema, lessonFaq } from './grammar-pages.mjs';
+import { blogPages, blogBody, blogSchema } from './blog-pages.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const check = process.argv.includes('--check');
 const SITEMAP_DATE = '2026-11-04';
-const V = { style: 11, base: 10, landing: 1, app: 32, theme: 9, analytics: 7 };
+const V = { style: 12, base: 11, landing: 1, app: 33, theme: 10, analytics: 7, a1lessons: 18, a1css: 8, grammarPages: 1, blog: 1 };
 const OG_IMAGE = `${SITE}/images/og-bozkurt-academy.jpg`;
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-const byPath = Object.fromEntries(PAGES.map(p => [p.path, p]));
+const root0 = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const GRAMMAR = grammarPages(root0);
+const BLOG = blogPages(root0);
+const byPath = Object.fromEntries([...PAGES, ...GRAMMAR.pages, BLOG.index, ...BLOG.posts].map(p => [p.path, p]));
 
 const NAV = [
   { key: 'home', label: 'Ana Sayfa', i18n: 'navHome', href: '/', spa: '#home' },
   { key: 'lessons', label: 'Almanca Dersleri', i18n: 'navLessons', href: '/online-almanca-dersi/' },
-  { key: 'grammar', label: 'Gramer', i18n: 'navGrammar', href: '/#grammar', spa: '#grammar' },
+  { key: 'grammar', label: 'Gramer', i18n: 'navGrammar', href: '/almanca-gramer/' },
   { key: 'exercises', label: 'Alıştırmalar', i18n: 'navExercises', href: '/#exercises', spa: '#exercises' },
   { key: 'exams', label: 'Sınav Hazırlığı', i18n: 'navExams', href: '/almanca-sinav-hazirlik/' },
   { key: 'about', label: 'Hakkımda', i18n: 'navAbout', href: '/hakkimda/' },
@@ -73,7 +78,7 @@ ${links}
 const FOOTER_GROUPS = [
   ['Dersler', [['/online-almanca-dersi/', 'Online Almanca dersi'], ['/almanca-ozel-ders/', 'Almanca özel ders'], ['/almanca-grup-dersi/', 'Almanca grup dersi'], ['/almanca-sinav-hazirlik/', 'Sınav hazırlık']]],
   ['Seviyeler', [['/a1-almanca-kursu/', 'A1 Almanca kursu'], ['/a2-almanca-kursu/', 'A2 Almanca kursu'], ['/b1-almanca-kursu/', 'B1 Almanca kursu'], ['/b2-almanca-kursu/', 'B2 Almanca kursu']]],
-  ['Ücretsiz çalış', [['/#grammar', 'Gramer konuları'], ['/#exercises', 'Alıştırmalar'], ['/#exams', 'Sınav deneme setleri'], ['/#seviye-testi', 'Seviye testi']]],
+  ['Ücretsiz çalış', [['/almanca-gramer/', 'Gramer konuları'], ['/#exercises', 'Alıştırmalar'], ['/#exams', 'Sınav deneme setleri'], ['/#seviye-testi', 'Seviye testi']]],
   ['Bozkurt Academy', [['/hakkimda/', 'Hakkımda'], ['/sss/', 'Sıkça sorulan sorular'], ['/iletisim/', 'İletişim']]]
 ];
 
@@ -141,7 +146,9 @@ function head(page, html) {
       '@id': `${url}#breadcrumb`,
       itemListElement: t.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.crumb, item: SITE + p.path }))
     },
-    ...(page.schema || [])
+    ...(page.schema || []),
+    ...lessonSchema(page, SITE),
+    ...blogSchema(page, SITE)
   ];
   // Kişi ve kurum tanımı ana sayfada; burada yalnızca @id ile bağlanır. Hakkımda sayfası kişiyi tekrar tanımlar.
   if (page.type === 'ProfilePage') graph.push({
@@ -149,7 +156,7 @@ function head(page, html) {
     url, image: `${SITE}/images/omer-faruk-768.jpg`, worksFor: { '@id': `${SITE}/#organization` },
     homeLocation: { '@type': 'Country', name: 'Almanya' }, knowsLanguage: ['tr', 'de', 'en']
   });
-  const qa = faqs(html);
+  const qa = page.kind === 'lesson' ? lessonFaq(page) : faqs(html);
   if (qa.length) graph.push({
     '@type': 'FAQPage', '@id': `${url}#faq`,
     mainEntity: qa.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } }))
@@ -161,13 +168,14 @@ function head(page, html) {
   <meta name="theme-color" content="#f8f7f3" />
   <script>try{document.documentElement.dataset.theme=localStorage.getItem('ba-theme')==='dark'?'dark':'light'}catch(_){document.documentElement.dataset.theme='light'}</script>
   <title>${esc(page.title)}</title>
-  <meta name="description" content="${esc(page.description)}" />
+  <meta name="description" content="${esc(page.description)}" />${page.noindex ? `
+  <meta name="robots" content="noindex" />` : ''}
   <link rel="canonical" href="${url}" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3">
-  <link rel="manifest" href="/site.webmanifest">
+  <!-- Manifest bilerek yok (PWA kurulumu kapalı). Play Store uygulaması çıkınca geri eklenecek: README.md › "PWA / uygulama kurulumu". -->
   <meta property="og:type" content="${page.ogType || 'website'}" />
   <meta property="og:site_name" content="Bozkurt Academy" />
   <meta property="og:locale" content="tr_TR" />
@@ -186,15 +194,19 @@ function head(page, html) {
   <link rel="preload" href="/fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css?v=${V.style}" />
   <link rel="stylesheet" href="/css/base.css?v=${V.base}" />
-  <link rel="stylesheet" href="/css/landing.css?v=${V.landing}" />
+  <link rel="stylesheet" href="/css/landing.css?v=${V.landing}" />${page.kind === 'lesson' ? `
+  <link rel="stylesheet" href="/css/a1-lessons.css?v=${V.a1css}" />` : ''}${['hub', 'level', 'lesson'].includes(page.kind) ? `
+  <link rel="stylesheet" href="/css/grammar-pages.css?v=${V.grammarPages}" />` : ''}${page.kind?.startsWith('blog') ? `
+  <link rel="stylesheet" href="/css/blog.css?v=${V.blog}" />` : ''}
   <script type="application/ld+json">
   ${ld}
   </script>
   `;
 }
 
-const scripts = () => `
-  <script src="/js/app.js?v=${V.app}"></script>
+const scripts = (page = {}) => `
+  <script src="/js/app.js?v=${V.app}"></script>${page.kind === 'lesson' ? `
+  <script src="/js/a1-lessons.js?v=${V.a1lessons}"></script>` : ''}
   <script src="/js/theme.js?v=${V.theme}"></script>
   <script defer data-goatcounter="https://bozkurtacademy.goatcounter.com/count" data-goatcounter-settings='{"no_onload": true}' src="/js/vendor/count.js?v=2.7.0"></script>
   <script defer src="/js/analytics.js?v=${V.analytics}"></script>
@@ -225,7 +237,40 @@ for (const [name, opts, footerOpts] of [['index.html', { spa: true }, {}], ['404
   html = fill(html, 'footer', footer(footerOpts), file);
   outputs.push([file, html]);
 }
-const urls = [{ path: '/' }, ...PAGES].map(p => `  <url>\n    <loc>${SITE}${p.path}</loc>\n    <lastmod>${p.updated || SITEMAP_DATE}</lastmod>\n  </url>`).join('\n');
+// Gramer sayfaları: dosyanın tamamı üretilir (elle düzenleme yapılmaz; içerik data/<seviye>-grammar.json'da).
+for (const page of GRAMMAR.pages) {
+  const file = path.join(root, page.path, 'index.html');
+  const html = `<!DOCTYPE html>
+<!-- Bu dosya scripts/build-pages.mjs ile üretilir. İçeriği data/<seviye>-grammar.json'da düzenle, sonra: node scripts/build-pages.mjs -->
+<html lang="tr" data-ba-fixed-lang="tr">
+<head>${head(page, '')}</head>
+<body class="academy-theme lp-page gr-page">
+  <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
+  <div class="shell">${header({ current: 'grammar' })}<main id="main" tabindex="-1" class="${page.kind === 'lesson' ? 'gr-main' : 'lp-main'}">${breadcrumb(page)}${grammarBody(page, GRAMMAR.lessonPath)}    </main>${footer({ current: page.path })}</div>${scripts(page)}
+</body>
+</html>
+`;
+  outputs.push([file, html]);
+}
+
+// Blog: ana sayfa ve yazılar (dosyanın tamamı üretilir; kaynak _blog/). Taslaklar ve boş blog sitemap'e girmez.
+for (const page of [BLOG.index, ...BLOG.posts]) {
+  const file = path.join(root, page.path, 'index.html');
+  const html = `<!DOCTYPE html>
+<!-- Bu dosya scripts/build-pages.mjs ile üretilir. Yazılar _blog/ klasöründe; değiştirince: node scripts/build-pages.mjs -->
+<html lang="tr" data-ba-fixed-lang="tr">
+<head>${head(page, '')}</head>
+<body class="academy-theme lp-page bl-page">
+  <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
+  <div class="shell">${header({})}<main id="main" tabindex="-1" class="lp-main">${breadcrumb(page)}${blogBody(page)}    </main>${footer({ current: page.path })}</div>${scripts(page)}
+</body>
+</html>
+`;
+  outputs.push([file, html]);
+}
+const blogUrls = BLOG.published.length ? [{ path: BLOG.index.path, updated: BLOG.published[0].updated || BLOG.published[0].date }, ...BLOG.published.map(p => ({ path: p.path, updated: p.updated || p.date }))] : [];
+
+const urls = [{ path: '/' }, ...PAGES, ...GRAMMAR.pages.map(p => ({ path: p.path, updated: GRAMMAR_DATE })), ...blogUrls].map(p => `  <url>\n    <loc>${SITE}${p.path}</loc>\n    <lastmod>${p.updated || SITEMAP_DATE}</lastmod>\n  </url>`).join('\n');
 outputs.push([path.join(root, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`]);
 
 let stale = 0;
@@ -234,7 +279,7 @@ for (const [file, html] of outputs) {
   if (old === html) continue;
   stale++;
   if (check) console.error(`Güncel değil: ${path.relative(root, file)}`);
-  else { fs.writeFileSync(file, html); console.log(`Yazıldı: ${path.relative(root, file)}`); }
+  else { fs.mkdirSync(path.dirname(file), { recursive: true }); fs.writeFileSync(file, html); console.log(`Yazıldı: ${path.relative(root, file)}`); }
 }
 if (check && stale) { console.error('node scripts/build-pages.mjs çalıştır ve sonucu commit et.'); process.exit(1); }
-console.log(`PASS: ${PAGES.length} statik sayfa${check ? ' güncel' : ''}.`);
+console.log(`PASS: ${PAGES.length} statik sayfa, ${GRAMMAR.pages.length} gramer sayfası ve ${BLOG.posts.length + 1} blog sayfası${check ? ' güncel' : ''}.`);

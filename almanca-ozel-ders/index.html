@@ -12,7 +12,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3">
-  <link rel="manifest" href="/site.webmanifest">
+  <!-- Manifest bilerek yok (PWA kurulumu kapalı). Play Store uygulaması çıkınca geri eklenecek: README.md › "PWA / uygulama kurulumu". -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Bozkurt Academy" />
   <meta property="og:locale" content="tr_TR" />
@@ -29,8 +29,8 @@
   <meta name="twitter:image" content="https://bozkurtacademy.com/images/og-bozkurt-academy.jpg" />
   <link rel="preload" href="/fonts/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/style.css?v=11" />
-  <link rel="stylesheet" href="/css/base.css?v=10" />
+  <link rel="stylesheet" href="/css/style.css?v=12" />
+  <link rel="stylesheet" href="/css/base.css?v=11" />
   <link rel="stylesheet" href="/css/landing.css?v=1" />
   <script type="application/ld+json">
   {
@@ -148,7 +148,7 @@
         <div class="nav-links" id="siteMenu">
           <a class="nav-link" href="/" data-i18n="navHome">Ana Sayfa</a>
           <a class="nav-link active" href="/online-almanca-dersi/" aria-current="page" data-i18n="navLessons">Almanca Dersleri</a>
-          <a class="nav-link" href="/#grammar" data-i18n="navGrammar">Gramer</a>
+          <a class="nav-link" href="/almanca-gramer/" data-i18n="navGrammar">Gramer</a>
           <a class="nav-link" href="/#exercises" data-i18n="navExercises">Alıştırmalar</a>
           <a class="nav-link" href="/almanca-sinav-hazirlik/" data-i18n="navExams">Sınav Hazırlığı</a>
           <a class="nav-link" href="/hakkimda/" data-i18n="navAbout">Hakkımda</a>
@@ -192,7 +192,7 @@
         <p>Birebir Almanca özel ders özellikle şu durumlarda uygundur:</p>
         <ul>
           <li><strong>Sınav tarihin belli:</strong> Goethe, telc, ÖSD veya DTZ sınavına kalan süreye göre bir plan yaparız. Ayrıntılar <a href="/almanca-sinav-hazirlik/">sınav hazırlık</a> sayfasında.</li>
-          <li><strong>Aile birleşimi veya vize için A1 gerekiyor:</strong> <a href="/a1-almanca-kursu/">A1 Almanca kursu</a> sayfasında A1 sınavına nasıl hazırlandığımızı anlattım.</li>
+          <li><strong>Aile birleşimi veya vize için Almanca belgesi gerekiyor:</strong> <a href="/a1-almanca-kursu/">A1 Almanca kursu</a> sayfasında A1 sınavına nasıl hazırlandığımızı anlattım.</li>
           <li><strong>Mesleğin için Almanca gerekiyor:</strong> İş görüşmesi, e-posta yazışmaları veya teknik terimler gibi konulara odaklanırız.</li>
           <li><strong>Okulda veya üniversitede destek gerekiyor:</strong> Dersteki konuları adım adım tekrar eder, ödev ve sınavlara hazırlanırız.</li>
           <li><strong>Konuşma pratiği eksik:</strong> Dil bilgisini biliyor ama konuşurken takılıyorsan dersin çoğunu konuşmaya ayırırız.</li>
@@ -203,9 +203,8 @@
         <h2 id="farklar">Bu derslerin farkı</h2>
         <div class="lp-cards">
           <div class="lp-card"><h3>Almanya’da yaşayan eğitmen</h3><p>Almanya’da yaşıyor ve üniversitede okuyorum. Derslere Almanya’daki üniversite, iş ve günlük yaşamdan gerçek örnekler getiriyorum.</p></div>
-          <div class="lp-card"><h3>Türkçe açıklama, Almanca pratik</h3><p>Ana dilim Türkçe. Zor konuları gerektiğinde Türkçe karşılaştırmalarla açıklıyor, pratiği Almanca yapıyoruz.</p></div>
           <div class="lp-card"><h3>Sana göre plan</h3><p>Hazır bir kitabı sırayla bitirmiyoruz. Hangi konuya ne kadar zaman ayıracağımızı hedefin ve ilerlemen belirliyor.</p></div>
-          <div class="lp-card"><h3>Ders dışında da çalış</h3><p>Sitedeki <a href="/#grammar">gramer anlatımları</a> ve <a href="/#exercises">alıştırmalar</a> ücretsiz. Her cevabın açıklamasını okuyarak derste öğrendiklerini tekrar edebilirsin.</p></div>
+          <div class="lp-card"><h3>Ders dışında da çalış</h3><p>Sitedeki <a href="/almanca-gramer/">gramer anlatımları</a> ve <a href="/#exercises">alıştırmalar</a> ücretsiz. Her cevabın açıklamasını okuyarak derste öğrendiklerini tekrar edebilirsin.</p></div>
         </div>
       </section>
 
@@ -287,7 +286,7 @@
       <nav class="footer-pages" aria-label="Site sayfaları">
           <div class="footer-group"><p class="footer-group-title">Dersler</p><ul><li><a href="/online-almanca-dersi/">Online Almanca dersi</a></li><li><a href="/almanca-ozel-ders/" aria-current="page">Almanca özel ders</a></li><li><a href="/almanca-grup-dersi/">Almanca grup dersi</a></li><li><a href="/almanca-sinav-hazirlik/">Sınav hazırlık</a></li></ul></div>
           <div class="footer-group"><p class="footer-group-title">Seviyeler</p><ul><li><a href="/a1-almanca-kursu/">A1 Almanca kursu</a></li><li><a href="/a2-almanca-kursu/">A2 Almanca kursu</a></li><li><a href="/b1-almanca-kursu/">B1 Almanca kursu</a></li><li><a href="/b2-almanca-kursu/">B2 Almanca kursu</a></li></ul></div>
-          <div class="footer-group"><p class="footer-group-title">Ücretsiz çalış</p><ul><li><a href="/#grammar">Gramer konuları</a></li><li><a href="/#exercises">Alıştırmalar</a></li><li><a href="/#exams">Sınav deneme setleri</a></li><li><a href="/#seviye-testi">Seviye testi</a></li></ul></div>
+          <div class="footer-group"><p class="footer-group-title">Ücretsiz çalış</p><ul><li><a href="/almanca-gramer/">Gramer konuları</a></li><li><a href="/#exercises">Alıştırmalar</a></li><li><a href="/#exams">Sınav deneme setleri</a></li><li><a href="/#seviye-testi">Seviye testi</a></li></ul></div>
           <div class="footer-group"><p class="footer-group-title">Bozkurt Academy</p><ul><li><a href="/hakkimda/">Hakkımda</a></li><li><a href="/sss/">Sıkça sorulan sorular</a></li><li><a href="/iletisim/">İletişim</a></li></ul></div>
       </nav>
       <div class="footer-meta">
@@ -299,8 +298,8 @@
     </footer>
     <a class="ba-sticky-cta btn primary" href="/iletisim/" data-i18n="ctaFreeInfo">Ücretsiz bilgi al</a>
     <!-- /ba:footer --></div><!-- ba:scripts -->
-  <script src="/js/app.js?v=32"></script>
-  <script src="/js/theme.js?v=9"></script>
+  <script src="/js/app.js?v=33"></script>
+  <script src="/js/theme.js?v=10"></script>
   <script defer data-goatcounter="https://bozkurtacademy.goatcounter.com/count" data-goatcounter-settings='{"no_onload": true}' src="/js/vendor/count.js?v=2.7.0"></script>
   <script defer src="/js/analytics.js?v=7"></script>
   <!-- /ba:scripts -->

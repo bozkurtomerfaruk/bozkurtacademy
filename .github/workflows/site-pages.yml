@@ -3,9 +3,9 @@ name: Static pages
 # Yerelde düzeltmek için: node scripts/build-pages.mjs
 on:
   push:
-    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', '**/*.html', 'js/**', 'css/**', '.github/workflows/site-pages.yml']
+    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', 'scripts/grammar-pages.mjs', 'scripts/blog-pages.mjs', '_blog/**', 'data/catalog.json', 'data/grammar-index.json', 'data/*-grammar.json', '**/*.html', 'js/**', 'css/**', '.github/workflows/site-pages.yml']
   pull_request:
-    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', '**/*.html', 'js/**', 'css/**', '.github/workflows/site-pages.yml']
+    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', 'scripts/grammar-pages.mjs', 'scripts/blog-pages.mjs', '_blog/**', 'data/catalog.json', 'data/grammar-index.json', 'data/*-grammar.json', '**/*.html', 'js/**', 'css/**', '.github/workflows/site-pages.yml']
 jobs:
   check:
     runs-on: ubuntu-latest

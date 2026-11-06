@@ -12,7 +12,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3">
-  <link rel="manifest" href="/site.webmanifest">
+  <!-- Manifest bilerek yok (PWA kurulumu kapalı). Play Store uygulaması çıkınca geri eklenecek: README.md › "PWA / uygulama kurulumu". -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Bozkurt Academy" />
   <meta property="og:locale" content="tr_TR" />
@@ -29,8 +29,8 @@
   <meta name="twitter:image" content="https://bozkurtacademy.com/images/og-bozkurt-academy.jpg" />
   <link rel="preload" href="/fonts/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/style.css?v=11" />
-  <link rel="stylesheet" href="/css/base.css?v=10" />
+  <link rel="stylesheet" href="/css/style.css?v=12" />
+  <link rel="stylesheet" href="/css/base.css?v=11" />
   <link rel="stylesheet" href="/css/landing.css?v=1" />
   <script type="application/ld+json">
   {
@@ -118,7 +118,7 @@
             "name": "B2 ile Almanya’da üniversite okuyabilir miyim?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Almanca eğitim veren bölümlerin çoğu genellikle daha yüksek bir seviye ister. B2 bu hedefe giden yolda önemli bir basamaktır. Başvuracağın üniversitenin dil şartını kendi sayfasından kontrol et."
+              "text": "Üniversitelerin dil şartı bölüme ve üniversiteye göre değişir. Başvuracağın üniversitenin dil şartını kendi sayfasından kontrol et; derslerde hedefine göre bir plan yaparız."
             }
           },
           {
@@ -148,7 +148,7 @@
         <div class="nav-links" id="siteMenu">
           <a class="nav-link" href="/" data-i18n="navHome">Ana Sayfa</a>
           <a class="nav-link active" href="/online-almanca-dersi/" aria-current="page" data-i18n="navLessons">Almanca Dersleri</a>
-          <a class="nav-link" href="/#grammar" data-i18n="navGrammar">Gramer</a>
+          <a class="nav-link" href="/almanca-gramer/" data-i18n="navGrammar">Gramer</a>
           <a class="nav-link" href="/#exercises" data-i18n="navExercises">Alıştırmalar</a>
           <a class="nav-link" href="/almanca-sinav-hazirlik/" data-i18n="navExams">Sınav Hazırlığı</a>
           <a class="nav-link" href="/hakkimda/" data-i18n="navAbout">Hakkımda</a>
@@ -198,8 +198,7 @@
 
       <section class="lp-section lp-prose" aria-labelledby="kimler">
         <h2 id="kimler">B2 kimler için gerekli?</h2>
-        <p>Almanya’da birçok nitelikli iş, özellikle müşteriyle ya da ekip içinde yoğun iletişim gerektiren pozisyonlar, B2 seviyesinde Almanca bekler. Sağlık alanında meslek tanınması (ör. hemşirelik) ve bazı Ausbildung programları için de B2 sık istenen bir seviyedir. Üniversitelerin çoğu Almanca eğitim veren bölümler için genellikle daha yüksek bir seviye (ör. TestDaF veya DSH) ister. B2 bu yolun önemli bir ara basamağıdır.</p>
-        <p>İstenen seviye ve kabul edilen belgeler kuruma, eyalete ve mesleğe göre değişir. Başvurundan önce ilgili kurumun güncel şartlarını mutlaka kontrol et.</p>
+        <p>B2, iş hayatında, meslekte ve üniversitede Almancayı daha akıcı ve doğru kullanmak isteyenler için önemli bir seviyedir. İş, meslek tanınması, Ausbildung veya üniversite başvurusu için hangi seviyenin ve hangi belgenin istendiği kuruma, eyalete ve mesleğe göre değişir. Başvurundan önce ilgili kurumun güncel şartlarını mutlaka kontrol et.</p>
         <p>Mühendislik veya teknik bir alanda çalışıyorsan derslerde <strong>teknik Almanca</strong> da çalışabiliriz: toplantı dili, rapor ve e-posta yazışmaları, alanına özgü kelimeler. Mühendislik eğitimimi Almanya’da sürdürdüğüm ve üretim, kalite ve teknik projelerde çalıştığım için bu konularda gerçek örnekler kullanabiliyorum.</p>
       </section>
 
@@ -243,7 +242,7 @@
           </details>
           <details class="lp-faq-item">
             <summary>B2 ile Almanya’da üniversite okuyabilir miyim?</summary>
-            <div class="lp-faq-answer"><p>Almanca eğitim veren bölümlerin çoğu genellikle daha yüksek bir seviye ister. B2 bu hedefe giden yolda önemli bir basamaktır. Başvuracağın üniversitenin dil şartını kendi sayfasından kontrol et.</p></div>
+            <div class="lp-faq-answer"><p>Üniversitelerin dil şartı bölüme ve üniversiteye göre değişir. Başvuracağın üniversitenin dil şartını kendi sayfasından kontrol et; derslerde hedefine göre bir plan yaparız.</p></div>
           </details>
           <details class="lp-faq-item">
             <summary>Teknik Almanca derslerine B2’den önce başlanabilir mi?</summary>
@@ -275,7 +274,7 @@
       <nav class="footer-pages" aria-label="Site sayfaları">
           <div class="footer-group"><p class="footer-group-title">Dersler</p><ul><li><a href="/online-almanca-dersi/">Online Almanca dersi</a></li><li><a href="/almanca-ozel-ders/">Almanca özel ders</a></li><li><a href="/almanca-grup-dersi/">Almanca grup dersi</a></li><li><a href="/almanca-sinav-hazirlik/">Sınav hazırlık</a></li></ul></div>
           <div class="footer-group"><p class="footer-group-title">Seviyeler</p><ul><li><a href="/a1-almanca-kursu/">A1 Almanca kursu</a></li><li><a href="/a2-almanca-kursu/">A2 Almanca kursu</a></li><li><a href="/b1-almanca-kursu/">B1 Almanca kursu</a></li><li><a href="/b2-almanca-kursu/" aria-current="page">B2 Almanca kursu</a></li></ul></div>
-          <div class="footer-group"><p class="footer-group-title">Ücretsiz çalış</p><ul><li><a href="/#grammar">Gramer konuları</a></li><li><a href="/#exercises">Alıştırmalar</a></li><li><a href="/#exams">Sınav deneme setleri</a></li><li><a href="/#seviye-testi">Seviye testi</a></li></ul></div>
+          <div class="footer-group"><p class="footer-group-title">Ücretsiz çalış</p><ul><li><a href="/almanca-gramer/">Gramer konuları</a></li><li><a href="/#exercises">Alıştırmalar</a></li><li><a href="/#exams">Sınav deneme setleri</a></li><li><a href="/#seviye-testi">Seviye testi</a></li></ul></div>
           <div class="footer-group"><p class="footer-group-title">Bozkurt Academy</p><ul><li><a href="/hakkimda/">Hakkımda</a></li><li><a href="/sss/">Sıkça sorulan sorular</a></li><li><a href="/iletisim/">İletişim</a></li></ul></div>
       </nav>
       <div class="footer-meta">
@@ -287,8 +286,8 @@
     </footer>
     <a class="ba-sticky-cta btn primary" href="/iletisim/" data-i18n="ctaFreeInfo">Ücretsiz bilgi al</a>
     <!-- /ba:footer --></div><!-- ba:scripts -->
-  <script src="/js/app.js?v=32"></script>
-  <script src="/js/theme.js?v=9"></script>
+  <script src="/js/app.js?v=33"></script>
+  <script src="/js/theme.js?v=10"></script>
   <script defer data-goatcounter="https://bozkurtacademy.goatcounter.com/count" data-goatcounter-settings='{"no_onload": true}' src="/js/vendor/count.js?v=2.7.0"></script>
   <script defer src="/js/analytics.js?v=7"></script>
   <!-- /ba:scripts -->

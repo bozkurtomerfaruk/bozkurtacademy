@@ -14,7 +14,7 @@
 
 /* Test sayfası */
 #page-seviye-testi .pl-wrap,#page-yonetim .admin-wrap{padding:clamp(32px,5vw,64px) 0;max-width:860px}
-#page-seviye-testi h1{font-size:var(--ba-head);margin:0 0 16px}
+#page-seviye-testi :is(h1,.page-title){font-size:var(--ba-head);margin:0 0 16px}
 #page-seviye-testi h2{font-size:clamp(1.5rem,1.2rem + 1vw,2rem);margin:0 0 12px}
 #page-seviye-testi .pl-card-body h2.pl-h3{font-family:var(--ba-serif);font-size:var(--ba-lead);font-weight:600;letter-spacing:0;margin:24px 0 10px}
 #page-seviye-testi .pl-lead{font-size:var(--ba-lead);line-height:1.5;max-width:44ch}
@@ -86,7 +86,7 @@
 }
 
 /* Yönetim */
-#page-yonetim h1{font-size:var(--ba-head);margin:0 0 10px;overflow-wrap:anywhere}
+#page-yonetim :is(h1,.page-title){font-size:var(--ba-head);margin:0 0 10px;overflow-wrap:anywhere}
 #page-yonetim .admin-section h2{font-size:var(--ba-lead)!important;font-family:var(--ba-serif);font-weight:600!important;margin:0 0 14px}
 #page-yonetim .admin-denied{padding:24px;border-radius:var(--ba-radius);background:var(--ba-paper);font-size:var(--ba-lead);font-weight:600}
 #page-yonetim .admin-head{margin:12px 0 20px}

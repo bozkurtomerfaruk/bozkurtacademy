@@ -75,7 +75,7 @@ export const PAGES = [
     nav: 'lessons',
     crumb: 'A1 Almanca Kursu',
     title: 'A1 Almanca Kursu: Vize ve Aile Birleşimi | Bozkurt Academy',
-    description: 'A1 Almanca kursu: sıfırdan başlayanlar, aile birleşimi ve vize için gereken A1 sınavına hazırlık. Online birebir veya grup dersleri, ücretsiz ilk ders.',
+    description: 'A1 Almanca kursu: sıfırdan başlayanlar ve aile birleşimi veya vize başvurusu öncesi A1 sınavına hazırlık. Online birebir veya grup dersleri, ücretsiz ilk ders.',
     schema: [course('/a1-almanca-kursu/', 'A1 Almanca Kursu', 'Sıfırdan başlayanlar için A1 Almanca: temel dil bilgisi, günlük iletişim ve A1 sınavına (Goethe, telc, ÖSD) hazırlık.', 'A1 (Başlangıç)')]
   },
   {

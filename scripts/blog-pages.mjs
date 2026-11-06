@@ -1,0 +1,98 @@
+// Blog: /blog/ ve /blog/<slug>/. Kaynaklar _blog/ klasöründe (GitHub Pages/Jekyll alt çizgili klasörü yayınlamaz):
+//   _blog/posts.json   → yazı listesi: slug, title, seoTitle, description, lead, date, status, related
+//   _blog/<slug>.html  → yazının gövdesi (HTML; H2'den başlar, H1 şablonda)
+// status "draft": sayfa noindex, sitemap'e girmez, üstte "Taslak" notu. "published": index, sitemap, BlogPosting.
+// Blog ana sayfası, yayınlanmış yazı olmadıkça noindex kalır ve taslakları listeler. Menüye elle eklenir.
+import fs from 'node:fs';
+import path from 'node:path';
+
+const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const MONTHS = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+export const trDate = iso => { const [y, m, d] = iso.split('-').map(Number); return `${d} ${MONTHS[m - 1]} ${y}`; };
+const AUTHOR = 'Ömer Faruk Bozkurt';
+
+export function blogPages(root) {
+  const dir = path.join(root, '_blog');
+  const reg = JSON.parse(fs.readFileSync(path.join(dir, 'posts.json'), 'utf8'));
+  const posts = reg.posts.map(p => {
+    if (!/^[a-z0-9-]+$/.test(p.slug)) throw new Error(`_blog/posts.json: geçersiz slug "${p.slug}"`);
+    if (!['draft', 'published'].includes(p.status)) throw new Error(`${p.slug}: status "draft" veya "published" olmalı`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(p.date)) throw new Error(`${p.slug}: date YYYY-AA-GG olmalı`);
+    const body = fs.readFileSync(path.join(dir, `${p.slug}.html`), 'utf8');
+    if (/<h1[\s>]/i.test(body)) throw new Error(`${p.slug}.html: gövdede H1 olmamalı (başlık şablondan gelir)`);
+    return {
+      ...p, body, draft: p.status !== 'published', kind: 'blog-post', path: `/blog/${p.slug}/`, parent: '/blog/',
+      crumb: p.crumb || p.title, title: p.seoTitle || `${p.title} | Bozkurt Academy`, h1: p.title,
+      noindex: p.status !== 'published', ogType: 'article'
+    };
+  });
+  const published = posts.filter(p => !p.draft).sort((a, b) => b.date.localeCompare(a.date));
+  const index = {
+    path: '/blog/', crumb: 'Blog', kind: 'blog-index',
+    title: 'Almanca Öğrenme Blogu | Bozkurt Academy',
+    description: 'Almanca öğrenme, A1–B2 sınavlarına hazırlık, günlük kalıplar ve Almanya’da yaşam ve iş için Almanca üzerine Türkçe yazılar.',
+    noindex: published.length === 0,
+    list: published.length ? published : posts
+  };
+  return { index, posts, published };
+}
+
+export function blogSchema(page, SITE) {
+  if (page.kind !== 'blog-post' || page.draft) return [];
+  const url = SITE + page.path;
+  return [{
+    '@type': 'BlogPosting', '@id': `${url}#post`, headline: page.h1, description: page.description, url,
+    inLanguage: 'tr-TR', datePublished: page.date, dateModified: page.updated || page.date,
+    author: { '@type': 'Person', name: AUTHOR },
+    publisher: { '@id': `${SITE}/#organization` },
+    mainEntityOfPage: { '@id': `${url}#webpage` },
+    image: `${SITE}/images/og-bozkurt-academy.jpg`
+  }];
+}
+
+export function blogBody(page, all) {
+  if (page.kind === 'blog-index') {
+    const items = page.list.map(p => `
+          <li><a href="${p.path}"><span class="bl-item-meta">${p.draft ? '<span class="bl-badge">Taslak</span> Planlanan: ' : ''}${trDate(p.date)}</span><strong>${esc(p.h1)}</strong><span>${esc(p.description)}</span></a></li>`).join('');
+    return `
+      <section class="lp-prose" aria-labelledby="bl-title">
+        <h1 id="bl-title">Almanca Öğrenme Blogu</h1>
+        <p class="lp-lead">Almanca öğrenmeye, sınavlara hazırlanmaya ve Almancayı günlük hayatta kullanmaya dair Türkçe yazılar.</p>
+        ${page.noindex ? '<p class="bl-draft" role="note">Bu sayfa henüz yayında değil: listedeki yazılar taslak.</p>' : ''}
+      </section>
+      <section class="lp-section" aria-label="Yazılar">
+        <ul class="bl-list">${items}
+        </ul>
+      </section>
+      <section class="lp-cta" aria-labelledby="bl-cta">
+        <div>
+          <h2 id="bl-cta">Almancayı birlikte çalışalım</h2>
+          <p>Seviyene ve hedefine göre birebir veya grup dersi. İlk ders ücretsiz.</p>
+        </div>
+        <a class="btn" href="/iletisim/">Ücretsiz bilgi al</a>
+      </section>
+`;
+  }
+  const related = (page.related || []).map(([href, label]) => `<li><a href="${href}"><strong>${esc(label)}</strong></a></li>`).join('');
+  return `
+      <article class="bl-article" aria-labelledby="bl-title">
+        ${page.draft ? `<p class="bl-draft" role="note">Taslak: Bu yazı henüz yayınlanmadı (planlanan tarih: ${trDate(page.date)}).</p>` : ''}
+        <header class="bl-header">
+          <p class="bl-meta">${AUTHOR} · <time datetime="${page.date}">${trDate(page.date)}</time></p>
+          <h1 id="bl-title">${esc(page.h1)}</h1>
+          <p class="lp-lead">${esc(page.lead)}</p>
+        </header>
+        <div class="lp-prose bl-body">
+${page.body.trim()}
+        </div>
+        ${related ? `<section class="lp-section" aria-labelledby="bl-related"><h2 id="bl-related">İlgili sayfalar</h2><ul class="lp-related">${related}</ul></section>` : ''}
+      </article>
+      <section class="lp-cta" aria-labelledby="bl-cta">
+        <div>
+          <h2 id="bl-cta">Bu konuyu birlikte çalışmak ister misin?</h2>
+          <p>Seviyene ve hedefine göre <a href="/almanca-ozel-ders/">birebir</a> veya <a href="/almanca-grup-dersi/">grup dersi</a>. İlk ders ücretsiz.</p>
+        </div>
+        <a class="btn" href="/iletisim/">Ücretsiz bilgi al</a>
+      </section>
+`;
+}

@@ -89,10 +89,12 @@ ok(isimTitles.length > 0 && isimTitles.every(t => /(^|[^a-zçğıöşü])[iİ]si
 ok(!isimTitles.some(t => /değişim/i.test(t)), '"isim" araması "değişim"i bulmuyor');
 await page.fill('#grammarSearchInput', 'olumsuz'); await page.waitForTimeout(300);
 ok(await sections().count() === 2, '"olumsuz": 2 bölüm');
+// Bölüm sonuçları statik ders sayfasının ilgili başlığına gider: /almanca-gramer/<seviye>/<ders>/#a1-step-N
 const sh = await sections().first().getAttribute('href');
+ok(/^\/almanca-gramer\/(a1|a2|b1)\/[a-z0-9-]+\/#a1-step-\d+$/.test(sh), `bölüm bağlantısı statik sayfaya (${sh})`);
 await sections().first().click(); await page.waitForTimeout(1800);
 const focused = await page.evaluate(() => ({ text: document.activeElement.textContent, top: document.activeElement.getBoundingClientRect().top, inSection: !!document.activeElement.closest('.a1-section') }));
-ok(hash() === sh.slice(1) && focused.inSection && focused.top >= 0 && focused.top < 300, `bölüme gidildi ve başlığı odaklandı (${focused.text.slice(0, 40)})`);
+ok(page.url().endsWith(sh) && focused.inSection && focused.top >= 0 && focused.top < 300, `bölüme gidildi ve başlığı odaklandı (${focused.text.slice(0, 40)})`);
 await page.goBack(); await page.waitForTimeout(1200);
 ok(hash() === 'grammar' && await page.locator('#grammarListView').isVisible(), 'geri tuşu gramer listesine döndürüyor');
 
@@ -100,9 +102,11 @@ ok(hash() === 'grammar' && await page.locator('#grammarListView').isVisible(), '
 await page.fill('#grammarSearchInput', 'yumuşak rica'); await page.waitForTimeout(300);
 ok(await page.locator('#grammarTopicGrid').isHidden() && await sections().count() === 1, 'sadece bölüm eşleşince konu kutusu gizli');
 await page.goto('about:blank'); await page.goto(B + '#grammar/A1/artikel/3'); await page.waitForTimeout(2000);
-ok(await page.evaluate(() => document.activeElement.closest('#a1-step-2') !== null), 'doğrudan bağlantı #grammar/A1/artikel/3 üçüncü bölümü açıyor');
+ok(new URL(page.url()).pathname === '/almanca-gramer/a1/artikel/' && await page.evaluate(() => document.activeElement.closest('#a1-step-2') !== null), 'eski bağlantı #grammar/A1/artikel/3 statik sayfada üçüncü bölümü açıyor');
 await page.goto('about:blank'); await page.goto(B + '#grammar/A1/artikel'); await page.waitForTimeout(1800);
-ok(await page.evaluate(() => document.activeElement.matches('.a1-article-header h2')), 'bölümsüz bağlantı eskisi gibi dersin başını açıyor');
+ok(new URL(page.url()).pathname === '/almanca-gramer/a1/artikel/' && await page.evaluate(() => scrollY < 50 && document.querySelector('h1').textContent.startsWith('Artikel')), 'bölümsüz eski bağlantı statik dersin başını açıyor');
+// Statik ders sayfası yalnızca Türkçe; dil seçimi SPA'daki gramer aramasında denenir.
+await page.goto(B + '#grammar'); await page.waitForTimeout(1500);
 await page.click('.lang button[data-lang="de"]'); await page.waitForTimeout(500);
 await page.goto(B + '#grammar'); await page.waitForTimeout(1500);
 await page.fill('#grammarSearchInput', 'olumsuz'); await page.waitForTimeout(300);

@@ -12,7 +12,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3">
-  <link rel="manifest" href="/site.webmanifest">
+  <!-- Manifest bilerek yok (PWA kurulumu kapalı). Play Store uygulaması çıkınca geri eklenecek: README.md › "PWA / uygulama kurulumu". -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Bozkurt Academy" />
   <meta property="og:locale" content="tr_TR" />
@@ -29,8 +29,8 @@
   <meta name="twitter:image" content="https://bozkurtacademy.com/images/og-bozkurt-academy.jpg" />
   <link rel="preload" href="/fonts/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/style.css?v=11" />
-  <link rel="stylesheet" href="/css/base.css?v=10" />
+  <link rel="stylesheet" href="/css/style.css?v=12" />
+  <link rel="stylesheet" href="/css/base.css?v=11" />
   <link rel="stylesheet" href="/css/landing.css?v=1" />
   <script type="application/ld+json">
   {
@@ -96,7 +96,7 @@
             "name": "Goethe mi, telc mi daha kolay?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "İkisi de aynı GER seviyelerini ölçer, görev türleri biraz farklıdır. Belgeyi vereceğin kurumun hangisini kabul ettiğine bak."
+              "text": "İki sınav da aynı GER seviyelerini ölçer; görev türleri ve bölüm yapıları biraz farklıdır. Hangisinin sana daha uygun olduğu, belgeyi nerede kullanacağına ve sınav tarihlerine bağlıdır. Belgeyi vereceğin kurumun hangi sınavları kabul ettiğini önceden kontrol et."
             }
           },
           {
@@ -104,7 +104,7 @@
             "name": "Sınava ne kadar önce hazırlanmaya başlamalıyım?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Seviyen sınava yakınsa birkaç hafta yetebilir. Değilse önce o seviyenin konularını tamamlarız."
+              "text": "Mevcut seviyen sınav seviyesine yakınsa birkaç haftalık yoğun bir hazırlık yeterli olabilir. Seviyen daha düşükse önce o seviyenin konularını tamamlarız. Ne kadar erken başlarsan plan o kadar rahat olur."
             }
           },
           {
@@ -112,7 +112,7 @@
             "name": "Sitedeki deneme setleri resmî sınav soruları mı?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Hayır. Resmî görev türlerine göre hazırlanmış alıştırmalardır."
+              "text": "Hayır. Deneme setleri resmî sınavların görev türlerine göre hazırlanmış alıştırmalardır. Sınav formatını tanımana ve süre tutarak pratik yapmana yardım eder."
             }
           },
           {
@@ -120,7 +120,23 @@
             "name": "Sınava kaydı siz mi yapıyorsunuz?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Hayır. Kaydı sınav kurumu veya yetkili sınav merkezi üzerinden kendin yaparsın."
+              "text": "Hayır. Sınav kaydını sınavı düzenleyen kurum veya yetkili sınav merkezi üzerinden kendin yaparsın. Derslerde sınava hazırlanırsın."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Sınav hazırlığı birebir mi, grup dersinde mi yapılıyor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yazma ve konuşma görevlerinde kişisel geri bildirim çok önemli olduğu için sınav hazırlığı genellikle birebir özel ders olarak yapılır. Genel seviye çalışması için grup dersleri de var."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ücretsiz deneme setlerini nasıl kullanabilirim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sitedeki sınav deneme setlerini hesap açmadan çözebilirsin. Okuma ve dil bilgisi bölümlerinde görev türlerini tanır, süre tutarak pratik yaparsın."
             }
           }
         ]
@@ -142,7 +158,7 @@
         <div class="nav-links" id="siteMenu">
           <a class="nav-link" href="/" data-i18n="navHome">Ana Sayfa</a>
           <a class="nav-link" href="/online-almanca-dersi/" data-i18n="navLessons">Almanca Dersleri</a>
-          <a class="nav-link" href="/#grammar" data-i18n="navGrammar">Gramer</a>
+          <a class="nav-link" href="/almanca-gramer/" data-i18n="navGrammar">Gramer</a>
           <a class="nav-link" href="/#exercises" data-i18n="navExercises">Alıştırmalar</a>
           <a class="nav-link active" href="/almanca-sinav-hazirlik/" aria-current="page" data-i18n="navExams">Sınav Hazırlığı</a>
           <a class="nav-link" href="/hakkimda/" data-i18n="navAbout">Hakkımda</a>
@@ -181,6 +197,7 @@
 
       <section class="lp-section lp-prose" aria-labelledby="neden">
         <h2 id="neden">Sınav hazırlığı neden ayrı bir çalışma ister?</h2>
+        <p>Almanca bilmek ile bir Almanca sınavını geçmek her zaman aynı şey değildir. Sınavlar belirli görev türlerinden oluşur, her bölüm için sınırlı bir süre vardır ve cevaplar belirli ölçütlere göre değerlendirilir.</p>
         <p>Seviyen yeterli olsa da görev türlerini ve süreyi tanımazsan puan kaybedersin. Bu yüzden derslerde:</p>
         <ul>
           <li>Dil bilgisi ve kelime eksiklerini kapatırız.</li>
@@ -192,12 +209,12 @@
       <section class="lp-section" aria-labelledby="sinavlar">
         <h2 id="sinavlar">Hangi sınavlara hazırlanabilirsin?</h2>
         <div class="lp-cards">
-          <div class="lp-card"><h3>Goethe-Zertifikat</h3><p><span lang="de">Start Deutsch 1</span> (A1) aile birleşiminde sık istenir; B1 ve B2 sınavlarına da hazırlanırız.</p></div>
+          <div class="lp-card"><h3>Goethe-Zertifikat</h3><p>A1 seviyesindeki <span lang="de">Start Deutsch 1</span>’den B2’ye kadar Goethe sınavlarına hazırlanırız.</p></div>
           <div class="lp-card"><h3>telc Deutsch</h3><p>A1’den C1’e kadar; B1 ve B2’de dil bilgisini ölçen “Sprachbausteine” bölümü vardır.</p></div>
-          <div class="lp-card"><h3>ÖSD</h3><p>Avusturya merkezli sınav; görev türleri Goethe ve telc’e benzer.</p></div>
-          <div class="lp-card"><h3>DTZ</h3><p><span lang="de">Deutsch-Test für Zuwanderer</span>: Entegrasyon kursunun sonunda yapılır, sonuç A2 veya B1 olarak verilir.</p></div>
-          <div class="lp-card"><h3>TestDaF</h3><p>Üniversite başvurularında kullanılır; okuma deneme setleri sitede var.</p></div>
-          <div class="lp-card"><h3>Okul sınavları</h3><p>Lise ve üniversite sınavlarına konu tekrarıyla hazırlanırız.</p></div>
+          <div class="lp-card"><h3>ÖSD</h3><p>Avusturya merkezli ÖSD sınavları da Almanca seviyesini belgelemek için kullanılır; görev türleri Goethe ve telc’e benzer.</p></div>
+          <div class="lp-card"><h3>DTZ</h3><p><span lang="de">Deutsch-Test für Zuwanderer</span>: Almanya’daki göçmenlere yönelik sınav.</p></div>
+          <div class="lp-card"><h3>TestDaF</h3><p>Üniversite başvurularıyla ilgili bir sınav; şartı başvuracağın üniversiteden kontrol et. Okuma deneme setleri sitede var.</p></div>
+          <div class="lp-card"><h3>Okul sınavları</h3><p>Lisede veya üniversitede Almanca dersi alıyorsan yazılı ve sözlü sınavlara konu tekrarıyla hazırlanırız.</p></div>
         </div>
       </section>
 
@@ -216,20 +233,21 @@
         <ol class="lp-steps">
           <li><h3>Ücretsiz ilk görüşme</h3><p>Sınavı ve tarihi konuşuruz. Seviyeni bilmiyorsan önce <a href="/#seviye-testi">ücretsiz seviye testini</a> çözebilirsin.</p></li>
           <li><h3>Eksiklerin belirlenmesi</h3><p>Kısa bir denemeyle zayıf bölümünü bulur, planı ona göre kurarız.</p></li>
-          <li><h3>Görev türü çalışması</h3><p>Her derste bir-iki görev türü çalışırız; eksikleri <a href="/#grammar">konu anlatımları</a> ve <a href="/#exercises">alıştırmalarla</a> kapatırsın.</p></li>
+          <li><h3>Görev türü çalışması</h3><p>Her derste bir-iki görev türü çalışırız; eksikleri <a href="/almanca-gramer/">konu anlatımları</a> ve <a href="/#exercises">alıştırmalarla</a> kapatırsın.</p></li>
           <li><h3>Sınav provası</h3><p>Son haftalarda süreli tam deneme ve konuşma provası yaparız.</p></li>
         </ol>
       </section>
 
       <section class="lp-section lp-prose" aria-labelledby="seviye">
         <h2 id="seviye">Seviyene göre sınav hazırlığı</h2>
-        <p>Seviyene göre ayrıntılar:</p>
+        <p>Her seviyenin kendi sınav içeriği vardır. Seviyene göre sayfalarda o seviyede çalışacağın konuları bulabilirsin:</p>
         <ul>
           <li><a href="/a1-almanca-kursu/">A1 Almanca kursu</a>: aile birleşimi ve vize</li>
           <li><a href="/a2-almanca-kursu/">A2 Almanca kursu</a>: Goethe ve telc A2</li>
           <li><a href="/b1-almanca-kursu/">B1 Almanca kursu</a>: Goethe B1, telc B1 ve DTZ</li>
           <li><a href="/b2-almanca-kursu/">B2 Almanca kursu</a>: Goethe ve telc B2</li>
         </ul>
+        <p>Sınavda ihtiyaç duyacağın dil bilgisini <a href="/almanca-gramer/a1/">A1</a>, <a href="/almanca-gramer/a2/">A2</a> ve <a href="/almanca-gramer/b1/">B1</a> gramer konularında ücretsiz tekrar edebilirsin.</p>
         <p>Dersler genellikle <a href="/almanca-ozel-ders/">birebir özel ders</a> olarak yapılır; ücret süreye ve haftalık ders sayısına göre belirlenir. Bilgi için <a href="/iletisim/">bana yazabilirsin</a>.</p>
       </section>
 
@@ -238,19 +256,27 @@
         <div class="lp-faq">
           <details class="lp-faq-item">
             <summary>Goethe mi, telc mi daha kolay?</summary>
-            <div class="lp-faq-answer"><p>İkisi de aynı GER seviyelerini ölçer, görev türleri biraz farklıdır. Belgeyi vereceğin kurumun hangisini kabul ettiğine bak.</p></div>
+            <div class="lp-faq-answer"><p>İki sınav da aynı GER seviyelerini ölçer; görev türleri ve bölüm yapıları biraz farklıdır. Hangisinin sana daha uygun olduğu, belgeyi nerede kullanacağına ve sınav tarihlerine bağlıdır. Belgeyi vereceğin kurumun hangi sınavları kabul ettiğini önceden kontrol et.</p></div>
           </details>
           <details class="lp-faq-item">
             <summary>Sınava ne kadar önce hazırlanmaya başlamalıyım?</summary>
-            <div class="lp-faq-answer"><p>Seviyen sınava yakınsa birkaç hafta yetebilir. Değilse önce o seviyenin konularını tamamlarız.</p></div>
+            <div class="lp-faq-answer"><p>Mevcut seviyen sınav seviyesine yakınsa birkaç haftalık yoğun bir hazırlık yeterli olabilir. Seviyen daha düşükse önce o seviyenin konularını tamamlarız. Ne kadar erken başlarsan plan o kadar rahat olur.</p></div>
           </details>
           <details class="lp-faq-item">
             <summary>Sitedeki deneme setleri resmî sınav soruları mı?</summary>
-            <div class="lp-faq-answer"><p>Hayır. Resmî görev türlerine göre hazırlanmış alıştırmalardır.</p></div>
+            <div class="lp-faq-answer"><p>Hayır. Deneme setleri resmî sınavların görev türlerine göre hazırlanmış alıştırmalardır. Sınav formatını tanımana ve süre tutarak pratik yapmana yardım eder.</p></div>
           </details>
           <details class="lp-faq-item">
             <summary>Sınava kaydı siz mi yapıyorsunuz?</summary>
-            <div class="lp-faq-answer"><p>Hayır. Kaydı sınav kurumu veya yetkili sınav merkezi üzerinden kendin yaparsın.</p></div>
+            <div class="lp-faq-answer"><p>Hayır. Sınav kaydını sınavı düzenleyen kurum veya yetkili sınav merkezi üzerinden kendin yaparsın. Derslerde sınava hazırlanırsın.</p></div>
+          </details>
+          <details class="lp-faq-item">
+            <summary>Sınav hazırlığı birebir mi, grup dersinde mi yapılıyor?</summary>
+            <div class="lp-faq-answer"><p>Yazma ve konuşma görevlerinde kişisel geri bildirim çok önemli olduğu için sınav hazırlığı genellikle <a href="/almanca-ozel-ders/">birebir özel ders</a> olarak yapılır. Genel seviye çalışması için <a href="/almanca-grup-dersi/">grup dersleri</a> de var.</p></div>
+          </details>
+          <details class="lp-faq-item">
+            <summary>Ücretsiz deneme setlerini nasıl kullanabilirim?</summary>
+            <div class="lp-faq-answer"><p>Sitedeki <a href="/#exams">sınav deneme setlerini</a> hesap açmadan çözebilirsin. Okuma ve dil bilgisi bölümlerinde görev türlerini tanır, süre tutarak pratik yaparsın.</p></div>
           </details>
         </div>
       </section>
@@ -269,7 +295,7 @@
       <nav class="footer-pages" aria-label="Site sayfaları">
           <div class="footer-group"><p class="footer-group-title">Dersler</p><ul><li><a href="/online-almanca-dersi/">Online Almanca dersi</a></li><li><a href="/almanca-ozel-ders/">Almanca özel ders</a></li><li><a href="/almanca-grup-dersi/">Almanca grup dersi</a></li><li><a href="/almanca-sinav-hazirlik/" aria-current="page">Sınav hazırlık</a></li></ul></div>
           <div class="footer-group"><p class="footer-group-title">Seviyeler</p><ul><li><a href="/a1-almanca-kursu/">A1 Almanca kursu</a></li><li><a href="/a2-almanca-kursu/">A2 Almanca kursu</a></li><li><a href="/b1-almanca-kursu/">B1 Almanca kursu</a></li><li><a href="/b2-almanca-kursu/">B2 Almanca kursu</a></li></ul></div>
-          <div class="footer-group"><p class="footer-group-title">Ücretsiz çalış</p><ul><li><a href="/#grammar">Gramer konuları</a></li><li><a href="/#exercises">Alıştırmalar</a></li><li><a href="/#exams">Sınav deneme setleri</a></li><li><a href="/#seviye-testi">Seviye testi</a></li></ul></div>
+          <div class="footer-group"><p class="footer-group-title">Ücretsiz çalış</p><ul><li><a href="/almanca-gramer/">Gramer konuları</a></li><li><a href="/#exercises">Alıştırmalar</a></li><li><a href="/#exams">Sınav deneme setleri</a></li><li><a href="/#seviye-testi">Seviye testi</a></li></ul></div>
           <div class="footer-group"><p class="footer-group-title">Bozkurt Academy</p><ul><li><a href="/hakkimda/">Hakkımda</a></li><li><a href="/sss/">Sıkça sorulan sorular</a></li><li><a href="/iletisim/">İletişim</a></li></ul></div>
       </nav>
       <div class="footer-meta">
@@ -281,8 +307,8 @@
     </footer>
     <a class="ba-sticky-cta btn primary" href="/iletisim/" data-i18n="ctaFreeInfo">Ücretsiz bilgi al</a>
     <!-- /ba:footer --></div><!-- ba:scripts -->
-  <script src="/js/app.js?v=32"></script>
-  <script src="/js/theme.js?v=9"></script>
+  <script src="/js/app.js?v=33"></script>
+  <script src="/js/theme.js?v=10"></script>
   <script defer data-goatcounter="https://bozkurtacademy.goatcounter.com/count" data-goatcounter-settings='{"no_onload": true}' src="/js/vendor/count.js?v=2.7.0"></script>
   <script defer src="/js/analytics.js?v=7"></script>
   <!-- /ba:scripts -->

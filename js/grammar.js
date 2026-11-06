@@ -423,7 +423,7 @@
     el.innerHTML = `
       <div class="page-hero">
         <div class="page-hero-inner grammar-hero-copy">
-          <h1 id="grammarHeroTitle">${escapeHtml(t('grammarTitle'))}</h1>
+          <h2 class="page-title" id="grammarHeroTitle">${escapeHtml(t('grammarTitle'))}</h2>
           <p id="grammarHeroSub">${escapeHtml(t('grammarSub'))}</p>
         </div>
       </div>
@@ -566,7 +566,7 @@
         </div>
         <p class="ba-subresults-sub">${escapeHtml(t('grammarSectionsSub'))}</p>
         <div class="ba-toc">${sections.slice(0, SECTION_LIMIT).map(item => `
-          <a class="ba-toc-item" href="#grammar/${escapeHtml(item.level)}/${encodeURIComponent(item.id)}/${item.index + 1}" data-grammar-section>
+          <a class="ba-toc-item" href="/almanca-gramer/${escapeHtml(item.level.toLowerCase())}/${encodeURIComponent(item.id)}/#a1-step-${item.index}" data-grammar-section>
             <span class="ba-toc-top"><span class="ba-toc-level">${escapeHtml(item.level)}</span></span>
             <h4>${escapeHtml(item.title)}</h4>
             <p>${escapeHtml(item.lesson)}</p>
@@ -637,6 +637,11 @@
   async function openTopic(level, id, options = {}) {
     const topic = findTopic(level, id);
     if (!topic) return;
+    // Yazılmış dersler statik sayfalarda: /almanca-gramer/<seviye>/<ders>/ (bölüm: #a1-step-N). Arama burada kalır.
+    if (authored[level]?.has(id) && window.BAA1Lessons?.lessonPath) {
+      location.assign(window.BAA1Lessons.lessonPath(level, id) + (options.section ? '#a1-step-' + (options.section - 1) : ''));
+      return;
+    }
 
     const list = document.getElementById('grammarListView');
     const detail = document.getElementById('grammarDetailView');

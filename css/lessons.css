@@ -1,41 +1,29 @@
 /* Almanca Dersleri: the lesson page as a set of printed pieces. Tokens come from base.css. */
 #page-lessons{padding-top:clamp(16px,3vw,32px)}
 #page-lessons .lesson-hero-pro{margin:0;padding:0;color:var(--ba-ink)}
-#page-lessons .lesson-hero-copy{padding:clamp(28px,5vw,72px) clamp(22px,5vw,72px) 0;max-width:none}
 #page-lessons .lesson-hero-pro h1{margin:0 0 20px;max-width:12em}
 #page-lessons .lesson-hero-pro p{font-size:var(--ba-lead);line-height:1.5;max-width:44ch;color:var(--ba-ink)}
-#page-lessons .lesson-hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:16px 28px;margin-top:32px}
-#page-lessons .lesson-inline-link{background:none;border:0;padding:0;min-height:44px;cursor:pointer;font:600 var(--ba-body) var(--ba-sans)}
-#page-lessons .lesson-hero-stats{--ba-stub-cols:4;margin:clamp(32px,5vw,56px) clamp(22px,5vw,72px) 0;padding-bottom:clamp(28px,4vw,48px)}
-#page-lessons .lesson-hero-stats article{display:flex;flex-direction:column-reverse}
 
-#page-lessons .lesson-page-block{padding:clamp(56px,8vw,120px) 0 0}
 #page-lessons .lesson-section-head{max-width:760px;margin:0 0 28px;text-align:left}
 #page-lessons .lesson-section-head h2{margin:0 0 14px}
 #page-lessons .lesson-section-head p{color:var(--ba-ink);max-width:40ch}
 
 /* First lesson on green, then two plain notes */
-#page-lessons .lesson-intro-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:12px}
 #page-lessons .lesson-feature-card{padding:clamp(24px,3vw,40px);background:var(--ba-paper);border-radius:var(--ba-radius);border:0;box-shadow:none}
-#page-lessons .lesson-feature-highlight{background:var(--ba-field);color:var(--ba-field-ink)}
-#page-lessons .lesson-feature-highlight :is(h2,p){color:var(--ba-field-ink)}
 #page-lessons .lesson-feature-card h2{font-size:clamp(1.75rem,1.3rem + 1.4vw,2.375rem);margin:0 0 14px}
 #page-lessons .lesson-feature-card h3{font-size:var(--ba-lead);margin:0 0 10px}
 #page-lessons .lesson-feature-card p{margin:0;color:inherit}
 
 /* Six areas printed on one sheet */
-#page-lessons .lesson-offer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 48px;padding:clamp(24px,4vw,56px);background:var(--ba-paper);border-radius:var(--ba-radius)}
 #page-lessons .lesson-offer{padding:0;background:none;border:0;box-shadow:none;border-radius:0}
 #page-lessons .lesson-offer h3{font-size:var(--ba-lead);margin:0 0 8px}
 #page-lessons .lesson-offer p{margin:0;color:var(--ba-ink)}
 
 /* Who it is for: heading beside a checked slip */
-#page-lessons .lesson-audience-wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,6vw,96px);align-items:start;background:none;border:0;padding:0}
 #page-lessons .lesson-check-list{display:grid;grid-template-columns:1fr 1fr;gap:14px 28px}
 #page-lessons .lesson-check-list div{background:none;border:0;border-radius:0;font-size:var(--ba-body);font-weight:400}
 
 /* How lessons run: four notes on the ground */
-#page-lessons .lesson-why-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,6vw,96px);align-items:start}
 #page-lessons .lesson-why-cards{display:grid;grid-template-columns:1fr 1fr;gap:36px 40px}
 #page-lessons .lesson-why-cards article{padding:0;background:none;border:0;box-shadow:none}
 #page-lessons .lesson-why-cards h3{font-size:var(--ba-lead);margin:0 0 8px}
@@ -43,20 +31,12 @@
 
 /* Closing reply card */
 #page-lessons .lesson-final-cta{padding:0;display:block;color:var(--ba-ink)}
-#page-lessons .lesson-final-cta-body{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 48px;align-items:end;padding:clamp(28px,5vw,64px)}
 #page-lessons .lesson-final-cta h2{margin:0 0 12px}
 #page-lessons .lesson-final-cta p{margin:0;max-width:44ch;color:var(--ba-ink)}
 
 @media(max-width:1020px){
-  #page-lessons .lesson-intro-grid{grid-template-columns:1fr 1fr}
-  #page-lessons .lesson-feature-highlight{grid-column:1/-1}
-  #page-lessons .lesson-offer-grid{grid-template-columns:1fr 1fr}
   #page-lessons :is(.lesson-audience-wrap,.lesson-why-grid){grid-template-columns:1fr}
 }
 @media(max-width:620px){
   #page-lessons :is(.lesson-intro-grid,.lesson-offer-grid,.lesson-check-list,.lesson-why-cards,.lesson-final-cta-body){grid-template-columns:1fr}
-  #page-lessons .lesson-hero-actions{flex-direction:column;align-items:stretch}
-  #page-lessons .lesson-hero-actions .lesson-inline-link{align-self:flex-start}
-  #page-lessons .lesson-hero-stats{--ba-stub-cols:2}
-  #page-lessons .lesson-cta-button{width:100%}
 }

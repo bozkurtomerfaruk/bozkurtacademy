@@ -8,7 +8,6 @@
 .academy-theme .bl-body :is(p,li){line-height:1.7}
 .academy-theme .bl-body table{width:100%;border-collapse:collapse;margin:16px 0 24px;background:var(--ba-paper);border-radius:var(--ba-radius-small);overflow:hidden}
 .academy-theme .bl-body :is(th,td){padding:10px 14px;text-align:left;vertical-align:top;border-bottom:2px solid var(--ba-ground)}
-.academy-theme .bl-body .bl-table-wrap{overflow-x:auto}
 .academy-theme .bl-body [lang="de"]{font-weight:600}
 .academy-theme .bl-draft{margin:0 0 20px;padding:12px 16px;background:var(--ba-paper-2);border-left:4px solid var(--ba-accent);border-radius:var(--ba-radius-small);font-weight:600}
 .academy-theme .bl-badge{display:inline-block;padding:1px 8px;border-radius:999px;background:var(--ba-accent);color:var(--ba-accent-ink);font-size:var(--ba-small);font-weight:600}

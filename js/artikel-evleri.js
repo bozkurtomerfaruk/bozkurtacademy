@@ -3,7 +3,9 @@
 // Türkçe anlam data/sozluk.json'dan (öğretmenin kontrol ettiği kelimeler), resimler data/cocuk/resimler.json'da
 // (node scripts/check-kids-games.mjs). Skor: ilk denemede doğru bilinen kelime sayısı.
 // Hesap, form ve sunucuya gönderim yok. localStorage'da (baKelimeOyunlari) sadece ses ayarı ve konu başına en iyi skor.
-// Ses: tarayıcının cihazdaki Almanca sesi (speechSynthesis, sadece localService). Ses yoksa oyun sessiz devam eder.
+// Ses: önce sitenin kendi MP3 dosyaları (data/cocuk/ses, liste data/cocuk/sesler.json; Thorsten-Voice CC0 ile Coqui TTS
+// Apache 2.0, bkz. data/cocuk/ses/LISANS.md). Dosya yoksa ya da çalınamazsa tarayıcının cihazdaki Almanca sesi
+// (speechSynthesis, sadece localService); o da yoksa oyun sessiz devam eder.
 // "Dinle" düğmesi sadece kelimeyi okur; artikel doğru cevaptan sonra okunur. Metinler js/app.js'te (ae…).
 (() => {
   'use strict';
@@ -40,6 +42,7 @@
   let soundOn = readStore().sound !== false;
   let voice = null;
   let voiceChecked = false;
+  let current = null; // the word on the board, for the sound controls
   function pickVoice() {
     try {
       const list = 'speechSynthesis' in window ? speechSynthesis.getVoices() : [];
@@ -48,7 +51,7 @@
     } catch (_) { voice = null; }
     updateSoundUi();
   }
-  function say(text) {
+  function speak(text) {
     if (!soundOn || !voice) return;
     try {
       speechSynthesis.cancel();
@@ -57,15 +60,63 @@
       speechSynthesis.speak(u);
     } catch (_) {}
   }
+  // Recorded files (one Audio per file, loaded when its word appears); a file that fails is not tried again.
+  const AUDIO_DIR = 'data/cocuk/ses/';
+  const clips = new Map();
+  const broken = new Set();
+  let playing = null;
+  let onFail = null; // fallback for the clip that is playing now
+  const fileFor = (w, kind) => { const f = data?.audio?.[w.word]?.[kind]; return f && !broken.has(f) ? f : null; };
+  function clip(file) {
+    if (!clips.has(file)) {
+      const a = new Audio();
+      a.preload = 'auto';
+      a.addEventListener('error', () => { broken.add(file); if (playing === a) onFail?.(); updateSoundUi(); });
+      a.src = AUDIO_DIR + file + '?v=1';
+      clips.set(file, a);
+    }
+    return clips.get(file);
+  }
+  function stopAll() {
+    try { playing?.pause(); } catch (_) {}
+    playing = null; onFail = null;
+    try { speechSynthesis.cancel(); } catch (_) {}
+  }
+  // kind: 'word' ("Hund", the Dinle button) or 'article' ("der Hund", after the right answer).
+  function say(w, kind) {
+    if (!soundOn) return;
+    stopAll();
+    const text = kind === 'article' ? `${w.article} ${w.word}` : w.word;
+    const file = fileFor(w, kind);
+    if (!file) { speak(text); return; }
+    const a = clip(file);
+    let fellBack = false;
+    const fallback = () => {
+      if (fellBack || playing !== a) return;
+      fellBack = true; onFail = null; broken.add(file); speak(text); updateSoundUi();
+    };
+    playing = a;
+    onFail = fallback;
+    if (a.error) { fallback(); return; }
+    try { a.currentTime = 0; } catch (_) {}
+    // AbortError: this play was stopped by the next one (e.g. Dinle pressed twice); the file itself is fine.
+    try { const p = a.play(); if (p && p.catch) p.catch((e) => { if (e?.name !== 'AbortError') fallback(); }); } catch (_) { fallback(); }
+  }
+  function preload(w) {
+    if (!soundOn) return;
+    for (const kind of ['word', 'article']) { const f = fileFor(w, kind); if (f) clip(f); }
+  }
   function updateSoundUi() {
     const btn = root.querySelector('[data-ae-sound]');
     if (btn) {
       btn.setAttribute('aria-pressed', String(soundOn));
       btn.querySelector('span').textContent = t(soundOn ? 'aeSoundOn' : 'aeSoundOff');
     }
+    // "No German voice" only matters for a word without a working file.
+    const files = current ? Boolean(fileFor(current, 'word') && fileFor(current, 'article')) : true;
     const note = root.querySelector('[data-ae-novoice]');
-    if (note) note.hidden = !voiceChecked || !soundOn || Boolean(voice);
-    root.querySelectorAll('[data-ae-listen]').forEach((b) => { b.hidden = !soundOn || !voice; });
+    if (note) note.hidden = !voiceChecked || !soundOn || Boolean(voice) || files;
+    root.querySelectorAll('[data-ae-listen]').forEach((b) => { b.hidden = !soundOn || (!voice && !(current && fileFor(current, 'word'))); });
   }
   if ('speechSynthesis' in window) { try { speechSynthesis.addEventListener('voiceschanged', pickVoice); } catch (_) {} }
   // Voices can arrive a moment after the page loads: wait before saying there is none.
@@ -75,16 +126,17 @@
   let data = null;
   let loading = null;
   function load() {
-    loading ||= Promise.all(['data/cocuk/artikel-evleri.json?v=1', 'data/cocuk/resimler.json?v=1', 'data/sozluk.json?v=1']
-      .map((url) => fetch(url).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })))
-      .then(([game, pics, dict]) => {
+    const get = (url) => fetch(url).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
+    loading ||= Promise.all([get('data/cocuk/artikel-evleri.json?v=1'), get('data/cocuk/resimler.json?v=1'), get('data/sozluk.json?v=1'),
+      get('data/cocuk/sesler.json?v=1').catch(() => ({ files: {} }))]) // without the list the game uses the device voice
+      .then(([game, pics, dict, audio]) => {
         const themes = game.themes.map((th) => ({
           ...th,
           words: th.words.filter((w) => dict.words[w] && pics.pictures[w]).map((w) => ({
             word: w, article: dict.words[w].article, tr: String(dict.words[w].tr).split(';')[0].trim(), pic: pics.pictures[w]
           }))
         }));
-        data = { themes, pics: pics.pictures };
+        data = { themes, pics: pics.pictures, audio: audio.files || {} };
         return data;
       })
       .catch((e) => { loading = null; throw e; });
@@ -120,11 +172,12 @@
       </header>
       <p class="ae-note" data-ae-novoice hidden>${esc(t('aeNoVoice'))}</p>
       ${inner}
-      <p class="ae-privacy">${esc(t('aePrivacy'))}${lang() !== 'tr' ? ' ' + esc(t('aeMeaningsTr')) : ''}</p>`;
+      <p class="ae-privacy">${esc(t('aePrivacy'))}${lang() !== 'tr' ? ' ' + esc(t('aeMeaningsTr')) : ''}</p>
+      ${data && Object.keys(data.audio).length ? `<p class="ae-privacy" data-ae-credit>${esc(t('aeVoiceCredit'))}</p>` : ''}`;
     root.querySelector('[data-ae-sound]').addEventListener('click', () => {
       soundOn = !soundOn;
       writeStore({ sound: soundOn });
-      if (!soundOn) { try { speechSynthesis.cancel(); } catch (_) {} }
+      if (!soundOn) stopAll(); else if (current) preload(current);
       updateSoundUi();
     });
     updateSoundUi();
@@ -132,6 +185,7 @@
 
   function renderPick() {
     game = null;
+    current = null;
     shell(`
       <p class="ae-lead">${esc(t('aeLead'))}</p>
       <h2>${esc(t('aePickTheme'))}</h2>
@@ -155,6 +209,8 @@
     const g = game;
     if (g.i >= g.order.length) return renderEnd();
     const w = g.order[g.i];
+    current = w;
+    preload(w);
     const total = g.order.length;
     const perHouse = Math.ceil(total / 3);
     const fb = g.feedback;
@@ -180,7 +236,7 @@
         }).join('')}</div>
         ${g.answered ? `<div class="ae-actions"><button class="btn primary" type="button" data-ae-next>${esc(t(g.i + 1 < total ? 'aeNext' : 'aeShowResult'))} <span aria-hidden="true">→</span></button></div>` : ''}
       </section>`, { back: true });
-    root.querySelector('[data-ae-listen]').addEventListener('click', () => say(w.word));
+    root.querySelector('[data-ae-listen]').addEventListener('click', () => say(w, 'word'));
     root.querySelectorAll('[data-ae-house]').forEach((b) => b.addEventListener('click', () => answer(b.dataset.aeHouse)));
     root.querySelector('[data-ae-next]')?.addEventListener('click', () => {
       g.i++; g.missed = false; g.tried = []; g.answered = false; g.feedback = null;
@@ -200,7 +256,7 @@
       g.lit[a]++;
       g.answered = true;
       g.feedback = { type: 'right', text: `${t('aeRight')} ${w.article} ${w.word} – ${w.tr}${g.missed ? '' : '. ' + t('aeRightFirst')}` };
-      say(`${w.article} ${w.word}`);
+      say(w, 'article');
       renderWord({ focus: 'next' });
     } else {
       g.missed = true;
@@ -214,6 +270,7 @@
 
   function renderEnd() {
     const g = game;
+    current = null;
     const n = g.order.length;
     const k = g.firstTry;
     // Saved once per game; a later redraw (e.g. a language change) shows the same result.

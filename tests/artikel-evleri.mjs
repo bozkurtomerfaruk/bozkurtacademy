@@ -20,8 +20,17 @@ const browser = await chromium.launch();
 const overflow = (p) => p.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
 
 // voice: a German voice on the device (spoken texts go to window.__spoken) or none at all.
-async function newPage({ width = 1280, theme = 'light', voice = true, lang = null, blockStorage = false } = {}) {
+// files: 'none' (no list of recorded files: device voice only), 'real' (data/cocuk/ses), 'broken' (list there, files 404).
+// Played files go to window.__played.
+async function newPage({ width = 1280, theme = 'light', voice = true, lang = null, blockStorage = false, files = 'none' } = {}) {
   const ctx = await browser.newContext({ viewport: { width, height: 900 } });
+  if (files === 'none') await ctx.route('**/data/cocuk/sesler.json*', (r) => r.fulfill({ status: 404, body: '' }));
+  if (files === 'broken') await ctx.route('**/data/cocuk/ses/*.mp3*', (r) => r.fulfill({ status: 404, body: '' }));
+  await ctx.addInitScript(() => {
+    window.__played = [];
+    const play = HTMLMediaElement.prototype.play;
+    HTMLMediaElement.prototype.play = function () { window.__played.push(decodeURIComponent(this.src.split('/').pop().split('?')[0])); return play.call(this); };
+  });
   await ctx.addInitScript(([t, l]) => { try { if (!sessionStorage.getItem('i')) { sessionStorage.setItem('i', '1'); localStorage.setItem('ba-theme', t); if (l) localStorage.setItem('baLang', l); } } catch (_) {} }, [theme, lang]);
   if (voice) {
     await ctx.addInitScript(() => {
@@ -47,7 +56,8 @@ async function newPage({ width = 1280, theme = 'light', voice = true, lang = nul
   }
   const page = await ctx.newPage();
   page.on('pageerror', (e) => errors.push(e.message));
-  page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
+  // In 'none' and 'broken' the 404s are made on purpose by the routes above.
+  page.on('console', (m) => { if (m.type() === 'error' && !(files !== 'real' && /Failed to load resource.*404/.test(m.text()))) errors.push(m.text()); });
   return { ctx, page };
 }
 const currentWord = async (p) => (await p.locator('#aeWord').textContent()).trim().split(' ').pop();
@@ -155,7 +165,7 @@ ok(out.every((r) => r.url.startsWith('https://bozkurtacademy.goatcounter.com/'))
 ok(requests.every((r) => !/goatcounter/.test(r.url) || !/sozluk|yiyecek|Apfel/.test(decodeURIComponent(r.url)) || /p=%2F%23artikel-evleri/.test(r.url)), 'sayaçta sadece sayfa adresi');
 await ctx.close();
 
-// 5. Almanca ses yok: not görünüyor, "Dinle" gizli, oyun hatasız oynanıyor.
+// 5. Ses dosyası listesi yok ve Almanca ses yok: not görünüyor, "Dinle" gizli, oyun hatasız oynanıyor.
 {
   const { ctx, page } = await newPage({ voice: false, width: 390 });
   await page.goto(B + '#artikel-evleri/disarida'); await page.waitForTimeout(2200);
@@ -167,6 +177,72 @@ await ctx.close();
   ok(!(await page.locator('[data-ae-novoice]').isVisible()), 'ses kapatılınca not gizleniyor');
   await page.goto(B + '#artikel-evleri/olmayan-konu'); await page.waitForTimeout(800);
   ok(page.url().endsWith('#artikel-evleri') && await page.locator('.ae-theme').count() === 4, 'bilinmeyen konu konu seçimine dönüyor');
+  await ctx.close();
+}
+
+// 5b. Kayıtlı ses dosyaları (data/cocuk/ses): önce dosya, dosyası olmayan ya da bozuk dosyada cihaz sesi.
+{
+  const audioList = JSON.parse(fs.readFileSync('data/cocuk/sesler.json', 'utf8')).files;
+  const slug = (s) => s.toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss').replace(/ /g, '-');
+  const { ctx, page } = await newPage({ files: 'real' });
+  const reqs = [];
+  page.on('request', (r) => reqs.push(r.url()));
+  await page.goto(B + '#artikel-evleri/evde'); await page.waitForTimeout(1500);
+  ok(await page.locator('[data-ae-credit]').count() === 1 && (await page.textContent('[data-ae-credit]')).includes('Thorsten-Voice (Thorsten Müller, CC0)'), 'oyunda ses atfı (Thorsten-Voice, CC0; Coqui, Apache 2.0)');
+  let fileWords = 0, deviceWords = 0;
+  for (let i = 0; i < 12; i++) {
+    const w = await currentWord(page);
+    const before = await page.evaluate(() => [window.__played.length, window.__spoken.length]);
+    await page.click('[data-ae-listen]'); await page.waitForTimeout(250);
+    const after = await page.evaluate(() => [window.__played.at(-1), window.__spoken.at(-1), window.__played.length, window.__spoken.length]);
+    if (audioList[w]?.word) {
+      fileWords++;
+      ok(after[0] === `${slug(w)}.mp3` && after[3] === before[1], `"Dinle" ${w}: dosya çalıyor (${after[0]}), cihaz sesi kullanılmıyor`);
+    } else {
+      deviceWords++;
+      ok(after[1] === w && after[2] === before[0], `"Dinle" ${w}: dosyası yok, cihaz sesi kelimeyi okuyor`);
+    }
+    await playWord(page); await page.waitForTimeout(250);
+    const end = await page.evaluate(() => [window.__played.at(-1), window.__spoken.at(-1)]);
+    if (audioList[w]?.article) ok(end[0] === `${slug(`${articleOf(w)} ${w}`)}.mp3`, `doğru cevap ${w}: artikelli dosya çalıyor (${end[0]})`);
+    else ok(end[1] === `${articleOf(w)} ${w}`, `doğru cevap ${w}: dosyası yok, cihaz sesi artikelle okuyor`);
+    await page.click('[data-ae-next]');
+  }
+  ok(fileWords > 0, `Evde konusunda ${fileWords} kelime dosyadan, ${deviceWords} kelime cihaz sesinden`);
+  const audioReqs = reqs.filter((u) => u.endsWith('.mp3') || u.includes('.mp3?'));
+  ok(audioReqs.length > 0 && audioReqs.every((u) => u.startsWith('http://localhost:8765/data/cocuk/ses/')), `ses dosyaları sadece bu siteden yükleniyor (${audioReqs.length})`);
+  await ctx.close();
+}
+{
+  // Dosyalar yüklenemiyor (404): hata yok, cihaz sesine geçiyor.
+  const { ctx, page } = await newPage({ files: 'broken' });
+  await page.goto(B + '#artikel-evleri/yiyecekler'); await page.waitForTimeout(1500);
+  const w = await currentWord(page);
+  await page.click('[data-ae-listen]'); await page.waitForTimeout(800);
+  ok((await page.evaluate(() => window.__spoken.at(-1))) === w, `bozuk dosyada cihaz sesine geçiyor (${w})`);
+  await page.click('[data-ae-listen]'); await page.waitForTimeout(300);
+  ok((await page.evaluate(() => window.__spoken.filter((x) => x === window.__spoken.at(-1)).length)) >= 2, 'bozuk dosya bir daha denenmiyor, yine cihaz sesi');
+  await ctx.close();
+}
+{
+  // Cihazda Almanca ses yok ama dosyalar var: "Dinle" görünüyor ve dosyayı çalıyor; not sadece dosyası olmayan kelimede.
+  const audioList = JSON.parse(fs.readFileSync('data/cocuk/sesler.json', 'utf8')).files;
+  const { ctx, page } = await newPage({ files: 'real', voice: false, width: 390 });
+  await page.goto(B + '#artikel-evleri/disarida'); await page.waitForTimeout(2200);
+  const w = await currentWord(page);
+  ok(audioList[w]?.word && await page.locator('[data-ae-listen]').isVisible() && !(await page.locator('[data-ae-novoice]').isVisible()), `ses yok, dosya var (${w}): "Dinle" görünüyor, not yok`);
+  await page.click('[data-ae-listen]'); await page.waitForTimeout(250);
+  ok((await page.evaluate(() => window.__played.at(-1))) === w.toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue') + '.mp3', 'cihaz sesi yokken dosya çalıyor');
+  await page.goto(B + '#artikel-evleri/evde'); await page.waitForTimeout(800);
+  let checked = false;
+  for (let i = 0; i < 12 && !checked; i++) {
+    const x = await currentWord(page);
+    if (!audioList[x]?.word) {
+      ok(!(await page.locator('[data-ae-listen]').isVisible()) && await page.locator('[data-ae-novoice]').isVisible(), `ses yok, dosya yok (${x}): "Dinle" gizli, not görünüyor`);
+      checked = true;
+    } else { await playWord(page); await page.click('[data-ae-next]'); }
+  }
+  if (!checked) ok(true, 'Evde konusunda dosyası olmayan kelime kalmadı');
   await ctx.close();
 }
 
@@ -197,7 +273,7 @@ for (const [l, h1, end, note] of [['de', 'Artikelhäuser', 'Du hast 12 von 12 W�
 // 8. 390 / 1440, açık / koyu: taşma yok, ekran görüntüleri.
 for (const width of [390, 1440]) {
   for (const theme of ['light', 'dark']) {
-    const { ctx, page } = await newPage({ width, theme });
+    const { ctx, page } = await newPage({ width, theme, files: 'real' });
     await page.goto(B + '#artikel-evleri'); await page.waitForTimeout(1500);
     ok(await overflow(page) <= 0, `${width} ${theme}: konu seçiminde taşma yok`);
     await page.screenshot({ path: path.join(shotDir, `konular-${width}-${theme}.png`), fullPage: true });

@@ -217,8 +217,8 @@ html[data-theme="dark"] .academy-theme .brand-logo-dark{display:block}
   .academy-theme .topbar .nav-links{display:flex;justify-content:center;flex-wrap:nowrap;gap:2px}
   .academy-theme .topbar .nav-link{white-space:nowrap}
 }
-/* Narrow desktops: eight menu links (with Giriş/Panelim) still fit on one line */
-@media(min-width:1021px) and (max-width:1199px){
+/* Narrow desktops: all menu links (with Blog and Giriş/Panelim) still fit on one line next to the CTA and language buttons */
+@media(min-width:1021px) and (max-width:1365px){
   .academy-theme .topbar .nav{grid-template-columns:auto minmax(0,1fr) auto}
   .academy-theme .topbar .nav-link{padding:8px 6px;font-size:14px}
 }
@@ -281,7 +281,7 @@ html[data-theme="dark"] .academy-theme .brand-logo-dark{display:block}
 
 /* Contact call to action: a header button on wide screens, a bar fixed to the bottom on phones */
 .academy-theme .nav-cta{display:none;min-height:40px;padding:0 16px;font-size:15px;white-space:nowrap}
-@media(min-width:1200px){.academy-theme .nav-cta{display:inline-flex}}
+@media(min-width:1280px){.academy-theme .nav-cta{display:inline-flex}}
 .academy-theme .ba-sticky-cta{display:none}
 @media(max-width:767px){
   .academy-theme .ba-sticky-cta{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:40;min-height:52px}

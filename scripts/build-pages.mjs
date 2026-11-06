@@ -15,7 +15,7 @@ import { blogPages, blogBody, blogSchema, homeBlog, blogBacklinks } from './blog
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const check = process.argv.includes('--check');
 const SITEMAP_DATE = '2026-11-04';
-const V = { style: 13, base: 12, landing: 1, app: 34, theme: 10, analytics: 7, a1lessons: 18, a1css: 8, grammarPages: 3, blog: 3 };
+const V = { style: 13, base: 12, landing: 1, app: 35, theme: 10, analytics: 7, a1lessons: 18, a1css: 8, grammarPages: 3, blog: 3 };
 const OG_IMAGE = `${SITE}/images/og-bozkurt-academy.jpg`;
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');

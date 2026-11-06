@@ -2,6 +2,36 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-06 · Yeni öncelik sırası ve madde 6 (yapay zekâ araştırması, Schreiben)
+
+**Öncelik sırası (öğretmenin kararı, 2026-11-06).** Her iş yine ayrı dal ve ayrı PR olarak yapılıyor; öğretmen onaylamadan birleştirilmiyor.
+
+1. Yarım kalan iş varsa önce o bitirilecek. Bu, madde 6 denemesiydi; bu PR'la tamamlandı.
+2. Madde 6 şimdilik sadece Schreiben'e bakıyor; Sprechen (ses tanıma) sonraya kaldı.
+3. Madde 7, sınav hazırlığında Schreiben, iki aşamada yapılacak:
+   - **Aşama A (yapay zekâsız):** Önce Goethe B1 Teil 1 pilotu.
+     - Görev metni, kelime sayacı, kendi kendini kontrol listesi, gönderince açılan örnek cevap ve kalıp ifadeler olacak.
+     - Giriş yapmış öğrencinin metni Firestore'a kaydedilecek. Öğretmen öğrenci detayında okuyup geri bildirim yazacak; öğrenci bunu kendi panelinde görecek. Görev ödev olarak da verilebilecek.
+     - Giriş yapmamış ziyaretçi görevi çözüp örnek cevabı görebilecek; metni kaydedilmeyecek.
+     - Spark planında kalınacak; kurallar ve testleri güncellenecek; metin boyutuna sınır konacak.
+     - Kodlamadan önce görev formatı, ekran taslağı ve veri yapısı onaya sunulacak.
+   - **Aşama B (yapay zekâ kontrolü):** Madde 6'da kurallara uyan ve kalitesi yeterli bir çözüm çıkarsa Aşama A'nın üstüne eklenecek: hatalar metin içinde işaretli, Türkçe açıklama, düzeltilmiş metin. Çıkmazsa Aşama A öğretmenin elle verdiği geri bildirimle devam edecek.
+4. Bunlardan sonra Sprechen (madde 8) ve Kayıp Harf Treni gelecek. E-posta (madde 9) bağımsız; araya girebilir.
+
+**Madde 6 sonucu (ayrıntı: `docs/yapay-zeka-arastirma.md`):**
+
+- **Kurallara uyan servisler:**
+  - Cloudflare Workers AI: günde 10.000 Neuron ücretsiz; kota dolunca hata verip duruyor; veriyi eğitimde kullanmıyor ve saklamıyor.
+  - Groq (yedek): ücretsiz katman kart istemiyor; veriyi kullanmıyor; veri ABD'de; şartlarda 18 yaş maddesi var.
+- **Elenenler:**
+  - Gemini: ücretsiz katmanda veriyi eğitimde kullanıyor ve 18 yaş altına yönelik sitelerde kullanılamıyor.
+  - Mistral: ücretsiz modda veriyi varsayılan olarak eğitimde kullanıyor.
+- **Kalite:** Bu ortamda denenebilen ücretsiz modeller (gpt-oss-20b, Gemma 3 12B) ve LanguageTool **yetersiz**. Hataları büyük ölçüde buluyorlar, ama Türkçe açıklamalar yanlış ya da tutarsız; hatasız metinde hata uydurabiliyorlar.
+- **Asıl karar için:** Cloudflare'in ücretsiz katmanındaki büyük modeller (gpt-oss-120b, Llama 3.3 70B, Mistral Small 3.1, Gemma 4 26B) bu makineye sığmadı. Öğretmenin açacağı ücretsiz bir Cloudflare hesabıyla aynı beş metinde denenmeli.
+- **Sprechen için not:** Whisper bazı ek hatalarını yazıya geçirirken kendiliğinden düzeltiyor ("mein Freund" → "meinen Freund").
+- **Ağ:** Bu oturum "bozkurtacademy" ortamına taşındı. Ortamın izinli adreslerine resmî belge siteleri ve Hugging Face eklendi (öğretmen onayıyla).
+- **Durum:** Belge PR'ı açık, onay bekliyor. Madde 7 Aşama A tasarımı onaya sunuldu.
+
 ## 2026-11-06 · Artikel Evleri: kayıtlı ses dosyaları
 
 - **Ne değişti:** Kelimeler önce sitenin kendi MP3 dosyalarıyla okunuyor. Dosya yoksa ya da çalınamazsa cihazın Almanca sesine, o da yoksa sessiz moda geçiliyor. İnternet üzerinden çalışan sesler (Google Deutsch vb.) kararın gereği kapalı.

@@ -29,7 +29,12 @@ const fsRoot = `projects/${project}/databases/(default)/documents`;
 const fsBase = `${fsEmulator ? `http://${fsEmulator}` : 'https://firestore.googleapis.com'}/v1/${fsRoot}`;
 const BATCH = 200;
 const appCheckDebugToken = process.env.APPCHECK_DEBUG_TOKEN;
-const extraHeaders = {};
+// API anahtarı Google Cloud'da "web sitesi" (HTTP yönlendiren) kısıtlamasıyla yalnızca bozkurtacademy.com'a açık:
+// Node isteği tarayıcı gibi Referer göndermezse Google 403 API_KEY_HTTP_REFERRER_BLOCKED verir. Emülatör bu başlığı
+// yok sayar, aynı istekler orada da çalışır. Not: Referer gizli değildir; kısıtlama anahtarın başka sitelerde
+// kopyalanıp kullanılmasını zorlaştırır, gerçek koruma firestore.rules ve (zorunluysa) App Check'tir.
+const SITE_REFERER = 'https://bozkurtacademy.com/';
+const extraHeaders = { referer: SITE_REFERER };
 
 class StepError extends Error {
   constructor(step, status, code) { super(`${step}: ${status} ${code}`); this.step = step; this.status = status; this.code = code; }

@@ -71,7 +71,7 @@
  // Comments: approved ones come from Firestore (js/comments.js), loaded only when the visitor scrolls near the
  // comment section. Every value is written with textContent, never as HTML. Without approved comments the
  // "Öğrenci yorumları" section stays hidden. New comments are saved as "pending" and approved at /yonetim/yorumlar/.
- const COMMENTS_MODULE='/js/comments.js?v=2';
+ const COMMENTS_MODULE='/js/comments.js?v=3';
  const MONTHS=['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
  const formatDate=d=>d instanceof Date && !Number.isNaN(d.getTime())?`${d.getDate()} ${MONTHS[d.getMonth()]} ${d.getFullYear()}`:'';
  const isoDate=d=>d instanceof Date && !Number.isNaN(d.getTime())?d.toISOString().slice(0,10):'';
@@ -101,12 +101,14 @@
      observer.observe(commentsSection);
    } else show();
    const form=container.querySelector('.a1-comment-form');const status=container.querySelector('.a1-comment-status');
-   let submitting=false,lastSent=0;
+   // Bot önlemleri (App Check'e ek): gizli "website" alanı (a1-honeypot) ve süre tuzağı. Form açıldıktan sonraki
+   // ilk 3 saniyede gelen ya da gizli alanı dolu gönderim hiçbir yere gönderilmez, ama bota başarı gibi görünür.
+   let submitting=false,lastSent=0;const shownAt=Date.now();
    form.addEventListener('submit',async event=>{
      event.preventDefault();if(submitting)return;
      const values=new FormData(form);const name=String(values.get('name')||'').trim(),email=String(values.get('email')||'').trim(),comment=String(values.get('comment')||'').trim();
      status.className='a1-comment-status';
-     if(values.get('website'))return;
+     if(values.get('website') || Date.now()-shownAt<3000){form.reset();status.textContent=t('grammarCommentSent');status.classList.add('success');return;}
      if(!name || name.length>60 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length>254 || comment.length<10 || comment.length>2000 || !values.get('consent')){status.textContent=t('grammarCommentInvalid');status.classList.add('error');return;}
      if(Date.now()-lastSent<60000){status.textContent=t('grammarCommentWait');return;}
      submitting=true;const button=form.querySelector('[type="submit"]');button.disabled=true;status.textContent=t('grammarCommentSending');

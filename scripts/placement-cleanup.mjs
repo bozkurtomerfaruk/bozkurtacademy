@@ -9,6 +9,8 @@
 // Günlüğe sadece silinen sayı yazılır. Hata olursa çıkış kodu 1 olur; GitHub başarısız zamanlanmış iş için
 // e-posta gönderir. Yönetim sayfasındaki silme yedek olarak duruyor.
 // Emülatörde (tests/placement-cleanup.mjs): FIRESTORE_EMULATOR_HOST, FIREBASE_AUTH_EMULATOR_HOST, GCLOUD_PROJECT.
+// App Check Firestore/Auth'ta zorunlu kılındıysa: GitHub Secrets'a APPCHECK_DEBUG_TOKEN (Firebase Console → App Check →
+// hata ayıklama belirteci) eklenir; script onu App Check belirteciyle değiştirip isteklere ekler (docs/app-check.md).
 import { firebaseConfig } from '../js/account/config.js';
 
 const email = process.env.CLEANUP_EMAIL;
@@ -26,6 +28,8 @@ const authBase = authEmulator ? `http://${authEmulator}/identitytoolkit.googleap
 const fsRoot = `projects/${project}/databases/(default)/documents`;
 const fsBase = `${fsEmulator ? `http://${fsEmulator}` : 'https://firestore.googleapis.com'}/v1/${fsRoot}`;
 const BATCH = 200;
+const appCheckDebugToken = process.env.APPCHECK_DEBUG_TOKEN;
+const extraHeaders = {};
 
 class StepError extends Error {
   constructor(step, status, code) { super(`${step}: ${status} ${code}`); this.step = step; this.status = status; this.code = code; }
@@ -34,7 +38,7 @@ class StepError extends Error {
 async function post(step, url, body, token) {
   const response = await fetch(url, {
     method: 'POST',
-    headers: { 'content-type': 'application/json', ...(token ? { authorization: `Bearer ${token}` } : {}) },
+    headers: { 'content-type': 'application/json', ...extraHeaders, ...(token ? { authorization: `Bearer ${token}` } : {}) },
     body: JSON.stringify(body)
   });
   const data = await response.json().catch(() => ({}));
@@ -45,6 +49,11 @@ async function post(step, url, body, token) {
 
 let deleted = 0;
 try {
+  if (appCheckDebugToken && !fsEmulator && !authEmulator) {
+    const exchanged = await post('App Check', `https://firebaseappcheck.googleapis.com/v1/projects/${firebaseConfig.projectId}/apps/${firebaseConfig.appId}:exchangeDebugToken?key=${firebaseConfig.apiKey}`,
+      { debugToken: appCheckDebugToken });
+    extraHeaders['x-firebase-appcheck'] = exchanged.token;
+  }
   const login = await post('giriş', `${authBase}/accounts:signInWithPassword?key=${firebaseConfig.apiKey}`,
     { email, password, returnSecureToken: true });
   const token = login.idToken;

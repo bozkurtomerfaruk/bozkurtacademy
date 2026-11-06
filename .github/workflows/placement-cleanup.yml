@@ -32,3 +32,4 @@ jobs:
         env:
           CLEANUP_EMAIL: ${{ secrets.CLEANUP_EMAIL }}
           CLEANUP_PASSWORD: ${{ secrets.CLEANUP_PASSWORD }}
+          APPCHECK_DEBUG_TOKEN: ${{ secrets.APPCHECK_DEBUG_TOKEN }}

@@ -344,17 +344,56 @@ await resetEmulators();
   await ctx.close();
 }
 
+// ---------- 7c. App Check: APPCHECK_SITE_KEY doluyken reCAPTCHA Enterprise CSP'den geçer (canlı köken) ----------
+{
+  const { ctx, page, log } = await context();
+  const headers = [];
+  await ctx.route(LIVE + '/js/account/config.js*', (route) => route.fulfill({ status: 200, contentType: 'text/javascript',
+    body: fs.readFileSync(path.join(ROOT, 'js/account/config.js'), 'utf8').replace("APPCHECK_SITE_KEY = ''", "APPCHECK_SITE_KEY = 'test-site-key'") }));
+  // Taklit reCAPTCHA Enterprise: görünmez pencereyi "çizer", hemen başarılı sayılır ve belirteç verir.
+  await ctx.route('https://www.google.com/recaptcha/enterprise.js*', (route) => { log.requests.push(route.request().url()); return route.fulfill({ status: 200, contentType: 'text/javascript',
+    body: "window.grecaptcha={enterprise:{ready:function(f){setTimeout(f)},render:function(el,o){setTimeout(function(){o.callback&&o.callback('ok')});return 'w1'},execute:function(){return Promise.resolve('recaptcha-token')}}};" }); });
+  await ctx.route('https://content-firebaseappcheck.googleapis.com/**', (route) => route.fulfill({ status: 200, contentType: 'application/json',
+    headers: { 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({ token: 'appcheck-token', ttl: '3600s' }) }));
+  await ctx.route('https://firestore.googleapis.com/**', (route) => { headers.push(route.request().headers()['x-firebase-appcheck'] || ''); return route.fulfill({ status: 200, contentType: 'application/json', headers: { 'Access-Control-Allow-Origin': '*' }, body: '[]' }); });
+  await page.goto(LIVE + '/almanca-gramer/a1/artikel/'); await page.waitForTimeout(400);
+  await page.locator('.a1-comments').scrollIntoViewIfNeeded();
+  await page.waitForTimeout(3000);
+  ok(log.requests.some((u) => u.startsWith('https://www.gstatic.com/firebasejs/12.19.0/firebase-app-check.js')) && log.requests.some((u) => u.startsWith('https://www.google.com/recaptcha/enterprise.js')), 'App Check SDK ve reCAPTCHA Enterprise betiği yüklendi');
+  ok(headers.includes('appcheck-token'), `onaylı yorumların REST okuması X-Firebase-AppCheck başlığı taşıyor (${headers.join(',') || 'istek yok'})`);
+  clean(log, 'App Check');
+  await ctx.close();
+}
+{
+  // Anahtar boşken (bugünkü ayar) App Check ve reCAPTCHA hiç yüklenmez.
+  const { ctx, page, log } = await context();
+  await page.goto(LIVE + '/almanca-gramer/a1/artikel/'); await page.locator('.a1-comments').scrollIntoViewIfNeeded(); await page.waitForTimeout(1500);
+  ok(!log.requests.some((u) => /app-check|recaptcha/.test(u)), 'APPCHECK_SITE_KEY boşken App Check atlanıyor');
+  await ctx.close();
+}
+
 // ---------- 8. Yorum gönderme (yerel emülatör) ----------
 {
   const { ctx, page, log } = await context({ live: false, emulator: true });
   await page.goto(LOCAL + '/almanca-gramer/a1/artikel/'); await page.waitForTimeout(500);
   const form = page.locator('.a1-comment-form');
   await form.scrollIntoViewIfNeeded();
-  await page.waitForTimeout(3200); // botlara karşı süre tuzağı: formu birkaç saniyeden önce gönderen sayılmaz
-  await form.locator('[name=name]').fill('Deniz');
-  await form.locator('[name=email]').fill('deniz@example.com');
-  await form.locator('[name=comment]').fill('Artikel konusunu çok iyi anladım, teşekkürler.');
-  await form.locator('[name=consent]').check();
+  const fillComment = async () => {
+    await form.locator('[name=name]').fill('Deniz');
+    await form.locator('[name=email]').fill('deniz@example.com');
+    await form.locator('[name=comment]').fill('Artikel konusunu çok iyi anladım, teşekkürler.');
+    await form.locator('[name=consent]').check();
+  };
+  // Süre tuzağı: sayfa açıldıktan hemen sonra gelen gönderim kaydedilmez (bota başarı gibi görünür).
+  await fillComment(); await form.locator('[type=submit]').click(); await page.waitForTimeout(800);
+  ok(await page.locator('.a1-comment-status.success').count() === 1 && (await listDocs('comments')).length === 0, 'ilk 3 saniyedeki gönderim kaydedilmedi (süre tuzağı)');
+  await page.waitForTimeout(3200);
+  // Gizli "website" alanı (honeypot) doluysa da kayıt yok.
+  await fillComment(); await form.locator('[name=website]').evaluate((el) => { el.value = 'http://spam.example'; });
+  await form.locator('[type=submit]').click(); await page.waitForTimeout(800);
+  ok((await listDocs('comments')).length === 0 && !log.requests.some((u) => u.includes('web3forms')), 'gizli alan dolu gönderim kaydedilmedi (honeypot)');
+  await page.evaluate(() => { const st = document.querySelector('.a1-comment-status'); st.className = 'a1-comment-status'; st.textContent = ''; });
+  await fillComment();
   await form.locator('[type=submit]').click();
   await page.waitForSelector('.a1-comment-status.success', { timeout: 20000 });
   const docs = await listDocs('comments');

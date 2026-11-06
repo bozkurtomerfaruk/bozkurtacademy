@@ -160,10 +160,17 @@ function studentNameOf_(summary) {
   return match ? match[1].trim() : '';
 }
 
+// Yalnızca gerçek bir Google Meet adresi e-postaya (metin ve "Görüşmeye katıl" düğmesi) girer. Etkinlik başka bir
+// adres taşıyorsa (javascript:, http:, meet.google.com.başka-site…) bağlantı eklenmez; "takvim davetinde" yazılır.
+var MEET_PREFIX_ = 'https://meet.google.com/';
+function isMeetUrl_(url) {
+  return typeof url === 'string' && url.indexOf(MEET_PREFIX_) === 0 && !/[\s"'<>]/.test(url);
+}
+
 function meetUrlOf_(event) {
-  if (event.hangoutLink) return event.hangoutLink;
+  if (isMeetUrl_(event.hangoutLink)) return event.hangoutLink;
   var points = (event.conferenceData && event.conferenceData.entryPoints) || [];
-  for (var i = 0; i < points.length; i++) if (points[i].entryPointType === 'video') return points[i].uri;
+  for (var i = 0; i < points.length; i++) if (points[i].entryPointType === 'video' && isMeetUrl_(points[i].uri)) return points[i].uri;
   return '';
 }
 

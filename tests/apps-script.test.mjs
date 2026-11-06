@@ -247,6 +247,28 @@ describe('Hatırlatma gönderimi', () => {
     ctx.sendReminders();
     assert.match(sent[0].body, /https:\/\/meet\.google\.com\/xyz/);
   });
+
+  test('Meet adresi https://meet.google.com/ ile başlamıyorsa düğme ve bağlantı eklenmez', () => {
+    for (const bad of ['javascript:alert(1)', 'http://meet.google.com/abc-defg-hij', 'https://meet.google.com.evil.example/x', 'https://evil.example/?https://meet.google.com/', ' https://meet.google.com/abc', 'https://meet.google.com/a"onmouseover="x']) {
+      const event = lessonEvent({ hangoutLink: bad, conferenceData: { entryPoints: [{ entryPointType: 'video', uri: bad }] } });
+      const { ctx, sent } = load({ now: NOW, events: [event] });
+      ctx.sendReminders();
+      assert.equal(sent.length, 2, bad);
+      for (const m of sent) {
+        assert.doesNotMatch(m.htmlBody, /Görüşmeye katıl/, bad);
+        assert.doesNotMatch(m.body, /Görüşmeye katıl/, bad);
+        assert.match(m.htmlBody, /Görüşme bağlantısı takvim davetinde/, bad);
+        assert.ok(!m.htmlBody.includes(bad.trim()) && !m.body.includes(bad.trim()), bad);
+      }
+    }
+  });
+
+  test('geçersiz hangoutLink varsa conferenceData içindeki gerçek Meet adresi kullanılır', () => {
+    const event = lessonEvent({ hangoutLink: 'javascript:alert(1)', conferenceData: { entryPoints: [{ entryPointType: 'video', uri: 'https://meet.google.com/xyz-abcd-efg' }] } });
+    const { ctx, sent } = load({ now: NOW, events: [event] });
+    ctx.sendReminders();
+    assert.match(sent[0].htmlBody, /<a href="https:\/\/meet\.google\.com\/xyz-abcd-efg"[^>]*>Görüşmeye katıl<\/a>/);
+  });
 });
 
 describe('Zamanlayıcı', () => {

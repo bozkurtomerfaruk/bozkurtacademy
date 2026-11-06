@@ -184,6 +184,15 @@ await resetEmulators();
   await ctx.close();
 }
 
+// ---------- 1a. security.txt ve Jekyll ----------
+{
+  const txt = fs.readFileSync(path.join(ROOT, '.well-known/security.txt'), 'utf8');
+  const expires = new Date(txt.match(/^Expires: (.+)$/m)?.[1]);
+  ok(/^Contact: mailto:\S+@\S+$/m.test(txt) && expires > new Date() && expires - new Date() <= 366 * 864e5, `security.txt: iletişim var, Expires gelecekte ve en çok 1 yıl sonra (${expires.toISOString?.()})`);
+  ok(txt.includes(fs.readFileSync(path.join(ROOT, 'iletisim/index.html'), 'utf8').match(/mailto:([^"?]+)/)[1]), 'security.txt iletişim sayfasındaki e-postayı kullanıyor');
+  ok(/include:\s*\n\s*-\s*\.well-known/.test(fs.readFileSync(path.join(ROOT, '_config.yml'), 'utf8')), '_config.yml .well-known klasörünü yayına dahil ediyor');
+}
+
 // ---------- 1b. GoatCounter (canlı köken; count.js localhost'u ve otomasyon tarayıcısını atlar, burada atlamamalı) ----------
 {
   const { ctx, page, log } = await context({ extraInit: () => Object.defineProperty(Navigator.prototype, 'webdriver', { get: () => false }) });
@@ -278,6 +287,11 @@ await resetEmulators();
   ok(r.connected && r.ev.meetUrl === 'https://meet.google.com/abc-defg-hij', 'Google Identity Services ile bağlanıp Calendar API\'ye etkinlik eklendi');
   ok(log.requests.some((u) => u.startsWith('https://accounts.google.com/gsi/client')) && log.requests.some((u) => u.startsWith('https://www.googleapis.com/calendar/v3/')), 'gsi/client ve Calendar API istekleri CSP\'den geçti');
   ok(!log.requests.some((u) => /calendar-mock\.js/.test(u)), 'calendar-mock.js canlı adreste hiç istenmedi');
+  const direct = await page.evaluate(() => import('/js/account/calendar-mock.js').then(() => 'yüklendi', (e) => 'reddedildi: ' + e.message));
+  ok(direct.startsWith('reddedildi'), `calendar-mock.js canlı adreste doğrudan içe aktarılsa da çalışmıyor (${direct})`);
+  // ?emulator=1 ile de canlıda emülatör/taklit açılmıyor.
+  const viaQuery = await page.evaluate(async () => { history.replaceState(null, '', '?emulator=1'); const m = await import('/js/account/firebase.js?q=1'); return m.emulator; });
+  ok(viaQuery === false, 'canlı adreste ?emulator=1 emülatör modunu açmıyor');
   clean(log, 'takvim bağlantısı', { errors: false });
   await ctx.close();
 }

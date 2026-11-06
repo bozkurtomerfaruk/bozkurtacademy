@@ -1,9 +1,12 @@
 // Giriş, kayıt ve panellerin ortak yardımcıları.
 import { auth, db, fa, fs } from './firebase.js';
+import '../html.js'; // window.baHtml (escapeHtml, safeUrl): sitenin geri kalanıyla aynı denetim
+const { safeUrl } = window.baHtml;
 
 export const $ = (id) => document.getElementById(id);
 
-// Güvenli eleman oluşturucu: metinler her zaman textContent olarak eklenir.
+// Güvenli eleman oluşturucu: metinler her zaman textContent olarak eklenir. href/src yalnızca https: ya da göreli
+// olabilir (Firestore'dan gelen meetUrl, docUrl…); başka bir şema (javascript:, data:, http:) gelirse nitelik yazılmaz.
 export function h(tag, attrs = {}, ...children){
   const el = document.createElement(tag);
   for(const [key, value] of Object.entries(attrs || {})){
@@ -12,6 +15,7 @@ export function h(tag, attrs = {}, ...children){
     else if(key === 'dataset') Object.assign(el.dataset, value);
     else if(key.startsWith('on') && typeof value === 'function') el.addEventListener(key.slice(2), value);
     else if(value === true) el.setAttribute(key, '');
+    else if(key === 'href' || key === 'src'){ const url = safeUrl(value); if(url) el.setAttribute(key, url); }
     else el.setAttribute(key, value);
   }
   for(const child of children.flat()){
@@ -23,8 +27,7 @@ export function h(tag, attrs = {}, ...children){
 
 // Bağlantılar sadece https olabilir ve yeni sekmede açılır.
 export function safeLink(url, text){
-  let ok = false;
-  try{ ok = new URL(url).protocol === 'https:'; }catch(_){}
+  const ok = /^https:/i.test(safeUrl(url));
   if(!ok) return h('span', {}, text);
   return h('a', { href: url, target: '_blank', rel: 'noopener noreferrer' }, text);
 }

@@ -1,5 +1,6 @@
 // innerHTML'e kaçışsız değer verilmesini yakalayan basit denetim (CI: .github/workflows/site-pages.yml).
 //   node scripts/check-html-escape.mjs
+// Ayrıca bütün sayfa ve betiklerde target="_blank" bağlantıların rel="noopener noreferrer" taşıdığını denetler.
 //
 // HTML üreten her şablon dizgisi (içinde <etiket bulunan `...`) taranır. İçindeki her ${...} şunlardan biri olmalı:
 //  - kaçışlayıcı/temizleyici çağrısı: escapeHtml(…), esc(…), h(…) (js/a1-lessons.js), safeUrl(…), sanitizeSvg(…), window.baHtml.…(…)
@@ -179,7 +180,37 @@ export function check(file, src = fs.readFileSync(path.join(root, file), 'utf8')
   return problems;
 }
 
+// target="_blank" bağlantılar rel="noopener noreferrer" taşımalı (HTML sayfaları ve js/ altındaki betikler).
+export function checkBlankTargets(){
+  const problems = [];
+  const skip = new Set(['node_modules', '.git', 'docs', 'tests', '.claude', 'Material', 'vendor']);
+  (function walk(dir){
+    for(const entry of fs.readdirSync(dir, { withFileTypes: true })){
+      if(skip.has(entry.name)) continue;
+      const full = path.join(dir, entry.name);
+      if(entry.isDirectory()){ walk(full); continue; }
+      if(!/\.(html|js|mjs)$/.test(entry.name)) continue;
+      const rel = path.relative(root, full);
+      const lines = fs.readFileSync(full, 'utf8').split('\n');
+      lines.forEach((line, i) => {
+        if(!/_blank/.test(line)) return;
+        for(const tag of line.match(/<a\b[^>]*target="_blank"[^>]*>/g) || [])
+          if(!/rel="[^"]*noopener[^"]*noreferrer|rel="[^"]*noreferrer[^"]*noopener/.test(tag)) problems.push(`${rel}:${i + 1}: ${tag.slice(0, 90)}`);
+        // Betiklerde: aynı satırda ya da sonraki iki satırda rel "noopener noreferrer" olmalı.
+        if(/target\s*[:=]\s*['"]_blank['"]/.test(line) && !/noopener noreferrer/.test(lines.slice(i, i + 3).join(' ')))
+          problems.push(`${rel}:${i + 1}: ${line.trim().slice(0, 90)}`);
+      });
+    }
+  })(root);
+  return problems;
+}
+
 if(process.argv[1] === fileURLToPath(import.meta.url)){
+  const blank = checkBlankTargets();
+  if(blank.length){
+    console.error(`FAIL: target="_blank" bağlantıda rel="noopener noreferrer" yok:\n  ` + blank.join('\n  '));
+    process.exit(1);
+  }
   const problems = FILES.filter((f) => fs.existsSync(path.join(root, f))).flatMap((f) => check(f));
   if(problems.length){
     console.error(`FAIL: HTML şablonunda kaçışsız ${problems.length} değer:\n  ` + problems.join('\n  '));

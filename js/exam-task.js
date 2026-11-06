@@ -7,9 +7,8 @@
   const t = key => window.BA?.t ? window.BA.t(key) : key;
   const fill = (key, values) => t(key).replace(/\{(\w+)\}/g, (_, name) => values[name] ?? '');
   const lang = () => window.BA?.lang || 'tr';
-  const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({
-    '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#039;'
-  })[ch]);
+  const esc = value => window.baHtml.escapeHtml(value); // ortak kaçışlayıcı: js/html.js
+  // html-safe-names: mark() paragraphs status solution evidence outcome badge prompt note locked options result navActions()
 
   // Answer words stay German in every interface language, as on the exam paper.
   const FIXED_OPTIONS = {
@@ -84,13 +83,14 @@
       for (const mark of found) {
         if (mark.at < from) continue;
         html += esc(paragraph.slice(from, mark.at));
-        html += `<span class="task-evidence" id="${mark.id}" data-q="${esc(mark.number)}" tabindex="-1">${esc(mark.quote)}</span>`;
+        html += `<span class="task-evidence" id="${esc(mark.id)}" data-q="${esc(mark.number)}" tabindex="-1">${esc(mark.quote)}</span>`;
         from = mark.at + mark.quote.length;
       }
       // {{10}} is a numbered gap (Goethe B2 Teil 2), {{0=…}} the example gap that is already filled in.
+      // The replacements run on text that esc() has already escaped; sentence and number need no second escape.
       return (html + esc(paragraph.slice(from)))
-        .replace(/\{\{0=(.+?)\}\}/g, (all, sentence) => `<span class="task-gap is-example"><span class="task-gap-no">0</span> ${sentence}</span>`)
-        .replace(/\{\{(\d+)\}\}/g, (all, number) => `<span class="task-gap" data-gap="${number}"><span class="task-gap-no">${number}</span><span class="visually-hidden"> ${esc(t('taskGap'))}</span><span class="task-gap-pick"></span></span>`);
+        .replace(/\{\{0=(.+?)\}\}/g, (all, sentence) => `<span class="task-gap is-example"><span class="task-gap-no">0</span> ${sentence}</span>`) /* html-safe: zaten esc() edilmiş metin */
+        .replace(/\{\{(\d+)\}\}/g, (all, number) => `<span class="task-gap" data-gap="${Number(number)}"><span class="task-gap-no">${Number(number)}</span><span class="visually-hidden"> ${esc(t('taskGap'))}</span><span class="task-gap-pick"></span></span>`);
     };
     const paragraphs = text.paragraphs.map(paragraph => {
       // { "heading": "Ruhezeiten" } is a subheading inside the text (rules, notices).
@@ -138,9 +138,9 @@
       const options = optionsFor(question, group).map(option =>
         `<option value="${esc(option.value)}"${given === option.value ? ' selected' : ''}>${esc(group.none !== false && option.value === noneOf(group) ? `${option.value.toUpperCase()} – ${t('taskNoMatch')}` : option.label)}</option>`).join('');
       return `<div class="task-q task-q--select${question.example ? ' is-example' : ''}${outcome}" data-q="${esc(number)}">
-        <label class="task-q-head" for="${name}">${badge}${prompt}</label>
+        <label class="task-q-head" for="${esc(name)}">${badge}${prompt}</label>
         ${note}
-        <select id="${name}" data-task-answer="${esc(number)}"${locked}>
+        <select id="${esc(name)}" data-task-answer="${esc(number)}"${locked}>
           <option value=""${given == null ? ' selected' : ''}>${esc(t('taskChoose'))}</option>${options}
         </select>
         ${result}
@@ -152,12 +152,12 @@
     const full = multi(question) && [].concat(given || []).length >= weight(question);
     const options = optionsFor(question, group).map(option => `${multi(question) && (question.breaks || []).includes(option.value) ? '<span class="task-break" aria-hidden="true"></span>' : ''}
       <label class="task-option${chosen(option.value) ? ' is-chosen' : ''}${done && [].concat(question.answer).includes(option.value) ? ' is-answer' : ''}">
-        <input type="${multi(question) ? 'checkbox' : 'radio'}" name="${name}" value="${esc(option.value)}" data-task-answer="${esc(number)}"${chosen(option.value) ? ' checked' : ''}${locked || (full && !chosen(option.value) ? ' disabled' : '')}>
+        <input type="${multi(question) ? 'checkbox' : 'radio'}" name="${esc(name)}" value="${esc(option.value)}" data-task-answer="${esc(number)}"${chosen(option.value) ? ' checked' : ''}${locked || (full && !chosen(option.value) ? ' disabled' : '')}>
         ${multi(question) ? '' : `<span class="task-option-key">${esc(question.type === 'abc' || pair ? option.value : option.label)}</span>`}
         ${question.type === 'abc' || multi(question) ? `<span class="task-option-text" lang="de">${esc(option.label)}</span>` : ''}
         ${pair && pairTitle(group, option.value) ? `<span class="task-option-text" lang="de">${esc(pairTitle(group, option.value))}</span>` : ''}
       </label>`).join('');
-    return `<fieldset class="task-q task-q--${pair ? 'pair' : question.type}${question.example ? ' is-example' : ''}${outcome}" data-q="${esc(number)}">
+    return `<fieldset class="task-q task-q--${pair ? 'pair' : esc(question.type)}${question.example ? ' is-example' : ''}${outcome}" data-q="${esc(number)}">
       <legend class="task-q-head">${badge}${prompt}</legend>
       ${note}
       <div class="task-options">${options}</div>

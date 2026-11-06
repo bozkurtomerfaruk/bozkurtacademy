@@ -16,7 +16,7 @@ import { CSP } from './csp.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const check = process.argv.includes('--check');
 const SITEMAP_DATE = '2026-11-04';
-const V = { themeInit: 1, style: 12, base: 11, landing: 1, app: 33, theme: 10, analytics: 7, a1lessons: 19, a1css: 8, grammarPages: 1, blog: 1 };
+const V = { themeInit: 1, html: 1, style: 12, base: 11, landing: 1, app: 33, theme: 10, analytics: 7, a1lessons: 19, a1css: 8, grammarPages: 1, blog: 1 };
 const OG_IMAGE = `${SITE}/images/og-bozkurt-academy.jpg`;
 
 const SECURITY = `
@@ -213,6 +213,7 @@ function head(page, html) {
 
 const scripts = (page = {}) => `
   <script src="/js/app.js?v=${V.app}"></script>${page.kind === 'lesson' ? `
+  <script src="/js/html.js?v=${V.html}"></script>
   <script src="/js/a1-lessons.js?v=${V.a1lessons}"></script>` : ''}
   <script src="/js/theme.js?v=${V.theme}"></script>
   <script defer data-goatcounter="https://bozkurtacademy.goatcounter.com/count" data-goatcounter-settings='{"no_onload": true}' src="/js/vendor/count.js?v=2.7.0"></script>

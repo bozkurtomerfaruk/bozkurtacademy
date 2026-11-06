@@ -18,11 +18,9 @@
   const lang = () => window.BA?.lang || 'tr';
   const loc = value => (value && typeof value === 'object') ? (value[lang()] ?? value.tr ?? '') : (value ?? '');
 
-  function escapeHtml(value) {
-    return String(value ?? '').replace(/[&<>"']/g, ch => ({
-      '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#039;'
-    })[ch]);
-  }
+  // Ortak kaçışlayıcı: js/html.js (bu dosyadan önce yüklenir).
+  function escapeHtml(value) { return window.baHtml.escapeHtml(value); }
+  // html-safe-names: inner body top badges content cards stars() renderSteps() exerciseLink() heading()
 
   function decodePart(value) {
     try { return decodeURIComponent(value).toLowerCase(); }
@@ -136,18 +134,18 @@
     return `<ol class="exam-steps">${items.map((item, index) => {
       const number = index + 1;
       const state = number < current ? 'done' : number === current ? 'current' : 'todo';
-      const inner = `<span class="exam-step-no" aria-hidden="true">${number}</span><span class="exam-step-text"><span class="exam-step-label">${escapeHtml(item.label)}</span>${item.value ? `<strong>${escapeHtml(item.value)}</strong>` : ''}</span>`;
+      const inner = `<span class="exam-step-no" aria-hidden="true">${Number(number)}</span><span class="exam-step-text"><span class="exam-step-label">${escapeHtml(item.label)}</span>${item.value ? `<strong>${escapeHtml(item.value)}</strong>` : ''}</span>`;
       const body = (state === 'done' || route.set) && item.href
-        ? `<a href="${item.href}" aria-label="${escapeHtml(fill('examStepBack', { step: item.label, value: item.value || '' }))}">${inner}</a>`
+        ? `<a href="${escapeHtml(item.href)}" aria-label="${escapeHtml(fill('examStepBack', { step: item.label, value: item.value || '' }))}">${inner}</a>`
         : `<span class="exam-step-static">${inner}</span>`;
-      return `<li class="exam-step is-${state}"${state === 'current' ? ' aria-current="step"' : ''}>${body}</li>`;
+      return `<li class="exam-step is-${escapeHtml(state)}"${state === 'current' ? ' aria-current="step"' : ''}>${body}</li>`;
     }).join('')}</ol>`;
   }
 
   function heading(title, sub, backHref) {
     return `
       <div class="exam-flow-head">
-        ${backHref ? `<a class="btn ghost exam-back" href="${backHref}">← <span>${escapeHtml(t('examBack'))}</span></a>` : ''}
+        ${backHref ? `<a class="btn ghost exam-back" href="${escapeHtml(backHref)}">← <span>${escapeHtml(t('examBack'))}</span></a>` : ''}
         <h2 id="examFlowTitle" tabindex="-1">${escapeHtml(title)}</h2>
         <p class="sub">${escapeHtml(sub)}</p>
       </div>`;
@@ -156,7 +154,7 @@
   function stars(difficulty) {
     if (!difficulty) return '';
     const text = fill('examDifficulty', { n: difficulty });
-    return `<span class="exam-stars" role="img" aria-label="${escapeHtml(text)}" title="${escapeHtml(text)}">${'★'.repeat(difficulty)}<span class="exam-stars-off">${'★'.repeat(5 - difficulty)}</span></span>`;
+    return `<span class="exam-stars" role="img" aria-label="${escapeHtml(text)}" title="${escapeHtml(text)}">${escapeHtml('★'.repeat(difficulty))}<span class="exam-stars-off">${escapeHtml('★'.repeat(5 - difficulty))}</span></span>`;
   }
 
   /* Step 1 */
@@ -180,7 +178,7 @@
       if (exam.comingSoon) {
         return `<li><div class="exam-card is-soon" aria-disabled="true" aria-label="${escapeHtml(fill('examSoonLabel', { name: exam.name }))}">${content}</div></li>`;
       }
-      return `<li><a class="exam-card" href="${hashFor(exam.id)}" aria-label="${escapeHtml(fill('examChooseLabel', { name: exam.fullName ? `${exam.name} (${exam.fullName})` : exam.name }))}">${content}</a></li>`;
+      return `<li><a class="exam-card" href="${escapeHtml(hashFor(exam.id))}" aria-label="${escapeHtml(fill('examChooseLabel', { name: exam.fullName ? `${exam.name} (${exam.fullName})` : exam.name }))}">${content}</a></li>`;
     }).join('');
     return heading(t('examChooseExam'), t('examChooseExamSub'), null) + `<ul class="exam-grid" role="list">${cards}</ul>`;
   }
@@ -190,7 +188,7 @@
     const cards = exam.levels.map(level => {
       const meta = levelMeta(level);
       const tag = loc(meta.tag);
-      return `<li><a class="exam-card exam-format-card" href="${hashFor(exam.id, level.id)}" aria-label="${escapeHtml(fill('examChooseLabel', { name: loc(meta.name) + (tag ? ` (${tag})` : '') }))}">
+      return `<li><a class="exam-card exam-format-card" href="${escapeHtml(hashFor(exam.id, level.id))}" aria-label="${escapeHtml(fill('examChooseLabel', { name: loc(meta.name) + (tag ? ` (${tag})` : '') }))}">
         ${tag ? `<span class="exam-card-top"><span class="exam-tag">${escapeHtml(tag)}</span></span>` : ''}
         <h3>${escapeHtml(loc(meta.name))}</h3>
         <p>${escapeHtml(loc(meta.description))}</p>
@@ -207,7 +205,7 @@
     const cards = exam.levels.map(level => {
       const meta = levelMeta(level);
       const code = loc(meta.code);
-      return `<li><a class="exam-card exam-level-card" href="${hashFor(exam.id, level.id)}" aria-label="${escapeHtml(fill('examChooseLabel', { name: `${code} – ${loc(meta.name)}` }))}">
+      return `<li><a class="exam-card exam-level-card" href="${escapeHtml(hashFor(exam.id, level.id))}" aria-label="${escapeHtml(fill('examChooseLabel', { name: `${code} – ${loc(meta.name)}` }))}">
         <span class="exam-level-badge">${escapeHtml(code)}</span>
         <div class="exam-level-body">
           <h3>${escapeHtml(loc(meta.name))}</h3>
@@ -228,7 +226,7 @@
       const info = data.sections[section.id] || { name: section.id, translation: '', description: '' };
       const translation = loc(info.translation);
       const showTranslation = translation && translation !== info.name;
-      return `<li><a class="exam-card" href="${routeHash({ ...route, section })}" aria-label="${escapeHtml(fill('examChooseLabel', { name: showTranslation ? `${info.name} (${translation})` : info.name }) + ', ' + partCount(exam, section.teile.length))}">
+      return `<li><a class="exam-card" href="${escapeHtml(routeHash({ ...route, section }))}" aria-label="${escapeHtml(fill('examChooseLabel', { name: showTranslation ? `${info.name} (${translation})` : info.name }) + ', ' + partCount(exam, section.teile.length))}">
         <span class="exam-card-top"><span class="exam-card-kicker">${escapeHtml(partCount(exam, section.teile.length))}</span></span>
         <h3><span lang="de">${escapeHtml(info.name)}</span>${showTranslation ? ` <span class="exam-translation">${escapeHtml(translation)}</span>` : ''}</h3>
         <p>${escapeHtml(loc(info.description))}</p>
@@ -242,11 +240,12 @@
   function exerciseLink(exercise, teilLabel, index, route, teilNumber) {
     const title = setTitle(exercise, index);
     // A set of this site opens in the exam player; otherwise href is an address of this site or a full URL.
-    const href = exercise.set ? routeHash({ ...route, teil: teilNumber, set: exercise }) : String(exercise.href || '');
-    const external = /^https?:\/\//i.test(href) && !href.startsWith(location.origin);
+    // Veriden gelen adres yalnızca https: ya da göreli olabilir (javascript:, data:, http: → bağlantı boş kalır).
+    const href = exercise.set ? routeHash({ ...route, teil: teilNumber, set: exercise }) : window.baHtml.safeUrl(exercise.href);
+    const external = /^https:\/\//i.test(href) && !href.startsWith(location.origin);
     return `<li class="exam-set">
       <span class="exam-set-title">${escapeHtml(title)}</span>
-      <a class="btn primary exam-start" href="${escapeHtml(href)}"${external ? ' target="_blank" rel="noopener"' : ''}
+      <a class="btn primary exam-start" href="${escapeHtml(href)}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}
         aria-label="${escapeHtml(fill('examStartLabel', { name: `${teilLabel} – ${title}` }) + (external ? ` (${t('examNewTab')})` : ''))}">${escapeHtml(t('examStart'))}</a>
     </li>`;
   }
@@ -267,7 +266,7 @@
            <button class="btn exam-start" type="button" disabled aria-label="${escapeHtml(fill('examStartSoonLabel', { name: label }))}">${escapeHtml(t('examStart'))}</button>`;
       return `<li><article class="exam-card exam-teil${exercises.length ? '' : ' is-soon'}" aria-labelledby="exam-teil-${index + 1}">
         <div class="exam-card-top">
-          <h3 id="exam-teil-${index + 1}" lang="de">${label}</h3>
+          <h3 id="exam-teil-${index + 1}" lang="de">${escapeHtml(label)}</h3>
           ${exercises.length ? '' : `<span class="exam-badge">${escapeHtml(t('examSoon'))}</span>`}
         </div>
         ${title ? `<p class="exam-teil-title">${escapeHtml(title)}</p>` : ''}

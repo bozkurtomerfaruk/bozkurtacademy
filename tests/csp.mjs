@@ -311,6 +311,39 @@ await resetEmulators();
   await ctx.close();
 }
 
+// ---------- 7b. XSS: veriden gelen kötü niyetli metin, seçenek, açıklama ve çizim (canlı köken) ----------
+{
+  const { ctx, page, log } = await context();
+  const BAD = '<img src=x onerror="window.__xss=1">';
+  await ctx.route(LIVE + '/data/a1/artikel.json*', (route) => {
+    const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/a1/artikel.json'), 'utf8'));
+    const ex = data.exercises.find((e) => e.id === 'kontext-1');
+    ex.title = { tr: 'Başlık ' + BAD, de: 'Titel ' + BAD, en: 'Title ' + BAD };
+    Object.assign(ex.questions[0], { word: 'Wort' + BAD, options: [BAD, 'die', 'das'], correct: BAD, explanations: { tr: 'Açıklama ' + BAD, de: BAD, en: BAD } });
+    route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(data) });
+  });
+  await ctx.route(LIVE + '/data/cocuk/resimler.json*', (route) => {
+    const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/cocuk/resimler.json'), 'utf8'));
+    for(const key of Object.keys(data.pictures)) data.pictures[key] += '<script>window.__xss=2</script><image href="x" onerror="window.__xss=3"/><a href="javascript:window.__xss=4"><rect width="1" height="1"/></a>';
+    route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(data) });
+  });
+  await page.goto(LIVE + '/#exercises/A1/artikel/kontext-1/q1'); await page.waitForSelector('.quiz-option');
+  await page.locator('.quiz-option', { hasText: 'die' }).click();
+  await page.click('#checkAnswerBtn'); await page.waitForTimeout(400);
+  const quiz = await page.evaluate(() => ({ imgs: document.querySelectorAll('#quizOptions img, #quizFeedback img').length, text: document.querySelector('#quizFeedback').textContent }));
+  ok(quiz.imgs === 0 && quiz.text.includes('<img src=x'), 'alıştırma: seçenek, doğru cevap ve açıklamadaki HTML metin olarak gösteriliyor');
+  await page.goto(LIVE + '/#exercises/A1/artikel'); await page.waitForSelector('[data-exercise]');
+  ok(await page.locator('.exercise-set-card img').count() === 0, 'alıştırma listesi: başlıktaki HTML metin olarak gösteriliyor');
+  await page.goto(LIVE + '/#artikel-evleri'); await page.waitForSelector('[data-ae-theme]');
+  await page.locator('[data-ae-theme]').first().click(); await page.waitForSelector('.ae-pic svg');
+  const pic = await page.locator('.ae-pic svg').innerHTML();
+  ok(!/script|image|<a\b|javascript/i.test(pic) && /<(path|circle|rect|g)\b/.test(pic), 'Artikel Evleri: çizimde yalnızca izinli SVG öğeleri kaldı');
+  await page.waitForTimeout(300);
+  ok(!(await page.evaluate(() => window.__xss)), 'kötü niyetli veriden hiçbir betik çalışmadı');
+  clean(log, 'XSS verisi');
+  await ctx.close();
+}
+
 // ---------- 8. Yorum gönderme (yerel emülatör) ----------
 {
   const { ctx, page, log } = await context({ live: false, emulator: true });

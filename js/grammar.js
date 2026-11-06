@@ -213,11 +213,8 @@
   const t = key => window.BA?.t ? window.BA.t(key) : key;
   const fill = (key, values) => t(key).replace(/\{(\w+)\}/g, (_, name) => values[name] ?? '');
 
-  function escapeHtml(value) {
-    return String(value ?? '').replace(/[&<>"']/g, ch => ({
-      '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#039;'
-    })[ch]);
-  }
+  // Ortak kaçışlayıcı: js/html.js (bu dosyadan önce yüklenir).
+  function escapeHtml(value) { return window.baHtml.escapeHtml(value); }
 
   function injectCss() {
     if (document.getElementById('grammarHubCss')) return;
@@ -502,8 +499,8 @@
     if (!el) return;
 
     el.innerHTML = Object.keys(TOPICS).map(level => `
-      <button class="grammar-level-tab ba-level-tab ${level === currentLevel ? 'active' : ''}" type="button" aria-pressed="${level === currentLevel}" data-grammar-level="${level}">
-        <span class="grammar-level-code ba-level-code">${level}</span>
+      <button class="grammar-level-tab ba-level-tab ${level === currentLevel ? 'active' : ''}" type="button" aria-pressed="${level === currentLevel}" data-grammar-level="${escapeHtml(level)}">
+        <span class="grammar-level-code ba-level-code">${escapeHtml(level)}</span>
         <span class="grammar-level-name ba-level-name">${escapeHtml(t('grammarLevelNames' + level))}</span>
         <span class="grammar-level-count ba-level-meta">${TOPICS[level].length} ${escapeHtml(t('grammarLevelTopics'))}</span>
       </button>
@@ -566,7 +563,7 @@
         </div>
         <p class="ba-subresults-sub">${escapeHtml(t('grammarSectionsSub'))}</p>
         <div class="ba-toc">${sections.slice(0, SECTION_LIMIT).map(item => `
-          <a class="ba-toc-item" href="/almanca-gramer/${escapeHtml(item.level.toLowerCase())}/${encodeURIComponent(item.id)}/#a1-step-${item.index}" data-grammar-section>
+          <a class="ba-toc-item" href="/almanca-gramer/${escapeHtml(item.level.toLowerCase())}/${encodeURIComponent(item.id)}/#a1-step-${Number(item.index)}" data-grammar-section>
             <span class="ba-toc-top"><span class="ba-toc-level">${escapeHtml(item.level)}</span></span>
             <h4>${escapeHtml(item.title)}</h4>
             <p>${escapeHtml(item.lesson)}</p>

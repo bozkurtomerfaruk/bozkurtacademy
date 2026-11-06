@@ -203,6 +203,8 @@ Sitede doğrulama dosyası (`google4cc3144aaa693325.html`) zaten var. Yani mülk
 
 Bunu benimle yapıyorsan, "şu konuda yeni yazı" demen yeterli; dosyaları ben hazırlarım, sen okuyup onaylarsın.
 
+**Haftalık otomatik yazı:** Her pazartesi çalışan zamanlanmış görev `docs/haftalik-blog.md` talimatına göre takvimdeki sıradaki yazıyı taslak olarak hazırlar. Okuyup "yayınla" demen yeterli. Görev çalışmazsa Claude'a "Haftalık blog yazısını yaz" yazman da aynı işi yapar.
+
 ---
 
 ## 6. Ücretsiz backlink (dış bağlantı) fırsatları

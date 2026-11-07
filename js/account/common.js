@@ -204,7 +204,9 @@ export function writingUrl({ exam, level, teil, set }){
   return `index.html#exams/${[exam, level, WRITING, String(teil), set].map(encodeURIComponent).join('/')}`;
 }
 // Öğrenci geri bildirimi henüz açmadıysa yeni sayılır.
-export const unseenFeedback = (w) => Boolean(w.feedbackAt) && (!w.seenAt || toDate(w.seenAt) < toDate(w.feedbackAt));
+// Yeni geri bildirim: öğretmenin geri bildirimi (feedbackAt) ya da "Anında göster" modundaki yapay zekâ önerisi (aiAt).
+export const feedbackTime = (w) => Math.max(toDate(w.feedbackAt)?.getTime() || 0, toDate(w.aiAt)?.getTime() || 0);
+export const unseenFeedback = (w) => feedbackTime(w) > 0 && (!w.seenAt || toDate(w.seenAt).getTime() < feedbackTime(w));
 
 export async function loadWritings(uid){
   const snap = await fs.getDocs(fs.collection(db, 'users', uid, 'writings'));

@@ -22,4 +22,9 @@ export const APPCHECK_SITE_KEY = '';
 
 // Google Calendar (sadece öğretmen): Google Cloud → Google Auth Platform → İstemciler → Web uygulaması.
 // Gizli anahtar (secret) gerekmez. Boşken canlı sitede Takvim bağlantısı kurulmaz, dersler yine Firestore'a kaydedilir.
+// Schreiben yapay zekâ kontrolü (madde 7 Aşama B): Cloudflare Worker'ın adresi (https://….workers.dev, sonunda / yok).
+// Boşken yapay zekâ kontrolü hiç çağrılmaz (Aşama A gibi sadece öğretmen geri bildirimi). Kurulum: docs/yapay-zeka-kurulum.md.
+// Değiştirince scripts/csp.mjs'teki AI_WORKER_ORIGIN da aynı adres olmalı (node scripts/build-pages.mjs).
+export const AI_WORKER_URL = '';
+
 export const GOOGLE_CLIENT_ID = '8848854838-71mdsvir8jgidnqfnsl67ff357mgbdip.apps.googleusercontent.com';

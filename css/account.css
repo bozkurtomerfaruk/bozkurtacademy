@@ -330,3 +330,26 @@
 .acc-writing textarea:focus-visible{outline:3px solid var(--ba-focus);outline-offset:2px}
 .acc-feedback{margin:0;padding:12px 14px;border-left:5px solid var(--ba-accent);border-radius:0 var(--ba-radius-small) var(--ba-radius-small) 0;background:var(--ba-paper-2);line-height:1.55;white-space:pre-wrap}
 .acc-new-dot{display:inline-block;width:10px;height:10px;margin-right:6px;border-radius:50%;background:var(--ba-wrong);vertical-align:middle}
+/* Schreiben, yapay zekâ (Aşama B): öğretmenin taslak paneli ve öğrencinin işaretli geri bildirimi. */
+.acc-badge.info{background:var(--ba-der-bg);color:var(--ba-der)}
+.acc-ai-draft{display:grid;gap:10px;padding:14px 16px;border:2px dashed var(--ba-line-strong);border-radius:var(--ba-radius-small)}
+.acc-ai-draft h3{margin:0;font-size:var(--ba-body)}
+.acc-ai-items{display:grid;gap:12px;margin:0;padding-left:22px}
+.acc-ai-item{display:grid;gap:6px;padding-bottom:12px;border-bottom:1px solid var(--ba-line)}
+.acc-ai-item .field{display:grid;gap:4px;margin:0}
+.acc-ai-item input{width:100%;min-height:40px;padding:6px 10px;border:2px solid var(--ba-line-strong);border-radius:var(--ba-radius-small);background:var(--ba-paper);color:var(--ba-ink);font:inherit}
+.acc-ai-item input:focus-visible{outline:3px solid var(--ba-focus);outline-offset:2px}
+.acc-ai-item textarea{min-height:60px}
+.acc-ai-item .btn{justify-self:start}
+.acc-ai-original{margin:0;overflow-wrap:anywhere}
+.acc-writing mark{padding:0 2px;border-radius:3px;background:var(--ba-wrong-bg);color:var(--ba-wrong)}
+.acc-mark-no{margin-left:2px;font-size:.75em;font-weight:700;vertical-align:super}
+.acc-feedback-items{display:grid;gap:8px;margin:0;padding-left:24px;line-height:1.5}
+.acc-feedback-items del{color:var(--ba-wrong)}
+.acc-feedback-items ins{color:var(--ba-right);text-decoration:none;font-weight:600}
+.acc-ai-mode{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.acc-ai-mode select{min-height:40px;padding:6px 10px;border:2px solid var(--ba-line-strong);border-radius:var(--ba-radius-small);background:var(--ba-paper);color:var(--ba-ink);font:inherit}
+.acc-feedback-block{display:grid;gap:8px}
+.acc-ai-consent{display:grid;gap:8px;margin:0 0 16px;justify-items:start}
+#aiMode:not([hidden]){display:grid;gap:6px;justify-items:start}
+#aiMode select{max-width:100%}

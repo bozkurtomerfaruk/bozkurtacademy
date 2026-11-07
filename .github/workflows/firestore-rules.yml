@@ -4,9 +4,9 @@ permissions:
 
 on:
   push:
-    paths: ['firestore.rules', 'tests/**', 'scripts/placement-cleanup.mjs', 'apps-script/**', 'js/html.js', 'scripts/check-html-escape.mjs', 'package.json', 'package-lock.json', 'firebase.json', '.github/workflows/firestore-rules.yml']
+    paths: ['firestore.rules', 'tests/**', 'worker/**', 'scripts/placement-cleanup.mjs', 'apps-script/**', 'js/html.js', 'scripts/check-html-escape.mjs', 'package.json', 'package-lock.json', 'firebase.json', '.github/workflows/firestore-rules.yml']
   pull_request:
-    paths: ['firestore.rules', 'tests/**', 'scripts/placement-cleanup.mjs', 'apps-script/**', 'js/html.js', 'scripts/check-html-escape.mjs', 'package.json', 'package-lock.json', 'firebase.json', '.github/workflows/firestore-rules.yml']
+    paths: ['firestore.rules', 'tests/**', 'worker/**', 'scripts/placement-cleanup.mjs', 'apps-script/**', 'js/html.js', 'scripts/check-html-escape.mjs', 'package.json', 'package-lock.json', 'firebase.json', '.github/workflows/firestore-rules.yml']
 jobs:
   rules:
     runs-on: ubuntu-latest

@@ -60,7 +60,7 @@ function showNote(key, type, where){
 }
 
 async function connect(){
-  const [{ auth, configured, db, fs }, { TEACHER_UID }, { registerStrings }] = await Promise.all([
+  const [{ auth, configured, db, fs, emulator }, { TEACHER_UID, AI_WORKER_URL }, { registerStrings }] = await Promise.all([
     import('./firebase.js'), import('./config.js'), import('./i18n.js')
   ]);
   if(!configured) return;
@@ -87,8 +87,24 @@ async function connect(){
     writingQueue.splice(0).forEach((d) => writingNote('wtNotActive', 'error', d.noteIn));
     return;
   }
+  // Yapay zekâ kontrolü (Aşama B): kayıttan sonra Worker'a sadece metnin kimliği gider; Worker metni kendisi okur.
+  // Öğrenciye hiçbir şey gösterilmez: "Taslak" modunda sonuç önce öğretmene düşer. Adres boşsa hiç çağrılmaz.
+  const workerUrl = emulator ? 'http://127.0.0.1:8787' : AI_WORKER_URL;
+  const askAi = async (writingId) => {
+    if(!workerUrl) return;
+    try{
+      await fetch(`${workerUrl}/check`, {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${await user.getIdToken()}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ writingId })
+      });
+    }catch(error){ console.warn('ai check', error); }
+  };
   saveWriting = (detail) => submitWriting({ db, fs, uid: user.uid, detail })
-    .then((outcome) => writingNote(outcome === 'limit' ? 'wtLimit' : 'wtSaved', outcome === 'limit' ? 'error' : 'success', detail.noteIn))
+    .then((outcome) => {
+      writingNote(outcome.status === 'limit' ? 'wtLimit' : 'wtSaved', outcome.status === 'limit' ? 'error' : 'success', detail.noteIn);
+      if(outcome.id) askAi(outcome.id);
+    })
     .catch((error) => { console.error(error); writingNote('wtSaveFailed', 'error', detail.noteIn); });
   save = async (detail) => {
     try{
@@ -121,7 +137,7 @@ async function submitWriting({ db, fs, uid, detail }){
   const limit = (await fs.getDoc(limitRef)).data();
   const startMs = limit?.windowStart?.toMillis?.();
   let fresh = !limit || !startMs || Date.now() - startMs >= DAY_MS;
-  if(!fresh && limit.count >= WRITING_LIMIT) return 'limit';
+  if(!fresh && limit.count >= WRITING_LIMIT) return { status: 'limit' };
   const attempt = async () => {
     const ref = fs.doc(fs.collection(db, 'users', uid, 'writings'));
     const batch = fs.writeBatch(db);
@@ -136,13 +152,13 @@ async function submitWriting({ db, fs, uid, detail }){
       lastId: ref.id
     });
     await batch.commit();
-    return 'saved';
+    return { status: 'saved', id: ref.id };
   };
   try{ return await attempt(); }
   catch(error){
     if(error?.code !== 'permission-denied' || !limit) throw error;
     fresh = !fresh;
-    if(!fresh && limit.count >= WRITING_LIMIT) return 'limit';
+    if(!fresh && limit.count >= WRITING_LIMIT) return { status: 'limit' };
     return attempt();
   }
 }

@@ -1054,3 +1054,98 @@ describe('Schreiben metinleri', () => {
     await assertSucceeds(deleteDoc(doc(teacherDb(), 'users/ayse/writings/w1')));
   });
 });
+
+// Schreiben Aşama B: yapay zekâ hesabı (aiUid), taslaklar (aiDrafts), sayaçlar (aiLimits), mod (settings/ai).
+const AI = rules.match(/function aiUid\(\)\s*{\s*return '([^']+)'/)[1];
+const aiDb = () => as(AI, passwordToken('yapay-zeka@example.com'));
+const aiResult = (overrides = {}) => ({ errors: [{ original: 'ich wohne', korrektur: 'wohne ich', erklaerung: 'Ana cümlede fiil 2. sırada.' }], correctedText: 'Seit drei Wochen wohne ich hier.', model: '@cf/google/gemma-4-26b-a4b-it', ...overrides });
+const draft = (overrides = {}) => ({ uid: 'ayse', writingId: 'w1', ...aiResult(), createdAt: serverTimestamp(), ...overrides });
+async function aiSetup(mode = 'draft') {
+  await seed('users/ayse', seededAdult('active'));
+  await seed('users/ayse/writings/w1', seededWriting());
+  await seed('settings/ai', { mode });
+}
+
+describe('Schreiben yapay zekâ (Aşama B)', () => {
+  test('yapay zekâ hesabı profili, metni ve modu okur', async () => {
+    await aiSetup();
+    await assertSucceeds(getDoc(doc(aiDb(), 'users/ayse')));
+    await assertSucceeds(getDoc(doc(aiDb(), 'users/ayse/writings/w1')));
+    await assertSucceeds(getDoc(doc(aiDb(), 'settings/ai')));
+    await assertFails(getDocs(collection(aiDb(), 'users/ayse/writings')));
+    await assertFails(getDocs(collection(aiDb(), 'users')));
+    await assertFails(getDoc(doc(aiDb(), 'users/ayse/results/r1')));
+  });
+
+  test('taslak modunda taslak yazar; anında modunda yazamaz', async () => {
+    await aiSetup('draft');
+    await assertSucceeds(setDoc(doc(aiDb(), 'aiDrafts/ayse_w1'), draft()));
+    await aiSetup('instant');
+    await env.clearFirestore(); await aiSetup('instant');
+    await assertFails(setDoc(doc(aiDb(), 'aiDrafts/ayse_w1'), draft()));
+  });
+
+  test('taslak kimliği, alanlar ve boyutlar denetlenir; olmayan metne taslak yazılamaz', async () => {
+    await aiSetup('draft');
+    await assertFails(setDoc(doc(aiDb(), 'aiDrafts/baska_w1'), draft()));
+    await assertFails(setDoc(doc(aiDb(), 'aiDrafts/ayse_w1'), draft({ name: 'Ayşe' })));
+    await assertFails(setDoc(doc(aiDb(), 'aiDrafts/ayse_w1'), draft({ correctedText: 'a'.repeat(6001) })));
+    await assertFails(setDoc(doc(aiDb(), 'aiDrafts/ayse_w1'), draft({ errors: Array.from({ length: 31 }, () => ({ original: 'a', korrektur: 'b', erklaerung: 'c' })) })));
+    await assertFails(setDoc(doc(aiDb(), 'aiDrafts/ayse_w2'), draft({ writingId: 'w2' })));
+    await assertFails(setDoc(doc(aiDb(), 'aiDrafts/ayse_w1'), draft({ createdAt: Timestamp.now() })));
+  });
+
+  test('öğrenci taslağı hiçbir zaman okuyamaz ve yazamaz; öğretmen okur ve siler', async () => {
+    await aiSetup('draft');
+    await seed('aiDrafts/ayse_w1', { ...draft(), createdAt: Timestamp.now() });
+    await assertFails(getDoc(doc(ayse(), 'aiDrafts/ayse_w1')));
+    await assertFails(getDocs(collection(ayse(), 'aiDrafts')));
+    await assertFails(setDoc(doc(ayse(), 'aiDrafts/ayse_w1'), draft()));
+    await assertSucceeds(getDocs(collection(teacherDb(), 'aiDrafts')));
+    await assertSucceeds(deleteDoc(doc(teacherDb(), 'aiDrafts/ayse_w1')));
+  });
+
+  test('anında modunda metne bir kez aiFeedback eklenir; taslak modunda eklenemez', async () => {
+    await aiSetup('draft');
+    await assertFails(updateDoc(doc(aiDb(), 'users/ayse/writings/w1'), { aiFeedback: aiResult(), aiAt: serverTimestamp() }));
+    await seed('settings/ai', { mode: 'instant' });
+    await assertFails(updateDoc(doc(aiDb(), 'users/ayse/writings/w1'), { aiFeedback: aiResult(), aiAt: serverTimestamp(), text: 'değişti' }));
+    await assertFails(updateDoc(doc(aiDb(), 'users/ayse/writings/w1'), { feedback: 'Harika', feedbackAt: serverTimestamp() }));
+    await assertSucceeds(updateDoc(doc(aiDb(), 'users/ayse/writings/w1'), { aiFeedback: aiResult(), aiAt: serverTimestamp() }));
+    await assertFails(updateDoc(doc(aiDb(), 'users/ayse/writings/w1'), { aiFeedback: aiResult({ correctedText: 'tekrar' }), aiAt: serverTimestamp() }));
+  });
+
+  test('öğrenci aiFeedback ya da onaylı geri bildirim alanı yazamaz', async () => {
+    await aiSetup('instant');
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse/writings/w1'), { aiFeedback: aiResult(), aiAt: serverTimestamp() }));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse/writings/w1'), { feedbackItems: [], feedbackSource: 'ai-approved' }));
+  });
+
+  test('günlük sayaçlar: öğrenci başına 3, site geneli 600; sadece yapay zekâ hesabı', async () => {
+    await aiSetup();
+    const lim = (count) => ({ day: '2026-11-08', count, updatedAt: serverTimestamp() });
+    await assertSucceeds(setDoc(doc(aiDb(), 'aiLimits/ayse'), lim(3)));
+    await assertFails(setDoc(doc(aiDb(), 'aiLimits/ayse'), lim(4)));
+    await assertSucceeds(setDoc(doc(aiDb(), 'aiLimits/_global'), lim(600)));
+    await assertFails(setDoc(doc(aiDb(), 'aiLimits/_global'), lim(601)));
+    await assertFails(setDoc(doc(aiDb(), 'aiLimits/ayse'), { day: 'bugün', count: 1, updatedAt: serverTimestamp() }));
+    await assertFails(setDoc(doc(ayse(), 'aiLimits/ayse'), lim(1)));
+    await assertFails(getDoc(doc(ayse(), 'aiLimits/ayse')));
+  });
+
+  test('mod ayarını sadece öğretmen yazar; öğrenci okuyamaz', async () => {
+    await aiSetup();
+    await assertSucceeds(setDoc(doc(teacherDb(), 'settings/ai'), { mode: 'instant' }));
+    await assertFails(setDoc(doc(aiDb(), 'settings/ai'), { mode: 'instant' }));
+    await assertFails(setDoc(doc(ayse(), 'settings/ai'), { mode: 'instant' }));
+    await assertFails(getDoc(doc(ayse(), 'settings/ai')));
+  });
+
+  test('yapay zekâ hesabı profil, seviye testi ya da yorum oluşturamaz; yapay zekâ onayını yazamaz', async () => {
+    await aiSetup();
+    await assertFails(setDoc(doc(aiDb(), `users/${AI}`), adultProfile({ email: 'yapay-zeka@example.com' })));
+    await assertFails(updateDoc(doc(aiDb(), 'users/ayse'), { aiConsent: { given: true } }));
+    await assertSucceeds(updateDoc(doc(teacherDb(), 'users/ayse'), { aiConsent: { given: true, at: Timestamp.now(), method: 'form', recordedAt: serverTimestamp() } }));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse'), { aiConsent: { given: true } }));
+  });
+});

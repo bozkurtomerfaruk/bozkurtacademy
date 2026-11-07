@@ -2,6 +2,31 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-07 · Madde 7 Aşama B: Schreiben yapay zekâ kontrolü (Gemma 4, Cloudflare Workers AI, Free plan)
+
+- **Nasıl çalışıyor:** Onaylı öğrenci metni gönderince (Aşama A) tarayıcı Cloudflare Worker'a (`worker/schreiben-kontrol.js`) sadece metnin kimliğini bildiriyor. Worker:
+  1. öğrencinin Firebase oturumunu doğruluyor;
+  2. ayrı bir "yapay zekâ hesabı" ile Firestore'dan modu, öğrencinin iznini ve metni okuyor;
+  3. Gemma 4 26B'ye (düşünme kapalı) **sadece metni ve görev adını** gönderiyor; ad, e-posta, uid gitmiyor;
+  4. sonucu denetliyor (yanlış kısım metinde geçmek zorunda; uydurma öneriler eleniyor) ve kaydediyor.
+- **Mod (öğretmen paneli, `settings/ai`):** Kapalı / **Taslak (varsayılan)** / Anında göster.
+  - Taslak: öneriler `aiDrafts/<uid>_<metin>` belgesine gidiyor. Öğrenci bunu hiçbir zaman göremiyor (kural + test). Öğretmen öğrenci sayfasında her öneriyi düzeltip ya da çıkarıp **Onayla ve öğrenciye gönder** diyor ya da **Taslağı sil**iyor. Kendisi de yazabiliyor.
+  - Anında göster: öğrenci öneriyi hemen "Otomatik öneri (öğretmenin henüz bakmadı)" etiketiyle görüyor; öğretmenin geri bildirimi yine bekleniyor.
+- **Öğrenci paneli:** Onaylanan geri bildirimde hatalı yerler metinde numarayla işaretli; altında "yanlış → doğru + Türkçe açıklama" listesi, öğretmenin notu, "öğretmenin kontrol edip onayladı/düzeltti" etiketi ve açılır düzeltilmiş metin var (TR/DE/EN).
+- **16 yaş altı (kararın):** Velinin ayrı ve isteğe bağlı yapay zekâ onayı olmadan kontrol yapılmıyor. Öğretmen öğrenci sayfasında **Velinin yapay zekâ onayı alındı** (tarih, yöntem) ya da **geri çekti** diyebiliyor. Yetişkinlerde açık; öğrenci istemezse öğretmen kapatabiliyor.
+- **Sınırlar (kararın):** Öğrenci başına günde 3, site genelinde günde 600 kontrol (Berlin günü, `aiLimits`). Workers AI'ın ücretsiz kotası (günde 10.000 Neuron, yaklaşık 800 metin) dolarsa Free planda istek duruyor, ücret çıkmıyor.
+- **Talimat:** Hâl adları sözlüğü (Akkusativ = -i hâli …), fiil sırası kuralları, gösterme zamiri der/die/das kuralı, çok anlamlı kelimelerde bağlam kuralı.
+- **Veli onay formu (TR/DE):** Yazma görevi metinleri veri listesine eklendi; yeni 3a maddesi (Cloudflare, sadece metin ve görev adı, eğitim yok, saklama yok, AB dışı DPF/SCC) ve ayrı onay kutusu.
+- **Gizlilik metni (TR/DE/EN):** Yeni 6a bölümü (`privacy.html#yapay-zeka`): hizmet, gönderilenler, eğitim/saklama, taslak, sınırlar, 16 yaş altı, hukuki dayanak.
+- **Silme:** Öğrenci silinince taslakları ve günlük sayacı da siliniyor.
+- **Kurulum:** `docs/yapay-zeka-kurulum.md` — kart istemeyen 9 adım. Kurulana kadar (`AI_WORKER_URL` boş) site Aşama A gibi çalışıyor.
+- **Kurallar:** `aiUid` (şimdilik yer tutucu `YAPAY-ZEKA-HESABI-UID`), `aiDrafts`, `aiLimits`, `settings`, metne `aiFeedback` (sadece Anında modunda, bir kez).
+- **Testler:**
+  - `npm test`: 159/159 (kural testleri + Worker testleri 12 + diğerleri).
+  - `npm run test:schreiben-ai` (emülatör, Worker Node'da, sahte yapay zekâ): bütün akış; 390/1440 açık/koyu taşma yok.
+  - `npm run test:schreiben`, `tests/schreiben.mjs`, `test:csp`, `test:placement` tekrar geçti.
+- **Senin yapacakların (birleştirmeden sonra):** Kurulum rehberindeki adımlar; bana yapay zekâ hesabının UID'sini ve Worker adresini gönder; kuralları yayınla; deneme başarılı olunca deneme API token'ını sil.
+
 ## 2026-11-07 · Madde 7 Aşama A: Schreiben (yapay zekâsız), pilot Goethe B1 Teil 1
 
 - **Görevler:** `#exams/goethe/b1/schreiben/1/set-1` … `set-5`; sınav hazırlığında Goethe B1 › Schreiben › Teil 1. Beş özgün görev:

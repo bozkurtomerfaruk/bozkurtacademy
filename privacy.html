@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- ba:security -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com/firebasejs/ https://apis.google.com https://accounts.google.com/gsi/client https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; connect-src 'self' https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://content-firebaseappcheck.googleapis.com https://www.googleapis.com https://accounts.google.com/gsi/ https://www.google.com/recaptcha/ https://api.web3forms.com https://bozkurtacademy.goatcounter.com http://127.0.0.1:8080 http://127.0.0.1:9099; frame-src https://accounts.google.com https://bozkurtacademy-8ab85.firebaseapp.com https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; upgrade-insecure-requests" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com/firebasejs/ https://apis.google.com https://accounts.google.com/gsi/client https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; connect-src 'self' https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://content-firebaseappcheck.googleapis.com https://www.googleapis.com https://accounts.google.com/gsi/ https://www.google.com/recaptcha/ https://api.web3forms.com https://bozkurtacademy.goatcounter.com http://127.0.0.1:8080 http://127.0.0.1:9099 http://127.0.0.1:8787; frame-src https://accounts.google.com https://bozkurtacademy-8ab85.firebaseapp.com https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <script src="/js/theme-init.js?v=1"></script>
   <!-- /ba:security -->
@@ -20,7 +20,7 @@
   <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13" />
   <link rel="stylesheet" href="css/base.css?v=12" />
-  <link rel="stylesheet" href="css/account.css?v=5" />
+  <link rel="stylesheet" href="css/account.css?v=6" />
 </head>
 <body class="academy-theme account-page">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
@@ -140,6 +140,21 @@
             <li>E-posta ve şifreyle kayıt olduğunda Firebase, e-posta adresini doğrulaman için bir e-posta gönderir.</li>
             <li>Firebase, giriş durumunu tarayıcında (IndexedDB) saklar. Bu, girişin çalışması için teknik olarak gereklidir.</li>
             <li><strong>Google ile giriş</strong> sadece 16 yaş ve üstü öğrenciler içindir. Site Google hesabından sadece adını ve e-posta adresini kullanır.</li>
+          </ul>
+        </section>
+
+        <section id="yapay-zeka" data-anchor="yapay-zeka">
+          <h2>6a. Yazma görevlerinde yapay zekâ önerisi (Cloudflare Workers AI)</h2>
+          <p>Giriş yapmış bir öğrenci yazma görevinde (Schreiben) metnini gönderdiğinde, öğretmenin daha hızlı geri bildirim verebilmesi için metin bir yapay zekâ ile kontrol edilebilir.</p>
+          <ul>
+            <li><strong>Hizmet:</strong> Cloudflare Workers AI (Cloudflare, Inc., 101 Townsend St., San Francisco, ABD). Model: Google Gemma 4 (Apache 2.0 lisanslı açık model), Cloudflare'in kendi sunucularında çalışır.</li>
+            <li><strong>Gönderilen:</strong> Sadece metnin kendisi ve görevin adı (ör. “Goethe B1 · Teil 1 · Neue Wohnung”). Adın, e-posta adresin, kullanıcı kimliğin veya başka bir bilgin gönderilmez. Metne kendin yazdığın bilgiler metnin parçası olarak gider; bu yüzden metinlerde gerçek kişisel bilgilerini yazmamanı öneririz.</li>
+            <li><strong>Eğitim ve saklama:</strong> Cloudflare, Workers AI'a gönderilen metinleri yapay zekâ modellerini eğitmek için kullanmaz ve işlemden sonra saklamaz. İşlem AB dışında, özellikle ABD'de de yapılabilir; dayanak AB-ABD Veri Gizliliği Çerçevesi ve standart sözleşme maddeleridir.</li>
+            <li><strong>Sonuç:</strong> Öneriler (hatalı yer, doğrusu, kısa açıklama, düzeltilmiş metin) Firebase'de (Frankfurt) önce sadece öğretmenin görebildiği bir taslak olarak saklanır. Öğretmen kontrol edip düzeltir ya da siler; onaylanınca geri bildirim olarak sana gösterilir. Yapay zekâ not vermez ve senin hakkında karar vermez.</li>
+            <li><strong>Sınır:</strong> Öğrenci başına günde en fazla 3, sitede günde en fazla 600 kontrol yapılır. Bunun için günlük kontrol sayın (tarih ve sayı) saklanır.</li>
+            <li><strong>16 yaş altı:</strong> Kontrol sadece velinin bu iş için verdiği ayrı ve isteğe bağlı onayla yapılır (veli onay formu). Onay yoksa öğrenci geri bildirimi sadece öğretmenden alır.</li>
+            <li><strong>Hukuki dayanak:</strong> Yetişkinlerde meşru menfaat (DSGVO md. 6/1-f: hızlı ve tutarlı geri bildirim); buna istediğin zaman itiraz edebilirsin, o zaman metinlerin yapay zekâya gönderilmez. 16 yaş altında velinin onayı (DSGVO md. 6/1-a ve md. 8); onay ayrıca ve istediği zaman geri alınabilir.</li>
+            <li>Taslaklar ve günlük sayaçlar diğer öğrenci verileriyle birlikte silinir (bkz. 10).</li>
           </ul>
         </section>
 
@@ -268,6 +283,21 @@
           </ul>
         </section>
 
+        <section id="yapay-zeka-de" data-anchor="yapay-zeka">
+          <h2>6a. KI-Vorschläge bei den Schreibaufgaben (Cloudflare Workers AI)</h2>
+          <p>Wenn angemeldete Schülerinnen und Schüler bei einer Schreibaufgabe (Schreiben) ihren Text abschicken, kann der Text mit einer KI geprüft werden, damit die Lehrkraft schneller eine Rückmeldung geben kann.</p>
+          <ul>
+            <li><strong>Dienst:</strong> Cloudflare Workers AI (Cloudflare, Inc., 101 Townsend St., San Francisco, USA). Modell: Google Gemma 4 (offenes Modell unter Apache-2.0-Lizenz), betrieben auf Servern von Cloudflare.</li>
+            <li><strong>Übermittelt:</strong> Nur der Text selbst und der Name der Aufgabe (z. B. „Goethe B1 · Teil 1 · Neue Wohnung“). Ihr Name, Ihre E-Mail-Adresse, Ihre Benutzerkennung oder andere Angaben werden nicht übermittelt. Was Sie selbst in den Text schreiben, geht als Teil des Textes mit; wir empfehlen daher, keine echten persönlichen Angaben in die Texte zu schreiben.</li>
+            <li><strong>Training und Speicherung:</strong> Cloudflare verwendet die an Workers AI gesendeten Texte nicht zum Training von KI-Modellen und speichert sie nach der Verarbeitung nicht. Die Verarbeitung kann auch außerhalb der EU, insbesondere in den USA, stattfinden; Grundlage sind das EU-U.S. Data Privacy Framework und die Standardvertragsklauseln.</li>
+            <li><strong>Ergebnis:</strong> Die Vorschläge (fehlerhafte Stelle, Korrektur, kurze Erklärung, korrigierter Text) werden in Firebase (Frankfurt) zunächst als Entwurf gespeichert, den nur die Lehrkraft sieht. Die Lehrkraft prüft und korrigiert ihn oder löscht ihn; erst nach der Freigabe sehen Sie ihn als Rückmeldung. Die KI vergibt keine Noten und trifft keine Entscheidungen über Sie.</li>
+            <li><strong>Begrenzung:</strong> Höchstens 3 Prüfungen pro Schülerin oder Schüler und 600 auf der ganzen Website pro Tag. Dafür wird die tägliche Zahl Ihrer Prüfungen (Datum und Anzahl) gespeichert.</li>
+            <li><strong>Unter 16 Jahren:</strong> Die Prüfung erfolgt nur mit einer gesonderten, freiwilligen Einwilligung der Eltern (Einwilligungserklärung). Ohne sie erhält das Kind die Rückmeldung nur von der Lehrkraft.</li>
+            <li><strong>Rechtsgrundlage:</strong> Bei Erwachsenen berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO: schnelle und einheitliche Rückmeldung); Sie können jederzeit widersprechen, dann werden Ihre Texte nicht an die KI gesendet. Unter 16 Jahren die Einwilligung der Eltern (Art. 6 Abs. 1 lit. a, Art. 8 DSGVO), die gesondert und jederzeit widerrufen werden kann.</li>
+            <li>Entwürfe und Tageszähler werden zusammen mit den übrigen Schülerdaten gelöscht (siehe Abschnitt 10).</li>
+          </ul>
+        </section>
+
         <section>
           <h2>7. Google Calendar und Google Meet</h2>
           <p>Jede Unterrichtsstunde wird als Termin im Google Calendar des Lehrers angelegt und automatisch mit einem Google-Meet-Link versehen. Für die Einladung werden Name, E-Mail-Adresse und Unterrichtszeit an Google übermittelt; bei Schülerinnen und Schülern unter 16 Jahren wird (sofern aktiviert) auch die E-Mail-Adresse eines Elternteils zur Einladung hinzugefügt. Einladungen und Änderungsmitteilungen versendet Google. Während der Videositzung gelten die Datenschutzbestimmungen von Google Meet.</p>
@@ -390,6 +420,21 @@
             <li>When you register with email and password, Firebase sends you an email so that you can verify your email address.</li>
             <li>Firebase stores your sign-in state in your browser (IndexedDB). This is technically necessary for signing in to work.</li>
             <li><strong>Signing in with Google</strong> is only for students aged 16 and over. The website uses only your name and email address from your Google account.</li>
+          </ul>
+        </section>
+
+        <section id="yapay-zeka-en" data-anchor="yapay-zeka">
+          <h2>6a. AI suggestions for the writing tasks (Cloudflare Workers AI)</h2>
+          <p>When a signed-in student submits a text for a writing task (Schreiben), the text may be checked by an AI so that the teacher can give feedback faster.</p>
+          <ul>
+            <li><strong>Service:</strong> Cloudflare Workers AI (Cloudflare, Inc., 101 Townsend St., San Francisco, USA). Model: Google Gemma 4 (an open model under the Apache 2.0 licence), run on Cloudflare's own servers.</li>
+            <li><strong>What is sent:</strong> Only the text itself and the name of the task (e.g. “Goethe B1 · Teil 1 · Neue Wohnung”). Your name, e-mail address, user ID or any other information is not sent. Whatever you write into the text yourself is sent as part of the text, so we recommend not writing real personal details in your texts.</li>
+            <li><strong>Training and storage:</strong> Cloudflare does not use texts sent to Workers AI to train AI models and does not store them after processing. Processing may also take place outside the EU, in particular in the USA, on the basis of the EU-U.S. Data Privacy Framework and the standard contractual clauses.</li>
+            <li><strong>Result:</strong> The suggestions (the wrong part, the correction, a short explanation, the corrected text) are first stored in Firebase (Frankfurt) as a draft that only the teacher can see. The teacher checks and corrects it or deletes it; only once approved is it shown to you as feedback. The AI does not give marks and makes no decisions about you.</li>
+            <li><strong>Limit:</strong> At most 3 checks per student and 600 across the whole site per day. For this, your daily number of checks (date and count) is stored.</li>
+            <li><strong>Under 16:</strong> The check only happens with a separate, optional consent from a parent (parental consent form). Without it, the student gets feedback from the teacher only.</li>
+            <li><strong>Legal basis:</strong> For adults, legitimate interest (Art. 6(1)(f) GDPR: fast and consistent feedback); you can object at any time, and your texts will then not be sent to the AI. For students under 16, parental consent (Art. 6(1)(a) and Art. 8 GDPR), which can be withdrawn separately at any time.</li>
+            <li>Drafts and daily counters are deleted together with the other student data (see section 10).</li>
           </ul>
         </section>
 

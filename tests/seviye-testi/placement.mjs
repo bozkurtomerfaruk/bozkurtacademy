@@ -479,7 +479,7 @@ for(const [lang, x] of Object.entries(PRIVACY)){
     ok(await page.locator('[data-privacy-lang]:not([hidden])').count() === 1 && await block.isVisible(), `${label}: tek dil bloğu görünüyor`);
     ok(await block.getAttribute('lang') === lang && await page.evaluate(() => document.documentElement.lang) === lang, `${label}: lang öznitelikleri`);
     ok((await block.locator('h1').textContent()) === x.h1 && await page.title() === x.doc, `${label}: başlık "${x.h1}"`);
-    ok(await block.locator('section h2').count() === 12, `${label}: 12 bölüm (1–11 ve 5a)`);
+    ok(await block.locator('section h2').count() === 13, `${label}: 13 bölüm (1–11, 5a ve 6a)`);
     const text = await visibleText(page);
     ok(x.foreign.every((w) => !text.includes(w)), `${label}: görünen metinde başka dil yok`);
     ok(text.includes(x.title) && text.includes(x.firebase) && text.includes(x.updated), `${label}: 5a, Firebase cümlesi ve tarih`);

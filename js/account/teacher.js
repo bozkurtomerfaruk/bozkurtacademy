@@ -2,15 +2,17 @@
 import { $, exerciseNames, formatDateTime, BERLIN, h, safeLink } from './common.js';
 import {
   approve, categorize, deleteAssignmentCopies, emailVerified, fmtDate, lastLessonByStudent, listStudents,
-  loadAssignmentGroups, openDeleteDialog, pendingWritingsByStudent, requireTeacher, statusBadges, UNVERIFIED_WARNING
+  AI_MODES, getAiMode, loadAiDrafts, loadAssignmentGroups, openDeleteDialog, pendingWritingsByStudent, setAiMode, requireTeacher, statusBadges, UNVERIFIED_WARNING
 } from './teacher-common.js';
 import { createModeration, permissionMessage } from './comments-moderation.js?v=2';
+import { AI_WORKER_URL } from './config.js';
 
 const TABS = ['ogrenciler', 'onay', 'veli', 'odevler', 'silinecek', 'yorumlar'];
 let lists = null;
 let groups = [];
 let studentsById = new Map();
 let pendingWritings = new Map(); // uid → geri bildirim bekleyen Schreiben metni sayısı
+let aiDrafts = new Map(); // uid → yapay zekâ taslağı hazır metin sayısı (öğrenci görmez)
 const fmtDateTime = (value) => formatDateTime(value, { lang: 'tr', timeZone: BERLIN });
 
 const detailLink = (s) => h('a', { class: 'btn ghost acc-row-action', href: `ogretmen-ogrenci.html?id=${encodeURIComponent(s.id)}` }, 'Detay');
@@ -48,8 +50,28 @@ function renderStudents(){
 function writingBadge(s){
   const n = pendingWritings.get(s.id) || 0;
   if(!n) return '—';
-  return h('a', { class: 'acc-badge warning', href: `ogretmen-ogrenci.html?id=${encodeURIComponent(s.id)}#yazilar`, 'data-pending-writings': String(n) },
-    `${n} geri bildirim bekliyor`);
+  const d = aiDrafts.get(s.id) || 0;
+  return h('a', { class: 'acc-badge warning', href: `ogretmen-ogrenci.html?id=${encodeURIComponent(s.id)}#yazilar`, 'data-pending-writings': String(n), 'data-ai-drafts': String(d) },
+    `${n} geri bildirim bekliyor` + (d ? ` · ${d} taslak hazır` : ''));
+}
+
+// Yapay zekâ modu (settings/ai): Kapalı / Taslak (varsayılan; öğrenci görmez) / Anında göster.
+const MODE_LABELS = { off: 'Kapalı', draft: 'Taslak: önce ben bakarım (öğrenci görmez)', instant: 'Anında göster: öğrenci öneriyi hemen görür' };
+async function renderAiMode(){
+  const box = $('aiMode');
+  let mode;
+  try{ mode = await getAiMode(); }catch(error){ console.warn(error); box.hidden = true; return; }
+  const select = h('select', { id: 'aiModeSelect' }, ...AI_MODES.map((m) => h('option', { value: m, selected: m === mode }, MODE_LABELS[m])));
+  const status = h('span', { class: 'acc-sub', role: 'status' });
+  select.addEventListener('change', async () => {
+    select.disabled = true;
+    try{ await setAiMode(select.value); status.textContent = 'Kaydedildi.'; }
+    catch(error){ console.error(error); status.textContent = 'Kaydedilemedi. Tekrar dene.'; }
+    finally{ select.disabled = false; }
+  });
+  box.replaceChildren(h('label', { for: 'aiModeSelect' }, h('strong', {}, 'Schreiben yapay zekâ kontrolü')), select, status,
+    AI_WORKER_URL ? null : h('span', { class: 'acc-sub' }, 'Worker henüz kurulmadı (docs/yapay-zeka-kurulum.md); kurulana kadar kontrol yapılmaz.'));
+  box.hidden = false;
 }
 
 function renderWritingNotice(){
@@ -57,7 +79,8 @@ function renderWritingNotice(){
   const notice = $('writingNotice');
   notice.hidden = total === 0;
   if(total){
-    notice.replaceChildren(`Geri bildirim bekleyen ${total} yazı var (${pendingWritings.size} öğrenci). `,
+    const drafts = [...aiDrafts.values()].reduce((a, b) => a + b, 0);
+    notice.replaceChildren(`Geri bildirim bekleyen ${total} yazı var (${pendingWritings.size} öğrenci)` + (drafts ? `; ${drafts} yazı için yapay zekâ taslağı hazır` : '') + '. ',
       h('a', { class: 'ba-link', href: '#ogrenciler' }, 'Öğrenci listesinde işaretli'));
   }
 }
@@ -197,18 +220,22 @@ function showError(message){
 async function load(){
   try{
     // Ödevler okunamasa bile öğrenci listesi açılsın.
-    const [students, lastLessons, assignmentGroups, writings] = await Promise.all([
+    const [students, lastLessons, assignmentGroups, writings, drafts] = await Promise.all([
       listStudents(),
       lastLessonByStudent(),
       loadAssignmentGroups().catch((error) => { console.warn(error); return []; }),
-      pendingWritingsByStudent()
+      pendingWritingsByStudent(),
+      loadAiDrafts()
     ]);
     pendingWritings = writings;
+    aiDrafts = new Map();
+    for(const d of drafts) aiDrafts.set(d.uid, (aiDrafts.get(d.uid) || 0) + 1);
     lists = categorize(students, lastLessons);
     groups = assignmentGroups;
     studentsById = new Map(students.map((st) => [st.id, st]));
     renderCounts();
     renderWritingNotice();
+    renderAiMode();
     renderStudents();
     renderPending();
     renderParent();

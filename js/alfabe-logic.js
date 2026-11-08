@@ -311,7 +311,53 @@
     return p >= 0.9 ? 3 : p >= 0.6 ? 2 : 1;
   }
 
+  /* ---------- Progress in the account (js/account/alfabe-sync.js, users/{uid}/progress/alfabe) ---------- */
+  var PROFILE_IDS = ['cocuk', 'yetiskin'];
+  var BEST_KEYS = [];
+  QUIZ_MODES.forEach(function (m) { BEST_KEYS.push(m, m + ':zaman'); });
+  var count = function (v) { var n = Math.floor(Number(v)); return isFinite(n) && n > 0 ? Math.min(n, 1000000) : 0; };
+  // Only the fields the rules (firestore.rules → validAlfabeProgress) allow: known letters and modes, whole numbers ≥ 0.
+  function cleanProgress(p, letterIds) {
+    var out = {};
+    PROFILE_IDS.forEach(function (id) {
+      var x = (p && p[id]) || {}, stats = {}, best = {};
+      letterIds.forEach(function (l) {
+        var s = x.stats && x.stats[l];
+        if (s && (count(s.r) || count(s.w))) stats[l] = { r: count(s.r), w: count(s.w) };
+      });
+      BEST_KEYS.forEach(function (k) { if (x.best && x.best[k] != null && isFinite(Number(x.best[k]))) best[k] = count(x.best[k]); });
+      out[id] = { stats: stats, best: best, stars: count(x.stars) };
+    });
+    return out;
+  }
+  // Local and account progress together: the better value of each field wins (right and wrong answers per letter,
+  // best score per mode, stars). Taking the maximum instead of the sum means merging the same data twice changes nothing.
+  function mergeProgress(a, b, letterIds) {
+    var x = cleanProgress(a, letterIds), y = cleanProgress(b, letterIds), out = {};
+    PROFILE_IDS.forEach(function (id) {
+      var stats = {}, best = {};
+      letterIds.forEach(function (l) {
+        var s = x[id].stats[l], t = y[id].stats[l];
+        if (s || t) stats[l] = { r: Math.max(s ? s.r : 0, t ? t.r : 0), w: Math.max(s ? s.w : 0, t ? t.w : 0) };
+      });
+      BEST_KEYS.forEach(function (k) {
+        if (k in x[id].best || k in y[id].best) best[k] = Math.max(k in x[id].best ? x[id].best[k] : 0, k in y[id].best ? y[id].best[k] : 0);
+      });
+      out[id] = { stats: stats, best: best, stars: Math.max(x[id].stars, y[id].stars) };
+    });
+    return out;
+  }
+  // Stable text form for "has anything changed?" (key order does not matter).
+  function progressKey(p, letterIds) {
+    var c = cleanProgress(p, letterIds);
+    return JSON.stringify(PROFILE_IDS.map(function (id) {
+      return [letterIds.map(function (l) { var s = c[id].stats[l]; return s ? s.r + '/' + s.w : ''; }),
+        BEST_KEYS.map(function (k) { return k in c[id].best ? c[id].best[k] : ''; }), c[id].stars];
+    }));
+  }
+
   var api = {
+    BEST_KEYS: BEST_KEYS, cleanProgress: cleanProgress, mergeProgress: mergeProgress, progressKey: progressKey,
     PROFILES: PROFILES, SLOW_RATE: SLOW_RATE, ROUND_LENGTH: ROUND_LENGTH, MODES: MODES, QUIZ_MODES: QUIZ_MODES,
     createRng: createRng, shuffle: shuffle, normalizeAnswer: normalizeAnswer, checkSpelling: checkSpelling,
     letterForChar: letterForChar, baseAlphabet: baseAlphabet, letterIndexInWord: letterIndexInWord, firstLetterId: firstLetterId,

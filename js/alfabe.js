@@ -1,7 +1,8 @@
 // Almanca Alfabe oyunu (/almanca-alfabe/): arayüz, ses ve kayıt. Oyun mantığı js/alfabe-logic.js'te, veri data/alfabe.json'da.
 // Adresler: #kesfet, #duy, #ilk-harf, #heceleme, #sirala (boş: mod seçimi). Profil (çocuk/yetişkin) seçimi ilk açılışta sorulur.
-// Hesap, form ve sunucuya gönderim yok. localStorage'da (baAlfabe) sadece profil seçimi, ses ayarları ve profil başına
-// harf ilerlemesi, en iyi skorlar ve yıldızlar. Depolama kapalıysa oyun yine çalışır, sadece hatırlamaz.
+// Form yok. localStorage'da (baAlfabe) profil seçimi, ses ayarları ve profil başına harf ilerlemesi, en iyi skorlar ve
+// yıldızlar. Depolama kapalıysa oyun yine çalışır, sadece hatırlamaz. Giriş yapmış onaylı öğrencide ilerleme ayrıca
+// hesaba yazılır (js/account/alfabe-sync.js, users/{uid}/progress/alfabe); Firebase sadece öğrenci ipucu varsa yüklenir.
 // Ses: tarayıcının cihazda çalışan Almanca (de) ve çocuk modunda Türkçe (tr) sesi (speechSynthesis, sadece localService:
 // çevrim içi bir ses okunan metni tarayıcı üreticisinin sunucusuna gönderirdi). Ses yoksa oyun sessiz devam eder.
 (() => {
@@ -49,6 +50,8 @@
     const prog = (x) => (x && typeof x === 'object' ? { stats: x.stats && typeof x.stats === 'object' ? x.stats : {}, best: x.best && typeof x.best === 'object' ? x.best : {}, stars: Number(x.stars) || 0 } : emptyProgress());
     return {
       profil: v.profil === 'cocuk' || v.profil === 'yetiskin' ? v.profil : null,
+      // Hangi hesapla eşitlendi: başka bir hesabın yerel ilerlemesi yeni girişteki hesaba karıştırılmaz.
+      uid: typeof v.uid === 'string' && v.uid ? v.uid : null,
       ses: v.ses !== false, yavas: v.yavas === true, zaman: v.zaman === true,
       p: { cocuk: prog(p.cocuk), yetiskin: prog(p.yetiskin) }
     };
@@ -143,6 +146,8 @@
   }
   // Re-render after a settings change without starting a new round.
   let rerender = () => {};
+  let view = 'yukleniyor'; // the account sync redraws only the menu and the letter grid
+  let accountSynced = false;
   function focusStage(sel) {
     const el = root.querySelector(sel || '.ab-stage h2');
     if (!el) return;
@@ -153,6 +158,7 @@
   /* ---------- Profile ---------- */
   function renderProfiles(changing) {
     rerender = () => renderProfiles(changing);
+    view = 'profil';
     const cards = ['cocuk', 'yetiskin'].map((id) => {
       const p = PROFILE_INFO[id];
       const cur = store.profil === id;
@@ -181,6 +187,7 @@
   function renderMenu() {
     clearTimer(); game = null;
     rerender = renderMenu;
+    view = 'menu';
     const kid = store.profil === 'cocuk';
     const prog = progress();
     const learned = data.harfler.filter((l) => L.isLearned(L.statFor(prog.stats, l.id))).length;
@@ -205,7 +212,8 @@
       <ul class="ab-modes">${cards}</ul>
       ${!kid ? `<label class="ab-switch"><input type="checkbox" data-ab-timed${store.zaman ? ' checked' : ''}> <span><strong>Zamana Karşı</strong> · Her soru için süre var; kalan her saniye puan getirir.</span></label>` : ''}
       ${hard.length ? `<p class="ab-hard">Zor harflerin: ${hard.map((l) => `<span class="ab-chip">${esc(big(l))}</span>`).join('')} <span class="ab-muted">Bu harfler sonraki turlarda daha sık gelir.</span></p>` : ''}
-      <p class="ab-info">${esc(data.bilgiNotu)}</p>`;
+      <p class="ab-info">${esc(data.bilgiNotu)}</p>
+      ${accountSynced ? '<p class="ab-muted ab-small" data-ab-synced>İlerlemen hesabına da kaydediliyor.</p>' : ''}`;
     paint(body);
     root.querySelector('[data-ab-timed]')?.addEventListener('change', (e) => { store.zaman = e.target.checked; save(); });
     root.querySelectorAll('[data-ab-mode]').forEach((a) => a.addEventListener('click', (e) => {
@@ -244,6 +252,7 @@
   }
   function renderExplore(first) {
     rerender = () => renderExplore(false);
+    view = 'kesfet';
     const prog = progress();
     const tiles = data.harfler.map((l) => {
       const learned = L.isLearned(L.statFor(prog.stats, l.id));
@@ -387,6 +396,7 @@
     game.answered = false; game.built = []; game.used = []; game.pick = null;
     if (question.mode === 'sirala') game.order = question.shuffled.slice();
     rerender = () => drawQuestion(false);
+    view = 'oyun';
     drawQuestion(true);
     speak(promptParts(question, withInstruction || settings().speakInstructions));
     if (game.timed) startTimer();
@@ -633,6 +643,8 @@
     const mode = game.mode;
     const focusIds = mode === 'sirala' ? hard.filter((l) => /^[A-Z]$/.test(l.id)) : hard;
     rerender = renderResult;
+    view = 'sonuc';
+    window.dispatchEvent(new CustomEvent('ba:alfabe-round'));
     const starsHtml = [1, 2, 3].map((n) => `<span class="ab-star${n <= stars ? ' is-on' : ''}">${kid ? '⭐' : '★'}</span>`).join('');
     const sticker = kid && Math.floor(prog.stars / 10) > Math.floor((prog.stars - right) / 10) ? STICKERS[Math.min(STICKERS.length, Math.floor(prog.stars / 10)) - 1] : null;
     const body = `<h2 class="ab-title">${stars === 3 ? (kid ? 'Süpersin!' : 'Çok iyi!') : stars === 2 ? 'İyi gidiyorsun!' : 'Devam, her tur daha iyi!'}</h2>
@@ -676,8 +688,30 @@
   window.addEventListener('hashchange', route);
   window.addEventListener('popstate', () => { if (!location.hash) route(); });
 
-  fetch('/data/alfabe.json?v=1')
+  /* ---------- Account (js/account/alfabe-sync.js) ---------- */
+  let readyResolve;
+  const ready = new Promise((resolve) => { readyResolve = resolve; });
+  window.baAlfabeSync = {
+    ready, // resolves with the letter ids once data/alfabe.json is loaded
+    logic: L,
+    read: () => ({ uid: store.uid, p: store.p }),
+    // Merged progress from the account: saved locally too; the menu and the letter grid are redrawn, a running question is not.
+    apply(p, uid) {
+      store.p.cocuk = p.cocuk; store.p.yetiskin = p.yetiskin; store.uid = uid; accountSynced = true;
+      save();
+      if (view === 'menu' || view === 'kesfet') rerender();
+    }
+  };
+  let hint = null;
+  try { hint = localStorage.getItem('baAccount'); } catch (_) { hint = null; }
+
+  fetch('/data/alfabe.json?v=2')
     .then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-    .then((d) => { data = d; route(); })
+    .then((d) => {
+      data = d; route();
+      readyResolve(d.harfler.map((l) => l.id));
+      // Visitors never load Firebase; only a device where a student signed in before does.
+      if (hint === 'student') import('/js/account/alfabe-sync.js?v=1').catch((error) => console.warn('alfabe sync', error));
+    })
     .catch(() => { root.innerHTML = '<p class="ab-note">Oyun yüklenemedi. Sayfayı yenilemeyi dene.</p>'; });
 })();

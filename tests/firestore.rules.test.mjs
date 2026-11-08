@@ -1149,3 +1149,58 @@ describe('Schreiben yapay zekâ (Aşama B)', () => {
     await assertFails(updateDoc(doc(ayse(), 'users/ayse'), { aiConsent: { given: true } }));
   });
 });
+
+// Almanca Alfabe oyunu (js/account/alfabe-sync.js): users/{uid}/progress/alfabe.
+describe('Almanca Alfabe ilerlemesi', () => {
+  const profile = (o = {}) => ({ stats: { A: { r: 2, w: 1 }, 'ß': { r: 1, w: 0 } }, best: { duy: 8, 'duy:zaman': 120 }, stars: 9, ...o });
+  const progress = (o = {}) => ({ cocuk: profile(), yetiskin: { stats: {}, best: {}, stars: 0 }, updatedAt: serverTimestamp(), ...o });
+  const ref = (db, uid = 'ayse', name = 'alfabe') => doc(db, `users/${uid}/progress/${name}`);
+
+  test('onaylı öğrenci kendi ilerlemesini yazabilir, güncelleyebilir ve okuyabilir', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await assertSucceeds(setDoc(ref(ayse()), progress()));
+    await assertSucceeds(setDoc(ref(ayse()), progress({ cocuk: profile({ stars: 20 }) })));
+    await assertSucceeds(getDoc(ref(ayse())));
+  });
+
+  test('onay bekleyen ya da veli onayı eksik öğrenci yazamaz ve okuyamaz', async () => {
+    await seed('users/ayse', seededAdult('pending'));
+    await assertFails(setDoc(ref(ayse()), progress()));
+    await assertFails(getDoc(ref(ayse())));
+    await seed('users/can', seededMinor('active'));
+    await assertFails(setDoc(ref(can(), 'can'), progress()));
+  });
+
+  test('başka öğrencinin ilerlemesi okunamaz ve yazılamaz; ziyaretçi hiçbir şey yapamaz', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await seed('users/can', seededMinor('active', consentGiven));
+    await seed('users/ayse/progress/alfabe', { ...progress(), updatedAt: Timestamp.now() });
+    await assertFails(getDoc(ref(can())));
+    await assertFails(setDoc(ref(can()), progress()));
+    await assertFails(getDoc(ref(guestDb())));
+  });
+
+  test('sadece "alfabe" belgesi; öğrenci silemez, öğretmen okuyup silebilir', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await assertFails(setDoc(ref(ayse(), 'ayse', 'baska'), progress()));
+    await seed('users/ayse/progress/alfabe', { ...progress(), updatedAt: Timestamp.now() });
+    await assertFails(deleteDoc(ref(ayse())));
+    await assertSucceeds(getDoc(ref(teacherDb())));
+    await assertSucceeds(deleteDoc(ref(teacherDb())));
+  });
+
+  test('biçim dışı ilerleme reddedilir', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    const bad = [
+      progress({ updatedAt: Timestamp.now() }),
+      progress({ extra: 1 }),
+      (() => { const p = progress(); delete p.yetiskin; return p; })(),
+      progress({ cocuk: profile({ stats: { '<x>': { r: 1, w: 0 } } }) }),
+      progress({ cocuk: profile({ best: { hile: 99 } }) }),
+      progress({ cocuk: profile({ stars: -1 }) }),
+      progress({ cocuk: profile({ stars: 1.5 }) }),
+      progress({ cocuk: { ...profile(), uid: 'x' } })
+    ];
+    for (const p of bad) await assertFails(setDoc(ref(ayse()), p));
+  });
+});

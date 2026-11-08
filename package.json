@@ -14,6 +14,7 @@
     "test:schreiben": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/schreiben-account.mjs\"",
     "test:worker": "node --test tests/worker.test.mjs",
     "test:alfabe": "node --test tests/alfabe-logic.test.mjs",
+    "test:alfabe-account": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/alfabe-account.mjs\"",
     "test:schreiben-ai": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/schreiben-ai-account.mjs\""
   },
   "devDependencies": {

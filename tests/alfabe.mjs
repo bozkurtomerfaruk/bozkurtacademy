@@ -128,7 +128,7 @@ async function playRound(p, wrongAt = []) {
   await clearSpoken(page);
   await page.click('[data-ab-letter="V"]');
   const d = await page.textContent('[data-ab-detail]');
-  ok(d.includes('fau') && d.includes('Vertrag') && d.includes('sözleşme') && d.includes('fertra:k'), 'V: okunuş, yetişkin örneği, anlam, kelime okunuşu');
+  ok(d.includes('fau') && d.includes('Vertrag') && d.includes('sözleşme') && d.includes('fertraak'), 'V: okunuş, yetişkin örneği, anlam, kelime okunuşu');
   const sp = await spoken(page);
   ok(sp.some((s) => s.text === 'Vau' && s.lang === 'de-DE') && sp.some((s) => s.text === 'der Vertrag'), 'harf adı (Vau) ve örnek kelime Almanca okunuyor');
   ok(sp.every((s) => s.local), 'sadece cihazdaki sesler');
@@ -255,6 +255,24 @@ async function playRound(p, wrongAt = []) {
   ok(await page.locator('[data-ab-pos]').count() === 4, 'çocuk: 4 harf sıralama');
   await playRound(page, [0]);
   ok((await page.textContent('.ab-result-score')).includes('9 / 10'), 'çocuk Sıraya Diz turu tamamlandı (dokunarak değiştirme)');
+  await ctx.close();
+}
+
+// 1b. Exercises page (A1): "Almanca Alfabe" card next to Artikel Evleri, in all three languages, no overflow on a phone.
+for (const [lang, title, width] of [[null, 'Almanca Alfabe', 1280], ['de', 'Deutsches Alphabet', 390], ['en', 'German Alphabet', 320]]) {
+  const { ctx, page } = await newPage({ width });
+  if (lang) await page.addInitScript((l) => { try { localStorage.setItem('baLang', l); } catch (_) {} }, lang);
+  await page.goto((process.env.BASE || 'http://localhost:8765') + '/index.html#exercises');
+  await page.waitForSelector('.kids-card [data-alfabe-game]');
+  ok((await page.textContent('#alfabeCardTitle')).trim() === title, `alıştırmalar: Alfabe kartı (${lang || 'tr'})`);
+  ok(await page.locator('.kids-card').count() === 2 && await page.locator('[data-kids-game][href="#artikel-evleri"]').count() === 1, 'Artikel Evleri kartı yerinde, iki kart');
+  ok(await overflow(page) <= 0, `alıştırmalar ${width}px: yatay kaydırma yok`);
+  if (!lang) {
+    await page.locator('.kids-card').last().screenshot({ path: path.join(shotDir, 'alistirmalar-kart.png') });
+    await page.click('[data-alfabe-game]');
+    await page.waitForSelector('[data-ab-pick]');
+    ok(new URL(page.url()).pathname === '/almanca-alfabe/', 'kart oyunu açıyor');
+  }
   await ctx.close();
 }
 

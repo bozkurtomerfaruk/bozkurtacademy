@@ -83,8 +83,8 @@ const requests = [];
 page.on('request', (r) => requests.push({ url: r.url(), method: r.method() }));
 await page.goto(B + '#exercises/A1'); await page.waitForTimeout(1500);
 ok(await page.locator('.kids-card [data-kids-game][href="#artikel-evleri"]').count() === 1, 'A1 alıştırma listesinde "Çocuklar için" kartı');
-ok((await page.textContent('.kids-card')).includes('Çocuklar için'), 'kartın başlığı "Çocuklar için"');
-await page.locator('.kids-card').screenshot({ path: path.join(shotDir, 'kart-1440.png') });
+ok((await page.textContent('.kids-card:has([data-kids-game])')).includes('Çocuklar için'), 'kartın başlığı "Çocuklar için"');
+await page.locator('.kids-card:has([data-kids-game])').screenshot({ path: path.join(shotDir, 'kart-1440.png') });
 await page.click('[data-hub-level="A2"]'); await page.waitForTimeout(300);
 ok(await page.locator('.kids-card').count() === 0, 'A2 listesinde kart yok');
 await page.click('[data-hub-level="A1"]'); await page.waitForTimeout(300);
@@ -260,7 +260,7 @@ for (const [l, h1, end, note] of [['de', 'Artikelhäuser', 'Du hast 12 von 12 W�
   ['en', 'Article Houses', 'You knew 12 of 12 words on the first try.', 'Word meanings are in Turkish.']]) {
   const { ctx, page } = await newPage({ lang: l });
   await page.goto(B + '#exercises/A1'); await page.waitForTimeout(1500);
-  ok((await page.textContent('.kids-card h3')) === h1, `${l}: kart başlığı ${h1}`);
+  ok((await page.textContent('#kidsCardTitle')) === h1, `${l}: kart başlığı ${h1}`);
   await page.goto(B + '#artikel-evleri/evde'); await page.waitForTimeout(1500);
   ok((await page.textContent('#artikelApp h1')) === h1 && (await page.textContent('#artikelApp')).includes(note), `${l}: başlık ve Türkçe anlam notu`);
   for (let i = 0; i < 12; i++) { await playWord(page); await page.click('[data-ae-next]'); }
@@ -293,7 +293,7 @@ for (const width of [390, 1440]) {
     if (width === 390) {
       await page.goto(B + '#exercises/A1'); await page.waitForTimeout(1500);
       ok(await overflow(page) <= 0, `${width} ${theme}: alıştırmalar sayfasında taşma yok`);
-      await page.locator('.kids-card').screenshot({ path: path.join(shotDir, `kart-390-${theme}.png`) });
+      await page.locator('.kids-card:has([data-kids-game])').screenshot({ path: path.join(shotDir, `kart-390-${theme}.png`) });
     }
     await ctx.close();
   }

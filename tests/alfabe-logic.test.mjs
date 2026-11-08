@@ -28,6 +28,10 @@ test('veri: 26 harf + Ä Ö Ü ß, her harfte gerekli alanlar', () => {
       assert.ok(L.letterIndexInWord(ex.kelime, l) >= 0, `${l.id} ${p}: ${ex.kelime} harfi içermiyor`);
     }
   }
+  // Okunuşlar Türkçe harflerle, fonetik işaret olmadan (ör. "foogel", "vasır", "tsebra").
+  for (const l of letters) for (const ex of [l.cocuk, l.yetiskin]) assert.ok(!ex.okunus || /^[a-zçğıöşü -]+$/.test(ex.okunus), `${ex.kelime}: ${ex.okunus}`);
+  for (const l of letters) for (const t of [l.ipucu, l.detay || '']) assert.ok(!/[aeiouöü]:[a-zçğıöşü"]/.test(t) && !/ŋ/.test(t), `${l.id}: ${t}`);
+  assert.equal(letters.find((l) => l.id === 'V').cocuk.okunus, 'foogel');
   assert.equal(letters.find((l) => l.id === 'V').ad, 'Vau');
   assert.equal(letters.find((l) => l.id === 'J').ad, 'Jot');
   assert.equal(letters.find((l) => l.id === 'ß').buyuk, null);
@@ -155,4 +159,21 @@ test('puan: çocukta ceza yok, yetişkinde seri çarpanı ve süre bonusu; yıld
   assert.equal(L.starsFor(6, 10), 2);
   assert.equal(L.starsFor(2, 10), 1);
   assert.deepEqual(plain(L.spellingMistakes('Fogel', 'Vogel', letters)), ['V']);
+});
+
+test('hesap ilerlemesi: yerel ve hesap verisi en iyi değerlerle birleşir', () => {
+  const local = { cocuk: { stats: { A: { r: 3, w: 1 }, V: { r: 0, w: 2 } }, best: { duy: 7 }, stars: 12 }, yetiskin: { stats: {}, best: { 'duy:zaman': 140 }, stars: 0 } };
+  const remote = { cocuk: { stats: { A: { r: 1, w: 4 }, B: { r: 2, w: 0 } }, best: { duy: 9, sirala: 5 }, stars: 30 }, yetiskin: { stats: { Z: { r: 1, w: 1 } }, best: { 'duy:zaman': 90 }, stars: 0 } };
+  const m = plain(L.mergeProgress(local, remote, ids));
+  assert.deepEqual(m.cocuk.stats, { A: { r: 3, w: 4 }, B: { r: 2, w: 0 }, V: { r: 0, w: 2 } });
+  assert.deepEqual(m.cocuk.best, { duy: 9, sirala: 5 });
+  assert.equal(m.cocuk.stars, 30);
+  assert.deepEqual(m.yetiskin, { stats: { Z: { r: 1, w: 1 } }, best: { 'duy:zaman': 140 }, stars: 0 });
+  assert.deepEqual(plain(L.mergeProgress(m, m, ids)), m, 'aynı veriyi tekrar birleştirmek bir şey değiştirmez');
+  assert.deepEqual(plain(L.mergeProgress(m, remote, ids)), m);
+  assert.equal(L.progressKey(m, ids), L.progressKey(plain(L.mergeProgress(remote, local, ids)), ids), 'sıra önemli değil');
+  // Boş, bozuk ya da fazladan alanlar temizlenir (kurallar yalnızca bilinen harf ve modlara izin verir).
+  const dirty = { cocuk: { stats: { A: { r: '2', w: -1 }, '<x>': { r: 5, w: 0 }, B: { r: 0, w: 0 } }, best: { duy: 3.7, hack: 1 }, stars: 'x' }, extra: 1 };
+  assert.deepEqual(plain(L.cleanProgress(dirty, ids)), { cocuk: { stats: { A: { r: 2, w: 0 } }, best: { duy: 3 }, stars: 0 }, yetiskin: { stats: {}, best: {}, stars: 0 } });
+  assert.deepEqual(plain(L.mergeProgress(null, undefined, ids)), { cocuk: { stats: {}, best: {}, stars: 0 }, yetiskin: { stats: {}, best: {}, stars: 0 } });
 });

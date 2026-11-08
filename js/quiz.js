@@ -425,6 +425,15 @@
           <p>${escapeHtml(t('kidsCardText'))}</p>
         </div>
         <a class="btn primary" href="#artikel-evleri" data-kids-game>${escapeHtml(t('kidsCardButton'))} <span aria-hidden="true">→</span></a>
+      </section>
+      <section class="kids-card" aria-labelledby="alfabeCardTitle">
+        <div class="kids-card-letters" aria-hidden="true">${['A','B','C'].map((l,i)=>`<span class="is-${escapeHtml(['der','die','das'][i])}">${escapeHtml(l)}</span>`).join('')}</div>
+        <div>
+          <p class="kids-card-kicker">${escapeHtml(t('alfabeCardKicker'))}</p>
+          <h3 id="alfabeCardTitle">${escapeHtml(t('alfabeCardTitle'))}</h3>
+          <p>${escapeHtml(t('alfabeCardText'))}</p>
+        </div>
+        <a class="btn primary" href="/almanca-alfabe/" data-alfabe-game>${escapeHtml(t('kidsCardButton'))} <span aria-hidden="true">→</span></a>
       </section>` : ''}
       ${subNote ? `<p class="ba-subresults-note" role="status">${escapeHtml(subNote)}</p>` : ''}
       ${subResults}

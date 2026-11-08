@@ -25,6 +25,6 @@ export const APPCHECK_SITE_KEY = '';
 // Schreiben yapay zekâ kontrolü (madde 7 Aşama B): Cloudflare Worker'ın adresi (https://….workers.dev, sonunda / yok).
 // Boşken yapay zekâ kontrolü hiç çağrılmaz (Aşama A gibi sadece öğretmen geri bildirimi). Kurulum: docs/yapay-zeka-kurulum.md.
 // Değiştirince scripts/csp.mjs'teki AI_WORKER_ORIGIN da aynı adres olmalı (node scripts/build-pages.mjs).
-export const AI_WORKER_URL = '';
+export const AI_WORKER_URL = 'https://schreiben-kontrol.bozkurtt-omerfaruk.workers.dev';
 
 export const GOOGLE_CLIENT_ID = '8848854838-71mdsvir8jgidnqfnsl67ff357mgbdip.apps.googleusercontent.com';

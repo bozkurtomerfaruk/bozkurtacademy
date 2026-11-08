@@ -2,6 +2,13 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-08 · Madde 7 Aşama B: Worker bağlandı
+
+- Kurulumu sen yaptın: Worker (`schreiben-kontrol.bozkurtt-omerfaruk.workers.dev`), Workers AI bağlantısı, yapay zekâ hesabı, değişkenler.
+- `firestore.rules`: `aiUid` = yapay zekâ hesabının UID'si. `js/account/config.js` → `AI_WORKER_URL`, `scripts/csp.mjs` → `AI_WORKER_ORIGIN` (sayfalar yeniden üretildi).
+- Dışarıdan kontrol: izinli kökenler (bozkurtacademy.com, www) 204; yabancı köken 403; belirteçsiz ve sahte belirteçli istek 401. Worker ayakta ve CORS ayarı doğru. Firebase anahtarı, yapay zekâ hesabının şifresi ve AI bağlantısı ancak gerçek bir öğrenci gönderimiyle (rehberin 8. adımı) denenebilir.
+- **Sıradaki:** Kuralları yayınla → rehberin 8. adımındaki deneme → deneme API token'ını sil.
+
 ## 2026-11-07 · Madde 7 Aşama B: Schreiben yapay zekâ kontrolü (Gemma 4, Cloudflare Workers AI, Free plan)
 
 - **Nasıl çalışıyor:** Onaylı öğrenci metni gönderince (Aşama A) tarayıcı Cloudflare Worker'a (`worker/schreiben-kontrol.js`) sadece metnin kimliğini bildiriyor. Worker:

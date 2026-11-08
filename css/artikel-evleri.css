@@ -102,4 +102,10 @@
 #page-exercises .kids-card .is-der .k-roof{fill:var(--ba-der)}#page-exercises .kids-card .is-der .k-wall{fill:var(--ba-der-bg)}
 #page-exercises .kids-card .is-die .k-roof{fill:var(--ba-die)}#page-exercises .kids-card .is-die .k-wall{fill:var(--ba-die-bg)}
 #page-exercises .kids-card .is-das .k-roof{fill:var(--ba-das)}#page-exercises .kids-card .is-das .k-wall{fill:var(--ba-das-bg)}
+/* Almanca Alfabe kartı (/almanca-alfabe/): üç harf kutusu, artikel renklerinde. */
+#page-exercises .kids-card-letters{display:flex;gap:4px}
+#page-exercises .kids-card-letters span{display:grid;place-items:center;width:34px;height:40px;border-radius:8px;font-family:var(--ba-serif);font-weight:600;font-size:1.25rem;color:var(--ba-ink)}
+#page-exercises .kids-card-letters .is-der{background:var(--ba-der-bg);box-shadow:inset 0 0 0 2px var(--ba-der)}
+#page-exercises .kids-card-letters .is-die{background:var(--ba-die-bg);box-shadow:inset 0 0 0 2px var(--ba-die)}
+#page-exercises .kids-card-letters .is-das{background:var(--ba-das-bg);box-shadow:inset 0 0 0 2px var(--ba-das)}
 @media(max-width:620px){#page-exercises .kids-card{grid-template-columns:1fr}#page-exercises .kids-card .btn{width:100%}}

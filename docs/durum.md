@@ -2,6 +2,22 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-08 · Almanca Alfabe: alıştırma kartı, sade okunuşlar, hesapta ilerleme
+
+- Alıştırmalar (A1) "Çocuklar için" bölümünde Artikel Evleri'nin yanında "Almanca Alfabe" kartı (TR/DE/EN). `quiz.js` v31, `app.js` v37, `artikel-evleri.css` v2.
+- `data/alfabe.json`: okunuşlar fonetik işaretsiz (uzun ünlü çift harf: "foogel", "tsebra"); `alfabe.json?v=2`.
+- Giriş yapmış onaylı öğrencinin ilerlemesi `users/{uid}/progress/alfabe` belgesinde (`js/account/alfabe-sync.js`); girişte yerel ilerleme en iyi değerlerle birleşir. Kurallar + 5 kural testi, öğrenci silinince belge de siliniyor. Gizlilik metni (TR/DE/EN) madde 5 ve localStorage maddesi güncellendi.
+- Testler: `npm run test:alfabe-account` (emülatör, 16 kontrol), `tests/alfabe.mjs` kart kontrolleri.
+- **Yayından önce:** `firestore.rules` Firebase Console'da yayınlanmalı; yoksa canlıda hesaba yazma reddedilir (oyun yerelde çalışmaya devam eder).
+
+## 2026-11-08 · Almanca Alfabe oyunu (`/almanca-alfabe/`)
+
+- Yeni statik sayfa: profil seçimi (Çocuk / Yetişkin, ilerleme ayrı), beş mod (Harfleri Keşfet, Duy ve Seç, İlk Harf, Buchstabieren, Sıraya Diz), 10 soruluk tur, 1–3 yıldız, "Zor harflerimi çalış", yetişkinde Zamana Karşı ve seri puanı.
+- Veri `data/alfabe.json`, mantık `js/alfabe-logic.js`, arayüz `js/alfabe.js`, stil `css/alfabe.css`. Ayrıntı ve yeni kelime ekleme: `docs/alfabe-oyunu.md`.
+- Bağlantılar: footer "Ücretsiz çalış" grubu ve A1 kurs sayfası (Temeller).
+- Gizlilik metni (TR/DE/EN): localStorage `baAlfabe` ve cihazdaki sesle okuma eklendi.
+- Testler: `tests/alfabe-logic.test.mjs` (CI) ve `tests/alfabe.mjs` (tarayıcı; 320/390/1280 px, açık/koyu, ses yok, depolama kapalı).
+
 ## 2026-11-08 · Madde 7 Aşama B: Worker bağlandı
 
 - Kurulumu sen yaptın: Worker (`schreiben-kontrol.bozkurtt-omerfaruk.workers.dev`), Workers AI bağlantısı, yapay zekâ hesabı, değişkenler.

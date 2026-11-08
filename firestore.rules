@@ -198,6 +198,27 @@ service cloud.firestore {
         );
     }
 
+    // Almanca Alfabe oyunu ilerlemesi (js/account/alfabe-sync.js): users/{uid}/progress/alfabe.
+    // { cocuk, yetiskin, updatedAt }; her profil { stats: harf → { r, w }, best: mod → skor, stars }.
+    // Sadece bilinen harfler ve modlar; değerler js/alfabe-logic.js → cleanProgress ile tam sayıya çevrilir.
+    function validAlfabeProfile(p) {
+      return p is map
+        && p.keys().hasOnly(['stats', 'best', 'stars']) && p.keys().hasAll(['stats', 'best', 'stars'])
+        && p.stats is map
+        && p.stats.keys().hasOnly(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Ä', 'Ö', 'Ü', 'ß'])
+        && p.best is map
+        && p.best.keys().hasOnly(['duy', 'duy:zaman', 'ilk-harf', 'ilk-harf:zaman', 'heceleme', 'heceleme:zaman', 'sirala', 'sirala:zaman'])
+        && p.stars is int && p.stars >= 0 && p.stars <= 1000000;
+    }
+
+    function validAlfabeProgress() {
+      let d = request.resource.data;
+      return d.keys().hasOnly(['cocuk', 'yetiskin', 'updatedAt'])
+        && d.keys().hasAll(['cocuk', 'yetiskin', 'updatedAt'])
+        && d.updatedAt == request.time
+        && validAlfabeProfile(d.cocuk) && validAlfabeProfile(d.yetiskin);
+    }
+
     // Öğrencinin ödeve eklediği kendi dokümanı: sadece Google Docs / Drive linki.
     function validStudentDoc(value) {
       return value is string
@@ -263,6 +284,12 @@ service cloud.firestore {
         allow get: if isAi();
         allow create: if ownActive(uid) && validWriting(uid, writingId);
         allow update: if (ownActive(uid) && validWritingSeen()) || (isAi() && validAiFeedback());
+      }
+
+      // Oyun ilerlemesi (şimdilik sadece "alfabe"): onaylı öğrenci okur ve yazar; silme sadece öğretmen.
+      match /progress/{name} {
+        allow get: if ownActive(uid) && name == 'alfabe';
+        allow create, update: if ownActive(uid) && name == 'alfabe' && validAlfabeProgress();
       }
 
       // Günlük gönderim sınırı (şimdilik sadece "writing").

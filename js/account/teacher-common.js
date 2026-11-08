@@ -177,8 +177,9 @@ export function addResource(uid, { title, url, note }){
 export const deleteResource = (uid, id) => fs.deleteDoc(fs.doc(db, 'users', uid, 'resources', id));
 
 // writings: Schreiben metinleri ve geri bildirimler; limits: günlük gönderim sınırı. Gizlilik politikasındaki saklama
-// süresi (son dersten 12 ay) bunlar için de geçerli: öğrenci silinince hepsi birlikte silinir.
-const SUBCOLLECTIONS = ['results', 'assignments', 'resources', 'lessons', 'writings', 'limits'];
+// süresi (son dersten 12 ay) bunlar için de geçerli: öğrenci silinince hepsi birlikte silinir. progress: Almanca Alfabe
+// oyununun ilerlemesi (js/account/alfabe-sync.js).
+const SUBCOLLECTIONS = ['results', 'assignments', 'resources', 'lessons', 'writings', 'limits', 'progress'];
 
 // Geri bildirim bekleyen Schreiben metinleri, öğrenci başına: Map(uid → sayı). Bütün metinler tek sorguda okunur
 // (filtresiz collectionGroup için ek indeks gerekmez).

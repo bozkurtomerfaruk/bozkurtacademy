@@ -194,8 +194,53 @@ export async function pendingWritingsByStudent(){
 }
 
 export function saveWritingFeedback(uid, id, feedback){
-  return fs.updateDoc(fs.doc(db, 'users', uid, 'writings', id), { feedback, feedbackAt: fs.serverTimestamp() });
+  return fs.updateDoc(fs.doc(db, 'users', uid, 'writings', id), { feedback, feedbackSource: 'teacher', feedbackAt: fs.serverTimestamp() });
 }
+
+// Yapay zekâ (Aşama B). Taslaklar aiDrafts/<uid>_<metin id> belgelerinde durur; öğrenci hiçbirini okuyamaz.
+// Öğretmen onaylayınca (düzenleyerek ya da düzenlemeden) taslak metnin geri bildirimine yazılır ve silinir.
+export async function loadAiDrafts(uid = null){
+  const col = fs.collection(db, 'aiDrafts');
+  const snap = await fs.getDocs(uid ? fs.query(col, fs.where('uid', '==', uid)) : col).catch((error) => { console.warn(error); return { docs: [] }; });
+  return snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+}
+
+// items: [{ original, korrektur, erklaerung }] (Worker'ın biçimi); source: 'ai-approved' (aynen) ya da 'ai-edited' (düzenlendi).
+export async function approveAiDraft(uid, writingId, { note, items, correctedText, source }){
+  const batch = fs.writeBatch(db);
+  batch.update(fs.doc(db, 'users', uid, 'writings', writingId), {
+    feedback: note,
+    feedbackItems: items,
+    correctedText,
+    feedbackSource: source,
+    feedbackAt: fs.serverTimestamp()
+  });
+  batch.delete(fs.doc(db, 'aiDrafts', `${uid}_${writingId}`));
+  await batch.commit();
+}
+
+export const deleteAiDraft = (uid, writingId) => fs.deleteDoc(fs.doc(db, 'aiDrafts', `${uid}_${writingId}`));
+
+// settings/ai.mode: 'off' | 'draft' | 'instant'. Belge yoksa varsayılan 'draft' ile oluşturulur.
+export const AI_MODES = ['off', 'draft', 'instant'];
+export async function getAiMode(){
+  const ref = fs.doc(db, 'settings', 'ai');
+  const snap = await fs.getDoc(ref);
+  const mode = snap.exists() ? snap.data().mode : null;
+  if(AI_MODES.includes(mode)) return mode;
+  await fs.setDoc(ref, { mode: 'draft', updatedAt: fs.serverTimestamp() });
+  return 'draft';
+}
+export const setAiMode = (mode) => fs.setDoc(fs.doc(db, 'settings', 'ai'), { mode, updatedAt: fs.serverTimestamp() });
+
+// 16 yaş altı: yapay zekâ ile kontrol için velinin ayrı ve isteğe bağlı onayı. given:false = onay geri çekildi.
+export function recordAiConsent(uid, { given, date = new Date(), method = '' }){
+  return fs.updateDoc(userRef(uid), {
+    aiConsent: { given, at: fs.Timestamp.fromDate(date), method, recordedAt: fs.serverTimestamp() }
+  });
+}
+// Worker'daki aiAllowed ile aynı karar (worker/schreiben-kontrol.js).
+export const aiAllowed = (s) => s.minor === false ? s.aiConsent?.given !== false : (consentGiven(s) && s.aiConsent?.given === true);
 
 // Öğrencinin Firestore'daki bütün verilerini siler. Önce silme işareti yazılır ki
 // silme yarıda kalsa bile aynı hesap yeniden profil açamasın.
@@ -209,6 +254,9 @@ export async function deleteStudentData(uid){
       await batch.commit();
     }
   }
+  const drafts = await fs.getDocs(fs.query(fs.collection(db, 'aiDrafts'), fs.where('uid', '==', uid)));
+  for(const d of drafts.docs) await fs.deleteDoc(d.ref);
+  await fs.deleteDoc(fs.doc(db, 'aiLimits', uid));
   await fs.deleteDoc(userRef(uid));
 }
 

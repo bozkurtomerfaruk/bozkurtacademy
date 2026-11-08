@@ -92,6 +92,62 @@ function renderWritingBadges(){
   });
 }
 
+// Hatalı yerler metinde numaralı işaretlenir; numara aşağıdaki listedeki düzeltmeyle aynıdır. Her öneri metinde
+// ilk (önceki işaretlerle çakışmayan) geçtiği yerde işaretlenir.
+function markedText(text, items){
+  if(!items?.length) return text;
+  const spans = [];
+  items.forEach((item, n) => {
+    let from = 0;
+    while(item.original){
+      const at = text.indexOf(item.original, from);
+      if(at < 0) break;
+      const end = at + item.original.length;
+      if(!spans.some((s) => at < s.end && end > s.at)){ spans.push({ at, end, n: n + 1 }); break; }
+      from = at + 1;
+    }
+  });
+  spans.sort((a, b) => a.at - b.at);
+  const out = [];
+  let pos = 0;
+  for(const s of spans){
+    out.push(text.slice(pos, s.at), h('mark', {}, text.slice(s.at, s.end), h('sup', { class: 'acc-mark-no' }, String(s.n))));
+    pos = s.end;
+  }
+  out.push(text.slice(pos));
+  return out;
+}
+
+function correctionList(items){
+  return h('ol', { class: 'acc-feedback-items', lang: 'tr' }, ...items.map((item) => h('li', {},
+    h('span', { lang: 'de' }, h('del', {}, item.original), ' → ', h('ins', {}, item.korrektur)),
+    item.erklaerung ? h('span', {}, ' ', item.erklaerung) : null)));
+}
+
+function correctedBlock(text){
+  return text ? h('details', { class: 'acc-details' }, h('summary', {}, t('panelWritingCorrected')), h('div', { class: 'acc-writing-text', lang: 'de' }, text)) : null;
+}
+
+function teacherFeedback(w){
+  const source = w.feedbackSource === 'ai-approved' ? 'panelWritingAiApproved' : w.feedbackSource === 'ai-edited' ? 'panelWritingAiEdited' : null;
+  return h('div', { class: 'acc-feedback-block', 'data-writing-feedback': w.id },
+    h('p', { class: 'acc-sub' }, t('panelWritingFeedbackFrom').replace('{date}', fmt(w.feedbackAt))),
+    w.feedback ? h('p', { class: 'acc-feedback', lang: 'tr' }, w.feedback) : null,
+    source ? h('p', { class: 'acc-sub' }, t(source)) : null,
+    w.feedbackItems?.length ? h('p', { class: 'acc-sub' }, h('strong', {}, t('panelWritingCorrections'))) : null,
+    w.feedbackItems?.length ? correctionList(w.feedbackItems) : null,
+    correctedBlock(w.correctedText));
+}
+
+function autoFeedback(w){
+  const errors = w.aiFeedback.errors || [];
+  return h('div', { class: 'acc-feedback-block acc-ai-auto', 'data-writing-auto': w.id },
+    h('p', {}, h('span', { class: 'acc-badge info' }, t('panelWritingAuto'))),
+    h('p', { class: 'acc-sub' }, t('panelWritingAutoNote')),
+    errors.length ? correctionList(errors) : h('p', { class: 'acc-sub' }, t('panelWritingAutoNone')),
+    correctedBlock(w.aiFeedback.correctedText));
+}
+
 async function renderWritings(){
   const box = $('writingList');
   if(!writings.length){
@@ -103,23 +159,23 @@ async function renderWritings(){
   }
   const titles = await Promise.all(writings.map(writingTitle));
   box.replaceChildren(...writings.map((w, i) => {
-    const feedback = w.feedbackAt
-      ? h('div', {}, h('p', { class: 'acc-sub' }, t('panelWritingFeedbackFrom').replace('{date}', fmt(w.feedbackAt))),
-        h('p', { class: 'acc-feedback', lang: 'tr' }, w.feedback || ''))
-      : h('p', { class: 'acc-sub' }, t('panelWritingWaiting'));
+    const has = Boolean(w.feedbackAt || w.aiAt);
+    const feedback = w.feedbackAt ? teacherFeedback(w) : h('p', { class: 'acc-sub' }, t('panelWritingWaiting'));
+    const auto = !w.feedbackAt && w.aiFeedback ? autoFeedback(w) : null;
     const item = h('details', { class: 'ba-card acc-card acc-writing', 'data-writing': w.id },
       h('summary', {},
         h('span', { class: 'acc-writing-title' }, h('span', { class: 'acc-new-dot', 'data-writing-new': w.id, 'aria-hidden': 'true', hidden: !unseenFeedback(w) }),
           `${fmt(w.at)} · ${titles[i]}`),
         h('span', { class: 'acc-badges' },
           h('span', { class: 'acc-badge' }, t('panelWritingWords').replace('{n}', String(w.words))),
-          w.feedbackAt
+          has
             ? h('span', { class: `acc-badge ${unseenFeedback(w) ? 'warning' : 'success'}`, 'data-writing-state': w.id }, t(unseenFeedback(w) ? 'panelWritingNew' : 'panelWritingDone'))
             : h('span', { class: 'acc-badge' }, t('panelWritingPending')))),
       h('div', { class: 'acc-card-body' },
         feedback,
+        auto,
         h('p', { class: 'acc-sub' }, t('panelWritingMine')),
-        h('div', { class: 'acc-writing-text', lang: 'de' }, w.text),
+        h('div', { class: 'acc-writing-text', lang: 'de', 'data-writing-text': w.id }, markedText(w.text, w.feedbackAt ? w.feedbackItems : w.aiFeedback?.errors)),
         h('a', { class: 'ba-link', href: writingUrl(w) }, t('panelWritingOpenTask'))));
     item.addEventListener('toggle', () => {
       if(!item.open || !unseenFeedback(w)) return;

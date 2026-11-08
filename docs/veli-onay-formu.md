@@ -14,6 +14,7 @@
 - Öğrencinin adı soyadı, e-posta adresi ve doğum yılı (tam doğum tarihi değil)
 - Sitedeki alıştırmaların sonuçları: konu, seviye, skor ve zaman
 - Ödevlerin durumu ve öğrencinin ödeve eklediği Google Docs linki
+- Sınav hazırlığındaki yazma görevlerinde (Schreiben) öğrencinin gönderdiği metinler ve öğretmenin geri bildirimi
 - Ders bilgileri: tarih, saat, süre, ders notu ve Google Meet linki
 - Velinin adı soyadı ve e-posta adresi
 - Bu onayın tarihi ve yöntemi (imzalı form ya da e-posta)
@@ -34,6 +35,17 @@ Veriler reklam için kullanılmaz ve satılmaz.
 - **Google Firebase:** Giriş ve öğrenci verileri burada tutulur. Veritabanı (Cloud Firestore) Frankfurt'taki sunucularda bulunur. Giriş hesabı (e-posta adresi, şifrenin şifrelenmiş özeti) Google tarafından AB dışında, özellikle ABD'de de işlenebilir; bu aktarım AB-ABD Veri Gizliliği Çerçevesi ve standart sözleşme maddeleri dayanağıyla yapılır.
 - **Google Calendar ve Google Meet:** Her ders öğretmenin Google Calendar'ında bir etkinlik olarak oluşturulur. Öğrencinin adı ve e-posta adresi, ders zamanı ve Meet linki bu etkinlikte yer alır. Davet e-postalarını Google gönderir.
 - **Gmail:** Dersten bir gün önce öğretmenin Gmail hesabından hatırlatma e-postası gönderilir (Google Apps Script ile).
+
+## 3a. Yapay zekâ ile metin kontrolü (isteğe bağlı, ayrı onay)
+
+Öğretmen, öğrencinin yazma görevlerindeki metinleri daha hızlı düzeltebilmek için bir yapay zekâdan öneri alabilir. Bu sadece aşağıdaki ayrı kutuyu işaretlerseniz yapılır. İşaretlemezseniz öğrenci yine bütün yazma görevlerini kullanır ve geri bildirimi sadece öğretmenden alır.
+
+- **Hizmet:** Cloudflare Workers AI (Cloudflare, Inc., ABD). Model: Google Gemma 4 (açık lisanslı bir model).
+- **Gönderilen:** Sadece metnin kendisi ve görevin adı (ör. "Goethe B1 · Teil 1 · Neue Wohnung"). Öğrencinin adı, e-posta adresi, kullanıcı kimliği ya da başka bir bilgisi gönderilmez. Öğrencinin metne kendi yazdığı bilgiler (ör. metindeki bir isim) metnin parçası olarak gider; bu yüzden öğrenciye metinlerde gerçek bilgilerini yazmamasını öneriyoruz.
+- **Eğitim ve saklama:** Cloudflare, Workers AI'a gönderilen metinleri yapay zekâ modellerini eğitmek için kullanmaz ve işlemden sonra saklamaz.
+- **Yer:** İşlem AB dışında, özellikle ABD'de de yapılabilir; dayanak AB-ABD Veri Gizliliği Çerçevesi ve standart sözleşme maddeleridir.
+- **Sonuç:** Öneriler önce öğretmene gider; öğretmen kontrol edip düzeltir, sonra öğrenci görür. Yapay zekâ not vermez ve öğrenci hakkında karar vermez.
+- Bu onayı ayrıca ve istediğiniz zaman geri alabilirsiniz; hesap açık kalır, sadece yapay zekâ kontrolü durur.
 
 ## 4. Saklama süresi
 
@@ -59,6 +71,7 @@ Velinin e-posta adresi: ______________________________
 
 - [ ] Yukarıdaki bilgileri okudum. Çocuğumun Bozkurt Academy öğrenci hesabının açılmasına ve verilerinin bu formda açıklandığı şekilde işlenmesine onay veriyorum.
 - [ ] Ders davetlerinin ve hatırlatma e-postalarının bana da gönderilmesini istiyorum. (İsteğe bağlı)
+- [ ] Çocuğumun yazma görevlerindeki metinlerin 3a maddesinde açıklandığı şekilde yapay zekâ ile kontrol edilmesine onay veriyorum. (İsteğe bağlı)
 
 Yer, tarih: ______________________________
 
@@ -77,6 +90,7 @@ Ihr Kind möchte für den Online-Deutschunterricht bei Bozkurt Academy ein Schü
 - Vor- und Nachname, E-Mail-Adresse und Geburtsjahr des Kindes (nicht das genaue Geburtsdatum)
 - Ergebnisse der Übungen auf der Website: Thema, Niveau, Punktzahl und Zeitpunkt
 - Stand der Hausaufgaben und der Google-Docs-Link, den das Kind zu einer Hausaufgabe hinzufügt
+- Bei den Schreibaufgaben der Prüfungsvorbereitung: die Texte, die das Kind abschickt, und die Rückmeldung des Lehrers
 - Unterrichtsdaten: Datum, Uhrzeit, Dauer, Notiz zur Stunde und Google-Meet-Link
 - Vor- und Nachname sowie E-Mail-Adresse eines Elternteils
 - Datum und Form dieser Einwilligung (unterschriebenes Formular oder E-Mail)
@@ -97,6 +111,17 @@ Die Daten werden nicht für Werbung verwendet und nicht verkauft.
 - **Google Firebase:** Anmelde- und Schülerdaten werden hier gespeichert. Die Datenbank (Cloud Firestore) liegt auf Servern in Frankfurt. Das Anmeldekonto (E-Mail-Adresse, verschlüsselter Passwort-Hash) kann von Google auch außerhalb der EU, insbesondere in den USA, verarbeitet werden; Grundlage dafür sind das EU-US Data Privacy Framework und die Standardvertragsklauseln der EU-Kommission.
 - **Google Calendar und Google Meet:** Jede Stunde wird als Termin im Google Calendar des Lehrers angelegt. Name und E-Mail-Adresse des Kindes, die Uhrzeit und der Meet-Link stehen in diesem Termin. Die Einladungs-E-Mails versendet Google.
 - **Gmail:** Einen Tag vor der Stunde wird vom Gmail-Konto des Lehrers eine Erinnerungs-E-Mail versendet (mit Google Apps Script).
+
+## 3a. Textprüfung mit künstlicher Intelligenz (freiwillig, gesonderte Einwilligung)
+
+Damit der Lehrer die Texte der Schreibaufgaben schneller korrigieren kann, kann er Vorschläge einer KI einholen. Das geschieht nur, wenn Sie das gesonderte Kästchen unten ankreuzen. Ohne dieses Kreuz nutzt das Kind alle Schreibaufgaben weiterhin und erhält die Rückmeldung nur vom Lehrer.
+
+- **Dienst:** Cloudflare Workers AI (Cloudflare, Inc., USA). Modell: Google Gemma 4 (ein offen lizenziertes Modell).
+- **Übermittelt:** Nur der Text selbst und der Name der Aufgabe (z. B. „Goethe B1 · Teil 1 · Neue Wohnung“). Name, E-Mail-Adresse, Benutzerkennung oder andere Angaben des Kindes werden nicht übermittelt. Was das Kind selbst in den Text schreibt (z. B. einen Namen), geht als Teil des Textes mit; wir empfehlen dem Kind deshalb, keine echten persönlichen Angaben in die Texte zu schreiben.
+- **Training und Speicherung:** Cloudflare verwendet die an Workers AI gesendeten Texte nicht zum Training von KI-Modellen und speichert sie nach der Verarbeitung nicht.
+- **Ort:** Die Verarbeitung kann auch außerhalb der EU, insbesondere in den USA, stattfinden; Grundlage sind das EU-US Data Privacy Framework und die Standardvertragsklauseln.
+- **Ergebnis:** Die Vorschläge gehen zuerst an den Lehrer; er prüft und korrigiert sie, erst dann sieht das Kind sie. Die KI vergibt keine Noten und trifft keine Entscheidungen über das Kind.
+- Sie können diese Einwilligung gesondert und jederzeit widerrufen; das Konto bleibt bestehen, nur die KI-Prüfung endet.
 
 ## 4. Speicherdauer
 
@@ -122,6 +147,7 @@ E-Mail-Adresse des Elternteils: ______________________________
 
 - [ ] Ich habe die obigen Informationen gelesen. Ich willige ein, dass für mein Kind ein Schülerkonto bei Bozkurt Academy angelegt wird und seine Daten wie in diesem Formular beschrieben verarbeitet werden.
 - [ ] Ich möchte die Einladungen und Erinnerungs-E-Mails ebenfalls erhalten. (Freiwillig)
+- [ ] Ich willige ein, dass die Texte meines Kindes aus den Schreibaufgaben wie unter Punkt 3a beschrieben mit KI geprüft werden. (Freiwillig)
 
 Ort, Datum: ______________________________
 

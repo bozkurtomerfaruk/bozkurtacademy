@@ -6,6 +6,9 @@
 // js/legacy-hash.js. JSON-LD (<script type="application/ld+json">) çalıştırılmadığı için CSP'den etkilenmez.
 // Yeni bir dış servis eklerken alan adını buraya, en dar biçimiyle ekle ve node scripts/build-pages.mjs çalıştır.
 // <meta> ile verilemeyenler: frame-ancestors, report-uri/report-to, sandbox (yalnızca HTTP başlığıyla çalışır).
+// Schreiben yapay zekâ Worker'ı (js/account/config.js → AI_WORKER_URL ile aynı köken). Boşken eklenmez.
+export const AI_WORKER_ORIGIN = '';
+
 export const CSP_DIRECTIVES = {
   'default-src': ["'self'"],
   'script-src': ["'self'",
@@ -24,7 +27,8 @@ export const CSP_DIRECTIVES = {
     'https://www.google.com/recaptcha/',
     'https://api.web3forms.com',                     // iletişim formu ve yorum bildirimi
     'https://bozkurtacademy.goatcounter.com',        // GoatCounter sayacı (sendBeacon)
-    'http://127.0.0.1:8080', 'http://127.0.0.1:9099'], // yalnızca yerel Firebase Emulator (canlıda bağlanılmaz)
+    ...(AI_WORKER_ORIGIN ? [AI_WORKER_ORIGIN] : []), // Schreiben yapay zekâ kontrolü (Cloudflare Worker)
+    'http://127.0.0.1:8080', 'http://127.0.0.1:9099', 'http://127.0.0.1:8787'], // yalnızca yerel Firebase Emulator ve test Worker'ı (canlıda bağlanılmaz)
   'frame-src': ['https://accounts.google.com',
     'https://bozkurtacademy-8ab85.firebaseapp.com',  // Firebase Auth açılır pencere iframe'i (authDomain)
     'https://www.google.com/recaptcha/', 'https://recaptcha.google.com/recaptcha/'],

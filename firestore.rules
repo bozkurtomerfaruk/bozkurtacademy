@@ -21,6 +21,23 @@ service cloud.firestore {
       return request.auth != null && request.auth.uid == cleanupUid();
     }
 
+    // Schreiben yapay zekâ hesabı (madde 7 Aşama B): Cloudflare Worker (worker/schreiben-kontrol.js) bu e-posta/şifre
+    // hesabıyla giriş yapar. Yetkisi: öğrencinin profilini ve metnini okumak, yapay zekâ taslağını (aiDrafts) ve günlük
+    // sayaçları (aiLimits) yazmak, "anında göster" modunda metne aiFeedback eklemek. Kurulum: docs/yapay-zeka-kurulum.md.
+    // Hesap açılınca UID buraya yazılır; o zamana kadar yer tutucu hiçbir hesapla eşleşmez.
+    function aiUid() {
+      return 'YAPAY-ZEKA-HESABI-UID';
+    }
+
+    function isAi() {
+      return request.auth != null && request.auth.uid == aiUid();
+    }
+
+    // Otomatik hesaplar (temizlik, yapay zekâ) profil, seviye testi ya da yorum oluşturamaz.
+    function isBot() {
+      return isCleanup() || isAi();
+    }
+
     function signedIn() {
       return request.auth != null;
     }
@@ -136,6 +153,29 @@ service cloud.firestore {
         && getAfter(writingLimitPath(uid)).data.lastId == id;
     }
 
+    // Yapay zekâ sonucu: hata maddeleri (en fazla 30; her biri original, korrektur, erklaerung), düzeltilmiş metin, model adı.
+    // Maddelerin içeriğini Worker denetler (original metinde geçmek zorunda); kurallar boyutları sınırlar.
+    function validAiResult(r) {
+      return r is map && r.keys().hasOnly(['errors', 'correctedText', 'model']) && r.keys().hasAll(['errors', 'correctedText', 'model'])
+        && r.errors is list && r.errors.size() <= 30
+        && r.correctedText is string && r.correctedText.size() <= 6000
+        && r.model is string && r.model.size() <= 80;
+    }
+
+    function aiMode() {
+      return get(/databases/$(database)/documents/settings/ai).data.mode;
+    }
+
+    // "Anında göster" modunda Worker metne bir kez aiFeedback ekler; öğrenci "otomatik öneri" olarak görür.
+    function validAiFeedback() {
+      let d = request.resource.data;
+      return d.diff(resource.data).affectedKeys().hasOnly(['aiFeedback', 'aiAt'])
+        && !('aiAt' in resource.data)
+        && d.aiAt == request.time
+        && aiMode() == 'instant'
+        && validAiResult(d.aiFeedback);
+    }
+
     // Öğrenci geri bildirimi gördüğünde sadece "görüldü" zamanını işaretleyebilir.
     function validWritingSeen() {
       return request.resource.data.diff(resource.data).affectedKeys().hasOnly(['seenAt'])
@@ -186,9 +226,10 @@ service cloud.firestore {
 
     match /users/{uid} {
       // Kendi profil belgesi: "onay bekleniyor" ekranı için onaysızken de okunabilir.
-      allow get: if isSelf(uid);
+      // Yapay zekâ hesabı onay durumunu (aktif, 16 yaş altı, veli ve yapay zekâ onayı) okur.
+      allow get: if isSelf(uid) || isAi();
       // Silinmiş hesap yeniden profil açamaz.
-      allow create: if isSelf(uid) && !isCleanup()
+      allow create: if isSelf(uid) && !isBot()
         && !exists(/databases/$(database)/documents/deleted/$(uid))
         && validNewProfile();
       // Öğrenci kendi profilinde sadece "e-posta doğrulandı" bilgisini ekleyebilir (Firebase
@@ -219,8 +260,9 @@ service cloud.firestore {
       // Schreiben metinleri: sadece onaylı (aktif) hesap; ekleme ve kendi metnini okuma.
       match /writings/{writingId} {
         allow read: if ownActive(uid);
+        allow get: if isAi();
         allow create: if ownActive(uid) && validWriting(uid, writingId);
-        allow update: if ownActive(uid) && validWritingSeen();
+        allow update: if (ownActive(uid) && validWritingSeen()) || (isAi() && validAiFeedback());
       }
 
       // Günlük gönderim sınırı (şimdilik sadece "writing").
@@ -231,6 +273,36 @@ service cloud.firestore {
     }
 
     // deleted/{uid}: sadece öğretmen (genel kural). Öğrenci okuyamaz.
+
+    // Yapay zekâ taslağı ("Taslak" modu): sadece öğretmen okur, düzenleyip öğrenciye gönderir ya da siler (genel kural).
+    // Öğrenci hiçbir zaman okuyamaz. Kimlik: <öğrenci uid>_<metin id>; bir metne bir taslak.
+    match /aiDrafts/{id} {
+      allow create: if isAi()
+        && request.resource.data.keys().hasOnly(['uid', 'writingId', 'errors', 'correctedText', 'model', 'createdAt'])
+        && request.resource.data.keys().hasAll(['uid', 'writingId', 'errors', 'correctedText', 'model', 'createdAt'])
+        && request.resource.data.uid is string && request.resource.data.writingId is string
+        && id == request.resource.data.uid + '_' + request.resource.data.writingId
+        && exists(/databases/$(database)/documents/users/$(request.resource.data.uid)/writings/$(request.resource.data.writingId))
+        && request.resource.data.createdAt == request.time
+        && aiMode() == 'draft'
+        && validAiResult({ 'errors': request.resource.data.errors, 'correctedText': request.resource.data.correctedText, 'model': request.resource.data.model });
+    }
+
+    // Günlük yapay zekâ sayaçları: öğrenci başına (uid) en fazla 3, site geneli (_global) en fazla 600. Gün: Berlin tarihi.
+    match /aiLimits/{id} {
+      allow get: if isAi();
+      allow create, update: if isAi()
+        && request.resource.data.keys().hasOnly(['day', 'count', 'updatedAt'])
+        && request.resource.data.day is string && request.resource.data.day.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')
+        && request.resource.data.count is int && request.resource.data.count >= 1
+        && request.resource.data.count <= (id == '_global' ? 600 : 3)
+        && request.resource.data.updatedAt == request.time;
+    }
+
+    // settings/ai: { mode: 'off' | 'draft' | 'instant' }. Öğretmen yazar (genel kural); yapay zekâ hesabı okur.
+    match /settings/{name} {
+      allow get: if isAi() && name == 'ai';
+    }
 
     // Seviye testi sonuçları (#seviye-testi). Herkes (anonim giriş dahil) yalnızca yeni sonuç
     // ekleyebilir; okuma, güncelleme ve silme sadece öğretmen (yukarıdaki genel kural).
@@ -311,14 +383,14 @@ service cloud.firestore {
     }
 
     match /placementTests/{id} {
-      allow create: if signedIn() && !isCleanup() && validPlacement(id);
+      allow create: if signedIn() && !isBot() && validPlacement(id);
       // Temizlik hesabı: sadece süresi dolmuş sonuçlar. Sorgu da "expireAt <= şimdi" ile sınırlı olmak zorunda;
       // tek belge okuma (get), değiştirme ve süresi dolmamış sonuçları silme yok.
       allow list, delete: if isCleanup() && resource.data.expireAt <= request.time;
     }
 
     match /placementLimits/{uid} {
-      allow create: if isSelf(uid) && !isCleanup() && validPlacementLimit();
+      allow create: if isSelf(uid) && !isBot() && validPlacementLimit();
       allow update: if isSelf(uid) && validPlacementLimit()
         && request.time >= resource.data.lastAt + duration.value(10, 'm');
     }
@@ -355,13 +427,13 @@ service cloud.firestore {
     }
 
     match /comments/{id} {
-      allow create: if signedIn() && !isCleanup() && validComment(id);
+      allow create: if signedIn() && !isBot() && validComment(id);
       allow get, list: if resource.data.status == 'approved';
     }
 
     // Aynı oturumdan en fazla dakikada bir yorum.
     match /commentLimits/{uid} {
-      allow create: if isSelf(uid) && !isCleanup() && validCommentLimit();
+      allow create: if isSelf(uid) && !isBot() && validCommentLimit();
       allow update: if isSelf(uid) && validCommentLimit()
         && request.time >= resource.data.lastAt + duration.value(60, 's');
     }

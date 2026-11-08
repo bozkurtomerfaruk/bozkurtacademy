@@ -24,9 +24,9 @@ service cloud.firestore {
     // Schreiben yapay zekâ hesabı (madde 7 Aşama B): Cloudflare Worker (worker/schreiben-kontrol.js) bu e-posta/şifre
     // hesabıyla giriş yapar. Yetkisi: öğrencinin profilini ve metnini okumak, yapay zekâ taslağını (aiDrafts) ve günlük
     // sayaçları (aiLimits) yazmak, "anında göster" modunda metne aiFeedback eklemek. Kurulum: docs/yapay-zeka-kurulum.md.
-    // Hesap açılınca UID buraya yazılır; o zamana kadar yer tutucu hiçbir hesapla eşleşmez.
+    // Firebase Authentication'daki "yapay zekâ" hesabının UID'si (2026-11-08).
     function aiUid() {
-      return 'YAPAY-ZEKA-HESABI-UID';
+      return 'vvCoJgYtzDTdOifk81pQyFmBWbg2';
     }
 
     function isAi() {

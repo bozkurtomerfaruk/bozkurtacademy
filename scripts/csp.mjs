@@ -7,7 +7,7 @@
 // Yeni bir dış servis eklerken alan adını buraya, en dar biçimiyle ekle ve node scripts/build-pages.mjs çalıştır.
 // <meta> ile verilemeyenler: frame-ancestors, report-uri/report-to, sandbox (yalnızca HTTP başlığıyla çalışır).
 // Schreiben yapay zekâ Worker'ı (js/account/config.js → AI_WORKER_URL ile aynı köken). Boşken eklenmez.
-export const AI_WORKER_ORIGIN = '';
+export const AI_WORKER_ORIGIN = 'https://schreiben-kontrol.bozkurtt-omerfaruk.workers.dev';
 
 export const CSP_DIRECTIVES = {
   'default-src': ["'self'"],

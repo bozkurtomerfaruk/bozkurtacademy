@@ -132,6 +132,28 @@ export const PAGES = [
     noStickyCta: true
   },
   {
+    path: '/almanca-alfabe/',
+    crumb: 'Almanca Alfabe Oyunu',
+    title: 'Almanca Alfabe Oyunu: Harfler ve Okunuşları | Bozkurt Academy',
+    description: 'Almanca alfabeyi oyunla öğren: 26 harf ile Ä, Ö, Ü ve ß, Almanca harf adları, Türkçe okunuşlar ve heceleme. Çocuklar ve yetişkinler için ücretsiz, hesap gerekmez.',
+    // Sayfaya özel dosyalar (scripts/build-pages.mjs head ve betik bölümüne yazar). Değiştirince ?v= artır.
+    css: ['/css/alfabe.css?v=1'],
+    js: ['/js/html.js?v=1', '/js/alfabe-logic.js?v=1', '/js/alfabe.js?v=1'],
+    schema: [{
+      '@type': 'LearningResource',
+      '@id': `${SITE}/almanca-alfabe/#game`,
+      name: 'Almanca Alfabe Oyunu',
+      description: 'Türkçe konuşanlar için Almanca alfabe oyunu: harf adları, okunuşlar, ilk harf, heceleme ve alfabe sırası.',
+      url: `${SITE}/almanca-alfabe/`,
+      inLanguage: 'tr',
+      learningResourceType: 'Oyun',
+      educationalLevel: 'A1 (Başlangıç)',
+      isAccessibleForFree: true,
+      about: { '@type': 'Thing', name: 'Almanca alfabe' },
+      provider
+    }]
+  },
+  {
     path: '/sss/',
     crumb: 'Sıkça Sorulan Sorular',
     title: 'Almanca Dersi Sıkça Sorulan Sorular | Bozkurt Academy',

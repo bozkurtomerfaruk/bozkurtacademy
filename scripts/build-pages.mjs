@@ -87,7 +87,7 @@ ${links}
 const FOOTER_GROUPS = [
   ['Dersler', [['/online-almanca-dersi/', 'Online Almanca dersi'], ['/almanca-ozel-ders/', 'Almanca özel ders'], ['/almanca-grup-dersi/', 'Almanca grup dersi'], ['/almanca-sinav-hazirlik/', 'Sınav hazırlık']]],
   ['Seviyeler', [['/a1-almanca-kursu/', 'A1 Almanca kursu'], ['/a2-almanca-kursu/', 'A2 Almanca kursu'], ['/b1-almanca-kursu/', 'B1 Almanca kursu'], ['/b2-almanca-kursu/', 'B2 Almanca kursu']]],
-  ['Ücretsiz çalış', [['/almanca-gramer/', 'Gramer konuları'], ['/#exercises', 'Alıştırmalar'], ['/#exams', 'Sınav deneme setleri'], ['/#seviye-testi', 'Seviye testi']]],
+  ['Ücretsiz çalış', [['/almanca-gramer/', 'Gramer konuları'], ['/#exercises', 'Alıştırmalar'], ['/#exams', 'Sınav deneme setleri'], ['/#seviye-testi', 'Seviye testi'], ['/almanca-alfabe/', 'Almanca alfabe oyunu']]],
   ['Bozkurt Academy', [['/hakkimda/', 'Hakkımda'], ['/blog/', 'Blog'], ['/sss/', 'Sıkça sorulan sorular'], ['/iletisim/', 'İletişim']]]
 ];
 
@@ -203,7 +203,8 @@ function head(page, html) {
   <link rel="preload" href="/fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css?v=${V.style}" />
   <link rel="stylesheet" href="/css/base.css?v=${V.base}" />
-  <link rel="stylesheet" href="/css/landing.css?v=${V.landing}" />${page.kind === 'lesson' ? `
+  <link rel="stylesheet" href="/css/landing.css?v=${V.landing}" />${(page.css || []).map(href => `
+  <link rel="stylesheet" href="${href}" />`).join('')}${page.kind === 'lesson' ? `
   <link rel="stylesheet" href="/css/a1-lessons.css?v=${V.a1css}" />` : ''}${['hub', 'level', 'lesson'].includes(page.kind) ? `
   <link rel="stylesheet" href="/css/grammar-pages.css?v=${V.grammarPages}" />` : ''}${page.kind?.startsWith('blog') ? `
   <link rel="stylesheet" href="/css/blog.css?v=${V.blog}" />` : ''}
@@ -217,7 +218,8 @@ const scripts = (page = {}) => `
   <script src="/js/app.js?v=${V.app}"></script>${page.kind === 'lesson' ? `
   <script src="/js/html.js?v=${V.html}"></script>
   <script src="/js/a1-lessons.js?v=${V.a1lessons}"></script>` : ''}
-  <script src="/js/theme.js?v=${V.theme}"></script>
+  <script src="/js/theme.js?v=${V.theme}"></script>${(page.js || []).map(src => `
+  <script src="${src}"></script>`).join('')}
   <script defer data-goatcounter="https://bozkurtacademy.goatcounter.com/count" data-goatcounter-settings='{"no_onload": true}' src="/js/vendor/count.js?v=2.7.0"></script>
   <script defer src="/js/analytics.js?v=${V.analytics}"></script>
   `;
@@ -241,7 +243,7 @@ for (const page of PAGES) {
   html = fill(html, 'header', header({ current: page.nav }), file);
   html = fill(html, 'breadcrumb', breadcrumb(page), file);
   html = fill(html, 'footer', footer({ current: page.path, sticky: !page.noStickyCta }), file);
-  html = fill(html, 'scripts', scripts(), file);
+  html = fill(html, 'scripts', scripts(page), file);
   outputs.push([file, html]);
 }
 // Menü ve footer'ı paylaşan diğer sayfalar (sitemap'e girmez). Yönetim sayfası: sabit iletişim düğmesi yok.

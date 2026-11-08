@@ -2,6 +2,14 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-08 · Almanca Alfabe oyunu (`/almanca-alfabe/`)
+
+- Yeni statik sayfa: profil seçimi (Çocuk / Yetişkin, ilerleme ayrı), beş mod (Harfleri Keşfet, Duy ve Seç, İlk Harf, Buchstabieren, Sıraya Diz), 10 soruluk tur, 1–3 yıldız, "Zor harflerimi çalış", yetişkinde Zamana Karşı ve seri puanı.
+- Veri `data/alfabe.json`, mantık `js/alfabe-logic.js`, arayüz `js/alfabe.js`, stil `css/alfabe.css`. Ayrıntı ve yeni kelime ekleme: `docs/alfabe-oyunu.md`.
+- Bağlantılar: footer "Ücretsiz çalış" grubu ve A1 kurs sayfası (Temeller).
+- Gizlilik metni (TR/DE/EN): localStorage `baAlfabe` ve cihazdaki sesle okuma eklendi.
+- Testler: `tests/alfabe-logic.test.mjs` (CI) ve `tests/alfabe.mjs` (tarayıcı; 320/390/1280 px, açık/koyu, ses yok, depolama kapalı).
+
 ## 2026-11-08 · Madde 7 Aşama B: Worker bağlandı
 
 - Kurulumu sen yaptın: Worker (`schreiben-kontrol.bozkurtt-omerfaruk.workers.dev`), Workers AI bağlantısı, yapay zekâ hesabı, değişkenler.

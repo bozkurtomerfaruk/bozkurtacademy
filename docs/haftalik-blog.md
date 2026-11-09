@@ -81,6 +81,7 @@ Teknik ayrıntılar (dosyalar, komutlar, testler) en sondaki **D** bölümünded
 - Force push yok, geçmişi yeniden yazma yok (rebase, amend, reset sonrası push yok). Çakışmada `git merge origin/main` kullan.
 - Önceki haftanın taslağı hâlâ yayınlanmadıysa yeni yazı yazma; site sahibine önceki taslağın onay beklediğini hatırlat (A0).
 - Yazar olarak yalnızca "Ömer Faruk Bozkurt" adı kullanılır; başka bilgi (unvan, yıl, sertifika) eklenmez.
+- Aile birleşimi, vize veya resmî başvuru konulu yazılarda Türkiye için hangi sınav belgelerinin kabul edildiğini mutlaka `tuerkei.diplo.de`'deki güncel sayfadan kontrol et (aile birleşimi: https://tuerkei.diplo.de/tr-tr/service/05-visaeinreise/2728618-2728618). Kontrol edemiyorsan yazıyı taslakta bırak ve site sahibine söyle.
 - Alan adı her yerde `https://bozkurtacademy.com` (www yok).
 
 ## D) Teknik ayrıntılar

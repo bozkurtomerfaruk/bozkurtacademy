@@ -32,3 +32,32 @@
 .academy-theme .bl-compare a{color:var(--ba-ink);font-weight:600;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
 .academy-theme .bl-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media(max-width:560px){.academy-theme .bl-body .bl-compare :is(th,td){padding:8px 6px}.academy-theme .bl-compare thead th:first-child{width:36%}}
+/* Görseller: kapak (raster) ve içerik görselleri (satır içi SVG; renkler temadan) */
+.academy-theme .bl-cover{margin:0 0 clamp(24px,4vw,40px)}
+.academy-theme .bl-cover img{display:block;width:100%;height:auto;border-radius:var(--ba-radius)}
+.academy-theme .bl-fig{margin:24px auto 32px;max-width:620px}
+.academy-theme .bl-fig svg{display:block;width:100%;height:auto}
+.academy-theme .bl-fig text{font-family:var(--ba-sans)}
+.academy-theme .bl-fig .f-serif{font-family:var(--ba-serif)}
+.academy-theme .bl-fig .f-b{font-weight:600}
+.academy-theme .bl-fig .f-bg{fill:var(--ba-paper)}
+.academy-theme .bl-fig .f-bg2{fill:var(--ba-paper-2)}
+.academy-theme .bl-fig .f-gr{fill:var(--ba-ground)}
+.academy-theme .bl-fig .f-ink{fill:var(--ba-ink)}
+.academy-theme .bl-fig .f-mut{fill:var(--ba-muted)}
+.academy-theme .bl-fig .f-acc{fill:var(--ba-accent)}
+.academy-theme .bl-fig .f-on{fill:var(--ba-accent-ink)}
+.academy-theme .bl-fig .f-der{fill:var(--ba-der)}
+.academy-theme .bl-fig .f-die{fill:var(--ba-die)}
+.academy-theme .bl-fig .f-das{fill:var(--ba-das)}
+.academy-theme .bl-fig .f-der-bg{fill:var(--ba-der-bg)}
+.academy-theme .bl-fig .f-die-bg{fill:var(--ba-die-bg)}
+.academy-theme .bl-fig .f-das-bg{fill:var(--ba-das-bg)}
+.academy-theme .bl-fig .f-ln{fill:none;stroke:var(--ba-line-strong);stroke-width:2}
+.academy-theme .bl-fig .f-ln-acc{fill:none;stroke:var(--ba-accent);stroke-width:3}
+.academy-theme .bl-thumb img{display:block;width:100%;height:auto;border-radius:var(--ba-radius-small)}
+@media(min-width:641px){
+  .academy-theme .lp-main .bl-list li a{grid-template-columns:220px minmax(0,1fr);column-gap:24px;align-items:start}
+  .academy-theme .lp-main .bl-list li a>*{grid-column:2}
+  .academy-theme .lp-main .bl-list li a>.bl-thumb{grid-column:1;grid-row:1/span 3}
+}

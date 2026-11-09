@@ -33,6 +33,7 @@ Teknik ayrıntılar (dosyalar, komutlar, testler) en sondaki **D** bölümünded
      - resmî kaynağa link ver; linkin açıldığını kontrol et (D bölümü), açamıyorsan kurumun ana sayfasına link ver;
      - o yeri kaynakta `<!-- KONTROL ET: … -->` ile işaretle.
    - Kişisel deneyim, öğrenci hikâyesi, başarı oranı, öğrenci sayısı, sertifika veya site sahibinin vermediği herhangi bir iddia **uydurma**.
+   - **Görseller (zorunlu):** Her yeni yazı en az **1 kapak görseli** ve konuya uygun **1–3 içerik görseliyle** hazırlanır. Görselsiz yazı taslak olarak bile yayınlanmaz (`build-pages`, kapak dosyaları yoksa hata verir). Kurallar ve dosya düzeni D › "Görseller" bölümünde.
 
 4. **Yazıyı TASLAK olarak yayına al:** `"status": "draft"`. Sayfa noindex olur, sitemap'e ve listelere girmez, üstte "Taslak" notu çıkar.
    `date` alanına planlanan yayın gününü (çalışma günü) yaz.
@@ -44,7 +45,8 @@ Teknik ayrıntılar (dosyalar, komutlar, testler) en sondaki **D** bölümünded
    - `node scripts/build-pages.mjs --check` ve `node scripts/check-versions.mjs` PASS;
    - tek H1;
    - yazıdaki iç linklerin hepsi var olan sayfalara gidiyor;
-   - 375 px ve 1280 px, açık ve koyu temada yatay taşma yok;
+   - 375 px ve 1280 px, açık ve koyu temada yatay taşma yok; görseller açık ve koyu temada okunuyor, kırık görsel yok;
+   - görsel dosyalarının her biri 150 KB'ın altında; `images/blog/KAYNAKLAR.md` güncel;
    - sayfa noindex ve sitemap'te yok;
    - CI yeşil.
 
@@ -57,6 +59,7 @@ Teknik ayrıntılar (dosyalar, komutlar, testler) en sondaki **D** bölümünded
    - taslak linki (`https://bozkurtacademy.com/blog/<adres>/`);
    - `KONTROL ET` yerlerinin sayısı ve her birinin kısaca ne olduğu;
    - okunması gereken noktalar (emin olunamayan Almanca örnek, açılamayan resmî link vb.);
+   - eklenen görseller ve kaynakları (kapak + içerik görselleri; özgün illüstrasyon mu, stok fotoğraf mı; fotoğrafsa fotoğrafçı ve sayfa linki);
    - "Onaylıyorsan 'yayınla' yaz."
 
 ## B) Site sahibi "yayınla" dediğinde
@@ -115,6 +118,42 @@ Teknik ayrıntılar (dosyalar, komutlar, testler) en sondaki **D** bölümünded
 
 - `slug`: yalnızca küçük harf, rakam ve tire.
 - Yeni kayıt listenin **sonuna** eklenir. Aynı tarihli yazılarda sonra eklenen önce gösterilir.
+
+### Görseller
+
+**Kaynak (lisans çok önemli).** Yalnızca şu iki yoldan biri kullanılır:
+
+- **B) Özgün illüstrasyon (tercih edilen):** kavram şemaları, tablolar, örnek cümle kartları, zaman çizelgeleri, çalışma planları. Sitenin renkleri ve fontlarıyla; açık ve koyu temada okunur. Lisans riski yoktur.
+- **A) Ücretsiz ve ticari kullanıma açık stok fotoğraf:** yalnızca Unsplash veya Pexels. Her fotoğrafın sayfası, fotoğrafçısı ve lisansı `images/blog/KAYNAKLAR.md`'ye yazılır; fotoğrafın altına linkli kaynak satırı eklenir (ör. "Fotoğraf: Ad Soyad / Unsplash"). İllüstrasyonlarda kaynak satırı gerekmez.
+  Bu sitelere erişim yoksa (ağ izni: `unsplash.com`, `images.unsplash.com`, `www.pexels.com`, `images.pexels.com`) yalnızca özgün illüstrasyon kullanılır ve özette belirtilir.
+
+**Yasaklar:**
+
+- Google Görseller, haber siteleri, başka kurs siteleri veya lisansı belirsiz hiçbir kaynaktan görsel alınmaz.
+- Goethe-Institut, telc, ÖSD veya başka kurumların logoları ve marka görselleri kullanılmaz (kurum adı düz yazı olarak geçebilir).
+- Tanınmış veya gerçek kişilerin fotoğrafları kullanılmaz. Stok fotoğrafta insan varsa "öğrencim", "sınıfım" gibi sunulmaz; yorum veya başarı hikâyesi ima eden görsel kullanılmaz.
+- Gerçek bir pasaport, vize, sertifika veya resmî belgeye benzeyen görsel kullanılmaz.
+- Yapay zekâ ile gerçekçi insan fotoğrafı üretilmez.
+
+**Her yazı için:** 1 kapak (başlığın altında) + 1–3 içerik görseli (ilgili bölümün yanında). Her görsel bir şey anlatsın; sayıyı abartma. Alt metin Türkçe ve açıklayıcı olur (görselde ne olduğunu anlatır, anahtar kelime doldurulmaz).
+
+**Dosya düzeni:** `images/blog/<adres>/`
+
+- `kapak.svg` (1200×630, sabit renkler; sitenin `--ba-*` açık tema renkleri, fontlar "Albert Sans" ve "STIX Two Text") → `node scripts/blog-kapak.mjs <adres>` ile `kapak-{480,800,1200}.{webp,jpg}` üretilir. Kapak, yazının OG paylaşım görseli ve BlogPosting şemasındaki `image` olur; blog listesinde ve ana sayfadaki "son yazılar" kartlarında küçük hâli görünür.
+- İçerik görselleri: `<ad>.svg`, `viewBox="0 0 560 …"`. Renkler sınıflarla verilir (koyu temaya uyması için): `f-bg`, `f-bg2`, `f-ink`, `f-mut`, `f-acc`, `f-on`, `f-der`/`f-die`/`f-das` (+ `-bg`), `f-ln`, `f-ln-acc`; yazı biçimleri `f-b` (kalın), `f-serif`. Dosyadaki `<style>` yalnızca dosya tek başına açıldığında kullanılır; sayfaya eklenirken çıkarılır ve renkler `css/blog.css`'ten gelir. Mobilde 375 px'te okunması için yazı boyutu en az 17 olsun.
+- Stok fotoğraf kullanılırsa: WebP + JPEG yedeği, 480/800/1200 genişlik, `srcset`, `width`/`height`, kapak dışındakiler `loading="lazy"`; her dosya mümkünse 150 KB'ın altında. **AVIF kullanılmaz.**
+- `images/blog/KAYNAKLAR.md`: her dosya için kaynak, fotoğrafçı ve lisans (özgün illüstrasyonlar için "Bozkurt Academy için hazırlanan özgün illüstrasyon").
+
+**posts.json alanları:**
+
+```json
+"cover": { "alt": "Kapakta ne olduğunu anlatan Türkçe alt metin" },
+"figures": [
+  { "file": "artikel-renkleri.svg", "after": "2. Adım: Artikelleri kelimeyle birlikte öğren", "alt": "Görseli anlatan Türkçe alt metin" }
+]
+```
+
+`after`: yazıdaki bir `<h2>`/`<h3>` başlığının metni (birebir). Görsel, o başlıktan sonraki ilk paragrafın (paragraf ":" ile bitiyorsa arkasındaki listenin) arkasına eklenir. Yazı metnine dokunmak gerekmez. Var olan bir yazıya görsel eklenirse `"updated"` o günün tarihi yapılır (şemadaki `dateModified` ve sitemap).
 
 ### Geri dönüş linki (kurs ve diğer elle yazılmış sayfalar)
 

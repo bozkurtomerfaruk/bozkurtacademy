@@ -131,3 +131,8 @@
 .home-blog-list strong{font-family:var(--ba-serif);font-size:var(--ba-lead);font-weight:600;line-height:1.25}
 .home-blog-list span{color:var(--ba-muted)}
 @media(max-width:1020px){.home-blog{grid-template-columns:1fr}}
+.home-blog-list a{flex-direction:row;align-items:flex-start;gap:16px}
+.home-blog-thumb{flex:0 0 132px}
+.home-blog-thumb img{display:block;width:100%;height:auto;border-radius:var(--ba-radius-small)}
+.home-blog-text{display:flex;flex-direction:column;gap:6px;min-width:0}
+@media(max-width:420px){.home-blog-thumb{flex-basis:96px}}

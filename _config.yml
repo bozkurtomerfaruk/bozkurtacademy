@@ -3,3 +3,9 @@
 # _blog/ (yazı kaynakları) alt çizgiyle başladığı için yayımlanmamaya devam eder.
 include:
   - .well-known
+
+# tools/: yalnızca yerelde kullanılan sayfalar (ör. tools/audio-check.html, Almanca Alfabe ses kontrolü) yayımlanmaz.
+exclude:
+  - tools
+  - node_modules
+  - vendor

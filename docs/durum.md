@@ -2,6 +2,13 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-09 · Almanca Alfabe: önceden üretilmiş ses dosyaları
+
+- Seslendirilen 125 klip (30 harf, 60 kelime, 3 işaret, 11 soru, 11 cevap, 10 sabit cümle) `js/alfabe-logic.js` → `audioClips` ile tek listede; dosyalar `audio/alfabe/<dil>/<ad>.mp3`.
+- `scripts/generate-alfabe-audio.mjs`: Google (varsayılan), Azure ya da ElevenLabs ile üretim; anahtar sadece `.env`'de; eksik/metni değişen klipler; ffmpeg ile 48 kbit/sn mono; kendi kayıtların korunur. Henüz ses üretilmedi (anahtar yok): oyun şimdilik cihaz sesiyle çalışıyor.
+- `js/alfabe-audio.js`: HTMLAudioElement, tek ses, ilk dokunuştan önce sessiz, yavaş 0,75, dosya yoksa cihaz sesi (en iyi yerel ses).
+- Kontrol sayfası `tools/audio-check.html` (yayına girmez). Gizlilik metni (TR/DE/EN) ses dosyaları için güncellendi.
+
 ## 2026-11-08 · Almanca Alfabe: alıştırma kartı, sade okunuşlar, hesapta ilerleme
 
 - Alıştırmalar (A1) "Çocuklar için" bölümünde Artikel Evleri'nin yanında "Almanca Alfabe" kartı (TR/DE/EN). `quiz.js` v31, `app.js` v37, `artikel-evleri.css` v2.

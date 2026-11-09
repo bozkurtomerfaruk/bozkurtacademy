@@ -146,8 +146,11 @@ await writeRemote('ogrenci1', { cocuk: { stats: { A: { r: 1, w: 2 }, B: { r: 2, 
   await page.goto(`${BASE}/almanca-alfabe/`); await page.waitForSelector('[data-ab-synced]', { timeout: 15000 });
   const remote = await readRemote('ogrenci1');
   const local = await getLocal(page);
-  ok(remote.cocuk.stars === before.cocuk.stars && !remote.cocuk.stats.Q, 'başka hesabın yerel ilerlemesi hesaba karışmıyor');
-  ok(local.uid === 'ogrenci1' && local.p.cocuk.stars === before.cocuk.stars, 'cihazda bu hesabın ilerlemesi gösteriliyor');
+  // The other account's values (Q: 50 right answers, 999 stars, best 10) must not appear. Q itself may be there:
+  // the order round above can contain it.
+  const foreign = (p) => p.stars === 999 || p.stats.Q?.r === 50 || p.best.duy === 10;
+  ok(!foreign(remote.cocuk) && JSON.stringify(remote.cocuk) === JSON.stringify(before.cocuk), 'başka hesabın yerel ilerlemesi hesaba karışmıyor');
+  ok(local.uid === 'ogrenci1' && !foreign(local.p.cocuk) && JSON.stringify(local.p.cocuk) === JSON.stringify(remote.cocuk), 'cihazda bu hesabın ilerlemesi gösteriliyor');
   await ctx.close();
 }
 

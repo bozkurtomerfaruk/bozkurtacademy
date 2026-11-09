@@ -64,44 +64,37 @@
   const settings = () => L.PROFILES[store.profil];
 
   /* ---------- Sound ---------- */
-  const synth = 'speechSynthesis' in window ? window.speechSynthesis : null;
-  const voices = { de: null, tr: null };
+  // js/alfabe-audio.js: the site's own recordings (audio/alfabe/, list audio/alfabe/manifest.json) first, then an
+  // on-device voice. Nothing plays before the first touch or key press; a new sound stops the previous one.
+  const audio = window.baAlfabeAudio
+    ? window.baAlfabeAudio.create({ base: '/audio/alfabe/', slowRate: L.SLOW_PLAYBACK, slowTts: L.SLOW_RATE, onVoices: () => updateSoundUi() })
+    : null;
   let voiceChecked = false;
-  function pickVoices() {
-    try {
-      const local = (synth ? synth.getVoices() : []).filter((v) => v.localService);
-      voices.de = local.find((v) => /^de([-_]|$)/i.test(v.lang)) || null;
-      voices.tr = local.find((v) => /^tr([-_]|$)/i.test(v.lang)) || null;
-    } catch (_) { voices.de = null; voices.tr = null; }
-    updateSoundUi();
+  // o.gap: pause between the parts in ms (spelling: letter by letter).
+  function speak(parts, o) {
+    if (!store.ses || !audio || !parts.length) return;
+    audio.play(parts, { slow: store.yavas, gap: (o && o.gap) || 0 });
   }
-  // parts: [{ text, lang: 'de' | 'tr' }]; the browser plays them one after another.
-  function speak(parts) {
-    if (!store.ses || !synth) return;
-    try {
-      synth.cancel();
-      parts.forEach((p) => {
-        const v = voices[p.lang];
-        if (!v || !p.text) return;
-        const u = new SpeechSynthesisUtterance(p.text);
-        u.voice = v; u.lang = v.lang;
-        u.rate = store.yavas ? L.SLOW_RATE : (p.lang === 'de' ? settings().rate : 1);
-        synth.speak(u);
-      });
-    } catch (_) { /* ses çalınamadı: sessiz devam */ }
+  function stopSound() { if (audio) audio.stop(); }
+  const spellGap = () => (store.yavas ? L.SPELL_GAP_SLOW : L.SPELL_GAP);
+  // Parts: clip id (file), text (on-device voice when there is no file), language.
+  const letterPart = (l) => ({ clip: L.audioId.letter(l), text: l.soyle || l.ad, lang: 'de', rate: settings().rate });
+  const wordPart = (ex) => ({ clip: L.audioId.word(ex), text: ex.artikel + ' ' + ex.kelime, lang: 'de', rate: settings().rate });
+  const phrasePart = (key, lang) => ({ clip: L.audioId.phrase(key), text: (data.seslendirme && data.seslendirme[lang] && data.seslendirme[lang][key]) || '', lang });
+  function tokenPart(t) {
+    if (t.id) return letterPart(letter(t.id));
+    const sign = data.isaretler[t.char];
+    return { clip: L.audioId.sign(t.char, sign), text: sign.ad, lang: 'de', rate: settings().rate };
   }
-  function stopSound() { try { synth && synth.cancel(); } catch (_) {} }
-  const canHear = () => store.ses && Boolean(voices.de);
-  // Children hear the Turkish instruction too (when the device has a Turkish voice).
-  function instruction(text) { return settings().speakInstructions ? [{ text, lang: 'tr' }] : []; }
+  // Children hear the Turkish instruction too.
+  function instruction(mode) { return settings().speakInstructions ? [phrasePart('talimat-' + mode, 'tr')] : []; }
+  const canHear = () => store.ses && Boolean(audio) && (audio.has('harf-a') || Boolean(audio.voice('de')));
   function updateSoundUi() {
     const note = root.querySelector('[data-ab-novoice]');
-    if (note) note.hidden = !voiceChecked || !store.ses || Boolean(voices.de);
+    if (note) note.hidden = !voiceChecked || !store.ses || canHear();
     root.querySelectorAll('[data-ab-textfallback]').forEach((el) => { el.hidden = canHear(); });
   }
-  if (synth) { try { synth.addEventListener('voiceschanged', pickVoices); } catch (_) {} }
-  setTimeout(() => { voiceChecked = true; pickVoices(); }, 1500);
-  pickVoices();
+  setTimeout(() => { voiceChecked = true; if (audio) audio.refreshVoices(); updateSoundUi(); }, 1500);
 
   /* ---------- Data ---------- */
   let data = null;
@@ -248,7 +241,7 @@
   }
   function sayLetter(l) {
     const ex = L.exampleOf(l, store.profil);
-    speak([{ text: l.ad, lang: 'de' }, { text: ex.artikel + ' ' + ex.kelime, lang: 'de' }]);
+    speak([letterPart(l), wordPart(ex)], { gap: 250 });
   }
   function renderExplore(first) {
     rerender = () => renderExplore(false);
@@ -280,7 +273,7 @@
       sayLetter(letter);
     }));
     root.querySelector('[data-ab-again]')?.addEventListener('click', () => sayLetter(l));
-    if (first) { focusStage(); speak(instruction(MODE_INFO.kesfet.say[store.profil])); }
+    if (first) { focusStage(); speak(instruction('kesfet')); }
   }
 
   /* ---------- Rounds ---------- */
@@ -298,15 +291,17 @@
   function letter(id) { return data.harfler.find((l) => l.id === id); }
 
   function promptParts(question, withInstruction) {
-    const parts = withInstruction ? instruction(MODE_INFO[question.mode].say[store.profil]) : [];
-    if (question.mode === 'duy') parts.push({ text: letter(question.answer).ad, lang: 'de' });
-    if (question.mode === 'ilk-harf') parts.push({ text: question.word.artikel + ' ' + question.word.kelime, lang: 'de' });
+    const parts = withInstruction ? instruction(question.mode) : [];
+    if (question.mode === 'duy') parts.push(letterPart(letter(question.answer)));
+    if (question.mode === 'ilk-harf') parts.push(wordPart(question.word));
     if (question.mode === 'heceleme') {
-      if (question.scene) parts.push({ text: question.scene.soru, lang: 'de' });
-      parts.push({ text: question.tokens.map((t) => t.name).join(', '), lang: 'de' });
+      if (question.scene) parts.push({ clip: L.audioId.question(question.scene), text: question.scene.soru, lang: 'de', rate: settings().rate });
+      question.tokens.forEach((t) => parts.push(tokenPart(t)));
     }
     return parts;
   }
+  // Spelling: a natural pause between the letters; elsewhere a short one.
+  const promptGap = (question) => ({ gap: question.mode === 'heceleme' ? spellGap() : 250 });
   const spelledText = (question) => question.tokens.map((t) => t.name).join(' – ');
 
   function headerHtml() {
@@ -398,7 +393,7 @@
     rerender = () => drawQuestion(false);
     view = 'oyun';
     drawQuestion(true);
-    speak(promptParts(question, withInstruction || settings().speakInstructions));
+    speak(promptParts(question, withInstruction || settings().speakInstructions), promptGap(question));
     if (game.timed) startTimer();
   }
   function drawQuestion(focus) {
@@ -416,7 +411,7 @@
   }
   function bindQuestion() {
     const question = q();
-    root.querySelector('[data-ab-play]')?.addEventListener('click', () => speak(promptParts(question, false)));
+    root.querySelector('[data-ab-play]')?.addEventListener('click', () => speak(promptParts(question, false), promptGap(question)));
     root.querySelector('[data-ab-show]')?.addEventListener('click', (e) => { root.querySelector('[data-ab-spelled]').hidden = false; e.currentTarget.hidden = true; });
     root.querySelectorAll('[data-ab-opt]').forEach((b) => b.addEventListener('click', () => answerChoice(b.dataset.abOpt)));
     if (question.mode === 'heceleme') bindSpelling(question);
@@ -435,7 +430,7 @@
         if (game.answered) return;
         const i = Number(b.dataset.abTile);
         game.built.push(question.tiles[i]); game.used.push(i);
-        speak([{ text: L.letterForChar(question.tiles[i], data.harfler).ad, lang: 'de' }]);
+        speak([letterPart(L.letterForChar(question.tiles[i], data.harfler))]);
         const next = root.querySelector('[data-ab-tile]:not([disabled]):not([data-ab-tile="' + i + '"])');
         redrawControls(next ? `[data-ab-tile="${next.dataset.abTile}"]` : '[data-ab-check]');
         if (game.built.length === Array.from(question.word).length) root.querySelector('[data-ab-check]')?.focus();
@@ -481,7 +476,7 @@
       b.addEventListener('click', (e) => {
         if (game.answered || performance.now() - dragEnd < 400) return;
         e.preventDefault();
-        if (game.pick === null) { game.pick = i; speak([{ text: letter(game.order[i]).ad, lang: 'de' }]); redrawControls(`[data-ab-pos="${i}"]`); return; }
+        if (game.pick === null) { game.pick = i; speak([letterPart(letter(game.order[i]))]); redrawControls(`[data-ab-pos="${i}"]`); return; }
         if (game.pick !== i) game.order = L.swapItems(game.order, game.pick, i);
         game.pick = null;
         redrawControls(`[data-ab-pos="${i}"]`);
@@ -592,7 +587,7 @@
     const wordLine = question.mode === 'ilk-harf' ? `<p lang="de" class="ab-word-small">${wordHtml(question.word, l, 'first')}</p>` : '';
     const html = correct ? `${wordLine}<p class="ab-muted"><strong>${letterHtml(l)}</strong> · <span lang="de">${esc(l.ad)}</span> “${esc(l.okunus)}”</p>` : wrongTip(l, wordLine);
     finish(correct, correct ? [] : [question.answer], html, timeUp);
-    afterSound(correct, [{ text: l.ad, lang: 'de' }]);
+    afterSound(correct, [letterPart(l)]);
   }
   function answerSpelling(value, timeUp) {
     if (game.answered) return;
@@ -604,7 +599,10 @@
     const extra = question.example && store.profil === 'cocuk' ? '' : (question.example ? `<p class="ab-muted">${esc(question.example.artikel + ' ' + question.example.kelime + ' · ' + question.example.anlam)}</p>` : '');
     const html = correct ? line + extra : `${line}${value ? `<p class="ab-muted">Senin cevabın: <span lang="de">${esc(value)}</span></p>` : ''}${firstWrong ? `<p class="ab-tip"><span aria-hidden="true">💡</span> <strong>${esc(big(firstWrong))}</strong> (${esc(firstWrong.ad)}): ${esc(firstWrong.ipucu)}</p>` : ''}`;
     finish(correct, wrong, html, timeUp);
-    afterSound(correct, [{ text: question.word.replace(/@/g, ' ät ').replace(/\./g, ' Punkt '), lang: 'de' }]);
+    // Names, e-mails and addresses have their own clip; example words are said with their article ("der Vogel").
+    afterSound(correct, [question.scene
+      ? { clip: L.audioId.answer(question.scene), text: L.spokenAnswer(question.scene.cevap, data.isaretler), lang: 'de', rate: settings().rate }
+      : wordPart(question.example)]);
   }
   function answerOrder(timeUp) {
     if (game.answered) return;
@@ -615,11 +613,12 @@
     const line = `<p>Doğru sıra: <strong class="ab-answer">${question.answer.map((id) => esc(letter(id).buyuk)).join(' ')}</strong></p>`;
     const html = correct ? line : `${line}<p class="ab-muted">Alfabeyi baştan söylemek yardımcı olur: <span lang="de">${question.answer.map((id) => esc(letter(id).ad)).join(', ')}</span>.</p>`;
     finish(correct, wrong, html, timeUp);
-    afterSound(correct, question.answer.map((id) => ({ text: letter(id).ad, lang: 'de' })));
+    afterSound(correct, question.answer.map((id) => letterPart(letter(id))), spellGap());
   }
-  function afterSound(correct, answerParts) {
-    if (correct) speak([{ text: 'Richtig!', lang: 'de' }].concat(store.profil === 'cocuk' ? [{ text: 'Doğru!', lang: 'tr' }] : []));
-    else speak((store.profil === 'cocuk' ? [{ text: 'Doğru cevap:', lang: 'tr' }] : []).concat(answerParts));
+  function afterSound(correct, answerParts, gap) {
+    const kid = store.profil === 'cocuk';
+    if (correct) speak([phrasePart('richtig', 'de')].concat(kid ? [phrasePart('dogru', 'tr')] : []), { gap: 200 });
+    else speak((kid ? [phrasePart('dogru-cevap', 'tr')] : []).concat(answerParts), { gap: gap || 250 });
   }
   function next() {
     if (game.index < game.questions.length - 1) { game.index += 1; showQuestion(false); return; }
@@ -665,7 +664,7 @@
     root.querySelector('[data-ab-hard]')?.addEventListener('click', () => startRound(mode, focusIds.map((l) => l.id)));
     root.querySelector('[data-ab-menu]').addEventListener('click', () => go(''));
     focusStage();
-    speak(kid ? [{ text: stars === 3 ? 'Süpersin!' : 'Aferin!', lang: 'tr' }] : []);
+    speak(kid ? [phrasePart(stars === 3 ? 'supersin' : 'aferin', 'tr')] : []);
   }
 
   /* ---------- Routing ---------- */
@@ -705,10 +704,21 @@
   let hint = null;
   try { hint = localStorage.getItem('baAccount'); } catch (_) { hint = null; }
 
-  fetch('/data/alfabe.json?v=2')
-    .then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-    .then((d) => {
-      data = d; route();
+  // The list of recorded files changes without a new page version: always revalidated (cache: 'no-cache'),
+  // the files themselves carry ?v=<hash>. Without the list the game uses the device voice.
+  const manifest = fetch('/audio/alfabe/manifest.json', { cache: 'no-cache' })
+    .then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  Promise.all([fetch('/data/alfabe.json?v=3').then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }), manifest])
+    .then(([d, m]) => {
+      data = d;
+      // The children's spoken instructions come from the data file, the same text the recordings say.
+      L.MODES.forEach((mode) => { const t = d.seslendirme?.tr?.['talimat-' + mode]; if (t) MODE_INFO[mode].say.cocuk = t; });
+      if (audio) {
+        audio.setManifest(m);
+        audio.preload(L.audioClips(d).filter((c) => c.preload).map((c) => c.id));
+      }
+      updateSoundUi();
+      route();
       readyResolve(d.harfler.map((l) => l.id));
       // Visitors never load Firebase; only a device where a student signed in before does.
       if (hint === 'student') import('/js/account/alfabe-sync.js?v=1').catch((error) => console.warn('alfabe sync', error));

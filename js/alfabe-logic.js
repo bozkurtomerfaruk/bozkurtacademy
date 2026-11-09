@@ -356,7 +356,82 @@
     }));
   }
 
+  /* ---------- Audio clips (audio/alfabe/, scripts/generate-alfabe-audio.mjs, docs/alfabe-oyunu.md) ---------- */
+  // One list for the game, the generator script and the check page (tools/audio-check.html). File: <lang>/<id>.mp3.
+  // Ids are simple and stable so an own recording can replace a file: harf-v, kelime-der-vogel, soru-wie-ist-ihr-nachname …
+  var SLOW_PLAYBACK = 0.75;     // "Yavaş oku" with recorded files (playbackRate, pitch kept)
+  var SPELL_GAP = 380;          // ms between letters when spelling; slow: SPELL_GAP_SLOW
+  var SPELL_GAP_SLOW = 600;
+  function slug(text) {
+    return lower(text).replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+      .replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ı/g, 'i').replace(/ş/g, 's')
+      .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  }
+  var LETTER_SLUG = { 'Ä': 'ae', 'Ö': 'oe', 'Ü': 'ue', 'ß': 'eszett' };
+  var SIGN_SLUG = { '@': 'at', '.': 'punkt', '-': 'bindestrich' };
+  var audioId = {
+    letter: function (l) { return 'harf-' + (LETTER_SLUG[l.id] || slug(l.id)); },
+    word: function (ex) { return 'kelime-' + slug(ex.artikel + ' ' + ex.kelime); },
+    sign: function (ch, sign) { return 'isaret-' + (SIGN_SLUG[ch] || slug(sign.ad)); },
+    question: function (scene) { return 'soru-' + slug(scene.soru); },
+    answer: function (scene) { return 'cevap-' + slug(scene.cevap); },
+    phrase: function (key) { return key; } // keys of data.seslendirme.tr / .de
+  };
+  // "mia.wolf@web.de" is read as "mia Punkt wolf ät web Punkt de".
+  function spokenAnswer(text, signs) {
+    return Array.from(String(text)).map(function (ch) { return signs && signs[ch] ? ' ' + signs[ch].ad + ' ' : ch; }).join('')
+      .replace(/\s+/g, ' ').trim();
+  }
+  var xml = function (s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
+  var signSsml = function (s) { return s.ipa ? '<phoneme alphabet="ipa" ph="' + xml(s.ipa) + '">' + xml(s.ad) + '</phoneme>' : xml(s.ad); };
+  // SSML of an answer: the signs with their own reading, a short pause around them.
+  function answerSsml(text, signs) {
+    return Array.from(String(text)).map(function (ch) {
+      return signs && signs[ch] ? ' <break time="150ms"/>' + signSsml(signs[ch]) + '<break time="150ms"/> ' : xml(ch);
+    }).join('').replace(/\s+/g, ' ').trim();
+  }
+  // Every clip: id, lang ('de' | 'tr'), file, kind, text (what it says, also the browser-voice fallback),
+  // ssml (body without <speak>; letter names with their IPA so V is "Vau", Q "Kuh", Ä a long "ä"),
+  // tone ('cocuk': warm Turkish voice for the children's mode; 'notr' otherwise), preload (often used).
+  function audioClips(data) {
+    var out = [];
+    var add = function (c) { c.file = c.lang + '/' + c.id + '.mp3'; out.push(c); };
+    data.harfler.forEach(function (l) {
+      add({ id: audioId.letter(l), lang: 'de', kind: 'harf', text: l.soyle || l.ad, ipa: l.ipa || null,
+        ssml: l.ipa ? '<phoneme alphabet="ipa" ph="' + xml(l.ipa) + '">' + xml(l.soyle || l.ad) + '</phoneme>' : xml(l.soyle || l.ad),
+        tone: 'notr', preload: true });
+    });
+    ['cocuk', 'yetiskin'].forEach(function (p) {
+      data.harfler.forEach(function (l) {
+        var ex = l[p], text = ex.artikel + ' ' + ex.kelime;
+        add({ id: audioId.word(ex), lang: 'de', kind: 'kelime', text: text, ssml: xml(text), tone: 'notr', profile: p });
+      });
+    });
+    Object.keys(data.isaretler || {}).forEach(function (ch) {
+      var s = data.isaretler[ch];
+      add({ id: audioId.sign(ch, s), lang: 'de', kind: 'isaret', text: s.ad, ssml: signSsml(s), tone: 'notr' });
+    });
+    ((data.heceleme && data.heceleme.yetiskin) || []).forEach(function (sc) {
+      add({ id: audioId.question(sc), lang: 'de', kind: 'soru', text: sc.soru, ssml: xml(sc.soru), tone: 'notr' });
+      var said = spokenAnswer(sc.cevap, data.isaretler);
+      add({ id: audioId.answer(sc), lang: 'de', kind: 'cevap', text: said, ssml: answerSsml(sc.cevap, data.isaretler), tone: 'notr' });
+    });
+    var phrases = data.seslendirme || {};
+    ['de', 'tr'].forEach(function (lang) {
+      Object.keys(phrases[lang] || {}).forEach(function (key) {
+        var text = phrases[lang][key];
+        add({ id: audioId.phrase(key), lang: lang, kind: /^talimat-/.test(key) ? 'talimat' : 'geri', text: text, ssml: xml(text),
+          tone: lang === 'tr' ? 'cocuk' : 'notr', preload: !/^talimat-/.test(key) });
+      });
+    });
+    // Same id twice would overwrite a file: keep the first and let the tests catch it.
+    var seen = {};
+    return out.filter(function (c) { var k = c.file; if (seen[k]) return false; seen[k] = true; return true; });
+  }
+
   var api = {
+    SLOW_PLAYBACK: SLOW_PLAYBACK, SPELL_GAP: SPELL_GAP, SPELL_GAP_SLOW: SPELL_GAP_SLOW,
+    slug: slug, audioId: audioId, audioClips: audioClips, spokenAnswer: spokenAnswer,
     BEST_KEYS: BEST_KEYS, cleanProgress: cleanProgress, mergeProgress: mergeProgress, progressKey: progressKey,
     PROFILES: PROFILES, SLOW_RATE: SLOW_RATE, ROUND_LENGTH: ROUND_LENGTH, MODES: MODES, QUIZ_MODES: QUIZ_MODES,
     createRng: createRng, shuffle: shuffle, normalizeAnswer: normalizeAnswer, checkSpelling: checkSpelling,

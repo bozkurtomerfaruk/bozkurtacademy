@@ -16,7 +16,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-export const FILES = ['js/quiz.js', 'js/grammar.js', 'js/exams.js', 'js/exam-task.js', 'js/a1-lessons.js', 'js/artikel-evleri.js', 'js/app.js', 'js/home.js', 'js/level-exam.js', 'js/placement.js', 'js/exercise-links.js', 'js/writing-task.js', 'js/alfabe.js'];
+export const FILES = ['js/quiz.js', 'js/grammar.js', 'js/exams.js', 'js/exam-task.js', 'js/a1-lessons.js', 'js/artikel-evleri.js', 'js/app.js', 'js/home.js', 'js/level-exam.js', 'js/placement.js', 'js/exercise-links.js', 'js/writing-task.js', 'js/alfabe.js', 'js/tools/audio-check.js'];
 
 // Şablon dizgilerini ve içlerindeki ${…} ifadelerini çıkarır (iç içe şablonlar, dizgiler ve yorumlar dahil).
 function templates(src){

@@ -248,7 +248,7 @@ for (const page of PAGES) {
 }
 // Menü ve footer'ı paylaşan diğer sayfalar (sitemap'e girmez). Yönetim sayfası: sabit iletişim düğmesi yok.
 // Ortak <head> kullanmayan, elle yazılmış sayfalar: yalnızca güvenlik bölümü (CSP, referrer, tema başlatıcı).
-for (const name of ['giris.html', 'kayit.html', 'panel.html', 'privacy.html', 'ogretmen.html', 'ogretmen-odev.html', 'ogretmen-ogrenci.html', 'ogretmen-takvim.html']) {
+for (const name of ['giris.html', 'kayit.html', 'panel.html', 'privacy.html', 'ogretmen.html', 'ogretmen-odev.html', 'ogretmen-ogrenci.html', 'ogretmen-takvim.html', 'tools/audio-check.html']) {
   const file = path.join(root, name);
   outputs.push([file, fill(fs.readFileSync(file, 'utf8'), 'security', SECURITY, file)]);
 }

@@ -3,3 +3,7 @@ node_modules/
 *.log
 .firebase/
 undefined/
+
+# TTS anahtarları (scripts/generate-alfabe-audio.mjs): asla commit etme
+.env
+.env.*

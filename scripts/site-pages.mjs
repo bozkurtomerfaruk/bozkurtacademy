@@ -4,6 +4,10 @@
 //
 // Kurallar: fiyat, telefon, adres yok; şemalarda offers/price/priceRange/telephone yok.
 // Şemalara yalnızca sayfada görünür biçimde yazan bilgiler girer.
+//
+// Çeviriler (İngilizce /en/…, Almanca /de/…): sayfanın sonundaki TRANSLATIONS listesinde, "lang" ve
+// Türkçe karşılığı "of" ile. Bu liste slug eşleme tablosudur; dil düğmeleri, menü bağlantıları, hreflang
+// ve sitemap buradan üretilir (scripts/site-i18n.mjs). Almanca slug'larda ü/ö/ä/ß yerine ue/oe/ae/ss.
 
 export const SITE = 'https://bozkurtacademy.com';
 
@@ -29,7 +33,7 @@ function course(path, name, description, level) {
   };
 }
 
-function service(path, name, description, serviceType) {
+function service(path, name, description, serviceType, contact = '/iletisim/') {
   return {
     '@type': 'Service',
     '@id': `${SITE}${path}#service`,
@@ -38,7 +42,7 @@ function service(path, name, description, serviceType) {
     serviceType,
     url: `${SITE}${path}`,
     provider,
-    availableChannel: { '@type': 'ServiceChannel', serviceUrl: `${SITE}/iletisim/` }
+    availableChannel: { '@type': 'ServiceChannel', serviceUrl: `${SITE}${contact}` }
   };
 }
 
@@ -160,3 +164,51 @@ export const PAGES = [
     description: 'Online Almanca dersleri hakkında sık sorulanlar: ilk ders, ders süresi, birebir ve grup dersi, ücretin nasıl belirlendiği, sınavlar ve seviye testi.',
   }
 ];
+
+// İngilizce ve Almanca sayfalar. İçerik metinleri kendi dosyalarında (ör. en/about/index.html).
+const TRANSLATIONS = [
+  {
+    path: '/en/online-german-lessons/',
+    lang: 'en',
+    of: '/online-almanca-dersi/',
+    nav: 'lessons',
+    crumb: 'Online German Lessons',
+    title: 'Online German Lessons A1–B2 | Bozkurt Academy',
+    description: 'Online German lessons with a teacher who lives in Germany: one-to-one or group classes from A1 to B2, 50-minute sessions and a free first lesson.',
+    schema: [service('/en/online-german-lessons/', 'Online German Lessons', 'Online German lessons from A1 to B2 via Zoom or Google Meet.', 'Online German lessons')]
+  },
+  {
+    path: '/de/online-deutschunterricht/',
+    lang: 'de',
+    of: '/online-almanca-dersi/',
+    nav: 'lessons',
+    crumb: 'Online-Deutschunterricht',
+    title: 'Online-Deutschunterricht A1–B2 | Bozkurt Academy',
+    description: 'Online-Deutschunterricht mit einem Lehrer, der in Deutschland lebt: Einzel- oder Gruppenunterricht von A1 bis B2, 50-minütige Stunden und eine kostenlose erste Stunde.',
+    schema: [service('/de/online-deutschunterricht/', 'Online-Deutschunterricht', 'Online-Deutschunterricht von A1 bis B2 über Zoom oder Google Meet.', 'Online-Deutschunterricht')]
+  },
+  {
+    path: '/en/about/',
+    lang: 'en',
+    of: '/hakkimda/',
+    nav: 'about',
+    crumb: 'About Me',
+    title: 'About Me: German Teacher Ömer Faruk Bozkurt',
+    description: 'Ömer Faruk Bozkurt, a German teacher living in Germany: education, experience in Germany and a teaching method built on explanation, practice and review.',
+    type: 'ProfilePage',
+    ogType: 'profile'
+  },
+  {
+    path: '/de/ueber-mich/',
+    lang: 'de',
+    of: '/hakkimda/',
+    nav: 'about',
+    crumb: 'Über mich',
+    title: 'Über mich: Deutschlehrer Ömer Faruk Bozkurt',
+    description: 'Ömer Faruk Bozkurt, Deutschlehrer mit Wohnsitz in Deutschland: Ausbildung, Erfahrung in Deutschland und eine Unterrichtsmethode aus Erklärung, Anwendung und Wiederholung.',
+    type: 'ProfilePage',
+    ogType: 'profile'
+  }
+];
+
+PAGES.push(...TRANSLATIONS);

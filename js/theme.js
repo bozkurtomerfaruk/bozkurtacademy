@@ -9,7 +9,8 @@
    const themeButton = document.getElementById('themeToggle');
    function updateThemeButton() {
      const dark = document.documentElement.dataset.theme === 'dark';
-     const language = document.documentElement.lang?.slice(0,2) || 'tr';
+     // Çevirisi olmayan sayfada menü kendi dilinde (header lang); başka yerde sayfanın dili.
+     const language = (themeButton?.closest('[lang]')?.lang || document.documentElement.lang || 'tr').slice(0,2);
      const labels = {tr:['Koyu temaya geç','Açık temaya geç'],de:['Dunkles Design aktivieren','Helles Design aktivieren'],en:['Switch to dark theme','Switch to light theme']};
      const label = (labels[language] || labels.tr)[dark ? 1 : 0];
      document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#171d19' : '#f8f7f3');

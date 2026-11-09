@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Bu dosya scripts/build-pages.mjs ile üretilir. İçeriği data/<seviye>-grammar.json'da düzenle, sonra: node scripts/build-pages.mjs -->
-<html lang="tr" data-ba-fixed-lang="tr">
+<html lang="tr" data-ba-content-lang="tr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,6 +13,8 @@
   <title>Präsens – şimdiki ve geniş zaman | A1 Almanca Gramer</title>
   <meta name="description" content="Düzenli fiilde kök + kişi eki kullanılır. Präsens ile şu anda olanları, alışkanlıklarını ve genel bilgileri anlatırsın." />
   <link rel="canonical" href="https://bozkurtacademy.com/almanca-gramer/a1/praesens/" />
+  <link rel="alternate" hreflang="tr" href="https://bozkurtacademy.com/almanca-gramer/a1/praesens/" />
+  <link rel="alternate" hreflang="x-default" href="https://bozkurtacademy.com/almanca-gramer/a1/praesens/" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3">
@@ -35,7 +37,7 @@
   <link rel="preload" href="/fonts/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css?v=13" />
-  <link rel="stylesheet" href="/css/base.css?v=12" />
+  <link rel="stylesheet" href="/css/base.css?v=13" />
   <link rel="stylesheet" href="/css/landing.css?v=1" />
   <link rel="stylesheet" href="/css/a1-lessons.css?v=8" />
   <link rel="stylesheet" href="/css/grammar-pages.css?v=3" />
@@ -170,6 +172,11 @@
         <div class="nav-actions">
         <a class="btn primary nav-cta" href="/iletisim/" data-i18n="ctaFreeInfo">Ücretsiz bilgi al</a>
         <button id="themeToggle" class="theme-toggle" type="button" aria-label="Koyu temaya geç" aria-pressed="false"><svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="currentColor"/></svg><svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="lang" role="group" aria-label="Dil seçimi" data-i18n-aria="langGroup">
+          <button type="button" data-lang="tr" class="active">TR</button>
+          <button type="button" data-lang="de">DE</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
         </div>
       </nav>
     </header>
@@ -211,10 +218,10 @@
     <footer>
       <div class="footer-brand"><img src="/images/logo-mark.svg" width="64" height="64" alt="" class="footer-logo brand-logo-light"><img src="/images/logo-mark-dark.svg" width="64" height="64" alt="" class="footer-logo brand-logo-dark"><div><strong>Bozkurt Academy</strong><br><span data-i18n="footerText">Online Almanca dersleri ve öğrenme materyalleri</span></div></div>
       <nav class="footer-pages" aria-label="Site sayfaları">
-          <div class="footer-group"><p class="footer-group-title">Dersler</p><ul><li><a href="/online-almanca-dersi/">Online Almanca dersi</a></li><li><a href="/almanca-ozel-ders/">Almanca özel ders</a></li><li><a href="/almanca-grup-dersi/">Almanca grup dersi</a></li><li><a href="/almanca-sinav-hazirlik/">Sınav hazırlık</a></li></ul></div>
-          <div class="footer-group"><p class="footer-group-title">Seviyeler</p><ul><li><a href="/a1-almanca-kursu/">A1 Almanca kursu</a></li><li><a href="/a2-almanca-kursu/">A2 Almanca kursu</a></li><li><a href="/b1-almanca-kursu/">B1 Almanca kursu</a></li><li><a href="/b2-almanca-kursu/">B2 Almanca kursu</a></li></ul></div>
-          <div class="footer-group"><p class="footer-group-title">Ücretsiz çalış</p><ul><li><a href="/almanca-gramer/">Gramer konuları</a></li><li><a href="/#exercises">Alıştırmalar</a></li><li><a href="/#exams">Sınav deneme setleri</a></li><li><a href="/#seviye-testi">Seviye testi</a></li><li><a href="/almanca-alfabe/">Almanca alfabe oyunu</a></li></ul></div>
-          <div class="footer-group"><p class="footer-group-title">Bozkurt Academy</p><ul><li><a href="/hakkimda/">Hakkımda</a></li><li><a href="/blog/">Blog</a></li><li><a href="/sss/">Sıkça sorulan sorular</a></li><li><a href="/iletisim/">İletişim</a></li></ul></div>
+          <div class="footer-group"><p class="footer-group-title" data-i18n="ftLessons">Dersler</p><ul><li><a href="/online-almanca-dersi/" data-i18n="ftOnline">Online Almanca dersi</a></li><li><a href="/almanca-ozel-ders/" data-i18n="ftPrivate">Almanca özel ders</a></li><li><a href="/almanca-grup-dersi/" data-i18n="ftGroup">Almanca grup dersi</a></li><li><a href="/almanca-sinav-hazirlik/" data-i18n="ftExamPrep">Sınav hazırlık</a></li></ul></div>
+          <div class="footer-group"><p class="footer-group-title" data-i18n="ftLevels">Seviyeler</p><ul><li><a href="/a1-almanca-kursu/" data-i18n="ftA1">A1 Almanca kursu</a></li><li><a href="/a2-almanca-kursu/" data-i18n="ftA2">A2 Almanca kursu</a></li><li><a href="/b1-almanca-kursu/" data-i18n="ftB1">B1 Almanca kursu</a></li><li><a href="/b2-almanca-kursu/" data-i18n="ftB2">B2 Almanca kursu</a></li></ul></div>
+          <div class="footer-group"><p class="footer-group-title" data-i18n="ftFree">Ücretsiz çalış</p><ul><li><a href="/almanca-gramer/" data-i18n="ftGrammar">Gramer konuları</a></li><li><a href="/#exercises" data-i18n="ftExercises">Alıştırmalar</a></li><li><a href="/#exams" data-i18n="ftExamSets">Sınav deneme setleri</a></li><li><a href="/#seviye-testi" data-i18n="ftPlacement">Seviye testi</a></li><li><a href="/almanca-alfabe/" data-i18n="ftAlphabet">Almanca alfabe oyunu</a></li></ul></div>
+          <div class="footer-group"><p class="footer-group-title" data-i18n="ftBrand">Bozkurt Academy</p><ul><li><a href="/hakkimda/" data-i18n="ftAbout">Hakkımda</a></li><li><a href="/blog/" data-i18n="ftBlog">Blog</a></li><li><a href="/sss/" data-i18n="ftFaq">Sıkça sorulan sorular</a></li><li><a href="/iletisim/" data-i18n="ftContact">İletişim</a></li></ul></div>
       </nav>
       <div class="footer-meta">
         <nav class="footer-links" aria-label="Yasal bilgiler" data-i18n-aria="footerLegal">
@@ -225,10 +232,10 @@
     </footer>
     <a class="ba-sticky-cta btn primary" href="/iletisim/" data-i18n="ctaFreeInfo">Ücretsiz bilgi al</a>
     </div>
-  <script src="/js/app.js?v=37"></script>
+  <script src="/js/app.js?v=38"></script>
   <script src="/js/html.js?v=1"></script>
   <script src="/js/a1-lessons.js?v=19"></script>
-  <script src="/js/theme.js?v=10"></script>
+  <script src="/js/theme.js?v=11"></script>
   <script defer data-goatcounter="https://bozkurtacademy.goatcounter.com/count" data-goatcounter-settings='{"no_onload": true}' src="/js/vendor/count.js?v=2.7.0"></script>
   <script defer src="/js/analytics.js?v=7"></script>
   

@@ -1,7 +1,8 @@
 // worker/schreiben-kontrol.js birim testleri (Firebase ve Workers AI taklit edilir). Çalıştırma: node --test tests/worker.test.mjs
 import { beforeEach, describe, test } from 'node:test';
 import assert from 'node:assert/strict';
-import worker, { aiAllowed, berlinDay, cleanResult, decode, encode, PROMPT, resetBotToken } from '../worker/schreiben-kontrol.js';
+import fs from 'node:fs';
+import worker, { aiAllowed, berlinDay, cleanResult, decode, encode, PROMPT, resetBotToken, TEXT_TYPES, userMessage } from '../worker/schreiben-kontrol.js';
 
 const TEXT = 'Liebe Lena,\nseit drei Wochen ich wohne in Hamburg. Ich bin umgezogen, weil ich habe eine Stelle gefunden.\nLiebe Grüße\nAyşe';
 const DAY = berlinDay();
@@ -28,7 +29,7 @@ beforeEach(() => {
     url = String(url); fetchLog.push({ url, body: init.body });
     if (url.includes('accounts:lookup')) return Response.json(JSON.parse(init.body).idToken === 'ogrenci-token' ? { users: [{ localId: 'ayse1234567' }] } : {}, { status: JSON.parse(init.body).idToken === 'ogrenci-token' ? 200 : 400 });
     if (url.includes('accounts:signInWithPassword')) return Response.json({ idToken: 'bot-token', expiresIn: '3600' });
-    if (url.includes('/data/exams/')) return Response.json({ title: 'Neue Wohnung' });
+    if (url.includes('/data/exams/')) return Response.json({ title: 'Neue Wohnung', textType: 'email-informal' });
     if (url.endsWith(':commit')) { commits.push(JSON.parse(init.body)); return Response.json({}); }
     const m = url.match(/documents\/(.+)$/);
     if (m) { const d = docs[m[1]]; return d ? Response.json({ fields: fields(d), updateTime: '2026-11-08T10:00:00Z' }) : new Response('', { status: 404 }); }
@@ -148,5 +149,17 @@ describe('Schreiben Worker', () => {
     assert.equal(aiAllowed({ status: 'active', minor: true, parentConsent: { given: true } }), false);
     assert.equal(aiAllowed({ status: 'active', minor: true, parentConsent: { given: true }, aiConsent: { given: true } }), true);
     assert.equal(aiAllowed({ status: 'inactive', minor: false }), false);
+  });
+
+  test('metin türü: kullanıcı mesajında görev adı, metin türü ve metin; başka bir şey yok', () => {
+    assert.equal(userMessage({ name: 'Goethe B1 · Teil 3 · Teambesprechung', type: TEXT_TYPES['email-semiformal'] }, 'Liebe Frau Wagner, …'),
+      'Görev: Goethe B1 · Teil 3 · Teambesprechung\nMetin türü: Yarı resmî e-posta (Sie), tanıdık birine\nMetin:\nLiebe Frau Wagner, …');
+    assert.equal(userMessage({ name: 'Goethe B1 · Teil 1', type: null }, 'x'), 'Görev: Goethe B1 · Teil 1\nMetin:\nx');
+    // Talimat her metin türü için kural içeriyor; sitedeki setlerin bütün textType değerleri tanınıyor.
+    for (const key of ['Gayriresmî e-posta', 'Kısa mesaj', 'Yarı resmî e-posta', 'Resmî yazı', 'Forum yazısı']) assert.ok(PROMPT.includes(key), key);
+    const types = new Set();
+    const walk = (dir) => { for (const e of fs.readdirSync(dir, { withFileTypes: true })) { const p = `${dir}/${e.name}`; if (e.isDirectory()) walk(p); else if (p.includes('/schreiben/') && p.endsWith('.json')) types.add(JSON.parse(fs.readFileSync(p, 'utf8')).textType); } };
+    walk('data/exams');
+    for (const t of types) assert.ok(TEXT_TYPES[t], `textType ${t}`);
   });
 });

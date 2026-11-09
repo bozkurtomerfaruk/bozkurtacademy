@@ -1,0 +1,135 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "schreiben",
+  "teil": 3,
+  "set": "set-4",
+  "title": "Arbeitsblätter aus dem Kurs",
+  "minutes": 15,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "Sie waren gestern nicht im Deutschkurs. Ihr Kursleiter, Herr Klein, hat im Unterricht neue Arbeitsblätter für die Prüfung verteilt.",
+  "task": "Schreiben Sie an Herrn Klein. Entschuldigen Sie sich höflich, berichten Sie, warum Sie nicht im Kurs waren, und bitten Sie um die Arbeitsblätter.",
+  "points": [],
+  "instructions": "Schreiben Sie eine E-Mail (circa 40 Wörter). Vergessen Sie nicht die Anrede und den Gruß am Schluss.",
+  "words": {
+    "target": 40,
+    "min": 35,
+    "max": 50
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Görevdeki her şeyi yazdım: özür, neden kursta olmadığım, çalışma kâğıtlarını rica etmek."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Hitap ve kapanış var: Sehr geehrte Frau … / Sehr geehrter Herr … (ya da Liebe Frau …), Viele Grüße / Mit freundlichen Grüßen + adım."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Baştan sona Sie kullandım (Sie, Ihnen, Ihr …); du, Hallo, Tschüss yok."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kısa ve düzenli: giriş → özür ve sebep → öneri ya da rica → kapanış."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitaptan sonra virgül; sonraki satır küçük harfle başlıyor (vielen Dank …, leider …)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "weil / dass'tan sonra çekimli fiil sonda: …, weil ich einen Termin habe."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Geçmiş: Ich war gestern nicht im Kurs. / Ich hatte einen Termin. (sein ve haben için Präteritum)."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede",
+      "items": [
+        {
+          "de": "Sehr geehrte Frau …, / Sehr geehrter Herr …,",
+          "tr": "Sayın … Hanım, / Sayın … Bey,"
+        },
+        {
+          "de": "Liebe Frau …, / Lieber Herr …,",
+          "tr": "Sevgili … Hanım / … Bey (tanıdık biri için, daha sıcak)"
+        }
+      ]
+    },
+    {
+      "group": "Sich entschuldigen",
+      "items": [
+        {
+          "de": "Es tut mir sehr leid, aber …",
+          "tr": "Çok üzgünüm ama …"
+        },
+        {
+          "de": "Leider kann ich am … nicht kommen, weil …",
+          "tr": "Maalesef …de gelemiyorum, çünkü …"
+        },
+        {
+          "de": "Bitte entschuldigen Sie, dass …",
+          "tr": "… için lütfen kusura bakmayın."
+        }
+      ]
+    },
+    {
+      "group": "Bitten und vorschlagen",
+      "items": [
+        {
+          "de": "Könnten Sie mir bitte … ?",
+          "tr": "Bana lütfen … -abilir misiniz?"
+        },
+        {
+          "de": "Würde Ihnen … passen?",
+          "tr": "… size uyar mı?"
+        },
+        {
+          "de": "Ich hoffe auf Ihr Verständnis.",
+          "tr": "Anlayışınızı umuyorum."
+        }
+      ]
+    },
+    {
+      "group": "Zum Thema",
+      "items": [
+        {
+          "de": "im Kurs fehlen",
+          "tr": "kursa gelmemek / derste olmamak"
+        },
+        {
+          "de": "die Arbeitsblätter per E-Mail schicken",
+          "tr": "çalışma kâğıtlarını e-postayla göndermek"
+        },
+        {
+          "de": "Ich hatte einen Termin beim Jobcenter.",
+          "tr": "İş ve İşçi Bulma Kurumunda (Jobcenter) randevum vardı."
+        }
+      ]
+    },
+    {
+      "group": "Gruß",
+      "items": [
+        {
+          "de": "Viele Grüße / Mit freundlichen Grüßen",
+          "tr": "Selamlar / Saygılarımla"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Sehr geehrter Herr Klein,\nbitte entschuldigen Sie, dass ich gestern nicht im Kurs war. Ich hatte einen wichtigen Termin beim Jobcenter. Könnten Sie mir die neuen Arbeitsblätter bitte per E-Mail schicken? Dann kann ich die Aufgaben bis Montag machen.\nMit freundlichen Grüßen\nHasan Öztürk",
+    "notes": [
+      "dass ile özür: Bitte entschuldigen Sie, dass ich … nicht im Kurs war (fiil sonda).",
+      "Sebep Präteritum ile: Ich hatte einen Termin.",
+      "Son cümle ricanın amacını gösteriyor: Dann kann ich … machen."
+    ]
+  }
+}

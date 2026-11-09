@@ -6,6 +6,12 @@
 #page-exams .wt-task p{margin:0;color:var(--ba-field-ink)}
 #page-exams .wt-points{margin:0;padding-left:22px;display:grid;gap:4px}
 #page-exams .wt-instructions{font-size:var(--ba-small);opacity:.9}
+/* Forum görevi (Goethe B1 Teil 2): Gästebuch'taki görüş, görev kutusunun içinde kâğıt renginde bir kart. */
+#page-exams .wt-post{display:grid;gap:6px;margin:0;padding:14px 16px;border-radius:var(--ba-radius-small);background:var(--ba-paper);color:var(--ba-ink)}
+#page-exams .wt-post-site{margin:0;color:var(--ba-muted);font-size:var(--ba-small);font-weight:600}
+#page-exams .wt-post blockquote{margin:0;padding-left:12px;border-left:4px solid var(--ba-accent)}
+#page-exams .wt-post blockquote p{margin:0;color:var(--ba-ink)}
+#page-exams .wt-post figcaption{color:var(--ba-muted);font-size:var(--ba-small)}
 
 #page-exams .wt-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:16px;align-items:start}
 #page-exams .wt-card{display:grid;gap:10px;padding:clamp(16px,3vw,22px);border-radius:var(--ba-radius);background:var(--ba-paper);color:var(--ba-ink);min-width:0}

@@ -1,0 +1,135 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "schreiben",
+  "teil": 3,
+  "set": "set-1",
+  "title": "Termin mit dem Vermieter",
+  "minutes": 15,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "Ihr Vermieter, Herr Schulz, möchte am Donnerstagvormittag mit einem Handwerker in Ihre Wohnung kommen und die Heizung prüfen. An diesem Vormittag können Sie aber nicht zu Hause sein.",
+  "task": "Schreiben Sie an Herrn Schulz. Entschuldigen Sie sich höflich, berichten Sie, warum Sie nicht zu Hause sein können, und schlagen Sie einen anderen Termin vor.",
+  "points": [],
+  "instructions": "Schreiben Sie eine E-Mail (circa 40 Wörter). Vergessen Sie nicht die Anrede und den Gruß am Schluss.",
+  "words": {
+    "target": 40,
+    "min": 35,
+    "max": 50
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Görevdeki her şeyi yazdım: özür, neden evde olamadığım, yeni bir randevu önerisi."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Hitap ve kapanış var: Sehr geehrte Frau … / Sehr geehrter Herr … (ya da Liebe Frau …), Viele Grüße / Mit freundlichen Grüßen + adım."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Baştan sona Sie kullandım (Sie, Ihnen, Ihr …); du, Hallo, Tschüss yok."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kısa ve düzenli: giriş → özür ve sebep → öneri ya da rica → kapanış."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitaptan sonra virgül; sonraki satır küçük harfle başlıyor (vielen Dank …, leider …)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "weil / dass'tan sonra çekimli fiil sonda: …, weil ich einen Termin habe."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Zaman: am Donnerstag, am Vormittag, ab 14 Uhr; Würde Ihnen Freitag passen? (fiil başta, soru)."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede",
+      "items": [
+        {
+          "de": "Sehr geehrte Frau …, / Sehr geehrter Herr …,",
+          "tr": "Sayın … Hanım, / Sayın … Bey,"
+        },
+        {
+          "de": "Liebe Frau …, / Lieber Herr …,",
+          "tr": "Sevgili … Hanım / … Bey (tanıdık biri için, daha sıcak)"
+        }
+      ]
+    },
+    {
+      "group": "Sich entschuldigen",
+      "items": [
+        {
+          "de": "Es tut mir sehr leid, aber …",
+          "tr": "Çok üzgünüm ama …"
+        },
+        {
+          "de": "Leider kann ich am … nicht kommen, weil …",
+          "tr": "Maalesef …de gelemiyorum, çünkü …"
+        },
+        {
+          "de": "Bitte entschuldigen Sie, dass …",
+          "tr": "… için lütfen kusura bakmayın."
+        }
+      ]
+    },
+    {
+      "group": "Bitten und vorschlagen",
+      "items": [
+        {
+          "de": "Könnten Sie mir bitte … ?",
+          "tr": "Bana lütfen … -abilir misiniz?"
+        },
+        {
+          "de": "Würde Ihnen … passen?",
+          "tr": "… size uyar mı?"
+        },
+        {
+          "de": "Ich hoffe auf Ihr Verständnis.",
+          "tr": "Anlayışınızı umuyorum."
+        }
+      ]
+    },
+    {
+      "group": "Zum Thema",
+      "items": [
+        {
+          "de": "die Heizung prüfen / reparieren",
+          "tr": "kaloriferi kontrol etmek / tamir etmek"
+        },
+        {
+          "de": "zu Hause sein",
+          "tr": "evde olmak"
+        },
+        {
+          "de": "einen anderen Termin vorschlagen",
+          "tr": "başka bir randevu önermek"
+        }
+      ]
+    },
+    {
+      "group": "Gruß",
+      "items": [
+        {
+          "de": "Viele Grüße / Mit freundlichen Grüßen",
+          "tr": "Selamlar / Saygılarımla"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Sehr geehrter Herr Schulz,\nvielen Dank für Ihre Nachricht. Leider kann ich am Donnerstagvormittag nicht zu Hause sein, weil ich an diesem Tag eine Prüfung im Deutschkurs habe. Das tut mir sehr leid. Würde Ihnen Freitag ab 14 Uhr passen?\nMit freundlichen Grüßen\nAylin Demir",
+    "notes": [
+      "Üç görev de var: özür (Das tut mir sehr leid), sebep (weil … habe), yeni randevu (Würde Ihnen … passen?).",
+      "Ev sahibine Sie ile yazıyor; hitap ve kapanış resmî.",
+      "Hitaptan sonraki satır küçük harfle başlıyor: vielen Dank …"
+    ]
+  }
+}

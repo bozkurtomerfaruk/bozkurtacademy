@@ -26,12 +26,23 @@ export function coverPicture(p, { sizes, thumb = false } = {}) {
   return `<picture><source type="image/webp" srcset="${srcset(p.slug, 'webp')}" sizes="${sizes}"><img src="${coverUrl(p.slug, thumb ? 480 : 800, 'jpg')}" srcset="${srcset(p.slug, 'jpg')}" sizes="${sizes}" width="${w}" height="${h}" ${attrs}></picture>`;
 }
 
+// open…close arasındaki her parçayı, hiç kalmayana kadar çıkarır (iç içe/bölünmüş parçalar dahil).
+function cut(s, open, close) {
+  for (let i = s.indexOf(open); i !== -1; i = s.indexOf(open)) {
+    const j = s.indexOf(close, i + open.length);
+    s = j === -1 ? s.slice(0, i) : s.slice(0, i) + s.slice(j + close.length);
+  }
+  return s;
+}
+
 function inlineSvg(root, p, f) {
   const file = path.join(root, 'images/blog', p.slug, f.file);
   if (!fs.existsSync(file)) throw new Error(`${p.slug}: görsel yok: images/blog/${p.slug}/${f.file}`);
   if (!f.alt) throw new Error(`${p.slug}: ${f.file} için alt metin yok`);
-  const svg = fs.readFileSync(file, 'utf8').replace(/<\?xml[^>]*>/, '').replace(/<style[\s\S]*?<\/style>/g, '').replace(/<!--[\s\S]*?-->/g, '').replace(/\n\s*\n/g, '\n').trim()
-    .replace(/^<svg /, `<svg role="img" aria-label="${esc(f.alt)}" focusable="false" `);
+  let svg = fs.readFileSync(file, 'utf8');
+  svg = cut(cut(cut(svg, '<?xml', '?>'), '<style', '</style>'), '<!--', '-->').replace(/\n\s*\n/g, '\n').trim();
+  if (!svg.startsWith('<svg ') || /<script|\son\w+=/i.test(svg)) throw new Error(`${p.slug}: ${f.file} geçerli bir SVG değil (script veya olay özniteliği olmamalı)`);
+  svg = `<svg role="img" aria-label="${esc(f.alt)}" focusable="false" ${svg.slice(5)}`;
   return `\n<figure class="bl-fig">${svg}</figure>\n`;
 }
 

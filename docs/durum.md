@@ -18,6 +18,23 @@
 - Gizlilik metni (TR/DE/EN): localStorage `baAlfabe` ve cihazdaki sesle okuma eklendi.
 - Testler: `tests/alfabe-logic.test.mjs` (CI) ve `tests/alfabe.mjs` (tarayıcı; 320/390/1280 px, açık/koyu, ses yok, depolama kapalı).
 
+## 2026-11-09 · Madde 7 Aşama B canlıda; yeni öncelik sırası
+
+- **Canlı deneme başarılı (senin denemen):**
+  - Firestore kuralları yayınlandı.
+  - Deneme öğrencisinin metni için taslak öğretmen paneline geldi.
+  - Taslak onaylandı; öğrenci panelinde işaretli hatalar göründü.
+- **Güvenlik:** Araştırmada kullanılan Cloudflare deneme API token'ı silindi. Worker bu token'ı kullanmıyor.
+- **Yeni öncelik sırası (2026-11-09):**
+  1. Schreiben'i genişletmek:
+     - önce Goethe B1 Teil 2 ve 3;
+     - sonra telc B1, DTZ, Goethe A2 ve Goethe B2;
+     - her sınav/seviye ayrı PR;
+     - yapay zekâ talimatı görev türüne uygun (resmî / yarı resmî / gayriresmî e-posta, forum yazısı).
+     - Önce plan onaya sunuluyor.
+  2. Madde 9: info@bozkurtacademy.com için Cloudflare Email Routing → Gmail ve Gmail'den bu adresle gönderme rehberi.
+  3. Sonra madde 8 (Sprechen) ve Kayıp Harf Treni.
+
 ## 2026-11-08 · Madde 7 Aşama B: Worker bağlandı
 
 - Kurulumu sen yaptın: Worker (`schreiben-kontrol.bozkurtt-omerfaruk.workers.dev`), Workers AI bağlantısı, yapay zekâ hesabı, değişkenler.

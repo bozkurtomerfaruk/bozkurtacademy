@@ -16,7 +16,7 @@ import { CSP } from './csp.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const check = process.argv.includes('--check');
 const SITEMAP_DATE = '2026-11-04';
-const V = { themeInit: 1, html: 1, style: 13, base: 12, landing: 1, app: 37, theme: 10, analytics: 7, a1lessons: 19, a1css: 8, grammarPages: 3, blog: 6 };
+const V = { themeInit: 1, html: 1, style: 13, base: 12, landing: 1, app: 38, theme: 10, analytics: 7, a1lessons: 19, a1css: 8, grammarPages: 3, blog: 6 };
 const OG_IMAGE = `${SITE}/images/og-bozkurt-academy.jpg`;
 
 const SECURITY = `
@@ -294,7 +294,7 @@ for (const page of [BLOG.index, ...BLOG.posts]) {
 }
 const blogUrls = BLOG.published.length ? [{ path: BLOG.index.path, updated: BLOG.published[0].updated || BLOG.published[0].date }, ...BLOG.published.map(p => ({ path: p.path, updated: p.updated || p.date }))] : [];
 
-const urls = [{ path: '/' }, ...PAGES, ...GRAMMAR.pages.map(p => ({ path: p.path, updated: GRAMMAR_DATE })), ...blogUrls].map(p => `  <url>\n    <loc>${SITE}${p.path}</loc>\n    <lastmod>${p.updated || SITEMAP_DATE}</lastmod>\n  </url>`).join('\n');
+const urls = [{ path: '/', updated: '2026-11-10' }, ...PAGES, ...GRAMMAR.pages.map(p => ({ path: p.path, updated: GRAMMAR_DATE })), ...blogUrls].map(p => `  <url>\n    <loc>${SITE}${p.path}</loc>\n    <lastmod>${p.updated || SITEMAP_DATE}</lastmod>\n  </url>`).join('\n');
 outputs.push([path.join(root, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`]);
 
 // Her HTML sayfası CSP'yi taşımalı: listede unutulan yeni bir sayfa (ör. ogretmen-yeni.html) burada yakalanır.

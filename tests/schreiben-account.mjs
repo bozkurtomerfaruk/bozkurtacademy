@@ -129,7 +129,7 @@ await teacher.selectOption('#aLevel', 'A1'); await teacher.waitForTimeout(300);
 ok(await teacher.locator('#aTopic option[value="schreiben"]').count() === 0, 'A1 için Schreiben yok (görev yok)');
 await teacher.selectOption('#aLevel', 'B1'); await teacher.waitForTimeout(300);
 await teacher.selectOption('#aTopic', 'schreiben'); await teacher.waitForTimeout(800);
-ok(await teacher.locator('#aExerciseList label').count() === 5, 'ödevde 5 Schreiben görevi seçilebiliyor');
+ok(await teacher.locator('#aExerciseList label').count() === 15 && await teacher.locator('#aExerciseList label', { hasText: 'Teil 3 · Teambesprechung' }).count() === 1, 'ödevde 15 Schreiben görevi (Teil 1–3) seçilebiliyor');
 await teacher.locator('#aExerciseList label', { hasText: 'Geburtstag verpasst' }).locator('input').check();
 await teacher.fill('#aTitle', 'Schreiben: Geburtstag verpasst');
 await teacher.click('#aSubmit'); await teacher.waitForURL(/ogretmen\.html/, { timeout: 15000 }).catch(() => {});

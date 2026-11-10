@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 
-export const GRAMMAR_DATE = '2026-11-05'; // sitemap lastmod; gramer içeriği değişince güncelle
+export const GRAMMAR_DATE = '2026-11-10'; // sitemap lastmod; gramer içeriği değişince güncelle
 const COURSE = { A1: '/a1-almanca-kursu/', A2: '/a2-almanca-kursu/', B1: '/b1-almanca-kursu/' };
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -53,34 +53,55 @@ function lessonTitle(level, lesson, used) {
   throw new Error(`${level}/${lesson.id}: benzersiz başlık bulunamadı`);
 }
 
+// Arama sonuçları için başlık/açıklama (data/grammar-seo.json; ders içeriğinden ayrı). Yoksa üretilir.
+function loadSeo(root) {
+  const file = path.join(root, 'data/grammar-seo.json');
+  const seo = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : {};
+  for (const [k, v] of Object.entries(seo)) {
+    if (k.startsWith('_')) continue;
+    if (v.title && v.title.length > 60) throw new Error(`grammar-seo.json ${k}: başlık 60 karakterden uzun (${v.title.length})`);
+    if (v.description && v.description.length > 160) throw new Error(`grammar-seo.json ${k}: açıklama 160 karakterden uzun (${v.description.length})`);
+  }
+  return seo;
+}
+
 // Sayfa tanımları: { path, title, description, crumb, parent, kind, ... }
 export function grammarPages(root) {
   const { levels, articleHtml, lessonPath } = loadGrammar(root);
+  const seo = loadSeo(root);
   const pages = [];
   const used = new Set();
   const hub = {
     path: '/almanca-gramer/', crumb: 'Almanca Gramer', kind: 'hub',
-    title: 'Almanca Gramer Konuları A1–B1 | Bozkurt Academy',
-    description: 'A1, A2 ve B1 seviyelerinde Türkçe Almanca gramer konu anlatımları: örnek cümleler, kısa tekrar, sık sorulan sorular ve her konu için alıştırmalar.',
+    title: 'Almanca Gramer Konuları A1–B1: Konu Anlatımı ve Alıştırma',
+    description: `Almanca gramer konuları: A1, A2 ve B1 seviyelerinde ${levels.reduce((n, lv) => n + lv.lessons.length, 0)} konu anlatımı, örnek cümleler, kısa tekrar, sık sorulan sorular ve her konu için ücretsiz alıştırmalar.`,
     levels
   };
   pages.push(hub);
   for (const lv of levels) {
     const levelPage = {
       path: lessonPath(lv.level), parent: hub.path, crumb: lv.level, kind: 'level', lv,
-      title: `${lv.level} Almanca Gramer Konuları (${lv.name}) | Bozkurt Academy`,
-      description: clip(`${lv.level} seviyesi Almanca gramer konuları Türkçe anlatımla: ${lv.about} ${lv.lessons.map(l => l.title.split(' – ')[0]).join(', ')}.`)
+      title: `${lv.level} Almanca Gramer Konuları: ${lv.lessons.length} Konu Anlatımı ve Alıştırma`,
+      description: clip(`${lv.level} Almanca gramer konuları, örnekler ve alıştırmalarla: ${lv.lessons.map(l => l.title.split(' – ')[0]).join(', ')}.`)
     };
     pages.push(levelPage);
     lv.lessons.forEach((lesson, i) => {
       pages.push({
         path: lessonPath(lv.level, lesson.id), parent: levelPage.path, crumb: lesson.title.split(' – ')[0], kind: 'lesson',
         lv, lesson, prev: lv.lessons[i - 1] || null, next: lv.lessons[i + 1] || null,
-        title: lessonTitle(lv.level, lesson, used),
-        description: clip(`${sentence(lesson.description?.tr || '')} ${lesson.lead}`),
+        title: seo[`${lv.level}/${lesson.id}`]?.title || lessonTitle(lv.level, lesson, used),
+        description: seo[`${lv.level}/${lesson.id}`]?.description || clip(`${sentence(lesson.description?.tr || '')} ${lesson.lead}`),
         article: articleHtml(lesson, lv.data, lv.level, { static: true })
       });
     });
+  }
+  // Benzersizlik: iki sayfa aynı başlığı veya açıklamayı kullanamaz.
+  for (const key of ['title', 'description']) {
+    const seen = new Map();
+    for (const p of pages) {
+      if (seen.has(p[key])) throw new Error(`Aynı ${key}: ${seen.get(p[key])} ve ${p.path}`);
+      seen.set(p[key], p.path);
+    }
   }
   return { pages, lessonPath };
 }

@@ -413,7 +413,7 @@ for(const [lang, title] of [['tr', 'Seviye tespit sınavı'], ['de', 'Einstufung
     ok(await overflow(page) <= 0, `${label}: sonuç ve formda taşma yok`);
     await page.click('[data-pl-submit]'); await page.waitForTimeout(150);
     const err = await page.locator('#plNameError').textContent();
-    ok(err === { tr: 'Adını yaz (en az 2 karakter).', de: 'Schreib deinen Namen (mindestens 2 Zeichen).', en: 'Enter your name (at least 2 characters).' }[lang], `${label}: hata mesajı çevrildi`);
+    ok(err === { tr: 'Adını yaz (en az 2 karakter).', de: 'Schreiben Sie Ihren Namen (mindestens 2 Zeichen).', en: 'Enter your name (at least 2 characters).' }[lang], `${label}: hata mesajı çevrildi`);
     if(width === 390) await page.screenshot({ path: path.join(shotDir, `result-${lang}-${width}-${theme}.png`), fullPage: true });
     await ctx.close();
   }

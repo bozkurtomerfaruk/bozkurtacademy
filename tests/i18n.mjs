@@ -201,7 +201,55 @@ for (const u of mobile) for (const theme of ['light', 'dark']) {
   await ctx.close();
 }
 
-// 6) Masaüstünde menünün son bağlantısı düğmelerin (CTA, tema, dil) altına girmez; Almanca etiketler en uzunu.
+// 6) İletişim formu: hata ve başarı mesajları sayfanın dilinde, konu satırında [EN] / [DE]. Web3Forms isteği yakalanır.
+{
+  const MSG = {
+    tr: ['Lütfen ad, geçerli e-posta ve mesaj alanlarını doldur.', 'Mesajın iletildi'],
+    en: ['Please enter your name, a valid email address and a message.', 'Your message was sent'],
+    de: ['Bitte Name, gültige E-Mail-Adresse und Nachricht ausfüllen.', 'Ihre Nachricht wurde gesendet']
+  };
+  for (const lang of ['tr', 'en', 'de']) {
+    const url = lang === 'tr' ? '/iletisim/' : routes['/iletisim/'][lang];
+    const { ctx, page } = await open(url, { lang: 'tr' });
+    let body = null;
+    await page.route('https://api.web3forms.com/**', route => { body = JSON.parse(route.request().postData() || '{}'); route.fulfill({ status: 200, contentType: 'application/json', body: '{"success":true}' }); });
+    await page.click('#contactSubmitBtn');
+    const err = await page.textContent('#formStatus');
+    ok(err.startsWith(MSG[lang][0].slice(0, 20)), `iletişim [${lang}]: hata mesajı "${err}"`);
+    await page.fill('#name', 'Test Kişi');
+    await page.fill('#email', 'test@example.com');
+    await page.fill('#message', 'Test mesajı');
+    await page.press('#message', 'Tab');
+    await page.click('#contactSubmitBtn');
+    await page.waitForFunction(() => document.querySelector('#formStatus')?.classList.contains('success'), null, { timeout: 5000 }).catch(() => {});
+    const done = await page.textContent('#formStatus');
+    ok(done.startsWith(MSG[lang][1]), `iletişim [${lang}]: başarı mesajı "${done}"`);
+    const prefix = lang === 'tr' ? 'Bozkurt Academy' : `[${lang.toUpperCase()}] Bozkurt Academy`;
+    ok(body?.subject?.startsWith(prefix) && body?.language === lang, `iletişim [${lang}]: konu "${body?.subject}", dil ${body?.language}`);
+    const hidden = await page.getAttribute('input[name="subject"]', 'value');
+    ok(hidden.startsWith(prefix), `iletişim [${lang}]: JavaScript kapalıyken konu "${hidden}"`);
+    ok(await page.getAttribute('input[name="redirect"]', 'value') === `https://bozkurtacademy.com${url}?gonderildi=1`, `iletişim [${lang}]: yönlendirme adresi`);
+    await ctx.close();
+  }
+}
+
+// 7) Almanca metinler "Sie" ile: sözlüklerde ve /de/ sayfalarında "du" biçimi yok (çocuk oyunu Artikel Evleri hariç).
+{
+  const du = /\b(du|dich|dir|dein|deine|deinen|deinem|deiner|deines)\b/i;
+  for (const file of ['js/app.js', 'js/account/i18n.js', 'js/placement.js']) {
+    const src = fs.readFileSync(path.join(root, file), 'utf8');
+    const start = src.search(/\n\s*de\s*:\s*\{/), end = src.search(/\n\s*en\s*:\s*\{/);
+    const bad = src.slice(start, end).split('\n').filter(line => du.test(line) && !/^\s*(ae|kidsCard)\w*\s*:/.test(line) && !/plWritingPrompt/.test(line));
+    ok(!bad.length, `${file}: Almancada "du" kaldı: ${bad.map(l => l.trim().slice(0, 60)).join(' | ')}`);
+  }
+  for (const p of Object.values(routes).map(a => a.de).filter(Boolean)) {
+    const text = fs.readFileSync(path.join(root, p, 'index.html'), 'utf8').replace(/<!--[\s\S]*?-->/g, '').replace(/<[^>]+>/g, ' ').replace(/mein, dein, sein, ihr/g, '');
+    const m = du.exec(text);
+    ok(!m, `${p}: "du" biçimi: …${m ? text.slice(Math.max(0, m.index - 30), m.index + 30) : ''}…`);
+  }
+}
+
+// 8) Masaüstünde menünün son bağlantısı düğmelerin (CTA, tema, dil) altına girmez; Almanca etiketler en uzunu.
 for (const [u, lang] of [['/', 'de'], ['/', 'en'], ['/', 'tr'], [routes['/hakkimda/'].de, 'de'], [routes['/hakkimda/'].en, 'en'], ['/almanca-gramer/a1/artikel/', 'de']]) {
   for (const width of [1021, 1121, 1200, 1280, 1366, 1440, 1600]) {
     const { ctx, page } = await open(u, { lang, width, session: true });

@@ -14,17 +14,17 @@ export const SITE = 'https://bozkurtacademy.com';
 const provider = { '@id': `${SITE}/#organization` };
 const instructor = { '@id': `${SITE}/#person` };
 
-function course(path, name, description, level) {
+function course(path, name, description, level, lang = 'tr') {
   return {
     '@type': 'Course',
     '@id': `${SITE}${path}#course`,
     name,
     description,
     url: `${SITE}${path}`,
-    inLanguage: 'tr',
+    inLanguage: lang,
     educationalLevel: level,
     provider,
-    about: { '@type': 'Thing', name: 'Almanca' },
+    about: { '@type': 'Thing', name: { tr: 'Almanca', en: 'German', de: 'Deutsch' }[lang] },
     hasCourseInstance: {
       '@type': 'CourseInstance',
       courseMode: 'online',
@@ -175,7 +175,7 @@ const TRANSLATIONS = [
     crumb: 'Online German Lessons',
     title: 'Online German Lessons A1–B2 | Bozkurt Academy',
     description: 'Online German lessons with a teacher who lives in Germany: one-to-one or group classes from A1 to B2, 50-minute sessions and a free first lesson.',
-    schema: [service('/en/online-german-lessons/', 'Online German Lessons', 'Online German lessons from A1 to B2 via Zoom or Google Meet.', 'Online German lessons')]
+    schema: [service('/en/online-german-lessons/', 'Online German Lessons', 'Online German lessons from A1 to B2 via Zoom or Google Meet.', 'Online German lessons', '/en/contact/')]
   },
   {
     path: '/de/online-deutschunterricht/',
@@ -185,7 +185,7 @@ const TRANSLATIONS = [
     crumb: 'Online-Deutschunterricht',
     title: 'Online-Deutschunterricht A1–B2 | Bozkurt Academy',
     description: 'Online-Deutschunterricht mit einem Lehrer, der in Deutschland lebt: Einzel- oder Gruppenunterricht von A1 bis B2, 50-minütige Stunden und eine kostenlose erste Stunde.',
-    schema: [service('/de/online-deutschunterricht/', 'Online-Deutschunterricht', 'Online-Deutschunterricht von A1 bis B2 über Zoom oder Google Meet.', 'Online-Deutschunterricht')]
+    schema: [service('/de/online-deutschunterricht/', 'Online-Deutschunterricht', 'Online-Deutschunterricht von A1 bis B2 über Zoom oder Google Meet.', 'Online-Deutschunterricht', '/de/kontakt/')]
   },
   {
     path: '/en/about/',
@@ -208,6 +208,132 @@ const TRANSLATIONS = [
     description: 'Ömer Faruk Bozkurt, Deutschlehrer mit Wohnsitz in Deutschland: Ausbildung, Erfahrung in Deutschland und eine Unterrichtsmethode aus Erklärung, Anwendung und Wiederholung.',
     type: 'ProfilePage',
     ogType: 'profile'
+  },
+  {
+    path: '/en/private-german-lessons/', lang: 'en', of: '/almanca-ozel-ders/', parent: '/en/online-german-lessons/', nav: 'lessons',
+    crumb: 'Private German Lessons',
+    title: 'Private German Lessons (One-to-One, Online) | Bozkurt Academy',
+    description: 'One-to-one German lessons planned around your level, goal and schedule. A1–B2, exam preparation and speaking practice, online. The first lesson is free.',
+    schema: [service('/en/private-german-lessons/', 'Private German Lessons (One-to-One)', 'One-to-one online German lessons planned around your level and goal.', 'Private German lessons', '/en/contact/')]
+  },
+  {
+    path: '/de/deutsch-einzelunterricht/', lang: 'de', of: '/almanca-ozel-ders/', parent: '/de/online-deutschunterricht/', nav: 'lessons',
+    crumb: 'Deutsch-Einzelunterricht',
+    title: 'Deutsch-Einzelunterricht (online) | Bozkurt Academy',
+    description: 'Deutsch-Einzelunterricht nach Ihrem Niveau, Ziel und Zeitplan: A1–B2, Prüfungsvorbereitung und Sprechpraxis, online. Die erste Stunde ist kostenlos.',
+    schema: [service('/de/deutsch-einzelunterricht/', 'Deutsch-Einzelunterricht', 'Online-Einzelunterricht in Deutsch, geplant nach Niveau und Ziel.', 'Deutsch-Einzelunterricht', '/de/kontakt/')]
+  },
+  {
+    path: '/en/german-group-classes/', lang: 'en', of: '/almanca-grup-dersi/', parent: '/en/online-german-lessons/', nav: 'lessons',
+    crumb: 'German Group Classes',
+    title: 'German Group Classes: Online, Up to 6 People | Bozkurt Academy',
+    description: 'Online German group classes with up to 6 learners at the same level: speaking practice and a regular schedule. Ask about A1–B2 groups.',
+    schema: [service('/en/german-group-classes/', 'German Group Classes (Online)', 'Online German group classes with up to 6 learners at the same level.', 'Online German group classes', '/en/contact/')]
+  },
+  {
+    path: '/de/deutsch-gruppenkurs/', lang: 'de', of: '/almanca-grup-dersi/', parent: '/de/online-deutschunterricht/', nav: 'lessons',
+    crumb: 'Deutsch-Gruppenkurs',
+    title: 'Deutsch-Gruppenkurs: online, höchstens 6 Personen | Bozkurt Academy',
+    description: 'Online-Gruppenkurs Deutsch mit höchstens 6 Lernenden auf demselben Niveau: Sprechpraxis und ein festes Programm. Informieren Sie sich über die Gruppen A1–B2.',
+    schema: [service('/de/deutsch-gruppenkurs/', 'Deutsch-Gruppenkurs (online)', 'Online-Gruppenkurse Deutsch mit höchstens 6 Lernenden auf demselben Niveau.', 'Online-Gruppenkurs Deutsch', '/de/kontakt/')]
+  },
+  {
+    path: '/en/a1-german-course/', lang: 'en', of: '/a1-almanca-kursu/', parent: '/en/online-german-lessons/', nav: 'lessons',
+    crumb: 'A1 German Course',
+    title: 'A1 German Course: Visa and Family Reunification | Bozkurt Academy',
+    description: 'A1 German course for complete beginners and for A1 exam preparation before a family reunification or visa application. Online one-to-one or group lessons, free first lesson.',
+    schema: [course('/en/a1-german-course/', 'A1 German Course', 'A1 German for beginners: basic grammar, everyday communication and preparation for the A1 exam (Goethe, telc, ÖSD).', 'A1 (Beginner)', 'en')]
+  },
+  {
+    path: '/de/deutschkurs-a1/', lang: 'de', of: '/a1-almanca-kursu/', parent: '/de/online-deutschunterricht/', nav: 'lessons',
+    crumb: 'Deutschkurs A1',
+    title: 'Deutschkurs A1: Visum und Familiennachzug | Bozkurt Academy',
+    description: 'Deutschkurs A1 für Lernende ohne Vorkenntnisse und zur Vorbereitung auf die A1-Prüfung vor Familiennachzug oder Visumantrag. Online einzeln oder in der Gruppe, erste Stunde kostenlos.',
+    schema: [course('/de/deutschkurs-a1/', 'Deutschkurs A1', 'Deutsch A1 für Anfänger: Grundgrammatik, Alltagskommunikation und Vorbereitung auf die A1-Prüfung (Goethe, telc, ÖSD).', 'A1 (Anfänger)', 'de')]
+  },
+  {
+    path: '/en/a2-german-course/', lang: 'en', of: '/a2-almanca-kursu/', parent: '/en/online-german-lessons/', nav: 'lessons',
+    crumb: 'A2 German Course',
+    title: 'A2 German Course (Online) | Bozkurt Academy',
+    description: 'A2 German course: the past tense, subordinate clauses and everyday communication. Online one-to-one or group lessons and A2 exam preparation for learners who have finished A1.',
+    schema: [course('/en/a2-german-course/', 'A2 German Course', 'A2 German after A1: Perfekt, Dativ, subordinate clauses, everyday communication and A2 exam preparation.', 'A2 (Elementary)', 'en')]
+  },
+  {
+    path: '/de/deutschkurs-a2/', lang: 'de', of: '/a2-almanca-kursu/', parent: '/de/online-deutschunterricht/', nav: 'lessons',
+    crumb: 'Deutschkurs A2',
+    title: 'Deutschkurs A2 (online) | Bozkurt Academy',
+    description: 'Deutschkurs A2: Vergangenheit, Nebensätze und Kommunikation im Alltag. Online einzeln oder in der Gruppe und Vorbereitung auf die A2-Prüfung für alle, die A1 abgeschlossen haben.',
+    schema: [course('/de/deutschkurs-a2/', 'Deutschkurs A2', 'Deutsch A2 nach A1: Perfekt, Dativ, Nebensätze, Alltagskommunikation und Vorbereitung auf die A2-Prüfung.', 'A2 (Grundstufe)', 'de')]
+  },
+  {
+    path: '/en/b1-german-course/', lang: 'en', of: '/b1-almanca-kursu/', parent: '/en/online-german-lessons/', nav: 'lessons',
+    crumb: 'B1 German Course',
+    title: 'B1 German Course and Exam Preparation | Bozkurt Academy',
+    description: 'B1 German course for work, vocational training (Ausbildung) and everyday life in Germany. Online one-to-one or group lessons, Goethe, telc and DTZ B1 preparation.',
+    schema: [course('/en/b1-german-course/', 'B1 German Course', 'Independent user level B1: subordinate clauses, passive, Konjunktiv II, communication at work and in everyday life, B1 exam preparation.', 'B1 (Intermediate)', 'en')]
+  },
+  {
+    path: '/de/deutschkurs-b1/', lang: 'de', of: '/b1-almanca-kursu/', parent: '/de/online-deutschunterricht/', nav: 'lessons',
+    crumb: 'Deutschkurs B1',
+    title: 'Deutschkurs B1 und Prüfungsvorbereitung | Bozkurt Academy',
+    description: 'Deutschkurs B1 für Beruf, Ausbildung und Alltag in Deutschland. Online einzeln oder in der Gruppe, Vorbereitung auf Goethe, telc und DTZ B1.',
+    schema: [course('/de/deutschkurs-b1/', 'Deutschkurs B1', 'Selbstständige Sprachverwendung B1: Nebensätze, Passiv, Konjunktiv II, Kommunikation in Beruf und Alltag, B1-Prüfungsvorbereitung.', 'B1 (Mittelstufe)', 'de')]
+  },
+  {
+    path: '/en/b2-german-course/', lang: 'en', of: '/b2-almanca-kursu/', parent: '/en/online-german-lessons/', nav: 'lessons',
+    crumb: 'B2 German Course',
+    title: 'B2 German Course: Work, University, Profession | Bozkurt Academy',
+    description: 'B2 German course: fluent German for work, university and your profession. Discussion, formal correspondence, complex grammar and B2 exam preparation, online.',
+    schema: [course('/en/b2-german-course/', 'B2 German Course', 'Level B2: complex sentence structures, passive and Konjunktiv, communication at work and university, Goethe and telc B2 preparation.', 'B2 (Upper intermediate)', 'en')]
+  },
+  {
+    path: '/de/deutschkurs-b2/', lang: 'de', of: '/b2-almanca-kursu/', parent: '/de/online-deutschunterricht/', nav: 'lessons',
+    crumb: 'Deutschkurs B2',
+    title: 'Deutschkurs B2: Beruf, Studium, Arbeitsleben | Bozkurt Academy',
+    description: 'Deutschkurs B2: flüssiges Deutsch für Beruf, Studium und Arbeitsleben. Diskussion, formelle Korrespondenz, komplexe Grammatik und B2-Prüfungsvorbereitung, online.',
+    schema: [course('/de/deutschkurs-b2/', 'Deutschkurs B2', 'Niveau B2: komplexe Satzstrukturen, Passiv und Konjunktiv, Kommunikation in Beruf und Studium, Vorbereitung auf Goethe und telc B2.', 'B2 (Obere Mittelstufe)', 'de')]
+  },
+  {
+    path: '/en/german-exam-preparation/', lang: 'en', of: '/almanca-sinav-hazirlik/', nav: 'exams',
+    crumb: 'German Exam Preparation',
+    title: 'Goethe and telc German Exam Preparation | Bozkurt Academy',
+    description: 'Preparation for the Goethe, telc, ÖSD, DTZ and TestDaF exams: task types, reading, listening, writing and speaking. Online one-to-one lessons and free practice sets.',
+    schema: [service('/en/german-exam-preparation/', 'German Exam Preparation', 'Online preparation lessons for the Goethe, telc, ÖSD, DTZ and TestDaF exams.', 'German exam preparation', '/en/contact/')]
+  },
+  {
+    path: '/de/pruefungsvorbereitung-deutsch/', lang: 'de', of: '/almanca-sinav-hazirlik/', nav: 'exams',
+    crumb: 'Prüfungsvorbereitung Deutsch',
+    title: 'Prüfungsvorbereitung Goethe und telc | Bozkurt Academy',
+    description: 'Vorbereitung auf Goethe, telc, ÖSD, DTZ und TestDaF: Aufgabentypen, Lesen, Hören, Schreiben und Sprechen. Online-Einzelunterricht und kostenlose Übungssätze.',
+    schema: [service('/de/pruefungsvorbereitung-deutsch/', 'Prüfungsvorbereitung Deutsch', 'Online-Vorbereitung auf die Prüfungen Goethe, telc, ÖSD, DTZ und TestDaF.', 'Prüfungsvorbereitung Deutsch', '/de/kontakt/')]
+  },
+  {
+    path: '/en/contact/', lang: 'en', of: '/iletisim/', nav: 'contact',
+    crumb: 'Contact',
+    title: 'Contact: Free First German Lesson | Bozkurt Academy',
+    description: 'Contact Bozkurt Academy: fill in the form about online German lessons and a free first lesson. Tell me your level, your goal and the times that suit you.',
+    type: 'ContactPage',
+    noStickyCta: true
+  },
+  {
+    path: '/de/kontakt/', lang: 'de', of: '/iletisim/', nav: 'contact',
+    crumb: 'Kontakt',
+    title: 'Kontakt: kostenlose erste Deutschstunde | Bozkurt Academy',
+    description: 'Kontakt zu Bozkurt Academy: Füllen Sie das Formular zum Online-Deutschunterricht und zur kostenlosen ersten Stunde aus. Nennen Sie Ihr Niveau, Ihr Ziel und passende Zeiten.',
+    type: 'ContactPage',
+    noStickyCta: true
+  },
+  {
+    path: '/en/faq/', lang: 'en', of: '/sss/',
+    crumb: 'FAQ',
+    title: 'German Lessons: Frequently Asked Questions | Bozkurt Academy',
+    description: 'Frequently asked questions about online German lessons: the first lesson, lesson length, one-to-one and group lessons, how fees are set, exams and the placement test.'
+  },
+  {
+    path: '/de/haeufige-fragen/', lang: 'de', of: '/sss/',
+    crumb: 'Häufige Fragen',
+    title: 'Deutschunterricht: häufige Fragen | Bozkurt Academy',
+    description: 'Häufige Fragen zum Online-Deutschunterricht: erste Stunde, Unterrichtsdauer, Einzel- und Gruppenunterricht, Preisgestaltung, Prüfungen und Einstufungstest.'
   }
 ];
 

@@ -6,9 +6,9 @@ permissions:
 
 on:
   push:
-    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/csp.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', 'scripts/check-html-escape.mjs', 'scripts/grammar-pages.mjs', 'scripts/blog-pages.mjs', '_blog/**', 'data/catalog.json', 'data/grammar-index.json', 'data/*-grammar.json', '**/*.html', 'js/**', 'css/**', 'data/alfabe.json', 'tests/alfabe-logic.test.mjs', '.github/workflows/site-pages.yml']
+    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/csp.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', 'scripts/check-html-escape.mjs', 'scripts/grammar-pages.mjs', 'scripts/blog-pages.mjs', '_blog/**', 'data/catalog.json', 'data/grammar-index.json', 'data/*-grammar.json', '**/*.html', 'js/**', 'css/**', 'data/alfabe.json', 'tests/alfabe-logic.test.mjs', 'tests/i18n.mjs', 'scripts/site-i18n.mjs', '.github/workflows/site-pages.yml']
   pull_request:
-    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/csp.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', 'scripts/check-html-escape.mjs', 'scripts/grammar-pages.mjs', 'scripts/blog-pages.mjs', '_blog/**', 'data/catalog.json', 'data/grammar-index.json', 'data/*-grammar.json', '**/*.html', 'js/**', 'css/**', 'data/alfabe.json', 'tests/alfabe-logic.test.mjs', '.github/workflows/site-pages.yml']
+    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/csp.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', 'scripts/check-html-escape.mjs', 'scripts/grammar-pages.mjs', 'scripts/blog-pages.mjs', '_blog/**', 'data/catalog.json', 'data/grammar-index.json', 'data/*-grammar.json', '**/*.html', 'js/**', 'css/**', 'data/alfabe.json', 'tests/alfabe-logic.test.mjs', 'tests/i18n.mjs', 'scripts/site-i18n.mjs', '.github/workflows/site-pages.yml']
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -20,3 +20,17 @@ jobs:
       - run: node scripts/check-versions.mjs
       - run: node scripts/check-html-escape.mjs
       - run: node --test tests/alfabe-logic.test.mjs
+
+  # Çoklu dil (TR / EN / DE): her sayfa her dilde, dil düğmeleri, menü bağlantıları, 404 yönlendirmeleri,
+  # iletişim formu, telefon genişliği ve koyu tema (tests/i18n.mjs). Playwright depoya eklenmez; geçici klasöre kurulur.
+  i18n:
+    runs-on: ubuntu-latest
+    env:
+      NODE_PATH: ${{ runner.temp }}/pw/node_modules
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - run: npm install --prefix "$RUNNER_TEMP/pw" --no-save --no-package-lock --no-audit --no-fund playwright@1.63.0
+      - run: npx --prefix "$RUNNER_TEMP/pw" playwright install --with-deps chromium
+      - run: node tests/i18n.mjs

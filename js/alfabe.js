@@ -700,6 +700,13 @@
       store.p.cocuk = p.cocuk; store.p.yetiskin = p.yetiskin; store.uid = uid; accountSynced = true;
       save();
       if (view === 'menu' || view === 'kesfet') rerender();
+    },
+    // A signed-in account that does not sync (waiting for approval, teacher) still owns the local progress: it is marked
+    // with its uid so that a student who signs in later on the same browser does not get it merged into their account.
+    claim(uid) {
+      if (store.uid) return;
+      store.uid = uid;
+      save();
     }
   };
   let hint = null;
@@ -711,7 +718,7 @@
       data = d; route();
       readyResolve(d.harfler.map((l) => l.id));
       // Visitors never load Firebase; only a device where a student signed in before does.
-      if (hint === 'student') import('/js/account/alfabe-sync.js?v=1').catch((error) => console.warn('alfabe sync', error));
+      if (hint === 'student') import('/js/account/alfabe-sync.js?v=2').catch((error) => console.warn('alfabe sync', error));
     })
     .catch(() => { root.innerHTML = '<p class="ab-note">Oyun yüklenemedi. Sayfayı yenilemeyi dene.</p>'; });
 })();

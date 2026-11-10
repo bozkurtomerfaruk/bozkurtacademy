@@ -25,8 +25,6 @@ jobs:
   # iletişim formu, telefon genişliği ve koyu tema (tests/i18n.mjs). Playwright depoya eklenmez; geçici klasöre kurulur.
   i18n:
     runs-on: ubuntu-latest
-    env:
-      NODE_PATH: ${{ runner.temp }}/pw/node_modules
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -34,3 +32,5 @@ jobs:
       - run: npm install --prefix "$RUNNER_TEMP/pw" --no-save --no-package-lock --no-audit --no-fund playwright@1.63.0
       - run: npx --prefix "$RUNNER_TEMP/pw" playwright install --with-deps chromium
       - run: node tests/i18n.mjs
+        env:
+          NODE_PATH: ${{ runner.temp }}/pw/node_modules

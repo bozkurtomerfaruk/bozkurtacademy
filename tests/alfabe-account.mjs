@@ -1,7 +1,8 @@
 // Almanca Alfabe oyunu, hesap tarafı (Firebase Emulator: auth + firestore). Çalıştırma: npm run test:alfabe-account
 // Ziyaretçide Firebase yüklenmiyor → girişten önceki yerel ilerleme ile hesaptaki ilerleme en iyi değerlerle birleşip
 // iki tarafa yazılıyor → tur sonunda hesap güncelleniyor → başka cihazdaki ilerleme kaybolmuyor → başka hesabın yerel
-// ilerlemesi karışmıyor → onaysız hesapta sadece yerel. Site için kendi statik sunucusunu açar; Firebase SDK dosyaları
+// ilerlemesi karışmıyor → onaysız hesapta sadece yerel, ama o hesapla işaretli → aynı tarayıcıda sonra giren onaylı
+// öğrencinin hesabına karışmıyor. Site için kendi statik sunucusunu açar; Firebase SDK dosyaları
 // gstatic yerine node_modules/firebase'den verilir.
 import fs from 'node:fs';
 import http from 'node:http';
@@ -146,7 +147,8 @@ await writeRemote('ogrenci1', { cocuk: { stats: { A: { r: 1, w: 2 }, B: { r: 2, 
   await page.goto(`${BASE}/almanca-alfabe/`); await page.waitForSelector('[data-ab-synced]', { timeout: 15000 });
   const remote = await readRemote('ogrenci1');
   const local = await getLocal(page);
-  ok(remote.cocuk.stars === before.cocuk.stars && !remote.cocuk.stats.Q, 'başka hesabın yerel ilerlemesi hesaba karışmıyor');
+  // ogrenci1 has its own Q record from the order round in step 2; the foreign one (r: 50, duy: 10, 999 stars) must not appear.
+  ok(JSON.stringify(remote.cocuk) === JSON.stringify(before.cocuk), 'başka hesabın yerel ilerlemesi hesaba karışmıyor');
   ok(local.uid === 'ogrenci1' && local.p.cocuk.stars === before.cocuk.stars, 'cihazda bu hesabın ilerlemesi gösteriliyor');
   await ctx.close();
 }
@@ -160,6 +162,22 @@ await writeRemote('ogrenci1', { cocuk: { stats: { A: { r: 1, w: 2 }, B: { r: 2, 
   await page.waitForTimeout(2500);
   ok(await readRemote('ogrenci2') === null, 'onaysız hesapta hesaba yazılmıyor');
   ok(await page.locator('[data-ab-synced]').count() === 0 && (await getLocal(page)).p.cocuk.stars === 3, 'onaysız hesapta oyun yerelde devam ediyor');
+  ok((await getLocal(page)).uid === 'ogrenci2', 'onaysız hesabın yerel ilerlemesi bu hesapla işaretli');
+
+  // 5. Same browser: the waiting account keeps playing, then an approved student signs in.
+  // The waiting account's local progress must not be merged into the approved account.
+  const mine = await getLocal(page);
+  mine.p.cocuk.stats.X = { r: 40, w: 0 }; mine.p.cocuk.best.duy = 10; mine.p.cocuk.stars = 500;
+  await setLocal(page, mine);
+  const before = await readRemote('ogrenci1');
+  await signIn(page, 'ogrenci@example.com');
+  await page.goto(`${BASE}/almanca-alfabe/`); await page.waitForSelector('[data-ab-synced]', { timeout: 15000 });
+  const remote = await readRemote('ogrenci1');
+  const local = await getLocal(page);
+  // The waiting account's values (X: 40 correct, duy 10, 500 stars) are distinctive; the approved account is unchanged.
+  const same = (x, y) => JSON.stringify(x) === JSON.stringify(y);
+  ok(same(remote.cocuk, before.cocuk) && same(remote.yetiskin, before.yetiskin) && remote.cocuk.stars !== 500, 'aynı tarayıcıda onaysız hesabın ilerlemesi onaylı hesaba karışmıyor');
+  ok(local.uid === 'ogrenci1' && same(local.p.cocuk, before.cocuk), 'cihazda artık onaylı hesabın ilerlemesi gösteriliyor');
   await ctx.close();
 }
 

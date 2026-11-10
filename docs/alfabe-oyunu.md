@@ -16,6 +16,7 @@ Türkçe konuşanlara Almanca alfabeyi öğreten oyun. Hesap gerekmez; alıştı
 | `tests/alfabe.mjs` | Tarayıcı testi (Playwright). |
 | `js/alfabe-audio.js` | Ses oynatıcı (dosya, yoksa cihaz sesi). |
 | `scripts/generate-alfabe-audio.mjs` | Ses dosyalarını üretir; liste `audio/alfabe/manifest.json`, tablo `docs/alfabe-ses-listesi.md`. Testleri `tests/alfabe-ses.test.mjs`. |
+| `scripts/alfabe-ses/` | Yerel ses üretimi: `yerel_tts.py` (Piper, Chatterbox, Whisper), kurulum `kur.sh` / `kur.ps1`. |
 | `tools/audio-check.html` | Bütün klipleri dinleme sayfası (yayına girmez). |
 | `js/account/alfabe-sync.js` | Giriş yapmış onaylı öğrencinin ilerlemesini hesaba yazar (`users/{uid}/progress/alfabe`). |
 | `tests/alfabe-account.mjs` | Hesap tarafı testi (`npm run test:alfabe-account`, Firebase Emulator). |
@@ -79,29 +80,75 @@ TTS servisi sadece senin bilgisayarında çalıştırdığın üretim scriptinde
 - **Önbellek:** GitHub Pages önbellek süresini kendisi belirler (10 dakika); dosyalar `?v=<ses özeti>` ile istenir,
   değişen dosyanın adresi de değişir. Liste (`manifest.json`) her açılışta yeniden doğrulanır (`cache: 'no-cache'`).
 
-### Sesleri üretme
+### Sesleri üretme (ücretsiz, kartsız, yerel)
 
-1. Servis hesabını aç ve bir API anahtarı al (Google Cloud: Text-to-Speech API'yi etkinleştir, "API anahtarı"
-   oluştur ve anahtarı sadece Text-to-Speech API ile sınırla).
-2. Depo kökünde `.env` dosyası oluştur (`.gitignore`'da, asla commit edilmez):
+Varsayılan servis `yerel`: modeller senin bilgisayarında çalışır, hesap, kart ya da API anahtarı gerekmez.
 
-   ```
-   ALFABE_TTS_PROVIDER=google
-   GOOGLE_TTS_API_KEY=buraya-anahtar
-   # isteğe bağlı: ALFABE_VOICE_DE=de-DE-Neural2-C  ALFABE_VOICE_TR=tr-TR-Wavenet-C
-   ```
+| Ne | Motor ve model | Lisans |
+| --- | --- | --- |
+| Almanca | Piper, `de_DE-thorsten-medium` | Thorsten-Voice CC0, temel model `nl_BE-rdh` CC0, model deposu MIT |
+| Türkçe (çocuk modu) | Chatterbox Multilingual (Resemble AI) | MIT |
+| Kalite kapısı | faster-whisper + Whisper `medium` | MIT |
 
-   Azure için `AZURE_SPEECH_KEY` ve `AZURE_SPEECH_REGION`; ElevenLabs için `ELEVENLABS_API_KEY`,
-   `ELEVENLABS_VOICE_DE`, `ELEVENLABS_VOICE_TR`.
-3. `node scripts/generate-alfabe-audio.mjs --dry-run` (ne üretileceği, karakter sayısı, maliyet; istek göndermez).
-4. Önce birkaç klip dene: `node scripts/generate-alfabe-audio.mjs --only harf-v,harf-q,kelime-der-vogel,aferin`.
-   Sesleri listelemek için `--voices`; beğenmezsen `.env`'de sesi değiştirip `--force --only …` ile yeniden üret.
-5. Hepsi: `node scripts/generate-alfabe-audio.mjs`. Sadece eksik ve metni değişmiş klipler üretilir
-   (`manifest.json` metnin özetini tutar). Script ffmpeg ile sessizliği kırpar, ses seviyesini −16 LUFS'ye eşitler ve
-   48 kbit/sn mono MP3 yapar; sonunda toplam boyutu yazar.
-6. `python3 -m http.server 8765` açıkken `http://localhost:8765/tools/audio-check.html` sayfasında hepsini dinle
-   (bu sayfa yayına girmez: `_config.yml` → `exclude: tools`). Sonra `audio/alfabe/`, `manifest.json` ve
-   `docs/alfabe-ses-listesi.md` dosyalarını commit et.
+Lisans tablosu ve kullanılmayan modeller: `audio/alfabe/LISANS.md`.
+
+**Kurulum (bir kez).** Gerekenler: Python 3.10–3.13, Node 20+, ffmpeg. Toplam yaklaşık 8 GB (PyTorch ve modeller),
+hepsi depodaki `.tts-modeller/` klasörüne gider (`.gitignore`'da, commit edilmez).
+
+- Linux / macOS:
+
+  ```bash
+  bash scripts/alfabe-ses/kur.sh
+  ```
+
+  (macOS'ta önce `brew install ffmpeg python@3.12`, Ubuntu/Debian'da `sudo apt install ffmpeg python3-venv`.)
+- Windows (PowerShell, depo klasöründe; önce python.org'dan Python, `winget install Gyan.FFmpeg`):
+
+  ```powershell
+  powershell -ExecutionPolicy Bypass -File scripts\alfabe-ses\kur.ps1
+  ```
+
+Kurulum Python ortamını oluşturur, `piper-tts`, `chatterbox-tts` ve `faster-whisper`'ı kurar ve modelleri indirir
+(`node scripts/generate-alfabe-audio.mjs --modelleri-indir`).
+
+**Üretim (tek komut):**
+
+```bash
+node scripts/generate-alfabe-audio.mjs
+```
+
+- Sadece eksik ve metni (ya da ses ayarı) değişmiş klipler üretilir; manifest metnin özetini (`textHash`) ve ses
+  ayarını (`render`) tutar. Hepsini yeniden üretmek için `--force`.
+- Almanca kelime ve cümlelerde, Türkçe ifadelerde birkaç aday üretilir (`CANDIDATES`: kelime 5, cümle 3, Türkçe 5);
+  Whisper her adayı yazıya döker, beklenen metne en çok benzeyen saklanır ("makine kulağı", tabloda puanıyla). Harf
+  adlarında tek aday: Whisper tek heceli harf adlarını güvenilir tanımaz, okunuşları fonemle sabittir.
+- Hız (`length_scale`, büyük = yavaş) türe göre: harf adları 1,2; işaretler 1,1; senaryo cevapları 1,12; kelimeler
+  1,05; cümleler 1,0 (`LOCAL_SPEED`). Hecelemedeki harf arası duraklama oyunda: 380 ms, yavaşta 600 ms.
+- Her klibin başına ve sonuna 80 ms sessizlik eklenir, sonra ffmpeg sessizliği kırpar (başta 50 ms, sonda 120 ms
+  kalır): tek kelimelik kliplerin başı ya da sonu kesilmez.
+- Whisper'ı kapatmak için `ALFABE_ASR=0` (daha hızlı, tek aday). Başka Whisper modeli: `ALFABE_ASR_MODEL=small`.
+- İsteğe bağlı ücretli servisler hâlâ var (`--provider google` ya da `azure`, `elevenlabs`; anahtar `.env`'de).
+
+**Okunuş: harf adları.** Piper SSML `<phoneme>` desteklemez; yerine iki yol var, ikisi de `data/alfabe.json` → harfin
+`sesMetni` alanında:
+
+- Yazım: Piper (espeak-ng) "Vau"yu /vaʊ/ okur, bu yüzden V için `Fau.`; "Ef, El, Em, En, Es, Er" uzun /eː/ ile
+  okunduğu için `Eff., Ell., Emm., Enn., Ess., Err.`; "Jot" /joːt/ olduğu için `Jott.`; "Ce" /keː/ olduğu için `Zeh.`;
+  "Qu" /kf/ olduğu için `Kuh.`
+- Fonem: `[[ … ]]` arası doğrudan okunur, ör. Y için `[[ ˈʏpsilɔn ]]` (hiçbir yazım /ʏpsilɔn/ vermedi). Aynı yol yabancı
+  kökenli kelimelerde de kullanıldı: `die [[ ʒirˈafə ]].` (Giraffe), Orange, Pinguin, Rakete, Zebra, Delfin, Rathaus.
+
+Her harfin denenen yazımları `sesAlternatifleri`'nde (ilki seçili). Hepsini yan yana dinlemek için:
+
+```bash
+node scripts/generate-alfabe-audio.mjs --alternatifler
+```
+
+Bu, `tools/audio-alternatifler/` klasörüne yazar (yayına girmez) ve `tools/audio-check.html`'in en üstünde "Harf
+adları: yazım alternatifleri" bölümü çıkar. Başka bir yazımı seçmek için onu `sesMetni`'ne yaz ve üretimi çalıştır.
+
+**Dinleme:** `python3 -m http.server 8765` açıkken `http://localhost:8765/tools/audio-check.html`.
+Sonra `audio/alfabe/`, `manifest.json` ve `docs/alfabe-ses-listesi.md` dosyalarını commit et.
 
 ### Kendi kaydınla değiştirme
 

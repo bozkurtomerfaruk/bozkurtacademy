@@ -2,6 +2,13 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-10 · Almanca Alfabe: sesler ücretsiz ve yerel (Piper + Chatterbox)
+
+- Google yerine varsayılan `yerel`: Almanca Piper `de_DE-thorsten-medium` (CC0), Türkçe Chatterbox Multilingual (MIT); Whisper birkaç adaydan en iyi anlaşılanı seçiyor. Kurulum `scripts/alfabe-ses/kur.sh` / `kur.ps1`, modeller `.tts-modeller/` (git'e girmez).
+- 125 klibin hepsi üretildi ve commit edildi. Lisans kontrolü: `audio/alfabe/LISANS.md` (Piper'ın Türkçe sesi ve lessac/ryan'dan türetilenler ticari olmadığı için kullanılmadı).
+- Harf adları `data/alfabe.json` → `sesMetni` (ör. V "Fau.", Y `[[ ˈʏpsilɔn ]]`), alternatifleri `tools/audio-check.html`'de yan yana.
+- **Öğretmenin kulak onayı bekleniyor** (özellikle harf adları, Ä/Ö/Ü/ß, Türkçe talimatlar).
+
 ## 2026-11-09 · Almanca Alfabe: önceden üretilmiş ses dosyaları
 
 - Seslendirilen 125 klip (30 harf, 60 kelime, 3 işaret, 11 soru, 11 cevap, 10 sabit cümle) `js/alfabe-logic.js` → `audioClips` ile tek listede; dosyalar `audio/alfabe/<dil>/<ad>.mp3`.

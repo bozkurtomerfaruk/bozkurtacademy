@@ -9,7 +9,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import {
-  REPO, buildRequest, loadClips, loadEnv, run, textHash, planGeneration, indexAudio, hasFfmpeg, readManifest
+  REPO, buildRequest, loadClips, loadEnv, run, textHash, planGeneration, indexAudio, hasFfmpeg, readManifest, renderKey, CANDIDATES, localSpeed
 } from '../scripts/generate-alfabe-audio.mjs';
 
 const clips = loadClips();
@@ -86,12 +86,15 @@ test('plan: eksik ve metni değişen üretilir, kendi kaydın korunur', () => {
   assert.ok(!planGeneration(clips, m, { force: true }).some((c) => c.id === 'harf-c'));
 });
 
-test('anahtarsız: --dry-run maliyeti gösterir, gerçek üretim anahtar ister; servise istek gitmez', async () => {
+test('varsayılan yerel ve ücretsiz; Google isteğe bağlı ve anahtar ister; servise istek gitmez', async () => {
   const root = tempRepo();
   const lines = [], calls = [];
   assert.equal(await run(['--dry-run'], { root, env: {}, fetchImpl: fakeGoogle(calls), log: (l) => lines.push(l) }), 0);
-  assert.ok(lines.some((l) => /125 klip/.test(l)) && lines.some((l) => /0 \$/.test(l)));
-  assert.equal(await run([], { root, env: {}, fetchImpl: fakeGoogle(calls), log: (l) => lines.push(l) }), 1);
+  assert.ok(lines.some((l) => /Servis: yerel/.test(l)) && lines.some((l) => /125 klip/.test(l)) && lines.some((l) => /0 \$/.test(l)));
+  assert.ok(lines.some((l) => /de\/harf-v\.mp3 {2}Fau\./.test(l)), 'kuru çalıştırma Piper metnini gösterir');
+  assert.equal(await run([], { root, env: {}, log: (l) => lines.push(l) }), 1);
+  assert.ok(lines.some((l) => /Model eksik \(de\)/.test(l)), 'model yoksa önce indirmeyi söyler');
+  assert.equal(await run(['--provider', 'google'], { root, env: {}, fetchImpl: fakeGoogle(calls), log: (l) => lines.push(l) }), 1);
   assert.ok(lines.some((l) => /Anahtar eksik: GOOGLE_TTS_API_KEY/.test(l)));
   assert.equal(calls.length, 0);
 });
@@ -101,7 +104,7 @@ test('üretim: 48 kbit/sn mono MP3, liste ve tablo; ikinci çalıştırmada bir 
   const calls = [];
   const env = { GOOGLE_TTS_API_KEY: 'test' };
   const only = ['harf-v', 'kelime-der-vogel', 'aferin'];
-  assert.equal(await run(['--only', only.join(',')], { root, env, fetchImpl: fakeGoogle(calls), log: quiet }), 0);
+  assert.equal(await run(['--provider', 'google', '--only', only.join(',')], { root, env, fetchImpl: fakeGoogle(calls), log: quiet }), 0);
   assert.equal(calls.length, 3);
   const file = path.join(root, 'audio/alfabe/de/harf-v.mp3');
   const probe = JSON.parse(spawnSync('ffprobe', ['-v', 'error', '-show_streams', '-show_format', '-of', 'json', file], { encoding: 'utf8' }).stdout);
@@ -115,12 +118,12 @@ test('üretim: 48 kbit/sn mono MP3, liste ve tablo; ikinci çalıştırmada bir 
   assert.equal(m.clips['harf-v'].voice, 'de-DE-Neural2-C');
   assert.match(m.clips['harf-v'].audioHash, /^[0-9a-f]{12}$/);
   const table = fs.readFileSync(path.join(root, 'docs/alfabe-ses-listesi.md'), 'utf8');
-  assert.match(table, /`de\/harf-v\.mp3` \| de \| Harf adı \| Vau \| \/faʊ\/ \| üretildi \(google\)/);
+  assert.match(table, /`de\/harf-v\.mp3` \| de \| Harf adı \| Vau \| Fau\. \| \/faʊ\/ \| {2}\| {2}\| üretildi \(google\)/);
   assert.equal(await run(['--check'], { root, env: {}, log: quiet }), 0);
 
   // Again: nothing to do.
   calls.length = 0;
-  assert.equal(await run(['--only', only.join(',')], { root, env, fetchImpl: fakeGoogle(calls), log: quiet }), 0);
+  assert.equal(await run(['--provider', 'google', '--only', only.join(',')], { root, env, fetchImpl: fakeGoogle(calls), log: quiet }), 0);
   assert.equal(calls.length, 0);
 
   // A text changes: that clip is stale (not played) until it is generated again; the others stay.
@@ -131,7 +134,7 @@ test('üretim: 48 kbit/sn mono MP3, liste ve tablo; ikinci çalıştırmada bir 
   assert.equal(await run(['--check'], { root, env: {}, log: quiet }), 1, '--check: liste güncel değil');
   assert.equal(await run(['--index'], { root, env: {}, log: quiet }), 0);
   assert.equal(readManifest(path.join(root, 'audio/alfabe')).clips.aferin.stale, true);
-  assert.equal(await run(['--only', only.join(',')], { root, env, fetchImpl: fakeGoogle(calls), log: quiet }), 0);
+  assert.equal(await run(['--provider', 'google', '--only', only.join(',')], { root, env, fetchImpl: fakeGoogle(calls), log: quiet }), 0);
   assert.deepEqual(calls.map((c) => c.body.input.ssml), ['<speak><prosody rate="95%" pitch="+2st">Aferin sana!</prosody></speak>']);
   assert.equal(readManifest(path.join(root, 'audio/alfabe')).clips.aferin.stale, undefined);
 });
@@ -152,7 +155,7 @@ test('kendi kaydın: aynı adla konan dosya --index ile listeye girer ve üzerin
   const m = readManifest(dir);
   assert.equal(m.clips['harf-v'].source, 'kendi');
   assert.equal(await run(['--check'], { root, env: {}, log: quiet }), 0);
-  assert.equal(await run(['--only', 'harf-v,harf-w', '--force'], { root, env, fetchImpl: fakeGoogle(calls), log: quiet }), 0);
+  assert.equal(await run(['--provider', 'google', '--only', 'harf-v,harf-w', '--force'], { root, env, fetchImpl: fakeGoogle(calls), log: quiet }), 0);
   assert.deepEqual(calls.length, 1, 'sadece harf-w üretildi');
   assert.deepEqual(fs.readFileSync(path.join(dir, 'de/harf-v.mp3')), own, 'kendi kaydın değişmedi');
   // Replacing a generated file with an own recording later works the same way.
@@ -173,4 +176,90 @@ test('kendi kaydın: aynı adla konan dosya --index ile listeye girer ve üzerin
 
 test('depodaki liste ve tablo güncel (--check, CI)', async () => {
   assert.equal(await run(['--check'], { env: {}, log: quiet }), 0);
+});
+
+// A stand-in for scripts/alfabe-ses/yerel_tts.py: writes a short tone per job and answers like the real helper
+// (phonemes for German, what "Whisper" heard for words). Lets the test run the whole local pipeline without models.
+const FAKE_HELPER = `import json, sys, math, struct, wave
+req = json.load(sys.stdin)
+json.dump(req, open(sys.argv[0] + '.req.json', 'w'))
+for job in req['jobs']:
+    rate = 22050
+    tone = [int(8000 * math.sin(2 * math.pi * 440 * i / rate)) for i in range(int(rate * 0.3))]
+    sil = [0] * int(rate * 0.2)
+    with wave.open(job['out'], 'wb') as w:
+        w.setnchannels(1); w.setsampwidth(2); w.setframerate(rate)
+        w.writeframes(struct.pack('<%dh' % (len(sil) * 2 + len(tone)), *(sil + tone + sil)))
+    heard = job['expect'] if job.get('candidates', 1) > 1 else None
+    print(json.dumps({'id': job['id'], 'ok': True, 'phonemes': 'fˈaʊ' if job['lang'] == 'de' else '', 'heard': heard, 'score': 1.0 if heard else None}), flush=True)
+`;
+function localRepo() {
+  const root = tempRepo();
+  fs.mkdirSync(path.join(root, 'scripts/alfabe-ses'), { recursive: true });
+  fs.writeFileSync(path.join(root, 'scripts/alfabe-ses/yerel_tts.py'), FAKE_HELPER);
+  fs.mkdirSync(path.join(root, '.tts-modeller/piper'), { recursive: true });
+  fs.writeFileSync(path.join(root, '.tts-modeller/piper/de_DE-thorsten-medium.onnx'), 'model');
+  return root;
+}
+const PY = spawnSync('python3', ['--version']).status === 0 ? 'python3' : 'python';
+
+test('yerel üretim: Piper metni, tür başına hız ve aday sayısı, makine kulağı; sadece eksik/değişen klipler', { skip: !FFMPEG && 'ffmpeg yok' }, async () => {
+  const root = localRepo();
+  const env = { ALFABE_PYTHON: PY };
+  const only = ['harf-v', 'harf-y', 'kelime-die-giraffe', 'cevap-mia-wolf-web-de', 'aferin', 'talimat-duy'];
+  const lines = [];
+  assert.equal(await run(['--only', only.join(',')], { root, env, log: (l) => lines.push(l) }), 0, lines.join('\n'));
+  const req = JSON.parse(fs.readFileSync(path.join(root, 'scripts/alfabe-ses/yerel_tts.py.req.json'), 'utf8'));
+  const job = Object.fromEntries(req.jobs.map((j) => [j.id, j]));
+  assert.equal(job['harf-v'].text, 'Fau.', 'V: "Vau" değil "Fau" (Piper "Vau"yu /vaʊ/ okur)');
+  assert.equal(job['harf-y'].text, '[[ ˈʏpsilɔn ]]', 'Y: doğrudan fonem');
+  assert.equal(job['kelime-die-giraffe'].text, 'die [[ ʒirˈafə ]].');
+  assert.equal(job['cevap-mia-wolf-web-de'].text, 'mia Punkt wolf Ät web Punkt de.');
+  assert.equal(job['cevap-mia-wolf-web-de'].expect, 'mia.wolf@web.de', 'makine kulağı yazılışı bekler');
+  assert.equal(job['harf-v'].length_scale, 1.2, 'harf adları daha yavaş');
+  assert.equal(job['kelime-die-giraffe'].length_scale, 1.05);
+  assert.equal(job['harf-v'].candidates, 1, 'harflerde tek aday');
+  assert.equal(job['kelime-die-giraffe'].candidates, CANDIDATES.kelime);
+  assert.equal(job['aferin'].tone, 'cocuk', 'Türkçe çocuk tonu');
+  assert.ok(req.models.de.endsWith('de_DE-thorsten-medium.onnx'));
+  assert.deepEqual(req.asr, { model: 'medium' });
+  const m = readManifest(path.join(root, 'audio/alfabe'));
+  assert.equal(m.clips['harf-v'].source, 'yerel');
+  assert.equal(m.clips['harf-v'].phonemes, 'fˈaʊ');
+  assert.equal(m.clips['harf-v'].render, renderKey('yerel', by['harf-v']));
+  assert.equal(m.clips['kelime-die-giraffe'].heard, 'die Giraffe');
+  assert.equal(m.clips['kelime-die-giraffe'].score, 1);
+  assert.equal(m.clips['aferin'].voice, 'chatterbox:multilingual');
+  const table = fs.readFileSync(path.join(root, 'docs/alfabe-ses-listesi.md'), 'utf8');
+  assert.match(table, /`de\/kelime-die-giraffe\.mp3` .*die \[\[ ʒirˈafə \]\]\. .*die Giraffe \(1\) \| üretildi \(yerel\)/);
+  // Again: nothing to do. ALFABE_ASR=0 turns the check off.
+  fs.rmSync(path.join(root, 'scripts/alfabe-ses/yerel_tts.py.req.json'));
+  assert.equal(await run(['--only', only.join(',')], { root, env, log: quiet }), 0);
+  assert.ok(!fs.existsSync(path.join(root, 'scripts/alfabe-ses/yerel_tts.py.req.json')), 'ikinci çalıştırmada üretim yok');
+  // Changing a letter's Piper text regenerates only that letter.
+  const dataFile = path.join(root, 'data/alfabe.json');
+  const data = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
+  data.harfler.find((l) => l.id === 'V').sesMetni = '[[ fˈaʊ ]]';
+  fs.writeFileSync(dataFile, JSON.stringify(data));
+  assert.equal(await run(['--only', only.join(','), '--index'], { root, env, log: quiet }), 0);
+  assert.equal(readManifest(path.join(root, 'audio/alfabe')).clips['harf-v'].stale, true, 'metin değişti: oynatılmaz');
+  assert.equal(await run(['--only', only.join(',')], { root, env: { ...env, ALFABE_ASR: '0' }, log: quiet }), 0);
+  const req2 = JSON.parse(fs.readFileSync(path.join(root, 'scripts/alfabe-ses/yerel_tts.py.req.json'), 'utf8'));
+  assert.deepEqual(req2.jobs.map((j) => j.id), ['harf-v']);
+  assert.equal(req2.asr, null);
+});
+
+test('alternatifler: her harfin yazımları ayrı dosyalarda, seçili işaretli; ikinci çalıştırmada üretim yok', { skip: !FFMPEG && 'ffmpeg yok' }, async () => {
+  const root = localRepo();
+  const env = { ALFABE_PYTHON: PY };
+  assert.equal(await run(['--alternatifler'], { root, env, log: quiet }), 0);
+  const list = JSON.parse(fs.readFileSync(path.join(root, 'tools/audio-alternatifler/liste.json'), 'utf8'));
+  assert.equal(list.harfler.length, 30);
+  const v = list.harfler.find((h) => h.clip === 'harf-v');
+  assert.deepEqual(v.secenekler.map((o) => [o.text, o.secili]), [['Fau.', true], ['[[ fˈaʊ ]]', false], ['Vau.', false]]);
+  assert.ok(fs.existsSync(path.join(root, 'tools/audio-alternatifler/de/harf-v--3.mp3')));
+  fs.rmSync(path.join(root, 'scripts/alfabe-ses/yerel_tts.py.req.json'));
+  assert.equal(await run(['--alternatifler'], { root, env, log: quiet }), 0);
+  assert.ok(!fs.existsSync(path.join(root, 'scripts/alfabe-ses/yerel_tts.py.req.json')));
+  assert.ok(localSpeed(by['harf-v']) > localSpeed(by['kelime-der-vogel']));
 });

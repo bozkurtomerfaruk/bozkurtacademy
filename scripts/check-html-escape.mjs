@@ -183,7 +183,7 @@ export function check(file, src = fs.readFileSync(path.join(root, file), 'utf8')
 // target="_blank" bağlantılar rel="noopener noreferrer" taşımalı (HTML sayfaları ve js/ altındaki betikler).
 export function checkBlankTargets(){
   const problems = [];
-  const skip = new Set(['node_modules', '.git', 'docs', 'tests', '.claude', 'Material', 'vendor']);
+  const skip = new Set(['node_modules', '.git', 'docs', 'tests', '.claude', 'Material', 'vendor', '.tts-modeller']);
   (function walk(dir){
     for(const entry of fs.readdirSync(dir, { withFileTypes: true })){
       if(skip.has(entry.name)) continue;

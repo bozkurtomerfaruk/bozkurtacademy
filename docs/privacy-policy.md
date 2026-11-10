@@ -11,7 +11,7 @@ verification) and GoatCounter visitor statistics on the public pages, and the pl
 
 ## Third-party services that receive visitors' personal data
 
-Not a visitor service: the German alphabet game's audio files (`audio/alfabe/`) are generated once by the site owner with a text-to-speech service (`scripts/generate-alfabe-audio.mjs`; only the fixed game texts are sent) and served from this site. Visitors never contact that service; without a file the game uses on-device voices only.
+Not a visitor service: the German alphabet game's audio files (`audio/alfabe/`) are generated once by the site owner on their own computer with open models (Piper, Chatterbox; `scripts/generate-alfabe-audio.mjs`, no online service by default) and served from this site. Visitors never contact that service; without a file the game uses on-device voices only.
 
 | Service | When | What it receives | Where to look in the code |
 | --- | --- | --- | --- |

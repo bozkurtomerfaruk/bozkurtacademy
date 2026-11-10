@@ -365,6 +365,7 @@
   function slug(text) {
     return lower(text).replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
       .replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ı/g, 'i').replace(/ş/g, 's')
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // é → e (Café)
       .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
   }
   var LETTER_SLUG = { 'Ä': 'ae', 'Ö': 'oe', 'Ü': 'ue', 'ß': 'eszett' };
@@ -377,6 +378,11 @@
     answer: function (scene) { return 'cevap-' + slug(scene.cevap); },
     phrase: function (key) { return key; } // keys of data.seslendirme.tr / .de
   };
+  // What a local engine (Piper) reads for an answer: the signs with their own text ("[[ ˈɛt ]]" for @).
+  function answerSay(text, signs) {
+    return Array.from(String(text)).map(function (ch) { return signs && signs[ch] ? ' ' + (signs[ch].sesMetni || signs[ch].ad) + ' ' : ch; }).join('')
+      .replace(/\s+/g, ' ').trim();
+  }
   // "mia.wolf@web.de" is read as "mia Punkt wolf ät web Punkt de".
   function spokenAnswer(text, signs) {
     return Array.from(String(text)).map(function (ch) { return signs && signs[ch] ? ' ' + signs[ch].ad + ' ' : ch; }).join('')
@@ -391,6 +397,8 @@
     }).join('').replace(/\s+/g, ' ').trim();
   }
   // Every clip: id, lang ('de' | 'tr'), file, kind, text (what it says, also the browser-voice fallback),
+  // say (what a local engine such as Piper reads: data sesMetni, [[ … ]] = phonemes; alts: other spellings to compare),
+  // expect (what a listener should hear, for the generator's speech-recognition check; default: text),
   // ssml (body without <speak>; letter names with their IPA so V is "Vau", Q "Kuh", Ä a long "ä"),
   // tone ('cocuk': warm Turkish voice for the children's mode; 'notr' otherwise), preload (often used).
   function audioClips(data) {
@@ -398,29 +406,30 @@
     var add = function (c) { c.file = c.lang + '/' + c.id + '.mp3'; out.push(c); };
     data.harfler.forEach(function (l) {
       add({ id: audioId.letter(l), lang: 'de', kind: 'harf', text: l.soyle || l.ad, ipa: l.ipa || null,
+        say: l.sesMetni || (l.soyle || l.ad) + '.', alts: l.sesAlternatifleri || [],
         ssml: l.ipa ? '<phoneme alphabet="ipa" ph="' + xml(l.ipa) + '">' + xml(l.soyle || l.ad) + '</phoneme>' : xml(l.soyle || l.ad),
         tone: 'notr', preload: true });
     });
     ['cocuk', 'yetiskin'].forEach(function (p) {
       data.harfler.forEach(function (l) {
         var ex = l[p], text = ex.artikel + ' ' + ex.kelime;
-        add({ id: audioId.word(ex), lang: 'de', kind: 'kelime', text: text, ssml: xml(text), tone: 'notr', profile: p });
+        add({ id: audioId.word(ex), lang: 'de', kind: 'kelime', text: text, say: ex.sesMetni || text + '.', ssml: xml(text), tone: 'notr', profile: p });
       });
     });
     Object.keys(data.isaretler || {}).forEach(function (ch) {
       var s = data.isaretler[ch];
-      add({ id: audioId.sign(ch, s), lang: 'de', kind: 'isaret', text: s.ad, ssml: signSsml(s), tone: 'notr' });
+      add({ id: audioId.sign(ch, s), lang: 'de', kind: 'isaret', text: s.ad, say: (s.sesMetni || s.ad) + '.', ssml: signSsml(s), tone: 'notr' });
     });
     ((data.heceleme && data.heceleme.yetiskin) || []).forEach(function (sc) {
-      add({ id: audioId.question(sc), lang: 'de', kind: 'soru', text: sc.soru, ssml: xml(sc.soru), tone: 'notr' });
+      add({ id: audioId.question(sc), lang: 'de', kind: 'soru', text: sc.soru, say: sc.soru, ssml: xml(sc.soru), tone: 'notr' });
       var said = spokenAnswer(sc.cevap, data.isaretler);
-      add({ id: audioId.answer(sc), lang: 'de', kind: 'cevap', text: said, ssml: answerSsml(sc.cevap, data.isaretler), tone: 'notr' });
+      add({ id: audioId.answer(sc), lang: 'de', kind: 'cevap', text: said, say: sc.sesMetni || answerSay(sc.cevap, data.isaretler) + '.', expect: sc.cevap, ssml: answerSsml(sc.cevap, data.isaretler), tone: 'notr' });
     });
     var phrases = data.seslendirme || {};
     ['de', 'tr'].forEach(function (lang) {
       Object.keys(phrases[lang] || {}).forEach(function (key) {
         var text = phrases[lang][key];
-        add({ id: audioId.phrase(key), lang: lang, kind: /^talimat-/.test(key) ? 'talimat' : 'geri', text: text, ssml: xml(text),
+        add({ id: audioId.phrase(key), lang: lang, kind: /^talimat-/.test(key) ? 'talimat' : 'geri', text: text, say: text, ssml: xml(text),
           tone: lang === 'tr' ? 'cocuk' : 'notr', preload: !/^talimat-/.test(key) });
       });
     });

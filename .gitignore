@@ -7,3 +7,7 @@ undefined/
 # TTS anahtarları (scripts/generate-alfabe-audio.mjs): asla commit etme
 .env
 .env.*
+
+# Yerel TTS modelleri (scripts/generate-alfabe-audio.mjs, Piper ve Coqui): büyük dosyalar, asla commit etme
+.tts-modeller/
+__pycache__/

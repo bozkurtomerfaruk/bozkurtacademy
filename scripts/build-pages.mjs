@@ -300,7 +300,7 @@ outputs.push([path.join(root, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF
 // Her HTML sayfası CSP'yi taşımalı: listede unutulan yeni bir sayfa (ör. ogretmen-yeni.html) burada yakalanır.
 {
   const produced = new Map(outputs);
-  const skip = new Set(['node_modules', '.git', 'docs', 'tests', '.claude', 'Material', '_blog']);
+  const skip = new Set(['node_modules', '.git', 'docs', 'tests', '.claude', 'Material', '_blog', '.tts-modeller']);
   const missing = [];
   (function walk(dir) {
     for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {

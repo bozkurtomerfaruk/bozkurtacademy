@@ -54,7 +54,28 @@
     }
     mark(null);
   });
-  document.getElementById('acStop').addEventListener('click', () => { player.stop(); mark(null); });
+  document.getElementById('acStop').addEventListener('click', () => { player.stop(); stopAlt(); mark(null); });
+
+  // Letter-name alternatives (tools/audio-alternatifler/liste.json from --alternatifler): played straight from the file.
+  let altAudio = null;
+  function stopAlt() { if (altAudio) { altAudio.pause(); altAudio = null; } }
+  function playAlt(file) {
+    player.stop(); stopAlt();
+    altAudio = new Audio('/tools/audio-alternatifler/' + file);
+    altAudio.playbackRate = slow() ? L.SLOW_PLAYBACK : 1;
+    altAudio.preservesPitch = true;
+    altAudio.play().catch(() => {});
+  }
+  function renderAlts(list) {
+    const rows = (list.harfler || []).map((h) => `<tr><th scope="row">${esc(h.text)}</th><td>${h.ipa ? esc('/' + h.ipa + '/') : ''}</td>
+      <td><div class="ac-alts">${h.secenekler.map((o) => `<button type="button" class="ac-alt${o.secili ? ' is-chosen' : ''}" data-alt="${esc(o.file)}" aria-label="${esc('Dinle: ' + o.text + (o.secili ? ', seçili' : ''))}">
+        <span>▶ ${esc(o.text)}${o.secili ? ' ✓ seçili' : ''}</span><small>${o.phonemes ? esc('/' + o.phonemes + '/') : ''}</small></button>`).join('')}</div></td></tr>`).join('');
+    const box = document.getElementById('acAltRows');
+    box.innerHTML = rows;
+    box.addEventListener('click', (e) => { const b = e.target.closest('[data-alt]'); if (b) playAlt(b.dataset.alt); });
+    document.getElementById('acAltSection').hidden = !rows;
+  }
+  fetch('/tools/audio-alternatifler/liste.json', { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : null)).then((l) => { if (l) renderAlts(l); }).catch(() => {});
   ['acKind', 'acStatus'].forEach((id) => document.getElementById(id).addEventListener('change', render));
 
   Promise.all([

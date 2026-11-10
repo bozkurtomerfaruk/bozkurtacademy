@@ -28,6 +28,11 @@
     td code{font-size:.85em}
     .st-gen{color:var(--ba-right)} .st-own{color:var(--ba-der)} .st-miss,.st-stale{color:var(--ba-wrong)}
     .ac-note{color:var(--ba-muted);font-size:var(--ba-small)}
+    h2{font-family:var(--ba-serif);font-weight:400;font-size:1.5rem;margin:28px 0 8px}
+    .ac-alts{display:flex;flex-wrap:wrap;gap:8px}
+    .ac-alt{display:inline-flex;flex-direction:column;align-items:flex-start;gap:2px;min-height:44px;padding:6px 10px;border:0;border-radius:var(--ba-radius-small);background:var(--ba-paper-2);color:var(--ba-ink);font:inherit;font-size:var(--ba-small);cursor:pointer;box-shadow:inset 0 0 0 1px var(--ba-line-strong);text-align:left}
+    .ac-alt.is-chosen{box-shadow:inset 0 0 0 2px var(--ba-right)}
+    .ac-alt small{color:var(--ba-muted)}
   </style>
 </head>
 <body class="academy-theme">
@@ -42,6 +47,15 @@
       <button type="button" id="acStop">Durdur</button>
       <span id="acSummary" class="ac-note" role="status"></span>
     </div>
+    <section id="acAltSection" hidden>
+      <h2>Harf adları: yazım alternatifleri</h2>
+      <p class="ac-note">Her harf için denenen yazımlar yan yana. Oyunda kullanılan "seçili" olandır (<code>data/alfabe.json</code> → <code>sesMetni</code>). Başka birini seçmek için onu <code>sesMetni</code>'ne yaz ve <code>node scripts/generate-alfabe-audio.mjs</code> çalıştır. <code>[[ … ]]</code> doğrudan fonemdir. Fonemler: Piper'ın gerçekten okuduğu.</p>
+      <div class="ac-wrap"><table>
+        <thead><tr><th scope="col">Harf</th><th scope="col">Hedef</th><th scope="col">Alternatifler</th></tr></thead>
+        <tbody id="acAltRows"></tbody>
+      </table></div>
+      <h2>Bütün klipler</h2>
+    </section>
     <div class="ac-wrap"><table>
       <thead><tr><th scope="col">#</th><th scope="col">Dosya</th><th scope="col">Dil</th><th scope="col">Tür</th><th scope="col">Metin</th><th scope="col">IPA</th><th scope="col">Durum</th><th scope="col">Boyut</th><th scope="col">Dinle</th></tr></thead>
       <tbody id="acRows"><tr><td colspan="9">Yükleniyor…</td></tr></tbody>
@@ -50,6 +64,6 @@
   <script src="/js/html.js?v=1"></script>
   <script src="/js/alfabe-logic.js?v=2"></script>
   <script src="/js/alfabe-audio.js?v=1"></script>
-  <script src="/js/tools/audio-check.js?v=1"></script>
+  <script src="/js/tools/audio-check.js?v=2"></script>
 </body>
 </html>

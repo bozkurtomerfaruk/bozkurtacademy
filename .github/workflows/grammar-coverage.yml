@@ -3,10 +3,17 @@ permissions:
   contents: read
 
 on:
+  # push yalnızca main'de; diğer dallar pull_request ile çalışır (aynı commit iki kez çalışmasın).
   push:
+    branches: [main]
     paths: ['data/**', 'scripts/check-grammar.mjs', 'scripts/build-search-index.mjs', 'scripts/sozluk.mjs', 'scripts/check-level-exams.mjs', 'scripts/check-kids-games.mjs', 'scripts/kids-audio.mjs', 'docs/sozluk-kontrol.csv', 'docs/sozluk-bekleyen.csv', '.github/workflows/grammar-coverage.yml']
   pull_request:
     paths: ['data/**', 'scripts/check-grammar.mjs', 'scripts/build-search-index.mjs', 'scripts/sozluk.mjs', 'scripts/check-level-exams.mjs', 'scripts/check-kids-games.mjs', 'scripts/kids-audio.mjs', 'docs/sozluk-kontrol.csv', 'docs/sozluk-bekleyen.csv', '.github/workflows/grammar-coverage.yml']
+# Aynı dala (PR'da head dalı, main'de main) yeni bir push gelince eski çalıştırma iptal edilir.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   coverage:
     runs-on: ubuntu-latest

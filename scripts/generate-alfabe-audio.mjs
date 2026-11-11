@@ -7,7 +7,9 @@
 // scripts/alfabe-ses/kur.sh (Linux/macOS) ya da kur.ps1 (Windows); kurulum modelleri de indirir. Sonra:
 //   node scripts/generate-alfabe-audio.mjs --modelleri-indir  modelleri .tts-modeller/ klasörüne indirir (git'e girmez)
 //   node scripts/generate-alfabe-audio.mjs                    eksik ve metni değişmiş klipleri üretir
-//   node scripts/generate-alfabe-audio.mjs --alternatifler    harf adlarının yazım alternatiflerini üretir (tools/audio-alternatifler/)
+//   node scripts/generate-alfabe-audio.mjs --alternatifler    harf adlarının (ve sesAlternatifleri olan kelimelerin) yazım alternatiflerini üretir
+//   node scripts/generate-alfabe-audio.mjs --alternatif harf-b:3,harf-s:1   kontrolde seçilen alternatif dosyayı oyuna alır
+//                                                             (önce data/alfabe.json → sesMetni o alternatifin metni olmalı)
 //   node scripts/generate-alfabe-audio.mjs --dry-run          ne üretileceğini gösterir
 //   node scripts/generate-alfabe-audio.mjs --only harf-v,kelime-der-vogel   sadece bu klipler
 //   node scripts/generate-alfabe-audio.mjs --force            kendi kayıtların dışında hepsini yeniden üretir
@@ -330,7 +332,7 @@ export function encodeMp3(input, format, outFile) {
 
 /* ---------- Run ---------- */
 function parseArgs(argv) {
-  const o = { dryRun: false, force: false, forceOwn: false, index: false, check: false, voices: false, acceptOwn: false, only: null, provider: null, models: false, alternatives: false };
+  const o = { dryRun: false, force: false, forceOwn: false, index: false, check: false, voices: false, acceptOwn: false, only: null, provider: null, models: false, alternatives: false, adopt: null };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === '--dry-run') o.dryRun = true;
@@ -342,6 +344,8 @@ function parseArgs(argv) {
     else if (a === '--accept-own') o.acceptOwn = true;
     else if (a === '--modelleri-indir') o.models = true;
     else if (a === '--alternatifler') o.alternatives = true;
+    else if (a === '--alternatif') o.adopt = String(argv[++i] || '').split(',').filter(Boolean);
+    else if (a.startsWith('--alternatif=')) o.adopt = a.slice(13).split(',').filter(Boolean);
     else if (a === '--only') o.only = String(argv[++i] || '').split(',').filter(Boolean);
     else if (a.startsWith('--only=')) o.only = a.slice(7).split(',').filter(Boolean);
     else if (a === '--provider') o.provider = argv[++i];
@@ -402,6 +406,17 @@ export async function run(argv, { root = REPO, fetchImpl = globalThis.fetch, env
   if (o.index) { write(); await refreshOffline(); report(); return 0; }
   if (o.models) { await downloadModels(root, env, { fetchImpl, log }); return 0; }
   if (o.alternatives) { const code = await alternatives(root, env, clips, { log, force: o.force }); await refreshOffline(); return code; }
+  if (o.adopt) {
+    const code = adoptAlternatives(root, clips, manifest, o.adopt, { log });
+    if (code) return code;
+    ({ manifest, notes } = indexAudio(dir, clips, manifest));
+    write();
+    // Refresh the list of alternatives (which one is now chosen); nothing is generated for unchanged texts.
+    await alternatives(root, env, clips, { log });
+    await refreshOffline();
+    report();
+    return 0;
+  }
 
   const env2 = env;
   if (o.voices) {
@@ -509,18 +524,48 @@ export async function run(argv, { root = REPO, fetchImpl = globalThis.fetch, env
   return 0;
 }
 
-/* ---------- Letter-name alternatives (tools/audio-alternatifler/, check page only, not published) ---------- */
+/* ---------- Alternatives (tools/audio-alternatifler/, check page only, not published) ---------- */
+// Letter names (sesAlternatifleri of each letter) and example words that have sesAlternatifleri.
 export const ALT_DIR = 'tools/audio-alternatifler';
 export const altFile = (clip, i) => `de/${clip.id}--${i + 1}.mp3`;
+export function readAltList(root) {
+  try { return JSON.parse(fs.readFileSync(path.join(root, ALT_DIR, 'liste.json'), 'utf8')); } catch (_) { return { harfler: [], kelimeler: [] }; }
+}
+// --alternatif harf-b:3: the reviewed alternative file becomes the game's clip, exactly the take that was listened to
+// (generating the same text again would give another take). The letter's sesMetni must already be that alternative.
+export function adoptAlternatives(root, clips, manifest, picks, { log = console.log } = {}) {
+  const list = readAltList(root);
+  const options = Object.fromEntries([...(list.harfler || []), ...(list.kelimeler || [])].flatMap((h) => h.secenekler.map((s) => [s.file, s])));
+  for (const pick of picks) {
+    const m = pick.match(/^([a-z0-9-]+):(\d+)$/);
+    const clip = m && clips.find((c) => c.id === m[1]);
+    if (!clip) { log(`Geçersiz seçim: ${pick} (biçim: harf-b:3)`); return 1; }
+    const file = altFile(clip, Number(m[2]) - 1);
+    const opt = options[file];
+    const src = path.join(root, ALT_DIR, file);
+    if (!opt || !fs.existsSync(src)) { log(`Alternatif yok: ${ALT_DIR}/${file} (önce --alternatifler)`); return 1; }
+    if (opt.text !== clip.say) { log(`${clip.id}: sesMetni "${clip.say}", alternatif ${m[2]} ise "${opt.text}". Önce data/alfabe.json → sesMetni "${opt.text}" yap.`); return 1; }
+    const out = path.join(root, AUDIO_DIR, clip.file);
+    fs.mkdirSync(path.dirname(out), { recursive: true });
+    fs.copyFileSync(src, out);
+    const buf = fs.readFileSync(out);
+    manifest.clips[clip.id] = { file: clip.file, lang: clip.lang, kind: clip.kind, text: clip.text, say: clip.say, phonemes: opt.phonemes || undefined,
+      textHash: textHash(clip), audioHash: sha(buf), bytes: buf.length, source: 'yerel', voice: PROVIDERS.yerel.voices[clip.lang],
+      render: renderKey('yerel', clip), alternative: Number(m[2]), generatedAt: new Date().toISOString().slice(0, 10) };
+    log(`  ${clip.file} ← ${ALT_DIR}/${file}  (${clip.say})`);
+  }
+  return 0;
+}
 async function alternatives(root, env, clips, { log = console.log, force = false } = {}) {
   const dir = path.join(root, ALT_DIR);
   const listFile = path.join(dir, 'liste.json');
-  let old = {};
-  try { old = Object.fromEntries(JSON.parse(fs.readFileSync(listFile, 'utf8')).harfler.flatMap((h) => h.secenekler.map((s) => [s.file, s]))); } catch (_) {}
+  const prev = readAltList(root);
+  const old = Object.fromEntries([...(prev.harfler || []), ...(prev.kelimeler || [])].flatMap((h) => h.secenekler.map((s) => [s.file, s])));
   const letters = clips.filter((c) => c.kind === 'harf' && c.alts && c.alts.length);
-  const options = letters.flatMap((c) => c.alts.map((text, i) => ({ clip: c, text, file: altFile(c, i), key: sha(JSON.stringify([text, localSpeed(c)]), 12) })));
+  const words = clips.filter((c) => c.kind === 'kelime' && c.alts && c.alts.length);
+  const options = [...letters, ...words].flatMap((c) => c.alts.map((text, i) => ({ clip: c, text, file: altFile(c, i), key: sha(JSON.stringify([text, localSpeed(c)]), 12) })));
   const todo = options.filter((o) => force || !old[o.file] || old[o.file].key !== o.key || !fs.existsSync(path.join(dir, o.file)));
-  log(`Harf adı alternatifleri: ${options.length} (${letters.length} harf), üretilecek: ${todo.length}.`);
+  log(`Alternatifler: ${options.length} (${letters.length} harf, ${words.length} kelime), üretilecek: ${todo.length}.`);
   const result = Object.fromEntries(options.filter((o) => !todo.includes(o)).map((o) => [o.file, old[o.file]]));
   if (todo.length) {
     if (!hasFfmpeg()) { log('ffmpeg gerekli.'); return 1; }
@@ -529,21 +574,26 @@ async function alternatives(root, env, clips, { log = console.log, force = false
     const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'alfabe-alt-'));
     const byName = Object.fromEntries(todo.map((o, i) => ['alt' + i, o]));
     try {
-      await runLocal(root, env, todo.map((o, i) => ({ id: 'alt' + i, lang: 'de', text: o.text, out: path.join(tmp, `alt${i}.wav`), length_scale: localSpeed(o.clip) })), (r) => {
+      await runLocal(root, env, todo.map((o, i) => ({ id: 'alt' + i, lang: 'de', text: o.text, out: path.join(tmp, `alt${i}.wav`), length_scale: localSpeed(o.clip),
+        // Words: the best of several takes, like the game's clips; letter names: one take (Whisper cannot judge them).
+        expect: o.clip.kind === 'kelime' ? o.clip.text : undefined, candidates: o.clip.kind === 'kelime' ? CANDIDATES.kelime : 1 })), (r) => {
         const o = byName[r.id];
         if (!r.ok) { log(`HATA ${o.file}: ${r.error}`); return; }
         const out = path.join(dir, o.file);
         fs.mkdirSync(path.dirname(out), { recursive: true });
         encodeMp3(fs.readFileSync(path.join(tmp, r.id + '.wav')), 'wav', out);
         const bytes = fs.statSync(out).size;
-        result[o.file] = { file: o.file, text: o.text, phonemes: r.phonemes, key: o.key, audioHash: sha(fs.readFileSync(out)), bytes };
+        result[o.file] = { file: o.file, text: o.text, phonemes: r.phonemes, key: o.key, audioHash: sha(fs.readFileSync(out)), bytes,
+          ...(r.heard != null ? { heard: r.heard, score: r.score } : {}) };
       });
     } finally { fs.rmSync(tmp, { recursive: true, force: true }); }
   }
+  const entry = (c) => ({ clip: c.id, text: c.text, ...(c.ipa ? { ipa: c.ipa } : {}), secili: c.say,
+    secenekler: c.alts.map((text, i) => result[altFile(c, i)]).filter(Boolean).map((s) => ({ ...s, secili: s.text === c.say })) });
   const list = {
-    _aciklama: 'Harf adlarının yazım alternatifleri (node scripts/generate-alfabe-audio.mjs --alternatifler). Sadece tools/audio-check.html için; yayına girmez. Seçmek için data/alfabe.json → sesMetni.',
-    harfler: letters.map((c) => ({ clip: c.id, text: c.text, ipa: c.ipa, secili: c.say,
-      secenekler: c.alts.map((text, i) => result[altFile(c, i)]).filter(Boolean).map((s) => ({ ...s, secili: s.text === c.say })) }))
+    _aciklama: 'Harf adlarının ve sesAlternatifleri olan kelimelerin yazım alternatifleri (node scripts/generate-alfabe-audio.mjs --alternatifler). Sadece kontrol sayfaları için; yayına girmez. Seçmek için data/alfabe.json → sesMetni, sonra --alternatif <klip>:<sıra>.',
+    harfler: letters.map(entry),
+    kelimeler: words.map(entry)
   };
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(listFile, JSON.stringify(list, null, 2) + '\n');

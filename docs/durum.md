@@ -2,6 +2,12 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-11 · Almanca Alfabe: öğretmenin ses kontrolü uygulandı
+
+- Kontrol sonucu (sürüm da13b1d9136a): 15 harfin `sesMetni` değişti (B, C, F, G, I, K, M, N, Q, R, U, Z, Ö, Ü, ß); bunlarla birlikte S, V, W, Ä'da da seçilen alternatif çekimin kendisi oyuna alındı (`--alternatif`, 19 klip).
+- Giraffe yeniden üretildi; karşılaştırmak için üç alternatifi var (kelime alternatifleri artık destekleniyor).
+- Sırada: Giraffe ve değişen harflerin yeniden dinlenmesi (`tools/audio-check-offline.html`).
+
 ## 2026-11-10 · Almanca Alfabe: sesler ücretsiz ve yerel (Piper + Chatterbox)
 
 - Google yerine varsayılan `yerel`: Almanca Piper `de_DE-thorsten-medium` (CC0), Türkçe Chatterbox Multilingual (MIT); Whisper birkaç adaydan en iyi anlaşılanı seçiyor. Kurulum `scripts/alfabe-ses/kur.sh` / `kur.ps1`, modeller `.tts-modeller/` (git'e girmez).

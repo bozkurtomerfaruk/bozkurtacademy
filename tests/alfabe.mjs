@@ -498,7 +498,9 @@ else {
     if (width === 1280) {
       const titles = await page.$$eval('h2', (h) => h.map((x) => x.textContent));
       ok(['Harf adları', 'Çocuk kelimeleri', 'Yetişkin kelimeleri', 'Heceleme', 'Türkçe talimat'].every((t) => titles.some((x) => x.startsWith(t))), `${label}: beş grup (${titles.length})`);
-      ok(await page.locator('.letter').count() === 30 && await page.locator('.letter').first().locator('.item').count() === 4, 'harf adları alternatifleriyle yan yana (oyundaki + 3)');
+      ok(await page.locator('#g-harf ~ .list .letter').count() === 30 && await page.locator('.letter').first().locator('.item').count() === 4, 'harf adları alternatifleriyle yan yana (oyundaki + 3)');
+      const gir = page.locator('.letter', { hasText: 'die Giraffe' });
+      ok(await gir.count() === 1 && await gir.locator('input[type=radio]').count() === 4, 'kelime alternatifleri de yan yana (Giraffe: oyundaki + 3)');
       const v = page.locator('.letter', { hasText: 'Vau' });
       ok((await v.textContent()).includes('audio/alfabe/de/harf-v.mp3') && (await v.textContent()).includes('okunan metin: Fau.'), 'okunan metin ve dosya adı görünüyor');
       await v.locator('.item').first().locator('.play button').first().click();

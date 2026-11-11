@@ -67,7 +67,7 @@
     altAudio.play().catch(() => {});
   }
   function renderAlts(list) {
-    const rows = (list.harfler || []).map((h) => `<tr><th scope="row">${esc(h.text)}</th><td>${h.ipa ? esc('/' + h.ipa + '/') : ''}</td>
+    const rows = [...(list.harfler || []), ...(list.kelimeler || [])].map((h) => `<tr><th scope="row">${esc(h.text)}</th><td>${h.ipa ? esc('/' + h.ipa + '/') : ''}</td>
       <td><div class="ac-alts">${h.secenekler.map((o) => `<button type="button" class="ac-alt${o.secili ? ' is-chosen' : ''}" data-alt="${esc(o.file)}" aria-label="${esc('Dinle: ' + o.text + (o.secili ? ', seçili' : ''))}">
         <span>▶ ${esc(o.text)}${o.secili ? ' ✓ seçili' : ''}</span><small>${o.phonemes ? esc('/' + o.phonemes + '/') : ''}</small></button>`).join('')}</div></td></tr>`).join('');
     const box = document.getElementById('acAltRows');

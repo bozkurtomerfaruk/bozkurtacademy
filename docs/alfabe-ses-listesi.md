@@ -5,7 +5,7 @@ Bu dosya `node scripts/generate-alfabe-audio.mjs` ile üretilir; elle düzenleme
 Kendi kaydını aynı dosya adıyla `audio/alfabe/` altına koy, sonra `node scripts/generate-alfabe-audio.mjs --index`.
 
 - Klip: 125 (dosyası olan: 125)
-- Toplam boyut: 645.4 KB
+- Toplam boyut: 647.5 KB
 
 Okutulan metin: yerel ses üreticisine verilen metin, metinden farklıysa (`data/alfabe.json` → `sesMetni`; `[[ … ]]` fonemdir).
 Hedef IPA: harf adının doğru okunuşu. Üretilen fonemler: Piper'ın gerçekten okuduğu (Türkçe motor fonem vermez).
@@ -15,42 +15,42 @@ yerine geçmez; puanı düşük klipleri önce dinle.
 | # | Dosya | Dil | Tür | Metin | Okutulan metin | Hedef IPA | Üretilen fonemler | Makine kulağı | Durum | Boyut |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | `de/harf-a.mp3` | de | Harf adı | A |  | /aː/ | /ˈɑː./ |  | üretildi (yerel) | 2.9 KB |
-| 2 | `de/harf-b.mp3` | de | Harf adı | Be |  | /beː/ | /bˈeː./ |  | üretildi (yerel) | 3.0 KB |
-| 3 | `de/harf-c.mp3` | de | Harf adı | Zeh |  | /tseː/ | /tsˈeː./ |  | üretildi (yerel) | 3.7 KB |
+| 2 | `de/harf-b.mp3` | de | Harf adı | Be | [[ bˈeː ]] | /beː/ | /bˈeː/ |  | üretildi (yerel) | 3.2 KB |
+| 3 | `de/harf-c.mp3` | de | Harf adı | Zeh | [[ tsˈeː ]] | /tseː/ | /tsˈeː/ |  | üretildi (yerel) | 3.7 KB |
 | 4 | `de/harf-d.mp3` | de | Harf adı | De |  | /deː/ | /dˈeː./ |  | üretildi (yerel) | 3.0 KB |
 | 5 | `de/harf-e.mp3` | de | Harf adı | E |  | /eː/ | /ˈeː./ |  | üretildi (yerel) | 3.0 KB |
-| 6 | `de/harf-f.mp3` | de | Harf adı | Ef | Eff. | /ɛf/ | /ɛf./ |  | üretildi (yerel) | 2.6 KB |
-| 7 | `de/harf-g.mp3` | de | Harf adı | Ge |  | /ɡeː/ | /ɡˈeː./ |  | üretildi (yerel) | 3.2 KB |
+| 6 | `de/harf-f.mp3` | de | Harf adı | Ef | [[ ˈɛf ]] | /ɛf/ | /ˈɛf/ |  | üretildi (yerel) | 2.8 KB |
+| 7 | `de/harf-g.mp3` | de | Harf adı | Ge | Geh. | /ɡeː/ | /ɡˈeː./ |  | üretildi (yerel) | 2.9 KB |
 | 8 | `de/harf-h.mp3` | de | Harf adı | Ha |  | /haː/ | /hˈɑː./ |  | üretildi (yerel) | 3.2 KB |
-| 9 | `de/harf-i.mp3` | de | Harf adı | I |  | /iː/ | /ˈiː/ |  | üretildi (yerel) | 3.0 KB |
+| 9 | `de/harf-i.mp3` | de | Harf adı | I | Ih. | /iː/ | /ˈiː./ |  | üretildi (yerel) | 3.3 KB |
 | 10 | `de/harf-j.mp3` | de | Harf adı | Jot | Jott. | /jɔt/ | /jˈɔt./ |  | üretildi (yerel) | 3.5 KB |
-| 11 | `de/harf-k.mp3` | de | Harf adı | Ka |  | /kaː/ | /kˈɑː./ |  | üretildi (yerel) | 3.0 KB |
+| 11 | `de/harf-k.mp3` | de | Harf adı | Ka | Kah. | /kaː/ | /kˈɑː./ |  | üretildi (yerel) | 3.2 KB |
 | 12 | `de/harf-l.mp3` | de | Harf adı | El | Ell. | /ɛl/ | /ˈɛl./ |  | üretildi (yerel) | 3.3 KB |
-| 13 | `de/harf-m.mp3` | de | Harf adı | Em | Emm. | /ɛm/ | /ˈɛm./ |  | üretildi (yerel) | 3.2 KB |
-| 14 | `de/harf-n.mp3` | de | Harf adı | En | Enn. | /ɛn/ | /ˈɛn./ |  | üretildi (yerel) | 3.2 KB |
+| 13 | `de/harf-m.mp3` | de | Harf adı | Em | [[ ˈɛm ]] | /ɛm/ | /ˈɛm/ |  | üretildi (yerel) | 3.5 KB |
+| 14 | `de/harf-n.mp3` | de | Harf adı | En | [[ ˈɛn ]] | /ɛn/ | /ˈɛn/ |  | üretildi (yerel) | 3.7 KB |
 | 15 | `de/harf-o.mp3` | de | Harf adı | O |  | /oː/ | /ˈoː./ |  | üretildi (yerel) | 3.2 KB |
 | 16 | `de/harf-p.mp3` | de | Harf adı | Pe |  | /peː/ | /pˈeː./ |  | üretildi (yerel) | 3.5 KB |
-| 17 | `de/harf-q.mp3` | de | Harf adı | Kuh |  | /kuː/ | /kˈuː./ |  | üretildi (yerel) | 3.5 KB |
-| 18 | `de/harf-r.mp3` | de | Harf adı | Er | Err. | /ɛʁ/ | /ˈɛɾ./ |  | üretildi (yerel) | 2.9 KB |
+| 17 | `de/harf-q.mp3` | de | Harf adı | Kuh | Ku. | /kuː/ | /kˈuː./ |  | üretildi (yerel) | 3.6 KB |
+| 18 | `de/harf-r.mp3` | de | Harf adı | Er | [[ ˈɛɾ ]] | /ɛʁ/ | /ˈɛɾ/ |  | üretildi (yerel) | 3.2 KB |
 | 19 | `de/harf-s.mp3` | de | Harf adı | Es | Ess. | /ɛs/ | /ˈɛs./ |  | üretildi (yerel) | 3.5 KB |
 | 20 | `de/harf-t.mp3` | de | Harf adı | Te |  | /teː/ | /tˈeː./ |  | üretildi (yerel) | 3.5 KB |
-| 21 | `de/harf-u.mp3` | de | Harf adı | U |  | /uː/ | /ˈuː./ |  | üretildi (yerel) | 3.0 KB |
-| 22 | `de/harf-v.mp3` | de | Harf adı | Vau | Fau. | /faʊ/ | /fˈaʊ./ |  | üretildi (yerel) | 3.6 KB |
+| 21 | `de/harf-u.mp3` | de | Harf adı | U | Uh. | /uː/ | /ˈuː./ |  | üretildi (yerel) | 3.3 KB |
+| 22 | `de/harf-v.mp3` | de | Harf adı | Vau | Fau. | /faʊ/ | /fˈaʊ./ |  | üretildi (yerel) | 3.5 KB |
 | 23 | `de/harf-w.mp3` | de | Harf adı | We |  | /veː/ | /vˈeː./ |  | üretildi (yerel) | 3.2 KB |
 | 24 | `de/harf-x.mp3` | de | Harf adı | Ix |  | /ɪks/ | /ˈɪks./ |  | üretildi (yerel) | 3.5 KB |
 | 25 | `de/harf-y.mp3` | de | Harf adı | Ypsilon | [[ ˈʏpsilɔn ]] | /ˈʏpsilɔn/ | /ˈʏpsilɔn/ |  | üretildi (yerel) | 5.0 KB |
-| 26 | `de/harf-z.mp3` | de | Harf adı | Zett |  | /tsɛt/ | /tsˈɛt./ |  | üretildi (yerel) | 3.6 KB |
+| 26 | `de/harf-z.mp3` | de | Harf adı | Zett | [[ tsˈɛt ]] | /tsɛt/ | /tsˈɛt/ |  | üretildi (yerel) | 3.5 KB |
 | 27 | `de/harf-ae.mp3` | de | Harf adı | Ä |  | /ɛː/ | /ˈɛː./ |  | üretildi (yerel) | 3.0 KB |
-| 28 | `de/harf-oe.mp3` | de | Harf adı | Ö |  | /øː/ | /ˈøː./ |  | üretildi (yerel) | 3.2 KB |
-| 29 | `de/harf-ue.mp3` | de | Harf adı | Ü |  | /yː/ | /ˈyː./ |  | üretildi (yerel) | 3.2 KB |
-| 30 | `de/harf-eszett.mp3` | de | Harf adı | Eszett |  | /ɛsˈtsɛt/ | /ɛstsˈɛt./ |  | üretildi (yerel) | 4.3 KB |
+| 28 | `de/harf-oe.mp3` | de | Harf adı | Ö | [[ ˈøː ]] | /øː/ | /ˈøː/ |  | üretildi (yerel) | 3.0 KB |
+| 29 | `de/harf-ue.mp3` | de | Harf adı | Ü | Üh. | /yː/ | /ˈyː./ |  | üretildi (yerel) | 3.5 KB |
+| 30 | `de/harf-eszett.mp3` | de | Harf adı | Eszett | Es-zett. | /ɛsˈtsɛt/ | /ɛstsˈɛt./ |  | üretildi (yerel) | 4.5 KB |
 | 31 | `de/kelime-der-apfel.mp3` | de | Kelime | der Apfel |  |  | /dɛɾ ˈapfəl./ | der Apfel (1) | üretildi (yerel) | 4.6 KB |
 | 32 | `de/kelime-die-banane.mp3` | de | Kelime | die Banane |  |  | /diː banˈɑːnə./ | die Banane (1) | üretildi (yerel) | 5.3 KB |
 | 33 | `de/kelime-der-computer.mp3` | de | Kelime | der Computer |  |  | /dɛɾ kɔmpjˈuːtɜ./ | der Computer (1) | üretildi (yerel) | 5.4 KB |
 | 34 | `de/kelime-der-delfin.mp3` | de | Kelime | der Delfin | der [[ dɛlfˈiːn ]]. |  | /dɛɾ dɛlfˈiːn/ | Der Delfin (1) | üretildi (yerel) | 5.7 KB |
 | 35 | `de/kelime-die-ente.mp3` | de | Kelime | die Ente |  |  | /diː ˈɛntə./ | Die Ente. (1) | üretildi (yerel) | 4.3 KB |
 | 36 | `de/kelime-der-fisch.mp3` | de | Kelime | der Fisch |  |  | /dɛɾ fˈɪʃ./ | der Fisch (1) | üretildi (yerel) | 4.6 KB |
-| 37 | `de/kelime-die-giraffe.mp3` | de | Kelime | die Giraffe | die [[ ʒirˈafə ]]. |  | /diː ʒirˈafə/ | Die Giraffe (1) | üretildi (yerel) | 5.2 KB |
+| 37 | `de/kelime-die-giraffe.mp3` | de | Kelime | die Giraffe | die [[ ʒirˈafə ]]. |  | /diː ʒirˈafə/ | die Giraffe. (1) | üretildi (yerel) | 5.3 KB |
 | 38 | `de/kelime-der-hund.mp3` | de | Kelime | der Hund |  |  | /dɛɾ hˈʊnt./ | Der Hund (1) | üretildi (yerel) | 4.3 KB |
 | 39 | `de/kelime-der-igel.mp3` | de | Kelime | der Igel |  |  | /dɛɾ ˈiːɡəl./ | der Igel (1) | üretildi (yerel) | 4.5 KB |
 | 40 | `de/kelime-die-jacke.mp3` | de | Kelime | die Jacke |  |  | /diː jˈakə./ | Die Jacke (1) | üretildi (yerel) | 4.5 KB |

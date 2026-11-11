@@ -263,3 +263,30 @@ test('alternatifler: her harfin yazımları ayrı dosyalarda, seçili işaretli;
   assert.ok(!fs.existsSync(path.join(root, 'scripts/alfabe-ses/yerel_tts.py.req.json')));
   assert.ok(localSpeed(by['harf-v']) > localSpeed(by['kelime-der-vogel']));
 });
+
+test('--alternatif: kontrolde seçilen alternatif dosya oyuna alınır (aynı çekim); metin uyuşmazsa reddedilir', { skip: !FFMPEG && 'ffmpeg yok' }, async () => {
+  const root = localRepo();
+  const env = { ALFABE_PYTHON: PY };
+  assert.equal(await run(['--alternatifler'], { root, env, log: quiet }), 0);
+  const lines = [];
+  assert.equal(await run(['--alternatif', 'harf-v:2'], { root, env, log: (l) => lines.push(l) }), 1, 'sesMetni henüz alternatif 2 değil');
+  assert.ok(lines.some((l) => /Önce data\/alfabe\.json → sesMetni "\[\[ fˈaʊ \]\]" yap/.test(l)));
+  const dataFile = path.join(root, 'data/alfabe.json');
+  const data = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
+  data.harfler.find((l) => l.id === 'V').sesMetni = '[[ fˈaʊ ]]';
+  fs.writeFileSync(dataFile, JSON.stringify(data));
+  assert.equal(await run(['--alternatif', 'harf-v:2,harf-w:1'], { root, env, log: quiet }), 0);
+  assert.deepEqual(fs.readFileSync(path.join(root, 'audio/alfabe/de/harf-v.mp3')), fs.readFileSync(path.join(root, 'tools/audio-alternatifler/de/harf-v--2.mp3')));
+  const m = readManifest(path.join(root, 'audio/alfabe'));
+  assert.equal(m.clips['harf-v'].source, 'yerel', 'üretilmiş sayılır, "kendi kaydın" değil');
+  assert.equal(m.clips['harf-v'].alternative, 2);
+  assert.equal(m.clips['harf-v'].say, '[[ fˈaʊ ]]');
+  assert.equal(m.clips['harf-v'].stale, undefined);
+  const list = JSON.parse(fs.readFileSync(path.join(root, 'tools/audio-alternatifler/liste.json'), 'utf8'));
+  assert.deepEqual(list.harfler.find((h) => h.clip === 'harf-v').secenekler.map((o) => o.secili), [false, true, false], 'seçili alternatif güncellendi');
+  // Nothing left to generate for V: the adopted take stays.
+  fs.rmSync(path.join(root, 'scripts/alfabe-ses/yerel_tts.py.req.json'), { force: true });
+  assert.equal(await run(['--only', 'harf-v'], { root, env, log: quiet }), 0);
+  assert.ok(!fs.existsSync(path.join(root, 'scripts/alfabe-ses/yerel_tts.py.req.json')), 'alınan çekim yeniden üretilmez');
+  assert.equal(await run(['--alternatif', 'harf-v:9'], { root, env, log: quiet }), 1, 'olmayan alternatif');
+});

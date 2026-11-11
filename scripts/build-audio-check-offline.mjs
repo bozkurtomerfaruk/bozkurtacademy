@@ -21,7 +21,10 @@ export function collect(root = REPO) {
   const b64 = (file) => (fs.existsSync(file) ? fs.readFileSync(file).toString('base64') : null);
   let alts = { harfler: [] };
   try { alts = JSON.parse(fs.readFileSync(path.join(root, ALT_DIR, 'liste.json'), 'utf8')); } catch (_) {}
-  const altBy = Object.fromEntries((alts.harfler || []).map((h) => [h.clip, h]));
+  const altBy = Object.fromEntries([...(alts.harfler || []), ...(alts.kelimeler || [])].map((h) => [h.clip, h]));
+  const options = (c) => (altBy[c.id]?.secenekler || []).map((o) => ({
+    id: `${c.id}--alt--${o.file}`, file: `${ALT_DIR}/${o.file}`, say: o.text, phonemes: o.phonemes || '', chosen: o.text === c.say,
+    heard: o.heard ?? null, score: o.score ?? null, audio: b64(path.join(root, ALT_DIR, o.file)) }));
   const item = (c) => {
     const e = manifest.clips[c.id];
     return { id: c.id, file: `${AUDIO_DIR}/${c.file}`, text: c.text, say: c.say || c.text, heard: e?.heard ?? null, score: e?.score ?? null,
@@ -29,19 +32,15 @@ export function collect(root = REPO) {
   };
   const groups = [
     { id: 'harf', title: 'Harf adları', note: 'Oyundaki klip ve denenen yazımlar yan yana. "Seçtiğim" ile hangisinin oyunda kalmasını istediğini işaretle.' },
-    { id: 'cocuk', title: 'Çocuk kelimeleri', note: 'Çocuk modundaki örnek kelimeler, artikeliyle.' },
+    { id: 'cocuk', title: 'Çocuk kelimeleri', note: 'Çocuk modundaki örnek kelimeler, artikeliyle. Alternatifi olan kelimelerde (Giraffe) "Seçtiğim" ile birini seç.' },
     { id: 'yetiskin', title: 'Yetişkin kelimeleri', note: 'Yetişkin modundaki örnek kelimeler, artikeliyle.' },
     { id: 'heceleme', title: 'Heceleme', note: 'İşaretler, senaryo soruları ve cevapları. "Diziyi çal" oyundaki gibi harf harf, aralarında duraklamayla çalar.' },
     { id: 'tr', title: 'Türkçe talimat ve geri bildirimler', note: 'Çocuk modunda okunan Türkçe cümleler ve "Richtig!".' }
   ];
   const items = { harf: [], cocuk: [], yetiskin: [], heceleme: [], tr: [] };
   for (const c of clips) {
-    if (c.kind === 'harf') {
-      const h = altBy[c.id];
-      items.harf.push({ ...item(c), ipa: c.ipa, options: (h?.secenekler || []).map((o) => ({
-        id: `${c.id}--alt--${o.file}`, file: `${ALT_DIR}/${o.file}`, say: o.text, phonemes: o.phonemes || '', chosen: o.text === c.say,
-        audio: b64(path.join(root, ALT_DIR, o.file)) })) });
-    } else if (c.kind === 'kelime') items[c.profile === 'yetiskin' ? 'yetiskin' : 'cocuk'].push(item(c));
+    if (c.kind === 'harf') items.harf.push({ ...item(c), ipa: c.ipa, options: options(c) });
+    else if (c.kind === 'kelime') items[c.profile === 'yetiskin' ? 'yetiskin' : 'cocuk'].push({ ...item(c), options: options(c) });
     else if (['isaret', 'soru', 'cevap'].includes(c.kind)) items.heceleme.push({ ...item(c), kind: c.kind });
     else items.tr.push(item(c));
   }
@@ -213,9 +212,9 @@ footer.out textarea{width:100%;min-height:200px;margin-top:10px;padding:8px;bord
   for (const g of D.groups) {
     const sec = el('section', { 'aria-labelledby': 'g-' + g.id }, el('h2', { id: 'g-' + g.id, text: g.title + ' (' + (g.items.length + g.items.reduce((n, i) => n + (i.options ? i.options.length : 0), 0)) + ')' }), el('p', { class: 'note', text: g.note }));
     const list = el('div', { class: 'list' });
-    if (g.id === 'harf') {
-      for (const it of g.items) {
-        const box = el('div', { class: 'letter' }, el('h3', { text: it.text + ' ' }, el('span', { text: 'hedef okunuş /' + (it.ipa || '') + '/' })));
+    // A clip with alternatives (letter names, some words): the game's clip and the alternatives side by side, "Seçtiğim".
+    const choiceBox = (it) => {
+        const box = el('div', { class: 'letter' }, el('h3', { text: it.text + ' ' }, it.ipa ? el('span', { text: 'hedef okunuş /' + it.ipa + '/' }) : null));
         const inner = el('div', { class: 'list' });
         const name = 'pick-' + it.id;
         const pick = (id, label) => {
@@ -226,10 +225,10 @@ footer.out textarea{width:100%;min-height:200px;margin-top:10px;padding:8px;bord
         inner.append(judgeRow({ ...it, label: 'Oyundaki: ' + it.say }, pick('oyun', 'Seçtiğim')));
         it.options.forEach((o, k) => inner.append(judgeRow({ ...o, text: it.text, label: 'Alternatif ' + (k + 1) + ': ' + o.say + (o.chosen ? ' (oyundakiyle aynı yazım)' : ''), letter: it.text }, pick(o.id, 'Seçtiğim'))));
         box.append(inner);
-        list.append(box);
-      }
-    } else {
-      for (const it of g.items) list.append(judgeRow({ ...it, lang: g.id === 'tr' && it.id !== 'richtig' ? 'tr' : 'de' }));
+        return box;
+    };
+    {
+      for (const it of g.items) list.append(it.options && it.options.length ? choiceBox(it) : judgeRow({ ...it, lang: g.id === 'tr' && it.id !== 'richtig' ? 'tr' : 'de' }));
       if (g.id === 'heceleme') {
         for (const sq of D.sequences) {
           list.append(judgeRow({ id: 'dizi-' + sq.answer, file: 'harf klipleri sırayla: ' + sq.clips.join(', '), text: 'Heceleme dizisi: ' + sq.answer,
@@ -252,9 +251,9 @@ footer.out textarea{width:100%;min-height:200px;margin-top:10px;padding:8px;bord
     const line = (it, s) => '- ' + it.file + ' · “' + (it.label || it.text) + '”' + (s && s.n ? ' · not: ' + s.n.trim() : '');
     const bad = all.filter((it) => state[it.id] && state[it.id].v === 'kotu');
     lines.push('KÖTÜ (' + bad.length + '):', ...(bad.length ? bad.map((it) => line(it, state[it.id])) : ['- yok']), '');
-    const letters = D.groups.find((g) => g.id === 'harf').items;
-    const picks = letters.filter((it) => state[it.id] && state[it.id].pick);
-    lines.push('HARF SEÇİMLERİ (' + picks.length + '):');
+    const choosable = D.groups.flatMap((g) => g.items).filter((it) => it.options && it.options.length);
+    const picks = choosable.filter((it) => state[it.id] && state[it.id].pick);
+    lines.push('SEÇİMLER (harf adları ve alternatifli kelimeler, ' + picks.length + '):');
     for (const it of picks) {
       const p = state[it.id].pick;
       if (p === 'oyun') lines.push('- ' + it.text + ': oyundaki kalsın (' + it.say + ')');

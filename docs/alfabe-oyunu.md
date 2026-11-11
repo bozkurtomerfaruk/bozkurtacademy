@@ -146,7 +146,15 @@ node scripts/generate-alfabe-audio.mjs --alternatifler
 ```
 
 Bu, `tools/audio-alternatifler/` klasörüne yazar (yayına girmez) ve `tools/audio-check.html`'in en üstünde "Harf
-adları: yazım alternatifleri" bölümü çıkar. Başka bir yazımı seçmek için onu `sesMetni`'ne yaz ve üretimi çalıştır.
+adları: yazım alternatifleri" bölümü çıkar. Başka bir yazımı seçmek için onu `sesMetni`'ne yaz, sonra dinlediğin
+çekimin kendisini oyuna al (yeniden üretmek başka bir çekim verir):
+
+```bash
+node scripts/generate-alfabe-audio.mjs --alternatif harf-b:3,harf-s:1
+```
+
+`harf-b:3` = B'nin 3. alternatifi. Kelimelere de `sesAlternatifleri` eklenebilir (ör. Giraffe); onlar da aynı yolla
+seçilir.
 
 **Dinleme:** `python3 -m http.server 8765` açıkken `http://localhost:8765/tools/audio-check.html`.
 **Çevrimdışı kontrol dosyası:** `tools/audio-check-offline.html` bütün klipleri (alternatifler dahil) base64 olarak

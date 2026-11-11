@@ -413,7 +413,7 @@
     ['cocuk', 'yetiskin'].forEach(function (p) {
       data.harfler.forEach(function (l) {
         var ex = l[p], text = ex.artikel + ' ' + ex.kelime;
-        add({ id: audioId.word(ex), lang: 'de', kind: 'kelime', text: text, say: ex.sesMetni || text + '.', ssml: xml(text), tone: 'notr', profile: p });
+        add({ id: audioId.word(ex), lang: 'de', kind: 'kelime', text: text, say: ex.sesMetni || text + '.', alts: ex.sesAlternatifleri || [], ssml: xml(text), tone: 'notr', profile: p });
       });
     });
     Object.keys(data.isaretler || {}).forEach(function (ch) {

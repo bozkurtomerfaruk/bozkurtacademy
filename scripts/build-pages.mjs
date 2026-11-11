@@ -307,7 +307,9 @@ outputs.push([path.join(root, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF
       if (skip.has(entry.name)) continue;
       const full = path.join(dir, entry.name);
       if (entry.isDirectory()) walk(full);
-      else if (entry.name.endsWith('.html') && !/^google[0-9a-f]+\.html$/.test(entry.name)) {
+      // tools/audio-check-offline.html: a downloaded, offline review file (scripts/build-audio-check-offline.mjs), never
+      // published (_config.yml → exclude: tools). It has its own strict CSP (no network at all) and inline code by design.
+      else if (entry.name.endsWith('.html') && !/^google[0-9a-f]+\.html$/.test(entry.name) && path.relative(root, full) !== path.join('tools', 'audio-check-offline.html')) {
         const html = produced.get(full) ?? fs.readFileSync(full, 'utf8');
         if (!html.includes('<!-- ba:security -->') || !html.includes('http-equiv="Content-Security-Policy"')) missing.push(path.relative(root, full));
         if (/<script(?![^>]*\bsrc=)(?![^>]*type="application\/ld\+json")[^>]*>/.test(html) || /\son[a-z]+="/.test(html)) missing.push(path.relative(root, full) + ' (satır içi betik veya on…= niteliği)');

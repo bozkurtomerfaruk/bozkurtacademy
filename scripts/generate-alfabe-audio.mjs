@@ -371,6 +371,13 @@ export async function run(argv, { root = REPO, fetchImpl = globalThis.fetch, env
     fs.writeFileSync(path.join(dir, 'manifest.json'), manifestText(manifest));
     fs.writeFileSync(path.join(root, TABLE_FILE), tableText(clips, manifest));
   };
+  // The offline review page (tools/audio-check-offline.html) carries the clips: rebuilt after every change.
+  const refreshOffline = async () => {
+    if (!fs.existsSync(path.join(root, 'scripts/build-audio-check-offline.mjs'))) return;
+    const { pageText, OFFLINE_FILE } = await import(pathToFileURL(path.join(root, 'scripts/build-audio-check-offline.mjs')).href);
+    fs.writeFileSync(path.join(root, OFFLINE_FILE), pageText(root));
+    log(`Yenilendi: ${OFFLINE_FILE}`);
+  };
   const report = () => {
     const total = Object.values(manifest.clips).reduce((n, e) => n + e.bytes, 0);
     const have = Object.values(manifest.clips).filter((e) => !e.stale).length;
@@ -392,9 +399,9 @@ export async function run(argv, { root = REPO, fetchImpl = globalThis.fetch, env
   }
   if (notes.own.length) log(`Kendi kaydın olarak eklendi: ${notes.own.join(', ')}`);
 
-  if (o.index) { write(); report(); return 0; }
+  if (o.index) { write(); await refreshOffline(); report(); return 0; }
   if (o.models) { await downloadModels(root, env, { fetchImpl, log }); return 0; }
-  if (o.alternatives) return alternatives(root, env, clips, { log, force: o.force });
+  if (o.alternatives) { const code = await alternatives(root, env, clips, { log, force: o.force }); await refreshOffline(); return code; }
 
   const env2 = env;
   if (o.voices) {
@@ -443,6 +450,7 @@ export async function run(argv, { root = REPO, fetchImpl = globalThis.fetch, env
       ({ manifest, notes } = indexAudio(dir, clips, manifest));
       write();
     }
+    await refreshOffline();
     log(`Üretildi: ${made} klip${failed ? `, hata: ${failed}` : ''}.`);
     report();
     return failed ? 1 : 0;
@@ -495,6 +503,7 @@ export async function run(argv, { root = REPO, fetchImpl = globalThis.fetch, env
   }
   ({ manifest, notes } = indexAudio(dir, clips, manifest));
   write();
+  await refreshOffline();
   log(`Üretildi: ${made} klip.`);
   report();
   return 0;

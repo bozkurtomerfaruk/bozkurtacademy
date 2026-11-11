@@ -18,6 +18,7 @@ Türkçe konuşanlara Almanca alfabeyi öğreten oyun. Hesap gerekmez; alıştı
 | `scripts/generate-alfabe-audio.mjs` | Ses dosyalarını üretir; liste `audio/alfabe/manifest.json`, tablo `docs/alfabe-ses-listesi.md`. Testleri `tests/alfabe-ses.test.mjs`. |
 | `scripts/alfabe-ses/` | Yerel ses üretimi: `yerel_tts.py` (Piper, Chatterbox, Whisper), kurulum `kur.sh` / `kur.ps1`. |
 | `tools/audio-check.html` | Bütün klipleri dinleme sayfası (yayına girmez). |
+| `tools/audio-check-offline.html` | Aynısının tek dosyalık, sunucusuz sürümü: İyi/Kötü, not, harf seçimi, sonuçları kopyalama (`scripts/build-audio-check-offline.mjs`). |
 | `js/account/alfabe-sync.js` | Giriş yapmış onaylı öğrencinin ilerlemesini hesaba yazar (`users/{uid}/progress/alfabe`). |
 | `tests/alfabe-account.mjs` | Hesap tarafı testi (`npm run test:alfabe-account`, Firebase Emulator). |
 
@@ -148,6 +149,11 @@ Bu, `tools/audio-alternatifler/` klasörüne yazar (yayına girmez) ve `tools/au
 adları: yazım alternatifleri" bölümü çıkar. Başka bir yazımı seçmek için onu `sesMetni`'ne yaz ve üretimi çalıştır.
 
 **Dinleme:** `python3 -m http.server 8765` açıkken `http://localhost:8765/tools/audio-check.html`.
+**Çevrimdışı kontrol dosyası:** `tools/audio-check-offline.html` bütün klipleri (alternatifler dahil) base64 olarak
+içinde taşır; indirip çift tıklayınca sunucusuz açılır. Her klip için İyi/Kötü ve not, harf adlarında "Seçtiğim";
+en altta "Sonuçları kopyala" düz metin özet verir. İşaretler o tarayıcıda saklanır. Ses üretimi (`--index`,
+`--alternatifler` dahil) dosyayı kendisi yeniler; elle: `node scripts/build-audio-check-offline.mjs` (CI `--check`).
+Yayına girmez (`tools/`).
 Sonra `audio/alfabe/`, `manifest.json` ve `docs/alfabe-ses-listesi.md` dosyalarını commit et.
 
 ### Kendi kaydınla değiştirme

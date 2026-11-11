@@ -438,7 +438,9 @@ else {
     const lastName = spelled[spelled.length - 1];
     const lastLetter = byName[lastName];
     const lastFile = lastLetter ? clips.find((c) => c.kind === 'harf' && c.text === (lastLetter.soyle || lastLetter.ad)).file : clips.find((c) => c.kind === 'isaret' && c.text === lastName).file;
-    await page.waitForFunction((f) => window.__played.some((x) => x.file === f), lastFile, { timeout: 15000 }).catch(() => {});
+    // Wait for every clip (question + letters): the last letter can also occur earlier in the word (Gartenstraße).
+    const expected = spelled.length + (await page.locator('.ab-scene').count());
+    await page.waitForFunction((n) => window.__played.length >= n, expected, { timeout: 20000 }).catch(() => {});
     await page.waitForTimeout(300);
     const times = await page.evaluate(() => window.__played.map((x) => x.t));
     const files = await played(page);
@@ -471,6 +473,68 @@ else {
     await ctx.close();
   }
   ok(/^exclude:\s*\n(\s*-.*\n)*\s*-\s*tools\s*$/m.test(fs.readFileSync('_config.yml', 'utf8')), 'tools/ yayına girmiyor (_config.yml exclude)');
+}
+
+// 3c. tools/audio-check-offline.html, opened from disk (file://): every clip inside, judging, notes, letter choice,
+// "Sonuçları kopyala"; no network at all; phone width and dark mode.
+{
+  const offline = 'file://' + path.resolve('tools/audio-check-offline.html');
+  for (const [width, scheme] of [[1280, 'light'], [375, 'dark']]) {
+    const ctx = await browser.newContext({ viewport: { width, height: 900 }, colorScheme: scheme });
+    const net = [];
+    await ctx.route('**/*', (r) => { const u = r.request().url(); if (!u.startsWith('file:') && !u.startsWith('data:')) net.push(u); return u.startsWith('file:') || u.startsWith('data:') ? r.continue() : r.abort(); });
+    await ctx.addInitScript(() => {
+      window.__played = [];
+      const pl = HTMLMediaElement.prototype.play;
+      HTMLMediaElement.prototype.play = function () { const a = this; window.__played.push(a.src.slice(0, 30)); const r = pl.call(this); a.addEventListener('ended', () => window.__played.push('ended'), { once: true }); return r; };
+    });
+    const page = await ctx.newPage();
+    const errs = [];
+    page.on('pageerror', (e) => errs.push(e.message));
+    page.on('console', (m) => { if (m.type() === 'error') errs.push(m.text()); });
+    await page.goto(offline);
+    await page.waitForSelector('.item');
+    const label = `çevrimdışı ${width}px ${scheme}`;
+    if (width === 1280) {
+      const titles = await page.$$eval('h2', (h) => h.map((x) => x.textContent));
+      ok(['Harf adları', 'Çocuk kelimeleri', 'Yetişkin kelimeleri', 'Heceleme', 'Türkçe talimat'].every((t) => titles.some((x) => x.startsWith(t))), `${label}: beş grup (${titles.length})`);
+      ok(await page.locator('.letter').count() === 30 && await page.locator('.letter').first().locator('.item').count() === 4, 'harf adları alternatifleriyle yan yana (oyundaki + 3)');
+      const v = page.locator('.letter', { hasText: 'Vau' });
+      ok((await v.textContent()).includes('audio/alfabe/de/harf-v.mp3') && (await v.textContent()).includes('okunan metin: Fau.'), 'okunan metin ve dosya adı görünüyor');
+      await v.locator('.item').first().locator('.play button').first().click();
+      ok(await page.waitForFunction(() => window.__played.includes('ended'), null, { timeout: 5000 }).then(() => true, () => false), 'gömülü ses çalıyor (data:audio/mpeg)');
+      ok((await page.evaluate(() => window.__played[0])).startsWith('data:audio/mpeg;base64,'), 'ses dosyanın içinden');
+      // Bad + note on the game's V, choose alternative 2 ([[ fˈaʊ ]]), good on a Turkish clip, a note without judgement.
+      await v.locator('.item').first().locator('button.b').click();
+      await v.locator('.item').first().locator('textarea').fill('çok kısa, "fau" daha uzun olsun');
+      await v.locator('.item').nth(2).locator('input[type=radio]').check();
+      const tr = page.locator('.item', { hasText: 'tr/aferin.mp3' });
+      await tr.locator('button.g').click();
+      await page.locator('.item', { hasText: 'de/kelime-der-vogel.mp3' }).locator('textarea').fill('iyi ama biraz hızlı');
+      // A spelling sequence plays several clips in a row.
+      await page.evaluate(() => { window.__played.length = 0; });
+      await page.locator('.item', { hasText: 'Heceleme dizisi: Jana' }).locator('.play button').click();
+      ok(await page.waitForFunction(() => window.__played.filter((x) => x === 'ended').length >= 4, null, { timeout: 8000 }).then(() => true, () => false), 'heceleme dizisi harf harf çalıyor (Jana: 4 harf)');
+      await page.reload(); await page.waitForSelector('.item');
+      ok(await page.locator('.letter', { hasText: 'Vau' }).locator('.item').first().evaluate((e) => e.classList.contains('is-bad')), 'işaretler yeniden açınca duruyor');
+      await page.click('#copy');
+      const out = await page.inputValue('#out');
+      ok(/KÖTÜ \(1\):\n- audio\/alfabe\/de\/harf-v\.mp3 · “Oyundaki: Fau\.” · not: çok kısa/.test(out), 'sonuç: kötü işaretlenen ve notu');
+      ok(/- Vau: \[\[ fˈaʊ \]\] \(tools\/audio-alternatifler\/de\/harf-v--2\.mp3\) ← DEĞİŞTİR/.test(out), 'sonuç: seçilen harf alternatifi');
+      ok(/NOTLAR .*\n- audio\/alfabe\/de\/kelime-der-vogel\.mp3 .*iyi ama biraz hızlı/.test(out), 'sonuç: diğer notlar');
+      ok(/iyi 1 · kötü 1/.test(out), 'sonuç: özet sayıları');
+      ok(await page.waitForFunction(() => document.getElementById('copied').textContent.length > 0, null, { timeout: 4000 }).then(() => true, () => false), '"Sonuçları kopyala" geri bildirim veriyor');
+      await page.screenshot({ path: path.join(shotDir, 'offline-1280.png') });
+    } else {
+      ok(await overflow(page) <= 0, `${label}: yatay kaydırma yok`);
+      const bg = await page.evaluate(() => getComputedStyle(document.body).backgroundColor);
+      ok(bg === 'rgb(22, 26, 20)', `${label}: koyu tema (${bg})`);
+      await page.screenshot({ path: path.join(shotDir, 'offline-375-dark.png') });
+    }
+    ok(net.length === 0, `${label}: dışarıya istek yok ${net.slice(0, 2)}`);
+    ok(errs.length === 0, `${label}: hata yok ${errs.slice(0, 2)}`);
+    await ctx.close();
+  }
 }
 
 // 4. Storage blocked: the game opens and plays, nothing breaks.

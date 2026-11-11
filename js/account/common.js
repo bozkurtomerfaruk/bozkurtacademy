@@ -170,6 +170,8 @@ const LEVEL_EXAM_NAMES = {
   exercise: (level) => ({ tr: `${level} seviye sonu sınavı`, de: `Abschlusstest ${level}`, en: `${level} end-of-level test` })
 };
 export const levelExamTopic = (lang = 'tr') => localize(LEVEL_EXAM_NAMES.topic, lang);
+const SINAV_TOPIC = { tr: 'Sınav hazırlığı', de: 'Prüfungsvorbereitung', en: 'Exam preparation' };
+export const sinavTopic = (lang = 'tr') => localize(SINAV_TOPIC, lang);
 
 // "perfekt:2,akkusativ:1" → "Perfekt 2, Akkusativ 1" (konu adları katalogdan).
 export async function topicErrorsText(levelId, value, lang = 'tr'){
@@ -184,7 +186,7 @@ export async function topicErrorsText(levelId, value, lang = 'tr'){
 // Schreiben (sınav hazırlığı): yazma görevleri js/examsData.js'teki "schreiben" bölümlerinden okunur.
 // Ödevde konu "schreiben", alıştırma "goethe-b1-1-set-1" (sınav-seviye-teil-set); metinler users/{uid}/writings'te.
 export const WRITING = 'schreiben';
-const EXAMS_DATA = 'js/examsData.js?v=18'; // index.html'deki sürümle aynı tutulmalı
+const EXAMS_DATA = 'js/examsData.js?v=19'; // index.html'deki sürümle aynı tutulmalı
 let examsData = null;
 export function loadExamsData(){
   examsData ||= new Promise((resolve, reject) => {
@@ -204,7 +206,7 @@ export async function writingTasks(){
   const list = [];
   for(const exam of data?.exams || []) for(const level of exam.levels || []) for(const section of level.sections || []){
     if(section.id !== WRITING) continue;
-    section.teile.forEach((teil, index) => (teil.exercises || []).filter((e) => e?.set).forEach((e) => {
+    section.teile.forEach((teil, index) => teil.kind === 'form' ? null : (teil.exercises || []).filter((e) => e?.set).forEach((e) => {
       const code = data.levels?.[level.id]?.code || level.id.toUpperCase();
       list.push({
         id: `${exam.id}-${level.id}-${index + 1}-${e.set}`, exam: exam.id, level: level.id, teil: index + 1, set: e.set,
@@ -216,6 +218,43 @@ export async function writingTasks(){
   return list;
 }
 export const writingId = (w) => `${w.exam}-${w.level}-${w.teil}-${w.set}`;
+
+// Sınav setleri (Lesen, Hören, Sprachbausteine, form doldurma): "Kontrol et"te sonuç results'a yazılır
+// (js/exam-task.js, js/form-task.js → session.js). Konu "sinav", seviye sınavın kendi seviye kimliği ("a1", "a2-b1",
+// "papier"), alıştırma "goethe-a1-lesen-1-set-2" (sınav-seviye-bölüm-teil-set). Hangi sorunun yanlış olduğu kaydedilmez.
+export const SINAV = 'sinav';
+const SECTION_IDS = 'hoeren|lesen|sprachbausteine|schreiben|sprechen';
+const SINAV_RE = new RegExp(`^([a-z]+)-([a-z0-9-]+)-(${SECTION_IDS})-(\\d+)-(set-\\d+)$`);
+export const examSetId = (s) => `${s.exam}-${s.level}-${s.section}-${s.teil}-${s.set}`;
+export function parseExamSetId(id){
+  const m = SINAV_RE.exec(id || '');
+  return m ? { exam: m[1], level: m[2], section: m[3], teil: Number(m[4]), set: m[5] } : null;
+}
+// Ödev ekranındaki seviye(ler): a1 → A1; DTZ (a2-b1) → A2 ve B1; C1 ve TestDaF → C1.
+function catalogLevelsOf(levelId, code){
+  const text = String(localize(code) || levelId).toUpperCase();
+  const found = text.match(/[A-C][12]/g);
+  return found ? [...new Set(found)] : ['C1'];
+}
+// [{ id, exam, level, section, teil, set, title: 'Goethe A1 · Lesen · Teil 1 · Grüße aus dem Urlaub', levelLabel: 'A1', catalogLevels: ['A1'] }]
+export async function examSets(){
+  const data = await loadExamsData();
+  const list = [];
+  for(const exam of data?.exams || []) for(const level of exam.levels || []) for(const section of level.sections || []){
+    section.teile.forEach((teil, index) => {
+      if(section.id === WRITING && teil.kind !== 'form') return; // yazma görevleri ayrı (writingTasks)
+      for(const e of (teil.exercises || []).filter((x) => x?.set)){
+        const code = level.code || data.levels?.[level.id]?.code || level.id.toUpperCase();
+        const s = { exam: exam.id, level: level.id, section: section.id, teil: index + 1, set: e.set };
+        const sectionName = data.sections?.[section.id]?.name || section.id;
+        list.push({ ...s, id: examSetId(s), levelLabel: localize(code),
+          title: `${exam.shortName || exam.name.replace(/-Zertifikat$/, '')} ${localize(code)} · ${sectionName} · Teil ${index + 1} · ${localize(e.title)}`,
+          catalogLevels: catalogLevelsOf(level.id, code) });
+      }
+    });
+  }
+  return list;
+}
 export async function writingTitle(w){
   return (await writingTasks().catch(() => [])).find((x) => x.id === writingId(w))?.title || `${w.exam} ${w.level} · Teil ${w.teil} · ${w.set}`;
 }
@@ -236,6 +275,9 @@ export async function loadWritings(uid){
 export async function loadTopicExercises(levelId, topicId){
   if(topicId === WRITING){
     return (await writingTasks()).filter((w) => w.catalogLevel === levelId).map((w) => ({ id: w.id, title: w.title }));
+  }
+  if(topicId === SINAV){
+    return (await examSets()).filter((s) => s.catalogLevels.includes(levelId)).map((s) => ({ id: s.id, title: s.title }));
   }
   const levels = await loadCatalogLevels();
   if(topicId === LEVEL_EXAM){
@@ -279,6 +321,11 @@ export async function exerciseNames(results, lang = 'tr'){
     if(r.topic === WRITING){
       const task = (await writingTasks().catch(() => [])).find((w) => w.id === r.exercise);
       names[key] = { topic: 'Schreiben', exercise: task?.title || r.exercise };
+      continue;
+    }
+    if(r.topic === SINAV){
+      const set = (await examSets().catch(() => [])).find((s) => s.id === r.exercise);
+      names[key] = { topic: localize(SINAV_TOPIC, lang), exercise: set?.title || r.exercise, level: set?.levelLabel };
       continue;
     }
     const topic = levels.find((l) => l.id === r.level)?.topics?.find((tp) => tp.id === r.topic);
@@ -343,6 +390,10 @@ export const validHttpsUrl = (url) => {
 // Sitedeki alıştırmaya doğrudan bağlantı (js/exercise-links.js'teki adres biçimi).
 export function exerciseUrl({ level, topic, exercise }){
   if(topic === LEVEL_EXAM) return `index.html#seviye-sonu/${encodeURIComponent(level)}`;
+  if(topic === SINAV){
+    const s = parseExamSetId(exercise);
+    if(s) return `index.html#exams/${[s.exam, s.level, s.section, String(s.teil), s.set].map(encodeURIComponent).join('/')}`;
+  }
   if(topic === WRITING){
     const m = /^([a-z0-9]+)-([a-z0-9]+)-(\d+)-(set-\d+)$/.exec(exercise || '');
     if(m) return writingUrl({ exam: m[1], level: m[2], teil: m[3], set: m[4] });
@@ -391,7 +442,8 @@ export function bestResultSince(results, exercise, since){
   const from = toDate(since);
   let best = null;
   for(const r of results){
-    if(r.level !== exercise.level || r.topic !== exercise.topic || r.exercise !== exercise.exercise) continue;
+    // Sınav setlerinde ödevin seviyesi katalog seviyesi (A1), sonucun seviyesi sınavın kimliği (a1): kimlik yeterli.
+    if((exercise.topic !== SINAV && r.level !== exercise.level) || r.topic !== exercise.topic || r.exercise !== exercise.exercise) continue;
     const at = toDate(r.at);
     if(from && at && at < from) continue;
     if(!best || r.score / r.total > best.score / best.total) best = r;

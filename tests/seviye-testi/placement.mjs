@@ -465,9 +465,9 @@ for(const [lang, title] of [['tr', 'Seviye tespit sınavı'], ['de', 'Einstufung
 
 // 11. Gizlilik sayfası: metnin tamamı TR/DE/EN; dil düğmesine göre tek dil görünür
 const PRIVACY = {
-  tr: { h1: 'Gizlilik politikası', title: '5a. Seviye testi', firebase: 'İki istisna var: Seviye testinin sonucunu göndermek', updated: 'Son güncelleme: 8 Kasım 2026', foreign: ['Verantwortlicher', 'Controller'], doc: 'Gizlilik politikası | Bozkurt Academy' },
-  de: { h1: 'Datenschutzerklärung', title: '5a. Einstufungstest', firebase: 'Zwei Ausnahmen: Wenn Sie nach dem Einstufungstest', updated: 'Stand: 8. November 2026', foreign: ['Sorumlu', 'Controller', 'Siteyi ziyaret'], doc: 'Datenschutzerklärung | Bozkurt Academy' },
-  en: { h1: 'Privacy policy', title: '5a. Placement test', firebase: 'There are two exceptions: when you press “Send result”', updated: 'Last updated: 8 November 2026', foreign: ['Sorumlu', 'Verantwortlicher', 'Siteyi ziyaret'], doc: 'Privacy policy | Bozkurt Academy' }
+  tr: { h1: 'Gizlilik politikası', title: '5a. Seviye testi', firebase: 'İki istisna var: Seviye testinin sonucunu göndermek', updated: 'Son güncelleme: 11 Kasım 2026', foreign: ['Verantwortlicher', 'Controller'], doc: 'Gizlilik politikası | Bozkurt Academy' },
+  de: { h1: 'Datenschutzerklärung', title: '5a. Einstufungstest', firebase: 'Zwei Ausnahmen: Wenn Sie nach dem Einstufungstest', updated: 'Stand: 11. November 2026', foreign: ['Sorumlu', 'Controller', 'Siteyi ziyaret'], doc: 'Datenschutzerklärung | Bozkurt Academy' },
+  en: { h1: 'Privacy policy', title: '5a. Placement test', firebase: 'There are two exceptions: when you press “Send result”', updated: 'Last updated: 11 November 2026', foreign: ['Sorumlu', 'Verantwortlicher', 'Siteyi ziyaret'], doc: 'Privacy policy | Bozkurt Academy' }
 };
 const visibleText = (page) => page.evaluate(() => document.querySelector('.acc-legal').innerText);
 for(const [lang, x] of Object.entries(PRIVACY)){

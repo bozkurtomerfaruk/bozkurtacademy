@@ -8,6 +8,8 @@
 // sonunda ve sayfa gizlenince hesaptaki belge yeniden okunup birleştirilerek yazılır (başka cihazdaki ilerleme kaybolmaz).
 // Yerel ilerleme başka bir hesapla eşitlenmişse ya da başka bir hesaba aitse (baAlfabe.uid farklı) bu hesaba karıştırılmaz;
 // hesaptaki alınır. Onay bekleyen hesap ve öğretmen hesabı yazmaz ama sahipsiz yerel ilerlemeyi kendi uid'leriyle işaretler.
+// Çıkışta (js/account/common.js → signedOut) yerel ilerleme silinir ve uid 'cikis-yapildi' olur: çıkıştan sonra giriş
+// yapmadan oynanan oyun hiçbir hesaba eklenmez, onay bekleyen hesap da onu sahiplenmez.
 import { auth, configured, db, fs } from './firebase.js';
 import { TEACHER_UID } from './config.js';
 

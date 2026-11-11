@@ -205,13 +205,23 @@ async function playRound(p, wrongAt = []) {
   await page.click('[data-ab-check]');
   ok((await page.textContent('[data-ab-feedback]')).includes('Richtig'), 'klavyeyle sıralama doğru');
   await page.click('[data-ab-next]'); await page.waitForSelector('[data-ab-pos]:not([disabled])');
+  // No fixed delays: measure only once the new tiles are enabled and have not moved for two animation frames
+  // (scrolling or re-rendering after "next" would otherwise make the mouse press beside the tile).
+  await page.waitForFunction(() => new Promise((resolve) => {
+    const tiles = () => [...document.querySelectorAll('[data-ab-pos]')];
+    const where = () => tiles().map((t) => { const r = t.getBoundingClientRect(); return `${r.x},${r.y},${r.width}`; }).join('|');
+    const first = where();
+    requestAnimationFrame(() => requestAnimationFrame(() => resolve(tiles().length === 5 && !tiles().some((t) => t.disabled) && where() === first)));
+  }), null, { timeout: 10000 });
   const before = await page.$$eval('[data-ab-pos]', (els) => els.map((e) => e.textContent.trim()));
-  const a0 = await page.$('[data-ab-pos="0"]'); const a3 = await page.$('[data-ab-pos="3"]');
-  const b0 = await a0.boundingBox(); const b3 = await a3.boundingBox();
+  const want = [before[1], before[2], before[3], before[0], before[4]].join();
+  const b0 = await page.locator('[data-ab-pos="0"]').boundingBox(); const b3 = await page.locator('[data-ab-pos="3"]').boundingBox();
   await page.mouse.move(b0.x + b0.width / 2, b0.y + b0.height / 2); await page.mouse.down();
   await page.mouse.move(b3.x + b3.width / 2, b3.y + b3.height / 2, { steps: 8 }); await page.mouse.up();
+  // Wait for the redraw with the new order (condition, not a delay); on timeout the check below reports what is shown.
+  await page.waitForFunction((w) => [...document.querySelectorAll('[data-ab-pos]')].map((e) => e.textContent.trim()).join() === w, want, { timeout: 5000 }).catch(() => {});
   const after = await page.$$eval('[data-ab-pos]', (els) => els.map((e) => e.textContent.trim()));
-  ok(after.join() === [before[1], before[2], before[3], before[0], before[4]].join(), `sürükle-bırak taşıyor (${before} → ${after})`);
+  ok(after.join() === want, `sürükle-bırak taşıyor (${before} → ${after})`);
   ok(await page.locator('.ab-ordertile.is-picked').count() === 0, 'sürüklemeden sonra seçili harf kalmıyor');
 
   // Profile switch: children's progress is separate.

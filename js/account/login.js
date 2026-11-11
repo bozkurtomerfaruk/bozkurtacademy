@@ -2,7 +2,7 @@
 import { auth, configured, fa } from './firebase.js';
 import { TEACHER_UID } from './config.js';
 import { registerStrings, t, lang } from './i18n.js';
-import { $, authErrorKey, clearHint, loadProfile, setHint, setStatus, validEmail } from './common.js';
+import { $, authErrorKey, signedOut, loadProfile, setHint, setStatus, validEmail } from './common.js';
 
 registerStrings();
 
@@ -116,7 +116,7 @@ if(!configured){
 
   $('logoutBtn').addEventListener('click', async () => {
     await fa.signOut(auth);
-    clearHint();
+    signedOut();
     location.reload();
   });
 }

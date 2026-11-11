@@ -3,7 +3,7 @@ import { auth, configured, db, fa, fs } from './firebase.js';
 import { TEACHER_EMAIL, TEACHER_UID } from './config.js';
 import { registerStrings, t, lang } from './i18n.js';
 import {
-  $, accountState, bestResultSince, clearHint, currentUser, exerciseNames, exerciseUrl, formatDateTime, h,
+  $, accountState, bestResultSince, signedOut, currentUser, exerciseNames, exerciseUrl, formatDateTime, h,
   loadAssignments, loadProfile, loadResources, loadResults, loadWritings, safeLink, scoreText, sendVerification, setHint, setStatus,
   summarizeResults, syncEmailVerified, toDate, unseenFeedback, validStudentDocUrl, writingTitle, writingUrl
 } from './common.js';
@@ -363,7 +363,7 @@ async function render(){
 async function start(){
   const user = await currentUser();
   if(!user){
-    clearHint();
+    signedOut();
     location.replace('giris.html');
     return;
   }
@@ -401,7 +401,7 @@ async function start(){
 
 $('logoutBtn').addEventListener('click', async () => {
   await fa.signOut(auth);
-  clearHint();
+  signedOut();
   location.replace('index.html');
 });
 

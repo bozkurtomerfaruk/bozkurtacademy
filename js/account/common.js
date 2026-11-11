@@ -67,6 +67,25 @@ export function setHint(role){ try{ localStorage.setItem(HINT, role); }catch(_){
 export function clearHint(){ try{ localStorage.removeItem(HINT); }catch(_){} }
 export function getHint(){ try{ return localStorage.getItem(HINT); }catch(_){ return null; } }
 
+// Almanca Alfabe oyunu (js/alfabe.js, localStorage baAlfabe). Çıkışta bu hesabın cihazdaki ilerlemesi silinir (hesapta
+// zaten kayıtlı) ve kayıt "çıkış yapıldı" diye işaretlenir. Bu işaret hiçbir hesap kimliğiyle eşleşmez: çıkıştan sonra
+// giriş yapmadan oynanan oyun cihazda kalır ama hiçbir hesaba eklenmez (js/account/alfabe-sync.js → localPart).
+// Profil ve ses ayarları cihaz tercihidir, korunur.
+export const ALFABE_SIGNED_OUT = 'cikis-yapildi';
+export function forgetAlfabeProgress(){
+  try{
+    let v = JSON.parse(localStorage.getItem('baAlfabe') || 'null');
+    if(!v || typeof v !== 'object') v = {};
+    const keep = Object.fromEntries(['profil', 'ses', 'yavas', 'zaman'].filter((k) => k in v).map((k) => [k, v[k]]));
+    localStorage.setItem('baAlfabe', JSON.stringify({ ...keep, uid: ALFABE_SIGNED_OUT }));
+  }catch(_){ /* depolama kapalı: silinecek bir şey yok */ }
+}
+// Çıkışta (ya da oturum bitmişse) cihazdaki hesap izleri: menü ipucu ve alfabe ilerlemesi.
+export function signedOut(){
+  clearHint();
+  forgetAlfabeProgress();
+}
+
 export function authErrorKey(error){
   switch(error?.code){
     case 'auth/invalid-credential':

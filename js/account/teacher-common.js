@@ -1,7 +1,7 @@
 // Öğretmen paneli ve öğrenci detay sayfasının ortak işlemleri (sadece Türkçe).
 import { auth, configured, db, fa, fs, projectId } from './firebase.js';
 import { TEACHER_UID } from './config.js';
-import { $, BERLIN, clearHint, consentGiven, currentUser, formatDate, h, setHint, toDate } from './common.js';
+import { $, BERLIN, signedOut, consentGiven, currentUser, formatDate, h, setHint, toDate } from './common.js';
 import * as cal from './calendar.js';
 import { deleteCalendarEvents, loadStudentLessons, needsCalendar } from './lessons.js';
 
@@ -29,7 +29,7 @@ export async function requireTeacher({ loadingId, errorId }){
   cal.preload();
   $('logoutBtn')?.addEventListener('click', async () => {
     await fa.signOut(auth);
-    clearHint();
+    signedOut();
     location.replace('index.html');
   });
   return user;

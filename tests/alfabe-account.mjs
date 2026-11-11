@@ -2,7 +2,8 @@
 // Ziyaretçide Firebase yüklenmiyor → girişten önceki yerel ilerleme ile hesaptaki ilerleme en iyi değerlerle birleşip
 // iki tarafa yazılıyor → tur sonunda hesap güncelleniyor → başka cihazdaki ilerleme kaybolmuyor → başka hesabın yerel
 // ilerlemesi karışmıyor → onaysız hesapta sadece yerel, ama o hesapla işaretli → aynı tarayıcıda sonra giren onaylı
-// öğrencinin hesabına karışmıyor. Site için kendi statik sunucusunu açar; Firebase SDK dosyaları
+// öğrencinin hesabına karışmıyor → çıkışta ilerleme silinip 'çıkış yapıldı' işaretleniyor; sonra giriş yapmadan
+// oynanan oyun aynı öğrencinin hesabına bile eklenmiyor. Site için kendi statik sunucusunu açar; Firebase SDK dosyaları
 // gstatic yerine node_modules/firebase'den verilir.
 import fs from 'node:fs';
 import http from 'node:http';
@@ -178,6 +179,52 @@ await writeRemote('ogrenci1', { cocuk: { stats: { A: { r: 1, w: 2 }, B: { r: 2, 
   const same = (x, y) => JSON.stringify(x) === JSON.stringify(y);
   ok(same(remote.cocuk, before.cocuk) && same(remote.yetiskin, before.yetiskin) && remote.cocuk.stars !== 500, 'aynı tarayıcıda onaysız hesabın ilerlemesi onaylı hesaba karışmıyor');
   ok(local.uid === 'ogrenci1' && same(local.p.cocuk, before.cocuk), 'cihazda artık onaylı hesabın ilerlemesi gösteriliyor');
+  await ctx.close();
+}
+
+// 6. Sign-out: the student's progress is removed from the device and the record is marked as signed out. A game played
+// afterwards without signing in stays on the device but is never added to an account, not even the same student's.
+{
+  const same = (x, y) => JSON.stringify(x) === JSON.stringify(y);
+  const { ctx, page } = await newPage();
+  await signIn(page, 'ogrenci@example.com');
+  await setLocal(page, { profil: 'cocuk', ses: false });
+  await page.goto(`${BASE}/almanca-alfabe/`); await page.waitForSelector('[data-ab-synced]', { timeout: 15000 });
+  const before = await readRemote('ogrenci1');
+  const inside = await getLocal(page);
+  ok(inside.uid === 'ogrenci1' && same(inside.p.cocuk, before.cocuk), 'çıkıştan önce cihazda hesabın ilerlemesi var');
+
+  await page.goto(`${BASE}/panel.html`);
+  await page.locator('#logoutBtn').click();
+  await page.waitForURL((u) => !u.pathname.endsWith('/panel.html'), { timeout: 15000 });
+  const out = await getLocal(page);
+  ok(out.uid === 'cikis-yapildi' && !out.p && out.profil === 'cocuk' && out.ses === inside.ses, 'çıkışta ilerleme silindi, ayarlar kaldı: ' + JSON.stringify(out));
+  ok(await page.evaluate(() => localStorage.getItem('baAccount')) === null, 'çıkışta hesap ipucu silindi');
+
+  // Someone plays on the same device without signing in; the values are made distinctive (X: 77, 900 stars).
+  await playOrderRound(page);
+  const played = await getLocal(page);
+  ok(played.uid === 'cikis-yapildi' && played.p.cocuk.stars > 0, 'çıkıştan sonra oyun cihazda oynanıyor (giriş yok)');
+  played.p.cocuk.stats.X = { r: 77, w: 0 }; played.p.cocuk.best.duy = 10; played.p.cocuk.stars = 900;
+  await setLocal(page, played);
+
+  // The same student signs in again on this device.
+  await signIn(page, 'ogrenci@example.com');
+  await page.goto(`${BASE}/almanca-alfabe/`); await page.waitForSelector('[data-ab-synced]', { timeout: 15000 });
+  const remote = await readRemote('ogrenci1');
+  const local = await getLocal(page);
+  ok(same(remote.cocuk, before.cocuk) && same(remote.yetiskin, before.yetiskin), 'çıkıştan sonra oynanan oyun öğrencinin hesabına eklenmiyor');
+  ok(local.uid === 'ogrenci1' && same(local.p.cocuk, before.cocuk), 'yeniden girişte cihazda hesabın ilerlemesi gösteriliyor');
+  await ctx.close();
+}
+
+// 7. The waiting account does not claim a game played after a sign-out either.
+{
+  const { ctx, page } = await newPage();
+  await signIn(page, 'bekleyen@example.com');
+  await setLocal(page, { profil: 'cocuk', uid: 'cikis-yapildi', p: { cocuk: { stats: { X: { r: 77, w: 0 } }, best: {}, stars: 900 }, yetiskin: empty() } });
+  await page.goto(`${BASE}/almanca-alfabe/`); await page.waitForSelector('.ab-modes'); await page.waitForTimeout(2500);
+  ok((await getLocal(page)).uid === 'cikis-yapildi' && await readRemote('ogrenci2') === null, 'onaysız hesap çıkış sonrası oyunu sahiplenmiyor');
   await ctx.close();
 }
 

@@ -2,6 +2,14 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-11 · Almanca Alfabe: hesap testi ara sıra kırmızıydı
+
+- `npm run test:alfabe-account` bölüm 3 ("başka hesabın yerel ilerlemesi hesaba karışmıyor") yaklaşık her üç çalıştırmada bir hata veriyordu. Sebep testteydi: bölüm 2'deki rastgele "Sıraya Diz" turu bazen Q harfini soruyor, hesapta da haklı olarak `stats.Q` oluşuyordu; test ise "Q yok" bekliyordu.
+- `js/account/alfabe-sync.js` doğru çalışıyor: hata veren çalıştırmalarda hesaptaki belge (`updatedAt` dahil) bölüm 3'ten önceki haliyle birebir aynıydı, yani başka hesabın ilerlemesi hiç yazılmadı. Kodda değişiklik yok.
+- Test artık hesaptaki ilerlemeyi önceki haliyle birebir karşılaştırıyor ve başka hesabın kendi değerlerini (Q r:50, 999 yıldız) arıyor; okumadan önce 1,5 sn bekliyor ki yanlış bir yazma geç gelse de yakalansın.
+- İkinci, daha seyrek hata (bölüm 2, "hesaptaki kayıt birleşti"): "İlerlemen hesabına da kaydediliyor" notu birleşen ilerleme yerelde uygulanınca, `setDoc` emülatöre ulaşmadan hemen önce çıkıyor. Test hesabı tek seferde okuyordu; artık birleşmiş kayıt gelene kadar bekliyor (en çok 8 sn).
+- Kontrol: `npm run test:alfabe-account` arka arkaya 10 kez geçti; uid koruması geçici olarak kaldırılınca bölüm 3 kırmızı oluyor (test gerçek sızıntıyı yakalıyor). `npm run test:alfabe` ve `node tests/alfabe.mjs` geçti.
+
 ## 2026-11-08 · Almanca Alfabe: alıştırma kartı, sade okunuşlar, hesapta ilerleme
 
 - Alıştırmalar (A1) "Çocuklar için" bölümünde Artikel Evleri'nin yanında "Almanca Alfabe" kartı (TR/DE/EN). `quiz.js` v31, `app.js` v37, `artikel-evleri.css` v2.

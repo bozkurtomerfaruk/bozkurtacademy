@@ -46,6 +46,12 @@ const toFs = (v) => Number.isInteger(v) ? { integerValue: String(v) } : typeof v
 const fromFs = (v) => 'integerValue' in v ? Number(v.integerValue) : 'mapValue' in v ? Object.fromEntries(Object.entries(v.mapValue.fields || {}).map(([k, x]) => [k, fromFs(x)])) : Object.values(v)[0];
 const PROGRESS = (uid) => `${docsUrl}/users/${uid}/progress/alfabe`;
 const readRemote = async (uid) => { const d = await (await fetch(PROGRESS(uid), { headers: owner })).json(); return d.fields ? fromFs({ mapValue: { fields: d.fields } }) : null; };
+// "[data-ab-synced]" appears when the merged progress is applied locally, just before setDoc lands: poll the account.
+const waitRemote = async (uid, pred, ms = 8000) => {
+  let r = null;
+  for (const end = Date.now() + ms; Date.now() < end; await new Promise((x) => setTimeout(x, 200))) { r = await readRemote(uid); if (r && pred(r)) break; }
+  return r;
+};
 const writeRemote = (uid, p) => fetch(PROGRESS(uid), { method: 'PATCH', headers: owner, body: JSON.stringify({ fields: { ...toFs(p).mapValue.fields, updatedAt: { timestampValue: new Date().toISOString() } } }) });
 
 const fails = [];
@@ -118,8 +124,8 @@ await writeRemote('ogrenci1', { cocuk: { stats: { A: { r: 1, w: 2 }, B: { r: 2, 
   await page.waitForSelector('[data-ab-synced]', { timeout: 15000 });
   ok(true, 'onaylı öğrenci: menüde "İlerlemen hesabına da kaydediliyor"');
   const local = await getLocal(page);
-  const remote = await readRemote('ogrenci1');
   const want = { stats: { A: { r: 3, w: 2 }, B: { r: 2, w: 0 }, V: { r: 0, w: 2 } }, best: { duy: 9, sirala: 5 }, stars: 12 };
+  const remote = await waitRemote('ogrenci1', (r) => JSON.stringify(r.cocuk) === JSON.stringify(want));
   ok(JSON.stringify(local.p.cocuk) === JSON.stringify(want), 'yerel kayıt birleşti: ' + JSON.stringify(local.p.cocuk));
   ok(JSON.stringify(remote.cocuk) === JSON.stringify(want), 'hesaptaki kayıt birleşti: ' + JSON.stringify(remote.cocuk));
   ok(remote.yetiskin.best.sirala === 60 && local.uid === 'ogrenci1', 'yetişkin en iyi skoru ve hesap kimliği (yerel uid)');
@@ -129,8 +135,7 @@ await writeRemote('ogrenci1', { cocuk: { stats: { A: { r: 1, w: 2 }, B: { r: 2, 
   // A round updates the account; progress another device wrote in the meantime is kept.
   await writeRemote('ogrenci1', { ...remote, yetiskin: { stats: { Z: { r: 4, w: 0 } }, best: { sirala: 60 }, stars: 0 } });
   await playOrderRound(page);
-  await page.waitForTimeout(1500);
-  const after = await readRemote('ogrenci1');
+  const after = await waitRemote('ogrenci1', (r) => r.cocuk.stars === 21 && r.yetiskin.stats.Z?.r === 4);
   ok(after.cocuk.stars === 21, `tur sonunda hesap güncellendi (yıldız ${after.cocuk.stars})`);
   ok(after.yetiskin.stats.Z?.r === 4, 'başka cihazın ilerlemesi korunuyor');
   ok((await getLocal(page)).p.yetiskin.stats.Z?.r === 4, 'başka cihazın ilerlemesi bu cihaza da geldi');
@@ -144,9 +149,13 @@ await writeRemote('ogrenci1', { cocuk: { stats: { A: { r: 1, w: 2 }, B: { r: 2, 
   await signIn(page, 'ogrenci@example.com');
   await setLocal(page, { profil: 'cocuk', uid: 'baskaHesap', p: { cocuk: { stats: { Q: { r: 50, w: 0 } }, best: { duy: 10 }, stars: 999 }, yetiskin: empty() } });
   await page.goto(`${BASE}/almanca-alfabe/`); await page.waitForSelector('[data-ab-synced]', { timeout: 15000 });
+  await page.waitForTimeout(1500); // a wrong setDoc would land after the note appears; give it time to show up
   const remote = await readRemote('ogrenci1');
   const local = await getLocal(page);
-  ok(remote.cocuk.stars === before.cocuk.stars && !remote.cocuk.stats.Q, 'başka hesabın yerel ilerlemesi hesaba karışmıyor');
+  // Bölüm 2'deki rastgele tur Q harfini de sorabilir; bu yüzden "Q yok" değil, başka hesabın değerleri (Q r:50, 999 yıldız)
+  // aranır ve hesaptaki ilerleme bölüm 3'ten önceki haliyle birebir karşılaştırılır.
+  const progressOnly = (x) => JSON.stringify({ cocuk: x.cocuk, yetiskin: x.yetiskin });
+  ok(progressOnly(remote) === progressOnly(before) && remote.cocuk.stats.Q?.r !== 50 && remote.cocuk.stars !== 999, 'başka hesabın yerel ilerlemesi hesaba karışmıyor');
   ok(local.uid === 'ogrenci1' && local.p.cocuk.stars === before.cocuk.stars, 'cihazda bu hesabın ilerlemesi gösteriliyor');
   await ctx.close();
 }

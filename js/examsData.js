@@ -191,6 +191,7 @@ window.BA_EXAMS = {
             { id: 'schreiben', teile: [
               {
                 title: { tr: 'Form doldurma · 5 bilgi', de: 'Formular ausfüllen · 5 Angaben', en: 'Fill in a form · 5 details' },
+                kind: 'form', // js/form-task.js: otomatik kontrol; ödevde ve sonuçlarda "sınav seti" (yazma görevi değil)
                 exercises: [
                   { set: 'set-1', title: 'Anmeldung zum Deutschkurs' },
                   { set: 'set-2', title: 'Beim Arzt' },

@@ -12,7 +12,7 @@
 ## 1. Toplanan veriler
 
 - Öğrencinin adı soyadı, e-posta adresi ve doğum yılı (tam doğum tarihi değil)
-- Sitedeki alıştırmaların sonuçları: konu, seviye, skor ve zaman
+- Sitedeki alıştırmaların ve sınav hazırlığı setlerinin sonuçları: konu, seviye, skor ve zaman (tek tek cevaplar kaydedilmez)
 - Ödevlerin durumu ve öğrencinin ödeve eklediği Google Docs linki
 - Sınav hazırlığındaki yazma görevlerinde (Schreiben) öğrencinin gönderdiği metinler ve öğretmenin geri bildirimi
 - Ders bilgileri: tarih, saat, süre, ders notu ve Google Meet linki
@@ -88,7 +88,7 @@ Ihr Kind möchte für den Online-Deutschunterricht bei Bozkurt Academy ein Schü
 ## 1. Erhobene Daten
 
 - Vor- und Nachname, E-Mail-Adresse und Geburtsjahr des Kindes (nicht das genaue Geburtsdatum)
-- Ergebnisse der Übungen auf der Website: Thema, Niveau, Punktzahl und Zeitpunkt
+- Ergebnisse der Übungen und der Sätze zur Prüfungsvorbereitung auf der Website: Thema, Niveau, Punktzahl und Zeitpunkt (einzelne Antworten werden nicht gespeichert)
 - Stand der Hausaufgaben und der Google-Docs-Link, den das Kind zu einer Hausaufgabe hinzufügt
 - Bei den Schreibaufgaben der Prüfungsvorbereitung: die Texte, die das Kind abschickt, und die Rückmeldung des Lehrers
 - Unterrichtsdaten: Datum, Uhrzeit, Dauer, Notiz zur Stunde und Google-Meet-Link

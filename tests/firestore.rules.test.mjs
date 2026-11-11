@@ -318,6 +318,18 @@ describe('Alıştırma sonuçları', () => {
     await assertFails(deleteDoc(doc(ayse(), 'users/ayse/results/r1')));
   });
 
+  test('sınav seti sonucu (konu "sinav"): seviye sınavın kimliği; diğer konularda A1–C2 kalır', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    const results = collection(ayse(), 'users/ayse/results');
+    await assertSucceeds(addDoc(results, result({ topic: 'sinav', level: 'a1', exercise: 'goethe-a1-lesen-1-set-2', score: 4, total: 5 })));
+    await assertSucceeds(addDoc(results, result({ topic: 'sinav', level: 'a2-b1', exercise: 'dtz-a2-b1-lesen-3-set-1', score: 3, total: 6 })));
+    await assertSucceeds(addDoc(results, result({ topic: 'sinav', level: 'papier', exercise: 'testdaf-papier-lesen-2-set-4', score: 7, total: 10 })));
+    await assertFails(addDoc(results, result({ topic: 'sinav', level: 'A1', exercise: 'goethe-a1-lesen-1-set-2' })));
+    await assertFails(addDoc(results, result({ topic: 'sinav', level: 'a1<b>', exercise: 'goethe-a1-lesen-1-set-2' })));
+    await assertFails(addDoc(results, result({ topic: 'sinav', level: 'a1', exercise: 'goethe-a1-lesen-1-set-2', topicErrors: 'lesen:1' })));
+    await assertFails(addDoc(results, result({ topic: 'artikel', level: 'a1' })));
+  });
+
   test('geçersiz skor reddedilir', async () => {
     await seed('users/ayse', seededAdult('active'));
     const results = collection(ayse(), 'users/ayse/results');

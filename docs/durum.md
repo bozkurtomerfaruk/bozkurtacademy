@@ -18,6 +18,48 @@
 - Gizlilik metni (TR/DE/EN): localStorage `baAlfabe` ve cihazdaki sesle okuma eklendi.
 - Testler: `tests/alfabe-logic.test.mjs` (CI) ve `tests/alfabe.mjs` (tarayıcı; 320/390/1280 px, açık/koyu, ses yok, depolama kapalı).
 
+## 2026-11-09 · Schreiben genişletme 1: Goethe B1 Teil 2 ve 3
+
+- **Format (resmî Goethe B1 Modellsatz ile karşılaştırıldı):**
+  - Teil 2: televizyondaki bir tartışma programının Gästebuch'undaki görüşe cevap; kendi görüşünü yaz, ~80 kelime, 25 dk; madde yok.
+  - Teil 3: tanıdık birine (kurs öğretmeni, şef, ev sahibi, komşu, antrenör) yarı resmî e-posta; özür, sebep, öneri ya da rica; ~40 kelime, 15 dk; hitap ve kapanış şart.
+- **Setler (özgün):**
+  - Teil 2: Kinder und Smartphones, Arbeiten im Homeoffice, Einkaufen im Internet, Leben auf dem Land, Hunde in der Mietwohnung.
+  - Teil 3: Termin mit dem Vermieter, Teambesprechung, Einladung der Nachbarin, Arbeitsblätter aus dem Kurs, Spiel am Sonntag.
+  - Her sette Türkçe kontrol listesi, Redemittel, örnek cevap (Teil 2: 73–87, Teil 3: 43–48 kelime) ve notlar var.
+- **Görev sayfası:**
+  - Gästebuch görüşü kart olarak görünüyor; maddesiz görevler destekleniyor.
+  - Metin alanı ipucu metin türüne göre değişiyor.
+  - Teil 1'in son setinden Teil 2'ye geçiliyor.
+- **Veri:** Yeni `textType` alanı (`email-informal`, `sms`, `email-semiformal`, `email-formal`, `forum`) eklendi; `check-exams` bunu `register` ile birlikte denetliyor.
+- **Yapay zekâ:**
+  - Worker artık görev adı ve metnin yanında **metin türünü** de gönderiyor; ad, e-posta, uid yine gitmiyor.
+  - Talimata her metin türü için kurallar eklendi: hitap ve kapanış, hitaptan sonra küçük harf, du/Sie tutarlılığı, Sie'nin büyük yazılması, resmiyet derecesi, forumda hitap gerekmemesi.
+  - Deneme (Gemma 4, 10 yeni metin, 23 hata): ilk turda 22/23, talimat düzeltmesinden sonra 23/23. Hatasız iki metinde yanlış alarm yok; yanlış kural öğreten açıklama yok.
+  - Teil 1 regresyonu (28 eski metin): 31/34, hatasız 8 metinde yanlış alarm yok. Kapanış kuralı netleştirilince "Grüße" yanlış alarmı kalktı.
+  - Bilinen sınırlar sürüyor: E8 "die helfen dort", E13 "gefallen"; "nächstes Mal" iki denemenin birinde işaretlendi. Taslak modu bunları yakalıyor.
+  - Metin başına 14–23 Neuron harcanıyor (önce 9–12); günlük ücretsiz kota yaklaşık 450–500 metne yetiyor.
+- **Senin yapacakların (birleştirmeden sonra):**
+  1. Cloudflare'de Worker'ı güncelle: Edit code → `worker/schreiben-kontrol.js` → yapıştır → Deploy.
+  2. Deneme bitince geçici Workers AI token'ını sil.
+
+## 2026-11-09 · Madde 7 Aşama B canlıda; yeni öncelik sırası
+
+- **Canlı deneme başarılı (senin denemen):**
+  - Firestore kuralları yayınlandı.
+  - Deneme öğrencisinin metni için taslak öğretmen paneline geldi.
+  - Taslak onaylandı; öğrenci panelinde işaretli hatalar göründü.
+- **Güvenlik:** Araştırmada kullanılan Cloudflare deneme API token'ı silindi. Worker bu token'ı kullanmıyor.
+- **Yeni öncelik sırası (2026-11-09):**
+  1. Schreiben'i genişletmek:
+     - önce Goethe B1 Teil 2 ve 3;
+     - sonra telc B1, DTZ, Goethe A2 ve Goethe B2;
+     - her sınav/seviye ayrı PR;
+     - yapay zekâ talimatı görev türüne uygun (resmî / yarı resmî / gayriresmî e-posta, forum yazısı).
+     - Önce plan onaya sunuluyor.
+  2. Madde 9: info@bozkurtacademy.com için Cloudflare Email Routing → Gmail ve Gmail'den bu adresle gönderme rehberi.
+  3. Sonra madde 8 (Sprechen) ve Kayıp Harf Treni.
+
 ## 2026-11-08 · Madde 7 Aşama B: Worker bağlandı
 
 - Kurulumu sen yaptın: Worker (`schreiben-kontrol.bozkurtt-omerfaruk.workers.dev`), Workers AI bağlantısı, yapay zekâ hesabı, değişkenler.

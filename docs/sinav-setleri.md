@@ -116,7 +116,7 @@ Set şu adresten açılır: `#exams/goethe/b1/lesen/1/set-1`. DTZ gibi seviye ad
 ```json
 {
   "format": 1, "exam": "goethe", "level": "b1", "section": "schreiben", "teil": 1, "set": "set-1",
-  "title": "Neue Wohnung", "minutes": 20, "kind": "writing", "register": "du",
+  "title": "Neue Wohnung", "minutes": 20, "kind": "writing", "register": "du", "textType": "email-informal",
   "situation": "Sie sind vor zwei Wochen …",
   "task": "Schreiben Sie Lena eine E-Mail:",
   "points": ["Beschreiben Sie: …", "Begründen Sie: …", "Machen Sie einen Vorschlag …"],
@@ -128,6 +128,13 @@ Set şu adresten açılır: `#exams/goethe/b1/lesen/1/set-1`. DTZ gibi seviye ad
 }
 ```
 
+- `textType` ve `register` (metin türü ve hitap; yapay zekâ kontrolü türe uygun kuralları buna göre kullanır, `worker/schreiben-kontrol.js`):
+  - `email-informal` (arkadaşa e-posta) ve `sms` (kısa mesaj): `register` `"du"`.
+  - `email-semiformal` (tanıdık birine: kurs öğretmeni, şef, ev sahibi) ve `email-formal` (kuruma ya da tanımadığın birine): `"Sie"`.
+  - `forum` (görüş yazısı): `"neutral"`; ayrıca `post` gerekir: Gästebuch'taki görüş `{ "site": "www.diskussion-aktuell.de", "author": "Markus", "time": "14.03. 19:20 Uhr", "text": "…" }`. Örnek: `teil-2/set-1.json` (Goethe B1 Teil 2).
+- `points`: içerik maddeleri (en az 2) ya da boş liste; görev cümlesi ne yazılacağını zaten söylüyorsa boş (Goethe B1 Teil 2 ve 3).
+- `instructions`: isteğe bağlı (Goethe B1 Teil 2'de sadece görev cümlesi var).
+- Goethe B1 (resmî Modellsatz): Teil 1 arkadaşa e-posta ~80 kelime, 20 dk; Teil 2 Gästebuch'a görüş ~80 kelime, 25 dk; Teil 3 tanıdık birine yarı resmî e-posta ~40 kelime, 15 dk (`words` 35–50).
 - `words`: kelime sayacı `min`–`max` arasını iyi sayar; dışında uyarır ama göndermeyi engellemez. Sayaç harf ve rakam dizilerini sayar; `-` ya da `'` ile birleşenler tek kelimedir (B1-Prüfung).
 - `checklist`: sınav kriterlerine göre (`aufgabe`: görevi yerine getirme, `aufbau`: metin düzeni, `sprache`: kelime ve dil bilgisi) öğrencinin kendi kendini kontrol listesi; Türkçe, en az 5 madde, her kriterden en az biri. Kaydedilmez.
 - `redemittel`: konuya uygun kalıplar, Almanca ve Türkçe; en az 3 grup.

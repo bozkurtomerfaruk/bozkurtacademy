@@ -6,9 +6,9 @@ permissions:
 
 on:
   push:
-    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/csp.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', 'scripts/check-html-escape.mjs', 'scripts/grammar-pages.mjs', 'scripts/blog-pages.mjs', '_blog/**', 'data/catalog.json', 'data/grammar-index.json', 'data/*-grammar.json', '**/*.html', 'js/**', 'css/**', 'data/alfabe.json', 'tests/alfabe-logic.test.mjs', 'tests/i18n.mjs', 'scripts/site-i18n.mjs', '.github/workflows/site-pages.yml']
+    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/csp.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', 'scripts/check-html-escape.mjs', 'scripts/grammar-pages.mjs', 'scripts/blog-pages.mjs', '_blog/**', 'images/blog/**', 'data/catalog.json', 'data/grammar-index.json', 'data/*-grammar.json', '**/*.html', 'js/**', 'css/**', 'data/alfabe.json', 'tests/alfabe-logic.test.mjs', 'tests/i18n.mjs', 'scripts/site-i18n.mjs', '.github/workflows/site-pages.yml']
   pull_request:
-    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/csp.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', 'scripts/check-html-escape.mjs', 'scripts/grammar-pages.mjs', 'scripts/blog-pages.mjs', '_blog/**', 'data/catalog.json', 'data/grammar-index.json', 'data/*-grammar.json', '**/*.html', 'js/**', 'css/**', 'data/alfabe.json', 'tests/alfabe-logic.test.mjs', 'tests/i18n.mjs', 'scripts/site-i18n.mjs', '.github/workflows/site-pages.yml']
+    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/csp.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', 'scripts/check-html-escape.mjs', 'scripts/grammar-pages.mjs', 'scripts/blog-pages.mjs', '_blog/**', 'images/blog/**', 'data/catalog.json', 'data/grammar-index.json', 'data/*-grammar.json', '**/*.html', 'js/**', 'css/**', 'data/alfabe.json', 'tests/alfabe-logic.test.mjs', 'tests/i18n.mjs', 'scripts/site-i18n.mjs', '.github/workflows/site-pages.yml']
 jobs:
   check:
     runs-on: ubuntu-latest

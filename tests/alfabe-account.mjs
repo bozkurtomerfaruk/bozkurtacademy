@@ -7,6 +7,7 @@ import fs from 'node:fs';
 import http from 'node:http';
 import path from 'node:path';
 import { createRequire } from 'node:module';
+import { isDeepStrictEqual } from 'node:util';
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.PW || 'playwright');
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
@@ -77,6 +78,18 @@ async function signIn(page, email) {
 const setLocal = (page, v) => page.evaluate((x) => localStorage.setItem('baAlfabe', JSON.stringify(x)), v);
 const getLocal = (page) => page.evaluate(() => JSON.parse(localStorage.getItem('baAlfabe') || 'null'));
 const empty = () => ({ stats: {}, best: {}, stars: 0 });
+// The page shows "hesabına da kaydediliyor" when the merged progress is applied; the write to the account finishes a
+// moment later. Read the account once it holds what the page holds (at most 5 s), so a check never sees the old state.
+async function settled(page, uid) {
+  let local, remote;
+  for (let i = 0; i < 50; i++) {
+    local = await getLocal(page);
+    remote = await readRemote(uid);
+    if (remote && isDeepStrictEqual(remote.cocuk, local.p.cocuk) && isDeepStrictEqual(remote.yetiskin, local.p.yetiskin)) break;
+    await new Promise((r) => setTimeout(r, 100));
+  }
+  return { local, remote };
+}
 // One "Sıraya Diz" round for children, sorting by taps; the first question is answered wrong.
 async function playOrderRound(page) {
   await page.goto(`${BASE}/almanca-alfabe/#sirala`); await page.waitForSelector('[data-ab-pos]');
@@ -117,8 +130,7 @@ await writeRemote('ogrenci1', { cocuk: { stats: { A: { r: 1, w: 2 }, B: { r: 2, 
   await page.goto(`${BASE}/almanca-alfabe/`);
   await page.waitForSelector('[data-ab-synced]', { timeout: 15000 });
   ok(true, 'onaylı öğrenci: menüde "İlerlemen hesabına da kaydediliyor"');
-  const local = await getLocal(page);
-  const remote = await readRemote('ogrenci1');
+  const { local, remote } = await settled(page, 'ogrenci1');
   const want = { stats: { A: { r: 3, w: 2 }, B: { r: 2, w: 0 }, V: { r: 0, w: 2 } }, best: { duy: 9, sirala: 5 }, stars: 12 };
   ok(JSON.stringify(local.p.cocuk) === JSON.stringify(want), 'yerel kayıt birleşti: ' + JSON.stringify(local.p.cocuk));
   ok(JSON.stringify(remote.cocuk) === JSON.stringify(want), 'hesaptaki kayıt birleşti: ' + JSON.stringify(remote.cocuk));
@@ -129,8 +141,7 @@ await writeRemote('ogrenci1', { cocuk: { stats: { A: { r: 1, w: 2 }, B: { r: 2, 
   // A round updates the account; progress another device wrote in the meantime is kept.
   await writeRemote('ogrenci1', { ...remote, yetiskin: { stats: { Z: { r: 4, w: 0 } }, best: { sirala: 60 }, stars: 0 } });
   await playOrderRound(page);
-  await page.waitForTimeout(1500);
-  const after = await readRemote('ogrenci1');
+  const { remote: after } = await settled(page, 'ogrenci1');
   ok(after.cocuk.stars === 21, `tur sonunda hesap güncellendi (yıldız ${after.cocuk.stars})`);
   ok(after.yetiskin.stats.Z?.r === 4, 'başka cihazın ilerlemesi korunuyor');
   ok((await getLocal(page)).p.yetiskin.stats.Z?.r === 4, 'başka cihazın ilerlemesi bu cihaza da geldi');
@@ -144,13 +155,13 @@ await writeRemote('ogrenci1', { cocuk: { stats: { A: { r: 1, w: 2 }, B: { r: 2, 
   await signIn(page, 'ogrenci@example.com');
   await setLocal(page, { profil: 'cocuk', uid: 'baskaHesap', p: { cocuk: { stats: { Q: { r: 50, w: 0 } }, best: { duy: 10 }, stars: 999 }, yetiskin: empty() } });
   await page.goto(`${BASE}/almanca-alfabe/`); await page.waitForSelector('[data-ab-synced]', { timeout: 15000 });
-  const remote = await readRemote('ogrenci1');
-  const local = await getLocal(page);
+  const { local, remote } = await settled(page, 'ogrenci1');
   // The other account's values (Q: 50 right answers, 999 stars, best 10) must not appear. Q itself may be there:
-  // the order round above can contain it.
+  // the random "Sıraya Diz" round above often asks a sequence with Q (the old check "no Q at all" failed then).
+  // Compared without regard to key order: Firestore may return map keys in another order than the page stores them.
   const foreign = (p) => p.stars === 999 || p.stats.Q?.r === 50 || p.best.duy === 10;
-  ok(!foreign(remote.cocuk) && JSON.stringify(remote.cocuk) === JSON.stringify(before.cocuk), 'başka hesabın yerel ilerlemesi hesaba karışmıyor');
-  ok(local.uid === 'ogrenci1' && !foreign(local.p.cocuk) && JSON.stringify(local.p.cocuk) === JSON.stringify(remote.cocuk), 'cihazda bu hesabın ilerlemesi gösteriliyor');
+  ok(!foreign(remote.cocuk) && isDeepStrictEqual(remote.cocuk, before.cocuk), 'başka hesabın yerel ilerlemesi hesaba karışmıyor');
+  ok(local.uid === 'ogrenci1' && !foreign(local.p.cocuk) && isDeepStrictEqual(local.p.cocuk, remote.cocuk), 'cihazda bu hesabın ilerlemesi gösteriliyor');
   await ctx.close();
 }
 

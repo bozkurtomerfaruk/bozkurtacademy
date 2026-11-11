@@ -18,6 +18,30 @@
 - Gizlilik metni (TR/DE/EN): localStorage `baAlfabe` ve cihazdaki sesle okuma eklendi.
 - Testler: `tests/alfabe-logic.test.mjs` (CI) ve `tests/alfabe.mjs` (tarayıcı; 320/390/1280 px, açık/koyu, ses yok, depolama kapalı).
 
+## 2026-11-11 · Schreiben genişletme 2: Goethe A1 (Start Deutsch 1)
+
+- **Format (resmî Start Deutsch 1 Modellsatz, Übungssatz 01 ve 02 ile karşılaştırıldı):** Schreiben toplam ~20 dk.
+  - Teil 1: kısa bir durum metnindeki bir arkadaşın bilgilerini forma yazma; 5 bilgi, her biri 1 puan.
+  - Teil 2: kısa mesaj; ~30 kelime, 3 madde, hitap ve kapanış. Arkadaşa du, tanıdık birine ya da kuruma Sie.
+- **Teil 1, form doldurma (yeni görev türü `js/form-task.js`, yapay zekâ yok):**
+  - Setler: Anmeldung zum Deutschkurs, Beim Arzt, Wohnung anmelden beim Bürgeramt (kararın: kütüphane kartı yerine), Schifffahrt im Urlaub, Im Sportverein.
+  - Otomatik kontrol: büyük-küçük harf, boşluk, sondaki nokta, ß/ss ve ä/ae önemsiz.
+  - Tek harflik yazım hatası "doğru sayıldı, ama yazımı: …" olarak gösteriliyor (harfler en az 5, sayılar aynı olmalı).
+  - Kontrolden sonra her cevabın dayanağı metinde boşluk numarasıyla işaretleniyor; her boşluğun kendi Türkçe açıklaması ve "Metinde göster" düğmesi var.
+  - Enter bir sonraki alana geçiyor, son alanda kontrol ediyor. 5 dk.
+  - Şimdilik hiçbir şey kaydedilmiyor (diğer sınav setleri gibi). Puanların kaydedilmesi ayrı madde (kararın).
+- **Teil 2, kısa mesaj (5 set, 15 dk, sayaç 25–40):**
+  - Zusammen kochen, Kino absagen (du)
+  - Krank im Deutschkurs, Fenster kaputt (Sie, yarı resmî)
+  - Schwimmkurs für Kinder (resmî)
+- **Yapay zekâ:**
+  - Talimata A1 notları eklendi: sadece açık hatalar, basit doğru cümleleri güzelleştirmeme, A1 dışı yapıları önermeme, tek cümlelik basit Türkçe açıklama. Kelime sırası, hâl ekleri, du/Sie, hitap/kapanış ve hitaptan sonraki küçük harf A1'de de hata sayılıyor.
+  - Worker'ın süzgeci artık hitaptan sonraki doğru küçük harfi büyüten öneriyi atıyor.
+  - Deneme (10 A1 metni, 13 hata): ilk tur 11/13; düzeltmeden sonra 13/13. Hatasız 2 metinde yanlış alarm yok. B1 Teil 2/3 denemesi yeni talimatla da 23/23.
+- **Senin yapacakların (birleştirmeden sonra):**
+  1. Worker'ı güncelle (Edit code → yapıştır → Deploy).
+  2. Geçici token'ı sil (18.11.2026'ya kadar geçerli).
+
 ## 2026-11-09 · Schreiben genişletme 1: Goethe B1 Teil 2 ve 3
 
 - **Format (resmî Goethe B1 Modellsatz ile karşılaştırıldı):**

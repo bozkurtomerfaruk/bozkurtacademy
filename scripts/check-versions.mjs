@@ -30,6 +30,16 @@ for(const file of pages){
     byVersion.get(version).push(path.relative(root, file));
   }
 }
+// JS içinden yüklenen dosyalar da (ör. js/account/common.js → 'js/examsData.js?v=18') sayfalardaki sürümle aynı olmalı.
+for(const file of ['js/account/common.js']){
+  const src = fs.readFileSync(path.join(root, file), 'utf8');
+  for(const m of src.matchAll(/'\/?((?:js|css)\/[^'?#]+\.(?:js|css))\?v=([^'#]+)'/g)){
+    if(!seen.has(m[1])) seen.set(m[1], new Map());
+    const byVersion = seen.get(m[1]);
+    if(!byVersion.has(m[2])) byVersion.set(m[2], []);
+    byVersion.get(m[2]).push(file);
+  }
+}
 let errors = 0;
 for(const [asset, byVersion] of [...seen].sort()){
   if(byVersion.size < 2) continue;

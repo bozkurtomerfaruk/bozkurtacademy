@@ -53,3 +53,38 @@
   #page-exams .wt-grid,#page-exams .wt-cols{grid-template-columns:1fr}
   #page-exams .wt-actions .btn{width:100%}
 }
+
+/* Form doldurma (js/form-task.js, Goethe A1 Teil 1): kâğıt form görünümü; dar ekranda etiket alanın üstünde. */
+#page-exams .ft-form{display:grid;gap:12px;padding:clamp(16px,3vw,24px);border-radius:var(--ba-radius);background:var(--ba-paper);color:var(--ba-ink);box-shadow:inset 0 0 0 2px var(--ba-line)}
+#page-exams .ft-head{display:grid;gap:2px;padding-bottom:10px;border-bottom:2px solid var(--ba-line)}
+#page-exams .ft-subtitle{margin:0;color:var(--ba-muted);font-size:var(--ba-small);font-weight:600}
+#page-exams .ft-head h3{margin:0;font-family:var(--ba-serif);font-size:var(--ba-lead)}
+#page-exams .ft-rows{display:grid;gap:0}
+#page-exams .ft-row{display:grid;grid-template-columns:minmax(0,14em) minmax(0,1fr) 32px;gap:6px 14px;align-items:center;padding:10px 0;border-bottom:1px dashed var(--ba-line)}
+#page-exams .ft-row:last-child{border-bottom:0}
+#page-exams .ft-label{font-weight:600;line-height:1.35}
+#page-exams .ft-value{font-family:var(--ba-serif);font-size:var(--ba-body)}
+#page-exams .ft-row.is-example .ft-value{color:var(--ba-muted)}
+#page-exams .ft-no{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:999px;background:var(--ba-paper-2);font-size:var(--ba-small);font-weight:700;font-variant-numeric:tabular-nums}
+#page-exams .ft-no.is-example{background:var(--ba-accent);color:var(--ba-accent-ink)}
+#page-exams .ft-input{width:100%;min-height:44px;padding:6px 12px;border:2px solid var(--ba-line-strong);border-radius:var(--ba-radius-small);background:var(--ba-paper);color:var(--ba-ink);font:inherit;font-size:var(--ba-body)}
+#page-exams .ft-input:focus-visible,#page-exams .ft-choice input:focus-visible{outline:3px solid var(--ba-focus);outline-offset:2px}
+#page-exams .ft-input:disabled{opacity:1}
+#page-exams .ft-choices{display:flex;flex-wrap:wrap;gap:8px 18px}
+#page-exams .ft-choice{display:inline-flex;align-items:center;gap:8px;min-height:44px;cursor:pointer}
+#page-exams .ft-choice input{width:20px;height:20px;margin:0;accent-color:var(--ba-accent)}
+#page-exams .ft-feedback{grid-column:1/-1}
+#page-exams .ft-feedback .task-result{margin-top:4px}
+#page-exams .ft-blank.is-right .ft-input{border-color:var(--ba-right);background:var(--ba-right-bg);color:var(--ba-right)}
+#page-exams .ft-blank.is-wrong .ft-input,#page-exams .ft-blank.is-empty .ft-input{border-color:var(--ba-wrong);background:var(--ba-wrong-bg);color:var(--ba-wrong)}
+#page-exams .ft-blank.is-right .task-result-status{color:var(--ba-right)}
+#page-exams .ft-blank.is-wrong .task-result-status,#page-exams .ft-blank.is-empty .task-result-status{color:var(--ba-wrong)}
+#page-exams .ft-blank.is-almost .task-solution{color:var(--ba-ink)}
+#page-exams .ft-choice:has(input:disabled){cursor:default}
+#page-exams .ft-blank.is-right .ft-choice:has(input:checked){padding:0 10px;border-radius:999px;background:var(--ba-right-bg);color:var(--ba-right);font-weight:600}
+#page-exams .ft-blank.is-wrong .ft-choice:has(input:checked){padding:0 10px;border-radius:999px;background:var(--ba-wrong-bg);color:var(--ba-wrong);font-weight:600;text-decoration:line-through}
+@media(max-width:560px){
+  #page-exams .ft-row{grid-template-columns:minmax(0,1fr) 32px}
+  #page-exams .ft-label{grid-column:1/-1}
+  #page-exams .ft-row:not(.ft-blank) .ft-value{grid-column:1}
+}

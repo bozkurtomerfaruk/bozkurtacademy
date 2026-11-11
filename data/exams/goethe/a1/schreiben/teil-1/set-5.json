@@ -1,0 +1,92 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Im Sportverein",
+  "minutes": 5,
+  "kind": "form",
+  "situation": "Ihre Freundin Mariam Said ist 27 Jahre alt. Sie möchte im Sportverein TSV Grün-Weiß schwimmen. Sie hat schon in Syrien ein Jahr lang geschwommen. In der Woche arbeitet sie, sie kann nur am Wochenende trainieren. Ihr Mann Omar möchte auch Mitglied werden. Den Beitrag möchte Mariam jeden Monat bezahlen.",
+  "task": "Helfen Sie Ihrer Freundin und schreiben Sie die fünf fehlenden Informationen in das Formular.",
+  "form": {
+    "title": "Mitgliedsantrag",
+    "subtitle": "TSV Grün-Weiß e. V.",
+    "rows": [
+      {
+        "label": "Familienname, Vorname",
+        "value": "Said, Mariam",
+        "example": true
+      },
+      {
+        "label": "Alter",
+        "value": "27"
+      },
+      {
+        "label": "Sportart",
+        "number": 1,
+        "evidence": [
+          "im Sportverein TSV Grün-Weiß schwimmen"
+        ],
+        "explanation": "Sportart = spor dalı. Metinde „Sie möchte … schwimmen“ → yüzme: Schwimmen.",
+        "accept": [
+          "Schwimmen",
+          "schwimmen"
+        ]
+      },
+      {
+        "label": "Trainingszeit",
+        "number": 2,
+        "evidence": [
+          "nur am Wochenende trainieren"
+        ],
+        "explanation": "Trainingszeit = antrenman zamanı. Mariam hafta içi çalışıyor; metinde „sie kann nur am Wochenende trainieren“ → hafta sonu.",
+        "choices": [
+          "Montag bis Freitag",
+          "am Wochenende"
+        ],
+        "answer": "am Wochenende"
+      },
+      {
+        "label": "Erfahrung: Wie lange?",
+        "number": 3,
+        "evidence": [
+          "ein Jahr lang geschwommen"
+        ],
+        "explanation": "Erfahrung = deneyim. Metinde „Sie hat schon in Syrien ein Jahr lang geschwommen“ → bir yıl: ein Jahr.",
+        "accept": [
+          "ein Jahr",
+          "1 Jahr",
+          "einem Jahr",
+          "ein Jahr lang"
+        ]
+      },
+      {
+        "label": "Weiteres Familienmitglied (Vorname)",
+        "number": 4,
+        "evidence": [
+          "Ihr Mann Omar"
+        ],
+        "explanation": "Weiteres Familienmitglied = üye olacak diğer aile ferdi. Metinde „Ihr Mann Omar möchte auch Mitglied werden“ → Omar.",
+        "accept": [
+          "Omar",
+          "Omar Said"
+        ]
+      },
+      {
+        "label": "Zahlung",
+        "number": 5,
+        "evidence": [
+          "jeden Monat bezahlen"
+        ],
+        "explanation": "Zahlung = ödeme. Metinde „jeden Monat bezahlen“ → her ay: monatlich. jährlich = yılda bir.",
+        "choices": [
+          "monatlich",
+          "jährlich"
+        ],
+        "answer": "monatlich"
+      }
+    ]
+  }
+}

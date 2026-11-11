@@ -158,8 +158,18 @@ describe('Schreiben Worker', () => {
     // Talimat her metin türü için kural içeriyor; sitedeki setlerin bütün textType değerleri tanınıyor.
     for (const key of ['Gayriresmî e-posta', 'Kısa mesaj', 'Yarı resmî e-posta', 'Resmî yazı', 'Forum yazısı']) assert.ok(PROMPT.includes(key), key);
     const types = new Set();
-    const walk = (dir) => { for (const e of fs.readdirSync(dir, { withFileTypes: true })) { const p = `${dir}/${e.name}`; if (e.isDirectory()) walk(p); else if (p.includes('/schreiben/') && p.endsWith('.json')) types.add(JSON.parse(fs.readFileSync(p, 'utf8')).textType); } };
+    const walk = (dir) => { for (const e of fs.readdirSync(dir, { withFileTypes: true })) { const p = `${dir}/${e.name}`; if (e.isDirectory()) walk(p); else if (p.includes('/schreiben/') && p.endsWith('.json')) { const set = JSON.parse(fs.readFileSync(p, 'utf8')); if (set.kind === 'writing') types.add(set.textType); } } };
     walk('data/exams');
     for (const t of types) assert.ok(TEXT_TYPES[t], `textType ${t}`);
+  });
+
+  test('hitaptan sonraki küçük harfi büyüten öneri atılır; büyük harfi küçülten kalır', () => {
+    const raw = (items) => JSON.stringify({ fehler: items, korrigierter_text: '' });
+    const a = cleanResult(raw([{ original: 'ich bin krank.', korrektur: 'Ich bin krank.', erklaerung: 'x' }]), 'Liebe Frau Roth,\nich bin krank.\nViele Grüße');
+    assert.equal(a.errors.length, 0);
+    const b = cleanResult(raw([{ original: 'Das Fenster', korrektur: 'das Fenster', erklaerung: 'x' }]), 'Sehr geehrter Herr Lang,\nDas Fenster ist kaputt.');
+    assert.equal(b.errors.length, 1);
+    const c = cleanResult(raw([{ original: 'ich', korrektur: 'Ich', erklaerung: 'x' }]), 'Hallo!\nich komme.');
+    assert.equal(c.errors.length, 1, 'hitap virgülle bitmiyorsa öneri kalır');
   });
 });

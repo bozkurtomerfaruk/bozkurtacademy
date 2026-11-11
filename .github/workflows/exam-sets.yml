@@ -3,11 +3,17 @@ permissions:
   contents: read
 
 on:
+  # push yalnızca main'de; diğer dallar pull_request ile çalışır (aynı commit iki kez çalışmasın).
   push:
     branches: [main]
     paths: ['data/exams/**', 'js/examsData.js', 'scripts/check-exams.mjs', '.github/workflows/exam-sets.yml']
   pull_request:
     paths: ['data/exams/**', 'js/examsData.js', 'scripts/check-exams.mjs', '.github/workflows/exam-sets.yml']
+# Aynı dala (PR'da head dalı, main'de main) yeni bir push gelince eski çalıştırma iptal edilir.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   check:
     runs-on: ubuntu-latest

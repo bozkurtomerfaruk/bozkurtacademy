@@ -5,10 +5,17 @@ permissions:
   contents: read
 
 on:
+  # push yalnızca main'de; diğer dallar pull_request ile çalışır (aynı commit iki kez çalışmasın).
   push:
+    branches: [main]
     paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/csp.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', 'scripts/check-html-escape.mjs', 'scripts/grammar-pages.mjs', 'scripts/blog-pages.mjs', '_blog/**', 'images/blog/**', 'data/catalog.json', 'data/grammar-index.json', 'data/*-grammar.json', '**/*.html', 'js/**', 'css/**', 'data/alfabe.json', 'tests/alfabe-logic.test.mjs', '.github/workflows/site-pages.yml']
   pull_request:
     paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/csp.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', 'scripts/check-html-escape.mjs', 'scripts/grammar-pages.mjs', 'scripts/blog-pages.mjs', '_blog/**', 'images/blog/**', 'data/catalog.json', 'data/grammar-index.json', 'data/*-grammar.json', '**/*.html', 'js/**', 'css/**', 'data/alfabe.json', 'tests/alfabe-logic.test.mjs', '.github/workflows/site-pages.yml']
+# Aynı dala (PR'da head dalı, main'de main) yeni bir push gelince eski çalıştırma iptal edilir.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   check:
     runs-on: ubuntu-latest

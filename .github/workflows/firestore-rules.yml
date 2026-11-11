@@ -3,10 +3,17 @@ permissions:
   contents: read
 
 on:
+  # push yalnızca main'de; diğer dallar pull_request ile çalışır (aynı commit iki kez çalışmasın).
   push:
+    branches: [main]
     paths: ['firestore.rules', 'tests/**', 'worker/**', 'scripts/placement-cleanup.mjs', 'apps-script/**', 'js/html.js', 'scripts/check-html-escape.mjs', 'package.json', 'package-lock.json', 'firebase.json', '.github/workflows/firestore-rules.yml']
   pull_request:
     paths: ['firestore.rules', 'tests/**', 'worker/**', 'scripts/placement-cleanup.mjs', 'apps-script/**', 'js/html.js', 'scripts/check-html-escape.mjs', 'package.json', 'package-lock.json', 'firebase.json', '.github/workflows/firestore-rules.yml']
+# Aynı dala (PR'da head dalı, main'de main) yeni bir push gelince eski çalıştırma iptal edilir.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   rules:
     runs-on: ubuntu-latest

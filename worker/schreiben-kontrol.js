@@ -51,6 +51,7 @@ Seviye A1 (görev adında "A1" geçiyorsa; kısa mesaj, yaklaşık 30 kelime):
 - Sadece açık hataları işaretle. Basit ama doğru cümleleri daha "güzel" yapmaya çalışma; bunlar hata DEĞİLDİR.
 - A1'de beklenmeyen yapıları (yan cümle, Präteritum, Konjunktiv II, Passiv) önerme; bunların yokluğunu eksik sayma. Düzeltmede de sadece A1 kelime ve yapılarını kullan.
 - Açıklamaları en basit Türkçeyle, tek kısa cümleyle yaz.
+- Ama A1'de de şunlar her zaman hatadır, mutlaka işaretle: çekimli fiilin yeri ve mastarın (kommen, gehen …) cümle sonunda olmaması, hâl ve çoğul ekleri, du/Sie karışması, uygunsuz hitap ve kapanış, hitaptan sonraki satırın büyük harfle başlaması (Das Fenster … → das Fenster …).
 - Sonra düzeltilmiş metnin tamamını ver.
 - SADECE şu biçimde JSON ile cevap ver:
 {"fehler":[{"original":"...","korrektur":"...","erklaerung":"..."}],"korrigierter_text":"..."}
@@ -105,11 +106,18 @@ export function cleanResult(raw, text) {
   if (!list) return null;
   const seen = new Set();
   const errors = [];
+  // Hitap virgülle bitiyorsa sonraki satır küçük harfle başlar (Liebe Lena, / wie geht …). Model bazen bunu "düzeltip"
+  // büyük harfe çeviriyor; doğru olanı bozan bu öneri atılır.
+  const lines = text.split('\n');
+  const afterGreeting = /,\s*$/.test(lines[0] || '') ? (lines[1] || '').trimStart() : '';
+  const capitalizesAfterGreeting = (original, korrektur) => afterGreeting && /^\p{Ll}/u.test(original) && afterGreeting.startsWith(original)
+    && korrektur === original.charAt(0).toUpperCase() + original.slice(1);
   for (const item of list) {
     const original = typeof item?.original === 'string' ? item.original.trim() : '';
     const korrektur = typeof item?.korrektur === 'string' ? item.korrektur.trim() : '';
     const erklaerung = typeof item?.erklaerung === 'string' ? item.erklaerung.trim() : '';
     if (!original || !korrektur || !erklaerung || original === korrektur || !text.includes(original) || seen.has(original)) continue;
+    if (capitalizesAfterGreeting(original, korrektur)) continue;
     seen.add(original);
     errors.push({ original: original.slice(0, 300), korrektur: korrektur.slice(0, 300), erklaerung: erklaerung.slice(0, 600) });
     if (errors.length >= 30) break;

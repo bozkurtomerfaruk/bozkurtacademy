@@ -162,4 +162,14 @@ describe('Schreiben Worker', () => {
     walk('data/exams');
     for (const t of types) assert.ok(TEXT_TYPES[t], `textType ${t}`);
   });
+
+  test('hitaptan sonraki küçük harfi büyüten öneri atılır; büyük harfi küçülten kalır', () => {
+    const raw = (items) => JSON.stringify({ fehler: items, korrigierter_text: '' });
+    const a = cleanResult(raw([{ original: 'ich bin krank.', korrektur: 'Ich bin krank.', erklaerung: 'x' }]), 'Liebe Frau Roth,\nich bin krank.\nViele Grüße');
+    assert.equal(a.errors.length, 0);
+    const b = cleanResult(raw([{ original: 'Das Fenster', korrektur: 'das Fenster', erklaerung: 'x' }]), 'Sehr geehrter Herr Lang,\nDas Fenster ist kaputt.');
+    assert.equal(b.errors.length, 1);
+    const c = cleanResult(raw([{ original: 'ich', korrektur: 'Ich', erklaerung: 'x' }]), 'Hallo!\nich komme.');
+    assert.equal(c.errors.length, 1, 'hitap virgülle bitmiyorsa öneri kalır');
+  });
 });

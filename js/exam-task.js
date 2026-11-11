@@ -175,9 +175,11 @@
     </section>`;
   }
 
+  const correctOf = (set, state) => scored(set).reduce((sum, { question }) => sum + points(question, state.answers[String(question.number)]), 0);
+
   function summaryHtml(set, state, path) {
     if (!state.checked) return '';
-    const correct = scored(set).reduce((sum, { question }) => sum + points(question, state.answers[String(question.number)]), 0);
+    const correct = correctOf(set, state);
     return `<div class="task-summary" tabindex="-1">
       <p class="task-score">${esc(fill('taskScore', { correct, total: total(set) }))}</p>
       <p>${esc(t('taskResultHint'))}</p>
@@ -276,6 +278,12 @@
           const summary = container.querySelector('.task-summary');
           summary?.focus({ preventScroll: true });
           container.querySelector('.task-head')?.scrollIntoView({ behavior: smooth(), block: 'start' });
+          // Giriş yapmış öğrencide js/account/session.js sonucu kaydeder (konu "sinav"); ziyaretçide hiçbir şey olmaz.
+          // Sadece puan: hangi sorunun yanlış olduğu kaydedilmez. Dil değişince yeniden çizilir ama olay tekrar gelmez.
+          window.dispatchEvent(new CustomEvent('ba:exercise-finished', { detail: {
+            level: data.level, topic: 'sinav', exercise: `${data.exam}-${data.level}-${data.section}-${data.teil}-${data.set}`,
+            score: correctOf(data, state), total: total(data), noteIn: '#examTask .task-summary'
+          } }));
         });
       }
       if (event.target.closest('[data-task-retry]')) {

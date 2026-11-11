@@ -52,7 +52,7 @@ async function renderHistory(){
     const name = names[g.key];
     return h('tr', {},
       h('td', { 'data-label': cols[0] }, h('strong', {}, name.exercise), h('span', { class: 'acc-sub' }, name.topic)),
-      h('td', { 'data-label': cols[1] }, g.level),
+      h('td', { 'data-label': cols[1] }, name.level || g.level),
       h('td', { 'data-label': cols[2], class: 'acc-num' }, scoreText(g.last)),
       h('td', { 'data-label': cols[3], class: 'acc-num' }, scoreText(g.best)),
       h('td', { 'data-label': cols[4], class: 'acc-num' }, String(g.attempts.length)),

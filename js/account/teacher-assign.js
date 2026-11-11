@@ -2,7 +2,7 @@
 // isteğe bağlı Google Docs linki ("her öğrenciye kopya" → /copy) ve bir ya da birden fazla öğrenci.
 import {
   $, berlinInputToDate, dateToBerlinInput, docsCopyUrl, h, LEVEL_EXAM, levelExamTopic, loadCatalogLevels, loadTopicExercises, localize, setStatus,
-  validHttpsUrl, WRITING, writingTasks
+  validHttpsUrl, WRITING, writingTasks, SINAV, examSets
 } from './common.js';
 import { fs } from './firebase.js';
 import { createAssignments, isEnabled, listStudents, requireTeacher } from './teacher-common.js';
@@ -10,6 +10,7 @@ import { createAssignments, isEnabled, listStudents, requireTeacher } from './te
 const chosen = []; // [{ level, topic, exercise, label }]
 let levels = [];
 let writingLevels = new Set(); // catalog levels that have Schreiben tasks (js/examsData.js)
+let examLevels = new Set(); // catalog levels that have exam sets (Lesen, Hören, Sprachbausteine, form)
 
 const key = (e) => `${e.level}/${e.topic}/${e.exercise}`;
 
@@ -58,14 +59,16 @@ async function renderExercises(){
 }
 
 function renderTopics(){
-  const level = levels.find((l) => l.id === $('aLevel').value);
+  const level = levels.find((l) => l.id === $('aLevel').value) || { id: $('aLevel').value, topics: [] };
   const topics = (level?.topics || []).filter((t) => t.path);
   // The level's end-of-level test (data/catalog.json → levelExam) is chosen like a topic.
   fillSelect($('aTopic'), [
     ...topics.map((t) => ({ value: t.id, label: localize(t.title, 'tr') })),
     ...(level?.levelExam ? [{ value: LEVEL_EXAM, label: levelExamTopic('tr') }] : []),
     // Sınav hazırlığındaki yazma görevleri (Schreiben): öğrenci metnini yazar, öğretmen geri bildirim verir.
-    ...(writingLevels.has(level?.id) ? [{ value: WRITING, label: 'Schreiben (sınav hazırlığı)' }] : [])
+    ...(writingLevels.has(level?.id) ? [{ value: WRITING, label: 'Schreiben (sınav hazırlığı)' }] : []),
+    // Sınav setleri: öğrenci "Kontrol et"e basınca puanı kaydedilir; ödev bu sonuçla "çözüldü" olur.
+    ...(examLevels.has(level?.id) ? [{ value: SINAV, label: 'Sınav setleri (Lesen, Hören, form doldurma …)' }] : [])
   ]);
   renderExercises();
 }
@@ -166,10 +169,14 @@ async function submit(event){
 const user = await requireTeacher({ loadingId: 'assignLoading', errorId: 'assignError' });
 if(user){
   try{
-    const [catalogLevels, students, writing] = await Promise.all([loadCatalogLevels(), listStudents(), writingTasks().catch(() => [])]);
+    const [catalogLevels, students, writing, sets] = await Promise.all([loadCatalogLevels(), listStudents(), writingTasks().catch(() => []), examSets().catch(() => [])]);
     levels = catalogLevels;
     writingLevels = new Set(writing.map((w) => w.catalogLevel));
-    fillSelect($('aLevel'), levels.map((l) => ({ value: l.id, label: `${l.id} · ${localize(l.title, 'tr')}` })));
+    examLevels = new Set(sets.flatMap((s) => s.catalogLevels));
+    // Katalogda olmayan sınav seviyeleri (C1, TestDaF) sadece sınav setleriyle seçilebilir.
+    const extra = [...examLevels].filter((id) => !levels.some((l) => l.id === id)).sort();
+    fillSelect($('aLevel'), [...levels.map((l) => ({ value: l.id, label: `${l.id} · ${localize(l.title, 'tr')}` })),
+      ...extra.map((id) => ({ value: id, label: `${id} · sadece sınav setleri` }))]);
     renderTopics();
     renderChosen();
     renderStudents(students, new URLSearchParams(location.search).get('ogrenci'));

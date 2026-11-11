@@ -15,7 +15,8 @@
     "test:worker": "node --test tests/worker.test.mjs",
     "test:alfabe": "node --test tests/alfabe-logic.test.mjs",
     "test:alfabe-account": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/alfabe-account.mjs\"",
-    "test:schreiben-ai": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/schreiben-ai-account.mjs\""
+    "test:schreiben-ai": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/schreiben-ai-account.mjs\"",
+    "test:sinav": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/sinav-account.mjs\""
   },
   "devDependencies": {
     "@firebase/rules-unit-testing": "5.0.2",

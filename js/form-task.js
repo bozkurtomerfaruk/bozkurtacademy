@@ -3,7 +3,7 @@
 // js/writing-task.js bir Schreiben setini yükleyip kind "form" görünce buraya devreder (BAFormTask.draw).
 // Kontrol: büyük-küçük harf, fazla boşluk, sondaki noktalama ve ß/ss, ä/ae farkı önemsiz; kabul edilen cevaplardan birine
 // tek harf uzaklıktaki cevap (en az 5 harf, sayıları aynı) "doğru, ama yazımı: …" sayılır. Cevabın dayandığı yer metinde
-// boşluğun numarasıyla işaretlenir. Hiçbir şey kaydedilmez ve gönderilmez (diğer sınav setleri gibi).
+// boşluğun numarasıyla işaretlenir. Ziyaretçide hiçbir şey gönderilmez; giriş yapmış öğrencide sadece puan kaydedilir (session.js).
 (() => {
   'use strict';
 
@@ -163,6 +163,13 @@
     container.querySelector('[data-ft-check]')?.addEventListener('click', () => {
       state.checked = true;
       draw(container, set, path);
+      // Giriş yapmış öğrencide sonuç kaydedilir (js/account/session.js, konu "sinav"); sadece puan, cevaplar değil.
+      const rows = blanks(set);
+      window.dispatchEvent(new CustomEvent('ba:exercise-finished', { detail: {
+        level: set.level, topic: 'sinav', exercise: `${set.exam}-${set.level}-${set.section}-${set.teil}-${set.set}`,
+        score: rows.filter(row => counts(judge(row, state.answers[row.number]).status)).length, total: rows.length,
+        noteIn: '#examTask [data-ft-summary]'
+      } }));
       const summary = container.querySelector('[data-ft-summary]');
       summary?.focus({ preventScroll: true });
       summary?.scrollIntoView({ behavior: smooth(), block: 'start' });

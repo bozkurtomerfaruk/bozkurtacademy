@@ -1,0 +1,109 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-4",
+  "title": "Fenster kaputt",
+  "minutes": 15,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "In Ihrer Wohnung ist das Fenster im Bad kaputt.",
+  "task": "Schreiben Sie Ihrem Vermieter, Herrn Lang, eine E-Mail:",
+  "points": [
+    "Warum schreiben Sie?",
+    "Sagen Sie: Seit wann?",
+    "Fragen Sie: Wann kommt ein Handwerker?"
+  ],
+  "instructions": "Schreiben Sie zu jedem Punkt ein bis zwei Sätze (circa 30 Wörter). Schreiben Sie auch eine Anrede und einen Gruß.",
+  "words": {
+    "target": 30,
+    "min": 25,
+    "max": 40
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "1. madde: Neden yazdığımı söyledim (banyodaki pencere bozuk)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "2. madde: Ne zamandan beri bozuk olduğunu yazdım (seit Montag …)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "3. madde: Ustanın ne zaman geleceğini sordum (Wann kommt …?)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap ve kapanış var: Liebe Frau … / Sehr geehrter Herr … ve Viele Grüße / Mit freundlichen Grüßen + adım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Her maddeye bir iki kısa cümle yazdım; hitaptan sonraki satır küçük harfle başlıyor."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Baştan sona Sie kullandım (Sie, Ihnen, Ihr); du ve Tschüss yok."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Düz cümlede çekimli fiil 2. sırada: Am Samstag habe ich Zeit. / Morgen kann ich nicht kommen."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "seit + Dativ: seit Montag, seit zwei Tagen."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Liebe Frau … / Lieber Herr …,",
+          "tr": "Sevgili … Hanım / … Bey (tanıdık biri)"
+        },
+        {
+          "de": "Viele Grüße",
+          "tr": "Selamlar"
+        }
+      ]
+    },
+    {
+      "group": "Warum schreiben Sie?",
+      "items": [
+        {
+          "de": "Das Fenster im Bad ist kaputt.",
+          "tr": "Banyodaki pencere bozuk."
+        },
+        {
+          "de": "Es geht nicht zu.",
+          "tr": "Kapanmıyor."
+        }
+      ]
+    },
+    {
+      "group": "Sagen und fragen",
+      "items": [
+        {
+          "de": "Seit Montag …",
+          "tr": "Pazartesiden beri …"
+        },
+        {
+          "de": "Wann kommt ein Handwerker?",
+          "tr": "Usta ne zaman geliyor?"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Sehr geehrter Herr Lang,\ndas Fenster im Bad ist kaputt. Es geht nicht mehr zu. Das ist seit Montag so und es ist sehr kalt. Wann kommt ein Handwerker?\nMit freundlichen Grüßen\nAli Demir",
+    "notes": [
+      "Neden: pencere bozuk; ne zamandan beri: seit Montag; soru: usta ne zaman geliyor?",
+      "Ev sahibine Sie: Sehr geehrter Herr Lang ve Mit freundlichen Grüßen.",
+      "Hitaptan sonra küçük harf: das Fenster …"
+    ]
+  }
+}

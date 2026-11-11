@@ -126,10 +126,13 @@ await teacher.goto(`${BASE}/ogretmen-odev.html?ogrenci=ogrenci1`); await teacher
 await teacher.selectOption('#aLevel', 'B1'); await teacher.waitForTimeout(500);
 ok(await teacher.locator('#aTopic option[value="schreiben"]').count() === 1, 'ödev ekranında B1 için "Schreiben (sınav hazırlığı)"');
 await teacher.selectOption('#aLevel', 'A1'); await teacher.waitForTimeout(300);
-ok(await teacher.locator('#aTopic option[value="schreiben"]').count() === 0, 'A1 için Schreiben yok (görev yok)');
+await teacher.selectOption('#aTopic', 'schreiben').catch(() => {}); await teacher.waitForTimeout(800);
+ok(await teacher.locator('#aExerciseList label').count() === 10 && await teacher.locator('#aExerciseList label', { hasText: 'Teil 1 · Beim Arzt' }).count() === 1, 'A1 için 10 Schreiben görevi (form + kısa mesaj)');
+await teacher.selectOption('#aLevel', 'A2'); await teacher.waitForTimeout(300);
+ok(await teacher.locator('#aTopic option[value="schreiben"]').count() === 0, 'A2 için Schreiben yok (henüz görev yok)');
 await teacher.selectOption('#aLevel', 'B1'); await teacher.waitForTimeout(300);
 await teacher.selectOption('#aTopic', 'schreiben'); await teacher.waitForTimeout(800);
-ok(await teacher.locator('#aExerciseList label').count() === 15 && await teacher.locator('#aExerciseList label', { hasText: 'Teil 3 · Teambesprechung' }).count() === 1, 'ödevde 15 Schreiben görevi (Teil 1–3) seçilebiliyor');
+ok(await teacher.locator('#aExerciseList label').count() === 15 && await teacher.locator('#aExerciseList label', { hasText: 'Teil 3 · Teambesprechung' }).count() === 1, 'ödevde B1 için 15 Schreiben görevi (Teil 1–3) seçilebiliyor');
 await teacher.locator('#aExerciseList label', { hasText: 'Geburtstag verpasst' }).locator('input').check();
 await teacher.fill('#aTitle', 'Schreiben: Geburtstag verpasst');
 await teacher.click('#aSubmit'); await teacher.waitForURL(/ogretmen\.html/, { timeout: 15000 }).catch(() => {});

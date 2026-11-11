@@ -60,6 +60,37 @@ function checkWriting(set, fail) {
   if (!Array.isArray(set.model?.notes) || !set.model.notes.length || !set.model.notes.every(text)) fail('"model.notes" needs at least one note (Turkish)');
 }
 
+// Form doldurma (kind "form", Goethe A1 Schreiben Teil 1; js/form-task.js): durum metni, görev, form satırları.
+// Boşluklar 1'den başlayıp sırayla numaralı; her biri ya kabul edilen cevaplar (accept) ya da seçenekler + cevap içerir,
+// dayanağı (evidence) durum metninde bir kez geçer ve çakışmaz, Türkçe açıklaması en az 40 karakter.
+function checkForm(set, fail) {
+  const text = value => typeof value === 'string' && value.trim();
+  for (const key of ['title', 'situation', 'task']) if (!text(set[key])) fail(`"${key}" missing`);
+  const rows = Array.isArray(set.form?.rows) ? set.form.rows : [];
+  if (!text(set.form?.title) || rows.length < 5) { fail('"form" needs a title and rows'); return; }
+  const blanks = rows.filter(row => row.number !== undefined);
+  blanks.forEach((row, i) => { if (row.number !== i + 1) fail(`blank numbers must be 1, 2, 3 …; found ${row.number}`); });
+  if (blanks.length !== 5) fail(`form needs 5 blanks, found ${blanks.length}`);
+  if (rows.filter(row => row.example).length !== 1) fail('form needs exactly one example row (0)');
+  const spans = [];
+  for (const row of rows) {
+    if (!text(row.label)) fail('every row needs a label');
+    if (row.number === undefined) { if (!text(row.value)) fail(`row "${row.label}" needs a value or a number`); continue; }
+    const label = `blank ${row.number}`;
+    if (row.choices) {
+      if (!Array.isArray(row.choices) || row.choices.length < 2 || !row.choices.every(text) || !row.choices.includes(row.answer)) fail(`${label}: "choices" (2+) must include "answer"`);
+    } else if (!Array.isArray(row.accept) || !row.accept.length || !row.accept.every(text)) fail(`${label}: "accept" needs at least one answer`);
+    if (!Array.isArray(row.evidence) || !row.evidence.length) fail(`${label}: "evidence" missing`);
+    for (const quote of row.evidence || []) {
+      const at = String(set.situation).indexOf(quote);
+      if (at < 0 || String(set.situation).indexOf(quote, at + 1) >= 0) { fail(`${label}: evidence "${quote}" must occur exactly once in "situation"`); continue; }
+      if (spans.some(s => at < s.end && at + quote.length > s.at)) fail(`${label}: evidence "${quote}" overlaps another blank`);
+      spans.push({ at, end: at + quote.length });
+    }
+    if (!text(row.explanation) || row.explanation.length < 40) fail(`${label}: Turkish "explanation" needs at least 40 characters`);
+  }
+}
+
 for (const exam of data.exams) for (const level of exam.levels || []) for (const section of level.sections) {
   section.teile.forEach((teil, index) => {
     for (const entry of teil.exercises || []) {
@@ -78,7 +109,7 @@ for (const exam of data.exams) for (const level of exam.levels || []) for (const
       if (!(set.minutes > 0)) fail('"minutes" must be a positive number');
       // Schreiben (kind "writing"): a task, a word target, a checklist, Redemittel and a model answer; no questions.
       // "instructions" is optional there (Goethe B1 Teil 2 has only the task line).
-      if (section.id === 'schreiben') { checkWriting(set, fail); writings++; continue; }
+      if (section.id === 'schreiben') { if (set.kind === 'form') checkForm(set, fail); else checkWriting(set, fail); writings++; continue; }
       if (!set.instructions) fail('"instructions" missing');
       if (!Array.isArray(set.groups) || !set.groups.length) { fail('"groups" missing'); continue; }
 

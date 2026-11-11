@@ -250,6 +250,8 @@
     container.innerHTML = `<p class="task-status" role="status">${esc(t('taskLoading'))}</p>`;
     return load(path).then(set => {
       if (!container.isConnected || container.dataset.taskPath !== path) return;
+      // Form doldurma (Goethe A1 Teil 1) js/form-task.js'te.
+      if (set.kind === 'form') { window.BAFormTask?.render(container, set, { path, preserve, nav }); return; }
       if (!preserve || !states[path]) states[path] = { text: readDraft(set), submitted: false, checks: {} };
       draw(container, set, path);
       bind(container);

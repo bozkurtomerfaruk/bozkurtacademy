@@ -1,0 +1,93 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-4",
+  "title": "Schifffahrt im Urlaub",
+  "minutes": 5,
+  "kind": "form",
+  "situation": "Ihr Freund Tomasz Nowak macht mit seiner Frau und seinen drei Kindern Urlaub in Lindau. Die Familie wohnt im Hotel Seeblick. Im Reisebüro bucht Tomasz für den nächsten Samstag eine Schifffahrt nach Konstanz. Er bezahlt mit Kreditkarte.",
+  "task": "Helfen Sie Ihrem Freund und schreiben Sie die fünf fehlenden Informationen in das Formular.",
+  "form": {
+    "title": "Buchung Schifffahrt",
+    "subtitle": "Reisebüro Bodensee",
+    "rows": [
+      {
+        "label": "Familienname, Vorname",
+        "value": "Nowak, Tomasz",
+        "example": true
+      },
+      {
+        "label": "Anzahl der Personen",
+        "number": 1,
+        "evidence": [
+          "mit seiner Frau"
+        ],
+        "explanation": "Anzahl der Personen = kişi sayısı. Tomasz + eşi (mit seiner Frau) + üç çocuğu (2. boşluk: seinen drei Kindern) = 5 kişi. Sayıyı rakamla (5) ya da yazıyla (fünf) yazabilirsin.",
+        "accept": [
+          "5",
+          "fünf",
+          "fuenf"
+        ]
+      },
+      {
+        "label": "Davon Kinder",
+        "number": 2,
+        "evidence": [
+          "seinen drei Kindern"
+        ],
+        "explanation": "Davon Kinder = bunlardan kaçı çocuk. Metinde „seinen drei Kindern“ → 3 çocuk.",
+        "accept": [
+          "3",
+          "drei"
+        ]
+      },
+      {
+        "label": "Urlaubsadresse",
+        "value": "Hotel Seeblick, Lindau"
+      },
+      {
+        "label": "Ziel",
+        "number": 3,
+        "evidence": [
+          "eine Schifffahrt nach Konstanz"
+        ],
+        "explanation": "Ziel = varış yeri, nereye. Metinde „eine Schifffahrt nach Konstanz“ → Konstanz. Lindau tatil yaptıkları yer, varış yeri değil.",
+        "accept": [
+          "Konstanz",
+          "nach Konstanz"
+        ]
+      },
+      {
+        "label": "Reisetag",
+        "number": 4,
+        "evidence": [
+          "für den nächsten Samstag"
+        ],
+        "explanation": "Reisetag = yolculuk günü. Metinde „für den nächsten Samstag“ → gelecek cumartesi: Samstag.",
+        "accept": [
+          "Samstag",
+          "nächsten Samstag",
+          "am Samstag",
+          "am nächsten Samstag",
+          "nächster Samstag"
+        ]
+      },
+      {
+        "label": "Zahlungsweise",
+        "number": 5,
+        "evidence": [
+          "Er bezahlt mit Kreditkarte"
+        ],
+        "explanation": "Zahlungsweise = ödeme şekli. Metinde „Er bezahlt mit Kreditkarte“ → kredi kartı; bar (nakit) değil.",
+        "choices": [
+          "bar",
+          "Kreditkarte"
+        ],
+        "answer": "Kreditkarte"
+      }
+    ]
+  }
+}

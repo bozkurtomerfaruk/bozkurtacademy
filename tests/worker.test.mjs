@@ -158,7 +158,7 @@ describe('Schreiben Worker', () => {
     // Talimat her metin türü için kural içeriyor; sitedeki setlerin bütün textType değerleri tanınıyor.
     for (const key of ['Gayriresmî e-posta', 'Kısa mesaj', 'Yarı resmî e-posta', 'Resmî yazı', 'Forum yazısı']) assert.ok(PROMPT.includes(key), key);
     const types = new Set();
-    const walk = (dir) => { for (const e of fs.readdirSync(dir, { withFileTypes: true })) { const p = `${dir}/${e.name}`; if (e.isDirectory()) walk(p); else if (p.includes('/schreiben/') && p.endsWith('.json')) types.add(JSON.parse(fs.readFileSync(p, 'utf8')).textType); } };
+    const walk = (dir) => { for (const e of fs.readdirSync(dir, { withFileTypes: true })) { const p = `${dir}/${e.name}`; if (e.isDirectory()) walk(p); else if (p.includes('/schreiben/') && p.endsWith('.json')) { const set = JSON.parse(fs.readFileSync(p, 'utf8')); if (set.kind === 'writing') types.add(set.textType); } } };
     walk('data/exams');
     for (const t of types) assert.ok(TEXT_TYPES[t], `textType ${t}`);
   });

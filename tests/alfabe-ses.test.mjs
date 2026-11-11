@@ -206,20 +206,20 @@ const PY = spawnSync('python3', ['--version']).status === 0 ? 'python3' : 'pytho
 test('yerel üretim: Piper metni, tür başına hız ve aday sayısı, makine kulağı; sadece eksik/değişen klipler', { skip: !FFMPEG && 'ffmpeg yok' }, async () => {
   const root = localRepo();
   const env = { ALFABE_PYTHON: PY };
-  const only = ['harf-v', 'harf-y', 'kelime-die-giraffe', 'cevap-mia-wolf-web-de', 'aferin', 'talimat-duy'];
+  const only = ['harf-v', 'harf-y', 'kelime-die-orange', 'cevap-mia-wolf-web-de', 'aferin', 'talimat-duy'];
   const lines = [];
   assert.equal(await run(['--only', only.join(',')], { root, env, log: (l) => lines.push(l) }), 0, lines.join('\n'));
   const req = JSON.parse(fs.readFileSync(path.join(root, 'scripts/alfabe-ses/yerel_tts.py.req.json'), 'utf8'));
   const job = Object.fromEntries(req.jobs.map((j) => [j.id, j]));
   assert.equal(job['harf-v'].text, 'Fau.', 'V: "Vau" değil "Fau" (Piper "Vau"yu /vaʊ/ okur)');
   assert.equal(job['harf-y'].text, '[[ ˈʏpsilɔn ]]', 'Y: doğrudan fonem');
-  assert.equal(job['kelime-die-giraffe'].text, 'die [[ ʒirˈafə ]].');
+  assert.equal(job['kelime-die-orange'].text, 'die [[ oːrˈaŋʒə ]].', 'vurgusu yanlış okunan kelime fonemle');
   assert.equal(job['cevap-mia-wolf-web-de'].text, 'mia Punkt wolf Ät web Punkt de.');
   assert.equal(job['cevap-mia-wolf-web-de'].expect, 'mia.wolf@web.de', 'makine kulağı yazılışı bekler');
   assert.equal(job['harf-v'].length_scale, 1.2, 'harf adları daha yavaş');
-  assert.equal(job['kelime-die-giraffe'].length_scale, 1.05);
+  assert.equal(job['kelime-die-orange'].length_scale, 1.05);
   assert.equal(job['harf-v'].candidates, 1, 'harflerde tek aday');
-  assert.equal(job['kelime-die-giraffe'].candidates, CANDIDATES.kelime);
+  assert.equal(job['kelime-die-orange'].candidates, CANDIDATES.kelime);
   assert.equal(job['aferin'].tone, 'cocuk', 'Türkçe çocuk tonu');
   assert.ok(req.models.de.endsWith('de_DE-thorsten-medium.onnx'));
   assert.deepEqual(req.asr, { model: 'medium' });
@@ -227,11 +227,11 @@ test('yerel üretim: Piper metni, tür başına hız ve aday sayısı, makine ku
   assert.equal(m.clips['harf-v'].source, 'yerel');
   assert.equal(m.clips['harf-v'].phonemes, 'fˈaʊ');
   assert.equal(m.clips['harf-v'].render, renderKey('yerel', by['harf-v']));
-  assert.equal(m.clips['kelime-die-giraffe'].heard, 'die Giraffe');
-  assert.equal(m.clips['kelime-die-giraffe'].score, 1);
+  assert.equal(m.clips['kelime-die-orange'].heard, 'die Orange');
+  assert.equal(m.clips['kelime-die-orange'].score, 1);
   assert.equal(m.clips['aferin'].voice, 'chatterbox:multilingual');
   const table = fs.readFileSync(path.join(root, 'docs/alfabe-ses-listesi.md'), 'utf8');
-  assert.match(table, /`de\/kelime-die-giraffe\.mp3` .*die \[\[ ʒirˈafə \]\]\. .*die Giraffe \(1\) \| üretildi \(yerel\)/);
+  assert.match(table, /`de\/kelime-die-orange\.mp3` .*die \[\[ oːrˈaŋʒə \]\]\. .*die Orange \(1\) \| üretildi \(yerel\)/);
   // Again: nothing to do. ALFABE_ASR=0 turns the check off.
   fs.rmSync(path.join(root, 'scripts/alfabe-ses/yerel_tts.py.req.json'));
   assert.equal(await run(['--only', only.join(',')], { root, env, log: quiet }), 0);
@@ -262,6 +262,18 @@ test('alternatifler: her harfin yazımları ayrı dosyalarda, seçili işaretli;
   assert.equal(await run(['--alternatifler'], { root, env, log: quiet }), 0);
   assert.ok(!fs.existsSync(path.join(root, 'scripts/alfabe-ses/yerel_tts.py.req.json')));
   assert.ok(localSpeed(by['harf-v']) > localSpeed(by['kelime-der-vogel']));
+  assert.deepEqual(list.kelimeler, [], 'şu an hiçbir kelimenin alternatifi yok');
+  // A word with sesAlternatifleri gets its own takes (the best of several, like the game's clips).
+  const dataFile = path.join(root, 'data/alfabe.json');
+  const data = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
+  data.harfler.find((l) => l.id === 'G').cocuk.sesAlternatifleri = ['die Gabel.', 'die [[ ɡˈaːbl̩ ]].'];
+  fs.writeFileSync(dataFile, JSON.stringify(data));
+  assert.equal(await run(['--alternatifler'], { root, env, log: quiet }), 0);
+  const req = JSON.parse(fs.readFileSync(path.join(root, 'scripts/alfabe-ses/yerel_tts.py.req.json'), 'utf8'));
+  assert.deepEqual(req.jobs.map((j) => [j.text, j.expect, j.candidates]), [['die Gabel.', 'die Gabel', CANDIDATES.kelime], ['die [[ ɡˈaːbl̩ ]].', 'die Gabel', CANDIDATES.kelime]]);
+  const words = JSON.parse(fs.readFileSync(path.join(root, 'tools/audio-alternatifler/liste.json'), 'utf8')).kelimeler;
+  assert.deepEqual(words.map((w) => [w.clip, w.secenekler.map((o) => o.secili)]), [['kelime-die-gabel', [true, false]]]);
+  assert.ok(fs.existsSync(path.join(root, 'tools/audio-alternatifler/de/kelime-die-gabel--2.mp3')));
 });
 
 test('--alternatif: kontrolde seçilen alternatif dosya oyuna alınır (aynı çekim); metin uyuşmazsa reddedilir', { skip: !FFMPEG && 'ffmpeg yok' }, async () => {

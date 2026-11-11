@@ -51,7 +51,8 @@ node tests/alfabe.mjs
 - `okunus`: Türkçe harflerle, fonetik işaret olmadan; uzun ünlü çift harfle (Vogel → "foogel", Wasser → "vasır", Zebra → "tsebra"). Birim testi `:` gibi işaretleri reddeder.
 - `artikel`: der, die ya da das. `anlam`: Türkçe. `emoji`: tek bir emoji (çocuk modunda resim yerine). `okunus` isteğe bağlı (yetişkin modunda gösterilir).
 - Kelime harfi içermek zorunda; harfle başlamıyorsa oyun harfi kelimenin içinde kendisi vurgular (der Bär, der Fuß).
-- Çocuk kelimeleri somut ve resmedilebilir olsun (hayvan, yiyecek, oyuncak); 5 harfe kadar olanlar heceleme modunda da sorulur (`heceleme.cocuk.enFazlaHarf`).
+- Çocuk kelimeleri somut ve resmedilebilir olsun (hayvan, yiyecek, oyuncak, ev eşyası); 5 harfe kadar olanlar heceleme modunda da sorulur (`heceleme.cocuk.enFazlaHarf`).
+- Örnek kelime harfin olağan sesini öğretmeli: G için "die Gabel" (/ɡ/), "die Giraffe" değil (orada G /ʒ/, yani "j" gibi okunur).
 - Yetişkin heceleme senaryosu eklemek için `heceleme.yetiskin` listesine `{ "tur", "durum", "soru", "cevap" }` ekle. Cevapta harfler ve `isaretler` içindeki @ . - kullanılabilir.
 - Karıştırılan harfler `karistirilanlar` listesinde; seçeneklerde yan yana gelirler.
 - Değiştirince `npm run test:alfabe` çalıştır (her harfin iki örneği ve harfi içerdiği denetlenir) ve `js/alfabe.js` içindeki `alfabe.json?v=` sürümünü artır.
@@ -137,7 +138,7 @@ node scripts/generate-alfabe-audio.mjs
   okunduğu için `Eff., Ell., Emm., Enn., Ess., Err.`; "Jot" /joːt/ olduğu için `Jott.`; "Ce" /keː/ olduğu için `Zeh.`;
   "Qu" /kf/ olduğu için `Kuh.`
 - Fonem: `[[ … ]]` arası doğrudan okunur, ör. Y için `[[ ˈʏpsilɔn ]]` (hiçbir yazım /ʏpsilɔn/ vermedi). Aynı yol yabancı
-  kökenli kelimelerde de kullanıldı: `die [[ ʒirˈafə ]].` (Giraffe), Orange, Pinguin, Rakete, Zebra, Delfin, Rathaus.
+  kökenli kelimelerde de kullanıldı: `die [[ oːrˈaŋʒə ]].` (Orange), Pinguin, Rakete, Zebra, Delfin, Rathaus.
 
 Her harfin denenen yazımları `sesAlternatifleri`'nde (ilki seçili). Hepsini yan yana dinlemek için:
 
@@ -153,7 +154,7 @@ adları: yazım alternatifleri" bölümü çıkar. Başka bir yazımı seçmek i
 node scripts/generate-alfabe-audio.mjs --alternatif harf-b:3,harf-s:1
 ```
 
-`harf-b:3` = B'nin 3. alternatifi. Kelimelere de `sesAlternatifleri` eklenebilir (ör. Giraffe); onlar da aynı yolla
+`harf-b:3` = B'nin 3. alternatifi. Kelimelere de `sesAlternatifleri` eklenebilir; onlar da aynı yolla
 seçilir.
 
 **Dinleme:** `python3 -m http.server 8765` açıkken `http://localhost:8765/tools/audio-check.html`.

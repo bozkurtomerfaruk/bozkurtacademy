@@ -708,7 +708,7 @@
   // the files themselves carry ?v=<hash>. Without the list the game uses the device voice.
   const manifest = fetch('/audio/alfabe/manifest.json', { cache: 'no-cache' })
     .then((r) => (r.ok ? r.json() : null)).catch(() => null);
-  Promise.all([fetch('/data/alfabe.json?v=3').then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }), manifest])
+  Promise.all([fetch('/data/alfabe.json?v=4').then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }), manifest])
     .then(([d, m]) => {
       data = d;
       // The children's spoken instructions come from the data file, the same text the recordings say.

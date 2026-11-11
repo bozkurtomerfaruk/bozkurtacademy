@@ -5,7 +5,7 @@ Bu dosya `node scripts/generate-alfabe-audio.mjs` ile üretilir; elle düzenleme
 Kendi kaydını aynı dosya adıyla `audio/alfabe/` altına koy, sonra `node scripts/generate-alfabe-audio.mjs --index`.
 
 - Klip: 125 (dosyası olan: 125)
-- Toplam boyut: 647.5 KB
+- Toplam boyut: 647.1 KB
 
 Okutulan metin: yerel ses üreticisine verilen metin, metinden farklıysa (`data/alfabe.json` → `sesMetni`; `[[ … ]]` fonemdir).
 Hedef IPA: harf adının doğru okunuşu. Üretilen fonemler: Piper'ın gerçekten okuduğu (Türkçe motor fonem vermez).
@@ -50,7 +50,7 @@ yerine geçmez; puanı düşük klipleri önce dinle.
 | 34 | `de/kelime-der-delfin.mp3` | de | Kelime | der Delfin | der [[ dɛlfˈiːn ]]. |  | /dɛɾ dɛlfˈiːn/ | Der Delfin (1) | üretildi (yerel) | 5.7 KB |
 | 35 | `de/kelime-die-ente.mp3` | de | Kelime | die Ente |  |  | /diː ˈɛntə./ | Die Ente. (1) | üretildi (yerel) | 4.3 KB |
 | 36 | `de/kelime-der-fisch.mp3` | de | Kelime | der Fisch |  |  | /dɛɾ fˈɪʃ./ | der Fisch (1) | üretildi (yerel) | 4.6 KB |
-| 37 | `de/kelime-die-giraffe.mp3` | de | Kelime | die Giraffe | die [[ ʒirˈafə ]]. |  | /diː ʒirˈafə/ | die Giraffe. (1) | üretildi (yerel) | 5.3 KB |
+| 37 | `de/kelime-die-gabel.mp3` | de | Kelime | die Gabel |  |  | /diː ɡˈɑːbəl./ | die Gabel (1) | üretildi (yerel) | 4.9 KB |
 | 38 | `de/kelime-der-hund.mp3` | de | Kelime | der Hund |  |  | /dɛɾ hˈʊnt./ | Der Hund (1) | üretildi (yerel) | 4.3 KB |
 | 39 | `de/kelime-der-igel.mp3` | de | Kelime | der Igel |  |  | /dɛɾ ˈiːɡəl./ | der Igel (1) | üretildi (yerel) | 4.5 KB |
 | 40 | `de/kelime-die-jacke.mp3` | de | Kelime | die Jacke |  |  | /diː jˈakə./ | Die Jacke (1) | üretildi (yerel) | 4.5 KB |

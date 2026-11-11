@@ -32,7 +32,7 @@ export function collect(root = REPO) {
   };
   const groups = [
     { id: 'harf', title: 'Harf adları', note: 'Oyundaki klip ve denenen yazımlar yan yana. "Seçtiğim" ile hangisinin oyunda kalmasını istediğini işaretle.' },
-    { id: 'cocuk', title: 'Çocuk kelimeleri', note: 'Çocuk modundaki örnek kelimeler, artikeliyle. Alternatifi olan kelimelerde (Giraffe) "Seçtiğim" ile birini seç.' },
+    { id: 'cocuk', title: 'Çocuk kelimeleri', note: 'Çocuk modundaki örnek kelimeler, artikeliyle. Alternatifi olan kelimelerde "Seçtiğim" ile birini seç.' },
     { id: 'yetiskin', title: 'Yetişkin kelimeleri', note: 'Yetişkin modundaki örnek kelimeler, artikeliyle.' },
     { id: 'heceleme', title: 'Heceleme', note: 'İşaretler, senaryo soruları ve cevapları. "Diziyi çal" oyundaki gibi harf harf, aralarında duraklamayla çalar.' },
     { id: 'tr', title: 'Türkçe talimat ve geri bildirimler', note: 'Çocuk modunda okunan Türkçe cümleler ve "Richtig!".' }

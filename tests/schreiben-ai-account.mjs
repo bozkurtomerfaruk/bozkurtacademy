@@ -152,7 +152,7 @@ const draftErrors = draftDoc?.fields?.errors?.arrayValue?.values || [];
 ok(draft && draft.uid === 'ogrenci1' && draftErrors.length === 1 && draftErrors[0].mapValue.fields.original.stringValue === WRONG,
   'aiDrafts/ogrenci1_<id>: metinde geçmeyen öneri elendi, 1 öneri kaldı');
 const sent = JSON.stringify(aiCalls.at(-1).input);
-ok(sent.includes('Görev: Goethe B1 · Teil 1 · Neue Wohnung') && sent.includes('Ich wohne jetzt seit zwei Wochen'), 'yapay zekâya görev adı ve metin gitti');
+ok(sent.includes('Görev: Goethe B1 · Teil 1 · Neue Wohnung\\nMetin türü: Gayriresmî e-posta (du), arkadaşa') && sent.includes('Ich wohne jetzt seit zwei Wochen'), 'yapay zekâya görev adı, metin türü ve metin gitti');
 ok(!/Deniz Kaya|ogrenci@example\.com|ogrenci1|Bearer/.test(sent), 'yapay zekâya ad, e-posta, uid ya da belirteç gitmedi');
 ok(!w2.aiAt && !w2.aiFeedback && !w2.feedbackAt, 'Taslak modunda metne hiçbir şey yazılmadı');
 ok(plain(await getDocRest('aiLimits/ogrenci1')).count === '1' && plain(await getDocRest('aiLimits/_global')).count === '1', 'günlük sayaçlar: öğrenci 1, site 1');

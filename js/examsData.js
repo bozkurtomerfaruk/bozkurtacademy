@@ -335,8 +335,26 @@ window.BA_EXAMS = {
                   { set: 'set-5', title: 'Abendkurs' },
                 ]
               }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
-              { title: null, exercises: [] }, // Teil 3
+              {
+                title: { tr: 'Forum yazısı: görüşünü yaz · yaklaşık 80 kelime', de: 'Diskussionsbeitrag · circa 80 Wörter', en: 'Discussion post: give your opinion · about 80 words' },
+                exercises: [
+                  { set: 'set-1', title: 'Kinder und Smartphones' },
+                  { set: 'set-2', title: 'Arbeiten im Homeoffice' },
+                  { set: 'set-3', title: 'Einkaufen im Internet' },
+                  { set: 'set-4', title: 'Leben auf dem Land' },
+                  { set: 'set-5', title: 'Hunde in der Mietwohnung' },
+                ]
+              }, // Teil 2
+              {
+                title: { tr: 'Tanıdık birine yarı resmî e-posta · yaklaşık 40 kelime', de: 'Halbformelle E-Mail · circa 40 Wörter', en: 'Semi-formal email to someone you know · about 40 words' },
+                exercises: [
+                  { set: 'set-1', title: 'Termin mit dem Vermieter' },
+                  { set: 'set-2', title: 'Teambesprechung' },
+                  { set: 'set-3', title: 'Einladung der Nachbarin' },
+                  { set: 'set-4', title: 'Arbeitsblätter aus dem Kurs' },
+                  { set: 'set-5', title: 'Spiel am Sonntag' },
+                ]
+              }, // Teil 3
             ] },
             { id: 'sprechen', teile: [
               { title: null, exercises: [] }, // Teil 1

@@ -119,6 +119,7 @@ export const PAGES = [
   },
   {
     path: '/hakkimda/',
+    updated: '2026-11-10',
     nav: 'about',
     crumb: 'Hakkımda',
     title: 'Hakkımda: Almanca Eğitmeni Ömer Faruk Bozkurt',

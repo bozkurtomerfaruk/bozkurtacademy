@@ -17,7 +17,7 @@ import { LANGS, LOCALE, IN_LANGUAGE, UI, FOOTER, appText, routes, alternates, lo
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const check = process.argv.includes('--check');
 const SITEMAP_DATE = '2026-11-04';
-const V = { themeInit: 1, html: 1, style: 13, base: 13, landing: 1, app: 38, theme: 11, analytics: 7, a1lessons: 19, a1css: 8, grammarPages: 3, blog: 5 };
+const V = { themeInit: 1, html: 1, style: 13, base: 13, landing: 1, app: 39, theme: 11, analytics: 7, a1lessons: 19, a1css: 8, grammarPages: 3, blog: 6 };
 const OG_IMAGE = `${SITE}/images/og-bozkurt-academy.jpg`;
 
 const SECURITY = `
@@ -181,7 +181,7 @@ function head(page, html) {
       isPartOf: { '@id': `${SITE}/#website` },
       breadcrumb: { '@id': `${url}#breadcrumb` },
       ...(page.type === 'ProfilePage' ? { mainEntity: { '@id': `${SITE}/#person` } } : {}),
-      primaryImageOfPage: { '@type': 'ImageObject', url: OG_IMAGE }
+      primaryImageOfPage: { '@type': 'ImageObject', url: page.ogImage ? SITE + page.ogImage : OG_IMAGE }
     },
     {
       '@type': 'BreadcrumbList',
@@ -225,14 +225,14 @@ function head(page, html) {
   <meta property="og:url" content="${url}" />
   <meta property="og:title" content="${esc(page.title)}" />
   <meta property="og:description" content="${esc(page.description)}" />
-  <meta property="og:image" content="${OG_IMAGE}" />
+  <meta property="og:image" content="${page.ogImage ? SITE + page.ogImage : OG_IMAGE}" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="${UI[page.lang].ogAlt}" />
+  <meta property="og:image:alt" content="${page.ogImageAlt ? esc(page.ogImageAlt) : UI[page.lang].ogAlt}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${esc(page.title)}" />
   <meta name="twitter:description" content="${esc(page.description)}" />
-  <meta name="twitter:image" content="${OG_IMAGE}" />
+  <meta name="twitter:image" content="${page.ogImage ? SITE + page.ogImage : OG_IMAGE}" />
   <link rel="preload" href="/fonts/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css?v=${V.style}" />
@@ -336,7 +336,7 @@ ${htmlTag(page)}
 const blogUrls = BLOG.published.length ? [{ path: BLOG.index.path, updated: BLOG.published[0].updated || BLOG.published[0].date }, ...BLOG.published.map(p => ({ path: p.path, updated: p.updated || p.date }))] : [];
 
 // Dil sürümü olan adresler sitemap'te birbirine xhtml:link ile bağlanır.
-const urls = [{ path: '/' }, ...PAGES, ...GRAMMAR.pages.map(p => ({ ...p, updated: GRAMMAR_DATE })), ...blogUrls].map(p => {
+const urls = [{ path: '/', updated: '2026-11-10' }, ...PAGES, ...GRAMMAR.pages.map(p => ({ ...p, updated: GRAMMAR_DATE })), ...blogUrls].map(p => {
   const page = byPath[p.path] || p;
   const alt = alternates(page, ROUTES);
   const links = Object.keys(alt).length > 1

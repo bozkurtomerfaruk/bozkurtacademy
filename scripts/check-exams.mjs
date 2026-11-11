@@ -35,8 +35,16 @@ function checkWriting(set, fail) {
   const text = value => typeof value === 'string' && value.trim();
   if (set.kind !== 'writing') fail('"kind" must be "writing" in a Schreiben set');
   for (const key of ['title', 'situation', 'task']) if (!text(set[key])) fail(`"${key}" missing`);
-  if (!['du', 'Sie'].includes(set.register)) fail('"register" must be "du" or "Sie"');
-  if (!Array.isArray(set.points) || set.points.length < 2 || !set.points.every(text)) fail('"points" needs at least two content points');
+  // textType: the kind of text (the AI check gets type-specific rules, worker/schreiben-kontrol.js) and the register it needs.
+  const REGISTER = { 'email-informal': 'du', sms: 'du', 'email-semiformal': 'Sie', 'email-formal': 'Sie', forum: 'neutral' };
+  if (!(set.textType in REGISTER)) fail(`"textType" must be one of ${Object.keys(REGISTER).join(', ')}`);
+  else if (set.register !== REGISTER[set.textType]) fail(`"register" must be "${REGISTER[set.textType]}" for textType ${set.textType}`);
+  // Content points (Goethe B1 Teil 1, A1/A2) or none (Goethe B1 Teil 2 and 3: the task says what to write).
+  if (!Array.isArray(set.points) || (set.points.length && (set.points.length < 2 || !set.points.every(text)))) fail('"points" must be empty or have at least two content points');
+  // Forum posts answer an opinion from a guest book: { site?, author, time?, text }.
+  if (set.textType === 'forum' && !(text(set.post?.author) && text(set.post?.text))) fail('"post" with author and text is needed for a forum task');
+  if (set.post !== undefined && set.textType !== 'forum') fail('"post" is only for forum tasks');
+  if (set.instructions !== undefined && !text(set.instructions)) fail('"instructions" must be text when present');
   const w = set.words || {};
   if (!(Number.isInteger(w.min) && Number.isInteger(w.target) && Number.isInteger(w.max) && w.min > 0 && w.min <= w.target && w.target <= w.max)) fail('"words" needs min <= target <= max');
   const list = Array.isArray(set.checklist) ? set.checklist : [];
@@ -68,9 +76,10 @@ for (const exam of data.exams) for (const level of exam.levels || []) for (const
       const expect = { exam: exam.id, level: level.id, section: section.id, teil: teilNo, set: entry.set };
       for (const [key, value] of Object.entries(expect)) if (set[key] !== value) fail(`"${key}" is ${JSON.stringify(set[key])}, expected ${JSON.stringify(value)}`);
       if (!(set.minutes > 0)) fail('"minutes" must be a positive number');
-      if (!set.instructions) fail('"instructions" missing');
       // Schreiben (kind "writing"): a task, a word target, a checklist, Redemittel and a model answer; no questions.
+      // "instructions" is optional there (Goethe B1 Teil 2 has only the task line).
       if (section.id === 'schreiben') { checkWriting(set, fail); writings++; continue; }
+      if (!set.instructions) fail('"instructions" missing');
       if (!Array.isArray(set.groups) || !set.groups.length) { fail('"groups" missing'); continue; }
 
       const numbers = [];

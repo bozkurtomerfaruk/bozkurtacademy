@@ -3,6 +3,11 @@
 //   _blog/<slug>.html  → yazının gövdesi (HTML; H2'den başlar, H1 şablonda)
 // status "draft": sayfa noindex, sitemap'e girmez, üstte "Taslak" notu. "published": index, sitemap, BlogPosting.
 // Blog ana sayfası, yayınlanmış yazı olmadıkça noindex kalır ve taslakları listeler. Menüye elle eklenir.
+// Görseller images/blog/<slug>/ klasöründe (kaynaklar: images/blog/KAYNAKLAR.md):
+//   kapak-{480,800,1200}.{webp,jpg} → kapak (1200×630; OG görseli ve şemadaki image). posts.json: "cover": {"alt": "…"}
+//   <ad>.svg → içerik görseli; posts.json: "figures": [{"file", "after": "<h2/h3 başlık metni>", "alt"}]
+//   SVG, başlıktan sonraki ilk paragraf/listenin (":" ile biten girişte listenin) arkasına satır içi eklenir (temaya uyar; <style> çıkarılır).
+//   Kapak görseli olmayan yazı üretilmez (taslak dahil).
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -10,6 +15,57 @@ const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(
 const MONTHS = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
 export const trDate = iso => { const [y, m, d] = iso.split('-').map(Number); return `${d} ${MONTHS[m - 1]} ${y}`; };
 const AUTHOR = 'Ömer Faruk Bozkurt';
+const COVER_W = [480, 800, 1200];
+const coverUrl = (slug, w, ext) => `/images/blog/${slug}/kapak-${w}.${ext}`;
+const srcset = (slug, ext) => COVER_W.map(w => `${coverUrl(slug, w, ext)} ${w}w`).join(', ');
+
+// Kapak resmi (picture: WebP + JPEG yedeği). thumb: kartlardaki küçük hâli.
+export function coverPicture(p, { sizes, thumb = false } = {}) {
+  const w = thumb ? 480 : 1200, h = Math.round(w * 630 / 1200);
+  const attrs = thumb ? 'loading="lazy" decoding="async" alt=""' : `fetchpriority="high" decoding="async" alt="${esc(p.cover.alt)}"`;
+  return `<picture><source type="image/webp" srcset="${srcset(p.slug, 'webp')}" sizes="${sizes}"><img src="${coverUrl(p.slug, thumb ? 480 : 800, 'jpg')}" srcset="${srcset(p.slug, 'jpg')}" sizes="${sizes}" width="${w}" height="${h}" ${attrs}></picture>`;
+}
+
+// open…close arasındaki her parçayı, hiç kalmayana kadar çıkarır (iç içe/bölünmüş parçalar dahil).
+function cut(s, open, close) {
+  for (let i = s.indexOf(open); i !== -1; i = s.indexOf(open)) {
+    const j = s.indexOf(close, i + open.length);
+    s = j === -1 ? s.slice(0, i) : s.slice(0, i) + s.slice(j + close.length);
+  }
+  return s;
+}
+
+function inlineSvg(root, p, f) {
+  const file = path.join(root, 'images/blog', p.slug, f.file);
+  if (!fs.existsSync(file)) throw new Error(`${p.slug}: görsel yok: images/blog/${p.slug}/${f.file}`);
+  if (!f.alt) throw new Error(`${p.slug}: ${f.file} için alt metin yok`);
+  let svg = fs.readFileSync(file, 'utf8');
+  svg = cut(cut(cut(svg, '<?xml', '?>'), '<style', '</style>'), '<!--', '-->').replace(/\n\s*\n/g, '\n').trim();
+  if (!svg.startsWith('<svg ') || /<script|\son\w+=/i.test(svg)) throw new Error(`${p.slug}: ${f.file} geçerli bir SVG değil (script veya olay özniteliği olmamalı)`);
+  svg = `<svg role="img" aria-label="${esc(f.alt)}" focusable="false" ${svg.slice(5)}`;
+  return `\n<figure class="bl-fig">${svg}</figure>\n`;
+}
+
+// İçerik görsellerini, "after" başlığından sonraki ilk blok öğenin (p, ul, ol, div, table, aside) arkasına ekler.
+function placeFigures(root, p, body) {
+  for (const f of p.figures || []) {
+    const h = new RegExp(`<h([23])[^>]*>${f.after.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}</h\\1>`).exec(body);
+    if (!h) throw new Error(`${p.slug}: "${f.after}" başlığı bulunamadı (${f.file})`);
+    // İlk bloğu atla; blok bir not (aside) ya da ":" ile biten giriş cümlesiyse arkasındaki listeyi/tabloyu da atla.
+    let at = h.index + h[0].length;
+    for (;;) {
+      const rest = body.slice(at);
+      const open = /^\s*<(p|ul|ol|div|table|aside)[\s>]/.exec(rest);
+      if (!open) break;
+      const end = rest.indexOf(`</${open[1]}>`) + open[1].length + 3;
+      const block = rest.slice(0, end);
+      at += end;
+      if (!(open[1] === 'aside' || (open[1] === 'p' && /:\s*(<!--[\s\S]*?-->\s*)?<\/p>$/.test(block.trim())))) break;
+    }
+    body = body.slice(0, at) + inlineSvg(root, p, f) + body.slice(at);
+  }
+  return body;
+}
 
 export function blogPages(root) {
   const dir = path.join(root, '_blog');
@@ -18,12 +74,17 @@ export function blogPages(root) {
     if (!/^[a-z0-9-]+$/.test(p.slug)) throw new Error(`_blog/posts.json: geçersiz slug "${p.slug}"`);
     if (!['draft', 'published'].includes(p.status)) throw new Error(`${p.slug}: status "draft" veya "published" olmalı`);
     if (!/^\d{4}-\d{2}-\d{2}$/.test(p.date)) throw new Error(`${p.slug}: date YYYY-AA-GG olmalı`);
-    const body = fs.readFileSync(path.join(dir, `${p.slug}.html`), 'utf8');
+    let body = fs.readFileSync(path.join(dir, `${p.slug}.html`), 'utf8');
     if (/<h1[\s>]/i.test(body)) throw new Error(`${p.slug}.html: gövdede H1 olmamalı (başlık şablondan gelir)`);
+    if (!p.cover?.alt) throw new Error(`${p.slug}: kapak görseli ("cover": {"alt": …}) zorunlu`);
+    for (const w of COVER_W) for (const ext of ['jpg', 'webp'])
+      if (!fs.existsSync(path.join(root, coverUrl(p.slug, w, ext)))) throw new Error(`${p.slug}: kapak dosyası yok: ${coverUrl(p.slug, w, ext)}`);
+    body = placeFigures(root, p, body);
     return {
       ...p, body, draft: p.status !== 'published', kind: 'blog-post', path: `/blog/${p.slug}/`, parent: '/blog/',
       crumb: p.crumb || p.title, title: p.seoTitle || `${p.title} | Bozkurt Academy`, h1: p.title,
-      noindex: p.status !== 'published', ogType: 'article'
+      noindex: p.status !== 'published', ogType: 'article',
+      ogImage: coverUrl(p.slug, 1200, 'jpg'), ogImageAlt: p.cover.alt
     };
   });
   // Yeniden eskiye; aynı tarihli yazılarda posts.json'da sonra eklenen önce gelir.
@@ -48,7 +109,7 @@ export function blogPages(root) {
 export function homeBlog(published) {
   if (!published.length) return '\n        ';
   const items = published.slice(0, 3).map(p => `
-              <li><a href="${p.path}"><strong>${esc(p.h1)}</strong><span>${esc(p.teaser || p.lead.split(/(?<=[.?!])\s/)[0])}</span></a></li>`).join('');
+              <li><a href="${p.path}"><span class="home-blog-thumb">${coverPicture(p, { sizes: '160px', thumb: true })}</span><span class="home-blog-text"><strong>${esc(p.h1)}</strong><span>${esc(p.teaser || p.lead.split(/(?<=[.?!])\s/)[0])}</span></span></a></li>`).join('');
   return `
         <section class="home-section home-blog" aria-labelledby="home-blog-title">
           <div class="home-section-heading" data-home-reveal>
@@ -77,14 +138,15 @@ export function blogSchema(page, SITE) {
     inLanguage: 'tr-TR', datePublished: page.date, dateModified: page.updated || page.date,
     author: { '@type': 'Person', name: AUTHOR },
     publisher: { '@id': `${SITE}/#organization` },
-    mainEntityOfPage: { '@id': `${url}#webpage` }
+    mainEntityOfPage: { '@id': `${url}#webpage` },
+    image: { '@type': 'ImageObject', url: SITE + page.ogImage, width: 1200, height: 630 }
   }];
 }
 
 export function blogBody(page, all) {
   if (page.kind === 'blog-index') {
     const items = page.list.map(p => `
-          <li><a href="${p.path}"><span class="bl-item-meta">${p.draft ? '<span class="bl-badge">Taslak</span> Planlanan: ' : ''}${trDate(p.date)}</span><strong>${esc(p.h1)}</strong><span>${esc(p.description)}</span></a></li>`).join('');
+          <li><a href="${p.path}"><span class="bl-thumb">${coverPicture(p, { sizes: '(max-width: 640px) calc(100vw - 32px), 240px', thumb: true })}</span><span class="bl-item-meta">${p.draft ? '<span class="bl-badge">Taslak</span> Planlanan: ' : ''}${trDate(p.date)}</span><strong>${esc(p.h1)}</strong><span>${esc(p.description)}</span></a></li>`).join('');
     return `
       <section class="lp-prose" aria-labelledby="bl-title">
         <h1 id="bl-title">Almanca Öğrenme Blogu</h1>
@@ -113,6 +175,7 @@ export function blogBody(page, all) {
           <h1 id="bl-title">${esc(page.h1)}</h1>
           <p class="lp-lead">${esc(page.lead)}</p>
         </header>
+        <figure class="bl-cover">${coverPicture(page, { sizes: '(max-width: 800px) calc(100vw - 32px), 760px' })}</figure>
         <div class="lp-prose bl-body">
 ${page.body.trim()}
         </div>

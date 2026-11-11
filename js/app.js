@@ -314,7 +314,7 @@ const translations = {
     examContact:'Sınav hazırlığı için iletişim',
     homeEyebrow:'Ömer Faruk Bozkurt · Online Almanca dersleri',
     homeTitle:'Hedeflerine uygun Almanca eğitimi',
-    homeIntro:'A1’den B2’ye online Almanca dersleri, sınav hazırlığı ve günlük kullanım için dil desteği. Ömer Faruk Bozkurt ile seviyene ve öğrenme hedeflerine uygun bir ders planı.',
+    homeIntro:'Bozkurt Academy (Bozkurt Akademi): A1’den B2’ye online Almanca dersleri, sınav hazırlığı ve günlük kullanım için dil desteği. Ömer Faruk Bozkurt ile seviyene ve öğrenme hedeflerine uygun bir ders planı.',
     homeContact:'İlk ders için iletişim',
     homeExercises:'Alıştırmaları keşfet',
     homeDuration:'50 dakika · Online',

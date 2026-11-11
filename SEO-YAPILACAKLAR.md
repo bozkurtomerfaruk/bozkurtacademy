@@ -315,3 +315,21 @@ Her ayın ilk haftası yaklaşık 30–45 dakika ayır. Kutucukları bu dosyanı
 - [ ] GoatCounter'da beklenmedik bir düşüş var mı?
 
 Bir sorun görürsen ekran görüntüsünü ve sayfa adresini bana göndermen yeterli.
+
+---
+
+## 11. Değişiklik günlüğü ve hatırlatmalar
+
+### 10 Kasım 2026: gramer title/description güncellemesi
+
+- 41 gramer dersinin, `/almanca-gramer/` sayfasının ve A1, A2, B1 liste sayfalarının `<title>` ve meta description metinleri, Türk kullanıcının arama biçimine göre yeniden yazıldı ("Almanca" + Türkçe karşılık + derste geçen somut biçimler, ör. "mein, dein, sein, ihr").
+- Ders başlıkları ve açıklamaları `data/grammar-seo.json` dosyasında; ders içerikleri, H1'ler ve adresler değişmedi.
+- Marka: ana sayfa şemasına `alternateName: "Bozkurt Akademi"` eklendi; ana sayfa girişinde ve Hakkımda'da "Bozkurt Academy (Bozkurt Akademi)" bir kez geçiyor.
+- Değişikliğe kadarki durum (Search Console, son 28 gün): gramer dersleri iyi sıradaydı ama neredeyse hiç tıklanmıyordu (ör. "mein dein sein" 3., "kein keinen keine" 3., "imperativ" 8., "plural artikel" 9., "akkusativ personalpronomen" 11.); "almanca gramer konuları" 62.; "bozkurt akademi" 3,8.
+
+**Hatırlatma, 8 Aralık 2026 civarı (4 hafta sonra):** Search Console › Performans › Sayfalar'da gramer sayfalarının tıklama oranını (TO) karşılaştır:
+
+1. Tarih aralığı › Karşılaştır › "10 Kasım – 7 Aralık 2026" ile "13 Ekim – 9 Kasım 2026".
+2. Sayfa filtresi: URL'de `/almanca-gramer/` geçenler.
+3. Tıklama, gösterim, TO ve ortalama sıralamayı not et. Yukarıdaki sorguların ("mein dein sein", "kein keinen keine", "imperativ", "plural artikel", "akkusativ personalpronomen", "almanca gramer konuları", "bozkurt akademi") TO'su arttı mı?
+4. Sonuçları bana gönder; TO artmayan sayfaların başlığını birlikte yeniden düzenleriz.

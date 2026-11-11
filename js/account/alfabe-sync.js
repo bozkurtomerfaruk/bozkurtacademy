@@ -37,9 +37,16 @@ async function start(){
     const { uid, p } = bridge.read();
     return uid && uid !== user.uid ? null : p;
   };
+  // Stop for good when the account signs out (in this tab or another one) or another account signs in: nothing is
+  // written to the old account any more, and the device keeps the signed-out record (js/account/common.js → signedOut).
+  let stopped = false;
+  auth.onAuthStateChanged((u) => { if(!u || u.uid !== user.uid) stopped = true; });
+  const closed = () => stopped || bridge.closed;
   let busy = Promise.resolve();
   const sync = () => (busy = busy.then(async () => {
+    if(closed()) return;
     const remote = (await fs.getDoc(ref)).data() || null;
+    if(closed()) return; // signed out while the account was being read
     const merged = L.mergeProgress(localPart(), remote, ids);
     const key = L.progressKey(merged, ids);
     bridge.apply(merged, user.uid);
@@ -51,7 +58,7 @@ async function start(){
   await sync();
   window.addEventListener('ba:alfabe-round', () => sync());
   document.addEventListener('visibilitychange', () => {
-    if(document.visibilityState !== 'hidden') return;
+    if(document.visibilityState !== 'hidden' || closed()) return;
     const p = localPart();
     if(p && L.progressKey(p, ids) !== written) sync();
   });

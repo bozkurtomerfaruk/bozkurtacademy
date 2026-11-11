@@ -57,6 +57,10 @@
     };
   }
   const store = readStore();
+  // js/account/common.js → signedOut: çıkışta yerel ilerleme silinir ve uid bu değere çevrilir (hiçbir hesapla eşleşmez).
+  const SIGNED_OUT = 'cikis-yapildi';
+  // Başka bir sekmede çıkış yapıldıysa bu sekme artık hiçbir hesaba yazmaz (hesap köprüsü kapalı).
+  let accountClosed = false;
   function save() {
     try { localStorage.setItem(STORE, JSON.stringify(store)); } catch (_) { /* depolama kapalı: oyun hatırlamadan devam eder */ }
   }
@@ -695,8 +699,10 @@
     ready, // resolves with the letter ids once data/alfabe.json is loaded
     logic: L,
     read: () => ({ uid: store.uid, p: store.p }),
+    signedOut: SIGNED_OUT,
     // Merged progress from the account: saved locally too; the menu and the letter grid are redrawn, a running question is not.
     apply(p, uid) {
+      if (accountClosed) return;
       store.p.cocuk = p.cocuk; store.p.yetiskin = p.yetiskin; store.uid = uid; accountSynced = true;
       save();
       if (view === 'menu' || view === 'kesfet') rerender();
@@ -704,11 +710,27 @@
     // A signed-in account that does not sync (waiting for approval, teacher) still owns the local progress: it is marked
     // with its uid so that a student who signs in later on the same browser does not get it merged into their account.
     claim(uid) {
-      if (store.uid) return;
+      if (accountClosed || store.uid) return;
       store.uid = uid;
       save();
-    }
+    },
+    // True once the account was signed out in another tab: js/account/alfabe-sync.js stops syncing.
+    get closed() { return accountClosed; }
   };
+  // Sign-out in another tab (js/account/common.js → signedOut writes baAlfabe with uid SIGNED_OUT). This tab still holds
+  // the account's progress in memory and would write it back at the end of a round; instead it takes over the signed-out
+  // record, stops the account bridge and keeps playing locally. The 'storage' event only fires in the other tabs.
+  window.addEventListener('storage', (e) => {
+    if (e.key !== STORE && e.key !== null) return;
+    const next = readStore();
+    if (next.uid !== SIGNED_OUT || store.uid === SIGNED_OUT) return;
+    accountClosed = true;
+    accountSynced = false;
+    // Settings changed here are kept; the progress and owner come from the signed-out record.
+    store.uid = next.uid;
+    store.p.cocuk = next.p.cocuk; store.p.yetiskin = next.p.yetiskin;
+    if (view === 'menu' || view === 'kesfet' || view === 'profil') rerender();
+  });
   let hint = null;
   try { hint = localStorage.getItem('baAccount'); } catch (_) { hint = null; }
 
@@ -718,7 +740,7 @@
       data = d; route();
       readyResolve(d.harfler.map((l) => l.id));
       // Visitors never load Firebase; only a device where a student signed in before does.
-      if (hint === 'student') import('/js/account/alfabe-sync.js?v=2').catch((error) => console.warn('alfabe sync', error));
+      if (hint === 'student') import('/js/account/alfabe-sync.js?v=3').catch((error) => console.warn('alfabe sync', error));
     })
     .catch(() => { root.innerHTML = '<p class="ab-note">Oyun yüklenemedi. Sayfayı yenilemeyi dene.</p>'; });
 })();

@@ -3,7 +3,8 @@
 // iki tarafa yazılıyor → tur sonunda hesap güncelleniyor → başka cihazdaki ilerleme kaybolmuyor → başka hesabın yerel
 // ilerlemesi karışmıyor → onaysız hesapta sadece yerel, ama o hesapla işaretli → aynı tarayıcıda sonra giren onaylı
 // öğrencinin hesabına karışmıyor → çıkışta ilerleme silinip 'çıkış yapıldı' işaretleniyor; sonra giriş yapmadan
-// oynanan oyun aynı öğrencinin hesabına bile eklenmiyor. Site için kendi statik sunucusunu açar; Firebase SDK dosyaları
+// oynanan oyun aynı öğrencinin hesabına bile eklenmiyor → oyun başka sekmede açıkken çıkış yapılınca o sekme eski
+// ilerlemeyi cihaza geri yazmıyor ve hesaba yazmıyor. Site için kendi statik sunucusunu açar; Firebase SDK dosyaları
 // gstatic yerine node_modules/firebase'den verilir.
 import fs from 'node:fs';
 import http from 'node:http';
@@ -80,8 +81,11 @@ const setLocal = (page, v) => page.evaluate((x) => localStorage.setItem('baAlfab
 const getLocal = (page) => page.evaluate(() => JSON.parse(localStorage.getItem('baAlfabe') || 'null'));
 const empty = () => ({ stats: {}, best: {}, stars: 0 });
 // One "Sıraya Diz" round for children, sorting by taps; the first question is answered wrong.
-async function playOrderRound(page) {
-  await page.goto(`${BASE}/almanca-alfabe/#sirala`); await page.waitForSelector('[data-ab-pos]');
+// reload: false starts the round in the open page (hash change) instead of loading it again.
+async function playOrderRound(page, { reload = true } = {}) {
+  if (reload) await page.goto(`${BASE}/almanca-alfabe/#sirala`);
+  else await page.evaluate(() => { location.hash = 'sirala'; });
+  await page.waitForSelector('[data-ab-pos]');
   for (let q = 0; q < 10; q++) {
     await page.waitForSelector('[data-ab-pos]:not([disabled])');
     if (q > 0) {
@@ -225,6 +229,44 @@ await writeRemote('ogrenci1', { cocuk: { stats: { A: { r: 1, w: 2 }, B: { r: 2, 
   await setLocal(page, { profil: 'cocuk', uid: 'cikis-yapildi', p: { cocuk: { stats: { X: { r: 77, w: 0 } }, best: {}, stars: 900 }, yetiskin: empty() } });
   await page.goto(`${BASE}/almanca-alfabe/`); await page.waitForSelector('.ab-modes'); await page.waitForTimeout(2500);
   ok((await getLocal(page)).uid === 'cikis-yapildi' && await readRemote('ogrenci2') === null, 'onaysız hesap çıkış sonrası oyunu sahiplenmiyor');
+  await ctx.close();
+}
+
+// 8. Sign-out in another tab while the game is open: the game tab must not write the account's progress back to the
+// device (end of a round) nor sync it to the account; it keeps playing locally on the signed-out record.
+{
+  const same = (x, y) => JSON.stringify(x) === JSON.stringify(y);
+  const { ctx, page } = await newPage();
+  await signIn(page, 'ogrenci@example.com');
+  await setLocal(page, { profil: 'cocuk', ses: false });
+  await page.goto(`${BASE}/almanca-alfabe/`); await page.waitForSelector('[data-ab-synced]', { timeout: 15000 });
+  const before = await readRemote('ogrenci1');
+  await page.evaluate(() => { window.baSameTab = true; });
+
+  const other = await ctx.newPage();
+  other.on('pageerror', (e) => errors.push(e.message));
+  other.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
+  await other.goto(`${BASE}/panel.html`);
+  await other.locator('#logoutBtn').click();
+  await other.waitForURL((u) => !u.pathname.endsWith('/panel.html'), { timeout: 15000 });
+  await other.close();
+
+  // The game tab notices the sign-out (condition wait, no fixed delay).
+  const noticed = await page.waitForFunction(() => !document.querySelector('[data-ab-synced]'), null, { timeout: 10000 }).then(() => true, () => false);
+  ok(noticed, 'açık oyun sekmesi başka sekmedeki çıkışı fark ediyor (hesap notu kalkıyor)');
+  await playOrderRound(page, { reload: false });
+  ok(await page.evaluate(() => window.baSameTab === true), 'tur aynı sekmede, sayfa yenilenmeden oynandı');
+  const local = await getLocal(page);
+  ok(local.uid === 'cikis-yapildi' && local.p.cocuk.stars > 0 && local.p.cocuk.stars < before.cocuk.stars && !same(local.p.cocuk, before.cocuk),
+    'eski sekme hesabın ilerlemesini cihaza geri yazmıyor: ' + JSON.stringify({ uid: local.uid, stars: local.p.cocuk.stars, before: before.cocuk.stars }));
+  const remote = await readRemote('ogrenci1');
+  ok(same(remote.cocuk, before.cocuk) && same(remote.yetiskin, before.yetiskin), 'çıkıştan sonra eski sekmeden hesaba yazılmıyor');
+
+  // Signing in again later works as usual: the account's progress comes back to the device.
+  await signIn(page, 'ogrenci@example.com');
+  await page.goto(`${BASE}/almanca-alfabe/`); await page.waitForSelector('[data-ab-synced]', { timeout: 15000 });
+  const again = await getLocal(page);
+  ok(again.uid === 'ogrenci1' && same(again.p.cocuk, before.cocuk) && same((await readRemote('ogrenci1')).cocuk, before.cocuk), 'yeniden girişte hesabın ilerlemesi geliyor, çıkış sonrası oyun eklenmiyor');
   await ctx.close();
 }
 

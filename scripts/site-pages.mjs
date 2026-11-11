@@ -143,7 +143,7 @@ export const PAGES = [
     description: 'Almanca alfabeyi oyunla öğren: 26 harf ile Ä, Ö, Ü ve ß, Almanca harf adları, Türkçe okunuşlar ve heceleme. Çocuklar ve yetişkinler için ücretsiz, hesap gerekmez.',
     // Sayfaya özel dosyalar (scripts/build-pages.mjs head ve betik bölümüne yazar). Değiştirince ?v= artır.
     css: ['/css/alfabe.css?v=1'],
-    js: ['/js/html.js?v=1', '/js/alfabe-logic.js?v=1', '/js/alfabe.js?v=2'],
+    js: ['/js/html.js?v=1', '/js/alfabe-logic.js?v=1', '/js/alfabe.js?v=3'],
     schema: [{
       '@type': 'LearningResource',
       '@id': `${SITE}/almanca-alfabe/#game`,

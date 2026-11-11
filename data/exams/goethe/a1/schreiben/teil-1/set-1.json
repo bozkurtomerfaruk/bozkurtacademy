@@ -1,0 +1,97 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-1",
+  "title": "Anmeldung zum Deutschkurs",
+  "minutes": 5,
+  "kind": "form",
+  "situation": "Ihr Freund Karim Haddad kommt aus Marokko. Er ist am 3. Mai 1990 in Casablanca geboren und wohnt seit Januar in Köln. Seine Muttersprache ist Arabisch, er spricht auch Französisch. Er möchte ab dem 2. März einen Deutschkurs besuchen. Am Tag arbeitet er, er hat nur am Abend Zeit. Er bezahlt den Kurs mit einer Überweisung.",
+  "task": "Helfen Sie Ihrem Freund und schreiben Sie die fünf fehlenden Informationen in das Formular.",
+  "form": {
+    "title": "Anmeldung Deutschkurs",
+    "subtitle": "Volkshochschule Köln",
+    "rows": [
+      {
+        "label": "Familienname, Vorname",
+        "value": "Haddad, Karim",
+        "example": true
+      },
+      {
+        "label": "Geburtsdatum",
+        "value": "03.05.1990"
+      },
+      {
+        "label": "Geburtsort",
+        "number": 1,
+        "evidence": [
+          "in Casablanca geboren"
+        ],
+        "explanation": "Geburtsort = doğum yeri. Metinde: „Er ist … in Casablanca geboren“ → Karim Casablanca'da doğmuş. Köln sadece şimdi oturduğu şehir.",
+        "accept": [
+          "Casablanca"
+        ]
+      },
+      {
+        "label": "Muttersprache",
+        "value": "Arabisch"
+      },
+      {
+        "label": "Andere Sprachen",
+        "number": 2,
+        "evidence": [
+          "er spricht auch Französisch"
+        ],
+        "explanation": "Andere Sprachen = başka diller. Ana dili (Muttersprache) Arabisch formda zaten yazılı; metinde „er spricht auch Französisch“ → diğer dil Fransızca.",
+        "accept": [
+          "Französisch",
+          "Franzoesisch"
+        ]
+      },
+      {
+        "label": "Kursbeginn",
+        "number": 3,
+        "evidence": [
+          "ab dem 2. März"
+        ],
+        "explanation": "Kursbeginn = kursun başlangıcı. Metinde „ab dem 2. März“ → kurs 2 Mart'ta başlıyor (2.3. ya da 2. März yazabilirsin).",
+        "accept": [
+          "2. März",
+          "2.3.",
+          "02.03.",
+          "am 2. März",
+          "02. März"
+        ]
+      },
+      {
+        "label": "Kurszeit",
+        "number": 4,
+        "evidence": [
+          "er hat nur am Abend Zeit"
+        ],
+        "explanation": "Kurszeit = kurs saati. Karim gündüz çalışıyor; metinde „er hat nur am Abend Zeit“ → sadece akşam: abends.",
+        "choices": [
+          "vormittags",
+          "nachmittags",
+          "abends"
+        ],
+        "answer": "abends"
+      },
+      {
+        "label": "Zahlungsweise",
+        "number": 5,
+        "evidence": [
+          "mit einer Überweisung"
+        ],
+        "explanation": "Zahlungsweise = ödeme şekli. Metinde „Er bezahlt den Kurs mit einer Überweisung“ → havale (Überweisung), nakit (bar) değil.",
+        "choices": [
+          "bar",
+          "Überweisung"
+        ],
+        "answer": "Überweisung"
+      }
+    ]
+  }
+}

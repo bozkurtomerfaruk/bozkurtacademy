@@ -1,0 +1,109 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-1",
+  "title": "Zusammen kochen",
+  "minutes": 15,
+  "kind": "writing",
+  "register": "du",
+  "textType": "email-informal",
+  "situation": "Sie möchten am Samstag mit Ihrer Freundin Sara zusammen kochen.",
+  "task": "Schreiben Sie Sara eine E-Mail:",
+  "points": [
+    "Warum schreiben Sie?",
+    "Sagen Sie: Wann und wo?",
+    "Fragen Sie: Was mitbringen?"
+  ],
+  "instructions": "Schreiben Sie zu jedem Punkt ein bis zwei Sätze (circa 30 Wörter). Schreiben Sie auch eine Anrede und einen Gruß.",
+  "words": {
+    "target": 30,
+    "min": 25,
+    "max": 40
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "1. madde: Neden yazdığımı söyledim (birlikte yemek yapmak)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "2. madde: Ne zaman ve nerede olduğunu yazdım (gün, saat, yer)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "3. madde: Ne getirmesi gerektiğini sordum (Kannst du … mitbringen?)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap ve kapanış var: Liebe … / Lieber … / Hallo …, ve Viele Grüße / Liebe Grüße + adım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Her maddeye bir iki kısa cümle yazdım; hitaptan sonraki satır küçük harfle başlıyor."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Arkadaşıma du ile yazdım (du, dich, dir, dein)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Düz cümlede çekimli fiil 2. sırada: Am Samstag habe ich Zeit. / Morgen kann ich nicht kommen."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Soru: fiil başta: Kannst du einen Salat mitbringen? (mitbringen: mit- sona gider, mastarda bitişik)."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Liebe … / Lieber … / Hallo …,",
+          "tr": "Sevgili … / Merhaba …,"
+        },
+        {
+          "de": "Viele Grüße / Liebe Grüße",
+          "tr": "Selamlar / Sevgiler"
+        }
+      ]
+    },
+    {
+      "group": "Warum schreiben Sie?",
+      "items": [
+        {
+          "de": "Ich möchte mit dir zusammen kochen.",
+          "tr": "Seninle birlikte yemek yapmak istiyorum."
+        },
+        {
+          "de": "Hast du am Samstag Zeit?",
+          "tr": "Cumartesi vaktin var mı?"
+        }
+      ]
+    },
+    {
+      "group": "Sagen und fragen",
+      "items": [
+        {
+          "de": "Komm um 18 Uhr zu mir.",
+          "tr": "Saat 18'de bana gel."
+        },
+        {
+          "de": "Kannst du … mitbringen?",
+          "tr": "… getirebilir misin?"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Liebe Sara,\nich möchte am Samstag mit dir zusammen kochen. Hast du Zeit? Komm bitte um 18 Uhr zu mir nach Hause. Ich koche Reis und Gemüse. Kannst du einen Salat mitbringen?\nViele Grüße\nAyşe",
+    "notes": [
+      "Üç madde de var: neden (zusammen kochen), ne zaman ve nerede (18 Uhr, zu mir), ne getirsin (einen Salat).",
+      "Kannst du … mitbringen? — soru cümlesinde fiil başta, mitbringen sonda.",
+      "Arkadaşa du: dir, Hast du, Kannst du."
+    ]
+  }
+}

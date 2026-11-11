@@ -491,7 +491,7 @@ async function renderResults(results){
       h('ul', {}, g.attempts.map((a) => h('li', {}, h('span', {}, fmtDateTime(a.at)), h('strong', {}, scoreText(a))))));
     return h('tr', {},
       h('td', { 'data-label': cols[0] }, h('strong', {}, name.exercise), h('span', { class: 'acc-sub' }, name.topic), examNote),
-      h('td', { 'data-label': cols[1] }, g.level),
+      h('td', { 'data-label': cols[1] }, name.level || g.level),
       h('td', { 'data-label': cols[2], class: 'acc-num' }, scoreText(g.first)),
       h('td', { 'data-label': cols[3], class: 'acc-num' }, scoreText(g.last)),
       h('td', { 'data-label': cols[4], class: 'acc-num' }, scoreText(g.best)),

@@ -127,7 +127,7 @@ await teacher.selectOption('#aLevel', 'B1'); await teacher.waitForTimeout(500);
 ok(await teacher.locator('#aTopic option[value="schreiben"]').count() === 1, 'ödev ekranında B1 için "Schreiben (sınav hazırlığı)"');
 await teacher.selectOption('#aLevel', 'A1'); await teacher.waitForTimeout(300);
 await teacher.selectOption('#aTopic', 'schreiben').catch(() => {}); await teacher.waitForTimeout(800);
-ok(await teacher.locator('#aExerciseList label').count() === 10 && await teacher.locator('#aExerciseList label', { hasText: 'Teil 1 · Beim Arzt' }).count() === 1, 'A1 için 10 Schreiben görevi (form + kısa mesaj)');
+ok(await teacher.locator('#aExerciseList label').count() === 5 && await teacher.locator('#aExerciseList label', { hasText: 'Beim Arzt' }).count() === 0, 'A1 için 5 Schreiben görevi (kısa mesaj; form setleri "Sınav setleri"nde)');
 await teacher.selectOption('#aLevel', 'A2'); await teacher.waitForTimeout(300);
 ok(await teacher.locator('#aTopic option[value="schreiben"]').count() === 0, 'A2 için Schreiben yok (henüz görev yok)');
 await teacher.selectOption('#aLevel', 'B1'); await teacher.waitForTimeout(300);

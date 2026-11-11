@@ -18,6 +18,26 @@
 - Gizlilik metni (TR/DE/EN): localStorage `baAlfabe` ve cihazdaki sesle okuma eklendi.
 - Testler: `tests/alfabe-logic.test.mjs` (CI) ve `tests/alfabe.mjs` (tarayıcı; 320/390/1280 px, açık/koyu, ses yok, depolama kapalı).
 
+## 2026-11-11 · Sınav seti sonuçları hesaba kaydediliyor
+
+- **Ne kaydediliyor:** Giriş yapmış ve onaylı öğrenci bir sınav setinde "Kontrol et"e basınca puan `users/{uid}/results`'a yazılıyor.
+  - Kapsanan setler: Lesen, Hören, Sprachbausteine ve form doldurma.
+  - Kayıt alanları: konu `sinav`, seviye sınavın kimliği (`a1`, `a2-b1`, `papier` …), alıştırma `goethe-a1-lesen-1-set-1`, doğru sayısı / toplam, zaman.
+  - Hangi sorunun nasıl cevaplandığı kaydedilmiyor.
+  - Dil değişince ikinci kez kaydedilmiyor; "Tekrar çöz" yeni bir deneme sayılıyor.
+  - Öğrenciye "Sonucun paneline kaydedildi" notu çıkıyor.
+- **Ziyaretçi ve öğretmen:** Ziyaretçide Firebase yüklenmiyor, hiçbir şey gönderilmiyor. Öğretmen hesabı ve onaysız hesap sonuç yazmıyor.
+- **Ödev (kararın):**
+  - Ödev ekranında her seviyede "Sınav setleri (Lesen, Hören, form doldurma …)" konusu var.
+  - DTZ hem A2 hem B1'de görünüyor. C1 ve TestDaF için ayrı bir "C1 · sadece sınav setleri" seviyesi var.
+  - Öğrenci seti ödev verildikten sonra çözünce ödevde "Çözüldü · puan" çıkıyor.
+  - Form setleri artık "Schreiben" konusunda değil, sınav setlerinde.
+- **Sonuç listeleri:** Öğretmenin öğrenci sayfasında ve öğrenci panelinde sınav sonuçları "Goethe A1 · Lesen · Teil 1 · …" adıyla ve sınavın seviyesiyle görünüyor. Ayrı özet yok (kararın).
+- **Kural:** `results`'ta konu `sinav` ise seviye `^[a-z0-9-]{1,20}$`, diğer konularda A1–C2.
+- **Gizlilik metni (TR/DE/EN) ve veli onay formu (TR/DE):** Sonuçlara "sınav hazırlığı setleri dahil; tek tek cevaplar kaydedilmez" eklendi. Tarih 11 Kasım 2026.
+- **Ayrıca düzeltildi:** Hesap sayfaları `examsData.js`'i eski sürümle yüklüyordu. `check-versions` artık `js/account/common.js`'teki sürümü de denetliyor.
+- **Senin yapacağın (birleştirmeden sonra):** Firestore kurallarını yayınla.
+
 ## 2026-11-11 · Schreiben genişletme 2: Goethe A1 (Start Deutsch 1)
 
 - **Format (resmî Start Deutsch 1 Modellsatz, Übungssatz 01 ve 02 ile karşılaştırıldı):** Schreiben toplam ~20 dk.

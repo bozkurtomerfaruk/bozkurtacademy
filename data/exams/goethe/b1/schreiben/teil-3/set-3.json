@@ -1,0 +1,135 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "schreiben",
+  "teil": 3,
+  "set": "set-3",
+  "title": "Einladung der Nachbarin",
+  "minutes": 15,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "Ihre Nachbarin, Frau Becker, hat Sie zu ihrem 60. Geburtstag am Samstagabend eingeladen. An diesem Abend können Sie aber nicht kommen.",
+  "task": "Schreiben Sie an Frau Becker. Bedanken Sie sich für die Einladung, entschuldigen Sie sich höflich und berichten Sie, warum Sie nicht kommen können.",
+  "points": [],
+  "instructions": "Schreiben Sie eine E-Mail (circa 40 Wörter). Vergessen Sie nicht die Anrede und den Gruß am Schluss.",
+  "words": {
+    "target": 40,
+    "min": 35,
+    "max": 50
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Görevdeki her şeyi yazdım: teşekkür, özür, neden gelemediğim."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Hitap ve kapanış var: Sehr geehrte Frau … / Sehr geehrter Herr … (ya da Liebe Frau …), Viele Grüße / Mit freundlichen Grüßen + adım."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Baştan sona Sie kullandım (Sie, Ihnen, Ihr …); du, Hallo, Tschüss yok."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kısa ve düzenli: giriş → özür ve sebep → öneri ya da rica → kapanış."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitaptan sonra virgül; sonraki satır küçük harfle başlıyor (vielen Dank …, leider …)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "weil / dass'tan sonra çekimli fiil sonda: …, weil ich einen Termin habe."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "sich bedanken für + Akkusativ: Vielen Dank für die Einladung / für Ihre Einladung."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede",
+      "items": [
+        {
+          "de": "Sehr geehrte Frau …, / Sehr geehrter Herr …,",
+          "tr": "Sayın … Hanım, / Sayın … Bey,"
+        },
+        {
+          "de": "Liebe Frau …, / Lieber Herr …,",
+          "tr": "Sevgili … Hanım / … Bey (tanıdık biri için, daha sıcak)"
+        }
+      ]
+    },
+    {
+      "group": "Sich entschuldigen",
+      "items": [
+        {
+          "de": "Es tut mir sehr leid, aber …",
+          "tr": "Çok üzgünüm ama …"
+        },
+        {
+          "de": "Leider kann ich am … nicht kommen, weil …",
+          "tr": "Maalesef …de gelemiyorum, çünkü …"
+        },
+        {
+          "de": "Bitte entschuldigen Sie, dass …",
+          "tr": "… için lütfen kusura bakmayın."
+        }
+      ]
+    },
+    {
+      "group": "Bitten und vorschlagen",
+      "items": [
+        {
+          "de": "Könnten Sie mir bitte … ?",
+          "tr": "Bana lütfen … -abilir misiniz?"
+        },
+        {
+          "de": "Würde Ihnen … passen?",
+          "tr": "… size uyar mı?"
+        },
+        {
+          "de": "Ich hoffe auf Ihr Verständnis.",
+          "tr": "Anlayışınızı umuyorum."
+        }
+      ]
+    },
+    {
+      "group": "Zum Thema",
+      "items": [
+        {
+          "de": "Vielen Dank für Ihre Einladung!",
+          "tr": "Davetiniz için çok teşekkürler!"
+        },
+        {
+          "de": "Ich wünsche Ihnen eine schöne Feier.",
+          "tr": "Size güzel bir kutlama dilerim."
+        },
+        {
+          "de": "Alles Gute zum Geburtstag!",
+          "tr": "Doğum gününüz kutlu olsun!"
+        }
+      ]
+    },
+    {
+      "group": "Gruß",
+      "items": [
+        {
+          "de": "Viele Grüße / Mit freundlichen Grüßen",
+          "tr": "Selamlar / Saygılarımla"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Liebe Frau Becker,\nvielen Dank für Ihre Einladung! Ich würde sehr gern kommen, aber am Samstag ist die Hochzeit meiner Cousine in Köln. Es tut mir wirklich leid. Ich wünsche Ihnen schon jetzt alles Gute zum Geburtstag und eine schöne Feier!\nViele Grüße\nElif Kaya",
+    "notes": [
+      "Önce teşekkür, sonra özür ve sebep: üç görev de var.",
+      "Ich würde sehr gern kommen, aber … : kibar bir reddetme kalıbı.",
+      "Kapanışta iyi dilek: alles Gute zum Geburtstag."
+    ]
+  }
+}

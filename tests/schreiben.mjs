@@ -94,7 +94,7 @@ ok((await page.inputValue('#wtText')) === text && (await page.textContent('.wt')
 await page.click('[data-lang="tr"]').catch(() => {}); await page.waitForTimeout(400);
 await page.goto(B + '#exams/goethe/b1/schreiben/1/set-5'); await page.waitForTimeout(800);
 await page.fill('#wtText', 'Lieber Paul, …'); await page.click('[data-wt-submit]'); await page.waitForTimeout(400);
-ok(await page.locator('[data-wt-result] a[href="#exams/goethe/b1/schreiben"]').count() === 1, 'son sette Teil listesine dönüş');
+ok(await page.locator('[data-wt-result] a.task-next[href="#exams/goethe/b1/schreiben/2/set-1"]').count() === 1, 'Teil 1 son setinden Teil 2 ilk sete geçiş');
 ok(!requests.some((u) => /gstatic\.com\/firebasejs|firestore\.googleapis|identitytoolkit/.test(u)), 'ziyaretçide Firebase hiç yüklenmiyor');
 await ctx.close();
 
@@ -120,9 +120,105 @@ for (const [l, title, submit, count] of [['de', 'Dein Text', 'Abschicken und Mus
   await ctx.close();
 }
 
+// 6b. Teil 2 (forum, Gästebuch görüşü, madde yok) ve Teil 3 (yarı resmî e-posta, ~40 kelime).
+{
+  const { ctx, page } = await newPage();
+  await page.goto(B + '#exams/goethe/b1/schreiben'); await page.waitForTimeout(1000);
+  const list = await page.textContent('#examView');
+  ok(['Kinder und Smartphones', 'Hunde in der Mietwohnung', 'Termin mit dem Vermieter', 'Spiel am Sonntag'].every((x) => list.includes(x)), 'Teil 2 ve Teil 3 setleri listede');
+  const t2 = JSON.parse(fs.readFileSync('data/exams/goethe/b1/schreiben/teil-2/set-1.json', 'utf8'));
+  await page.goto(B + '#exams/goethe/b1/schreiben/2/set-1'); await page.waitForTimeout(1000);
+  ok((await page.textContent('.wt-post blockquote')).includes(t2.post.text) && (await page.textContent('.wt-post figcaption')).includes('Markus'), 'Teil 2: Gästebuch görüşü ve yazarı');
+  ok(await page.locator('.wt-points').count() === 0 && await page.locator('.wt-instructions').count() === 0, 'Teil 2: madde listesi ve ayrı yönerge yok');
+  ok(await page.getAttribute('#wtText', 'placeholder') === 'Ich finde, …', 'Teil 2: metin alanı ipucu forum yazısına uygun');
+  await page.fill('#wtText', t2.model.text);
+  ok((await page.getAttribute('[data-wt-state]', 'class')).includes('is-ok'), 'Teil 2: örnek cevap uzunluğu iyi');
+  await page.goto(B + '#exams/goethe/b1/schreiben/3/set-2'); await page.waitForTimeout(1000);
+  ok((await page.textContent('.wt-task')).includes('Frau Wagner') && (await page.textContent('.wt-instructions')).includes('circa 40 Wörter'), 'Teil 3: görev ve "circa 40 Wörter"');
+  ok(await page.getAttribute('#wtText', 'placeholder') === 'Liebe Frau …, / Sehr geehrter Herr …,', 'Teil 3: ipucu yarı resmî hitap');
+  for (const [n, cls] of [[34, 'is-short'], [35, 'is-ok'], [50, 'is-ok'], [51, 'is-long']]) {
+    await page.fill('#wtText', words(n));
+    ok((await page.getAttribute('[data-wt-state]', 'class')).includes(cls), `Teil 3: ${n} kelime → ${cls}`);
+  }
+  await page.goto(B + '#exams/goethe/b1/schreiben/3/set-5'); await page.waitForTimeout(800);
+  await page.fill('#wtText', 'Lieber Herr Braun, …'); await page.click('[data-wt-submit]'); await page.waitForTimeout(400);
+  ok(await page.locator('[data-wt-result] a[href="#exams/goethe/b1/schreiben"]').count() === 1, 'Teil 3 son sette Teil listesine dönüş');
+  await ctx.close();
+}
+
+// 6c. Goethe A1: Teil 1 form doldurma (otomatik kontrol, yapay zekâ yok), Teil 2 kısa mesaj (~30 kelime).
+{
+  const { ctx, page } = await newPage();
+  const reqs = [];
+  page.on('request', (r) => reqs.push(r.url()));
+  await page.goto(B + '#exams/goethe/a1/schreiben'); await page.waitForTimeout(1000);
+  const list = await page.textContent('#examView');
+  ok(['Anmeldung zum Deutschkurs', 'Wohnung anmelden beim Bürgeramt', 'Zusammen kochen', 'Schwimmkurs für Kinder'].every((x) => list.includes(x)), 'A1: Teil 1 ve Teil 2 setleri listede');
+  // Eşleştirme kuralları (js/form-task.js).
+  const judge = await page.evaluate(() => {
+    const j = (row, v) => window.BAFormTask.judge(row, v).status;
+    const street = { accept: ['Goethestraße 7'] }, num = { accept: ['3', 'drei'] }, pick = { choices: ['bar', 'Überweisung'], answer: 'Überweisung' };
+    return [j(street, '  goethestrasse 7. '), j(street, 'Goethestrase 7'), j(street, 'Goethestraße 8'), j(num, 'Drei'), j(num, '4'), j(num, ''), j(pick, 'Überweisung'), j(pick, 'bar'),
+      j({ accept: ['Casablanca'] }, 'Casablnaca'), j({ accept: ['AOK'] }, 'AOX')];
+  });
+  ok(JSON.stringify(judge) === JSON.stringify(['right', 'almost', 'wrong', 'right', 'wrong', 'empty', 'right', 'wrong', 'almost', 'wrong']),
+    `form kontrolü: büyük-küçük harf/ß/boşluk önemsiz, tek harf yazım hatası "almost", sayı farklıysa yanlış, kısa kelimede tolerans yok (${judge})`);
+  await page.goto(B + '#exams/goethe/a1/schreiben/1/set-1'); await page.waitForTimeout(1000);
+  ok(await page.locator('.ft-input').count() === 3 && await page.locator('.ft-choice input').count() === 5 && await page.locator('.ft-no.is-example').count() === 1, 'form: 3 yazı alanı, 2 seçenekli alan, örnek (0)');
+  ok(await page.locator('#wtText').count() === 0 && await page.locator('.task-evidence').count() === 5, 'form: metin alanı yok; 5 dayanak işareti hazır');
+  await page.fill('#ft-1', 'casablanca');
+  await page.press('#ft-1', 'Enter');
+  ok(await page.evaluate(() => document.activeElement?.id) === 'ft-2', 'Enter bir sonraki alana geçiyor');
+  await page.fill('#ft-2', 'Franzosisch');
+  await page.fill('#ft-3', '3.3.');
+  await page.check('input[name="ft-4"][value="abends"]');
+  await page.press('#ft-3', 'Enter');
+  await page.waitForTimeout(400);
+  ok((await page.textContent('[data-ft-summary]')).includes('3 / 5 doğru'), 'son alanda Enter kontrol ediyor: 3 / 5 doğru');
+  ok((await page.textContent('[data-ft-row="2"] .task-result')).includes('Doğru sayıldı, ama yazımı: Französisch'), '"Franzosisch" → doğru, ama yazımı: Französisch');
+  ok((await page.textContent('[data-ft-row="3"] .task-result')).includes('Doğru cevap: 2. März') && (await page.getAttribute('[data-ft-row="3"]', 'class')).includes('is-wrong'), 'yanlış tarih: doğru cevap gösteriliyor');
+  ok((await page.textContent('[data-ft-row="5"] .task-result')).includes('Cevap verilmedi'), 'boş seçim: "Cevap verilmedi"');
+  ok(await page.locator('.ft-situation.is-checked .task-evidence[data-q="5"]').count() === 1 && await page.locator('.ft-input:disabled').count() === 3, 'kontrolden sonra dayanaklar numaralı, alanlar kilitli');
+  await page.click('[data-task-show="1"]'); await page.waitForTimeout(300);
+  ok(await page.evaluate(() => document.activeElement?.dataset.q) === '1', '"Metinde göster" dayanağa gidiyor');
+  ok(await page.locator('a.task-next[href="#exams/goethe/a1/schreiben/1/set-2"]').count() === 1, 'sonraki set bağlantısı');
+  await page.click('[data-ft-retry]'); await page.waitForTimeout(300);
+  ok(await page.inputValue('#ft-1') === '' && await page.locator('[data-ft-summary]').count() === 0, '"Tekrar çöz" formu boşaltıyor');
+  await page.goto(B + '#exams/goethe/a1/schreiben/1/set-5'); await page.waitForTimeout(800);
+  await page.click('[data-ft-check]'); await page.waitForTimeout(300);
+  ok(await page.locator('a[href="#exams/goethe/a1/schreiben/2/set-1"]').count() === 1 && (await page.textContent('[data-ft-summary]')).includes('0 / 5'), 'Teil 1 son setinden Teil 2\'ye geçiş; boş form 0 / 5');
+  await page.goto(B + '#exams/goethe/a1/schreiben/2/set-3'); await page.waitForTimeout(1000);
+  ok((await page.textContent('.wt-instructions')).includes('circa 30 Wörter') && await page.locator('.wt-points li').count() === 3, 'A1 Teil 2: üç madde ve "circa 30 Wörter"');
+  for (const [n, cls] of [[24, 'is-short'], [25, 'is-ok'], [40, 'is-ok'], [41, 'is-long']]) {
+    await page.fill('#wtText', words(n));
+    ok((await page.getAttribute('[data-wt-state]', 'class')).includes(cls), `A1 Teil 2: ${n} kelime → ${cls}`);
+  }
+  ok(!reqs.some((u) => /gstatic\.com\/firebasejs|firestore\.googleapis|identitytoolkit/.test(u)), 'A1 Schreiben: ziyaretçide Firebase yüklenmiyor');
+  await ctx.close();
+  for (const [l, check, spelling] of [['de', 'Prüfen', 'Als richtig gezählt'], ['en', 'Check answers', 'Counted as correct']]) {
+    const { ctx, page } = await newPage({ lang: l });
+    await page.goto(B + '#exams/goethe/a1/schreiben/1/set-3'); await page.waitForTimeout(1000);
+    await page.fill('#ft-2', 'Goethestrase 7');
+    ok((await page.textContent('[data-ft-check]')).includes(check), `${l}: form düğmesi`);
+    await page.click('[data-ft-check]'); await page.waitForTimeout(300);
+    const body = await page.textContent('.ft');
+    ok(body.includes(spelling) && !/\bft[A-Z]\w+/.test(body), `${l}: form metinleri çevrili`);
+    await ctx.close();
+  }
+}
+
 // 7. 390 / 1440, açık / koyu.
 for (const width of [390, 1440]) {
   for (const theme of ['light', 'dark']) {
+    for (const teil of ['b1/schreiben/2/set-1', 'b1/schreiben/3/set-1', 'a1/schreiben/1/set-3', 'a1/schreiben/2/set-1']) {
+      const { ctx, page } = await newPage({ width, theme });
+      await page.goto(B + `#exams/goethe/${teil}`); await page.waitForTimeout(1200);
+      const name = teil.replace(/\/schreiben\/(\d)\/set-\d/, '-teil$1');
+      if (teil.startsWith('a1/schreiben/1')) { await page.fill('#ft-1', 'drei'); await page.fill('#ft-2', 'Goethestrase 7'); await page.check('input[name="ft-4"][value="vormittags"]'); await page.click('[data-ft-check]'); await page.waitForTimeout(400); }
+      ok(await overflow(page) <= 0, `${width} ${theme} ${name}: taşma yok`);
+      await page.screenshot({ path: path.join(shotDir, `${name}-${width}-${theme}.png`), fullPage: true });
+      await ctx.close();
+    }
     const { ctx, page } = await newPage({ width, theme });
     await page.goto(B + '#exams/goethe/b1/schreiben/1/set-4'); await page.waitForTimeout(1200);
     await page.fill('#wtText', set1.model.text);

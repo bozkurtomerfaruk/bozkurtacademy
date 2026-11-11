@@ -35,8 +35,16 @@ function checkWriting(set, fail) {
   const text = value => typeof value === 'string' && value.trim();
   if (set.kind !== 'writing') fail('"kind" must be "writing" in a Schreiben set');
   for (const key of ['title', 'situation', 'task']) if (!text(set[key])) fail(`"${key}" missing`);
-  if (!['du', 'Sie'].includes(set.register)) fail('"register" must be "du" or "Sie"');
-  if (!Array.isArray(set.points) || set.points.length < 2 || !set.points.every(text)) fail('"points" needs at least two content points');
+  // textType: the kind of text (the AI check gets type-specific rules, worker/schreiben-kontrol.js) and the register it needs.
+  const REGISTER = { 'email-informal': 'du', sms: 'du', 'email-semiformal': 'Sie', 'email-formal': 'Sie', forum: 'neutral' };
+  if (!(set.textType in REGISTER)) fail(`"textType" must be one of ${Object.keys(REGISTER).join(', ')}`);
+  else if (set.register !== REGISTER[set.textType]) fail(`"register" must be "${REGISTER[set.textType]}" for textType ${set.textType}`);
+  // Content points (Goethe B1 Teil 1, A1/A2) or none (Goethe B1 Teil 2 and 3: the task says what to write).
+  if (!Array.isArray(set.points) || (set.points.length && (set.points.length < 2 || !set.points.every(text)))) fail('"points" must be empty or have at least two content points');
+  // Forum posts answer an opinion from a guest book: { site?, author, time?, text }.
+  if (set.textType === 'forum' && !(text(set.post?.author) && text(set.post?.text))) fail('"post" with author and text is needed for a forum task');
+  if (set.post !== undefined && set.textType !== 'forum') fail('"post" is only for forum tasks');
+  if (set.instructions !== undefined && !text(set.instructions)) fail('"instructions" must be text when present');
   const w = set.words || {};
   if (!(Number.isInteger(w.min) && Number.isInteger(w.target) && Number.isInteger(w.max) && w.min > 0 && w.min <= w.target && w.target <= w.max)) fail('"words" needs min <= target <= max');
   const list = Array.isArray(set.checklist) ? set.checklist : [];
@@ -50,6 +58,37 @@ function checkWriting(set, fail) {
     if (n < w.min || n > w.max) fail(`model answer has ${n} words, expected ${w.min}–${w.max}`);
   }
   if (!Array.isArray(set.model?.notes) || !set.model.notes.length || !set.model.notes.every(text)) fail('"model.notes" needs at least one note (Turkish)');
+}
+
+// Form doldurma (kind "form", Goethe A1 Schreiben Teil 1; js/form-task.js): durum metni, görev, form satırları.
+// Boşluklar 1'den başlayıp sırayla numaralı; her biri ya kabul edilen cevaplar (accept) ya da seçenekler + cevap içerir,
+// dayanağı (evidence) durum metninde bir kez geçer ve çakışmaz, Türkçe açıklaması en az 40 karakter.
+function checkForm(set, fail) {
+  const text = value => typeof value === 'string' && value.trim();
+  for (const key of ['title', 'situation', 'task']) if (!text(set[key])) fail(`"${key}" missing`);
+  const rows = Array.isArray(set.form?.rows) ? set.form.rows : [];
+  if (!text(set.form?.title) || rows.length < 5) { fail('"form" needs a title and rows'); return; }
+  const blanks = rows.filter(row => row.number !== undefined);
+  blanks.forEach((row, i) => { if (row.number !== i + 1) fail(`blank numbers must be 1, 2, 3 …; found ${row.number}`); });
+  if (blanks.length !== 5) fail(`form needs 5 blanks, found ${blanks.length}`);
+  if (rows.filter(row => row.example).length !== 1) fail('form needs exactly one example row (0)');
+  const spans = [];
+  for (const row of rows) {
+    if (!text(row.label)) fail('every row needs a label');
+    if (row.number === undefined) { if (!text(row.value)) fail(`row "${row.label}" needs a value or a number`); continue; }
+    const label = `blank ${row.number}`;
+    if (row.choices) {
+      if (!Array.isArray(row.choices) || row.choices.length < 2 || !row.choices.every(text) || !row.choices.includes(row.answer)) fail(`${label}: "choices" (2+) must include "answer"`);
+    } else if (!Array.isArray(row.accept) || !row.accept.length || !row.accept.every(text)) fail(`${label}: "accept" needs at least one answer`);
+    if (!Array.isArray(row.evidence) || !row.evidence.length) fail(`${label}: "evidence" missing`);
+    for (const quote of row.evidence || []) {
+      const at = String(set.situation).indexOf(quote);
+      if (at < 0 || String(set.situation).indexOf(quote, at + 1) >= 0) { fail(`${label}: evidence "${quote}" must occur exactly once in "situation"`); continue; }
+      if (spans.some(s => at < s.end && at + quote.length > s.at)) fail(`${label}: evidence "${quote}" overlaps another blank`);
+      spans.push({ at, end: at + quote.length });
+    }
+    if (!text(row.explanation) || row.explanation.length < 40) fail(`${label}: Turkish "explanation" needs at least 40 characters`);
+  }
 }
 
 for (const exam of data.exams) for (const level of exam.levels || []) for (const section of level.sections) {
@@ -68,9 +107,10 @@ for (const exam of data.exams) for (const level of exam.levels || []) for (const
       const expect = { exam: exam.id, level: level.id, section: section.id, teil: teilNo, set: entry.set };
       for (const [key, value] of Object.entries(expect)) if (set[key] !== value) fail(`"${key}" is ${JSON.stringify(set[key])}, expected ${JSON.stringify(value)}`);
       if (!(set.minutes > 0)) fail('"minutes" must be a positive number');
-      if (!set.instructions) fail('"instructions" missing');
       // Schreiben (kind "writing"): a task, a word target, a checklist, Redemittel and a model answer; no questions.
-      if (section.id === 'schreiben') { checkWriting(set, fail); writings++; continue; }
+      // "instructions" is optional there (Goethe B1 Teil 2 has only the task line).
+      if (section.id === 'schreiben') { if (set.kind === 'form') checkForm(set, fail); else checkWriting(set, fail); writings++; continue; }
+      if (!set.instructions) fail('"instructions" missing');
       if (!Array.isArray(set.groups) || !set.groups.length) { fail('"groups" missing'); continue; }
 
       const numbers = [];

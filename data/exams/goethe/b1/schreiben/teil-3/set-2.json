@@ -1,0 +1,135 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "schreiben",
+  "teil": 3,
+  "set": "set-2",
+  "title": "Teambesprechung",
+  "minutes": 15,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "Ihre Chefin, Frau Wagner, hat für morgen um 9 Uhr eine Teambesprechung geplant. Ihr Sohn ist krank und Sie müssen morgen früh mit ihm zum Arzt.",
+  "task": "Schreiben Sie an Frau Wagner. Entschuldigen Sie sich höflich, berichten Sie, warum Sie nicht kommen können, und fragen Sie, wie Sie die wichtigen Informationen bekommen.",
+  "points": [],
+  "instructions": "Schreiben Sie eine E-Mail (circa 40 Wörter). Vergessen Sie nicht die Anrede und den Gruß am Schluss.",
+  "words": {
+    "target": 40,
+    "min": 35,
+    "max": 50
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Görevdeki her şeyi yazdım: özür, neden gelemediğim, bilgileri nasıl alacağımı sormak."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Hitap ve kapanış var: Sehr geehrte Frau … / Sehr geehrter Herr … (ya da Liebe Frau …), Viele Grüße / Mit freundlichen Grüßen + adım."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Baştan sona Sie kullandım (Sie, Ihnen, Ihr …); du, Hallo, Tschüss yok."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kısa ve düzenli: giriş → özür ve sebep → öneri ya da rica → kapanış."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitaptan sonra virgül; sonraki satır küçük harfle başlıyor (vielen Dank …, leider …)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "weil / dass'tan sonra çekimli fiil sonda: …, weil ich einen Termin habe."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Dolaylı soru: Können Sie mir sagen, wie ich die Informationen bekomme? (fiil sonda)."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede",
+      "items": [
+        {
+          "de": "Sehr geehrte Frau …, / Sehr geehrter Herr …,",
+          "tr": "Sayın … Hanım, / Sayın … Bey,"
+        },
+        {
+          "de": "Liebe Frau …, / Lieber Herr …,",
+          "tr": "Sevgili … Hanım / … Bey (tanıdık biri için, daha sıcak)"
+        }
+      ]
+    },
+    {
+      "group": "Sich entschuldigen",
+      "items": [
+        {
+          "de": "Es tut mir sehr leid, aber …",
+          "tr": "Çok üzgünüm ama …"
+        },
+        {
+          "de": "Leider kann ich am … nicht kommen, weil …",
+          "tr": "Maalesef …de gelemiyorum, çünkü …"
+        },
+        {
+          "de": "Bitte entschuldigen Sie, dass …",
+          "tr": "… için lütfen kusura bakmayın."
+        }
+      ]
+    },
+    {
+      "group": "Bitten und vorschlagen",
+      "items": [
+        {
+          "de": "Könnten Sie mir bitte … ?",
+          "tr": "Bana lütfen … -abilir misiniz?"
+        },
+        {
+          "de": "Würde Ihnen … passen?",
+          "tr": "… size uyar mı?"
+        },
+        {
+          "de": "Ich hoffe auf Ihr Verständnis.",
+          "tr": "Anlayışınızı umuyorum."
+        }
+      ]
+    },
+    {
+      "group": "Zum Thema",
+      "items": [
+        {
+          "de": "an der Besprechung teilnehmen",
+          "tr": "toplantıya katılmak"
+        },
+        {
+          "de": "mit meinem Sohn zum Arzt gehen",
+          "tr": "oğlumla doktora gitmek"
+        },
+        {
+          "de": "das Protokoll schicken",
+          "tr": "toplantı notlarını göndermek"
+        }
+      ]
+    },
+    {
+      "group": "Gruß",
+      "items": [
+        {
+          "de": "Viele Grüße / Mit freundlichen Grüßen",
+          "tr": "Selamlar / Saygılarımla"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Liebe Frau Wagner,\nleider kann ich morgen nicht an der Teambesprechung teilnehmen. Mein Sohn ist krank und ich muss um 9 Uhr mit ihm zum Arzt gehen. Es tut mir sehr leid. Könnten Sie mir bitte das Protokoll schicken?\nViele Grüße\nMurat Yılmaz",
+    "notes": [
+      "Tanıdığı şefine Liebe Frau Wagner ile sıcak ama kibar başlıyor; Sehr geehrte da doğru olurdu.",
+      "Sebep kısa ve net: oğlu hasta, doktora gitmesi gerekiyor.",
+      "Rica Konjunktiv II ile kibar: Könnten Sie mir bitte …?"
+    ]
+  }
+}

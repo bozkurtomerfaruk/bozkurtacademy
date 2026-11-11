@@ -1,0 +1,167 @@
+{
+  "_not": "Gramer sayfalarının <title> ve meta description metinleri (ders içeriğinden ayrı). Anahtar: SEVİYE/ders-id. Yoksa ders başlığından üretilir. Başlık en fazla 60, açıklama en fazla 160 karakter; hepsi benzersiz olmalı (scripts/grammar-pages.mjs denetler). Başlıkta yalnızca derste gerçekten geçen biçimler yazılır.",
+  "A1/akkusativ": {
+    "title": "Almanca Akkusativ (-i Hâli): den, einen, keinen | A1",
+    "description": "Almanca Akkusativ: özneyi nesneden ayırma, den, einen, keinen biçimleri, kein ve mein ile kullanım, Akkusativ isteyen edatlar. Örnekler ve alıştırmalar."
+  },
+  "A1/artikel": {
+    "title": "Almanca Artikeller: der, die, das ve ein, eine | A1",
+    "description": "Almancada der, die, das ne zaman kullanılır? ein ve eine ile yeni bir şeyi tanıtma, isimleri artikeliyle öğrenme yöntemi. Örnekler ve alıştırmalar."
+  },
+  "A1/imperativ": {
+    "title": "Almanca Imperativ (Emir Kipi) Konu Anlatımı | A1",
+    "description": "Almanca emir kipi: du, ihr ve Sie biçimleri, kökü değişen ve ayrılabilen fiiller, olumsuz emir ve kibar rica. Örnek cümleler ve alıştırmalar."
+  },
+  "A1/lokale-praepositionen": {
+    "title": "Almanca Yer Edatları: in, auf, an, bei, zu, nach | A1",
+    "description": "Almanca yer ve yön edatları: Wo, Wohin, Woher ayrımı, şehir ve ülke kalıpları, in, auf, an, bei, zu, nach kullanımı. Örnekler ve alıştırmalar."
+  },
+  "A1/modalverben": {
+    "title": "Almanca Modal Fiiller: können, müssen, wollen | A1",
+    "description": "Almanca modal fiiller: können, müssen, wollen, dürfen, sollen, möchten çekimi, fiil sırası ve nicht müssen ile nicht dürfen farkı. Örnekler, alıştırmalar."
+  },
+  "A1/negation": {
+    "title": "Almanca Olumsuzluk: nicht ve kein, keinen, keine | A1",
+    "description": "Almanca olumsuz cümle: kein, keine, keinen ne zaman, nicht ne zaman kullanılır; nicht’in yeri, noch nicht ve nicht mehr. Örnekler ve alıştırmalar."
+  },
+  "A1/perfekt": {
+    "title": "Almanca Perfekt Geçmiş Zaman: haben/sein + Partizip | A1",
+    "description": "Almanca Perfekt: haben mı sein mı, düzenli ve düzensiz Partizip II (gemacht, gegangen), soru ve olumsuz cümle. Örnekler ve alıştırmalar."
+  },
+  "A1/personalpronomen-akkusativ": {
+    "title": "Almanca Akkusativ Şahıs Zamirleri: mich, dich, ihn | A1",
+    "description": "Almanca Akkusativ şahıs zamirleri: mich, dich, ihn, sie, es, uns, euch; ismin yerine doğru zamiri koyma ve Dativ’den ayırma. Örnekler ve alıştırmalar."
+  },
+  "A1/personalpronomen-dativ": {
+    "title": "Almanca Dativ Şahıs Zamirleri: mir, dir, ihm, ihr | A1",
+    "description": "Almanca Dativ şahıs zamirleri: mir, dir, ihm, ihr, uns, euch; helfen, danken, gefallen gibi Dativ fiilleri ve Dativ edatları. Örnekler ve alıştırmalar."
+  },
+  "A1/plural": {
+    "title": "Almanca Çoğul (Plural) Kuralları ve die Artikeli | A1",
+    "description": "Almanca isimlerin çoğulu: çoğulda artikel die, sık çoğul biçimleri, Umlaut değişimi (das Buch – die Bücher) ve fiil uyumu. Örnekler ve alıştırmalar."
+  },
+  "A1/possessivartikel": {
+    "title": "Almanca İyelik Artikelleri: mein, dein, sein, ihr | A1",
+    "description": "Almanca iyelik artikelleri: mein, dein, sein, ihr, unser, euer; sein ve ihr farkı, Akkusativ’de meinen biçimi. Örnekler ve alıştırmalar."
+  },
+  "A1/praesens": {
+    "title": "Almanca Präsens: Şimdiki ve Geniş Zaman Fiil Çekimi | A1",
+    "description": "Almanca Präsens fiil çekimi: kök + kişi ekleri, telaffuzu kolaylaştıran ekler, kökü değişen fiiller ve Präsens’in kullanımı. Örnekler ve alıştırmalar."
+  },
+  "A1/sein-haben": {
+    "title": "Almanca sein ve haben Çekimi: bin, bist, habe, hast | A1",
+    "description": "Almanca sein ve haben fiilleri: ich bin, du bist ve habe, hast biçimleri; kimlik, durum, yaş ve sahiplik anlatma, soru sırası. Örnekler ve alıştırmalar."
+  },
+  "A1/temporale-praepositionen": {
+    "title": "Almanca Zaman Edatları: am, um, im, seit, bis | A1",
+    "description": "Almanca zaman edatları: gün ve tarih için am, saat için um, ay ve mevsim için im; seit, von … bis, vor ve nach. Örnekler ve alıştırmalar."
+  },
+  "A1/trennbare-verben": {
+    "title": "Almanca Ayrılabilen Fiiller (Trennbare Verben) | A1",
+    "description": "Almanca ayrılabilen fiiller: aufstehen, einkaufen, anrufen; ön ekin cümle sonuna gitmesi, soru ve modal fiilli cümleler. Örnekler ve alıştırmalar."
+  },
+  "A1/w-fragen": {
+    "title": "Almanca Soru Kelimeleri (W-Fragen): Wer, Was, Wo, Wie | A1",
+    "description": "Almanca W-soruları: Wer, Was, Wo, Wie, Woher; soru kelimesi + fiil + özne sırası ve evet/hayır sorusundan farkı. Örnekler ve alıştırmalar."
+  },
+  "A1/zahlen-uhrzeit-datum": {
+    "title": "Almanca Sayılar, Saatler ve Tarihler | A1",
+    "description": "Almanca sayılar (einundzwanzig gibi), resmî ve günlük saat söyleme (halb), tarihte sıra sayıları. Örnekler ve alıştırmalar."
+  },
+  "A2/adjektivdeklination": {
+    "title": "Almanca Sıfat Çekimi (Adjektivdeklination) | A2",
+    "description": "Almanca sıfat çekimi: sıfat ne zaman ek alır, belirli artikel ve ein, mein, kein sonrası ekler, artikelsiz kullanım. Örnekler ve alıştırmalar."
+  },
+  "A2/dativ": {
+    "title": "Almanca Dativ (-e Hâli): dem, der, einem | A2",
+    "description": "Almanca Dativ: dem, der, den biçimleri, Dativ fiilleri, Dativ isteyen edatlar ve iki nesnenin sırası. Örnekler ve alıştırmalar."
+  },
+  "A2/futur-i": {
+    "title": "Almanca Gelecek Zaman (Futur I): werden + Mastar | A2",
+    "description": "Almanca Futur I: werden çekimi, asıl fiilin mastar olarak sonda kalması, olumsuz ve soru cümleleri, Präsens ile gelecek. Örnekler ve alıştırmalar."
+  },
+  "A2/komparativ-superlativ": {
+    "title": "Almanca Karşılaştırma: Komparativ ve Superlativ | A2",
+    "description": "Almanca karşılaştırma: -er ile Komparativ, als ve wie farkı, am …-sten ile Superlativ ve isim önünde sıfat eki. Örnekler ve alıştırmalar."
+  },
+  "A2/konjunktiv-ii": {
+    "title": "Almanca Konjunktiv II: würde, hätte, wäre, könnte | A2",
+    "description": "Almanca Konjunktiv II: hätte ve wäre çekimi, würde + mastar, wenn ile koşul, kibar rica ve tavsiye kalıpları. Örnekler ve alıştırmalar."
+  },
+  "A2/nebensaetze": {
+    "title": "Almanca Yan Cümleler (Nebensätze): weil, dass, wenn | A2",
+    "description": "Almanca yan cümleler: weil, dass, wenn, ob gibi bağlaçlar, çekimli fiilin sona gitmesi ve yan cümle başta olunca sıra. Örnekler ve alıştırmalar."
+  },
+  "A2/praeteritum": {
+    "title": "Almanca Präteritum: war, hatte ve Geçmiş Zaman | A2",
+    "description": "Almanca Präteritum: sein ve haben (war, hatte), modal fiillerin geçmişi, düzenli fiillerde -te ve Perfekt ile farkı. Örnekler ve alıştırmalar."
+  },
+  "A2/reflexive-verben": {
+    "title": "Almanca Dönüşlü Fiiller: sich, mich, dich | A2",
+    "description": "Almanca dönüşlü fiiller: mich, dich, sich gibi dönüşlü zamirler, Dativ biçimi, zamirin cümledeki yeri ve sabit edatlar. Örnekler ve alıştırmalar."
+  },
+  "A2/verben-dativ-akkusativ": {
+    "title": "Almanca İki Nesneli Fiiller: Dativ ve Akkusativ | A2",
+    "description": "Almanca geben, zeigen, schenken gibi iki nesneli fiiller: alıcı Dativ, şey Akkusativ; artikel çekimi ve zamir sırası. Örnekler ve alıştırmalar."
+  },
+  "A2/verben-praepositionen": {
+    "title": "Almanca Edatlı Fiiller: warten auf, denken an | A2",
+    "description": "Almanca edatlı fiiller: warten auf, denken an gibi kalıplar, fiil + edat + hâl, wo(r)- ve da(r)- ile soru ve tekrar. Örnekler ve alıştırmalar."
+  },
+  "A2/wechselpraepositionen": {
+    "title": "Almanca Wechselpräpositionen: Wo? Dativ, Wohin? Akkusativ",
+    "description": "Almanca iki hâlli edatlar: Wo? için Dativ, Wohin? için Akkusativ; dokuz edat, durum ve yerleştirme fiilleri. A2 örnekleri ve alıştırmalar."
+  },
+  "B1/genitiv": {
+    "title": "Almanca Genitiv (Tamlama): des, wegen, während | B1",
+    "description": "Almanca Genitiv: Wessen? sorusu, des ve isim sonundaki -s/-es, wegen ve während ile kullanım, von + Dativ ile karşılaştırma. Örnekler ve alıştırmalar."
+  },
+  "B1/indirekte-fragen": {
+    "title": "Almanca Dolaylı Sorular (Indirekte Fragen) ve ob | B1",
+    "description": "Almanca dolaylı sorular: soru kelimesi veya ob ile soruyu cümleye yerleştirme, fiilin sona gitmesi, ob, dass ve wenn farkı. Örnekler ve alıştırmalar."
+  },
+  "B1/infinitiv-zu": {
+    "title": "Almanca zu + Mastar: um … zu, ohne … zu, statt … zu | B1",
+    "description": "Almanca Infinitiv mit zu: zu’nun yeri, ayrılabilen fiillerde zu, um … zu, ohne … zu, statt … zu ve zu kullanılmayan durumlar. Örnekler ve alıştırmalar."
+  },
+  "B1/kausalsaetze": {
+    "title": "Almanca Sebep Cümleleri: weil, denn, da (Kausalsätze) | B1",
+    "description": "Almanca sebep bildiren cümleler: weil, denn ve da farkı, fiil sırası, modal fiil ve Perfekt ile yan cümleler. Örnekler ve alıştırmalar."
+  },
+  "B1/konjunktiv-ii-b1": {
+    "title": "Almanca Konjunktiv II: Varsayım, Dilek ve Geçmiş | B1",
+    "description": "Almanca Konjunktiv II: hätte, wäre, würde + mastar, gerçekleşmeyen geçmiş (hätte/wäre + Partizip II), dilek ve tavsiye. Örnekler ve alıştırmalar."
+  },
+  "B1/konnektoren": {
+    "title": "Almanca Bağlaçlar (Konnektoren): deshalb, trotzdem | B1",
+    "description": "Almanca bağlaçlar: und, aber, denn, weil, deshalb, obwohl, trotzdem, wenn, falls; anlam ilişkisine göre seçim ve fiil sırası. Örnekler ve alıştırmalar."
+  },
+  "B1/n-deklination": {
+    "title": "Almanca N-Deklination: der Student, den Studenten | B1",
+    "description": "Almanca N-Deklination: zayıf eril isimler (der Student, der Kollege), -(e)n eki, Genitiv ve özel biçimler, sık hatalar. Örnekler ve alıştırmalar."
+  },
+  "B1/passiv": {
+    "title": "Almanca Edilgen Yapı (Passiv): werden + Partizip II | B1",
+    "description": "Almanca Passiv: werden + Partizip II, geçmişte wurde ve ist … worden, modal fiillerle Passiv, von ile yapan kişi. Örnekler ve alıştırmalar."
+  },
+  "B1/plusquamperfekt": {
+    "title": "Almanca Plusquamperfekt: hatte/war + Partizip II | B1",
+    "description": "Almanca Plusquamperfekt: iki geçmiş olaydan önce olanı anlatma, hatte/war + Partizip II, nachdem ve als ile kullanım. Örnekler ve alıştırmalar."
+  },
+  "B1/praeteritum-b1": {
+    "title": "Almanca Präteritum ile Hikâye Anlatma: lernte, ging | B1",
+    "description": "Almanca Präteritum: düzenli fiillerde -te (lernte), güçlü fiiller (ging), karışık fiiller (dachte) ve modal fiillerle anlatı. Örnekler ve alıştırmalar."
+  },
+  "B1/pronominaladverbien": {
+    "title": "Almanca darauf, worauf, damit (Pronominaladverbien) | B1",
+    "description": "Almanca Pronominaladverbien: da- ve wo- biçimleri (darauf, worauf, damit), kişi ile şeyi ayırma, edatlı fiillerle kullanım. Örnekler ve alıştırmalar."
+  },
+  "B1/relativsaetze": {
+    "title": "Almanca İlgi Cümleleri (Relativsätze): der, die, das | B1",
+    "description": "Almanca ilgi cümleleri: ilgi zamiri seçimi, Dativ ve edatlı biçimler, dessen ve deren, wo ve was, virgül kullanımı. Örnekler ve alıştırmalar."
+  },
+  "B1/satzstellung-b1": {
+    "title": "Almanca Cümle Yapısı ve Kelime Sırası (Satzstellung) | B1",
+    "description": "Almanca kelime sırası: fiil ikinci öğede, cümle parantezi, TeKaMoLo, nicht’in yeri, soru ve yan cümlede fiil sırası. Örnekler ve alıştırmalar."
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b1",
+  "section": "schreiben",
+  "teil": 3,
+  "set": "set-5",
+  "title": "Spiel am Sonntag",
+  "minutes": 15,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "Sie spielen in einem Fußballverein. Ihr Trainer, Herr Braun, hat Sie für das wichtige Spiel am Sonntag aufgestellt. Sie können am Sonntag aber nicht spielen.",
+  "task": "Schreiben Sie an Herrn Braun. Entschuldigen Sie sich höflich und berichten Sie, warum Sie am Sonntag nicht spielen können.",
+  "points": [],
+  "instructions": "Schreiben Sie eine E-Mail (circa 40 Wörter). Vergessen Sie nicht die Anrede und den Gruß am Schluss.",
+  "words": {
+    "target": 40,
+    "min": 35,
+    "max": 50
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Görevdeki her şeyi yazdım: özür, neden oynayamadığım."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Hitap ve kapanış var: Sehr geehrte Frau … / Sehr geehrter Herr … (ya da Liebe Frau …), Viele Grüße / Mit freundlichen Grüßen + adım."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Baştan sona Sie kullandım (Sie, Ihnen, Ihr …); du, Hallo, Tschüss yok."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kısa ve düzenli: giriş → özür ve sebep → öneri ya da rica → kapanış."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitaptan sonra virgül; sonraki satır küçük harfle başlıyor (vielen Dank …, leider …)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "weil / dass'tan sonra çekimli fiil sonda: …, weil ich einen Termin habe."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Modalfiil + mastar sonda: Ich kann am Sonntag nicht spielen. / Ich muss arbeiten."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede",
+      "items": [
+        {
+          "de": "Sehr geehrte Frau …, / Sehr geehrter Herr …,",
+          "tr": "Sayın … Hanım, / Sayın … Bey,"
+        },
+        {
+          "de": "Liebe Frau …, / Lieber Herr …,",
+          "tr": "Sevgili … Hanım / … Bey (tanıdık biri için, daha sıcak)"
+        }
+      ]
+    },
+    {
+      "group": "Sich entschuldigen",
+      "items": [
+        {
+          "de": "Es tut mir sehr leid, aber …",
+          "tr": "Çok üzgünüm ama …"
+        },
+        {
+          "de": "Leider kann ich am … nicht kommen, weil …",
+          "tr": "Maalesef …de gelemiyorum, çünkü …"
+        },
+        {
+          "de": "Bitte entschuldigen Sie, dass …",
+          "tr": "… için lütfen kusura bakmayın."
+        }
+      ]
+    },
+    {
+      "group": "Bitten und vorschlagen",
+      "items": [
+        {
+          "de": "Könnten Sie mir bitte … ?",
+          "tr": "Bana lütfen … -abilir misiniz?"
+        },
+        {
+          "de": "Würde Ihnen … passen?",
+          "tr": "… size uyar mı?"
+        },
+        {
+          "de": "Ich hoffe auf Ihr Verständnis.",
+          "tr": "Anlayışınızı umuyorum."
+        }
+      ]
+    },
+    {
+      "group": "Zum Thema",
+      "items": [
+        {
+          "de": "beim Spiel mitspielen",
+          "tr": "maçta oynamak"
+        },
+        {
+          "de": "eine Schicht übernehmen",
+          "tr": "bir vardiyayı üstlenmek"
+        },
+        {
+          "de": "Beim nächsten Training bin ich wieder dabei.",
+          "tr": "Bir sonraki antrenmanda yine oradayım."
+        }
+      ]
+    },
+    {
+      "group": "Gruß",
+      "items": [
+        {
+          "de": "Viele Grüße / Mit freundlichen Grüßen",
+          "tr": "Selamlar / Saygılarımla"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Lieber Herr Braun,\nes tut mir sehr leid, aber ich kann am Sonntag leider nicht spielen. Ein Kollege ist krank und ich muss für ihn im Restaurant arbeiten. Das habe ich erst heute erfahren. Beim nächsten Training am Dienstag bin ich aber wieder dabei.\nViele Grüße\nCan Arslan",
+    "notes": [
+      "Özür ve sebep net: bir iş arkadaşının yerine çalışmak zorunda.",
+      "Kısa bir ek bilgi (erst heute erfahren) özrü daha anlaşılır yapıyor.",
+      "Kapanıştan önce olumlu bir cümle: Beim nächsten Training bin ich wieder dabei."
+    ]
+  }
+}

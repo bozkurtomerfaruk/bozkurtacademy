@@ -1,0 +1,109 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-2",
+  "title": "Kino absagen",
+  "minutes": 15,
+  "kind": "writing",
+  "register": "du",
+  "textType": "email-informal",
+  "situation": "Sie wollten morgen mit Ihrem Freund Max ins Kino gehen. Sie können aber nicht.",
+  "task": "Schreiben Sie Max eine E-Mail:",
+  "points": [
+    "Warum schreiben Sie?",
+    "Sagen Sie: Warum können Sie nicht?",
+    "Fragen Sie: neuer Termin?"
+  ],
+  "instructions": "Schreiben Sie zu jedem Punkt ein bis zwei Sätze (circa 30 Wörter). Schreiben Sie auch eine Anrede und einen Gruß.",
+  "words": {
+    "target": 30,
+    "min": 25,
+    "max": 40
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "1. madde: Neden yazdığımı söyledim (yarın sinemaya gelemiyorum)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "2. madde: Neden gelemediğimi yazdım (hasta, çalışmak zorunda …)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "3. madde: Yeni bir gün sordum (Hast du am … Zeit?)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap ve kapanış var: Liebe … / Lieber … / Hallo …, ve Viele Grüße / Liebe Grüße + adım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Her maddeye bir iki kısa cümle yazdım; hitaptan sonraki satır küçük harfle başlıyor."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Arkadaşıma du ile yazdım (du, dich, dir, dein)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Düz cümlede çekimli fiil 2. sırada: Am Samstag habe ich Zeit. / Morgen kann ich nicht kommen."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Modalfiil: Ich kann nicht kommen. / Ich muss arbeiten. (mastar sonda)."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Liebe … / Lieber … / Hallo …,",
+          "tr": "Sevgili … / Merhaba …,"
+        },
+        {
+          "de": "Viele Grüße / Liebe Grüße",
+          "tr": "Selamlar / Sevgiler"
+        }
+      ]
+    },
+    {
+      "group": "Warum schreiben Sie?",
+      "items": [
+        {
+          "de": "Leider kann ich morgen nicht ins Kino gehen.",
+          "tr": "Maalesef yarın sinemaya gidemiyorum."
+        },
+        {
+          "de": "Es tut mir leid.",
+          "tr": "Üzgünüm."
+        }
+      ]
+    },
+    {
+      "group": "Sagen und fragen",
+      "items": [
+        {
+          "de": "Ich muss arbeiten. / Ich bin krank.",
+          "tr": "Çalışmam gerekiyor. / Hastayım."
+        },
+        {
+          "de": "Hast du am Sonntag Zeit?",
+          "tr": "Pazar vaktin var mı?"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Hallo Max,\nleider kann ich morgen nicht ins Kino gehen. Es tut mir leid. Ich muss am Abend lange arbeiten. Hast du am Sonntag Zeit? Dann können wir zusammen gehen.\nViele Grüße\nMehmet",
+    "notes": [
+      "Neden yazıyor: sinemaya gidemiyor; sebep: akşam çalışmak zorunda; yeni gün: Pazar.",
+      "Ich muss … arbeiten / kann … gehen: modal fiil 2. sırada, mastar sonda.",
+      "Dann können wir …: Dann başta, fiil hemen arkasında."
+    ]
+  }
+}

@@ -21,9 +21,9 @@ export const MODEL = '@cf/google/gemma-4-26b-a4b-it';
 export const LIMIT_STUDENT = 3;
 export const LIMIT_GLOBAL = 600;
 
-export const PROMPT = `Sen Türkçe konuşan öğrencilere (A2–B1) Almanca öğreten deneyimli bir öğretmensin.
+export const PROMPT = `Sen Türkçe konuşan öğrencilere (A1–B1) Almanca öğreten deneyimli bir öğretmensin.
 Görev: Öğrencinin Almanca metnindeki gerçek dil bilgisi, yazım ve noktalama hatalarını bul.
-Kullanıcı mesajının ilk satırı görev adıdır ("Görev: …"); sadece "Metin:" satırından sonraki metni düzelt.
+Kullanıcı mesajının ilk satırları görev adı ("Görev: …") ve metin türüdür ("Metin türü: …"); sadece "Metin:" satırından sonraki metni düzelt.
 Kurallar:
 - Sadece gerçek hataları işaretle. Doğru cümleler ve üslup tercihleri hata DEĞİLDİR. Özel isimler hata değildir.
 - Her hata için: metindeki yanlış kısım (aynen), düzeltmesi ve TÜRKÇE kısa bir açıklama (1–2 cümle, yeni başlayan biri için, kuralı söyle; ör. "weil'den sonra çekimli fiil cümlenin sonuna gider").
@@ -41,12 +41,31 @@ Hâl adları (her açıklamada aynen bunları kullan, başka karşılık uydurma
 - "-de hâli" deme. Yer bildiren edatlarda: "Wo? (nerede?) sorusunda Dativ, Wohin? (nereye?) sorusunda Akkusativ" de.
 - Emin olmadığın bir şeyi hata olarak gösterme; iki biçim de doğruysa (ör. nächstes Mal / das nächste Mal, zu dem / zum) hata değildir.
 - Bir kelimenin birden çok anlamı olabilir (ör. "Bank": banka ya da bank); hangi anlamda kullanıldığını cümlenin bağlamından çıkar ve cümlenin anlamını değiştiren bir düzeltme önerme.
+Metin türüne göre (sadece dil ve resmiyet hatalarını işaretle; içeriği, uzunluğu ve görevi yerine getirip getirmediğini değerlendirme):
+- E-posta ve mesajlarda hitaptan sonra virgül gelir ve sonraki satır küçük harfle başlar (Liebe Lena, / wie geht es dir?). Hitaptan sonraki ilk kelime büyük harfle yazılmışsa (Vielen Dank …, Leider …, Wie geht …) hata say; isimler ve Sie, Ihnen, Ihr hariç. Kapanış selamından (Viele Grüße, Liebe Grüße, Mit freundlichen Grüßen) sonra virgül ve nokta gelmez. Kısa kapanışlar (Grüße, Gruß, Bis bald, LG) da doğrudur; uygun kapanışı hata sayma, sadece resmiyet derecesine uymayanı işaretle. Liebe kadına, Lieber erkeğe; Sehr geehrte Frau …, Sehr geehrter Herr ….
+- Gayriresmî e-posta ve Kısa mesaj (du): arkadaşa du ile yazılır. Metinde du ile Sie karışırsa (dich/Sie, dein/Ihr) hata say. Mektupta du, dich, dein büyük ya da küçük yazılabilir; ikisi de doğru.
+- Yarı resmî e-posta (Sie; tanıdık biri: kurs öğretmeni, şef, ev sahibi, komşu): Sie, Ihnen, Ihr her zaman büyük harfle. Bu kişiye du, dich, dein ya da Tschüss, Hi kullanmak resmiyet hatasıdır; açıklamada "Bu kişiye Sie ile yazılır" de. Liebe Frau … / Sehr geehrte Frau …, Hallo Frau …, Viele Grüße, Freundliche Grüße ve Mit freundlichen Grüßen burada doğrudur, hata sayma.
+- Resmî yazı (Sie; tanımadığın biri ya da kurum): Hallo, Tschüss, Liebe Grüße, du ve dein resmiyet hatasıdır; doğrusu Sehr geehrte Damen und Herren, / Sehr geehrte Frau …, ve Mit freundlichen Grüßen.
+- Forum yazısı (görüş): hitap ve imza gerekmez; Hallo zusammen da olabilir. Okurlara ihr ile ya da genel (man) yazmak doğrudur. Görüş kalıplarında fiil sırasına bak: Meiner Meinung nach ist … doğru, "Meiner Meinung nach ich finde" yanlış.
+Seviye A1 (görev adında "A1" geçiyorsa; kısa mesaj, yaklaşık 30 kelime):
+- Sadece açık hataları işaretle. Basit ama doğru cümleleri daha "güzel" yapmaya çalışma; bunlar hata DEĞİLDİR.
+- A1'de beklenmeyen yapıları (yan cümle, Präteritum, Konjunktiv II, Passiv) önerme; bunların yokluğunu eksik sayma. Düzeltmede de sadece A1 kelime ve yapılarını kullan.
+- Açıklamaları en basit Türkçeyle, tek kısa cümleyle yaz.
+- Ama A1'de de şunlar her zaman hatadır, mutlaka işaretle: çekimli fiilin yeri ve mastarın (kommen, gehen …) cümle sonunda olmaması, hâl ve çoğul ekleri, du/Sie karışması, uygunsuz hitap ve kapanış, hitaptan sonraki satırın büyük harfle başlaması (Das Fenster … → das Fenster …).
 - Sonra düzeltilmiş metnin tamamını ver.
 - SADECE şu biçimde JSON ile cevap ver:
 {"fehler":[{"original":"...","korrektur":"...","erklaerung":"..."}],"korrigierter_text":"..."}
 - Hata yoksa: {"fehler":[],"korrigierter_text":"<metnin aslı>"}`;
 
 const EXAM_NAMES = { goethe: 'Goethe', telc: 'telc', testdaf: 'TestDaF', dtz: 'DTZ', osd: 'ÖSD' };
+// Set dosyasındaki textType → yapay zekâya giden "Metin türü" satırı (talimattaki kurallarla aynı adlar).
+export const TEXT_TYPES = {
+  'email-informal': 'Gayriresmî e-posta (du), arkadaşa',
+  sms: 'Kısa mesaj (du), arkadaşa',
+  'email-semiformal': 'Yarı resmî e-posta (Sie), tanıdık birine',
+  'email-formal': 'Resmî yazı (Sie), tanımadığın birine ya da bir kuruma',
+  forum: 'Forum yazısı (görüş)'
+};
 
 // ---------- Firestore REST değerleri ----------
 export function decode(value) {
@@ -87,11 +106,18 @@ export function cleanResult(raw, text) {
   if (!list) return null;
   const seen = new Set();
   const errors = [];
+  // Hitap virgülle bitiyorsa sonraki satır küçük harfle başlar (Liebe Lena, / wie geht …). Model bazen bunu "düzeltip"
+  // büyük harfe çeviriyor; doğru olanı bozan bu öneri atılır.
+  const lines = text.split('\n');
+  const afterGreeting = /,\s*$/.test(lines[0] || '') ? (lines[1] || '').trimStart() : '';
+  const capitalizesAfterGreeting = (original, korrektur) => afterGreeting && /^\p{Ll}/u.test(original) && afterGreeting.startsWith(original)
+    && korrektur === original.charAt(0).toUpperCase() + original.slice(1);
   for (const item of list) {
     const original = typeof item?.original === 'string' ? item.original.trim() : '';
     const korrektur = typeof item?.korrektur === 'string' ? item.korrektur.trim() : '';
     const erklaerung = typeof item?.erklaerung === 'string' ? item.erklaerung.trim() : '';
     if (!original || !korrektur || !erklaerung || original === korrektur || !text.includes(original) || seen.has(original)) continue;
+    if (capitalizesAfterGreeting(original, korrektur)) continue;
     seen.add(original);
     errors.push({ original: original.slice(0, 300), korrektur: korrektur.slice(0, 300), erklaerung: erklaerung.slice(0, 600) });
     if (errors.length >= 30) break;
@@ -155,18 +181,24 @@ function db(env, token) {
   };
 }
 
-// Görev adı sitedeki set dosyasından okunur: "Goethe B1 · Teil 1 · Neue Wohnung".
-async function taskName(env, w) {
+// Görev adı ve metin türü sitedeki set dosyasından okunur: "Goethe B1 · Teil 1 · Neue Wohnung", textType.
+async function taskInfo(env, w) {
   const ok = [w.exam, w.level, w.set].every((v) => typeof v === 'string' && /^[a-z0-9-]{1,20}$/.test(v)) && Number.isInteger(w.teil);
-  const fallback = `${EXAM_NAMES[w.exam] || 'Sınav'} ${String(w.level || '').toUpperCase()} · Teil ${w.teil}`;
+  const fallback = { name: `${EXAM_NAMES[w.exam] || 'Sınav'} ${String(w.level || '').toUpperCase()} · Teil ${w.teil}`, type: null };
   if (!ok || !env.SITE_URL) return fallback;
   try {
     const r = await fetch(`${env.SITE_URL.replace(/\/$/, '')}/data/exams/${w.exam}/${w.level}/schreiben/teil-${w.teil}/${w.set}.json`);
     if (!r.ok) return fallback;
     const set = await r.json();
-    return typeof set.title === 'string' ? `${fallback} · ${set.title.slice(0, 80)}` : fallback;
+    return {
+      name: typeof set.title === 'string' ? `${fallback.name} · ${set.title.slice(0, 80)}` : fallback.name,
+      type: TEXT_TYPES[set.textType] || null
+    };
   } catch (_) { return fallback; }
 }
+
+// Yapay zekâya giden kullanıcı mesajı: sadece görev adı, metin türü ve metin (ad, e-posta, uid yok).
+export const userMessage = (task, text) => `Görev: ${task.name}\n${task.type ? `Metin türü: ${task.type}\n` : ''}Metin:\n${text}`;
 
 // Hesap açık mı ve yapay zekâ kontrolüne izin var mı: 16 yaş altında veli onayı VE ayrı yapay zekâ onayı gerekir.
 export function aiAllowed(profile) {
@@ -177,7 +209,7 @@ export function aiAllowed(profile) {
 
 async function runModel(env, task, text) {
   const result = await env.AI.run(MODEL, {
-    messages: [{ role: 'system', content: PROMPT }, { role: 'user', content: `Görev: ${task}\nMetin:\n${text}` }],
+    messages: [{ role: 'system', content: PROMPT }, { role: 'user', content: userMessage(task, text) }],
     max_tokens: 1500, temperature: 0.2, chat_template_kwargs: { enable_thinking: false }
   });
   return typeof result?.response === 'string' ? result.response
@@ -226,7 +258,7 @@ export default {
       if (count(mine) >= LIMIT_STUDENT || count(all) >= LIMIT_GLOBAL) return json({ status: 'limit' }, 200, okOrigin);
 
       let raw;
-      try { raw = await runModel(env, await taskName(env, w), w.text); }
+      try { raw = await runModel(env, await taskInfo(env, w), w.text); }
       catch (error) { console.error('model', String(error)); return json({ status: 'unavailable' }, 503, okOrigin); }
       const result = cleanResult(raw, w.text);
 

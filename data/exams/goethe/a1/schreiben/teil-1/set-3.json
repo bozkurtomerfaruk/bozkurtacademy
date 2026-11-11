@@ -1,0 +1,96 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-3",
+  "title": "Wohnung anmelden beim Bürgeramt",
+  "minutes": 5,
+  "kind": "form",
+  "situation": "Ihr Freund Bilal Rahimi ist mit seiner Frau und seiner Tochter nach Hannover gezogen. Die Familie wohnt seit dem 1. Oktober in der Goethestraße 7 in 30169 Hannover. Bilal möchte die neue Wohnung beim Bürgeramt anmelden. Er arbeitet jeden Tag bis 14 Uhr, deshalb braucht er einen Termin am Nachmittag. Die Bestätigung für den Termin möchte er per E-Mail bekommen.",
+  "task": "Helfen Sie Ihrem Freund und schreiben Sie die fünf fehlenden Informationen in das Formular.",
+  "form": {
+    "title": "Terminanfrage: Wohnsitz anmelden",
+    "subtitle": "Stadt Hannover, Bürgeramt",
+    "rows": [
+      {
+        "label": "Familienname, Vorname",
+        "value": "Rahimi, Bilal",
+        "example": true
+      },
+      {
+        "label": "Anzahl der Personen",
+        "number": 1,
+        "evidence": [
+          "mit seiner Frau und seiner Tochter"
+        ],
+        "explanation": "Anzahl der Personen = kişi sayısı. Bilal + eşi (seine Frau) + kızı (seine Tochter) = 3 kişi. Sayıyı rakamla ya da yazıyla (drei) yazabilirsin.",
+        "accept": [
+          "3",
+          "drei"
+        ]
+      },
+      {
+        "label": "Neue Adresse: Straße, Hausnummer",
+        "number": 2,
+        "evidence": [
+          "in der Goethestraße 7"
+        ],
+        "explanation": "Straße, Hausnummer = sokak ve kapı numarası. Metinde „in der Goethestraße 7“ → Goethestraße 7. PLZ ve şehir formda zaten yazılı.",
+        "accept": [
+          "Goethestraße 7",
+          "Goethestrasse 7",
+          "Goethestr. 7",
+          "Goethe-Straße 7"
+        ]
+      },
+      {
+        "label": "PLZ, Ort",
+        "value": "30169 Hannover"
+      },
+      {
+        "label": "Einzugsdatum",
+        "number": 3,
+        "evidence": [
+          "seit dem 1. Oktober"
+        ],
+        "explanation": "Einzugsdatum = eve taşınma tarihi. Metinde „Die Familie wohnt seit dem 1. Oktober …“ → 1 Ekim'den beri orada oturuyorlar: 1. Oktober ya da 1.10.",
+        "accept": [
+          "1. Oktober",
+          "1.10.",
+          "01.10.",
+          "am 1. Oktober",
+          "01. Oktober"
+        ]
+      },
+      {
+        "label": "Termin",
+        "number": 4,
+        "evidence": [
+          "einen Termin am Nachmittag"
+        ],
+        "explanation": "Bilal her gün saat 14'e kadar çalışıyor; metinde „er braucht einen Termin am Nachmittag“ → öğleden sonra: nachmittags.",
+        "choices": [
+          "vormittags",
+          "nachmittags"
+        ],
+        "answer": "nachmittags"
+      },
+      {
+        "label": "Bestätigung per",
+        "number": 5,
+        "evidence": [
+          "per E-Mail bekommen"
+        ],
+        "explanation": "Bestätigung = onay, randevu teyidi. Metinde „per E-Mail bekommen“ → e-postayla. Post = mektupla, SMS = telefona mesaj.",
+        "choices": [
+          "Post",
+          "E-Mail",
+          "SMS"
+        ],
+        "answer": "E-Mail"
+      }
+    ]
+  }
+}

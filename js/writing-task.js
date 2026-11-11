@@ -12,7 +12,7 @@
   const fill = (key, values) => t(key).replace(/\{(\w+)\}/g, (_, name) => values[name] ?? '');
   const lang = () => window.BA?.lang || 'tr';
   const esc = value => window.baHtml.escapeHtml(value);
-  // html-safe-names: status navActions() points groups notes
+  // html-safe-names: status navActions() points groups notes head postHtml(set.post)
   const MAX_CHARS = 4000; // firestore.rules ile aynı sınır
 
   // Harf ve rakam dizileri; "-" ya da "'" ile birleşenler tek kelime (B1-Prüfung). scripts/check-exams.mjs aynı kuralı kullanır.
@@ -51,15 +51,34 @@
     return { cls: 'is-long', key: 'wtCountLong' };
   }
 
+  // Görev: durum, (forum görevlerinde) Gästebuch'taki görüş, görev cümlesi, varsa içerik maddeleri ve yönerge.
+  function postHtml(post) {
+    if (!post) return '';
+    const head = [post.author, post.time].filter(Boolean).map(esc).join(' · ');
+    return `<figure class="wt-post">
+      ${post.site ? `<p class="wt-post-site">${esc(post.site)} · Gästebuch</p>` : ''}
+      <blockquote><p>${esc(post.text)}</p></blockquote>
+      <figcaption>${head}</figcaption>
+    </figure>`;
+  }
+
   function taskHtml(set) {
-    const points = set.points.map(point => `<li>${esc(point)}</li>`).join('');
+    const points = set.points?.length ? `<ul class="wt-points">${set.points.map(point => `<li>${esc(point)}</li>`).join('')}</ul>` : '';
     return `<div class="wt-task" lang="de">
       <p>${esc(set.situation)}</p>
+      ${postHtml(set.post)}
       <p><strong>${esc(set.task)}</strong></p>
-      <ul class="wt-points">${points}</ul>
-      <p class="wt-instructions">${esc(set.instructions)}</p>
+      ${points}
+      ${set.instructions ? `<p class="wt-instructions">${esc(set.instructions)}</p>` : ''}
     </div>`;
   }
+
+  // Metin alanındaki ipucu, metin türüne göre (data: textType).
+  const PLACEHOLDERS = {
+    'email-informal': 'Liebe …, / Lieber …,', sms: 'Hallo …,',
+    'email-semiformal': 'Liebe Frau …, / Sehr geehrter Herr …,', 'email-formal': 'Sehr geehrte Damen und Herren,',
+    forum: 'Ich finde, …'
+  };
 
   function checklistHtml(set, state) {
     const groups = CRITERIA.map(criterion => {
@@ -91,7 +110,7 @@
       <section class="wt-card wt-editor" aria-labelledby="wtTextLabel">
         <h3 id="wtTextLabel"><label for="wtText">${esc(t('wtYourText'))}</label></h3>
         <textarea id="wtText" lang="de" spellcheck="false" autocomplete="off" autocapitalize="sentences" maxlength="${MAX_CHARS}"
-          aria-describedby="wtCount wtCountState" placeholder="${esc(set.register === 'du' ? 'Liebe …, / Lieber …,' : 'Sehr geehrte …,')}">${esc(state.text)}</textarea>
+          aria-describedby="wtCount wtCountState" placeholder="${esc(PLACEHOLDERS[set.textType] || (set.register === 'du' ? 'Liebe …, / Lieber …,' : 'Sehr geehrte …,'))}">${esc(state.text)}</textarea>
         <p class="wt-counter"><span id="wtCount" data-wt-count>${esc(fill('wtWords', { n }))}</span>
           <span class="wt-pill ${esc(c.cls)}" id="wtCountState" aria-live="polite" data-wt-state>${esc(fill(c.key, { min: set.words.min, max: set.words.max, target: set.words.target }))}</span></p>
         <p class="wt-error" role="alert" data-wt-error hidden></p>
@@ -231,6 +250,8 @@
     container.innerHTML = `<p class="task-status" role="status">${esc(t('taskLoading'))}</p>`;
     return load(path).then(set => {
       if (!container.isConnected || container.dataset.taskPath !== path) return;
+      // Form doldurma (Goethe A1 Teil 1) js/form-task.js'te.
+      if (set.kind === 'form') { window.BAFormTask?.render(container, set, { path, preserve, nav }); return; }
       if (!preserve || !states[path]) states[path] = { text: readDraft(set), submitted: false, checks: {} };
       draw(container, set, path);
       bind(container);

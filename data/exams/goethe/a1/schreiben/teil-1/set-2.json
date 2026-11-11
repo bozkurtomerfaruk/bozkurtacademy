@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Beim Arzt",
+  "minutes": 5,
+  "kind": "form",
+  "situation": "Ihre Freundin Leyla Aksoy ist 34 Jahre alt und wohnt in der Lindenstraße 12 in 50667 Köln. Sie hat seit drei Tagen starke Kopfschmerzen. Heute geht sie zum ersten Mal in die Praxis von Dr. Weber. Sie ist bei der AOK versichert. Sie nimmt keine Medikamente.",
+  "task": "Helfen Sie Ihrer Freundin und schreiben Sie die fünf fehlenden Informationen in das Formular.",
+  "form": {
+    "title": "Patientenbogen",
+    "subtitle": "Praxis Dr. Weber, Allgemeinmedizin",
+    "rows": [
+      {
+        "label": "Name, Vorname",
+        "value": "Aksoy, Leyla",
+        "example": true
+      },
+      {
+        "label": "Straße, Hausnummer",
+        "value": "Lindenstraße 12"
+      },
+      {
+        "label": "PLZ, Wohnort",
+        "value": "50667 Köln"
+      },
+      {
+        "label": "Alter",
+        "number": 1,
+        "evidence": [
+          "34 Jahre alt"
+        ],
+        "explanation": "Alter = yaş. Metinde „Ihre Freundin Leyla Aksoy ist 34 Jahre alt“ → 34 (sadece sayıyı yazman yeterli).",
+        "accept": [
+          "34",
+          "vierunddreißig",
+          "34 Jahre",
+          "vierunddreissig"
+        ]
+      },
+      {
+        "label": "Krankenkasse",
+        "number": 2,
+        "evidence": [
+          "bei der AOK versichert"
+        ],
+        "explanation": "Krankenkasse = sağlık sigortası şirketi. Metinde „Sie ist bei der AOK versichert“ → AOK.",
+        "accept": [
+          "AOK"
+        ]
+      },
+      {
+        "label": "Beschwerden",
+        "number": 3,
+        "evidence": [
+          "starke Kopfschmerzen"
+        ],
+        "explanation": "Beschwerden = şikâyetler, nesi var. Metinde „Sie hat … starke Kopfschmerzen“ → baş ağrısı (Kopfschmerzen).",
+        "accept": [
+          "Kopfschmerzen",
+          "starke Kopfschmerzen",
+          "Kopfweh"
+        ]
+      },
+      {
+        "label": "Seit wann?",
+        "number": 4,
+        "evidence": [
+          "seit drei Tagen"
+        ],
+        "explanation": "Seit wann? = ne zamandan beri? Metinde „seit drei Tagen“ → üç gündür. seit'ten sonra Dativ: drei Tagen.",
+        "accept": [
+          "seit drei Tagen",
+          "seit 3 Tagen",
+          "drei Tage",
+          "3 Tage",
+          "drei Tagen",
+          "3 Tagen"
+        ]
+      },
+      {
+        "label": "Nehmen Sie Medikamente?",
+        "number": 5,
+        "evidence": [
+          "Sie nimmt keine Medikamente"
+        ],
+        "explanation": "Medikamente = ilaçlar. Metinde „Sie nimmt keine Medikamente“ → ilaç almıyor: nein. keine = hiç (olumsuz).",
+        "choices": [
+          "ja",
+          "nein"
+        ],
+        "answer": "nein"
+      }
+    ]
+  }
+}

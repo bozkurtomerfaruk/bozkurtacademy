@@ -1,0 +1,109 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-5",
+  "title": "Schwimmkurs für Kinder",
+  "minutes": 15,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-formal",
+  "situation": "Ihre Tochter ist sieben Jahre alt und möchte schwimmen lernen.",
+  "task": "Schreiben Sie an die Volkshochschule:",
+  "points": [
+    "Warum schreiben Sie?",
+    "Fragen Sie: Wann ist der Kurs?",
+    "Fragen Sie: Wie viel kostet der Kurs?"
+  ],
+  "instructions": "Schreiben Sie zu jedem Punkt ein bis zwei Sätze (circa 30 Wörter). Schreiben Sie auch eine Anrede und einen Gruß.",
+  "words": {
+    "target": 30,
+    "min": 25,
+    "max": 40
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "1. madde: Neden yazdığımı söyledim (kızım için yüzme kursu)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "2. madde: Kursun ne zaman olduğunu sordum (gün ve saat)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "3. madde: Fiyatı sordum (Wie viel kostet …?)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap ve kapanış var: Sehr geehrte Damen und Herren, ve Mit freundlichen Grüßen + adım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Her maddeye bir iki kısa cümle yazdım; hitaptan sonraki satır küçük harfle başlıyor."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Baştan sona Sie kullandım (Sie, Ihnen, Ihr); du ve Tschüss yok."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Düz cümlede çekimli fiil 2. sırada: Am Samstag habe ich Zeit. / Morgen kann ich nicht kommen."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Soru kelimesiyle soru: Wann ist der Kurs? / Wie viel kostet der Kurs? (fiil 2. sırada)."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Sehr geehrte Damen und Herren,",
+          "tr": "Sayın yetkililer,"
+        },
+        {
+          "de": "Mit freundlichen Grüßen",
+          "tr": "Saygılarımla"
+        }
+      ]
+    },
+    {
+      "group": "Warum schreiben Sie?",
+      "items": [
+        {
+          "de": "Meine Tochter möchte schwimmen lernen.",
+          "tr": "Kızım yüzme öğrenmek istiyor."
+        },
+        {
+          "de": "Haben Sie einen Schwimmkurs für Kinder?",
+          "tr": "Çocuklar için yüzme kursunuz var mı?"
+        }
+      ]
+    },
+    {
+      "group": "Sagen und fragen",
+      "items": [
+        {
+          "de": "Wann ist der Kurs?",
+          "tr": "Kurs ne zaman?"
+        },
+        {
+          "de": "Wie viel kostet der Kurs?",
+          "tr": "Kurs ne kadar?"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Sehr geehrte Damen und Herren,\nmeine Tochter ist sieben Jahre alt und möchte schwimmen lernen. Haben Sie einen Schwimmkurs für Kinder? Wann ist der Kurs? Wie viel kostet er?\nMit freundlichen Grüßen\nSevgi Kaya",
+    "notes": [
+      "Kuruma resmî yazı: Sehr geehrte Damen und Herren ve Mit freundlichen Grüßen.",
+      "Neden: kızı yüzme öğrenmek istiyor; iki soru: ne zaman, ne kadar.",
+      "Wie viel kostet er? — er = der Kurs (zamir)."
+    ]
+  }
+}

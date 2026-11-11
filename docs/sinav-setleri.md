@@ -116,7 +116,7 @@ Set şu adresten açılır: `#exams/goethe/b1/lesen/1/set-1`. DTZ gibi seviye ad
 ```json
 {
   "format": 1, "exam": "goethe", "level": "b1", "section": "schreiben", "teil": 1, "set": "set-1",
-  "title": "Neue Wohnung", "minutes": 20, "kind": "writing", "register": "du",
+  "title": "Neue Wohnung", "minutes": 20, "kind": "writing", "register": "du", "textType": "email-informal",
   "situation": "Sie sind vor zwei Wochen …",
   "task": "Schreiben Sie Lena eine E-Mail:",
   "points": ["Beschreiben Sie: …", "Begründen Sie: …", "Machen Sie einen Vorschlag …"],
@@ -128,11 +128,44 @@ Set şu adresten açılır: `#exams/goethe/b1/lesen/1/set-1`. DTZ gibi seviye ad
 }
 ```
 
+- `textType` ve `register` (metin türü ve hitap; yapay zekâ kontrolü türe uygun kuralları buna göre kullanır, `worker/schreiben-kontrol.js`):
+  - `email-informal` (arkadaşa e-posta) ve `sms` (kısa mesaj): `register` `"du"`.
+  - `email-semiformal` (tanıdık birine: kurs öğretmeni, şef, ev sahibi) ve `email-formal` (kuruma ya da tanımadığın birine): `"Sie"`.
+  - `forum` (görüş yazısı): `"neutral"`; ayrıca `post` gerekir: Gästebuch'taki görüş `{ "site": "www.diskussion-aktuell.de", "author": "Markus", "time": "14.03. 19:20 Uhr", "text": "…" }`. Örnek: `teil-2/set-1.json` (Goethe B1 Teil 2).
+- `points`: içerik maddeleri (en az 2) ya da boş liste; görev cümlesi ne yazılacağını zaten söylüyorsa boş (Goethe B1 Teil 2 ve 3).
+- `instructions`: isteğe bağlı (Goethe B1 Teil 2'de sadece görev cümlesi var).
+- Goethe B1 (resmî Modellsatz): Teil 1 arkadaşa e-posta ~80 kelime, 20 dk; Teil 2 Gästebuch'a görüş ~80 kelime, 25 dk; Teil 3 tanıdık birine yarı resmî e-posta ~40 kelime, 15 dk (`words` 35–50).
 - `words`: kelime sayacı `min`–`max` arasını iyi sayar; dışında uyarır ama göndermeyi engellemez. Sayaç harf ve rakam dizilerini sayar; `-` ya da `'` ile birleşenler tek kelimedir (B1-Prüfung).
 - `checklist`: sınav kriterlerine göre (`aufgabe`: görevi yerine getirme, `aufbau`: metin düzeni, `sprache`: kelime ve dil bilgisi) öğrencinin kendi kendini kontrol listesi; Türkçe, en az 5 madde, her kriterden en az biri. Kaydedilmez.
 - `redemittel`: konuya uygun kalıplar, Almanca ve Türkçe; en az 3 grup.
 - `model`: örnek cevap (`min`–`max` kelime) ve kısa Türkçe notlar; gönderdikten sonra açılır. Tek doğru cevap değil, bir örnektir.
 - Giriş yapmış öğrencinin metni `users/{uid}/writings`'e kaydedilir, öğretmen geri bildirim yazar (`firestore.rules`); ziyaretçinin metni sadece kendi cihazında taslak olarak durur.
+
+## 2c. Form doldurma setleri (Goethe A1 Schreiben Teil 1)
+
+`"kind": "form"` olan Schreiben setleri `js/form-task.js` ile açılır (yazma görevi değildir, yapay zekâ kullanılmaz, hiçbir şey kaydedilmez). Öğrenci kısa durum metnindeki bilgileri (bir arkadaşın bilgileri; kendi kişisel bilgileri istenmez) forma yazar. Örnek: `data/exams/goethe/a1/schreiben/teil-1/set-1.json`.
+
+```json
+{
+  "format": 1, "exam": "goethe", "level": "a1", "section": "schreiben", "teil": 1, "set": "set-1",
+  "title": "Anmeldung zum Deutschkurs", "minutes": 5, "kind": "form",
+  "situation": "Ihr Freund Karim Haddad … ist am 3. Mai 1990 in Casablanca geboren …",
+  "task": "Helfen Sie Ihrem Freund und schreiben Sie die fünf fehlenden Informationen in das Formular.",
+  "form": { "title": "Anmeldung Deutschkurs", "subtitle": "Volkshochschule Köln", "rows": [
+    { "label": "Familienname, Vorname", "value": "Haddad, Karim", "example": true },
+    { "label": "Geburtsdatum", "value": "03.05.1990" },
+    { "label": "Geburtsort", "number": 1, "accept": ["Casablanca"], "evidence": ["in Casablanca geboren"], "explanation": "Türkçe açıklama …" },
+    { "label": "Zahlungsweise", "number": 5, "choices": ["bar", "Überweisung"], "answer": "Überweisung", "evidence": ["mit einer Überweisung"], "explanation": "…" }
+  ] }
+}
+```
+
+- Satırlar: dolu satır (`value`), tek örnek satır (`"example": true`, 0 olarak gösterilir) ve 1–5 numaralı beş boşluk.
+- Boşluk: yazılan cevap için `accept` (kabul edilen yazımlar: "4", "vier"; tarih biçimleri …) ya da işaretlenen seçenek için `choices` + `answer`.
+- Kontrol: büyük-küçük harf, fazla boşluk, sondaki nokta, ß/ss ve ä/ae farkı önemsizdir. Kabul edilen bir cevaba tek harf uzaklıktaki cevap (harfleri en az 5, sayıları aynı) "doğru sayıldı, ama yazımı: …" olur.
+- `evidence`: cevabın dayandığı yer; `situation` içinde harfi harfine ve bir kez geçer, başka bir boşluğun dayanağıyla çakışmaz. "Kontrol et"ten sonra metinde boşluk numarasıyla işaretlenir.
+- `explanation`: her boşluğun kendi Türkçe açıklaması (en az 40 karakter): bilginin metnin neresinde olduğu ve nasıl çıkarıldığı.
+- Goethe A1 (resmî Modellsatz): Schreiben toplam ~20 dk; Teil 1 form (5 bilgi, bilgi başına 1 puan), Teil 2 kısa mesaj (~30 kelime, 3 madde, hitap ve kapanış; arkadaşa du, tanıdık birine ya da kuruma Sie). Sitede Teil 1 için 5, Teil 2 için 15 dk gösterilir; Teil 2 sayacı 25–40 arasını iyi sayar.
 
 ## 3. Kontrol
 

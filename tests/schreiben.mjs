@@ -111,7 +111,7 @@ await ctx.close();
 }
 
 // 6. Diller.
-for (const [l, title, submit, count] of [['de', 'Dein Text', 'Abschicken und Musterlösung ansehen', '0 Wörter'], ['en', 'Your text', 'Submit and see the model answer', '0 words']]) {
+for (const [l, title, submit, count] of [['de', 'Ihr Text', 'Abschicken und Musterlösung ansehen', '0 Wörter'], ['en', 'Your text', 'Submit and see the model answer', '0 words']]) {
   const { ctx, page } = await newPage({ lang: l });
   await page.goto(B + '#exams/goethe/b1/schreiben/1/set-3'); await page.waitForTimeout(1200);
   const body = await page.textContent('.wt');

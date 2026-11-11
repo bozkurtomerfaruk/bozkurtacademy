@@ -33,9 +33,12 @@ function wav(seconds = 0.4) {
     '-f', 'lavfi', '-i', 'anullsrc=r=24000:cl=mono:d=0.3', '-filter_complex', '[0][1][2]concat=n=3:v=0:a=1', '-c:a', 'pcm_s16le', file]);
   return fs.readFileSync(file);
 }
+// The fake answer's audio is made only when a request really comes (needs ffmpeg); tests that check that no request
+// is sent run without ffmpeg too (GitHub's runner may not have it).
 function fakeGoogle(calls) {
-  const audio = wav();
+  let audio = null;
   return async (url, init) => {
+    audio = audio || wav();
     calls.push({ url, body: JSON.parse(init.body), headers: init.headers });
     return new Response(JSON.stringify({ audioContent: audio.toString('base64') }), { status: 200 });
   };

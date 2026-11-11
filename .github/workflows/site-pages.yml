@@ -19,6 +19,8 @@ jobs:
       - run: node scripts/build-pages.mjs --check
       - run: node scripts/check-versions.mjs
       - run: node scripts/check-html-escape.mjs
+      # ffmpeg: the Almanca Alfabe audio tests encode real MP3s (without it they are skipped).
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends ffmpeg
       - run: node --test tests/alfabe-logic.test.mjs tests/alfabe-ses.test.mjs
       - run: node scripts/generate-alfabe-audio.mjs --check
       - run: node scripts/build-audio-check-offline.mjs --check

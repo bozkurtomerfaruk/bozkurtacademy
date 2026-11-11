@@ -123,7 +123,8 @@ export function planGeneration(clips, manifest, { force = false, forceOwn = fals
 /* ---------- Table (docs/alfabe-ses-listesi.md) ---------- */
 const KIND = { harf: 'Harf adı', kelime: 'Kelime', isaret: 'İşaret', soru: 'Senaryo sorusu', cevap: 'Senaryo cevabı', geri: 'Geri bildirim', talimat: 'Talimat' };
 export function tableText(clips, manifest) {
-  const cell = (s) => String(s ?? '').replace(/\|/g, '\\|');
+  // Markdown table cell: escape the backslash first, then the column separator.
+  const cell = (s) => String(s ?? '').replace(/\\/g, '\\\\').replace(/\|/g, '\\|');
   const status = (e) => !e ? 'eksik (cihaz sesi)' : e.stale ? 'metin değişti (oynatılmaz)' : e.source === 'kendi' ? 'kendi kaydın' : `üretildi (${e.source})`;
   const rows = clips.map((c, i) => {
     const e = manifest.clips[c.id];
@@ -437,9 +438,12 @@ export async function run(argv, { root = REPO, fetchImpl = globalThis.fetch, env
     log(`Üretilecek: ${todo.length} klip. Maliyet: 0 $ (bilgisayarında çalışır, hesap ve kart gerekmez).`);
     if (o.dryRun) { for (const c of todo) log(`  ${c.file}  ${c.say || c.text}`); return 0; }
     if (!todo.length) { write(); report(); log('Üretilecek klip yok.'); return 0; }
-    if (!hasFfmpeg()) { log('ffmpeg gerekli (docs/alfabe-oyunu.md › Kurulum).'); return 1; }
+    // Report every missing prerequisite at once.
     const missing = missingModels(root, env);
-    if (missing.length) { log(`Model eksik (${missing.join(', ')}): önce node scripts/generate-alfabe-audio.mjs --modelleri-indir`); return 1; }
+    const noFfmpeg = !hasFfmpeg();
+    if (noFfmpeg) log('ffmpeg gerekli (docs/alfabe-oyunu.md › Kurulum).');
+    if (missing.length) log(`Model eksik (${missing.join(', ')}): önce node scripts/generate-alfabe-audio.mjs --modelleri-indir`);
+    if (noFfmpeg || missing.length) return 1;
     const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'alfabe-yerel-'));
     const byId = Object.fromEntries(todo.map((c) => [c.id, c]));
     const jobs = todo.map((c) => ({ id: c.id, lang: c.lang, text: c.say || c.text, out: path.join(tmp, c.id + '.wav'), length_scale: localSpeed(c),

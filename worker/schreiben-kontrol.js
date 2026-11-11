@@ -21,7 +21,7 @@ export const MODEL = '@cf/google/gemma-4-26b-a4b-it';
 export const LIMIT_STUDENT = 3;
 export const LIMIT_GLOBAL = 600;
 
-export const PROMPT = `Sen Türkçe konuşan öğrencilere (A2–B1) Almanca öğreten deneyimli bir öğretmensin.
+export const PROMPT = `Sen Türkçe konuşan öğrencilere (A1–B1) Almanca öğreten deneyimli bir öğretmensin.
 Görev: Öğrencinin Almanca metnindeki gerçek dil bilgisi, yazım ve noktalama hatalarını bul.
 Kullanıcı mesajının ilk satırları görev adı ("Görev: …") ve metin türüdür ("Metin türü: …"); sadece "Metin:" satırından sonraki metni düzelt.
 Kurallar:
@@ -47,6 +47,11 @@ Metin türüne göre (sadece dil ve resmiyet hatalarını işaretle; içeriği, 
 - Yarı resmî e-posta (Sie; tanıdık biri: kurs öğretmeni, şef, ev sahibi, komşu): Sie, Ihnen, Ihr her zaman büyük harfle. Bu kişiye du, dich, dein ya da Tschüss, Hi kullanmak resmiyet hatasıdır; açıklamada "Bu kişiye Sie ile yazılır" de. Liebe Frau … / Sehr geehrte Frau …, Hallo Frau …, Viele Grüße, Freundliche Grüße ve Mit freundlichen Grüßen burada doğrudur, hata sayma.
 - Resmî yazı (Sie; tanımadığın biri ya da kurum): Hallo, Tschüss, Liebe Grüße, du ve dein resmiyet hatasıdır; doğrusu Sehr geehrte Damen und Herren, / Sehr geehrte Frau …, ve Mit freundlichen Grüßen.
 - Forum yazısı (görüş): hitap ve imza gerekmez; Hallo zusammen da olabilir. Okurlara ihr ile ya da genel (man) yazmak doğrudur. Görüş kalıplarında fiil sırasına bak: Meiner Meinung nach ist … doğru, "Meiner Meinung nach ich finde" yanlış.
+Seviye A1 (görev adında "A1" geçiyorsa; kısa mesaj, yaklaşık 30 kelime):
+- Sadece açık hataları işaretle. Basit ama doğru cümleleri daha "güzel" yapmaya çalışma; bunlar hata DEĞİLDİR.
+- A1'de beklenmeyen yapıları (yan cümle, Präteritum, Konjunktiv II, Passiv) önerme; bunların yokluğunu eksik sayma. Düzeltmede de sadece A1 kelime ve yapılarını kullan.
+- Açıklamaları en basit Türkçeyle, tek kısa cümleyle yaz.
+- Ama A1'de de şunlar her zaman hatadır, mutlaka işaretle: çekimli fiilin yeri ve mastarın (kommen, gehen …) cümle sonunda olmaması, hâl ve çoğul ekleri, du/Sie karışması, uygunsuz hitap ve kapanış, hitaptan sonraki satırın büyük harfle başlaması (Das Fenster … → das Fenster …).
 - Sonra düzeltilmiş metnin tamamını ver.
 - SADECE şu biçimde JSON ile cevap ver:
 {"fehler":[{"original":"...","korrektur":"...","erklaerung":"..."}],"korrigierter_text":"..."}
@@ -101,11 +106,18 @@ export function cleanResult(raw, text) {
   if (!list) return null;
   const seen = new Set();
   const errors = [];
+  // Hitap virgülle bitiyorsa sonraki satır küçük harfle başlar (Liebe Lena, / wie geht …). Model bazen bunu "düzeltip"
+  // büyük harfe çeviriyor; doğru olanı bozan bu öneri atılır.
+  const lines = text.split('\n');
+  const afterGreeting = /,\s*$/.test(lines[0] || '') ? (lines[1] || '').trimStart() : '';
+  const capitalizesAfterGreeting = (original, korrektur) => afterGreeting && /^\p{Ll}/u.test(original) && afterGreeting.startsWith(original)
+    && korrektur === original.charAt(0).toUpperCase() + original.slice(1);
   for (const item of list) {
     const original = typeof item?.original === 'string' ? item.original.trim() : '';
     const korrektur = typeof item?.korrektur === 'string' ? item.korrektur.trim() : '';
     const erklaerung = typeof item?.erklaerung === 'string' ? item.erklaerung.trim() : '';
     if (!original || !korrektur || !erklaerung || original === korrektur || !text.includes(original) || seen.has(original)) continue;
+    if (capitalizesAfterGreeting(original, korrektur)) continue;
     seen.add(original);
     errors.push({ original: original.slice(0, 300), korrektur: korrektur.slice(0, 300), erklaerung: erklaerung.slice(0, 600) });
     if (errors.length >= 30) break;

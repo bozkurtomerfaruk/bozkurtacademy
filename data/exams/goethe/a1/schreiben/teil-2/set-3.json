@@ -1,0 +1,109 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a1",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-3",
+  "title": "Krank im Deutschkurs",
+  "minutes": 15,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "Sie sind krank und können morgen nicht in den Deutschkurs kommen.",
+  "task": "Schreiben Sie Ihrer Kursleiterin, Frau Roth, eine E-Mail:",
+  "points": [
+    "Warum schreiben Sie?",
+    "Sagen Sie: Wie lange sind Sie krank?",
+    "Fragen Sie: Hausaufgaben?"
+  ],
+  "instructions": "Schreiben Sie zu jedem Punkt ein bis zwei Sätze (circa 30 Wörter). Schreiben Sie auch eine Anrede und einen Gruß.",
+  "words": {
+    "target": 30,
+    "min": 25,
+    "max": 40
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "1. madde: Neden yazdığımı söyledim (hastayım, yarın kursa gelemiyorum)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "2. madde: Ne kadar süre hasta olduğumu yazdım (bis Freitag, zwei Tage …)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "3. madde: Ödevleri sordum (Welche Hausaufgaben …?)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap ve kapanış var: Liebe Frau … / Sehr geehrter Herr … ve Viele Grüße / Mit freundlichen Grüßen + adım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Her maddeye bir iki kısa cümle yazdım; hitaptan sonraki satır küçük harfle başlıyor."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Baştan sona Sie kullandım (Sie, Ihnen, Ihr); du ve Tschüss yok."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Düz cümlede çekimli fiil 2. sırada: Am Samstag habe ich Zeit. / Morgen kann ich nicht kommen."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Soru kelimesiyle soru: Welche Hausaufgaben haben wir? (fiil 2. sırada)."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Liebe Frau … / Lieber Herr …,",
+          "tr": "Sevgili … Hanım / … Bey (tanıdık biri)"
+        },
+        {
+          "de": "Viele Grüße",
+          "tr": "Selamlar"
+        }
+      ]
+    },
+    {
+      "group": "Warum schreiben Sie?",
+      "items": [
+        {
+          "de": "Ich bin krank.",
+          "tr": "Hastayım."
+        },
+        {
+          "de": "Ich kann morgen nicht kommen.",
+          "tr": "Yarın gelemiyorum."
+        }
+      ]
+    },
+    {
+      "group": "Sagen und fragen",
+      "items": [
+        {
+          "de": "Der Arzt sagt, ich bin bis Freitag krank.",
+          "tr": "Doktor cumaya kadar hasta olduğumu söylüyor."
+        },
+        {
+          "de": "Welche Hausaufgaben haben wir?",
+          "tr": "Hangi ödevlerimiz var?"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Liebe Frau Roth,\nich bin krank und kann morgen nicht in den Kurs kommen. Ich habe Fieber. Der Arzt sagt, ich bin bis Freitag krank. Welche Hausaufgaben haben wir?\nViele Grüße\nFatma Yılmaz",
+    "notes": [
+      "Üç madde: hastalık ve gelememe, ne kadar süre (bis Freitag), ödev sorusu.",
+      "Kurs öğretmenine Sie: Liebe Frau Roth ve Viele Grüße bu sınavda uygun.",
+      "Welche Hausaufgaben haben wir? — soru kelimesinden sonra fiil 2. sırada."
+    ]
+  }
+}

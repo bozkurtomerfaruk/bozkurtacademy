@@ -172,4 +172,10 @@ describe('Schreiben Worker', () => {
     const c = cleanResult(raw([{ original: 'ich', korrektur: 'Ich', erklaerung: 'x' }]), 'Hallo!\nich komme.');
     assert.equal(c.errors.length, 1, 'hitap virgülle bitmiyorsa öneri kalır');
   });
+
+  test('Betreff satırı varsa hitap ikinci satırda: küçük harfi büyüten öneri yine atılır', () => {
+    const raw = JSON.stringify({ fehler: [{ original: 'danke für deine Mail', korrektur: 'Danke für deine Mail', erklaerung: 'x' }], korrigierter_text: '' });
+    assert.equal(cleanResult(raw, 'Betreff: Willkommen!\nLieber Jonas,\ndanke für deine Mail!').errors.length, 0);
+    assert.ok(PROMPT.includes('Betreff: …'));
+  });
 });

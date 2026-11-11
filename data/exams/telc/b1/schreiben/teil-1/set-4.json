@@ -1,0 +1,138 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-4",
+  "title": "Kursausflug",
+  "minutes": 30,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "subjectLine": true,
+  "situation": "Sie haben von Ihrer Kursleiterin folgende E-Mail erhalten:",
+  "mail": {
+    "from": "Claudia Neumann",
+    "subject": "Ausflug zum Kursende",
+    "text": "Liebe Kursteilnehmerinnen und Kursteilnehmer,\nzum Ende unseres Kurses möchte ich gern mit Ihnen einen Ausflug machen. Ich habe aber noch nichts geplant und brauche Ihre Hilfe. Bitte schreiben Sie mir bis Freitag Ihre Ideen.\nViele Grüße\nClaudia Neumann"
+  },
+  "task": "Antworten Sie auf die E-Mail. Schreiben Sie etwas zu allen vier Punkten:",
+  "points": [
+    "ob Sie am Ausflug teilnehmen",
+    "welches Ziel Sie vorschlagen und warum",
+    "welcher Tag für Sie gut passt",
+    "was Sie zum Ausflug beitragen können"
+  ],
+  "instructions": "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der Punkte, einen passenden Betreff, eine passende Anrede, Einleitung und einen passenden Schluss.",
+  "words": {
+    "target": 120,
+    "min": 100,
+    "max": 150,
+    "recommended": true
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: katılıp katılmadığım, gezi yeri önerisi ve sebebi, uygun gün, katkım."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "İlk satırda Betreff, sonra hitap (Liebe Frau … / Sehr geehrter Herr …,), kısa giriş ve kapanış (Viele Grüße / Mit freundlichen Grüßen + adım) var."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Baştan sona Sie ile yazdım (Sie, Ihnen, Ihr); du, Hallo ve Tschüss yok."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Maddeleri kendi seçtiğim mantıklı bir sırayla yazdım ve bağladım (zuerst, außerdem, deshalb, zum Schluss …)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümlelerimin hepsi Ich ya da Wir ile başlamıyor (Am Samstag …, Leider …, Zum Glück …): telc bunu ayrıca değerlendiriyor."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "weil / dass / wenn / ob'dan sonra çekimli fiil cümlenin sonunda."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Kibar öneri: Ich würde vorschlagen, dass … / Wie wäre es mit …? (dass'tan sonra fiil sonda)."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Betreff und Anrede",
+      "items": [
+        {
+          "de": "Betreff: …",
+          "tr": "Konu: …"
+        },
+        {
+          "de": "Liebe Frau … / Lieber Herr …,",
+          "tr": "Sevgili … Hanım / … Bey, (tanıdık biri)"
+        },
+        {
+          "de": "Sehr geehrte Frau … / Sehr geehrter Herr …,",
+          "tr": "Sayın … Hanım / … Bey,"
+        }
+      ]
+    },
+    {
+      "group": "Einleitung",
+      "items": [
+        {
+          "de": "vielen Dank für Ihre E-Mail und die schöne Idee!",
+          "tr": "E-postanız ve güzel fikriniz için çok teşekkürler!"
+        },
+        {
+          "de": "Ich komme sehr gern mit.",
+          "tr": "Seve seve gelirim."
+        }
+      ]
+    },
+    {
+      "group": "Zum Thema",
+      "items": [
+        {
+          "de": "Ich würde vorschlagen, dass wir …",
+          "tr": "… önerirdim."
+        },
+        {
+          "de": "Für mich passt … am besten.",
+          "tr": "Bana en iyi … uyuyor."
+        },
+        {
+          "de": "Ich kann gern … mitbringen / organisieren.",
+          "tr": "Seve seve … getirebilirim / organize edebilirim."
+        }
+      ]
+    },
+    {
+      "group": "Schluss",
+      "items": [
+        {
+          "de": "Ich freue mich auf Ihre Antwort.",
+          "tr": "Cevabınızı bekliyorum."
+        },
+        {
+          "de": "Viele Grüße / Mit freundlichen Grüßen",
+          "tr": "Selamlar / Saygılarımla"
+        },
+        {
+          "de": "Ich freue mich schon auf den Ausflug.",
+          "tr": "Geziyi şimdiden dört gözle bekliyorum."
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Betreff: Unser Ausflug zum Kursende\nLiebe Frau Neumann,\nvielen Dank für Ihre E-Mail und die schöne Idee! Ich komme sehr gern mit. Ich würde vorschlagen, dass wir in den Zoo fahren. Dort können alle mitkommen, auch die Teilnehmerinnen mit kleinen Kindern, und der Eintritt ist für Gruppen nicht so teuer. Für mich passt ein Samstag am besten, weil ich unter der Woche bis 17 Uhr arbeite. Zum Ausflug kann ich gern etwas beitragen: Ich backe einen Kuchen, und ich könnte auch die Zugverbindung heraussuchen und die Gruppenkarte kaufen. Ich freue mich schon auf einen schönen Tag mit dem ganzen Kurs.\nViele Grüße\nFatma Yılmaz",
+    "notes": [
+      "Dört madde: katılım, yer önerisi ve sebebi (Zoo, auch mit Kindern, nicht so teuer), gün (Samstag, weil …), katkı (Kuchen, Zugverbindung).",
+      "Kurs öğretmenine Sie, hitap Liebe Frau Neumann: yarı resmî.",
+      "Ich würde vorschlagen, dass wir … fahren: dass'tan sonra fiil sonda."
+    ]
+  }
+}

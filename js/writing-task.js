@@ -12,7 +12,7 @@
   const fill = (key, values) => t(key).replace(/\{(\w+)\}/g, (_, name) => values[name] ?? '');
   const lang = () => window.BA?.lang || 'tr';
   const esc = value => window.baHtml.escapeHtml(value);
-  // html-safe-names: status navActions() points groups notes head postHtml(set.post)
+  // html-safe-names: status navActions() points groups notes head postHtml(set.post) mailHtml(set.mail)
   const MAX_CHARS = 4000; // firestore.rules ile aynı sınır
 
   // Harf ve rakam dizileri; "-" ya da "'" ile birleşenler tek kelime (B1-Prüfung). scripts/check-exams.mjs aynı kuralı kullanır.
@@ -46,7 +46,7 @@
   // Kelime sayacının durumu: kısa / iyi / uzun (göndermeyi engellemez).
   function counterState(set, n) {
     const { min, max } = set.words;
-    if (n < min) return { cls: 'is-short', key: n === 0 ? 'wtCountTarget' : 'wtCountShort' };
+    if (n < min) return { cls: 'is-short', key: n === 0 ? (set.words.recommended ? 'wtCountRecommended' : 'wtCountTarget') : 'wtCountShort' };
     if (n <= max) return { cls: 'is-ok', key: 'wtCountOk' };
     return { cls: 'is-long', key: 'wtCountLong' };
   }
@@ -62,11 +62,20 @@
     </figure>`;
   }
 
+  // Gelen e-posta (telc B1 vb.): gönderen, konu ve metin; öğrenci buna cevap yazar.
+  function mailHtml(mail) {
+    if (!mail) return '';
+    return `<figure class="wt-post wt-mail">
+      <p class="wt-post-site">${esc(t('wtMailFrom'))}: ${esc(mail.from)}${mail.subject ? ` · ${esc(t('wtMailSubject'))}: ${esc(mail.subject)}` : ''}</p>
+      <blockquote><p>${esc(mail.text)}</p></blockquote>
+    </figure>`;
+  }
+
   function taskHtml(set) {
     const points = set.points?.length ? `<ul class="wt-points">${set.points.map(point => `<li>${esc(point)}</li>`).join('')}</ul>` : '';
     return `<div class="wt-task" lang="de">
       <p>${esc(set.situation)}</p>
-      ${postHtml(set.post)}
+      ${postHtml(set.post)}${mailHtml(set.mail)}
       <p><strong>${esc(set.task)}</strong></p>
       ${points}
       ${set.instructions ? `<p class="wt-instructions">${esc(set.instructions)}</p>` : ''}
@@ -110,7 +119,7 @@
       <section class="wt-card wt-editor" aria-labelledby="wtTextLabel">
         <h3 id="wtTextLabel"><label for="wtText">${esc(t('wtYourText'))}</label></h3>
         <textarea id="wtText" lang="de" spellcheck="false" autocomplete="off" autocapitalize="sentences" maxlength="${MAX_CHARS}"
-          aria-describedby="wtCount wtCountState" placeholder="${esc(PLACEHOLDERS[set.textType] || (set.register === 'du' ? 'Liebe …, / Lieber …,' : 'Sehr geehrte …,'))}">${esc(state.text)}</textarea>
+          aria-describedby="wtCount wtCountState" placeholder="${esc((set.subjectLine ? 'Betreff: …\n' : '') + (PLACEHOLDERS[set.textType] || (set.register === 'du' ? 'Liebe …, / Lieber …,' : 'Sehr geehrte …,')))}">${esc(state.text)}</textarea>
         <p class="wt-counter"><span id="wtCount" data-wt-count>${esc(fill('wtWords', { n }))}</span>
           <span class="wt-pill ${esc(c.cls)}" id="wtCountState" aria-live="polite" data-wt-state>${esc(fill(c.key, { min: set.words.min, max: set.words.max, target: set.words.target }))}</span></p>
         <p class="wt-error" role="alert" data-wt-error hidden></p>
@@ -166,7 +175,8 @@
 
   function draw(container, set, path) {
     const state = states[path];
-    const meta = [fill('taskMinutes', { n: set.minutes }), fill('wtTargetMeta', { n: set.words.target })];
+    // words.recommended: sınavda resmî kelime sınırı yok (telc B1, DTZ); hedef sadece öneri.
+    const meta = [fill('taskMinutes', { n: set.minutes }), fill(set.words.recommended ? 'wtRecommendedMeta' : 'wtTargetMeta', { n: set.words.target })];
     if (lang() !== 'tr') meta.push(t('wtTurkishNote'));
     container.innerHTML = `<div class="task wt${state.submitted ? ' is-submitted' : ''}">
       <div class="task-head"><p class="task-meta">${meta.map(item => `<span>${esc(item)}</span>`).join('')}</p></div>

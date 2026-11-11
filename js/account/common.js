@@ -167,7 +167,7 @@ export async function topicErrorsText(levelId, value, lang = 'tr'){
 // Schreiben (sınav hazırlığı): yazma görevleri js/examsData.js'teki "schreiben" bölümlerinden okunur.
 // Ödevde konu "schreiben", alıştırma "goethe-b1-1-set-1" (sınav-seviye-teil-set); metinler users/{uid}/writings'te.
 export const WRITING = 'schreiben';
-const EXAMS_DATA = 'js/examsData.js?v=19'; // index.html'deki sürümle aynı tutulmalı
+const EXAMS_DATA = 'js/examsData.js?v=20'; // index.html'deki sürümle aynı tutulmalı
 let examsData = null;
 export function loadExamsData(){
   examsData ||= new Promise((resolve, reject) => {

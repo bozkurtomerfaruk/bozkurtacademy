@@ -132,6 +132,10 @@ Set şu adresten açılır: `#exams/goethe/b1/lesen/1/set-1`. DTZ gibi seviye ad
   - `email-informal` (arkadaşa e-posta) ve `sms` (kısa mesaj): `register` `"du"`.
   - `email-semiformal` (tanıdık birine: kurs öğretmeni, şef, ev sahibi) ve `email-formal` (kuruma ya da tanımadığın birine): `"Sie"`.
   - `forum` (görüş yazısı): `"neutral"`; ayrıca `post` gerekir: Gästebuch'taki görüş `{ "site": "www.diskussion-aktuell.de", "author": "Markus", "time": "14.03. 19:20 Uhr", "text": "…" }`. Örnek: `teil-2/set-1.json` (Goethe B1 Teil 2).
+- `mail` (e-postaya cevap görevleri, telc B1): gelen e-posta `{ "from": "Jonas", "subject": "Ich ziehe zu dir!", "text": "Hallo,\n…" }`; görev sayfasında kart olarak gösterilir. Sadece `email-…` metin türlerinde.
+- `subjectLine: true`: cevap "Betreff: …" satırıyla başlar (telc B1); metin alanının ipucu Betreff ile başlar, örnek cevap da Betreff ile başlamak zorundadır. Yapay zekâ bu satırı hata saymaz.
+- `words.recommended: true`: sınavda resmî kelime sınırı yok (telc B1, DTZ); sayfada "Önerilen uzunluk: yaklaşık … kelime (resmî sınır yok)" yazar, sayaç yine uyarır ama göndermeyi engellemez.
+- telc Deutsch B1 (resmî Übungstest 1): Schriftlicher Ausdruck 30 dk, 45 puan; arkadaştan ya da tanıdık birinden gelen e-postaya gayriresmî veya yarı resmî cevap, 4 madde (Leitpunkt), Betreff, hitap, giriş ve kapanış; kelime sınırı yok (önerilen ~120, 100–150).
 - `points`: içerik maddeleri (en az 2) ya da boş liste; görev cümlesi ne yazılacağını zaten söylüyorsa boş (Goethe B1 Teil 2 ve 3).
 - `instructions`: isteğe bağlı (Goethe B1 Teil 2'de sadece görev cümlesi var).
 - Goethe B1 (resmî Modellsatz): Teil 1 arkadaşa e-posta ~80 kelime, 20 dk; Teil 2 Gästebuch'a görüş ~80 kelime, 25 dk; Teil 3 tanıdık birine yarı resmî e-posta ~40 kelime, 15 dk (`words` 35–50).

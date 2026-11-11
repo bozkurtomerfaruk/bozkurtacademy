@@ -42,6 +42,7 @@ Hâl adları (her açıklamada aynen bunları kullan, başka karşılık uydurma
 - Emin olmadığın bir şeyi hata olarak gösterme; iki biçim de doğruysa (ör. nächstes Mal / das nächste Mal, zu dem / zum) hata değildir.
 - Bir kelimenin birden çok anlamı olabilir (ör. "Bank": banka ya da bank); hangi anlamda kullanıldığını cümlenin bağlamından çıkar ve cümlenin anlamını değiştiren bir düzeltme önerme.
 Metin türüne göre (sadece dil ve resmiyet hatalarını işaretle; içeriği, uzunluğu ve görevi yerine getirip getirmediğini değerlendirme):
+- E-posta metni "Betreff: …" satırıyla başlayabilir (konu satırı; telc); bu satır doğrudur, hitap onun altındadır. Betreff satırında nokta gerekmez.
 - E-posta ve mesajlarda hitaptan sonra virgül gelir ve sonraki satır küçük harfle başlar (Liebe Lena, / wie geht es dir?). Hitaptan sonraki ilk kelime büyük harfle yazılmışsa (Vielen Dank …, Leider …, Wie geht …) hata say; isimler ve Sie, Ihnen, Ihr hariç. Kapanış selamından (Viele Grüße, Liebe Grüße, Mit freundlichen Grüßen) sonra virgül ve nokta gelmez. Kısa kapanışlar (Grüße, Gruß, Bis bald, LG) da doğrudur; uygun kapanışı hata sayma, sadece resmiyet derecesine uymayanı işaretle. Liebe kadına, Lieber erkeğe; Sehr geehrte Frau …, Sehr geehrter Herr ….
 - Gayriresmî e-posta ve Kısa mesaj (du): arkadaşa du ile yazılır. Metinde du ile Sie karışırsa (dich/Sie, dein/Ihr) hata say. Mektupta du, dich, dein büyük ya da küçük yazılabilir; ikisi de doğru.
 - Yarı resmî e-posta (Sie; tanıdık biri: kurs öğretmeni, şef, ev sahibi, komşu): Sie, Ihnen, Ihr her zaman büyük harfle. Bu kişiye du, dich, dein ya da Tschüss, Hi kullanmak resmiyet hatasıdır; açıklamada "Bu kişiye Sie ile yazılır" de. Liebe Frau … / Sehr geehrte Frau …, Hallo Frau …, Viele Grüße, Freundliche Grüße ve Mit freundlichen Grüßen burada doğrudur, hata sayma.
@@ -108,8 +109,10 @@ export function cleanResult(raw, text) {
   const errors = [];
   // Hitap virgülle bitiyorsa sonraki satır küçük harfle başlar (Liebe Lena, / wie geht …). Model bazen bunu "düzeltip"
   // büyük harfe çeviriyor; doğru olanı bozan bu öneri atılır.
+  // İlk satır "Betreff: …" ise (telc B1) hitap ikinci satırdadır.
   const lines = text.split('\n');
-  const afterGreeting = /,\s*$/.test(lines[0] || '') ? (lines[1] || '').trimStart() : '';
+  const g = /^\s*Betreff\s*:/i.test(lines[0] || '') ? 1 : 0;
+  const afterGreeting = /,\s*$/.test(lines[g] || '') ? (lines[g + 1] || '').trimStart() : '';
   const capitalizesAfterGreeting = (original, korrektur) => afterGreeting && /^\p{Ll}/u.test(original) && afterGreeting.startsWith(original)
     && korrektur === original.charAt(0).toUpperCase() + original.slice(1);
   for (const item of list) {

@@ -207,12 +207,39 @@ for (const [l, title, submit, count] of [['de', 'Dein Text', 'Abschicken und Mus
   }
 }
 
+// 6d. telc B1: gelen e-postaya cevap, 4 madde, Betreff ilk satırda, önerilen uzunluk (resmî sınır yok).
+{
+  const { ctx, page } = await newPage();
+  await page.goto(B + '#exams/telc/b1/schreiben'); await page.waitForTimeout(1000);
+  const list = await page.textContent('#examView');
+  ok(['Ein Freund zieht in Ihre Stadt', 'Einladung zur Hochzeit', 'Tipps zum Deutschlernen', 'Kursausflug', 'Abschied einer Kollegin', 'Hoffest im Haus'].every((x) => list.includes(x)), 'telc B1: 6 set listede');
+  const t1 = JSON.parse(fs.readFileSync('data/exams/telc/b1/schreiben/teil-1/set-4.json', 'utf8'));
+  await page.goto(B + '#exams/telc/b1/schreiben/1/set-4'); await page.waitForTimeout(1000);
+  ok((await page.textContent('.wt-mail')).includes('Claudia Neumann') && (await page.textContent('.wt-mail')).includes('Ausflug zum Kursende') && (await page.textContent('.wt-mail blockquote')).includes('bis Freitag'), 'telc: gelen e-posta kartı (gönderen, konu, metin)');
+  ok(await page.locator('.wt-points li').count() === 4 && (await page.textContent('.wt-instructions')).includes('passenden Betreff'), 'telc: 4 madde ve resmî yönerge');
+  ok((await page.textContent('.task-meta')).includes('Önerilen uzunluk: yaklaşık 120 kelime (resmî sınır yok)') && (await page.textContent('.task-meta')).includes('30'), 'telc: "önerilen uzunluk, resmî sınır yok" ve 30 dk');
+  ok((await page.getAttribute('#wtText', 'placeholder')).startsWith('Betreff: …\nLiebe Frau'), 'telc: ipucu Betreff ile başlıyor');
+  for (const [n, cls] of [[99, 'is-short'], [100, 'is-ok'], [150, 'is-ok'], [151, 'is-long']]) {
+    await page.fill('#wtText', words(n));
+    ok((await page.getAttribute('[data-wt-state]', 'class')).includes(cls), `telc: ${n} kelime → ${cls}`);
+  }
+  await page.fill('#wtText', t1.model.text);
+  await page.click('[data-wt-submit]'); await page.waitForTimeout(400);
+  ok((await page.textContent('#wtModelTitle')).includes('Örnek cevap') && (await page.textContent('.wt-cols')).includes('Betreff: Unser Ausflug zum Kursende'), 'telc: gönderince örnek cevap (Betreff ile)');
+  ok(await page.locator('a.task-next[href="#exams/telc/b1/schreiben/1/set-5"]').count() === 1, 'telc: sonraki set');
+  await ctx.close();
+  const { ctx: c2, page: p2 } = await newPage({ lang: 'de' });
+  await p2.goto(B + '#exams/telc/b1/schreiben/1/set-1'); await p2.waitForTimeout(1000);
+  ok((await p2.textContent('.task-meta')).includes('Empfohlene Länge') && (await p2.textContent('.wt-mail')).includes('Von: Jonas'), 'de: telc metinleri çevrili');
+  await c2.close();
+}
+
 // 7. 390 / 1440, açık / koyu.
 for (const width of [390, 1440]) {
   for (const theme of ['light', 'dark']) {
-    for (const teil of ['b1/schreiben/2/set-1', 'b1/schreiben/3/set-1', 'a1/schreiben/1/set-3', 'a1/schreiben/2/set-1']) {
+    for (const teil of ['b1/schreiben/2/set-1', 'b1/schreiben/3/set-1', 'a1/schreiben/1/set-3', 'a1/schreiben/2/set-1', 'telc-b1']) {
       const { ctx, page } = await newPage({ width, theme });
-      await page.goto(B + `#exams/goethe/${teil}`); await page.waitForTimeout(1200);
+      await page.goto(B + (teil === 'telc-b1' ? '#exams/telc/b1/schreiben/1/set-2' : `#exams/goethe/${teil}`)); await page.waitForTimeout(1200);
       const name = teil.replace(/\/schreiben\/(\d)\/set-\d/, '-teil$1');
       if (teil.startsWith('a1/schreiben/1')) { await page.fill('#ft-1', 'drei'); await page.fill('#ft-2', 'Goethestrase 7'); await page.check('input[name="ft-4"][value="vormittags"]'); await page.click('[data-ft-check]'); await page.waitForTimeout(400); }
       ok(await overflow(page) <= 0, `${width} ${theme} ${name}: taşma yok`);

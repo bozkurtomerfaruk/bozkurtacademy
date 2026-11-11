@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Einladung zur Hochzeit",
+  "minutes": 30,
+  "kind": "writing",
+  "register": "du",
+  "textType": "email-informal",
+  "subjectLine": true,
+  "situation": "Sie haben von einer Freundin folgende E-Mail erhalten:",
+  "mail": {
+    "from": "Sophie",
+    "subject": "Wir heiraten!",
+    "text": "Hallo,\nendlich ist es so weit: Mario und ich heiraten am 14. Juni! Die Feier ist am Abend in einem Restaurant am See, und wir würden uns sehr freuen, wenn du dabei bist. Wir haben noch so viel vorzubereiten … Kannst du mir bitte bald schreiben, ob du kommst?\nLiebe Grüße\nSophie"
+  },
+  "task": "Antworten Sie auf die E-Mail. Schreiben Sie etwas zu allen vier Punkten:",
+  "points": [
+    "ob Sie zur Hochzeit kommen",
+    "was Sie den beiden schenken möchten",
+    "wie Sie bei der Vorbereitung helfen können",
+    "wo Sie übernachten möchten"
+  ],
+  "instructions": "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der Punkte, einen passenden Betreff, eine passende Anrede, Einleitung und einen passenden Schluss.",
+  "words": {
+    "target": 120,
+    "min": 100,
+    "max": 150,
+    "recommended": true
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: gelip gelmediğim, hediye, hazırlıkta yardım, nerede kalacağım."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "İlk satırda Betreff, sonra hitap (Liebe … / Lieber … / Hallo …,), kısa giriş ve kapanış (Viele Grüße + adım) var."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Arkadaşıma baştan sona du ile yazdım (du, dich, dir, dein)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Maddeleri kendi seçtiğim mantıklı bir sırayla yazdım ve bağladım (zuerst, außerdem, deshalb, zum Schluss …)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümlelerimin hepsi Ich ya da Wir ile başlamıyor (Am Samstag …, Leider …, Zum Glück …): telc bunu ayrıca değerlendiriyor."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "weil / dass / wenn / ob'dan sonra çekimli fiil cümlenin sonunda."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Konjunktiv II ile kibar teklif ve soru: Ich könnte …, Hättet ihr Lust …?, Würdet ihr …?"
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Betreff und Anrede",
+      "items": [
+        {
+          "de": "Betreff: …",
+          "tr": "Konu: …"
+        },
+        {
+          "de": "Liebe … / Lieber … / Hallo …,",
+          "tr": "Sevgili … / Merhaba …,"
+        }
+      ]
+    },
+    {
+      "group": "Einleitung",
+      "items": [
+        {
+          "de": "Herzlichen Glückwunsch! Ich freue mich so für euch!",
+          "tr": "Tebrikler! Sizin için çok sevindim!"
+        },
+        {
+          "de": "Danke für die Einladung!",
+          "tr": "Davet için teşekkürler!"
+        }
+      ]
+    },
+    {
+      "group": "Zum Thema",
+      "items": [
+        {
+          "de": "Natürlich komme ich! / Leider kann ich erst später kommen.",
+          "tr": "Tabii ki geliyorum! / Maalesef ancak daha geç gelebilirim."
+        },
+        {
+          "de": "Ich möchte euch … schenken. Habt ihr einen Wunsch?",
+          "tr": "Size … hediye etmek istiyorum. Bir isteğiniz var mı?"
+        },
+        {
+          "de": "Ich könnte euch beim … helfen.",
+          "tr": "Size … konusunda yardım edebilirim."
+        }
+      ]
+    },
+    {
+      "group": "Schluss",
+      "items": [
+        {
+          "de": "Ich freue mich auf deine Antwort.",
+          "tr": "Cevabını bekliyorum."
+        },
+        {
+          "de": "Viele Grüße / Liebe Grüße",
+          "tr": "Selamlar / Sevgiler"
+        },
+        {
+          "de": "Ich freue mich schon auf das Fest!",
+          "tr": "Düğünü dört gözle bekliyorum!"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Betreff: Ich komme gern!\nLiebe Sophie,\nherzlichen Glückwunsch! Ich freue mich so für euch beide. Natürlich komme ich am 14. Juni zu eurer Hochzeit. Über ein Geschenk habe ich schon nachgedacht: Ihr reist doch so gern, deshalb möchte ich euch einen Gutschein für ein Wochenende in einem Hotel schenken. Oder habt ihr einen anderen Wunsch? Bei der Vorbereitung helfe ich euch gern. Ich könnte zum Beispiel die Tischkarten schreiben oder am Tag vorher Blumen besorgen. Übernachten möchte ich in einer kleinen Pension in der Nähe, dann muss ich nach der Feier nicht mehr lange fahren. Ich freue mich schon sehr auf das Fest!\nLiebe Grüße\nAyşe",
+    "notes": [
+      "Dört madde: geliyor, hediye (Gutschein, deshalb …), yardım (Ich könnte …), konaklama (Pension, dann …).",
+      "Bağlaçlar ve farklı cümle başları: deshalb, Oder, Bei der Vorbereitung …, Übernachten möchte ich …",
+      "Ich könnte zum Beispiel …: Konjunktiv II ile kibar teklif."
+    ]
+  }
+}

@@ -147,10 +147,11 @@ async function signIn(page, email, password){
 const allPages = [];
 (function walk(dir){
   for(const entry of fs.readdirSync(dir, { withFileTypes: true })){
-    if(['node_modules', '.git', 'docs', 'tests', '.claude', 'Material', '_blog'].includes(entry.name)) continue;
+    if(['node_modules', '.git', 'docs', 'tests', '.claude', 'Material', '_blog', '.tts-modeller'].includes(entry.name)) continue;
     const full = path.join(dir, entry.name);
     if(entry.isDirectory()) walk(full);
-    else if(entry.name.endsWith('.html') && !/^google[0-9a-f]+\.html$/.test(entry.name)) allPages.push('/' + path.relative(ROOT, full).replace(/index\.html$/, ''));
+    // tools/audio-check-offline.html: offline review file with its own CSP, never published (scripts/build-audio-check-offline.mjs).
+    else if(entry.name.endsWith('.html') && !/^google[0-9a-f]+\.html$/.test(entry.name) && entry.name !== 'audio-check-offline.html') allPages.push('/' + path.relative(ROOT, full).replace(/index\.html$/, ''));
   }
 })(ROOT);
 allPages.sort();

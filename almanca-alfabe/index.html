@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="/css/style.css?v=13" />
   <link rel="stylesheet" href="/css/base.css?v=12" />
   <link rel="stylesheet" href="/css/landing.css?v=1" />
-  <link rel="stylesheet" href="/css/alfabe.css?v=1" />
+  <link rel="stylesheet" href="/css/alfabe.css?v=2" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -112,7 +112,7 @@
             "name": "Oyun için hesap veya kayıt gerekiyor mu?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Hayır. İlerlemen ve profil seçimin yalnızca bu cihazdaki tarayıcıda saklanır; sunucuya hiçbir şey gönderilmez. Sesler cihazının kendi Almanca sesiyle okunur."
+              "text": "Hayır. Giriş yapmadan oynarsan ilerlemen ve profil seçimin yalnızca bu cihazdaki tarayıcıda saklanır. Öğrenci hesabınla giriş yaptıysan ilerlemen hesabına da kaydedilir. Sesler bu sitenin kendi ses dosyalarından çalınır; dosya yoksa cihazının kendi sesi kullanılır ve okunan metin hiçbir servise gönderilmez."
             }
           },
           {
@@ -170,6 +170,7 @@
         <div class="ab-app" id="alfabeApp" data-profil="secim">
           <noscript><p>Almanca alfabe oyunu için tarayıcında JavaScript’i etkinleştir.</p></noscript>
         </div>
+        <p class="ab-credit">Sesler bu sitede, açık kaynaklı modellerle üretildi: Almanca Piper ve Thorsten-Voice (CC0), Türkçe Resemble AI Chatterbox (MIT). Oynarken hiçbir ses servisine bağlanılmaz.</p>
       </section>
 
       <section class="lp-section" aria-labelledby="kurallar">
@@ -191,7 +192,7 @@
           </details>
           <details class="lp-faq-item">
             <summary>Oyun için hesap veya kayıt gerekiyor mu?</summary>
-            <div class="lp-faq-answer"><p>Hayır. İlerlemen ve profil seçimin yalnızca bu cihazdaki tarayıcıda saklanır; sunucuya hiçbir şey gönderilmez. Sesler cihazının kendi Almanca sesiyle okunur.</p></div>
+            <div class="lp-faq-answer"><p>Hayır. Giriş yapmadan oynarsan ilerlemen ve profil seçimin yalnızca bu cihazdaki tarayıcıda saklanır. Öğrenci hesabınla giriş yaptıysan ilerlemen hesabına da kaydedilir. Sesler bu sitenin kendi ses dosyalarından çalınır; dosya yoksa cihazının kendi sesi kullanılır ve okunan metin hiçbir servise gönderilmez.</p></div>
           </details>
           <details class="lp-faq-item">
             <summary>Neden harf harf hecelemeyi öğrenmeliyim?</summary>
@@ -237,8 +238,9 @@
   <script src="/js/app.js?v=41"></script>
   <script src="/js/theme.js?v=10"></script>
   <script src="/js/html.js?v=1"></script>
-  <script src="/js/alfabe-logic.js?v=1"></script>
-  <script src="/js/alfabe.js?v=1"></script>
+  <script src="/js/alfabe-logic.js?v=3"></script>
+  <script src="/js/alfabe-audio.js?v=1"></script>
+  <script src="/js/alfabe.js?v=3"></script>
   <script defer data-goatcounter="https://bozkurtacademy.goatcounter.com/count" data-goatcounter-settings='{"no_onload": true}' src="/js/vendor/count.js?v=2.7.0"></script>
   <script defer src="/js/analytics.js?v=7"></script>
   <!-- /ba:scripts -->

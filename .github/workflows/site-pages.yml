@@ -6,9 +6,9 @@ permissions:
 
 on:
   push:
-    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/csp.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', 'scripts/check-html-escape.mjs', 'scripts/grammar-pages.mjs', 'scripts/blog-pages.mjs', '_blog/**', 'images/blog/**', 'data/catalog.json', 'data/grammar-index.json', 'data/*-grammar.json', '**/*.html', 'js/**', 'css/**', 'data/alfabe.json', 'tests/alfabe-logic.test.mjs', '.github/workflows/site-pages.yml']
+    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/csp.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', 'scripts/check-html-escape.mjs', 'scripts/grammar-pages.mjs', 'scripts/blog-pages.mjs', '_blog/**', 'images/blog/**', 'data/catalog.json', 'data/grammar-index.json', 'data/*-grammar.json', '**/*.html', 'js/**', 'css/**', 'data/alfabe.json', 'tests/alfabe-logic.test.mjs', 'tests/alfabe-ses.test.mjs', 'audio/**', 'scripts/generate-alfabe-audio.mjs', 'scripts/build-audio-check-offline.mjs', 'tools/**', '_config.yml', '.github/workflows/site-pages.yml']
   pull_request:
-    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/csp.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', 'scripts/check-html-escape.mjs', 'scripts/grammar-pages.mjs', 'scripts/blog-pages.mjs', '_blog/**', 'images/blog/**', 'data/catalog.json', 'data/grammar-index.json', 'data/*-grammar.json', '**/*.html', 'js/**', 'css/**', 'data/alfabe.json', 'tests/alfabe-logic.test.mjs', '.github/workflows/site-pages.yml']
+    paths: ['*/index.html', 'index.html', '404.html', 'sitemap.xml', 'scripts/build-pages.mjs', 'scripts/csp.mjs', 'scripts/site-pages.mjs', 'scripts/check-versions.mjs', 'scripts/check-html-escape.mjs', 'scripts/grammar-pages.mjs', 'scripts/blog-pages.mjs', '_blog/**', 'images/blog/**', 'data/catalog.json', 'data/grammar-index.json', 'data/*-grammar.json', '**/*.html', 'js/**', 'css/**', 'data/alfabe.json', 'tests/alfabe-logic.test.mjs', 'tests/alfabe-ses.test.mjs', 'audio/**', 'scripts/generate-alfabe-audio.mjs', 'scripts/build-audio-check-offline.mjs', 'tools/**', '_config.yml', '.github/workflows/site-pages.yml']
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -19,4 +19,8 @@ jobs:
       - run: node scripts/build-pages.mjs --check
       - run: node scripts/check-versions.mjs
       - run: node scripts/check-html-escape.mjs
-      - run: node --test tests/alfabe-logic.test.mjs
+      # ffmpeg: the Almanca Alfabe audio tests encode real MP3s (without it they are skipped).
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends ffmpeg
+      - run: node --test tests/alfabe-logic.test.mjs tests/alfabe-ses.test.mjs
+      - run: node scripts/generate-alfabe-audio.mjs --check
+      - run: node scripts/build-audio-check-offline.mjs --check

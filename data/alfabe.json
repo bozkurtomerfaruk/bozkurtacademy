@@ -1,5 +1,5 @@
 {
-  "_aciklama": "Almanca Alfabe oyunu (/almanca-alfabe/, js/alfabe.js) verisi. Her harf: id, buyuk, kucuk, ad (Almanca harf adı; sesli okunan budur), okunus (Türkçe harflerle), ipucu (kısa, çocuk ve yetişkin), detay (yetişkin modunda ek telaffuz bilgisi, isteğe bağlı), cocuk ve yetiskin örnekleri. Örnek: artikel, kelime, anlam (Türkçe), emoji, okunus (kelimenin Türkçe harflerle okunuşu, isteğe bağlı). Kelime harfle başlamıyorsa oyun harfi kelimenin içinde kendisi bulup vurgular. Kontrol: node --test tests/alfabe-logic.test.mjs",
+  "_aciklama": "Almanca Alfabe oyunu (/almanca-alfabe/, js/alfabe.js) verisi. Her harf: id, buyuk, kucuk, ad (Almanca harf adı; sesli okunan budur), okunus (Türkçe harflerle), ipucu (kısa, çocuk ve yetişkin), detay (yetişkin modunda ek telaffuz bilgisi, isteğe bağlı), cocuk ve yetiskin örnekleri. Örnek: artikel, kelime, anlam (Türkçe), emoji, okunus (kelimenin Türkçe harflerle okunuşu, isteğe bağlı). Kelime harfle başlamıyorsa oyun harfi kelimenin içinde kendisi bulup vurgular. Kontrol: node --test tests/alfabe-logic.test.mjs soyle: harf adının seslendirilen biçimi (ses dosyası yoksa tarayıcı sesi bunu okur; Q → \"Kuh\"), ipa: ses dosyası üretilirken kullanılan IPA okunuşu (scripts/generate-alfabe-audio.mjs). seslendirme: sesli okunan sabit cümleler (tr: çocuk modu talimatları ve geri bildirimler, de: geri bildirim). sesMetni: yerel ses üreticisine (Piper) verilen metin; [[ ... ]] arası doğrudan fonem olarak okunur (Piper SSML desteklemez). sesAlternatifleri: aynı harf adının denenmiş yazımları, ilki seçilen; tools/audio-check.html'de yan yana dinlenir. Örnek kelimelerde isteğe bağlı sesMetni, vurgusu yanlış okunan yabancı kökenli kelimeler için (Giraffe, Orange …).",
   "harfler": [
     {
       "id": "A",
@@ -7,6 +7,14 @@
       "kucuk": "a",
       "ad": "A",
       "okunus": "a",
+      "soyle": "A",
+      "ipa": "aː",
+      "sesMetni": "A.",
+      "sesAlternatifleri": [
+        "A.",
+        "Ah.",
+        "[[ ˈaː ]]"
+      ],
       "ipucu": "Türkçedeki a gibi okunur.",
       "detay": "Uzun (Name → \"naame\") ya da kısa (Mann → \"man\") olabilir. Arkasından iki ünsüz geliyorsa çoğunlukla kısadır.",
       "cocuk": {
@@ -30,6 +38,14 @@
       "kucuk": "b",
       "ad": "Be",
       "okunus": "be",
+      "soyle": "Be",
+      "ipa": "beː",
+      "sesMetni": "[[ bˈeː ]]",
+      "sesAlternatifleri": [
+        "Be.",
+        "Beh.",
+        "[[ bˈeː ]]"
+      ],
       "ipucu": "Türkçedeki b gibi okunur.",
       "detay": "Kelimenin ya da hecenin sonunda \"p\" gibi sertleşir: gelb → \"gelp\", Urlaub → \"urlaup\".",
       "cocuk": {
@@ -53,6 +69,14 @@
       "kucuk": "c",
       "ad": "Ce",
       "okunus": "tse",
+      "soyle": "Zeh",
+      "ipa": "tseː",
+      "sesMetni": "[[ tsˈeː ]]",
+      "sesAlternatifleri": [
+        "Zeh.",
+        "Zee.",
+        "[[ tsˈeː ]]"
+      ],
       "ipucu": "Harfin adı \"tse\" diye okunur.",
       "detay": "Tek başına az görülür ve çoğunlukla yabancı kelimelerde \"k\" okunur (Computer, Café). Asıl önemlisi ikililer: ch → \"h/ş\" arası bir ses (ich), sch → \"ş\" (Schule), ck → \"k\" (Jacke).",
       "cocuk": {
@@ -76,6 +100,14 @@
       "kucuk": "d",
       "ad": "De",
       "okunus": "de",
+      "soyle": "De",
+      "ipa": "deː",
+      "sesMetni": "De.",
+      "sesAlternatifleri": [
+        "De.",
+        "Deh.",
+        "[[ dˈeː ]]"
+      ],
       "ipucu": "Türkçedeki d gibi okunur.",
       "detay": "Kelimenin sonunda \"t\" gibi sertleşir: Hund → \"hunt\", Geld → \"gelt\".",
       "cocuk": {
@@ -83,7 +115,8 @@
         "kelime": "Delfin",
         "anlam": "yunus",
         "emoji": "🐬",
-        "okunus": "delfiin"
+        "okunus": "delfiin",
+        "sesMetni": "der [[ dɛlfˈiːn ]]."
       },
       "yetiskin": {
         "artikel": "die",
@@ -99,6 +132,14 @@
       "kucuk": "e",
       "ad": "E",
       "okunus": "e",
+      "soyle": "E",
+      "ipa": "eː",
+      "sesMetni": "E.",
+      "sesAlternatifleri": [
+        "E.",
+        "Eh.",
+        "[[ ˈeː ]]"
+      ],
       "ipucu": "Türkçedeki e gibi okunur. I ile karıştırma: E \"e\", I \"i\" sesidir.",
       "detay": "Kelime sonundaki e hafif ve kısa okunur (Dusche → \"duşe\"). ei birlikte \"ay\" okunur: mein → \"mayn\", Zeit → \"tsayt\". eu \"oy\" okunur: neu → \"noy\".",
       "cocuk": {
@@ -122,6 +163,14 @@
       "kucuk": "f",
       "ad": "Ef",
       "okunus": "ef",
+      "soyle": "Ef",
+      "ipa": "ɛf",
+      "sesMetni": "[[ ˈɛf ]]",
+      "sesAlternatifleri": [
+        "Eff.",
+        "[[ ˈɛf ]]",
+        "Ef."
+      ],
       "ipucu": "Türkçedeki f gibi okunur.",
       "detay": "pf birlikte gelince iki ses de duyulur: Apfel → \"apfel\".",
       "cocuk": {
@@ -145,14 +194,22 @@
       "kucuk": "g",
       "ad": "Ge",
       "okunus": "ge",
+      "soyle": "Ge",
+      "ipa": "ɡeː",
+      "sesMetni": "Geh.",
+      "sesAlternatifleri": [
+        "Ge.",
+        "Geh.",
+        "[[ ɡˈeː ]]"
+      ],
       "ipucu": "Her zaman Türkçedeki g gibi okunur, \"c\" olmaz.",
       "detay": "Giraffe gibi yabancı kelimeler dışında hep \"g\"dir. Kelime sonunda \"k\" gibi sertleşir: Tag → \"taak\". -ig sonu \"ih\" gibi okunur: zwanzig → \"tsvantsih\".",
       "cocuk": {
         "artikel": "die",
-        "kelime": "Giraffe",
-        "anlam": "zürafa",
-        "emoji": "🦒",
-        "okunus": "jirafe"
+        "kelime": "Gabel",
+        "anlam": "çatal",
+        "emoji": "🍴",
+        "okunus": "gaabel"
       },
       "yetiskin": {
         "artikel": "das",
@@ -168,6 +225,14 @@
       "kucuk": "h",
       "ad": "Ha",
       "okunus": "ha",
+      "soyle": "Ha",
+      "ipa": "haː",
+      "sesMetni": "Ha.",
+      "sesAlternatifleri": [
+        "Ha.",
+        "Hah.",
+        "[[ hˈaː ]]"
+      ],
       "ipucu": "Kelime başında Türkçedeki h gibi okunur.",
       "detay": "Ünlüden sonra gelen h okunmaz, önceki ünlüyü uzatır: Bahnhof → \"baanhof\", Uhr → \"uur\".",
       "cocuk": {
@@ -191,6 +256,14 @@
       "kucuk": "i",
       "ad": "I",
       "okunus": "i",
+      "soyle": "I",
+      "ipa": "iː",
+      "sesMetni": "Ih.",
+      "sesAlternatifleri": [
+        "I.",
+        "Ih.",
+        "[[ ˈiː ]]"
+      ],
       "ipucu": "Türkçedeki i gibi okunur. Almancada ı harfi yoktur.",
       "detay": "ie birlikte uzun \"ii\" okunur: Brief → \"briif\", vier → \"fiir\". Türkçe isimlerdeki ı yazılamaz; çoğunlukla i yazılır (Yılmaz → Yilmaz).",
       "cocuk": {
@@ -214,6 +287,14 @@
       "kucuk": "j",
       "ad": "Jot",
       "okunus": "yot",
+      "soyle": "Jot",
+      "ipa": "jɔt",
+      "sesMetni": "Jott.",
+      "sesAlternatifleri": [
+        "Jott.",
+        "[[ jˈɔt ]]",
+        "Jot."
+      ],
       "ipucu": "J, Türkçedeki y gibi okunur: Jacke → \"yake\".",
       "detay": "Ja → \"ya\", Januar → \"yanuaar\". Türkçedeki j sesi değildir. Y harfiyle karıştırma: Y'nin adı \"üpsilon\"dur.",
       "cocuk": {
@@ -237,6 +318,14 @@
       "kucuk": "k",
       "ad": "Ka",
       "okunus": "ka",
+      "soyle": "Ka",
+      "ipa": "kaː",
+      "sesMetni": "Kah.",
+      "sesAlternatifleri": [
+        "Ka.",
+        "Kah.",
+        "[[ kˈaː ]]"
+      ],
       "ipucu": "Türkçedeki k gibi okunur.",
       "detay": "Kelime başında hafif bir nefesle söylenir. ck de \"k\" okunur: Jacke → \"yake\".",
       "cocuk": {
@@ -260,6 +349,14 @@
       "kucuk": "l",
       "ad": "El",
       "okunus": "el",
+      "soyle": "El",
+      "ipa": "ɛl",
+      "sesMetni": "Ell.",
+      "sesAlternatifleri": [
+        "Ell.",
+        "[[ ˈɛl ]]",
+        "El."
+      ],
       "ipucu": "Türkçedeki l gibi okunur.",
       "detay": "Almanca l her zaman ince okunur (Türkçedeki \"lale\" gibi), kalın l yoktur.",
       "cocuk": {
@@ -283,6 +380,14 @@
       "kucuk": "m",
       "ad": "Em",
       "okunus": "em",
+      "soyle": "Em",
+      "ipa": "ɛm",
+      "sesMetni": "[[ ˈɛm ]]",
+      "sesAlternatifleri": [
+        "Emm.",
+        "[[ ˈɛm ]]",
+        "Em."
+      ],
       "ipucu": "Türkçedeki m gibi okunur.",
       "cocuk": {
         "artikel": "die",
@@ -305,6 +410,14 @@
       "kucuk": "n",
       "ad": "En",
       "okunus": "en",
+      "soyle": "En",
+      "ipa": "ɛn",
+      "sesMetni": "[[ ˈɛn ]]",
+      "sesAlternatifleri": [
+        "Enn.",
+        "[[ ˈɛn ]]",
+        "En."
+      ],
       "ipucu": "Türkçedeki n gibi okunur.",
       "detay": "ng birlikte genizden tek bir ses gibi okunur, g ayrıca duyulmaz: Wohnung → \"voonung\".",
       "cocuk": {
@@ -328,6 +441,14 @@
       "kucuk": "o",
       "ad": "O",
       "okunus": "o",
+      "soyle": "O",
+      "ipa": "oː",
+      "sesMetni": "O.",
+      "sesAlternatifleri": [
+        "O.",
+        "Oh.",
+        "[[ ˈoː ]]"
+      ],
       "ipucu": "Türkçedeki o gibi okunur.",
       "detay": "Uzun (Ort → kısa \"ort\", Brot → uzun \"broot\") olabilir. Ö ile karıştırma: O \"o\", Ö \"ö\" sesidir.",
       "cocuk": {
@@ -335,7 +456,8 @@
         "kelime": "Orange",
         "anlam": "portakal",
         "emoji": "🍊",
-        "okunus": "oranje"
+        "okunus": "oranje",
+        "sesMetni": "die [[ oːrˈaŋʒə ]]."
       },
       "yetiskin": {
         "artikel": "der",
@@ -351,6 +473,14 @@
       "kucuk": "p",
       "ad": "Pe",
       "okunus": "pe",
+      "soyle": "Pe",
+      "ipa": "peː",
+      "sesMetni": "Pe.",
+      "sesAlternatifleri": [
+        "Pe.",
+        "Peh.",
+        "[[ pˈeː ]]"
+      ],
       "ipucu": "Türkçedeki p gibi okunur.",
       "detay": "ph \"f\" okunur: Physik → \"füüzik\". pf'de iki ses de duyulur: Apfel.",
       "cocuk": {
@@ -358,7 +488,8 @@
         "kelime": "Pinguin",
         "anlam": "penguen",
         "emoji": "🐧",
-        "okunus": "pinguin"
+        "okunus": "pinguin",
+        "sesMetni": "der [[ pˈɪŋɡuiːn ]]."
       },
       "yetiskin": {
         "artikel": "die",
@@ -374,6 +505,14 @@
       "kucuk": "q",
       "ad": "Qu",
       "okunus": "ku",
+      "soyle": "Kuh",
+      "ipa": "kuː",
+      "sesMetni": "Ku.",
+      "sesAlternatifleri": [
+        "Kuh.",
+        "Ku.",
+        "[[ kˈuː ]]"
+      ],
       "ipucu": "Harfin adı \"ku\". Hemen hep qu olarak yazılır ve \"kv\" okunur.",
       "detay": "qu → \"kv\": Quittung → \"kvitung\", bequem → \"bekveem\".",
       "cocuk": {
@@ -397,6 +536,14 @@
       "kucuk": "r",
       "ad": "Er",
       "okunus": "er",
+      "soyle": "Er",
+      "ipa": "ɛʁ",
+      "sesMetni": "[[ ˈɛɾ ]]",
+      "sesAlternatifleri": [
+        "Err.",
+        "[[ ˈɛɾ ]]",
+        "Er."
+      ],
       "ipucu": "Boğazdan, hafif hırıltılı bir r sesi.",
       "detay": "Kelime başında boğazdan söylenir (Rathaus). Kelime sonundaki -er hafif okunur, \"ır\" ile \"a\" arası bir sestir: Wasser → \"vasır\", Vater → \"faatır\".",
       "cocuk": {
@@ -404,14 +551,16 @@
         "kelime": "Rakete",
         "anlam": "roket",
         "emoji": "🚀",
-        "okunus": "rakeete"
+        "okunus": "rakeete",
+        "sesMetni": "die [[ rakˈeːtə ]]."
       },
       "yetiskin": {
         "artikel": "das",
         "kelime": "Rathaus",
         "anlam": "belediye binası",
         "emoji": "🏛️",
-        "okunus": "raat-haus"
+        "okunus": "raat-haus",
+        "sesMetni": "das [[ rˈɑːthaʊs ]]."
       }
     },
     {
@@ -420,6 +569,14 @@
       "kucuk": "s",
       "ad": "Es",
       "okunus": "es",
+      "soyle": "Es",
+      "ipa": "ɛs",
+      "sesMetni": "Ess.",
+      "sesAlternatifleri": [
+        "Ess.",
+        "[[ ˈɛs ]]",
+        "Es."
+      ],
       "ipucu": "Kelime başında ünlüden önce \"z\" gibi okunur: Sonne → \"zone\".",
       "detay": "Ünlüden önce \"z\" (Supermarkt → \"zuupermarkt\"), kelime sonunda \"s\" (Bus). sp ve st kelime başında \"şp\", \"şt\" okunur: Sport → \"şport\", Straße → \"ştraase\". sch → \"ş\". Z ile karıştırma: Z \"ts\" sesidir.",
       "cocuk": {
@@ -443,6 +600,14 @@
       "kucuk": "t",
       "ad": "Te",
       "okunus": "te",
+      "soyle": "Te",
+      "ipa": "teː",
+      "sesMetni": "Te.",
+      "sesAlternatifleri": [
+        "Te.",
+        "Teh.",
+        "[[ tˈeː ]]"
+      ],
       "ipucu": "Türkçedeki t gibi okunur.",
       "detay": "th de \"t\" okunur (Theater). -tion sonu \"tsyon\" okunur: Information → \"informatsyoon\".",
       "cocuk": {
@@ -466,6 +631,14 @@
       "kucuk": "u",
       "ad": "U",
       "okunus": "u",
+      "soyle": "U",
+      "ipa": "uː",
+      "sesMetni": "Uh.",
+      "sesAlternatifleri": [
+        "U.",
+        "Uh.",
+        "[[ ˈuː ]]"
+      ],
       "ipucu": "Türkçedeki u gibi okunur. Ü ile karıştırma: U \"u\", Ü \"ü\" sesidir.",
       "detay": "au birlikte \"au\" okunur: Haus → \"haus\". eu ve äu \"oy\" okunur: heute → \"hoyte\".",
       "cocuk": {
@@ -489,6 +662,14 @@
       "kucuk": "v",
       "ad": "Vau",
       "okunus": "fau",
+      "soyle": "Vau",
+      "ipa": "faʊ",
+      "sesMetni": "Fau.",
+      "sesAlternatifleri": [
+        "Fau.",
+        "[[ fˈaʊ ]]",
+        "Vau."
+      ],
       "ipucu": "V çoğunlukla \"f\" okunur: Vogel → \"foogel\".",
       "detay": "Almanca kelimelerde \"f\": Vater → \"faatır\", Vertrag → \"fertraak\". Bazı yabancı kökenli kelimelerde \"v\": Video, Vase. W ile karıştırma: W'nin sesi \"v\"dir.",
       "cocuk": {
@@ -512,6 +693,14 @@
       "kucuk": "w",
       "ad": "We",
       "okunus": "ve",
+      "soyle": "We",
+      "ipa": "veː",
+      "sesMetni": "We.",
+      "sesAlternatifleri": [
+        "We.",
+        "Weh.",
+        "[[ vˈeː ]]"
+      ],
       "ipucu": "W, Türkçedeki v gibi okunur: Wasser → \"vasır\".",
       "detay": "Wohnung → \"voonung\", wo → \"voo\". İngilizcedeki gibi \"u\" sesi olmaz. V ile karıştırma: V çoğunlukla \"f\" okunur.",
       "cocuk": {
@@ -535,6 +724,14 @@
       "kucuk": "x",
       "ad": "Ix",
       "okunus": "iks",
+      "soyle": "Ix",
+      "ipa": "ɪks",
+      "sesMetni": "Ix.",
+      "sesAlternatifleri": [
+        "Ix.",
+        "Iks.",
+        "[[ ˈɪks ]]"
+      ],
       "ipucu": "X, \"ks\" okunur.",
       "detay": "Az görülür ve hep \"ks\": Praxis → \"praksis\", Taxi → \"taksi\". chs de çoğunlukla \"ks\" okunur: sechs → \"zeks\".",
       "cocuk": {
@@ -558,6 +755,14 @@
       "kucuk": "y",
       "ad": "Ypsilon",
       "okunus": "üpsilon",
+      "soyle": "Ypsilon",
+      "ipa": "ˈʏpsilɔn",
+      "sesMetni": "[[ ˈʏpsilɔn ]]",
+      "sesAlternatifleri": [
+        "[[ ˈʏpsilɔn ]]",
+        "Üpsilon.",
+        "Ypsilon."
+      ],
       "ipucu": "Harfin adı \"üpsilon\". Türkçedeki y sesi Almancada J ile yazılır.",
       "detay": "Kelimede çoğunlukla \"ü\" okunur: Gymnasium → \"gümnaazyum\", Typ → \"tüüp\". İngilizceden gelen kelimelerde \"i\" (Handy → \"hendi\") ya da \"y\" (Yoga) olabilir.",
       "cocuk": {
@@ -581,6 +786,14 @@
       "kucuk": "z",
       "ad": "Zett",
       "okunus": "tset",
+      "soyle": "Zett",
+      "ipa": "tsɛt",
+      "sesMetni": "[[ tsˈɛt ]]",
+      "sesAlternatifleri": [
+        "Zett.",
+        "[[ tsˈɛt ]]",
+        "Zet."
+      ],
       "ipucu": "Z, \"ts\" okunur: Zebra → \"tsebra\".",
       "detay": "Zug → \"tsuuk\", Zeit → \"tsayt\". Türkçedeki z sesi değildir; o ses Almancada ünlüden önceki s ile yazılır (Sonne).",
       "cocuk": {
@@ -588,7 +801,8 @@
         "kelime": "Zebra",
         "anlam": "zebra",
         "emoji": "🦓",
-        "okunus": "tsebra"
+        "okunus": "tsebra",
+        "sesMetni": "das [[ tsˈeːbrɑː ]]."
       },
       "yetiskin": {
         "artikel": "der",
@@ -604,6 +818,14 @@
       "kucuk": "ä",
       "ad": "Ä",
       "okunus": "e",
+      "soyle": "Ä",
+      "ipa": "ɛː",
+      "sesMetni": "Ä.",
+      "sesAlternatifleri": [
+        "Ä.",
+        "Äh.",
+        "[[ ˈɛː ]]"
+      ],
       "ipucu": "Ä, Türkçedeki e gibi okunur: Bär → \"beer\".",
       "detay": "Uzun ä biraz daha açık bir \"ee\" sesidir. äu \"oy\" okunur: Häuser → \"hoyzer\". Yazılamazsa ae yazılır: Änderung → Aenderung.",
       "cocuk": {
@@ -627,6 +849,14 @@
       "kucuk": "ö",
       "ad": "Ö",
       "okunus": "ö",
+      "soyle": "Ö",
+      "ipa": "øː",
+      "sesMetni": "[[ ˈøː ]]",
+      "sesAlternatifleri": [
+        "Ö.",
+        "Öh.",
+        "[[ ˈøː ]]"
+      ],
       "ipucu": "Türkçedeki ö gibi okunur.",
       "detay": "Uzun ö'de dudaklar yuvarlak ve öne doğrudur (schön → \"şöön\"). Yazılamazsa oe yazılır: Öztürk → Oeztuerk.",
       "cocuk": {
@@ -650,6 +880,14 @@
       "kucuk": "ü",
       "ad": "Ü",
       "okunus": "ü",
+      "soyle": "Ü",
+      "ipa": "yː",
+      "sesMetni": "Üh.",
+      "sesAlternatifleri": [
+        "Ü.",
+        "Üh.",
+        "[[ ˈyː ]]"
+      ],
       "ipucu": "Türkçedeki ü gibi okunur. U ile karıştırma.",
       "detay": "Uzun ü, Tür → \"tüür\". Yazılamazsa ue yazılır: Überweisung → Ueberweisung.",
       "cocuk": {
@@ -673,6 +911,14 @@
       "kucuk": "ß",
       "ad": "Eszett",
       "okunus": "estset",
+      "soyle": "Eszett",
+      "ipa": "ɛsˈtsɛt",
+      "sesMetni": "Es-zett.",
+      "sesAlternatifleri": [
+        "Eszett.",
+        "Es-zett.",
+        "[[ ɛstsˈɛt ]]"
+      ],
       "ipucu": "ß, \"ss\" okunur: Fuß → \"fuus\".",
       "detay": "Uzun ünlüden ya da ei, au gibi ikililerden sonra yazılır: Straße → \"ştraase\", heißen → \"hayssen\". Kelime başında hiç gelmez. Yazılamazsa ss yazılır: Strasse.",
       "cocuk": {
@@ -728,7 +974,9 @@
   "isaretler": {
     "@": {
       "ad": "ät",
-      "aciklama": "et işareti"
+      "aciklama": "et işareti",
+      "ipa": "ɛt",
+      "sesMetni": "Ät"
     },
     ".": {
       "ad": "Punkt",
@@ -781,13 +1029,15 @@
         "tur": "Soyadı",
         "durum": "Telefonda bir memur soyadını soruyor ve kontrol için harf harf tekrar ediyor.",
         "soru": "Wie ist Ihr Nachname?",
-        "cevap": "Öztürk"
+        "cevap": "Öztürk",
+        "sesMetni": "Ös-türk."
       },
       {
         "tur": "Soyadı",
         "durum": "Doktor muayenehanesinde randevu alıyorsun; görevli soyadını harf harf okuyor.",
         "soru": "Wie schreibt man das?",
-        "cevap": "Demir"
+        "cevap": "Demir",
+        "sesMetni": "[[ dˈeːmiːɾ ]]."
       },
       {
         "tur": "Soyadı",
@@ -844,5 +1094,21 @@
         "cevap": "Lindenweg"
       }
     ]
+  },
+  "seslendirme": {
+    "tr": {
+      "talimat-kesfet": "Bir harfe dokun ve dinle.",
+      "talimat-duy": "Dinle ve doğru harfe dokun.",
+      "talimat-ilk-harf": "Bu kelime hangi harfle başlıyor?",
+      "talimat-heceleme": "Harfleri dinle ve kelimeyi kur.",
+      "talimat-sirala": "Harfleri sıraya diz.",
+      "dogru": "Doğru!",
+      "dogru-cevap": "Doğru cevap:",
+      "supersin": "Süpersin!",
+      "aferin": "Aferin!"
+    },
+    "de": {
+      "richtig": "Richtig!"
+    }
   }
 }

@@ -2,6 +2,30 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-11 · Almanca Alfabe: G'nin çocuk örneği "die Gabel"
+
+- "die Giraffe" (G /ʒ/ okunuyor, öğretici değil) yerine "die Gabel 🍴 çatal" (/ɡaːbəl/, okunuş "gaabel"). Ses üretildi; Giraffe klibi ve üç alternatifi kaldırıldı.
+
+## 2026-11-11 · Almanca Alfabe: öğretmenin ses kontrolü uygulandı
+
+- Kontrol sonucu (sürüm da13b1d9136a): 15 harfin `sesMetni` değişti (B, C, F, G, I, K, M, N, Q, R, U, Z, Ö, Ü, ß); bunlarla birlikte S, V, W, Ä'da da seçilen alternatif çekimin kendisi oyuna alındı (`--alternatif`, 19 klip).
+- Giraffe yeniden üretildi ve üç alternatif eklendi (sonra G örneği Gabel ile değiştirildi; kelime alternatifleri desteği duruyor).
+- Sırada: değişen harflerin ve Gabel'in yeniden dinlenmesi (`tools/audio-check-offline.html`).
+
+## 2026-11-10 · Almanca Alfabe: sesler ücretsiz ve yerel (Piper + Chatterbox)
+
+- Google yerine varsayılan `yerel`: Almanca Piper `de_DE-thorsten-medium` (CC0), Türkçe Chatterbox Multilingual (MIT); Whisper birkaç adaydan en iyi anlaşılanı seçiyor. Kurulum `scripts/alfabe-ses/kur.sh` / `kur.ps1`, modeller `.tts-modeller/` (git'e girmez).
+- 125 klibin hepsi üretildi ve commit edildi. Lisans kontrolü: `audio/alfabe/LISANS.md` (Piper'ın Türkçe sesi ve lessac/ryan'dan türetilenler ticari olmadığı için kullanılmadı).
+- Harf adları `data/alfabe.json` → `sesMetni` (ör. V "Fau.", Y `[[ ˈʏpsilɔn ]]`), alternatifleri `tools/audio-check.html`'de yan yana.
+- **Öğretmenin kulak onayı bekleniyor** (özellikle harf adları, Ä/Ö/Ü/ß, Türkçe talimatlar).
+
+## 2026-11-09 · Almanca Alfabe: önceden üretilmiş ses dosyaları
+
+- Seslendirilen 125 klip (30 harf, 60 kelime, 3 işaret, 11 soru, 11 cevap, 10 sabit cümle) `js/alfabe-logic.js` → `audioClips` ile tek listede; dosyalar `audio/alfabe/<dil>/<ad>.mp3`.
+- `scripts/generate-alfabe-audio.mjs`: Google (varsayılan), Azure ya da ElevenLabs ile üretim; anahtar sadece `.env`'de; eksik/metni değişen klipler; ffmpeg ile 48 kbit/sn mono; kendi kayıtların korunur. Henüz ses üretilmedi (anahtar yok): oyun şimdilik cihaz sesiyle çalışıyor.
+- `js/alfabe-audio.js`: HTMLAudioElement, tek ses, ilk dokunuştan önce sessiz, yavaş 0,75, dosya yoksa cihaz sesi (en iyi yerel ses).
+- Kontrol sayfası `tools/audio-check.html` (yayına girmez). Gizlilik metni (TR/DE/EN) ses dosyaları için güncellendi.
+
 ## 2026-11-08 · Almanca Alfabe: alıştırma kartı, sade okunuşlar, hesapta ilerleme
 
 - Alıştırmalar (A1) "Çocuklar için" bölümünde Artikel Evleri'nin yanında "Almanca Alfabe" kartı (TR/DE/EN). `quiz.js` v31, `app.js` v37, `artikel-evleri.css` v2.

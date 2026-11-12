@@ -1,0 +1,1056 @@
+{
+  "_aciklama": "Harf adlarının ve sesAlternatifleri olan kelimelerin yazım alternatifleri (node scripts/generate-alfabe-audio.mjs --alternatifler). Sadece kontrol sayfaları için; yayına girmez. Seçmek için data/alfabe.json → sesMetni, sonra --alternatif <klip>:<sıra>.",
+  "harfler": [
+    {
+      "clip": "harf-a",
+      "text": "A",
+      "ipa": "aː",
+      "secili": "A.",
+      "secenekler": [
+        {
+          "file": "de/harf-a--1.mp3",
+          "text": "A.",
+          "phonemes": "ˈɑː.",
+          "key": "a73a3302829d",
+          "audioHash": "219bd5184e25",
+          "bytes": 2829,
+          "secili": true
+        },
+        {
+          "file": "de/harf-a--2.mp3",
+          "text": "Ah.",
+          "phonemes": "ˈɑː.",
+          "key": "5303316e068c",
+          "audioHash": "161caa24bb30",
+          "bytes": 2829,
+          "secili": false
+        },
+        {
+          "file": "de/harf-a--3.mp3",
+          "text": "[[ ˈaː ]]",
+          "phonemes": "ˈaː",
+          "key": "e344d58db378",
+          "audioHash": "c6c50931071f",
+          "bytes": 3117,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-b",
+      "text": "Be",
+      "ipa": "beː",
+      "secili": "[[ bˈeː ]]",
+      "secenekler": [
+        {
+          "file": "de/harf-b--1.mp3",
+          "text": "Be.",
+          "phonemes": "bˈeː.",
+          "key": "c111b19cd8e9",
+          "audioHash": "f30abcd21fd4",
+          "bytes": 3261,
+          "secili": false
+        },
+        {
+          "file": "de/harf-b--2.mp3",
+          "text": "Beh.",
+          "phonemes": "bˈeː.",
+          "key": "a7698cd16a2e",
+          "audioHash": "0a456cac4614",
+          "bytes": 3261,
+          "secili": false
+        },
+        {
+          "file": "de/harf-b--3.mp3",
+          "text": "[[ bˈeː ]]",
+          "phonemes": "bˈeː",
+          "key": "6a30a640ef8c",
+          "audioHash": "9ae521092d32",
+          "bytes": 3261,
+          "secili": true
+        }
+      ]
+    },
+    {
+      "clip": "harf-c",
+      "text": "Zeh",
+      "ipa": "tseː",
+      "secili": "[[ tsˈeː ]]",
+      "secenekler": [
+        {
+          "file": "de/harf-c--1.mp3",
+          "text": "Zeh.",
+          "phonemes": "tsˈeː.",
+          "key": "75f887a90aa5",
+          "audioHash": "fc525aef2942",
+          "bytes": 3693,
+          "secili": false
+        },
+        {
+          "file": "de/harf-c--2.mp3",
+          "text": "Zee.",
+          "phonemes": "tsˈeː.",
+          "key": "970c410c2741",
+          "audioHash": "925826dccd20",
+          "bytes": 3693,
+          "secili": false
+        },
+        {
+          "file": "de/harf-c--3.mp3",
+          "text": "[[ tsˈeː ]]",
+          "phonemes": "tsˈeː",
+          "key": "a6769953a493",
+          "audioHash": "3f63eb52b38e",
+          "bytes": 3837,
+          "secili": true
+        }
+      ]
+    },
+    {
+      "clip": "harf-d",
+      "text": "De",
+      "ipa": "deː",
+      "secili": "De.",
+      "secenekler": [
+        {
+          "file": "de/harf-d--1.mp3",
+          "text": "De.",
+          "phonemes": "dˈeː.",
+          "key": "75c8469620fe",
+          "audioHash": "3668d92e5fed",
+          "bytes": 3261,
+          "secili": true
+        },
+        {
+          "file": "de/harf-d--2.mp3",
+          "text": "Deh.",
+          "phonemes": "dˈeː.",
+          "key": "9e513ae50399",
+          "audioHash": "4d725b533b20",
+          "bytes": 2973,
+          "secili": false
+        },
+        {
+          "file": "de/harf-d--3.mp3",
+          "text": "[[ dˈeː ]]",
+          "phonemes": "dˈeː",
+          "key": "bef7cd787c6c",
+          "audioHash": "2e7e7790d119",
+          "bytes": 3261,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-e",
+      "text": "E",
+      "ipa": "eː",
+      "secili": "E.",
+      "secenekler": [
+        {
+          "file": "de/harf-e--1.mp3",
+          "text": "E.",
+          "phonemes": "ˈeː.",
+          "key": "a5d01ab1d238",
+          "audioHash": "6b391d6c61d9",
+          "bytes": 3117,
+          "secili": true
+        },
+        {
+          "file": "de/harf-e--2.mp3",
+          "text": "Eh.",
+          "phonemes": "ˈeː.",
+          "key": "088bad23c5ef",
+          "audioHash": "e87f515c86bf",
+          "bytes": 3117,
+          "secili": false
+        },
+        {
+          "file": "de/harf-e--3.mp3",
+          "text": "[[ ˈeː ]]",
+          "phonemes": "ˈeː",
+          "key": "87506bf47446",
+          "audioHash": "64f375bad2c9",
+          "bytes": 2973,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-f",
+      "text": "Ef",
+      "ipa": "ɛf",
+      "secili": "[[ ˈɛf ]]",
+      "secenekler": [
+        {
+          "file": "de/harf-f--1.mp3",
+          "text": "Eff.",
+          "phonemes": "ɛf.",
+          "key": "16816bc1c401",
+          "audioHash": "0116665ee95a",
+          "bytes": 2973,
+          "secili": false
+        },
+        {
+          "file": "de/harf-f--2.mp3",
+          "text": "[[ ˈɛf ]]",
+          "phonemes": "ˈɛf",
+          "key": "f158188191b8",
+          "audioHash": "c1c005e6dbc2",
+          "bytes": 2829,
+          "secili": true
+        },
+        {
+          "file": "de/harf-f--3.mp3",
+          "text": "Ef.",
+          "phonemes": "ˈeːf.",
+          "key": "1e72620fdcc8",
+          "audioHash": "3ded849ea2fa",
+          "bytes": 2973,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-g",
+      "text": "Ge",
+      "ipa": "ɡeː",
+      "secili": "Geh.",
+      "secenekler": [
+        {
+          "file": "de/harf-g--1.mp3",
+          "text": "Ge.",
+          "phonemes": "ɡˈeː.",
+          "key": "c3fc14a8b864",
+          "audioHash": "cead703e7a92",
+          "bytes": 3261,
+          "secili": false
+        },
+        {
+          "file": "de/harf-g--2.mp3",
+          "text": "Geh.",
+          "phonemes": "ɡˈeː.",
+          "key": "2aff9313c073",
+          "audioHash": "8aa6e8adfb4c",
+          "bytes": 2973,
+          "secili": true
+        },
+        {
+          "file": "de/harf-g--3.mp3",
+          "text": "[[ ɡˈeː ]]",
+          "phonemes": "ɡˈeː",
+          "key": "58a431831304",
+          "audioHash": "a15a7a3971d6",
+          "bytes": 3117,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-h",
+      "text": "Ha",
+      "ipa": "haː",
+      "secili": "Ha.",
+      "secenekler": [
+        {
+          "file": "de/harf-h--1.mp3",
+          "text": "Ha.",
+          "phonemes": "hˈɑː.",
+          "key": "aef4cd226c1f",
+          "audioHash": "1764c1057778",
+          "bytes": 3117,
+          "secili": true
+        },
+        {
+          "file": "de/harf-h--2.mp3",
+          "text": "Hah.",
+          "phonemes": "hˈɑː.",
+          "key": "79faa006df33",
+          "audioHash": "f8f88b59f80e",
+          "bytes": 3261,
+          "secili": false
+        },
+        {
+          "file": "de/harf-h--3.mp3",
+          "text": "[[ hˈaː ]]",
+          "phonemes": "hˈaː",
+          "key": "351e21036b41",
+          "audioHash": "530dc687af6f",
+          "bytes": 2973,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-i",
+      "text": "I",
+      "ipa": "iː",
+      "secili": "Ih.",
+      "secenekler": [
+        {
+          "file": "de/harf-i--1.mp3",
+          "text": "I.",
+          "phonemes": "ˈiː",
+          "key": "7c501dc2155d",
+          "audioHash": "4b2c548e9d21",
+          "bytes": 2685,
+          "secili": false
+        },
+        {
+          "file": "de/harf-i--2.mp3",
+          "text": "Ih.",
+          "phonemes": "ˈiː.",
+          "key": "b1203a3415d4",
+          "audioHash": "e0c4e332822c",
+          "bytes": 3405,
+          "secili": true
+        },
+        {
+          "file": "de/harf-i--3.mp3",
+          "text": "[[ ˈiː ]]",
+          "phonemes": "ˈiː",
+          "key": "d053e40e4d8f",
+          "audioHash": "11ca765426d2",
+          "bytes": 2829,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-j",
+      "text": "Jot",
+      "ipa": "jɔt",
+      "secili": "Jott.",
+      "secenekler": [
+        {
+          "file": "de/harf-j--1.mp3",
+          "text": "Jott.",
+          "phonemes": "jˈɔt.",
+          "key": "b274f9c09d84",
+          "audioHash": "c6252811871b",
+          "bytes": 3549,
+          "secili": true
+        },
+        {
+          "file": "de/harf-j--2.mp3",
+          "text": "[[ jˈɔt ]]",
+          "phonemes": "jˈɔt",
+          "key": "63fe0468c019",
+          "audioHash": "c2ec8dde698a",
+          "bytes": 3117,
+          "secili": false
+        },
+        {
+          "file": "de/harf-j--3.mp3",
+          "text": "Jot.",
+          "phonemes": "jˈoːt.",
+          "key": "3200a5a9900f",
+          "audioHash": "496e8c67e3e9",
+          "bytes": 3549,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-k",
+      "text": "Ka",
+      "ipa": "kaː",
+      "secili": "Kah.",
+      "secenekler": [
+        {
+          "file": "de/harf-k--1.mp3",
+          "text": "Ka.",
+          "phonemes": "kˈɑː.",
+          "key": "4a3595b86167",
+          "audioHash": "0898e31cee93",
+          "bytes": 3261,
+          "secili": false
+        },
+        {
+          "file": "de/harf-k--2.mp3",
+          "text": "Kah.",
+          "phonemes": "kˈɑː.",
+          "key": "5ddd2670927e",
+          "audioHash": "b03627533a5f",
+          "bytes": 3261,
+          "secili": true
+        },
+        {
+          "file": "de/harf-k--3.mp3",
+          "text": "[[ kˈaː ]]",
+          "phonemes": "kˈaː",
+          "key": "c90fbf4f5819",
+          "audioHash": "638b9878c14c",
+          "bytes": 3117,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-l",
+      "text": "El",
+      "ipa": "ɛl",
+      "secili": "Ell.",
+      "secenekler": [
+        {
+          "file": "de/harf-l--1.mp3",
+          "text": "Ell.",
+          "phonemes": "ˈɛl.",
+          "key": "34c881515ff3",
+          "audioHash": "4e72e18ef091",
+          "bytes": 3405,
+          "secili": true
+        },
+        {
+          "file": "de/harf-l--2.mp3",
+          "text": "[[ ˈɛl ]]",
+          "phonemes": "ˈɛl",
+          "key": "32ca9d73e43f",
+          "audioHash": "c5bbe77d49e9",
+          "bytes": 3117,
+          "secili": false
+        },
+        {
+          "file": "de/harf-l--3.mp3",
+          "text": "El.",
+          "phonemes": "ˈeːl.",
+          "key": "e23c71736086",
+          "audioHash": "b686fe7fb5b3",
+          "bytes": 3693,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-m",
+      "text": "Em",
+      "ipa": "ɛm",
+      "secili": "[[ ˈɛm ]]",
+      "secenekler": [
+        {
+          "file": "de/harf-m--1.mp3",
+          "text": "Emm.",
+          "phonemes": "ˈɛm.",
+          "key": "d921ea315b2d",
+          "audioHash": "bad3f38ea14f",
+          "bytes": 3405,
+          "secili": false
+        },
+        {
+          "file": "de/harf-m--2.mp3",
+          "text": "[[ ˈɛm ]]",
+          "phonemes": "ˈɛm",
+          "key": "8b7b9c47ae81",
+          "audioHash": "502d82e928ca",
+          "bytes": 3549,
+          "secili": true
+        },
+        {
+          "file": "de/harf-m--3.mp3",
+          "text": "Em.",
+          "phonemes": "ˈeːm.",
+          "key": "b9994f1d0458",
+          "audioHash": "8dba370451a2",
+          "bytes": 3405,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-n",
+      "text": "En",
+      "ipa": "ɛn",
+      "secili": "[[ ˈɛn ]]",
+      "secenekler": [
+        {
+          "file": "de/harf-n--1.mp3",
+          "text": "Enn.",
+          "phonemes": "ˈɛn.",
+          "key": "33dffe5cdfc9",
+          "audioHash": "8a560c9568ec",
+          "bytes": 3405,
+          "secili": false
+        },
+        {
+          "file": "de/harf-n--2.mp3",
+          "text": "[[ ˈɛn ]]",
+          "phonemes": "ˈɛn",
+          "key": "e7774346b01d",
+          "audioHash": "55994b9a88e3",
+          "bytes": 3837,
+          "secili": true
+        },
+        {
+          "file": "de/harf-n--3.mp3",
+          "text": "En.",
+          "phonemes": "ˈeːn.",
+          "key": "9bb9b33697e0",
+          "audioHash": "1e598df2af56",
+          "bytes": 3405,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-o",
+      "text": "O",
+      "ipa": "oː",
+      "secili": "O.",
+      "secenekler": [
+        {
+          "file": "de/harf-o--1.mp3",
+          "text": "O.",
+          "phonemes": "ˈoː.",
+          "key": "eff543ed97da",
+          "audioHash": "626eaf0235b0",
+          "bytes": 3261,
+          "secili": true
+        },
+        {
+          "file": "de/harf-o--2.mp3",
+          "text": "Oh.",
+          "phonemes": "ˈoː.",
+          "key": "342891120259",
+          "audioHash": "cf2b2b9228e6",
+          "bytes": 3405,
+          "secili": false
+        },
+        {
+          "file": "de/harf-o--3.mp3",
+          "text": "[[ ˈoː ]]",
+          "phonemes": "ˈoː",
+          "key": "7d584ccef4ab",
+          "audioHash": "b63e4573855c",
+          "bytes": 3405,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-p",
+      "text": "Pe",
+      "ipa": "peː",
+      "secili": "Pe.",
+      "secenekler": [
+        {
+          "file": "de/harf-p--1.mp3",
+          "text": "Pe.",
+          "phonemes": "pˈeː.",
+          "key": "26a9fb2e6cae",
+          "audioHash": "56a90dfdddc4",
+          "bytes": 3405,
+          "secili": true
+        },
+        {
+          "file": "de/harf-p--2.mp3",
+          "text": "Peh.",
+          "phonemes": "pˈeː.",
+          "key": "29a0268695e8",
+          "audioHash": "fe9baae62f6a",
+          "bytes": 3405,
+          "secili": false
+        },
+        {
+          "file": "de/harf-p--3.mp3",
+          "text": "[[ pˈeː ]]",
+          "phonemes": "pˈeː",
+          "key": "90b8a029ebce",
+          "audioHash": "e666a11f0545",
+          "bytes": 3405,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-q",
+      "text": "Kuh",
+      "ipa": "kuː",
+      "secili": "Ku.",
+      "secenekler": [
+        {
+          "file": "de/harf-q--1.mp3",
+          "text": "Kuh.",
+          "phonemes": "kˈuː.",
+          "key": "c84b17bd9244",
+          "audioHash": "3cd50024fd74",
+          "bytes": 3549,
+          "secili": false
+        },
+        {
+          "file": "de/harf-q--2.mp3",
+          "text": "Ku.",
+          "phonemes": "kˈuː.",
+          "key": "1ba38bf89c1f",
+          "audioHash": "9c9facfb3cae",
+          "bytes": 3693,
+          "secili": true
+        },
+        {
+          "file": "de/harf-q--3.mp3",
+          "text": "[[ kˈuː ]]",
+          "phonemes": "kˈuː",
+          "key": "39fdbf002649",
+          "audioHash": "d7de380df273",
+          "bytes": 3549,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-r",
+      "text": "Er",
+      "ipa": "ɛʁ",
+      "secili": "[[ ˈɛɾ ]]",
+      "secenekler": [
+        {
+          "file": "de/harf-r--1.mp3",
+          "text": "Err.",
+          "phonemes": "ˈɛɾ.",
+          "key": "b8c8ea622b52",
+          "audioHash": "664c3fdb0c08",
+          "bytes": 3117,
+          "secili": false
+        },
+        {
+          "file": "de/harf-r--2.mp3",
+          "text": "[[ ˈɛɾ ]]",
+          "phonemes": "ˈɛɾ",
+          "key": "09d4ee13d7c6",
+          "audioHash": "803bf953693a",
+          "bytes": 3261,
+          "secili": true
+        },
+        {
+          "file": "de/harf-r--3.mp3",
+          "text": "Er.",
+          "phonemes": "ɛɾ.",
+          "key": "79d5ff2ffd08",
+          "audioHash": "478548c24cb5",
+          "bytes": 3261,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-s",
+      "text": "Es",
+      "ipa": "ɛs",
+      "secili": "Ess.",
+      "secenekler": [
+        {
+          "file": "de/harf-s--1.mp3",
+          "text": "Ess.",
+          "phonemes": "ˈɛs.",
+          "key": "56bb6b4ba2ed",
+          "audioHash": "1baaa38b51ae",
+          "bytes": 3549,
+          "secili": true
+        },
+        {
+          "file": "de/harf-s--2.mp3",
+          "text": "[[ ˈɛs ]]",
+          "phonemes": "ˈɛs",
+          "key": "58a7cceb5e79",
+          "audioHash": "b0ddb7d63ac2",
+          "bytes": 3117,
+          "secili": false
+        },
+        {
+          "file": "de/harf-s--3.mp3",
+          "text": "Es.",
+          "phonemes": "ɛs.",
+          "key": "f5f00ea0d1d8",
+          "audioHash": "fa3958695448",
+          "bytes": 3117,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-t",
+      "text": "Te",
+      "ipa": "teː",
+      "secili": "Te.",
+      "secenekler": [
+        {
+          "file": "de/harf-t--1.mp3",
+          "text": "Te.",
+          "phonemes": "tˈeː.",
+          "key": "4cbdfcae3430",
+          "audioHash": "3bec6ffa7518",
+          "bytes": 3405,
+          "secili": true
+        },
+        {
+          "file": "de/harf-t--2.mp3",
+          "text": "Teh.",
+          "phonemes": "tˈeː.",
+          "key": "17aaf9ec9985",
+          "audioHash": "84a09e0fbd5c",
+          "bytes": 3405,
+          "secili": false
+        },
+        {
+          "file": "de/harf-t--3.mp3",
+          "text": "[[ tˈeː ]]",
+          "phonemes": "tˈeː",
+          "key": "33557503966e",
+          "audioHash": "898edcbf2dea",
+          "bytes": 3549,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-u",
+      "text": "U",
+      "ipa": "uː",
+      "secili": "Uh.",
+      "secenekler": [
+        {
+          "file": "de/harf-u--1.mp3",
+          "text": "U.",
+          "phonemes": "ˈuː.",
+          "key": "a10737d1f397",
+          "audioHash": "fd11c62462a7",
+          "bytes": 3117,
+          "secili": false
+        },
+        {
+          "file": "de/harf-u--2.mp3",
+          "text": "Uh.",
+          "phonemes": "ˈuː.",
+          "key": "772b92b0641d",
+          "audioHash": "2789b27f46cb",
+          "bytes": 3405,
+          "secili": true
+        },
+        {
+          "file": "de/harf-u--3.mp3",
+          "text": "[[ ˈuː ]]",
+          "phonemes": "ˈuː",
+          "key": "2abfe9f69453",
+          "audioHash": "cb337afc6686",
+          "bytes": 3117,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-v",
+      "text": "Vau",
+      "ipa": "faʊ",
+      "secili": "Fau.",
+      "secenekler": [
+        {
+          "file": "de/harf-v--1.mp3",
+          "text": "Fau.",
+          "phonemes": "fˈaʊ.",
+          "key": "6f5c08172d82",
+          "audioHash": "2d7dcdd39043",
+          "bytes": 3549,
+          "secili": true
+        },
+        {
+          "file": "de/harf-v--2.mp3",
+          "text": "[[ fˈaʊ ]]",
+          "phonemes": "fˈaʊ",
+          "key": "e3351abc56c8",
+          "audioHash": "3ff73b07ac60",
+          "bytes": 3837,
+          "secili": false
+        },
+        {
+          "file": "de/harf-v--3.mp3",
+          "text": "Vau.",
+          "phonemes": "vˈaʊ.",
+          "key": "8b52c95ded4d",
+          "audioHash": "8ee5ab7ab4e4",
+          "bytes": 3549,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-w",
+      "text": "We",
+      "ipa": "veː",
+      "secili": "We.",
+      "secenekler": [
+        {
+          "file": "de/harf-w--1.mp3",
+          "text": "We.",
+          "phonemes": "vˈeː.",
+          "key": "b06d10604954",
+          "audioHash": "8721d0d1aaf9",
+          "bytes": 3261,
+          "secili": true
+        },
+        {
+          "file": "de/harf-w--2.mp3",
+          "text": "Weh.",
+          "phonemes": "vˈeː.",
+          "key": "2390e647ab9a",
+          "audioHash": "f6667ed247a8",
+          "bytes": 3405,
+          "secili": false
+        },
+        {
+          "file": "de/harf-w--3.mp3",
+          "text": "[[ vˈeː ]]",
+          "phonemes": "vˈeː",
+          "key": "6d8c3562bcf9",
+          "audioHash": "27014d390fa1",
+          "bytes": 3549,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-x",
+      "text": "Ix",
+      "ipa": "ɪks",
+      "secili": "Ix.",
+      "secenekler": [
+        {
+          "file": "de/harf-x--1.mp3",
+          "text": "Ix.",
+          "phonemes": "ˈɪks.",
+          "key": "bec7428e54c2",
+          "audioHash": "ab1d72219439",
+          "bytes": 3549,
+          "secili": true
+        },
+        {
+          "file": "de/harf-x--2.mp3",
+          "text": "Iks.",
+          "phonemes": "ˈɪks.",
+          "key": "763f8341aded",
+          "audioHash": "5015527ce3da",
+          "bytes": 3549,
+          "secili": false
+        },
+        {
+          "file": "de/harf-x--3.mp3",
+          "text": "[[ ˈɪks ]]",
+          "phonemes": "ˈɪks",
+          "key": "39d3481c498d",
+          "audioHash": "a3b66257ff1c",
+          "bytes": 3405,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-y",
+      "text": "Ypsilon",
+      "ipa": "ˈʏpsilɔn",
+      "secili": "[[ ˈʏpsilɔn ]]",
+      "secenekler": [
+        {
+          "file": "de/harf-y--1.mp3",
+          "text": "[[ ˈʏpsilɔn ]]",
+          "phonemes": "ˈʏpsilɔn",
+          "key": "94a5dfee46b7",
+          "audioHash": "849788eb668e",
+          "bytes": 5277,
+          "secili": true
+        },
+        {
+          "file": "de/harf-y--2.mp3",
+          "text": "Üpsilon.",
+          "phonemes": "ˈʏpsiːlˌoːn.",
+          "key": "68f0385332dc",
+          "audioHash": "dc467d25235d",
+          "bytes": 5709,
+          "secili": false
+        },
+        {
+          "file": "de/harf-y--3.mp3",
+          "text": "Ypsilon.",
+          "phonemes": "ˈʏpsiːlˌoːn.",
+          "key": "c08a34b0be84",
+          "audioHash": "a2f53b70b7c4",
+          "bytes": 5853,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-z",
+      "text": "Zett",
+      "ipa": "tsɛt",
+      "secili": "[[ tsˈɛt ]]",
+      "secenekler": [
+        {
+          "file": "de/harf-z--1.mp3",
+          "text": "Zett.",
+          "phonemes": "tsˈɛt.",
+          "key": "255a2cbd87de",
+          "audioHash": "70b4b7eda9ce",
+          "bytes": 3693,
+          "secili": false
+        },
+        {
+          "file": "de/harf-z--2.mp3",
+          "text": "[[ tsˈɛt ]]",
+          "phonemes": "tsˈɛt",
+          "key": "6222518f8496",
+          "audioHash": "c09f5824bb2f",
+          "bytes": 3549,
+          "secili": true
+        },
+        {
+          "file": "de/harf-z--3.mp3",
+          "text": "Zet.",
+          "phonemes": "tsˈeːt.",
+          "key": "402d1475fbd5",
+          "audioHash": "86c53216a541",
+          "bytes": 3837,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-ae",
+      "text": "Ä",
+      "ipa": "ɛː",
+      "secili": "Ä.",
+      "secenekler": [
+        {
+          "file": "de/harf-ae--1.mp3",
+          "text": "Ä.",
+          "phonemes": "ˈɛː.",
+          "key": "9874559532ac",
+          "audioHash": "b0bc3bf8e288",
+          "bytes": 3117,
+          "secili": true
+        },
+        {
+          "file": "de/harf-ae--2.mp3",
+          "text": "Äh.",
+          "phonemes": "ˈɛː.",
+          "key": "914ec50ca580",
+          "audioHash": "dbd01d3dca9f",
+          "bytes": 3261,
+          "secili": false
+        },
+        {
+          "file": "de/harf-ae--3.mp3",
+          "text": "[[ ˈɛː ]]",
+          "phonemes": "ˈɛː",
+          "key": "313d0d7ae837",
+          "audioHash": "8f353c751c09",
+          "bytes": 3117,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-oe",
+      "text": "Ö",
+      "ipa": "øː",
+      "secili": "[[ ˈøː ]]",
+      "secenekler": [
+        {
+          "file": "de/harf-oe--1.mp3",
+          "text": "Ö.",
+          "phonemes": "ˈøː.",
+          "key": "11ad526a1877",
+          "audioHash": "fc33500bd63a",
+          "bytes": 3405,
+          "secili": false
+        },
+        {
+          "file": "de/harf-oe--2.mp3",
+          "text": "Öh.",
+          "phonemes": "ˈøː.",
+          "key": "4b3d4c4594b5",
+          "audioHash": "8c488ee686e0",
+          "bytes": 3261,
+          "secili": false
+        },
+        {
+          "file": "de/harf-oe--3.mp3",
+          "text": "[[ ˈøː ]]",
+          "phonemes": "ˈøː",
+          "key": "86900e4fbaf9",
+          "audioHash": "afe0e0342555",
+          "bytes": 3117,
+          "secili": true
+        }
+      ]
+    },
+    {
+      "clip": "harf-ue",
+      "text": "Ü",
+      "ipa": "yː",
+      "secili": "Üh.",
+      "secenekler": [
+        {
+          "file": "de/harf-ue--1.mp3",
+          "text": "Ü.",
+          "phonemes": "ˈyː.",
+          "key": "b89cff7427fd",
+          "audioHash": "89b71d503fb8",
+          "bytes": 3261,
+          "secili": false
+        },
+        {
+          "file": "de/harf-ue--2.mp3",
+          "text": "Üh.",
+          "phonemes": "ˈyː.",
+          "key": "e5b5f1eb65c8",
+          "audioHash": "da0474049b7e",
+          "bytes": 3549,
+          "secili": true
+        },
+        {
+          "file": "de/harf-ue--3.mp3",
+          "text": "[[ ˈyː ]]",
+          "phonemes": "ˈyː",
+          "key": "344654ca2276",
+          "audioHash": "cfb1fec03c39",
+          "bytes": 2973,
+          "secili": false
+        }
+      ]
+    },
+    {
+      "clip": "harf-eszett",
+      "text": "Eszett",
+      "ipa": "ɛsˈtsɛt",
+      "secili": "Es-zett.",
+      "secenekler": [
+        {
+          "file": "de/harf-eszett--1.mp3",
+          "text": "Eszett.",
+          "phonemes": "ɛstsˈɛt.",
+          "key": "15591d787cfc",
+          "audioHash": "a31bd62ca28a",
+          "bytes": 4557,
+          "secili": false
+        },
+        {
+          "file": "de/harf-eszett--2.mp3",
+          "text": "Es-zett.",
+          "phonemes": "ɛstsˈɛt.",
+          "key": "324ea5f74dd1",
+          "audioHash": "0ce33912c3f3",
+          "bytes": 4557,
+          "secili": true
+        },
+        {
+          "file": "de/harf-eszett--3.mp3",
+          "text": "[[ ɛstsˈɛt ]]",
+          "phonemes": "ɛstsˈɛt",
+          "key": "08ab88e9214d",
+          "audioHash": "47e7893c8c16",
+          "bytes": 4413,
+          "secili": false
+        }
+      ]
+    }
+  ],
+  "kelimeler": []
+}

@@ -248,7 +248,7 @@ for (const page of PAGES) {
 }
 // Menü ve footer'ı paylaşan diğer sayfalar (sitemap'e girmez). Yönetim sayfası: sabit iletişim düğmesi yok.
 // Ortak <head> kullanmayan, elle yazılmış sayfalar: yalnızca güvenlik bölümü (CSP, referrer, tema başlatıcı).
-for (const name of ['giris.html', 'kayit.html', 'panel.html', 'privacy.html', 'ogretmen.html', 'ogretmen-odev.html', 'ogretmen-ogrenci.html', 'ogretmen-takvim.html']) {
+for (const name of ['giris.html', 'kayit.html', 'panel.html', 'privacy.html', 'ogretmen.html', 'ogretmen-odev.html', 'ogretmen-ogrenci.html', 'ogretmen-takvim.html', 'tools/audio-check.html']) {
   const file = path.join(root, name);
   outputs.push([file, fill(fs.readFileSync(file, 'utf8'), 'security', SECURITY, file)]);
 }
@@ -300,14 +300,16 @@ outputs.push([path.join(root, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF
 // Her HTML sayfası CSP'yi taşımalı: listede unutulan yeni bir sayfa (ör. ogretmen-yeni.html) burada yakalanır.
 {
   const produced = new Map(outputs);
-  const skip = new Set(['node_modules', '.git', 'docs', 'tests', '.claude', 'Material', '_blog']);
+  const skip = new Set(['node_modules', '.git', 'docs', 'tests', '.claude', 'Material', '_blog', '.tts-modeller']);
   const missing = [];
   (function walk(dir) {
     for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
       if (skip.has(entry.name)) continue;
       const full = path.join(dir, entry.name);
       if (entry.isDirectory()) walk(full);
-      else if (entry.name.endsWith('.html') && !/^google[0-9a-f]+\.html$/.test(entry.name)) {
+      // tools/audio-check-offline.html: a downloaded, offline review file (scripts/build-audio-check-offline.mjs), never
+      // published (_config.yml → exclude: tools). It has its own strict CSP (no network at all) and inline code by design.
+      else if (entry.name.endsWith('.html') && !/^google[0-9a-f]+\.html$/.test(entry.name) && path.relative(root, full) !== path.join('tools', 'audio-check-offline.html')) {
         const html = produced.get(full) ?? fs.readFileSync(full, 'utf8');
         if (!html.includes('<!-- ba:security -->') || !html.includes('http-equiv="Content-Security-Policy"')) missing.push(path.relative(root, full));
         if (/<script(?![^>]*\bsrc=)(?![^>]*type="application\/ld\+json")[^>]*>/.test(html) || /\son[a-z]+="/.test(html)) missing.push(path.relative(root, full) + ' (satır içi betik veya on…= niteliği)');

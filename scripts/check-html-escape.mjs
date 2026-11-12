@@ -16,7 +16,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-export const FILES = ['js/quiz.js', 'js/grammar.js', 'js/exams.js', 'js/exam-task.js', 'js/a1-lessons.js', 'js/artikel-evleri.js', 'js/app.js', 'js/home.js', 'js/level-exam.js', 'js/placement.js', 'js/exercise-links.js', 'js/writing-task.js', 'js/form-task.js', 'js/alfabe.js'];
+export const FILES = ['js/quiz.js', 'js/grammar.js', 'js/exams.js', 'js/exam-task.js', 'js/a1-lessons.js', 'js/artikel-evleri.js', 'js/app.js', 'js/home.js', 'js/level-exam.js', 'js/placement.js', 'js/exercise-links.js', 'js/writing-task.js', 'js/form-task.js', 'js/alfabe.js', 'js/tools/audio-check.js'];
 
 // Şablon dizgilerini ve içlerindeki ${…} ifadelerini çıkarır (iç içe şablonlar, dizgiler ve yorumlar dahil).
 function templates(src){
@@ -183,7 +183,7 @@ export function check(file, src = fs.readFileSync(path.join(root, file), 'utf8')
 // target="_blank" bağlantılar rel="noopener noreferrer" taşımalı (HTML sayfaları ve js/ altındaki betikler).
 export function checkBlankTargets(){
   const problems = [];
-  const skip = new Set(['node_modules', '.git', 'docs', 'tests', '.claude', 'Material', 'vendor']);
+  const skip = new Set(['node_modules', '.git', 'docs', 'tests', '.claude', 'Material', 'vendor', '.tts-modeller']);
   (function walk(dir){
     for(const entry of fs.readdirSync(dir, { withFileTypes: true })){
       if(skip.has(entry.name)) continue;

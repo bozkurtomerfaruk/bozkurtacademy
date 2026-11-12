@@ -177,3 +177,60 @@ test('hesap ilerlemesi: yerel ve hesap verisi en iyi değerlerle birleşir', () 
   assert.deepEqual(plain(L.cleanProgress(dirty, ids)), { cocuk: { stats: { A: { r: 2, w: 0 } }, best: { duy: 3 }, stars: 0 }, yetiskin: { stats: {}, best: {}, stars: 0 } });
   assert.deepEqual(plain(L.mergeProgress(null, undefined, ids)), { cocuk: { stats: {}, best: {}, stars: 0 }, yetiskin: { stats: {}, best: {}, stars: 0 } });
 });
+
+test('ses klipleri: 125 benzersiz dosya, basit adlar, harf adları IPA ile', () => {
+  const clips = plain(L.audioClips(data));
+  assert.equal(clips.length, 125);
+  assert.equal(new Set(clips.map((c) => c.file)).size, clips.length, 'dosya adları benzersiz');
+  for (const c of clips) {
+    assert.match(c.file, /^(de|tr)\/[a-z0-9-]+\.mp3$/, c.file);
+    assert.ok(c.text && c.ssml, c.id);
+    assert.ok(!/<speak/.test(c.ssml), 'SSML gövdesi, <speak> servise göre eklenir');
+  }
+  const by = Object.fromEntries(clips.map((c) => [c.id, c]));
+  const counts = clips.reduce((o, c) => ({ ...o, [c.kind]: (o[c.kind] || 0) + 1 }), {});
+  assert.deepEqual(counts, { harf: 30, kelime: 60, isaret: 3, soru: 11, cevap: 11, geri: 5, talimat: 5 });
+  // Harf adları tek harf olarak değil, Almanca adıyla ve IPA ile.
+  for (const [id, text, ipa] of [['harf-v', 'Vau', 'faʊ'], ['harf-j', 'Jot', 'jɔt'], ['harf-q', 'Kuh', 'kuː'], ['harf-y', 'Ypsilon', 'ˈʏpsilɔn'],
+    ['harf-z', 'Zett', 'tsɛt'], ['harf-eszett', 'Eszett', 'ɛsˈtsɛt'], ['harf-ae', 'Ä', 'ɛː'], ['harf-oe', 'Ö', 'øː'], ['harf-ue', 'Ü', 'yː']]) {
+    assert.equal(by[id].text, text, id);
+    assert.equal(by[id].ssml, `<phoneme alphabet="ipa" ph="${ipa}">${text}</phoneme>`, id);
+    assert.equal(by[id].file, `de/${id}.mp3`);
+  }
+  for (const l of letters) assert.ok(l.soyle && l.ipa, `${l.id}: soyle ve ipa`);
+  // Kelimeler artikeliyle; adlar sade.
+  assert.equal(by['kelime-der-vogel'].text, 'der Vogel');
+  assert.equal(by['kelime-die-strasse'].text, 'die Straße');
+  assert.equal(by['kelime-der-fuss'].text, 'der Fuß');
+  assert.equal(by['soru-wie-ist-ihr-nachname'].text, 'Wie ist Ihr Nachname?');
+  assert.equal(by['cevap-mia-wolf-web-de'].text, 'mia Punkt wolf ät web Punkt de');
+  assert.match(by['cevap-mia-wolf-web-de'].ssml, /<phoneme alphabet="ipa" ph="ɛt">ät<\/phoneme>/);
+  assert.ok(by['isaret-at'] && by['isaret-punkt'] && by['isaret-bindestrich']);
+  // Türkçe: çocuk modu için sıcak ton; Almanca nötr. Sık kullanılanlar önceden yüklenir.
+  assert.equal(by['talimat-duy'].lang, 'tr');
+  assert.equal(by['aferin'].tone, 'cocuk');
+  assert.equal(by['richtig'].lang, 'de');
+  assert.equal(by['richtig'].tone, 'notr');
+  assert.ok(by['harf-a'].preload && by['richtig'].preload && !by['kelime-der-vogel'].preload);
+  // Oyunun kullandığı kimlikler listede.
+  assert.equal(L.audioId.letter(letters.find((l) => l.id === 'ß')), 'harf-eszett');
+  assert.equal(L.audioId.word({ artikel: 'der', kelime: 'Bär' }), 'kelime-der-baer');
+  assert.equal(L.slug('Öztürk Çağrı Işık Şen'), 'oeztuerk-cagri-isik-sen');
+  for (const sc of data.heceleme.yetiskin) assert.ok(by[L.audioId.question(sc)] && by[L.audioId.answer(sc)], sc.cevap);
+  assert.ok(L.SLOW_PLAYBACK === 0.75 && L.SPELL_GAP > 200);
+});
+
+test('cihaz sesi seçimi: sadece cihazdaki sesler; "Natural", "Katja" … öncelikli', () => {
+  const actx = { window: {} };
+  vm.createContext(actx);
+  vm.runInContext(fs.readFileSync(new URL('../js/alfabe-audio.js', import.meta.url), 'utf8'), actx);
+  const { pickVoice } = actx.window.baAlfabeAudio;
+  const v = (name, lang, local = true, extra = {}) => ({ name, lang, localService: local, ...extra });
+  const list = [v('Google Deutsch', 'de-DE', false), v('Microsoft Katja Online (Natural)', 'de-DE', false), v('Deutsch (Österreich)', 'de-AT'),
+    v('Test Deutsch', 'de-DE'), v('Microsoft Katja', 'de-DE'), v('Yelda', 'tr-TR'), v('Türkçe', 'tr_TR', true, { default: true })];
+  assert.equal(pickVoice(list, 'de').name, 'Microsoft Katja', 'çevrim içi sesler (Google, Online) atlanır');
+  assert.equal(pickVoice(list, 'tr').name, 'Yelda');
+  assert.equal(pickVoice([v('Deutsch (Österreich)', 'de-AT'), v('Anna', 'de-DE')], 'de').name, 'Anna');
+  assert.equal(pickVoice([v('Google Deutsch', 'de-DE', false)], 'de'), null, 'sadece çevrim içi ses varsa sessiz');
+  assert.equal(pickVoice([], 'tr'), null);
+});

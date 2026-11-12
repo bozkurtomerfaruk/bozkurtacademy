@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- Almanca Alfabe ses kontrolü: yayına girmez (_config.yml → exclude: tools). Yerelde: python3 -m http.server 8765 →
+     http://localhost:8765/tools/audio-check.html. Liste: js/alfabe-logic.js → audioClips, durum: audio/alfabe/manifest.json. -->
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ba:security -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com/firebasejs/ https://apis.google.com https://accounts.google.com/gsi/client https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; connect-src 'self' https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://content-firebaseappcheck.googleapis.com https://www.googleapis.com https://accounts.google.com/gsi/ https://www.google.com/recaptcha/ https://api.web3forms.com https://bozkurtacademy.goatcounter.com https://schreiben-kontrol.bozkurtt-omerfaruk.workers.dev http://127.0.0.1:8080 http://127.0.0.1:9099 http://127.0.0.1:8787; frame-src https://accounts.google.com https://bozkurtacademy-8ab85.firebaseapp.com https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <script src="/js/theme-init.js?v=1"></script>
+  <!-- /ba:security -->
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Ses kontrolü: Almanca Alfabe | Bozkurt Academy</title>
+  <link rel="stylesheet" href="/css/base.css?v=12" />
+  <style>
+    body{margin:0;padding:24px 16px 64px;background:var(--ba-ground);color:var(--ba-ink);font-family:var(--ba-sans)}
+    main{max-width:1180px;margin:0 auto}
+    h1{font-family:var(--ba-serif);font-weight:400;font-size:clamp(1.75rem,1.4rem + 1.5vw,2.5rem);margin:0 0 8px}
+    .ac-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0;padding:12px;background:var(--ba-paper);border-radius:var(--ba-radius-small)}
+    .ac-bar label{display:inline-flex;gap:6px;align-items:center}
+    .ac-bar select,.ac-bar button,td button{min-height:40px;padding:0 12px;border:0;border-radius:var(--ba-radius-small);background:var(--ba-paper-2);color:var(--ba-ink);font:inherit;cursor:pointer;box-shadow:inset 0 0 0 1px var(--ba-line-strong)}
+    .ac-bar button.primary{background:var(--ba-accent);color:var(--ba-accent-ink);box-shadow:none}
+    .ac-wrap{overflow-x:auto;background:var(--ba-paper);border-radius:var(--ba-radius-small)}
+    table{width:100%;border-collapse:collapse;font-size:var(--ba-small)}
+    th,td{padding:8px 10px;border-bottom:1px solid var(--ba-line);text-align:left;vertical-align:middle}
+    tr.is-playing{background:var(--ba-right-bg)}
+    td code{font-size:.85em}
+    .st-gen{color:var(--ba-right)} .st-own{color:var(--ba-der)} .st-miss,.st-stale{color:var(--ba-wrong)}
+    .ac-note{color:var(--ba-muted);font-size:var(--ba-small)}
+    h2{font-family:var(--ba-serif);font-weight:400;font-size:1.5rem;margin:28px 0 8px}
+    .ac-alts{display:flex;flex-wrap:wrap;gap:8px}
+    .ac-alt{display:inline-flex;flex-direction:column;align-items:flex-start;gap:2px;min-height:44px;padding:6px 10px;border:0;border-radius:var(--ba-radius-small);background:var(--ba-paper-2);color:var(--ba-ink);font:inherit;font-size:var(--ba-small);cursor:pointer;box-shadow:inset 0 0 0 1px var(--ba-line-strong);text-align:left}
+    .ac-alt.is-chosen{box-shadow:inset 0 0 0 2px var(--ba-right)}
+    .ac-alt small{color:var(--ba-muted)}
+  </style>
+</head>
+<body class="academy-theme">
+  <main>
+    <h1>Almanca Alfabe: ses kontrolü</h1>
+    <p class="ac-note">Bu sayfa yayına girmez. Her klibi dinle; beğenmediğini aynı dosya adıyla kendi kaydınla değiştirip <code>node scripts/generate-alfabe-audio.mjs --index</code> çalıştır. Dosyası olmayan klipler oyunda cihazın sesiyle okunur; “Cihaz sesi” düğmesi onu dinletir.</p>
+    <div class="ac-bar">
+      <label>Tür <select id="acKind"><option value="">Hepsi</option></select></label>
+      <label>Durum <select id="acStatus"><option value="">Hepsi</option><option value="gen">Üretildi</option><option value="own">Kendi kaydın</option><option value="miss">Eksik</option><option value="stale">Metin değişti</option></select></label>
+      <label><input type="checkbox" id="acSlow"> Yavaş (0,75)</label>
+      <button type="button" class="primary" id="acAll">Listedekileri sırayla çal</button>
+      <button type="button" id="acStop">Durdur</button>
+      <span id="acSummary" class="ac-note" role="status"></span>
+    </div>
+    <section id="acAltSection" hidden>
+      <h2>Harf adları ve kelimeler: yazım alternatifleri</h2>
+      <p class="ac-note">Her harf için denenen yazımlar yan yana. Oyunda kullanılan "seçili" olandır (<code>data/alfabe.json</code> → <code>sesMetni</code>). Başka birini seçmek için onu <code>sesMetni</code>'ne yaz ve <code>node scripts/generate-alfabe-audio.mjs</code> çalıştır. <code>[[ … ]]</code> doğrudan fonemdir. Fonemler: Piper'ın gerçekten okuduğu.</p>
+      <div class="ac-wrap"><table>
+        <thead><tr><th scope="col">Harf</th><th scope="col">Hedef</th><th scope="col">Alternatifler</th></tr></thead>
+        <tbody id="acAltRows"></tbody>
+      </table></div>
+      <h2>Bütün klipler</h2>
+    </section>
+    <div class="ac-wrap"><table>
+      <thead><tr><th scope="col">#</th><th scope="col">Dosya</th><th scope="col">Dil</th><th scope="col">Tür</th><th scope="col">Metin</th><th scope="col">IPA</th><th scope="col">Durum</th><th scope="col">Boyut</th><th scope="col">Dinle</th></tr></thead>
+      <tbody id="acRows"><tr><td colspan="9">Yükleniyor…</td></tr></tbody>
+    </table></div>
+  </main>
+  <script src="/js/html.js?v=1"></script>
+  <script src="/js/alfabe-logic.js?v=3"></script>
+  <script src="/js/alfabe-audio.js?v=1"></script>
+  <script src="/js/tools/audio-check.js?v=3"></script>
+</body>
+</html>

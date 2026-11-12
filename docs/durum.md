@@ -18,6 +18,29 @@
 - Gizlilik metni (TR/DE/EN): localStorage `baAlfabe` ve cihazdaki sesle okuma eklendi.
 - Testler: `tests/alfabe-logic.test.mjs` (CI) ve `tests/alfabe.mjs` (tarayıcı; 320/390/1280 px, açık/koyu, ses yok, depolama kapalı).
 
+## 2026-11-12 · Schreiben genişletme 3: telc Deutsch B1
+
+- **Format (resmî telc Deutsch B1 · Zertifikat Deutsch, Übungstest 1):** Schriftlicher Ausdruck 30 dk, 45 puan (%15).
+  - Görev: arkadaştan ya da tanıdık birinden gelen e-postaya gayriresmî veya yarı resmî cevap; 4 madde (Leitpunkt), sırayı öğrenci seçiyor.
+  - Betreff, hitap, giriş ve kapanış isteniyor. Kelime sınırı yok.
+  - Kriterler: Aufgabenbewältigung, Kommunikative Gestaltung (resmiyet derecesi, bağlaçlar, cümlelerin çoğunun Ich/Wir ile başlamaması), Formale Richtigkeit.
+- **6 set (kararın: 3 gayriresmî + 3 yarı resmî):**
+  - Gayriresmî: Ein Freund zieht in Ihre Stadt, Einladung zur Hochzeit, Tipps zum Deutschlernen.
+  - Yarı resmî: Kursausflug, Abschied einer Kollegin, Hoffest im Haus.
+  - Örnek cevaplar 101–107 kelime ve Betreff ile başlıyor.
+- **Görev sayfası:**
+  - Gelen e-posta kartı (gönderen, konu, metin).
+  - Metin alanı ipucu "Betreff: …" ile başlıyor (kararın: Betreff ilk satırda).
+  - "Önerilen uzunluk: yaklaşık 120 kelime (resmî sınır yok)" yazıyor (kararın); sayaç 100–150 arasını iyi sayıyor, engellemiyor.
+- **Yapay zekâ:**
+  - Talimata eklendi: Betreff satırı doğru sayılıyor; hitaptan sonraki küçük harf kuralı Betreff varken de geçerli; gün ve ay adları özne olunca artikelle kullanılabiliyor.
+  - Yeni kesin kural (Worker): hitaptan sonraki satır büyük harfle başlıyorsa ve ilk kelime isim olamayacak sık bir kelimeyse (danke, ich, leider …) öneri ekleniyor. Sie, Ihr, Ihre ve isimlere dokunulmuyor.
+  - Deneme (8 telc metni, 14 hata): ilk tur 12/14 ve bir yanlış kural ("Der Samstag" için "günlerden önce artikel olmaz"). Düzeltmeden sonra 13/14 ve yanlış alarm yok; kaçan: "an den Ausflug teilnehmen" (teilnehmen an + Dativ).
+  - Regresyon: B1 Teil 2/3 23/23, A1 13/13.
+- **Senin yapacakların (birleştirmeden sonra):**
+  1. Worker'ı güncelle.
+  2. Geçici token'ı sil (19.11.2026'ya kadar geçerli).
+
 ## 2026-11-11 · Sınav seti sonuçları hesaba kaydediliyor
 
 - **Ne kaydediliyor:** Giriş yapmış ve onaylı öğrenci bir sınav setinde "Kontrol et"e basınca puan `users/{uid}/results`'a yazılıyor.

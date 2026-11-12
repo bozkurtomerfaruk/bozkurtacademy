@@ -695,7 +695,17 @@ window.BA_EXAMS = {
               }, // Teil 2
             ] },
             { id: 'schreiben', teile: [
-              { title: null, exercises: [] }, // Teil 1
+              {
+                title: { tr: 'E-postaya cevap · 4 madde · önerilen ~120 kelime', de: 'Auf eine E-Mail antworten · 4 Leitpunkte', en: 'Reply to an email · 4 points · about 120 words suggested' },
+                exercises: [
+                  { set: 'set-1', title: 'Ein Freund zieht in Ihre Stadt' },
+                  { set: 'set-2', title: 'Einladung zur Hochzeit' },
+                  { set: 'set-3', title: 'Tipps zum Deutschlernen' },
+                  { set: 'set-4', title: 'Kursausflug' },
+                  { set: 'set-5', title: 'Abschied einer Kollegin' },
+                  { set: 'set-6', title: 'Hoffest im Haus' },
+                ]
+              }, // Teil 1
             ] },
             { id: 'sprechen', teile: [
               { title: null, exercises: [] }, // Teil 1

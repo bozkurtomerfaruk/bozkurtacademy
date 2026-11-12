@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-1",
+  "title": "Ein Freund zieht in Ihre Stadt",
+  "minutes": 30,
+  "kind": "writing",
+  "register": "du",
+  "textType": "email-informal",
+  "subjectLine": true,
+  "situation": "Sie haben von einem Freund folgende E-Mail erhalten:",
+  "mail": {
+    "from": "Jonas",
+    "subject": "Ich ziehe zu dir!",
+    "text": "Hallo,\nstell dir vor: Ich habe eine neue Stelle in deiner Stadt gefunden und ziehe im März um! Ich kenne dort noch fast nichts. In welchem Stadtteil wohnt man gut, und wie finde ich am schnellsten eine Wohnung? Ein Auto habe ich nicht mehr. Ich freue mich schon sehr darauf, dass wir uns dann öfter sehen können.\nViele Grüße\nJonas"
+  },
+  "task": "Antworten Sie auf die E-Mail. Schreiben Sie etwas zu allen vier Punkten:",
+  "points": [
+    "welchen Stadtteil Sie empfehlen und warum",
+    "wie er eine Wohnung finden kann",
+    "wie man sich in der Stadt ohne Auto bewegt",
+    "wann Sie sich nach dem Umzug treffen"
+  ],
+  "instructions": "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der Punkte, einen passenden Betreff, eine passende Anrede, Einleitung und einen passenden Schluss.",
+  "words": {
+    "target": 120,
+    "min": 100,
+    "max": 150,
+    "recommended": true
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: semt önerisi ve sebebi, ev bulma yolu, arabasız ulaşım, buluşma zamanı."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "İlk satırda Betreff, sonra hitap (Liebe … / Lieber … / Hallo …,), kısa giriş ve kapanış (Viele Grüße + adım) var."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Arkadaşıma baştan sona du ile yazdım (du, dich, dir, dein)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Maddeleri kendi seçtiğim mantıklı bir sırayla yazdım ve bağladım (zuerst, außerdem, deshalb, zum Schluss …)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümlelerimin hepsi Ich ya da Wir ile başlamıyor (Am Samstag …, Leider …, Zum Glück …): telc bunu ayrıca değerlendiriyor."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "weil / dass / wenn / ob'dan sonra çekimli fiil cümlenin sonunda."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "empfehlen + Dativ (kime) + Akkusativ (neyi): Ich empfehle dir den Stadtteil Ehrenfeld."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Betreff und Anrede",
+      "items": [
+        {
+          "de": "Betreff: …",
+          "tr": "Konu: …"
+        },
+        {
+          "de": "Liebe … / Lieber … / Hallo …,",
+          "tr": "Sevgili … / Merhaba …,"
+        }
+      ]
+    },
+    {
+      "group": "Einleitung",
+      "items": [
+        {
+          "de": "Danke für deine Mail! Das ist ja eine tolle Nachricht.",
+          "tr": "Mailin için teşekkürler! Bu harika bir haber."
+        },
+        {
+          "de": "Ich freue mich riesig, dass …",
+          "tr": "… çok sevindim."
+        }
+      ]
+    },
+    {
+      "group": "Zum Thema",
+      "items": [
+        {
+          "de": "Ich empfehle dir …, weil …",
+          "tr": "Sana … öneririm, çünkü …"
+        },
+        {
+          "de": "Am besten suchst du im Internet / in der Zeitung.",
+          "tr": "En iyisi internette / gazetede ara."
+        },
+        {
+          "de": "Mit der U-Bahn kommst du überall hin.",
+          "tr": "Metroyla her yere gidebilirsin."
+        }
+      ]
+    },
+    {
+      "group": "Schluss",
+      "items": [
+        {
+          "de": "Ich freue mich auf deine Antwort.",
+          "tr": "Cevabını bekliyorum."
+        },
+        {
+          "de": "Viele Grüße / Liebe Grüße",
+          "tr": "Selamlar / Sevgiler"
+        },
+        {
+          "de": "Melde dich, wenn du angekommen bist!",
+          "tr": "Gelince haber ver!"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Betreff: Willkommen in Köln!\nLieber Jonas,\ndanke für deine Mail! Das ist ja eine tolle Nachricht. Ich empfehle dir den Stadtteil Ehrenfeld, weil er lebendig ist und die Mieten noch nicht so hoch sind wie in der Innenstadt. Eine Wohnung findest du am schnellsten im Internet, zum Beispiel auf großen Wohnungsportalen. Am Anfang kannst du auch ein WG-Zimmer nehmen. Ein Auto brauchst du hier nicht: Mit Bus und Bahn kommst du überall hin, und viele Leute fahren Fahrrad. Wenn du im März angekommen bist, gehen wir am ersten Wochenende zusammen essen und ich zeige dir die Stadt. Ich freue mich schon!\nViele Grüße\nEmre",
+    "notes": [
+      "Dört madde de var: semt (Ehrenfeld, weil …), ev bulma (Internet, WG-Zimmer), ulaşım (Bus, Bahn, Fahrrad), buluşma (am ersten Wochenende).",
+      "Cümleler farklı öğelerle başlıyor: Eine Wohnung findest du …, Am Anfang kannst du …, Mit Bus und Bahn …",
+      "Betreff, hitap, giriş ve kapanış tam; arkadaşa du."
+    ]
+  }
+}

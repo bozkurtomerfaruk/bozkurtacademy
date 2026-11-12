@@ -172,4 +172,22 @@ describe('Schreiben Worker', () => {
     const c = cleanResult(raw([{ original: 'ich', korrektur: 'Ich', erklaerung: 'x' }]), 'Hallo!\nich komme.');
     assert.equal(c.errors.length, 1, 'hitap virgülle bitmiyorsa öneri kalır');
   });
+
+  test('Betreff satırı varsa hitap ikinci satırda: küçük harfi büyüten öneri yine atılır', () => {
+    const raw = JSON.stringify({ fehler: [{ original: 'danke für deine Mail', korrektur: 'Danke für deine Mail', erklaerung: 'x' }], korrigierter_text: '' });
+    assert.equal(cleanResult(raw, 'Betreff: Willkommen!\nLieber Jonas,\ndanke für deine Mail!').errors.length, 0);
+    assert.ok(PROMPT.includes('Betreff: …'));
+  });
+
+  test('hitaptan sonra büyük harfle başlayan sık kelime kesin kuralla eklenir; Sie ve isimler değil', () => {
+    const raw = JSON.stringify({ fehler: [], korrigierter_text: '' });
+    const a = cleanResult(raw, 'Betreff: Super!\nLieber Jonas,\nDanke für deine Mail.');
+    assert.deepEqual(a.errors.map((e) => [e.original, e.korrektur]), [['Danke', 'danke']]);
+    assert.equal(cleanResult(raw, 'Liebe Frau Roth,\nSie haben recht.').errors.length, 0, 'Sie büyük kalır');
+    assert.equal(cleanResult(raw, 'Lieber Max,\nMeine Familie kommt.').errors.length, 1, 'Meine → meine');
+    assert.equal(cleanResult(raw, 'Lieber Max,\nFamilie Kaya kommt.').errors.length, 0, 'isim değişmez');
+    assert.equal(cleanResult(raw, 'Hallo!\nIch komme.').errors.length, 0, 'ünlemli hitapta büyük harf doğru');
+    const dup = JSON.stringify({ fehler: [{ original: 'Danke für', korrektur: 'danke für', erklaerung: 'x' }], korrigierter_text: '' });
+    assert.equal(cleanResult(dup, 'Lieber Jonas,\nDanke für alles.').errors.length, 1, 'model bulduysa ikinci kez eklenmez');
+  });
 });

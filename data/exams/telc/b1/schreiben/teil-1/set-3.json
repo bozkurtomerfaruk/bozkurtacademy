@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-3",
+  "title": "Tipps zum Deutschlernen",
+  "minutes": 30,
+  "kind": "writing",
+  "register": "du",
+  "textType": "email-informal",
+  "subjectLine": true,
+  "situation": "Sie haben von einem Freund folgende E-Mail erhalten:",
+  "mail": {
+    "from": "Ali",
+    "subject": "Deutschkurs",
+    "text": "Hallo,\nnächste Woche fange ich endlich mit meinem Deutschkurs an. Ehrlich gesagt bin ich ein bisschen nervös. Du sprichst ja schon so gut Deutsch! Wie hast du das eigentlich geschafft? Hast du vielleicht ein paar Tipps für mich?\nViele Grüße\nAli"
+  },
+  "task": "Antworten Sie auf die E-Mail. Schreiben Sie etwas zu allen vier Punkten:",
+  "points": [
+    "wie Sie selbst Deutsch gelernt haben",
+    "welche Bücher, Apps oder Medien Sie empfehlen",
+    "was am Anfang für Sie schwierig war",
+    "einen Vorschlag, wie Sie ihm helfen können"
+  ],
+  "instructions": "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der Punkte, einen passenden Betreff, eine passende Anrede, Einleitung und einen passenden Schluss.",
+  "words": {
+    "target": 120,
+    "min": 100,
+    "max": 150,
+    "recommended": true
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: nasıl öğrendiğim, kitap/uygulama önerisi, başta zor olan, yardım önerisi."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "İlk satırda Betreff, sonra hitap (Liebe … / Lieber … / Hallo …,), kısa giriş ve kapanış (Viele Grüße + adım) var."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Arkadaşıma baştan sona du ile yazdım (du, dich, dir, dein)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Maddeleri kendi seçtiğim mantıklı bir sırayla yazdım ve bağladım (zuerst, außerdem, deshalb, zum Schluss …)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümlelerimin hepsi Ich ya da Wir ile başlamıyor (Am Samstag …, Leider …, Zum Glück …): telc bunu ayrıca değerlendiriyor."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "weil / dass / wenn / ob'dan sonra çekimli fiil cümlenin sonunda."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Perfekt: haben/sein + Partizip sonda: Ich habe jeden Tag gelernt. / Ich bin oft in die Bibliothek gegangen."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Betreff und Anrede",
+      "items": [
+        {
+          "de": "Betreff: …",
+          "tr": "Konu: …"
+        },
+        {
+          "de": "Liebe … / Lieber … / Hallo …,",
+          "tr": "Sevgili … / Merhaba …,"
+        }
+      ]
+    },
+    {
+      "group": "Einleitung",
+      "items": [
+        {
+          "de": "Toll, dass du jetzt Deutsch lernst!",
+          "tr": "Almanca öğrenmeye başlaman harika!"
+        },
+        {
+          "de": "Keine Sorge, das schaffst du!",
+          "tr": "Merak etme, başaracaksın!"
+        }
+      ]
+    },
+    {
+      "group": "Zum Thema",
+      "items": [
+        {
+          "de": "Am Anfang war es für mich schwierig, …",
+          "tr": "Başta … benim için zordu."
+        },
+        {
+          "de": "Ich empfehle dir …",
+          "tr": "Sana … öneririm."
+        },
+        {
+          "de": "Wenn du willst, können wir …",
+          "tr": "İstersen … -ebiliriz."
+        }
+      ]
+    },
+    {
+      "group": "Schluss",
+      "items": [
+        {
+          "de": "Ich freue mich auf deine Antwort.",
+          "tr": "Cevabını bekliyorum."
+        },
+        {
+          "de": "Viele Grüße / Liebe Grüße",
+          "tr": "Selamlar / Sevgiler"
+        },
+        {
+          "de": "Viel Erfolg im Kurs!",
+          "tr": "Kursta başarılar!"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Betreff: Tipps für deinen Kurs\nHallo Ali,\ntoll, dass du jetzt mit dem Deutschkurs anfängst! Keine Sorge, das schaffst du. Ich habe zuerst einen Integrationskurs besucht und jeden Tag neue Wörter auf kleine Karten geschrieben. Am Anfang war für mich besonders die Aussprache schwierig, und ich habe mich oft nicht getraut zu sprechen. Geholfen haben mir deutsche Serien mit Untertiteln und eine Vokabel-App auf dem Handy. Außerdem empfehle ich dir, viel mit Nachbarn oder Kollegen zu sprechen, auch wenn du Fehler machst. Wenn du willst, können wir uns jeden Samstag treffen und eine Stunde nur Deutsch sprechen. Viel Erfolg im Kurs!\nViele Grüße\nMurat",
+    "notes": [
+      "Dört madde: kendi yolu (Integrationskurs, Karten), zorluk (Aussprache), öneriler (Serien, App, sprechen), yardım teklifi (Samstag).",
+      "Perfekt doğru: Ich habe … besucht / geschrieben; Geholfen haben mir … (Partizip başa alınmış, fiil 2. sırada).",
+      "Cümle başları çeşitli: Am Anfang …, Geholfen haben mir …, Außerdem …, Wenn du willst, …"
+    ]
+  }
+}

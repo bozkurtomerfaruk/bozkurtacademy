@@ -1,0 +1,138 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Abschied einer Kollegin",
+  "minutes": 30,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "subjectLine": true,
+  "situation": "Sie haben von einem Kollegen folgende E-Mail erhalten:",
+  "mail": {
+    "from": "Thomas Brandt",
+    "subject": "Abschiedsfeier für Frau Weber",
+    "text": "Liebe Kolleginnen und Kollegen,\nwie Sie wissen, geht unsere Kollegin Frau Weber Ende Mai in Rente. Wir möchten für sie eine kleine Feier im Büro organisieren und ihr ein Geschenk machen. Wer möchte mithelfen? Ich freue mich über Ihre Rückmeldung.\nViele Grüße\nThomas Brandt"
+  },
+  "task": "Antworten Sie auf die E-Mail. Schreiben Sie etwas zu allen vier Punkten:",
+  "points": [
+    "ob Sie bei der Feier dabei sind",
+    "welches Geschenk Sie vorschlagen",
+    "was Sie für die Feier übernehmen können",
+    "welcher Termin für Sie passt"
+  ],
+  "instructions": "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der Punkte, einen passenden Betreff, eine passende Anrede, Einleitung und einen passenden Schluss.",
+  "words": {
+    "target": 120,
+    "min": 100,
+    "max": 150,
+    "recommended": true
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: katılım, hediye önerisi, üstlenebileceğim iş, uygun tarih."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "İlk satırda Betreff, sonra hitap (Liebe Frau … / Sehr geehrter Herr …,), kısa giriş ve kapanış (Viele Grüße / Mit freundlichen Grüßen + adım) var."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Baştan sona Sie ile yazdım (Sie, Ihnen, Ihr); du, Hallo ve Tschüss yok."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Maddeleri kendi seçtiğim mantıklı bir sırayla yazdım ve bağladım (zuerst, außerdem, deshalb, zum Schluss …)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümlelerimin hepsi Ich ya da Wir ile başlamıyor (Am Samstag …, Leider …, Zum Glück …): telc bunu ayrıca değerlendiriyor."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "weil / dass / wenn / ob'dan sonra çekimli fiil cümlenin sonunda."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "sich freuen auf/über: Ich freue mich auf die Feier (gelecek) / über Ihre Mail (olmuş şey)."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Betreff und Anrede",
+      "items": [
+        {
+          "de": "Betreff: …",
+          "tr": "Konu: …"
+        },
+        {
+          "de": "Liebe Frau … / Lieber Herr …,",
+          "tr": "Sevgili … Hanım / … Bey, (tanıdık biri)"
+        },
+        {
+          "de": "Sehr geehrte Frau … / Sehr geehrter Herr …,",
+          "tr": "Sayın … Hanım / … Bey,"
+        }
+      ]
+    },
+    {
+      "group": "Einleitung",
+      "items": [
+        {
+          "de": "vielen Dank für Ihre E-Mail. Das ist eine sehr schöne Idee.",
+          "tr": "E-postanız için teşekkürler. Bu çok güzel bir fikir."
+        },
+        {
+          "de": "Ich bin natürlich dabei.",
+          "tr": "Tabii ki ben de varım."
+        }
+      ]
+    },
+    {
+      "group": "Zum Thema",
+      "items": [
+        {
+          "de": "Als Geschenk könnten wir …",
+          "tr": "Hediye olarak … -ebiliriz."
+        },
+        {
+          "de": "Ich übernehme gern …",
+          "tr": "… işini seve seve üstlenirim."
+        },
+        {
+          "de": "Am besten passt mir …",
+          "tr": "Bana en iyi … uyar."
+        }
+      ]
+    },
+    {
+      "group": "Schluss",
+      "items": [
+        {
+          "de": "Ich freue mich auf Ihre Antwort.",
+          "tr": "Cevabınızı bekliyorum."
+        },
+        {
+          "de": "Viele Grüße / Mit freundlichen Grüßen",
+          "tr": "Selamlar / Saygılarımla"
+        },
+        {
+          "de": "Sagen Sie mir bitte Bescheid, wenn ich noch etwas tun kann.",
+          "tr": "Yapabileceğim başka bir şey olursa lütfen haber verin."
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Betreff: AW: Abschiedsfeier für Frau Weber\nLieber Herr Brandt,\nvielen Dank für Ihre E-Mail. Das ist eine sehr schöne Idee, und ich bin natürlich dabei. Als Geschenk könnten wir Frau Weber einen Gutschein für einen Kochkurs schenken, denn sie erzählt in der Mittagspause oft von neuen Rezepten. Außerdem könnten alle Kollegen ein Foto mit einem kurzen Gruß in ein kleines Album kleben. Für die Feier übernehme ich gern das Essen: Ich kann Börek und einen Salat mitbringen und auch Geschirr organisieren. Am besten passt mir der letzte Freitag im Mai am Nachmittag. Sagen Sie mir bitte Bescheid, wenn ich noch etwas tun kann.\nViele Grüße\nSelin Öztürk",
+    "notes": [
+      "Dört madde: katılım, hediye (Gutschein, denn …; Album), üstlenilen iş (Essen, Geschirr), tarih (letzter Freitag im Mai).",
+      "İş arkadaşına Sie ve Lieber Herr Brandt: yarı resmî ve tutarlı.",
+      "denn ana cümle bağlar, fiil yerinde kalır: denn sie erzählt …"
+    ]
+  }
+}

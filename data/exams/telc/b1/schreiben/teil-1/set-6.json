@@ -1,0 +1,138 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-6",
+  "title": "Hoffest im Haus",
+  "minutes": 30,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "subjectLine": true,
+  "situation": "Sie haben von Ihrer Nachbarin folgende E-Mail erhalten:",
+  "mail": {
+    "from": "Monika Hoffmann",
+    "subject": "Hoffest am 20. Juli",
+    "text": "Liebe Nachbarinnen und Nachbarn,\nam Samstag, dem 20. Juli, möchten wir im Hof ein kleines Sommerfest für alle Mieterinnen und Mieter feiern. Damit es ein schönes Fest wird, brauchen wir Ihre Hilfe und Ihre Ideen. Bitte antworten Sie mir bis Ende Juni.\nHerzliche Grüße\nMonika Hoffmann"
+  },
+  "task": "Antworten Sie auf die E-Mail. Schreiben Sie etwas zu allen vier Punkten:",
+  "points": [
+    "ob Sie mit Ihrer Familie kommen",
+    "was Sie zum Essen mitbringen",
+    "wobei Sie beim Fest helfen können",
+    "eine Idee für die Kinder im Haus"
+  ],
+  "instructions": "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der Punkte, einen passenden Betreff, eine passende Anrede, Einleitung und einen passenden Schluss.",
+  "words": {
+    "target": 120,
+    "min": 100,
+    "max": 150,
+    "recommended": true
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: aileyle gelip gelmediğim, getireceğim yemek, yardım edebileceğim iş, çocuklar için bir fikir."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "İlk satırda Betreff, sonra hitap (Liebe Frau … / Sehr geehrter Herr …,), kısa giriş ve kapanış (Viele Grüße / Mit freundlichen Grüßen + adım) var."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Baştan sona Sie ile yazdım (Sie, Ihnen, Ihr); du, Hallo ve Tschüss yok."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Maddeleri kendi seçtiğim mantıklı bir sırayla yazdım ve bağladım (zuerst, außerdem, deshalb, zum Schluss …)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümlelerimin hepsi Ich ya da Wir ile başlamıyor (Am Samstag …, Leider …, Zum Glück …): telc bunu ayrıca değerlendiriyor."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "weil / dass / wenn / ob'dan sonra çekimli fiil cümlenin sonunda."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Konjunktiv II ile kibar öneri: Für die Kinder könnten wir … / Es wäre schön, wenn …"
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Betreff und Anrede",
+      "items": [
+        {
+          "de": "Betreff: …",
+          "tr": "Konu: …"
+        },
+        {
+          "de": "Liebe Frau … / Lieber Herr …,",
+          "tr": "Sevgili … Hanım / … Bey, (tanıdık biri)"
+        },
+        {
+          "de": "Sehr geehrte Frau … / Sehr geehrter Herr …,",
+          "tr": "Sayın … Hanım / … Bey,"
+        }
+      ]
+    },
+    {
+      "group": "Einleitung",
+      "items": [
+        {
+          "de": "vielen Dank für Ihre Einladung zum Hoffest!",
+          "tr": "Bahçe şenliği davetiniz için çok teşekkürler!"
+        },
+        {
+          "de": "Wir kommen sehr gern.",
+          "tr": "Seve seve geliyoruz."
+        }
+      ]
+    },
+    {
+      "group": "Zum Thema",
+      "items": [
+        {
+          "de": "Zum Essen bringe ich … mit.",
+          "tr": "Yemek olarak … getiriyorum."
+        },
+        {
+          "de": "Ich kann beim Aufbauen / Aufräumen helfen.",
+          "tr": "Kurulumda / toplamada yardım edebilirim."
+        },
+        {
+          "de": "Für die Kinder könnten wir …",
+          "tr": "Çocuklar için … -ebiliriz."
+        }
+      ]
+    },
+    {
+      "group": "Schluss",
+      "items": [
+        {
+          "de": "Ich freue mich auf Ihre Antwort.",
+          "tr": "Cevabınızı bekliyorum."
+        },
+        {
+          "de": "Viele Grüße / Mit freundlichen Grüßen",
+          "tr": "Selamlar / Saygılarımla"
+        },
+        {
+          "de": "Wir freuen uns auf das Fest!",
+          "tr": "Şenliği dört gözle bekliyoruz!"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Betreff: Wir kommen gern zum Hoffest\nLiebe Frau Hoffmann,\nvielen Dank für Ihre Einladung! Mein Mann, unsere zwei Kinder und ich kommen sehr gern zum Hoffest. Zum Essen bringe ich gefüllte Weinblätter und einen großen Nudelsalat mit, das mögen bei uns alle. Beim Fest kann ich am Vormittag beim Aufbauen helfen, zum Beispiel Tische und Bänke tragen. Am Abend hat leider nur mein Mann Zeit zum Aufräumen. Für die Kinder im Haus könnten wir eine kleine Malecke mit Kreide und Papier einrichten. Es wäre auch schön, wenn jemand Musik mitbringt. Wir freuen uns schon auf das Fest!\nHerzliche Grüße\nNesrin Kaya",
+    "notes": [
+      "Dört madde: aileyle katılım, yemek (Weinblätter, Nudelsalat), yardım (Aufbauen; akşam eşi), çocuklar için fikir (Malecke).",
+      "Komşuya Sie: Liebe Frau Hoffmann ve Herzliche Grüße yarı resmîde uygun.",
+      "Es wäre schön, wenn jemand Musik mitbringt: wenn'den sonra fiil sonda."
+    ]
+  }
+}

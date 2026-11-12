@@ -44,6 +44,12 @@ function checkWriting(set, fail) {
   // Forum posts answer an opinion from a guest book: { site?, author, time?, text }.
   if (set.textType === 'forum' && !(text(set.post?.author) && text(set.post?.text))) fail('"post" with author and text is needed for a forum task');
   if (set.post !== undefined && set.textType !== 'forum') fail('"post" is only for forum tasks');
+  // Reply tasks (telc B1): the received e-mail { from, subject?, text }; "subjectLine": the answer starts with "Betreff: …".
+  if (set.mail !== undefined && !(String(set.textType).startsWith('email-') && text(set.mail?.from) && text(set.mail?.text))) fail('"mail" needs from and text and an email textType');
+  if (set.subjectLine !== undefined && set.subjectLine !== true) fail('"subjectLine" must be true when present');
+  if (set.subjectLine && !/^Betreff: \S/.test(String(set.model?.text))) fail('model answer must start with "Betreff: …" when subjectLine is true');
+  // words.recommended: no official word limit in the exam; the page says "suggested length".
+  if (set.words?.recommended !== undefined && set.words.recommended !== true) fail('"words.recommended" must be true when present');
   if (set.instructions !== undefined && !text(set.instructions)) fail('"instructions" must be text when present');
   const w = set.words || {};
   if (!(Number.isInteger(w.min) && Number.isInteger(w.target) && Number.isInteger(w.max) && w.min > 0 && w.min <= w.target && w.target <= w.max)) fail('"words" needs min <= target <= max');

@@ -39,9 +39,11 @@ Fiil sırası (açıklamalarda hangi cümle türü olduğunu söyle; "fiil her z
 Hâl adları (her açıklamada aynen bunları kullan, başka karşılık uydurma):
 - Nominativ = yalın hâl, Akkusativ = -i hâli (belirtme), Dativ = -e hâli (yönelme), Genitiv = -in hâli (tamlayan).
 - "-de hâli" deme. Yer bildiren edatlarda: "Wo? (nerede?) sorusunda Dativ, Wohin? (nereye?) sorusunda Akkusativ" de.
+- Gün, ay ve mevsim adları cümlenin öznesi ya da nesnesi olunca artikelle kullanılır: "Der Samstag passt mir gut.", "Der Mai ist schön." Bunlar hata DEĞİLDİR; artikelsiz kullanım sadece "am Samstag", "im Mai" gibi zaman bildiren ifadelerde vardır.
 - Emin olmadığın bir şeyi hata olarak gösterme; iki biçim de doğruysa (ör. nächstes Mal / das nächste Mal, zu dem / zum) hata değildir.
 - Bir kelimenin birden çok anlamı olabilir (ör. "Bank": banka ya da bank); hangi anlamda kullanıldığını cümlenin bağlamından çıkar ve cümlenin anlamını değiştiren bir düzeltme önerme.
 Metin türüne göre (sadece dil ve resmiyet hatalarını işaretle; içeriği, uzunluğu ve görevi yerine getirip getirmediğini değerlendirme):
+- E-posta metni "Betreff: …" satırıyla başlayabilir (konu satırı; telc); bu satır doğrudur, hitap onun altındadır. Betreff satırında nokta gerekmez. Hitaptan sonraki satırın küçük harfle başlaması kuralı Betreff varken de geçerlidir (Betreff: … / Lieber Jonas, / danke …).
 - E-posta ve mesajlarda hitaptan sonra virgül gelir ve sonraki satır küçük harfle başlar (Liebe Lena, / wie geht es dir?). Hitaptan sonraki ilk kelime büyük harfle yazılmışsa (Vielen Dank …, Leider …, Wie geht …) hata say; isimler ve Sie, Ihnen, Ihr hariç. Kapanış selamından (Viele Grüße, Liebe Grüße, Mit freundlichen Grüßen) sonra virgül ve nokta gelmez. Kısa kapanışlar (Grüße, Gruß, Bis bald, LG) da doğrudur; uygun kapanışı hata sayma, sadece resmiyet derecesine uymayanı işaretle. Liebe kadına, Lieber erkeğe; Sehr geehrte Frau …, Sehr geehrter Herr ….
 - Gayriresmî e-posta ve Kısa mesaj (du): arkadaşa du ile yazılır. Metinde du ile Sie karışırsa (dich/Sie, dein/Ihr) hata say. Mektupta du, dich, dein büyük ya da küçük yazılabilir; ikisi de doğru.
 - Yarı resmî e-posta (Sie; tanıdık biri: kurs öğretmeni, şef, ev sahibi, komşu): Sie, Ihnen, Ihr her zaman büyük harfle. Bu kişiye du, dich, dein ya da Tschüss, Hi kullanmak resmiyet hatasıdır; açıklamada "Bu kişiye Sie ile yazılır" de. Liebe Frau … / Sehr geehrte Frau …, Hallo Frau …, Viele Grüße, Freundliche Grüße ve Mit freundlichen Grüßen burada doğrudur, hata sayma.
@@ -96,6 +98,12 @@ export function berlinDay(date = new Date()) {
 }
 
 // Model yanıtındaki JSON'u ayıklar ve denetler: yanlış kısım metinde aynen geçmeli, düzeltme farklı olmalı.
+// Hitaptan sonra küçük harfle başlaması gereken sık kelimeler (isim olamazlar).
+const LOWER_AFTER_GREETING = new Set(['danke', 'vielen', 'herzlichen', 'ich', 'wir', 'du', 'es', 'er', 'man', 'wie', 'was', 'wann', 'wo',
+  'leider', 'gern', 'gerne', 'endlich', 'gestern', 'heute', 'hier', 'jetzt', 'bitte', 'entschuldige', 'entschuldigen', 'schön', 'toll', 'super',
+  'ach', 'oh', 'na', 'ja', 'nein', 'natürlich', 'zuerst', 'seit', 'am', 'im', 'in', 'mit', 'nach', 'vor', 'zum', 'zur', 'für', 'das', 'die', 'der',
+  'ein', 'eine', 'mein', 'meine', 'unser', 'unsere', 'dein', 'deine', 'hast', 'habe', 'bist', 'bin', 'kannst', 'können', 'könnten', 'möchte', 'ist',
+  'sind', 'war', 'wollte', 'darf']); // sie, ihr, ihre yok: Sie, Ihr, Ihre (nezaket) büyük yazılır
 export function cleanResult(raw, text) {
   const s = String(raw || '');
   const from = s.indexOf('{'), to = s.lastIndexOf('}');
@@ -108,8 +116,10 @@ export function cleanResult(raw, text) {
   const errors = [];
   // Hitap virgülle bitiyorsa sonraki satır küçük harfle başlar (Liebe Lena, / wie geht …). Model bazen bunu "düzeltip"
   // büyük harfe çeviriyor; doğru olanı bozan bu öneri atılır.
+  // İlk satır "Betreff: …" ise (telc B1) hitap ikinci satırdadır.
   const lines = text.split('\n');
-  const afterGreeting = /,\s*$/.test(lines[0] || '') ? (lines[1] || '').trimStart() : '';
+  const g = /^\s*Betreff\s*:/i.test(lines[0] || '') ? 1 : 0;
+  const afterGreeting = /,\s*$/.test(lines[g] || '') ? (lines[g + 1] || '').trimStart() : '';
   const capitalizesAfterGreeting = (original, korrektur) => afterGreeting && /^\p{Ll}/u.test(original) && afterGreeting.startsWith(original)
     && korrektur === original.charAt(0).toUpperCase() + original.slice(1);
   for (const item of list) {
@@ -121,6 +131,14 @@ export function cleanResult(raw, text) {
     seen.add(original);
     errors.push({ original: original.slice(0, 300), korrektur: korrektur.slice(0, 300), erklaerung: erklaerung.slice(0, 600) });
     if (errors.length >= 30) break;
+  }
+  // Hitaptan sonraki satır büyük harfle başlıyorsa ve ilk kelime isim olamayacak sık bir kelimeyse (danke, ich, leider …)
+  // model kaçırsa bile kesin kuralla eklenir. İsim, özel ad ve Sie/Ihnen/Ihr burada yoktur, onlara dokunulmaz.
+  const first = (afterGreeting.match(/^\p{L}+/u) || [''])[0];
+  if (first && /^\p{Lu}/u.test(first) && LOWER_AFTER_GREETING.has(first.toLowerCase()) && !seen.has(first) && errors.length < 30
+    && !errors.some((e) => afterGreeting.startsWith(e.original))) {
+    errors.unshift({ original: first, korrektur: first.charAt(0).toLowerCase() + first.slice(1),
+      erklaerung: 'Hitap virgülle bittiği için sonraki satır küçük harfle başlar (isimler ve Sie hariç).' });
   }
   const corrected = typeof data.korrigierter_text === 'string' ? data.korrigierter_text.slice(0, 6000) : '';
   return { errors, correctedText: corrected, model: MODEL };

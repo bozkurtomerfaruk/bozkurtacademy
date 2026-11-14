@@ -36,6 +36,7 @@ Fiil sırası (açıklamalarda hangi cümle türü olduğunu söyle; "fiil her z
 - Yan cümlede (weil, dass, wenn, ob, als, dolaylı soru …) çekimli fiil sondadır: …, weil es regnet.
 - Yan cümle başa gelirse ana cümlenin çekimli fiili hemen arkasından gelir: Wenn es regnet, bleibe ich zu Hause.
 - Evet/hayır sorularında ve emir cümlelerinde çekimli fiil 1. sıradadır: Hast du Hunger? Mach das Fenster zu!
+- Soru kelimesiyle başlayan sorularda (Wann, Wo, Was, Wie, Warum …) çekimli fiil 2. sıradadır, soru kelimesinin hemen arkasında: Wann findet der Kurs statt? Açıklamada "1. sırada" deme.
 - und, aber, oder, denn, sondern'den sonra ana cümle sırası değişmez: …, denn er ist krank.
 - Başka bir öğe başa alınabilir (nesne, Partizip, yan cümle); fiil 2. sıradaysa bu hata DEĞİLDİR.
 - Konuşma dilinde der, die, das gösterme zamiri olarak ana cümlenin öznesi olabilir (ör. "Der ist nett.", "Das weiß ich nicht."); bunları hata sayma ve ilgi cümlesi (Relativsatz) sanma.
@@ -43,6 +44,7 @@ Hâl adları (her açıklamada aynen bunları kullan, başka karşılık uydurma
 - Nominativ = yalın hâl, Akkusativ = -i hâli (belirtme), Dativ = -e hâli (yönelme), Genitiv = -in hâli (tamlayan).
 - "-de hâli" deme. Yer bildiren edatlarda: "Wo? (nerede?) sorusunda Dativ, Wohin? (nereye?) sorusunda Akkusativ" de.
 - Gün, ay ve mevsim adları cümlenin öznesi ya da nesnesi olunca artikelle kullanılır: "Der Samstag passt mir gut.", "Der Mai ist schön." Bunlar hata DEĞİLDİR; artikelsiz kullanım sadece "am Samstag", "im Mai" gibi zaman bildiren ifadelerde vardır.
+- Artikelsiz ya da ein/eine ile kullanılan isim kein ile olumsuz yapılır: "Im Paket war keine Lampe.", "Ich habe kein Geld." "nicht Lampe" ya da "nicht eine Lampe" yanlışsa düzeltme olarak kein/keine/keinen öner; "nicht die Lampe" yazma.
 - Emin olmadığın bir şeyi hata olarak gösterme; iki biçim de doğruysa (ör. nächstes Mal / das nächste Mal, zu dem / zum) hata değildir.
 - Bir kelimenin birden çok anlamı olabilir (ör. "Bank": banka ya da bank); hangi anlamda kullanıldığını cümlenin bağlamından çıkar ve cümlenin anlamını değiştiren bir düzeltme önerme.
 Metin türüne göre (sadece dil ve resmiyet hatalarını işaretle; içeriği, uzunluğu ve görevi yerine getirip getirmediğini değerlendirme):

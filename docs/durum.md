@@ -24,10 +24,15 @@
   - İlk tam tur: 15/16 gibi görünen sonuçta bir yanlış kural çıktı ("Dich → dich") ve dass cümlesindeki fiil yeri kaçtı. Neden: "Du büyük yazılabilir, asla dokunma" kuralı o cümledeki asıl hatayı da bastırıyordu.
   - Kural yeniden yazıldıktan sonra: art arda 5 turun hepsinde 16/16. Bunların birinde tek yanlış alarm çıktı ("Emres Noten" için kesme işareti); kural eklendi, son 3 turda yanlış alarm yok.
   - Betreff'siz metin, Betreff'li metin, büyük harfli Du ve hatasız metin hata sayılmadı.
-  - Eski setlerde (Goethe B1, A1, telc B1) gerçek modelle regresyon yapılamadı: o deneme metinleri depoda yok. Yeni kurallar ekleme niteliğinde; Worker birim testleri geçiyor.
-- **Deneme artık depoda:** `tests/ai-deneme/dtz.json` (metinler, bulunması gereken hatalar, işaretlenmemesi gereken yerler) ve `scripts/ai-deneme.mjs` (Worker'daki talimatla gerçek modele gönderir; token depoya yazılmaz).
+- **Regresyon (bütün sınavlar birlikte, gerçek Gemma 4):** Goethe B1 Teil 1, 2, 3, Goethe A1 Teil 2 ve telc B1 için beşer metin yazıldı (her birinde en az biri hatasız). Toplam 33 metin, 58 kasıtlı hata.
+  - main'deki eski talimat aynı metinlerde: 54/59 hata, 2 yanlış alarm (ölçüm, iki belirsiz deneme maddesi düzeltilmeden önce yapıldı).
+  - Bu PR'daki son talimat: art arda 3 turda 57/58 hata, yanlış alarm yok. Yani gerileme yok, iyileşme var.
+  - Kaçan tek hata üç turda da aynı: "Ich nehme gern an den Ausflug teil" (teilnehmen an + Dativ, fiil ayrılmış). Talimata kural ve örnek eklendi ama model bu cümlede yine görmüyor; "an die Besprechung teilnehmen" ise bulunuyor. Bilinen sınır.
+  - Model turdan tura biraz farklı cevap veriyor (ara turlarda 55–58 arası sonuçlar ve tek tük yanlış alarm görüldü). Bunun için eklenenler: sabit edatlı fiiller listesi; "Dann/Deshalb + fiil" kuralı; "doğru cümleye kelime ekleme"; "her maddede sadece hatalı kısım".
+  - Worker'da iki yeni kesin kural: açıklamasında "hata değildir / hata sayılmaz" diyen madde atılıyor; model hitaptan sonraki satırı başka bir hata için düzeltip büyük harfi bıraktıysa aynı maddenin düzeltmesi küçük harfle başlatılıyor.
+- **Kural (bundan sonra):** Talimat ya da `cleanResult` her değiştiğinde `node scripts/ai-deneme.mjs` ad vermeden çalıştırılır; bütün sınavların metinleri birlikte denenir. Metinler `tests/ai-deneme/` altında: `dtz`, `goethe-a1-teil2`, `goethe-b1-teil1`, `goethe-b1-teil2`, `goethe-b1-teil3`, `telc-b1`. Token depoya yazılmaz.
 - **Öğretmen paneli:** Mod seçim kutusunun altındaki "null" yazısı düzeltildi (Worker adresi kayıtlıyken boş öğe yazıya dönüşüyordu).
-- **Testler:** `npm test` (Worker testleri 22), `node tests/schreiben.mjs` (20 yeni DTZ kontrolü), `test:schreiben`, `test:schreiben-ai`, `test:csp`; 390/1440 açık/koyu, taşma yok.
+- **Testler:** `npm test` (Worker testleri 24), `node tests/schreiben.mjs` (20 yeni DTZ kontrolü), `test:schreiben`, `test:schreiben-ai`, `test:csp`; 390/1440 açık/koyu, taşma yok.
 - **Senin yapacakların (birleştirmeden sonra):**
   1. Worker'ı Cloudflare'de güncelle. Firestore kuralları değişmedi.
   2. Deneme token'ını sil (21.11.2026'ya kadar geçerli).

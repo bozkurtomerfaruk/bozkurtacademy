@@ -29,10 +29,13 @@ Görev: Öğrencinin Almanca metnindeki gerçek dil bilgisi, yazım ve noktalama
 Kullanıcı mesajının ilk satırları görev adı ("Görev: …") ve metin türüdür ("Metin türü: …"); sadece "Metin:" satırından sonraki metni düzelt.
 Kurallar:
 - Sadece gerçek hataları işaretle. Doğru cümleler ve üslup tercihleri hata DEĞİLDİR. Özel isimler hata değildir.
+- Doğru bir cümleye daha "doğal" ya da daha "tam" olsun diye kelime ekleme ve kelime çıkarma (ör. "Ich möchte meine Tochter anmelden." doğrudur; "für den Kurs" ekleme). Kendi açıklamanda "hata değildir" diyeceğin şeyi listeye hiç yazma.
+- Her maddede sadece hatalı kısmı (birkaç kelime ya da tek cümle) yaz; bütün paragrafı tek madde yapma.
 - Her hata için: metindeki yanlış kısım (aynen), düzeltmesi ve TÜRKÇE kısa bir açıklama (1–2 cümle, yeni başlayan biri için, kuralı söyle; ör. "weil'den sonra çekimli fiil cümlenin sonuna gider").
 - Açıklamalar mutlaka Türkçe olsun; Almanca kelimeleri sadece örnek olarak kullan.
 Fiil sırası (açıklamalarda hangi cümle türü olduğunu söyle; "fiil her zaman ikinci sırada" gibi genelleme yapma):
 - Ana cümlede (düz cümle) çekimli fiil 2. sıradadır: Heute koche ich …, Trotzdem bleibt er …
+- Cümle dann, deshalb, trotzdem, außerdem, leider, danach ya da bir zaman/yer ifadesiyle başlıyorsa hemen arkasından çekimli fiil gelir, özne ondan sonra: "Dann wir gehen" yanlış → "Dann gehen wir"; "Deshalb ich komme" yanlış → "Deshalb komme ich". Kısa A1 cümlelerinde de bunu mutlaka işaretle.
 - Yan cümlede (weil, dass, wenn, ob, als, dolaylı soru …) çekimli fiil sondadır: …, weil es regnet.
 - Her dass, weil, wenn, ob cümlesini tek tek kontrol et: çekimli fiil nesneden, zamirden ya da nicht'ten önce duruyorsa hatadır ("…, dass der Lärm stört dich nicht" → "…, dass der Lärm dich nicht stört"). Açıklamada o cümledeki bağlacı söyle (dass cümlesinde "dass'tan sonra", weil cümlesinde "weil'den sonra").
 - Yan cümle başa gelirse ana cümlenin çekimli fiili hemen arkasından gelir: Wenn es regnet, bleibe ich zu Hause.
@@ -47,6 +50,7 @@ Hâl adları (her açıklamada aynen bunları kullan, başka karşılık uydurma
 - Gün, ay ve mevsim adları cümlenin öznesi ya da nesnesi olunca artikelle kullanılır: "Der Samstag passt mir gut.", "Der Mai ist schön." Bunlar hata DEĞİLDİR; artikelsiz kullanım sadece "am Samstag", "im Mai" gibi zaman bildiren ifadelerde vardır.
 - Artikelsiz ya da ein/eine ile kullanılan isim kein ile olumsuz yapılır: "Im Paket war keine Lampe.", "Ich habe kein Geld." "nicht Lampe" ya da "nicht eine Lampe" yanlışsa düzeltme olarak kein/keine/keinen öner; "nicht die Lampe" yazma.
 - Özel isimlerde iyelik -s'si kesme işaretsiz yazılır: Emres Noten, Annas Auto, Frau Krügers Klasse. Bunlar doğrudur; kesme işareti ekleme. Kesme işareti sadece isim s, ß, x ya da z ile bitiyorsa gelir (Hans' Auto, Max' Buch).
+- Sabit edatlı fiillerde edatı ve hâli kontrol et: teilnehmen an + Dativ (an dem/am Ausflug, an der Besprechung teilnehmen; fiil ayrılsa da aynı: "Ich nehme am Ausflug teil."; "an den Ausflug", "an die Besprechung" yanlış), sich kümmern um + Akkusativ, sich freuen auf/über + Akkusativ, warten auf + Akkusativ, denken an + Akkusativ, helfen bei + Dativ, danken für + Akkusativ.
 - Emin olmadığın bir şeyi hata olarak gösterme; iki biçim de doğruysa (ör. nächstes Mal / das nächste Mal, zu dem / zum) hata değildir.
 - Bir kelimenin birden çok anlamı olabilir (ör. "Bank": banka ya da bank); hangi anlamda kullanıldığını cümlenin bağlamından çıkar ve cümlenin anlamını değiştiren bir düzeltme önerme.
 Metin türüne göre (sadece dil ve resmiyet hatalarını işaretle; içeriği, uzunluğu ve görevi yerine getirip getirmediğini değerlendirme):
@@ -142,6 +146,8 @@ export function cleanResult(raw, text) {
     if (!original || !korrektur || !erklaerung || original === korrektur || !text.includes(original) || seen.has(original)) continue;
     if (capitalizesAfterGreeting(original, korrektur)) continue;
     if (onlyDuCase(original, korrektur)) continue;
+    // Model bazen bir maddeyi yazıp açıklamasında "bu bir hata değildir / hata sayılmaz" diyor; öyle maddeler gösterilmez.
+    if (/hata (değil|sayılmaz)/i.test(erklaerung)) continue;
     seen.add(original);
     errors.push({ original: original.slice(0, 300), korrektur: korrektur.slice(0, 300), erklaerung: erklaerung.slice(0, 600) });
     if (errors.length >= 30) break;
@@ -149,10 +155,18 @@ export function cleanResult(raw, text) {
   // Hitaptan sonraki satır büyük harfle başlıyorsa ve ilk kelime isim olamayacak sık bir kelimeyse (danke, ich, leider …)
   // model kaçırsa bile kesin kuralla eklenir. İsim, özel ad ve Sie/Ihnen/Ihr burada yoktur, onlara dokunulmaz.
   const first = (afterGreeting.match(/^\p{L}+/u) || [''])[0];
-  if (first && /^\p{Lu}/u.test(first) && LOWER_AFTER_GREETING.has(first.toLowerCase()) && !seen.has(first) && errors.length < 30
-    && !errors.some((e) => afterGreeting.startsWith(e.original))) {
-    errors.unshift({ original: first, korrektur: first.charAt(0).toLowerCase() + first.slice(1),
-      erklaerung: 'Hitap virgülle bittiği için sonraki satır küçük harfle başlar (isimler ve Sie hariç).' });
+  if (first && /^\p{Lu}/u.test(first) && LOWER_AFTER_GREETING.has(first.toLowerCase()) && !seen.has(first)) {
+    const lower = first.charAt(0).toLowerCase() + first.slice(1);
+    const note = 'Hitap virgülle bittiği için sonraki satır küçük harfle başlar (isimler ve Sie hariç).';
+    // Model satırın başını başka bir hata için zaten düzeltmiş ama büyük harfi bırakmışsa (Es tut mir leid, aber … →
+    // Es tut mir leid, aber …) aynı maddenin düzeltmesi küçük harfle başlatılır; yoksa ayrı madde eklenir.
+    const same = errors.find((e) => afterGreeting.startsWith(e.original) && e.original.startsWith(first));
+    if (same) {
+      if (same.korrektur.startsWith(first)) {
+        same.korrektur = lower + same.korrektur.slice(first.length);
+        same.erklaerung = `${same.erklaerung} ${note}`.slice(0, 600);
+      }
+    } else if (errors.length < 30) errors.unshift({ original: first, korrektur: lower, erklaerung: note });
   }
   const corrected = typeof data.korrigierter_text === 'string' ? data.korrigierter_text.slice(0, 6000) : '';
   return { errors, correctedText: corrected, model: MODEL };

@@ -47,6 +47,11 @@
 #page-exams .wt-saved .notice.error{background:var(--ba-wrong-bg);color:var(--ba-wrong)}
 #page-exams .wt-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
 #page-exams .wt-text{white-space:pre-wrap;overflow-wrap:anywhere;padding:12px 14px;border-radius:var(--ba-radius-small);background:var(--ba-paper-2);line-height:1.6}
+#page-exams .wt-cols.wt-stack{grid-template-columns:1fr}
+#page-exams .wt-saved .notice.is-pending{display:flex;align-items:center;gap:10px}
+#page-exams .wt-saved .notice.is-pending::before{content:"";flex:none;width:16px;height:16px;border-radius:50%;border:2px solid var(--ba-line-strong);border-top-color:var(--ba-accent)}
+@media (prefers-reduced-motion:no-preference){#page-exams .wt-saved .notice.is-pending::before{animation:wt-spin .9s linear infinite}}
+@keyframes wt-spin{to{transform:rotate(360deg)}}
 #page-exams .wt-notes{display:grid;gap:4px;margin:0;padding-left:20px;line-height:1.45}
 
 @media(max-width:760px){

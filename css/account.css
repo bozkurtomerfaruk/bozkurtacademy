@@ -353,3 +353,8 @@
 .acc-ai-consent{display:grid;gap:8px;margin:0 0 16px;justify-items:start}
 #aiMode:not([hidden]){display:grid;gap:6px;justify-items:start}
 #aiMode select{max-width:100%}
+/* Schreiben: öğrencinin "yanlış görünüyor" dediği madde (öğretmen), madde etiketi ve düzeltilmiş hâl (öğrenci paneli). */
+.acc-ai-item.is-flagged{padding:10px 12px 12px;border:0;border-radius:var(--ba-radius-small);box-shadow:inset 0 0 0 2px var(--ba-wrong)}
+.acc-ai-item p{margin:0}
+.acc-item-by{margin-left:6px;min-height:22px;font-size:12px}
+.acc-writing-revision{margin-left:clamp(12px,3vw,28px)}

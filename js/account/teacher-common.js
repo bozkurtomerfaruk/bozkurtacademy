@@ -183,13 +183,25 @@ const SUBCOLLECTIONS = ['results', 'assignments', 'resources', 'lessons', 'writi
 
 // Geri bildirim bekleyen Schreiben metinleri, öğrenci başına: Map(uid → sayı). Bütün metinler tek sorguda okunur
 // (filtresiz collectionGroup için ek indeks gerekmez).
+// Öğretmenin bakması gereken yazı: geri bildirimi yok VE (yapay zekâ kontrol etmedi YA DA öğrenci bir maddeyi
+// "yanlış görünüyor" diye işaretledi). Yapay zekânın kontrol ettiği, işaretlenmemiş yazılar sayılmaz.
+export const flaggedCount = (w) => (!w.feedbackAt && w.aiFeedback && Array.isArray(w.aiFlags) ? w.aiFlags.length : 0);
+export const needsTeacher = (w) => !w.feedbackAt && (!w.aiFeedback || flaggedCount(w) > 0);
+// Yapay zekâ neden kontrol etmedi (Worker yazar: aiSkip).
+export const AI_SKIP_LABELS = { consent: 'yapay zekâ onayı yok', limit: 'günlük sınır dolmuştu', error: 'servis hatası' };
+
+// uid → { total, flagged } : bakılması gereken yazı sayısı ve bunlardan öğrencinin işaretledikleri.
 export async function pendingWritingsByStudent(){
   const snap = await fs.getDocs(fs.collectionGroup(db, 'writings')).catch((error) => { console.warn(error); return { docs: [] }; });
   const counts = new Map();
   for(const d of snap.docs){
-    if(d.data().feedbackAt) continue;
+    if(!needsTeacher(d.data())) continue;
     const uid = d.ref.parent.parent?.id;
-    if(uid) counts.set(uid, (counts.get(uid) || 0) + 1);
+    if(!uid) continue;
+    const c = counts.get(uid) || { total: 0, flagged: 0 };
+    c.total += 1;
+    if(flaggedCount(d.data())) c.flagged += 1;
+    counts.set(uid, c);
   }
   return counts;
 }
@@ -222,24 +234,28 @@ export async function approveAiDraft(uid, writingId, { note, items, correctedTex
 
 export const deleteAiDraft = (uid, writingId) => fs.deleteDoc(fs.doc(db, 'aiDrafts', `${uid}_${writingId}`));
 
-// settings/ai.mode: 'off' | 'draft' | 'instant'. Belge yoksa varsayılan 'draft' ile oluşturulur.
+// settings/ai.mode: 'off' | 'draft' | 'instant'. Belge yoksa varsayılan 'instant' ile oluşturulur (öğrenci hemen görür).
 export const AI_MODES = ['off', 'draft', 'instant'];
 export async function getAiMode(){
   const ref = fs.doc(db, 'settings', 'ai');
   const snap = await fs.getDoc(ref);
   const mode = snap.exists() ? snap.data().mode : null;
   if(AI_MODES.includes(mode)) return mode;
-  await fs.setDoc(ref, { mode: 'draft', updatedAt: fs.serverTimestamp() });
-  return 'draft';
+  await fs.setDoc(ref, { mode: 'instant', updatedAt: fs.serverTimestamp() });
+  return 'instant';
 }
 export const setAiMode = (mode) => fs.setDoc(fs.doc(db, 'settings', 'ai'), { mode, updatedAt: fs.serverTimestamp() });
 
 // 16 yaş altı: yapay zekâ ile kontrol için velinin ayrı ve isteğe bağlı onayı. given:false = onay geri çekildi.
-export function recordAiConsent(uid, { given, date = new Date(), method = '' }){
+// version: veli onay formunun sürümü. 2 = "geri bildirim öğretmen onayı olmadan doğrudan gösterilir" (docs/veli-onay-formu.md).
+// 16 yaş altında sürüm 2 yoksa sonuç, mod ne olursa olsun taslak olarak öğretmene gider (Worker: directAllowed).
+export const AI_CONSENT_VERSION = 2;
+export function recordAiConsent(uid, { given, date = new Date(), method = '', version = null }){
   return fs.updateDoc(userRef(uid), {
-    aiConsent: { given, at: fs.Timestamp.fromDate(date), method, recordedAt: fs.serverTimestamp() }
+    aiConsent: { given, at: fs.Timestamp.fromDate(date), method, recordedAt: fs.serverTimestamp(), ...(given && version ? { version } : {}) }
   });
 }
+export const aiDirect = (s) => s.minor === false || Number(s.aiConsent?.version) >= AI_CONSENT_VERSION;
 // Worker'daki aiAllowed ile aynı karar (worker/schreiben-kontrol.js).
 export const aiAllowed = (s) => s.minor === false ? s.aiConsent?.given !== false : (consentGiven(s) && s.aiConsent?.given === true);
 

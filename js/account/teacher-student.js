@@ -6,7 +6,7 @@ import {
 } from './common.js';
 import {
   addResource, approve, deleteAssignment, deleteResource, emailVerified, fmtDate, isEnabled, openDeleteDialog,
-  aiAllowed, approveAiDraft, deleteAiDraft, loadAiDrafts, recordAiConsent,
+  AI_CONSENT_VERSION, AI_SKIP_LABELS, aiAllowed, aiDirect, approveAiDraft, deleteAiDraft, flaggedCount, loadAiDrafts, needsTeacher, recordAiConsent,
   recordConsent, requireTeacher, saveWritingFeedback, setActive, setInactive, statusBadges, UNVERIFIED_WARNING, updateParent
 } from './teacher-common.js';
 import * as cal from './calendar.js';
@@ -295,8 +295,9 @@ async function renderResources(){
 const FEEDBACK_MAX = 2000;
 const SOURCE_LABELS = { teacher: 'Senin geri bildirimin', 'ai-approved': 'Yapay zekâ önerisi, aynen onaylandı', 'ai-edited': 'Yapay zekâ önerisi, düzenlenerek onaylandı' };
 
-function draftItemRow(item, index, wid){
-  const row = h('li', { class: 'acc-ai-item', 'data-ai-item': String(index) },
+function draftItemRow(item, index, wid, flagged = false){
+  const row = h('li', { class: `acc-ai-item${flagged ? ' is-flagged' : ''}`, 'data-ai-item': String(index), 'data-ai-flagged': flagged ? '' : null },
+    flagged ? h('p', {}, h('span', { class: 'acc-badge warning' }, 'Öğrenci: bu açıklama yanlış görünüyor')) : null,
     h('p', { class: 'acc-ai-original', lang: 'de' }, h('span', { class: 'acc-sub' }, 'Metinde: '), h('mark', {}, item.original)),
     h('div', { class: 'field' }, h('label', { for: `ai-k-${wid}-${index}` }, 'Doğrusu'),
       h('input', { id: `ai-k-${wid}-${index}`, value: item.korrektur, maxlength: '300', lang: 'de', 'data-ai-korrektur': '' })),
@@ -309,22 +310,30 @@ function draftItemRow(item, index, wid){
   return row;
 }
 
-function draftPanel(w, draft){
-  const list = h('ol', { class: 'acc-ai-items' }, ...draft.errors.map((item, i) => draftItemRow(item, i, w.id)));
+// live: öğrenci bu geri bildirimi zaten gördü ("Anında göster"; draft = w.aiFeedback). Öğretmen işaretlenen maddeyi
+// düzeltir ya da çıkarır, not yazar; kaydedince öğrenci düzeltilen maddede "Öğretmenin düzeltti" etiketini görür.
+function draftPanel(w, draft, live = false){
+  const flags = new Set(live ? w.aiFlags || [] : []);
+  const list = h('ol', { class: 'acc-ai-items' }, ...draft.errors.map((item, i) => draftItemRow(item, i, w.id, flags.has(i))));
   const corrected = h('textarea', { id: `ai-c-${w.id}`, rows: '6', maxlength: '6000', lang: 'de', 'data-ai-corrected': '' }, draft.correctedText || '');
   const note = h('textarea', { id: `ai-n-${w.id}`, rows: '3', maxlength: String(FEEDBACK_MAX), 'data-ai-note': '' });
   const status = h('p', { class: 'acc-status', role: 'status', hidden: true });
-  const send = h('button', { class: 'btn primary', type: 'button', 'data-ai-approve': '' }, 'Onayla ve öğrenciye gönder');
-  const drop = h('button', { class: 'btn ghost', type: 'button', 'data-ai-delete': '' }, 'Taslağı sil');
+  const send = h('button', { class: 'btn primary', type: 'button', 'data-ai-approve': '' }, live ? 'Düzeltmeyi öğrenciye gönder' : 'Onayla ve öğrenciye gönder');
+  const drop = h('button', { class: 'btn ghost', type: 'button', 'data-ai-delete': '', hidden: live }, 'Taslağı sil');
   send.addEventListener('click', async () => {
-    const items = [...list.querySelectorAll('[data-ai-item]')].map((row) => ({
-      original: row.dataset.original,
-      korrektur: row.querySelector('[data-ai-korrektur]').value.trim(),
-      erklaerung: row.querySelector('[data-ai-erklaerung]').value.trim()
-    })).filter((item) => item.korrektur && item.korrektur !== item.original);
+    // by: 'teacher' → öğretmen maddeyi değiştirdi (öğrenci panelinde etiketlenir).
+    const items = [...list.querySelectorAll('[data-ai-item]')].map((row) => {
+      const source = draft.errors[Number(row.dataset.aiItem)];
+      const item = {
+        original: row.dataset.original,
+        korrektur: row.querySelector('[data-ai-korrektur]').value.trim(),
+        erklaerung: row.querySelector('[data-ai-erklaerung]').value.trim()
+      };
+      return item.korrektur === source.korrektur && item.erklaerung === source.erklaerung ? item : { ...item, by: 'teacher' };
+    }).filter((item) => item.korrektur && item.korrektur !== item.original);
     const text = note.value.trim().slice(0, FEEDBACK_MAX);
     const correctedText = corrected.value.trim();
-    if(!items.length && !text){ setStatus(status, 'error', 'Öneri kalmadı: kısa bir not yaz ya da taslağı sil.'); note.focus(); return; }
+    if(!items.length && !text){ setStatus(status, 'error', live ? 'Madde kalmadı: öğrenciye kısa bir not yaz.' : 'Öneri kalmadı: kısa bir not yaz ya da taslağı sil.'); note.focus(); return; }
     const same = items.length === draft.errors.length && !text && correctedText === (draft.correctedText || '').trim()
       && items.every((item, i) => item.original === draft.errors[i].original && item.korrektur === draft.errors[i].korrektur && item.erklaerung === draft.errors[i].erklaerung);
     send.disabled = drop.disabled = true;
@@ -350,9 +359,11 @@ function draftPanel(w, draft){
       send.disabled = drop.disabled = false;
     }
   });
-  return h('section', { class: 'acc-ai-draft', 'data-ai-draft': w.id, 'aria-label': 'Yapay zekâ taslağı' },
-    h('h3', {}, 'Yapay zekâ taslağı'),
-    h('p', { class: 'acc-hint' }, `Öğrenci bu taslağı görmez. Önerileri kontrol et: yanlış olanı düzelt ya da çıkar, sonra onayla. Model: ${draft.model || '—'} · ${fmtDateTime(draft.createdAt)}`),
+  return h('section', { class: 'acc-ai-draft', [live ? 'data-ai-live' : 'data-ai-draft']: w.id, 'aria-label': live ? 'Yapay zekâ geri bildirimi' : 'Yapay zekâ taslağı' },
+    h('h3', {}, live ? 'Yapay zekâ geri bildirimi (öğrenci gördü)' : 'Yapay zekâ taslağı'),
+    h('p', { class: 'acc-hint' }, live
+      ? `Öğrenci bu maddeleri gördü${flags.size ? `; ${flags.size} maddeyi "yanlış görünüyor" diye işaretledi` : ''}. Yanlış olanı düzelt ya da çıkar, istersen not yaz ve gönder: öğrenci düzelttiğin maddede "Öğretmenin düzeltti" etiketini görür. Değiştirmeden gönderirsen yapay zekâyı onaylamış olursun. Model: ${draft.model || '—'} · ${fmtDateTime(w.aiAt)}`
+      : `Öğrenci bu taslağı görmez. Önerileri kontrol et: yanlış olanı düzelt ya da çıkar, sonra onayla. Model: ${draft.model || '—'} · ${fmtDateTime(draft.createdAt)}`),
     draft.errors.length ? list : h('p', { class: 'acc-hint' }, 'Yapay zekâ bu metinde hata bulmadı.'),
     h('label', { for: `ai-c-${w.id}` }, h('strong', {}, 'Düzeltilmiş metin')), corrected,
     h('label', { for: `ai-n-${w.id}` }, h('strong', {}, 'Kendi notun'), h('span', { class: 'acc-sub' }, ' isteğe bağlı; öğrenci önerilerin üstünde görür')), note,
@@ -361,7 +372,7 @@ function draftPanel(w, draft){
 
 function instantNote(w){
   const n = w.aiFeedback?.errors?.length || 0;
-  return h('p', { class: 'acc-hint', 'data-ai-instant': '' }, `"Anında göster" modunda yapay zekâ önerisi öğrenciye gösterildi (${n} öneri). Kendi geri bildirimini yazarsan öğrenci ikisini de görür.`);
+  return h('p', { class: 'acc-hint', 'data-ai-instant': '' }, `Yapay zekâ bu yazıyı kontrol etti ve öğrenci geri bildirimi gördü (${n} madde). Aşağıya sadece not yazarsan öğrenci notunu ve yapay zekâ geri bildirimini birlikte görür.`);
 }
 
 // Yapay zekâ ile kontrol izni. 16 yaş altı: velinin ayrı ve isteğe bağlı onayı (docs/veli-onay-formu.md) işaretlenene
@@ -376,11 +387,30 @@ function renderAiConsent(){
   if(student.minor !== false){
     if(c?.given === true){
       items.push(h('p', { class: 'acc-hint' }, `Velinin yapay zekâ onayı: ${fmtDate(c.at)} · ${METHODS[c.method] || c.method}` + (consentGiven(student) ? '' : ' (genel veli onayı da gerekli)')));
+      // Eski form: "öneriler önce öğretmene gider". Yeni formla (doğrudan gösterim) onay alınana kadar sonuç taslak olarak gelir.
+      if(!aiDirect(student)){
+        items.push(h('p', { class: 'acc-hint', 'data-ai-consent-old': '' }, 'Bu onay eski formla alındı (öneriler önce sana gelir). Yeni form geri bildirimin doğrudan öğrenciye gösterildiğini söylüyor; veli yeni formu onaylayana kadar bu öğrencinin sonuçları taslak olarak sana gelir.'));
+        items.push(h('details', { class: 'acc-details' }, h('summary', {}, 'Veli yeni formu onayladı: kaydet'), aiConsentForm()));
+      }
       const off = h('button', { class: 'btn ghost', type: 'button', 'data-ai-consent-withdraw': '' }, 'Veli yapay zekâ onayını geri çekti');
       off.addEventListener('click', () => run(off, () => recordAiConsent(uid, { given: false }), 'Yapay zekâ kontrolü bu öğrencide kapatıldı. Var olan taslaklar sende kalır; istersen sil.'));
       items.push(off);
     }else{
       items.push(h('p', { class: 'acc-hint' }, '16 yaş altı: veli onay formundaki ayrı "yapay zekâ ile kontrol" kutusu işaretlenmişse burada kaydet. Onay yoksa öğrenci sadece senin geri bildirimini alır.'));
+      items.push(h('details', { class: 'acc-details' }, h('summary', {}, 'Velinin yapay zekâ onayını kaydet'), aiConsentForm()));
+    }
+  }else{
+    const button = allowed
+      ? h('button', { class: 'btn ghost', type: 'button', 'data-ai-consent-withdraw': '' }, 'Bu öğrencide kapat (öğrenci istemiyor)')
+      : h('button', { class: 'btn ghost', type: 'button', 'data-ai-consent-record': '' }, 'Yeniden aç');
+    button.addEventListener('click', () => run(button, () => recordAiConsent(uid, { given: !allowed, method: 'student' }), allowed ? 'Yapay zekâ kontrolü bu öğrencide kapatıldı.' : 'Yapay zekâ kontrolü yeniden açıldı.'));
+    items.push(h('p', { class: 'acc-hint' }, 'Yetişkin öğrenci: metni gönderilince yapay zekâ kontrolü otomatik çalışır ve geri bildirimi hemen görür (gizlilik politikası). Öğrenci istemezse kapat.'), button);
+  }
+  box.replaceChildren(...items);
+}
+
+// Velinin yapay zekâ onayını kaydetme formu: güncel form sürümüyle (AI_CONSENT_VERSION) kaydedilir.
+function aiConsentForm(){
       const today = new Intl.DateTimeFormat('en-CA', { timeZone: BERLIN }).format(new Date());
       const date = h('input', { id: 'aiConsentDate', type: 'date', value: today, max: today, required: true });
       const methods = Object.entries(METHODS).map(([value, label], i) =>
@@ -393,18 +423,9 @@ function renderAiConsent(){
         event.preventDefault();
         if(!date.value || date.value > today){ setActionStatus('error', 'Geçerli bir tarih seç (bugün ya da önce).'); return; }
         const method = form.querySelector('input[name="aiConsentMethod"]:checked')?.value || 'form';
-        run(submit, () => recordAiConsent(uid, { given: true, date: new Date(`${date.value}T12:00:00`), method }), 'Velinin yapay zekâ onayı kaydedildi.');
+        run(submit, () => recordAiConsent(uid, { given: true, date: new Date(`${date.value}T12:00:00`), method, version: AI_CONSENT_VERSION }), 'Velinin yapay zekâ onayı kaydedildi.');
       });
-      items.push(h('details', { class: 'acc-details' }, h('summary', {}, 'Velinin yapay zekâ onayını kaydet'), form));
-    }
-  }else{
-    const button = allowed
-      ? h('button', { class: 'btn ghost', type: 'button', 'data-ai-consent-withdraw': '' }, 'Bu öğrencide kapat (öğrenci istemiyor)')
-      : h('button', { class: 'btn ghost', type: 'button', 'data-ai-consent-record': '' }, 'Yeniden aç');
-    button.addEventListener('click', () => run(button, () => recordAiConsent(uid, { given: !allowed, method: 'student' }), allowed ? 'Yapay zekâ kontrolü bu öğrencide kapatıldı.' : 'Yapay zekâ kontrolü yeniden açıldı.'));
-    items.push(h('p', { class: 'acc-hint' }, 'Yetişkin öğrenci: metni gönderilince yapay zekâ kontrolü otomatik çalışır (gizlilik politikası). Öğrenci istemezse kapat.'), button);
-  }
-  box.replaceChildren(...items);
+      return form;
 }
 
 async function renderWritings(){
@@ -412,16 +433,19 @@ async function renderWritings(){
   const box = $('writingsList');
   const [writings, drafts] = await Promise.all([loadWritings(uid), loadAiDrafts(uid)]);
   const draftById = new Map(drafts.map((d) => [d.writingId, d]));
-  const pending = writings.filter((w) => !w.feedbackAt).length;
-  $('writingsCount').textContent = pending ? `${pending} geri bildirim bekliyor` : '';
+  const pending = writings.filter(needsTeacher).length;
+  $('writingsCount').textContent = pending ? `${pending} yazı sana bakıyor` : '';
   $('writingsCount').hidden = !pending;
   if(!writings.length){
     box.replaceChildren(h('p', { class: 'acc-empty' }, 'Henüz gönderilmiş yazı yok.'));
     return;
   }
   const titles = await Promise.all(writings.map(writingTitle));
+  const byId = new Map(writings.map((w) => [w.id, w]));
   box.replaceChildren(...writings.map((w, i) => {
     const draft = !w.feedbackAt ? draftById.get(w.id) : null;
+    const live = !w.feedbackAt && w.aiFeedback ? w.aiFeedback : null;
+    const flags = flaggedCount(w);
     const area = h('textarea', { id: `fb-${w.id}`, maxlength: String(FEEDBACK_MAX), rows: '4' });
     area.value = w.feedback || '';
     const status = h('p', { class: 'acc-status', role: 'status', hidden: true });
@@ -433,6 +457,7 @@ async function renderWritings(){
       try{
         await saveWritingFeedback(uid, w.id, text.slice(0, FEEDBACK_MAX));
         if(draft) await deleteAiDraft(uid, w.id).catch((error) => console.warn(error));
+        // İşaretli madde varken sadece not yazıldı: yapay zekâ maddeleri öğrencide aynen kalır.
         await renderWritings();
         setActionStatus('success', 'Geri bildirim kaydedildi; öğrenci panelinde görecek.');
       }catch(error){
@@ -443,7 +468,11 @@ async function renderWritings(){
     });
     const badge = w.feedbackAt
       ? h('span', { class: 'acc-badge success' }, `Geri bildirim verildi · ${fmtDateTime(w.feedbackAt)}`)
-      : h('span', { class: 'acc-badge warning' }, 'Geri bildirim bekliyor');
+      : flags ? h('span', { class: 'acc-badge warning', 'data-writing-flagged': String(flags) }, `Öğrenci ${flags} maddeyi işaretledi`)
+      : live ? h('span', { class: 'acc-badge info', 'data-writing-ai': '' }, 'Yapay zekâ kontrol etti')
+      : h('span', { class: 'acc-badge warning', 'data-writing-waiting': w.aiSkip || '' }, 'Geri bildirim bekliyor' + (AI_SKIP_LABELS[w.aiSkip] ? ` · yapay zekâ kontrol etmedi: ${AI_SKIP_LABELS[w.aiSkip]}` : ''));
+    const revision = w.revisionOf && byId.has(w.revisionOf)
+      ? h('span', { class: 'acc-badge', 'data-writing-revision': w.revisionOf }, `Düzeltilmiş hâl (ilk yazı: ${fmtDateTime(byId.get(w.revisionOf).at)})`) : null;
     const seen = w.feedbackAt && w.seenAt ? h('span', { class: 'acc-badge' }, 'Öğrenci okudu') : null;
     const aiBadge = draft ? h('span', { class: 'acc-badge info' }, 'Yapay zekâ taslağı hazır') : null;
     const items = w.feedbackItems?.length
@@ -453,17 +482,18 @@ async function renderWritings(){
     const sent = w.feedbackAt && w.feedbackSource && w.feedbackSource !== 'teacher'
       ? h('div', { class: 'acc-ai-sent' }, h('p', { class: 'acc-hint' }, `Gönderilen: ${SOURCE_LABELS[w.feedbackSource] || w.feedbackSource}`), items)
       : null;
-    return h('details', { class: 'ba-card acc-card acc-writing', open: !w.feedbackAt, 'data-writing': w.id },
+    return h('details', { class: 'ba-card acc-card acc-writing', open: needsTeacher(w), 'data-writing': w.id },
       h('summary', {},
         h('span', { class: 'acc-writing-title' }, `${fmtDateTime(w.at)} · ${titles[i]}`),
-        h('span', { class: 'acc-badges' }, h('span', { class: 'acc-badge' }, `${w.words} kelime`), badge, aiBadge, seen)),
+        h('span', { class: 'acc-badges' }, h('span', { class: 'acc-badge' }, `${w.words} kelime`), revision, badge, aiBadge, seen)),
       h('div', { class: 'acc-card-body' },
         h('div', { class: 'acc-writing-text', lang: 'de' }, w.text),
         h('p', { class: 'acc-sub' }, h('a', { class: 'ba-link', href: writingUrl(w), target: '_blank', rel: 'noopener noreferrer' }, 'Görevi ve örnek cevabı aç')),
         w.aiFeedback ? instantNote(w) : null,
+        live ? draftPanel(w, live, true) : null,
         draft ? draftPanel(w, draft) : null,
         sent,
-        h('label', { for: `fb-${w.id}` }, h('strong', {}, draft ? 'Ya da kendin yaz' : 'Geri bildirimin'), h('span', { class: 'acc-sub' }, ` en fazla ${FEEDBACK_MAX} karakter; öğrenci kendi panelinde görür`)),
+        h('label', { for: `fb-${w.id}` }, h('strong', {}, draft ? 'Ya da kendin yaz' : live ? 'Ya da sadece not yaz' : 'Geri bildirimin'), h('span', { class: 'acc-sub' }, ` en fazla ${FEEDBACK_MAX} karakter; öğrenci kendi panelinde görür`)),
         area, h('div', { class: 'acc-actions' }, save), status));
   }));
 }

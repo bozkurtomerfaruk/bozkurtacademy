@@ -3,7 +3,10 @@
 // Görev, canlı kelime sayacı, kendi kendini kontrol listesi, Redemittel; gönderince örnek cevap (Musterlösung) açılır.
 // Taslak sadece bu cihazda durur (localStorage baWriting:<sınav>-<seviye>-<teil>-<set>).
 // Gönderim 'ba:writing-submitted' olayıyla js/account/session.js'e gider: giriş yapmış ve onaylı öğrencinin metni
-// users/{uid}/writings'e kaydedilir, öğretmen geri bildirim yazar. Ziyaretçide Firebase hiç yüklenmez, metin gönderilmez.
+// users/{uid}/writings'e kaydedilir. session.js her adımı 'ba:writing-status' olayıyla geri bildirir (kaydedildi, yapay zekâ
+// kontrol ediyor, sonuç): yapay zekâ geri bildirimi aynı sayfada, metnin içinde işaretli görünür (js/account/writing-feedback.js),
+// ardından örnek cevap açılır. "Düzeltilmiş hâlini yaz" yeni bir deneme gönderir (revisionOf). Kontrol yapılamazsa
+// (16 yaş altı onaysız, günlük sınır, hata) öğretmen geri bildirim yazar. Ziyaretçide Firebase hiç yüklenmez, metin gönderilmez.
 // Arayüz metinleri js/app.js'te (wt…); kontrol listesi, kalıpların açıklaması ve notlar Türkçe.
 (() => {
   'use strict';
@@ -20,7 +23,9 @@
   const CRITERIA = ['aufgabe', 'aufbau', 'sprache'];
 
   const files = {};   // path -> Promise of the set
-  const states = {};  // path -> { text, submitted, checks: {index: bool} }
+  // path -> { text, submitted, checks: {index: bool}, pending, note: {key, type}, savedId, feedback, flags: [index], revisionOf }
+  const states = {};
+  const PENDING_MS = 90000; // session.js bu sürede cevap vermezse örnek cevap yine açılır
   const navs = {};
 
   function load(path) {
@@ -126,6 +131,7 @@
         <p class="wt-muted">${esc(t('wtDraftNote'))}</p>
         <div class="wt-actions"><button class="btn primary" type="button" data-wt-submit>${esc(t('wtSubmit'))}</button></div>
         <p class="wt-muted" data-wt-who>${esc(note)}</p>
+        ${state.revisionOf ? `<p class="wt-muted" data-wt-revision>${esc(t('wtReviseNote'))}</p>` : ''}
       </section>
       ${checklistHtml(set, state)}
     </div>
@@ -148,27 +154,33 @@
   function resultHtml(set, state, path) {
     const who = account();
     // Ziyaretçi ve öğretmen: hemen bilgi notu. Öğrenci: js/account/session.js kaydedip notu buraya yazar.
-    const status = who === 'student' ? `<p class="notice wt-status" role="status" data-wt-status>${esc(t('wtSaving'))}</p>`
+    const note = state.note || { key: 'wtSaving', type: '' };
+    const noteType = ['success', 'error'].includes(note.type) ? ` ${note.type}` : '';
+    const status = who === 'student' ? `<p class="notice wt-status${esc(noteType)}${state.pending ? ' is-pending' : ''}" role="status" data-wt-status>${esc(t(note.key))}</p>`
       : who === 'teacher' ? `<p class="notice wt-status" role="status" data-wt-status>${esc(t('wtTeacherNotSaved'))}</p>`
       : `<p class="notice wt-status" role="status" data-wt-status>${esc(t('wtVisitorNotSaved'))} <a class="ba-link" href="giris.html">${esc(t('wtLoginLink'))}</a></p>`;
     const notes = set.model.notes.map(note => `<li lang="tr">${esc(note)}</li>`).join('');
     return `<div class="wt-result" tabindex="-1" data-wt-result>
       <div class="wt-saved" id="wtSaved">${status}</div>
-      <div class="wt-cols">
+      <div class="wt-cols${state.feedback ? ' wt-stack' : ''}">
         <section class="wt-card" aria-labelledby="wtMineTitle">
           <h3 id="wtMineTitle">${esc(fill('wtMine', { n: countWords(state.text) }))}</h3>
-          <div class="wt-text" lang="de">${esc(state.text)}</div>
+          <div class="wt-text" lang="de" data-wt-mine${state.feedback ? ' hidden' : ''}>${esc(state.text)}</div>
+          <div data-wt-ai></div>
         </section>
-        <section class="wt-card" aria-labelledby="wtModelTitle">
+        ${state.pending ? `<section class="wt-card" aria-labelledby="wtModelTitle" data-wt-model-later>
+          <h3 id="wtModelTitle">${esc(t('wtModelTitle'))}</h3>
+          <p class="wt-muted">${esc(t('wtModelLater'))}</p>
+        </section>` : `<section class="wt-card" aria-labelledby="wtModelTitle" data-wt-model>
           <h3 id="wtModelTitle">${esc(fill('wtModel', { n: countWords(set.model.text) }))}</h3>
           <div class="wt-text" lang="de">${esc(set.model.text)}</div>
           <ul class="wt-notes">${notes}</ul>
           <p class="wt-muted">${esc(t('wtModelNote'))}</p>
-        </section>
+        </section>`}
       </div>
       <div class="task-actions">
         ${navActions(path)}
-        <button class="btn ${navs[path] ? 'ghost' : 'primary'}" type="button" data-wt-again>${esc(t('wtAgain'))}</button>
+        <button class="btn ${navs[path] ? 'ghost' : 'primary'}" type="button" data-wt-again${state.pending ? ' disabled' : ''}>${esc(t(who === 'student' && state.savedId ? 'wtRevise' : 'wtAgain'))}</button>
       </div>
     </div>`;
   }
@@ -183,7 +195,41 @@
       ${taskHtml(set)}
       ${state.submitted ? resultHtml(set, state, path) : editorHtml(set, state)}
     </div>`;
+    mountFeedback(container, state);
   }
+
+  // Yapay zekâ geri bildirimi: görünümü session.js yükler (window.BAWritingFeedback); ziyaretçide hiç yoktur.
+  function mountFeedback(container, state) {
+    const box = container.querySelector('[data-wt-ai]');
+    const api = window.BAWritingFeedback;
+    if (!box || !state.submitted || !state.feedback || !api) return;
+    const id = state.savedId;
+    box.replaceChildren(api.view({
+      text: state.text, feedback: state.feedback, flags: state.flags || [], t,
+      onFlag: id ? index => api.flag(id, index).then(() => { state.flags = [...(state.flags || []), index]; }) : null
+    }));
+  }
+
+  // session.js'ten: { path, key, type, pending, id, feedback }. Durum saklanır; dil değişse de aynı not ve geri bildirim çizilir.
+  let mounted = null;
+  window.addEventListener('ba:writing-status', event => {
+    const d = event.detail || {};
+    const state = states[d.path];
+    if (!state || !state.submitted) return;
+    state.note = { key: d.key, type: d.type };
+    state.pending = Boolean(d.pending);
+    if (d.id) state.savedId = d.id;
+    if (d.feedback) { state.feedback = d.feedback; state.flags = []; }
+    const container = mounted;
+    if (!container?.isConnected || container.dataset.taskPath !== d.path) return;
+    load(d.path).then(set => {
+      if (container.dataset.taskPath !== d.path || !state.submitted) return;
+      const active = document.activeElement;
+      const again = active?.matches?.('[data-wt-again]');
+      draw(container, set, d.path);
+      if (again) container.querySelector('[data-wt-again]')?.focus({ preventScroll: true });
+    });
+  });
 
   function updateCounter(container, set, text) {
     const n = countWords(text);
@@ -231,17 +277,35 @@
         }
         load(path).then(set => {
           state.submitted = true;
+          // Öğrenci: session.js kaydedip sonucu bildirene kadar "bekliyor"; örnek cevap kontrol bitince açılır.
+          const student = account() === 'student';
+          state.pending = student;
+          state.note = student ? { key: 'wtSaving', type: '' } : null;
+          state.feedback = null;
+          state.flags = [];
+          state.savedId = null;
+          const revisionOf = state.revisionOf || null;
+          state.revisionOf = null;
+          const token = state.token = {};
+          if (student) setTimeout(() => {
+            if (state.token !== token || !state.pending) return;
+            window.dispatchEvent(new CustomEvent('ba:writing-status', { detail: { path, key: 'wtAiTimeout', type: 'error', pending: false } }));
+          }, PENDING_MS);
           draw(container, set, path);
           const result = container.querySelector('[data-wt-result]');
           result?.focus({ preventScroll: true });
           result?.scrollIntoView({ behavior: smooth(), block: 'start' });
           window.dispatchEvent(new CustomEvent('ba:writing-submitted', { detail: {
             exam: set.exam, level: set.level, teil: set.teil, set: set.set,
-            text: state.text.slice(0, MAX_CHARS), words: Math.min(countWords(state.text), 1000), noteIn: '#wtSaved'
+            text: state.text.slice(0, MAX_CHARS), words: Math.min(countWords(state.text), 1000), noteIn: '#wtSaved',
+            path, ...(revisionOf ? { revisionOf } : {})
           } }));
         });
       }
       if (event.target.closest('[data-wt-again]')) {
+        if (state.pending) return;
+        // Kaydedilmiş bir metinden sonra: düzeltilmiş hâl yeni deneme olarak o metne bağlanır.
+        state.revisionOf = account() === 'student' && state.savedId ? state.savedId : null;
         state.submitted = false;
         load(path).then(set => {
           draw(container, set, path);
@@ -256,6 +320,7 @@
   // preserve: keep the text and the checks (used when only the interface language changed).
   function render(container, { path, preserve = false, nav = null } = {}) {
     container.dataset.taskPath = path;
+    mounted = container;
     if (nav) navs[path] = nav; else delete navs[path];
     container.innerHTML = `<p class="task-status" role="status">${esc(t('taskLoading'))}</p>`;
     return load(path).then(set => {

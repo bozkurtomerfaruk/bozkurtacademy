@@ -11,7 +11,7 @@ const TABS = ['ogrenciler', 'onay', 'veli', 'odevler', 'silinecek', 'yorumlar'];
 let lists = null;
 let groups = [];
 let studentsById = new Map();
-let pendingWritings = new Map(); // uid → geri bildirim bekleyen Schreiben metni sayısı
+let pendingWritings = new Map(); // uid → { total, flagged }: bakılması gereken Schreiben metni (yapay zekâ kontrol etmedi ya da öğrenci madde işaretledi)
 let aiDrafts = new Map(); // uid → yapay zekâ taslağı hazır metin sayısı (öğrenci görmez)
 const fmtDateTime = (value) => formatDateTime(value, { lang: 'tr', timeZone: BERLIN });
 
@@ -48,15 +48,15 @@ function renderStudents(){
 
 // Schreiben: geri bildirim bekleyen metin varsa öğrencinin detayındaki "Yazma görevleri" bölümüne giden işaret.
 function writingBadge(s){
-  const n = pendingWritings.get(s.id) || 0;
+  const { total: n = 0, flagged: f = 0 } = pendingWritings.get(s.id) || {};
   if(!n) return '—';
   const d = aiDrafts.get(s.id) || 0;
-  return h('a', { class: 'acc-badge warning', href: `ogretmen-ogrenci.html?id=${encodeURIComponent(s.id)}#yazilar`, 'data-pending-writings': String(n), 'data-ai-drafts': String(d) },
-    `${n} geri bildirim bekliyor` + (d ? ` · ${d} taslak hazır` : ''));
+  return h('a', { class: 'acc-badge warning', href: `ogretmen-ogrenci.html?id=${encodeURIComponent(s.id)}#yazilar`, 'data-pending-writings': String(n), 'data-flagged-writings': String(f), 'data-ai-drafts': String(d) },
+    `${n} yazı sana bakıyor` + (f ? ` · ${f} işaretli madde` : '') + (d ? ` · ${d} taslak hazır` : ''));
 }
 
-// Yapay zekâ modu (settings/ai): Kapalı / Taslak (varsayılan; öğrenci görmez) / Anında göster.
-const MODE_LABELS = { off: 'Kapalı', draft: 'Taslak: önce ben bakarım (öğrenci görmez)', instant: 'Anında göster: öğrenci öneriyi hemen görür' };
+// Yapay zekâ modu (settings/ai): Anında göster (varsayılan; öğrenci hemen görür) / Taslak (öğrenci görmez) / Kapalı.
+const MODE_LABELS = { off: 'Kapalı: sadece ben geri bildirim yazarım', draft: 'Taslak: önce ben bakarım (öğrenci görmez)', instant: 'Anında göster: öğrenci geri bildirimi hemen görür (varsayılan)' };
 async function renderAiMode(){
   const box = $('aiMode');
   let mode;
@@ -70,17 +70,21 @@ async function renderAiMode(){
     finally{ select.disabled = false; }
   });
   box.replaceChildren(h('label', { for: 'aiModeSelect' }, h('strong', {}, 'Schreiben yapay zekâ kontrolü')), select, status,
+    h('span', { class: 'acc-sub', 'data-ai-mode-hint': '' }, 'Anında göster: öğrenci geri bildirimi görev sayfasında hemen görür; sen sadece işaretlenen maddelere ve yapay zekânın kontrol edemediği yazılara bakarsın. 16 yaş altında veli onayı eski formla alınmışsa sonuç yine taslak olarak sana gelir.'),
     AI_WORKER_URL ? null : h('span', { class: 'acc-sub' }, 'Worker henüz kurulmadı (docs/yapay-zeka-kurulum.md); kurulana kadar kontrol yapılmaz.'));
   box.hidden = false;
 }
 
 function renderWritingNotice(){
-  const total = [...pendingWritings.values()].reduce((a, b) => a + b, 0);
+  const total = [...pendingWritings.values()].reduce((a, b) => a + b.total, 0);
+  const flagged = [...pendingWritings.values()].reduce((a, b) => a + b.flagged, 0);
   const notice = $('writingNotice');
   notice.hidden = total === 0;
   if(total){
     const drafts = [...aiDrafts.values()].reduce((a, b) => a + b, 0);
-    notice.replaceChildren(`Geri bildirim bekleyen ${total} yazı var (${pendingWritings.size} öğrenci)` + (drafts ? `; ${drafts} yazı için yapay zekâ taslağı hazır` : '') + '. ',
+    notice.dataset.flagged = String(flagged);
+    notice.replaceChildren(`Sana bakan ${total} yazı var (${pendingWritings.size} öğrenci): ${flagged} yazıda öğrenci bir açıklamayı "yanlış görünüyor" diye işaretledi, ${total - flagged} yazıyı yapay zekâ kontrol etmedi`
+      + (drafts ? `; ${drafts} yazı için yapay zekâ taslağı hazır` : '') + '. ',
       h('a', { class: 'ba-link', href: '#ogrenciler' }, 'Öğrenci listesinde işaretli'));
   }
 }

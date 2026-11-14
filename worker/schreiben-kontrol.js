@@ -7,8 +7,11 @@
 //  2. "yapay zekâ hesabı" ile giriş yapar ve Firestore'dan okur: settings/ai (mod), users/{uid} (aktif mi, 16 yaş altıysa
 //     veli onayı ve yapay zekâ onayı), users/{uid}/writings/{id} (metin; öğrenci başka bir metin gönderemez), günlük sayaçlar;
 //  3. Gemma 4 26B'ye (Workers AI, düşünme kapalı) SADECE metni ve görev adını gönderir; ad, e-posta, uid gitmez;
-//  4. sonucu denetler (yanlış kısım metinde geçmek zorunda) ve yazar: "Taslak" modunda aiDrafts/{uid}_{id} (öğrenci
-//     okuyamaz, öğretmen onaylar), "Anında göster" modunda metne aiFeedback.
+//  4. sonucu denetler (yanlış kısım metinde geçmek zorunda) ve yazar: "Anında göster" modunda (varsayılan) metne aiFeedback
+//     ekler ve aynı sonucu cevabında döndürür (öğrenci görev sayfasında hemen görür); "Taslak" modunda aiDrafts/{uid}_{id}
+//     (öğrenci okuyamaz, öğretmen onaylar). 16 yaş altında veli yapay zekâ onayı eski formla (sürüm 2'den önce:
+//     "öneriler önce öğretmene gider") alınmışsa mod ne olursa olsun taslak yazılır.
+//  5. kontrol yapılamazsa nedenini metne yazar (aiSkip: 'consent' | 'limit' | 'error'); öğretmen panelinde görünür.
 // Sınırlar: öğrenci başına günde 3, site genelinde günde 600 kontrol (Berlin günü). Workers AI ücretsiz kotası
 // (günde 10.000 Neuron) dolarsa istek hata verir, taslak oluşmaz, ücret çıkmaz.
 //
@@ -219,6 +222,11 @@ async function taskInfo(env, w) {
 export const userMessage = (task, text) => `Görev: ${task.name}\n${task.type ? `Metin türü: ${task.type}\n` : ''}Metin:\n${text}`;
 
 // Hesap açık mı ve yapay zekâ kontrolüne izin var mı: 16 yaş altında veli onayı VE ayrı yapay zekâ onayı gerekir.
+// Veli yapay zekâ onayının sürümü: 2 = "geri bildirim öğretmen onayı olmadan doğrudan öğrenciye gösterilir" (docs/veli-onay-formu.md).
+export const AI_CONSENT_VERSION = 2;
+// 16 yaş altında doğrudan gösterim sadece yeni formla alınmış onayla; yoksa taslak öğretmene gider.
+export const directAllowed = (profile) => profile?.minor === false || Number(profile?.aiConsent?.version) >= AI_CONSENT_VERSION;
+
 export function aiAllowed(profile) {
   if (!profile || profile.status !== 'active') return false;
   if (profile.minor === false) return profile.aiConsent?.given !== false;
@@ -258,26 +266,39 @@ export default {
       const store = db(env, await botSignIn(env));
 
       const settings = await store.get('settings/ai');
-      const mode = settings?.data?.mode;
-      if (mode !== 'draft' && mode !== 'instant') return json({ status: 'off' }, 200, okOrigin);
+      if (settings?.data?.mode !== 'draft' && settings?.data?.mode !== 'instant') return json({ status: 'off' }, 200, okOrigin);
 
+      const settingsMode = settings.data.mode;
       const profile = await store.get(`users/${uid}`);
-      if (!aiAllowed(profile?.data)) return json({ status: 'not-allowed' }, 200, okOrigin);
-
       const writing = await store.get(`users/${uid}/writings/${writingId}`);
       if (!writing) return json({ status: 'not-found' }, 404, okOrigin);
       const w = writing.data;
       if (typeof w.text !== 'string' || !w.text.trim()) return json({ status: 'bad-request' }, 400, okOrigin);
-      if (w.aiAt) return json({ status: 'exists' }, 200, okOrigin);
+      if (w.aiAt) return json({ status: 'exists', ...(w.aiFeedback ? { feedback: w.aiFeedback } : {}) }, 200, okOrigin);
+      // Kontrol yapılamadı: nedeni metne bir kez yazılır (öğretmen panelindeki sayaç ve açıklama için). Yazılamazsa akış bozulmaz.
+      const skip = async (reason) => {
+        if (w.aiSkip) return;
+        try {
+          await store.commit([{
+            update: { name: store.name(`users/${uid}/writings/${writingId}`), fields: { aiSkip: encode(reason) } },
+            updateMask: { fieldPaths: ['aiSkip'] }, currentDocument: { updateTime: writing.updateTime }
+          }]);
+        } catch (error) { console.error('skip', String(error)); }
+      };
+      if (!aiAllowed(profile?.data)) { await skip('consent'); return json({ status: 'not-allowed' }, 200, okOrigin); }
+      const mode = settingsMode === 'instant' && !directAllowed(profile.data) ? 'draft' : settingsMode;
 
       const day = berlinDay();
       const [mine, all] = await Promise.all([store.get(`aiLimits/${uid}`), store.get('aiLimits/_global')]);
       const count = (doc) => (doc?.data?.day === day ? Number(doc.data.count) || 0 : 0);
-      if (count(mine) >= LIMIT_STUDENT || count(all) >= LIMIT_GLOBAL) return json({ status: 'limit' }, 200, okOrigin);
+      if (count(mine) >= LIMIT_STUDENT || count(all) >= LIMIT_GLOBAL) {
+        await skip('limit');
+        return json({ status: 'limit', scope: count(mine) >= LIMIT_STUDENT ? 'student' : 'site' }, 200, okOrigin);
+      }
 
       let raw;
       try { raw = await runModel(env, await taskInfo(env, w), w.text); }
-      catch (error) { console.error('model', String(error)); return json({ status: 'unavailable' }, 503, okOrigin); }
+      catch (error) { console.error('model', String(error)); await skip('error'); return json({ status: 'unavailable' }, 503, okOrigin); }
       const result = cleanResult(raw, w.text);
 
       const limitWrite = (path, doc, n) => ({
@@ -308,7 +329,8 @@ export default {
         if (error.status === 400 || error.status === 409 || error.status === 412 || error.status === 403) return json({ status: 'busy' }, 409, okOrigin);
         throw error;
       }
-      return json({ status: result ? mode : 'no-result' }, 200, okOrigin);
+      if (!result) { await skip('error'); return json({ status: 'no-result' }, 200, okOrigin); }
+      return json({ status: mode, ...(mode === 'instant' ? { feedback: result } : {}) }, 200, okOrigin);
     } catch (error) {
       console.error(String(error));
       return json({ status: 'error' }, 500, okOrigin);

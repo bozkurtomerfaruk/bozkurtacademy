@@ -1,0 +1,130 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-6",
+  "title": "Geburtstagsfeier im Haus",
+  "minutes": 30,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "examChoice": true,
+  "situation": "Sie möchten am Samstag in Ihrer Wohnung Ihren Geburtstag feiern. Es kann etwas lauter werden. Schreiben Sie Ihrer Nachbarin, Frau Petrova, eine Nachricht.",
+  "task": "Schreiben Sie etwas zu folgenden Punkten:",
+  "points": [
+    "Grund für Ihr Schreiben",
+    "Wann und wie lange",
+    "Bitte um Verständnis",
+    "Einladung"
+  ],
+  "instructions": "Vergessen Sie nicht die Anrede und den Gruß. Zeigen Sie, was Sie können: Schreiben Sie möglichst viel.",
+  "words": {
+    "target": 80,
+    "min": 60,
+    "max": 120,
+    "recommended": true,
+    "veryShort": 40
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: neden yazdığım, ne zaman ve ne kadar süreceği, anlayış ricası, davet."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Hitap (Liebe Frau Petrova,) ve selam (Viele Grüße + adım) var; Betreff gerekmiyor."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Komşuma baştan sona aynı biçimde hitap ettim: Sie ile başladıysam Sie ile bitirdim (Sie, Ihnen büyük harfle)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümleleri bağladım: und, dass, wenn, natürlich."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Maddeleri numaralamadım ve her maddeye tek cümle yazıp geçmedim; metnim bağlantılı."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Saat ve süre: um 19 Uhr, bis Mitternacht, ab 22 Uhr, am Samstag."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "dass ve wenn'den sonra çekimli fiil sonda: Ich hoffe, dass der Lärm Sie nicht stört."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Kibar davet: Kommen Sie doch auch vorbei! / Ich würde mich sehr freuen."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede",
+      "items": [
+        {
+          "de": "Liebe Frau … / Lieber Herr …,",
+          "tr": "Sevgili … Hanım / … Bey, (tanıdık komşu)"
+        }
+      ]
+    },
+    {
+      "group": "Informieren",
+      "items": [
+        {
+          "de": "ich möchte Sie kurz informieren: …",
+          "tr": "size kısaca haber vermek istiyorum: …"
+        },
+        {
+          "de": "Die Feier beginnt um … Uhr und dauert bis …",
+          "tr": "Kutlama saat …'da başlıyor ve …'a kadar sürüyor."
+        }
+      ]
+    },
+    {
+      "group": "Um Verständnis bitten",
+      "items": [
+        {
+          "de": "Ich bitte Sie um Verständnis.",
+          "tr": "Anlayışınızı rica ediyorum."
+        },
+        {
+          "de": "Ich hoffe, dass der Lärm Sie nicht zu sehr stört.",
+          "tr": "Umarım gürültü sizi çok rahatsız etmez."
+        },
+        {
+          "de": "Ab 22 Uhr machen wir die Musik leiser.",
+          "tr": "Saat 22'den sonra müziği kısarız."
+        }
+      ]
+    },
+    {
+      "group": "Einladen und Schluss",
+      "items": [
+        {
+          "de": "Kommen Sie doch auch vorbei!",
+          "tr": "Siz de uğrayın!"
+        },
+        {
+          "de": "Ich würde mich sehr freuen.",
+          "tr": "Çok sevinirim."
+        },
+        {
+          "de": "Viele Grüße",
+          "tr": "Selamlar"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Liebe Frau Petrova,\nich möchte Sie kurz informieren: Am Samstag feiere ich in meiner Wohnung meinen 30. Geburtstag. Es kommen ungefähr fünfzehn Gäste, und wir möchten auch Musik hören und tanzen. Die Feier beginnt um 19 Uhr und dauert wahrscheinlich bis Mitternacht. Ich hoffe, dass der Lärm Sie nicht zu sehr stört, und bitte Sie um Verständnis. Ab 22 Uhr machen wir die Musik natürlich leiser. Wenn Sie Lust haben, kommen Sie doch auch vorbei! Ich würde mich sehr freuen, und es gibt genug zu essen und zu trinken.\nViele Grüße\nIhr Nachbar Murat Şahin",
+    "notes": [
+      "Dört madde: sebep (Geburtstag feiern), zaman ve süre (um 19 Uhr, bis Mitternacht), anlayış (bitte Sie um Verständnis, ab 22 Uhr leiser), davet (kommen Sie doch auch vorbei).",
+      "Komşuya Sie ile ama samimi: Liebe Frau Petrova, … Viele Grüße. Sınavda tanıdık bir komşuya du da yazılabilir; önemli olan biçimi baştan sona korumak.",
+      "Wenn cümlesi başta: Wenn Sie Lust haben, kommen Sie … (yan cümleden sonra fiil hemen gelir)."
+    ]
+  }
+}

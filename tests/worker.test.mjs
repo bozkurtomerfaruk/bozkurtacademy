@@ -164,6 +164,17 @@ describe('Schreiben Worker', () => {
     assert.ok(commits[1].writes.some((w) => w.update.fields.aiFeedback));
   });
 
+  test('DTZ: görev adı ve talimat (Betreff istenmez, du büyük ya da küçük)', async () => {
+    docs['users/ayse1234567/writings/w123456789012'] = { exam: 'dtz', level: 'a2-b1', teil: 1, set: 'set-1', text: TEXT, words: 20 };
+    await call();
+    const sent = aiCalls[0].input.messages[1].content;
+    assert.ok(sent.startsWith('Görev: DTZ A2-B1 · Teil 1 · Neue Wohnung\n'), sent.slice(0, 60));
+    assert.ok(fetchLog.some((f) => f.url.endsWith('/data/exams/dtz/a2-b1/schreiben/teil-1/set-1.json')));
+    assert.match(PROMPT, /DTZ \(görev adında "DTZ" geçiyorsa/);
+    assert.match(PROMPT, /Betreff yoksa hata sayma/);
+    assert.match(PROMPT, /du, dich, dein, dir büyük ya da küçük yazılabilir/);
+  });
+
   test('directAllowed', () => {
     assert.equal(directAllowed({ minor: false }), true);
     assert.equal(directAllowed({ minor: true, aiConsent: { given: true } }), false);

@@ -50,7 +50,9 @@
 
   // Kelime sayacının durumu: kısa / iyi / uzun (göndermeyi engellemez).
   function counterState(set, n) {
-    const { min, max } = set.words;
+    const { min, max, veryShort } = set.words;
+    // DTZ: 40 kelimenin altındaki metinde Korrektheit ve Wortschatz B1 sayılamıyor (g.a.s.t. SSS).
+    if (veryShort && n > 0 && n < veryShort) return { cls: 'is-short is-very-short', key: 'wtCountVeryShort' };
     if (n < min) return { cls: 'is-short', key: n === 0 ? (set.words.recommended ? 'wtCountRecommended' : 'wtCountTarget') : 'wtCountShort' };
     if (n <= max) return { cls: 'is-ok', key: 'wtCountOk' };
     return { cls: 'is-long', key: 'wtCountLong' };
@@ -84,7 +86,7 @@
       <p><strong>${esc(set.task)}</strong></p>
       ${points}
       ${set.instructions ? `<p class="wt-instructions">${esc(set.instructions)}</p>` : ''}
-    </div>`;
+    </div>${set.examChoice ? `<p class="wt-muted wt-choice" data-wt-choice>${esc(t('wtExamChoice'))}</p>` : ''}`;
   }
 
   // Metin alanındaki ipucu, metin türüne göre (data: textType).
@@ -126,7 +128,7 @@
         <textarea id="wtText" lang="de" spellcheck="false" autocomplete="off" autocapitalize="sentences" maxlength="${MAX_CHARS}"
           aria-describedby="wtCount wtCountState" placeholder="${esc((set.subjectLine ? 'Betreff: …\n' : '') + (PLACEHOLDERS[set.textType] || (set.register === 'du' ? 'Liebe …, / Lieber …,' : 'Sehr geehrte …,')))}">${esc(state.text)}</textarea>
         <p class="wt-counter"><span id="wtCount" data-wt-count>${esc(fill('wtWords', { n }))}</span>
-          <span class="wt-pill ${esc(c.cls)}" id="wtCountState" aria-live="polite" data-wt-state>${esc(fill(c.key, { min: set.words.min, max: set.words.max, target: set.words.target }))}</span></p>
+          <span class="wt-pill ${esc(c.cls)}" id="wtCountState" aria-live="polite" data-wt-state>${esc(fill(c.key, { min: set.words.min, max: set.words.max, target: set.words.target, short: set.words.veryShort }))}</span></p>
         <p class="wt-error" role="alert" data-wt-error hidden></p>
         <p class="wt-muted">${esc(t('wtDraftNote'))}</p>
         <div class="wt-actions"><button class="btn primary" type="button" data-wt-submit>${esc(t('wtSubmit'))}</button></div>
@@ -238,7 +240,7 @@
     const pill = container.querySelector('[data-wt-state]');
     if (count) count.textContent = fill('wtWords', { n });
     if (pill) {
-      const label = fill(c.key, { min: set.words.min, max: set.words.max, target: set.words.target });
+      const label = fill(c.key, { min: set.words.min, max: set.words.max, target: set.words.target, short: set.words.veryShort });
       pill.className = `wt-pill ${c.cls}`;
       if (pill.textContent !== label) pill.textContent = label; // aria-live: only when the state changes
     }

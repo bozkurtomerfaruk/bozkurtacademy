@@ -1,0 +1,126 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-1",
+  "title": "Die Heizung funktioniert nicht",
+  "minutes": 30,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "examChoice": true,
+  "situation": "In Ihrer Wohnung funktioniert die Heizung nicht. Schreiben Sie an Ihren Vermieter, Herrn Brandt.",
+  "task": "Schreiben Sie etwas zu folgenden Punkten:",
+  "points": [
+    "Grund für Ihr Schreiben",
+    "Seit wann und in welchen Zimmern",
+    "Warum das für Ihre Familie ein Problem ist",
+    "Wann der Handwerker kommen kann"
+  ],
+  "instructions": "Vergessen Sie nicht die Anrede und den Gruß. Zeigen Sie, was Sie können: Schreiben Sie möglichst viel.",
+  "words": {
+    "target": 80,
+    "min": 60,
+    "max": 120,
+    "recommended": true,
+    "veryShort": 40
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: neden yazdığım, ne zamandan beri ve hangi odalarda, ailem için neden sorun, ustanın ne zaman gelebileceği."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Hitap (Sehr geehrter Herr Brandt,) ve selam (Mit freundlichen Grüßen + adım) var; Betreff gerekmiyor."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Baştan sona Sie ile yazdım (Sie, Ihnen, Ihr büyük harfle); du ve Hallo yok."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümleleri bağladım: weil, deshalb, außerdem, und, aber."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Maddeleri numaralamadım ve her maddeye tek cümle yazıp geçmedim; metnim bağlantılı."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Ev kelimelerini doğru kullandım: die Heizung, das Wohnzimmer, das Kinderzimmer, der Handwerker."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "weil'den sonra çekimli fiil cümlenin sonunda: …, weil die Heizung nicht funktioniert."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Kibar rica: Könnten Sie bitte … schicken? (fiil başta, mastar sonda)."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede",
+      "items": [
+        {
+          "de": "Sehr geehrter Herr … / Sehr geehrte Frau …,",
+          "tr": "Sayın … Bey / … Hanım,"
+        }
+      ]
+    },
+    {
+      "group": "Grund nennen",
+      "items": [
+        {
+          "de": "ich schreibe Ihnen, weil …",
+          "tr": "Size yazıyorum çünkü …"
+        },
+        {
+          "de": "Seit Montag funktioniert … nicht.",
+          "tr": "Pazartesiden beri … çalışmıyor."
+        },
+        {
+          "de": "Das ist ein großes Problem, denn …",
+          "tr": "Bu büyük bir sorun, çünkü …"
+        }
+      ]
+    },
+    {
+      "group": "Bitten",
+      "items": [
+        {
+          "de": "Könnten Sie bitte einen Handwerker schicken?",
+          "tr": "Lütfen bir usta gönderebilir misiniz?"
+        },
+        {
+          "de": "Ich bin jeden Tag ab 14 Uhr zu Hause.",
+          "tr": "Her gün saat 14'ten sonra evdeyim."
+        }
+      ]
+    },
+    {
+      "group": "Schluss",
+      "items": [
+        {
+          "de": "Vielen Dank für Ihre Hilfe.",
+          "tr": "Yardımınız için çok teşekkürler."
+        },
+        {
+          "de": "Mit freundlichen Grüßen",
+          "tr": "Saygılarımla"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Sehr geehrter Herr Brandt,\nich schreibe Ihnen, weil die Heizung in unserer Wohnung nicht funktioniert. Seit Montag bleibt sie im Wohnzimmer und im Kinderzimmer kalt, nur im Bad wird es noch warm. Für meine Familie ist das ein großes Problem: Unsere Tochter ist erst zwei Jahre alt und schon erkältet, und nachts sind es in der Wohnung nur 15 Grad. Könnten Sie bitte so schnell wie möglich einen Handwerker schicken? Ich bin diese Woche jeden Tag ab 14 Uhr zu Hause, am Freitag sogar den ganzen Tag. Vielen Dank für Ihre Hilfe.\nMit freundlichen Grüßen\nElif Kaya",
+    "notes": [
+      "Dört madde bağlantılı bir metinde: sebep (Heizung funktioniert nicht), ne zamandan beri ve nerede (seit Montag, Wohnzimmer und Kinderzimmer), sorun (Tochter erkältet, 15 Grad), usta (ab 14 Uhr, am Freitag den ganzen Tag).",
+      "Ev sahibine Sie ile: Sehr geehrter Herr Brandt, … Mit freundlichen Grüßen. Hitaptan sonraki satır küçük harfle başlıyor (ich schreibe …).",
+      "Kibar rica Konjunktiv II ile: Könnten Sie bitte … schicken?"
+    ]
+  }
+}

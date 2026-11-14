@@ -51,6 +51,19 @@ function checkWriting(set, fail) {
   // words.recommended: no official word limit in the exam; the page says "suggested length".
   if (set.words?.recommended !== undefined && set.words.recommended !== true) fail('"words.recommended" must be true when present');
   if (set.instructions !== undefined && !text(set.instructions)) fail('"instructions" must be text when present');
+  // examChoice: in the real exam the candidate picks one of two tasks (DTZ: Aufgabe A or B); the page says so.
+  if (set.examChoice !== undefined && set.examChoice !== true) fail('"examChoice" must be true when present');
+  // words.veryShort: below this many words the counter warns that B1 can hardly be reached (DTZ: 40, g.a.s.t. FAQ).
+  if (set.words?.veryShort !== undefined && !(Number.isInteger(set.words.veryShort) && set.words.veryShort > 0 && set.words.veryShort < set.words.min)) fail('"words.veryShort" must be a positive integer below "words.min"');
+  // DTZ (g.a.s.t. practice sets): one semi-formal or formal message, four content points, no subject line, no word limit.
+  if (set.exam === 'dtz') {
+    if (!['email-semiformal', 'email-formal'].includes(set.textType)) fail('DTZ writing tasks are semi-formal or formal (email-semiformal, email-formal)');
+    if (set.points?.length !== 4) fail('DTZ writing tasks have exactly four content points');
+    if (set.subjectLine) fail('DTZ writing tasks have no subject line');
+    if (set.examChoice !== true || set.words?.recommended !== true) fail('DTZ writing tasks need "examChoice": true and "words.recommended": true');
+    if (/^Betreff/i.test(String(set.model?.text))) fail('DTZ model answers start with the greeting, not with "Betreff"');
+    if (!(Array.isArray(set.checklist) && set.checklist.some(item => /numaralamadım/.test(item?.tr || '')))) fail('DTZ checklist needs the item about not numbering the points (connected text)');
+  }
   const w = set.words || {};
   if (!(Number.isInteger(w.min) && Number.isInteger(w.target) && Number.isInteger(w.max) && w.min > 0 && w.min <= w.target && w.target <= w.max)) fail('"words" needs min <= target <= max');
   const list = Array.isArray(set.checklist) ? set.checklist : [];

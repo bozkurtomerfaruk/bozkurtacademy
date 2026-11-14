@@ -1,0 +1,126 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Ein freier Tag",
+  "minutes": 30,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "examChoice": true,
+  "situation": "Sie arbeiten in einem Supermarkt. Nächste Woche haben Sie einen wichtigen Termin und brauchen einen freien Tag. Schreiben Sie an Ihre Chefin, Frau Wagner.",
+  "task": "Schreiben Sie etwas zu folgenden Punkten:",
+  "points": [
+    "Grund für Ihr Schreiben",
+    "An welchem Tag",
+    "Wer Ihre Arbeit übernehmen kann",
+    "Wann Sie die Stunden nacharbeiten"
+  ],
+  "instructions": "Vergessen Sie nicht die Anrede und den Gruß. Zeigen Sie, was Sie können: Schreiben Sie möglichst viel.",
+  "words": {
+    "target": 80,
+    "min": 60,
+    "max": 120,
+    "recommended": true,
+    "veryShort": 40
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: neden yazdığım, hangi gün, işimi kimin yapabileceği, saatleri ne zaman telafi edeceğim."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Hitap (Liebe Frau Wagner, / Sehr geehrte Frau Wagner,) ve selam (Viele Grüße / Mit freundlichen Grüßen + adım) var; Betreff gerekmiyor."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Şefime Sie ile yazdım (Sie, Ihnen, Ihr büyük harfle); du yok."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümleleri bağladım: deshalb, denn, schon, und."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Maddeleri numaralamadım ve her maddeye tek cümle yazıp geçmedim; metnim bağlantılı."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "İş kelimelerini doğru kullandım: die Schicht, die Kasse, der Kollege, frei haben, nacharbeiten."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "İlgi cümlesi: einen Termin, den ich nicht verschieben kann (fiil sonda)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "deshalb'dan sonra fiil hemen gelir: Deshalb kann ich nicht kommen."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede",
+      "items": [
+        {
+          "de": "Liebe Frau … / Sehr geehrte Frau …,",
+          "tr": "Sevgili … Hanım / Sayın … Hanım,"
+        }
+      ]
+    },
+    {
+      "group": "Um etwas bitten",
+      "items": [
+        {
+          "de": "ich habe eine Bitte: …",
+          "tr": "bir ricam var: …"
+        },
+        {
+          "de": "Ich brauche nächste Woche einen freien Tag.",
+          "tr": "Gelecek hafta bir gün izne ihtiyacım var."
+        },
+        {
+          "de": "Ist das für Sie in Ordnung?",
+          "tr": "Bu sizin için uygun mu?"
+        }
+      ]
+    },
+    {
+      "group": "Eine Lösung anbieten",
+      "items": [
+        {
+          "de": "Mein Kollege würde meine Schicht übernehmen.",
+          "tr": "İş arkadaşım vardiyamı devralır."
+        },
+        {
+          "de": "Die Stunden kann ich am Samstag nacharbeiten.",
+          "tr": "Saatleri cumartesi günü telafi edebilirim."
+        }
+      ]
+    },
+    {
+      "group": "Schluss",
+      "items": [
+        {
+          "de": "Vielen Dank für Ihr Verständnis.",
+          "tr": "Anlayışınız için çok teşekkürler."
+        },
+        {
+          "de": "Viele Grüße",
+          "tr": "Selamlar"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Liebe Frau Wagner,\nich habe eine Bitte: Ich brauche nächste Woche einen freien Tag. Am Mittwoch habe ich um 10 Uhr einen Termin bei der Ausländerbehörde, den ich leider nicht verschieben kann. Deshalb kann ich an diesem Tag nicht zur Arbeit kommen. Ich habe schon mit meinem Kollegen Tarık gesprochen. Er hat am Mittwoch frei und würde meine Schicht an der Kasse gern übernehmen. Die Stunden kann ich am Samstag nacharbeiten, denn da habe ich normalerweise frei. Ist das für Sie in Ordnung? Vielen Dank für Ihr Verständnis.\nViele Grüße\nSelin Aydın",
+    "notes": [
+      "Dört madde: sebep (freier Tag, Termin bei der Ausländerbehörde), gün (am Mittwoch), yerime kim (Kollege Tarık übernimmt die Schicht), telafi (am Samstag nacharbeiten).",
+      "Sadece istemiyor, çözüm de sunuyor; bu metni bağlantılı ve ikna edici yapıyor.",
+      "mit meinem Kollegen: mit + Dativ, Kollege n-çekimli (Kollegen)."
+    ]
+  }
+}

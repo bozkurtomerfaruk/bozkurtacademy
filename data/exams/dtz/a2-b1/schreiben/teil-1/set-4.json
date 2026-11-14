@@ -1,0 +1,130 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-4",
+  "title": "Falsche Lieferung",
+  "minutes": 30,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-formal",
+  "examChoice": true,
+  "situation": "Sie haben im Internet bei der Firma „Wohnwelt“ eine Lampe bestellt. Sie haben aber ein falsches Paket bekommen. Schreiben Sie an den Kundenservice.",
+  "task": "Schreiben Sie etwas zu folgenden Punkten:",
+  "points": [
+    "Grund für Ihr Schreiben",
+    "Was Sie bestellt und was Sie bekommen haben",
+    "Was die Firma tun soll",
+    "Wie man Sie erreichen kann"
+  ],
+  "instructions": "Vergessen Sie nicht die Anrede und den Gruß. Zeigen Sie, was Sie können: Schreiben Sie möglichst viel.",
+  "words": {
+    "target": 80,
+    "min": 60,
+    "max": 120,
+    "recommended": true,
+    "veryShort": 40
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: neden yazdığım, ne sipariş ettiğim ve ne geldiği, firmanın ne yapması gerektiği, bana nasıl ulaşılacağı."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Hitap (Sehr geehrte Damen und Herren,) ve selam (Mit freundlichen Grüßen + adım) var; Betreff gerekmiyor."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Firmaya resmî ve kibar yazdım: Sie ile; kızgın ama saygılı (Bitte schicken Sie mir …)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümleleri bağladım: weil, aber, sondern, und."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Maddeleri numaralamadım ve her maddeye tek cümle yazıp geçmedim; metnim bağlantılı."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Geçmişi Perfekt ile anlattım: Ich habe … bestellt. Das Paket ist angekommen."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "nicht/kein … sondern: Im Paket war keine Lampe, sondern ein Wecker."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Alışveriş kelimeleri: die Bestellung, das Paket, zurückschicken, kostenlos."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede",
+      "items": [
+        {
+          "de": "Sehr geehrte Damen und Herren,",
+          "tr": "Sayın Bayanlar ve Baylar,"
+        }
+      ]
+    },
+    {
+      "group": "Das Problem beschreiben",
+      "items": [
+        {
+          "de": "es gibt ein Problem mit meiner Bestellung.",
+          "tr": "siparişimle ilgili bir sorun var."
+        },
+        {
+          "de": "Am … habe ich bei Ihnen … bestellt.",
+          "tr": "… tarihinde sizden … sipariş ettim."
+        },
+        {
+          "de": "Im Paket war aber kein/keine …, sondern …",
+          "tr": "Ama pakette … değil, … vardı."
+        }
+      ]
+    },
+    {
+      "group": "Eine Lösung verlangen",
+      "items": [
+        {
+          "de": "Bitte schicken Sie mir die richtige Ware.",
+          "tr": "Lütfen bana doğru ürünü gönderin."
+        },
+        {
+          "de": "Wie kann ich das Paket kostenlos zurückschicken?",
+          "tr": "Paketi ücretsiz nasıl geri gönderebilirim?"
+        },
+        {
+          "de": "Sie erreichen mich per E-Mail oder telefonisch.",
+          "tr": "Bana e-postayla ya da telefonla ulaşabilirsiniz."
+        }
+      ]
+    },
+    {
+      "group": "Schluss",
+      "items": [
+        {
+          "de": "Ich hoffe auf eine schnelle Antwort.",
+          "tr": "Hızlı bir cevap bekliyorum."
+        },
+        {
+          "de": "Mit freundlichen Grüßen",
+          "tr": "Saygılarımla"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Sehr geehrte Damen und Herren,\nich schreibe Ihnen, weil es ein Problem mit meiner Bestellung gibt. Am 3. März habe ich bei Ihnen eine weiße Stehlampe für 49 Euro bestellt. Gestern ist das Paket angekommen, aber darin war keine Lampe, sondern ein Wecker. Den Wecker habe ich nicht bestellt und möchte ihn auch nicht behalten. Bitte schicken Sie mir die richtige Lampe und teilen Sie mir mit, wie ich den Wecker kostenlos zurückschicken kann. Sie erreichen mich per E-Mail oder nachmittags nach 16 Uhr telefonisch; meine Nummer steht in der Bestellung. Ich hoffe auf eine schnelle Antwort.\nMit freundlichen Grüßen\nHasan Yıldız",
+    "notes": [
+      "Dört madde: sebep (Problem mit meiner Bestellung), sipariş ve gelen (Stehlampe bestellt, Wecker bekommen), istek (richtige Lampe schicken, Wecker zurückschicken), ulaşım (per E-Mail oder telefonisch nach 16 Uhr).",
+      "Şikâyet de kibar yazılır: Bitte schicken Sie mir … / Ich hoffe auf eine schnelle Antwort.",
+      "keine Lampe, sondern ein Wecker: olumsuzdan sonra 'ama, bilakis' anlamında sondern."
+    ]
+  }
+}

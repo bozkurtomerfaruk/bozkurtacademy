@@ -164,6 +164,48 @@ describe('Schreiben Worker', () => {
     assert.ok(commits[1].writes.some((w) => w.update.fields.aiFeedback));
   });
 
+  test('DTZ: görev adı ve talimat (Betreff istenmez, du büyük ya da küçük)', async () => {
+    docs['users/ayse1234567/writings/w123456789012'] = { exam: 'dtz', level: 'a2-b1', teil: 1, set: 'set-1', text: TEXT, words: 20 };
+    await call();
+    const sent = aiCalls[0].input.messages[1].content;
+    assert.ok(sent.startsWith('Görev: DTZ A2-B1 · Teil 1 · Neue Wohnung\n'), sent.slice(0, 60));
+    assert.ok(fetchLog.some((f) => f.url.endsWith('/data/exams/dtz/a2-b1/schreiben/teil-1/set-1.json')));
+    assert.match(PROMPT, /DTZ \(görev adında "DTZ" geçiyorsa/);
+    assert.match(PROMPT, /Betreff yoksa hata sayma/);
+    assert.match(PROMPT, /du, dich, dein, dir büyük ya da küçük yazılabilir/);
+  });
+
+  test('du/Du: sadece büyük-küçük harfi değiştiren öneri atılır; başka kelimenin harfi değişiyorsa kalır', () => {
+    const text = 'Liebe Olga,\nich hoffe, dass der Lärm stört Dich nicht. Wenn Du Lust hast, komm vorbei. das Fest wird schön.';
+    const r = cleanResult(JSON.stringify({ fehler: [
+      { original: 'Dich', korrektur: 'dich', erklaerung: 'yanlış kural' },
+      { original: 'Wenn Du Lust hast', korrektur: 'Wenn du Lust hast', erklaerung: 'yanlış kural' },
+      { original: 'dass der Lärm stört Dich nicht', korrektur: 'dass der Lärm dich nicht stört', erklaerung: 'Yan cümlede fiil sonda.' },
+      { original: 'das Fest', korrektur: 'Das Fest', erklaerung: 'Cümle başı büyük harf.' }
+    ], korrigierter_text: 'x' }), text);
+    assert.deepEqual(r.errors.map((e) => e.original), ['dass der Lärm stört Dich nicht', 'das Fest']);
+  });
+
+  test('hitaptan sonraki büyük harf: model satırı başka hata için düzeltip büyük harfi bıraktıysa aynı madde düzeltilir', () => {
+    const text = 'Hallo Herr Schulz,\nEs tut mir leid, aber am Donnerstag ich bin nicht zu Hause.\nViele Grüße\nDeniz';
+    const r = cleanResult(JSON.stringify({ fehler: [
+      { original: 'Es tut mir leid, aber am Donnerstag ich bin nicht zu Hause.', korrektur: 'Es tut mir leid, aber am Donnerstag bin ich nicht zu Hause.', erklaerung: 'Zaman ifadesinden sonra fiil gelir.' }
+    ], korrigierter_text: 'x' }), text);
+    assert.equal(r.errors.length, 1);
+    assert.equal(r.errors[0].korrektur, 'es tut mir leid, aber am Donnerstag bin ich nicht zu Hause.');
+    assert.match(r.errors[0].erklaerung, /Zaman ifadesinden sonra fiil gelir\. Hitap virgülle bittiği için/);
+  });
+
+  test('açıklamasında "hata değildir / hata sayılmaz" diyen madde atılır', () => {
+    const text = 'Liebe Lena,\nder Freitag ist für mich besser. Ich habe kein Zeit. Bis bald';
+    const r = cleanResult(JSON.stringify({ fehler: [
+      { original: 'der Freitag ist für mich besser', korrektur: 'Freitag ist für mich besser', erklaerung: 'Artikelsiz daha doğal; fakat bu bir hata değildir.' },
+      { original: 'Bis bald', korrektur: 'Bis bald,', erklaerung: 'Bu kullanım da hata sayılmaz.' },
+      { original: 'kein Zeit', korrektur: 'keine Zeit', erklaerung: 'Zeit dişildir: keine Zeit.' }
+    ], korrigierter_text: 'x' }), text);
+    assert.deepEqual(r.errors.map((e) => e.original), ['kein Zeit']);
+  });
+
   test('directAllowed', () => {
     assert.equal(directAllowed({ minor: false }), true);
     assert.equal(directAllowed({ minor: true, aiConsent: { given: true } }), false);

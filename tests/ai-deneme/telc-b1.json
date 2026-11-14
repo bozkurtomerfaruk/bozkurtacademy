@@ -1,0 +1,106 @@
+{
+  "about": "Yapay zekâ denemesi (telc B1). errors: bulunması gereken hatalı yer (wrong) ve düzeltmede geçmesi gereken parça (fix; liste ise biri yeter); clean: doğru olan, işaretlenmemesi gereken yerler. Çalıştırma: scripts/ai-deneme.mjs.",
+  "exam": "telc",
+  "level": "b1",
+  "teil": 1,
+  "texts": [
+    {
+      "id": "telc-1",
+      "set": "set-1",
+      "note": "Arkadaşa cevap; Betreff doğru, weil ve fiil yeri",
+      "text": "Betreff: Dein Umzug\nLieber Jonas,\ndas ist eine tolle Nachricht! Ich empfehle dir den Stadtteil Nordstadt, weil dort gibt es viele Geschäfte. Eine Wohnung findest du am besten im Internet. Ohne Auto ist das kein Problem, denn du kannst mit der Straßenbahn fahren. Nach dem Umzug wir treffen uns sofort!\nViele Grüße\nMurat",
+      "errors": [
+        {
+          "wrong": "weil dort gibt es viele Geschäfte",
+          "fix": "Geschäfte gibt"
+        },
+        {
+          "wrong": "Nach dem Umzug wir treffen uns",
+          "fix": "treffen wir uns"
+        }
+      ],
+      "clean": [
+        "Betreff: Dein Umzug",
+        "denn du kannst mit der Straßenbahn fahren"
+      ]
+    },
+    {
+      "id": "telc-2",
+      "set": "set-2",
+      "note": "Hatasız metin; Betreff ve tarih artikelle (hata sayılmamalı)",
+      "text": "Betreff: Eure Hochzeit\nLiebe Sophie,\nherzlichen Glückwunsch! Natürlich komme ich zu eurer Hochzeit. Ich möchte euch eine Kaffeemaschine schenken. Bei der Vorbereitung kann ich helfen: Ich backe gern einen Kuchen. Ich übernachte in einem Hotel in der Nähe. Der 14. Juni passt mir sehr gut.\nLiebe Grüße\nElif",
+      "errors": [],
+      "clean": [
+        "Betreff: Eure Hochzeit",
+        "Der 14. Juni passt mir sehr gut",
+        "herzlichen Glückwunsch"
+      ]
+    },
+    {
+      "id": "telc-3",
+      "set": "set-4",
+      "note": "Yarı resmî; hitaptan sonra büyük harf, teilnehmen an + Dativ, dass cümlesi; Der Samstag doğru",
+      "text": "Betreff: Ausflug\nLiebe Frau Neumann,\nVielen Dank für Ihre E-Mail. Ich nehme gern an den Ausflug teil. Ich schlage vor, dass wir fahren in den Zoo. Der Samstag passt mir am besten, weil ich am Wochenende nicht arbeite. Ich kann einen Kuchen mitbringen.\nViele Grüße\nFatma Yılmaz",
+      "errors": [
+        {
+          "wrong": "Vielen",
+          "fix": "vielen"
+        },
+        {
+          "wrong": "an den Ausflug",
+          "fix": [
+            "am Ausflug",
+            "an dem Ausflug"
+          ]
+        },
+        {
+          "wrong": "dass wir fahren in den Zoo",
+          "fix": "in den Zoo fahren"
+        }
+      ],
+      "clean": [
+        "Der Samstag passt mir am besten",
+        "Betreff: Ausflug"
+      ]
+    },
+    {
+      "id": "telc-4",
+      "set": "set-3",
+      "note": "Arkadaşa; Wenn cümlesinden sonra fiil, anrufen + Akkusativ",
+      "text": "Betreff: Deutsch lernen\nHallo Ali,\nich habe Deutsch in einem Kurs gelernt und viel mit meinen Nachbarn gesprochen. Ich empfehle dir eine App und einfache Bücher. Am Anfang war die Aussprache für mich schwierig. Wenn du willst, ich kann dir am Wochenende helfen. Ruf mir einfach an!\nLiebe Grüße\nAyşe",
+      "errors": [
+        {
+          "wrong": "ich kann dir am Wochenende helfen",
+          "fix": "kann ich"
+        },
+        {
+          "wrong": "Ruf mir",
+          "fix": "Ruf mich"
+        }
+      ],
+      "clean": [
+        "Am Anfang war die Aussprache für mich schwierig"
+      ]
+    },
+    {
+      "id": "telc-5",
+      "set": "set-5",
+      "note": "Yarı resmî; sich kümmern um, passen + Dativ; Der Freitag doğru",
+      "text": "Betreff: Feier für Frau Weber\nSehr geehrter Herr Brandt,\nvielen Dank für Ihre E-Mail. Ich bin gern bei der Feier dabei. Als Geschenk schlage ich ein Fotobuch vor, weil Frau Weber gern fotografiert. Ich kann für die Getränke kümmern. Der Freitag passt mich am besten, weil ich dann frei habe.\nMit freundlichen Grüßen\nSelin Aydın",
+      "errors": [
+        {
+          "wrong": "Ich kann für die Getränke kümmern",
+          "fix": "um die Getränke"
+        },
+        {
+          "wrong": "passt mich",
+          "fix": "passt mir"
+        }
+      ],
+      "clean": [
+        "weil Frau Weber gern fotografiert",
+        "Betreff: Feier für Frau Weber"
+      ]
+    }
+  ]
+}

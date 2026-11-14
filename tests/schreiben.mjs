@@ -234,12 +234,47 @@ for (const [l, title, submit, count] of [['de', 'Dein Text', 'Abschicken und Mus
   await c2.close();
 }
 
+// 6e. DTZ: tek görev, 4 madde, Betreff yok, önerilen ~80 kelime (60–120), 40'ın altında uyarı, "sınavda iki görevden biri" notu.
+{
+  const { ctx, page } = await newPage();
+  await page.goto(B + '#exams/dtz/schreiben'); await page.waitForTimeout(1000);
+  const list = await page.textContent('#examView');
+  ok(['Die Heizung funktioniert nicht', 'Elternabend in der Schule', 'Schwimmkurs für Ihre Tochter', 'Falsche Lieferung', 'Ein freier Tag', 'Geburtstagsfeier im Haus'].every((x) => list.includes(x)), 'DTZ: 6 set listede');
+  const d1 = JSON.parse(fs.readFileSync('data/exams/dtz/a2-b1/schreiben/teil-1/set-1.json', 'utf8'));
+  await page.goto(B + '#exams/dtz/schreiben/1/set-1'); await page.waitForTimeout(1000);
+  ok(await page.locator('.wt-points li').count() === 4 && (await page.textContent('.wt-task')).includes('Herrn Brandt') && (await page.textContent('.wt-instructions')).includes('Anrede und den Gruß'), 'DTZ: durum, 4 madde, "Anrede und Gruß" yönergesi');
+  ok((await page.textContent('[data-wt-choice]')).includes('iki görevden (Aufgabe A ya da B) birini seçersin'), 'DTZ: "gerçek sınavda iki görevden birini seçersin" notu');
+  ok((await page.textContent('.task-meta')).includes('Önerilen uzunluk: yaklaşık 80 kelime (resmî sınır yok)') && (await page.textContent('.task-meta')).includes('30'), 'DTZ: önerilen ~80 kelime ve 30 dk');
+  const hint = await page.getAttribute('#wtText', 'placeholder');
+  ok(!hint.includes('Betreff') && hint.startsWith('Liebe Frau'), `DTZ: ipucunda Betreff yok (${hint})`);
+  ok(await page.locator('.wt-mail').count() === 0, 'DTZ: gelen e-posta kartı yok');
+  ok((await page.textContent('.wt-checklist')).includes('Maddeleri numaralamadım ve her maddeye tek cümle yazıp geçmedim; metnim bağlantılı.'), 'DTZ: kontrol listesinde "numaralamadım, metnim bağlantılı" maddesi');
+  for (const [n, cls, text] of [[39, 'is-very-short', '40 kelimenin altında'], [40, 'is-short', '60–120'], [59, 'is-short', '60–120'], [60, 'is-ok', ''], [120, 'is-ok', ''], [121, 'is-long', '']]) {
+    await page.fill('#wtText', words(n));
+    ok((await page.getAttribute('[data-wt-state]', 'class')).includes(cls) && (await page.textContent('[data-wt-state]')).includes(text), `DTZ: ${n} kelime → ${cls}`);
+  }
+  ok(!(await page.getAttribute('[data-wt-state]', 'class')).includes('is-very-short'), 'DTZ: uzun metinde "çok kısa" uyarısı yok');
+  await page.fill('#wtText', words(20)); await page.click('[data-wt-submit]'); await page.waitForTimeout(400);
+  ok(await page.locator('[data-wt-result]').count() === 1, 'DTZ: 40 kelimenin altında da gönderilebiliyor (uyarı engellemiyor)');
+  ok((await page.textContent('.wt-cols')).includes('Sehr geehrter Herr Brandt,') && !(await page.textContent('.wt-cols')).includes('Betreff'), 'DTZ: örnek cevap hitapla başlıyor, Betreff yok');
+  ok(await page.locator('a.task-next[href="#exams/dtz/schreiben/1/set-2"]').count() === 1, 'DTZ: sonraki set');
+  ok(d1.model.text.startsWith('Sehr geehrter Herr Brandt,'), 'DTZ: set dosyası');
+  await ctx.close();
+  for (const [lang, meta, choice, short] of [['de', 'Empfohlene Länge', 'In der echten Prüfung wählst du eine von zwei Aufgaben', 'Unter 40 Wörtern'], ['en', 'Suggested length', 'In the real exam you choose one of two tasks', 'Under 40 words']]) {
+    const { ctx: c2, page: p2 } = await newPage({ lang });
+    await p2.goto(B + '#exams/dtz/schreiben/1/set-3'); await p2.waitForTimeout(1000);
+    await p2.fill('#wtText', words(10));
+    ok((await p2.textContent('.task-meta')).includes(meta) && (await p2.textContent('[data-wt-choice]')).includes(choice) && (await p2.textContent('[data-wt-state]')).includes(short), `${lang}: DTZ metinleri çevrili`);
+    await c2.close();
+  }
+}
+
 // 7. 390 / 1440, açık / koyu.
 for (const width of [390, 1440]) {
   for (const theme of ['light', 'dark']) {
-    for (const teil of ['b1/schreiben/2/set-1', 'b1/schreiben/3/set-1', 'a1/schreiben/1/set-3', 'a1/schreiben/2/set-1', 'telc-b1']) {
+    for (const teil of ['b1/schreiben/2/set-1', 'b1/schreiben/3/set-1', 'a1/schreiben/1/set-3', 'a1/schreiben/2/set-1', 'telc-b1', 'dtz']) {
       const { ctx, page } = await newPage({ width, theme });
-      await page.goto(B + (teil === 'telc-b1' ? '#exams/telc/b1/schreiben/1/set-2' : `#exams/goethe/${teil}`)); await page.waitForTimeout(1200);
+      await page.goto(B + (teil === 'telc-b1' ? '#exams/telc/b1/schreiben/1/set-2' : teil === 'dtz' ? '#exams/dtz/schreiben/1/set-6' : `#exams/goethe/${teil}`)); await page.waitForTimeout(1200);
       const name = teil.replace(/\/schreiben\/(\d)\/set-\d/, '-teil$1');
       if (teil.startsWith('a1/schreiben/1')) { await page.fill('#ft-1', 'drei'); await page.fill('#ft-2', 'Goethestrase 7'); await page.check('input[name="ft-4"][value="vormittags"]'); await page.click('[data-ft-check]'); await page.waitForTimeout(400); }
       ok(await overflow(page) <= 0, `${width} ${theme} ${name}: taşma yok`);

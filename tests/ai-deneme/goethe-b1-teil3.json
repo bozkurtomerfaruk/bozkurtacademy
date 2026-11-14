@@ -1,0 +1,98 @@
+{
+  "about": "Yapay zekâ denemesi (Goethe B1 Teil 3). errors: bulunması gereken hatalı yer (wrong) ve düzeltmede geçmesi gereken parça (fix; liste ise biri yeter); clean: doğru olan, işaretlenmemesi gereken yerler. Çalıştırma: scripts/ai-deneme.mjs.",
+  "exam": "goethe",
+  "level": "b1",
+  "teil": 3,
+  "texts": [
+    {
+      "id": "b1t3-1",
+      "set": "set-1",
+      "note": "Ev sahibine; weil cümlesi, Dativ",
+      "text": "Sehr geehrter Herr Schulz,\nleider kann ich am Donnerstagvormittag nicht zu Hause sein, weil ich habe einen Termin beim Arzt. Das tut mich sehr leid. Können wir den Termin auf Freitag verschieben? Ich bin ab 10 Uhr zu Hause.\nMit freundlichen Grüßen\nElif Kaya",
+      "errors": [
+        {
+          "wrong": "weil ich habe einen Termin beim Arzt",
+          "fix": "beim Arzt habe"
+        },
+        {
+          "wrong": "tut mich",
+          "fix": "tut mir"
+        }
+      ],
+      "clean": [
+        "Sehr geehrter Herr Schulz",
+        "Mit freundlichen Grüßen"
+      ]
+    },
+    {
+      "id": "b1t3-2",
+      "set": "set-2",
+      "note": "Şefe du (resmiyet hatası); Liebe Frau … doğru",
+      "text": "Liebe Frau Wagner,\nich kann morgen leider nicht zur Teambesprechung kommen. Mein Sohn ist krank und ich muss mit ihm zum Arzt gehen. Kannst du mir bitte das Protokoll schicken? Ich bin ab Mittag wieder im Büro.\nViele Grüße\nSelin Aydın",
+      "errors": [
+        {
+          "wrong": "Kannst du mir",
+          "fix": "Sie"
+        }
+      ],
+      "clean": [
+        "Liebe Frau Wagner",
+        "Viele Grüße"
+      ]
+    },
+    {
+      "id": "b1t3-3",
+      "set": "set-3",
+      "note": "Hatasız metin",
+      "text": "Liebe Frau Becker,\nvielen Dank für Ihre Einladung! Leider kann ich am Samstagabend nicht kommen, weil meine Eltern zu Besuch sind. Ich gratuliere Ihnen herzlich zum Geburtstag. Darf ich Sie am Sonntag kurz besuchen und Ihnen ein Geschenk bringen?\nViele Grüße\nMurat Şahin",
+      "errors": [],
+      "clean": [
+        "weil meine Eltern zu Besuch sind",
+        "Darf ich Sie am Sonntag kurz besuchen"
+      ]
+    },
+    {
+      "id": "b1t3-4",
+      "set": "set-1",
+      "note": "Hitaptan sonra büyük harf, fiil yeri, Tschüss; Hallo Herr … ve Der Freitag doğru",
+      "text": "Hallo Herr Schulz,\nEs tut mir leid, aber am Donnerstag ich bin nicht zu Hause. Ich muss bis 14 Uhr arbeiten. Passt Ihnen der Freitag? Der Freitag ist für mich besser.\nTschüss\nDeniz Yılmaz",
+      "errors": [
+        {
+          "wrong": "Es",
+          "fix": "es"
+        },
+        {
+          "wrong": "am Donnerstag ich bin",
+          "fix": "bin ich"
+        },
+        {
+          "wrong": "Tschüss",
+          "fix": "Grüß"
+        }
+      ],
+      "clean": [
+        "Hallo Herr Schulz",
+        "Der Freitag ist für mich besser"
+      ]
+    },
+    {
+      "id": "b1t3-5",
+      "set": "set-2",
+      "note": "teilnehmen an + Dativ, danken + Dativ",
+      "text": "Sehr geehrte Frau Wagner,\nich möchte mich entschuldigen: Morgen kann ich nicht an die Besprechung teilnehmen. Mein Sohn hat Fieber und ich muss zu Hause bleiben. Könnten Sie mich bitte informieren, was Sie besprochen haben? Ich danke Sie für Ihr Verständnis.\nMit freundlichen Grüßen\nAyşe Demir",
+      "errors": [
+        {
+          "wrong": "an die Besprechung",
+          "fix": "an der Besprechung"
+        },
+        {
+          "wrong": "danke Sie",
+          "fix": "danke Ihnen"
+        }
+      ],
+      "clean": [
+        "was Sie besprochen haben"
+      ]
+    }
+  ]
+}

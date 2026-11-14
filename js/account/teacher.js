@@ -69,9 +69,10 @@ async function renderAiMode(){
     catch(error){ console.error(error); status.textContent = 'Kaydedilemedi. Tekrar dene.'; }
     finally{ select.disabled = false; }
   });
-  box.replaceChildren(h('label', { for: 'aiModeSelect' }, h('strong', {}, 'Schreiben yapay zekâ kontrolü')), select, status,
+  // replaceChildren null'ı "null" yazısına çevirir; boş öğeler ayıklanır.
+  box.replaceChildren(...[h('label', { for: 'aiModeSelect' }, h('strong', {}, 'Schreiben yapay zekâ kontrolü')), select, status,
     h('span', { class: 'acc-sub', 'data-ai-mode-hint': '' }, 'Anında göster: öğrenci geri bildirimi görev sayfasında hemen görür; sen sadece işaretlenen maddelere ve yapay zekânın kontrol edemediği yazılara bakarsın. 16 yaş altında veli onayı eski formla alınmışsa sonuç yine taslak olarak sana gelir.'),
-    AI_WORKER_URL ? null : h('span', { class: 'acc-sub' }, 'Worker henüz kurulmadı (docs/yapay-zeka-kurulum.md); kurulana kadar kontrol yapılmaz.'));
+    AI_WORKER_URL ? null : h('span', { class: 'acc-sub' }, 'Worker henüz kurulmadı (docs/yapay-zeka-kurulum.md); kurulana kadar kontrol yapılmaz.')].filter(Boolean));
   box.hidden = false;
 }
 

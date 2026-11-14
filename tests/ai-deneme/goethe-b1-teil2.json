@@ -1,0 +1,104 @@
+{
+  "about": "Yapay zekâ denemesi (Goethe B1 Teil 2). errors: bulunması gereken hatalı yer (wrong) ve düzeltmede geçmesi gereken parça (fix; liste ise biri yeter); clean: doğru olan, işaretlenmemesi gereken yerler. Çalıştırma: scripts/ai-deneme.mjs.",
+  "exam": "goethe",
+  "level": "b1",
+  "teil": 2,
+  "texts": [
+    {
+      "id": "b1t2-1",
+      "set": "set-1",
+      "note": "Forum; dass cümlesi, Meiner Meinung nach ve Trotzdem sonrası fiil",
+      "text": "Ich finde, dass Kinder brauchen kein eigenes Smartphone. Meiner Meinung nach neun Jahre ist zu früh. Viele Kinder spielen stundenlang und machen ihre Hausaufgaben nicht. Trotzdem ein Handy kann nützlich sein, zum Beispiel für den Schulweg. Die Eltern sollten deshalb feste Regeln machen.",
+      "errors": [
+        {
+          "wrong": "dass Kinder brauchen kein eigenes Smartphone",
+          "fix": "Smartphone brauchen"
+        },
+        {
+          "wrong": "Meiner Meinung nach neun Jahre ist",
+          "fix": [
+            "ist neun Jahre",
+            "sind neun Jahre"
+          ]
+        },
+        {
+          "wrong": "Trotzdem ein Handy kann",
+          "fix": "kann ein Handy"
+        }
+      ],
+      "clean": [
+        "Die Eltern sollten deshalb feste Regeln machen"
+      ]
+    },
+    {
+      "id": "b1t2-2",
+      "set": "set-2",
+      "note": "Forum; Hallo zusammen doğru, Deshalb ve Für mich sonrası fiil",
+      "text": "Hallo zusammen,\nich arbeite auch oft im Homeoffice und finde das gut. Man spart viel Zeit, weil man nicht mit dem Bus fahren muss. Aber es gibt auch Nachteile: Ich vermisse meine Kollegen und zu Hause kann ich mich nicht gut konzentrieren. Deshalb ich gehe zwei Tage pro Woche ins Büro. Für mich das ist die beste Lösung.",
+      "errors": [
+        {
+          "wrong": "Deshalb ich gehe",
+          "fix": "gehe ich"
+        },
+        {
+          "wrong": "Für mich das ist",
+          "fix": "ist das"
+        }
+      ],
+      "clean": [
+        "Hallo zusammen",
+        "weil man nicht mit dem Bus fahren muss"
+      ]
+    },
+    {
+      "id": "b1t2-3",
+      "set": "set-3",
+      "note": "Forum; Außerdem sonrası fiil, yazım",
+      "text": "Ich kaufe nicht gern im Internet ein. Im Geschäft kann ich die Kleidung anprobieren und der Verkäufer hilft mir. Online-Shopping ist zwar bequehm, aber man muss oft Pakete zurückschicken. Außerdem die kleinen Läden in der Stadt verlieren ihre Kunden. Ich habe letzte Woche eine Jacke bestellt, aber sie hat mir nicht gepasst. Ich bin dagegen, dass man alles online kauft.",
+      "errors": [
+        {
+          "wrong": "bequehm",
+          "fix": "bequem"
+        },
+        {
+          "wrong": "Außerdem die kleinen Läden in der Stadt verlieren",
+          "fix": "verlieren die kleinen Läden"
+        }
+      ],
+      "clean": [
+        "dass man alles online kauft",
+        "Ich kaufe nicht gern im Internet ein"
+      ]
+    },
+    {
+      "id": "b1t2-4",
+      "set": "set-1",
+      "note": "Hatasız forum yazısı; hitap ve imza yok (hata sayılmamalı)",
+      "text": "Ich bin anderer Meinung. Meiner Meinung nach ist ein Smartphone für Kinder nicht nur gefährlich, sondern auch nützlich. Mein Sohn ist zehn und hat seit einem Jahr ein Handy. Er kann mich anrufen, wenn er später nach Hause kommt. Natürlich gibt es bei uns Regeln: Beim Essen und nach 20 Uhr bleibt das Handy aus. Wenn Eltern ihre Kinder begleiten, sehe ich kein Problem.",
+      "errors": [],
+      "clean": [
+        "Meiner Meinung nach ist ein Smartphone",
+        "sehe ich kein Problem"
+      ]
+    },
+    {
+      "id": "b1t2-5",
+      "set": "set-2",
+      "note": "Forum; Wenn cümlesinden sonra fiil, keinen",
+      "text": "Ich glaube, Homeoffice ist nicht für alle gut. Wenn man kleine Kinder hat, man kann zu Hause nicht ruhig arbeiten. Mein Mann arbeitet seit einem Jahr zu Hause und er hat kein Kontakt mit seinen Kollegen. Das finde ich schade. Die Firmen sollten den Mitarbeitern die Wahl lassen.",
+      "errors": [
+        {
+          "wrong": "man kann zu Hause nicht ruhig arbeiten",
+          "fix": "kann man"
+        },
+        {
+          "wrong": "kein Kontakt",
+          "fix": "keinen Kontakt"
+        }
+      ],
+      "clean": [
+        "Das finde ich schade"
+      ]
+    }
+  ]
+}

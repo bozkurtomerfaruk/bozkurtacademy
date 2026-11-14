@@ -1,0 +1,92 @@
+{
+  "about": "Yapay zekâ denemesi (Goethe A1 Teil 2). errors: bulunması gereken hatalı yer (wrong) ve düzeltmede geçmesi gereken parça (fix; liste ise biri yeter); clean: doğru olan, işaretlenmemesi gereken yerler. Çalıştırma: scripts/ai-deneme.mjs.",
+  "exam": "goethe",
+  "level": "a1",
+  "teil": 2,
+  "texts": [
+    {
+      "id": "a1t2-1",
+      "set": "set-1",
+      "note": "A1; fiil çekimi, soru cümlesi",
+      "text": "Liebe Sara,\nich möchte am Samstag mit dir kochen. Kommst du um 18 Uhr zu mir? Ich wohnen in der Gartenstraße 5. Was du bringst mit?\nViele Grüße\nElif",
+      "errors": [
+        {
+          "wrong": "Ich wohnen",
+          "fix": "wohne"
+        },
+        {
+          "wrong": "Was du bringst mit",
+          "fix": "bringst du mit"
+        }
+      ],
+      "clean": [
+        "Kommst du um 18 Uhr zu mir"
+      ]
+    },
+    {
+      "id": "a1t2-2",
+      "set": "set-2",
+      "note": "A1; hitaptan sonra büyük harf, Dann sonrası fiil",
+      "text": "Hallo Max,\nIch kann morgen nicht ins Kino kommen. Ich bin krank und habe Fieber. Hast du am Samstag Zeit? Dann wir gehen zusammen.\nLiebe Grüße\nMurat",
+      "errors": [
+        {
+          "wrong": "Ich",
+          "fix": "ich"
+        },
+        {
+          "wrong": "Dann wir gehen",
+          "fix": "gehen wir"
+        }
+      ],
+      "clean": [
+        "Hast du am Samstag Zeit"
+      ]
+    },
+    {
+      "id": "a1t2-3",
+      "set": "set-3",
+      "note": "A1; öğretmene du (resmiyet hatası)",
+      "text": "Liebe Frau Roth,\nich bin krank und kann morgen nicht kommen. Ich bleibe drei Tage zu Hause. Was ist die Hausaufgabe? Kannst du mir eine E-Mail schreiben?\nViele Grüße\nAyşe Demir",
+      "errors": [
+        {
+          "wrong": "Kannst du mir",
+          "fix": "Sie"
+        }
+      ],
+      "clean": [
+        "Was ist die Hausaufgabe"
+      ]
+    },
+    {
+      "id": "a1t2-4",
+      "set": "set-1",
+      "note": "Hatasız, basit A1 metni (güzelleştirme önerilmemeli)",
+      "text": "Liebe Sara,\nam Samstag koche ich Pizza. Möchtest du kommen? Wir essen um 19 Uhr bei mir. Bringst du bitte einen Salat mit?\nLiebe Grüße\nDeniz",
+      "errors": [],
+      "clean": [
+        "am Samstag koche ich Pizza",
+        "Bringst du bitte einen Salat mit"
+      ]
+    },
+    {
+      "id": "a1t2-5",
+      "set": "set-2",
+      "note": "A1; mastar cümle sonunda (kommen), ins Kino",
+      "text": "Lieber Max,\nich kann nicht kommen morgen. Ich muss bis 20 Uhr arbeiten. Gehen wir am Sonntag in Kino?\nViele Grüße\nElif",
+      "errors": [
+        {
+          "wrong": "kann nicht kommen morgen",
+          "fix": "morgen nicht kommen"
+        },
+        {
+          "wrong": "in Kino",
+          "fix": "ins Kino"
+        }
+      ],
+      "clean": [
+        "Lieber Max",
+        "Ich muss bis 20 Uhr arbeiten"
+      ]
+    }
+  ]
+}

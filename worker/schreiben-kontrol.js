@@ -29,13 +29,18 @@ Görev: Öğrencinin Almanca metnindeki gerçek dil bilgisi, yazım ve noktalama
 Kullanıcı mesajının ilk satırları görev adı ("Görev: …") ve metin türüdür ("Metin türü: …"); sadece "Metin:" satırından sonraki metni düzelt.
 Kurallar:
 - Sadece gerçek hataları işaretle. Doğru cümleler ve üslup tercihleri hata DEĞİLDİR. Özel isimler hata değildir.
+- Doğru bir cümleye daha "doğal" ya da daha "tam" olsun diye kelime ekleme ve kelime çıkarma (ör. "Ich möchte meine Tochter anmelden." doğrudur; "für den Kurs" ekleme). Kendi açıklamanda "hata değildir" diyeceğin şeyi listeye hiç yazma.
+- Her maddede sadece hatalı kısmı (birkaç kelime ya da tek cümle) yaz; bütün paragrafı tek madde yapma.
 - Her hata için: metindeki yanlış kısım (aynen), düzeltmesi ve TÜRKÇE kısa bir açıklama (1–2 cümle, yeni başlayan biri için, kuralı söyle; ör. "weil'den sonra çekimli fiil cümlenin sonuna gider").
 - Açıklamalar mutlaka Türkçe olsun; Almanca kelimeleri sadece örnek olarak kullan.
 Fiil sırası (açıklamalarda hangi cümle türü olduğunu söyle; "fiil her zaman ikinci sırada" gibi genelleme yapma):
 - Ana cümlede (düz cümle) çekimli fiil 2. sıradadır: Heute koche ich …, Trotzdem bleibt er …
+- Cümle dann, deshalb, trotzdem, außerdem, leider, danach ya da bir zaman/yer ifadesiyle başlıyorsa hemen arkasından çekimli fiil gelir, özne ondan sonra: "Dann wir gehen" yanlış → "Dann gehen wir"; "Deshalb ich komme" yanlış → "Deshalb komme ich". Kısa A1 cümlelerinde de bunu mutlaka işaretle.
 - Yan cümlede (weil, dass, wenn, ob, als, dolaylı soru …) çekimli fiil sondadır: …, weil es regnet.
+- Her dass, weil, wenn, ob cümlesini tek tek kontrol et: çekimli fiil nesneden, zamirden ya da nicht'ten önce duruyorsa hatadır ("…, dass der Lärm stört dich nicht" → "…, dass der Lärm dich nicht stört"). Açıklamada o cümledeki bağlacı söyle (dass cümlesinde "dass'tan sonra", weil cümlesinde "weil'den sonra").
 - Yan cümle başa gelirse ana cümlenin çekimli fiili hemen arkasından gelir: Wenn es regnet, bleibe ich zu Hause.
 - Evet/hayır sorularında ve emir cümlelerinde çekimli fiil 1. sıradadır: Hast du Hunger? Mach das Fenster zu!
+- Soru kelimesiyle başlayan sorularda (Wann, Wo, Was, Wie, Warum …) çekimli fiil 2. sıradadır, soru kelimesinin hemen arkasında: Wann findet der Kurs statt? Açıklamada "1. sırada" deme.
 - und, aber, oder, denn, sondern'den sonra ana cümle sırası değişmez: …, denn er ist krank.
 - Başka bir öğe başa alınabilir (nesne, Partizip, yan cümle); fiil 2. sıradaysa bu hata DEĞİLDİR.
 - Konuşma dilinde der, die, das gösterme zamiri olarak ana cümlenin öznesi olabilir (ör. "Der ist nett.", "Das weiß ich nicht."); bunları hata sayma ve ilgi cümlesi (Relativsatz) sanma.
@@ -43,14 +48,19 @@ Hâl adları (her açıklamada aynen bunları kullan, başka karşılık uydurma
 - Nominativ = yalın hâl, Akkusativ = -i hâli (belirtme), Dativ = -e hâli (yönelme), Genitiv = -in hâli (tamlayan).
 - "-de hâli" deme. Yer bildiren edatlarda: "Wo? (nerede?) sorusunda Dativ, Wohin? (nereye?) sorusunda Akkusativ" de.
 - Gün, ay ve mevsim adları cümlenin öznesi ya da nesnesi olunca artikelle kullanılır: "Der Samstag passt mir gut.", "Der Mai ist schön." Bunlar hata DEĞİLDİR; artikelsiz kullanım sadece "am Samstag", "im Mai" gibi zaman bildiren ifadelerde vardır.
+- Artikelsiz ya da ein/eine ile kullanılan isim kein ile olumsuz yapılır: "Im Paket war keine Lampe.", "Ich habe kein Geld." "nicht Lampe" ya da "nicht eine Lampe" yanlışsa düzeltme olarak kein/keine/keinen öner; "nicht die Lampe" yazma.
+- Özel isimlerde iyelik -s'si kesme işaretsiz yazılır: Emres Noten, Annas Auto, Frau Krügers Klasse. Bunlar doğrudur; kesme işareti ekleme. Kesme işareti sadece isim s, ß, x ya da z ile bitiyorsa gelir (Hans' Auto, Max' Buch).
+- Sabit edatlı fiillerde edatı ve hâli kontrol et: teilnehmen an + Dativ (an dem/am Ausflug, an der Besprechung teilnehmen; fiil ayrılsa da aynı: "Ich nehme am Ausflug teil."; "an den Ausflug", "an die Besprechung" yanlış), sich kümmern um + Akkusativ, sich freuen auf/über + Akkusativ, warten auf + Akkusativ, denken an + Akkusativ, helfen bei + Dativ, danken für + Akkusativ.
 - Emin olmadığın bir şeyi hata olarak gösterme; iki biçim de doğruysa (ör. nächstes Mal / das nächste Mal, zu dem / zum) hata değildir.
 - Bir kelimenin birden çok anlamı olabilir (ör. "Bank": banka ya da bank); hangi anlamda kullanıldığını cümlenin bağlamından çıkar ve cümlenin anlamını değiştiren bir düzeltme önerme.
 Metin türüne göre (sadece dil ve resmiyet hatalarını işaretle; içeriği, uzunluğu ve görevi yerine getirip getirmediğini değerlendirme):
 - E-posta metni "Betreff: …" satırıyla başlayabilir (konu satırı; telc); bu satır doğrudur, hitap onun altındadır. Betreff satırında nokta gerekmez. Hitaptan sonraki satırın küçük harfle başlaması kuralı Betreff varken de geçerlidir (Betreff: … / Lieber Jonas, / danke …).
 - E-posta ve mesajlarda hitaptan sonra virgül gelir ve sonraki satır küçük harfle başlar (Liebe Lena, / wie geht es dir?). Hitaptan sonraki ilk kelime büyük harfle yazılmışsa (Vielen Dank …, Leider …, Wie geht …) hata say; isimler ve Sie, Ihnen, Ihr hariç. Kapanış selamından (Viele Grüße, Liebe Grüße, Mit freundlichen Grüßen) sonra virgül ve nokta gelmez. Kısa kapanışlar (Grüße, Gruß, Bis bald, LG) da doğrudur; uygun kapanışı hata sayma, sadece resmiyet derecesine uymayanı işaretle. Liebe kadına, Lieber erkeğe; Sehr geehrte Frau …, Sehr geehrter Herr ….
-- Gayriresmî e-posta ve Kısa mesaj (du): arkadaşa du ile yazılır. Metinde du ile Sie karışırsa (dich/Sie, dein/Ihr) hata say. Mektupta du, dich, dein büyük ya da küçük yazılabilir; ikisi de doğru.
+- Gayriresmî e-posta ve Kısa mesaj (du): arkadaşa du ile yazılır. Metinde du ile Sie karışırsa (dich/Sie, dein/Ihr) hata say.
+- Bütün metin türlerinde: mektup ve e-postada du, dich, dir, dein, ihr, euch, euer büyük harfle de yazılabilir (Du, Dich, Dir, Dein, Euch). İki yazım da doğrudur, tek başına hata değildir. Ama içinde Du, Dich, Dir geçen cümlede başka bir hata (fiilin yeri, hâl, çekim) varsa onu yine işaretle; düzeltmede bu kelimenin yazımını öğrencinin yazdığı gibi bırak ("dass der Lärm stört Dich nicht" → "dass der Lärm Dich nicht stört").
 - Yarı resmî e-posta (Sie; tanıdık biri: kurs öğretmeni, şef, ev sahibi, komşu): Sie, Ihnen, Ihr her zaman büyük harfle. Bu kişiye du, dich, dein ya da Tschüss, Hi kullanmak resmiyet hatasıdır; açıklamada "Bu kişiye Sie ile yazılır" de. Liebe Frau … / Sehr geehrte Frau …, Hallo Frau …, Viele Grüße, Freundliche Grüße ve Mit freundlichen Grüßen burada doğrudur, hata sayma.
 - Resmî yazı (Sie; tanımadığın biri ya da kurum): Hallo, Tschüss, Liebe Grüße, du ve dein resmiyet hatasıdır; doğrusu Sehr geehrte Damen und Herren, / Sehr geehrte Frau …, ve Mit freundlichen Grüßen.
+- DTZ (görev adında "DTZ" geçiyorsa; ev sahibine, okula, şefe, komşuya ya da bir kuruma kısa yazı): Betreff (konu) satırı istenmez; Betreff yoksa hata sayma ve eklemeyi önerme, varsa da doğrudur. Tarih ve adres de gerekmez. E-posta ile mektup arasında fark gözetme. Metinde du kullanılmışsa du, dich, dein, dir büyük ya da küçük yazılabilir, ikisi de doğrudur; aynı metinde du ile Sie karışırsa hata say. DTZ'de komşuya ya da iş arkadaşına baştan sona du ile yazmak resmiyet hatası DEĞİLDİR (bu, yarı resmî kuralının önüne geçer); kuruma, firmaya ve tanımadığın birine du yine hatadır.
 - Forum yazısı (görüş): hitap ve imza gerekmez; Hallo zusammen da olabilir. Okurlara ihr ile ya da genel (man) yazmak doğrudur. Görüş kalıplarında fiil sırasına bak: Meiner Meinung nach ist … doğru, "Meiner Meinung nach ich finde" yanlış.
 Seviye A1 (görev adında "A1" geçiyorsa; kısa mesaj, yaklaşık 30 kelime):
 - Sadece açık hataları işaretle. Basit ama doğru cümleleri daha "güzel" yapmaya çalışma; bunlar hata DEĞİLDİR.
@@ -107,6 +117,10 @@ const LOWER_AFTER_GREETING = new Set(['danke', 'vielen', 'herzlichen', 'ich', 'w
   'ach', 'oh', 'na', 'ja', 'nein', 'natürlich', 'zuerst', 'seit', 'am', 'im', 'in', 'mit', 'nach', 'vor', 'zum', 'zur', 'für', 'das', 'die', 'der',
   'ein', 'eine', 'mein', 'meine', 'unser', 'unsere', 'dein', 'deine', 'hast', 'habe', 'bist', 'bin', 'kannst', 'können', 'könnten', 'möchte', 'ist',
   'sind', 'war', 'wollte', 'darf']); // sie, ihr, ihre yok: Sie, Ihr, Ihre (nezaket) büyük yazılır
+// Mektupta du, dich, dir, dein … büyük ya da küçük yazılabilir (Du/du): sadece bu harfi değiştiren öneri atılır.
+const DU_WORD = /^(du|dich|dir|dein|deine|deinen|deinem|deiner|deines|euch|euer|eure|euren|eurem|eurer)$/i;
+const onlyDuCase = (original, korrektur) => original !== korrektur && original.toLowerCase() === korrektur.toLowerCase()
+  && original.split(/\s+/).every((word, i) => { const other = korrektur.split(/\s+/)[i]; return word === other || DU_WORD.test(word.replace(/[.,!?;:]+$/, '')); });
 export function cleanResult(raw, text) {
   const s = String(raw || '');
   const from = s.indexOf('{'), to = s.lastIndexOf('}');
@@ -131,6 +145,9 @@ export function cleanResult(raw, text) {
     const erklaerung = typeof item?.erklaerung === 'string' ? item.erklaerung.trim() : '';
     if (!original || !korrektur || !erklaerung || original === korrektur || !text.includes(original) || seen.has(original)) continue;
     if (capitalizesAfterGreeting(original, korrektur)) continue;
+    if (onlyDuCase(original, korrektur)) continue;
+    // Model bazen bir maddeyi yazıp açıklamasında "bu bir hata değildir / hata sayılmaz" diyor; öyle maddeler gösterilmez.
+    if (/hata (değil|sayılmaz)/i.test(erklaerung)) continue;
     seen.add(original);
     errors.push({ original: original.slice(0, 300), korrektur: korrektur.slice(0, 300), erklaerung: erklaerung.slice(0, 600) });
     if (errors.length >= 30) break;
@@ -138,10 +155,18 @@ export function cleanResult(raw, text) {
   // Hitaptan sonraki satır büyük harfle başlıyorsa ve ilk kelime isim olamayacak sık bir kelimeyse (danke, ich, leider …)
   // model kaçırsa bile kesin kuralla eklenir. İsim, özel ad ve Sie/Ihnen/Ihr burada yoktur, onlara dokunulmaz.
   const first = (afterGreeting.match(/^\p{L}+/u) || [''])[0];
-  if (first && /^\p{Lu}/u.test(first) && LOWER_AFTER_GREETING.has(first.toLowerCase()) && !seen.has(first) && errors.length < 30
-    && !errors.some((e) => afterGreeting.startsWith(e.original))) {
-    errors.unshift({ original: first, korrektur: first.charAt(0).toLowerCase() + first.slice(1),
-      erklaerung: 'Hitap virgülle bittiği için sonraki satır küçük harfle başlar (isimler ve Sie hariç).' });
+  if (first && /^\p{Lu}/u.test(first) && LOWER_AFTER_GREETING.has(first.toLowerCase()) && !seen.has(first)) {
+    const lower = first.charAt(0).toLowerCase() + first.slice(1);
+    const note = 'Hitap virgülle bittiği için sonraki satır küçük harfle başlar (isimler ve Sie hariç).';
+    // Model satırın başını başka bir hata için zaten düzeltmiş ama büyük harfi bırakmışsa (Es tut mir leid, aber … →
+    // Es tut mir leid, aber …) aynı maddenin düzeltmesi küçük harfle başlatılır; yoksa ayrı madde eklenir.
+    const same = errors.find((e) => afterGreeting.startsWith(e.original) && e.original.startsWith(first));
+    if (same) {
+      if (same.korrektur.startsWith(first)) {
+        same.korrektur = lower + same.korrektur.slice(first.length);
+        same.erklaerung = `${same.erklaerung} ${note}`.slice(0, 600);
+      }
+    } else if (errors.length < 30) errors.unshift({ original: first, korrektur: lower, erklaerung: note });
   }
   const corrected = typeof data.korrigierter_text === 'string' ? data.korrigierter_text.slice(0, 6000) : '';
   return { errors, correctedText: corrected, model: MODEL };

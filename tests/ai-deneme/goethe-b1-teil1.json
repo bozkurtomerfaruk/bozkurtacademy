@@ -1,0 +1,105 @@
+{
+  "about": "Yapay zekâ denemesi (Goethe B1 Teil 1). errors: bulunması gereken hatalı yer (wrong) ve düzeltmede geçmesi gereken parça (fix; liste ise biri yeter); clean: doğru olan, işaretlenmemesi gereken yerler. Çalıştırma: scripts/ai-deneme.mjs.",
+  "exam": "goethe",
+  "level": "b1",
+  "teil": 1,
+  "texts": [
+    {
+      "id": "b1t1-1",
+      "set": "set-1",
+      "note": "Arkadaşa e-posta; weil ve dann cümlesinde fiil yeri",
+      "text": "Liebe Lena,\nwie geht es dir? Ich wohne jetzt seit zwei Wochen in meiner neuen Wohnung. Sie ist klein, aber sehr hell und hat einen Balkon. Ich bin umgezogen, weil die alte Wohnung war zu teuer. Hast du am Samstag Zeit? Dann wir können zusammen kochen.\nLiebe Grüße\nDeniz",
+      "errors": [
+        {
+          "wrong": "weil die alte Wohnung war zu teuer",
+          "fix": "zu teuer war"
+        },
+        {
+          "wrong": "Dann wir können",
+          "fix": "können wir"
+        }
+      ],
+      "clean": [
+        "wie geht es dir",
+        "Liebe Grüße"
+      ]
+    },
+    {
+      "id": "b1t1-2",
+      "set": "set-2",
+      "note": "Hatasız metin; gün adı artikelle (hata sayılmamalı)",
+      "text": "Lieber Jonas,\nes tut mir leid, dass ich am Samstag nicht kommen konnte. Ich musste arbeiten und bin erst um Mitternacht nach Hause gekommen. Wie war die Party? Hast du viele Geschenke bekommen? Ich möchte deinen Geburtstag gern nachfeiern. Wir können in ein Restaurant gehen. Der Freitag passt mir gut. Ich lade dich ein!\nViele Grüße\nElif",
+      "errors": [],
+      "clean": [
+        "Der Freitag passt mir gut",
+        "dass ich am Samstag nicht kommen konnte"
+      ]
+    },
+    {
+      "id": "b1t1-3",
+      "set": "set-3",
+      "note": "Hitaptan sonra büyük harf, fiil yeri, edat + hâl",
+      "text": "Liebe Sara,\nDanke für deine E-Mail! Meine neue Arbeit gefällt mir gut. Ich arbeite in einem Büro und schreibe viele E-Mails. Leider ich muss jeden Tag um sechs Uhr aufstehen. Das gefällt mir nicht, weil ich bin dann sehr müde. Möchtest du mich am Wochenende besuchen? Ich freue mich auf dir.\nLiebe Grüße\nAyşe",
+      "errors": [
+        {
+          "wrong": "Danke",
+          "fix": "danke"
+        },
+        {
+          "wrong": "Leider ich muss",
+          "fix": "muss ich"
+        },
+        {
+          "wrong": "weil ich bin dann sehr müde",
+          "fix": "müde bin"
+        },
+        {
+          "wrong": "auf dir",
+          "fix": "auf dich"
+        }
+      ],
+      "clean": [
+        "Meine neue Arbeit gefällt mir gut"
+      ]
+    },
+    {
+      "id": "b1t1-4",
+      "set": "set-1",
+      "note": "du/Sie karışması, artikel ve sıfat eki, Partizip",
+      "text": "Liebe Lena,\nvielen Dank für Ihre Nachricht. Meine neue Wohnung ist sehr schön. Sie hat drei Zimmer und einen großen Küche. Ich bin umgezogen, weil ich näher bei meiner Arbeit wohnen wollte. Kommst du am Sonntag zu mir? Ich habe gestern einen Kuchen gebackt.\nBis bald\nDeniz",
+      "errors": [
+        {
+          "wrong": "Ihre Nachricht",
+          "fix": [
+            "deine",
+            "Deine"
+          ]
+        },
+        {
+          "wrong": "einen großen Küche",
+          "fix": "eine große Küche"
+        },
+        {
+          "wrong": "gebackt",
+          "fix": "gebacken"
+        }
+      ],
+      "clean": [
+        "Bis bald",
+        "weil ich näher bei meiner Arbeit wohnen wollte"
+      ]
+    },
+    {
+      "id": "b1t1-5",
+      "set": "set-2",
+      "note": "Hatasız metin; büyük harfli Du/Dir/Dich (hata sayılmamalı)",
+      "text": "Lieber Jonas,\nentschuldige bitte, dass ich nicht zu Deiner Party gekommen bin. Ich war krank und habe den ganzen Tag im Bett gelegen. Wie war es? Wer hat alles mit Dir gefeiert? Ich habe ein Geschenk für Dich gekauft, aber ich habe es noch nicht eingepackt. Wollen wir nächste Woche zusammen essen gehen?\nLiebe Grüße\nMurat",
+      "errors": [],
+      "clean": [
+        "zu Deiner Party",
+        "mit Dir",
+        "für Dich"
+      ]
+    }
+  ]
+}

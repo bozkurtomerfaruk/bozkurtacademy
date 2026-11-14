@@ -1,0 +1,130 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-3",
+  "title": "Schwimmkurs für Ihre Tochter",
+  "minutes": 30,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-formal",
+  "examChoice": true,
+  "situation": "Ihre Tochter soll schwimmen lernen. Der Sportverein „TSV Nord“ bietet Schwimmkurse für Kinder an. Sie haben noch Fragen. Schreiben Sie eine E-Mail an den Verein.",
+  "task": "Schreiben Sie etwas zu folgenden Punkten:",
+  "points": [
+    "Grund für Ihr Schreiben",
+    "Alter und Schwimmkenntnisse Ihrer Tochter",
+    "Kurstage und Uhrzeit",
+    "Was Ihre Tochter mitbringen muss"
+  ],
+  "instructions": "Vergessen Sie nicht die Anrede und den Gruß. Zeigen Sie, was Sie können: Schreiben Sie möglichst viel.",
+  "words": {
+    "target": 80,
+    "min": 60,
+    "max": 120,
+    "recommended": true,
+    "veryShort": 40
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: neden yazdığım, kızımın yaşı ve yüzme bilgisi, kurs günleri ve saati, yanında ne getirmesi gerektiği."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Hitap (Sehr geehrte Damen und Herren,) ve selam (Mit freundlichen Grüßen + adım) var; Betreff gerekmiyor."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kuruma resmî yazdım: Sie ile; Hallo, Tschüss ve Liebe Grüße yok."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümleleri bağladım: dass, aber, deshalb, auch."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Maddeleri numaralamadım ve her maddeye tek cümle yazıp geçmedim; metnim bağlantılı."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Sorularımı doğru kurdum: An welchen Tagen findet der Kurs statt? Um wie viel Uhr beginnt er? (soru kelimesi + fiil)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Ayrılabilen fiiller: Der Kurs findet am Samstag statt. / Ich möchte meine Tochter anmelden."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "dass'tan sonra çekimli fiil sonda: Ich habe gelesen, dass Sie Kurse anbieten."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede",
+      "items": [
+        {
+          "de": "Sehr geehrte Damen und Herren,",
+          "tr": "Sayın Bayanlar ve Baylar, (kişiyi tanımıyorsan)"
+        }
+      ]
+    },
+    {
+      "group": "Grund nennen",
+      "items": [
+        {
+          "de": "auf Ihrer Internetseite habe ich gelesen, dass …",
+          "tr": "internet sayfanızda … okudum."
+        },
+        {
+          "de": "Ich möchte meine Tochter gern anmelden.",
+          "tr": "Kızımı kaydettirmek istiyorum."
+        },
+        {
+          "de": "Ich habe noch einige Fragen.",
+          "tr": "Birkaç sorum daha var."
+        }
+      ]
+    },
+    {
+      "group": "Fragen",
+      "items": [
+        {
+          "de": "An welchen Tagen findet der Kurs statt?",
+          "tr": "Kurs hangi günlerde yapılıyor?"
+        },
+        {
+          "de": "Um wie viel Uhr beginnt der Kurs?",
+          "tr": "Kurs saat kaçta başlıyor?"
+        },
+        {
+          "de": "Was muss meine Tochter mitbringen?",
+          "tr": "Kızım yanında ne getirmeli?"
+        }
+      ]
+    },
+    {
+      "group": "Schluss",
+      "items": [
+        {
+          "de": "Vielen Dank im Voraus.",
+          "tr": "Şimdiden çok teşekkürler."
+        },
+        {
+          "de": "Mit freundlichen Grüßen",
+          "tr": "Saygılarımla"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Sehr geehrte Damen und Herren,\nauf Ihrer Internetseite habe ich gelesen, dass Sie Schwimmkurse für Kinder anbieten. Ich möchte meine Tochter Zeynep gern anmelden. Sie ist sechs Jahre alt und kann noch nicht schwimmen, aber sie hat keine Angst vor dem Wasser. An welchen Tagen findet der Anfängerkurs statt und um wie viel Uhr beginnt er? Ich arbeite bis 16 Uhr, deshalb wäre ein Kurs am späten Nachmittag oder am Samstag für uns am besten. Bitte schreiben Sie mir auch, was Zeynep zum Kurs mitbringen muss, zum Beispiel eine Schwimmbrille. Vielen Dank im Voraus.\nMit freundlichen Grüßen\nMehmet Arslan",
+    "notes": [
+      "Dört madde: sebep (Tochter anmelden), yaş ve bilgi (sechs Jahre, kann noch nicht schwimmen), günler ve saat (An welchen Tagen …? um wie viel Uhr …?), getirilecekler (was Zeynep mitbringen muss).",
+      "Tanımadığın bir kuruma: Sehr geehrte Damen und Herren, … Mit freundlichen Grüßen.",
+      "Dolaylı soru: Bitte schreiben Sie mir, was Zeynep mitbringen muss (fiil sonda)."
+    ]
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "format": 1,
+  "exam": "dtz",
+  "level": "a2-b1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Elternabend in der Schule",
+  "minutes": 30,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "examChoice": true,
+  "situation": "Am Donnerstag ist Elternabend in der Klasse Ihres Sohnes. Sie können nicht kommen. Schreiben Sie an die Klassenlehrerin, Frau Krüger.",
+  "task": "Schreiben Sie etwas zu folgenden Punkten:",
+  "points": [
+    "Grund für Ihr Schreiben",
+    "Warum Sie nicht kommen können",
+    "Wie Sie die Informationen bekommen möchten",
+    "Termin für ein persönliches Gespräch"
+  ],
+  "instructions": "Vergessen Sie nicht die Anrede und den Gruß. Zeigen Sie, was Sie können: Schreiben Sie möglichst viel.",
+  "words": {
+    "target": 80,
+    "min": 60,
+    "max": 120,
+    "recommended": true,
+    "veryShort": 40
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: neden yazdığım, neden gelemediğim, bilgileri nasıl almak istediğim, görüşme için zaman önerisi."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Hitap (Liebe Frau Krüger, / Sehr geehrte Frau Krüger,) ve selam (Viele Grüße / Mit freundlichen Grüßen + adım) var; Betreff gerekmiyor."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Baştan sona Sie ile yazdım (Sie, Ihnen, Ihr büyük harfle); du yok."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümleleri bağladım: leider, denn, außerdem, oder."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Maddeleri numaralamadım ve her maddeye tek cümle yazıp geçmedim; metnim bağlantılı."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Okul kelimelerini doğru kullandım: der Elternabend, die Klassenfahrt, die Note, der Zettel."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Kibar soru: Könnten Sie mir bitte … schicken? / Haben Sie am Montag Zeit?"
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Zaman ifadeleri: am Donnerstag, nächste Woche, nach 15 Uhr (am + gün, um/nach + saat)."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede",
+      "items": [
+        {
+          "de": "Liebe Frau … / Sehr geehrte Frau …,",
+          "tr": "Sevgili … Hanım / Sayın … Hanım,"
+        }
+      ]
+    },
+    {
+      "group": "Absagen",
+      "items": [
+        {
+          "de": "leider kann ich am Donnerstag nicht kommen.",
+          "tr": "maalesef perşembe günü gelemiyorum."
+        },
+        {
+          "de": "Das tut mir sehr leid.",
+          "tr": "Çok üzgünüm."
+        },
+        {
+          "de": "Ich muss an dem Abend arbeiten.",
+          "tr": "O akşam çalışmam gerekiyor."
+        }
+      ]
+    },
+    {
+      "group": "Bitten und fragen",
+      "items": [
+        {
+          "de": "Könnten Sie mir die Informationen per E-Mail schicken?",
+          "tr": "Bilgileri bana e-postayla gönderebilir misiniz?"
+        },
+        {
+          "de": "Ich würde gern persönlich mit Ihnen sprechen.",
+          "tr": "Sizinle yüz yüze konuşmak isterim."
+        },
+        {
+          "de": "Haben Sie nächste Woche Zeit?",
+          "tr": "Gelecek hafta vaktiniz var mı?"
+        }
+      ]
+    },
+    {
+      "group": "Schluss",
+      "items": [
+        {
+          "de": "Vielen Dank für Ihr Verständnis.",
+          "tr": "Anlayışınız için çok teşekkürler."
+        },
+        {
+          "de": "Viele Grüße",
+          "tr": "Selamlar"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Liebe Frau Krüger,\nleider kann ich am Donnerstag nicht zum Elternabend kommen. Ich arbeite in dieser Woche in der Spätschicht und bekomme an dem Abend nicht frei. Das tut mir sehr leid, denn die Informationen über die Klassenfahrt sind für uns wichtig. Könnten Sie mir bitte die wichtigsten Punkte per E-Mail schicken oder Emre einen Zettel mitgeben? Außerdem würde ich gern persönlich mit Ihnen über Emres Noten in Mathematik sprechen. Haben Sie nächste Woche am Montag oder Dienstag nach 15 Uhr Zeit? Vielen Dank für Ihr Verständnis.\nViele Grüße\nAyşe Demir",
+    "notes": [
+      "Dört madde: sebep (nicht zum Elternabend kommen), neden (Spätschicht), bilgi (per E-Mail oder Zettel), görüşme (Montag oder Dienstag nach 15 Uhr).",
+      "Öğretmene Sie ile ama sıcak bir hitap: Liebe Frau Krüger, … Viele Grüße. g.a.s.t. bunu okul için uygun sayıyor.",
+      "denn'den sonra ana cümle sırası: …, denn die Informationen … sind für uns wichtig."
+    ]
+  }
+}

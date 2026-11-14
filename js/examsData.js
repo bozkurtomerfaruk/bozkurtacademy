@@ -925,7 +925,17 @@ window.BA_EXAMS = {
               }, // Teil 5
             ] },
             { id: 'schreiben', teile: [
-              { title: null, exercises: [] }, // Teil 1
+              {
+                title: { tr: 'Yarı resmî ya da resmî e-posta · 4 madde · önerilen ~80 kelime', de: 'Halbformelle oder formelle Mitteilung · 4 Leitpunkte', en: 'Semi-formal or formal message · 4 points · about 80 words suggested' },
+                exercises: [
+                  { set: 'set-1', title: 'Die Heizung funktioniert nicht' },
+                  { set: 'set-2', title: 'Elternabend in der Schule' },
+                  { set: 'set-3', title: 'Schwimmkurs für Ihre Tochter' },
+                  { set: 'set-4', title: 'Falsche Lieferung' },
+                  { set: 'set-5', title: 'Ein freier Tag' },
+                  { set: 'set-6', title: 'Geburtstagsfeier im Haus' },
+                ]
+              }, // Teil 1
             ] },
             { id: 'sprechen', teile: [
               { title: null, exercises: [] }, // Teil 1

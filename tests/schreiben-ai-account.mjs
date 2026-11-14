@@ -147,6 +147,7 @@ await signIn(teacher, 'ogretmen@example.com', 'ogretmen123', 'teacher');
 await teacher.goto(`${BASE}/ogretmen.html`); await teacher.waitForSelector('#aiModeSelect', { timeout: 15000 }).catch(() => {});
 ok(await teacher.inputValue('#aiModeSelect') === 'instant' && plain(await getDocRest('settings/ai')).mode === 'instant', 'öğretmen paneli açılınca varsayılan mod "Anında göster" (settings/ai)');
 ok(await teacher.locator('#aiModeSelect option').count() === 3, 'Kapalı ve Taslak seçenekleri duruyor');
+ok(!(await teacher.textContent('#aiMode')).includes('null') && await teacher.locator('#aiMode [data-ai-mode-hint]').count() === 1, 'mod kutusunun altında "null" yazısı yok');
 await teacher.selectOption('#aiModeSelect', 'draft'); await teacher.waitForTimeout(1000);
 ok(await teacher.inputValue('#aiModeSelect') === 'draft' && plain(await getDocRest('settings/ai')).mode === 'draft', 'öğretmen paneli açılınca mod "Taslak" (settings/ai oluşturuldu)');
 

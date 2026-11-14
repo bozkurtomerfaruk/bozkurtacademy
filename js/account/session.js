@@ -31,9 +31,16 @@ let saveWriting = null;
 let writingBlocked = null; // açık olmayan hesapta gösterilecek notun anahtarı
 window.addEventListener('ba:writing-submitted', (event) => {
   if(saveWriting) saveWriting(event.detail);
-  else if(writingBlocked) writingNote(writingBlocked, 'error', event.detail.noteIn);
+  else if(writingBlocked) writingStatus(event.detail, writingBlocked, 'error');
   else if(hint === 'student') writingQueue.push(event.detail);
 });
+
+// Yazma görevi (js/writing-task.js) durumu kendisi çizer: detail.path varsa olay gönderilir (not, bekliyor mu, metnin
+// kimliği, yapay zekâ geri bildirimi). Form doldurma gibi eski görünümlerde not doğrudan sayfaya yazılır.
+function writingStatus(detail, key, type, extra = {}){
+  if(!detail.path){ writingNote(key, type, detail.noteIn); return; }
+  window.dispatchEvent(new CustomEvent('ba:writing-status', { detail: { path: detail.path, key, type, pending: false, ...extra } }));
+}
 
 function writingNote(key, type, where){
   const box = document.querySelector(where || '#wtSaved');
@@ -72,7 +79,7 @@ async function connect(){
     try{ localStorage.removeItem(HINT); }catch(_){}
     setNav(null);
     writingBlocked = 'wtVisitorNotSaved';
-    writingQueue.splice(0).forEach((d) => writingNote('wtVisitorNotSaved', 'error', d.noteIn));
+    writingQueue.splice(0).forEach((d) => writingStatus(d, 'wtVisitorNotSaved', 'error'));
     return;
   }
   if(user.uid === TEACHER_UID){
@@ -84,28 +91,52 @@ async function connect(){
   const active = profile?.status === 'active' && (!profile.minor || profile.parentConsent?.given === true);
   if(!active){
     writingBlocked = 'wtNotActive';
-    writingQueue.splice(0).forEach((d) => writingNote('wtNotActive', 'error', d.noteIn));
+    writingQueue.splice(0).forEach((d) => writingStatus(d, 'wtNotActive', 'error'));
     return;
   }
-  // Yapay zekâ kontrolü (Aşama B): kayıttan sonra Worker'a sadece metnin kimliği gider; Worker metni kendisi okur.
-  // Öğrenciye hiçbir şey gösterilmez: "Taslak" modunda sonuç önce öğretmene düşer. Adres boşsa hiç çağrılmaz.
+  // Yapay zekâ kontrolü: kayıttan sonra Worker'a sadece metnin kimliği gider; Worker metni kendisi okur ve sonucu döndürür.
+  // "Anında göster" modunda geri bildirim aynı sayfada görünür. Kontrol yapılamazsa (kapalı, taslak, 16 yaş altı onaysız,
+  // günlük sınır, hata) metin öğretmende kalır. Adres boşsa Worker hiç çağrılmaz.
   const workerUrl = emulator ? 'http://127.0.0.1:8787' : AI_WORKER_URL;
+  const AI_TIMEOUT_MS = 75000;
   const askAi = async (writingId) => {
-    if(!workerUrl) return;
+    if(!workerUrl) return { status: 'off' };
+    const stop = new AbortController();
+    const timer = setTimeout(() => stop.abort(), AI_TIMEOUT_MS);
     try{
-      await fetch(`${workerUrl}/check`, {
+      const response = await fetch(`${workerUrl}/check`, {
         method: 'POST',
         headers: { Authorization: `Bearer ${await user.getIdToken()}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ writingId })
+        body: JSON.stringify({ writingId }),
+        signal: stop.signal
       });
-    }catch(error){ console.warn('ai check', error); }
+      return await response.json();
+    }catch(error){ console.warn('ai check', error); return { status: 'error' }; }
+    finally{ clearTimeout(timer); }
   };
-  saveWriting = (detail) => submitWriting({ db, fs, uid: user.uid, detail })
-    .then((outcome) => {
-      writingNote(outcome.status === 'limit' ? 'wtLimit' : 'wtSaved', outcome.status === 'limit' ? 'error' : 'success', detail.noteIn);
-      if(outcome.id) askAi(outcome.id);
-    })
-    .catch((error) => { console.error(error); writingNote('wtSaveFailed', 'error', detail.noteIn); });
+  // "Bu açıklama yanlış görünüyor": maddenin sırası metne eklenir (aiFlags); öğretmen panelinde görünür.
+  const flag = (writingId, index) => fs.updateDoc(fs.doc(db, 'users', user.uid, 'writings', writingId), {
+    aiFlags: fs.arrayUnion(index), aiFlaggedAt: fs.serverTimestamp()
+  });
+  const AI_NOTES = { limit: ['wtAiLimit', 'error'], unavailable: ['wtAiFailed', 'error'], 'no-result': ['wtAiFailed', 'error'], error: ['wtAiFailed', 'error'], busy: ['wtAiFailed', 'error'] };
+  saveWriting = async (detail) => {
+    let outcome;
+    try{ outcome = await submitWriting({ db, fs, uid: user.uid, detail }); }
+    catch(error){ console.error(error); writingStatus(detail, 'wtSaveFailed', 'error'); return; }
+    if(outcome.status === 'limit'){ writingStatus(detail, 'wtLimit', 'error'); return; }
+    if(!workerUrl || !detail.path){ writingStatus(detail, 'wtSaved', 'success', { id: outcome.id }); return; }
+    writingStatus(detail, 'wtAiChecking', '', { id: outcome.id, pending: true });
+    const [result, view] = await Promise.all([askAi(outcome.id), import('./writing-feedback.js?v=1').catch((error) => { console.error(error); return null; })]);
+    if(result?.status === 'instant' && result.feedback && view){
+      window.BAWritingFeedback = { view: view.feedbackView, flag };
+      // Öğrenci geri bildirimi bu sayfada gördü: panelde "yeni" diye işaretlenmesin.
+      fs.updateDoc(fs.doc(db, 'users', user.uid, 'writings', outcome.id), { seenAt: fs.serverTimestamp() }).catch((error) => console.warn(error));
+      writingStatus(detail, result.feedback.errors?.length ? 'wtAiDone' : 'wtAiDoneNone', 'success', { id: outcome.id, feedback: result.feedback });
+      return;
+    }
+    const [key, type] = result?.status === 'limit' && result.scope === 'site' ? ['wtAiLimitSite', 'error'] : AI_NOTES[result?.status] || ['wtSaved', 'success'];
+    writingStatus(detail, key, type, { id: outcome.id });
+  };
   save = async (detail) => {
     try{
       await fs.addDoc(fs.collection(db, 'users', user.uid, 'results'), {
@@ -143,7 +174,8 @@ async function submitWriting({ db, fs, uid, detail }){
     const batch = fs.writeBatch(db);
     batch.set(ref, {
       exam: detail.exam, level: detail.level, teil: detail.teil, set: detail.set,
-      text: detail.text, words: detail.words, at: fs.serverTimestamp()
+      text: detail.text, words: detail.words, at: fs.serverTimestamp(),
+      ...(typeof detail.revisionOf === 'string' ? { revisionOf: detail.revisionOf } : {})
     });
     batch.set(limitRef, {
       windowStart: fresh ? fs.serverTimestamp() : limit.windowStart,

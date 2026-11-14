@@ -1089,12 +1089,65 @@ describe('Schreiben yapay zekâ (Aşama B)', () => {
     await assertFails(getDoc(doc(aiDb(), 'users/ayse/results/r1')));
   });
 
-  test('taslak modunda taslak yazar; anında modunda yazamaz', async () => {
+  test('taslak ve anında modunda taslak yazar (16 yaş altı eski onay); kapalı modda yazamaz', async () => {
     await aiSetup('draft');
     await assertSucceeds(setDoc(doc(aiDb(), 'aiDrafts/ayse_w1'), draft()));
-    await aiSetup('instant');
     await env.clearFirestore(); await aiSetup('instant');
+    await assertSucceeds(setDoc(doc(aiDb(), 'aiDrafts/ayse_w1'), draft()));
+    await env.clearFirestore(); await aiSetup('off');
     await assertFails(setDoc(doc(aiDb(), 'aiDrafts/ayse_w1'), draft()));
+  });
+
+  test('16 yaş altı: aiFeedback sadece yeni formla (sürüm 2) alınmış veli onayıyla doğrudan yazılır', async () => {
+    const consent = { given: true, at: Timestamp.now(), method: 'form' };
+    await seed('settings/ai', { mode: 'instant' });
+    await seed('users/can', { ...seededMinor('active', consent), aiConsent: consent });
+    await seed('users/can/writings/w1', seededWriting());
+    await assertFails(updateDoc(doc(aiDb(), 'users/can/writings/w1'), { aiFeedback: aiResult(), aiAt: serverTimestamp() }));
+    await seed('users/can', { ...seededMinor('active', consent), aiConsent: { ...consent, version: 2 } });
+    await assertSucceeds(updateDoc(doc(aiDb(), 'users/can/writings/w1'), { aiFeedback: aiResult(), aiAt: serverTimestamp() }));
+  });
+
+  test('kontrol yapılamazsa yapay zekâ hesabı nedeni bir kez yazar; öğrenci yazamaz', async () => {
+    await aiSetup('instant');
+    const ref = (db) => doc(db, 'users/ayse/writings/w1');
+    await assertFails(updateDoc(ref(aiDb()), { aiSkip: 'başka' }));
+    await assertFails(updateDoc(ref(ayse()), { aiSkip: 'limit' }));
+    await assertFails(updateDoc(ref(aiDb()), { aiSkip: 'limit', text: 'değişti' }));
+    await assertSucceeds(updateDoc(ref(aiDb()), { aiSkip: 'limit' }));
+    await assertFails(updateDoc(ref(aiDb()), { aiSkip: 'error' }));
+  });
+
+  test('"yanlış görünüyor": öğrenci yapay zekâ maddesini işaretler, geri alamaz; öğretmen yazdıktan sonra işaretleyemez', async () => {
+    await aiSetup('instant');
+    const two = aiResult({ errors: [{ original: 'a', korrektur: 'b', erklaerung: 'c' }, { original: 'd', korrektur: 'e', erklaerung: 'f' }] });
+    const ref = (db) => doc(db, 'users/ayse/writings/w1');
+    const flag = (list, extra = {}) => ({ aiFlags: list, aiFlaggedAt: serverTimestamp(), ...extra });
+    await assertFails(updateDoc(ref(ayse()), flag([0])));
+    await seed('users/ayse/writings/w1', seededWriting({ aiFeedback: two, aiAt: Timestamp.now() }));
+    await assertFails(updateDoc(ref(ayse()), flag([])));
+    await assertFails(updateDoc(ref(ayse()), flag([0, 0])));
+    await assertFails(updateDoc(ref(ayse()), flag([0, 1, 2])));
+    await assertFails(updateDoc(ref(ayse()), flag(['0'])));
+    await assertFails(updateDoc(ref(ayse()), flag([0], { text: 'değişti' })));
+    await assertFails(updateDoc(ref(ayse()), { aiFlags: [0], aiFlaggedAt: Timestamp.fromMillis(1) }));
+    await assertFails(updateDoc(ref(can()), flag([0])));
+    await assertSucceeds(updateDoc(ref(ayse()), flag([1])));
+    await assertFails(updateDoc(ref(ayse()), flag([0])));
+    await assertFails(updateDoc(ref(ayse()), flag([1])));
+    await assertSucceeds(updateDoc(ref(ayse()), flag([1, 0])));
+    await seed('users/ayse/writings/w1', seededWriting({ aiFeedback: two, aiAt: Timestamp.now(), feedback: 'Baktım.', feedbackAt: Timestamp.now() }));
+    await assertFails(updateDoc(ref(ayse()), flag([0])));
+  });
+
+  test('düzeltilmiş hâl: sadece kendi var olan metnine bağlanır', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await seed('users/ayse/writings/abcdefghij12', seededWriting());
+    await seed('users/can/writings/abcdefghij99', seededWriting());
+    await assertFails(submitWriting(ayse(), 'ayse', { data: { revisionOf: 'yokyokyokyok' } }));
+    await assertFails(submitWriting(ayse(), 'ayse', { data: { revisionOf: 'abcdefghij99' } }));
+    await assertFails(submitWriting(ayse(), 'ayse', { data: { revisionOf: 12 } }));
+    await assertSucceeds(submitWriting(ayse(), 'ayse', { data: { revisionOf: 'abcdefghij12' } }));
   });
 
   test('taslak kimliği, alanlar ve boyutlar denetlenir; olmayan metne taslak yazılamaz', async () => {

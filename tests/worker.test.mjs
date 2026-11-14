@@ -2,7 +2,7 @@
 import { beforeEach, describe, test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import worker, { aiAllowed, berlinDay, cleanResult, decode, encode, PROMPT, resetBotToken, TEXT_TYPES, userMessage } from '../worker/schreiben-kontrol.js';
+import worker, { aiAllowed, directAllowed, berlinDay, cleanResult, decode, encode, PROMPT, resetBotToken, TEXT_TYPES, userMessage } from '../worker/schreiben-kontrol.js';
 
 const TEXT = 'Liebe Lena,\nseit drei Wochen ich wohne in Hamburg. Ich bin umgezogen, weil ich habe eine Stelle gefunden.\nLiebe Grüße\nAyşe';
 const DAY = berlinDay();
@@ -67,7 +67,11 @@ describe('Schreiben Worker', () => {
 
   test('anında göster modunda metne aiFeedback yazar', async () => {
     docs['settings/ai'] = { mode: 'instant' };
-    assert.equal((await (await call()).json()).status, 'instant');
+    const body = await (await call()).json();
+    assert.equal(body.status, 'instant');
+    // Sonuç cevapta da döner: öğrenci görev sayfasında hemen görür.
+    assert.equal(body.feedback.errors.length, 2);
+    assert.ok(body.feedback.correctedText);
     const w = commits[0].writes.find((x) => x.update.name.endsWith('writings/w123456789012'));
     assert.deepEqual(w.updateMask.fieldPaths, ['aiFeedback']);
     assert.equal(w.updateTransforms[0].fieldPath, 'aiAt');
@@ -84,6 +88,7 @@ describe('Schreiben Worker', () => {
   test('16 yaş altı: veli onayı ve yapay zekâ onayı olmadan model çağrılmaz', async () => {
     docs['users/ayse1234567'] = { status: 'active', minor: true, parentConsent: { given: true } };
     assert.equal((await (await call()).json()).status, 'not-allowed');
+    assert.equal(decode(commits[0].writes[0].update.fields.aiSkip), 'consent');
     docs['users/ayse1234567'].aiConsent = { given: true };
     assert.equal((await (await call()).json()).status, 'draft');
     assert.equal(aiCalls.length, 1);
@@ -103,8 +108,12 @@ describe('Schreiben Worker', () => {
     docs['aiLimits/_global'] = { day: DAY, count: 600 };
     assert.equal((await (await call()).json()).status, 'limit');
     docs['aiLimits/_global'] = { day: DAY, count: 12 };
+    // Sınır dolunca neden metne yazılır (öğretmen paneli için).
+    assert.equal(commits.length, 2);
+    assert.equal(decode(commits[0].writes[0].update.fields.aiSkip), 'limit');
+    assert.deepEqual(commits[0].writes[0].updateMask.fieldPaths, ['aiSkip']);
     assert.equal((await (await call()).json()).status, 'draft');
-    const [mine, all] = commits[0].writes;
+    const [mine, all] = commits[2].writes;
     assert.equal(decode(mine.update.fields.count), 1);
     assert.equal(decode(all.update.fields.count), 13);
     assert.equal(mine.currentDocument.updateTime, '2026-11-08T10:00:00Z');
@@ -124,12 +133,49 @@ describe('Schreiben Worker', () => {
     aiAnswer = new Error('Capacity exceeded');
     const r = await call();
     assert.equal(r.status, 503);
+    assert.equal(commits.length, 1);
+    assert.equal(decode(commits[0].writes[0].update.fields.aiSkip), 'error');
+  });
+
+  test('model cevabı okunamıyorsa: sayaç artar, neden metne yazılır', async () => {
+    aiAnswer = 'JSON yok';
+    assert.equal((await (await call()).json()).status, 'no-result');
+    assert.equal(decode(commits.at(-1).writes[0].update.fields.aiSkip), 'error');
+  });
+
+  test('neden bir kez yazılır; yazılamazsa cevap yine döner', async () => {
+    docs['users/ayse1234567/writings/w123456789012'].aiSkip = 'limit';
+    docs['aiLimits/ayse1234567'] = { day: DAY, count: 3 };
+    assert.equal((await (await call()).json()).status, 'limit');
     assert.equal(commits.length, 0);
+  });
+
+  test('16 yaş altı, anında modu: eski formla alınmış onayda taslak, yeni formla (sürüm 2) doğrudan', async () => {
+    docs['settings/ai'] = { mode: 'instant' };
+    docs['users/ayse1234567'] = { status: 'active', minor: true, parentConsent: { given: true }, aiConsent: { given: true } };
+    const old = await (await call()).json();
+    assert.equal(old.status, 'draft');
+    assert.equal(old.feedback, undefined);
+    assert.ok(commits[0].writes.some((w) => w.update.name.includes('aiDrafts/')));
+    assert.ok(!commits[0].writes.some((w) => w.update.fields.aiFeedback));
+    docs['users/ayse1234567'].aiConsent.version = 2;
+    const fresh = await (await call()).json();
+    assert.equal(fresh.status, 'instant');
+    assert.ok(commits[1].writes.some((w) => w.update.fields.aiFeedback));
+  });
+
+  test('directAllowed', () => {
+    assert.equal(directAllowed({ minor: false }), true);
+    assert.equal(directAllowed({ minor: true, aiConsent: { given: true } }), false);
+    assert.equal(directAllowed({ minor: true, aiConsent: { given: true, version: 2 } }), true);
+    assert.equal(directAllowed({ aiConsent: { given: true, version: 1 } }), false);
   });
 
   test('daha önce kontrol edilmiş metin tekrar gönderilmez', async () => {
     docs['users/ayse1234567/writings/w123456789012'].aiAt = '2026-11-08T09:00:00Z';
     assert.equal((await (await call()).json()).status, 'exists');
+    docs['users/ayse1234567/writings/w123456789012'].aiFeedback = { errors: [], correctedText: 'x', model: 'm' };
+    assert.equal((await (await call()).json()).feedback.correctedText, 'x');
     assert.equal(aiCalls.length, 0);
   });
 

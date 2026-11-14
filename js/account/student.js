@@ -2,6 +2,7 @@
 import { auth, configured, db, fa, fs } from './firebase.js';
 import { TEACHER_EMAIL, TEACHER_UID } from './config.js';
 import { registerStrings, t, lang } from './i18n.js';
+import { feedbackView } from './writing-feedback.js?v=1';
 import {
   $, accountState, bestResultSince, clearHint, currentUser, exerciseNames, exerciseUrl, formatDateTime, h,
   loadAssignments, loadProfile, loadResources, loadResults, loadWritings, safeLink, scoreText, sendVerification, setHint, setStatus,
@@ -118,10 +119,13 @@ function markedText(text, items){
   return out;
 }
 
-function correctionList(items){
+// by: 'teacher' → öğretmen bu maddeyi düzeltti ya da kendisi ekledi; diğerleri yapay zekâdan, öğretmen aynen bıraktı.
+function correctionList(items, labels = false){
   return h('ol', { class: 'acc-feedback-items', lang: 'tr' }, ...items.map((item) => h('li', {},
     h('span', { lang: 'de' }, h('del', {}, item.original), ' → ', h('ins', {}, item.korrektur)),
-    item.erklaerung ? h('span', {}, ' ', item.erklaerung) : null)));
+    item.erklaerung ? h('span', {}, ' ', item.erklaerung) : null,
+    labels ? h('span', { class: `acc-badge ${item.by === 'teacher' ? 'success' : 'muted'} acc-item-by`, 'data-item-by': item.by === 'teacher' ? 'teacher' : 'ai' },
+      t(item.by === 'teacher' ? 'panelWritingByTeacher' : 'panelWritingByAi')) : null)));
 }
 
 function correctedBlock(text){
@@ -135,17 +139,45 @@ function teacherFeedback(w){
     w.feedback ? h('p', { class: 'acc-feedback', lang: 'tr' }, w.feedback) : null,
     source ? h('p', { class: 'acc-sub' }, t(source)) : null,
     w.feedbackItems?.length ? h('p', { class: 'acc-sub' }, h('strong', {}, t('panelWritingCorrections'))) : null,
-    w.feedbackItems?.length ? correctionList(w.feedbackItems) : null,
+    w.feedbackItems?.length ? correctionList(w.feedbackItems, Boolean(w.aiFeedback)) : null,
+    removedNote(w),
     correctedBlock(w.correctedText));
 }
 
+// Öğretmen yapay zekânın bazı maddelerini çıkardıysa öğrenci bunu bilsin (daha önce o maddeleri görmüştü).
+function removedNote(w){
+  if(!w.aiFeedback?.errors?.length || !w.feedbackSource || w.feedbackSource === 'teacher') return null;
+  const kept = new Set((w.feedbackItems || []).map((item) => item.original));
+  const removed = w.aiFeedback.errors.filter((item) => !kept.has(item.original));
+  if(!removed.length) return null;
+  return h('p', { class: 'acc-sub', 'data-writing-removed': String(removed.length) },
+    t('panelWritingRemoved').replace('{items}', removed.map((item) => `„${item.original}“`).join(', ')));
+}
+
+// Yapay zekâ geri bildirimi (js/account/writing-feedback.js): metin içinde işaretli hatalar, açıklamalar, düzeltilmiş metin.
+// Öğretmen henüz yazmadıysa her maddede "Bu açıklama yanlış görünüyor" düğmesi vardır (aiFlags; öğretmen paneline düşer).
+function flagWriting(w, index){
+  return fs.updateDoc(fs.doc(db, 'users', currentAuthUser.uid, 'writings', w.id), {
+    aiFlags: fs.arrayUnion(index), aiFlaggedAt: fs.serverTimestamp()
+  }).then(() => { w.aiFlags = [...(w.aiFlags || []), index]; });
+}
 function autoFeedback(w){
-  const errors = w.aiFeedback.errors || [];
   return h('div', { class: 'acc-feedback-block acc-ai-auto', 'data-writing-auto': w.id },
-    h('p', {}, h('span', { class: 'acc-badge info' }, t('panelWritingAuto'))),
-    h('p', { class: 'acc-sub' }, t('panelWritingAutoNote')),
-    errors.length ? correctionList(errors) : h('p', { class: 'acc-sub' }, t('panelWritingAutoNone')),
-    correctedBlock(w.aiFeedback.correctedText));
+    feedbackView({ text: w.text, feedback: w.aiFeedback, flags: w.aiFlags || [], t, onFlag: w.feedbackAt ? null : (index) => flagWriting(w, index) }),
+    !w.feedbackAt && w.aiFlags?.length ? h('p', { class: 'acc-sub' }, t('panelWritingFlagSent')) : null);
+}
+
+// Düzeltilmiş hâller (revisionOf) ilk metnin altında, eskiden yeniye; gruplar en yeni denemeye göre sıralanır.
+function groupWritings(list){
+  const byId = new Map(list.map((w) => [w.id, w]));
+  const rootOf = (w) => { let cur = w, n = 0; while(cur.revisionOf && byId.has(cur.revisionOf) && n++ < 50) cur = byId.get(cur.revisionOf); return cur.id; };
+  const groups = new Map();
+  for(const w of list){ const root = rootOf(w); if(!groups.has(root)) groups.set(root, []); groups.get(root).push(w); }
+  const time = (w) => toDate(w.at)?.getTime() || 0;
+  return [...groups.values()]
+    .map((g) => g.sort((a, b) => time(a) - time(b)))
+    .sort((a, b) => time(b.at(-1)) - time(a.at(-1)))
+    .flatMap((g) => g.map((w, i) => ({ w, attempt: i + 1, of: g.length })));
 }
 
 async function renderWritings(){
@@ -157,16 +189,22 @@ async function renderWritings(){
     renderWritingBadges();
     return;
   }
-  const titles = await Promise.all(writings.map(writingTitle));
-  box.replaceChildren(...writings.map((w, i) => {
+  const rows = groupWritings(writings);
+  const titles = await Promise.all(rows.map(({ w }) => writingTitle(w)));
+  box.replaceChildren(...rows.map(({ w, attempt, of }, i) => {
     const has = Boolean(w.feedbackAt || w.aiAt);
-    const feedback = w.feedbackAt ? teacherFeedback(w) : h('p', { class: 'acc-sub' }, t('panelWritingWaiting'));
-    const auto = !w.feedbackAt && w.aiFeedback ? autoFeedback(w) : null;
-    const item = h('details', { class: 'ba-card acc-card acc-writing', 'data-writing': w.id },
+    // Öğretmen maddeleri düzelttiyse (feedbackItems) onun listesi; sadece not yazdıysa not + yapay zekâ geri bildirimi.
+    const teacherItems = Boolean(w.feedbackAt && (w.feedbackItems?.length || (w.feedbackSource && w.feedbackSource !== 'teacher')));
+    const auto = w.aiFeedback && !teacherItems ? autoFeedback(w) : null;
+    const feedback = w.feedbackAt ? teacherFeedback(w)
+      : auto ? null
+      : h('p', { class: 'acc-sub' }, t(w.aiSkip === 'limit' ? 'panelWritingWaitingLimit' : 'panelWritingWaiting'));
+    const item = h('details', { class: `ba-card acc-card acc-writing${attempt > 1 ? ' acc-writing-revision' : ''}`, 'data-writing': w.id, 'data-attempt': String(attempt) },
       h('summary', {},
         h('span', { class: 'acc-writing-title' }, h('span', { class: 'acc-new-dot', 'data-writing-new': w.id, 'aria-hidden': 'true', hidden: !unseenFeedback(w) }),
           `${fmt(w.at)} · ${titles[i]}`),
         h('span', { class: 'acc-badges' },
+          of > 1 ? h('span', { class: 'acc-badge', 'data-writing-attempt': String(attempt) }, t('panelWritingAttempt').replace('{n}', String(attempt))) : null,
           h('span', { class: 'acc-badge' }, t('panelWritingWords').replace('{n}', String(w.words))),
           has
             ? h('span', { class: `acc-badge ${unseenFeedback(w) ? 'warning' : 'success'}`, 'data-writing-state': w.id }, t(unseenFeedback(w) ? 'panelWritingNew' : 'panelWritingDone'))
@@ -174,8 +212,8 @@ async function renderWritings(){
       h('div', { class: 'acc-card-body' },
         feedback,
         auto,
-        h('p', { class: 'acc-sub' }, t('panelWritingMine')),
-        h('div', { class: 'acc-writing-text', lang: 'de', 'data-writing-text': w.id }, markedText(w.text, w.feedbackAt ? w.feedbackItems : w.aiFeedback?.errors)),
+        auto ? null : h('p', { class: 'acc-sub' }, t('panelWritingMine')),
+        auto ? null : h('div', { class: 'acc-writing-text', lang: 'de', 'data-writing-text': w.id }, markedText(w.text, w.feedbackAt ? w.feedbackItems : null)),
         h('a', { class: 'ba-link', href: writingUrl(w) }, t('panelWritingOpenTask'))));
     item.addEventListener('toggle', () => {
       if(!item.open || !unseenFeedback(w)) return;

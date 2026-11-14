@@ -23,7 +23,7 @@ service cloud.firestore {
 
     // Schreiben yapay zekâ hesabı (madde 7 Aşama B): Cloudflare Worker (worker/schreiben-kontrol.js) bu e-posta/şifre
     // hesabıyla giriş yapar. Yetkisi: öğrencinin profilini ve metnini okumak, yapay zekâ taslağını (aiDrafts) ve günlük
-    // sayaçları (aiLimits) yazmak, "anında göster" modunda metne aiFeedback eklemek. Kurulum: docs/yapay-zeka-kurulum.md.
+    // sayaçları (aiLimits) yazmak, "anında göster" modunda metne aiFeedback, kontrol yapılamazsa aiSkip eklemek. Kurulum: docs/yapay-zeka-kurulum.md.
     // Firebase Authentication'daki "yapay zekâ" hesabının UID'si (2026-11-08).
     function aiUid() {
       return 'vvCoJgYtzDTdOifk81pQyFmBWbg2';
@@ -141,8 +141,11 @@ service cloud.firestore {
 
     function validWriting(uid, id) {
       let d = request.resource.data;
-      return d.keys().hasOnly(['exam', 'level', 'teil', 'set', 'text', 'words', 'at'])
+      return d.keys().hasOnly(['exam', 'level', 'teil', 'set', 'text', 'words', 'at', 'revisionOf'])
         && d.keys().hasAll(['exam', 'level', 'teil', 'set', 'text', 'words', 'at'])
+        // Düzeltilmiş hâl: öğrencinin kendi önceki metnine bağlanır (yeni deneme; günlük sınırlara dahil).
+        && (!('revisionOf' in d) || (d.revisionOf is string && d.revisionOf.matches('^[A-Za-z0-9]{10,40}$') && d.revisionOf != id
+          && exists(/databases/$(database)/documents/users/$(uid)/writings/$(d.revisionOf))))
         && d.exam is string && d.exam.matches('^[a-z0-9-]{2,20}$')
         && d.level is string && d.level.matches('^[a-z0-9-]{1,20}$')
         && d.teil is int && d.teil >= 1 && d.teil <= 10
@@ -167,14 +170,42 @@ service cloud.firestore {
       return get(/databases/$(database)/documents/settings/ai).data.mode;
     }
 
-    // "Anında göster" modunda Worker metne bir kez aiFeedback ekler; öğrenci "otomatik öneri" olarak görür.
-    function validAiFeedback() {
+    // 16 yaş altında geri bildirim ancak yeni formla (sürüm 2: "doğrudan gösterilir") alınmış veli onayıyla doğrudan gösterilir.
+    function aiDirectAllowed(uid) {
+      let u = get(/databases/$(database)/documents/users/$(uid)).data;
+      return u.minor == false || ('aiConsent' in u && 'version' in u.aiConsent && u.aiConsent.version >= 2);
+    }
+
+    // "Anında göster" modunda Worker metne bir kez aiFeedback ekler; öğrenci "yapay zekâ geri bildirimi" olarak görür.
+    function validAiFeedback(uid) {
       let d = request.resource.data;
       return d.diff(resource.data).affectedKeys().hasOnly(['aiFeedback', 'aiAt'])
         && !('aiAt' in resource.data)
         && d.aiAt == request.time
         && aiMode() == 'instant'
+        && aiDirectAllowed(uid)
         && validAiResult(d.aiFeedback);
+    }
+
+    // Kontrol yapılamadıysa Worker nedenini bir kez yazar: veli/öğrenci onayı yok, günlük sınır, servis hatası.
+    function validAiSkip() {
+      let d = request.resource.data;
+      return d.diff(resource.data).affectedKeys().hasOnly(['aiSkip'])
+        && !('aiSkip' in resource.data) && !('aiAt' in resource.data)
+        && d.aiSkip in ['consent', 'limit', 'error'];
+    }
+
+    // "Bu açıklama yanlış görünüyor": öğrenci yapay zekâ maddelerinin sıra numaralarını (0'dan) işaretler; sadece ekleyebilir.
+    // Öğretmen geri bildirim yazdıktan sonra işaretlenemez.
+    function validAiFlag() {
+      let d = request.resource.data;
+      return d.diff(resource.data).affectedKeys().hasOnly(['aiFlags', 'aiFlaggedAt'])
+        && 'aiFeedback' in resource.data && !('feedbackAt' in resource.data)
+        && d.aiFlaggedAt == request.time
+        && d.aiFlags is list && d.aiFlags.size() >= 1 && d.aiFlags.size() <= resource.data.aiFeedback.errors.size()
+        && d.aiFlags.toSet().size() == d.aiFlags.size()
+        && d.aiFlags.toSet().hasOnly([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29])
+        && (!('aiFlags' in resource.data) || (d.aiFlags.size() > resource.data.aiFlags.size() && d.aiFlags.hasAll(resource.data.aiFlags)));
     }
 
     // Öğrenci geri bildirimi gördüğünde sadece "görüldü" zamanını işaretleyebilir.
@@ -284,7 +315,7 @@ service cloud.firestore {
         allow read: if ownActive(uid);
         allow get: if isAi();
         allow create: if ownActive(uid) && validWriting(uid, writingId);
-        allow update: if (ownActive(uid) && validWritingSeen()) || (isAi() && validAiFeedback());
+        allow update: if (ownActive(uid) && (validWritingSeen() || validAiFlag())) || (isAi() && (validAiFeedback(uid) || validAiSkip()));
       }
 
       // Oyun ilerlemesi (şimdilik sadece "alfabe"): onaylı öğrenci okur ve yazar; silme sadece öğretmen.
@@ -312,7 +343,8 @@ service cloud.firestore {
         && id == request.resource.data.uid + '_' + request.resource.data.writingId
         && exists(/databases/$(database)/documents/users/$(request.resource.data.uid)/writings/$(request.resource.data.writingId))
         && request.resource.data.createdAt == request.time
-        && aiMode() == 'draft'
+        // "Anında göster" modunda da: 16 yaş altında eski formla alınmış onayda sonuç taslak olarak öğretmene gider.
+        && aiMode() in ['draft', 'instant']
         && validAiResult({ 'errors': request.resource.data.errors, 'correctedText': request.resource.data.correctedText, 'model': request.resource.data.model });
     }
 

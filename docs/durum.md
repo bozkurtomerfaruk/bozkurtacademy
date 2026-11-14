@@ -2,6 +2,35 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-14 · Schreiben: öğrenci geri bildirimi hemen görüyor ("Anında göster" varsayılan)
+
+- **Ne değişti:** Yapay zekâ geri bildirimi artık öğretmen onayını beklemeden, gönderdikten birkaç saniye sonra aynı görev sayfasında görünüyor.
+  - Hatalı yerler metnin içinde işaretli; işarete tıklayınca (ya da Enter) Türkçe açıklaması öne çıkıyor. Altında düzeltilmiş metin, ardından örnek cevap.
+  - Kontrol sürerken "Yapay zekâ kontrol ediyor…" göstergesi var; örnek cevap kontrol bitince açılıyor.
+  - Etiket: "Yapay zekâ geri bildirimi – nadiren hata yapabilir" (TR/DE/EN). Geçmiş geri bildirimler öğrenci panelinde duruyor.
+- **"Bu açıklama yanlış görünüyor":** Her maddenin altında. Basınca madde numarası yazıya kaydediliyor (`aiFlags`) ve öğretmen paneline düşüyor.
+  - Öğretmen öğrenci sayfasında işaretli maddeyi görüyor, düzeltiyor ya da çıkarıyor, not yazıyor.
+  - Öğrenci düzeltilen maddede "Öğretmenin düzeltti" etiketini, çıkarılan maddeleri ve notu görüyor (karar 2).
+- **Öğretmen sayacı:** Artık sadece (1) işaretlenen maddeleri ve (2) yapay zekânın kontrol edemediği yazıları sayıyor. Kontrol edilmiş yazılar "Yapay zekâ kontrol etti" rozetiyle kapalı duruyor; açıp not eklenebiliyor.
+  - Kontrol edilemeyen yazıda neden yazıyor: yapay zekâ onayı yok / günlük sınır dolmuştu / servis hatası (`aiSkip`, Worker yazar).
+- **Düzeltilmiş hâl (karar 3):** "Düzeltilmiş hâlini yaz" yeni bir yazı kaydediyor (`revisionOf`), günlük 10 yazı ve günlük 3 yapay zekâ kontrolü sınırına dahil. Panelde "2. deneme" olarak ilk yazının altında.
+  - Sınır dolunca: "Bugünkü yapay zekâ kontrolün bitti (günde 3 metin), yarın tekrar dene; metnin öğretmenine iletildi."
+- **16 yaş altı (karar 1):** Veli yapay zekâ onayına sürüm eklendi (`aiConsent.version`). Sürüm 2 = yeni form ("geri bildirim doğrudan gösterilir").
+  - Onay eski formla alınmışsa sonuç, mod ne olursa olsun taslak olarak öğretmene gidiyor (Worker + kural). Öğrenci sayfasında uyarı ve "Veli yeni formu onayladı: kaydet" var.
+  - Onay hiç yoksa yapay zekâ çalışmıyor; akış eskisi gibi (kontrol listesi + örnek cevap + öğretmen).
+- **Modlar:** Varsayılan "Anında göster"; "Taslak" ve "Kapalı" öğretmen panelinde duruyor.
+- **Worker (değişti):** Sonucu cevabında döndürüyor; `aiSkip` yazıyor; onay sürümüne bakıyor. Model, sınırlar ve yapay zekâya giden veri (metin + görev adı + metin türü) aynı.
+- **Firestore kuralları (değişti):** `revisionOf`, `aiFlags` + `aiFlaggedAt` (öğrenci sadece ekler; öğretmen yazdıktan sonra ekleyemez), `aiSkip` (sadece yapay zekâ hesabı, bir kez), 16 yaş altında `aiFeedback` için onay sürümü 2, taslak "Anında göster" modunda da yazılabiliyor. Yeni koleksiyon yok.
+- **Yeni dosyalar:** `js/account/writing-feedback.js` (görev sayfası ve panel aynı görünümü kullanır; sadece giriş yapmış öğrencide yüklenir), `css/writing-feedback.css`.
+- **Gizlilik metni (TR/DE/EN, 6a) ve veli onay formu (TR/DE, 3a):** geri bildirimin öğretmen onayı olmadan doğrudan gösterildiği, "yanlış görünüyor" bildirimi, kontrol yapılamazsa akış, düzeltilmiş hâl, eski formla verilmiş onay. Hukuki kontrol senin sorumluluğunda (form hâlâ "taslak" notu taşıyor).
+- **Testler:** `npm test` (kural testleri: işaretleme, `aiSkip`, `revisionOf`, onay sürümü; Worker testleri 20), `npm run test:schreiben-ai` (uçtan uca: gönder → aynı sayfada geri bildirim → "yanlış görünüyor" öğretmen panelinde → öğretmen düzeltir → düzeltilmiş hâl → sınır mesajı → 16 yaş altı eski onay/onaysız → ziyaretçide Firebase yüklenmez), 390/1440 açık/koyu, taşma yok.
+- **Senin yapacakların (birleştirmeden sonra, bu sırayla):**
+  1. Firestore kurallarını yayınla.
+  2. Worker'ı Cloudflare'de güncelle (`docs/yapay-zeka-kurulum.md`, "Kod değişirse").
+  3. Öğretmen panelinde modu **Anında göster** yap (sende "Taslak" kayıtlı; kendiliğinden değişmez).
+  4. 16 yaş altı öğrencilerin velilerine yeni formu gönder; onaylayanları öğrenci sayfasında kaydet.
+- **Sıradaki:** Schreiben genişletmesi: DTZ → Goethe A2 → Goethe B2; sonra e-posta (madde 9), sonra Sprechen (madde 8).
+
 ## 2026-11-12 · Schreiben genişletme 3: telc Deutsch B1
 
 - **Format (resmî telc Deutsch B1 · Zertifikat Deutsch, Übungstest 1):** Schriftlicher Ausdruck 30 dk, 45 puan (%15).

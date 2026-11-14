@@ -20,7 +20,7 @@
   <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13" />
   <link rel="stylesheet" href="css/base.css?v=12" />
-  <link rel="stylesheet" href="css/account.css?v=6" />
+  <link rel="stylesheet" href="css/account.css?v=7" />
 </head>
 <body class="academy-theme account-page">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
@@ -58,7 +58,7 @@
         <div class="privacy-lang" data-privacy-lang="tr" lang="tr">
         <p class="acc-status warning" role="note">Bu metin hukuki olarak kontrol edilmektedir.</p>
         <header class="acc-head">
-          <p class="acc-eyebrow">Son güncelleme: 11 Kasım 2026</p>
+          <p class="acc-eyebrow">Son güncelleme: 12 Kasım 2026</p>
           <h1 id="privacyTitle-tr">Gizlilik politikası</h1>
           <p class="acc-lead">Bu sayfa, Bozkurt Academy sitesini kullanırken ve öğrenci hesabı açtığında hangi kişisel verilerin işlendiğini, nerede saklandığını ve haklarını açıklar.</p>
         </header>
@@ -146,16 +146,18 @@
         </section>
 
         <section id="yapay-zeka" data-anchor="yapay-zeka">
-          <h2>6a. Yazma görevlerinde yapay zekâ önerisi (Cloudflare Workers AI)</h2>
-          <p>Giriş yapmış bir öğrenci yazma görevinde (Schreiben) metnini gönderdiğinde, öğretmenin daha hızlı geri bildirim verebilmesi için metin bir yapay zekâ ile kontrol edilebilir.</p>
+          <h2>6a. Yazma görevlerinde yapay zekâ geri bildirimi (Cloudflare Workers AI)</h2>
+          <p>Giriş yapmış bir öğrenci yazma görevinde (Schreiben) metnini gönderdiğinde, geri bildirimi beklemeden hemen alabilmesi için metin bir yapay zekâ ile kontrol edilir.</p>
           <ul>
             <li><strong>Hizmet:</strong> Cloudflare Workers AI (Cloudflare, Inc., 101 Townsend St., San Francisco, ABD). Model: Google Gemma 4 (Apache 2.0 lisanslı açık model), Cloudflare'in kendi sunucularında çalışır.</li>
-            <li><strong>Gönderilen:</strong> Sadece metnin kendisi ve görevin adı (ör. “Goethe B1 · Teil 1 · Neue Wohnung”). Adın, e-posta adresin, kullanıcı kimliğin veya başka bir bilgin gönderilmez. Metne kendin yazdığın bilgiler metnin parçası olarak gider; bu yüzden metinlerde gerçek kişisel bilgilerini yazmamanı öneririz.</li>
+            <li><strong>Gönderilen:</strong> Sadece metnin kendisi, görevin adı (ör. “Goethe B1 · Teil 1 · Neue Wohnung”) ve metin türü (ör. gayriresmî e-posta). Adın, e-posta adresin, kullanıcı kimliğin veya başka bir bilgin gönderilmez. Metne kendin yazdığın bilgiler metnin parçası olarak gider; bu yüzden metinlerde gerçek kişisel bilgilerini yazmamanı öneririz.</li>
             <li><strong>Eğitim ve saklama:</strong> Cloudflare, Workers AI'a gönderilen metinleri yapay zekâ modellerini eğitmek için kullanmaz ve işlemden sonra saklamaz. İşlem AB dışında, özellikle ABD'de de yapılabilir; dayanak AB-ABD Veri Gizliliği Çerçevesi ve standart sözleşme maddeleridir.</li>
-            <li><strong>Sonuç:</strong> Öneriler (hatalı yer, doğrusu, kısa açıklama, düzeltilmiş metin) Firebase'de (Frankfurt) önce sadece öğretmenin görebildiği bir taslak olarak saklanır. Öğretmen kontrol edip düzeltir ya da siler; onaylanınca geri bildirim olarak sana gösterilir. Yapay zekâ not vermez ve senin hakkında karar vermez.</li>
+            <li><strong>Sonuç:</strong> Geri bildirim (hatalı yer, doğrusu, kısa açıklama, düzeltilmiş metin) Firebase'de (Frankfurt) metninle birlikte saklanır ve <strong>öğretmen önceden kontrol etmeden</strong>, gönderdikten birkaç saniye sonra görev sayfasında ve panelinde “Yapay zekâ geri bildirimi – nadiren hata yapabilir” etiketiyle sana gösterilir. Yapay zekâ yanılabilir: bir açıklama sana yanlış geliyorsa “Bu açıklama yanlış görünüyor” düğmesiyle öğretmene bildirebilirsin (hangi maddeyi işaretlediğin saklanır); öğretmen bakar, düzeltir ve not yazabilir. Öğretmen bütün metinleri ve geri bildirimleri görebilir. Yapay zekâ not vermez ve senin hakkında karar vermez.</li>
+            <li><strong>Kontrol yapılamazsa:</strong> Günlük sınır dolduysa, hizmet cevap vermediyse ya da yapay zekâ kontrolü senin için kapalıysa metnin sadece öğretmene iletilir ve geri bildirimi öğretmen yazar; bunun nedeni (ör. “günlük sınır”) metninle birlikte saklanır. Öğretmen gerekirse yapay zekâ sonucunu önce kendisi görecek şekilde (taslak) ayarlayabilir.</li>
+            <li><strong>Düzeltilmiş hâl:</strong> Geri bildirimden sonra metnini düzeltip yeniden gönderebilirsin; bu yeni bir metin olarak saklanır, ilk metne bağlanır ve günlük sınıra dahildir.</li>
             <li><strong>Sınır:</strong> Öğrenci başına günde en fazla 3, sitede günde en fazla 600 kontrol yapılır. Bunun için günlük kontrol sayın (tarih ve sayı) saklanır.</li>
-            <li><strong>16 yaş altı:</strong> Kontrol sadece velinin bu iş için verdiği ayrı ve isteğe bağlı onayla yapılır (veli onay formu). Onay yoksa öğrenci geri bildirimi sadece öğretmenden alır.</li>
-            <li><strong>Hukuki dayanak:</strong> Yetişkinlerde meşru menfaat (DSGVO md. 6/1-f: hızlı ve tutarlı geri bildirim); buna istediğin zaman itiraz edebilirsin, o zaman metinlerin yapay zekâya gönderilmez. 16 yaş altında velinin onayı (DSGVO md. 6/1-a ve md. 8); onay ayrıca ve istediği zaman geri alınabilir.</li>
+            <li><strong>16 yaş altı:</strong> Kontrol sadece velinin bu iş için verdiği ayrı ve isteğe bağlı onayla yapılır (veli onay formu). Onay yoksa öğrenci geri bildirimi sadece öğretmenden alır. Veli onayı 12 Kasım 2026'dan önceki formla verilmişse (o form “öneriler önce öğretmene gider” diyordu), veli yeni formu onaylayana kadar sonuç öğrenciye doğrudan gösterilmez; önce öğretmen kontrol eder.</li>
+            <li><strong>Hukuki dayanak:</strong> Yetişkinlerde meşru menfaat (DSGVO md. 6/1-f: öğrencinin beklemeden, hızlı ve tutarlı geri bildirim alması); buna istediğin zaman itiraz edebilirsin, o zaman metinlerin yapay zekâya gönderilmez. 16 yaş altında velinin onayı (DSGVO md. 6/1-a ve md. 8); onay ayrıca ve istediği zaman geri alınabilir.</li>
             <li>Taslaklar ve günlük sayaçlar diğer öğrenci verileriyle birlikte silinir (bkz. 10).</li>
           </ul>
         </section>
@@ -200,7 +202,7 @@
         <div class="privacy-lang" data-privacy-lang="de" lang="de" hidden>
         <p class="acc-status warning" role="note">Dieser Text wird derzeit rechtlich geprüft.</p>
         <header class="acc-head">
-          <p class="acc-eyebrow">Stand: 11. November 2026</p>
+          <p class="acc-eyebrow">Stand: 12. November 2026</p>
           <h1 id="privacyTitle-de">Datenschutzerklärung</h1>
           <p class="acc-lead">Diese Datenschutzerklärung informiert Sie darüber, welche personenbezogenen Daten bei der Nutzung der Website von Bozkurt Academy und bei der Eröffnung eines Schülerkontos verarbeitet werden, wo sie gespeichert werden und welche Rechte Sie haben.</p>
         </header>
@@ -288,16 +290,18 @@
         </section>
 
         <section id="yapay-zeka-de" data-anchor="yapay-zeka">
-          <h2>6a. KI-Vorschläge bei den Schreibaufgaben (Cloudflare Workers AI)</h2>
-          <p>Wenn angemeldete Schülerinnen und Schüler bei einer Schreibaufgabe (Schreiben) ihren Text abschicken, kann der Text mit einer KI geprüft werden, damit die Lehrkraft schneller eine Rückmeldung geben kann.</p>
+          <h2>6a. KI-Rückmeldung bei den Schreibaufgaben (Cloudflare Workers AI)</h2>
+          <p>Wenn angemeldete Schülerinnen und Schüler bei einer Schreibaufgabe (Schreiben) ihren Text abschicken, wird der Text mit einer KI geprüft, damit sie sofort eine Rückmeldung erhalten, ohne zu warten.</p>
           <ul>
             <li><strong>Dienst:</strong> Cloudflare Workers AI (Cloudflare, Inc., 101 Townsend St., San Francisco, USA). Modell: Google Gemma 4 (offenes Modell unter Apache-2.0-Lizenz), betrieben auf Servern von Cloudflare.</li>
-            <li><strong>Übermittelt:</strong> Nur der Text selbst und der Name der Aufgabe (z. B. „Goethe B1 · Teil 1 · Neue Wohnung“). Ihr Name, Ihre E-Mail-Adresse, Ihre Benutzerkennung oder andere Angaben werden nicht übermittelt. Was Sie selbst in den Text schreiben, geht als Teil des Textes mit; wir empfehlen daher, keine echten persönlichen Angaben in die Texte zu schreiben.</li>
+            <li><strong>Übermittelt:</strong> Nur der Text selbst, der Name der Aufgabe (z. B. „Goethe B1 · Teil 1 · Neue Wohnung“) und die Textsorte (z. B. informelle E-Mail). Ihr Name, Ihre E-Mail-Adresse, Ihre Benutzerkennung oder andere Angaben werden nicht übermittelt. Was Sie selbst in den Text schreiben, geht als Teil des Textes mit; wir empfehlen daher, keine echten persönlichen Angaben in die Texte zu schreiben.</li>
             <li><strong>Training und Speicherung:</strong> Cloudflare verwendet die an Workers AI gesendeten Texte nicht zum Training von KI-Modellen und speichert sie nach der Verarbeitung nicht. Die Verarbeitung kann auch außerhalb der EU, insbesondere in den USA, stattfinden; Grundlage sind das EU-U.S. Data Privacy Framework und die Standardvertragsklauseln.</li>
-            <li><strong>Ergebnis:</strong> Die Vorschläge (fehlerhafte Stelle, Korrektur, kurze Erklärung, korrigierter Text) werden in Firebase (Frankfurt) zunächst als Entwurf gespeichert, den nur die Lehrkraft sieht. Die Lehrkraft prüft und korrigiert ihn oder löscht ihn; erst nach der Freigabe sehen Sie ihn als Rückmeldung. Die KI vergibt keine Noten und trifft keine Entscheidungen über Sie.</li>
+            <li><strong>Ergebnis:</strong> Die Rückmeldung (fehlerhafte Stelle, Korrektur, kurze Erklärung, korrigierter Text) wird in Firebase (Frankfurt) zusammen mit Ihrem Text gespeichert und Ihnen <strong>ohne vorherige Prüfung durch die Lehrkraft</strong> wenige Sekunden nach dem Abschicken auf der Aufgabenseite und in Ihrem Bereich angezeigt, mit dem Hinweis „KI-Rückmeldung – kann selten Fehler enthalten“. Die KI kann sich irren: Wenn Ihnen eine Erklärung falsch vorkommt, können Sie sie mit „Diese Erklärung scheint falsch“ der Lehrkraft melden (gespeichert wird, welchen Punkt Sie markiert haben); die Lehrkraft prüft, korrigiert und kann eine Notiz schreiben. Die Lehrkraft kann alle Texte und Rückmeldungen sehen. Die KI vergibt keine Noten und trifft keine Entscheidungen über Sie.</li>
+            <li><strong>Wenn keine Prüfung möglich ist:</strong> Ist das Tageslimit erreicht, antwortet der Dienst nicht oder ist die KI-Prüfung für Sie ausgeschaltet, wird Ihr Text nur an die Lehrkraft weitergeleitet, die dann die Rückmeldung schreibt; der Grund (z. B. „Tageslimit“) wird mit dem Text gespeichert. Die Lehrkraft kann bei Bedarf einstellen, dass sie das KI-Ergebnis zuerst selbst sieht (Entwurf).</li>
+            <li><strong>Korrigierte Fassung:</strong> Nach der Rückmeldung können Sie Ihren Text korrigieren und erneut abschicken; er wird als neuer Text gespeichert, mit dem ersten verknüpft und zählt zum Tageslimit.</li>
             <li><strong>Begrenzung:</strong> Höchstens 3 Prüfungen pro Schülerin oder Schüler und 600 auf der ganzen Website pro Tag. Dafür wird die tägliche Zahl Ihrer Prüfungen (Datum und Anzahl) gespeichert.</li>
-            <li><strong>Unter 16 Jahren:</strong> Die Prüfung erfolgt nur mit einer gesonderten, freiwilligen Einwilligung der Eltern (Einwilligungserklärung). Ohne sie erhält das Kind die Rückmeldung nur von der Lehrkraft.</li>
-            <li><strong>Rechtsgrundlage:</strong> Bei Erwachsenen berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO: schnelle und einheitliche Rückmeldung); Sie können jederzeit widersprechen, dann werden Ihre Texte nicht an die KI gesendet. Unter 16 Jahren die Einwilligung der Eltern (Art. 6 Abs. 1 lit. a, Art. 8 DSGVO), die gesondert und jederzeit widerrufen werden kann.</li>
+            <li><strong>Unter 16 Jahren:</strong> Die Prüfung erfolgt nur mit einer gesonderten, freiwilligen Einwilligung der Eltern (Einwilligungserklärung). Ohne sie erhält das Kind die Rückmeldung nur von der Lehrkraft. Wurde die Einwilligung mit dem Formular vor dem 12. November 2026 erteilt (dort hieß es: „Die Vorschläge gehen zuerst an den Lehrer“), wird das Ergebnis dem Kind nicht direkt angezeigt, bis die Eltern das neue Formular bestätigt haben; bis dahin prüft zuerst die Lehrkraft.</li>
+            <li><strong>Rechtsgrundlage:</strong> Bei Erwachsenen berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO: sofortige, schnelle und einheitliche Rückmeldung ohne Wartezeit); Sie können jederzeit widersprechen, dann werden Ihre Texte nicht an die KI gesendet. Unter 16 Jahren die Einwilligung der Eltern (Art. 6 Abs. 1 lit. a, Art. 8 DSGVO), die gesondert und jederzeit widerrufen werden kann.</li>
             <li>Entwürfe und Tageszähler werden zusammen mit den übrigen Schülerdaten gelöscht (siehe Abschnitt 10).</li>
           </ul>
         </section>
@@ -342,7 +346,7 @@
         <div class="privacy-lang" data-privacy-lang="en" lang="en" hidden>
         <p class="acc-status warning" role="note">This text is currently under legal review.</p>
         <header class="acc-head">
-          <p class="acc-eyebrow">Last updated: 11 November 2026</p>
+          <p class="acc-eyebrow">Last updated: 12 November 2026</p>
           <h1 id="privacyTitle-en">Privacy policy</h1>
           <p class="acc-lead">This page explains which personal data are processed when you use the Bozkurt Academy website and when you open a student account, where they are stored, and what your rights are.</p>
         </header>
@@ -430,16 +434,18 @@
         </section>
 
         <section id="yapay-zeka-en" data-anchor="yapay-zeka">
-          <h2>6a. AI suggestions for the writing tasks (Cloudflare Workers AI)</h2>
-          <p>When a signed-in student submits a text for a writing task (Schreiben), the text may be checked by an AI so that the teacher can give feedback faster.</p>
+          <h2>6a. AI feedback for the writing tasks (Cloudflare Workers AI)</h2>
+          <p>When a signed-in student submits a text for a writing task (Schreiben), the text is checked by an AI so that the student gets feedback straight away, without waiting.</p>
           <ul>
             <li><strong>Service:</strong> Cloudflare Workers AI (Cloudflare, Inc., 101 Townsend St., San Francisco, USA). Model: Google Gemma 4 (an open model under the Apache 2.0 licence), run on Cloudflare's own servers.</li>
-            <li><strong>What is sent:</strong> Only the text itself and the name of the task (e.g. “Goethe B1 · Teil 1 · Neue Wohnung”). Your name, e-mail address, user ID or any other information is not sent. Whatever you write into the text yourself is sent as part of the text, so we recommend not writing real personal details in your texts.</li>
+            <li><strong>What is sent:</strong> Only the text itself, the name of the task (e.g. “Goethe B1 · Teil 1 · Neue Wohnung”) and the text type (e.g. informal e-mail). Your name, e-mail address, user ID or any other information is not sent. Whatever you write into the text yourself is sent as part of the text, so we recommend not writing real personal details in your texts.</li>
             <li><strong>Training and storage:</strong> Cloudflare does not use texts sent to Workers AI to train AI models and does not store them after processing. Processing may also take place outside the EU, in particular in the USA, on the basis of the EU-U.S. Data Privacy Framework and the standard contractual clauses.</li>
-            <li><strong>Result:</strong> The suggestions (the wrong part, the correction, a short explanation, the corrected text) are first stored in Firebase (Frankfurt) as a draft that only the teacher can see. The teacher checks and corrects it or deletes it; only once approved is it shown to you as feedback. The AI does not give marks and makes no decisions about you.</li>
+            <li><strong>Result:</strong> The feedback (the wrong part, the correction, a short explanation, the corrected text) is stored in Firebase (Frankfurt) together with your text and is shown to you <strong>without the teacher checking it first</strong>, a few seconds after you submit, on the task page and in your area, labelled “AI feedback – may occasionally be wrong”. The AI can be mistaken: if an explanation looks wrong to you, you can report it to the teacher with “This explanation looks wrong” (which point you flagged is stored); the teacher checks it, corrects it and can write a note. The teacher can see all texts and feedback. The AI does not give marks and makes no decisions about you.</li>
+            <li><strong>If no check is possible:</strong> If the daily limit is reached, the service does not respond or AI checking is switched off for you, your text is only passed on to the teacher, who then writes the feedback; the reason (e.g. “daily limit”) is stored with the text. If needed, the teacher can switch to a setting where they see the AI result first (draft).</li>
+            <li><strong>Corrected version:</strong> After the feedback you can correct your text and submit it again; it is stored as a new text, linked to the first one, and counts towards the daily limit.</li>
             <li><strong>Limit:</strong> At most 3 checks per student and 600 across the whole site per day. For this, your daily number of checks (date and count) is stored.</li>
-            <li><strong>Under 16:</strong> The check only happens with a separate, optional consent from a parent (parental consent form). Without it, the student gets feedback from the teacher only.</li>
-            <li><strong>Legal basis:</strong> For adults, legitimate interest (Art. 6(1)(f) GDPR: fast and consistent feedback); you can object at any time, and your texts will then not be sent to the AI. For students under 16, parental consent (Art. 6(1)(a) and Art. 8 GDPR), which can be withdrawn separately at any time.</li>
+            <li><strong>Under 16:</strong> The check only happens with a separate, optional consent from a parent (parental consent form). Without it, the student gets feedback from the teacher only. If the consent was given with the form used before 12 November 2026 (which said “the suggestions go to the teacher first”), the result is not shown to the student directly until the parent has confirmed the new form; until then the teacher checks it first.</li>
+            <li><strong>Legal basis:</strong> For adults, legitimate interest (Art. 6(1)(f) GDPR: immediate, fast and consistent feedback without waiting); you can object at any time, and your texts will then not be sent to the AI. For students under 16, parental consent (Art. 6(1)(a) and Art. 8 GDPR), which can be withdrawn separately at any time.</li>
             <li>Drafts and daily counters are deleted together with the other student data (see section 10).</li>
           </ul>
         </section>
@@ -494,7 +500,7 @@
       </div>
     </footer>
   </div>
-  <script src="js/app.js?v=41"></script>
+  <script src="js/app.js?v=42"></script>
   <script src="js/theme.js?v=10"></script>
   <script src="js/privacy.js?v=2"></script>
 </body>

@@ -38,13 +38,14 @@ Veriler reklam için kullanılmaz ve satılmaz.
 
 ## 3a. Yapay zekâ ile metin kontrolü (isteğe bağlı, ayrı onay)
 
-Öğretmen, öğrencinin yazma görevlerindeki metinleri daha hızlı düzeltebilmek için bir yapay zekâdan öneri alabilir. Bu sadece aşağıdaki ayrı kutuyu işaretlerseniz yapılır. İşaretlemezseniz öğrenci yine bütün yazma görevlerini kullanır ve geri bildirimi sadece öğretmenden alır.
+Öğrenci yazma görevinde metnini gönderdiğinde, geri bildirimi beklemeden hemen alabilmesi için metin bir yapay zekâ ile kontrol edilir (form sürümü 2, 12 Kasım 2026). Bu sadece aşağıdaki ayrı kutuyu işaretlerseniz yapılır. İşaretlemezseniz öğrenci yine bütün yazma görevlerini kullanır ve geri bildirimi sadece öğretmenden alır.
 
 - **Hizmet:** Cloudflare Workers AI (Cloudflare, Inc., ABD). Model: Google Gemma 4 (açık lisanslı bir model).
-- **Gönderilen:** Sadece metnin kendisi ve görevin adı (ör. "Goethe B1 · Teil 1 · Neue Wohnung"). Öğrencinin adı, e-posta adresi, kullanıcı kimliği ya da başka bir bilgisi gönderilmez. Öğrencinin metne kendi yazdığı bilgiler (ör. metindeki bir isim) metnin parçası olarak gider; bu yüzden öğrenciye metinlerde gerçek bilgilerini yazmamasını öneriyoruz.
+- **Gönderilen:** Sadece metnin kendisi, görevin adı (ör. "Goethe B1 · Teil 1 · Neue Wohnung") ve metin türü (ör. gayriresmî e-posta). Öğrencinin adı, e-posta adresi, kullanıcı kimliği ya da başka bir bilgisi gönderilmez. Öğrencinin metne kendi yazdığı bilgiler (ör. metindeki bir isim) metnin parçası olarak gider; bu yüzden öğrenciye metinlerde gerçek bilgilerini yazmamasını öneriyoruz.
 - **Eğitim ve saklama:** Cloudflare, Workers AI'a gönderilen metinleri yapay zekâ modellerini eğitmek için kullanmaz ve işlemden sonra saklamaz.
 - **Yer:** İşlem AB dışında, özellikle ABD'de de yapılabilir; dayanak AB-ABD Veri Gizliliği Çerçevesi ve standart sözleşme maddeleridir.
-- **Sonuç:** Öneriler önce öğretmene gider; öğretmen kontrol edip düzeltir, sonra öğrenci görür. Yapay zekâ not vermez ve öğrenci hakkında karar vermez.
+- **Sonuç:** Geri bildirim (hatalı yer, doğrusu, kısa Türkçe açıklama, düzeltilmiş metin) **öğretmen önceden kontrol etmeden**, gönderdikten birkaç saniye sonra doğrudan öğrenciye gösterilir; üzerinde "Yapay zekâ geri bildirimi – nadiren hata yapabilir" yazar. Yapay zekâ yanılabilir: öğrenci yanlış bulduğu açıklamayı tek düğmeyle öğretmene bildirebilir; öğretmen bakar, düzeltir ve not yazar. Öğretmen bütün metinleri ve geri bildirimleri görebilir. Yapay zekâ not vermez ve öğrenci hakkında karar vermez.
+- **Sınır:** Öğrenci başına günde en fazla 3 kontrol yapılır. Sınır dolarsa ya da hizmet çalışmazsa metin sadece öğretmene iletilir ve geri bildirimi öğretmen yazar.
 - Bu onayı ayrıca ve istediğiniz zaman geri alabilirsiniz; hesap açık kalır, sadece yapay zekâ kontrolü durur.
 
 ## 4. Saklama süresi
@@ -71,7 +72,7 @@ Velinin e-posta adresi: ______________________________
 
 - [ ] Yukarıdaki bilgileri okudum. Çocuğumun Bozkurt Academy öğrenci hesabının açılmasına ve verilerinin bu formda açıklandığı şekilde işlenmesine onay veriyorum.
 - [ ] Ders davetlerinin ve hatırlatma e-postalarının bana da gönderilmesini istiyorum. (İsteğe bağlı)
-- [ ] Çocuğumun yazma görevlerindeki metinlerin 3a maddesinde açıklandığı şekilde yapay zekâ ile kontrol edilmesine onay veriyorum. (İsteğe bağlı)
+- [ ] Çocuğumun yazma görevlerindeki metinlerin 3a maddesinde açıklandığı şekilde yapay zekâ ile kontrol edilmesine ve geri bildirimin öğretmen önceden kontrol etmeden doğrudan çocuğuma gösterilmesine onay veriyorum. (İsteğe bağlı)
 
 Yer, tarih: ______________________________
 
@@ -114,13 +115,14 @@ Die Daten werden nicht für Werbung verwendet und nicht verkauft.
 
 ## 3a. Textprüfung mit künstlicher Intelligenz (freiwillig, gesonderte Einwilligung)
 
-Damit der Lehrer die Texte der Schreibaufgaben schneller korrigieren kann, kann er Vorschläge einer KI einholen. Das geschieht nur, wenn Sie das gesonderte Kästchen unten ankreuzen. Ohne dieses Kreuz nutzt das Kind alle Schreibaufgaben weiterhin und erhält die Rückmeldung nur vom Lehrer.
+Wenn das Kind bei einer Schreibaufgabe seinen Text abschickt, wird der Text mit einer KI geprüft, damit es sofort eine Rückmeldung erhält, ohne zu warten (Formularversion 2, 12. November 2026). Das geschieht nur, wenn Sie das gesonderte Kästchen unten ankreuzen. Ohne dieses Kreuz nutzt das Kind alle Schreibaufgaben weiterhin und erhält die Rückmeldung nur vom Lehrer.
 
 - **Dienst:** Cloudflare Workers AI (Cloudflare, Inc., USA). Modell: Google Gemma 4 (ein offen lizenziertes Modell).
-- **Übermittelt:** Nur der Text selbst und der Name der Aufgabe (z. B. „Goethe B1 · Teil 1 · Neue Wohnung“). Name, E-Mail-Adresse, Benutzerkennung oder andere Angaben des Kindes werden nicht übermittelt. Was das Kind selbst in den Text schreibt (z. B. einen Namen), geht als Teil des Textes mit; wir empfehlen dem Kind deshalb, keine echten persönlichen Angaben in die Texte zu schreiben.
+- **Übermittelt:** Nur der Text selbst, der Name der Aufgabe (z. B. „Goethe B1 · Teil 1 · Neue Wohnung“) und die Textsorte (z. B. informelle E-Mail). Name, E-Mail-Adresse, Benutzerkennung oder andere Angaben des Kindes werden nicht übermittelt. Was das Kind selbst in den Text schreibt (z. B. einen Namen), geht als Teil des Textes mit; wir empfehlen dem Kind deshalb, keine echten persönlichen Angaben in die Texte zu schreiben.
 - **Training und Speicherung:** Cloudflare verwendet die an Workers AI gesendeten Texte nicht zum Training von KI-Modellen und speichert sie nach der Verarbeitung nicht.
 - **Ort:** Die Verarbeitung kann auch außerhalb der EU, insbesondere in den USA, stattfinden; Grundlage sind das EU-US Data Privacy Framework und die Standardvertragsklauseln.
-- **Ergebnis:** Die Vorschläge gehen zuerst an den Lehrer; er prüft und korrigiert sie, erst dann sieht das Kind sie. Die KI vergibt keine Noten und trifft keine Entscheidungen über das Kind.
+- **Ergebnis:** Die Rückmeldung (fehlerhafte Stelle, Korrektur, kurze Erklärung auf Türkisch, korrigierter Text) wird dem Kind **ohne vorherige Prüfung durch den Lehrer** wenige Sekunden nach dem Abschicken direkt angezeigt, mit dem Hinweis „KI-Rückmeldung – kann selten Fehler enthalten“. Die KI kann sich irren: Das Kind kann eine Erklärung, die ihm falsch vorkommt, mit einem Klick dem Lehrer melden; der Lehrer prüft, korrigiert und schreibt eine Notiz. Der Lehrer kann alle Texte und Rückmeldungen sehen. Die KI vergibt keine Noten und trifft keine Entscheidungen über das Kind.
+- **Begrenzung:** Höchstens 3 Prüfungen pro Kind und Tag. Ist das Limit erreicht oder der Dienst nicht erreichbar, geht der Text nur an den Lehrer, der dann die Rückmeldung schreibt.
 - Sie können diese Einwilligung gesondert und jederzeit widerrufen; das Konto bleibt bestehen, nur die KI-Prüfung endet.
 
 ## 4. Speicherdauer
@@ -147,7 +149,7 @@ E-Mail-Adresse des Elternteils: ______________________________
 
 - [ ] Ich habe die obigen Informationen gelesen. Ich willige ein, dass für mein Kind ein Schülerkonto bei Bozkurt Academy angelegt wird und seine Daten wie in diesem Formular beschrieben verarbeitet werden.
 - [ ] Ich möchte die Einladungen und Erinnerungs-E-Mails ebenfalls erhalten. (Freiwillig)
-- [ ] Ich willige ein, dass die Texte meines Kindes aus den Schreibaufgaben wie unter Punkt 3a beschrieben mit KI geprüft werden. (Freiwillig)
+- [ ] Ich willige ein, dass die Texte meines Kindes aus den Schreibaufgaben wie unter Punkt 3a beschrieben mit KI geprüft werden und die Rückmeldung meinem Kind ohne vorherige Prüfung durch den Lehrer direkt angezeigt wird. (Freiwillig)
 
 Ort, Datum: ______________________________
 

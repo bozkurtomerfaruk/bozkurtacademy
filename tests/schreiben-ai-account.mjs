@@ -1,9 +1,11 @@
 // Schreiben yapay zekâ (Aşama B), uçtan uca (Firebase Emulator: auth + firestore). Çalıştırma: npm run test:schreiben-ai
 // Worker (worker/schreiben-kontrol.js) Node'da 127.0.0.1:8787'de çalışır; Firebase istekleri emülatöre gider, yapay zekâ
-// sahte (gerçek Cloudflare çağrısı yok). Akış: mod yokken kontrol yapılmaz → öğretmen paneli varsayılan "Taslak"ı yazar
-// → öğrenci gönderir, taslak oluşur (öğrenci görmez; yapay zekâya sadece görev adı ve metin gider) → öğretmen düzeltip
+// sahte (gerçek Cloudflare çağrısı yok). Akış: mod yokken kontrol yapılmaz → öğretmen paneli varsayılan "Anında göster"i
+// yazar, öğretmen "Taslak"a çevirir → öğrenci gönderir, taslak oluşur (öğrenci görmez; yapay zekâya sadece görev adı ve metin gider) → öğretmen düzeltip
 // onaylar → öğrenci işaretli hataları görür → 16 yaş altı: yapay zekâ onayı yokken kontrol yok, öğretmen işaretleyince
-// var → günlük sınır → "Anında göster" modu. Ekran görüntüleri 390/1440, açık/koyu: $S ya da geçici klasör.
+// var → günlük sınır → "Anında göster" (varsayılan): geri bildirim görev sayfasında, "yanlış görünüyor" bildirimi öğretmen
+// panelinde, öğretmen düzeltir, düzeltilmiş hâl (yeni deneme), sınır mesajı, 16 yaş altı (eski onay → taslak, onaysız →
+// kontrol yok), ziyaretçide Firebase yüklenmez → Kapalı. Ekran görüntüleri 390/1440, açık/koyu: $S ya da geçici klasör.
 import fs from 'node:fs';
 import http from 'node:http';
 import os from 'node:os';
@@ -33,6 +35,7 @@ const FS = 'http://127.0.0.1:8080', AUTH = 'http://127.0.0.1:9099';
 
 // Sahte yapay zekâ: metinde geçen bir hata ve metinde geçmeyen (Worker'ın elemesi gereken) bir öneri döner.
 const aiCalls = [];
+let aiDelay = 0; // ms; "kontrol ediyor" durumunu görebilmek için
 const WRONG = 'weil die alte Wohnung war zu teuer';
 const RIGHT = 'weil die alte Wohnung zu teuer war';
 const env = {
@@ -41,6 +44,7 @@ const env = {
   AUTH_BASE: `${AUTH}/identitytoolkit.googleapis.com`, FIRESTORE_BASE: FS,
   AI: { run: async (model, input) => {
     aiCalls.push({ model, input });
+    if (aiDelay) await new Promise((r) => setTimeout(r, aiDelay));
     const text = input.messages[1].content.split('Metin:\n')[1] || '';
     const fehler = [
       { original: WRONG, korrektur: RIGHT, erklaerung: 'weil yan cümle kurar: çekimli fiil (war) sona gider.' },
@@ -137,10 +141,13 @@ await signIn(student, 'ogrenci@example.com', 'ogrenci123', 'student');
 ok(await submit(student) === 'off', 'settings/ai yokken Worker "off" der, kontrol yapılmaz');
 ok(aiCalls.length === 0 && (await listDocs('aiDrafts')).length === 0, 'yapay zekâ çağrılmadı, taslak yok');
 
-// 2. Öğretmen paneli varsayılan modu "Taslak" olarak yazar.
+// 2. Öğretmen paneli varsayılan modu "Anında göster" olarak yazar; öğretmen "Taslak"a çevirebilir.
 const { ctx: tctx, page: teacher } = await newPage(1440);
 await signIn(teacher, 'ogretmen@example.com', 'ogretmen123', 'teacher');
 await teacher.goto(`${BASE}/ogretmen.html`); await teacher.waitForSelector('#aiModeSelect', { timeout: 15000 }).catch(() => {});
+ok(await teacher.inputValue('#aiModeSelect') === 'instant' && plain(await getDocRest('settings/ai')).mode === 'instant', 'öğretmen paneli açılınca varsayılan mod "Anında göster" (settings/ai)');
+ok(await teacher.locator('#aiModeSelect option').count() === 3, 'Kapalı ve Taslak seçenekleri duruyor');
+await teacher.selectOption('#aiModeSelect', 'draft'); await teacher.waitForTimeout(1000);
 ok(await teacher.inputValue('#aiModeSelect') === 'draft' && plain(await getDocRest('settings/ai')).mode === 'draft', 'öğretmen paneli açılınca mod "Taslak" (settings/ai oluşturuldu)');
 
 // 3. Taslak modu: öğrenci gönderir, taslak oluşur, öğrenci görmez.
@@ -236,22 +243,175 @@ await setLimit('_global', 600);
 ok(await submit(student) === 'limit', 'site genelinde günde 600: sınır dolunca kontrol yok');
 await setLimit('_global', 5);
 
-// 8. "Anında göster": öğrenci öneriyi hemen, etiketle görür.
+// 8. "Anında göster" (varsayılan mod): geri bildirim görev sayfasında, öğretmen onayı beklenmeden.
+const TASK = `${BASE}/index.html#exams/goethe/b1/schreiben/1/set-1`;
+const resetWritingLimit = () => fetch(`${docsUrl}/users/ogrenci1/limits/writing`, { method: 'DELETE', headers: owner });
+const overflow = (page) => page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
 await teacher.goto(`${BASE}/ogretmen.html`); await teacher.waitForSelector('#aiModeSelect', { timeout: 15000 });
 await teacher.selectOption('#aiModeSelect', 'instant'); await teacher.waitForTimeout(1000);
 ok(plain(await getDocRest('settings/ai')).mode === 'instant', 'öğretmen modu "Anında göster" yaptı');
-ok(await submit(student) === 'instant', 'Anında göster modunda Worker "instant" der');
+await resetWritingLimit(); await setLimit('ogrenci1', 1);
+
+// 8a. Öğrenci gönderir: önce "kontrol ediyor", sonra aynı sayfada işaretli metin, açıklama, düzeltilmiş metin, örnek cevap.
+aiDelay = 1500;
+await student.goto('about:blank'); await student.goto(TASK); await student.waitForSelector('#wtText');
+ok((await student.textContent('[data-wt-who]')).includes('yapay zekâ'), 'gönderme notu yapay zekâ kontrolünü anlatıyor');
+await student.fill('#wtText', TEXT); await student.click('[data-wt-submit]');
+await student.waitForFunction(() => document.querySelector('.wt-status.is-pending')?.textContent.includes('Yapay zekâ'), null, { timeout: 10000 }).catch(() => {});
+ok((await student.textContent('[data-wt-status]')).includes('Yapay zekâ kontrol ediyor'), 'gönderince "Yapay zekâ kontrol ediyor" durumu');
+ok(await student.locator('[data-wt-model-later]').count() === 1 && await student.locator('[data-wt-model]').count() === 0, 'kontrol sürerken örnek cevap henüz kapalı');
+ok(await student.locator('[data-wt-again]').isDisabled(), 'kontrol sürerken "yeniden yaz" kapalı');
+await student.waitForSelector('[data-wf]', { timeout: 15000 }).catch(() => {});
+aiDelay = 0;
+ok(student.url().includes('#exams/goethe/b1/schreiben/1/set-1') && await student.locator('[data-wf]').count() === 1, 'geri bildirim aynı görev sayfasında göründü');
+ok((await student.textContent('.wf-badge')) === 'Yapay zekâ geri bildirimi – nadiren hata yapabilir', 'etiket: "Yapay zekâ geri bildirimi – nadiren hata yapabilir"');
+ok(!(await student.textContent('#examTask')).includes('öğretmenin henüz bakmadı'), '"öğretmen henüz bakmadı" etiketi yok');
+ok(await student.locator('.wf-mark').count() === 1 && (await student.locator('.wf-mark').textContent()) === `${WRONG}1`, 'hatalı yer metin içinde işaretli');
+await student.locator('.wf-mark').click();
+ok(await student.locator('.wf-item.is-active').count() === 1 && (await student.textContent('.wf-item.is-active .wf-why')).includes('weil yan cümle kurar')
+  && await student.getAttribute('.wf-mark', 'aria-expanded') === 'true', 'işarete tıklayınca Türkçe açıklaması öne çıkıyor');
+await student.locator('.wf-mark').focus(); await student.keyboard.press('Enter');
+ok(await student.evaluate(() => document.activeElement?.matches('.wf-item')), 'klavyeyle (Enter) de açıklamaya gidiliyor');
+await student.click('.wf-corrected summary');
+ok((await student.textContent('[data-wf-corrected]')).includes(RIGHT), 'düzeltilmiş metin açılıyor');
+ok(await student.locator('[data-wt-model]').count() === 1 && (await student.textContent('[data-wt-status]')).includes('Kontrol bitti'), 'kontrol bitince örnek cevap açıldı');
+ok(await student.evaluate(() => { const a = document.querySelector('[data-wf]'), b = document.querySelector('[data-wt-model]'); return Boolean(a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING); }), 'örnek cevap geri bildirimden sonra geliyor');
+ok((await student.textContent('[data-wt-again]')).trim() === 'Düzeltilmiş hâlini yaz', '"Düzeltilmiş hâlini yaz" düğmesi');
 const w5 = await latestWriting('ogrenci1');
-ok(w5.aiAt && w5.raw.fields.aiFeedback.mapValue.fields.errors.arrayValue.values.length === 1 && !w5.feedbackAt, 'metne aiFeedback ve aiAt yazıldı, öğretmen geri bildirimi bekleniyor');
-ok(await submit(student) === 'instant', 'ikinci metin de kontrol edildi (sayaç 3)');
-await student.goto(`${BASE}/panel.html`); await student.waitForSelector(`[data-writing="${w5.id}"]`, { timeout: 15000 }).catch(() => {});
-const card5 = student.locator(`[data-writing="${w5.id}"]`);
-ok(await card5.locator('.acc-new-dot:not([hidden])').count() === 1, 'otomatik öneri "yeni" olarak işaretli');
-await card5.locator(':scope > summary').click(); await student.waitForTimeout(800);
-ok((await card5.textContent()).includes('Otomatik öneri (öğretmenin henüz bakmadı)') && await card5.locator('mark').count() === 1, 'öğrenci "Otomatik öneri" etiketini ve işaretli hatayı görüyor');
-await card5.screenshot({ path: path.join(shotDir, 'ogrenci-aninda-1280.png') });
-await teacher.goto(`${BASE}/ogretmen-ogrenci.html?id=ogrenci1#yazilar`); await teacher.waitForSelector(`[data-writing="${w5.id}"] [data-ai-instant]`, { timeout: 15000 }).catch(() => {});
-ok(await teacher.locator(`[data-writing="${w5.id}"] [data-ai-instant]`).count() === 1, 'öğretmen detayında "öğrenciye gösterildi" notu');
+ok(w5.aiAt && w5.raw.fields.aiFeedback.mapValue.fields.errors.arrayValue.values.length === 1 && !w5.feedbackAt && w5.seenAt, 'metne aiFeedback ve aiAt yazıldı; öğretmen onayı yok; görüldü işaretli');
+ok(!(await getDocRest(`aiDrafts/ogrenci1_${w5.id}`)), 'anında modunda taslak oluşmadı');
+
+// 8b. Dil değişince geri bildirim ve durum kaybolmaz (DE/EN).
+for (const [code, label] of [['de', 'KI-Rückmeldung – kann selten Fehler enthalten'], ['en', 'AI feedback – may occasionally be wrong']]) {
+  await student.evaluate((l) => document.querySelector(`[data-lang="${l}"], [data-set-lang="${l}"], #lang-${l}`)?.click(), code);
+  await student.waitForTimeout(600);
+  const got = await student.locator('.wf-badge').textContent().catch(() => '');
+  ok(got === label, `${code.toUpperCase()}: etiket çevrildi (${got})`);
+}
+await student.evaluate(() => document.querySelector('[data-lang="tr"], [data-set-lang="tr"], #lang-tr')?.click()); await student.waitForTimeout(600);
+
+// 8c. "Bu açıklama yanlış görünüyor": öğretmene bildirilir.
+await student.click('[data-wf-flag="0"]');
+await student.waitForSelector('[data-wf-flagged="0"]', { timeout: 10000 }).catch(() => {});
+ok((await student.textContent('.wf-flag-box')).includes('Öğretmenine bildirildi'), '"yanlış görünüyor" → "Öğretmenine bildirildi"');
+const w5f = await latestWriting('ogrenci1');
+ok(w5f.raw.fields.aiFlags?.arrayValue.values.length === 1 && w5f.raw.fields.aiFlags.arrayValue.values[0].integerValue === '0' && w5f.aiFlaggedAt, 'işaret Firestore\'da (aiFlags: [0])');
+
+// 8d. Ekran görüntüleri (390/1440, açık/koyu) ve taşma: işaretlenmemiş, yapay zekânın kontrol ettiği dört yazı daha.
+for (const [width, theme] of [[390, 'light'], [390, 'dark'], [1440, 'light'], [1440, 'dark']]) {
+  await setLimit('ogrenci1', 1);
+  const { ctx, page } = await newPage(width, theme);
+  await signIn(page, 'ogrenci@example.com', 'ogrenci123', 'student');
+  await page.goto(TASK); await page.waitForSelector('#wtText');
+  await page.fill('#wtText', TEXT); await page.click('[data-wt-submit]');
+  await page.waitForSelector('[data-wf]', { timeout: 15000 }).catch(() => {});
+  await page.locator('.wf-mark').click().catch(() => {}); await page.waitForTimeout(400);
+  ok(await page.locator('[data-wf]').count() === 1 && await overflow(page) <= 0, `${width} ${theme}: görev sayfasında geri bildirim var, taşma yok`);
+  await page.locator('.wt-result').screenshot({ path: path.join(shotDir, `gorev-geri-bildirim-${width}-${theme}.png`) });
+  await ctx.close();
+}
+
+// 8e. Öğretmen paneli: sayaç yapay zekânın kontrol ettiği yazıları saymaz; işaretlenen madde ve kontrol edilemeyenler sayılır.
+const all = (await listDocs('users/ogrenci1/writings')).map((d) => d.fields);
+const expected = all.filter((f) => !f.feedbackAt && (!f.aiFeedback || f.aiFlags)).length;
+const checked = all.filter((f) => !f.feedbackAt && f.aiFeedback && !f.aiFlags).length;
+await teacher.goto(`${BASE}/ogretmen.html`); await teacher.waitForSelector('#list-ogrenciler [data-pending-writings]', { timeout: 15000 }).catch(() => {});
+const badge = teacher.locator('#list-ogrenciler [data-flagged-writings="1"]');
+ok(checked === 4 && await badge.count() === 1 && await badge.getAttribute('data-pending-writings') === String(expected),
+  `sayaç: ${expected} yazı (1 işaretli + kontrol edilemeyenler); yapay zekânın kontrol ettiği ${checked} yazı sayılmıyor`);
+ok((await teacher.textContent('#writingNotice')).includes('yanlış görünüyor') && await teacher.getAttribute('#writingNotice', 'data-flagged') === '1', 'öğretmen panelinde "yanlış görünüyor" bildirimi');
+await teacher.screenshot({ path: path.join(shotDir, 'ogretmen-sayac-1440.png') });
+await teacher.goto(`${BASE}/ogretmen-ogrenci.html?id=ogrenci1#yazilar`); await teacher.waitForSelector(`[data-ai-live="${w5.id}"]`, { timeout: 15000 }).catch(() => {});
+const live = teacher.locator(`[data-ai-live="${w5.id}"]`);
+ok(await teacher.locator(`[data-writing="${w5.id}"] [data-writing-flagged="1"]`).count() === 1 && await live.locator('[data-ai-flagged]').count() === 1, 'öğretmen: hangi yazı, hangi madde işaretlenmiş görünüyor');
+ok(await teacher.locator('[data-writing-ai]').count() === 4 && await teacher.locator('details[data-writing][open]').count() === expected, 'kontrol edilmiş yazılar kapalı duruyor ama görülebiliyor; sadece bakılacaklar açık');
+ok(await teacher.locator('[data-writing-waiting="limit"]').count() >= 1 && (await teacher.textContent('#writingsList')).includes('günlük sınır dolmuştu'), 'kontrol edilemeyen yazıda neden yazıyor (günlük sınır)');
+await live.scrollIntoViewIfNeeded();
+await live.screenshot({ path: path.join(shotDir, 'ogretmen-isaretli-madde-1440.png') });
+await teacher.setViewportSize({ width: 390, height: 900 });
+ok(await overflow(teacher) <= 0, '390: öğretmen sayfasında taşma yok');
+await live.screenshot({ path: path.join(shotDir, 'ogretmen-isaretli-madde-390.png') });
+await teacher.setViewportSize({ width: 1280, height: 900 });
+await live.locator('[data-ai-erklaerung]').fill('Öğretmen: weil yan cümlesinde çekimli fiil sonda durur: … zu teuer war.');
+await live.locator('[data-ai-note]').fill('Haklısın, açıklama eksikti; düzelttim.');
+await live.locator('[data-ai-approve]').click(); await teacher.waitForTimeout(1500);
+const w5t = (await listDocs('users/ogrenci1/writings')).map((d) => ({ id: d.name.split('/').pop(), f: d.fields })).find((d) => d.id === w5.id).f;
+ok(w5t.feedbackSource.stringValue === 'ai-edited' && w5t.feedbackItems.arrayValue.values[0].mapValue.fields.by?.stringValue === 'teacher' && w5t.feedback.stringValue.startsWith('Haklısın'), 'öğretmen maddeyi düzeltti ve not yazdı (by: teacher)');
+await teacher.goto(`${BASE}/ogretmen.html`); await teacher.waitForSelector('#list-ogrenciler [data-pending-writings]', { timeout: 15000 }).catch(() => {});
+ok(await teacher.locator(`#list-ogrenciler [data-pending-writings="${expected - 1}"][data-flagged-writings="0"]`).count() === 1, 'düzeltmeden sonra işaretli yazı sayaçtan düştü');
+
+// 8f. Öğrenci paneli: geçmiş geri bildirim, "Öğretmenin düzeltti" etiketi ve not.
+const { ctx: pctx, page: panel } = await newPage(390);
+await signIn(panel, 'ogrenci@example.com', 'ogrenci123', 'student');
+await panel.goto(`${BASE}/panel.html`); await panel.waitForSelector(`[data-writing="${w5.id}"]`, { timeout: 15000 }).catch(() => {});
+const card5 = panel.locator(`[data-writing="${w5.id}"]`);
+await card5.locator(':scope > summary').click(); await panel.waitForTimeout(800);
+ok(await card5.locator('[data-item-by="teacher"]').count() === 1 && (await card5.textContent()).includes('Öğretmenin düzeltti') && (await card5.textContent()).includes('Haklısın'), 'öğrenci panelinde düzeltilen maddede "Öğretmenin düzeltti" ve not');
+await card5.screenshot({ path: path.join(shotDir, 'ogrenci-ogretmen-duzeltti-390.png') });
+const other = panel.locator('[data-writing]:has([data-writing-auto])').first();
+await other.locator(':scope > summary').click(); await panel.waitForTimeout(800);
+ok(await other.locator('.wf-mark').count() === 1 && (await other.textContent()).includes('Yapay zekâ geri bildirimi – nadiren hata yapabilir') && await other.locator('[data-wf-flag]').count() === 1, 'panelde geçmiş yapay zekâ geri bildirimi (işaretli metin, etiket, "yanlış görünüyor" düğmesi) duruyor');
+ok(await overflow(panel) <= 0, '390: öğrenci panelinde taşma yok');
+await other.screenshot({ path: path.join(shotDir, 'ogrenci-panel-yapay-zeka-390.png') });
+
+// 8g. Düzeltilmiş hâl: yeni deneme, ilk yazıya bağlı, günlük yapay zekâ sınırına dahil.
+await setLimit('ogrenci1', 2);
+await student.click('[data-wt-again]'); await student.waitForSelector('#wtText');
+ok((await student.inputValue('#wtText')) === TEXT && await student.locator('[data-wt-revision]').count() === 1, 'düzenleyicide önceki metin ve "yeni deneme" notu');
+await student.fill('#wtText', TEXT.replace(WRONG, RIGHT)); await student.click('[data-wt-submit]');
+await student.waitForSelector('[data-wf]', { timeout: 15000 }).catch(() => {});
+const w6 = await latestWriting('ogrenci1');
+ok(w6.revisionOf === w5.id && w6.id !== w5.id && w6.aiAt, 'düzeltilmiş hâl yeni bir yazı olarak kaydedildi (revisionOf) ve kontrol edildi');
+ok(await student.locator('.wf-mark').count() === 0 && (await student.textContent('[data-wf]')).includes('hata bulmadı'), 'düzeltilmiş metinde hata kalmadı');
+ok(plain(await getDocRest('aiLimits/ogrenci1')).count === '3', 'düzeltilmiş hâl günlük yapay zekâ sınırına sayıldı (3/3)');
+await panel.reload(); await panel.waitForSelector(`[data-writing="${w6.id}"]`, { timeout: 15000 }).catch(() => {});
+ok(await panel.locator(`[data-writing="${w6.id}"] [data-writing-attempt="2"]`).count() === 1 && await panel.locator(`[data-writing="${w5.id}"] [data-writing-attempt="1"]`).count() === 1
+  && await panel.evaluate(([a, b]) => document.querySelector(`[data-writing="${a}"]`).nextElementSibling === document.querySelector(`[data-writing="${b}"]`), [w5.id, w6.id]), 'panelde "2. deneme" ilk yazının hemen altında');
+await pctx.close();
+
+// 8h. Sınır dolunca açık mesaj; metin öğretmene kalır.
+await student.click('[data-wt-again]'); await student.waitForSelector('#wtText');
+await student.fill('#wtText', TEXT); await student.click('[data-wt-submit]');
+await student.waitForSelector('.wt-status.error', { timeout: 15000 }).catch(() => {});
+ok((await student.textContent('[data-wt-status]')) === 'Bugünkü yapay zekâ kontrolün bitti (günde 3 metin), yarın tekrar dene; metnin öğretmenine iletildi.', 'sınır dolunca açık mesaj');
+ok(await student.locator('[data-wf]').count() === 0 && await student.locator('[data-wt-model]').count() === 1 && await student.locator('#wtText').count() === 0, 'sınırda geri bildirim yok; örnek cevap açık');
+const w7 = await latestWriting('ogrenci1');
+ok(w7.aiSkip === 'limit' && !w7.aiAt && w7.revisionOf === w6.id, 'neden yazıya kaydedildi (aiSkip: limit); öğretmen sayacına girer');
+await student.screenshot({ path: path.join(shotDir, 'gorev-sinir-1280.png') });
+
+// 8i. 16 yaş altı: eski formla alınmış onay → taslak öğretmene (öğrenci görmez); onay yok → yapay zekâ çalışmaz.
+const patchConsent = (fields) => fetch(`${docsUrl}/users/ogrenci3?updateMask.fieldPaths=aiConsent`, { method: 'PATCH', headers: owner, body: JSON.stringify({ fields }) });
+ok(plain(await getDocRest('users/ogrenci3')).aiConsent.fields.version?.integerValue === '2', 'öğretmenin kaydettiği veli onayı yeni form sürümüyle (2)');
+await patchConsent({ aiConsent: { mapValue: { fields: { given: { booleanValue: true }, at: now(), method: { stringValue: 'form' }, recordedAt: now() } } } });
+const { ctx: mctx2, page: minor2 } = await newPage();
+await signIn(minor2, 'genc@example.com', 'ogrenci123', 'student');
+const draftsBefore = (await listDocs('aiDrafts')).length;
+ok(await submit(minor2) === 'draft' && (await listDocs('aiDrafts')).length === draftsBefore + 1, '16 yaş altı, eski onay, mod "Anında göster": sonuç taslak olarak öğretmene gitti');
+await minor2.waitForSelector('.wt-status.success', { timeout: 15000 }).catch(() => {});
+ok(await minor2.locator('[data-wf]').count() === 0 && (await minor2.textContent('[data-wt-status]')).includes('Öğretmenin okuyup') && await minor2.locator('[data-wt-model]').count() === 1, 'öğrenci yapay zekâ sonucunu görmüyor; kontrol listesi akışı (örnek cevap + öğretmen)');
+ok(!(await latestWriting('ogrenci3')).aiFeedback, 'metne aiFeedback yazılmadı');
+await teacher.goto(`${BASE}/ogretmen-ogrenci.html?id=ogrenci3#yazilar`); await teacher.waitForSelector('#aiConsentBox [data-ai-allowed]', { timeout: 15000 }).catch(() => {});
+ok(await teacher.locator('[data-ai-consent-old]').count() === 1, 'öğretmen sayfasında "eski formla alındı" uyarısı');
+await patchConsent({});
+const callsMinor = aiCalls.length;
+ok(await submit(minor2) === 'not-allowed' && aiCalls.length === callsMinor, '16 yaş altı, yapay zekâ onayı yok: yapay zekâ çalışmadı');
+await minor2.waitForSelector('.wt-status.success', { timeout: 15000 }).catch(() => {});
+ok(await minor2.locator('[data-wf]').count() === 0 && await minor2.locator('[data-wt-model]').count() === 1 && (await latestWriting('ogrenci3')).aiSkip === 'consent', 'onaysız öğrencide akış eskisi gibi; neden kaydedildi (aiSkip: consent)');
+await mctx2.close();
+
+// 8j. Ziyaretçi: Firebase, Worker ve geri bildirim modülü hiç yüklenmez.
+{
+  const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+  const page = await ctx.newPage();
+  const requests = [];
+  page.on('request', (r) => requests.push(r.url()));
+  await page.goto(TASK); await page.waitForSelector('#wtText');
+  await page.fill('#wtText', TEXT); await page.click('[data-wt-submit]'); await page.waitForTimeout(1500);
+  ok(!requests.some((u) => /firebasejs|firestore|identitytoolkit|:8080|:9099|:8787|writing-feedback\.js|account\/firebase\.js/.test(u)), 'ziyaretçide Firebase, Worker ve geri bildirim modülü yüklenmedi');
+  ok(await page.locator('[data-wt-model]').count() === 1 && await page.locator('.is-pending').count() === 0 && (await page.textContent('[data-wt-again]')).trim() === 'Yeniden yaz', 'ziyaretçi örnek cevabı hemen görüyor');
+  await ctx.close();
+}
+await setLimit('ogrenci1', 1);
 
 // 9. Kapalı: Worker hiçbir şey yapmaz.
 await teacher.goto(`${BASE}/ogretmen.html`); await teacher.waitForSelector('#aiModeSelect', { timeout: 15000 });

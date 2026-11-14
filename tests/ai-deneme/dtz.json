@@ -1,0 +1,118 @@
+{
+  "about": "Yapay zekâ denemesi (DTZ Schreiben). errors: bulunması gereken hatalı yerler; clean: doğru olan, işaretlenmemesi gereken yerler. Çalıştırma: scripts/ai-deneme.mjs.",
+  "exam": "dtz",
+  "level": "a2-b1",
+  "teil": 1,
+  "texts": [
+    {
+      "id": "dtz-1",
+      "set": "set-1",
+      "note": "Ev sahibi; Betreff yok (hata sayılmamalı)",
+      "text": "Sehr geehrter Herr Brandt,\nich schreibe Ihnen, weil die Heizung funktioniert nicht. Seit Montag ist es im Wohnzimmer sehr kalt. Meine Tochter ist krank und sie brauche ein warmes Zimmer. Können Sie bitte einen Handwerker schicken? Ich bin jeden Tag ab 14 Uhr zu Hause.\nMit freundlichen Grüßen\nElif Kaya",
+      "errors": [
+        "weil die Heizung funktioniert nicht",
+        "sie brauche"
+      ],
+      "clean": [
+        "Sehr geehrter Herr Brandt",
+        "Mit freundlichen Grüßen"
+      ]
+    },
+    {
+      "id": "dtz-2",
+      "set": "set-2",
+      "note": "Öğretmen; hitaptan sonra büyük harf, Dativ, fiil yeri",
+      "text": "Liebe Frau Krüger,\nLeider kann ich am Donnerstag nicht zum Elternabend kommen, weil ich arbeiten muss. Das tut mir leid. Können Sie mir die Informationen per E-Mail schicken? Ich möchte auch mit Sie über die Noten von Emre sprechen. Nächste Woche ich habe am Montag Zeit.\nViele Grüße\nAyşe Demir",
+      "errors": [
+        "Leider",
+        "mit Sie",
+        "Nächste Woche ich habe"
+      ],
+      "clean": [
+        "weil ich arbeiten muss",
+        "Viele Grüße"
+      ]
+    },
+    {
+      "id": "dtz-3",
+      "set": "set-3",
+      "note": "Kurum; resmiyet (Hallo/Tschüss), ayrılabilen fiil, soru cümlesi",
+      "text": "Hallo,\nich habe gelesen, dass Sie Schwimmkurse anbieten. Ich möchte meine Tochter anmelden. Sie ist sechs Jahre alt und kann nicht schwimmen. Wann der Kurs findet statt? Was muss sie mitbringen?\nTschüss\nMehmet Arslan",
+      "errors": [
+        "Hallo",
+        "Wann der Kurs findet statt",
+        "Tschüss"
+      ],
+      "clean": [
+        "dass Sie Schwimmkurse anbieten",
+        "Was muss sie mitbringen"
+      ]
+    },
+    {
+      "id": "dtz-4",
+      "set": "set-4",
+      "note": "Firma; Perfekt yardımcı fiili, kein/nicht, Akkusativ",
+      "text": "Sehr geehrte Damen und Herren,\nich habe bei Ihnen eine Lampe bestellt. Gestern hat das Paket angekommen, aber im Paket war nicht Lampe, sondern ein Wecker. Bitte schicken Sie mir der richtige Lampe. Sie erreichen mich per E-Mail.\nMit freundlichen Grüßen\nHasan Yıldız",
+      "errors": [
+        "hat das Paket angekommen",
+        "nicht Lampe",
+        "der richtige Lampe"
+      ],
+      "clean": [
+        "sondern ein Wecker",
+        "Sie erreichen mich per E-Mail"
+      ]
+    },
+    {
+      "id": "dtz-5",
+      "set": "set-5",
+      "note": "Şef; du/Sie karışması, modal fiil + mastar",
+      "text": "Liebe Frau Wagner,\nich brauche nächste Woche einen freien Tag. Am Mittwoch habe ich einen Termin bei der Ausländerbehörde. Mein Kollege Tarık kann meine Schicht übernimmt. Kannst du mir bitte frei geben? Die Stunden arbeite ich am Samstag nach. Vielen Dank für Ihr Verständnis.\nViele Grüße\nSelin Aydın",
+      "errors": [
+        "kann meine Schicht übernimmt",
+        "Kannst du mir"
+      ],
+      "clean": [
+        "Die Stunden arbeite ich am Samstag nach",
+        "Vielen Dank für Ihr Verständnis"
+      ]
+    },
+    {
+      "id": "dtz-6",
+      "set": "set-6",
+      "note": "Komşu; baştan sona du, büyük harfle Du/Dich (hata sayılmamalı), bir fiil yeri hatası",
+      "text": "Liebe Olga,\nam Samstag feiere ich meinen Geburtstag. Die Feier beginnt um 19 Uhr. Ich hoffe, dass der Lärm stört Dich nicht. Wenn Du Lust hast, komm doch auch vorbei! Ich würde mich freuen.\nViele Grüße\nMurat",
+      "errors": [
+        "dass der Lärm stört Dich nicht"
+      ],
+      "clean": [
+        "Wenn Du Lust hast",
+        "Liebe Olga"
+      ]
+    },
+    {
+      "id": "dtz-7",
+      "set": "set-1",
+      "note": "Betreff satırı var (hata sayılmamalı); yazım ve edat",
+      "text": "Betreff: Heizung kaputt\nSehr geehrter Herr Brandt,\nseit drei Tagen ist die Heizung in unsere Wohnung kaputt. Es ist sehr kalt und meine Kinder sind erkeltet. Bitte kommen Sie schnell oder schicken Sie einen Handwerker. Ich warte auf Ihre Antwort.\nMit freundlichen Grüßen\nElif Kaya",
+      "errors": [
+        "in unsere Wohnung",
+        "erkeltet"
+      ],
+      "clean": [
+        "Betreff: Heizung kaputt",
+        "Ich warte auf Ihre Antwort"
+      ]
+    },
+    {
+      "id": "dtz-8",
+      "set": "set-2",
+      "note": "Hatasız metin (yanlış alarm olmamalı)",
+      "text": "Sehr geehrte Frau Krüger,\nleider kann ich am Donnerstag nicht zum Elternabend kommen, weil ich an diesem Abend arbeiten muss. Könnten Sie mir bitte die wichtigsten Informationen per E-Mail schicken? Außerdem möchte ich gern mit Ihnen über Emres Noten sprechen. Haben Sie nächste Woche Zeit?\nMit freundlichen Grüßen\nAyşe Demir",
+      "errors": [],
+      "clean": [
+        "weil ich an diesem Abend arbeiten muss"
+      ]
+    }
+  ]
+}

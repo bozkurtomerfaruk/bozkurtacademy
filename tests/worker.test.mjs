@@ -175,6 +175,17 @@ describe('Schreiben Worker', () => {
     assert.match(PROMPT, /du, dich, dein, dir büyük ya da küçük yazılabilir/);
   });
 
+  test('du/Du: sadece büyük-küçük harfi değiştiren öneri atılır; başka kelimenin harfi değişiyorsa kalır', () => {
+    const text = 'Liebe Olga,\nich hoffe, dass der Lärm stört Dich nicht. Wenn Du Lust hast, komm vorbei. das Fest wird schön.';
+    const r = cleanResult(JSON.stringify({ fehler: [
+      { original: 'Dich', korrektur: 'dich', erklaerung: 'yanlış kural' },
+      { original: 'Wenn Du Lust hast', korrektur: 'Wenn du Lust hast', erklaerung: 'yanlış kural' },
+      { original: 'dass der Lärm stört Dich nicht', korrektur: 'dass der Lärm dich nicht stört', erklaerung: 'Yan cümlede fiil sonda.' },
+      { original: 'das Fest', korrektur: 'Das Fest', erklaerung: 'Cümle başı büyük harf.' }
+    ], korrigierter_text: 'x' }), text);
+    assert.deepEqual(r.errors.map((e) => e.original), ['dass der Lärm stört Dich nicht', 'das Fest']);
+  });
+
   test('directAllowed', () => {
     assert.equal(directAllowed({ minor: false }), true);
     assert.equal(directAllowed({ minor: true, aiConsent: { given: true } }), false);

@@ -2,6 +2,37 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-14 · Schreiben genişletme 4: DTZ (Deutsch-Test für Zuwanderer)
+
+- **Format (resmî: g.a.s.t. Übungssatz 1 ve 2, Ekim 2026; g.a.s.t. "DTZ auf einen Blick" ve öğretmen SSS'si):** Schreiben 30 dk, 20 puan (B1 15–20, A2 7–14).
+  - Tek görev; sınavda iki seçenekten biri seçiliyor (Aufgabe A ya da B).
+  - Yarı resmî ya da resmî e-posta/mektup; gayriresmî kişisel mektup sorulmuyor. Kısa durum + 4 madde, sıra serbest.
+  - Hitap ve selam zorunlu; Betreff, tarih, adres istenmiyor. Kelime sınırı yok ("Schreiben Sie möglichst viel"); 40 kelimenin altında B1 neredeyse imkânsız.
+  - Ölçütler: Inhalt, Kommunikative Gestaltung, Ausdruck, Korrektheit. Maddeleri numaralamak ya da "her maddeye bir cümle" yazmak puan düşürüyor.
+- **6 set (kararın: 6 ayrı görev):** Die Heizung funktioniert nicht (ev sahibi), Elternabend in der Schule (öğretmen), Schwimmkurs für Ihre Tochter (spor kulübü), Falsche Lieferung (firma), Ein freier Tag (şef), Geburtstagsfeier im Haus (komşu).
+  - Örnek cevaplar 91–102 kelime, hitapla başlıyor, Betreff yok.
+  - Kontrol listesinde (kararın): "Maddeleri numaralamadım ve her maddeye tek cümle yazıp geçmedim; metnim bağlantılı." `scripts/check-exams.mjs` DTZ setlerinde bunu zorunlu tutuyor.
+- **Görev sayfası:**
+  - "Gerçek sınavda iki görevden (Aufgabe A ya da B) birini seçersin; burada her görev ayrı bir alıştırmadır." notu (`examChoice`).
+  - "Önerilen uzunluk: yaklaşık 80 kelime (resmî sınır yok)"; sayaç 60–120 arasını iyi sayıyor.
+  - 40 kelimenin altında "B1 için çok kısa" uyarısı (`words.veryShort`); göndermeyi engellemiyor. TR/DE/EN.
+- **Yapay zekâ talimatı (Worker değişti):**
+  - DTZ: Betreff yoksa hata sayılmıyor, eklenmesi önerilmiyor; komşuya ya da iş arkadaşına baştan sona du ile yazmak hata değil, kuruma ve firmaya du hata.
+  - Bütün metin türleri: Du/Dich/Dir büyük ya da küçük yazılabilir. Sadece bu harfi değiştiren öneri Worker'da kesin kuralla atılıyor.
+  - Deneme sırasında eklenen genel kurallar: soru kelimeli sorularda fiil 2. sırada; isim kein ile olumsuz yapılır ("keine Lampe"); her dass/weil/wenn/ob cümlesi tek tek kontrol edilir ve açıklamada doğru bağlaç söylenir; özel isimlerde iyelik -s'si kesme işaretsiz (Emres Noten).
+- **Deneme (8 DTZ metni, 16 hata; gerçek Gemma 4):**
+  - İlk tam tur: 15/16 gibi görünen sonuçta bir yanlış kural çıktı ("Dich → dich") ve dass cümlesindeki fiil yeri kaçtı. Neden: "Du büyük yazılabilir, asla dokunma" kuralı o cümledeki asıl hatayı da bastırıyordu.
+  - Kural yeniden yazıldıktan sonra: art arda 5 turun hepsinde 16/16. Bunların birinde tek yanlış alarm çıktı ("Emres Noten" için kesme işareti); kural eklendi, son 3 turda yanlış alarm yok.
+  - Betreff'siz metin, Betreff'li metin, büyük harfli Du ve hatasız metin hata sayılmadı.
+  - Eski setlerde (Goethe B1, A1, telc B1) gerçek modelle regresyon yapılamadı: o deneme metinleri depoda yok. Yeni kurallar ekleme niteliğinde; Worker birim testleri geçiyor.
+- **Deneme artık depoda:** `tests/ai-deneme/dtz.json` (metinler, bulunması gereken hatalar, işaretlenmemesi gereken yerler) ve `scripts/ai-deneme.mjs` (Worker'daki talimatla gerçek modele gönderir; token depoya yazılmaz).
+- **Öğretmen paneli:** Mod seçim kutusunun altındaki "null" yazısı düzeltildi (Worker adresi kayıtlıyken boş öğe yazıya dönüşüyordu).
+- **Testler:** `npm test` (Worker testleri 22), `node tests/schreiben.mjs` (20 yeni DTZ kontrolü), `test:schreiben`, `test:schreiben-ai`, `test:csp`; 390/1440 açık/koyu, taşma yok.
+- **Senin yapacakların (birleştirmeden sonra):**
+  1. Worker'ı Cloudflare'de güncelle. Firestore kuralları değişmedi.
+  2. Deneme token'ını sil (21.11.2026'ya kadar geçerli).
+- **Sıradaki:** Goethe A2 → Goethe B2 Schreiben; sonra e-posta (madde 9), sonra Sprechen (madde 8).
+
 ## 2026-11-14 · Schreiben: öğrenci geri bildirimi hemen görüyor ("Anında göster" varsayılan)
 
 - **Ne değişti:** Yapay zekâ geri bildirimi artık öğretmen onayını beklemeden, gönderdikten birkaç saniye sonra aynı görev sayfasında görünüyor.
@@ -29,7 +60,6 @@
   2. Worker'ı Cloudflare'de güncelle (`docs/yapay-zeka-kurulum.md`, "Kod değişirse").
   3. Öğretmen panelinde modu **Anında göster** yap (sende "Taslak" kayıtlı; kendiliğinden değişmez).
   4. 16 yaş altı öğrencilerin velilerine yeni formu gönder; onaylayanları öğrenci sayfasında kaydet.
-- **Sıradaki:** Schreiben genişletmesi: DTZ → Goethe A2 → Goethe B2; sonra e-posta (madde 9), sonra Sprechen (madde 8).
 
 ## 2026-11-12 · Schreiben genişletme 3: telc Deutsch B1
 

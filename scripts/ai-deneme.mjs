@@ -34,12 +34,15 @@ for (const t of trial.texts) {
   const raw = typeof r.response === 'string' ? r.response : r.choices?.[0]?.message?.content || JSON.stringify(r.response || '');
   const clean = cleanResult(raw, t.text) || { errors: [] };
   const overlaps = (a, b) => a.includes(b) || b.includes(a);
-  const hit = t.errors.filter((e) => clean.errors.some((x) => overlaps(x.original, e)));
-  const missed = t.errors.filter((e) => !hit.includes(e));
-  // Yanlış alarm: beklenen hiçbir hatayla örtüşmeyen madde (özellikle "clean" listesindeki doğru yerler).
-  const extra = clean.errors.filter((x) => !t.errors.some((e) => overlaps(x.original, e)));
+  // Bulundu: madde hatalı yerle örtüşüyor VE düzeltmesinde beklenen parça (fix) geçiyor. Sadece örtüşmek yetmez
+  // (ör. "stört Dich nicht" içindeki "Dich → dich" fiil yeri hatasını bulmuş sayılmaz).
+  const matches = (x, e) => overlaps(x.original, e.wrong) && x.korrektur.includes(e.fix);
+  const hit = t.errors.filter((e) => clean.errors.some((x) => matches(x, e)));
+  const missed = t.errors.filter((e) => !hit.includes(e)).map((e) => e.wrong);
+  // Beklenmeyen madde: beklenen hiçbir hatayı düzeltmeyen madde (yanlış alarm ya da metindeki fark edilmemiş başka bir hata).
+  const extra = clean.errors.filter((x) => !t.errors.some((e) => matches(x, e)));
   found += hit.length; expected += t.errors.length; alarms += extra.length;
-  results.push({ id: t.id, note: t.note, hit, missed, extra, items: clean.errors });
+  results.push({ id: t.id, note: t.note, hit: hit.map((e) => e.wrong), missed, extra, items: clean.errors });
   console.log(`\n${t.id} · ${t.note}\n  bulunan ${hit.length}/${t.errors.length}${missed.length ? ` · kaçan: ${missed.join(' | ')}` : ''}`);
   for (const x of clean.errors) console.log(`  ${extra.includes(x) ? '?' : '✓'} ${x.original} → ${x.korrektur}\n      ${x.erklaerung}`);
 }

@@ -84,20 +84,20 @@ UID'li kurallar birleştirildikten sonra: Firebase Console → **Firestore Datab
 ## Adım 7: Öğretmen panelinde modu kontrol et
 
 1. `ogretmen.html`'e öğretmen hesabınla gir.
-2. Üstte **Schreiben yapay zekâ kontrolü** seçimini gör. İlk açılışta **Taslak** olarak kaydedilir.
-   - **Kapalı:** hiç kontrol yapılmaz.
-   - **Taslak** (varsayılan): öneri sadece sana gelir; öğrenci görmez. Sen düzeltip onaylarsın ya da silersin.
-   - **Anında göster:** öğrenci öneriyi hemen "Otomatik öneri (öğretmenin henüz bakmadı)" etiketiyle görür.
-3. 16 yaş altı öğrencilerde kontrol, öğrenci sayfasında **Velinin yapay zekâ onayı alındı** işaretlenene kadar kapalıdır.
+2. Üstte **Schreiben yapay zekâ kontrolü** seçimini gör. Ayar hiç yoksa ilk açılışta **Anında göster** olarak kaydedilir. Daha önce **Taslak** kayıtlıysa öyle kalır; istediğinde buradan değiştirirsin.
+   - **Anında göster** (varsayılan): öğrenci geri bildirimi gönderdikten birkaç saniye sonra görev sayfasında görür ("Yapay zekâ geri bildirimi – nadiren hata yapabilir"). Sen sadece öğrencinin "Bu açıklama yanlış görünüyor" dediği maddelere ve yapay zekânın kontrol edemediği yazılara bakarsın.
+   - **Taslak:** geri bildirim sadece sana gelir; öğrenci görmez. Sen düzeltip onaylarsın ya da silersin.
+   - **Kapalı:** hiç kontrol yapılmaz; geri bildirimi sen yazarsın.
+3. 16 yaş altı öğrencilerde kontrol, öğrenci sayfasında **Velinin yapay zekâ onayı alındı** işaretlenene kadar kapalıdır. Onay eski formla (12.11.2026'dan önce) alınmışsa sonuç, mod ne olursa olsun taslak olarak sana gelir; veli yeni formu (`docs/veli-onay-formu.md`, madde 3a) onaylayınca öğrenci sayfasında **Veli yeni formu onayladı: kaydet** ile kaydet.
 
 ## Adım 8: Deneme
 
 1. Bir yetişkin deneme öğrenci hesabıyla bir Schreiben metni gönder (ör. `#exams/goethe/b1/schreiben/1/set-1`).
-2. Birkaç saniye sonra öğretmen panelinde o öğrencide **"1 taslak hazır"** görünmeli.
-3. Öğrenci sayfasında taslağı aç, bir öneriyi düzelt, **Onayla ve öğrenciye gönder**.
-4. Öğrenci panelinde işaretli hataları ve açıklamaları gör.
+2. **Anında göster** modunda: birkaç saniye içinde aynı sayfada işaretli hatalar, açıklamalar, düzeltilmiş metin ve ardından örnek cevap görünmeli.
+3. Bir maddede **Bu açıklama yanlış görünüyor**a bas. Öğretmen panelinde o öğrencide **"1 işaretli madde"** görünmeli; öğrenci sayfasında maddeyi düzelt ve **Düzeltmeyi öğrenciye gönder**.
+4. **Taslak** modunda: öğretmen panelinde **"1 taslak hazır"** görünür; taslağı aç, düzelt, **Onayla ve öğrenciye gönder**.
 
-Taslak gelmezse: Cloudflare → Worker → **Logs** (ya da **Observability**) ekranındaki son hatayı bana yaz (metin içermez).
+Geri bildirim gelmezse: Cloudflare → Worker → **Logs** (ya da **Observability**) ekranındaki son hatayı bana yaz (metin içermez).
 
 ## Adım 9: Deneme token'ını sil
 
@@ -107,7 +107,8 @@ Worker bu token'ı kullanmaz; silmek hiçbir şeyi bozmaz.
 
 ## Notlar
 
-- **Ne gönderilir:** sadece metin ve görev adı (ör. "Goethe B1 · Teil 1 · Neue Wohnung"). Ad, e-posta, uid gitmez.
+- **Ne gönderilir:** sadece metin, görev adı (ör. "Goethe B1 · Teil 1 · Neue Wohnung") ve metin türü. Ad, e-posta, uid gitmez.
+- **Güncelleme sırası (kurallar da değiştiyse):** önce Firestore kurallarını yayınla, sonra Worker'ı güncelle, en son öğretmen panelinde modu değiştir. Eski Worker yeni siteyle de çalışır; sadece geri bildirim görev sayfasında değil, öğrenci panelinde görünür.
 - **Kapatmak için:** öğretmen panelinde **Kapalı** seç. Worker'ı silmek de yeterli; site Worker olmadan da çalışır.
 - **App Check:** İleride Firebase App Check'i "zorunlu" yaparsan Worker'ın Firestore istekleri reddedilir. O zaman bana sor.
 - **Kod değişirse:** `worker/schreiben-kontrol.js` güncellendiğinde Adım 1'deki 5–7'yi tekrarla (Edit code → yapıştır → Deploy).

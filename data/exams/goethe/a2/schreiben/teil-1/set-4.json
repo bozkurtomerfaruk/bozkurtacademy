@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-4",
+  "title": "Hilfe beim Einkaufen",
+  "minutes": 15,
+  "sharedMinutes": 30,
+  "kind": "writing",
+  "register": "du",
+  "textType": "sms",
+  "situation": "Sie sind im Supermarkt. Ihre Mitbewohnerin Lea ist zu Hause.",
+  "task": "Schreiben Sie Lea eine SMS:",
+  "points": [
+    "Fragen Sie, was Lea braucht.",
+    "Sagen Sie, wann Sie nach Hause kommen.",
+    "Fragen Sie nach einem Wunsch für das Abendessen."
+  ],
+  "instructions": "Schreiben Sie 20–30 Wörter. Schreiben Sie zu allen drei Punkten.",
+  "words": {
+    "target": 25,
+    "min": 20,
+    "max": 30,
+    "zeroBelow": 10
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Üç maddenin hepsine yazdım: neye ihtiyacı olduğu, ne zaman eve geleceğim, akşam yemeği için soru."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Ev arkadaşıma du ile yazdım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap ve kapanış var (Hallo Lea, … Bis später! + adım)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Soruları ve bilgiyi bağladım: und, oder, dann."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Soru kelimesinden sonra fiil: Was brauchst du? Was möchtest du essen?"
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Zaman: in einer halben Stunde, um sechs Uhr."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Fragen",
+      "items": [
+        {
+          "de": "Was brauchst du noch?",
+          "tr": "Başka neye ihtiyacın var?"
+        },
+        {
+          "de": "Soll ich … mitbringen?",
+          "tr": "… getireyim mi?"
+        }
+      ]
+    },
+    {
+      "group": "Zeit",
+      "items": [
+        {
+          "de": "Ich bin in einer halben Stunde zu Hause.",
+          "tr": "Yarım saat sonra evdeyim."
+        }
+      ]
+    },
+    {
+      "group": "Abendessen",
+      "items": [
+        {
+          "de": "Was möchtest du heute essen?",
+          "tr": "Bugün ne yemek istersin?"
+        },
+        {
+          "de": "Bis später!",
+          "tr": "Sonra görüşürüz!"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Hallo Lea,\nich bin im Supermarkt. Was brauchst du noch? Ich bin in einer halben Stunde zu Hause. Was möchtest du essen, Nudeln oder Pizza?\nBis später!\nAyşe",
+    "notes": [
+      "Üç madde: soru (Was brauchst du noch?), zaman (in einer halben Stunde), akşam yemeği (Nudeln oder Pizza?).",
+      "Soru kelimesinden sonra fiil 2. sırada: Was brauchst du …?",
+      "in einer halben Stunde: in + Dativ (zaman)."
+    ]
+  }
+}

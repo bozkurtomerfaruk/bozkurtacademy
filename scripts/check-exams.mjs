@@ -55,6 +55,22 @@ function checkWriting(set, fail) {
   if (set.examChoice !== undefined && set.examChoice !== true) fail('"examChoice" must be true when present');
   // words.veryShort: below this many words the counter warns that B1 can hardly be reached (DTZ: 40, g.a.s.t. FAQ).
   if (set.words?.veryShort !== undefined && !(Number.isInteger(set.words.veryShort) && set.words.veryShort > 0 && set.words.veryShort < set.words.min)) fail('"words.veryShort" must be a positive integer below "words.min"');
+  // words.zeroBelow: below this many words the task scores 0 in the exam (Goethe A2: half of the required minimum); the counter says so.
+  if (set.words?.zeroBelow !== undefined && !(Number.isInteger(set.words.zeroBelow) && set.words.zeroBelow > 0 && set.words.zeroBelow < set.words.min)) fail('"words.zeroBelow" must be a positive integer below "words.min"');
+  // sharedMinutes: the official time covers several Teile together (Goethe A2: 30 minutes for both); the page says so.
+  if (set.sharedMinutes !== undefined && !(Number.isInteger(set.sharedMinutes) && set.sharedMinutes > set.minutes)) fail('"sharedMinutes" must be an integer above "minutes"');
+  // Goethe A2 (Modellsatz and Übungssatz 01): Teil 1 SMS to a friend (du), 20–30 words; Teil 2 semi-formal e-mail (Sie), 30–40 words;
+  // three content points each, 30 minutes for both parts, under half the minimum = 0 points.
+  if (set.exam === 'goethe' && set.level === 'a2') {
+    const A2 = { 1: { textType: 'sms', min: 20, max: 30, zero: 10 }, 2: { textType: 'email-semiformal', min: 30, max: 40, zero: 15 } }[set.teil];
+    if (!A2) fail('Goethe A2 Schreiben has Teil 1 and Teil 2 only');
+    else {
+      if (set.textType !== A2.textType) fail(`Goethe A2 Teil ${set.teil} needs textType "${A2.textType}"`);
+      if (set.points?.length !== 3) fail('Goethe A2 writing tasks have exactly three content points');
+      if (set.words?.min !== A2.min || set.words?.max !== A2.max || set.words?.zeroBelow !== A2.zero) fail(`Goethe A2 Teil ${set.teil} needs words ${A2.min}–${A2.max} and zeroBelow ${A2.zero}`);
+      if (set.sharedMinutes !== 30) fail('Goethe A2 writing tasks need "sharedMinutes": 30');
+    }
+  }
   // DTZ (g.a.s.t. practice sets): one semi-formal or formal message, four content points, no subject line, no word limit.
   if (set.exam === 'dtz') {
     if (!['email-semiformal', 'email-formal'].includes(set.textType)) fail('DTZ writing tasks are semi-formal or formal (email-semiformal, email-formal)');

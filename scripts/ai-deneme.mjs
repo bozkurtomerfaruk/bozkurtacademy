@@ -51,7 +51,10 @@ for (const name of names) {
   for (const t of trial.texts) {
     const set = JSON.parse(fs.readFileSync(`data/exams/${trial.exam}/${trial.level}/schreiben/teil-${trial.teil}/${t.set}.json`, 'utf8'));
     const task = { name: `${EXAMS[trial.exam]} ${trial.level.toUpperCase()} · Teil ${trial.teil} · ${set.title}`, type: TEXT_TYPES[set.textType] };
-    const clean = cleanResult(await ask(task, t.text), t.text) || { errors: [] };
+    const parsed = cleanResult(await ask(task, t.text), t.text);
+    // Okunamayan cevap (JSON yok): Worker bunu bir kez daha sorar; burada ayrıca sayılır ki model hatası ile kaçan hata karışmasın.
+    if (!parsed) { sum.unreadable = (sum.unreadable || 0) + 1; console.log(`\n${t.id} · OKUNAMAYAN CEVAP (Worker yeniden sorar)`); }
+    const clean = parsed || { errors: [] };
     const hit = t.errors.filter((e) => clean.errors.some((x) => matches(x, e)));
     const missed = t.errors.filter((e) => !hit.includes(e)).map((e) => e.wrong);
     // Beklenmeyen madde: beklenen hiçbir hatayı düzeltmeyen madde (yanlış alarm ya da metindeki fark edilmemiş başka bir hata).
@@ -65,6 +68,6 @@ for (const name of names) {
   for (const k of ['found', 'expected', 'extra', 'texts']) total[k] += sum[k];
 }
 console.log('\n=== Özet ===');
-for (const s of report) console.log(`${s.name.padEnd(18)} ${String(s.texts).padStart(2)} metin · ${s.found}/${s.expected} hata · beklenmeyen ${s.extra}`);
+for (const s of report) console.log(`${s.name.padEnd(18)} ${String(s.texts).padStart(2)} metin · ${s.found}/${s.expected} hata · beklenmeyen ${s.extra}${s.unreadable ? ` · okunamayan ${s.unreadable}` : ''}`);
 console.log(`${'TOPLAM'.padEnd(18)} ${String(total.texts).padStart(2)} metin · ${total.found}/${total.expected} hata · beklenmeyen ${total.extra}`);
 if (out) fs.writeFileSync(out, JSON.stringify({ model: MODEL, total, report }, null, 2));

@@ -1,0 +1,103 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-1",
+  "title": "Ich komme zu spät",
+  "minutes": 15,
+  "sharedMinutes": 30,
+  "kind": "writing",
+  "register": "du",
+  "textType": "sms",
+  "situation": "Sie sind mit Ihrem Freund Tobias im Café verabredet. Ihr Bus hat Verspätung.",
+  "task": "Schreiben Sie Tobias eine SMS:",
+  "points": [
+    "Entschuldigen Sie sich, dass Sie zu spät kommen.",
+    "Schreiben Sie, warum.",
+    "Schlagen Sie eine neue Uhrzeit vor."
+  ],
+  "instructions": "Schreiben Sie 20–30 Wörter. Schreiben Sie zu allen drei Punkten.",
+  "words": {
+    "target": 25,
+    "min": 20,
+    "max": 30,
+    "zeroBelow": 10
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Üç maddenin hepsine yazdım: özür, neden geç kaldığım, yeni saat önerisi."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Arkadaşıma du ile yazdım (du, dich, dir); Sie yok."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kısa bir hitap (Hallo Tobias,) ve kapanış (Bis gleich! / Liebe Grüße + adım) var."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümleleri bağladım: weil, aber, dann."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "weil'den sonra çekimli fiil sonda: …, weil mein Bus Verspätung hat."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Saat: um halb vier, um 16 Uhr; öneri: Können wir uns um … treffen?"
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Sich entschuldigen",
+      "items": [
+        {
+          "de": "Tut mir leid, ich komme zu spät.",
+          "tr": "Üzgünüm, geç kalıyorum."
+        },
+        {
+          "de": "Entschuldige bitte!",
+          "tr": "Kusura bakma!"
+        }
+      ]
+    },
+    {
+      "group": "Grund nennen",
+      "items": [
+        {
+          "de": "Mein Bus hat Verspätung.",
+          "tr": "Otobüsüm rötarlı."
+        },
+        {
+          "de": "…, weil ich im Stau stehe.",
+          "tr": "…, çünkü trafikteyim."
+        }
+      ]
+    },
+    {
+      "group": "Vorschlag und Gruß",
+      "items": [
+        {
+          "de": "Können wir uns um … treffen?",
+          "tr": "… saatte buluşabilir miyiz?"
+        },
+        {
+          "de": "Bis gleich! / Liebe Grüße",
+          "tr": "Birazdan görüşürüz! / Sevgiler"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Hallo Tobias,\ntut mir leid, ich komme zu spät, weil mein Bus Verspätung hat. Können wir uns um halb vier treffen?\nBis gleich!\nElif",
+    "notes": [
+      "Üç madde: özür (tut mir leid), neden (weil mein Bus Verspätung hat), yeni saat (um halb vier).",
+      "weil cümlesinde fiil sonda: … Verspätung hat.",
+      "SMS kısa olur ama hitap ve kapanış yine var."
+    ]
+  }
+}

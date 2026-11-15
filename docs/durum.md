@@ -2,6 +2,29 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-15 · Schreiben genişletme 5: Goethe A2
+
+- **Format (resmî Goethe-Zertifikat A2 Modellsatz ve Übungssatz 01):** Schreiben iki Teil, toplam 30 dk.
+  - Teil 1: arkadaşa SMS (du), 3 madde, 20–30 kelime. Teil 2: yarı resmî e-posta (Sie; şef, otel), 3 madde, 30–40 kelime.
+  - Ölçütler: Aufgabenerfüllung (3 madde, uygun hitap düzeyi) ve Sprache. İstenen uzunluğun yarısının altı (Teil 1: 10, Teil 2: 15 kelime) 0 puan.
+- **10 set (kararın: 5 + 5):**
+  - Teil 1: Ich komme zu spät, Meine neue Wohnung, Ich bin krank, Hilfe beim Einkaufen, Danke für das Geschenk (örnek cevaplar 24–28 kelime).
+  - Teil 2: Einladung vom Chef, Später im Hotel, Termin beim Arzt, Fahrrad kaufen, Deutschkurs wechseln (35–38 kelime).
+- **Görev sayfası (kararların):** "Tahmini süre: 15 dk" ve altında "Gerçek sınavda iki Teil (SMS ve e-posta) için toplam 30 dakikan var." notu (`sharedMinutes`). 10/15 kelimenin altında "sınavda bu görev 0 puan alır" uyarısı (`words.zeroBelow`); göndermeyi engellemiyor. TR/DE/EN. `scripts/check-exams.mjs` Goethe A2 kurallarını denetliyor.
+- **Ödev ekranı:** A2 için Goethe A2 ve DTZ yazma görevleri seçilebiliyor. Düzeltilen hata: DTZ'nin seviye kodu "A2-B1" olduğu için DTZ yazma görevleri ödev ekranında hiç çıkmıyordu; artık A2'de ve B1'de çıkıyor (B1: 27 görev).
+- **Yapay zekâ (Worker değişti):**
+  - Kısa bir A2 kuralı (sadece "Goethe A2 ·" görevleri): basit doğru cümleyi güzelleştirme, Konjunktiv II/Passiv/Genitiv önerme; weil/dass/wenn, Perfekt ve modal fiil hatalarını işaretle; SMS'te "Bis gleich!" ve özne düşmesi doğru.
+  - İlk, uzun A2 bölümü DTZ'yi ("A2-B1") de etkileyip dtz-6'daki hatayı her turda kaçırttı; bölüm kısaltılınca 4/4 bulundu.
+  - Açıklama alanı zorunlu yapıldı. Model bazen açıklamayı atlıyordu ve Worker açıklamasız maddeyi attığı için a1t2-3'teki du→Sie hatası kayboluyordu; du→Sie düzeltmesine Worker artık kendi açıklamasını ekliyor.
+  - "…" ile kısaltılmış düzeltme yasak ("Ich komme erst … an" yerine tam cümle).
+  - Okunamayan cevap: model bazen JSON'da `"erklaerung "` yazıp iki noktayı unutuyor. Worker bunu onarıyor; yine okunamazsa modeli bir kez daha soruyor (ücretsiz kotadan).
+- **Deneme (gerçek Gemma 4, bütün sınavlar birlikte; 43 metin, 74 hata):**
+  - Goethe A2 Teil 1 ve 2 (beşer metin, ikisinde hatasız metin): bütün turlarda 16/16, yanlış alarm yok.
+  - Ara talimatlarla 9 tam tur: 69–72/74. Kaçanlar: dtz-6 (A2 bölümü yüzünden, düzeltildi), a1t2-3 (açıklamasız madde, düzeltildi), okunamayan cevaplar (düzeltildi), "an den Ausflug teilnehmen" (bilinen sınır).
+  - Son talimatla tur yarıda durduruldu (aşağıya bak): o ana kadarki 34 metinde 51/51, yanlış alarm yok (DTZ 16/16, Goethe A1 7/7, Goethe A2 16/16, Goethe B1 Teil 1'in ilk 4 metni 12/12). Goethe B1 Teil 1'in son metni, Teil 2, Teil 3 ve telc B1 son talimatla henüz denenmedi.
+  - **Kota uyarısı:** Bugün yaklaşık 580 model çağrısı yapıldı; Cloudflare çağrı başına 16–34 Neuron bildiriyor, yani toplam günlük 10.000 Neuron'luk ücretsiz kotayı aşmış olabilir. Hiç kota hatası görülmedi. Denetlenene kadar yeni deneme çalıştırılmadı.
+- **Senin yapacakların (birleştirmeden sonra):** Worker'ı güncelle. Firestore kuralları değişmedi.
+
 ## 2026-11-14 · Schreiben genişletme 4: DTZ (Deutsch-Test für Zuwanderer)
 
 - **Format (resmî: g.a.s.t. Übungssatz 1 ve 2, Ekim 2026; g.a.s.t. "DTZ auf einen Blick" ve öğretmen SSS'si):** Schreiben 30 dk, 20 puan (B1 15–20, A2 7–14).

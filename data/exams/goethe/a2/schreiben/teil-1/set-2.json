@@ -1,0 +1,107 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Meine neue Wohnung",
+  "minutes": 15,
+  "sharedMinutes": 30,
+  "kind": "writing",
+  "register": "du",
+  "textType": "sms",
+  "situation": "Sie sind letzte Woche umgezogen.",
+  "task": "Schreiben Sie Ihrer Freundin Julia eine SMS:",
+  "points": [
+    "Schreiben Sie, wo Sie jetzt wohnen.",
+    "Schreiben Sie, was Ihnen dort gefällt.",
+    "Laden Sie Julia ein."
+  ],
+  "instructions": "Schreiben Sie 20–30 Wörter. Schreiben Sie zu allen drei Punkten.",
+  "words": {
+    "target": 25,
+    "min": 20,
+    "max": 30,
+    "zeroBelow": 10
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Üç maddenin hepsine yazdım: yeni adresim, beğendiğim şey, davet."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Arkadaşıma du ile yazdım (Kommst du …? Hast du Zeit?)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap (Hallo Julia, / Liebe Julia,) ve kapanış (Liebe Grüße + adım) var."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümleleri bağladım: und, aber, denn."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Yer: in der Bahnhofstraße, in der Nähe vom Park (in + Dativ)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Davet: Hast du am Samstag Zeit? Komm doch vorbei!"
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Informieren",
+      "items": [
+        {
+          "de": "Ich wohne jetzt in der …straße.",
+          "tr": "Artık … sokağında oturuyorum."
+        },
+        {
+          "de": "Die Wohnung ist hell und groß.",
+          "tr": "Ev aydınlık ve büyük."
+        }
+      ]
+    },
+    {
+      "group": "Gefallen",
+      "items": [
+        {
+          "de": "Mir gefällt besonders …",
+          "tr": "En çok … hoşuma gidiyor."
+        },
+        {
+          "de": "Ich finde den Balkon toll.",
+          "tr": "Balkonu harika buluyorum."
+        }
+      ]
+    },
+    {
+      "group": "Einladen",
+      "items": [
+        {
+          "de": "Hast du am Samstag Zeit?",
+          "tr": "Cumartesi vaktin var mı?"
+        },
+        {
+          "de": "Komm doch vorbei!",
+          "tr": "Uğrasana!"
+        },
+        {
+          "de": "Liebe Grüße",
+          "tr": "Sevgiler"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Hallo Julia,\nich wohne jetzt in der Bahnhofstraße 12. Mir gefällt besonders der große Balkon. Hast du am Samstag Zeit? Komm doch zum Kaffee vorbei!\nLiebe Grüße\nDeniz",
+    "notes": [
+      "Üç madde: adres (Bahnhofstraße 12), beğendiği şey (der große Balkon), davet (Hast du am Samstag Zeit?).",
+      "Mir gefällt der Balkon: gefallen + Dativ (mir).",
+      "Komm doch … vorbei: emir cümlesi, vorbei sonda."
+    ]
+  }
+}

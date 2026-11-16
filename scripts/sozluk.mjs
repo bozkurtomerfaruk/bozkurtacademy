@@ -7,8 +7,8 @@
 //
 // İki cinsiyetli isimlerde artikel "der/die" yazılabilir.
 // Tablo Excel için noktalı virgülle ayrılmış ve UTF-8 BOM'lu. Düzeltilebilen sütunlar: Artikel, Türkçe anlam,
-// Sadece çoğul, Emin değilim, Not, Kontrol edildi (evet/hayır). "Emin değilim = evet" olan kelimeler,
-// "Kontrol edildi = evet" yapılana kadar öğrenciye gösterilmez.
+// Sadece çoğul, Emin değilim, Not, Kontrol edildi (evet/hayır). "Kontrol edildi = hayır" olan kelimeler
+// öğrenciye gösterilmez; "Emin değilim = evet" olanlar tablonun en üstündedir.
 // Sözlük anahtarı kelimenin kendisidir; aynı yazılışlı iki farklı isim için "See|die" gibi bir anahtar ve
 // "word": "See" kullanılır.
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -155,7 +155,7 @@ if (errors.length) {
 const text = csvText();
 const pending = csvText(true);
 const words = Object.values(dict.words);
-const summary = `${words.length} kelime, ${words.filter((w) => w.checked).length} kontrol edildi, ${words.filter((w) => w.unsure && !w.checked).length} emin olunmayan (gizli)`;
+const summary = `${words.length} kelime, ${words.filter((w) => w.checked).length} kontrol edildi, ${words.filter((w) => !w.checked).length} kontrol bekleyen (gizli), bunların ${words.filter((w) => w.unsure && !w.checked).length} tanesi emin olunmayan`;
 if (args[0] === '--check') {
   let current = '';
   try { current = readFileSync(CSV, 'utf8'); } catch (_) {}

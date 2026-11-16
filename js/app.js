@@ -2058,7 +2058,7 @@ function baGrammarUrl(hash){
   if(p[0]!=='grammar' || p.length<2) return null;
   let url='/almanca-gramer/';
   const level=(p[1]||'').toLowerCase();
-  if(/^(a1|a2|b1)$/.test(level)){
+  if(/^(a1|a2|b1|b2)$/.test(level)){
     url+=level+'/';
     if(p[2]){
       url+=encodeURIComponent(decodeURIComponent(p[2]))+'/';

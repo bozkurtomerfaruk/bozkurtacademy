@@ -701,15 +701,15 @@
           "word": "insofern – Bedeutung",
           "sentence": "„Du hast viel geübt. Insofern ist die gute Note keine Überraschung.“ – Was bedeutet „insofern“ hier?",
           "options": [
-            "so gesehen / in dieser Hinsicht",
-            "trotzdem",
+            "so gesehen",
+            "im Gegenteil",
             "vorher"
           ],
-          "correct": "so gesehen / in dieser Hinsicht",
+          "correct": "so gesehen",
           "explanations": {
-            "tr": "Tek başına cümlenin başındaki insofern, bir önceki bilgiye bakarak bir sonuç çıkarır: “bu açıdan bakınca, öyle düşününce”. trotzdem (yine de) karşıtlık bildirirdi; burada karşıtlık yok.",
-            "de": "Allein am Satzanfang bezieht sich „insofern“ auf die vorige Aussage: „so gesehen, in dieser Hinsicht“. Ein Gegensatz („trotzdem“) liegt nicht vor.",
-            "en": "On its own at the start, „insofern“ refers back to the previous statement: „seen that way, in that respect“. There is no contrast („trotzdem“)."
+            "tr": "Tek başına cümlenin başındaki insofern, bir önceki bilgiye bakarak bir sonuç çıkarır: “bu açıdan bakınca, öyle düşününce” (so gesehen). im Gegenteil (aksine) bir karşıtlık bildirirdi, vorher (önceden) zaman bildirir; burada ikisi de yok: çok çalışmak iyi notu açıklıyor.",
+            "de": "Allein am Satzanfang bezieht sich „insofern“ auf die vorige Aussage: „so gesehen“. „im Gegenteil“ würde einen Gegensatz ausdrücken, „vorher“ eine Zeit – beides passt nicht: Das viele Üben erklärt die gute Note.",
+            "en": "On its own at the start, „insofern“ refers back to the previous statement: „seen that way“. „im Gegenteil“ would express a contrast and „vorher“ a time – neither fits: the practice explains the good grade."
           },
           "vocab": [
             "Note",
@@ -1057,6 +1057,3007 @@
           "vocab": [
             "Teilnahme",
             "Freitag"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "indem-dadurch-dass-6",
+      "title": {
+        "tr": "Übung 6 – indem / dadurch, dass",
+        "de": "Übung 6 – indem / dadurch, dass",
+        "en": "Übung 6 – indem / dadurch, dass"
+      },
+      "description": {
+        "tr": "Bir sonuca hangi yolla ulaşıldığını anlat: indem ve dadurch, dass. Amaç bildiren damit ile karıştırma.",
+        "de": "Das Mittel oder die Methode angeben: indem und dadurch, dass – und nicht mit dem finalen damit verwechseln.",
+        "en": "State the means or method: indem and dadurch, dass – without mixing them up with purpose damit."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Medium"
+      },
+      "questions": [
+        {
+          "word": "indem – Mittel",
+          "sentence": "Man kann Energie sparen, ___ man das Licht ausschaltet.",
+          "options": [
+            "indem",
+            "damit",
+            "obwohl"
+          ],
+          "correct": "indem",
+          "explanations": {
+            "tr": "Işığı kapatmak, enerji tasarrufunun yöntemidir: “ışığı kapatarak”. Yöntem bildiren bağlaç indem’dir. damit amaç bildirirdi (“ışığı kapatsın diye” anlamsız), obwohl ise karşıtlık.",
+            "de": "Das Ausschalten ist das Mittel zum Energiesparen („wie?“) → „indem“. „damit“ nennt einen Zweck, „obwohl“ eine Einräumung.",
+            "en": "Switching off the light is the means of saving energy („how?“) → „indem“. „damit“ states a purpose, „obwohl“ a concession."
+          },
+          "vocab": [
+            "Energie",
+            "Licht"
+          ]
+        },
+        {
+          "word": "indem – Bedeutung",
+          "sentence": "Er hat sein Deutsch verbessert, indem er jeden Tag Podcasts gehört hat. – Was drückt „indem“ aus?",
+          "options": [
+            "die Methode",
+            "den Zweck",
+            "die Zeit"
+          ],
+          "correct": "die Methode",
+          "explanations": {
+            "tr": "indem cümlesi “nasıl?” sorusunun cevabıdır: Almancasını her gün podcast dinleyerek geliştirdi. Türkçedeki “-arak/-erek” eki gibi düşün.",
+            "de": "Der indem-Satz beantwortet die Frage „Wie?“: Er nennt die Methode, mit der das Ziel erreicht wurde.",
+            "en": "The indem-clause answers „how?“: it names the method by which the result was achieved."
+          },
+          "vocab": [
+            "Deutsch",
+            "Tag",
+            "Podcast"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "indem – Perfekt am Ende",
+          "sentence": "Sie hat die Prüfung bestanden, indem sie regelmäßig ___. (üben – Perfekt)",
+          "correct": "geübt hat",
+          "answers": [
+            "geübt hat",
+            "geuebt hat"
+          ],
+          "explanations": {
+            "tr": "üben Perfekt’te haben alır. indem yan cümle kurduğu için çekimli hat en sona, Partizip II geübt ondan önce gelir. Özne sie (tekil) → hat.",
+            "de": "„üben“ bildet das Perfekt mit „haben“. Im indem-Satz steht „hat“ (Subjekt „sie“) am Ende, „geübt“ davor.",
+            "en": "„üben“ takes „haben“; in the indem-clause „hat“ (subject „sie“) goes last, after „geübt“."
+          },
+          "vocab": [
+            "Prüfung"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "indem – Sätze verbinden",
+          "sentence": "Verbinde mit „indem“: Wir senken die Kosten. Wir nutzen weniger Papier.",
+          "correct": "Wir senken die Kosten, indem wir weniger Papier nutzen.",
+          "answers": [
+            "wir senken die kosten, indem wir weniger papier nutzen"
+          ],
+          "explanations": {
+            "tr": "İkinci cümle yöntemi gösterir, bu yüzden indem ile yan cümle olur: virgül, indem, özne wir, sonra weniger Papier ve çekimli fiil nutzen en sonda.",
+            "de": "Der zweite Satz nennt das Mittel und wird zum indem-Satz: Komma, „indem wir weniger Papier nutzen“ mit dem Verb am Ende.",
+            "en": "The second sentence is the means and becomes an indem-clause: comma, „indem wir weniger Papier nutzen“ with the verb last."
+          },
+          "vocab": [
+            "Kosten",
+            "Papier"
+          ]
+        },
+        {
+          "word": "indem – Frage",
+          "sentence": "Auf welche Frage antwortet ein indem-Satz?",
+          "options": [
+            "Wie? / Auf welche Weise?",
+            "Wann?",
+            "Warum?"
+          ],
+          "correct": "Wie? / Auf welche Weise?",
+          "explanations": {
+            "tr": "indem bir yöntemi, bir yolu anlatır; bu yüzden “Nasıl? Hangi yolla?” sorusuna cevap verir. Zaman için als/wenn, sebep için weil/da kullanılır.",
+            "de": "indem nennt den Weg oder das Mittel und antwortet auf „Wie? Auf welche Weise?“. Zeit: als/wenn, Grund: weil/da.",
+            "en": "indem names the way or means and answers „How? In what way?“. Time: als/wenn; reason: weil/da."
+          }
+        },
+        {
+          "type": "text",
+          "word": "dadurch, dass",
+          "sentence": "Der Unfall entstand ___, dass der Fahrer zu schnell fuhr.",
+          "correct": "dadurch",
+          "answers": [
+            "dadurch"
+          ],
+          "explanations": {
+            "tr": "Ana cümledeki dadurch, virgülden sonraki dass cümlesini önceden haber verir: “sürücünün çok hızlı gitmesi yüzünden/yoluyla”. dadurch, dass da indem gibi yolu ya da nedeni gösterir.",
+            "de": "„dadurch“ im Hauptsatz kündigt den dass-Satz an: dadurch, dass … nennt das Mittel bzw. die Ursache.",
+            "en": "„dadurch“ in the main clause points to the dass-clause: dadurch, dass … names the means or cause."
+          },
+          "vocab": [
+            "Unfall",
+            "Fahrer"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "dadurch, dass – Satzanfang",
+          "sentence": "Verbinde mit „Dadurch, dass“ am Satzanfang: Die Stadt hat neue Radwege gebaut. Mehr Menschen fahren Fahrrad.",
+          "correct": "Dadurch, dass die Stadt neue Radwege gebaut hat, fahren mehr Menschen Fahrrad.",
+          "answers": [
+            "dadurch, dass die stadt neue radwege gebaut hat, fahren mehr menschen fahrrad"
+          ],
+          "explanations": {
+            "tr": "„Dadurch, dass …“ bölümü yan cümledir; fiil öbeği gebaut hat sonda. Bu bölüm ana cümlenin ilk yerini doldurduğu için virgülden sonra hemen çekimli fiil fahren gelir.",
+            "de": "„Dadurch, dass die Stadt … gebaut hat“ steht auf Position 1; danach folgt sofort das finite Verb „fahren“.",
+            "en": "„Dadurch, dass die Stadt … gebaut hat“ fills position 1, so the finite verb „fahren“ follows immediately."
+          },
+          "vocab": [
+            "Stadt",
+            "Radweg",
+            "Mensch",
+            "Fahrrad"
+          ]
+        },
+        {
+          "word": "indem – Wortstellung",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Man lernt Vokabeln am besten, indem man sie in Sätzen verwendet.",
+            "Man lernt Vokabeln am besten, indem man verwendet sie in Sätzen.",
+            "Man lernt Vokabeln am besten, indem verwendet man sie in Sätzen."
+          ],
+          "correct": "Man lernt Vokabeln am besten, indem man sie in Sätzen verwendet.",
+          "explanations": {
+            "tr": "indem yan cümle bağlacıdır: özne man, zamir sie, in Sätzen ve en sonda çekimli fiil verwendet. Fiil ikinci yerde ya da bağlaçtan hemen sonra olamaz.",
+            "de": "Nach der Subjunktion „indem“ steht das finite Verb „verwendet“ am Ende.",
+            "en": "After the subordinating conjunction „indem“ the finite verb „verwendet“ goes to the end."
+          },
+          "vocab": [
+            "Vokabel",
+            "Satz"
+          ]
+        },
+        {
+          "word": "indem oder damit?",
+          "sentence": "Ich schreibe mir alles auf, ___ ich nichts vergesse.",
+          "options": [
+            "damit",
+            "indem",
+            "wohingegen"
+          ],
+          "correct": "damit",
+          "explanations": {
+            "tr": "Not almanın amacı bir şey unutmamaktır: “unutmayayım diye”. Amaç bildiren bağlaç damit’tir. indem yöntem bildirirdi (“unutmayarak yazıyorum” anlamsız).",
+            "de": "Das Aufschreiben hat ein Ziel: nichts vergessen → Zweck → „damit“. „indem“ würde das Mittel nennen und ergibt hier keinen Sinn.",
+            "en": "Writing things down has a goal – not forgetting → purpose → „damit“. „indem“ would name the means and makes no sense here."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Fehlerkorrektur",
+          "sentence": "Korrigiere: Er hat Geld gespart, indem er ist mit dem Fahrrad gefahren.",
+          "correct": "Er hat Geld gespart, indem er mit dem Fahrrad gefahren ist.",
+          "answers": [
+            "er hat geld gespart, indem er mit dem fahrrad gefahren ist"
+          ],
+          "explanations": {
+            "tr": "indem cümlesinde çekimli yardımcı fiil ist sona gider; Partizip II gefahren ondan önce durur. fahren Perfekt’te sein alır.",
+            "de": "Im indem-Satz steht das finite Hilfsverb „ist“ am Ende, nach „gefahren“.",
+            "en": "In the indem-clause the finite auxiliary „ist“ goes last, after „gefahren“."
+          },
+          "vocab": [
+            "Geld",
+            "Fahrrad"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "obgleich-wenngleich-7",
+      "title": {
+        "tr": "Übung 7 – obgleich / wenngleich",
+        "de": "Übung 7 – obgleich / wenngleich",
+        "en": "Übung 7 – obgleich / wenngleich"
+      },
+      "description": {
+        "tr": "obwohl’un resmî eşleri obgleich ve wenngleich: fiilin yeri, ana cümle sırası ve kısaltılmış kullanım.",
+        "de": "obgleich und wenngleich als gehobene Varianten von obwohl: Verbstellung, Hauptsatz danach und verkürzte Formen.",
+        "en": "obgleich and wenngleich as formal variants of obwohl: verb position, the main clause after them and shortened forms."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel bis schwer",
+        "en": "Medium to hard"
+      },
+      "questions": [
+        {
+          "word": "obgleich – Bedeutung",
+          "sentence": "___ das Hotel teuer war, haben wir dort übernachtet.",
+          "options": [
+            "Obgleich",
+            "Damit",
+            "Indem"
+          ],
+          "correct": "Obgleich",
+          "explanations": {
+            "tr": "Otel pahalıydı ama yine de orada kaldık: beklenene ters bir sonuç var. Bu taviz (karşıtlık) anlamı obgleich (= obwohl) ile kurulur. damit amaç, indem yöntem bildirir.",
+            "de": "Trotz des hohen Preises haben wir dort übernachtet – ein unerwartetes Ergebnis, also konzessiv: „Obgleich“ (= obwohl).",
+            "en": "Despite the price we stayed there – an unexpected result, so concessive: „Obgleich“ (= obwohl)."
+          },
+          "vocab": [
+            "Hotel"
+          ]
+        },
+        {
+          "word": "obgleich – Bedeutung",
+          "sentence": "Welches Wort hat die gleiche Bedeutung wie „obgleich“?",
+          "options": [
+            "obwohl",
+            "weil",
+            "falls"
+          ],
+          "correct": "obwohl",
+          "explanations": {
+            "tr": "obgleich ve wenngleich, obwohl ile aynı anlamdadır (“-e rağmen”). Sadece daha resmî ve yazılı bir üsluba aittir.",
+            "de": "„obgleich“ und „wenngleich“ bedeuten dasselbe wie „obwohl“, klingen aber gehobener.",
+            "en": "„obgleich“ and „wenngleich“ mean the same as „obwohl“ but sound more formal."
+          }
+        },
+        {
+          "type": "text",
+          "word": "obgleich – Verb am Ende",
+          "sentence": "Die Präsentation war überzeugend, obgleich die Zeit sehr knapp ___. (sein – Präteritum)",
+          "correct": "war",
+          "answers": [
+            "war"
+          ],
+          "explanations": {
+            "tr": "Yan cümlede çekimli fiil sona gider. Özne die Zeit tekil, zaman Präteritum: sein → war.",
+            "de": "Im obgleich-Satz steht das finite Verb am Ende; Subjekt „die Zeit“, Präteritum → „war“.",
+            "en": "The finite verb goes last in the obgleich-clause; subject „die Zeit“, past tense → „war“."
+          },
+          "vocab": [
+            "Präsentation",
+            "Zeit"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "wenngleich – Sätze verbinden",
+          "sentence": "Verbinde mit „wenngleich“ und beginne mit „Das Restaurant ist immer voll“: Das Restaurant ist klein. Es ist immer voll.",
+          "correct": "Das Restaurant ist immer voll, wenngleich es klein ist.",
+          "answers": [
+            "das restaurant ist immer voll, wenngleich es klein ist"
+          ],
+          "explanations": {
+            "tr": "Ana cümle “restoran hep dolu”, karşıt beklenti “küçük olmasına rağmen” yan cümledir: wenngleich es klein ist; çekimli fiil ist sonda.",
+            "de": "Hauptsatz „Das Restaurant ist immer voll“, Einräumung im Nebensatz „wenngleich es klein ist“ mit Verb am Ende.",
+            "en": "Main clause „Das Restaurant ist immer voll“; the concession „wenngleich es klein ist“ has the verb last."
+          },
+          "vocab": [
+            "Restaurant"
+          ]
+        },
+        {
+          "word": "wenngleich – verkürzt",
+          "sentence": "Das war eine kurze, ___ sehr intensive Diskussion.",
+          "options": [
+            "wenngleich",
+            "denn",
+            "sodass"
+          ],
+          "correct": "wenngleich",
+          "explanations": {
+            "tr": "wenngleich fiilsiz, kısaltılmış biçimde iki sıfatı bağlayabilir: “kısa ama yine de çok yoğun”. denn ve sodass bir isim öbeğinin içinde iki sıfatı bağlayamaz.",
+            "de": "„wenngleich“ kann verkürzt zwei Adjektive verbinden („kurz, wenngleich intensiv“). „denn“ und „sodass“ sind so nicht möglich.",
+            "en": "„wenngleich“ can link two adjectives in a shortened form („short, albeit intense“); „denn“ and „sodass“ cannot."
+          },
+          "vocab": [
+            "Diskussion"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "obgleich – Hauptsatz danach",
+          "sentence": "Ergänze den Hauptsatz: Obgleich er krank war, ___ (er – zur Arbeit – gehen – Präteritum)",
+          "correct": "ging er zur Arbeit",
+          "answers": [
+            "ging er zur arbeit"
+          ],
+          "explanations": {
+            "tr": "Yan cümle başta olduğu için ana cümlenin ilk yerini doldurur. Virgülden sonra hemen çekimli fiil ging, sonra özne er gelir.",
+            "de": "Der obgleich-Satz ist Position 1; nach dem Komma folgt sofort „ging“, dann „er“.",
+            "en": "The obgleich-clause is position 1, so „ging“ follows the comma, then „er“."
+          },
+          "vocab": [
+            "Arbeit"
+          ]
+        },
+        {
+          "word": "wenngleich – Wortstellung",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Wenngleich die Ergebnisse gut sind, bleiben einige Fragen offen.",
+            "Wenngleich die Ergebnisse sind gut, bleiben einige Fragen offen.",
+            "Wenngleich die Ergebnisse gut sind, einige Fragen bleiben offen."
+          ],
+          "correct": "Wenngleich die Ergebnisse gut sind, bleiben einige Fragen offen.",
+          "explanations": {
+            "tr": "İki kural birlikte: wenngleich cümlesinde fiil sind sonda; ardından ana cümle virgülden sonra fiille (bleiben) başlar, özne einige Fragen fiilden sonra gelir.",
+            "de": "Im Nebensatz steht „sind“ am Ende; der Hauptsatz beginnt nach dem Komma mit dem Verb „bleiben“.",
+            "en": "„sind“ goes last in the subordinate clause; the main clause starts with the verb „bleiben“ after the comma."
+          },
+          "vocab": [
+            "Ergebnis",
+            "Frage"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Fehlerkorrektur",
+          "sentence": "Korrigiere: Obgleich sie hatte keine Erfahrung, bekam sie die Stelle.",
+          "correct": "Obgleich sie keine Erfahrung hatte, bekam sie die Stelle.",
+          "answers": [
+            "obgleich sie keine erfahrung hatte, bekam sie die stelle"
+          ],
+          "explanations": {
+            "tr": "obgleich yan cümle bağlacıdır; çekimli fiil hatte nesneden (keine Erfahrung) sonra, cümlenin sonuna gider. Ana cümle doğru: bekam sie.",
+            "de": "Im obgleich-Satz gehört „hatte“ ans Ende; der Hauptsatz „bekam sie die Stelle“ ist richtig.",
+            "en": "In the obgleich-clause „hatte“ belongs at the end; the main clause „bekam sie die Stelle“ is correct."
+          },
+          "vocab": [
+            "Erfahrung",
+            "Stelle"
+          ]
+        },
+        {
+          "word": "obgleich – Stil",
+          "sentence": "Wie klingen „obgleich“ und „wenngleich“?",
+          "options": [
+            "gehoben, eher schriftlich",
+            "umgangssprachlich, eher im Chat",
+            "altmodisch und falsch"
+          ],
+          "correct": "gehoben, eher schriftlich",
+          "explanations": {
+            "tr": "İkisi de doğru ve günceldir ama resmî bir tona sahiptir; mektup, rapor ve sınav yazılarında iyi durur. Günlük konuşmada daha çok obwohl söylenir.",
+            "de": "Beide sind korrekt und aktuell, aber gehoben – gut für Briefe, Berichte und Prüfungstexte. Im Alltag sagt man meist „obwohl“.",
+            "en": "Both are correct and current but formal – good for letters, reports and exam texts. In everyday speech people say „obwohl“."
+          }
+        },
+        {
+          "type": "text",
+          "word": "obgleich – Modalverb",
+          "sentence": "Wir mussten das Projekt verschieben, obgleich wir es eigentlich im Mai ___. (abschließen – wollen – Präteritum)",
+          "correct": "abschließen wollten",
+          "answers": [
+            "abschließen wollten",
+            "abschliessen wollten"
+          ],
+          "explanations": {
+            "tr": "Yan cümlede modal fiil wollen çekimli fiildir ve en sona gider; ana fiil abschließen mastar olarak ondan önce durur. Özne wir, Präteritum → wollten.",
+            "de": "Das Modalverb ist finit und steht am Ende („wollten“, Subjekt „wir“), der Infinitiv „abschließen“ davor.",
+            "en": "The modal is finite and goes last („wollten“, subject „wir“), with the infinitive „abschließen“ before it."
+          },
+          "vocab": [
+            "Projekt",
+            "Mai"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zwar-aber-nichtsdestotrotz-8",
+      "title": {
+        "tr": "Übung 8 – zwar … aber / nichtsdestotrotz",
+        "de": "Übung 8 – zwar … aber / nichtsdestotrotz",
+        "en": "Übung 8 – zwar … aber / nichtsdestotrotz"
+      },
+      "description": {
+        "tr": "Bir şeyi kabul edip karşı bir bilgi ekle: zwar … aber ve “yine de” anlamındaki nichtsdestotrotz.",
+        "de": "Etwas einräumen und dagegenhalten: zwar … aber und nichtsdestotrotz.",
+        "en": "Concede a point and counter it: zwar … aber and nichtsdestotrotz."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Medium"
+      },
+      "questions": [
+        {
+          "word": "zwar … aber – Wortstellung",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Zwar ist die Wohnung klein, aber sie liegt sehr zentral.",
+            "Zwar die Wohnung ist klein, aber sie liegt sehr zentral.",
+            "Zwar ist die Wohnung klein, aber liegt sie sehr zentral."
+          ],
+          "correct": "Zwar ist die Wohnung klein, aber sie liegt sehr zentral.",
+          "explanations": {
+            "tr": "zwar başta ilk yeri doldurur, bu yüzden fiil ist hemen arkasından gelir. aber ise sıfır konumdadır (Position 0): ondan sonra normal sıra gelir, önce özne sie, sonra fiil liegt.",
+            "de": "„Zwar“ besetzt Position 1 → „ist“ folgt direkt. „aber“ steht auf Position 0 → danach „sie liegt“ in normaler Reihenfolge.",
+            "en": "„Zwar“ fills position 1, so „ist“ follows. „aber“ takes position 0, so „sie liegt“ follows in normal order."
+          },
+          "vocab": [
+            "Wohnung"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "zwar … aber",
+          "sentence": "Die Wohnung ist ___ klein, aber sie liegt sehr zentral.",
+          "correct": "zwar",
+          "answers": [
+            "zwar"
+          ],
+          "explanations": {
+            "tr": "İkinci bölümdeki aber, ilk bölümde bir kabulü bekler: zwar (“gerçi, evet … ama”). zwar burada fiilden sonra, cümlenin ortasında duruyor.",
+            "de": "Das „aber“ im zweiten Teil verlangt im ersten Teil die Einräumung „zwar“; hier steht es nach dem Verb.",
+            "en": "The „aber“ in the second part calls for the concession „zwar“ in the first; here it follows the verb."
+          },
+          "vocab": [
+            "Wohnung"
+          ]
+        },
+        {
+          "word": "nichtsdestotrotz",
+          "sentence": "Die Kosten sind gestiegen. ___ bleibt das Unternehmen optimistisch.",
+          "options": [
+            "Nichtsdestotrotz",
+            "Obwohl",
+            "Weil"
+          ],
+          "correct": "Nichtsdestotrotz",
+          "explanations": {
+            "tr": "Boşluktan sonra fiil bleibt geliyor, yani ilk yeri dolduran bir zarf gerekli. Nichtsdestotrotz = trotzdem (“yine de”). obwohl ve weil yan cümle bağlacıdır; fiili sona gönderirdi.",
+            "de": "Nach der Lücke folgt „bleibt“: Gesucht ist ein Adverb auf Position 1 – „Nichtsdestotrotz“ (= trotzdem). obwohl/weil verlangen Verbendstellung.",
+            "en": "„bleibt“ follows the gap, so an adverb in position 1 is needed – „Nichtsdestotrotz“ (= trotzdem). obwohl/weil would require verb-final order."
+          },
+          "vocab": [
+            "Kosten",
+            "Unternehmen"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "nichtsdestotrotz – Satzbau",
+          "sentence": "Das Wetter war schlecht. Beginne mit „Nichtsdestotrotz“: (wir – einen schönen Ausflug – machen – Perfekt)",
+          "correct": "Nichtsdestotrotz haben wir einen schönen Ausflug gemacht.",
+          "answers": [
+            "nichtsdestotrotz haben wir einen schönen ausflug gemacht",
+            "nichtsdestotrotz haben wir einen schoenen ausflug gemacht"
+          ],
+          "explanations": {
+            "tr": "Nichtsdestotrotz ilk yerde, çekimli yardımcı fiil haben ikinci yerde, özne wir arkasında; Partizip II gemacht en sonda.",
+            "de": "„Nichtsdestotrotz“ auf Position 1, dann „haben“, das Subjekt „wir“ und „gemacht“ am Ende.",
+            "en": "„Nichtsdestotrotz“ in position 1, then „haben“, the subject „wir“ and „gemacht“ at the end."
+          },
+          "vocab": [
+            "Wetter",
+            "Ausflug"
+          ]
+        },
+        {
+          "word": "nichtsdestotrotz – Bedeutung",
+          "sentence": "Was bedeutet „nichtsdestotrotz“?",
+          "options": [
+            "trotzdem",
+            "deshalb",
+            "außerdem"
+          ],
+          "correct": "trotzdem",
+          "explanations": {
+            "tr": "nichtsdestotrotz, trotzdem ve dennoch ile aynı anlamdadır: “buna rağmen, yine de”. deshalb sonuç, außerdem ekleme bildirir.",
+            "de": "„nichtsdestotrotz“ = trotzdem, dennoch. „deshalb“ nennt eine Folge, „außerdem“ eine Ergänzung.",
+            "en": "„nichtsdestotrotz“ = trotzdem, dennoch („nevertheless“). „deshalb“ gives a result, „außerdem“ an addition."
+          }
+        },
+        {
+          "type": "text",
+          "word": "zwar … aber – Sätze verbinden",
+          "sentence": "Verbinde mit „zwar … aber“ und beginne mit „Zwar“: Der Test war schwer. Ich habe ihn bestanden.",
+          "correct": "Zwar war der Test schwer, aber ich habe ihn bestanden.",
+          "answers": [
+            "zwar war der test schwer, aber ich habe ihn bestanden"
+          ],
+          "explanations": {
+            "tr": "Zwar ilk yerde → fiil war hemen arkasından, sonra özne der Test. aber’den sonra normal sıra: ich habe ihn bestanden.",
+            "de": "„Zwar“ auf Position 1 → „war der Test schwer“; nach „aber“ (Position 0) normale Stellung „ich habe ihn bestanden“.",
+            "en": "„Zwar“ in position 1 → „war der Test schwer“; after „aber“ (position 0) normal order „ich habe ihn bestanden“."
+          },
+          "vocab": [
+            "Test"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "zwar – im Mittelfeld",
+          "sentence": "Verbinde mit „zwar … aber“, beginne mit „Das Auto“: Das Auto ist alt. Es fährt zuverlässig.",
+          "correct": "Das Auto ist zwar alt, aber es fährt zuverlässig.",
+          "answers": [
+            "das auto ist zwar alt, aber es fährt zuverlässig",
+            "das auto ist zwar alt, aber es faehrt zuverlaessig",
+            "das auto ist zwar alt, fährt aber zuverlässig",
+            "das auto ist zwar alt, faehrt aber zuverlaessig"
+          ],
+          "explanations": {
+            "tr": "Özne başta olunca zwar fiilden sonra gelir: Das Auto ist zwar alt. İkinci bölüm aber es fährt … olur. Aynı özne olduğu için kısa biçim fährt aber zuverlässig da doğrudur.",
+            "de": "Beginnt der Satz mit dem Subjekt, steht „zwar“ nach dem Verb. Danach „aber es fährt …“ oder verkürzt „fährt aber zuverlässig“.",
+            "en": "If the subject comes first, „zwar“ follows the verb. Then „aber es fährt …“ or the shortened „fährt aber zuverlässig“."
+          },
+          "vocab": [
+            "Auto"
+          ]
+        },
+        {
+          "word": "zwar – Stellung",
+          "sentence": "Welcher Satz ist falsch?",
+          "options": [
+            "Er ist zwar müde, aber er arbeitet weiter.",
+            "Zwar ist er müde, aber er arbeitet weiter.",
+            "Zwar er ist müde, aber er arbeitet weiter."
+          ],
+          "correct": "Zwar er ist müde, aber er arbeitet weiter.",
+          "explanations": {
+            "tr": "zwar bir zarftır; başta durursa fiil hemen arkasından gelmelidir (Zwar ist er …). „Zwar er ist“ sırasında fiil üçüncü yerde kaldığı için yanlıştır.",
+            "de": "Am Satzanfang ist „zwar“ Position 1, also muss das Verb folgen („Zwar ist er …“). „Zwar er ist“ ist falsch.",
+            "en": "At the start „zwar“ is position 1, so the verb must follow („Zwar ist er …“); „Zwar er ist“ is wrong."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Fehlerkorrektur",
+          "sentence": "Korrigiere den zweiten Satz: Die Firma hat Verluste gemacht. Nichtsdestotrotz sie zahlt den Mitarbeitern einen Bonus.",
+          "correct": "Nichtsdestotrotz zahlt sie den Mitarbeitern einen Bonus.",
+          "answers": [
+            "nichtsdestotrotz zahlt sie den mitarbeitern einen bonus",
+            "die firma hat verluste gemacht. nichtsdestotrotz zahlt sie den mitarbeitern einen bonus"
+          ],
+          "explanations": {
+            "tr": "Nichtsdestotrotz bir zarftır ve ilk yeri doldurur; çekimli fiil zahlt hemen arkasından, özne sie ondan sonra gelir.",
+            "de": "„Nichtsdestotrotz“ ist Position 1 → das finite Verb „zahlt“ folgt direkt, dann „sie“.",
+            "en": "„Nichtsdestotrotz“ is position 1 → the finite verb „zahlt“ follows directly, then „sie“."
+          },
+          "vocab": [
+            "Firma",
+            "Verlust",
+            "Mitarbeiter",
+            "Bonus"
+          ]
+        },
+        {
+          "word": "nichtsdestotrotz – Mittelfeld",
+          "sentence": "Die Reise war anstrengend. Wir haben ___ viel gesehen.",
+          "options": [
+            "nichtsdestotrotz",
+            "obwohl",
+            "weil"
+          ],
+          "correct": "nichtsdestotrotz",
+          "explanations": {
+            "tr": "Fiil haben zaten ikinci yerde; boşluk cümlenin ortasında. Buraya ancak bir zarf girebilir: nichtsdestotrotz (“yine de”). obwohl ve weil yeni bir yan cümle başlatırdı.",
+            "de": "Die Lücke steht im Mittelfeld nach „haben“; dort passt nur ein Adverb: „nichtsdestotrotz“. obwohl/weil leiten Nebensätze ein.",
+            "en": "The gap is in the middle field after „haben“, where only an adverb fits: „nichtsdestotrotz“. obwohl/weil introduce clauses."
+          },
+          "vocab": [
+            "Reise"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sodass-so-dass-9",
+      "title": {
+        "tr": "Übung 9 – sodass / so …, dass",
+        "de": "Übung 9 – sodass / so …, dass",
+        "en": "Übung 9 – sodass / so …, dass"
+      },
+      "description": {
+        "tr": "Sonucu bildir: sodass ve so + sıfat …, dass. Amaç bildiren damit’ten ayır.",
+        "de": "Folgen ausdrücken: sodass und so + Adjektiv …, dass – im Unterschied zum finalen damit.",
+        "en": "Express results with sodass and so + adjective …, dass – unlike purpose damit."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Medium"
+      },
+      "questions": [
+        {
+          "word": "sodass – Folge",
+          "sentence": "Es regnete stark, ___ das Spiel abgesagt wurde.",
+          "options": [
+            "sodass",
+            "damit",
+            "obwohl"
+          ],
+          "correct": "sodass",
+          "explanations": {
+            "tr": "Maçın iptali şiddetli yağmurun sonucudur. Sonuç bildiren bağlaç sodass’tır. damit bir amacı (biri maçı iptal etmek için yağdırmış gibi) bildirirdi; obwohl karşıtlık.",
+            "de": "Die Absage ist die Folge des Regens → „sodass“. „damit“ würde einen Zweck ausdrücken, „obwohl“ eine Einräumung.",
+            "en": "The cancellation is the result of the rain → „sodass“. „damit“ would express a purpose, „obwohl“ a concession."
+          },
+          "vocab": [
+            "Spiel"
+          ]
+        },
+        {
+          "word": "so …, dass",
+          "sentence": "Der Vortrag war ___ langweilig, dass viele Zuhörer eingeschlafen sind.",
+          "options": [
+            "so",
+            "sehr",
+            "zu"
+          ],
+          "correct": "so",
+          "explanations": {
+            "tr": "Sonuç cümlesi dass ile başlıyorsa ana cümlede sıfattan önce so gelir: so langweilig, dass … (“o kadar sıkıcıydı ki”). sehr ve zu dass ile bu yapıyı kuramaz.",
+            "de": "Vor dem Adjektiv steht das Korrelat „so“: so langweilig, dass … „sehr“ und „zu“ bilden diese Konstruktion nicht.",
+            "en": "The correlate „so“ goes before the adjective: so langweilig, dass … „sehr“ and „zu“ cannot form this structure."
+          },
+          "vocab": [
+            "Vortrag",
+            "Zuhörer"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "sodass – Perfekt am Ende",
+          "sentence": "Der Zug hatte Verspätung, sodass wir den Anschluss ___. (verpassen – Perfekt)",
+          "correct": "verpasst haben",
+          "answers": [
+            "verpasst haben"
+          ],
+          "explanations": {
+            "tr": "verpassen Perfekt’te haben alır. sodass yan cümle kurar: Partizip II verpasst, çekimli haben (özne wir) en sonda.",
+            "de": "„verpassen“ bildet das Perfekt mit „haben“; im sodass-Satz steht „haben“ (Subjekt „wir“) am Ende.",
+            "en": "„verpassen“ takes „haben“; in the sodass-clause „haben“ (subject „wir“) goes last."
+          },
+          "vocab": [
+            "Zug",
+            "Verspätung",
+            "Anschluss"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "so …, dass – Sätze verbinden",
+          "sentence": "Verbinde mit „so …, dass“: Die Musik war laut. Wir konnten uns nicht unterhalten.",
+          "correct": "Die Musik war so laut, dass wir uns nicht unterhalten konnten.",
+          "answers": [
+            "die musik war so laut, dass wir uns nicht unterhalten konnten"
+          ],
+          "explanations": {
+            "tr": "so sıfattan (laut) önce gelir. dass cümlesinde modal fiil konnten en sona, mastar unterhalten ondan önce gider; dönüşlü zamir uns özneden hemen sonra.",
+            "de": "„so“ vor „laut“; im dass-Satz steht „konnten“ am Ende, „unterhalten“ davor, „uns“ nach dem Subjekt.",
+            "en": "„so“ before „laut“; in the dass-clause „konnten“ goes last, „unterhalten“ before it, „uns“ after the subject."
+          },
+          "vocab": [
+            "Musik"
+          ]
+        },
+        {
+          "word": "sodass – Bedeutung",
+          "sentence": "Was nennt ein sodass-Satz?",
+          "options": [
+            "eine Folge",
+            "einen Zweck",
+            "einen Grund"
+          ],
+          "correct": "eine Folge",
+          "explanations": {
+            "tr": "sodass bir olayın sonucunu bildirir (“bu yüzden, öyle ki”). Amaç için damit veya um … zu, sebep için weil kullanılır.",
+            "de": "„sodass“ nennt die Folge. Für einen Zweck: damit / um … zu; für einen Grund: weil.",
+            "en": "„sodass“ names the result. Purpose: damit / um … zu; reason: weil."
+          }
+        },
+        {
+          "word": "sodass oder damit?",
+          "sentence": "Er hat zu viel gegessen, ___ ihm jetzt schlecht ist.",
+          "options": [
+            "sodass",
+            "damit",
+            "indem"
+          ],
+          "correct": "sodass",
+          "explanations": {
+            "tr": "Midesinin bulanması kimsenin istediği bir şey değil, sadece fazla yemenin sonucu. Bu yüzden sodass. damit bilinçli bir amaç gösterirdi; indem yöntem.",
+            "de": "Die Übelkeit ist eine ungewollte Folge, kein Ziel → „sodass“. „damit“ wäre ein Zweck, „indem“ ein Mittel.",
+            "en": "Feeling sick is an unwanted result, not a goal → „sodass“. „damit“ would be a purpose, „indem“ a means."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Fehlerkorrektur",
+          "sentence": "Korrigiere: Es war sehr kalt, sodass wir sind zu Hause geblieben.",
+          "correct": "Es war sehr kalt, sodass wir zu Hause geblieben sind.",
+          "answers": [
+            "es war sehr kalt, sodass wir zu hause geblieben sind"
+          ],
+          "explanations": {
+            "tr": "sodass yan cümlesinde çekimli sind en sona gider; Partizip II geblieben ondan önce. bleiben Perfekt’te sein alır.",
+            "de": "Im sodass-Satz gehört „sind“ ans Ende, nach „geblieben“.",
+            "en": "In the sodass-clause „sind“ belongs at the end, after „geblieben“."
+          }
+        },
+        {
+          "type": "text",
+          "word": "so …, dass",
+          "sentence": "Er sprach ___ leise, dass ihn niemand verstand.",
+          "correct": "so",
+          "answers": [
+            "so"
+          ],
+          "explanations": {
+            "tr": "Arkasından dass ile bir sonuç geliyor; bu yüzden sıfattan (leise) önce so gerekir: “o kadar alçak sesle konuştu ki kimse anlamadı”.",
+            "de": "Der dass-Satz nennt die Folge; vor dem Adjektiv „leise“ steht deshalb „so“.",
+            "en": "The dass-clause gives the result, so „so“ is needed before the adjective „leise“."
+          }
+        },
+        {
+          "word": "sodass – Modalverb",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Die Straße war gesperrt, sodass wir einen Umweg fahren mussten.",
+            "Die Straße war gesperrt, sodass mussten wir einen Umweg fahren.",
+            "Die Straße war gesperrt, sodass wir mussten einen Umweg fahren."
+          ],
+          "correct": "Die Straße war gesperrt, sodass wir einen Umweg fahren mussten.",
+          "explanations": {
+            "tr": "sodass yan cümle kurar: modal fiil mussten çekimli fiildir ve en sona gider, mastar fahren ondan önce. „sodass mussten wir“ zarf sırasıdır, sodass için yanlıştır.",
+            "de": "Im sodass-Satz steht das Modalverb „mussten“ am Ende, „fahren“ davor.",
+            "en": "In the sodass-clause the modal „mussten“ goes last, with „fahren“ before it."
+          },
+          "vocab": [
+            "Straße",
+            "Umweg"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "sodass – Sätze verbinden",
+          "sentence": "Verbinde mit „sodass“: Der Server war überlastet. Die Website war stundenlang nicht erreichbar.",
+          "correct": "Der Server war überlastet, sodass die Website stundenlang nicht erreichbar war.",
+          "answers": [
+            "der server war überlastet, sodass die website stundenlang nicht erreichbar war",
+            "der server war ueberlastet, sodass die website stundenlang nicht erreichbar war",
+            "der server war überlastet, so dass die website stundenlang nicht erreichbar war",
+            "der server war ueberlastet, so dass die website stundenlang nicht erreichbar war"
+          ],
+          "explanations": {
+            "tr": "İkinci cümle birinci cümlenin sonucudur. sodass (ya da ayrı yazılmış so dass) yan cümle kurar; çekimli fiil war en sona gider.",
+            "de": "Der zweite Satz ist die Folge: „sodass“ (auch „so dass“) mit „war“ am Ende.",
+            "en": "The second sentence is the result: „sodass“ (also „so dass“) with „war“ at the end."
+          },
+          "vocab": [
+            "Server",
+            "Website"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "folglich-infolgedessen-10",
+      "title": {
+        "tr": "Übung 10 – folglich / infolgedessen",
+        "de": "Übung 10 – folglich / infolgedessen",
+        "en": "Übung 10 – folglich / infolgedessen"
+      },
+      "description": {
+        "tr": "Sonuç bildiren zarflar folglich, infolgedessen ve demzufolge: fiil hemen arkalarından gelir. Edat olan infolge’den ayır.",
+        "de": "Konsekutive Adverbien folglich, infolgedessen und demzufolge – und die Präposition infolge.",
+        "en": "Consecutive adverbs folglich, infolgedessen and demzufolge – and the preposition infolge."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Medium"
+      },
+      "questions": [
+        {
+          "word": "folglich – Position 1",
+          "sentence": "Die Nachfrage ist gestiegen. ___ hat die Firma neue Mitarbeiter eingestellt.",
+          "options": [
+            "Folglich",
+            "Sodass",
+            "Weil"
+          ],
+          "correct": "Folglich",
+          "explanations": {
+            "tr": "Boşluktan sonra fiil hat geliyor; ilk yeri dolduran bir zarf gerekiyor. Folglich (“dolayısıyla”) sonuç bildiren bir zarftır. sodass ve weil yan cümle bağlacıdır.",
+            "de": "Nach der Lücke folgt „hat“ → Adverb auf Position 1: „Folglich“. sodass und weil verlangen Verbendstellung.",
+            "en": "„hat“ follows the gap → an adverb in position 1: „Folglich“. sodass and weil require verb-final order."
+          },
+          "vocab": [
+            "Nachfrage",
+            "Firma",
+            "Mitarbeiter"
+          ]
+        },
+        {
+          "word": "infolgedessen – Wortstellung",
+          "sentence": "Er hat nicht gelernt. Welcher Satz folgt richtig?",
+          "options": [
+            "Infolgedessen hat er die Prüfung nicht bestanden.",
+            "Infolgedessen er hat die Prüfung nicht bestanden.",
+            "Infolgedessen er die Prüfung nicht bestanden hat."
+          ],
+          "correct": "Infolgedessen hat er die Prüfung nicht bestanden.",
+          "explanations": {
+            "tr": "infolgedessen bir zarftır (“bunun sonucunda”). İlk yerde durur; çekimli fiil hat hemen arkasından gelir, özne er fiilden sonra.",
+            "de": "„infolgedessen“ ist ein Adverb auf Position 1; „hat“ folgt direkt, dann das Subjekt „er“.",
+            "en": "„infolgedessen“ is an adverb in position 1; „hat“ follows directly, then the subject „er“."
+          },
+          "vocab": [
+            "Prüfung"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "folglich – Satzbau",
+          "sentence": "Alle Hotels waren ausgebucht. Beginne mit „Folglich“: (wir – bei Freunden – übernachten – Präteritum)",
+          "correct": "Folglich übernachteten wir bei Freunden.",
+          "answers": [
+            "folglich übernachteten wir bei freunden",
+            "folglich uebernachteten wir bei freunden"
+          ],
+          "explanations": {
+            "tr": "Folglich ilk yerde; çekimli fiil übernachteten (Präteritum, özne wir) ikinci yerde, sonra wir ve bei Freunden.",
+            "de": "„Folglich“ auf Position 1, „übernachteten“ auf Position 2, dann „wir bei Freunden“.",
+            "en": "„Folglich“ in position 1, „übernachteten“ second, then „wir bei Freunden“."
+          },
+          "vocab": [
+            "Hotel",
+            "Freund"
+          ]
+        },
+        {
+          "word": "infolge oder infolgedessen?",
+          "sentence": "___ des Sturms fielen viele Züge aus.",
+          "options": [
+            "Infolge",
+            "Infolgedessen",
+            "Folglich"
+          ],
+          "correct": "Infolge",
+          "explanations": {
+            "tr": "Boşluktan sonra Genitiv bir isim öbeği geliyor: des Sturms. İsim öbeğine bağlanan kelime bir edattır: infolge + Genitiv (“… sonucunda”). infolgedessen ve folglich zarftır, isim almaz.",
+            "de": "Es folgt eine Genitivgruppe („des Sturms“) → Präposition „infolge“. „infolgedessen“ und „folglich“ sind Adverbien ohne Nomen.",
+            "en": "A genitive phrase follows („des Sturms“) → the preposition „infolge“. „infolgedessen“ and „folglich“ are adverbs and take no noun."
+          },
+          "vocab": [
+            "Sturm",
+            "Zug"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "folglich – Mittelfeld",
+          "sentence": "Setze „folglich“ ein und beginne mit „Die Nachfrage“: Der Preis ist gesunken. Die Nachfrage ist gestiegen.",
+          "correct": "Die Nachfrage ist folglich gestiegen.",
+          "answers": [
+            "die nachfrage ist folglich gestiegen",
+            "der preis ist gesunken. die nachfrage ist folglich gestiegen"
+          ],
+          "explanations": {
+            "tr": "Özne başta olduğunda folglich çekimli fiilden (ist) sonra, cümlenin ortasında durur. Fiil yine ikinci yerdedir.",
+            "de": "Beginnt der Satz mit dem Subjekt, steht „folglich“ im Mittelfeld nach dem finiten Verb „ist“.",
+            "en": "If the sentence starts with the subject, „folglich“ goes in the middle field after the finite verb „ist“."
+          },
+          "vocab": [
+            "Preis",
+            "Nachfrage"
+          ]
+        },
+        {
+          "word": "demzufolge – Bedeutung",
+          "sentence": "Was bedeutet „demzufolge“ in diesem Satz? – Die Werte waren zu hoch. Demzufolge wurde die Anlage abgeschaltet.",
+          "options": [
+            "deshalb, als Folge davon",
+            "trotzdem",
+            "stattdessen"
+          ],
+          "correct": "deshalb, als Folge davon",
+          "explanations": {
+            "tr": "Değerlerin yüksek olması kapatmanın sebebidir; demzufolge bu sonucu bağlar: “buna göre, bu yüzden”. trotzdem karşıtlık, stattdessen “onun yerine” demektir.",
+            "de": "Die Abschaltung folgt aus den hohen Werten: „demzufolge“ = deshalb, als Folge davon.",
+            "en": "The shutdown results from the high values: „demzufolge“ = therefore, as a consequence."
+          },
+          "vocab": [
+            "Wert",
+            "Anlage"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Fehlerkorrektur",
+          "sentence": "Korrigiere den zweiten Satz: Die Straße war glatt. Folglich viele Autofahrer fuhren langsam.",
+          "correct": "Folglich fuhren viele Autofahrer langsam.",
+          "answers": [
+            "folglich fuhren viele autofahrer langsam",
+            "die straße war glatt. folglich fuhren viele autofahrer langsam",
+            "die strasse war glatt. folglich fuhren viele autofahrer langsam"
+          ],
+          "explanations": {
+            "tr": "Folglich ilk yeri doldurur; çekimli fiil fuhren hemen arkasından gelmeli, özne viele Autofahrer fiilden sonra.",
+            "de": "„Folglich“ ist Position 1 → „fuhren“ direkt danach, das Subjekt folgt.",
+            "en": "„Folglich“ is position 1 → „fuhren“ comes right after it, then the subject."
+          },
+          "vocab": [
+            "Straße",
+            "Autofahrer"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "infolgedessen – Sätze verbinden",
+          "sentence": "Verbinde: Der zweite Satz beginnt mit „Infolgedessen“. Die Firma verlor einen wichtigen Kunden. Sie musste Stellen abbauen.",
+          "correct": "Die Firma verlor einen wichtigen Kunden. Infolgedessen musste sie Stellen abbauen.",
+          "answers": [
+            "die firma verlor einen wichtigen kunden. infolgedessen musste sie stellen abbauen",
+            "infolgedessen musste sie stellen abbauen"
+          ],
+          "explanations": {
+            "tr": "Infolgedessen ikinci cümlenin ilk yerinde; modal fiil musste ikinci yerde, özne sie, mastar abbauen en sonda. infolgedessen zarftır, virgülle bağlanan bir yan cümle kurmaz.",
+            "de": "„Infolgedessen“ auf Position 1, „musste“ auf Position 2, „sie“, am Ende „abbauen“.",
+            "en": "„Infolgedessen“ first, „musste“ second, then „sie“ and „abbauen“ at the end."
+          },
+          "vocab": [
+            "Firma",
+            "Kunde",
+            "Stelle"
+          ]
+        },
+        {
+          "word": "Konnektortyp erkennen",
+          "sentence": "Welcher dieser Konnektoren schickt das Verb ans Satzende?",
+          "options": [
+            "sodass",
+            "folglich",
+            "infolgedessen"
+          ],
+          "correct": "sodass",
+          "explanations": {
+            "tr": "Üçü de sonuç bildirir ama yalnızca sodass yan cümle bağlacıdır ve fiili sona gönderir. folglich ve infolgedessen zarftır; fiil hemen arkalarından gelir.",
+            "de": "Alle drei sind konsekutiv, aber nur „sodass“ ist eine Subjunktion mit Verbendstellung. folglich/infolgedessen sind Adverbien.",
+            "en": "All three express result, but only „sodass“ is a subordinating conjunction with verb-final order; the others are adverbs."
+          }
+        },
+        {
+          "type": "text",
+          "word": "folglich – Perfekt",
+          "sentence": "Es hat drei Wochen nicht geregnet. Schreibe im Perfekt: Folglich vertrockneten viele Pflanzen.",
+          "correct": "Folglich sind viele Pflanzen vertrocknet.",
+          "answers": [
+            "folglich sind viele pflanzen vertrocknet"
+          ],
+          "explanations": {
+            "tr": "vertrocknen bir durum değişikliğidir ve Perfekt’te sein alır. Folglich ilk yerde, çekimli sind ikinci yerde, Partizip II vertrocknet en sonda.",
+            "de": "„vertrocknen“ bildet das Perfekt mit „sein“: „Folglich sind … vertrocknet“.",
+            "en": "„vertrocknen“ takes „sein“ in the perfect: „Folglich sind … vertrocknet“."
+          },
+          "vocab": [
+            "Woche",
+            "Pflanze"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "es-sei-denn-vorausgesetzt-11",
+      "title": {
+        "tr": "Übung 11 – es sei denn / vorausgesetzt, dass / angenommen, dass",
+        "de": "Übung 11 – es sei denn / vorausgesetzt, dass / angenommen, dass",
+        "en": "Übung 11 – es sei denn / vorausgesetzt, dass / angenommen, dass"
+      },
+      "description": {
+        "tr": "Koşulun özel biçimleri: es sei denn (… olmadıkça), vorausgesetzt, dass (… şartıyla) ve angenommen, dass (… varsayalım).",
+        "de": "Besondere Bedingungen: es sei denn, vorausgesetzt, dass und angenommen, dass – mit und ohne dass.",
+        "en": "Special conditions: es sei denn, vorausgesetzt, dass and angenommen, dass – with and without dass."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "questions": [
+        {
+          "word": "es sei denn",
+          "sentence": "Wir treffen uns um acht, ___ du hast keine Zeit.",
+          "options": [
+            "es sei denn,",
+            "vorausgesetzt,",
+            "angenommen,"
+          ],
+          "correct": "es sei denn,",
+          "explanations": {
+            "tr": "Anlam: “saat sekizde buluşuyoruz, vaktin yoksa başka” – yani “… olmadıkça”. Bu istisnayı es sei denn bildirir. vorausgesetzt (“vaktinin olmaması şartıyla”) ve angenommen (“vaktin olmadığını varsayalım”) anlamı bozar.",
+            "de": "Gemeint ist eine Ausnahme: „außer wenn du keine Zeit hast“ → „es sei denn“. „vorausgesetzt“ und „angenommen“ ergeben hier keinen Sinn.",
+            "en": "An exception is meant – „unless you have no time“ → „es sei denn“. „vorausgesetzt“ and „angenommen“ make no sense here."
+          },
+          "vocab": [
+            "Zeit"
+          ]
+        },
+        {
+          "word": "es sei denn – Bedeutung",
+          "sentence": "Was bedeutet „es sei denn“?",
+          "options": [
+            "außer wenn",
+            "weil",
+            "obwohl"
+          ],
+          "correct": "außer wenn",
+          "explanations": {
+            "tr": "es sei denn bir istisna koşulu bildirir: “… olmadıkça, … değilse”. Kalıplaşmış bir ifadedir; sei Konjunktiv I biçimidir ve değişmez.",
+            "de": "„es sei denn“ = „außer wenn“ und nennt eine Ausnahme. Die Form „sei“ bleibt immer gleich.",
+            "en": "„es sei denn“ = „unless“ and names an exception; „sei“ never changes."
+          }
+        },
+        {
+          "type": "text",
+          "word": "es sei denn, dass",
+          "sentence": "Ich komme morgen, es sei denn, dass mein Chef mich ___. (brauchen)",
+          "correct": "braucht",
+          "answers": [
+            "braucht"
+          ],
+          "explanations": {
+            "tr": "dass ile kurulan yan cümlede çekimli fiil sona gider. Özne mein Chef tekil → braucht.",
+            "de": "Mit „dass“ entsteht ein Nebensatz: „braucht“ (Subjekt „mein Chef“) steht am Ende.",
+            "en": "With „dass“ it is a subordinate clause: „braucht“ (subject „mein Chef“) goes last."
+          },
+          "vocab": [
+            "Chef"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "es sei denn – ohne dass",
+          "sentence": "Schreibe ohne „dass“: Der Flug startet pünktlich, es sei denn, dass das Wetter sich verschlechtert.",
+          "correct": "Der Flug startet pünktlich, es sei denn, das Wetter verschlechtert sich.",
+          "answers": [
+            "der flug startet pünktlich, es sei denn, das wetter verschlechtert sich",
+            "der flug startet puenktlich, es sei denn, das wetter verschlechtert sich",
+            "es sei denn, das wetter verschlechtert sich"
+          ],
+          "explanations": {
+            "tr": "dass olmadan es sei denn’den sonra ana cümle sırası gelir: özne das Wetter, çekimli fiil verschlechtert ikinci yerde, dönüşlü sich fiilden sonra.",
+            "de": "Ohne „dass“ folgt nach „es sei denn,“ Hauptsatzstellung: „das Wetter verschlechtert sich“.",
+            "en": "Without „dass“, main-clause order follows „es sei denn,“: „das Wetter verschlechtert sich“."
+          },
+          "vocab": [
+            "Flug",
+            "Wetter"
+          ]
+        },
+        {
+          "word": "vorausgesetzt, dass",
+          "sentence": "Ich helfe dir beim Umzug, ___ du mir rechtzeitig Bescheid gibst.",
+          "options": [
+            "vorausgesetzt, dass",
+            "es sei denn, dass",
+            "angenommen, dass"
+          ],
+          "correct": "vorausgesetzt, dass",
+          "explanations": {
+            "tr": "Yardım bir şarta bağlı: zamanında haber vermen. Bu “… şartıyla” anlamı vorausgesetzt, dass ile verilir. es sei denn, dass ters anlam verirdi (“haber vermedikçe yardım ederim”).",
+            "de": "Die Hilfe hängt von einer Voraussetzung ab → „vorausgesetzt, dass“. „es sei denn, dass“ würde das Gegenteil sagen.",
+            "en": "The help depends on a precondition → „vorausgesetzt, dass“. „es sei denn, dass“ would say the opposite."
+          },
+          "vocab": [
+            "Umzug"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "vorausgesetzt – ohne dass",
+          "sentence": "Wir können morgen wandern, vorausgesetzt, das Wetter ___ gut. (bleiben)",
+          "correct": "bleibt",
+          "answers": [
+            "bleibt"
+          ],
+          "explanations": {
+            "tr": "dass yok, bu yüzden virgülden sonra ana cümle sırası var: özne das Wetter, çekimli fiil bleibt ikinci yerde.",
+            "de": "Ohne „dass“ folgt Hauptsatzstellung: „das Wetter bleibt gut“ (Verb auf Position 2).",
+            "en": "Without „dass“, main-clause order follows: „das Wetter bleibt gut“ (verb second)."
+          },
+          "vocab": [
+            "Wetter"
+          ]
+        },
+        {
+          "word": "angenommen",
+          "sentence": "___, du gewinnst eine Million Euro – was würdest du damit machen?",
+          "options": [
+            "Angenommen",
+            "Es sei denn",
+            "Vorausgesetzt"
+          ],
+          "correct": "Angenommen",
+          "explanations": {
+            "tr": "Bir varsayım kuruluyor ve ardından soru soruluyor: “Bir milyon euro kazandığını varsayalım, ne yapardın?”. Bu angenommen’dir. es sei denn ve vorausgesetzt cümleye bu şekilde başlayamaz.",
+            "de": "Eine Annahme wird aufgestellt und dann eine Frage gestellt → „Angenommen, …“.",
+            "en": "A hypothesis is set up and then a question asked → „Angenommen, …“."
+          },
+          "vocab": [
+            "Million",
+            "Euro"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "angenommen, dass",
+          "sentence": "Verbinde mit „Angenommen, dass“ am Anfang: Der Zug fällt aus. Wie kommen wir dann nach Hamburg?",
+          "correct": "Angenommen, dass der Zug ausfällt, wie kommen wir dann nach Hamburg?",
+          "answers": [
+            "angenommen, dass der zug ausfällt, wie kommen wir dann nach hamburg",
+            "angenommen, dass der zug ausfaellt, wie kommen wir dann nach hamburg"
+          ],
+          "explanations": {
+            "tr": "dass cümlesinde ayrılabilen fiil birleşir ve sona gider: ausfällt. Ardından soru cümlesi gelir: wie kommen wir …",
+            "de": "Im dass-Satz steht das trennbare Verb zusammen am Ende („ausfällt“); danach folgt die Frage.",
+            "en": "In the dass-clause the separable verb is joined and goes last („ausfällt“); then the question follows."
+          },
+          "vocab": [
+            "Zug"
+          ]
+        },
+        {
+          "word": "es sei denn – Form",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Wir fahren ans Meer, es sei denn, es regnet.",
+            "Wir fahren ans Meer, es sei denn, regnet es.",
+            "Wir fahren ans Meer, es ist denn, es regnet."
+          ],
+          "correct": "Wir fahren ans Meer, es sei denn, es regnet.",
+          "explanations": {
+            "tr": "Kalıp her zaman es sei denn’dir (sei = Konjunktiv I), es ist denn olmaz. dass olmadığında arkasından normal ana cümle sırası gelir: es regnet.",
+            "de": "Die feste Form ist „es sei denn“ (nicht „es ist denn“); ohne „dass“ folgt „es regnet“ mit Verb auf Position 2.",
+            "en": "The fixed form is „es sei denn“ (not „es ist denn“); without „dass“, „es regnet“ follows with the verb second."
+          },
+          "vocab": [
+            "Meer"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Fehlerkorrektur",
+          "sentence": "Korrigiere: Ich nehme die Stelle an, vorausgesetzt, dass ich kann im Homeoffice arbeiten.",
+          "correct": "Ich nehme die Stelle an, vorausgesetzt, dass ich im Homeoffice arbeiten kann.",
+          "answers": [
+            "ich nehme die stelle an, vorausgesetzt, dass ich im homeoffice arbeiten kann"
+          ],
+          "explanations": {
+            "tr": "dass yan cümlesinde modal fiil kann sona gider, mastar arbeiten ondan önce durur.",
+            "de": "Im dass-Satz steht das Modalverb „kann“ am Ende, „arbeiten“ davor.",
+            "en": "In the dass-clause the modal „kann“ goes last, with „arbeiten“ before it."
+          },
+          "vocab": [
+            "Stelle",
+            "Homeoffice"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zumal-umso-mehr-als-12",
+      "title": {
+        "tr": "Übung 12 – zumal / umso mehr, als",
+        "de": "Übung 12 – zumal / umso mehr, als",
+        "en": "Übung 12 – zumal / umso mehr, als"
+      },
+      "description": {
+        "tr": "Ek ve güçlü bir sebep ekle: zumal (“hele ki, özellikle de”) ve umso mehr, als (“… olduğu için daha da çok”).",
+        "de": "Einen zusätzlichen, besonders wichtigen Grund nennen: zumal und umso mehr, als.",
+        "en": "Add an extra, especially strong reason: zumal and umso mehr, als."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "questions": [
+        {
+          "word": "zumal – Grund",
+          "sentence": "Ich bleibe heute zu Hause, ___ ich mich erkältet habe.",
+          "options": [
+            "zumal",
+            "obwohl",
+            "sodass"
+          ],
+          "correct": "zumal",
+          "explanations": {
+            "tr": "Soğuk algınlığı evde kalmanın (ek) sebebidir: “hele ki üşüttüm”. Sebep ekleyen bağlaç zumal’dır. obwohl karşıtlık, sodass sonuç bildirir.",
+            "de": "Die Erkältung ist ein (zusätzlicher) Grund → „zumal“. „obwohl“ ist konzessiv, „sodass“ konsekutiv.",
+            "en": "The cold is an (extra) reason → „zumal“. „obwohl“ is concessive, „sodass“ consecutive."
+          }
+        },
+        {
+          "word": "zumal – Bedeutung",
+          "sentence": "Was bedeutet „zumal“?",
+          "options": [
+            "besonders weil",
+            "obwohl",
+            "sobald"
+          ],
+          "correct": "besonders weil",
+          "explanations": {
+            "tr": "zumal bir sebebi vurgulayarak ekler: “özellikle de … olduğu için, hele ki”. Genellikle önce bir sebep veya görüş söylenmiştir; zumal bunu güçlendirir.",
+            "de": "„zumal“ = „besonders weil“: Es fügt einen zusätzlichen, gewichtigen Grund hinzu.",
+            "en": "„zumal“ = „especially since“: it adds an extra, weighty reason."
+          }
+        },
+        {
+          "type": "text",
+          "word": "zumal – Verb am Ende",
+          "sentence": "Wir sollten das Angebot annehmen, zumal der Preis sehr günstig ___. (sein)",
+          "correct": "ist",
+          "answers": [
+            "ist"
+          ],
+          "explanations": {
+            "tr": "zumal yan cümle bağlacıdır; çekimli fiil sona gider. Özne der Preis tekil → ist.",
+            "de": "„zumal“ ist eine Subjunktion: „ist“ (Subjekt „der Preis“) steht am Ende.",
+            "en": "„zumal“ is a subordinating conjunction: „ist“ (subject „der Preis“) goes last."
+          },
+          "vocab": [
+            "Angebot",
+            "Preis"
+          ]
+        },
+        {
+          "word": "zumal – Wortstellung",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Er nimmt das Rad, zumal das Wetter schön ist.",
+            "Er nimmt das Rad, zumal ist das Wetter schön.",
+            "Er nimmt das Rad, zumal das Wetter ist schön."
+          ],
+          "correct": "Er nimmt das Rad, zumal das Wetter schön ist.",
+          "explanations": {
+            "tr": "zumal’dan sonra önce özne das Wetter, sonra schön ve en sonda çekimli fiil ist gelir; weil gibi davranır.",
+            "de": "Nach „zumal“ steht das Verb am Ende: „zumal das Wetter schön ist“ – wie bei „weil“.",
+            "en": "After „zumal“ the verb goes last: „zumal das Wetter schön ist“ – just like „weil“."
+          },
+          "vocab": [
+            "Rad",
+            "Wetter"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "zumal – Sätze verbinden",
+          "sentence": "Verbinde mit „zumal“: Die Wohnung gefällt uns. Sie hat einen großen Balkon.",
+          "correct": "Die Wohnung gefällt uns, zumal sie einen großen Balkon hat.",
+          "answers": [
+            "die wohnung gefällt uns, zumal sie einen großen balkon hat",
+            "die wohnung gefaellt uns, zumal sie einen grossen balkon hat"
+          ],
+          "explanations": {
+            "tr": "İkinci cümle beğenmenin güçlü bir sebebidir: virgül, zumal, özne sie, nesne einen großen Balkon ve çekimli fiil hat en sonda.",
+            "de": "Der zweite Satz liefert einen zusätzlichen Grund: „zumal sie einen großen Balkon hat“ mit Verb am Ende.",
+            "en": "The second sentence gives an extra reason: „zumal sie einen großen Balkon hat“ with the verb last."
+          },
+          "vocab": [
+            "Wohnung",
+            "Balkon"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "umso mehr, als",
+          "sentence": "Die Absage ist ärgerlich, ___ mehr, als wir schon Tickets gekauft hatten.",
+          "correct": "umso",
+          "answers": [
+            "umso",
+            "um so"
+          ],
+          "explanations": {
+            "tr": "Kalıp umso mehr, als’dır: “… olduğu için daha da can sıkıcı”. umso eskiden um so diye de yazılırdı; ikisi de kabul edilir.",
+            "de": "Die feste Verbindung lautet „umso mehr, als“ (auch „um so“): Der als-Satz verstärkt die Aussage.",
+            "en": "The fixed combination is „umso mehr, als“ (also spelled „um so“): the als-clause strengthens the statement."
+          },
+          "vocab": [
+            "Absage",
+            "Ticket"
+          ]
+        },
+        {
+          "word": "umso mehr, als",
+          "sentence": "Ich freue mich ___, als ich dich lange nicht gesehen habe.",
+          "options": [
+            "umso mehr",
+            "so viel",
+            "sehr"
+          ],
+          "correct": "umso mehr",
+          "explanations": {
+            "tr": "Virgülden sonraki als, ana cümlede umso mehr’i ister: “seni uzun zamandır görmediğim için daha da çok seviniyorum”. sehr ve so viel als ile bu yapıyı kuramaz.",
+            "de": "Das „als“ nach dem Komma verlangt „umso mehr“: Die Freude ist wegen des als-Satzes größer.",
+            "en": "The „als“ after the comma requires „umso mehr“: the joy is greater because of the als-clause."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Fehlerkorrektur",
+          "sentence": "Korrigiere: Sie lernt jeden Tag, zumal die Prüfung ist bald.",
+          "correct": "Sie lernt jeden Tag, zumal die Prüfung bald ist.",
+          "answers": [
+            "sie lernt jeden tag, zumal die prüfung bald ist",
+            "sie lernt jeden tag, zumal die pruefung bald ist"
+          ],
+          "explanations": {
+            "tr": "zumal yan cümle bağlacıdır: çekimli fiil ist en sona, bald’dan sonraya gider.",
+            "de": "Im zumal-Satz gehört „ist“ ans Ende, nach „bald“.",
+            "en": "In the zumal-clause „ist“ belongs at the end, after „bald“."
+          },
+          "vocab": [
+            "Tag",
+            "Prüfung"
+          ]
+        },
+        {
+          "word": "zumal – Gebrauch",
+          "sentence": "Wann benutzt man „zumal“ statt „weil“?",
+          "options": [
+            "wenn man einen zusätzlichen, besonders wichtigen Grund nennt",
+            "wenn man eine Bedingung nennt",
+            "wenn man eine Folge nennt"
+          ],
+          "correct": "wenn man einen zusätzlichen, besonders wichtigen Grund nennt",
+          "explanations": {
+            "tr": "zumal sıradan bir sebep değil, söylenen şeyi güçlendiren ek ve önemli bir sebep sunar: “hele ki”. Koşul için sofern, sonuç için sodass kullanılır.",
+            "de": "„zumal“ nennt einen zusätzlichen, verstärkenden Grund. Bedingung: sofern; Folge: sodass.",
+            "en": "„zumal“ gives an additional, reinforcing reason. Condition: sofern; result: sodass."
+          }
+        },
+        {
+          "type": "text",
+          "word": "zumal – Perfekt",
+          "sentence": "Wir fahren nicht mit, zumal wir den Ausflug schon letztes Jahr ___. (machen – Perfekt)",
+          "correct": "gemacht haben",
+          "answers": [
+            "gemacht haben"
+          ],
+          "explanations": {
+            "tr": "machen Perfekt’te haben alır. zumal yan cümlesinde çekimli haben (özne wir) en sona, gemacht ondan önce gelir.",
+            "de": "„machen“ bildet das Perfekt mit „haben“; im zumal-Satz steht „haben“ am Ende.",
+            "en": "„machen“ takes „haben“; in the zumal-clause „haben“ goes last."
+          },
+          "vocab": [
+            "Ausflug",
+            "Jahr"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "je-nachdem-13",
+      "title": {
+        "tr": "Übung 13 – je nachdem",
+        "de": "Übung 13 – je nachdem",
+        "en": "Übung 13 – je nachdem"
+      },
+      "description": {
+        "tr": "Bir şeyin başka bir şeye bağlı olduğunu söyle: je nachdem, ob / wie / wann … ve tek başına „Je nachdem.“",
+        "de": "Abhängigkeit ausdrücken: je nachdem, ob / wie / wann … und die Kurzantwort „Je nachdem.“",
+        "en": "Express dependence: je nachdem, ob / wie / wann … and the short answer „Je nachdem.“"
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel bis schwer",
+        "en": "Medium to hard"
+      },
+      "questions": [
+        {
+          "word": "je nachdem, ob",
+          "sentence": "Wir essen drinnen oder draußen, je nachdem, ___ es regnet.",
+          "options": [
+            "ob",
+            "dass",
+            "wenn"
+          ],
+          "correct": "ob",
+          "explanations": {
+            "tr": "Seçenek evet/hayır sorusuna bağlı: “yağmur yağıp yağmamasına göre”. Bu yüzden je nachdem’den sonra ob gelir. dass ve wenn ile bu yapı kurulmaz.",
+            "de": "Es hängt von einer Ja/Nein-Frage ab (Regnet es?) → „je nachdem, ob“.",
+            "en": "It depends on a yes/no question (Is it raining?) → „je nachdem, ob“."
+          }
+        },
+        {
+          "word": "je nachdem – Bedeutung",
+          "sentence": "Was bedeutet „je nachdem, ob …“?",
+          "options": [
+            "abhängig davon, ob …",
+            "obwohl …",
+            "seitdem …"
+          ],
+          "correct": "abhängig davon, ob …",
+          "explanations": {
+            "tr": "je nachdem bir şeyin başka bir duruma bağlı olduğunu söyler: “… -ip -mamasına göre, … duruma göre”.",
+            "de": "„je nachdem, ob …“ = „abhängig davon, ob …“.",
+            "en": "„je nachdem, ob …“ = „depending on whether …“."
+          }
+        },
+        {
+          "type": "text",
+          "word": "je nachdem, wie",
+          "sentence": "Die Fahrt dauert zwei oder drei Stunden, je nachdem, wie viel Verkehr ___. (sein)",
+          "correct": "ist",
+          "answers": [
+            "ist"
+          ],
+          "explanations": {
+            "tr": "je nachdem, wie … dolaylı bir soru gibi yan cümle kurar; çekimli fiil sona gider. Özne Verkehr tekil → ist.",
+            "de": "Der Satz mit „je nachdem, wie viel …“ ist ein Nebensatz: „ist“ steht am Ende.",
+            "en": "The clause „je nachdem, wie viel …“ is subordinate: „ist“ goes last."
+          },
+          "vocab": [
+            "Fahrt",
+            "Stunde",
+            "Verkehr"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "je nachdem, wann",
+          "sentence": "Verbinde mit „je nachdem, wann“: Ich komme um sechs oder um sieben. Es hängt davon ab, wann der Kurs endet.",
+          "correct": "Ich komme um sechs oder um sieben, je nachdem, wann der Kurs endet.",
+          "answers": [
+            "ich komme um sechs oder um sieben, je nachdem, wann der kurs endet"
+          ],
+          "explanations": {
+            "tr": "“Hangi saatte geleceğim kursun ne zaman bittiğine bağlı.” je nachdem, wann ile yan cümle olur: özne der Kurs, fiil endet sonda.",
+            "de": "Die Abhängigkeit wird mit „je nachdem, wann der Kurs endet“ ausgedrückt; „endet“ steht am Ende.",
+            "en": "The dependence becomes „je nachdem, wann der Kurs endet“, with „endet“ last."
+          },
+          "vocab": [
+            "Kurs"
+          ]
+        },
+        {
+          "word": "je nachdem – Hauptsatz danach",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Je nachdem, wie das Wetter ist, gehen wir wandern oder ins Kino.",
+            "Je nachdem, wie ist das Wetter, gehen wir wandern oder ins Kino.",
+            "Je nachdem, wie das Wetter ist, wir gehen wandern oder ins Kino."
+          ],
+          "correct": "Je nachdem, wie das Wetter ist, gehen wir wandern oder ins Kino.",
+          "explanations": {
+            "tr": "Yan cümlede fiil ist sonda. Yan cümle başta olduğu için ana cümlenin ilk yerini doldurur; virgülden sonra fiil gehen, sonra özne wir gelir.",
+            "de": "Im Nebensatz steht „ist“ am Ende; danach beginnt der Hauptsatz mit dem Verb „gehen“.",
+            "en": "„ist“ goes last in the subordinate clause; the main clause then starts with the verb „gehen“."
+          },
+          "vocab": [
+            "Wetter",
+            "Kino"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "je nachdem – Hauptsatz danach",
+          "sentence": "Ergänze den Hauptsatz: Je nachdem, ob wir Zeit haben, ___ (wir – am Wochenende – nach Berlin – fahren)",
+          "correct": "fahren wir am Wochenende nach Berlin",
+          "answers": [
+            "fahren wir am wochenende nach berlin"
+          ],
+          "explanations": {
+            "tr": "je nachdem cümlesi ilk yeri doldurur; virgülden sonra hemen çekimli fiil fahren, sonra özne wir. Zaman (am Wochenende) yerden (nach Berlin) önce gelir.",
+            "de": "Der Nebensatz ist Position 1 → „fahren“ direkt danach, dann „wir“; Zeit vor Ort: „am Wochenende nach Berlin“.",
+            "en": "The clause is position 1 → „fahren“ next, then „wir“; time before place: „am Wochenende nach Berlin“."
+          },
+          "vocab": [
+            "Zeit",
+            "Wochenende"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Fehlerkorrektur",
+          "sentence": "Korrigiere: Der Preis ändert sich, je nachdem, wann bucht man.",
+          "correct": "Der Preis ändert sich, je nachdem, wann man bucht.",
+          "answers": [
+            "der preis ändert sich, je nachdem, wann man bucht",
+            "der preis aendert sich, je nachdem, wann man bucht",
+            "der preis ändert sich, je nachdem wann man bucht",
+            "der preis aendert sich, je nachdem wann man bucht"
+          ],
+          "explanations": {
+            "tr": "wann ile kurulan bölüm yan cümledir: özne man, çekimli fiil bucht en sonda. je nachdem’den sonraki virgül isteğe bağlıdır.",
+            "de": "Im wann-Satz steht „bucht“ am Ende. Das Komma nach „je nachdem“ ist freigestellt.",
+            "en": "In the wann-clause „bucht“ goes last; the comma after „je nachdem“ is optional."
+          },
+          "vocab": [
+            "Preis"
+          ]
+        },
+        {
+          "word": "Je nachdem. – Kurzantwort",
+          "sentence": "„Kommst du morgen mit?“ – Welche Kurzantwort bedeutet „Das hängt davon ab“?",
+          "options": [
+            "Je nachdem.",
+            "Je desto.",
+            "Nachdem."
+          ],
+          "correct": "Je nachdem.",
+          "explanations": {
+            "tr": "„Je nachdem.“ tek başına da kullanılır: “Duruma göre, belli olmaz.” je … desto ve nachdem tek başına cevap olamaz.",
+            "de": "„Je nachdem.“ allein heißt „Das hängt davon ab.“ „Je desto“ und „Nachdem“ sind keine Antworten.",
+            "en": "„Je nachdem.“ on its own means „It depends.“ „Je desto“ and „Nachdem“ are not answers."
+          }
+        },
+        {
+          "word": "je nachdem oder je … desto?",
+          "sentence": "___ früher wir losfahren, desto weniger Stau gibt es.",
+          "options": [
+            "Je",
+            "Je nachdem",
+            "Nachdem"
+          ],
+          "correct": "Je",
+          "explanations": {
+            "tr": "İkinci bölümde desto + Komparativ var; bu yapı je + Komparativ ister: Je früher …, desto weniger … (“ne kadar erken …, o kadar az …”).",
+            "de": "Mit „desto“ im zweiten Teil bildet man „je + Komparativ …, desto …“.",
+            "en": "With „desto“ in the second part the structure is „je + comparative …, desto …“."
+          },
+          "vocab": [
+            "Stau"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "je nachdem, welch-",
+          "sentence": "Die Kosten sind unterschiedlich, je nachdem, ___ Tarif Sie wählen.",
+          "correct": "welchen",
+          "answers": [
+            "welchen"
+          ],
+          "explanations": {
+            "tr": "Soru kelimesi welch- burada wählen fiilinin nesnesidir: Sie wählen den Tarif → Akkusativ, eril → welchen.",
+            "de": "„Tarif“ ist Akkusativobjekt von „wählen“ (maskulin) → „welchen“.",
+            "en": "„Tarif“ is the accusative object of „wählen“ (masculine) → „welchen“."
+          },
+          "vocab": [
+            "Kosten",
+            "Tarif"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ohne-dass-anstatt-dass-14",
+      "title": {
+        "tr": "Übung 14 – ohne dass / anstatt dass",
+        "de": "Übung 14 – ohne dass / anstatt dass",
+        "en": "Übung 14 – ohne dass / anstatt dass"
+      },
+      "description": {
+        "tr": "ohne dass ve anstatt dass ile zu’lu mastar biçimleri: iki özne farklıysa dass, aynıysa zu.",
+        "de": "ohne dass / anstatt dass und ohne … zu / anstatt … zu: verschiedene Subjekte → dass, gleiches Subjekt → zu.",
+        "en": "ohne dass / anstatt dass and ohne … zu / anstatt … zu: different subjects → dass, same subject → zu."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel bis schwer",
+        "en": "Medium to hard"
+      },
+      "questions": [
+        {
+          "word": "ohne … zu",
+          "sentence": "Er verließ den Raum, ___ sich zu verabschieden.",
+          "options": [
+            "ohne",
+            "ohne dass",
+            "damit"
+          ],
+          "correct": "ohne",
+          "explanations": {
+            "tr": "Boşluktan sonra zu + mastar (sich zu verabschieden) geliyor. zu’lu mastar ohne ile kurulur: ohne … zu (“vedalaşmadan”). ohne dass bir özne ve çekimli fiil isterdi.",
+            "de": "Es folgt ein zu-Infinitiv → „ohne … zu“. „ohne dass“ bräuchte ein Subjekt und ein finites Verb.",
+            "en": "A zu-infinitive follows → „ohne … zu“. „ohne dass“ would need a subject and a finite verb."
+          },
+          "vocab": [
+            "Raum"
+          ]
+        },
+        {
+          "word": "ohne dass",
+          "sentence": "Sie hat das Auto repariert, ___ ihr jemand geholfen hat.",
+          "options": [
+            "ohne dass",
+            "ohne",
+            "anstatt"
+          ],
+          "correct": "ohne dass",
+          "explanations": {
+            "tr": "İkinci bölümde başka bir özne (jemand) ve çekimli fiil (hat) var. Özne farklı olduğu için ohne dass kullanılır: “kimse ona yardım etmeden”.",
+            "de": "Der zweite Teil hat ein eigenes Subjekt („jemand“) und ein finites Verb → „ohne dass“.",
+            "en": "The second part has its own subject („jemand“) and a finite verb → „ohne dass“."
+          },
+          "vocab": [
+            "Auto"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "anstatt … zu – Hauptsatz danach",
+          "sentence": "Anstatt zu lernen, ___ er den ganzen Abend Videos. (schauen – Präteritum)",
+          "correct": "schaute",
+          "answers": [
+            "schaute"
+          ],
+          "explanations": {
+            "tr": "Anstatt zu lernen bölümü ilk yeri doldurur; virgülden sonra hemen çekimli fiil gelir. Özne er, Präteritum → schaute.",
+            "de": "„Anstatt zu lernen“ ist Position 1 → das finite Verb „schaute“ folgt sofort.",
+            "en": "„Anstatt zu lernen“ is position 1 → the finite verb „schaute“ follows immediately."
+          },
+          "vocab": [
+            "Abend",
+            "Video"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "ohne … zu – Sätze verbinden",
+          "sentence": "Verbinde mit „ohne … zu“: Sie unterschrieb den Vertrag. Sie las ihn nicht.",
+          "correct": "Sie unterschrieb den Vertrag, ohne ihn zu lesen.",
+          "answers": [
+            "sie unterschrieb den vertrag, ohne ihn zu lesen"
+          ],
+          "explanations": {
+            "tr": "İki cümlenin öznesi aynı (sie), bu yüzden ohne … zu kullanılır. Olumsuzluk nicht ohne’un içinde zaten var; zamir ihn zu’dan önce gelir.",
+            "de": "Gleiches Subjekt („sie“) → „ohne ihn zu lesen“; die Verneinung steckt schon in „ohne“.",
+            "en": "Same subject („sie“) → „ohne ihn zu lesen“; the negation is already in „ohne“."
+          },
+          "vocab": [
+            "Vertrag"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "ohne dass – Sätze verbinden",
+          "sentence": "Verbinde mit „ohne dass“: Die Kinder spielten im Garten. Die Eltern merkten es nicht.",
+          "correct": "Die Kinder spielten im Garten, ohne dass die Eltern es merkten.",
+          "answers": [
+            "die kinder spielten im garten, ohne dass die eltern es merkten"
+          ],
+          "explanations": {
+            "tr": "Özneler farklı (die Kinder – die Eltern), bu yüzden ohne dass gerekir. Olumsuzluk nicht düşer, çünkü ohne zaten olumsuz anlam taşır; çekimli fiil merkten sonda.",
+            "de": "Verschiedene Subjekte → „ohne dass die Eltern es merkten“; „nicht“ entfällt, das Verb steht am Ende.",
+            "en": "Different subjects → „ohne dass die Eltern es merkten“; „nicht“ is dropped and the verb goes last."
+          },
+          "vocab": [
+            "Kind",
+            "Garten",
+            "Eltern"
+          ]
+        },
+        {
+          "word": "dass oder zu?",
+          "sentence": "Wann braucht man „ohne dass“ statt „ohne … zu“?",
+          "options": [
+            "wenn die beiden Teile verschiedene Subjekte haben",
+            "wenn das Verb trennbar ist",
+            "immer in der Vergangenheit"
+          ],
+          "correct": "wenn die beiden Teile verschiedene Subjekte haben",
+          "explanations": {
+            "tr": "Kural öznelere bağlıdır: özne aynıysa ohne … zu, farklıysa ohne dass. Fiilin ayrılabilir olması ya da zaman bu seçimi değiştirmez.",
+            "de": "Entscheidend sind die Subjekte: gleich → ohne … zu, verschieden → ohne dass.",
+            "en": "The subjects decide: same → ohne … zu, different → ohne dass."
+          }
+        },
+        {
+          "type": "text",
+          "word": "anstatt dass",
+          "sentence": "Anstatt dass der Chef selbst ___, schickt er immer seine Assistentin. (kommen)",
+          "correct": "kommt",
+          "answers": [
+            "kommt"
+          ],
+          "explanations": {
+            "tr": "anstatt dass yan cümle kurar; çekimli fiil sona gider. Özne der Chef tekil → kommt.",
+            "de": "Im anstatt-dass-Satz steht „kommt“ (Subjekt „der Chef“) am Ende.",
+            "en": "In the anstatt-dass clause „kommt“ (subject „der Chef“) goes last."
+          },
+          "vocab": [
+            "Chef",
+            "Assistentin"
+          ]
+        },
+        {
+          "word": "anstatt … zu – Wortstellung",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Anstatt mit dem Auto zu fahren, nehme ich das Fahrrad.",
+            "Anstatt mit dem Auto fahren zu, nehme ich das Fahrrad.",
+            "Anstatt zu mit dem Auto fahren, nehme ich das Fahrrad."
+          ],
+          "correct": "Anstatt mit dem Auto zu fahren, nehme ich das Fahrrad.",
+          "explanations": {
+            "tr": "zu her zaman mastarın hemen önüne gelir: zu fahren. Diğer öğeler (mit dem Auto) zu’dan önce durur.",
+            "de": "„zu“ steht direkt vor dem Infinitiv: „mit dem Auto zu fahren“.",
+            "en": "„zu“ goes directly before the infinitive: „mit dem Auto zu fahren“."
+          },
+          "vocab": [
+            "Auto",
+            "Fahrrad"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "ohne … zu – trennbares Verb",
+          "sentence": "Er ging nach Hause, ohne das Licht ___. (ausmachen)",
+          "correct": "auszumachen",
+          "answers": [
+            "auszumachen"
+          ],
+          "explanations": {
+            "tr": "Ayrılabilen fiillerde zu, önek ile kök arasına girer ve tek kelime yazılır: aus + zu + machen → auszumachen.",
+            "de": "Bei trennbaren Verben steht „zu“ zwischen Präfix und Stamm: „auszumachen“.",
+            "en": "With separable verbs „zu“ goes between prefix and stem: „auszumachen“."
+          },
+          "vocab": [
+            "Licht"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Fehlerkorrektur",
+          "sentence": "Korrigiere: Sie half mir, ohne dass sie zu fragen.",
+          "correct": "Sie half mir, ohne zu fragen.",
+          "answers": [
+            "sie half mir, ohne zu fragen"
+          ],
+          "explanations": {
+            "tr": "Özne aynı (sie), bu yüzden ohne … zu kullanılır; dass ve ikinci sie çıkar. ohne dass ile zu birlikte kullanılmaz.",
+            "de": "Gleiches Subjekt → „ohne zu fragen“; „dass“ und „zu“ schließen sich aus.",
+            "en": "Same subject → „ohne zu fragen“; „dass“ and „zu“ cannot be combined."
+          }
+        }
+      ]
+    },
+    {
+      "id": "welcher-konnektor-15",
+      "title": {
+        "tr": "Übung 15 – Welcher Konnektor passt?",
+        "de": "Übung 15 – Welcher Konnektor passt?",
+        "en": "Übung 15 – Welcher Konnektor passt?"
+      },
+      "description": {
+        "tr": "Anlama göre doğru bağlacı seç: karşıtlık, koşul, yöntem, taviz, sebep ve sonuç.",
+        "de": "Den passenden Konnektor nach der Bedeutung wählen: Gegensatz, Bedingung, Mittel, Einräumung, Grund und Folge.",
+        "en": "Choose the connector by meaning: contrast, condition, means, concession, reason and result."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel bis schwer",
+        "en": "Medium to hard"
+      },
+      "questions": [
+        {
+          "word": "Einräumung",
+          "sentence": "Er hat das Stipendium bekommen, ___ seine Noten nicht die besten waren.",
+          "options": [
+            "obgleich",
+            "zumal",
+            "sofern"
+          ],
+          "correct": "obgleich",
+          "explanations": {
+            "tr": "Notların en iyi olmaması burs almaya engel gibi görünür ama yine de aldı: taviz → obgleich. zumal bir sebep eklerdi (“hele ki notları kötüydü”), sofern bir koşul; ikisi de mantıksız.",
+            "de": "Die Noten sprechen eigentlich gegen das Stipendium – trotzdem bekam er es → konzessiv: „obgleich“.",
+            "en": "The grades actually speak against the scholarship, yet he got it → concessive: „obgleich“."
+          },
+          "vocab": [
+            "Stipendium",
+            "Note"
+          ]
+        },
+        {
+          "word": "Bedingung",
+          "sentence": "Du kannst die Wohnung besichtigen, ___ du vorher einen Termin vereinbarst.",
+          "options": [
+            "sofern",
+            "obgleich",
+            "wohingegen"
+          ],
+          "correct": "sofern",
+          "explanations": {
+            "tr": "Evi görmek bir şarta bağlı: önceden randevu almak. Koşul → sofern. obgleich ve wohingegen anlamı bozar.",
+            "de": "Die Besichtigung setzt einen Termin voraus → Bedingung: „sofern“.",
+            "en": "The viewing requires an appointment → condition: „sofern“."
+          },
+          "vocab": [
+            "Wohnung",
+            "Termin"
+          ]
+        },
+        {
+          "word": "Gegensatz",
+          "sentence": "Mein Bruder ist sehr sportlich, ___ ich mich kaum bewege.",
+          "options": [
+            "wohingegen",
+            "sodass",
+            "indem"
+          ],
+          "correct": "wohingegen",
+          "explanations": {
+            "tr": "İki kişi karşılaştırılıyor: kardeşim sportif, ben ise neredeyse hiç hareket etmiyorum. Karşıtlık → wohingegen.",
+            "de": "Zwei Personen werden gegenübergestellt → adversativ: „wohingegen“.",
+            "en": "Two people are contrasted → adversative: „wohingegen“."
+          },
+          "vocab": [
+            "Bruder"
+          ]
+        },
+        {
+          "word": "Mittel",
+          "sentence": "Sie hat ihr Englisch verbessert, ___ sie ein Jahr in London gelebt hat.",
+          "options": [
+            "indem",
+            "sofern",
+            "wohingegen"
+          ],
+          "correct": "indem",
+          "explanations": {
+            "tr": "Londra’da yaşamak İngilizcesini geliştirmenin yoludur: “bir yıl Londra’da yaşayarak”. Yöntem → indem.",
+            "de": "Das Leben in London ist das Mittel der Verbesserung → „indem“.",
+            "en": "Living in London is the means of improving → „indem“."
+          },
+          "vocab": [
+            "Englisch",
+            "Jahr"
+          ]
+        },
+        {
+          "word": "zusätzlicher Grund",
+          "sentence": "Wir verschieben das Treffen, ___ der Raum noch nicht frei ist.",
+          "options": [
+            "zumal",
+            "obgleich",
+            "indem"
+          ],
+          "correct": "zumal",
+          "explanations": {
+            "tr": "Odanın boş olmaması toplantıyı ertelemenin sebebidir → zumal (“hele ki, zaten”). obgleich karşıtlık, indem yöntem bildirirdi.",
+            "de": "Der belegte Raum ist ein Grund für die Verschiebung → „zumal“.",
+            "en": "The occupied room is a reason for postponing → „zumal“."
+          },
+          "vocab": [
+            "Treffen",
+            "Raum"
+          ]
+        },
+        {
+          "word": "Folge",
+          "sentence": "Der Akku war leer, ___ ich nicht telefonieren konnte.",
+          "options": [
+            "sodass",
+            "zumal",
+            "sofern"
+          ],
+          "correct": "sodass",
+          "explanations": {
+            "tr": "Telefon edememek boş pilin sonucudur → sodass. zumal sebep-sonucu ters çevirirdi, sofern bir koşul kurardı.",
+            "de": "Nicht telefonieren zu können ist die Folge des leeren Akkus → „sodass“.",
+            "en": "Not being able to call is the result of the empty battery → „sodass“."
+          },
+          "vocab": [
+            "Akku"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Bedingung, formell",
+          "sentence": "Ich nehme an dem Kurs teil, ___ mein Arbeitgeber die Kosten übernimmt. (Bedingung, formell für „falls“, ein Wort)",
+          "correct": "sofern",
+          "answers": [
+            "sofern"
+          ],
+          "explanations": {
+            "tr": "Kursa katılmam bir şarta bağlı: işverenim masrafları karşılarsa. falls’un resmî karşılığı sofern’dir.",
+            "de": "Die Teilnahme hängt von der Kostenübernahme ab: formell für „falls“ → „sofern“.",
+            "en": "Taking part depends on the employer paying; the formal word for „falls“ is „sofern“."
+          },
+          "vocab": [
+            "Kurs",
+            "Arbeitgeber",
+            "Kosten"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Gegensatz, Adverb",
+          "sentence": "Die Stadt wächst. Die Dörfer ___ verlieren Einwohner. (Gegensatz, ein Wort)",
+          "correct": "hingegen",
+          "answers": [
+            "hingegen",
+            "dagegen"
+          ],
+          "explanations": {
+            "tr": "Şehir ile köyler karşılaştırılıyor. Özneden sonra duran karşıtlık zarfı hingegen ya da dagegen’dir; ikisi de doğrudur. Fiil verlieren yine ikinci yerde kalır.",
+            "de": "Nach dem Subjekt passt ein adversatives Adverb: „hingegen“ oder „dagegen“.",
+            "en": "After the subject an adversative adverb fits: „hingegen“ or „dagegen“."
+          },
+          "vocab": [
+            "Stadt",
+            "Dorf",
+            "Einwohner"
+          ]
+        },
+        {
+          "word": "Mittel oder Folge?",
+          "sentence": "Er spart Geld, ___ er mit dem Rad zur Arbeit fährt.",
+          "options": [
+            "indem",
+            "sodass",
+            "obgleich"
+          ],
+          "correct": "indem",
+          "explanations": {
+            "tr": "Bisikletle gitmek para biriktirmenin yoludur → indem. sodass sebep-sonucu ters çevirirdi (“para biriktiriyor, bu yüzden bisikletle gidiyor”).",
+            "de": "Radfahren ist das Mittel zum Sparen → „indem“. „sodass“ würde Ursache und Folge vertauschen.",
+            "en": "Cycling is the means of saving → „indem“. „sodass“ would reverse cause and effect."
+          },
+          "vocab": [
+            "Geld",
+            "Rad",
+            "Arbeit"
+          ]
+        },
+        {
+          "word": "Wissensstand",
+          "sentence": "___ ich weiß, hat das Geschäft montags geschlossen.",
+          "options": [
+            "Soweit",
+            "Sodass",
+            "Zumal"
+          ],
+          "correct": "Soweit",
+          "explanations": {
+            "tr": "Bilginin sınırı belirtiliyor: “bildiğim kadarıyla” → Soweit ich weiß. sodass ve zumal cümleye bu anlamda başlayamaz.",
+            "de": "„Soweit ich weiß“ begrenzt die Aussage auf den eigenen Wissensstand.",
+            "en": "„Soweit ich weiß“ limits the statement to one’s own knowledge."
+          },
+          "vocab": [
+            "Geschäft"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "saetze-verbinden-16",
+      "title": {
+        "tr": "Übung 16 – Sätze verbinden",
+        "de": "Übung 16 – Sätze verbinden",
+        "en": "Übung 16 – Sätze verbinden"
+      },
+      "description": {
+        "tr": "Verilen bağlaçla iki cümleyi birleştir: bağlacın türüne göre fiilin yerini doğru yaz.",
+        "de": "Zwei Sätze mit dem angegebenen Konnektor verbinden und das Verb je nach Konnektortyp richtig stellen.",
+        "en": "Join two sentences with the given connector and place the verb according to its type."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "questions": [
+        {
+          "type": "text",
+          "word": "wohingegen",
+          "sentence": "Verbinde mit „wohingegen“: In Spanien isst man spät zu Abend. In Deutschland isst man meist gegen 18 Uhr.",
+          "correct": "In Spanien isst man spät zu Abend, wohingegen man in Deutschland meist gegen 18 Uhr isst.",
+          "answers": [
+            "in spanien isst man spät zu abend, wohingegen man in deutschland meist gegen 18 uhr isst",
+            "in spanien isst man spaet zu abend, wohingegen man in deutschland meist gegen 18 uhr isst"
+          ],
+          "explanations": {
+            "tr": "İkinci cümle karşıtlık bildiren yan cümle olur: wohingegen, özne man, yer ve zaman ifadeleri, çekimli fiil isst en sonda.",
+            "de": "Der zweite Satz wird zum wohingegen-Satz; „isst“ steht am Ende.",
+            "en": "The second sentence becomes a wohingegen-clause with „isst“ at the end."
+          },
+          "vocab": [
+            "Uhr"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "sofern",
+          "sentence": "Verbinde mit „Sofern“ am Satzanfang: Die Unterlagen sind vollständig. Wir bearbeiten Ihren Antrag sofort.",
+          "correct": "Sofern die Unterlagen vollständig sind, bearbeiten wir Ihren Antrag sofort.",
+          "answers": [
+            "sofern die unterlagen vollständig sind, bearbeiten wir ihren antrag sofort",
+            "sofern die unterlagen vollstaendig sind, bearbeiten wir ihren antrag sofort"
+          ],
+          "explanations": {
+            "tr": "Koşul cümlesi başta: Sofern … sind (fiil sonda). Ardından ana cümle fiille başlar: bearbeiten wir …",
+            "de": "Der sofern-Satz steht vorn (Verb am Ende), danach folgt sofort „bearbeiten wir“.",
+            "en": "The sofern-clause comes first (verb last); then „bearbeiten wir“ follows immediately."
+          },
+          "vocab": [
+            "Unterlagen",
+            "Antrag"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "indem",
+          "sentence": "Verbinde mit „indem“: Man kann Wasser sparen. Man duscht kürzer.",
+          "correct": "Man kann Wasser sparen, indem man kürzer duscht.",
+          "answers": [
+            "man kann wasser sparen, indem man kürzer duscht",
+            "man kann wasser sparen, indem man kuerzer duscht"
+          ],
+          "explanations": {
+            "tr": "Kısa duş almak su tasarrufunun yoludur → indem. Yan cümlede özne man, kürzer ve fiil duscht en sonda.",
+            "de": "Kürzer duschen ist das Mittel → „indem man kürzer duscht“.",
+            "en": "Showering for less time is the means → „indem man kürzer duscht“."
+          },
+          "vocab": [
+            "Wasser"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "obgleich",
+          "sentence": "Verbinde mit „Obgleich“ am Satzanfang: Es war schon spät. Die Gäste blieben noch lange.",
+          "correct": "Obgleich es schon spät war, blieben die Gäste noch lange.",
+          "answers": [
+            "obgleich es schon spät war, blieben die gäste noch lange",
+            "obgleich es schon spaet war, blieben die gaeste noch lange"
+          ],
+          "explanations": {
+            "tr": "Obgleich cümlesi başta, fiil war sonda. Sonra ana cümle fiille başlar: blieben die Gäste.",
+            "de": "Nebensatz vorn mit „war“ am Ende, dann Hauptsatz mit „blieben“ auf Position 2.",
+            "en": "Clause first with „war“ at the end, then the main clause starting with „blieben“."
+          },
+          "vocab": [
+            "Gast"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "zumal",
+          "sentence": "Verbinde mit „zumal“: Ich nehme den Bus. Es regnet heute.",
+          "correct": "Ich nehme den Bus, zumal es heute regnet.",
+          "answers": [
+            "ich nehme den bus, zumal es heute regnet"
+          ],
+          "explanations": {
+            "tr": "Yağmur otobüse binmenin ek sebebidir → zumal; yan cümlede fiil regnet sonda.",
+            "de": "Der Regen ist ein zusätzlicher Grund: „zumal es heute regnet“.",
+            "en": "The rain is an extra reason: „zumal es heute regnet“."
+          },
+          "vocab": [
+            "Bus"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "es sei denn",
+          "sentence": "Verbinde mit „es sei denn“ ohne „dass“: Das Paket kommt morgen an. Die Post streikt.",
+          "correct": "Das Paket kommt morgen an, es sei denn, die Post streikt.",
+          "answers": [
+            "das paket kommt morgen an, es sei denn, die post streikt"
+          ],
+          "explanations": {
+            "tr": "dass olmadığı için es sei denn’den sonra ana cümle sırası gelir: die Post streikt. “Postane grev yapmadıkça.”",
+            "de": "Ohne „dass“ folgt Hauptsatzstellung: „es sei denn, die Post streikt“.",
+            "en": "Without „dass“ main-clause order follows: „es sei denn, die Post streikt“."
+          },
+          "vocab": [
+            "Paket",
+            "Post"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "sodass",
+          "sentence": "Verbinde mit „sodass“: Der Kühlschrank war leer. Wir mussten einkaufen gehen.",
+          "correct": "Der Kühlschrank war leer, sodass wir einkaufen gehen mussten.",
+          "answers": [
+            "der kühlschrank war leer, sodass wir einkaufen gehen mussten",
+            "der kuehlschrank war leer, sodass wir einkaufen gehen mussten",
+            "der kühlschrank war leer, so dass wir einkaufen gehen mussten",
+            "der kuehlschrank war leer, so dass wir einkaufen gehen mussten"
+          ],
+          "explanations": {
+            "tr": "Alışverişe gitmek boş buzdolabının sonucudur → sodass. Modal fiil mussten en sonda, einkaufen gehen ondan önce.",
+            "de": "Folge → „sodass“; „mussten“ steht am Ende nach „einkaufen gehen“.",
+            "en": "Result → „sodass“; „mussten“ goes last after „einkaufen gehen“."
+          },
+          "vocab": [
+            "Kühlschrank"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "ohne … zu",
+          "sentence": "Verbinde mit „ohne … zu“: Er kaufte das Handy. Er verglich die Preise nicht.",
+          "correct": "Er kaufte das Handy, ohne die Preise zu vergleichen.",
+          "answers": [
+            "er kaufte das handy, ohne die preise zu vergleichen"
+          ],
+          "explanations": {
+            "tr": "Özne aynı (er) → ohne … zu. nicht düşer; nesne die Preise zu’dan önce, mastar vergleichen en sonda.",
+            "de": "Gleiches Subjekt → „ohne die Preise zu vergleichen“, ohne „nicht“.",
+            "en": "Same subject → „ohne die Preise zu vergleichen“, without „nicht“."
+          },
+          "vocab": [
+            "Handy",
+            "Preis"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "insofern …, als",
+          "sentence": "Verbinde mit „insofern …, als“: Das Seminar war nützlich. Wir haben viele praktische Beispiele gesehen.",
+          "correct": "Das Seminar war insofern nützlich, als wir viele praktische Beispiele gesehen haben.",
+          "answers": [
+            "das seminar war insofern nützlich, als wir viele praktische beispiele gesehen haben",
+            "das seminar war insofern nuetzlich, als wir viele praktische beispiele gesehen haben",
+            "das seminar war nützlich, insofern als wir viele praktische beispiele gesehen haben",
+            "das seminar war nuetzlich, insofern als wir viele praktische beispiele gesehen haben"
+          ],
+          "explanations": {
+            "tr": "insofern ana cümlede sıfattan önce, als cümlesinde çekimli haben en sonda. “Şu bakımdan yararlıydı ki …”",
+            "de": "„insofern“ vor „nützlich“; im als-Satz steht „haben“ am Ende.",
+            "en": "„insofern“ before „nützlich“; „haben“ goes last in the als-clause."
+          },
+          "vocab": [
+            "Seminar",
+            "Beispiel"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "demgegenüber",
+          "sentence": "Verbinde: Der zweite Satz beginnt mit „Demgegenüber“. Früher las man die Zeitung auf Papier. Heute liest man sie meist online.",
+          "correct": "Früher las man die Zeitung auf Papier. Demgegenüber liest man sie heute meist online.",
+          "answers": [
+            "früher las man die zeitung auf papier. demgegenüber liest man sie heute meist online",
+            "frueher las man die zeitung auf papier. demgegenueber liest man sie heute meist online",
+            "demgegenüber liest man sie heute meist online",
+            "demgegenueber liest man sie heute meist online"
+          ],
+          "explanations": {
+            "tr": "Demgegenüber zarftır: ilk yerde durur, fiil liest hemen arkasından gelir. heute artık başta olmadığı için fiilden sonra yer alır.",
+            "de": "„Demgegenüber“ auf Position 1 → „liest man sie heute meist online“.",
+            "en": "„Demgegenüber“ in position 1 → „liest man sie heute meist online“."
+          },
+          "vocab": [
+            "Zeitung",
+            "Papier"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "satzbau-17",
+      "title": {
+        "tr": "Übung 17 – Satzbau",
+        "de": "Übung 17 – Satzbau",
+        "en": "Übung 17 – Satzbau"
+      },
+      "description": {
+        "tr": "Kelimeleri doğru sıraya koy: yan cümlede fiil sonda, zarftan sonra fiil ikinci yerde.",
+        "de": "Satzglieder ordnen: Verb am Ende im Nebensatz, Verb auf Position 2 nach Adverbien.",
+        "en": "Put the words in order: verb last in subordinate clauses, verb second after adverbs."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel bis schwer",
+        "en": "Medium to hard"
+      },
+      "questions": [
+        {
+          "type": "text",
+          "word": "sofern",
+          "sentence": "Ordne: Die Teilnahme ist kostenlos, ___ (anmelden / sofern / sich / Sie / bis Montag)",
+          "correct": "sofern Sie sich bis Montag anmelden",
+          "answers": [
+            "sofern sie sich bis montag anmelden"
+          ],
+          "explanations": {
+            "tr": "sofern’den sonra özne Sie, dönüşlü zamir sich, zaman ifadesi bis Montag ve en sonda çekimli fiil anmelden (ayrılabilen fiil yan cümlede birleşik).",
+            "de": "Nach „sofern“: Subjekt, Reflexivpronomen, Zeitangabe, am Ende das zusammengeschriebene „anmelden“.",
+            "en": "After „sofern“: subject, reflexive pronoun, time phrase, and finally the joined verb „anmelden“."
+          },
+          "vocab": [
+            "Teilnahme",
+            "Montag"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "obgleich",
+          "sentence": "Ordne: Er wurde befördert, ___ (arbeitet / obgleich / im Team / er / erst seit einem Jahr)",
+          "correct": "obgleich er erst seit einem Jahr im Team arbeitet",
+          "answers": [
+            "obgleich er erst seit einem jahr im team arbeitet",
+            "obgleich er im team erst seit einem jahr arbeitet"
+          ],
+          "explanations": {
+            "tr": "obgleich, özne er, ardından zaman ve yer ifadeleri, çekimli fiil arbeitet en sonda. Zaman ifadesinin yer ifadesinden önce gelmesi daha doğaldır; iki sıra da kabul edilir.",
+            "de": "„obgleich er … arbeitet“ mit dem Verb am Ende; Zeit vor Ort ist üblich, beide Reihenfolgen sind möglich.",
+            "en": "„obgleich er … arbeitet“ with the verb last; time before place is usual, both orders are accepted."
+          },
+          "vocab": [
+            "Team",
+            "Jahr"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "dagegen",
+          "sentence": "Im Winter ist es hier mild. Beginne mit „Dagegen“ und ordne: (sehr heiß / es / im Sommer / ist)",
+          "correct": "Dagegen ist es im Sommer sehr heiß.",
+          "answers": [
+            "dagegen ist es im sommer sehr heiß",
+            "dagegen ist es im sommer sehr heiss"
+          ],
+          "explanations": {
+            "tr": "Dagegen ilk yerde → fiil ist ikinci yerde, ardından özne es, zaman im Sommer ve sıfat sehr heiß.",
+            "de": "„Dagegen“ auf Position 1 → „ist es im Sommer sehr heiß“.",
+            "en": "„Dagegen“ in position 1 → „ist es im Sommer sehr heiß“."
+          },
+          "vocab": [
+            "Winter",
+            "Sommer"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "zumal",
+          "sentence": "Ordne: Wir sollten sie einstellen, ___ (hat / gute Referenzen / zumal / sie)",
+          "correct": "zumal sie gute Referenzen hat",
+          "answers": [
+            "zumal sie gute referenzen hat"
+          ],
+          "explanations": {
+            "tr": "zumal yan cümle bağlacı: özne sie, nesne gute Referenzen, çekimli fiil hat en sonda.",
+            "de": "„zumal sie gute Referenzen hat“ – Verb am Ende.",
+            "en": "„zumal sie gute Referenzen hat“ – verb at the end."
+          },
+          "vocab": [
+            "Referenz"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "indem",
+          "sentence": "Ordne: Wir sparen Zeit, ___ (online / ausfüllen / indem / die Formulare / wir)",
+          "correct": "indem wir die Formulare online ausfüllen",
+          "answers": [
+            "indem wir die formulare online ausfüllen",
+            "indem wir die formulare online ausfuellen",
+            "indem wir online die formulare ausfüllen",
+            "indem wir online die formulare ausfuellen"
+          ],
+          "explanations": {
+            "tr": "indem, özne wir, nesne ve online, en sonda ayrılabilen fiil ausfüllen birleşik hâlde. Nesne ile online’ın sırası değişebilir.",
+            "de": "„indem wir … ausfüllen“: das trennbare Verb steht zusammen am Ende.",
+            "en": "„indem wir … ausfüllen“: the separable verb stays joined at the end."
+          },
+          "vocab": [
+            "Zeit",
+            "Formular"
+          ]
+        },
+        {
+          "word": "es sei denn – Stellung",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Ich schaffe das nicht, es sei denn, du hilfst mir.",
+            "Es sei denn, du hilfst mir, schaffe ich das nicht.",
+            "Ich schaffe das nicht, es sei denn, hilfst du mir."
+          ],
+          "correct": "Ich schaffe das nicht, es sei denn, du hilfst mir.",
+          "explanations": {
+            "tr": "es sei denn bölümü her zaman ana cümleden sonra gelir, başa alınamaz. dass olmadan arkasından normal sıra gelir: du hilfst mir.",
+            "de": "Der es-sei-denn-Teil steht immer nach dem Hauptsatz; ohne „dass“ folgt „du hilfst mir“.",
+            "en": "The es-sei-denn part always follows the main clause; without „dass“ it is „du hilfst mir“."
+          }
+        },
+        {
+          "type": "text",
+          "word": "insofern als",
+          "sentence": "Ordne: Das Projekt war erfolgreich, ___ (haben / alle Termine / insofern als / eingehalten / wir)",
+          "correct": "insofern als wir alle Termine eingehalten haben",
+          "answers": [
+            "insofern als wir alle termine eingehalten haben"
+          ],
+          "explanations": {
+            "tr": "insofern als birlikte virgülden sonra gelebilir. Yan cümlede özne wir, nesne alle Termine, Partizip II eingehalten ve çekimli haben en sonda.",
+            "de": "„insofern als wir alle Termine eingehalten haben“ – „haben“ am Ende.",
+            "en": "„insofern als wir alle Termine eingehalten haben“ – „haben“ at the end."
+          },
+          "vocab": [
+            "Projekt",
+            "Termin"
+          ]
+        },
+        {
+          "word": "je nachdem – Hauptsatz",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Je nachdem, ob es regnet, nehmen wir den Schirm mit.",
+            "Je nachdem, ob regnet es, nehmen wir den Schirm mit.",
+            "Je nachdem, ob es regnet, wir nehmen den Schirm mit."
+          ],
+          "correct": "Je nachdem, ob es regnet, nehmen wir den Schirm mit.",
+          "explanations": {
+            "tr": "ob cümlesinde fiil regnet sonda; ardından ana cümle fiille başlar (nehmen wir …), ayrılabilen önek mit en sonda.",
+            "de": "„ob es regnet“ mit Verb am Ende; danach beginnt der Hauptsatz mit „nehmen“.",
+            "en": "„ob es regnet“ with the verb last; the main clause then starts with „nehmen“."
+          },
+          "vocab": [
+            "Schirm"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "folglich",
+          "sentence": "Der Unterricht beginnt jetzt um 7 Uhr. Beginne mit „Folglich“ und ordne: (aufstehen / wir / früher / müssen)",
+          "correct": "Folglich müssen wir früher aufstehen.",
+          "answers": [
+            "folglich müssen wir früher aufstehen",
+            "folglich muessen wir frueher aufstehen"
+          ],
+          "explanations": {
+            "tr": "Folglich ilk yerde → modal fiil müssen ikinci yerde, özne wir, früher ve mastar aufstehen en sonda.",
+            "de": "„Folglich müssen wir früher aufstehen“ – Modalverb auf Position 2, Infinitiv am Ende.",
+            "en": "„Folglich müssen wir früher aufstehen“ – modal second, infinitive last."
+          },
+          "vocab": [
+            "Unterricht",
+            "Uhr"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "ohne … zu",
+          "sentence": "Ordne: Sie verließ die Party, ___ (verabschieden / zu / ohne / sich)",
+          "correct": "ohne sich zu verabschieden",
+          "answers": [
+            "ohne sich zu verabschieden"
+          ],
+          "explanations": {
+            "tr": "ohne başta, dönüşlü zamir sich zu’dan önce, zu doğrudan mastarın önünde: ohne sich zu verabschieden.",
+            "de": "„ohne sich zu verabschieden“ – „zu“ direkt vor dem Infinitiv.",
+            "en": "„ohne sich zu verabschieden“ – „zu“ directly before the infinitive."
+          },
+          "vocab": [
+            "Party"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fehlerkorrektur-18",
+      "title": {
+        "tr": "Übung 18 – Fehlerkorrektur",
+        "de": "Übung 18 – Fehlerkorrektur",
+        "en": "Übung 18 – Fehlerkorrektur"
+      },
+      "description": {
+        "tr": "Her cümlede bir fiil sırası hatası var. Bağlacın türünü belirle ve cümleyi düzelt.",
+        "de": "In jedem Satz steckt ein Fehler in der Verbstellung. Bestimme den Konnektortyp und korrigiere.",
+        "en": "Each sentence has a verb-position error. Identify the connector type and correct it."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "questions": [
+        {
+          "type": "text",
+          "word": "vorausgesetzt, dass",
+          "sentence": "Korrigiere: Wir fahren morgen los, vorausgesetzt, dass das Auto ist repariert.",
+          "correct": "Wir fahren morgen los, vorausgesetzt, dass das Auto repariert ist.",
+          "answers": [
+            "wir fahren morgen los, vorausgesetzt, dass das auto repariert ist"
+          ],
+          "explanations": {
+            "tr": "dass yan cümlesinde çekimli ist sona, repariert’den sonraya gider.",
+            "de": "Im dass-Satz steht „ist“ am Ende: „dass das Auto repariert ist“.",
+            "en": "In the dass-clause „ist“ goes last: „dass das Auto repariert ist“."
+          },
+          "vocab": [
+            "Auto"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "demgegenüber",
+          "sentence": "Korrigiere: Demgegenüber die Preise sind im Ausland niedriger.",
+          "correct": "Demgegenüber sind die Preise im Ausland niedriger.",
+          "answers": [
+            "demgegenüber sind die preise im ausland niedriger",
+            "demgegenueber sind die preise im ausland niedriger"
+          ],
+          "explanations": {
+            "tr": "Demgegenüber zarftır ve ilk yeri doldurur; fiil sind hemen arkasından gelmeli.",
+            "de": "„Demgegenüber“ ist Position 1 → „sind“ direkt danach.",
+            "en": "„Demgegenüber“ is position 1 → „sind“ right after it."
+          },
+          "vocab": [
+            "Preis",
+            "Ausland"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "indem",
+          "sentence": "Korrigiere: Er hat das Problem gelöst, indem er hat einen Experten gefragt.",
+          "correct": "Er hat das Problem gelöst, indem er einen Experten gefragt hat.",
+          "answers": [
+            "er hat das problem gelöst, indem er einen experten gefragt hat",
+            "er hat das problem geloest, indem er einen experten gefragt hat"
+          ],
+          "explanations": {
+            "tr": "indem yan cümlesinde çekimli hat en sona, gefragt’tan sonraya gider.",
+            "de": "Im indem-Satz steht „hat“ am Ende.",
+            "en": "In the indem-clause „hat“ goes to the end."
+          },
+          "vocab": [
+            "Problem",
+            "Experte"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "zumal",
+          "sentence": "Korrigiere: Ich gehe nicht zur Party, zumal ich muss morgen früh arbeiten.",
+          "correct": "Ich gehe nicht zur Party, zumal ich morgen früh arbeiten muss.",
+          "answers": [
+            "ich gehe nicht zur party, zumal ich morgen früh arbeiten muss",
+            "ich gehe nicht zur party, zumal ich morgen frueh arbeiten muss"
+          ],
+          "explanations": {
+            "tr": "zumal yan cümlesinde modal fiil muss en sona, mastar arbeiten ondan önce gelir.",
+            "de": "Im zumal-Satz steht „muss“ am Ende, „arbeiten“ davor.",
+            "en": "In the zumal-clause „muss“ goes last, with „arbeiten“ before it."
+          },
+          "vocab": [
+            "Party"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "ohne … zu",
+          "sentence": "Korrigiere: Sie verließ das Haus, ohne dass zu frühstücken.",
+          "correct": "Sie verließ das Haus, ohne zu frühstücken.",
+          "answers": [
+            "sie verließ das haus, ohne zu frühstücken",
+            "sie verliess das haus, ohne zu fruehstuecken"
+          ],
+          "explanations": {
+            "tr": "Özne aynı (sie) ve arkasında zu + mastar var; bu yüzden dass çıkar: ohne zu frühstücken.",
+            "de": "Gleiches Subjekt und zu-Infinitiv → „ohne zu frühstücken“, ohne „dass“.",
+            "en": "Same subject and zu-infinitive → „ohne zu frühstücken“, no „dass“."
+          },
+          "vocab": [
+            "Haus"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "sodass",
+          "sentence": "Korrigiere: Der Laden war geschlossen, sodass wir mussten woanders einkaufen.",
+          "correct": "Der Laden war geschlossen, sodass wir woanders einkaufen mussten.",
+          "answers": [
+            "der laden war geschlossen, sodass wir woanders einkaufen mussten"
+          ],
+          "explanations": {
+            "tr": "sodass yan cümlesinde modal fiil mussten en sona gider.",
+            "de": "Im sodass-Satz steht „mussten“ am Ende.",
+            "en": "In the sodass-clause „mussten“ goes to the end."
+          },
+          "vocab": [
+            "Laden"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "zwar … aber",
+          "sentence": "Korrigiere: Zwar ist das Handy teuer, aber ist es sehr gut.",
+          "correct": "Zwar ist das Handy teuer, aber es ist sehr gut.",
+          "answers": [
+            "zwar ist das handy teuer, aber es ist sehr gut"
+          ],
+          "explanations": {
+            "tr": "aber sıfır konumdadır (Position 0); arkasından normal sıra gelir: önce özne es, sonra fiil ist.",
+            "de": "„aber“ steht auf Position 0 → „aber es ist sehr gut“.",
+            "en": "„aber“ takes position 0 → „aber es ist sehr gut“."
+          },
+          "vocab": [
+            "Handy"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "nichtsdestotrotz",
+          "sentence": "Korrigiere: Nichtsdestotrotz wir haben das Spiel gewonnen.",
+          "correct": "Nichtsdestotrotz haben wir das Spiel gewonnen.",
+          "answers": [
+            "nichtsdestotrotz haben wir das spiel gewonnen"
+          ],
+          "explanations": {
+            "tr": "Nichtsdestotrotz zarftır, ilk yeri doldurur; çekimli haben hemen arkasından, özne wir ondan sonra.",
+            "de": "„Nichtsdestotrotz“ ist Position 1 → „haben wir“.",
+            "en": "„Nichtsdestotrotz“ is position 1 → „haben wir“."
+          },
+          "vocab": [
+            "Spiel"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "je nachdem",
+          "sentence": "Korrigiere: Je nachdem, wie das Wetter ist, wir grillen im Park.",
+          "correct": "Je nachdem, wie das Wetter ist, grillen wir im Park.",
+          "answers": [
+            "je nachdem, wie das wetter ist, grillen wir im park"
+          ],
+          "explanations": {
+            "tr": "Başta duran yan cümle ana cümlenin ilk yeridir; bu yüzden virgülden sonra fiil grillen, ardından özne wir gelir.",
+            "de": "Der Nebensatz ist Position 1 → „grillen wir im Park“.",
+            "en": "The clause is position 1 → „grillen wir im Park“."
+          },
+          "vocab": [
+            "Wetter",
+            "Park"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "obgleich",
+          "sentence": "Korrigiere: Obgleich er war müde, fuhr er weiter.",
+          "correct": "Obgleich er müde war, fuhr er weiter.",
+          "answers": [
+            "obgleich er müde war, fuhr er weiter",
+            "obgleich er muede war, fuhr er weiter"
+          ],
+          "explanations": {
+            "tr": "obgleich yan cümlesinde fiil war sona, müde’den sonraya gider. Ana cümle doğru: fuhr er weiter.",
+            "de": "Im obgleich-Satz gehört „war“ ans Ende.",
+            "en": "In the obgleich-clause „war“ belongs at the end."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sachtexte-19",
+      "title": {
+        "tr": "Übung 19 – Konnektoren in Sachtexten",
+        "de": "Übung 19 – Konnektoren in Sachtexten",
+        "en": "Übung 19 – Konnektoren in Sachtexten"
+      },
+      "description": {
+        "tr": "Rapor, haber ve araştırma metinlerinden cümlelerle B2 bağlaçlarını karışık çalış.",
+        "de": "B2-Konnektoren gemischt in Sätzen aus Berichten, Nachrichten und Studien.",
+        "en": "Mixed B2 connectors in sentences from reports, news and studies."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "questions": [
+        {
+          "word": "hingegen",
+          "sentence": "Laut der Studie schlafen viele Jugendliche zu wenig. Erwachsene ___ schlafen im Durchschnitt sieben Stunden.",
+          "options": [
+            "hingegen",
+            "obgleich",
+            "sofern"
+          ],
+          "correct": "hingegen",
+          "explanations": {
+            "tr": "Gençler ile yetişkinler karşılaştırılıyor; boşluk özneden sonra ve fiil schlafen ikinci yerde. Buraya karşıtlık zarfı hingegen uyar. obgleich ve sofern yan cümle kurardı.",
+            "de": "Gegenüberstellung, Lücke nach dem Subjekt, Verb auf Position 2 → Adverb „hingegen“.",
+            "en": "A contrast, gap after the subject, verb second → the adverb „hingegen“."
+          },
+          "vocab": [
+            "Studie",
+            "Jugendliche",
+            "Erwachsene",
+            "Durchschnitt",
+            "Stunde"
+          ]
+        },
+        {
+          "word": "sodass",
+          "sentence": "Die Mieten sind stark gestiegen, ___ viele Familien an den Stadtrand ziehen.",
+          "options": [
+            "sodass",
+            "sofern",
+            "wohingegen"
+          ],
+          "correct": "sodass",
+          "explanations": {
+            "tr": "Ailelerin şehir dışına taşınması kira artışının sonucudur → sodass.",
+            "de": "Der Umzug an den Stadtrand ist die Folge der Mietsteigerung → „sodass“.",
+            "en": "Moving to the outskirts is the result of the rising rents → „sodass“."
+          },
+          "vocab": [
+            "Miete",
+            "Familie",
+            "Stadtrand"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "sofern",
+          "sentence": "Die Förderung wird nur gewährt, ___ der Antrag bis zum 30. Juni eingeht. (Bedingung, formell, ein Wort)",
+          "correct": "sofern",
+          "answers": [
+            "sofern"
+          ],
+          "explanations": {
+            "tr": "Destek bir şarta bağlı: başvurunun 30 Haziran’a kadar gelmesi. Resmî koşul bağlacı sofern; fiil eingeht sonda.",
+            "de": "Die Förderung setzt den rechtzeitigen Antrag voraus → „sofern“.",
+            "en": "The funding requires the application in time → „sofern“."
+          },
+          "vocab": [
+            "Förderung",
+            "Antrag",
+            "Juni"
+          ]
+        },
+        {
+          "word": "demgegenüber",
+          "sentence": "Der Umsatz stieg im ersten Halbjahr um 5 %. ___ sank er im zweiten Halbjahr um 2 %.",
+          "options": [
+            "Demgegenüber",
+            "Sodass",
+            "Zumal"
+          ],
+          "correct": "Demgegenüber",
+          "explanations": {
+            "tr": "İki dönemin verileri karşılaştırılıyor ve boşluktan sonra fiil sank geliyor → ilk yerde duran karşıtlık zarfı Demgegenüber.",
+            "de": "Zwei Zeiträume werden verglichen; nach der Lücke folgt „sank“ → Adverb „Demgegenüber“.",
+            "en": "Two periods are compared; „sank“ follows the gap → the adverb „Demgegenüber“."
+          },
+          "vocab": [
+            "Umsatz",
+            "Halbjahr"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "indem",
+          "sentence": "Die Firma senkte ihre Kosten, ___ sie viele Abläufe digitalisierte. (Mittel)",
+          "correct": "indem",
+          "answers": [
+            "indem"
+          ],
+          "explanations": {
+            "tr": "Süreçleri dijitalleştirmek maliyet düşürmenin yoludur → indem; fiil digitalisierte sonda.",
+            "de": "Die Digitalisierung ist das Mittel → „indem“.",
+            "en": "Digitalisation is the means → „indem“."
+          },
+          "vocab": [
+            "Firma",
+            "Kosten",
+            "Ablauf"
+          ]
+        },
+        {
+          "word": "insofern …, als",
+          "sentence": "Die Ergebnisse sind insofern bemerkenswert, ___ sie frühere Studien widerlegen.",
+          "options": [
+            "als",
+            "ob",
+            "wenn"
+          ],
+          "correct": "als",
+          "explanations": {
+            "tr": "Ana cümledeki insofern, als ile tamamlanır: “önceki araştırmaları çürüttükleri için/açısından dikkat çekici”.",
+            "de": "„insofern“ verlangt „als“: insofern bemerkenswert, als …",
+            "en": "„insofern“ requires „als“: insofern bemerkenswert, als …"
+          },
+          "vocab": [
+            "Ergebnis",
+            "Studie"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "es sei denn – Passiv",
+          "sentence": "Das Projekt wird fortgesetzt, es sei denn, die Finanzierung ___ gestrichen. (werden – Präsens)",
+          "correct": "wird",
+          "answers": [
+            "wird"
+          ],
+          "explanations": {
+            "tr": "dass yok, bu yüzden es sei denn’den sonra ana cümle sırası var: özne die Finanzierung, çekimli fiil wird ikinci yerde, Partizip gestrichen sonda (Passiv).",
+            "de": "Ohne „dass“ Hauptsatzstellung: „die Finanzierung wird gestrichen“ (Passiv, „wird“ auf Position 2).",
+            "en": "Without „dass“, main-clause order: „die Finanzierung wird gestrichen“ (passive, „wird“ second)."
+          },
+          "vocab": [
+            "Projekt",
+            "Finanzierung"
+          ]
+        },
+        {
+          "word": "zumal",
+          "sentence": "Die Studie ist aussagekräftig, ___ sie mit über 10.000 Teilnehmenden durchgeführt wurde.",
+          "options": [
+            "zumal",
+            "obgleich",
+            "wohingegen"
+          ],
+          "correct": "zumal",
+          "explanations": {
+            "tr": "Katılımcı sayısının yüksek olması çalışmanın güvenilirliğinin güçlü bir sebebidir → zumal. obgleich karşıtlık, wohingegen iki şeyin karşılaştırmasını bildirirdi.",
+            "de": "Die hohe Teilnehmerzahl ist ein starker Grund für die Aussagekraft → „zumal“.",
+            "en": "The large number of participants is a strong reason for the study’s value → „zumal“."
+          },
+          "vocab": [
+            "Studie"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "nichtsdestotrotz",
+          "sentence": "Viele Unternehmen setzen auf Homeoffice. ___ bleibt der persönliche Kontakt wichtig. (= trotzdem, formell, beginnt mit „N“)",
+          "correct": "Nichtsdestotrotz",
+          "answers": [
+            "nichtsdestotrotz"
+          ],
+          "explanations": {
+            "tr": "Ev ofise rağmen yüz yüze iletişim önemli kalıyor: “yine de” → Nichtsdestotrotz. Zarf ilk yerde, fiil bleibt hemen arkasından.",
+            "de": "Gegen die Erwartung bleibt der Kontakt wichtig → „Nichtsdestotrotz“ auf Position 1.",
+            "en": "Contrary to expectation, contact stays important → „Nichtsdestotrotz“ in position 1."
+          },
+          "vocab": [
+            "Unternehmen",
+            "Homeoffice",
+            "Kontakt"
+          ]
+        },
+        {
+          "word": "obgleich",
+          "sentence": "Die Teilnehmerzahl sank, ___ die Werbung verstärkt worden war.",
+          "options": [
+            "obgleich",
+            "sodass",
+            "indem"
+          ],
+          "correct": "obgleich",
+          "explanations": {
+            "tr": "Reklam artırılmıştı, bu yüzden katılımcı sayısının artması beklenirdi; ama azaldı → taviz: obgleich.",
+            "de": "Mehr Werbung hätte mehr Teilnehmer erwarten lassen – trotzdem sank die Zahl → „obgleich“.",
+            "en": "More advertising should have raised the numbers, yet they fell → „obgleich“."
+          },
+          "vocab": [
+            "Teilnehmerzahl",
+            "Werbung"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "master-20",
+      "title": {
+        "tr": "Übung 20 – Konnektoren B2 Master Challenge",
+        "de": "Übung 20 – Konnektoren B2 Master Challenge",
+        "en": "Übung 20 – Konnektoren B2 Master Challenge"
+      },
+      "description": {
+        "tr": "Bütün B2 bağlaçlarıyla son tekrar: anlam, fiilin yeri ve kalıplar birlikte.",
+        "de": "Abschluss mit allen B2-Konnektoren: Bedeutung, Verbstellung und feste Wendungen.",
+        "en": "Final review with all B2 connectors: meaning, verb position and fixed phrases."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "questions": [
+        {
+          "word": "wenngleich – Modalverb",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Wenngleich die Kritik berechtigt sein mag, hilft sie uns jetzt nicht weiter.",
+            "Wenngleich die Kritik mag berechtigt sein, hilft sie uns jetzt nicht weiter.",
+            "Wenngleich die Kritik berechtigt sein mag, sie hilft uns jetzt nicht weiter."
+          ],
+          "correct": "Wenngleich die Kritik berechtigt sein mag, hilft sie uns jetzt nicht weiter.",
+          "explanations": {
+            "tr": "Yan cümlede modal fiil mag sonda, berechtigt sein ondan önce. Ardından ana cümle fiille başlar: hilft sie …",
+            "de": "„mag“ steht im Nebensatz am Ende; der Hauptsatz beginnt mit „hilft“.",
+            "en": "„mag“ goes last in the subordinate clause; the main clause starts with „hilft“."
+          },
+          "vocab": [
+            "Kritik"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "angenommen – ohne dass",
+          "sentence": "Verbinde mit „Angenommen“ ohne „dass“: Die Preise steigen weiter. Was bedeutet das für die Mieter?",
+          "correct": "Angenommen, die Preise steigen weiter, was bedeutet das für die Mieter?",
+          "answers": [
+            "angenommen, die preise steigen weiter, was bedeutet das für die mieter",
+            "angenommen, die preise steigen weiter, was bedeutet das fuer die mieter"
+          ],
+          "explanations": {
+            "tr": "dass olmadan angenommen’dan sonra ana cümle sırası gelir: die Preise steigen weiter. Ardından soru cümlesi.",
+            "de": "Ohne „dass“: „Angenommen, die Preise steigen weiter, …“ mit Verb auf Position 2.",
+            "en": "Without „dass“: „Angenommen, die Preise steigen weiter, …“ with the verb second."
+          },
+          "vocab": [
+            "Preis",
+            "Mieter"
+          ]
+        },
+        {
+          "word": "Konnektortyp erkennen",
+          "sentence": "Ich unterschreibe den Vertrag nicht, ___ mein Anwalt hat ihn geprüft.",
+          "options": [
+            "es sei denn,",
+            "sofern",
+            "zumal"
+          ],
+          "correct": "es sei denn,",
+          "explanations": {
+            "tr": "Boşluktan sonra ana cümle sırası var (mein Anwalt hat …): fiil ikinci yerde. Bu sırayı yalnızca es sei denn alabilir. sofern ve zumal fiili sona gönderirdi (… geprüft hat).",
+            "de": "Es folgt Hauptsatzstellung („mein Anwalt hat …“) – das geht nur nach „es sei denn,“. sofern/zumal verlangen Verbendstellung.",
+            "en": "Main-clause order follows („mein Anwalt hat …“), which only works after „es sei denn,“; sofern/zumal need the verb last."
+          },
+          "vocab": [
+            "Vertrag",
+            "Anwalt"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "anstatt dass",
+          "sentence": "Anstatt dass die Regierung die Steuern ___, erhöht sie sie. (senken)",
+          "correct": "senkt",
+          "answers": [
+            "senkt"
+          ],
+          "explanations": {
+            "tr": "anstatt dass yan cümlesinde fiil sona gider. Özne die Regierung tekil → senkt.",
+            "de": "Im anstatt-dass-Satz steht „senkt“ (Subjekt „die Regierung“) am Ende.",
+            "en": "In the anstatt-dass clause „senkt“ (subject „die Regierung“) goes last."
+          },
+          "vocab": [
+            "Regierung",
+            "Steuer"
+          ]
+        },
+        {
+          "word": "wenngleich – verkürzt",
+          "sentence": "Die Ausstellung war interessant, ___ ziemlich voll.",
+          "options": [
+            "wenngleich",
+            "sodass",
+            "indem"
+          ],
+          "correct": "wenngleich",
+          "explanations": {
+            "tr": "Fiilsiz kısa bir taviz: “ilginçti, gerçi oldukça kalabalıktı”. wenngleich fiil olmadan bir sıfatı bağlayabilir; sodass ve indem bir fiil ister.",
+            "de": "Verkürzte Einräumung ohne Verb: „interessant, wenngleich ziemlich voll“.",
+            "en": "A shortened concession without a verb: „interessant, wenngleich ziemlich voll“."
+          },
+          "vocab": [
+            "Ausstellung"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Fehlerkorrektur",
+          "sentence": "Korrigiere: Sofern Sie noch Fragen haben, Sie können mich gern anrufen.",
+          "correct": "Sofern Sie noch Fragen haben, können Sie mich gern anrufen.",
+          "answers": [
+            "sofern sie noch fragen haben, können sie mich gern anrufen",
+            "sofern sie noch fragen haben, koennen sie mich gern anrufen"
+          ],
+          "explanations": {
+            "tr": "Başta duran sofern cümlesi ilk yeri doldurur; virgülden sonra hemen çekimli können, sonra özne Sie gelmeli.",
+            "de": "Der sofern-Satz ist Position 1 → „können Sie …“.",
+            "en": "The sofern-clause is position 1 → „können Sie …“."
+          },
+          "vocab": [
+            "Frage"
+          ]
+        },
+        {
+          "word": "hingegen",
+          "sentence": "Ich mag Kaffee, meine Schwester ___ trinkt nur Tee.",
+          "options": [
+            "hingegen",
+            "obgleich",
+            "zumal"
+          ],
+          "correct": "hingegen",
+          "explanations": {
+            "tr": "İki kişinin zevki karşılaştırılıyor; boşluk özneden sonra ve fiil trinkt ikinci yerde → zarf hingegen. obgleich ve zumal fiili sona gönderirdi.",
+            "de": "Gegenüberstellung; nach „meine Schwester“ folgt direkt „trinkt“ → Adverb „hingegen“.",
+            "en": "A contrast; „trinkt“ follows „meine Schwester“ directly → the adverb „hingegen“."
+          },
+          "vocab": [
+            "Kaffee",
+            "Schwester",
+            "Tee"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "obgleich / wenngleich",
+          "sentence": "Das Unternehmen wuchs schnell, ___ die Konkurrenz stark war. (= obwohl, formell, ein Wort)",
+          "correct": "obgleich",
+          "answers": [
+            "obgleich",
+            "wenngleich"
+          ],
+          "explanations": {
+            "tr": "Güçlü rekabete rağmen şirket büyüdü: taviz. obwohl’un resmî karşılıkları obgleich ve wenngleich’tır; ikisi de kabul edilir.",
+            "de": "Konzessiv und formell: „obgleich“ oder „wenngleich“.",
+            "en": "Concessive and formal: „obgleich“ or „wenngleich“."
+          },
+          "vocab": [
+            "Unternehmen",
+            "Konkurrenz"
+          ]
+        },
+        {
+          "word": "so …, dass",
+          "sentence": "Die Straßen sind ___ glatt, dass die Schulen geschlossen bleiben.",
+          "options": [
+            "so",
+            "sehr",
+            "zu"
+          ],
+          "correct": "so",
+          "explanations": {
+            "tr": "Okulların kapalı kalması sonuçtur ve dass ile gelir; ana cümlede sıfattan önce so gerekir: so glatt, dass …",
+            "de": "Folge mit „dass“ → Korrelat „so“ vor dem Adjektiv.",
+            "en": "A result with „dass“ → the correlate „so“ before the adjective."
+          },
+          "vocab": [
+            "Straße",
+            "Schule"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "umso mehr, als",
+          "sentence": "Verbinde mit „umso mehr, als“: Wir freuen uns über die Auszeichnung. Wir hatten nicht damit gerechnet.",
+          "correct": "Wir freuen uns umso mehr über die Auszeichnung, als wir nicht damit gerechnet hatten.",
+          "answers": [
+            "wir freuen uns umso mehr über die auszeichnung, als wir nicht damit gerechnet hatten",
+            "wir freuen uns umso mehr ueber die auszeichnung, als wir nicht damit gerechnet hatten",
+            "wir freuen uns über die auszeichnung umso mehr, als wir nicht damit gerechnet hatten",
+            "wir freuen uns ueber die auszeichnung umso mehr, als wir nicht damit gerechnet hatten"
+          ],
+          "explanations": {
+            "tr": "umso mehr ana cümlede durur; als cümlesinde çekimli hatten en sonda. “Beklemediğimiz için ödüle daha da çok seviniyoruz.”",
+            "de": "„umso mehr“ im Hauptsatz, im als-Satz „hatten“ am Ende.",
+            "en": "„umso mehr“ in the main clause, „hatten“ at the end of the als-clause."
+          },
+          "vocab": [
+            "Auszeichnung"
           ]
         }
       ]

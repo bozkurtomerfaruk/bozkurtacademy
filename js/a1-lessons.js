@@ -9,7 +9,7 @@
  const dataPromises={};
  function load(level='A1') {
    if (!/^[AB][12]$/.test(level)) return Promise.reject(Error('Geçersiz seviye'));
-   if (!dataPromises[level]) dataPromises[level] = fetch('/data/'+level.toLowerCase()+'-grammar.json?v=6').then(r=>{if(!r.ok)throw Error('Dersler yüklenemedi');return r.json();}).catch(e=>{delete dataPromises[level];throw e;});
+   if (!dataPromises[level]) dataPromises[level] = fetch('/data/'+level.toLowerCase()+'-grammar.json?v=7').then(r=>{if(!r.ok)throw Error('Dersler yüklenemedi');return r.json();}).catch(e=>{delete dataPromises[level];throw e;});
    return dataPromises[level];
  }
  const tiles = (items,cls='') => `<div class="lesson-diagram-tiles ${cls}">${items.map(([main,sub])=>`<div><strong lang="de">${h(main)}</strong><span>${h(sub)}</span></div>`).join('')}</div>`;
@@ -28,12 +28,14 @@
    return body?`<figure class="a1-figure ${h(f.type)}">${body}<figcaption>${h(caption)}</figcaption></figure>`:'';
  }
  function section(s,i,H='h3') {
-   return `<section class="a1-section" id="a1-step-${i}"><${H}>${h(s.title)}</${H}>${s.paragraphs.map(p=>`<p>${h(p)}</p>`).join('')}${s.table?`<div class="a1-table-wrap" tabindex="0" role="region" aria-label="${h(s.title)} tablosu"><table><thead><tr>${s.table.headers.map(x=>`<th scope="col">${h(x)}</th>`).join('')}</tr></thead><tbody>${s.table.rows.map(row=>`<tr>${row.map((x,j)=>j===0?`<th scope="row">${h(x)}</th>`:`<td>${h(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`:''}${s.figure?figure(s.figure):''}${s.examples?`<div class="a1-examples">${s.examples.map(e=>`<div class="a1-example"><p lang="de">${h(e.de)}</p><p>${h(e.tr)}</p>${e.note?`<small>${h(e.note)}</small>`:''}</div>`).join('')}</div>`:''}</section>`;
+   return `<section class="a1-section" id="a1-step-${i}"><${H}>${h(s.title)}</${H}>${s.paragraphs.map(p=>`<p>${h(p)}</p>`).join('')}${s.table?`<div class="a1-table-wrap" tabindex="0" role="region" aria-label="${h(s.title)} tablosu"><table><thead><tr>${s.table.headers.map(x=>`<th scope="col">${h(x)}</th>`).join('')}</tr></thead><tbody>${s.table.rows.map(row=>`<tr>${row.map((x,j)=>j===0?`<th scope="row">${h(x)}</th>`:`<td>${h(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`:''}${s.figure?figure(s.figure):''}${s.box?`<aside class="a1-box"><strong>${h(s.box.title)}</strong>${s.box.paragraphs.map(p=>`<p>${h(p)}</p>`).join('')}</aside>`:''}${s.examples?`<div class="a1-examples">${s.examples.map(e=>`<div class="a1-example"><p lang="de">${h(e.de)}</p><p>${h(e.tr)}</p>${e.note?`<small>${h(e.note)}</small>`:''}</div>`).join('')}</div>`:''}</section>`;
  }
 
  // Lesson pages: the SPA (#grammar, render) and the static pages /almanca-gramer/<level>/<id>/ built by
  // scripts/build-pages.mjs share this template, so both show the same text from data/<level>-grammar.json.
  // opts.static: H1 title, H2 section headings, real page links, no in-article breadcrumb (the page has one).
+ // related: aynı seviyedeki ders kimliği ("passiv") veya başka seviyedeki ders ("B1/passiv").
+ const relatedRef=(ref,level)=>String(ref).includes('/')?String(ref).split('/'):[level,ref];
  const lessonPath=(level,id)=>'/almanca-gramer/'+String(level).toLowerCase()+'/'+(id?id+'/':'');
  function articleHtml(lesson,data,level,opts={}) {
    const S=Boolean(opts.static),H=S?'h2':'h3',id=lesson.id,key=level+'/'+id;
@@ -45,7 +47,7 @@
      <section class="a1-section a1-summary"><${H}>Kısa tekrar</${H}><ul>${lesson.summary.map(x=>`<li>${h(x)}</li>`).join('')}</ul><details class="a1-check"><summary>Kendini kontrol et: ${h(lesson.check.question)}</summary><p><strong lang="de">${h(lesson.check.answer)}</strong></p><p>${h(lesson.check.why)}</p></details></section>
      <section class="a1-practice"><${H}>Konuyu alıştırmalarla pekiştir</${H}><p>Örnekleri anladıysan kısa sorularla devam et. Yanlış yaptığında cevap açıklamasını okuyup bu anlatıma dönebilirsin.</p><a class="btn primary" data-a1-practice href="${S?'/':''}#exercises/${h(level)}/${h(id)}">${h(lesson.title)} alıştırmaları →</a><p class="a1-practice-status" role="status"></p></section>
      <section class="a1-section" id="a1-faq"><${H}>Sık sorulan sorular</${H}>${lesson.faq.map(f=>`<details class="a1-faq"><summary>${h(f.question)}</summary><p>${h(f.answer)}</p></details>`).join('')}</section>
-     <section class="a1-section"><${H}>Benzer ve bağlantılı konular</${H}><div class="a1-related">${lesson.related.map(key=>{const item=data.lessons.find(l=>l.id===key);return `<a href="${S?h(lessonPath(level,key)):`#grammar/${h(level)}/${h(key)}`}" data-a1-related="${h(key)}">${h(item.title)} <span aria-hidden="true">→</span></a>`}).join('')}</div></section>
+     <section class="a1-section"><${H}>Benzer ve bağlantılı konular</${H}><div class="a1-related">${lesson.related.map(ref=>{const [lv,key]=relatedRef(ref,level);const item=(lv===level?data:opts.levels?.[lv])?.lessons.find(l=>l.id===key);if(!item)return '';return `<a href="${S?h(lessonPath(lv,key)):`#grammar/${h(lv)}/${h(key)}`}"${lv===level?` data-a1-related="${h(key)}"`:''}>${lv===level?'':`<span class="a1-related-level">${h(lv)}</span> `}${h(item.title)} <span aria-hidden="true">→</span></a>`}).join('')}</div></section>
      <aside class="a1-author"><picture><source type="image/webp" srcset="/images/omer-faruk-avatar.webp"><img src="/images/omer-faruk-avatar.jpg" width="84" height="84" loading="lazy" decoding="async" alt="Almanca eğitmeni Ömer Faruk Bozkurt" data-picture-fallback></picture><div><${H}>Ömer Faruk Bozkurt</${H}><p class="a1-author-role">Almanca eğitmeni</p><p>Almanya’da yaşıyor, online Almanca dersleri veriyorum. Derslerimde konuları açık örnekler, düzenli tekrar ve günlük kullanım üzerinden ele alıyorum.</p><a href="/hakkimda/">Hakkımda daha fazla bilgi →</a></div></aside>
      ${safeUrl(lesson.reading)?`<p class="a1-reading">Ek okuma: <a href="${h(safeUrl(lesson.reading))}" target="_blank" rel="noopener noreferrer">${h(lesson.readingTitle || 'Deutsch mit Anna · '+lesson.title)}</a> (Almanca). Bu sayfadaki Türkçe anlatım ve örnekler Bozkurt Academy için hazırlanmıştır.</p>`:''}
      <section class="a1-section a1-comments-published" hidden><${H}>Öğrenci yorumları</${H}><div class="a1-comment-list"></div></section>
@@ -58,7 +60,10 @@
    const data=await load(level);const lesson=data.lessons.find(l=>l.id===id);
    if(container.dataset.lesson!==level+'/'+id)return null;
    if(!lesson)throw Error('Konu bulunamadı');
-   container.innerHTML=articleHtml(lesson,data,level);
+   const others=[...new Set(lesson.related.map(ref=>relatedRef(ref,level)[0]).filter(lv=>lv!==level))];
+   const levels=Object.fromEntries(await Promise.all(others.map(async lv=>[lv,await load(lv).catch(()=>null)])));
+   if(container.dataset.lesson!==level+'/'+id)return null;
+   container.innerHTML=articleHtml(lesson,data,level,{levels});
    container.querySelectorAll('[data-a1-related]').forEach(link=>link.addEventListener('click',e=>{e.preventDefault();openRelated(link.dataset.a1Related);}));
    container.querySelectorAll('[data-a1-scroll]').forEach(link=>link.addEventListener('click',e=>{e.preventDefault();container.querySelector('#'+link.dataset.a1Scroll)?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});}));
    container.querySelector('[data-a1-practice]').addEventListener('click',async e=>{

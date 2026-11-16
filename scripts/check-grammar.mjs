@@ -10,7 +10,12 @@ for(const level of catalog.levels){
  for(const l of lessons){
   if(!level.topics.some(t=>t.id===l.id))throw Error('Orphan lesson '+l.id);
   if(!l.title || !l.lead || l.sections.length<5 || l.faq.length<3 || l.related.length<3 || !l.summary || !l.check)throw Error('Incomplete lesson '+l.id);
-  for(const id of l.related)if(!ids.has(id))throw Error('Missing related lesson '+id);
+  for(const ref of l.related){
+   const [lv,id]=ref.includes('/')?ref.split('/'):[level.id,ref];
+   const target=lv===level.id?ids:new Set(registry[lv]?read(registry[lv]).lessons.map(x=>x.id):[]);
+   if(!target.has(id))throw Error('Missing related lesson '+ref);
+  }
+  if(new Set(l.related).size!==l.related.length)throw Error('Duplicate related lesson in '+l.id);
   count++;
  }
 }

@@ -2,6 +2,13 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-16 · Giriş ve kayıt: "hesaplar yalnızca öğrencilerim için" notu
+
+- **giris.html, kayit.html:** Formun üstünde sade bir kutu (solda vurgu çizgisi, `.acc-notice`). Metin TR/DE/EN (`js/account/i18n.js` → `accOnlyStudents…`); "iletişime geç" seçilen dilin iletişim sayfasına gider (/iletisim/, /de/kontakt/, /en/contact/; `js/app.js` → `localizeLinks`).
+- **Panel, onay bekleyen hesap:** "Öğretmenin kaydını onaylayınca giriş yapabileceksin." (`panelPendingReminder`, `#stateNote`).
+- Menüdeki "Giriş" bağlantısı genel sayfalarda gizli kalıyor (değiştirilmedi).
+- **Test:** `tests/hesap-notu.mjs` (emülatörle; not metni ve bağlantısı her dilde, formun üstünde, panel hatırlatması, 390/1440 açık/koyu taşma). Sürümler: `account.css` 8, `i18n-boot.js` 2, `student.js` 5.
+
 ## 2026-11-16 · Dil sürümleri, Aşama 2 / PR 1: altyapı + Kontakt + Über mich
 
 - **Yeni sayfalar:** `/de/kontakt/`, `/de/ueber-mich/` (hedef kitle: Almanya'da büyüyen Türk kökenli öğrenciler ve veliler, Almanya'ya sonradan gelenler; "Sie"), `/en/contact/`, `/en/about/` (İngilizce konuşan öğrenciler). Birebir çeviri değil; Türkçe sayfa değişince bunlar da gözden geçirilmeli.

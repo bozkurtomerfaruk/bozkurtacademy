@@ -20,7 +20,7 @@
   <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13" />
   <link rel="stylesheet" href="css/base.css?v=13" />
-  <link rel="stylesheet" href="css/account.css?v=7" />
+  <link rel="stylesheet" href="css/account.css?v=8" />
 </head>
 <body class="academy-theme account-page">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
@@ -61,6 +61,10 @@
             <h1 id="regTitle" data-i18n="regTitle">Kayıt ol</h1>
             <p class="acc-lead" id="regLead" data-i18n="regLead">Kayıttan sonra hesabın öğretmen onayıyla açılır.</p>
             <p class="acc-status error" id="notConfigured" role="alert" hidden data-i18n="accNotConfigured">Giriş sistemi henüz kurulmadı. Kısa süre sonra açılacak.</p>
+
+            <div class="acc-status acc-notice" role="note">
+              <p><span data-i18n="accOnlyStudents">Hesaplar yalnızca benden ders alan öğrencilerim içindir. Kaydın, öğrencim olduğunu doğruladıktan sonra onaylanır. Ders almak istiyorsan önce</span> <a class="ba-link" href="/iletisim/" data-i18n="accOnlyStudentsLink">iletişime geç</a><span data-i18n="accOnlyStudentsEnd">.</span></p>
+            </div>
 
             <form id="regForm" class="acc-form" novalidate>
               <div class="field">
@@ -132,7 +136,7 @@
   </div>
   <script src="js/app.js?v=46"></script>
   <script src="js/theme.js?v=10"></script>
-  <script type="module" src="js/account/i18n-boot.js?v=1"></script>
+  <script type="module" src="js/account/i18n-boot.js?v=2"></script>
   <script type="module" src="js/account/register.js"></script>
 </body>
 </html>

@@ -2924,7 +2924,7 @@
         },
         {
           "word": "zusätzlicher Grund",
-          "sentence": "Wir verschieben das Treffen, ___ der Raum noch nicht frei ist.",
+          "sentence": "Wir verschieben das Treffen, weil viele Kollegen krank sind, ___ der Raum noch gar nicht frei ist.",
           "options": [
             "zumal",
             "obgleich",
@@ -2932,12 +2932,13 @@
           ],
           "correct": "zumal",
           "explanations": {
-            "tr": "Odanın boş olmaması toplantıyı ertelemenin sebebidir → zumal (“hele ki, zaten”). obgleich karşıtlık, indem yöntem bildirirdi.",
-            "de": "Der belegte Raum ist ein Grund für die Verschiebung → „zumal“.",
-            "en": "The occupied room is a reason for postponing → „zumal“."
+            "tr": "Cümlede zaten bir sebep var (weil viele Kollegen krank sind). Odanın henüz boş olmaması buna eklenen ikinci, güçlendiren bir sebeptir: “hele ki oda daha boş bile değil” → zumal. obgleich karşıtlık, indem yöntem bildirirdi.",
+            "de": "Ein Grund ist schon genannt (weil viele Kollegen krank sind); der Raum liefert einen zusätzlichen, verstärkenden Grund → „zumal“.",
+            "en": "One reason is already given (weil viele Kollegen krank sind); the room adds a further, reinforcing reason → „zumal“."
           },
           "vocab": [
             "Treffen",
+            "Kollege",
             "Raum"
           ]
         },

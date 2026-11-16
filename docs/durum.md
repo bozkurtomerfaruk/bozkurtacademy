@@ -2,6 +2,12 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-16 · B2 gramer dersleri, PR 2: Passiv mit Modalverben, Nominalisierung, Partizip I (dal `claude/b2-dersler-1`)
+
+- **Dersler (`data/b2-grammar.json`):** Passiv mit Modalverben (8 bölüm: temel kalıp + "B1'den hatırlatma" kutusu, modal fiil anlamları, aktif → Passiv, Dativ fiilleri ve öznesiz Passiv, Präteritum, Perfekt/Plusquamperfekt ve çift mastar, Futur ve hätte … werden müssen, sık hatalar) · Nominalisierung (8 bölüm: das + mastar, beim/zum/vom, der Kranke – ein Kranker, etwas/alles + sıfat, das Neue ve renkler, büyük-küçük harf, cümleden isim öbeğine, sık hatalar) · Partizip I (8 bölüm: oluşum, Partizip I/II farkı, sıfat çekimi, zarf kullanımı, genişletilmiş grup, Relativsatz dönüşümü + B1 kutusu, der Reisende, sık hatalar). Bölümler mevcut 20'şer paketle uyumlu.
+- Üçü `grammar-legacy.json`'dan çıkarıldı; SEO metinleri; B2 kurs sayfası (TR/DE) ve seviye testi sonucu artık derslere bağlı (`placement.js` 8). Yeni kelime yok (dersler kelime listesi kullanmıyor).
+- **Test:** `tests/gramer-b2.mjs` (dört ders, 390/1440 açık/koyu), `tests/search.mjs`, check-grammar, check-versions geçti.
+
 ## 2026-11-16 · B2 gramer dersleri, pilot: B2 seviyesi açıldı + Konjunktiv I dersi
 
 - **Plan (onaylandı):** B2'nin 10 konusu için ders; hazırlanmakta olan 3 konu (İleri Konnektoren, Funktionsverbgefüge, Adjektivdeklination vertieft) için ders + 20 paket × 10 soru. Sıra: bu pilot → Passiv mit Modalverben, Nominalisierung, Partizip I dersleri → Partizip II, Genitivpräpositionen, je … desto dersleri → her yeni konu ayrı PR. Sonra B2 seviye sonu sınavı planı. Öğretmenin değişikliği: Konnektoren paket 11 = es sei denn / vorausgesetzt, dass / angenommen, dass; paket 12 = zumal / umso mehr, als; weder … noch ve benzerleri derste yalnızca kısa "B1'den hatırlatma" kutusunda.

@@ -20,7 +20,7 @@
   <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13" />
   <link rel="stylesheet" href="css/base.css?v=13" />
-  <link rel="stylesheet" href="css/account.css?v=7" />
+  <link rel="stylesheet" href="css/account.css?v=8" />
 </head>
 <body class="academy-theme account-page">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
@@ -68,6 +68,10 @@
                 <a class="btn primary" id="goPanelLink" href="panel.html" data-i18n="loginGoPanel">Panelime git</a>
                 <button class="btn ghost" type="button" id="logoutBtn" data-i18n="accLogout">Çıkış yap</button>
               </div>
+            </div>
+
+            <div class="acc-status acc-notice" role="note">
+              <p><span data-i18n="accOnlyStudents">Hesaplar yalnızca benden ders alan öğrencilerim içindir. Kaydın, öğrencim olduğunu doğruladıktan sonra onaylanır. Ders almak istiyorsan önce</span> <a class="ba-link" href="/iletisim/" data-i18n="accOnlyStudentsLink">iletişime geç</a><span data-i18n="accOnlyStudentsEnd">.</span></p>
             </div>
 
             <div id="loginArea">
@@ -118,7 +122,7 @@
   </div>
   <script src="js/app.js?v=46"></script>
   <script src="js/theme.js?v=10"></script>
-  <script type="module" src="js/account/i18n-boot.js?v=1"></script>
+  <script type="module" src="js/account/i18n-boot.js?v=2"></script>
   <script type="module" src="js/account/login.js?v=2"></script>
 </body>
 </html>

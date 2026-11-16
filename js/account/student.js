@@ -20,7 +20,7 @@ let writings = [];
 let currentAuthUser = null;
 
 const STATES = {
-  pending: ['panelPendingTitle', 'panelPendingText'],
+  pending: ['panelPendingTitle', 'panelPendingText', 'panelPendingReminder'],
   parent: ['panelParentTitle', 'panelParentText'],
   inactive: ['panelInactiveTitle', 'panelInactiveText']
 };
@@ -33,6 +33,12 @@ function renderState(){
   if(texts){
     $('stateTitle').textContent = t(texts[0]);
     $('stateText').textContent = t(texts[1]);
+  }
+  // Kısa hatırlatma (yalnızca onay bekleyen hesapta).
+  const note = $('stateNote');
+  if(note){
+    note.hidden = !texts?.[2];
+    note.textContent = texts?.[2] ? t(texts[2]) : '';
   }
 }
 

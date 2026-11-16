@@ -2,6 +2,12 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-16 · B2 gramer dersleri, PR 2: Passiv mit Modalverben, Nominalisierung, Partizip I (dal `claude/b2-dersler-1`)
+
+- **Dersler (`data/b2-grammar.json`):** Passiv mit Modalverben (8 bölüm: temel kalıp + "B1'den hatırlatma" kutusu, modal fiil anlamları, aktif → Passiv, Dativ fiilleri ve öznesiz Passiv, Präteritum, Perfekt/Plusquamperfekt ve çift mastar, Futur ve hätte … werden müssen, sık hatalar) · Nominalisierung (8 bölüm: das + mastar, beim/zum/vom, der Kranke – ein Kranker, etwas/alles + sıfat, das Neue ve renkler, büyük-küçük harf, cümleden isim öbeğine, sık hatalar) · Partizip I (8 bölüm: oluşum, Partizip I/II farkı, sıfat çekimi, zarf kullanımı, genişletilmiş grup, Relativsatz dönüşümü + B1 kutusu, der Reisende, sık hatalar). Bölümler mevcut 20'şer paketle uyumlu.
+- Üçü `grammar-legacy.json`'dan çıkarıldı; SEO metinleri; B2 kurs sayfası (TR/DE) ve seviye testi sonucu artık derslere bağlı (`placement.js` 8). Yeni kelime yok (dersler kelime listesi kullanmıyor).
+- **Test:** `tests/gramer-b2.mjs` (dört ders, 390/1440 açık/koyu), `tests/search.mjs`, check-grammar, check-versions geçti.
+
 ## 2026-11-16 · B2 İleri Konnektoren: ders + 200 soru, konu "hazır" (dal `claude/b2-konnektoren`)
 
 - **Paketler (`data/b2/konnektoren-b2.json`, 20 × 10 soru):** 1 Konnektortyp und Verbstellung · 2 wohingegen / während · 3 demgegenüber / hingegen / dagegen · 4 insofern (als) · 5 sofern / soweit · 6 indem / dadurch, dass · 7 obgleich / wenngleich · 8 zwar … aber / nichtsdestotrotz · 9 sodass / so …, dass · 10 folglich / infolgedessen · 11 es sei denn / vorausgesetzt, dass / angenommen, dass · 12 zumal / umso mehr, als · 13 je nachdem · 14 ohne dass / anstatt dass · 15 Welcher Konnektor passt? · 16 Sätze verbinden · 17 Satzbau · 18 Fehlerkorrektur · 19 Konnektoren in Sachtexten · 20 Master Challenge. Seçmeli sorular 3 seçenekli; her sorunun kendi TR/DE/EN açıklaması (bağlaç türü, özne, fiilin yeri, anlam ipucu). Pilot (1–5) öğretmen tarafından onaylandı; 4.2'de "in dieser Hinsicht" seçeneği "im Gegenteil" ile değiştirildi.

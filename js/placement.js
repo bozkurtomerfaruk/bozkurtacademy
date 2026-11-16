@@ -313,10 +313,10 @@
     'reflexive-verben': ['Reflexive Verben', 'A2'], relativsaetze: ['Relativsätze', 'B1'], passiv: ['Passiv', 'B1'],
     'konjunktiv-ii-b1': ['Konjunktiv II', 'B1'], konnektoren: ['Konnektoren', 'B1'], 'infinitiv-zu': ['Infinitiv mit zu', 'B1'],
     'indirekte-fragen': ['Indirekte Fragen', 'B1'], 'satzstellung-b1': ['Satzstellung', 'B1'],
-    'konjunktiv-i': ['Konjunktiv I', 'B2'], 'passiv-varianten': ['Passiversatz', 'B2', 'exercises'],
-    'partizip-i': ['Partizip I', 'B2', 'exercises'], 'partizip-ii': ['Partizipialattribute', 'B2', 'exercises'],
+    'konjunktiv-i': ['Konjunktiv I', 'B2'], 'passiv-varianten': ['Passiv mit Modalverben', 'B2'],
+    'partizip-i': ['Partizip I', 'B2'], 'partizip-ii': ['Partizipialattribute', 'B2', 'exercises'],
     genitivpraepositionen: ['Präpositionen mit Genitiv', 'B2', 'exercises'], 'je-desto': ['je … desto', 'B2', 'exercises'],
-    nominalisierung: ['Nominalisierung', 'B2', 'exercises'], 'modalverben-subjektiv': ['Modalverben (subjektiv)'],
+    nominalisierung: ['Nominalisierung', 'B2'], 'modalverben-subjektiv': ['Modalverben (subjektiv)'],
     funktionsverbgefuege: ['Funktionsverbgefüge'], 'konnektoren-b2': ['Konnektoren (zumal, sofern …)']
   };
   function topicName(id){

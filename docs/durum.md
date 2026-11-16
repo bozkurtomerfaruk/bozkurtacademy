@@ -2,6 +2,16 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-16 · Dil seçimi, Aşama 1: sabit Türkçe sayfalarda not ve çalışan dil düğmesi
+
+- **Sorun:** 4–5 Kasım SEO çalışmasıyla gelen statik sayfalarda (`data-ba-fixed-lang="tr"`: 12 menü/kurs sayfası, 45 gramer dersi, blog, 404) dil düğmesi yoktu ve menü Türkçeye dönüyordu. Kayıtlı seçim (`baLang`) silinmiyordu ama ana sayfaya dönünce dil yeniden değişiyordu; "dil kayboluyor" gibi görünüyordu. PR #29 bu sayfalardan önce yapıldığı için bunu kapsamıyordu.
+- **Şimdi:** Dil düğmesi bütün statik sayfalarda (öğretmenin `/yonetim/yorumlar/` sayfası hariç). Seçim her sayfada kaydediliyor. Menü, alt bilgi ve "Ücretsiz bilgi al" seçilen dilde; sayfa içeriği (iletişim formu ve yorum formu dahil) Türkçe kalıyor; `<html lang="tr">` değişmiyor, ortak parçalara kendi `lang` değeri veriliyor.
+- **Not:** DE/EN seçilince menünün altında "Diese Seite gibt es vorerst nur auf Türkisch." / "This page is currently only available in Turkish." Bağlantı: sınav hazırlık → `/#exams`, gramer dersleri → `/#exercises`, kurs sayfaları, Hakkımda, SSS, 404 → ana sayfa; iletişimde "bize Almanca/İngilizce yazabilirsin"; blog ve alfabe oyununda sadece not. Not JavaScript ile ekleniyor (Google'ın gördüğü HTML'de yok). × ile kapatılınca o dil için oturum boyunca çıkmıyor; başka dil seçilince yeniden çıkıyor.
+- **Ana sayfa alt bilgisi** de artık çevriliyor (grup başlıkları ve bağlantılar Türkçe kalıyordu).
+- `window.BA.lang` sayfa içeriğinin dilini, yeni `window.BA.uiLang` seçilen dili verir.
+- **Test:** `node tests/dil-secimi.mjs` (DE seç → statik sayfa → EN → TR → geri dön; not bağlantıları; kapatma; yönetim sayfası; 390 px taşma). Sürümler: `app.js` 44, `base.css` 13.
+- **Sırada:** Giriş/kayıt/panel çevirilerinin Firebase yüklenemediğinde de uygulanması (ayrı PR); sonra Aşama 2 (12 sayfanın `/de/` ve `/en/` sürümleri) için plan.
+
 ## 2026-11-14 · Schreiben genişletme 4: DTZ (Deutsch-Test für Zuwanderer)
 
 - **Format (resmî: g.a.s.t. Übungssatz 1 ve 2, Ekim 2026; g.a.s.t. "DTZ auf einen Blick" ve öğretmen SSS'si):** Schreiben 30 dk, 20 puan (B1 15–20, A2 7–14).

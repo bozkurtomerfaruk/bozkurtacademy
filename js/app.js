@@ -172,6 +172,15 @@ const translations = {
     langNoteExercises:'Alıştırmalara git',
     langNoteContact:'Bize Türkçe yazabilirsin; form her dilde çalışır.',
     langNoteClose:'Notu kapat',
+    langNoteAlt:'Bu sayfanın Türkçe sürümü de var.',
+    langNoteAltLink:'Türkçe sürüme git',
+    // Statik sayfa iskeleti (scripts/build-pages.mjs bu metinleri de buradan okur).
+    navMenuLabel:'Site menüsü',
+    brandHomeLabel:'Bozkurt Academy ana sayfa',
+    langChoice:'Dil seçimi',
+    breadcrumbLabel:'Sayfa yolu',
+    breadcrumbHome:'Ana sayfa',
+    skipLink:'Ana içeriğe geç',
     founderBio2:'Almanya’daki eğitim ve günlük yaşam deneyimimi, öğrencilerin karşılaşabileceği iletişim durumlarına yönelik örneklerle derslere taşıyorum.',
     aboutJourneyTag:'Eğitim ve Deneyim',
     aboutJourneyTitle:'Eğitim ve çalışma geçmişim',
@@ -787,6 +796,14 @@ const translations = {
     langNoteExercises:'Zu den Übungen auf Deutsch',
     langNoteContact:'Du kannst uns gern auf Deutsch schreiben – das Formular funktioniert in jeder Sprache.',
     langNoteClose:'Hinweis schließen',
+    langNoteAlt:'Diese Seite gibt es auch auf Deutsch.',
+    langNoteAltLink:'Zur deutschen Version',
+    navMenuLabel:'Hauptmenü',
+    brandHomeLabel:'Bozkurt Academy – Startseite',
+    langChoice:'Sprache wählen',
+    breadcrumbLabel:'Brotkrumennavigation',
+    breadcrumbHome:'Startseite',
+    skipLink:'Zum Inhalt springen',
     founderBio2:'Erfahrungen aus meinem Studium und Alltag in Deutschland nutze ich für Beispiele aus typischen Kommunikationssituationen.',
     aboutJourneyTag:'Ausbildung und Erfahrung',
     aboutJourneyTitle:'Mein Bildungs- und Berufsweg',
@@ -1402,6 +1419,14 @@ const translations = {
     langNoteExercises:'Exercises in English',
     langNoteContact:'Feel free to write to us in English – the form works in any language.',
     langNoteClose:'Close notice',
+    langNoteAlt:'This page is also available in English.',
+    langNoteAltLink:'Go to the English version',
+    navMenuLabel:'Main menu',
+    brandHomeLabel:'Bozkurt Academy – home',
+    langChoice:'Choose language',
+    breadcrumbLabel:'Breadcrumb',
+    breadcrumbHome:'Home',
+    skipLink:'Skip to content',
     founderBio2:'I draw on my studies and daily life in Germany to provide examples of communication situations learners may encounter.',
     aboutJourneyTag:'Education and experience',
     aboutJourneyTitle:'Education and work background',
@@ -1861,8 +1886,38 @@ function readSavedLang(){
 // Dil düğmesi olmayan sabit sayfa (öğretmenin /yonetim/yorumlar/ sayfası): tamamen Türkçe kalır, kayıtlı seçime dokunulmaz.
 // app.js sayfanın sonunda yüklenir, menü o anda hazırdır.
 const BA_LANG_LOCKED = Boolean(BA_FIXED_LANG) && !document.querySelector('.lang button');
-let currentLang = BA_LANG_LOCKED ? BA_FIXED_LANG : readSavedLang();
+// Almanca/İngilizce sürüm sayfası (/de/…, /en/…) açılınca seçim o dil olur.
+let currentLang = BA_LANG_LOCKED ? BA_FIXED_LANG : (BA_FIXED_LANG && BA_FIXED_LANG!=='tr' ? BA_FIXED_LANG : readSavedLang());
 const contentLang = () => BA_FIXED_LANG || currentLang;
+
+// Aynı sayfanın dil sürümleri: [{tr, de, en}, …]. scripts/build-pages.mjs scripts/site-pages.mjs'ten üretir; elle düzenleme.
+// Değişince app.js'in ?v= sürümünü artır (node scripts/check-versions.mjs).
+const BA_ALTS = /* ba:alts */[
+  {"tr":"/hakkimda/","de":"/de/ueber-mich/","en":"/en/about/"},
+  {"tr":"/iletisim/","de":"/de/kontakt/","en":"/en/contact/"}
+]/* /ba:alts */;
+function altGroup(path){
+  return BA_ALTS.find(group=>Object.values(group).includes(path)) || null;
+}
+// Bir adresin seçilen dildeki karşılığı (yoksa adres aynen kalır). Diyez (#…) ve sorgu korunur.
+function localizedHref(href, lang){
+  const m=/^(\/[^?#]*)([?#].*)?$/.exec(href||'');
+  if(!m) return href;
+  const group=altGroup(m[1]);
+  if(!group) return href;
+  return (group[lang] || group.tr) + (m[2] || '');
+}
+// Site içi bağlantılar seçilen dildeki sürüme gider (ör. DE seçiliyken "İletişim" → /de/kontakt/).
+// Asıl adres data-ba-href'te saklanır; Google'ın gördüğü HTML değişmez (JavaScript'le uygulanır).
+function localizeLinks(lang){
+  document.querySelectorAll('a[href^="/"]').forEach(a=>{
+    if(!a.dataset.baHref){
+      if(!altGroup(a.getAttribute('href').replace(/[?#].*$/,''))) return;
+      a.dataset.baHref=a.getAttribute('href');
+    }
+    a.setAttribute('href', localizedHref(a.dataset.baHref, lang));
+  });
+}
 
 // t(): sayfa içeriğinin dilinde (sabit sayfalarda yorum formu gibi içerik metinleri Türkçe kalır).
 function t(key){
@@ -1884,6 +1939,8 @@ function i18nTargets(selector){
 // Sabit sayfada aynı içeriğin seçilen dilde bulunduğu yer (yoksa sadece not).
 function langNoteTarget(){
   const p=location.pathname;
+  const alt=altGroup(p)?.[currentLang];
+  if(alt && alt!==p) return {href:alt, key:'langNoteAltLink', textKey:'langNoteAlt'};
   if(p.startsWith('/almanca-sinav-hazirlik/')) return {href:'/#exams', key:'langNoteExams'};
   if(p.startsWith('/almanca-gramer/')) return {href:'/#exercises', key:'langNoteExercises'};
   if(p.startsWith('/iletisim/')) return {key:'langNoteContact'};
@@ -1911,7 +1968,7 @@ function renderLangNote(){
   const inner=document.createElement('div');
   inner.className='ba-lang-note-inner';
   const text=document.createElement('p');
-  text.textContent=uiT('langNoteText');
+  text.textContent=uiT(target?.textKey || 'langNoteText');
   if(target){
     text.append(' ');
     if(target.href){
@@ -1957,6 +2014,7 @@ function applyLanguage(lang){
     const key = el.getAttribute('data-i18n-placeholder');
     if(translations[lang] && translations[lang][key]) el.setAttribute('placeholder', translations[lang][key]);
   });
+  localizeLinks(lang);
   document.querySelectorAll('.lang button').forEach(b=>{
     b.classList.toggle('active', b.dataset.lang===lang);
     b.setAttribute('aria-pressed', String(b.dataset.lang===lang));
@@ -2003,7 +2061,7 @@ function baGrammarUrl(hash){
 window.addEventListener('hashchange',()=>{const url=baGrammarUrl(location.hash);if(url)location.replace(url);});
 
 function showPage(page, options={}){
-  if(BA_MOVED[page]){ location.assign(BA_MOVED[page]); return; }
+  if(BA_MOVED[page]){ location.assign(localizedHref(BA_MOVED[page], currentLang)); return; }
   if(page==='grammar'){ const url=baGrammarUrl(location.hash); if(url){ location.assign(url); return; } }
   const {historyMode='push', scroll=true} = options;
   document.body.dataset.baPage = page;
@@ -2072,7 +2130,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
     event.preventDefault();
     document.getElementById('main')?.focus();
   });
-  document.querySelectorAll('.lang button').forEach(btn=>btn.addEventListener('click',()=>applyLanguage(btn.dataset.lang)));
+  // Sayfanın seçilen dilde ayrı bir sürümü varsa (/de/kontakt/ gibi) oraya gidilir; yoksa bu sayfada dil değişir.
+  document.querySelectorAll('.lang button').forEach(btn=>btn.addEventListener('click',()=>{
+    const lang=btn.dataset.lang;
+    const alt=altGroup(location.pathname)?.[lang];
+    if(alt && alt!==location.pathname && !BA_LANG_LOCKED){
+      try{ localStorage.setItem('baLang', lang); }catch(_){}
+      location.assign(alt + location.hash);
+      return;
+    }
+    applyLanguage(lang);
+  }));
 
   const form = document.getElementById('contactForm');
   const formStatus = document.getElementById('formStatus');
@@ -2083,12 +2151,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
   // inbox it was created for. The same key is used by the comment form in js/a1-lessons.js.
   const WEB3FORMS_URL = 'https://api.web3forms.com/submit';
   const WEB3FORMS_KEY = '21c1c876-3c08-4019-a29d-8181b1f640f0';
+  // A page can word the form messages itself (e.g. /de/kontakt/ uses "Sie"): data-msg-sent-message on the form
+  // overrides t('sentMessage'), and so on for invalidForm, sendError, sendingMessage and sendMessage.
+  const ft = key => form?.dataset['msg' + key[0].toUpperCase() + key.slice(1)] || t(key);
   function setFormStatus(type, message){
     if(!formStatus) return;
     formStatus.className = `contact-form-status show ${type}`;
     formStatus.textContent = message;
     // On an error the visitor can still write directly; the address is already shown on the page.
-    if(type === 'error' && message === t('sendError')){
+    if(type === 'error' && message === ft('sendError')){
       const link = document.createElement('a');
       link.href = 'mailto:' + CONTACT_EMAIL;
       link.textContent = CONTACT_EMAIL;
@@ -2096,7 +2167,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
   }
   // Without JavaScript the form posts to Web3Forms directly and comes back with ?gonderildi=1.
-  if(form && new URLSearchParams(location.search).has('gonderildi')) setFormStatus('success', t('sentMessage'));
+  if(form && new URLSearchParams(location.search).has('gonderildi')) setFormStatus('success', ft('sentMessage'));
 
   form?.addEventListener('submit', async e=>{
     e.preventDefault();
@@ -2110,14 +2181,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     if(honey) return;
     if(!name || !emailOk || !message){
-      setFormStatus('error', t('invalidForm'));
+      setFormStatus('error', ft('invalidForm'));
       return;
     }
 
-    const originalLabel = t('sendMessage');
+    const originalLabel = ft('sendMessage');
     if(submitBtn){
       submitBtn.disabled = true;
-      submitBtn.textContent = t('sendingMessage');
+      submitBtn.textContent = ft('sendingMessage');
     }
     if(formStatus) formStatus.className = 'contact-form-status';
 
@@ -2130,7 +2201,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         },
         body:JSON.stringify({
           access_key:WEB3FORMS_KEY,
-          subject:'Bozkurt Academy – Yeni iletişim mesajı',
+          // The page language in the subject tells the teacher which language to answer in.
+          subject:'Bozkurt Academy – Yeni iletişim mesajı' + (contentLang() !== 'tr' ? ` (${contentLang().toUpperCase()})` : ''),
           from_name:'Bozkurt Academy Web Sitesi',
           replyto:email,
           name,
@@ -2149,10 +2221,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
       form.reset();
       applyLanguage(currentLang);
-      setFormStatus('success', t('sentMessage'));
+      setFormStatus('success', ft('sentMessage'));
     }catch(error){
       console.error('İletişim formu gönderim hatası:', error);
-      setFormStatus('error', t('sendError'));
+      setFormStatus('error', ft('sendError'));
     }finally{
       if(submitBtn){
         submitBtn.disabled = false;

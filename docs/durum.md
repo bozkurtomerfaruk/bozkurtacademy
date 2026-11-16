@@ -2,6 +2,18 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-16 · Dil sürümleri, Aşama 2 / PR 1: altyapı + Kontakt + Über mich
+
+- **Yeni sayfalar:** `/de/kontakt/`, `/de/ueber-mich/` (hedef kitle: Almanya'da büyüyen Türk kökenli öğrenciler ve veliler, Almanya'ya sonradan gelenler; "Sie"), `/en/contact/`, `/en/about/` (İngilizce konuşan öğrenciler). Birebir çeviri değil; Türkçe sayfa değişince bunlar da gözden geçirilmeli.
+- **Kayıt:** `scripts/site-pages.mjs` → `lang` ve `group` (aynı grup = aynı sayfanın dil sürümleri; tr, de, en hepsi zorunlu). Türkçe adresler değişmedi.
+- **Üretilen:** hreflang (tr, de, en, x-default = Türkçe), kendi canonical'ı, `og:locale` + `og:locale:alternate`, şemada `inLanguage`, sitemap. Almanca/İngilizce sayfaların menüsü, alt bilgisi ve sayfa yolu doğrudan o dilde yazılır; metinler tek kaynaktan, `js/app.js` → `translations`.
+- **Dil düğmesi:** Sürümü olan sayfada aynı sayfanın o dildeki sürümüne gider; yoksa sayfada kalır ve Aşama 1 notu çıkar. DE seçiliyken Türkçe sürümü olan sayfaya gelen kullanıcı yönlendirilmez; "Diese Seite gibt es auch auf Deutsch" notu çıkar. `/de/…` açılınca seçim `de` olur.
+- **Site içi bağlantılar:** Seçilen dil DE/EN ise "İletişim", "Hakkımda", "Ücretsiz bilgi al" gibi bağlantılar JavaScript ile o dilin sürümüne gider (Google'ın gördüğü HTML değişmez). Liste `js/app.js` → `BA_ALTS`, `build-pages.mjs` üretir; değişince app.js sürümü artırılmalı.
+- **Kontroller (`build-pages --check`):** eksik dil sürümü, yanlış `<html lang>`, Almanca/İngilizce içerikte o dilde sürümü olan sayfaya Türkçe adresle bağlantı.
+- **İletişim formu:** Sayfa kendi mesajlarını `data-msg-*` ile verir ("Sie"); e-posta konusuna sayfa dili eklenir: "(DE)", "(EN)".
+- **Test:** `node tests/dil-secimi.mjs` genişletildi (sürümler arası geçiş, notlar, bağlantılar, DE form gönderimi). Sürüm: `app.js` 45.
+- **Sırada:** PR 2 – Online-Unterricht, Einzelunterricht, Gruppenkurs, Prüfungsvorbereitung.
+
 ## 2026-11-16 · Giriş, kayıt ve panel: çeviriler Firebase'den bağımsız
 
 - **Sorun:** Bu üç sayfanın DE/EN metinleri (`js/account/i18n.js`) Firebase ile aynı modül zincirinde yükleniyordu. Firebase yüklenemezse (reklam engelleyici, kötü bağlantı) zincir hiç çalışmıyor, sayfa seçilen dil yerine Türkçe kalıyordu.

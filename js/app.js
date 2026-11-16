@@ -1896,6 +1896,10 @@ const contentLang = () => BA_FIXED_LANG || currentLang;
 // Aynı sayfanın dil sürümleri: [{tr, de, en}, …]. scripts/build-pages.mjs scripts/site-pages.mjs'ten üretir; elle düzenleme.
 // Değişince app.js'in ?v= sürümünü artır (node scripts/check-versions.mjs).
 const BA_ALTS = /* ba:alts */[
+  {"tr":"/online-almanca-dersi/","de":"/de/online-deutschunterricht/","en":"/en/online-german-lessons/"},
+  {"tr":"/almanca-ozel-ders/","de":"/de/deutsch-einzelunterricht/","en":"/en/private-german-lessons/"},
+  {"tr":"/almanca-grup-dersi/","de":"/de/deutsch-gruppenkurs/","en":"/en/german-group-lessons/"},
+  {"tr":"/almanca-sinav-hazirlik/","de":"/de/pruefungsvorbereitung-deutsch/","en":"/en/german-exam-preparation/"},
   {"tr":"/hakkimda/","de":"/de/ueber-mich/","en":"/en/about/"},
   {"tr":"/iletisim/","de":"/de/kontakt/","en":"/en/contact/"}
 ]/* /ba:alts */;
@@ -1944,7 +1948,6 @@ function langNoteTarget(){
   const p=location.pathname;
   const alt=altGroup(p)?.[currentLang];
   if(alt && alt!==p) return {href:alt, key:'langNoteAltLink', textKey:'langNoteAlt'};
-  if(p.startsWith('/almanca-sinav-hazirlik/')) return {href:'/#exams', key:'langNoteExams'};
   if(p.startsWith('/almanca-gramer/')) return {href:'/#exercises', key:'langNoteExercises'};
   if(p.startsWith('/iletisim/')) return {key:'langNoteContact'};
   if(p.startsWith('/blog/') || p.startsWith('/almanca-alfabe/')) return null;

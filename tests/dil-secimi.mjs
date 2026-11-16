@@ -91,7 +91,8 @@ ok(await page.getAttribute('.nav-link[data-i18n="navContact"]', 'href') === '/il
 // 5) Notun bağlantıları (sürümü olmayan sayfalar).
 await page.evaluate(() => localStorage.setItem('baLang', 'de'));
 for (const [p, href, txt] of [
-  ['/almanca-sinav-hazirlik/', '/#exams', 'Prüfungstraining'],
+  ['/almanca-sinav-hazirlik/', '/de/pruefungsvorbereitung-deutsch/', 'auch auf Deutsch'],
+  ['/almanca-ozel-ders/', '/de/deutsch-einzelunterricht/', 'auch auf Deutsch'],
   ['/almanca-gramer/a1/', '/#exercises', 'Übungen'],
   ['/a1-almanca-kursu/', '/', 'Startseite'],
   ['/blog/', null, null],
@@ -146,10 +147,24 @@ ok((await text('.nav-link[data-i18n="navAbout"]')) === 'About Me' && await page.
 ok(await page.getAttribute('.nav-link[aria-current="page"]', 'href') === '/en/contact/', '/en/contact/: menüde etkin sayfa');
 ok(await page.locator('.ba-sticky-cta').count() === 0, '/en/contact/: sabit iletişim düğmesi yok');
 
+// 10b) Ders sayfaları (Aşama 2 / PR 2): menü, alt bilgi, sayfa yolu ve dil düğmesi.
+await page.goto(B + '/de/deutsch-einzelunterricht/');
+ok(await page.getAttribute('.nav-link[data-i18n="navLessons"]', 'href') === '/de/online-deutschunterricht/', '/de/deutsch-einzelunterricht/: menü Deutschunterricht → DE');
+ok(await page.getAttribute('.nav-link[data-i18n="navExams"]', 'href') === '/de/pruefungsvorbereitung-deutsch/', '/de/deutsch-einzelunterricht/: menü Prüfungsvorbereitung → DE');
+ok(await page.getAttribute('.nav-link[aria-current="page"]', 'href') === '/de/online-deutschunterricht/', '/de/deutsch-einzelunterricht/: menüde "Deutschunterricht" etkin');
+ok(await page.getAttribute('.lp-breadcrumb li:nth-child(2) a', 'href') === '/de/online-deutschunterricht/', '/de/deutsch-einzelunterricht/: sayfa yolu üst sayfa DE');
+ok(await page.getAttribute('footer a[data-i18n="footerGroup"]', 'href') === '/de/deutsch-gruppenkurs/', '/de/deutsch-einzelunterricht/: alt bilgi Gruppenkurs → DE');
+await page.click('.lang button[data-lang="en"]');
+await page.waitForURL('**/en/private-german-lessons/');
+ok(await htmlLang() === 'en', 'EN düğmesi → /en/private-german-lessons/');
+await page.click('.lang button[data-lang="tr"]');
+await page.waitForURL('**/almanca-ozel-ders/');
+ok(await note().count() === 0, 'TR düğmesi → /almanca-ozel-ders/, not yok');
+
 // 11) Mobil: yatay taşma yok.
 const mobile = await newPage({ width: 390, height: 844 });
 await mobile.goto(B + '/'); await mobile.evaluate(() => localStorage.setItem('baLang', 'de'));
-for (const p of ['/de/ueber-mich/', '/de/kontakt/', '/en/about/', '/en/contact/', '/sss/', '/hakkimda/', '/']) {
+for (const p of ['/de/ueber-mich/', '/de/kontakt/', '/en/about/', '/en/contact/', '/de/online-deutschunterricht/', '/de/deutsch-einzelunterricht/', '/de/deutsch-gruppenkurs/', '/de/pruefungsvorbereitung-deutsch/', '/en/online-german-lessons/', '/en/private-german-lessons/', '/en/german-group-lessons/', '/en/german-exam-preparation/', '/sss/', '/hakkimda/', '/']) {
   await mobile.goto(B + p); await mobile.waitForTimeout(150);
   const over = await mobile.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   ok(over <= 0, `390 px ${p}: yatay taşma yok (${over})`);

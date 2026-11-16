@@ -17,7 +17,7 @@ import { CSP } from './csp.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const check = process.argv.includes('--check');
 const SITEMAP_DATE = '2026-11-04';
-const V = { themeInit: 1, html: 1, style: 13, base: 13, landing: 1, app: 46, theme: 10, analytics: 7, a1lessons: 19, a1css: 8, grammarPages: 3, blog: 6 };
+const V = { themeInit: 1, html: 1, style: 13, base: 13, landing: 1, app: 47, theme: 10, analytics: 7, a1lessons: 19, a1css: 8, grammarPages: 3, blog: 6 };
 const OG_IMAGE = `${SITE}/images/og-bozkurt-academy.jpg`;
 
 const SECURITY = `
@@ -301,7 +301,8 @@ for (const page of PAGES) {
   if (!page.mixedLang && (!htmlTag.includes(`lang="${lang}"`) || !htmlTag.includes(`data-ba-fixed-lang="${lang}"`))) langErrors.push(`${page.path}: <html lang="${lang}" data-ba-fixed-lang="${lang}"> olmalı (şu an: ${htmlTag})`);
   // Almanca/İngilizce içerikte, o dilde sürümü olan sayfaya Türkçe adresle bağlantı verilmesin.
   if (lang !== 'tr') {
-    const body = html.split('İÇERİK BAŞLANGICI')[1] || '';
+    // Yalnızca elle yazılan içerik (alt bilgi ve menü bu betikle zaten doğru dilde üretilir).
+    const body = (html.split('İÇERİK BAŞLANGICI')[1] || '').split('<!-- İÇERİK SONU -->')[0];
     for (const [, href] of body.matchAll(/href="(\/[^"?#]*)/g)) {
       const better = ALT_BY_PATH[href]?.[lang];
       if (better && better !== href) langErrors.push(`${page.path}: ${href} yerine ${better} bağlantısını kullan`);

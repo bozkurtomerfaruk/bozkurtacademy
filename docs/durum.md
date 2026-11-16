@@ -2,6 +2,15 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-16 · Dil sürümleri, Aşama 2 / PR 2: ders sayfaları (DE/EN)
+
+- **Yeni sayfalar:** `/de/online-deutschunterricht/`, `/de/deutsch-einzelunterricht/`, `/de/deutsch-gruppenkurs/`, `/de/pruefungsvorbereitung-deutsch/`, `/en/online-german-lessons/`, `/en/private-german-lessons/`, `/en/german-group-lessons/`, `/en/german-exam-preparation/`. Türkçe karşılıkları değişmedi; hreflang ve sitemap otomatik.
+- **İçerik:** Türkçe sayfadaki bilgiler (50 dk, Zoom/Google Meet, grup en fazla 6 kişi, ilk ders ücretsiz, 24 saat iptal kuralı, sınav listesi) korundu. Almanca sürümde okul desteği ve Türkçe açıklama öne çıkıyor ("Sie"); İngilizce sürümde açıklamalar İngilizce. Seviye kartları (A1–B2) PR 3'e kadar bağlantısız; gramer anlatımlarına yalnızca Almanca sayfalardan "auf Türkisch" notuyla bağlantı var.
+- **Şema:** `service()` artık dile göre iletişim adresi ve `inLanguage` alıyor.
+- **Düzeltme:** `build-pages --check`'teki "Türkçe adresle bağlantı" kontrolü artık yalnızca elle yazılan içeriği tarıyor (alt bilgi sayılmıyor).
+- **Test:** `tests/dil-secimi.mjs` genişletildi (ders sayfalarında menü, sayfa yolu, alt bilgi, dil düğmesiyle geçiş, 390 px taşma). Sürüm: `app.js` 47.
+- **Sırada:** PR 3 – A1–B2 kurs sayfaları; ardından PR 4 – SSS.
+
 ## 2026-11-16 · Giriş ve kayıt: "hesaplar yalnızca öğrencilerim için" notu
 
 - **giris.html, kayit.html:** Formun üstünde sade bir kutu (solda vurgu çizgisi, `.acc-notice`). Metin TR/DE/EN (`js/account/i18n.js` → `accOnlyStudents…`); "iletişime geç" seçilen dilin iletişim sayfasına gider (/iletisim/, /de/kontakt/, /en/contact/; `js/app.js` → `localizeLinks`).

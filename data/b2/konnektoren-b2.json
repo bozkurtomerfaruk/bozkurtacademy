@@ -1,0 +1,1065 @@
+{
+  "id": "konnektoren-b2",
+  "level": "B2",
+  "title": {
+    "tr": "İleri Konnektoren",
+    "de": "Konnektoren B2",
+    "en": "Advanced connectors"
+  },
+  "description": {
+    "tr": "wohingegen, demgegenüber, insofern, sofern, es sei denn, zumal, indem, sodass ve folglich gibi B2 bağlaçlarıyla anlam ve fiil sırası alıştırmaları.",
+    "de": "B2-Übungen zu Bedeutung und Verbstellung mit Konnektoren wie wohingegen, demgegenüber, insofern, sofern, es sei denn, zumal, indem, sodass und folglich.",
+    "en": "B2 practice on meaning and verb position with connectors such as wohingegen, demgegenüber, insofern, sofern, es sei denn, zumal, indem, sodass and folglich."
+  },
+  "lesson": {
+    "title": {
+      "tr": "B2 – İleri Konnektoren",
+      "de": "B2 – Konnektoren",
+      "en": "B2 – Advanced connectors"
+    },
+    "intro": {
+      "tr": "Her pakette önce bağlacın anlamını, sonra türünü sor: yan cümle bağlacı mı (fiil sonda), zarf mı (fiil hemen arkasında)? Paketler karşıtlık, koşul, yöntem, taviz ve sonuç bildiren B2 bağlaçlarını sırayla çalıştırır.",
+      "de": "Frage bei jedem Paket zuerst nach der Bedeutung, dann nach dem Typ des Konnektors: Subjunktion (Verb am Ende) oder Adverb (Verb direkt danach)? Die Pakete üben nacheinander B2-Konnektoren für Gegensatz, Bedingung, Mittel, Einräumung und Folge.",
+      "en": "In each set ask first about the meaning, then about the connector type: subordinating conjunction (verb last) or adverb (verb right after it)? The sets practise B2 connectors for contrast, condition, means, concession and result."
+    }
+  },
+  "exercises": [
+    {
+      "id": "konnektortyp-1",
+      "title": {
+        "tr": "Übung 1 – Konnektortyp und Verbstellung",
+        "de": "Übung 1 – Konnektortyp und Verbstellung",
+        "en": "Übung 1 – Konnektortyp und Verbstellung"
+      },
+      "description": {
+        "tr": "Bağlacın türünü tanı: yan cümle bağlacı mı, zarf mı? Fiilin yerini buna göre seç.",
+        "de": "Erkenne den Konnektortyp – Subjunktion oder Adverb – und stelle das Verb richtig.",
+        "en": "Identify the connector type – subordinating conjunction or adverb – and place the verb correctly."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Medium"
+      },
+      "questions": [
+        {
+          "word": "wohingegen – Nebensatz",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Sie arbeitet gern im Team, wohingegen ihr Kollege lieber allein arbeitet.",
+            "Sie arbeitet gern im Team, wohingegen arbeitet ihr Kollege lieber allein.",
+            "Sie arbeitet gern im Team, wohingegen ihr Kollege arbeitet lieber allein."
+          ],
+          "correct": "Sie arbeitet gern im Team, wohingegen ihr Kollege lieber allein arbeitet.",
+          "explanations": {
+            "tr": "wohingegen bir yan cümle bağlacıdır (Subjunktion), tıpkı weil gibi. Bu yüzden özne (ihr Kollege) bağlaçtan hemen sonra gelir, çekimli fiil arbeitet cümlenin sonuna gider.",
+            "de": "wohingegen ist eine Subjunktion wie weil: Nach dem Subjekt „ihr Kollege“ steht das finite Verb „arbeitet“ am Satzende.",
+            "en": "wohingegen is a subordinating conjunction like weil: the subject „ihr Kollege“ follows it and the finite verb „arbeitet“ goes to the end."
+          },
+          "vocab": [
+            "Team",
+            "Kollege"
+          ]
+        },
+        {
+          "word": "demgegenüber – Position 1",
+          "sentence": "Die Mieten in der Stadt sind hoch. Welcher Satz folgt richtig?",
+          "options": [
+            "Demgegenüber sind die Mieten auf dem Land deutlich niedriger.",
+            "Demgegenüber die Mieten auf dem Land sind deutlich niedriger.",
+            "Demgegenüber die Mieten auf dem Land deutlich niedriger sind."
+          ],
+          "correct": "Demgegenüber sind die Mieten auf dem Land deutlich niedriger.",
+          "explanations": {
+            "tr": "demgegenüber bir zarftır (Adverb) ve cümlenin ilk yerini doldurur. Ana cümlede çekimli fiil ikinci yerde olduğu için sind hemen demgegenüber’den sonra gelir; özne die Mieten fiilden sonraya kayar.",
+            "de": "demgegenüber ist ein Adverb und besetzt Position 1. Das finite Verb „sind“ steht deshalb direkt danach, das Subjekt „die Mieten“ folgt dem Verb.",
+            "en": "demgegenüber is an adverb filling position 1, so the finite verb „sind“ comes right after it and the subject „die Mieten“ follows the verb."
+          },
+          "vocab": [
+            "Miete",
+            "Stadt",
+            "Land"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "hingegen – nach dem Subjekt",
+          "sentence": "Der erste Bewerber hat viel Erfahrung. Der zweite Bewerber hingegen ___ jünger und flexibler. (sein)",
+          "correct": "ist",
+          "answers": [
+            "ist"
+          ],
+          "explanations": {
+            "tr": "hingegen burada özneden hemen sonra duruyor: „Der zweite Bewerber hingegen“ birlikte ilk yeri doldurur. Bu yüzden fiil yine ikinci yerdedir. Özne tekil (der zweite Bewerber) olduğu için sein → ist.",
+            "de": "„Der zweite Bewerber hingegen“ bildet zusammen Position 1; danach folgt das finite Verb. Subjekt 3. Person Singular → „ist“.",
+            "en": "„Der zweite Bewerber hingegen“ fills position 1 together, so the finite verb follows. Third person singular subject → „ist“."
+          },
+          "vocab": [
+            "Bewerber",
+            "Erfahrung"
+          ]
+        },
+        {
+          "word": "Konnektortyp erkennen",
+          "sentence": "Zu welcher Gruppe gehört „wohingegen“?",
+          "options": [
+            "Subjunktion: Das Verb steht am Ende.",
+            "Adverb: Das Verb steht direkt nach dem Konnektor.",
+            "Position 0: Das Verb steht nach dem Subjekt an zweiter Stelle."
+          ],
+          "correct": "Subjunktion: Das Verb steht am Ende.",
+          "explanations": {
+            "tr": "wohingegen bir yan cümle başlatır; weil, obwohl ve während gibi davranır. Yan cümlede çekimli fiil sona gider: …, wohingegen er Tee trinkt.",
+            "de": "wohingegen leitet einen Nebensatz ein und verhält sich wie weil, obwohl oder während: Das finite Verb steht am Ende.",
+            "en": "wohingegen introduces a subordinate clause like weil, obwohl or während, so the finite verb goes to the end."
+          }
+        },
+        {
+          "word": "Konnektortyp erkennen",
+          "sentence": "Wo steht das finite Verb nach „demgegenüber“ am Satzanfang?",
+          "options": [
+            "Direkt nach „demgegenüber“, also auf Position 2.",
+            "Am Ende des Satzes.",
+            "Nach dem Subjekt; „demgegenüber“ zählt nicht als Position."
+          ],
+          "correct": "Direkt nach „demgegenüber“, also auf Position 2.",
+          "explanations": {
+            "tr": "demgegenüber zarftır ve bir cümle öğesi gibi sayılır. Cümlenin başındaysa ilk yeri doldurur; çekimli fiil hemen arkasından gelir. Sıfır konumda kalan (Position 0) yalnızca und, aber, oder, denn, sondern gibi bağlaçlardır.",
+            "de": "demgegenüber ist ein Adverb und zählt als Satzglied auf Position 1; das finite Verb folgt sofort. Position 0 haben nur und, aber, oder, denn, sondern.",
+            "en": "demgegenüber is an adverb that counts as position 1, so the finite verb follows immediately. Only und, aber, oder, denn and sondern take position 0."
+          }
+        },
+        {
+          "type": "text",
+          "word": "wohingegen – Satzbau",
+          "sentence": "Ordne den Nebensatz: Mein Mann trinkt morgens Kaffee, ___ (lieber / trinke / Tee / ich / wohingegen)",
+          "correct": "wohingegen ich lieber Tee trinke",
+          "answers": [
+            "wohingegen ich lieber tee trinke",
+            "wohingegen ich tee lieber trinke"
+          ],
+          "explanations": {
+            "tr": "wohingegen yan cümleyi başlatır, ardından özne ich gelir. Çekimli fiil trinke en sona gider: wohingegen ich lieber Tee trinke.",
+            "de": "Nach wohingegen folgt das Subjekt „ich“; das finite Verb „trinke“ steht am Ende des Nebensatzes.",
+            "en": "After wohingegen comes the subject „ich“; the finite verb „trinke“ goes to the end of the clause."
+          },
+          "vocab": [
+            "Mann",
+            "Kaffee",
+            "Tee"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "demgegenüber – Satzbau",
+          "sentence": "Im ersten Quartal stiegen die Umsätze. Beginne mit „Demgegenüber“ und ordne: (sanken / im zweiten Quartal / sie)",
+          "correct": "Demgegenüber sanken sie im zweiten Quartal.",
+          "answers": [
+            "demgegenüber sanken sie im zweiten quartal",
+            "demgegenueber sanken sie im zweiten quartal"
+          ],
+          "explanations": {
+            "tr": "demgegenüber cümlenin başında, yani ilk yerde. Çekimli fiil sanken hemen arkasından gelir, sonra özne sie ve zaman ifadesi im zweiten Quartal. Zamir özne fiilin hemen arkasında durur.",
+            "de": "demgegenüber steht auf Position 1, das Verb „sanken“ folgt direkt. Das Pronomen „sie“ steht unmittelbar nach dem Verb, dann die Zeitangabe.",
+            "en": "demgegenüber fills position 1, the verb „sanken“ follows directly, then the pronoun subject „sie“ and the time phrase."
+          },
+          "vocab": [
+            "Quartal",
+            "Umsatz"
+          ]
+        },
+        {
+          "word": "hingegen – Stellung",
+          "sentence": "Welcher Satz ist falsch?",
+          "options": [
+            "Er spricht drei Sprachen, sie hingegen spricht nur eine.",
+            "Er spricht drei Sprachen, sie spricht hingegen nur eine.",
+            "Er spricht drei Sprachen, hingegen sie spricht nur eine."
+          ],
+          "correct": "Er spricht drei Sprachen, hingegen sie spricht nur eine.",
+          "explanations": {
+            "tr": "hingegen zarftır ve Position 0’da duramaz. Başa gelirse fiil hemen arkasından gelmelidir (hingegen spricht sie). Özneden sonra (sie hingegen spricht) veya fiilden sonra (sie spricht hingegen) kullanılabilir. Yanlış olan cümlede hingegen’den sonra özne gelmiş.",
+            "de": "hingegen kann nicht auf Position 0 stehen. Möglich sind „sie hingegen spricht“ und „sie spricht hingegen“; nach „hingegen“ am Anfang müsste das Verb folgen.",
+            "en": "hingegen cannot take position 0. „sie hingegen spricht“ and „sie spricht hingegen“ are fine; at the start it would need the verb next."
+          },
+          "vocab": [
+            "Sprache"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Fehlerkorrektur",
+          "sentence": "Korrigiere: Die Firma spart Kosten, wohingegen investiert die Konkurrenz in neue Technik.",
+          "correct": "Die Firma spart Kosten, wohingegen die Konkurrenz in neue Technik investiert.",
+          "answers": [
+            "die firma spart kosten, wohingegen die konkurrenz in neue technik investiert"
+          ],
+          "explanations": {
+            "tr": "wohingegen bir yan cümle bağlacıdır, zarf değildir. Bu yüzden fiil (investiert) hemen arkasından gelmez; özne die Konkurrenz’den sonra cümlenin sonuna gider.",
+            "de": "wohingegen ist eine Subjunktion, kein Adverb: Das finite Verb „investiert“ gehört ans Ende des Nebensatzes.",
+            "en": "wohingegen is a subordinating conjunction, not an adverb: the finite verb „investiert“ belongs at the end of the clause."
+          },
+          "vocab": [
+            "Firma",
+            "Kosten",
+            "Konkurrenz",
+            "Technik"
+          ]
+        },
+        {
+          "word": "Konnektortyp erkennen",
+          "sentence": "In welchem Satz steht das Verb wegen des Konnektors am Ende?",
+          "options": [
+            "Viele Menschen kaufen online ein, wohingegen ältere Menschen lieber in Geschäfte gehen.",
+            "Viele Menschen kaufen online ein. Ältere Menschen dagegen gehen lieber in Geschäfte.",
+            "Viele Menschen kaufen online ein. Demgegenüber gehen ältere Menschen lieber in Geschäfte."
+          ],
+          "correct": "Viele Menschen kaufen online ein, wohingegen ältere Menschen lieber in Geschäfte gehen.",
+          "explanations": {
+            "tr": "Üç cümle de doğru, ama yalnızca wohingegen yan cümle kurar ve fiili (gehen) sona gönderir. dagegen ve demgegenüber zarftır; arkalarından ana cümle sırası gelir.",
+            "de": "Alle drei Sätze sind korrekt, aber nur die Subjunktion wohingegen schickt das Verb „gehen“ ans Ende. dagegen und demgegenüber sind Adverbien.",
+            "en": "All three sentences are correct, but only the subordinating conjunction wohingegen sends „gehen“ to the end; dagegen and demgegenüber are adverbs."
+          },
+          "vocab": [
+            "Mensch",
+            "Geschäft"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wohingegen-waehrend-2",
+      "title": {
+        "tr": "Übung 2 – wohingegen / während",
+        "de": "Übung 2 – wohingegen / während",
+        "en": "Übung 2 – wohingegen / während"
+      },
+      "description": {
+        "tr": "İki durumu karşılaştır: wohingegen ve karşıtlık anlamındaki während. während’in zaman anlamını da ayır.",
+        "de": "Zwei Situationen gegenüberstellen: wohingegen und adversatives während – und das temporale während unterscheiden.",
+        "en": "Contrast two situations with wohingegen and adversative während, and tell temporal während apart."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Medium"
+      },
+      "questions": [
+        {
+          "word": "während – Bedeutung",
+          "sentence": "Während Tim sehr ordentlich ist, ist sein Mitbewohner ziemlich chaotisch. – Was drückt „während“ hier aus?",
+          "options": [
+            "einen Gegensatz",
+            "eine Gleichzeitigkeit",
+            "einen Grund"
+          ],
+          "correct": "einen Gegensatz",
+          "explanations": {
+            "tr": "İki kişinin kalıcı özellikleri (düzenli – dağınık) karşılaştırılıyor; burada “aynı anda” bir olay yok. Bu yüzden während karşıtlık bildirir ve wohingegen ile değiştirilebilir.",
+            "de": "Hier werden zwei dauerhafte Eigenschaften verglichen (ordentlich – chaotisch); es geht nicht um gleichzeitige Handlungen. „während“ ist adversativ und durch „wohingegen“ ersetzbar.",
+            "en": "Two permanent traits (tidy – chaotic) are compared; no simultaneous actions are involved, so während expresses contrast and could be replaced by wohingegen."
+          },
+          "vocab": [
+            "Mitbewohner"
+          ]
+        },
+        {
+          "word": "während – Bedeutung",
+          "sentence": "Während ich koche, deckst du den Tisch. – Was drückt „während“ hier aus?",
+          "options": [
+            "eine Gleichzeitigkeit",
+            "einen Gegensatz",
+            "eine Bedingung"
+          ],
+          "correct": "eine Gleichzeitigkeit",
+          "explanations": {
+            "tr": "İki eylem aynı zaman diliminde oluyor: ben yemek yaparken sen masayı kuruyorsun. Burada während zaman bildirir ve wohingegen ile değiştirilemez.",
+            "de": "Zwei Handlungen laufen zur gleichen Zeit ab (kochen – Tisch decken). „während“ ist hier temporal und nicht durch „wohingegen“ ersetzbar.",
+            "en": "Two actions happen at the same time (cooking – setting the table), so während is temporal here and cannot be replaced by wohingegen."
+          },
+          "vocab": [
+            "Tisch"
+          ]
+        },
+        {
+          "word": "wohingegen – Bedeutung",
+          "sentence": "Im Süden ist es meist trocken, ___ es im Norden oft regnet.",
+          "options": [
+            "wohingegen",
+            "weil",
+            "sodass"
+          ],
+          "correct": "wohingegen",
+          "explanations": {
+            "tr": "Güney (kuru) ile kuzey (yağmurlu) karşılaştırılıyor; bir sebep (weil) ya da sonuç (sodass) yok. Karşıtlık bildiren yan cümle bağlacı wohingegen’dir; fiil regnet sona gitmiş.",
+            "de": "Süden (trocken) und Norden (Regen) werden gegenübergestellt – kein Grund (weil), keine Folge (sodass). Der adversative Konnektor ist „wohingegen“.",
+            "en": "South (dry) and north (rain) are contrasted – no cause (weil) and no result (sodass). The contrastive connector is wohingegen."
+          },
+          "vocab": [
+            "Süden",
+            "Norden"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "wohingegen – Sätze verbinden",
+          "sentence": "Verbinde mit „wohingegen“: Lisa mag Großstädte. Ihr Mann fühlt sich auf dem Land wohler.",
+          "correct": "Lisa mag Großstädte, wohingegen ihr Mann sich auf dem Land wohler fühlt.",
+          "answers": [
+            "lisa mag großstädte, wohingegen ihr mann sich auf dem land wohler fühlt",
+            "lisa mag grossstaedte, wohingegen ihr mann sich auf dem land wohler fuehlt",
+            "lisa mag großstädte, wohingegen sich ihr mann auf dem land wohler fühlt",
+            "lisa mag grossstaedte, wohingegen sich ihr mann auf dem land wohler fuehlt"
+          ],
+          "explanations": {
+            "tr": "İkinci cümle wohingegen ile yan cümle olur: virgül, wohingegen, özne ihr Mann, çekimli fiil fühlt en sonda. Dönüşlü zamir sich özneden önce de sonra da gelebilir; ikisi de doğru kabul edilir.",
+            "de": "Der zweite Satz wird mit Komma und „wohingegen“ zum Nebensatz; „fühlt“ steht am Ende. „sich“ darf vor oder nach „ihr Mann“ stehen.",
+            "en": "The second sentence becomes a subordinate clause with a comma and wohingegen; „fühlt“ goes to the end. „sich“ may stand before or after „ihr Mann“."
+          },
+          "vocab": [
+            "Großstadt",
+            "Mann",
+            "Land"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "während – Hauptsatz danach",
+          "sentence": "Ergänze den Hauptsatz: Während die Bibliothek am Wochenende geschlossen ist, ___ (das Museum – geöffnet haben)",
+          "correct": "hat das Museum geöffnet",
+          "answers": [
+            "hat das museum geöffnet",
+            "hat das museum geoeffnet"
+          ],
+          "explanations": {
+            "tr": "Yan cümle (Während … ist) ana cümlenin ilk yerini doldurur. Bu yüzden virgülden hemen sonra ana cümlenin çekimli fiili hat gelir, özne das Museum fiilden sonra durur.",
+            "de": "Der Nebensatz besetzt Position 1 des Hauptsatzes. Deshalb folgt nach dem Komma sofort das finite Verb „hat“, danach das Subjekt „das Museum“.",
+            "en": "The subordinate clause fills position 1 of the main clause, so the finite verb „hat“ follows the comma, then the subject „das Museum“."
+          },
+          "vocab": [
+            "Bibliothek",
+            "Wochenende",
+            "Museum"
+          ]
+        },
+        {
+          "word": "wohingegen – Wortstellung",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Mein Vater steht früh auf, wohingegen meine Mutter gern lange schläft.",
+            "Mein Vater steht früh auf, wohingegen meine Mutter schläft gern lange.",
+            "Mein Vater steht früh auf, wohingegen schläft meine Mutter gern lange."
+          ],
+          "correct": "Mein Vater steht früh auf, wohingegen meine Mutter gern lange schläft.",
+          "explanations": {
+            "tr": "wohingegen yan cümle kurduğu için çekimli fiil schläft en sona gider. Fiil ikinci yerde (schläft gern) veya bağlaçtan hemen sonra (wohingegen schläft) duramaz.",
+            "de": "Im wohingegen-Satz steht das finite Verb „schläft“ am Ende, nicht an zweiter Stelle und nicht direkt nach dem Konnektor.",
+            "en": "In the wohingegen clause the finite verb „schläft“ goes to the end – not second and not right after the connector."
+          },
+          "vocab": [
+            "Vater",
+            "Mutter"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "wohingegen – Modalverb am Ende",
+          "sentence": "Erwachsene müssen 12 Euro bezahlen, wohingegen Kinder kostenlos ___. (hineingehen – können)",
+          "correct": "hineingehen können",
+          "answers": [
+            "hineingehen können",
+            "hineingehen koennen"
+          ],
+          "explanations": {
+            "tr": "Yan cümlede modal fiil (können) çekimli fiildir ve en sona gider; ana fiil hineingehen mastar olarak ondan hemen önce durur: hineingehen können. Özne Kinder çoğul olduğu için können.",
+            "de": "Im Nebensatz steht das Modalverb als finites Verb ganz am Ende, der Infinitiv „hineingehen“ direkt davor. Subjekt „Kinder“ (Plural) → „können“.",
+            "en": "In the subordinate clause the modal is the finite verb and goes last, with the infinitive „hineingehen“ just before it. Plural subject „Kinder“ → „können“."
+          },
+          "vocab": [
+            "Erwachsene",
+            "Euro",
+            "Kind"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "wohingegen – Perfekt am Ende",
+          "sentence": "Im letzten Jahr ist der Umsatz gestiegen, wohingegen der Gewinn ___. (sinken – Perfekt)",
+          "correct": "gesunken ist",
+          "answers": [
+            "gesunken ist"
+          ],
+          "explanations": {
+            "tr": "sinken bir durum değişikliğidir ve Perfekt’te sein alır: ist gesunken. Yan cümlede çekimli yardımcı fiil ist en sona gider, Partizip II gesunken ondan önce durur.",
+            "de": "„sinken“ bildet das Perfekt mit „sein“. Im Nebensatz steht das finite Hilfsverb „ist“ am Ende, das Partizip „gesunken“ davor.",
+            "en": "„sinken“ forms the perfect with „sein“. In the subordinate clause the finite auxiliary „ist“ goes last, after the participle „gesunken“."
+          },
+          "vocab": [
+            "Jahr",
+            "Umsatz",
+            "Gewinn"
+          ]
+        },
+        {
+          "word": "während – Bedeutung",
+          "sentence": "Während er studierte, arbeitete er abends in einem Café. – Was drückt „während“ hier aus?",
+          "options": [
+            "eine Gleichzeitigkeit",
+            "einen Gegensatz",
+            "eine Folge"
+          ],
+          "correct": "eine Gleichzeitigkeit",
+          "explanations": {
+            "tr": "Özne aynı kişi (er) ve iki etkinlik aynı dönemde oluyor: okurken akşamları da çalışıyordu. Karşılaştırılan iki farklı durum yok; bu yüzden anlam zamandır.",
+            "de": "Dieselbe Person tut zwei Dinge im selben Zeitraum (studieren – im Café arbeiten). Es gibt keinen Gegensatz zwischen zwei Seiten; „während“ ist temporal.",
+            "en": "The same person does two things in the same period (studying – working in a café). Nothing is contrasted, so während is temporal."
+          },
+          "vocab": [
+            "Café"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Fehlerkorrektur",
+          "sentence": "Korrigiere: Mein Kollege fährt mit dem Auto, während fahre ich mit dem Fahrrad.",
+          "correct": "Mein Kollege fährt mit dem Auto, während ich mit dem Fahrrad fahre.",
+          "answers": [
+            "mein kollege fährt mit dem auto, während ich mit dem fahrrad fahre",
+            "mein kollege faehrt mit dem auto, waehrend ich mit dem fahrrad fahre"
+          ],
+          "explanations": {
+            "tr": "während yan cümle bağlacıdır. Arkasından önce özne ich gelir, çekimli fiil fahre cümlenin sonuna gider. „während fahre ich“ sırası zarflar içindir, während için yanlıştır.",
+            "de": "„während“ ist eine Subjunktion: erst das Subjekt „ich“, das finite Verb „fahre“ am Ende.",
+            "en": "„während“ is a subordinating conjunction: subject „ich“ first, finite verb „fahre“ at the end."
+          },
+          "vocab": [
+            "Kollege",
+            "Auto",
+            "Fahrrad"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "demgegenueber-hingegen-dagegen-3",
+      "title": {
+        "tr": "Übung 3 – demgegenüber / hingegen / dagegen",
+        "de": "Übung 3 – demgegenüber / hingegen / dagegen",
+        "en": "Übung 3 – demgegenüber / hingegen / dagegen"
+      },
+      "description": {
+        "tr": "Karşıtlık bildiren zarflar: demgegenüber, hingegen ve dagegen. Cümledeki yerlerini ve dagegen’in iki anlamını ayır.",
+        "de": "Adversative Adverbien demgegenüber, hingegen und dagegen: Stellung im Satz und die zwei Bedeutungen von dagegen.",
+        "en": "Contrastive adverbs demgegenüber, hingegen and dagegen: position in the sentence and the two meanings of dagegen."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel bis schwer",
+        "en": "Medium to hard"
+      },
+      "questions": [
+        {
+          "word": "dagegen – Konnektor",
+          "sentence": "Die Altstadt ist am Abend ruhig. ___ ist im Zentrum immer viel los.",
+          "options": [
+            "Dagegen",
+            "Obwohl",
+            "Wohingegen"
+          ],
+          "correct": "Dagegen",
+          "explanations": {
+            "tr": "Boşluktan sonra fiil ist geliyor; demek ki boşluğa ilk yeri dolduran bir zarf gerekiyor. Dagegen karşıtlık bildiren bir zarftır. Obwohl ve wohingegen yan cümle bağlacıdır; arkalarından fiil sona giderdi.",
+            "de": "Nach der Lücke folgt direkt das Verb „ist“: Gesucht ist ein Adverb auf Position 1. „Dagegen“ passt; „obwohl“ und „wohingegen“ würden das Verb ans Ende schicken.",
+            "en": "The verb „ist“ follows the gap directly, so an adverb in position 1 is needed. „Dagegen“ fits; obwohl and wohingegen would send the verb to the end."
+          },
+          "vocab": [
+            "Altstadt",
+            "Abend",
+            "Zentrum"
+          ]
+        },
+        {
+          "word": "hingegen – Stellung",
+          "sentence": "Die erste Wohnung ist groß. Welcher Satz folgt richtig?",
+          "options": [
+            "Die zweite hingegen ist sehr klein.",
+            "Hingegen die zweite ist sehr klein.",
+            "Die zweite ist sehr klein hingegen."
+          ],
+          "correct": "Die zweite hingegen ist sehr klein.",
+          "explanations": {
+            "tr": "hingegen özneden hemen sonra durabilir: „Die zweite hingegen“ ilk yeri birlikte doldurur ve fiil ist ikinci yerde kalır. Başa tek başına gelirse fiil hemen ardından gelmeliydi; cümlenin en sonuna ise konmaz.",
+            "de": "„Die zweite hingegen“ bildet zusammen Position 1, das Verb „ist“ folgt. Allein am Satzanfang bräuchte hingegen direkt das Verb; ans Satzende gehört es nicht.",
+            "en": "„Die zweite hingegen“ fills position 1 together and „ist“ follows. Alone at the start it would need the verb next; it does not go at the very end."
+          },
+          "vocab": [
+            "Wohnung"
+          ]
+        },
+        {
+          "word": "dagegen – zwei Bedeutungen",
+          "sentence": "Viele Bürger protestieren gegen das neue Projekt. Auch der Bürgermeister ist dagegen. – Was bedeutet „dagegen“ hier?",
+          "options": [
+            "gegen das Projekt",
+            "im Gegensatz dazu",
+            "aus diesem Grund"
+          ],
+          "correct": "gegen das Projekt",
+          "explanations": {
+            "tr": "Burada dagegen bir Pronominaladverb’dir: da + gegen = “ona karşı”, yani projeye karşı. gegen etwas sein kalıbındaki edatın yerini tutar. Karşıtlık bildiren bağlaç anlamı yok, çünkü belediye başkanı vatandaşlarla aynı görüşte.",
+            "de": "Hier ist „dagegen“ ein Pronominaladverb (gegen + das Projekt) aus „gegen etwas sein“. Es gibt keinen Gegensatz – der Bürgermeister denkt wie die Bürger.",
+            "en": "Here „dagegen“ is a pronominal adverb (gegen + the project) from „gegen etwas sein“. There is no contrast – the mayor agrees with the citizens."
+          },
+          "vocab": [
+            "Bürger",
+            "Projekt",
+            "Bürgermeister"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "demgegenüber – Satzbau",
+          "sentence": "Im Jahr 2015 arbeiteten nur wenige Angestellte im Homeoffice. Bilde den nächsten Satz: (demgegenüber / heute / arbeiten / fast die Hälfte / im Homeoffice)",
+          "correct": "Demgegenüber arbeitet heute fast die Hälfte im Homeoffice.",
+          "answers": [
+            "demgegenüber arbeitet heute fast die hälfte im homeoffice",
+            "demgegenueber arbeitet heute fast die haelfte im homeoffice",
+            "demgegenüber arbeiten heute fast die hälfte im homeoffice",
+            "demgegenueber arbeiten heute fast die haelfte im homeoffice",
+            "demgegenüber arbeitet fast die hälfte heute im homeoffice",
+            "demgegenueber arbeitet fast die haelfte heute im homeoffice",
+            "demgegenüber arbeiten fast die hälfte heute im homeoffice",
+            "demgegenueber arbeiten fast die haelfte heute im homeoffice"
+          ],
+          "explanations": {
+            "tr": "demgegenüber ilk yerde, fiil hemen ardından gelir, sonra özne fast die Hälfte. die Hälfte gramer olarak tekildir (arbeitet); konuşmada anlam yüzünden çoğul (arbeiten) de sık kullanılır, ikisi de kabul edilir.",
+            "de": "demgegenüber auf Position 1, das Verb direkt danach, dann das Subjekt. „die Hälfte“ ist grammatisch Singular („arbeitet“); der Plural nach Sinn („arbeiten“) ist ebenfalls üblich.",
+            "en": "demgegenüber in position 1, verb next, then the subject. „die Hälfte“ is grammatically singular („arbeitet“); the plural by meaning („arbeiten“) is also common."
+          },
+          "vocab": [
+            "Jahr",
+            "Angestellte",
+            "Homeoffice",
+            "Hälfte"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "hingegen – nach dem Subjekt",
+          "sentence": "Mein Bruder isst gern Fleisch. Beginne mit „Ich hingegen“ und ordne: (lebe / vegetarisch)",
+          "correct": "Ich hingegen lebe vegetarisch.",
+          "answers": [
+            "ich hingegen lebe vegetarisch"
+          ],
+          "explanations": {
+            "tr": "„Ich hingegen“ birlikte ilk yeri doldurur; bu yüzden çekimli fiil lebe hemen arkasından, ikinci yerde gelir.",
+            "de": "„Ich hingegen“ ist zusammen Position 1, das finite Verb „lebe“ folgt auf Position 2.",
+            "en": "„Ich hingegen“ fills position 1 together, so the finite verb „lebe“ comes second."
+          },
+          "vocab": [
+            "Bruder",
+            "Fleisch"
+          ]
+        },
+        {
+          "word": "Konnektortyp erkennen",
+          "sentence": "Welches Wort passt NICHT an den Anfang des zweiten Satzes? Die Nachfrage im Inland sank. (…) stieg der Export deutlich.",
+          "options": [
+            "Wohingegen",
+            "Demgegenüber",
+            "Dagegen"
+          ],
+          "correct": "Wohingegen",
+          "explanations": {
+            "tr": "Boşluktan sonra fiil stieg geliyor; burada ilk yeri dolduran bir zarf gerekir. Demgegenüber ve Dagegen zarftır ve uyar. Wohingegen ise yan cümle bağlacıdır; ayrıca yeni bir cümleye tek başına başlayamaz.",
+            "de": "Nach der Lücke folgt das Verb „stieg“, also wird ein Adverb gebraucht. „Demgegenüber“ und „Dagegen“ passen; „wohingegen“ ist eine Subjunktion und kann keinen selbstständigen Satz beginnen.",
+            "en": "The verb „stieg“ follows the gap, so an adverb is needed. Demgegenüber and Dagegen fit; wohingegen is a subordinating conjunction and cannot start an independent sentence."
+          },
+          "vocab": [
+            "Nachfrage",
+            "Inland",
+            "Export"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Fehlerkorrektur",
+          "sentence": "Korrigiere den zweiten Satz und beginne mit „Dagegen“: Das Hotel war teuer. Dagegen das Essen war sehr günstig.",
+          "correct": "Dagegen war das Essen sehr günstig.",
+          "answers": [
+            "dagegen war das essen sehr günstig",
+            "dagegen war das essen sehr guenstig",
+            "das hotel war teuer. dagegen war das essen sehr günstig",
+            "das hotel war teuer. dagegen war das essen sehr guenstig"
+          ],
+          "explanations": {
+            "tr": "Dagegen zarftır ve ilk yeri doldurur. Ana cümlede çekimli fiil ikinci yerde olmalı: Dagegen war … Özne das Essen fiilden sonraya geçer.",
+            "de": "„Dagegen“ besetzt Position 1, also folgt sofort das finite Verb „war“; das Subjekt „das Essen“ steht danach.",
+            "en": "„Dagegen“ fills position 1, so the finite verb „war“ follows at once and the subject „das Essen“ comes after it."
+          },
+          "vocab": [
+            "Hotel",
+            "Essen"
+          ]
+        },
+        {
+          "word": "demgegenüber – Stil",
+          "sentence": "Wo liest oder hört man „demgegenüber“ am häufigsten?",
+          "options": [
+            "in sachlichen Texten wie Berichten und Statistiken",
+            "in lockeren Gesprächen unter Freunden",
+            "nur in Fragesätzen"
+          ],
+          "correct": "in sachlichen Texten wie Berichten und Statistiken",
+          "explanations": {
+            "tr": "demgegenüber resmî ve yazılı bir zarftır; rapor, istatistik ve akademik metinlerde iki veriyi karşılaştırırken kullanılır. Arkadaş sohbetinde daha çok aber veya dagegen tercih edilir.",
+            "de": "„demgegenüber“ gehört zum formellen, schriftlichen Stil (Berichte, Statistiken, wissenschaftliche Texte). Im Gespräch sagt man eher „aber“ oder „dagegen“.",
+            "en": "„demgegenüber“ belongs to formal written style (reports, statistics, academic texts). In conversation people prefer aber or dagegen."
+          },
+          "vocab": [
+            "Text",
+            "Bericht",
+            "Statistik"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "hingegen – Perfekt",
+          "sentence": "Peter ist in die Stadt gezogen. Schreibe den Satz im Perfekt: Seine Schwester bleibt hingegen auf dem Land.",
+          "correct": "Seine Schwester ist hingegen auf dem Land geblieben.",
+          "answers": [
+            "seine schwester ist hingegen auf dem land geblieben",
+            "seine schwester hingegen ist auf dem land geblieben"
+          ],
+          "explanations": {
+            "tr": "bleiben Perfekt’te sein alır: ist geblieben. Çekimli ist ikinci yerde, Partizip II geblieben en sonda durur. hingegen ya fiilden sonra ya da doğrudan özneden sonra durabilir.",
+            "de": "„bleiben“ bildet das Perfekt mit „sein“: „ist“ auf Position 2, „geblieben“ am Ende. „hingegen“ steht nach dem Verb oder direkt nach dem Subjekt.",
+            "en": "„bleiben“ takes „sein“ in the perfect: „ist“ second, „geblieben“ at the end. „hingegen“ follows the verb or directly follows the subject."
+          },
+          "vocab": [
+            "Stadt",
+            "Schwester",
+            "Land"
+          ]
+        },
+        {
+          "word": "demgegenüber – Wortstellung",
+          "sentence": "Die Theorie klingt überzeugend. Welcher Satz folgt richtig?",
+          "options": [
+            "Demgegenüber zeigen die Daten ein anderes Bild.",
+            "Demgegenüber die Daten zeigen ein anderes Bild.",
+            "Demgegenüber die Daten ein anderes Bild zeigen."
+          ],
+          "correct": "Demgegenüber zeigen die Daten ein anderes Bild.",
+          "explanations": {
+            "tr": "demgegenüber zarftır ve ilk yerde durur; bu yüzden çekimli fiil zeigen hemen arkasından gelir. Fiilin sona gitmesi yalnızca yan cümle bağlaçlarında olur.",
+            "de": "demgegenüber ist ein Adverb auf Position 1; das finite Verb „zeigen“ folgt sofort. Verbendstellung gibt es nur nach Subjunktionen.",
+            "en": "demgegenüber is an adverb in position 1, so the finite verb „zeigen“ follows immediately. Verb-final order only follows subordinating conjunctions."
+          },
+          "vocab": [
+            "Theorie",
+            "Daten",
+            "Bild"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "insofern-als-4",
+      "title": {
+        "tr": "Übung 4 – insofern (als)",
+        "de": "Übung 4 – insofern (als)",
+        "en": "Übung 4 – insofern (als)"
+      },
+      "description": {
+        "tr": "insofern ile bir sözün hangi açıdan geçerli olduğunu belirt: insofern …, als ve “bu açıdan” anlamındaki insofern.",
+        "de": "Mit insofern den Gesichtspunkt angeben: insofern …, als und insofern als Adverb („in dieser Hinsicht“).",
+        "en": "Use insofern to name the respect in which something holds: insofern …, als and insofern as an adverb."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "questions": [
+        {
+          "word": "insofern …, als",
+          "sentence": "Das Ergebnis ist insofern überraschend, ___ niemand damit gerechnet hatte.",
+          "options": [
+            "als",
+            "wenn",
+            "ob"
+          ],
+          "correct": "als",
+          "explanations": {
+            "tr": "insofern ana cümlede bir ipucudur; ikinci parça her zaman als ile gelir: insofern …, als. “Şu bakımdan şaşırtıcı ki kimse bunu beklemiyordu.” als yan cümle kurar, fiil hatte sona gider.",
+            "de": "„insofern“ im Hauptsatz kündigt den Nebensatz mit „als“ an: insofern …, als. Das finite Verb „hatte“ steht am Ende.",
+            "en": "„insofern“ in the main clause points ahead to a clause with „als“: insofern …, als. The finite verb „hatte“ goes to the end."
+          }
+        },
+        {
+          "word": "insofern – Bedeutung",
+          "sentence": "„Du hast viel geübt. Insofern ist die gute Note keine Überraschung.“ – Was bedeutet „insofern“ hier?",
+          "options": [
+            "so gesehen / in dieser Hinsicht",
+            "trotzdem",
+            "vorher"
+          ],
+          "correct": "so gesehen / in dieser Hinsicht",
+          "explanations": {
+            "tr": "Tek başına cümlenin başındaki insofern, bir önceki bilgiye bakarak bir sonuç çıkarır: “bu açıdan bakınca, öyle düşününce”. trotzdem (yine de) karşıtlık bildirirdi; burada karşıtlık yok.",
+            "de": "Allein am Satzanfang bezieht sich „insofern“ auf die vorige Aussage: „so gesehen, in dieser Hinsicht“. Ein Gegensatz („trotzdem“) liegt nicht vor.",
+            "en": "On its own at the start, „insofern“ refers back to the previous statement: „seen that way, in that respect“. There is no contrast („trotzdem“)."
+          },
+          "vocab": [
+            "Note",
+            "Überraschung"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "insofern …, als",
+          "sentence": "Der Kurs war ___ hilfreich, als ich viele neue Wörter gelernt habe.",
+          "correct": "insofern",
+          "answers": [
+            "insofern",
+            "insoweit"
+          ],
+          "explanations": {
+            "tr": "Virgülden sonraki als, ana cümlede insofern’i (ya da aynı anlamdaki insoweit’ı) gerektirir: insofern hilfreich, als … “Şu bakımdan yararlıydı ki…”",
+            "de": "Das „als“ nach dem Komma verlangt im Hauptsatz das Korrelat „insofern“ (gleichbedeutend: „insoweit“).",
+            "en": "The „als“ after the comma requires the correlate „insofern“ (or the synonym „insoweit“) in the main clause."
+          },
+          "vocab": [
+            "Kurs",
+            "Wort"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "insofern …, als – Sätze verbinden",
+          "sentence": "Verbinde mit „insofern …, als“: Das Angebot ist interessant. Es enthält eine kostenlose Beratung.",
+          "correct": "Das Angebot ist insofern interessant, als es eine kostenlose Beratung enthält.",
+          "answers": [
+            "das angebot ist insofern interessant, als es eine kostenlose beratung enthält",
+            "das angebot ist insofern interessant, als es eine kostenlose beratung enthaelt",
+            "das angebot ist interessant, insofern als es eine kostenlose beratung enthält",
+            "das angebot ist interessant, insofern als es eine kostenlose beratung enthaelt"
+          ],
+          "explanations": {
+            "tr": "insofern ana cümlede sıfattan (interessant) önce durur; als ile başlayan yan cümlede çekimli fiil enthält sona gider. insofern als birlikte virgülden sonra da gelebilir.",
+            "de": "„insofern“ steht im Hauptsatz vor „interessant“; im als-Satz steht „enthält“ am Ende. Auch „…, insofern als …“ ist möglich.",
+            "en": "„insofern“ goes before „interessant“ in the main clause; in the als-clause „enthält“ goes last. „…, insofern als …“ is also possible."
+          },
+          "vocab": [
+            "Angebot",
+            "Beratung"
+          ]
+        },
+        {
+          "word": "insofern …, als – Wortstellung",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Die Lösung ist insofern einfach, als sie keine neue Software braucht.",
+            "Die Lösung ist insofern einfach, als braucht sie keine neue Software.",
+            "Die Lösung insofern ist einfach, als sie keine neue Software braucht."
+          ],
+          "correct": "Die Lösung ist insofern einfach, als sie keine neue Software braucht.",
+          "explanations": {
+            "tr": "Ana cümlede fiil ist ikinci yerde, insofern fiilden sonra gelir. als yan cümle kurduğu için braucht sona gider. „Die Lösung insofern ist“ sırasında fiil üçüncü yere kaymış.",
+            "de": "Im Hauptsatz steht „ist“ auf Position 2, „insofern“ danach. Im als-Satz steht „braucht“ am Ende.",
+            "en": "In the main clause „ist“ is second and „insofern“ follows it; in the als-clause „braucht“ goes last."
+          },
+          "vocab": [
+            "Lösung",
+            "Software"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "insofern – Position 1",
+          "sentence": "Ordne: (ist / die Kritik / berechtigt / insofern)",
+          "correct": "Insofern ist die Kritik berechtigt.",
+          "answers": [
+            "insofern ist die kritik berechtigt",
+            "die kritik ist insofern berechtigt"
+          ],
+          "explanations": {
+            "tr": "insofern bir zarftır. Başa gelirse ilk yeri doldurur ve çekimli fiil ist hemen arkasından gelir. Özne başta olursa insofern fiilden sonra durur; iki sıra da doğrudur.",
+            "de": "„insofern“ ist ein Adverb: am Anfang folgt sofort „ist“. Beginnt der Satz mit dem Subjekt, steht „insofern“ nach dem Verb.",
+            "en": "„insofern“ is an adverb: at the start it is followed at once by „ist“; if the subject comes first, „insofern“ follows the verb."
+          },
+          "vocab": [
+            "Kritik"
+          ]
+        },
+        {
+          "word": "inwiefern oder insofern?",
+          "sentence": "Wir müssen klären, ___ diese Regel heute noch sinnvoll ist.",
+          "options": [
+            "inwiefern",
+            "insofern",
+            "sofern"
+          ],
+          "correct": "inwiefern",
+          "explanations": {
+            "tr": "klären fiili bir dolaylı soru ister: “bu kuralın bugün ne ölçüde anlamlı olduğunu açıklığa kavuşturmalıyız”. inwiefern bir soru kelimesidir (ne ölçüde, hangi açıdan) ve dolaylı soruyu başlatır; fiil ist sona gider. insofern bir açıdan bildirir, sofern bir koşul bildirir; ikisi de klären’in nesnesi olamaz.",
+            "de": "„klären“ verlangt einen indirekten Fragesatz; „inwiefern“ (in welchem Maß, in welcher Hinsicht) leitet ihn ein, „ist“ steht am Ende. „insofern“ und „sofern“ können keinen Fragesatz einleiten.",
+            "en": "„klären“ needs an indirect question; „inwiefern“ (to what extent, in what respect) introduces it and „ist“ goes last. „insofern“ and „sofern“ cannot introduce a question."
+          },
+          "vocab": [
+            "Regel"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Fehlerkorrektur",
+          "sentence": "Korrigiere: Die Zahlen sind insofern wichtig, als sie zeigen den Trend.",
+          "correct": "Die Zahlen sind insofern wichtig, als sie den Trend zeigen.",
+          "answers": [
+            "die zahlen sind insofern wichtig, als sie den trend zeigen"
+          ],
+          "explanations": {
+            "tr": "als burada yan cümle bağlacıdır. Bu yüzden özne sie’den sonra nesne den Trend gelir, çekimli fiil zeigen cümlenin sonuna gider.",
+            "de": "Im als-Satz (Nebensatz) steht das finite Verb „zeigen“ am Ende, nach dem Objekt „den Trend“.",
+            "en": "In the als-clause the finite verb „zeigen“ goes to the end, after the object „den Trend“."
+          },
+          "vocab": [
+            "Zahl",
+            "Trend"
+          ]
+        },
+        {
+          "word": "insofern …, als – Bedeutung",
+          "sentence": "Was drückt „insofern …, als“ aus?",
+          "options": [
+            "den Gesichtspunkt, unter dem eine Aussage gilt",
+            "eine zeitliche Reihenfolge",
+            "einen Zweck"
+          ],
+          "correct": "den Gesichtspunkt, unter dem eine Aussage gilt",
+          "explanations": {
+            "tr": "insofern …, als bir sözün hangi açıdan doğru olduğunu söyler: “Proje şu bakımdan başarılıydı ki…”. Zaman sırası (nachdem) veya amaç (damit) bildirmez.",
+            "de": "„insofern …, als“ nennt den Gesichtspunkt, unter dem die Aussage gilt – keine Zeitfolge (nachdem) und keinen Zweck (damit).",
+            "en": "„insofern …, als“ names the respect in which a statement holds – not a time sequence (nachdem) or a purpose (damit)."
+          }
+        },
+        {
+          "type": "text",
+          "word": "insofern …, als – Perfekt",
+          "sentence": "Der Tag war insofern erfolgreich, als wir alle Aufgaben ___. (erledigen – Perfekt)",
+          "correct": "erledigt haben",
+          "answers": [
+            "erledigt haben"
+          ],
+          "explanations": {
+            "tr": "erledigen Perfekt’te haben alır. als yan cümle kurduğu için çekimli haben en sona gider; Partizip II erledigt ondan önce durur. Özne wir → haben.",
+            "de": "„erledigen“ bildet das Perfekt mit „haben“. Im als-Satz steht „haben“ (Subjekt „wir“) am Ende, das Partizip „erledigt“ davor.",
+            "en": "„erledigen“ takes „haben“ in the perfect. In the als-clause „haben“ (subject „wir“) goes last, after the participle „erledigt“."
+          },
+          "vocab": [
+            "Tag",
+            "Aufgabe"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sofern-soweit-5",
+      "title": {
+        "tr": "Übung 5 – sofern / soweit",
+        "de": "Übung 5 – sofern / soweit",
+        "en": "Übung 5 – sofern / soweit"
+      },
+      "description": {
+        "tr": "sofern ile koşul (… şartıyla), soweit ile ölçü ve bilgi sınırı (bildiğim kadarıyla) bildir.",
+        "de": "sofern für Bedingungen, soweit für Umfang und Wissensstand („soweit ich weiß“).",
+        "en": "sofern for conditions, soweit for extent and state of knowledge („soweit ich weiß“)."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel bis schwer",
+        "en": "Medium to hard"
+      },
+      "questions": [
+        {
+          "word": "sofern – Bedingung",
+          "sentence": "Ich komme gern mit, ___ ich rechtzeitig mit der Arbeit fertig bin.",
+          "options": [
+            "sofern",
+            "sodass",
+            "wohingegen"
+          ],
+          "correct": "sofern",
+          "explanations": {
+            "tr": "Gelmem bir şarta bağlı: işi zamanında bitirirsem. Koşul bildiren bağlaç sofern’dir (= vorausgesetzt, dass). sodass sonuç, wohingegen karşıtlık bildirir.",
+            "de": "Das Mitkommen hängt von einer Bedingung ab: „sofern“ = „vorausgesetzt, dass“. „sodass“ nennt eine Folge, „wohingegen“ einen Gegensatz.",
+            "en": "Coming along depends on a condition: „sofern“ = „provided that“. „sodass“ states a result, „wohingegen“ a contrast."
+          },
+          "vocab": [
+            "Arbeit"
+          ]
+        },
+        {
+          "word": "soweit – Wissensstand",
+          "sentence": "___ ich weiß, beginnt der Kurs erst im März.",
+          "options": [
+            "Soweit",
+            "Indem",
+            "Wohingegen"
+          ],
+          "correct": "Soweit",
+          "explanations": {
+            "tr": "„Soweit ich weiß“ kalıplaşmış bir ifadedir: “bildiğim kadarıyla”. Bilginin sınırını gösterir. indem yöntem, wohingegen karşıtlık bildirir.",
+            "de": "„Soweit ich weiß“ ist eine feste Wendung und begrenzt die Aussage auf den eigenen Wissensstand. „indem“ nennt ein Mittel, „wohingegen“ einen Gegensatz.",
+            "en": "„Soweit ich weiß“ is a fixed phrase limiting the statement to one’s own knowledge. „indem“ states a means, „wohingegen“ a contrast."
+          },
+          "vocab": [
+            "Kurs",
+            "März"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "sofern – Verb am Ende",
+          "sentence": "Die Lieferung ist kostenlos, sofern die Bestellung mehr als 50 Euro ___. (kosten)",
+          "correct": "kostet",
+          "answers": [
+            "kostet"
+          ],
+          "explanations": {
+            "tr": "sofern yan cümle kurar; çekimli fiil sona gider. Özne die Bestellung tekil olduğu için kosten → kostet.",
+            "de": "Im sofern-Satz steht das finite Verb am Ende; Subjekt „die Bestellung“ (3. Person Singular) → „kostet“.",
+            "en": "In the sofern-clause the finite verb goes last; the subject „die Bestellung“ is singular → „kostet“."
+          },
+          "vocab": [
+            "Lieferung",
+            "Bestellung",
+            "Euro"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "sofern – Nebensatz zuerst",
+          "sentence": "Verbinde mit „sofern“ und beginne mit dem Nebensatz: Das Wetter bleibt stabil. Wir starten morgen früh.",
+          "correct": "Sofern das Wetter stabil bleibt, starten wir morgen früh.",
+          "answers": [
+            "sofern das wetter stabil bleibt, starten wir morgen früh",
+            "sofern das wetter stabil bleibt, starten wir morgen frueh"
+          ],
+          "explanations": {
+            "tr": "Yan cümle başta: Sofern das Wetter stabil bleibt (fiil sonda). Yan cümle ana cümlenin ilk yerini doldurduğu için virgülden sonra hemen çekimli fiil starten gelir, sonra özne wir.",
+            "de": "Der sofern-Satz steht vorn (Verb am Ende) und besetzt Position 1. Deshalb folgt nach dem Komma direkt „starten“, dann „wir“.",
+            "en": "The sofern-clause comes first (verb last) and fills position 1, so „starten“ follows the comma directly, then „wir“."
+          },
+          "vocab": [
+            "Wetter"
+          ]
+        },
+        {
+          "word": "sofern – Bedeutung",
+          "sentence": "Was bedeutet „sofern“?",
+          "options": [
+            "unter der Bedingung, dass",
+            "obwohl",
+            "nachdem"
+          ],
+          "correct": "unter der Bedingung, dass",
+          "explanations": {
+            "tr": "sofern bir koşul bildirir: “… şartıyla, … olduğu takdirde”. Anlamca falls ve vorausgesetzt, dass ile aynı alandadır; daha resmîdir.",
+            "de": "„sofern“ ist konditional: „unter der Bedingung, dass“ – wie „falls“ oder „vorausgesetzt, dass“, aber eher formell.",
+            "en": "„sofern“ is conditional: „on condition that“ – like falls or vorausgesetzt, dass, but more formal."
+          }
+        },
+        {
+          "type": "text",
+          "word": "soweit / sofern",
+          "sentence": "Ergänze ein Wort: Wir helfen Ihnen gern, ___ es uns möglich ist.",
+          "correct": "soweit",
+          "answers": [
+            "soweit",
+            "sofern"
+          ],
+          "explanations": {
+            "tr": "İki cevap da doğrudur. soweit “mümkün olduğu ölçüde”, sofern “mümkün olduğu takdirde” anlamını verir. Yan cümlede fiil ist sondadır.",
+            "de": "Beide Lösungen sind richtig: „soweit“ betont den Umfang („in dem Maß, wie“), „sofern“ die Bedingung. Das Verb „ist“ steht am Ende.",
+            "en": "Both answers are correct: „soweit“ stresses the extent, „sofern“ the condition. The verb „ist“ stands at the end."
+          }
+        },
+        {
+          "type": "text",
+          "word": "sofern – Hauptsatz danach",
+          "sentence": "Ergänze den Hauptsatz: Sofern Sie Fragen haben, ___ (Sie – uns – gern – anrufen – können)",
+          "correct": "können Sie uns gern anrufen",
+          "answers": [
+            "können sie uns gern anrufen",
+            "koennen sie uns gern anrufen"
+          ],
+          "explanations": {
+            "tr": "Yan cümle ilk yeri doldurur; virgülden sonra çekimli modal fiil können gelir, sonra özne Sie. Zamir nesne uns özneden hemen sonra durur, mastar anrufen en sonda.",
+            "de": "Der Nebensatz ist Position 1; es folgen das Modalverb „können“, das Subjekt „Sie“, das Pronomen „uns“ und am Ende der Infinitiv „anrufen“.",
+            "en": "The subordinate clause is position 1; then the modal „können“, the subject „Sie“, the pronoun „uns“ and finally the infinitive „anrufen“."
+          },
+          "vocab": [
+            "Frage"
+          ]
+        },
+        {
+          "word": "soweit – Wortstellung",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Soweit ich mich erinnere, war das Treffen am Dienstag.",
+            "Soweit ich erinnere mich, war das Treffen am Dienstag.",
+            "Soweit erinnere ich mich, war das Treffen am Dienstag."
+          ],
+          "correct": "Soweit ich mich erinnere, war das Treffen am Dienstag.",
+          "explanations": {
+            "tr": "soweit yan cümle bağlacıdır: özne ich, dönüşlü zamir mich, çekimli fiil erinnere en sonda. Ardından ana cümle virgülden sonra fiille (war) başlar.",
+            "de": "„soweit“ ist eine Subjunktion: „ich mich erinnere“ mit dem finiten Verb am Ende. Danach beginnt der Hauptsatz mit „war“.",
+            "en": "„soweit“ is a subordinating conjunction: „ich mich erinnere“ with the finite verb last; the main clause then starts with „war“."
+          },
+          "vocab": [
+            "Treffen",
+            "Dienstag"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Fehlerkorrektur",
+          "sentence": "Korrigiere: Sofern regnet es nicht, grillen wir im Garten.",
+          "correct": "Sofern es nicht regnet, grillen wir im Garten.",
+          "answers": [
+            "sofern es nicht regnet, grillen wir im garten"
+          ],
+          "explanations": {
+            "tr": "sofern yan cümle bağlacıdır, zarf değildir. Özne es hemen sofern’den sonra gelir, olumsuzluk nicht ve çekimli fiil regnet sona gider.",
+            "de": "„sofern“ ist eine Subjunktion: „es nicht regnet“ mit Verbendstellung.",
+            "en": "„sofern“ is a subordinating conjunction: „es nicht regnet“ with the verb at the end."
+          },
+          "vocab": [
+            "Garten"
+          ]
+        },
+        {
+          "word": "sofern – Bedingung",
+          "sentence": "Die Teilnahme ist kostenlos, ___ Sie sich bis Freitag anmelden.",
+          "options": [
+            "sofern",
+            "obwohl",
+            "wohingegen"
+          ],
+          "correct": "sofern",
+          "explanations": {
+            "tr": "Ücretsiz katılım bir şarta bağlı: cumaya kadar kayıt olmak. Bu yüzden koşul bildiren sofern doğrudur. obwohl (rağmen) ve wohingegen (oysa) anlamı bozar.",
+            "de": "Die kostenlose Teilnahme hängt von der Anmeldung bis Freitag ab – eine Bedingung, also „sofern“. „obwohl“ und „wohingegen“ passen inhaltlich nicht.",
+            "en": "Free participation depends on registering by Friday – a condition, so „sofern“. „obwohl“ and „wohingegen“ do not fit the meaning."
+          },
+          "vocab": [
+            "Teilnahme",
+            "Freitag"
+          ]
+        }
+      ]
+    }
+  ]
+}

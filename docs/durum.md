@@ -2,6 +2,13 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-16 · B2 İleri Konnektoren, pilot: ilk 5 paket (dal `claude/b2-konnektoren`, birleştirilmedi)
+
+- **Paketler (`data/b2/konnektoren-b2.json`, 50 soru):** 1 Konnektortyp und Verbstellung · 2 wohingegen / während · 3 demgegenüber / hingegen / dagegen · 4 insofern (als) · 5 sofern / soweit. Her pakette 3–5 seçmeli (3 seçenek) ve yazılı sorular; her sorunun kendi TR/DE/EN açıklaması (fiil türü, özne, fiilin yeri, anlam ipucu). Konu katalogda hâlâ "Hazırlanıyor" (dosya yolu eklendi, kart kapalı); 20 paket ve ders bitince "hazır" olacak. Kalan paketler: 6 indem / dadurch dass · 7 obgleich / wenngleich · 8 zwar … aber / nichtsdestotrotz · 9 sodass / so … dass · 10 folglich / infolgedessen · 11 es sei denn / vorausgesetzt, dass / angenommen, dass · 12 zumal / umso mehr, als · 13 je nachdem · 14 ohne dass / anstatt dass · 15–20 karışık ve tekrar.
+- **Tek doğru cevap:** Seçmeli sorularda yanlış seçenekler ya fiil sırasını bozuyor ya da anlamca uymuyor; aynı boşluğa iki bağlacın uyabildiği durumlarda (ör. soweit/sofern, insofern/insoweit) soru yazılı yapıldı ve iki cevap da kabul ediliyor. "Insofern …?" yankı sorusu riski olan soru dolaylı soruya (klären, inwiefern) çevrildi.
+- **Kelime listesi:** 20 yeni isim `data/sozluk.json`'a `"checked": false` ile eklendi; 4'ü "emin değilim" (Erwachsene, Inland, Konkurrenz, Note) ve tablonun en üstünde (`docs/sozluk-bekleyen.csv`). Öğretmenin isteğiyle artık yalnızca kontrol edilmiş kelimeler gösteriliyor (`js/quiz.js` → vocabHtml; önceden "emin değilim" olmayan kelimeler kontrol beklemeden görünüyordu). Mevcut 1249 kelimenin hepsi kontrol edilmiş olduğu için görünen listeler değişmedi. AGENTS.md ve `scripts/sozluk.mjs` açıklamaları buna göre güncellendi. Sürümler: `quiz.js` 32, `sozluk.json?v=2`.
+- **Test:** yeni `tests/alistirma-b2-yeni.mjs` (50 sorunun hepsi tarayıcıda: her paketin ilk seçmeli ve ilk yazılı sorusu yanlış, yazılı Enter ile, kendi açıklaması; diğerleri doğru cevapla kabul; kelime listesinde yalnızca kontrol edilmiş kelimeler; DE/EN açıklama; 390/1440 açık/koyu taşma). `tests/vocab.mjs` yeni kurala göre güncellendi ve geçti. sozluk --check, check-grammar, build-search-index --check, check-versions geçti.
+
 ## 2026-11-16 · Dil sürümleri, Aşama 2 / PR 4: SSS (DE/EN) – Aşama 2 tamamlandı
 
 - **Yeni sayfalar:** `/de/faq/` ("Sie"; ayrıca "Schule und Eltern" bölümü) ve `/en/faq/`. FAQPage şeması `<details>` bloklarından otomatik. `/sss/`'e hreflang eklendi.

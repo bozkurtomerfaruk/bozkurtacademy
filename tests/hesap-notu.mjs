@@ -78,12 +78,12 @@ for (const [lang, e] of Object.entries(EXPECT)) {
   }
   await ctx.close();
 }
-// Menüdeki "Giriş" bağlantısı genel sayfalarda gizli kalır (giris.html'in kendi menüsünde zaten bulunulan sayfa olarak görünür).
+// Menüdeki "Giriş" bağlantısı her sayfada görünür (ayrıntılı kontrol: tests/giris-baglantisi.mjs).
 {
   const { ctx, page } = await newPage();
   for (const p of ['/', '/iletisim/', '/de/kontakt/']) {
     await page.goto(`${BASE}${p}`); await page.waitForTimeout(400);
-    ok(await page.locator('#navAccount').isHidden(), `${p}: menüdeki Giriş bağlantısı gizli`);
+    ok(await page.locator('#navAccount').isVisible(), `${p}: menüdeki Giriş bağlantısı görünür`);
   }
   await ctx.close();
 }

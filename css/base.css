@@ -212,19 +212,22 @@ html[data-theme="dark"] .academy-theme .brand-logo-dark{display:block}
 .academy-theme .theme-toggle .theme-icon-sun,.academy-theme .theme-toggle.is-dark .theme-icon-moon{display:none}
 .academy-theme .theme-toggle.is-dark .theme-icon-sun{display:block}
 .academy-theme .menu-toggle{display:none;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:0 14px;border:0;border-radius:var(--ba-radius-small);background:var(--ba-paper);color:var(--ba-ink);font:600 15px var(--ba-sans);cursor:pointer;touch-action:manipulation}
+/* Desktop menu: all links, including Giriş/Panelim/Öğretmen paneli, fit on one line next to the CTA and the language
+   buttons in TR, DE and EN (checked from 1021 to 1700 px). Narrower desktops use tighter links and hide the brand text. */
 @media(min-width:1021px){
-  .academy-theme .topbar .nav{display:grid;grid-template-columns:220px minmax(0,1fr) auto;align-items:center;gap:12px}
+  .academy-theme .topbar .nav{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:10px}
   .academy-theme .topbar .nav-links{display:flex;justify-content:center;flex-wrap:nowrap;gap:2px}
-  .academy-theme .topbar .nav-link{white-space:nowrap}
+  .academy-theme .topbar .nav-link{white-space:nowrap;padding:8px}
 }
-/* Narrow desktops: all menu links (with Blog and Giriş/Panelim) still fit on one line next to the CTA and language buttons */
+@media(min-width:1021px) and (max-width:1499px){
+  .academy-theme .topbar .nav-link{padding:8px 5px;font-size:14px}
+  .academy-theme .topbar .nav-cta{padding-left:12px;padding-right:12px}
+}
 @media(min-width:1021px) and (max-width:1365px){
-  .academy-theme .topbar .nav{grid-template-columns:auto minmax(0,1fr) auto}
-  .academy-theme .topbar .nav-link{padding:8px 6px;font-size:14px}
-}
-@media(min-width:1021px) and (max-width:1120px){
   .academy-theme .topbar .brand{width:auto}
   .academy-theme .topbar .brand-title{display:none}
+  .academy-theme .topbar .nav-links{gap:0}
+  .academy-theme .topbar .nav-link{padding:8px 4px;font-size:13.5px}
 }
 @media(max-width:1020px){
   .academy-theme .nav{display:flex;flex-direction:row;align-items:center;flex-wrap:wrap;gap:10px}

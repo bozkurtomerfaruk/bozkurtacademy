@@ -36,7 +36,7 @@
   <link rel="preload" href="/fonts/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css?v=13" />
-  <link rel="stylesheet" href="/css/base.css?v=13" />
+  <link rel="stylesheet" href="/css/base.css?v=14" />
   <link rel="stylesheet" href="/css/landing.css?v=1" />
   <link rel="stylesheet" href="/css/blog.css?v=6" />
   <script type="application/ld+json">
@@ -134,8 +134,8 @@
           <a class="nav-link active" href="/blog/" aria-current="page" data-i18n="navBlog">Blog</a>
           <a class="nav-link" href="/hakkimda/" data-i18n="navAbout">Hakkımda</a>
           <a class="nav-link" href="/iletisim/" data-i18n="navContact">İletişim</a>
-          <!-- Quiet launch: the account link stays hidden until the privacy policy is final. Login pages still open by URL. -->
-          <a class="nav-link nav-account" href="/giris.html" id="navAccount" data-i18n="navLogin" hidden>Giriş</a>
+          <!-- Hesap bağlantısı: ziyaretçide "Giriş"; daha önce giriş yapmış öğrencide "Panelim", öğretmende "Öğretmen paneli" (js/app.js → accountNav). -->
+          <a class="nav-link nav-account" href="/giris.html" id="navAccount" data-i18n="navLogin">Giriş</a>
         </div>
         <div class="nav-actions">
         <a class="btn primary nav-cta" href="/iletisim/" data-i18n="ctaFreeInfo">Ücretsiz bilgi al</a>
@@ -321,7 +321,7 @@
     </footer>
     <a class="ba-sticky-cta btn primary" href="/iletisim/" data-i18n="ctaFreeInfo">Ücretsiz bilgi al</a>
     </div>
-  <script src="/js/app.js?v=48"></script>
+  <script src="/js/app.js?v=49"></script>
   <script src="/js/theme.js?v=10"></script>
   <script defer data-goatcounter="https://bozkurtacademy.goatcounter.com/count" data-goatcounter-settings='{"no_onload": true}' src="/js/vendor/count.js?v=2.7.0"></script>
   <script defer src="/js/analytics.js?v=7"></script>

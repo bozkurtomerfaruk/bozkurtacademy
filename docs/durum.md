@@ -2,6 +2,15 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-16 · Menüdeki "Giriş" bağlantısı her sayfada görünür
+
+- **Bağlantı (#navAccount):** "Quiet launch" gizlemesi kaldırıldı; üretilen bütün sayfalarda (TR/DE/EN), ana sayfada ve elle yazılmış sayfalarda görünür, mobil menüde de.
+- **Yazı:** Ziyaretçide "Giriş / Anmelden / Sign in". Daha önce giriş yapmış öğrencide "Panelim", öğretmende "Öğretmen paneli". `js/app.js` → `accountNav` bunu yalnızca tarayıcıdaki ipucundan (`baAccount`) okur; adresler mutlak (`/panel.html`, `/ogretmen.html`), /de/ ve /en/ altında da çalışır. Ana sayfada `js/account/session.js` durumu Firebase ile ayrıca doğrulamaya devam ediyor.
+- **Firebase:** Ziyaretçide yine yalnızca giriş/kayıt sayfası açılınca yükleniyor. (Öğretmenin `/yonetim/yorumlar/` sayfası giriş gerektirdiği için Firebase'i zaten kendisi yüklüyordu; değişmedi.)
+- **Menü sığması:** Bağlantı eklenince Almanca menü masaüstünde taşıyordu. Almanca menü etiketleri kısaltıldı ("Unterricht", "Prüfungen"; sayfa başlıkları değişmedi), masaüstü menü aralıkları `css/base.css`'te yeniden ayarlandı; TR/DE/EN, ziyaretçi/öğretmen, 1024–1700 px'te taşma yok.
+- **Test:** `tests/giris-baglantisi.mjs` (görünürlük, dil, rol, mobil menü, Firebase isteği yok, masaüstü menü taşması). `tests/hesap-notu.mjs` artık bağlantının görünür olmasını bekliyor. Sürümler: `app.js` 49, `base.css` 14.
+- **Bilinen (bu işten bağımsız):** `tests/schreiben-account.mjs` main'de de ara sıra "kaydedildi notu" adımında düşüyor (yapay zekâ servisine erişilemeyen ortamda zamanlama); CI'da çalışmıyor.
+
 ## 2026-11-16 · Dil sürümleri, Aşama 2 / PR 3: A1–B2 kurs sayfaları (DE/EN)
 
 - **Yeni sayfalar:** `/de/deutschkurs-a1/` … `/de/deutschkurs-b2/`, `/en/german-course-a1/` … `/en/german-course-b2/` (8 sayfa). Türkçe sayfalar değişmedi; hreflang ve sitemap otomatik.

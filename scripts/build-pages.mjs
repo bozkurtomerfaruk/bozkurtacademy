@@ -17,7 +17,7 @@ import { CSP } from './csp.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const check = process.argv.includes('--check');
 const SITEMAP_DATE = '2026-11-04';
-const V = { themeInit: 1, html: 1, style: 13, base: 13, landing: 1, app: 48, theme: 10, analytics: 7, a1lessons: 19, a1css: 8, grammarPages: 3, blog: 6 };
+const V = { themeInit: 1, html: 1, style: 13, base: 14, landing: 1, app: 49, theme: 10, analytics: 7, a1lessons: 19, a1css: 8, grammarPages: 3, blog: 6 };
 const OG_IMAGE = `${SITE}/images/og-bozkurt-academy.jpg`;
 
 const SECURITY = `
@@ -97,8 +97,8 @@ function header({ spa = false, current = null, langSwitch = true, lang = 'tr' } 
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteMenu" data-i18n="menuOpen">${L(lang, 'menuOpen', 'Menü')}</button>
         <div class="nav-links" id="siteMenu">
 ${links}
-          <!-- Quiet launch: the account link stays hidden until the privacy policy is final. Login pages still open by URL. -->
-          <a class="nav-link nav-account" href="/giris.html" id="navAccount" data-i18n="navLogin" hidden>${L(lang, 'navLogin', 'Giriş')}</a>
+          <!-- Hesap bağlantısı: ziyaretçide "Giriş"; daha önce giriş yapmış öğrencide "Panelim", öğretmende "Öğretmen paneli" (js/app.js → accountNav). -->
+          <a class="nav-link nav-account" href="/giris.html" id="navAccount" data-i18n="navLogin">${L(lang, 'navLogin', 'Giriş')}</a>
         </div>
         <div class="nav-actions">
         <a class="btn primary nav-cta" href="${localHref('/iletisim/', lang)}" data-i18n="ctaFreeInfo">${L(lang, 'ctaFreeInfo', 'Ücretsiz bilgi al')}</a>

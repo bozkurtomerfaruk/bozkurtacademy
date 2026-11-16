@@ -631,10 +631,10 @@ const translations = {
   de: {
     brandSub:'Ein klarer Weg zum Deutschlernen',
     navHome:'Startseite',
-    navLessons:'Deutschunterricht',
+    navLessons:'Unterricht',
     navGrammar:'Grammatik',
     navExercises:'Übungen',
-    navExams:'Prüfungsvorbereitung',
+    navExams:'Prüfungen',
     navBlog:'Blog',
     homeBlogTitle:'Neu im Blog',
     homeBlogIntro:'Beiträge auf Türkisch rund ums Deutschlernen und Prüfungen.',
@@ -2244,6 +2244,22 @@ document.addEventListener('DOMContentLoaded', ()=>{
   });
 
   const startPage=pageFromHash();
+  accountNav();
   applyLanguage(currentLang);
   if(hasPages()) showPage(startPage, {historyMode:'replace', scroll:false});
 });
+
+// Menüdeki hesap bağlantısı her sayfada: ziyaretçide "Giriş", daha önce giriş yapmış öğrencide "Panelim", öğretmende
+// "Öğretmen paneli". Yalnızca tarayıcıdaki ipucu (localStorage baAccount, js/account/common.js → setHint) okunur;
+// Firebase yüklenmez. Hesap sayfalarının kendi (etkin) bağlantısına dokunulmaz. Ana sayfada js/account/session.js
+// giriş durumunu Firebase ile doğrulayıp bağlantıyı ayrıca günceller.
+function accountNav(){
+  const link=document.getElementById('navAccount');
+  if(!link || link.classList.contains('active')) return;
+  let role=null;
+  try{ role=localStorage.getItem('baAccount'); }catch(_){}
+  const [href, key] = role==='teacher' ? ['/ogretmen.html','navTeacher'] : role==='student' ? ['/panel.html','navPanel'] : ['/giris.html','navLogin'];
+  link.setAttribute('href', href);
+  link.dataset.i18n=key;
+  link.textContent=uiT(key);
+}

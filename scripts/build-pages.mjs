@@ -17,7 +17,7 @@ import { CSP } from './csp.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const check = process.argv.includes('--check');
 const SITEMAP_DATE = '2026-11-04';
-const V = { themeInit: 1, html: 1, style: 13, base: 13, landing: 1, app: 45, theme: 10, analytics: 7, a1lessons: 19, a1css: 8, grammarPages: 3, blog: 6 };
+const V = { themeInit: 1, html: 1, style: 13, base: 13, landing: 1, app: 46, theme: 10, analytics: 7, a1lessons: 19, a1css: 8, grammarPages: 3, blog: 6 };
 const OG_IMAGE = `${SITE}/images/og-bozkurt-academy.jpg`;
 
 const SECURITY = `
@@ -135,6 +135,7 @@ ${groups}
       <div class="footer-meta">
         <nav class="footer-links" aria-label="${L(lang, 'footerLegal', 'Yasal bilgiler')}" data-i18n-aria="footerLegal">
           <a href="/privacy.html" data-i18n="footerPrivacy">${L(lang, 'footerPrivacy', 'Gizlilik politikası')}</a>
+          <a href="/impressum/"${current === '/impressum/' ? ' aria-current="page"' : ''} data-i18n="footerImprint">${L(lang, 'footerImprint', 'Künye (Impressum)')}</a>
         </nav>
         <span>© 2026 Bozkurt Academy</span>
       </div>
@@ -290,13 +291,14 @@ for (const [name, group] of Object.entries(ALT_GROUPS)) {
   const missing = Object.keys(LANG_NAMES).filter(l => !group[l]);
   if (missing.length) langErrors.push(`site-pages.mjs: "${name}" grubunda eksik dil: ${missing.join(', ')}`);
 }
+const placeholderErrors = [];
 for (const page of PAGES) {
   const file = path.join(root, page.path, 'index.html');
   let html = fs.readFileSync(file, 'utf8');
   const lang = page.lang || 'tr';
   // <html lang> sayfanın diliyle aynı olmalı; Almanca/İngilizce sayfa data-ba-fixed-lang ile işaretlenir.
   const htmlTag = /<html[^>]*>/.exec(html)?.[0] || '';
-  if (!htmlTag.includes(`lang="${lang}"`) || !htmlTag.includes(`data-ba-fixed-lang="${lang}"`)) langErrors.push(`${page.path}: <html lang="${lang}" data-ba-fixed-lang="${lang}"> olmalı (şu an: ${htmlTag})`);
+  if (!page.mixedLang && (!htmlTag.includes(`lang="${lang}"`) || !htmlTag.includes(`data-ba-fixed-lang="${lang}"`))) langErrors.push(`${page.path}: <html lang="${lang}" data-ba-fixed-lang="${lang}"> olmalı (şu an: ${htmlTag})`);
   // Almanca/İngilizce içerikte, o dilde sürümü olan sayfaya Türkçe adresle bağlantı verilmesin.
   if (lang !== 'tr') {
     const body = html.split('İÇERİK BAŞLANGICI')[1] || '';
@@ -315,6 +317,11 @@ for (const page of PAGES) {
   html = fill(html, 'breadcrumb', breadcrumb(page), file);
   html = fill(html, 'footer', footer({ current: page.path, sticky: !page.noStickyCta, lang }), file);
   html = fill(html, 'scripts', scripts(page), file);
+  if (page.noPlaceholders) {
+    const body = html.split('İÇERİK BAŞLANGICI')[1]?.split('<!-- İÇERİK SONU -->')[0]?.replace(/^[\s\S]*?-->/, '') || ''; // talimat yorumunun kalanı sayılmaz
+    const left = [...new Set(body.match(/\[[^\]<>]+\]/g) || [])];
+    if (left.length) placeholderErrors.push(`${page.path}: doldurulmamış yer tutucu: ${left.join(', ')}`);
+  }
   outputs.push([file, html]);
 }
 // Menü ve footer'ı paylaşan diğer sayfalar (sitemap'e girmez). Yönetim sayfası: sabit iletişim düğmesi yok.
@@ -365,7 +372,7 @@ for (const page of [BLOG.index, ...BLOG.posts]) {
 }
 const blogUrls = BLOG.published.length ? [{ path: BLOG.index.path, updated: BLOG.published[0].updated || BLOG.published[0].date }, ...BLOG.published.map(p => ({ path: p.path, updated: p.updated || p.date }))] : [];
 
-const urls = [{ path: '/', updated: '2026-11-10' }, ...PAGES, ...GRAMMAR.pages.map(p => ({ path: p.path, updated: GRAMMAR_DATE })), ...blogUrls].map(p => `  <url>\n    <loc>${SITE}${p.path}</loc>\n    <lastmod>${p.updated || SITEMAP_DATE}</lastmod>\n  </url>`).join('\n');
+const urls = [{ path: '/', updated: '2026-11-10' }, ...PAGES.filter(p => !p.noindex), ...GRAMMAR.pages.map(p => ({ path: p.path, updated: GRAMMAR_DATE })), ...blogUrls].map(p => `  <url>\n    <loc>${SITE}${p.path}</loc>\n    <lastmod>${p.updated || SITEMAP_DATE}</lastmod>\n  </url>`).join('\n');
 outputs.push([path.join(root, 'blog/feed.xml'), blogFeed(BLOG.published, BLOG.index, SITE)]);
 outputs.push([path.join(root, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`]);
 
@@ -412,4 +419,9 @@ for (const [file, html] of outputs) {
 }
 if (check && stale) { console.error('node scripts/build-pages.mjs çalıştır ve sonucu commit et.'); process.exit(1); }
 if (langErrors.length) { console.error('Dil sürümleri:\n  ' + langErrors.join('\n  ')); process.exit(1); }
+// Impressum gibi yasal sayfalar yer tutucuyla yayına çıkmasın: yazarken uyar, --check'te (CI) hata ver.
+if (placeholderErrors.length) {
+  console.error(placeholderErrors.join('\n'));
+  if (check) process.exit(1);
+}
 console.log(`PASS: ${PAGES.length} statik sayfa, ${GRAMMAR.pages.length} gramer sayfası ve ${BLOG.posts.length + 1} blog sayfası${check ? ' güncel' : ''}.`);

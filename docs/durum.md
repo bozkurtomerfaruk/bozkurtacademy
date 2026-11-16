@@ -11,8 +11,16 @@
 - **Site içi bağlantılar:** Seçilen dil DE/EN ise "İletişim", "Hakkımda", "Ücretsiz bilgi al" gibi bağlantılar JavaScript ile o dilin sürümüne gider (Google'ın gördüğü HTML değişmez). Liste `js/app.js` → `BA_ALTS`, `build-pages.mjs` üretir; değişince app.js sürümü artırılmalı.
 - **Kontroller (`build-pages --check`):** eksik dil sürümü, yanlış `<html lang>`, Almanca/İngilizce içerikte o dilde sürümü olan sayfaya Türkçe adresle bağlantı.
 - **İletişim formu:** Sayfa kendi mesajlarını `data-msg-*` ile verir ("Sie"); e-posta konusuna sayfa dili eklenir: "(DE)", "(EN)".
-- **Test:** `node tests/dil-secimi.mjs` genişletildi (sürümler arası geçiş, notlar, bağlantılar, DE form gönderimi). Sürüm: `app.js` 45.
+- **Test:** `node tests/dil-secimi.mjs` genişletildi (sürümler arası geçiş, notlar, bağlantılar, DE form gönderimi). Sürüm: `app.js` 46 (Impressum ile birlikte).
 - **Sırada:** PR 2 – Online-Unterricht, Einzelunterricht, Gruppenkurs, Prüfungsvorbereitung.
+
+## 2026-11-16 · Impressum (künye) sayfası
+
+- **Sayfa:** `/impressum/` (Almanca yasal metin + Türkçe çeviri, tek sayfa). Arama motorlarında listelenmez (`noindex`), sitemap'e girmez. Bağlantı her sayfanın alt bilgisinde "Yasal bilgiler" bölümünde: TR "Künye (Impressum)", DE "Impressum", EN "Legal notice (Impressum)".
+- **İçerik:** § 5 DDG bilgileri, iletişim, vergi numaraları (varsa), § 18 Abs. 2 MStV sorumlu kişi, tüketici hakem kurulu açıklaması. AB çevrim içi uyuşmazlık platformu (OS-Plattform) Temmuz 2025'te kapandığı için ona bağlantı yok.
+- **Bilgiler:** Ad, adres (Neuss), e-posta ve iletişim formu. Telefon, USt-IdNr. ve W-IdNr. verilmedi; bölümleri kaldırıldı (eklenirse iki dile de yazılmalı).
+- **Koruma:** Köşeli parantezli yer tutucu kalırsa `node scripts/build-pages.mjs --check` hata veriyor (`noPlaceholders`).
+- Sürüm: `app.js` 45.
 
 ## 2026-11-16 · Giriş, kayıt ve panel: çeviriler Firebase'den bağımsız
 

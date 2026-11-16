@@ -251,7 +251,10 @@ for (const page of PAGES) {
   html = fill(html, 'footer', footer({ current: page.path, sticky: !page.noStickyCta }), file);
   html = fill(html, 'scripts', scripts(page), file);
   if (page.noPlaceholders) {
-    const body = html.split('İÇERİK BAŞLANGICI')[1]?.split('<!-- İÇERİK SONU -->')[0]?.replace(/^[\s\S]*?-->/, '') || ''; // talimat yorumunun kalanı sayılmaz
+    // İçerik: talimat yorumunun bittiği yerden "İÇERİK SONU"na kadar (yorumun içindeki örnek parantezler sayılmaz).
+    const start = html.indexOf('-->', html.indexOf('İÇERİK BAŞLANGICI'));
+    const end = html.indexOf('<!-- İÇERİK SONU -->');
+    const body = start >= 0 && end > start ? html.slice(start + 3, end) : '';
     const left = [...new Set(body.match(/\[[^\]<>]+\]/g) || [])];
     if (left.length) placeholderErrors.push(`${page.path}: doldurulmamış yer tutucu: ${left.join(', ')}`);
   }

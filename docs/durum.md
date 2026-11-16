@@ -21,8 +21,13 @@
 - **Deneme (gerçek Gemma 4, bütün sınavlar birlikte; 43 metin, 74 hata):**
   - Goethe A2 Teil 1 ve 2 (beşer metin, ikisinde hatasız metin): bütün turlarda 16/16, yanlış alarm yok.
   - Ara talimatlarla 9 tam tur: 69–72/74. Kaçanlar: dtz-6 (A2 bölümü yüzünden, düzeltildi), a1t2-3 (açıklamasız madde, düzeltildi), okunamayan cevaplar (düzeltildi), "an den Ausflug teilnehmen" (bilinen sınır).
-  - Son talimatla tur yarıda durduruldu (aşağıya bak): o ana kadarki 34 metinde 51/51, yanlış alarm yok (DTZ 16/16, Goethe A1 7/7, Goethe A2 16/16, Goethe B1 Teil 1'in ilk 4 metni 12/12). Goethe B1 Teil 1'in son metni, Teil 2, Teil 3 ve telc B1 son talimatla henüz denenmedi.
-  - **Kota uyarısı:** Bugün yaklaşık 580 model çağrısı yapıldı; Cloudflare çağrı başına 16–34 Neuron bildiriyor, yani toplam günlük 10.000 Neuron'luk ücretsiz kotayı aşmış olabilir. Hiç kota hatası görülmedi. Denetlenene kadar yeni deneme çalıştırılmadı.
+  - Son talimatla tur yarıda durduruldu (aşağıya bak): o ana kadarki 34 metinde 51/51, yanlış alarm yok (DTZ 16/16, Goethe A1 7/7, Goethe A2 16/16, Goethe B1 Teil 1'in ilk 4 metni 12/12). Goethe B1 Teil 1'in son metni, Teil 2, Teil 3 ve telc B1 (16 metin) son talimatla henüz denenmedi; Almanya saatiyle gece çalıştırılacak.
+  - **Kota:** 15 Kasım'da yaklaşık 580 model çağrısı yapıldı (çağrı başına 16–34 Neuron). Senin kontrolün (16 Kasım): plan "Free", Workers AI maliyeti $0; ücret çıkmadı.
+- **Deneme kuralları (kararın, 16 Kasım):** Denemeler öğrencilerle aynı ücretsiz kotayı kullanıyor (günde 10.000 Neuron, gün UTC 00:00'da başlar).
+  - Bir günde en fazla 2 tam tur ve en fazla 4.000 Neuron (öğrencilere en az 6.000 kalır).
+  - Almanya saatiyle 01:00–07:00 arasında.
+  - `scripts/ai-deneme.mjs` çalışmadan önce o günün kayıtlı kullanımını ve bu çalıştırmanın tahminini (metin başına en az 35 Neuron) hesaplıyor; 4.000'i aşacaksa, o gün 2 tam tur çalıştıysa ya da saat aralık dışındaysa hiçbir istek göndermeden duruyor. Mantık `scripts/ai-deneme-kota.mjs`'te, testi `npm test`'te.
+  - Küçük bir ek deneme için `--saat-disi`; tek tek metinler için `--ids`. Kullanım depoya girmeyen `.ai-deneme-kullanim.json`'a yazılıyor (sadece bu bilgisayarın denemeleri; öğrencilerin kullanımı Cloudflare panelinde). Kural AGENTS.md'ye de yazıldı.
 - **Senin yapacakların (birleştirmeden sonra):** Worker'ı güncelle. Firestore kuralları değişmedi.
 
 ## 2026-11-14 · Schreiben genişletme 4: DTZ (Deutsch-Test für Zuwanderer)

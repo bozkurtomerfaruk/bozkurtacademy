@@ -2,6 +2,14 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-16 · Impressum (künye) sayfası
+
+- **Sayfa:** `/impressum/` (Almanca yasal metin + Türkçe çeviri, tek sayfa). Arama motorlarında listelenmez (`noindex`), sitemap'e girmez. Bağlantı her sayfanın alt bilgisinde "Yasal bilgiler" bölümünde: TR "Künye (Impressum)", DE "Impressum", EN "Legal notice (Impressum)".
+- **İçerik:** § 5 DDG bilgileri, iletişim, vergi numaraları (varsa), § 18 Abs. 2 MStV sorumlu kişi, tüketici hakem kurulu açıklaması. AB çevrim içi uyuşmazlık platformu (OS-Plattform) Temmuz 2025'te kapandığı için ona bağlantı yok.
+- **Bilgiler:** Ad, adres (Neuss), e-posta ve iletişim formu. Telefon, USt-IdNr. ve W-IdNr. verilmedi; bölümleri kaldırıldı (eklenirse iki dile de yazılmalı).
+- **Koruma:** Köşeli parantezli yer tutucu kalırsa `node scripts/build-pages.mjs --check` hata veriyor (`noPlaceholders`).
+- Sürüm: `app.js` 45.
+
 ## 2026-11-16 · Giriş, kayıt ve panel: çeviriler Firebase'den bağımsız
 
 - **Sorun:** Bu üç sayfanın DE/EN metinleri (`js/account/i18n.js`) Firebase ile aynı modül zincirinde yükleniyordu. Firebase yüklenemezse (reklam engelleyici, kötü bağlantı) zincir hiç çalışmıyor, sayfa seçilen dil yerine Türkçe kalıyordu.

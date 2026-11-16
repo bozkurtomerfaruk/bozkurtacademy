@@ -159,5 +159,15 @@ export const PAGES = [
     crumb: 'Sıkça Sorulan Sorular',
     title: 'Almanca Dersi Sıkça Sorulan Sorular | Bozkurt Academy',
     description: 'Online Almanca dersleri hakkında sık sorulanlar: ilk ders, ders süresi, birebir ve grup dersi, ücretin nasıl belirlendiği, sınavlar ve seviye testi.',
+  },
+  {
+    // Yasal künye (Almanca metin geçerli, Türkçe çeviri). Arama motorlarında listelenmez, sitemap'e girmez.
+    path: '/impressum/',
+    crumb: 'Künye (Impressum)',
+    title: 'Impressum | Bozkurt Academy',
+    description: 'Impressum der Bozkurt Academy: Anbieterkennzeichnung nach § 5 DDG, Kontakt und verantwortliche Person. Bozkurt Academy künyesi.',
+    noindex: true,
+    // Köşeli parantezli yer tutucu kalmışsa build-pages --check hata verir (yarım künye yayına çıkmasın).
+    noPlaceholders: true
   }
 ];

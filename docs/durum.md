@@ -2,6 +2,18 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-16 · B2 gramer dersleri, pilot: B2 seviyesi açıldı + Konjunktiv I dersi
+
+- **Plan (onaylandı):** B2'nin 10 konusu için ders; hazırlanmakta olan 3 konu (İleri Konnektoren, Funktionsverbgefüge, Adjektivdeklination vertieft) için ders + 20 paket × 10 soru. Sıra: bu pilot → Passiv mit Modalverben, Nominalisierung, Partizip I dersleri → Partizip II, Genitivpräpositionen, je … desto dersleri → her yeni konu ayrı PR. Sonra B2 seviye sonu sınavı planı. Öğretmenin değişikliği: Konnektoren paket 11 = es sei denn / vorausgesetzt, dass / angenommen, dass; paket 12 = zumal / umso mehr, als; weder … noch ve benzerleri derste yalnızca kısa "B1'den hatırlatma" kutusunda.
+- **Ders:** `data/b2-grammar.json` → Konjunktiv I (9 bölüm: aktarma, kök + -e, sein ve yedek biçim kuralı, modal fiiller, werde + mastar, geçmiş, ob/W-soruları ve solle/möge, zamir-zaman-fiil sırası, Türk öğrencilerin sık hataları; 5 maddelik kısa tekrar, kendini kontrol, 3 SSS). `data/grammar-index.json`'a B2 eklendi; `data/grammar-legacy.json`'dan konjunktiv-i çıkarıldı (liste sadece küçülüyor). SEO metni `data/grammar-seo.json`.
+- **Statik sayfalar:** `/almanca-gramer/b2/` ve `/almanca-gramer/b2/konjunktiv-i/`; sitemap otomatik (gramer tarihi 2026-11-16). Gramer ana sayfası artık "A1–B2". B2 dersleri B2 kurs sayfasına bağlı (`scripts/grammar-pages.mjs` → COURSE).
+- **Şablon (`js/a1-lessons.js`):** (1) Benzer konular başka seviyedeki dersi gösterebilir: `"related": ["B1/indirekte-fragen"]` (seviye etiketiyle, gerçek sayfa bağlantısı); `scripts/check-grammar.mjs` bunları da denetler. (2) Bölümde isteğe bağlı hatırlatma kutusu: `"box": {"title", "paragraphs"}` (`.a1-box`, `css/a1-lessons.css`, açık/koyu tema token'larıyla).
+- **Yönlendirme:** `#grammar/B2/...` adresleri artık statik B2 sayfalarına gidiyor (`js/legacy-hash.js`, `js/app.js` → baGrammarUrl). Dersi henüz olmayan B2 konularına sitede `#grammar/B2/<konu>` bağlantısı yok (kartlar "hazırlanıyor" gösteriyor, "Konuyu çalış" yalnızca dersi olan konularda çıkıyor).
+- **İç bağlantılar:** B2 kurs sayfası (TR, DE) Konjunktiv I satırı derse gidiyor; seviye testi sonucunda Konjunktiv I artık derse bağlı (`js/placement.js`).
+- **Sürümler:** `a1-lessons.js` 20, `a1-lessons.css` 9, `grammar.js` 22, `app.js` 51, `legacy-hash.js` 2, `placement.js` 7; ders verisi `?v=7`, grammar-index `?v=3`.
+- **Test:** yeni `tests/gramer-b2.mjs` (bütün B2 dersleri: bölümler, kutu, benzer konular ve sayfaların açılması, alıştırmaya geçiş, `#grammar/B2/<ders>/3` derin bağlantısı, B2 sekmesi, seviye sayfası, sitemap, "Konuyu çalış", 390/1440 px açık/koyu taşma + ekran görüntüsü). check-grammar, check-versions, build-search-index --check, check-html-escape, `tests/search.mjs`, `npm test` geçti.
+- **Bilinen (bu işten bağımsız):** `npm run test:placement` main'de de 6 adımda düşüyor: gizlilik sayfasının tarihi 12 Kasım'a güncellenmiş, test 11 Kasım bekliyor.
+
 ## 2026-11-16 · Dil sürümleri, Aşama 2 / PR 4: SSS (DE/EN) – Aşama 2 tamamlandı
 
 - **Yeni sayfalar:** `/de/faq/` ("Sie"; ayrıca "Schule und Eltern" bölümü) ve `/en/faq/`. FAQPage şeması `<details>` bloklarından otomatik. `/sss/`'e hreflang eklendi.

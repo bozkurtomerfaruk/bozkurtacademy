@@ -800,7 +800,7 @@
     try {
       const response=await fetch('data/catalog.json?v=7');if(!response.ok)throw Error('Catalog');
       const catalog=await response.json();
-      const registryResponse=await fetch('data/grammar-index.json?v=2');if(!registryResponse.ok)throw Error('Grammar index');
+      const registryResponse=await fetch('data/grammar-index.json?v=3');if(!registryResponse.ok)throw Error('Grammar index');
       const registry=await registryResponse.json();
       const datasets=await Promise.all(Object.keys(registry.levels).map(async level=>[level,await window.BAA1Lessons.load(level)]));
       for(const [level,data] of datasets)authored[level]=new Set(data.lessons.map(l=>l.id));

@@ -1899,6 +1899,10 @@ const BA_ALTS = /* ba:alts */[
   {"tr":"/online-almanca-dersi/","de":"/de/online-deutschunterricht/","en":"/en/online-german-lessons/"},
   {"tr":"/almanca-ozel-ders/","de":"/de/deutsch-einzelunterricht/","en":"/en/private-german-lessons/"},
   {"tr":"/almanca-grup-dersi/","de":"/de/deutsch-gruppenkurs/","en":"/en/german-group-lessons/"},
+  {"tr":"/a1-almanca-kursu/","de":"/de/deutschkurs-a1/","en":"/en/german-course-a1/"},
+  {"tr":"/a2-almanca-kursu/","de":"/de/deutschkurs-a2/","en":"/en/german-course-a2/"},
+  {"tr":"/b1-almanca-kursu/","de":"/de/deutschkurs-b1/","en":"/en/german-course-b1/"},
+  {"tr":"/b2-almanca-kursu/","de":"/de/deutschkurs-b2/","en":"/en/german-course-b2/"},
   {"tr":"/almanca-sinav-hazirlik/","de":"/de/pruefungsvorbereitung-deutsch/","en":"/en/german-exam-preparation/"},
   {"tr":"/hakkimda/","de":"/de/ueber-mich/","en":"/en/about/"},
   {"tr":"/iletisim/","de":"/de/kontakt/","en":"/en/contact/"}

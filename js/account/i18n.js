@@ -172,8 +172,9 @@ const strings = {
     accErrorNetwork: 'Keine Verbindung. Prüfe deine Internetverbindung und versuche es noch einmal.',
     accErrorPopup: 'Das Google-Fenster wurde geschlossen. Bitte versuche es noch einmal.',
     accErrorTooMany: 'Zu viele Versuche. Warte kurz und versuche es dann noch einmal.',
-    accOnlyStudents: 'Die Konten sind nur für meine Schülerinnen und Schüler, die Unterricht bei mir nehmen. Ihre Registrierung wird freigeschaltet, sobald ich bestätigt habe, dass Sie bei mir lernen. Wenn Sie Unterricht nehmen möchten,',
-    accOnlyStudentsLink: 'kontaktieren Sie mich bitte zuerst',
+    // Hesap alanının geri kalanı gibi "du" (giriş, kayıt, panel tutarlı olsun).
+    accOnlyStudents: 'Die Konten sind nur für meine Schülerinnen und Schüler, die Unterricht bei mir nehmen. Deine Registrierung wird freigeschaltet, sobald ich bestätigt habe, dass du bei mir lernst. Wenn du Unterricht nehmen möchtest,',
+    accOnlyStudentsLink: 'kontaktiere mich bitte zuerst',
     accOnlyStudentsEnd: '.',
 
     loginTitle: 'Anmelden',

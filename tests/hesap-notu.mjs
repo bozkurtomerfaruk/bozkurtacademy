@@ -58,7 +58,7 @@ async function newPage({ width = 1440, theme = 'light', lang = 'tr' } = {}) {
 
 const EXPECT = {
   tr: { start: 'Hesaplar yalnızca benden ders alan', link: 'iletişime geç', href: '/iletisim/', reminder: 'Öğretmenin kaydını onaylayınca giriş yapabileceksin.' },
-  de: { start: 'Die Konten sind nur für meine', link: 'kontaktieren Sie mich bitte zuerst', href: '/de/kontakt/', reminder: 'Sobald dein Lehrer deine Registrierung freigeschaltet hat, kannst du dich anmelden.' },
+  de: { start: 'Die Konten sind nur für meine', link: 'kontaktiere mich bitte zuerst', href: '/de/kontakt/', reminder: 'Sobald dein Lehrer deine Registrierung freigeschaltet hat, kannst du dich anmelden.' },
   en: { start: 'Accounts are only for students', link: 'get in touch first', href: '/en/contact/', reminder: 'You will be able to sign in once your teacher has approved your registration.' }
 };
 

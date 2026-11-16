@@ -10,17 +10,18 @@ export const SITE = 'https://bozkurtacademy.com';
 const provider = { '@id': `${SITE}/#organization` };
 const instructor = { '@id': `${SITE}/#person` };
 
-function course(path, name, description, level) {
+// lang: sayfanın (ve dersin anlatım) dili; Almanca/İngilizce sürümlerde 'de' / 'en'.
+function course(path, name, description, level, { lang = 'tr' } = {}) {
   return {
     '@type': 'Course',
     '@id': `${SITE}${path}#course`,
     name,
     description,
     url: `${SITE}${path}`,
-    inLanguage: 'tr',
+    inLanguage: lang,
     educationalLevel: level,
     provider,
-    about: { '@type': 'Thing', name: 'Almanca' },
+    about: { '@type': 'Thing', name: { tr: 'Almanca', de: 'Deutsch', en: 'German' }[lang] },
     hasCourseInstance: {
       '@type': 'CourseInstance',
       courseMode: 'online',
@@ -78,6 +79,7 @@ export const PAGES = [
   },
   {
     path: '/a1-almanca-kursu/',
+    group: 'a1',
     parent: '/online-almanca-dersi/',
     nav: 'lessons',
     crumb: 'A1 Almanca Kursu',
@@ -87,6 +89,7 @@ export const PAGES = [
   },
   {
     path: '/a2-almanca-kursu/',
+    group: 'a2',
     parent: '/online-almanca-dersi/',
     nav: 'lessons',
     crumb: 'A2 Almanca Kursu',
@@ -96,6 +99,7 @@ export const PAGES = [
   },
   {
     path: '/b1-almanca-kursu/',
+    group: 'b1',
     parent: '/online-almanca-dersi/',
     nav: 'lessons',
     crumb: 'B1 Almanca Kursu',
@@ -105,6 +109,7 @@ export const PAGES = [
   },
   {
     path: '/b2-almanca-kursu/',
+    group: 'b2',
     parent: '/online-almanca-dersi/',
     nav: 'lessons',
     crumb: 'B2 Almanca Kursu',
@@ -326,5 +331,103 @@ export const PAGES = [
     title: 'German Exam Preparation: Goethe, telc, TestDaF | Bozkurt Academy',
     description: 'Prepare for Goethe, telc, ÖSD, DTZ and TestDaF with real task types: reading, listening, writing and speaking. One-to-one online lessons and free practice sets.',
     schema: [service('/en/german-exam-preparation/', 'German Exam Preparation', 'Online preparation for Goethe, telc, ÖSD, DTZ and TestDaF German exams.', 'German exam preparation', { contact: '/en/contact/', lang: 'en' })]
+  },
+
+  // ---- Aşama 2 / PR 3: A1–B2 kurs sayfaları (Almanca, sonra İngilizce) ----
+  {
+    path: '/de/deutschkurs-a1/',
+    lang: 'de',
+    group: 'a1',
+    parent: '/de/online-deutschunterricht/',
+    updated: '2026-11-16',
+    nav: 'lessons',
+    crumb: 'Deutschkurs A1',
+    title: 'Deutschkurs A1 online: Einstieg und Familiennachzug | Bozkurt Academy',
+    description: 'Deutschkurs A1 online für den Einstieg ohne Vorkenntnisse und die A1-Prüfung, etwa für den Familiennachzug. Erklärungen auf Türkisch und Deutsch, erste Stunde kostenlos.',
+    schema: [course('/de/deutschkurs-a1/', 'Deutschkurs A1', 'Deutsch für Anfänger ohne Vorkenntnisse: Grundgrammatik, Alltagskommunikation und Vorbereitung auf die A1-Prüfung (Goethe, telc, ÖSD).', 'A1 (Anfang)', { lang: 'de' })]
+  },
+  {
+    path: '/de/deutschkurs-a2/',
+    lang: 'de',
+    group: 'a2',
+    parent: '/de/online-deutschunterricht/',
+    updated: '2026-11-16',
+    nav: 'lessons',
+    crumb: 'Deutschkurs A2',
+    title: 'Deutschkurs A2 online | Bozkurt Academy',
+    description: 'Deutschkurs A2 online: Vergangenheit, Nebensätze und Deutsch für den Alltag in Deutschland. Einzel- oder Gruppenunterricht und A2-Prüfungsvorbereitung.',
+    schema: [course('/de/deutschkurs-a2/', 'Deutschkurs A2', 'A2 nach A1: Perfekt, Dativ, Nebensätze, Alltagskommunikation und Vorbereitung auf die A2-Prüfung.', 'A2 (Grundlagen)', { lang: 'de' })]
+  },
+  {
+    path: '/de/deutschkurs-b1/',
+    lang: 'de',
+    group: 'b1',
+    parent: '/de/online-deutschunterricht/',
+    updated: '2026-11-16',
+    nav: 'lessons',
+    crumb: 'Deutschkurs B1',
+    title: 'Deutschkurs B1 und Prüfungsvorbereitung (Goethe, telc, DTZ) | Bozkurt Academy',
+    description: 'Deutschkurs B1 online: selbstständiges Deutsch für Arbeit, Ausbildung, Schule und Alltag. Vorbereitung auf Goethe B1, telc B1 und DTZ.',
+    schema: [course('/de/deutschkurs-b1/', 'Deutschkurs B1', 'Selbstständige Sprachverwendung B1: Nebensätze, Passiv, Konjunktiv II, Kommunikation in Beruf und Alltag, Vorbereitung auf die B1-Prüfung.', 'B1 (Mittelstufe)', { lang: 'de' })]
+  },
+  {
+    path: '/de/deutschkurs-b2/',
+    lang: 'de',
+    group: 'b2',
+    parent: '/de/online-deutschunterricht/',
+    updated: '2026-11-16',
+    nav: 'lessons',
+    crumb: 'Deutschkurs B2',
+    title: 'Deutschkurs B2 online: Beruf, Studium, Prüfung | Bozkurt Academy',
+    description: 'Deutschkurs B2 online: flüssiges und genaues Deutsch für Beruf, Studium und Oberstufe. Diskussion, formelle Texte, komplexe Grammatik und B2-Prüfungsvorbereitung.',
+    schema: [course('/de/deutschkurs-b2/', 'Deutschkurs B2', 'B2: komplexe Satzstrukturen, Passiv und Konjunktiv, berufliche und akademische Kommunikation, Vorbereitung auf Goethe und telc B2.', 'B2 (Fortgeschritten)', { lang: 'de' })]
+  },
+  {
+    path: '/en/german-course-a1/',
+    lang: 'en',
+    group: 'a1',
+    parent: '/en/online-german-lessons/',
+    updated: '2026-11-16',
+    nav: 'lessons',
+    crumb: 'German course A1',
+    title: 'German Course A1 Online: Beginners and Visas | Bozkurt Academy',
+    description: 'German course A1 online for complete beginners and the A1 exam, for example for a family reunification visa. Explanations in English, first lesson free.',
+    schema: [course('/en/german-course-a1/', 'German course A1', 'German for complete beginners: basic grammar, everyday communication and preparation for the A1 exam (Goethe, telc, ÖSD).', 'A1 (Beginner)', { lang: 'en' })]
+  },
+  {
+    path: '/en/german-course-a2/',
+    lang: 'en',
+    group: 'a2',
+    parent: '/en/online-german-lessons/',
+    updated: '2026-11-16',
+    nav: 'lessons',
+    crumb: 'German course A2',
+    title: 'German Course A2 Online | Bozkurt Academy',
+    description: 'German course A2 online: past tense, subordinate clauses and everyday German for life in Germany. One-to-one or group lessons and A2 exam preparation.',
+    schema: [course('/en/german-course-a2/', 'German course A2', 'A2 after A1: Perfekt, dative, subordinate clauses, everyday communication and preparation for the A2 exam.', 'A2 (Elementary)', { lang: 'en' })]
+  },
+  {
+    path: '/en/german-course-b1/',
+    lang: 'en',
+    group: 'b1',
+    parent: '/en/online-german-lessons/',
+    updated: '2026-11-16',
+    nav: 'lessons',
+    crumb: 'German course B1',
+    title: 'German Course B1 and Exam Preparation | Bozkurt Academy',
+    description: 'German course B1 online: independent German for work, vocational training and daily life in Germany. Preparation for Goethe B1, telc B1 and DTZ.',
+    schema: [course('/en/german-course-b1/', 'German course B1', 'Independent user level B1: subordinate clauses, passive, Konjunktiv II, communication at work and in daily life, B1 exam preparation.', 'B1 (Intermediate)', { lang: 'en' })]
+  },
+  {
+    path: '/en/german-course-b2/',
+    lang: 'en',
+    group: 'b2',
+    parent: '/en/online-german-lessons/',
+    updated: '2026-11-16',
+    nav: 'lessons',
+    crumb: 'German course B2',
+    title: 'German Course B2 Online: Work, University, Exams | Bozkurt Academy',
+    description: 'German course B2 online: fluent, accurate German for work, your profession and university. Discussion, formal writing, complex grammar and B2 exam preparation.',
+    schema: [course('/en/german-course-b2/', 'German course B2', 'B2: complex sentence structures, passive and Konjunktiv, professional and academic communication, Goethe and telc B2 preparation.', 'B2 (Upper intermediate)', { lang: 'en' })]
   }
 ];

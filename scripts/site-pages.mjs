@@ -29,7 +29,8 @@ function course(path, name, description, level) {
   };
 }
 
-function service(path, name, description, serviceType) {
+// contact: iletişim sayfası (Almanca/İngilizce sürümlerde o dilin sayfası). inLanguage: sayfanın dili.
+function service(path, name, description, serviceType, { contact = '/iletisim/', lang } = {}) {
   return {
     '@type': 'Service',
     '@id': `${SITE}${path}#service`,
@@ -37,8 +38,9 @@ function service(path, name, description, serviceType) {
     description,
     serviceType,
     url: `${SITE}${path}`,
+    ...(lang ? { inLanguage: lang } : {}),
     provider,
-    availableChannel: { '@type': 'ServiceChannel', serviceUrl: `${SITE}/iletisim/` }
+    availableChannel: { '@type': 'ServiceChannel', serviceUrl: `${SITE}${contact}` }
   };
 }
 
@@ -47,6 +49,7 @@ function service(path, name, description, serviceType) {
 export const PAGES = [
   {
     path: '/online-almanca-dersi/',
+    group: 'lessons',
     nav: 'lessons',
     crumb: 'Online Almanca Dersi',
     title: 'Online Almanca Dersi A1–B2 | Bozkurt Academy',
@@ -55,6 +58,7 @@ export const PAGES = [
   },
   {
     path: '/almanca-ozel-ders/',
+    group: 'private',
     parent: '/online-almanca-dersi/',
     nav: 'lessons',
     crumb: 'Almanca Özel Ders',
@@ -64,6 +68,7 @@ export const PAGES = [
   },
   {
     path: '/almanca-grup-dersi/',
+    group: 'group',
     parent: '/online-almanca-dersi/',
     nav: 'lessons',
     crumb: 'Almanca Grup Dersi',
@@ -109,6 +114,7 @@ export const PAGES = [
   },
   {
     path: '/almanca-sinav-hazirlik/',
+    group: 'exams',
     nav: 'exams',
     crumb: 'Almanca Sınav Hazırlık',
     title: 'Goethe ve telc Almanca Sınav Hazırlık | Bozkurt Academy',
@@ -224,5 +230,101 @@ export const PAGES = [
     description: 'Get in touch for online German lessons from A1 to B2, one-to-one or in a group, and exam preparation. The first lesson is free.',
     type: 'ContactPage',
     noStickyCta: true
+  },
+
+  // ---- Aşama 2 / PR 2: ders sayfaları (Almanca) ----
+  {
+    path: '/de/online-deutschunterricht/',
+    lang: 'de',
+    group: 'lessons',
+    updated: '2026-11-16',
+    nav: 'lessons',
+    crumb: 'Online-Deutschunterricht',
+    title: 'Online-Deutschunterricht A1–B2 auf Türkisch und Deutsch | Bozkurt Academy',
+    description: 'Online-Deutschunterricht von A1 bis B2 mit Erklärungen auf Türkisch und Deutsch: Schulunterstützung, Deutsch für Alltag und Beruf, Prüfungsvorbereitung. Erste Stunde kostenlos.',
+    schema: [service('/de/online-deutschunterricht/', 'Online-Deutschunterricht', 'Online-Deutschunterricht A1–B2 über Zoom oder Google Meet, mit Erklärungen auf Türkisch und Deutsch.', 'Online-Deutschunterricht', { contact: '/de/kontakt/', lang: 'de' })]
+  },
+  {
+    path: '/de/deutsch-einzelunterricht/',
+    lang: 'de',
+    group: 'private',
+    parent: '/de/online-deutschunterricht/',
+    updated: '2026-11-16',
+    nav: 'lessons',
+    crumb: 'Einzelunterricht',
+    title: 'Deutsch-Einzelunterricht online: Nachhilfe und Prüfungen | Bozkurt Academy',
+    description: 'Deutsch-Einzelunterricht online: Nachhilfe für Schülerinnen und Schüler, Deutsch für Beruf und Alltag, Prüfungsvorbereitung. Erklärungen auf Türkisch und Deutsch, erste Stunde kostenlos.',
+    schema: [service('/de/deutsch-einzelunterricht/', 'Deutsch-Einzelunterricht (online)', 'Online-Einzelunterricht in Deutsch nach Niveau, Ziel und Zeitplan.', 'Deutsch-Einzelunterricht', { contact: '/de/kontakt/', lang: 'de' })]
+  },
+  {
+    path: '/de/deutsch-gruppenkurs/',
+    lang: 'de',
+    group: 'group',
+    parent: '/de/online-deutschunterricht/',
+    updated: '2026-11-16',
+    nav: 'lessons',
+    crumb: 'Gruppenkurs',
+    title: 'Deutsch-Gruppenkurs online: höchstens 6 Personen | Bozkurt Academy',
+    description: 'Online-Gruppenkurs Deutsch in kleinen Gruppen mit höchstens 6 Personen auf demselben Niveau: feste Termine, viel Sprechpraxis, A1 bis B2.',
+    schema: [service('/de/deutsch-gruppenkurs/', 'Deutsch-Gruppenkurs (online)', 'Online-Deutschkurse in Gruppen mit höchstens 6 Lernenden auf demselben Niveau.', 'Deutsch-Gruppenkurs', { contact: '/de/kontakt/', lang: 'de' })]
+  },
+  {
+    path: '/de/pruefungsvorbereitung-deutsch/',
+    lang: 'de',
+    group: 'exams',
+    updated: '2026-11-16',
+    nav: 'exams',
+    crumb: 'Prüfungsvorbereitung',
+    title: 'Prüfungsvorbereitung Deutsch: Goethe, telc, DTZ | Bozkurt Academy',
+    description: 'Vorbereitung auf Goethe, telc, ÖSD, DTZ und TestDaF sowie auf Klassenarbeiten: Aufgabentypen, Lesen, Hören, Schreiben und Sprechen. Online-Einzelunterricht und kostenlose Übungssätze.',
+    schema: [service('/de/pruefungsvorbereitung-deutsch/', 'Prüfungsvorbereitung Deutsch', 'Online-Vorbereitung auf Goethe, telc, ÖSD, DTZ und TestDaF.', 'Prüfungsvorbereitung Deutsch', { contact: '/de/kontakt/', lang: 'de' })]
+  },
+
+  // ---- Aşama 2 / PR 2: ders sayfaları (İngilizce) ----
+  {
+    path: '/en/online-german-lessons/',
+    lang: 'en',
+    group: 'lessons',
+    updated: '2026-11-16',
+    nav: 'lessons',
+    crumb: 'Online German lessons',
+    title: 'Online German Lessons A1–B2 | Bozkurt Academy',
+    description: 'Online German lessons from A1 to B2 with a teacher who lives in Germany. One-to-one or small groups, 50-minute lessons, explanations in English. First lesson free.',
+    schema: [service('/en/online-german-lessons/', 'Online German Lessons', 'Online German lessons A1–B2 via Zoom or Google Meet, with explanations in English.', 'Online German lessons', { contact: '/en/contact/', lang: 'en' })]
+  },
+  {
+    path: '/en/private-german-lessons/',
+    lang: 'en',
+    group: 'private',
+    parent: '/en/online-german-lessons/',
+    updated: '2026-11-16',
+    nav: 'lessons',
+    crumb: 'Private lessons',
+    title: 'Private German Lessons Online (One-to-One) | Bozkurt Academy',
+    description: 'One-to-one German lessons online, planned around your level, goal and schedule: exams, work, everyday life in Germany and speaking practice. First lesson free.',
+    schema: [service('/en/private-german-lessons/', 'Private German Lessons (one-to-one)', 'One-to-one online German lessons planned around your level and goal.', 'Private German lessons', { contact: '/en/contact/', lang: 'en' })]
+  },
+  {
+    path: '/en/german-group-lessons/',
+    lang: 'en',
+    group: 'group',
+    parent: '/en/online-german-lessons/',
+    updated: '2026-11-16',
+    nav: 'lessons',
+    crumb: 'Group lessons',
+    title: 'German Group Lessons Online: Max. 6 People | Bozkurt Academy',
+    description: 'Online German group lessons with at most 6 learners at the same level: a fixed schedule, lots of speaking practice, A1 to B2.',
+    schema: [service('/en/german-group-lessons/', 'German Group Lessons (online)', 'Online German lessons in groups of at most 6 learners at the same level.', 'German group lessons', { contact: '/en/contact/', lang: 'en' })]
+  },
+  {
+    path: '/en/german-exam-preparation/',
+    lang: 'en',
+    group: 'exams',
+    updated: '2026-11-16',
+    nav: 'exams',
+    crumb: 'Exam preparation',
+    title: 'German Exam Preparation: Goethe, telc, TestDaF | Bozkurt Academy',
+    description: 'Prepare for Goethe, telc, ÖSD, DTZ and TestDaF with real task types: reading, listening, writing and speaking. One-to-one online lessons and free practice sets.',
+    schema: [service('/en/german-exam-preparation/', 'German Exam Preparation', 'Online preparation for Goethe, telc, ÖSD, DTZ and TestDaF German exams.', 'German exam preparation', { contact: '/en/contact/', lang: 'en' })]
   }
 ];

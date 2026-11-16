@@ -1739,6 +1739,888 @@
         "de": "Partizip I – Erklärung auf Türkisch mit Beispielen zu Bildung, Deklination und erweiterten Attributen.",
         "en": "Present participle – Turkish explanation with examples of formation, declension and extended attributes."
       }
+    },
+    {
+      "id": "partizip-ii",
+      "title": "Partizip II – sıfat olarak: das reparierte Auto",
+      "lead": "Partizip II’yi Perfekt’ten tanıyorsun: Ich habe das Auto repariert. B2’de aynı biçimi bir isimden önce sıfat olarak kullanacağız: das reparierte Auto (tamir edilmiş araba). Türkçedeki “-mış / -an” sıfat-fiillerine benzer: “yazılmış mektup, gelen tren”. Önce oluşumu tekrar edecek, sonra anlamını, çekimini ve uzun sıfat gruplarını çalışacağız.",
+      "sections": [
+        {
+          "title": "1 · Oluşum: ge-…-t ve ge-…-en",
+          "paragraphs": [
+            "Düzenli fiillerde Partizip II ge- + kök + -t ile yapılır: machen → gemacht, kaufen → gekauft. Kök -t veya -d ile bitiyorsa araya -e- girer: arbeiten → gearbeitet.",
+            "Düzensiz fiiller -en ile biter ve kök sesli harfi çoğu zaman değişir: schreiben → geschrieben, finden → gefunden, nehmen → genommen. Bunları ezberlemek gerekir.",
+            "Karışık fiiller hem kökünü değiştirir hem de -t alır: bringen → gebracht, denken → gedacht, kennen → gekannt, wissen → gewusst."
+          ],
+          "box": {
+            "title": "A1–A2’den hatırlatma: Perfekt",
+            "paragraphs": [
+              "Perfekt = haben/sein + Partizip II: Ich habe den Brief geschrieben. Wir sind nach Berlin gefahren. Bu derste aynı Partizip II biçimlerini sıfat olarak kullanacaksın."
+            ]
+          },
+          "examples": [
+            {
+              "de": "machen → gemacht · arbeiten → gearbeitet",
+              "tr": "yapmak → yapılmış · çalışmak → çalışılmış",
+              "note": "düzenli"
+            },
+            {
+              "de": "schreiben → geschrieben · finden → gefunden",
+              "tr": "yazmak → yazılmış · bulmak → bulunmuş",
+              "note": "düzensiz"
+            },
+            {
+              "de": "bringen → gebracht · denken → gedacht",
+              "tr": "getirmek → getirilmiş · düşünmek → düşünülmüş",
+              "note": "karışık"
+            }
+          ],
+          "table": {
+            "headers": [
+              "Tür",
+              "Kalıp",
+              "Örnek"
+            ],
+            "rows": [
+              [
+                "Düzenli",
+                "ge- + kök + -t",
+                "kaufen → gekauft"
+              ],
+              [
+                "Kökü -t/-d ile biten",
+                "ge- + kök + -et",
+                "arbeiten → gearbeitet"
+              ],
+              [
+                "Düzensiz",
+                "ge- + (değişen) kök + -en",
+                "nehmen → genommen"
+              ],
+              [
+                "Karışık",
+                "ge- + değişen kök + -t",
+                "bringen → gebracht"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "2 · Ayrılabilen, ayrılamayan fiiller ve -ieren",
+          "paragraphs": [
+            "Ayrılabilen fiillerde ge- önek ile kök arasına girer ve kelime bitişik yazılır: aufmachen → aufgemacht, ankommen → angekommen, einladen → eingeladen.",
+            "be-, ver-, er-, ent-, zer-, ge-, emp-, miss- önekleri ayrılmaz ve Partizip II’de ge- almaz: besuchen → besucht, verstehen → verstanden, erklären → erklärt, entdecken → entdeckt.",
+            "-ieren ile biten fiiller de ge- almaz: studieren → studiert, reparieren → repariert, organisieren → organisiert."
+          ],
+          "examples": [
+            {
+              "de": "Die Tür ist schon aufgemacht.",
+              "tr": "Kapı zaten açılmış.",
+              "note": "auf-ge-macht"
+            },
+            {
+              "de": "Wir haben die Großeltern besucht.",
+              "tr": "Büyükanne ve büyükbabamızı ziyaret ettik.",
+              "note": "be- → ge- yok"
+            },
+            {
+              "de": "Das Fest wurde gut organisiert.",
+              "tr": "Kutlama iyi organize edildi.",
+              "note": "-ieren → ge- yok"
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "an-ge-kommen",
+                "ayrılabilen: ge- ortada"
+              ],
+              [
+                "verstanden",
+                "ayrılamayan: ge- yok"
+              ],
+              [
+                "repariert",
+                "-ieren: ge- yok"
+              ]
+            ],
+            "caption": "ge- nereye gider? Önce fiilin türüne bak."
+          }
+        },
+        {
+          "title": "3 · Anlam: edilgen ve bitmiş",
+          "paragraphs": [
+            "Nesne alan fiillerde sıfat olarak kullanılan Partizip II edilgen bir anlam taşır: das reparierte Auto = tamir edilmiş araba (biri onu tamir etti). Türkçedeki “-ılmış / -ilmiş” ekine karşılık gelir.",
+            "Perfekt’te sein alan fiillerde ise anlam “bitmiş, olmuş”tur: der angekommene Zug = gelmiş tren, die gefallenen Blätter = düşmüş yapraklar.",
+            "Partizip I ile karşılaştır: die schreibende Studentin (yazan öğrenci, şimdi yazıyor) – der geschriebene Text (yazılmış metin). İsim işi yapıyorsa Partizip I, iş isme yapılmışsa Partizip II seç."
+          ],
+          "examples": [
+            {
+              "de": "Das reparierte Fahrrad steht im Keller.",
+              "tr": "Tamir edilmiş bisiklet bodrumda duruyor.",
+              "note": "edilgen"
+            },
+            {
+              "de": "Die gefallenen Blätter liegen auf dem Weg.",
+              "tr": "Düşmüş yapraklar yolda duruyor.",
+              "note": "sein-fiil: bitmiş"
+            },
+            {
+              "de": "die lesende Frau – das gelesene Buch",
+              "tr": "okuyan kadın – okunmuş kitap",
+              "note": "Partizip I – Partizip II"
+            }
+          ]
+        },
+        {
+          "title": "4 · Sıfat çekimi: dört Kasus",
+          "paragraphs": [
+            "İsimden önce Partizip II normal bir sıfat gibi çekilir: der gekochte Reis, ein gekochtes Ei, mit dem gekochten Gemüse. Ek, artikel ve Kasus’a göre seçilir.",
+            "Önce ismin cinsiyetini ve cümledeki görevini belirle, sonra eki ekle. Partizip II’nin kendi sonu (-t veya -en) değişmez; ek bunun arkasına gelir: geschrieben + e → geschriebene.",
+            "Artikelsiz çoğulda güçlü ek gelir: frisch gewaschene Hemden, mit frisch gewaschenen Hemden."
+          ],
+          "examples": [
+            {
+              "de": "Der verlorene Schlüssel wurde gefunden.",
+              "tr": "Kaybolan anahtar bulundu.",
+              "note": "Nominativ: der → -e"
+            },
+            {
+              "de": "Ich habe einen gebrauchten Laptop gekauft.",
+              "tr": "İkinci el bir dizüstü bilgisayar aldım.",
+              "note": "Akkusativ: einen → -en"
+            },
+            {
+              "de": "Trotz des verspäteten Zuges kamen wir pünktlich an.",
+              "tr": "Geciken trene rağmen zamanında vardık.",
+              "note": "Genitiv: des → -en"
+            }
+          ],
+          "table": {
+            "headers": [
+              "Kasus",
+              "der/das/die + Partizip II",
+              "ein/eine + Partizip II"
+            ],
+            "rows": [
+              [
+                "Nominativ",
+                "das reparierte Auto",
+                "ein repariertes Auto"
+              ],
+              [
+                "Akkusativ",
+                "das reparierte Auto",
+                "ein repariertes Auto"
+              ],
+              [
+                "Dativ",
+                "dem reparierten Auto",
+                "einem reparierten Auto"
+              ],
+              [
+                "Genitiv",
+                "des reparierten Autos",
+                "eines reparierten Autos"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "5 · Relativsatz → Partizip II",
+          "paragraphs": [
+            "Edilgen bir ilgi cümlesi Partizip II grubuyla kısaltılabilir: das Auto, das repariert wurde → das reparierte Auto. Perfekt’te sein alan fiillerde de olur: der Zug, der angekommen ist → der angekommene Zug.",
+            "Adımlar: (1) ilgi zamirini ve yardımcı fiili (wurde, ist, worden ist) at, (2) Partizip II’ye sıfat eki ekle, (3) diğer kelimeleri Partizip II’nin önüne koy.",
+            "Dikkat: Perfekt’te haben alan ve nesnesi olmayan fiillerle bu yapılmaz. der Mann, der lange gearbeitet hat → der lange gearbeitete Mann yanlıştır. Bu durumda Relativsatz kalır."
+          ],
+          "box": {
+            "title": "B1’den hatırlatma: Passiv’de Präteritum",
+            "paragraphs": [
+              "Das Auto wurde gestern repariert = Araba dün tamir edildi. Relativsatz’ta fiil sona gider: das Auto, das gestern repariert wurde."
+            ]
+          },
+          "examples": [
+            {
+              "de": "das Auto, das gestern repariert wurde → das gestern reparierte Auto",
+              "tr": "dün tamir edilen araba",
+              "note": ""
+            },
+            {
+              "de": "der Gast, der spät angekommen ist → der spät angekommene Gast",
+              "tr": "geç gelen misafir",
+              "note": "sein-fiil"
+            },
+            {
+              "de": "die Waren, die online bestellt worden sind → die online bestellten Waren",
+              "tr": "internetten sipariş edilen ürünler",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "6 · Genişletilmiş Partizip II grupları",
+          "paragraphs": [
+            "Resmî metinlerde Partizip II’nin önüne zaman, yer, kişi gibi bilgiler girer: das gestern von der Firma veröffentlichte Gutachten (şirket tarafından dün yayımlanan rapor).",
+            "Okurken önce artikeli ve ismi bul: das … Gutachten. Aradaki her şey ismi anlatır. Sonra grubu bir ilgi cümlesine çevir: das Gutachten, das gestern von der Firma veröffentlicht wurde.",
+            "Yazarken grubu çok uzatma; iki üç bilgiden fazlası okuru yorar. Gerekirse Relativsatz kullan."
+          ],
+          "examples": [
+            {
+              "de": "Das gestern von der Firma veröffentlichte Gutachten sorgt für Diskussionen.",
+              "tr": "Şirketin dün yayımladığı rapor tartışmalara yol açıyor.",
+              "note": ""
+            },
+            {
+              "de": "Die im letzten Jahr renovierte Schule hat jetzt eine Mensa.",
+              "tr": "Geçen yıl yenilenen okulun artık bir yemekhanesi var.",
+              "note": ""
+            },
+            {
+              "de": "Wir sprechen über die in der Studie genannten Ergebnisse.",
+              "tr": "Araştırmada belirtilen sonuçlar hakkında konuşuyoruz.",
+              "note": "Akkusativ çoğul → -en"
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "das",
+              "gestern von der Firma",
+              "veröffentlichte",
+              "Gutachten"
+            ],
+            "labels": [
+              "artikel",
+              "eklenen bilgi",
+              "Partizip II + ek",
+              "isim"
+            ]
+          }
+        },
+        {
+          "title": "7 · Hata kontrolü: Türk öğrencilerin sık yaptığı hatalar",
+          "paragraphs": [
+            "Hata 1: Ayrılamayan fiillere ve -ieren fiillerine ge- eklemek. geverstanden, gestudiert yanlıştır; doğrusu verstanden, studiert.",
+            "Hata 2: Ayrılabilen fiilde ge-’yi başa koymak. geaufmacht yanlıştır; ge- önek ile kökün arasına girer: aufgemacht.",
+            "Hata 3: Sıfat ekini unutmak. das repariert Auto yanlıştır; isimden önce ek gerekir: das reparierte Auto.",
+            "Hata 4: Partizip I ile II’yi karıştırmak. Zaten yapılmış bir şey için die kochende Nudeln değil, die gekochten Nudeln.",
+            "Hata 5: haben alan nesnesiz fiillerle sıfat yapmak. der geschlafene Mann yanlıştır; der Mann, der geschlafen hat."
+          ],
+          "examples": [
+            {
+              "de": "Falsch: der geverkaufte Wagen → Richtig: der verkaufte Wagen",
+              "tr": "satılmış araba",
+              "note": "ver- → ge- yok"
+            },
+            {
+              "de": "Falsch: ein gestohlen Fahrrad → Richtig: ein gestohlenes Fahrrad",
+              "tr": "çalınmış bir bisiklet",
+              "note": "ein + nötr → -es"
+            },
+            {
+              "de": "Falsch: die eingeladete Gäste → Richtig: die eingeladenen Gäste",
+              "tr": "davet edilmiş misafirler",
+              "note": "einladen → eingeladen; çoğul → -en"
+            }
+          ]
+        }
+      ],
+      "summary": [
+        "Oluşum: ge-…-t (gemacht), ge-…-en (geschrieben), karışık (gebracht); ayrılabilen: aufgemacht; be-/ver-/-ieren: ge- yok.",
+        "Sıfat olarak anlam: nesne alan fiillerde edilgen (das reparierte Auto), sein-fiillerde bitmiş (der angekommene Zug).",
+        "İsimden önce sıfat gibi çekilir: das reparierte Auto, ein repariertes Auto, dem reparierten Auto.",
+        "Edilgen Relativsatz ve sein-fiilli Relativsatz Partizip II grubuyla kısaltılabilir.",
+        "Genişletilmiş grupta ek bilgiler artikel ile Partizip II arasına girer."
+      ],
+      "faq": [
+        {
+          "question": "Partizip II ile sıfat arasında fark var mı?",
+          "answer": "İsimden önce kullanıldığında Partizip II tam bir sıfat gibi davranır ve aynı ekleri alır. Bazıları zamanla sıradan sıfat olmuştur: bekannt, verheiratet, geschlossen. Fark, anlamın bir fiilden ve bir eylemden gelmesidir."
+        },
+        {
+          "question": "Her ilgi cümlesini Partizip II ile kısaltabilir miyim?",
+          "answer": "Hayır. Yalnızca edilgen ilgi cümleleri (das Haus, das gebaut wurde) ve Perfekt’te sein alan fiiller (der Zug, der angekommen ist) kısaltılabilir. Etken ve şimdiki zamandaki ilgi cümleleri Partizip I ile kısaltılır; haben alan nesnesiz fiiller ise kısaltılamaz."
+        },
+        {
+          "question": "Düzensiz Partizip II biçimlerini nasıl öğrenirim?",
+          "answer": "Fiilleri üç biçimiyle birlikte ezberle: nehmen – nahm – genommen. Sık kullanılan 50–60 düzensiz fiilin listesini her gün birkaç dakika tekrar etmek en etkili yoldur. Sıfat olarak kullanırken aynı biçimi alırsın."
+        }
+      ],
+      "related": [
+        "B1/passiv",
+        "B1/relativsaetze",
+        "A2/adjektivdeklination"
+      ],
+      "check": {
+        "question": "Wir haben die im Internet ___ Tickets ausgedruckt. (bestellen)",
+        "answer": "bestellten",
+        "why": "Biletler sipariş edilmiş: edilgen ve bitmiş → Partizip II bestellt. die + Akkusativ çoğul → sıfat eki -en: die … bestellten Tickets."
+      },
+      "titleTranslations": {
+        "tr": "Partizip II",
+        "de": "Partizip II",
+        "en": "Past participle"
+      },
+      "description": {
+        "tr": "Partizip II sıfat olarak: oluşum, edilgen ve bitmiş anlam, dört Kasus’ta çekim, Relativsatz dönüşümü.",
+        "de": "Partizip II – Erklärung auf Türkisch mit Beispielen zu Bildung, Bedeutung und erweiterten Attributen.",
+        "en": "Past participle – Turkish explanation with examples of formation, meaning and extended attributes."
+      }
+    },
+    {
+      "id": "genitivpraepositionen",
+      "title": "Präpositionen mit Genitiv – wegen, trotz, während, innerhalb",
+      "lead": "Bazı edatlar Genitiv ister: wegen des Wetters (hava yüzünden), trotz der Kälte (soğuğa rağmen), während des Kurses (kurs sırasında). Bu edatlar resmî yazılarda, haberlerde ve B2 sınavlarında çok sık çıkar. Bu derste anlam gruplarına göre edatları, doğru Genitiv eklerini ve günlük dilde Dativ kullanımını öğreneceğiz.",
+      "sections": [
+        {
+          "title": "1 · Genitiv biçimlerini tekrar et",
+          "paragraphs": [
+            "Genitiv’de eril ve nötr isimlerin artikeli des / eines olur ve isim -s veya -es alır: des Vertrags, eines Kindes. Dişil ve çoğulda artikel der / einer olur, isim değişmez: der Woche, der Kosten.",
+            "Sıfat, artikelden sonra -en alır: wegen des schlechten Wetters, trotz der hohen Kosten. Artikel yoksa sıfat güçlü eki alır: trotz starken Regens, trotz großer Probleme.",
+            "Tek heceli eril ve nötr isimler çoğunlukla -es alır (des Tages, des Buches); çok heceliler -s alır (des Projekts, des Wetters). N-Deklination isimleri -n/-en alır: des Kollegen, des Kunden."
+          ],
+          "box": {
+            "title": "B1’den hatırlatma: Genitiv",
+            "paragraphs": [
+              "B1’de Genitiv’i sahiplik için öğrendin: das Auto meines Vaters (babamın arabası). Burada aynı biçimleri edatlardan sonra kullanacaksın."
+            ]
+          },
+          "examples": [
+            {
+              "de": "wegen des Streiks",
+              "tr": "grev yüzünden",
+              "note": "eril: des + -s"
+            },
+            {
+              "de": "während der Woche",
+              "tr": "hafta boyunca",
+              "note": "dişil: der, isim değişmez"
+            },
+            {
+              "de": "trotz der hohen Kosten",
+              "tr": "yüksek maliyetlere rağmen",
+              "note": "çoğul: der + -en"
+            }
+          ],
+          "table": {
+            "headers": [
+              "",
+              "Eril",
+              "Nötr",
+              "Dişil",
+              "Çoğul"
+            ],
+            "rows": [
+              [
+                "belirli",
+                "des neuen Vertrags",
+                "des neuen Projekts",
+                "der neuen Regel",
+                "der neuen Regeln"
+              ],
+              [
+                "belirsiz",
+                "eines neuen Vertrags",
+                "eines neuen Projekts",
+                "einer neuen Regel",
+                "neuer Regeln"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "2 · Sebep ve karşıtlık: wegen, aufgrund, infolge, angesichts, trotz",
+          "paragraphs": [
+            "wegen en sık kullanılan sebep edatıdır: wegen des Regens. aufgrund daha resmîdir ve bir gerekçe bildirir: aufgrund der neuen Vorschriften. infolge bir olayın sonucunu anlatır: infolge des Unfalls (kaza sonucunda). angesichts “… karşısında, … göz önüne alındığında” demektir: angesichts der Lage.",
+            "trotz bir karşıtlık bildirir: “-e rağmen”. Trotz des Regens gingen wir spazieren. Cümle olarak söylemek istersen obwohl kullanırsın: Obwohl es regnete, …",
+            "Bu edatlar weil ve obwohl cümlelerini kısaltır: weil es regnete → wegen des Regens. B2 yazılarında bu dönüşüm üslubu daha resmî yapar."
+          ],
+          "examples": [
+            {
+              "de": "Wegen des Streiks fallen heute viele Züge aus.",
+              "tr": "Grev yüzünden bugün birçok tren seferi iptal.",
+              "note": ""
+            },
+            {
+              "de": "Aufgrund der hohen Nachfrage ist das Produkt ausverkauft.",
+              "tr": "Yüksek talep nedeniyle ürün tükendi.",
+              "note": "resmî"
+            },
+            {
+              "de": "Trotz der Kälte haben wir draußen gegessen.",
+              "tr": "Soğuğa rağmen dışarıda yemek yedik.",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "3 · Zaman: während, innerhalb, außerhalb, anlässlich, zeit",
+          "paragraphs": [
+            "während bir süre boyunca olanı anlatır: während des Urlaubs (tatil sırasında). innerhalb bir süre içinde (bitmeden önce) demektir: innerhalb einer Woche. außerhalb ise bir zaman diliminin dışında: außerhalb der Öffnungszeiten.",
+            "anlässlich bir olay vesilesiyle demektir: anlässlich des Jubiläums (yıldönümü vesilesiyle). zeit kalıplaşmış bir ifadede kullanılır: zeit seines Lebens (hayatı boyunca).",
+            "Artikel olmadan Genitiv belli olmuyorsa von + Dativ kullanılır: innerhalb von zwei Tagen (zwei Tagen’in Genitiv’i görünmez)."
+          ],
+          "examples": [
+            {
+              "de": "Während des Urlaubs habe ich viel gelesen.",
+              "tr": "Tatil sırasında çok kitap okudum.",
+              "note": ""
+            },
+            {
+              "de": "Bitte antworten Sie innerhalb einer Woche.",
+              "tr": "Lütfen bir hafta içinde cevap verin.",
+              "note": ""
+            },
+            {
+              "de": "Innerhalb von drei Tagen war alles erledigt.",
+              "tr": "Üç gün içinde her şey halledilmişti.",
+              "note": "artikel yok → von + Dativ"
+            }
+          ]
+        },
+        {
+          "title": "4 · Yer: innerhalb, außerhalb, oberhalb, unterhalb, abseits, unweit",
+          "paragraphs": [
+            "innerhalb ve außerhalb yer için de kullanılır: innerhalb der Stadt (şehrin içinde), außerhalb des Zentrums (merkezin dışında).",
+            "oberhalb ve unterhalb bir şeyin üstünde veya altında (daha yüksekte/alçakta) olanı gösterir: oberhalb des Dorfes. abseits “… -den uzakta, kenarda” demektir: abseits der Hauptstraße. unweit “… -e yakın” demektir: unweit des Bahnhofs.",
+            "Günlük dilde bunların yerine çoğu zaman in, über, unter, neben gibi Dativ edatları kullanılır; Genitiv edatları daha çok yazılı ve resmî dildedir."
+          ],
+          "examples": [
+            {
+              "de": "Das Hotel liegt außerhalb der Stadt.",
+              "tr": "Otel şehrin dışında.",
+              "note": ""
+            },
+            {
+              "de": "Oberhalb des Dorfes gibt es eine alte Burg.",
+              "tr": "Köyün yukarısında eski bir kale var.",
+              "note": ""
+            },
+            {
+              "de": "Wir wohnen unweit des Flughafens.",
+              "tr": "Havalimanına yakın oturuyoruz.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "oberhalb des Dorfes",
+                "köyün yukarısında"
+              ],
+              [
+                "innerhalb der Stadt",
+                "şehrin içinde"
+              ],
+              [
+                "außerhalb der Stadt",
+                "şehrin dışında"
+              ]
+            ],
+            "caption": "Yer bildiren Genitiv edatları."
+          }
+        },
+        {
+          "title": "5 · Yerine ve araç: anstatt, anstelle, mittels",
+          "paragraphs": [
+            "anstatt (veya kısaca statt) ve anstelle “… yerine” demektir: Anstatt eines Briefes schrieb er eine E-Mail. anstelle daha çok kişiler ve görevler için kullanılır: anstelle des Chefs (şefin yerine).",
+            "mittels “… aracılığıyla, … ile” demektir ve teknik, resmî metinlerde görülür: mittels eines Formulars. Günlük dilde mit + Dativ daha yaygındır.",
+            "anstatt bir cümleyle de kullanılabilir: anstatt zu warten (beklemek yerine). O zaman edat değil, bağlaçtır ve Genitiv istemez."
+          ],
+          "examples": [
+            {
+              "de": "Anstatt eines Geschenks hat sie uns Geld gegeben.",
+              "tr": "Bir hediye yerine bize para verdi.",
+              "note": ""
+            },
+            {
+              "de": "Anstelle des Direktors hält heute seine Stellvertreterin die Rede.",
+              "tr": "Bugün müdürün yerine yardımcısı konuşma yapıyor.",
+              "note": ""
+            },
+            {
+              "de": "Die Daten werden mittels einer App übertragen.",
+              "tr": "Veriler bir uygulama aracılığıyla aktarılıyor.",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "6 · Günlük dilde Dativ: wegen dem Wetter",
+          "paragraphs": [
+            "Konuşmada birçok Almanca konuşan wegen, trotz ve während’den sonra Dativ kullanır: wegen dem Wetter. Bu günlük dilde duyulur ama yazılı ve resmî dilde ve sınavlarda Genitiv beklenir: wegen des Wetters.",
+            "Zamirlerle özel biçimler kullanılır: wegen mir yerine resmî dilde meinetwegen, deinetwegen, seinetwegen.",
+            "Artikelsiz çoğul isimlerde Genitiv görünmezse Dativ kullanmak doğrudur: wegen Bauarbeiten olur, ama innerhalb von zwei Wochen gibi von + Dativ de yaygındır."
+          ],
+          "examples": [
+            {
+              "de": "Wegen des Wetters bleiben wir zu Hause.",
+              "tr": "Hava yüzünden evde kalıyoruz.",
+              "note": "Yazılı dil: Genitiv"
+            },
+            {
+              "de": "Wegen dem Wetter bleiben wir zu Hause.",
+              "tr": "Hava yüzünden evde kalıyoruz.",
+              "note": "Konuşma dili: Dativ, sınavda kullanma"
+            },
+            {
+              "de": "Meinetwegen kannst du das Fenster öffnen.",
+              "tr": "Bana kalırsa pencereyi açabilirsin.",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "7 · Hata kontrolü: Türk öğrencilerin sık yaptığı hatalar",
+          "paragraphs": [
+            "Hata 1: İsmin -s ekini unutmak. wegen des Regen yanlıştır; eril ve nötr isimler Genitiv’de -s/-es alır: wegen des Regens.",
+            "Hata 2: Dişil isme -s eklemek. während der Pauses yanlıştır; dişil isimler değişmez: während der Pause.",
+            "Hata 3: Sıfat ekini yanlış seçmek. trotz des schlechte Wetters yanlıştır; artikelden sonra -en: trotz des schlechten Wetters.",
+            "Hata 4: Yazılı metinde Dativ kullanmak. Sınavda wegen dem Unfall yerine wegen des Unfalls yaz.",
+            "Hata 5: innerhalb ile während’i karıştırmak. innerhalb einer Woche = bir hafta içinde (en geç); während einer Woche = bir hafta boyunca."
+          ],
+          "examples": [
+            {
+              "de": "Falsch: wegen des schlechten Verkehr → Richtig: wegen des schlechten Verkehrs",
+              "tr": "kötü trafik yüzünden",
+              "note": ""
+            },
+            {
+              "de": "Falsch: trotz die Probleme → Richtig: trotz der Probleme",
+              "tr": "sorunlara rağmen",
+              "note": "çoğul Genitiv: der"
+            },
+            {
+              "de": "Falsch: anlässlich das Jubiläum → Richtig: anlässlich des Jubiläums",
+              "tr": "yıldönümü vesilesiyle",
+              "note": ""
+            }
+          ]
+        }
+      ],
+      "summary": [
+        "Genitiv: des/eines + isim -(e)s (eril/nötr), der/einer (dişil/çoğul); artikelden sonra sıfat -en.",
+        "Sebep: wegen, aufgrund, infolge, angesichts; karşıtlık: trotz.",
+        "Zaman: während, innerhalb, außerhalb, anlässlich; yer: innerhalb, außerhalb, oberhalb, unterhalb, abseits, unweit.",
+        "Yerine ve araç: anstatt/statt, anstelle, mittels.",
+        "Konuşmada wegen/trotz + Dativ duyulur; yazılı dilde ve sınavda Genitiv kullan."
+      ],
+      "faq": [
+        {
+          "question": "wegen + Dativ yanlış mı?",
+          "answer": "Günlük konuşmada çok yaygındır ve anlaşılır, ama standart yazılı dilde Genitiv beklenir. Sınavlarda, e-postalarda ve resmî metinlerde wegen des …, trotz des … kullan."
+        },
+        {
+          "question": "aufgrund ile wegen arasında fark var mı?",
+          "answer": "Anlamları çok yakındır. aufgrund daha resmîdir ve bir gerekçeyi, bir dayanağı vurgular: aufgrund der Daten. wegen her bağlamda kullanılabilir. infolge ise bir olayın sonucunu anlatır: infolge des Sturms."
+        },
+        {
+          "question": "Genitiv görünmüyorsa ne yaparım?",
+          "answer": "Artikel ve sıfat olmayan çoğul isimlerde Genitiv görünmez (zwei Tage). O zaman von + Dativ kullanılır: innerhalb von zwei Tagen. Bir sıfat varsa Genitiv görünür ve kullanılabilir: innerhalb zweier Tage, trotz großer Probleme."
+        }
+      ],
+      "related": [
+        "B1/genitiv",
+        "A2/adjektivdeklination",
+        "B1/kausalsaetze"
+      ],
+      "check": {
+        "question": "Trotz ___ schlechten Wetters fand das Konzert statt.",
+        "answer": "des",
+        "why": "trotz Genitiv ister. das Wetter nötrdür → Genitiv’de des; sıfat -en (schlechten), isim -s alır (Wetters)."
+      },
+      "titleTranslations": {
+        "tr": "Präpositionen mit Genitiv",
+        "de": "Präpositionen mit Genitiv",
+        "en": "Prepositions with the genitive"
+      },
+      "description": {
+        "tr": "Genitiv alan edatlar: wegen, trotz, während, innerhalb, aufgrund, infolge, anlässlich, mittels ve Genitiv ekleri.",
+        "de": "Präpositionen mit Genitiv – Erklärung auf Türkisch mit Beispielen und Endungen.",
+        "en": "Prepositions with the genitive – Turkish explanation with examples and endings."
+      }
+    },
+    {
+      "id": "je-desto",
+      "title": "Je … desto – ne kadar …, o kadar …",
+      "lead": "„Je mehr ich übe, desto besser spreche ich.“ (Ne kadar çok pratik yaparsam o kadar iyi konuşurum.) je … desto iki şeyin birlikte arttığını veya azaldığını gösterir. Her iki tarafta da Komparativ vardır ve fiil iki tarafta farklı yerdedir. Bu derste yapıyı, Komparativ biçimlerini, fiil sırasını ve sık yapılan hataları çalışacağız.",
+      "sections": [
+        {
+          "title": "1 · Yapı: Je + Komparativ …, desto + Komparativ …",
+          "paragraphs": [
+            "Cümle iki parçadan oluşur. Birinci parça je ile başlar ve bir yan cümledir: çekimli fiil sona gider. İkinci parça desto (veya umso) ile başlar ve ana cümledir: çekimli fiil hemen Komparativ’den sonra gelir.",
+            "Her iki parçada da Komparativ, je veya desto’dan hemen sonra durur: Je länger …, desto müder …",
+            "Türkçedeki “ne kadar … -sa, o kadar …” yapısına benzer: Je länger wir warten, desto ungeduldiger werden wir = Ne kadar uzun beklersek o kadar sabırsızlanırız."
+          ],
+          "examples": [
+            {
+              "de": "Je länger wir warten, desto ungeduldiger werden wir.",
+              "tr": "Ne kadar uzun beklersek o kadar sabırsızlanırız.",
+              "note": ""
+            },
+            {
+              "de": "Je früher du kommst, desto mehr Zeit haben wir.",
+              "tr": "Ne kadar erken gelirsen o kadar çok vaktimiz olur.",
+              "note": ""
+            },
+            {
+              "de": "Je älter er wird, desto ruhiger wird er.",
+              "tr": "Yaşlandıkça sakinleşiyor.",
+              "note": ""
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "Je länger",
+              "wir warten,",
+              "desto ungeduldiger",
+              "werden wir."
+            ],
+            "labels": [
+              "je + Komparativ",
+              "yan cümle: fiil sonda",
+              "desto + Komparativ",
+              "fiil hemen sonra, sonra özne"
+            ]
+          }
+        },
+        {
+          "title": "2 · Komparativ biçimleri",
+          "paragraphs": [
+            "Komparativ çoğu sıfatta -er ile yapılır: schnell → schneller, klein → kleiner. Tek heceli birçok sıfat Umlaut alır: alt → älter, jung → jünger, groß → größer, warm → wärmer.",
+            "Bazı biçimler düzensizdir ve je … desto’da çok sık kullanılır: gut → besser, viel → mehr, wenig → weniger, gern → lieber, hoch → höher, nah → näher.",
+            "-el ve -er ile biten sıfatlarda e düşebilir: dunkel → dunkler, teuer → teurer."
+          ],
+          "box": {
+            "title": "A2’den hatırlatma: Komparativ",
+            "paragraphs": [
+              "A2’de Komparativ ile karşılaştırma yaptın: Berlin ist größer als Köln. je … desto’da als kullanılmaz; iki Komparativ birbirine bağlanır."
+            ]
+          },
+          "examples": [
+            {
+              "de": "Je höher wir steigen, desto kälter wird es.",
+              "tr": "Ne kadar yükseğe çıkarsak o kadar soğuk oluyor.",
+              "note": "hoch → höher"
+            },
+            {
+              "de": "Je öfter ich Deutsch spreche, desto lieber spreche ich es.",
+              "tr": "Almanca ne kadar sık konuşursam o kadar severek konuşuyorum.",
+              "note": "oft → öfter, gern → lieber"
+            },
+            {
+              "de": "Je teurer das Hotel ist, desto besser ist der Service.",
+              "tr": "Otel ne kadar pahalıysa hizmet o kadar iyi.",
+              "note": "teuer → teurer"
+            }
+          ],
+          "table": {
+            "headers": [
+              "Sıfat / zarf",
+              "Komparativ",
+              "Örnek"
+            ],
+            "rows": [
+              [
+                "gut",
+                "besser",
+                "desto besser"
+              ],
+              [
+                "viel / wenig",
+                "mehr / weniger",
+                "je mehr"
+              ],
+              [
+                "gern",
+                "lieber",
+                "desto lieber"
+              ],
+              [
+                "hoch",
+                "höher",
+                "je höher"
+              ],
+              [
+                "oft",
+                "öfter",
+                "je öfter"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "3 · Fiil sırası iki tarafta",
+          "paragraphs": [
+            "je parçası: je + Komparativ + özne + … + çekimli fiil (sonda). Je schneller du fährst, …",
+            "desto parçası: desto + Komparativ + çekimli fiil + özne + … desto gefährlicher wird es. Özneyi fiilden önce yazmak en sık hatadır: desto es wird gefährlicher yanlıştır.",
+            "Komparativ bir isme aitse isim de onunla birlikte gelir: Je mehr Bücher du liest, desto größer wird dein Wortschatz."
+          ],
+          "examples": [
+            {
+              "de": "Je schneller du fährst, desto gefährlicher wird es.",
+              "tr": "Ne kadar hızlı gidersen o kadar tehlikeli olur.",
+              "note": ""
+            },
+            {
+              "de": "Je genauer du zuhörst, desto besser verstehst du die Erklärung.",
+              "tr": "Ne kadar dikkatli dinlersen açıklamayı o kadar iyi anlarsın.",
+              "note": "zuhören: yan cümlede bitişik"
+            },
+            {
+              "de": "Je mehr Bücher du liest, desto größer wird dein Wortschatz.",
+              "tr": "Ne kadar çok kitap okursan kelime hazinen o kadar büyür.",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "4 · mehr ve weniger: isimle ve fiille",
+          "paragraphs": [
+            "mehr ve weniger isimden önce gelirse miktar bildirir: Je mehr Zeit ich habe, … / desto weniger Fehler macht man.",
+            "Tek başına kullanılırsa fiilin ne kadar yapıldığını anlatır: Je mehr du übst, desto weniger musst du nachdenken.",
+            "mehr ve weniger çekim eki almaz: mehr Zeit, mehr Fehler, weniger Geld."
+          ],
+          "examples": [
+            {
+              "de": "Je mehr Zeit ich habe, desto mehr lese ich.",
+              "tr": "Ne kadar çok vaktim olursa o kadar çok okurum.",
+              "note": ""
+            },
+            {
+              "de": "Je mehr du übst, desto weniger Fehler machst du.",
+              "tr": "Ne kadar çok pratik yaparsan o kadar az hata yaparsın.",
+              "note": ""
+            },
+            {
+              "de": "Je weniger Zucker man isst, desto gesünder lebt man.",
+              "tr": "Ne kadar az şeker yersen o kadar sağlıklı yaşarsın.",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "5 · umso ve sırayı değiştirmek",
+          "paragraphs": [
+            "desto yerine umso da kullanılabilir; anlam aynıdır: Je länger der Film dauert, umso müder werde ich.",
+            "Ana cümle başa da gelebilir. O zaman ana cümle normal sırayla başlar ve desto/umso Komparativ ile birlikte cümlenin ortasına girer; je parçası sonra gelir: Ich werde umso müder, je länger der Film dauert.",
+            "B2 yazılarında bu sıra bir sonucu öne çıkarmak için kullanılır: Die Gefahr ist umso größer, je schneller man fährt."
+          ],
+          "examples": [
+            {
+              "de": "Je länger der Film dauert, umso müder werde ich.",
+              "tr": "Film ne kadar uzun sürerse o kadar yoruluyorum.",
+              "note": "umso = desto"
+            },
+            {
+              "de": "Ich werde umso müder, je länger der Film dauert.",
+              "tr": "Film uzadıkça daha çok yoruluyorum.",
+              "note": "ana cümle önce"
+            },
+            {
+              "de": "Die Gefahr ist umso größer, je schneller man fährt.",
+              "tr": "Ne kadar hızlı gidilirse tehlike o kadar büyük.",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "6 · Modal, dönüşlü ve ayrılabilen fiiller",
+          "paragraphs": [
+            "Modal fiiller: je parçasında modal fiil en sona gider (je früher wir anfangen können); desto parçasında modal fiil Komparativ’den sonra gelir, mastar sonda kalır (desto früher können wir gehen).",
+            "Dönüşlü fiiller: je parçasında sich özneden sonra gelir (je mehr du dich bewegst); desto parçasında fiilden ve özneden sonra (desto besser fühlst du dich).",
+            "Ayrılabilen fiiller: je parçasında bitişik ve sonda (je früher der Zug ankommt); desto parçasında ayrılır, önek sona gider (desto früher kommen wir an)."
+          ],
+          "examples": [
+            {
+              "de": "Je früher wir anfangen, desto früher können wir nach Hause gehen.",
+              "tr": "Ne kadar erken başlarsak o kadar erken eve gidebiliriz.",
+              "note": "modal"
+            },
+            {
+              "de": "Je mehr du dich bewegst, desto besser fühlst du dich.",
+              "tr": "Ne kadar çok hareket edersen kendini o kadar iyi hissedersin.",
+              "note": "dönüşlü"
+            },
+            {
+              "de": "Je früher wir losfahren, desto früher kommen wir an.",
+              "tr": "Ne kadar erken yola çıkarsak o kadar erken varırız.",
+              "note": "ayrılabilen"
+            }
+          ]
+        },
+        {
+          "title": "7 · Hata kontrolü: Türk öğrencilerin sık yaptığı hatalar",
+          "paragraphs": [
+            "Hata 1: je parçasında fiili ikinci yere koymak. Je länger warten wir yanlıştır; je parçası yan cümledir: Je länger wir warten.",
+            "Hata 2: desto parçasında özneyi fiilden önce yazmak. desto ungeduldiger wir werden yanlıştır; doğrusu desto ungeduldiger werden wir.",
+            "Hata 3: Komparativ yerine sıfatın yalın hâlini kullanmak. Je lang …, desto gut … yanlıştır; iki tarafta da Komparativ gerekir: länger, besser.",
+            "Hata 4: Komparativ’i cümlenin sonuna atmak. Je wir länger warten yanlıştır; Komparativ hemen je’den sonra gelir.",
+            "Hata 5: viel ve gern’in Komparativ’ini yanlış yapmak. vieler, gerner yoktur; doğrusu mehr ve lieber."
+          ],
+          "examples": [
+            {
+              "de": "Falsch: Je mehr übst du, desto besser du sprichst. → Richtig: Je mehr du übst, desto besser sprichst du.",
+              "tr": "Ne kadar çok pratik yaparsan o kadar iyi konuşursun.",
+              "note": ""
+            },
+            {
+              "de": "Falsch: Je spät es ist, desto müde bin ich. → Richtig: Je später es ist, desto müder bin ich.",
+              "tr": "Saat ne kadar geçse o kadar yorgun oluyorum.",
+              "note": ""
+            },
+            {
+              "de": "Falsch: Je vieler Leute kommen, … → Richtig: Je mehr Leute kommen, …",
+              "tr": "Ne kadar çok insan gelirse …",
+              "note": "viel → mehr"
+            }
+          ]
+        }
+      ],
+      "summary": [
+        "Yapı: Je + Komparativ + … + fiil (sonda), desto/umso + Komparativ + fiil + özne.",
+        "Komparativ: -er, çoğu tek heceli sıfatta Umlaut; düzensiz: besser, mehr, weniger, lieber, höher.",
+        "mehr ve weniger ek almaz ve isimden önce miktar bildirir: je mehr Zeit.",
+        "Ana cümle önce gelirse: Ich werde umso müder, je länger der Film dauert.",
+        "Modal, dönüşlü ve ayrılabilen fiillerde je parçası yan cümle, desto parçası ana cümle kurallarına uyar."
+      ],
+      "faq": [
+        {
+          "question": "desto ile umso arasında fark var mı?",
+          "answer": "Hayır, anlam aynıdır ve ikisi de doğru. desto daha sık kullanılır. Ana cümle başa geldiğinde (Ich werde umso müder, je …) umso daha yaygındır."
+        },
+        {
+          "question": "je parçasında neden fiil sonda?",
+          "answer": "Çünkü je burada bir yan cümle bağlacı gibi davranır; weil veya wenn gibi fiili sona gönderir. desto parçası ise ana cümledir ve Komparativ grubu ilk yeri doldurur; bu yüzden fiil hemen arkasından gelir."
+        },
+        {
+          "question": "İki tarafta da Komparativ gerekli mi?",
+          "answer": "Evet. je … desto iki değişimin birlikte olduğunu anlatır; bu yüzden her iki tarafta da bir Komparativ (veya mehr / weniger) bulunur: Je mehr …, desto besser …"
+        }
+      ],
+      "related": [
+        "A2/komparativ-superlativ",
+        "A2/nebensaetze",
+        "B1/satzstellung-b1"
+      ],
+      "check": {
+        "question": "Je öfter wir uns treffen, desto besser ___ wir uns. (verstehen)",
+        "answer": "verstehen",
+        "why": "desto parçası ana cümledir: desto besser ilk yeri doldurur, çekimli fiil verstehen hemen arkasından gelir, sonra özne wir ve dönüşlü uns."
+      },
+      "titleTranslations": {
+        "tr": "Je … desto",
+        "de": "Je … desto",
+        "en": "The more … the more"
+      },
+      "description": {
+        "tr": "je … desto: iki Komparativ, iki farklı fiil sırası, mehr/weniger, umso ve modal/dönüşlü/ayrılabilen fiiller.",
+        "de": "Je … desto – Erklärung auf Türkisch mit Beispielen zu Komparativ und Verbstellung.",
+        "en": "The more … the more – Turkish explanation with examples of comparatives and word order."
+      }
     }
   ]
 }

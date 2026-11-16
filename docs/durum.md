@@ -2,6 +2,13 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-16 · Giriş, kayıt ve panel: çeviriler Firebase'den bağımsız
+
+- **Sorun:** Bu üç sayfanın DE/EN metinleri (`js/account/i18n.js`) Firebase ile aynı modül zincirinde yükleniyordu. Firebase yüklenemezse (reklam engelleyici, kötü bağlantı) zincir hiç çalışmıyor, sayfa seçilen dil yerine Türkçe kalıyordu.
+- **Şimdi:** Yeni `js/account/i18n-boot.js` sadece metinleri yükler; `giris.html`, `kayit.html`, `panel.html` onu ana modülden önce ayrıca yükler. Firebase yüklenemese de metinler seçilen dilde görünür.
+- **Test:** `node tests/hesap-ceviri.mjs` (dış istekler engelliyken DE/EN/TR başlıkları).
+- **Bilinen:** Firebase hiç yüklenemezse panel "Wird geladen…" durumunda kalıyor (artık doğru dilde). Hata mesajı göstermek ayrı bir iş.
+
 ## 2026-11-16 · Dil seçimi, Aşama 1: sabit Türkçe sayfalarda not ve çalışan dil düğmesi
 
 - **Sorun:** 4–5 Kasım SEO çalışmasıyla gelen statik sayfalarda (`data-ba-fixed-lang="tr"`: 12 menü/kurs sayfası, 45 gramer dersi, blog, 404) dil düğmesi yoktu ve menü Türkçeye dönüyordu. Kayıtlı seçim (`baLang`) silinmiyordu ama ana sayfaya dönünce dil yeniden değişiyordu; "dil kayboluyor" gibi görünüyordu. PR #29 bu sayfalardan önce yapıldığı için bunu kapsamıyordu.

@@ -1,7 +1,7 @@
-// Dil seçimi sabit Türkçe sayfalarda da korunuyor mu? (Aşama 1: not + çalışan dil düğmesi)
+// Dil seçimi ve dil sürümleri: sabit Türkçe sayfalarda not + çalışan dil düğmesi (Aşama 1),
+// /de/… ve /en/… sürümleri, dil düğmesiyle sürümler arasında geçiş, site içi bağlantılar (Aşama 2).
 // Çalıştırma: python3 -m http.server 8765 açıkken node tests/dil-secimi.mjs
 // Ekran görüntüleri: S=<klasör> verilirse oraya (390/1440 px, açık/koyu).
-import fs from 'fs';
 import path from 'path';
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
@@ -13,108 +13,144 @@ const fails = [];
 const ok = (cond, label) => { console.log((cond ? 'ok   ' : 'FAIL ') + label); if (!cond) fails.push(label); };
 const browser = await chromium.launch();
 const errors = [];
-const watch = page => {
+const newPage = async (viewport = { width: 1440, height: 900 }) => {
+  const ctx = await browser.newContext({ viewport });
+  // Dışarıya istek gitmesin; iletişim formu gönderimi taklit edilir.
+  await ctx.route(/^https?:\/\/(?!localhost)/, route => route.abort());
+  const page = await ctx.newPage();
   page.on('pageerror', e => errors.push(e.message));
-  page.on('console', m => { if (m.type() === 'error' && !/Failed to load resource|ERR_|goatcounter/i.test(m.text())) errors.push(m.text()); });
+  page.on('console', m => { if (m.type() === 'error' && !/Failed to load resource|ERR_|net::/i.test(m.text())) errors.push(m.text()); });
+  return page;
 };
-const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
-watch(page);
+const page = await newPage();
 const saved = () => page.evaluate(() => localStorage.getItem('baLang'));
 const note = () => page.locator('.ba-lang-note');
+const htmlLang = () => page.evaluate(() => document.documentElement.lang);
+const path_ = () => new URL(page.url()).pathname;
+const text = async sel => (await page.textContent(sel)).trim();
 
-// 1) Ana sayfada DE seç → statik sayfaya geç.
+// 1) Ana sayfada DE → menüdeki "Über mich" Almanca sürüme gider.
 await page.goto(B + '/');
 await page.click('.lang button[data-lang="de"]');
 ok(await saved() === 'de', 'ana sayfada DE kaydedildi');
-await page.click('.nav-link[href="/hakkimda/"]');
-await page.waitForURL('**/hakkimda/');
-ok(await saved() === 'de', 'statik sayfada seçim silinmedi');
-ok(await page.locator('.lang button[data-lang="de"]').count() === 1, 'statik sayfada dil düğmesi var');
-ok(await page.getAttribute('.lang button[data-lang="de"]', 'aria-pressed') === 'true', 'DE düğmesi etkin görünüyor');
-ok(await page.evaluate(() => document.documentElement.lang) === 'tr', 'sayfanın dili (içerik) tr kalıyor');
-ok(await note().count() === 1, 'not görünüyor');
-ok((await note().textContent()).includes('nur auf Türkisch'), 'not Almanca');
-ok(await page.getAttribute('.ba-lang-note', 'lang') === 'de', 'notun lang değeri de');
-ok(await page.getAttribute('.ba-lang-note a', 'href') === '/', 'not ana sayfaya bağlantı veriyor');
-ok((await page.textContent('.nav-link[href="/hakkimda/"]')).trim() === 'Über mich', 'menü Almanca');
-ok((await page.textContent('footer [data-i18n="footerGroupLessons"]')).trim() === 'Unterricht', 'alt bilgi Almanca');
-ok((await page.textContent('h1')).includes('Ömer Faruk Bozkurt'), 'içerik Türkçe kalıyor');
-ok(await page.getAttribute('.topbar', 'lang') === 'de', 'menünün lang değeri de');
+ok(await page.getAttribute('.nav-link[data-i18n="navAbout"]', 'href') === '/de/ueber-mich/', 'ana sayfa menüsü: Über mich → /de/ueber-mich/');
+ok(await page.getAttribute('.nav-cta', 'href') === '/de/kontakt/', 'ana sayfa: "Kostenlos anfragen" → /de/kontakt/');
+await page.click('.nav-link[data-i18n="navAbout"]');
+await page.waitForURL('**/de/ueber-mich/');
+ok(await htmlLang() === 'de', '/de/ueber-mich/: sayfa dili de');
+ok((await text('h1')) === 'Ömer Faruk Bozkurt' && (await text('.lp-lead')).startsWith('Ich studiere'), '/de/ueber-mich/: içerik Almanca');
+ok(await note().count() === 0, '/de/ueber-mich/: not yok');
+ok(await page.getAttribute('.lang button[data-lang="de"]', 'aria-pressed') === 'true', '/de/ueber-mich/: DE düğmesi etkin');
+ok(await page.locator('link[rel="alternate"][hreflang]').count() === 4, '/de/ueber-mich/: 4 hreflang (tr, de, en, x-default)');
+ok((await text('.lp-breadcrumb li:first-child')) === 'Startseite', '/de/ueber-mich/: sayfa yolu Almanca');
 
-// 2) Statik sayfada EN'e bas → kaydedilir, not güncellenir.
+// 2) Sürümler arasında dil düğmesi: DE → EN → TR.
 await page.click('.lang button[data-lang="en"]');
-ok(await saved() === 'en', 'statik sayfada EN kaydedildi');
-ok((await note().textContent()).includes('only available in Turkish'), 'not İngilizceye döndü');
-ok((await page.textContent('.nav-link[href="/hakkimda/"]')).trim() === 'About Me', 'menü İngilizce');
+await page.waitForURL('**/en/about/');
+ok(await saved() === 'en' && await htmlLang() === 'en', 'EN düğmesi → /en/about/, seçim en');
+await page.click('.lang button[data-lang="tr"]');
+await page.waitForURL('**/hakkimda/');
+ok(await saved() === 'tr' && await note().count() === 0, 'TR düğmesi → /hakkimda/, seçim tr, not yok');
+await page.goBack(); await page.waitForURL('**/en/about/');
+ok(await htmlLang() === 'en', 'geri tuşu → /en/about/');
+
+// 3) Türkçe sayfaya DE seçiliyken doğrudan gelmek: otomatik yönlendirme yok, "Almanca sürümü de var" notu.
+await page.evaluate(() => localStorage.setItem('baLang', 'de'));
+await page.goto(B + '/iletisim/');
+ok(path_() === '/iletisim/', '/iletisim/: yönlendirme yok');
+ok((await note().textContent()).includes('auch auf Deutsch'), '/iletisim/: "auch auf Deutsch" notu');
+ok(await page.getAttribute('.ba-lang-note a', 'href') === '/de/kontakt/', '/iletisim/: not → /de/kontakt/');
+ok((await text('h1')) === 'İletişim ve ücretsiz ilk ders', '/iletisim/: içerik Türkçe');
+
+// 4) Sürümü olmayan Türkçe sayfa: "nur auf Türkisch", menü Almanca, düğme sayfada kalır.
+await page.goto(B + '/sss/');
+ok((await note().textContent()).includes('nur auf Türkisch'), '/sss/: "nur auf Türkisch" notu');
+ok(await page.getAttribute('.ba-lang-note a', 'href') === '/', '/sss/: not ana sayfaya bağlantı veriyor');
+ok((await text('.nav-link[data-i18n="navAbout"]')) === 'Über mich', '/sss/: menü Almanca');
+ok(await page.getAttribute('.nav-link[data-i18n="navContact"]', 'href') === '/de/kontakt/', '/sss/: menü Kontakt → /de/kontakt/');
+ok(await page.getAttribute('footer a[data-i18n="navContact"]', 'href') === '/de/kontakt/', '/sss/: alt bilgi Kontakt → /de/kontakt/');
+ok(await htmlLang() === 'tr' && await page.getAttribute('.topbar', 'lang') === 'de', '/sss/: içerik tr, menü lang=de');
+await page.click('.lang button[data-lang="en"]');
+ok(path_() === '/sss/' && await saved() === 'en', '/sss/: EN düğmesi sayfada kalır, kaydedilir');
+ok((await note().textContent()).includes('only available in Turkish'), '/sss/: not İngilizce');
+ok(await page.getAttribute('.nav-link[data-i18n="navContact"]', 'href') === '/en/contact/', '/sss/: menü Contact → /en/contact/');
 if (shotDir) {
   for (const [w, h] of [[390, 844], [1440, 900]]) for (const theme of ['light', 'dark']) {
     await page.setViewportSize({ width: w, height: h });
     await page.evaluate(t => { document.documentElement.dataset.theme = t; }, theme);
     await page.waitForTimeout(150);
-    await page.screenshot({ path: path.join(shotDir, `dil-not-hakkimda-en-${w}-${theme}.png`) });
+    await page.screenshot({ path: path.join(shotDir, `dil-not-sss-en-${w}-${theme}.png`) });
   }
   await page.evaluate(() => { document.documentElement.dataset.theme = 'light'; });
   await page.setViewportSize({ width: 1440, height: 900 });
 }
-
-// 3) TR'ye bas → not kaybolur, menü Türkçe.
 await page.click('.lang button[data-lang="tr"]');
-ok(await saved() === 'tr', 'TR kaydedildi');
-ok(await note().count() === 0, 'TR seçilince not yok');
-ok(await page.getAttribute('.topbar', 'lang') === null, 'TR\'de menüde ayrı lang yok');
-ok((await page.textContent('.nav-link[href="/hakkimda/"]')).trim() === 'Hakkımda', 'menü Türkçe');
+ok(await note().count() === 0 && await page.getAttribute('.topbar', 'lang') === null, '/sss/: TR → not yok');
+ok(await page.getAttribute('.nav-link[data-i18n="navContact"]', 'href') === '/iletisim/', '/sss/: TR → menü İletişim → /iletisim/');
 
-// 4) DE seç, geri tuşu → ana sayfa Almanca.
-await page.click('.lang button[data-lang="de"]');
-await page.goBack(); await page.waitForTimeout(400);
-ok(await page.evaluate(() => document.documentElement.lang) === 'de', 'geri dönünce ana sayfa Almanca');
-await page.reload(); await page.waitForTimeout(300);
-ok(await page.evaluate(() => document.documentElement.lang) === 'de', 'yeniden yüklenince ana sayfa Almanca');
-
-// 5) Notun bağlantıları sayfaya göre.
-for (const [p, href, text] of [
+// 5) Notun bağlantıları (sürümü olmayan sayfalar).
+await page.evaluate(() => localStorage.setItem('baLang', 'de'));
+for (const [p, href, txt] of [
   ['/almanca-sinav-hazirlik/', '/#exams', 'Prüfungstraining'],
   ['/almanca-gramer/a1/', '/#exercises', 'Übungen'],
   ['/a1-almanca-kursu/', '/', 'Startseite'],
-  ['/iletisim/', null, 'auf Deutsch schreiben'],
   ['/blog/', null, null],
   ['/almanca-alfabe/', null, null],
 ]) {
-  await page.goto(B + p); await page.waitForTimeout(200);
+  await page.goto(B + p); await page.waitForTimeout(150);
   ok(await note().count() === 1, `${p}: not var`);
   ok(await page.locator('.ba-lang-note a').count() === (href ? 1 : 0), `${p}: bağlantı sayısı`);
   if (href) ok(await page.getAttribute('.ba-lang-note a', 'href') === href, `${p}: bağlantı ${href}`);
-  if (text) ok((await note().textContent()).includes(text), `${p}: metin "${text}"`);
+  if (txt) ok((await note().textContent()).includes(txt), `${p}: metin "${txt}"`);
 }
-// İletişim formu düğmesi içerik olduğu için Türkçe kalır.
-await page.goto(B + '/iletisim/');
-ok((await page.textContent('#contactSubmitBtn')).trim() === 'Mesaj gönder', 'iletişim formu Türkçe kalıyor');
 
 // 6) Kapatma: aynı oturumda o dil için gizli; başka dil seçince yeniden çıkar.
+await page.goto(B + '/sss/');
 await page.click('.ba-lang-note-close');
 ok(await note().count() === 0, 'kapatınca not gitti');
-await page.goto(B + '/sss/');
+await page.goto(B + '/b1-almanca-kursu/');
 ok(await note().count() === 0, 'kapatılan not başka sayfada da çıkmıyor');
 await page.click('.lang button[data-lang="en"]');
 ok(await note().count() === 1, 'başka dil seçince not yeniden çıktı');
 
 // 7) Yönetim sayfası (dil düğmesi yok): tamamen Türkçe, seçim korunur.
-await page.goto(B + '/yonetim/yorumlar/'); await page.waitForTimeout(200);
-ok(await note().count() === 0, 'yönetim: not yok');
-ok(await page.locator('.lang button').count() === 0, 'yönetim: dil düğmesi yok');
-ok((await page.textContent('.nav-link[href="/hakkimda/"]')).trim() === 'Hakkımda', 'yönetim: menü Türkçe');
+await page.goto(B + '/yonetim/yorumlar/'); await page.waitForTimeout(150);
+ok(await note().count() === 0 && await page.locator('.lang button').count() === 0, 'yönetim: not ve dil düğmesi yok');
+ok((await text('.nav-link[data-i18n="navAbout"]')) === 'Hakkımda', 'yönetim: menü Türkçe');
+ok(await page.getAttribute('.nav-link[data-i18n="navContact"]', 'href') === '/iletisim/', 'yönetim: bağlantılar Türkçe');
 ok(await saved() === 'en', 'yönetim: kayıtlı seçim silinmedi');
 
-// 8) Ana sayfa alt bilgisi artık çevriliyor.
-await page.goto(B + '/'); await page.waitForTimeout(300);
-ok((await page.textContent('footer [data-i18n="footerGroupFree"]')).trim() === 'Practise for free', 'ana sayfa alt bilgi İngilizce');
+// 8) Almanca sayfaya TR seçiliyken gelmek: seçim de olur.
+await page.evaluate(() => localStorage.setItem('baLang', 'tr'));
+await page.goto(B + '/de/kontakt/');
+ok(await saved() === 'de', '/de/kontakt/ açılınca seçim de');
+await page.goto(B + '/');
+ok(await htmlLang() === 'de' && (await text('footer [data-i18n="footerGroupFree"]')) === 'Kostenlos üben', 'ana sayfa sonra Almanca');
 
-// 9) Mobil: yatay taşma yok.
-const mobile = await browser.newPage({ viewport: { width: 390, height: 844 } });
-watch(mobile);
+// 9) Almanca iletişim formu: "Sie" mesajları ve gönderim (Web3Forms taklit).
+await page.goto(B + '/de/kontakt/');
+await page.click('#contactSubmitBtn');
+ok((await text('#formStatus')).startsWith('Bitte geben Sie'), 'DE form: eksik alan mesajı (Sie)');
+let sent = null;
+await page.route('https://api.web3forms.com/submit', route => { sent = JSON.parse(route.request().postData()); route.fulfill({ status: 200, contentType: 'application/json', body: '{"success":true}' }); });
+await page.fill('#name', 'Test'); await page.fill('#email', 'test@example.com'); await page.fill('#message', 'Hallo, ich habe eine Frage.');
+await page.press('#message', 'Tab'); await page.keyboard.press('Enter');
+await page.waitForTimeout(400);
+ok((await text('#formStatus')).startsWith('Vielen Dank! Ihre Nachricht'), 'DE form: gönderildi mesajı (Sie)');
+ok(sent?.subject?.endsWith('(DE)') && sent?.page === 'https://bozkurtacademy.com/de/kontakt/', 'DE form: konu (DE) ve sayfa adresi');
+ok((await text('#contactSubmitBtn')) === 'Nachricht senden', 'DE form: düğme yazısı geri geldi');
+
+// 10) İngilizce sayfada menü ve alt bilgi İngilizce, bağlantılar İngilizce sürümlere.
+await page.goto(B + '/en/contact/');
+ok((await text('.nav-link[data-i18n="navAbout"]')) === 'About Me' && await page.getAttribute('.nav-link[data-i18n="navAbout"]', 'href') === '/en/about/', '/en/contact/: menü İngilizce');
+ok(await page.getAttribute('.nav-link[aria-current="page"]', 'href') === '/en/contact/', '/en/contact/: menüde etkin sayfa');
+ok(await page.locator('.ba-sticky-cta').count() === 0, '/en/contact/: sabit iletişim düğmesi yok');
+
+// 11) Mobil: yatay taşma yok.
+const mobile = await newPage({ width: 390, height: 844 });
 await mobile.goto(B + '/'); await mobile.evaluate(() => localStorage.setItem('baLang', 'de'));
-for (const p of ['/hakkimda/', '/almanca-gramer/a1/', '/iletisim/', '/']) {
-  await mobile.goto(B + p); await mobile.waitForTimeout(200);
+for (const p of ['/de/ueber-mich/', '/de/kontakt/', '/en/about/', '/en/contact/', '/sss/', '/hakkimda/', '/']) {
+  await mobile.goto(B + p); await mobile.waitForTimeout(150);
   const over = await mobile.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   ok(over <= 0, `390 px ${p}: yatay taşma yok (${over})`);
 }

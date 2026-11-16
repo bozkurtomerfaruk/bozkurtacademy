@@ -42,6 +42,8 @@ function service(path, name, description, serviceType) {
   };
 }
 
+// Dil sürümleri: aynı "group" adını taşıyan sayfalar birbirinin çevirisidir (tr, de, en hepsi olmalı).
+// lang: sayfanın dili (yoksa tr). Almanca/İngilizce sayfalar /de/… ve /en/… altında, adresleri o dilde.
 export const PAGES = [
   {
     path: '/online-almanca-dersi/',
@@ -115,6 +117,7 @@ export const PAGES = [
   },
   {
     path: '/hakkimda/',
+    group: 'about',
     updated: '2026-11-10',
     nav: 'about',
     crumb: 'Hakkımda',
@@ -125,6 +128,7 @@ export const PAGES = [
   },
   {
     path: '/iletisim/',
+    group: 'contact',
     nav: 'contact',
     crumb: 'İletişim',
     title: 'İletişim: Ücretsiz İlk Almanca Dersi | Bozkurt Academy',
@@ -168,6 +172,57 @@ export const PAGES = [
     description: 'Impressum der Bozkurt Academy: Anbieterkennzeichnung nach § 5 DDG, Kontakt und verantwortliche Person. Bozkurt Academy künyesi.',
     noindex: true,
     // Köşeli parantezli yer tutucu kalmışsa build-pages --check hata verir (yarım künye yayına çıkmasın).
-    noPlaceholders: true
+    noPlaceholders: true,
+    // İki dilli sayfa (Almanca + Türkçe): sabit dil işareti yok, dil kontrolü uygulanmaz.
+    mixedLang: true
+  },
+  // ---- Almanca sürümler (hedef kitle: Almanya'da büyüyen Türk kökenli öğrenciler ve veliler, Almanya'ya sonradan gelenler; "Sie") ----
+  {
+    path: '/de/ueber-mich/',
+    lang: 'de',
+    group: 'about',
+    updated: '2026-11-16',
+    nav: 'about',
+    crumb: 'Über mich',
+    title: 'Über mich: Deutschlehrer Ömer Faruk Bozkurt | Bozkurt Academy',
+    description: 'Ömer Faruk Bozkurt unterrichtet online Deutsch auf Türkisch und Deutsch: Schulunterstützung, Prüfungsvorbereitung und Deutsch für den Alltag in Deutschland.',
+    type: 'ProfilePage',
+    ogType: 'profile'
+  },
+  {
+    path: '/de/kontakt/',
+    lang: 'de',
+    group: 'contact',
+    nav: 'contact',
+    crumb: 'Kontakt',
+    title: 'Kontakt und kostenlose Probestunde | Bozkurt Academy',
+    description: 'Schreiben Sie mir für Online-Deutschunterricht auf Türkisch und Deutsch, Schulunterstützung oder Prüfungsvorbereitung. Die erste Stunde ist kostenlos.',
+    type: 'ContactPage',
+    noStickyCta: true
+  },
+
+  // ---- İngilizce sürümler (İngilizce konuşan öğrenciler) ----
+  {
+    path: '/en/about/',
+    lang: 'en',
+    group: 'about',
+    updated: '2026-11-16',
+    nav: 'about',
+    crumb: 'About me',
+    title: 'About Me: German Teacher Ömer Faruk Bozkurt | Bozkurt Academy',
+    description: 'Ömer Faruk Bozkurt teaches German online from A1 to B2, with explanations in English, Turkish or German. Lives and studies in Germany.',
+    type: 'ProfilePage',
+    ogType: 'profile'
+  },
+  {
+    path: '/en/contact/',
+    lang: 'en',
+    group: 'contact',
+    nav: 'contact',
+    crumb: 'Contact',
+    title: 'Contact and Free First Lesson | Bozkurt Academy',
+    description: 'Get in touch for online German lessons from A1 to B2, one-to-one or in a group, and exam preparation. The first lesson is free.',
+    type: 'ContactPage',
+    noStickyCta: true
   }
 ];

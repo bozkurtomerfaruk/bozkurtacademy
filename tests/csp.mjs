@@ -118,6 +118,7 @@ async function context({ live = true, theme = 'light', emulator = false, extraIn
     if(url.hostname === 'firestore.googleapis.com' && url.pathname.endsWith(':runQuery')) return json(log.runQuery || []);
     if(url.hostname === 'identitytoolkit.googleapis.com') return json({ error: { code: 400, message: 'INVALID_LOGIN_CREDENTIALS' } }, 400);
     if(url.hostname === 'www.googleapis.com' && url.pathname.startsWith('/calendar/')) return json({ id: 'ev1', hangoutLink: 'https://meet.google.com/abc-defg-hij', items: [] });
+    if(url.href === 'https://oauth2.googleapis.com/revoke'){ log.revoked = (req.postData() || '').includes('token='); return json({}); }
     log.unknown.push(req.url());
     return route.abort();
   });
@@ -290,6 +291,20 @@ await resetEmulators();
   ok(!log.requests.some((u) => /calendar-mock\.js/.test(u)), 'calendar-mock.js canlı adreste hiç istenmedi');
   const direct = await page.evaluate(() => import('/js/account/calendar-mock.js').then(() => 'yüklendi', (e) => 'reddedildi: ' + e.message));
   ok(direct.startsWith('reddedildi'), `calendar-mock.js canlı adreste doğrudan içe aktarılsa da çalışmıyor (${direct})`);
+  // Yenileme sonrası bağlantı korunur (sessionStorage), "Bağlantıyı kes" Google'a iptal isteği gönderir (CSP izinli).
+  // Giriş yapılmadığı için sayfa giris.html'e yönlenir. Belirteç yalnızca öğretmen sayfalarında saklanıp geri
+  // yüklendiği için öğretmen adresine dönülür; modülün yeni bir kopyası "sayfa yenilendi" durumunu taklit eder.
+  const after = await page.evaluate(async () => {
+    history.replaceState(null, '', '/ogretmen-takvim.html');
+    const first = await import('/js/account/calendar.js?ilk=1');
+    await first.connect();
+    const cal = await import('/js/account/calendar.js?yenile=1');
+    const before = cal.connectionState().state;
+    await cal.disconnect();
+    return { before, after: cal.connectionState().state, stored: sessionStorage.getItem('baGcalSession'), flag: localStorage.getItem('baGcalConnected') };
+  });
+  ok(after.before === 'connected', 'gerçek kod yolu: sayfa yenilenince takvim bağlantısı korunuyor');
+  ok(log.revoked === true && after.after === 'none' && !after.stored && !after.flag, 'gerçek kod yolu: "Bağlantıyı kes" oauth2.googleapis.com/revoke\'a gidiyor, belirteç ve işaret siliniyor');
   // ?emulator=1 ile de canlıda emülatör/taklit açılmıyor.
   const viaQuery = await page.evaluate(async () => { history.replaceState(null, '', '?emulator=1'); const m = await import('/js/account/firebase.js?q=1'); return m.emulator; });
   ok(viaQuery === false, 'canlı adreste ?emulator=1 emülatör modunu açmıyor');

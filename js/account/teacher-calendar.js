@@ -32,23 +32,37 @@ function notice(type, message){
 
 // ---- Google Calendar bağlantısı ----
 
+// Üç durum: bağlı (kalan süreyle), süresi doldu (bir sonraki takvim işleminde kendiliğinden yenilenir), bağlı değil.
 function renderConnection(){
   const status = $('gcalStatus');
-  const button = $('gcalConnect');
+  const connectBtn = $('gcalConnect');
+  const disconnectBtn = $('gcalDisconnect');
   if(!cal.calendarConfigured){
     status.className = 'acc-badge warning';
     status.textContent = 'Google Calendar ayarlanmadı';
-    button.hidden = true;
-  }else if(cal.isConnected()){
+    connectBtn.hidden = true;
+    disconnectBtn.hidden = true;
+    return;
+  }
+  const { state, minutesLeft } = cal.connectionState();
+  const mockNote = cal.usingMock ? ' (sahte, yerel test)' : '';
+  if(state === 'connected'){
     status.className = 'acc-badge success';
-    status.textContent = cal.usingMock ? 'Google Calendar bağlı (sahte, yerel test)' : 'Google Calendar bağlı';
-    button.hidden = true;
+    status.textContent = `Google Calendar bağlı (yaklaşık ${minutesLeft} dk)${mockNote}`;
+  }else if(state === 'expired'){
+    // Hata değil: bir sonraki takvim işleminde kendiliğinden yenilenir, bu yüzden sakin renk.
+    status.className = 'acc-badge muted';
+    status.textContent = `Bağlantı süresi doldu, bir sonraki işlemde otomatik yenilenecek${mockNote}`;
   }else{
     status.className = 'acc-badge muted';
     status.textContent = 'Google Calendar bağlı değil';
-    button.hidden = false;
   }
+  connectBtn.hidden = state === 'connected';
+  connectBtn.textContent = state === 'expired' ? 'Şimdi yenile' : 'Google Calendar\'a bağlan';
+  disconnectBtn.hidden = state === 'none';
 }
+// Kalan süre yarım dakikada bir güncellenir; süre dolunca rozet "süresi doldu"ya geçer.
+setInterval(renderConnection, 30e3);
 
 // Takvim izni düğmeye basıldığı anda istenir (açılır pencere engellenmesin). Hata dönerse ders yine kaydedilir.
 async function ensureCalendar(){
@@ -408,6 +422,13 @@ $('nlRepeat').addEventListener('change', () => { $('nlWeeks').disabled = !$('nlR
 $('gcalConnect').addEventListener('click', async () => {
   const error = await ensureCalendar();
   if(error) notice('error', `Google Calendar'a bağlanılamadı: ${error.message}`);
+});
+$('gcalDisconnect').addEventListener('click', async () => {
+  $('gcalDisconnect').disabled = true;
+  await cal.disconnect();
+  $('gcalDisconnect').disabled = false;
+  renderConnection();
+  notice('success', 'Google Calendar bağlantısı kesildi; izin Google\'dan da geri alındı. Dersler sitede kayıtlı kalır.');
 });
 
 const user = await requireTeacher({ loadingId: 'calLoading', errorId: 'calError' });

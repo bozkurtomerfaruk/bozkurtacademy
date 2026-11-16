@@ -16,7 +16,7 @@ import { CSP } from './csp.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const check = process.argv.includes('--check');
 const SITEMAP_DATE = '2026-11-04';
-const V = { themeInit: 1, html: 1, style: 13, base: 12, landing: 1, app: 43, theme: 10, analytics: 7, a1lessons: 19, a1css: 8, grammarPages: 3, blog: 6 };
+const V = { themeInit: 1, html: 1, style: 13, base: 13, landing: 1, app: 44, theme: 10, analytics: 7, a1lessons: 19, a1css: 8, grammarPages: 3, blog: 6 };
 const OG_IMAGE = `${SITE}/images/og-bozkurt-academy.jpg`;
 
 const SECURITY = `
@@ -46,7 +46,8 @@ const NAV = [
 const THEME_ICONS = '<svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="currentColor"/></svg><svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
 
 // spa: index.html (tek sayfa uygulaması, dil seçimi var); current: menüde etkin bölüm.
-function header({ spa = false, current = null } = {}) {
+// lang: dil düğmesi (öğretmenin yönetim sayfası hariç her sayfada; sabit Türkçe sayfalarda menü ve not seçilen dilde).
+function header({ spa = false, current = null, lang = true } = {}) {
   const links = NAV.map(n => {
     const isSpa = spa && n.spa;
     const href = isSpa ? n.spa : n.href;
@@ -72,7 +73,7 @@ ${links}
         </div>
         <div class="nav-actions">
         <a class="btn primary nav-cta" href="/iletisim/" data-i18n="ctaFreeInfo">Ücretsiz bilgi al</a>
-        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Koyu temaya geç" aria-pressed="false">${THEME_ICONS}</button>${spa ? `
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Koyu temaya geç" aria-pressed="false">${THEME_ICONS}</button>${lang ? `
         <div class="lang" aria-label="Dil seçimi">
           <button data-lang="tr" class="active">TR</button>
           <button data-lang="de">DE</button>
@@ -84,19 +85,21 @@ ${links}
     `;
 }
 
+// [başlık, çeviri anahtarı, [[adres, yazı, çeviri anahtarı], …]] – çeviriler js/app.js'te (footer…).
 const FOOTER_GROUPS = [
-  ['Dersler', [['/online-almanca-dersi/', 'Online Almanca dersi'], ['/almanca-ozel-ders/', 'Almanca özel ders'], ['/almanca-grup-dersi/', 'Almanca grup dersi'], ['/almanca-sinav-hazirlik/', 'Sınav hazırlık']]],
-  ['Seviyeler', [['/a1-almanca-kursu/', 'A1 Almanca kursu'], ['/a2-almanca-kursu/', 'A2 Almanca kursu'], ['/b1-almanca-kursu/', 'B1 Almanca kursu'], ['/b2-almanca-kursu/', 'B2 Almanca kursu']]],
-  ['Ücretsiz çalış', [['/almanca-gramer/', 'Gramer konuları'], ['/#exercises', 'Alıştırmalar'], ['/#exams', 'Sınav deneme setleri'], ['/#seviye-testi', 'Seviye testi'], ['/almanca-alfabe/', 'Almanca alfabe oyunu']]],
-  ['Bozkurt Academy', [['/hakkimda/', 'Hakkımda'], ['/blog/', 'Blog'], ['/sss/', 'Sıkça sorulan sorular'], ['/iletisim/', 'İletişim']]]
+  ['Dersler', 'footerGroupLessons', [['/online-almanca-dersi/', 'Online Almanca dersi', 'footerOnline'], ['/almanca-ozel-ders/', 'Almanca özel ders', 'footerPrivate'], ['/almanca-grup-dersi/', 'Almanca grup dersi', 'footerGroup'], ['/almanca-sinav-hazirlik/', 'Sınav hazırlık', 'footerExamPrep']]],
+  ['Seviyeler', 'footerGroupLevels', [['/a1-almanca-kursu/', 'A1 Almanca kursu', 'footerA1'], ['/a2-almanca-kursu/', 'A2 Almanca kursu', 'footerA2'], ['/b1-almanca-kursu/', 'B1 Almanca kursu', 'footerB1'], ['/b2-almanca-kursu/', 'B2 Almanca kursu', 'footerB2']]],
+  ['Ücretsiz çalış', 'footerGroupFree', [['/almanca-gramer/', 'Gramer konuları', 'footerGrammar'], ['/#exercises', 'Alıştırmalar', 'footerExercises'], ['/#exams', 'Sınav deneme setleri', 'footerExamSets'], ['/#seviye-testi', 'Seviye testi', 'footerPlacement'], ['/almanca-alfabe/', 'Almanca alfabe oyunu', 'footerAlphabet']]],
+  ['Bozkurt Academy', null, [['/hakkimda/', 'Hakkımda', 'navAbout'], ['/blog/', 'Blog', 'navBlog'], ['/sss/', 'Sıkça sorulan sorular', 'footerFaq'], ['/iletisim/', 'İletişim', 'navContact']]]
 ];
 
 function footer({ current = null, sticky = true } = {}) {
-  const groups = FOOTER_GROUPS.map(([title, links]) => `          <div class="footer-group"><p class="footer-group-title">${title}</p><ul>${links.map(([href, label]) => `<li><a href="${href}"${href === current ? ' aria-current="page"' : ''}>${label}</a></li>`).join('')}</ul></div>`).join('\n');
+  const i18n = key => key ? ` data-i18n="${key}"` : '';
+  const groups = FOOTER_GROUPS.map(([title, titleKey, links]) => `          <div class="footer-group"><p class="footer-group-title"${i18n(titleKey)}>${title}</p><ul>${links.map(([href, label, key]) => `<li><a href="${href}"${href === current ? ' aria-current="page"' : ''}${i18n(key)}>${label}</a></li>`).join('')}</ul></div>`).join('\n');
   return `
     <footer>
       <div class="footer-brand"><img src="/images/logo-mark.svg" width="64" height="64" alt="" class="footer-logo brand-logo-light"><img src="/images/logo-mark-dark.svg" width="64" height="64" alt="" class="footer-logo brand-logo-dark"><div><strong>Bozkurt Academy</strong><br><span data-i18n="footerText">Online Almanca dersleri ve öğrenme materyalleri</span></div></div>
-      <nav class="footer-pages" aria-label="Site sayfaları">
+      <nav class="footer-pages" aria-label="Site sayfaları" data-i18n-aria="footerPages">
 ${groups}
       </nav>
       <div class="footer-meta">
@@ -253,7 +256,7 @@ for (const name of ['giris.html', 'kayit.html', 'panel.html', 'privacy.html', 'o
   const file = path.join(root, name);
   outputs.push([file, fill(fs.readFileSync(file, 'utf8'), 'security', SECURITY, file)]);
 }
-for (const [name, opts, footerOpts] of [['index.html', { spa: true }, {}], ['404.html', {}, {}], ['yonetim/yorumlar/index.html', {}, { sticky: false }]]) {
+for (const [name, opts, footerOpts] of [['index.html', { spa: true }, {}], ['404.html', {}, {}], ['yonetim/yorumlar/index.html', { lang: false }, { sticky: false }]]) {
   const file = path.join(root, name);
   let html = fs.readFileSync(file, 'utf8');
   html = fill(html, 'security', SECURITY, file);

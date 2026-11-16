@@ -303,3 +303,13 @@ html[data-theme="dark"] .academy-theme .brand-logo-dark{display:block}
 .academy-theme :is(section,article,div,main,h1,h2,h3)[tabindex="-1"]:focus{outline:none!important}
 .academy-theme main [id]{scroll-margin-top:96px}
 .academy-theme .section-head.center{text-align:left;margin:0 0 28px;max-width:760px}
+
+/* Sabit Türkçe sayfalarda DE/EN seçilince menünün altında çıkan not (js/app.js → renderLangNote). */
+.academy-theme .ba-lang-note{background:var(--ba-paper-2);border-bottom:1px solid var(--ba-line);color:var(--ba-ink);font-family:var(--ba-sans);font-size:var(--ba-small)}
+.academy-theme .ba-lang-note-inner{max-width:var(--ba-content);margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px}
+.academy-theme .ba-lang-note p{margin:0;flex:1;min-width:0;line-height:1.5;overflow-wrap:anywhere}
+.academy-theme .ba-lang-note a{color:var(--ba-accent);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.academy-theme .ba-lang-note a:hover{color:var(--ba-accent-hover)}
+.academy-theme .ba-lang-note-close{flex:none;width:44px;height:44px;margin:-6px -8px -6px 0;border:0;border-radius:var(--ba-radius-small);background:transparent;color:var(--ba-muted);font-size:1.5rem;line-height:1;cursor:pointer}
+.academy-theme .ba-lang-note-close:hover{color:var(--ba-ink);background:var(--ba-paper)}
+.academy-theme .ba-lang-note-close:focus-visible{outline:2px solid var(--ba-focus);outline-offset:2px}

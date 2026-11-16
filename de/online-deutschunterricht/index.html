@@ -40,7 +40,7 @@
   <link rel="preload" href="/fonts/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css?v=13" />
-  <link rel="stylesheet" href="/css/base.css?v=13" />
+  <link rel="stylesheet" href="/css/base.css?v=14" />
   <link rel="stylesheet" href="/css/landing.css?v=1" />
   <script type="application/ld+json">
   {
@@ -168,15 +168,15 @@
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteMenu" data-i18n="menuOpen">Menü</button>
         <div class="nav-links" id="siteMenu">
           <a class="nav-link" href="/" data-i18n="navHome">Startseite</a>
-          <a class="nav-link active" href="/de/online-deutschunterricht/" aria-current="page" data-i18n="navLessons">Deutschunterricht</a>
+          <a class="nav-link active" href="/de/online-deutschunterricht/" aria-current="page" data-i18n="navLessons">Unterricht</a>
           <a class="nav-link" href="/almanca-gramer/" data-i18n="navGrammar">Grammatik</a>
           <a class="nav-link" href="/#exercises" data-i18n="navExercises">Übungen</a>
-          <a class="nav-link" href="/de/pruefungsvorbereitung-deutsch/" data-i18n="navExams">Prüfungsvorbereitung</a>
+          <a class="nav-link" href="/de/pruefungsvorbereitung-deutsch/" data-i18n="navExams">Prüfungen</a>
           <a class="nav-link" href="/blog/" data-i18n="navBlog">Blog</a>
           <a class="nav-link" href="/de/ueber-mich/" data-i18n="navAbout">Über mich</a>
           <a class="nav-link" href="/de/kontakt/" data-i18n="navContact">Kontakt</a>
-          <!-- Quiet launch: the account link stays hidden until the privacy policy is final. Login pages still open by URL. -->
-          <a class="nav-link nav-account" href="/giris.html" id="navAccount" data-i18n="navLogin" hidden>Anmelden</a>
+          <!-- Hesap bağlantısı: ziyaretçide "Giriş"; daha önce giriş yapmış öğrencide "Panelim", öğretmende "Öğretmen paneli" (js/app.js → accountNav). -->
+          <a class="nav-link nav-account" href="/giris.html" id="navAccount" data-i18n="navLogin">Anmelden</a>
         </div>
         <div class="nav-actions">
         <a class="btn primary nav-cta" href="/de/kontakt/" data-i18n="ctaFreeInfo">Kostenlos anfragen</a>
@@ -347,7 +347,7 @@
     </footer>
     <a class="ba-sticky-cta btn primary" href="/de/kontakt/" data-i18n="ctaFreeInfo">Kostenlos anfragen</a>
     <!-- /ba:footer --></div><!-- ba:scripts -->
-  <script src="/js/app.js?v=49"></script>
+  <script src="/js/app.js?v=50"></script>
   <script src="/js/theme.js?v=10"></script>
   <script defer data-goatcounter="https://bozkurtacademy.goatcounter.com/count" data-goatcounter-settings='{"no_onload": true}' src="/js/vendor/count.js?v=2.7.0"></script>
   <script defer src="/js/analytics.js?v=7"></script>

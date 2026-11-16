@@ -2,6 +2,16 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-16 · Dil sürümleri, Aşama 2 / PR 3: A1–B2 kurs sayfaları (DE/EN)
+
+- **Yeni sayfalar:** `/de/deutschkurs-a1/` … `/de/deutschkurs-b2/`, `/en/german-course-a1/` … `/en/german-course-b2/` (8 sayfa). Türkçe sayfalar değişmedi; hreflang ve sitemap otomatik.
+- **Seviye kartları:** `/de/online-deutschunterricht/` ve `/en/online-german-lessons/` sayfasındaki A1–B2 kartları artık kurs sayfalarına bağlı.
+- **İçerik:** Almanca sürümde gramer konuları Türkçe anlatımlara bağlanır ("auf Türkisch" notuyla); A1'de Türkiye'deki eş için Familiennachzug bağlamı. İngilizce sürümde gramer anlatımları Türkçe olduğu için konu listeleri bağlantısız. Resmî şartlar için her yerde "ilgili kurumdan kontrol et" uyarısı korundu.
+- **Düzeltme:** Alıştırma açıklamaları Türkçe; İngilizce sayfalardaki "every answer comes with an explanation" ifadeleri ve Almanca sayfalardaki ilgili cümleler buna göre düzeltildi.
+- **Şema:** `course()` dile göre `inLanguage` ve konu adı alıyor.
+- **Hesap ekranı:** Giriş/kayıt notunun Almancası "du" ile (hesap alanının geri kalanı ve onay hatırlatması gibi). Sürümler: `app.js` 48, `i18n-boot.js` 3.
+- **Sırada:** PR 4 – SSS (/de/faq/, /en/faq/).
+
 ## 2026-11-16 · Dil sürümleri, Aşama 2 / PR 2: ders sayfaları (DE/EN)
 
 - **Yeni sayfalar:** `/de/online-deutschunterricht/`, `/de/deutsch-einzelunterricht/`, `/de/deutsch-gruppenkurs/`, `/de/pruefungsvorbereitung-deutsch/`, `/en/online-german-lessons/`, `/en/private-german-lessons/`, `/en/german-group-lessons/`, `/en/german-exam-preparation/`. Türkçe karşılıkları değişmedi; hreflang ve sitemap otomatik.

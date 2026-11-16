@@ -94,7 +94,8 @@ for (const [p, href, txt] of [
   ['/almanca-sinav-hazirlik/', '/de/pruefungsvorbereitung-deutsch/', 'auch auf Deutsch'],
   ['/almanca-ozel-ders/', '/de/deutsch-einzelunterricht/', 'auch auf Deutsch'],
   ['/almanca-gramer/a1/', '/#exercises', 'Übungen'],
-  ['/a1-almanca-kursu/', '/', 'Startseite'],
+  ['/a1-almanca-kursu/', '/de/deutschkurs-a1/', 'auch auf Deutsch'],
+  ['/sss/', '/', 'Startseite'],
   ['/blog/', null, null],
   ['/almanca-alfabe/', null, null],
 ]) {
@@ -109,7 +110,7 @@ for (const [p, href, txt] of [
 await page.goto(B + '/sss/');
 await page.click('.ba-lang-note-close');
 ok(await note().count() === 0, 'kapatınca not gitti');
-await page.goto(B + '/b1-almanca-kursu/');
+await page.goto(B + '/almanca-gramer/a1/');
 ok(await note().count() === 0, 'kapatılan not başka sayfada da çıkmıyor');
 await page.click('.lang button[data-lang="en"]');
 ok(await note().count() === 1, 'başka dil seçince not yeniden çıktı');
@@ -161,10 +162,22 @@ await page.click('.lang button[data-lang="tr"]');
 await page.waitForURL('**/almanca-ozel-ders/');
 ok(await note().count() === 0, 'TR düğmesi → /almanca-ozel-ders/, not yok');
 
+// 10c) Kurs sayfaları (Aşama 2 / PR 3): seviye kartları ve sürümler arası geçiş.
+await page.goto(B + '/de/online-deutschunterricht/');
+ok(await page.locator('a.lp-card-link[href^="/de/deutschkurs-"]').count() === 4, '/de/online-deutschunterricht/: 4 seviye kartı bağlı');
+await page.goto(B + '/en/online-german-lessons/');
+ok(await page.locator('a.lp-card-link[href^="/en/german-course-"]').count() === 4, '/en/online-german-lessons/: 4 seviye kartı bağlı');
+await page.goto(B + '/de/deutschkurs-b1/');
+ok(await page.getAttribute('.lp-breadcrumb li:nth-child(2) a', 'href') === '/de/online-deutschunterricht/', '/de/deutschkurs-b1/: sayfa yolu');
+ok(await page.getAttribute('footer a[data-i18n="footerB2"]', 'href') === '/de/deutschkurs-b2/', '/de/deutschkurs-b1/: alt bilgi B2 → DE');
+await page.click('.lang button[data-lang="en"]');
+await page.waitForURL('**/en/german-course-b1/');
+ok(await htmlLang() === 'en', 'EN düğmesi → /en/german-course-b1/');
+
 // 11) Mobil: yatay taşma yok.
 const mobile = await newPage({ width: 390, height: 844 });
 await mobile.goto(B + '/'); await mobile.evaluate(() => localStorage.setItem('baLang', 'de'));
-for (const p of ['/de/ueber-mich/', '/de/kontakt/', '/en/about/', '/en/contact/', '/de/online-deutschunterricht/', '/de/deutsch-einzelunterricht/', '/de/deutsch-gruppenkurs/', '/de/pruefungsvorbereitung-deutsch/', '/en/online-german-lessons/', '/en/private-german-lessons/', '/en/german-group-lessons/', '/en/german-exam-preparation/', '/sss/', '/hakkimda/', '/']) {
+for (const p of ['/de/ueber-mich/', '/de/kontakt/', '/en/about/', '/en/contact/', '/de/online-deutschunterricht/', '/de/deutsch-einzelunterricht/', '/de/deutsch-gruppenkurs/', '/de/pruefungsvorbereitung-deutsch/', '/en/online-german-lessons/', '/en/private-german-lessons/', '/en/german-group-lessons/', '/en/german-exam-preparation/', '/de/deutschkurs-a1/', '/de/deutschkurs-a2/', '/de/deutschkurs-b1/', '/de/deutschkurs-b2/', '/en/german-course-a1/', '/en/german-course-a2/', '/en/german-course-b1/', '/en/german-course-b2/', '/sss/', '/hakkimda/', '/']) {
   await mobile.goto(B + p); await mobile.waitForTimeout(150);
   const over = await mobile.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   ok(over <= 0, `390 px ${p}: yatay taşma yok (${over})`);

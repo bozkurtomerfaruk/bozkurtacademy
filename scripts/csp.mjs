@@ -23,6 +23,7 @@ export const CSP_DIRECTIVES = {
     'https://securetoken.googleapis.com',            // Firebase Auth belirteç yenileme
     'https://content-firebaseappcheck.googleapis.com', // App Check
     'https://www.googleapis.com',                    // Google Calendar API v3
+    'https://oauth2.googleapis.com/revoke',          // Takvim "Bağlantıyı kes": izni Google'dan geri alma (js/account/calendar.js)
     'https://accounts.google.com/gsi/',
     'https://www.google.com/recaptcha/',
     'https://api.web3forms.com',                     // iletişim formu ve yorum bildirimi

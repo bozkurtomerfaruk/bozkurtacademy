@@ -1905,7 +1905,8 @@ const BA_ALTS = /* ba:alts */[
   {"tr":"/b2-almanca-kursu/","de":"/de/deutschkurs-b2/","en":"/en/german-course-b2/"},
   {"tr":"/almanca-sinav-hazirlik/","de":"/de/pruefungsvorbereitung-deutsch/","en":"/en/german-exam-preparation/"},
   {"tr":"/hakkimda/","de":"/de/ueber-mich/","en":"/en/about/"},
-  {"tr":"/iletisim/","de":"/de/kontakt/","en":"/en/contact/"}
+  {"tr":"/iletisim/","de":"/de/kontakt/","en":"/en/contact/"},
+  {"tr":"/sss/","de":"/de/faq/","en":"/en/faq/"}
 ]/* /ba:alts */;
 function altGroup(path){
   return BA_ALTS.find(group=>Object.values(group).includes(path)) || null;
@@ -1953,7 +1954,6 @@ function langNoteTarget(){
   const alt=altGroup(p)?.[currentLang];
   if(alt && alt!==p) return {href:alt, key:'langNoteAltLink', textKey:'langNoteAlt'};
   if(p.startsWith('/almanca-gramer/')) return {href:'/#exercises', key:'langNoteExercises'};
-  if(p.startsWith('/iletisim/')) return {key:'langNoteContact'};
   if(p.startsWith('/blog/') || p.startsWith('/almanca-alfabe/')) return null;
   return {href:'/', key:'langNoteHome'};
 }

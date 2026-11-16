@@ -171,6 +171,7 @@ export const PAGES = [
   },
   {
     path: '/sss/',
+    group: 'faq',
     crumb: 'Sıkça Sorulan Sorular',
     title: 'Almanca Dersi Sıkça Sorulan Sorular | Bozkurt Academy',
     description: 'Online Almanca dersleri hakkında sık sorulanlar: ilk ders, ders süresi, birebir ve grup dersi, ücretin nasıl belirlendiği, sınavlar ve seviye testi.',
@@ -429,5 +430,25 @@ export const PAGES = [
     title: 'German Course B2 Online: Work, University, Exams | Bozkurt Academy',
     description: 'German course B2 online: fluent, accurate German for work, your profession and university. Discussion, formal writing, complex grammar and B2 exam preparation.',
     schema: [course('/en/german-course-b2/', 'German course B2', 'B2: complex sentence structures, passive and Konjunktiv, professional and academic communication, Goethe and telc B2 preparation.', 'B2 (Upper intermediate)', { lang: 'en' })]
+  },
+
+  // ---- Aşama 2 / PR 4: SSS ----
+  {
+    path: '/de/faq/',
+    lang: 'de',
+    group: 'faq',
+    updated: '2026-11-16',
+    crumb: 'Häufige Fragen',
+    title: 'Häufige Fragen zum Online-Deutschunterricht | Bozkurt Academy',
+    description: 'Antworten auf häufige Fragen: Ablauf und Dauer der Stunden, kostenlose erste Stunde, Einzel- oder Gruppenunterricht, Schulunterstützung, Preis, Prüfungen und kostenlose Übungen.'
+  },
+  {
+    path: '/en/faq/',
+    lang: 'en',
+    group: 'faq',
+    updated: '2026-11-16',
+    crumb: 'FAQ',
+    title: 'FAQ: Online German Lessons | Bozkurt Academy',
+    description: 'Answers to common questions: how lessons work, the free first lesson, one-to-one or group lessons, prices, exams and free practice material.'
   }
 ];

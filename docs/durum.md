@@ -2,6 +2,13 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-16 · Dil sürümleri, Aşama 2 / PR 4: SSS (DE/EN) – Aşama 2 tamamlandı
+
+- **Yeni sayfalar:** `/de/faq/` ("Sie"; ayrıca "Schule und Eltern" bölümü) ve `/en/faq/`. FAQPage şeması `<details>` bloklarından otomatik. `/sss/`'e hreflang eklendi.
+- **Temizlik:** `js/app.js` → `langNoteTarget` içinde artık çalışmayan İletişim satırı kaldırıldı. Sürüm: `app.js` 50 (Giriş bağlantısı PR'ından sonra).
+- **Test:** `tests/dil-secimi.mjs` – "karşılığı olmayan Türkçe sayfa" senaryoları artık 404 sayfasını kullanıyor; /sss/ → /de/faq/ notu ve iki yeni sayfada 390 px taşma eklendi.
+- **Aşama 2 sonucu – üç dilde olan sayfalar (12):** online ders, özel ders, grup dersi, sınav hazırlık, A1, A2, B1, B2, Hakkımda, İletişim, SSS. **Sadece Türkçe kalanlar:** 45 gramer dersi, blog (ana sayfa ve 6 yazı), Almanca alfabe oyunu (bilerek ertelendi), 404; ana sayfa (`/`) tek adres, içerik dil düğmesiyle JavaScript ile değişiyor. Impressum iki dilli (DE + TR).
+
 ## 2026-11-16 · Menüdeki "Giriş" bağlantısı her sayfada görünür
 
 - **Bağlantı (#navAccount):** "Quiet launch" gizlemesi kaldırıldı; üretilen bütün sayfalarda (TR/DE/EN), ana sayfada ve elle yazılmış sayfalarda görünür, mobil menüde de.

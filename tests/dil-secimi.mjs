@@ -63,30 +63,30 @@ ok(await page.getAttribute('.ba-lang-note a', 'href') === '/de/kontakt/', '/ilet
 ok((await text('h1')) === 'İletişim ve ücretsiz ilk ders', '/iletisim/: içerik Türkçe');
 
 // 4) Sürümü olmayan Türkçe sayfa: "nur auf Türkisch", menü Almanca, düğme sayfada kalır.
-await page.goto(B + '/sss/');
-ok((await note().textContent()).includes('nur auf Türkisch'), '/sss/: "nur auf Türkisch" notu');
-ok(await page.getAttribute('.ba-lang-note a', 'href') === '/', '/sss/: not ana sayfaya bağlantı veriyor');
-ok((await text('.nav-link[data-i18n="navAbout"]')) === 'Über mich', '/sss/: menü Almanca');
-ok(await page.getAttribute('.nav-link[data-i18n="navContact"]', 'href') === '/de/kontakt/', '/sss/: menü Kontakt → /de/kontakt/');
-ok(await page.getAttribute('footer a[data-i18n="navContact"]', 'href') === '/de/kontakt/', '/sss/: alt bilgi Kontakt → /de/kontakt/');
-ok(await htmlLang() === 'tr' && await page.getAttribute('.topbar', 'lang') === 'de', '/sss/: içerik tr, menü lang=de');
+await page.goto(B + '/404.html');
+ok((await note().textContent()).includes('nur auf Türkisch'), '/404.html: "nur auf Türkisch" notu');
+ok(await page.getAttribute('.ba-lang-note a', 'href') === '/', '/404.html: not ana sayfaya bağlantı veriyor');
+ok((await text('.nav-link[data-i18n="navAbout"]')) === 'Über mich', '/404.html: menü Almanca');
+ok(await page.getAttribute('.nav-link[data-i18n="navContact"]', 'href') === '/de/kontakt/', '/404.html: menü Kontakt → /de/kontakt/');
+ok(await page.getAttribute('footer a[data-i18n="navContact"]', 'href') === '/de/kontakt/', '/404.html: alt bilgi Kontakt → /de/kontakt/');
+ok(await htmlLang() === 'tr' && await page.getAttribute('.topbar', 'lang') === 'de', '/404.html: içerik tr, menü lang=de');
 await page.click('.lang button[data-lang="en"]');
-ok(path_() === '/sss/' && await saved() === 'en', '/sss/: EN düğmesi sayfada kalır, kaydedilir');
-ok((await note().textContent()).includes('only available in Turkish'), '/sss/: not İngilizce');
-ok(await page.getAttribute('.nav-link[data-i18n="navContact"]', 'href') === '/en/contact/', '/sss/: menü Contact → /en/contact/');
+ok(path_() === '/404.html' && await saved() === 'en', '/404.html: EN düğmesi sayfada kalır, kaydedilir');
+ok((await note().textContent()).includes('only available in Turkish'), '/404.html: not İngilizce');
+ok(await page.getAttribute('.nav-link[data-i18n="navContact"]', 'href') === '/en/contact/', '/404.html: menü Contact → /en/contact/');
 if (shotDir) {
   for (const [w, h] of [[390, 844], [1440, 900]]) for (const theme of ['light', 'dark']) {
     await page.setViewportSize({ width: w, height: h });
     await page.evaluate(t => { document.documentElement.dataset.theme = t; }, theme);
     await page.waitForTimeout(150);
-    await page.screenshot({ path: path.join(shotDir, `dil-not-sss-en-${w}-${theme}.png`) });
+    await page.screenshot({ path: path.join(shotDir, `dil-not-404-en-${w}-${theme}.png`) });
   }
   await page.evaluate(() => { document.documentElement.dataset.theme = 'light'; });
   await page.setViewportSize({ width: 1440, height: 900 });
 }
 await page.click('.lang button[data-lang="tr"]');
-ok(await note().count() === 0 && await page.getAttribute('.topbar', 'lang') === null, '/sss/: TR → not yok');
-ok(await page.getAttribute('.nav-link[data-i18n="navContact"]', 'href') === '/iletisim/', '/sss/: TR → menü İletişim → /iletisim/');
+ok(await note().count() === 0 && await page.getAttribute('.topbar', 'lang') === null, '/404.html: TR → not yok');
+ok(await page.getAttribute('.nav-link[data-i18n="navContact"]', 'href') === '/iletisim/', '/404.html: TR → menü İletişim → /iletisim/');
 
 // 5) Notun bağlantıları (sürümü olmayan sayfalar).
 await page.evaluate(() => localStorage.setItem('baLang', 'de'));
@@ -95,7 +95,8 @@ for (const [p, href, txt] of [
   ['/almanca-ozel-ders/', '/de/deutsch-einzelunterricht/', 'auch auf Deutsch'],
   ['/almanca-gramer/a1/', '/#exercises', 'Übungen'],
   ['/a1-almanca-kursu/', '/de/deutschkurs-a1/', 'auch auf Deutsch'],
-  ['/sss/', '/', 'Startseite'],
+  ['/404.html', '/', 'Startseite'],
+  ['/sss/', '/de/faq/', 'auch auf Deutsch'],
   ['/blog/', null, null],
   ['/almanca-alfabe/', null, null],
 ]) {
@@ -107,7 +108,7 @@ for (const [p, href, txt] of [
 }
 
 // 6) Kapatma: aynı oturumda o dil için gizli; başka dil seçince yeniden çıkar.
-await page.goto(B + '/sss/');
+await page.goto(B + '/404.html');
 await page.click('.ba-lang-note-close');
 ok(await note().count() === 0, 'kapatınca not gitti');
 await page.goto(B + '/almanca-gramer/a1/');
@@ -177,7 +178,7 @@ ok(await htmlLang() === 'en', 'EN düğmesi → /en/german-course-b1/');
 // 11) Mobil: yatay taşma yok.
 const mobile = await newPage({ width: 390, height: 844 });
 await mobile.goto(B + '/'); await mobile.evaluate(() => localStorage.setItem('baLang', 'de'));
-for (const p of ['/de/ueber-mich/', '/de/kontakt/', '/en/about/', '/en/contact/', '/de/online-deutschunterricht/', '/de/deutsch-einzelunterricht/', '/de/deutsch-gruppenkurs/', '/de/pruefungsvorbereitung-deutsch/', '/en/online-german-lessons/', '/en/private-german-lessons/', '/en/german-group-lessons/', '/en/german-exam-preparation/', '/de/deutschkurs-a1/', '/de/deutschkurs-a2/', '/de/deutschkurs-b1/', '/de/deutschkurs-b2/', '/en/german-course-a1/', '/en/german-course-a2/', '/en/german-course-b1/', '/en/german-course-b2/', '/sss/', '/hakkimda/', '/']) {
+for (const p of ['/de/ueber-mich/', '/de/kontakt/', '/en/about/', '/en/contact/', '/de/online-deutschunterricht/', '/de/deutsch-einzelunterricht/', '/de/deutsch-gruppenkurs/', '/de/pruefungsvorbereitung-deutsch/', '/en/online-german-lessons/', '/en/private-german-lessons/', '/en/german-group-lessons/', '/en/german-exam-preparation/', '/de/deutschkurs-a1/', '/de/deutschkurs-a2/', '/de/deutschkurs-b1/', '/de/deutschkurs-b2/', '/en/german-course-a1/', '/en/german-course-a2/', '/en/german-course-b1/', '/en/german-course-b2/', '/de/faq/', '/en/faq/', '/sss/', '/hakkimda/', '/']) {
   await mobile.goto(B + p); await mobile.waitForTimeout(150);
   const over = await mobile.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   ok(over <= 0, `390 px ${p}: yatay taşma yok (${over})`);

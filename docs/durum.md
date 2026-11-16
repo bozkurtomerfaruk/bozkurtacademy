@@ -2,6 +2,10 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-16 · Seviye testi testi: gizlilik tarihi
+
+- `npm run test:placement` main'de 6 hata veriyordu: gizlilik sayfasının tarihi 12 Kasım 2026'ya güncellenmiş, test (`tests/seviye-testi/placement.mjs`) hâlâ 11 Kasım'ı bekliyordu (TR/DE/EN × 2 ekran). Beklenen tarih güncellendi; test geçiyor. Gizlilik metni bir daha güncellenirse bu satırlar da güncellenmeli.
+
 ## 2026-11-16 · B2 gramer dersleri, pilot: B2 seviyesi açıldı + Konjunktiv I dersi
 
 - **Plan (onaylandı):** B2'nin 10 konusu için ders; hazırlanmakta olan 3 konu (İleri Konnektoren, Funktionsverbgefüge, Adjektivdeklination vertieft) için ders + 20 paket × 10 soru. Sıra: bu pilot → Passiv mit Modalverben, Nominalisierung, Partizip I dersleri → Partizip II, Genitivpräpositionen, je … desto dersleri → her yeni konu ayrı PR. Sonra B2 seviye sonu sınavı planı. Öğretmenin değişikliği: Konnektoren paket 11 = es sei denn / vorausgesetzt, dass / angenommen, dass; paket 12 = zumal / umso mehr, als; weder … noch ve benzerleri derste yalnızca kısa "B1'den hatırlatma" kutusunda.

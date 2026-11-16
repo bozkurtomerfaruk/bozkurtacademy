@@ -2,6 +2,12 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-16 · B2 gramer dersleri, PR 3: Partizip II, Genitivpräpositionen, je … desto (dal `claude/b2-dersler-2`)
+
+- **Dersler (`data/b2-grammar.json`):** Partizip II (7 bölüm: oluşum + A1–A2 Perfekt kutusu, ayrılabilen/ayrılamayan/-ieren, edilgen ve bitmiş anlam, dört Kasus'ta çekim, Relativsatz → Partizip II + B1 Passiv kutusu, genişletilmiş gruplar, sık hatalar) · Präpositionen mit Genitiv (7 bölüm: Genitiv tekrarı + B1 kutusu, sebep/karşıtlık, zaman, yer, anstatt/anstelle/mittels, günlük dilde Dativ, sık hatalar) · je … desto (7 bölüm: yapı, Komparativ + A2 kutusu, fiil sırası, mehr/weniger, umso ve sıra değişimi, modal/dönüşlü/ayrılabilen fiiller, sık hatalar). Bölümler mevcut 20'şer paketle uyumlu.
+- Üçü `grammar-legacy.json`'dan çıkarıldı; SEO metinleri; B2 kurs sayfası (TR/DE) ve seviye testi sonucu derslere bağlı (`placement.js` 8). Yeni kelime yok.
+- **Test:** `tests/gramer-b2.mjs` (dört ders, 390/1440 açık/koyu), `tests/search.mjs`, check-grammar, check-versions geçti.
+
 ## 2026-11-16 · B2 gramer dersleri, pilot: B2 seviyesi açıldı + Konjunktiv I dersi
 
 - **Plan (onaylandı):** B2'nin 10 konusu için ders; hazırlanmakta olan 3 konu (İleri Konnektoren, Funktionsverbgefüge, Adjektivdeklination vertieft) için ders + 20 paket × 10 soru. Sıra: bu pilot → Passiv mit Modalverben, Nominalisierung, Partizip I dersleri → Partizip II, Genitivpräpositionen, je … desto dersleri → her yeni konu ayrı PR. Sonra B2 seviye sonu sınavı planı. Öğretmenin değişikliği: Konnektoren paket 11 = es sei denn / vorausgesetzt, dass / angenommen, dass; paket 12 = zumal / umso mehr, als; weder … noch ve benzerleri derste yalnızca kısa "B1'den hatırlatma" kutusunda.

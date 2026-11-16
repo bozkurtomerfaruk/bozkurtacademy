@@ -2,6 +2,10 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-16 · Seviye testi testi: gizlilik tarihi
+
+- `npm run test:placement` main'de 6 hata veriyordu: gizlilik sayfasının tarihi 12 Kasım 2026'ya güncellenmiş, test (`tests/seviye-testi/placement.mjs`) hâlâ 11 Kasım'ı bekliyordu (TR/DE/EN × 2 ekran). Beklenen tarih güncellendi; test geçiyor. Gizlilik metni bir daha güncellenirse bu satırlar da güncellenmeli.
+
 ## 2026-11-16 · Öğretmen takvimi: Google Calendar bağlantısı yenilemede korunuyor
 
 - **Sorun:** Erişim belirteci (access token, ~1 saat) yalnızca bellekteydi; sayfa yenilenince bağlantı kayboluyordu.

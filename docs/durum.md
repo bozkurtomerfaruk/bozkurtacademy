@@ -2,6 +2,13 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-16 · Giriş, kayıt ve panel: çeviriler Firebase'den bağımsız
+
+- **Sorun:** Bu üç sayfanın DE/EN metinleri (`js/account/i18n.js`) Firebase ile aynı modül zincirinde yükleniyordu. Firebase yüklenemezse (reklam engelleyici, kötü bağlantı) zincir hiç çalışmıyor, sayfa seçilen dil yerine Türkçe kalıyordu.
+- **Şimdi:** Yeni `js/account/i18n-boot.js` sadece metinleri yükler; `giris.html`, `kayit.html`, `panel.html` onu ana modülden önce ayrıca yükler. Firebase yüklenemese de metinler seçilen dilde görünür.
+- **Test:** `node tests/hesap-ceviri.mjs` (dış istekler engelliyken DE/EN/TR başlıkları).
+- **Bilinen:** Firebase hiç yüklenemezse panel "Wird geladen…" durumunda kalıyor (artık doğru dilde). Hata mesajı göstermek ayrı bir iş.
+
 ## 2026-11-14 · Schreiben genişletme 4: DTZ (Deutsch-Test für Zuwanderer)
 
 - **Format (resmî: g.a.s.t. Übungssatz 1 ve 2, Ekim 2026; g.a.s.t. "DTZ auf einen Blick" ve öğretmen SSS'si):** Schreiben 30 dk, 20 puan (B1 15–20, A2 7–14).

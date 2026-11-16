@@ -10,7 +10,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SITE, PAGES } from './site-pages.mjs';
 import { GRAMMAR_DATE, grammarPages, grammarBody, lessonSchema, lessonFaq } from './grammar-pages.mjs';
-import { blogPages, blogBody, blogSchema, homeBlog, blogBacklinks } from './blog-pages.mjs';
+import { blogPages, blogBody, blogSchema, homeBlog, blogBacklinks, blogFeed } from './blog-pages.mjs';
 import { CSP } from './csp.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -179,7 +179,8 @@ function head(page, html) {
   <title>${esc(page.title)}</title>
   <meta name="description" content="${esc(page.description)}" />${page.noindex ? `
   <meta name="robots" content="noindex" />` : ''}
-  <link rel="canonical" href="${url}" />
+  <link rel="canonical" href="${url}" />${page.kind?.startsWith('blog') ? `
+  <link rel="alternate" type="application/atom+xml" title="Bozkurt Academy Blog" href="${SITE}/blog/feed.xml" />` : ''}
   <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3">
@@ -295,6 +296,7 @@ for (const page of [BLOG.index, ...BLOG.posts]) {
 const blogUrls = BLOG.published.length ? [{ path: BLOG.index.path, updated: BLOG.published[0].updated || BLOG.published[0].date }, ...BLOG.published.map(p => ({ path: p.path, updated: p.updated || p.date }))] : [];
 
 const urls = [{ path: '/', updated: '2026-11-10' }, ...PAGES, ...GRAMMAR.pages.map(p => ({ path: p.path, updated: GRAMMAR_DATE })), ...blogUrls].map(p => `  <url>\n    <loc>${SITE}${p.path}</loc>\n    <lastmod>${p.updated || SITEMAP_DATE}</lastmod>\n  </url>`).join('\n');
+outputs.push([path.join(root, 'blog/feed.xml'), blogFeed(BLOG.published, BLOG.index, SITE)]);
 outputs.push([path.join(root, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`]);
 
 // Her HTML sayfası CSP'yi taşımalı: listede unutulan yeni bir sayfa (ör. ogretmen-yeni.html) burada yakalanır.

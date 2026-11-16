@@ -190,3 +190,31 @@ ${page.body.trim()}
       </section>
 `;
 }
+
+// Atom akışı (/blog/feed.xml): yalnızca yayınlanmış yazılar, yeniden eskiye. Taslaklar girmez.
+export function blogFeed(published, index, SITE) {
+  const x = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const ts = d => `${d}T00:00:00Z`;
+  const updated = published.map(p => p.updated || p.date).sort().pop() || '2026-11-06';
+  const entries = published.map(p => `  <entry>
+    <title>${x(p.h1)}</title>
+    <link rel="alternate" type="text/html" href="${SITE}${p.path}"/>
+    <id>${SITE}${p.path}</id>
+    <published>${ts(p.date)}</published>
+    <updated>${ts(p.updated || p.date)}</updated>
+    <author><name>${AUTHOR}</name></author>
+    <summary>${x(p.description)}</summary>
+  </entry>`).join('\n');
+  return `<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="tr">
+  <title>Bozkurt Academy Blog</title>
+  <subtitle>${x(index.description)}</subtitle>
+  <link rel="self" type="application/atom+xml" href="${SITE}/blog/feed.xml"/>
+  <link rel="alternate" type="text/html" href="${SITE}/blog/"/>
+  <id>${SITE}/blog/</id>
+  <updated>${ts(updated)}</updated>
+  <author><name>${AUTHOR}</name></author>
+${entries}
+</feed>
+`;
+}

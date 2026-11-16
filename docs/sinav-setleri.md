@@ -173,6 +173,7 @@ Set şu adresten açılır: `#exams/goethe/b1/lesen/1/set-1`. DTZ gibi seviye ad
 - Kontrol: büyük-küçük harf, fazla boşluk, sondaki nokta, ß/ss ve ä/ae farkı önemsizdir. Kabul edilen bir cevaba tek harf uzaklıktaki cevap (harfleri en az 5, sayıları aynı) "doğru sayıldı, ama yazımı: …" olur.
 - `evidence`: cevabın dayandığı yer; `situation` içinde harfi harfine ve bir kez geçer, başka bir boşluğun dayanağıyla çakışmaz. "Kontrol et"ten sonra metinde boşluk numarasıyla işaretlenir.
 - `explanation`: her boşluğun kendi Türkçe açıklaması (en az 40 karakter): bilginin metnin neresinde olduğu ve nasıl çıkarıldığı.
+- telc A1 / Start Deutsch 1 (resmî Übungstest 1): format Goethe A1 ile aynı (Teil 1 form 5 bilgi, Teil 2 ~30 kelime, 3 madde, hitap ve selam); setler `data/exams/telc/a1/schreiben/`.
 - Goethe A1 (resmî Modellsatz): Schreiben toplam ~20 dk; Teil 1 form (5 bilgi, bilgi başına 1 puan), Teil 2 kısa mesaj (~30 kelime, 3 madde, hitap ve kapanış; arkadaşa du, tanıdık birine ya da kuruma Sie). Sitede Teil 1 için 5, Teil 2 için 15 dk gösterilir; Teil 2 sayacı 25–40 arasını iyi sayar.
 
 ## 3. Kontrol

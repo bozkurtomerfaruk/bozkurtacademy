@@ -1,0 +1,109 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-2",
+  "title": "Termin verschieben",
+  "minutes": 15,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-formal",
+  "situation": "Sie haben am Dienstag um 9 Uhr einen Termin bei der Ausländerbehörde. Sie können aber nicht kommen.",
+  "task": "Schreiben Sie an die Ausländerbehörde:",
+  "points": [
+    "Warum schreiben Sie?",
+    "Sagen Sie: Warum können Sie nicht kommen?",
+    "Fragen Sie: neuer Termin?"
+  ],
+  "instructions": "Schreiben Sie zu jedem Punkt ein bis zwei Sätze (circa 30 Wörter). Vergessen Sie nicht den passenden Anfang und Gruß am Schluss.",
+  "words": {
+    "target": 30,
+    "min": 25,
+    "max": 40
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "1. madde: Neden yazdığımı söyledim (salı saat 9'daki randevu)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "2. madde: Neden gelemediğimi yazdım (hasta, iş …)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "3. madde: Yeni bir randevu istedim."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kuruma resmî hitap ve kapanış: Sehr geehrte Damen und Herren, … Mit freundlichen Grüßen + adım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Her maddeye bir iki kısa cümle yazdım; hitaptan sonraki satır küçük harfle başlıyor."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Sie ile yazdım; Hallo ve Tschüss yok."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Düz cümlede fiil 2. sırada: Am Dienstag habe ich einen Termin."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Kibar soru: Haben Sie einen neuen Termin für mich?"
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Sehr geehrte Damen und Herren,",
+          "tr": "Sayın Bayanlar ve Baylar,"
+        },
+        {
+          "de": "Mit freundlichen Grüßen",
+          "tr": "Saygılarımla"
+        }
+      ]
+    },
+    {
+      "group": "Warum schreiben Sie?",
+      "items": [
+        {
+          "de": "Ich habe am Dienstag um 9 Uhr einen Termin.",
+          "tr": "Salı saat 9'da randevum var."
+        },
+        {
+          "de": "Leider kann ich nicht kommen.",
+          "tr": "Maalesef gelemiyorum."
+        }
+      ]
+    },
+    {
+      "group": "Sagen und fragen",
+      "items": [
+        {
+          "de": "Ich bin krank.",
+          "tr": "Hastayım."
+        },
+        {
+          "de": "Haben Sie einen neuen Termin für mich?",
+          "tr": "Benim için yeni bir randevunuz var mı?"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Sehr geehrte Damen und Herren,\nich habe am Dienstag um 9 Uhr einen Termin bei Ihnen. Leider kann ich nicht kommen, ich bin krank. Haben Sie bitte einen neuen Termin für mich?\nMit freundlichen Grüßen\nHamid Karimi",
+    "notes": [
+      "Üç madde: randevu (Dienstag um 9 Uhr), neden (ich bin krank), yeni randevu sorusu.",
+      "Kuruma resmî: Sehr geehrte Damen und Herren, … Mit freundlichen Grüßen.",
+      "Leider kann ich nicht kommen: leider başta, fiil hemen arkasında (kann)."
+    ]
+  }
+}

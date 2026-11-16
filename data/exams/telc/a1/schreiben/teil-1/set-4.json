@@ -1,0 +1,95 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-4",
+  "title": "Eine Wohnung mieten",
+  "minutes": 5,
+  "kind": "form",
+  "situation": "Ihr Freund Murat Aslan sucht mit seiner Familie eine größere Wohnung in Nürnberg. Sie sind vier Personen: Murat, seine Frau und zwei Kinder. Sie haben keine Haustiere. Murat arbeitet als Busfahrer. Die Familie möchte ab dem 1. Februar einziehen. Die Wohnung soll höchstens 950 Euro kosten. Murat möchte die Wohnung am Samstag ansehen.",
+  "task": "Helfen Sie und schreiben Sie die fünf fehlenden Informationen in das Formular.",
+  "form": {
+    "title": "Selbstauskunft Mietinteressent",
+    "subtitle": "Hausverwaltung Berger, Nürnberg",
+    "rows": [
+      {
+        "label": "Familienname, Vorname",
+        "value": "Aslan, Murat",
+        "example": true
+      },
+      {
+        "label": "Beruf",
+        "number": 1,
+        "evidence": [
+          "arbeitet als Busfahrer"
+        ],
+        "explanation": "Beruf = meslek. Metinde „Murat arbeitet als Busfahrer“ → Busfahrer (otobüs şoförü).",
+        "accept": [
+          "Busfahrer"
+        ]
+      },
+      {
+        "label": "Personen im Haushalt",
+        "number": 2,
+        "evidence": [
+          "Sie sind vier Personen"
+        ],
+        "explanation": "Personen im Haushalt = evde yaşayan kişi sayısı. Metinde „Sie sind vier Personen: Murat, seine Frau und zwei Kinder“ → 4.",
+        "accept": [
+          "4",
+          "vier"
+        ]
+      },
+      {
+        "label": "Haustiere",
+        "number": 3,
+        "evidence": [
+          "Sie haben keine Haustiere"
+        ],
+        "explanation": "Haustiere = evcil hayvanlar. Metinde „Sie haben keine Haustiere“ → hayır: nein.",
+        "choices": [
+          "ja",
+          "nein"
+        ],
+        "answer": "nein"
+      },
+      {
+        "label": "Einzug ab",
+        "number": 4,
+        "evidence": [
+          "ab dem 1. Februar einziehen"
+        ],
+        "explanation": "Einzug ab = …'den itibaren taşınma. Metinde „Die Familie möchte ab dem 1. Februar einziehen“ → 1. Februar ya da 01.02.",
+        "accept": [
+          "1. Februar",
+          "01.02.",
+          "1.2.",
+          "ab 1. Februar",
+          "ab dem 1. Februar",
+          "01. Februar"
+        ]
+      },
+      {
+        "label": "Miete bis (Euro)",
+        "number": 5,
+        "evidence": [
+          "höchstens 950 Euro"
+        ],
+        "explanation": "Miete bis = en fazla kira. Metinde „Die Wohnung soll höchstens 950 Euro kosten“ → 950. höchstens = en fazla.",
+        "accept": [
+          "950",
+          "950 Euro",
+          "950,00",
+          "950 €",
+          "950,-"
+        ]
+      },
+      {
+        "label": "Besichtigung",
+        "value": "Samstag"
+      }
+    ]
+  }
+}

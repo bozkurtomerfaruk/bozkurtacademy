@@ -569,8 +569,27 @@ window.BA_EXAMS = {
               }, // Teil 3
             ] },
             { id: 'schreiben', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
+              {
+                title: { tr: 'Form doldurma · 5 bilgi', de: 'Formular ausfüllen · 5 Angaben', en: 'Fill in a form · 5 details' },
+                kind: 'form', // js/form-task.js: otomatik kontrol; ödevde ve sonuçlarda "sınav seti" (yazma görevi değil)
+                exercises: [
+                  { set: 'set-1', title: 'Anmeldung in der Kita' },
+                  { set: 'set-2', title: 'Termin bei der Ausländerbehörde' },
+                  { set: 'set-3', title: 'Ein Konto eröffnen' },
+                  { set: 'set-4', title: 'Eine Wohnung mieten' },
+                  { set: 'set-5', title: 'Neu bei der Arbeit' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: 'Kısa mesaj · yaklaşık 30 kelime', de: 'Kurze Mitteilung · circa 30 Wörter', en: 'Short message · about 30 words' },
+                exercises: [
+                  { set: 'set-1', title: 'Kind krank: Kita' },
+                  { set: 'set-2', title: 'Termin verschieben' },
+                  { set: 'set-3', title: 'Bankkarte verloren' },
+                  { set: 'set-4', title: 'Hilfe beim Umzug' },
+                  { set: 'set-5', title: 'Schicht tauschen' },
+                ]
+              }, // Teil 2
             ] },
             { id: 'sprechen', teile: [
               { title: null, exercises: [] }, // Teil 1

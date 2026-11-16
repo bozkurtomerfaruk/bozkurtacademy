@@ -1,0 +1,93 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-3",
+  "title": "Ein Konto eröffnen",
+  "minutes": 5,
+  "kind": "form",
+  "situation": "Ihre Freundin Leyla Demir hat eine Stelle als Verkäuferin gefunden. Für ihr Gehalt braucht sie ein Konto. Sie möchte ein Girokonto bei der Stadtsparkasse eröffnen. Leyla ist 29 Jahre alt und wohnt in der Bahnhofstraße 21 in 44135 Dortmund. Sie möchte eine Bankkarte, aber keine Kreditkarte. Die Unterlagen soll die Bank per Post schicken.",
+  "task": "Helfen Sie und schreiben Sie die fünf fehlenden Informationen in das Formular.",
+  "form": {
+    "title": "Antrag auf Kontoeröffnung",
+    "subtitle": "Stadtsparkasse Dortmund",
+    "rows": [
+      {
+        "label": "Familienname, Vorname",
+        "value": "Demir, Leyla",
+        "example": true
+      },
+      {
+        "label": "Alter",
+        "number": 1,
+        "evidence": [
+          "29 Jahre alt"
+        ],
+        "explanation": "Alter = yaş. Metinde „Leyla ist 29 Jahre alt“ → 29. Sayıyı rakamla ya da yazıyla yazabilirsin.",
+        "accept": [
+          "29",
+          "neunundzwanzig",
+          "29 Jahre"
+        ]
+      },
+      {
+        "label": "Straße, Hausnummer",
+        "number": 2,
+        "evidence": [
+          "in der Bahnhofstraße 21"
+        ],
+        "explanation": "Straße, Hausnummer = sokak ve kapı numarası. Metinde „in der Bahnhofstraße 21“ → Bahnhofstraße 21. Posta kodu ve şehir formda ayrı satırda.",
+        "accept": [
+          "Bahnhofstraße 21",
+          "Bahnhofstrasse 21",
+          "Bahnhofstr. 21"
+        ]
+      },
+      {
+        "label": "PLZ, Ort",
+        "value": "44135 Dortmund"
+      },
+      {
+        "label": "Beruf",
+        "number": 3,
+        "evidence": [
+          "eine Stelle als Verkäuferin"
+        ],
+        "explanation": "Beruf = meslek. Metinde „Ihre Freundin Leyla Demir hat eine Stelle als Verkäuferin gefunden“ → Verkäuferin (satış elemanı).",
+        "accept": [
+          "Verkäuferin",
+          "Verkäufer"
+        ]
+      },
+      {
+        "label": "Karte",
+        "number": 4,
+        "evidence": [
+          "eine Bankkarte, aber keine Kreditkarte"
+        ],
+        "explanation": "Metinde „Sie möchte eine Bankkarte, aber keine Kreditkarte“ → Bankkarte işaretlenir. aber keine = ama … değil.",
+        "choices": [
+          "Bankkarte",
+          "Kreditkarte"
+        ],
+        "answer": "Bankkarte"
+      },
+      {
+        "label": "Unterlagen per",
+        "number": 5,
+        "evidence": [
+          "soll die Bank per Post schicken"
+        ],
+        "explanation": "Unterlagen = belgeler. Metinde „Die Unterlagen soll die Bank per Post schicken“ → postayla: Post. E-Mail ya da Abholung (şubeden alma) değil.",
+        "choices": [
+          "Post",
+          "E-Mail",
+          "Abholung in der Filiale"
+        ],
+        "answer": "Post"
+      }
+    ]
+  }
+}

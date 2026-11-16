@@ -5,7 +5,7 @@
 ## 2026-11-16 · B2 gramer dersleri, PR 3: Partizip II, Genitivpräpositionen, je … desto (dal `claude/b2-dersler-2`)
 
 - **Dersler (`data/b2-grammar.json`):** Partizip II (7 bölüm: oluşum + A1–A2 Perfekt kutusu, ayrılabilen/ayrılamayan/-ieren, edilgen ve bitmiş anlam, dört Kasus'ta çekim, Relativsatz → Partizip II + B1 Passiv kutusu, genişletilmiş gruplar, sık hatalar) · Präpositionen mit Genitiv (7 bölüm: Genitiv tekrarı + B1 kutusu, sebep/karşıtlık, zaman, yer, anstatt/anstelle/mittels, günlük dilde Dativ, sık hatalar) · je … desto (7 bölüm: yapı, Komparativ + A2 kutusu, fiil sırası, mehr/weniger, umso ve sıra değişimi, modal/dönüşlü/ayrılabilen fiiller, sık hatalar). Bölümler mevcut 20'şer paketle uyumlu.
-- Üçü `grammar-legacy.json`'dan çıkarıldı; SEO metinleri; B2 kurs sayfası (TR/DE) ve seviye testi sonucu derslere bağlı (`placement.js` 8). Yeni kelime yok.
+- Üçü `grammar-legacy.json`'dan çıkarıldı; SEO metinleri; B2 kurs sayfası (TR/DE) ve seviye testi sonucu derslere bağlı (`placement.js` 9). Yeni kelime yok.
 - **Test:** `tests/gramer-b2.mjs` (dört ders, 390/1440 açık/koyu), `tests/search.mjs`, check-grammar, check-versions geçti.
 
 

@@ -14,6 +14,16 @@
 - **Test:** yeni `tests/gramer-b2.mjs` (bütün B2 dersleri: bölümler, kutu, benzer konular ve sayfaların açılması, alıştırmaya geçiş, `#grammar/B2/<ders>/3` derin bağlantısı, B2 sekmesi, seviye sayfası, sitemap, "Konuyu çalış", 390/1440 px açık/koyu taşma + ekran görüntüsü). check-grammar, check-versions, build-search-index --check, check-html-escape, `tests/search.mjs`, `npm test` geçti.
 - **Bilinen (bu işten bağımsız):** `npm run test:placement` main'de de 6 adımda düşüyor: gizlilik sayfasının tarihi 12 Kasım'a güncellenmiş, test 11 Kasım bekliyor.
 
+## 2026-11-16 · Öğretmen takvimi: Google Calendar bağlantısı yenilemede korunuyor
+
+- **Sorun:** Erişim belirteci (access token, ~1 saat) yalnızca bellekteydi; sayfa yenilenince bağlantı kayboluyordu.
+- **Şimdi (`js/account/calendar.js`):** Belirteç süresi dolana kadar sessionStorage'da (`baGcalSession`; sekme kapanınca silinir), yalnızca öğretmen sayfalarında (`/ogretmen*.html`) saklanır ve geri yüklenir. Hiçbir sunucuya gönderilmez (yalnızca Google Calendar API'ye), loglanmaz. localStorage'da yalnızca "daha önce bağlandı" işareti (`baGcalConnected`), belirteç değil.
+- **Otomatik yenileme:** Süre dolmuşsa ya da yeni sekmedeyse bir takvim işleminde (ders ekleme/taşıma/iptal, "Tekrar dene", katılımcı güncelleme) öğretmenin tıklamasıyla `requestAccessToken({ prompt: '' })` sessizce yeniler. Google 401 dönerse belirteç silinir, bir sonraki işlemde yenilenir.
+- **Rozet:** "Google Calendar bağlı (yaklaşık N dk)" · "Bağlantı süresi doldu, bir sonraki işlemde otomatik yenilenecek" (düğme: "Şimdi yenile") · "Google Calendar bağlı değil". Yarım dakikada bir güncellenir.
+- **Bağlantıyı kes:** Belirteci Google'dan iptal eder (`https://oauth2.googleapis.com/revoke`, CSP'ye eklendi) ve sessionStorage + işareti siler. Öğretmen çıkış yapınca da belirteç ve işaret silinir.
+- **Test:** `tests/takvim-baglanti.mjs` (sahte takvim: bağlan → yenile → hâlâ bağlı; süre dolunca rozet ve ders eklerken otomatik yenileme; bağlantıyı kes; yeni sekme; çıkış; 390/1440 açık/koyu). `tests/csp.mjs` gerçek kod yolunda yenileme ve iptal isteğini sınar. Sürümler: `teacher-calendar.js` 2, `teacher.js` 7, `teacher-assign.js` 3, `teacher-student.js` 5.
+- **Karar bekliyor:** Kalıcı bağlantı (Cloudflare Worker'da refresh token) kodlanmadı; artı/eksi notu PR açıklamasında.
+
 ## 2026-11-16 · Dil sürümleri, Aşama 2 / PR 4: SSS (DE/EN) – Aşama 2 tamamlandı
 
 - **Yeni sayfalar:** `/de/faq/` ("Sie"; ayrıca "Schule und Eltern" bölümü) ve `/en/faq/`. FAQPage şeması `<details>` bloklarından otomatik. `/sss/`'e hreflang eklendi.

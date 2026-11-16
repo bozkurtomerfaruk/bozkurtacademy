@@ -17,8 +17,16 @@ const write = (key, value) => localStorage.setItem(key, JSON.stringify(value));
 const failing = () => localStorage.getItem('baCalendarMockFail') === '1';
 const stamp = (date) => date.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
 
+// Testler: baCalendarMockTtl = belirtecin süresi (saniye, varsayılan 3600); baCalendarMockConnects = kaç kez izin
+// istendi (otomatik yenilemeyi görmek için); baCalendarMockRevoked = "Bağlantıyı kes" kaç kez iptal etti.
 export async function connect(){
   if(localStorage.getItem('baCalendarMockDenied') === '1') throw new CalendarError('Google penceresi kapatıldı.');
+  localStorage.setItem('baCalendarMockConnects', String(Number(localStorage.getItem('baCalendarMockConnects') || 0) + 1));
+  return { access_token: `mock-token-${Date.now()}`, expires_in: Number(localStorage.getItem('baCalendarMockTtl') || 3600) };
+}
+
+export async function revoke(){
+  localStorage.setItem('baCalendarMockRevoked', String(Number(localStorage.getItem('baCalendarMockRevoked') || 0) + 1));
 }
 
 // Tekrarlayan etkinliğin haftalık dersleri, Berlin duvar saatine göre (Google'ın yaptığı gibi).

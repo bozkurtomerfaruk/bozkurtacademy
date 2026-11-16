@@ -24,3 +24,6 @@ Bu klasördeki her görselin kaynağı burada yazılıdır. Kurallar: `docs/haft
 | aile-birlesimi-icin-almanca | ich-e.svg | ich ile fiil çekimi (kök + -e) | Özgün illüstrasyon | Bozkurt Academy |
 | aile-birlesimi-icin-almanca | aile-kelimeleri.svg | Aile kelimeleri artikelleriyle | Özgün illüstrasyon | Bozkurt Academy |
 | aile-birlesimi-icin-almanca | calisma-haftasi.svg | Örnek çalışma haftası | Özgün illüstrasyon | Bozkurt Academy |
+| almanyada-calismak-icin-almanca-seviyesi | kapak.svg → kapak-* | A2–C1 basamakları ve soru işareti | Özgün illüstrasyon | Bozkurt Academy |
+| almanyada-calismak-icin-almanca-seviyesi | seviye-merdiveni.svg | Seviyelerin iş yerindeki karşılığı | Özgün illüstrasyon | Bozkurt Academy |
+| almanyada-calismak-icin-almanca-seviyesi | dort-soru.svg | Gereken seviyeyi belirleyen dört soru | Özgün illüstrasyon | Bozkurt Academy |

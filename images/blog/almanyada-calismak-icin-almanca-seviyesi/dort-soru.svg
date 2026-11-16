@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" width="560" height="380">
+<style>
+.f-bg{fill:#f3f0e8}.f-bg2{fill:#e6e1d5}.f-gr{fill:#ddd6c6}.f-ink{fill:#2a2a26}.f-mut{fill:#55534a}
+.f-acc{fill:#45572f}.f-on{fill:#ffffff}.f-der{fill:#2c5f9e}.f-die{fill:#a3352c}.f-das{fill:#35703e}
+.f-der-bg{fill:#dbe5f1}.f-die-bg{fill:#f4e0dc}.f-das-bg{fill:#dde9d7}.f-ln{fill:none;stroke:#857d6b;stroke-width:2}
+.f-ln-acc{fill:none;stroke:#45572f;stroke-width:3}
+text{font-family:"Albert Sans",system-ui,sans-serif}.f-serif{font-family:"STIX Two Text",Georgia,serif}.f-b{font-weight:600}
+</style>
+<rect class="f-bg" width="560" height="260" rx="14"/>
+<rect class="f-bg" width="560" height="380" rx="14"/>
+<text class="f-ink f-b" x="24" y="40" font-size="20">Gereken seviyeyi belirleyen dört soru</text>
+<rect class="f-bg2" x="24" y="64" width="250" height="120" rx="10"/>
+<circle class="f-acc" cx="54" cy="98" r="18"/>
+<text class="f-on f-b" x="54" y="104" font-size="18" text-anchor="middle">1</text>
+<text class="f-ink f-b" x="82" y="104" font-size="19">Vize / oturum</text>
+<text class="f-mut" x="40" y="152" font-size="17">Hangi yolla gidiyorum?</text>
+<rect class="f-bg2" x="286" y="64" width="250" height="120" rx="10"/>
+<circle class="f-acc" cx="316" cy="98" r="18"/>
+<text class="f-on f-b" x="316" y="104" font-size="18" text-anchor="middle">2</text>
+<text class="f-ink f-b" x="344" y="104" font-size="19">Meslek</text>
+<text class="f-mut" x="302" y="152" font-size="17">Tanınma şartı var mı?</text>
+<rect class="f-bg2" x="24" y="200" width="250" height="120" rx="10"/>
+<circle class="f-acc" cx="54" cy="234" r="18"/>
+<text class="f-on f-b" x="54" y="240" font-size="18" text-anchor="middle">3</text>
+<text class="f-ink f-b" x="82" y="240" font-size="19">İşveren</text>
+<text class="f-mut" x="40" y="288" font-size="17">İlanda ne yazıyor?</text>
+<rect class="f-bg2" x="286" y="200" width="250" height="120" rx="10"/>
+<circle class="f-acc" cx="316" cy="234" r="18"/>
+<text class="f-on f-b" x="316" y="240" font-size="18" text-anchor="middle">4</text>
+<text class="f-ink f-b" x="344" y="240" font-size="19">İşin kendisi</text>
+<text class="f-mut" x="302" y="288" font-size="17">Ne kadar konuşacağım?</text>
+<text class="f-mut" x="24" y="362" font-size="17">Resmî şartlar için hep resmî kaynağa bak.</text>
+</svg>

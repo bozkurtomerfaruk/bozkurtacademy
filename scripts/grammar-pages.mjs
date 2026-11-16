@@ -5,8 +5,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 
-export const GRAMMAR_DATE = '2026-11-10'; // sitemap lastmod; gramer içeriği değişince güncelle
-const COURSE = { A1: '/a1-almanca-kursu/', A2: '/a2-almanca-kursu/', B1: '/b1-almanca-kursu/' };
+export const GRAMMAR_DATE = '2026-11-16'; // sitemap lastmod; gramer içeriği değişince güncelle
+const COURSE = { A1: '/a1-almanca-kursu/', A2: '/a2-almanca-kursu/', B1: '/b1-almanca-kursu/', B2: '/b2-almanca-kursu/' };
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -71,10 +71,11 @@ export function grammarPages(root) {
   const seo = loadSeo(root);
   const pages = [];
   const used = new Set();
+  const dataByLevel = Object.fromEntries(levels.map(lv => [lv.level, lv.data]));
   const hub = {
     path: '/almanca-gramer/', crumb: 'Almanca Gramer', kind: 'hub',
-    title: 'Almanca Gramer Konuları A1–B1: Konu Anlatımı ve Alıştırma',
-    description: `Almanca gramer konuları: A1, A2 ve B1 seviyelerinde ${levels.reduce((n, lv) => n + lv.lessons.length, 0)} konu anlatımı, örnek cümleler, kısa tekrar, sık sorulan sorular ve her konu için ücretsiz alıştırmalar.`,
+    title: 'Almanca Gramer Konuları A1–B2: Konu Anlatımı ve Alıştırma',
+    description: `Almanca gramer konuları: A1, A2, B1 ve B2 seviyelerinde ${levels.reduce((n, lv) => n + lv.lessons.length, 0)} konu anlatımı, örnek cümleler, kısa tekrar, sık sorulan sorular ve her konu için ücretsiz alıştırmalar.`,
     levels
   };
   pages.push(hub);
@@ -91,7 +92,7 @@ export function grammarPages(root) {
         lv, lesson, prev: lv.lessons[i - 1] || null, next: lv.lessons[i + 1] || null,
         title: seo[`${lv.level}/${lesson.id}`]?.title || lessonTitle(lv.level, lesson, used),
         description: seo[`${lv.level}/${lesson.id}`]?.description || clip(`${sentence(lesson.description?.tr || '')} ${lesson.lead}`),
-        article: articleHtml(lesson, lv.data, lv.level, { static: true })
+        article: articleHtml(lesson, lv.data, lv.level, { static: true, levels: dataByLevel })
       });
     });
   }
@@ -121,7 +122,7 @@ export function grammarBody(page, lessonPath) {
     return `
       <section class="lp-prose" aria-labelledby="gr-title">
         <h1 id="gr-title">Almanca Gramer Konuları</h1>
-        <p class="lp-lead">A1, A2 ve B1 seviyelerinde Türkçe Almanca gramer anlatımları. Her derste örnek cümleler, kısa tekrar, kendini kontrol sorusu, sık sorulan sorular ve konuya ait alıştırmalar var.</p>
+        <p class="lp-lead">A1, A2, B1 ve B2 seviyelerinde Türkçe Almanca gramer anlatımları. Her derste örnek cümleler, kısa tekrar, kendini kontrol sorusu, sık sorulan sorular ve konuya ait alıştırmalar var.</p>
         <p><a href="/#grammar">Konu veya ders bölümü ara →</a></p>
       </section>
 ${page.levels.map(lv => `

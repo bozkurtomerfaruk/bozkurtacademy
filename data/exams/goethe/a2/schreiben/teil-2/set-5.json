@@ -1,0 +1,112 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-5",
+  "title": "Deutschkurs wechseln",
+  "minutes": 15,
+  "sharedMinutes": 30,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "Sie besuchen einen Deutschkurs am Vormittag. Ab nächsten Monat arbeiten Sie vormittags.",
+  "task": "Schreiben Sie eine E-Mail an Herrn Krause von der Sprachschule:",
+  "points": [
+    "Erklären Sie Ihre Situation.",
+    "Fragen Sie nach einem Kurs am Abend.",
+    "Fragen Sie, was Sie jetzt tun müssen."
+  ],
+  "instructions": "Schreiben Sie 30–40 Wörter. Schreiben Sie zu allen drei Punkten.",
+  "words": {
+    "target": 35,
+    "min": 30,
+    "max": 40,
+    "zeroBelow": 15
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Üç maddenin hepsine yazdım: durumum, akşam kursu sorusu, ne yapmam gerektiği."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Dil okuluna Sie ile yazdım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap (Sehr geehrter Herr Krause,) ve kapanış (Mit freundlichen Grüßen + adım) var."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümleleri bağladım: aber, deshalb, und."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Zaman: ab nächsten Monat, am Abend, vormittags."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Dolaylı soru: Können Sie mir sagen, was ich jetzt tun muss? (fiil sonda)"
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede",
+      "items": [
+        {
+          "de": "Sehr geehrter Herr …,",
+          "tr": "Sayın … Bey,"
+        }
+      ]
+    },
+    {
+      "group": "Situation",
+      "items": [
+        {
+          "de": "ich besuche den Kurs am Vormittag.",
+          "tr": "öğleden önceki kursa gidiyorum."
+        },
+        {
+          "de": "Ab nächsten Monat arbeite ich vormittags.",
+          "tr": "Gelecek aydan itibaren sabahları çalışıyorum."
+        }
+      ]
+    },
+    {
+      "group": "Fragen",
+      "items": [
+        {
+          "de": "Gibt es auch einen Kurs am Abend?",
+          "tr": "Akşam kursu da var mı?"
+        },
+        {
+          "de": "Was muss ich jetzt tun?",
+          "tr": "Şimdi ne yapmam gerekiyor?"
+        }
+      ]
+    },
+    {
+      "group": "Schluss",
+      "items": [
+        {
+          "de": "Vielen Dank für Ihre Hilfe.",
+          "tr": "Yardımınız için teşekkürler."
+        },
+        {
+          "de": "Mit freundlichen Grüßen",
+          "tr": "Saygılarımla"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Sehr geehrter Herr Krause,\nich besuche den A2-Kurs am Vormittag. Ab nächsten Monat arbeite ich aber vormittags. Gibt es auch einen Kurs am Abend? Können Sie mir sagen, was ich jetzt tun muss?\nMit freundlichen Grüßen\nSelin Aydın",
+    "notes": [
+      "Üç madde: durum (Kurs am Vormittag, arbeite vormittags), akşam kursu sorusu, ne yapmalı (was ich jetzt tun muss).",
+      "Dolaylı soru: Können Sie mir sagen, was ich … tun muss? (fiil sonda).",
+      "A2-Kurs tek kelime sayılır (tire ile bağlı)."
+    ]
+  }
+}

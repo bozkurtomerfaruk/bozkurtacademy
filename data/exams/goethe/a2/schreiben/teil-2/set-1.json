@@ -1,0 +1,112 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-1",
+  "title": "Einladung vom Chef",
+  "minutes": 15,
+  "sharedMinutes": 30,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "Ihr Chef, Herr Lehmann, hat Sie zu seiner Geburtstagsfeier eingeladen.",
+  "task": "Schreiben Sie Herrn Lehmann eine E-Mail:",
+  "points": [
+    "Bedanken Sie sich und sagen Sie, dass Sie kommen.",
+    "Fragen Sie, ob Sie Ihren Partner / Ihre Partnerin mitbringen können.",
+    "Fragen Sie nach dem Weg."
+  ],
+  "instructions": "Schreiben Sie 30–40 Wörter. Schreiben Sie zu allen drei Punkten.",
+  "words": {
+    "target": 35,
+    "min": 30,
+    "max": 40,
+    "zeroBelow": 15
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Üç maddenin hepsine yazdım: teşekkür ve geleceğim, eşimi getirip getiremeyeceğim, yol tarifi."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Şefime Sie ile yazdım (Sie, Ihnen, Ihr büyük harfle)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap (Lieber Herr Lehmann, / Sehr geehrter Herr Lehmann,) ve kapanış (Viele Grüße / Mit freundlichen Grüßen + adım) var."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümleleri bağladım: und, gern, auch."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Kibar soru: Darf ich … mitbringen? Können Sie mir den Weg beschreiben?"
+    },
+    {
+      "criterion": "sprache",
+      "tr": "danken für + Akkusativ: Vielen Dank für die Einladung."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede",
+      "items": [
+        {
+          "de": "Lieber Herr … / Sehr geehrter Herr …,",
+          "tr": "Sevgili … Bey / Sayın … Bey,"
+        }
+      ]
+    },
+    {
+      "group": "Zusagen",
+      "items": [
+        {
+          "de": "Vielen Dank für die Einladung!",
+          "tr": "Davet için çok teşekkürler!"
+        },
+        {
+          "de": "Ich komme sehr gern.",
+          "tr": "Seve seve geliyorum."
+        }
+      ]
+    },
+    {
+      "group": "Fragen",
+      "items": [
+        {
+          "de": "Darf ich meinen Mann / meine Frau mitbringen?",
+          "tr": "Eşimi getirebilir miyim?"
+        },
+        {
+          "de": "Können Sie mir bitte den Weg beschreiben?",
+          "tr": "Bana yolu tarif edebilir misiniz?"
+        }
+      ]
+    },
+    {
+      "group": "Schluss",
+      "items": [
+        {
+          "de": "Viele Grüße",
+          "tr": "Selamlar"
+        },
+        {
+          "de": "Mit freundlichen Grüßen",
+          "tr": "Saygılarımla"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Lieber Herr Lehmann,\nvielen Dank für die Einladung zu Ihrer Feier! Ich komme sehr gern. Darf ich meinen Mann mitbringen? Können Sie mir bitte auch den Weg zu Ihrem Haus beschreiben?\nViele Grüße\nAyşe Demir",
+    "notes": [
+      "Üç madde: teşekkür ve geliyorum, eşi getirme sorusu (Darf ich … mitbringen?), yol (den Weg beschreiben).",
+      "Şefe Sie ama sıcak: Lieber Herr Lehmann, … Viele Grüße.",
+      "zu Ihrer Feier: zu + Dativ."
+    ]
+  }
+}

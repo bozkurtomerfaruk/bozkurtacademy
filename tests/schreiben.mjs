@@ -269,10 +269,43 @@ for (const [l, title, submit, count] of [['de', 'Dein Text', 'Abschicken und Mus
   }
 }
 
+// 6f. Goethe A2: Teil 1 arkadaşa SMS (20–30), Teil 2 yarı resmî e-posta (30–40); 3 madde; iki Teil için toplam 30 dk notu; 0 puan uyarısı.
+{
+  const { ctx, page } = await newPage();
+  await page.goto(B + '#exams/goethe/a2/schreiben'); await page.waitForTimeout(1000);
+  const list = await page.textContent('#examView');
+  ok(['Ich komme zu spät', 'Meine neue Wohnung', 'Danke für das Geschenk', 'Einladung vom Chef', 'Später im Hotel', 'Deutschkurs wechseln'].every((x) => list.includes(x)), 'Goethe A2: Teil 1 ve Teil 2 setleri listede');
+  await page.goto(B + '#exams/goethe/a2/schreiben/1/set-1'); await page.waitForTimeout(1000);
+  ok(await page.locator('.wt-points li').count() === 3 && (await page.textContent('.wt-task')).includes('Tobias'), 'A2 Teil 1: durum ve 3 madde');
+  ok((await page.textContent('.task-meta')).includes('15') && (await page.textContent('[data-wt-shared]')).includes('toplam 30 dakikan var'), 'A2: tahmini 15 dk ve "iki Teil için toplam 30 dakika" notu');
+  ok((await page.getAttribute('#wtText', 'placeholder')).startsWith('Hallo'), 'A2 Teil 1: SMS ipucu');
+  for (const [n, cls, text] of [[9, 'is-very-short', '0 puan'], [10, 'is-short', '20–30'], [19, 'is-short', '20–30'], [20, 'is-ok', ''], [30, 'is-ok', ''], [31, 'is-long', '']]) {
+    await page.fill('#wtText', words(n));
+    ok((await page.getAttribute('[data-wt-state]', 'class')).includes(cls) && (await page.textContent('[data-wt-state]')).includes(text), `A2 Teil 1: ${n} kelime → ${cls}`);
+  }
+  await page.fill('#wtText', words(5)); await page.click('[data-wt-submit]'); await page.waitForTimeout(400);
+  ok(await page.locator('[data-wt-result]').count() === 1 && (await page.textContent('.wt-cols')).includes('Hallo Tobias,'), 'A2: çok kısa metin de gönderilebiliyor; örnek cevap açılıyor');
+  ok(await page.locator('a.task-next[href="#exams/goethe/a2/schreiben/1/set-2"]').count() === 1, 'A2: sonraki set');
+  await page.goto(B + '#exams/goethe/a2/schreiben/2/set-2'); await page.waitForTimeout(1000);
+  ok((await page.textContent('.wt-task')).includes('Frau Becker') && (await page.getAttribute('#wtText', 'placeholder')).startsWith('Liebe Frau'), 'A2 Teil 2: otel görevi ve yarı resmî ipucu');
+  for (const [n, cls] of [[14, 'is-very-short'], [15, 'is-short'], [30, 'is-ok'], [40, 'is-ok'], [41, 'is-long']]) {
+    await page.fill('#wtText', words(n));
+    ok((await page.getAttribute('[data-wt-state]', 'class')).includes(cls), `A2 Teil 2: ${n} kelime → ${cls}`);
+  }
+  await ctx.close();
+  for (const [lang, shared, zero] of [['de', 'zusammen 30 Minuten', '0 Punkte'], ['en', '30 minutes in total', '0 points']]) {
+    const { ctx: c2, page: p2 } = await newPage({ lang });
+    await p2.goto(B + '#exams/goethe/a2/schreiben/1/set-3'); await p2.waitForTimeout(1000);
+    await p2.fill('#wtText', words(4));
+    ok((await p2.textContent('[data-wt-shared]')).includes(shared) && (await p2.textContent('[data-wt-state]')).includes(zero), `${lang}: Goethe A2 metinleri çevrili`);
+    await c2.close();
+  }
+}
+
 // 7. 390 / 1440, açık / koyu.
 for (const width of [390, 1440]) {
   for (const theme of ['light', 'dark']) {
-    for (const teil of ['b1/schreiben/2/set-1', 'b1/schreiben/3/set-1', 'a1/schreiben/1/set-3', 'a1/schreiben/2/set-1', 'telc-b1', 'dtz']) {
+    for (const teil of ['b1/schreiben/2/set-1', 'b1/schreiben/3/set-1', 'a1/schreiben/1/set-3', 'a1/schreiben/2/set-1', 'telc-b1', 'dtz', 'a2/schreiben/1/set-4', 'a2/schreiben/2/set-5']) {
       const { ctx, page } = await newPage({ width, theme });
       await page.goto(B + (teil === 'telc-b1' ? '#exams/telc/b1/schreiben/1/set-2' : teil === 'dtz' ? '#exams/dtz/schreiben/1/set-6' : `#exams/goethe/${teil}`)); await page.waitForTimeout(1200);
       const name = teil.replace(/\/schreiben\/(\d)\/set-\d/, '-teil$1');

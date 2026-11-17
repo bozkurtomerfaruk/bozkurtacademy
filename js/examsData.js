@@ -463,8 +463,26 @@ window.BA_EXAMS = {
               }, // Teil 5
             ] },
             { id: 'schreiben', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
+              {
+                title: { tr: 'Forum yazısı · 4 madde · yaklaşık 150 kelime', de: 'Forumsbeitrag · 4 Punkte · circa 150 Wörter', en: 'Forum post · 4 points · about 150 words' },
+                exercises: [
+                  { set: 'set-1', title: 'Weniger Fleisch essen' },
+                  { set: 'set-2', title: 'Fliegen oder Bahn fahren' },
+                  { set: 'set-3', title: 'Tablets im Unterricht' },
+                  { set: 'set-4', title: 'Ehrenamt' },
+                  { set: 'set-5', title: 'Stadt oder Land' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: 'İş yerinde mesaj · 4 madde · yaklaşık 100 kelime', de: 'Nachricht · 4 Punkte · circa 100 Wörter', en: 'Message · 4 points · about 100 words' },
+                exercises: [
+                  { set: 'set-1', title: 'Bericht verspätet' },
+                  { set: 'set-2', title: 'Weiterbildung beantragen' },
+                  { set: 'set-3', title: 'Prüfung verpasst' },
+                  { set: 'set-4', title: 'Präsentation übernehmen' },
+                  { set: 'set-5', title: 'Gleitzeit vorschlagen' },
+                ]
+              }, // Teil 2
             ] },
             { id: 'sprechen', teile: [
               { title: null, exercises: [] }, // Teil 1

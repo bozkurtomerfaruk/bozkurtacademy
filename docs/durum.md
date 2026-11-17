@@ -2,6 +2,20 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-17 · Schreiben genişletme 7: Goethe B2
+
+- **Format (resmî Goethe-Zertifikat B2 Modellsatz Erwachsene, 2. baskı Ağustos 2025):** Schreiben 75 dk, iki Teil; adaylar istedikleri görevle başlayabiliyor.
+  - Teil 1: Forumsbeitrag, ~150 kelime, önerilen 50 dk, 4 madde (görüş, nedenler, alternatifler, avantajlar), giriş ve sonuç.
+  - Teil 2: Nachricht (amire ya da iş arkadaşına), ~100 kelime, önerilen 25 dk, 4 madde, hitap ve selam, sıra serbest.
+  - Ölçütler: Aufgabenerfüllung, Kohärenz, Wortschatz, Strukturen. İstenen uzunluğun yarısının altı ya da konu dışı yazı 0 puan.
+- **10 set (kararların):**
+  - Teil 1: Weniger Fleisch essen, Fliegen oder Bahn fahren, Tablets im Unterricht, Ehrenamt, Stadt oder Land (örnek cevaplar 140–159 kelime). Gästebuch kartı yok (B1'den farklı).
+  - Teil 2: Bericht verspätet, Weiterbildung beantragen, Prüfung verpasst, Präsentation übernehmen, Gleitzeit vorschlagen (93–104 kelime).
+- **Görev sayfası:** Teil 1 50 dk, Teil 2 25 dk; altında "Gerçek sınavda iki Teil için toplam 75 dakikan var. İstediğin görevle başlayabilirsin." (`anyOrder`). Sayaç: Teil 1 130–180 iyi, 75'in altı "sınavda 0 puan"; Teil 2 85–125, 50'nin altı aynı uyarı. TR/DE/EN. Toplam süre notu genel hâle getirildi (A2'deki "SMS ve e-posta" ifadesi çıkarıldı).
+- **Kohärenz (ek isteğin):** Her setin kontrol listesinde B2 bağlaçlı Kohärenz maddeleri (Einerseits … andererseits, Zum einen … zum anderen, Darüber hinaus, Hinzu kommt, dass …, Abschließend lässt sich sagen, dass …; Teil 2'de deshalb, allerdings, jedoch, Mir ist bewusst, dass …) ve Redemittel'de "Kohärenz" grubu var. `scripts/check-exams.mjs` B2 setlerinde ikisini de zorunlu tutuyor.
+- **Ödev ekranı:** B2 için 10 Schreiben görevi seçilebiliyor (test eklendi).
+- **Yapay zekâ (Worker değişti):** Kısa bir B2 kuralı (sadece "Goethe B2 ·" görevleri): Konjunktiv II, Passiv, Relativsatz, Nominalisierung ve bağlaç hatalarını işaretle; üslup tercihlerini hata sayma; Teil 2'de Sie ve kibar dil. Deneme metinleri: `tests/ai-deneme/goethe-b2-teil1.json` ve `goethe-b2-teil2.json` (10 metin, 18 hata, ikisi hatasız). Talimat değiştiği için bütün sınavların tam turu (58 metin, tahmini ~2.000 Neuron) Almanya saatiyle gece 01:30'da çalışacak.
+
 ## 2026-11-16 · Schreiben genişletme 6: telc A1 (Start Deutsch 1)
 
 - **Format (resmî telc Start Deutsch 1 Übungstest 1, shop.telc.net'te ücretsiz):** Goethe A1 ile aynı (sınavı birlikte geliştirdiler).

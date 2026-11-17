@@ -1,0 +1,99 @@
+{
+  "about": "Yapay zekâ denemesi (Goethe B2 Teil 2). errors: bulunması gereken hatalı yer (wrong) ve düzeltmede geçmesi gereken parça (fix; liste ise biri yeter); clean: doğru olan, işaretlenmemesi gereken yerler. Çalıştırma: scripts/ai-deneme.mjs.",
+  "exam": "goethe",
+  "level": "b2",
+  "teil": 2,
+  "texts": [
+    {
+      "id": "b2t2-1",
+      "set": "set-1",
+      "note": "Amire; du/Sie, Relativsatz, Konjunktiv",
+      "text": "Sehr geehrte Frau Hoffmann,\nleider schaffe ich den Bericht nicht bis Freitag. Seit Montag übernehme ich die Aufgaben von Herrn Weber, der ist krank. Ich bitte dich um Verständnis. Mir ist bewusst, dass Sie die Zahlen dringend brauchen. Ich würde vorschlagen, dass ich Ihnen am Freitag eine Zusammenfassung schicke.\nMit freundlichen Grüßen\nAylin Kaya",
+      "errors": [
+        {
+          "wrong": "der ist krank",
+          "fix": "der krank ist"
+        },
+        {
+          "wrong": "Ich bitte dich",
+          "fix": "Ich bitte Sie"
+        }
+      ],
+      "clean": [
+        "Mir ist bewusst, dass Sie die Zahlen dringend brauchen",
+        "Ich würde vorschlagen, dass ich Ihnen am Freitag eine Zusammenfassung schicke"
+      ]
+    },
+    {
+      "id": "b2t2-2",
+      "set": "set-2",
+      "note": "Hatasız resmî mesaj (yanlış alarm olmamalı)",
+      "text": "Sehr geehrter Herr Schulte,\nich interessiere mich für die Weiterbildung „Projektmanagement“, die im März stattfindet. Da ich immer häufiger Projekte koordiniere, würde mir der Kurs sehr helfen. Deshalb möchte ich Sie bitten, mich an den drei Freitagen freizustellen. Meine Kollegin Frau Becker wäre bereit, mich zu vertreten. Über eine positive Antwort würde ich mich freuen.\nMit freundlichen Grüßen\nMurat Yilmaz",
+      "errors": [],
+      "clean": [
+        "Da ich immer häufiger Projekte koordiniere, würde mir der Kurs sehr helfen",
+        "Deshalb möchte ich Sie bitten, mich an den drei Freitagen freizustellen"
+      ]
+    },
+    {
+      "id": "b2t2-3",
+      "set": "set-3",
+      "note": "Kurs öğretmenine; teilnehmen an + Dativ, Perfekt yardımcı fiili, deshalb sonrası fiil",
+      "text": "Sehr geehrte Frau Dr. Lehmann,\nleider konnte ich am Samstag nicht an die Prüfung teilnehmen. Am Freitagabend hat mein Vater ins Krankenhaus gekommen. Es tut mir sehr leid, dass ich mich nicht abgemeldet habe. Deshalb ich möchte fragen, ob ich die Prüfung nachholen kann. Ich könnte am nächsten Samstag kommen.\nMit freundlichen Grüßen\nElif Demir",
+      "errors": [
+        {
+          "wrong": "an die Prüfung",
+          "fix": "an der Prüfung"
+        },
+        {
+          "wrong": "hat mein Vater ins Krankenhaus gekommen",
+          "fix": "ist mein Vater"
+        },
+        {
+          "wrong": "Deshalb ich möchte",
+          "fix": "möchte ich"
+        }
+      ],
+      "clean": [
+        "Es tut mir sehr leid, dass ich mich nicht abgemeldet habe"
+      ]
+    },
+    {
+      "id": "b2t2-4",
+      "set": "set-4",
+      "note": "İş arkadaşına; Konjunktiv II rica, Akkusativ/Dativ, dolaylı soru",
+      "text": "Lieber Herr Lang,\nich habe eine große Bitte. Am Donnerstag muss ich kurzfristig nach Hamburg. Können Sie die Präsentation bei der Firma Berger für mich übernehmen? Ich erkläre Ihnen morgen gern, worauf kommt es an. Mir ist klar, dass Sie selbst viel zu tun haben. Als Dank übernehme ich nächste Woche Ihren Spätdienst.\nViele Grüße\nSelin Aydın",
+      "errors": [
+        {
+          "wrong": "worauf kommt es an",
+          "fix": "worauf es ankommt"
+        }
+      ],
+      "clean": [
+        "Mir ist klar, dass Sie selbst viel zu tun haben",
+        "Lieber Herr Lang",
+        "Viele Grüße"
+      ]
+    },
+    {
+      "id": "b2t2-5",
+      "set": "set-5",
+      "note": "Ekip liderine; dass cümlesi, solange, Akkusativ eki",
+      "text": "Sehr geehrte Frau Krüger,\nviele Kollegen mit Kindern haben Schwierigkeiten, um acht Uhr im Büro zu sein. Ich möchte vorschlagen, dass wir führen Gleitzeit ein. Jeder könnte zwischen sieben und neun Uhr anfangen, solange alle zwischen zehn und fünfzehn Uhr erreichbar sind. Natürlich verstehe ich, dass die Kunden uns erreichen müssen. Gern bespreche ich die Idee mit Ihnen in einen persönlichen Gespräch.\nMit freundlichen Grüßen\nHasan Öztürk",
+      "errors": [
+        {
+          "wrong": "dass wir führen Gleitzeit ein",
+          "fix": "Gleitzeit einführen"
+        },
+        {
+          "wrong": "in einen persönlichen Gespräch",
+          "fix": "in einem persönlichen Gespräch"
+        }
+      ],
+      "clean": [
+        "solange alle zwischen zehn und fünfzehn Uhr erreichbar sind",
+        "Natürlich verstehe ich, dass die Kunden uns erreichen müssen"
+      ]
+    }
+  ]
+}

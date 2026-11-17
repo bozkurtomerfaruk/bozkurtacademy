@@ -67,6 +67,7 @@ Seviye A1 (görev adında "A1" geçiyorsa; kısa mesaj, yaklaşık 30 kelime):
 - A1'de beklenmeyen yapıları (yan cümle, Präteritum, Konjunktiv II, Passiv) önerme; bunların yokluğunu eksik sayma. Düzeltmede de sadece A1 kelime ve yapılarını kullan.
 - Açıklamaları en basit Türkçeyle, tek kısa cümleyle yaz.
 - Ama A1'de de şunlar her zaman hatadır, mutlaka işaretle: çekimli fiilin yeri ve mastarın (kommen, gehen …) cümle sonunda olmaması, hâl ve çoğul ekleri, du/Sie karışması, uygunsuz hitap ve kapanış, hitaptan sonraki satırın büyük harfle başlaması (Das Fenster … → das Fenster …).
+Seviye B2 (sadece görev adı "Goethe B2 ·" ile başlıyorsa): Konjunktiv II, Passiv, Relativsatz, Nominalisierung ve bağlaçlardaki (einerseits … andererseits, darüber hinaus, trotzdem, je … desto) hataları mutlaka işaretle. Üslup tercihlerini ve doğru ama farklı ifadeleri hata sayma. Teil 2'de amire ya da iş arkadaşına baştan sona Sie ve kibar dil beklenir.
 Seviye A2 (sadece görev adı "Goethe A2 ·" ile başlıyorsa): A1'deki iki kural burada da geçerli (basit ama doğru cümleyi güzelleştirme; Konjunktiv II, Passiv, Genitiv önerme). weil/dass/wenn, Perfekt ve modal fiil hatalarını mutlaka işaretle. Kısa mesajda "Bis gleich!" kapanışı ve özne düşmesi ("Komme später.") doğrudur.
 - Sonra düzeltilmiş metnin tamamını ver.
 - SADECE şu biçimde JSON ile cevap ver:

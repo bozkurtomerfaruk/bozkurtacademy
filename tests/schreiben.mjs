@@ -334,10 +334,44 @@ for (const [l, title, submit, count] of [['de', 'Dein Text', 'Abschicken und Mus
   await ctx.close();
 }
 
+// 6h. Goethe B2: Teil 1 forum yazısı (~150, 130–180; 75'in altı 0 puan), Teil 2 mesaj (~100, 85–125; 50'nin altı 0 puan);
+// 4 madde; toplam 75 dk ve "istediğin görevle başlayabilirsin" notu; Gästebuch kartı yok; kontrol listesinde ve Redemittel'de Kohärenz.
+{
+  const { ctx, page } = await newPage();
+  await page.goto(B + '#exams/goethe/b2/schreiben'); await page.waitForTimeout(1000);
+  const list = await page.textContent('#examView');
+  ok(['Weniger Fleisch essen', 'Fliegen oder Bahn fahren', 'Tablets im Unterricht', 'Ehrenamt', 'Stadt oder Land', 'Bericht verspätet', 'Weiterbildung beantragen', 'Prüfung verpasst', 'Präsentation übernehmen', 'Gleitzeit vorschlagen'].every((x) => list.includes(x)), 'Goethe B2: Teil 1 ve Teil 2 setleri listede');
+  await page.goto(B + '#exams/goethe/b2/schreiben/1/set-1'); await page.waitForTimeout(1000);
+  ok(await page.locator('.wt-points li').count() === 4 && await page.locator('.wt-post').count() === 0 && (await page.textContent('.wt-instructions')).includes('Einleitung und einen Schluss'), 'B2 Teil 1: 4 madde, Gästebuch kartı yok, giriş/sonuç yönergesi');
+  ok((await page.textContent('.task-meta')).includes('50') && (await page.textContent('[data-wt-shared]')).includes('toplam 75 dakikan var') && (await page.textContent('[data-wt-shared]')).includes('İstediğin görevle başlayabilirsin'), 'B2: 50 dk, toplam 75 dk ve "istediğin görevle başla" notu');
+  ok((await page.textContent('.wt-checklist')).includes('Einerseits … andererseits') && (await page.textContent('.wt-checklist')).includes('Abschließend lässt sich sagen'), 'B2 Teil 1: kontrol listesinde Kohärenz bağlaçları');
+  await page.click('.wt-redemittel summary');
+  ok((await page.textContent('.wt-redemittel')).includes('Kohärenz') && (await page.textContent('.wt-redemittel')).includes('Darüber hinaus'), 'B2 Teil 1: Redemittel\'de Kohärenz grubu');
+  for (const [n, cls, text] of [[74, 'is-very-short', '0 puan'], [75, 'is-short', '130–180'], [130, 'is-ok', ''], [180, 'is-ok', ''], [181, 'is-long', '']]) {
+    await page.fill('#wtText', words(n));
+    ok((await page.getAttribute('[data-wt-state]', 'class')).includes(cls) && (await page.textContent('[data-wt-state]')).includes(text), `B2 Teil 1: ${n} kelime → ${cls}`);
+  }
+  await page.goto(B + '#exams/goethe/b2/schreiben/2/set-1'); await page.waitForTimeout(1000);
+  ok((await page.textContent('.wt-task')).includes('Frau Hoffmann') && (await page.textContent('.wt-instructions')).includes('Anrede und Gruß') && (await page.textContent('.wt-checklist')).includes('Kohärenz'), 'B2 Teil 2: amire mesaj, hitap/selam yönergesi, Kohärenz maddesi');
+  for (const [n, cls] of [[49, 'is-very-short'], [50, 'is-short'], [85, 'is-ok'], [125, 'is-ok'], [126, 'is-long']]) {
+    await page.fill('#wtText', words(n));
+    ok((await page.getAttribute('[data-wt-state]', 'class')).includes(cls), `B2 Teil 2: ${n} kelime → ${cls}`);
+  }
+  await page.fill('#wtText', words(100)); await page.click('[data-wt-submit]'); await page.waitForTimeout(400);
+  ok((await page.textContent('.wt-cols')).includes('Sehr geehrte Frau Hoffmann,') && await page.locator('a.task-next[href="#exams/goethe/b2/schreiben/2/set-2"]').count() === 1, 'B2 Teil 2: örnek cevap ve sonraki set');
+  await ctx.close();
+  for (const [lang, any] of [['de', 'Du kannst mit jeder Aufgabe beginnen'], ['en', 'You can start with either task']]) {
+    const { ctx: c2, page: p2 } = await newPage({ lang });
+    await p2.goto(B + '#exams/goethe/b2/schreiben/2/set-3'); await p2.waitForTimeout(1000);
+    ok((await p2.textContent('[data-wt-shared]')).includes(any), `${lang}: B2 "istediğin görevle başla" notu çevrili`);
+    await c2.close();
+  }
+}
+
 // 7. 390 / 1440, açık / koyu.
 for (const width of [390, 1440]) {
   for (const theme of ['light', 'dark']) {
-    for (const teil of ['b1/schreiben/2/set-1', 'b1/schreiben/3/set-1', 'a1/schreiben/1/set-3', 'a1/schreiben/2/set-1', 'telc-b1', 'dtz', 'a2/schreiben/1/set-4', 'a2/schreiben/2/set-5', '#exams/telc/a1/schreiben/1/set-4', '#exams/telc/a1/schreiben/2/set-4']) {
+    for (const teil of ['b1/schreiben/2/set-1', 'b1/schreiben/3/set-1', 'a1/schreiben/1/set-3', 'a1/schreiben/2/set-1', 'telc-b1', 'dtz', 'a2/schreiben/1/set-4', 'a2/schreiben/2/set-5', '#exams/telc/a1/schreiben/1/set-4', '#exams/telc/a1/schreiben/2/set-4', 'b2/schreiben/1/set-5', 'b2/schreiben/2/set-4']) {
       const { ctx, page } = await newPage({ width, theme });
       await page.goto(B + (teil.startsWith('#') ? teil : teil === 'telc-b1' ? '#exams/telc/b1/schreiben/1/set-2' : teil === 'dtz' ? '#exams/dtz/schreiben/1/set-6' : `#exams/goethe/${teil}`)); await page.waitForTimeout(1200);
       const name = teil.replace(/^#exams\/(\w+)\//, '$1-').replace(/\/schreiben\/(\d)\/set-\d/, '-teil$1');

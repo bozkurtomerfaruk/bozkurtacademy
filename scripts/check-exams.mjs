@@ -42,7 +42,8 @@ function checkWriting(set, fail) {
   // Content points (Goethe B1 Teil 1, A1/A2) or none (Goethe B1 Teil 2 and 3: the task says what to write).
   if (!Array.isArray(set.points) || (set.points.length && (set.points.length < 2 || !set.points.every(text)))) fail('"points" must be empty or have at least two content points');
   // Forum posts answer an opinion from a guest book: { site?, author, time?, text }.
-  if (set.textType === 'forum' && !(text(set.post?.author) && text(set.post?.text))) fail('"post" with author and text is needed for a forum task');
+  // Goethe B1 Teil 2 answers a guest-book opinion (post); Goethe B2 Teil 1 is a forum post on a topic with four points (no post).
+  if (set.textType === 'forum' && !(set.exam === 'goethe' && set.level === 'b2') && !(text(set.post?.author) && text(set.post?.text))) fail('"post" with author and text is needed for a forum task');
   if (set.post !== undefined && set.textType !== 'forum') fail('"post" is only for forum tasks');
   // Reply tasks (telc B1): the received e-mail { from, subject?, text }; "subjectLine": the answer starts with "Betreff: …".
   if (set.mail !== undefined && !(String(set.textType).startsWith('email-') && text(set.mail?.from) && text(set.mail?.text))) fail('"mail" needs from and text and an email textType');
@@ -69,6 +70,24 @@ function checkWriting(set, fail) {
       if (set.points?.length !== 3) fail('Goethe A2 writing tasks have exactly three content points');
       if (set.words?.min !== A2.min || set.words?.max !== A2.max || set.words?.zeroBelow !== A2.zero) fail(`Goethe A2 Teil ${set.teil} needs words ${A2.min}–${A2.max} and zeroBelow ${A2.zero}`);
       if (set.sharedMinutes !== 30) fail('Goethe A2 writing tasks need "sharedMinutes": 30');
+    }
+  }
+  // anyOrder: in the exam the candidate may start with either task (Goethe B2); the page says so.
+  if (set.anyOrder !== undefined && set.anyOrder !== true) fail('"anyOrder" must be true when present');
+  // Goethe B2 (Modellsatz Erwachsene, 2. Auflage 2025): 75 minutes for both parts, start with either; Teil 1 forum post (~150 words,
+  // 50 min, introduction and conclusion), Teil 2 semi-formal message (~100 words, 25 min, greeting and closing); four points each;
+  // under half the word count = 0 points. The checklist needs Kohärenz connectors (teacher's decision).
+  if (set.exam === 'goethe' && set.level === 'b2') {
+    const B2 = { 1: { textType: 'forum', min: 130, max: 180, zero: 75, minutes: 50 }, 2: { textType: 'email-semiformal', min: 85, max: 125, zero: 50, minutes: 25 } }[set.teil];
+    if (!B2) fail('Goethe B2 Schreiben has Teil 1 and Teil 2 only');
+    else {
+      if (set.textType !== B2.textType) fail(`Goethe B2 Teil ${set.teil} needs textType "${B2.textType}"`);
+      if (set.points?.length !== 4) fail('Goethe B2 writing tasks have exactly four content points');
+      if (set.words?.min !== B2.min || set.words?.max !== B2.max || set.words?.zeroBelow !== B2.zero) fail(`Goethe B2 Teil ${set.teil} needs words ${B2.min}–${B2.max} and zeroBelow ${B2.zero}`);
+      if (set.minutes !== B2.minutes || set.sharedMinutes !== 75 || set.anyOrder !== true) fail(`Goethe B2 Teil ${set.teil} needs minutes ${B2.minutes}, sharedMinutes 75 and anyOrder`);
+      if (set.post !== undefined) fail('Goethe B2 Teil 1 has no guest-book post');
+      if (!(Array.isArray(set.checklist) && set.checklist.some((item) => item?.criterion === 'aufbau' && /Kohärenz/.test(item.tr || '')))) fail('Goethe B2 checklist needs a Kohärenz item with B2 connectors');
+      if (!(Array.isArray(set.redemittel) && set.redemittel.some((g) => /Kohärenz/.test(g?.group || '')))) fail('Goethe B2 Redemittel need a Kohärenz group');
     }
   }
   // DTZ (g.a.s.t. practice sets): one semi-formal or formal message, four content points, no subject line, no word limit.

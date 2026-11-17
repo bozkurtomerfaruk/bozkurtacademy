@@ -241,6 +241,11 @@ describe('Schreiben Worker', () => {
     assert.equal(cleanResult('{"fehler":[{"original" "a"}]', text), null);
   });
 
+  test('B2 kuralı sadece "Goethe B2 ·" görevleri için; A2 kuralı ondan ayrı', () => {
+    assert.match(PROMPT, /Seviye B2 \(sadece görev adı "Goethe B2 ·" ile başlıyorsa\)/);
+    assert.match(PROMPT, /Konjunktiv II, Passiv, Relativsatz, Nominalisierung/);
+  });
+
   test('A2 kuralı sadece "Goethe A2 ·" görevleri için (DTZ "A2-B1" değil)', () => {
     assert.match(PROMPT, /Seviye A2 \(sadece görev adı "Goethe A2 ·" ile başlıyorsa\)/);
   });

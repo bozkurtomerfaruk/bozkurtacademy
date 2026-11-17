@@ -1,0 +1,115 @@
+{
+  "about": "Yapay zekâ denemesi (Goethe B2 Teil 1). errors: bulunması gereken hatalı yer (wrong) ve düzeltmede geçmesi gereken parça (fix; liste ise biri yeter); clean: doğru olan, işaretlenmemesi gereken yerler. Çalıştırma: scripts/ai-deneme.mjs.",
+  "exam": "goethe",
+  "level": "b2",
+  "teil": 1,
+  "texts": [
+    {
+      "id": "b2t1-1",
+      "set": "set-1",
+      "note": "Forum; bağlaçtan sonra fiil, Konjunktiv II, Relativsatz",
+      "text": "Immer mehr Menschen essen weniger Fleisch, und ich finde diese Entwicklung richtig. Einerseits Fleisch ist ein Teil unserer Esskultur, andererseits schadet die Massentierhaltung dem Klima. Darüber hinaus gibt es viele Menschen, die wissen nicht, wie man ohne Fleisch kocht. Linsen und Bohnen sind gute Alternativen, weil sie viel Eiweiß enthalten. Wenn jeder einmal pro Woche auf Fleisch verzichten würde, das wäre schon ein großer Fortschritt. Abschließend lässt sich sagen, dass jeder selbst entscheiden sollte.",
+      "errors": [
+        {
+          "wrong": "Einerseits Fleisch ist",
+          "fix": "ist Fleisch"
+        },
+        {
+          "wrong": "die wissen nicht, wie man ohne Fleisch kocht",
+          "fix": "die nicht wissen"
+        },
+        {
+          "wrong": "das wäre schon ein großer Fortschritt",
+          "fix": [
+            "wäre das schon",
+            "wäre schon"
+          ]
+        }
+      ],
+      "clean": [
+        "Darüber hinaus gibt es viele Menschen",
+        "Abschließend lässt sich sagen, dass jeder selbst entscheiden sollte"
+      ]
+    },
+    {
+      "id": "b2t1-2",
+      "set": "set-2",
+      "note": "Hatasız B2 forum yazısı (yanlış alarm olmamalı)",
+      "text": "Ob Inlandsflüge noch zeitgemäß sind, wird zurzeit viel diskutiert. Ich halte sie in den meisten Fällen für überflüssig. Zum einen sind die Wege zum Flughafen lang, zum anderen verursachen Flugzeuge deutlich mehr Emissionen als Züge. Dass trotzdem so viele Menschen fliegen, liegt vor allem an den niedrigen Preisen. Als Alternative bietet sich die Bahn an, in der man sogar arbeiten kann. Zusammenfassend bin ich der Meinung, dass die Bahn günstiger und zuverlässiger werden muss.",
+      "errors": [],
+      "clean": [
+        "Ich halte sie in den meisten Fällen für überflüssig",
+        "Zum einen sind die Wege zum Flughafen lang",
+        "in der man sogar arbeiten kann"
+      ]
+    },
+    {
+      "id": "b2t1-3",
+      "set": "set-3",
+      "note": "Forum; Passiv yardımcı fiili, wegen + Genitiv, statt … zu",
+      "text": "Meiner Ansicht nach können Tablets den Unterricht bereichern. In vielen Schulen hat die Kreidetafel schon durch digitale Tafeln ersetzt worden. Trotzdem darf man die Nachteile nicht vergessen: Wegen dem ständigen Blick auf den Bildschirm können sich manche Kinder schlecht konzentrieren. Projektarbeit ist eine gute Alternative, weil die Schüler miteinander sprechen, statt nur auf ein Gerät schauen. Abschließend lässt sich sagen, dass eine gute Mischung entscheidend ist.",
+      "errors": [
+        {
+          "wrong": "hat die Kreidetafel schon durch digitale Tafeln ersetzt worden",
+          "fix": "ist die Kreidetafel"
+        },
+        {
+          "wrong": "Wegen dem ständigen Blick",
+          "fix": "Wegen des ständigen Blicks"
+        },
+        {
+          "wrong": "statt nur auf ein Gerät schauen",
+          "fix": "zu schauen"
+        }
+      ],
+      "clean": [
+        "Meiner Ansicht nach können Tablets den Unterricht bereichern",
+        "Trotzdem darf man die Nachteile nicht vergessen"
+      ]
+    },
+    {
+      "id": "b2t1-4",
+      "set": "set-4",
+      "note": "Forum; je … desto, Nominalisierung yazımı, sich engagieren für",
+      "text": "Ehrenamtliches Engagement ist für unsere Gesellschaft unverzichtbar. Je mehr Menschen helfen, desto besser funktioniert das Zusammenleben in einer Stadt. Viele engagieren sich für Sinnvolles zu tun, zum Beispiel bei der Tafel. Wer wenig Zeit hat, kann auch durch das spenden von Geld helfen. Darüber hinaus sammeln junge Menschen wertvolle Erfahrungen. Abschließend lässt sich sagen, dass jede Hilfe zählt.",
+      "errors": [
+        {
+          "wrong": "engagieren sich für Sinnvolles zu tun",
+          "fix": [
+            "um etwas Sinnvolles zu tun",
+            "um Sinnvolles zu tun",
+            "engagieren sich, um"
+          ]
+        },
+        {
+          "wrong": "durch das spenden von Geld",
+          "fix": "das Spenden"
+        }
+      ],
+      "clean": [
+        "Je mehr Menschen helfen, desto besser funktioniert das Zusammenleben",
+        "Darüber hinaus sammeln junge Menschen wertvolle Erfahrungen"
+      ]
+    },
+    {
+      "id": "b2t1-5",
+      "set": "set-5",
+      "note": "Forum; ohne dass, Komparativ, Genitiv artikeli",
+      "text": "Viele Familien überlegen, ob sie aufs Land ziehen sollen. Meiner Meinung nach ist das Leben auf dem Land oft angenehmer, als die meisten denken. Die Mieten sind deutlich niedriger als in der Stadt, und die Kinder können draußen spielen, ohne dass die Eltern müssen sich Sorgen machen. Ein Nachteil ist jedoch die Länge des Arbeitsweges, weil die Busse seltener fahren als in der Stadt. Trotz die langen Wege würde ich gern auf dem Land wohnen.",
+      "errors": [
+        {
+          "wrong": "ohne dass die Eltern müssen sich Sorgen machen",
+          "fix": "Sorgen machen müssen"
+        },
+        {
+          "wrong": "Trotz die langen Wege",
+          "fix": "Trotz der langen Wege"
+        }
+      ],
+      "clean": [
+        "Die Mieten sind deutlich niedriger als in der Stadt",
+        "die Länge des Arbeitsweges"
+      ]
+    }
+  ]
+}

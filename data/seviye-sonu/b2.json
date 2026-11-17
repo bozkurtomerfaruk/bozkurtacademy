@@ -1,0 +1,309 @@
+{
+  "version": 1,
+  "level": "B2",
+  "passPercent": 60,
+  "distribution": [
+    {
+      "topic": "konjunktiv-i",
+      "count": 4
+    },
+    {
+      "topic": "konnektoren-b2",
+      "count": 4
+    },
+    {
+      "topic": "passiv-varianten",
+      "count": 3
+    },
+    {
+      "topic": "nominalisierung",
+      "count": 3
+    },
+    {
+      "topic": "partizip-ii",
+      "count": 3
+    },
+    {
+      "topic": "genitivpraepositionen",
+      "count": 3
+    },
+    {
+      "topic": "funktionsverbgefuege",
+      "count": 3
+    },
+    {
+      "topic": "adjektivdeklination-b2",
+      "count": 3
+    },
+    {
+      "topic": "partizip-i",
+      "count": 2
+    },
+    {
+      "topic": "je-desto",
+      "count": 2
+    }
+  ],
+  "questions": [
+    {
+      "id": "b2-konjunktiv-i-1",
+      "topic": "konjunktiv-i",
+      "prompt": "Der Sprecher erklärte, das Unternehmen ___ keine neuen Mitarbeiter einstellen. (indirekte Rede, Konjunktiv I)",
+      "options": [
+        "wolle",
+        "will",
+        "wollen",
+        "gewollt"
+      ],
+      "answer": "wolle",
+      "explanation": "Haber dilinde başkasının sözü Konjunktiv I ile aktarılır. Özne das Unternehmen (3. tekil): wollen → wolle. will normal biçimdir, wollen çoğuldur, gewollt Partizip II’dir."
+    },
+    {
+      "id": "b2-konjunktiv-i-2",
+      "topic": "konjunktiv-i",
+      "prompt": "Die Forscher behaupten, sie ___ den Fehler schon im Mai entdeckt. (indirekte Rede, Konjunktiv)",
+      "options": [
+        "hätten",
+        "haben",
+        "hatten",
+        "hätte"
+      ],
+      "answer": "hätten",
+      "explanation": "Özne sie (çoğul). Konjunktiv I biçimi sie haben normal biçimle aynı olduğu için Konjunktiv II’ye geçilir: hätten. hätte tekil, hatten normal geçmiş zamandır."
+    },
+    {
+      "id": "b2-passiv-varianten-1",
+      "topic": "passiv-varianten",
+      "prompt": "Der Antrag muss bis Ende des Monats ___.",
+      "options": [
+        "eingereicht werden",
+        "eingereicht wird",
+        "einreichen werden",
+        "eingereicht worden"
+      ],
+      "answer": "eingereicht werden",
+      "explanation": "Modal fiilli Passiv: muss + Partizip II + werden. Çekimli fiil muss olduğu için werden mastar kalır: eingereicht werden."
+    },
+    {
+      "id": "b2-passiv-varianten-2",
+      "topic": "passiv-varianten",
+      "prompt": "Die Brücke hätte schon längst ___ müssen.",
+      "options": [
+        "repariert werden",
+        "repariert worden",
+        "reparieren werden",
+        "repariert wird"
+      ],
+      "answer": "repariert werden",
+      "explanation": "Gerçekleşmemiş geçmiş: hätte + Partizip II + werden + modal fiil mastarı. Sona üç kelime gelir: repariert werden müssen."
+    },
+    {
+      "id": "b2-nominalisierung-1",
+      "topic": "nominalisierung",
+      "prompt": "Beim ___ höre ich gern Podcasts.",
+      "options": [
+        "Joggen",
+        "joggen",
+        "gejoggt",
+        "Joggens"
+      ],
+      "answer": "Joggen",
+      "explanation": "beim = bei dem: artikel var, bu yüzden fiil isimleşir ve büyük yazılır: beim Joggen (koşarken). Dativ’de ek almaz; Joggens Genitiv olurdu."
+    },
+    {
+      "id": "b2-nominalisierung-2",
+      "topic": "nominalisierung",
+      "prompt": "Ich wünsche Ihnen für die Zukunft alles ___.",
+      "options": [
+        "Gute",
+        "Gutes",
+        "gute",
+        "Guten"
+      ],
+      "answer": "Gute",
+      "explanation": "alles’ten sonra gelen sıfat isimleşir, büyük yazılır ve -e alır: alles Gute. etwas/nichts’ten sonra -es olurdu (etwas Gutes)."
+    },
+    {
+      "id": "b2-partizip-i-1",
+      "topic": "partizip-i",
+      "prompt": "Die ___ Arbeitslosigkeit macht der Regierung Sorgen.",
+      "options": [
+        "steigende",
+        "gestiegende",
+        "steigend",
+        "steigenden"
+      ],
+      "answer": "steigende",
+      "explanation": "Artan işsizlik: süren ve etken bir durum → Partizip I steigend. die + dişil Nominativ → sıfat eki -e: die steigende Arbeitslosigkeit. gestiegende diye bir biçim yoktur."
+    },
+    {
+      "id": "b2-partizip-i-2",
+      "topic": "partizip-i",
+      "prompt": "Er verließ ___ den Raum.",
+      "options": [
+        "lächelnd",
+        "lächelnde",
+        "gelächelt",
+        "lächelnden"
+      ],
+      "answer": "lächelnd",
+      "explanation": "Burada Partizip I fiili niteleyen bir zarftır (nasıl çıktı? gülümseyerek) ve ek almaz: lächelnd."
+    },
+    {
+      "id": "b2-partizip-ii-1",
+      "topic": "partizip-ii",
+      "prompt": "Die gestern ___ Pakete sind schon angekommen.",
+      "options": [
+        "verschickten",
+        "verschickenden",
+        "verschickte",
+        "verschickt"
+      ],
+      "answer": "verschickten",
+      "explanation": "Paketler gönderilmiş: edilgen ve bitmiş → Partizip II verschickt. die + çoğul → sıfat eki -en: die gestern verschickten Pakete."
+    },
+    {
+      "id": "b2-partizip-ii-2",
+      "topic": "partizip-ii",
+      "prompt": "Das ist ein von vielen Lesern ___ Buch.",
+      "options": [
+        "empfohlenes",
+        "empfehlendes",
+        "empfohlene",
+        "empfohlen"
+      ],
+      "answer": "empfohlenes",
+      "explanation": "Kitap önerilmiş: Partizip II empfohlen. ein + nötr Nominativ’de artikel eki göstermediği için sıfat -es alır: ein … empfohlenes Buch."
+    },
+    {
+      "id": "b2-genitivpraepositionen-1",
+      "topic": "genitivpraepositionen",
+      "prompt": "___ des Unwetters wurde das Fest abgesagt.",
+      "options": [
+        "Aufgrund",
+        "Trotz",
+        "Statt",
+        "Innerhalb"
+      ],
+      "answer": "Aufgrund",
+      "explanation": "Fırtına, kutlamanın iptal edilmesinin sebebidir → aufgrund (+ Genitiv). trotz karşıtlık, statt “yerine”, innerhalb “içinde” demektir; anlam uymaz."
+    },
+    {
+      "id": "b2-genitivpraepositionen-2",
+      "topic": "genitivpraepositionen",
+      "prompt": "Bitte senden Sie die Unterlagen innerhalb ___ Woche zurück.",
+      "options": [
+        "einer",
+        "einem",
+        "eine",
+        "einen"
+      ],
+      "answer": "einer",
+      "explanation": "innerhalb Genitiv ister. die Woche dişil → Genitiv’de einer Woche."
+    },
+    {
+      "id": "b2-je-desto-1",
+      "topic": "je-desto",
+      "prompt": "Je mehr du liest, ___.",
+      "options": [
+        "desto größer wird dein Wortschatz",
+        "desto dein Wortschatz wird größer",
+        "desto größer dein Wortschatz wird",
+        "desto wird dein Wortschatz größer"
+      ],
+      "answer": "desto größer wird dein Wortschatz",
+      "explanation": "desto + Komparativ ilk yeri doldurur; çekimli fiil hemen arkasından, sonra özne gelir: desto größer wird dein Wortschatz."
+    },
+    {
+      "id": "b2-je-desto-2",
+      "topic": "je-desto",
+      "prompt": "___ öfter ich Deutsch spreche, desto sicherer fühle ich mich.",
+      "options": [
+        "Je",
+        "Desto",
+        "Umso",
+        "Wenn"
+      ],
+      "answer": "Je",
+      "explanation": "İkinci bölümde desto + Komparativ var; birinci bölüm je + Komparativ ile başlar ve fiil sona gider: Je öfter ich Deutsch spreche, …"
+    },
+    {
+      "id": "b2-konnektoren-b2-1",
+      "topic": "konnektoren-b2",
+      "prompt": "Wir können pünktlich anfangen, ___ alle Teilnehmer rechtzeitig da sind.",
+      "options": [
+        "sofern",
+        "obgleich",
+        "wohingegen",
+        "indem"
+      ],
+      "answer": "sofern",
+      "explanation": "Zamanında başlamak bir şarta bağlı: herkesin vaktinde gelmesi → sofern (= … şartıyla). obgleich karşıtlık, wohingegen karşılaştırma, indem yöntem bildirir."
+    },
+    {
+      "id": "b2-konnektoren-b2-2",
+      "topic": "konnektoren-b2",
+      "prompt": "Die Mieten in München sind sehr hoch. ___ sind sie in Leipzig deutlich niedriger.",
+      "options": [
+        "Demgegenüber",
+        "Wohingegen",
+        "Obwohl",
+        "Sofern"
+      ],
+      "answer": "Demgegenüber",
+      "explanation": "Boşluktan sonra fiil sind geliyor; ilk yeri dolduran bir zarf gerekir. Demgegenüber karşıtlık bildiren bir zarftır. wohingegen, obwohl ve sofern yan cümle kurar ve fiili sona gönderirdi."
+    },
+    {
+      "id": "b2-funktionsverbgefuege-1",
+      "topic": "funktionsverbgefuege",
+      "prompt": "Die Firma ___ ihren Kunden kostenlose Parkplätze zur Verfügung.",
+      "options": [
+        "stellt",
+        "steht",
+        "bringt",
+        "nimmt"
+      ],
+      "answer": "stellt",
+      "explanation": "Cümlede nesne var (kostenlose Parkplätze): biri bir şeyi kullanıma sunuyor → zur Verfügung stellen. zur Verfügung stehen nesne almaz."
+    },
+    {
+      "id": "b2-funktionsverbgefuege-2",
+      "topic": "funktionsverbgefuege",
+      "prompt": "Dieser Vorschlag kommt für uns leider nicht in ___.",
+      "options": [
+        "Frage",
+        "Ordnung",
+        "Kraft",
+        "Anspruch"
+      ],
+      "answer": "Frage",
+      "explanation": "in Frage kommen = söz konusu olmak, mümkün olmak: Bu öneri bizim için söz konusu değil. in Ordnung bringen, in Kraft treten, in Anspruch nehmen başka fiillerle kurulur."
+    },
+    {
+      "id": "b2-adjektivdeklination-b2-1",
+      "topic": "adjektivdeklination-b2",
+      "prompt": "Wegen ___ Verkehrs kamen wir zu spät.",
+      "options": [
+        "dichten",
+        "dichtes",
+        "dichter",
+        "dichtem"
+      ],
+      "answer": "dichten",
+      "explanation": "Artikelsiz eril Genitiv: isim -s ile Genitiv’i gösterir (Verkehrs), bu yüzden sıfat -es değil -en alır: wegen dichten Verkehrs."
+    },
+    {
+      "id": "b2-adjektivdeklination-b2-2",
+      "topic": "adjektivdeklination-b2",
+      "prompt": "Mehrere ___ Firmen haben sich beworben.",
+      "options": [
+        "ausländische",
+        "ausländischen",
+        "ausländischer",
+        "ausländisches"
+      ],
+      "answer": "ausländische",
+      "explanation": "mehrere sıfat gibi davranır ve Kasus’u göstermez; sonraki sıfat güçlü ek alır: Nominativ çoğul -e: mehrere ausländische Firmen."
+    }
+  ]
+}

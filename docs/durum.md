@@ -2,6 +2,11 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-17 · B2 seviye sonu sınavı: pilot (dal `claude/b2-seviye-sonu`, taslak)
+
+- **Plan (onaylandı):** Her denemede 30 soru, geçme %60, havuz 60 soru (her konu için dağılımın iki katı), 4 seçenek ve her soruda kendi Türkçe açıklaması. Dağılım: Konjunktiv I 4, İleri Konnektoren 4, Passiv mit Modalverben 3, Nominalisierung 3, Partizip II 3, Präpositionen mit Genitiv 3, Funktionsverbgefüge 3, Adjektivdeklination vertieft 3, Partizip I 2, je … desto 2.
+- **Pilot:** `data/seviye-sonu/b2.json` içinde her konudan 2 soru (20 soru). Katalogda henüz `levelExam` bağlantısı yok; havuz 60 soruya tamamlanıp Funktionsverbgefüge (#120) ve Adjektivdeklination (#121) birleştirildikten sonra bağlanacak (`check-level-exams` o zaman 2× kuralını denetler).
+
 ## 2026-11-16 · B2 gramer dersleri, PR 3: Partizip II, Genitivpräpositionen, je … desto (dal `claude/b2-dersler-2`)
 
 - **Dersler (`data/b2-grammar.json`):** Partizip II (7 bölüm: oluşum + A1–A2 Perfekt kutusu, ayrılabilen/ayrılamayan/-ieren, edilgen ve bitmiş anlam, dört Kasus'ta çekim, Relativsatz → Partizip II + B1 Passiv kutusu, genişletilmiş gruplar, sık hatalar) · Präpositionen mit Genitiv (7 bölüm: Genitiv tekrarı + B1 kutusu, sebep/karşıtlık, zaman, yer, anstatt/anstelle/mittels, günlük dilde Dativ, sık hatalar) · je … desto (7 bölüm: yapı, Komparativ + A2 kutusu, fiil sırası, mehr/weniger, umso ve sıra değişimi, modal/dönüşlü/ayrılabilen fiiller, sık hatalar). Bölümler mevcut 20'şer paketle uyumlu.

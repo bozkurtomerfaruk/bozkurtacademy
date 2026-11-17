@@ -21,7 +21,9 @@
 - **Deneme (gerçek Gemma 4, bütün sınavlar birlikte; 43 metin, 74 hata):**
   - Goethe A2 Teil 1 ve 2 (beşer metin, ikisinde hatasız metin): bütün turlarda 16/16, yanlış alarm yok.
   - Ara talimatlarla 9 tam tur: 69–72/74. Kaçanlar: dtz-6 (A2 bölümü yüzünden, düzeltildi), a1t2-3 (açıklamasız madde, düzeltildi), okunamayan cevaplar (düzeltildi), "an den Ausflug teilnehmen" (bilinen sınır).
-  - Son talimatla tur yarıda durduruldu (aşağıya bak): o ana kadarki 34 metinde 51/51, yanlış alarm yok (DTZ 16/16, Goethe A1 7/7, Goethe A2 16/16, Goethe B1 Teil 1'in ilk 4 metni 12/12). Goethe B1 Teil 1'in son metni, Teil 2, Teil 3 ve telc B1 (16 metin) son talimatla henüz denenmedi; Almanya saatiyle gece çalıştırılacak.
+  - **Son talimatla (bütün sınavlar, 43 metin, 74 hata): 73/74, yanlış alarm yok, okunamayan cevap yok.**
+    - 15 Kasım (yarıda durdurulan tur): 34 metin, 48/48 (DTZ 16/16, Goethe A1 7/7, Goethe A2 16/16, Goethe B1 Teil 1'in ilk 4 metni 9/9). Önceki mesajımda bunu yanlışlıkla "51/51" ve "12/12" yazmıştım.
+    - 17 Kasım 01:30 (Almanya saati, kota kuralına göre): kalan 16 metin, 25/26 (Goethe B1 Teil 1'in son metni 0/0, Teil 2 9/9, Teil 3 8/8, telc B1 8/9). Kaçan tek hata yine "an den Ausflug teilnehmen" (bilinen sınır). Kullanım: 503 Neuron.
   - **Kota:** 15 Kasım'da yaklaşık 580 model çağrısı yapıldı (çağrı başına 16–34 Neuron). Senin kontrolün (16 Kasım): plan "Free", Workers AI maliyeti $0; ücret çıkmadı.
 - **Deneme kuralları (kararın, 16 Kasım):** Denemeler öğrencilerle aynı ücretsiz kotayı kullanıyor (günde 10.000 Neuron, gün UTC 00:00'da başlar).
   - Bir günde en fazla 2 tam tur ve en fazla 4.000 Neuron (öğrencilere en az 6.000 kalır).

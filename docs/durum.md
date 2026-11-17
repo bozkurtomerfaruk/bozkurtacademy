@@ -2,6 +2,12 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-17 · B2 seviye sonu sınavı: 60 soruluk havuz, katalogda bağlı (dal `claude/b2-seviye-sonu`)
+
+- **Durum:** Pilot (20 soru) öğretmen tarafından onaylandı; 40 soru eklendi (havuz 60: Konjunktiv I 8, Konnektoren 8, diğerleri 6, Partizip I ve je … desto 4). #120 ve #121 birleştikten sonra `data/catalog.json` → B2 `levelExam` eklendi; `check-level-exams` geçti (4 sınav, 240 soru). `js/level-exam.js` catalog `?v=10`, sürüm 5.
+- **Test:** `tests/level-exam.mjs` artık B2'yi de deniyor (kart, 30 soru ve dağılım, 18/30 geçti, konu tablosu; 390/1440 açık/koyu ekran görüntüsü ve taşma A1 ve B2 için). "Sınavı olmayan seviye" notu, bütün seviyelerin sınavı olduğu için katalogun bir kopyasında B2'nin sınavı çıkarılarak deneniyor. TR/DE/EN başlık (B2 seviye sonu sınavı / Abschlusstest B2 / B2 end-of-level test). `npm run test:level-exam`, `npm test`, check-grammar, check-versions geçti.
+- **Plan (onaylandı):** Her denemede 30 soru, geçme %60, havuz 60 soru (her konu için dağılımın iki katı), 4 seçenek ve her soruda kendi Türkçe açıklaması. Dağılım: Konjunktiv I 4, İleri Konnektoren 4, Passiv mit Modalverben 3, Nominalisierung 3, Partizip II 3, Präpositionen mit Genitiv 3, Funktionsverbgefüge 3, Adjektivdeklination vertieft 3, Partizip I 2, je … desto 2.
+
 ## 2026-11-17 · B2 Adjektivdeklination vertieft: ders + 200 soru, konu "hazır" (dal `claude/b2-adjektivdeklination`)
 
 - **Kapsam (öğretmenin isteği: A2/B1 tekrarı yok):** A2'deki temel tablolar (der/ein/kein/artikelsiz, edatlar) yeniden çalışılmıyor. Paketler: 1 Genitiv mit Artikel · 2 Genitiv ohne Artikel (trotz starken Regens) · 3 Mehrere Adjektive · 4 alle, diese, welche, die beiden · 5 einige, viele, wenige, mehrere · 6 viel, wenig, etwas, mehr · 7 dessen/deren + Adjektiv · 8 dunkel, teuer, hoch · 9 lila, rosa, Berliner · 10 Komparativ/Superlativ als Attribut · 11 Zahlwörter · 12 Nominalisierte Adjektive in Gruppen · 13 Partizipien als Attribute · 14 Lange Nominalgruppen · 15 Apposition und als-Gruppen · 16 Genitivattribute · 17 Fehlerkorrektur · 18 Anzeigen und Beschreibungen · 19 B2 Mix · 20 Master Challenge.

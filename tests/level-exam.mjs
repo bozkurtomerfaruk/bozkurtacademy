@@ -29,9 +29,9 @@ async function newPage(width = 1280, theme = 'light') {
   return { ctx, page };
 }
 const shownIds = (p) => p.locator('.le-q').evaluateAll((els) => els.map((e) => e.dataset.q));
-async function answer(p, ids, correct) {
+async function answer(p, ids, correct, map = byId) {
   for (const [i, id] of ids.entries()) {
-    const q = byId[id];
+    const q = map[id];
     const value = i < correct ? q.answer : q.options.find((o) => o !== q.answer);
     await p.locator(`.le-q[data-q="${id}"] input[value="${css(value)}"]`).check();
   }
@@ -110,9 +110,15 @@ ok(page.url().includes('#exercises/A1/'), 'zayıf konu bağlantısı alıştırm
 // Eski biçim bağlantı (ör. ödevden): #exercises/A1/seviye-sonu/a1 → #seviye-sonu/A1.
 await page.goto('about:blank'); await page.goto(B + '#exercises/A1/seviye-sonu/a1'); await page.waitForTimeout(1500);
 ok(page.url().endsWith('#seviye-sonu/A1') && await page.locator('#page-seviye-sonu.active').count() === 1, 'ödev bağlantısı sınavı açıyor');
-// Sınavı olmayan seviye.
+// Sınavı olmayan seviye: bütün seviyelerin sınavı olduğu için katalogun bir kopyasında B2'nin sınavı çıkarılır.
+await page.route('**/data/catalog.json*', async (r) => {
+  const cat = JSON.parse(fs.readFileSync('data/catalog.json', 'utf8'));
+  delete cat.levels.find((l) => l.id === 'B2').levelExam;
+  await r.fulfill({ contentType: 'application/json', body: JSON.stringify(cat) });
+});
 await page.goto('about:blank'); await page.goto(B + '#seviye-sonu/B2'); await page.waitForTimeout(1200);
 ok((await page.textContent('#levelExamApp')).includes('henüz bir seviye sonu sınavı yok'), 'sınavı olmayan seviyede not');
+await page.unroute('**/data/catalog.json*');
 await ctx.close();
 
 // Diğer seviyeler (data/catalog.json → levelExam): kart, 30 soru, dağılım, puan.
@@ -139,20 +145,21 @@ for (const level of JSON.parse(fs.readFileSync('data/catalog.json', 'utf8')).lev
 }
 
 // 390 ve 1440 px, açık ve koyu: sorular ve sonuç; telefonda da bağlantılar görünüyor.
-for (const [w, th] of [[390, 'light'], [390, 'dark'], [1440, 'light'], [1440, 'dark']]) {
+for (const lv of ['A1', 'B2']) for (const [w, th] of [[390, 'light'], [390, 'dark'], [1440, 'light'], [1440, 'dark']]) {
+  const map = Object.fromEntries(JSON.parse(fs.readFileSync(`data/seviye-sonu/${lv.toLowerCase()}.json`, 'utf8')).questions.map((q) => [q.id, q]));
   const { ctx: c, page: p } = await newPage(w, th);
-  await p.goto(B + '#seviye-sonu/A1'); await p.waitForTimeout(1200);
-  await p.screenshot({ path: path.join(shotDir, `sinav-giris-${w}-${th}.png`) });
+  await p.goto(B + '#seviye-sonu/' + lv); await p.waitForTimeout(1200);
+  await p.screenshot({ path: path.join(shotDir, `sinav-${lv}-giris-${w}-${th}.png`) });
   await p.click('[data-le-start]'); await p.waitForTimeout(400);
   const ids = await shownIds(p);
-  await answer(p, ids.slice(0, 3), 2);
-  ok(await overflow(p) <= 0, `${w} ${th}: sorularda yatay taşma yok`);
-  await p.screenshot({ path: path.join(shotDir, `sinav-sorular-${w}-${th}.png`) });
-  await answer(p, ids, 22);
+  await answer(p, ids.slice(0, 3), 2, map);
+  ok(await overflow(p) <= 0, `${lv} ${w} ${th}: sorularda yatay taşma yok`);
+  await p.screenshot({ path: path.join(shotDir, `sinav-${lv}-sorular-${w}-${th}.png`) });
+  await answer(p, ids, 22, map);
   await p.click('[data-le-finish]'); await p.waitForTimeout(500);
-  ok(await overflow(p) <= 0, `${w} ${th}: sonuçta yatay taşma yok`);
-  ok(await p.locator('.le-topics li.is-weak a').first().isVisible(), `${w} ${th}: konu bağlantıları görünüyor`);
-  await p.screenshot({ path: path.join(shotDir, `sinav-sonuc-${w}-${th}.png`), fullPage: true });
+  ok(await overflow(p) <= 0, `${lv} ${w} ${th}: sonuçta yatay taşma yok`);
+  ok(await p.locator('.le-topics li.is-weak a').first().isVisible(), `${lv} ${w} ${th}: konu bağlantıları görünüyor`);
+  await p.screenshot({ path: path.join(shotDir, `sinav-${lv}-sonuc-${w}-${th}.png`), fullPage: true });
   await c.close();
 }
 

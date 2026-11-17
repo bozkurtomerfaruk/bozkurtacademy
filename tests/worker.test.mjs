@@ -141,6 +141,22 @@ describe('Schreiben Worker', () => {
     aiAnswer = 'JSON yok';
     assert.equal((await (await call()).json()).status, 'no-result');
     assert.equal(decode(commits.at(-1).writes[0].update.fields.aiSkip), 'error');
+    assert.equal(aiCalls.length, 2, 'okunamayan cevapta model bir kez daha sorulur');
+  });
+
+  test('ilk cevap okunamaz, ikincisi okunursa geri bildirim yazılır', async () => {
+    const good = aiAnswer;
+    let n = 0;
+    env.AI.run = async (model, input) => { aiCalls.push({ model, input }); n++; return { response: n === 1 ? 'bozuk' : good }; };
+    try {
+      docs['settings/ai'] = { mode: 'instant' };
+      const body = await (await call()).json();
+      assert.equal(body.status, 'instant');
+      assert.equal(body.feedback.errors.length, 2);
+      assert.equal(aiCalls.length, 2);
+    } finally {
+      env.AI.run = async (model, input) => { aiCalls.push({ model, input }); if (aiAnswer instanceof Error) throw aiAnswer; return { response: aiAnswer }; };
+    }
   });
 
   test('neden bir kez yazılır; yazılamazsa cevap yine döner', async () => {
@@ -204,6 +220,29 @@ describe('Schreiben Worker', () => {
       { original: 'kein Zeit', korrektur: 'keine Zeit', erklaerung: 'Zeit dişildir: keine Zeit.' }
     ], korrigierter_text: 'x' }), text);
     assert.deepEqual(r.errors.map((e) => e.original), ['kein Zeit']);
+  });
+
+  test('açıklamasız madde: du → Sie düzeltmesine açıklama eklenir, başka açıklamasız madde atılır', () => {
+    const text = 'Liebe Frau Roth,\nKannst du mir eine E-Mail schreiben? Ich habe kein Zeit.';
+    const r = cleanResult(JSON.stringify({ fehler: [
+      { original: 'Kannst du mir eine E-Mail schreiben?', korrektur: 'Können Sie mir eine E-Mail schreiben?' },
+      { original: 'kein Zeit', korrektur: 'keine Zeit' }
+    ], korrigierter_text: 'x' }), text);
+    assert.deepEqual(r.errors.map((e) => e.original), ['Kannst du mir eine E-Mail schreiben?']);
+    assert.match(r.errors[0].erklaerung, /Sie ile yazılır/);
+  });
+
+  test('JSON onarımı: anahtardan sonra unutulan iki nokta', () => {
+    const text = 'Liebe Frau Wagner,\nich danke Sie für Ihr Verständnis.';
+    const raw = '{"fehler":[{"original":"ich danke Sie","korrektur":"ich danke Ihnen","erklaerung "\'danken\' fiili Dativ ister."}],"korrigierter_text":"x"}';
+    const r = cleanResult(raw, text);
+    assert.equal(r.errors.length, 1);
+    assert.match(r.errors[0].erklaerung, /Dativ ister/);
+    assert.equal(cleanResult('{"fehler":[{"original" "a"}]', text), null);
+  });
+
+  test('A2 kuralı sadece "Goethe A2 ·" görevleri için (DTZ "A2-B1" değil)', () => {
+    assert.match(PROMPT, /Seviye A2 \(sadece görev adı "Goethe A2 ·" ile başlıyorsa\)/);
   });
 
   test('directAllowed', () => {

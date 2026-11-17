@@ -88,7 +88,7 @@ const isimTitles = await sections().locator('h4').allTextContents();
 ok(isimTitles.length > 0 && isimTitles.every(t => /(^|[^a-zçğıöşü])[iİ]sim/i.test(t)), `"isim": ${isimTitles.length} bölüm, hepsi kelime başında eşleşiyor`);
 ok(!isimTitles.some(t => /değişim/i.test(t)), '"isim" araması "değişim"i bulmuyor');
 await page.fill('#grammarSearchInput', 'olumsuz'); await page.waitForTimeout(300);
-ok(await sections().count() === 2, '"olumsuz": 2 bölüm');
+ok(await sections().count() === 3, '"olumsuz": 3 bölüm (B2 Funktionsverbgefüge eklendi)');
 // Bölüm sonuçları statik ders sayfasının ilgili başlığına gider: /almanca-gramer/<seviye>/<ders>/#a1-step-N
 const sh = await sections().first().getAttribute('href');
 ok(/^\/almanca-gramer\/(a1|a2|b1)\/[a-z0-9-]+\/#a1-step-\d+$/.test(sh), `bölüm bağlantısı statik sayfaya (${sh})`);

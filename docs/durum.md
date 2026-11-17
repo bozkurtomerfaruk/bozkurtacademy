@@ -10,6 +10,57 @@
 - **Kelime listesi:** 36 yeni isim; öğretmen hepsini onayladı ("kontrol edildi"), emin olmadığım 3 kelime (Gehalt, Leiter, Single) dahil. Möbel ve Deutschkenntnisse çoğul (öğrenciye "(sadece çoğul)" etiketiyle görünür); Möbel anlamına "tekili: das Möbelstück" eklendi, notlarda "çoğul" açıklaması var. Gehalt ve Leiterin, Funktionsverbgefüge dalındakiyle aynı tanımla eklendi (birleştirmede çakışma tek satırlık olacak).
 - **Test:** `tests/alistirma-b2-yeni.mjs adjektivdeklination-b2` (200 soru), `tests/gramer-b2.mjs`, `tests/vocab.mjs`, `tests/search.mjs`, `npm test`, check-grammar, sozluk, build-search-index, check-versions geçti.
 
+## 2026-11-17 · B2 Funktionsverbgefüge: ders + 200 soru, konu "hazır" (dal `claude/b2-funktionsverbgefuege`)
+
+- **Paketler (`data/b2/funktionsverbgefuege.json`, 20 × 10):** 1 Welches Verb passt? · 2 treffen / stellen · 3 nehmen · 4 bringen / kommen · 5 stehen / stellen / setzen · 6 finden / leisten / geben · 7 Welche Präposition? · 8 zur, zum, ins · 9 FVG → einfaches Verb · 10 einfaches Verb → FVG · 11 kein oder nicht? · 12 Wortstellung · 13 Perfekt und Modalverben · 14 Passivbedeutung · 15 Beginn, Verlauf, Ende · 16 Bedeutung erkennen · 17 Fehlerkorrektur · 18 Arbeit und Beruf · 19 Medien und Politik · 20 Master Challenge. Her sorunun kendi TR/DE/EN açıklaması var.
+- **İki doğru cevap riski (öğretmenin uyarısı):** "Welches Verb passt?" ve "Bedeutung" sorularında seçeneklere, o isimle de kullanılabilen ikinci bir fiil konmadı. İki fiilin de doğru olduğu kalıplar (eine Entscheidung treffen/fällen, Maßnahmen treffen/ergreifen, Auskunft geben/erteilen, in Gang setzen/bringen, Stellung nehmen/beziehen) yalnızca yazılı sorularda var ve ikisi de kabul ediliyor. in Frage stellen (şüphe etmek) ile in Frage kommen (mümkün olmak) ayrı sorularda ve derste karşılaştırılıyor.
+- **Ders:** `data/b2-grammar.json` → funktionsverbgefuege (8 bölüm: tanım, sık fiiller tablosu, stellen–stehen / bringen–kommen çiftleri, edilgen anlam, başlangıç–süreç–son, edat/artikel ve fiil sırası, kein/nicht, karıştırılanlar ve sık hatalar). Legacy listesinden çıktı (geriye yalnızca adjektivdeklination-b2 kaldı); SEO metni; kurs sayfası (TR/DE) ve seviye testi bağlantısı (`placement.js` 10). Arama dizini 896 paket.
+- **Kelime listesi:** 60 yeni isim; öğretmen hepsini onayladı ("kontrol edildi"), emin olmadığım 6 kelime (Artikel, Bau, Flut, Gehalt, Können, Schalter) dahil.
+- **Test:** `tests/alistirma-b2-yeni.mjs funktionsverbgefuege` (200 soru), `tests/gramer-b2.mjs`, `tests/vocab.mjs`, `tests/search.mjs` (gramer aramasında "olumsuz" artık 3 bölüm buluyor; yeni dersin "Olumsuzluk" bölümü nedeniyle test güncellendi), `npm test`, check-grammar, sozluk, build-search-index, check-versions geçti.
+
+## 2026-11-16 · Schreiben genişletme 6: telc A1 (Start Deutsch 1)
+
+- **Format (resmî telc Start Deutsch 1 Übungstest 1, shop.telc.net'te ücretsiz):** Goethe A1 ile aynı (sınavı birlikte geliştirdiler).
+  - Schreiben ~20 dk (Lesen + Schreiben toplam 45 dk). Teil 1: form, 5 eksik bilgi (bilgi başına 1 puan). Teil 2: kısa mesaj, 3 madde, her maddeye 1–2 cümle (~30 kelime), "passender Anfang und Gruß"; 10 puan (madde başına 3 + biçim 1).
+  - Tek fark: telc'in örnek Teil 2 görevi bir kuruma (Touristeninformation) resmî yazı.
+- **10 set (kararın: Goethe A1 konularını tekrarlamadan, günlük hayat ve aile birleşimi):**
+  - Teil 1 (form, otomatik kontrol, yapay zekâ yok): Anmeldung in der Kita, Termin bei der Ausländerbehörde, Ein Konto eröffnen, Eine Wohnung mieten, Neu bei der Arbeit.
+  - Teil 2 (kısa mesaj, yapay zekâ kontrollü): Kind krank: Kita (yarı resmî), Termin verschieben (Ausländerbehörde, resmî), Bankkarte verloren (resmî), Hilfe beim Umzug (arkadaşa du), Schicht tauschen (iş arkadaşına du). Örnek cevaplar 31–37 kelime.
+- **Ödev ekranı:** A1'de Schreiben altında Goethe ve telc kısa mesajları (10 görev), "Sınav setleri" altında Goethe ve telc form setleri seçilebiliyor (sınav verisinden kendiliğinden geliyor; test eklendi).
+- **Yapay zekâ:** Talimat değişmedi (A1 kuralları "A1" geçen görev adlarında zaten geçerli). Deneme metinleri: `tests/ai-deneme/telc-a1-teil2.json` (5 metin, 9 hata, biri hatasız).
+- **Deneme (17 Kasım 01:30 Almanya saati, kota kuralına göre; Goethe A2 dalındaki son talimat ve kota koruması ile):** 9/9 hata bulundu, hatasız metinde yanlış alarm yok, okunamayan cevap yok. Kullanım 147 Neuron. Örnekler: Sie haben Fieber → Sie hat Fieber, Kannst du mich helfen? → Kannst du mir helfen?, Hallo/Tschüss → Sehr geehrte Damen und Herren / Mit freundlichen Grüßen. Goethe A2 PR'ı birleşince main bu dala tekrar alınacak (kota koruması ve son talimat main'e A2 ile geliyor; examsData ve app sürümleri yeniden kontrol edilecek).
+- **Testler:** `node tests/schreiben.mjs` (21 yeni telc A1 kontrolü: liste, form 5/5 ve 0/5, dayanaklar, Teil 2 uzunluk sınırları, örnek cevap), `npm run test:schreiben` (ödev ekranı); 390/1440 açık/koyu, taşma yok.
+
+## 2026-11-15 · Schreiben genişletme 5: Goethe A2
+
+- **Format (resmî Goethe-Zertifikat A2 Modellsatz ve Übungssatz 01):** Schreiben iki Teil, toplam 30 dk.
+  - Teil 1: arkadaşa SMS (du), 3 madde, 20–30 kelime. Teil 2: yarı resmî e-posta (Sie; şef, otel), 3 madde, 30–40 kelime.
+  - Ölçütler: Aufgabenerfüllung (3 madde, uygun hitap düzeyi) ve Sprache. İstenen uzunluğun yarısının altı (Teil 1: 10, Teil 2: 15 kelime) 0 puan.
+- **10 set (kararın: 5 + 5):**
+  - Teil 1: Ich komme zu spät, Meine neue Wohnung, Ich bin krank, Hilfe beim Einkaufen, Danke für das Geschenk (örnek cevaplar 24–28 kelime).
+  - Teil 2: Einladung vom Chef, Später im Hotel, Termin beim Arzt, Fahrrad kaufen, Deutschkurs wechseln (35–38 kelime).
+- **Görev sayfası (kararların):** "Tahmini süre: 15 dk" ve altında "Gerçek sınavda iki Teil (SMS ve e-posta) için toplam 30 dakikan var." notu (`sharedMinutes`). 10/15 kelimenin altında "sınavda bu görev 0 puan alır" uyarısı (`words.zeroBelow`); göndermeyi engellemiyor. TR/DE/EN. `scripts/check-exams.mjs` Goethe A2 kurallarını denetliyor.
+- **Ödev ekranı:** A2 için Goethe A2 ve DTZ yazma görevleri seçilebiliyor. Düzeltilen hata: DTZ'nin seviye kodu "A2-B1" olduğu için DTZ yazma görevleri ödev ekranında hiç çıkmıyordu; artık A2'de ve B1'de çıkıyor (B1: 27 görev).
+- **Yapay zekâ (Worker değişti):**
+  - Kısa bir A2 kuralı (sadece "Goethe A2 ·" görevleri): basit doğru cümleyi güzelleştirme, Konjunktiv II/Passiv/Genitiv önerme; weil/dass/wenn, Perfekt ve modal fiil hatalarını işaretle; SMS'te "Bis gleich!" ve özne düşmesi doğru.
+  - İlk, uzun A2 bölümü DTZ'yi ("A2-B1") de etkileyip dtz-6'daki hatayı her turda kaçırttı; bölüm kısaltılınca 4/4 bulundu.
+  - Açıklama alanı zorunlu yapıldı. Model bazen açıklamayı atlıyordu ve Worker açıklamasız maddeyi attığı için a1t2-3'teki du→Sie hatası kayboluyordu; du→Sie düzeltmesine Worker artık kendi açıklamasını ekliyor.
+  - "…" ile kısaltılmış düzeltme yasak ("Ich komme erst … an" yerine tam cümle).
+  - Okunamayan cevap: model bazen JSON'da `"erklaerung "` yazıp iki noktayı unutuyor. Worker bunu onarıyor; yine okunamazsa modeli bir kez daha soruyor (ücretsiz kotadan).
+- **Deneme (gerçek Gemma 4, bütün sınavlar birlikte; 43 metin, 74 hata):**
+  - Goethe A2 Teil 1 ve 2 (beşer metin, ikisinde hatasız metin): bütün turlarda 16/16, yanlış alarm yok.
+  - Ara talimatlarla 9 tam tur: 69–72/74. Kaçanlar: dtz-6 (A2 bölümü yüzünden, düzeltildi), a1t2-3 (açıklamasız madde, düzeltildi), okunamayan cevaplar (düzeltildi), "an den Ausflug teilnehmen" (bilinen sınır).
+  - **Son talimatla (bütün sınavlar, 43 metin, 74 hata): 73/74, yanlış alarm yok, okunamayan cevap yok.**
+    - 15 Kasım (yarıda durdurulan tur): 34 metin, 48/48 (DTZ 16/16, Goethe A1 7/7, Goethe A2 16/16, Goethe B1 Teil 1'in ilk 4 metni 9/9). Önceki mesajımda bunu yanlışlıkla "51/51" ve "12/12" yazmıştım.
+    - 17 Kasım 01:30 (Almanya saati, kota kuralına göre): kalan 16 metin, 25/26 (Goethe B1 Teil 1'in son metni 0/0, Teil 2 9/9, Teil 3 8/8, telc B1 8/9). Kaçan tek hata yine "an den Ausflug teilnehmen" (bilinen sınır). Kullanım: 503 Neuron.
+  - **Kota:** 15 Kasım'da yaklaşık 580 model çağrısı yapıldı (çağrı başına 16–34 Neuron). Senin kontrolün (16 Kasım): plan "Free", Workers AI maliyeti $0; ücret çıkmadı.
+- **Deneme kuralları (kararın, 16 Kasım):** Denemeler öğrencilerle aynı ücretsiz kotayı kullanıyor (günde 10.000 Neuron, gün UTC 00:00'da başlar).
+  - Bir günde en fazla 2 tam tur ve en fazla 4.000 Neuron (öğrencilere en az 6.000 kalır).
+  - Almanya saatiyle 01:00–07:00 arasında.
+  - `scripts/ai-deneme.mjs` çalışmadan önce o günün kayıtlı kullanımını ve bu çalıştırmanın tahminini (metin başına en az 35 Neuron) hesaplıyor; 4.000'i aşacaksa, o gün 2 tam tur çalıştıysa ya da saat aralık dışındaysa hiçbir istek göndermeden duruyor. Mantık `scripts/ai-deneme-kota.mjs`'te, testi `npm test`'te.
+  - Küçük bir ek deneme için `--saat-disi`; tek tek metinler için `--ids`. Kullanım depoya girmeyen `.ai-deneme-kullanim.json`'a yazılıyor (sadece bu bilgisayarın denemeleri; öğrencilerin kullanımı Cloudflare panelinde). Kural AGENTS.md'ye de yazıldı.
+- **Senin yapacakların (birleştirmeden sonra):** Worker'ı güncelle. Firestore kuralları değişmedi.
+
 ## 2026-11-16 · B2 gramer dersleri, PR 3: Partizip II, Genitivpräpositionen, je … desto (dal `claude/b2-dersler-2`)
 
 - **Dersler (`data/b2-grammar.json`):** Partizip II (7 bölüm: oluşum + A1–A2 Perfekt kutusu, ayrılabilen/ayrılamayan/-ieren, edilgen ve bitmiş anlam, dört Kasus'ta çekim, Relativsatz → Partizip II + B1 Passiv kutusu, genişletilmiş gruplar, sık hatalar) · Präpositionen mit Genitiv (7 bölüm: Genitiv tekrarı + B1 kutusu, sebep/karşıtlık, zaman, yer, anstatt/anstelle/mittels, günlük dilde Dativ, sık hatalar) · je … desto (7 bölüm: yapı, Komparativ + A2 kutusu, fiil sırası, mehr/weniger, umso ve sıra değişimi, modal/dönüşlü/ayrılabilen fiiller, sık hatalar). Bölümler mevcut 20'şer paketle uyumlu.

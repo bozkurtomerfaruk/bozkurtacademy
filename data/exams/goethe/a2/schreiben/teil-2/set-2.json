@@ -1,0 +1,112 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-2",
+  "title": "Später im Hotel",
+  "minutes": 15,
+  "sharedMinutes": 30,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "Sie haben in einem Hotel ein Zimmer von Freitag bis Sonntag gebucht. Sie können aber erst am Samstag kommen.",
+  "task": "Schreiben Sie eine E-Mail an Frau Becker vom Hotel:",
+  "points": [
+    "Erklären Sie, warum Sie schreiben.",
+    "Sagen Sie, wann Sie jetzt ankommen.",
+    "Fragen Sie nach dem Preis."
+  ],
+  "instructions": "Schreiben Sie 30–40 Wörter. Schreiben Sie zu allen drei Punkten.",
+  "words": {
+    "target": 35,
+    "min": 30,
+    "max": 40,
+    "zeroBelow": 15
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Üç maddenin hepsine yazdım: neden yazdığım, ne zaman geleceğim, fiyat sorusu."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Otele Sie ile yazdım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap (Sehr geehrte Frau Becker,) ve kapanış (Mit freundlichen Grüßen + adım) var."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümleleri bağladım: leider, erst, deshalb."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Ayrılabilen fiil: Ich komme erst am Samstag an."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Soru: Was kostet das Zimmer jetzt? / Muss ich für Freitag bezahlen?"
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede",
+      "items": [
+        {
+          "de": "Sehr geehrte Frau …,",
+          "tr": "Sayın … Hanım,"
+        }
+      ]
+    },
+    {
+      "group": "Grund",
+      "items": [
+        {
+          "de": "ich habe bei Ihnen ein Zimmer gebucht.",
+          "tr": "sizde bir oda ayırttım."
+        },
+        {
+          "de": "Leider kann ich erst am … kommen.",
+          "tr": "Maalesef ancak …'da gelebiliyorum."
+        }
+      ]
+    },
+    {
+      "group": "Fragen",
+      "items": [
+        {
+          "de": "Was kostet das Zimmer jetzt?",
+          "tr": "Oda şimdi kaça?"
+        },
+        {
+          "de": "Muss ich für Freitag bezahlen?",
+          "tr": "Cuma için ödemem gerekiyor mu?"
+        }
+      ]
+    },
+    {
+      "group": "Schluss",
+      "items": [
+        {
+          "de": "Vielen Dank!",
+          "tr": "Çok teşekkürler!"
+        },
+        {
+          "de": "Mit freundlichen Grüßen",
+          "tr": "Saygılarımla"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Sehr geehrte Frau Becker,\nich habe bei Ihnen ein Zimmer von Freitag bis Sonntag gebucht. Leider muss ich am Freitag arbeiten. Ich komme deshalb erst am Samstag an. Was kostet das Zimmer jetzt?\nMit freundlichen Grüßen\nHasan Yıldız",
+    "notes": [
+      "Üç madde: neden (Zimmer gebucht, Freitag arbeiten), ne zaman (erst am Samstag), fiyat (Was kostet …?).",
+      "ankommen ayrılabilir: Ich komme … an.",
+      "deshalb cümlenin başına da gelebilir: Deshalb komme ich … an (fiil hemen arkasında)."
+    ]
+  }
+}

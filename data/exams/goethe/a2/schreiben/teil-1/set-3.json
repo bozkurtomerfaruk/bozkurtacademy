@@ -1,0 +1,103 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-3",
+  "title": "Ich bin krank",
+  "minutes": 15,
+  "sharedMinutes": 30,
+  "kind": "writing",
+  "register": "du",
+  "textType": "sms",
+  "situation": "Sie wollten heute Abend mit Ihrem Freund Can ins Fitnessstudio gehen. Aber Sie sind krank.",
+  "task": "Schreiben Sie Can eine SMS:",
+  "points": [
+    "Sagen Sie, dass Sie nicht kommen können.",
+    "Schreiben Sie, warum.",
+    "Schlagen Sie einen neuen Termin vor."
+  ],
+  "instructions": "Schreiben Sie 20–30 Wörter. Schreiben Sie zu allen drei Punkten.",
+  "words": {
+    "target": 25,
+    "min": 20,
+    "max": 30,
+    "zeroBelow": 10
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Üç maddenin hepsine yazdım: gelemediğim, neden, yeni gün önerisi."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Arkadaşıma du ile yazdım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap ve kapanış var (Hallo Can, … Bis bald! + adım)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümleleri bağladım: leider, und, vielleicht."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Modal fiil + mastar sonda: Ich kann heute leider nicht kommen."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Hastalık: Ich habe Fieber / Kopfschmerzen. Ich bin erkältet."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Absagen",
+      "items": [
+        {
+          "de": "Ich kann heute leider nicht kommen.",
+          "tr": "Bugün maalesef gelemiyorum."
+        },
+        {
+          "de": "Tut mir leid!",
+          "tr": "Üzgünüm!"
+        }
+      ]
+    },
+    {
+      "group": "Grund",
+      "items": [
+        {
+          "de": "Ich bin erkältet.",
+          "tr": "Nezle oldum."
+        },
+        {
+          "de": "Ich habe Fieber.",
+          "tr": "Ateşim var."
+        }
+      ]
+    },
+    {
+      "group": "Neuer Termin",
+      "items": [
+        {
+          "de": "Geht es am Donnerstag?",
+          "tr": "Perşembe olur mu?"
+        },
+        {
+          "de": "Bis bald!",
+          "tr": "Görüşürüz!"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Hallo Can,\nich kann heute Abend leider nicht ins Fitnessstudio kommen. Ich bin erkältet und habe Fieber. Geht es vielleicht am Donnerstag um sieben Uhr?\nBis bald!\nMurat",
+    "notes": [
+      "Üç madde: gelemiyor (kann leider nicht kommen), neden (erkältet, Fieber), yeni gün (Donnerstag um sieben).",
+      "kann … kommen: modal fiil 2. sırada, mastar sonda.",
+      "ins Fitnessstudio: in + das = ins (nereye? Akkusativ)."
+    ]
+  }
+}

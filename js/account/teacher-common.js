@@ -30,6 +30,7 @@ export async function requireTeacher({ loadingId, errorId }){
   $('logoutBtn')?.addEventListener('click', async () => {
     await fa.signOut(auth);
     clearHint();
+    cal.forget();
     location.replace('index.html');
   });
   return user;

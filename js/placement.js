@@ -304,7 +304,7 @@
     return text;
   };
 
-  // Konu kimlikleri sitenin gramer konularıyla aynı. link: anlatım sayfası (A1–B1) ya da B2 alıştırması.
+  // Konu kimlikleri sitenin gramer konularıyla aynı. link: anlatım sayfası ya da (dersi henüz yazılmamış B2 konularında) alıştırma.
   const TOPICS = {
     praesens: ['Präsens', 'A1'], 'sein-haben': ['sein & haben', 'A1'], artikel: ['Artikel: der · die · das', 'A1'],
     akkusativ: ['Akkusativ', 'A1'], negation: ['Negation: nicht · kein', 'A1'], modalverben: ['Modalverben', 'A1'],
@@ -313,10 +313,10 @@
     'reflexive-verben': ['Reflexive Verben', 'A2'], relativsaetze: ['Relativsätze', 'B1'], passiv: ['Passiv', 'B1'],
     'konjunktiv-ii-b1': ['Konjunktiv II', 'B1'], konnektoren: ['Konnektoren', 'B1'], 'infinitiv-zu': ['Infinitiv mit zu', 'B1'],
     'indirekte-fragen': ['Indirekte Fragen', 'B1'], 'satzstellung-b1': ['Satzstellung', 'B1'],
-    'konjunktiv-i': ['Konjunktiv I', 'B2', 'exercises'], 'passiv-varianten': ['Passiversatz', 'B2', 'exercises'],
-    'partizip-i': ['Partizip I', 'B2', 'exercises'], 'partizip-ii': ['Partizipialattribute', 'B2', 'exercises'],
-    genitivpraepositionen: ['Präpositionen mit Genitiv', 'B2', 'exercises'], 'je-desto': ['je … desto', 'B2', 'exercises'],
-    nominalisierung: ['Nominalisierung', 'B2', 'exercises'], 'modalverben-subjektiv': ['Modalverben (subjektiv)'],
+    'konjunktiv-i': ['Konjunktiv I', 'B2'], 'passiv-varianten': ['Passiv mit Modalverben', 'B2'],
+    'partizip-i': ['Partizip I', 'B2'], 'partizip-ii': ['Partizip II', 'B2'],
+    genitivpraepositionen: ['Präpositionen mit Genitiv', 'B2'], 'je-desto': ['je … desto', 'B2'],
+    nominalisierung: ['Nominalisierung', 'B2'], 'modalverben-subjektiv': ['Modalverben (subjektiv)'],
     funktionsverbgefuege: ['Funktionsverbgefüge'], 'konnektoren-b2': ['Konnektoren (zumal, sofern …)']
   };
   function topicName(id){

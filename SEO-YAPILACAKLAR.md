@@ -128,7 +128,7 @@ Arama hacimleri Search Console verisi geldikçe gözden geçirilmeli. Resmî şa
 | 3 (6 Kasım 2026) | a1 almanca sınavı nasıl geçilir | A1 Almanca Sınavı Nasıl Geçilir? Bölüm Bölüm Hazırlık Rehberi | /a1-almanca-kursu/, /almanca-sinav-hazirlik/, /#exams, /almanca-gramer/a1/ | Yayında |
 | 4 (6 Kasım 2026) | goethe telc farkı | Goethe mi telc mi? Almanca Sınavları Arasındaki Farklar | /almanca-sinav-hazirlik/, /b1-almanca-kursu/, /almanca-gramer/b1/ | Yayınlandı |
 | 5 (9 Kasım 2026) | aile birleşimi için almanca | Aile Birleşimi İçin Almanca: Nereden Başlamalı? | /a1-almanca-kursu/, /almanca-gramer/a1/, /iletisim/ (resmî şartlar için yalnızca yönlendirme) | Yayınlandı |
-| 6 (17 Aralık 2026) | almanya'da çalışmak için hangi seviye almanca | Almanya'da Çalışmak İçin Hangi Seviye Almanca Gerekir? | /b1-almanca-kursu/, /b2-almanca-kursu/ (seviye şartları için resmî kaynağa yönlendirme) | Planlandı |
+| 6 (16 Kasım 2026) | almanya'da çalışmak için hangi seviye almanca | Almanya'da Çalışmak İçin Hangi Seviye Almanca Gerekir? | /b1-almanca-kursu/, /b2-almanca-kursu/ (seviye şartları için resmî kaynağa yönlendirme) | Yayınlandı |
 | 7 (24 Aralık 2026) | almanca artikel nasıl öğrenilir | der, die, das: Almanca Artikeller Nasıl Akılda Kalır? | /almanca-gramer/a1/artikel/, /almanca-gramer/a1/plural/ | Planlandı |
 | 8 (31 Aralık 2026) | almanca konuşma pratiği | Almanca Konuşma Pratiği: Evde ve Derste Neler Yapılabilir? | /almanca-grup-dersi/, /almanca-ozel-ders/ | Planlandı |
 | 9 (7 Ocak 2027) | a2 almanca sınavı / dtz | A2 Seviyesinde Neler Öğrenilir? A2 Sınavına Hazırlık | /a2-almanca-kursu/, /almanca-gramer/a2/ (perfekt, dativ, nebensaetze) | Planlandı |
@@ -152,6 +152,7 @@ Sitede doğrulama dosyası (`google4cc3144aaa693325.html`) zaten var. Yani mülk
 1. https://search.google.com/search-console adresine Google hesabınla gir.
 2. Sol üstte `bozkurtacademy.com` mülkünü seç. Yoksa "Mülk ekle" → "URL ön eki" → `https://bozkurtacademy.com/` yaz ve "HTML dosyası" ile doğrula (dosya sitede duruyor, silme).
 3. Soldaki menüden **Site haritaları**'na gir, `sitemap.xml` yaz ve **Gönder**'e bas. Durum "Başarılı" olmalı.
+   Aynı yerde blog akışını da gönder: `blog/feed.xml` yaz ve **Gönder**'e bas (16 Kasım 2026'da eklendi). Akış, yeni blog yazılarının daha hızlı bulunmasına yardım eder; durum "Başarılı" olmalı.
 4. İsteğe bağlı: "Ayarlar → Kullanıcılar ve izinler" bölümünden e-posta bildirimlerinin açık olduğunu kontrol et.
 
 ### Neye, ne sıklıkla bakacaksın?
@@ -333,3 +334,9 @@ Bir sorun görürsen ekran görüntüsünü ve sayfa adresini bana göndermen ye
 2. Sayfa filtresi: URL'de `/almanca-gramer/` geçenler.
 3. Tıklama, gösterim, TO ve ortalama sıralamayı not et. Yukarıdaki sorguların ("mein dein sein", "kein keinen keine", "imperativ", "plural artikel", "akkusativ personalpronomen", "almanca gramer konuları", "bozkurt akademi") TO'su arttı mı?
 4. Sonuçları bana gönder; TO artmayan sayfaların başlığını birlikte yeniden düzenleriz.
+
+### 16 Kasım 2026: blog akışı ve IndexNow
+
+- Blog için Atom akışı: `https://bozkurtacademy.com/blog/feed.xml` (yalnızca yayınlanmış yazılar). robots.txt'de Sitemap olarak da listelendi. **Yapman gereken:** Search Console › Site haritaları bölümüne `blog/feed.xml` adresini de gönder (Bölüm 4).
+- IndexNow: Her yayından sonra GitHub Actions'taki "IndexNow" iş akışı, içeriği değişen yayınlanmış sayfaları Bing ve Yandex'e bildirir. Anahtar dosyası sitenin kökünde (`/<anahtar>.txt`); silme. Google IndexNow kullanmaz; Google için Search Console'daki "Dizine eklenmesini iste" adımı geçerli.
+- İsteğe bağlı: Bing Webmaster Tools'a (https://www.bing.com/webmasters) Google hesabınla girip siteyi Search Console'dan içe aktarabilirsin; IndexNow bildirimlerini oradan görebilirsin.

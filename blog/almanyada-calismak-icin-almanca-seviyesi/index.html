@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<!-- Bu dosya scripts/build-pages.mjs ile üretilir. Yazılar _blog/ klasöründe; değiştirince: node scripts/build-pages.mjs -->
+<html lang="tr" data-ba-fixed-lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ba:security -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com/firebasejs/ https://apis.google.com https://accounts.google.com/gsi/client https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; connect-src 'self' https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://content-firebaseappcheck.googleapis.com https://www.googleapis.com https://oauth2.googleapis.com/revoke https://accounts.google.com/gsi/ https://www.google.com/recaptcha/ https://api.web3forms.com https://bozkurtacademy.goatcounter.com https://schreiben-kontrol.bozkurtt-omerfaruk.workers.dev http://127.0.0.1:8080 http://127.0.0.1:9099 http://127.0.0.1:8787; frame-src https://accounts.google.com https://bozkurtacademy-8ab85.firebaseapp.com https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <script src="/js/theme-init.js?v=1"></script>
+  <!-- /ba:security -->
+  <meta name="theme-color" content="#f8f7f3" />
+  <title>Almanya’da Çalışmak İçin Almanca Seviyesi | Bozkurt Academy</title>
+  <meta name="description" content="Almanya’da çalışmak için hangi seviye Almanca gerekir? A2–C1 seviyelerinin iş yerinde anlamı, seviyeyi belirleyen dört soru ve örnek cümleler." />
+  <link rel="canonical" href="https://bozkurtacademy.com/blog/almanyada-calismak-icin-almanca-seviyesi/" />
+  <link rel="alternate" type="application/atom+xml" title="Bozkurt Academy Blog" href="https://bozkurtacademy.com/blog/feed.xml" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3">
+  <!-- Manifest bilerek yok (PWA kurulumu kapalı). Play Store uygulaması çıkınca geri eklenecek: README.md › "PWA / uygulama kurulumu". -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Bozkurt Academy" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="og:url" content="https://bozkurtacademy.com/blog/almanyada-calismak-icin-almanca-seviyesi/" />
+  <meta property="og:title" content="Almanya’da Çalışmak İçin Almanca Seviyesi | Bozkurt Academy" />
+  <meta property="og:description" content="Almanya’da çalışmak için hangi seviye Almanca gerekir? A2–C1 seviyelerinin iş yerinde anlamı, seviyeyi belirleyen dört soru ve örnek cümleler." />
+  <meta property="og:image" content="https://bozkurtacademy.com/images/blog/almanyada-calismak-icin-almanca-seviyesi/kapak-1200.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="A2, B1, B2 ve C1 basamaklarından oluşan merdiven ve üstünde soru işareti; yanında “Almanya’da çalışmak için hangi seviye?” yazısı" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Almanya’da Çalışmak İçin Almanca Seviyesi | Bozkurt Academy" />
+  <meta name="twitter:description" content="Almanya’da çalışmak için hangi seviye Almanca gerekir? A2–C1 seviyelerinin iş yerinde anlamı, seviyeyi belirleyen dört soru ve örnek cümleler." />
+  <meta name="twitter:image" content="https://bozkurtacademy.com/images/blog/almanyada-calismak-icin-almanca-seviyesi/kapak-1200.jpg" />
+  <link rel="preload" href="/fonts/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css?v=13" />
+  <link rel="stylesheet" href="/css/base.css?v=14" />
+  <link rel="stylesheet" href="/css/landing.css?v=1" />
+  <link rel="stylesheet" href="/css/blog.css?v=6" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://bozkurtacademy.com/blog/almanyada-calismak-icin-almanca-seviyesi/#webpage",
+        "url": "https://bozkurtacademy.com/blog/almanyada-calismak-icin-almanca-seviyesi/",
+        "name": "Almanya’da Çalışmak İçin Almanca Seviyesi | Bozkurt Academy",
+        "description": "Almanya’da çalışmak için hangi seviye Almanca gerekir? A2–C1 seviyelerinin iş yerinde anlamı, seviyeyi belirleyen dört soru ve örnek cümleler.",
+        "inLanguage": "tr-TR",
+        "isPartOf": {
+          "@id": "https://bozkurtacademy.com/#website"
+        },
+        "breadcrumb": {
+          "@id": "https://bozkurtacademy.com/blog/almanyada-calismak-icin-almanca-seviyesi/#breadcrumb"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://bozkurtacademy.com/images/blog/almanyada-calismak-icin-almanca-seviyesi/kapak-1200.jpg"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://bozkurtacademy.com/blog/almanyada-calismak-icin-almanca-seviyesi/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Ana sayfa",
+            "item": "https://bozkurtacademy.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://bozkurtacademy.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Çalışmak için Almanca seviyesi",
+            "item": "https://bozkurtacademy.com/blog/almanyada-calismak-icin-almanca-seviyesi/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://bozkurtacademy.com/blog/almanyada-calismak-icin-almanca-seviyesi/#post",
+        "headline": "Almanya’da Çalışmak İçin Hangi Seviye Almanca Gerekir?",
+        "description": "Almanya’da çalışmak için hangi seviye Almanca gerekir? A2–C1 seviyelerinin iş yerinde anlamı, seviyeyi belirleyen dört soru ve örnek cümleler.",
+        "url": "https://bozkurtacademy.com/blog/almanyada-calismak-icin-almanca-seviyesi/",
+        "inLanguage": "tr-TR",
+        "datePublished": "2026-11-16",
+        "dateModified": "2026-11-16",
+        "author": {
+          "@type": "Person",
+          "name": "Ömer Faruk Bozkurt"
+        },
+        "publisher": {
+          "@id": "https://bozkurtacademy.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://bozkurtacademy.com/blog/almanyada-calismak-icin-almanca-seviyesi/#webpage"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://bozkurtacademy.com/images/blog/almanyada-calismak-icin-almanca-seviyesi/kapak-1200.jpg",
+          "width": 1200,
+          "height": 630
+        }
+      }
+    ]
+  }
+  </script>
+  </head>
+<body class="academy-theme lp-page bl-page">
+  <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
+  <div class="shell">
+    <header class="topbar">
+      <nav class="nav" aria-label="Site menüsü" data-i18n-aria="navMenuLabel">
+        <a class="brand" href="/" aria-label="Bozkurt Academy ana sayfa" data-i18n-aria="brandHomeLabel">
+          <img src="/images/logo-mark.svg" width="64" height="64" alt="" class="brand-logo brand-logo-light"><img src="/images/logo-mark-dark.svg" width="64" height="64" alt="" class="brand-logo brand-logo-dark">
+          <div><div class="brand-title">Bozkurt Academy</div><div class="brand-sub" data-i18n="brandSub">Almancada net ilerleme</div></div>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteMenu" data-i18n="menuOpen">Menü</button>
+        <div class="nav-links" id="siteMenu">
+          <a class="nav-link" href="/" data-i18n="navHome">Ana Sayfa</a>
+          <a class="nav-link" href="/online-almanca-dersi/" data-i18n="navLessons">Almanca Dersleri</a>
+          <a class="nav-link" href="/almanca-gramer/" data-i18n="navGrammar">Gramer</a>
+          <a class="nav-link" href="/#exercises" data-i18n="navExercises">Alıştırmalar</a>
+          <a class="nav-link" href="/almanca-sinav-hazirlik/" data-i18n="navExams">Sınav Hazırlığı</a>
+          <a class="nav-link active" href="/blog/" aria-current="page" data-i18n="navBlog">Blog</a>
+          <a class="nav-link" href="/hakkimda/" data-i18n="navAbout">Hakkımda</a>
+          <a class="nav-link" href="/iletisim/" data-i18n="navContact">İletişim</a>
+          <!-- Hesap bağlantısı: ziyaretçide "Giriş"; daha önce giriş yapmış öğrencide "Panelim", öğretmende "Öğretmen paneli" (js/app.js → accountNav). -->
+          <a class="nav-link nav-account" href="/giris.html" id="navAccount" data-i18n="navLogin">Giriş</a>
+        </div>
+        <div class="nav-actions">
+        <a class="btn primary nav-cta" href="/iletisim/" data-i18n="ctaFreeInfo">Ücretsiz bilgi al</a>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Koyu temaya geç" aria-pressed="false"><svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="currentColor"/></svg><svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="lang" aria-label="Dil seçimi" data-i18n-aria="langChoice">
+          <button data-lang="tr" class="active">TR</button>
+          <button data-lang="de">DE</button>
+          <button data-lang="en">EN</button>
+        </div>
+        </div>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1" class="lp-main">
+      <nav class="lp-breadcrumb" aria-label="Sayfa yolu" data-i18n-aria="breadcrumbLabel"><ol><li><a href="/">Ana sayfa</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">Çalışmak için Almanca seviyesi</li></ol></nav>
+      
+      <article class="bl-article" aria-labelledby="bl-title">
+        
+        <header class="bl-header">
+          <p class="bl-meta">Ömer Faruk Bozkurt · <time datetime="2026-11-16">16 Kasım 2026</time></p>
+          <h1 id="bl-title">Almanya’da Çalışmak İçin Hangi Seviye Almanca Gerekir?</h1>
+          <p class="lp-lead">Almanya’da çalışmak istiyorsan ilk sorulardan biri Almanca seviyesidir. Bu yazıda kesin şart vermiyorum; seviyelerin iş yerinde ne anlama geldiğini ve kendi durumun için cevabı nasıl bulacağını anlatıyorum.</p>
+        </header>
+        <figure class="bl-cover"><picture><source type="image/webp" srcset="/images/blog/almanyada-calismak-icin-almanca-seviyesi/kapak-480.webp 480w, /images/blog/almanyada-calismak-icin-almanca-seviyesi/kapak-800.webp 800w, /images/blog/almanyada-calismak-icin-almanca-seviyesi/kapak-1200.webp 1200w" sizes="(max-width: 800px) calc(100vw - 32px), 760px"><img src="/images/blog/almanyada-calismak-icin-almanca-seviyesi/kapak-800.jpg" srcset="/images/blog/almanyada-calismak-icin-almanca-seviyesi/kapak-480.jpg 480w, /images/blog/almanyada-calismak-icin-almanca-seviyesi/kapak-800.jpg 800w, /images/blog/almanyada-calismak-icin-almanca-seviyesi/kapak-1200.jpg 1200w" sizes="(max-width: 800px) calc(100vw - 32px), 760px" width="1200" height="630" fetchpriority="high" decoding="async" alt="A2, B1, B2 ve C1 basamaklarından oluşan merdiven ve üstünde soru işareti; yanında “Almanya’da çalışmak için hangi seviye?” yazısı"></picture></figure>
+        <div class="lp-prose bl-body">
+<h2>Önce kısa cevap</h2>
+<aside class="bl-note" role="note"><p><strong>Önemli:</strong> Almanya’da çalışmak için herkese geçerli tek bir Almanca seviyesi yok. Hangi seviyenin ve hangi belgenin istendiği; vize veya oturum türüne, mesleğine ve işverene göre değişir. Resmî şartları Almanya’nın resmî göç portalı <a href="https://www.make-it-in-germany.com/tr/" target="_blank" rel="noopener noreferrer">Make it in Germany</a> ve <a href="https://tuerkei.diplo.de/tr-tr" target="_blank" rel="noopener noreferrer">Almanya’nın Türkiye’deki temsilcilikleri</a> üzerinden kontrol et. <!-- KONTROL ET: make-it-in-germany.com ve tuerkei.diplo.de bu ortamdan açılamadı; çalışma vizesi sayfasının güncel adresi ve kabul edilen dil belgeleri elle kontrol edilmeli, sonra link bu sayfaya çevrilmeli --></p></aside>
+<p>“Almanya’da çalışmak için hangi seviye Almanca gerekir?” sorusu çok sık sorulur. Dürüst cevap şu: Bu soru, “hangi işte ve hangi yolla çalışacaksın?” sorusuna bağlıdır. Bazı işlerde resmî bir dil belgesi istenir, bazılarında istenmez ama iş yerinde Almancayla iletişim kurman beklenir.</p>
+<p>Resmî şartlar zamanla değişebildiği için bu yazıda kesin seviye ve rakam vermiyorum. Bunun yerine iki şeyi anlatıyorum: Her seviye iş hayatında ne anlama gelir ve hedefine göre nasıl çalışabilirsin? <!-- KONTROL ET: seviye ve belge şartları için resmî kaynak (vize türüne ve mesleğe göre) --></p>
+
+<h2>Seviyeler iş hayatında ne anlama gelir?</h2>
+<p>Almanca seviyeleri Avrupa Ortak Dil Çerçevesi’ne (GER) göre A1’den C2’ye kadar sıralanır. Aşağıdaki tablo, A2–C1 seviyelerinin iş yerinde kabaca neye karşılık geldiğini gösterir. Bu bir resmî tanım değil, genel bir fikir verir:</p>
+<div class="bl-table-scroll" role="region" aria-label="İş hayatında Almanca seviyeleri" tabindex="0">
+<table class="bl-compare">
+  <caption>İş yerinde seviyeler (genel fikir)</caption>
+  <thead><tr><th scope="col">Seviye</th><th scope="col">İş yerinde ne yapabilirsin?</th><th scope="col">Örnek cümle</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">A2</th><td>Basit talimatları anlar, kendini ve işini kısaca anlatırsın.</td><td><span lang="de">Ich arbeite von Montag bis Freitag.</span> – Pazartesiden cumaya çalışıyorum.</td></tr>
+    <tr><th scope="row">B1</th><td>Günlük iş konuşmalarını yürütür, sorunu ve sebebini açıklarsın.</td><td><span lang="de">Ich kann morgen nicht kommen, weil ich einen Arzttermin habe.</span> – Yarın gelemem, çünkü doktor randevum var.</td></tr>
+    <tr><th scope="row">B2</th><td>Toplantıya katılır, öneri sunar, resmî e-posta yazarsın.</td><td><span lang="de">Wenn wir die Lieferung um eine Woche verschieben, können wir die Teile besser prüfen.</span> – Teslimatı bir hafta ertelersek parçaları daha iyi kontrol edebiliriz.</td></tr>
+    <tr><th scope="row">C1</th><td>Karmaşık konuları tartışır, ayrıntılı rapor yazarsın.</td><td><span lang="de">Ich halte diesen Vorschlag für sinnvoll, sofern die Kosten im Rahmen bleiben.</span> – Maliyetler makul sınırda kaldığı sürece bu öneriyi mantıklı buluyorum.</td></tr>
+  </tbody>
+</table>
+</div>
+<figure class="bl-fig"><svg role="img" aria-label="A2’den C1’e seviye merdiveni: A2 basit talimatları anlamak, B1 sorunu ve sebebini anlatmak, B2 toplantıda öneri sunmak, C1 ayrıntılı rapor yazmak" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 340" width="560" height="340">
+<rect class="f-bg" width="560" height="260" rx="14"/>
+<rect class="f-bg" width="560" height="340" rx="14"/>
+<text class="f-ink f-b" x="24" y="40" font-size="20">Seviye yükseldikçe iş yerinde neler yapılır?</text>
+<rect class="f-bg2" x="24" y="220" width="118" height="30" rx="8"/>
+<text class="f-ink f-b f-serif" x="83.0" y="250" font-size="22" text-anchor="middle">A2</text>
+<text class="f-ink f-b" x="83.0" y="282" font-size="17" text-anchor="middle">Basit</text>
+<text class="f-mut" x="83.0" y="304" font-size="17" text-anchor="middle">talimatlar</text>
+<rect class="f-bg2" x="154" y="180" width="118" height="70" rx="8"/>
+<text class="f-ink f-b f-serif" x="213.0" y="210" font-size="22" text-anchor="middle">B1</text>
+<text class="f-ink f-b" x="213.0" y="282" font-size="17" text-anchor="middle">Sorun ve</text>
+<text class="f-mut" x="213.0" y="304" font-size="17" text-anchor="middle">sebep</text>
+<rect class="f-bg2" x="284" y="140" width="118" height="110" rx="8"/>
+<text class="f-ink f-b f-serif" x="343.0" y="170" font-size="22" text-anchor="middle">B2</text>
+<text class="f-ink f-b" x="343.0" y="282" font-size="17" text-anchor="middle">Toplantı,</text>
+<text class="f-mut" x="343.0" y="304" font-size="17" text-anchor="middle">öneri</text>
+<rect class="f-acc" x="414" y="100" width="118" height="150" rx="8"/>
+<text class="f-on f-b f-serif" x="473.0" y="130" font-size="22" text-anchor="middle">C1</text>
+<text class="f-ink f-b" x="473.0" y="282" font-size="17" text-anchor="middle">Ayrıntılı</text>
+<text class="f-mut" x="473.0" y="304" font-size="17" text-anchor="middle">rapor</text>
+<path class="f-ln-acc" d="M60 200 L430 80" stroke-dasharray="6 6"/><path class="f-ln-acc" d="M418 76 L432 80 L424 92"/>
+<text class="f-mut" x="24" y="330" font-size="17">Genel fikir verir; resmî tanım değildir.</text>
+</svg></figure>
+
+<p>Dikkat edersen seviye yükseldikçe cümleler uzuyor ve bağlaçlar artıyor: B1’de <span lang="de">weil</span> (çünkü), B2’de <span lang="de">wenn</span> (eğer), C1’de <span lang="de">sofern</span> (… sürece). Bu yan cümlelerin hepsinde çekimli fiil cümlenin sonuna gider: <span lang="de">… weil ich einen Arzttermin <strong>habe</strong>.</span> Bunu <a href="/almanca-gramer/a2/nebensaetze/">yan cümleler</a> ve <a href="/almanca-gramer/b1/kausalsaetze/">sebep cümleleri</a> derslerinde çalışabilirsin.</p>
+
+<h2>Seviyeyi ne belirler? Dört soru</h2>
+<p>Kendi durumun için gereken seviyeyi bulmak istiyorsan şu dört soruyu sırayla sor:</p>
+<ol>
+  <li><strong>Hangi yolla gidiyorum?</strong> Vize ve oturum türüne göre dil şartı farklı olabilir. Bazı yollarda belge istenir, bazılarında istenmez. Bunu resmî sayfalardan veya temsilcilikten öğren. <!-- KONTROL ET: vize türlerine göre dil şartları --></li>
+  <li><strong>Mesleğim düzenlenmiş bir meslek mi?</strong> Sağlık, eğitim gibi bazı alanlarda mesleğin tanınması için ayrı bir dil şartı olabilir. Bu şart eyalete ve mesleğe göre değişebilir. Bilgi için resmî tanınma portalına bak: <a href="https://www.anerkennung-in-deutschland.de/" target="_blank" rel="noopener noreferrer">Anerkennung in Deutschland</a>. <!-- KONTROL ET: anerkennung-in-deutschland.de bu ortamdan açılamadı; Türkçe sayfası varsa linki ona çevir --></li>
+  <li><strong>İşveren ne bekliyor?</strong> Resmî şart olmasa bile iş ilanında “gute Deutschkenntnisse” (iyi Almanca bilgisi) gibi bir beklenti yazabilir. İlanı dikkatle oku.</li>
+  <li><strong>İşin kendisi ne istiyor?</strong> Müşteriyle, hastayla veya ekiple sürekli konuşacaksan, belge ne derse desin daha yüksek bir seviye işini kolaylaştırır.</li>
+</ol>
+<figure class="bl-fig"><svg role="img" aria-label="Gereken seviyeyi belirleyen dört soru: vize veya oturum türü, meslek tanınması, işverenin beklentisi ve işin kendisi" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" width="560" height="380">
+<rect class="f-bg" width="560" height="260" rx="14"/>
+<rect class="f-bg" width="560" height="380" rx="14"/>
+<text class="f-ink f-b" x="24" y="40" font-size="20">Gereken seviyeyi belirleyen dört soru</text>
+<rect class="f-bg2" x="24" y="64" width="250" height="120" rx="10"/>
+<circle class="f-acc" cx="54" cy="98" r="18"/>
+<text class="f-on f-b" x="54" y="104" font-size="18" text-anchor="middle">1</text>
+<text class="f-ink f-b" x="82" y="104" font-size="19">Vize / oturum</text>
+<text class="f-mut" x="40" y="152" font-size="17">Hangi yolla gidiyorum?</text>
+<rect class="f-bg2" x="286" y="64" width="250" height="120" rx="10"/>
+<circle class="f-acc" cx="316" cy="98" r="18"/>
+<text class="f-on f-b" x="316" y="104" font-size="18" text-anchor="middle">2</text>
+<text class="f-ink f-b" x="344" y="104" font-size="19">Meslek</text>
+<text class="f-mut" x="302" y="152" font-size="17">Tanınma şartı var mı?</text>
+<rect class="f-bg2" x="24" y="200" width="250" height="120" rx="10"/>
+<circle class="f-acc" cx="54" cy="234" r="18"/>
+<text class="f-on f-b" x="54" y="240" font-size="18" text-anchor="middle">3</text>
+<text class="f-ink f-b" x="82" y="240" font-size="19">İşveren</text>
+<text class="f-mut" x="40" y="288" font-size="17">İlanda ne yazıyor?</text>
+<rect class="f-bg2" x="286" y="200" width="250" height="120" rx="10"/>
+<circle class="f-acc" cx="316" cy="234" r="18"/>
+<text class="f-on f-b" x="316" y="240" font-size="18" text-anchor="middle">4</text>
+<text class="f-ink f-b" x="344" y="240" font-size="19">İşin kendisi</text>
+<text class="f-mut" x="302" y="288" font-size="17">Ne kadar konuşacağım?</text>
+<text class="f-mut" x="24" y="362" font-size="17">Resmî şartlar için hep resmî kaynağa bak.</text>
+</svg></figure>
+
+<p>Bu soruların cevabı “belge gerekiyor” ise hangi sınavın kabul edildiğini de öğren. Goethe ve telc sınavlarının farklarını <a href="/blog/goethe-telc-farki/">Goethe mi telc mi?</a> yazısında anlattım. Sınav ücretleri ve tarihler için kurumların sayfalarına bak: <a href="https://www.goethe.de/ins/tr/tr/spr/prf.html" target="_blank" rel="noopener noreferrer">Goethe-Institut Türkiye: Sınavlar</a> ve <a href="https://www.telc.net/sprachpruefungen/zertifikatspruefung/deutsch/" target="_blank" rel="noopener noreferrer">telc: Almanca sınavları</a>. <!-- KONTROL ET: Goethe sayfası otomatik isteklere 403 veriyor (daha önce doğrulanan adres); hangi belgenin hangi başvuruda kabul edildiği resmî kaynaktan kontrol edilmeli --></p>
+
+<h2>İş yerinde Almanca neye benzer?</h2>
+<p>İş yerindeki Almanca, ders kitabındaki Almancadan biraz farklıdır: kısa sorular, hızlı talimatlar ve çok sayıda resmî kalıp vardır. Örnek bir konuşma:</p>
+<blockquote>
+<p><span lang="de">– Guten Morgen, Herr Weber. Haben Sie kurz Zeit?</span><br>
+<span lang="de">– Ja, natürlich. Worum geht es?</span><br>
+<span lang="de">– Die Lieferung ist noch nicht da. Soll ich beim Lieferanten anrufen?</span><br>
+<span lang="de">– Ja, bitte. Und schreiben Sie mir danach eine kurze E-Mail.</span></p>
+<p>Türkçesi: – Günaydın Weber Bey. Kısa bir vaktiniz var mı? – Evet, tabii. Konu ne? – Teslimat henüz gelmedi. Tedarikçiyi arayayım mı? – Evet, lütfen. Ardından bana kısa bir e-posta yazın.</p>
+</blockquote>
+<p>Bu kısa konuşmada birkaç önemli gramer konusu var:</p>
+<ul>
+  <li><strong><span lang="de">Soll ich …?</span></strong> “… yapayım mı?” anlamında bir öneri sorusudur. Modal fiil ikinci sırada, asıl fiil (<span lang="de">anrufen</span>) sondadır. Bkz. <a href="/almanca-gramer/a1/modalverben/">Modalverben</a>.</li>
+  <li><strong><span lang="de">anrufen</span></strong> ayrılabilen bir fiildir: <span lang="de">Ich rufe den Lieferanten an.</span> (Tedarikçiyi arıyorum.) Bkz. <a href="/almanca-gramer/a1/trennbare-verben/">ayrılabilen fiiller</a>.</li>
+  <li><strong><span lang="de">beim Lieferanten</span></strong>: <span lang="de">bei</span> Dativ ister; <span lang="de">der Lieferant</span> ise Dativ’de <em>-en</em> alır. Bu özel gruba <a href="/almanca-gramer/b1/n-deklination/">n-Deklination</a> denir.</li>
+  <li><strong><span lang="de">Sie</span></strong> ile resmî hitap iş yerinde çok yaygındır. Ekip içinde <span lang="de">du</span>’ya geçilebilir; bunu genellikle karşı taraf önerir.</li>
+</ul>
+<p>E-postalarda da resmî kalıplar sık geçer: <span lang="de">Sehr geehrte Frau Schmidt,</span> (Sayın Schmidt Hanım,) ve <span lang="de">Mit freundlichen Grüßen</span> (Saygılarımla). Edilgen yapı da çok kullanılır: <span lang="de">Die Bestellung wird morgen verschickt.</span> (Sipariş yarın gönderilecek.) Bunu <a href="/almanca-gramer/b1/passiv/">Passiv</a> dersinde bulabilirsin. Kibar rica için <span lang="de">Könnten Sie mir bitte helfen?</span> (Bana yardım edebilir misiniz lütfen?) gibi <a href="/almanca-gramer/a2/konjunktiv-ii/">Konjunktiv II</a> kalıpları işine yarar.</p>
+
+<h2>Hedefine göre nasıl çalışmalı?</h2>
+<p>Hangi seviyeye ihtiyacın olduğunu öğrendikten sonra planını bulunduğun seviyeye göre yap:</p>
+<h3>A1–A2: Temeli sağlam kur</h3>
+<p>Kendini ve işini tanıtmayı, saat ve tarih söylemeyi, basit soruları anlamayı öğren. İş yerindeki ilk günlerde en çok bunlara ihtiyaç duyarsın. Günlük ifadeler için <a href="/blog/almanca-gunluk-kaliplar/">Almanca günlük kalıplar</a> yazısına bakabilirsin.</p>
+<h3>B1: Sebep söyle, sorun anlat</h3>
+<p>B1’de <span lang="de">weil</span>, <span lang="de">dass</span>, <span lang="de">obwohl</span> gibi bağlaçlarla cümle kurmayı ve geçmişte olanı anlatmayı çalış. İş yerinde “ne oldu ve neden oldu?” sorusuna cevap vermek çok önemlidir. Bağlaçları <a href="/almanca-gramer/b1/konnektoren/">Konnektoren</a> dersinde topluca görebilirsin.</p>
+<h3>B2 ve üstü: Tartış, yaz, öneri sun</h3>
+<p>B2’de toplantı dili, resmî e-posta ve kendi alanındaki kelimeler öne çıkar. Bu seviyede her gün alanınla ilgili kısa bir metin okumak ve birkaç cümlelik bir özet yazmak iyi bir alışkanlıktır.</p>
+<p>Seviyeni bilmiyorsan önce sitedeki ücretsiz <a href="/#seviye-testi">seviye testini</a> çöz. Sınava hazırlanıyorsan <a href="/#exams">sınav deneme setleri</a> ve <a href="/#exercises">alıştırmalar</a> ile çalışabilirsin.</p>
+
+<h2>Sık yapılan hatalar</h2>
+<ul>
+  <li><strong>Yalnızca belgeye odaklanmak.</strong> Belge kapıyı açar, ama iş yerinde konuşma ve dinleme becerin gerekir.</li>
+  <li><strong>Eski veya dolaylı bilgiye güvenmek.</strong> Forumlarda okunan şartlar güncel olmayabilir. Hep resmî kaynağa bak.</li>
+  <li><strong>Mesleki kelimeleri en sona bırakmak.</strong> Kendi alanındaki kelimeleri artikelleriyle erken öğrenmeye başla: <span lang="de">der Vertrag</span> (sözleşme), <span lang="de">die Schicht</span> (vardiya), <span lang="de">das Gehalt</span> (maaş).</li>
+  <li><strong>Resmî hitabı karıştırmak.</strong> Emin değilsen <span lang="de">Sie</span> kullan.</li>
+</ul>
+
+<h2>Kendini kontrol et</h2>
+<p>Şu üç cümleyi Almanca söyleyebiliyor musun?</p>
+<ul>
+  <li>Yarın gelemem, çünkü hastayım.</li>
+  <li>Bunu lütfen tekrar edebilir misiniz?</li>
+  <li>Size yarın bir e-posta yazacağım.</li>
+</ul>
+<p>Örnek cevaplar: <span lang="de">Ich kann morgen nicht kommen, weil ich krank bin.</span> – <span lang="de">Können Sie das bitte wiederholen?</span> – <span lang="de">Ich schreibe Ihnen morgen eine E-Mail.</span> Son cümlede <span lang="de">Ihnen</span> Dativ’dir (size), <span lang="de">eine E-Mail</span> ise Akkusativ’dir (bir e-posta). Almancada yarın olacak şeyler çoğu zaman şimdiki zamanla söylenir.</p>
+
+<h2>Destek almak istersen</h2>
+<p>İş hayatı için Almanca çalışıyorsan derslerde hedefine ve mesleğine uygun bir plan yapabiliriz. Ayrıntılar için <a href="/b1-almanca-kursu/">B1 Almanca Kursu</a> ve <a href="/b2-almanca-kursu/">B2 Almanca Kursu</a> sayfalarına, sınav hazırlığı için <a href="/almanca-sinav-hazirlik/">sınav hazırlık</a> sayfasına bakabilirsin. Sorun olursa <a href="/iletisim/">iletişim</a> sayfasından bana yazabilirsin.</p>
+        </div>
+        <section class="lp-section" aria-labelledby="bl-related"><h2 id="bl-related">İlgili sayfalar</h2><ul class="lp-related"><li><a href="/b1-almanca-kursu/"><strong>B1 Almanca Kursu</strong></a></li><li><a href="/b2-almanca-kursu/"><strong>B2 Almanca Kursu</strong></a></li><li><a href="/almanca-gramer/b1/konnektoren/"><strong>Konnektoren</strong></a></li></ul></section>
+      </article>
+      <section class="lp-cta" aria-labelledby="bl-cta">
+        <div>
+          <h2 id="bl-cta">Bu konuyu birlikte çalışmak ister misin?</h2>
+          <p>Seviyene ve hedefine göre <a href="/almanca-ozel-ders/">birebir</a> veya <a href="/almanca-grup-dersi/">grup dersi</a>. İlk ders ücretsiz.</p>
+        </div>
+        <a class="btn" href="/iletisim/">Ücretsiz bilgi al</a>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-brand"><img src="/images/logo-mark.svg" width="64" height="64" alt="" class="footer-logo brand-logo-light"><img src="/images/logo-mark-dark.svg" width="64" height="64" alt="" class="footer-logo brand-logo-dark"><div><strong>Bozkurt Academy</strong><br><span data-i18n="footerText">Online Almanca dersleri ve öğrenme materyalleri</span></div></div>
+      <nav class="footer-pages" aria-label="Site sayfaları" data-i18n-aria="footerPages">
+          <div class="footer-group"><p class="footer-group-title" data-i18n="footerGroupLessons">Dersler</p><ul><li><a href="/online-almanca-dersi/" data-i18n="footerOnline">Online Almanca dersi</a></li><li><a href="/almanca-ozel-ders/" data-i18n="footerPrivate">Almanca özel ders</a></li><li><a href="/almanca-grup-dersi/" data-i18n="footerGroup">Almanca grup dersi</a></li><li><a href="/almanca-sinav-hazirlik/" data-i18n="footerExamPrep">Sınav hazırlık</a></li></ul></div>
+          <div class="footer-group"><p class="footer-group-title" data-i18n="footerGroupLevels">Seviyeler</p><ul><li><a href="/a1-almanca-kursu/" data-i18n="footerA1">A1 Almanca kursu</a></li><li><a href="/a2-almanca-kursu/" data-i18n="footerA2">A2 Almanca kursu</a></li><li><a href="/b1-almanca-kursu/" data-i18n="footerB1">B1 Almanca kursu</a></li><li><a href="/b2-almanca-kursu/" data-i18n="footerB2">B2 Almanca kursu</a></li></ul></div>
+          <div class="footer-group"><p class="footer-group-title" data-i18n="footerGroupFree">Ücretsiz çalış</p><ul><li><a href="/almanca-gramer/" data-i18n="footerGrammar">Gramer konuları</a></li><li><a href="/#exercises" data-i18n="footerExercises">Alıştırmalar</a></li><li><a href="/#exams" data-i18n="footerExamSets">Sınav deneme setleri</a></li><li><a href="/#seviye-testi" data-i18n="footerPlacement">Seviye testi</a></li><li><a href="/almanca-alfabe/" data-i18n="footerAlphabet">Almanca alfabe oyunu</a></li></ul></div>
+          <div class="footer-group"><p class="footer-group-title">Bozkurt Academy</p><ul><li><a href="/hakkimda/" data-i18n="navAbout">Hakkımda</a></li><li><a href="/blog/" data-i18n="navBlog">Blog</a></li><li><a href="/sss/" data-i18n="footerFaq">Sıkça sorulan sorular</a></li><li><a href="/iletisim/" data-i18n="navContact">İletişim</a></li></ul></div>
+      </nav>
+      <div class="footer-meta">
+        <nav class="footer-links" aria-label="Yasal bilgiler" data-i18n-aria="footerLegal">
+          <a href="/privacy.html" data-i18n="footerPrivacy">Gizlilik politikası</a>
+          <a href="/impressum/" data-i18n="footerImprint">Künye (Impressum)</a>
+        </nav>
+        <span>© 2026 Bozkurt Academy</span>
+      </div>
+    </footer>
+    <a class="ba-sticky-cta btn primary" href="/iletisim/" data-i18n="ctaFreeInfo">Ücretsiz bilgi al</a>
+    </div>
+  <script src="/js/app.js?v=52"></script>
+  <script src="/js/theme.js?v=10"></script>
+  <script defer data-goatcounter="https://bozkurtacademy.goatcounter.com/count" data-goatcounter-settings='{"no_onload": true}' src="/js/vendor/count.js?v=2.7.0"></script>
+  <script defer src="/js/analytics.js?v=7"></script>
+  
+</body>
+</html>

@@ -70,10 +70,12 @@ Teknik ayrıntılar (dosyalar, komutlar, testler) en sondaki **D** bölümünded
    - sayfa sitemap'e girer;
    - BlogPosting şeması eklenir;
    - blog listesi ve ana sayfadaki "Blogdan son yazılar" bölümü güncellenir;
-   - kurs sayfalarındaki geri dönüş cümleleri ve gramer derslerindeki "Blogda bu konu" notu görünür.
+   - kurs sayfalarındaki geri dönüş cümleleri ve gramer derslerindeki "Blogda bu konu" notu görünür;
+   - yazı Atom akışına (`/blog/feed.xml`) eklenir.
 3. `SEO-YAPILACAKLAR.md`'de o satırın durumunu **"Yayınlandı"**, tarihini yayın günü yap.
 4. Kontroller (A6), PR, CI yeşil ve çakışma yoksa normal merge, Pages yayınını kontrol et.
-5. Site sahibine Search Console'da **"Dizine eklenmesini iste"** yapması gereken adresi yaz: `https://bozkurtacademy.com/blog/<adres>/`.
+5. Birleştirmeden sonra `IndexNow` iş akışı, Pages yayını bitince değişen yayınlanmış sayfaları Bing ve Yandex'e kendiliğinden bildirir; ayrıca bir şey yapılmaz (Actions › IndexNow log'unda görülebilir).
+6. Yayından sonra site sahibine Search Console'da **"Dizine eklenmesini iste"** yapması gereken adresi yaz: `https://bozkurtacademy.com/blog/<adres>/`.
 
 ## C) Kurallar (her çalışmada geçerli)
 

@@ -76,13 +76,14 @@
 
   // Word list under each checked question and on the result screen: nouns with their article and Turkish
   // meaning (also in the German and English interface). Each question lists its words in "vocab"; the
-  // entries are in data/sozluk.json (scripts/sozluk.mjs). Words marked unsure stay hidden until checked.
+  // entries are in data/sozluk.json (scripts/sozluk.mjs). Only words the teacher has checked are shown; new words
+  // ("checked": false) stay hidden until the teacher approves them in docs/sozluk-bekleyen.csv.
   // Exam sets (js/exam-task.js) do not use this.
   const vocab = { status:'idle', words:{}, promise:null };
   function loadVocab(){
     if(vocab.status === 'idle'){
       vocab.status = 'loading';
-      vocab.promise = fetch('data/sozluk.json?v=1')
+      vocab.promise = fetch('data/sozluk.json?v=2')
         .then(response => { if(!response.ok) throw new Error(response.status); return response.json(); })
         .then(data => { vocab.words = data.words || {}; vocab.status = 'ready'; })
         .catch(() => { vocab.status = 'failed'; });
@@ -92,7 +93,7 @@
   const exerciseVocab = () => [...new Set((state.exercise?.questions || []).flatMap(q => q.vocab || []))];
   function vocabHtml(keys, titleKey){
     if(vocab.status !== 'ready' || !keys?.length) return '';
-    const items = [...new Set(keys)].map(key => [key, vocab.words[key]]).filter(([, w]) => w && (!w.unsure || w.checked));
+    const items = [...new Set(keys)].map(key => [key, vocab.words[key]]).filter(([, w]) => w?.checked);
     if(!items.length) return '';
     return `<div class="quiz-vocab" data-vocab>
       <strong>${escapeHtml(t(titleKey))}</strong>

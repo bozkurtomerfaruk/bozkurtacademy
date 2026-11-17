@@ -58,6 +58,11 @@
 .acc-status p{margin:0 0 8px}
 .acc-status p:last-child{margin:0}
 .acc-status .ba-link{color:inherit}
+/* Giriş/kayıt formunun üstündeki bilgi notu: sade kutu, solda vurgu çizgisi. */
+.acc-notice{margin:0 0 24px;box-shadow:inset 4px 0 0 var(--ba-accent);font-weight:400}
+.acc-notice .ba-link{font-weight:600}
+/* Onay bekleyen hesapta kısa hatırlatma. */
+.acc-state-note{margin:12px 0 0;font-weight:600}
 .acc-uid{font-size:var(--ba-small);overflow-wrap:anywhere}
 .acc-signed-in p{margin:0 0 16px;overflow-wrap:anywhere}
 

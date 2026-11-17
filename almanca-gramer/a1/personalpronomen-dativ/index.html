@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- ba:security -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com/firebasejs/ https://apis.google.com https://accounts.google.com/gsi/client https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; connect-src 'self' https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://content-firebaseappcheck.googleapis.com https://www.googleapis.com https://accounts.google.com/gsi/ https://www.google.com/recaptcha/ https://api.web3forms.com https://bozkurtacademy.goatcounter.com https://schreiben-kontrol.bozkurtt-omerfaruk.workers.dev http://127.0.0.1:8080 http://127.0.0.1:9099 http://127.0.0.1:8787; frame-src https://accounts.google.com https://bozkurtacademy-8ab85.firebaseapp.com https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; upgrade-insecure-requests" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com/firebasejs/ https://apis.google.com https://accounts.google.com/gsi/client https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; connect-src 'self' https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://content-firebaseappcheck.googleapis.com https://www.googleapis.com https://oauth2.googleapis.com/revoke https://accounts.google.com/gsi/ https://www.google.com/recaptcha/ https://api.web3forms.com https://bozkurtacademy.goatcounter.com https://schreiben-kontrol.bozkurtt-omerfaruk.workers.dev http://127.0.0.1:8080 http://127.0.0.1:9099 http://127.0.0.1:8787; frame-src https://accounts.google.com https://bozkurtacademy-8ab85.firebaseapp.com https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <script src="/js/theme-init.js?v=1"></script>
   <!-- /ba:security -->
@@ -35,9 +35,9 @@
   <link rel="preload" href="/fonts/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css?v=13" />
-  <link rel="stylesheet" href="/css/base.css?v=12" />
+  <link rel="stylesheet" href="/css/base.css?v=14" />
   <link rel="stylesheet" href="/css/landing.css?v=1" />
-  <link rel="stylesheet" href="/css/a1-lessons.css?v=8" />
+  <link rel="stylesheet" href="/css/a1-lessons.css?v=9" />
   <link rel="stylesheet" href="/css/grammar-pages.css?v=3" />
   <script type="application/ld+json">
   {
@@ -149,8 +149,8 @@
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
   <div class="shell">
     <header class="topbar">
-      <nav class="nav" aria-label="Site menüsü">
-        <a class="brand" href="/" aria-label="Bozkurt Academy ana sayfa">
+      <nav class="nav" aria-label="Site menüsü" data-i18n-aria="navMenuLabel">
+        <a class="brand" href="/" aria-label="Bozkurt Academy ana sayfa" data-i18n-aria="brandHomeLabel">
           <img src="/images/logo-mark.svg" width="64" height="64" alt="" class="brand-logo brand-logo-light"><img src="/images/logo-mark-dark.svg" width="64" height="64" alt="" class="brand-logo brand-logo-dark">
           <div><div class="brand-title">Bozkurt Academy</div><div class="brand-sub" data-i18n="brandSub">Almancada net ilerleme</div></div>
         </a>
@@ -164,17 +164,22 @@
           <a class="nav-link" href="/blog/" data-i18n="navBlog">Blog</a>
           <a class="nav-link" href="/hakkimda/" data-i18n="navAbout">Hakkımda</a>
           <a class="nav-link" href="/iletisim/" data-i18n="navContact">İletişim</a>
-          <!-- Quiet launch: the account link stays hidden until the privacy policy is final. Login pages still open by URL. -->
-          <a class="nav-link nav-account" href="/giris.html" id="navAccount" data-i18n="navLogin" hidden>Giriş</a>
+          <!-- Hesap bağlantısı: ziyaretçide "Giriş"; daha önce giriş yapmış öğrencide "Panelim", öğretmende "Öğretmen paneli" (js/app.js → accountNav). -->
+          <a class="nav-link nav-account" href="/giris.html" id="navAccount" data-i18n="navLogin">Giriş</a>
         </div>
         <div class="nav-actions">
         <a class="btn primary nav-cta" href="/iletisim/" data-i18n="ctaFreeInfo">Ücretsiz bilgi al</a>
         <button id="themeToggle" class="theme-toggle" type="button" aria-label="Koyu temaya geç" aria-pressed="false"><svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="currentColor"/></svg><svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="lang" aria-label="Dil seçimi" data-i18n-aria="langChoice">
+          <button data-lang="tr" class="active">TR</button>
+          <button data-lang="de">DE</button>
+          <button data-lang="en">EN</button>
+        </div>
         </div>
       </nav>
     </header>
     <main id="main" tabindex="-1" class="gr-main">
-      <nav class="lp-breadcrumb" aria-label="Sayfa yolu"><ol><li><a href="/">Ana sayfa</a></li><li><a href="/almanca-gramer/">Almanca Gramer</a></li><li><a href="/almanca-gramer/a1/">A1</a></li><li aria-current="page">Personalpronomen im Dativ</li></ol></nav>
+      <nav class="lp-breadcrumb" aria-label="Sayfa yolu" data-i18n-aria="breadcrumbLabel"><ol><li><a href="/">Ana sayfa</a></li><li><a href="/almanca-gramer/">Almanca Gramer</a></li><li><a href="/almanca-gramer/a1/">A1</a></li><li aria-current="page">Personalpronomen im Dativ</li></ol></nav>
       
       <section class="page active" id="page-grammar">
         <article class="a1-article a1-article--static" lang="tr" data-static-lesson="A1/personalpronomen-dativ" data-title="Personalpronomen im Dativ">
@@ -209,24 +214,25 @@
     </main>
     <footer>
       <div class="footer-brand"><img src="/images/logo-mark.svg" width="64" height="64" alt="" class="footer-logo brand-logo-light"><img src="/images/logo-mark-dark.svg" width="64" height="64" alt="" class="footer-logo brand-logo-dark"><div><strong>Bozkurt Academy</strong><br><span data-i18n="footerText">Online Almanca dersleri ve öğrenme materyalleri</span></div></div>
-      <nav class="footer-pages" aria-label="Site sayfaları">
-          <div class="footer-group"><p class="footer-group-title">Dersler</p><ul><li><a href="/online-almanca-dersi/">Online Almanca dersi</a></li><li><a href="/almanca-ozel-ders/">Almanca özel ders</a></li><li><a href="/almanca-grup-dersi/">Almanca grup dersi</a></li><li><a href="/almanca-sinav-hazirlik/">Sınav hazırlık</a></li></ul></div>
-          <div class="footer-group"><p class="footer-group-title">Seviyeler</p><ul><li><a href="/a1-almanca-kursu/">A1 Almanca kursu</a></li><li><a href="/a2-almanca-kursu/">A2 Almanca kursu</a></li><li><a href="/b1-almanca-kursu/">B1 Almanca kursu</a></li><li><a href="/b2-almanca-kursu/">B2 Almanca kursu</a></li></ul></div>
-          <div class="footer-group"><p class="footer-group-title">Ücretsiz çalış</p><ul><li><a href="/almanca-gramer/">Gramer konuları</a></li><li><a href="/#exercises">Alıştırmalar</a></li><li><a href="/#exams">Sınav deneme setleri</a></li><li><a href="/#seviye-testi">Seviye testi</a></li><li><a href="/almanca-alfabe/">Almanca alfabe oyunu</a></li></ul></div>
-          <div class="footer-group"><p class="footer-group-title">Bozkurt Academy</p><ul><li><a href="/hakkimda/">Hakkımda</a></li><li><a href="/blog/">Blog</a></li><li><a href="/sss/">Sıkça sorulan sorular</a></li><li><a href="/iletisim/">İletişim</a></li></ul></div>
+      <nav class="footer-pages" aria-label="Site sayfaları" data-i18n-aria="footerPages">
+          <div class="footer-group"><p class="footer-group-title" data-i18n="footerGroupLessons">Dersler</p><ul><li><a href="/online-almanca-dersi/" data-i18n="footerOnline">Online Almanca dersi</a></li><li><a href="/almanca-ozel-ders/" data-i18n="footerPrivate">Almanca özel ders</a></li><li><a href="/almanca-grup-dersi/" data-i18n="footerGroup">Almanca grup dersi</a></li><li><a href="/almanca-sinav-hazirlik/" data-i18n="footerExamPrep">Sınav hazırlık</a></li></ul></div>
+          <div class="footer-group"><p class="footer-group-title" data-i18n="footerGroupLevels">Seviyeler</p><ul><li><a href="/a1-almanca-kursu/" data-i18n="footerA1">A1 Almanca kursu</a></li><li><a href="/a2-almanca-kursu/" data-i18n="footerA2">A2 Almanca kursu</a></li><li><a href="/b1-almanca-kursu/" data-i18n="footerB1">B1 Almanca kursu</a></li><li><a href="/b2-almanca-kursu/" data-i18n="footerB2">B2 Almanca kursu</a></li></ul></div>
+          <div class="footer-group"><p class="footer-group-title" data-i18n="footerGroupFree">Ücretsiz çalış</p><ul><li><a href="/almanca-gramer/" data-i18n="footerGrammar">Gramer konuları</a></li><li><a href="/#exercises" data-i18n="footerExercises">Alıştırmalar</a></li><li><a href="/#exams" data-i18n="footerExamSets">Sınav deneme setleri</a></li><li><a href="/#seviye-testi" data-i18n="footerPlacement">Seviye testi</a></li><li><a href="/almanca-alfabe/" data-i18n="footerAlphabet">Almanca alfabe oyunu</a></li></ul></div>
+          <div class="footer-group"><p class="footer-group-title">Bozkurt Academy</p><ul><li><a href="/hakkimda/" data-i18n="navAbout">Hakkımda</a></li><li><a href="/blog/" data-i18n="navBlog">Blog</a></li><li><a href="/sss/" data-i18n="footerFaq">Sıkça sorulan sorular</a></li><li><a href="/iletisim/" data-i18n="navContact">İletişim</a></li></ul></div>
       </nav>
       <div class="footer-meta">
         <nav class="footer-links" aria-label="Yasal bilgiler" data-i18n-aria="footerLegal">
           <a href="/privacy.html" data-i18n="footerPrivacy">Gizlilik politikası</a>
+          <a href="/impressum/" data-i18n="footerImprint">Künye (Impressum)</a>
         </nav>
         <span>© 2026 Bozkurt Academy</span>
       </div>
     </footer>
     <a class="ba-sticky-cta btn primary" href="/iletisim/" data-i18n="ctaFreeInfo">Ücretsiz bilgi al</a>
     </div>
-  <script src="/js/app.js?v=43"></script>
+  <script src="/js/app.js?v=51"></script>
   <script src="/js/html.js?v=1"></script>
-  <script src="/js/a1-lessons.js?v=19"></script>
+  <script src="/js/a1-lessons.js?v=20"></script>
   <script src="/js/theme.js?v=10"></script>
   <script defer data-goatcounter="https://bozkurtacademy.goatcounter.com/count" data-goatcounter-settings='{"no_onload": true}' src="/js/vendor/count.js?v=2.7.0"></script>
   <script defer src="/js/analytics.js?v=7"></script>

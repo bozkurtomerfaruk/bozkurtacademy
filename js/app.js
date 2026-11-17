@@ -146,7 +146,42 @@ const translations = {
     sendMessage:'Mesaj gönder',
     footerText:'Online Almanca dersleri ve öğrenme materyalleri',
     footerPrivacy:'Gizlilik politikası',
+    footerImprint:'Künye (Impressum)',
     footerLegal:'Yasal bilgiler',
+    footerPages:'Site sayfaları',
+    footerGroupLessons:'Dersler',
+    footerGroupLevels:'Seviyeler',
+    footerGroupFree:'Ücretsiz çalış',
+    footerOnline:'Online Almanca dersi',
+    footerPrivate:'Almanca özel ders',
+    footerGroup:'Almanca grup dersi',
+    footerExamPrep:'Sınav hazırlık',
+    footerA1:'A1 Almanca kursu',
+    footerA2:'A2 Almanca kursu',
+    footerB1:'B1 Almanca kursu',
+    footerB2:'B2 Almanca kursu',
+    footerGrammar:'Gramer konuları',
+    footerExercises:'Alıştırmalar',
+    footerExamSets:'Sınav deneme setleri',
+    footerPlacement:'Seviye testi',
+    footerAlphabet:'Almanca alfabe oyunu',
+    footerFaq:'Sıkça sorulan sorular',
+    // Statik Türkçe sayfalarda DE/EN seçilince çıkan not (js/app.js → langNote).
+    langNoteText:'Bu sayfa şimdilik sadece Türkçe mevcut.',
+    langNoteHome:'Ana sayfaya git',
+    langNoteExams:'Sınav deneme setlerine git',
+    langNoteExercises:'Alıştırmalara git',
+    langNoteContact:'Bize Türkçe yazabilirsin; form her dilde çalışır.',
+    langNoteClose:'Notu kapat',
+    langNoteAlt:'Bu sayfanın Türkçe sürümü de var.',
+    langNoteAltLink:'Türkçe sürüme git',
+    // Statik sayfa iskeleti (scripts/build-pages.mjs bu metinleri de buradan okur).
+    navMenuLabel:'Site menüsü',
+    brandHomeLabel:'Bozkurt Academy ana sayfa',
+    langChoice:'Dil seçimi',
+    breadcrumbLabel:'Sayfa yolu',
+    breadcrumbHome:'Ana sayfa',
+    skipLink:'Ana içeriğe geç',
     founderBio2:'Almanya’daki eğitim ve günlük yaşam deneyimimi, öğrencilerin karşılaşabileceği iletişim durumlarına yönelik örneklerle derslere taşıyorum.',
     aboutJourneyTag:'Eğitim ve Deneyim',
     aboutJourneyTitle:'Eğitim ve çalışma geçmişim',
@@ -596,10 +631,10 @@ const translations = {
   de: {
     brandSub:'Ein klarer Weg zum Deutschlernen',
     navHome:'Startseite',
-    navLessons:'Deutschunterricht',
+    navLessons:'Unterricht',
     navGrammar:'Grammatik',
     navExercises:'Übungen',
-    navExams:'Prüfungsvorbereitung',
+    navExams:'Prüfungen',
     navBlog:'Blog',
     homeBlogTitle:'Neu im Blog',
     homeBlogIntro:'Beiträge auf Türkisch rund ums Deutschlernen und Prüfungen.',
@@ -737,7 +772,40 @@ const translations = {
     sendMessage:'Nachricht senden',
     footerText:'Online-Deutschunterricht und Lernmaterialien',
     footerPrivacy:'Datenschutzerklärung',
+    footerImprint:'Impressum',
     footerLegal:'Rechtliche Hinweise',
+    footerPages:'Seiten der Website',
+    footerGroupLessons:'Unterricht',
+    footerGroupLevels:'Niveaus',
+    footerGroupFree:'Kostenlos üben',
+    footerOnline:'Online-Deutschunterricht',
+    footerPrivate:'Deutsch-Einzelunterricht',
+    footerGroup:'Deutsch in der Gruppe',
+    footerExamPrep:'Prüfungsvorbereitung',
+    footerA1:'Deutschkurs A1',
+    footerA2:'Deutschkurs A2',
+    footerB1:'Deutschkurs B1',
+    footerB2:'Deutschkurs B2',
+    footerGrammar:'Grammatikthemen',
+    footerExercises:'Übungen',
+    footerExamSets:'Prüfungstraining',
+    footerPlacement:'Einstufungstest',
+    footerAlphabet:'Alphabet-Spiel',
+    footerFaq:'Häufige Fragen',
+    langNoteText:'Diese Seite gibt es vorerst nur auf Türkisch.',
+    langNoteHome:'Zur deutschen Startseite',
+    langNoteExams:'Zum Prüfungstraining auf Deutsch',
+    langNoteExercises:'Zu den Übungen auf Deutsch',
+    langNoteContact:'Du kannst uns gern auf Deutsch schreiben – das Formular funktioniert in jeder Sprache.',
+    langNoteClose:'Hinweis schließen',
+    langNoteAlt:'Diese Seite gibt es auch auf Deutsch.',
+    langNoteAltLink:'Zur deutschen Version',
+    navMenuLabel:'Hauptmenü',
+    brandHomeLabel:'Bozkurt Academy – Startseite',
+    langChoice:'Sprache wählen',
+    breadcrumbLabel:'Brotkrumennavigation',
+    breadcrumbHome:'Startseite',
+    skipLink:'Zum Inhalt springen',
     founderBio2:'Erfahrungen aus meinem Studium und Alltag in Deutschland nutze ich für Beispiele aus typischen Kommunikationssituationen.',
     aboutJourneyTag:'Ausbildung und Erfahrung',
     aboutJourneyTitle:'Mein Bildungs- und Berufsweg',
@@ -1328,7 +1396,40 @@ const translations = {
     sendMessage:'Send message',
     footerText:'Online German lessons and learning materials',
     footerPrivacy:'Privacy policy',
+    footerImprint:'Legal notice (Impressum)',
     footerLegal:'Legal information',
+    footerPages:'Site pages',
+    footerGroupLessons:'Lessons',
+    footerGroupLevels:'Levels',
+    footerGroupFree:'Practise for free',
+    footerOnline:'Online German lessons',
+    footerPrivate:'Private German lessons',
+    footerGroup:'German group lessons',
+    footerExamPrep:'Exam preparation',
+    footerA1:'German course A1',
+    footerA2:'German course A2',
+    footerB1:'German course B1',
+    footerB2:'German course B2',
+    footerGrammar:'Grammar topics',
+    footerExercises:'Exercises',
+    footerExamSets:'Exam practice sets',
+    footerPlacement:'Placement test',
+    footerAlphabet:'German alphabet game',
+    footerFaq:'FAQ',
+    langNoteText:'This page is currently only available in Turkish.',
+    langNoteHome:'Go to the English home page',
+    langNoteExams:'Exam practice sets in English',
+    langNoteExercises:'Exercises in English',
+    langNoteContact:'Feel free to write to us in English – the form works in any language.',
+    langNoteClose:'Close notice',
+    langNoteAlt:'This page is also available in English.',
+    langNoteAltLink:'Go to the English version',
+    navMenuLabel:'Main menu',
+    brandHomeLabel:'Bozkurt Academy – home',
+    langChoice:'Choose language',
+    breadcrumbLabel:'Breadcrumb',
+    breadcrumbHome:'Home',
+    skipLink:'Skip to content',
     founderBio2:'I draw on my studies and daily life in Germany to provide examples of communication situations learners may encounter.',
     aboutJourneyTag:'Education and experience',
     aboutJourneyTitle:'Education and work background',
@@ -1777,36 +1878,159 @@ const translations = {
   }
 };
 
-// Statik Türkçe sayfalar (<html data-ba-fixed-lang="tr">) dil seçimini değiştirmez ve kaydetmez.
+// Statik Türkçe sayfalar (<html data-ba-fixed-lang="tr">): içerik Türkçe kalır, ama dil seçimi yine çalışır
+// ve kaydedilir. Menü, alt bilgi ve sabit düğme seçilen dilde görünür; DE/EN seçilince üstte bir not çıkar.
 const BA_FIXED_LANG = document.documentElement.dataset.baFixedLang || '';
-let currentLang = BA_FIXED_LANG || localStorage.getItem('baLang') || 'tr';
+const BA_LANGS = ['tr','de','en'];
+function readSavedLang(){
+  try{ const saved=localStorage.getItem('baLang'); return BA_LANGS.includes(saved) ? saved : 'tr'; }catch(_){ return 'tr'; }
+}
+// currentLang: kullanıcının seçtiği dil (menü). Sayfa içeriğinin dili sabit sayfalarda BA_FIXED_LANG'dır.
+// Dil düğmesi olmayan sabit sayfa (öğretmenin /yonetim/yorumlar/ sayfası): tamamen Türkçe kalır, kayıtlı seçime dokunulmaz.
+// app.js sayfanın sonunda yüklenir, menü o anda hazırdır.
+const BA_LANG_LOCKED = Boolean(BA_FIXED_LANG) && !document.querySelector('.lang button');
+// Almanca/İngilizce sürüm sayfası (/de/…, /en/…) açılınca seçim o dil olur.
+let currentLang = BA_LANG_LOCKED ? BA_FIXED_LANG : (BA_FIXED_LANG && BA_FIXED_LANG!=='tr' ? BA_FIXED_LANG : readSavedLang());
+const contentLang = () => BA_FIXED_LANG || currentLang;
 
+// Aynı sayfanın dil sürümleri: [{tr, de, en}, …]. scripts/build-pages.mjs scripts/site-pages.mjs'ten üretir; elle düzenleme.
+// Değişince app.js'in ?v= sürümünü artır (node scripts/check-versions.mjs).
+const BA_ALTS = /* ba:alts */[
+  {"tr":"/online-almanca-dersi/","de":"/de/online-deutschunterricht/","en":"/en/online-german-lessons/"},
+  {"tr":"/almanca-ozel-ders/","de":"/de/deutsch-einzelunterricht/","en":"/en/private-german-lessons/"},
+  {"tr":"/almanca-grup-dersi/","de":"/de/deutsch-gruppenkurs/","en":"/en/german-group-lessons/"},
+  {"tr":"/a1-almanca-kursu/","de":"/de/deutschkurs-a1/","en":"/en/german-course-a1/"},
+  {"tr":"/a2-almanca-kursu/","de":"/de/deutschkurs-a2/","en":"/en/german-course-a2/"},
+  {"tr":"/b1-almanca-kursu/","de":"/de/deutschkurs-b1/","en":"/en/german-course-b1/"},
+  {"tr":"/b2-almanca-kursu/","de":"/de/deutschkurs-b2/","en":"/en/german-course-b2/"},
+  {"tr":"/almanca-sinav-hazirlik/","de":"/de/pruefungsvorbereitung-deutsch/","en":"/en/german-exam-preparation/"},
+  {"tr":"/hakkimda/","de":"/de/ueber-mich/","en":"/en/about/"},
+  {"tr":"/iletisim/","de":"/de/kontakt/","en":"/en/contact/"},
+  {"tr":"/sss/","de":"/de/faq/","en":"/en/faq/"}
+]/* /ba:alts */;
+function altGroup(path){
+  return BA_ALTS.find(group=>Object.values(group).includes(path)) || null;
+}
+// Bir adresin seçilen dildeki karşılığı (yoksa adres aynen kalır). Diyez (#…) ve sorgu korunur.
+function localizedHref(href, lang){
+  const m=/^(\/[^?#]*)([?#].*)?$/.exec(href||'');
+  if(!m) return href;
+  const group=altGroup(m[1]);
+  if(!group) return href;
+  return (group[lang] || group.tr) + (m[2] || '');
+}
+// Site içi bağlantılar seçilen dildeki sürüme gider (ör. DE seçiliyken "İletişim" → /de/kontakt/).
+// Asıl adres data-ba-href'te saklanır; Google'ın gördüğü HTML değişmez (JavaScript'le uygulanır).
+function localizeLinks(lang){
+  document.querySelectorAll('a[href^="/"]').forEach(a=>{
+    if(!a.dataset.baHref){
+      if(!altGroup(a.getAttribute('href').replace(/[?#].*$/,''))) return;
+      a.dataset.baHref=a.getAttribute('href');
+    }
+    a.setAttribute('href', localizedHref(a.dataset.baHref, lang));
+  });
+}
+
+// t(): sayfa içeriğinin dilinde (sabit sayfalarda yorum formu gibi içerik metinleri Türkçe kalır).
 function t(key){
+  const lang=contentLang();
+  return translations[lang]?.[key] || translations.tr[key] || key;
+}
+// uiT(): menü ve not gibi ortak parçalar için, her zaman seçilen dilde.
+function uiT(key){
   return translations[currentLang]?.[key] || translations.tr[key] || key;
 }
 
+// Sabit sayfalarda yalnızca bu ortak parçalar çevrilir; sayfa içeriğindeki data-i18n'ler Türkçe kalır.
+const BA_CHROME = '.topbar, body > .shell > footer, .ba-sticky-cta, .ba-lang-note';
+function i18nTargets(selector){
+  if(!BA_FIXED_LANG) return document.querySelectorAll(selector);
+  return [...document.querySelectorAll(BA_CHROME)].flatMap(root=>[...(root.matches(selector)?[root]:[]), ...root.querySelectorAll(selector)]);
+}
+
+// Sabit sayfada aynı içeriğin seçilen dilde bulunduğu yer (yoksa sadece not).
+function langNoteTarget(){
+  const p=location.pathname;
+  const alt=altGroup(p)?.[currentLang];
+  if(alt && alt!==p) return {href:alt, key:'langNoteAltLink', textKey:'langNoteAlt'};
+  if(p.startsWith('/almanca-gramer/')) return {href:'/#exercises', key:'langNoteExercises'};
+  if(p.startsWith('/blog/') || p.startsWith('/almanca-alfabe/')) return null;
+  return {href:'/', key:'langNoteHome'};
+}
+
+const LANG_NOTE_HIDDEN = 'baLangNoteHidden';
+function sessionGet(key){ try{ return sessionStorage.getItem(key); }catch(_){ return null; } }
+function sessionSet(key, value){ try{ if(value==null) sessionStorage.removeItem(key); else sessionStorage.setItem(key, value); }catch(_){} }
+
+function renderLangNote(){
+  let note=document.querySelector('.ba-lang-note');
+  const show = BA_FIXED_LANG && currentLang!==BA_FIXED_LANG && sessionGet(LANG_NOTE_HIDDEN)!==currentLang;
+  if(!show){ note?.remove(); return; }
+  if(!note){
+    note=document.createElement('div');
+    note.className='ba-lang-note';
+    note.setAttribute('role','note');
+    const header=document.querySelector('.topbar');
+    if(header) header.after(note); else document.body.prepend(note);
+  }
+  note.lang=currentLang;
+  const target=langNoteTarget();
+  const inner=document.createElement('div');
+  inner.className='ba-lang-note-inner';
+  const text=document.createElement('p');
+  text.textContent=uiT(target?.textKey || 'langNoteText');
+  if(target){
+    text.append(' ');
+    if(target.href){
+      const link=document.createElement('a');
+      link.href=target.href;
+      link.textContent=uiT(target.key);
+      text.append(link);
+    }else text.append(uiT(target.key));
+  }
+  const close=document.createElement('button');
+  close.type='button';
+  close.className='ba-lang-note-close';
+  close.setAttribute('aria-label', uiT('langNoteClose'));
+  close.title=uiT('langNoteClose');
+  close.textContent='×';
+  close.addEventListener('click',()=>{ sessionSet(LANG_NOTE_HIDDEN, currentLang); note.remove(); });
+  inner.append(text, close);
+  note.replaceChildren(inner);
+}
+
 function applyLanguage(lang){
-  if(BA_FIXED_LANG) lang = BA_FIXED_LANG;
+  if(!BA_LANGS.includes(lang)) lang='tr';
+  if(BA_LANG_LOCKED) lang=BA_FIXED_LANG;
+  // Seçilen dil bir önceki kapatmadan farklıysa not yeniden görünsün.
+  if(lang!==currentLang) sessionSet(LANG_NOTE_HIDDEN, null);
   currentLang = lang;
-  if(!BA_FIXED_LANG) localStorage.setItem('baLang', lang);
-  document.documentElement.lang = lang;
-  document.querySelectorAll('[data-i18n]').forEach(el=>{
+  if(!BA_LANG_LOCKED){ try{ localStorage.setItem('baLang', lang); }catch(_){} }
+  document.documentElement.lang = contentLang();
+  if(BA_FIXED_LANG){
+    renderLangNote();
+    // Ekran okuyucular menüyü doğru dilde okusun: ortak parçalara kendi lang değeri.
+    document.querySelectorAll(BA_CHROME).forEach(el=>{ if(lang===BA_FIXED_LANG) el.removeAttribute('lang'); else el.lang=lang; });
+  }
+  i18nTargets('[data-i18n]').forEach(el=>{
     const key = el.getAttribute('data-i18n');
     if(translations[lang] && translations[lang][key]) el.textContent = translations[lang][key];
   });
-  document.querySelectorAll('[data-i18n-aria]').forEach(el=>{
+  i18nTargets('[data-i18n-aria]').forEach(el=>{
     const value=translations[lang]?.[el.getAttribute('data-i18n-aria')];
     if(value) el.setAttribute('aria-label', value);
   });
-  document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{
+  i18nTargets('[data-i18n-placeholder]').forEach(el=>{
     const key = el.getAttribute('data-i18n-placeholder');
     if(translations[lang] && translations[lang][key]) el.setAttribute('placeholder', translations[lang][key]);
   });
+  localizeLinks(lang);
   document.querySelectorAll('.lang button').forEach(b=>{
     b.classList.toggle('active', b.dataset.lang===lang);
     b.setAttribute('aria-pressed', String(b.dataset.lang===lang));
   });
-  window.dispatchEvent(new CustomEvent('ba:languagechange', {detail:{lang}}));
+  // lang: sayfa içeriğinin dili (sabit sayfalarda hep tr); uiLang: seçilen dil.
+  window.dispatchEvent(new CustomEvent('ba:languagechange', {detail:{lang:contentLang(), uiLang:lang}}));
 }
 
 const BA_PAGES = ['home','lessons','grammar','exercises','exams','about','contact','seviye-testi','seviye-sonu','artikel-evleri','yonetim'];
@@ -1834,7 +2058,7 @@ function baGrammarUrl(hash){
   if(p[0]!=='grammar' || p.length<2) return null;
   let url='/almanca-gramer/';
   const level=(p[1]||'').toLowerCase();
-  if(/^(a1|a2|b1)$/.test(level)){
+  if(/^(a1|a2|b1|b2)$/.test(level)){
     url+=level+'/';
     if(p[2]){
       url+=encodeURIComponent(decodeURIComponent(p[2]))+'/';
@@ -1847,7 +2071,7 @@ function baGrammarUrl(hash){
 window.addEventListener('hashchange',()=>{const url=baGrammarUrl(location.hash);if(url)location.replace(url);});
 
 function showPage(page, options={}){
-  if(BA_MOVED[page]){ location.assign(BA_MOVED[page]); return; }
+  if(BA_MOVED[page]){ location.assign(localizedHref(BA_MOVED[page], currentLang)); return; }
   if(page==='grammar'){ const url=baGrammarUrl(location.hash); if(url){ location.assign(url); return; } }
   const {historyMode='push', scroll=true} = options;
   document.body.dataset.baPage = page;
@@ -1868,7 +2092,8 @@ window.BA = {
   t,
   showPage,
   applyLanguage,
-  get lang(){ return currentLang; },
+  get lang(){ return contentLang(); },
+  get uiLang(){ return currentLang; },
   translations
 };
 
@@ -1893,7 +2118,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   function setMenu(open, {focusToggle=false}={}){
     if(!menuToggle) return;
     menuToggle.setAttribute('aria-expanded', String(open));
-    menuToggle.textContent=t(open ? 'menuClose' : 'menuOpen');
+    menuToggle.textContent=uiT(open ? 'menuClose' : 'menuOpen');
     document.body.classList.toggle('menu-open', open);
     if(!open && focusToggle) menuToggle.focus();
   }
@@ -1915,7 +2140,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
     event.preventDefault();
     document.getElementById('main')?.focus();
   });
-  document.querySelectorAll('.lang button').forEach(btn=>btn.addEventListener('click',()=>applyLanguage(btn.dataset.lang)));
+  // Sayfanın seçilen dilde ayrı bir sürümü varsa (/de/kontakt/ gibi) oraya gidilir; yoksa bu sayfada dil değişir.
+  document.querySelectorAll('.lang button').forEach(btn=>btn.addEventListener('click',()=>{
+    const lang=btn.dataset.lang;
+    const alt=altGroup(location.pathname)?.[lang];
+    if(alt && alt!==location.pathname && !BA_LANG_LOCKED){
+      try{ localStorage.setItem('baLang', lang); }catch(_){}
+      location.assign(alt + location.hash);
+      return;
+    }
+    applyLanguage(lang);
+  }));
 
   const form = document.getElementById('contactForm');
   const formStatus = document.getElementById('formStatus');
@@ -1926,12 +2161,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
   // inbox it was created for. The same key is used by the comment form in js/a1-lessons.js.
   const WEB3FORMS_URL = 'https://api.web3forms.com/submit';
   const WEB3FORMS_KEY = '21c1c876-3c08-4019-a29d-8181b1f640f0';
+  // A page can word the form messages itself (e.g. /de/kontakt/ uses "Sie"): data-msg-sent-message on the form
+  // overrides t('sentMessage'), and so on for invalidForm, sendError, sendingMessage and sendMessage.
+  const ft = key => form?.dataset['msg' + key[0].toUpperCase() + key.slice(1)] || t(key);
   function setFormStatus(type, message){
     if(!formStatus) return;
     formStatus.className = `contact-form-status show ${type}`;
     formStatus.textContent = message;
     // On an error the visitor can still write directly; the address is already shown on the page.
-    if(type === 'error' && message === t('sendError')){
+    if(type === 'error' && message === ft('sendError')){
       const link = document.createElement('a');
       link.href = 'mailto:' + CONTACT_EMAIL;
       link.textContent = CONTACT_EMAIL;
@@ -1939,7 +2177,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
   }
   // Without JavaScript the form posts to Web3Forms directly and comes back with ?gonderildi=1.
-  if(form && new URLSearchParams(location.search).has('gonderildi')) setFormStatus('success', t('sentMessage'));
+  if(form && new URLSearchParams(location.search).has('gonderildi')) setFormStatus('success', ft('sentMessage'));
 
   form?.addEventListener('submit', async e=>{
     e.preventDefault();
@@ -1953,14 +2191,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     if(honey) return;
     if(!name || !emailOk || !message){
-      setFormStatus('error', t('invalidForm'));
+      setFormStatus('error', ft('invalidForm'));
       return;
     }
 
-    const originalLabel = t('sendMessage');
+    const originalLabel = ft('sendMessage');
     if(submitBtn){
       submitBtn.disabled = true;
-      submitBtn.textContent = t('sendingMessage');
+      submitBtn.textContent = ft('sendingMessage');
     }
     if(formStatus) formStatus.className = 'contact-form-status';
 
@@ -1973,7 +2211,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         },
         body:JSON.stringify({
           access_key:WEB3FORMS_KEY,
-          subject:'Bozkurt Academy – Yeni iletişim mesajı',
+          // The page language in the subject tells the teacher which language to answer in.
+          subject:'Bozkurt Academy – Yeni iletişim mesajı' + (contentLang() !== 'tr' ? ` (${contentLang().toUpperCase()})` : ''),
           from_name:'Bozkurt Academy Web Sitesi',
           replyto:email,
           name,
@@ -1992,10 +2231,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
       form.reset();
       applyLanguage(currentLang);
-      setFormStatus('success', t('sentMessage'));
+      setFormStatus('success', ft('sentMessage'));
     }catch(error){
       console.error('İletişim formu gönderim hatası:', error);
-      setFormStatus('error', t('sendError'));
+      setFormStatus('error', ft('sendError'));
     }finally{
       if(submitBtn){
         submitBtn.disabled = false;
@@ -2005,6 +2244,22 @@ document.addEventListener('DOMContentLoaded', ()=>{
   });
 
   const startPage=pageFromHash();
+  accountNav();
   applyLanguage(currentLang);
   if(hasPages()) showPage(startPage, {historyMode:'replace', scroll:false});
 });
+
+// Menüdeki hesap bağlantısı her sayfada: ziyaretçide "Giriş", daha önce giriş yapmış öğrencide "Panelim", öğretmende
+// "Öğretmen paneli". Yalnızca tarayıcıdaki ipucu (localStorage baAccount, js/account/common.js → setHint) okunur;
+// Firebase yüklenmez. Hesap sayfalarının kendi (etkin) bağlantısına dokunulmaz. Ana sayfada js/account/session.js
+// giriş durumunu Firebase ile doğrulayıp bağlantıyı ayrıca günceller.
+function accountNav(){
+  const link=document.getElementById('navAccount');
+  if(!link || link.classList.contains('active')) return;
+  let role=null;
+  try{ role=localStorage.getItem('baAccount'); }catch(_){}
+  const [href, key] = role==='teacher' ? ['/ogretmen.html','navTeacher'] : role==='student' ? ['/panel.html','navPanel'] : ['/giris.html','navLogin'];
+  link.setAttribute('href', href);
+  link.dataset.i18n=key;
+  link.textContent=uiT(key);
+}

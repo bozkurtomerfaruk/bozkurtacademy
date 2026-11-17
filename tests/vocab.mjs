@@ -116,7 +116,7 @@ for (const level of catalog.levels) for (const topic of level.topics) {
   await open(`exercises/${level.id}/${topic.id}/${exercise.id}/q1`);
   if (q.type === 'text') { await page.fill('#writtenAnswerInput', 'x'); await page.press('#writtenAnswerInput', 'Enter'); await page.waitForTimeout(300); }
   else await choose(q.options[0]);
-  const expected = q.vocab.filter(k => !words[k].unsure || words[k].checked).map(k => `${words[k].article} ${words[k].word || k.split('|')[0]}${words[k].pluralOnly ? ' (sadece çoğul)' : ''} – ${words[k].tr}`);
+  const expected = q.vocab.filter(k => words[k].checked).map(k => `${words[k].article} ${words[k].word || k.split('|')[0]}${words[k].pluralOnly ? ' (sadece çoğul)' : ''} – ${words[k].tr}`);
   const got = await items('#quizFeedback');
   if (got.join('|') !== expected.join('|')) ok(false, `${level.id} ${topic.id}: ${got.join(' | ')} ≠ ${expected.join(' | ')}`);
   else covered++;

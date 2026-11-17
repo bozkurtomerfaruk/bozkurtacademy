@@ -85,7 +85,9 @@ async function writeAndSubmit(page, text = TEXT) {
 const { ctx: sctx, page: student } = await newPage();
 await signIn(student, 'ogrenci@example.com', 'ogrenci123', 'student');
 const note = await writeAndSubmit(student);
-ok(note.includes('Metnin kaydedildi'), `öğrenciye "kaydedildi" notu (${note})`);
+// Bu testte yapay zekâ servisi (Worker) çalışmıyor: not ya "Metnin kaydedildi. Yapay zekâ kontrol ediyor…" ya da bağlantı
+// hatası hızlı dönerse "… kontrol edemedi; metnin kaydedildi ve öğretmenine iletildi" olur. İkisinde de metin kaydedildi.
+ok(/metnin kaydedildi/i.test(note), `öğrenciye "kaydedildi" notu (${note})`);
 ok((await student.textContent('#wtModelTitle')).includes('Örnek cevap'), 'gönderince örnek cevap açılıyor');
 await student.screenshot({ path: path.join(shotDir, 'ogrenci-gonderdi-1280.png'), fullPage: true });
 let writings = await listDocs('users/ogrenci1/writings');

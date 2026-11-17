@@ -11,8 +11,135 @@
   - Teil 1 (form, otomatik kontrol, yapay zekâ yok): Anmeldung in der Kita, Termin bei der Ausländerbehörde, Ein Konto eröffnen, Eine Wohnung mieten, Neu bei der Arbeit.
   - Teil 2 (kısa mesaj, yapay zekâ kontrollü): Kind krank: Kita (yarı resmî), Termin verschieben (Ausländerbehörde, resmî), Bankkarte verloren (resmî), Hilfe beim Umzug (arkadaşa du), Schicht tauschen (iş arkadaşına du). Örnek cevaplar 31–37 kelime.
 - **Ödev ekranı:** A1'de Schreiben altında Goethe ve telc kısa mesajları (10 görev), "Sınav setleri" altında Goethe ve telc form setleri seçilebiliyor (sınav verisinden kendiliğinden geliyor; test eklendi).
-- **Yapay zekâ:** Talimat değişmedi (A1 kuralları "A1" geçen görev adlarında zaten geçerli). Deneme metinleri: `tests/ai-deneme/telc-a1-teil2.json` (5 metin, 9 hata, biri hatasız). Kota kuralı gereği Almanya saatiyle gece çalıştırılacak.
+- **Yapay zekâ:** Talimat değişmedi (A1 kuralları "A1" geçen görev adlarında zaten geçerli). Deneme metinleri: `tests/ai-deneme/telc-a1-teil2.json` (5 metin, 9 hata, biri hatasız).
+- **Deneme (17 Kasım 01:30 Almanya saati, kota kuralına göre; Goethe A2 dalındaki son talimat ve kota koruması ile):** 9/9 hata bulundu, hatasız metinde yanlış alarm yok, okunamayan cevap yok. Kullanım 147 Neuron. Örnekler: Sie haben Fieber → Sie hat Fieber, Kannst du mich helfen? → Kannst du mir helfen?, Hallo/Tschüss → Sehr geehrte Damen und Herren / Mit freundlichen Grüßen. Goethe A2 PR'ı birleşince main bu dala tekrar alınacak (kota koruması ve son talimat main'e A2 ile geliyor; examsData ve app sürümleri yeniden kontrol edilecek).
 - **Testler:** `node tests/schreiben.mjs` (21 yeni telc A1 kontrolü: liste, form 5/5 ve 0/5, dayanaklar, Teil 2 uzunluk sınırları, örnek cevap), `npm run test:schreiben` (ödev ekranı); 390/1440 açık/koyu, taşma yok.
+
+## 2026-11-16 · B2 gramer dersleri, PR 3: Partizip II, Genitivpräpositionen, je … desto (dal `claude/b2-dersler-2`)
+
+- **Dersler (`data/b2-grammar.json`):** Partizip II (7 bölüm: oluşum + A1–A2 Perfekt kutusu, ayrılabilen/ayrılamayan/-ieren, edilgen ve bitmiş anlam, dört Kasus'ta çekim, Relativsatz → Partizip II + B1 Passiv kutusu, genişletilmiş gruplar, sık hatalar) · Präpositionen mit Genitiv (7 bölüm: Genitiv tekrarı + B1 kutusu, sebep/karşıtlık, zaman, yer, anstatt/anstelle/mittels, günlük dilde Dativ, sık hatalar) · je … desto (7 bölüm: yapı, Komparativ + A2 kutusu, fiil sırası, mehr/weniger, umso ve sıra değişimi, modal/dönüşlü/ayrılabilen fiiller, sık hatalar). Bölümler mevcut 20'şer paketle uyumlu.
+- Üçü `grammar-legacy.json`'dan çıkarıldı; SEO metinleri; B2 kurs sayfası (TR/DE) ve seviye testi sonucu derslere bağlı (`placement.js` 9). Yeni kelime yok.
+- **Test:** `tests/gramer-b2.mjs` (dört ders, 390/1440 açık/koyu), `tests/search.mjs`, check-grammar, check-versions geçti.
+
+
+## 2026-11-16 · B2 gramer dersleri, PR 2: Passiv mit Modalverben, Nominalisierung, Partizip I (dal `claude/b2-dersler-1`)
+
+- **Dersler (`data/b2-grammar.json`):** Passiv mit Modalverben (8 bölüm: temel kalıp + "B1'den hatırlatma" kutusu, modal fiil anlamları, aktif → Passiv, Dativ fiilleri ve öznesiz Passiv, Präteritum, Perfekt/Plusquamperfekt ve çift mastar, Futur ve hätte … werden müssen, sık hatalar) · Nominalisierung (8 bölüm: das + mastar, beim/zum/vom, der Kranke – ein Kranker, etwas/alles + sıfat, das Neue ve renkler, büyük-küçük harf, cümleden isim öbeğine, sık hatalar) · Partizip I (8 bölüm: oluşum, Partizip I/II farkı, sıfat çekimi, zarf kullanımı, genişletilmiş grup, Relativsatz dönüşümü + B1 kutusu, der Reisende, sık hatalar). Bölümler mevcut 20'şer paketle uyumlu.
+- Üçü `grammar-legacy.json`'dan çıkarıldı; SEO metinleri; B2 kurs sayfası (TR/DE) ve seviye testi sonucu artık derslere bağlı (`placement.js` 8). Yeni kelime yok (dersler kelime listesi kullanmıyor).
+- **Test:** `tests/gramer-b2.mjs` (dört ders, 390/1440 açık/koyu), `tests/search.mjs`, check-grammar, check-versions geçti.
+
+## 2026-11-16 · B2 İleri Konnektoren: ders + 200 soru, konu "hazır" (dal `claude/b2-konnektoren`)
+
+- **Paketler (`data/b2/konnektoren-b2.json`, 20 × 10 soru):** 1 Konnektortyp und Verbstellung · 2 wohingegen / während · 3 demgegenüber / hingegen / dagegen · 4 insofern (als) · 5 sofern / soweit · 6 indem / dadurch, dass · 7 obgleich / wenngleich · 8 zwar … aber / nichtsdestotrotz · 9 sodass / so …, dass · 10 folglich / infolgedessen · 11 es sei denn / vorausgesetzt, dass / angenommen, dass · 12 zumal / umso mehr, als · 13 je nachdem · 14 ohne dass / anstatt dass · 15 Welcher Konnektor passt? · 16 Sätze verbinden · 17 Satzbau · 18 Fehlerkorrektur · 19 Konnektoren in Sachtexten · 20 Master Challenge. Seçmeli sorular 3 seçenekli; her sorunun kendi TR/DE/EN açıklaması (bağlaç türü, özne, fiilin yeri, anlam ipucu). Pilot (1–5) öğretmen tarafından onaylandı; 4.2'de "in dieser Hinsicht" seçeneği "im Gegenteil" ile değiştirildi.
+- **Ders:** `data/b2-grammar.json` → konnektoren-b2 (8 bölüm: üç bağlaç türü ve fiilin yeri + "B1'den hatırlatma: iki parçalı bağlaçlar" kutusu, karşıtlık, insofern/sofern/soweit, es sei denn/vorausgesetzt/angenommen, indem/ohne/anstatt, taviz ve zumal, sonuç ve je nachdem, sık hatalar). `grammar-legacy.json`'dan çıkarıldı; SEO metni; B2 kurs sayfası (TR/DE) bağlantısı. Katalogda "ready", yeni açıklama; arama dizini 876 paket. Sürüm: `grammar.js` 23 (catalog `?v=8`).
+- **Tek doğru cevap:** Seçmeli sorularda yanlış seçenekler ya fiil sırasını bozuyor ya da anlamca uymuyor; aynı boşluğa iki bağlacın uyabildiği durumlarda (soweit/sofern, insofern/insoweit, hingegen/dagegen, obgleich/wenngleich) soru yazılı yapıldı ve hepsi kabul ediliyor (öğretmen onayladı). "Insofern …?" yankı sorusu riski olan soru dolaylı soruya (klären, inwiefern) çevrildi.
+- **Kelime listesi:** Pilotun 20 kelimesi öğretmen onayıyla "kontrol edildi". 6–20. paketlerde 22 yeni isim eklendi ve öğretmen onayıyla hepsi "kontrol edildi" (Stadtrand anlamı "şehrin kenarı, şehrin dış mahalleleri" olarak düzeltildi). Öğretmen düzeltmesi: 15.5 artık iki sebepli bir zumal cümlesi (weil … , zumal …). Öğretmenin isteğiyle (onaylandı) artık yalnızca kontrol edilmiş kelimeler gösteriliyor (`js/quiz.js` → vocabHtml; önceden "emin değilim" olmayan kelimeler kontrol beklemeden görünüyordu). Mevcut 1249 kelimenin hepsi kontrol edilmiş olduğu için görünen listeler değişmedi. AGENTS.md ve `scripts/sozluk.mjs` açıklamaları buna göre güncellendi. Sürümler: `quiz.js` 32, `sozluk.json?v=2`.
+- **Test:** yeni `tests/alistirma-b2-yeni.mjs` (200 sorunun hepsi tarayıcıda: her paketin ilk seçmeli ve ilk yazılı sorusu yanlış, yazılı Enter ile, kendi açıklaması; diğerleri doğru cevapla kabul; kelime listesinde yalnızca kontrol edilmiş kelimeler; DE/EN açıklama; 390/1440 açık/koyu taşma). `tests/vocab.mjs` yeni kurala göre güncellendi ve geçti. `tests/gramer-b2.mjs` (iki ders), `tests/search.mjs`, `npm test`, sozluk --check, check-grammar, build-search-index --check, check-versions geçti.
+
+## 2026-11-16 · Seviye testi testi: gizlilik tarihi
+
+- `npm run test:placement` main'de 6 hata veriyordu: gizlilik sayfasının tarihi 12 Kasım 2026'ya güncellenmiş, test (`tests/seviye-testi/placement.mjs`) hâlâ 11 Kasım'ı bekliyordu (TR/DE/EN × 2 ekran). Beklenen tarih güncellendi; test geçiyor. Gizlilik metni bir daha güncellenirse bu satırlar da güncellenmeli.
+
+## 2026-11-16 · B2 gramer dersleri, pilot: B2 seviyesi açıldı + Konjunktiv I dersi
+
+- **Plan (onaylandı):** B2'nin 10 konusu için ders; hazırlanmakta olan 3 konu (İleri Konnektoren, Funktionsverbgefüge, Adjektivdeklination vertieft) için ders + 20 paket × 10 soru. Sıra: bu pilot → Passiv mit Modalverben, Nominalisierung, Partizip I dersleri → Partizip II, Genitivpräpositionen, je … desto dersleri → her yeni konu ayrı PR. Sonra B2 seviye sonu sınavı planı. Öğretmenin değişikliği: Konnektoren paket 11 = es sei denn / vorausgesetzt, dass / angenommen, dass; paket 12 = zumal / umso mehr, als; weder … noch ve benzerleri derste yalnızca kısa "B1'den hatırlatma" kutusunda.
+- **Ders:** `data/b2-grammar.json` → Konjunktiv I (9 bölüm: aktarma, kök + -e, sein ve yedek biçim kuralı, modal fiiller, werde + mastar, geçmiş, ob/W-soruları ve solle/möge, zamir-zaman-fiil sırası, Türk öğrencilerin sık hataları; 5 maddelik kısa tekrar, kendini kontrol, 3 SSS). `data/grammar-index.json`'a B2 eklendi; `data/grammar-legacy.json`'dan konjunktiv-i çıkarıldı (liste sadece küçülüyor). SEO metni `data/grammar-seo.json`.
+- **Statik sayfalar:** `/almanca-gramer/b2/` ve `/almanca-gramer/b2/konjunktiv-i/`; sitemap otomatik (gramer tarihi 2026-11-16). Gramer ana sayfası artık "A1–B2". B2 dersleri B2 kurs sayfasına bağlı (`scripts/grammar-pages.mjs` → COURSE).
+- **Şablon (`js/a1-lessons.js`):** (1) Benzer konular başka seviyedeki dersi gösterebilir: `"related": ["B1/indirekte-fragen"]` (seviye etiketiyle, gerçek sayfa bağlantısı); `scripts/check-grammar.mjs` bunları da denetler. (2) Bölümde isteğe bağlı hatırlatma kutusu: `"box": {"title", "paragraphs"}` (`.a1-box`, `css/a1-lessons.css`, açık/koyu tema token'larıyla).
+- **Yönlendirme:** `#grammar/B2/...` adresleri artık statik B2 sayfalarına gidiyor (`js/legacy-hash.js`, `js/app.js` → baGrammarUrl). Dersi henüz olmayan B2 konularına sitede `#grammar/B2/<konu>` bağlantısı yok (kartlar "hazırlanıyor" gösteriyor, "Konuyu çalış" yalnızca dersi olan konularda çıkıyor).
+- **İç bağlantılar:** B2 kurs sayfası (TR, DE) Konjunktiv I satırı derse gidiyor; seviye testi sonucunda Konjunktiv I artık derse bağlı (`js/placement.js`).
+- **Sürümler:** `a1-lessons.js` 20, `a1-lessons.css` 9, `grammar.js` 22, `app.js` 51, `legacy-hash.js` 2, `placement.js` 7; ders verisi `?v=7`, grammar-index `?v=3`.
+- **Test:** yeni `tests/gramer-b2.mjs` (bütün B2 dersleri: bölümler, kutu, benzer konular ve sayfaların açılması, alıştırmaya geçiş, `#grammar/B2/<ders>/3` derin bağlantısı, B2 sekmesi, seviye sayfası, sitemap, "Konuyu çalış", 390/1440 px açık/koyu taşma + ekran görüntüsü). check-grammar, check-versions, build-search-index --check, check-html-escape, `tests/search.mjs`, `npm test` geçti.
+- **Bilinen (bu işten bağımsız):** `npm run test:placement` main'de de 6 adımda düşüyor: gizlilik sayfasının tarihi 12 Kasım'a güncellenmiş, test 11 Kasım bekliyor.
+
+## 2026-11-16 · Öğretmen takvimi: Google Calendar bağlantısı yenilemede korunuyor
+
+- **Sorun:** Erişim belirteci (access token, ~1 saat) yalnızca bellekteydi; sayfa yenilenince bağlantı kayboluyordu.
+- **Şimdi (`js/account/calendar.js`):** Belirteç süresi dolana kadar sessionStorage'da (`baGcalSession`; sekme kapanınca silinir), yalnızca öğretmen sayfalarında (`/ogretmen*.html`) saklanır ve geri yüklenir. Hiçbir sunucuya gönderilmez (yalnızca Google Calendar API'ye), loglanmaz. localStorage'da yalnızca "daha önce bağlandı" işareti (`baGcalConnected`), belirteç değil.
+- **Otomatik yenileme:** Süre dolmuşsa ya da yeni sekmedeyse bir takvim işleminde (ders ekleme/taşıma/iptal, "Tekrar dene", katılımcı güncelleme) öğretmenin tıklamasıyla `requestAccessToken({ prompt: '' })` sessizce yeniler. Google 401 dönerse belirteç silinir, bir sonraki işlemde yenilenir.
+- **Rozet:** "Google Calendar bağlı (yaklaşık N dk)" · "Bağlantı süresi doldu, bir sonraki işlemde otomatik yenilenecek" (düğme: "Şimdi yenile") · "Google Calendar bağlı değil". Yarım dakikada bir güncellenir.
+- **Bağlantıyı kes:** Belirteci Google'dan iptal eder (`https://oauth2.googleapis.com/revoke`, CSP'ye eklendi) ve sessionStorage + işareti siler. Öğretmen çıkış yapınca da belirteç ve işaret silinir.
+- **Test:** `tests/takvim-baglanti.mjs` (sahte takvim: bağlan → yenile → hâlâ bağlı; süre dolunca rozet ve ders eklerken otomatik yenileme; bağlantıyı kes; yeni sekme; çıkış; 390/1440 açık/koyu). `tests/csp.mjs` gerçek kod yolunda yenileme ve iptal isteğini sınar. Sürümler: `teacher-calendar.js` 2, `teacher.js` 7, `teacher-assign.js` 3, `teacher-student.js` 5.
+- **Karar bekliyor:** Kalıcı bağlantı (Cloudflare Worker'da refresh token) kodlanmadı; artı/eksi notu PR açıklamasında.
+
+## 2026-11-16 · Dil sürümleri, Aşama 2 / PR 4: SSS (DE/EN) – Aşama 2 tamamlandı
+
+- **Yeni sayfalar:** `/de/faq/` ("Sie"; ayrıca "Schule und Eltern" bölümü) ve `/en/faq/`. FAQPage şeması `<details>` bloklarından otomatik. `/sss/`'e hreflang eklendi.
+- **Temizlik:** `js/app.js` → `langNoteTarget` içinde artık çalışmayan İletişim satırı kaldırıldı. Sürüm: `app.js` 50 (Giriş bağlantısı PR'ından sonra).
+- **Test:** `tests/dil-secimi.mjs` – "karşılığı olmayan Türkçe sayfa" senaryoları artık 404 sayfasını kullanıyor; /sss/ → /de/faq/ notu ve iki yeni sayfada 390 px taşma eklendi.
+- **Aşama 2 sonucu – üç dilde olan sayfalar (12):** online ders, özel ders, grup dersi, sınav hazırlık, A1, A2, B1, B2, Hakkımda, İletişim, SSS. **Sadece Türkçe kalanlar:** 45 gramer dersi, blog (ana sayfa ve 6 yazı), Almanca alfabe oyunu (bilerek ertelendi), 404; ana sayfa (`/`) tek adres, içerik dil düğmesiyle JavaScript ile değişiyor. Impressum iki dilli (DE + TR).
+
+## 2026-11-16 · Menüdeki "Giriş" bağlantısı her sayfada görünür
+
+- **Bağlantı (#navAccount):** "Quiet launch" gizlemesi kaldırıldı; üretilen bütün sayfalarda (TR/DE/EN), ana sayfada ve elle yazılmış sayfalarda görünür, mobil menüde de.
+- **Yazı:** Ziyaretçide "Giriş / Anmelden / Sign in". Daha önce giriş yapmış öğrencide "Panelim", öğretmende "Öğretmen paneli". `js/app.js` → `accountNav` bunu yalnızca tarayıcıdaki ipucundan (`baAccount`) okur; adresler mutlak (`/panel.html`, `/ogretmen.html`), /de/ ve /en/ altında da çalışır. Ana sayfada `js/account/session.js` durumu Firebase ile ayrıca doğrulamaya devam ediyor.
+- **Firebase:** Ziyaretçide yine yalnızca giriş/kayıt sayfası açılınca yükleniyor. (Öğretmenin `/yonetim/yorumlar/` sayfası giriş gerektirdiği için Firebase'i zaten kendisi yüklüyordu; değişmedi.)
+- **Menü sığması:** Bağlantı eklenince Almanca menü masaüstünde taşıyordu. Almanca menü etiketleri kısaltıldı ("Unterricht", "Prüfungen"; sayfa başlıkları değişmedi), masaüstü menü aralıkları `css/base.css`'te yeniden ayarlandı; TR/DE/EN, ziyaretçi/öğretmen, 1024–1700 px'te taşma yok.
+- **Test:** `tests/giris-baglantisi.mjs` (görünürlük, dil, rol, mobil menü, Firebase isteği yok, masaüstü menü taşması). `tests/hesap-notu.mjs` artık bağlantının görünür olmasını bekliyor. Sürümler: `app.js` 49, `base.css` 14.
+- **Bilinen (bu işten bağımsız):** `tests/schreiben-account.mjs` main'de de ara sıra "kaydedildi notu" adımında düşüyor (yapay zekâ servisine erişilemeyen ortamda zamanlama); CI'da çalışmıyor.
+
+## 2026-11-16 · Dil sürümleri, Aşama 2 / PR 3: A1–B2 kurs sayfaları (DE/EN)
+
+- **Yeni sayfalar:** `/de/deutschkurs-a1/` … `/de/deutschkurs-b2/`, `/en/german-course-a1/` … `/en/german-course-b2/` (8 sayfa). Türkçe sayfalar değişmedi; hreflang ve sitemap otomatik.
+- **Seviye kartları:** `/de/online-deutschunterricht/` ve `/en/online-german-lessons/` sayfasındaki A1–B2 kartları artık kurs sayfalarına bağlı.
+- **İçerik:** Almanca sürümde gramer konuları Türkçe anlatımlara bağlanır ("auf Türkisch" notuyla); A1'de Türkiye'deki eş için Familiennachzug bağlamı. İngilizce sürümde gramer anlatımları Türkçe olduğu için konu listeleri bağlantısız. Resmî şartlar için her yerde "ilgili kurumdan kontrol et" uyarısı korundu.
+- **Düzeltme:** Alıştırma açıklamaları Türkçe; İngilizce sayfalardaki "every answer comes with an explanation" ifadeleri ve Almanca sayfalardaki ilgili cümleler buna göre düzeltildi.
+- **Şema:** `course()` dile göre `inLanguage` ve konu adı alıyor.
+- **Hesap ekranı:** Giriş/kayıt notunun Almancası "du" ile (hesap alanının geri kalanı ve onay hatırlatması gibi). Sürümler: `app.js` 48, `i18n-boot.js` 3.
+- **Sırada:** PR 4 – SSS (/de/faq/, /en/faq/).
+
+## 2026-11-16 · Dil sürümleri, Aşama 2 / PR 2: ders sayfaları (DE/EN)
+
+- **Yeni sayfalar:** `/de/online-deutschunterricht/`, `/de/deutsch-einzelunterricht/`, `/de/deutsch-gruppenkurs/`, `/de/pruefungsvorbereitung-deutsch/`, `/en/online-german-lessons/`, `/en/private-german-lessons/`, `/en/german-group-lessons/`, `/en/german-exam-preparation/`. Türkçe karşılıkları değişmedi; hreflang ve sitemap otomatik.
+- **İçerik:** Türkçe sayfadaki bilgiler (50 dk, Zoom/Google Meet, grup en fazla 6 kişi, ilk ders ücretsiz, 24 saat iptal kuralı, sınav listesi) korundu. Almanca sürümde okul desteği ve Türkçe açıklama öne çıkıyor ("Sie"); İngilizce sürümde açıklamalar İngilizce. Seviye kartları (A1–B2) PR 3'e kadar bağlantısız; gramer anlatımlarına yalnızca Almanca sayfalardan "auf Türkisch" notuyla bağlantı var.
+- **Şema:** `service()` artık dile göre iletişim adresi ve `inLanguage` alıyor.
+- **Düzeltme:** `build-pages --check`'teki "Türkçe adresle bağlantı" kontrolü artık yalnızca elle yazılan içeriği tarıyor (alt bilgi sayılmıyor).
+- **Test:** `tests/dil-secimi.mjs` genişletildi (ders sayfalarında menü, sayfa yolu, alt bilgi, dil düğmesiyle geçiş, 390 px taşma). Sürüm: `app.js` 47.
+- **Sırada:** PR 3 – A1–B2 kurs sayfaları; ardından PR 4 – SSS.
+
+## 2026-11-16 · Giriş ve kayıt: "hesaplar yalnızca öğrencilerim için" notu
+
+- **giris.html, kayit.html:** Formun üstünde sade bir kutu (solda vurgu çizgisi, `.acc-notice`). Metin TR/DE/EN (`js/account/i18n.js` → `accOnlyStudents…`); "iletişime geç" seçilen dilin iletişim sayfasına gider (/iletisim/, /de/kontakt/, /en/contact/; `js/app.js` → `localizeLinks`).
+- **Panel, onay bekleyen hesap:** "Öğretmenin kaydını onaylayınca giriş yapabileceksin." (`panelPendingReminder`, `#stateNote`).
+- Menüdeki "Giriş" bağlantısı genel sayfalarda gizli kalıyor (değiştirilmedi).
+- **Test:** `tests/hesap-notu.mjs` (emülatörle; not metni ve bağlantısı her dilde, formun üstünde, panel hatırlatması, 390/1440 açık/koyu taşma). Sürümler: `account.css` 8, `i18n-boot.js` 2, `student.js` 5.
+
+## 2026-11-16 · Dil sürümleri, Aşama 2 / PR 1: altyapı + Kontakt + Über mich
+
+- **Yeni sayfalar:** `/de/kontakt/`, `/de/ueber-mich/` (hedef kitle: Almanya'da büyüyen Türk kökenli öğrenciler ve veliler, Almanya'ya sonradan gelenler; "Sie"), `/en/contact/`, `/en/about/` (İngilizce konuşan öğrenciler). Birebir çeviri değil; Türkçe sayfa değişince bunlar da gözden geçirilmeli.
+- **Kayıt:** `scripts/site-pages.mjs` → `lang` ve `group` (aynı grup = aynı sayfanın dil sürümleri; tr, de, en hepsi zorunlu). Türkçe adresler değişmedi.
+- **Üretilen:** hreflang (tr, de, en, x-default = Türkçe), kendi canonical'ı, `og:locale` + `og:locale:alternate`, şemada `inLanguage`, sitemap. Almanca/İngilizce sayfaların menüsü, alt bilgisi ve sayfa yolu doğrudan o dilde yazılır; metinler tek kaynaktan, `js/app.js` → `translations`.
+- **Dil düğmesi:** Sürümü olan sayfada aynı sayfanın o dildeki sürümüne gider; yoksa sayfada kalır ve Aşama 1 notu çıkar. DE seçiliyken Türkçe sürümü olan sayfaya gelen kullanıcı yönlendirilmez; "Diese Seite gibt es auch auf Deutsch" notu çıkar. `/de/…` açılınca seçim `de` olur.
+- **Site içi bağlantılar:** Seçilen dil DE/EN ise "İletişim", "Hakkımda", "Ücretsiz bilgi al" gibi bağlantılar JavaScript ile o dilin sürümüne gider (Google'ın gördüğü HTML değişmez). Liste `js/app.js` → `BA_ALTS`, `build-pages.mjs` üretir; değişince app.js sürümü artırılmalı.
+- **Kontroller (`build-pages --check`):** eksik dil sürümü, yanlış `<html lang>`, Almanca/İngilizce içerikte o dilde sürümü olan sayfaya Türkçe adresle bağlantı.
+- **İletişim formu:** Sayfa kendi mesajlarını `data-msg-*` ile verir ("Sie"); e-posta konusuna sayfa dili eklenir: "(DE)", "(EN)".
+- **Test:** `node tests/dil-secimi.mjs` genişletildi (sürümler arası geçiş, notlar, bağlantılar, DE form gönderimi). Sürüm: `app.js` 46 (Impressum ile birlikte).
+- **Sırada:** PR 2 – Online-Unterricht, Einzelunterricht, Gruppenkurs, Prüfungsvorbereitung.
+
+## 2026-11-16 · Impressum (künye) sayfası
+
+- **Sayfa:** `/impressum/` (Almanca yasal metin + Türkçe çeviri, tek sayfa). Arama motorlarında listelenmez (`noindex`), sitemap'e girmez. Bağlantı her sayfanın alt bilgisinde "Yasal bilgiler" bölümünde: TR "Künye (Impressum)", DE "Impressum", EN "Legal notice (Impressum)".
+- **İçerik:** § 5 DDG bilgileri, iletişim, vergi numaraları (varsa), § 18 Abs. 2 MStV sorumlu kişi, tüketici hakem kurulu açıklaması. AB çevrim içi uyuşmazlık platformu (OS-Plattform) Temmuz 2025'te kapandığı için ona bağlantı yok.
+- **Bilgiler:** Ad, adres (Neuss), e-posta ve iletişim formu. Telefon, USt-IdNr. ve W-IdNr. verilmedi; bölümleri kaldırıldı (eklenirse iki dile de yazılmalı).
+- **Koruma:** Köşeli parantezli yer tutucu kalırsa `node scripts/build-pages.mjs --check` hata veriyor (`noPlaceholders`).
+- Sürüm: `app.js` 45.
+
+## 2026-11-16 · Giriş, kayıt ve panel: çeviriler Firebase'den bağımsız
+
+- **Sorun:** Bu üç sayfanın DE/EN metinleri (`js/account/i18n.js`) Firebase ile aynı modül zincirinde yükleniyordu. Firebase yüklenemezse (reklam engelleyici, kötü bağlantı) zincir hiç çalışmıyor, sayfa seçilen dil yerine Türkçe kalıyordu.
+- **Şimdi:** Yeni `js/account/i18n-boot.js` sadece metinleri yükler; `giris.html`, `kayit.html`, `panel.html` onu ana modülden önce ayrıca yükler. Firebase yüklenemese de metinler seçilen dilde görünür.
+- **Test:** `node tests/hesap-ceviri.mjs` (dış istekler engelliyken DE/EN/TR başlıkları).
+- **Bilinen:** Firebase hiç yüklenemezse panel "Wird geladen…" durumunda kalıyor (artık doğru dilde). Hata mesajı göstermek ayrı bir iş.
+
+## 2026-11-16 · Dil seçimi, Aşama 1: sabit Türkçe sayfalarda not ve çalışan dil düğmesi
+
+- **Sorun:** 4–5 Kasım SEO çalışmasıyla gelen statik sayfalarda (`data-ba-fixed-lang="tr"`: 12 menü/kurs sayfası, 45 gramer dersi, blog, 404) dil düğmesi yoktu ve menü Türkçeye dönüyordu. Kayıtlı seçim (`baLang`) silinmiyordu ama ana sayfaya dönünce dil yeniden değişiyordu; "dil kayboluyor" gibi görünüyordu. PR #29 bu sayfalardan önce yapıldığı için bunu kapsamıyordu.
+- **Şimdi:** Dil düğmesi bütün statik sayfalarda (öğretmenin `/yonetim/yorumlar/` sayfası hariç). Seçim her sayfada kaydediliyor. Menü, alt bilgi ve "Ücretsiz bilgi al" seçilen dilde; sayfa içeriği (iletişim formu ve yorum formu dahil) Türkçe kalıyor; `<html lang="tr">` değişmiyor, ortak parçalara kendi `lang` değeri veriliyor.
+- **Not:** DE/EN seçilince menünün altında "Diese Seite gibt es vorerst nur auf Türkisch." / "This page is currently only available in Turkish." Bağlantı: sınav hazırlık → `/#exams`, gramer dersleri → `/#exercises`, kurs sayfaları, Hakkımda, SSS, 404 → ana sayfa; iletişimde "bize Almanca/İngilizce yazabilirsin"; blog ve alfabe oyununda sadece not. Not JavaScript ile ekleniyor (Google'ın gördüğü HTML'de yok). × ile kapatılınca o dil için oturum boyunca çıkmıyor; başka dil seçilince yeniden çıkıyor.
+- **Ana sayfa alt bilgisi** de artık çevriliyor (grup başlıkları ve bağlantılar Türkçe kalıyordu).
+- `window.BA.lang` sayfa içeriğinin dilini, yeni `window.BA.uiLang` seçilen dili verir.
+- **Test:** `node tests/dil-secimi.mjs` (DE seç → statik sayfa → EN → TR → geri dön; not bağlantıları; kapatma; yönetim sayfası; 390 px taşma). Sürümler: `app.js` 44, `base.css` 13.
+- **Sırada:** Giriş/kayıt/panel çevirilerinin Firebase yüklenemediğinde de uygulanması (ayrı PR); sonra Aşama 2 (12 sayfanın `/de/` ve `/en/` sürümleri) için plan.
 
 ## 2026-11-14 · Schreiben genişletme 4: DTZ (Deutsch-Test für Zuwanderer)
 

@@ -1,0 +1,36 @@
+name: IndexNow
+# main'e her gönderimden sonra: GitHub Pages yayını bitince, içeriği değişen ve yayınlanmış (sitemap'teki)
+# sayfaları IndexNow'a (Bing, Yandex vb.) bildirir. Hata olursa yalnızca log'a yazar; yayını etkilemez.
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+  pages: read
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: GitHub Pages yayınını bekle
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in $(seq 1 40); do
+            state=$(gh api "repos/${{ github.repository }}/pages/builds/latest" --jq '.status + " " + .commit' 2>/dev/null || echo "bilinmiyor -")
+            echo "[$i] Pages: $state"
+            status=${state%% *}; commit=${state#* }
+            if [ "$status" = "built" ] && git merge-base --is-ancestor "${{ github.sha }}" "$commit" 2>/dev/null; then exit 0; fi
+            if [ "$status" = "errored" ] && [ "$commit" = "${{ github.sha }}" ]; then echo "Pages yayını hatalı; bildirim yine de denenecek."; exit 0; fi
+            sleep 20
+          done
+          echo "Pages yayını 13 dakikada bitmedi; bildirim yine de denenecek."
+      - name: Değişen sayfaları bildir
+        run: node scripts/indexnow.mjs --from "${{ github.event.before }}" --to "${{ github.sha }}" || true

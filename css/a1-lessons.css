@@ -139,3 +139,8 @@
 .academy-theme #page-grammar .a1-article--static .a1-practice h2{margin-top:0}
 .academy-theme #page-grammar .a1-article--static .a1-author h2{margin:0 0 2px;font-size:var(--ba-lead)}
 .a1-article--static :is(.a1-section,.a1-practice){scroll-margin-top:96px}
+/* Hatırlatma kutusu (bölümde "box": önceki seviyeden kısa tekrar) ve başka seviyeye giden benzer konu etiketi */
+.a1-box{margin:18px 0;padding:16px 20px;border:2px solid var(--ba-accent);border-radius:var(--ba-radius-small);background:var(--ba-paper)}
+.a1-box strong{display:block;margin-bottom:6px;font-family:var(--ba-serif);font-size:var(--ba-lead);color:var(--ba-ink)}
+#page-grammar .a1-box p{margin:6px 0 0;line-height:1.6;color:var(--ba-ink)}
+.a1-related-level{flex:none;margin-right:auto;padding:2px 8px;border-radius:999px;background:var(--ba-paper-2);font-family:var(--ba-sans,inherit);font-size:var(--ba-small);font-weight:700}

@@ -2,6 +2,14 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-17 · B2 Adjektivdeklination vertieft: ders + 200 soru, konu "hazır" (dal `claude/b2-adjektivdeklination`)
+
+- **Kapsam (öğretmenin isteği: A2/B1 tekrarı yok):** A2'deki temel tablolar (der/ein/kein/artikelsiz, edatlar) yeniden çalışılmıyor. Paketler: 1 Genitiv mit Artikel · 2 Genitiv ohne Artikel (trotz starken Regens) · 3 Mehrere Adjektive · 4 alle, diese, welche, die beiden · 5 einige, viele, wenige, mehrere · 6 viel, wenig, etwas, mehr · 7 dessen/deren + Adjektiv · 8 dunkel, teuer, hoch · 9 lila, rosa, Berliner · 10 Komparativ/Superlativ als Attribut · 11 Zahlwörter · 12 Nominalisierte Adjektive in Gruppen · 13 Partizipien als Attribute · 14 Lange Nominalgruppen · 15 Apposition und als-Gruppen · 16 Genitivattribute · 17 Fehlerkorrektur · 18 Anzeigen und Beschreibungen · 19 B2 Mix · 20 Master Challenge.
+- **Tek doğru cevap:** Duden'e göre iki ekin de mümkün olduğu kelimelerle (beide, solche, manche, sämtliche; wenig + çoğul) seçmeli soru yok; derste SSS'de açıklanıyor. Virgül kuralı gri alanda kaldığı için virgül sorusu çıkarıldı. Yazılı sorularda iki doğru yazım kabul ediliyor (neuestem/neustem, achtziger/80er, lila/lilafarbene).
+- **Ders:** `data/b2-grammar.json` → adjektivdeklination-b2 (8 bölüm: "Kasus'u kim gösteriyor?" + A2 kutusu, Genitiv tablosu, birden fazla sıfat, alle–viele tablosu, değişmeyen kelimeler, dessen/deren + Apposition + als (B1 kutusu), özel biçimler ve uzun gruplar, sık hatalar). Legacy listesinden çıktı; SEO; kurs sayfası (TR/DE) bağlantısı. Arama dizini 896 paket.
+- **Kelime listesi:** 36 yeni isim `"checked": false`; 3'ü "emin değilim" (Gehalt, Leiter, Single). Gehalt ve Leiterin, Funktionsverbgefüge dalındakiyle aynı tanımla eklendi (birleştirmede çakışma tek satırlık olacak).
+- **Test:** `tests/alistirma-b2-yeni.mjs adjektivdeklination-b2` (200 soru), `tests/gramer-b2.mjs`, `tests/vocab.mjs`, `tests/search.mjs`, `npm test`, check-grammar, sozluk, build-search-index, check-versions geçti.
+
 ## 2026-11-16 · B2 gramer dersleri, PR 3: Partizip II, Genitivpräpositionen, je … desto (dal `claude/b2-dersler-2`)
 
 - **Dersler (`data/b2-grammar.json`):** Partizip II (7 bölüm: oluşum + A1–A2 Perfekt kutusu, ayrılabilen/ayrılamayan/-ieren, edilgen ve bitmiş anlam, dört Kasus'ta çekim, Relativsatz → Partizip II + B1 Passiv kutusu, genişletilmiş gruplar, sık hatalar) · Präpositionen mit Genitiv (7 bölüm: Genitiv tekrarı + B1 kutusu, sebep/karşıtlık, zaman, yer, anstatt/anstelle/mittels, günlük dilde Dativ, sık hatalar) · je … desto (7 bölüm: yapı, Komparativ + A2 kutusu, fiil sırası, mehr/weniger, umso ve sıra değişimi, modal/dönüşlü/ayrılabilen fiiller, sık hatalar). Bölümler mevcut 20'şer paketle uyumlu.

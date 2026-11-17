@@ -2621,6 +2621,353 @@
         "de": "Je … desto – Erklärung auf Türkisch mit Beispielen zu Komparativ und Verbstellung.",
         "en": "The more … the more – Turkish explanation with examples of comparatives and word order."
       }
+    },
+    {
+      "id": "adjektivdeklination-b2",
+      "title": "Adjektivdeklination vertieft – B2’de zorlaşan sıfat ekleri",
+      "lead": "A2’de sıfat eklerinin temel tablolarını öğrendin: der neue, ein neuer, mit dem neuen … B2 metinlerinde daha zor durumlar karşına çıkar: trotz starken Regens, viele junge Leute ama alle jungen Leute, viel frisches Obst, der Mann, dessen neues Auto … Bu derste tabloları tekrar etmek yerine tek bir soruyla çalışacağız: Cinsiyeti ve Kasus’u kim gösteriyor? Cevap bir artikel ise sıfat zayıf, kimse göstermiyorsa sıfat güçlü ek alır.",
+      "sections": [
+        {
+          "title": "1 · Tek soru: Kasus’u kim gösteriyor?",
+          "paragraphs": [
+            "Sıfat ekleri bir iş bölümüdür. İsmin önündeki kelime (der, dieser, alle …) cinsiyeti ve Kasus’u açıkça gösteriyorsa sıfat “dinlenir” ve zayıf ek alır: -e veya -en. Önündeki kelime bunu göstermiyorsa (ein, mein, zwei, viel, dessen) ya da hiç kelime yoksa, bu görevi sıfat üstlenir ve güçlü ek alır: -er, -es, -em, -e.",
+            "B2’deki bütün zor durumlar bu kurala dayanır. Yeni bir kelimeyle karşılaştığında kendine sor: Bu kelime der/die/das gibi mi davranıyor, yoksa sıfat gibi mi? Ya da hiç değişmiyor mu?",
+            "Aşağıdaki bölümlerde bu sorunun cevabını grup grup göreceğiz."
+          ],
+          "box": {
+            "title": "A2’den hatırlatma: zayıf ve güçlü ekler",
+            "paragraphs": [
+              "der neue Kollege (der gösteriyor → zayıf -e), ein neuer Kollege (ein eril Nominativ’i göstermiyor → güçlü -er), neuer Kollege (artikel yok → güçlü -er). B2’de aynı mantığı yeni kelimelere uygulayacaksın."
+            ]
+          },
+          "examples": [
+            {
+              "de": "Alle neuen Kollegen sind nett.",
+              "tr": "Bütün yeni iş arkadaşları kibar.",
+              "note": "alle gösteriyor → zayıf -en"
+            },
+            {
+              "de": "Viele neue Kollegen kommen aus Spanien.",
+              "tr": "Birçok yeni iş arkadaşı İspanya’dan geliyor.",
+              "note": "viele göstermiyor → güçlü -e"
+            },
+            {
+              "de": "Trotz starken Regens gingen wir spazieren.",
+              "tr": "Şiddetli yağmura rağmen yürüyüşe çıktık.",
+              "note": "Regens’in -s’i gösteriyor → -en"
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "der, dieser, alle, welche",
+                "gösterir → sıfat zayıf (-e/-en)"
+              ],
+              [
+                "ein, mein, zwei, viele, dessen",
+                "göstermez → sıfat güçlü"
+              ],
+              [
+                "viel, mehr, lila, Berliner",
+                "hiç değişmez"
+              ]
+            ],
+            "caption": "Önce ismin önündeki kelimeye bak."
+          }
+        },
+        {
+          "title": "2 · Genitiv: artikelle ve artikelsiz",
+          "paragraphs": [
+            "Artikel veya iyelik varsa Genitiv’de sıfat her zaman -en alır: des neuen Kollegen, einer erfahrenen Ärztin, meiner alten Großeltern.",
+            "Artikel yoksa iki durum vardır. Dişil ve çoğulda sıfat -er alır: statt frischer Milch, wegen hoher Kosten. Eril ve nötrde ise isim zaten -s ile Genitiv’i gösterir; bu yüzden sıfat -es değil -en alır: trotz starken Regens, wegen schlechten Wetters. Bu, güçlü çekimin tek istisnasıdır.",
+            "Artikelsiz çoğulda Genitiv görünmüyorsa (zwei Wochen gibi) von + Dativ kullanılır: die Wünsche von jungen Kunden."
+          ],
+          "examples": [
+            {
+              "de": "Das ist das Büro des neuen Abteilungsleiters.",
+              "tr": "Bu, yeni bölüm müdürünün odası.",
+              "note": "des → -en"
+            },
+            {
+              "de": "Trotz schlechten Wetters fand das Fest statt.",
+              "tr": "Kötü havaya rağmen kutlama yapıldı.",
+              "note": "nötr, artikelsiz → -en"
+            },
+            {
+              "de": "Wegen hoher Kosten wurde das Projekt gestoppt.",
+              "tr": "Yüksek maliyetler yüzünden proje durduruldu.",
+              "note": "çoğul, artikelsiz → -er"
+            }
+          ],
+          "table": {
+            "headers": [
+              "Genitiv",
+              "Eril / Nötr",
+              "Dişil",
+              "Çoğul"
+            ],
+            "rows": [
+              [
+                "artikelle",
+                "des neuen Plans",
+                "der neuen Regel",
+                "der neuen Regeln"
+              ],
+              [
+                "ein/mein ile",
+                "eines neuen Plans",
+                "einer neuen Regel",
+                "meiner neuen Regeln"
+              ],
+              [
+                "artikelsiz",
+                "neuen Plans (!)",
+                "neuer Regel",
+                "neuer Regeln"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "3 · Birden fazla sıfat",
+          "paragraphs": [
+            "Bir isimden önce iki veya daha fazla sıfat varsa hepsi aynı eki alır: ein großes, helles Zimmer; mit frischem, warmem Brot; der alte, kranke Mann.",
+            "İkinci sıfat birincinin ekine bakarak zayıflamaz. mit gutem, alten Wein yanlıştır; artikel olmadığı için ikisi de güçlü -em alır: mit gutem, altem Wein.",
+            "Bir sıfatı niteleyen zarflar (sehr, frisch, gut, hoch) ek almaz: frisch gepresster Saft, ein gut bezahlter Job, hoch motivierte Mitarbeiter."
+          ],
+          "examples": [
+            {
+              "de": "Wir suchen ein großes, helles Zimmer.",
+              "tr": "Büyük, aydınlık bir oda arıyoruz.",
+              "note": ""
+            },
+            {
+              "de": "Mit gutem, altem Wein feierten wir das Jubiläum.",
+              "tr": "Yıldönümünü iyi, eski bir şarapla kutladık.",
+              "note": "ikisi de -em"
+            },
+            {
+              "de": "Sie hat einen gut bezahlten Job.",
+              "tr": "İyi maaşlı bir işi var.",
+              "note": "gut: zarf, eksiz"
+            }
+          ]
+        },
+        {
+          "title": "4 · alle gibi mi, viele gibi mi?",
+          "paragraphs": [
+            "alle, diese, welche, jede ve die beiden belirli artikel gibi davranır: Kasus’u gösterir, sonraki sıfat zayıf ek alır: alle neuen Mitarbeiter, welche spannenden Bücher, die beiden jungen Schwestern.",
+            "viele, einige, wenige, mehrere, andere ve sayılar (zwei, drei …) sıfat gibi davranır ya da hiç çekilmez; Kasus’u göstermez. Sonraki sıfat güçlü ek alır: viele junge Leute, mehrere kleine Fehler, zwei neue Kollegen.",
+            "Dativ çoğulda fark kaybolur, çünkü her şey -en olur: mit allen neuen / mit vielen neuen Kollegen. Fark Nominativ, Akkusativ ve Genitiv’de görünür: aller neuen – vieler neuer."
+          ],
+          "examples": [
+            {
+              "de": "Alle wichtigen Dokumente liegen im Ordner.",
+              "tr": "Bütün önemli belgeler klasörde.",
+              "note": "alle → -en"
+            },
+            {
+              "de": "Viele wichtige Dokumente fehlen noch.",
+              "tr": "Birçok önemli belge hâlâ eksik.",
+              "note": "viele → -e"
+            },
+            {
+              "de": "Die zwei neuen Kollegen sitzen nebenan. – Zwei neue Kollegen sitzen nebenan.",
+              "tr": "İki yeni iş arkadaşı yan odada oturuyor.",
+              "note": "die varsa zayıf, yoksa güçlü"
+            }
+          ],
+          "table": {
+            "headers": [
+              "Grup",
+              "Kelimeler",
+              "Sıfat (Nominativ çoğul)"
+            ],
+            "rows": [
+              [
+                "artikel gibi",
+                "die, diese, alle, welche, keine, meine",
+                "alle neuen Mitarbeiter"
+              ],
+              [
+                "sıfat gibi",
+                "viele, einige, wenige, mehrere, andere",
+                "viele neue Mitarbeiter"
+              ],
+              [
+                "çekilmeyen",
+                "zwei, drei, vier …",
+                "zwei neue Mitarbeiter"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "5 · Hiç değişmeyen kelimeler",
+          "paragraphs": [
+            "Tekil isimlerden önce viel, wenig, etwas (= biraz), mehr ve weniger ek almaz. Kasus’u göstermedikleri için sonraki sıfat güçlü ek alır: viel frisches Obst, mit wenig heißem Öl, etwas kaltes Wasser, mehr qualifiziertes Personal. Çoğulda viel ve wenig çekilir: viele, wenige.",
+            "Bazı sıfatlar hiç çekilmez: lila, rosa, prima ve şehir adlarından yapılan -er sıfatları: ein lila Kleid, im Kölner Dom, der Berliner Mauer. On yıllar da öyledir: die achtziger Jahre.",
+            "Bu kelimelerden sonra gelen başka bir sıfat normal çekilir: einen rosa warmen Pullover."
+          ],
+          "examples": [
+            {
+              "de": "Im Sommer esse ich viel frisches Obst.",
+              "tr": "Yazın çok taze meyve yerim.",
+              "note": "viel: eksiz"
+            },
+            {
+              "de": "Wir trafen uns vor dem Frankfurter Bahnhof.",
+              "tr": "Frankfurt garının önünde buluştuk.",
+              "note": "Frankfurter: eksiz"
+            },
+            {
+              "de": "Sie hat ein lila Kleid gekauft.",
+              "tr": "Mor bir elbise aldı.",
+              "note": "lila: eksiz"
+            }
+          ]
+        },
+        {
+          "title": "6 · dessen, deren, açıklayıcı ek ve als",
+          "paragraphs": [
+            "İlgi zamiri dessen ve deren hiç değişmez ve sonraki ismin Kasus’unu göstermez. Bu yüzden arkasındaki sıfat güçlü ek alır: der Nachbar, dessen neues Auto …; die Stadt, in deren historischem Zentrum wir wohnen. Kasus’u yan cümledeki göreve göre bul.",
+            "Bir ismi açıklayan ek grup (Apposition) ait olduğu ismin Kasus’unu alır: mit Herrn Weber, unserem neuen Chef (Dativ). als ile kurulan grup da aynı kurala uyar: Ich kenne ihn als einen zuverlässigen Kollegen (Akkusativ); Als erfahrener Ingenieur verdient er gut (Nominativ).",
+            "Burada Türkçe düşünmek yanıltabilir; Türkçede açıklayıcı grup ek almaz. Almancada ise bir önceki ismin Kasus’unu taşır."
+          ],
+          "box": {
+            "title": "B1’den hatırlatma: dessen ve deren",
+            "paragraphs": [
+              "dessen eril ve nötr bir isme, deren dişil isme ve çoğula döner: der Mann, dessen Auto …; die Frau, deren Auto … Seçimi arkadaki isim değil, öndeki isim belirler."
+            ]
+          },
+          "examples": [
+            {
+              "de": "Der Autor, mit dessen letztem Roman wir arbeiten, kommt nach Berlin.",
+              "tr": "Son romanı üzerinde çalıştığımız yazar Berlin’e geliyor.",
+              "note": "dessen → güçlü -em"
+            },
+            {
+              "de": "Ich habe mit Frau Schulz, unserer neuen Nachbarin, gesprochen.",
+              "tr": "Yeni komşumuz Bayan Schulz ile konuştum.",
+              "note": "Apposition: Dativ"
+            },
+            {
+              "de": "Sie arbeitet als selbstständige Übersetzerin.",
+              "tr": "Serbest çevirmen olarak çalışıyor.",
+              "note": "als: Nominativ"
+            }
+          ]
+        },
+        {
+          "title": "7 · Özel biçimler ve uzun isim grupları",
+          "paragraphs": [
+            "Bazı sıfatlar ek alınca değişir: dunkel → dunkle, flexibel → flexible, teuer → teure, sauer → saure, hoch → hohe. Komparativ ve Superlativ isimden önce normal ek alır: ein besseres Angebot, die höchsten Preise; mehr ve weniger hiç değişmez.",
+            "İsimleşmiş sıfatlar ve Partizip’ler de aynı kurallara uyar: alle Beteiligten ama einige Angestellte; ein Bekannter; die steigenden Preise, ein gut bezahlter Job.",
+            "Uzun gruplarda artikel ile isim arasına başka bilgiler girer: mit einem seit Jahren in Berlin lebenden jungen Künstler. Önce artikeli ve ismi bul; aradaki bütün sıfat ve Partizip’ler aynı eki alır."
+          ],
+          "examples": [
+            {
+              "de": "Wir wohnen in einem hohen Gebäude.",
+              "tr": "Yüksek bir binada oturuyoruz.",
+              "note": "hoch → hohen"
+            },
+            {
+              "de": "Alle Beteiligten wurden informiert.",
+              "tr": "Bütün ilgililer bilgilendirildi.",
+              "note": "alle → -en"
+            },
+            {
+              "de": "Die Ergebnisse der im letzten Jahr durchgeführten Studie wurden veröffentlicht.",
+              "tr": "Geçen yıl yapılan araştırmanın sonuçları yayımlandı.",
+              "note": "der (Genitiv) → -en"
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "mit einem",
+              "seit Jahren in Berlin",
+              "lebenden jungen",
+              "Künstler"
+            ],
+            "labels": [
+              "artikel: Dativ eril",
+              "eklenen bilgi",
+              "hepsi aynı ek (-en)",
+              "isim"
+            ]
+          }
+        },
+        {
+          "title": "8 · Hata kontrolü: Türk öğrencilerin sık yaptığı hatalar",
+          "paragraphs": [
+            "Hata 1: alle ve viele’yi aynı çekmek. alle neue Kollegen ve viele neuen Kollegen yanlıştır; doğrusu alle neuen, viele neue.",
+            "Hata 2: Artikelsiz Genitiv’de -es kullanmak. trotz starkes Regens yanlıştır; isim -s aldığı için sıfat -en alır: trotz starken Regens.",
+            "Hata 3: İkinci sıfatı zayıflatmak. mit frischem, warmen Brot yanlıştır; ikisi de -em: frischem, warmem.",
+            "Hata 4: dessen/deren’den sonra zayıf ek kullanmak. dessen neue Auto yanlıştır; dessen Kasus göstermez: dessen neues Auto.",
+            "Hata 5: Çekilmeyen kelimelere ek eklemek. ein lilanes Kleid, im Kölnern Dom, mehre Leute yanlıştır."
+          ],
+          "examples": [
+            {
+              "de": "Falsch: Viele neuen Studenten suchen eine Wohnung. → Richtig: Viele neue Studenten suchen eine Wohnung.",
+              "tr": "Birçok yeni öğrenci ev arıyor.",
+              "note": ""
+            },
+            {
+              "de": "Falsch: Wir haben zwei kleinen Kinder. → Richtig: Wir haben zwei kleine Kinder.",
+              "tr": "İki küçük çocuğumuz var.",
+              "note": ""
+            },
+            {
+              "de": "Falsch: Das ist eine teuere Wohnung. → Richtig: Das ist eine teure Wohnung.",
+              "tr": "Bu pahalı bir daire.",
+              "note": ""
+            }
+          ]
+        }
+      ],
+      "summary": [
+        "Önündeki kelime cinsiyeti ve Kasus’u gösteriyorsa sıfat zayıf (-e/-en), göstermiyorsa güçlü ek alır.",
+        "Genitiv: artikelden sonra -en; artikelsiz dişil/çoğul -er, artikelsiz eril/nötr -en (trotz starken Regens).",
+        "alle, diese, welche, die beiden → zayıf; viele, einige, mehrere, zwei → güçlü; birden fazla sıfat aynı eki alır.",
+        "viel, wenig, etwas, mehr, lila, Berliner değişmez; dessen/deren’den sonra sıfat güçlü ek alır.",
+        "Apposition ve als grubu ait olduğu ismin Kasus’unu alır; dunkel → dunkle, teuer → teure, hoch → hohe."
+      ],
+      "faq": [
+        {
+          "question": "beide, solche, manche’den sonra hangi ek gelir?",
+          "answer": "Bu kelimelerde iki biçim de kullanılır: beide jungen / beide junge Leute, solche großen / solche große Probleme. Zayıf ek (-en) daha yaygındır. Artikelle (die beiden jungen Leute) ise yalnızca zayıf ek doğrudur. Bu yüzden alıştırmalarda bu kelimelerle seçmeli soru sorulmuyor."
+        },
+        {
+          "question": "Tabloyu ezberlemeden eki nasıl bulurum?",
+          "answer": "Önce ismin cinsiyetini, sayısını ve Kasus’unu belirle. Sonra önündeki kelimeye bak: bu bilgileri o gösteriyorsa sıfat -e veya -en alır; göstermiyorsa sıfat, belirli artikelin son harfini alır (der → -er, das → -es, dem → -em, die → -e). Tek istisna artikelsiz eril/nötr Genitiv’dir: -en."
+        },
+        {
+          "question": "Konuşurken bu kadar dikkat etmem gerekiyor mu?",
+          "answer": "Konuşmada küçük ek hataları anlamayı genellikle bozmaz. Yazılı sınavlarda ve resmî metinlerde ise sıfat ekleri puanlanır. Önce sık kalıpları (alle neuen, viele neue, trotz starken Regens) ezberle; bunlar zamanla otomatik hâle gelir."
+        }
+      ],
+      "related": [
+        "A2/adjektivdeklination",
+        "partizip-i",
+        "nominalisierung"
+      ],
+      "check": {
+        "question": "Mit vielen jungen Leuten, aber ohne ___ Erfahrung (groß) startete das Projekt.",
+        "answer": "große",
+        "why": "ohne Akkusativ ister; Erfahrung dişil ve artikelsiz → sıfat güçlü ek -e alır: ohne große Erfahrung."
+      },
+      "titleTranslations": {
+        "tr": "Adjektivdeklination vertieft",
+        "de": "Adjektivdeklination vertieft",
+        "en": "Advanced adjective endings"
+      },
+      "description": {
+        "tr": "B2 sıfat çekimi: Genitiv, alle/viele, viel/wenig, birden fazla sıfat, dessen/deren, Apposition ve özel biçimler.",
+        "de": "Adjektivdeklination vertieft – Erklärung auf Türkisch mit Beispielen zu Genitiv, alle/viele und Sonderformen.",
+        "en": "Advanced adjective endings – Turkish explanation with examples of the genitive, alle/viele and special forms."
+      }
     }
   ]
 }

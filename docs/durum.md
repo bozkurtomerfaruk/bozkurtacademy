@@ -2,6 +2,14 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-17 · B2 Funktionsverbgefüge: ders + 200 soru, konu "hazır" (dal `claude/b2-funktionsverbgefuege`)
+
+- **Paketler (`data/b2/funktionsverbgefuege.json`, 20 × 10):** 1 Welches Verb passt? · 2 treffen / stellen · 3 nehmen · 4 bringen / kommen · 5 stehen / stellen / setzen · 6 finden / leisten / geben · 7 Welche Präposition? · 8 zur, zum, ins · 9 FVG → einfaches Verb · 10 einfaches Verb → FVG · 11 kein oder nicht? · 12 Wortstellung · 13 Perfekt und Modalverben · 14 Passivbedeutung · 15 Beginn, Verlauf, Ende · 16 Bedeutung erkennen · 17 Fehlerkorrektur · 18 Arbeit und Beruf · 19 Medien und Politik · 20 Master Challenge. Her sorunun kendi TR/DE/EN açıklaması var.
+- **İki doğru cevap riski (öğretmenin uyarısı):** "Welches Verb passt?" ve "Bedeutung" sorularında seçeneklere, o isimle de kullanılabilen ikinci bir fiil konmadı. İki fiilin de doğru olduğu kalıplar (eine Entscheidung treffen/fällen, Maßnahmen treffen/ergreifen, Auskunft geben/erteilen, in Gang setzen/bringen, Stellung nehmen/beziehen) yalnızca yazılı sorularda var ve ikisi de kabul ediliyor. in Frage stellen (şüphe etmek) ile in Frage kommen (mümkün olmak) ayrı sorularda ve derste karşılaştırılıyor.
+- **Ders:** `data/b2-grammar.json` → funktionsverbgefuege (8 bölüm: tanım, sık fiiller tablosu, stellen–stehen / bringen–kommen çiftleri, edilgen anlam, başlangıç–süreç–son, edat/artikel ve fiil sırası, kein/nicht, karıştırılanlar ve sık hatalar). Legacy listesinden çıktı (geriye yalnızca adjektivdeklination-b2 kaldı); SEO metni; kurs sayfası (TR/DE) ve seviye testi bağlantısı (`placement.js` 10). Arama dizini 896 paket.
+- **Kelime listesi:** 60 yeni isim `"checked": false`; 6'sı "emin değilim" (Artikel, Bau, Flut, Gehalt, Können, Schalter: birden fazla anlam veya isimleşmiş fiil) ve `docs/sozluk-bekleyen.csv`'nin en üstünde.
+- **Test:** `tests/alistirma-b2-yeni.mjs funktionsverbgefuege` (200 soru), `tests/gramer-b2.mjs`, `tests/vocab.mjs`, `tests/search.mjs` (gramer aramasında "olumsuz" artık 3 bölüm buluyor; yeni dersin "Olumsuzluk" bölümü nedeniyle test güncellendi), `npm test`, check-grammar, sozluk, build-search-index, check-versions geçti.
+
 ## 2026-11-16 · B2 gramer dersleri, PR 3: Partizip II, Genitivpräpositionen, je … desto (dal `claude/b2-dersler-2`)
 
 - **Dersler (`data/b2-grammar.json`):** Partizip II (7 bölüm: oluşum + A1–A2 Perfekt kutusu, ayrılabilen/ayrılamayan/-ieren, edilgen ve bitmiş anlam, dört Kasus'ta çekim, Relativsatz → Partizip II + B1 Passiv kutusu, genişletilmiş gruplar, sık hatalar) · Präpositionen mit Genitiv (7 bölüm: Genitiv tekrarı + B1 kutusu, sebep/karşıtlık, zaman, yer, anstatt/anstelle/mittels, günlük dilde Dativ, sık hatalar) · je … desto (7 bölüm: yapı, Komparativ + A2 kutusu, fiil sırası, mehr/weniger, umso ve sıra değişimi, modal/dönüşlü/ayrılabilen fiiller, sık hatalar). Bölümler mevcut 20'şer paketle uyumlu.

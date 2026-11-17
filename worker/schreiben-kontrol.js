@@ -67,9 +67,12 @@ Seviye A1 (görev adında "A1" geçiyorsa; kısa mesaj, yaklaşık 30 kelime):
 - A1'de beklenmeyen yapıları (yan cümle, Präteritum, Konjunktiv II, Passiv) önerme; bunların yokluğunu eksik sayma. Düzeltmede de sadece A1 kelime ve yapılarını kullan.
 - Açıklamaları en basit Türkçeyle, tek kısa cümleyle yaz.
 - Ama A1'de de şunlar her zaman hatadır, mutlaka işaretle: çekimli fiilin yeri ve mastarın (kommen, gehen …) cümle sonunda olmaması, hâl ve çoğul ekleri, du/Sie karışması, uygunsuz hitap ve kapanış, hitaptan sonraki satırın büyük harfle başlaması (Das Fenster … → das Fenster …).
+Seviye A2 (sadece görev adı "Goethe A2 ·" ile başlıyorsa): A1'deki iki kural burada da geçerli (basit ama doğru cümleyi güzelleştirme; Konjunktiv II, Passiv, Genitiv önerme). weil/dass/wenn, Perfekt ve modal fiil hatalarını mutlaka işaretle. Kısa mesajda "Bis gleich!" kapanışı ve özne düşmesi ("Komme später.") doğrudur.
 - Sonra düzeltilmiş metnin tamamını ver.
 - SADECE şu biçimde JSON ile cevap ver:
 {"fehler":[{"original":"...","korrektur":"...","erklaerung":"..."}],"korrigierter_text":"..."}
+- Her maddede üç alan da zorunludur: original, korrektur VE erklaerung (Türkçe açıklama). erklaerung'u asla boş bırakma ya da atlama.
+- korrektur'da "..." ya da "…" kullanma; düzeltilmiş ifadeyi tam yaz. Ayrılabilen fiilde original'e fiilden ayrılan ekin geleceği yere kadar olan parçayı al ("Ich ankomme erst am Samstag" → "Ich komme erst am Samstag an").
 - Hata yoksa: {"fehler":[],"korrigierter_text":"<metnin aslı>"}`;
 
 const EXAM_NAMES = { goethe: 'Goethe', telc: 'telc', testdaf: 'TestDaF', dtz: 'DTZ', osd: 'ÖSD' };
@@ -121,12 +124,19 @@ const LOWER_AFTER_GREETING = new Set(['danke', 'vielen', 'herzlichen', 'ich', 'w
 const DU_WORD = /^(du|dich|dir|dein|deine|deinen|deinem|deiner|deines|euch|euer|eure|euren|eurem|eurer)$/i;
 const onlyDuCase = (original, korrektur) => original !== korrektur && original.toLowerCase() === korrektur.toLowerCase()
   && original.split(/\s+/).every((word, i) => { const other = korrektur.split(/\s+/)[i]; return word === other || DU_WORD.test(word.replace(/[.,!?;:]+$/, '')); });
+const DU_TO_SIE = (original, korrektur) => /\b(du|dich|dir|dein\w*|kannst|hast|bist|willst|möchtest)\b/i.test(original)
+  && /\b(Sie|Ihnen|Ihr\w*)\b/.test(korrektur) && !/\b(du|dich|dir|dein\w*)\b/i.test(korrektur);
 export function cleanResult(raw, text) {
   const s = String(raw || '');
   const from = s.indexOf('{'), to = s.lastIndexOf('}');
   if (from < 0 || to <= from) return null;
   let data;
-  try { data = JSON.parse(s.slice(from, to + 1)); } catch (_) { return null; }
+  // Model ara sıra anahtardan sonra iki noktayı unutuyor ("erklaerung "'danken' …); bu tek yazım hatası onarılır.
+  const body = s.slice(from, to + 1);
+  try { data = JSON.parse(body); }
+  catch (_) {
+    try { data = JSON.parse(body.replace(/"(original|korrektur|erklaerung|fehler|korrigierter_text)\s+"(?!\s*:)/g, '"$1":"')); } catch (__) { return null; }
+  }
   const list = Array.isArray(data?.fehler) ? data.fehler : null;
   if (!list) return null;
   const seen = new Set();
@@ -142,7 +152,10 @@ export function cleanResult(raw, text) {
   for (const item of list) {
     const original = typeof item?.original === 'string' ? item.original.trim() : '';
     const korrektur = typeof item?.korrektur === 'string' ? item.korrektur.trim() : '';
-    const erklaerung = typeof item?.erklaerung === 'string' ? item.erklaerung.trim() : '';
+    let erklaerung = typeof item?.erklaerung === 'string' ? item.erklaerung.trim() : '';
+    // Model bazen açıklamayı atlıyor. du → Sie düzeltmesinde (resmiyet) açıklama kesin olarak bilindiği için eklenir;
+    // başka açıklamasız maddeler (aşağıda) yine atılır.
+    if (!erklaerung && DU_TO_SIE(original, korrektur)) erklaerung = 'Bu kişiye Sie ile yazılır: du yerine Sie, dir/dich yerine Ihnen/Sie, dein yerine Ihr kullanılır.';
     if (!original || !korrektur || !erklaerung || original === korrektur || !text.includes(original) || seen.has(original)) continue;
     if (capitalizesAfterGreeting(original, korrektur)) continue;
     if (onlyDuCase(original, korrektur)) continue;
@@ -321,10 +334,12 @@ export default {
         return json({ status: 'limit', scope: count(mine) >= LIMIT_STUDENT ? 'student' : 'site' }, 200, okOrigin);
       }
 
-      let raw;
-      try { raw = await runModel(env, await taskInfo(env, w), w.text); }
-      catch (error) { console.error('model', String(error)); await skip('error'); return json({ status: 'unavailable' }, 503, okOrigin); }
-      const result = cleanResult(raw, w.text);
+      // Model ara sıra okunamayan (JSON olmayan) bir cevap veriyor; o zaman bir kez daha sorulur (ücretsiz kotadan, ücret yok).
+      let result = null;
+      try {
+        const task = await taskInfo(env, w);
+        for (let attempt = 0; attempt < 2 && !result; attempt++) result = cleanResult(await runModel(env, task, w.text), w.text);
+      } catch (error) { console.error('model', String(error)); await skip('error'); return json({ status: 'unavailable' }, 503, okOrigin); }
 
       const limitWrite = (path, doc, n) => ({
         update: { name: store.name(path), fields: { day: encode(day), count: encode(n) } },

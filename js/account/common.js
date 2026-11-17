@@ -167,7 +167,7 @@ export async function topicErrorsText(levelId, value, lang = 'tr'){
 // Schreiben (sınav hazırlığı): yazma görevleri js/examsData.js'teki "schreiben" bölümlerinden okunur.
 // Ödevde konu "schreiben", alıştırma "goethe-b1-1-set-1" (sınav-seviye-teil-set); metinler users/{uid}/writings'te.
 export const WRITING = 'schreiben';
-const EXAMS_DATA = 'js/examsData.js?v=22'; // index.html'deki sürümle aynı tutulmalı
+const EXAMS_DATA = 'js/examsData.js?v=23'; // index.html'deki sürümle aynı tutulmalı
 let examsData = null;
 export function loadExamsData(){
   examsData ||= new Promise((resolve, reject) => {
@@ -181,7 +181,8 @@ export function loadExamsData(){
   return examsData;
 }
 
-// [{ id: 'goethe-b1-1-set-1', exam, level, teil, set, title: 'Goethe B1 · Teil 1 · Neue Wohnung', catalogLevel: 'B1' }]
+// [{ id: 'goethe-b1-1-set-1', exam, level, teil, set, title: 'Goethe B1 · Teil 1 · Neue Wohnung', catalogLevels: ['B1'] }]
+// DTZ ("A2-B1") hem A2'de hem B1'de seçilebilir.
 export async function writingTasks(){
   const data = await loadExamsData();
   const list = [];
@@ -192,7 +193,7 @@ export async function writingTasks(){
       list.push({
         id: `${exam.id}-${level.id}-${index + 1}-${e.set}`, exam: exam.id, level: level.id, teil: index + 1, set: e.set,
         title: `${exam.shortName || exam.name.replace(/-Zertifikat$/, '')} ${localize(code)} · Teil ${index + 1} · ${localize(e.title)}`,
-        catalogLevel: String(localize(code)).toUpperCase()
+        catalogLevels: catalogLevelsOf(level.id, code)
       });
     }));
   }
@@ -255,7 +256,7 @@ export async function loadWritings(uid){
 // Ödev oluştururken: bir konunun alıştırmaları (data/<seviye>/<konu>.json).
 export async function loadTopicExercises(levelId, topicId){
   if(topicId === WRITING){
-    return (await writingTasks()).filter((w) => w.catalogLevel === levelId).map((w) => ({ id: w.id, title: w.title }));
+    return (await writingTasks()).filter((w) => w.catalogLevels.includes(levelId)).map((w) => ({ id: w.id, title: w.title }));
   }
   if(topicId === SINAV){
     return (await examSets()).filter((s) => s.catalogLevels.includes(levelId)).map((s) => ({ id: s.id, title: s.title }));

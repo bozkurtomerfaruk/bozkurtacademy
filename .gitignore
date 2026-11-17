@@ -11,3 +11,6 @@ undefined/
 # Yerel TTS modelleri (scripts/generate-alfabe-audio.mjs, Piper ve Coqui): büyük dosyalar, asla commit etme
 .tts-modeller/
 __pycache__/
+
+# Yapay zekâ denemelerinin günlük kota kaydı (scripts/ai-deneme.mjs)
+.ai-deneme-kullanim.json

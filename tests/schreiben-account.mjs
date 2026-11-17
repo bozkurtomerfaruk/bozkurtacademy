@@ -136,10 +136,14 @@ await teacher.selectOption('#aTopic', 'sinav').catch(() => {}); await teacher.wa
 ok(await teacher.locator('#aExerciseList label', { hasText: 'telc Deutsch A1 · Schreiben · Teil 1 · Anmeldung in der Kita' }).count() === 1
   && await teacher.locator('#aExerciseList label', { hasText: 'Goethe A1 · Schreiben · Teil 1 · Beim Arzt' }).count() === 1, 'A1 sınav setlerinde telc A1 form setleri de seçilebiliyor');
 await teacher.selectOption('#aLevel', 'A2'); await teacher.waitForTimeout(300);
-ok(await teacher.locator('#aTopic option[value="schreiben"]').count() === 0, 'A2 için Schreiben yok (henüz görev yok)');
+await teacher.selectOption('#aTopic', 'schreiben').catch(() => {}); await teacher.waitForTimeout(800);
+ok(await teacher.locator('#aExerciseList label').count() === 16 && await teacher.locator('#aExerciseList label', { hasText: 'Teil 1 · Ich komme zu spät' }).count() === 1
+  && await teacher.locator('#aExerciseList label', { hasText: 'Teil 2 · Deutschkurs wechseln' }).count() === 1 && await teacher.locator('#aExerciseList label', { hasText: 'Falsche Lieferung' }).count() === 1,
+  'ödevde A2 için 16 Schreiben görevi (Goethe A2 Teil 1 ve 2, DTZ) seçilebiliyor');
 await teacher.selectOption('#aLevel', 'B1'); await teacher.waitForTimeout(300);
 await teacher.selectOption('#aTopic', 'schreiben'); await teacher.waitForTimeout(800);
-ok(await teacher.locator('#aExerciseList label').count() === 21 && await teacher.locator('#aExerciseList label', { hasText: 'Teil 3 · Teambesprechung' }).count() === 1 && await teacher.locator('#aExerciseList label', { hasText: 'telc Deutsch B1 · Teil 1 · Kursausflug' }).count() === 1, 'ödevde B1 için 21 Schreiben görevi (Goethe Teil 1–3, telc) seçilebiliyor');
+ok(await teacher.locator('#aExerciseList label').count() === 27 && await teacher.locator('#aExerciseList label', { hasText: 'Teil 3 · Teambesprechung' }).count() === 1 && await teacher.locator('#aExerciseList label', { hasText: 'telc Deutsch B1 · Teil 1 · Kursausflug' }).count() === 1
+  && await teacher.locator('#aExerciseList label', { hasText: 'Die Heizung funktioniert nicht' }).count() === 1, 'ödevde B1 için 27 Schreiben görevi (Goethe Teil 1–3, telc, DTZ) seçilebiliyor');
 await teacher.locator('#aExerciseList label', { hasText: 'Geburtstag verpasst' }).locator('input').check();
 await teacher.fill('#aTitle', 'Schreiben: Geburtstag verpasst');
 await teacher.click('#aSubmit'); await teacher.waitForURL(/ogretmen\.html/, { timeout: 15000 }).catch(() => {});

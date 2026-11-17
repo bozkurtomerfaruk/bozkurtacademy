@@ -1,0 +1,108 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-4",
+  "title": "Fahrrad kaufen",
+  "minutes": 15,
+  "sharedMinutes": 30,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "Ihre Nachbarin, Frau Schmidt, möchte ein Fahrrad verkaufen. Sie haben die Anzeige im Haus gesehen.",
+  "task": "Schreiben Sie Frau Schmidt eine E-Mail:",
+  "points": [
+    "Sagen Sie, warum Sie schreiben.",
+    "Fragen Sie nach dem Preis.",
+    "Schlagen Sie einen Termin zum Ansehen vor."
+  ],
+  "instructions": "Schreiben Sie 30–40 Wörter. Schreiben Sie zu allen drei Punkten.",
+  "words": {
+    "target": 35,
+    "min": 30,
+    "max": 40,
+    "zeroBelow": 15
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Üç maddenin hepsine yazdım: neden yazdığım, fiyat sorusu, görmek için zaman önerisi."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Komşuma Sie ile yazdım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap (Liebe Frau Schmidt,) ve kapanış (Viele Grüße + adım) var."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümleleri bağladım: und, wenn, dann."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "dass/weil/wenn'den sonra fiil sonda: Ich habe gesehen, dass Sie ein Fahrrad verkaufen."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Öneri: Kann ich es am Samstag ansehen? (mastar sonda)"
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede",
+      "items": [
+        {
+          "de": "Liebe Frau … / Sehr geehrte Frau …,",
+          "tr": "Sevgili … Hanım / Sayın … Hanım,"
+        }
+      ]
+    },
+    {
+      "group": "Grund",
+      "items": [
+        {
+          "de": "ich habe Ihre Anzeige gesehen.",
+          "tr": "ilanınızı gördüm."
+        },
+        {
+          "de": "Ich suche schon lange ein Fahrrad.",
+          "tr": "Uzun zamandır bisiklet arıyorum."
+        }
+      ]
+    },
+    {
+      "group": "Fragen und vorschlagen",
+      "items": [
+        {
+          "de": "Wie viel kostet das Fahrrad?",
+          "tr": "Bisiklet kaça?"
+        },
+        {
+          "de": "Kann ich es am … ansehen?",
+          "tr": "…'da bakabilir miyim?"
+        }
+      ]
+    },
+    {
+      "group": "Schluss",
+      "items": [
+        {
+          "de": "Viele Grüße",
+          "tr": "Selamlar"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Liebe Frau Schmidt,\nich habe im Treppenhaus gesehen, dass Sie ein Fahrrad verkaufen. Ich suche schon lange eins für die Arbeit. Wie viel kostet es? Kann ich es am Samstagvormittag ansehen?\nViele Grüße\nMurat Şahin",
+    "notes": [
+      "Üç madde: neden (Anzeige gesehen, suche ein Fahrrad), fiyat (Wie viel kostet es?), zaman (Samstagvormittag ansehen).",
+      "dass cümlesinde fiil sonda: …, dass Sie ein Fahrrad verkaufen.",
+      "eins: daha önce geçen 'ein Fahrrad' yerine (das Fahrrad → eins)."
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-3",
+  "title": "Termin beim Arzt",
+  "minutes": 15,
+  "sharedMinutes": 30,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "Sie haben morgen um 10 Uhr einen Termin bei Ihrer Hausärztin, Frau Dr. Wolf. Sie können nicht kommen.",
+  "task": "Schreiben Sie eine E-Mail an Frau Dr. Wolf:",
+  "points": [
+    "Sagen Sie, dass Sie nicht kommen können.",
+    "Erklären Sie, warum.",
+    "Bitten Sie um einen neuen Termin."
+  ],
+  "instructions": "Schreiben Sie 30–40 Wörter. Schreiben Sie zu allen drei Punkten.",
+  "words": {
+    "target": 35,
+    "min": 30,
+    "max": 40,
+    "zeroBelow": 15
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Üç maddenin hepsine yazdım: gelemediğim, neden, yeni randevu ricası."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Doktoruma Sie ile yazdım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap (Sehr geehrte Frau Dr. Wolf,) ve kapanış (Mit freundlichen Grüßen + adım) var."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümleleri bağladım: leider, weil, aber."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "weil'den sonra fiil sonda: …, weil mein Kind krank ist."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Kibar rica: Haben Sie nächste Woche einen Termin frei?"
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede",
+      "items": [
+        {
+          "de": "Sehr geehrte Frau Dr. …,",
+          "tr": "Sayın Dr. … Hanım,"
+        }
+      ]
+    },
+    {
+      "group": "Absagen",
+      "items": [
+        {
+          "de": "Leider kann ich morgen nicht kommen.",
+          "tr": "Maalesef yarın gelemiyorum."
+        },
+        {
+          "de": "…, weil mein Sohn krank ist.",
+          "tr": "…, çünkü oğlum hasta."
+        }
+      ]
+    },
+    {
+      "group": "Neuer Termin",
+      "items": [
+        {
+          "de": "Haben Sie nächste Woche einen Termin frei?",
+          "tr": "Gelecek hafta boş bir randevunuz var mı?"
+        },
+        {
+          "de": "Am besten passt mir der Vormittag.",
+          "tr": "En iyi öğleden önce uyuyor."
+        }
+      ]
+    },
+    {
+      "group": "Schluss",
+      "items": [
+        {
+          "de": "Vielen Dank.",
+          "tr": "Çok teşekkürler."
+        },
+        {
+          "de": "Mit freundlichen Grüßen",
+          "tr": "Saygılarımla"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Sehr geehrte Frau Dr. Wolf,\nleider kann ich morgen um 10 Uhr nicht zu meinem Termin kommen, weil meine Tochter krank ist. Haben Sie nächste Woche einen neuen Termin für mich frei?\nMit freundlichen Grüßen\nElif Kaya",
+    "notes": [
+      "Üç madde: gelemiyor (nicht zu meinem Termin kommen), neden (weil meine Tochter krank ist), yeni randevu.",
+      "weil cümlesinde fiil sonda: … krank ist.",
+      "Doktora resmî: Sehr geehrte Frau Dr. Wolf, … Mit freundlichen Grüßen."
+    ]
+  }
+}

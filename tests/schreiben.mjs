@@ -302,13 +302,46 @@ for (const [l, title, submit, count] of [['de', 'Dein Text', 'Abschicken und Mus
   }
 }
 
+// 6g. telc A1 (Start Deutsch 1): Goethe A1 ile aynı format; Teil 1 form (otomatik kontrol), Teil 2 kısa mesaj (~30 kelime).
+{
+  const { ctx, page } = await newPage();
+  await page.goto(B + '#exams/telc/a1/schreiben'); await page.waitForTimeout(1000);
+  const list = await page.textContent('#examView');
+  ok(['Anmeldung in der Kita', 'Termin bei der Ausländerbehörde', 'Ein Konto eröffnen', 'Eine Wohnung mieten', 'Neu bei der Arbeit', 'Kind krank: Kita', 'Termin verschieben', 'Bankkarte verloren', 'Hilfe beim Umzug', 'Schicht tauschen'].every((x) => list.includes(x)), 'telc A1: Teil 1 ve Teil 2 setleri listede');
+  await page.goto(B + '#exams/telc/a1/schreiben/1/set-1'); await page.waitForTimeout(1000);
+  ok((await page.textContent('.ft-form')).includes('Kita Sonnenblume') && await page.locator('.ft-input').count() === 4 && await page.locator('.ft-choice input').count() === 2, 'telc A1 form: Kita formu, 4 yazı alanı, 1 seçenekli alan');
+  await page.fill('#ft-1', '12.04.2022');
+  await page.fill('#ft-2', '28201 Bremen');
+  await page.fill('#ft-3', '1.9.');
+  await page.check('input[name="ft-4"][value="vormittags (bis 13 Uhr)"]');
+  await page.fill('#ft-5', 'dari');
+  await page.click('[data-ft-check]'); await page.waitForTimeout(300);
+  ok((await page.textContent('[data-ft-summary]')).includes('5 / 5 doğru'), 'telc A1 form: doğru cevaplar 5 / 5 (tarih biçimleri, küçük harf)');
+  ok(await page.locator('.ft-situation.is-checked .task-evidence[data-q="4"]').count() === 1, 'telc A1 form: dayanaklar metinde işaretli');
+  ok(await page.locator('a.task-next[href="#exams/telc/a1/schreiben/1/set-2"]').count() === 1, 'telc A1 form: sonraki set');
+  await page.goto(B + '#exams/telc/a1/schreiben/1/set-3'); await page.waitForTimeout(800);
+  await page.fill('#ft-1', '92'); await page.check('input[name="ft-4"][value="Kreditkarte"]'); await page.click('[data-ft-check]'); await page.waitForTimeout(300);
+  ok((await page.textContent('[data-ft-summary]')).includes('0 / 5') && (await page.textContent('[data-ft-row="4"] .task-result')).includes('Bankkarte'), 'telc A1 form: yanlış cevaplarda doğrusu gösteriliyor');
+  await page.goto(B + '#exams/telc/a1/schreiben/2/set-2'); await page.waitForTimeout(1000);
+  ok(await page.locator('.wt-points li').count() === 3 && (await page.textContent('.wt-task')).includes('Ausländerbehörde') && (await page.textContent('.wt-instructions')).includes('passenden Anfang und Gruß'), 'telc A1 Teil 2: durum, 3 madde, telc yönergesi');
+  ok((await page.getAttribute('#wtText', 'placeholder')).startsWith('Sehr geehrte Damen und Herren'), 'telc A1 Teil 2: resmî ipucu');
+  for (const [n, cls] of [[24, 'is-short'], [25, 'is-ok'], [40, 'is-ok'], [41, 'is-long']]) {
+    await page.fill('#wtText', words(n));
+    ok((await page.getAttribute('[data-wt-state]', 'class')).includes(cls), `telc A1 Teil 2: ${n} kelime → ${cls}`);
+  }
+  await page.fill('#wtText', words(30)); await page.click('[data-wt-submit]'); await page.waitForTimeout(400);
+  ok((await page.textContent('.wt-cols')).includes('Sehr geehrte Damen und Herren,') && await page.locator('a.task-next[href="#exams/telc/a1/schreiben/2/set-3"]').count() === 1, 'telc A1 Teil 2: örnek cevap ve sonraki set');
+  await ctx.close();
+}
+
 // 7. 390 / 1440, açık / koyu.
 for (const width of [390, 1440]) {
   for (const theme of ['light', 'dark']) {
-    for (const teil of ['b1/schreiben/2/set-1', 'b1/schreiben/3/set-1', 'a1/schreiben/1/set-3', 'a1/schreiben/2/set-1', 'telc-b1', 'dtz', 'a2/schreiben/1/set-4', 'a2/schreiben/2/set-5']) {
+    for (const teil of ['b1/schreiben/2/set-1', 'b1/schreiben/3/set-1', 'a1/schreiben/1/set-3', 'a1/schreiben/2/set-1', 'telc-b1', 'dtz', 'a2/schreiben/1/set-4', 'a2/schreiben/2/set-5', '#exams/telc/a1/schreiben/1/set-4', '#exams/telc/a1/schreiben/2/set-4']) {
       const { ctx, page } = await newPage({ width, theme });
-      await page.goto(B + (teil === 'telc-b1' ? '#exams/telc/b1/schreiben/1/set-2' : teil === 'dtz' ? '#exams/dtz/schreiben/1/set-6' : `#exams/goethe/${teil}`)); await page.waitForTimeout(1200);
-      const name = teil.replace(/\/schreiben\/(\d)\/set-\d/, '-teil$1');
+      await page.goto(B + (teil.startsWith('#') ? teil : teil === 'telc-b1' ? '#exams/telc/b1/schreiben/1/set-2' : teil === 'dtz' ? '#exams/dtz/schreiben/1/set-6' : `#exams/goethe/${teil}`)); await page.waitForTimeout(1200);
+      const name = teil.replace(/^#exams\/(\w+)\//, '$1-').replace(/\/schreiben\/(\d)\/set-\d/, '-teil$1');
+      if (teil.includes('telc/a1/schreiben/1')) { await page.fill('#ft-1', 'Fahrer'); await page.check('input[name="ft-3"][value="nein"]'); await page.click('[data-ft-check]'); await page.waitForTimeout(400); }
       if (teil.startsWith('a1/schreiben/1')) { await page.fill('#ft-1', 'drei'); await page.fill('#ft-2', 'Goethestrase 7'); await page.check('input[name="ft-4"][value="vormittags"]'); await page.click('[data-ft-check]'); await page.waitForTimeout(400); }
       ok(await overflow(page) <= 0, `${width} ${theme} ${name}: taşma yok`);
       await page.screenshot({ path: path.join(shotDir, `${name}-${width}-${theme}.png`), fullPage: true });

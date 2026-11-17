@@ -1,0 +1,109 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-3",
+  "title": "Bankkarte verloren",
+  "minutes": 15,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-formal",
+  "situation": "Sie haben gestern Ihre Bankkarte verloren. Sie haben ein Konto bei der Stadtsparkasse.",
+  "task": "Schreiben Sie an die Stadtsparkasse:",
+  "points": [
+    "Warum schreiben Sie?",
+    "Bitten Sie um eine neue Karte.",
+    "Fragen Sie: Wie lange dauert das?"
+  ],
+  "instructions": "Schreiben Sie zu jedem Punkt ein bis zwei Sätze (circa 30 Wörter). Vergessen Sie nicht den passenden Anfang und Gruß am Schluss.",
+  "words": {
+    "target": 30,
+    "min": 25,
+    "max": 40
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "1. madde: Kartımı kaybettiğimi yazdım (gestern)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "2. madde: Yeni kart istedim."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "3. madde: Ne kadar süreceğini sordum."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Bankaya resmî hitap ve kapanış: Sehr geehrte Damen und Herren, … Mit freundlichen Grüßen + adım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Her maddeye bir iki kısa cümle yazdım."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Perfekt: Ich habe meine Bankkarte verloren (habe … verloren)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Kibar rica: Bitte schicken Sie mir eine neue Karte."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Soru: Wie lange dauert das? (soru kelimesinden sonra fiil)."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Sehr geehrte Damen und Herren,",
+          "tr": "Sayın Bayanlar ve Baylar,"
+        },
+        {
+          "de": "Mit freundlichen Grüßen",
+          "tr": "Saygılarımla"
+        }
+      ]
+    },
+    {
+      "group": "Warum schreiben Sie?",
+      "items": [
+        {
+          "de": "Ich habe gestern meine Bankkarte verloren.",
+          "tr": "Dün banka kartımı kaybettim."
+        },
+        {
+          "de": "Ich habe ein Konto bei Ihnen.",
+          "tr": "Sizde bir hesabım var."
+        }
+      ]
+    },
+    {
+      "group": "Bitten und fragen",
+      "items": [
+        {
+          "de": "Bitte schicken Sie mir eine neue Karte.",
+          "tr": "Lütfen bana yeni bir kart gönderin."
+        },
+        {
+          "de": "Wie lange dauert das?",
+          "tr": "Bu ne kadar sürer?"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Sehr geehrte Damen und Herren,\nich habe ein Konto bei Ihnen. Gestern habe ich meine Bankkarte verloren. Bitte schicken Sie mir eine neue Karte. Wie lange dauert das?\nMit freundlichen Grüßen\nLeyla Demir",
+    "notes": [
+      "Üç madde: neden (Bankkarte verloren), rica (neue Karte schicken), soru (Wie lange dauert das?).",
+      "Gestern habe ich … verloren: zaman başta, fiil 2. sırada, Partizip sonda.",
+      "Bankaya resmî: Sehr geehrte Damen und Herren, … Mit freundlichen Grüßen."
+    ]
+  }
+}

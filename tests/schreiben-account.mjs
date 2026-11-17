@@ -85,7 +85,9 @@ async function writeAndSubmit(page, text = TEXT) {
 const { ctx: sctx, page: student } = await newPage();
 await signIn(student, 'ogrenci@example.com', 'ogrenci123', 'student');
 const note = await writeAndSubmit(student);
-ok(note.includes('Metnin kaydedildi'), `öğrenciye "kaydedildi" notu (${note})`);
+// Bu testte yapay zekâ servisi (Worker) çalışmıyor: not ya "Metnin kaydedildi. Yapay zekâ kontrol ediyor…" ya da bağlantı
+// hatası hızlı dönerse "… kontrol edemedi; metnin kaydedildi ve öğretmenine iletildi" olur. İkisinde de metin kaydedildi.
+ok(/metnin kaydedildi/i.test(note), `öğrenciye "kaydedildi" notu (${note})`);
 ok((await student.textContent('#wtModelTitle')).includes('Örnek cevap'), 'gönderince örnek cevap açılıyor');
 await student.screenshot({ path: path.join(shotDir, 'ogrenci-gonderdi-1280.png'), fullPage: true });
 let writings = await listDocs('users/ogrenci1/writings');
@@ -127,7 +129,12 @@ await teacher.selectOption('#aLevel', 'B1'); await teacher.waitForTimeout(500);
 ok(await teacher.locator('#aTopic option[value="schreiben"]').count() === 1, 'ödev ekranında B1 için "Schreiben (sınav hazırlığı)"');
 await teacher.selectOption('#aLevel', 'A1'); await teacher.waitForTimeout(300);
 await teacher.selectOption('#aTopic', 'schreiben').catch(() => {}); await teacher.waitForTimeout(800);
-ok(await teacher.locator('#aExerciseList label').count() === 5 && await teacher.locator('#aExerciseList label', { hasText: 'Beim Arzt' }).count() === 0, 'A1 için 5 Schreiben görevi (kısa mesaj; form setleri "Sınav setleri"nde)');
+ok(await teacher.locator('#aExerciseList label').count() === 10 && await teacher.locator('#aExerciseList label', { hasText: 'Beim Arzt' }).count() === 0
+  && await teacher.locator('#aExerciseList label', { hasText: 'telc Deutsch A1 · Teil 2 · Bankkarte verloren' }).count() === 1 && await teacher.locator('#aExerciseList label', { hasText: 'Anmeldung in der Kita' }).count() === 0,
+  'A1 için 10 Schreiben görevi (Goethe ve telc kısa mesaj; form setleri "Sınav setleri"nde)');
+await teacher.selectOption('#aTopic', 'sinav').catch(() => {}); await teacher.waitForTimeout(800);
+ok(await teacher.locator('#aExerciseList label', { hasText: 'telc Deutsch A1 · Schreiben · Teil 1 · Anmeldung in der Kita' }).count() === 1
+  && await teacher.locator('#aExerciseList label', { hasText: 'Goethe A1 · Schreiben · Teil 1 · Beim Arzt' }).count() === 1, 'A1 sınav setlerinde telc A1 form setleri de seçilebiliyor');
 await teacher.selectOption('#aLevel', 'A2'); await teacher.waitForTimeout(300);
 await teacher.selectOption('#aTopic', 'schreiben').catch(() => {}); await teacher.waitForTimeout(800);
 ok(await teacher.locator('#aExerciseList label').count() === 16 && await teacher.locator('#aExerciseList label', { hasText: 'Teil 1 · Ich komme zu spät' }).count() === 1

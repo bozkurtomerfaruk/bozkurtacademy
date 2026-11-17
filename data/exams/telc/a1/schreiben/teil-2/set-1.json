@@ -1,0 +1,109 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-1",
+  "title": "Kind krank: Kita",
+  "minutes": 15,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "Ihre Tochter Elif geht in die Kita Sonnenblume. Heute ist sie krank.",
+  "task": "Schreiben Sie an die Kita-Leiterin, Frau Ahrens:",
+  "points": [
+    "Elif ist krank und kommt heute nicht.",
+    "Sagen Sie: Wie lange ist sie krank?",
+    "Fragen Sie: Muss ich ein Attest bringen?"
+  ],
+  "instructions": "Schreiben Sie zu jedem Punkt ein bis zwei Sätze (circa 30 Wörter). Vergessen Sie nicht den passenden Anfang und Gruß am Schluss.",
+  "words": {
+    "target": 30,
+    "min": 25,
+    "max": 40
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "1. madde: Elif'in hasta olduğunu ve bugün gelmeyeceğini yazdım."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "2. madde: Ne kadar süre hasta olacağını yazdım (bis Freitag, zwei Tage …)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "3. madde: Doktor raporu (Attest) gerekip gerekmediğini sordum."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap ve kapanış var: Liebe Frau Ahrens, / Sehr geehrte Frau Ahrens, ve Viele Grüße / Mit freundlichen Grüßen + adım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Her maddeye bir iki kısa cümle yazdım; hitaptan sonraki satır küçük harfle başlıyor."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Kreş müdürüne Sie ile yazdım (Sie, Ihnen); du yok."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Soru: fiil başta: Muss ich ein Attest bringen? (bringen sonda)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Zaman: heute, bis Freitag, zwei Tage, morgen."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Liebe Frau … / Sehr geehrte Frau …,",
+          "tr": "Sevgili … Hanım / Sayın … Hanım,"
+        },
+        {
+          "de": "Viele Grüße",
+          "tr": "Selamlar"
+        }
+      ]
+    },
+    {
+      "group": "Warum schreiben Sie?",
+      "items": [
+        {
+          "de": "Meine Tochter ist krank.",
+          "tr": "Kızım hasta."
+        },
+        {
+          "de": "Sie kommt heute nicht in die Kita.",
+          "tr": "Bugün kreşe gelmiyor."
+        }
+      ]
+    },
+    {
+      "group": "Sagen und fragen",
+      "items": [
+        {
+          "de": "Der Arzt sagt, sie ist bis Freitag krank.",
+          "tr": "Doktor cumaya kadar hasta olduğunu söylüyor."
+        },
+        {
+          "de": "Muss ich ein Attest bringen?",
+          "tr": "Rapor getirmem gerekiyor mu?"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Liebe Frau Ahrens,\nmeine Tochter Elif ist krank. Sie hat Fieber und kommt heute nicht in die Kita. Der Arzt sagt, sie ist bis Freitag krank. Muss ich ein Attest bringen?\nViele Grüße\nAyşe Yılmaz",
+    "notes": [
+      "Üç madde: hasta ve gelmiyor, ne kadar (bis Freitag), rapor sorusu (Muss ich ein Attest bringen?).",
+      "Kreş müdürüne Sie ama sıcak bir hitap: Liebe Frau Ahrens, … Viele Grüße.",
+      "Muss ich … bringen? — soru cümlesinde modal fiil başta, mastar sonda."
+    ]
+  }
+}

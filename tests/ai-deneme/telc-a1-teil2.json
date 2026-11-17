@@ -1,0 +1,105 @@
+{
+  "about": "Yapay zekâ denemesi (telc A1 Teil 2). errors: bulunması gereken hatalı yer (wrong) ve düzeltmede geçmesi gereken parça (fix; liste ise biri yeter); clean: doğru olan, işaretlenmemesi gereken yerler. Çalıştırma: scripts/ai-deneme.mjs.",
+  "exam": "telc",
+  "level": "a1",
+  "teil": 2,
+  "texts": [
+    {
+      "id": "telca1-1",
+      "set": "set-1",
+      "note": "Kreş müdürüne; fiil çekimi, modal fiil + mastar",
+      "text": "Liebe Frau Ahrens,\nmeine Tochter Elif ist krank. Sie haben Fieber und kann heute nicht kommen in die Kita. Muss ich ein Attest bringen?\nViele Grüße\nAyşe Yılmaz",
+      "errors": [
+        {
+          "wrong": "Sie haben Fieber",
+          "fix": [
+            "Sie hat Fieber",
+            "hat Fieber"
+          ]
+        },
+        {
+          "wrong": "kann heute nicht kommen in die Kita",
+          "fix": "nicht in die Kita kommen"
+        }
+      ],
+      "clean": [
+        "Muss ich ein Attest bringen",
+        "Liebe Frau Ahrens"
+      ]
+    },
+    {
+      "id": "telca1-2",
+      "set": "set-2",
+      "note": "Kuruma; Hallo ve Tschüss resmiyet hatası, Dann sonrası fiil",
+      "text": "Hallo,\nich habe am Dienstag einen Termin bei Ihnen. Ich bin krank. Ich kann nicht kommen. Haben Sie einen neuen Termin für mich? Dann ich komme gern.\nTschüss\nHamid Karimi",
+      "errors": [
+        {
+          "wrong": "Hallo",
+          "fix": "Sehr geehrte"
+        },
+        {
+          "wrong": "Dann ich komme",
+          "fix": "komme ich"
+        },
+        {
+          "wrong": "Tschüss",
+          "fix": "Grüß"
+        }
+      ],
+      "clean": [
+        "Haben Sie einen neuen Termin für mich"
+      ]
+    },
+    {
+      "id": "telca1-3",
+      "set": "set-3",
+      "note": "Hatasız, basit A1 metni (güzelleştirme önerilmemeli)",
+      "text": "Sehr geehrte Damen und Herren,\nich habe gestern meine Bankkarte verloren. Ich brauche eine neue Karte. Bitte schicken Sie mir eine Karte. Wie lange dauert das?\nMit freundlichen Grüßen\nLeyla Demir",
+      "errors": [],
+      "clean": [
+        "ich habe gestern meine Bankkarte verloren",
+        "Wie lange dauert das"
+      ]
+    },
+    {
+      "id": "telca1-4",
+      "set": "set-4",
+      "note": "Arkadaşa; helfen + Dativ, hitaptan sonra büyük harf, soru sırası",
+      "text": "Lieber Can,\nIch ziehe am Samstag um. Kannst du mich helfen? Du hast ein Auto. Wann du hast Zeit? Komm bitte in die Lindenstraße 4.\nViele Grüße\nMurat",
+      "errors": [
+        {
+          "wrong": "Ich",
+          "fix": "ich"
+        },
+        {
+          "wrong": "Kannst du mich helfen",
+          "fix": "mir helfen"
+        },
+        {
+          "wrong": "Wann du hast Zeit",
+          "fix": "hast du"
+        }
+      ],
+      "clean": [
+        "Komm bitte in die Lindenstraße 4",
+        "Lieber Can"
+      ]
+    },
+    {
+      "id": "telca1-5",
+      "set": "set-5",
+      "note": "İş arkadaşına du doğru; artikel ve çoğul olmayan isim",
+      "text": "Liebe Anna,\nam Montag habe ich Spätschicht. Aber am Abend ist ein Elternabend in der Schule. Können wir der Schicht tauschen? Ich kann am Montag deine Frühschicht machen.\nViele Grüße\nSelin",
+      "errors": [
+        {
+          "wrong": "der Schicht tauschen",
+          "fix": "die Schicht tauschen"
+        }
+      ],
+      "clean": [
+        "Ich kann am Montag deine Frühschicht machen",
+        "am Montag habe ich Spätschicht"
+      ]
+    }
+  ]
+}

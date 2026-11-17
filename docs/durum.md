@@ -2,6 +2,19 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-16 · Schreiben genişletme 6: telc A1 (Start Deutsch 1)
+
+- **Format (resmî telc Start Deutsch 1 Übungstest 1, shop.telc.net'te ücretsiz):** Goethe A1 ile aynı (sınavı birlikte geliştirdiler).
+  - Schreiben ~20 dk (Lesen + Schreiben toplam 45 dk). Teil 1: form, 5 eksik bilgi (bilgi başına 1 puan). Teil 2: kısa mesaj, 3 madde, her maddeye 1–2 cümle (~30 kelime), "passender Anfang und Gruß"; 10 puan (madde başına 3 + biçim 1).
+  - Tek fark: telc'in örnek Teil 2 görevi bir kuruma (Touristeninformation) resmî yazı.
+- **10 set (kararın: Goethe A1 konularını tekrarlamadan, günlük hayat ve aile birleşimi):**
+  - Teil 1 (form, otomatik kontrol, yapay zekâ yok): Anmeldung in der Kita, Termin bei der Ausländerbehörde, Ein Konto eröffnen, Eine Wohnung mieten, Neu bei der Arbeit.
+  - Teil 2 (kısa mesaj, yapay zekâ kontrollü): Kind krank: Kita (yarı resmî), Termin verschieben (Ausländerbehörde, resmî), Bankkarte verloren (resmî), Hilfe beim Umzug (arkadaşa du), Schicht tauschen (iş arkadaşına du). Örnek cevaplar 31–37 kelime.
+- **Ödev ekranı:** A1'de Schreiben altında Goethe ve telc kısa mesajları (10 görev), "Sınav setleri" altında Goethe ve telc form setleri seçilebiliyor (sınav verisinden kendiliğinden geliyor; test eklendi).
+- **Yapay zekâ:** Talimat değişmedi (A1 kuralları "A1" geçen görev adlarında zaten geçerli). Deneme metinleri: `tests/ai-deneme/telc-a1-teil2.json` (5 metin, 9 hata, biri hatasız).
+- **Deneme (17 Kasım 01:30 Almanya saati, kota kuralına göre; Goethe A2 dalındaki son talimat ve kota koruması ile):** 9/9 hata bulundu, hatasız metinde yanlış alarm yok, okunamayan cevap yok. Kullanım 147 Neuron. Örnekler: Sie haben Fieber → Sie hat Fieber, Kannst du mich helfen? → Kannst du mir helfen?, Hallo/Tschüss → Sehr geehrte Damen und Herren / Mit freundlichen Grüßen. Goethe A2 PR'ı birleşince main bu dala tekrar alınacak (kota koruması ve son talimat main'e A2 ile geliyor; examsData ve app sürümleri yeniden kontrol edilecek).
+- **Testler:** `node tests/schreiben.mjs` (21 yeni telc A1 kontrolü: liste, form 5/5 ve 0/5, dayanaklar, Teil 2 uzunluk sınırları, örnek cevap), `npm run test:schreiben` (ödev ekranı); 390/1440 açık/koyu, taşma yok.
+
 ## 2026-11-15 · Schreiben genişletme 5: Goethe A2
 
 - **Format (resmî Goethe-Zertifikat A2 Modellsatz ve Übungssatz 01):** Schreiben iki Teil, toplam 30 dk.

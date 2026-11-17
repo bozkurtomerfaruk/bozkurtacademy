@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-1",
+  "title": "Anmeldung in der Kita",
+  "minutes": 5,
+  "kind": "form",
+  "situation": "Ihre Freundin Amina Rahimi ist mit ihrem Mann nach Deutschland gekommen. Ihr Sohn Yusuf ist am 12. April 2022 geboren. Die Familie wohnt in der Lindenstraße 4 in 28201 Bremen. Amina möchte Yusuf in der Kita Sonnenblume anmelden. Er soll ab dem 1. September in die Kita gehen. Amina arbeitet am Vormittag, deshalb braucht Yusuf einen Platz nur bis 13 Uhr. Yusuf spricht zu Hause Dari und ein bisschen Deutsch.",
+  "task": "Ihre Freundin spricht noch nicht gut Deutsch. Helfen Sie und schreiben Sie die fünf fehlenden Informationen in das Formular.",
+  "form": {
+    "title": "Anmeldung für einen Kita-Platz",
+    "subtitle": "Kita Sonnenblume, Bremen",
+    "rows": [
+      {
+        "label": "Name des Kindes, Vorname",
+        "value": "Rahimi, Yusuf",
+        "example": true
+      },
+      {
+        "label": "Geburtsdatum",
+        "number": 1,
+        "evidence": [
+          "am 12. April 2022 geboren"
+        ],
+        "explanation": "Geburtsdatum = doğum tarihi. Metinde „Ihr Sohn Yusuf ist am 12. April 2022 geboren“ → 12. April 2022 ya da 12.04.2022.",
+        "accept": [
+          "12. April 2022",
+          "12.04.2022",
+          "12.4.2022",
+          "12. 04. 2022",
+          "am 12. April 2022"
+        ]
+      },
+      {
+        "label": "Straße, Hausnummer",
+        "value": "Lindenstraße 4"
+      },
+      {
+        "label": "PLZ, Ort",
+        "number": 2,
+        "evidence": [
+          "in 28201 Bremen"
+        ],
+        "explanation": "PLZ = posta kodu, Ort = şehir. Metinde „in der Lindenstraße 4 in 28201 Bremen“ → 28201 Bremen. Sokak formda zaten yazılı.",
+        "accept": [
+          "28201 Bremen",
+          "28201, Bremen"
+        ]
+      },
+      {
+        "label": "Aufnahme ab",
+        "number": 3,
+        "evidence": [
+          "ab dem 1. September"
+        ],
+        "explanation": "Aufnahme ab = …'den itibaren kabul (çocuğun kreşe başlayacağı tarih). Metinde „Er soll ab dem 1. September in die Kita gehen“ → 1. September ya da 01.09.",
+        "accept": [
+          "1. September",
+          "01.09.",
+          "1.9.",
+          "1. 9.",
+          "ab 1. September",
+          "ab dem 1. September",
+          "01. September"
+        ]
+      },
+      {
+        "label": "Betreuungszeit",
+        "number": 4,
+        "evidence": [
+          "einen Platz nur bis 13 Uhr"
+        ],
+        "explanation": "Betreuungszeit = bakım saati. Amina sabahları çalışıyor ve metinde „Yusuf braucht einen Platz nur bis 13 Uhr“ → sadece öğlene kadar: vormittags.",
+        "choices": [
+          "vormittags (bis 13 Uhr)",
+          "ganztags (bis 17 Uhr)"
+        ],
+        "answer": "vormittags (bis 13 Uhr)"
+      },
+      {
+        "label": "Sprache(n) zu Hause",
+        "number": 5,
+        "evidence": [
+          "spricht zu Hause Dari"
+        ],
+        "explanation": "Sprache zu Hause = evde konuşulan dil. Metinde „Yusuf spricht zu Hause Dari“ → Dari. (Deutsch'u biraz biliyor ama evde Dari konuşuyor.)",
+        "accept": [
+          "Dari",
+          "Dari und Deutsch",
+          "Dari, Deutsch",
+          "Persisch (Dari)"
+        ]
+      }
+    ]
+  }
+}

@@ -666,6 +666,7 @@
     },
     {
       "id": "B2",
+      "levelExam": "data/seviye-sonu/b2.json",
       "title": {
         "tr": "Orta-İleri",
         "de": "Obere Mittelstufe",
@@ -775,11 +776,12 @@
             "en": "Light-verb constructions"
           },
           "description": {
-            "tr": "eine Entscheidung treffen gibi yapılar.",
-            "de": "Verbindungen wie eine Entscheidung treffen.",
-            "en": "Constructions such as eine Entscheidung treffen."
+            "tr": "eine Entscheidung treffen, zur Verfügung stehen, in Frage kommen gibi isim + fiil kalıplarıyla anlam, edat, olumsuzluk ve fiil sırası için kapsamlı B2 alıştırmaları.",
+            "de": "Umfangreiche B2-Übungen zu Funktionsverbgefügen wie eine Entscheidung treffen, zur Verfügung stehen und in Frage kommen: Bedeutung, Präposition, Verneinung und Wortstellung.",
+            "en": "Comprehensive B2 practice on noun-verb collocations such as eine Entscheidung treffen, zur Verfügung stehen and in Frage kommen: meaning, preposition, negation and word order."
           },
-          "status": "soon"
+          "status": "ready",
+          "path": "data/b2/funktionsverbgefuege.json"
         },
         {
           "id": "genitivpraepositionen",
@@ -819,11 +821,12 @@
             "en": "Advanced adjective endings"
           },
           "description": {
-            "tr": "Karmaşık isim gruplarında sıfat çekimi.",
-            "de": "Adjektivdeklination in komplexeren Nominalgruppen.",
-            "en": "Adjective endings in more complex noun phrases."
+            "tr": "Genitiv, artikelsiz Genitiv, birden fazla sıfat, alle/viele/viel sonrası ekler, dessen/deren, özel biçimler ve uzun isim gruplarıyla kapsamlı B2 alıştırmaları.",
+            "de": "Umfangreiche B2-Übungen zu Genitiv, Genitiv ohne Artikel, mehreren Adjektiven, Endungen nach alle/viele/viel, dessen/deren, Sonderformen und langen Nominalgruppen.",
+            "en": "Comprehensive B2 practice on the genitive, genitive without an article, several adjectives, endings after alle/viele/viel, dessen/deren, special forms and long noun phrases."
           },
-          "status": "soon"
+          "status": "ready",
+          "path": "data/b2/adjektivdeklination-b2.json"
         }
       ]
     }

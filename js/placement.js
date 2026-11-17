@@ -317,7 +317,7 @@
     'partizip-i': ['Partizip I', 'B2'], 'partizip-ii': ['Partizip II', 'B2'],
     genitivpraepositionen: ['Präpositionen mit Genitiv', 'B2'], 'je-desto': ['je … desto', 'B2'],
     nominalisierung: ['Nominalisierung', 'B2'], 'modalverben-subjektiv': ['Modalverben (subjektiv)'],
-    funktionsverbgefuege: ['Funktionsverbgefüge'], 'konnektoren-b2': ['Konnektoren (zumal, sofern …)']
+    funktionsverbgefuege: ['Funktionsverbgefüge', 'B2'], 'konnektoren-b2': ['Konnektoren (zumal, sofern …)']
   };
   function topicName(id){
     if(id === 'lesen') return t('plTopicLesen');

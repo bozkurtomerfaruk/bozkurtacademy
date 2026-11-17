@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "a2",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Danke für das Geschenk",
+  "minutes": 15,
+  "sharedMinutes": 30,
+  "kind": "writing",
+  "register": "du",
+  "textType": "sms",
+  "situation": "Ihr Freund Jan hat Ihnen zum Geburtstag ein Buch geschenkt.",
+  "task": "Schreiben Sie Jan eine SMS:",
+  "points": [
+    "Bedanken Sie sich.",
+    "Schreiben Sie, wie Ihnen das Buch gefällt.",
+    "Laden Sie Jan zum Essen ein."
+  ],
+  "instructions": "Schreiben Sie 20–30 Wörter. Schreiben Sie zu allen drei Punkten.",
+  "words": {
+    "target": 25,
+    "min": 20,
+    "max": 30,
+    "zeroBelow": 10
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Üç maddenin hepsine yazdım: teşekkür, kitabı nasıl bulduğum, yemeğe davet."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Arkadaşıma du ile yazdım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap ve kapanış var (Lieber Jan, … Liebe Grüße + adım)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Cümleleri bağladım: und, schon, deshalb."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "danken für + Akkusativ: Vielen Dank für das Buch!"
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Davet: Ich möchte dich zum Essen einladen (mastar sonda)."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Danken",
+      "items": [
+        {
+          "de": "Vielen Dank für das tolle Buch!",
+          "tr": "Harika kitap için çok teşekkürler!"
+        }
+      ]
+    },
+    {
+      "group": "Meinung",
+      "items": [
+        {
+          "de": "Das Buch gefällt mir sehr gut.",
+          "tr": "Kitap çok hoşuma gidiyor."
+        },
+        {
+          "de": "Es ist sehr spannend.",
+          "tr": "Çok heyecanlı."
+        }
+      ]
+    },
+    {
+      "group": "Einladen",
+      "items": [
+        {
+          "de": "Ich möchte dich zum Essen einladen.",
+          "tr": "Seni yemeğe davet etmek istiyorum."
+        },
+        {
+          "de": "Hast du am Freitag Zeit?",
+          "tr": "Cuma vaktin var mı?"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Lieber Jan,\nvielen Dank für das tolle Buch! Es ist sehr spannend. Ich möchte dich gern zum Essen einladen. Hast du am Freitag Zeit?\nLiebe Grüße\nSelin",
+    "notes": [
+      "Üç madde: teşekkür (vielen Dank für das Buch), görüş (sehr spannend), davet (zum Essen einladen).",
+      "Lieber Jan: erkeğe Lieber, kadına Liebe.",
+      "möchte … einladen: modal fiil 2. sırada, mastar sonda."
+    ]
+  }
+}

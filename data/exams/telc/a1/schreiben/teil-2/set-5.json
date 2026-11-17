@@ -1,0 +1,109 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-5",
+  "title": "Schicht tauschen",
+  "minutes": 15,
+  "kind": "writing",
+  "register": "du",
+  "textType": "email-informal",
+  "situation": "Sie arbeiten im Supermarkt. Am Montag haben Sie Spätschicht. Aber am Montagabend ist ein Elternabend in der Schule von Ihrem Sohn.",
+  "task": "Schreiben Sie Ihrer Kollegin Anna eine E-Mail:",
+  "points": [
+    "Warum schreiben Sie?",
+    "Fragen Sie: Schicht tauschen?",
+    "Sagen Sie: Wann können Sie arbeiten?"
+  ],
+  "instructions": "Schreiben Sie zu jedem Punkt ein bis zwei Sätze (circa 30 Wörter). Vergessen Sie nicht den passenden Anfang und Gruß am Schluss.",
+  "words": {
+    "target": 30,
+    "min": 25,
+    "max": 40
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "1. madde: Neden yazdığımı söyledim (pazartesi akşamı veli toplantısı)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "2. madde: Vardiyayı değiştirip değiştiremeyeceğimizi sordum."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "3. madde: Ne zaman çalışabileceğimi yazdım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap ve kapanış var: Liebe Anna, / Hallo Anna, ve Viele Grüße + adım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Her maddeye bir iki kısa cümle yazdım."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "İş arkadaşıma du ile yazdım (du, dir, deine)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Soru: Können wir die Schicht tauschen? (tauschen sonda)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Zaman: am Montag, am Dienstag, am Abend, die Frühschicht."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Liebe … / Lieber … / Hallo …,",
+          "tr": "Sevgili … / Merhaba …,"
+        },
+        {
+          "de": "Viele Grüße",
+          "tr": "Selamlar"
+        }
+      ]
+    },
+    {
+      "group": "Warum schreiben Sie?",
+      "items": [
+        {
+          "de": "Am Montag habe ich Spätschicht.",
+          "tr": "Pazartesi akşam vardiyam var."
+        },
+        {
+          "de": "Am Abend ist ein Elternabend.",
+          "tr": "Akşam veli toplantısı var."
+        }
+      ]
+    },
+    {
+      "group": "Fragen und sagen",
+      "items": [
+        {
+          "de": "Können wir die Schicht tauschen?",
+          "tr": "Vardiyayı değişebilir miyiz?"
+        },
+        {
+          "de": "Ich kann am Dienstag arbeiten.",
+          "tr": "Salı günü çalışabilirim."
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Liebe Anna,\nam Montag habe ich Spätschicht, aber am Abend ist ein Elternabend in der Schule. Können wir die Schicht tauschen? Ich kann am Montag deine Frühschicht machen.\nViele Grüße\nSelin",
+    "notes": [
+      "Üç madde: neden (Spätschicht, Elternabend), soru (Können wir … tauschen?), ne zaman çalışabilirim (deine Frühschicht am Montag).",
+      "Am Montag habe ich …: zaman başta, fiil 2. sırada.",
+      "İş arkadaşına du: Liebe Anna, deine Frühschicht."
+    ]
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "about": "Yapay zekâ denemesi (Goethe A2 Teil 2). errors: bulunması gereken hatalı yer (wrong) ve düzeltmede geçmesi gereken parça (fix; liste ise biri yeter); clean: doğru olan, işaretlenmemesi gereken yerler. Çalıştırma: scripts/ai-deneme.mjs.",
+  "exam": "goethe",
+  "level": "a2",
+  "teil": 2,
+  "texts": [
+    {
+      "id": "a2t2-1",
+      "set": "set-1",
+      "note": "Şefe; du (resmiyet), mitbringen sırası",
+      "text": "Lieber Herr Lehmann,\nvielen Dank für die Einladung! Ich komme gern zu Ihrer Feier. Darf ich mitbringen meinen Mann? Kannst du mir auch den Weg beschreiben?\nViele Grüße\nAyşe Demir",
+      "errors": [
+        {
+          "wrong": "Darf ich mitbringen meinen Mann",
+          "fix": "meinen Mann mitbringen"
+        },
+        {
+          "wrong": "Kannst du mir",
+          "fix": "Sie"
+        }
+      ],
+      "clean": [
+        "Lieber Herr Lehmann",
+        "Ich komme gern zu Ihrer Feier"
+      ]
+    },
+    {
+      "id": "a2t2-2",
+      "set": "set-2",
+      "note": "Otele; Hallo/Tschüss resmiyet, ayrılabilen fiil",
+      "text": "Hallo Frau Becker,\nich habe ein Zimmer von Freitag bis Sonntag gebucht. Leider ich muss am Freitag arbeiten. Ich ankomme erst am Samstag. Was kostet das Zimmer jetzt?\nTschüss\nHasan Yıldız",
+      "errors": [
+        {
+          "wrong": "Leider ich muss",
+          "fix": [
+            "leider muss ich",
+            "Leider muss ich"
+          ]
+        },
+        {
+          "wrong": "Ich ankomme erst am Samstag",
+          "fix": [
+            "komme erst am Samstag an",
+            "komme erst"
+          ]
+        },
+        {
+          "wrong": "Tschüss",
+          "fix": "Grüß"
+        }
+      ],
+      "clean": [
+        "Was kostet das Zimmer jetzt"
+      ]
+    },
+    {
+      "id": "a2t2-3",
+      "set": "set-3",
+      "note": "Hatasız e-posta",
+      "text": "Sehr geehrte Frau Dr. Wolf,\nleider kann ich morgen nicht zu meinem Termin kommen, weil mein Sohn krank ist. Ich muss zu Hause bleiben. Haben Sie nächste Woche einen neuen Termin für mich?\nMit freundlichen Grüßen\nElif Kaya",
+      "errors": [],
+      "clean": [
+        "weil mein Sohn krank ist",
+        "Haben Sie nächste Woche einen neuen Termin für mich"
+      ]
+    },
+    {
+      "id": "a2t2-4",
+      "set": "set-4",
+      "note": "Komşuya; dass cümlesi, Akkusativ",
+      "text": "Liebe Frau Schmidt,\nich habe gesehen, dass Sie verkaufen ein Fahrrad. Ich suche schon lange ein Fahrrad für die Arbeit. Wie viel kostet es? Kann ich der Fahrrad am Samstag ansehen?\nViele Grüße\nMurat Şahin",
+      "errors": [
+        {
+          "wrong": "dass Sie verkaufen ein Fahrrad",
+          "fix": "ein Fahrrad verkaufen"
+        },
+        {
+          "wrong": "der Fahrrad",
+          "fix": "das Fahrrad"
+        }
+      ],
+      "clean": [
+        "Wie viel kostet es",
+        "Ich suche schon lange ein Fahrrad"
+      ]
+    },
+    {
+      "id": "a2t2-5",
+      "set": "set-5",
+      "note": "Dil okuluna; Perfekt yardımcı fiili, dolaylı soru; basit doğru cümleler",
+      "text": "Sehr geehrter Herr Krause,\nich besuche den Kurs am Vormittag. Aber ich habe eine neue Arbeit gefunden und ich habe letzte Woche nach Berlin umgezogen. Gibt es einen Kurs am Abend? Können Sie mir sagen, was muss ich jetzt tun?\nMit freundlichen Grüßen\nSelin Aydın",
+      "errors": [
+        {
+          "wrong": "habe letzte Woche nach Berlin umgezogen",
+          "fix": "bin letzte Woche nach Berlin umgezogen"
+        },
+        {
+          "wrong": "was muss ich jetzt tun",
+          "fix": "was ich jetzt tun muss"
+        }
+      ],
+      "clean": [
+        "Gibt es einen Kurs am Abend",
+        "ich besuche den Kurs am Vormittag"
+      ]
+    }
+  ]
+}

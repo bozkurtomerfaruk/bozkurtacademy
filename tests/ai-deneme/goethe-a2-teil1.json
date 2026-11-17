@@ -1,0 +1,102 @@
+{
+  "about": "Yapay zekâ denemesi (Goethe A2 Teil 1). errors: bulunması gereken hatalı yer (wrong) ve düzeltmede geçmesi gereken parça (fix; liste ise biri yeter); clean: doğru olan, işaretlenmemesi gereken yerler. Çalıştırma: scripts/ai-deneme.mjs.",
+  "exam": "goethe",
+  "level": "a2",
+  "teil": 1,
+  "texts": [
+    {
+      "id": "a2t1-1",
+      "set": "set-1",
+      "note": "SMS; weil cümlesi, Dativ",
+      "text": "Hallo Tobias,\ntut mir leid, ich komme zu spät, weil mein Bus hat Verspätung. Können wir uns um vier Uhr treffen? Ich warte vor dem Café auf dir.\nBis gleich!\nElif",
+      "errors": [
+        {
+          "wrong": "weil mein Bus hat Verspätung",
+          "fix": "Verspätung hat"
+        },
+        {
+          "wrong": "auf dir",
+          "fix": "auf dich"
+        }
+      ],
+      "clean": [
+        "Bis gleich!",
+        "Können wir uns um vier Uhr treffen"
+      ]
+    },
+    {
+      "id": "a2t1-2",
+      "set": "set-2",
+      "note": "Hatasız SMS; ünlemden sonra büyük harf (hata sayılmamalı)",
+      "text": "Hallo Julia! Ich wohne jetzt in der Gartenstraße 5. Die Wohnung ist klein, aber sehr hell. Mir gefällt der Balkon. Hast du am Sonntag Zeit? Komm doch vorbei!\nLiebe Grüße\nDeniz",
+      "errors": [],
+      "clean": [
+        "Hallo Julia! Ich wohne",
+        "Mir gefällt der Balkon"
+      ]
+    },
+    {
+      "id": "a2t1-3",
+      "set": "set-3",
+      "note": "SMS; modal fiil + mastar, hitaptan sonra büyük harf",
+      "text": "Hallo Can,\nLeider ich kann heute nicht ins Fitnessstudio kommen. Ich bin krank und habe Fieber. Können wir am Donnerstag gehen?\nBis bald!\nMurat",
+      "errors": [
+        {
+          "wrong": "Leider ich kann",
+          "fix": [
+            "leider kann ich",
+            "Leider kann ich"
+          ]
+        }
+      ],
+      "clean": [
+        "Können wir am Donnerstag gehen",
+        "Bis bald!"
+      ]
+    },
+    {
+      "id": "a2t1-4",
+      "set": "set-4",
+      "note": "SMS; konuşma dili özne düşmesi doğru, soru cümlesi ve fiil çekimi hatalı",
+      "text": "Hallo Lea,\nbin gerade im Supermarkt. Was du brauchst noch? Ich komme in einer halben Stunde nach Hause. Möchtest du heute Pizza essen? Ich kaufen auch Getränke.\nBis später!\nAyşe",
+      "errors": [
+        {
+          "wrong": "Was du brauchst noch",
+          "fix": "brauchst du"
+        },
+        {
+          "wrong": "Ich kaufen",
+          "fix": "kaufe"
+        }
+      ],
+      "clean": [
+        "bin gerade im Supermarkt",
+        "Möchtest du heute Pizza essen"
+      ]
+    },
+    {
+      "id": "a2t1-5",
+      "set": "set-5",
+      "note": "SMS; danken für + Akkusativ, gefallen + Dativ",
+      "text": "Lieber Jan,\nvielen Dank für dem Buch! Es ist sehr spannend und ich gefalle es sehr. Ich möchte dich zum Essen einladen. Hast du am Freitag Zeit?\nLiebe Grüße\nSelin",
+      "errors": [
+        {
+          "wrong": "für dem Buch",
+          "fix": "für das Buch"
+        },
+        {
+          "wrong": "ich gefalle es sehr",
+          "fix": [
+            "es gefällt mir",
+            "gefällt es mir",
+            "gefällt mir"
+          ]
+        }
+      ],
+      "clean": [
+        "Hast du am Freitag Zeit",
+        "Ich möchte dich zum Essen einladen"
+      ]
+    }
+  ]
+}

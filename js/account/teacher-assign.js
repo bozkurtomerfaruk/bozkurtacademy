@@ -171,7 +171,7 @@ if(user){
   try{
     const [catalogLevels, students, writing, sets] = await Promise.all([loadCatalogLevels(), listStudents(), writingTasks().catch(() => []), examSets().catch(() => [])]);
     levels = catalogLevels;
-    writingLevels = new Set(writing.map((w) => w.catalogLevel));
+    writingLevels = new Set(writing.flatMap((w) => w.catalogLevels));
     examLevels = new Set(sets.flatMap((s) => s.catalogLevels));
     // Katalogda olmayan sınav seviyeleri (C1, TestDaF) sadece sınav setleriyle seçilebilir.
     const extra = [...examLevels].filter((id) => !levels.some((l) => l.id === id)).sort();

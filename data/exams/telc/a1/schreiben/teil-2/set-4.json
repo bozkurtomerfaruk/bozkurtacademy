@@ -1,0 +1,109 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-4",
+  "title": "Hilfe beim Umzug",
+  "minutes": 15,
+  "kind": "writing",
+  "register": "du",
+  "textType": "email-informal",
+  "situation": "Sie ziehen am Samstag in eine neue Wohnung. Ihr Freund Can hat ein Auto.",
+  "task": "Schreiben Sie Can eine E-Mail:",
+  "points": [
+    "Warum schreiben Sie?",
+    "Fragen Sie: Kann Can helfen?",
+    "Sagen Sie: Wann und wo?"
+  ],
+  "instructions": "Schreiben Sie zu jedem Punkt ein bis zwei Sätze (circa 30 Wörter). Vergessen Sie nicht den passenden Anfang und Gruß am Schluss.",
+  "words": {
+    "target": 30,
+    "min": 25,
+    "max": 40
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "1. madde: Neden yazdığımı söyledim (cumartesi taşınıyorum)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "2. madde: Can'ın yardım edip edemeyeceğini sordum."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "3. madde: Ne zaman ve nerede buluşacağımızı yazdım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap ve kapanış var: Lieber Can, / Hallo Can, ve Viele Grüße / Liebe Grüße + adım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Her maddeye bir iki kısa cümle yazdım; hitaptan sonraki satır küçük harfle başlıyor."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Arkadaşıma du ile yazdım (du, dich, dir, dein)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Soru: Kannst du mir helfen? (helfen + Dativ: mir)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Zaman ve yer: am Samstag um 9 Uhr, in der Lindenstraße 4."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Lieber … / Liebe … / Hallo …,",
+          "tr": "Sevgili … / Merhaba …,"
+        },
+        {
+          "de": "Viele Grüße",
+          "tr": "Selamlar"
+        }
+      ]
+    },
+    {
+      "group": "Warum schreiben Sie?",
+      "items": [
+        {
+          "de": "Ich ziehe am Samstag um.",
+          "tr": "Cumartesi taşınıyorum."
+        },
+        {
+          "de": "Ich habe eine neue Wohnung.",
+          "tr": "Yeni bir evim var."
+        }
+      ]
+    },
+    {
+      "group": "Fragen und sagen",
+      "items": [
+        {
+          "de": "Kannst du mir helfen?",
+          "tr": "Bana yardım edebilir misin?"
+        },
+        {
+          "de": "Komm bitte um 9 Uhr in die …straße.",
+          "tr": "Lütfen saat 9'da … sokağına gel."
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Lieber Can,\nich ziehe am Samstag in eine neue Wohnung. Kannst du mir helfen? Du hast ein Auto. Komm bitte um 9 Uhr in die Lindenstraße 4. Danach essen wir zusammen.\nViele Grüße\nMurat",
+    "notes": [
+      "Üç madde: neden (ziehe am Samstag um), soru (Kannst du mir helfen?), ne zaman ve nerede (um 9 Uhr, Lindenstraße 4).",
+      "helfen + Dativ: Kannst du mir helfen? (mich değil).",
+      "Arkadaşa du: Lieber Can, … Viele Grüße."
+    ]
+  }
+}

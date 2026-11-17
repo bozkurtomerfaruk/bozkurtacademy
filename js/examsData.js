@@ -271,8 +271,26 @@ window.BA_EXAMS = {
               }, // Teil 4
             ] },
             { id: 'schreiben', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
+              {
+                title: { tr: 'Arkadaşa SMS · 3 madde · 20–30 kelime', de: 'SMS an einen Freund · 3 Punkte · 20–30 Wörter', en: 'Text message to a friend · 3 points · 20–30 words' },
+                exercises: [
+                  { set: 'set-1', title: 'Ich komme zu spät' },
+                  { set: 'set-2', title: 'Meine neue Wohnung' },
+                  { set: 'set-3', title: 'Ich bin krank' },
+                  { set: 'set-4', title: 'Hilfe beim Einkaufen' },
+                  { set: 'set-5', title: 'Danke für das Geschenk' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: 'Yarı resmî e-posta · 3 madde · 30–40 kelime', de: 'Halbformelle E-Mail · 3 Punkte · 30–40 Wörter', en: 'Semi-formal email · 3 points · 30–40 words' },
+                exercises: [
+                  { set: 'set-1', title: 'Einladung vom Chef' },
+                  { set: 'set-2', title: 'Später im Hotel' },
+                  { set: 'set-3', title: 'Termin beim Arzt' },
+                  { set: 'set-4', title: 'Fahrrad kaufen' },
+                  { set: 'set-5', title: 'Deutschkurs wechseln' },
+                ]
+              }, // Teil 2
             ] },
             { id: 'sprechen', teile: [
               { title: null, exercises: [] }, // Teil 1
@@ -569,8 +587,27 @@ window.BA_EXAMS = {
               }, // Teil 3
             ] },
             { id: 'schreiben', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
+              {
+                title: { tr: 'Form doldurma · 5 bilgi', de: 'Formular ausfüllen · 5 Angaben', en: 'Fill in a form · 5 details' },
+                kind: 'form', // js/form-task.js: otomatik kontrol; ödevde ve sonuçlarda "sınav seti" (yazma görevi değil)
+                exercises: [
+                  { set: 'set-1', title: 'Anmeldung in der Kita' },
+                  { set: 'set-2', title: 'Termin bei der Ausländerbehörde' },
+                  { set: 'set-3', title: 'Ein Konto eröffnen' },
+                  { set: 'set-4', title: 'Eine Wohnung mieten' },
+                  { set: 'set-5', title: 'Neu bei der Arbeit' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: 'Kısa mesaj · yaklaşık 30 kelime', de: 'Kurze Mitteilung · circa 30 Wörter', en: 'Short message · about 30 words' },
+                exercises: [
+                  { set: 'set-1', title: 'Kind krank: Kita' },
+                  { set: 'set-2', title: 'Termin verschieben' },
+                  { set: 'set-3', title: 'Bankkarte verloren' },
+                  { set: 'set-4', title: 'Hilfe beim Umzug' },
+                  { set: 'set-5', title: 'Schicht tauschen' },
+                ]
+              }, // Teil 2
             ] },
             { id: 'sprechen', teile: [
               { title: null, exercises: [] }, // Teil 1

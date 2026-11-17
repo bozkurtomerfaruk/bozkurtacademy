@@ -1,0 +1,93 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Termin bei der Ausländerbehörde",
+  "minutes": 5,
+  "kind": "form",
+  "situation": "Ihr Freund Hamid Karimi wohnt seit zwei Jahren in Leipzig. Seine Aufenthaltserlaubnis ist nur noch bis zum 30. Januar gültig. Er möchte sie verlängern. Hamid ist am 8. Juli 1991 in Kabul geboren. Er hat die Telefonnummer 0176 4421903. Er arbeitet jeden Tag ab 12 Uhr, deshalb braucht er einen Termin am Vormittag. Seine Frau und seine Tochter kommen mit zum Termin.",
+  "task": "Helfen Sie und schreiben Sie die fünf fehlenden Informationen in das Formular.",
+  "form": {
+    "title": "Terminanfrage: Aufenthaltstitel verlängern",
+    "subtitle": "Stadt Leipzig, Ausländerbehörde",
+    "rows": [
+      {
+        "label": "Familienname, Vorname",
+        "value": "Karimi, Hamid",
+        "example": true
+      },
+      {
+        "label": "Geburtsort",
+        "number": 1,
+        "evidence": [
+          "in Kabul geboren"
+        ],
+        "explanation": "Geburtsort = doğum yeri. Metinde „Hamid ist am 8. Juli 1991 in Kabul geboren“ → Kabul. Doğum tarihi değil, şehir yazılır.",
+        "accept": [
+          "Kabul"
+        ]
+      },
+      {
+        "label": "Geburtsdatum",
+        "value": "08.07.1991"
+      },
+      {
+        "label": "Aufenthaltstitel gültig bis",
+        "number": 2,
+        "evidence": [
+          "bis zum 30. Januar gültig"
+        ],
+        "explanation": "gültig bis = …'e kadar geçerli. Metinde „Seine Aufenthaltserlaubnis ist nur noch bis zum 30. Januar gültig“ → 30. Januar ya da 30.01.",
+        "accept": [
+          "30. Januar",
+          "30.01.",
+          "30.1.",
+          "bis 30. Januar",
+          "30. 01."
+        ]
+      },
+      {
+        "label": "Telefon",
+        "number": 3,
+        "evidence": [
+          "die Telefonnummer 0176 4421903"
+        ],
+        "explanation": "Telefon = telefon numarası. Metinde „Er hat die Telefonnummer 0176 4421903“. Sayıları tam ve doğru yaz.",
+        "accept": [
+          "0176 4421903",
+          "01764421903",
+          "0176-4421903",
+          "0176/4421903"
+        ]
+      },
+      {
+        "label": "Termin gewünscht",
+        "number": 4,
+        "evidence": [
+          "einen Termin am Vormittag"
+        ],
+        "explanation": "Hamid her gün saat 12'den itibaren çalışıyor; metinde „er braucht einen Termin am Vormittag“ → öğleden önce: vormittags.",
+        "choices": [
+          "vormittags",
+          "nachmittags"
+        ],
+        "answer": "vormittags"
+      },
+      {
+        "label": "Anzahl der Personen beim Termin",
+        "number": 5,
+        "evidence": [
+          "Seine Frau und seine Tochter kommen mit"
+        ],
+        "explanation": "Anzahl der Personen = kişi sayısı. Hamid + eşi (seine Frau) + kızı (seine Tochter) randevuya birlikte geliyor = 3 kişi.",
+        "accept": [
+          "3",
+          "drei"
+        ]
+      }
+    ]
+  }
+}

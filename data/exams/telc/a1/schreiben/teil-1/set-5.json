@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Neu bei der Arbeit",
+  "minutes": 5,
+  "kind": "form",
+  "situation": "Ihr Freund Ali Haidari arbeitet ab Montag in der Bäckerei Krause in Kassel. Er ist verheiratet und hat ein Kind. Ali wohnt in der Gartenstraße 9 in 34117 Kassel. Er fährt mit dem Fahrrad zur Arbeit. Ali möchte immer in der Frühschicht arbeiten. Seine Krankenkasse ist die AOK.",
+  "task": "Helfen Sie und schreiben Sie die fünf fehlenden Informationen in das Formular.",
+  "form": {
+    "title": "Personalbogen für neue Mitarbeiter",
+    "subtitle": "Bäckerei Krause, Kassel",
+    "rows": [
+      {
+        "label": "Familienname, Vorname",
+        "value": "Haidari, Ali",
+        "example": true
+      },
+      {
+        "label": "Adresse: Straße, Hausnummer",
+        "number": 1,
+        "evidence": [
+          "in der Gartenstraße 9"
+        ],
+        "explanation": "Straße, Hausnummer = sokak ve kapı numarası. Metinde „Ali wohnt in der Gartenstraße 9 in 34117 Kassel“ → Gartenstraße 9.",
+        "accept": [
+          "Gartenstraße 9",
+          "Gartenstrasse 9",
+          "Gartenstr. 9"
+        ]
+      },
+      {
+        "label": "PLZ, Ort",
+        "value": "34117 Kassel"
+      },
+      {
+        "label": "Familienstand",
+        "number": 2,
+        "evidence": [
+          "Er ist verheiratet"
+        ],
+        "explanation": "Familienstand = medeni durum. Metinde „Er ist verheiratet“ → evli: verheiratet. ledig = bekâr.",
+        "choices": [
+          "ledig",
+          "verheiratet",
+          "geschieden"
+        ],
+        "answer": "verheiratet"
+      },
+      {
+        "label": "Anzahl der Kinder",
+        "number": 3,
+        "evidence": [
+          "hat ein Kind"
+        ],
+        "explanation": "Anzahl der Kinder = çocuk sayısı. Metinde „Er ist verheiratet und hat ein Kind“ → 1.",
+        "accept": [
+          "1",
+          "ein",
+          "eins",
+          "ein Kind"
+        ]
+      },
+      {
+        "label": "Krankenkasse",
+        "number": 4,
+        "evidence": [
+          "Seine Krankenkasse ist die AOK"
+        ],
+        "explanation": "Krankenkasse = sağlık sigortası. Metinde „Seine Krankenkasse ist die AOK“ → AOK.",
+        "accept": [
+          "AOK",
+          "die AOK"
+        ]
+      },
+      {
+        "label": "Schicht",
+        "number": 5,
+        "evidence": [
+          "immer in der Frühschicht arbeiten"
+        ],
+        "explanation": "Schicht = vardiya. Metinde „Ali möchte immer in der Frühschicht arbeiten“ → sabah vardiyası: Frühschicht. Spätschicht = akşam vardiyası.",
+        "choices": [
+          "Frühschicht",
+          "Spätschicht"
+        ],
+        "answer": "Frühschicht"
+      }
+    ]
+  }
+}

@@ -141,6 +141,7 @@ describe('Hatırlatma gönderimi', () => {
     for(const m of sent){
       assert.equal(m.subject, 'Yarınki Almanca dersin – 18:00');
       assert.equal(m.name, 'Bozkurt Academy');
+      assert.equal(m.replyTo, 'info@bozkurtacademy.com');
       assert.match(m.body, /Tarih: 16 Ekim 2026, Cuma/);
       assert.match(m.body, /Saat: 18:00–18:50 \(Almanya saati\)/);
       assert.match(m.body, /Süre: 50 dakika/);

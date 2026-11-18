@@ -10,6 +10,8 @@ var CONFIG = {
   SOURCE: 'bozkurtacademy',
   TIME_ZONE: 'Europe/Berlin',
   SENDER_NAME: 'Bozkurt Academy',
+  // Gönderen adres Apps Script'in çalıştığı Gmail hesabıdır; "Yanıtla" bu adrese gider.
+  REPLY_TO: 'info@bozkurtacademy.com',
   TEACHER_NAME: 'Ömer Faruk Bozkurt',
   PANEL_URL: 'https://bozkurtacademy.com/panel.html',
   // Gönderim kayıtları bu kadar gün saklanır (e-posta adresi değil, SHA-256 özeti).
@@ -84,7 +86,8 @@ function run_(options) {
         subject: item.subject,
         body: item.text,
         htmlBody: item.html,
-        name: CONFIG.SENDER_NAME
+        name: CONFIG.SENDER_NAME,
+        replyTo: CONFIG.REPLY_TO
       });
       props.setProperty(key, String(now.getTime()));
       sentKeys[key] = String(now.getTime());

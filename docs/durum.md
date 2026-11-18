@@ -2,6 +2,16 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-18 · Madde 9 (e-posta) kapandı: iletişim adresi info@bozkurtacademy.com (dal `claude/compassionate-sagan-excdhp`)
+
+- **Durum:** Tamamlandı. Gelen posta Cloudflare Email Routing ile Gmail'e, giden posta Gmail + Brevo SMTP; site bu adresi gösteriyor. Öğretmenin kararı: Web3Forms alıcısı değişmiyor, form ve yorum bildirimleri Gmail'e gelmeye devam ediyor.
+
+- **Değişen:** Görünen bütün e-posta adresleri `bozkurtt.omerfaruk@gmail.com` yerine `info@bozkurtacademy.com`: ana sayfa, İletişim (TR/DE/EN), Impressum (DE/TR), gizlilik (TR/DE/EN, tarih 18 Kasım 2026), seviye testi metinleri (`js/placement.js`), iletişim formu hata bağlantısı (`js/app.js`), `.well-known/security.txt`, `docs/veli-onay-formu.md`, `docs/seviye-testi.md`, `js/account/config.js` → `TEACHER_EMAIL` (öğrencinin "verilerimi sil" bağlantısı). `app.js` v53, `placement.js` v11.
+- **Gizlilik:** Doğrudan info@ adresine yazılan e-postalar için Cloudflare Email Routing (Gmail'e yönlendirme) ve yanıtlar için Brevo SMTP eklendi (TR/DE/EN ve `docs/privacy-policy.md`).
+- **Apps Script:** `CONFIG.REPLY_TO = 'info@bozkurtacademy.com'`, `MailApp.sendEmail` artık `replyTo` alıyor; gönderen hesap aynı. Öğretmen yeni `Code.gs`'yi Apps Script'e yapıştırmalı (apps-script/README.md → Güncelleme).
+- **Dokunulmayan:** Firebase öğretmen girişi, `firestore.rules`/`TEACHER_UID`, Web3Forms erişim anahtarı (alıcı adresi kodda değil, Web3Forms hesabında; bugün Gmail), Cloudflare hesabı adresi (`docs/yapay-zeka-kurulum.md`).
+- **Test:** `npm test` (213 geçti, `apps-script.test.mjs` replyTo kontrolü), `npm run test:placement` (gizlilik tarihi ve 5 info@ bağlantısı), `node tests/dil-secimi.mjs`, check-versions, build-pages --check, check-html-escape; tarayıcıda 375 px açık/koyu: İletişim (3 dil), Impressum, gizlilik, ana sayfada eski adres yok, taşma yok; /de/kontakt/ form hatasında bağlantı mailto:info@bozkurtacademy.com.
+
 ## 2026-11-17 · B2 seviye sonu sınavı: 60 soruluk havuz, katalogda bağlı (dal `claude/b2-seviye-sonu`)
 
 - **Durum:** Pilot (20 soru) öğretmen tarafından onaylandı; 40 soru eklendi (havuz 60: Konjunktiv I 8, Konnektoren 8, diğerleri 6, Partizip I ve je … desto 4). #120 ve #121 birleştikten sonra `data/catalog.json` → B2 `levelExam` eklendi; `check-level-exams` geçti (4 sınav, 240 soru). `js/level-exam.js` catalog `?v=10`, sürüm 5.

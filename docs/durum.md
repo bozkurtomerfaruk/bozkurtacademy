@@ -4,8 +4,9 @@
 
 ## 2026-11-18 · Gece yapay zekâ denemeleri: her seferinde yeni oturum (kararın)
 
-- **Sorun:** 18 Kasım 01:30'a bu oturuma kurulan hatırlatma, oturum o saatte uyandırılmadığı için ancak 09:40'ta ulaştı; kota koruması gündüz tam turu durdurdu.
+- **Sorun:** 18 Kasım 01:30'a bu oturuma kurulan hatırlatma oturumu zamanında uyandırdı, ama o tur tamamlanamadı (deneme hiç başlamadı); öğretmen sabah "tekrar dene" deyince 09:40'ta devam etti ve kota koruması gündüz tam turu durdurdu. Uzun ve dolu bir oturumda gece işinin yarıda kalma riski var; her deneme için temiz, yeni bir oturum daha güvenilir.
 - **Yeni yapı:** Bir deneme gerektiğinde (talimat ya da `cleanResult` değişince) **tek seferlik, her çalışmada yeni bir oturum başlatan zamanlanmış görev** kuruluyor: Almanya saatiyle 01:30, `create_new_session_on_fire`, bitince telefona bildirim.
+  - Yeni oturumda depo yoksa `add_repo` ile eklenir; GitHub aracı yoksa dal gönderilir ve PR ana oturumda açılır (görev metninde yazılı).
   - Görevin metni kendi başına yeterli: hangi dal, hangi komut (`node scripts/ai-deneme.mjs`, ad vermeden), kota kuralları (AGENTS.md: günde en fazla 4.000 Neuron ve 2 tam tur, 01:00–07:00, korumayı aşmak yok), sonuçların `docs/durum.md`'ye yazılması, testler, sonuç iyiyse PR (birleştirme yok).
   - Yeni oturum kendi kopyasında `.ai-deneme-kullanim.json` olmadan başlar; deneme yeni UTC gününde (01:30 Almanya = 00:30 UTC) çalıştığı için o günün ilk kullanımıdır.
   - Token, ortamın ağ sırrı olarak kalır; görevler bitince öğretmen siler. Yeni oturum token'ın silinebileceğini PR açıklamasına ve oturum özetine yazar.

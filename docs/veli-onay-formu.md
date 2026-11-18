@@ -5,7 +5,7 @@
 
 # Veli onay formu: Bozkurt Academy öğrenci hesabı
 
-**Sorumlu:** Ömer Faruk Bozkurt, bozkurtt.omerfaruk@gmail.com
+**Sorumlu:** Ömer Faruk Bozkurt, info@bozkurtacademy.com
 
 Çocuğunuz Bozkurt Academy'nin online Almanca derslerine katılmak için bozkurtacademy.com sitesinde bir öğrenci hesabı açmak istiyor. 16 yaşından küçük öğrencilerin hesabı sizin onayınız olmadan açılmaz. Bu form, hangi verilerin neden işlendiğini açıklar.
 
@@ -56,7 +56,7 @@ Veriler reklam için kullanılmaz ve satılmaz.
 
 ## 5. Haklarınız
 
-- Verilere erişmeyi, düzeltilmesini ve **silinmesini isteme hakkınız** var. Bunun için bozkurtt.omerfaruk@gmail.com adresine yazmanız yeterli.
+- Verilere erişmeyi, düzeltilmesini ve **silinmesini isteme hakkınız** var. Bunun için info@bozkurtacademy.com adresine yazmanız yeterli.
 - **Bu onayı istediğiniz zaman geri alabilirsiniz.** Onay geri alınırsa öğrencinin bütün verileri (alıştırma sonuçları, ödevler, dersler ve veli bilgileri) silinir. Geri alma, o zamana kadar yapılan işlemleri geçersiz kılmaz.
 - Bir veri koruma denetim makamına şikâyette bulunabilirsiniz. Yetkili makam: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW), www.ldi.nrw.de.
 
@@ -82,7 +82,7 @@ Velinin imzası: ______________________________
 
 # Einwilligungserklärung der Eltern: Schülerkonto bei Bozkurt Academy
 
-**Verantwortlicher:** Ömer Faruk Bozkurt, bozkurtt.omerfaruk@gmail.com
+**Verantwortlicher:** Ömer Faruk Bozkurt, info@bozkurtacademy.com
 
 Ihr Kind möchte für den Online-Deutschunterricht bei Bozkurt Academy ein Schülerkonto auf bozkurtacademy.com anlegen. Konten von Schülerinnen und Schülern unter 16 Jahren werden nur mit Ihrer Einwilligung freigeschaltet. Dieses Formular erklärt, welche Daten zu welchem Zweck verarbeitet werden.
 
@@ -133,7 +133,7 @@ Wenn das Kind bei einer Schreibaufgabe seinen Text abschickt, wird der Text mit 
 
 ## 5. Ihre Rechte
 
-- Sie haben das Recht auf Auskunft, Berichtigung und **Löschung der Daten**. Schreiben Sie dazu einfach an bozkurtt.omerfaruk@gmail.com.
+- Sie haben das Recht auf Auskunft, Berichtigung und **Löschung der Daten**. Schreiben Sie dazu einfach an info@bozkurtacademy.com.
 - **Sie können diese Einwilligung jederzeit widerrufen.** Nach einem Widerruf werden alle Daten des Kindes (Übungsergebnisse, Hausaufgaben, Stunden und Elterndaten) gelöscht. Der Widerruf berührt nicht die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung.
 - Sie können sich bei einer Datenschutz-Aufsichtsbehörde beschweren. Zuständig: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW), www.ldi.nrw.de.
 

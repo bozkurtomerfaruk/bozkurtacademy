@@ -2,7 +2,9 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
-## 2026-11-18 · İletişim adresi info@bozkurtacademy.com (dal `claude/compassionate-sagan-excdhp`)
+## 2026-11-18 · Madde 9 (e-posta) kapandı: iletişim adresi info@bozkurtacademy.com (dal `claude/compassionate-sagan-excdhp`)
+
+- **Durum:** Tamamlandı. Gelen posta Cloudflare Email Routing ile Gmail'e, giden posta Gmail + Brevo SMTP; site bu adresi gösteriyor. Öğretmenin kararı: Web3Forms alıcısı değişmiyor, form ve yorum bildirimleri Gmail'e gelmeye devam ediyor.
 
 - **Değişen:** Görünen bütün e-posta adresleri `bozkurtt.omerfaruk@gmail.com` yerine `info@bozkurtacademy.com`: ana sayfa, İletişim (TR/DE/EN), Impressum (DE/TR), gizlilik (TR/DE/EN, tarih 18 Kasım 2026), seviye testi metinleri (`js/placement.js`), iletişim formu hata bağlantısı (`js/app.js`), `.well-known/security.txt`, `docs/veli-onay-formu.md`, `docs/seviye-testi.md`, `js/account/config.js` → `TEACHER_EMAIL` (öğrencinin "verilerimi sil" bağlantısı). `app.js` v53, `placement.js` v11.
 - **Gizlilik:** Doğrudan info@ adresine yazılan e-postalar için Cloudflare Email Routing (Gmail'e yönlendirme) ve yanıtlar için Brevo SMTP eklendi (TR/DE/EN ve `docs/privacy-policy.md`).

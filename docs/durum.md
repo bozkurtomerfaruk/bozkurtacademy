@@ -2,6 +2,15 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-18 · Gece yapay zekâ denemeleri: her seferinde yeni oturum (kararın)
+
+- **Sorun:** 18 Kasım 01:30'a bu oturuma kurulan hatırlatma, oturum o saatte uyandırılmadığı için ancak 09:40'ta ulaştı; kota koruması gündüz tam turu durdurdu.
+- **Yeni yapı:** Bir deneme gerektiğinde (talimat ya da `cleanResult` değişince) **tek seferlik, her çalışmada yeni bir oturum başlatan zamanlanmış görev** kuruluyor: Almanya saatiyle 01:30, `create_new_session_on_fire`, bitince telefona bildirim.
+  - Görevin metni kendi başına yeterli: hangi dal, hangi komut (`node scripts/ai-deneme.mjs`, ad vermeden), kota kuralları (AGENTS.md: günde en fazla 4.000 Neuron ve 2 tam tur, 01:00–07:00, korumayı aşmak yok), sonuçların `docs/durum.md`'ye yazılması, testler, sonuç iyiyse PR (birleştirme yok).
+  - Yeni oturum kendi kopyasında `.ai-deneme-kullanim.json` olmadan başlar; deneme yeni UTC gününde (01:30 Almanya = 00:30 UTC) çalıştığı için o günün ilk kullanımıdır.
+  - Token, ortamın ağ sırrı olarak kalır; görevler bitince öğretmen siler. Yeni oturum token'ın silinebileceğini PR açıklamasına ve oturum özetine yazar.
+- İlk kullanım: Goethe B2 tam turu, 19 Kasım 01:30.
+
 ## 2026-11-17 · Schreiben genişletme 7: Goethe B2
 
 - **Format (resmî Goethe-Zertifikat B2 Modellsatz Erwachsene, 2. baskı Ağustos 2025):** Schreiben 75 dk, iki Teil; adaylar istedikleri görevle başlayabiliyor.
@@ -14,7 +23,15 @@
 - **Görev sayfası:** Teil 1 50 dk, Teil 2 25 dk; altında "Gerçek sınavda iki Teil için toplam 75 dakikan var. İstediğin görevle başlayabilirsin." (`anyOrder`). Sayaç: Teil 1 130–180 iyi, 75'in altı "sınavda 0 puan"; Teil 2 85–125, 50'nin altı aynı uyarı. TR/DE/EN. Toplam süre notu genel hâle getirildi (A2'deki "SMS ve e-posta" ifadesi çıkarıldı).
 - **Kohärenz (ek isteğin):** Her setin kontrol listesinde B2 bağlaçlı Kohärenz maddeleri (Einerseits … andererseits, Zum einen … zum anderen, Darüber hinaus, Hinzu kommt, dass …, Abschließend lässt sich sagen, dass …; Teil 2'de deshalb, allerdings, jedoch, Mir ist bewusst, dass …) ve Redemittel'de "Kohärenz" grubu var. `scripts/check-exams.mjs` B2 setlerinde ikisini de zorunlu tutuyor.
 - **Ödev ekranı:** B2 için 10 Schreiben görevi seçilebiliyor (test eklendi).
-- **Yapay zekâ (Worker değişti):** Kısa bir B2 kuralı (sadece "Goethe B2 ·" görevleri): Konjunktiv II, Passiv, Relativsatz, Nominalisierung ve bağlaç hatalarını işaretle; üslup tercihlerini hata sayma; Teil 2'de Sie ve kibar dil. Deneme metinleri: `tests/ai-deneme/goethe-b2-teil1.json` ve `goethe-b2-teil2.json` (10 metin, 18 hata, ikisi hatasız). Talimat değiştiği için bütün sınavların tam turu (58 metin, tahmini ~2.000 Neuron) Almanya saatiyle gece çalışacak. 18 Kasım 01:30'a planlanan görev oturuma ancak 09:40'ta ulaştı; kota koruması gündüz tam turu durdurdu (istek gönderilmedi), deneme 19 Kasım 01:30'a ertelendi. main (B2 dersleri ve seviye sonu sınavı) dala alındı, testler geçti.
+- **Yapay zekâ (Worker değişti):**
+  - B2 notu (Konjunktiv II, Passiv, Relativsatz, Nominalisierung, bağlaçlar; Teil 2'de Sie) **genel talimatta değil**, sadece "Goethe B2 ·" görevlerinin kullanıcı mesajında (`LEVEL_NOTES`). Neden: talimata eklenen B2 satırı DTZ'deki dtz-6'yı her seferinde kaçırttı (satır varken 0/4, yokken 4/4; A2'de 15 Kasım'da aynı sorun olmuştu). Notu mesaja taşıyınca dtz-6 yeniden 2/2.
+  - İki yeni kesin kural (Worker): "teilnehmen an + Dativ" hatası (an den Ausflug / an die Prüfung teilnehmen) modelden bağımsız ekleniyor (model bunu sürekli kaçırıyordu; Dativ çoğul "an den Kursen" ve doğru Dativ dokunulmuyor); kapanış selamına virgül ekleyen öneri (Bis bald → Bis bald,) atılıyor. Bütün deneme metinleri ve 67 örnek cevapta yerel kontrol: sadece kasıtlı üç hata işaretlendi.
+  - Deneme metinleri: `tests/ai-deneme/goethe-b2-teil1.json` ve `goethe-b2-teil2.json` (10 metin, 18 hata, ikisi hatasız).
+- **Deneme (18 Kasım, öğretmenin bir kerelik istisnası: gündüz, `--saat-disi`; Cloudflare kullanımı token izni olmadığı için okunamadı, öğretmen yerel kayda göre onayladı):**
+  - Tur 1 (B2 satırı talimatta): 58 metin, 97/101, 2 yanlış alarm (Bis bald,; bringen → mitbringen). Kaçanlar: dtz-6, b2t1-3 (statt … zu), b2t2-3 ve telc-3 (teilnehmen an).
+  - Tur 2 (kesin kurallardan sonra): 99/101, 1 yanlış alarm (bringen → mitbringen; modelin kendi açıklaması "hata sayılmayabilir" diyor). Kaçanlar: dtz-6 ve b2t1-3. B2 Teil 2 8/8, telc B1 9/9 (ilk kez).
+  - Ardından dtz-6 ölçümü ve B2 notunun kullanıcı mesajına taşınması (yukarıda). Günlük toplam 3.919 Neuron (sınır 4.000), 2 tam tur.
+  - **Bekleyen:** B2 notu kullanıcı mesajına taşındıktan sonraki tam tur, 19 Kasım 01:30'da yeni bir oturumda (aşağıdaki gece denemesi yapısı). Sonuç iyiyse o oturum PR'ı açar.
 
 ## 2026-11-17 · B2 seviye sonu sınavı: 60 soruluk havuz, katalogda bağlı (dal `claude/b2-seviye-sonu`)
 

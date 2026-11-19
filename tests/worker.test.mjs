@@ -2,7 +2,7 @@
 import { beforeEach, describe, test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import worker, { aiAllowed, directAllowed, berlinDay, cleanResult, decode, encode, PROMPT, resetBotToken, TEXT_TYPES, userMessage } from '../worker/schreiben-kontrol.js';
+import worker, { aiAllowed, directAllowed, LEVEL_NOTES, berlinDay, cleanResult, decode, encode, PROMPT, resetBotToken, TEXT_TYPES, userMessage } from '../worker/schreiben-kontrol.js';
 
 const TEXT = 'Liebe Lena,\nseit drei Wochen ich wohne in Hamburg. Ich bin umgezogen, weil ich habe eine Stelle gefunden.\nLiebe Grüße\nAyşe';
 const DAY = berlinDay();
@@ -241,8 +241,34 @@ describe('Schreiben Worker', () => {
     assert.equal(cleanResult('{"fehler":[{"original" "a"}]', text), null);
   });
 
+  test('B2 notu genel talimatta değil, sadece Goethe B2 görevlerinin kullanıcı mesajında', () => {
+    assert.doesNotMatch(PROMPT, /Seviye B2|Seviye notu/);
+    const b2 = userMessage({ name: 'Goethe B2 · Teil 2 · Bericht verspätet', type: TEXT_TYPES['email-semiformal'] }, 'Sehr geehrte Frau Hoffmann, …');
+    assert.match(b2, /^Görev: Goethe B2 · Teil 2 · Bericht verspätet\nMetin türü: .+\nSeviye notu \(B2\): Konjunktiv II, Passiv, Relativsatz, Nominalisierung .+\nMetin:\nSehr geehrte Frau Hoffmann, …$/);
+    for (const name of ['DTZ A2-B1 · Teil 1 · X', 'Goethe B1 · Teil 1 · X', 'telc B1 · Teil 1 · X', 'Goethe A2 · Teil 1 · X']) assert.doesNotMatch(userMessage({ name, type: null }, 'x'), /Seviye notu/, name);
+    assert.ok(Object.keys(LEVEL_NOTES).every((k) => k.endsWith(' ·')));
+  });
+
   test('A2 kuralı sadece "Goethe A2 ·" görevleri için (DTZ "A2-B1" değil)', () => {
     assert.match(PROMPT, /Seviye A2 \(sadece görev adı "Goethe A2 ·" ile başlıyorsa\)/);
+  });
+
+  test('teilnehmen an + Dativ kesin kuralla eklenir; doğru Dativ ve Dativ çoğul dokunulmaz', () => {
+    const empty = JSON.stringify({ fehler: [], korrigierter_text: 'x' });
+    const r1 = cleanResult(empty, 'Ich nehme gern an den Ausflug teil. Ich konnte nicht an die Prüfung teilnehmen.');
+    assert.deepEqual(r1.errors.map((e) => [e.original, e.korrektur]), [['an den Ausflug', 'an dem Ausflug'], ['an die Prüfung', 'an der Prüfung']]);
+    assert.match(r1.errors[0].erklaerung, /Dativ/);
+    assert.equal(cleanResult(empty, 'Ich nehme am Ausflug teil. Wir nehmen an den Kursen teil. Ich möchte an der Prüfung teilnehmen.').errors.length, 0);
+    const r2 = cleanResult(empty, 'Ich möchte an die nächste Prüfung teilnehmen.');
+    assert.deepEqual(r2.errors.map((e) => e.korrektur), ['an der nächsten Prüfung']);
+    const model = JSON.stringify({ fehler: [{ original: 'an die Prüfung teilnehmen', korrektur: 'an der Prüfung teilnehmen', erklaerung: 'Dativ.' }], korrigierter_text: 'x' });
+    assert.equal(cleanResult(model, 'Ich konnte nicht an die Prüfung teilnehmen.').errors.length, 1, 'model bulduysa ikinci kez eklenmez');
+  });
+
+  test('kapanış selamına virgül ekleyen öneri atılır', () => {
+    const text = 'Lieber Jonas,\nich komme gern.\nBis bald\nDeniz';
+    const r = cleanResult(JSON.stringify({ fehler: [{ original: 'Bis bald', korrektur: 'Bis bald,', erklaerung: 'virgül' }], korrigierter_text: 'x' }), text);
+    assert.equal(r.errors.length, 0);
   });
 
   test('directAllowed', () => {

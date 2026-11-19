@@ -88,7 +88,7 @@
       <p><strong>${esc(set.task)}</strong></p>
       ${points}
       ${set.instructions ? `<p class="wt-instructions">${esc(set.instructions)}</p>` : ''}
-    </div>${set.examChoice ? `<p class="wt-muted wt-choice" data-wt-choice>${esc(t('wtExamChoice'))}</p>` : ''}${set.sharedMinutes ? `<p class="wt-muted wt-choice" data-wt-shared>${esc(fill('wtSharedMinutes', { n: set.sharedMinutes }))}</p>` : ''}`;
+    </div>${set.examChoice ? `<p class="wt-muted wt-choice" data-wt-choice>${esc(t('wtExamChoice'))}</p>` : ''}${set.sharedMinutes ? `<p class="wt-muted wt-choice" data-wt-shared>${esc(fill('wtSharedMinutes', { n: set.sharedMinutes }))}${set.anyOrder ? ` ${esc(t('wtAnyOrder'))}` : ''}</p>` : ''}`;
   }
 
   // Metin alanındaki ipucu, metin türüne göre (data: textType).

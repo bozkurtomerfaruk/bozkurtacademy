@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b2",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-3",
+  "title": "Prüfung verpasst",
+  "minutes": 25,
+  "sharedMinutes": 75,
+  "anyOrder": true,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "Sie besuchen einen Fortbildungskurs. Am Samstag fand die Abschlussprüfung statt, aber Sie konnten wegen eines Notfalls in der Familie nicht kommen.",
+  "task": "Schreiben Sie eine Nachricht an die Kursleiterin, Frau Dr. Lehmann.",
+  "points": [
+    "Erklären Sie, was passiert ist.",
+    "Entschuldigen Sie sich.",
+    "Fragen Sie nach einer Möglichkeit, die Prüfung nachzuholen.",
+    "Machen Sie einen Terminvorschlag."
+  ],
+  "instructions": "Überlegen Sie sich eine passende Reihenfolge für die Inhaltspunkte. Bei der Bewertung wird darauf geachtet, wie genau die Inhaltspunkte bearbeitet sind, wie korrekt der Text ist und wie gut die Sätze und Abschnitte sprachlich miteinander verknüpft sind. Vergessen Sie nicht Anrede und Gruß. Schreiben Sie circa 100 Wörter.",
+  "words": {
+    "target": 100,
+    "min": 85,
+    "max": 125,
+    "zeroBelow": 50
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: ne olduğu, özür, sınavı sonradan yapma imkânı sorusu, tarih önerisi."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Baştan sona Sie ile ve kibar yazdım (Konjunktiv II: Könnten Sie …? Ich würde …)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap (Sehr geehrte Frau … / Sehr geehrter Herr … ya da tanıdık bir iş arkadaşına Lieber Herr …,) ve selam (Mit freundlichen Grüßen / Viele Grüße + adım) var; maddeleri kendi seçtiğim mantıklı sırayla yazdım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kohärenz: Maddeleri bağladım: deshalb, darüber hinaus, allerdings, jedoch; Mir ist bewusst, dass … / Ich verstehe natürlich, dass …"
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Her maddeye en az bir iki cümle yazdım; liste ya da numara kullanmadım."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "teilnehmen an + Dativ: an der Abschlussprüfung teilnehmen."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Perfekt ve sein: Mein Vater ist ins Krankenhaus gekommen. / Ich bin zu ihm gefahren."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Sehr geehrte Frau … / Sehr geehrter Herr …,",
+          "tr": "Sayın … Hanım / … Bey,"
+        },
+        {
+          "de": "Mit freundlichen Grüßen",
+          "tr": "Saygılarımla"
+        }
+      ]
+    },
+    {
+      "group": "Situation und Bitte",
+      "items": [
+        {
+          "de": "Leider muss ich Ihnen mitteilen, dass …",
+          "tr": "Maalesef size … bildirmek zorundayım"
+        },
+        {
+          "de": "Ich bitte Sie um Verständnis für …",
+          "tr": "… için anlayışınızı rica ediyorum"
+        },
+        {
+          "de": "Könnten Sie …?",
+          "tr": "… yapabilir misiniz?"
+        }
+      ]
+    },
+    {
+      "group": "Vorschlag",
+      "items": [
+        {
+          "de": "Darf ich Ihnen vorschlagen, dass …?",
+          "tr": "… önerebilir miyim?"
+        },
+        {
+          "de": "Vielleicht könnten wir …",
+          "tr": "Belki … yapabiliriz"
+        }
+      ]
+    },
+    {
+      "group": "Kohärenz: Verknüpfen",
+      "items": [
+        {
+          "de": "Deshalb möchte ich Sie bitten, …",
+          "tr": "Bu yüzden sizden … rica etmek istiyorum"
+        },
+        {
+          "de": "Mir ist bewusst, dass … / Ich verstehe natürlich, dass …",
+          "tr": "… farkındayım / Elbette … anlıyorum"
+        },
+        {
+          "de": "Darüber hinaus … / Außerdem …",
+          "tr": "Bunun ötesinde … / Ayrıca …"
+        },
+        {
+          "de": "Allerdings … / Jedoch …",
+          "tr": "Ancak … / Fakat …"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Sehr geehrte Frau Dr. Lehmann,\nich muss Ihnen leider mitteilen, dass ich am Samstag nicht an der Abschlussprüfung des Fortbildungskurses teilnehmen konnte. Am Freitagabend ist mein Vater ins Krankenhaus gekommen, und ich bin sofort zu ihm gefahren.\nEs tut mir sehr leid, dass ich mich nicht vorher abgemeldet habe, aber in dieser Situation habe ich einfach nicht daran gedacht. Ich hoffe, Sie haben dafür Verständnis.\nGibt es die Möglichkeit, die Prüfung nachzuholen? Ich könnte an jedem Wochentag ab 16 Uhr oder am nächsten Samstag kommen. Eine Bescheinigung des Krankenhauses reiche ich gern nach.\nMit freundlichen Grüßen\nElif Demir",
+    "notes": [
+      "Dört madde: ne oldu (Vater im Krankenhaus), özür (Es tut mir sehr leid, dass …), soru (die Prüfung nachzuholen), öneri (wochentags ab 16 Uhr, nächster Samstag).",
+      "teilnehmen an + Dativ: an der Abschlussprüfung.",
+      "nachholen, nachreichen: sonradan yapmak, sonradan teslim etmek."
+    ]
+  }
+}

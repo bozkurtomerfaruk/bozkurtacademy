@@ -2,6 +2,56 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-19 · Schreiben genişletmesi tamamlandı (madde 7)
+
+- **Kapanış:** #124 (Goethe B2) birleştirilince 9 Kasım'da başlayan Schreiben genişletmesi bitti. Sınavlar ve setler:
+
+| Sınav | Teil | Görev | Set |
+|---|---|---|---|
+| Goethe A1 | 1 / 2 | Form doldurma (otomatik kontrol) / kısa mesaj ~30 kelime | 5 + 5 |
+| Goethe A2 | 1 / 2 | Arkadaşa SMS 20–30 / yarı resmî e-posta 30–40 | 5 + 5 |
+| Goethe B1 | 1 / 2 / 3 | Arkadaşa e-posta ~80 / Gästebuch görüşü ~80 / yarı resmî e-posta ~40 | 5 + 5 + 5 |
+| Goethe B2 | 1 / 2 | Forum yazısı ~150 / iş yerinde mesaj ~100 | 5 + 5 |
+| telc A1 (Start Deutsch 1) | 1 / 2 | Form doldurma / kısa mesaj ~30 | 5 + 5 |
+| telc B1 | 1 | E-postaya cevap, Betreff, ~120 | 6 |
+| DTZ | 1 | Yarı resmî / resmî yazı ~80 | 6 |
+
+- **Ortak altyapı:** kelime sayacı (hedef aralık, "çok kısa" ve "sınavda 0 puan" uyarıları), toplam süre ve sınav seçimi notları, kontrol listesi, Redemittel, örnek cevap, ödev ekranında seviyeye göre seçim (DTZ hem A2 hem B1).
+- **Yapay zekâ kontrolü:** "Anında göster" (öğrenci hemen görür), "yanlış görünüyor" bildirimi, düzeltilmiş hâl, 16 yaş altı onay sürümü. Seviye notları kullanıcı mesajında (`LEVEL_NOTES`). Kesin kurallar: hitaptan sonra küçük harf, Du/du, du→Sie açıklaması, JSON onarımı, teilnehmen an + Dativ, kapanış virgülü.
+- **Deneme seti:** `tests/ai-deneme/` altında 11 dosya, 58 metin, 101 hata. Son tam tur (19 Kasım): 100/101, 1 yanlış alarm. Deneme kuralı: öğretmene sor, onaydan sonra gündüz; günde en fazla 4.000 Neuron ve 2 tam tur (`scripts/ai-deneme-kota.mjs`).
+- **Senin yapacakların:** Worker'ı Cloudflare'de #124'ün koduyla güncelle; deneme token'ını sil (yapmadıysan).
+- **Sıradaki (9 Kasım öncelik sırası):** e-posta (madde 9) 18 Kasım'da kapandı; sırada Sprechen (madde 8) ve Kayıp Harf Treni var.
+
+## 2026-11-19 · Yapay zekâ denemeleri: gece görevleri bırakıldı (kararın)
+
+- **Ne oldu:** 18 Kasım'da gece denemesi için her seferinde yeni oturum açan zamanlanmış görev kurulmuştu. 19 Kasım 01:30'da çalıştı ama yeni oturum depoya erişemedi; deneme yapılmadı. Daha önce de (18 Kasım) aynı oturuma kurulan hatırlatmanın turu tamamlanamamıştı.
+- **Kalıcı karar:** Gece/zamanlanmış deneme görevi yok. Deneme gerektiğinde (talimat ya da `cleanResult` değişince) öğretmene sorulur; onay verirse gündüz, çalışılan oturumda çalıştırılır. Zamanlanmış gece görevi silindi.
+- **Koruma (`scripts/ai-deneme-kota.mjs`):** Saat sınırı ve `--saat-disi` kaldırıldı. Günde en fazla 4.000 Neuron ve 2 tam tur sınırı aynen geçerli; betik aşacaksa hiçbir istek göndermeden durur. AGENTS.md buna göre güncellendi.
+- **Seviye notları:** Seviyeye özel yapay zekâ notları genel talimata değil kullanıcı mesajına eklenir (`LEVEL_NOTES`); kural AGENTS.md'de.
+- **Düzeltme:** Kota kayıt dosyası `.ai-deneme-kullanim.json` telc A1 dalında `.gitignore` kuralı yokken yanlışlıkla depoya girmişti (#117 ile main'e geldi; içinde sadece tarih ve Neuron sayıları vardı). Depodan çıkarıldı; yerel kopya ve `.gitignore` kuralı duruyor.
+
+## 2026-11-17 · Schreiben genişletme 7: Goethe B2
+
+- **Format (resmî Goethe-Zertifikat B2 Modellsatz Erwachsene, 2. baskı Ağustos 2025):** Schreiben 75 dk, iki Teil; adaylar istedikleri görevle başlayabiliyor.
+  - Teil 1: Forumsbeitrag, ~150 kelime, önerilen 50 dk, 4 madde (görüş, nedenler, alternatifler, avantajlar), giriş ve sonuç.
+  - Teil 2: Nachricht (amire ya da iş arkadaşına), ~100 kelime, önerilen 25 dk, 4 madde, hitap ve selam, sıra serbest.
+  - Ölçütler: Aufgabenerfüllung, Kohärenz, Wortschatz, Strukturen. İstenen uzunluğun yarısının altı ya da konu dışı yazı 0 puan.
+- **10 set (kararların):**
+  - Teil 1: Weniger Fleisch essen, Fliegen oder Bahn fahren, Tablets im Unterricht, Ehrenamt, Stadt oder Land (örnek cevaplar 140–159 kelime). Gästebuch kartı yok (B1'den farklı).
+  - Teil 2: Bericht verspätet, Weiterbildung beantragen, Prüfung verpasst, Präsentation übernehmen, Gleitzeit vorschlagen (93–104 kelime).
+- **Görev sayfası:** Teil 1 50 dk, Teil 2 25 dk; altında "Gerçek sınavda iki Teil için toplam 75 dakikan var. İstediğin görevle başlayabilirsin." (`anyOrder`). Sayaç: Teil 1 130–180 iyi, 75'in altı "sınavda 0 puan"; Teil 2 85–125, 50'nin altı aynı uyarı. TR/DE/EN. Toplam süre notu genel hâle getirildi (A2'deki "SMS ve e-posta" ifadesi çıkarıldı).
+- **Kohärenz (ek isteğin):** Her setin kontrol listesinde B2 bağlaçlı Kohärenz maddeleri (Einerseits … andererseits, Zum einen … zum anderen, Darüber hinaus, Hinzu kommt, dass …, Abschließend lässt sich sagen, dass …; Teil 2'de deshalb, allerdings, jedoch, Mir ist bewusst, dass …) ve Redemittel'de "Kohärenz" grubu var. `scripts/check-exams.mjs` B2 setlerinde ikisini de zorunlu tutuyor.
+- **Ödev ekranı:** B2 için 10 Schreiben görevi seçilebiliyor (test eklendi).
+- **Yapay zekâ (Worker değişti):**
+  - B2 notu (Konjunktiv II, Passiv, Relativsatz, Nominalisierung, bağlaçlar; Teil 2'de Sie) **genel talimatta değil**, sadece "Goethe B2 ·" görevlerinin kullanıcı mesajında (`LEVEL_NOTES`). Neden: talimata eklenen B2 satırı DTZ'deki dtz-6'yı her seferinde kaçırttı (satır varken 0/4, yokken 4/4; A2'de 15 Kasım'da aynı sorun olmuştu). Notu mesaja taşıyınca dtz-6 yeniden 2/2.
+  - İki yeni kesin kural (Worker): "teilnehmen an + Dativ" hatası (an den Ausflug / an die Prüfung teilnehmen) modelden bağımsız ekleniyor (model bunu sürekli kaçırıyordu; Dativ çoğul "an den Kursen" ve doğru Dativ dokunulmuyor); kapanış selamına virgül ekleyen öneri (Bis bald → Bis bald,) atılıyor. Bütün deneme metinleri ve 67 örnek cevapta yerel kontrol: sadece kasıtlı üç hata işaretlendi.
+  - Deneme metinleri: `tests/ai-deneme/goethe-b2-teil1.json` ve `goethe-b2-teil2.json` (10 metin, 18 hata, ikisi hatasız).
+- **Deneme (18 Kasım, öğretmenin bir kerelik istisnası: gündüz, `--saat-disi`; Cloudflare kullanımı token izni olmadığı için okunamadı, öğretmen yerel kayda göre onayladı):**
+  - Tur 1 (B2 satırı talimatta): 58 metin, 97/101, 2 yanlış alarm (Bis bald,; bringen → mitbringen). Kaçanlar: dtz-6, b2t1-3 (statt … zu), b2t2-3 ve telc-3 (teilnehmen an).
+  - Tur 2 (kesin kurallardan sonra): 99/101, 1 yanlış alarm (bringen → mitbringen; modelin kendi açıklaması "hata sayılmayabilir" diyor). Kaçanlar: dtz-6 ve b2t1-3. B2 Teil 2 8/8, telc B1 9/9 (ilk kez).
+  - Ardından dtz-6 ölçümü ve B2 notunun kullanıcı mesajına taşınması (yukarıda). Günlük toplam 3.919 Neuron (sınır 4.000), 2 tam tur.
+  - **19 Kasım (öğretmenin onayıyla gündüz, B2 notu kullanıcı mesajında):** 58 metin, **100/101**, 1 yanlış alarm (telc A1: "bringen → mitbringen"; modelin kendi açıklaması "hata sayılmayabilir" diyor), okunamayan cevap yok. dtz-6 yeniden bulundu; eski sınavlarda gerileme yok (DTZ 16/16, Goethe A1 7/7, A2 16/16, B1 26/26, telc A1 9/9, telc B1 9/9). B2: Teil 1 9/10 (kaçan "statt … zu"), Teil 2 8/8. Kullanım 1.730 Neuron.
+
 ## 2026-11-18 · Madde 9 (e-posta) kapandı: iletişim adresi info@bozkurtacademy.com (dal `claude/compassionate-sagan-excdhp`)
 
 - **Durum:** Tamamlandı. Gelen posta Cloudflare Email Routing ile Gmail'e, giden posta Gmail + Brevo SMTP; site bu adresi gösteriyor. Öğretmenin kararı: Web3Forms alıcısı değişmiyor, form ve yorum bildirimleri Gmail'e gelmeye devam ediyor.
@@ -72,9 +122,9 @@
   - **Kota:** 15 Kasım'da yaklaşık 580 model çağrısı yapıldı (çağrı başına 16–34 Neuron). Senin kontrolün (16 Kasım): plan "Free", Workers AI maliyeti $0; ücret çıkmadı.
 - **Deneme kuralları (kararın, 16 Kasım):** Denemeler öğrencilerle aynı ücretsiz kotayı kullanıyor (günde 10.000 Neuron, gün UTC 00:00'da başlar).
   - Bir günde en fazla 2 tam tur ve en fazla 4.000 Neuron (öğrencilere en az 6.000 kalır).
-  - Almanya saatiyle 01:00–07:00 arasında.
+  - Almanya saatiyle 01:00–07:00 arasında (19 Kasım'da kaldırıldı: deneme öğretmenin onayıyla gündüz).
   - `scripts/ai-deneme.mjs` çalışmadan önce o günün kayıtlı kullanımını ve bu çalıştırmanın tahminini (metin başına en az 35 Neuron) hesaplıyor; 4.000'i aşacaksa, o gün 2 tam tur çalıştıysa ya da saat aralık dışındaysa hiçbir istek göndermeden duruyor. Mantık `scripts/ai-deneme-kota.mjs`'te, testi `npm test`'te.
-  - Küçük bir ek deneme için `--saat-disi`; tek tek metinler için `--ids`. Kullanım depoya girmeyen `.ai-deneme-kullanim.json`'a yazılıyor (sadece bu bilgisayarın denemeleri; öğrencilerin kullanımı Cloudflare panelinde). Kural AGENTS.md'ye de yazıldı.
+  - `--saat-disi` (19 Kasım'da kaldırıldı); tek tek metinler için `--ids`. Kullanım depoya girmeyen `.ai-deneme-kullanim.json`'a yazılıyor (sadece bu bilgisayarın denemeleri; öğrencilerin kullanımı Cloudflare panelinde). Kural AGENTS.md'ye de yazıldı.
 - **Senin yapacakların (birleştirmeden sonra):** Worker'ı güncelle. Firestore kuralları değişmedi.
 
 ## 2026-11-16 · B2 gramer dersleri, PR 3: Partizip II, Genitivpräpositionen, je … desto (dal `claude/b2-dersler-2`)
@@ -237,7 +287,7 @@
 - **Senin yapacakların (birleştirmeden sonra):**
   1. Worker'ı Cloudflare'de güncelle. Firestore kuralları değişmedi.
   2. Deneme token'ını sil (21.11.2026'ya kadar geçerli).
-- **Sıradaki:** Goethe A2 → Goethe B2 Schreiben; sonra e-posta (madde 9), sonra Sprechen (madde 8).
+- **Sıradaki:** Goethe A2 → Goethe B2 Schreiben; sonra e-posta (madde 9), sonra Sprechen (madde 8). (19 Kasım: Schreiben tamamlandı, yukarıdaki kapanış girişine bak.)
 
 ## 2026-11-14 · Schreiben: öğrenci geri bildirimi hemen görüyor ("Anında göster" varsayılan)
 

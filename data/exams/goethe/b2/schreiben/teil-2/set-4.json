@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b2",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-4",
+  "title": "Präsentation übernehmen",
+  "minutes": 25,
+  "sharedMinutes": 75,
+  "anyOrder": true,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "Sie sollen am Donnerstag bei einem Kunden ein neues Produkt präsentieren. Kurzfristig müssen Sie aber zu einem anderen Termin nach Hamburg.",
+  "task": "Schreiben Sie eine Nachricht an Ihren Kollegen, Herrn Lang.",
+  "points": [
+    "Beschreiben Sie Ihre Situation.",
+    "Bitten Sie Herrn Lang, die Präsentation zu übernehmen.",
+    "Zeigen Sie Verständnis für seine Situation.",
+    "Bieten Sie ihm etwas als Dank an."
+  ],
+  "instructions": "Überlegen Sie sich eine passende Reihenfolge für die Inhaltspunkte. Bei der Bewertung wird darauf geachtet, wie genau die Inhaltspunkte bearbeitet sind, wie korrekt der Text ist und wie gut die Sätze und Abschnitte sprachlich miteinander verknüpft sind. Vergessen Sie nicht Anrede und Gruß. Schreiben Sie circa 100 Wörter.",
+  "words": {
+    "target": 100,
+    "min": 85,
+    "max": 125,
+    "zeroBelow": 50
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: durumum, sunumu devralma ricası, onun durumuna anlayış, teşekkür olarak karşılık."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Baştan sona Sie ile ve kibar yazdım (Konjunktiv II: Könnten Sie …? Ich würde …)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap (Sehr geehrte Frau … / Sehr geehrter Herr … ya da tanıdık bir iş arkadaşına Lieber Herr …,) ve selam (Mit freundlichen Grüßen / Viele Grüße + adım) var; maddeleri kendi seçtiğim mantıklı sırayla yazdım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kohärenz: Maddeleri bağladım: deshalb, darüber hinaus, allerdings, jedoch; Mir ist bewusst, dass … / Ich verstehe natürlich, dass …"
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Her maddeye en az bir iki cümle yazdım; liste ya da numara kullanmadım."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Kibar rica: Könnten Sie … übernehmen? (Konjunktiv II, mastar sonda)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Dolaylı soru: … erklären, worauf es ankommt (fiil sonda)."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Sehr geehrte Frau … / Sehr geehrter Herr …,",
+          "tr": "Sayın … Hanım / … Bey,"
+        },
+        {
+          "de": "Mit freundlichen Grüßen",
+          "tr": "Saygılarımla"
+        }
+      ]
+    },
+    {
+      "group": "Situation und Bitte",
+      "items": [
+        {
+          "de": "Leider muss ich Ihnen mitteilen, dass …",
+          "tr": "Maalesef size … bildirmek zorundayım"
+        },
+        {
+          "de": "Ich bitte Sie um Verständnis für …",
+          "tr": "… için anlayışınızı rica ediyorum"
+        },
+        {
+          "de": "Könnten Sie …?",
+          "tr": "… yapabilir misiniz?"
+        }
+      ]
+    },
+    {
+      "group": "Vorschlag",
+      "items": [
+        {
+          "de": "Darf ich Ihnen vorschlagen, dass …?",
+          "tr": "… önerebilir miyim?"
+        },
+        {
+          "de": "Vielleicht könnten wir …",
+          "tr": "Belki … yapabiliriz"
+        }
+      ]
+    },
+    {
+      "group": "Kohärenz: Verknüpfen",
+      "items": [
+        {
+          "de": "Deshalb möchte ich Sie bitten, …",
+          "tr": "Bu yüzden sizden … rica etmek istiyorum"
+        },
+        {
+          "de": "Mir ist bewusst, dass … / Ich verstehe natürlich, dass …",
+          "tr": "… farkındayım / Elbette … anlıyorum"
+        },
+        {
+          "de": "Darüber hinaus … / Außerdem …",
+          "tr": "Bunun ötesinde … / Ayrıca …"
+        },
+        {
+          "de": "Allerdings … / Jedoch …",
+          "tr": "Ancak … / Fakat …"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Lieber Herr Lang,\nich habe eine große Bitte an Sie. Am Donnerstag sollte ich unser neues Produkt bei der Firma Berger vorstellen, aber kurzfristig hat mich die Geschäftsleitung zu einem wichtigen Termin nach Hamburg geschickt.\nKönnten Sie die Präsentation für mich übernehmen? Die Folien sind fertig, und ich würde Ihnen morgen in einer halben Stunde erklären, worauf es ankommt.\nMir ist klar, dass Sie selbst viel zu tun haben, und ich weiß Ihre Hilfe sehr zu schätzen. Als Dank übernehme ich gern nächste Woche Ihren Spätdienst am Telefon.\nBitte geben Sie mir bis heute Abend Bescheid.\nViele Grüße\nSelin Aydın",
+    "notes": [
+      "Dört madde: durum (Termin nach Hamburg), rica (Könnten Sie … übernehmen?), anlayış (Mir ist klar, dass Sie selbst viel zu tun haben), teşekkür önerisi (Spätdienst übernehmen).",
+      "İş arkadaşına Sie ama sıcak: Lieber Herr Lang, … Viele Grüße.",
+      "etwas zu schätzen wissen: bir şeyin değerini bilmek."
+    ]
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b2",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Fliegen oder Bahn fahren",
+  "minutes": 50,
+  "sharedMinutes": 75,
+  "anyOrder": true,
+  "kind": "writing",
+  "register": "neutral",
+  "textType": "forum",
+  "situation": "Sie schreiben einen Forumsbeitrag zum Thema „Inlandsflüge – noch zeitgemäß?“.",
+  "task": "Schreiben Sie etwas zu folgenden Punkten:",
+  "points": [
+    "Äußern Sie Ihre Meinung zu Flügen innerhalb Deutschlands.",
+    "Nennen Sie Gründe, warum viele Menschen trotzdem fliegen.",
+    "Nennen Sie andere Möglichkeiten zu reisen.",
+    "Nennen Sie Vorteile dieser Möglichkeiten."
+  ],
+  "instructions": "Denken Sie an eine Einleitung und einen Schluss. Bei der Bewertung wird darauf geachtet, wie genau die Inhaltspunkte bearbeitet sind, wie korrekt der Text ist und wie gut die Sätze und Abschnitte sprachlich miteinander verknüpft sind. Schreiben Sie circa 150 Wörter.",
+  "words": {
+    "target": 150,
+    "min": 130,
+    "max": 180,
+    "zeroBelow": 75
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: görüşüm, nedenler, alternatifler, avantajlar."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Görüşümü gerekçelendirdim ve her maddeye birkaç cümle yazdım; konu dışına çıkmadım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Giriş (konuyu ve görüşümü söyledim) ve sonuç (Abschließend lässt sich sagen, dass … / Zusammenfassend …) var; maddeleri ayrı paragraflarda yazdım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kohärenz: Cümleleri ve paragrafları B2 bağlaçlarıyla bağladım: Einerseits … andererseits, Zum einen … zum anderen, Darüber hinaus, Hinzu kommt, dass …"
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Bağlaçtan sonra kelime sırası doğru: Darüber hinaus wissen viele … (fiil 2. sırada); einerseits/andererseits ve trotzdem'den sonra da fiil hemen gelir."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Ich halte … für … (bir şeyi … bulmak): Ich halte Inlandsflüge für überflüssig."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "damit + yan cümle (fiil sonda): …, damit die Bahn zuverlässiger wird."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Einleitung und Meinung",
+      "items": [
+        {
+          "de": "Immer mehr Menschen fragen sich, ob …",
+          "tr": "Giderek daha fazla insan … diye soruyor"
+        },
+        {
+          "de": "Meiner Meinung nach … / Ich bin der Ansicht, dass …",
+          "tr": "Bence … / … görüşündeyim"
+        },
+        {
+          "de": "Ich halte … für …",
+          "tr": "…'i … buluyorum"
+        }
+      ]
+    },
+    {
+      "group": "Gründe, Alternativen, Vorteile",
+      "items": [
+        {
+          "de": "Das hat mehrere Gründe: …",
+          "tr": "Bunun birkaç nedeni var: …"
+        },
+        {
+          "de": "Als Alternative bietet sich … an.",
+          "tr": "Alternatif olarak … öne çıkıyor"
+        },
+        {
+          "de": "Der Vorteil liegt darin, dass …",
+          "tr": "Avantajı şu: …"
+        }
+      ]
+    },
+    {
+      "group": "Kohärenz: Text gliedern und verknüpfen",
+      "items": [
+        {
+          "de": "Einerseits …, andererseits …",
+          "tr": "Bir yandan …, öte yandan …"
+        },
+        {
+          "de": "Zum einen …, zum anderen …",
+          "tr": "Birincisi …, ikincisi …"
+        },
+        {
+          "de": "Darüber hinaus … / Hinzu kommt, dass …",
+          "tr": "Bunun ötesinde … / Buna … da eklenir"
+        },
+        {
+          "de": "Dabei … / Trotzdem …",
+          "tr": "Oysa … / Yine de … (fiil hemen arkasında)"
+        },
+        {
+          "de": "Abschließend lässt sich sagen, dass …",
+          "tr": "Son olarak şunu söyleyebiliriz: …"
+        },
+        {
+          "de": "Zusammenfassend bin ich der Meinung, dass …",
+          "tr": "Özetle … düşüncesindeyim"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Ob man für kurze Strecken innerhalb Deutschlands das Flugzeug nehmen sollte, wird zurzeit heftig diskutiert. Ich persönlich halte Inlandsflüge in den meisten Fällen für überflüssig.\nTrotzdem sind sie weiterhin sehr verbreitet. Das liegt zum einen daran, dass Flugtickets oft günstiger sind als Bahnfahrkarten, zum anderen sparen Geschäftsreisende scheinbar Zeit. Hinzu kommt, dass die Bahn häufig Verspätung hat.\nAls Alternative bietet sich vor allem der Zug an. Für manche Strecken kommen auch Fernbusse oder Fahrgemeinschaften infrage.\nDie Vorteile liegen auf der Hand: Im Zug kann man arbeiten oder sich ausruhen, man fährt direkt von Stadtzentrum zu Stadtzentrum und verursacht deutlich weniger CO₂. Wenn man die Wege zum Flughafen und die Sicherheitskontrolle mitrechnet, ist man oft sogar schneller.\nZusammenfassend bin ich der Meinung, dass die Politik die Bahn stärker fördern sollte, damit sie zuverlässiger und günstiger wird. Dann würden viele freiwillig auf das Flugzeug verzichten.",
+    "notes": [
+      "Dört madde: görüş (überflüssig), nedenler (günstiger, Zeit, Verspätung), alternatifler (Zug, Fernbus, Fahrgemeinschaft), avantajlar (arbeiten, Stadtzentrum, weniger CO₂).",
+      "Kohärenz: zum einen … zum anderen, Hinzu kommt, dass …, Zusammenfassend bin ich der Meinung …",
+      "Die Vorteile liegen auf der Hand: B2 düzeyinde kalıp (avantajlar ortada)."
+    ]
+  }
+}

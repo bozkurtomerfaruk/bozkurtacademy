@@ -126,6 +126,25 @@ const onlyDuCase = (original, korrektur) => original !== korrektur && original.t
   && original.split(/\s+/).every((word, i) => { const other = korrektur.split(/\s+/)[i]; return word === other || DU_WORD.test(word.replace(/[.,!?;:]+$/, '')); });
 const DU_TO_SIE = (original, korrektur) => /\b(du|dich|dir|dein\w*|kannst|hast|bist|willst|möchtest)\b/i.test(original)
   && /\b(Sie|Ihnen|Ihr\w*)\b/.test(korrektur) && !/\b(du|dich|dir|dein\w*)\b/i.test(korrektur);
+// Kapanış selamına virgül ekleyen ya da silen öneri (Bis bald → Bis bald,): kapanıştan sonra virgül gelmez; atılır.
+const CLOSING = /^(bis bald|bis gleich|bis später|bis morgen|viele grüße|liebe grüße|herzliche grüße|beste grüße|mit freundlichen grüßen|freundliche grüße|gruß|grüße|lg)$/i;
+const onlyClosingComma = (original, korrektur) => CLOSING.test(original.replace(/[,.!]+$/, '').trim()) && original.replace(/[,.!\s]+$/, '') === korrektur.replace(/[,.!\s]+$/, '');
+// teilnehmen an + Dativ: "an den Ausflug teilnehmen / nehme an den Ausflug teil", "an die Prüfung teilnehmen" yanlış.
+// Model bu kuralı sık kaçırıyor; kesin kuralla eklenir. "an den Kursen" (Dativ çoğul, -n) ve n ile biten isimler atlanır.
+const TEILNEHMEN = /\ban (den|die|das) ((?:\p{Ll}+ )?\p{Lu}\p{L}*) (?:\p{L}+ ){0,3}?(teilnehmen|teilzunehmen|teilgenommen|teil)\b/gu;
+function teilnehmenItems(text) {
+  const out = [];
+  for (const m of text.matchAll(TEILNEHMEN)) {
+    const [, article, phrase] = m;
+    const noun = phrase.split(' ').pop();
+    if (article === 'den' && /n$/.test(noun)) continue;
+    const fixed = { den: 'dem', das: 'dem', die: 'der' }[article];
+    const adj = phrase.includes(' ') ? phrase.split(' ')[0].replace(/e$/, 'en') + ' ' + noun : noun;
+    out.push({ original: `an ${article} ${phrase}`, korrektur: `an ${fixed} ${adj}`,
+      erklaerung: 'teilnehmen an + Dativ (-e hâli): an dem (am) / an der … teilnehmen; Akkusativ (an den / an die) yanlış.' });
+  }
+  return out;
+}
 export function cleanResult(raw, text) {
   const s = String(raw || '');
   const from = s.indexOf('{'), to = s.lastIndexOf('}');
@@ -159,6 +178,7 @@ export function cleanResult(raw, text) {
     if (!original || !korrektur || !erklaerung || original === korrektur || !text.includes(original) || seen.has(original)) continue;
     if (capitalizesAfterGreeting(original, korrektur)) continue;
     if (onlyDuCase(original, korrektur)) continue;
+    if (onlyClosingComma(original, korrektur)) continue;
     // Model bazen bir maddeyi yazıp açıklamasında "bu bir hata değildir / hata sayılmaz" diyor; öyle maddeler gösterilmez.
     if (/hata (değil|sayılmaz)/i.test(erklaerung)) continue;
     seen.add(original);
@@ -180,6 +200,10 @@ export function cleanResult(raw, text) {
         same.erklaerung = `${same.erklaerung} ${note}`.slice(0, 600);
       }
     } else if (errors.length < 30) errors.unshift({ original: first, korrektur: lower, erklaerung: note });
+  }
+  for (const item of teilnehmenItems(text)) {
+    if (errors.length >= 30 || errors.some((e) => e.original.includes(item.original) || item.original.includes(e.original))) continue;
+    errors.push(item);
   }
   const corrected = typeof data.korrigierter_text === 'string' ? data.korrigierter_text.slice(0, 6000) : '';
   return { errors, correctedText: corrected, model: MODEL };
@@ -257,7 +281,16 @@ async function taskInfo(env, w) {
 }
 
 // Yapay zekâya giden kullanıcı mesajı: sadece görev adı, metin türü ve metin (ad, e-posta, uid yok).
-export const userMessage = (task, text) => `Görev: ${task.name}\n${task.type ? `Metin türü: ${task.type}\n` : ''}Metin:\n${text}`;
+// Seviyeye özel notlar genel talimata (PROMPT) değil, sadece o sınavın kullanıcı mesajına eklenir: talimata eklenen her
+// seviye satırı öbür sınavların sonuçlarını da değiştirdi (A2 ve B2 satırları DTZ'de bir fiil yeri hatasını kaçırttı, 15 ve 18 Kasım).
+export const LEVEL_NOTES = {
+  'Goethe B2 ·': 'Seviye notu (B2): Konjunktiv II, Passiv, Relativsatz, Nominalisierung ve bağlaç (einerseits … andererseits, darüber hinaus, trotzdem, je … desto) hatalarını da işaretle. Teil 2\'de amire ya da iş arkadaşına baştan sona Sie.'
+};
+const levelNote = (name) => Object.entries(LEVEL_NOTES).find(([prefix]) => String(name).startsWith(prefix))?.[1];
+export const userMessage = (task, text) => {
+  const note = levelNote(task.name);
+  return `Görev: ${task.name}\n${task.type ? `Metin türü: ${task.type}\n` : ''}${note ? `${note}\n` : ''}Metin:\n${text}`;
+};
 
 // Hesap açık mı ve yapay zekâ kontrolüne izin var mı: 16 yaş altında veli onayı VE ayrı yapay zekâ onayı gerekir.
 // Veli yapay zekâ onayının sürümü: 2 = "geri bildirim öğretmen onayı olmadan doğrudan öğrenciye gösterilir" (docs/veli-onay-formu.md).

@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b2",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-2",
+  "title": "Weiterbildung beantragen",
+  "minutes": 25,
+  "sharedMinutes": 75,
+  "anyOrder": true,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "Sie möchten an einer Weiterbildung „Projektmanagement“ teilnehmen. Der Kurs findet im März an drei Freitagen statt und kostet 450 Euro.",
+  "task": "Schreiben Sie eine Nachricht an Ihren Vorgesetzten, Herrn Schulte.",
+  "points": [
+    "Erklären Sie, warum Sie die Weiterbildung machen möchten.",
+    "Beschreiben Sie den Nutzen für die Firma.",
+    "Bitten Sie um Freistellung und Übernahme der Kosten.",
+    "Machen Sie einen Vorschlag für Ihre Vertretung."
+  ],
+  "instructions": "Überlegen Sie sich eine passende Reihenfolge für die Inhaltspunkte. Bei der Bewertung wird darauf geachtet, wie genau die Inhaltspunkte bearbeitet sind, wie korrekt der Text ist und wie gut die Sätze und Abschnitte sprachlich miteinander verknüpft sind. Vergessen Sie nicht Anrede und Gruß. Schreiben Sie circa 100 Wörter.",
+  "words": {
+    "target": 100,
+    "min": 85,
+    "max": 125,
+    "zeroBelow": 50
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: neden kursa gitmek istediğim, firmaya faydası, izin ve masraf ricası, vekil önerisi."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Baştan sona Sie ile ve kibar yazdım (Konjunktiv II: Könnten Sie …? Ich würde …)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap (Sehr geehrte Frau … / Sehr geehrter Herr … ya da tanıdık bir iş arkadaşına Lieber Herr …,) ve selam (Mit freundlichen Grüßen / Viele Grüße + adım) var; maddeleri kendi seçtiğim mantıklı sırayla yazdım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kohärenz: Maddeleri bağladım: deshalb, darüber hinaus, allerdings, jedoch; Mir ist bewusst, dass … / Ich verstehe natürlich, dass …"
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Her maddeye en az bir iki cümle yazdım; liste ya da numara kullanmadım."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Konjunktiv II ile kibarlık: Mit dem Kurs könnte ich … / davon würde das Team profitieren."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "jemanden für … freistellen, die Kosten übernehmen (ayrılabilen fiil: übernehmen ayrılmaz)."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Sehr geehrte Frau … / Sehr geehrter Herr …,",
+          "tr": "Sayın … Hanım / … Bey,"
+        },
+        {
+          "de": "Mit freundlichen Grüßen",
+          "tr": "Saygılarımla"
+        }
+      ]
+    },
+    {
+      "group": "Situation und Bitte",
+      "items": [
+        {
+          "de": "Leider muss ich Ihnen mitteilen, dass …",
+          "tr": "Maalesef size … bildirmek zorundayım"
+        },
+        {
+          "de": "Ich bitte Sie um Verständnis für …",
+          "tr": "… için anlayışınızı rica ediyorum"
+        },
+        {
+          "de": "Könnten Sie …?",
+          "tr": "… yapabilir misiniz?"
+        }
+      ]
+    },
+    {
+      "group": "Vorschlag",
+      "items": [
+        {
+          "de": "Darf ich Ihnen vorschlagen, dass …?",
+          "tr": "… önerebilir miyim?"
+        },
+        {
+          "de": "Vielleicht könnten wir …",
+          "tr": "Belki … yapabiliriz"
+        }
+      ]
+    },
+    {
+      "group": "Kohärenz: Verknüpfen",
+      "items": [
+        {
+          "de": "Deshalb möchte ich Sie bitten, …",
+          "tr": "Bu yüzden sizden … rica etmek istiyorum"
+        },
+        {
+          "de": "Mir ist bewusst, dass … / Ich verstehe natürlich, dass …",
+          "tr": "… farkındayım / Elbette … anlıyorum"
+        },
+        {
+          "de": "Darüber hinaus … / Außerdem …",
+          "tr": "Bunun ötesinde … / Ayrıca …"
+        },
+        {
+          "de": "Allerdings … / Jedoch …",
+          "tr": "Ancak … / Fakat …"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Sehr geehrter Herr Schulte,\nich interessiere mich sehr für die Weiterbildung „Projektmanagement“, die im März an drei Freitagen stattfindet. In meiner jetzigen Position koordiniere ich immer häufiger kleinere Projekte, habe dafür aber keine Ausbildung.\nMit dem Kurs könnte ich unsere Abläufe besser planen, und davon würde das ganze Team profitieren. Deshalb möchte ich Sie bitten, mich für diese drei Tage freizustellen und die Kursgebühr zu übernehmen.\nIch weiß, dass im März viel zu tun ist. Meine Kollegin Frau Becker hat sich jedoch bereit erklärt, mich an diesen Tagen zu vertreten. Über eine positive Antwort würde ich mich sehr freuen.\nMit freundlichen Grüßen\nMurat Yilmaz",
+    "notes": [
+      "Dört madde: neden (Projekte koordinieren, keine Ausbildung), fayda (Abläufe planen, Team profitiert), rica (freistellen, Kursgebühr), vekil (Frau Becker).",
+      "Kohärenz: Deshalb möchte ich Sie bitten …, Ich weiß, dass … jedoch …",
+      "sich bereit erklären: bir şeyi yapmayı kabul etmek."
+    ]
+  }
+}

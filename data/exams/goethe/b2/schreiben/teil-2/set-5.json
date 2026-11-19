@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "b2",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-5",
+  "title": "Gleitzeit vorschlagen",
+  "minutes": 25,
+  "sharedMinutes": 75,
+  "anyOrder": true,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "In Ihrer Abteilung beginnt die Arbeit für alle um 8 Uhr. Viele Kolleginnen und Kollegen mit Kindern finden das schwierig.",
+  "task": "Schreiben Sie eine Nachricht an Ihre Teamleiterin, Frau Krüger.",
+  "points": [
+    "Beschreiben Sie das Problem im Team.",
+    "Machen Sie einen Vorschlag für neue Arbeitszeiten.",
+    "Zeigen Sie Verständnis für die Bedürfnisse der Firma.",
+    "Schlagen Sie ein Gespräch vor."
+  ],
+  "instructions": "Überlegen Sie sich eine passende Reihenfolge für die Inhaltspunkte. Bei der Bewertung wird darauf geachtet, wie genau die Inhaltspunkte bearbeitet sind, wie korrekt der Text ist und wie gut die Sätze und Abschnitte sprachlich miteinander verknüpft sind. Vergessen Sie nicht Anrede und Gruß. Schreiben Sie circa 100 Wörter.",
+  "words": {
+    "target": 100,
+    "min": 85,
+    "max": 125,
+    "zeroBelow": 50
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: ekipteki sorun, yeni çalışma saatleri önerisi, firmanın ihtiyaçlarına anlayış, görüşme önerisi."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Baştan sona Sie ile ve kibar yazdım (Konjunktiv II: Könnten Sie …? Ich würde …)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap (Sehr geehrte Frau … / Sehr geehrter Herr … ya da tanıdık bir iş arkadaşına Lieber Herr …,) ve selam (Mit freundlichen Grüßen / Viele Grüße + adım) var; maddeleri kendi seçtiğim mantıklı sırayla yazdım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kohärenz: Maddeleri bağladım: deshalb, darüber hinaus, allerdings, jedoch; Mir ist bewusst, dass … / Ich verstehe natürlich, dass …"
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Her maddeye en az bir iki cümle yazdım; liste ya da numara kullanmadım."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "vorschlagen, dass + yan cümle (fiil sonda): Ich möchte vorschlagen, dass wir Gleitzeit einführen."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "solange + yan cümle: solange alle zwischen zehn und fünfzehn Uhr erreichbar sind."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Sehr geehrte Frau … / Sehr geehrter Herr …,",
+          "tr": "Sayın … Hanım / … Bey,"
+        },
+        {
+          "de": "Mit freundlichen Grüßen",
+          "tr": "Saygılarımla"
+        }
+      ]
+    },
+    {
+      "group": "Situation und Bitte",
+      "items": [
+        {
+          "de": "Leider muss ich Ihnen mitteilen, dass …",
+          "tr": "Maalesef size … bildirmek zorundayım"
+        },
+        {
+          "de": "Ich bitte Sie um Verständnis für …",
+          "tr": "… için anlayışınızı rica ediyorum"
+        },
+        {
+          "de": "Könnten Sie …?",
+          "tr": "… yapabilir misiniz?"
+        }
+      ]
+    },
+    {
+      "group": "Vorschlag",
+      "items": [
+        {
+          "de": "Darf ich Ihnen vorschlagen, dass …?",
+          "tr": "… önerebilir miyim?"
+        },
+        {
+          "de": "Vielleicht könnten wir …",
+          "tr": "Belki … yapabiliriz"
+        }
+      ]
+    },
+    {
+      "group": "Kohärenz: Verknüpfen",
+      "items": [
+        {
+          "de": "Deshalb möchte ich Sie bitten, …",
+          "tr": "Bu yüzden sizden … rica etmek istiyorum"
+        },
+        {
+          "de": "Mir ist bewusst, dass … / Ich verstehe natürlich, dass …",
+          "tr": "… farkındayım / Elbette … anlıyorum"
+        },
+        {
+          "de": "Darüber hinaus … / Außerdem …",
+          "tr": "Bunun ötesinde … / Ayrıca …"
+        },
+        {
+          "de": "Allerdings … / Jedoch …",
+          "tr": "Ancak … / Fakat …"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Sehr geehrte Frau Krüger,\nin unserem Team wurde in letzter Zeit oft über die Arbeitszeiten gesprochen. Viele Kolleginnen und Kollegen mit Kindern haben Schwierigkeiten, pünktlich um acht Uhr im Büro zu sein.\nIch möchte deshalb vorschlagen, dass wir Gleitzeit einführen: Jeder könnte zwischen sieben und neun Uhr beginnen, solange zwischen zehn und fünfzehn Uhr alle erreichbar sind.\nIch verstehe natürlich, dass die Kunden uns zuverlässig erreichen müssen und dass eine Änderung gut geplant werden muss. Vielleicht könnten wir das Modell zunächst drei Monate lang testen?\nGern bespreche ich die Idee persönlich mit Ihnen.\nMit freundlichen Grüßen\nHasan Öztürk",
+    "notes": [
+      "Dört madde: sorun (pünktlich um acht schwierig), öneri (Gleitzeit 7–9 Uhr), firmanın ihtiyacı (Kunden erreichen, gut planen), görüşme (persönlich besprechen).",
+      "Kohärenz: deshalb, natürlich …, Vielleicht könnten wir …",
+      "Konjunktiv II ile yumuşak öneri: Vielleicht könnten wir das Modell testen?"
+    ]
+  }
+}

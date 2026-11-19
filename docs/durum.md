@@ -8,6 +8,7 @@
 - **Kalıcı karar:** Gece/zamanlanmış deneme görevi yok. Deneme gerektiğinde (talimat ya da `cleanResult` değişince) öğretmene sorulur; onay verirse gündüz, çalışılan oturumda çalıştırılır. Zamanlanmış gece görevi silindi.
 - **Koruma (`scripts/ai-deneme-kota.mjs`):** Saat sınırı ve `--saat-disi` kaldırıldı. Günde en fazla 4.000 Neuron ve 2 tam tur sınırı aynen geçerli; betik aşacaksa hiçbir istek göndermeden durur. AGENTS.md buna göre güncellendi.
 - **Seviye notları:** Seviyeye özel yapay zekâ notları genel talimata değil kullanıcı mesajına eklenir (`LEVEL_NOTES`); kural AGENTS.md'de.
+- **Düzeltme:** Kota kayıt dosyası `.ai-deneme-kullanim.json` telc A1 dalında `.gitignore` kuralı yokken yanlışlıkla depoya girmişti (#117 ile main'e geldi; içinde sadece tarih ve Neuron sayıları vardı). Depodan çıkarıldı; yerel kopya ve `.gitignore` kuralı duruyor.
 
 ## 2026-11-17 · Schreiben genişletme 7: Goethe B2
 
@@ -30,6 +31,16 @@
   - Tur 2 (kesin kurallardan sonra): 99/101, 1 yanlış alarm (bringen → mitbringen; modelin kendi açıklaması "hata sayılmayabilir" diyor). Kaçanlar: dtz-6 ve b2t1-3. B2 Teil 2 8/8, telc B1 9/9 (ilk kez).
   - Ardından dtz-6 ölçümü ve B2 notunun kullanıcı mesajına taşınması (yukarıda). Günlük toplam 3.919 Neuron (sınır 4.000), 2 tam tur.
   - **19 Kasım (öğretmenin onayıyla gündüz, B2 notu kullanıcı mesajında):** 58 metin, **100/101**, 1 yanlış alarm (telc A1: "bringen → mitbringen"; modelin kendi açıklaması "hata sayılmayabilir" diyor), okunamayan cevap yok. dtz-6 yeniden bulundu; eski sınavlarda gerileme yok (DTZ 16/16, Goethe A1 7/7, A2 16/16, B1 26/26, telc A1 9/9, telc B1 9/9). B2: Teil 1 9/10 (kaçan "statt … zu"), Teil 2 8/8. Kullanım 1.730 Neuron.
+
+## 2026-11-18 · Madde 9 (e-posta) kapandı: iletişim adresi info@bozkurtacademy.com (dal `claude/compassionate-sagan-excdhp`)
+
+- **Durum:** Tamamlandı. Gelen posta Cloudflare Email Routing ile Gmail'e, giden posta Gmail + Brevo SMTP; site bu adresi gösteriyor. Öğretmenin kararı: Web3Forms alıcısı değişmiyor, form ve yorum bildirimleri Gmail'e gelmeye devam ediyor.
+
+- **Değişen:** Görünen bütün e-posta adresleri `bozkurtt.omerfaruk@gmail.com` yerine `info@bozkurtacademy.com`: ana sayfa, İletişim (TR/DE/EN), Impressum (DE/TR), gizlilik (TR/DE/EN, tarih 18 Kasım 2026), seviye testi metinleri (`js/placement.js`), iletişim formu hata bağlantısı (`js/app.js`), `.well-known/security.txt`, `docs/veli-onay-formu.md`, `docs/seviye-testi.md`, `js/account/config.js` → `TEACHER_EMAIL` (öğrencinin "verilerimi sil" bağlantısı). `app.js` v53, `placement.js` v11.
+- **Gizlilik:** Doğrudan info@ adresine yazılan e-postalar için Cloudflare Email Routing (Gmail'e yönlendirme) ve yanıtlar için Brevo SMTP eklendi (TR/DE/EN ve `docs/privacy-policy.md`).
+- **Apps Script:** `CONFIG.REPLY_TO = 'info@bozkurtacademy.com'`, `MailApp.sendEmail` artık `replyTo` alıyor; gönderen hesap aynı. Öğretmen yeni `Code.gs`'yi Apps Script'e yapıştırmalı (apps-script/README.md → Güncelleme).
+- **Dokunulmayan:** Firebase öğretmen girişi, `firestore.rules`/`TEACHER_UID`, Web3Forms erişim anahtarı (alıcı adresi kodda değil, Web3Forms hesabında; bugün Gmail), Cloudflare hesabı adresi (`docs/yapay-zeka-kurulum.md`).
+- **Test:** `npm test` (213 geçti, `apps-script.test.mjs` replyTo kontrolü), `npm run test:placement` (gizlilik tarihi ve 5 info@ bağlantısı), `node tests/dil-secimi.mjs`, check-versions, build-pages --check, check-html-escape; tarayıcıda 375 px açık/koyu: İletişim (3 dil), Impressum, gizlilik, ana sayfada eski adres yok, taşma yok; /de/kontakt/ form hatasında bağlantı mailto:info@bozkurtacademy.com.
 
 ## 2026-11-17 · B2 seviye sonu sınavı: 60 soruluk havuz, katalogda bağlı (dal `claude/b2-seviye-sonu`)
 

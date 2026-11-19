@@ -137,7 +137,7 @@ Aşağıdaki öneri senin onayınla `privacy.html`'e TR/DE/EN olarak eklendi (b�
    >
    > Saklama süresi: Sonuç gönderimden 6 ay sonra otomatik olarak silinir. Derslere başlarsak ilgili bilgiler öğrenci kaydına aktarılabilir; o zaman 10. bölüm geçerlidir.
    >
-   > Kaydının daha önce silinmesini istediğinde bozkurtt.omerfaruk@gmail.com adresine yazman yeterli; onayını istediğin zaman geri alabilirsin.
+   > Kaydının daha önce silinmesini istediğinde info@bozkurtacademy.com adresine yazman yeterli; onayını istediğin zaman geri alabilirsin.
 
 4. **11. bölüme (Hakların) ekle:** "Seviye testi sonucunun silinmesini e-postayla isteyebilirsin."
 5. **3. bölüm (GoatCounter):** Sayılan sayfalar listesine "seviye testi (/#seviye-testi)" eklenmeli. Yönetim sayfası sayılmıyor.

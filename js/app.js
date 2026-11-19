@@ -2165,7 +2165,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const formStatus = document.getElementById('formStatus');
   const submitBtn = document.getElementById('contactSubmitBtn');
 
-  const CONTACT_EMAIL = 'bozkurtt.omerfaruk@gmail.com';
+  const CONTACT_EMAIL = 'info@bozkurtacademy.com';
   // Web3Forms (https://web3forms.com): the access key is public by design and only allows sending to the
   // inbox it was created for. The same key is used by the comment form in js/a1-lessons.js.
   const WEB3FORMS_URL = 'https://api.web3forms.com/submit';

@@ -46,6 +46,8 @@ Google Calendar etkinlik hatırlatmaları sadece etkinliği düzenleyene (öğre
 
 Repodaki `Code.gs` değişirse aynı yere yeniden yapıştırıp kaydet. Zamanlayıcıyı yeniden kurmak gerekmez.
 
+Hatırlatmalar Apps Script'in çalıştığı Gmail hesabından gider; "Yanıtla" denince yanıt `CONFIG.REPLY_TO` adresine (info@bozkurtacademy.com) gider. Gönderen adresi değişmez.
+
 ## Sorun giderme
 
 - **Günlükte "Ders: 0":** Yarın için siteden planlanmış ders yok ya da ders Google Calendar'a eklenememiş. Öğretmen takviminde "Google Calendar'a eklenemedi" uyarısına bak.

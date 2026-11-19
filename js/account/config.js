@@ -14,7 +14,7 @@ export const firebaseConfig = {
 export const TEACHER_UID = 'IoTwBV5HjRUaoLoj0SCI0VVGkfk2';
 
 // Öğrencilerin veri silme talebi gönderebileceği adres (iletişim sayfasındakiyle aynı).
-export const TEACHER_EMAIL = 'bozkurtt.omerfaruk@gmail.com';
+export const TEACHER_EMAIL = 'info@bozkurtacademy.com';
 
 // Firebase App Check (reCAPTCHA Enterprise): Google Cloud → Security → reCAPTCHA → Anahtar (web, puan tabanlı).
 // Gizli değildir. Boşken App Check hiç başlatılmaz (bugünkü davranış). Kurulum ve zorunlu kılma: docs/app-check.md.

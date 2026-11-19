@@ -2,15 +2,12 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
-## 2026-11-18 · Gece yapay zekâ denemeleri: her seferinde yeni oturum (kararın)
+## 2026-11-19 · Yapay zekâ denemeleri: gece görevleri bırakıldı (kararın)
 
-- **Sorun:** 18 Kasım 01:30'a bu oturuma kurulan hatırlatma oturumu zamanında uyandırdı, ama o tur tamamlanamadı (deneme hiç başlamadı); öğretmen sabah "tekrar dene" deyince 09:40'ta devam etti ve kota koruması gündüz tam turu durdurdu. Uzun ve dolu bir oturumda gece işinin yarıda kalma riski var; her deneme için temiz, yeni bir oturum daha güvenilir.
-- **Yeni yapı:** Bir deneme gerektiğinde (talimat ya da `cleanResult` değişince) **tek seferlik, her çalışmada yeni bir oturum başlatan zamanlanmış görev** kuruluyor: Almanya saatiyle 01:30, `create_new_session_on_fire`, bitince telefona bildirim.
-  - Yeni oturumda depo yoksa `add_repo` ile eklenir; GitHub aracı yoksa dal gönderilir ve PR ana oturumda açılır (görev metninde yazılı).
-  - Görevin metni kendi başına yeterli: hangi dal, hangi komut (`node scripts/ai-deneme.mjs`, ad vermeden), kota kuralları (AGENTS.md: günde en fazla 4.000 Neuron ve 2 tam tur, 01:00–07:00, korumayı aşmak yok), sonuçların `docs/durum.md`'ye yazılması, testler, sonuç iyiyse PR (birleştirme yok).
-  - Yeni oturum kendi kopyasında `.ai-deneme-kullanim.json` olmadan başlar; deneme yeni UTC gününde (01:30 Almanya = 00:30 UTC) çalıştığı için o günün ilk kullanımıdır.
-  - Token, ortamın ağ sırrı olarak kalır; görevler bitince öğretmen siler. Yeni oturum token'ın silinebileceğini PR açıklamasına ve oturum özetine yazar.
-- İlk kullanım: Goethe B2 tam turu, 19 Kasım 01:30.
+- **Ne oldu:** 18 Kasım'da gece denemesi için her seferinde yeni oturum açan zamanlanmış görev kurulmuştu. 19 Kasım 01:30'da çalıştı ama yeni oturum depoya erişemedi; deneme yapılmadı. Daha önce de (18 Kasım) aynı oturuma kurulan hatırlatmanın turu tamamlanamamıştı.
+- **Kalıcı karar:** Gece/zamanlanmış deneme görevi yok. Deneme gerektiğinde (talimat ya da `cleanResult` değişince) öğretmene sorulur; onay verirse gündüz, çalışılan oturumda çalıştırılır. Zamanlanmış gece görevi silindi.
+- **Koruma (`scripts/ai-deneme-kota.mjs`):** Saat sınırı ve `--saat-disi` kaldırıldı. Günde en fazla 4.000 Neuron ve 2 tam tur sınırı aynen geçerli; betik aşacaksa hiçbir istek göndermeden durur. AGENTS.md buna göre güncellendi.
+- **Seviye notları:** Seviyeye özel yapay zekâ notları genel talimata değil kullanıcı mesajına eklenir (`LEVEL_NOTES`); kural AGENTS.md'de.
 
 ## 2026-11-17 · Schreiben genişletme 7: Goethe B2
 
@@ -32,7 +29,7 @@
   - Tur 1 (B2 satırı talimatta): 58 metin, 97/101, 2 yanlış alarm (Bis bald,; bringen → mitbringen). Kaçanlar: dtz-6, b2t1-3 (statt … zu), b2t2-3 ve telc-3 (teilnehmen an).
   - Tur 2 (kesin kurallardan sonra): 99/101, 1 yanlış alarm (bringen → mitbringen; modelin kendi açıklaması "hata sayılmayabilir" diyor). Kaçanlar: dtz-6 ve b2t1-3. B2 Teil 2 8/8, telc B1 9/9 (ilk kez).
   - Ardından dtz-6 ölçümü ve B2 notunun kullanıcı mesajına taşınması (yukarıda). Günlük toplam 3.919 Neuron (sınır 4.000), 2 tam tur.
-  - **Bekleyen:** B2 notu kullanıcı mesajına taşındıktan sonraki tam tur, 19 Kasım 01:30'da yeni bir oturumda (aşağıdaki gece denemesi yapısı). Sonuç iyiyse o oturum PR'ı açar.
+  - **19 Kasım (öğretmenin onayıyla gündüz, B2 notu kullanıcı mesajında):** 58 metin, **100/101**, 1 yanlış alarm (telc A1: "bringen → mitbringen"; modelin kendi açıklaması "hata sayılmayabilir" diyor), okunamayan cevap yok. dtz-6 yeniden bulundu; eski sınavlarda gerileme yok (DTZ 16/16, Goethe A1 7/7, A2 16/16, B1 26/26, telc A1 9/9, telc B1 9/9). B2: Teil 1 9/10 (kaçan "statt … zu"), Teil 2 8/8. Kullanım 1.730 Neuron.
 
 ## 2026-11-17 · B2 seviye sonu sınavı: 60 soruluk havuz, katalogda bağlı (dal `claude/b2-seviye-sonu`)
 
@@ -94,9 +91,9 @@
   - **Kota:** 15 Kasım'da yaklaşık 580 model çağrısı yapıldı (çağrı başına 16–34 Neuron). Senin kontrolün (16 Kasım): plan "Free", Workers AI maliyeti $0; ücret çıkmadı.
 - **Deneme kuralları (kararın, 16 Kasım):** Denemeler öğrencilerle aynı ücretsiz kotayı kullanıyor (günde 10.000 Neuron, gün UTC 00:00'da başlar).
   - Bir günde en fazla 2 tam tur ve en fazla 4.000 Neuron (öğrencilere en az 6.000 kalır).
-  - Almanya saatiyle 01:00–07:00 arasında.
+  - Almanya saatiyle 01:00–07:00 arasında (19 Kasım'da kaldırıldı: deneme öğretmenin onayıyla gündüz).
   - `scripts/ai-deneme.mjs` çalışmadan önce o günün kayıtlı kullanımını ve bu çalıştırmanın tahminini (metin başına en az 35 Neuron) hesaplıyor; 4.000'i aşacaksa, o gün 2 tam tur çalıştıysa ya da saat aralık dışındaysa hiçbir istek göndermeden duruyor. Mantık `scripts/ai-deneme-kota.mjs`'te, testi `npm test`'te.
-  - Küçük bir ek deneme için `--saat-disi`; tek tek metinler için `--ids`. Kullanım depoya girmeyen `.ai-deneme-kullanim.json`'a yazılıyor (sadece bu bilgisayarın denemeleri; öğrencilerin kullanımı Cloudflare panelinde). Kural AGENTS.md'ye de yazıldı.
+  - `--saat-disi` (19 Kasım'da kaldırıldı); tek tek metinler için `--ids`. Kullanım depoya girmeyen `.ai-deneme-kullanim.json`'a yazılıyor (sadece bu bilgisayarın denemeleri; öğrencilerin kullanımı Cloudflare panelinde). Kural AGENTS.md'ye de yazıldı.
 - **Senin yapacakların (birleştirmeden sonra):** Worker'ı güncelle. Firestore kuralları değişmedi.
 
 ## 2026-11-16 · B2 gramer dersleri, PR 3: Partizip II, Genitivpräpositionen, je … desto (dal `claude/b2-dersler-2`)

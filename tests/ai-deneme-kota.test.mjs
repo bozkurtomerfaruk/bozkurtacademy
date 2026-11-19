@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { DAILY_TRIAL_LIMIT, FULL_ROUNDS_PER_DAY, guard, NEURONS_PER_TEXT } from '../scripts/ai-deneme-kota.mjs';
 
 const day = '2026-11-16';
-const base = { day, texts: 43, full: true, hour: 3, allowOutsideHours: false };
+const base = { day, texts: 43, full: true };
 
 test('sınırlar: günde 4.000 Neuron, 2 tam tur', () => {
   assert.equal(DAILY_TRIAL_LIMIT, 4000);
@@ -17,10 +17,9 @@ test('boş günde gece tam tur çalışır; tahmin metin sayısı × Neuron', ()
   assert.equal(r.planned, 43 * NEURONS_PER_TEXT);
 });
 
-test('Almanya saatiyle 01:00–07:00 dışında durur; --saat-disi ile çalışır', () => {
-  for (const hour of [0, 7, 9, 23]) assert.equal(guard({ ...base, log: {}, hour }).ok, false, `saat ${hour}`);
-  for (const hour of [1, 6]) assert.equal(guard({ ...base, log: {}, hour }).ok, true, `saat ${hour}`);
-  assert.equal(guard({ ...base, log: {}, hour: 10, allowOutsideHours: true }).ok, true);
+test('saat sınırı yok (19 Kasım kararı: deneme öğretmenin onayıyla gündüz)', () => {
+  assert.equal(guard({ ...base, log: {} }).ok, true);
+  assert.equal(guard.length, 1);
 });
 
 test('günde 2 tam turdan sonra üçüncü tam tur durur; tek tek metinler çalışabilir', () => {

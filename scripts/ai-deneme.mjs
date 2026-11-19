@@ -1,6 +1,6 @@
 // Yapay zekâ denemesi: tests/ai-deneme/<ad>.json içindeki örnek metinleri Worker'daki talimatla (PROMPT) gerçek modele
 // gönderir ve Worker'ın denetiminden (cleanResult) geçirir. Sonuç: bulunan / kaçan hatalar ve beklenmeyen maddeler.
-//   CF_ACCOUNT_ID=<hesap kimliği> CF_API_TOKEN=<Workers AI token> node scripts/ai-deneme.mjs [ad …] [--ids id,id] [--json dosya] [--saat-disi]
+//   CF_ACCOUNT_ID=<hesap kimliği> CF_API_TOKEN=<Workers AI token> node scripts/ai-deneme.mjs [ad …] [--ids id,id] [--json dosya]
 // Ad verilmezse BÜTÜN sınavların metinleri çalışır (tam tur). Talimat (worker/schreiben-kontrol.js PROMPT ya da cleanResult)
 // her değiştiğinde böyle, hepsi birlikte çalıştırılır: bir sınav için eklenen kural öbür sınavları bozmasın.
 // --ids: sadece bu metinler (ör. --ids b1t1-5,telc-3). Ağ vekili arkasında (bulut oturumu): NODE_USE_ENV_PROXY=1 ekle.
@@ -11,7 +11,7 @@
 //   - Denemeler bir günde en fazla 4.000 Neuron kullanır: çalışmadan önce o günün kayıtlı kullanımı + bu çalıştırmanın
 //     tahmini hesaplanır, 4.000'i aşacaksa betik hiçbir istek göndermeden durur.
 //   - Bir günde en fazla 2 tam tur.
-//   - Almanya saatiyle 01:00–07:00 dışında çalışmaz; zorunluysa (küçük bir ek deneme) --saat-disi ile çalıştırılır.
+//   - Saat sınırı yok; deneme sadece öğretmen onay verince çalıştırılır (19 Kasım kararı; gece görevleri bırakıldı).
 // Kullanım, depoya girmeyen .ai-deneme-kullanim.json dosyasına yazılır (Cloudflare'in bildirdiği Neuron). Bu dosya
 // sadece bu bilgisayardaki denemeleri bilir; öğrencilerin kullanımı Cloudflare panelindedir (AI → Workers AI).
 import fs from 'node:fs';
@@ -23,14 +23,12 @@ const args = process.argv.slice(2);
 const valueOf = (flag) => { const at = args.indexOf(flag); return at >= 0 ? args[at + 1] : null; };
 const out = valueOf('--json');
 const ids = valueOf('--ids') ? new Set(valueOf('--ids').split(',').map((x) => x.trim()).filter(Boolean)) : null;
-const outsideHours = args.includes('--saat-disi');
 const picked = args.filter((a, i) => !a.startsWith('--') && !['--json', '--ids'].includes(args[i - 1]));
 const names = picked.length ? picked : fs.readdirSync(DIR).filter((f) => f.endsWith('.json')).map((f) => f.slice(0, -5)).sort();
 const fullRound = !picked.length && !ids;
 
 const USAGE_FILE = '.ai-deneme-kullanim.json';
 const utcDay = () => new Date().toISOString().slice(0, 10);
-const berlinHour = () => Number(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Berlin', hour: '2-digit', hourCycle: 'h23' }).format(new Date()));
 function readUsage() { try { return JSON.parse(fs.readFileSync(USAGE_FILE, 'utf8')); } catch (_) { return {}; } }
 function saveUsage(log) { fs.writeFileSync(USAGE_FILE, JSON.stringify(log, null, 2)); }
 const { CF_ACCOUNT_ID: account, CF_API_TOKEN: token = 'proxy' } = process.env;
@@ -40,7 +38,7 @@ const textCount = trials.reduce((n, x) => n + x.texts.length, 0);
 if (ids && textCount !== ids.size) { console.error('Bulunamayan metin kimliği var: ' + [...ids].filter((id) => !trials.some((x) => x.texts.some((t) => t.id === id))).join(', ')); process.exit(2); }
 const usageLog = readUsage();
 const day = utcDay();
-const check = guard({ log: usageLog, day, texts: textCount, full: fullRound, hour: berlinHour(), allowOutsideHours: outsideHours });
+const check = guard({ log: usageLog, day, texts: textCount, full: fullRound });
 if (!check.ok) { console.error(`DURDU (kota koruması): ${check.reason}`); process.exit(3); }
 console.log(`Kota: bugün (UTC ${day}) kayıtlı ${Math.round(check.today.neurons)} Neuron; bu çalıştırma ${textCount} metin, tahmini ${check.planned} Neuron (sınır ${DAILY_TRIAL_LIMIT}).`);
 usageLog[day] = { ...check.today };

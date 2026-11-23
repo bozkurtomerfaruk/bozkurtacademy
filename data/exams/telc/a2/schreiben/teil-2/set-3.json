@@ -1,0 +1,119 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-3",
+  "title": "Besuch am Wochenende",
+  "minutes": 15,
+  "sharedMinutes": 50,
+  "sharedWith": "lesen",
+  "kind": "writing",
+  "register": "du",
+  "textType": "email-informal",
+  "situation": "Ihr Freund Luca kommt im Mai für ein Wochenende in Ihre Stadt. Er fragt: Kann ich bei dir übernachten?",
+  "task": "Antworten Sie Luca mit einer E-Mail.",
+  "points": [
+    "Übernachten",
+    "Abholen",
+    "Programm am Samstag",
+    "Wetter"
+  ],
+  "choosePoints": 3,
+  "instructions": "Hier finden Sie vier Punkte. Wählen Sie drei aus. Schreiben Sie zu jedem dieser drei Punkte ein bis zwei Sätze. Vergessen Sie nicht den passenden Anfang und den Gruß am Schluss. Schreiben Sie ca. 40 Wörter.",
+  "words": {
+    "target": 40,
+    "min": 35,
+    "max": 55
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "4 maddeden 3'ünü seçtim ve her birine bir iki cümle yazdım (ör. Übernachten, Abholen, Programm am Samstag)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Dördüncü maddeyi de yazmak ek puan getirmez; 3 maddeyi iyi yazmak yeterli."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Luca'nın sorusuna cevap verdim: bende kalabilir mi?"
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap ve selam var: Lieber Luca, … Bis bald! / Viele Grüße + adım."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Arkadaşa du ile yazdım (du, dich, dir); Sie yok."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Ayrılabilen fiil: Ich hole dich am Bahnhof ab. (ab- sonda)"
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Gelecek planı için şimdiki zaman yeter: Am Samstag gehen wir in den Zoo."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Lieber Luca,",
+          "tr": "Sevgili Luca,"
+        },
+        {
+          "de": "Bis bald! / Viele Grüße",
+          "tr": "Yakında görüşürüz! / Selamlar"
+        }
+      ]
+    },
+    {
+      "group": "Einladen und planen",
+      "items": [
+        {
+          "de": "Natürlich kannst du bei mir schlafen.",
+          "tr": "Tabii ki bende kalabilirsin."
+        },
+        {
+          "de": "Ich hole dich am Bahnhof ab.",
+          "tr": "Seni istasyondan alırım."
+        },
+        {
+          "de": "Am Samstag gehen wir …",
+          "tr": "Cumartesi … gideriz."
+        }
+      ]
+    },
+    {
+      "group": "Fragen",
+      "items": [
+        {
+          "de": "Wann kommt dein Zug an?",
+          "tr": "Trenin ne zaman geliyor?"
+        },
+        {
+          "de": "Was möchtest du gern sehen?",
+          "tr": "Ne görmek istersin?"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Lieber Luca,\ntoll, dass du kommst! Natürlich kannst du bei mir übernachten. Ich habe ein Sofa im Wohnzimmer. Wann kommt dein Zug an? Ich hole dich am Bahnhof ab. Am Samstag zeige ich dir die Altstadt und abends gehen wir essen.\nBis bald!\nSelin",
+    "covers": [
+      "Übernachten",
+      "Abholen",
+      "Programm am Samstag"
+    ],
+    "skipped": "Wetter",
+    "notes": [
+      "Üç madde: Übernachten (bei mir … ein Sofa), Abholen (Ich hole dich am Bahnhof ab), Programm am Samstag (Altstadt, essen). „Wetter“ maddesi atlandı.",
+      "Kısa bir sevinç cümlesiyle başlıyor: Toll, dass du kommst! — hitaptan sonra küçük harf: toll.",
+      "abholen ayrılabilen fiil: Ich hole dich … ab. „Am Samstag zeige ich dir …“: zaman başta, fiil ikinci sırada."
+    ]
+  }
+}

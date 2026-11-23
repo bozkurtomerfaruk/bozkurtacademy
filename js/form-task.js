@@ -1,4 +1,4 @@
-// Form doldurma (Goethe A1 Schreiben Teil 1): durum metnindeki bilgileri forma yazmak. Yapay zekâ yok; otomatik kontrol.
+// Form doldurma (Goethe A1, telc A1/A2 Schreiben Teil 1): durum metnindeki (telc A2: ve belgedeki) bilgileri forma yazmak. Yapay zekâ yok; otomatik kontrol.
 // Veri: data/exams/<sınav>/<seviye>/schreiben/teil-<n>/<set>.json, "kind": "form" (biçim: docs/sinav-setleri.md).
 // js/writing-task.js bir Schreiben setini yükleyip kind "form" görünce buraya devreder (BAFormTask.draw).
 // Kontrol: büyük-küçük harf, fazla boşluk, sondaki noktalama ve ß/ss, ä/ae farkı önemsiz; kabul edilen cevaplardan birine
@@ -11,7 +11,7 @@
   const fill = (key, values) => t(key).replace(/\{(\w+)\}/g, (_, name) => values[name] ?? '');
   const lang = () => window.BA?.lang || 'tr';
   const esc = value => window.baHtml.escapeHtml(value);
-  // html-safe-names: rows marks situation result status solution show navActions() inputHtml(row) resultHtml(row) summary lock cls label actions id html situationHtml(set) formHtml(set)
+  // html-safe-names: cell body cardsHtml(set) rows marks situation result status solution show navActions() inputHtml(row) resultHtml(row) summary lock cls label actions id html situationHtml(set) formHtml(set)
 
   const states = {}; // path -> { answers: {number: value}, checked: bool }
   const navs = {};
@@ -50,20 +50,33 @@
   const counts = status => status === 'right' || status === 'almost';
   const blanks = set => set.form.rows.filter(row => row.number);
 
-  function situationHtml(set, checked) {
-    // Her boşluğun dayanağı metinde numarasıyla işaretlenir (task-evidence; işaret "Kontrol et"ten sonra görünür).
-    const marks = blanks(set).flatMap(row => (row.evidence || []).map(quote => ({ quote, number: row.number, at: set.situation.indexOf(quote) })))
+  // Her boşluğun dayanağı metinde (ya da kartta) numarasıyla işaretlenir (task-evidence; işaret "Kontrol et"ten sonra görünür).
+  function marked(set, text) {
+    const marks = blanks(set).flatMap(row => (row.evidence || []).map(quote => ({ quote, number: row.number, at: text.indexOf(quote) })))
       .filter(mark => mark.at >= 0).sort((a, b) => a.at - b.at);
     let html = '';
     let from = 0;
     for (const mark of marks) {
       if (mark.at < from) continue;
-      html += esc(set.situation.slice(from, mark.at));
+      html += esc(text.slice(from, mark.at));
       html += `<span class="task-evidence" data-q="${esc(mark.number)}" tabindex="-1">${esc(mark.quote)}</span>`;
       from = mark.at + mark.quote.length;
     }
-    html += esc(set.situation.slice(from));
-    return `<div class="wt-task ft-situation${checked ? ' is-checked' : ''}" lang="de"><p>${html}</p><p><strong>${esc(set.task)}</strong></p></div>`;
+    return html + esc(text.slice(from));
+  }
+
+  // Belgeler (telc A2): kimlik, üyelik kartı gibi; satırlar [etiket, değer]. Bilgiler hem metinde hem kartta olabilir.
+  function cardsHtml(set) {
+    if (!set.cards?.length) return '';
+    return `<div class="ft-cards">${set.cards.map(card => `<figure class="ft-card" lang="de">
+      <figcaption>${esc(card.title)}</figcaption>
+      <dl>${card.rows.map(([label, value]) => { const cell = marked(set, value); return `<div><dt>${esc(label)}</dt><dd>${cell}</dd></div>`; }).join('')}</dl>
+    </figure>`).join('')}</div>`;
+  }
+
+  function situationHtml(set, checked) {
+    const body = marked(set, set.situation);
+    return `<div class="wt-task ft-situation${checked ? ' is-checked' : ''}" lang="de">${cardsHtml(set)}<p>${body}</p><p><strong>${esc(set.task)}</strong></p></div>`;
   }
 
   function inputHtml(row, state) {
@@ -136,6 +149,7 @@
     container.innerHTML = `<div class="task wt ft${state.checked ? ' is-checked' : ''}">
       <div class="task-head"><p class="task-meta">${meta.map(item => `<span>${esc(item)}</span>`).join('')}</p></div>
       ${situationHtml(set, state.checked)}
+      ${set.sharedMinutes ? `<p class="wt-muted wt-choice" data-wt-shared>${esc(fill(set.sharedWith === 'lesen' ? 'wtSharedLesen' : 'wtSharedMinutes', { n: set.sharedMinutes }))}</p>` : ''}
       ${summary}
       ${formHtml(set, state)}
       <p class="wt-muted">${esc(t('ftNote'))}</p>

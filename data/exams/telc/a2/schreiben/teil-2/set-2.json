@@ -1,0 +1,119 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-2",
+  "title": "Umzug einer Kollegin",
+  "minutes": 15,
+  "sharedMinutes": 50,
+  "sharedWith": "lesen",
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "Ihre Kollegin Frau Krüger zieht nächste Woche in eine neue Wohnung. Sie fragt im Team: Wer kann beim Umzug helfen?",
+  "task": "Antworten Sie Frau Krüger mit einer E-Mail.",
+  "points": [
+    "Tag und Uhrzeit",
+    "Auto",
+    "Möbel tragen",
+    "Essen nach dem Umzug"
+  ],
+  "choosePoints": 3,
+  "instructions": "Hier finden Sie vier Punkte. Wählen Sie drei aus. Schreiben Sie zu jedem dieser drei Punkte ein bis zwei Sätze. Vergessen Sie nicht den passenden Anfang und den Gruß am Schluss. Schreiben Sie ca. 40 Wörter.",
+  "words": {
+    "target": 40,
+    "min": 35,
+    "max": 55
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "4 maddeden 3'ünü seçtim ve her birine bir iki cümle yazdım (ör. Tag und Uhrzeit, Auto, Möbel tragen)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Dördüncü maddeyi de yazmak ek puan getirmez; 3 maddeyi iyi yazmak yeterli."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Yardım edip edemeyeceğimi açıkça yazdım (Ich helfe gern … / Leider …)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap ve selam var: Liebe Frau Krüger, / Sehr geehrte Frau Krüger, … Viele Grüße + adım."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "İş arkadaşına Sie ile yazdım: Sie, Ihnen, Ihre; du yok."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "helfen + Dativ: Ich helfe Ihnen gern. (Sie değil, Ihnen)"
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Zaman ifadesinden sonra fiil ikinci sırada: Am Samstag habe ich Zeit."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Liebe Frau Krüger,",
+          "tr": "Sevgili Krüger Hanım,"
+        },
+        {
+          "de": "Viele Grüße",
+          "tr": "Selamlar"
+        }
+      ]
+    },
+    {
+      "group": "Hilfe anbieten",
+      "items": [
+        {
+          "de": "Ich helfe Ihnen gern beim Umzug.",
+          "tr": "Taşınmanızda size memnuniyetle yardım ederim."
+        },
+        {
+          "de": "Am Samstag habe ich ab 9 Uhr Zeit.",
+          "tr": "Cumartesi saat 9'dan itibaren vaktim var."
+        },
+        {
+          "de": "Ich kann leider kein Auto mitbringen.",
+          "tr": "Maalesef araba getiremem."
+        }
+      ]
+    },
+    {
+      "group": "Etwas fragen",
+      "items": [
+        {
+          "de": "Haben Sie schwere Möbel?",
+          "tr": "Ağır mobilyalarınız var mı?"
+        },
+        {
+          "de": "Wann soll ich kommen?",
+          "tr": "Ne zaman geleyim?"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Liebe Frau Krüger,\nich helfe Ihnen gern beim Umzug. Am Samstag habe ich ab 9 Uhr Zeit. Ich habe ein großes Auto, wir können also Kartons transportieren. Ich kann auch Möbel tragen, aber bitte nicht allein. Haben Sie einen schweren Schrank?\nViele Grüße\nMurat Aydın",
+    "covers": [
+      "Tag und Uhrzeit",
+      "Auto",
+      "Möbel tragen"
+    ],
+    "skipped": "Essen nach dem Umzug",
+    "notes": [
+      "Üç madde: Tag und Uhrzeit (Am Samstag … ab 9 Uhr), Auto (ein großes Auto), Möbel tragen (Ich kann auch Möbel tragen …). „Essen nach dem Umzug“ maddesi atlandı.",
+      "İş arkadaşına Sie ama sıcak hitap: Liebe Frau Krüger, … Viele Grüße.",
+      "helfen + Dativ: Ich helfe Ihnen gern. „Am Samstag habe ich …“: zaman başta, fiil ikinci sırada."
+    ]
+  }
+}

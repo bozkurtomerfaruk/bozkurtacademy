@@ -1,0 +1,126 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Fahrräder mieten",
+  "minutes": 5,
+  "sharedMinutes": 50,
+  "sharedWith": "lesen",
+  "kind": "form",
+  "situation": "Ihr Bekannter Arjun Mehta ist mit seiner Familie in Freiburg und wohnt im Hotel Schwarzwaldblick. Er möchte vom 14. bis 16. August zwei Fahrräder mieten: ein normales Fahrrad für sich und ein Kinderfahrrad für seine Tochter Priya. Er möchte mit seiner Kreditkarte bezahlen.",
+  "task": "Arjun bittet Sie um Hilfe beim Mietvertrag. Schreiben Sie die fünf fehlenden Informationen in das Formular.",
+  "cards": [
+    {
+      "title": "Kreditkarte",
+      "rows": [
+        [
+          "Name",
+          "ARJUN MEHTA"
+        ],
+        [
+          "Kartennummer",
+          "4929 1845 7730 2216"
+        ],
+        [
+          "gültig bis",
+          "08/2028"
+        ]
+      ]
+    }
+  ],
+  "form": {
+    "title": "Mietvertrag",
+    "subtitle": "Radverleih Freiburg",
+    "rows": [
+      {
+        "label": "Familienname",
+        "value": "Mehta",
+        "example": true
+      },
+      {
+        "label": "Vorname",
+        "value": "Arjun"
+      },
+      {
+        "label": "Adresse in Freiburg",
+        "number": 1,
+        "evidence": [
+          "Hotel Schwarzwaldblick"
+        ],
+        "explanation": "Adresse in Freiburg = Freiburg'daki adresi. Arjun burada bir evde değil, otelde kalıyor: „wohnt im Hotel Schwarzwaldblick“.",
+        "accept": [
+          "Hotel Schwarzwaldblick",
+          "im Hotel Schwarzwaldblick",
+          "Schwarzwaldblick"
+        ]
+      },
+      {
+        "label": "Mietbeginn",
+        "value": "14.08."
+      },
+      {
+        "label": "Mietende",
+        "number": 2,
+        "evidence": [
+          "bis 16. August"
+        ],
+        "explanation": "Mietende = kiralamanın bittiği gün. „vom 14. bis 16. August“: 14 başlangıç (formda yazılı), bitiş → 16.08.",
+        "accept": [
+          "16.08.",
+          "16.8.",
+          "16. August",
+          "16.08",
+          "16.8",
+          "am 16. August"
+        ]
+      },
+      {
+        "label": "Anzahl der Fahrräder",
+        "number": 3,
+        "evidence": [
+          "zwei Fahrräder mieten"
+        ],
+        "explanation": "Anzahl = sayı. „Er möchte … zwei Fahrräder mieten“ → 2. Aile kalabalık olsa da kiralanan bisiklet iki tane.",
+        "accept": [
+          "2",
+          "zwei",
+          "2 Fahrräder",
+          "zwei Fahrräder"
+        ]
+      },
+      {
+        "label": "Kinderfahrrad",
+        "number": 4,
+        "evidence": [
+          "ein Kinderfahrrad für seine Tochter"
+        ],
+        "explanation": "Kinderfahrrad = çocuk bisikleti. Bisikletlerden biri „ein Kinderfahrrad für seine Tochter Priya“ → ja.",
+        "choices": [
+          "ja",
+          "nein"
+        ],
+        "answer": "ja"
+      },
+      {
+        "label": "Zahlung",
+        "value": "Kreditkarte"
+      },
+      {
+        "label": "Kartennummer",
+        "number": 5,
+        "evidence": [
+          "4929 1845 7730 2216"
+        ],
+        "explanation": "Kartennummer = kart numarası. Kredi kartındaki 16 rakam: 4929 1845 7730 2216. „08/2028“ son kullanma tarihidir.",
+        "accept": [
+          "4929 1845 7730 2216",
+          "4929184577302216",
+          "4929-1845-7730-2216"
+        ]
+      }
+    ]
+  }
+}

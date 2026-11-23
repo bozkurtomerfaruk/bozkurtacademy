@@ -1,0 +1,133 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-1",
+  "title": "Anmeldung im Sportverein",
+  "minutes": 5,
+  "sharedMinutes": 50,
+  "sharedWith": "lesen",
+  "kind": "form",
+  "situation": "Ihr Bekannter Tarik Benali kommt aus Marokko. Er wohnt seit März in Leipzig, in der Kantstraße 12, 04275 Leipzig. Tarik arbeitet als Koch in einem Restaurant und hat unter der Woche abends keine Zeit. Er möchte am Wochenende Volleyball spielen. In Casablanca hat er schon drei Jahre in einem Verein gespielt.",
+  "task": "Tarik möchte Mitglied im Sportverein werden und bittet Sie um Hilfe. Schreiben Sie die fünf fehlenden Informationen in das Formular.",
+  "cards": [
+    {
+      "title": "Reisepass",
+      "rows": [
+        [
+          "Name",
+          "BENALI"
+        ],
+        [
+          "Vorname",
+          "TARIK"
+        ],
+        [
+          "Geburtsdatum",
+          "03.05.1990"
+        ],
+        [
+          "Geburtsort",
+          "CASABLANCA"
+        ],
+        [
+          "Staatsangehörigkeit",
+          "MAROKKANISCH"
+        ]
+      ]
+    }
+  ],
+  "form": {
+    "title": "Mitgliedsantrag",
+    "subtitle": "SV Grün-Weiß Leipzig",
+    "rows": [
+      {
+        "label": "Familienname",
+        "value": "Benali",
+        "example": true
+      },
+      {
+        "label": "Vorname",
+        "value": "Tarik"
+      },
+      {
+        "label": "Geburtsdatum",
+        "number": 1,
+        "evidence": [
+          "03.05.1990"
+        ],
+        "explanation": "Geburtsdatum = doğum tarihi. Metinde yok; pasaporttaki „Geburtsdatum: 03.05.1990“ satırından alınır. Rakamlar tam doğru olmalı.",
+        "accept": [
+          "03.05.1990",
+          "3.5.1990",
+          "3. Mai 1990",
+          "03. Mai 1990",
+          "03.05.90"
+        ]
+      },
+      {
+        "label": "Staatsangehörigkeit",
+        "value": "marokkanisch"
+      },
+      {
+        "label": "Straße, Hausnummer",
+        "value": "Kantstraße 12"
+      },
+      {
+        "label": "PLZ, Wohnort",
+        "number": 2,
+        "evidence": [
+          "04275 Leipzig"
+        ],
+        "explanation": "PLZ = posta kodu, Wohnort = oturduğu şehir. Metinde „Kantstraße 12, 04275 Leipzig“ yazıyor; Casablanca doğduğu yer, şimdi oturduğu yer değil.",
+        "accept": [
+          "04275 Leipzig",
+          "04275, Leipzig",
+          "Leipzig 04275"
+        ]
+      },
+      {
+        "label": "Beruf",
+        "number": 3,
+        "evidence": [
+          "arbeitet als Koch"
+        ],
+        "explanation": "Beruf = meslek. „Tarik arbeitet als Koch“ → Koch (aşçı). Restaurant iş yeridir, meslek değil.",
+        "accept": [
+          "Koch",
+          "als Koch"
+        ]
+      },
+      {
+        "label": "Sportart",
+        "number": 4,
+        "evidence": [
+          "Volleyball spielen"
+        ],
+        "explanation": "Sportart = spor dalı. „Er möchte … Volleyball spielen“ → Volleyball. Sportverein ve Verein spor dalı değil, kulüp demektir.",
+        "accept": [
+          "Volleyball"
+        ]
+      },
+      {
+        "label": "Trainingszeit",
+        "number": 5,
+        "evidence": [
+          "am Wochenende"
+        ],
+        "explanation": "Trainingszeit = antrenman zamanı. „unter der Woche abends keine Zeit“ hafta içi akşamı eler; „Er möchte am Wochenende …“ → am Wochenende.",
+        "choices": [
+          "wochentags abends",
+          "am Wochenende"
+        ],
+        "answer": "am Wochenende"
+      },
+      {
+        "label": "Erfahrung",
+        "value": "ja, 3 Jahre"
+      }
+    ]
+  }
+}

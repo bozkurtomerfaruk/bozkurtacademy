@@ -2,12 +2,29 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-23 · telc A2 Schreiben: Teil 1 form + Teil 2 mektup (dal `claude/dazzling-galileo-k4j6gp`)
+
+Eksik Schreiben sınavları sırası: **telc A2** → telc B2 → Goethe C1 → telc C1 → TestDaF (dijital, kâğıt). Her sınav ayrı dal ve ayrı PR; öğretmen "birleştir" demeden birleştirilmez.
+
+- **Kaynak:** resmî telc Deutsch A2 Übungstest 1 (Aralık 2024 baskısı, 5090-B00-010107; bu kez PDF'e erişildi). Lesen + Schreiben 50 dk; Schreiben 15 puan. Teil 1 form (5 bilgi, 1'er puan; bilgiler kısa metinde ve bir belgede, örnek satır 0; yazım hatası genelde sayılmaz, rakam tam doğru). Teil 2 tanıdığa mektup: 4 anahtar kelimeden 3'ü, her birine 1–2 cümle, hitap ve selam, ca. 40 kelime; seçilen madde başına 3 / 1,5 / 0 + Kommunikative Gestaltung 1 / 0,5 / 0 = 10.
+- **Öğretmenin onayı ve ekleri:** 35–55 kelime aralığı ve konular plandaki gibi; Teil 2 kontrol listesinde "Dördüncü maddeyi de yazmak ek puan getirmez; 3 maddeyi iyi yazmak yeterli."; örnek cevabın notunda atlanan madde; bir deneme metninde dört maddenin hepsi yazılı (hata sayılmamalı).
+- **Teil 1 (5 set, `kind: "form"`):** Anmeldung im Sportverein (pasaport), Ausweis für die Bibliothek (öğrenci kartı), Im Hotel: der Meldeschein (kimlik), Neu beim Zahnarzt (sağlık kartı), Fahrräder mieten (kredi kartı). Yeni: `cards` (metnin üstünde belge kutusu; dayanak kartta da işaretlenir, "Metinde göster" oraya gider).
+- **Teil 2 (5 set):** Grillfest im Garten (du), Umzug einer Kollegin (Sie), Besuch am Wochenende (du), Ausflug an den See (Sie), Die Katze vom Nachbarn (du; öğretmenin isteğiyle bisiklet seti yerine, Goethe A2 „Fahrrad kaufen“e çok yakındı). Yeni: `choosePoints: 3` (anahtar kelime kutuları + "4 maddeden 3'ünü seç" notu), `model.covers` / `model.skipped`; `sharedWith: "lesen"` ("Lesen ve Schreiben için birlikte 50 dakikan var"). Örnek cevaplar 41–45 kelime.
+- **Kontrol (`scripts/check-exams.mjs`):** telc A2 Teil 1'de kart ve 50 dk zorunlu, dayanak metin + kartlarda tam bir kez; Teil 2'de 4 madde, `choosePoints` 3, 35–55 (hedef 40), atlanan maddenin notta adıyla geçmesi, öğretmenin kontrol listesi maddesi.
+- **Ödev:** Teil 2 setleri öğretmenin ödev ekranında A2 → Schreiben altında (21 görev), Teil 1 form setleri "Sınav setleri" altında seçilebiliyor.
+- **Yapay zekâ:** `tests/ai-deneme/telc-a2-teil2.json` (5 metin: 4 kasıtlı hatalı, telca2-5 hatasız ve dört maddenin hepsini yazıyor). LEVEL_NOTES eklenmedi (Goethe A2 denemelerde 16/16; görev adı ve metin dışında bir şey gönderilmiyor, madde sayısı modele gitmiyor). - **Deneme (23 Kasım, öğretmenin onayıyla gündüz, sadece 5 metin `--ids telca2-1…5`, öğretmenin geçici Workers AI token'ı):** **8/10**, beklenmeyen 0, okunamayan 0; 153 Neuron (5 çağrı, tam tur değil).
+  - telca2-1 2/2 (mitbringen ayrılması, Dürfen), telca2-2 2/2 (helfen + Ihnen, fiil ikinci sırada), telca2-3 2/3, telca2-4 2/3, telca2-5 0/0: dört maddeyi yazan hatasız metinde hiçbir şey işaretlenmedi, "çok uzun" ya da güzelleştirme önerisi yok.
+  - Kaçanlar: "Ich hole dich am Bahnhof" (ab eksik; ama "jemanden holen" konuşma dilinde tek başına da kullanılıyor, kesin hata değil) ve "Hallo Frau Hartmann" (kurs öğretmenine; bugün yaygın ve telc'te en fazla Kommunikative Gestaltung'da yarım puan). İkisi de tartışmalı örnekler; model zayıflığı sayılmadı, LEVEL_NOTES eklenmedi. Beklentiler değiştirilmedi (öğretmene soruldu).
+- **Testler:** `tests/schreiben.mjs` (telc A2 bölümü: kart, tek harf yazım hatası, rakam sırası, Enter, karttaki dayanak, 4 kutu, 35/55 sınırları, örnek cevap notu, TR/DE/EN, 390/1440 açık/koyu taşma), `test:schreiben` (ödev listesi 21), `test:schreiben-ai`, `test:worker`, `test:odev`, `test:csp`, check-exams, check-html-escape, check-versions, build-pages --check.
+- **Önbellek:** `app.js?v=55` (bütün sayfalar, `scripts/build-pages.mjs`), `examsData.js?v=25` (index.html ve `js/account/common.js`), `writing-task.js?v=9`, `form-task.js?v=3`, `writing-task.css?v=7`.
+
 ## 2026-11-23 · Ödev e-postası canlıda çalışıyor (#130); takip metni düzeltildi (dal `claude/eposta-takip-anonim`)
 
 - #130 birleştirildi (main alındı, testler ve CI yeniden geçti).
 - **Öğretmenin canlı denemesi (23 Kasım): e-posta info@bozkurtacademy.com'dan geldi.** Brevo, Worker ve kurallar kurulu.
 - **Takip:** Brevo kayıtlarında açılma ve tıklama olayları yine görünüyor, ama alıcı "Anonymisiert" olarak kaydediliyor: `contactPixelTrackingConsent: false` çalışıyor; ücretsiz planda takibi tamamen kapatmak mümkün değil.
 - **Düzeltme:** "Açılma ve tıklama takibi yapılmaz" cümlesi yerine anlamca "E-posta hizmeti açılma ve tıklamaları yalnızca anonim olarak sayar; bunlar öğrenciye ya da veliye bağlanmaz ve tarafımızdan kullanılmaz" yazıldı: `privacy.html` (TR/DE/EN), `docs/veli-onay-formu.md` (TR/DE), `docs/privacy-policy.md`. `docs/odev-eposta-kurulum.md`'ye bu durum ve Brevo ayarlarının neden açık kalması gerektiği eklendi. Worker'da sadece iki açıklama satırı değişti, kod aynı; Worker'ı yeniden yüklemen gerekmiyor.
+
 ## 2026-11-23 · B1 lassen + Infinitiv: ders + 200 soru, konu "hazır" (dal `claude/b1-lassen-infinitiv`)
 
 - **Plan (onaylandı, eklemelerle):** Ders 9 bölüm; 20 paket × 10 soru. Öğretmenin eklemeleri: "Lass uns …" (öneri) 1. bölümde ayrı anlam ve 5. pakette ayrı sorular, "Lass mich …" (izin) ile karşılaştırmalı; 15. paket (Türkçe → Almanca) serbest çeviri değil, çoktan seçmeli ve verilen kelimelerle cümle (birden fazla doğru sıra varsa hepsi kabul); 1. paketteki anlam sorularında bağlam anlamı tek kılacak kadar açık. Pilot (ders + 5 paket) öğretmen tarafından onaylandı. B1 seviye sonu sınavına dokunulmadı (ayrı iş).

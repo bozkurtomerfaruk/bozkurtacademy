@@ -91,7 +91,7 @@ service cloud.firestore {
       let year = request.time.year();
       let provider = request.auth.token.firebase.sign_in_provider;
       let minor = d.birthYear is int && year - d.birthYear <= 16;
-      return d.keys().hasOnly(['name', 'email', 'birthYear', 'minor', 'provider', 'status', 'parent', 'emailVerified', 'createdAt'])
+      return d.keys().hasOnly(['name', 'email', 'birthYear', 'minor', 'provider', 'status', 'parent', 'emailVerified', 'lang', 'createdAt'])
         && d.keys().hasAll(['name', 'email', 'birthYear', 'minor', 'provider', 'status', 'createdAt'])
         && validName(d.name)
         && request.auth.token.email is string
@@ -103,6 +103,7 @@ service cloud.firestore {
         && d.status == 'pending'
         && d.createdAt == request.time
         && (!('emailVerified' in d) || verifiedFlag(d.emailVerified))
+        && (!('lang' in d) || validLang(d.lang))
         && (
           (minor && provider == 'password' && ('parent' in d) && validParent(d.parent, d.email))
           || (!minor && !('parent' in d))
@@ -112,6 +113,11 @@ service cloud.firestore {
     // "E-posta doğrulandı" bilgisi sadece giriş bilgisi bunu doğruluyorsa yazılabilir.
     function verifiedFlag(value) {
       return value == true && request.auth.token.email_verified == true;
+    }
+
+    // Öğrencinin arayüz dili (ödev e-postası bu dilde gider; yoksa Türkçe).
+    function validLang(value) {
+      return value in ['tr', 'de', 'en'];
     }
 
     // topicErrors: sadece seviye sonu sınavında (topic "seviye-sonu"), konu başına yanlış sayısı: "perfekt:2,akkusativ:1".
@@ -285,11 +291,12 @@ service cloud.firestore {
       allow create: if isSelf(uid) && !isBot()
         && !exists(/databases/$(database)/documents/deleted/$(uid))
         && validNewProfile();
-      // Öğrenci kendi profilinde sadece "e-posta doğrulandı" bilgisini ekleyebilir (Firebase
-      // e-posta doğrulamasından sonra). Diğer güncellemeler ve silme: sadece öğretmen.
+      // Öğrenci kendi profilinde sadece "e-posta doğrulandı" bilgisini (Firebase e-posta doğrulamasından sonra) ve
+      // arayüz dilini (lang: tr/de/en) değiştirebilir. Diğer güncellemeler ve silme: sadece öğretmen.
       allow update: if isSelf(uid)
-        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['emailVerified'])
-        && verifiedFlag(request.resource.data.emailVerified);
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['emailVerified', 'lang'])
+        && (!request.resource.data.diff(resource.data).affectedKeys().hasAny(['emailVerified']) || verifiedFlag(request.resource.data.emailVerified))
+        && (!request.resource.data.diff(resource.data).affectedKeys().hasAny(['lang']) || validLang(request.resource.data.lang));
 
       match /results/{resultId} {
         allow read: if ownActive(uid);

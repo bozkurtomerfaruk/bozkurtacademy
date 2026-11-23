@@ -286,6 +286,53 @@ describe('E-posta doğrulama bilgisi', () => {
   });
 });
 
+describe('Arayüz dili (ödev e-postası)', () => {
+  test('öğrenci kendi profiline dilini yazabilir: tr, de, en', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    for(const lang of ['de', 'en', 'tr']) await assertSucceeds(updateDoc(doc(ayse(), 'users/ayse'), { lang }));
+  });
+
+  test('geçersiz dil ve dil ile birlikte başka alan reddedilir', async () => {
+    await seed('users/ayse', seededAdult('pending'));
+    for(const lang of ['fr', '', 'TR', 1, null]) await assertFails(updateDoc(doc(ayse(), 'users/ayse'), { lang }));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse'), { lang: 'de', status: 'active' }));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse'), { lang: 'de', homeworkMail: true }));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse'), { lang: 'de', emailVerified: true }));
+  });
+
+  test('öğrenci ödev e-postası ve "veliyi de ekle" ayarlarını değiştiremez; öğretmen değiştirebilir', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse'), { homeworkMail: false }));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse'), { inviteParent: false }));
+    await assertSucceeds(updateDoc(doc(teacherDb(), 'users/ayse'), { homeworkMail: false, lang: 'en' }));
+  });
+
+  test('başka öğrencinin dili yazılamaz', async () => {
+    await seed('users/can', seededMinor('active', consentGiven));
+    await assertFails(updateDoc(doc(ayse(), 'users/can'), { lang: 'de' }));
+  });
+
+  test('kayıtta dil isteğe bağlı ve sadece tr/de/en', async () => {
+    await assertSucceeds(setDoc(doc(ayse(), 'users/ayse'), adultProfile({ lang: 'de' })));
+    await env.clearFirestore();
+    await assertFails(setDoc(doc(ayse(), 'users/ayse'), adultProfile({ lang: 'xx' })));
+  });
+
+  test('öğrenci e-posta sayacını (mailLimits) okuyamaz ve yazamaz; öğretmen yazabilir', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await assertFails(getDoc(doc(ayse(), 'mailLimits/_global')));
+    await assertFails(setDoc(doc(ayse(), 'mailLimits/_global'), { day: '2026-11-23', count: 0 }));
+    await assertSucceeds(setDoc(doc(teacherDb(), 'mailLimits/_global'), { day: '2026-11-23', count: 1, updatedAt: serverTimestamp() }));
+  });
+
+  test('öğrenci ödevindeki e-posta işaretlerini (mailNewAt, mailUpdateAt) değiştiremez', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await seed('users/ayse/assignments/a1', { title: 'x', groupId: 'g', done: false, doneAt: null, studentDocUrl: '', createdAt: Timestamp.now(), mailNewAt: Timestamp.now() });
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse/assignments/a1'), { mailNewAt: null }));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse/assignments/a1'), { mailUpdateAt: serverTimestamp() }));
+  });
+});
+
 describe('Alıştırma sonuçları', () => {
   test('onaylı öğrenci sonuç ekleyebilir ve kendi sonuçlarını okuyabilir', async () => {
     await seed('users/ayse', seededAdult('active'));

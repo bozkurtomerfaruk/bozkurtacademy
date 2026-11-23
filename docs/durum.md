@@ -2,6 +2,21 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-23 · Ödev e-postası (dal `claude/odev-eposta`, PR açık, birleştirilmedi)
+
+- **Kararların:** 16 yaş altı: öğrenci + veli; mevcut "veliyi de ekle" anahtarı ödev e-postalarını da kapsıyor (veli onay formuna eklendi). Düzenlemede "değişikliği bildir" varsayılan işaretsiz. Öğrencinin seçtiği dil profile yazılıyor. Aynı Worker'da yeni adres `/odev-bildirim`.
+- **Worker (`worker/schreiben-kontrol.js`, Schreiben kontrolüne dokunulmadı):** Tarayıcı sadece `{kind, items:[{uid,id}]}` gönderir. Worker belirteci Firebase'e sordurur (`TEACHER_UID` değilse 401). Profil, dil, veli ve ödevin başlığı/teslim tarihi Firestore'dan **öğretmenin kendi belirteciyle** okunur. Brevo transactional API ile info@ adına gönderilir (yanıt adresi info@).
+  - E-postada sadece başlık, teslim (Berlin) ve `odevlerim.html#odev-…` bağlantısı var; TR/DE/EN, veliye ayrı metin; HTML kaçışlı.
+  - "Yeni ödev" bir kez (`mailNewAt`). "Güncellendi" ödev başına günde bir kez ve aynı gün "yeni ödev" gittiyse gitmez (`mailUpdateAt`).
+  - Günde en fazla 100 (`mailLimits/_global`, veliye giden de sayılır).
+- **Arayüz:** Formda "Öğrencilere e-posta ile bildir" (yeni: işaretli; düzenleme: "Değişikliği mevcut öğrencilere e-postayla bildir" işaretsiz, "Yeni eklediğin öğrencilere e-posta gönder" işaretli). Ödev listesinde sonuç bildirimi, öğrenci başına "E-posta gönderildi · tarih" ya da "E-posta gönder" (tekrar dene). Öğrenci detayında "Yeni ödevlerde e-posta gönder" (`homeworkMail`). E-posta gitmese de ödev kayıtlı kalır.
+- **Dil:** Kayıtta ve öğrenci paneli/Ödevlerim açılınca ya da dil değişince `users/{uid}.lang` (tr/de/en). `firestore.rules`: öğrenci sadece `emailVerified` ve `lang` değiştirebilir; kayıtta `lang` isteğe bağlı. **Kuralları Firebase Console'da yayınlaman gerekiyor.**
+- **Gizlilik:** `privacy.html` 8. bölüm "Hatırlatma ve ödev e-postaları" (TR/DE/EN, tarih 23 Kasım 2026); `docs/veli-onay-formu.md` (TR/DE: veriler, amaç, Brevo, kutu); `docs/privacy-policy.md` Brevo API satırı.
+- **Brevo takip ayarı:** Geliştirme ortamından Brevo'nun yardım sayfalarına erişilemedi; açılma/tıklama takibinin ücretsiz planda kapatılıp kapatılamadığı doğrulanamadı. Rehberde (`docs/odev-eposta-kurulum.md`) nerede arayacağın ve kapatılamazsa ne olacağı açıkça yazıyor; sonucu yazarsan gizlilik metnine eklenir.
+- **Ek düzeltme:** Öğrenci detayında geçmiş ders yokken "Dersler" altında görünen "null" yazısı kaldırıldı (önceden vardı).
+- **Testler:** Yeni `tests/odev-eposta-worker.test.mjs` (18, Brevo taklit), yeni `npm run test:odev-eposta` (emülatör + Node'da Worker + sahte Brevo; 390/1440 açık/koyu ve e-posta HTML'i). Kural testleri (`lang`, `homeworkMail`, `mailLimits`, e-posta işaretleri) dahil `npm test` 245/245. `test:odev`, `test:csp`, `test:schreiben-ai`, `test:schreiben`, `test:sinav`, `test:level-exam`, `test:placement` (gizlilik tarihi güncellendi), takvim, hesap çevirileri, statik kontroller geçti.
+- **Birleştirmeden sonra senin yapacakların:** `docs/odev-eposta-kurulum.md`: Brevo API anahtarı ve Authorised IPs, gönderen ve takip ayarı, Worker kodu ve değişkenleri (`TEACHER_UID`, `BREVO_API_KEY` Secret, `MAIL_DAILY_LIMIT`), Firestore kurallarını yayınlama, canlı deneme.
+
 ## 2026-11-23 · Ödev PDF'leri canlıda çalışıyor (#128)
 
 - #128 birleştirildi (main alındı, testler yeniden geçti). GitHub'daki "Static pages" işi `apt-get install ffmpeg` adımında takıldı; bu PR'la ilgisi yok, o işin adımları yerelde geçti.

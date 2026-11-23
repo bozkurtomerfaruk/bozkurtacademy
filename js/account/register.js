@@ -65,6 +65,7 @@ async function createProfile(user, form){
     minor: form.minor,
     provider: signInProvider,
     status: 'pending',
+    lang: ['tr', 'de', 'en'].includes(lang()) ? lang() : 'tr',
     createdAt: fs.serverTimestamp()
   };
   if(form.minor) data.parent = form.parent;

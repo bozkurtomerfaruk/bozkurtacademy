@@ -121,6 +121,17 @@ export async function syncEmailVerified(user, profile){
   return true;
 }
 
+// Öğrencinin seçtiği arayüz dili profile yazılır (ödev e-postası bu dilde gider). Yazılamazsa sessizce geçilir.
+export async function syncLang(uid, profile, value){
+  if(!uid || !profile || !['tr', 'de', 'en'].includes(value) || profile.lang === value) return;
+  try{
+    await fs.updateDoc(fs.doc(db, 'users', uid), { lang: value });
+    profile.lang = value;
+  }catch(error){
+    console.warn(error);
+  }
+}
+
 // Hesabın öğrenci açısından durumu. Kurallardaki isActive() ile aynı mantık.
 export function accountState(profile){
   if(!profile) return 'none';

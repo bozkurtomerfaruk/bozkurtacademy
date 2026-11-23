@@ -55,8 +55,11 @@ function showState(state, info){
   else if(state === 'error' && info?.code === 'deleted'){ text = 'Not silinmiş, kaydedilmedi'; kind = 'error'; }
   else if(offline || (state === 'error' && isOfflineError(info))){ text = 'Bağlantı yok, bağlantı gelince kaydedilecek'; kind = 'offline'; }
   else if(state === 'error'){ text = 'Kaydedilemedi, tekrar deneniyor…'; kind = 'error'; }
+  // Yazarken (henüz yazma isteği yok): kısa bir süre sonra kaydedilecek. "Kaydediliyor…" yalnızca sunucuya
+  // yazılırken görünür (normalde bir saniyenin altında).
+  else if(state === 'dirty'){ text = 'Kaydedilmeyi bekliyor'; kind = 'pending'; }
   else { text = 'Kaydediliyor…'; kind = 'saving'; }
-  el.textContent = text;
+  if(el.textContent !== text) el.textContent = text;
   el.dataset.state = kind;
   // Kayıt 5 sn içinde onaylanmazsa bağlantı yok sayılır (Firestore çevrimdışıyken yazmayı bekletir).
   clearTimeout(offlineTimer);
@@ -184,7 +187,12 @@ function updateToolbar(){
   $('colorSample').className = `note-swatch-a${f.color ? ' ba-c-' + f.color : ''}`;
   const inTable = Boolean(f.table);
   for(const b of document.querySelectorAll('[data-needs-table]')) b.disabled = !inTable || readOnly;
-  $('tableHint').hidden = inTable;
+  // "Tabloyu düzenle" yalnızca imleç tablodayken açılır; tablonun içine yeni tablo eklenmez.
+  const edit = $('tableEditMenu');
+  edit.querySelector('summary').setAttribute('aria-disabled', String(!inTable || readOnly));
+  if(!inTable && edit.open) edit.open = false;
+  $('tableMenu').querySelector('summary').setAttribute('aria-disabled', String(inTable || readOnly));
+  if(inTable && $('tableMenu').open) $('tableMenu').open = false;
 }
 
 function applyFormat(name, value){
@@ -206,16 +214,100 @@ function tableAction(action){
   if(readOnly) return;
   const table = quill.getModule('table');
   quill.focus();
-  if(action === 'insertTable'){
-    const rows = Math.min(30, Math.max(1, Number($('tableRows').value) || 3));
-    const cols = Math.min(10, Math.max(1, Number($('tableCols').value) || 3));
-    if(quill.getFormat().table){ alert('Tablonun içine tablo eklenemez. İmleci tablonun dışına koy.'); return; }
-    table.insertTable(rows, cols);
-  }else{
-    table[action]?.();
-  }
-  $('tableMenu').open = false;
+  table[action]?.();
+  $('tableEditMenu').open = false;
   updateToolbar();
+}
+
+// ---- Tablo ızgarası (Google Docs gibi): fareyle ya da ok tuşlarıyla sütun × satır seç, tıkla / Enter ----
+const GRID_COLS = 10, GRID_ROWS = 8;
+let gridPick = { cols: 1, rows: 1 };
+
+function paintGrid(){
+  const { cols, rows } = gridPick;
+  for(const cell of $('tableGrid').children){
+    const on = Number(cell.dataset.col) <= cols && Number(cell.dataset.row) <= rows;
+    cell.classList.toggle('is-on', on);
+    cell.setAttribute('aria-selected', String(Number(cell.dataset.col) === cols && Number(cell.dataset.row) === rows));
+  }
+  $('tableSize').textContent = `${cols} × ${rows}`;
+  $('tableGrid').setAttribute('aria-activedescendant', `tableCell-${rows}-${cols}`);
+}
+
+function insertTable(cols, rows){
+  if(readOnly) return;
+  $('tableMenu').open = false;
+  quill.focus();
+  if(quill.getFormat().table) return;
+  // Tablo her zaman kendi satırına gelir: imleç dolu bir satırdaysa satırın sonuna yeni boş satır açılır (Quill
+  // tabloyu imlecin tam yerine ekler, satırı ikiye bölerdi). Hemen üstte tablo varsa araya boş satır girer
+  // (yoksa iki tablo birleşir).
+  let { index } = quill.getSelection(true);
+  const [line] = quill.getLine(index);
+  if(line && line.length() > 1){
+    index = quill.getIndex(line) + line.length() - 1;
+    quill.insertText(index, '\n', 'user');
+    index += 1;
+    quill.formatLine(index, 1, { header: false, list: false, indent: false }, 'user');
+  }
+  if(index > 0 && quill.getLine(index - 1)[0]?.statics?.blotName === 'table'){
+    quill.insertText(index, '\n', 'user');
+    index += 1;
+  }
+  quill.setSelection(index, 0, 'silent');
+  quill.getModule('table').insertTable(rows, cols);
+  keepLineAfterTable();
+  updateToolbar();
+}
+
+function setupTableGrid(){
+  const grid = $('tableGrid');
+  const cells = [];
+  for(let r = 1; r <= GRID_ROWS; r++){
+    for(let c = 1; c <= GRID_COLS; c++){
+      cells.push(h('div', { class: 'note-grid-cell', role: 'gridcell', id: `tableCell-${r}-${c}`, 'data-row': String(r), 'data-col': String(c), 'aria-label': `${c} sütun, ${r} satır` }));
+    }
+  }
+  grid.style.setProperty('--grid-cols', String(GRID_COLS));
+  grid.replaceChildren(...cells);
+  paintGrid();
+  grid.addEventListener('mouseover', (e) => {
+    const cell = e.target.closest('.note-grid-cell');
+    if(!cell) return;
+    gridPick = { cols: Number(cell.dataset.col), rows: Number(cell.dataset.row) };
+    paintGrid();
+  });
+  grid.addEventListener('click', (e) => {
+    const cell = e.target.closest('.note-grid-cell');
+    if(cell) insertTable(Number(cell.dataset.col), Number(cell.dataset.row));
+  });
+  grid.addEventListener('keydown', (e) => {
+    const move = { ArrowRight: [1, 0], ArrowLeft: [-1, 0], ArrowDown: [0, 1], ArrowUp: [0, -1] }[e.key];
+    if(move){
+      e.preventDefault();
+      gridPick = {
+        cols: Math.min(GRID_COLS, Math.max(1, gridPick.cols + move[0])),
+        rows: Math.min(GRID_ROWS, Math.max(1, gridPick.rows + move[1]))
+      };
+      paintGrid();
+    }else if(e.key === 'Enter' || e.key === ' '){
+      e.preventDefault();
+      insertTable(gridPick.cols, gridPick.rows);
+    }
+  });
+  // Açılınca 1 × 1'den başla. Klavyeyle (Enter / boşluk) açıldıysa odak ızgaraya geçer; fareyle açılınca odak
+  // editörde kalır (fareyle seçmek için gerekmez, kalın odak çerçevesi de çıkmaz).
+  let byKeyboard = false;
+  const summary = $('tableMenu').querySelector('summary');
+  summary.addEventListener('keydown', (e) => { if(e.key === 'Enter' || e.key === ' ') byKeyboard = true; });
+  summary.addEventListener('pointerdown', () => { byKeyboard = false; });
+  $('tableMenu').addEventListener('toggle', () => {
+    if(!$('tableMenu').open) return;
+    gridPick = { cols: 1, rows: 1 };
+    paintGrid();
+    if(byKeyboard) grid.focus({ preventScroll: true });
+    byKeyboard = false;
+  });
 }
 
 // Bağlantı penceresi: seçili metne bağlantı ekler; seçim yoksa adres metin olarak eklenir.
@@ -270,7 +362,9 @@ function setupToolbar(){
   swatches('highlightList', 'background', NOTE_HIGHLIGHTS);
   const bar = $('noteToolbar');
   // Fareyle tıklayınca editördeki seçim kaybolmasın.
-  bar.addEventListener('mousedown', (e) => { if(e.target.closest('button, summary')) e.preventDefault(); });
+  bar.addEventListener('mousedown', (e) => { if(e.target.closest('button, summary, .note-grid')) e.preventDefault(); });
+  // Kapalı ("aria-disabled") menü açılmaz: Tabloyu düzenle imleç tablodayken, Tablo ekle tablo dışındayken.
+  for(const sum of bar.querySelectorAll('summary')) sum.addEventListener('click', (e) => { if(sum.getAttribute('aria-disabled') === 'true') e.preventDefault(); });
   bar.addEventListener('click', (e) => {
     const b = e.target.closest('button');
     if(!b || b.disabled) return;
@@ -291,9 +385,40 @@ function setupToolbar(){
     const open = menus.find((m) => m.open);
     if(open){ open.open = false; open.querySelector('summary').focus(); }
   });
+  setupTableGrid();
   $('linkForm').addEventListener('submit', saveLink);
   $('linkCancel').addEventListener('click', () => { $('linkDialog').close(); quill.focus(); });
   $('linkRemove').addEventListener('click', removeLink);
+}
+
+// ---- Yapışkan araç çubuğu: sitenin üst menüsünün hemen altında durur. Editör imleci kaydırırken çubuğun altında
+// kalmasın diye sayfanın scroll-padding'i çubuğun yüksekliği kadar ayarlanır (Quill bunu dikkate alır).
+function setupSticky(){
+  const topbar = document.querySelector('.topbar');
+  const sticky = $('noteSticky');
+  const root = document.documentElement;
+  const update = () => {
+    const full = document.fullscreenElement === $('noteCard') || document.body.classList.contains('note-fullscreen');
+    const top = full || !topbar ? 0 : Math.round(topbar.getBoundingClientRect().height);
+    root.style.setProperty('--note-top', `${top}px`);
+    root.style.setProperty('--note-sticky-h', `${Math.round(sticky.getBoundingClientRect().height)}px`);
+  };
+  update();
+  if('ResizeObserver' in window){
+    const ro = new ResizeObserver(update);
+    if(topbar) ro.observe(topbar);
+    ro.observe(sticky);
+  }
+  window.addEventListener('resize', update);
+  document.addEventListener('fullscreenchange', update);
+  // Çubuk yapıştığında altına ince gölge (metnin üstünde olduğu belli olsun).
+  const stuck = () => {
+    const top = parseFloat(getComputedStyle(root).getPropertyValue('--note-top')) || 0;
+    sticky.classList.toggle('is-stuck', sticky.getBoundingClientRect().top <= top + 1 && (scrollY > 0 || $('noteCard').scrollTop > 0));
+  };
+  window.addEventListener('scroll', stuck, { passive: true });
+  $('noteCard').addEventListener('scroll', stuck, { passive: true });
+  new MutationObserver(update).observe(document.body, { attributes: true, attributeFilter: ['class'] });
 }
 
 // ---- Görünüm: tam ekran, yazdır, sil, yeni sayfa ----
@@ -501,6 +626,7 @@ async function start(){
 
   setupToolbar();
   setupView();
+  setupSticky();
   updateToolbar();
   showState('saved');
 

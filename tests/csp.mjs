@@ -537,7 +537,8 @@ await resetEmulators();
   await page.keyboard.press('Shift+Home'); await page.keyboard.press('Control+B');
   await page.click('#colorMenu summary'); await page.click('#colorList [data-value="mavi"]');
   await page.keyboard.press('End'); await page.keyboard.press('Enter');
-  await page.click('#tableMenu summary'); await page.click('[data-table="insertTable"]');
+  await page.click('#tableMenu summary'); await page.hover('#tableCell-4-3'); await page.click('#tableCell-4-3');
+  ok(await page.locator('#editor table tr').count() === 4, 'ders defteri: ızgaradan 3 × 4 tablo');
   await page.evaluate(() => {
     const dt = new DataTransfer();
     dt.setData('text/html', '<p><span style="color:#ff0000;font-weight:700">Rot</span> <a href="https://example.com">Link</a></p>');

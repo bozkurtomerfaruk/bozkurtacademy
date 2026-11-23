@@ -83,7 +83,7 @@
   function loadVocab(){
     if(vocab.status === 'idle'){
       vocab.status = 'loading';
-      vocab.promise = fetch('data/sozluk.json?v=2')
+      vocab.promise = fetch('data/sozluk.json?v=3')
         .then(response => { if(!response.ok) throw new Error(response.status); return response.json(); })
         .then(data => { vocab.words = data.words || {}; vocab.status = 'ready'; })
         .catch(() => { vocab.status = 'failed'; });
@@ -115,6 +115,8 @@
       .normalize('NFC')
       .trim()
       .toLocaleLowerCase('de-DE')
+      // ä/ae, ö/oe, ü/ue, ß/ss count as the same spelling, also when mixed in one answer.
+      .replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss')
       .replace(/[.!?,;:]+$/g,'')
       .replace(/\s+/g,' ');
   }

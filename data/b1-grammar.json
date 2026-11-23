@@ -3034,6 +3034,573 @@
       "readingTitle": "IDS · Resmî virgül kuralı §73"
     },
     {
+      "id": "lassen-infinitiv",
+      "title": "lassen + Infinitiv – yaptırmak, izin vermek, bırakmak",
+      "titleTranslations": {
+        "tr": "lassen + Infinitiv",
+        "de": "lassen + Infinitiv",
+        "en": "lassen + infinitive"
+      },
+      "description": {
+        "tr": "lassen ile yaptırmak, izin vermek, bırakmak ve öneri: çekim, fiil sırası, Perfekt ve yan cümle.",
+        "de": "lassen + Infinitiv – Erklärung auf Türkisch mit visuellen Beispielen.",
+        "en": "lassen + infinitive – Turkish explanation with visual examples."
+      },
+      "lead": "Arabanı kendin tamir etmiyorsan Türkçede “tamir ettiriyorum” dersin. Almancada bunun için ayrı bir ek yok; lassen fiili kullanılır: Ich lasse mein Auto reparieren. Aynı fiil “izin vermek”, “bırakmak” ve “hadi …” anlamlarında da çok sık geçer. Bu derste anlamları ayırmayı, fiilleri doğru sıraya koymayı ve Perfekt’te neden gelassen değil lassen dendiğini öğreneceksin.",
+      "sections": [
+        {
+          "title": "1 · lassen’in dört anlamı",
+          "paragraphs": [
+            "lassen tek başına “bırakmak” demektir. Yanına ikinci bir fiil (mastar) gelince anlam bağlama göre değişir. Önce kendine sor: İşi kim yapıyor ve neden?",
+            "Yaptırmak: İşi başka biri yapar, sen sağlarsın. Ich lasse mein Auto reparieren = Arabamı tamir ettiriyorum (tamirci yapıyor). İzin vermek: Birinin bir şey yapmasına engel olmazsın. Die Eltern lassen das Kind lange spielen = Anne baba çocuğun uzun süre oynamasına izin veriyor. Bırakmak: Bir şeyi bir yerde bırakırsın, ikinci fiil yoktur. Ich lasse den Schirm zu Hause = Şemsiyeyi evde bırakıyorum.",
+            "Öneri (hadi …): Lass uns … ile kendini de içine katan bir öneri yaparsın. Lass uns ins Kino gehen! = Hadi sinemaya gidelim! Burada kimse izin istemiyor; “wir” birlikte bir şey yapacak. Lass mich … ise izin istemektir: Lass mich bitte ausreden! = Lütfen sözümü bitirmeme izin ver."
+          ],
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto in der Werkstatt reparieren.",
+              "tr": "Arabamı tamirhanede tamir ettiriyorum.",
+              "note": "yaptırmak: tamirci yapıyor"
+            },
+            {
+              "de": "Meine Eltern lassen mich am Wochenende lange schlafen.",
+              "tr": "Annemle babam hafta sonu uzun uyumama izin veriyor.",
+              "note": "izin vermek"
+            },
+            {
+              "de": "Ich lasse meinen Schlüssel heute zu Hause.",
+              "tr": "Anahtarımı bugün evde bırakıyorum.",
+              "note": "bırakmak: ikinci fiil yok"
+            },
+            {
+              "de": "Lass uns am Samstag zusammen kochen!",
+              "tr": "Hadi cumartesi birlikte yemek yapalım!",
+              "note": "öneri: biz birlikte"
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "Ich lasse mein Auto reparieren.",
+                "yaptırmak – işi başkası yapar"
+              ],
+              [
+                "Sie lassen das Kind spielen.",
+                "izin vermek – engel olmazlar"
+              ],
+              [
+                "Ich lasse den Schirm zu Hause.",
+                "bırakmak – ikinci fiil yok"
+              ],
+              [
+                "Lass uns gehen!",
+                "öneri – hadi (biz)"
+              ]
+            ],
+            "caption": "Anlamı bağlam ve cümledeki kişiler belirler: kim yapıyor, kim istiyor?"
+          }
+        },
+        {
+          "title": "2 · Präsens çekimi ve fiilin yeri",
+          "paragraphs": [
+            "lassen düzensiz bir fiildir: du ve er/sie/es biçimlerinde a → ä olur. du lässt ve er lässt aynı yazılır. ihr lasst’ta ise ä yoktur; bunu sık karıştırırsın.",
+            "Cümlede lassen çekimli fiildir ve ikinci sıradadır. Yapılacak işin fiili mastar hâlinde en sona gider. Modal fiillerde olduğu gibi zu kullanılmaz: Ich lasse mein Fahrrad reparieren (… zu reparieren değil).",
+            "Tek bir istisnaya dikkat: lassen’in kendisi zu isteyen bir fiile bağlıysa (vorhaben, versuchen, planen, Es ist teuer … gibi), o zu lassen’in önüne gelir: Wir haben vor, die Küche streichen zu lassen. Bu zu lassen’den değil, vorhaben’dan gelir; streichen yine zu almaz."
+          ],
+          "table": {
+            "headers": [
+              "Kişi",
+              "lassen",
+              "Örnek"
+            ],
+            "rows": [
+              [
+                "ich",
+                "lasse",
+                "Ich lasse die Jacke reinigen."
+              ],
+              [
+                "du",
+                "lässt",
+                "Du lässt dein Handy reparieren."
+              ],
+              [
+                "er / sie / es",
+                "lässt",
+                "Sie lässt ihre Haare schneiden."
+              ],
+              [
+                "wir",
+                "lassen",
+                "Wir lassen eine Pizza liefern."
+              ],
+              [
+                "ihr",
+                "lasst",
+                "Ihr lasst die Kinder draußen spielen."
+              ],
+              [
+                "sie / Sie",
+                "lassen",
+                "Sie lassen das Paket bringen."
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Am Montag lasse ich die Heizung prüfen.",
+              "tr": "Pazartesi kaloriferi kontrol ettiriyorum.",
+              "note": "lasse ikinci sırada, prüfen sonda"
+            },
+            {
+              "de": "Lässt du dein Fahrrad reparieren?",
+              "tr": "Bisikletini tamir ettiriyor musun?",
+              "note": "soru: lassen başta"
+            },
+            {
+              "de": "Wir lassen heute eine Pizza liefern.",
+              "tr": "Bugün pizza getirtiyoruz (siparişle).",
+              "note": "zu yok"
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "Ich",
+              "lasse",
+              "mein Fahrrad",
+              "reparieren."
+            ],
+            "labels": [
+              "Özne",
+              "lassen (çekimli, 2. sıra)",
+              "Nesne ve diğer kısımlar",
+              "Mastar sonda, zu yok"
+            ]
+          }
+        },
+        {
+          "title": "3 · Kim yaptırıyor, kim yapıyor?",
+          "paragraphs": [
+            "Ich lasse den Mechaniker das Auto reparieren cümlesinde iki kişi var: ich işi yaptırıyor, den Mechaniker işi yapıyor. İşi yapan kişi Akkusativ’de durur: den Mechaniker, mich, dich, uns. Çoğu zaman işi yapan kişi hiç söylenmez, çünkü önemli değildir: Ich lasse das Auto reparieren.",
+            "Emir kipinde de aynı kural geçerlidir. du’ya: Lass mich …, ihr’e: Lasst mich …, Sie’ye: Lassen Sie mich … Bu cümlelerde konuşan kişi izin ister: Lassen Sie mich kurz erklären = Kısaca açıklamama izin verin.",
+            "Öneri ise uns ile kurulur: Lass uns … (bir kişiye), Lasst uns … (birden fazla kişiye). Lass mich gehen = gitmeme izin ver (sadece ben gidiyorum). Lass uns gehen = hadi gidelim (birlikte gidiyoruz). Farkı mich ve uns gösterir."
+          ],
+          "table": {
+            "headers": [
+              "Kime?",
+              "İzin istemek",
+              "Öneri (hadi …)"
+            ],
+            "rows": [
+              [
+                "du",
+                "Lass mich bitte ausreden!",
+                "Lass uns eine Pause machen!"
+              ],
+              [
+                "ihr",
+                "Lasst mich bitte ausreden!",
+                "Lasst uns eine Pause machen!"
+              ],
+              [
+                "Sie",
+                "Lassen Sie mich bitte ausreden!",
+                "Lassen Sie uns eine Pause machen!"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Ich lasse den Techniker die Heizung prüfen.",
+              "tr": "Kaloriferi teknisyene kontrol ettiriyorum.",
+              "note": "prüft: der Techniker → Akkusativ den Techniker"
+            },
+            {
+              "de": "Die Lehrerin lässt uns heute früher gehen.",
+              "tr": "Öğretmen bugün erken gitmemize izin veriyor.",
+              "note": "gehen: wir → Akkusativ uns"
+            },
+            {
+              "de": "Lass mich bitte in Ruhe arbeiten!",
+              "tr": "Lütfen rahat rahat çalışmama izin ver!",
+              "note": "izin: sadece ben"
+            },
+            {
+              "de": "Lass uns heute Abend Freunde einladen!",
+              "tr": "Hadi bu akşam arkadaş davet edelim!",
+              "note": "öneri: biz birlikte"
+            }
+          ],
+          "figure": {
+            "type": "tiles",
+            "items": [
+              [
+                "ich",
+                "yaptıran / izin veren"
+              ],
+              [
+                "den Mechaniker",
+                "işi yapan → Akkusativ"
+              ],
+              [
+                "das Auto reparieren",
+                "yapılan iş"
+              ]
+            ],
+            "caption": "Ich lasse den Mechaniker das Auto reparieren: üç parçayı ayır."
+          }
+        },
+        {
+          "title": "4 · Kendine bir şey yaptırmak: sich + lassen",
+          "paragraphs": [
+            "Bir işi kendin için yaptırıyorsan dönüşlü zamir eklenir: Ich lasse mir die Haare schneiden = Saçımı kestiriyorum. Cümlede die Haare zaten Akkusativ nesne olduğu için dönüşlü zamir Dativ olur: mir, dir, sich, uns, euch, sich.",
+            "Başka bir nesne yoksa dönüşlü zamir Akkusativ olur: Ich lasse mich vom Arzt untersuchen = Kendimi doktora muayene ettiriyorum. Kısa kural: Akkusativ’de bir şey (die Haare, einen Zahn, das Visum) varsa mir/dir; yoksa mich/dich.",
+            "Türkçede “saçımı” deriz; Almancada bu cümlede çoğu zaman mein yerine mir kullanılır: Ich lasse mir die Haare schneiden. Ich lasse meine Haare schneiden de doğru ve anlaşılır bir cümledir, ama mir ile kurulan biçim daha yaygındır."
+          ],
+          "table": {
+            "headers": [
+              "Kişi",
+              "Dativ (nesne var)",
+              "Akkusativ (nesne yok)"
+            ],
+            "rows": [
+              [
+                "ich",
+                "Ich lasse mir die Haare schneiden.",
+                "Ich lasse mich beraten."
+              ],
+              [
+                "du",
+                "Du lässt dir einen Zahn ziehen.",
+                "Du lässt dich untersuchen."
+              ],
+              [
+                "er / sie",
+                "Sie lässt sich ein Kleid nähen.",
+                "Er lässt sich impfen."
+              ],
+              [
+                "wir",
+                "Wir lassen uns die Küche planen.",
+                "Wir lassen uns beraten."
+              ],
+              [
+                "ihr",
+                "Lasst ihr euch die Fotos schicken?",
+                "Lasst ihr euch fotografieren?"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Ich lasse mir morgen die Haare schneiden.",
+              "tr": "Yarın saçımı kestiriyorum.",
+              "note": "die Haare = Akkusativ → mir"
+            },
+            {
+              "de": "Mein Bruder lässt sich einen Anzug nähen.",
+              "tr": "Kardeşim kendine takım elbise diktiriyor.",
+              "note": "einen Anzug = Akkusativ → sich (Dativ)"
+            },
+            {
+              "de": "Ich lasse mich in der Bank beraten.",
+              "tr": "Bankada danışmanlık alıyorum (bana danışmanlık yaptırıyorum).",
+              "note": "başka nesne yok → mich"
+            }
+          ]
+        },
+        {
+          "title": "5 · Perfekt: lassen mı, gelassen mı?",
+          "paragraphs": [
+            "Yanında ikinci bir fiil varsa Perfekt’te lassen’in Partizip II’si kullanılmaz. Onun yerine iki mastar yan yana gelir: Ich habe mein Auto reparieren lassen. Buna çift mastar (Ersatzinfinitiv) denir. Modal fiillerde de aynısını görürsün: Ich habe arbeiten müssen. Yardımcı fiil her zaman haben’dır.",
+            "lassen tek başına kullanılırsa (ikinci fiil yok) normal Partizip II gelir: Ich habe meinen Schlüssel zu Hause gelassen = Anahtarımı evde bıraktım. Kural basit: İkinci fiil var mı? Varsa lassen, yoksa gelassen.",
+            "Dikkat: liegen lassen, stehen lassen, fallen lassen gibi sık kullanılan birleşimlerde iki biçim de doğru kabul edilir: Ich habe meine Brille liegen lassen / liegen gelassen. Bu alıştırmalarda bu birleşimler için yalnızca yazılı soru sorulur ve iki cevap da kabul edilir."
+          ],
+          "table": {
+            "headers": [
+              "Durum",
+              "Perfekt",
+              "Türkçe"
+            ],
+            "rows": [
+              [
+                "ikinci fiil var",
+                "Ich habe das Auto reparieren lassen.",
+                "Arabayı tamir ettirdim."
+              ],
+              [
+                "ikinci fiil var",
+                "Sie hat mich ausschlafen lassen.",
+                "Uyumama izin verdi."
+              ],
+              [
+                "ikinci fiil yok",
+                "Ich habe die Tasche im Bus gelassen.",
+                "Çantayı otobüste bıraktım."
+              ],
+              [
+                "liegen / stehen lassen",
+                "Ich habe die Brille liegen lassen / liegen gelassen.",
+                "Gözlüğü unuttum (orada bıraktım)."
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Wir haben die Wohnung streichen lassen.",
+              "tr": "Evi boyattık.",
+              "note": "streichen + lassen → çift mastar"
+            },
+            {
+              "de": "Hast du dir die Haare schneiden lassen?",
+              "tr": "Saçını kestirdin mi?",
+              "note": "ikinci fiil var → lassen"
+            },
+            {
+              "de": "Er hat sein Handy im Auto gelassen.",
+              "tr": "Telefonunu arabada bıraktı.",
+              "note": "ikinci fiil yok → gelassen"
+            }
+          ]
+        },
+        {
+          "title": "6 · Yan cümlede fiil sırası",
+          "paragraphs": [
+            "Präsens’te yan cümle kolaydır: çekimli lassen en sona gider. …, weil ich mein Auto reparieren lasse. Modal fiil varsa o en sona gider: …, weil ich mein Auto reparieren lassen muss.",
+            "Perfekt’te çift mastar varsa özel bir kural vardır: Yardımcı fiil haben en sona değil, iki mastarın önüne gelir. …, weil ich mein Auto habe reparieren lassen. “…, weil ich mein Auto reparieren lassen habe” yanlıştır. Bu kural B1 sınavlarında sık sorulur. Yapı biraz ağır duyulduğu için yazıda bazen Präteritum tercih edilir: …, weil ich mein Auto reparieren ließ.",
+            "İkinci fiil yoksa (gelassen) yan cümle normal kurala uyar: …, weil ich den Schlüssel zu Hause gelassen habe."
+          ],
+          "examples": [
+            {
+              "de": "Ich komme zu spät, weil ich meine Jacke reinigen lasse.",
+              "tr": "Ceketimi temizletiyorum, o yüzden geç kalıyorum.",
+              "note": "Präsens: lasse sonda"
+            },
+            {
+              "de": "Mein Auto fährt wieder, weil ich es habe reparieren lassen.",
+              "tr": "Arabam yine çalışıyor, çünkü onu tamir ettirdim.",
+              "note": "habe iki mastarın önünde"
+            },
+            {
+              "de": "Sie wartet vor der Tür, weil sie den Schlüssel zu Hause gelassen hat.",
+              "tr": "Kapının önünde bekliyor, çünkü anahtarı evde bırakmış.",
+              "note": "gelassen: normal sıra"
+            }
+          ],
+          "figure": {
+            "type": "sentence",
+            "parts": [
+              "…, weil",
+              "ich",
+              "mein Auto",
+              "habe",
+              "reparieren lassen."
+            ],
+            "labels": [
+              "Bağlaç",
+              "Özne",
+              "Nesne",
+              "haben öne geçer",
+              "İki mastar en sonda"
+            ]
+          }
+        },
+        {
+          "title": "7 · Modal fiillerle ve Präteritum’da",
+          "paragraphs": [
+            "Modal fiille birlikte lassen de mastar olur ve en sona gider: Ich muss mein Auto reparieren lassen. Du solltest dir die Haare schneiden lassen. Sıra hep aynıdır: önce yapılan işin fiili, sonra lassen.",
+            "Präteritum’da lassen → ließ olur. ich ließ ve er ließ aynıdır; wir ve sie ließen; ihr ließt. du için ließest (konuşmada ließt de kullanılır). Hikâye anlatırken ve yazılı metinlerde çok kullanılır: Der König ließ ein Schloss bauen = Kral bir saray yaptırdı."
+          ],
+          "table": {
+            "headers": [
+              "Kişi",
+              "Präteritum",
+              "Örnek"
+            ],
+            "rows": [
+              [
+                "ich",
+                "ließ",
+                "Ich ließ den Arzt kommen."
+              ],
+              [
+                "du",
+                "ließest / ließt",
+                "Du ließest die Tür offen."
+              ],
+              [
+                "er / sie / es",
+                "ließ",
+                "Sie ließ das Paket zurückschicken."
+              ],
+              [
+                "wir",
+                "ließen",
+                "Wir ließen ein Haus bauen."
+              ],
+              [
+                "ihr",
+                "ließt",
+                "Ihr ließt uns lange warten."
+              ],
+              [
+                "sie / Sie",
+                "ließen",
+                "Sie ließen die Kinder spielen."
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Wir müssen das Dach reparieren lassen.",
+              "tr": "Çatıyı tamir ettirmemiz gerekiyor.",
+              "note": "modal + iş + lassen"
+            },
+            {
+              "de": "Du kannst dir das Essen auch liefern lassen.",
+              "tr": "Yemeği eve de getirtebilirsin.",
+              "note": ""
+            },
+            {
+              "de": "Der Chef ließ uns eine Stunde warten.",
+              "tr": "Şef bizi bir saat bekletti.",
+              "note": "Präteritum: ließ"
+            }
+          ],
+          "box": {
+            "title": "B2’ye bakış: sich lassen",
+            "paragraphs": [
+              "B2’de lassen bir yapıda daha görünecek: sich + lassen + mastar = “…-ebilir, …-ılabilir”. Das lässt sich leicht erklären = Bu kolayca açıklanabilir. Das Fenster lässt sich nicht öffnen = Pencere açılmıyor (açılamıyor). Burada kimse bir şey yaptırmıyor; anlam edilgen ve olanaklıdır. Bu yapıyı şimdilik tanıman yeterli; B1 alıştırmalarında sorulmaz."
+            ]
+          }
+        },
+        {
+          "title": "8 · Türkçeyle karşılaştırma: -dır- / -t- eki",
+          "paragraphs": [
+            "Türkçede yaptırmak için fiile ettirgen eki eklersin: yap-tır-mak, kes-tir-mek, boya-t-mak, temizle-t-mek. Almancada fiil değişmez; yanına lassen gelir. Türkçedeki ek, Almancada ayrı bir kelimedir.",
+            "Türkçede “izin vermek” için çoğu zaman ayrı bir ifade kullanırsın: Çocuğun oynamasına izin veriyorum. Almancada aynı lassen yeter: Ich lasse das Kind spielen. Bu yüzden Almanca cümleyi çevirirken bağlama bak: Ich lasse ihn fahren, “onun (arabayı) sürmesine izin veriyorum” da olabilir, “ona arabayı sürdürüyorum” da. Hangisi olduğunu cümlenin öncesi ve sonrası gösterir."
+          ],
+          "table": {
+            "headers": [
+              "Türkçe",
+              "Almanca",
+              "Örnek"
+            ],
+            "rows": [
+              [
+                "yaptırmak",
+                "machen lassen",
+                "Ich lasse einen Schlüssel machen."
+              ],
+              [
+                "kestirmek (saç)",
+                "schneiden lassen",
+                "Ich lasse mir die Haare schneiden."
+              ],
+              [
+                "boyatmak",
+                "streichen lassen",
+                "Wir lassen die Wand streichen."
+              ],
+              [
+                "temizletmek",
+                "reinigen lassen",
+                "Sie lässt den Mantel reinigen."
+              ],
+              [
+                "getirtmek (sipariş)",
+                "liefern lassen",
+                "Wir lassen eine Pizza liefern."
+              ],
+              [
+                "bekletmek",
+                "warten lassen",
+                "Er lässt uns warten."
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Ich lasse meinen Pass verlängern.",
+              "tr": "Pasaportumu uzatıyorum (uzattırıyorum).",
+              "note": "Türkçede ek bazen düşer; Almancada lassen kalır"
+            },
+            {
+              "de": "Der Arzt lässt den Patienten warten.",
+              "tr": "Doktor hastayı bekletiyor.",
+              "note": "bekle-t-mek = warten lassen"
+            }
+          ]
+        },
+        {
+          "title": "9 · Türk öğrencilerin sık yaptığı hatalar",
+          "paragraphs": [
+            "Bu hataların çoğu Türkçeden ya da Infinitiv mit zu kuralından gelir. Cümleni kurduktan sonra şu soruları sor: zu var mı? du/er için ä yazdım mı? Perfekt’te ikinci fiil varken gelassen mi yazdım? Akkusativ nesne varken mich mi kullandım?",
+            "Bir de lassen ile verlassen’i karıştırma: verlassen bir yerden ayrılmaktır (Ich verlasse das Haus um acht = Evden sekizde çıkıyorum). Bir şeyi bir yerde bırakmak ise lassen’dir (Ich lasse das Handy zu Hause)."
+          ],
+          "examples": [
+            {
+              "de": "Ich lasse mein Auto reparieren.",
+              "tr": "Arabamı tamir ettiriyorum.",
+              "note": "yanlış: Ich lasse mein Auto zu reparieren."
+            },
+            {
+              "de": "Du lässt dir die Haare schneiden.",
+              "tr": "Saçını kestiriyorsun.",
+              "note": "yanlış: Du lasst … (lasst = ihr)"
+            },
+            {
+              "de": "Ich habe mein Auto reparieren lassen.",
+              "tr": "Arabamı tamir ettirdim.",
+              "note": "yanlış: Ich habe mein Auto reparieren gelassen."
+            },
+            {
+              "de": "Ich lasse mir die Haare schneiden.",
+              "tr": "Saçımı kestiriyorum.",
+              "note": "yanlış: Ich lasse mich die Haare schneiden."
+            },
+            {
+              "de": "Ich habe das Handy zu Hause gelassen.",
+              "tr": "Telefonu evde bıraktım.",
+              "note": "yanlış: Ich habe das Handy zu Hause verlassen."
+            }
+          ]
+        }
+      ],
+      "summary": [
+        "lassen = yaptırmak, izin vermek, bırakmak; Lass uns … = hadi …",
+        "du lässt, er lässt, ama ihr lasst; mastar sonda, zu yok.",
+        "İşi yapan kişi Akkusativ’de: Ich lasse den Mechaniker das Auto reparieren.",
+        "Akkusativ nesne varsa mir/dir: Ich lasse mir die Haare schneiden.",
+        "Perfekt: ikinci fiil varsa … reparieren lassen, yoksa gelassen; yan cümlede … habe reparieren lassen."
+      ],
+      "check": {
+        "question": "Gestern habe ich mir die Haare schneiden ___. (lassen)",
+        "answer": "lassen",
+        "why": "Cümlede ikinci bir fiil (schneiden) var. Bu yüzden Perfekt’te gelassen değil, mastar lassen kullanılır: habe … schneiden lassen."
+      },
+      "faq": [
+        {
+          "question": "Ich lasse mein Auto zu reparieren neden yanlış?",
+          "answer": "lassen modal fiiller gibi davranır: ardından gelen mastar zu almaz. Doğrusu: Ich lasse mein Auto reparieren."
+        },
+        {
+          "question": "Perfekt’te ne zaman gelassen kullanılır?",
+          "answer": "lassen yanında ikinci bir fiil olmadan kullanılınca: Ich habe den Schirm im Bus gelassen. İkinci fiil varsa mastar lassen gelir: Ich habe den Schirm reparieren lassen. liegen lassen ve stehen lassen gibi birleşimlerde iki biçim de doğrudur."
+        },
+        {
+          "question": "Lass mich … ile Lass uns … arasındaki fark nedir?",
+          "answer": "Lass mich … izin istemektir; işi sadece konuşan kişi yapar: Lass mich bitte ausreden! Lass uns … bir öneridir; işi konuşan ve dinleyen birlikte yapar: Lass uns eine Pause machen! (Hadi mola verelim!)"
+        }
+      ],
+      "related": [
+        "infinitiv-zu",
+        "passiv",
+        "A1/modalverben"
+      ]
+    },
+    {
       "id": "praeteritum-b1",
       "title": "Präteritum – geçmişi bir hikâyeye dönüştür",
       "lead": "A2’de war, hatte ve ging gibi biçimleri tanıdın. Şimdi düzenli, güçlü ve karışık fiilleri aynı anlatı içinde kullanacağız. Hedef yalnızca boşluğa bir fiil yazmak değil; olayları birbirine bağlayan kısa bir geçmiş hikâyesi kurmak.",

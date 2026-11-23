@@ -372,10 +372,10 @@ if(user){
     levels = catalogLevels;
     writingLevels = new Set(writing.flatMap((w) => w.catalogLevels));
     examLevels = new Set(sets.flatMap((s) => s.catalogLevels));
-    // Katalogda olmayan sınav seviyeleri (C1, TestDaF) sadece sınav setleriyle seçilebilir.
-    const extra = [...examLevels].filter((id) => !levels.some((l) => l.id === id)).sort();
+    // Katalogda olmayan sınav seviyeleri (C1, TestDaF) sadece sınav hazırlığıyla seçilebilir: sınav setleri ve Schreiben görevleri.
+    const extra = [...new Set([...examLevels, ...writingLevels])].filter((id) => !levels.some((l) => l.id === id)).sort();
     fillSelect($('aLevel'), [...levels.map((l) => ({ value: l.id, label: `${l.id} · ${localize(l.title, 'tr')}` })),
-      ...extra.map((id) => ({ value: id, label: `${id} · sadece sınav setleri` }))]);
+      ...extra.map((id) => ({ value: id, label: `${id} · sadece sınav hazırlığı` }))]);
     if(editing) await fillFromGroup(editing);
     else $('aTitle').value = defaultTitle();
     renderTopics();

@@ -17,6 +17,9 @@
   /* Article colours for the children's game (css/artikel-evleri.css); the picture tile stays light in both themes. */
   --ba-der:#2c5f9e;--ba-der-bg:#dbe5f1;--ba-die:#a3352c;--ba-die-bg:#f4e0dc;--ba-das:#35703e;--ba-das-bg:#dde9d7;
   --ba-lamp:#e8ae2f;--ba-pic:#fbf8ef;
+  /* Lesson notebook (css/ders-defteri.css): text colours and highlighter colours the teacher can pick. */
+  --ba-note-kirmizi:#a8281e;--ba-note-mavi:#1d5a9e;--ba-note-yesil:#2c6a30;--ba-note-turuncu:#9a4a00;--ba-note-mor:#673b9a;--ba-note-gri:#5f5c53;
+  --ba-mark-sari:#f7e07a;--ba-mark-yesil:#cbe8bd;--ba-mark-mavi:#cde0f5;--ba-mark-pembe:#f5d0de;
   --ba-radius:14px;--ba-radius-small:6px;--ba-gutter:12px;--ba-content:1180px;
   --ba-serif:"STIX Two Text",Georgia,"Times New Roman",serif;
   --ba-sans:"Albert Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
@@ -38,6 +41,8 @@ html[data-theme="dark"]{
   --ba-focus:#ece6d6;
   --ba-der:#93b8e6;--ba-der-bg:#1f2b3a;--ba-die:#f0a89c;--ba-die-bg:#3d2622;--ba-das:#a9d6a0;--ba-das-bg:#22341f;
   --ba-lamp:#f0c55a;--ba-pic:#ece6d6;
+  --ba-note-kirmizi:#f2a196;--ba-note-mavi:#9cc2f0;--ba-note-yesil:#a8d89f;--ba-note-turuncu:#f2b878;--ba-note-mor:#cfb0f0;--ba-note-gri:#bcb6a7;
+  --ba-mark-sari:#5e4f12;--ba-mark-yesil:#2a4a2c;--ba-mark-mavi:#223a57;--ba-mark-pembe:#52263a;
   color-scheme:dark;background:var(--ba-ground)!important;
 }
 html{background:var(--ba-ground)}

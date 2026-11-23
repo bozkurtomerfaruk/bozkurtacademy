@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ba:security -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com/firebasejs/ https://apis.google.com https://accounts.google.com/gsi/client https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; connect-src 'self' https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://content-firebaseappcheck.googleapis.com https://www.googleapis.com https://oauth2.googleapis.com/revoke https://accounts.google.com/gsi/ https://www.google.com/recaptcha/ https://api.web3forms.com https://bozkurtacademy.goatcounter.com https://schreiben-kontrol.bozkurtt-omerfaruk.workers.dev http://127.0.0.1:8080 http://127.0.0.1:9099 http://127.0.0.1:8787; frame-src https://accounts.google.com https://bozkurtacademy-8ab85.firebaseapp.com https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <script src="/js/theme-init.js?v=1"></script>
+  <!-- /ba:security -->
+  <meta name="theme-color" content="#f8f7f3" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Ders notlarım | Bozkurt Academy</title>
+  <meta name="description" content="Bozkurt Academy öğrenci paneli: ders notlarım." />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3">
+  <link rel="preload" href="fonts/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=13" />
+  <link rel="stylesheet" href="css/base.css?v=15" />
+  <link rel="stylesheet" href="css/account.css?v=8" />
+  <link rel="stylesheet" href="js/vendor/quill/quill.core.css?v=1" />
+  <link rel="stylesheet" href="css/ders-defteri.css?v=1" />
+</head>
+<body class="academy-theme account-page note-page">
+  <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
+  <div class="shell">
+    <header class="topbar">
+      <nav class="nav" aria-label="Site menüsü">
+        <a class="brand" href="index.html" aria-label="Bozkurt Academy ana sayfa">
+          <img src="images/logo-mark.svg" width="64" height="64" alt="" class="brand-logo brand-logo-light"><img src="images/logo-mark-dark.svg" width="64" height="64" alt="" class="brand-logo brand-logo-dark">
+          <div><div class="brand-title">Bozkurt Academy</div></div>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteMenu" data-i18n="menuOpen">Menü</button>
+        <div class="nav-links" id="siteMenu">
+          <a class="nav-link" href="index.html" data-i18n="navHome">Ana Sayfa</a>
+          <a class="nav-link" href="/online-almanca-dersi/" data-i18n="navLessons">Almanca Dersleri</a>
+          <a class="nav-link" href="/almanca-gramer/" data-i18n="navGrammar">Gramer</a>
+          <a class="nav-link" href="index.html#exercises" data-i18n="navExercises">Alıştırmalar</a>
+          <a class="nav-link" href="/almanca-sinav-hazirlik/" data-i18n="navExams">Sınav Hazırlığı</a>
+          <a class="nav-link" href="/hakkimda/" data-i18n="navAbout">Hakkımda</a>
+          <a class="nav-link" href="/iletisim/" data-i18n="navContact">İletişim</a>
+          <a class="nav-link nav-account active" href="panel.html" id="navAccount" data-i18n="navPanel">Panelim</a>
+        </div>
+        <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Koyu temaya geç" aria-pressed="false"><svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="currentColor"/></svg><svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="lang" aria-label="Dil seçimi">
+          <button data-lang="tr" class="active">TR</button>
+          <button data-lang="de">DE</button>
+          <button data-lang="en">EN</button>
+        </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" tabindex="-1" class="acc-main">
+      <section class="acc-wrap acc-wide" aria-labelledby="notesHeading">
+        <p class="acc-back"><a class="ba-link" id="notesBackLink" href="panel.html" data-i18n="notesBack">← Panelim</a></p>
+        <p class="acc-status error" id="notConfigured" role="alert" hidden data-i18n="accNotConfigured">Giriş sistemi henüz kurulmadı. Kısa süre sonra açılacak.</p>
+        <p class="acc-status" id="notesLoading" data-i18n="accLoading">Yükleniyor…</p>
+        <p class="acc-status error" id="notesError" role="alert" hidden data-i18n="panelReadError">Bilgiler yüklenemedi. Sayfayı yenileyip tekrar dene.</p>
+        <p class="acc-status" id="notesInactive" hidden data-i18n="notesNotActive">Ders notların hesabın onaylandıktan sonra burada görünür.</p>
+
+        <div id="notesListView" hidden>
+          <header class="acc-head">
+            <p class="acc-eyebrow" data-i18n="panelTitle">Panelim</p>
+            <h1 id="notesHeading" data-i18n="notesTitle">Ders notlarım</h1>
+          </header>
+          <p class="acc-hint" id="notesCount" aria-live="polite"></p>
+          <ul class="note-list" id="notesList"></ul>
+        </div>
+
+        <div id="noteView" hidden>
+          <div class="note-card note-card-read" id="noteCard">
+            <header class="note-head">
+              <div class="note-head-main">
+                <p class="acc-eyebrow"><span data-i18n="notesTitle">Ders notlarım</span> <span class="note-live" id="noteLive" hidden data-i18n="notesLive">Canlı</span></p>
+                <h1 class="note-title" id="noteHeading"></h1>
+                <p class="note-meta" id="noteMeta"></p>
+              </div>
+            </header>
+            <div class="note-view-actions" role="group" aria-label="Yazı boyutu" data-i18n-aria="notesTextSize">
+              <div class="note-zoom">
+                <button class="note-tool" type="button" id="sizeDown" aria-label="Yazıyı küçült" data-i18n-aria="notesSmaller">A−</button>
+                <span class="note-zoom-value" id="sizeLabel" aria-live="polite">100 %</span>
+                <button class="note-tool" type="button" id="sizeUp" aria-label="Yazıyı büyüt" data-i18n-aria="notesBigger">A+</button>
+              </div>
+              <button class="note-tool note-tool-text" type="button" id="printBtn" data-i18n="notesPrint">Yazdır / PDF</button>
+            </div>
+            <p class="acc-status note-banner" id="liveHint" role="status" hidden data-i18n="notesLiveHint">Öğretmenin şu an bu notu yazıyor; sayfa kendiliğinden güncellenir.</p>
+            <p class="acc-status warning note-banner" id="offlineHint" role="status" hidden data-i18n="notesOffline">Bağlantı yok. Bağlantı gelince not kendiliğinden güncellenir.</p>
+            <p class="acc-status error note-banner" id="noteMissing" role="alert" hidden data-i18n="notesNotFound">Bu not bulunamadı. Öğretmenin silmiş olabilir.</p>
+            <div class="note-paper"><div id="viewer" class="note-content note-read"></div></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand"><img src="images/logo-mark.svg" width="64" height="64" alt="" class="footer-logo brand-logo-light"><img src="images/logo-mark-dark.svg" width="64" height="64" alt="" class="footer-logo brand-logo-dark"><div><strong>Bozkurt Academy</strong><br><span data-i18n="footerText">Online Almanca dersleri ve öğrenme materyalleri</span></div></div>
+      <div class="footer-meta">
+        <nav class="footer-links" aria-label="Yasal bilgiler" data-i18n-aria="footerLegal">
+          <a href="privacy.html" data-i18n="footerPrivacy">Gizlilik politikası</a>
+          <a href="/impressum/" data-i18n="footerImprint">Künye (Impressum)</a>
+        </nav>
+        <span>© 2026 Bozkurt Academy</span>
+      </div>
+    </footer>
+  </div>
+  <script src="js/app.js?v=56"></script>
+  <script src="js/theme.js?v=10"></script>
+  <script type="module" src="js/account/i18n-boot.js?v=3"></script>
+  <script src="js/vendor/quill/quill.js?v=1"></script>
+  <script type="module" src="js/account/student-notes.js?v=1"></script>
+</body>
+</html>

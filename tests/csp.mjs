@@ -529,6 +529,25 @@ await resetEmulators();
     await page.goto(LOCAL + p); await page.waitForTimeout(1800);
     clean(log, `öğretmen ${p}`);
   }
+  // Ders defteri: Quill (js/vendor/quill) yazma, biçim, tablo ve yapıştırma sırasında CSP ihlali yok.
+  await page.goto(LOCAL + '/ogretmen-ders.html?ogrenci=ogrenci1');
+  await page.waitForSelector('#noteApp:not([hidden])', { timeout: 15000 });
+  await page.click('#editor .ql-editor');
+  await page.keyboard.type('Hallo');
+  await page.keyboard.press('Shift+Home'); await page.keyboard.press('Control+B');
+  await page.click('#colorMenu summary'); await page.click('#colorList [data-value="mavi"]');
+  await page.keyboard.press('End'); await page.keyboard.press('Enter');
+  await page.click('#tableMenu summary'); await page.click('[data-table="insertTable"]');
+  await page.evaluate(() => {
+    const dt = new DataTransfer();
+    dt.setData('text/html', '<p><span style="color:#ff0000;font-weight:700">Rot</span> <a href="https://example.com">Link</a></p>');
+    dt.setData('text/plain', 'Rot Link');
+    document.querySelector('#editor .ql-editor').dispatchEvent(new ClipboardEvent('paste', { clipboardData: dt, bubbles: true, cancelable: true }));
+  });
+  await page.waitForTimeout(2500);
+  ok((await page.textContent('#saveState')).includes('Kaydedildi'), 'ders defteri (emülatör) kaydedildi');
+  const noteUrl = page.url().replace(/^https?:\/\/[^/]+/, '');
+  clean(log, 'öğretmen ders defteri');
   await page.goto(LOCAL + '/ogretmen-takvim.html');
   await page.waitForSelector('#calApp:not([hidden])', { timeout: 15000 });
   await page.click('#gcalConnect'); await page.waitForTimeout(800);
@@ -543,6 +562,11 @@ await resetEmulators();
   clean(s.log, 'öğrenci paneli');
   await s.page.goto(LOCAL + '/odevlerim.html'); await s.page.waitForTimeout(2500);
   clean(s.log, 'öğrenci Ödevlerim');
+  await s.page.goto(LOCAL + '/ders-notlarim.html'); await s.page.waitForTimeout(2500);
+  clean(s.log, 'öğrenci Ders notlarım');
+  await s.page.goto(LOCAL + '/ders-notlarim.html?not=' + new URL('http://x' + noteUrl).searchParams.get('not')); await s.page.waitForTimeout(2500);
+  ok((await s.page.textContent('#viewer')).includes('Hallo'), 'öğrenci ders notunu görüyor (emülatör)');
+  clean(s.log, 'öğrenci ders notu');
   await s.ctx.close();
 }
 

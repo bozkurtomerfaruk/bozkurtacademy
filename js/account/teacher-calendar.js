@@ -320,6 +320,10 @@ function openLesson(l){
     scheduled && l.meetUrl
       ? h('a', { class: 'btn primary acc-join', href: l.meetUrl, target: '_blank', rel: 'noopener noreferrer' }, 'Görüşmeye katıl')
       : null,
+    // Ders defteri: bu derse bağlı not varsa açılır, yoksa bu derse bağlı yeni sayfa (js/account/teacher-note.js).
+    student && scheduled
+      ? h('a', { class: 'btn ghost acc-join', id: 'lessonNoteLink', href: `ogretmen-ders.html?${new URLSearchParams({ ogrenci: l.uid, ders: l.id })}` }, 'Ders defteri')
+      : null,
     ...parts,
     status,
     h('div', { class: 'acc-actions' }, close)));

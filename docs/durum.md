@@ -2,6 +2,18 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-23 · Ders defteri (dal `claude/elegant-newton-qz9tkr`, PR açık, birleştirilmedi)
+
+- **Ne:** Google Docs yerine dersi siteden işlemek. Öğretmen: öğrenci sayfasında "Derse başla" (bugün takvimde ders varsa o derse bağlanır; varsa "Bugünün notunu aç" + "Yeni sayfa"), takvimdeki ders penceresinde "Ders defteri". Sayfa `ogretmen-ders.html`; başlık varsayılan "23.11.2026 – Ders", tıklayınca düzenlenir. Öğrenci: `ders-notlarim.html` (TR/DE/EN, "du"), panelde "Ders notlarım" (son 3); açık not canlı ve salt okunur, "Canlı" rozeti (son 3 dk).
+- **Veri:** `users/{uid}/lessonNotes/{id}` (title, day, lessonId, content = Quill Delta JSON, bytes, rev, createdAt, updatedAt). Kurallar: yalnızca öğretmen yazar/siler; onaylı öğrenci kendi notlarını okur. Öğrenci silinince notlar da silinir (`SUBCOLLECTIONS`).
+- **Editör:** Quill 2.0.3 (BSD-3) depoda (`js/vendor/quill/`), CDN yok. Kalın, italik, altı çizili, üstü çizili, 6 yazı rengi, 4 vurgu (sınıf olarak, koyu temada ayrı tonlar), başlık/alt başlık, madde/numaralı liste (Tab girinti), tablo (satır/sütun ekle-sil), http/https bağlantı (yeni sekme, noopener noreferrer), geri al/yinele, Google Docs kısayolları. A−/A+ (yalnız görünüm, `baNotBoyut`), tam ekran, yazdır/PDF.
+- **Kayıt:** 1,5 sn sessizlikten sonra; durmadan yazarken en geç 10 sn; iki kayıt arası en az 2 sn; sayfadan çıkarken ve başlık değişince hemen. Kaydedilene kadar yedek öğretmenin tarayıcısında (`baDersDefteri:…`); bağlantı yokken kapanan sekmenin değişiklikleri tekrar açınca "Geri yükle" ile kaydedilir. İkinci sekme salt okunur ("Burada düzenle"); başka cihazda değişmişse üzerine yazmadan sorar.
+- **Kota hesabı (Spark, günde 20.000 yazma / 50.000 okuma):** testte 25 sn kesintisiz yazma = 3 yazma (≈ 400/saat). Normal ders (duraklamalı) ≈ 150–250 yazma/saat; üst sınır 1.800/saat (2 sn kuralı). Öğrencinin canlı görünümü yazma başına ≈ 1 okuma. Günde 5 ders en kötü durumda 9.000 yazma.
+- **Boyut:** 700 KB'ta "Not büyüyor", 900 KB'ta "Yeni sayfa aç", 1.000.000 baytın üstünde sunucuya yazılmaz (yerel yedekte kalır).
+- **Güvenlik:** İçerik hem yapıştırırken hem öğrencide gösterirken izin listesinden geçer (`js/account/note-format.js`); HTML, resim, stil, javascript:/data: bağlantıları atılır. Yapıştırılan `onerror=` CSP'ye de takılıyor.
+- **Google Docs'tan yapıştırma (sınandı):** basit tablolar, kalın, listeler, başlıklar, https bağlantıları doğru geliyor; renkler en yakın palet rengine çevriliyor. Sınırlar: hücrede birden çok paragraf → aynı hücrede " / " ile birleşiyor; birleşik hücre (colspan) birleşik kalmıyor (metin ilk hücrede, yanına boş hücre); resimler alınmıyor.
+- **Gizlilik:** `privacy.html` (TR/DE/EN), `docs/privacy-policy.md`, `docs/veli-onay-formu.md` güncellendi.
+- **Testler:** `npm run test:ders-defteri` (17 birim + 133 tarayıcı kontrolü, 390/1440 açık/koyu), `npm test` (6 yeni kural testi), `npm run test:csp`, `npm run test:odev`, `tests/takvim-baglanti.mjs` geçti.
 ## 2026-11-23 · telc B2 Schreiben: ilana göre bilgi isteme ya da şikâyet e-postası (dal `claude/nifty-gates-d34ddv`)
 
 - **Kaynak:** resmî telc Deutsch B2 Übungstest 1 (gözden geçirilmiş baskı 2019, 5023-B00-010201) ve telc "Tipps zur Prüfungsvorbereitung" B2 (puanlama tablosu). Schriftlicher Ausdruck tek Teil, 30 dk, 45 puan (%15). İki görevden biri: Aufgabe A Bitte um Informationen, Aufgabe B Beschwerde; ilana göre yarı resmî e-posta; 4 Leitpunkt: 3'ü ya da 2'si + kendi konu; Betreff/Anrede/Einleitung/Schluss; en az 150 kelime. Ölçütler I–III, A 5 / B 3 / C 1 / D 0, ×3.

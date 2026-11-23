@@ -4,6 +4,8 @@ import { TEACHER_EMAIL, TEACHER_UID } from './config.js';
 import { registerStrings, t, lang } from './i18n.js';
 import { feedbackView } from './writing-feedback.js?v=1';
 import { normalizeAssignment } from './assignments.js?v=1';
+import { isLive, loadNotes } from './lesson-notes.js?v=1';
+import { defaultTitle } from './note-format.js?v=1';
 import {
   $, accountState, clearHint, currentUser, exerciseNames, formatDateTime, h,
   loadAssignments, loadProfile, loadResources, loadResults, loadWritings, safeLink, scoreText, sendVerification, setHint, setStatus,
@@ -18,6 +20,7 @@ let assignments = [];
 let lessons = [];
 let resources = [];
 let writings = [];
+let notes = [];
 let currentAuthUser = null;
 
 const STATES = {
@@ -283,6 +286,20 @@ function renderAssignments(){
     : [h('p', { class: 'acc-empty' }, t('panelAssignEmpty'))]));
 }
 
+// Ders notlarım: son 3 not (en yeni gün önce); öğretmen şu an yazıyorsa "Canlı". Hepsi ders-notlarim.html'de.
+function renderNotes(){
+  const locale = { tr: 'tr-TR', de: 'de-DE', en: 'en-GB' }[lang()] || 'tr-TR';
+  const day = (key) => {
+    const m = /^(\d{4})-(\d\d)-(\d\d)$/.exec(key || '');
+    return m ? new Intl.DateTimeFormat(locale, { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC' }).format(new Date(Date.UTC(+m[1], +m[2] - 1, +m[3]))) : '';
+  };
+  $('notesList').replaceChildren(...(notes.length
+    ? [h('ul', { class: 'acc-resource-list' }, notes.slice(0, 3).map((n) => h('li', {}, h('div', {},
+      h('a', { class: 'ba-link', href: `ders-notlarim.html?not=${encodeURIComponent(n.id)}` }, n.title || defaultTitle(n.day)),
+      h('span', { class: 'acc-sub' }, day(n.day), isLive(n) ? ` · ${t('notesLive')}` : '')))))]
+    : [h('p', { class: 'acc-empty' }, t('notesEmpty'))]));
+}
+
 function renderResources(){
   $('resourceList').replaceChildren(...(resources.length
     ? [h('ul', { class: 'acc-resource-list' }, resources.map((r) =>
@@ -303,9 +320,10 @@ async function render(){
   renderAccount();
   renderState();
   const active = accountState(profile) === 'active';
-  for(const id of ['lessonSection', 'assignSection', 'resourceSection', 'writingSection']) $(id).hidden = !active;
+  for(const id of ['lessonSection', 'notesSection', 'assignSection', 'resourceSection', 'writingSection']) $(id).hidden = !active;
   if(active){
     renderLessons();
+    renderNotes();
     renderAssignments();
     renderResources();
     await renderWritings();
@@ -340,6 +358,7 @@ async function start(){
         loadResults(user.uid), loadAssignments(user.uid), loadResources(user.uid), loadLessons(user.uid),
         loadWritings(user.uid).catch((error) => { console.warn(error); return []; })
       ]);
+      notes = await loadNotes(user.uid).catch((error) => { console.warn(error); return []; });
       // "Görüşmeye katıl" düğmesinin durumu zamanla değişir.
       setInterval(() => { if(!document.hidden) renderLessons(); }, 30000);
     }

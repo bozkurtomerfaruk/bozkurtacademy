@@ -62,6 +62,21 @@ Guests who never sign in load nothing from Google, unless they send a placement-
 - For under-16s the teacher can switch off adding the parent to invitations (`inviteParent`).
 - Deleting a student also deletes their Calendar events (future ones with a cancellation notice).
 
+## Lesson notebook (Ders defteri)
+
+- The teacher writes notes during one-to-one lessons on `ogretmen-ders.html`; they are stored per student
+  (`users/{uid}/lessonNotes`): title, lesson day, optional link to a calendar lesson, content (rich text as a
+  Quill Delta: bold, italic, underline, strikethrough, a fixed colour/highlight palette, headings, lists,
+  tables, http/https links; no images, no embedded content), size, revision number and timestamps.
+- Only the teacher writes and deletes notes (`firestore.rules`); an approved student reads only their own,
+  live while the teacher writes (`ders-notlarim.html`). Content is filtered against an allow-list before it is
+  shown (`js/account/note-format.js`).
+- Until a change is saved on the server, a copy is kept in the teacher's own browser (localStorage
+  `baDersDefteri:<uid>:<noteId>`) and removed after saving. Students' chosen text size: `baNotBoyut`.
+- Deleted with the other student data (12 months after the last lesson). Mentioned in `privacy.html`
+  (TR/DE/EN, section 5) and in the parent consent form.
+- Editor: Quill 2 (BSD-3-Clause), served from this site (`js/vendor/quill/`); no third-party request.
+
 ## Homework and resources (stage 2)
 
 - Homework is stored per student (`users/{uid}/assignments`): title (default: the date it was given),

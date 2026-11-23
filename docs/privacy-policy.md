@@ -62,9 +62,11 @@ Guests who never sign in load nothing from Google, unless they send a placement-
 
 ## Homework and resources (stage 2)
 
-- Homework is stored per student (`users/{uid}/assignments`): title, description, due date, chosen
-  site exercises, an optional Google Docs link from the teacher, and the student's own fields
-  (done, done time, an optional Google Docs/Drive link). Students can change only their own fields.
+- Homework is stored per student (`users/{uid}/assignments`): title (default: the date it was given),
+  description/note, optional due date, links added by the teacher (any http/https page, e.g. Google Docs,
+  YouTube, Drive), chosen site exercises or whole topics, and the student's own fields (done, done time,
+  an optional Google Docs/Drive link). Students can change only their own fields. Links open the external
+  site in a new tab; nothing is embedded. Shown on `ogretmen-odevler.html` (teacher) and `odevlerim.html` (student).
 - Resources (`users/{uid}/resources`): title, link and short note added by the teacher.
 - Links to Google Docs open Google's site in a new tab; Google only receives data if the student
   opens them. No Google Drive API is used.

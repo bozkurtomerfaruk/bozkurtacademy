@@ -11,6 +11,7 @@ import {
   collection,
   collectionGroup,
   deleteDoc,
+  deleteField,
   doc,
   getDoc,
   getDocs,
@@ -525,6 +526,65 @@ describe('Ödevler ve kaynaklar', () => {
     await assertSucceeds(getDocs(collectionGroup(db, 'assignments')));
     await assertFails(getDocs(collectionGroup(ayse(), 'assignments')));
     await assertSucceeds(deleteDoc(doc(db, 'users/ayse/assignments/a1')));
+  });
+
+  // Yeni biçim (schemaVersion 2, ogretmen-odevler.html): bağlantı listesi, konunun tamamı, isteğe bağlı teslim tarihi.
+  const assignmentV2 = () => ({
+    title: '23.11.2026', description: 'Videoyu izle, PDF\'i çöz.', dueAt: null, schemaVersion: 2, groupId: 'g2',
+    links: [
+      { url: 'https://www.youtube.com/watch?v=abc', title: 'Perfekt', kind: 'youtube', copy: false },
+      { url: 'http://example.com/arbeitsblatt', title: '', kind: 'web', copy: false },
+      { url: 'https://docs.google.com/document/d/abc/copy', title: '', kind: 'docs', copy: true }
+    ],
+    topics: [{ level: 'A2', topic: 'perfekt' }],
+    exercises: [{ level: 'A1', topic: 'sinav', exercise: 'goethe-a1-lesen-1-set-1' }],
+    createdAt: Timestamp.now(), done: false, doneAt: null, studentDocUrl: ''
+  });
+  const refV2 = (db, uid = 'ayse') => doc(db, `users/${uid}/assignments/b1`);
+
+  test('yeni biçim: teslim tarihi olmayan ödevi öğrenci okur, tamamlar ve geri alır', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await seed('users/ayse/assignments/b1', assignmentV2());
+    await assertSucceeds(getDoc(refV2(ayse())));
+    await assertSucceeds(updateDoc(refV2(ayse()), { done: true, doneAt: serverTimestamp(), studentDocUrl: 'https://docs.google.com/document/d/x/edit' }));
+    await assertSucceeds(updateDoc(refV2(ayse()), { done: false, doneAt: null }));
+  });
+
+  test('yeni biçim: öğrenci bağlantıları, konuları, notu ve sürümü değiştiremez', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await seed('users/ayse/assignments/b1', assignmentV2());
+    await assertFails(updateDoc(refV2(ayse()), { links: [] }));
+    await assertFails(updateDoc(refV2(ayse()), { links: [{ url: 'https://evil.example/', title: '', kind: 'web', copy: false }] }));
+    await assertFails(updateDoc(refV2(ayse()), { topics: [] }));
+    await assertFails(updateDoc(refV2(ayse()), { description: 'x' }));
+    await assertFails(updateDoc(refV2(ayse()), { dueAt: Timestamp.now() }));
+    await assertFails(updateDoc(refV2(ayse()), { schemaVersion: 3 }));
+    await assertFails(updateDoc(refV2(ayse()), { done: true, doneAt: serverTimestamp(), links: [] }));
+  });
+
+  test('yeni biçim: başka öğrencinin ödevini okuyamaz; öğrenci ödev ekleyemez', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await seed('users/can', seededMinor('active', consentGiven));
+    await seed('users/can/assignments/b1', assignmentV2());
+    await assertFails(getDoc(refV2(ayse(), 'can')));
+    await assertFails(setDoc(doc(ayse(), 'users/ayse/assignments/b2'), assignmentV2()));
+  });
+
+  test('öğretmen ödevi düzenler (eski biçimden yeni biçime) ve aynı gruba öğrenci ekler', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await seed('users/can', seededMinor('active', consentGiven));
+    await seed('users/ayse/assignments/a1', { ...assignment(), done: true, doneAt: Timestamp.now() });
+    const db = teacherDb();
+    const v2 = assignmentV2();
+    const batch = writeBatch(db);
+    batch.update(doc(db, 'users/ayse/assignments/a1'), {
+      title: v2.title, description: v2.description, dueAt: null, links: v2.links, topics: v2.topics, exercises: v2.exercises,
+      schemaVersion: 2, docUrl: deleteField(), copyPerStudent: deleteField(), updatedAt: serverTimestamp()
+    });
+    batch.set(doc(db, 'users/can/assignments/n1'), { ...v2, groupId: 'g1' });
+    await assertSucceeds(batch.commit());
+    const after = (await getDoc(doc(ayse(), 'users/ayse/assignments/a1'))).data();
+    if(after.docUrl !== undefined || after.done !== true || after.links.length !== 3) throw new Error('düzenleme öğrencinin işaretini korumalı, docUrl silinmeli');
   });
 });
 

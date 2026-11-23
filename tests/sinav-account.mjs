@@ -119,21 +119,22 @@ await teacher.locator('#aExerciseList label', { hasText: 'Lesen · Teil 2 · Ein
 await teacher.selectOption('#aTopic', 'schreiben'); await teacher.waitForTimeout(800);
 ok(!(await teacher.locator('#aExerciseList').textContent()).includes('Beim Arzt') && (await teacher.locator('#aExerciseList').textContent()).includes('Zusammen kochen'), '"Schreiben" konusunda sadece yazma görevleri (form yok)');
 await teacher.fill('#aTitle', 'Sınav: Lesen A1');
-await teacher.click('#aSubmit'); await teacher.waitForURL(/ogretmen\.html/, { timeout: 15000 }).catch(() => {});
+await teacher.click('#aSubmit'); await teacher.waitForURL(/ogretmen-odevler\.html/, { timeout: 15000 }).catch(() => {});
 const a = await listDocs('users/ogrenci1/assignments');
 ok(a.length === 1 && JSON.stringify(a[0].fields.exercises).includes('goethe-a1-lesen-1-set-1') && JSON.stringify(a[0].fields.exercises).includes('"sinav"'), 'ödev kaydedildi (konu sinav)');
 
 // 4. Öğrenci ödevdeki seti çözer → "çözüldü".
 const { ctx: pctx, page: panel } = await newPage(390);
 await signIn(panel, 'ogrenci@example.com', 'ogrenci123', 'student');
-await panel.goto(`${BASE}/panel.html`); await panel.waitForSelector('.acc-assign-exercises', { timeout: 15000 }).catch(() => {});
-const link = panel.locator('.acc-assign-exercises a[href="index.html#exams/goethe/a1/lesen/2/set-1"]');
+await panel.goto(`${BASE}/odevlerim.html`); await panel.waitForSelector('.odev-ex-list', { timeout: 15000 }).catch(() => {});
+const link = panel.locator('.odev-ex-list a[href="index.html#exams/goethe/a1/lesen/2/set-1"]');
 ok(await link.count() === 1, 'ödevdeki bağlantı sınav setini açıyor');
-ok((await panel.locator('.acc-assign-exercises li').filter({ hasText: 'Grüße aus dem Urlaub' }).textContent()).includes('Henüz çözülmedi'), 'ödev verilmeden önceki sonuç sayılmıyor: "Henüz çözülmedi"');
+ok((await panel.locator('.odev-ex-list li').filter({ hasText: 'Grüße aus dem Urlaub' }).textContent()).includes('Henüz çözülmedi'), 'ödev verilmeden önceki sonuç sayılmıyor: "Henüz çözülmedi"');
 await link.click(); await panel.waitForTimeout(1500);
 await panel.click('[data-task-check]'); await panel.waitForTimeout(1500);
-await panel.goto(`${BASE}/panel.html`); await panel.waitForSelector('.acc-assign-exercises', { timeout: 15000 }).catch(() => {});
-ok((await panel.locator('.acc-assign-exercises li').filter({ hasText: 'Einkaufen in der Stadt' }).textContent()).includes('Çözüldü'), 'çözülen set ödevde "Çözüldü"');
+await panel.goto(`${BASE}/odevlerim.html`); await panel.waitForSelector('.odev-ex-list', { timeout: 15000 }).catch(() => {});
+ok((await panel.locator('.odev-ex-list li').filter({ hasText: 'Einkaufen in der Stadt' }).textContent()).includes('Çözüldü'), 'çözülen set ödevde "Çözüldü"');
+await panel.goto(`${BASE}/panel.html`); await panel.waitForSelector('#historyList table, #historyList li', { timeout: 15000 }).catch(() => {});
 const hist = await panel.textContent('#historyList');
 ok(hist.includes('Goethe A1 · Lesen · Teil 1 · Grüße aus dem Urlaub') && hist.includes('Sınav hazırlığı') && hist.includes('Schreiben · Teil 1 · Beim Arzt'), 'öğrenci panelindeki sonuç listesinde sınav setleri');
 ok(await panel.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth) <= 0, '390: panelde taşma yok');

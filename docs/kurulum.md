@@ -104,7 +104,10 @@ curl -X POST -H 'Authorization: Bearer owner' -H 'Content-Type: application/json
 | `js/account/session.js` | `index.html`: menüdeki Giriş/Panelim bağlantısı, alıştırma sonucu kaydı |
 | `js/account/login.js`, `register.js`, `student.js` | Giriş, kayıt, öğrenci paneli |
 | `js/account/teacher.js`, `teacher-student.js`, `teacher-common.js` | Öğretmen paneli (öğrenciler, ödevler), öğrenci detayı (ödevler, kaynaklar) |
-| `js/account/teacher-assign.js` | `ogretmen-odev.html`: yeni ödev |
+| `js/account/teacher-assign.js` | `ogretmen-odev.html`: yeni ödev ve ödevi düzenleme (`?duzenle=<groupId>`) |
+| `js/account/teacher-assignments.js` | `ogretmen-odevler.html`: öğrenci seçimiyle ödev listesi, tarih başlıkları, sil |
+| `js/account/student-assignments.js` | `odevlerim.html`: öğrencinin ödevleri (TR/DE/EN) |
+| `js/account/assignments.js` | Ödevlerin ortak veri biçimi (eski `docUrl` ödevlerini okuma), bağlantı denetimi, görünüm parçaları |
 | `js/account/teacher-calendar.js` | `ogretmen-takvim.html`: haftalık/aylık takvim, yeni ders, taşıma, iptal, tekrar dene |
 | `js/account/lessons.js` | Dersler: önce Firestore, sonra Google Calendar; başarısız işlemler ve yeniden deneme |
 | `js/account/calendar.js` | Google Identity Services (token client) ve Calendar API v3 |

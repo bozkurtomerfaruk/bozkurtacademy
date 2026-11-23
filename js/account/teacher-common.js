@@ -4,6 +4,7 @@ import { TEACHER_UID } from './config.js';
 import { $, BERLIN, clearHint, consentGiven, currentUser, formatDate, h, setHint, toDate } from './common.js';
 import * as cal from './calendar.js';
 import { deleteCalendarEvents, loadStudentLessons, needsCalendar } from './lessons.js';
+import { normalizeAssignment, SCHEMA_VERSION } from './assignments.js?v=1';
 
 export const fmtDate = (value) => formatDate(value, { lang: 'tr', timeZone: BERLIN });
 
@@ -131,13 +132,13 @@ export function recordConsent(uid, { date, method }){
 }
 
 // Ödevler: her öğrenciye ayrı bir kopya yazılır (users/{uid}/assignments), aynı groupId ile.
-// Böylece bir öğrenci aynı ödevi başka kimin aldığını göremez.
-export async function createAssignments(studentIds, data){
-  const groupId = crypto.randomUUID();
+// Böylece bir öğrenci aynı ödevi başka kimin aldığını göremez. Veri biçimi: js/account/assignments.js.
+export async function createAssignments(studentIds, data, groupId = crypto.randomUUID()){
   const batch = fs.writeBatch(db);
   for(const uid of studentIds){
     batch.set(fs.doc(fs.collection(db, 'users', uid, 'assignments')), {
       ...data,
+      schemaVersion: SCHEMA_VERSION,
       groupId,
       createdAt: fs.serverTimestamp(),
       done: false,
@@ -149,18 +150,50 @@ export async function createAssignments(studentIds, data){
   return groupId;
 }
 
-// Bütün öğrencilerin ödevleri, groupId'ye göre gruplanmış.
+// Ödevi düzenleme: bütün kopyalarda içerik güncellenir; öğrencinin işaretleri (done, doneAt, studentDocUrl) ve
+// verildiği gün (createdAt) değişmez. Eski biçimin docUrl/copyPerStudent alanları links'e taşınıp silinir.
+// Yeni seçilen öğrencilere aynı groupId ve aynı "verildiği gün" ile kopya eklenir.
+export async function updateAssignmentGroup(group, data, addStudentIds = []){
+  const batch = fs.writeBatch(db);
+  for(const c of group.copies){
+    batch.update(c.ref, { ...data, schemaVersion: SCHEMA_VERSION, docUrl: fs.deleteField(), copyPerStudent: fs.deleteField(), updatedAt: fs.serverTimestamp() });
+  }
+  for(const uid of addStudentIds){
+    batch.set(fs.doc(fs.collection(db, 'users', uid, 'assignments')), {
+      ...data,
+      schemaVersion: SCHEMA_VERSION,
+      groupId: group.groupId,
+      createdAt: group.createdAt ? fs.Timestamp.fromDate(group.createdAt) : fs.serverTimestamp(),
+      done: false,
+      doneAt: null,
+      studentDocUrl: ''
+    });
+  }
+  await batch.commit();
+}
+
+// Bütün öğrencilerin ödevleri, groupId'ye göre gruplanmış (eski ödevler de; bkz. normalizeAssignment).
+// Grubun içeriği en son güncellenen kopyadan alınır.
 export async function loadAssignmentGroups(){
   const snap = await fs.getDocs(fs.collectionGroup(db, 'assignments'));
   const groups = new Map();
   for(const d of snap.docs){
-    const a = d.data();
+    const a = normalizeAssignment({ id: d.id, ...d.data() });
     const key = a.groupId || d.id;
-    const group = groups.get(key) || { groupId: key, title: a.title, dueAt: toDate(a.dueAt), docUrl: a.docUrl, exercises: a.exercises || [], copies: [] };
-    group.copies.push({ ref: d.ref, uid: d.ref.parent.parent?.id, done: a.done === true, doneAt: toDate(a.doneAt), studentDocUrl: a.studentDocUrl || '' });
+    const group = groups.get(key) || { groupId: key, copies: [] };
+    const stamp = toDate(a.updatedAt) || a.created || new Date(0);
+    if(!group.data || stamp > group.stamp){
+      group.data = a;
+      group.stamp = stamp;
+    }
+    group.createdAt = group.createdAt && a.created ? (a.created < group.createdAt ? a.created : group.createdAt) : (group.createdAt || a.created);
+    group.copies.push({ ref: d.ref, id: d.id, uid: d.ref.parent.parent?.id, done: a.done === true, doneAt: toDate(a.doneAt), studentDocUrl: a.studentDocUrl || '', assignment: a });
     groups.set(key, group);
   }
-  return [...groups.values()].sort((a, b) => (b.dueAt || 0) - (a.dueAt || 0));
+  return [...groups.values()].map((g) => ({
+    ...g,
+    title: g.data.title, dueAt: g.data.due, links: g.data.links, topics: g.data.topics, exercises: g.data.exercises, description: g.data.description
+  })).sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
 }
 
 export async function deleteAssignmentCopies(refs){

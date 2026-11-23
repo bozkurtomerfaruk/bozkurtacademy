@@ -120,7 +120,7 @@ ok(await teacher.locator('#aTopic option[value="seviye-sonu"]').count() === 1, '
 await teacher.selectOption('#aTopic', 'seviye-sonu'); await teacher.waitForTimeout(500);
 await teacher.locator('#aExerciseList label', { hasText: 'A1 seviye sonu sınavı' }).locator('input').check();
 await teacher.fill('#aTitle', 'A1 seviye sonu sınavı');
-await teacher.click('#aSubmit'); await teacher.waitForURL(/ogretmen\.html/, { timeout: 15000 }).catch(() => {});
+await teacher.click('#aSubmit'); await teacher.waitForURL(/ogretmen-odevler\.html/, { timeout: 15000 }).catch(() => {});
 const assignments = await listDocs('users/ogrenci1/assignments');
 ok(assignments.length === 1 && JSON.stringify(assignments[0].fields.exercises).includes('seviye-sonu'), 'ödev kaydedildi');
 await tctx.close();
@@ -128,7 +128,7 @@ await tctx.close();
 // 4. Öğrenci panelinde ödev bağlantısı sınavı açıyor.
 const { ctx: s2, page: panel } = await newPage(390);
 await signIn(panel, 'ogrenci@example.com', 'ogrenci123', 'student');
-await panel.goto(`${BASE}/panel.html`); await panel.waitForTimeout(3000);
+await panel.goto(`${BASE}/odevlerim.html`); await panel.waitForTimeout(3000);
 const link = panel.locator('a[href="index.html#seviye-sonu/A1"]');
 ok(await link.count() >= 1, 'öğrenci panelinde ödev bağlantısı #seviye-sonu/A1');
 await panel.screenshot({ path: path.join(shotDir, 'panel-odev-390.png'), fullPage: true });

@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="css/style.css?v=13" />
   <link rel="stylesheet" href="css/base.css?v=14" />
   <link rel="stylesheet" href="css/account.css?v=8" />
+  <link rel="stylesheet" href="css/odevler.css?v=1" />
 </head>
 <body class="academy-theme account-page teacher-page">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
@@ -50,7 +51,7 @@
 
     <main id="main" tabindex="-1" class="acc-main">
       <section class="acc-wrap acc-wide" aria-labelledby="assignTitle">
-        <p class="acc-back"><a class="ba-link" href="ogretmen.html#odevler">← Ödevler</a></p>
+        <p class="acc-back"><a class="ba-link" id="backLink" href="ogretmen-odevler.html">← Ödevler</a></p>
         <header class="acc-head">
           <p class="acc-eyebrow">Öğretmen paneli</p>
           <h1 id="assignTitle">Yeni ödev</h1>
@@ -58,7 +59,6 @@
         <p class="acc-status error" id="notConfigured" role="alert" hidden>Giriş sistemi henüz kurulmadı. Firebase yapılandırmasını js/account/config.js dosyasına ekle (docs/kurulum.md).</p>
         <p class="acc-status" id="assignLoading">Yükleniyor…</p>
         <p class="acc-status error" id="assignError" role="alert" hidden></p>
-
         <form id="assignForm" class="acc-form acc-layout" novalidate hidden>
           <div class="acc-primary acc-stack">
             <section class="ba-card acc-card" aria-labelledby="partTask">
@@ -66,25 +66,54 @@
                 <h2 id="partTask">Ödev</h2>
                 <div class="field">
                   <label for="aTitle">Başlık</label>
-                  <input id="aTitle" maxlength="120" required autocomplete="off">
+                  <input id="aTitle" maxlength="120" required autocomplete="off" aria-describedby="aTitleHint">
+                  <small class="acc-hint" id="aTitleHint">Varsayılan: bugünün tarihi. İstersen değiştir.</small>
                 </div>
                 <div class="field">
-                  <label for="aDescription">Açıklama</label>
-                  <textarea id="aDescription" rows="5" maxlength="4000" aria-describedby="aDescriptionHint"></textarea>
+                  <label for="aDescription">Açıklama / not (isteğe bağlı)</label>
+                  <textarea id="aDescription" rows="4" maxlength="4000" aria-describedby="aDescriptionHint"></textarea>
                   <small class="acc-hint" id="aDescriptionHint">Öğrenci bu metni olduğu gibi görür; satır sonları korunur.</small>
                 </div>
                 <div class="field">
-                  <label for="aDue">Teslim tarihi</label>
-                  <input id="aDue" type="datetime-local" required aria-describedby="aDueHint">
-                  <small class="acc-hint" id="aDueHint">Berlin saatiyle. Öğrenci kendi saat diliminde görür.</small>
+                  <label for="aDue">Teslim tarihi (isteğe bağlı)</label>
+                  <div class="odev-due">
+                    <input id="aDue" type="datetime-local" aria-describedby="aDueHint">
+                    <button class="acc-text-button" type="button" id="aDueWeek">1 hafta sonra</button>
+                    <button class="acc-text-button" type="button" id="aDueClear">Teslim tarihi yok</button>
+                  </div>
+                  <small class="acc-hint" id="aDueHint">Berlin saatiyle. Boş bırakırsan ödevin teslim tarihi olmaz.</small>
                 </div>
               </div>
             </section>
-
+            <section class="ba-card acc-card" aria-labelledby="partLinks">
+              <div class="ba-card-body acc-form">
+                <h2 id="partLinks">Bağlantılar</h2>
+                <p class="acc-hint">Her türlü bağlantı: Google Docs, YouTube, Drive dosyası, web sayfası … Sadece http ve https.</p>
+                <ul class="odev-link-list" id="aLinks" aria-live="polite"></ul>
+                <div class="odev-link-add">
+                  <div class="field">
+                    <label for="aLinkUrl">Bağlantı</label>
+                    <input id="aLinkUrl" type="url" inputmode="url" placeholder="https://…" autocomplete="off" aria-describedby="aLinkPreview">
+                  </div>
+                  <div class="field">
+                    <label for="aLinkTitle">Ad (isteğe bağlı)</label>
+                    <input id="aLinkTitle" maxlength="120" autocomplete="off" placeholder="ör. Perfekt videosu">
+                  </div>
+                </div>
+                <label class="acc-check" id="aLinkCopyRow" hidden>
+                  <input type="checkbox" id="aLinkCopy">
+                  <span>Her öğrenciye kopya: Google Docs/Sheets/Slides linki <code>/copy</code> biçimine çevrilir, her öğrenci kendi kopyasını oluşturur.</span>
+                </label>
+                <p class="acc-hint" id="aLinkPreview" hidden></p>
+                <div class="acc-actions">
+                  <button class="btn ghost" type="button" id="aLinkAdd">+ Bağlantı ekle</button>
+                </div>
+              </div>
+            </section>
             <section class="ba-card acc-card" aria-labelledby="partExercises">
               <div class="ba-card-body acc-form">
                 <h2 id="partExercises">Alıştırmalar</h2>
-                <p class="acc-hint">Sitedeki alıştırmalardan seç. Öğrenci ödevde her alıştırmanın bağlantısını ve çözüp çözmediğini görür.</p>
+                <p class="acc-hint">Sitedeki alıştırmalardan seç. Öğrenci ödevde her paketin bağlantısını ve çözüp çözmediğini (puanıyla) görür.</p>
                 <div class="acc-pick">
                   <div class="field">
                     <label for="aLevel">Seviye</label>
@@ -95,6 +124,10 @@
                     <select id="aTopic"></select>
                   </div>
                 </div>
+                <label class="acc-check odev-whole" id="aWholeRow" hidden>
+                  <input type="checkbox" id="aWhole">
+                  <span><strong>Bu konunun tamamını ekle</strong> <span id="aWholeCount"></span><br><small class="acc-hint">Konuya sonradan eklenen paketler de öğrencinin ödevinde görünür.</small></span>
+                </label>
                 <fieldset class="acc-checklist" id="aExerciseList">
                   <legend class="visually-hidden">Bu konunun alıştırmaları</legend>
                 </fieldset>
@@ -104,27 +137,11 @@
                 </div>
               </div>
             </section>
-
-            <section class="ba-card acc-card" aria-labelledby="partDoc">
-              <div class="ba-card-body acc-form">
-                <h2 id="partDoc">Google Docs (isteğe bağlı)</h2>
-                <div class="field">
-                  <label for="aDoc">Doküman linki</label>
-                  <input id="aDoc" type="url" inputmode="url" placeholder="https://docs.google.com/document/d/…" autocomplete="off">
-                </div>
-                <label class="acc-check">
-                  <input type="checkbox" id="aCopy">
-                  <span>Her öğrenciye kopya: link <code>/copy</code> biçimine çevrilir, her öğrenci kendi kopyasını oluşturur.</span>
-                </label>
-                <p class="acc-hint" id="aDocPreview" hidden></p>
-              </div>
-            </section>
           </div>
-
           <aside class="acc-side">
             <section class="ba-card acc-card acc-sticky" aria-labelledby="partStudents">
               <div class="ba-card-body acc-form">
-                <h2 id="partStudents">Öğrenciler</h2>
+                <h2 id="partStudents">Öğrenciler <span class="acc-count" id="aStudentCount">0</span></h2>
                 <label class="acc-check acc-check-all">
                   <input type="checkbox" id="aAll">
                   <span>Hepsini seç</span>
@@ -155,6 +172,6 @@
   </div>
   <script src="js/app.js?v=54"></script>
   <script src="js/theme.js?v=10"></script>
-  <script type="module" src="js/account/teacher-assign.js?v=4"></script>
+  <script type="module" src="js/account/teacher-assign.js?v=5"></script>
 </body>
 </html>

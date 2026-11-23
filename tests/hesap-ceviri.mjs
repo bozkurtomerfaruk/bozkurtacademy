@@ -13,6 +13,8 @@ const cases = [
   ['de', '/giris.html', '#loginTitle', 'Anmelden'],
   ['de', '/kayit.html', '#regTitle', 'Registrieren'],
   ['de', '/panel.html', '#panelLoading', 'Wird geladen…'],
+  ['de', '/odevlerim.html', '#odevTitle', 'Meine Hausaufgaben'],
+  ['en', '/odevlerim.html', '#odevTitle', 'My homework'],
   ['en', '/giris.html', '#loginTitle', 'Sign in'],
   ['en', '/kayit.html', '#regTitle', 'Register'],
   ['tr', '/giris.html', '#loginTitle', 'Giriş yap'],

@@ -17,7 +17,8 @@
     "alfabe-ses": "node scripts/generate-alfabe-audio.mjs",
     "test:alfabe-account": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/alfabe-account.mjs\"",
     "test:schreiben-ai": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/schreiben-ai-account.mjs\"",
-    "test:sinav": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/sinav-account.mjs\""
+    "test:sinav": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/sinav-account.mjs\"",
+    "test:odev": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/odev-account.mjs\""
   },
   "devDependencies": {
     "@firebase/rules-unit-testing": "5.0.2",

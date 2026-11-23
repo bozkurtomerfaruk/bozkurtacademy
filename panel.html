@@ -91,13 +91,11 @@
             </section>
 
             <section class="acc-section" id="assignSection" hidden aria-labelledby="assignTitle">
-              <h2 id="assignTitle" data-i18n="panelAssignTitle">Aktif ödevler</h2>
+              <div class="acc-section-head">
+                <h2 id="assignTitle" data-i18n="odevTitle">Ödevlerim</h2>
+                <a class="btn ghost acc-row-action" href="odevlerim.html" data-i18n="odevPanelLink">Bütün ödevlerim</a>
+              </div>
               <div id="assignList"></div>
-            </section>
-
-            <section class="acc-section" id="doneSection" hidden aria-labelledby="doneTitle">
-              <h2 id="doneTitle" data-i18n="panelDoneTitle">Tamamlanan ödevler</h2>
-              <div id="doneList"></div>
             </section>
 
             <section class="acc-section" id="resourceSection" hidden aria-labelledby="resourceTitle">
@@ -152,6 +150,6 @@
   <script src="js/app.js?v=54"></script>
   <script src="js/theme.js?v=10"></script>
   <script type="module" src="js/account/i18n-boot.js?v=3"></script>
-  <script type="module" src="js/account/student.js?v=5"></script>
+  <script type="module" src="js/account/student.js?v=6"></script>
 </body>
 </html>

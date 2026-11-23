@@ -157,6 +157,7 @@ ok(toDeniz?.htmlContent.includes('Perfekt &lt;b&gt;tekrar&lt;/b&gt;'), 'HTML\'de
 ok(toMert?.subject === 'Yeni ödev: Perfekt <b>tekrar</b>' && toVeli?.textContent.includes('öğrencinize yeni bir ödev verildi'), '16 yaş altı: öğrenci ve veli (Türkçe, veliye ayrı metin)');
 ok(!mails.some((m) => m.to[0].email === 'kapali@example.com'), 'bildirimi kapalı öğrenciye e-posta yok');
 ok(mails.every((m) => m.sender.email === 'info@bozkurtacademy.com' && m.replyTo.email === 'info@bozkurtacademy.com'), 'gönderen ve yanıt adresi info@bozkurtacademy.com');
+ok(mails.every((m) => m.to.every((t) => t.contactPixelTrackingConsent === false)), 'her alıcıda açılma/tıklama takibi kapalı (contactPixelTrackingConsent: false)');
 ok(mails.every((m) => !JSON.stringify(m).includes('GİZLİ NOT') && !JSON.stringify(m).includes('gizli-baglanti') && !JSON.stringify(m).includes('Deniz') && !JSON.stringify(m).includes('Mert')),
   'e-postada ödevin notu, bağlantıları ve öğrencinin adı yok');
 ok(mails.every((m) => /https:\/\/bozkurtacademy\.com\/odevlerim\.html#odev-[A-Za-z0-9]+/.test(m.textContent)), 'e-postada "Ödevlerim" bağlantısı');

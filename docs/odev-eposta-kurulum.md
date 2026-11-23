@@ -5,6 +5,7 @@
 - **Ücret:** Yok. Brevo ücretsiz planı (günde 300 e-posta; site günde en fazla 100 gönderir), Cloudflare Workers ücretsiz planı, Firebase Spark. Kart gerekmez.
 - **E-postada ne var:** Ödevin başlığı, varsa teslim tarihi (Berlin saati) ve "Ödevlerim" sayfasının bağlantısı. Ödevin içeriği, notlar, bağlantılar ya da öğrencinin adı yok. Öğrencinin panelde seçtiği dilde (TR/DE/EN; bilinmiyorsa TR). Yanıt adresi info@.
 - **Güvenlik:** Tarayıcı Worker'a sadece ödev kopyalarının kimliklerini gönderir. Worker öğretmenin oturum belirtecini Firebase'e sordurur (`TEACHER_UID` değilse reddeder), e-posta adresini, dili ve başlığı Firestore'dan **öğretmenin kendi belirteciyle** okur. Yeni bir hesap ya da yetki yok.
+- **Takip yok:** Her alıcıda `contactPixelTrackingConsent: false`; açılma/tıklama takibi yapılmaz (2.3'teki Brevo ayarıyla).
 - **Tekrar yok:** "Yeni ödev" her ödev kopyası için bir kez gider (`mailNewAt`). "Ödev güncellendi" ödev başına günde en fazla bir kez gider ve aynı gün "yeni ödev" gittiyse gitmez (`mailUpdateAt`).
 
 Kod: `worker/schreiben-kontrol.js` ("Ödev e-postası" bölümü), `js/account/homework-mail.js`. Testler: `npm run test:worker`, `npm run test:odev-eposta`.
@@ -22,9 +23,10 @@ Kod: `worker/schreiben-kontrol.js` ("Ödev e-postası" bölümü), `js/account/h
 
 1. **Senders, Domains & Dedicated IPs** → **Senders**: `info@bozkurtacademy.com` listede ve doğrulanmış (yeşil) olmalı. Gmail yanıtları için Brevo SMTP kurulurken eklendiyse zaten vardır. Yoksa **Add a sender** → ad "Bozkurt Academy", e-posta info@ → gelen doğrulama e-postasındaki bağlantıya tıkla (e-posta Gmail'ine yönlendirilir).
 2. **Domains** sekmesinde `bozkurtacademy.com` "Authenticated" görünmüyorsa Brevo'nun gösterdiği DNS kayıtlarını (DKIM, gerekirse Brevo kodu) Cloudflare DNS'e ekle; e-postaların spam'e düşmemesi için önerilir.
-3. **Açılma ve tıklama takibi:** Brevo transactional e-postalarda açılma (görünmez piksel) ve tıklama (bağlantı yönlendirme) takibi yapabilir. Kapatmak için **Transactional** (ya da **Campaigns → Transactional**) → **Settings** bölümünde "Tracking" / "Open tracking" / "Click tracking" seçeneğini ara ve kapat.
-   - **Bunu buradan doğrulayamadım:** Geliştirme ortamından Brevo'nun yardım sayfalarına erişilemedi. Ücretsiz planda bu ayarın olup olmadığından emin değilim; API'de mesaj başına takibi kapatan bir seçenek de kodda kullanılmıyor.
-   - **Ayarı bulamazsan ya da ücretsiz planda kapatılamıyorsa:** Takip açık kalır. Yani Brevo, e-postanın açıldığını ve "Ödevlerim" bağlantısına tıklandığını kaydedebilir; bağlantı Brevo üzerinden yönlendirilebilir. Bu durumu bana yaz; gizlilik metnine bunu açıkça ekleriz (şu anki metin takipten söz etmiyor).
+3. **Açılma ve tıklama takibi (kapalı kalmalı):** Brevo'nun ücretsiz planında takibi genel olarak kapatan bir ayar yok (sadece Enterprise'da talep üzerine). Onun yerine Worker her alıcı (öğrenci ve veli) için `contactPixelTrackingConsent: false` gönderiyor; bu izin "hayır" olan alıcıda Brevo açılma ve tıklama takibi yapmıyor (Brevo yardım sayfası: help.brevo.com/hc/en-us/articles/37113920427922). Bunun çalışması için:
+   - Brevo → **Settings** → **Contacts** → **Per-contact pixel tracking consent** = **Yes**
+   - Aynı yerde **Track contacts whose consent is unknown** = **No**
+   - Kaydet.
 
 ### 3. Cloudflare: Worker kodu ve değişkenleri
 
@@ -34,7 +36,7 @@ Kod: `worker/schreiben-kontrol.js` ("Ödev e-postası" bölümü), `js/account/h
 
 | Ad | Tür | Değer |
 |---|---|---|
-| `TEACHER_UID` | Text | `IoTwBV5HjRUaoLoj0SCI0VVGkfk2` (öğretmen hesabının UID'i; `firestore.rules` → `teacherUid()` ile aynı) |
+| `TEACHER_UID` | Text | `IoTwBV5HjRUaoLoj0SCI0VVGkfk2` (öğretmen hesabının UID'i; `firestore.rules` → `teacherUid()` ve `js/account/config.js` → `TEACHER_UID` ile aynı değer) |
 | `BREVO_API_KEY` | **Secret** | 1. adımdaki Brevo API anahtarı |
 | `MAIL_DAILY_LIMIT` | Text | `100` |
 

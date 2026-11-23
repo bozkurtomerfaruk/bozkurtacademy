@@ -98,7 +98,7 @@ describe('Ödev e-postası (/odev-bildirim)', () => {
     assert.deepEqual(body.results.map((x) => x.status), ['sent']);
     assert.equal(mails.length, 1);
     const m = mails[0];
-    assert.deepEqual(m.to, [{ email: 'ayse@example.com' }]);
+    assert.deepEqual(m.to, [{ email: 'ayse@example.com', contactPixelTrackingConsent: false }], 'alıcıda takip izni yok');
     assert.equal(m.sender.email, 'info@bozkurtacademy.com');
     assert.equal(m.replyTo.email, 'info@bozkurtacademy.com');
     assert.equal(m.headers['api-key'], 'brevo-anahtar');
@@ -146,6 +146,7 @@ describe('Ödev e-postası (/odev-bildirim)', () => {
     assert.equal(body.results[0].status, 'sent');
     assert.equal(body.results[0].recipients, 2);
     assert.deepEqual(mails.map((m) => m.to[0].email), ['can@example.com', 'veli@example.com']);
+    assert.ok(mails.every((m) => m.to.length === 1 && m.to[0].contactPixelTrackingConsent === false), 'öğrenci ve velide açılma/tıklama takibi kapalı');
     assert.equal(mails[0].subject, 'Yeni ödev: 23.11.2026');
     assert.ok(mails[0].textContent.includes('sana yeni bir ödev verildi') && !mails[0].textContent.includes('Teslim'), 'teslim tarihi yoksa satır yok');
     assert.ok(mails[1].textContent.includes('öğrencinize yeni bir ödev verildi'));

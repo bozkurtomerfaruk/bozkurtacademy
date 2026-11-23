@@ -7,7 +7,7 @@ import { normalizeAssignment } from './assignments.js?v=1';
 import {
   $, accountState, clearHint, currentUser, exerciseNames, formatDateTime, h,
   loadAssignments, loadProfile, loadResources, loadResults, loadWritings, safeLink, scoreText, sendVerification, setHint, setStatus,
-  summarizeResults, syncEmailVerified, toDate, unseenFeedback, writingTitle, writingUrl
+  summarizeResults, syncEmailVerified, syncLang, toDate, unseenFeedback, writingTitle, writingUrl
 } from './common.js';
 
 registerStrings();
@@ -333,6 +333,7 @@ async function start(){
     setHint('student');
     currentAuthUser = user;
     const verified = await syncEmailVerified(user, profile).catch((error) => { console.warn(error); return false; });
+    syncLang(user.uid, profile, lang());
     $('verifyCard').hidden = verified;
     if(accountState(profile) === 'active'){
       [results, assignments, resources, lessons, writings] = await Promise.all([
@@ -371,7 +372,11 @@ $('verifyResend').addEventListener('click', async () => {
   }
 });
 
-window.addEventListener('ba:languagechange', () => { if(profile) render(); });
+window.addEventListener('ba:languagechange', () => {
+  if(!profile) return;
+  syncLang(currentAuthUser?.uid, profile, lang());
+  render();
+});
 
 if(!configured){
   $('notConfigured').hidden = false;

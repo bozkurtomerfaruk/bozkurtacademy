@@ -9,6 +9,7 @@ import {
 import { fs } from './firebase.js';
 import { defaultTitle, KIND_LABELS, linkKind, linkLabel, MAX_LINKS, topicTitles, validLinkUrl, wholeTopicAllowed } from './assignments.js?v=1';
 import * as drive from './drive.js?v=1';
+import { mailConfigured, notifyHomework, rememberResult } from './homework-mail.js?v=1';
 import { createAssignments, isEnabled, listStudents, loadAssignmentGroups, requireTeacher, updateAssignmentGroup } from './teacher-common.js';
 
 const chosen = []; // [{ level, topic, exercise, label }]
@@ -240,7 +241,7 @@ function renderStudents(students, preselect){
   box.replaceChildren(legend, ...(enabled.length
     ? enabled.map((s) => h('label', { class: 'acc-check' },
       h('input', { type: 'checkbox', name: 'student', value: s.id, checked: already.has(s.id) || s.id === preselect, disabled: already.has(s.id) }),
-      h('span', {}, s.name, h('span', { class: 'acc-sub' }, already.has(s.id) ? 'Bu ödev verildi' : s.email))))
+      h('span', {}, s.name, h('span', { class: 'acc-sub' }, [already.has(s.id) ? 'Bu ödev verildi' : s.email, s.homeworkMail === false ? 'ödev e-postası kapalı' : null].filter(Boolean).join(' · ')))))
     : [h('p', { class: 'acc-hint' }, 'Hesabı açık öğrenci yok.')]));
   $('aAll').disabled = !enabled.length;
   updateStudentCount();
@@ -299,8 +300,29 @@ async function submit(event){
   button.disabled = true;
   setStatus($('aStatus'), '', 'Kaydediliyor…');
   try{
-    if(editing) await updateAssignmentGroup(editing, form.data, form.students);
-    else await createAssignments(form.students, form.data);
+    let fresh = [];
+    if(editing) fresh = await updateAssignmentGroup(editing, form.data, form.students);
+    else fresh = (await createAssignments(form.students, form.data)).copies;
+    // E-posta: ödev kaydedildi; e-posta gitmese de ödev kalır (sonuç ödev listesinde gösterilir).
+    if(mailConfigured){
+      const wantNew = $('aNotify').checked && fresh.length;
+      const wantUpdate = editing && $('aNotifyUpdate').checked;
+      if(wantNew || wantUpdate){
+        setStatus($('aStatus'), '', 'Kaydedildi. E-postalar gönderiliyor…');
+        const result = { ok: true, results: [], sent: 0, count: 0, limit: 0 };
+        for(const [kind, items] of [['new', wantNew ? fresh : []], ['update', wantUpdate ? editing.copies.map((c) => ({ uid: c.uid, id: c.id })) : []]]){
+          if(!items.length) continue;
+          const r = await notifyHomework(kind, items);
+          result.ok &&= r.ok;
+          result.results.push(...r.results);
+          result.sent += r.sent;
+          result.count = r.count || result.count;
+          result.limit = r.limit || result.limit;
+          if(r.error) result.error = r.error;
+        }
+        rememberResult(result);
+      }
+    }
     const preselect = new URLSearchParams(location.search).get('ogrenci');
     const target = preselect || (form.students.length === 1 && !editing ? form.students[0] : '');
     location.href = `ogretmen-odevler.html?${target ? `ogrenci=${encodeURIComponent(target)}&` : ''}durum=${editing ? 'guncellendi' : 'verildi'}`;
@@ -328,6 +350,8 @@ async function fillFromGroup(group){
   document.title = 'Ödevi düzenle | Bozkurt Academy';
   $('assignTitle').textContent = 'Ödevi düzenle';
   $('aSubmit').textContent = 'Kaydet';
+  $('aNotifyLabel').textContent = 'Yeni eklediğin öğrencilere e-posta gönder';
+  $('aNotifyUpdateRow').hidden = false;
   $('aStudentsHint').textContent = 'Ödevi almış öğrenciler işaretli ve değiştirilemez; yeni öğrenci ekleyebilirsin. Bir öğrenciden kaldırmak için ödev listesini kullan.';
   $('backLink').href = 'ogretmen-odevler.html';
 }
@@ -391,6 +415,7 @@ if(user){
       updateStudentCount();
     });
     $('aStudents').addEventListener('change', updateStudentCount);
+    if(!mailConfigured) $('aNotifyBox').hidden = true;
     $('assignForm').addEventListener('submit', submit);
     $('assignLoading').hidden = true;
     $('assignForm').hidden = false;

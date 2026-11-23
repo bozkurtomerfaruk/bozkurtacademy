@@ -6,13 +6,14 @@ import { TEACHER_UID } from './config.js';
 import { registerStrings, t, lang } from './i18n.js';
 import {
   $, accountState, clearHint, currentUser, exerciseUrl, formatDateTime, h, loadAssignments, loadProfile, loadResults,
-  scoreText, setStatus, validStudentDocUrl
+  scoreText, setStatus, syncLang, validStudentDocUrl
 } from './common.js';
 import { assignmentBody, expandExercises, groupByDay, normalizeAssignment, solvedCount, withResults } from './assignments.js?v=1';
 
 registerStrings();
 
 let uid = null;
+let profile = null;
 let assignments = [];
 let results = [];
 const opened = new Set(); // kullanıcının açıp kapattığı ödevler yeniden çizimde korunur
@@ -125,7 +126,7 @@ async function start(){
     return;
   }
   try{
-    const profile = await loadProfile(user.uid);
+    profile = await loadProfile(user.uid);
     if(!profile){
       location.replace('kayit.html');
       return;
@@ -136,6 +137,7 @@ async function start(){
       return;
     }
     uid = user.uid;
+    syncLang(uid, profile, lang());
     const [list, res] = await Promise.all([loadAssignments(uid), loadResults(uid)]);
     assignments = list.map(normalizeAssignment);
     results = res;
@@ -149,7 +151,11 @@ async function start(){
   }
 }
 
-window.addEventListener('ba:languagechange', () => { if(uid) render(); });
+window.addEventListener('ba:languagechange', () => {
+  if(!uid) return;
+  syncLang(uid, profile, lang());
+  render();
+});
 
 if(!configured){
   $('notConfigured').hidden = false;

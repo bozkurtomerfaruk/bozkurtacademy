@@ -65,7 +65,7 @@ function accept(accessToken, expiresInSec){
   saveSession();
 }
 
-function loadGis(){
+export function loadGis(){
   if(window.google?.accounts?.oauth2) return Promise.resolve();
   return new Promise((resolve, reject) => {
     const script = document.createElement('script');

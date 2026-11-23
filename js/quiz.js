@@ -83,7 +83,7 @@
   function loadVocab(){
     if(vocab.status === 'idle'){
       vocab.status = 'loading';
-      vocab.promise = fetch('data/sozluk.json?v=2')
+      vocab.promise = fetch('data/sozluk.json?v=3')
         .then(response => { if(!response.ok) throw new Error(response.status); return response.json(); })
         .then(data => { vocab.words = data.words || {}; vocab.status = 'ready'; })
         .catch(() => { vocab.status = 'failed'; });

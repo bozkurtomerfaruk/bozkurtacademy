@@ -1,0 +1,171 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b2",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Carsharing statt eigenes Auto",
+  "minutes": 30,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-formal",
+  "subjectLine": true,
+  "examChoice": true,
+  "situation": "In der Zeitung lesen Sie folgende Anzeige:",
+  "ad": {
+    "title": "StadtMobil – Carsharing für Ihre Stadt",
+    "text": "Ein Auto, wann immer Sie es brauchen – ohne Werkstatt, Versicherung und Parkplatzsuche. Über 400 Fahrzeuge in Leipzig und Halle, vom Kleinwagen bis zum Transporter, rund um die Uhr per App buchbar.\n• keine Grundgebühr im ersten Jahr\n• ab 2,90 Euro pro Stunde, 100 Kilometer inklusive\n• Familienwagen mit Kindersitzen auf Anfrage\nNeukunden erhalten 30 Euro Fahrguthaben!",
+    "contact": "service@stadtmobil-carsharing.de"
+  },
+  "context": "Sie haben Ihr Auto verkauft und brauchen nur noch selten eines, zum Beispiel für Ausflüge mit Ihrer Familie. Sie überlegen, Kundin oder Kunde bei StadtMobil zu werden.",
+  "task": "Bitten Sie in einer E-Mail an StadtMobil um mehr Informationen. Behandeln Sie darin entweder a) drei der folgenden Punkte oder b) zwei der folgenden Punkte und einen weiteren Aspekt Ihrer Wahl.",
+  "points": [
+    "Beschreiben Sie, wofür und wie oft Sie ein Auto brauchen.",
+    "Erkundigen Sie sich, ob man mit den Autos auch ins Ausland fahren darf.",
+    "Fragen Sie, was bei einem Unfall oder Schaden passiert.",
+    "Erkundigen Sie sich nach den Kosten für längere Fahrten."
+  ],
+  "choosePoints": 3,
+  "ownAspect": true,
+  "instructions": "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der Punkte, einen passenden Betreff, eine passende Anrede, Einleitung und einen passenden Schluss. Schreiben Sie mindestens 150 Wörter.",
+  "words": {
+    "target": 180,
+    "min": 150,
+    "max": 220,
+    "atLeast": true
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "İki yoldan birini seçtim: 4 maddeden 3'ü ya da 2 madde + duruma uygun kendi konum; her birine en az iki cümle yazdım (tek cümle yetmez)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "En az 150 kelime yazdım; 150–220 arası iyi. Daha uzun yazmak ek puan getirmez, zamanı kontrolde kullan."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Kendi konumu seçtiysem, durumla ilgili olmalı (ör. eşimin de aynı hesapla sürmesi); tamamen başka bir konu (ör. araba satın almak) sayılmaz."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Betreff satırı, hitap (Sehr geehrte Damen und Herren,), kısa bir giriş (neden yazıyorum) ve uygun bir kapanış (Mit freundlichen Grüßen + adım) var."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Maddeleri ayrı ayrı sıralama; bağlaçlarla birbirine bağla: Zunächst …, Darüber hinaus …, Was … betrifft, …, Hinzu kommt, dass …, Schließlich … Bağlantısız sıralanan maddeler Kommunikative Gestaltung'da B'yi engeller."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kohärenz: Paragrafları bağladım: Vor Kurzem …, Deshalb …, Außerdem frage ich mich, …, Schließlich würde ich gern wissen, …"
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Firmaya baştan sona Sie ile yazdım (Sie, Ihnen, Ihr); du ya da Hallo yok."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Dolaylı soru: Ich frage mich, was bei einem Unfall passiert. / … ob mein Mann mit demselben Konto fahren darf. (fiil sonda)"
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Konjunktiv II ile kibar istek: Ein Familienwagen wäre für uns ideal. Wir würden uns die Autos teilen."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Betreff, Anrede und Schluss",
+      "items": [
+        {
+          "de": "Betreff: Anfrage zu … / Betreff: Beschwerde über …",
+          "tr": "Konu: … hakkında soru / Konu: … hakkında şikâyet"
+        },
+        {
+          "de": "Sehr geehrte Damen und Herren,",
+          "tr": "Sayın yetkili,"
+        },
+        {
+          "de": "Mit freundlichen Grüßen",
+          "tr": "Saygılarımla"
+        }
+      ]
+    },
+    {
+      "group": "Um Informationen bitten",
+      "items": [
+        {
+          "de": "Mit großem Interesse habe ich Ihre Anzeige gelesen.",
+          "tr": "İlanınızı büyük ilgiyle okudum."
+        },
+        {
+          "de": "Könnten Sie mir bitte mitteilen, ob …?",
+          "tr": "Bana … olup olmadığını bildirebilir misiniz?"
+        },
+        {
+          "de": "Darüber hinaus würde mich interessieren, wie …",
+          "tr": "Ayrıca … nasıl olduğunu merak ediyorum"
+        },
+        {
+          "de": "Über eine baldige Antwort würde ich mich freuen.",
+          "tr": "Yakında cevap verirseniz sevinirim."
+        }
+      ]
+    },
+    {
+      "group": "Bedarf beschreiben",
+      "items": [
+        {
+          "de": "Ein Auto brauche ich höchstens zwei- oder dreimal im Monat.",
+          "tr": "Arabaya ayda en fazla iki üç kez ihtiyacım var."
+        },
+        {
+          "de": "Für uns wäre … ideal.",
+          "tr": "Bizim için … ideal olurdu"
+        },
+        {
+          "de": "Wie früh muss man … reservieren?",
+          "tr": "… ne kadar önceden ayırtılmalı?"
+        }
+      ]
+    },
+    {
+      "group": "Kohärenz",
+      "items": [
+        {
+          "de": "Zunächst … / Darüber hinaus … / Schließlich …",
+          "tr": "Önce … / Bunun yanı sıra … / Son olarak …"
+        },
+        {
+          "de": "Was … betrifft, …",
+          "tr": "… konusuna gelince, …"
+        },
+        {
+          "de": "Hinzu kommt, dass …",
+          "tr": "Buna bir de … ekleniyor"
+        },
+        {
+          "de": "Aus diesem Grund … / deshalb",
+          "tr": "Bu nedenle …"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Betreff: Fragen zur Anmeldung bei StadtMobil\n\nSehr geehrte Damen und Herren,\n\nich habe Ihre Anzeige in der Zeitung gelesen und interessiere mich sehr für Ihr Carsharing-Angebot. Vor Kurzem habe ich mein Auto verkauft, weil es die meiste Zeit nur auf der Straße stand. Bevor ich mich anmelde, möchte ich jedoch einige Punkte klären.\n\nEin Auto brauche ich höchstens zwei- oder dreimal im Monat, meistens am Wochenende, wenn wir mit unseren beiden Kindern Ausflüge in die Umgebung machen. Deshalb wäre ein Familienwagen mit zwei Kindersitzen für uns ideal. Wie früh muss man ein solches Auto reservieren?\n\nAußerdem frage ich mich, was bei einem Unfall oder einem kleinen Schaden passiert. Muss ich in diesem Fall eine Selbstbeteiligung zahlen, und wenn ja, wie hoch ist sie? Diese Information ist mir wichtig, weil ich schon lange nicht mehr Auto gefahren bin.\n\nSchließlich würde ich gern wissen, ob mein Mann mit demselben Konto fahren darf oder ob er sich separat anmelden muss. Wir würden uns die Autos nämlich teilen.\n\nFür Ihre Antwort bedanke ich mich im Voraus.\n\nMit freundlichen Grüßen\nKatarzyna Nowak",
+    "covers": [
+      "Beschreiben Sie, wofür und wie oft Sie ein Auto brauchen.",
+      "Fragen Sie, was bei einem Unfall oder Schaden passiert."
+    ],
+    "own": "Ob der Ehemann mit demselben Konto fahren darf.",
+    "skipped": [
+      "Erkundigen Sie sich, ob man mit den Autos auch ins Ausland fahren darf.",
+      "Erkundigen Sie sich nach den Kosten für längere Fahrten."
+    ],
+    "notes": [
+      "İkinci yol: 2 madde + kendi konu. Yazılan maddeler: ne için ve ne sıklıkla araba gerektiği, kaza ya da hasarda ne olduğu. Kendi konu: eşin aynı hesapla sürüp süremeyeceği (durumla ilgili, bu yüzden geçerli).",
+      "„Erkundigen Sie sich, ob man mit den Autos auch ins Ausland fahren darf.“ ve „Erkundigen Sie sich nach den Kosten für längere Fahrten.“ atlandı; ikinci yolda iki madde atlanır, bu doğrudur.",
+      "Her madde en az iki cümle: Ein Auto brauche ich … Deshalb wäre … Wie früh …? Bağlaçlar: Deshalb, Außerdem frage ich mich, Schließlich würde ich gern wissen."
+    ]
+  }
+}

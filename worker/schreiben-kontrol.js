@@ -289,7 +289,9 @@ async function taskInfo(env, w) {
 // Seviyeye özel notlar genel talimata (PROMPT) değil, sadece o sınavın kullanıcı mesajına eklenir: talimata eklenen her
 // seviye satırı öbür sınavların sonuçlarını da değiştirdi (A2 ve B2 satırları DTZ'de bir fiil yeri hatasını kaçırttı, 15 ve 18 Kasım).
 export const LEVEL_NOTES = {
-  'Goethe B2 ·': 'Seviye notu (B2): Konjunktiv II, Passiv, Relativsatz, Nominalisierung ve bağlaç (einerseits … andererseits, darüber hinaus, trotzdem, je … desto) hatalarını da işaretle. Teil 2\'de amire ya da iş arkadaşına baştan sona Sie.'
+  'Goethe B2 ·': 'Seviye notu (B2): Konjunktiv II, Passiv, Relativsatz, Nominalisierung ve bağlaç (einerseits … andererseits, darüber hinaus, trotzdem, je … desto) hatalarını da işaretle. Teil 2\'de amire ya da iş arkadaşına baştan sona Sie.',
+  // telc Deutsch B2 (tek Teil): ilana göre firmaya bilgi isteme ya da şikâyet e-postası, Betreff satırıyla, en az 150 kelime.
+  'telc B2 ·': 'Seviye notu (B2): Konjunktiv II, Passiv, Relativsatz, Nominalisierung ve bağlaç (einerseits … andererseits, darüber hinaus, trotzdem, obwohl) hatalarını da işaretle. Firmaya baştan sona Sie; "Betreff:" satırı doğrudur. Metin kısa ya da uzun olabilir, uzunluğu ve hangi maddelerin yazıldığını değerlendirme.'
 };
 const levelNote = (name) => Object.entries(LEVEL_NOTES).find(([prefix]) => String(name).startsWith(prefix))?.[1];
 export const userMessage = (task, text) => {

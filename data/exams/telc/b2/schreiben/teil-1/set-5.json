@@ -1,0 +1,171 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "b2",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Reparaturservice ohne Reparatur",
+  "minutes": 30,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-formal",
+  "subjectLine": true,
+  "examChoice": true,
+  "situation": "In der Zeitung lesen Sie folgende Anzeige:",
+  "ad": {
+    "title": "FixFix – Reparaturservice für Haushaltsgeräte",
+    "text": "Waschmaschine kaputt? Kühlschrank streikt? Unsere Technikerinnen und Techniker sind schnell bei Ihnen!\n• Termin innerhalb von 24 Stunden – garantiert\n• feste Anfahrtspauschale: 39 Euro\n• Reparatur meistens schon beim ersten Besuch\n• 12 Monate Garantie auf jede Reparatur\nRufen Sie an oder buchen Sie online.",
+    "contact": "kundenservice@fixfix-reparatur.de"
+  },
+  "context": "Ihre Waschmaschine war kaputt und Sie haben bei FixFix online einen Termin gebucht. Leider lief dabei vieles schief, und trotzdem haben Sie eine Rechnung über die Anfahrtspauschale bekommen.",
+  "task": "Schreiben Sie eine Beschwerde an die Firma FixFix. Behandeln Sie darin entweder a) drei der folgenden Punkte oder b) zwei der folgenden Punkte und einen weiteren Aspekt Ihrer Wahl.",
+  "points": [
+    "Beschreiben Sie, was nach Ihrer Buchung passiert ist.",
+    "Erläutern Sie, welche Nachteile Ihnen dadurch entstanden sind.",
+    "Erklären Sie, was Sie jetzt von der Firma erwarten.",
+    "Fragen Sie, wer die Kosten übernimmt, falls das Gerät nicht mehr repariert werden kann."
+  ],
+  "choosePoints": 3,
+  "ownAspect": true,
+  "instructions": "Überlegen Sie sich vor dem Schreiben eine passende Reihenfolge der Punkte, einen passenden Betreff, eine passende Anrede, Einleitung und einen passenden Schluss. Schreiben Sie mindestens 150 Wörter.",
+  "words": {
+    "target": 180,
+    "min": 150,
+    "max": 220,
+    "atLeast": true
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "İki yoldan birini seçtim: 4 maddeden 3'ü ya da 2 madde + duruma uygun kendi konum; her birine en az iki cümle yazdım (tek cümle yetmez)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "En az 150 kelime yazdım; 150–220 arası iyi. Daha uzun yazmak ek puan getirmez, zamanı kontrolde kullan."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Kendi konumu seçtiysem şikâyetle ilgili olmalı (ör. hiç ulaşılamayan müşteri hattı); başka bir firmayı ya da başka bir cihazı anlatmak konu dışı sayılır."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Betreff satırı, hitap (Sehr geehrte Damen und Herren,), kısa bir giriş (neden yazıyorum) ve uygun bir kapanış (Mit freundlichen Grüßen + adım) var."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Maddeleri ayrı ayrı sıralama; bağlaçlarla birbirine bağla: Zunächst …, Darüber hinaus …, Was … betrifft, …, Hinzu kommt, dass …, Schließlich … Bağlantısız sıralanan maddeler Kommunikative Gestaltung'da B'yi engeller."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kohärenz: Olayları zaman sırasıyla bağladım: Obwohl …, Auch beim zweiten Termin …, Erst beim dritten Mal …, Hinzu kommt, dass …, Ich erwarte daher, …"
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Firmaya baştan sona Sie ile yazdım (Sie, Ihnen, Ihr); du ya da Hallo yok."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "obwohl + fiil sonda: Obwohl Sie einen Termin innerhalb von 24 Stunden garantieren, ist niemand gekommen."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Passiv: dass die Waschmaschine kostenlos repariert wird; Zeitangabe ile: innerhalb einer Woche (Genitiv) / innerhalb von 24 Stunden."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Betreff, Anrede und Schluss",
+      "items": [
+        {
+          "de": "Betreff: Anfrage zu … / Betreff: Beschwerde über …",
+          "tr": "Konu: … hakkında soru / Konu: … hakkında şikâyet"
+        },
+        {
+          "de": "Sehr geehrte Damen und Herren,",
+          "tr": "Sayın yetkili,"
+        },
+        {
+          "de": "Mit freundlichen Grüßen",
+          "tr": "Saygılarımla"
+        }
+      ]
+    },
+    {
+      "group": "Sich beschweren",
+      "items": [
+        {
+          "de": "Leider bin ich mit … äußerst unzufrieden.",
+          "tr": "Maalesef … konusunda hiç memnun değilim."
+        },
+        {
+          "de": "Obwohl Sie in Ihrer Anzeige … versprechen, …",
+          "tr": "İlanınızda … vaat etmenize rağmen …"
+        },
+        {
+          "de": "Ich erwarte daher, dass Sie …",
+          "tr": "Bu nedenle sizden … bekliyorum"
+        },
+        {
+          "de": "Ich bitte Sie, mir … zurückzuerstatten.",
+          "tr": "Bana … iade etmenizi rica ediyorum"
+        }
+      ]
+    },
+    {
+      "group": "Ablauf schildern",
+      "items": [
+        {
+          "de": "Am vereinbarten Tag ist leider niemand gekommen.",
+          "tr": "Kararlaştırılan gün maalesef kimse gelmedi."
+        },
+        {
+          "de": "Erst beim dritten Mal erschien ein Techniker.",
+          "tr": "Ancak üçüncü seferde bir teknisyen geldi."
+        },
+        {
+          "de": "Ich hing mehr als 20 Minuten in der Warteschleife.",
+          "tr": "20 dakikadan fazla bekleme hattında kaldım."
+        }
+      ]
+    },
+    {
+      "group": "Kohärenz",
+      "items": [
+        {
+          "de": "Zunächst … / Darüber hinaus … / Schließlich …",
+          "tr": "Önce … / Bunun yanı sıra … / Son olarak …"
+        },
+        {
+          "de": "Was … betrifft, …",
+          "tr": "… konusuna gelince, …"
+        },
+        {
+          "de": "Hinzu kommt, dass …",
+          "tr": "Buna bir de … ekleniyor"
+        },
+        {
+          "de": "Aus diesem Grund … / deshalb",
+          "tr": "Bu nedenle …"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Betreff: Beschwerde über Ihren Reparaturservice, Auftrag 48213\n\nSehr geehrte Damen und Herren,\n\nam 2. November habe ich bei Ihnen online einen Reparaturtermin für meine Waschmaschine gebucht. Leider bin ich mit Ihrem Service äußerst unzufrieden, weshalb ich mich heute an Sie wende.\n\nObwohl Sie in Ihrer Anzeige einen Termin innerhalb von 24 Stunden garantieren, ist am vereinbarten Tag niemand gekommen. Auch beim zweiten Termin habe ich den ganzen Vormittag vergeblich gewartet. Erst beim dritten Mal erschien ein Techniker, der das Gerät jedoch nicht reparieren konnte, weil ihm ein Ersatzteil fehlte.\n\nHinzu kommt, dass Ihre Hotline kaum erreichbar ist. Jedes Mal hing ich mehr als 20 Minuten in der Warteschleife, und niemand konnte mir sagen, wann das Ersatzteil geliefert wird. Auf meine E-Mail vom 5. November habe ich ebenfalls keine Antwort erhalten.\n\nIch erwarte daher, dass die Waschmaschine innerhalb einer Woche kostenlos repariert wird. Außerdem bitte ich Sie, mir die Anfahrtspauschale von 39 Euro zurückzuzahlen, da bisher keine Reparatur stattgefunden hat.\n\nIch hoffe auf eine schnelle Lösung.\n\nMit freundlichen Grüßen\nAna Ferreira",
+    "covers": [
+      "Beschreiben Sie, was nach Ihrer Buchung passiert ist.",
+      "Erklären Sie, was Sie jetzt von der Firma erwarten."
+    ],
+    "own": "Die Hotline ist kaum erreichbar.",
+    "skipped": [
+      "Erläutern Sie, welche Nachteile Ihnen dadurch entstanden sind.",
+      "Fragen Sie, wer die Kosten übernimmt, falls das Gerät nicht mehr repariert werden kann."
+    ],
+    "notes": [
+      "İkinci yol: 2 madde + kendi konu. Yazılan maddeler: rezervasyondan sonra olanlar, firmadan beklenenler. Kendi konu: müşteri hattına neredeyse hiç ulaşılamaması (şikâyetle ilgili, bu yüzden geçerli).",
+      "„Erläutern Sie, welche Nachteile Ihnen dadurch entstanden sind.“ ve „Fragen Sie, wer die Kosten übernimmt, falls das Gerät nicht mehr repariert werden kann.“ atlandı; ikinci yolda iki madde atlanır, bu doğrudur.",
+      "Olaylar zaman sırasıyla ve bağlaçlarla: Obwohl …, Auch beim zweiten Termin …, Erst beim dritten Mal …, Hinzu kommt, dass …, Ich erwarte daher, …"
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "about": "Yapay zekâ denemesi (telc Deutsch B2: ilana göre firmaya bilgi isteme ya da şikâyet e-postası, Betreff satırıyla, en az 150 kelime). errors: bulunması gereken hatalı yer (wrong) ve düzeltmede geçmesi gereken parça (fix; liste ise biri yeter); clean: doğru olan, işaretlenmemesi gereken yerler. telcb2-4 bilerek 150 kelimenin altında: yapay zekâ uzunluğu değil sadece dil hatalarını işaretlemeli (uzunluk uyarısı sayfadaki sayacın işi). telcb2-5 hatasız; hiçbir şey işaretlenmemeli. Çalıştırma: scripts/ai-deneme.mjs.",
+  "exam": "telc",
+  "level": "b2",
+  "teil": 1,
+  "texts": [
+    {
+      "id": "telcb2-1",
+      "set": "set-1",
+      "note": "Bilgi isteme; dolaylı soruda fiil sonda, Relativsatz'da fiil sonda, sich interessieren für",
+      "text": "Betreff: Anfrage zu einem Flexdesk\n\nSehr geehrte Damen und Herren,\n\nmit großem Interesse habe ich Ihre Anzeige gelesen, denn ich arbeite seit einem Jahr als freiberuflicher Grafikdesigner von zu Hause aus. Ich interessiere mich an Ihrem Angebot, weil mir der Kontakt zu anderen Menschen fehlt.\n\nFür meine Arbeit brauche ich einen großen Tisch und einen ruhigen Platz, wo ich kann telefonieren. Außerdem arbeite ich mit einem großen Bildschirm. Könnten Sie mir mitteilen, ob es gibt Bildschirme bei Ihnen?\n\nDarüber hinaus würde ich gern wissen, wie lange der Coworking-Space am Abend geöffnet ist. Da ich oft Termine mit Kunden in den USA habe, arbeite ich manchmal bis 22 Uhr. Ist das bei Ihnen möglich?\n\nWas den Vertrag betrifft, möchte ich wissen, ob ich jeden Monat kündigen kann. Ich möchte nämlich zuerst ausprobieren, ob die Arbeit im Coworking-Space zu mir passt.\n\nÜber eine baldige Antwort würde ich mich sehr freuen.\n\nMit freundlichen Grüßen\nJakub Malinowski",
+      "errors": [
+        { "wrong": "Ich interessiere mich an Ihrem Angebot", "fix": "für Ihr Angebot" },
+        { "wrong": "wo ich kann telefonieren", "fix": ["telefonieren kann", "wo ich telefonieren kann", "an dem ich telefonieren kann"] },
+        { "wrong": "ob es gibt Bildschirme bei Ihnen", "fix": ["ob es bei Ihnen Bildschirme gibt", "Bildschirme gibt"] }
+      ],
+      "clean": [
+        "Da ich oft Termine mit Kunden in den USA habe, arbeite ich manchmal bis 22 Uhr",
+        "Was den Vertrag betrifft, möchte ich wissen, ob ich jeden Monat kündigen kann"
+      ]
+    },
+    {
+      "id": "telcb2-2",
+      "set": "set-2",
+      "note": "Bilgi isteme (2 madde + kendi konu); deshalb'dan sonra fiil, mit + Dativ çoğul, firmaya du",
+      "text": "Betreff: Fragen zu Ihrem Carsharing-Angebot\n\nSehr geehrte Damen und Herren,\n\nich habe Ihre Anzeige gelesen und überlege, bei StadtMobil Kundin zu werden. Letzten Monat habe ich mein Auto verkauft, weil ich es fast nur am Wochenende benutzt habe. Ich finde es übrigens sehr praktisch, dass es im ersten Jahr keine Grundgebühr gibt.\n\nEin Auto brauche ich ungefähr zweimal im Monat. Meistens fahre ich mit meinem Mann und unsere Kinder zu meinen Eltern, die in einem Dorf ohne Bahnhof wohnen. Deshalb ich brauche ein großes Auto mit Kindersitzen.\n\nAußerdem möchte ich wissen, was passiert, wenn ich einen kleinen Unfall habe. Muss ich dann den ganzen Schaden selbst bezahlen, oder übernimmt Ihre Versicherung die Kosten?\n\nSchließlich habe ich noch eine Frage zur App. Mein Handy ist schon ziemlich alt. Kannst du mir sagen, ob man ein Auto auch telefonisch oder über Ihre Internetseite buchen kann?\n\nVielen Dank im Voraus für Ihre Antwort.\n\nMit freundlichen Grüßen\nSvetlana Ivanova",
+      "errors": [
+        { "wrong": "mit meinem Mann und unsere Kinder", "fix": ["unseren Kindern"] },
+        { "wrong": "Deshalb ich brauche", "fix": "Deshalb brauche ich" },
+        { "wrong": "Kannst du mir sagen", "fix": ["Können Sie mir sagen", "Könnten Sie mir sagen"] }
+      ],
+      "clean": [
+        "meinen Eltern, die in einem Dorf ohne Bahnhof wohnen",
+        "oder übernimmt Ihre Versicherung die Kosten"
+      ]
+    },
+    {
+      "id": "telcb2-3",
+      "set": "set-4",
+      "note": "Şikâyet; obwohl + fiil sonda, Partizip II (abgesagt), warten auf + Akkusativ",
+      "text": "Betreff: Beschwerde über das Sommerklang Open Air\n\nSehr geehrte Damen und Herren,\n\nim August war ich drei Tage lang auf Ihrem Festival. Ich hatte mich sehr darauf gefreut, weil Sie in Ihrer Anzeige einen schnellen Einlass und einen Shuttlebus alle 15 Minuten versprochen hatten. Leider war die Realität ganz anders.\n\nAm ersten Tag musste ich fast zwei Stunden am Eingang warten, obwohl ich hatte ein Online-Ticket. Der Shuttlebus fuhr nur einmal pro Stunde und war immer völlig überfüllt. Auch das Info-Zelt war am Abend oft geschlossen. Am Samstag wurde der Auftritt meiner Lieblingsband ohne Erklärung absagt.\n\nWegen dieser Probleme habe ich mehrere Konzerte verpasst. Am Sonntag musste ich sogar ein Taxi zum Bahnhof nehmen, weil kein Bus mehr kam. Das hat mich 60 Euro gekostet.\n\nIch erwarte, dass Sie mir einen Teil des Ticketpreises zurückerstatten und die Taxikosten übernehmen. Die Quittung finden Sie im Anhang.\n\nIch warte auf Ihrer Antwort.\n\nMit freundlichen Grüßen\nOmar Haddad",
+      "errors": [
+        { "wrong": "obwohl ich hatte ein Online-Ticket", "fix": ["obwohl ich ein Online-Ticket hatte", "ein Online-Ticket hatte"] },
+        { "wrong": "ohne Erklärung absagt", "fix": "abgesagt" },
+        { "wrong": "Ich warte auf Ihrer Antwort", "fix": "auf Ihre Antwort" }
+      ],
+      "clean": [
+        "Ich hatte mich sehr darauf gefreut",
+        "Das hat mich 60 Euro gekostet"
+      ]
+    },
+    {
+      "id": "telcb2-4",
+      "set": "set-5",
+      "note": "Şikâyet, bilerek 150 kelimenin altında (uzunluk işaretlenmemeli); obwohl + fiil sonda, Relativsatz'da fiil sonda",
+      "text": "Betreff: Beschwerde über Ihren Reparaturservice\n\nSehr geehrte Damen und Herren,\n\nletzte Woche habe ich online einen Termin für meine Waschmaschine gebucht. Obwohl Sie garantieren einen Termin innerhalb von 24 Stunden, ist zweimal niemand gekommen. Der Techniker, der kam am Freitag, konnte die Maschine nicht reparieren, weil ein Ersatzteil fehlte.\n\nTrotzdem habe ich eine Rechnung über 39 Euro bekommen. Ich erwarte, dass Sie die Waschmaschine kostenlos reparieren und mir das Geld zurückzahlen.\n\nMit freundlichen Grüßen\nLina Haddad",
+      "errors": [
+        { "wrong": "Obwohl Sie garantieren einen Termin innerhalb von 24 Stunden", "fix": ["innerhalb von 24 Stunden garantieren", "Obwohl Sie einen Termin innerhalb von 24 Stunden garantieren"] },
+        { "wrong": "der kam am Freitag", "fix": ["der am Freitag kam", "am Freitag kam"] }
+      ],
+      "clean": [
+        "weil ein Ersatzteil fehlte",
+        "Trotzdem habe ich eine Rechnung über 39 Euro bekommen"
+      ]
+    },
+    {
+      "id": "telcb2-5",
+      "set": "set-3",
+      "note": "Hatasız bilgi isteme e-postası (yanlış alarm olmamalı); teilnehmen an + Dativ, Relativsatz, Konjunktiv II doğru",
+      "text": "Betreff: Frage zu einem Beet im Gemeinschaftsgarten\n\nSehr geehrte Damen und Herren,\n\nmit großem Interesse habe ich Ihre Anzeige in der Stadtteilzeitung gelesen. Seit zwei Jahren wohne ich in Ehrenfeld, und weil meine Wohnung keinen Balkon hat, wünsche ich mir schon lange einen eigenen kleinen Garten.\n\nMit Gartenarbeit habe ich bisher nur wenig Erfahrung. Früher habe ich auf dem Balkon meiner Eltern Kräuter gepflanzt, die erstaunlich gut gewachsen sind. Bei Ihnen würde ich gern Salat, Zucchini und Kräuter anbauen.\n\nDa ich in Vollzeit arbeite, habe ich vor allem am Wochenende Zeit. Deshalb wäre ein kleines Beet mit sechs Quadratmetern für mich wahrscheinlich am besten geeignet.\n\nDarüber hinaus würde mich interessieren, welche Pflichten die Mitglieder haben. Muss man an allen Gartentagen teilnehmen, oder kann man auch nur gelegentlich mithelfen? Außerdem möchte ich wissen, ob ich zuerst einen Workshop besuchen muss, bevor ich ein Beet mieten kann.\n\nIch freue mich auf Ihre Antwort.\n\nMit freundlichen Grüßen\nNadia Rahman",
+      "errors": [],
+      "clean": [
+        "Muss man an allen Gartentagen teilnehmen",
+        "die erstaunlich gut gewachsen sind",
+        "Deshalb wäre ein kleines Beet mit sechs Quadratmetern für mich wahrscheinlich am besten geeignet"
+      ]
+    }
+  ]
+}

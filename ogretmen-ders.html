@@ -20,9 +20,9 @@
   <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13" />
   <link rel="stylesheet" href="css/base.css?v=15" />
-  <link rel="stylesheet" href="css/account.css?v=9" />
+  <link rel="stylesheet" href="css/account.css?v=10" />
   <link rel="stylesheet" href="js/vendor/quill/quill.core.css?v=1" />
-  <link rel="stylesheet" href="css/ders-defteri.css?v=1" />
+  <link rel="stylesheet" href="css/ders-defteri.css?v=2" />
 </head>
 <body class="academy-theme account-page teacher-page note-page">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
@@ -65,7 +65,6 @@
                 <p class="note-print-meta" id="notePrintMeta"></p>
               </div>
               <div class="note-head-side">
-                <p class="note-save" id="saveState" role="status" aria-live="polite" data-state="saved">Kaydedildi ✓</p>
                 <p class="note-size" id="sizeInfo"></p>
               </div>
             </header>
@@ -93,6 +92,7 @@
               <span>Bu not başka bir sekmede açık. Orada düzenlemeye devam et ya da burada düzenle.</span>
               <span class="note-banner-actions"><button class="btn primary" type="button" id="tabTakeover">Burada düzenle</button></span>
             </div>
+            <div class="note-sticky" id="noteSticky">
             <div class="note-toolbar" id="noteToolbar" role="toolbar" aria-label="Biçimlendirme" aria-controls="editor">
               <div class="note-group">
                 <button class="note-tool" type="button" data-action="undo" aria-label="Geri al (Ctrl+Z)" title="Geri al (Ctrl+Z)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7 4 12l5 5M4 12h10a6 6 0 0 1 0 12h-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 -4)"/></svg></button>
@@ -123,14 +123,17 @@
               <div class="note-group">
                 <button class="note-tool" type="button" data-action="link" aria-pressed="false" aria-label="Bağlantı (Ctrl+K)" title="Bağlantı (Ctrl+K)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
                 <details class="note-menu" id="tableMenu">
-                  <summary class="note-tool note-tool-text" title="Tablo">Tablo</summary>
+                  <summary class="note-tool note-tool-text" title="Tablo ekle">Tablo</summary>
+                  <div class="note-menu-panel note-grid-panel">
+                    <p class="note-grid-title" id="tableGridLabel">Tablo ekle</p>
+                    <div class="note-grid" id="tableGrid" role="grid" tabindex="0" aria-labelledby="tableGridLabel" aria-describedby="tableGridHelp"></div>
+                    <p class="note-grid-size" id="tableSize" aria-live="polite">1 × 1</p>
+                    <p class="acc-hint" id="tableGridHelp">Sütun × satır. Ok tuşlarıyla seç, Enter ile ekle, Esc ile kapat.</p>
+                  </div>
+                </details>
+                <details class="note-menu" id="tableEditMenu">
+                  <summary class="note-tool note-tool-text" title="Tabloyu düzenle (imleç tablodayken)" aria-disabled="true">Tabloyu düzenle</summary>
                   <div class="note-menu-panel note-table-panel">
-                    <div class="note-table-new">
-                      <label>Satır <input type="number" id="tableRows" min="1" max="30" value="3" inputmode="numeric"></label>
-                      <label>Sütun <input type="number" id="tableCols" min="1" max="10" value="3" inputmode="numeric"></label>
-                      <button class="btn primary" type="button" data-table="insertTable">Tablo ekle</button>
-                    </div>
-                    <p class="acc-hint" id="tableHint">Satır ve sütun eklemek için önce imleci tabloya koy.</p>
                     <div class="note-table-ops">
                       <button class="btn ghost" type="button" data-table="insertRowAbove" data-needs-table>Üste satır</button>
                       <button class="btn ghost" type="button" data-table="insertRowBelow" data-needs-table>Alta satır</button>
@@ -143,6 +146,8 @@
                   </div>
                 </details>
               </div>
+            </div>
+            <p class="note-save" id="saveState" role="status" aria-live="polite" data-state="saved">Kaydedildi ✓</p>
             </div>
             <div class="note-paper"><div id="editor" class="note-content"></div></div>
           </div>
@@ -180,6 +185,6 @@
   <script src="js/app.js?v=57"></script>
   <script src="js/theme.js?v=10"></script>
   <script src="js/vendor/quill/quill.js?v=1"></script>
-  <script type="module" src="js/account/teacher-note.js?v=1"></script>
+  <script type="module" src="js/account/teacher-note.js?v=2"></script>
 </body>
 </html>

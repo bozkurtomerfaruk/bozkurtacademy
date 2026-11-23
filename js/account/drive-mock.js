@@ -1,7 +1,7 @@
 // Sadece yerel emülatör modu: Google Drive API'nin sahte hâli (js/account/drive.js bunu canlıda hiç yüklemez).
 // Yüklenen dosyalar localStorage'da (baDriveMock: ad, boyut, klasör, paylaşım) tutulur; testler buradan okur.
 // localStorage.baDriveMockDenied = '1' → izin penceresi kapatıldı; baDriveMockFail = '1' → yükleme hatası.
-import { DriveError } from './drive.js?v=1';
+import { DriveError } from './drive.js?v=2';
 
 if(!['localhost', '127.0.0.1'].includes(location.hostname)) throw new Error('drive-mock.js yalnızca yerel emülatörde çalışır');
 

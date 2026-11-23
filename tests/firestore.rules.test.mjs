@@ -566,6 +566,28 @@ describe('Ödevler ve kaynaklar', () => {
     await assertFails(deleteDoc(doc(ayse(), 'users/ayse/resources/k1')));
   });
 
+  // Yardımcı kaynaklar (js/account/resources.js): PDF ve çok öğrenciye kopya (aynı groupId), tek toplu yazmayla.
+  test('yardımcı kaynak: öğretmen PDF kaynağını iki öğrenciye kopya olarak yazar; her öğrenci yalnızca kendi kopyasını okur', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await seed('users/can', seededMinor('active', consentGiven));
+    const res = { title: 'Artikel-Tabelle', url: 'https://drive.google.com/file/d/abc/view', note: '', kind: 'pdf', fileId: 'abc', fileName: 'artikel.pdf', groupId: 'g1', createdAt: serverTimestamp() };
+    const db = teacherDb();
+    const batch = writeBatch(db);
+    batch.set(doc(db, 'users/ayse/resources/r1'), res);
+    batch.set(doc(db, 'users/can/resources/r2'), res);
+    await assertSucceeds(batch.commit());
+    await assertSucceeds(getDocs(collectionGroup(db, 'resources')));
+    await assertSucceeds(getDoc(doc(ayse(), 'users/ayse/resources/r1')));
+    await assertFails(getDoc(doc(ayse(), 'users/can/resources/r2')));
+    await assertFails(getDocs(collection(ayse(), 'users/can/resources')));
+    await assertFails(getDocs(collectionGroup(ayse(), 'resources')));
+    await assertFails(setDoc(doc(ayse(), 'users/ayse/resources/r3'), { ...res, createdAt: Timestamp.now() }));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse/resources/r1'), { url: 'https://evil.example' }));
+    await assertFails(deleteDoc(doc(ayse(), 'users/ayse/resources/r1')));
+    await assertSucceeds(deleteDoc(doc(db, 'users/ayse/resources/r1')));
+    await assertSucceeds(getDoc(doc(can(), 'users/can/resources/r2')));
+  });
+
   test('öğretmen ödev ve kaynak oluşturup silebilir, bütün ödevleri tek sorguyla okuyabilir', async () => {
     await seed('users/ayse', seededAdult('active'));
     const db = teacherDb();

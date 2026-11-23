@@ -20,8 +20,8 @@
   <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13" />
   <link rel="stylesheet" href="css/base.css?v=15" />
-  <link rel="stylesheet" href="css/account.css?v=9" />
-  <link rel="stylesheet" href="css/ders-defteri.css?v=1" />
+  <link rel="stylesheet" href="css/account.css?v=10" />
+  <link rel="stylesheet" href="css/ders-defteri.css?v=2" />
 </head>
 <body class="academy-theme account-page teacher-page">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
@@ -102,24 +102,47 @@
               <div id="writingsList"></div>
             </section>
 
-            <section class="acc-section" aria-labelledby="resourcesTitle">
-              <h2 id="resourcesTitle">Kaynaklar</h2>
+            <section class="acc-section" id="kaynaklar" aria-labelledby="resourcesTitle">
+              <h2 id="resourcesTitle">Yardımcı kaynaklar</h2>
               <form class="ba-card acc-card acc-resource-form" id="resourceForm" novalidate>
                 <div class="ba-card-body acc-form">
-                  <h3>Kaynak ekle</h3>
-                  <div class="acc-pick">
-                    <div class="field">
-                      <label for="rTitle">Başlık</label>
-                      <input id="rTitle" maxlength="120" autocomplete="off" required>
+                  <h3>Yardımcı kaynak ekle</h3>
+                  <fieldset class="acc-res-kind">
+                    <legend>Tür</legend>
+                    <label class="acc-check"><input type="radio" name="rKind" value="link" id="rKindLink" checked><span>Bağlantı</span></label>
+                    <label class="acc-check"><input type="radio" name="rKind" value="pdf" id="rKindPdf"><span>PDF yükle</span></label>
+                  </fieldset>
+                  <div class="field">
+                    <label for="rTitle">Başlık</label>
+                    <input id="rTitle" maxlength="120" autocomplete="off" aria-describedby="rTitleHint">
+                    <small class="acc-hint" id="rTitleHint">PDF'te boş bırakırsan dosyanın adı kullanılır.</small>
+                  </div>
+                  <div class="field" id="rLinkBox">
+                    <label for="rUrl">Bağlantı</label>
+                    <input id="rUrl" type="url" inputmode="url" placeholder="https://" autocomplete="off">
+                  </div>
+                  <div class="field acc-res-pdf" id="rPdfBox" hidden>
+                    <span class="acc-res-pdf-label">PDF dosyası</span>
+                    <div class="acc-res-pdf-row">
+                      <button class="btn ghost" type="button" id="rPdfAdd" aria-describedby="rPdfHint">PDF seç</button>
+                      <span class="acc-res-file" id="rPdfName" hidden></span>
                     </div>
-                    <div class="field">
-                      <label for="rUrl">Link</label>
-                      <input id="rUrl" type="url" inputmode="url" placeholder="https://" autocomplete="off" required>
-                    </div>
+                    <input type="file" id="rPdfFile" accept="application/pdf,.pdf" hidden>
+                    <progress class="acc-res-progress" id="rPdfProgress" max="1" value="0" hidden aria-label="PDF yükleniyor"></progress>
+                    <p class="acc-status" id="rPdfStatus" role="status" hidden></p>
+                    <small class="acc-hint" id="rPdfHint">PDF senin Google Drive'ında "Bozkurt Academy Kaynaklar" klasörüne bir kez yüklenir ve "bağlantıya sahip olan görüntüleyebilir" olarak paylaşılır. En çok 20 MB. Kaynak silinse de dosya Drive'da kalır.</small>
                   </div>
                   <div class="field">
                     <label for="rNote">Kısa not (isteğe bağlı)</label>
                     <input id="rNote" maxlength="500" autocomplete="off">
+                  </div>
+                  <div class="field acc-res-students">
+                    <span class="acc-res-pdf-label" id="rStudentsLabel">Öğrenciler</span>
+                    <label class="acc-check acc-check-all"><input type="checkbox" id="rAll"><span>Hepsini seç</span></label>
+                    <fieldset class="acc-checklist" id="rStudents" aria-labelledby="rStudentsLabel">
+                      <legend class="visually-hidden">Kaynağı alacak öğrenciler</legend>
+                    </fieldset>
+                    <small class="acc-hint" id="rStudentsHint">Her öğrenciye ayrı kopya eklenir. Sadece hesabı açık öğrenciler listelenir.</small>
                   </div>
                   <button class="btn primary" type="submit" id="rSubmit">Kaynağı ekle</button>
                 </div>
@@ -166,6 +189,6 @@
   </div>
   <script src="js/app.js?v=57"></script>
   <script src="js/theme.js?v=10"></script>
-  <script type="module" src="js/account/teacher-student.js?v=8"></script>
+  <script type="module" src="js/account/teacher-student.js?v=9"></script>
 </body>
 </html>

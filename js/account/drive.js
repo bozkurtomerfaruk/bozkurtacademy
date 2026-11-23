@@ -16,6 +16,8 @@ import { loadGis } from './calendar.js';
 
 export const SCOPE = 'https://www.googleapis.com/auth/drive.file';
 export const FOLDER_NAME = 'Bozkurt Academy Ödevler';
+// Yardımcı kaynakların PDF'leri ayrı klasörde (js/account/teacher-student.js).
+export const RESOURCE_FOLDER = 'Bozkurt Academy Kaynaklar';
 export const MAX_BYTES = 20 * 1024 * 1024;
 const API = 'https://www.googleapis.com/drive/v3/files';
 const UPLOAD = 'https://www.googleapis.com/upload/drive/v3/files';
@@ -130,22 +132,24 @@ async function api(method, url, { body, headers = {} } = {}){
   return response;
 }
 
-// Uygulamanın oluşturduğu "Bozkurt Academy Ödevler" klasörü (drive.file ile sadece onu görür); yoksa oluşturulur.
-async function folderId(){
+// Uygulamanın oluşturduğu klasör (drive.file ile sadece onu görür); yoksa oluşturulur. Varsayılan "Bozkurt Academy
+// Ödevler" (kimliği eskisi gibi baGdriveFolder'da), diğerleri baGdriveFolder:<ad> anahtarında.
+async function folderId(name = FOLDER_NAME){
+  const key = name === FOLDER_NAME ? FOLDER_KEY : `${FOLDER_KEY}:${name}`;
   let saved = '';
-  try{ saved = storage('localStorage')?.getItem(FOLDER_KEY) || ''; }catch(_){}
+  try{ saved = storage('localStorage')?.getItem(key) || ''; }catch(_){}
   if(saved){
     const check = await fetch(`${API}/${encodeURIComponent(saved)}?fields=id,trashed`, { headers: { Authorization: `Bearer ${token}` } })
       .then((r) => (r.ok ? r.json() : null)).catch(() => null);
     if(check?.id && !check.trashed) return saved;
   }
-  const q = `name = '${FOLDER_NAME}' and mimeType = '${FOLDER_MIME}' and trashed = false`;
+  const q = `name = '${name.replace(/['\\]/g, '\\$&')}' and mimeType = '${FOLDER_MIME}' and trashed = false`;
   const found = await (await api('GET', `${API}?${new URLSearchParams({ q, fields: 'files(id)', spaces: 'drive', pageSize: '1' })}`)).json();
   let id = found?.files?.[0]?.id;
   if(!id){
-    id = (await (await api('POST', `${API}?fields=id`, { body: { name: FOLDER_NAME, mimeType: FOLDER_MIME } })).json()).id;
+    id = (await (await api('POST', `${API}?fields=id`, { body: { name, mimeType: FOLDER_MIME } })).json()).id;
   }
-  try{ storage('localStorage')?.setItem(FOLDER_KEY, id); }catch(_){}
+  try{ storage('localStorage')?.setItem(key, id); }catch(_){}
   return id;
 }
 
@@ -170,13 +174,13 @@ function putWithProgress(url, file, onProgress){
   });
 }
 
-// PDF'i yükler ve paylaşır. Döner: { id, name, url }.
-export async function uploadPdf(file, { onProgress } = {}){
+// PDF'i yükler ve paylaşır. Döner: { id, name, url }. folderName: hedef klasör (varsayılan ödevler).
+export async function uploadPdf(file, { onProgress, folderName = FOLDER_NAME } = {}){
   const problem = await checkPdf(file);
   if(problem) throw new DriveError(problem);
   if(!isConnected()) throw new DriveError('Google Drive bağlı değil.');
-  if(usingMock) return (await mockModule()).uploadPdf(file, { onProgress, folderName: FOLDER_NAME });
-  const parent = await folderId();
+  if(usingMock) return (await mockModule()).uploadPdf(file, { onProgress, folderName });
+  const parent = await folderId(folderName);
   const start = await api('POST', `${UPLOAD}?uploadType=resumable&fields=id,name`, {
     body: { name: file.name, mimeType: 'application/pdf', parents: [parent] },
     headers: { 'X-Upload-Content-Type': 'application/pdf', 'X-Upload-Content-Length': String(file.size) }

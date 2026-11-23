@@ -1,11 +1,11 @@
 // ogretmen-ogrenci.html?id=UID: öğrenci detayı, onay işlemleri, veli onayı, alıştırma sonuçları.
 import {
   $, consentGiven, currentYear, exerciseNames, formatDateTime, h, BERLIN, loadAssignments, loadProfile,
-  loadResources, loadResults, loadWritings, safeLink, scoreText, summarizeResults, validEmail, validHttpsUrl, LEVEL_EXAM, topicErrorsText,
+  loadResults, loadWritings, safeLink, scoreText, summarizeResults, validEmail, validHttpsUrl, LEVEL_EXAM, topicErrorsText,
   setStatus, writingTitle, writingUrl
 } from './common.js';
 import {
-  addResource, approve, deleteResource, emailVerified, fmtDate, isEnabled, openDeleteDialog,
+  approve, emailVerified, fmtDate, isEnabled, listStudents, openDeleteDialog,
   AI_CONSENT_VERSION, AI_SKIP_LABELS, aiAllowed, aiDirect, approveAiDraft, deleteAiDraft, flaggedCount, loadAiDrafts, needsTeacher, recordAiConsent,
   recordConsent, requireTeacher, saveWritingFeedback, setActive, setInactive, statusBadges, UNVERIFIED_WARNING, updateParent
 } from './teacher-common.js';
@@ -13,6 +13,8 @@ import * as cal from './calendar.js';
 import { db, fs } from './firebase.js';
 import { applyAttendees, loadStudentLessons } from './lessons.js';
 import { normalizeAssignment } from './assignments.js?v=1';
+import * as drive from './drive.js?v=2';
+import { addResourceCopies, deleteResourceCopy, groupCounts, loadResourceList, MAX_TITLE, resourceItem } from './resources.js?v=1';
 import { backupsFor, deleteNote, loadNotes, noteUrl, removeBackup } from './lesson-notes.js?v=1';
 import { defaultTitle } from './note-format.js?v=1';
 import { berlinParts, todayKey } from './common.js';
@@ -325,17 +327,20 @@ async function renderAssignments(){
       a.due && a.due < now ? h('span', { class: 'acc-badge warning' }, 'Süresi geçti') : null))) : null);
 }
 
+// Yardımcı kaynaklar (js/account/resources.js). Aynı kaynak birden çok öğrenciye verildiyse "X öğrenciye verildi".
+// Silme yalnızca bu öğrencinin kopyasını siler; PDF Drive'da kalır.
 async function renderResources(){
-  const resources = await loadResources(uid);
+  const [resources, counts] = await Promise.all([loadResourceList(uid), groupCounts().catch((error) => { console.warn(error); return new Map(); })]);
   const box = $('resourcesList');
   box.replaceChildren(...(resources.length
     ? [h('ul', { class: 'acc-resource-list' }, resources.map((r) => {
       const remove = h('button', { class: 'acc-text-button', type: 'button' }, 'Sil');
       remove.addEventListener('click', async () => {
-        if(!confirm(`"${r.title}" kaynağı silinsin mi?`)) return;
+        const pdfNote = r.kind === 'pdf' ? ' PDF Google Drive\'ında kalır.' : '';
+        if(!confirm(`"${r.title}" bu öğrenciden kaldırılsın mı? Diğer öğrencilerdeki kopyalar kalır.${pdfNote}`)) return;
         remove.disabled = true;
         try{
-          await deleteResource(uid, r.id);
+          await deleteResourceCopy(uid, r.id);
           await reload();
         }catch(error){
           console.error(error);
@@ -343,11 +348,11 @@ async function renderResources(){
           remove.disabled = false;
         }
       });
-      return h('li', {},
-        h('div', {}, safeLink(r.url, r.title), r.note ? h('span', { class: 'acc-sub' }, r.note) : null),
-        remove);
+      const n = r.groupId ? counts.get(r.groupId) || 1 : 1;
+      const info = [r.kind === 'pdf' ? 'PDF' : 'Bağlantı', r.createdAt ? fmtDate(r.createdAt.toDate?.() || r.createdAt) : '', n > 1 ? `${n} öğrenciye verildi` : ''].filter(Boolean).join(' · ');
+      return h('li', { 'data-resource': r.id }, resourceItem(r, { extra: [h('span', { class: 'acc-sub acc-res-info' }, info)] }), remove);
     }))]
-    : [h('p', { class: 'acc-hint' }, 'Henüz kaynak eklenmedi.')]));
+    : [h('p', { class: 'acc-hint' }, 'Henüz yardımcı kaynak eklenmedi.')]));
 }
 
 // Schreiben metinleri: en yeni üstte; geri bildirim bekleyenler işaretli. Öğretmen geri bildirim yazar ya da düzeltir
@@ -628,33 +633,142 @@ async function reload(){
   if(location.hash === '#ders-notlari') $('ders-notlari').scrollIntoView({ block: 'start' });
 }
 
+// ---- Yardımcı kaynak ekleme: bağlantı ya da PDF (Drive, "Bozkurt Academy Kaynaklar"), birden çok öğrenciye ----
+let pdf = null;          // yüklenmiş PDF: { id, name, url }
+let uploading = false;
+let allStudents = [];
+
+const resourceKind = () => (document.querySelector('input[name="rKind"]:checked')?.value === 'pdf' ? 'pdf' : 'link');
+const pdfStatus = (type, message) => setStatus($('rPdfStatus'), type, message);
+
+function showKind(){
+  const isPdf = resourceKind() === 'pdf';
+  $('rLinkBox').hidden = isPdf;
+  $('rPdfBox').hidden = !isPdf;
+}
+
+function renderResourceStudents(){
+  const enabled = allStudents.filter(isEnabled).sort((a, b) => (a.name || '').localeCompare(b.name || '', 'tr'));
+  const box = $('rStudents');
+  const legend = box.querySelector('legend');
+  box.replaceChildren(legend, ...(enabled.length
+    ? enabled.map((s) => h('label', { class: 'acc-check' },
+      h('input', { type: 'checkbox', name: 'rStudent', value: s.id, checked: s.id === uid }),
+      h('span', {}, s.name, h('span', { class: 'acc-sub' }, s.email))))
+    : [h('p', { class: 'acc-hint' }, 'Hesabı açık öğrenci yok.')]));
+  $('rAll').disabled = !enabled.length;
+  syncAll();
+}
+
+const studentBoxes = () => [...document.querySelectorAll('input[name="rStudent"]')];
+function syncAll(){
+  const boxes = studentBoxes();
+  $('rAll').checked = boxes.length > 0 && boxes.every((b) => b.checked);
+  const n = boxes.filter((b) => b.checked).length;
+  $('rSubmit').textContent = n > 1 ? `Kaynağı ${n} öğrenciye ekle` : 'Kaynağı ekle';
+}
+
+async function pickResourcePdf(){
+  if(!drive.isConnected()){
+    $('rPdfAdd').disabled = true;
+    pdfStatus('', 'Google Drive izni isteniyor…');
+    try{
+      await drive.connect();
+    }catch(error){
+      console.warn(error);
+      pdfStatus('error', `Google Drive'a bağlanılamadı: ${error.message}`);
+      return;
+    }finally{
+      $('rPdfAdd').disabled = false;
+    }
+    pdfStatus('success', 'Google Drive bağlandı. PDF dosyasını seç.');
+  }
+  $('rPdfFile').click();
+}
+
+async function uploadResourcePdf(){
+  const file = $('rPdfFile').files?.[0];
+  $('rPdfFile').value = '';
+  if(!file) return;
+  const problem = await drive.checkPdf(file);
+  if(problem){ pdfStatus('error', problem); return; }
+  uploading = true;
+  $('rPdfAdd').disabled = true;
+  $('rSubmit').disabled = true;
+  const progress = $('rPdfProgress');
+  progress.hidden = false;
+  progress.value = 0;
+  pdfStatus('', `"${file.name}" yükleniyor…`);
+  try{
+    pdf = await drive.uploadPdf(file, { folderName: drive.RESOURCE_FOLDER, onProgress: (p) => { progress.value = p; } });
+    $('rPdfName').hidden = false;
+    $('rPdfName').textContent = pdf.name;
+    $('rPdfAdd').textContent = 'Başka PDF seç';
+    if(!$('rTitle').value.trim()) $('rTitle').value = pdf.name.replace(/\.pdf$/i, '').slice(0, MAX_TITLE);
+    pdfStatus('success', `"${pdf.name}" Drive'a yüklendi ve paylaşıldı. Öğrencileri seçip "Kaynağı ekle"ye bas.`);
+  }catch(error){
+    console.warn(error);
+    pdfStatus('error', `PDF yüklenemedi: ${error.message} Tekrar dene.`);
+  }finally{
+    uploading = false;
+    progress.hidden = true;
+    $('rPdfAdd').disabled = false;
+    $('rSubmit').disabled = false;
+  }
+}
+
+function resetResourceForm(){
+  $('resourceForm').reset();
+  pdf = null;
+  $('rPdfName').hidden = true;
+  $('rPdfName').textContent = '';
+  $('rPdfAdd').textContent = 'PDF seç';
+  $('rPdfStatus').hidden = true;
+  showKind();
+  renderResourceStudents();
+}
+
+$('resourceForm').addEventListener('change', (e) => {
+  if(e.target.name === 'rKind') showKind();
+  if(e.target.name === 'rStudent') syncAll();
+});
+$('rAll').addEventListener('change', () => { studentBoxes().forEach((b) => { b.checked = $('rAll').checked; }); syncAll(); });
+$('rPdfAdd').addEventListener('click', pickResourcePdf);
+$('rPdfFile').addEventListener('change', uploadResourcePdf);
+
 $('resourceForm').addEventListener('submit', async (event) => {
   event.preventDefault();
-  const title = $('rTitle').value.trim();
-  const url = $('rUrl').value.trim();
+  if(uploading) return;
+  const kind = resourceKind();
+  let title = $('rTitle').value.trim();
   const note = $('rNote').value.trim();
-  if(title.length < 2){
-    setActionStatus('error', 'Kaynak için bir başlık yaz.');
-    $('rTitle').focus();
-    return;
+  let url = '';
+  if(kind === 'pdf'){
+    if(!pdf){ setActionStatus('error', 'Önce bir PDF seçip yükle.'); $('rPdfAdd').focus(); return; }
+    url = pdf.url;
+    if(!title) title = pdf.name.replace(/\.pdf$/i, '').slice(0, MAX_TITLE);
+  }else{
+    url = $('rUrl').value.trim();
+    if(!validHttpsUrl(url)){ setActionStatus('error', 'Bağlantı https:// ile başlamalı.'); $('rUrl').focus(); return; }
   }
-  if(!validHttpsUrl(url)){
-    setActionStatus('error', 'Link https:// ile başlamalı.');
-    $('rUrl').focus();
-    return;
-  }
+  if(title.length < 2){ setActionStatus('error', 'Kaynak için bir başlık yaz.'); $('rTitle').focus(); return; }
+  const ids = studentBoxes().filter((b) => b.checked).map((b) => b.value);
+  if(!ids.length){ setActionStatus('error', 'En az bir öğrenci seç.'); return; }
   const button = $('rSubmit');
   button.disabled = true;
   try{
-    await addResource(uid, { title, url, note });
-    $('resourceForm').reset();
-    setActionStatus('success', 'Kaynak eklendi. Öğrenci panelinde görünür.');
+    await addResourceCopies(ids, kind === 'pdf'
+      ? { title, url, note, kind, fileId: pdf.id, fileName: pdf.name }
+      : { title, url, note, kind });
+    resetResourceForm();
+    setActionStatus('success', ids.length > 1 ? `Kaynak ${ids.length} öğrenciye eklendi. Öğrenci panellerinde görünür.` : 'Kaynak eklendi. Öğrenci panelinde görünür.');
     await reload();
   }catch(error){
     console.error(error);
     setActionStatus('error', 'Kaynak eklenemedi. Tekrar dene.');
   }finally{
     button.disabled = false;
+    syncAll();
   }
 });
 
@@ -663,6 +777,9 @@ if(user){
   if(!uid){
     location.replace('ogretmen.html');
   }else{
+    if(drive.driveConfigured) drive.preload();
+    else{ $('rKindPdf').disabled = true; $('rPdfHint').textContent = 'PDF yükleme için Google Drive bağlantısı kurulu değil (docs/kurulum.md).'; }
+    listStudents().then((list) => { allStudents = list; renderResourceStudents(); }).catch((error) => console.warn(error));
     reload().catch((error) => {
       console.error(error);
       $('studentLoading').hidden = true;

@@ -18,6 +18,7 @@
 /* Kayıt durumu */
 .note-save{margin:0;padding:6px 12px;border-radius:999px;background:var(--ba-paper-2);color:var(--ba-muted);font-size:var(--ba-small);font-weight:600;white-space:nowrap}
 .note-save[data-state="saved"]{background:var(--ba-right-bg);color:var(--ba-right)}
+.note-save[data-state="pending"]{background:transparent;box-shadow:inset 0 0 0 1px var(--ba-line)}
 .note-save[data-state="offline"],.note-save[data-state="error"]{background:var(--ba-wrong-bg);color:var(--ba-wrong);white-space:normal}
 .note-size{margin:0;color:var(--ba-muted);font-size:.8125rem}
 .note-size[data-level="warn"],.note-size[data-level="danger"],.note-size[data-level="over"]{color:var(--ba-wrong);font-weight:600}
@@ -30,13 +31,22 @@
 .note-view-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .note-zoom{display:inline-flex;align-items:center;gap:4px;padding:2px;border:1px solid var(--ba-line);border-radius:var(--ba-radius-small)}
 .note-zoom-value{min-width:3.5em;text-align:center;font-size:var(--ba-small);color:var(--ba-muted);font-variant-numeric:tabular-nums}
-.note-toolbar{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;gap:6px 10px;padding:8px;border:1px solid var(--ba-line);border-radius:var(--ba-radius-small);background:var(--ba-paper-2)}
+/* Yapışkan çubuk: araç çubuğu + kayıt durumu. Sitenin üst menüsünün (--note-top, JS ölçer) hemen altında durur;
+   arka planı kartla aynı, altından kayan metin görünmez. */
+/* Ders defterinde kaydırma anlık olsun: sitenin genel "smooth" kaydırması (css/style.css) imleci takip ederken her
+   tuşta yeniden başlayıp geride kalıyordu. */
+html:has(body.note-page),body.note-page,body.note-page *{scroll-behavior:auto}
+html{scroll-padding-top:calc(var(--note-top,0px) + var(--note-sticky-h,0px) + 12px);scroll-padding-bottom:48px}
+.note-sticky{position:sticky;top:var(--note-top,0px);z-index:20;display:flex;align-items:center;gap:8px 12px;margin:-6px 0;padding:6px 0;background:inherit}
+.note-sticky .note-save{flex:none}
+.note-toolbar{flex:1 1 auto;min-width:0;display:flex;flex-wrap:wrap;gap:6px 10px;padding:8px;border:1px solid var(--ba-line);border-radius:var(--ba-radius-small);background:var(--ba-paper-2)}
+.note-sticky.is-stuck .note-toolbar{box-shadow:0 6px 14px -8px rgb(0 0 0 / .35)}
 .note-group{display:flex;flex-wrap:wrap;gap:4px;padding-right:10px;border-right:1px solid var(--ba-line)}
 .note-group:last-child{border-right:0;padding-right:0}
 .note-tool{display:inline-flex;align-items:center;justify-content:center;min-width:40px;min-height:40px;padding:0 8px;border:1px solid transparent;border-radius:var(--ba-radius-small);background:transparent;color:var(--ba-ink);font:600 1rem/1 var(--ba-sans);cursor:pointer;text-decoration:none;list-style:none}
 .note-tool::-webkit-details-marker{display:none}
 .note-tool svg{width:20px;height:20px}
-.note-tool-text{font-size:var(--ba-small)}
+.note-tool-text{font-size:var(--ba-small);white-space:nowrap}
 .note-view-actions>.note-tool{border-color:var(--ba-line)}
 .note-tool:hover{background:var(--ba-line)}
 .note-tool[aria-pressed="true"]{background:var(--ba-accent);color:var(--ba-accent-ink)}
@@ -50,10 +60,18 @@
 .note-swatch{width:40px;height:40px;border:1px solid var(--ba-line-strong);border-radius:var(--ba-radius-small);background:var(--ba-ground);color:var(--ba-ink);font:700 1.125rem/1 var(--ba-sans);cursor:pointer}
 .note-swatch[aria-pressed="true"]{outline:3px solid var(--ba-accent);outline-offset:1px}
 .note-swatch-a{font-weight:700;border-bottom:3px solid currentColor;line-height:1.1}
-.note-table-panel{width:min(330px,calc(100vw - 48px));display:grid;gap:10px}
-.note-table-new{display:flex;flex-wrap:wrap;align-items:flex-end;gap:8px}
-.note-table-new label{display:grid;gap:2px;font-size:var(--ba-small);color:var(--ba-muted)}
-.note-table-new input{width:4.5em;min-height:40px;padding:0 8px;border:1px solid var(--ba-line-strong);border-radius:var(--ba-radius-small);background:var(--ba-ground);color:var(--ba-ink);font:inherit}
+.note-table-panel{width:min(330px,calc(100vw - 48px));display:grid;gap:10px;left:auto;right:0}
+/* Tablo ızgarası (Google Docs gibi) */
+.note-grid-panel{display:grid;gap:8px;justify-items:start}
+.note-grid-title{margin:0;font-weight:600;font-size:var(--ba-small)}
+.note-grid{display:grid;grid-template-columns:repeat(var(--grid-cols,10),22px);gap:3px;padding:3px;border-radius:4px}
+.note-grid:focus-visible{outline:3px solid var(--ba-focus);outline-offset:2px}
+.note-grid-cell{width:22px;height:22px;border:1px solid var(--ba-line-strong);border-radius:2px;background:var(--ba-ground);cursor:pointer}
+.note-grid-cell.is-on{border-color:var(--ba-accent);background:var(--ba-accent)}
+.note-grid-size{margin:0;font-weight:700;font-variant-numeric:tabular-nums;color:var(--ba-ink)}
+.note-grid-panel .acc-hint{max-width:260px}
+.note-tool[aria-disabled="true"]{opacity:.45;cursor:not-allowed}
+.note-tool[aria-disabled="true"]:hover{background:transparent}
 .note-table-ops{display:grid;grid-template-columns:1fr 1fr;gap:6px}
 .academy-theme .note-table-panel .btn{min-height:40px;padding:0 10px;font-size:var(--ba-small)}
 .academy-theme .note-table-panel .btn:disabled{opacity:.45;cursor:not-allowed}
@@ -109,15 +127,25 @@
 .note-teacher-list .acc-row-actions{flex-wrap:wrap}
 
 /* Tam ekran (öğretmen) */
-.note-card:fullscreen{overflow:auto;border-radius:0;border:0;background:var(--ba-ground);padding:clamp(14px,2vw,28px) clamp(14px,4vw,64px)}
+.note-card:fullscreen{--note-pad-top:clamp(14px,2vw,28px);scroll-padding-top:calc(var(--note-sticky-h,0px) + 12px);scroll-padding-bottom:48px;overflow:auto;border-radius:0;border:0;background:var(--ba-ground);padding:clamp(14px,2vw,28px) clamp(14px,4vw,64px)}
 .note-card:fullscreen .note-content .ql-editor{min-height:calc(100vh - 260px)}
 body.note-fullscreen{overflow:hidden}
-body.note-fullscreen .note-card{position:fixed;inset:0;z-index:1000;overflow:auto;border-radius:0;border:0;background:var(--ba-ground)}
+/* Tam ekranda çubuk kartın en üstüne yapışır (kartın üst boşluğu kadar yukarı). */
+.note-card:fullscreen .note-sticky{top:calc(-1 * var(--note-pad-top))}
+body.note-fullscreen .note-card{--note-pad-top:clamp(14px,2.4vw,28px)}
+body.note-fullscreen .note-sticky{top:calc(-1 * var(--note-pad-top))}
+body.note-fullscreen .note-card{position:fixed;inset:0;z-index:1000;overflow:auto;border-radius:0;border:0;background:var(--ba-ground);scroll-padding-top:calc(var(--note-sticky-h,0px) + 12px);scroll-padding-bottom:48px}
 
 @media (max-width:640px){
   .note-head-side{justify-items:start;text-align:left}
   .note-group{display:contents}
-  .note-toolbar{gap:4px}
+  /* Telefonda araç çubuğu tek satır, yana kayar; kayıt durumu altında küçük. */
+  .note-sticky{flex-wrap:wrap;gap:4px}
+  .note-toolbar{flex:1 1 100%;flex-wrap:nowrap;overflow-x:auto;gap:4px;padding:4px;scrollbar-width:thin}
+  .note-toolbar>*{flex:none}
+  .note-sticky .note-save{margin-left:auto;padding:3px 10px;font-size:.8125rem}
+  .note-grid{grid-template-columns:repeat(var(--grid-cols,10),26px)}
+  .note-grid-cell{width:26px;height:26px}
   .note-tool{min-width:44px;min-height:44px}
   .note-swatch{width:44px;height:44px}
   .note-swatches{grid-template-columns:repeat(4,44px)}
@@ -130,7 +158,7 @@ body.note-fullscreen .note-card{position:fixed;inset:0;z-index:1000;overflow:aut
 @page{margin:16mm 14mm}
 @media print{
   #noteEyebrow{display:none!important}
-  .note-page .topbar,.note-page footer,.note-page .acc-back,.note-page .skip-link,.note-toolbar,.note-view-actions,.note-banner,.note-head-side,.note-help,.note-page .floating-contact,.note-page #noteMissing,.note-live{display:none!important}
+  .note-page .topbar,.note-page footer,.note-page .acc-back,.note-page .skip-link,.note-toolbar,.note-sticky,.note-view-actions,.note-banner,.note-head-side,.note-help,.note-page .floating-contact,.note-page #noteMissing,.note-live{display:none!important}
   html,body.note-page,.note-page .shell,.note-page main{background:#fff!important;color:#000!important}
   .note-page main{width:auto!important;margin:0!important;padding:0!important}
   .note-card,.note-paper{border:0!important;padding:0!important;background:#fff!important;box-shadow:none!important}

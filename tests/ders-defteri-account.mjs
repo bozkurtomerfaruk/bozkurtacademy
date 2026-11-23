@@ -92,7 +92,8 @@ const shot = async (page, name) => { await page.evaluate(() => window.scrollTo(0
 const noOverflow = (page) => page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth <= 0
   && [...document.querySelectorAll('.note-card, .note-list-item, .acc-section')].every((c) => {
     const right = c.getBoundingClientRect().right + 1;
-    return [...c.querySelectorAll('*')].filter((e) => !e.closest('.note-menu-panel')).every((e) => !e.getClientRects().length || e.getBoundingClientRect().right <= right);
+    // Telefonda araç çubuğu yana kayar: içindeki düğmeler değil, çubuğun kendisi karta sığmalı.
+    return [...c.querySelectorAll('*')].filter((e) => !e.closest('.note-menu-panel') && (!e.closest('.note-toolbar') || e.classList.contains('note-toolbar'))).every((e) => !e.getClientRects().length || e.getBoundingClientRect().right <= right);
   }));
 const waitFor = async (fn, ms = 10000, step = 200) => { const end = Date.now() + ms; for (;;) { const v = await fn(); if (v) return v; if (Date.now() > end) return v; await new Promise((r) => setTimeout(r, step)); } };
 const TODAY = new Intl.DateTimeFormat('de-DE', { timeZone: 'Europe/Berlin', day: '2-digit', month: '2-digit', year: 'numeric' }).format(new Date());
@@ -132,12 +133,20 @@ ok((await student.textContent('#notesList')).includes('Henüz ders notun yok'), 
 // ---- 3. Yazma ve otomatik kayıt ----
 await teacher.keyboard.type('Hallo zusammen! Heute: Perfekt.');
 await teacher.waitForTimeout(400);
-ok((await saveState(teacher)).includes('Kaydediliyor'), 'yazarken durum "Kaydediliyor…"');
+ok((await saveState(teacher)).includes('Kaydedilmeyi bekliyor'), 'yazarken durum "Kaydedilmeyi bekliyor" (henüz yazma isteği yok)');
+// "Kaydediliyor…" yalnızca sunucuya yazılırken; yazmayı bırakınca en geç ~3 sn'de "Kaydedildi ✓".
+await teacher.evaluate(() => { window.__tl = []; const el = document.querySelector('#saveState'); const t0 = performance.now(); new MutationObserver(() => window.__tl.push([Math.round(performance.now() - t0), el.textContent])).observe(el, { childList: true, characterData: true, subtree: true }); });
 const t0 = Date.now();
 const saved = await waitFor(async () => (await noteText(noteId)).includes('Heute: Perfekt.'), 6000, 100);
 ok(saved, `yazmayı bırakınca kaydedildi (${Date.now() - t0} ms)`);
 await waitFor(async () => (await saveState(teacher)).includes('Kaydedildi'), 3000);
 ok((await saveState(teacher)).includes('Kaydedildi ✓'), 'durum "Kaydedildi ✓"');
+{
+  const tl = await teacher.evaluate(() => window.__tl);
+  const start = tl.find(([, t]) => t === 'Kaydediliyor…')?.[0], end = tl.find(([, t]) => t.startsWith('Kaydedildi'))?.[0];
+  console.log('     durum zaman çizelgesi:', JSON.stringify(tl));
+  ok(start !== undefined && end !== undefined && end - start < 1500 && end < 3500, `"Kaydediliyor…" kısa görünüyor (${end - start} ms), takılı kalmıyor`);
+}
 let d = await noteDoc(noteId);
 ok(d.lessonId === 'ders1' && /^\d{4}-\d\d-\d\d$/.test(d.day) && d.title === `${TODAY} – Ders`, 'belge: takvimdeki derse bağlı, gün ve başlık doğru');
 ok(new URL(teacher.url()).searchParams.get('ders') === null, 'ilk kayıttan sonra adres ?not ile (ders parametresi kalktı)');
@@ -231,29 +240,56 @@ const punkt = await line('Punkt');
 ok(punkt.list === 'bullet' && punkt.cls.includes('ql-indent-1'), `madde listesi ve satır başında Tab ile girinti ${JSON.stringify(punkt)}`);
 await teacher.keyboard.press('Shift+Tab');
 await teacher.keyboard.press('Enter'); await teacher.keyboard.press('Enter');
-// Tablo
-await teacher.click('#tableMenu summary');
-ok(await teacher.locator('[data-table="insertRowBelow"]').isDisabled(), 'tablo dışındayken satır/sütun düğmeleri kapalı');
-await teacher.fill('#tableRows', '2'); await teacher.fill('#tableCols', '2');
-await teacher.click('[data-table="insertTable"]');
-const cells = () => teacher.evaluate(() => [...document.querySelectorAll('#editor table tr')].map((tr) => tr.children.length));
-ok(JSON.stringify(await cells()) === '[2,2]', '2×2 tablo eklendi');
+// Tablo: ızgara (Google Docs gibi). Önce klavyeyle: Enter ile aç, oklarla seç, Esc ile kapat, Enter ile ekle.
+const lastTable = () => teacher.evaluate(() => { const t = [...document.querySelectorAll('#editor table')].pop(); return t ? [...t.querySelectorAll('tr')].map((tr) => tr.children.length) : []; });
+const tableCount = () => teacher.locator('#editor table').count();
+ok(await teacher.getAttribute('#tableEditMenu summary', 'aria-disabled') === 'true', 'tablo dışındayken "Tabloyu düzenle" kapalı');
+await teacher.click('#tableEditMenu summary', { force: true });
+ok(!(await teacher.evaluate(() => document.querySelector('#tableEditMenu').open)), 'kapalı "Tabloyu düzenle" menüsü açılmıyor');
+await teacher.focus('#tableMenu summary');
+await teacher.keyboard.press('Enter');
+await waitFor(() => teacher.evaluate(() => document.activeElement.id === 'tableGrid'), 2000, 50);
+ok(await teacher.evaluate(() => document.querySelector('#tableMenu').open && document.activeElement.id === 'tableGrid'), 'klavye: Enter ızgarayı açıyor, odak ızgarada');
+ok(await teacher.locator('#tableGrid .note-grid-cell').count() === 80, 'ızgara 10 sütun × 8 satır');
+await teacher.keyboard.press('ArrowRight'); await teacher.keyboard.press('ArrowDown');
+ok((await teacher.textContent('#tableSize')) === '2 × 2' && await teacher.locator('#tableGrid .is-on').count() === 4, 'klavye: oklarla 2 × 2 seçiliyor, 4 kare boyalı');
+await teacher.keyboard.press('Escape');
+ok(await teacher.evaluate(() => !document.querySelector('#tableMenu').open && document.activeElement === document.querySelector('#tableMenu summary')), 'Esc ızgarayı kapatıyor, odak "Tablo" düğmesinde');
+await teacher.keyboard.press('Enter');
+await waitFor(() => teacher.evaluate(() => document.activeElement.id === 'tableGrid'), 2000, 50);
+for (let i = 0; i < 12; i++) await teacher.keyboard.press('ArrowRight');
+for (let i = 0; i < 12; i++) await teacher.keyboard.press('ArrowDown');
+ok((await teacher.textContent('#tableSize')) === '10 × 8', 'klavye: sınırda duruyor (10 × 8)');
+for (let i = 0; i < 8; i++) await teacher.keyboard.press('ArrowLeft');
+for (let i = 0; i < 6; i++) await teacher.keyboard.press('ArrowUp');
+await teacher.keyboard.press('Enter');
+ok(JSON.stringify(await lastTable()) === '[2,2]' && !(await teacher.evaluate(() => document.querySelector('#tableMenu').open)), 'klavye: Enter 2 × 2 tablo ekliyor');
 await teacher.keyboard.type('der');
+ok(await teacher.getAttribute('#tableMenu summary', 'aria-disabled') === 'true' && await teacher.getAttribute('#tableEditMenu summary', 'aria-disabled') === 'false', 'tablonun içindeyken "Tablo" kapalı, "Tabloyu düzenle" açık');
+// Fareyle: imleç tablonun altında; 3 × 4 (sütun × satır) üzerine gel, kareler boyansın, tıkla.
+await teacher.keyboard.press('Control+End');
 await teacher.click('#tableMenu summary');
-await teacher.click('[data-table="insertRowBelow"]');
+await teacher.hover('#tableCell-4-3');
+ok((await teacher.textContent('#tableSize')) === '3 × 4' && await teacher.locator('#tableGrid .is-on').count() === 12, 'fare: 3 × 4 üzerine gelince 12 kare boyalı, altında "3 × 4"');
+await teacher.screenshot({ path: path.join(shotDir, 'tablo-izgarasi-3x4-1440-acik.png'), clip: await teacher.locator('#tableMenu .note-menu-panel').boundingBox().then((b) => ({ x: b.x - 40, y: b.y - 70, width: b.width + 80, height: b.height + 90 })) });
+const before34 = await tableCount();
+await teacher.click('#tableCell-4-3');
+ok(await tableCount() === before34 + 1 && JSON.stringify(await lastTable()) === '[3,3,3,3]', 'fare: ızgaradan 3 sütun × 4 satır tablo eklendi (önceki tabloyla birleşmedi)');
+// Satır/sütun ekle-sil: "Tabloyu düzenle" menüsünde.
+const edit = async (action) => { await teacher.click('#tableEditMenu summary'); await teacher.click(`[data-table="${action}"]`); };
+await edit('insertRowBelow'); await edit('insertColumnRight');
+ok(JSON.stringify(await lastTable()) === '[4,4,4,4,4]', 'alta satır ve sağa sütun eklendi');
+await edit('deleteColumn'); await edit('deleteRow');
+ok(JSON.stringify(await lastTable()) === '[3,3,3,3]', 'sütun ve satır silindi');
+await edit('insertRowAbove'); await edit('insertColumnLeft');
+ok(JSON.stringify(await lastTable()) === '[4,4,4,4,4]', 'üste satır ve sola sütun eklendi');
+// Dolu bir satırın ortasındayken tablo: satır bölünmez, tablo altına gelir.
+await teacher.keyboard.press('Control+End');
+await teacher.keyboard.type('Vorher Nachher');
+for (let i = 0; i < 8; i++) await teacher.keyboard.press('ArrowLeft');
 await teacher.click('#tableMenu summary');
-await teacher.click('[data-table="insertColumnRight"]');
-ok(JSON.stringify(await cells()) === '[3,3,3]', 'alta satır ve sağa sütun eklendi');
-await teacher.click('#tableMenu summary');
-await teacher.click('[data-table="deleteColumn"]');
-await teacher.click('#tableMenu summary');
-await teacher.click('[data-table="deleteRow"]');
-ok(JSON.stringify(await cells()) === '[2,2]', 'sütun ve satır silindi');
-await teacher.click('#tableMenu summary');
-await teacher.click('[data-table="insertRowAbove"]');
-await teacher.click('#tableMenu summary');
-await teacher.click('[data-table="insertColumnLeft"]');
-ok(JSON.stringify(await cells()) === '[3,3,3]', 'üste satır ve sola sütun eklendi');
+await teacher.click('#tableCell-1-2');
+ok(await teacher.evaluate(() => { const p = [...document.querySelectorAll('#editor .ql-editor > p')].find((e) => e.textContent.includes('Vorher')); return p?.textContent === 'Vorher Nachher' && p.nextElementSibling?.tagName === 'TABLE'; }), 'satırın ortasındayken tablo satırı bölmüyor, altına ekleniyor');
 // Bağlantı
 await teacher.keyboard.press('Control+End');
 await teacher.keyboard.type('Grammatik');
@@ -272,8 +308,8 @@ await teacher.keyboard.press('Control+End');
 await teacher.keyboard.press('Enter');
 
 await waitFor(async () => (await saveState(teacher)).includes('Kaydedildi'), 8000);
-await waitFor(async () => (await student.locator('#viewer table').count()) === 1 && (await student.locator('#viewer a').count()) === 1, 8000);
-ok(await student.locator('#viewer .ba-c-kirmizi.ba-bg-sari').count() === 1 && await student.locator('#viewer h2').count() >= 1 && await student.locator('#viewer table tr').count() === 3, 'öğrenci biçimleri, başlığı ve tabloyu görüyor');
+await waitFor(async () => (await student.locator('#viewer table').count()) === 3 && (await student.locator('#viewer a').count()) === 1, 8000);
+ok(await student.locator('#viewer .ba-c-kirmizi.ba-bg-sari').count() === 1 && await student.locator('#viewer h2').count() >= 1 && await student.locator('#viewer table').count() === 3 && await student.locator('#viewer table').nth(1).locator('tr').count() === 5, 'öğrenci biçimleri, başlığı ve tabloları görüyor');
 const sLink = student.locator('#viewer a');
 ok(await sLink.getAttribute('target') === '_blank' && await sLink.getAttribute('rel') === 'noopener noreferrer' && (await sLink.getAttribute('href')).startsWith('https://'), 'öğrencinin ekranında bağlantı yeni sekmede (noopener noreferrer)');
 
@@ -354,7 +390,7 @@ ok(JSON.stringify(gTable) === JSON.stringify([['Kasus', 'maskulin', 'feminin'], 
 ops = await editorOps(teacher2);
 ok(ops.find((o) => o.insert === 'Artikel-Tabelle')?.attributes?.bold === true, 'Google Docs: kalın yazı korunuyor');
 ok(!ops.some((o) => o.attributes && (o.attributes.color || o.attributes.background) && !['kirmizi', 'mavi', 'yesil', 'turuncu', 'mor', 'gri', 'sari', 'pembe'].includes(o.attributes.color || o.attributes.background)), 'Google Docs: palet dışı renk kalmadı');
-ok(ops.find((o) => o.insert === 'der')?.attributes?.color === 'kirmizi' && ops.find((o) => o.insert === 'die' && o.attributes?.background)?.attributes?.background === 'sari' && !ops.some((o) => o.insert === 'Nominativ' && o.attributes?.color), 'Google Docs: kırmızı yazı ve sarı vurgu palete çevrildi, siyah atıldı');
+ok(ops.some((o) => o.insert === 'der' && o.attributes?.color === 'kirmizi') && ops.find((o) => o.insert === 'die' && o.attributes?.background)?.attributes?.background === 'sari' && !ops.some((o) => o.insert === 'Nominativ' && o.attributes?.color), 'Google Docs: kırmızı yazı ve sarı vurgu palete çevrildi, siyah atıldı');
 ok(await teacher2.evaluate(() => ![...document.querySelectorAll('#editor .ql-editor *')].some((e) => e.getAttribute('style'))), 'Google Docs: satır içi stil kalmadı');
 await teacher2.keyboard.press('Control+End'); await teacher2.keyboard.press('Enter');
 ok(await teacher2.evaluate(() => { const last = document.querySelector('#editor .ql-editor').lastElementChild; return last.tagName === 'P'; }), 'tablo en sonda kalınca altında boş satır var (imleç tablodan çıkabiliyor)');
@@ -495,6 +531,76 @@ await student.emulateMedia({ media: 'print' });
 ok(await student.evaluate(() => ['.topbar', 'footer', '.note-view-actions', '#liveHint'].every((s) => { const e = document.querySelector(s); return !e || !e.checkVisibility(); })), 'öğrencinin yazdırma görünümü sade');
 await student.emulateMedia({ media: 'screen' });
 
+// ---- 13b. Yapışkan araç çubuğu: uzun notta aşağı inince çubuk ve kayıt durumu görünür, imleçteki satırı örtmez ----
+const stickyState = (pg) => pg.evaluate(() => {
+  const q = window.Quill.find(document.querySelector('#editor'));
+  const tb = document.querySelector('#noteToolbar').getBoundingClientRect();
+  const save = document.querySelector('#saveState').getBoundingClientRect();
+  const full = document.fullscreenElement === document.querySelector('#noteCard') || document.body.classList.contains('note-fullscreen');
+  const topbar = full ? 0 : document.querySelector('.topbar').getBoundingClientRect().bottom;
+  const sel = q.getSelection();
+  const b = sel ? q.getBounds(sel.index) : null;
+  const root = q.root.getBoundingClientRect();
+  const caret = b ? { top: root.top + b.top, bottom: root.top + b.top + b.height } : null;
+  const hit = document.elementFromPoint(tb.left + 20, tb.top + tb.height / 2);
+  return {
+    scrolled: Math.max(scrollY, document.querySelector('#noteCard').scrollTop), toolbarTop: Math.round(tb.top), toolbarBottom: Math.round(tb.bottom), topbar: Math.round(topbar),
+    toolbarOnTop: Boolean(hit?.closest('#noteToolbar')), saveVisible: save.top >= topbar - 1 && save.bottom <= innerHeight && save.height > 0,
+    caret, caretVisible: Boolean(caret && caret.top >= tb.bottom - 1 && caret.bottom <= innerHeight), vh: innerHeight
+  };
+});
+await teacher2.goto(`${BASE}/ogretmen-ders.html?ogrenci=ogrenci1&not=${noteId}`);
+await teacher2.waitForSelector('#noteApp:not([hidden])', { timeout: 15000 });
+await teacher2.click(ed); await teacher2.keyboard.press('Control+End');
+await paste(teacher2, { text: Array.from({ length: 120 }, (_, i) => `Satz ${i + 1}: Ich habe heute Deutsch gelernt.`).join('\n') });
+await teacher2.keyboard.press('Control+End');
+await teacher2.keyboard.type(' Ende');
+await teacher2.waitForTimeout(300);
+let st = await stickyState(teacher2);
+console.log('     yapışkan (sayfa sonu):', JSON.stringify(st));
+ok(st.scrolled > 1500 && Math.abs(st.toolbarTop - st.topbar) <= 8 && st.toolbarOnTop, 'uzun notta aşağı inince araç çubuğu üst menünün hemen altında, üstünde başka bir şey yok');
+ok(st.saveVisible, 'kayıt durumu da görünür kalıyor');
+ok(st.caretVisible, 'en altta yazarken imleçteki satır görünür (çubuk örtmüyor)');
+await waitFor(async () => (await saveState(teacher2)).includes('Kaydedildi'), 8000);
+ok((await teacher2.textContent('#saveState')).includes('Kaydedildi ✓') && (await stickyState(teacher2)).saveVisible, '"Kaydedildi ✓" aşağıdayken de görünüyor');
+await teacher2.screenshot({ path: path.join(shotDir, 'yapiskan-cubuk-1440-acik.png') });
+// Yukarı doğru imleçle gidince satır çubuğun altında kalmamalı.
+for (let i = 0; i < 40; i++) await teacher2.keyboard.press('ArrowUp');
+st = await stickyState(teacher2);
+ok(st.caretVisible && Math.abs(st.toolbarTop - st.topbar) <= 8, `yukarı çıkarken imleçteki satır çubuğun altında kalmıyor (imleç ${Math.round(st.caret?.top)} px, çubuk altı ${st.toolbarBottom} px)`);
+// Koyu tema
+await teacher2.evaluate(() => { localStorage.setItem('ba-theme', 'dark'); document.documentElement.setAttribute('data-theme', 'dark'); });
+await teacher2.keyboard.press('Control+End');
+await teacher2.waitForTimeout(200);
+st = await stickyState(teacher2);
+ok(st.toolbarOnTop && st.saveVisible && await teacher2.evaluate(() => getComputedStyle(document.querySelector('#noteSticky')).backgroundColor !== 'rgba(0, 0, 0, 0)'), 'koyu temada çubuk yapışık ve arka planı dolu (metin altından görünmüyor)');
+await teacher2.screenshot({ path: path.join(shotDir, 'yapiskan-cubuk-1440-koyu.png') });
+// Tam ekran
+await teacher2.click('#fullBtn');
+await teacher2.waitForTimeout(400);
+await teacher2.click(ed); await teacher2.keyboard.press('Control+End'); await teacher2.keyboard.type('!');
+await teacher2.waitForTimeout(300);
+st = await stickyState(teacher2);
+console.log('     yapışkan (tam ekran):', JSON.stringify(st));
+ok(st.scrolled > 1500 && st.toolbarTop <= 8 && st.toolbarOnTop && st.saveVisible && st.caretVisible, 'tam ekranda da araç çubuğu ve kayıt durumu üstte, imleçteki satır görünür');
+await teacher2.screenshot({ path: path.join(shotDir, 'yapiskan-cubuk-tam-ekran-1440-koyu.png') });
+await teacher2.click('#fullBtn');
+await teacher2.waitForTimeout(300);
+// Telefon genişliği
+await teacher2.setViewportSize({ width: 390, height: 844 });
+await teacher2.click(ed); await teacher2.keyboard.press('Control+End'); await teacher2.keyboard.type('?');
+await teacher2.waitForTimeout(400);
+st = await stickyState(teacher2);
+ok(Math.abs(st.toolbarTop - st.topbar) <= 8 && st.toolbarOnTop && st.saveVisible && st.caretVisible && st.toolbarBottom - st.toolbarTop < 70, `390: çubuk tek satır (${st.toolbarBottom - st.toolbarTop} px), yapışık, imleç görünür`);
+ok(await noOverflow(teacher2), '390: uzun notta yatay taşma yok');
+await teacher2.screenshot({ path: path.join(shotDir, 'yapiskan-cubuk-390-koyu.png') });
+await teacher2.setViewportSize({ width: 1440, height: 900 });
+await teacher2.evaluate(() => { localStorage.setItem('ba-theme', 'light'); document.documentElement.setAttribute('data-theme', 'light'); });
+// Uzun metni geri al (sonraki adımlar kısa notla devam etsin).
+await teacher2.keyboard.press('Control+Z'); await teacher2.keyboard.press('Control+Z'); await teacher2.keyboard.press('Control+Z'); await teacher2.keyboard.press('Control+Z');
+await waitFor(async () => !(await teacher2.textContent(ed)).includes('Satz 120'), 3000);
+await waitFor(async () => (await saveState(teacher2)).includes('Kaydedildi'), 8000);
+
 // ---- 14. Takvimden açma ----
 await teacher2.goto(`${BASE}/ogretmen-takvim.html`);
 await teacher2.waitForSelector('[data-lesson], .cal-lesson, .acc-cal-lesson', { timeout: 15000 }).catch(() => {});
@@ -523,8 +629,10 @@ for (const theme of ['light', 'dark']) {
     ok(await noOverflow(tp), `${width} ${theme}: öğretmenin ders sayfası taşmıyor`);
     ok(await tp.evaluate(() => { const t = document.querySelector('#noteTitle'); return t.scrollHeight <= t.clientHeight + 2 && t.scrollWidth <= t.clientWidth + 1; }), `${width} ${theme}: başlık kesilmeden görünüyor`);
     await shot(tp, `ogretmen-ders-${width}-${theme}`);
+    await tp.click('#editor .ql-editor'); await tp.keyboard.press('Control+End');
     await tp.click('#tableMenu summary');
-    ok(await tp.evaluate(() => { const r = document.querySelector('#tableMenu .note-menu-panel').getBoundingClientRect(); return r.left >= 0 && r.right <= innerWidth; }), `${width} ${theme}: tablo menüsü ekrana sığıyor`);
+    await tp.hover('#tableCell-4-3');
+    ok(await tp.evaluate(() => { const r = document.querySelector('#tableMenu .note-menu-panel').getBoundingClientRect(); return r.left >= 0 && r.right <= innerWidth && r.bottom <= innerHeight; }), `${width} ${theme}: tablo ızgarası ekrana sığıyor`);
     await tp.screenshot({ path: path.join(shotDir, `ogretmen-ders-tablo-menusu-${width}-${theme}.png`) });
     await tp.goto(`${BASE}/ogretmen-ogrenci.html?id=ogrenci1`);
     await tp.waitForSelector('#studentApp:not([hidden])', { timeout: 15000 });

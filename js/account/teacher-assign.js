@@ -8,7 +8,7 @@ import {
 } from './common.js';
 import { fs } from './firebase.js';
 import { defaultTitle, KIND_LABELS, linkKind, linkLabel, MAX_LINKS, topicTitles, validLinkUrl, wholeTopicAllowed } from './assignments.js?v=1';
-import * as drive from './drive.js?v=1';
+import * as drive from './drive.js?v=2';
 import { mailConfigured, notifyHomework, rememberResult } from './homework-mail.js?v=1';
 import { createAssignments, isEnabled, listStudents, loadAssignmentGroups, requireTeacher, updateAssignmentGroup } from './teacher-common.js';
 

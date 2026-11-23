@@ -4,11 +4,12 @@ import { TEACHER_EMAIL, TEACHER_UID } from './config.js';
 import { registerStrings, t, lang } from './i18n.js';
 import { feedbackView } from './writing-feedback.js?v=1';
 import { normalizeAssignment } from './assignments.js?v=1';
+import { loadResourceList, resourceItem } from './resources.js?v=1';
 import { isLive, loadNotes } from './lesson-notes.js?v=1';
 import { defaultTitle } from './note-format.js?v=1';
 import {
   $, accountState, clearHint, currentUser, exerciseNames, formatDateTime, h,
-  loadAssignments, loadProfile, loadResources, loadResults, loadWritings, safeLink, scoreText, sendVerification, setHint, setStatus,
+  loadAssignments, loadProfile, loadResults, loadWritings, safeLink, scoreText, sendVerification, setHint, setStatus,
   summarizeResults, syncEmailVerified, syncLang, toDate, unseenFeedback, writingTitle, writingUrl
 } from './common.js';
 
@@ -300,10 +301,10 @@ function renderNotes(){
     : [h('p', { class: 'acc-empty' }, t('notesEmpty'))]));
 }
 
+// Yardımcı kaynaklar: bağlantı ya da PDF (simgeyle), yeni sekmede açılır. Eski kayıtlar bağlantı olarak görünür.
 function renderResources(){
   $('resourceList').replaceChildren(...(resources.length
-    ? [h('ul', { class: 'acc-resource-list' }, resources.map((r) =>
-      h('li', {}, h('div', {}, safeLink(r.url, r.title), r.note ? h('span', { class: 'acc-sub' }, r.note) : null))))]
+    ? [h('ul', { class: 'acc-resource-list' }, resources.map((r) => h('li', { 'data-resource': r.id }, resourceItem(r, { pdfLabel: t('panelResourcesPdf') }))))]
     : [h('p', { class: 'acc-hint' }, t('panelResourcesEmpty'))]));
 }
 
@@ -355,7 +356,7 @@ async function start(){
     $('verifyCard').hidden = verified;
     if(accountState(profile) === 'active'){
       [results, assignments, resources, lessons, writings] = await Promise.all([
-        loadResults(user.uid), loadAssignments(user.uid), loadResources(user.uid), loadLessons(user.uid),
+        loadResults(user.uid), loadAssignments(user.uid), loadResourceList(user.uid), loadLessons(user.uid),
         loadWritings(user.uid).catch((error) => { console.warn(error); return []; })
       ]);
       notes = await loadNotes(user.uid).catch((error) => { console.warn(error); return []; });

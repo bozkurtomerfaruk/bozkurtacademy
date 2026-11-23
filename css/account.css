@@ -371,3 +371,23 @@
 .acc-ai-item p{margin:0}
 .acc-item-by{margin-left:6px;min-height:22px;font-size:12px}
 .acc-writing-revision{margin-left:clamp(12px,3vw,28px)}
+
+/* Yardımcı kaynaklar (js/account/resources.js): simge + başlık, PDF/bağlantı türü, öğretmen formu. */
+.acc-res-main{display:grid;gap:2px;min-width:0}
+.acc-res-link{display:inline-flex;align-items:flex-start;gap:10px;min-width:0;font-weight:600;color:var(--ba-ink);text-decoration:none}
+a.acc-res-link .acc-res-title{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;overflow-wrap:anywhere}
+a.acc-res-link:hover .acc-res-title{text-decoration-thickness:2px}
+.acc-res-icon{flex:none;width:26px;height:26px;margin-top:-1px}
+.acc-res-icon-pdf{color:var(--ba-wrong)}
+.acc-res-icon-link{color:var(--ba-accent)}
+.acc-res-main .acc-sub{padding-left:36px}
+.acc-res-kind{display:flex;flex-wrap:wrap;gap:4px 20px;margin:0;padding:0;border:0}
+.acc-res-kind legend{margin-bottom:6px;color:var(--ba-ink);font-weight:600;font-size:var(--ba-small)}
+.acc-res-pdf,.acc-res-students{display:grid;gap:8px}
+.acc-res-pdf[hidden]{display:none}
+.acc-res-pdf-label{color:var(--ba-ink);font-weight:600;font-size:var(--ba-small)}
+.acc-res-pdf-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.acc-res-file{display:inline-flex;align-items:center;min-height:40px;padding:6px 12px;border:2px solid var(--ba-line);border-radius:10px;font-size:var(--ba-small);overflow-wrap:anywhere;min-width:0}
+.acc-res-progress{width:100%;height:10px;accent-color:var(--ba-accent)}
+.acc-res-pdf .acc-status{margin:0}
+.acc-resource-list .acc-res-main{flex:1}

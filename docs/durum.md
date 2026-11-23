@@ -2,6 +2,16 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-23 · Ödevler: PDF'i Google Drive'a yükleme (PR 2/2)
+
+- **PR 1 (#127) birleştirildi** (onayınla; main alındı, testler yeniden geçti, CodeQL uyarısı düzeltildi: testte URL'nin `includes` ile denetlenmesi tam eşitliğe çevrildi).
+- **Senin Google Cloud ayarların (23 Kasım):** Drive API etkin, `drive.file` kapsamı eklendi (hassas olmayan izin). Uygulama "In Produktion", doğrulamaya gönderilmedi. `drive.file` hassas olmadığı için doğrulama gerekmiyor; takvimin `calendar.events` izni hassas olduğu için izin penceresinde "Google bu uygulamayı doğrulamadı" uyarısı görünebilir; uygulamayı sadece sen kullandığın için sorun değil.
+- **Akış (`js/account/drive.js`):** Formda **PDF ekle** → ilk seferde Google izin penceresi (Google Identity Services, sadece `drive.file`) → **PDF seç** → denetim (uzantı/tür PDF, içerik `%PDF-` ile başlıyor, en çok 20 MB) → "Bozkurt Academy Ödevler" klasörü bulunur ya da oluşturulur → resumable yükleme (ilerleme çubuğu) → "bağlantıya sahip olan herkes görüntüleyebilir" izni → `https://drive.google.com/file/d/<id>/view` ödeve `kind: 'pdf'` bağlantı olarak eklenir. Yükleme sürerken ödev kaydedilemez. Ödev silinince PDF Drive'da kalır (kararın).
+- **Belirteç:** Takvimdeki gibi bellekte ve aynı sekmede `sessionStorage` (`baGdriveSession`), sadece öğretmen sayfalarında; çıkışta silinir. `localStorage`'da sadece klasörün kimliği (`baGdriveFolder`). CSP değişmedi (`www.googleapis.com` zaten izinli). Spark planında; ücret yok.
+- **Gizlilik:** `privacy.html` 7. bölüm "Google Calendar, Google Meet ve Google Drive" oldu; TR/DE/EN Drive paragrafı (PDF'ler öğretmenin materyali, öğrenci verisi konmaz, `drive.file`, bağlantı açılınca Google'ın sayfası yüklenir, diğer bağlantılar yeni sekmede, gömülü içerik yok). `docs/privacy-policy.md` tablosuna Drive satırı.
+- **Testler:** `test:csp` canlı kökende gerçek kod yolu (sadece `drive.file` isteniyor; klasör arama/oluşturma, resumable yükleme, paylaşım izninin gövdesi, her istekte belirteç, sahte/büyük/PDF olmayan dosya reddi, `drive-mock.js` canlıda yüklenmiyor) geçti; `test:odev` arayüz akışı (izin reddi, bağlanma, 3 hatalı dosya, yükleme hatası, başarılı yükleme, öğrencinin PDF bağlantısını görmesi, ekran matrisi) geçti; `npm test` 220/220, `test:sinav`, `test:level-exam`, `test:schreiben`, takvim bağlantısı testi, hesap çevirileri ve statik kontroller geçti.
+- **Canlıda senin denemen:** Birleştirip yayınlandıktan sonra `ogretmen-odev.html` → PDF ekle → izin → küçük bir PDF yükle; Drive'ında klasörü ve paylaşımı, öğrenci hesabında bağlantının açıldığını kontrol et. (Geliştirme ortamından gerçek Google'a bağlanılamadığı için bu adım test edilemedi.)
+
 ## 2026-11-23 · Ödevler: Classroom düzeni (PR 1/2)
 
 - **Plan onaylandı (kararların):** teslim tarihi isteğe bağlı; ödev verildikten sonra düzenlenebilir; ödev silinince Drive'daki PDF kalır; bağlantı denetimi formda, öğretmen kuralı daraltılmadı. PDF yükleme (Google Drive, `drive.file`) PR 2'de.

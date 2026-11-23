@@ -75,7 +75,7 @@ const GIF = Buffer.from('R0lGODlhAQABAAAAACw=', 'base64');
 const GIS_STUB = `(function(){
   var l=document.createElement('link');l.rel='stylesheet';l.href='https://accounts.google.com/gsi/style';document.head.append(l);
   window.google={accounts:{oauth2:{
-    initTokenClient:function(o){return{requestAccessToken:function(){setTimeout(function(){o.callback({access_token:'test-token',expires_in:3600,scope:o.scope})},10)}}},
+    initTokenClient:function(o){(window.__gisScopes=window.__gisScopes||[]).push(o.scope);return{requestAccessToken:function(){setTimeout(function(){o.callback({access_token:'test-token',expires_in:3600,scope:o.scope})},10)}}},
     hasGrantedAllScopes:function(){return true}
   }}};
 })();`;
@@ -118,6 +118,20 @@ async function context({ live = true, theme = 'light', emulator = false, extraIn
     if(url.hostname === 'firestore.googleapis.com' && url.pathname.endsWith(':runQuery')) return json(log.runQuery || []);
     if(url.hostname === 'identitytoolkit.googleapis.com') return json({ error: { code: 400, message: 'INVALID_LOGIN_CREDENTIALS' } }, 400);
     if(url.hostname === 'www.googleapis.com' && url.pathname.startsWith('/calendar/')) return json({ id: 'ev1', hangoutLink: 'https://meet.google.com/abc-defg-hij', items: [] });
+    // Google Drive API (ödev PDF'leri): klasör arama/oluşturma, resumable yükleme, paylaşım izni.
+    if(url.hostname === 'www.googleapis.com' && (url.pathname.startsWith('/drive/') || url.pathname.startsWith('/upload/drive/'))){
+      const drive = (log.drive ||= []);
+      drive.push({ method: req.method(), path: url.pathname, query: Object.fromEntries(url.searchParams), auth: req.headers().authorization || '',
+        body: req.method() === 'PUT' ? `(${(req.postDataBuffer() || Buffer.alloc(0)).length} bayt)` : (req.postData() || '') });
+      const cors = { 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'Location' };
+      if(req.method() === 'GET' && url.pathname === '/drive/v3/files') return json({ files: [] });
+      if(req.method() === 'POST' && url.pathname === '/drive/v3/files') return json({ id: 'folder1' });
+      if(req.method() === 'POST' && url.pathname === '/upload/drive/v3/files')
+        return route.fulfill({ status: 200, headers: { ...cors, Location: 'https://www.googleapis.com/upload/drive/v3/files?uploadType=resumable&upload_id=abc' }, body: '' });
+      if(req.method() === 'PUT' && url.pathname === '/upload/drive/v3/files') return json({ id: 'file1', name: 'arbeitsblatt.pdf' });
+      if(req.method() === 'POST' && url.pathname === '/drive/v3/files/file1/permissions') return json({ id: 'anyoneWithLink' });
+      return json({ error: { message: 'yok' } }, 404);
+    }
     if(url.href === 'https://oauth2.googleapis.com/revoke'){ log.revoked = (req.postData() || '').includes('token='); return json({}); }
     log.unknown.push(req.url());
     return route.abort();
@@ -309,6 +323,48 @@ await resetEmulators();
   const viaQuery = await page.evaluate(async () => { history.replaceState(null, '', '?emulator=1'); const m = await import('/js/account/firebase.js?q=1'); return m.emulator; });
   ok(viaQuery === false, 'canlı adreste ?emulator=1 emülatör modunu açmıyor');
   clean(log, 'takvim bağlantısı', { errors: false });
+  await ctx.close();
+}
+
+// ---------- 5b. Ödev PDF'i Google Drive'a (canlı köken, gerçek kod yolu) ----------
+{
+  const { ctx, page, log } = await context({ emulator: true });
+  await page.goto(LIVE + '/ogretmen-odev.html'); await page.waitForTimeout(800);
+  // Giriş yapılmadığı için sayfa giris.html'e yönlenir; belirteç yalnızca öğretmen sayfalarında saklandığı için adrese dönülür.
+  const r = await page.evaluate(async () => {
+    history.replaceState(null, '', '/ogretmen-odev.html');
+    const drive = await import('/js/account/drive.js?v=1');
+    const pdf = new File([new TextEncoder().encode('%PDF-1.4\n1 0 obj<<>>endobj\n%%EOF')], 'arbeitsblatt.pdf', { type: 'application/pdf' });
+    const bad = new File(['merhaba'], 'not.pdf', { type: 'application/pdf' });
+    const big = new File([new Uint8Array(20 * 1024 * 1024 + 1)], 'buyuk.pdf', { type: 'application/pdf' });
+    const txt = new File(['%PDF-'], 'not.txt', { type: 'text/plain' });
+    const checks = [await drive.checkPdf(bad), await drive.checkPdf(big), await drive.checkPdf(txt), await drive.checkPdf(pdf)];
+    await drive.connect();
+    const progress = [];
+    const result = await drive.uploadPdf(pdf, { onProgress: (p) => progress.push(p) });
+    return { usingMock: drive.usingMock, checks, result, progress: progress.length, scopes: window.__gisScopes, folder: localStorage.getItem('baGdriveFolder'),
+      stored: Boolean(sessionStorage.getItem('baGdriveSession')) };
+  });
+  ok(r.usingMock === false, 'canlı adreste Drive taklidi kullanılmıyor');
+  ok(r.checks[0].includes('geçerli bir PDF değil') && r.checks[1].includes('çok büyük') && r.checks[2].includes('Sadece PDF') && r.checks[3] === '',
+    `PDF denetimi: sahte PDF, 20 MB üstü ve PDF olmayan reddedildi (${r.checks.join(' | ')})`);
+  ok(JSON.stringify(r.scopes) === JSON.stringify(['https://www.googleapis.com/auth/drive.file']), `sadece drive.file izni istendi (${JSON.stringify(r.scopes)})`);
+  const calls = log.drive || [];
+  const step = (m, p) => calls.find((c) => c.method === m && c.path === p);
+  const search = step('GET', '/drive/v3/files'), folder = step('POST', '/drive/v3/files'), start = step('POST', '/upload/drive/v3/files'),
+    put = step('PUT', '/upload/drive/v3/files'), perm = step('POST', '/drive/v3/files/file1/permissions');
+  ok(search && search.query.q.includes("name = 'Bozkurt Academy Ödevler'") && search.query.q.includes('trashed = false'), 'klasör adıyla aranıyor');
+  ok(folder && JSON.parse(folder.body).name === 'Bozkurt Academy Ödevler' && JSON.parse(folder.body).mimeType === 'application/vnd.google-apps.folder', 'klasör yoksa oluşturuluyor');
+  ok(start && start.query.uploadType === 'resumable' && JSON.parse(start.body).parents[0] === 'folder1' && JSON.parse(start.body).mimeType === 'application/pdf', 'resumable yükleme klasörün içine');
+  ok(put && put.query.upload_id === 'abc' && r.progress > 0, 'dosya yükleme oturumuna gönderildi (ilerleme bildirildi)');
+  ok(perm && JSON.stringify(JSON.parse(perm.body)) === JSON.stringify({ role: 'reader', type: 'anyone' }), '"bağlantıya sahip olan görüntüleyebilir" izni verildi');
+  ok(calls.every((c) => c.auth === 'Bearer test-token'), 'bütün Drive isteklerinde öğretmenin belirteci');
+  ok(r.result.url === 'https://drive.google.com/file/d/file1/view' && r.result.name === 'arbeitsblatt.pdf', 'ödeve eklenecek bağlantı: drive.google.com/file/d/…/view');
+  ok(r.folder === 'folder1' && r.stored, 'klasör kimliği hatırlanıyor, belirteç sadece sessionStorage\'da');
+  ok(!log.requests.some((u) => /drive-mock\.js/.test(u)), 'drive-mock.js canlı adreste istenmedi');
+  const direct = await page.evaluate(() => import('/js/account/drive-mock.js').then(() => 'yüklendi', (e) => 'reddedildi: ' + e.message));
+  ok(direct.startsWith('reddedildi'), 'drive-mock.js canlı adreste doğrudan içe aktarılsa da çalışmıyor');
+  clean(log, 'Drive yüklemesi', { errors: false });
   await ctx.close();
 }
 

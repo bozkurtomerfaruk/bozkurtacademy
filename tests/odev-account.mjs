@@ -130,6 +130,38 @@ ok((await teacher.textContent('#aLinkPreview')) === 'Öğrenciye verilecek bağl
 await teacher.click('#aLinkAdd');
 ok(await teacher.locator('#aLinks li').count() === 3, '3 bağlantı eklendi');
 ok((await teacher.textContent('#aLinks')).includes('YouTube') && (await teacher.textContent('#aLinks')).includes('Docs · kopya'), 'bağlantı türleri: YouTube, Docs · kopya');
+// PDF → Google Drive (emülatörde sahte Drive): izin reddi, bağlanma, hatalı dosyalar, yükleme.
+await teacher.evaluate(() => localStorage.setItem('baDriveMockDenied', '1'));
+await teacher.click('#aPdfAdd');
+await teacher.waitForSelector('#aPdfStatus.error', { timeout: 5000 }).catch(() => {});
+ok((await teacher.textContent('#aPdfStatus')).includes('bağlanılamadı'), 'Drive izni verilmezse hata gösteriliyor');
+await teacher.evaluate(() => localStorage.removeItem('baDriveMockDenied'));
+const firstChooser = teacher.waitForEvent('filechooser', { timeout: 5000 }).catch(() => null);
+await teacher.click('#aPdfAdd');
+await firstChooser;
+ok((await teacher.textContent('#aPdfAdd')) === 'PDF seç' && (await teacher.textContent('#aPdfStatus')).includes('bağlandı'), 'Drive bağlandı, düğme "PDF seç"');
+const pick = async (files) => {
+  const chooser = teacher.waitForEvent('filechooser', { timeout: 5000 });
+  await teacher.click('#aPdfAdd');
+  await (await chooser).setFiles(files);
+  await teacher.waitForTimeout(600);
+};
+await pick({ name: 'notlar.txt', mimeType: 'text/plain', buffer: Buffer.from('merhaba') });
+ok((await teacher.textContent('#aPdfStatus')).includes('Sadece PDF'), 'PDF olmayan dosya reddedildi');
+await pick({ name: 'sahte.pdf', mimeType: 'application/pdf', buffer: Buffer.from('merhaba') });
+ok((await teacher.textContent('#aPdfStatus')).includes('geçerli bir PDF değil'), 'içeriği PDF olmayan .pdf reddedildi');
+await pick({ name: 'buyuk.pdf', mimeType: 'application/pdf', buffer: Buffer.concat([Buffer.from('%PDF-1.4\n'), Buffer.alloc(20 * 1024 * 1024)]) });
+ok((await teacher.textContent('#aPdfStatus')).includes('çok büyük'), '20 MB üstü PDF reddedildi');
+ok(await teacher.locator('#aLinks li').count() === 3, 'reddedilen dosyalar bağlantı eklemedi');
+await teacher.evaluate(() => localStorage.setItem('baDriveMockFail', '1'));
+await pick({ name: 'Perfekt-Arbeitsblatt.pdf', mimeType: 'application/pdf', buffer: Buffer.from('%PDF-1.4\n1 0 obj<<>>endobj\n%%EOF') });
+ok((await teacher.textContent('#aPdfStatus')).includes('PDF yüklenemedi') && await teacher.locator('#aLinks li').count() === 3 && await teacher.isEnabled('#aSubmit'), 'yükleme hatası: mesaj, bağlantı yok, form yine gönderilebilir');
+await teacher.evaluate(() => localStorage.removeItem('baDriveMockFail'));
+await pick({ name: 'Perfekt-Arbeitsblatt.pdf', mimeType: 'application/pdf', buffer: Buffer.from('%PDF-1.4\n1 0 obj<<>>endobj\n%%EOF') });
+ok((await teacher.textContent('#aPdfStatus')).includes('yüklendi, paylaşıldı') && await teacher.locator('#aLinks li').count() === 4, 'PDF yüklendi ve bağlantılara eklendi');
+ok((await teacher.locator('#aLinks li').last().textContent()).includes('PDF') && (await teacher.locator('#aLinks li').last().textContent()).includes('Perfekt-Arbeitsblatt'), 'PDF bağlantısı adıyla listede');
+const mockFiles = await teacher.evaluate(() => JSON.parse(localStorage.getItem('baDriveMock') || '[]'));
+ok(mockFiles.length === 1 && mockFiles[0].folder === 'Bozkurt Academy Ödevler' && mockFiles[0].shared === 'anyone:reader', 'dosya "Bozkurt Academy Ödevler" klasörüne, bağlantıyla görüntülenebilir');
 // Konunun tamamı
 await teacher.selectOption('#aLevel', 'A1'); await teacher.waitForTimeout(300);
 await teacher.selectOption('#aTopic', 'plural'); await teacher.waitForTimeout(800);
@@ -153,7 +185,7 @@ const created = docs.find((d) => d.id !== 'eski1');
 ok(docs.length === 2 && created, 'ödev kaydedildi');
 const links = created.links.arrayValue.values.map((v) => plain(v.mapValue));
 ok(created.title.stringValue === TODAY && created.dueAt.nullValue === null && created.schemaVersion.integerValue === '2', 'başlık bugünün tarihi, teslim tarihi yok, schemaVersion 2');
-ok(links.length === 3 && links[0].kind === 'youtube' && links[0].title === 'Perfekt videosu' && links[1].url === 'http://example.com/arbeitsblatt' && links[2].url.endsWith('/abc123/copy') && links[2].copy === true,
+ok(links.length === 4 && links[3].kind === 'pdf' && /^https:\/\/drive\.google\.com\/file\/d\/mock[a-z0-9]+\/view$/.test(links[3].url) && links[3].title === 'Perfekt-Arbeitsblatt' && links[0].kind === 'youtube' && links[0].title === 'Perfekt videosu' && links[1].url === 'http://example.com/arbeitsblatt' && links[2].url.endsWith('/abc123/copy') && links[2].copy === true,
   `bağlantılar doğru kaydedildi (${JSON.stringify(links)})`);
 ok(JSON.stringify(created.topics).includes('plural') && JSON.stringify(created.exercises).includes('goethe-a1-lesen-1-set-1') && !JSON.stringify(created.exercises).includes('umlaut'),
   'konunun tamamı topics\'te, sınav seti exercises\'te');
@@ -170,7 +202,7 @@ await shot(teacher, 'ogretmen-odevler-1440-acik');
 await teacher.locator('.odev-item').first().locator('a', { hasText: 'Düzenle' }).click();
 await teacher.waitForSelector('#assignForm:not([hidden])', { timeout: 15000 });
 ok((await teacher.textContent('#assignTitle')) === 'Ödevi düzenle' && (await teacher.inputValue('#aTitle')) === TODAY, 'düzenleme formu mevcut içerikle açılıyor');
-ok(await teacher.locator('#aLinks li').count() === 3 && (await teacher.textContent('#aChosen')).includes('konunun tamamı') && (await teacher.textContent('#aChosen')).includes('Grüße aus dem Urlaub'), 'bağlantılar ve alıştırmalar dolu');
+ok(await teacher.locator('#aLinks li').count() === 4 && (await teacher.textContent('#aChosen')).includes('konunun tamamı') && (await teacher.textContent('#aChosen')).includes('Grüße aus dem Urlaub'), 'bağlantılar ve alıştırmalar dolu');
 ok(await teacher.locator('input[name="student"][value="ogrenci1"]').isDisabled(), 'ödevi almış öğrenci kilitli');
 await teacher.fill('#aTitle', 'Perfekt ve Plural');
 await teacher.locator('#aLinks li', { hasText: 'example.com' }).locator('button').click();
@@ -179,7 +211,7 @@ await teacher.fill('#aDue', '2030-01-15T18:00');
 await teacher.click('#aSubmit'); await teacher.waitForURL(/durum=guncellendi/, { timeout: 15000 });
 const one = plain((await listDocs('users/ogrenci1/assignments')).find((d) => !d.name.endsWith('eski1')));
 const three = (await listDocs('users/ogrenci3/assignments')).map(plain);
-ok(one.title === 'Perfekt ve Plural' && one.links.values.length === 2 && one.dueAt && one.updatedAt, 'düzenleme bütün kopyalara yazıldı');
+ok(one.title === 'Perfekt ve Plural' && one.links.values.length === 3 && one.dueAt && one.updatedAt, 'düzenleme bütün kopyalara yazıldı');
 ok(three.length === 1 && three[0].groupId === one.groupId && three[0].title === 'Perfekt ve Plural' && Math.abs(Date.parse(three[0].createdAt) - Date.parse(one.createdAt)) < 1000, 'eklenen öğrenci aynı gruba, aynı "verildiği gün" ile eklendi');
 await teacher.waitForSelector('.odev-item', { timeout: 15000 });
 ok((await teacher.textContent('#listNotice')).includes('güncellendi'), '"Ödev güncellendi" bildirimi');
@@ -220,6 +252,7 @@ ok(await card.locator('details').evaluate((d) => d.open), 'açık ödev açık g
 ok((await card.textContent()).includes('Perfekt ve Plural') && (await card.textContent()).includes('Teslim'), 'başlık ve teslim tarihi');
 ok(await card.locator('a.odev-chip[href="https://www.youtube.com/watch?v=perfekt"][target="_blank"][rel="noopener noreferrer"]').count() === 1, 'YouTube bağlantısı yeni sekmede');
 ok(await card.locator('a.odev-chip[href$="/abc123/copy"]').count() === 1, 'Docs kopya bağlantısı');
+ok(await card.locator('a.odev-chip', { hasText: 'Perfekt-Arbeitsblatt' }).locator('.odev-tag-pdf').count() === 1, 'öğrenci PDF bağlantısını görüyor');
 ok((await card.textContent()).includes('A1 · Plural · konunun tamamı') && await card.locator('.odev-ex-list li').count() === 21, 'konunun 20 paketi + sınav seti listeleniyor');
 ok((await card.locator('.odev-ex-list li', { hasText: 'Umlaut' }).first().textContent()).includes('Çözüldü · 8/10'), 'çözülen paket: "Çözüldü · 8/10"');
 ok((await card.locator('.odev-ex-list li', { hasText: 'Grüße aus dem Urlaub' }).textContent()).includes('Henüz çözülmedi'), 'çözülmeyen set: "Henüz çözülmedi"');
@@ -268,6 +301,10 @@ for (const theme of ['light', 'dark']) {
     await shot(tp, `m-ogretmen-odevler-${width}-${theme}`);
     await tp.goto(`${BASE}/ogretmen-odev.html?ogrenci=ogrenci1`); await tp.waitForSelector('#assignForm:not([hidden])', { timeout: 15000 });
     await tp.fill('#aLinkUrl', 'https://docs.google.com/document/d/abc/edit'); await tp.check('#aLinkCopy'); await tp.click('#aLinkAdd');
+    const ch = tp.waitForEvent('filechooser', { timeout: 5000 });
+    await tp.click('#aPdfAdd');
+    await (await ch).setFiles({ name: 'Perfekt-Arbeitsblatt.pdf', mimeType: 'application/pdf', buffer: Buffer.from('%PDF-1.4\n%%EOF') });
+    await tp.waitForSelector('#aPdfStatus.success', { timeout: 5000 });
     await tp.selectOption('#aLevel', 'A1'); await tp.selectOption('#aTopic', 'plural'); await tp.waitForTimeout(600); await tp.check('#aWhole');
     ok(await noOverflow(tp), `${width} ${theme}: yeni ödev formu taşmıyor`);
     await shot(tp, `m-yeni-odev-${width}-${theme}`);

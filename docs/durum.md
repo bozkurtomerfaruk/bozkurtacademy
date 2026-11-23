@@ -2,6 +2,15 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-23 · B1 lassen + Infinitiv: pilot (ders + 5 paket, 50 soru), konu "hazırlanıyor" (dal `claude/b1-lassen-infinitiv`)
+
+- **Plan (onaylandı, eklemelerle):** Ders 9 bölüm; 20 paket × 10 soru. Öğretmenin eklemeleri: "Lass uns …" (öneri) 1. bölümde ayrı anlam ve 5. pakette ayrı sorular, "Lass mich …" (izin) ile karşılaştırmalı; 15. paket (Türkçe → Almanca) serbest çeviri değil, çoktan seçmeli ya da verilen kelimelerle cümle; 1. paketteki anlam sorularında bağlam anlamı tek kılacak kadar açık. B1 seviye sonu sınavına dokunulmadı.
+- **Ders (`data/b1-grammar.json` → lassen-infinitiv):** 1 dört anlam (yaptırmak, izin, bırakmak, Lass uns) · 2 Präsens çekimi ve fiil sırası (zu yok) · 3 kim yaptırıyor / kim yapıyor (Akkusativ), Lass mich / Lass uns / Lassen Sie tablosu · 4 sich + lassen (Akkusativ nesne varsa mir/dir, yoksa mich/dich) · 5 Perfekt: çift mastar / gelassen; liegen/stehen/fallen lassen'da iki biçim de doğru (yalnızca yazılı sorularda, iki cevap kabul) · 6 yan cümle (… habe reparieren lassen) · 7 modal fiiller ve Präteritum (ließ) + "B2'ye bakış: sich lassen" kutusu · 8 Türkçe -dır-/-t- karşılaştırması · 9 sık hatalar. İlgili konular: infinitiv-zu, passiv, A1/modalverben. SEO metni, statik sayfa, sitemap, B1 kurs sayfaları (TR/DE/EN).
+- **Pilot paketler (`data/b1/lassen-infinitiv.json`):** 1 Welche Bedeutung hat lassen? · 2 Präsens: lasse, lässt, lasst · 3 Satzbau: Infinitiv am Ende, ohne zu · 4 Wer macht was? · 5 Lass mich … / Lass uns … / Lassen Sie … (35 seçmeli, 15 yazılı; her sorunun kendi TR/DE/EN açıklaması). Katalogda `"status": "soon"`: alıştırma sayfasında "Hazırlanıyor" kartı, arama dizinine henüz girmiyor; 20 paket bitince "ready" olacak ve arama dizini yenilenecek.
+- **Kelime listesi:** Pilotta 1 yeni isim (Friseur), `checked: false`; diğer bütün isimler sözlükte onaylı.
+- **Test:** `tests/gramer-b2.mjs` ve `tests/alistirma-b2-yeni.mjs` artık `LEVEL` (ve gramer testinde `ONLY`) alıyor; varsayılan B2, B2 testleri yine geçti. `LEVEL=B1 ONLY=lassen-infinitiv node tests/gramer-b2.mjs`, `LEVEL=B1 node tests/alistirma-b2-yeni.mjs lassen-infinitiv` (50 soru, her pakette yanlış seçmeli ve Enter ile yanlış yazılı), `tests/vocab.mjs`, `tests/search.mjs`, `npm test`, check-grammar, sozluk, build-pages --check, build-search-index --check, check-versions geçti.
+- **Birleştirmeden önce:** `js/grammar.js` (catalog ?v=) ve `js/a1-lessons.js` (grammar ?v=) önbellek sürümleri artırılacak; çakışmasın diye son adıma bırakıldı.
+
 ## 2026-11-23 · Ödevler: Classroom düzeni (PR 1/2)
 
 - **Plan onaylandı (kararların):** teslim tarihi isteğe bağlı; ödev verildikten sonra düzenlenebilir; ödev silinince Drive'daki PDF kalır; bağlantı denetimi formda, öğretmen kuralı daraltılmadı. PDF yükleme (Google Drive, `drive.file`) PR 2'de.

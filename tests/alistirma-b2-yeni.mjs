@@ -5,6 +5,7 @@
 // - Kelime listesinde yalnızca kontrol edilmiş kelimeler görünür; "checked": false olanlar gizli.
 // - Almanca ve İngilizce arayüzde açıklama o dilde; 390/1440 px açık/koyu taşma yok + ekran görüntüsü.
 // Çalıştırma: python3 -m http.server 8765 açıkken node tests/alistirma-b2-yeni.mjs [konu …] (ekran görüntüleri $S).
+// Başka seviye: LEVEL=B1 node tests/alistirma-b2-yeni.mjs lassen-infinitiv
 import fs from 'fs';
 import os from 'os';
 import path from 'path';
@@ -13,6 +14,7 @@ const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.PW || 'playwright');
 const B = process.env.BASE || 'http://localhost:8765/index.html';
 const shotDir = process.env.S || fs.mkdtempSync(path.join(os.tmpdir(), 'alistirma-b2-'));
+const LEVEL = process.env.LEVEL || 'B2';
 const TOPICS = process.argv.slice(2).length ? process.argv.slice(2) : ['konnektoren-b2'];
 const catalog = JSON.parse(fs.readFileSync('data/catalog.json', 'utf8'));
 const words = JSON.parse(fs.readFileSync('data/sozluk.json', 'utf8')).words;
@@ -30,10 +32,10 @@ const shownWord = k => `${words[k].article} ${words[k].word || k.split('|')[0]}$
 let answered = 0, wrongChecked = 0;
 
 for (const topicId of TOPICS) {
-  const topic = catalog.levels.find(l => l.id === 'B2').topics.find(t => t.id === topicId);
+  const topic = catalog.levels.find(l => l.id === LEVEL).topics.find(t => t.id === topicId);
   const data = JSON.parse(fs.readFileSync(topic.path, 'utf8'));
   for (const ex of data.exercises) {
-    await open(`exercises/B2/${topicId}/${ex.id}/q1`);
+    await open(`exercises/${LEVEL}/${topicId}/${ex.id}/q1`);
     let wrongMc = false, wrongText = false;
     for (const [i, q] of ex.questions.entries()) {
       const where = `${topicId}/${ex.id} #${i + 1}`;
@@ -72,7 +74,7 @@ for (const topicId of TOPICS) {
   const q = ex.questions.find(x => x.options);
   const qi = ex.questions.indexOf(q);
   for (const lang of ['de', 'en']) {
-    await open(`exercises/B2/${topicId}/${ex.id}/q${qi + 1}`);
+    await open(`exercises/${LEVEL}/${topicId}/${ex.id}/q${qi + 1}`);
     await page.click(`.lang button[data-lang="${lang}"]`); await page.waitForTimeout(500);
     await page.click(`#quizOptions .quiz-option[data-answer="${q.options.find(o => o !== q.correct).replace(/"/g, '\\"')}"]`);
     await page.click('#checkAnswerBtn'); await page.waitForTimeout(300);
@@ -85,7 +87,7 @@ for (const topicId of TOPICS) {
     await ctx.addInitScript(t => { try { localStorage.setItem('ba-theme', t); } catch (_) {} }, th);
     const p = await ctx.newPage(); p.on('pageerror', e => errors.push(e.message));
     const tq = ex.questions.findIndex(x => !x.options);
-    await p.goto(B + `#exercises/B2/${topicId}/${ex.id}/q${tq + 1}`); await p.waitForTimeout(1300);
+    await p.goto(B + `#exercises/${LEVEL}/${topicId}/${ex.id}/q${tq + 1}`); await p.waitForTimeout(1300);
     await p.fill('#writtenAnswerInput', 'falsch'); await p.press('#writtenAnswerInput', 'Enter'); await p.waitForTimeout(400);
     ok(await p.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth) <= 0, `${topicId} ${w} ${th}: yatay taşma yok`);
     await p.locator('#quizFeedback').scrollIntoViewIfNeeded(); await p.waitForTimeout(500);

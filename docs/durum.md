@@ -2,6 +2,12 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-23 · Ödev PDF'leri canlıda çalışıyor (#128)
+
+- #128 birleştirildi (main alındı, testler yeniden geçti). GitHub'daki "Static pages" işi `apt-get install ffmpeg` adımında takıldı; bu PR'la ilgisi yok, o işin adımları yerelde geçti.
+- **Öğretmenin canlı denemesi (23 Kasım): PDF yükleme çalışıyor.** İzin, "Bozkurt Academy Ödevler" klasörüne yükleme, paylaşım ve ödevdeki PDF bağlantısı canlıda doğrulandı.
+- Ödevler işi (Classroom düzeni + PDF) tamamlandı. Sıradaki: ödev e-posta bildirimi (plan aşamasında).
+
 ## 2026-11-23 · Ödevler: PDF'i Google Drive'a yükleme (PR 2/2)
 
 - **PR 1 (#127) birleştirildi** (onayınla; main alındı, testler yeniden geçti, CodeQL uyarısı düzeltildi: testte URL'nin `includes` ile denetlenmesi tam eşitliğe çevrildi).

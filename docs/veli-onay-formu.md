@@ -17,6 +17,7 @@
 - Öğrencinin sitede seçtiği dil (ödev e-postası bu dilde gönderilir)
 - Sınav hazırlığındaki yazma görevlerinde (Schreiben) öğrencinin gönderdiği metinler ve öğretmenin geri bildirimi
 - Ders bilgileri: tarih, saat, süre, ders notu ve Google Meet linki
+- Ders defteri: öğretmenin derste yazdığı ders notları (başlık, ders günü, içerik, son güncelleme zamanı). Notları yalnızca öğretmen yazar; çocuğunuz kendi notlarını öğrenci panelinde okuyabilir (ders sırasında canlı). Başka öğrenciler göremez.
 - Velinin adı soyadı ve e-posta adresi
 - Bu onayın tarihi ve yöntemi (imzalı form ya da e-posta)
 
@@ -96,6 +97,7 @@ Ihr Kind möchte für den Online-Deutschunterricht bei Bozkurt Academy ein Schü
 - Die Sprache, die das Kind auf der Website gewählt hat (die Hausaufgaben-E-Mail wird in dieser Sprache versendet)
 - Bei den Schreibaufgaben der Prüfungsvorbereitung: die Texte, die das Kind abschickt, und die Rückmeldung des Lehrers
 - Unterrichtsdaten: Datum, Uhrzeit, Dauer, Notiz zur Stunde und Google-Meet-Link
+- Unterrichtsheft: die Notizen, die der Lehrer während der Stunde schreibt (Titel, Unterrichtstag, Inhalt, Zeitpunkt der letzten Änderung). Nur der Lehrer schreibt die Notizen; Ihr Kind kann seine eigenen Notizen im Schülerbereich lesen (während der Stunde live). Andere Schülerinnen und Schüler sehen sie nicht.
 - Vor- und Nachname sowie E-Mail-Adresse eines Elternteils
 - Datum und Form dieser Einwilligung (unterschriebenes Formular oder E-Mail)
 

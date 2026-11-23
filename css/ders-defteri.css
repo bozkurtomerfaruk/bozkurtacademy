@@ -1,0 +1,150 @@
+/* Ders defteri: öğretmenin editörü (ogretmen-ders.html) ve öğrencinin salt okunur görünümü (ders-notlarim.html).
+   Renkler css/base.css'teki --ba-* token'larından; Quill'in temel düzeni js/vendor/quill/quill.core.css'te. */
+
+.note-card{--note-scale:1;display:grid;grid-template-columns:minmax(0,1fr);gap:12px;padding:clamp(14px,2.4vw,28px);border:1px solid var(--ba-line);border-radius:var(--ba-radius);background:var(--ba-paper)}
+.note-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px 24px;flex-wrap:wrap}
+.note-head-main{flex:1 1 320px;min-width:0;padding-left:10px}
+.note-head-main .acc-eyebrow{margin:0 0 4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.note-head-side{display:grid;gap:4px;justify-items:end;text-align:right}
+.note-card-read .note-head-main{padding-left:0}
+.academy-theme .note-title{margin:0;font-size:clamp(1.5rem,1.2rem + 1.2vw,2.25rem);line-height:1.2;overflow-wrap:anywhere}
+.academy-theme .note-title-input{display:block;width:100%;min-width:0;resize:none;overflow:hidden;margin:0 0 0 -10px;padding:2px 8px;border:2px solid transparent;border-radius:var(--ba-radius-small);background:transparent;color:var(--ba-ink);font:600 1em/1.2 var(--ba-serif);letter-spacing:inherit;cursor:text}
+.academy-theme .note-title-input:hover{border-color:var(--ba-line)}
+.academy-theme .note-title-input:focus{border-color:var(--ba-line-strong);background:var(--ba-ground)}
+.academy-theme .note-title-input[readonly]{cursor:default;border-color:transparent;background:transparent}
+.note-meta,.note-print-meta{margin:6px 0 0;color:var(--ba-muted);font-size:var(--ba-small)}
+.note-print-meta{display:none}
+
+/* Kayıt durumu */
+.note-save{margin:0;padding:6px 12px;border-radius:999px;background:var(--ba-paper-2);color:var(--ba-muted);font-size:var(--ba-small);font-weight:600;white-space:nowrap}
+.note-save[data-state="saved"]{background:var(--ba-right-bg);color:var(--ba-right)}
+.note-save[data-state="offline"],.note-save[data-state="error"]{background:var(--ba-wrong-bg);color:var(--ba-wrong);white-space:normal}
+.note-size{margin:0;color:var(--ba-muted);font-size:.8125rem}
+.note-size[data-level="warn"],.note-size[data-level="danger"],.note-size[data-level="over"]{color:var(--ba-wrong);font-weight:600}
+.note-banner{margin:0;display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap}
+.note-banner[hidden]{display:none}
+.note-banner-actions{display:flex;gap:8px;flex-wrap:wrap}
+.academy-theme .note-banner .btn{min-height:40px;padding:0 16px;font-size:var(--ba-small)}
+
+/* Araç çubuğu ve görünüm düğmeleri */
+.note-view-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.note-zoom{display:inline-flex;align-items:center;gap:4px;padding:2px;border:1px solid var(--ba-line);border-radius:var(--ba-radius-small)}
+.note-zoom-value{min-width:3.5em;text-align:center;font-size:var(--ba-small);color:var(--ba-muted);font-variant-numeric:tabular-nums}
+.note-toolbar{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;gap:6px 10px;padding:8px;border:1px solid var(--ba-line);border-radius:var(--ba-radius-small);background:var(--ba-paper-2)}
+.note-group{display:flex;flex-wrap:wrap;gap:4px;padding-right:10px;border-right:1px solid var(--ba-line)}
+.note-group:last-child{border-right:0;padding-right:0}
+.note-tool{display:inline-flex;align-items:center;justify-content:center;min-width:40px;min-height:40px;padding:0 8px;border:1px solid transparent;border-radius:var(--ba-radius-small);background:transparent;color:var(--ba-ink);font:600 1rem/1 var(--ba-sans);cursor:pointer;text-decoration:none;list-style:none}
+.note-tool::-webkit-details-marker{display:none}
+.note-tool svg{width:20px;height:20px}
+.note-tool-text{font-size:var(--ba-small)}
+.note-view-actions>.note-tool{border-color:var(--ba-line)}
+.note-tool:hover{background:var(--ba-line)}
+.note-tool[aria-pressed="true"]{background:var(--ba-accent);color:var(--ba-accent-ink)}
+.note-tool:disabled,.note-tool[disabled]{opacity:.45;cursor:not-allowed;background:transparent}
+.note-tool:focus-visible,.note-swatch:focus-visible{outline:3px solid var(--ba-focus);outline-offset:2px}
+.note-danger{color:var(--ba-wrong)}
+.note-menu{position:relative}
+.note-menu[open]>summary{background:var(--ba-line)}
+.note-menu-panel{position:absolute;top:calc(100% + 6px);left:0;z-index:10;padding:10px;border:1px solid var(--ba-line-strong);border-radius:var(--ba-radius-small);background:var(--ba-paper);box-shadow:0 8px 24px rgb(0 0 0 / .18)}
+.note-swatches{display:grid;grid-template-columns:repeat(4,40px);gap:6px}
+.note-swatch{width:40px;height:40px;border:1px solid var(--ba-line-strong);border-radius:var(--ba-radius-small);background:var(--ba-ground);color:var(--ba-ink);font:700 1.125rem/1 var(--ba-sans);cursor:pointer}
+.note-swatch[aria-pressed="true"]{outline:3px solid var(--ba-accent);outline-offset:1px}
+.note-swatch-a{font-weight:700;border-bottom:3px solid currentColor;line-height:1.1}
+.note-table-panel{width:min(330px,calc(100vw - 48px));display:grid;gap:10px}
+.note-table-new{display:flex;flex-wrap:wrap;align-items:flex-end;gap:8px}
+.note-table-new label{display:grid;gap:2px;font-size:var(--ba-small);color:var(--ba-muted)}
+.note-table-new input{width:4.5em;min-height:40px;padding:0 8px;border:1px solid var(--ba-line-strong);border-radius:var(--ba-radius-small);background:var(--ba-ground);color:var(--ba-ink);font:inherit}
+.note-table-ops{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.academy-theme .note-table-panel .btn{min-height:40px;padding:0 10px;font-size:var(--ba-small)}
+.academy-theme .note-table-panel .btn:disabled{opacity:.45;cursor:not-allowed}
+.note-help{margin-top:12px}
+
+/* İçerik */
+.note-paper{border:1px solid var(--ba-line);border-radius:var(--ba-radius-small);background:var(--ba-ground)}
+.note-content.ql-container{font-family:var(--ba-sans);font-size:calc(var(--ba-body) * var(--note-scale));color:var(--ba-ink);height:auto}
+.note-content .ql-editor{min-height:min(62vh,640px);padding:clamp(14px,2.5vw,32px);line-height:1.6;overflow:visible;overflow-wrap:anywhere}
+.note-content.note-read .ql-editor{min-height:200px;cursor:auto}
+.note-content.note-read .ql-editor>*{cursor:auto}
+.note-content .ql-editor.ql-blank::before{color:var(--ba-muted);font-style:normal;left:clamp(14px,2.5vw,32px);right:clamp(14px,2.5vw,32px)}
+.note-content .ql-editor p,.note-content .ql-editor li{margin:0}
+.note-content .ql-editor h2{margin:.9em 0 .35em;font:600 1.5em/1.25 var(--ba-serif);color:var(--ba-ink)}
+.note-content .ql-editor h3{margin:.8em 0 .3em;font:600 1.22em/1.3 var(--ba-serif);color:var(--ba-ink)}
+.note-content .ql-editor>:first-child{margin-top:0}
+.note-content .ql-editor ol{padding-left:.4em;margin:.2em 0}
+.note-content .ql-editor a{color:var(--ba-accent);text-decoration:underline;text-underline-offset:2px}
+.note-content .ql-editor table{margin:.5em 0;border-collapse:collapse;width:100%;table-layout:fixed}
+.note-content .ql-editor td{border:1px solid var(--ba-line-strong);padding:.35em .55em;vertical-align:top;overflow-wrap:anywhere}
+.note-content .ql-editor tr:first-child td{background:var(--ba-paper-2);font-weight:600}
+/* Öğrencinin görünümü: dar ekranda kelimeler bölünmesin, geniş tablo kendi içinde kaysın. */
+.note-content.note-read .ql-editor table{display:block;overflow-x:auto;table-layout:auto;width:max-content;min-width:100%;max-width:100%}
+.note-content.note-read .ql-editor td{overflow-wrap:normal;min-width:4em}
+.note-content .ql-editor td:focus-within{outline:2px solid var(--ba-accent);outline-offset:-2px}
+.note-content .ql-editor s{text-decoration-thickness:2px}
+
+/* Renk ve vurgu paleti (sınıf adları note-format.js'te) */
+.ba-c-kirmizi{color:var(--ba-note-kirmizi)}.ba-c-mavi{color:var(--ba-note-mavi)}.ba-c-yesil{color:var(--ba-note-yesil)}
+.ba-c-turuncu{color:var(--ba-note-turuncu)}.ba-c-mor{color:var(--ba-note-mor)}.ba-c-gri{color:var(--ba-note-gri)}
+.ba-bg-sari{background-color:var(--ba-mark-sari)}.ba-bg-yesil{background-color:var(--ba-mark-yesil)}
+.ba-bg-mavi{background-color:var(--ba-mark-mavi)}.ba-bg-pembe{background-color:var(--ba-mark-pembe)}
+.note-content .ql-editor [class*="ba-bg-"]{padding:0 .08em;border-radius:2px}
+.note-content .ql-editor [class*="ba-bg-"]:not([class*="ba-c-"]){color:var(--ba-ink)}
+
+/* Öğrencinin not listesi */
+.note-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.note-list-item{display:grid;grid-template-columns:1fr auto;gap:2px 12px;align-items:center;padding:16px 18px;border:1px solid var(--ba-line);border-radius:var(--ba-radius);background:var(--ba-paper);color:var(--ba-ink);text-decoration:none}
+.note-list-item:hover{border-color:var(--ba-line-strong)}
+.note-list-item:focus-visible{outline:3px solid var(--ba-focus);outline-offset:2px}
+.note-list-title{font-weight:600;overflow-wrap:anywhere}
+.note-list-meta{grid-column:1;color:var(--ba-muted);font-size:var(--ba-small)}
+.note-list-item .note-live{grid-column:2;grid-row:1 / span 2}
+.note-live{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;background:var(--ba-right-bg);color:var(--ba-right);font:700 .8125rem/1.2 var(--ba-sans);letter-spacing:.02em;text-transform:none}
+.note-live[hidden]{display:none}
+.note-live::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;animation:note-pulse 1.6s ease-in-out infinite}
+@keyframes note-pulse{50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.note-live::before{animation:none}}
+
+/* Öğretmenin öğrenci sayfasındaki liste (ogretmen-ogrenci.html) */
+.note-teacher-list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
+.note-teacher-list li{display:flex;justify-content:space-between;align-items:center;gap:8px 12px;flex-wrap:wrap;padding:12px 16px;border-radius:var(--ba-radius);background:var(--ba-paper)}
+.note-teacher-list .acc-row-actions{flex-wrap:wrap}
+
+/* Tam ekran (öğretmen) */
+.note-card:fullscreen{overflow:auto;border-radius:0;border:0;background:var(--ba-ground);padding:clamp(14px,2vw,28px) clamp(14px,4vw,64px)}
+.note-card:fullscreen .note-content .ql-editor{min-height:calc(100vh - 260px)}
+body.note-fullscreen{overflow:hidden}
+body.note-fullscreen .note-card{position:fixed;inset:0;z-index:1000;overflow:auto;border-radius:0;border:0;background:var(--ba-ground)}
+
+@media (max-width:640px){
+  .note-head-side{justify-items:start;text-align:left}
+  .note-group{display:contents}
+  .note-toolbar{gap:4px}
+  .note-tool{min-width:44px;min-height:44px}
+  .note-swatch{width:44px;height:44px}
+  .note-swatches{grid-template-columns:repeat(4,44px)}
+  .note-menu-panel{position:fixed;left:16px;right:16px;top:auto;width:auto}
+  .note-table-panel{width:auto}
+  .note-content .ql-editor{padding:14px 12px}
+}
+
+/* Yazdırma / PDF: yalnızca başlık, öğrenci, tarih ve içerik. */
+@page{margin:16mm 14mm}
+@media print{
+  #noteEyebrow{display:none!important}
+  .note-page .topbar,.note-page footer,.note-page .acc-back,.note-page .skip-link,.note-toolbar,.note-view-actions,.note-banner,.note-head-side,.note-help,.note-page .floating-contact,.note-page #noteMissing,.note-live{display:none!important}
+  html,body.note-page,.note-page .shell,.note-page main{background:#fff!important;color:#000!important}
+  .note-page main{width:auto!important;margin:0!important;padding:0!important}
+  .note-card,.note-paper{border:0!important;padding:0!important;background:#fff!important;box-shadow:none!important}
+  .note-title-input{border:0!important;padding:0!important;color:#000!important}
+  .note-print-meta{display:block;color:#333}
+  .note-content.ql-container{font-size:12pt;color:#000}
+  .note-content .ql-editor{min-height:0!important;padding:0!important;color:#000}
+  .note-content .ql-editor h2,.note-content .ql-editor h3{color:#000;break-after:avoid}
+  .note-content .ql-editor table{break-inside:auto;display:table!important;width:100%!important}
+  .note-content .ql-editor tr{break-inside:avoid}
+  .note-content .ql-editor td{border-color:#666}
+  .note-content .ql-editor a{color:#000}
+  .note-content .ql-editor a::after{content:" (" attr(href) ")";font-size:.85em;color:#444;overflow-wrap:anywhere}
+  .note-card,.note-content *{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  /* Koyu temadan yazdırınca da açık renk palet kullanılır. */
+  html[data-theme="dark"]{--ba-note-kirmizi:#a8281e;--ba-note-mavi:#1d5a9e;--ba-note-yesil:#2c6a30;--ba-note-turuncu:#9a4a00;--ba-note-mor:#673b9a;--ba-note-gri:#5f5c53;--ba-mark-sari:#f7e07a;--ba-mark-yesil:#cbe8bd;--ba-mark-mavi:#cde0f5;--ba-mark-pembe:#f5d0de;--ba-ink:#000;--ba-line-strong:#666;--ba-paper-2:#eee}
+}

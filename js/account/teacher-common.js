@@ -6,6 +6,7 @@ import * as cal from './calendar.js';
 import * as drive from './drive.js?v=1';
 import { deleteCalendarEvents, loadStudentLessons, needsCalendar } from './lessons.js';
 import { normalizeAssignment, SCHEMA_VERSION } from './assignments.js?v=1';
+import { backupsFor, removeBackup } from './lesson-notes.js?v=1';
 
 export const fmtDate = (value) => formatDate(value, { lang: 'tr', timeZone: BERLIN });
 
@@ -222,8 +223,8 @@ export const deleteResource = (uid, id) => fs.deleteDoc(fs.doc(db, 'users', uid,
 
 // writings: Schreiben metinleri ve geri bildirimler; limits: günlük gönderim sınırı. Gizlilik politikasındaki saklama
 // süresi (son dersten 12 ay) bunlar için de geçerli: öğrenci silinince hepsi birlikte silinir. progress: Almanca Alfabe
-// oyununun ilerlemesi (js/account/alfabe-sync.js).
-const SUBCOLLECTIONS = ['results', 'assignments', 'resources', 'lessons', 'writings', 'limits', 'progress'];
+// oyununun ilerlemesi (js/account/alfabe-sync.js). lessonNotes: ders defteri (js/account/lesson-notes.js).
+const SUBCOLLECTIONS = ['results', 'assignments', 'resources', 'lessons', 'lessonNotes', 'writings', 'limits', 'progress'];
 
 // Geri bildirim bekleyen Schreiben metinleri, öğrenci başına: Map(uid → sayı). Bütün metinler tek sorguda okunur
 // (filtresiz collectionGroup için ek indeks gerekmez).
@@ -319,6 +320,8 @@ export async function deleteStudentData(uid){
   for(const d of drafts.docs) await fs.deleteDoc(d.ref);
   await fs.deleteDoc(fs.doc(db, 'aiLimits', uid));
   await fs.deleteDoc(userRef(uid));
+  // Ders defterinin bu tarayıcıdaki yedekleri de.
+  for(const b of backupsFor(uid)) removeBackup(uid, b.id);
 }
 
 function copyButton(value){

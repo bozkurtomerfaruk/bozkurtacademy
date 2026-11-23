@@ -16,6 +16,7 @@ import {
   getDoc,
   getDocs,
   limit,
+  orderBy,
   query,
   serverTimestamp,
   setDoc,
@@ -667,6 +668,66 @@ describe('Dersler', () => {
     await assertSucceeds(setDoc(doc(db, 'users/ayse/lessons/l1'), lesson()));
     await assertSucceeds(updateDoc(doc(db, 'users/ayse/lessons/l1'), { status: 'cancelled' }));
     await assertSucceeds(deleteDoc(doc(db, 'users/ayse/lessons/l1')));
+  });
+});
+
+describe('Ders defteri', () => {
+  const note = () => ({ title: '23.11.2026 – Ders', day: '2026-11-23', lessonId: null, content: JSON.stringify({ ops: [{ insert: 'Hallo\n' }] }), bytes: 450, rev: 1, createdAt: Timestamp.now(), updatedAt: Timestamp.now() });
+
+  test('öğretmen not oluşturur, günceller ve siler', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    const db = teacherDb();
+    await assertSucceeds(setDoc(doc(db, 'users/ayse/lessonNotes/n1'), note()));
+    await assertSucceeds(updateDoc(doc(db, 'users/ayse/lessonNotes/n1'), { content: '{"ops":[{"insert":"Tschüss\\n"}]}', rev: 2, updatedAt: serverTimestamp() }));
+    await assertSucceeds(getDocs(collection(db, 'users/ayse/lessonNotes')));
+    await assertSucceeds(deleteDoc(doc(db, 'users/ayse/lessonNotes/n1')));
+  });
+
+  test('onaylı öğrenci kendi notlarını okur ve listeler ama yazamaz, değiştiremez, silemez', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await seed('users/ayse/lessonNotes/n1', note());
+    await assertSucceeds(getDoc(doc(ayse(), 'users/ayse/lessonNotes/n1')));
+    await assertSucceeds(getDocs(query(collection(ayse(), 'users/ayse/lessonNotes'), orderBy('day', 'desc'))));
+    await assertFails(setDoc(doc(ayse(), 'users/ayse/lessonNotes/n2'), note()));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse/lessonNotes/n1'), { content: '{"ops":[{"insert":"<script>\\n"}]}' }));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse/lessonNotes/n1'), { title: 'Değişti' }));
+    await assertFails(setDoc(doc(ayse(), 'users/ayse/lessonNotes/n1'), note()));
+    await assertFails(deleteDoc(doc(ayse(), 'users/ayse/lessonNotes/n1')));
+  });
+
+  test('öğrenci başka öğrencinin notlarını okuyamaz ve yazamaz', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await seed('users/can', seededMinor('active', consentGiven));
+    await seed('users/can/lessonNotes/n1', note());
+    await assertFails(getDoc(doc(ayse(), 'users/can/lessonNotes/n1')));
+    await assertFails(getDocs(collection(ayse(), 'users/can/lessonNotes')));
+    await assertFails(setDoc(doc(ayse(), 'users/can/lessonNotes/n2'), note()));
+    await assertFails(deleteDoc(doc(ayse(), 'users/can/lessonNotes/n1')));
+  });
+
+  test('onay bekleyen, pasif ve veli onayı olmayan öğrenci kendi notlarını okuyamaz', async () => {
+    for(const [id, profile] of [['bekleyen', seededAdult('pending')], ['pasif', seededAdult('inactive')], ['velisiz', seededMinor('active')]]){
+      await seed(`users/${id}`, profile);
+      await seed(`users/${id}/lessonNotes/n1`, note());
+      const db = as(id, passwordToken(`${id}@example.com`));
+      await assertFails(getDoc(doc(db, `users/${id}/lessonNotes/n1`)));
+      await assertFails(getDocs(collection(db, `users/${id}/lessonNotes`)));
+    }
+  });
+
+  test('giriş yapmamış biri notları okuyamaz', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await seed('users/ayse/lessonNotes/n1', note());
+    await assertFails(getDoc(doc(guestDb(), 'users/ayse/lessonNotes/n1')));
+    await assertFails(getDocs(collection(guestDb(), 'users/ayse/lessonNotes')));
+    await assertFails(setDoc(doc(guestDb(), 'users/ayse/lessonNotes/n2'), note()));
+  });
+
+  test('öğrenci notları toplu (collectionGroup) okuyamaz, öğretmen okuyabilir', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await seed('users/ayse/lessonNotes/n1', note());
+    await assertFails(getDocs(collectionGroup(ayse(), 'lessonNotes')));
+    await assertSucceeds(getDocs(collectionGroup(teacherDb(), 'lessonNotes')));
   });
 });
 

@@ -13,6 +13,9 @@ import * as cal from './calendar.js';
 import { db, fs } from './firebase.js';
 import { applyAttendees, loadStudentLessons } from './lessons.js';
 import { normalizeAssignment } from './assignments.js?v=1';
+import { backupsFor, deleteNote, loadNotes, noteUrl, removeBackup } from './lesson-notes.js?v=1';
+import { defaultTitle } from './note-format.js?v=1';
+import { berlinParts, todayKey } from './common.js';
 
 const uid = new URLSearchParams(location.search).get('id');
 let student = null;
@@ -176,6 +179,66 @@ function renderLessons(){
     past.length ? h('details', { class: 'acc-details' }, h('summary', {}, `Geçmiş dersler (${past.length})`), h('ul', { class: 'acc-status-list' }, past.map(row))) : null,
     h('p', { class: 'acc-hint' }, h('a', { class: 'ba-link', href: 'ogretmen-takvim.html' }, 'Takvimde aç'), ' (taşıma ve iptal için).')
   ].filter(Boolean)); // geçmiş ders yoksa ekrana "null" yazılmasın
+}
+
+// Ders defteri: "Derse başla" yeni sayfa açar. Takvimde bugün bu öğrencinin dersi varsa sayfa o derse bağlanır;
+// o derse bağlı not zaten varsa düğme "Bugünün notunu aç" olur, yanında "Yeni sayfa". Eski notlar: aç, sil.
+// Bu tarayıcıda kalmış, sunucuya hiç ulaşmamış yedekler (ör. bağlantı yokken kapanan yeni sayfa) de listelenir.
+let notes = [];
+function todaysLesson(){
+  const today = todayKey();
+  return lessons.filter((l) => l.status === 'scheduled' && l.startAt && berlinParts(l.startAt).key === today)
+    .sort((a, b) => a.startAt - b.startAt)[0] || null;
+}
+
+function renderNoteStart(){
+  const lesson = todaysLesson();
+  const linked = lesson ? notes.find((n) => n.lessonId === lesson.id) : null;
+  const actions = [];
+  if(linked){
+    actions.push(h('a', { class: 'btn primary acc-row-action', id: 'startLessonLink', href: noteUrl(uid, linked.id) }, 'Bugünün notunu aç'));
+    actions.push(h('a', { class: 'btn ghost acc-row-action', id: 'newNoteLink', href: noteUrl(uid, null) }, 'Yeni sayfa'));
+  }else{
+    actions.push(h('a', { class: 'btn primary acc-row-action', id: 'startLessonLink', href: noteUrl(uid, null, lesson ? { ders: lesson.id } : {}) }, 'Derse başla'));
+  }
+  $('noteStartActions').replaceChildren(...actions);
+  $('noteStartActions').hidden = !isEnabled(student) && !notes.length;
+}
+
+function renderNotes(){
+  renderNoteStart();
+  const known = new Set(notes.map((n) => n.id));
+  const orphans = backupsFor(uid).filter((b) => !known.has(b.id));
+  const row = (n) => {
+    const del = h('button', { class: 'btn ghost note-danger', type: 'button' }, 'Sil');
+    del.addEventListener('click', async () => {
+      if(!confirm(`"${n.title || defaultTitle(n.day)}" silinsin mi? Öğrenci de artık göremez. Bu geri alınamaz.`)) return;
+      del.disabled = true;
+      try{
+        await deleteNote(uid, n.id);
+        removeBackup(uid, n.id);
+        notes = notes.filter((x) => x.id !== n.id);
+        renderNotes();
+        setActionStatus('success', 'Not silindi.');
+      }catch(error){
+        console.error(error);
+        del.disabled = false;
+        setActionStatus('error', 'Not silinemedi. Tekrar dene.');
+      }
+    });
+    return h('li', { 'data-note': n.id },
+      h('div', {}, h('a', { class: 'ba-link', href: noteUrl(uid, n.id) }, n.title || defaultTitle(n.day)),
+        h('span', { class: 'acc-sub' }, [fmtDate(n.updatedAt || n.createdAt), n.lessonId ? 'takvimdeki derse bağlı' : '', n.bytes ? `${Math.max(1, Math.round(n.bytes / 1024))} KB` : ''].filter(Boolean).join(' · '))),
+      h('div', { class: 'acc-row-actions' }, h('a', { class: 'btn ghost', href: noteUrl(uid, n.id) }, 'Aç'), del));
+  };
+  $('notesList').replaceChildren(...[
+    orphans.length ? h('div', { class: 'acc-status warning' },
+      h('p', {}, 'Bu tarayıcıda sunucuya kaydedilmemiş ders notu var:'),
+      h('ul', { class: 'acc-status-list' }, orphans.map((b) => h('li', {}, h('a', { class: 'ba-link', href: noteUrl(uid, b.id) }, `${b.title || 'Ders'} – açıp kaydet`))))) : null,
+    notes.length
+      ? h('ul', { class: 'note-teacher-list' }, notes.map(row))
+      : h('p', { class: 'acc-empty' }, 'Henüz ders notu yok. "Derse başla" ile ilk sayfayı aç; öğrenci notu kendi panelinde canlı görür.')
+  ].filter(Boolean));
 }
 
 // 16 yaş altı: ders davetlerine ve hatırlatmalara veli de eklensin mi (varsayılan açık).
@@ -551,14 +614,18 @@ async function reload(){
   $('newAssignmentLink').hidden = !isEnabled(student);
   $('newLessonLink').href = `ogretmen-takvim.html?yeni=1&ogrenci=${encodeURIComponent(uid)}`;
   $('newLessonLink').hidden = !isEnabled(student);
-  const [results, studentLessons] = await Promise.all([loadResults(uid), loadStudentLessons(uid)]);
+  const [results, studentLessons, studentNotes] = await Promise.all([loadResults(uid), loadStudentLessons(uid),
+    loadNotes(uid).catch((error) => { console.warn(error); return []; })]);
   lessons = studentLessons;
+  notes = studentNotes;
   renderLessons();
+  renderNotes();
   await Promise.all([renderAssignments(), renderResources(), renderResults(results), renderWritings()]);
   $('studentLoading').hidden = true;
   $('studentApp').hidden = false;
   // Öğretmen panelindeki "geri bildirim bekliyor" işareti #yazilar ile buraya gelir.
   if(location.hash === '#yazilar') $('yazilar').scrollIntoView({ block: 'start' });
+  if(location.hash === '#ders-notlari') $('ders-notlari').scrollIntoView({ block: 'start' });
 }
 
 $('resourceForm').addEventListener('submit', async (event) => {

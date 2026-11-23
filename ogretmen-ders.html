@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ba:security -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com/firebasejs/ https://apis.google.com https://accounts.google.com/gsi/client https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; connect-src 'self' https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://content-firebaseappcheck.googleapis.com https://www.googleapis.com https://oauth2.googleapis.com/revoke https://accounts.google.com/gsi/ https://www.google.com/recaptcha/ https://api.web3forms.com https://bozkurtacademy.goatcounter.com https://schreiben-kontrol.bozkurtt-omerfaruk.workers.dev http://127.0.0.1:8080 http://127.0.0.1:9099 http://127.0.0.1:8787; frame-src https://accounts.google.com https://bozkurtacademy-8ab85.firebaseapp.com https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <script src="/js/theme-init.js?v=1"></script>
+  <!-- /ba:security -->
+  <meta name="theme-color" content="#f8f7f3" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Ders defteri | Bozkurt Academy</title>
+  <meta name="description" content="Bozkurt Academy öğretmen paneli: ders defteri." />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3">
+  <link rel="preload" href="fonts/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=13" />
+  <link rel="stylesheet" href="css/base.css?v=15" />
+  <link rel="stylesheet" href="css/account.css?v=8" />
+  <link rel="stylesheet" href="js/vendor/quill/quill.core.css?v=1" />
+  <link rel="stylesheet" href="css/ders-defteri.css?v=1" />
+</head>
+<body class="academy-theme account-page teacher-page note-page">
+  <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
+  <div class="shell">
+    <header class="topbar">
+      <nav class="nav" aria-label="Site menüsü">
+        <a class="brand" href="index.html" aria-label="Bozkurt Academy ana sayfa">
+          <img src="images/logo-mark.svg" width="64" height="64" alt="" class="brand-logo brand-logo-light"><img src="images/logo-mark-dark.svg" width="64" height="64" alt="" class="brand-logo brand-logo-dark">
+          <div><div class="brand-title">Bozkurt Academy</div></div>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteMenu" data-i18n="menuOpen">Menü</button>
+        <div class="nav-links" id="siteMenu">
+          <a class="nav-link" href="index.html" data-i18n="navHome">Ana Sayfa</a>
+          <a class="nav-link" href="/online-almanca-dersi/" data-i18n="navLessons">Almanca Dersleri</a>
+          <a class="nav-link" href="/almanca-gramer/" data-i18n="navGrammar">Gramer</a>
+          <a class="nav-link" href="index.html#exercises" data-i18n="navExercises">Alıştırmalar</a>
+          <a class="nav-link" href="/almanca-sinav-hazirlik/" data-i18n="navExams">Sınav Hazırlığı</a>
+          <a class="nav-link" href="/hakkimda/" data-i18n="navAbout">Hakkımda</a>
+          <a class="nav-link" href="/iletisim/" data-i18n="navContact">İletişim</a>
+          <a class="nav-link nav-account active" aria-current="page" href="ogretmen.html" id="navAccount" data-i18n="navTeacher">Öğretmen paneli</a>
+        </div>
+        <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Koyu temaya geç" aria-pressed="false"><svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="currentColor"/></svg><svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" tabindex="-1" class="acc-main">
+      <section class="acc-wrap acc-wide" aria-labelledby="noteTitleLabel">
+        <p class="acc-back"><a class="ba-link" id="backLink" href="ogretmen.html">← Öğretmen paneli</a></p>
+        <p class="acc-status error" id="notConfigured" role="alert" hidden>Giriş sistemi henüz kurulmadı. Firebase yapılandırmasını js/account/config.js dosyasına ekle (docs/kurulum.md).</p>
+        <p class="acc-status" id="noteLoading">Yükleniyor…</p>
+        <p class="acc-status error" id="noteError" role="alert" hidden></p>
+        <div id="noteApp" hidden>
+          <div class="note-card" id="noteCard">
+            <header class="note-head">
+              <div class="note-head-main">
+                <p class="acc-eyebrow" id="noteEyebrow">Ders defteri</p>
+                <h1 class="note-title"><label class="visually-hidden" for="noteTitle" id="noteTitleLabel">Başlık</label><textarea id="noteTitle" class="note-title-input" rows="1" maxlength="120" autocomplete="off" spellcheck="false" title="Başlığı düzenlemek için tıkla"></textarea></h1>
+                <p class="note-print-meta" id="notePrintMeta"></p>
+              </div>
+              <div class="note-head-side">
+                <p class="note-save" id="saveState" role="status" aria-live="polite" data-state="saved">Kaydedildi ✓</p>
+                <p class="note-size" id="sizeInfo"></p>
+              </div>
+            </header>
+            <div class="note-view-actions" role="group" aria-label="Görünüm">
+              <div class="note-zoom" role="group" aria-label="Yazı boyutu">
+                <button class="note-tool" type="button" id="sizeDown" aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
+                <span class="note-zoom-value" id="sizeLabel" aria-live="polite">100 %</span>
+                <button class="note-tool" type="button" id="sizeUp" aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
+              </div>
+              <button class="note-tool note-tool-text" type="button" id="fullBtn" aria-pressed="false">Tam ekran</button>
+              <button class="note-tool note-tool-text" type="button" id="printBtn">Yazdır / PDF</button>
+              <a class="note-tool note-tool-text" id="newPageLink" href="#">Yeni sayfa</a>
+              <button class="note-tool note-tool-text note-danger" type="button" id="deleteBtn">Sil</button>
+            </div>
+            <p class="acc-status warning note-banner" id="sizeWarn" role="status" hidden></p>
+            <div class="acc-status warning note-banner" id="backupBanner" role="alert" hidden>
+              <span id="backupText">Bu tarayıcıda kaydedilmemiş değişiklikler bulundu.</span>
+              <span class="note-banner-actions"><button class="btn primary" type="button" id="backupRestore">Geri yükle</button><button class="btn ghost" type="button" id="backupDiscard">Yok say</button></span>
+            </div>
+            <div class="acc-status error note-banner" id="conflictBanner" role="alert" hidden>
+              <span id="conflictText">Bu not başka bir cihazda değiştirilmiş. Üzerine yazmamak için otomatik kayıt durdu.</span>
+              <span class="note-banner-actions"><button class="btn ghost" type="button" id="conflictReload">Yeniden yükle</button><button class="btn primary" type="button" id="conflictKeep">Bu hâli kaydet</button></span>
+            </div>
+            <div class="acc-status warning note-banner" id="tabBanner" role="alert" hidden>
+              <span>Bu not başka bir sekmede açık. Orada düzenlemeye devam et ya da burada düzenle.</span>
+              <span class="note-banner-actions"><button class="btn primary" type="button" id="tabTakeover">Burada düzenle</button></span>
+            </div>
+            <div class="note-toolbar" id="noteToolbar" role="toolbar" aria-label="Biçimlendirme" aria-controls="editor">
+              <div class="note-group">
+                <button class="note-tool" type="button" data-action="undo" aria-label="Geri al (Ctrl+Z)" title="Geri al (Ctrl+Z)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7 4 12l5 5M4 12h10a6 6 0 0 1 0 12h-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 -4)"/></svg></button>
+                <button class="note-tool" type="button" data-action="redo" aria-label="Yinele (Ctrl+Y)" title="Yinele (Ctrl+Y)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 7 5 5-5 5M20 12H10a6 6 0 0 0 0 12h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 -4)"/></svg></button>
+              </div>
+              <div class="note-group">
+                <button class="note-tool" type="button" data-format="bold" aria-pressed="false" aria-label="Kalın (Ctrl+B)" title="Kalın (Ctrl+B)"><b>K</b></button>
+                <button class="note-tool" type="button" data-format="italic" aria-pressed="false" aria-label="İtalik (Ctrl+I)" title="İtalik (Ctrl+I)"><i>İ</i></button>
+                <button class="note-tool" type="button" data-format="underline" aria-pressed="false" aria-label="Altı çizili (Ctrl+U)" title="Altı çizili (Ctrl+U)"><u>A</u></button>
+                <button class="note-tool" type="button" data-format="strike" aria-pressed="false" aria-label="Üstü çizili (Ctrl+Shift+X)" title="Üstü çizili (Ctrl+Shift+X)"><s>Ü</s></button>
+              </div>
+              <div class="note-group">
+                <details class="note-menu" id="colorMenu">
+                  <summary class="note-tool" aria-label="Yazı rengi" title="Yazı rengi"><span class="note-swatch-a" id="colorSample">A</span></summary>
+                  <div class="note-menu-panel note-swatches" id="colorList" role="group" aria-label="Yazı rengi"></div>
+                </details>
+                <details class="note-menu" id="highlightMenu">
+                  <summary class="note-tool" aria-label="Vurgu (fosforlu kalem)" title="Vurgu (fosforlu kalem)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 4 6 6-8 8H6v-6l8-8ZM4 22h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg></summary>
+                  <div class="note-menu-panel note-swatches" id="highlightList" role="group" aria-label="Vurgu rengi"></div>
+                </details>
+              </div>
+              <div class="note-group">
+                <button class="note-tool note-tool-text" type="button" data-format="header" data-value="2" aria-pressed="false" title="Başlık (Ctrl+Alt+2)">Başlık</button>
+                <button class="note-tool note-tool-text" type="button" data-format="header" data-value="3" aria-pressed="false" title="Alt başlık (Ctrl+Alt+3)">Alt başlık</button>
+                <button class="note-tool" type="button" data-format="list" data-value="bullet" aria-pressed="false" aria-label="Madde listesi (Ctrl+Shift+8)" title="Madde listesi (Ctrl+Shift+8)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="4.5" cy="6" r="1.5" fill="currentColor"/><circle cx="4.5" cy="12" r="1.5" fill="currentColor"/><circle cx="4.5" cy="18" r="1.5" fill="currentColor"/></svg></button>
+                <button class="note-tool" type="button" data-format="list" data-value="ordered" aria-pressed="false" aria-label="Numaralı liste (Ctrl+Shift+7)" title="Numaralı liste (Ctrl+Shift+7)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6h10M10 12h10M10 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><text x="2" y="8.5" font-size="7" fill="currentColor" font-family="sans-serif">1</text><text x="2" y="14.5" font-size="7" fill="currentColor" font-family="sans-serif">2</text><text x="2" y="20.5" font-size="7" fill="currentColor" font-family="sans-serif">3</text></svg></button>
+              </div>
+              <div class="note-group">
+                <button class="note-tool" type="button" data-action="link" aria-pressed="false" aria-label="Bağlantı (Ctrl+K)" title="Bağlantı (Ctrl+K)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+                <details class="note-menu" id="tableMenu">
+                  <summary class="note-tool note-tool-text" title="Tablo">Tablo</summary>
+                  <div class="note-menu-panel note-table-panel">
+                    <div class="note-table-new">
+                      <label>Satır <input type="number" id="tableRows" min="1" max="30" value="3" inputmode="numeric"></label>
+                      <label>Sütun <input type="number" id="tableCols" min="1" max="10" value="3" inputmode="numeric"></label>
+                      <button class="btn primary" type="button" data-table="insertTable">Tablo ekle</button>
+                    </div>
+                    <p class="acc-hint" id="tableHint">Satır ve sütun eklemek için önce imleci tabloya koy.</p>
+                    <div class="note-table-ops">
+                      <button class="btn ghost" type="button" data-table="insertRowAbove" data-needs-table>Üste satır</button>
+                      <button class="btn ghost" type="button" data-table="insertRowBelow" data-needs-table>Alta satır</button>
+                      <button class="btn ghost" type="button" data-table="insertColumnLeft" data-needs-table>Sola sütun</button>
+                      <button class="btn ghost" type="button" data-table="insertColumnRight" data-needs-table>Sağa sütun</button>
+                      <button class="btn ghost" type="button" data-table="deleteRow" data-needs-table>Satırı sil</button>
+                      <button class="btn ghost" type="button" data-table="deleteColumn" data-needs-table>Sütunu sil</button>
+                      <button class="btn ghost note-danger" type="button" data-table="deleteTable" data-needs-table>Tabloyu sil</button>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+            <div class="note-paper"><div id="editor" class="note-content"></div></div>
+          </div>
+          <p class="acc-hint note-help">Kısayollar: Ctrl+B kalın, Ctrl+I italik, Ctrl+U altı çizili, Ctrl+Shift+X üstü çizili, Ctrl+Alt+2/3 başlık, Ctrl+Alt+0 normal metin, Ctrl+Shift+8 madde, Ctrl+Shift+7 numaralı liste, Tab / Shift+Tab liste girintisi, Ctrl+K bağlantı, Ctrl+Z geri al, Ctrl+Y yinele. Öğrenci bu sayfayı kendi panelinde canlı ve salt okunur görür.</p>
+        </div>
+        <dialog class="acc-dialog" id="linkDialog" aria-labelledby="linkDialogTitle">
+          <form method="dialog" id="linkForm" class="acc-dialog-body acc-form" novalidate>
+            <h2 id="linkDialogTitle">Bağlantı</h2>
+            <div class="field">
+              <label for="linkUrl">Adres (http:// ya da https://)</label>
+              <input id="linkUrl" type="url" inputmode="url" autocomplete="off" placeholder="https://…" maxlength="2000">
+            </div>
+            <p class="acc-status error" id="linkError" role="alert" hidden>Adres http:// ya da https:// ile başlamalı.</p>
+            <div class="acc-row-actions">
+              <button class="btn ghost" type="button" id="linkRemove">Bağlantıyı kaldır</button>
+              <button class="btn ghost" type="button" id="linkCancel">Vazgeç</button>
+              <button class="btn primary" type="submit" id="linkSave">Kaydet</button>
+            </div>
+          </form>
+        </dialog>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand"><img src="images/logo-mark.svg" width="64" height="64" alt="" class="footer-logo brand-logo-light"><img src="images/logo-mark-dark.svg" width="64" height="64" alt="" class="footer-logo brand-logo-dark"><div><strong>Bozkurt Academy</strong><br><span data-i18n="footerText">Online Almanca dersleri ve öğrenme materyalleri</span></div></div>
+      <div class="footer-meta">
+        <nav class="footer-links" aria-label="Yasal bilgiler" data-i18n-aria="footerLegal">
+          <a href="privacy.html" data-i18n="footerPrivacy">Gizlilik politikası</a>
+          <a href="/impressum/" data-i18n="footerImprint">Künye (Impressum)</a>
+        </nav>
+        <span>© 2026 Bozkurt Academy</span>
+      </div>
+    </footer>
+  </div>
+  <script src="js/app.js?v=54"></script>
+  <script src="js/theme.js?v=10"></script>
+  <script src="js/vendor/quill/quill.js?v=1"></script>
+  <script type="module" src="js/account/teacher-note.js?v=1"></script>
+</body>
+</html>

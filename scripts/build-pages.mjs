@@ -17,7 +17,7 @@ import { CSP } from './csp.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const check = process.argv.includes('--check');
 const SITEMAP_DATE = '2026-11-04';
-const V = { themeInit: 1, html: 1, style: 13, base: 14, landing: 1, app: 54, theme: 10, analytics: 7, a1lessons: 21, a1css: 9, grammarPages: 3, blog: 6 };
+const V = { themeInit: 1, html: 1, style: 13, base: 15, landing: 1, app: 54, theme: 10, analytics: 7, a1lessons: 21, a1css: 9, grammarPages: 3, blog: 6 };
 const OG_IMAGE = `${SITE}/images/og-bozkurt-academy.jpg`;
 
 const SECURITY = `
@@ -330,7 +330,7 @@ for (const page of PAGES) {
 }
 // Menü ve footer'ı paylaşan diğer sayfalar (sitemap'e girmez). Yönetim sayfası: sabit iletişim düğmesi yok.
 // Ortak <head> kullanmayan, elle yazılmış sayfalar: yalnızca güvenlik bölümü (CSP, referrer, tema başlatıcı).
-for (const name of ['giris.html', 'kayit.html', 'panel.html', 'privacy.html', 'ogretmen.html', 'ogretmen-odev.html', 'ogretmen-odevler.html', 'odevlerim.html', 'ogretmen-ogrenci.html', 'ogretmen-takvim.html', 'tools/audio-check.html']) {
+for (const name of ['giris.html', 'kayit.html', 'panel.html', 'privacy.html', 'ogretmen.html', 'ogretmen-odev.html', 'ogretmen-odevler.html', 'odevlerim.html', 'ogretmen-ogrenci.html', 'ogretmen-takvim.html', 'ogretmen-ders.html', 'ders-notlarim.html', 'tools/audio-check.html']) {
   const file = path.join(root, name);
   outputs.push([file, fill(fs.readFileSync(file, 'utf8'), 'security', SECURITY, file)]);
 }

@@ -317,6 +317,12 @@ service cloud.firestore {
         allow read: if ownActive(uid);
       }
 
+      // Ders defteri: notları yalnızca öğretmen yazar ve siler (yukarıdaki genel kural). Onaylı (aktif) öğrenci kendi
+      // notlarını okur, canlı dinler; yazamaz, değiştiremez, silemez.
+      match /lessonNotes/{noteId} {
+        allow read: if ownActive(uid);
+      }
+
       // Schreiben metinleri: sadece onaylı (aktif) hesap; ekleme ve kendi metnini okuma.
       match /writings/{writingId} {
         allow read: if ownActive(uid);

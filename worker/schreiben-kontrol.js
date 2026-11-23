@@ -19,6 +19,11 @@
 //   FIREBASE_API_KEY, FIREBASE_PROJECT_ID, ALLOWED_ORIGINS (virgülle), SITE_URL   (düz metin, gizli değil)
 //   AI_EMAIL, AI_PASSWORD                                                          (gizli: Secret)
 //   AUTH_BASE, FIRESTORE_BASE   (sadece testlerde: Firebase Emulator adresleri)
+//
+// İkinci adres: POST /odev-bildirim (ödev e-postası; ayrıntı aşağıda "Ödev e-postası" bölümünde). Ek ortam:
+//   TEACHER_UID, MAIL_DAILY_LIMIT (varsayılan 100), MAIL_FROM (varsayılan info@bozkurtacademy.com)   (düz metin)
+//   BREVO_API_KEY                                                                                    (gizli: Secret)
+//   BREVO_BASE   (sadece testlerde: sahte Brevo adresi)
 
 export const MODEL = '@cf/google/gemma-4-26b-a4b-it';
 export const LIMIT_STUDENT = 3;
@@ -313,6 +318,216 @@ async function runModel(env, task, text) {
     : result?.choices?.[0]?.message?.content || (typeof result === 'string' ? result : JSON.stringify(result?.response || ''));
 }
 
+// ---------- Ödev e-postası (POST /odev-bildirim) ----------
+// Öğretmen ödev verince (ya da düzenleyip "değişikliği bildir" deyince) tarayıcı sadece ödev kopyalarının kimliklerini
+// gönderir: { kind: 'new' | 'update', items: [{ uid, id }] }. Worker e-posta adresine ya da metne tarayıcıdan güvenmez:
+//  1. belirteç Firebase Auth'a sorulur (accounts:lookup); TEACHER_UID değilse 401;
+//  2. öğretmenin KENDİ belirteciyle Firestore'dan okunur: users/{uid} (aktif mi, homeworkMail, lang, 16 yaş altıysa veli
+//     ve "veliyi de ekle" anahtarı inviteParent), users/{uid}/assignments/{id} (sadece başlık ve teslim tarihi), mailLimits/_global;
+//  3. Brevo transactional API ile info@bozkurtacademy.com adına gönderilir (yanıt adresi info@): ödevin başlığı, varsa
+//     teslim tarihi ve "Ödevlerim" bağlantısı. Ödevin içeriği, notlar, bağlantılar ya da öğrencinin adı e-postaya girmez;
+//  4. ödev kopyasına mailNewAt / mailUpdateAt yazılır: "yeni ödev" bir kez gider; "güncellendi" Berlin gününde en fazla bir
+//     kez ve aynı gün "yeni ödev" gitmediyse (ödev başına günde en fazla bir e-posta);
+//  5. site genelinde günde en fazla MAIL_DAILY_LIMIT (100) e-posta (veliye giden de sayılır; Brevo ücretsiz planı 300);
+//  6. açılma/tıklama takibi yapılmaz: her alıcıda contactPixelTrackingConsent: false (docs/odev-eposta-kurulum.md).
+export const MAIL_LIMIT_DEFAULT = 100;
+export const MAIL_MAX_ITEMS = 50;
+const MAIL_LANGS = ['tr', 'de', 'en'];
+const LOCALES = { tr: 'tr-TR', de: 'de-DE', en: 'en-GB' };
+const MAIL_TEXT = {
+  tr: {
+    subject: { new: 'Yeni ödev: {title}', update: 'Ödev güncellendi: {title}' },
+    hello: 'Merhaba,',
+    student: { new: "Bozkurt Academy'de sana yeni bir ödev verildi:", update: "Bozkurt Academy'deki ödevin güncellendi:" },
+    parent: { new: "Bozkurt Academy'de öğrencinize yeni bir ödev verildi:", update: "Bozkurt Academy'de öğrencinizin ödevi güncellendi:" },
+    due: 'Teslim: {due} (Berlin saati)',
+    link: { student: 'Ödevini görmek için:', parent: 'Öğrenci ödevi kendi hesabıyla bu sayfada görür:' },
+    button: { student: 'Ödevlerim', parent: 'Ödevler sayfası' },
+    why: {
+      student: 'Bu e-postayı öğretmenin sana ödev verdiği için aldın. Sorularını bu e-postayı yanıtlayarak sorabilirsin.',
+      parent: 'Bu e-postayı, öğrencinin ders bildirimlerinde veli olarak kayıtlı olduğunuz için aldınız. Sorularınızı bu e-postayı yanıtlayarak sorabilirsiniz.'
+    }
+  },
+  de: {
+    subject: { new: 'Neue Hausaufgabe: {title}', update: 'Hausaufgabe geändert: {title}' },
+    hello: { student: 'Hallo,', parent: 'Guten Tag,' },
+    student: { new: 'Du hast bei Bozkurt Academy eine neue Hausaufgabe bekommen:', update: 'Deine Hausaufgabe bei Bozkurt Academy wurde geändert:' },
+    parent: { new: 'Ihr Kind hat bei Bozkurt Academy eine neue Hausaufgabe bekommen:', update: 'Die Hausaufgabe Ihres Kindes bei Bozkurt Academy wurde geändert:' },
+    due: 'Abgabe: {due} (Berliner Zeit)',
+    link: { student: 'Hier siehst du deine Hausaufgaben:', parent: 'Ihr Kind sieht die Aufgabe mit dem eigenen Konto auf dieser Seite:' },
+    button: { student: 'Meine Hausaufgaben', parent: 'Hausaufgaben' },
+    why: {
+      student: 'Du bekommst diese E-Mail, weil dein Lehrer dir eine Hausaufgabe gegeben hat. Bei Fragen antworte einfach auf diese E-Mail.',
+      parent: 'Sie erhalten diese E-Mail, weil Sie für die Unterrichtsbenachrichtigungen Ihres Kindes als Elternteil eingetragen sind. Bei Fragen antworten Sie einfach auf diese E-Mail.'
+    }
+  },
+  en: {
+    subject: { new: 'New homework: {title}', update: 'Homework updated: {title}' },
+    hello: 'Hello,',
+    student: { new: 'You have a new homework assignment at Bozkurt Academy:', update: 'Your homework at Bozkurt Academy has been updated:' },
+    parent: { new: 'Your child has a new homework assignment at Bozkurt Academy:', update: "Your child's homework at Bozkurt Academy has been updated:" },
+    due: 'Due: {due} (Berlin time)',
+    link: { student: 'See your homework here:', parent: 'Your child can see the assignment with their own account on this page:' },
+    button: { student: 'My homework', parent: 'Homework page' },
+    why: {
+      student: 'You are receiving this email because your teacher gave you homework. If you have questions, just reply to this email.',
+      parent: "You are receiving this email because you are registered as a parent for your child's lesson notifications. If you have questions, just reply to this email."
+    }
+  }
+};
+
+const escapeHtml = (v) => String(v).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+const oneLine = (v) => String(v || '').replace(/[\u0000-\u001f\u007f]+/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 120);
+const validEmail = (v) => typeof v === 'string' && v.length <= 254 && /^[^@\s<>"',;]+@[^@\s<>"',;]+\.[^@\s<>"',;]+$/.test(v);
+
+export function formatDue(value, lang) {
+  const d = value ? new Date(value) : null;
+  if (!d || Number.isNaN(d.getTime())) return '';
+  return new Intl.DateTimeFormat(LOCALES[lang] || LOCALES.tr, { timeZone: 'Europe/Berlin', day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(d);
+}
+
+// E-postanın konusu, düz metni ve HTML'i. Sadece başlık, teslim tarihi ve bağlantı; değerler HTML'de kaçışlanır.
+export function homeworkMail({ lang, role, kind, title, due, url }) {
+  const L = MAIL_TEXT[MAIL_LANGS.includes(lang) ? lang : 'tr'];
+  const pick = (v) => (typeof v === 'string' ? v : v[role]);
+  const t = oneLine(title) || '—';
+  const dueText = due ? L.due.replace('{due}', due) : '';
+  const subject = L.subject[kind].replace('{title}', t);
+  const lines = [pick(L.hello), '', L[role][kind], t, ...(dueText ? [dueText] : []), '', `${L.link[role]} ${url}`, '', L.why[role], '', 'Bozkurt Academy'];
+  const html = `<!doctype html><html lang="${escapeHtml(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(subject)}</title></head>`
+    + '<body style="margin:0;padding:24px 12px;background:#f3f0e8;font-family:Arial,Helvetica,sans-serif;color:#2a2a26">'
+    + '<div style="max-width:520px;margin:0 auto;background:#ffffff;border:2px solid #d3cbb9;border-radius:14px;padding:24px">'
+    + `<p style="margin:0 0 12px">${escapeHtml(pick(L.hello))}</p>`
+    + `<p style="margin:0 0 6px">${escapeHtml(L[role][kind])}</p>`
+    + `<p style="margin:0 0 6px;font-size:20px;font-weight:bold">${escapeHtml(t)}</p>`
+    + (dueText ? `<p style="margin:0 0 16px;color:#55534a">${escapeHtml(dueText)}</p>` : '<p style="margin:0 0 16px"></p>')
+    + `<p style="margin:0 0 8px">${escapeHtml(L.link[role])}</p>`
+    + `<p style="margin:0 0 20px"><a href="${escapeHtml(url)}" style="display:inline-block;background:#45572f;color:#ffffff;text-decoration:none;padding:10px 18px;border-radius:8px;font-weight:bold">${escapeHtml(L.button[role])}</a></p>`
+    + `<p style="margin:0 0 4px;font-size:13px;color:#55534a">${escapeHtml(url)}</p>`
+    + `<p style="margin:16px 0 0;font-size:13px;color:#55534a">${escapeHtml(L.why[role])}</p>`
+    + '<p style="margin:16px 0 0;font-size:13px;color:#55534a">Bozkurt Academy</p>'
+    + '</div></body></html>';
+  return { subject, text: lines.join('\n'), html };
+}
+
+// Alıcılar: öğrenci; 16 yaş altıysa ve "veliyi de ekle" açıksa (ders davetleriyle aynı anahtar) veli de.
+export function mailRecipients(profile) {
+  const list = [];
+  if (validEmail(profile?.email)) list.push({ email: profile.email, role: 'student' });
+  const parent = profile?.parent?.email;
+  if (profile?.minor === true && profile?.inviteParent !== false && validEmail(parent)
+    && !list.some((r) => r.email.toLowerCase() === parent.toLowerCase())) list.push({ email: parent, role: 'parent' });
+  return list;
+}
+
+async function teacherUid(env, idToken) {
+  const uid = await studentUid(env, idToken);
+  return uid && env.TEACHER_UID && uid === env.TEACHER_UID ? uid : null;
+}
+
+async function sendBrevo(env, { to, subject, text, html }) {
+  const from = env.MAIL_FROM || 'info@bozkurtacademy.com';
+  const r = await fetch(`${env.BREVO_BASE || 'https://api.brevo.com'}/v3/smtp/email`, {
+    method: 'POST',
+    headers: { 'api-key': env.BREVO_API_KEY, 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify({
+      sender: { name: 'Bozkurt Academy', email: from }, replyTo: { email: from, name: 'Bozkurt Academy' },
+      // Açılma/tıklama takibi yok: alıcı başına izin "yok" (Brevo → Settings → Contacts → "Per-contact pixel tracking consent").
+      to: [{ email: to, contactPixelTrackingConsent: false }], subject, textContent: text, htmlContent: html, tags: ['odev']
+    })
+  });
+  if (!r.ok) throw new Error(`brevo ${r.status}`);
+}
+
+async function handleHomeworkMail(request, env, okOrigin) {
+  let body;
+  try { body = await request.json(); } catch (_) { return json({ status: 'bad-request' }, 400, okOrigin); }
+  const kind = body?.kind;
+  const items = Array.isArray(body?.items) ? body.items : null;
+  if (!['new', 'update'].includes(kind) || !items || !items.length || items.length > MAIL_MAX_ITEMS
+    || !items.every((i) => /^[A-Za-z0-9]{1,128}$/.test(i?.uid || '') && /^[A-Za-z0-9]{1,40}$/.test(i?.id || ''))) {
+    return json({ status: 'bad-request' }, 400, okOrigin);
+  }
+  const idToken = (request.headers.get('Authorization') || '').replace(/^Bearer\s+/i, '');
+  if (!idToken) return json({ status: 'unauthorized' }, 401, okOrigin);
+  if (!env.BREVO_API_KEY || !env.TEACHER_UID) return json({ status: 'not-configured' }, 503, okOrigin);
+  try {
+    if (!(await teacherUid(env, idToken))) return json({ status: 'unauthorized' }, 401, okOrigin);
+    const store = db(env, idToken);
+    const day = berlinDay();
+    const max = Number(env.MAIL_DAILY_LIMIT) > 0 ? Number(env.MAIL_DAILY_LIMIT) : MAIL_LIMIT_DEFAULT;
+    let limitDoc = await store.get('mailLimits/_global');
+    const startCount = limitDoc?.data?.day === day ? Number(limitDoc.data.count) || 0 : 0;
+    let sentCount = 0;
+    const site = (env.SITE_URL || 'https://bozkurtacademy.com').replace(/\/$/, '');
+    const field = kind === 'new' ? 'mailNewAt' : 'mailUpdateAt';
+    const results = [];
+    const seen = new Set();
+    for (const { uid, id } of items) {
+      const key = `${uid}/${id}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      const result = { uid, id, status: 'error', recipients: 0 };
+      results.push(result);
+      try {
+        const [profileDoc, assignmentDoc] = await Promise.all([store.get(`users/${uid}`), store.get(`users/${uid}/assignments/${id}`)]);
+        const profile = profileDoc?.data;
+        const a = assignmentDoc?.data;
+        if (!profile || !a) { result.status = 'not-found'; continue; }
+        if (profile.status !== 'active') { result.status = 'inactive'; continue; }
+        if (profile.homeworkMail === false) { result.status = 'off'; continue; }
+        // "Yeni ödev" bir kez; "güncellendi" ödev başına günde bir kez (aynı gün "yeni ödev" gittiyse o da sayılır).
+        const sameDay = (v) => Boolean(v) && berlinDay(new Date(v)) === day;
+        if (kind === 'new' ? Boolean(a.mailNewAt) : (sameDay(a.mailUpdateAt) || sameDay(a.mailNewAt))) { result.status = 'already'; continue; }
+        const recipients = mailRecipients(profile);
+        if (!recipients.length) { result.status = 'no-email'; continue; }
+        if (startCount + sentCount + recipients.length > max) { result.status = 'limit'; continue; }
+        const lang = MAIL_LANGS.includes(profile.lang) ? profile.lang : 'tr';
+        const url = `${site}/odevlerim.html#odev-${encodeURIComponent(id)}`;
+        let studentSent = false;
+        for (const r of recipients) {
+          const mail = homeworkMail({ lang, role: r.role, kind, title: a.title, due: formatDue(a.dueAt, lang), url });
+          try {
+            await sendBrevo(env, { to: r.email, ...mail });
+            sentCount += 1;
+            result.recipients += 1;
+            if (r.role === 'student') studentSent = true;
+          } catch (error) {
+            console.error('mail', String(error));
+            if (r.role === 'parent') result.parentError = true;
+          }
+        }
+        if (!studentSent) { result.status = 'error'; continue; }
+        await store.commit([{
+          transform: { document: store.name(`users/${uid}/assignments/${id}`), fieldTransforms: [{ fieldPath: field, setToServerValue: 'REQUEST_TIME' }] },
+          currentDocument: { exists: true }
+        }]).catch((error) => console.error('mark', String(error)));
+        result.status = 'sent';
+      } catch (error) {
+        console.error('item', String(error));
+      }
+    }
+    // Günlük sayaç: bu arada başka bir istek yazdıysa yeniden okunup üstüne eklenir.
+    for (let attempt = 0; sentCount && attempt < 3; attempt++) {
+      const base = limitDoc?.data?.day === day ? Number(limitDoc.data.count) || 0 : 0;
+      try {
+        await store.commit([{
+          update: { name: store.name('mailLimits/_global'), fields: { day: encode(day), count: encode(base + sentCount) } },
+          updateTransforms: [{ fieldPath: 'updatedAt', setToServerValue: 'REQUEST_TIME' }],
+          currentDocument: limitDoc ? { updateTime: limitDoc.updateTime } : { exists: false }
+        }]);
+        break;
+      } catch (error) {
+        limitDoc = await store.get('mailLimits/_global');
+      }
+    }
+    return json({ status: 'ok', results, sent: sentCount, count: startCount + sentCount, limit: max }, 200, okOrigin);
+  } catch (error) {
+    console.error(String(error));
+    return json({ status: 'error' }, 500, okOrigin);
+  }
+}
+
 // ---------- İstek ----------
 export default {
   async fetch(request, env) {
@@ -321,8 +536,9 @@ export default {
     const okOrigin = origin && allowed.includes(origin) ? origin : null;
     const url = new URL(request.url);
     if (request.method === 'OPTIONS') return new Response(null, { status: okOrigin ? 204 : 403, headers: cors(okOrigin) });
-    if (url.pathname !== '/check' || request.method !== 'POST') return json({ status: 'not-found' }, 404, okOrigin);
+    if ((url.pathname !== '/check' && url.pathname !== '/odev-bildirim') || request.method !== 'POST') return json({ status: 'not-found' }, 404, okOrigin);
     if (!okOrigin) return json({ status: 'forbidden' }, 403, null);
+    if (url.pathname === '/odev-bildirim') return handleHomeworkMail(request, env, okOrigin);
 
     let body;
     try { body = await request.json(); } catch (_) { return json({ status: 'bad-request' }, 400, okOrigin); }

@@ -50,6 +50,10 @@ Firestore "üretim modunda" oluşturulduğu için kurallar yayınlanana kadar he
 5. İzin yaklaşık 1 saat geçerli, aynı sekmede korunur, çıkışta silinir. Ödev silinince PDF Drive'da kalır; istersen klasörden elle silebilirsin.
 6. Yerel geliştirmede (`?emulator=1`) gerçek Google yerine `js/account/drive-mock.js` kullanılır; canlıda asla yüklenmez.
 
+### Ödev e-postası (Brevo)
+
+Adım adım kurulum (Brevo API anahtarı, Worker kodu ve değişkenleri, Firestore kuralları, takip ayarı, deneme): `docs/odev-eposta-kurulum.md`.
+
 ### Öğrenci ve veli hatırlatma e-postaları (Aşama 4)
 
 Google Apps Script ile, senin Google hesabında: adım adım kurulum `apps-script/README.md`'de. Kısaca: script.google.com → yeni proje → `Code.gs` ve `appsscript.json`'ı yapıştır → Google Calendar API hizmetini ekle → `dryRun` → `installTrigger`.
@@ -120,6 +124,7 @@ curl -X POST -H 'Authorization: Bearer owner' -H 'Content-Type: application/json
 | `js/account/student-assignments.js` | `odevlerim.html`: öğrencinin ödevleri (TR/DE/EN) |
 | `js/account/drive.js` | Ödev PDF'lerini öğretmenin Google Drive'ına yükleme (Google Identity Services, sadece `drive.file`) |
 | `js/account/drive-mock.js` | Sadece yerel emülatörde: sahte Google Drive |
+| `js/account/homework-mail.js` | Ödev e-postası: Worker'a (`/odev-bildirim`) ödev kimliklerini gönderir, sonucu ödev listesinde gösterir |
 | `js/account/assignments.js` | Ödevlerin ortak veri biçimi (eski `docUrl` ödevlerini okuma), bağlantı denetimi, görünüm parçaları |
 | `js/account/teacher-calendar.js` | `ogretmen-takvim.html`: haftalık/aylık takvim, yeni ders, taşıma, iptal, tekrar dene |
 | `js/account/lessons.js` | Dersler: önce Firestore, sonra Google Calendar; başarısız işlemler ve yeniden deneme |

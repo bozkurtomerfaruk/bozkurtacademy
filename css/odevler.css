@@ -57,3 +57,5 @@ a.odev-chip:hover{border-color:var(--ba-line-strong)}
   .odev-icon{display:none}
 }
 .odev-progress{width:100%;height:10px;accent-color:var(--ba-accent)}
+.odev-notify{display:grid;gap:6px;padding-top:12px;border-top:2px solid var(--ba-paper-2)}
+.odev-mail{font-size:var(--ba-small);color:var(--ba-muted)}

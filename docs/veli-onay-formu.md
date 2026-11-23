@@ -13,7 +13,8 @@
 
 - Öğrencinin adı soyadı, e-posta adresi ve doğum yılı (tam doğum tarihi değil)
 - Sitedeki alıştırmaların ve sınav hazırlığı setlerinin sonuçları: konu, seviye, skor ve zaman (tek tek cevaplar kaydedilmez)
-- Ödevlerin durumu ve öğrencinin ödeve eklediği Google Docs linki
+- Ödevlerin durumu, öğrencinin ödeve eklediği Google Docs linki ve ödev e-postasının gönderildiği zaman
+- Öğrencinin sitede seçtiği dil (ödev e-postası bu dilde gönderilir)
 - Sınav hazırlığındaki yazma görevlerinde (Schreiben) öğrencinin gönderdiği metinler ve öğretmenin geri bildirimi
 - Ders bilgileri: tarih, saat, süre, ders notu ve Google Meet linki
 - Velinin adı soyadı ve e-posta adresi
@@ -25,8 +26,8 @@ Başka kişisel veri istenmez.
 
 - Derslerin planlanması ve yürütülmesi
 - Öğrencinin ilerlemesinin takibi (alıştırma sonuçları, ödevler)
-- Ders davetlerinin ve hatırlatma e-postalarının gönderilmesi
-- İsterseniz ders davetleri ve hatırlatmalar size de gönderilir (aşağıdaki 3. maddeye bakın)
+- Ders davetlerinin, hatırlatma e-postalarının ve ödev e-postalarının gönderilmesi
+- İsterseniz ders davetleri, hatırlatmalar ve ödev e-postaları size de gönderilir (aşağıdaki 6. maddedeki kutu)
 
 Veriler reklam için kullanılmaz ve satılmaz.
 
@@ -35,6 +36,7 @@ Veriler reklam için kullanılmaz ve satılmaz.
 - **Google Firebase:** Giriş ve öğrenci verileri burada tutulur. Veritabanı (Cloud Firestore) Frankfurt'taki sunucularda bulunur. Giriş hesabı (e-posta adresi, şifrenin şifrelenmiş özeti) Google tarafından AB dışında, özellikle ABD'de de işlenebilir; bu aktarım AB-ABD Veri Gizliliği Çerçevesi ve standart sözleşme maddeleri dayanağıyla yapılır.
 - **Google Calendar ve Google Meet:** Her ders öğretmenin Google Calendar'ında bir etkinlik olarak oluşturulur. Öğrencinin adı ve e-posta adresi, ders zamanı ve Meet linki bu etkinlikte yer alır. Davet e-postalarını Google gönderir.
 - **Gmail:** Dersten bir gün önce öğretmenin Gmail hesabından hatırlatma e-postası gönderilir (Google Apps Script ile).
+- **Brevo (Sendinblue SAS, Fransa, AB) ve Cloudflare Workers (Cloudflare, Inc.):** Öğretmen ödev verdiğinde info@bozkurtacademy.com adresinden kısa bir ödev e-postası gönderilir. E-postada sadece ödevin başlığı, varsa teslim tarihi ve "Ödevlerim" sayfasının bağlantısı vardır; ödevin içeriği ya da notlar yoktur. Brevo'ya alıcı adresi, konu ve e-postanın metni iletilir; açılma ve tıklama takibi yapılmaz. Öğretmen ödev e-postalarını öğrenci bazında kapatabilir.
 
 ## 3a. Yapay zekâ ile metin kontrolü (isteğe bağlı, ayrı onay)
 
@@ -71,7 +73,7 @@ Velinin adı soyadı: ______________________________
 Velinin e-posta adresi: ______________________________
 
 - [ ] Yukarıdaki bilgileri okudum. Çocuğumun Bozkurt Academy öğrenci hesabının açılmasına ve verilerinin bu formda açıklandığı şekilde işlenmesine onay veriyorum.
-- [ ] Ders davetlerinin ve hatırlatma e-postalarının bana da gönderilmesini istiyorum. (İsteğe bağlı)
+- [ ] Ders davetlerinin, hatırlatma e-postalarının ve ödev e-postalarının bana da gönderilmesini istiyorum. (İsteğe bağlı)
 - [ ] Çocuğumun yazma görevlerindeki metinlerin 3a maddesinde açıklandığı şekilde yapay zekâ ile kontrol edilmesine ve geri bildirimin öğretmen önceden kontrol etmeden doğrudan çocuğuma gösterilmesine onay veriyorum. (İsteğe bağlı)
 
 Yer, tarih: ______________________________
@@ -90,7 +92,8 @@ Ihr Kind möchte für den Online-Deutschunterricht bei Bozkurt Academy ein Schü
 
 - Vor- und Nachname, E-Mail-Adresse und Geburtsjahr des Kindes (nicht das genaue Geburtsdatum)
 - Ergebnisse der Übungen und der Sätze zur Prüfungsvorbereitung auf der Website: Thema, Niveau, Punktzahl und Zeitpunkt (einzelne Antworten werden nicht gespeichert)
-- Stand der Hausaufgaben und der Google-Docs-Link, den das Kind zu einer Hausaufgabe hinzufügt
+- Stand der Hausaufgaben, der Google-Docs-Link, den das Kind zu einer Hausaufgabe hinzufügt, und der Zeitpunkt der Hausaufgaben-E-Mail
+- Die Sprache, die das Kind auf der Website gewählt hat (die Hausaufgaben-E-Mail wird in dieser Sprache versendet)
 - Bei den Schreibaufgaben der Prüfungsvorbereitung: die Texte, die das Kind abschickt, und die Rückmeldung des Lehrers
 - Unterrichtsdaten: Datum, Uhrzeit, Dauer, Notiz zur Stunde und Google-Meet-Link
 - Vor- und Nachname sowie E-Mail-Adresse eines Elternteils
@@ -102,8 +105,8 @@ Weitere personenbezogene Daten werden nicht erhoben.
 
 - Planung und Durchführung des Unterrichts
 - Verfolgung des Lernfortschritts (Übungsergebnisse, Hausaufgaben)
-- Versand von Einladungen zu den Stunden und von Erinnerungs-E-Mails
-- Auf Wunsch erhalten auch Sie die Einladungen und Erinnerungen (siehe Punkt 3)
+- Versand von Einladungen zu den Stunden, von Erinnerungs-E-Mails und von Hausaufgaben-E-Mails
+- Auf Wunsch erhalten auch Sie die Einladungen, Erinnerungen und Hausaufgaben-E-Mails (Kästchen unter Punkt 6)
 
 Die Daten werden nicht für Werbung verwendet und nicht verkauft.
 
@@ -112,6 +115,7 @@ Die Daten werden nicht für Werbung verwendet und nicht verkauft.
 - **Google Firebase:** Anmelde- und Schülerdaten werden hier gespeichert. Die Datenbank (Cloud Firestore) liegt auf Servern in Frankfurt. Das Anmeldekonto (E-Mail-Adresse, verschlüsselter Passwort-Hash) kann von Google auch außerhalb der EU, insbesondere in den USA, verarbeitet werden; Grundlage dafür sind das EU-US Data Privacy Framework und die Standardvertragsklauseln der EU-Kommission.
 - **Google Calendar und Google Meet:** Jede Stunde wird als Termin im Google Calendar des Lehrers angelegt. Name und E-Mail-Adresse des Kindes, die Uhrzeit und der Meet-Link stehen in diesem Termin. Die Einladungs-E-Mails versendet Google.
 - **Gmail:** Einen Tag vor der Stunde wird vom Gmail-Konto des Lehrers eine Erinnerungs-E-Mail versendet (mit Google Apps Script).
+- **Brevo (Sendinblue SAS, Frankreich, EU) und Cloudflare Workers (Cloudflare, Inc.):** Wenn der Lehrer eine Hausaufgabe gibt, wird von info@bozkurtacademy.com eine kurze Hausaufgaben-E-Mail versendet. Sie enthält nur den Titel der Hausaufgabe, gegebenenfalls den Abgabetermin und den Link zur Seite „Meine Hausaufgaben“; Inhalte der Aufgabe oder Notizen sind nicht enthalten. An Brevo werden Empfängeradresse, Betreff und der Text der E-Mail übermittelt; es findet kein Öffnungs- oder Klick-Tracking statt. Der Lehrer kann Hausaufgaben-E-Mails pro Schülerin bzw. Schüler abschalten.
 
 ## 3a. Textprüfung mit künstlicher Intelligenz (freiwillig, gesonderte Einwilligung)
 
@@ -148,7 +152,7 @@ Vor- und Nachname des Elternteils: ______________________________
 E-Mail-Adresse des Elternteils: ______________________________
 
 - [ ] Ich habe die obigen Informationen gelesen. Ich willige ein, dass für mein Kind ein Schülerkonto bei Bozkurt Academy angelegt wird und seine Daten wie in diesem Formular beschrieben verarbeitet werden.
-- [ ] Ich möchte die Einladungen und Erinnerungs-E-Mails ebenfalls erhalten. (Freiwillig)
+- [ ] Ich möchte die Einladungen, Erinnerungs-E-Mails und Hausaufgaben-E-Mails ebenfalls erhalten. (Freiwillig)
 - [ ] Ich willige ein, dass die Texte meines Kindes aus den Schreibaufgaben wie unter Punkt 3a beschrieben mit KI geprüft werden und die Rückmeldung meinem Kind ohne vorherige Prüfung durch den Lehrer direkt angezeigt wird. (Freiwillig)
 
 Ort, Datum: ______________________________

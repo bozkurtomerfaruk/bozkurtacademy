@@ -169,12 +169,13 @@ function renderLessons(){
     l.status === 'cancelled' ? h('span', { class: 'acc-badge muted' }, 'İptal') : null,
     l.calendarSync === 'failed' ? h('span', { class: 'acc-badge warning' }, 'Takvim hatası') : null,
     l.status === 'scheduled' && end(l) > now && l.meetUrl ? safeLink(l.meetUrl, 'Görüşmeye katıl') : null);
-  $('lessonsList').replaceChildren(
+  $('lessonsList').replaceChildren(...[
     upcoming.length
       ? h('ul', { class: 'acc-status-list acc-lesson-list' }, upcoming.map(row))
       : h('p', { class: 'acc-empty' }, 'Planlanmış ders yok.'),
     past.length ? h('details', { class: 'acc-details' }, h('summary', {}, `Geçmiş dersler (${past.length})`), h('ul', { class: 'acc-status-list' }, past.map(row))) : null,
-    h('p', { class: 'acc-hint' }, h('a', { class: 'ba-link', href: 'ogretmen-takvim.html' }, 'Takvimde aç'), ' (taşıma ve iptal için).'));
+    h('p', { class: 'acc-hint' }, h('a', { class: 'ba-link', href: 'ogretmen-takvim.html' }, 'Takvimde aç'), ' (taşıma ve iptal için).')
+  ].filter(Boolean)); // geçmiş ders yoksa ekrana "null" yazılmasın
 }
 
 // 16 yaş altı: ders davetlerine ve hatırlatmalara veli de eklensin mi (varsayılan açık).
@@ -213,14 +214,39 @@ function inviteParentControl(){
     await reload();
   });
   return h('div', { class: 'acc-invite' },
-    h('label', { class: 'acc-check' }, input, h('span', {}, 'Ders davetlerine ve hatırlatma e-postalarına veliyi de ekle')),
+    h('label', { class: 'acc-check' }, input, h('span', {}, 'Ders davetlerine, hatırlatma ve ödev e-postalarına veliyi de ekle')),
     save);
 }
 
 // Öğrencinin ödevleri ayrı sayfada (ogretmen-odevler.html?ogrenci=…). Burada kısa özet ve açık ödevler.
+// Ödev e-postaları açık/kapalı (users/{uid}.homeworkMail; yoksa açık). Worker kapalıysa göndermez.
+function homeworkMailControl(){
+  const input = h('input', { type: 'checkbox', id: 'homeworkMailInput', checked: student.homeworkMail !== false });
+  const status = h('p', { class: 'acc-status', role: 'status', hidden: true });
+  input.addEventListener('change', async () => {
+    input.disabled = true;
+    try{
+      await fs.updateDoc(fs.doc(db, 'users', uid), { homeworkMail: input.checked });
+      student.homeworkMail = input.checked;
+      setStatus(status, 'success', input.checked ? 'Ödev e-postaları açık.' : 'Ödev e-postaları kapalı; bu öğrenciye ödev e-postası gitmez.');
+    }catch(error){
+      console.error(error);
+      input.checked = !input.checked;
+      setStatus(status, 'error', 'Kaydedilemedi. Tekrar dene.');
+    }finally{
+      input.disabled = false;
+    }
+  });
+  return h('div', { class: 'acc-homework-mail' },
+    h('label', { class: 'acc-check' }, input, h('span', {}, 'Yeni ödevlerde e-posta gönder',
+      h('span', { class: 'acc-sub' }, student.minor ? 'Veliye de gitmesi için "veliyi de ekle" anahtarı (veli kartında) açık olmalı.' : 'Sadece ödevin başlığı, teslim tarihi ve "Ödevlerim" bağlantısı.'))),
+    status);
+}
+
 async function renderAssignments(){
   const assignments = (await loadAssignments(uid)).map(normalizeAssignment);
   const box = $('assignmentsList');
+  $('homeworkMailBox').replaceChildren(homeworkMailControl());
   const pageLink = h('a', { class: 'ba-link', href: `ogretmen-odevler.html?ogrenci=${encodeURIComponent(uid)}` }, 'Ödevlerini aç');
   if(!assignments.length){
     box.replaceChildren(h('p', { class: 'acc-empty' }, 'Bu öğrenciye henüz ödev verilmedi.'));

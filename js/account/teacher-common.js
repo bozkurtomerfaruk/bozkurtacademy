@@ -135,10 +135,14 @@ export function recordConsent(uid, { date, method }){
 
 // Ödevler: her öğrenciye ayrı bir kopya yazılır (users/{uid}/assignments), aynı groupId ile.
 // Böylece bir öğrenci aynı ödevi başka kimin aldığını göremez. Veri biçimi: js/account/assignments.js.
+// Döner: { groupId, copies: [{ uid, id }] } (ödev e-postası için kopyaların kimlikleri).
 export async function createAssignments(studentIds, data, groupId = crypto.randomUUID()){
   const batch = fs.writeBatch(db);
+  const copies = [];
   for(const uid of studentIds){
-    batch.set(fs.doc(fs.collection(db, 'users', uid, 'assignments')), {
+    const ref = fs.doc(fs.collection(db, 'users', uid, 'assignments'));
+    copies.push({ uid, id: ref.id });
+    batch.set(ref, {
       ...data,
       schemaVersion: SCHEMA_VERSION,
       groupId,
@@ -149,7 +153,7 @@ export async function createAssignments(studentIds, data, groupId = crypto.rando
     });
   }
   await batch.commit();
-  return groupId;
+  return { groupId, copies };
 }
 
 // Ödevi düzenleme: bütün kopyalarda içerik güncellenir; öğrencinin işaretleri (done, doneAt, studentDocUrl) ve
@@ -160,8 +164,11 @@ export async function updateAssignmentGroup(group, data, addStudentIds = []){
   for(const c of group.copies){
     batch.update(c.ref, { ...data, schemaVersion: SCHEMA_VERSION, docUrl: fs.deleteField(), copyPerStudent: fs.deleteField(), updatedAt: fs.serverTimestamp() });
   }
+  const added = [];
   for(const uid of addStudentIds){
-    batch.set(fs.doc(fs.collection(db, 'users', uid, 'assignments')), {
+    const ref = fs.doc(fs.collection(db, 'users', uid, 'assignments'));
+    added.push({ uid, id: ref.id });
+    batch.set(ref, {
       ...data,
       schemaVersion: SCHEMA_VERSION,
       groupId: group.groupId,
@@ -172,6 +179,7 @@ export async function updateAssignmentGroup(group, data, addStudentIds = []){
     });
   }
   await batch.commit();
+  return added;
 }
 
 // Bütün öğrencilerin ödevleri, groupId'ye göre gruplanmış (eski ödevler de; bkz. normalizeAssignment).

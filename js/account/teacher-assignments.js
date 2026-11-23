@@ -3,6 +3,7 @@
 // "+ Oluştur" ve "Düzenle" ogretmen-odev.html'yi açar. Veri biçimi: js/account/assignments.js.
 import { $, exerciseUrl, h, loadResults, scoreText } from './common.js';
 import { assignmentBody, expandExercises, groupByDay, solvedCount, withResults } from './assignments.js?v=1';
+import { describeResult, mailConfigured, notifyHomework, takeResult } from './homework-mail.js?v=1';
 import { deleteAssignmentCopies, fmtDate, isEnabled, listStudents, loadAssignmentGroups, requireTeacher } from './teacher-common.js';
 
 const TX = {
@@ -73,6 +74,25 @@ function setNotice(type, message){
   el.textContent = message || '';
 }
 
+// E-posta: "yeni ödev" e-postası gitmemiş kopyalara gönderir (tekrar dene). Sonuç bildirim satırında.
+async function sendMail(copies, button){
+  button.disabled = true;
+  setNotice('', 'E-postalar gönderiliyor…');
+  const result = await notifyHomework('new', copies.map((c) => ({ uid: c.uid, id: c.id })));
+  const view = describeResult(result, studentName);
+  await reload();
+  setNotice(view.type, view.text);
+}
+
+const mailSent = (copy) => copy.assignment?.mailNewAt;
+const mailOff = (uid) => studentsById.get(uid)?.homeworkMail === false;
+function mailText(copy){
+  const a = copy.assignment;
+  if(mailSent(copy)) return `E-posta gönderildi · ${fmtDate(a.mailNewAt)}${a.mailUpdateAt ? ` · değişiklik bildirildi ${fmtDate(a.mailUpdateAt)}` : ''}`;
+  if(mailOff(copy.uid)) return 'Ödev e-postaları kapalı';
+  return 'E-posta gönderilmedi';
+}
+
 // Tek öğrencinin görünümü: o öğrencinin kopyası, alıştırma durumları ve öğrencinin işaretleri.
 async function studentCard(g, copy, results){
   const a = copy.assignment;
@@ -83,9 +103,17 @@ async function studentCard(g, copy, results){
   const removeOne = h('button', { class: 'acc-text-button', type: 'button' }, 'Bu öğrenciden kaldır');
   removeOne.addEventListener('click', () => removeCopies([copy.ref], removeOne, `"${a.title}" ödevi ${studentName(copy.uid)} adlı öğrenciden kaldırılsın mı?`));
   const others = g.copies.length - 1;
+  const actions = [edit, removeOne];
+  let mailAction = null;
+  if(mailConfigured && !mailSent(copy) && !mailOff(copy.uid) && isEnabled(studentsById.get(copy.uid) || {})){
+    mailAction = h('button', { class: 'acc-text-button', type: 'button' }, 'E-posta gönder');
+    mailAction.addEventListener('click', () => sendMail([copy], mailAction));
+  }
   return card({
     a, done: copy.done,
     meta: [dueText(a.due), others > 0 ? `${studentName(copy.uid)} ve ${others} öğrenci daha` : null],
+    mail: mailConfigured ? mailText(copy) : null,
+    mailAction,
     badges: [
       count ? h('span', { class: `acc-badge ${count.solved === count.total ? 'success' : ''}` }, `${count.solved}/${count.total} çözüldü`) : null,
       h('span', { class: `acc-badge ${copy.done ? 'success' : ''}` }, copy.done ? `Tamamladı · ${fmtDate(copy.doneAt)}` : 'Bekliyor'),
@@ -95,7 +123,7 @@ async function studentCard(g, copy, results){
       ...assignmentBody(a, exercises, { tx, scoreText, exerciseUrl }),
       copy.studentDocUrl ? h('p', { class: 'odev-text' }, 'Öğrencinin dokümanı: ', h('a', { class: 'ba-link', href: copy.studentDocUrl, target: '_blank', rel: 'noopener noreferrer' }, 'Aç')) : null
     ],
-    actions: [edit, removeOne]
+    actions
   });
 }
 
@@ -110,6 +138,9 @@ async function groupCard(g){
   remove.addEventListener('click', () => removeCopies(g.copies.map((c) => c.ref), remove,
     `"${a.title}" ödevi ${g.copies.length} öğrenciden silinsin mi? Öğrencilerin işaretleri de silinir. (Drive'daki PDF'ler silinmez.)`));
   const people = [...g.copies].sort((x, y) => studentName(x.uid).localeCompare(studentName(y.uid), 'tr'));
+  const unsent = mailConfigured ? g.copies.filter((c) => !mailSent(c) && !mailOff(c.uid) && isEnabled(studentsById.get(c.uid) || {})) : [];
+  const unsentButton = h('button', { class: 'acc-text-button', type: 'button' }, 'Gönder');
+  unsentButton.addEventListener('click', () => sendMail(unsent, unsentButton));
   return card({
     a, done: done === g.copies.length,
     meta: [dueText(a.due), `${g.copies.length} öğrenci`],
@@ -125,13 +156,16 @@ async function groupCard(g){
           studentsById.has(c.uid)
             ? h('a', { class: 'ba-link', href: `ogretmen-odevler.html?ogrenci=${encodeURIComponent(c.uid)}` }, studentName(c.uid))
             : h('span', {}, studentName(c.uid)),
-          h('span', { class: `acc-badge ${c.done ? 'success' : ''}` }, c.done ? `Tamamladı · ${fmtDate(c.doneAt)}` : 'Bekliyor')))))
+          h('span', { class: `acc-badge ${c.done ? 'success' : ''}` }, c.done ? `Tamamladı · ${fmtDate(c.doneAt)}` : 'Bekliyor'),
+          mailConfigured ? h('span', { class: 'odev-mail' }, mailText(c)) : null))))
     ],
+    mail: unsent.length ? `${unsent.length} öğrenciye e-posta gitmedi` : null,
+    mailAction: unsent.length ? unsentButton : null,
     actions: [edit, remove]
   });
 }
 
-function card({ a, done, meta, badges, body, actions }){
+function card({ a, done, meta, badges, body, actions, mail, mailAction }){
   return h('article', { class: 'odev-item', id: `odev-${a.groupId || a.id}` },
     h('span', { class: `odev-icon${done ? ' done' : ''}`, 'aria-hidden': 'true' }, done ? '✓' : '✎'),
     h('div', { class: 'odev-main' },
@@ -139,6 +173,7 @@ function card({ a, done, meta, badges, body, actions }){
         h('h3', {}, a.title),
         h('span', { class: 'acc-badges' }, badges)),
       h('p', { class: 'odev-meta' }, meta.filter(Boolean).join(' · ')),
+      mail ? h('p', { class: 'odev-mail' }, mail, mailAction ? ' · ' : null, mailAction) : null,
       h('details', { class: 'odev-details' },
         h('summary', {}, 'Ayrıntılar'),
         h('div', { class: 'odev-body' }, body),
@@ -186,6 +221,8 @@ if(user){
     const status = params.get('durum');
     if(status === 'verildi') setNotice('success', 'Ödev verildi.');
     if(status === 'guncellendi') setNotice('success', 'Ödev güncellendi.');
+    const mail = describeResult(takeResult(), studentName);
+    if(mail) setNotice(mail.type, `${status === 'guncellendi' ? 'Ödev güncellendi.' : 'Ödev verildi.'} ${mail.text}`);
     $('studentSelect').addEventListener('change', () => { setNotice('', ''); render(); });
     await render();
     $('listLoading').hidden = true;

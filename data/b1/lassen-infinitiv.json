@@ -7,9 +7,9 @@
     "en": "lassen + infinitive"
   },
   "description": {
-    "tr": "lassen ile yaptırmak, izin vermek, bırakmak ve Lass uns … için B1 alıştırmaları: çekim, fiil sırası, işi kim yapıyor, emir kipi.",
-    "de": "B1-Übungen zu lassen (veranlassen, erlauben, zurücklassen, Lass uns …): Konjugation, Satzbau, wer handelt, Imperativ.",
-    "en": "B1 practice on lassen (having something done, allowing, leaving, Lass uns …): conjugation, word order, who acts, imperative."
+    "tr": "lassen ile yaptırmak, izin vermek, bırakmak ve Lass uns … için B1 alıştırmaları: çekim, fiil sırası, sich lassen, Perfekt (lassen / gelassen), yan cümle, modal fiiller, Präteritum ve Türkçe karşılaştırma.",
+    "de": "B1-Übungen zu lassen (veranlassen, erlauben, zurücklassen, Lass uns …): Konjugation, Satzbau, sich lassen, Perfekt (lassen / gelassen), Nebensatz, Modalverben, Präteritum und Vergleich mit dem Türkischen.",
+    "en": "B1 practice on lassen (having something done, allowing, leaving, Lass uns …): conjugation, word order, sich lassen, perfect (lassen / gelassen), subordinate clauses, modal verbs, simple past and comparison with Turkish."
   },
   "lesson": {
     "title": {
@@ -547,18 +547,18 @@
           "word": "Satzbau",
           "sentence": "Welcher Satz ist richtig?",
           "options": [
-            "Wir haben vor, die Küche streichen zu lassen.",
-            "Wir haben vor, die Küche zu streichen lassen.",
-            "Wir haben vor, die Küche streichen lassen."
+            "Sie lässt ihre Schuhe reparieren.",
+            "Sie lässt ihre Schuhe zu reparieren.",
+            "Sie lässt ihre Schuhe repariert."
           ],
-          "correct": "Wir haben vor, die Küche streichen zu lassen.",
+          "correct": "Sie lässt ihre Schuhe reparieren.",
           "explanations": {
-            "tr": "Burada vorhaben zu-Infinitiv ister. zu, lassen’in önüne gelir: streichen zu lassen. streichen’in önüne zu konmaz, çünkü streichen lassen’e bağlıdır.",
-            "de": "vorhaben verlangt einen Infinitiv mit zu. Das zu steht vor lassen: streichen zu lassen.",
-            "en": "vorhaben needs an infinitive with zu. The zu goes before lassen: streichen zu lassen."
+            "tr": "lassen’den sonra yalın mastar gelir ve en sona gider: reparieren. zu reparieren yanlış (zu yok); repariert Partizip II’dir, burada mastar gerekir.",
+            "de": "Nach lassen steht der reine Infinitiv am Ende: reparieren – ohne zu, nicht repariert.",
+            "en": "After lassen the bare infinitive goes at the end: reparieren – no zu, not repariert."
           },
           "vocab": [
-            "Küche"
+            "Schuh"
           ]
         },
         {
@@ -1038,6 +1038,3010 @@
           "vocab": [
             "Schwester",
             "Buch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sich-lassen-1",
+      "title": {
+        "tr": "Übung 6 – sich etwas machen lassen: mir oder mich?",
+        "de": "Übung 6 – sich etwas machen lassen: mir oder mich?",
+        "en": "Übung 6 – sich etwas machen lassen: mir oder mich?"
+      },
+      "description": {
+        "tr": "Kendine bir şey yaptırmak: Akkusativ nesne varsa mir/dir/sich (Dativ), yoksa mich/dich/sich (Akkusativ).",
+        "de": "Etwas für sich machen lassen: Mit Akkusativobjekt mir/dir/sich (Dativ), ohne Akkusativobjekt mich/dich/sich.",
+        "en": "Having something done for yourself: with an accusative object mir/dir/sich (dative), without one mich/dich/sich."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel bis schwer",
+        "en": "Medium to hard"
+      },
+      "questions": [
+        {
+          "word": "sich lassen",
+          "sentence": "Ergänze: „Ich lasse ___ die Haare schneiden.“",
+          "options": [
+            "mir",
+            "mich",
+            "mein"
+          ],
+          "correct": "mir",
+          "explanations": {
+            "tr": "Cümlede zaten bir Akkusativ nesne var: die Haare. Bu yüzden dönüşlü zamir Dativ olur: mir (kendime). mich + die Haare iki Akkusativ olur, yanlış. mein ise die Haare’nin önüne meine olarak gelirdi.",
+            "de": "die Haare ist schon das Akkusativobjekt, deshalb steht das Reflexivpronomen im Dativ: mir.",
+            "en": "die Haare is already the accusative object, so the reflexive pronoun is dative: mir."
+          },
+          "vocab": [
+            "Haar"
+          ]
+        },
+        {
+          "word": "sich lassen",
+          "sentence": "Ergänze: „Du lässt ___ beim Zahnarzt einen Zahn ziehen.“",
+          "options": [
+            "dir",
+            "dich",
+            "du"
+          ],
+          "correct": "dir",
+          "explanations": {
+            "tr": "Akkusativ nesne einen Zahn. Kendin için yaptırdığın için dönüşlü zamir Dativ: du → dir. dich yanlış, çünkü Akkusativ yeri einen Zahn ile dolu.",
+            "de": "Akkusativobjekt: einen Zahn → Reflexivpronomen im Dativ: dir.",
+            "en": "Accusative object: einen Zahn → reflexive pronoun in the dative: dir."
+          },
+          "vocab": [
+            "Zahn"
+          ]
+        },
+        {
+          "word": "sich lassen",
+          "sentence": "Ergänze: „Ich lasse ___ beim Arzt untersuchen.“",
+          "options": [
+            "mich",
+            "mir",
+            "ich"
+          ],
+          "correct": "mich",
+          "explanations": {
+            "tr": "Burada başka bir Akkusativ nesne yok; muayene edilen kişi sensin. Bu yüzden dönüşlü zamir Akkusativ: mich. mir ancak die Augen gibi bir nesne olsaydı gelirdi: Ich lasse mir die Augen untersuchen.",
+            "de": "Es gibt kein anderes Akkusativobjekt; ich selbst werde untersucht → mich.",
+            "en": "There is no other accusative object; I myself am examined → mich."
+          },
+          "vocab": [
+            "Arzt"
+          ]
+        },
+        {
+          "word": "sich lassen",
+          "sentence": "Meine Mutter möchte ein neues Kleid für sich selbst. Ergänze: „Meine Mutter lässt ___ ein Kleid nähen.“",
+          "options": [
+            "sich",
+            "ihr",
+            "mich"
+          ],
+          "correct": "sich",
+          "explanations": {
+            "tr": "Elbise annenin kendisi için. Özne 3. tekil kişi olduğunda dönüşlü zamir her zaman sich’tir (Dativ’de de). ihr başka bir kadını gösterir, mich ise seni; ikisi de bağlama uymaz.",
+            "de": "Das Kleid ist für die Mutter selbst: Reflexivpronomen der 3. Person ist immer sich.",
+            "en": "The dress is for the mother herself: the 3rd-person reflexive pronoun is always sich."
+          },
+          "vocab": [
+            "Mutter",
+            "Kleid"
+          ]
+        },
+        {
+          "word": "sich lassen",
+          "sentence": "Ergänze (wir): „Wir lassen ___ in der Bank beraten.“",
+          "options": [
+            "uns",
+            "wir",
+            "unser"
+          ],
+          "correct": "uns",
+          "explanations": {
+            "tr": "Başka bir Akkusativ nesne yok; danışmanlık alanlar wir. Dönüşlü zamir: uns. wir özne biçimidir, unser ise iyelik.",
+            "de": "Kein weiteres Akkusativobjekt; wir werden beraten → uns.",
+            "en": "No other accusative object; we are advised → uns."
+          },
+          "vocab": [
+            "Bank"
+          ]
+        },
+        {
+          "word": "sich lassen",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Ich lasse mir einen neuen Schlüssel machen.",
+            "Ich lasse mich einen neuen Schlüssel machen.",
+            "Ich lasse mir machen einen neuen Schlüssel."
+          ],
+          "correct": "Ich lasse mir einen neuen Schlüssel machen.",
+          "explanations": {
+            "tr": "einen neuen Schlüssel Akkusativ nesne olduğu için mir (Dativ) gerekir. Mastar machen en sona gider.",
+            "de": "einen neuen Schlüssel ist Akkusativobjekt → mir; machen steht am Ende.",
+            "en": "einen neuen Schlüssel is the accusative object → mir; machen goes at the end."
+          },
+          "vocab": [
+            "Schlüssel"
+          ]
+        },
+        {
+          "word": "sich lassen",
+          "sentence": "Ergänze (ihr, ihr selbst auf dem Foto): „Lasst ihr ___ fotografieren?“",
+          "options": [
+            "euch",
+            "ihr",
+            "eure"
+          ],
+          "correct": "euch",
+          "explanations": {
+            "tr": "Fotoğrafı çekilen kişiler ihr; başka Akkusativ nesne yok. ihr’in dönüşlü zamiri euch’tur. ihr özne biçimi, eure iyelik.",
+            "de": "Ihr selbst werdet fotografiert, kein anderes Objekt → euch.",
+            "en": "You yourselves are photographed, no other object → euch."
+          }
+        },
+        {
+          "type": "text",
+          "word": "sich lassen",
+          "sentence": "Ergänze das Reflexivpronomen (für sich selbst): „Mein Bruder lässt ___ einen Anzug nähen.“",
+          "correct": "sich",
+          "answers": [
+            "sich"
+          ],
+          "explanations": {
+            "tr": "Akkusativ nesne einen Anzug; takım elbise kardeşin kendisi için. 3. kişide dönüşlü zamir sich’tir.",
+            "de": "einen Anzug ist Akkusativobjekt, der Anzug ist für ihn selbst → sich.",
+            "en": "einen Anzug is the accusative object; it is for himself → sich."
+          },
+          "vocab": [
+            "Bruder",
+            "Anzug"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "sich lassen",
+          "sentence": "Ergänze (du, für dich selbst): „Lässt du ___ die Haare kurz schneiden?“",
+          "correct": "dir",
+          "answers": [
+            "dir"
+          ],
+          "explanations": {
+            "tr": "Akkusativ nesne die Haare. Kendin için yaptırdığın için du → dir (Dativ).",
+            "de": "die Haare ist Akkusativobjekt → Reflexivpronomen im Dativ: dir.",
+            "en": "die Haare is the accusative object → dative reflexive: dir."
+          },
+          "vocab": [
+            "Haar"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "sich lassen",
+          "sentence": "Ergänze (ich): „Ich lasse ___ morgen gegen Grippe impfen.“",
+          "correct": "mich",
+          "answers": [
+            "mich"
+          ],
+          "explanations": {
+            "tr": "Aşılanan kişi sensin ve başka Akkusativ nesne yok (gegen Grippe bir edat grubu). Bu yüzden mich.",
+            "de": "Ich werde geimpft; gegen Grippe ist kein Akkusativobjekt → mich.",
+            "en": "I am vaccinated; gegen Grippe is not an accusative object → mich."
+          },
+          "vocab": [
+            "Grippe"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "perfekt-ersatzinfinitiv-1",
+      "title": {
+        "tr": "Übung 7 – Perfekt: … reparieren lassen",
+        "de": "Übung 7 – Perfekt: … reparieren lassen",
+        "en": "Übung 7 – Perfekt: … reparieren lassen"
+      },
+      "description": {
+        "tr": "İkinci fiil varsa Perfekt’te gelassen değil, mastar lassen: habe … reparieren lassen. Yardımcı fiil haben.",
+        "de": "Mit zweitem Verb steht im Perfekt der Infinitiv lassen (Ersatzinfinitiv), nicht gelassen; Hilfsverb haben.",
+        "en": "With a second verb the perfect uses the infinitive lassen (double infinitive), not gelassen; auxiliary haben."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel bis schwer",
+        "en": "Medium to hard"
+      },
+      "questions": [
+        {
+          "word": "Perfekt",
+          "sentence": "Ergänze: „Ich habe mein Auto gestern ___.“",
+          "options": [
+            "reparieren lassen",
+            "reparieren gelassen",
+            "repariert lassen"
+          ],
+          "correct": "reparieren lassen",
+          "explanations": {
+            "tr": "lassen’in yanında ikinci bir fiil (reparieren) var. Böyle olunca Perfekt’te gelassen değil, iki mastar yan yana gelir: reparieren lassen. repariert lassen’de iki yanlış var.",
+            "de": "Mit zweitem Verb (reparieren) bildet lassen das Perfekt mit dem Ersatzinfinitiv: reparieren lassen.",
+            "en": "With a second verb (reparieren) lassen forms the perfect with the double infinitive: reparieren lassen."
+          },
+          "vocab": [
+            "Auto"
+          ]
+        },
+        {
+          "word": "Perfekt",
+          "sentence": "Perfekt: „Wir ___ die Wohnung streichen lassen.“",
+          "options": [
+            "haben",
+            "sind",
+            "wurden"
+          ],
+          "correct": "haben",
+          "explanations": {
+            "tr": "lassen Perfekt’i her zaman haben ile yapar: Wir haben … streichen lassen. sein hareket fiilleri içindir; wurden Passiv yapar ve buraya uymaz.",
+            "de": "lassen bildet das Perfekt immer mit haben.",
+            "en": "lassen always forms the perfect with haben."
+          },
+          "vocab": [
+            "Wohnung"
+          ]
+        },
+        {
+          "word": "Perfekt",
+          "sentence": "Ergänze: „Hast du dir die Haare schneiden ___?“",
+          "options": [
+            "lassen",
+            "gelassen",
+            "gelasst"
+          ],
+          "correct": "lassen",
+          "explanations": {
+            "tr": "İkinci fiil schneiden var → Perfekt’te mastar lassen. gelasst diye bir biçim yoktur.",
+            "de": "Zweites Verb schneiden → Ersatzinfinitiv lassen.",
+            "en": "Second verb schneiden → double infinitive lassen."
+          },
+          "vocab": [
+            "Haar"
+          ]
+        },
+        {
+          "word": "Perfekt",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Sie hat das Paket zurückschicken lassen.",
+            "Sie hat das Paket zurückschicken gelassen.",
+            "Sie ist das Paket zurückschicken lassen."
+          ],
+          "correct": "Sie hat das Paket zurückschicken lassen.",
+          "explanations": {
+            "tr": "Paketi başkası geri gönderiyor; ikinci fiil zurückschicken var → lassen. Yardımcı fiil haben (sein değil).",
+            "de": "Zweites Verb zurückschicken → lassen; Hilfsverb haben.",
+            "en": "Second verb zurückschicken → lassen; auxiliary haben."
+          },
+          "vocab": [
+            "Paket"
+          ]
+        },
+        {
+          "word": "Perfekt",
+          "sentence": "Setze ins Perfekt: „Er lässt sein Fahrrad reparieren.“",
+          "options": [
+            "Er hat sein Fahrrad reparieren lassen.",
+            "Er hat sein Fahrrad repariert lassen.",
+            "Er hat sein Fahrrad lassen reparieren."
+          ],
+          "correct": "Er hat sein Fahrrad reparieren lassen.",
+          "explanations": {
+            "tr": "Ana cümlede sıra: hat (2. sıra) … reparieren lassen (sonda). Önce yapılan işin fiili, sonra lassen. repariert Partizip’tir, burada mastar gerekir.",
+            "de": "hat auf Position 2, am Ende reparieren lassen (erst das Vollverb, dann lassen).",
+            "en": "hat in position 2, at the end reparieren lassen (main verb first, then lassen)."
+          },
+          "vocab": [
+            "Fahrrad"
+          ]
+        },
+        {
+          "word": "Perfekt",
+          "sentence": "Ergänze: „Wir haben das Essen liefern ___.“",
+          "options": [
+            "lassen",
+            "gelassen",
+            "geliefert"
+          ],
+          "correct": "lassen",
+          "explanations": {
+            "tr": "Yemeği restoran getiriyor, siz sağlıyorsunuz. İkinci fiil liefern var → lassen. geliefert ile cümle “yemeği biz getirdik” olurdu ve liefern de fazla kalırdı.",
+            "de": "Zweites Verb liefern → Ersatzinfinitiv lassen.",
+            "en": "Second verb liefern → double infinitive lassen."
+          },
+          "vocab": [
+            "Essen"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Perfekt",
+          "sentence": "Setze ins Perfekt: „Ich lasse mein Handy reparieren.“",
+          "correct": "Ich habe mein Handy reparieren lassen.",
+          "answers": [
+            "ich habe mein handy reparieren lassen"
+          ],
+          "explanations": {
+            "tr": "haben 2. sırada çekilir: ich habe. Sona iki mastar gelir: reparieren lassen. gelassen değil, çünkü ikinci fiil var.",
+            "de": "ich habe … reparieren lassen (Ersatzinfinitiv).",
+            "en": "ich habe … reparieren lassen (double infinitive)."
+          },
+          "vocab": [
+            "Handy"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Perfekt",
+          "sentence": "Setze ins Perfekt: „Lässt du die Jacke reinigen?“",
+          "correct": "Hast du die Jacke reinigen lassen?",
+          "answers": [
+            "hast du die jacke reinigen lassen"
+          ],
+          "explanations": {
+            "tr": "Soru cümlesinde çekimli yardımcı fiil başa gelir: Hast du …? Sonda reinigen lassen.",
+            "de": "Fragesatz: Hast du … reinigen lassen?",
+            "en": "Question: Hast du … reinigen lassen?"
+          },
+          "vocab": [
+            "Jacke"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Perfekt",
+          "sentence": "Ergänze die zwei Verben: „Wir haben unser Haus von einer Firma ___.“ (bauen, lassen)",
+          "correct": "bauen lassen",
+          "answers": [
+            "bauen lassen"
+          ],
+          "explanations": {
+            "tr": "Evi firma yaptı, siz yaptırdınız. Perfekt’te sıra: önce asıl iş fiili (bauen), sonra lassen. gelassen değil.",
+            "de": "Erst bauen, dann lassen: Wir haben unser Haus bauen lassen.",
+            "en": "First bauen, then lassen: Wir haben unser Haus bauen lassen."
+          },
+          "vocab": [
+            "Haus",
+            "Firma"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Perfekt",
+          "sentence": "Setze ins Perfekt (zwei Formen sind richtig): „Ich lasse meine Brille im Zug liegen.“",
+          "correct": "Ich habe meine Brille im Zug liegen lassen.",
+          "answers": [
+            "ich habe meine brille im zug liegen lassen",
+            "ich habe meine brille im zug liegen gelassen",
+            "ich habe meine brille im zug liegenlassen",
+            "ich habe meine brille im zug liegengelassen"
+          ],
+          "explanations": {
+            "tr": "liegen lassen (unutup bırakmak) özel bir birleşimdir: Perfekt’te hem liegen lassen hem liegen gelassen doğrudur. İki cevap da kabul edilir. Normal yaptırmak cümlelerinde ise yalnızca lassen doğrudur.",
+            "de": "Bei liegen lassen sind im Perfekt beide Formen üblich: liegen lassen und liegen gelassen.",
+            "en": "With liegen lassen both forms are used in the perfect: liegen lassen and liegen gelassen."
+          },
+          "vocab": [
+            "Brille",
+            "Zug"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "perfekt-gelassen-1",
+      "title": {
+        "tr": "Übung 8 – Perfekt ohne zweites Verb: gelassen",
+        "de": "Übung 8 – Perfekt ohne zweites Verb: gelassen",
+        "en": "Übung 8 – Perfekt ohne zweites Verb: gelassen"
+      },
+      "description": {
+        "tr": "İkinci fiil yoksa lassen normal Partizip II alır: Ich habe den Schlüssel zu Hause gelassen.",
+        "de": "Ohne zweites Verb hat lassen das normale Partizip II: gelassen.",
+        "en": "Without a second verb lassen uses its normal past participle: gelassen."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Medium"
+      },
+      "questions": [
+        {
+          "word": "gelassen",
+          "sentence": "Ergänze: „Ich habe meinen Schlüssel zu Hause ___.“",
+          "options": [
+            "gelassen",
+            "lassen",
+            "gelasst"
+          ],
+          "correct": "gelassen",
+          "explanations": {
+            "tr": "Cümlede ikinci bir fiil yok; anlam bırakmak. Bu yüzden normal Partizip II: gelassen. lassen ancak ikinci fiil olsaydı gelirdi.",
+            "de": "Kein zweites Verb → normales Partizip II: gelassen.",
+            "en": "No second verb → normal past participle: gelassen."
+          },
+          "vocab": [
+            "Schlüssel"
+          ]
+        },
+        {
+          "word": "gelassen",
+          "sentence": "Ergänze: „Wo hast du das Auto ___?“",
+          "options": [
+            "gelassen",
+            "lassen",
+            "gelässt"
+          ],
+          "correct": "gelassen",
+          "explanations": {
+            "tr": "Arabayı nerede bıraktın? İkinci fiil yok → gelassen. gelässt diye bir biçim yoktur; Partizip’te ä olmaz.",
+            "de": "Kein zweites Verb → gelassen (ohne Umlaut).",
+            "en": "No second verb → gelassen (no umlaut)."
+          },
+          "vocab": [
+            "Auto"
+          ]
+        },
+        {
+          "word": "gelassen",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Er hat die Tür offen gelassen.",
+            "Er hat die Tür offen lassen.",
+            "Er ist die Tür offen gelassen."
+          ],
+          "correct": "Er hat die Tür offen gelassen.",
+          "explanations": {
+            "tr": "offen bir sıfattır, fiil değil. Yani ikinci fiil yok → gelassen. Yardımcı fiil haben. (Kapıyı açık bıraktı.)",
+            "de": "offen ist ein Adjektiv, kein Verb → gelassen, mit haben.",
+            "en": "offen is an adjective, not a verb → gelassen, with haben."
+          },
+          "vocab": [
+            "Tür"
+          ]
+        },
+        {
+          "word": "gelassen",
+          "sentence": "Ergänze: „Ich habe die Kinder heute bei meiner Mutter ___.“",
+          "options": [
+            "gelassen",
+            "lassen",
+            "verlassen"
+          ],
+          "correct": "gelassen",
+          "explanations": {
+            "tr": "Çocukları annende bıraktın; ikinci fiil yok → gelassen. verlassen “terk etmek, bir yerden ayrılmak” demektir ve burada anlamı bozar.",
+            "de": "Kein zweites Verb, Bedeutung zurücklassen → gelassen. verlassen hieße „im Stich lassen“.",
+            "en": "No second verb, meaning leave somewhere → gelassen. verlassen would mean abandon."
+          },
+          "vocab": [
+            "Kind",
+            "Mutter"
+          ]
+        },
+        {
+          "word": "gelassen",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Ich habe das Fahrrad im Keller gelassen.",
+            "Ich habe das Fahrrad im Keller lassen.",
+            "Ich habe das Fahrrad im Keller gelassen lassen."
+          ],
+          "correct": "Ich habe das Fahrrad im Keller gelassen.",
+          "explanations": {
+            "tr": "im Keller bir yer bilgisi; ikinci fiil yok → sadece gelassen. Üçüncü seçenekte lassen iki kez var.",
+            "de": "im Keller ist eine Ortsangabe, kein Verb → gelassen.",
+            "en": "im Keller is a place, not a verb → gelassen."
+          },
+          "vocab": [
+            "Fahrrad",
+            "Keller"
+          ]
+        },
+        {
+          "word": "gelassen",
+          "sentence": "Ergänze: „Sie hat ihre Tasche im Büro ___ und ist nach Hause gegangen.“",
+          "options": [
+            "gelassen",
+            "lassen",
+            "verlassen"
+          ],
+          "correct": "gelassen",
+          "explanations": {
+            "tr": "Çantayı ofiste bıraktı. Bir eşyayı bir yerde bırakmak lassen’dir; ikinci fiil yok → gelassen. verlassen bir yerden ayrılmak içindir (Sie hat das Büro verlassen).",
+            "de": "Etwas an einem Ort zurücklassen = lassen → gelassen. verlassen benutzt man für Orte oder Personen.",
+            "en": "Leaving a thing somewhere = lassen → gelassen. verlassen is used for places or people."
+          },
+          "vocab": [
+            "Tasche",
+            "Büro"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "gelassen",
+          "sentence": "Ergänze das Partizip: „Wir haben den Hund während des Urlaubs bei den Nachbarn ___.“",
+          "correct": "gelassen",
+          "answers": [
+            "gelassen"
+          ],
+          "explanations": {
+            "tr": "Köpeği komşularda bıraktınız; ikinci fiil yok → gelassen.",
+            "de": "Kein zweites Verb → gelassen.",
+            "en": "No second verb → gelassen."
+          },
+          "vocab": [
+            "Hund",
+            "Urlaub",
+            "Nachbar"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "gelassen",
+          "sentence": "Setze ins Perfekt: „Ich lasse das Handy im Auto.“",
+          "correct": "Ich habe das Handy im Auto gelassen.",
+          "answers": [
+            "ich habe das handy im auto gelassen"
+          ],
+          "explanations": {
+            "tr": "Präsens’te de ikinci fiil yok, anlam bırakmak. Perfekt: habe … gelassen.",
+            "de": "Ohne zweites Verb: Ich habe … gelassen.",
+            "en": "Without a second verb: Ich habe … gelassen."
+          },
+          "vocab": [
+            "Handy",
+            "Auto"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "gelassen",
+          "sentence": "Setze ins Perfekt: „Lässt du die Jacke hier?“",
+          "correct": "Hast du die Jacke hier gelassen?",
+          "answers": [
+            "hast du die jacke hier gelassen"
+          ],
+          "explanations": {
+            "tr": "Soru: Hast du başta. İkinci fiil yok → gelassen sonda.",
+            "de": "Frage: Hast du … gelassen?",
+            "en": "Question: Hast du … gelassen?"
+          },
+          "vocab": [
+            "Jacke"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "gelassen",
+          "sentence": "Ergänze: „Er hat mir keine Wahl ___.“",
+          "correct": "gelassen",
+          "answers": [
+            "gelassen"
+          ],
+          "explanations": {
+            "tr": "jemandem keine Wahl lassen = birine seçenek bırakmamak. İkinci fiil yok → gelassen.",
+            "de": "jemandem keine Wahl lassen, ohne zweites Verb → gelassen.",
+            "en": "jemandem keine Wahl lassen, no second verb → gelassen."
+          },
+          "vocab": [
+            "Wahl"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lassen-oder-gelassen-1",
+      "title": {
+        "tr": "Übung 9 – Perfekt: lassen oder gelassen?",
+        "de": "Übung 9 – Perfekt: lassen oder gelassen?",
+        "en": "Übung 9 – Perfekt: lassen oder gelassen?"
+      },
+      "description": {
+        "tr": "Tek soru: ikinci fiil var mı? Varsa lassen, yoksa gelassen. (liegen/stehen lassen’da iki biçim de doğru.)",
+        "de": "Eine Frage: Gibt es ein zweites Verb? Dann lassen, sonst gelassen. (Bei liegen/stehen lassen gehen beide Formen.)",
+        "en": "One question: is there a second verb? Then lassen, otherwise gelassen. (With liegen/stehen lassen both work.)"
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel bis schwer",
+        "en": "Medium to hard"
+      },
+      "questions": [
+        {
+          "word": "lassen/gelassen",
+          "sentence": "Ergänze: „Ich habe meine Haare färben ___.“",
+          "options": [
+            "lassen",
+            "gelassen",
+            "gefärbt"
+          ],
+          "correct": "lassen",
+          "explanations": {
+            "tr": "İkinci fiil färben var → lassen. gefärbt koyarsan färben fazla kalır.",
+            "de": "Zweites Verb färben → lassen.",
+            "en": "Second verb färben → lassen."
+          },
+          "vocab": [
+            "Haar"
+          ]
+        },
+        {
+          "word": "lassen/gelassen",
+          "sentence": "Ergänze: „Ich habe meine Jacke im Restaurant ___.“",
+          "options": [
+            "gelassen",
+            "lassen",
+            "gelassen lassen"
+          ],
+          "correct": "gelassen",
+          "explanations": {
+            "tr": "im Restaurant sadece yer bilgisi; ikinci fiil yok → gelassen.",
+            "de": "Nur eine Ortsangabe, kein zweites Verb → gelassen.",
+            "en": "Only a place, no second verb → gelassen."
+          },
+          "vocab": [
+            "Jacke",
+            "Restaurant"
+          ]
+        },
+        {
+          "word": "lassen/gelassen",
+          "sentence": "Ergänze: „Wir haben die Heizung prüfen ___.“",
+          "options": [
+            "lassen",
+            "gelassen",
+            "geprüft"
+          ],
+          "correct": "lassen",
+          "explanations": {
+            "tr": "İkinci fiil prüfen var; kaloriferi teknisyen kontrol etti → lassen.",
+            "de": "Zweites Verb prüfen → lassen.",
+            "en": "Second verb prüfen → lassen."
+          },
+          "vocab": [
+            "Heizung"
+          ]
+        },
+        {
+          "word": "lassen/gelassen",
+          "sentence": "Ergänze: „Sie hat das Licht die ganze Nacht ___.“",
+          "options": [
+            "angelassen",
+            "anlassen",
+            "angelassen lassen"
+          ],
+          "correct": "angelassen",
+          "explanations": {
+            "tr": "anlassen (açık bırakmak) ayrılabilen bir fiildir ve burada ikinci fiil yok. Partizip II: an-ge-lassen.",
+            "de": "anlassen ohne zweites Verb → Partizip II angelassen.",
+            "en": "anlassen without a second verb → past participle angelassen."
+          },
+          "vocab": [
+            "Licht",
+            "Nacht"
+          ]
+        },
+        {
+          "word": "lassen/gelassen",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Ich habe die Fenster putzen lassen.",
+            "Ich habe die Fenster putzen gelassen.",
+            "Ich habe die Fenster geputzt lassen."
+          ],
+          "correct": "Ich habe die Fenster putzen lassen.",
+          "explanations": {
+            "tr": "Camları başkası sildi; ikinci fiil putzen var → mastar lassen.",
+            "de": "Zweites Verb putzen → Ersatzinfinitiv lassen.",
+            "en": "Second verb putzen → double infinitive lassen."
+          },
+          "vocab": [
+            "Fenster"
+          ]
+        },
+        {
+          "word": "lassen/gelassen",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Er hat seine Brille im Auto gelassen.",
+            "Er hat seine Brille im Auto lassen.",
+            "Er hat seine Brille im Auto gelasst."
+          ],
+          "correct": "Er hat seine Brille im Auto gelassen.",
+          "explanations": {
+            "tr": "im Auto yer bilgisi; ikinci fiil yok → gelassen. gelasst diye bir biçim yoktur.",
+            "de": "Kein zweites Verb → gelassen.",
+            "en": "No second verb → gelassen."
+          },
+          "vocab": [
+            "Brille",
+            "Auto"
+          ]
+        },
+        {
+          "word": "lassen/gelassen",
+          "sentence": "Ergänze: „Ich habe einen Schlüssel ___.“",
+          "options": [
+            "nachmachen lassen",
+            "nachmachen gelassen",
+            "nachgemacht lassen"
+          ],
+          "correct": "nachmachen lassen",
+          "explanations": {
+            "tr": "Anahtarı çilingir kopyaladı; ikinci fiil nachmachen var → nachmachen lassen. Önce asıl fiil mastar hâlinde, sonra lassen.",
+            "de": "Zweites Verb nachmachen → nachmachen lassen.",
+            "en": "Second verb nachmachen → nachmachen lassen."
+          },
+          "vocab": [
+            "Schlüssel"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "lassen/gelassen",
+          "sentence": "Ergänze lassen oder gelassen: „Wir haben die Kinder allein zu Hause ___.“",
+          "correct": "gelassen",
+          "answers": [
+            "gelassen"
+          ],
+          "explanations": {
+            "tr": "allein ve zu Hause fiil değildir; ikinci fiil yok → gelassen.",
+            "de": "allein und zu Hause sind keine Verben → gelassen.",
+            "en": "allein and zu Hause are not verbs → gelassen."
+          },
+          "vocab": [
+            "Kind"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "lassen/gelassen",
+          "sentence": "Ergänze lassen oder gelassen: „Ich habe mir das Paket nach Hause schicken ___.“",
+          "correct": "lassen",
+          "answers": [
+            "lassen"
+          ],
+          "explanations": {
+            "tr": "İkinci fiil schicken var; paketi başkası gönderdi → lassen.",
+            "de": "Zweites Verb schicken → lassen.",
+            "en": "Second verb schicken → lassen."
+          },
+          "vocab": [
+            "Paket"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "lassen/gelassen",
+          "sentence": "Ergänze lassen oder gelassen (beides ist hier richtig): „Ich habe den Koffer im Flur stehen ___.“",
+          "correct": "lassen",
+          "answers": [
+            "lassen",
+            "gelassen"
+          ],
+          "explanations": {
+            "tr": "stehen lassen, liegen lassen gibi birleşimlerde iki biçim de kullanılır: stehen lassen ve stehen gelassen. Bu soruda iki cevap da kabul edilir.",
+            "de": "Bei stehen lassen sind beide Formen richtig: lassen und gelassen.",
+            "en": "With stehen lassen both forms are correct: lassen and gelassen."
+          },
+          "vocab": [
+            "Koffer",
+            "Flur"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nebensatz-1",
+      "title": {
+        "tr": "Übung 10 – Nebensatz: …, weil ich es habe reparieren lassen",
+        "de": "Übung 10 – Nebensatz: …, weil ich es habe reparieren lassen",
+        "en": "Übung 10 – Nebensatz: …, weil ich es habe reparieren lassen"
+      },
+      "description": {
+        "tr": "Yan cümlede: Präsens’te lasse sonda; Perfekt’te çift mastar varsa habe iki mastarın önüne gelir.",
+        "de": "Im Nebensatz: Präsens lasse am Ende; im Perfekt mit Ersatzinfinitiv steht habe vor den zwei Infinitiven.",
+        "en": "In subordinate clauses: present lasse at the end; in the perfect with a double infinitive habe comes before both infinitives."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "questions": [
+        {
+          "word": "Nebensatz",
+          "sentence": "Ergänze (Perfekt): „Mein Auto ist wieder in Ordnung, weil ich es ___.“",
+          "options": [
+            "habe reparieren lassen",
+            "reparieren lassen habe",
+            "reparieren gelassen habe"
+          ],
+          "correct": "habe reparieren lassen",
+          "explanations": {
+            "tr": "Yan cümlede iki mastar (reparieren lassen) varsa yardımcı fiil habe en sona değil, iki mastarın önüne gelir: … weil ich es habe reparieren lassen.",
+            "de": "Im Nebensatz mit Ersatzinfinitiv steht habe vor den beiden Infinitiven.",
+            "en": "In a subordinate clause with a double infinitive, habe comes before both infinitives."
+          },
+          "vocab": [
+            "Auto"
+          ]
+        },
+        {
+          "word": "Nebensatz",
+          "sentence": "Ergänze (Präsens): „Ich komme später, weil ich mir noch die Haare ___.“",
+          "options": [
+            "schneiden lasse",
+            "lasse schneiden",
+            "schneiden lassen"
+          ],
+          "correct": "schneiden lasse",
+          "explanations": {
+            "tr": "Präsens yan cümlede çekimli fiil (lasse) en sona gider: … schneiden lasse. lassen mastar olur ve özneyle uymaz.",
+            "de": "Präsens im Nebensatz: das konjugierte lasse steht am Ende.",
+            "en": "Present in a subordinate clause: conjugated lasse goes last."
+          },
+          "vocab": [
+            "Haar"
+          ]
+        },
+        {
+          "word": "Nebensatz",
+          "sentence": "Ergänze: „Weißt du, ob er seinen Computer ___?“",
+          "options": [
+            "reparieren lässt",
+            "lässt reparieren",
+            "reparieren lassen"
+          ],
+          "correct": "reparieren lässt",
+          "explanations": {
+            "tr": "ob ile kurulan yan cümlede çekimli lässt sona gider; mastar reparieren önünde kalır.",
+            "de": "ob-Satz: konjugiertes lässt am Ende.",
+            "en": "ob-clause: conjugated lässt at the end."
+          },
+          "vocab": [
+            "Computer"
+          ]
+        },
+        {
+          "word": "Nebensatz",
+          "sentence": "Ergänze (Perfekt): „Die Wohnung sieht toll aus, weil wir sie ___.“",
+          "options": [
+            "haben streichen lassen",
+            "streichen lassen haben",
+            "haben streichen gelassen"
+          ],
+          "correct": "haben streichen lassen",
+          "explanations": {
+            "tr": "Çift mastarlı Perfekt yan cümlede haben iki mastarın önüne geçer: … weil wir sie haben streichen lassen.",
+            "de": "Ersatzinfinitiv im Nebensatz: haben vor streichen lassen.",
+            "en": "Double infinitive in a subordinate clause: haben before streichen lassen."
+          },
+          "vocab": [
+            "Wohnung"
+          ]
+        },
+        {
+          "word": "Nebensatz",
+          "sentence": "Ergänze (Perfekt): „Ich weiß nicht, wo ich meine Brille ___.“",
+          "options": [
+            "gelassen habe",
+            "habe gelassen",
+            "lassen habe"
+          ],
+          "correct": "gelassen habe",
+          "explanations": {
+            "tr": "İkinci fiil yok (gelassen). O zaman normal yan cümle kuralı geçerli: Partizip, sonra en sonda habe.",
+            "de": "Ohne zweites Verb: normale Nebensatzstellung – gelassen habe.",
+            "en": "Without a second verb: normal subordinate order – gelassen habe."
+          },
+          "vocab": [
+            "Brille"
+          ]
+        },
+        {
+          "word": "Nebensatz",
+          "sentence": "Ergänze (Perfekt): „Sie ist froh, dass sie das Kleid ___.“",
+          "options": [
+            "hat ändern lassen",
+            "ändern lassen hat",
+            "hat ändern gelassen"
+          ],
+          "correct": "hat ändern lassen",
+          "explanations": {
+            "tr": "İkinci fiil ändern var → çift mastar. Yan cümlede hat iki mastarın önüne gelir: … dass sie das Kleid hat ändern lassen.",
+            "de": "Zweites Verb ändern → hat ändern lassen im Nebensatz.",
+            "en": "Second verb ändern → hat ändern lassen in the subordinate clause."
+          },
+          "vocab": [
+            "Kleid"
+          ]
+        },
+        {
+          "word": "Nebensatz",
+          "sentence": "Ergänze (Präsens mit müssen): „Ich habe keine Zeit, weil ich meinen Pass ___.“",
+          "options": [
+            "verlängern lassen muss",
+            "verlängern muss lassen",
+            "lassen verlängern muss"
+          ],
+          "correct": "verlängern lassen muss",
+          "explanations": {
+            "tr": "Modal fiilli Präsens yan cümlede çekimli muss en sona gider; önünde verlängern lassen (önce asıl fiil, sonra lassen).",
+            "de": "Präsens mit Modalverb: verlängern lassen muss (das konjugierte Modalverb am Ende).",
+            "en": "Present with a modal: verlängern lassen muss (conjugated modal last)."
+          },
+          "vocab": [
+            "Zeit",
+            "Pass"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Nebensatz",
+          "sentence": "Verbinde mit weil (Perfekt behalten): „Mein Auto fährt wieder. Ich habe es reparieren lassen.“",
+          "correct": "Mein Auto fährt wieder, weil ich es habe reparieren lassen.",
+          "answers": [
+            "mein auto fährt wieder, weil ich es habe reparieren lassen",
+            "mein auto faehrt wieder, weil ich es habe reparieren lassen",
+            "mein auto fährt wieder weil ich es habe reparieren lassen",
+            "mein auto faehrt wieder weil ich es habe reparieren lassen"
+          ],
+          "explanations": {
+            "tr": "weil yan cümle kurar. Çift mastar olduğu için habe iki mastarın önüne gelir: weil ich es habe reparieren lassen.",
+            "de": "weil + Ersatzinfinitiv: …, weil ich es habe reparieren lassen.",
+            "en": "weil + double infinitive: …, weil ich es habe reparieren lassen."
+          },
+          "vocab": [
+            "Auto"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Nebensatz",
+          "sentence": "Ergänze den dass-Satz: „Ich habe die Tasche im Zug gelassen. Das ärgert mich.“ → „Es ärgert mich, dass ___.“",
+          "correct": "ich die Tasche im Zug gelassen habe",
+          "answers": [
+            "ich die tasche im zug gelassen habe"
+          ],
+          "explanations": {
+            "tr": "İkinci fiil yok (gelassen), bu yüzden normal yan cümle sırası: … gelassen habe (habe en sonda).",
+            "de": "Kein zweites Verb → normale Stellung: gelassen habe.",
+            "en": "No second verb → normal order: gelassen habe."
+          },
+          "vocab": [
+            "Tasche",
+            "Zug"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Nebensatz",
+          "sentence": "Ergänze den weil-Satz (Präsens): „Ich komme später. Ich lasse meine Jacke reinigen.“ → „Ich komme später, weil ___.“",
+          "correct": "ich meine Jacke reinigen lasse",
+          "answers": [
+            "ich meine jacke reinigen lasse"
+          ],
+          "explanations": {
+            "tr": "Präsens yan cümle: çekimli lasse en sona gider, mastar reinigen önünde kalır.",
+            "de": "Präsens im Nebensatz: … reinigen lasse.",
+            "en": "Present in a subordinate clause: … reinigen lasse."
+          },
+          "vocab": [
+            "Jacke"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modalverben-1",
+      "title": {
+        "tr": "Übung 11 – Modalverben + lassen",
+        "de": "Übung 11 – Modalverben + lassen",
+        "en": "Übung 11 – Modalverben + lassen"
+      },
+      "description": {
+        "tr": "Modal fiille: lassen de mastar olur ve en sona gider: Ich muss mein Auto reparieren lassen.",
+        "de": "Mit Modalverb steht auch lassen im Infinitiv am Ende: Ich muss mein Auto reparieren lassen.",
+        "en": "With a modal verb lassen is also an infinitive at the end: Ich muss mein Auto reparieren lassen."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Medium"
+      },
+      "questions": [
+        {
+          "word": "Modalverben",
+          "sentence": "Ergänze: „Ich muss mein Auto ___.“",
+          "options": [
+            "reparieren lassen",
+            "lassen reparieren",
+            "zu reparieren lassen"
+          ],
+          "correct": "reparieren lassen",
+          "explanations": {
+            "tr": "Modal fiil (muss) çekimli ve 2. sırada. Sona iki mastar gelir: önce asıl iş (reparieren), sonra lassen. zu kullanılmaz.",
+            "de": "Modalverb auf Position 2, am Ende reparieren lassen – ohne zu.",
+            "en": "Modal in position 2, at the end reparieren lassen – without zu."
+          },
+          "vocab": [
+            "Auto"
+          ]
+        },
+        {
+          "word": "Modalverben",
+          "sentence": "Ergänze: „Du ___ dir die Haare schneiden lassen. Sie sind sehr lang.“",
+          "options": [
+            "solltest",
+            "sollte",
+            "solltet"
+          ],
+          "correct": "solltest",
+          "explanations": {
+            "tr": "Özne du → solltest. sollte ich/er için, solltet ihr içindir. lassen sonda mastar olarak kalır.",
+            "de": "Subjekt du → solltest; lassen bleibt im Infinitiv am Ende.",
+            "en": "Subject du → solltest; lassen stays an infinitive at the end."
+          },
+          "vocab": [
+            "Haar"
+          ]
+        },
+        {
+          "word": "Modalverben",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Kann ich mir das Essen liefern lassen?",
+            "Kann ich mir das Essen lassen liefern?",
+            "Kann ich mir das Essen liefern zu lassen?"
+          ],
+          "correct": "Kann ich mir das Essen liefern lassen?",
+          "explanations": {
+            "tr": "Soru: kann başta. Sonda önce liefern, sonra lassen. Modal fiilden sonra zu gelmez.",
+            "de": "Frage mit kann; am Ende liefern lassen, ohne zu.",
+            "en": "Question with kann; at the end liefern lassen, without zu."
+          },
+          "vocab": [
+            "Essen"
+          ]
+        },
+        {
+          "word": "Modalverben",
+          "sentence": "Ergänze: „Wir wollen die Küche neu ___.“",
+          "options": [
+            "streichen lassen",
+            "gestrichen lassen",
+            "streichen gelassen"
+          ],
+          "correct": "streichen lassen",
+          "explanations": {
+            "tr": "wollen modal fiil → sona iki mastar: streichen lassen. Partizip (gestrichen, gelassen) burada kullanılmaz.",
+            "de": "Nach wollen zwei Infinitive: streichen lassen.",
+            "en": "After wollen two infinitives: streichen lassen."
+          },
+          "vocab": [
+            "Küche"
+          ]
+        },
+        {
+          "word": "Modalverben",
+          "sentence": "Ergänze: „Meine Eltern ___ mich nicht allein reisen lassen.“",
+          "options": [
+            "wollen",
+            "lassen",
+            "zu"
+          ],
+          "correct": "wollen",
+          "explanations": {
+            "tr": "Cümlenin sonunda zaten reisen lassen var; 2. sıraya çekimli bir modal fiil gerekir: wollen. lassen’i iki kez kullanmak yanlış; zu fiil değil.",
+            "de": "Am Ende steht schon reisen lassen; auf Position 2 fehlt ein Modalverb: wollen.",
+            "en": "reisen lassen is already at the end; position 2 needs a modal: wollen."
+          },
+          "vocab": [
+            "Eltern"
+          ]
+        },
+        {
+          "word": "Modalverben",
+          "sentence": "„Ich musste mein Handy reparieren lassen.“ Was bedeutet der Satz?",
+          "options": [
+            "Telefonumu tamir ettirmek zorunda kaldım.",
+            "Telefonumu tamir etmek zorunda kaldım.",
+            "Telefonumu tamir ettirmeme izin verildi."
+          ],
+          "correct": "Telefonumu tamir ettirmek zorunda kaldım.",
+          "explanations": {
+            "tr": "musste = zorunda kaldım; reparieren lassen = tamir ettirmek (başkası tamir etti). İkinci seçenekte lassen’in anlamı yok; üçüncüde musste’nin anlamı yanlış.",
+            "de": "musste = es war nötig; reparieren lassen = jemand anderes repariert.",
+            "en": "musste = had to; reparieren lassen = someone else repairs it."
+          },
+          "vocab": [
+            "Handy"
+          ]
+        },
+        {
+          "word": "Modalverben",
+          "sentence": "Ergänze: „Man ___ sein Visum rechtzeitig verlängern lassen.“",
+          "options": [
+            "muss",
+            "lässt",
+            "müssen"
+          ],
+          "correct": "muss",
+          "explanations": {
+            "tr": "Sonda verlängern lassen var; 2. sırada modal fiil eksik. man tekil gibi çekilir → muss. lässt koyarsan lassen iki kez olur.",
+            "de": "man → muss; lassen steht schon am Ende.",
+            "en": "man → muss; lassen is already at the end."
+          },
+          "vocab": [
+            "Visum"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Modalverben",
+          "sentence": "Bilde einen Satz mit müssen: „Ich lasse die Heizung prüfen.“",
+          "correct": "Ich muss die Heizung prüfen lassen.",
+          "answers": [
+            "ich muss die heizung prüfen lassen",
+            "ich muss die heizung pruefen lassen"
+          ],
+          "explanations": {
+            "tr": "müssen çekimli 2. sırada (muss), lassen mastar olur ve prüfen’den sonra en sona gider.",
+            "de": "Ich muss … prüfen lassen.",
+            "en": "Ich muss … prüfen lassen."
+          },
+          "vocab": [
+            "Heizung"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Modalverben",
+          "sentence": "Bilde eine Frage mit können: „Lässt du dir die Jacke kürzen?“",
+          "correct": "Kannst du dir die Jacke kürzen lassen?",
+          "answers": [
+            "kannst du dir die jacke kürzen lassen",
+            "kannst du dir die jacke kuerzen lassen"
+          ],
+          "explanations": {
+            "tr": "können du ile kannst olur ve soru olduğu için başa gelir. Sonda kürzen lassen.",
+            "de": "Kannst du … kürzen lassen?",
+            "en": "Kannst du … kürzen lassen?"
+          },
+          "vocab": [
+            "Jacke"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Modalverben",
+          "sentence": "Ergänze die zwei Verben am Ende: „Wir möchten unsere Wohnung ___.“ (renovieren / lassen)",
+          "correct": "renovieren lassen",
+          "answers": [
+            "renovieren lassen"
+          ],
+          "explanations": {
+            "tr": "Modal fiilden (möchten) sonra iki mastar: önce asıl iş renovieren, sonra lassen.",
+            "de": "Nach möchten: renovieren lassen.",
+            "en": "After möchten: renovieren lassen."
+          },
+          "vocab": [
+            "Wohnung"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "praeteritum-1",
+      "title": {
+        "tr": "Übung 12 – Präteritum: ließ, ließen",
+        "de": "Übung 12 – Präteritum: ließ, ließen",
+        "en": "Übung 12 – Präteritum: ließ, ließen"
+      },
+      "description": {
+        "tr": "lassen’in Präteritum’u: ich/er ließ, wir/sie ließen, ihr ließt.",
+        "de": "Präteritum von lassen: ich/er ließ, wir/sie ließen, ihr ließt.",
+        "en": "Simple past of lassen: ich/er ließ, wir/sie ließen, ihr ließt."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Medium"
+      },
+      "questions": [
+        {
+          "word": "Präteritum",
+          "sentence": "Präteritum: „Der König ___ ein großes Schloss bauen.“",
+          "options": [
+            "ließ",
+            "lies",
+            "ließen"
+          ],
+          "correct": "ließ",
+          "explanations": {
+            "tr": "Özne der König = er → ließ. lies lesen’in emir biçimidir; ließen çoğul içindir.",
+            "de": "Subjekt er → ließ (lies ist der Imperativ von lesen).",
+            "en": "Subject er → ließ (lies is the imperative of lesen)."
+          },
+          "vocab": [
+            "König",
+            "Schloss"
+          ]
+        },
+        {
+          "word": "Präteritum",
+          "sentence": "Präteritum: „Wir ___ die Kinder lange spielen.“",
+          "options": [
+            "ließen",
+            "ließ",
+            "ließt"
+          ],
+          "correct": "ließen",
+          "explanations": {
+            "tr": "Özne wir → ließen. ließ ich/er, ließt ihr içindir.",
+            "de": "Subjekt wir → ließen.",
+            "en": "Subject wir → ließen."
+          },
+          "vocab": [
+            "Kind"
+          ]
+        },
+        {
+          "word": "Präteritum",
+          "sentence": "Präteritum: „Ihr ___ uns eine Stunde warten.“",
+          "options": [
+            "ließt",
+            "ließen",
+            "ließ"
+          ],
+          "correct": "ließt",
+          "explanations": {
+            "tr": "Özne ihr → ließt (-t eki). ließen wir/sie, ließ ich/er içindir.",
+            "de": "Subjekt ihr → ließt.",
+            "en": "Subject ihr → ließt."
+          },
+          "vocab": [
+            "Stunde"
+          ]
+        },
+        {
+          "word": "Präteritum",
+          "sentence": "Was ist das Präteritum von „Sie lässt den Arzt kommen.“?",
+          "options": [
+            "Sie ließ den Arzt kommen.",
+            "Sie lassete den Arzt kommen.",
+            "Sie hat den Arzt kommen ließ."
+          ],
+          "correct": "Sie ließ den Arzt kommen.",
+          "explanations": {
+            "tr": "lassen düzensizdir: Präteritum’da kök ließ olur, -te eki almaz. kommen yine mastar olarak sonda kalır.",
+            "de": "lassen ist unregelmäßig: ließ (nicht lassete).",
+            "en": "lassen is irregular: ließ (not lassete)."
+          },
+          "vocab": [
+            "Arzt"
+          ]
+        },
+        {
+          "word": "Präteritum",
+          "sentence": "„Der Chef ließ uns eine Stunde warten.“ Welche Zeitform ist das?",
+          "options": [
+            "Präteritum",
+            "Präsens",
+            "Perfekt"
+          ],
+          "correct": "Präteritum",
+          "explanations": {
+            "tr": "ließ Präteritum biçimidir. Präsens’te lässt, Perfekt’te hat … warten lassen olurdu.",
+            "de": "ließ = Präteritum (Präsens: lässt; Perfekt: hat … warten lassen).",
+            "en": "ließ = simple past (present: lässt; perfect: hat … warten lassen)."
+          },
+          "vocab": [
+            "Chef",
+            "Stunde"
+          ]
+        },
+        {
+          "word": "Präteritum",
+          "sentence": "Präteritum: „Er ___ seinen Schlüssel im Büro.“",
+          "options": [
+            "ließ",
+            "ließen",
+            "lassen"
+          ],
+          "correct": "ließ",
+          "explanations": {
+            "tr": "Özne er → ließ. Burada ikinci fiil yok; anlam bırakmak.",
+            "de": "Subjekt er → ließ (hier: zurücklassen).",
+            "en": "Subject er → ließ (here: leave behind)."
+          },
+          "vocab": [
+            "Schlüssel",
+            "Büro"
+          ]
+        },
+        {
+          "word": "Präteritum",
+          "sentence": "Was bedeutet: „Die Lehrerin ließ die Schüler früher nach Hause gehen.“?",
+          "options": [
+            "Öğretmen öğrencilerin eve erken gitmesine izin verdi.",
+            "Öğretmen öğrencileri eve erken gönderiyor.",
+            "Öğretmen öğrencileri evde bıraktı."
+          ],
+          "correct": "Öğretmen öğrencilerin eve erken gitmesine izin verdi.",
+          "explanations": {
+            "tr": "ließ geçmiş zamandır, bu yüzden “gönderiyor” (şimdiki zaman) yanlış. gehen ikinci fiil olduğu için “evde bıraktı” da yanlış; burada lassen izin anlamında.",
+            "de": "ließ ist Vergangenheit; mit gehen bedeutet lassen hier erlauben.",
+            "en": "ließ is past tense; with gehen lassen means allow here."
+          },
+          "vocab": [
+            "Lehrerin",
+            "Schüler"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Präteritum",
+          "sentence": "Setze ins Präteritum: „Ich lasse mir die Haare schneiden.“",
+          "correct": "Ich ließ mir die Haare schneiden.",
+          "answers": [
+            "ich ließ mir die haare schneiden",
+            "ich liess mir die haare schneiden"
+          ],
+          "explanations": {
+            "tr": "ich → ließ. Diğer her şey aynı kalır; schneiden sonda.",
+            "de": "ich → ließ; der Rest bleibt gleich.",
+            "en": "ich → ließ; the rest stays the same."
+          },
+          "vocab": [
+            "Haar"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Präteritum",
+          "sentence": "Ergänze im Präteritum: „Meine Großeltern ___ 1975 ein Haus bauen.“",
+          "correct": "ließen",
+          "answers": [
+            "ließen",
+            "liessen"
+          ],
+          "explanations": {
+            "tr": "Özne meine Großeltern = sie (çoğul) → ließen.",
+            "de": "Subjekt sie (Plural) → ließen.",
+            "en": "Subject sie (plural) → ließen."
+          },
+          "vocab": [
+            "Großeltern",
+            "Haus"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Präteritum",
+          "sentence": "Setze ins Präteritum: „Wir lassen die Tür offen.“",
+          "correct": "Wir ließen die Tür offen.",
+          "answers": [
+            "wir ließen die tür offen",
+            "wir liessen die tuer offen"
+          ],
+          "explanations": {
+            "tr": "wir → ließen. offen sıfattır, cümlede kalır.",
+            "de": "wir → ließen.",
+            "en": "wir → ließen."
+          },
+          "vocab": [
+            "Tür"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zeitformen-1",
+      "title": {
+        "tr": "Übung 13 – Zeitformen im Vergleich",
+        "de": "Übung 13 – Zeitformen im Vergleich",
+        "en": "Übung 13 – Zeitformen im Vergleich"
+      },
+      "description": {
+        "tr": "Präsens, Präteritum ve Perfekt’i tanı ve dönüştür: lässt – ließ – hat … lassen / gelassen.",
+        "de": "Präsens, Präteritum und Perfekt erkennen und umformen: lässt – ließ – hat … lassen / gelassen.",
+        "en": "Recognise and convert present, simple past and perfect: lässt – ließ – hat … lassen / gelassen."
+      },
+      "difficulty": {
+        "tr": "Orta-Zor",
+        "de": "Mittel bis schwer",
+        "en": "Medium to hard"
+      },
+      "questions": [
+        {
+          "word": "Zeitformen",
+          "sentence": "Welcher Satz steht im Perfekt?",
+          "options": [
+            "Ich habe das Auto waschen lassen.",
+            "Ich ließ das Auto waschen.",
+            "Ich lasse das Auto waschen."
+          ],
+          "correct": "Ich habe das Auto waschen lassen.",
+          "explanations": {
+            "tr": "Perfekt = haben + (burada) çift mastar: habe … waschen lassen. ließ Präteritum, lasse Präsens.",
+            "de": "Perfekt: habe … waschen lassen.",
+            "en": "Perfect: habe … waschen lassen."
+          },
+          "vocab": [
+            "Auto"
+          ]
+        },
+        {
+          "word": "Zeitformen",
+          "sentence": "Welcher Satz steht im Präteritum?",
+          "options": [
+            "Sie ließ ihre Jacke im Bus.",
+            "Sie hat ihre Jacke im Bus gelassen.",
+            "Sie lässt ihre Jacke im Bus."
+          ],
+          "correct": "Sie ließ ihre Jacke im Bus.",
+          "explanations": {
+            "tr": "Präteritum tek kelimedir: ließ. hat … gelassen Perfekt, lässt Präsens.",
+            "de": "Präteritum: ließ.",
+            "en": "Simple past: ließ."
+          },
+          "vocab": [
+            "Jacke",
+            "Bus"
+          ]
+        },
+        {
+          "word": "Zeitformen",
+          "sentence": "Ergänze: „Gestern ___ ich mir die Nägel machen lassen.“",
+          "options": [
+            "habe",
+            "bin",
+            "ließ"
+          ],
+          "correct": "habe",
+          "explanations": {
+            "tr": "Sonda machen lassen var → Perfekt, yardımcı fiil haben: habe. ließ koyarsan lassen iki kez olur.",
+            "de": "Am Ende steht machen lassen → Perfekt mit habe.",
+            "en": "machen lassen is at the end → perfect with habe."
+          },
+          "vocab": [
+            "Nagel"
+          ]
+        },
+        {
+          "word": "Zeitformen",
+          "sentence": "Was ist das Perfekt von „Wir lassen das Kind allein.“?",
+          "options": [
+            "Wir haben das Kind allein gelassen.",
+            "Wir haben das Kind allein lassen.",
+            "Wir sind das Kind allein gelassen."
+          ],
+          "correct": "Wir haben das Kind allein gelassen.",
+          "explanations": {
+            "tr": "allein bir sıfat/zarf, fiil değil. İkinci fiil yok → gelassen, yardımcı fiil haben.",
+            "de": "allein ist kein Verb → gelassen mit haben.",
+            "en": "allein is not a verb → gelassen with haben."
+          },
+          "vocab": [
+            "Kind"
+          ]
+        },
+        {
+          "word": "Zeitformen",
+          "sentence": "Was ist das Perfekt von „Sie lässt ihren Pass verlängern.“?",
+          "options": [
+            "Sie hat ihren Pass verlängern lassen.",
+            "Sie hat ihren Pass verlängert gelassen.",
+            "Sie hat ihren Pass verlängern gelassen."
+          ],
+          "correct": "Sie hat ihren Pass verlängern lassen.",
+          "explanations": {
+            "tr": "İkinci fiil verlängern var → çift mastar: verlängern lassen.",
+            "de": "Zweites Verb → Ersatzinfinitiv: verlängern lassen.",
+            "en": "Second verb → double infinitive: verlängern lassen."
+          },
+          "vocab": [
+            "Pass"
+          ]
+        },
+        {
+          "word": "Zeitformen",
+          "sentence": "Was ist das Präsens von „Er ließ den Hund im Garten.“?",
+          "options": [
+            "Er lässt den Hund im Garten.",
+            "Er lasst den Hund im Garten.",
+            "Er ließt den Hund im Garten."
+          ],
+          "correct": "Er lässt den Hund im Garten.",
+          "explanations": {
+            "tr": "er için Präsens: lässt (ä ile). lasst ihr biçimidir; ließt ise ihr’in Präteritum’u.",
+            "de": "er → lässt.",
+            "en": "er → lässt."
+          },
+          "vocab": [
+            "Hund",
+            "Garten"
+          ]
+        },
+        {
+          "word": "Zeitformen",
+          "sentence": "Ergänze: „Letztes Jahr ___“",
+          "options": [
+            "haben wir das Dach reparieren lassen.",
+            "haben wir das Dach reparieren gelassen.",
+            "lassen wir das Dach reparieren lassen."
+          ],
+          "correct": "haben wir das Dach reparieren lassen.",
+          "explanations": {
+            "tr": "Geçmiş: Perfekt. İkinci fiil reparieren → lassen. Cümle Letztes Jahr ile başladığı için haben 2. sırada, wir arkasında.",
+            "de": "Perfekt mit Ersatzinfinitiv; haben auf Position 2.",
+            "en": "Perfect with double infinitive; haben in position 2."
+          },
+          "vocab": [
+            "Jahr",
+            "Dach"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Zeitformen",
+          "sentence": "Setze ins Perfekt: „Sie ließ die Wände streichen.“",
+          "correct": "Sie hat die Wände streichen lassen.",
+          "answers": [
+            "sie hat die wände streichen lassen",
+            "sie hat die waende streichen lassen"
+          ],
+          "explanations": {
+            "tr": "ließ → hat … lassen. İkinci fiil streichen var, bu yüzden gelassen değil lassen.",
+            "de": "ließ → hat … streichen lassen.",
+            "en": "ließ → hat … streichen lassen."
+          },
+          "vocab": [
+            "Wand"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Zeitformen",
+          "sentence": "Setze ins Präteritum: „Wir haben eine Pizza liefern lassen.“",
+          "correct": "Wir ließen eine Pizza liefern.",
+          "answers": [
+            "wir ließen eine pizza liefern",
+            "wir liessen eine pizza liefern"
+          ],
+          "explanations": {
+            "tr": "Perfekt’ten Präteritum’a: haben ve sondaki lassen kalkar, yerine wir ließen gelir. liefern sonda kalır.",
+            "de": "haben … liefern lassen → ließen … liefern.",
+            "en": "haben … liefern lassen → ließen … liefern."
+          },
+          "vocab": [
+            "Pizza"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Zeitformen",
+          "sentence": "Setze ins Präsens: „Ich habe mir die Haare schneiden lassen.“",
+          "correct": "Ich lasse mir die Haare schneiden.",
+          "answers": [
+            "ich lasse mir die haare schneiden"
+          ],
+          "explanations": {
+            "tr": "Präsens: ich lasse (2. sıra), schneiden sonda. habe kalkar.",
+            "de": "Präsens: ich lasse … schneiden.",
+            "en": "Present: ich lasse … schneiden."
+          },
+          "vocab": [
+            "Haar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lassen-verlassen-machen-1",
+      "title": {
+        "tr": "Übung 14 – lassen, verlassen oder machen?",
+        "de": "Übung 14 – lassen, verlassen oder machen?",
+        "en": "Übung 14 – lassen, verlassen oder machen?"
+      },
+      "description": {
+        "tr": "lassen (bırakmak / yaptırmak), verlassen (bir yerden ayrılmak, terk etmek) ve machen (kendin yapmak) farkı.",
+        "de": "Unterschied zwischen lassen, verlassen (einen Ort verlassen) und machen (selbst tun).",
+        "en": "The difference between lassen, verlassen (leave a place) and machen (do it yourself)."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Medium"
+      },
+      "questions": [
+        {
+          "word": "lassen/verlassen",
+          "sentence": "Ergänze: „Ich ___ das Haus jeden Tag um acht Uhr.“",
+          "options": [
+            "verlasse",
+            "lasse",
+            "mache"
+          ],
+          "correct": "verlasse",
+          "explanations": {
+            "tr": "Bir yerden çıkmak, ayrılmak: verlassen. Evden sekizde çıkıyorum. lasse ile “evi bırakıyorum” anlamsız olurdu.",
+            "de": "Einen Ort verlassen = weggehen → verlasse.",
+            "en": "Leaving a place → verlasse."
+          },
+          "vocab": [
+            "Haus"
+          ]
+        },
+        {
+          "word": "lassen/verlassen",
+          "sentence": "Ergänze: „Ich ___ mein Handy heute zu Hause.“",
+          "options": [
+            "lasse",
+            "verlasse",
+            "mache"
+          ],
+          "correct": "lasse",
+          "explanations": {
+            "tr": "Bir eşyayı bir yerde bırakmak: lassen. verlassen yerler ve insanlar için kullanılır.",
+            "de": "Etwas irgendwo zurücklassen → lasse.",
+            "en": "Leave a thing somewhere → lasse."
+          },
+          "vocab": [
+            "Handy"
+          ]
+        },
+        {
+          "word": "lassen/machen",
+          "sentence": "Ergänze: „Ich ___ heute meine Hausaufgaben selbst.“",
+          "options": [
+            "mache",
+            "lasse",
+            "verlasse"
+          ],
+          "correct": "mache",
+          "explanations": {
+            "tr": "selbst = kendim. İşi kendin yapıyorsun → machen. lassen yaptırmak olurdu ve ikinci fiil isterdi.",
+            "de": "selbst → ich mache es selbst.",
+            "en": "selbst → I do it myself."
+          },
+          "vocab": [
+            "Hausaufgabe"
+          ]
+        },
+        {
+          "word": "lassen/verlassen",
+          "sentence": "Ergänze: „Er hat seine Familie vor zwei Jahren ___.“",
+          "options": [
+            "verlassen",
+            "gelassen",
+            "gemacht"
+          ],
+          "correct": "verlassen",
+          "explanations": {
+            "tr": "Bir insanı ya da aileyi terk etmek: verlassen. Partizip II de verlassen’dir (ge- almaz).",
+            "de": "Jemanden verlassen = weggehen und nicht zurückkommen → verlassen.",
+            "en": "To leave/abandon someone → verlassen."
+          },
+          "vocab": [
+            "Familie"
+          ]
+        },
+        {
+          "word": "lassen/verlassen",
+          "sentence": "Ergänze (ihr): „Bitte ___ den Raum leise.“",
+          "options": [
+            "verlasst",
+            "lasst",
+            "macht"
+          ],
+          "correct": "verlasst",
+          "explanations": {
+            "tr": "Odadan sessizce çıkın: bir yerden ayrılmak → verlassen. ihr’e emir: verlasst.",
+            "de": "Den Raum verlassen; Imperativ ihr: verlasst.",
+            "en": "Leave the room; imperative ihr: verlasst."
+          },
+          "vocab": [
+            "Raum"
+          ]
+        },
+        {
+          "word": "lassen/machen",
+          "sentence": "Ergänze: „Ich ___ mir einen Kaffee.“",
+          "options": [
+            "mache",
+            "lasse",
+            "verlasse"
+          ],
+          "correct": "mache",
+          "explanations": {
+            "tr": "Kahveyi kendin yapıyorsun → machen. lassen burada ikinci bir fiil olmadan anlamsız kalır.",
+            "de": "Ich mache mir selbst einen Kaffee.",
+            "en": "I make myself a coffee."
+          },
+          "vocab": [
+            "Kaffee"
+          ]
+        },
+        {
+          "word": "lassen/machen",
+          "sentence": "Wie sagt man auf Deutsch: „Arabamı yıkatıyorum.“?",
+          "options": [
+            "Ich lasse mein Auto waschen.",
+            "Ich mache mein Auto waschen.",
+            "Ich verlasse mein Auto waschen."
+          ],
+          "correct": "Ich lasse mein Auto waschen.",
+          "explanations": {
+            "tr": "-t- eki (yıka-t-mak) Almancada lassen ile verilir. machen + mastar Almancada yaptırmak anlamına gelmez; bu, Türkçeden gelen sık bir hatadır.",
+            "de": "Kausativ im Deutschen = lassen + Infinitiv, nicht machen.",
+            "en": "The causative in German is lassen + infinitive, not machen."
+          },
+          "vocab": [
+            "Auto"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "lassen/verlassen",
+          "sentence": "Ergänze lassen oder verlassen in der richtigen Form: „Der Zug ___ den Bahnhof um 9 Uhr.“",
+          "correct": "verlässt",
+          "answers": [
+            "verlässt",
+            "verlaesst"
+          ],
+          "explanations": {
+            "tr": "Tren istasyondan ayrılıyor → verlassen. Özne der Zug = er → verlässt (ä ile).",
+            "de": "Den Bahnhof verlassen; er → verlässt.",
+            "en": "Leaving the station; er → verlässt."
+          },
+          "vocab": [
+            "Zug",
+            "Bahnhof"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "lassen/verlassen",
+          "sentence": "Ergänze lassen oder verlassen in der richtigen Form: „___ du bitte das Fenster offen?“",
+          "correct": "Lässt",
+          "answers": [
+            "lässt",
+            "laesst"
+          ],
+          "explanations": {
+            "tr": "Pencereyi açık bırakmak → lassen. du → lässt; soru olduğu için başta.",
+            "de": "Das Fenster offen lassen; du → lässt.",
+            "en": "Leave the window open; du → lässt."
+          },
+          "vocab": [
+            "Fenster"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "lassen/machen",
+          "sentence": "Ergänze machen oder lassen in der richtigen Form: „Ich kann das nicht selbst. Ich ___ es von einem Fachmann machen.“",
+          "correct": "lasse",
+          "answers": [
+            "lasse"
+          ],
+          "explanations": {
+            "tr": "Kendin yapamıyorsun, uzmana yaptırıyorsun → lassen. machen sonda mastar olarak duruyor; çekimli fiil lasse.",
+            "de": "Nicht selbst → lassen: Ich lasse es machen.",
+            "en": "Not yourself → lassen: Ich lasse es machen."
+          },
+          "vocab": [
+            "Fachmann"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tuerkisch-deutsch-1",
+      "title": {
+        "tr": "Übung 15 – Türkçe → Almanca: yaptırmak, kestirmek",
+        "de": "Übung 15 – Türkçe → Almanca: yaptırmak, kestirmek",
+        "en": "Übung 15 – Türkçe → Almanca: yaptırmak, kestirmek"
+      },
+      "description": {
+        "tr": "Türkçe cümlenin doğru Almanca karşılığını seç ya da verilen kelimeleri doğru sıraya koy.",
+        "de": "Wähle die richtige Übersetzung oder bringe die gegebenen Wörter in die richtige Reihenfolge.",
+        "en": "Choose the correct translation or put the given words in the right order."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Medium"
+      },
+      "questions": [
+        {
+          "word": "Türkçe → Deutsch",
+          "sentence": "„Saçımı kestiriyorum.“",
+          "options": [
+            "Ich lasse mir die Haare schneiden.",
+            "Ich schneide mir die Haare.",
+            "Ich lasse mich die Haare schneiden."
+          ],
+          "correct": "Ich lasse mir die Haare schneiden.",
+          "explanations": {
+            "tr": "kes-tir-mek = schneiden lassen. Ich schneide mir die Haare “saçımı kendim kesiyorum” demektir. die Haare Akkusativ olduğu için mich değil mir.",
+            "de": "kestirmek = schneiden lassen; die Haare ist Akkusativobjekt → mir.",
+            "en": "kestirmek = schneiden lassen; die Haare is the accusative object → mir."
+          },
+          "vocab": [
+            "Haar"
+          ]
+        },
+        {
+          "word": "Türkçe → Deutsch",
+          "sentence": "„Evi boyattık.“",
+          "options": [
+            "Wir haben die Wohnung streichen lassen.",
+            "Wir haben die Wohnung gestrichen.",
+            "Wir haben die Wohnung streichen gelassen."
+          ],
+          "correct": "Wir haben die Wohnung streichen lassen.",
+          "explanations": {
+            "tr": "boya-t-mak = streichen lassen. gestrichen “kendimiz boyadık” olur. İkinci fiil olduğu için gelassen değil lassen.",
+            "de": "boyatmak = streichen lassen; Perfekt: streichen lassen.",
+            "en": "boyatmak = streichen lassen; perfect: streichen lassen."
+          },
+          "vocab": [
+            "Wohnung"
+          ]
+        },
+        {
+          "word": "Türkçe → Deutsch",
+          "sentence": "„Hadi mola verelim!“",
+          "options": [
+            "Lass uns eine Pause machen!",
+            "Lass mich eine Pause machen!",
+            "Mach eine Pause!"
+          ],
+          "correct": "Lass uns eine Pause machen!",
+          "explanations": {
+            "tr": "Hadi … -elim = Lass uns … Lass mich … izin istemek, Mach eine Pause! ise karşındakine emir.",
+            "de": "„Hadi …“ = Lass uns …",
+            "en": "“Hadi …” = Lass uns …"
+          },
+          "vocab": [
+            "Pause"
+          ]
+        },
+        {
+          "word": "Türkçe → Deutsch",
+          "sentence": "„Çocukların bahçede oynamasına izin veriyoruz.“",
+          "options": [
+            "Wir lassen die Kinder im Garten spielen.",
+            "Wir lassen den Kindern im Garten spielen.",
+            "Wir lassen die Kinder im Garten zu spielen."
+          ],
+          "correct": "Wir lassen die Kinder im Garten spielen.",
+          "explanations": {
+            "tr": "izin vermek = lassen. Oynayan kişiler Akkusativ’de: die Kinder (den Kindern Dativ). zu kullanılmaz.",
+            "de": "erlauben = lassen + Akkusativ (die Kinder), ohne zu.",
+            "en": "allow = lassen + accusative (die Kinder), without zu."
+          },
+          "vocab": [
+            "Kind",
+            "Garten"
+          ]
+        },
+        {
+          "word": "Türkçe → Deutsch",
+          "sentence": "„Anahtarımı arabada bıraktım.“",
+          "options": [
+            "Ich habe meinen Schlüssel im Auto gelassen.",
+            "Ich habe meinen Schlüssel im Auto verlassen.",
+            "Ich habe meinen Schlüssel im Auto lassen."
+          ],
+          "correct": "Ich habe meinen Schlüssel im Auto gelassen.",
+          "explanations": {
+            "tr": "Eşyayı bir yerde bırakmak lassen’dir; ikinci fiil yok → gelassen. verlassen yerler/insanlar içindir.",
+            "de": "Etwas zurücklassen → gelassen (nicht verlassen).",
+            "en": "Leave something behind → gelassen (not verlassen)."
+          },
+          "vocab": [
+            "Schlüssel",
+            "Auto"
+          ]
+        },
+        {
+          "word": "Türkçe → Deutsch",
+          "sentence": "„Doktor bizi uzun süre bekletti.“",
+          "options": [
+            "Der Arzt hat uns lange warten lassen.",
+            "Der Arzt hat uns lange gewartet.",
+            "Der Arzt ließ uns lange warten lassen."
+          ],
+          "correct": "Der Arzt hat uns lange warten lassen.",
+          "explanations": {
+            "tr": "bekle-t-mek = warten lassen. gewartet “doktor bekledi” olur. Üçüncü seçenekte lassen iki kez var.",
+            "de": "bekletmek = warten lassen.",
+            "en": "bekletmek = warten lassen."
+          },
+          "vocab": [
+            "Arzt"
+          ]
+        },
+        {
+          "word": "Türkçe → Deutsch",
+          "sentence": "„Bilgisayarımı tamir ettirmem lazım.“",
+          "options": [
+            "Ich muss meinen Computer reparieren lassen.",
+            "Ich muss meinen Computer reparieren.",
+            "Ich lasse meinen Computer reparieren müssen."
+          ],
+          "correct": "Ich muss meinen Computer reparieren lassen.",
+          "explanations": {
+            "tr": "lazım = müssen (2. sırada). tamir ettirmek = reparieren lassen (sonda). İkinci seçenek “kendim tamir etmeliyim” demek; üçüncüde sıra yanlış.",
+            "de": "müssen auf Position 2, reparieren lassen am Ende.",
+            "en": "müssen in position 2, reparieren lassen at the end."
+          },
+          "vocab": [
+            "Computer"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Wörter ordnen",
+          "sentence": "„Paltomu yarın temizletiyorum.“ Ordne die Wörter und beginne mit „Ich“: lasse / reinigen / meinen Mantel / morgen",
+          "correct": "Ich lasse morgen meinen Mantel reinigen.",
+          "answers": [
+            "ich lasse morgen meinen mantel reinigen",
+            "ich lasse meinen mantel morgen reinigen"
+          ],
+          "explanations": {
+            "tr": "Ich + lasse (2. sıra), reinigen en sonda. morgen ve meinen Mantel ortada; ikisinin sırası değişebilir, iki sıra da kabul edilir.",
+            "de": "Ich lasse … reinigen; morgen und meinen Mantel stehen in der Mitte (beide Reihenfolgen sind richtig).",
+            "en": "Ich lasse … reinigen; morgen and meinen Mantel go in the middle (both orders are correct)."
+          },
+          "vocab": [
+            "Mantel"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Wörter ordnen",
+          "sentence": "„Ağabeyim bisikletini kullanmama izin veriyor.“ Ordne und beginne mit „Mein Bruder“: lässt / benutzen / mich / sein Fahrrad",
+          "correct": "Mein Bruder lässt mich sein Fahrrad benutzen.",
+          "answers": [
+            "mein bruder lässt mich sein fahrrad benutzen",
+            "mein bruder laesst mich sein fahrrad benutzen"
+          ],
+          "explanations": {
+            "tr": "lässt 2. sırada. İzin verilen kişi mich, nesneden (sein Fahrrad) önce gelir: zamir isimden önce. benutzen en sonda.",
+            "de": "lässt auf Position 2, Pronomen mich vor dem Nomen, benutzen am Ende.",
+            "en": "lässt in position 2, pronoun mich before the noun, benutzen at the end."
+          },
+          "vocab": [
+            "Bruder",
+            "Fahrrad"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Wörter ordnen",
+          "sentence": "„Hadi bu akşam birlikte yemek yapalım!“ Ordne: lass / zusammen / uns / heute Abend / kochen",
+          "correct": "Lass uns heute Abend zusammen kochen!",
+          "answers": [
+            "lass uns heute abend zusammen kochen",
+            "lass uns zusammen heute abend kochen"
+          ],
+          "explanations": {
+            "tr": "Öneri: Lass uns başta, kochen en sonda. Zaman (heute Abend) genelde zusammen’den önce gelir; “Lass uns zusammen heute Abend kochen!” da kabul edilir.",
+            "de": "Lass uns … kochen; heute Abend meist vor zusammen.",
+            "en": "Lass uns … kochen; heute Abend usually before zusammen."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fragen-verneinung-1",
+      "title": {
+        "tr": "Übung 16 – Fragen und Verneinung",
+        "de": "Übung 16 – Fragen und Verneinung",
+        "en": "Übung 16 – Fragen und Verneinung"
+      },
+      "description": {
+        "tr": "lassen ile soru (Lässt du …?, Wo lässt du …?) ve olumsuzluk (nicht, kein).",
+        "de": "Fragen mit lassen (Lässt du …?, Wo lässt du …?) und Verneinung (nicht, kein).",
+        "en": "Questions with lassen (Lässt du …?, Wo lässt du …?) and negation (nicht, kein)."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Medium"
+      },
+      "questions": [
+        {
+          "word": "Fragen",
+          "sentence": "Welche Frage ist richtig?",
+          "options": [
+            "Lässt du dir die Haare färben?",
+            "Lässt dir du die Haare färben?",
+            "Du lässt dir die Haare färben zu?"
+          ],
+          "correct": "Lässt du dir die Haare färben?",
+          "explanations": {
+            "tr": "Evet/hayır sorusu: çekimli fiil başta, sonra özne (du), sonra dönüşlü zamir (dir). färben en sonda, zu yok.",
+            "de": "Ja/Nein-Frage: Lässt du dir … färben?",
+            "en": "Yes/no question: Lässt du dir … färben?"
+          },
+          "vocab": [
+            "Haar"
+          ]
+        },
+        {
+          "word": "Verneinung",
+          "sentence": "Welcher Satz ist eine normale Verneinung?",
+          "options": [
+            "Ich lasse mein Auto nicht reparieren.",
+            "Ich lasse nicht mein Auto reparieren.",
+            "Ich lasse mein Auto reparieren nicht."
+          ],
+          "correct": "Ich lasse mein Auto nicht reparieren.",
+          "explanations": {
+            "tr": "Cümlenin tamamını olumsuz yaparken nicht mastarın hemen önüne gelir: … nicht reparieren. nicht mein Auto ancak “… sondern mein Fahrrad” gibi bir karşıtlıkla kullanılır.",
+            "de": "Satzverneinung: nicht direkt vor dem Infinitiv.",
+            "en": "Sentence negation: nicht right before the infinitive."
+          },
+          "vocab": [
+            "Auto"
+          ]
+        },
+        {
+          "word": "Verneinung",
+          "sentence": "kein oder nicht? „Ich lasse ___ Pizza liefern, ich koche selbst.“",
+          "options": [
+            "keine",
+            "nicht",
+            "kein"
+          ],
+          "correct": "keine",
+          "explanations": {
+            "tr": "Belirsiz bir isim (eine Pizza) kein ile olumsuz yapılır. Pizza dişil → keine.",
+            "de": "eine Pizza → keine Pizza.",
+            "en": "eine Pizza → keine Pizza."
+          },
+          "vocab": [
+            "Pizza"
+          ]
+        },
+        {
+          "word": "Fragen",
+          "sentence": "Ergänze: „___ lässt du dein Fahrrad reparieren? – In der Werkstatt am Markt.“",
+          "options": [
+            "Wo",
+            "Wann",
+            "Was"
+          ],
+          "correct": "Wo",
+          "explanations": {
+            "tr": "Cevap bir yer (In der Werkstatt) → soru kelimesi Wo. W-sorusunda lässt 2. sırada.",
+            "de": "Antwort ist ein Ort → Wo.",
+            "en": "The answer is a place → Wo."
+          },
+          "vocab": [
+            "Fahrrad",
+            "Werkstatt",
+            "Markt"
+          ]
+        },
+        {
+          "word": "Verneinung",
+          "sentence": "„Warum lässt du dir nicht helfen?“ Was bedeutet das?",
+          "options": [
+            "Neden yardım almıyorsun (sana yardım edilmesine izin vermiyorsun)?",
+            "Neden kimseye yardım etmiyorsun?",
+            "Neden bize yardım ettirmiyorsun?"
+          ],
+          "correct": "Neden yardım almıyorsun (sana yardım edilmesine izin vermiyorsun)?",
+          "explanations": {
+            "tr": "sich helfen lassen = yardım edilmesine izin vermek, yardım almak. dir yardımın sana yapıldığını gösteriyor; nicht bunu olumsuz yapıyor.",
+            "de": "sich helfen lassen = Hilfe annehmen.",
+            "en": "sich helfen lassen = accept help."
+          }
+        },
+        {
+          "word": "Verneinung",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Ich habe die Heizung nicht prüfen lassen.",
+            "Ich habe die Heizung prüfen nicht lassen.",
+            "Ich habe nicht die Heizung prüfen gelassen."
+          ],
+          "correct": "Ich habe die Heizung nicht prüfen lassen.",
+          "explanations": {
+            "tr": "nicht iki mastarın önüne gelir: nicht prüfen lassen. İkinci fiil olduğu için gelassen değil lassen.",
+            "de": "nicht vor prüfen lassen; Ersatzinfinitiv lassen.",
+            "en": "nicht before prüfen lassen; double infinitive lassen."
+          },
+          "vocab": [
+            "Heizung"
+          ]
+        },
+        {
+          "word": "Fragen",
+          "sentence": "„Lässt du mich bitte ausreden?“ Was ist das?",
+          "options": [
+            "Kibar bir rica: Sözümü bitirmeme izin verir misin?",
+            "Bir öneri: Hadi konuşalım!",
+            "Bir emir: Sözünü bitir!"
+          ],
+          "correct": "Kibar bir rica: Sözümü bitirmeme izin verir misin?",
+          "explanations": {
+            "tr": "Lässt du mich …? bir izin sorusudur; bitte onu kibar bir rica yapar. Öneri olsaydı Lass uns … olurdu.",
+            "de": "Lässt du mich …? = höfliche Bitte um Erlaubnis.",
+            "en": "Lässt du mich …? = polite request for permission."
+          }
+        },
+        {
+          "type": "text",
+          "word": "Verneinung",
+          "sentence": "Verneine mit nicht: „Ich lasse mir die Haare schneiden.“",
+          "correct": "Ich lasse mir die Haare nicht schneiden.",
+          "answers": [
+            "ich lasse mir die haare nicht schneiden",
+            "ich lasse mir nicht die haare schneiden"
+          ],
+          "explanations": {
+            "tr": "nicht mastar schneiden’in önüne gelir. “Ich lasse mir nicht die Haare schneiden.” de kullanılır; iki cevap da kabul edilir.",
+            "de": "nicht vor schneiden (auch: nicht die Haare … ist möglich).",
+            "en": "nicht before schneiden (nicht die Haare … is also possible)."
+          },
+          "vocab": [
+            "Haar"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Fragen",
+          "sentence": "Bilde eine W-Frage mit wo (du): „Ich lasse mein Handy im Laden am Bahnhof reparieren.“ → „___“",
+          "correct": "Wo lässt du dein Handy reparieren?",
+          "answers": [
+            "wo lässt du dein handy reparieren",
+            "wo laesst du dein handy reparieren"
+          ],
+          "explanations": {
+            "tr": "W-sorusunda soru kelimesi başta, çekimli lässt 2. sırada, sonra du. mein → dein; reparieren sonda.",
+            "de": "Wo + lässt + du … reparieren?",
+            "en": "Wo + lässt + du … reparieren?"
+          },
+          "vocab": [
+            "Handy"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Verneinung",
+          "sentence": "Ergänze kein oder nicht in der richtigen Form: „Wir lassen das Kind heute ___ allein.“",
+          "correct": "nicht",
+          "answers": [
+            "nicht"
+          ],
+          "explanations": {
+            "tr": "allein bir isim değil; bu yüzden kein değil nicht kullanılır.",
+            "de": "allein ist kein Nomen → nicht.",
+            "en": "allein is not a noun → nicht."
+          },
+          "vocab": [
+            "Kind"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "umformung-1",
+      "title": {
+        "tr": "Übung 17 – Umformung: Sätze mit lassen",
+        "de": "Übung 17 – Umformung: Sätze mit lassen",
+        "en": "Übung 17 – Umformung: Sätze mit lassen"
+      },
+      "description": {
+        "tr": "Cümleyi lassen ile yeniden kur: kim yapıyor, kim yaptırıyor ya da izin veriyor?",
+        "de": "Forme Sätze mit lassen um: Wer handelt, wer veranlasst oder erlaubt?",
+        "en": "Rewrite sentences with lassen: who acts, who arranges or allows?"
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "questions": [
+        {
+          "word": "Umformung",
+          "sentence": "„Der Friseur schneidet mir die Haare.“ Mit lassen:",
+          "options": [
+            "Ich lasse mir die Haare schneiden.",
+            "Ich lasse mir die Haare geschnitten.",
+            "Ich schneide mir die Haare lassen."
+          ],
+          "correct": "Ich lasse mir die Haare schneiden.",
+          "explanations": {
+            "tr": "Yaptıran ich özne olur; işi yapan (Friseur) söylenmeyebilir. schneiden mastar hâlinde sona gider; mir korunur.",
+            "de": "Ich (veranlasse) + lasse mir die Haare schneiden.",
+            "en": "Ich (arrange it) + lasse mir die Haare schneiden."
+          },
+          "vocab": [
+            "Friseur",
+            "Haar"
+          ]
+        },
+        {
+          "word": "Umformung",
+          "sentence": "„Die Eltern erlauben dem Kind, länger aufzubleiben.“ Mit lassen:",
+          "options": [
+            "Die Eltern lassen das Kind länger aufbleiben.",
+            "Die Eltern lassen dem Kind länger aufbleiben.",
+            "Die Eltern lassen das Kind länger aufzubleiben."
+          ],
+          "correct": "Die Eltern lassen das Kind länger aufbleiben.",
+          "explanations": {
+            "tr": "erlauben Dativ alır (dem Kind), lassen ise Akkusativ (das Kind). zu-Infinitiv yerine yalın mastar: aufbleiben.",
+            "de": "erlauben + Dativ → lassen + Akkusativ; ohne zu.",
+            "en": "erlauben + dative → lassen + accusative; without zu."
+          },
+          "vocab": [
+            "Eltern",
+            "Kind"
+          ]
+        },
+        {
+          "word": "Umformung",
+          "sentence": "„Ein Mechaniker repariert mein Auto. Ich bezahle dafür.“",
+          "options": [
+            "Ich lasse mein Auto reparieren.",
+            "Ich repariere mein Auto.",
+            "Ich lasse mein Auto repariert."
+          ],
+          "correct": "Ich lasse mein Auto reparieren.",
+          "explanations": {
+            "tr": "İşi tamirci yapıyor, sen yaptırıyorsun → lassen + mastar. Ich repariere “kendim tamir ediyorum” olur.",
+            "de": "Jemand anderes repariert → Ich lasse … reparieren.",
+            "en": "Someone else repairs → Ich lasse … reparieren."
+          },
+          "vocab": [
+            "Mechaniker",
+            "Auto"
+          ]
+        },
+        {
+          "word": "Umformung",
+          "sentence": "„Wollen wir zusammen Fußball spielen?“ Mit lassen:",
+          "options": [
+            "Lass uns zusammen Fußball spielen!",
+            "Lass mich zusammen Fußball spielen!",
+            "Lassen wir uns zusammen Fußball spielen!"
+          ],
+          "correct": "Lass uns zusammen Fußball spielen!",
+          "explanations": {
+            "tr": "Wollen wir …? bir öneridir → Lass uns … Lass mich … izin istemek olurdu; üçüncü seçenek bozuk bir yapı.",
+            "de": "Vorschlag: Wollen wir …? = Lass uns …!",
+            "en": "Suggestion: Wollen wir …? = Lass uns …!"
+          }
+        },
+        {
+          "word": "Umformung",
+          "sentence": "„Eine Schneiderin kürzt meine Hose.“ Mit lassen:",
+          "options": [
+            "Ich lasse meine Hose kürzen.",
+            "Ich lasse die Schneiderin meine Hose zu kürzen.",
+            "Ich kürze meine Hose lassen."
+          ],
+          "correct": "Ich lasse meine Hose kürzen.",
+          "explanations": {
+            "tr": "Terzi kısaltıyor, sen yaptırıyorsun: Ich lasse … kürzen. zu kullanılmaz; lassen çekimli 2. sırada.",
+            "de": "Ich lasse … kürzen (ohne zu).",
+            "en": "Ich lasse … kürzen (without zu)."
+          },
+          "vocab": [
+            "Schneiderin",
+            "Hose"
+          ]
+        },
+        {
+          "word": "Umformung",
+          "sentence": "„Ich nehme den Laptop nicht mit, er bleibt im Büro.“ Mit lassen:",
+          "options": [
+            "Ich lasse den Laptop im Büro.",
+            "Ich verlasse den Laptop im Büro.",
+            "Ich lasse den Laptop im Büro bleiben lassen."
+          ],
+          "correct": "Ich lasse den Laptop im Büro.",
+          "explanations": {
+            "tr": "Eşyayı bir yerde bırakmak: lassen, ikinci fiil gerekmez. verlassen yerler içindir; üçüncüde lassen iki kez var.",
+            "de": "Zurücklassen: Ich lasse den Laptop im Büro.",
+            "en": "Leave behind: Ich lasse den Laptop im Büro."
+          },
+          "vocab": [
+            "Laptop",
+            "Büro"
+          ]
+        },
+        {
+          "word": "Umformung",
+          "sentence": "„Die Firma liefert uns die Möbel.“ Mit lassen:",
+          "options": [
+            "Wir lassen uns die Möbel liefern.",
+            "Wir lassen die Möbel uns liefern zu.",
+            "Wir liefern uns die Möbel lassen."
+          ],
+          "correct": "Wir lassen uns die Möbel liefern.",
+          "explanations": {
+            "tr": "Yaptıran wir özne; die Möbel Akkusativ nesne olduğu için dönüşlü zamir Dativ: uns. liefern en sonda.",
+            "de": "Wir lassen uns (Dativ) die Möbel liefern.",
+            "en": "Wir lassen uns (dative) die Möbel liefern."
+          },
+          "vocab": [
+            "Firma",
+            "Möbel"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Umformung",
+          "sentence": "Forme um mit lassen: „Ein Maler streicht unsere Wohnung.“ → „Wir ___“",
+          "correct": "Wir lassen unsere Wohnung streichen.",
+          "answers": [
+            "wir lassen unsere wohnung streichen"
+          ],
+          "explanations": {
+            "tr": "Yaptıran wir: Wir lassen … streichen. Boyacıyı söylemek gerekmez.",
+            "de": "Wir lassen unsere Wohnung streichen.",
+            "en": "Wir lassen unsere Wohnung streichen."
+          },
+          "vocab": [
+            "Maler",
+            "Wohnung"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Umformung",
+          "sentence": "Forme um mit lassen: „Mein Chef erlaubt mir, heute zu Hause zu arbeiten.“ → „Mein Chef lässt ___“",
+          "correct": "Mein Chef lässt mich heute zu Hause arbeiten.",
+          "answers": [
+            "mein chef lässt mich heute zu hause arbeiten",
+            "mein chef laesst mich heute zu hause arbeiten"
+          ],
+          "explanations": {
+            "tr": "erlaubt mir (Dativ) → lässt mich (Akkusativ). zu düşer: arbeiten sonda.",
+            "de": "erlaubt mir → lässt mich; arbeiten ohne zu am Ende.",
+            "en": "erlaubt mir → lässt mich; arbeiten without zu at the end."
+          },
+          "vocab": [
+            "Chef"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Umformung",
+          "sentence": "Forme um ins Perfekt mit lassen: „Ein Techniker hat meinen Computer repariert. Ich habe ihn bezahlt.“ → „Ich ___“",
+          "correct": "Ich habe meinen Computer reparieren lassen.",
+          "answers": [
+            "ich habe meinen computer reparieren lassen"
+          ],
+          "explanations": {
+            "tr": "Yaptıran ich, Perfekt: habe … reparieren lassen (çift mastar).",
+            "de": "Ich habe … reparieren lassen.",
+            "en": "Ich habe … reparieren lassen."
+          },
+          "vocab": [
+            "Techniker",
+            "Computer"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fehlerkorrektur-1",
+      "title": {
+        "tr": "Übung 18 – Fehlerkorrektur",
+        "de": "Übung 18 – Fehlerkorrektur",
+        "en": "Übung 18 – Fehlerkorrektur"
+      },
+      "description": {
+        "tr": "Türk öğrencilerin sık yaptığı lassen hatalarını bul ve düzelt.",
+        "de": "Finde und korrigiere typische Fehler mit lassen.",
+        "en": "Find and correct typical mistakes with lassen."
+      },
+      "difficulty": {
+        "tr": "Zor",
+        "de": "Schwer",
+        "en": "Hard"
+      },
+      "questions": [
+        {
+          "word": "Fehler",
+          "sentence": "Falsch: „Ich lasse mein Fahrrad zu reparieren.“ Welche Korrektur ist richtig?",
+          "options": [
+            "Ich lasse mein Fahrrad reparieren.",
+            "Ich lasse mein Fahrrad reparieren zu.",
+            "Ich lasse zu mein Fahrrad reparieren."
+          ],
+          "correct": "Ich lasse mein Fahrrad reparieren.",
+          "explanations": {
+            "tr": "Hata: zu. lassen’den sonra mastar zu almaz (modal fiiller gibi).",
+            "de": "Fehler: zu. Nach lassen kein zu.",
+            "en": "Mistake: zu. No zu after lassen."
+          },
+          "vocab": [
+            "Fahrrad"
+          ]
+        },
+        {
+          "word": "Fehler",
+          "sentence": "Falsch: „Du lasst dir die Haare schneiden.“ Welche Korrektur ist richtig?",
+          "options": [
+            "Du lässt dir die Haare schneiden.",
+            "Du lasse dir die Haare schneiden.",
+            "Du lässt dich die Haare schneiden."
+          ],
+          "correct": "Du lässt dir die Haare schneiden.",
+          "explanations": {
+            "tr": "Hata: du için ä gerekir → lässt. lasst ihr biçimidir. dir doğru (die Haare Akkusativ).",
+            "de": "Fehler: du → lässt (mit ä).",
+            "en": "Mistake: du → lässt (with ä)."
+          },
+          "vocab": [
+            "Haar"
+          ]
+        },
+        {
+          "word": "Fehler",
+          "sentence": "Falsch: „Ich habe mein Auto reparieren gelassen.“ Welche Korrektur ist richtig?",
+          "options": [
+            "Ich habe mein Auto reparieren lassen.",
+            "Ich habe mein Auto repariert gelassen.",
+            "Ich bin mein Auto reparieren lassen."
+          ],
+          "correct": "Ich habe mein Auto reparieren lassen.",
+          "explanations": {
+            "tr": "Hata: İkinci fiil (reparieren) varken gelassen. Perfekt’te mastar lassen kullanılır.",
+            "de": "Fehler: gelassen statt Ersatzinfinitiv lassen.",
+            "en": "Mistake: gelassen instead of the double infinitive lassen."
+          },
+          "vocab": [
+            "Auto"
+          ]
+        },
+        {
+          "word": "Fehler",
+          "sentence": "Falsch: „Ich lasse mich die Haare färben.“ Welche Korrektur ist richtig?",
+          "options": [
+            "Ich lasse mir die Haare färben.",
+            "Ich lasse ich die Haare färben.",
+            "Ich lasse mich die Haare zu färben."
+          ],
+          "correct": "Ich lasse mir die Haare färben.",
+          "explanations": {
+            "tr": "Hata: mich. die Haare zaten Akkusativ nesne; dönüşlü zamir Dativ olmalı: mir.",
+            "de": "Fehler: mit Akkusativobjekt (die Haare) → mir.",
+            "en": "Mistake: with an accusative object (die Haare) → mir."
+          },
+          "vocab": [
+            "Haar"
+          ]
+        },
+        {
+          "word": "Fehler",
+          "sentence": "Falsch: „…, weil ich mein Auto reparieren lassen habe.“ Welche Korrektur ist richtig?",
+          "options": [
+            "…, weil ich mein Auto habe reparieren lassen.",
+            "…, weil ich habe mein Auto reparieren lassen.",
+            "…, weil ich mein Auto reparieren gelassen habe."
+          ],
+          "correct": "…, weil ich mein Auto habe reparieren lassen.",
+          "explanations": {
+            "tr": "Hata: Çift mastarlı Perfekt’te habe yan cümlede iki mastarın önüne gelir: habe reparieren lassen.",
+            "de": "Fehler: Im Nebensatz steht habe vor reparieren lassen.",
+            "en": "Mistake: in the subordinate clause habe comes before reparieren lassen."
+          },
+          "vocab": [
+            "Auto"
+          ]
+        },
+        {
+          "word": "Fehler",
+          "sentence": "Falsch: „Ich habe das Handy zu Hause verlassen.“ Welche Korrektur ist richtig?",
+          "options": [
+            "Ich habe das Handy zu Hause gelassen.",
+            "Ich habe das Handy zu Hause lassen.",
+            "Ich habe das Handy zu Hause gelasst."
+          ],
+          "correct": "Ich habe das Handy zu Hause gelassen.",
+          "explanations": {
+            "tr": "Hata: verlassen. Eşyayı bir yerde bırakmak lassen’dir; ikinci fiil yok → gelassen.",
+            "de": "Fehler: verlassen. Richtig: gelassen.",
+            "en": "Mistake: verlassen. Correct: gelassen."
+          },
+          "vocab": [
+            "Handy"
+          ]
+        },
+        {
+          "word": "Fehler",
+          "sentence": "Falsch: „Lass uns morgen zu schwimmen gehen!“ Welche Korrektur ist richtig?",
+          "options": [
+            "Lass uns morgen schwimmen gehen!",
+            "Lass uns morgen schwimmen zu gehen!",
+            "Lass uns morgen zu schwimmen!"
+          ],
+          "correct": "Lass uns morgen schwimmen gehen!",
+          "explanations": {
+            "tr": "Hata: zu. Lass uns …’dan sonra mastarlar zu almaz: schwimmen gehen.",
+            "de": "Fehler: zu. Nach Lass uns … kein zu.",
+            "en": "Mistake: zu. No zu after Lass uns …"
+          }
+        },
+        {
+          "type": "text",
+          "word": "Fehler",
+          "sentence": "Korrigiere den Satz: „Er lasst seinen Pass verlängern.“",
+          "correct": "Er lässt seinen Pass verlängern.",
+          "answers": [
+            "er lässt seinen pass verlängern",
+            "er laesst seinen pass verlaengern"
+          ],
+          "explanations": {
+            "tr": "er için ä gerekir: er lässt. lasst ihr biçimidir.",
+            "de": "er → lässt.",
+            "en": "er → lässt."
+          },
+          "vocab": [
+            "Pass"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Fehler",
+          "sentence": "Korrigiere den Satz: „Wir haben die Küche streichen gelassen.“",
+          "correct": "Wir haben die Küche streichen lassen.",
+          "answers": [
+            "wir haben die küche streichen lassen",
+            "wir haben die kueche streichen lassen"
+          ],
+          "explanations": {
+            "tr": "İkinci fiil streichen var → gelassen değil lassen.",
+            "de": "Zweites Verb → lassen statt gelassen.",
+            "en": "Second verb → lassen instead of gelassen."
+          },
+          "vocab": [
+            "Küche"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Fehler",
+          "sentence": "Korrigiere den Satz: „Ihr lässt die Kinder zu lange fernsehen.“",
+          "correct": "Ihr lasst die Kinder zu lange fernsehen.",
+          "answers": [
+            "ihr lasst die kinder zu lange fernsehen"
+          ],
+          "explanations": {
+            "tr": "ihr biçiminde ä olmaz: ihr lasst. lässt du ve er/sie/es içindir.",
+            "de": "ihr → lasst (ohne ä).",
+            "en": "ihr → lasst (no ä)."
+          },
+          "vocab": [
+            "Kind"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "alltag-1",
+      "title": {
+        "tr": "Übung 19 – Alltag: Werkstatt, Friseur, Amt, Wohnung",
+        "de": "Übung 19 – Alltag: Werkstatt, Friseur, Amt, Wohnung",
+        "en": "Übung 19 – Alltag: Werkstatt, Friseur, Amt, Wohnung"
+      },
+      "description": {
+        "tr": "Günlük hayattan kısa durumlarda lassen: tamirhane, kuaför, resmî daire, ev.",
+        "de": "lassen in kurzen Alltagssituationen: Werkstatt, Friseur, Amt, Wohnung.",
+        "en": "lassen in short everyday situations: garage, hairdresser, office, flat."
+      },
+      "difficulty": {
+        "tr": "Orta",
+        "de": "Mittel",
+        "en": "Medium"
+      },
+      "questions": [
+        {
+          "word": "Alltag",
+          "sentence": "In der Werkstatt: „Guten Tag, ich möchte die Bremsen ___.“",
+          "options": [
+            "prüfen lassen",
+            "prüfen zu lassen",
+            "geprüft lassen"
+          ],
+          "correct": "prüfen lassen",
+          "explanations": {
+            "tr": "möchte modal fiil → sona iki mastar: prüfen lassen. zu yok, Partizip yok.",
+            "de": "Nach möchte: prüfen lassen.",
+            "en": "After möchte: prüfen lassen."
+          },
+          "vocab": [
+            "Werkstatt",
+            "Bremse"
+          ]
+        },
+        {
+          "word": "Alltag",
+          "sentence": "Beim Friseur: „Möchten Sie sich die Haare auch färben ___?“",
+          "options": [
+            "lassen",
+            "gelassen",
+            "zu lassen"
+          ],
+          "correct": "lassen",
+          "explanations": {
+            "tr": "Möchten Sie … ? modal fiilli soru; sonda färben lassen (mastar). gelassen Perfekt’te bile burada olmazdı.",
+            "de": "Möchten Sie … färben lassen?",
+            "en": "Möchten Sie … färben lassen?"
+          },
+          "vocab": [
+            "Friseur",
+            "Haar"
+          ]
+        },
+        {
+          "word": "Alltag",
+          "sentence": "Auf dem Amt: „Sie müssen Ihren Ausweis ___.“",
+          "options": [
+            "verlängern lassen",
+            "verlängert lassen",
+            "lassen verlängern"
+          ],
+          "correct": "verlängern lassen",
+          "explanations": {
+            "tr": "müssen’den sonra sırayla: önce asıl fiil verlängern, sonra lassen. Partizip verlängert kullanılmaz.",
+            "de": "Nach müssen: verlängern lassen.",
+            "en": "After müssen: verlängern lassen."
+          },
+          "vocab": [
+            "Amt",
+            "Ausweis"
+          ]
+        },
+        {
+          "word": "Alltag",
+          "sentence": "Umzug: „Wir tragen die Möbel nicht selbst. Wir ___ sie von einer Firma transportieren.“",
+          "options": [
+            "lassen",
+            "verlassen",
+            "machen"
+          ],
+          "correct": "lassen",
+          "explanations": {
+            "tr": "nicht selbst: mobilyaları firma taşıyor, siz yaptırıyorsunuz → lassen. machen + mastar Almancada yaptırmak demek değildir.",
+            "de": "nicht selbst → lassen.",
+            "en": "nicht selbst → lassen."
+          },
+          "vocab": [
+            "Möbel",
+            "Firma"
+          ]
+        },
+        {
+          "word": "Alltag",
+          "sentence": "Im Restaurant: „Der Kellner ___ uns sehr lange warten.“",
+          "options": [
+            "lässt",
+            "lasst",
+            "ließen"
+          ],
+          "correct": "lässt",
+          "explanations": {
+            "tr": "Özne der Kellner = er → lässt (bekletiyor). lasst ihr, ließen çoğul Präteritum’dur.",
+            "de": "Subjekt er → lässt.",
+            "en": "Subject er → lässt."
+          },
+          "vocab": [
+            "Restaurant",
+            "Kellner"
+          ]
+        },
+        {
+          "word": "Alltag",
+          "sentence": "Beim Arzt: „Sie sollten sich gegen Grippe ___.“",
+          "options": [
+            "impfen lassen",
+            "impfen zu lassen",
+            "geimpft lassen"
+          ],
+          "correct": "impfen lassen",
+          "explanations": {
+            "tr": "sollten modal fiil → sonda impfen lassen. sich impfen lassen = aşı olmak (kendini aşılatmak).",
+            "de": "Nach sollten: impfen lassen.",
+            "en": "After sollten: impfen lassen."
+          },
+          "vocab": [
+            "Arzt",
+            "Grippe"
+          ]
+        },
+        {
+          "word": "Alltag",
+          "sentence": "Der Vermieter sagt: „Die Heizung ist kaputt? Ich ___ morgen einen Techniker kommen.“",
+          "options": [
+            "lasse",
+            "lassen",
+            "lässt"
+          ],
+          "correct": "lasse",
+          "explanations": {
+            "tr": "Özne ich → lasse. Teknisyeni çağırtıyor (gelmesini sağlıyor); kommen sonda.",
+            "de": "Subjekt ich → lasse.",
+            "en": "Subject ich → lasse."
+          },
+          "vocab": [
+            "Vermieter",
+            "Heizung",
+            "Techniker"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Alltag",
+          "sentence": "Im Copyshop. Ergänze: „Ich möchte das Dokument fünfmal kopieren ___.“",
+          "correct": "lassen",
+          "answers": [
+            "lassen"
+          ],
+          "explanations": {
+            "tr": "Belgeyi dükkândaki kişi kopyalıyor → kopieren lassen. möchte’den sonra mastar lassen.",
+            "de": "Nach möchte: kopieren lassen.",
+            "en": "After möchte: kopieren lassen."
+          },
+          "vocab": [
+            "Dokument"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Alltag",
+          "sentence": "Ergänze (Perfekt): „Hast du schon dein Visum verlängern ___?“",
+          "correct": "lassen",
+          "answers": [
+            "lassen"
+          ],
+          "explanations": {
+            "tr": "İkinci fiil verlängern var → Perfekt’te lassen (gelassen değil).",
+            "de": "Zweites Verb → Ersatzinfinitiv lassen.",
+            "en": "Second verb → double infinitive lassen."
+          },
+          "vocab": [
+            "Visum"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Alltag",
+          "sentence": "Ergänze die richtige Form von lassen: „Mein Nachbar ___ sein Dach reparieren, deshalb ist es heute so laut.“",
+          "correct": "lässt",
+          "answers": [
+            "lässt",
+            "laesst"
+          ],
+          "explanations": {
+            "tr": "Özne mein Nachbar = er → lässt (ä ile).",
+            "de": "Subjekt er → lässt.",
+            "en": "Subject er → lässt."
+          },
+          "vocab": [
+            "Nachbar",
+            "Dach"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "master-challenge-1",
+      "title": {
+        "tr": "Übung 20 – lassen + Infinitiv Master Challenge",
+        "de": "Übung 20 – lassen + Infinitiv Master Challenge",
+        "en": "Übung 20 – lassen + Infinitiv Master Challenge"
+      },
+      "description": {
+        "tr": "Bütün konular karışık: anlam, Perfekt, yan cümle, zu’lu yapılar, Präteritum ve emir kipi.",
+        "de": "Alles gemischt: Bedeutung, Perfekt, Nebensatz, Infinitiv mit zu, Präteritum und Imperativ.",
+        "en": "Everything mixed: meaning, perfect, subordinate clauses, zu-infinitives, simple past and imperative."
+      },
+      "difficulty": {
+        "tr": "Çok Zor",
+        "de": "Sehr schwer",
+        "en": "Very hard"
+      },
+      "questions": [
+        {
+          "word": "Master",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Wir haben vor, die Küche streichen zu lassen.",
+            "Wir haben vor, die Küche zu streichen lassen.",
+            "Wir haben vor, die Küche streichen lassen."
+          ],
+          "correct": "Wir haben vor, die Küche streichen zu lassen.",
+          "explanations": {
+            "tr": "Dikkat: Bu zu lassen’den gelmiyor; vorhaben fiili kendinden sonra zu’lu bir mastar grubu ister (Wir haben vor, … zu …). Mastar grubunun son fiili burada lassen olduğu için zu onun önüne gelir: streichen zu lassen. lassen’e bağlı streichen ise yine zu almaz. Kısaca: lassen’den sonra zu yok; ama lassen’in kendisi vorhaben/versuchen gibi bir fiile bağlıysa zu lassen olur.",
+            "de": "Das zu kommt von vorhaben, nicht von lassen: Es steht vor dem letzten Infinitiv (zu lassen). streichen bleibt ohne zu.",
+            "en": "The zu comes from vorhaben, not from lassen: it goes before the last infinitive (zu lassen). streichen stays without zu."
+          },
+          "vocab": [
+            "Küche"
+          ]
+        },
+        {
+          "word": "Master",
+          "sentence": "Ergänze (Perfekt): „Ich weiß nicht, ob er sich die Haare ___.“",
+          "options": [
+            "hat schneiden lassen",
+            "schneiden lassen hat",
+            "hat geschnitten lassen"
+          ],
+          "correct": "hat schneiden lassen",
+          "explanations": {
+            "tr": "ob yan cümlesi + çift mastarlı Perfekt: hat iki mastarın önüne gelir: hat schneiden lassen.",
+            "de": "Nebensatz mit Ersatzinfinitiv: hat schneiden lassen.",
+            "en": "Subordinate clause with double infinitive: hat schneiden lassen."
+          },
+          "vocab": [
+            "Haar"
+          ]
+        },
+        {
+          "word": "Master",
+          "sentence": "Ergänze: „Es ist teuer, ___.“",
+          "options": [
+            "das Auto reparieren zu lassen",
+            "das Auto zu reparieren lassen",
+            "das Auto reparieren lassen zu"
+          ],
+          "correct": "das Auto reparieren zu lassen",
+          "explanations": {
+            "tr": "Es ist teuer, … zu … kalıbı zu’lu mastar ister. zu son fiilin (lassen) önüne gelir: reparieren zu lassen.",
+            "de": "Es ist teuer + zu-Infinitiv: reparieren zu lassen.",
+            "en": "Es ist teuer + zu-infinitive: reparieren zu lassen."
+          },
+          "vocab": [
+            "Auto"
+          ]
+        },
+        {
+          "word": "Master",
+          "sentence": "Präteritum, für sich selbst: „Meine Oma ___ ein Kleid nähen.“",
+          "options": [
+            "ließ sich",
+            "ließ ihr",
+            "lässt sich"
+          ],
+          "correct": "ließ sich",
+          "explanations": {
+            "tr": "Präteritum → ließ. Elbise ninenin kendisi için → dönüşlü sich. ihr başka bir kadını gösterir; lässt Präsens’tir.",
+            "de": "Präteritum ließ + Reflexivpronomen sich.",
+            "en": "Simple past ließ + reflexive sich."
+          },
+          "vocab": [
+            "Oma",
+            "Kleid"
+          ]
+        },
+        {
+          "word": "Master",
+          "sentence": "„Lass mich das bitte selbst machen – ich will es lernen!“ Welche Bedeutung hat lassen?",
+          "options": [
+            "izin istemek",
+            "öneri: hadi …",
+            "yaptırmak"
+          ],
+          "correct": "izin istemek",
+          "explanations": {
+            "tr": "selbst ve ich will es lernen işi yapmak isteyenin sadece konuşan olduğunu gösteriyor → izin istemek (kendim yapmama izin ver).",
+            "de": "selbst + ich will lernen → Bitte um Erlaubnis.",
+            "en": "selbst + ich will lernen → asking for permission."
+          }
+        },
+        {
+          "word": "Master",
+          "sentence": "Welcher Satz ist richtig?",
+          "options": [
+            "Lassen Sie sich von uns beraten!",
+            "Lassen Sie von uns beraten sich!",
+            "Lassen Sie sich von uns zu beraten!"
+          ],
+          "correct": "Lassen Sie sich von uns beraten!",
+          "explanations": {
+            "tr": "Sie’ye emir: Lassen Sie … Dönüşlü sich Sie’den hemen sonra gelir, beraten en sonda ve zu’suz.",
+            "de": "Lassen Sie sich … beraten! (ohne zu).",
+            "en": "Lassen Sie sich … beraten! (without zu)."
+          }
+        },
+        {
+          "word": "Master",
+          "sentence": "Was bedeutet: „Ich habe den Wagen stehen lassen und bin zu Fuß gegangen.“?",
+          "options": [
+            "Arabayı bırakıp yürüyerek gittim.",
+            "Arabayı tamir ettirip yürüyerek gittim.",
+            "Arabanın durmasına izin vermedim."
+          ],
+          "correct": "Arabayı bırakıp yürüyerek gittim.",
+          "explanations": {
+            "tr": "stehen lassen = (bir şeyi olduğu yerde) bırakmak. zu Fuß gehen = yürüyerek gitmek.",
+            "de": "stehen lassen = zurücklassen.",
+            "en": "stehen lassen = leave behind."
+          },
+          "vocab": [
+            "Wagen"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Master",
+          "sentence": "Ergänze den weil-Satz (Perfekt): „Die Wohnung ist sauber, weil ___.“ (wir / sie / putzen lassen)",
+          "correct": "wir sie haben putzen lassen",
+          "answers": [
+            "wir sie haben putzen lassen"
+          ],
+          "explanations": {
+            "tr": "Yan cümle + çift mastarlı Perfekt: haben iki mastarın önüne gelir. Zamir sie özneden sonra gelir: weil wir sie haben putzen lassen.",
+            "de": "Nebensatz mit Ersatzinfinitiv: … weil wir sie haben putzen lassen.",
+            "en": "Subordinate clause with double infinitive: … weil wir sie haben putzen lassen."
+          },
+          "vocab": [
+            "Wohnung"
+          ]
+        },
+        {
+          "type": "text",
+          "word": "Master",
+          "sentence": "Forme um in den Imperativ (Sie): „Können Sie mich bitte ausreden lassen?“",
+          "correct": "Lassen Sie mich bitte ausreden!",
+          "answers": [
+            "lassen sie mich bitte ausreden",
+            "lassen sie mich ausreden"
+          ],
+          "explanations": {
+            "tr": "Sie’ye emir: Lassen Sie başta, mich arkasında, ausreden sonda. bitte olmadan da kabul edilir.",
+            "de": "Imperativ: Lassen Sie mich (bitte) ausreden!",
+            "en": "Imperative: Lassen Sie mich (bitte) ausreden!"
+          }
+        },
+        {
+          "type": "text",
+          "word": "Master",
+          "sentence": "Setze ins Perfekt (zwei Formen sind richtig): „Er lässt seinen Regenschirm im Café liegen.“",
+          "correct": "Er hat seinen Regenschirm im Café liegen lassen.",
+          "answers": [
+            "er hat seinen regenschirm im café liegen lassen",
+            "er hat seinen regenschirm im café liegen gelassen",
+            "er hat seinen regenschirm im café liegenlassen",
+            "er hat seinen regenschirm im café liegengelassen"
+          ],
+          "explanations": {
+            "tr": "liegen lassen’da Perfekt’te iki biçim de doğrudur: liegen lassen ve liegen gelassen. Bitişik yazımlar da kabul edilir.",
+            "de": "Bei liegen lassen sind beide Formen richtig.",
+            "en": "With liegen lassen both forms are correct."
+          },
+          "vocab": [
+            "Regenschirm",
+            "Café"
           ]
         }
       ]

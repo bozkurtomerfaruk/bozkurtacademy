@@ -2,6 +2,16 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-23 · Yardımcı kaynaklar: PDF ve çok öğrenciye (dal `claude/elegant-newton-qz9tkr`, PR açık, birleştirilmedi)
+
+- **Ad:** "Kaynaklar" → "Yardımcı kaynaklar" (öğretmenin öğrenci sayfası, öğrenci paneli); DE "Hilfreiche Materialien", EN "Helpful resources"; boş liste metni üç dilde, "du".
+- **Form (`ogretmen-ogrenci.html#kaynaklar`):** Tür "Bağlantı" (https) ya da "PDF yükle". PDF ödevlerdeki akışla (`js/account/drive.js`, yalnızca `drive.file`, "bağlantıya sahip olan görüntüleyebilir", en çok 20 MB) ayrı "Bozkurt Academy Kaynaklar" klasörüne bir kez yüklenir. Öğrenci seçimi (açık olan öğrenci işaretli, "Hepsini seç"); her öğrenciye ayrı kopya, tek toplu yazmayla, ortak `groupId`. Öğretmen listesinde "X öğrenciye verildi". Düzenleme yok; silme yalnızca o öğrencinin kopyasını siler, PDF Drive'da kalır.
+- **Veri (`js/account/resources.js`):** yeni alanlar `kind` ('link'/'pdf'), `fileId`, `fileName`, `groupId`. Eski kayıtlar (kind yok) bağlantı olarak görünür, yeniden yazılmaz. Listede PDF simgesi, yeni sekme (noopener noreferrer).
+- **Drive:** `uploadPdf(file, { folderName })`; varsayılan klasör yine "Bozkurt Academy Ödevler". Klasör kimliği klasör başına ayrı saklanır (`baGdriveFolder`, `baGdriveFolder:<ad>`).
+- **Kurallar değişmedi** (öğretmenin genel yetkisi yeni alanları kapsıyor) → yayınlama gerekmiyor. Yeni kural testi: PDF kaynağı iki öğrenciye kopya; öğrenci yalnızca kendi kopyasını okur, yazamaz.
+- **Gizlilik:** `privacy.html` (TR/DE/EN) ve `docs/privacy-policy.md` Drive bölümüne "Bozkurt Academy Kaynaklar" eklendi.
+- **Testler:** yeni `npm run test:kaynak` (40 kontrol, Drive taklidi, 390/1440 açık/koyu); `npm test` 269, `test:odev`, `test:csp`, `test:ders-defteri`, hesap çevirisi, sayfa/sürüm kontrolleri geçti.
+
 ## 2026-11-23 · Ders defteri: yapışkan araç çubuğu ve tablo ızgarası (dal `claude/elegant-newton-qz9tkr`, PR açık, birleştirilmedi)
 
 - **Yapışkan çubuk:** Araç çubuğu ve kayıt durumu tek bir çubukta (`#noteSticky`); sitenin üst menüsünün hemen altına yapışıyor (yükseklik JS ile ölçülüyor, `--note-top`). Önceki sürümde çubuk `top:0`'a yapışıp üst menünün (72 px) arkasında kalıyordu; kayıt durumu da başlıkta olduğu için aşağı inince görünmüyordu. İmleç çubuğun altında kalmasın diye sayfanın `scroll-padding`'i çubuk yüksekliği kadar (Quill bunu dikkate alıyor). Tam ekranda kartın en üstüne yapışıyor. Telefonda çubuk tek satır, yana kayıyor.

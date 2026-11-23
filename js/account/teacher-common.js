@@ -3,7 +3,7 @@ import { auth, configured, db, fa, fs, projectId } from './firebase.js';
 import { TEACHER_UID } from './config.js';
 import { $, BERLIN, clearHint, consentGiven, currentUser, formatDate, h, setHint, toDate } from './common.js';
 import * as cal from './calendar.js';
-import * as drive from './drive.js?v=1';
+import * as drive from './drive.js?v=2';
 import { deleteCalendarEvents, loadStudentLessons, needsCalendar } from './lessons.js';
 import { normalizeAssignment, SCHEMA_VERSION } from './assignments.js?v=1';
 import { backupsFor, removeBackup } from './lesson-notes.js?v=1';
@@ -215,11 +215,7 @@ export async function deleteAssignmentCopies(refs){
 
 export const deleteAssignment = (uid, id) => fs.deleteDoc(fs.doc(db, 'users', uid, 'assignments', id));
 
-export function addResource(uid, { title, url, note }){
-  return fs.addDoc(fs.collection(db, 'users', uid, 'resources'), { title, url, note, createdAt: fs.serverTimestamp() });
-}
-
-export const deleteResource = (uid, id) => fs.deleteDoc(fs.doc(db, 'users', uid, 'resources', id));
+// Yardımcı kaynaklar: js/account/resources.js.
 
 // writings: Schreiben metinleri ve geri bildirimler; limits: günlük gönderim sınırı. Gizlilik politikasındaki saklama
 // süresi (son dersten 12 ay) bunlar için de geçerli: öğrenci silinince hepsi birlikte silinir. progress: Almanca Alfabe

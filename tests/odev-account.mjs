@@ -126,7 +126,7 @@ await teacher.fill('#aLinkUrl', 'http://example.com/arbeitsblatt'); await teache
 await teacher.fill('#aLinkUrl', 'https://docs.google.com/document/d/abc123/edit');
 ok(await teacher.locator('#aLinkCopyRow').isVisible(), 'Docs bağlantısında "her öğrenciye kopya" seçeneği çıkıyor');
 await teacher.check('#aLinkCopy');
-ok((await teacher.textContent('#aLinkPreview')).includes('https://docs.google.com/document/d/abc123/copy'), 'kopya önizlemesi /copy');
+ok((await teacher.textContent('#aLinkPreview')) === 'Öğrenciye verilecek bağlantı: https://docs.google.com/document/d/abc123/copy', 'kopya önizlemesi /copy');
 await teacher.click('#aLinkAdd');
 ok(await teacher.locator('#aLinks li').count() === 3, '3 bağlantı eklendi');
 ok((await teacher.textContent('#aLinks')).includes('YouTube') && (await teacher.textContent('#aLinks')).includes('Docs · kopya'), 'bağlantı türleri: YouTube, Docs · kopya');

@@ -329,7 +329,7 @@ async function runModel(env, task, text) {
 //  4. ödev kopyasına mailNewAt / mailUpdateAt yazılır: "yeni ödev" bir kez gider; "güncellendi" Berlin gününde en fazla bir
 //     kez ve aynı gün "yeni ödev" gitmediyse (ödev başına günde en fazla bir e-posta);
 //  5. site genelinde günde en fazla MAIL_DAILY_LIMIT (100) e-posta (veliye giden de sayılır; Brevo ücretsiz planı 300);
-//  6. açılma/tıklama takibi yapılmaz: her alıcıda contactPixelTrackingConsent: false (docs/odev-eposta-kurulum.md).
+//  6. her alıcıda contactPixelTrackingConsent: false: Brevo açılma/tıklamaları sadece anonim sayar, alıcıya bağlamaz (docs/odev-eposta-kurulum.md).
 export const MAIL_LIMIT_DEFAULT = 100;
 export const MAIL_MAX_ITEMS = 50;
 const MAIL_LANGS = ['tr', 'de', 'en'];
@@ -432,7 +432,7 @@ async function sendBrevo(env, { to, subject, text, html }) {
     headers: { 'api-key': env.BREVO_API_KEY, 'Content-Type': 'application/json', Accept: 'application/json' },
     body: JSON.stringify({
       sender: { name: 'Bozkurt Academy', email: from }, replyTo: { email: from, name: 'Bozkurt Academy' },
-      // Açılma/tıklama takibi yok: alıcı başına izin "yok" (Brevo → Settings → Contacts → "Per-contact pixel tracking consent").
+      // Alıcı başına takip izni "yok": Brevo açılma/tıklamaları sadece anonim sayar (Settings → Contacts → "Per-contact pixel tracking consent").
       to: [{ email: to, contactPixelTrackingConsent: false }], subject, textContent: text, htmlContent: html, tags: ['odev']
     })
   });

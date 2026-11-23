@@ -1,0 +1,123 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-1",
+  "title": "Grillfest im Garten",
+  "minutes": 15,
+  "sharedMinutes": 50,
+  "sharedWith": "lesen",
+  "kind": "writing",
+  "register": "du",
+  "textType": "email-informal",
+  "situation": "Ihr Nachbar Jonas feiert am Samstag ein Grillfest in seinem Garten. Er hat Sie eingeladen.",
+  "task": "Antworten Sie Jonas mit einer E-Mail.",
+  "points": [
+    "Uhrzeit",
+    "Essen mitbringen",
+    "Kinder",
+    "Musik"
+  ],
+  "choosePoints": 3,
+  "instructions": "Hier finden Sie vier Punkte. Wählen Sie drei aus. Schreiben Sie zu jedem dieser drei Punkte ein bis zwei Sätze. Vergessen Sie nicht den passenden Anfang und den Gruß am Schluss. Schreiben Sie ca. 40 Wörter.",
+  "words": {
+    "target": 40,
+    "min": 35,
+    "max": 55
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "4 maddeden 3'ünü seçtim ve her birine bir iki cümle yazdım (ör. Uhrzeit, Essen mitbringen, Kinder)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Dördüncü maddeyi de yazmak ek puan getirmez; 3 maddeyi iyi yazmak yeterli."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Davete cevap verdim: geliyorum / gelemiyorum ve teşekkür ettim."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap ve selam var: Lieber Jonas, … Viele Grüße + adım; hitaptan sonraki satır küçük harfle başlıyor."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Komşuya du ile yazdım (du, dich, dir, dein); Sie yok."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Soru cümlesinde fiil başta: Soll ich einen Salat mitbringen? Darf ich meine Kinder mitbringen?"
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Ayrılabilen fiil: Ich bringe einen Kuchen mit. (mit- sonda)"
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Lieber Jonas, / Liebe Anna,",
+          "tr": "Sevgili Jonas, / Sevgili Anna,"
+        },
+        {
+          "de": "Viele Grüße / Bis Samstag!",
+          "tr": "Selamlar / Cumartesi görüşürüz!"
+        }
+      ]
+    },
+    {
+      "group": "Auf eine Einladung antworten",
+      "items": [
+        {
+          "de": "Vielen Dank für die Einladung!",
+          "tr": "Davet için çok teşekkürler!"
+        },
+        {
+          "de": "Ich komme gern.",
+          "tr": "Memnuniyetle geliyorum."
+        },
+        {
+          "de": "Leider kann ich erst um … kommen.",
+          "tr": "Maalesef ancak saat …'de gelebilirim."
+        }
+      ]
+    },
+    {
+      "group": "Fragen und anbieten",
+      "items": [
+        {
+          "de": "Soll ich etwas mitbringen?",
+          "tr": "Bir şey getireyim mi?"
+        },
+        {
+          "de": "Ich bringe einen Salat mit.",
+          "tr": "Bir salata getiriyorum."
+        },
+        {
+          "de": "Dürfen meine Kinder auch kommen?",
+          "tr": "Çocuklarım da gelebilir mi?"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Lieber Jonas,\nvielen Dank für die Einladung! Ich komme gern, aber ich kann erst um 18 Uhr kommen. Soll ich etwas mitbringen? Ich mache gern einen Kartoffelsalat. Dürfen meine zwei Kinder auch kommen? Sie spielen gern im Garten.\nViele Grüße\nDeniz",
+    "covers": [
+      "Uhrzeit",
+      "Essen mitbringen",
+      "Kinder"
+    ],
+    "skipped": "Musik",
+    "notes": [
+      "Üç madde seçildi: Uhrzeit (erst um 18 Uhr), Essen mitbringen (Kartoffelsalat), Kinder (Dürfen meine zwei Kinder …?). Dördüncü madde „Musik“ atlandı; sınavda bu doğru bir seçimdir.",
+      "Önce teşekkür ve cevap: Vielen Dank für die Einladung! Ich komme gern …",
+      "Komşuya du: Lieber Jonas, … Viele Grüße. Soru cümlelerinde fiil başta: Soll ich …? Dürfen …?"
+    ]
+  }
+}

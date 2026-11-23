@@ -1,0 +1,139 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-3",
+  "title": "Im Hotel: der Meldeschein",
+  "minutes": 5,
+  "sharedMinutes": 50,
+  "sharedWith": "lesen",
+  "kind": "form",
+  "situation": "Ihr Bekannter Ivan Petrov aus Sofia macht mit seiner Frau Elena ein paar Tage Urlaub in Hamburg. Sie kommen am 2. Juni im Hotel an und fahren am 6. Juni wieder nach Hause. Ihre Adresse in Bulgarien ist ul. Vitosha 18, 1000 Sofia. Ivan spricht noch nicht gut Deutsch.",
+  "task": "An der Rezeption muss Ivan einen Meldeschein ausfüllen. Helfen Sie ihm und schreiben Sie die fünf fehlenden Informationen in das Formular.",
+  "cards": [
+    {
+      "title": "Personalausweis",
+      "rows": [
+        [
+          "Name",
+          "PETROV"
+        ],
+        [
+          "Vorname",
+          "IVAN"
+        ],
+        [
+          "Geburtsdatum",
+          "14.07.1985"
+        ],
+        [
+          "Staatsangehörigkeit",
+          "BULGARISCH"
+        ],
+        [
+          "Ausweisnummer",
+          "645128337"
+        ]
+      ]
+    }
+  ],
+  "form": {
+    "title": "Meldeschein",
+    "subtitle": "Hotel am Hafen, Hamburg",
+    "rows": [
+      {
+        "label": "Familienname",
+        "value": "Petrov",
+        "example": true
+      },
+      {
+        "label": "Vorname",
+        "value": "Ivan"
+      },
+      {
+        "label": "Geburtsdatum",
+        "number": 1,
+        "evidence": [
+          "14.07.1985"
+        ],
+        "explanation": "Geburtsdatum = doğum tarihi. Metinde yok; kimlik kartındaki „Geburtsdatum: 14.07.1985“ satırından alınır.",
+        "accept": [
+          "14.07.1985",
+          "14.7.1985",
+          "14. Juli 1985",
+          "14.07.85"
+        ]
+      },
+      {
+        "label": "Staatsangehörigkeit",
+        "value": "bulgarisch"
+      },
+      {
+        "label": "Ausweisnummer",
+        "number": 2,
+        "evidence": [
+          "645128337"
+        ],
+        "explanation": "Ausweisnummer = kimlik numarası. Karttaki „Ausweisnummer: 645128337“; dokuz rakamın hepsi doğru sırada olmalı.",
+        "accept": [
+          "645128337",
+          "645 128 337"
+        ]
+      },
+      {
+        "label": "Wohnadresse",
+        "value": "ul. Vitosha 18, 1000 Sofia, Bulgarien"
+      },
+      {
+        "label": "Anreise",
+        "value": "02.06."
+      },
+      {
+        "label": "Abreise",
+        "number": 3,
+        "evidence": [
+          "fahren am 6. Juni wieder nach Hause"
+        ],
+        "explanation": "Abreise = otelden ayrılış. „Sie kommen am 2. Juni … an“ geliş (Anreise), „fahren am 6. Juni wieder nach Hause“ ayrılış → 6. Juni / 06.06.",
+        "accept": [
+          "06.06.",
+          "6.6.",
+          "6. Juni",
+          "06.06",
+          "6.6",
+          "am 6. Juni",
+          "06. Juni"
+        ]
+      },
+      {
+        "label": "Anzahl der Personen",
+        "number": 4,
+        "evidence": [
+          "mit seiner Frau Elena"
+        ],
+        "explanation": "Anzahl der Personen = kişi sayısı. Ivan „mit seiner Frau Elena“ geliyor: Ivan + Elena = 2 kişi.",
+        "accept": [
+          "2",
+          "zwei",
+          "2 Personen",
+          "zwei Personen"
+        ]
+      },
+      {
+        "label": "Grund der Reise",
+        "number": 5,
+        "evidence": [
+          "ein paar Tage Urlaub"
+        ],
+        "explanation": "Grund der Reise = seyahat nedeni. Metinde „ein paar Tage Urlaub in Hamburg“ → Urlaub (tatil); iş seyahatinden söz edilmiyor.",
+        "choices": [
+          "Urlaub",
+          "Geschäftsreise"
+        ],
+        "answer": "Urlaub"
+      }
+    ]
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-5",
+  "title": "Ein gebrauchtes Fahrrad",
+  "minutes": 15,
+  "sharedMinutes": 50,
+  "sharedWith": "lesen",
+  "kind": "writing",
+  "register": "du",
+  "textType": "email-informal",
+  "situation": "Ihre Bekannte Nina verkauft ihr altes Fahrrad. Sie hat Ihnen ein Foto geschickt. Sie möchten das Fahrrad vielleicht kaufen.",
+  "task": "Schreiben Sie Nina eine E-Mail.",
+  "points": [
+    "Preis",
+    "Farbe und Größe",
+    "Probefahrt",
+    "Fahrradschloss"
+  ],
+  "choosePoints": 3,
+  "instructions": "Hier finden Sie vier Punkte. Wählen Sie drei aus. Schreiben Sie zu jedem dieser drei Punkte ein bis zwei Sätze. Vergessen Sie nicht den passenden Anfang und den Gruß am Schluss. Schreiben Sie ca. 40 Wörter.",
+  "words": {
+    "target": 40,
+    "min": 35,
+    "max": 55
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "4 maddeden 3'ünü seçtim ve her birine bir iki cümle yazdım (ör. Preis, Probefahrt, Fahrradschloss)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Dördüncü maddeyi de yazmak ek puan getirmez; 3 maddeyi iyi yazmak yeterli."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Neden yazdığımı söyledim: bisikleti satın almak istiyorum."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap ve selam var: Liebe Nina, … Viele Grüße + adım."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Tanıdığa du ile yazdım (du, dein, dir); Sie yok."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Soru: Wie viel kostet das Fahrrad? Kann ich es am Freitag ausprobieren?"
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Fiil sonda: …, weil ich zur Arbeit fahren möchte. (weil-yan cümlesi)"
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Liebe Nina,",
+          "tr": "Sevgili Nina,"
+        },
+        {
+          "de": "Viele Grüße",
+          "tr": "Selamlar"
+        }
+      ]
+    },
+    {
+      "group": "Interesse zeigen",
+      "items": [
+        {
+          "de": "Ich habe dein Foto gesehen.",
+          "tr": "Fotoğrafını gördüm."
+        },
+        {
+          "de": "Ich möchte das Fahrrad gern kaufen.",
+          "tr": "Bisikleti satın almak isterim."
+        }
+      ]
+    },
+    {
+      "group": "Fragen",
+      "items": [
+        {
+          "de": "Wie viel kostet es?",
+          "tr": "Ne kadar?"
+        },
+        {
+          "de": "Kann ich eine Probefahrt machen?",
+          "tr": "Deneme sürüşü yapabilir miyim?"
+        },
+        {
+          "de": "Ist ein Schloss dabei?",
+          "tr": "Kilidi de var mı?"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Liebe Nina,\nich habe das Foto von deinem Fahrrad gesehen. Ich möchte es gern kaufen, weil ich damit zur Arbeit fahren will. Wie viel kostet es? Kann ich am Freitag eine Probefahrt machen? Ist auch ein Fahrradschloss dabei?\nViele Grüße\nYusuf",
+    "covers": [
+      "Preis",
+      "Probefahrt",
+      "Fahrradschloss"
+    ],
+    "skipped": "Farbe und Größe",
+    "notes": [
+      "Üç madde: Preis (Wie viel kostet es?), Probefahrt (am Freitag eine Probefahrt), Fahrradschloss (Ist auch ein Fahrradschloss dabei?). „Farbe und Größe“ maddesi atlandı.",
+      "Giriş cümlesi neden yazdığını söylüyor: Ich habe das Foto … gesehen. Ich möchte es gern kaufen …",
+      "weil-yan cümlesinde fiil sonda: …, weil ich damit zur Arbeit fahren will."
+    ]
+  }
+}

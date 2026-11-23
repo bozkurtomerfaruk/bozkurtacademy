@@ -1,0 +1,119 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-4",
+  "title": "Ausflug an den See",
+  "minutes": 15,
+  "sharedMinutes": 50,
+  "sharedWith": "lesen",
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "Ihre Kursleiterin Frau Hartmann plant mit dem Deutschkurs am Sonntag einen Ausflug an einen See. Sie möchte wissen, wer mitkommt.",
+  "task": "Antworten Sie Frau Hartmann mit einer E-Mail.",
+  "points": [
+    "Mitkommen",
+    "Fahrkarte",
+    "Picknick",
+    "Ihr Sohn"
+  ],
+  "choosePoints": 3,
+  "instructions": "Hier finden Sie vier Punkte. Wählen Sie drei aus. Schreiben Sie zu jedem dieser drei Punkte ein bis zwei Sätze. Vergessen Sie nicht den passenden Anfang und den Gruß am Schluss. Schreiben Sie ca. 40 Wörter.",
+  "words": {
+    "target": 40,
+    "min": 35,
+    "max": 55
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "4 maddeden 3'ünü seçtim ve her birine bir iki cümle yazdım (ör. Mitkommen, Picknick, Ihr Sohn)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Dördüncü maddeyi de yazmak ek puan getirmez; 3 maddeyi iyi yazmak yeterli."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Gelip gelmediğimi ilk cümlelerde açıkça yazdım."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap ve selam var: Liebe Frau Hartmann, / Sehr geehrte Frau Hartmann, … Viele Grüße + adım."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Kurs öğretmenine Sie ile yazdım: Sie, Ihnen; du yok."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Modal fiil + mastar sonda: Darf mein Sohn mitkommen? Ich kann einen Kuchen backen."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "mein Sohn / meinen Sohn: Ich bringe meinen Sohn mit. (Akkusativ)"
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Liebe Frau Hartmann,",
+          "tr": "Sevgili Hartmann Hanım,"
+        },
+        {
+          "de": "Viele Grüße / Bis Sonntag!",
+          "tr": "Selamlar / Pazar görüşürüz!"
+        }
+      ]
+    },
+    {
+      "group": "Zusagen und anbieten",
+      "items": [
+        {
+          "de": "Ich komme gern mit.",
+          "tr": "Memnuniyetle geliyorum."
+        },
+        {
+          "de": "Für das Picknick bringe ich … mit.",
+          "tr": "Piknik için … getiriyorum."
+        }
+      ]
+    },
+    {
+      "group": "Fragen",
+      "items": [
+        {
+          "de": "Darf mein Sohn auch mitkommen?",
+          "tr": "Oğlum da gelebilir mi?"
+        },
+        {
+          "de": "Wie viel kostet die Fahrkarte?",
+          "tr": "Bilet ne kadar?"
+        },
+        {
+          "de": "Wo treffen wir uns?",
+          "tr": "Nerede buluşuyoruz?"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Liebe Frau Hartmann,\nvielen Dank für die Idee! Ich komme am Sonntag gern mit. Für das Picknick bringe ich Obst und einen Kuchen mit. Mein Sohn ist acht Jahre alt. Darf er auch mitkommen? Er schwimmt sehr gern.\nViele Grüße\nAna Costa",
+    "covers": [
+      "Mitkommen",
+      "Picknick",
+      "Ihr Sohn"
+    ],
+    "skipped": "Fahrkarte",
+    "notes": [
+      "Üç madde: Mitkommen (Ich komme … gern mit), Picknick (Obst und einen Kuchen), Ihr Sohn (Darf er auch mitkommen?). „Fahrkarte“ maddesi atlandı.",
+      "Kurs öğretmenine Sie ama sıcak hitap: Liebe Frau Hartmann, … Viele Grüße.",
+      "Ayrılabilen fiil: Ich komme … mit / bringe … mit. Modal fiil: Darf er … mitkommen? — mastar sonda."
+    ]
+  }
+}

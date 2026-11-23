@@ -15,7 +15,7 @@
   const fill = (key, values) => t(key).replace(/\{(\w+)\}/g, (_, name) => values[name] ?? '');
   const lang = () => window.BA?.lang || 'tr';
   const esc = value => window.baHtml.escapeHtml(value);
-  // html-safe-names: status navActions() points groups notes head postHtml(set.post) mailHtml(set.mail)
+  // html-safe-names: status navActions() points pick groups notes head postHtml(set.post) mailHtml(set.mail)
   const MAX_CHARS = 4000; // firestore.rules ile aynı sınır
 
   // Harf ve rakam dizileri; "-" ya da "'" ile birleşenler tek kelime (B1-Prüfung). scripts/check-exams.mjs aynı kuralı kullanır.
@@ -81,14 +81,16 @@
   }
 
   function taskHtml(set) {
-    const points = set.points?.length ? `<ul class="wt-points">${set.points.map(point => `<li>${esc(point)}</li>`).join('')}</ul>` : '';
+    // choosePoints (telc A2 Teil 2): maddeler anahtar kelime kutularıdır, öğrenci bunlardan birkaçını seçer.
+    const points = set.points?.length ? `<ul class="wt-points${set.choosePoints ? ' is-keywords' : ''}">${set.points.map(point => `<li>${esc(point)}</li>`).join('')}</ul>` : '';
+    const pick = set.choosePoints ? `<p class="wt-muted wt-choice" data-wt-pick>${esc(fill('wtChoosePoints', { n: set.choosePoints, total: set.points.length }))}</p>` : '';
     return `<div class="wt-task" lang="de">
       <p>${esc(set.situation)}</p>
       ${postHtml(set.post)}${mailHtml(set.mail)}
       <p><strong>${esc(set.task)}</strong></p>
       ${points}
       ${set.instructions ? `<p class="wt-instructions">${esc(set.instructions)}</p>` : ''}
-    </div>${set.examChoice ? `<p class="wt-muted wt-choice" data-wt-choice>${esc(t('wtExamChoice'))}</p>` : ''}${set.sharedMinutes ? `<p class="wt-muted wt-choice" data-wt-shared>${esc(fill('wtSharedMinutes', { n: set.sharedMinutes }))}${set.anyOrder ? ` ${esc(t('wtAnyOrder'))}` : ''}</p>` : ''}`;
+    </div>${pick}${set.examChoice ? `<p class="wt-muted wt-choice" data-wt-choice>${esc(t('wtExamChoice'))}</p>` : ''}${set.sharedMinutes ? `<p class="wt-muted wt-choice" data-wt-shared>${esc(fill(set.sharedWith === 'lesen' ? 'wtSharedLesen' : 'wtSharedMinutes', { n: set.sharedMinutes }))}${set.anyOrder ? ` ${esc(t('wtAnyOrder'))}` : ''}</p>` : ''}`;
   }
 
   // Metin alanındaki ipucu, metin türüne göre (data: textType).

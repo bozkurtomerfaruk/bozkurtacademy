@@ -3,6 +3,7 @@ import { auth, configured, db, fa, fs, projectId } from './firebase.js';
 import { TEACHER_UID } from './config.js';
 import { $, BERLIN, clearHint, consentGiven, currentUser, formatDate, h, setHint, toDate } from './common.js';
 import * as cal from './calendar.js';
+import * as drive from './drive.js?v=1';
 import { deleteCalendarEvents, loadStudentLessons, needsCalendar } from './lessons.js';
 import { normalizeAssignment, SCHEMA_VERSION } from './assignments.js?v=1';
 
@@ -32,6 +33,7 @@ export async function requireTeacher({ loadingId, errorId }){
     await fa.signOut(auth);
     clearHint();
     cal.forget();
+    drive.forget();
     location.replace('index.html');
   });
   return user;

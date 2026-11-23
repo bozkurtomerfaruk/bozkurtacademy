@@ -8,6 +8,7 @@ import {
 } from './common.js';
 import { fs } from './firebase.js';
 import { defaultTitle, KIND_LABELS, linkKind, linkLabel, MAX_LINKS, topicTitles, validLinkUrl, wholeTopicAllowed } from './assignments.js?v=1';
+import * as drive from './drive.js?v=1';
 import { createAssignments, isEnabled, listStudents, loadAssignmentGroups, requireTeacher, updateAssignmentGroup } from './teacher-common.js';
 
 const chosen = []; // [{ level, topic, exercise, label }]
@@ -164,6 +165,71 @@ function addLink(){
   return true;
 }
 
+// PDF (Google Drive) ---------------------------------------------------------------------------------------------------
+// İlk tıklamada Google izni istenir (açılır pencere tıklamaya bağlı olmalı); izin alınınca dosya seçimi açılır ya da
+// tarayıcı engellerse ikinci tıklamada açılır. Yükleme sürerken ödev kaydedilemez.
+let uploading = false;
+
+function pdfStatus(type, message){
+  setStatus($('aPdfStatus'), type, message);
+}
+
+async function pickPdf(){
+  if(links.length >= MAX_LINKS){
+    pdfStatus('error', `Bir ödeve en çok ${MAX_LINKS} bağlantı eklenebilir.`);
+    return;
+  }
+  if(!drive.isConnected()){
+    $('aPdfAdd').disabled = true;
+    pdfStatus('', 'Google Drive izni isteniyor…');
+    try{
+      await drive.connect();
+    }catch(error){
+      console.warn(error);
+      pdfStatus('error', `Google Drive'a bağlanılamadı: ${error.message}`);
+      return;
+    }finally{
+      $('aPdfAdd').disabled = false;
+    }
+    pdfStatus('success', 'Google Drive bağlandı. PDF dosyasını seç.');
+    $('aPdfAdd').textContent = 'PDF seç';
+  }
+  $('aPdfFile').click();
+}
+
+async function uploadSelected(){
+  const file = $('aPdfFile').files?.[0];
+  $('aPdfFile').value = '';
+  if(!file) return;
+  const problem = await drive.checkPdf(file);
+  if(problem){
+    pdfStatus('error', problem);
+    return;
+  }
+  uploading = true;
+  $('aPdfAdd').disabled = true;
+  $('aSubmit').disabled = true;
+  const progress = $('aPdfProgress');
+  progress.hidden = false;
+  progress.value = 0;
+  pdfStatus('', `"${file.name}" yükleniyor…`);
+  try{
+    const result = await drive.uploadPdf(file, { onProgress: (p) => { progress.value = p; } });
+    links.push({ url: result.url, title: result.name.replace(/\.pdf$/i, '').slice(0, 120), kind: 'pdf', copy: false });
+    renderLinks();
+    pdfStatus('success', `"${result.name}" Drive'a yüklendi, paylaşıldı ve ödeve eklendi.`);
+  }catch(error){
+    console.warn(error);
+    pdfStatus('error', `PDF yüklenemedi: ${error.message} Tekrar dene.`);
+    if(!drive.isConnected()) $('aPdfAdd').textContent = 'PDF ekle';
+  }finally{
+    uploading = false;
+    progress.hidden = true;
+    $('aPdfAdd').disabled = false;
+    $('aSubmit').disabled = false;
+  }
+}
+
 // Öğrenciler -----------------------------------------------------------------------------------------------------------
 
 function renderStudents(students, preselect){
@@ -223,6 +289,10 @@ function readForm(){
 
 async function submit(event){
   event.preventDefault();
+  if(uploading){
+    setStatus($('aStatus'), 'error', 'PDF yüklenirken bekle.');
+    return;
+  }
   const form = readForm();
   if(!form) return;
   const button = $('aSubmit');
@@ -300,6 +370,16 @@ if(user){
     $('aLinkUrl').addEventListener('input', updateLinkPreview);
     $('aLinkCopy').addEventListener('change', updateLinkPreview);
     $('aLinkAdd').addEventListener('click', addLink);
+    // PDF: Google Drive ayarlı değilse düğme gizlenir.
+    if(drive.driveConfigured){
+      drive.preload();
+      if(drive.isConnected()) $('aPdfAdd').textContent = 'PDF seç';
+      $('aPdfAdd').addEventListener('click', pickPdf);
+      $('aPdfFile').addEventListener('change', uploadSelected);
+    }else{
+      $('aPdfAdd').hidden = true;
+      $('aPdfHint').hidden = true;
+    }
     // Bağlantı kutusunda Enter formu göndermez, bağlantıyı ekler.
     for(const id of ['aLinkUrl', 'aLinkTitle']){
       $(id).addEventListener('keydown', (event) => {

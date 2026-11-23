@@ -75,10 +75,20 @@ function checkWriting(set, fail) {
   // choosePoints: the task lists more points than the candidate must cover (telc A2 Teil 2: four keywords, choose three).
   // model.skipped names the point the model answer leaves out; a Turkish note must say so.
   if (set.choosePoints !== undefined && !(Number.isInteger(set.choosePoints) && set.choosePoints >= 2 && set.choosePoints < (set.points?.length || 0))) fail('"choosePoints" must be an integer from 2 to below the number of points');
+  // With ownAspect (telc B2) two points may be skipped (two points + an aspect of one's own): skipped is then a list.
   if (set.model?.skipped !== undefined) {
-    if (!set.choosePoints || !(set.points || []).includes(set.model.skipped)) fail('"model.skipped" must be one of "points" (only with choosePoints)');
-    else if (!(set.model.notes || []).some(note => String(note).includes(`„${set.model.skipped}“`) && /atla/.test(note))) fail(`a model note must say that „${set.model.skipped}“ was left out (atladı …)`);
+    const skipped = [].concat(set.model.skipped);
+    if (!set.choosePoints || !skipped.length || !skipped.every(point => (set.points || []).includes(point))) fail('"model.skipped" must be one of "points" or a list of them (only with choosePoints)');
+    else for (const point of skipped) if (!(set.model.notes || []).some(note => String(note).includes(`„${point}“`) && /atla/.test(note))) fail(`a model note must say that „${point}“ was left out (atladı …)`);
   }
+  // ownAspect (telc B2): either choosePoints points, or one point fewer plus a relevant aspect of one's own; the page says both ways.
+  if (set.ownAspect !== undefined && !(set.ownAspect === true && set.choosePoints)) fail('"ownAspect" must be true and needs "choosePoints"');
+  if (set.model?.own !== undefined && !(set.ownAspect && text(set.model.own))) fail('"model.own" (the own aspect of the model answer) needs "ownAspect"');
+  // ad (telc B2): the advert the e-mail reacts to { title, text, contact? }; context: the candidate's situation after the advert.
+  if (set.ad !== undefined && !(text(set.ad?.title) && text(set.ad?.text) && (set.ad.contact === undefined || text(set.ad.contact)))) fail('"ad" needs title and text (contact optional)');
+  if (set.context !== undefined && !text(set.context)) fail('"context" must be text when present');
+  // words.atLeast: "Schreiben Sie mindestens {min} Wörter" is the official minimum; the counter warns below it.
+  if (set.words?.atLeast !== undefined && set.words.atLeast !== true) fail('"words.atLeast" must be true when present');
   // sharedWith "lesen": the shared time covers Lesen and Schreiben together (telc A2: 50 minutes).
   if (set.sharedWith !== undefined && !(set.sharedWith === 'lesen' && set.sharedMinutes)) fail('"sharedWith" must be "lesen" and needs "sharedMinutes"');
   // telc A2 / Start Deutsch 2 (Übungstest 1, 2024): Teil 2 a letter to an acquaintance, four keywords of which three are covered
@@ -95,6 +105,26 @@ function checkWriting(set, fail) {
       if (covered.length !== 3 || covered.includes(set.model.skipped) || !covered.every(point => set.points.includes(point))) fail('"model.covers" must list the three other points');
     }
     if (!(Array.isArray(set.checklist) && set.checklist.some(item => item?.tr === 'Dördüncü maddeyi de yazmak ek puan getirmez; 3 maddeyi iyi yazmak yeterli.'))) fail('telc A2 checklist needs the item "Dördüncü maddeyi de yazmak ek puan getirmez; 3 maddeyi iyi yazmak yeterli."');
+  }
+  // telc Deutsch B2 (Übungstest 1, überarbeitete Auflage 2019): one Teil, 30 minutes; choose Aufgabe A (Bitte um Informationen) or
+  // B (Beschwerde); a semi-formal e-mail to a company reacting to an advert; four Leitpunkte: three, or two plus an aspect of one's own;
+  // subject line, greeting, introduction and closing; at least 150 words (site: 150–220). Criteria I–III, A 5 / B 3 / C 1 / D 0, ×3 = 45.
+  if (set.exam === 'telc' && set.level === 'b2') {
+    if (set.teil !== 1 || set.minutes !== 30) fail('telc B2 Schreiben has one Teil of 30 minutes');
+    if (set.textType !== 'email-formal' || set.subjectLine !== true || set.examChoice !== true) fail('telc B2 needs textType "email-formal", "subjectLine" and "examChoice"');
+    if (!set.ad) fail('telc B2 tasks react to an advert ("ad")');
+    if (set.points?.length !== 4 || set.choosePoints !== 3 || set.ownAspect !== true) fail('telc B2 needs four Leitpunkte, "choosePoints": 3 and "ownAspect": true');
+    if (!/a\) drei der folgenden Punkte oder b\) zwei der folgenden Punkte und einen weiteren Aspekt Ihrer Wahl/.test(set.task || '')) fail('telc B2 task must state both ways (a) drei … oder b) zwei … und einen weiteren Aspekt Ihrer Wahl)');
+    if (!/mindestens 150 Wörter/.test(set.instructions || '')) fail('telc B2 instructions need "mindestens 150 Wörter"');
+    if (set.words?.min !== 150 || set.words?.target !== 180 || set.words?.max !== 220 || set.words?.atLeast !== true || set.words?.zeroBelow !== undefined) fail('telc B2 needs words 150–220 (target 180), "atLeast" and no zeroBelow');
+    const covers = set.model?.covers || [], skipped = [].concat(set.model?.skipped || []);
+    const ok = covers.every(point => set.points.includes(point)) && !covers.some(point => skipped.includes(point)) && covers.length + skipped.length === 4
+      && (covers.length === 3 ? set.model.own === undefined : covers.length === 2 && text(set.model.own));
+    if (!ok) fail('telc B2 model: "covers" three points (one skipped) or two points plus "model.own" (two skipped)');
+    const list = Array.isArray(set.checklist) ? set.checklist : [];
+    if (!list.some(item => item?.criterion === 'aufbau' && String(item.tr).startsWith('Maddeleri ayrı ayrı sıralama; bağlaçlarla birbirine bağla'))) fail('telc B2 checklist needs "Maddeleri ayrı ayrı sıralama; bağlaçlarla birbirine bağla …"');
+    if (!list.some(item => item?.criterion === 'aufgabe' && /2 madde \+ duruma uygun kendi/.test(item.tr || ''))) fail('telc B2 checklist needs the item about the two ways (3 madde ya da 2 madde + kendi konu)');
+    if (!list.some(item => item?.criterion === 'aufbau' && /Kohärenz/.test(item.tr || '')) || !(set.redemittel || []).some(g => /Kohärenz/.test(g?.group || ''))) fail('telc B2 needs a Kohärenz checklist item and Redemittel group');
   }
   // anyOrder: in the exam the candidate may start with either task (Goethe B2); the page says so.
   if (set.anyOrder !== undefined && set.anyOrder !== true) fail('"anyOrder" must be true when present');

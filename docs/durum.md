@@ -2,6 +2,17 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-23 · telc B2 Schreiben: ilana göre bilgi isteme ya da şikâyet e-postası (dal `claude/nifty-gates-d34ddv`)
+
+- **Kaynak:** resmî telc Deutsch B2 Übungstest 1 (gözden geçirilmiş baskı 2019, 5023-B00-010201) ve telc "Tipps zur Prüfungsvorbereitung" B2 (puanlama tablosu). Schriftlicher Ausdruck tek Teil, 30 dk, 45 puan (%15). İki görevden biri: Aufgabe A Bitte um Informationen, Aufgabe B Beschwerde; ilana göre yarı resmî e-posta; 4 Leitpunkt: 3'ü ya da 2'si + kendi konu; Betreff/Anrede/Einleitung/Schluss; en az 150 kelime. Ölçütler I–III, A 5 / B 3 / C 1 / D 0, ×3.
+- **5 set (öğretmenin onayı: 3 bilgi isteme + 2 şikâyet):** Coworking am Hafen, Carsharing statt eigenes Auto, Ein Beet im Gemeinschaftsgarten (A); Ärger beim Open-Air-Festival, Reparaturservice ohne Reparatur (B). Örnek cevaplar 169–178 kelime; set-2 ve set-5 ikinci yolu (2 madde + kendi konu) kullanıyor.
+- **Görev sayfası (yeni alanlar):** `ad` (ilan kartı), `context`, `ownAspect` (notta iki yol açıkça: "4 maddeden 3 tanesini yaz ya da 2 madde + duruma uygun kendi seçtiğin bir konu"), `words.atLeast` (sayaç: 150'nin altında "resmî alt sınır" uyarısı, 150–220 iyi, 221+ uzun; göndermeyi engellemez). Aufgabe A/B notu (`examChoice`). TR/DE/EN. Kontrol listesinde "Maddeleri ayrı ayrı sıralama; bağlaçlarla birbirine bağla …" (Kommunikative Gestaltung'da B için şart), iki yol ve Kohärenz maddeleri.
+- **Kontrol (`scripts/check-exams.mjs`):** telc B2 kuralları (30 dk, `email-formal`, Betreff, ilan, 4 madde, `choosePoints` 3 + `ownAspect`, görevde iki yol, "mindestens 150 Wörter", 150–220, örnek cevapta 3 madde ya da 2 + `model.own`, zorunlu kontrol listesi maddeleri). `model.skipped` artık liste de olabilir.
+- **Ödev:** B2 → Schreiben altında 15 görev (Goethe B2 10 + telc B2 5).
+- **Yapay zekâ (Worker değişti):** `LEVEL_NOTES`'a sadece "telc B2 ·" görevleri için B2 notu eklendi (genel PROMPT değişmedi; Worker testi bunu denetliyor). Deneme metinleri `tests/ai-deneme/telc-b2.json`: 5 metin, 11 kasıtlı hata; telcb2-4 bilerek 76 kelime (uzunluk işaretlenmemeli), telcb2-5 hatasız. Worker'ın kesin kuralları yeni metinlerde ve 5 örnek cevapta yerelde yanlış alarm vermedi. **Deneme henüz çalıştırılmadı:** öğretmenin onayı ve yeni geçici token bekleniyor.
+- **Testler:** `tests/schreiben.mjs` (telc B2 bölümü: ilan, iki yol notu, A/B notu, 149/150/220/221 sayaç, 76 kelimeyle gönderim, Enter yeni satır, örnek cevap ve atlanan madde, set-5 ikinci yol, DE/EN, 390/1440 açık/koyu taşma) ALL PASSED; `test:schreiben` (ödev listesi 15), `test:schreiben-ai`, `test:odev`, `test:csp`, `test:worker` 49/49, `npm test` 245/245; check-exams, check-html-escape, check-versions, build-pages --check, build-search-index --check, check-grammar PASS. Önbellek: app 56, examsData 26, writing-task.js 10, writing-task.css 8.
+- **Birleştikten sonra:** Worker değiştiği için `worker/schreiben-kontrol.js` Cloudflare'e yeniden yapıştırılmalı (Edit code → yapıştır → Deploy).
+
 ## 2026-11-23 · telc A2 Schreiben: Teil 1 form + Teil 2 mektup (dal `claude/dazzling-galileo-k4j6gp`)
 
 Eksik Schreiben sınavları sırası: **telc A2** → telc B2 → Goethe C1 → telc C1 → TestDaF (dijital, kâğıt). Her sınav ayrı dal ve ayrı PR; öğretmen "birleştir" demeden birleştirilmez.

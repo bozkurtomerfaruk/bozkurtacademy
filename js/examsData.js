@@ -852,7 +852,16 @@ window.BA_EXAMS = {
               }, // Teil 2
             ] },
             { id: 'schreiben', teile: [
-              { title: null, exercises: [] }, // Teil 1
+              {
+                title: { tr: 'Yarı resmî e-posta · bilgi isteme ya da şikâyet · en az 150 kelime', de: 'Halbformelle E-Mail · Bitte um Informationen oder Beschwerde · mindestens 150 Wörter', en: 'Semi-formal email · request for information or complaint · at least 150 words' },
+                exercises: [
+                  { set: 'set-1', title: 'Coworking am Hafen' },
+                  { set: 'set-2', title: 'Carsharing statt eigenes Auto' },
+                  { set: 'set-3', title: 'Ein Beet im Gemeinschaftsgarten' },
+                  { set: 'set-4', title: 'Ärger beim Open-Air-Festival' },
+                  { set: 'set-5', title: 'Reparaturservice ohne Reparatur' },
+                ]
+              }, // Teil 1
             ] },
             { id: 'sprechen', teile: [
               { title: null, exercises: [] }, // Teil 1

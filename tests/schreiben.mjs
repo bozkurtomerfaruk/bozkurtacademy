@@ -416,10 +416,52 @@ for (const [l, title, submit, count] of [['de', 'Dein Text', 'Abschicken und Mus
   }
 }
 
+// 6i. telc Deutsch B2: tek Teil, 30 dk; ilana göre bilgi isteme (Aufgabe A) ya da şikâyet (Aufgabe B); 4 Leitpunkt: 3 madde ya da
+// 2 madde + kendi konu; Betreff; en az 150 kelime (150–220 iyi, altında resmî alt sınır uyarısı); Aufgabe A/B notu.
+{
+  const { ctx, page } = await newPage();
+  await page.goto(B + '#exams/telc/b2/schreiben'); await page.waitForTimeout(1000);
+  const list = await page.textContent('#examView');
+  ok(['Coworking am Hafen', 'Carsharing statt eigenes Auto', 'Ein Beet im Gemeinschaftsgarten', 'Ärger beim Open-Air-Festival', 'Reparaturservice ohne Reparatur'].every((x) => list.includes(x)), 'telc B2: 5 set listede');
+  await page.goto(B + '#exams/telc/b2/schreiben/1/set-1'); await page.waitForTimeout(1000);
+  ok((await page.textContent('.wt-ad')).includes('Coworking Hafenblick') && (await page.textContent('.wt-ad figcaption')).includes('info@coworking-hafenblick.de'), 'telc B2: ilan kutusu ve iletişim adresi');
+  ok(await page.locator('.wt-points li').count() === 4 && await page.locator('.wt-points.is-keywords').count() === 0 && (await page.textContent('.wt-task strong')).includes('b) zwei der folgenden Punkte und einen weiteren Aspekt Ihrer Wahl'), 'telc B2: 4 madde (cümle, kutu değil), iki yol görevde');
+  const pick = await page.textContent('[data-wt-pick]');
+  ok(pick.includes('4 maddeden 3 tanesini yaz') && pick.includes('2 madde + duruma uygun kendi seçtiğin bir konu') && pick.includes('en az iki cümle'), 'telc B2: notta iki yol açıkça yazıyor');
+  ok((await page.textContent('[data-wt-choice]')).includes('Aufgabe A ya da B') && (await page.textContent('.wt-instructions')).includes('mindestens 150 Wörter'), 'telc B2: Aufgabe A/B notu ve resmî "mindestens 150 Wörter"');
+  ok((await page.textContent('.task-meta')).includes('30') && (await page.textContent('.task-meta')).includes('En az 150 kelime') && (await page.getAttribute('#wtText', 'placeholder')).startsWith('Betreff: …'), 'telc B2: 30 dk, "en az 150 kelime", Betreff ipucu');
+  const checks = await page.textContent('.wt-checklist');
+  ok(checks.includes('Maddeleri ayrı ayrı sıralama; bağlaçlarla birbirine bağla') && checks.includes('Kohärenz') && checks.includes('2 madde + duruma uygun kendi konum'), 'telc B2: kontrol listesinde bağlaç, Kohärenz ve iki yol maddeleri');
+  ok((await page.textContent('[data-wt-state]')).includes('En az 150 kelime'), 'telc B2: boş metinde "en az 150" sayacı');
+  for (const [n, cls, text] of [[149, 'is-very-short', 'resmî alt sınır'], [150, 'is-ok', ''], [220, 'is-ok', ''], [221, 'is-long', '']]) {
+    await page.fill('#wtText', words(n));
+    ok((await page.getAttribute('[data-wt-state]', 'class')).includes(cls) && (await page.textContent('[data-wt-state]')).includes(text), `telc B2: ${n} kelime → ${cls}`);
+  }
+  // Kısa metin de gönderilebilir (sayaç uyarır, engellemez); Enter yeni satır açar, göndermez.
+  await page.fill('#wtText', words(76)); await page.focus('#wtText'); await page.keyboard.press('Enter'); await page.waitForTimeout(200);
+  ok(await page.locator('[data-wt-submit]').count() === 1 && (await page.inputValue('#wtText')).endsWith('\n'), 'telc B2: Enter metne satır ekliyor, göndermiyor');
+  await page.click('[data-wt-submit]'); await page.waitForTimeout(400);
+  ok((await page.textContent('.wt-cols')).includes('Betreff: Anfrage zu einem Flexdesk') && (await page.textContent('.wt-notes')).includes('atlandı'), 'telc B2: 76 kelimeyle gönderilebiliyor; örnek cevap ve atlanan madde notu');
+  ok(await page.locator('a.task-next[href="#exams/telc/b2/schreiben/1/set-2"]').count() === 1, 'telc B2: sonraki set');
+  await page.goto(B + '#exams/telc/b2/schreiben/1/set-5'); await page.waitForTimeout(1000);
+  await page.fill('#wtText', words(160)); await page.click('[data-wt-submit]'); await page.waitForTimeout(400);
+  ok((await page.textContent('.wt-notes')).includes('İkinci yol: 2 madde + kendi konu'), 'telc B2 set-5: örnek cevap ikinci yolu (2 madde + kendi konu) kullanıyor');
+  await ctx.close();
+  const sets = [1, 2, 3, 4, 5].map((i) => JSON.parse(fs.readFileSync(`data/exams/telc/b2/schreiben/teil-1/set-${i}.json`, 'utf8')));
+  ok(sets.filter((x) => x.model.own).length >= 1 && sets.filter((x) => /Bitten Sie/.test(x.task)).length === 3 && sets.filter((x) => /Beschwerde/.test(x.task)).length === 2, 'telc B2: 3 bilgi isteme + 2 şikâyet, en az bir örnek cevap 2 madde + kendi konu');
+  for (const [lang, two, min] of [['de', 'Zwei Wege', 'Mindestens 150 Wörter'], ['en', 'Two ways', 'At least 150 words']]) {
+    const { ctx: c2, page: p2 } = await newPage({ lang });
+    await p2.goto(B + '#exams/telc/b2/schreiben/1/set-4'); await p2.waitForTimeout(1000);
+    await p2.fill('#wtText', words(100));
+    ok((await p2.textContent('[data-wt-pick]')).includes(two) && (await p2.textContent('.task-meta')).includes(min) && (await p2.textContent('[data-wt-state]')).includes('150'), `${lang}: telc B2 metinleri çevrili`);
+    await c2.close();
+  }
+}
+
 // 7. 390 / 1440, açık / koyu.
 for (const width of [390, 1440]) {
   for (const theme of ['light', 'dark']) {
-    for (const teil of ['b1/schreiben/2/set-1', 'b1/schreiben/3/set-1', 'a1/schreiben/1/set-3', 'a1/schreiben/2/set-1', 'telc-b1', 'dtz', 'a2/schreiben/1/set-4', 'a2/schreiben/2/set-5', '#exams/telc/a1/schreiben/1/set-4', '#exams/telc/a1/schreiben/2/set-4', '#exams/telc/a2/schreiben/1/set-2', '#exams/telc/a2/schreiben/2/set-3', 'b2/schreiben/1/set-5', 'b2/schreiben/2/set-4']) {
+    for (const teil of ['b1/schreiben/2/set-1', 'b1/schreiben/3/set-1', 'a1/schreiben/1/set-3', 'a1/schreiben/2/set-1', 'telc-b1', 'dtz', 'a2/schreiben/1/set-4', 'a2/schreiben/2/set-5', '#exams/telc/a1/schreiben/1/set-4', '#exams/telc/a1/schreiben/2/set-4', '#exams/telc/a2/schreiben/1/set-2', '#exams/telc/a2/schreiben/2/set-3', 'b2/schreiben/1/set-5', 'b2/schreiben/2/set-4', '#exams/telc/b2/schreiben/1/set-1', '#exams/telc/b2/schreiben/1/set-4']) {
       const { ctx, page } = await newPage({ width, theme });
       await page.goto(B + (teil.startsWith('#') ? teil : teil === 'telc-b1' ? '#exams/telc/b1/schreiben/1/set-2' : teil === 'dtz' ? '#exams/dtz/schreiben/1/set-6' : `#exams/goethe/${teil}`)); await page.waitForTimeout(1200);
       const name = teil.replace(/^#exams\/(\w+)\//, '$1-').replace(/\/schreiben\/(\d)\/set-\d/, '-teil$1');

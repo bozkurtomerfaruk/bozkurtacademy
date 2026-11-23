@@ -245,6 +245,10 @@ describe('Schreiben Worker', () => {
     assert.doesNotMatch(PROMPT, /Seviye B2|Seviye notu/);
     const b2 = userMessage({ name: 'Goethe B2 · Teil 2 · Bericht verspätet', type: TEXT_TYPES['email-semiformal'] }, 'Sehr geehrte Frau Hoffmann, …');
     assert.match(b2, /^Görev: Goethe B2 · Teil 2 · Bericht verspätet\nMetin türü: .+\nSeviye notu \(B2\): Konjunktiv II, Passiv, Relativsatz, Nominalisierung .+\nMetin:\nSehr geehrte Frau Hoffmann, …$/);
+    const telcB2 = userMessage({ name: 'telc B2 · Teil 1 · Coworking am Hafen', type: TEXT_TYPES['email-formal'] }, 'Betreff: Anfrage');
+    assert.match(telcB2, /^Görev: telc B2 · Teil 1 · Coworking am Hafen\nMetin türü: .+\nSeviye notu \(B2\): .+Firmaya baştan sona Sie.+uzunluğu .+değerlendirme\.\nMetin:\nBetreff: Anfrage$/);
+    assert.doesNotMatch(userMessage({ name: 'telc B1 · Teil 1 · Kursausflug', type: TEXT_TYPES['email-informal'] }, 'x'), /Seviye notu/);
+    assert.doesNotMatch(PROMPT, /telc B2/);
     for (const name of ['DTZ A2-B1 · Teil 1 · X', 'Goethe B1 · Teil 1 · X', 'telc B1 · Teil 1 · X', 'Goethe A2 · Teil 1 · X']) assert.doesNotMatch(userMessage({ name, type: null }, 'x'), /Seviye notu/, name);
     assert.ok(Object.keys(LEVEL_NOTES).every((k) => k.endsWith(' ·')));
   });

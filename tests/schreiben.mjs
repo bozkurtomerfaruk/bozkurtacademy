@@ -340,7 +340,7 @@ for (const [l, title, submit, count] of [['de', 'Dein Text', 'Abschicken und Mus
   const { ctx, page } = await newPage();
   await page.goto(B + '#exams/telc/a2/schreiben'); await page.waitForTimeout(1000);
   const list = await page.textContent('#examView');
-  ok(['Anmeldung im Sportverein', 'Ausweis für die Bibliothek', 'Im Hotel: der Meldeschein', 'Neu beim Zahnarzt', 'Fahrräder mieten', 'Grillfest im Garten', 'Umzug einer Kollegin', 'Besuch am Wochenende', 'Ausflug an den See', 'Ein gebrauchtes Fahrrad'].every((x) => list.includes(x)), 'telc A2: Teil 1 ve Teil 2 setleri listede');
+  ok(['Anmeldung im Sportverein', 'Ausweis für die Bibliothek', 'Im Hotel: der Meldeschein', 'Neu beim Zahnarzt', 'Fahrräder mieten', 'Grillfest im Garten', 'Umzug einer Kollegin', 'Besuch am Wochenende', 'Ausflug an den See', 'Die Katze vom Nachbarn'].every((x) => list.includes(x)), 'telc A2: Teil 1 ve Teil 2 setleri listede');
   await page.goto(B + '#exams/telc/a2/schreiben/1/set-1'); await page.waitForTimeout(1000);
   ok((await page.textContent('.ft-card')).includes('Reisepass') && (await page.textContent('.ft-card')).includes('03.05.1990') && await page.locator('.ft-input').count() === 4 && await page.locator('.ft-choice input').count() === 2, 'telc A2 form: pasaport kartı, 4 yazı alanı, 1 seçenekli alan');
   ok((await page.textContent('[data-wt-shared]')).includes('Lesen ve Schreiben için birlikte 50 dakikan'), 'telc A2 form: Lesen + Schreiben 50 dk notu');

@@ -694,7 +694,7 @@ window.BA_EXAMS = {
                   { set: 'set-2', title: 'Umzug einer Kollegin' },
                   { set: 'set-3', title: 'Besuch am Wochenende' },
                   { set: 'set-4', title: 'Ausflug an den See' },
-                  { set: 'set-5', title: 'Ein gebrauchtes Fahrrad' },
+                  { set: 'set-5', title: 'Die Katze vom Nachbarn' },
                 ]
               }, // Teil 2
             ] },

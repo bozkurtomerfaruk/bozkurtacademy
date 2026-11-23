@@ -10,10 +10,19 @@
       "note": "Komşuya du; ayrılabilen fiil, mitbringen + Akkusativ, modal fiil + mastar",
       "text": "Lieber Jonas,\nvielen Dank für die Einladung! Ich komme gern, aber erst um 18 Uhr. Ich mitbringe einen Kartoffelsalat. Darf meine Kinder auch kommen? Sie spielen gern im Garten.\nViele Grüße\nDeniz",
       "errors": [
-        { "wrong": "Ich mitbringe einen Kartoffelsalat", "fix": "bringe einen Kartoffelsalat mit" },
-        { "wrong": "Darf meine Kinder", "fix": "Dürfen meine Kinder" }
+        {
+          "wrong": "Ich mitbringe einen Kartoffelsalat",
+          "fix": "bringe einen Kartoffelsalat mit"
+        },
+        {
+          "wrong": "Darf meine Kinder",
+          "fix": "Dürfen meine Kinder"
+        }
       ],
-      "clean": ["vielen Dank für die Einladung", "Sie spielen gern im Garten"]
+      "clean": [
+        "vielen Dank für die Einladung",
+        "Sie spielen gern im Garten"
+      ]
     },
     {
       "id": "telca2-2",
@@ -21,10 +30,19 @@
       "note": "İş arkadaşına Sie; helfen + Dativ, zaman ifadesinden sonra fiil ikinci sırada",
       "text": "Liebe Frau Krüger,\nich helfe Sie gern beim Umzug. Am Samstag ich habe ab 9 Uhr Zeit. Ich habe ein großes Auto. Wir können die Kartons transportieren. Haben Sie einen schweren Schrank?\nViele Grüße\nMurat Aydın",
       "errors": [
-        { "wrong": "ich helfe Sie gern", "fix": "helfe Ihnen" },
-        { "wrong": "Am Samstag ich habe", "fix": "Am Samstag habe ich" }
+        {
+          "wrong": "ich helfe Sie gern",
+          "fix": "helfe Ihnen"
+        },
+        {
+          "wrong": "Am Samstag ich habe",
+          "fix": "Am Samstag habe ich"
+        }
       ],
-      "clean": ["Haben Sie einen schweren Schrank", "Liebe Frau Krüger"]
+      "clean": [
+        "Haben Sie einen schweren Schrank",
+        "Liebe Frau Krüger"
+      ]
     },
     {
       "id": "telca2-3",
@@ -32,11 +50,26 @@
       "note": "Arkadaşa; du/Sie karışması, abholen, Artikel",
       "text": "Lieber Luca,\ntoll, dass du kommst! Natürlich können Sie bei mir übernachten. Wann kommt dein Zug an? Ich hole dich am Bahnhof. Am Samstag zeige ich dir der Altstadt.\nBis bald!\nSelin",
       "errors": [
-        { "wrong": "können Sie bei mir übernachten", "fix": "kannst du" },
-        { "wrong": "Ich hole dich am Bahnhof", "fix": ["am Bahnhof ab", "hole dich am Bahnhof ab"] },
-        { "wrong": "der Altstadt", "fix": "die Altstadt" }
+        {
+          "wrong": "können Sie bei mir übernachten",
+          "fix": "kannst du"
+        },
+        {
+          "wrong": "Ich hole dich am Bahnhof",
+          "fix": [
+            "am Bahnhof ab",
+            "hole dich am Bahnhof ab"
+          ]
+        },
+        {
+          "wrong": "der Altstadt",
+          "fix": "die Altstadt"
+        }
       ],
-      "clean": ["toll, dass du kommst", "Wann kommt dein Zug an"]
+      "clean": [
+        "toll, dass du kommst",
+        "Wann kommt dein Zug an"
+      ]
     },
     {
       "id": "telca2-4",
@@ -44,19 +77,42 @@
       "note": "Kurs öğretmenine; Hallo/Tschüss resmiyet hatası, weil-yan cümlesinde fiil sonda",
       "text": "Hallo Frau Hartmann,\nich komme am Sonntag gern mit. Für das Picknick bringe ich Obst mit. Mein Sohn möchte auch kommen, weil er schwimmt sehr gern. Darf er mitkommen?\nTschüss\nAna Costa",
       "errors": [
-        { "wrong": "Hallo Frau Hartmann", "fix": ["Liebe Frau Hartmann", "Sehr geehrte Frau Hartmann"] },
-        { "wrong": "weil er schwimmt sehr gern", "fix": "sehr gern schwimmt" },
-        { "wrong": "Tschüss", "fix": ["Viele Grüße", "Grüße"] }
+        {
+          "wrong": "Hallo Frau Hartmann",
+          "fix": [
+            "Liebe Frau Hartmann",
+            "Sehr geehrte Frau Hartmann"
+          ]
+        },
+        {
+          "wrong": "weil er schwimmt sehr gern",
+          "fix": "sehr gern schwimmt"
+        },
+        {
+          "wrong": "Tschüss",
+          "fix": [
+            "Viele Grüße",
+            "Grüße"
+          ]
+        }
       ],
-      "clean": ["Für das Picknick bringe ich Obst mit", "Darf er mitkommen"]
+      "clean": [
+        "Für das Picknick bringe ich Obst mit",
+        "Darf er mitkommen"
+      ]
     },
     {
       "id": "telca2-5",
       "set": "set-5",
-      "note": "Hatasız; öğrenci dört maddenin hepsini yazıyor (Preis, Farbe und Größe, Probefahrt, Fahrradschloss). Bu hata değil; güzelleştirme ya da 'çok uzun' uyarısı önerilmemeli.",
-      "text": "Liebe Nina,\nich habe das Foto von deinem Fahrrad gesehen. Ich möchte es gern kaufen. Wie viel kostet es? Ist das Fahrrad blau oder grün? Ich bin 1,70 Meter groß. Kann ich am Freitag eine Probefahrt machen? Ist auch ein Schloss dabei?\nViele Grüße\nYusuf",
+      "note": "Hatasız; öğrenci dört maddenin hepsini yazıyor (Zeit, Schlüssel, Futter, Fotos). Bu hata değil; güzelleştirme ya da 'çok uzun' uyarısı önerilmemeli.",
+      "text": "Lieber Felix,\nich helfe dir gern. Ich bin im August zu Hause und habe jeden Tag Zeit. Bitte gib mir am Freitag den Schlüssel. Wo ist das Futter für Mia? Ich schicke dir jeden Abend ein Foto.\nViele Grüße\nYusuf",
       "errors": [],
-      "clean": ["Wie viel kostet es", "Ist das Fahrrad blau oder grün", "Kann ich am Freitag eine Probefahrt machen", "Ist auch ein Schloss dabei"]
+      "clean": [
+        "Ich bin im August zu Hause",
+        "Bitte gib mir am Freitag den Schlüssel",
+        "Wo ist das Futter für Mia",
+        "Ich schicke dir jeden Abend ein Foto"
+      ]
     }
   ]
 }

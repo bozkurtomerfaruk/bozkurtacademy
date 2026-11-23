@@ -5,20 +5,20 @@
   "section": "schreiben",
   "teil": 2,
   "set": "set-5",
-  "title": "Ein gebrauchtes Fahrrad",
+  "title": "Die Katze vom Nachbarn",
   "minutes": 15,
   "sharedMinutes": 50,
   "sharedWith": "lesen",
   "kind": "writing",
   "register": "du",
   "textType": "email-informal",
-  "situation": "Ihre Bekannte Nina verkauft ihr altes Fahrrad. Sie hat Ihnen ein Foto geschickt. Sie möchten das Fahrrad vielleicht kaufen.",
-  "task": "Schreiben Sie Nina eine E-Mail.",
+  "situation": "Ihr Nachbar Felix fährt im August zwei Wochen in Urlaub. Er fragt Sie: Kannst du in dieser Zeit meine Katze Mia füttern?",
+  "task": "Antworten Sie Felix mit einer E-Mail.",
   "points": [
-    "Preis",
-    "Farbe und Größe",
-    "Probefahrt",
-    "Fahrradschloss"
+    "Zeit",
+    "Schlüssel",
+    "Futter",
+    "Fotos"
   ],
   "choosePoints": 3,
   "instructions": "Hier finden Sie vier Punkte. Wählen Sie drei aus. Schreiben Sie zu jedem dieser drei Punkte ein bis zwei Sätze. Vergessen Sie nicht den passenden Anfang und den Gruß am Schluss. Schreiben Sie ca. 40 Wörter.",
@@ -30,7 +30,7 @@
   "checklist": [
     {
       "criterion": "aufgabe",
-      "tr": "4 maddeden 3'ünü seçtim ve her birine bir iki cümle yazdım (ör. Preis, Probefahrt, Fahrradschloss)."
+      "tr": "4 maddeden 3'ünü seçtim ve her birine bir iki cümle yazdım (ör. Zeit, Schlüssel, Fotos)."
     },
     {
       "criterion": "aufgabe",
@@ -38,23 +38,23 @@
     },
     {
       "criterion": "aufgabe",
-      "tr": "Neden yazdığımı söyledim: bisikleti satın almak istiyorum."
+      "tr": "Felix'in ricasına açıkça cevap verdim: kediye bakabilirim / bakamam."
     },
     {
       "criterion": "aufbau",
-      "tr": "Hitap ve selam var: Liebe Nina, … Viele Grüße + adım."
+      "tr": "Hitap ve selam var: Lieber Felix, … Viele Grüße + adım; hitaptan sonraki satır küçük harfle başlıyor."
     },
     {
       "criterion": "sprache",
-      "tr": "Tanıdığa du ile yazdım (du, dein, dir); Sie yok."
+      "tr": "Komşuya du ile yazdım (du, dir, dein); Sie yok."
     },
     {
       "criterion": "sprache",
-      "tr": "Soru: Wie viel kostet das Fahrrad? Kann ich es am Freitag ausprobieren?"
+      "tr": "geben + Dativ + Akkusativ: Kannst du mir den Schlüssel geben? (mir kime, den Schlüssel neyi)"
     },
     {
       "criterion": "sprache",
-      "tr": "Fiil sonda: …, weil ich zur Arbeit fahren möchte. (weil-yan cümlesi)"
+      "tr": "Zaman ifadesinden sonra fiil ikinci sırada: Am Freitag habe ich Zeit. Jeden Abend schicke ich dir ein Foto."
     }
   ],
   "redemittel": [
@@ -62,58 +62,62 @@
       "group": "Anrede und Gruß",
       "items": [
         {
-          "de": "Liebe Nina,",
-          "tr": "Sevgili Nina,"
+          "de": "Lieber Felix,",
+          "tr": "Sevgili Felix,"
         },
         {
-          "de": "Viele Grüße",
-          "tr": "Selamlar"
+          "de": "Schönen Urlaub! / Viele Grüße",
+          "tr": "İyi tatiller! / Selamlar"
         }
       ]
     },
     {
-      "group": "Interesse zeigen",
+      "group": "Zusagen",
       "items": [
         {
-          "de": "Ich habe dein Foto gesehen.",
-          "tr": "Fotoğrafını gördüm."
+          "de": "Natürlich helfe ich dir gern.",
+          "tr": "Tabii ki sana memnuniyetle yardım ederim."
         },
         {
-          "de": "Ich möchte das Fahrrad gern kaufen.",
-          "tr": "Bisikleti satın almak isterim."
+          "de": "Ich habe jeden Tag Zeit.",
+          "tr": "Her gün vaktim var."
+        },
+        {
+          "de": "Leider bin ich am … nicht da.",
+          "tr": "Maalesef …'de burada değilim."
         }
       ]
     },
     {
-      "group": "Fragen",
+      "group": "Fragen und anbieten",
       "items": [
         {
-          "de": "Wie viel kostet es?",
-          "tr": "Ne kadar?"
+          "de": "Wann kann ich den Schlüssel holen?",
+          "tr": "Anahtarı ne zaman alabilirim?"
         },
         {
-          "de": "Kann ich eine Probefahrt machen?",
-          "tr": "Deneme sürüşü yapabilir miyim?"
+          "de": "Wie viel Futter bekommt Mia?",
+          "tr": "Mia ne kadar mama yiyor?"
         },
         {
-          "de": "Ist ein Schloss dabei?",
-          "tr": "Kilidi de var mı?"
+          "de": "Ich schicke dir jeden Abend ein Foto.",
+          "tr": "Sana her akşam bir fotoğraf gönderirim."
         }
       ]
     }
   ],
   "model": {
-    "text": "Liebe Nina,\nich habe das Foto von deinem Fahrrad gesehen. Ich möchte es gern kaufen, weil ich damit zur Arbeit fahren will. Wie viel kostet es? Kann ich am Freitag eine Probefahrt machen? Ist auch ein Fahrradschloss dabei?\nViele Grüße\nYusuf",
+    "text": "Lieber Felix,\nnatürlich helfe ich dir gern! Ich bin im August zu Hause und habe jeden Tag Zeit. Kannst du mir am Freitag den Schlüssel geben? Ich schicke dir jeden Abend ein Foto von Mia.\nSchönen Urlaub!\nViele Grüße\nYusuf",
     "covers": [
-      "Preis",
-      "Probefahrt",
-      "Fahrradschloss"
+      "Zeit",
+      "Schlüssel",
+      "Fotos"
     ],
-    "skipped": "Farbe und Größe",
+    "skipped": "Futter",
     "notes": [
-      "Üç madde: Preis (Wie viel kostet es?), Probefahrt (am Freitag eine Probefahrt), Fahrradschloss (Ist auch ein Fahrradschloss dabei?). „Farbe und Größe“ maddesi atlandı.",
-      "Giriş cümlesi neden yazdığını söylüyor: Ich habe das Foto … gesehen. Ich möchte es gern kaufen …",
-      "weil-yan cümlesinde fiil sonda: …, weil ich damit zur Arbeit fahren will."
+      "Üç madde: Zeit (im August zu Hause, jeden Tag Zeit), Schlüssel (Kannst du mir am Freitag den Schlüssel geben?), Fotos (jeden Abend ein Foto von Mia). „Futter“ maddesi atlandı.",
+      "Önce ricaya cevap: Natürlich helfe ich dir gern! Sonda tatile uygun bir dilek: Schönen Urlaub!",
+      "geben iki nesne alır: mir (Dativ, kime) + den Schlüssel (Akkusativ, neyi)."
     ]
   }
 }

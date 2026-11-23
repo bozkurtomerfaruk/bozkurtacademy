@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" width="560" height="300">
+<style>
+.f-bg{fill:#f3f0e8}.f-bg2{fill:#e6e1d5}.f-gr{fill:#ddd6c6}.f-ink{fill:#2a2a26}.f-mut{fill:#55534a}
+.f-acc{fill:#45572f}.f-on{fill:#ffffff}.f-der{fill:#2c5f9e}.f-die{fill:#a3352c}.f-das{fill:#35703e}
+.f-der-bg{fill:#dbe5f1}.f-die-bg{fill:#f4e0dc}.f-das-bg{fill:#dde9d7}.f-ln{fill:none;stroke:#857d6b;stroke-width:2}
+.f-ln-acc{fill:none;stroke:#45572f;stroke-width:3}
+text{font-family:"Albert Sans",system-ui,sans-serif}.f-serif{font-family:"STIX Two Text",Georgia,serif}.f-b{font-weight:600}
+</style>
+<rect class="f-bg" width="560" height="300" rx="14"/>
+<text class="f-ink f-b" x="24" y="42" font-size="22">Birleşik kelime: son kelime belirler</text>
+<rect class="f-das-bg" x="24" y="66" width="200" height="72" rx="10"/>
+<text class="f-ink" x="124" y="100" font-size="21" text-anchor="middle" lang="de"><tspan class="f-das f-b">das</tspan> Haus</text>
+<text class="f-mut" x="124" y="125" font-size="17" text-anchor="middle">ev</text>
+<text class="f-ink f-b" x="268" y="112" font-size="30" text-anchor="middle">+</text>
+<rect class="f-die-bg" x="312" y="66" width="200" height="72" rx="10"/>
+<text class="f-ink" x="412" y="100" font-size="21" text-anchor="middle" lang="de"><tspan class="f-die f-b">die</tspan> Tür</text>
+<text class="f-mut" x="412" y="125" font-size="17" text-anchor="middle">kapı</text>
+<path class="f-ln" d="M412 146 L412 168 L280 168 L280 186"/>
+<path class="f-acc" d="M272 182 L288 182 L280 194 Z"/>
+<rect class="f-die-bg" x="120" y="200" width="320" height="72" rx="10"/>
+<text class="f-ink" x="280" y="234" font-size="23" text-anchor="middle" lang="de"><tspan class="f-die f-b">die</tspan> <tspan class="f-b">Haus</tspan><tspan class="f-die f-b">tür</tspan></text>
+<text class="f-mut" x="280" y="259" font-size="17" text-anchor="middle">evin giriş kapısı</text>
+</svg>

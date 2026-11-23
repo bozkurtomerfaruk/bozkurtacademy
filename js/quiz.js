@@ -115,6 +115,8 @@
       .normalize('NFC')
       .trim()
       .toLocaleLowerCase('de-DE')
+      // ä/ae, ö/oe, ü/ue, ß/ss count as the same spelling, also when mixed in one answer.
+      .replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss')
       .replace(/[.!?,;:]+$/g,'')
       .replace(/\s+/g,' ');
   }

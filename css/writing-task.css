@@ -96,3 +96,19 @@
   #page-exams .ft-row:not(.ft-blank) .ft-value{grid-column:1}
 }
 #page-exams .wt-mail blockquote p{white-space:pre-line}
+/* telc A2 Teil 2: dört anahtar kelime (Stichpunkte), üçü seçilir. */
+#page-exams .wt-points.is-keywords{padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+#page-exams .wt-points.is-keywords li{padding:6px 14px;border-radius:999px;background:var(--ba-paper);color:var(--ba-ink);box-shadow:inset 0 0 0 2px var(--ba-line-strong);font-weight:600}
+/* telc A2 Teil 1: metnin yanında belge (kimlik, kart); satırlar etiket + değer. */
+#page-exams .ft-cards{display:flex;flex-wrap:wrap;gap:12px}
+#page-exams .ft-card{flex:1 1 260px;max-width:420px;margin:0;padding:12px 16px;border-radius:var(--ba-radius-small);background:var(--ba-paper);color:var(--ba-ink);box-shadow:inset 0 0 0 2px var(--ba-line)}
+#page-exams .ft-card figcaption{margin-bottom:6px;color:var(--ba-muted);font-size:var(--ba-small);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+#page-exams .ft-card dl{display:grid;gap:4px;margin:0}
+#page-exams .ft-card dl>div{display:grid;grid-template-columns:minmax(0,8.5em) minmax(0,1fr);gap:10px}
+#page-exams .ft-card dt{color:var(--ba-muted);font-size:var(--ba-small)}
+#page-exams .ft-card dd{margin:0;font-weight:600;overflow-wrap:anywhere}
+/* telc B2: görevdeki ilan (başlık, metin, iletişim adresi); satır sonları korunur, uzun adres taşmaz. */
+#page-exams .wt-ad{box-shadow:inset 0 0 0 2px var(--ba-line)}
+#page-exams .wt-ad-title{margin:0;color:var(--ba-ink);font-weight:700}
+#page-exams .wt-ad blockquote p{white-space:pre-line}
+#page-exams .wt-ad figcaption{overflow-wrap:anywhere}

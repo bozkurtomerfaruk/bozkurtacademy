@@ -1,0 +1,126 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-4",
+  "title": "Neu beim Zahnarzt",
+  "minutes": 5,
+  "sharedMinutes": 50,
+  "sharedWith": "lesen",
+  "kind": "form",
+  "situation": "Ihre Bekannte Amara Okafor hat seit gestern Zahnschmerzen und hat heute einen Termin beim Zahnarzt. Sie ist am 9. Februar 1994 geboren und wohnt in der Bahnhofstraße 7, 90402 Nürnberg. Amara nimmt keine Medikamente, aber sie hat eine Allergie gegen Penicillin.",
+  "task": "In der Praxis bekommt Amara einen Patientenbogen. Helfen Sie ihr und schreiben Sie die fünf fehlenden Informationen in das Formular.",
+  "cards": [
+    {
+      "title": "Gesundheitskarte",
+      "rows": [
+        [
+          "Krankenkasse",
+          "Gesundheitskasse Nord"
+        ],
+        [
+          "Name",
+          "Amara Okafor"
+        ],
+        [
+          "Versichertennummer",
+          "K482913570"
+        ],
+        [
+          "gültig bis",
+          "12/2029"
+        ]
+      ]
+    }
+  ],
+  "form": {
+    "title": "Patientenbogen",
+    "subtitle": "Zahnarztpraxis Dr. Weber, Nürnberg",
+    "rows": [
+      {
+        "label": "Familienname",
+        "value": "Okafor",
+        "example": true
+      },
+      {
+        "label": "Vorname",
+        "value": "Amara"
+      },
+      {
+        "label": "Geburtsdatum",
+        "number": 1,
+        "evidence": [
+          "am 9. Februar 1994 geboren"
+        ],
+        "explanation": "Geburtsdatum = doğum tarihi. Sağlık kartında doğum tarihi yok; metinde „am 9. Februar 1994 geboren“ → 09.02.1994.",
+        "accept": [
+          "09.02.1994",
+          "9.2.1994",
+          "9. Februar 1994",
+          "09. Februar 1994",
+          "9.02.1994"
+        ]
+      },
+      {
+        "label": "Adresse",
+        "value": "Bahnhofstraße 7, 90402 Nürnberg"
+      },
+      {
+        "label": "Krankenkasse",
+        "number": 2,
+        "evidence": [
+          "Gesundheitskasse Nord"
+        ],
+        "explanation": "Krankenkasse = sağlık sigortası şirketi. Kartın ilk satırı: „Krankenkasse: Gesundheitskasse Nord“.",
+        "accept": [
+          "Gesundheitskasse Nord"
+        ]
+      },
+      {
+        "label": "Versichertennummer",
+        "number": 3,
+        "evidence": [
+          "K482913570"
+        ],
+        "explanation": "Versichertennummer = sigortalı numarası. Karttaki „K482913570“: baştaki harf K ve dokuz rakam aynı sırada yazılmalı.",
+        "accept": [
+          "K482913570",
+          "K 482913570",
+          "K 482 913 570"
+        ]
+      },
+      {
+        "label": "Medikamente",
+        "value": "keine"
+      },
+      {
+        "label": "Allergien",
+        "number": 4,
+        "evidence": [
+          "Allergie gegen Penicillin"
+        ],
+        "explanation": "Allergien = alerjiler. „sie hat eine Allergie gegen Penicillin“ → Penicillin. „keine Medikamente“ ilaç satırının cevabıdır.",
+        "accept": [
+          "Penicillin",
+          "gegen Penicillin",
+          "Penizillin"
+        ]
+      },
+      {
+        "label": "Grund des Besuchs",
+        "number": 5,
+        "evidence": [
+          "hat seit gestern Zahnschmerzen"
+        ],
+        "explanation": "Grund des Besuchs = geliş nedeni. İlk cümle: „hat seit gestern Zahnschmerzen“ → Zahnschmerzen (diş ağrısı).",
+        "accept": [
+          "Zahnschmerzen",
+          "Schmerzen",
+          "Zahnweh"
+        ]
+      }
+    ]
+  }
+}

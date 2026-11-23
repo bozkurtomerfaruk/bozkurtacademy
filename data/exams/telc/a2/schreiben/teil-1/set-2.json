@@ -1,0 +1,136 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-2",
+  "title": "Ausweis für die Bibliothek",
+  "minutes": 5,
+  "sharedMinutes": 50,
+  "sharedWith": "lesen",
+  "kind": "form",
+  "situation": "Ihre Bekannte Mei Zhang kommt aus China und studiert Biologie in Bremen. Sie wohnt im Studentenwohnheim, Am Wall 45, 28195 Bremen. Mei liest gern und möchte in der Stadtbibliothek Bücher leihen, auch deutsche Kinderbücher zum Lernen. Studierende bezahlen nur 10 Euro im Jahr. Einen Newsletter per E-Mail möchte sie nicht bekommen.",
+  "task": "Mei möchte einen Bibliotheksausweis und bittet Sie um Hilfe. Schreiben Sie die fünf fehlenden Informationen in das Formular.",
+  "cards": [
+    {
+      "title": "Studierendenausweis",
+      "rows": [
+        [
+          "Hochschule",
+          "Universität Bremen"
+        ],
+        [
+          "Name",
+          "Zhang"
+        ],
+        [
+          "Vorname",
+          "Mei"
+        ],
+        [
+          "geboren am",
+          "21.11.2001"
+        ],
+        [
+          "Matrikelnummer",
+          "4471208"
+        ],
+        [
+          "gültig bis",
+          "30.09.2027"
+        ]
+      ]
+    }
+  ],
+  "form": {
+    "title": "Anmeldung für einen Bibliotheksausweis",
+    "subtitle": "Stadtbibliothek Bremen",
+    "rows": [
+      {
+        "label": "Familienname",
+        "value": "Zhang",
+        "example": true
+      },
+      {
+        "label": "Vorname",
+        "value": "Mei"
+      },
+      {
+        "label": "Geburtsdatum",
+        "number": 1,
+        "evidence": [
+          "21.11.2001"
+        ],
+        "explanation": "Geburtsdatum = doğum tarihi. Öğrenci kartında „geboren am: 21.11.2001“ yazıyor. „gültig bis 30.09.2027“ kartın geçerlilik tarihidir, doğum tarihi değil.",
+        "accept": [
+          "21.11.2001",
+          "21. November 2001",
+          "21.11.01"
+        ]
+      },
+      {
+        "label": "Straße, Hausnummer",
+        "value": "Am Wall 45"
+      },
+      {
+        "label": "PLZ, Ort",
+        "value": "28195 Bremen"
+      },
+      {
+        "label": "Hochschule",
+        "number": 2,
+        "evidence": [
+          "Universität Bremen"
+        ],
+        "explanation": "Hochschule = üniversite / yüksekokul. Kartın ilk satırında „Hochschule: Universität Bremen“ yazıyor.",
+        "accept": [
+          "Universität Bremen",
+          "Uni Bremen",
+          "Universität in Bremen"
+        ]
+      },
+      {
+        "label": "Matrikelnummer",
+        "number": 3,
+        "evidence": [
+          "4471208"
+        ],
+        "explanation": "Matrikelnummer = öğrenci numarası. Karttaki „Matrikelnummer: 4471208“; rakamlar tek tek doğru ve aynı sırada olmalı.",
+        "accept": [
+          "4471208",
+          "447 1208",
+          "44 71 208"
+        ]
+      },
+      {
+        "label": "Studienfach",
+        "number": 4,
+        "evidence": [
+          "studiert Biologie"
+        ],
+        "explanation": "Studienfach = okuduğu bölüm. Metinde „studiert Biologie in Bremen“ → Biologie. Bremen bölüm değil, şehirdir.",
+        "accept": [
+          "Biologie"
+        ]
+      },
+      {
+        "label": "Jahresgebühr",
+        "value": "10 Euro (Studierende)"
+      },
+      {
+        "label": "Newsletter per E-Mail",
+        "number": 5,
+        "evidence": [
+          "möchte sie nicht bekommen"
+        ],
+        "explanation": "Newsletter = bülten. Son cümle: „Einen Newsletter per E-Mail möchte sie nicht bekommen.“ → nein. „nicht“ kelimesine dikkat.",
+        "choices": [
+          "ja",
+          "nein"
+        ],
+        "answer": "nein"
+      }
+    ]
+  }
+}

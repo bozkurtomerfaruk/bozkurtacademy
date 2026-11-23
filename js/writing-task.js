@@ -15,7 +15,7 @@
   const fill = (key, values) => t(key).replace(/\{(\w+)\}/g, (_, name) => values[name] ?? '');
   const lang = () => window.BA?.lang || 'tr';
   const esc = value => window.baHtml.escapeHtml(value);
-  // html-safe-names: status navActions() points groups notes head postHtml(set.post) mailHtml(set.mail)
+  // html-safe-names: status navActions() points pick groups notes head postHtml(set.post) mailHtml(set.mail) adHtml(set.ad) context
   const MAX_CHARS = 4000; // firestore.rules ile aynı sınır
 
   // Harf ve rakam dizileri; "-" ya da "'" ile birleşenler tek kelime (B1-Prüfung). scripts/check-exams.mjs aynı kuralı kullanır.
@@ -50,12 +50,14 @@
 
   // Kelime sayacının durumu: kısa / iyi / uzun (göndermeyi engellemez).
   function counterState(set, n) {
-    const { min, max, veryShort, zeroBelow } = set.words;
+    const { min, max, veryShort, zeroBelow, atLeast } = set.words;
     // Goethe A2: resmî ölçütlere göre bu sayının altındaki metin (istenen uzunluğun yarısı) 0 puan alır.
     if (zeroBelow && n > 0 && n < zeroBelow) return { cls: 'is-short is-very-short', key: 'wtCountZero' };
     // DTZ: 40 kelimenin altındaki metinde Korrektheit ve Wortschatz B1 sayılamıyor (g.a.s.t. SSS).
     if (veryShort && n > 0 && n < veryShort) return { cls: 'is-short is-very-short', key: 'wtCountVeryShort' };
-    if (n < min) return { cls: 'is-short', key: n === 0 ? (set.words.recommended ? 'wtCountRecommended' : 'wtCountTarget') : 'wtCountShort' };
+    // words.atLeast (telc B2): "mindestens {min} Wörter" resmî alt sınırdır; altındaki metin için ayrı uyarı.
+    if (atLeast && n > 0 && n < min) return { cls: 'is-short is-very-short', key: 'wtCountMinimum' };
+    if (n < min) return { cls: 'is-short', key: n === 0 ? atLeast ? 'wtCountAtLeast' : (set.words.recommended ? 'wtCountRecommended' : 'wtCountTarget') : 'wtCountShort' };
     if (n <= max) return { cls: 'is-ok', key: 'wtCountOk' };
     return { cls: 'is-long', key: 'wtCountLong' };
   }
@@ -80,15 +82,29 @@
     </figure>`;
   }
 
+  // İlan (telc B2): başlık, metin, iletişim; öğrenci ilana göre bilgi ister ya da şikâyet eder.
+  function adHtml(ad) {
+    if (!ad) return '';
+    return `<figure class="wt-post wt-ad">
+      <p class="wt-ad-title">${esc(ad.title)}</p>
+      <blockquote><p>${esc(ad.text)}</p></blockquote>
+      ${ad.contact ? `<figcaption>${esc(ad.contact)}</figcaption>` : ''}
+    </figure>`;
+  }
+
   function taskHtml(set) {
-    const points = set.points?.length ? `<ul class="wt-points">${set.points.map(point => `<li>${esc(point)}</li>`).join('')}</ul>` : '';
+    // choosePoints (telc A2 Teil 2): maddeler anahtar kelime kutularıdır, öğrenci bunlardan birkaçını seçer.
+    // ownAspect (telc B2): maddeler cümledir; "3 madde ya da 2 madde + kendi konun" notu çıkar.
+    const points = set.points?.length ? `<ul class="wt-points${set.choosePoints && !set.ownAspect ? ' is-keywords' : ''}">${set.points.map(point => `<li>${esc(point)}</li>`).join('')}</ul>` : '';
+    const pick = set.choosePoints ? `<p class="wt-muted wt-choice" data-wt-pick>${esc(fill(set.ownAspect ? 'wtChoosePointsOwn' : 'wtChoosePoints', { n: set.choosePoints, total: set.points.length, m: set.choosePoints - 1 }))}</p>` : '';
+    const context = set.context ? `<p>${esc(set.context)}</p>` : '';
     return `<div class="wt-task" lang="de">
       <p>${esc(set.situation)}</p>
-      ${postHtml(set.post)}${mailHtml(set.mail)}
-      <p><strong>${esc(set.task)}</strong></p>
+      ${postHtml(set.post)}${mailHtml(set.mail)}${adHtml(set.ad)}
+      ${context}<p><strong>${esc(set.task)}</strong></p>
       ${points}
       ${set.instructions ? `<p class="wt-instructions">${esc(set.instructions)}</p>` : ''}
-    </div>${set.examChoice ? `<p class="wt-muted wt-choice" data-wt-choice>${esc(t('wtExamChoice'))}</p>` : ''}${set.sharedMinutes ? `<p class="wt-muted wt-choice" data-wt-shared>${esc(fill('wtSharedMinutes', { n: set.sharedMinutes }))}${set.anyOrder ? ` ${esc(t('wtAnyOrder'))}` : ''}</p>` : ''}`;
+    </div>${pick}${set.examChoice ? `<p class="wt-muted wt-choice" data-wt-choice>${esc(t('wtExamChoice'))}</p>` : ''}${set.sharedMinutes ? `<p class="wt-muted wt-choice" data-wt-shared>${esc(fill(set.sharedWith === 'lesen' ? 'wtSharedLesen' : 'wtSharedMinutes', { n: set.sharedMinutes }))}${set.anyOrder ? ` ${esc(t('wtAnyOrder'))}` : ''}</p>` : ''}`;
   }
 
   // Metin alanındaki ipucu, metin türüne göre (data: textType).
@@ -192,7 +208,7 @@
   function draw(container, set, path) {
     const state = states[path];
     // words.recommended: sınavda resmî kelime sınırı yok (telc B1, DTZ); hedef sadece öneri.
-    const meta = [fill('taskMinutes', { n: set.minutes }), fill(set.words.recommended ? 'wtRecommendedMeta' : 'wtTargetMeta', { n: set.words.target })];
+    const meta = [fill('taskMinutes', { n: set.minutes }), set.words.atLeast ? fill('wtAtLeastMeta', { n: set.words.min }) : fill(set.words.recommended ? 'wtRecommendedMeta' : 'wtTargetMeta', { n: set.words.target })];
     if (lang() !== 'tr') meta.push(t('wtTurkishNote'));
     container.innerHTML = `<div class="task wt${state.submitted ? ' is-submitted' : ''}">
       <div class="task-head"><p class="task-meta">${meta.map(item => `<span>${esc(item)}</span>`).join('')}</p></div>

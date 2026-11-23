@@ -1,0 +1,123 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "a2",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-5",
+  "title": "Die Katze vom Nachbarn",
+  "minutes": 15,
+  "sharedMinutes": 50,
+  "sharedWith": "lesen",
+  "kind": "writing",
+  "register": "du",
+  "textType": "email-informal",
+  "situation": "Ihr Nachbar Felix fährt im August zwei Wochen in Urlaub. Er fragt Sie: Kannst du in dieser Zeit meine Katze Mia füttern?",
+  "task": "Antworten Sie Felix mit einer E-Mail.",
+  "points": [
+    "Zeit",
+    "Schlüssel",
+    "Futter",
+    "Fotos"
+  ],
+  "choosePoints": 3,
+  "instructions": "Hier finden Sie vier Punkte. Wählen Sie drei aus. Schreiben Sie zu jedem dieser drei Punkte ein bis zwei Sätze. Vergessen Sie nicht den passenden Anfang und den Gruß am Schluss. Schreiben Sie ca. 40 Wörter.",
+  "words": {
+    "target": 40,
+    "min": 35,
+    "max": 55
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "4 maddeden 3'ünü seçtim ve her birine bir iki cümle yazdım (ör. Zeit, Schlüssel, Fotos)."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Dördüncü maddeyi de yazmak ek puan getirmez; 3 maddeyi iyi yazmak yeterli."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Felix'in ricasına açıkça cevap verdim: kediye bakabilirim / bakamam."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap ve selam var: Lieber Felix, … Viele Grüße + adım; hitaptan sonraki satır küçük harfle başlıyor."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Komşuya du ile yazdım (du, dir, dein); Sie yok."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "geben + Dativ + Akkusativ: Kannst du mir den Schlüssel geben? (mir kime, den Schlüssel neyi)"
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Zaman ifadesinden sonra fiil ikinci sırada: Am Freitag habe ich Zeit. Jeden Abend schicke ich dir ein Foto."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Lieber Felix,",
+          "tr": "Sevgili Felix,"
+        },
+        {
+          "de": "Schönen Urlaub! / Viele Grüße",
+          "tr": "İyi tatiller! / Selamlar"
+        }
+      ]
+    },
+    {
+      "group": "Zusagen",
+      "items": [
+        {
+          "de": "Natürlich helfe ich dir gern.",
+          "tr": "Tabii ki sana memnuniyetle yardım ederim."
+        },
+        {
+          "de": "Ich habe jeden Tag Zeit.",
+          "tr": "Her gün vaktim var."
+        },
+        {
+          "de": "Leider bin ich am … nicht da.",
+          "tr": "Maalesef …'de burada değilim."
+        }
+      ]
+    },
+    {
+      "group": "Fragen und anbieten",
+      "items": [
+        {
+          "de": "Wann kann ich den Schlüssel holen?",
+          "tr": "Anahtarı ne zaman alabilirim?"
+        },
+        {
+          "de": "Wie viel Futter bekommt Mia?",
+          "tr": "Mia ne kadar mama yiyor?"
+        },
+        {
+          "de": "Ich schicke dir jeden Abend ein Foto.",
+          "tr": "Sana her akşam bir fotoğraf gönderirim."
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Lieber Felix,\nnatürlich helfe ich dir gern! Ich bin im August zu Hause und habe jeden Tag Zeit. Kannst du mir am Freitag den Schlüssel geben? Ich schicke dir jeden Abend ein Foto von Mia.\nSchönen Urlaub!\nViele Grüße\nYusuf",
+    "covers": [
+      "Zeit",
+      "Schlüssel",
+      "Fotos"
+    ],
+    "skipped": "Futter",
+    "notes": [
+      "Üç madde: Zeit (im August zu Hause, jeden Tag Zeit), Schlüssel (Kannst du mir am Freitag den Schlüssel geben?), Fotos (jeden Abend ein Foto von Mia). „Futter“ maddesi atlandı.",
+      "Önce ricaya cevap: Natürlich helfe ich dir gern! Sonda tatile uygun bir dilek: Schönen Urlaub!",
+      "geben iki nesne alır: mir (Dativ, kime) + den Schlüssel (Akkusativ, neyi)."
+    ]
+  }
+}

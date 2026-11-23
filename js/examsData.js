@@ -676,8 +676,27 @@ window.BA_EXAMS = {
               }, // Teil 3
             ] },
             { id: 'schreiben', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
+              {
+                title: { tr: 'Form doldurma · 5 bilgi', de: 'Formular ausfüllen · 5 Angaben', en: 'Fill in a form · 5 details' },
+                kind: 'form', // js/form-task.js: metin + belge (kimlik, kart); otomatik kontrol
+                exercises: [
+                  { set: 'set-1', title: 'Anmeldung im Sportverein' },
+                  { set: 'set-2', title: 'Ausweis für die Bibliothek' },
+                  { set: 'set-3', title: 'Im Hotel: der Meldeschein' },
+                  { set: 'set-4', title: 'Neu beim Zahnarzt' },
+                  { set: 'set-5', title: 'Fahrräder mieten' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: 'Mektup · 4 maddeden 3’ü, yaklaşık 40 kelime', de: 'Brief · 3 von 4 Punkten, circa 40 Wörter', en: 'Letter · 3 of 4 points, about 40 words' },
+                exercises: [
+                  { set: 'set-1', title: 'Grillfest im Garten' },
+                  { set: 'set-2', title: 'Umzug einer Kollegin' },
+                  { set: 'set-3', title: 'Besuch am Wochenende' },
+                  { set: 'set-4', title: 'Ausflug an den See' },
+                  { set: 'set-5', title: 'Die Katze vom Nachbarn' },
+                ]
+              }, // Teil 2
             ] },
             { id: 'sprechen', teile: [
               { title: null, exercises: [] }, // Teil 1
@@ -833,7 +852,16 @@ window.BA_EXAMS = {
               }, // Teil 2
             ] },
             { id: 'schreiben', teile: [
-              { title: null, exercises: [] }, // Teil 1
+              {
+                title: { tr: 'Yarı resmî e-posta · bilgi isteme ya da şikâyet · en az 150 kelime', de: 'Halbformelle E-Mail · Bitte um Informationen oder Beschwerde · mindestens 150 Wörter', en: 'Semi-formal email · request for information or complaint · at least 150 words' },
+                exercises: [
+                  { set: 'set-1', title: 'Coworking am Hafen' },
+                  { set: 'set-2', title: 'Carsharing statt eigenes Auto' },
+                  { set: 'set-3', title: 'Ein Beet im Gemeinschaftsgarten' },
+                  { set: 'set-4', title: 'Ärger beim Open-Air-Festival' },
+                  { set: 'set-5', title: 'Reparaturservice ohne Reparatur' },
+                ]
+              }, // Teil 1
             ] },
             { id: 'sprechen', teile: [
               { title: null, exercises: [] }, // Teil 1

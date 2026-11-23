@@ -72,6 +72,60 @@ function checkWriting(set, fail) {
       if (set.sharedMinutes !== 30) fail('Goethe A2 writing tasks need "sharedMinutes": 30');
     }
   }
+  // choosePoints: the task lists more points than the candidate must cover (telc A2 Teil 2: four keywords, choose three).
+  // model.skipped names the point the model answer leaves out; a Turkish note must say so.
+  if (set.choosePoints !== undefined && !(Number.isInteger(set.choosePoints) && set.choosePoints >= 2 && set.choosePoints < (set.points?.length || 0))) fail('"choosePoints" must be an integer from 2 to below the number of points');
+  // With ownAspect (telc B2) two points may be skipped (two points + an aspect of one's own): skipped is then a list.
+  if (set.model?.skipped !== undefined) {
+    const skipped = [].concat(set.model.skipped);
+    if (!set.choosePoints || !skipped.length || !skipped.every(point => (set.points || []).includes(point))) fail('"model.skipped" must be one of "points" or a list of them (only with choosePoints)');
+    else for (const point of skipped) if (!(set.model.notes || []).some(note => String(note).includes(`„${point}“`) && /atla/.test(note))) fail(`a model note must say that „${point}“ was left out (atladı …)`);
+  }
+  // ownAspect (telc B2): either choosePoints points, or one point fewer plus a relevant aspect of one's own; the page says both ways.
+  if (set.ownAspect !== undefined && !(set.ownAspect === true && set.choosePoints)) fail('"ownAspect" must be true and needs "choosePoints"');
+  if (set.model?.own !== undefined && !(set.ownAspect && text(set.model.own))) fail('"model.own" (the own aspect of the model answer) needs "ownAspect"');
+  // ad (telc B2): the advert the e-mail reacts to { title, text, contact? }; context: the candidate's situation after the advert.
+  if (set.ad !== undefined && !(text(set.ad?.title) && text(set.ad?.text) && (set.ad.contact === undefined || text(set.ad.contact)))) fail('"ad" needs title and text (contact optional)');
+  if (set.context !== undefined && !text(set.context)) fail('"context" must be text when present');
+  // words.atLeast: "Schreiben Sie mindestens {min} Wörter" is the official minimum; the counter warns below it.
+  if (set.words?.atLeast !== undefined && set.words.atLeast !== true) fail('"words.atLeast" must be true when present');
+  // sharedWith "lesen": the shared time covers Lesen and Schreiben together (telc A2: 50 minutes).
+  if (set.sharedWith !== undefined && !(set.sharedWith === 'lesen' && set.sharedMinutes)) fail('"sharedWith" must be "lesen" and needs "sharedMinutes"');
+  // telc A2 / Start Deutsch 2 (Übungstest 1, 2024): Teil 2 a letter to an acquaintance, four keywords of which three are covered
+  // (one or two sentences each), greeting and closing, about 40 words; Lesen and Schreiben 50 minutes together.
+  if (set.exam === 'telc' && set.level === 'a2') {
+    if (set.teil !== 2) fail('telc A2 Schreiben Teil 1 is a form (kind "form")');
+    if (!['email-informal', 'email-semiformal'].includes(set.textType)) fail('telc A2 Teil 2 is an informal or semi-formal letter (email-informal, email-semiformal)');
+    if (set.points?.length !== 4 || set.choosePoints !== 3) fail('telc A2 Teil 2 needs four keyword points and "choosePoints": 3');
+    if (set.words?.target !== 40 || set.words?.min !== 35 || set.words?.max !== 55 || set.words?.zeroBelow !== undefined) fail('telc A2 Teil 2 needs words 35–55 (target 40), no zeroBelow');
+    if (set.sharedMinutes !== 50 || set.sharedWith !== 'lesen') fail('telc A2 Teil 2 needs "sharedMinutes": 50 and "sharedWith": "lesen"');
+    if (!(set.model?.skipped)) fail('telc A2 Teil 2 model answer covers three points; "model.skipped" names the fourth');
+    else {
+      const covered = (set.model.covers || []);
+      if (covered.length !== 3 || covered.includes(set.model.skipped) || !covered.every(point => set.points.includes(point))) fail('"model.covers" must list the three other points');
+    }
+    if (!(Array.isArray(set.checklist) && set.checklist.some(item => item?.tr === 'Dördüncü maddeyi de yazmak ek puan getirmez; 3 maddeyi iyi yazmak yeterli.'))) fail('telc A2 checklist needs the item "Dördüncü maddeyi de yazmak ek puan getirmez; 3 maddeyi iyi yazmak yeterli."');
+  }
+  // telc Deutsch B2 (Übungstest 1, überarbeitete Auflage 2019): one Teil, 30 minutes; choose Aufgabe A (Bitte um Informationen) or
+  // B (Beschwerde); a semi-formal e-mail to a company reacting to an advert; four Leitpunkte: three, or two plus an aspect of one's own;
+  // subject line, greeting, introduction and closing; at least 150 words (site: 150–220). Criteria I–III, A 5 / B 3 / C 1 / D 0, ×3 = 45.
+  if (set.exam === 'telc' && set.level === 'b2') {
+    if (set.teil !== 1 || set.minutes !== 30) fail('telc B2 Schreiben has one Teil of 30 minutes');
+    if (set.textType !== 'email-formal' || set.subjectLine !== true || set.examChoice !== true) fail('telc B2 needs textType "email-formal", "subjectLine" and "examChoice"');
+    if (!set.ad) fail('telc B2 tasks react to an advert ("ad")');
+    if (set.points?.length !== 4 || set.choosePoints !== 3 || set.ownAspect !== true) fail('telc B2 needs four Leitpunkte, "choosePoints": 3 and "ownAspect": true');
+    if (!/a\) drei der folgenden Punkte oder b\) zwei der folgenden Punkte und einen weiteren Aspekt Ihrer Wahl/.test(set.task || '')) fail('telc B2 task must state both ways (a) drei … oder b) zwei … und einen weiteren Aspekt Ihrer Wahl)');
+    if (!/mindestens 150 Wörter/.test(set.instructions || '')) fail('telc B2 instructions need "mindestens 150 Wörter"');
+    if (set.words?.min !== 150 || set.words?.target !== 180 || set.words?.max !== 220 || set.words?.atLeast !== true || set.words?.zeroBelow !== undefined) fail('telc B2 needs words 150–220 (target 180), "atLeast" and no zeroBelow');
+    const covers = set.model?.covers || [], skipped = [].concat(set.model?.skipped || []);
+    const ok = covers.every(point => set.points.includes(point)) && !covers.some(point => skipped.includes(point)) && covers.length + skipped.length === 4
+      && (covers.length === 3 ? set.model.own === undefined : covers.length === 2 && text(set.model.own));
+    if (!ok) fail('telc B2 model: "covers" three points (one skipped) or two points plus "model.own" (two skipped)');
+    const list = Array.isArray(set.checklist) ? set.checklist : [];
+    if (!list.some(item => item?.criterion === 'aufbau' && String(item.tr).startsWith('Maddeleri ayrı ayrı sıralama; bağlaçlarla birbirine bağla'))) fail('telc B2 checklist needs "Maddeleri ayrı ayrı sıralama; bağlaçlarla birbirine bağla …"');
+    if (!list.some(item => item?.criterion === 'aufgabe' && /2 madde \+ duruma uygun kendi/.test(item.tr || ''))) fail('telc B2 checklist needs the item about the two ways (3 madde ya da 2 madde + kendi konu)');
+    if (!list.some(item => item?.criterion === 'aufbau' && /Kohärenz/.test(item.tr || '')) || !(set.redemittel || []).some(g => /Kohärenz/.test(g?.group || ''))) fail('telc B2 needs a Kohärenz checklist item and Redemittel group');
+  }
   // anyOrder: in the exam the candidate may start with either task (Goethe B2); the page says so.
   if (set.anyOrder !== undefined && set.anyOrder !== true) fail('"anyOrder" must be true when present');
   // Goethe B2 (Modellsatz Erwachsene, 2. Auflage 2025): 75 minutes for both parts, start with either; Teil 1 forum post (~150 words,
@@ -120,6 +174,15 @@ function checkWriting(set, fail) {
 function checkForm(set, fail) {
   const text = value => typeof value === 'string' && value.trim();
   for (const key of ['title', 'situation', 'task']) if (!text(set[key])) fail(`"${key}" missing`);
+  // cards (telc A2): documents beside the text, { title, rows: [[label, value], …] }; evidence may be in a card value.
+  const cards = set.cards === undefined ? [] : set.cards;
+  if (!Array.isArray(cards) || !cards.every(card => text(card?.title) && Array.isArray(card.rows) && card.rows.length >= 2
+    && card.rows.every(row => Array.isArray(row) && row.length === 2 && row.every(text)))) fail('"cards" must be a list of { title, rows: [[label, value], …] }');
+  if (set.sharedMinutes !== undefined && !(Number.isInteger(set.sharedMinutes) && set.sharedMinutes > set.minutes)) fail('"sharedMinutes" must be an integer above "minutes"');
+  if (set.sharedWith !== undefined && !(set.sharedWith === 'lesen' && set.sharedMinutes)) fail('"sharedWith" must be "lesen" and needs "sharedMinutes"');
+  // telc A2 (Übungstest 1): the details come from a short text and a document (ID card, bank card); Lesen + Schreiben 50 minutes.
+  if (set.exam === 'telc' && set.level === 'a2' && (!cards.length || set.sharedMinutes !== 50 || set.sharedWith !== 'lesen')) fail('telc A2 Teil 1 needs "cards", "sharedMinutes": 50 and "sharedWith": "lesen"');
+  const sources = [String(set.situation), ...(Array.isArray(cards) ? cards.flatMap(card => (card.rows || []).map(row => String(row?.[1] ?? ''))) : [])];
   const rows = Array.isArray(set.form?.rows) ? set.form.rows : [];
   if (!text(set.form?.title) || rows.length < 5) { fail('"form" needs a title and rows'); return; }
   const blanks = rows.filter(row => row.number !== undefined);
@@ -136,10 +199,11 @@ function checkForm(set, fail) {
     } else if (!Array.isArray(row.accept) || !row.accept.length || !row.accept.every(text)) fail(`${label}: "accept" needs at least one answer`);
     if (!Array.isArray(row.evidence) || !row.evidence.length) fail(`${label}: "evidence" missing`);
     for (const quote of row.evidence || []) {
-      const at = String(set.situation).indexOf(quote);
-      if (at < 0 || String(set.situation).indexOf(quote, at + 1) >= 0) { fail(`${label}: evidence "${quote}" must occur exactly once in "situation"`); continue; }
-      if (spans.some(s => at < s.end && at + quote.length > s.at)) fail(`${label}: evidence "${quote}" overlaps another blank`);
-      spans.push({ at, end: at + quote.length });
+      const hits = sources.flatMap((source, src) => { const found = []; for (let at = source.indexOf(quote); at >= 0; at = source.indexOf(quote, at + 1)) found.push({ src, at }); return found; });
+      if (hits.length !== 1) { fail(`${label}: evidence "${quote}" must occur exactly once in "situation" and the cards`); continue; }
+      const { src, at } = hits[0];
+      if (spans.some(s => s.src === src && at < s.end && at + quote.length > s.at)) fail(`${label}: evidence "${quote}" overlaps another blank`);
+      spans.push({ src, at, end: at + quote.length });
     }
     if (!text(row.explanation) || row.explanation.length < 40) fail(`${label}: Turkish "explanation" needs at least 40 characters`);
   }

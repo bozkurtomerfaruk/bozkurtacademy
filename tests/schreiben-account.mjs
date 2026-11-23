@@ -152,7 +152,7 @@ await teacher.selectOption('#aLevel', 'B1'); await teacher.waitForTimeout(300);
 await teacher.selectOption('#aTopic', 'schreiben'); await teacher.waitForTimeout(800);
 await teacher.locator('#aExerciseList label', { hasText: 'Geburtstag verpasst' }).locator('input').check();
 await teacher.fill('#aTitle', 'Schreiben: Geburtstag verpasst');
-await teacher.click('#aSubmit'); await teacher.waitForURL(/ogretmen\.html/, { timeout: 15000 }).catch(() => {});
+await teacher.click('#aSubmit'); await teacher.waitForURL(/ogretmen-odevler\.html/, { timeout: 15000 }).catch(() => {});
 const assignments = await listDocs('users/ogrenci1/assignments');
 ok(assignments.length === 1 && JSON.stringify(assignments[0].fields.exercises).includes('goethe-b1-1-set-2'), 'ödev kaydedildi (goethe-b1-1-set-2)');
 await tctx.close();
@@ -163,8 +163,6 @@ await signIn(panel, 'ogrenci@example.com', 'ogrenci123', 'student');
 await panel.goto(`${BASE}/panel.html`); await panel.waitForSelector('#writingList [data-writing]', { timeout: 15000 }).catch(() => {});
 ok(await panel.locator('#writingAlert').isVisible() && (await panel.textContent('#writingAlertText')).includes('1 yeni geri bildirim'), 'panelin üstünde "1 yeni geri bildirim"');
 ok((await panel.textContent('#writingNew')).includes('1 yeni geri bildirim') && await panel.locator('[data-writing-new]:not([hidden])').count() === 1, 'bölüm başlığında ve metinde yeni işareti');
-const link = panel.locator('a[href="index.html#exams/goethe/b1/schreiben/2/set-2"], a[href="index.html#exams/goethe/b1/schreiben/1/set-2"]');
-ok(await link.count() >= 1, 'ödevdeki bağlantı Schreiben görevini açıyor');
 await panel.screenshot({ path: path.join(shotDir, 'panel-yeni-390.png'), fullPage: true });
 await panel.locator('#writingList [data-writing] summary').first().click(); await panel.waitForTimeout(1500);
 ok((await panel.textContent('#writingList')).includes('Üç maddenin hepsi var'), 'öğrenci geri bildirimi okuyor');
@@ -173,6 +171,8 @@ ok(Boolean(plain((await listDocs('users/ogrenci1/writings'))[0]).seenAt), 'gör�
 await panel.screenshot({ path: path.join(shotDir, 'panel-okundu-390.png'), fullPage: true });
 await panel.reload(); await panel.waitForTimeout(3000);
 ok(await panel.locator('#writingAlert').isHidden(), 'yeniden açınca da işaret yok');
+await panel.goto(`${BASE}/odevlerim.html`); await panel.waitForSelector('.odev-item', { timeout: 15000 }).catch(() => {});
+ok(await panel.locator('a[href="index.html#exams/goethe/b1/schreiben/2/set-2"], a[href="index.html#exams/goethe/b1/schreiben/1/set-2"]').count() >= 1, 'ödevdeki bağlantı Schreiben görevini açıyor (Ödevlerim)');
 
 // 5. Günlük sınır: 24 saatte 10 metin.
 await fetch(`${docsUrl}/users/ogrenci1/limits/writing`, { method: 'PATCH', headers: owner, body: JSON.stringify({ fields: {

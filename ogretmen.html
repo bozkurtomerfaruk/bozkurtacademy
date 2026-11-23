@@ -96,8 +96,11 @@
           </section>
           <section class="acc-tabpanel" role="tabpanel" id="panel-odevler" aria-labelledby="tab-odevler" hidden>
             <div class="acc-tabpanel-head">
-              <p class="acc-hint">Her ödev, seçilen her öğrenciye ayrı olarak verilir; öğrenciler birbirini görmez.</p>
-              <a class="btn primary" href="ogretmen-odev.html">Yeni ödev</a>
+              <p class="acc-hint">Ödevler ayrı sayfada: öğrenci seçerek, verildiği güne göre. Her ödev seçilen her öğrenciye ayrı verilir; öğrenciler birbirini görmez.</p>
+              <div class="acc-actions">
+                <a class="btn ghost" href="ogretmen-odevler.html">Ödev sayfası</a>
+                <a class="btn primary" href="ogretmen-odev.html">+ Oluştur</a>
+              </div>
             </div>
             <p class="acc-status" id="assignNotice" role="status" hidden></p>
             <div class="acc-list" id="list-odevler"></div>
@@ -135,6 +138,6 @@
   </div>
   <script src="js/app.js?v=54"></script>
   <script src="js/theme.js?v=10"></script>
-  <script type="module" src="js/account/teacher.js?v=7"></script>
+  <script type="module" src="js/account/teacher.js?v=8"></script>
 </body>
 </html>

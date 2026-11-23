@@ -3,10 +3,11 @@ import { auth, configured, db, fa, fs } from './firebase.js';
 import { TEACHER_EMAIL, TEACHER_UID } from './config.js';
 import { registerStrings, t, lang } from './i18n.js';
 import { feedbackView } from './writing-feedback.js?v=1';
+import { normalizeAssignment } from './assignments.js?v=1';
 import {
-  $, accountState, bestResultSince, clearHint, currentUser, exerciseNames, exerciseUrl, formatDateTime, h,
+  $, accountState, clearHint, currentUser, exerciseNames, formatDateTime, h,
   loadAssignments, loadProfile, loadResources, loadResults, loadWritings, safeLink, scoreText, sendVerification, setHint, setStatus,
-  summarizeResults, syncEmailVerified, toDate, unseenFeedback, validStudentDocUrl, writingTitle, writingUrl
+  summarizeResults, syncEmailVerified, toDate, unseenFeedback, writingTitle, writingUrl
 } from './common.js';
 
 registerStrings();
@@ -270,108 +271,16 @@ function renderLessons(){
     : [h('p', { class: 'acc-empty' }, t('panelLessonsEmpty'))]));
 }
 
-// Öğrenci sadece "tamamladım", tamamlama zamanı ve kendi doküman linkini değiştirebilir (kurallar).
-async function saveAssignment(a, changes, statusEl){
-  try{
-    await fs.updateDoc(fs.doc(db, 'users', currentAuthUser.uid, 'assignments', a.id), changes);
-    assignments = await loadAssignments(currentAuthUser.uid);
-    await renderAssignments();
-  }catch(error){
-    console.error(error);
-    setStatus(statusEl, 'error', t('assignSaveFailed'));
-  }
-}
-
-function docBlock(a){
-  if(!a.docUrl) return null;
-  return h('div', { class: 'acc-assign-doc' },
-    h('a', { class: 'btn ghost', href: a.docUrl, target: '_blank', rel: 'noopener noreferrer' }, t(a.copyPerStudent ? 'assignCopyDoc' : 'assignOpenDoc')),
-    a.copyPerStudent ? h('p', { class: 'acc-hint' }, t('assignCopyHint')) : null);
-}
-
-function exerciseList(a, names){
-  if(!(a.exercises || []).length) return null;
-  return h('div', { class: 'acc-assign-exercises' },
-    h('h4', {}, t('assignExercises')),
-    h('ul', { class: 'acc-status-list' }, a.exercises.map((e) => {
-      const n = names[`${e.level}/${e.topic}/${e.exercise}`];
-      const best = bestResultSince(results, e, a.createdAt);
-      return h('li', {},
-        h('a', { class: 'ba-link', href: exerciseUrl(e) }, `${e.level} · ${n?.exercise || e.exercise}`),
-        h('span', { class: `acc-badge ${best ? 'success' : ''}` }, best ? `${t('assignSolved')} · ${scoreText(best)}` : t('assignNotSolved')));
-    })));
-}
-
-function activeCard(a, names, index){
-  const due = toDate(a.dueAt);
-  const overdue = due && due < new Date();
-  const inputId = `myDoc-${index}`;
-  const input = h('input', { id: inputId, type: 'url', inputmode: 'url', value: a.studentDocUrl || '', placeholder: 'https://docs.google.com/…', autocomplete: 'off', 'aria-describedby': `${inputId}-hint` });
-  const status = h('p', { class: 'acc-status', role: 'status', hidden: true });
-  const readLink = () => {
-    const url = input.value.trim();
-    if(!validStudentDocUrl(url)){
-      setStatus(status, 'error', t('assignBadLink'));
-      input.focus();
-      return null;
-    }
-    return url;
-  };
-  const saveLink = h('button', { class: 'btn ghost', type: 'button' }, t('assignSaveLink'));
-  saveLink.addEventListener('click', () => {
-    const url = readLink();
-    if(url === null) return;
-    saveAssignment(a, { studentDocUrl: url }, status);
-  });
-  const done = h('button', { class: 'btn primary', type: 'button' }, t('assignMarkDone'));
-  done.addEventListener('click', () => {
-    const url = readLink();
-    if(url === null) return;
-    done.disabled = true;
-    saveAssignment(a, { done: true, doneAt: fs.serverTimestamp(), studentDocUrl: url }, status).finally(() => { done.disabled = false; });
-  });
-  return h('article', { class: 'ba-card acc-card acc-assign' },
-    h('div', { class: 'ba-card-body' },
-      h('header', { class: 'acc-assign-head' },
-        h('h3', {}, a.title),
-        h('p', { class: 'acc-assign-due' }, `${t('assignDue')}: ${fmt(due)}`, overdue ? h('span', { class: 'acc-badge warning' }, t('assignOverdue')) : null)),
-      a.description ? h('p', { class: 'acc-assign-text' }, a.description) : null,
-      exerciseList(a, names),
-      docBlock(a),
-      h('div', { class: 'field acc-assign-link' },
-        h('label', { for: inputId }, t('assignMyDoc')),
-        input,
-        h('small', { class: 'acc-hint', id: `${inputId}-hint` }, t('assignMyDocHint'))),
-      h('div', { class: 'acc-actions' }, done, saveLink),
-      status));
-}
-
-function doneRow(a){
-  const status = h('p', { class: 'acc-status', role: 'status', hidden: true });
-  const undo = h('button', { class: 'acc-text-button', type: 'button' }, t('assignUndo'));
-  undo.addEventListener('click', () => saveAssignment(a, { done: false, doneAt: null }, status));
-  return h('article', { class: 'acc-row acc-assign-row' },
-    h('div', { class: 'acc-row-main' },
-      h('span', { class: 'acc-row-name' }, a.title),
-      h('span', { class: 'acc-badges' }, h('span', { class: 'acc-badge success' }, `${t('assignDoneOn')} · ${fmt(a.doneAt)}`))),
-    h('dl', { class: 'acc-row-meta' },
-      h('div', {}, h('dt', {}, t('assignDue')), h('dd', {}, fmt(a.dueAt))),
-      a.studentDocUrl ? h('div', {}, h('dt', {}, t('assignMyDocLink')), h('dd', {}, safeLink(a.studentDocUrl, t('assignOpenDoc')))) : null),
-    h('div', { class: 'acc-row-actions' }, undo),
-    status);
-}
-
-// Aktif ödevler teslim tarihine göre (en yakın önce), tamamlananlar tamamlanma tarihine göre (en yeni önce).
-async function renderAssignments(){
-  const names = await exerciseNames(assignments.flatMap((a) => a.exercises || []), lang());
-  const active = assignments.filter((a) => !a.done).sort((a, b) => (toDate(a.dueAt) || 0) - (toDate(b.dueAt) || 0));
-  const done = assignments.filter((a) => a.done).sort((a, b) => (toDate(b.doneAt) || 0) - (toDate(a.doneAt) || 0));
-  $('assignList').replaceChildren(...(active.length
-    ? [h('div', { class: 'acc-stack' }, active.map((a, i) => activeCard(a, names, i)))]
+// Ödevler ayrı sayfada (odevlerim.html, js/account/student-assignments.js). Panelde sadece açık ödevlerin kısa listesi.
+function renderAssignments(){
+  const open = assignments.map(normalizeAssignment).filter((a) => !a.done)
+    .sort((a, b) => (a.due || Infinity) - (b.due || Infinity) || (b.created || 0) - (a.created || 0));
+  $('assignList').replaceChildren(...(open.length
+    ? [h('p', { class: 'acc-hint' }, t('odevPanelOpen').replace('{n}', String(open.length))),
+      h('ul', { class: 'acc-resource-list' }, open.slice(0, 5).map((a) => h('li', {}, h('div', {},
+        h('a', { class: 'ba-link', href: `odevlerim.html#odev-${encodeURIComponent(a.id)}` }, a.title),
+        h('span', { class: 'acc-sub' }, a.due ? `${t('assignDue')}: ${fmt(a.due)}` : t('odevNoDue'))))))]
     : [h('p', { class: 'acc-empty' }, t('panelAssignEmpty'))]));
-  $('doneList').replaceChildren(...(done.length
-    ? [h('div', { class: 'acc-list' }, done.map(doneRow))]
-    : [h('p', { class: 'acc-hint' }, t('panelDoneEmpty'))]));
 }
 
 function renderResources(){
@@ -394,10 +303,10 @@ async function render(){
   renderAccount();
   renderState();
   const active = accountState(profile) === 'active';
-  for(const id of ['lessonSection', 'assignSection', 'doneSection', 'resourceSection', 'writingSection']) $(id).hidden = !active;
+  for(const id of ['lessonSection', 'assignSection', 'resourceSection', 'writingSection']) $(id).hidden = !active;
   if(active){
     renderLessons();
-    await renderAssignments();
+    renderAssignments();
     renderResources();
     await renderWritings();
     await renderHistory();

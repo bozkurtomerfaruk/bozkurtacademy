@@ -1,7 +1,7 @@
 // ogretmen.html: öğrenci listesi, onay bekleyenler, veli onayı bekleyenler, silinmesi gereken kayıtlar.
-import { $, exerciseNames, formatDateTime, BERLIN, h, safeLink } from './common.js';
+import { $, formatDateTime, BERLIN, h } from './common.js';
 import {
-  approve, categorize, deleteAssignmentCopies, emailVerified, fmtDate, lastLessonByStudent, listStudents,
+  approve, categorize, emailVerified, fmtDate, lastLessonByStudent, listStudents,
   AI_MODES, getAiMode, loadAiDrafts, loadAssignmentGroups, openDeleteDialog, pendingWritingsByStudent, setAiMode, requireTeacher, statusBadges, UNVERIFIED_WARNING
 } from './teacher-common.js';
 import { createModeration, permissionMessage } from './comments-moderation.js?v=2';
@@ -10,7 +10,6 @@ import { AI_WORKER_URL } from './config.js';
 const TABS = ['ogrenciler', 'onay', 'veli', 'odevler', 'silinecek', 'yorumlar'];
 let lists = null;
 let groups = [];
-let studentsById = new Map();
 let pendingWritings = new Map(); // uid → { total, flagged }: bakılması gereken Schreiben metni (yapay zekâ kontrol etmedi ya da öğrenci madde işaretledi)
 let aiDrafts = new Map(); // uid → yapay zekâ taslağı hazır metin sayısı (öğrenci görmez)
 const fmtDateTime = (value) => formatDateTime(value, { lang: 'tr', timeZone: BERLIN });
@@ -134,57 +133,26 @@ function renderStale(){
     : [empty('Silinmesi gereken kayıt yok.')]));
 }
 
+// Ödevler ayrı sayfada (ogretmen-odevler.html). Burada son 5 ödev kısaca.
 async function renderAssignments(){
   const box = $('list-odevler');
   if(!groups.length){
     box.replaceChildren(empty('Henüz ödev verilmedi.'));
     return;
   }
-  const names = await exerciseNames(groups.flatMap((g) => g.exercises), 'tr');
-  box.replaceChildren(...groups.map((g) => {
+  box.replaceChildren(...groups.slice(0, 5).map((g) => {
     const done = g.copies.filter((c) => c.done).length;
-    const overdue = g.dueAt && g.dueAt < new Date();
-    const students = g.copies
-      .map((c) => ({ ...c, student: studentsById.get(c.uid) }))
-      .sort((a, b) => (a.student?.name || '').localeCompare(b.student?.name || '', 'tr'));
-    const deleteBtn = h('button', { class: 'btn danger acc-row-action', type: 'button' }, 'Sil');
-    deleteBtn.addEventListener('click', async () => {
-      if(!confirm(`"${g.title}" ödevi ${g.copies.length} öğrenciden silinsin mi? Öğrencilerin işaretleri de silinir.`)) return;
-      deleteBtn.disabled = true;
-      try{
-        await deleteAssignmentCopies(g.copies.map((c) => c.ref));
-        await load();
-      }catch(error){
-        console.error(error);
-        deleteBtn.disabled = false;
-        showError('Ödev silinemedi. Tekrar dene.');
-      }
-    });
+    const overdue = g.dueAt && g.dueAt < new Date() && done < g.copies.length;
     return h('article', { class: 'acc-row acc-assign-row' },
       h('div', { class: 'acc-row-main' },
-        h('span', { class: 'acc-row-name' }, g.title),
+        h('a', { class: 'acc-row-name ba-link', href: `ogretmen-odevler.html#odev-${encodeURIComponent(g.groupId)}` }, g.title),
         h('span', { class: 'acc-badges' },
           h('span', { class: `acc-badge ${done === g.copies.length ? 'success' : ''}` }, `${done}/${g.copies.length} tamamladı`),
-          overdue && done < g.copies.length ? h('span', { class: 'acc-badge warning' }, 'Süresi geçti') : null)),
+          overdue ? h('span', { class: 'acc-badge warning' }, 'Süresi geçti') : null)),
       h('dl', { class: 'acc-row-meta' },
-        h('div', {}, h('dt', {}, 'Teslim'), h('dd', {}, fmtDateTime(g.dueAt))),
-        h('div', {}, h('dt', {}, 'Alıştırma'), h('dd', {}, String(g.exercises.length))),
-        g.docUrl ? h('div', {}, h('dt', {}, 'Doküman'), h('dd', {}, safeLink(g.docUrl, 'Aç'))) : null),
-      h('div', { class: 'acc-row-actions' }, deleteBtn),
-      h('details', { class: 'acc-details acc-row-full' },
-        h('summary', {}, 'Öğrenciler ve alıştırmalar'),
-        g.exercises.length ? h('ul', { class: 'acc-plain-list' }, g.exercises.map((e) => {
-          const n = names[`${e.level}/${e.topic}/${e.exercise}`];
-          return h('li', {}, `${e.level} · ${n?.topic || e.topic} · ${n?.exercise || e.exercise}`);
-        })) : null,
-        h('ul', { class: 'acc-status-list' }, students.map((c) => h('li', {},
-          c.student
-            ? h('a', { class: 'ba-link', href: `ogretmen-ogrenci.html?id=${encodeURIComponent(c.uid)}` }, c.student.name)
-            : h('span', {}, 'Silinmiş öğrenci'),
-          h('span', { class: `acc-badge ${c.done ? 'success' : ''}` }, c.done ? `Tamamladı · ${fmtDateTime(c.doneAt)}` : 'Bekliyor'),
-          c.studentDocUrl ? safeLink(c.studentDocUrl, 'Öğrencinin dokümanı') : null))))
-    );
-  }));
+        h('div', {}, h('dt', {}, 'Verildi'), h('dd', {}, fmtDate(g.createdAt))),
+        h('div', {}, h('dt', {}, 'Teslim'), h('dd', {}, g.dueAt ? fmtDateTime(g.dueAt) : 'Yok'))));
+  }), groups.length > 5 ? h('p', { class: 'acc-hint' }, h('a', { class: 'ba-link', href: 'ogretmen-odevler.html' }, `Bütün ödevler (${groups.length})`)) : null);
 }
 
 function renderCounts(){
@@ -237,7 +205,6 @@ async function load(){
     for(const d of drafts) aiDrafts.set(d.uid, (aiDrafts.get(d.uid) || 0) + 1);
     lists = categorize(students, lastLessons);
     groups = assignmentGroups;
-    studentsById = new Map(students.map((st) => [st.id, st]));
     renderCounts();
     renderWritingNotice();
     renderAiMode();

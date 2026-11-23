@@ -2,6 +2,17 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-23 · Ödevler: Classroom düzeni (PR 1/2)
+
+- **Plan onaylandı (kararların):** teslim tarihi isteğe bağlı; ödev verildikten sonra düzenlenebilir; ödev silinince Drive'daki PDF kalır; bağlantı denetimi formda, öğretmen kuralı daraltılmadı. PDF yükleme (Google Drive, `drive.file`) PR 2'de.
+- **Öğretmen, `ogretmen-odevler.html` (yeni):** Üstte öğrenci seçimi ("Tüm öğrenciler" ya da tek öğrenci), sağda "+ Oluştur". Ödevler verildiği günün tarihi başlığı altında (Berlin), en yenisi üstte. Kartta teslim tarihi, durum rozetleri ("2/21 çözüldü", "Tamamladı", "Süresi geçti"); "Ayrıntılar"da açıklama, bağlantılar, paketler ve puanları, öğrenciler, "Düzenle" ve "Sil / Bu öğrenciden kaldır". Öğretmen panelindeki "Ödevler" sekmesi ve öğrenci detayı artık kısa özet + bu sayfaya bağlantı.
+- **Form, `ogretmen-odev.html`:** Başlık varsayılan olarak bugünün tarihi ("23.11.2026"), açıklama/not, isteğe bağlı teslim tarihi ("1 hafta sonra", "Teslim tarihi yok"). Bir ödeve en çok 10 bağlantı (http/https; YouTube, Docs, Drive, PDF, web türü otomatik), Google Docs/Sheets/Slides için "her öğrenciye kopya" (/copy). "Bu konunun tamamını ekle" (konuya sonradan eklenen paketler de görünür), tek tek paket, sınav setleri, Schreiben görevleri ve seviye sonu sınavı. Birden fazla öğrenci. `?duzenle=<groupId>` ile düzenleme: içerik bütün kopyalara yazılır, öğrencinin işaretleri korunur, yeni öğrenci aynı gruba eklenebilir.
+- **Öğrenci, `odevlerim.html` (yeni, TR/DE/EN):** Aynı tarih başlıklı düzen; açık ödevler açık gelir. Bağlantılar yeni sekmede, her paketin "Çözüldü · 8/10 / Henüz çözülmedi" durumu, kendi Docs linki, "Tamamladım / Geri al". Panelde sadece açık ödevlerin kısa listesi ve "Bütün ödevlerim".
+- **Veri (`js/account/assignments.js`):** Yol aynı (`users/{uid}/assignments`, ortak `groupId`). Yeni alanlar `links[]`, `topics[]`, `schemaVersion: 2`, `dueAt` null olabilir, düzenlemede `updatedAt`. **Eski ödevler taşınmadı, okunurken çevriliyor:** `docUrl` + `copyPerStudent` tek bir bağlantı olarak görünür; öğretmen eski bir ödevi düzenleyip kaydederse o ödev yeni biçime geçer (`docUrl` silinir, işaretler korunur).
+- **Kurallar:** `firestore.rules` değişmedi (öğrenci yine sadece `done`, `doneAt`, `studentDocUrl`). Yeni kural testleri: yeni biçimde tamamlama, bağlantı/konu/not/sürüm değiştirememe, başkasının ödevi, öğretmenin eski→yeni düzenlemesi. Spark planında; yeni hizmet yok.
+- **Testler:** `npm test` 220/220; yeni `npm run test:odev` (emülatörde uçtan uca, eski ödev, form, geçersiz bağlantılar ve Enter, düzenleme, öğrenci görünümü, DE/EN, onaysız hesap, 3 sayfa × 390/1440 × açık/koyu taşma denetimi); `test:sinav`, `test:level-exam`, `test:schreiben` yeni sayfalara uyarlandı ve geçti; `test:csp` (yeni sayfalar dahil) ve `tests/hesap-ceviri.mjs` geçti; `check-grammar`, `build-pages --check`, `check-versions`, `check-html-escape`, `check-exams` PASS.
+- **Sıradaki:** PR 2, PDF'i Drive'a yükleme. Önce senin Google Cloud adımların (Drive API'yi aç, `drive.file` kapsamını ekle).
+
 ## 2026-11-19 · Schreiben genişletmesi tamamlandı (madde 7)
 
 - **Kapanış:** #124 (Goethe B2) birleştirilince 9 Kasım'da başlayan Schreiben genişletmesi bitti. Sınavlar ve setler:

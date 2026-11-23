@@ -1,17 +1,18 @@
 // ogretmen-ogrenci.html?id=UID: öğrenci detayı, onay işlemleri, veli onayı, alıştırma sonuçları.
 import {
-  $, bestResultSince, consentGiven, currentYear, exerciseNames, formatDateTime, h, BERLIN, loadAssignments, loadProfile,
-  loadResources, loadResults, loadWritings, safeLink, scoreText, summarizeResults, toDate, validEmail, validHttpsUrl, LEVEL_EXAM, topicErrorsText,
+  $, consentGiven, currentYear, exerciseNames, formatDateTime, h, BERLIN, loadAssignments, loadProfile,
+  loadResources, loadResults, loadWritings, safeLink, scoreText, summarizeResults, validEmail, validHttpsUrl, LEVEL_EXAM, topicErrorsText,
   setStatus, writingTitle, writingUrl
 } from './common.js';
 import {
-  addResource, approve, deleteAssignment, deleteResource, emailVerified, fmtDate, isEnabled, openDeleteDialog,
+  addResource, approve, deleteResource, emailVerified, fmtDate, isEnabled, openDeleteDialog,
   AI_CONSENT_VERSION, AI_SKIP_LABELS, aiAllowed, aiDirect, approveAiDraft, deleteAiDraft, flaggedCount, loadAiDrafts, needsTeacher, recordAiConsent,
   recordConsent, requireTeacher, saveWritingFeedback, setActive, setInactive, statusBadges, UNVERIFIED_WARNING, updateParent
 } from './teacher-common.js';
 import * as cal from './calendar.js';
 import { db, fs } from './firebase.js';
 import { applyAttendees, loadStudentLessons } from './lessons.js';
+import { normalizeAssignment } from './assignments.js?v=1';
 
 const uid = new URLSearchParams(location.search).get('id');
 let student = null;
@@ -216,52 +217,23 @@ function inviteParentControl(){
     save);
 }
 
-// Öğrencinin ödevleri: yaklaşanlar önce, tamamlananlar sonda.
-async function renderAssignments(results){
-  const assignments = await loadAssignments(uid);
+// Öğrencinin ödevleri ayrı sayfada (ogretmen-odevler.html?ogrenci=…). Burada kısa özet ve açık ödevler.
+async function renderAssignments(){
+  const assignments = (await loadAssignments(uid)).map(normalizeAssignment);
   const box = $('assignmentsList');
+  const pageLink = h('a', { class: 'ba-link', href: `ogretmen-odevler.html?ogrenci=${encodeURIComponent(uid)}` }, 'Ödevlerini aç');
   if(!assignments.length){
     box.replaceChildren(h('p', { class: 'acc-empty' }, 'Bu öğrenciye henüz ödev verilmedi.'));
     return;
   }
-  const names = await exerciseNames(assignments.flatMap((a) => a.exercises || []), 'tr');
-  assignments.sort((a, b) => (a.done - b.done) || ((toDate(a.dueAt) || 0) - (toDate(b.dueAt) || 0)));
+  const open = assignments.filter((a) => !a.done).sort((a, b) => (a.due || Infinity) - (b.due || Infinity));
   const now = new Date();
-  box.replaceChildren(h('div', { class: 'acc-list' }, assignments.map((a) => {
-    const overdue = !a.done && toDate(a.dueAt) < now;
-    const remove = h('button', { class: 'acc-text-button', type: 'button' }, 'Bu öğrenciden kaldır');
-    remove.addEventListener('click', async () => {
-      if(!confirm(`"${a.title}" ödevi bu öğrenciden kaldırılsın mı?`)) return;
-      remove.disabled = true;
-      try{
-        await deleteAssignment(uid, a.id);
-        await reload();
-      }catch(error){
-        console.error(error);
-        setActionStatus('error', 'Ödev kaldırılamadı. Tekrar dene.');
-        remove.disabled = false;
-      }
-    });
-    return h('article', { class: 'acc-row acc-assign-row' },
-      h('div', { class: 'acc-row-main' },
-        h('span', { class: 'acc-row-name' }, a.title),
-        h('span', { class: 'acc-badges' },
-          h('span', { class: `acc-badge ${a.done ? 'success' : ''}` }, a.done ? `Tamamladı · ${fmtDateTime(a.doneAt)}` : 'Bekliyor'),
-          overdue ? h('span', { class: 'acc-badge warning' }, 'Süresi geçti') : null)),
-      h('dl', { class: 'acc-row-meta' },
-        h('div', {}, h('dt', {}, 'Teslim'), h('dd', {}, fmtDateTime(a.dueAt))),
-        a.docUrl ? h('div', {}, h('dt', {}, 'Doküman'), h('dd', {}, safeLink(a.docUrl, 'Aç'))) : null,
-        a.studentDocUrl ? h('div', {}, h('dt', {}, 'Öğrencinin dokümanı'), h('dd', {}, safeLink(a.studentDocUrl, 'Aç'))) : null),
-      h('div', { class: 'acc-row-actions' }, remove),
-      (a.exercises || []).length ? h('ul', { class: 'acc-status-list acc-row-full' }, a.exercises.map((e) => {
-        const n = names[`${e.level}/${e.topic}/${e.exercise}`];
-        const best = bestResultSince(results, e, a.createdAt);
-        return h('li', {},
-          h('span', {}, `${e.level} · ${n?.topic || e.topic} · ${n?.exercise || e.exercise}`),
-          h('span', { class: `acc-badge ${best ? 'success' : ''}` }, best ? `Çözüldü · ${scoreText(best)}` : 'Henüz çözülmedi'));
-      })) : null
-    );
-  })));
+  box.replaceChildren(
+    h('p', { class: 'acc-hint' }, `${assignments.length} ödev, ${open.length} açık. `, pageLink),
+    open.length ? h('ul', { class: 'acc-status-list' }, open.slice(0, 5).map((a) => h('li', {},
+      h('span', {}, a.title),
+      h('span', { class: 'acc-badge' }, a.due ? `Teslim ${fmtDateTime(a.due)}` : 'Teslim tarihi yok'),
+      a.due && a.due < now ? h('span', { class: 'acc-badge warning' }, 'Süresi geçti') : null))) : null);
 }
 
 async function renderResources(){
@@ -556,7 +528,7 @@ async function reload(){
   const [results, studentLessons] = await Promise.all([loadResults(uid), loadStudentLessons(uid)]);
   lessons = studentLessons;
   renderLessons();
-  await Promise.all([renderAssignments(results), renderResources(), renderResults(results), renderWritings()]);
+  await Promise.all([renderAssignments(), renderResources(), renderResults(results), renderWritings()]);
   $('studentLoading').hidden = true;
   $('studentApp').hidden = false;
   // Öğretmen panelindeki "geri bildirim bekliyor" işareti #yazilar ile buraya gelir.

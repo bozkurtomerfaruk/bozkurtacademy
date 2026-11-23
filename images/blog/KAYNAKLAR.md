@@ -27,3 +27,6 @@ Bu klasördeki her görselin kaynağı burada yazılıdır. Kurallar: `docs/haft
 | almanyada-calismak-icin-almanca-seviyesi | kapak.svg → kapak-* | A2–C1 basamakları ve soru işareti | Özgün illüstrasyon | Bozkurt Academy |
 | almanyada-calismak-icin-almanca-seviyesi | seviye-merdiveni.svg | Seviyelerin iş yerindeki karşılığı | Özgün illüstrasyon | Bozkurt Academy |
 | almanyada-calismak-icin-almanca-seviyesi | dort-soru.svg | Gereken seviyeyi belirleyen dört soru | Özgün illüstrasyon | Bozkurt Academy |
+| almanca-artikel-nasil-ogrenilir | kapak.svg → kapak-* | der Löffel, die Gabel, das Messer renkli kartları; A1 rozeti | Özgün illüstrasyon | Bozkurt Academy |
+| almanca-artikel-nasil-ogrenilir | kelime-sonlari.svg | die/das/der için artikeli gösteren kelime sonları | Özgün illüstrasyon | Bozkurt Academy |
+| almanca-artikel-nasil-ogrenilir | bilesik-kelime.svg | das Haus + die Tür = die Haustür | Özgün illüstrasyon | Bozkurt Academy |

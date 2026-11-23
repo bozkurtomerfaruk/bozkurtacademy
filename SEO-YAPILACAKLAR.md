@@ -129,7 +129,7 @@ Arama hacimleri Search Console verisi geldikçe gözden geçirilmeli. Resmî şa
 | 4 (6 Kasım 2026) | goethe telc farkı | Goethe mi telc mi? Almanca Sınavları Arasındaki Farklar | /almanca-sinav-hazirlik/, /b1-almanca-kursu/, /almanca-gramer/b1/ | Yayınlandı |
 | 5 (9 Kasım 2026) | aile birleşimi için almanca | Aile Birleşimi İçin Almanca: Nereden Başlamalı? | /a1-almanca-kursu/, /almanca-gramer/a1/, /iletisim/ (resmî şartlar için yalnızca yönlendirme) | Yayınlandı |
 | 6 (16 Kasım 2026) | almanya'da çalışmak için hangi seviye almanca | Almanya'da Çalışmak İçin Hangi Seviye Almanca Gerekir? | /b1-almanca-kursu/, /b2-almanca-kursu/ (seviye şartları için resmî kaynağa yönlendirme) | Yayınlandı |
-| 7 (24 Aralık 2026) | almanca artikel nasıl öğrenilir | der, die, das: Almanca Artikeller Nasıl Akılda Kalır? | /almanca-gramer/a1/artikel/, /almanca-gramer/a1/plural/ | Planlandı |
+| 7 (23 Kasım 2026) | almanca artikel nasıl öğrenilir | der, die, das: Almanca Artikeller Nasıl Akılda Kalır? | /almanca-gramer/a1/artikel/, /almanca-gramer/a1/plural/ | Taslak yazıldı |
 | 8 (31 Aralık 2026) | almanca konuşma pratiği | Almanca Konuşma Pratiği: Evde ve Derste Neler Yapılabilir? | /almanca-grup-dersi/, /almanca-ozel-ders/ | Planlandı |
 | 9 (7 Ocak 2027) | a2 almanca sınavı / dtz | A2 Seviyesinde Neler Öğrenilir? A2 Sınavına Hazırlık | /a2-almanca-kursu/, /almanca-gramer/a2/ (perfekt, dativ, nebensaetze) | Planlandı |
 | 10 (14 Ocak 2027) | almanca perfekt | Almancada Geçmiş Zaman: Perfekt ve Präteritum Ne Zaman Kullanılır? | /almanca-gramer/a1/perfekt/, /almanca-gramer/a2/praeteritum/ | Planlandı |

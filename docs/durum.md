@@ -2,7 +2,15 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
-## 2026-11-23 · Ders defteri (dal `claude/elegant-newton-qz9tkr`, PR açık, birleştirilmedi)
+## 2026-11-23 · Ders defteri: yapışkan araç çubuğu ve tablo ızgarası (dal `claude/elegant-newton-qz9tkr`, PR açık, birleştirilmedi)
+
+- **Yapışkan çubuk:** Araç çubuğu ve kayıt durumu tek bir çubukta (`#noteSticky`); sitenin üst menüsünün hemen altına yapışıyor (yükseklik JS ile ölçülüyor, `--note-top`). Önceki sürümde çubuk `top:0`'a yapışıp üst menünün (72 px) arkasında kalıyordu; kayıt durumu da başlıkta olduğu için aşağı inince görünmüyordu. İmleç çubuğun altında kalmasın diye sayfanın `scroll-padding`'i çubuk yüksekliği kadar (Quill bunu dikkate alıyor). Tam ekranda kartın en üstüne yapışıyor. Telefonda çubuk tek satır, yana kayıyor.
+- **Kaydırma:** Sitenin genel `scroll-behavior:smooth` kuralı imleci takip eden kaydırmayı her tuşta yeniden başlatıp geride bırakıyordu; ders defteri sayfalarında kaydırma anlık.
+- **"Kaydediliyor…":** Takılı kalmıyordu, ama yazmaya başlandığı andan yazma bittikten ~1,6 sn sonrasına kadar görünüyordu (gerçek kayıt ~50–80 ms). Artık yazarken "Kaydedilmeyi bekliyor", yalnızca sunucuya yazılırken "Kaydediliyor…" (testte ~50 ms), sonra "Kaydedildi ✓".
+- **Tablo:** "Tablo" düğmesi 10 × 8 kare ızgara açıyor; fareyle boyanıyor, altında "sütun × satır"; tıklayınca ekleniyor. Klavye: Enter ile açılır (odak ızgarada), oklar, Enter ekler, Esc kapatır. Satır/sütun ekle-sil "Tabloyu düzenle" menüsünde, yalnızca imleç tablodayken açılır. Tablo artık hep kendi satırına ekleniyor (dolu satırın ortasındayken satırı bölmüyor, hemen üstündeki tabloyla birleşmiyor).
+- **Testler:** `npm run test:ders-defteri` 153 kontrol (uzun notta çubuk ve durum görünür, imleç satırı görünür, tam ekran, koyu tema, 390 px; ızgaradan klavyeyle 2 × 2 ve fareyle 3 × 4 tablo); `tests/csp.mjs` ızgaradan tablo ekliyor.
+
+## 2026-11-23 · Ders defteri (#134, birleştirildi)
 
 - **Ne:** Google Docs yerine dersi siteden işlemek. Öğretmen: öğrenci sayfasında "Derse başla" (bugün takvimde ders varsa o derse bağlanır; varsa "Bugünün notunu aç" + "Yeni sayfa"), takvimdeki ders penceresinde "Ders defteri". Sayfa `ogretmen-ders.html`; başlık varsayılan "23.11.2026 – Ders", tıklayınca düzenlenir. Öğrenci: `ders-notlarim.html` (TR/DE/EN, "du"), panelde "Ders notlarım" (son 3); açık not canlı ve salt okunur, "Canlı" rozeti (son 3 dk).
 - **Veri:** `users/{uid}/lessonNotes/{id}` (title, day, lessonId, content = Quill Delta JSON, bytes, rev, createdAt, updatedAt). Kurallar: yalnızca öğretmen yazar/siler; onaylı öğrenci kendi notlarını okur. Öğrenci silinince notlar da silinir (`SUBCOLLECTIONS`).

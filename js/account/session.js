@@ -95,7 +95,7 @@ async function connect(){
     return;
   }
   // Yapay zekâ kontrolü: kayıttan sonra Worker'a sadece metnin kimliği gider; Worker metni kendisi okur ve sonucu döndürür.
-  // "Anında göster" modunda geri bildirim aynı sayfada görünür. Kontrol yapılamazsa (kapalı, taslak, 16 yaş altı onaysız,
+  // "Anında göster" modunda geri bildirim aynı sayfada görünür. Kontrol yapılamazsa (kapalı, bu sınavda kapalı ya da taslak, 16 yaş altı onaysız,
   // günlük sınır, hata) metin öğretmende kalır. Adres boşsa Worker hiç çağrılmaz.
   const workerUrl = emulator ? 'http://127.0.0.1:8787' : AI_WORKER_URL;
   const AI_TIMEOUT_MS = 75000;
@@ -118,7 +118,7 @@ async function connect(){
   const flag = (writingId, index) => fs.updateDoc(fs.doc(db, 'users', user.uid, 'writings', writingId), {
     aiFlags: fs.arrayUnion(index), aiFlaggedAt: fs.serverTimestamp()
   });
-  const AI_NOTES = { limit: ['wtAiLimit', 'error'], unavailable: ['wtAiFailed', 'error'], 'no-result': ['wtAiFailed', 'error'], error: ['wtAiFailed', 'error'], busy: ['wtAiFailed', 'error'] };
+  const AI_NOTES = { 'exam-off': ['wtAiExamOff', 'success'], limit: ['wtAiLimit', 'error'], unavailable: ['wtAiFailed', 'error'], 'no-result': ['wtAiFailed', 'error'], error: ['wtAiFailed', 'error'], busy: ['wtAiFailed', 'error'] };
   saveWriting = async (detail) => {
     let outcome;
     try{ outcome = await submitWriting({ db, fs, uid: user.uid, detail }); }

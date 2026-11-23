@@ -17,7 +17,7 @@ import { CSP } from './csp.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const check = process.argv.includes('--check');
 const SITEMAP_DATE = '2026-11-04';
-const V = { themeInit: 1, html: 1, style: 13, base: 15, landing: 1, app: 56, theme: 10, analytics: 7, a1lessons: 21, a1css: 9, grammarPages: 3, blog: 6 };
+const V = { themeInit: 1, html: 1, style: 13, base: 15, landing: 1, app: 57, theme: 10, analytics: 7, a1lessons: 21, a1css: 9, grammarPages: 3, blog: 6 };
 const OG_IMAGE = `${SITE}/images/og-bozkurt-academy.jpg`;
 
 const SECURITY = `

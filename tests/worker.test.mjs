@@ -2,7 +2,7 @@
 import { beforeEach, describe, test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import worker, { aiAllowed, directAllowed, LEVEL_NOTES, berlinDay, cleanResult, decode, encode, PROMPT, resetBotToken, TEXT_TYPES, userMessage } from '../worker/schreiben-kontrol.js';
+import worker, { aiAllowed, directAllowed, examAiMode, examKey, LEVEL_NOTES, berlinDay, cleanResult, decode, encode, PROMPT, resetBotToken, TEXT_TYPES, userMessage } from '../worker/schreiben-kontrol.js';
 
 const TEXT = 'Liebe Lena,\nseit drei Wochen ich wohne in Hamburg. Ich bin umgezogen, weil ich habe eine Stelle gefunden.\nLiebe Grüße\nAyşe';
 const DAY = berlinDay();
@@ -83,6 +83,34 @@ describe('Schreiben Worker', () => {
     delete docs['settings/ai'];
     assert.equal((await (await call()).json()).status, 'off');
     assert.equal(aiCalls.length, 0);
+  });
+
+  test('sınava özel ayar: Kapalı model çağırmaz (aiSkip exam-off), Taslak anında göster modunu taslağa çevirir', async () => {
+    docs['settings/ai'] = { mode: 'instant', exams: { 'goethe-b1': 'off' } };
+    assert.equal((await (await call()).json()).status, 'exam-off');
+    assert.equal(aiCalls.length, 0);
+    assert.equal(commits.length, 1);
+    assert.deepEqual(commits[0].writes[0].updateMask.fieldPaths, ['aiSkip']);
+    assert.equal(decode(commits[0].writes[0].update.fields.aiSkip), 'exam-off');
+
+    commits = [];
+    docs['settings/ai'] = { mode: 'instant', exams: { 'goethe-b1': 'draft', 'goethe-c1': 'off' } };
+    const body = await (await call()).json();
+    assert.equal(body.status, 'draft');
+    assert.equal(body.feedback, undefined);
+    assert.ok(commits[0].writes.some((w) => w.update.name.endsWith('aiDrafts/ayse1234567_w123456789012')));
+    assert.ok(!commits[0].writes.some((w) => w.update.name.endsWith('writings/w123456789012')));
+
+    // Başka bir sınavın ayarı ve tanınmayan değer etkilemez; genel mod kapalıysa sınav ayarı açamaz.
+    commits = [];
+    docs['settings/ai'] = { mode: 'instant', exams: { 'goethe-c1': 'off', 'goethe-b1': 'instant' } };
+    assert.equal((await (await call()).json()).status, 'instant');
+    docs['settings/ai'] = { mode: 'off', exams: { 'goethe-b1': 'draft' } };
+    assert.equal((await (await call()).json()).status, 'off');
+    assert.equal(examAiMode({ exams: { 'telc-c1': 'off' } }, { exam: 'telc', level: 'c1' }), 'off');
+    assert.equal(examAiMode({ exams: { 'testdaf-digital': 'draft' } }, { exam: 'testdaf', level: 'digital' }), 'draft');
+    assert.equal(examAiMode({}, { exam: 'goethe', level: 'c1' }), null);
+    assert.equal(examKey({ exam: 'goethe', level: 'c1' }), 'goethe-c1');
   });
 
   test('16 yaş altı: veli onayı ve yapay zekâ onayı olmadan model çağrılmaz', async () => {
@@ -251,6 +279,15 @@ describe('Schreiben Worker', () => {
     assert.doesNotMatch(PROMPT, /telc B2/);
     for (const name of ['DTZ A2-B1 · Teil 1 · X', 'Goethe B1 · Teil 1 · X', 'telc B1 · Teil 1 · X', 'Goethe A2 · Teil 1 · X']) assert.doesNotMatch(userMessage({ name, type: null }, 'x'), /Seviye notu/, name);
     assert.ok(Object.keys(LEVEL_NOTES).every((k) => k.endsWith(' ·')));
+  });
+
+  test('C1 notu genel talimatta değil, sadece Goethe C1 görevlerinin kullanıcı mesajında; doğru ileri yapıları korur', () => {
+    assert.doesNotMatch(PROMPT, /C1/);
+    const c1 = userMessage({ name: 'Goethe C1 · Teil 1 · Tempolimit auf Autobahnen?', type: TEXT_TYPES.forum }, 'Kaum ein Thema …');
+    assert.match(c1, /^Görev: Goethe C1 · Teil 1 · Tempolimit auf Autobahnen\?\nMetin türü: .+\nSeviye notu \(C1\): .+Konjunktiv I.+Partizipialattribut.+Funktionsverbgefüge.+Uzunluğu .+değerlendirme\.\nMetin:\nKaum ein Thema …$/);
+    for (const name of ['Goethe B2 · Teil 1 · X', 'telc B2 · Teil 1 · X']) assert.doesNotMatch(userMessage({ name, type: null }, 'x'), /Seviye notu \(C1\)/, name);
+    // telc C1 ya da TestDaF'a kendi notları eklenene kadar C1 notu gitmez.
+    for (const name of ['telc C1 · Teil 1 · X', 'TestDaF DIGITAL · Teil 1 · X']) assert.doesNotMatch(userMessage({ name, type: null }, 'x'), /Seviye notu/, name);
   });
 
   test('A2 kuralı sadece "Goethe A2 ·" görevleri için (DTZ "A2-B1" değil)', () => {

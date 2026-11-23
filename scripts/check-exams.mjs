@@ -42,8 +42,8 @@ function checkWriting(set, fail) {
   // Content points (Goethe B1 Teil 1, A1/A2) or none (Goethe B1 Teil 2 and 3: the task says what to write).
   if (!Array.isArray(set.points) || (set.points.length && (set.points.length < 2 || !set.points.every(text)))) fail('"points" must be empty or have at least two content points');
   // Forum posts answer an opinion from a guest book: { site?, author, time?, text }.
-  // Goethe B1 Teil 2 answers a guest-book opinion (post); Goethe B2 Teil 1 is a forum post on a topic with four points (no post).
-  if (set.textType === 'forum' && !(set.exam === 'goethe' && set.level === 'b2') && !(text(set.post?.author) && text(set.post?.text))) fail('"post" with author and text is needed for a forum task');
+  // Goethe B1 Teil 2 answers a guest-book opinion (post); Goethe B2 and C1 Teil 1 are forum posts on a topic with four points (no post).
+  if (set.textType === 'forum' && !(set.exam === 'goethe' && ['b2', 'c1'].includes(set.level)) && !(text(set.post?.author) && text(set.post?.text))) fail('"post" with author and text is needed for a forum task');
   if (set.post !== undefined && set.textType !== 'forum') fail('"post" is only for forum tasks');
   // Reply tasks (telc B1): the received e-mail { from, subject?, text }; "subjectLine": the answer starts with "Betreff: …".
   if (set.mail !== undefined && !(String(set.textType).startsWith('email-') && text(set.mail?.from) && text(set.mail?.text))) fail('"mail" needs from and text and an email textType');
@@ -142,6 +142,33 @@ function checkWriting(set, fail) {
       if (set.post !== undefined) fail('Goethe B2 Teil 1 has no guest-book post');
       if (!(Array.isArray(set.checklist) && set.checklist.some((item) => item?.criterion === 'aufbau' && /Kohärenz/.test(item.tr || '')))) fail('Goethe B2 checklist needs a Kohärenz item with B2 connectors');
       if (!(Array.isArray(set.redemittel) && set.redemittel.some((g) => /Kohärenz/.test(g?.group || '')))) fail('Goethe B2 Redemittel need a Kohärenz group');
+    }
+  }
+  // Goethe-Zertifikat C1 (modular Modellsatz, 2. Auflage Februar 2024): Schreiben 75 minutes, start with either part;
+  // Teil 1 Diskussionsbeitrag for an online forum (~230 words, suggested 50 min, four Sprachfunktionen, no post to answer),
+  // Teil 2 (semi-)formal message (~120 words, 25 min, four Sprachfunktionen). Criteria Aufgabenerfüllung, Kohärenz, Wortschatz,
+  // Strukturen (Teil 1 14/14/16/16, Teil 2 4 × 10 = 100); under 50 % of the words or off topic = 0 points for that part.
+  if (set.exam === 'goethe' && set.level === 'c1') {
+    const C1 = { 1: { textType: 'forum', min: 200, target: 230, max: 270, zero: 115, minutes: 50, words: 'circa 230 Wörter' },
+      2: { textType: 'email-semiformal', min: 100, target: 120, max: 145, zero: 60, minutes: 25, words: 'circa 120 Wörter' } }[set.teil];
+    if (!C1) fail('Goethe C1 Schreiben has Teil 1 and Teil 2 only');
+    else {
+      if (set.textType !== C1.textType) fail(`Goethe C1 Teil ${set.teil} needs textType "${C1.textType}"`);
+      if (set.points?.length !== 4) fail('Goethe C1 writing tasks have exactly four content points (Sprachfunktionen)');
+      if (set.words?.min !== C1.min || set.words?.target !== C1.target || set.words?.max !== C1.max || set.words?.zeroBelow !== C1.zero) fail(`Goethe C1 Teil ${set.teil} needs words ${C1.min}–${C1.max} (target ${C1.target}) and zeroBelow ${C1.zero}`);
+      if (set.minutes !== C1.minutes || set.sharedMinutes !== 75 || set.anyOrder !== true) fail(`Goethe C1 Teil ${set.teil} needs minutes ${C1.minutes}, sharedMinutes 75 and anyOrder`);
+      if (!String(set.instructions || '').includes(`Schreiben Sie ${C1.words}.`) || !/wie gut die Sätze und Abschnitte sprachlich miteinander verknüpft sind/.test(set.instructions || '')) fail(`Goethe C1 Teil ${set.teil} instructions need the official assessment sentence and "Schreiben Sie ${C1.words}."`);
+      if (set.post !== undefined) fail('Goethe C1 Teil 1 has no post to answer');
+      if (set.teil === 1 && !/^Für das Internetforum „[^“]+“ verfassen Sie einen Diskussionsbeitrag zu diesem Thema:$/.test(set.situation || '')) fail('Goethe C1 Teil 1 situation: "Für das Internetforum „…“ verfassen Sie einen Diskussionsbeitrag zu diesem Thema:"');
+      const model = String(set.model?.text || '');
+      if (set.teil === 2 && !(/^Sehr geehrte[r]? (Frau|Herr) /.test(model) && /\nMit freundlichen Grüßen\n/.test(model))) fail('Goethe C1 Teil 2 model answer needs "Sehr geehrte(r) Frau/Herr …" and "Mit freundlichen Grüßen"');
+      const n = countWords(model), [lo, hi] = set.teil === 1 ? [215, 245] : [110, 130];
+      if (n < lo || n > hi) fail(`Goethe C1 Teil ${set.teil} model answer should have ${lo}–${hi} words (has ${n})`);
+      const list = Array.isArray(set.checklist) ? set.checklist : [];
+      if (!list.some((item) => item?.criterion === 'aufbau' && /^Kohärenz:/.test(item.tr || ''))) fail('Goethe C1 checklist needs a "Kohärenz: …" item');
+      if (!(set.redemittel || []).some((g) => /^Kohärenz/.test(g?.group || ''))) fail('Goethe C1 Redemittel need a Kohärenz group');
+      if (set.teil === 2 && !list.some((item) => item?.criterion === 'aufgabe' && /^Register:/.test(item.tr || ''))) fail('Goethe C1 Teil 2 checklist needs a "Register: …" item (Aufgabenerfüllung includes register)');
+      if (!list.some((item) => new RegExp(`${C1.zero}'(ın|in) altı sınavda 0 puan`).test(item?.tr || ''))) fail(`Goethe C1 checklist must say that under ${C1.zero} words the part scores 0`);
     }
   }
   // DTZ (g.a.s.t. practice sets): one semi-formal or formal message, four content points, no subject line, no word limit.

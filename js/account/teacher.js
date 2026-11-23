@@ -1,8 +1,8 @@
 // ogretmen.html: öğrenci listesi, onay bekleyenler, veli onayı bekleyenler, silinmesi gereken kayıtlar.
-import { $, formatDateTime, BERLIN, h } from './common.js';
+import { $, formatDateTime, BERLIN, h, writingTasks } from './common.js';
 import {
   approve, categorize, emailVerified, fmtDate, lastLessonByStudent, listStudents,
-  AI_MODES, getAiMode, loadAiDrafts, loadAssignmentGroups, openDeleteDialog, pendingWritingsByStudent, setAiMode, requireTeacher, statusBadges, UNVERIFIED_WARNING
+  AI_MODES, EXAM_AI_MODES, examAiKey, getAiSettings, loadAiDrafts, loadAssignmentGroups, openDeleteDialog, pendingWritingsByStudent, setAiMode, setExamAiMode, requireTeacher, statusBadges, UNVERIFIED_WARNING
 } from './teacher-common.js';
 import { createModeration, permissionMessage } from './comments-moderation.js?v=2';
 import { AI_WORKER_URL } from './config.js';
@@ -56,10 +56,35 @@ function writingBadge(s){
 
 // Yapay zekâ modu (settings/ai): Anında göster (varsayılan; öğrenci hemen görür) / Taslak (öğrenci görmez) / Kapalı.
 const MODE_LABELS = { off: 'Kapalı: sadece ben geri bildirim yazarım', draft: 'Taslak: önce ben bakarım (öğrenci görmez)', instant: 'Anında göster: öğrenci geri bildirimi hemen görür (varsayılan)' };
+// Sınava özel ayar (settings/ai.exams): Schreiben görevi olan her sınav (Goethe C1, telc C1, TestDaF …) kendiliğinden listelenir.
+// "Açık" genel modu izler; "Taslak" ve "Kapalı" sadece o sınavın metinleri için geçerli.
+const EXAM_MODE_LABELS = { on: 'Açık (genel ayara göre)', draft: 'Taslak: ben onaylarım (öğrenci görmez)', off: 'Kapalı: sadece ben bakarım' };
+async function examAiSettings(exams){
+  const names = new Map();
+  for(const w of await writingTasks().catch(() => [])) if(!names.has(examAiKey(w))) names.set(examAiKey(w), w.title.split(' · ')[0]);
+  if(!names.size) return null;
+  const rows = [...names].map(([key, name]) => {
+    const id = `aiExam-${key}`;
+    const select = h('select', { id, 'data-ai-exam': key }, ...EXAM_AI_MODES.map((m) => h('option', { value: m, selected: m === (exams[key] || 'on') }, EXAM_MODE_LABELS[m])));
+    const status = h('span', { class: 'acc-sub', role: 'status' });
+    select.addEventListener('change', async () => {
+      select.disabled = true;
+      try{ await setExamAiMode(key, select.value); status.textContent = 'Kaydedildi.'; }
+      catch(error){ console.error(error); status.textContent = 'Kaydedilemedi. Tekrar dene.'; }
+      finally{ select.disabled = false; }
+    });
+    return h('div', { class: 'acc-ai-exam' }, h('label', { for: id }, name), select, status);
+  });
+  const open = Object.keys(exams).length > 0;
+  return h('details', { class: 'acc-ai-exams', 'data-ai-exams': '', ...(open ? { open: true } : {}) },
+    h('summary', {}, `Sınava göre ayar${open ? ` (${Object.keys(exams).length} sınavda farklı)` : ''}`),
+    h('p', { class: 'acc-sub' }, 'Açık: sınav yukarıdaki genel ayarı izler. Taslak: o sınavın sonuçları önce sana gelir. Kapalı: o sınavda yapay zekâ hiç çağrılmaz, yazılar doğrudan sana düşer. Genel ayar Kapalı ise bütün sınavlarda kapalıdır.'),
+    ...rows);
+}
 async function renderAiMode(){
   const box = $('aiMode');
-  let mode;
-  try{ mode = await getAiMode(); }catch(error){ console.warn(error); box.hidden = true; return; }
+  let mode, exams;
+  try{ ({ mode, exams } = await getAiSettings()); }catch(error){ console.warn(error); box.hidden = true; return; }
   const select = h('select', { id: 'aiModeSelect' }, ...AI_MODES.map((m) => h('option', { value: m, selected: m === mode }, MODE_LABELS[m])));
   const status = h('span', { class: 'acc-sub', role: 'status' });
   select.addEventListener('change', async () => {
@@ -71,6 +96,7 @@ async function renderAiMode(){
   // replaceChildren null'ı "null" yazısına çevirir; boş öğeler ayıklanır.
   box.replaceChildren(...[h('label', { for: 'aiModeSelect' }, h('strong', {}, 'Schreiben yapay zekâ kontrolü')), select, status,
     h('span', { class: 'acc-sub', 'data-ai-mode-hint': '' }, 'Anında göster: öğrenci geri bildirimi görev sayfasında hemen görür; sen sadece işaretlenen maddelere ve yapay zekânın kontrol edemediği yazılara bakarsın. 16 yaş altında veli onayı eski formla alınmışsa sonuç yine taslak olarak sana gelir.'),
+    await examAiSettings(exams),
     AI_WORKER_URL ? null : h('span', { class: 'acc-sub' }, 'Worker henüz kurulmadı (docs/yapay-zeka-kurulum.md); kurulana kadar kontrol yapılmaz.')].filter(Boolean));
   box.hidden = false;
 }

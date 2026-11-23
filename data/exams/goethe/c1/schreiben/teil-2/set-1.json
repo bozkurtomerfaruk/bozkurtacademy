@@ -1,0 +1,130 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "c1",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-1",
+  "title": "Überstunden ungleich verteilt",
+  "minutes": 25,
+  "sharedMinutes": 75,
+  "anyOrder": true,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "In Ihrer Abteilung werden seit Monaten viele Überstunden gemacht. Dabei fällt Ihnen auf, dass immer dieselben Kolleginnen und Kollegen – darunter Sie selbst – kurzfristig länger bleiben müssen, während andere nie gefragt werden.",
+  "task": "Schreiben Sie eine Beschwerde an Ihren Teamleiter, Herrn Albers.",
+  "points": [
+    "Eröffnen Sie Ihr Schreiben, indem Sie die hohe Arbeitsbelastung im Team anerkennen.",
+    "Beschreiben Sie, wie sich die Überstunden auf Sie auswirken.",
+    "Machen Sie auf die ungleiche Verteilung aufmerksam.",
+    "Schlagen Sie eine gerechtere Lösung vor."
+  ],
+  "instructions": "Bei der Bewertung wird darauf geachtet, wie genau die Inhaltspunkte bearbeitet sind, wie korrekt der Text ist und wie gut die Sätze und Abschnitte sprachlich miteinander verknüpft sind. Schreiben Sie circa 120 Wörter.",
+  "words": {
+    "target": 120,
+    "min": 100,
+    "max": 145,
+    "zeroBelow": 60
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: ekibin iş yükünü kabul ettim, fazla mesainin bana etkisi, eşitsiz dağılım, daha adil bir çözüm önerisi."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Register: Ekip liderine baştan sona Sie; şikâyet ediyorum ama suçlamadan, kibar ve net yazdım (Ich möchte Sie auf … aufmerksam machen; Ich würde vorschlagen, …)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap (Sehr geehrter Herr Albers,) ve selam (Mit freundlichen Grüßen + adım) var; hitaptan sonraki satır küçük harfle başlıyor."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kohärenz: Maddeleri bağladım: Mir ist bewusst, dass …; Dennoch …; Auffällig ist zudem, dass …; daher …"
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Her maddeye en az bir iki cümle yazdım; liste ya da numara kullanmadım. Yaklaşık 120 kelime (60'ın altı sınavda 0 puan)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "aufmerksam machen auf + Akkusativ: Ich möchte Sie auf ein Problem aufmerksam machen."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Relativsatz + Passiv: einen Plan, in dem Zusatzschichten reihum verteilt werden (fiil sonda)."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Sehr geehrter Herr … / Sehr geehrte Frau …,",
+          "tr": "Sayın … Bey / … Hanım,"
+        },
+        {
+          "de": "Mit freundlichen Grüßen",
+          "tr": "Saygılarımla"
+        }
+      ]
+    },
+    {
+      "group": "Verständnis zeigen und Problem schildern",
+      "items": [
+        {
+          "de": "Mir ist bewusst, dass … unter erheblichem Zeitdruck steht.",
+          "tr": "…'in büyük zaman baskısı altında olduğunun farkındayım"
+        },
+        {
+          "de": "Dennoch möchte ich Sie auf … aufmerksam machen.",
+          "tr": "Yine de dikkatinizi …'e çekmek istiyorum"
+        },
+        {
+          "de": "Das führt dazu, dass …",
+          "tr": "Bu, …'e yol açıyor"
+        }
+      ]
+    },
+    {
+      "group": "Vorschlag machen",
+      "items": [
+        {
+          "de": "Ich würde daher vorschlagen, …",
+          "tr": "Bu yüzden … önerirdim"
+        },
+        {
+          "de": "Gern bespreche ich das mit Ihnen persönlich.",
+          "tr": "Bunu sizinle yüz yüze konuşmaktan memnuniyet duyarım"
+        }
+      ]
+    },
+    {
+      "group": "Kohärenz: Text verknüpfen",
+      "items": [
+        {
+          "de": "Dennoch … / Allerdings …",
+          "tr": "Yine de … / Ancak … (fiil hemen arkasında)"
+        },
+        {
+          "de": "Auffällig ist zudem, dass …",
+          "tr": "Ayrıca dikkat çekici olan şu: …"
+        },
+        {
+          "de": "Nicht nur …, sondern auch …",
+          "tr": "Sadece … değil, … da"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Sehr geehrter Herr Albers,\nmir ist bewusst, dass unser Team angesichts der vielen Kundenprojekte derzeit unter erheblichem Zeitdruck steht und Sie die Arbeit bestmöglich organisieren müssen. Dennoch möchte ich Sie auf ein Problem aufmerksam machen.\nIn den letzten drei Monaten habe ich über 40 Überstunden geleistet, häufig mit nur einem Tag Vorlauf. Das erschwert nicht nur die Betreuung meiner Kinder, sondern führt auch dazu, dass ich mich zunehmend erschöpft fühle.\nAuffällig ist zudem, dass fast immer dieselben vier Kolleginnen und Kollegen gebeten werden, länger zu bleiben, während andere kaum betroffen sind.\nIch würde daher vorschlagen, einen transparenten Plan einzuführen, in dem Zusatzschichten reihum verteilt werden. Gern bespreche ich das mit Ihnen persönlich.\nMit freundlichen Grüßen\nDeniz Aydın",
+    "notes": [
+      "Dört madde: iş yükünü kabul (unter erheblichem Zeitdruck), etkisi (40 Überstunden, Kinder, erschöpft), eşitsiz dağılım (immer dieselben vier), öneri (transparenter Plan, reihum).",
+      "Amire şikâyet: önce anlayış (Mir ist bewusst, dass …), sonra Dennoch ile sorun; suçlama yok.",
+      "angesichts + Genitiv: angesichts der vielen Kundenprojekte."
+    ]
+  }
+}

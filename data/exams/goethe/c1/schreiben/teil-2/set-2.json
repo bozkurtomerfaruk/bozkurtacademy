@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "c1",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-2",
+  "title": "Jobticket wird gestrichen",
+  "minutes": 25,
+  "sharedMinutes": 75,
+  "anyOrder": true,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "Ihre Firma hat angekündigt, das Jobticket – einen Zuschuss zur Monatskarte für Bus und Bahn – zum Jahresende abzuschaffen, um Kosten zu sparen. Sie fahren jeden Tag mit der Bahn zur Arbeit.",
+  "task": "Schreiben Sie eine Nachricht an die Personalabteilung, Frau Neumann.",
+  "points": [
+    "Zeigen Sie Verständnis für die Sparmaßnahmen des Unternehmens.",
+    "Erläutern Sie, welche Nachteile die Entscheidung für Sie und andere hat.",
+    "Weisen Sie auf mögliche Folgen für das Unternehmen hin.",
+    "Machen Sie einen alternativen Vorschlag."
+  ],
+  "instructions": "Bei der Bewertung wird darauf geachtet, wie genau die Inhaltspunkte bearbeitet sind, wie korrekt der Text ist und wie gut die Sätze und Abschnitte sprachlich miteinander verknüpft sind. Schreiben Sie circa 120 Wörter.",
+  "words": {
+    "target": 120,
+    "min": 100,
+    "max": 145,
+    "zeroBelow": 60
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: tasarrufa anlayış, bana ve başkalarına zararları, firmaya olası sonuçları, başka bir öneri."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Register: Personel bölümüne baştan sona Sie; itiraz ediyorum ama kibar yazdım (Wäre es nicht denkbar, …? Alternativ könnte man …)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap (Sehr geehrte Frau Neumann,) ve selam (Mit freundlichen Grüßen + adım) var; hitaptan sonraki satır küçük harfle başlıyor."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kohärenz: Maddeleri bağladım: Ich kann durchaus nachvollziehen, dass …; allerdings; Zudem befürchte ich, dass …; Da …; Alternativ …"
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Her maddeye en az bir iki cümle yazdım; liste ya da numara kullanmadım. Yaklaşık 120 kelime (60'ın altı sınavda 0 puan)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "statt … zu + Infinitiv: den Zuschuss zu reduzieren, statt ihn ganz zu streichen."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Konjunktiv II ile olası sonuç: Konflikte wären vorprogrammiert; das Ziel würde in weite Ferne rücken."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Sehr geehrte Frau … / Sehr geehrter Herr …,",
+          "tr": "Sayın … Hanım / … Bey,"
+        },
+        {
+          "de": "Mit freundlichen Grüßen",
+          "tr": "Saygılarımla"
+        }
+      ]
+    },
+    {
+      "group": "Verständnis und Nachteile",
+      "items": [
+        {
+          "de": "Mit Bedauern habe ich erfahren, dass …",
+          "tr": "… olduğunu üzülerek öğrendim"
+        },
+        {
+          "de": "Ich kann durchaus nachvollziehen, dass …",
+          "tr": "… olduğunu gayet iyi anlayabiliyorum"
+        },
+        {
+          "de": "Für mich bedeutet die Entscheidung allerdings …",
+          "tr": "Benim için bu karar ise … anlamına geliyor"
+        }
+      ]
+    },
+    {
+      "group": "Folgen und Alternative",
+      "items": [
+        {
+          "de": "Zudem befürchte ich, dass …",
+          "tr": "Ayrıca …'den endişe ediyorum"
+        },
+        {
+          "de": "Wäre es nicht denkbar, …?",
+          "tr": "… mümkün olmaz mıydı?"
+        },
+        {
+          "de": "Alternativ könnte man …",
+          "tr": "Alternatif olarak … yapılabilirdi"
+        }
+      ]
+    },
+    {
+      "group": "Kohärenz: Text verknüpfen",
+      "items": [
+        {
+          "de": "Zudem … / Außerdem …",
+          "tr": "Ayrıca … (fiil hemen arkasında)"
+        },
+        {
+          "de": "Da …, …",
+          "tr": "… olduğu için … (da'dan sonra fiil sonda)"
+        },
+        {
+          "de": "…, statt … zu …",
+          "tr": "… yerine …"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Sehr geehrte Frau Neumann,\nmit Bedauern habe ich erfahren, dass das Jobticket zum Jahresende abgeschafft werden soll. Ich kann durchaus nachvollziehen, dass das Unternehmen in der aktuellen wirtschaftlichen Lage sparen muss.\nFür mich bedeutet die Entscheidung allerdings Mehrkosten von rund 50 Euro im Monat. Kolleginnen und Kollegen mit geringerem Gehalt trifft sie sogar noch härter.\nZudem befürchte ich, dass künftig deutlich mehr Beschäftigte mit dem Auto kommen. Da Parkplätze schon jetzt knapp sind, wären Konflikte vorprogrammiert, und das Klimaziel, das sich die Firma selbst gesetzt hat, würde in weite Ferne rücken.\nWäre es nicht denkbar, den Zuschuss zu reduzieren, statt ihn ganz zu streichen? Alternativ könnte man ihn auf Beschäftigte beschränken, die weiter als zehn Kilometer entfernt wohnen.\nMit freundlichen Grüßen\nJonas Weber",
+    "notes": [
+      "Dört madde: anlayış (in der aktuellen wirtschaftlichen Lage), zararlar (50 Euro, geringeres Gehalt), firmaya sonuçlar (Autos, Parkplätze, Klimaziel), öneri (reduzieren statt streichen, zehn Kilometer).",
+      "Kibar itiraz: Wäre es nicht denkbar, …? (Konjunktiv II soru).",
+      "sich ein Ziel setzen: das Klimaziel, das sich die Firma selbst gesetzt hat."
+    ]
+  }
+}

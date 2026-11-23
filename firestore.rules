@@ -176,6 +176,13 @@ service cloud.firestore {
       return get(/databases/$(database)/documents/settings/ai).data.mode;
     }
 
+    // Sınava özel ayar (settings/ai.exams, öğretmen sayfası): anahtar "<sınav>-<seviye>" (ör. goethe-c1), değer 'draft' | 'off'.
+    // Anahtar yoksa 'on': sınav genel modu izler. Ayar sadece daha sıkı olabilir.
+    function examAiMode(w) {
+      return get(/databases/$(database)/documents/settings/ai).data.get('exams', {})
+        .get(w.get('exam', '') + '-' + w.get('level', ''), 'on');
+    }
+
     // 16 yaş altında geri bildirim ancak yeni formla (sürüm 2: "doğrudan gösterilir") alınmış veli onayıyla doğrudan gösterilir.
     function aiDirectAllowed(uid) {
       let u = get(/databases/$(database)/documents/users/$(uid)).data;
@@ -189,16 +196,18 @@ service cloud.firestore {
         && !('aiAt' in resource.data)
         && d.aiAt == request.time
         && aiMode() == 'instant'
+        && examAiMode(resource.data) == 'on'
         && aiDirectAllowed(uid)
         && validAiResult(d.aiFeedback);
     }
 
-    // Kontrol yapılamadıysa Worker nedenini bir kez yazar: veli/öğrenci onayı yok, günlük sınır, servis hatası.
+    // Kontrol yapılamadıysa Worker nedenini bir kez yazar: veli/öğrenci onayı yok, günlük sınır, servis hatası,
+    // bu sınavda yapay zekâ kapalı (exam-off).
     function validAiSkip() {
       let d = request.resource.data;
       return d.diff(resource.data).affectedKeys().hasOnly(['aiSkip'])
         && !('aiSkip' in resource.data) && !('aiAt' in resource.data)
-        && d.aiSkip in ['consent', 'limit', 'error'];
+        && d.aiSkip in ['consent', 'limit', 'error', 'exam-off'];
     }
 
     // "Bu açıklama yanlış görünüyor": öğrenci yapay zekâ maddelerinin sıra numaralarını (0'dan) işaretler; sadece ekleyebilir.
@@ -358,6 +367,8 @@ service cloud.firestore {
         && request.resource.data.createdAt == request.time
         // "Anında göster" modunda da: 16 yaş altında eski formla alınmış onayda sonuç taslak olarak öğretmene gider.
         && aiMode() in ['draft', 'instant']
+        // Sınava özel "Kapalı": o sınavın metinleri için taslak da yazılmaz.
+        && examAiMode(get(/databases/$(database)/documents/users/$(request.resource.data.uid)/writings/$(request.resource.data.writingId)).data) != 'off'
         && validAiResult({ 'errors': request.resource.data.errors, 'correctedText': request.resource.data.correctedText, 'model': request.resource.data.model });
     }
 
@@ -372,7 +383,7 @@ service cloud.firestore {
         && request.resource.data.updatedAt == request.time;
     }
 
-    // settings/ai: { mode: 'off' | 'draft' | 'instant' }. Öğretmen yazar (genel kural); yapay zekâ hesabı okur.
+    // settings/ai: { mode: 'off' | 'draft' | 'instant', exams?: { '<sınav>-<seviye>': 'draft' | 'off' } }. Öğretmen yazar (genel kural); yapay zekâ hesabı okur.
     match /settings/{name} {
       allow get: if isAi() && name == 'ai';
     }

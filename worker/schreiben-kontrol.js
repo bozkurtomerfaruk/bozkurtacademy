@@ -291,8 +291,21 @@ async function taskInfo(env, w) {
 export const LEVEL_NOTES = {
   'Goethe B2 ·': 'Seviye notu (B2): Konjunktiv II, Passiv, Relativsatz, Nominalisierung ve bağlaç (einerseits … andererseits, darüber hinaus, trotzdem, je … desto) hatalarını da işaretle. Teil 2\'de amire ya da iş arkadaşına baştan sona Sie.',
   // telc Deutsch B2 (tek Teil): ilana göre firmaya bilgi isteme ya da şikâyet e-postası, Betreff satırıyla, en az 150 kelime.
-  'telc B2 ·': 'Seviye notu (B2): Konjunktiv II, Passiv, Relativsatz, Nominalisierung ve bağlaç (einerseits … andererseits, darüber hinaus, trotzdem, obwohl) hatalarını da işaretle. Firmaya baştan sona Sie; "Betreff:" satırı doğrudur. Metin kısa ya da uzun olabilir, uzunluğu ve hangi maddelerin yazıldığını değerlendirme.'
+  'telc B2 ·': 'Seviye notu (B2): Konjunktiv II, Passiv, Relativsatz, Nominalisierung ve bağlaç (einerseits … andererseits, darüber hinaus, trotzdem, obwohl) hatalarını da işaretle. Firmaya baştan sona Sie; "Betreff:" satırı doğrudur. Metin kısa ya da uzun olabilir, uzunluğu ve hangi maddelerin yazıldığını değerlendirme.',
+  // Goethe-Zertifikat C1: Teil 1 forum yazısı (~230 kelime), Teil 2 amire ya da bir bölüme (yarı) resmî mesaj (~120 kelime).
+  // C1 metinlerindeki doğru ileri yapılar (Konjunktiv I, Partizipialattribut …) yanlış alarm riski taşıyor: not bunları korur.
+  'Goethe C1 ·': 'Seviye notu (C1): Metin ileri düzeydedir. Doğru olan ileri yapılara dokunma: Nominalstil (die Einführung eines …), dolaylı aktarmada Konjunktiv I (Kritiker meinen, es sei/habe/bringe …), Konjunktiv II, uzun Partizipialattribut (die seit Jahren steigenden Mieten), Funktionsverbgefüge (zur Folge haben, in Kauf nehmen, einen Beitrag leisten), nesneyle başlayan cümle ve uzun yan cümleler. Sadece gerçek hataları işaretle: çekim, hâl, edat, özne-fiil uyumu, fiil yeri, yazım. Teil 2\'de amire ya da kuruma baştan sona Sie; hitaptan sonraki satırın küçük harfle başlaması doğrudur. Uzunluğu ve hangi maddelerin yazıldığını değerlendirme.'
 };
+// Sınava özel yapay zekâ ayarı (settings/ai.exams, öğretmen sayfasında): { 'goethe-c1': 'draft' | 'off' }. Anahtar yoksa
+// sınav genel modu izler ("Açık"). Ayar sadece daha sıkı olabilir: genel mod kapalıysa her sınavda kapalı, taslaksa taslak.
+// 'off': model hiç çağrılmaz, metne aiSkip 'exam-off' yazılır (öğretmen sayacına düşer); 'draft': sonuç sadece aiDrafts'a gider.
+export const EXAM_AI_MODES = ['draft', 'off'];
+export const examKey = (w) => `${w?.exam}-${w?.level}`;
+export const examAiMode = (settings, w) => {
+  const value = settings?.exams?.[examKey(w)];
+  return EXAM_AI_MODES.includes(value) ? value : null;
+};
+
 const levelNote = (name) => Object.entries(LEVEL_NOTES).find(([prefix]) => String(name).startsWith(prefix))?.[1];
 export const userMessage = (task, text) => {
   const note = levelNote(task.name);
@@ -574,8 +587,10 @@ export default {
           }]);
         } catch (error) { console.error('skip', String(error)); }
       };
+      const examMode = examAiMode(settings.data, w);
+      if (examMode === 'off') { await skip('exam-off'); return json({ status: 'exam-off' }, 200, okOrigin); }
       if (!aiAllowed(profile?.data)) { await skip('consent'); return json({ status: 'not-allowed' }, 200, okOrigin); }
-      const mode = settingsMode === 'instant' && !directAllowed(profile.data) ? 'draft' : settingsMode;
+      const mode = examMode === 'draft' || (settingsMode === 'instant' && !directAllowed(profile.data)) ? 'draft' : settingsMode;
 
       const day = berlinDay();
       const [mine, all] = await Promise.all([store.get(`aiLimits/${uid}`), store.get('aiLimits/_global')]);

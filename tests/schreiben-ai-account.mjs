@@ -414,11 +414,52 @@ await mctx2.close();
 }
 await setLimit('ogrenci1', 1);
 
+// 8k. Sınava özel ayar (settings/ai.exams): Schreiben görevi olan her sınav listelenir; "Kapalı" o sınavda yapay zekâyı hiç
+// çağırmaz (aiSkip exam-off, öğretmen sayacına düşer), "Taslak" sadece o sınavın sonucunu taslağa çevirir, "Açık" genel modu izler.
+{
+  await teacher.goto(`${BASE}/ogretmen.html`); await teacher.waitForSelector('[data-ai-exams] select', { timeout: 15000 }).catch(() => {});
+  const keys = await teacher.locator('[data-ai-exam]').evaluateAll((els) => els.map((e) => e.dataset.aiExam));
+  ok(['goethe-a1', 'goethe-a2', 'goethe-b1', 'goethe-b2', 'goethe-c1', 'telc-a1', 'telc-b2', 'dtz-a2-b1'].every((k) => keys.includes(k)) && new Set(keys).size === keys.length
+    && await teacher.locator('#aiExam-goethe-c1 option').count() === 3 && await teacher.inputValue('#aiExam-goethe-c1') === 'on', 'öğretmen: Schreiben sınavları listede, her biri Açık / Taslak / Kapalı, varsayılan Açık');
+  ok((await teacher.textContent('label[for="aiExam-goethe-c1"]')).trim() === 'Goethe C1' && await teacher.inputValue('#aiModeSelect') === 'instant', 'sınav adı okunur; genel mod değişmedi');
+  await teacher.click('[data-ai-exams] summary');
+  await teacher.selectOption('#aiExam-goethe-b1', 'off'); await teacher.waitForTimeout(1000);
+  let s = plain(await getDocRest('settings/ai'));
+  ok(s.mode === 'instant' && s.exams.fields['goethe-b1'].stringValue === 'off' && (await teacher.textContent('[data-ai-exams]')).includes('Kaydedildi.'), 'Goethe B1 "Kapalı" kaydedildi (settings/ai.exams), genel mod "Anında göster" kaldı');
+  const calls = aiCalls.length;
+  ok(await submit(student) === 'exam-off' && aiCalls.length === calls, 'Kapalı sınavda yapay zekâ çağrılmadı (Worker: exam-off)');
+  await student.waitForSelector('.wt-status.success', { timeout: 15000 }).catch(() => {});
+  ok((await student.textContent('[data-wt-status]')).includes('Bu sınavda yapay zekâ kontrolü kapalı') && await student.locator('[data-wf]').count() === 0 && await student.locator('[data-wt-model]').count() === 1, 'öğrenci: "bu sınavda yapay zekâ kapalı" notu ve örnek cevap');
+  const off = await latestWriting('ogrenci1');
+  ok(off.aiSkip === 'exam-off' && !off.aiAt, 'metne aiSkip: exam-off yazıldı');
+  await teacher.goto(`${BASE}/ogretmen-ogrenci.html?id=ogrenci1#yazilar`); await teacher.waitForSelector('[data-writing-waiting="exam-off"]', { timeout: 15000 }).catch(() => {});
+  ok((await teacher.textContent('[data-writing-waiting="exam-off"]').catch(() => '')).includes('bu sınavda yapay zekâ kapalı'), 'öğretmenin öğrenci sayfasında neden: "bu sınavda yapay zekâ kapalı"');
+  await teacher.goto(`${BASE}/ogretmen.html`); await teacher.waitForSelector('#aiExam-goethe-b1', { timeout: 15000 });
+  ok(await teacher.locator('[data-ai-exams][open]').count() === 1 && (await teacher.textContent('[data-ai-exams] summary')).includes('1 sınavda farklı') && await teacher.inputValue('#aiExam-goethe-b1') === 'off', 'öğretmen: farklı ayar varken bölüm açık ve sayısı yazıyor');
+  await teacher.selectOption('#aiExam-goethe-b1', 'draft'); await teacher.waitForTimeout(1000);
+  const drafts = (await listDocs('aiDrafts')).length;
+  ok(await submit(student) === 'draft' && (await listDocs('aiDrafts')).length === drafts + 1 && !(await latestWriting('ogrenci1')).aiFeedback, 'Taslak sınavda sonuç sadece taslak (genel mod "Anında göster" iken)');
+  await student.waitForSelector('.wt-status.success', { timeout: 15000 }).catch(() => {});
+  ok(await student.locator('[data-wf]').count() === 0, 'öğrenci taslağı görmüyor');
+  await teacher.selectOption('#aiExam-goethe-b1', 'on'); await teacher.selectOption('#aiExam-goethe-c1', 'off'); await teacher.waitForTimeout(1200);
+  s = plain(await getDocRest('settings/ai'));
+  ok(!('goethe-b1' in s.exams.fields) && s.exams.fields['goethe-c1'].stringValue === 'off', '"Açık" anahtarı siler (genel modu izler); Goethe C1 Kapalı');
+  for (const [width, theme] of [[390, 'light'], [390, 'dark'], [1440, 'dark']]) {
+    const { ctx, page } = await newPage(width, theme);
+    await signIn(page, 'ogretmen@example.com', 'ogretmen123', 'teacher');
+    await page.goto(`${BASE}/ogretmen.html`); await page.waitForSelector('#aiExam-goethe-c1', { timeout: 15000 });
+    ok(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth) <= 0, `${width} ${theme}: öğretmen sınav ayarlarında taşma yok`);
+    await page.locator('[data-ai-exams]').screenshot({ path: path.join(shotDir, `sinav-ayari-${width}-${theme}.png`) });
+    await ctx.close();
+  }
+}
+
 // 9. Kapalı: Worker hiçbir şey yapmaz.
 await teacher.goto(`${BASE}/ogretmen.html`); await teacher.waitForSelector('#aiModeSelect', { timeout: 15000 });
 await teacher.selectOption('#aiModeSelect', 'off'); await teacher.waitForTimeout(1000);
 const callsBefore = aiCalls.length;
 ok(await submit(student) === 'off' && aiCalls.length === callsBefore, 'Kapalı modunda yapay zekâ çağrılmıyor');
+ok(plain(await getDocRest('settings/ai')).exams?.fields?.['goethe-c1']?.stringValue === 'off', 'genel mod değişince sınava özel ayar silinmedi');
 await sctx.close();
 await tctx.close();
 

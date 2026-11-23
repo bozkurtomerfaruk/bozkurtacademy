@@ -1,0 +1,130 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "c1",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-5",
+  "title": "Urlaubssperre im Sommer",
+  "minutes": 25,
+  "sharedMinutes": 75,
+  "anyOrder": true,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "Ihre Vorgesetzte hat per Rundmail mitgeteilt, dass wegen eines Großprojekts im Juli und August niemand Urlaub nehmen darf. Sie haben Ihren dreiwöchigen Urlaub im Juli bereits im Januar beantragt; er wurde damals genehmigt.",
+  "task": "Schreiben Sie eine Nachricht an Ihre Vorgesetzte, Frau Lindner.",
+  "points": [
+    "Zeigen Sie Verständnis für die Bedeutung des Projekts.",
+    "Erklären Sie, warum die Urlaubssperre für Sie problematisch ist.",
+    "Beschreiben Sie, wie Sie das Projekt trotzdem unterstützen könnten.",
+    "Bitten Sie um ein persönliches Gespräch."
+  ],
+  "instructions": "Bei der Bewertung wird darauf geachtet, wie genau die Inhaltspunkte bearbeitet sind, wie korrekt der Text ist und wie gut die Sätze und Abschnitte sprachlich miteinander verknüpft sind. Schreiben Sie circa 120 Wörter.",
+  "words": {
+    "target": 120,
+    "min": 100,
+    "max": 145,
+    "zeroBelow": 60
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: projenin önemine anlayış, izin yasağının bana sorunu, projeye yine de nasıl destek olurum, yüz yüze görüşme ricası."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Register: Amirime baştan sona Sie; kendi durumumu anlattım ama talep ederken kibar kaldım (Hätten Sie … Zeit …? Gern bin ich bereit, …)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap (Sehr geehrte Frau Lindner,) ve selam (Mit freundlichen Grüßen + adım) var; hitaptan sonraki satır küçük harfle başlıyor."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kohärenz: Maddeleri bağladım: Mir ist bewusst, wie …; Allerdings …; Da …; trotzdem; um … zu …"
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Her maddeye en az bir iki cümle yazdım; liste ya da numara kullanmadım. Yaklaşık 120 kelime (60'ın altı sınavda 0 puan)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Plusquamperfekt + Passiv: Den Urlaub hatte ich bereits im Januar beantragt, und er wurde damals genehmigt."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "einen Beitrag leisten, Aufgaben übernehmen (Funktionsverbgefüge); Konjunktiv II: Ich könnte … übernehmen."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Sehr geehrte Frau … / Sehr geehrter Herr …,",
+          "tr": "Sayın … Hanım / … Bey,"
+        },
+        {
+          "de": "Mit freundlichen Grüßen",
+          "tr": "Saygılarımla"
+        }
+      ]
+    },
+    {
+      "group": "Verständnis und Problem",
+      "items": [
+        {
+          "de": "Mir ist bewusst, wie wichtig … ist.",
+          "tr": "…'in ne kadar önemli olduğunun farkındayım"
+        },
+        {
+          "de": "Allerdings trifft mich … besonders hart.",
+          "tr": "Ancak … beni özellikle zor durumda bırakıyor"
+        }
+      ]
+    },
+    {
+      "group": "Unterstützung anbieten und um ein Gespräch bitten",
+      "items": [
+        {
+          "de": "Gern bin ich bereit, meinen Beitrag zu leisten: …",
+          "tr": "Katkımı sunmaya seve seve hazırım: …"
+        },
+        {
+          "de": "Ich könnte vor meiner Abreise zusätzliche Aufgaben übernehmen.",
+          "tr": "Gitmeden önce ek görevler üstlenebilirim"
+        },
+        {
+          "de": "Hätten Sie in den nächsten Tagen Zeit für ein kurzes Gespräch?",
+          "tr": "Önümüzdeki günlerde kısa bir görüşme için vaktiniz olur mu?"
+        }
+      ]
+    },
+    {
+      "group": "Kohärenz: Text verknüpfen",
+      "items": [
+        {
+          "de": "Allerdings … / trotzdem …",
+          "tr": "Ancak … / yine de …"
+        },
+        {
+          "de": "Da …, …",
+          "tr": "… olduğu için … (fiil sonda)"
+        },
+        {
+          "de": "…, um … zu …",
+          "tr": "… için (amaç)"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Sehr geehrte Frau Lindner,\nvielen Dank für Ihre Rundmail. Mir ist bewusst, wie wichtig das Großprojekt für unser Unternehmen ist und dass im Sommer jede helfende Hand gebraucht wird.\nAllerdings trifft mich die Urlaubssperre besonders hart. Meinen dreiwöchigen Urlaub im Juli hatte ich bereits im Januar beantragt, und er wurde damals genehmigt. Da wir die Familie meiner Frau in der Türkei besuchen, sind die Flüge längst gebucht und könnten nur mit hohen Kosten storniert werden.\nGern bin ich bereit, meinen Beitrag zum Projekt trotzdem zu leisten: Ich könnte vor meiner Abreise zusätzliche Aufgaben übernehmen und eine ausführliche Übergabe für meine Vertretung vorbereiten.\nHätten Sie in den nächsten Tagen Zeit für ein kurzes Gespräch, um gemeinsam eine Lösung zu finden?\nMit freundlichen Grüßen\nMurat Yılmaz",
+    "notes": [
+      "Dört madde: anlayış (jede helfende Hand), sorun (im Januar beantragt, genehmigt, Flüge gebucht), destek (zusätzliche Aufgaben, Übergabe), görüşme ricası (Hätten Sie … Zeit …?).",
+      "Plusquamperfekt: hatte ich bereits im Januar beantragt (Ocak'ta, Rundmail'den önce).",
+      "Kibar rica Konjunktiv II ile: Hätten Sie …? (Haben Sie …? yerine)."
+    ]
+  }
+}

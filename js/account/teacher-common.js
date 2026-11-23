@@ -233,7 +233,7 @@ const SUBCOLLECTIONS = ['results', 'assignments', 'resources', 'lessons', 'lesso
 export const flaggedCount = (w) => (!w.feedbackAt && w.aiFeedback && Array.isArray(w.aiFlags) ? w.aiFlags.length : 0);
 export const needsTeacher = (w) => !w.feedbackAt && (!w.aiFeedback || flaggedCount(w) > 0);
 // Yapay zekâ neden kontrol etmedi (Worker yazar: aiSkip).
-export const AI_SKIP_LABELS = { consent: 'yapay zekâ onayı yok', limit: 'günlük sınır dolmuştu', error: 'servis hatası' };
+export const AI_SKIP_LABELS = { consent: 'yapay zekâ onayı yok', limit: 'günlük sınır dolmuştu', error: 'servis hatası', 'exam-off': 'bu sınavda yapay zekâ kapalı' };
 
 // uid → { total, flagged } : bakılması gereken yazı sayısı ve bunlardan öğrencinin işaretledikleri.
 export async function pendingWritingsByStudent(){
@@ -280,16 +280,27 @@ export async function approveAiDraft(uid, writingId, { note, items, correctedTex
 export const deleteAiDraft = (uid, writingId) => fs.deleteDoc(fs.doc(db, 'aiDrafts', `${uid}_${writingId}`));
 
 // settings/ai.mode: 'off' | 'draft' | 'instant'. Belge yoksa varsayılan 'instant' ile oluşturulur (öğrenci hemen görür).
+// settings/ai.exams: sınava özel ayar { '<sınav>-<seviye>': 'draft' | 'off' } (ör. goethe-c1); anahtar yoksa "Açık", yani
+// sınav genel modu izler. Worker ve firestore.rules aynı anahtarı okur; ayar genel moddan sadece daha sıkı olabilir.
 export const AI_MODES = ['off', 'draft', 'instant'];
-export async function getAiMode(){
+export const EXAM_AI_MODES = ['on', 'draft', 'off'];
+export async function getAiSettings(){
   const ref = fs.doc(db, 'settings', 'ai');
   const snap = await fs.getDoc(ref);
-  const mode = snap.exists() ? snap.data().mode : null;
-  if(AI_MODES.includes(mode)) return mode;
-  await fs.setDoc(ref, { mode: 'instant', updatedAt: fs.serverTimestamp() });
-  return 'instant';
+  const data = snap.exists() ? snap.data() : {};
+  const exams = Object.fromEntries(Object.entries(data.exams || {}).filter(([, v]) => v === 'draft' || v === 'off'));
+  if(AI_MODES.includes(data.mode)) return { mode: data.mode, exams };
+  await fs.setDoc(ref, { mode: 'instant', updatedAt: fs.serverTimestamp() }, { merge: true });
+  return { mode: 'instant', exams };
 }
-export const setAiMode = (mode) => fs.setDoc(fs.doc(db, 'settings', 'ai'), { mode, updatedAt: fs.serverTimestamp() });
+// merge: sınava özel ayarlar genel mod değişince silinmesin.
+export const setAiMode = (mode) => fs.setDoc(fs.doc(db, 'settings', 'ai'), { mode, updatedAt: fs.serverTimestamp() }, { merge: true });
+// key: "<sınav>-<seviye>" (examAiKey); value 'on' anahtarı siler (genel modu izler).
+export const examAiKey = ({ exam, level }) => `${exam}-${level}`;
+export function setExamAiMode(key, value){
+  if(!/^[a-z0-9]+-[a-z0-9-]+$/.test(key) || !EXAM_AI_MODES.includes(value)) throw new Error('exam ai mode');
+  return fs.updateDoc(fs.doc(db, 'settings', 'ai'), { [`exams.${key}`]: value === 'on' ? fs.deleteField() : value, updatedAt: fs.serverTimestamp() });
+}
 
 // 16 yaş altı: yapay zekâ ile kontrol için velinin ayrı ve isteğe bağlı onayı. given:false = onay geri çekildi.
 // version: veli onay formunun sürümü. 2 = "geri bildirim öğretmen onayı olmadan doğrudan gösterilir" (docs/veli-onay-formu.md).

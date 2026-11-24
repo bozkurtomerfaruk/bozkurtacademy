@@ -503,10 +503,48 @@ for (const [l, title, submit, count] of [['de', 'Dein Text', 'Abschicken und Mus
   }
 }
 
+// 6k. telc Deutsch C1 Hochschule: tek görev, 70 dk; Seminararbeit, iki Zitat (zorunlu değil), Einleitung/Hauptteil/Schluss;
+// en az 350 kelime (350–450 iyi, altında resmî alt sınır uyarısı); "iki temadan birini seçersin" notu; sonuçlar setler arasında değişiyor.
+{
+  const { ctx, page } = await newPage();
+  await page.goto(B + '#exams/telc/c1/schreiben'); await page.waitForTimeout(1000);
+  const list = await page.textContent('#examView');
+  ok(['Wahlrecht ab 16', 'Schuluniformen', 'Privates Silvesterfeuerwerk', 'Zoos und Artenschutz', 'Bedingungsloses Grundeinkommen', 'Seminer yazısı'].every((x) => list.includes(x)), 'telc C1: 5 set ve Teil adı listede');
+  await page.goto(B + '#exams/telc/c1/schreiben/1/set-1'); await page.waitForTimeout(1000);
+  const task = await page.textContent('.wt-task');
+  ok(task.includes('In einer Seminararbeit sollen Sie das Thema „Wahlrecht ab 16“') && (await page.textContent('.wt-task strong')).includes('Einleitung, Hauptteil und Schluss') && await page.locator('.wt-quotes blockquote').count() === 2 && await page.locator('.wt-points li').count() === 0, 'telc C1: Seminararbeit durumu, resmî görev cümlesi, iki alıntı, madde yok');
+  const choice = await page.textContent('[data-wt-choice]');
+  ok(choice.includes('iki temadan') && choice.includes('birini seçersin') && choice.includes('Alıntılar sadece fikir verir') && (await page.textContent('.wt-instructions')).includes('mindestens 350 Wörter'), 'telc C1: "iki temadan birini seçersin" notu ve resmî "mindestens 350 Wörter"');
+  ok((await page.textContent('.task-meta')).includes('70') && (await page.textContent('.task-meta')).includes('En az 350 kelime') && await page.locator('[data-wt-shared]').count() === 0, 'telc C1: 70 dk, "en az 350 kelime"');
+  const checks = await page.textContent('.wt-checklist');
+  ok(['Aufgabengerechtheit: ', 'Karşı görüşü de ciddiye al ve çürüt', 'Kommunikative Gestaltung: ', 'Kohärenz: ', 'Korrektheit: ', 'Repertoire: ', '„Thema verfehlt“'].every((x) => checks.includes(x)), 'telc C1: dört telc ölçütü, karşı görüş ve Thema verfehlt maddeleri');
+  ok((await page.textContent('.wt-redemittel')).includes('Gegenargumente ernst nehmen') && (await page.textContent('.wt-redemittel')).includes('Kohärenz'), 'telc C1: Redemittel\'de karşı görüş ve Kohärenz grupları');
+  for (const [n, cls, text] of [[349, 'is-very-short', 'resmî alt sınır'], [350, 'is-ok', ''], [450, 'is-ok', ''], [451, 'is-long', '']]) {
+    await page.fill('#wtText', words(n));
+    ok((await page.getAttribute('[data-wt-state]', 'class')).includes(cls) && (await page.textContent('[data-wt-state]')).includes(text), `telc C1: ${n} kelime → ${cls}`);
+  }
+  await page.fill('#wtText', words(120)); await page.focus('#wtText'); await page.keyboard.press('Enter'); await page.waitForTimeout(200);
+  ok(await page.locator('[data-wt-submit]').count() === 1 && (await page.inputValue('#wtText')).endsWith('\n'), 'telc C1: Enter metne satır ekliyor, göndermiyor');
+  await page.click('[data-wt-submit]'); await page.waitForTimeout(400);
+  ok((await page.textContent('.wt-cols')).includes('Ob Jugendliche bereits mit 16 Jahren') && (await page.textContent('.wt-notes')).includes('tek tarafı küçümsemeden') && await page.locator('a.task-next[href="#exams/telc/c1/schreiben/1/set-2"]').count() === 1, 'telc C1: 120 kelimeyle gönderilebiliyor; örnek cevap, notlar ve sonraki set');
+  await ctx.close();
+  const sets = [1, 2, 3, 4, 5].map((i) => JSON.parse(fs.readFileSync(`data/exams/telc/c1/schreiben/teil-1/set-${i}.json`, 'utf8')));
+  const stance = (x) => sets.filter((s) => s.model.stance === x).length;
+  ok(stance('dafür') >= 2 && stance('dagegen') >= 2 && stance('bedingt') >= 1, 'telc C1: örnek cevapların sonucu değişiyor (2 lehte, 2 aleyhte, 1 koşullu)');
+  for (const [lang, two, min] of [['de', 'eines von zwei Themen', 'Mindestens 350 Wörter'], ['en', 'one of two topics', 'At least 350 words']]) {
+    const { ctx: c2, page: p2 } = await newPage({ lang });
+    await p2.goto(B + '#exams/telc/c1/schreiben'); await p2.waitForTimeout(1000);
+    const view = await p2.textContent('#examView');
+    await p2.goto(B + '#exams/telc/c1/schreiben/1/set-5'); await p2.waitForTimeout(1000);
+    ok(view.includes(lang === 'de' ? 'Seminararbeit' : 'Seminar paper') && (await p2.textContent('[data-wt-choice]')).includes(two) && (await p2.textContent('.task-meta')).includes(min), `${lang}: telc C1 metinleri çevrili`);
+    await c2.close();
+  }
+}
+
 // 7. 390 / 1440, açık / koyu.
 for (const width of [390, 1440]) {
   for (const theme of ['light', 'dark']) {
-    for (const teil of ['b1/schreiben/2/set-1', 'b1/schreiben/3/set-1', 'a1/schreiben/1/set-3', 'a1/schreiben/2/set-1', 'telc-b1', 'dtz', 'a2/schreiben/1/set-4', 'a2/schreiben/2/set-5', '#exams/telc/a1/schreiben/1/set-4', '#exams/telc/a1/schreiben/2/set-4', '#exams/telc/a2/schreiben/1/set-2', '#exams/telc/a2/schreiben/2/set-3', 'b2/schreiben/1/set-5', 'b2/schreiben/2/set-4', '#exams/telc/b2/schreiben/1/set-1', '#exams/telc/b2/schreiben/1/set-4', 'c1/schreiben/1/set-3', 'c1/schreiben/2/set-5']) {
+    for (const teil of ['b1/schreiben/2/set-1', 'b1/schreiben/3/set-1', 'a1/schreiben/1/set-3', 'a1/schreiben/2/set-1', 'telc-b1', 'dtz', 'a2/schreiben/1/set-4', 'a2/schreiben/2/set-5', '#exams/telc/a1/schreiben/1/set-4', '#exams/telc/a1/schreiben/2/set-4', '#exams/telc/a2/schreiben/1/set-2', '#exams/telc/a2/schreiben/2/set-3', 'b2/schreiben/1/set-5', 'b2/schreiben/2/set-4', '#exams/telc/b2/schreiben/1/set-1', '#exams/telc/b2/schreiben/1/set-4', 'c1/schreiben/1/set-3', 'c1/schreiben/2/set-5', '#exams/telc/c1/schreiben/1/set-1', '#exams/telc/c1/schreiben/1/set-5']) {
       const { ctx, page } = await newPage({ width, theme });
       await page.goto(B + (teil.startsWith('#') ? teil : teil === 'telc-b1' ? '#exams/telc/b1/schreiben/1/set-2' : teil === 'dtz' ? '#exams/dtz/schreiben/1/set-6' : `#exams/goethe/${teil}`)); await page.waitForTimeout(1200);
       const name = teil.replace(/^#exams\/(\w+)\//, '$1-').replace(/\/schreiben\/(\d)\/set-\d/, '-teil$1');

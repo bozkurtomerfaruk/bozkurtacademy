@@ -27,6 +27,8 @@ const words = value => String(value).replace(/\{\{\d+\}\}/g, ' ').replace(/\{\{0
 const pieces = text => (text.paragraphs || []).flatMap((p, i) => typeof p === 'string' ? [{ key: `${i}`, value: p }]
   : Array.isArray(p?.rows) ? p.rows.flatMap((row, r) => row.map((cell, c) => ({ key: `${i}:${r}:${c}`, value: cell }))) : []);
 let sets = 0, questions = 0, writings = 0;
+// telc C1 model answers reach different conclusions (teacher's decision): at least two for, two against, one conditional.
+const telcC1Stances = [];
 
 // Same word count as the counter in js/writing-task.js: letters/digits, joined by - or ' (B1-Prüfung is one word).
 const countWords = value => (String(value).match(/[\p{L}\p{N}]+(?:[-'’][\p{L}\p{N}]+)*/gu) || []).length;
@@ -36,7 +38,8 @@ function checkWriting(set, fail) {
   if (set.kind !== 'writing') fail('"kind" must be "writing" in a Schreiben set');
   for (const key of ['title', 'situation', 'task']) if (!text(set[key])) fail(`"${key}" missing`);
   // textType: the kind of text (the AI check gets type-specific rules, worker/schreiben-kontrol.js) and the register it needs.
-  const REGISTER = { 'email-informal': 'du', sms: 'du', 'email-semiformal': 'Sie', 'email-formal': 'Sie', forum: 'neutral' };
+  // essay (telc C1 Hochschule): argumentative text for a seminar paper, no greeting or signature.
+  const REGISTER = { 'email-informal': 'du', sms: 'du', 'email-semiformal': 'Sie', 'email-formal': 'Sie', forum: 'neutral', essay: 'neutral' };
   if (!(set.textType in REGISTER)) fail(`"textType" must be one of ${Object.keys(REGISTER).join(', ')}`);
   else if (set.register !== REGISTER[set.textType]) fail(`"register" must be "${REGISTER[set.textType]}" for textType ${set.textType}`);
   // Content points (Goethe B1 Teil 1, A1/A2) or none (Goethe B1 Teil 2 and 3: the task says what to write).
@@ -53,7 +56,10 @@ function checkWriting(set, fail) {
   if (set.words?.recommended !== undefined && set.words.recommended !== true) fail('"words.recommended" must be true when present');
   if (set.instructions !== undefined && !text(set.instructions)) fail('"instructions" must be text when present');
   // examChoice: in the real exam the candidate picks one of two tasks (DTZ: Aufgabe A or B); the page says so.
-  if (set.examChoice !== undefined && set.examChoice !== true) fail('"examChoice" must be true when present');
+  // "thema" (telc C1 Hochschule): one of two topics (Thema 1 oder Thema 2); the note also says the quotations are optional.
+  if (set.examChoice !== undefined && set.examChoice !== true && set.examChoice !== 'thema') fail('"examChoice" must be true or "thema" when present');
+  // quotes (telc C1 Hochschule): two quotations for orientation, shown under the task.
+  if (set.quotes !== undefined && !(Array.isArray(set.quotes) && set.quotes.length >= 2 && set.quotes.every(q => text(q) && /^„[^„“]+“$/.test(q)))) fail('"quotes" must list at least two quotations in „…“');
   // words.veryShort: below this many words the counter warns that B1 can hardly be reached (DTZ: 40, g.a.s.t. FAQ).
   if (set.words?.veryShort !== undefined && !(Number.isInteger(set.words.veryShort) && set.words.veryShort > 0 && set.words.veryShort < set.words.min)) fail('"words.veryShort" must be a positive integer below "words.min"');
   // words.zeroBelow: below this many words the task scores 0 in the exam (Goethe A2: half of the required minimum); the counter says so.
@@ -170,6 +176,30 @@ function checkWriting(set, fail) {
       if (set.teil === 2 && !list.some((item) => item?.criterion === 'aufgabe' && /^Register:/.test(item.tr || ''))) fail('Goethe C1 Teil 2 checklist needs a "Register: …" item (Aufgabenerfüllung includes register)');
       if (!list.some((item) => new RegExp(`${C1.zero}'(ın|in) altı sınavda 0 puan`).test(item?.tr || ''))) fail(`Goethe C1 checklist must say that under ${C1.zero} words the part scores 0`);
     }
+  }
+  // telc Deutsch C1 Hochschule (Übungstest 1, 3. Auflage 2021): Schriftlicher Ausdruck one text, 70 minutes, 48 points (22.5 %);
+  // choose one of two topics; Seminararbeit on a topic "aus unterschiedlichen Perspektiven", two quotations for orientation (other
+  // aspects allowed); argue convincingly, give examples, Einleitung/Hauptteil/Schluss; at least 350 words (site: 350–450).
+  // Criteria Aufgabengerechtheit, Korrektheit, Repertoire, Kommunikative Gestaltung, A 12 / B 8 / C 4 / D 0; "Thema verfehlt" = D in all four.
+  if (set.exam === 'telc' && set.level === 'c1') {
+    if (set.teil !== 1 || set.minutes !== 70) fail('telc C1 Hochschule Schreiben has one Teil of 70 minutes');
+    if (set.textType !== 'essay' || set.examChoice !== 'thema') fail('telc C1 needs textType "essay" and "examChoice": "thema"');
+    if (set.points?.length || set.quotes?.length !== 2) fail('telc C1 tasks have no content points and exactly two quotations');
+    if (set.situation !== `In einer Seminararbeit sollen Sie das Thema „${set.title}“ aus unterschiedlichen Perspektiven beleuchten. Sie können die unten stehenden Zitate zur Orientierung verwenden, aber auch andere Aspekte des Themas darlegen.`) fail('telc C1 situation: official Seminararbeit sentence with the title as Thema');
+    if (set.task !== 'Argumentieren Sie überzeugend, führen Sie Beispiele an und gliedern Sie Ihren Text in Einleitung, Hauptteil und Schluss.') fail('telc C1 task: official sentence (Argumentieren Sie überzeugend …)');
+    if (!/eigenen Standpunkt dazu erarbeiten und argumentativ darlegen\. Ihr Text soll mindestens 350 Wörter umfassen\.$/.test(set.instructions || '')) fail('telc C1 instructions need the official sentence and "mindestens 350 Wörter"');
+    if (set.words?.min !== 350 || set.words?.target !== 400 || set.words?.max !== 450 || set.words?.atLeast !== true || set.words?.zeroBelow !== undefined) fail('telc C1 needs words 350–450 (target 400), "atLeast" and no zeroBelow');
+    const model = String(set.model?.text || ''), n = countWords(model);
+    if (n < 360 || n > 440) fail(`telc C1 model answer should have 360–440 words (has ${n})`);
+    if (model.split('\n').filter(Boolean).length < 4) fail('telc C1 model answer needs paragraphs (Einleitung, Hauptteil, Schluss)');
+    if (!['dafür', 'dagegen', 'bedingt'].includes(set.model?.stance)) fail('telc C1 "model.stance" must be dafür, dagegen or bedingt');
+    else telcC1Stances.push(set.model.stance);
+    const list = Array.isArray(set.checklist) ? set.checklist : [];
+    for (const [criterion, start] of [['aufgabe', 'Aufgabengerechtheit: '], ['aufgabe', 'Karşı görüşü de ciddiye al ve çürüt'], ['aufbau', 'Kommunikative Gestaltung: '], ['aufbau', 'Kohärenz: '], ['sprache', 'Korrektheit: '], ['sprache', 'Repertoire: ']]) {
+      if (!list.some(item => item?.criterion === criterion && String(item.tr || '').startsWith(start))) fail(`telc C1 checklist needs a ${criterion} item "${start}…"`);
+    }
+    if (!list.some(item => /„Thema verfehlt“/.test(item?.tr || '') && /en az 350 kelime/i.test(item.tr))) fail('telc C1 checklist needs the item with "en az 350 kelime" and „Thema verfehlt“');
+    if (!(set.redemittel || []).some(g => /^Kohärenz/.test(g?.group || ''))) fail('telc C1 Redemittel need a Kohärenz group');
   }
   // DTZ (g.a.s.t. practice sets): one semi-formal or formal message, four content points, no subject line, no word limit.
   if (set.exam === 'dtz') {
@@ -334,6 +364,11 @@ for (const exam of data.exams) for (const level of exam.levels || []) for (const
       console.log(`${path.padEnd(48)} ${String(real.length).padStart(2)} Aufgaben | Lösungen ${Object.entries(answers).sort().map(([k, v]) => `${k}×${v}`).join(' ')} | Wörter ${report.join(' / ')}`);
     }
   });
+}
+
+if (telcC1Stances.length) {
+  const count = stance => telcC1Stances.filter(s => s === stance).length;
+  if (count('dafür') < 2 || count('dagegen') < 2 || count('bedingt') < 1) errors.push(`telc C1 model answers: need at least 2 dafür, 2 dagegen and 1 bedingt (found ${telcC1Stances.join(', ')})`);
 }
 
 if (errors.length) {

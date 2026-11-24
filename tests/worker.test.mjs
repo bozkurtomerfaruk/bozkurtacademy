@@ -286,8 +286,16 @@ describe('Schreiben Worker', () => {
     const c1 = userMessage({ name: 'Goethe C1 · Teil 1 · Tempolimit auf Autobahnen?', type: TEXT_TYPES.forum }, 'Kaum ein Thema …');
     assert.match(c1, /^Görev: Goethe C1 · Teil 1 · Tempolimit auf Autobahnen\?\nMetin türü: .+\nSeviye notu \(C1\): .+Konjunktiv I.+Partizipialattribut.+Funktionsverbgefüge.+Uzunluğu .+değerlendirme\.\nMetin:\nKaum ein Thema …$/);
     for (const name of ['Goethe B2 · Teil 1 · X', 'telc B2 · Teil 1 · X']) assert.doesNotMatch(userMessage({ name, type: null }, 'x'), /Seviye notu \(C1\)/, name);
-    // telc C1 ya da TestDaF'a kendi notları eklenene kadar C1 notu gitmez.
-    for (const name of ['telc C1 · Teil 1 · X', 'TestDaF DIGITAL · Teil 1 · X']) assert.doesNotMatch(userMessage({ name, type: null }, 'x'), /Seviye notu/, name);
+    // TestDaF'a kendi notu eklenene kadar C1 notu gitmez.
+    assert.doesNotMatch(userMessage({ name: 'TestDaF DIGITAL · Teil 1 · X', type: null }, 'x'), /Seviye notu/);
+  });
+
+  test('telc C1 notu sadece telc C1 görevlerinde: seminer yazısı, hitap gerekmez; Goethe C1 notu ve genel talimat değişmez', () => {
+    const telc = userMessage({ name: 'telc C1 · Teil 1 · Wahlrecht ab 16', type: TEXT_TYPES.essay }, 'Ob Jugendliche …');
+    assert.match(telc, /^Görev: telc C1 · Teil 1 · Wahlrecht ab 16\nMetin türü: Seminer yazısı \(akademik görüş yazısı\)\nSeviye notu \(C1\): Metin bir seminer yazısıdır: hitap, imza ve selam gerekmez.+Konjunktiv I.+Funktionsverbgefüge.+Uzunluğu, içeriği .+değerlendirme\.\nMetin:\nOb Jugendliche …$/);
+    assert.doesNotMatch(telc, /Teil 2'de amire/);
+    assert.doesNotMatch(userMessage({ name: 'Goethe C1 · Teil 1 · X', type: TEXT_TYPES.forum }, 'x'), /seminer yazısı/);
+    assert.doesNotMatch(PROMPT, /seminer|Seminar|essay/i);
   });
 
   test('A2 kuralı sadece "Goethe A2 ·" görevleri için (DTZ "A2-B1" değil)', () => {

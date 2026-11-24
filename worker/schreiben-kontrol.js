@@ -87,7 +87,9 @@ export const TEXT_TYPES = {
   sms: 'Kısa mesaj (du), arkadaşa',
   'email-semiformal': 'Yarı resmî e-posta (Sie), tanıdık birine',
   'email-formal': 'Resmî yazı (Sie), tanımadığın birine ya da bir kuruma',
-  forum: 'Forum yazısı (görüş)'
+  forum: 'Forum yazısı (görüş)',
+  // telc C1 Hochschule: kuralları genel talimatta değil, LEVEL_NOTES['telc C1 ·'] içinde (öbür sınavlar etkilenmesin).
+  essay: 'Seminer yazısı (akademik görüş yazısı)'
 };
 
 // ---------- Firestore REST değerleri ----------
@@ -294,7 +296,9 @@ export const LEVEL_NOTES = {
   'telc B2 ·': 'Seviye notu (B2): Konjunktiv II, Passiv, Relativsatz, Nominalisierung ve bağlaç (einerseits … andererseits, darüber hinaus, trotzdem, obwohl) hatalarını da işaretle. Firmaya baştan sona Sie; "Betreff:" satırı doğrudur. Metin kısa ya da uzun olabilir, uzunluğu ve hangi maddelerin yazıldığını değerlendirme.',
   // Goethe-Zertifikat C1: Teil 1 forum yazısı (~230 kelime), Teil 2 amire ya da bir bölüme (yarı) resmî mesaj (~120 kelime).
   // C1 metinlerindeki doğru ileri yapılar (Konjunktiv I, Partizipialattribut …) yanlış alarm riski taşıyor: not bunları korur.
-  'Goethe C1 ·': 'Seviye notu (C1): Metin ileri düzeydedir. Doğru olan ileri yapılara dokunma: Nominalstil (die Einführung eines …), dolaylı aktarmada Konjunktiv I (Kritiker meinen, es sei/habe/bringe …), Konjunktiv II, uzun Partizipialattribut (die seit Jahren steigenden Mieten), Funktionsverbgefüge (zur Folge haben, in Kauf nehmen, einen Beitrag leisten), nesneyle başlayan cümle ve uzun yan cümleler. Sadece gerçek hataları işaretle: çekim, hâl, edat, özne-fiil uyumu, fiil yeri, yazım. Teil 2\'de amire ya da kuruma baştan sona Sie; hitaptan sonraki satırın küçük harfle başlaması doğrudur. Uzunluğu ve hangi maddelerin yazıldığını değerlendirme.'
+  'Goethe C1 ·': 'Seviye notu (C1): Metin ileri düzeydedir. Doğru olan ileri yapılara dokunma: Nominalstil (die Einführung eines …), dolaylı aktarmada Konjunktiv I (Kritiker meinen, es sei/habe/bringe …), Konjunktiv II, uzun Partizipialattribut (die seit Jahren steigenden Mieten), Funktionsverbgefüge (zur Folge haben, in Kauf nehmen, einen Beitrag leisten), nesneyle başlayan cümle ve uzun yan cümleler. Sadece gerçek hataları işaretle: çekim, hâl, edat, özne-fiil uyumu, fiil yeri, yazım. Teil 2\'de amire ya da kuruma baştan sona Sie; hitaptan sonraki satırın küçük harfle başlaması doğrudur. Uzunluğu ve hangi maddelerin yazıldığını değerlendirme.',
+  // telc Deutsch C1 Hochschule: tek görev, bir Seminararbeit için en az 350 kelimelik görüş yazısı (Einleitung, Hauptteil, Schluss).
+  'telc C1 ·': 'Seviye notu (C1): Metin bir seminer yazısıdır: hitap, imza ve selam gerekmez, yoksa hata sayma. Genel ve akademik dil (man, wir, ich, Passiv) doğrudur. Doğru olan ileri yapılara dokunma: Nominalstil (die Absenkung des Wahlalters), dolaylı aktarmada Konjunktiv I ve onun yerine Konjunktiv II (Kritiker geben zu bedenken, es sei/habe/befänden …), uzun Partizipialattribut, Funktionsverbgefüge (Verantwortung übernehmen, ins Feld führen, zur Verfügung stellen), nesneyle başlayan cümle ve uzun yan cümleler. Sadece gerçek hataları işaretle: çekim, hâl, edat, özne-fiil uyumu, fiil yeri, yazım. Uzunluğu, içeriği ve hangi görüşün savunulduğunu değerlendirme.'
 };
 // Sınava özel yapay zekâ ayarı (settings/ai.exams, öğretmen sayfasında): { 'goethe-c1': 'draft' | 'off' }. Anahtar yoksa
 // sınav genel modu izler ("Açık"). Ayar sadece daha sıkı olabilir: genel mod kapalıysa her sınavda kapalı, taslaksa taslak.

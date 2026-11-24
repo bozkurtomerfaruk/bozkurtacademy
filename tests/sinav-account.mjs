@@ -107,7 +107,7 @@ await sctx.close();
 const { ctx: tctx, page: teacher } = await newPage(1440);
 await signIn(teacher, 'ogretmen@example.com', 'ogretmen123', 'teacher');
 await teacher.goto(`${BASE}/ogretmen-odev.html?ogrenci=ogrenci1`); await teacher.waitForSelector('#assignForm:not([hidden])', { timeout: 15000 });
-ok(await teacher.locator('#aLevel option[value="C1"]').count() === 1, 'ödev ekranında C1 (sadece sınav setleri) seviyesi');
+ok(await teacher.locator('#aLevel option[value="C1"]').count() === 1, 'ödev ekranında C1 (sadece sınav hazırlığı) seviyesi');
 await teacher.selectOption('#aLevel', 'A1'); await teacher.waitForTimeout(500);
 ok(await teacher.locator('#aTopic option[value="sinav"]').count() === 1, 'A1 için "Sınav setleri" konusu');
 await teacher.selectOption('#aTopic', 'sinav'); await teacher.waitForTimeout(800);
@@ -146,6 +146,34 @@ await teacher.goto(`${BASE}/ogretmen-ogrenci.html?id=ogrenci1`); await teacher.w
 const row = teacher.locator('#resultsList tr', { hasText: 'Grüße aus dem Urlaub' });
 ok(await row.count() === 1 && (await row.textContent()).includes('A1') && (await row.textContent()).includes('2 deneme'), 'öğretmen sonuç listesinde: Goethe A1 Lesen seti, seviye A1, 2 deneme');
 await teacher.locator('#resultsList').screenshot({ path: path.join(shotDir, 'ogretmen-sonuclar-1440.png') });
+
+// 5b. Katalogda olmayan C1: "C1 · sadece sınav hazırlığı" satırından hem sınav setleri (Lesen) hem Schreiben görevleri verilir.
+await teacher.goto(`${BASE}/ogretmen-odev.html?ogrenci=ogrenci1`); await teacher.waitForSelector('#assignForm:not([hidden])', { timeout: 15000 });
+ok((await teacher.textContent('#aLevel option[value="C1"]')).trim() === 'C1 · sadece sınav hazırlığı' && !(await teacher.textContent('#aLevel')).includes('sadece sınav setleri'), 'C1 satırının adı "C1 · sadece sınav hazırlığı"');
+await teacher.selectOption('#aLevel', 'C1'); await teacher.waitForTimeout(500);
+const c1Topics = await teacher.locator('#aTopic option').evaluateAll((els) => els.map((e) => [e.value, e.textContent.trim()]));
+ok(c1Topics.some(([v, t]) => v === 'schreiben' && t === 'Schreiben (sınav hazırlığı)') && c1Topics.some(([v]) => v === 'sinav') && c1Topics.length === 2, `C1 konuları: Schreiben (sınav hazırlığı) ve Sınav setleri (${JSON.stringify(c1Topics)})`);
+await teacher.selectOption('#aTopic', 'schreiben'); await teacher.waitForTimeout(800);
+const c1Writing = await teacher.locator('#aExerciseList label').allTextContents();
+ok(c1Writing.length === 10 && c1Writing.some((x) => x.includes('Goethe C1 · Teil 1 · Tempolimit auf Autobahnen?')) && c1Writing.some((x) => x.includes('Goethe C1 · Teil 2 · Urlaubssperre im Sommer')), `C1 Schreiben: 10 görev listede (${c1Writing.length})`);
+await teacher.locator('#aExerciseList label', { hasText: 'Goethe C1 · Teil 1 · Tempolimit auf Autobahnen?' }).locator('input').check();
+await teacher.selectOption('#aTopic', 'sinav'); await teacher.waitForTimeout(800);
+ok((await teacher.locator('#aExerciseList').textContent()).includes('Lesen · Teil 1 · Schlaf und Gedächtnis'), 'C1 sınav setlerinde Goethe C1 Lesen var');
+await teacher.locator('#aExerciseList label', { hasText: 'Lesen · Teil 1 · Schlaf und Gedächtnis' }).locator('input').check();
+await teacher.fill('#aTitle', 'C1: Schreiben + Lesen');
+await teacher.click('#aSubmit'); await teacher.waitForURL(/ogretmen-odevler\.html/, { timeout: 15000 }).catch(() => {});
+const c1Assignment = (await listDocs('users/ogrenci1/assignments')).find((d) => JSON.stringify(d.fields).includes('C1: Schreiben + Lesen'));
+const c1Json = JSON.stringify(c1Assignment?.fields || {});
+ok(c1Json.includes('goethe-c1-1-set-1') && c1Json.includes('"schreiben"') && c1Json.includes('goethe-c1-lesen-1-set-1') && c1Json.includes('"sinav"'), 'C1 ödevi kaydedildi: Schreiben görevi ve Lesen seti');
+{
+  const { ctx, page } = await newPage(390);
+  await signIn(page, 'ogrenci@example.com', 'ogrenci123', 'student');
+  await page.goto(`${BASE}/odevlerim.html`); await page.waitForSelector('.odev-ex-list', { timeout: 15000 }).catch(() => {});
+  ok(await page.locator('.odev-ex-list a[href="index.html#exams/goethe/c1/schreiben/1/set-1"]').count() === 1 && await page.locator('.odev-ex-list a[href="index.html#exams/goethe/c1/lesen/1/set-1"]').count() === 1, 'öğrencinin ödevlerinde C1 Schreiben görevi ve C1 Lesen seti açılıyor');
+  ok(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth) <= 0, '390: C1 ödeviyle Ödevlerim\'de taşma yok');
+  await page.screenshot({ path: path.join(shotDir, 'odevlerim-c1-390.png'), fullPage: true });
+  await ctx.close();
+}
 
 // 6. Öğretmen hesabı ve onaysız hesap sonuç yazmaz.
 await teacher.goto(`${BASE}/index.html#exams/goethe/a1/lesen/1/set-2`); await teacher.waitForTimeout(1500);

@@ -1,0 +1,130 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "c1",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-4",
+  "title": "Kantine wird geschlossen",
+  "minutes": 25,
+  "sharedMinutes": 75,
+  "anyOrder": true,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "Die Geschäftsleitung hat beschlossen, die Kantine Ihres Unternehmens Ende des Monats zu schließen. Stattdessen sollen im Foyer Automaten mit Snacks und Fertiggerichten aufgestellt werden.",
+  "task": "Schreiben Sie eine Nachricht an die Personalabteilung, Herrn Köhler.",
+  "points": [
+    "Zeigen Sie Verständnis für die Gründe der Geschäftsleitung.",
+    "Beschreiben Sie, welche Bedeutung die Kantine für die Belegschaft hat.",
+    "Äußern Sie Bedenken gegenüber der geplanten Lösung.",
+    "Schlagen Sie einen Kompromiss vor."
+  ],
+  "instructions": "Bei der Bewertung wird darauf geachtet, wie genau die Inhaltspunkte bearbeitet sind, wie korrekt der Text ist und wie gut die Sätze und Abschnitte sprachlich miteinander verknüpft sind. Schreiben Sie circa 120 Wörter.",
+  "words": {
+    "target": 120,
+    "min": 100,
+    "max": 145,
+    "zeroBelow": 60
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: yönetimin gerekçelerine anlayış, yemekhanenin çalışanlar için önemi, otomatlara itirazım, uzlaşma önerisi."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Register: Personel bölümüne baştan sona Sie; görüşümü kibarca ama açıkça yazdım (Die geplanten Automaten sehe ich kritisch; Wie wäre es, …?)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap (Sehr geehrter Herr Köhler,) ve selam (Mit freundlichen Grüßen + adım) var; hitaptan sonraki satır küçük harfle başlıyor."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kohärenz: Maddeleri bağladım: Insofern verstehe ich, dass …; jedoch; da …; Wer …, hätte dann …"
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Her maddeye en az bir iki cümle yazdım; liste ya da numara kullanmadım. Yaklaşık 120 kelime (60'ın altı sınavda 0 puan)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Dass-cümlesiyle başlama: Dass die Kantine … weniger genutzt wird, ist mir bekannt (yan cümle önde, ana cümle fiille başlar)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Anschluss finden, sich austauschen, Bedenken äußern gegenüber + Dativ."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Sehr geehrter Herr … / Sehr geehrte Frau …,",
+          "tr": "Sayın … Bey / … Hanım,"
+        },
+        {
+          "de": "Mit freundlichen Grüßen",
+          "tr": "Saygılarımla"
+        }
+      ]
+    },
+    {
+      "group": "Verständnis und Bedeutung",
+      "items": [
+        {
+          "de": "Dass …, ist mir bekannt. Insofern verstehe ich, dass …",
+          "tr": "…'i biliyorum. Bu bakımdan … anlıyorum"
+        },
+        {
+          "de": "Für viele von uns ist … jedoch weit mehr als …",
+          "tr": "Ama çoğumuz için … …'den çok daha fazlası"
+        }
+      ]
+    },
+    {
+      "group": "Bedenken und Kompromiss",
+      "items": [
+        {
+          "de": "… sehe ich kritisch, da …",
+          "tr": "…'e eleştirel bakıyorum, çünkü …"
+        },
+        {
+          "de": "Wie wäre es, …?",
+          "tr": "… nasıl olur?"
+        },
+        {
+          "de": "Ich würde mich freuen, wenn Sie meinen Vorschlag prüfen könnten.",
+          "tr": "Önerimi değerlendirirseniz sevinirim"
+        }
+      ]
+    },
+    {
+      "group": "Kohärenz: Text verknüpfen",
+      "items": [
+        {
+          "de": "Insofern … / Jedoch …",
+          "tr": "Bu bakımdan … / Ancak … (fiil hemen arkasında)"
+        },
+        {
+          "de": "…, da …",
+          "tr": "…, çünkü … (fiil sonda)"
+        },
+        {
+          "de": "gerade …",
+          "tr": "özellikle …"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Sehr geehrter Herr Köhler,\ndass die Kantine seit der Einführung des Homeoffice deutlich weniger genutzt wird und hohe Kosten verursacht, ist mir bekannt. Insofern verstehe ich, dass die Geschäftsleitung nach Einsparmöglichkeiten sucht.\nFür viele von uns ist die Kantine jedoch weit mehr als ein Ort zum Essen. Hier tauschen sich Beschäftigte verschiedener Abteilungen aus, und gerade neue Kolleginnen und Kollegen finden so schnell Anschluss.\nDie geplanten Automaten sehe ich kritisch, da sie kaum gesunde, warme Mahlzeiten bieten. Wer im Schichtdienst arbeitet, hätte dann keine Möglichkeit mehr, sich ausgewogen zu ernähren.\nWie wäre es, die Kantine nur noch an drei Tagen pro Woche zu öffnen, an denen erfahrungsgemäß die meisten Beschäftigten im Büro sind? Ich würde mich freuen, wenn Sie meinen Vorschlag prüfen könnten.\nMit freundlichen Grüßen\nMarta Nowak",
+    "notes": [
+      "Dört madde: anlayış (weniger genutzt, hohe Kosten), önem (Austausch, Anschluss), itiraz (kaum gesunde, warme Mahlzeiten, Schichtdienst), uzlaşma (drei Tage pro Woche).",
+      "Hitaptan sonraki satır küçük harfle: „dass die Kantine …“.",
+      "Relativsatz + edat: an drei Tagen …, an denen … die meisten Beschäftigten im Büro sind."
+    ]
+  }
+}

@@ -88,6 +88,7 @@ UID'li kurallar birleştirildikten sonra: Firebase Console → **Firestore Datab
    - **Anında göster** (varsayılan): öğrenci geri bildirimi gönderdikten birkaç saniye sonra görev sayfasında görür ("Yapay zekâ geri bildirimi – nadiren hata yapabilir"). Sen sadece öğrencinin "Bu açıklama yanlış görünüyor" dediği maddelere ve yapay zekânın kontrol edemediği yazılara bakarsın.
    - **Taslak:** geri bildirim sadece sana gelir; öğrenci görmez. Sen düzeltip onaylarsın ya da silersin.
    - **Kapalı:** hiç kontrol yapılmaz; geri bildirimi sen yazarsın.
+   - **Sınava göre ayar** (aynı kutuda, açılır bölüm): Schreiben görevi olan her sınav (Goethe A1–C1, telc, DTZ; ileride telc C1 ve TestDaF da kendiliğinden) ayrı listelenir. **Açık** (varsayılan): sınav yukarıdaki genel ayarı izler. **Taslak (ben onaylarım):** o sınavın sonuçları öğrenciye gitmez, önce sana gelir. **Kapalı:** o sınavda yapay zekâ hiç çağrılmaz; yazı doğrudan sana düşer ve öğrenci "Bu sınavda yapay zekâ kontrolü kapalı" notunu görür. Ayar genel ayardan sadece daha sıkı olabilir: genel ayar Kapalı ise bütün sınavlar kapalıdır. Kayıt `settings/ai.exams` (ör. `goethe-c1: off`); Worker ve Firestore kuralları aynı alanı okur. Bu özellik geldiğinde Worker kodu ve `firestore.rules` bir kez güncellenir; sonra ayarı değiştirmek için hiçbir şeyi yeniden yüklemen gerekmez.
 3. 16 yaş altı öğrencilerde kontrol, öğrenci sayfasında **Velinin yapay zekâ onayı alındı** işaretlenene kadar kapalıdır. Onay eski formla (12.11.2026'dan önce) alınmışsa sonuç, mod ne olursa olsun taslak olarak sana gelir; veli yeni formu (`docs/veli-onay-formu.md`, madde 3a) onaylayınca öğrenci sayfasında **Veli yeni formu onayladı: kaydet** ile kaydet.
 
 ## Adım 8: Deneme
@@ -109,7 +110,7 @@ Worker bu token'ı kullanmaz; silmek hiçbir şeyi bozmaz.
 
 - **Ne gönderilir:** sadece metin, görev adı (ör. "Goethe B1 · Teil 1 · Neue Wohnung") ve metin türü. Ad, e-posta, uid gitmez.
 - **Güncelleme sırası (kurallar da değiştiyse):** önce Firestore kurallarını yayınla, sonra Worker'ı güncelle, en son öğretmen panelinde modu değiştir. Eski Worker yeni siteyle de çalışır; sadece geri bildirim görev sayfasında değil, öğrenci panelinde görünür.
-- **Kapatmak için:** öğretmen panelinde **Kapalı** seç. Worker'ı silmek de yeterli; site Worker olmadan da çalışır.
+- **Kapatmak için:** öğretmen panelinde **Kapalı** seç (tek bir sınav için: **Sınava göre ayar** → o sınavda **Kapalı**). Worker'ı silmek de yeterli; site Worker olmadan da çalışır.
 - **App Check:** İleride Firebase App Check'i "zorunlu" yaparsan Worker'ın Firestore istekleri reddedilir. O zaman bana sor.
 - **Kod değişirse:** `worker/schreiben-kontrol.js` güncellendiğinde Adım 1'deki 5–7'yi tekrarla (Edit code → yapıştır → Deploy).
 - Testler: `npm run test:worker` (sahte Firebase ve sahte yapay zekâ ile), `npm run test:schreiben-ai` (emülatörle uçtan uca).

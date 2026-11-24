@@ -1,0 +1,130 @@
+{
+  "format": 1,
+  "exam": "goethe",
+  "level": "c1",
+  "section": "schreiben",
+  "teil": 2,
+  "set": "set-3",
+  "title": "Neue Software ohne Schulung",
+  "minutes": 25,
+  "sharedMinutes": 75,
+  "anyOrder": true,
+  "kind": "writing",
+  "register": "Sie",
+  "textType": "email-semiformal",
+  "situation": "In Ihrer Firma wurde vor zwei Wochen ein neues Programm für die Auftragsbearbeitung eingeführt. Eine Schulung gab es nicht, und seitdem dauern viele Arbeitsschritte deutlich länger als früher.",
+  "task": "Schreiben Sie eine Beschwerde an den Leiter der IT-Abteilung, Herrn Brandt.",
+  "points": [
+    "Erkennen Sie die Vorteile der neuen Software an.",
+    "Beschreiben Sie, welche Schwierigkeiten im Arbeitsalltag entstehen.",
+    "Erklären Sie, welche Unterstützung Sie sich wünschen.",
+    "Machen Sie einen Vorschlag für eine Übergangslösung."
+  ],
+  "instructions": "Bei der Bewertung wird darauf geachtet, wie genau die Inhaltspunkte bearbeitet sind, wie korrekt der Text ist und wie gut die Sätze und Abschnitte sprachlich miteinander verknüpft sind. Schreiben Sie circa 120 Wörter.",
+  "words": {
+    "target": 120,
+    "min": 100,
+    "max": 145,
+    "zeroBelow": 60
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Dört maddenin hepsine yazdım: programın avantajları, iş hayatındaki zorluklar, istediğim destek, geçiş dönemi için öneri."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Register: BT yöneticisine baştan sona Sie; şikâyetimi somut örneklerle ve kibarca yazdım (Hilfreich wäre …; Für Ihre Unterstützung wäre ich Ihnen dankbar)."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Hitap (Sehr geehrter Herr Brandt,) ve selam (Mit freundlichen Grüßen + adım) var; hitaptan sonraki satır küçük harfle başlıyor."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kohärenz: Maddeleri bağladım: zunächst; In der Praxis … jedoch; Da …; Bis dahin …; damit …"
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Her maddeye en az bir iki cümle yazdım; liste ya da numara kullanmadım. Yaklaşık 120 kelime (60'ın altı sınavda 0 puan)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Schwierigkeiten bereiten + Dativ: Es bereitet uns erhebliche Schwierigkeiten (Funktionsverbgefüge)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "sich wenden an + Akkusativ: eine Ansprechperson, an die wir uns wenden können (edat Relativpronomen'in önünde)."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Anrede und Gruß",
+      "items": [
+        {
+          "de": "Sehr geehrter Herr … / Sehr geehrte Frau …,",
+          "tr": "Sayın … Bey / … Hanım,"
+        },
+        {
+          "de": "Mit freundlichen Grüßen",
+          "tr": "Saygılarımla"
+        }
+      ]
+    },
+    {
+      "group": "Anerkennen und Schwierigkeiten",
+      "items": [
+        {
+          "de": "Zunächst möchte ich betonen, dass …",
+          "tr": "Önce şunu vurgulamak istiyorum: …"
+        },
+        {
+          "de": "In der Praxis bereitet es uns jedoch erhebliche Schwierigkeiten.",
+          "tr": "Ancak uygulamada bize ciddi zorluk çıkarıyor"
+        },
+        {
+          "de": "Hilfreich wäre aus meiner Sicht …",
+          "tr": "Bence … faydalı olurdu"
+        }
+      ]
+    },
+    {
+      "group": "Übergangslösung",
+      "items": [
+        {
+          "de": "Bis dahin schlage ich vor, …",
+          "tr": "O zamana kadar … öneriyorum"
+        },
+        {
+          "de": "Für Ihre Unterstützung wäre ich Ihnen sehr dankbar.",
+          "tr": "Desteğiniz için size çok minnettar olurum"
+        }
+      ]
+    },
+    {
+      "group": "Kohärenz: Text verknüpfen",
+      "items": [
+        {
+          "de": "Zunächst … / In der Praxis … jedoch …",
+          "tr": "Önce … / Uygulamada ise …"
+        },
+        {
+          "de": "Da …, …",
+          "tr": "… olduğu için … (fiil sonda)"
+        },
+        {
+          "de": "…, damit …",
+          "tr": "… için, … diye (fiil sonda)"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Sehr geehrter Herr Brandt,\nzunächst möchte ich betonen, dass das neue Programm zur Auftragsbearbeitung übersichtlicher ist als das alte System und uns langfristig sicherlich viel Zeit sparen wird.\nIn der Praxis bereitet es uns jedoch erhebliche Schwierigkeiten. Da wir nicht geschult wurden, suchen wir oft minutenlang nach einfachen Funktionen. Rechnungen werden fehlerhaft erstellt, und Kundenanfragen bleiben länger liegen als früher.\nHilfreich wäre aus meiner Sicht eine kurze Einführung für jede Abteilung sowie eine feste Ansprechperson, an die wir uns bei Problemen wenden können.\nBis dahin schlage ich vor, das alte System noch einen Monat parallel nutzen zu dürfen, damit eilige Aufträge zuverlässig bearbeitet werden.\nFür Ihre Unterstützung wäre ich Ihnen sehr dankbar.\nMit freundlichen Grüßen\nElif Şahin",
+    "notes": [
+      "Dört madde: avantaj (übersichtlicher, Zeit sparen), zorluklar (minutenlang suchen, Rechnungen, Kundenanfragen), istenen destek (Einführung, Ansprechperson), geçiş (altes System einen Monat parallel).",
+      "Önce olumlu bir cümle, sonra jedoch ile sorun: şikâyeti kibar yapar.",
+      "nach etwas suchen; sich an jemanden wenden: an die wir uns … wenden können."
+    ]
+  }
+}

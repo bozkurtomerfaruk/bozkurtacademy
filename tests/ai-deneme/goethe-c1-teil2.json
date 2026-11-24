@@ -1,0 +1,88 @@
+{
+  "about": "Yapay zekâ denemesi (Goethe-Zertifikat C1 Teil 2: amire ya da bir bölüme ~120 kelimelik (yarı) resmî mesaj, 4 dil işlevi, Sie). errors: bulunması gereken hatalı yer (wrong) ve düzeltmede geçmesi gereken parça (fix; liste ise biri yeter); clean: doğru olan, işaretlenmemesi gereken yerler. Metinlerde bilerek doğru ama ileri düzey yapılar var (Nominalstil, Partizipialattribut, Funktionsverbgefüge, nesneyle başlayan cümle): bunlar yanlış alarm sınavı. Hitaptan sonraki satırın küçük harfle başlaması doğrudur. c1t2-5 hatasız; hiçbir şey işaretlenmemeli. Çalıştırma: scripts/ai-deneme.mjs.",
+  "exam": "goethe",
+  "level": "c1",
+  "teil": 2,
+  "texts": [
+    {
+      "id": "c1t2-1",
+      "set": "set-1",
+      "note": "sich auswirken auf + Akkusativ, Relativ/yan cümlede özne-fiil uyumu (andere … müssen), Mit freundlichen Grüßen; doğru Passiv'li Relativsatz",
+      "text": "Sehr geehrter Herr Albers,\nmir ist bewusst, dass unser Team wegen der vielen Projekte unter großem Druck steht. Dennoch möchte ich Sie auf ein Problem aufmerksam machen.\nSeit Februar habe ich mehr als 40 Überstunden gemacht, oft ohne vorherige Ankündigung. Das wirkt sich negativ an meine Gesundheit aus, und ich kann meine Kinder nicht mehr pünktlich von der Kita abholen.\nAußerdem ist mir aufgefallen, dass immer die gleichen Kollegen gefragt werden, während andere nie länger bleiben muss. Das empfinde ich als ungerecht.\nIch würde vorschlagen, einen Plan zu erstellen, in dem die Zusatzschichten gerecht verteilt werden. Wäre es möglich, in der nächsten Teambesprechung darüber zu sprechen?\nMit freundlichen Grüße\nDeniz Aydın",
+      "errors": [
+        { "wrong": "wirkt sich negativ an meine Gesundheit aus", "fix": "auf meine Gesundheit" },
+        { "wrong": "während andere nie länger bleiben muss", "fix": ["bleiben müssen", "müssen"] },
+        { "wrong": "Mit freundlichen Grüße", "fix": "Mit freundlichen Grüßen" }
+      ],
+      "clean": [
+        "mir ist bewusst, dass unser Team wegen der vielen Projekte unter großem Druck steht",
+        "Dennoch möchte ich Sie auf ein Problem aufmerksam machen",
+        "einen Plan zu erstellen, in dem die Zusatzschichten gerecht verteilt werden"
+      ]
+    },
+    {
+      "id": "c1t2-2",
+      "set": "set-2",
+      "note": "da-cümlesinden sonra ana cümle fiille başlar, sich freuen auf + Akkusativ, yazım (reduzieren); doğru nesneyle başlayan cümle (Besonders die Kollegen …, wird das hart treffen), Nominalstil",
+      "text": "Sehr geehrte Frau Neumann,\nmit Bedauern habe ich von der geplanten Abschaffung des Jobtickets erfahren. Ich verstehe, dass das Unternehmen angesichts der schwierigen wirtschaftlichen Lage Kosten senken muss.\nFür mich bedeutet diese Entscheidung jedoch Mehrkosten von etwa 50 Euro im Monat. Besonders die Kollegen in der Produktion, die weniger verdienen, wird das hart treffen.\nIch befürchte außerdem, dass viele Beschäftigte künftig mit dem Auto zur Arbeit kommen werden. Da es schon jetzt zu wenige Parkplätze gibt, es würde täglich Streit geben. Das passt auch nicht zu den Klimazielen, die sich die Firma selbst gesetzt hat.\nWäre es nicht möglich, den Zuschuss nur zu reduziern, statt ihn komplett zu streichen? Ich freue mich auf Ihrer Antwort.\nMit freundlichen Grüßen\nJonas Weber",
+      "errors": [
+        { "wrong": "es würde täglich Streit geben", "fix": "würde es" },
+        { "wrong": "reduziern", "fix": "reduzieren" },
+        { "wrong": "auf Ihrer Antwort", "fix": "auf Ihre Antwort" }
+      ],
+      "clean": [
+        "mit Bedauern habe ich von der geplanten Abschaffung des Jobtickets erfahren",
+        "angesichts der schwierigen wirtschaftlichen Lage",
+        "Besonders die Kollegen in der Produktion, die weniger verdienen, wird das hart treffen",
+        "Das passt auch nicht zu den Klimazielen, die sich die Firma selbst gesetzt hat"
+      ]
+    },
+    {
+      "id": "c1t2-3",
+      "set": "set-3",
+      "note": "weil-cümlesinden sonra ana cümle fiille başlar, sich wenden an + Akkusativ (an die), yazım (parallel); doğru Funktionsverbgefüge (Schwierigkeiten bereiten), sich beschweren über",
+      "text": "Sehr geehrter Herr Brandt,\nzunächst möchte ich betonen, dass die neue Software deutlich moderner ist als das alte Programm. Langfristig wird sie uns sicher die Arbeit erleichtern.\nIm Alltag bereitet uns das Programm allerdings große Schwierigkeiten. Weil wir keine Schulung bekommen haben, wir brauchen für einfache Aufgaben viel mehr Zeit. Gestern wurden drei Rechnungen fehlerhaft erstellt, und einige Kunden haben sich bereits über die langen Wartezeiten beschwert.\nIch würde mir wünschen, dass jede Abteilung eine kurze Einführung bekommt. Außerdem wäre eine feste Ansprechperson hilfreich, an der wir uns bei Fragen wenden können.\nBis dahin schlage ich vor, dass wir das alte System noch einige Wochen paralell nutzen dürfen.\nFür Ihre Unterstützung bedanke ich mich im Voraus.\nMit freundlichen Grüßen\nElif Şahin",
+      "errors": [
+        { "wrong": "wir brauchen für einfache Aufgaben", "fix": "brauchen wir" },
+        { "wrong": "an der wir uns bei Fragen wenden können", "fix": "an die" },
+        { "wrong": "paralell", "fix": "parallel" }
+      ],
+      "clean": [
+        "Im Alltag bereitet uns das Programm allerdings große Schwierigkeiten",
+        "einige Kunden haben sich bereits über die langen Wartezeiten beschwert",
+        "Für Ihre Unterstützung bedanke ich mich im Voraus"
+      ]
+    },
+    {
+      "id": "c1t2-4",
+      "set": "set-4",
+      "note": "an + Dativ çoğul (an drei Tagen), sıfat çekimi (aus verschiedenen Abteilungen), denn'den sonra normal sıra; doğru dass-cümlesiyle başlama, Konjunktiv II",
+      "text": "Sehr geehrter Herr Köhler,\ndass die Kantine seit der Einführung des Homeoffice weniger genutzt wird, ist mir bewusst. Ich kann daher nachvollziehen, dass die Geschäftsleitung nach Einsparmöglichkeiten sucht.\nFür viele Kollegen ist die Kantine aber mehr als nur ein Ort zum Essen. Hier treffen sich Beschäftigte aus verschiedene Abteilungen, und neue Kollegen finden schnell Anschluss.\nGegen die geplanten Automaten habe ich Bedenken, denn sie fast nur Fertiggerichte und Süßigkeiten bieten. Besonders für die Kollegen im Schichtdienst wäre das ein großer Nachteil, weil sie abends keine andere Möglichkeit haben, eine warme Mahlzeit zu essen.\nWie wäre es, wenn die Kantine nur noch an drei Tage pro Woche geöffnet wäre? An diesen Tagen sind die meisten Beschäftigten ohnehin im Büro.\nIch würde mich freuen, wenn Sie meinen Vorschlag berücksichtigen könnten.\nMit freundlichen Grüßen\nMarta Nowak",
+      "errors": [
+        { "wrong": "aus verschiedene Abteilungen", "fix": "verschiedenen Abteilungen" },
+        { "wrong": "denn sie fast nur Fertiggerichte und Süßigkeiten bieten", "fix": ["denn sie bieten", "sie bieten fast nur"] },
+        { "wrong": "an drei Tage pro Woche", "fix": "an drei Tagen" }
+      ],
+      "clean": [
+        "dass die Kantine seit der Einführung des Homeoffice weniger genutzt wird, ist mir bewusst",
+        "neue Kollegen finden schnell Anschluss",
+        "Wie wäre es, wenn die Kantine nur noch an",
+        "Ich würde mich freuen, wenn Sie meinen Vorschlag berücksichtigen könnten"
+      ]
+    },
+    {
+      "id": "c1t2-5",
+      "set": "set-5",
+      "note": "Hatasız C1 mesajı: Partizipialattribut, Funktionsverbgefüge, sich lassen + Konjunktiv II, Plusquamperfekt; hiçbir şey işaretlenmemeli",
+      "text": "Sehr geehrte Frau Lindner,\nvielen Dank für Ihre Rundmail. Mir ist bewusst, welche Bedeutung das Großprojekt für unser Unternehmen hat und dass im Sommer jede Unterstützung gebraucht wird.\nDie angekündigte Urlaubssperre stellt mich allerdings vor ein ernsthaftes Problem. Meinen bereits im Januar beantragten und genehmigten Urlaub im Juli hatte ich fest eingeplant. Da wir meine Schwiegereltern in Izmir besuchen, sind die Flüge längst gebucht und ließen sich nur gegen eine hohe Gebühr stornieren.\nGleichwohl bin ich gern bereit, meinen Beitrag zum Gelingen des Projekts zu leisten. Vor meiner Abreise könnte ich zusätzliche Aufgaben übernehmen und eine ausführliche Übergabe für meine Vertretung vorbereiten.\nHätten Sie in den kommenden Tagen Zeit für ein kurzes Gespräch, damit wir gemeinsam eine Lösung finden können?\nMit freundlichen Grüßen\nMurat Yılmaz",
+      "errors": [],
+      "clean": [
+        "Die angekündigte Urlaubssperre stellt mich allerdings vor ein ernsthaftes Problem",
+        "Meinen bereits im Januar beantragten und genehmigten Urlaub im Juli hatte ich fest eingeplant",
+        "ließen sich nur gegen eine hohe Gebühr stornieren",
+        "meinen Beitrag zum Gelingen des Projekts zu leisten",
+        "Hätten Sie in den kommenden Tagen Zeit für ein kurzes Gespräch"
+      ]
+    }
+  ]
+}

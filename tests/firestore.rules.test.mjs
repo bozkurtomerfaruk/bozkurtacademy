@@ -1298,6 +1298,33 @@ describe('Schreiben yapay zekâ (Aşama B)', () => {
     await assertSucceeds(updateDoc(doc(aiDb(), 'users/can/writings/w1'), { aiFeedback: aiResult(), aiAt: serverTimestamp() }));
   });
 
+  test('sınava özel ayar: Kapalı sınavda aiFeedback ve taslak yazılamaz, exam-off yazılır; Taslak sınavda sadece taslak', async () => {
+    const ref = (db) => doc(db, 'users/ayse/writings/w1');
+    const feedback = () => updateDoc(ref(aiDb()), { aiFeedback: aiResult(), aiAt: serverTimestamp() });
+    await seed('users/ayse', seededAdult('active'));
+    await seed('users/ayse/writings/w1', seededWriting({ exam: 'goethe', level: 'c1' }));
+    await seed('settings/ai', { mode: 'instant', exams: { 'goethe-c1': 'off' } });
+    await assertFails(feedback());
+    await assertFails(setDoc(doc(aiDb(), 'aiDrafts/ayse_w1'), draft()));
+    await assertSucceeds(updateDoc(ref(aiDb()), { aiSkip: 'exam-off' }));
+
+    await seed('users/ayse/writings/w1', seededWriting({ exam: 'goethe', level: 'c1' }));
+    await seed('settings/ai', { mode: 'instant', exams: { 'goethe-c1': 'draft' } });
+    await assertFails(feedback());
+    await assertSucceeds(setDoc(doc(aiDb(), 'aiDrafts/ayse_w1'), draft()));
+
+    // Başka sınavın ayarı etkilemez.
+    await env.clearFirestore();
+    await seed('users/ayse', seededAdult('active'));
+    await seed('users/ayse/writings/w1', seededWriting({ exam: 'goethe', level: 'c1' }));
+    await seed('settings/ai', { mode: 'instant', exams: { 'telc-c1': 'off' } });
+    await assertSucceeds(feedback());
+    // Öğrenci ayarı ne okuyabilir ne değiştirebilir; öğretmen değiştirebilir.
+    await assertFails(getDoc(doc(ayse(), 'settings/ai')));
+    await assertFails(updateDoc(doc(ayse(), 'settings/ai'), { 'exams.goethe-c1': 'off' }));
+    await assertSucceeds(updateDoc(doc(teacherDb(), 'settings/ai'), { 'exams.goethe-c1': 'off' }));
+  });
+
   test('kontrol yapılamazsa yapay zekâ hesabı nedeni bir kez yazar; öğrenci yazamaz', async () => {
     await aiSetup('instant');
     const ref = (db) => doc(db, 'users/ayse/writings/w1');

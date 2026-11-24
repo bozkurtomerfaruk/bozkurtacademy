@@ -1,0 +1,95 @@
+{
+  "about": "Yapay zekâ denemesi (Goethe-Zertifikat C1 Teil 1: bir internet forumu için ~230 kelimelik Diskussionsbeitrag, 4 dil işlevi). errors: bulunması gereken hatalı yer (wrong) ve düzeltmede geçmesi gereken parça (fix; liste ise biri yeter); clean: doğru olan, işaretlenmemesi gereken yerler. Metinlerde bilerek doğru ama ileri düzey yapılar var (Nominalstil, Konjunktiv I, Partizipialattribut, Funktionsverbgefüge): bunlar yanlış alarm sınavı. c1t1-3 hatasız; hiçbir şey işaretlenmemeli. c1t1-4 bilerek kısa (~80 kelime, sınavda 0 puan sınırının altında): yapay zekâ uzunluğu değil sadece dil hatalarını işaretlemeli. Çalıştırma: scripts/ai-deneme.mjs.",
+  "exam": "goethe",
+  "level": "c1",
+  "teil": 1,
+  "texts": [
+    {
+      "id": "c1t1-1",
+      "set": "set-1",
+      "note": "Partizipialattribut çekimi, wegen + Genitiv, trotzdem'den sonra fiil, Funktionsverbgefüge (eine Entscheidung treffen); doğru Konjunktiv I ve Nominalstil",
+      "text": "Kaum ein Thema wird in Deutschland so emotional diskutiert wie das Tempolimit. Viele Autofahrer betrachten die freie Fahrt als ein Stück persönlicher Freiheit, und die Autoindustrie hat in der Politik großen Einfluss.\n\nMeiner Meinung nach sprechen mehrere Gründe für eine Höchstgeschwindigkeit. Die Einführung eines Tempolimits würde zur Senkung der Emissionen beitragen, und zwar ohne zusätzliche Kosten. Außerdem passieren auf den immer voller werdende Autobahnen viele Unfälle, weil die Unterschiede zwischen schnellen und langsamen Fahrzeugen zu groß sind. Die von Verkehrsforschern ausgewerteten Daten zeigen, dass auf Strecken mit Tempolimit weniger schwere Unfälle geschehen.\n\nKritiker behaupten, ein Tempolimit bringe kaum etwas und schränke die Freiheit der Bürger unnötig ein. Manche befürchten auch, dass sie wegen dem längeren Arbeitsweg weniger Zeit für ihre Familie hätten. Trotzdem ich verstehe diese Bedenken nur teilweise, denn der Zeitverlust beträgt auf den meisten Strecken nur wenige Minuten.\n\nAls Kompromiss schlage ich vor, ein Tempolimit von 130 km/h zunächst drei Jahre lang zu testen. Danach sollte die Politik auf der Grundlage der Ergebnisse eine Entscheidung machen. So würde man nicht nach Gefühl, sondern nach Fakten handeln.\n\nInsgesamt bin ich davon überzeugt, dass ein Tempolimit mehr Vorteile als Nachteile hat.",
+      "errors": [
+        { "wrong": "auf den immer voller werdende Autobahnen", "fix": "voller werdenden" },
+        { "wrong": "wegen dem längeren Arbeitsweg", "fix": "wegen des längeren" },
+        { "wrong": "Trotzdem ich verstehe", "fix": "Trotzdem verstehe ich" },
+        { "wrong": "eine Entscheidung machen", "fix": "treffen" }
+      ],
+      "clean": [
+        "Die Einführung eines Tempolimits würde zur Senkung der Emissionen beitragen",
+        "Die von Verkehrsforschern ausgewerteten Daten zeigen",
+        "Kritiker behaupten, ein Tempolimit bringe kaum etwas und schränke die Freiheit der Bürger unnötig ein",
+        "weniger Zeit für ihre Familie hätten"
+      ]
+    },
+    {
+      "id": "c1t1-2",
+      "set": "set-2",
+      "note": "weil'den sonra fiil sonda, sich beschweren darüber, dass …, als ob + Konjunktiv, Genitiv çoğul (der Kinder); doğru Partizipialattribut, Nominalstil, in Kauf nehmen, müssten",
+      "text": "Werbung spielt im Leben von Kindern eine immer größere Rolle. Früher sahen Kinder Werbespots vor allem im Fernsehen, heute begegnet ihnen die in Videos versteckte Werbung fast überall im Internet.\n\nDas kann ernste Folgen haben. Viele Kinder können zwischen Werbung und Inhalt nicht unterscheiden, weil sie sind noch zu jung. Sie wünschen sich deshalb ständig neue Spielsachen und ungesunde Snacks. Viele Eltern beschweren sich über, dass sie im Supermarkt immer wieder mit ihren Kindern streiten müssen. Es scheint, als ob die Werbung ist harmlos, doch in Wirklichkeit beeinflusst sie das Verhalten der Kinder stark.\n\nGegen ein Verbot spricht allerdings, dass viele kostenlose Angebote ohne Werbeeinnahmen nicht existieren könnten. Die Finanzierung kostenloser Kinderseiten wäre dann nicht mehr gesichert. Außerdem ist fraglich, ob man ein solches Verbot im Internet überhaupt durchsetzen kann. Manche Fachleute meinen, Kinder müssten lernen, kritisch mit Werbung umzugehen.\n\nIch schlage deshalb vor, Werbung für besonders zuckerhaltige Produkte in Kindersendungen zu verbieten. Gleichzeitig sollten die Schulen die Interessen der Kindern stärker berücksichtigen und Medienkompetenz unterrichten. Höhere Kosten für die Anbieter müsste man dabei in Kauf nehmen.\n\nZusammenfassend lässt sich sagen, dass Kinder besser vor Werbung geschützt werden sollten.",
+      "errors": [
+        { "wrong": "weil sie sind noch zu jung", "fix": ["noch zu jung sind", "zu jung sind"] },
+        { "wrong": "beschweren sich über, dass", "fix": "darüber" },
+        { "wrong": "als ob die Werbung ist harmlos", "fix": ["harmlos sei", "harmlos wäre"] },
+        { "wrong": "die Interessen der Kindern", "fix": "der Kinder" }
+      ],
+      "clean": [
+        "heute begegnet ihnen die in Videos versteckte Werbung fast überall im Internet",
+        "Die Finanzierung kostenloser Kinderseiten wäre dann nicht mehr gesichert",
+        "Manche Fachleute meinen, Kinder müssten lernen, kritisch mit Werbung umzugehen",
+        "Höhere Kosten für die Anbieter müsste man dabei in Kauf nehmen"
+      ]
+    },
+    {
+      "id": "c1t1-3",
+      "set": "set-3",
+      "note": "Hatasız C1 metni: Nominalstil, Konjunktiv I, Partizipialattribut, Funktionsverbgefüge; hiçbir şey işaretlenmemeli",
+      "text": "In Deutschland werden jedes Jahr Millionen Tonnen noch genießbarer Lebensmittel weggeworfen. Die Gründe dafür sind vielfältig: Supermärkte sortieren Obst mit kleinen Makeln aus, und viele Verbraucher halten das Mindesthaltbarkeitsdatum für ein Verfallsdatum.\n\nIch befürworte eine gesetzliche Pflicht zur Weitergabe unverkaufter Lebensmittel. In Frankreich, wo eine solche Regelung seit 2016 gilt, erhalten gemeinnützige Organisationen deutlich mehr Spenden. Befürworter betonen, die Vorschrift habe sich bewährt und sei für große Märkte gut umsetzbar.\n\nBei der Umsetzung müssten allerdings einige Fragen geklärt werden. Die meist ehrenamtlich arbeitenden Tafeln verfügen oft nicht über genügend Kühlräume, um die zusätzlich anfallenden Mengen zu lagern. Zudem müsste die Haftung bei verdorbenen Produkten eindeutig geregelt sein, damit kein Markt aus Angst vor Klagen auf Spenden verzichtet.\n\nAuch die Verbraucher können einen wichtigen Beitrag leisten. Wer seinen Wocheneinkauf plant und Reste kreativ verwertet, nimmt Einfluss darauf, wie viel im Müll landet. Hilfreich sind außerdem Apps, über die Bäckereien übrig gebliebene Backwaren am Abend zu reduzierten Preisen anbieten.\n\nInsgesamt bin ich der Überzeugung, dass nur das Zusammenwirken von Politik, Handel und Verbrauchern die Verschwendung nachhaltig verringern kann.",
+      "errors": [],
+      "clean": [
+        "Millionen Tonnen noch genießbarer Lebensmittel",
+        "eine gesetzliche Pflicht zur Weitergabe unverkaufter Lebensmittel",
+        "Befürworter betonen, die Vorschrift habe sich bewährt und sei für große Märkte gut umsetzbar",
+        "Die meist ehrenamtlich arbeitenden Tafeln verfügen oft nicht über genügend Kühlräume",
+        "um die zusätzlich anfallenden Mengen zu lagern",
+        "Auch die Verbraucher können einen wichtigen Beitrag leisten",
+        "nimmt Einfluss darauf, wie viel im Müll landet",
+        "übrig gebliebene Backwaren am Abend zu reduzierten Preisen",
+        "dass nur das Zusammenwirken von Politik, Handel und Verbrauchern die Verschwendung nachhaltig verringern kann"
+      ]
+    },
+    {
+      "id": "c1t1-4",
+      "set": "set-4",
+      "note": "Bilerek kısa (~80 kelime): uzunluk işaretlenmemeli; leiden unter + Dativ, ana cümlede fiil 2. sırada",
+      "text": "Viele Jugendliche träumen davon, als Influencer berühmt zu werden. Sie glauben, dass man mit wenig Arbeit viel Geld verdienen kann. In Wirklichkeit leben nur wenige von diesem Beruf, und der Druck ist enorm. Wer erfolgreich sein will, muss täglich neue Inhalte produzieren. Viele leiden unter die ständige Kritik im Netz. Ob es ein richtiger Beruf ist, darüber kann man streiten. Ich würde jungen Menschen raten, zuerst eine Ausbildung zu machen. Denn ohne einen Abschluss sie haben später kaum Alternativen.",
+      "errors": [
+        { "wrong": "leiden unter die ständige Kritik", "fix": "unter der ständigen Kritik" },
+        { "wrong": "ohne einen Abschluss sie haben", "fix": ["haben sie später", "haben sie"] }
+      ],
+      "clean": [
+        "Wer erfolgreich sein will, muss täglich neue Inhalte produzieren",
+        "Ob es ein richtiger Beruf ist, darüber kann man streiten"
+      ]
+    },
+    {
+      "id": "c1t1-5",
+      "set": "set-5",
+      "note": "bei + Dativ çoğul, özne-fiil uyumu (die Anzahl … wächst), Passiv'de Partizip II (umgangen), öndeki edat grubundan sonra virgül olmaz; doğru Konjunktiv I, Relativsatz + Passiv, zur Folge haben",
+      "text": "Die Wohnungsnot in deutschen Großstädten hat sich in den letzten Jahren dramatisch verschärft. Für viele Familien ist die Miete inzwischen der größte Posten im Haushaltsbudget, und nicht wenige ziehen deshalb an den Stadtrand, was lange Pendelzeiten zur Folge hat. Viele Studierende finden trotz intensiver Suche kein Zimmer und müssen bei ihre Eltern wohnen bleiben.\n\nDie Ursachen sind vielfältig. Einerseits ziehen immer mehr Menschen in die Städte, andererseits wird zu wenig neu gebaut. Viele Investoren sehen Wohnungen vor allem als sichere Geldanlage, weshalb die Preise weiter steigen. Hinzu kommt, dass die Anzahl der Single-Haushalte seit Jahren wachsen.\n\nEine bekannte Maßnahme ist die Mietpreisbremse. Befürworter argumentieren, sie schütze Mieter vor überhöhten Preisen. Meiner Meinung nach reicht dieses Instrument allein nicht aus, weil dadurch keine neuen Wohnungen entstehen. Außerdem wird die Regel oft umgehen, ohne dass Vermieter Konsequenzen fürchten müssen.\n\nDie Städte sollten daher selbst aktiv werden. Sie könnten leerstehende Büros in Wohnungen umbauen und Grundstücke bevorzugt an Genossenschaften vergeben, die sich zu dauerhaft niedrigen Mieten verpflichten. Auch der Bau kleinerer Wohnungen, der von vielen Fachleuten gefordert wird, sollte stärker gefördert werden. Ohne entschlossenes Handeln der Politik, wird sich die Lage nicht verbessern.\n\nAbschließend möchte ich betonen, dass bezahlbarer Wohnraum ein Grundbedürfnis ist.",
+      "errors": [
+        { "wrong": "bei ihre Eltern", "fix": "bei ihren Eltern" },
+        { "wrong": "die Anzahl der Single-Haushalte seit Jahren wachsen", "fix": "wächst" },
+        { "wrong": "wird die Regel oft umgehen", "fix": "umgangen" },
+        { "wrong": "der Politik, wird", "fix": ["Politik wird", "der Politik wird sich"] }
+      ],
+      "clean": [
+        "was lange Pendelzeiten zur Folge hat",
+        "weshalb die Preise weiter steigen",
+        "Befürworter argumentieren, sie schütze Mieter vor überhöhten Preisen",
+        "an Genossenschaften vergeben, die sich zu dauerhaft niedrigen Mieten verpflichten",
+        "Auch der Bau kleinerer Wohnungen, der von vielen Fachleuten gefordert wird, sollte stärker gefördert werden"
+      ]
+    }
+  ]
+}

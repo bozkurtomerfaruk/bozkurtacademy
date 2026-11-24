@@ -543,8 +543,26 @@ window.BA_EXAMS = {
               }, // Teil 4
             ] },
             { id: 'schreiben', teile: [
-              { title: null, exercises: [] }, // Teil 1
-              { title: null, exercises: [] }, // Teil 2
+              {
+                title: { tr: 'Forum yazısı · 4 madde · yaklaşık 230 kelime', de: 'Diskussionsbeitrag · 4 Punkte · circa 230 Wörter', en: 'Forum contribution · 4 points · about 230 words' },
+                exercises: [
+                  { set: 'set-1', title: 'Tempolimit auf Autobahnen?' },
+                  { set: 'set-2', title: 'Werbeverbot für Kinderprodukte?' },
+                  { set: 'set-3', title: 'Lebensmittel retten – Pflicht für Supermärkte?' },
+                  { set: 'set-4', title: 'Influencer als Traumberuf?' },
+                  { set: 'set-5', title: 'Bezahlbares Wohnen in Großstädten' },
+                ]
+              }, // Teil 1
+              {
+                title: { tr: '(Yarı) resmî mesaj · 4 madde · yaklaşık 120 kelime', de: '(Halb-)formelle Nachricht · 4 Punkte · circa 120 Wörter', en: '(Semi-)formal message · 4 points · about 120 words' },
+                exercises: [
+                  { set: 'set-1', title: 'Überstunden ungleich verteilt' },
+                  { set: 'set-2', title: 'Jobticket wird gestrichen' },
+                  { set: 'set-3', title: 'Neue Software ohne Schulung' },
+                  { set: 'set-4', title: 'Kantine wird geschlossen' },
+                  { set: 'set-5', title: 'Urlaubssperre im Sommer' },
+                ]
+              }, // Teil 2
             ] },
             { id: 'sprechen', teile: [
               { title: null, exercises: [] }, // Teil 1

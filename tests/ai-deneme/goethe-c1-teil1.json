@@ -81,7 +81,7 @@
         { "wrong": "bei ihre Eltern", "fix": "bei ihren Eltern" },
         { "wrong": "die Anzahl der Single-Haushalte seit Jahren wachsen", "fix": "wächst" },
         { "wrong": "wird die Regel oft umgehen", "fix": "umgangen" },
-        { "wrong": "Ohne entschlossenes Handeln der Politik, wird", "fix": ["Politik wird", "der Politik wird sich"] }
+        { "wrong": "der Politik, wird", "fix": ["Politik wird", "der Politik wird sich"] }
       ],
       "clean": [
         "was lange Pendelzeiten zur Folge hat",

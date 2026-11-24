@@ -2,7 +2,7 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
-## 2026-11-23 · Goethe C1 Schreiben + sınava özel yapay zekâ ayarı (dal `claude/ecstatic-dijkstra-5rwp81`, PR açık, birleştirilmedi)
+## 2026-11-23 · Goethe C1 Schreiben + sınava özel yapay zekâ ayarı (dal `claude/ecstatic-dijkstra-5rwp81`, birleştirildi (#137))
 
 Eksik Schreiben sınavları sırası: telc A2 ✓ → telc B2 ✓ → **Goethe C1** → telc C1 → TestDaF (dijital, kâğıt).
 

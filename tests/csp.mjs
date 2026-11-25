@@ -525,7 +525,7 @@ await resetEmulators();
   const { ctx, page, log } = await context({ live: false, emulator: true });
   await page.goto(LOCAL + '/giris.html'); await page.waitForTimeout(500);
   await signIn(page, 'ogretmen@example.com', 'ogretmen123');
-  for(const p of ['/ogretmen.html', '/ogretmen-ogrenci.html?id=ogrenci1', '/ogretmen-odev.html?ogrenci=ogrenci1', '/ogretmen-odevler.html', '/ogretmen-odevler.html?ogrenci=ogrenci1', '/yonetim/yorumlar/', '/index.html#yonetim/seviye-testleri']){
+  for(const p of ['/ogretmen.html', '/ogretmen-ogrenci.html?id=ogrenci1', '/ogretmen-odev.html?ogrenci=ogrenci1', '/ogretmen-odevler.html', '/ogretmen-odevler.html?ogrenci=ogrenci1', '/ogretmen-taslaklar.html', '/yonetim/yorumlar/', '/index.html#yonetim/seviye-testleri']){
     await page.goto(LOCAL + p); await page.waitForTimeout(1800);
     clean(log, `öğretmen ${p}`);
   }

@@ -137,7 +137,8 @@ export function recordConsent(uid, { date, method }){
 // Ödevler: her öğrenciye ayrı bir kopya yazılır (users/{uid}/assignments), aynı groupId ile.
 // Böylece bir öğrenci aynı ödevi başka kimin aldığını göremez. Veri biçimi: js/account/assignments.js.
 // Döner: { groupId, copies: [{ uid, id }] } (ödev e-postası için kopyaların kimlikleri).
-export async function createAssignments(studentIds, data, groupId = crypto.randomUUID()){
+// onBatch(batch): aynı yazmaya eklenecek işlem (ör. onaylanan taslağın silinmesi, js/account/homework-drafts.js).
+export async function createAssignments(studentIds, data, groupId = crypto.randomUUID(), { onBatch } = {}){
   const batch = fs.writeBatch(db);
   const copies = [];
   for(const uid of studentIds){
@@ -153,6 +154,7 @@ export async function createAssignments(studentIds, data, groupId = crypto.rando
       studentDocUrl: ''
     });
   }
+  onBatch?.(batch);
   await batch.commit();
   return { groupId, copies };
 }
@@ -325,6 +327,12 @@ export async function deleteStudentData(uid){
   }
   const drafts = await fs.getDocs(fs.query(fs.collection(db, 'aiDrafts'), fs.where('uid', '==', uid)));
   for(const d of drafts.docs) await fs.deleteDoc(d.ref);
+  // Ödev taslakları (homeworkDrafts): öğrenci taslaktan çıkarılır; taslakta başka öğrenci kalmazsa taslak silinir.
+  const homework = await fs.getDocs(fs.query(fs.collection(db, 'homeworkDrafts'), fs.where('uids', 'array-contains', uid)));
+  for(const d of homework.docs){
+    const rest = (d.data().uids || []).filter((u) => u !== uid);
+    await (rest.length ? fs.updateDoc(d.ref, { uids: rest }) : fs.deleteDoc(d.ref));
+  }
   await fs.deleteDoc(fs.doc(db, 'aiLimits', uid));
   await fs.deleteDoc(userRef(uid));
   // Ders defterinin bu tarayıcıdaki yedekleri de.

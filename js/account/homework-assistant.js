@@ -1,0 +1,137 @@
+// Ödev asistanı (ogretmen-odev.html): yapay zekâ yok, her şey tarayıcıda hesaplanır. Bu dosyada DOM ve Firebase yok;
+// node --test tests/odev-asistani.test.mjs ile sınanır. Veriler: data/catalog.json (konu adları, açıklamalar),
+// data/search-index.json (paketler, dosyadaki sırayla), öğrencinin sonuçları (results) ve önceki ödevleri (assignments).
+// Asistan hiçbir şeyi kendiliğinden forma eklemez; yalnızca öneri listesi verir.
+
+// "Relativsätze" → "relativsaetze", "Präteritum" → "praeteritum", "Şimdiki" → "simdiki".
+export function normalize(value){
+  return String(value || '')
+    .toLowerCase()
+    .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+    .replace(/ı/g, 'i').replace(/ş/g, 's').replace(/ç/g, 'c').replace(/ğ/g, 'g')
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+export const words = (value) => normalize(value).split(' ').filter(Boolean);
+
+// Bir arama kelimesi bir metin kelimesine uyuyor mu? 0: hayır, 1: içinde geçiyor, 2: ortak kök, 3: kelime başı / aynı.
+// Ortak kök: "relativsatz" ↔ "relativsaetze" (Almanca çoğul ve umlaut farkları), en az 5 harf.
+function wordMatch(q, w){
+  if(w === q || w.startsWith(q)) return 3;
+  let common = 0;
+  while(common < q.length && common < w.length && q[common] === w[common]) common++;
+  if(common >= 5 && common >= Math.min(q.length, w.length) - 3) return 2;
+  if(q.length >= 4 && w.includes(q)) return 1;
+  return 0;
+}
+
+// Arama kelimelerinin hepsi metinde geçmeli; dönüş 0 (yok) ya da 1..3 (en zayıf eşleşme).
+function textMatch(queryWords, textWords){
+  let worst = 3;
+  for(const q of queryWords){
+    let best = 0;
+    for(const w of textWords){
+      best = Math.max(best, wordMatch(q, w));
+      if(best === 3) break;
+    }
+    if(!best) return 0;
+    worst = Math.min(worst, best);
+  }
+  return worst;
+}
+
+const loc = (value) => (value == null ? [] : typeof value === 'string' ? [value] : Object.values(value));
+
+// Konular: [{ level, topic, title, haystack: { title, id, description }, exercises: [{ id, title, words }] }].
+// levels: data/catalog.json → levels; searchIndex: data/search-index.json (paketler dosyadaki sırayla).
+export function buildTopicIndex(levels, searchIndex){
+  const byTopic = new Map();
+  for(const e of searchIndex?.exercises || []){
+    const k = `${e.level}/${e.topic}`;
+    if(!byTopic.has(k)) byTopic.set(k, []);
+    byTopic.get(k).push({ id: e.id, title: e.title, words: words(e.title) });
+  }
+  const list = [];
+  for(const level of levels || []) for(const t of level.topics || []){
+    if(!t.path) continue;
+    list.push({
+      level: level.id,
+      topic: t.id,
+      title: typeof t.title === 'string' ? t.title : (t.title?.tr || t.title?.de || t.id),
+      haystack: {
+        title: words(loc(t.title).join(' ')),
+        id: words(t.id.replace(/-/g, ' ')),
+        description: words(loc(t.description).join(' '))
+      },
+      exercises: byTopic.get(`${level.id}/${t.id}`) || []
+    });
+  }
+  return list;
+}
+
+// Konu araması: konu adı > konu kimliği > paket adı > açıklama. Paket adlarında geçenler "matches" olarak döner.
+// Dönüş: [{ ...konu, score, matches: [paket id] }], en iyi eşleşme önce; aynı puanda seviye sırası korunur.
+export function searchTopics(index, query, { limit = 6, level = '' } = {}){
+  const q = words(query);
+  if(!q.length || q.join('').length < 2) return [];
+  const out = [];
+  index.forEach((t, order) => {
+    const title = textMatch(q, t.haystack.title);
+    const id = textMatch(q, t.haystack.id);
+    const description = textMatch(q, t.haystack.description);
+    const matches = t.exercises.filter((e) => textMatch(q, e.words)).map((e) => e.id);
+    const score = Math.max(title * 10, id * 8, matches.length ? 6 + Math.min(matches.length, 6) / 10 : 0, description * 2);
+    if(!score) return;
+    out.push({ ...t, score: score + (level && t.level === level ? 0.5 : 0), matches, order });
+  });
+  out.sort((a, b) => b.score - a.score || a.order - b.order);
+  return out.slice(0, limit).map(({ order, ...t }) => t);
+}
+
+const exKey = (level, topic, exercise) => `${level}/${topic}/${exercise}`;
+
+// Öğrencinin geçmişi: çözdüğü (results) ve kendisine verilmiş (assignments: tek paketler ve konunun tamamı) paketler.
+export function studentHistory(results = [], assignments = []){
+  const solved = new Set();
+  for(const r of results){
+    if(!r?.level || !r?.topic || !r?.exercise) continue;
+    solved.add(exKey(r.level, r.topic, r.exercise));
+    // Sınav setlerinde sonucun seviyesi sınavın kimliği (a1, a2-b1), ödevdeki seviye katalog seviyesi (A1): kimlik yeterli.
+    if(r.topic === 'sinav') solved.add(exKey('*', r.topic, r.exercise));
+  }
+  const assigned = new Set();
+  const assignedTopics = new Set();
+  for(const a of assignments){
+    for(const e of a?.exercises || []) if(e?.level && e?.topic && e?.exercise) assigned.add(exKey(e.level, e.topic, e.exercise));
+    for(const t of a?.topics || []) if(t?.level && t?.topic) assignedTopics.add(`${t.level}/${t.topic}`);
+  }
+  return { solved, assigned, assignedTopics };
+}
+
+// Bir paketin bir öğrenci için durumu: 'solved' | 'assigned' | null.
+export function exerciseState(history, level, topic, exercise){
+  if(history.solved.has(exKey(level, topic, exercise)) || (topic === 'sinav' && history.solved.has(exKey('*', topic, exercise)))) return 'solved';
+  if(history.assigned.has(exKey(level, topic, exercise)) || history.assignedTopics.has(`${level}/${topic}`)) return 'assigned';
+  return null;
+}
+
+// Sıradaki paketler: konunun sırasıyla, seçili öğrencilerin hiçbirinin çözmediği ve hiçbirine verilmemiş, formda da
+// olmayan ilk "count" paket. histories: öğrenci başına studentHistory; skip: formdaki paketlerin anahtarları.
+export function nextExercises(topic, histories, { count = 3, skip = new Set() } = {}){
+  const out = [];
+  for(const e of topic.exercises){
+    if(out.length >= count) break;
+    if(skip.has(exKey(topic.level, topic.topic, e.id))) continue;
+    if(histories.some((hst) => exerciseState(hst, topic.level, topic.topic, e.id))) continue;
+    out.push(e);
+  }
+  return out;
+}
+
+// Bir konuda seçili öğrencilerin kaçının kaç paketi çözdüğü ("12/30 paket çözüldü"): tek öğrenci için anlamlı.
+export function topicProgress(topic, history){
+  const solved = topic.exercises.filter((e) => history.solved.has(exKey(topic.level, topic.topic, e.id))).length;
+  return { solved, total: topic.exercises.length };
+}

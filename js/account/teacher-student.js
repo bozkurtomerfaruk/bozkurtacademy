@@ -2,8 +2,9 @@
 import {
   $, consentGiven, currentYear, exerciseNames, formatDateTime, h, BERLIN, loadAssignments, loadProfile,
   loadResults, loadWritings, safeLink, scoreText, summarizeResults, validEmail, validHttpsUrl, LEVEL_EXAM, topicErrorsText,
-  setStatus, writingTitle, writingUrl
+  setStatus, writingTitle, writingUrl, examSets, loadExamsData, writingTasks
 } from './common.js';
+import { examTargets } from './homework-assistant.js?v=2';
 import {
   approve, emailVerified, fmtDate, isEnabled, listStudents, openDeleteDialog,
   AI_CONSENT_VERSION, AI_SKIP_LABELS, aiAllowed, aiDirect, approveAiDraft, deleteAiDraft, flaggedCount, loadAiDrafts, needsTeacher, recordAiConsent,
@@ -281,6 +282,49 @@ function inviteParentControl(){
   return h('div', { class: 'acc-invite' },
     h('label', { class: 'acc-check' }, input, h('span', {}, 'Ders davetlerine, hatırlatma ve ödev e-postalarına veliyi de ekle')),
     save);
+}
+
+// Hedef sınav (users/{uid}.targetExam = { exam, level }; yalnızca öğretmen yazar, öğrenciye gösterilmez). Ödev asistanı
+// (ogretmen-odev.html) bu sınavın sıradaki Lesen setini ve Schreiben görevini önerir.
+const targetKey = (t) => (t?.exam && t?.level ? `${t.exam}|${t.level}` : '');
+let targetExamReady = false;
+async function renderTargetExam(){
+  const select = $('targetExam');
+  const status = $('targetExamStatus');
+  try{
+    const [data, sets, tasks] = await Promise.all([loadExamsData(), examSets(), writingTasks()]);
+    const options = examTargets(data, { sets, tasks });
+    const current = targetKey(student.targetExam);
+    // Listede artık olmayan bir hedef (sınav kaldırıldıysa) yine görünür ki yanlışlıkla silinmesin.
+    const known = options.some((o) => targetKey(o) === current);
+    select.replaceChildren(h('option', { value: '' }, 'Seçilmedi'),
+      ...options.map((o) => h('option', { value: targetKey(o) }, o.label)),
+      ...(current && !known ? [h('option', { value: current }, `${student.targetExam.exam} ${student.targetExam.level}`)] : []));
+    select.value = current;
+  }catch(error){
+    console.warn(error);
+    setStatus(status, 'error', 'Sınav listesi yüklenemedi.');
+    return;
+  }
+  if(targetExamReady) return;
+  targetExamReady = true;
+  select.addEventListener('change', async () => {
+    const [exam, level] = select.value.split('|');
+    const previous = targetKey(student.targetExam);
+    select.disabled = true;
+    try{
+      const value = exam && level ? { exam, level } : null;
+      await fs.updateDoc(fs.doc(db, 'users', uid), { targetExam: value || fs.deleteField() });
+      student.targetExam = value;
+      setStatus(status, 'success', value ? `Hedef sınav: ${select.selectedOptions[0].textContent}.` : 'Hedef sınav kaldırıldı.');
+    }catch(error){
+      console.error(error);
+      select.value = previous;
+      setStatus(status, 'error', 'Kaydedilemedi. Tekrar dene.');
+    }finally{
+      select.disabled = false;
+    }
+  });
 }
 
 // Öğrencinin ödevleri ayrı sayfada (ogretmen-odevler.html?ogrenci=…). Burada kısa özet ve açık ödevler.
@@ -625,7 +669,7 @@ async function reload(){
   notes = studentNotes;
   renderLessons();
   renderNotes();
-  await Promise.all([renderAssignments(), renderResources(), renderResults(results), renderWritings()]);
+  await Promise.all([renderAssignments(), renderResources(), renderResults(results), renderWritings(), renderTargetExam()]);
   $('studentLoading').hidden = true;
   $('studentApp').hidden = false;
   // Öğretmen panelindeki "geri bildirim bekliyor" işareti #yazilar ile buraya gelir.

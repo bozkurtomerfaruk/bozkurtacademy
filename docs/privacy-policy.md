@@ -84,6 +84,9 @@ Guests who never sign in load nothing from Google, unless they send a placement-
   YouTube, Drive), chosen site exercises or whole topics, and the student's own fields (done, done time,
   an optional Google Docs/Drive link), plus `mailNewAt`/`mailUpdateAt` when a homework email was sent. Students can change only their own fields. Links open the external
   site in a new tab; nothing is embedded. Shown on `ogretmen-odevler.html` (teacher) and `odevlerim.html` (student).
+- Target exam (`users/{uid}.targetExam = { exam, level }`, e.g. goethe/b1, dtz/a2-b1): set only by the teacher on
+  `ogretmen-ogrenci.html`, not shown to the student; the homework assistant uses it with the student's results,
+  writings and earlier homework to suggest the next Lesen set and Schreiben task. Deleted with the profile.
 - Homework drafts (`homeworkDrafts/{id}`, homework assistant): the same content fields plus `uids` (the students it is
   for), `source` and timestamps. Teacher only (no student rule); approving writes the per-student copies and deletes the
   draft in one batch, and only then is the homework email sent. Deleting a student's data removes the student from every

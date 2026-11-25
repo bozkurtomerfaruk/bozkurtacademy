@@ -7,14 +7,16 @@
 // ?taslak=<id> taslağı açar, "Onayla ve gönder" ödevi verir ve taslağı siler (js/account/homework-drafts.js).
 import {
   $, berlinInputToDate, dateToBerlinInput, docsCopyUrl, exerciseNames, h, LEVEL_EXAM, levelExamTopic, loadAssignments, loadCatalogLevels, loadResults,
-  loadTopicExercises, localize, setStatus, WRITING, writingTasks, SINAV, examSets
+  loadExamsData, loadTopicExercises, loadWritings, localize, setStatus, toDate, WRITING, writingTasks, SINAV, examSets
 } from './common.js';
 import { fs } from './firebase.js';
 import { defaultTitle, KIND_LABELS, linkKind, linkLabel, MAX_LINKS, topicTitles, validLinkUrl, wholeTopicAllowed } from './assignments.js?v=1';
 import * as drive from './drive.js?v=2';
 import { mailConfigured, notifyHomework, rememberResult } from './homework-mail.js?v=1';
-import { createAssignments, isEnabled, listStudents, loadAssignmentGroups, requireTeacher, updateAssignmentGroup } from './teacher-common.js';
-import { buildTopicIndex, exerciseState, nextExercises, searchTopics, studentHistory, topicProgress } from './homework-assistant.js?v=1';
+import { createAssignments, fmtDate, isEnabled, listStudents, loadAssignmentGroups, requireTeacher, updateAssignmentGroup } from './teacher-common.js';
+import {
+  buildTopicIndex, examHistory, examItemState, examTargets, examTrack, exerciseState, nextExamItem, nextExercises, searchTopics, studentHistory, topicProgress
+} from './homework-assistant.js?v=2';
 import { approveDraft, getDraft, saveDraft } from './homework-drafts.js?v=1';
 
 const chosen = []; // [{ level, topic, exercise, label }]
@@ -29,6 +31,9 @@ let studentList = []; // listStudents
 let topicIndex = []; // buildTopicIndex (katalog + arama dizini)
 const histories = new Map(); // uid → studentHistory (sonuçlar ve önceki ödevler; sayfa açıkken bir kez okunur)
 const historyLoads = new Map(); // uid → Promise
+let examSetList = []; // examSets (Lesen, Hören, Sprachbausteine, form)
+let writingList = []; // writingTasks (Schreiben)
+let examLabels = new Map(); // "goethe|b1" → "Goethe B1"
 
 const key = (e) => `${e.level}/${e.topic}/${e.exercise}`;
 const topicKey = (t) => `${t.level}/${t.topic}`;
@@ -123,8 +128,10 @@ const studentName = (uid) => studentList.find((s) => s.id === uid)?.name || 'Ö�
 // Seçili öğrencilerin geçmişi (sonuçlar + önceki ödevler). Her öğrenci sayfa açıkken bir kez okunur (Spark kotası).
 function loadHistory(uid){
   if(!historyLoads.has(uid)){
-    historyLoads.set(uid, Promise.all([loadResults(uid), loadAssignments(uid)])
-      .then(([results, assignments]) => { histories.set(uid, studentHistory(results, assignments)); })
+    historyLoads.set(uid, Promise.all([loadResults(uid), loadAssignments(uid), loadWritings(uid).catch(() => [])])
+      .then(([results, assignments, writings]) => {
+        histories.set(uid, { ...studentHistory(results, assignments), exam: examHistory(results, assignments, writings, toDate) });
+      })
       .catch((error) => { console.warn(error); historyLoads.delete(uid); throw error; }));
   }
   return historyLoads.get(uid);
@@ -201,7 +208,72 @@ function scheduleSuggest(){
   suggestTimer = setTimeout(renderSuggest, 120);
 }
 
+// Hedef sınav: seçili her öğrenci için sıradaki Lesen seti ve Schreiben görevi (öneri değiştirilebilir: liste).
+const EXAM_PARTS = [
+  { key: 'lesen', label: 'Lesen', topic: SINAV, empty: 'Bu sınavda sitede Lesen seti yok.' },
+  { key: 'schreiben', label: 'Schreiben', topic: WRITING, empty: 'Bu sınavda sitede Schreiben görevi yok.' }
+];
+const STATE_TEXT = { solved: 'çözüldü', assigned: 'verildi' };
+
+// "Teil 2 · Set 1 · Neue Wohnung"
+const examItemName = (x) => `Teil ${x.teil} · ${x.set.replace('set-', 'Set ')} · ${x.title.split(' · ').pop()}`;
+
+function addExamItem(part, item){
+  if(chosen.some((c) => c.topic === part.topic && c.exercise === item.id)) return;
+  const level = item.catalogLevels.includes($('aLevel').value) ? $('aLevel').value : item.catalogLevels[0];
+  chosen.push({ level, topic: part.topic, exercise: item.id, label: item.title });
+}
+
+function examPartRow(student, track, history, part){
+  const items = track[part.key];
+  if(!items.length) return h('div', { class: 'odev-exam-part' }, h('p', { class: 'odev-suggest-label' }, part.label), h('p', { class: 'acc-hint' }, part.empty));
+  const inForm = new Set(chosen.filter((c) => c.topic === part.topic).map((c) => c.exercise));
+  const { next, last } = nextExamItem(items, history, inForm);
+  const id = `aExam-${student.id}-${part.key}`;
+  const select = h('select', { id, class: 'odev-exam-select' }, items.map((x) => {
+    const state = inForm.has(x.id) ? 'ödevde' : STATE_TEXT[examItemState(history, x.id)];
+    return h('option', { value: x.id, selected: x.id === next?.id }, `${examItemName(x)}${state ? ` (${state})` : ''}`);
+  }));
+  const add = h('button', { class: 'btn ghost odev-suggest-add', type: 'button', 'aria-label': `${part.label}: seçileni ekle (${student.name})` }, 'Ekle');
+  add.addEventListener('click', () => {
+    const item = items.find((x) => x.id === select.value);
+    if(item) addExamItem(part, item);
+    renderChosen();
+    renderExercises();
+    renderSuggest();
+  });
+  return h('div', { class: 'odev-exam-part' },
+    h('label', { class: 'odev-suggest-label', for: id }, next ? `${part.label}: sıradaki ${examItemName(next)}` : `${part.label}: hepsi verildi ya da çözüldü; listeden seç`),
+    h('div', { class: 'odev-exam-pick' }, select, add),
+    h('p', { class: 'acc-sub odev-exam-last' }, last
+      ? `Son verilen: ${last.item.title}${last.at ? ` (${fmtDate(last.at)})` : ''}`
+      : 'Son verilen: henüz yok'));
+}
+
+function renderExamSuggest(){
+  const box = $('aExamSuggest');
+  const selected = checkedStudents().map((u) => studentList.find((s) => s.id === u)).filter(Boolean);
+  if(!selected.length){
+    box.replaceChildren();
+    return;
+  }
+  box.replaceChildren(...selected.slice(0, 6).map((student) => {
+    const target = student.targetExam;
+    const label = target ? (examLabels.get(`${target.exam}|${target.level}`) || `${target.exam} ${target.level}`) : '';
+    if(!target?.exam){
+      return h('li', { class: 'odev-suggest-item odev-exam-item' }, h('p', { class: 'acc-hint' }, `${student.name} için hedef sınav seçilmemiş. `,
+        h('a', { class: 'ba-link', href: `ogretmen-ogrenci.html?id=${encodeURIComponent(student.id)}` }, 'Öğrenci sayfasında seç')));
+    }
+    const history = histories.get(student.id)?.exam;
+    const head = h('div', { class: 'odev-suggest-head' }, h('span', {}, h('strong', {}, `${student.name} · ${label}`), h('span', { class: 'acc-sub' }, 'Hedef sınav')));
+    if(!history) return h('li', { class: 'odev-suggest-item odev-exam-item' }, head, h('p', { class: 'acc-hint' }, 'Önceki ödevleri okunuyor…'));
+    const track = examTrack(target, { sets: examSetList, tasks: writingList });
+    return h('li', { class: 'odev-suggest-item odev-exam-item' }, head, ...EXAM_PARTS.map((part) => examPartRow(student, track, history, part)));
+  }));
+}
+
 function renderSuggest(){
+  renderExamSuggest();
   const box = $('aSuggest');
   const query = $('aSearch').value.trim();
   if(!query){
@@ -567,6 +639,12 @@ if(user){
     }
     levels = catalogLevels;
     studentList = students;
+    examSetList = sets;
+    writingList = writing;
+    loadExamsData().then((data) => {
+      examLabels = new Map(examTargets(data, { sets, tasks: writing }).map((t) => [`${t.exam}|${t.level}`, t.label]));
+      renderExamSuggest();
+    }).catch((error) => console.warn(error));
     topicIndex = buildTopicIndex(catalogLevels, searchIndex);
     if(!searchIndex) setStatus($('aSuggestStatus'), 'error', 'Arama dizini yüklenemedi; asistan sadece konu adlarında arar.');
     writingLevels = new Set(writing.flatMap((w) => w.catalogLevels));

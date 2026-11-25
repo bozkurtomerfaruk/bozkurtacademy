@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="css/base.css?v=15" />
   <link rel="stylesheet" href="css/account.css?v=11" />
   <link rel="stylesheet" href="js/vendor/quill/quill.core.css?v=1" />
-  <link rel="stylesheet" href="css/ders-defteri.css?v=2" />
+  <link rel="stylesheet" href="css/ders-defteri.css?v=3" />
 </head>
 <body class="academy-theme account-page teacher-page note-page">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
@@ -77,6 +77,7 @@
               <button class="note-tool note-tool-text" type="button" id="fullBtn" aria-pressed="false">Tam ekran</button>
               <button class="note-tool note-tool-text" type="button" id="printBtn">Yazdır / PDF</button>
               <a class="note-tool note-tool-text" id="newPageLink" href="#">Yeni sayfa</a>
+              <a class="note-tool note-tool-text" id="homeworkLink" href="ogretmen-odev.html" title="Not başlığından ve içeriğinden konuları bulur, ödev taslağını açar. Öğrenciye bir şey gitmez."><span class="note-hw-full" id="homeworkLabel">Bu dersin ödevini hazırla</span><span class="note-hw-short" aria-hidden="true">Ödev</span></a>
               <button class="note-tool note-tool-text note-danger" type="button" id="deleteBtn">Sil</button>
             </div>
             <p class="acc-status warning note-banner" id="sizeWarn" role="status" hidden></p>
@@ -185,6 +186,6 @@
   <script src="js/app.js?v=57"></script>
   <script src="js/theme.js?v=10"></script>
   <script src="js/vendor/quill/quill.js?v=1"></script>
-  <script type="module" src="js/account/teacher-note.js?v=2"></script>
+  <script type="module" src="js/account/teacher-note.js?v=4"></script>
 </body>
 </html>

@@ -6,6 +6,7 @@
 //   uids: [öğrenci uid]           (en az bir)
 //   title, description, dueAt, links, topics, exercises   (ödevle aynı biçim, js/account/assignments.js)
 //   source: 'form' | 'ders-defteri'
+//   noteId: ders notunun kimliği (yalnızca ders defterinden açılan taslakta; users/{uid}/lessonNotes/{noteId})
 //   createdAt, updatedAt
 import { db, fs } from './firebase.js';
 import { toDate } from './common.js';
@@ -40,13 +41,13 @@ export async function getDraft(id){
 }
 
 // data: ödev alanları (title, description, dueAt, links, topics, exercises). Dönüş: taslak kimliği.
-export async function saveDraft(id, uids, data, { source = 'form' } = {}){
+export async function saveDraft(id, uids, data, { source = 'form', noteId = '' } = {}){
   if(id){
     await fs.updateDoc(draftRef(id), { ...data, uids, updatedAt: fs.serverTimestamp() });
     return id;
   }
   const ref = fs.doc(fs.collection(db, COLLECTION));
-  await fs.setDoc(ref, { ...data, uids, source, createdAt: fs.serverTimestamp(), updatedAt: fs.serverTimestamp() });
+  await fs.setDoc(ref, { ...data, uids, source, ...(noteId ? { noteId: String(noteId).slice(0, 100) } : {}), createdAt: fs.serverTimestamp(), updatedAt: fs.serverTimestamp() });
   return ref.id;
 }
 

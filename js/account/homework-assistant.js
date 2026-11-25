@@ -238,3 +238,36 @@ export function suggestTags(fileName, index){
 
 // Kütüphanedeki PDF'lerden bir konuya etiketlenmiş olanlar.
 export const libraryFor = (library, level, topic) => library.filter((item) => (item.topics || []).some((t) => t.level === level && t.topic === topic));
+
+// Ders defteri → ödev: not başlığı ve metninden konular ---------------------------------------------------------------
+// Her anlamlı kelime (en az 4 harf, sık geçen genel kelimeler hariç) konu adı ya da kimliğinde aranır; bir konunun puanı
+// eşleşmelerin toplamı (başlıktaki kelimeler iki kat sayılır). Dönüş: en çok "limit" konu, en güçlüsü önce.
+const NOTE_STOP = new Set([...FILE_STOP, 'heute', 'morgen', 'hausaufgabe', 'hausaufgaben', 'odev', 'ders', 'dersi', 'bugun', 'tekrar', 'konu',
+  'notlar', 'notu', 'beispiel', 'beispiele', 'ornek', 'ornekler', 'satz', 'saetze', 'wort', 'woerter', 'kelime', 'kelimeler', 'sein', 'haben',
+  'werden', 'nicht', 'eine', 'einen', 'einem', 'einer', 'ist', 'sind', 'hat', 'auch', 'aber', 'oder', 'wenn', 'dass', 'weil', 'sehr', 'bitte',
+  'danke', 'hier', 'dort', 'jetzt', 'immer', 'noch', 'schon', 'bir', 'icin', 'gibi', 'daha', 'cok', 'olan', 'olarak', 'sonra', 'once']);
+const MAX_NOTE_WORDS = 600;
+
+export function topicsFromText(title, text, index, { limit = 3 } = {}){
+  const counts = new Map();
+  const add = (value, weight) => {
+    for(const w of words(String(value || '').replace(/([a-zäöüß])([A-ZÄÖÜ])/g, '$1 $2'))){
+      if(w.length < 4 || NOTE_STOP.has(w) || /^\d+$/.test(w)) continue;
+      if(!counts.has(w) && counts.size >= MAX_NOTE_WORDS) continue;
+      counts.set(w, (counts.get(w) || 0) + weight);
+    }
+  };
+  add(title, 2);
+  add(text, 1);
+  const scored = new Map();
+  for(const [w, n] of counts){
+    for(const t of searchTopics(index, w, { limit: 3 })){
+      if(t.score < 20) continue; // yalnızca konu adında ya da kimliğinde tam/kök eşleşme
+      const key = `${t.level}/${t.topic}`;
+      const prev = scored.get(key) || { level: t.level, topic: t.topic, title: t.title, score: 0 };
+      prev.score += Math.min(n, 5) * (t.score / 10);
+      scored.set(key, prev);
+    }
+  }
+  return [...scored.values()].sort((a, b) => b.score - a.score).slice(0, limit).map(({ level, topic, title: tt }) => ({ level, topic, title: tt }));
+}

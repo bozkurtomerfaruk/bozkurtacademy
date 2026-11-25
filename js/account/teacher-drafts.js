@@ -4,7 +4,7 @@
 // Onay: her taslak için ödev kopyaları + taslağın silinmesi tek yazmada; sonra yeni ödev e-postaları (Worker).
 import { $, exerciseNames, h, setStatus } from './common.js';
 import { linkLabel, topicTitles } from './assignments.js?v=1';
-import { approveDraft, deleteDraft, draftData, draftEmpty, loadDrafts, updateDraft } from './homework-drafts.js?v=1';
+import { approveDraft, deleteDraft, draftData, draftEmpty, loadDrafts, updateDraft } from './homework-drafts.js?v=2';
 import { mailConfigured, notifyHomework, rememberResult } from './homework-mail.js?v=1';
 import { loadLibrary, shareItems, unsharedIn } from './library.js?v=1';
 import { fmtDate, isEnabled, listStudents, requireTeacher } from './teacher-common.js';
@@ -107,6 +107,7 @@ function draftCard(d){
       h('div', { class: 'odev-draft-actions' },
         approve,
         h('a', { class: 'btn ghost', href: `ogretmen-odev.html?taslak=${encodeURIComponent(d.id)}` }, 'Düzenle / öğe ekle'),
+        d.noteId && d.uids.length ? h('a', { class: 'ba-link', href: `ogretmen-ders.html?ogrenci=${encodeURIComponent(d.uids[0])}&not=${encodeURIComponent(d.noteId)}` }, 'Ders notunu aç') : null,
         remove)));
 }
 

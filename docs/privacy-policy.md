@@ -93,7 +93,8 @@ Guests who never sign in load nothing from Google, unless they send a placement-
   teacher adds the PDF to homework (on approval, never for a draft) or to helpful resources, and is not revoked when it
   is removed again (another student may use it). Removing a record leaves the file in Drive. Format: `js/account/library.js`.
 - Homework drafts (`homeworkDrafts/{id}`, homework assistant): the same content fields plus `uids` (the students it is
-  for), `source` and timestamps. Teacher only (no student rule); approving writes the per-student copies and deletes the
+  for), `source` ('form' or 'ders-defteri'), for drafts started from the lesson notebook the `noteId` of that lesson
+  note (the note itself is not copied; its topics are found in the teacher's browser) and timestamps. Teacher only (no student rule); approving writes the per-student copies and deletes the
   draft in one batch, and only then is the homework email sent. Deleting a student's data removes the student from every
   draft (a draft left without students is deleted). The assistant's suggestions are computed in the teacher's browser
   from the catalog, `data/search-index.json`, the student's results and earlier homework; nothing is sent elsewhere.

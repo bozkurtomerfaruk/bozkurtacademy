@@ -176,3 +176,9 @@ body.note-fullscreen .note-card{position:fixed;inset:0;z-index:1000;overflow:aut
   /* Koyu temadan yazdırınca da açık renk palet kullanılır. */
   html[data-theme="dark"]{--ba-note-kirmizi:#a8281e;--ba-note-mavi:#1d5a9e;--ba-note-yesil:#2c6a30;--ba-note-turuncu:#9a4a00;--ba-note-mor:#673b9a;--ba-note-gri:#5f5c53;--ba-mark-sari:#f7e07a;--ba-mark-yesil:#cbe8bd;--ba-mark-mavi:#cde0f5;--ba-mark-pembe:#f5d0de;--ba-ink:#000;--ba-line-strong:#666;--ba-paper-2:#eee}
 }
+/* "Bu dersin ödevini hazırla": dar ekranda kısa yazı (araç çubuğu satır sayısı artmasın); ekran okuyucu tam adı okur. */
+.note-hw-short{display:none}
+@media (max-width:640px){
+  .note-hw-full{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  .note-hw-short{display:inline}
+}

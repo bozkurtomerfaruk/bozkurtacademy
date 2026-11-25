@@ -7,7 +7,8 @@
 //    önce sorulur (rev).
 //  - Öğrenci aynı belgeyi ders-notlarim.html'de canlı ve salt okunur görür.
 import { db, fs } from './firebase.js';
-import { $, berlinParts, h, loadProfile, todayKey, toDate } from './common.js';
+import { $, berlinParts, h, loadCatalogLevels, loadProfile, todayKey, toDate } from './common.js';
+import { buildTopicIndex, topicsFromText } from './homework-assistant.js?v=4';
 import { requireTeacher } from './teacher-common.js';
 import { createAutosave } from './autosave.js?v=1';
 import { COLOR_NAMES, MAX_BYTES, NOTE_COLORS, NOTE_HIGHLIGHTS, cleanTitle, defaultTitle, noteBytes, parseContent, safeUrl, sizeLevel } from './note-format.js?v=1';
@@ -447,6 +448,29 @@ function setupView(){
     window.print();
   });
   $('newPageLink').href = noteUrl(uid, null);
+  // "Bu dersin ödevini hazırla": not önce kaydedilir, konular not başlığı ve metninden bu tarayıcıda bulunur
+  // (homework-assistant.js topicsFromText; not hiçbir yere gönderilmez), ödev formu taslak olarak açılır.
+  const homework = $('homeworkLink');
+  homework.href = `ogretmen-odev.html?ogrenci=${encodeURIComponent(uid)}&kaynak=ders-defteri`;
+  homework.addEventListener('click', async (event) => {
+    event.preventDefault();
+    if(homework.getAttribute('aria-disabled') === 'true') return;
+    homework.setAttribute('aria-disabled', 'true');
+    $('homeworkLabel').textContent = 'Hazırlanıyor…';
+    backupNow();
+    await Promise.race([autosave.flush(), new Promise((r) => setTimeout(r, 8000))]).catch(() => {});
+    let found = [];
+    try{
+      const [levels, searchIndex] = await Promise.all([loadCatalogLevels(), fetch('data/search-index.json').then((r) => r.json()).catch(() => null)]);
+      found = topicsFromText(currentTitle(), quill.getText(), buildTopicIndex(levels, searchIndex));
+    }catch(error){
+      console.warn(error);
+    }
+    // Kaydedilmemiş (boş) yeni sayfada not kimliği gönderilmez: geri bağlantı olmayan bir nota gitmesin.
+    const q = new URLSearchParams({ ogrenci: uid, kaynak: 'ders-defteri', ...(exists ? { not: noteId } : {}), baslik: currentTitle().slice(0, 100) });
+    if(found.length) q.set('konular', found.map((t) => `${t.level}/${t.topic}`).join(','));
+    location.href = `ogretmen-odev.html?${q}`;
+  });
   $('newPageLink').addEventListener('click', () => { backupNow(); autosave.flush(); });
   $('deleteBtn').addEventListener('click', async () => {
     if(!confirm(`"${currentTitle()}" silinsin mi? Öğrenci de artık göremez. Bu geri alınamaz.`)) return;

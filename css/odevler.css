@@ -94,3 +94,8 @@ a.odev-chip:hover{border-color:var(--ba-line-strong)}
 .odev-approve-bar{position:sticky;bottom:0;z-index:5;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;margin-top:16px;padding:12px 16px;background:var(--ba-paper);border:2px solid var(--ba-line-strong);border-radius:var(--ba-radius)}
 @media(max-width:600px){.odev-draft{padding:14px}.odev-approve-bar .btn{width:100%}}
 .odev-toolbar-actions{display:flex;flex-wrap:wrap;gap:8px}
+.odev-exam-part{display:grid;gap:6px;min-width:0}
+.odev-exam-part+.odev-exam-part{padding-top:8px;border-top:2px solid var(--ba-paper-2)}
+.odev-exam-pick{display:flex;gap:8px;align-items:center;min-width:0}
+.odev-exam-select{flex:1 1 auto;min-width:0;max-width:100%}
+.odev-exam-last{margin:0}

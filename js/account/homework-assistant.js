@@ -135,3 +135,76 @@ export function topicProgress(topic, history){
   const solved = topic.exercises.filter((e) => history.solved.has(exKey(topic.level, topic.topic, e.id))).length;
   return { solved, total: topic.exercises.length };
 }
+
+// Hedef sınav (users/{uid}.targetExam = { exam, level }): sıradaki Lesen seti ve Schreiben görevi -------------------
+
+// Set numarası: "set-3" → 3.
+const setNumber = (set) => Number(/(\d+)$/.exec(set || '')?.[1]) || 0;
+
+// Sıra (a): önce bütün Teil'ler aynı setten (T1S1 → T2S1 → … → T1S2 …).
+export function examOrder(items){
+  return [...items].sort((a, b) => setNumber(a.set) - setNumber(b.set) || a.teil - b.teil);
+}
+
+// Hedef sınavın Lesen setleri (examSets çıktısından) ve Schreiben görevleri (writingTasks çıktısından), sırayla.
+export function examTrack(target, { sets = [], tasks = [] } = {}){
+  if(!target?.exam || !target?.level) return { lesen: [], schreiben: [] };
+  const same = (x) => x.exam === target.exam && x.level === target.level;
+  return {
+    lesen: examOrder(sets.filter((s) => same(s) && s.section === 'lesen')),
+    schreiben: examOrder(tasks.filter(same))
+  };
+}
+
+// Sınav ödevlerinin geçmişi: verilen (ödevdeki "sinav"/"schreiben" paketleri, verildiği tarihle), çözülen Lesen setleri
+// (results, konu "sinav") ve yazılan Schreiben görevleri (writings).
+export function examHistory(results = [], assignments = [], writings = [], toDate = (d) => d){
+  const given = new Map(); // id → en son verildiği tarih
+  for(const a of assignments){
+    const at = toDate(a?.createdAt) || null;
+    for(const e of a?.exercises || []){
+      if(e?.topic !== 'sinav' && e?.topic !== 'schreiben') continue;
+      const prev = given.get(e.exercise);
+      if(!prev || (at && at > prev)) given.set(e.exercise, at);
+    }
+  }
+  const solved = new Set(results.filter((r) => r?.topic === 'sinav' && r.exercise).map((r) => r.exercise));
+  const written = new Set(writings.filter((w) => w?.exam && w?.level && w?.teil && w?.set).map((w) => `${w.exam}-${w.level}-${w.teil}-${w.set}`));
+  return { given, solved, written };
+}
+
+export function examItemState(history, id){
+  if(history.solved.has(id) || history.written.has(id)) return 'solved';
+  if(history.given.has(id)) return 'assigned';
+  return null;
+}
+
+// Sıradaki öğe (verilmemiş, çözülmemiş, formda olmayan ilk öğe) ve "son verilen" (en yeni tarihli verilen öğe).
+export function nextExamItem(items, history, skip = new Set()){
+  const next = items.find((x) => !skip.has(x.id) && !examItemState(history, x.id)) || null;
+  let last = null;
+  for(const x of items){
+    if(!history.given.has(x.id)) continue;
+    const at = history.given.get(x.id);
+    if(!last || (at && (!last.at || at > last.at))) last = { item: x, at };
+  }
+  return { next, last };
+}
+
+// Hedef sınav seçenekleri: yakında olmayan sınavların, Lesen seti ya da Schreiben görevi olan seviyeleri.
+// data: window.BA_EXAMS. Dönüş: [{ exam, level, label }] ("Goethe B1", "telc B2", "DTZ", "TestDaF digital").
+export function examTargets(data, { sets = [], tasks = [] } = {}){
+  const out = [];
+  for(const exam of data?.exams || []){
+    if(exam.comingSoon) continue;
+    for(const level of exam.levels || []){
+      const has = (x) => x.exam === exam.id && x.level === level.id;
+      if(!sets.some((s) => has(s) && s.section === 'lesen') && !tasks.some(has)) continue;
+      const name = exam.shortName || String(exam.name || exam.id).replace(/-Zertifikat$/, '').replace(/ Deutsch$/, '');
+      const code = level.code || data.levels?.[level.id]?.code || level.id.toUpperCase();
+      const codeText = typeof code === 'string' ? code : (code.tr || code.de || level.id.toUpperCase());
+      out.push({ exam: exam.id, level: level.id, label: exam.skipLevel ? name : `${name} ${codeText}` });
+    }
+  }
+  return out;
+}

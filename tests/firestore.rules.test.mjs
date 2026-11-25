@@ -1516,3 +1516,16 @@ describe('Ödev taslakları', () => {
     await assertFails(getDoc(doc(guestDb(), 'homeworkDrafts/t1')));
   });
 });
+
+// Hedef sınav (users/{uid}.targetExam): yalnızca öğretmen yazar.
+describe('Hedef sınav', () => {
+  test('öğretmen yazar ve kaldırır; öğrenci kendi profilinde yazamaz, kayıtta ekleyemez', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await assertSucceeds(updateDoc(doc(teacherDb(), 'users/ayse'), { targetExam: { exam: 'goethe', level: 'b1' } }));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse'), { targetExam: { exam: 'telc', level: 'b2' } }));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse'), { targetExam: deleteField() }));
+    await assertSucceeds(updateDoc(doc(teacherDb(), 'users/ayse'), { targetExam: deleteField() }));
+    const can = as('can', passwordToken('can@example.com'));
+    await assertFails(setDoc(doc(can, 'users/can'), { name: 'Can', email: 'can@example.com', birthYear: YEAR - 20, minor: false, provider: 'password', status: 'pending', createdAt: serverTimestamp(), targetExam: { exam: 'goethe', level: 'b1' } }));
+  });
+});

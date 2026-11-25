@@ -1486,3 +1486,33 @@ describe('Almanca Alfabe ilerlemesi', () => {
     for (const p of bad) await assertFails(setDoc(ref(ayse()), p));
   });
 });
+
+// Ödev asistanı taslakları (homeworkDrafts): yalnızca öğretmen; öğrenci (onaylı olsa da) okuyamaz, yazamaz.
+describe('Ödev taslakları', () => {
+  const draft = () => ({ uids: ['ayse'], title: 'Taslak', description: '', dueAt: null, links: [], topics: [],
+    exercises: [{ level: 'A1', topic: 'perfekt', exercise: 'haben-sein-1' }], source: 'form', createdAt: serverTimestamp(), updatedAt: serverTimestamp() });
+
+  test('öğretmen taslak yazar, okur, günceller, siler; onayda ödev kopyası ve taslağın silinmesi tek yazmada', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await assertSucceeds(setDoc(doc(teacherDb(), 'homeworkDrafts/t1'), draft()));
+    await assertSucceeds(getDocs(collection(teacherDb(), 'homeworkDrafts')));
+    await assertSucceeds(updateDoc(doc(teacherDb(), 'homeworkDrafts/t1'), { exercises: [] }));
+    const tdb = teacherDb();
+    const batch = writeBatch(tdb);
+    batch.set(doc(tdb, 'users/ayse/assignments/a1'), { title: 'Taslak', schemaVersion: 2, groupId: 'g1', createdAt: serverTimestamp(), done: false, doneAt: null, studentDocUrl: '', links: [], topics: [], exercises: [] });
+    batch.delete(doc(tdb, 'homeworkDrafts/t1'));
+    await assertSucceeds(batch.commit());
+  });
+
+  test('öğrenci kendi adına olan taslağı bile okuyamaz, listeleyemez, yazamaz, silemez', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await seed('homeworkDrafts/t1', draft());
+    await assertFails(getDoc(doc(ayse(), 'homeworkDrafts/t1')));
+    await assertFails(getDocs(collection(ayse(), 'homeworkDrafts')));
+    await assertFails(getDocs(query(collection(ayse(), 'homeworkDrafts'), where('uids', 'array-contains', 'ayse'))));
+    await assertFails(setDoc(doc(ayse(), 'homeworkDrafts/t2'), draft()));
+    await assertFails(updateDoc(doc(ayse(), 'homeworkDrafts/t1'), { title: 'x' }));
+    await assertFails(deleteDoc(doc(ayse(), 'homeworkDrafts/t1')));
+    await assertFails(getDoc(doc(guestDb(), 'homeworkDrafts/t1')));
+  });
+});

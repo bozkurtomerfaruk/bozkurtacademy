@@ -4,6 +4,7 @@
 import { $, exerciseUrl, h, loadResults, scoreText } from './common.js';
 import { assignmentBody, expandExercises, groupByDay, solvedCount, withResults } from './assignments.js?v=1';
 import { describeResult, mailConfigured, notifyHomework, takeResult } from './homework-mail.js?v=1';
+import { loadDrafts } from './homework-drafts.js?v=1';
 import { deleteAssignmentCopies, fmtDate, isEnabled, listStudents, loadAssignmentGroups, requireTeacher } from './teacher-common.js';
 
 const TX = {
@@ -225,6 +226,8 @@ if(user){
     if(mail) setNotice(mail.type, `${status === 'guncellendi' ? 'Ödev güncellendi.' : 'Ödev verildi.'} ${mail.text}`);
     $('studentSelect').addEventListener('change', () => { setNotice('', ''); render(); });
     await render();
+    // Taslak sayısı (homeworkDrafts; öğrenci görmez).
+    loadDrafts().then((list) => { if(list.length) $('draftsLink').textContent = `Taslaklar (${list.length})`; }).catch((error) => console.warn(error));
     $('listLoading').hidden = true;
     $('listApp').hidden = false;
   }catch(error){

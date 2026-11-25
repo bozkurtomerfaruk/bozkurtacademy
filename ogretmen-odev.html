@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="css/style.css?v=13" />
   <link rel="stylesheet" href="css/base.css?v=15" />
   <link rel="stylesheet" href="css/account.css?v=10" />
-  <link rel="stylesheet" href="css/odevler.css?v=3" />
+  <link rel="stylesheet" href="css/odevler.css?v=4" />
 </head>
 <body class="academy-theme account-page teacher-page">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
@@ -51,7 +51,7 @@
 
     <main id="main" tabindex="-1" class="acc-main">
       <section class="acc-wrap acc-wide" aria-labelledby="assignTitle">
-        <p class="acc-back"><a class="ba-link" id="backLink" href="ogretmen-odevler.html">← Ödevler</a></p>
+        <p class="acc-back"><a class="ba-link" id="backLink" href="ogretmen-odevler.html">← Ödevler</a> <a class="ba-link odev-drafts-link" href="ogretmen-taslaklar.html">Taslaklar</a></p>
         <header class="acc-head">
           <p class="acc-eyebrow">Öğretmen paneli</p>
           <h1 id="assignTitle">Yeni ödev</h1>
@@ -119,6 +119,15 @@
               <div class="ba-card-body acc-form">
                 <h2 id="partExercises">Alıştırmalar</h2>
                 <p class="acc-hint">Sitedeki alıştırmalardan seç. Öğrenci ödevde her paketin bağlantısını ve çözüp çözmediğini (puanıyla) görür.</p>
+                <div class="odev-assist" role="search" aria-labelledby="aSearchLabel">
+                  <div class="field">
+                    <label for="aSearch" id="aSearchLabel">Asistan: konu ara</label>
+                    <input id="aSearch" type="search" autocomplete="off" spellcheck="false" placeholder="ör. lassen, Perfekt, Relativsatz" aria-describedby="aSearchHint" aria-controls="aSuggest">
+                    <small class="acc-hint" id="aSearchHint">Konu ve paketler bulunur; seçili öğrencinin çözmediği ve ona verilmemiş sıradaki paketler önerilir. Öneriler sen eklemeden ödeve girmez.</small>
+                  </div>
+                  <p class="acc-status" id="aSuggestStatus" role="status" hidden></p>
+                  <ul class="odev-suggest" id="aSuggest" aria-live="polite" aria-label="Asistanın önerileri"></ul>
+                </div>
                 <div class="acc-pick">
                   <div class="field">
                     <label for="aLevel">Seviye</label>
@@ -166,7 +175,11 @@
                   </label>
                   <small class="acc-hint" id="aNotifyHint">E-postada sadece ödevin başlığı, varsa teslim tarihi ve "Ödevlerim" bağlantısı olur. 16 yaş altında "veliyi de ekle" açıksa veliye de gider.</small>
                 </div>
-                <button class="btn primary acc-submit" type="submit" id="aSubmit">Ödevi ver</button>
+                <div class="odev-submit">
+                  <button class="btn primary acc-submit" type="submit" id="aSubmit">Onayla ve gönder</button>
+                  <button class="btn ghost" type="button" id="aDraft" aria-describedby="aDraftHint">Taslak kaydet</button>
+                </div>
+                <small class="acc-hint" id="aDraftHint">Taslağı öğrenci görmez, e-posta gitmez. Taslaklar sayfasında düzenleyip onaylarsın.</small>
                 <p class="acc-status" id="aStatus" role="alert" hidden></p>
               </div>
             </section>
@@ -188,6 +201,6 @@
   </div>
   <script src="js/app.js?v=57"></script>
   <script src="js/theme.js?v=10"></script>
-  <script type="module" src="js/account/teacher-assign.js?v=9"></script>
+  <script type="module" src="js/account/teacher-assign.js?v=10"></script>
 </body>
 </html>

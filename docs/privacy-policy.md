@@ -84,6 +84,11 @@ Guests who never sign in load nothing from Google, unless they send a placement-
   YouTube, Drive), chosen site exercises or whole topics, and the student's own fields (done, done time,
   an optional Google Docs/Drive link), plus `mailNewAt`/`mailUpdateAt` when a homework email was sent. Students can change only their own fields. Links open the external
   site in a new tab; nothing is embedded. Shown on `ogretmen-odevler.html` (teacher) and `odevlerim.html` (student).
+- Homework drafts (`homeworkDrafts/{id}`, homework assistant): the same content fields plus `uids` (the students it is
+  for), `source` and timestamps. Teacher only (no student rule); approving writes the per-student copies and deletes the
+  draft in one batch, and only then is the homework email sent. Deleting a student's data removes the student from every
+  draft (a draft left without students is deleted). The assistant's suggestions are computed in the teacher's browser
+  from the catalog, `data/search-index.json`, the student's results and earlier homework; nothing is sent elsewhere.
 - Helpful resources (`users/{uid}/resources`, "Yardımcı kaynaklar"): title, https link and short note added by the
   teacher; new records also have `kind` ('link' or 'pdf'), for PDFs the Drive `fileId` and `fileName` (folder "Bozkurt
   Academy Kaynaklar"), and a `groupId` shared by the per-student copies when one resource is given to several students.

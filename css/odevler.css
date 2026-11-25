@@ -99,3 +99,7 @@ a.odev-chip:hover{border-color:var(--ba-line-strong)}
 .odev-exam-pick{display:flex;gap:8px;align-items:center;min-width:0}
 .odev-exam-select{flex:1 1 auto;min-width:0;max-width:100%}
 .odev-exam-last{margin:0}
+.odev-suggest-count{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;font-size:var(--ba-small)}
+.odev-suggest-count label{font-weight:600}
+.odev-suggest-count select{width:auto;min-width:72px}
+.odev-suggest-actions{display:flex;flex-wrap:wrap;gap:6px 18px}

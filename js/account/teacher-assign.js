@@ -192,14 +192,39 @@ async function openTopic(t){
 }
 
 // Bir konunun önerilecek paketleri: arama paket adlarında bulduysa onlar, yoksa konunun sıradaki paketleri.
+// Önerilen paket sayısı (3 / 5 / 10): son seçim bu tarayıcıda hatırlanır (localStorage, sadece bir sayı).
+const COUNT_KEY = 'baOdevOneriSayisi';
+const COUNTS = [3, 5, 10];
+function readCount(){
+  try{ const n = Number(localStorage.getItem(COUNT_KEY)); return COUNTS.includes(n) ? n : 3; }catch(_){ return 3; }
+}
+function saveCount(n){
+  try{ localStorage.setItem(COUNT_KEY, String(n)); }catch(_){}
+}
+const suggestCount = () => (COUNTS.includes(Number($('aSuggestCount').value)) ? Number($('aSuggestCount').value) : 3);
+
+const formSkip = (t) => new Set([...chosen.map(key), ...(hasTopic(t.level, t.topic) ? t.exercises.map((e) => exKey(t.level, t.topic, e.id)) : [])]);
+
 function suggestionsFor(t, list){
-  const skip = new Set([...chosen.map(key), ...topics.filter((x) => x.level === t.level && x.topic === t.topic).flatMap(() => t.exercises.map((e) => exKey(t.level, t.topic, e.id)))]);
+  const skip = formSkip(t);
+  const count = suggestCount();
   const byName = t.score < 10 && t.matches.length;
   if(byName){
     const matched = { ...t, exercises: t.exercises.filter((e) => t.matches.includes(e.id)) };
-    return { label: 'Adında geçen paketler', items: nextExercises(matched, list, { count: 3, skip }) };
+    return { label: 'Adında geçen paketler', items: nextExercises(matched, list, { count, skip }) };
   }
-  return { label: 'Sıradaki paketler', items: nextExercises(t, list, { count: 3, skip }) };
+  return { label: 'Sıradaki paketler', items: nextExercises(t, list, { count, skip }) };
+}
+
+// Seçili öğrencilerin hiçbirinin çözmediği, hiçbirine verilmemiş ve formda olmayan bütün paketler.
+const unsolvedFor = (t, list) => nextExercises(t, list, { count: Infinity, skip: formSkip(t) });
+
+// "Konunun tamamını ekle": formdaki "Bu konunun tamamını ekle" ile aynı (sonradan eklenen paketler de görünür);
+// bu konudan tek tek seçilmiş paketler konunun içinde kalır, listeden çıkar.
+function addWholeTopic(t){
+  if(hasTopic(t.level, t.topic)) return;
+  topics.push({ level: t.level, topic: t.topic, label: `${t.level} · ${t.title}` });
+  for(let i = chosen.length - 1; i >= 0; i--) if(chosen[i].level === t.level && chosen[i].topic === t.topic) chosen.splice(i, 1);
 }
 
 let suggestTimer = 0;
@@ -298,11 +323,25 @@ function renderSuggest(){
       add.addEventListener('click', () => { addSuggested(t, e); renderChosen(); renderExercises(); renderSuggest(); });
       return h('li', {}, h('span', {}, e.title), add);
     });
-    let addAll = null;
+    const refresh = () => { renderChosen(); renderExercises(); renderSuggest(); };
+    const actions = [];
     if(items.length > 1){
-      addAll = h('button', { class: 'acc-text-button', type: 'button' }, `Önerilen ${items.length} paketi ekle`);
-      addAll.addEventListener('click', () => { items.forEach((e) => addSuggested(t, e)); renderChosen(); renderExercises(); renderSuggest(); });
+      const addAll = h('button', { class: 'acc-text-button', type: 'button' }, `Önerilen ${items.length} paketi ekle`);
+      addAll.addEventListener('click', () => { items.forEach((e) => addSuggested(t, e)); refresh(); });
+      actions.push(addAll);
     }
+    const unsolved = uids.length && !whole ? unsolvedFor(t, list) : [];
+    if(unsolved.length){
+      const addUnsolved = h('button', { class: 'acc-text-button', type: 'button', 'data-action': 'unsolved' }, `Çözülmemiş paketlerin hepsini ekle (${unsolved.length})`);
+      addUnsolved.addEventListener('click', () => { unsolved.forEach((e) => addSuggested(t, e)); refresh(); });
+      actions.push(addUnsolved);
+    }
+    if(!whole && t.exercises.length){
+      const addWhole = h('button', { class: 'acc-text-button', type: 'button', 'data-action': 'whole' }, `Konunun tamamını ekle (${t.exercises.length} paket)`);
+      addWhole.addEventListener('click', () => { addWholeTopic(t); refresh(); });
+      actions.push(addWhole);
+    }
+    const actionRow = actions.length ? h('div', { class: 'odev-suggest-actions' }, actions) : null;
     const empty = whole ? 'Konunun tamamı ödevde.' : (uids.length ? 'Önerilecek paket kalmadı: hepsi çözüldü, verildi ya da ödevde.' : 'Önerilecek paket kalmadı.');
     return h('li', { class: 'odev-suggest-item' },
       h('div', { class: 'odev-suggest-head' },
@@ -313,8 +352,9 @@ function renderSuggest(){
         open),
       items.length
         ? h('div', {}, h('p', { class: 'odev-suggest-label' }, uids.length ? label : `${label} (öğrenci seçince çözdükleri atlanır)`),
-          h('ul', { class: 'odev-suggest-list' }, rows), addAll)
-        : h('p', { class: 'acc-hint' }, empty));
+          h('ul', { class: 'odev-suggest-list' }, rows))
+        : h('p', { class: 'acc-hint' }, empty),
+      actionRow);
   }));
 }
 
@@ -695,6 +735,8 @@ if(user){
     });
     $('aStudents').addEventListener('change', () => { updateStudentCount(); refreshHistories(); });
     $('aSearch').addEventListener('input', scheduleSuggest);
+    $('aSuggestCount').value = String(readCount());
+    $('aSuggestCount').addEventListener('change', () => { saveCount(suggestCount()); renderSuggest(); });
     // Arama kutusunda Enter formu göndermez (ödev yanlışlıkla verilmesin).
     $('aSearch').addEventListener('keydown', (event) => { if(event.key === 'Enter'){ event.preventDefault(); renderSuggest(); } });
     $('aDraft').addEventListener('click', submitDraft);

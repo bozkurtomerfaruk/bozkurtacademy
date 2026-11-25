@@ -119,3 +119,13 @@ test('kütüphane: dosya adından seviye ve konu önerisi', async () => {
   const lib = [{ id: 'x', topics: [{ level: 'A1', topic: 'perfekt' }] }, { id: 'y', topics: [] }];
   assert.deepEqual(libraryFor(lib, 'A1', 'perfekt').map((x) => x.id), ['x']);
 });
+
+test('ders defteri: not başlığı ve metninden konular', async () => {
+  const { topicsFromText } = await import('../js/account/homework-assistant.js');
+  const k = (title, text) => topicsFromText(title, text, index).map((t) => `${t.level}/${t.topic}`);
+  assert.equal(k('12.11.2026 – Ders', 'Heute: Relativsätze im Dativ. Der Mann, dem ich helfe. Hausaufgabe: Relativsatz üben.')[0], 'B1/relativsaetze');
+  assert.equal(k('Perfekt tekrar', 'Ich habe gegessen. Er ist gefahren.')[0], 'A1/perfekt');
+  assert.deepEqual(k('25.11.2026 – Ders', 'Ich lasse mein Auto reparieren. Konnektoren: deshalb, trotzdem.').slice(0, 2), ['B1/lassen-infinitiv', 'B1/konnektoren']);
+  assert.deepEqual(k('Ders', 'Merhaba, bugün tanıştık. Hausaufgabe bis morgen.'), []);
+  assert.ok(k('x', 'Perfekt '.repeat(5000)).length <= 3);
+});

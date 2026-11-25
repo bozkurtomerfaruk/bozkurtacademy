@@ -313,6 +313,66 @@ ok(await t.evaluate(async () => (await import('/js/account/common.js')).exercise
   await ctx.close();
 }
 
+// 6c. Ders defterinden kısa yol: "Bu dersin ödevini hazırla" not başlığı ve metninden konuları bulur, taslağı açar.
+{
+  const { ctx, page } = await newPage(1440);
+  await signIn(page, 'ogretmen@example.com', 'ogretmen123', 'teacher');
+  await page.goto(`${BASE}/ogretmen-ders.html?ogrenci=ogrenci1`); await page.waitForSelector('#noteApp:not([hidden])', { timeout: 15000 });
+  await page.fill('#noteTitle', 'Relativsätze im Dativ');
+  await page.dispatchEvent('#noteTitle', 'change');
+  await page.click('#editor .ql-editor');
+  await page.keyboard.type('Der Mann, dem ich helfe. Ich lasse mein Auto reparieren.');
+  ok(await page.getByRole('link', { name: 'Bu dersin ödevini hazırla' }).isVisible() && await page.isVisible('#homeworkLabel'), 'ders defterinde "Bu dersin ödevini hazırla"');
+  await page.click('#homeworkLink');
+  await page.waitForURL(/ogretmen-odev\.html\?.*kaynak=ders-defteri/, { timeout: 15000 });
+  const url = new URL(page.url());
+  const noteId = url.searchParams.get('not');
+  const konular = url.searchParams.get('konular')?.split(',') || [];
+  ok(konular[0] === 'B1/relativsaetze' && konular.length <= 3, `nottan konular, başlıktaki konu önce: ${konular.join(', ')}`);
+  const note = noteId ? await getDocRest(`users/ogrenci1/lessonNotes/${noteId}`) : null;
+  ok(note?.fields?.title?.stringValue === 'Relativsätze im Dativ', 'not düğmeden önce kaydedildi');
+  await page.waitForSelector('#assignForm:not([hidden])', { timeout: 15000 });
+  await page.waitForSelector('#aSuggest .odev-suggest-from', { timeout: 15000 });
+  ok((await page.textContent('#assignTitle')) === 'Yeni taslak · ders defterinden' && (await page.inputValue('#aTitle')) === 'Relativsätze im Dativ – ödev', 'taslak başlığı nottan');
+  ok((await page.locator('#aSuggest .odev-suggest-item strong').first().textContent()) === 'B1 · Relativsätze', 'asistanda nottan bulunan ilk konu: B1 · Relativsätze');
+  ok(await page.locator('input[name="student"][value="ogrenci1"]').isChecked() && (await page.textContent('#aChosenCount')) === '0', 'öğrenci seçili, hiçbir şey kendiliğinden eklenmedi');
+  ok((await page.getAttribute('#backLink', 'href')) === `ogretmen-ders.html?ogrenci=ogrenci1&not=${noteId}`, 'geri bağlantı ders notuna');
+  await page.fill('#aSearch', 'Perfekt'); await page.waitForTimeout(300);
+  ok(await page.locator('#aSuggest .odev-suggest-from').count() === 0, 'arama yazınca nottan gelen başlık kalkıyor');
+  await page.fill('#aSearch', ''); await page.waitForTimeout(300);
+  ok(await page.locator('#aSuggest .odev-suggest-from').count() === 1, 'arama silinince nottan bulunan konular geri geliyor');
+  await page.locator('#aSuggest .odev-suggest-item').first().locator('.odev-suggest-add').first().click();
+  ok(await noOverflow(page), '1440: nottan açılan form taşmıyor');
+  await shot(page, 'ders-defteri-taslak-1440');
+  await page.click('#aDraft'); await page.waitForURL(/ogretmen-taslaklar\.html/, { timeout: 15000 });
+  const d = (await listDocs('homeworkDrafts')).map((x) => ({ id: x.name.split('/').pop(), ...plain(x) })).find((x) => x.title === 'Relativsätze im Dativ – ödev');
+  ok(d?.source === 'ders-defteri' && d?.noteId === noteId, 'taslak: kaynak ders defteri, not kimliği');
+  await page.waitForSelector('.odev-draft');
+  const card = page.locator('.odev-draft', { hasText: 'Relativsätze im Dativ – ödev' });
+  ok((await card.textContent()).includes('Ders defterinden') && (await card.getByRole('link', { name: 'Ders notunu aç' }).getAttribute('href')) === `ogretmen-ders.html?ogrenci=ogrenci1&not=${noteId}`, 'taslaklar sayfasında "Ders defterinden" ve "Ders notunu aç"');
+  ok((await listDocs('users/ogrenci1/assignments')).every((a) => plain(a).title !== 'Relativsätze im Dativ – ödev'), 'öğrenciye ödev gitmedi (taslak)');
+  await fetch(`${docsUrl}/homeworkDrafts/${d.id}`, { method: 'DELETE', headers: owner });
+  // Boş yeni sayfa: konu yok, not kimliği gönderilmez.
+  await page.goto(`${BASE}/ogretmen-ders.html?ogrenci=ogrenci1`); await page.waitForSelector('#noteApp:not([hidden])', { timeout: 15000 });
+  await page.click('#homeworkLink');
+  await page.waitForURL(/ogretmen-odev\.html\?.*kaynak=ders-defteri/, { timeout: 15000 });
+  ok(!new URL(page.url()).searchParams.has('not') && !new URL(page.url()).searchParams.has('konular'), 'boş sayfa: not ve konu gönderilmiyor');
+  await page.waitForSelector('#assignForm:not([hidden])', { timeout: 15000 });
+  await page.waitForFunction(() => document.querySelector('#aSuggest')?.textContent.includes('bilinen bir konu bulunamadı'), null, { timeout: 10000 });
+  ok(true, 'konu bulunamayınca ipucu');
+  await ctx.close();
+}
+{
+  const { ctx, page } = await newPage(390, 'dark');
+  await signIn(page, 'ogretmen@example.com', 'ogretmen123', 'teacher');
+  await page.goto(`${BASE}/ogretmen-ders.html?ogrenci=ogrenci1`); await page.waitForSelector('#noteApp:not([hidden])', { timeout: 15000 });
+  ok(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth) && await page.isVisible('#homeworkLink'), '390 koyu: ders defteri taşmıyor, düğme görünüyor');
+  ok((await page.locator('#homeworkLink .note-hw-short').isVisible()) && await page.getByRole('link', { name: 'Bu dersin ödevini hazırla' }).count() === 1, '390: kısa yazı "Ödev", erişilebilir ad tam');
+  ok(await page.evaluate(() => { const r = document.getElementById('deleteBtn').getBoundingClientRect(); const h = document.getElementById('homeworkLink').getBoundingClientRect(); return Math.abs(r.top - h.top) < 4; }), '390: düğme "Sil" ile aynı satırda (araç çubuğu uzamıyor)');
+  await shot(page, 'ders-defteri-390-dark');
+  await ctx.close();
+}
+
 // 7. Öğrenci ödevini görür; taslak koleksiyonunu okuyamaz.
 const { page: s } = await newPage(1440);
 await signIn(s, 'ogrenci@example.com', 'ogrenci123', 'student');

@@ -16,8 +16,8 @@ import { mailConfigured, notifyHomework, rememberResult } from './homework-mail.
 import { createAssignments, fmtDate, isEnabled, listStudents, loadAssignmentGroups, requireTeacher, updateAssignmentGroup } from './teacher-common.js';
 import {
   buildTopicIndex, examHistory, libraryFor, examItemState, examTargets, examTrack, exerciseState, nextExamItem, nextExercises, searchTopics, studentHistory, topicProgress
-} from './homework-assistant.js?v=3';
-import { approveDraft, getDraft, saveDraft } from './homework-drafts.js?v=1';
+} from './homework-assistant.js?v=4';
+import { approveDraft, getDraft, saveDraft } from './homework-drafts.js?v=2';
 import { libraryUrl, loadLibrary, shareItems, unsharedIn } from './library.js?v=1';
 
 const chosen = []; // [{ level, topic, exercise, label }]
@@ -28,6 +28,10 @@ let writingLevels = new Set(); // catalog levels that have Schreiben tasks (js/e
 let examLevels = new Set(); // catalog levels that have exam sets (Lesen, Hören, Sprachbausteine, form)
 let editing = null; // düzenlenen ödev grubu (loadAssignmentGroups)
 let draft = null; // açılan taslak (?taslak=<id>)
+// Ders defterinden (ogretmen-ders.html "Bu dersin ödevini hazırla"): ?kaynak=ders-defteri&not=<id>&konular=B1/relativsaetze,…
+// Konular ders notunun başlığı ve metninden tarayıcıda bulunur (homework-assistant.js topicsFromText); not okunmaz.
+let presetTopics = [];
+let fromNote = null; // { noteId, uid }
 let studentList = []; // listStudents
 let topicIndex = []; // buildTopicIndex (katalog + arama dizini)
 const histories = new Map(); // uid → studentHistory (sonuçlar ve önceki ödevler; sayfa açıkken bir kez okunur)
@@ -304,18 +308,24 @@ function renderSuggest(){
   renderExamSuggest();
   const box = $('aSuggest');
   const query = $('aSearch').value.trim();
-  if(!query){
+  if(!query && !fromNote){
     box.replaceChildren();
     return;
   }
-  const found = searchTopics(topicIndex, query, { limit: 5, level: $('aLevel').value });
+  if(!query && !presetTopics.length){
+    box.replaceChildren(h('li', { class: 'acc-hint' }, 'Ders notunda bilinen bir konu bulunamadı. Konu adı yazarak ara.'));
+    return;
+  }
+  const found = query ? searchTopics(topicIndex, query, { limit: 5, level: $('aLevel').value }) : presetTopics;
   if(!found.length){
     box.replaceChildren(h('li', { class: 'acc-hint' }, `"${query}" için konu bulunamadı. Başka bir kelime dene (Almanca ya da Türkçe konu adı).`));
     return;
   }
   const uids = checkedStudents();
   const list = selectedHistories();
-  box.replaceChildren(...found.map((t) => {
+  const noteHead = !query ? h('li', { class: 'odev-suggest-from' }, h('strong', {}, 'Ders notundan bulunan konular'),
+    h('span', { class: 'acc-sub' }, 'Başka bir konu için yukarıya yaz.')) : null;
+  box.replaceChildren(...(noteHead ? [noteHead] : []), ...found.map((t) => {
     const { label, items } = suggestionsFor(t, list);
     const whole = hasTopic(t.level, t.topic);
     const progress = uids.length === 1 && histories.has(uids[0]) ? topicProgress(t, histories.get(uids[0])) : null;
@@ -665,7 +675,9 @@ async function submitDraft(){
   setBusy(true);
   setStatus($('aStatus'), '', 'Taslak kaydediliyor…');
   try{
-    const id = await saveDraft(draft?.id || null, form.students, form.data, { source: draft?.source || new URLSearchParams(location.search).get('kaynak') || 'form' });
+    const id = await saveDraft(draft?.id || null, form.students, form.data, {
+      source: draft?.source || (fromNote ? 'ders-defteri' : 'form'), noteId: fromNote?.noteId || ''
+    });
     location.href = `ogretmen-taslaklar.html?durum=kaydedildi#taslak-${encodeURIComponent(id)}`;
   }catch(error){
     console.error(error);
@@ -700,6 +712,18 @@ async function fillFromGroup(group){
   $('aNotifyUpdateRow').hidden = false;
   $('aStudentsHint').textContent = 'Ödevi almış öğrenciler işaretli ve değiştirilemez; yeni öğrenci ekleyebilirsin. Bir öğrenciden kaldırmak için ödev listesini kullan.';
   $('backLink').href = 'ogretmen-odevler.html';
+}
+
+// Ders defterinden: not başlığından ödev başlığı, nottan bulunan konular (en çok 3) asistanda hazır gelir.
+function fillFromNote(params){
+  const noteTitle = (params.get('baslik') || '').trim().slice(0, 100);
+  $('aTitle').value = noteTitle ? (/– Ders$/.test(noteTitle) ? `${noteTitle} ödevi` : `${noteTitle} – ödev`) : defaultTitle();
+  document.title = 'Yeni taslak · ders defteri | Bozkurt Academy';
+  $('assignTitle').textContent = 'Yeni taslak · ders defterinden';
+  if(fromNote.noteId){
+    $('backLink').textContent = '← Ders notu';
+    $('backLink').href = `ogretmen-ders.html?ogrenci=${encodeURIComponent(fromNote.uid)}&not=${encodeURIComponent(fromNote.noteId)}`;
+  }
 }
 
 // Taslağı açma: içerik ve öğrenciler taslaktan; "Onayla ve gönder" ödevi verir ve taslağı siler.
@@ -744,6 +768,14 @@ if(user){
       renderExamSuggest();
     }).catch((error) => console.warn(error));
     topicIndex = buildTopicIndex(catalogLevels, searchIndex);
+    if(!editId && !draftId && params.get('kaynak') === 'ders-defteri' && params.get('ogrenci')){
+      fromNote = { uid: params.get('ogrenci'), noteId: (params.get('not') || '').slice(0, 100) };
+      presetTopics = (params.get('konular') || '').split(',').slice(0, 3).map((k) => {
+        const [level, topic] = k.split('/');
+        const t = topicIndex.find((x) => x.level === level && x.topic === topic);
+        return t ? { ...t, score: 100, matches: [] } : null;
+      }).filter(Boolean);
+    }
     if(!searchIndex) setStatus($('aSuggestStatus'), 'error', 'Arama dizini yüklenemedi; asistan sadece konu adlarında arar.');
     writingLevels = new Set(writing.flatMap((w) => w.catalogLevels));
     examLevels = new Set(sets.flatMap((s) => s.catalogLevels));
@@ -753,13 +785,14 @@ if(user){
       ...extra.map((id) => ({ value: id, label: `${id} · sadece sınav hazırlığı` }))]);
     if(editing) await fillFromGroup(editing);
     else if(draft) await fillFromDraft(draft);
+    else if(fromNote) fillFromNote(params);
     else $('aTitle').value = defaultTitle();
     renderTopics();
     renderChosen();
     renderLinks();
     renderStudents(students, draft ? draft.uids : [params.get('ogrenci')].filter(Boolean));
     const preselect = params.get('ogrenci');
-    if(preselect) $('backLink').href = `ogretmen-odevler.html?ogrenci=${encodeURIComponent(preselect)}`;
+    if(preselect && !draft && !fromNote?.noteId) $('backLink').href = `ogretmen-odevler.html?ogrenci=${encodeURIComponent(preselect)}`;
     $('aDueWeek').addEventListener('click', () => {
       $('aDue').value = `${dateToBerlinInput(new Date(Date.now() + 7 * 864e5)).slice(0, 10)}T18:00`;
     });
@@ -799,6 +832,8 @@ if(user){
     $('aSearch').addEventListener('keydown', (event) => { if(event.key === 'Enter'){ event.preventDefault(); renderSuggest(); } });
     $('aDraft').addEventListener('click', submitDraft);
     if(params.get('konu')) $('aSearch').value = params.get('konu').slice(0, 80);
+    // Ders defterinden gelince nottan bulunan konular hemen görünsün: asistan kutusuna kaydırılır.
+    if(fromNote) requestAnimationFrame(() => { $('aSearch').focus({ preventScroll: true }); $('aSearch').closest('.odev-assist')?.scrollIntoView({ block: 'start' }); });
     refreshHistories();
     if(!mailConfigured) $('aNotifyBox').hidden = true;
     $('assignForm').addEventListener('submit', submit);

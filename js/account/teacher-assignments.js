@@ -4,7 +4,7 @@
 import { $, exerciseUrl, h, loadResults, scoreText } from './common.js';
 import { assignmentBody, expandExercises, groupByDay, solvedCount, withResults } from './assignments.js?v=1';
 import { describeResult, mailConfigured, notifyHomework, takeResult } from './homework-mail.js?v=1';
-import { loadDrafts } from './homework-drafts.js?v=1';
+import { loadDrafts } from './homework-drafts.js?v=2';
 import { deleteAssignmentCopies, fmtDate, isEnabled, listStudents, loadAssignmentGroups, requireTeacher } from './teacher-common.js';
 
 const TX = {

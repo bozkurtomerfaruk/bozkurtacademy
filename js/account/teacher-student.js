@@ -4,7 +4,7 @@ import {
   loadResults, loadWritings, safeLink, scoreText, summarizeResults, validEmail, validHttpsUrl, LEVEL_EXAM, topicErrorsText,
   setStatus, writingTitle, writingUrl, examSets, loadExamsData, writingTasks
 } from './common.js';
-import { examTargets } from './homework-assistant.js?v=3';
+import { examTargets } from './homework-assistant.js?v=4';
 import {
   approve, emailVerified, fmtDate, isEnabled, listStudents, openDeleteDialog,
   AI_CONSENT_VERSION, AI_SKIP_LABELS, aiAllowed, aiDirect, approveAiDraft, deleteAiDraft, flaggedCount, loadAiDrafts, needsTeacher, recordAiConsent,

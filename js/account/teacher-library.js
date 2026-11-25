@@ -5,7 +5,7 @@
 import { $, h, loadCatalogLevels, localize, setStatus } from './common.js';
 import { requireTeacher, fmtDate } from './teacher-common.js';
 import * as drive from './drive.js?v=3';
-import { buildTopicIndex, suggestTags } from './homework-assistant.js?v=3';
+import { buildTopicIndex, suggestTags } from './homework-assistant.js?v=4';
 import { addLibraryItem, deleteLibraryItem, LEVELS, libraryUrl, loadLibrary, MAX_TOPICS, updateLibraryItem } from './library.js?v=1';
 
 const MAX_QUEUE = 50;

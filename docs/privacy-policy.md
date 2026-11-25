@@ -87,6 +87,11 @@ Guests who never sign in load nothing from Google, unless they send a placement-
 - Target exam (`users/{uid}.targetExam = { exam, level }`, e.g. goethe/b1, dtz/a2-b1): set only by the teacher on
   `ogretmen-ogrenci.html`, not shown to the student; the homework assistant uses it with the student's results,
   writings and earlier homework to suggest the next Lesen set and Schreiben task. Deleted with the profile.
+- Resource library (`library/{id}`, `ogretmen-kutuphane.html`): teacher only (no student rule). Per PDF: Drive `fileId`,
+  `fileName`, title, level and topic tags, size, `shared`/`sharedAt` and timestamps; no student data. PDFs are uploaded
+  unshared to the Drive folder "Bozkurt Academy Kütüphane"; "anyone with the link can view" is granted only when the
+  teacher adds the PDF to homework (on approval, never for a draft) or to helpful resources, and is not revoked when it
+  is removed again (another student may use it). Removing a record leaves the file in Drive. Format: `js/account/library.js`.
 - Homework drafts (`homeworkDrafts/{id}`, homework assistant): the same content fields plus `uids` (the students it is
   for), `source` and timestamps. Teacher only (no student rule); approving writes the per-student copies and deletes the
   draft in one batch, and only then is the homework email sent. Deleting a student's data removes the student from every

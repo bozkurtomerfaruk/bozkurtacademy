@@ -6,9 +6,11 @@ import { $, exerciseNames, h, setStatus } from './common.js';
 import { linkLabel, topicTitles } from './assignments.js?v=1';
 import { approveDraft, deleteDraft, draftData, draftEmpty, loadDrafts, updateDraft } from './homework-drafts.js?v=1';
 import { mailConfigured, notifyHomework, rememberResult } from './homework-mail.js?v=1';
+import { loadLibrary, shareItems, unsharedIn } from './library.js?v=1';
 import { fmtDate, isEnabled, listStudents, requireTeacher } from './teacher-common.js';
 
 let drafts = [];
+let library = []; // kütüphaneden eklenen gizli PDF'ler onayda paylaşılır
 let studentsById = new Map();
 const names = { topics: {}, exercises: {} };
 const exKey = (e) => `${e.level}/${e.topic}/${e.exercise}`;
@@ -139,6 +141,20 @@ async function approveDrafts(list){
   approving = true;
   document.querySelectorAll('#draftApp button').forEach((b) => { b.disabled = true; });
   const status = $('approveStatus');
+  // Kütüphaneden eklenen gizli PDF'ler önce paylaşılır; paylaşılamazsa hiçbir taslak onaylanmaz.
+  const toShare = [...new Set(list.flatMap((d) => unsharedIn(d.links, library)))];
+  if(toShare.length){
+    setStatus(status, '', 'Kütüphane PDF\'leri paylaşılıyor…');
+    try{
+      await shareItems(toShare);
+    }catch(error){
+      console.error(error);
+      approving = false;
+      render();
+      setStatus(status, 'error', `PDF paylaşılamadı, taslaklar onaylanmadı: ${error.message} Tekrar dene.`);
+      return;
+    }
+  }
   setStatus(status, '', 'Onaylanıyor…');
   const copies = [];
   const failed = [];
@@ -168,7 +184,8 @@ async function approveDrafts(list){
 const user = await requireTeacher({ loadingId: 'draftLoading', errorId: 'draftError' });
 if(user){
   try{
-    const [list, students] = await Promise.all([loadDrafts(), listStudents()]);
+    const [list, students, lib] = await Promise.all([loadDrafts(), listStudents(), loadLibrary().catch((error) => { console.warn(error); return []; })]);
+    library = lib;
     drafts = list;
     studentsById = new Map(students.map((s) => [s.id, s]));
     await loadNames();

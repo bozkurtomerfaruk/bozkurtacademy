@@ -4,7 +4,7 @@ import {
   loadResults, loadWritings, safeLink, scoreText, summarizeResults, validEmail, validHttpsUrl, LEVEL_EXAM, topicErrorsText,
   setStatus, writingTitle, writingUrl, examSets, loadExamsData, writingTasks
 } from './common.js';
-import { examTargets } from './homework-assistant.js?v=2';
+import { examTargets } from './homework-assistant.js?v=3';
 import {
   approve, emailVerified, fmtDate, isEnabled, listStudents, openDeleteDialog,
   AI_CONSENT_VERSION, AI_SKIP_LABELS, aiAllowed, aiDirect, approveAiDraft, deleteAiDraft, flaggedCount, loadAiDrafts, needsTeacher, recordAiConsent,
@@ -14,7 +14,8 @@ import * as cal from './calendar.js';
 import { db, fs } from './firebase.js';
 import { applyAttendees, loadStudentLessons } from './lessons.js';
 import { normalizeAssignment } from './assignments.js?v=1';
-import * as drive from './drive.js?v=2';
+import * as drive from './drive.js?v=3';
+import { libraryUrl, loadLibrary, shareItems } from './library.js?v=1';
 import { addResourceCopies, deleteResourceCopy, groupCounts, loadResourceList, MAX_TITLE, resourceItem } from './resources.js?v=1';
 import { backupsFor, deleteNote, loadNotes, noteUrl, removeBackup } from './lesson-notes.js?v=1';
 import { defaultTitle } from './note-format.js?v=1';
@@ -682,13 +683,31 @@ let pdf = null;          // yüklenmiş PDF: { id, name, url }
 let uploading = false;
 let allStudents = [];
 
-const resourceKind = () => (document.querySelector('input[name="rKind"]:checked')?.value === 'pdf' ? 'pdf' : 'link');
+let library = [];        // kaynak kütüphanesi (yalnızca öğretmen; js/account/library.js)
+const resourceKind = () => {
+  const value = document.querySelector('input[name="rKind"]:checked')?.value;
+  return value === 'pdf' || value === 'lib' ? value : 'link';
+};
 const pdfStatus = (type, message) => setStatus($('rPdfStatus'), type, message);
 
 function showKind(){
-  const isPdf = resourceKind() === 'pdf';
-  $('rLinkBox').hidden = isPdf;
-  $('rPdfBox').hidden = !isPdf;
+  const kind = resourceKind();
+  $('rLinkBox').hidden = kind !== 'link';
+  $('rPdfBox').hidden = kind !== 'pdf';
+  $('rLibBox').hidden = kind !== 'lib';
+}
+
+// Kütüphane listesi: seviyeye göre gruplu; boşsa seçenek kapalı.
+function renderLibrarySelect(){
+  const groups = new Map();
+  for(const item of library){
+    const label = item.level || 'Seviyesiz';
+    if(!groups.has(label)) groups.set(label, []);
+    groups.get(label).push(item);
+  }
+  $('rLibSelect').replaceChildren(h('option', { value: '' }, library.length ? 'PDF seç' : 'Kütüphane boş'),
+    ...[...groups].map(([label, items]) => h('optgroup', { label }, items.map((item) => h('option', { value: item.id }, item.title + (item.shared ? '' : ' (gizli)'))))));
+  $('rKindLib').disabled = !library.length || !drive.driveConfigured;
 }
 
 function renderResourceStudents(){
@@ -770,6 +789,7 @@ function resetResourceForm(){
   $('rPdfStatus').hidden = true;
   showKind();
   renderResourceStudents();
+  renderLibrarySelect();
 }
 
 $('resourceForm').addEventListener('change', (e) => {
@@ -787,7 +807,13 @@ $('resourceForm').addEventListener('submit', async (event) => {
   let title = $('rTitle').value.trim();
   const note = $('rNote').value.trim();
   let url = '';
-  if(kind === 'pdf'){
+  let libItem = null;
+  if(kind === 'lib'){
+    libItem = library.find((x) => x.id === $('rLibSelect').value);
+    if(!libItem){ setActionStatus('error', 'Kütüphaneden bir PDF seç.'); $('rLibSelect').focus(); return; }
+    url = libraryUrl(libItem);
+    if(!title) title = libItem.title.slice(0, MAX_TITLE);
+  }else if(kind === 'pdf'){
     if(!pdf){ setActionStatus('error', 'Önce bir PDF seçip yükle.'); $('rPdfAdd').focus(); return; }
     url = pdf.url;
     if(!title) title = pdf.name.replace(/\.pdf$/i, '').slice(0, MAX_TITLE);
@@ -801,15 +827,22 @@ $('resourceForm').addEventListener('submit', async (event) => {
   const button = $('rSubmit');
   button.disabled = true;
   try{
+    // Kütüphane PDF'i gizliyse önce paylaşılır (Google izni tıklamaya bağlı: ilk iş); paylaşılamazsa kaynak eklenmez.
+    if(libItem && !libItem.shared){
+      setActionStatus('', 'PDF paylaşılıyor…');
+      await shareItems([libItem]);
+    }
     await addResourceCopies(ids, kind === 'pdf'
       ? { title, url, note, kind, fileId: pdf.id, fileName: pdf.name }
-      : { title, url, note, kind });
+      : kind === 'lib'
+        ? { title, url, note, kind: 'pdf', fileId: libItem.fileId, fileName: libItem.fileName }
+        : { title, url, note, kind });
     resetResourceForm();
     setActionStatus('success', ids.length > 1 ? `Kaynak ${ids.length} öğrenciye eklendi. Öğrenci panellerinde görünür.` : 'Kaynak eklendi. Öğrenci panelinde görünür.');
     await reload();
   }catch(error){
     console.error(error);
-    setActionStatus('error', 'Kaynak eklenemedi. Tekrar dene.');
+    setActionStatus('error', libItem && !libItem.shared ? `PDF paylaşılamadı, kaynak eklenmedi: ${error.message} Tekrar dene.` : 'Kaynak eklenemedi. Tekrar dene.');
   }finally{
     button.disabled = false;
     syncAll();
@@ -824,6 +857,7 @@ if(user){
     if(drive.driveConfigured) drive.preload();
     else{ $('rKindPdf').disabled = true; $('rPdfHint').textContent = 'PDF yükleme için Google Drive bağlantısı kurulu değil (docs/kurulum.md).'; }
     listStudents().then((list) => { allStudents = list; renderResourceStudents(); }).catch((error) => console.warn(error));
+    loadLibrary().then((list) => { library = list; renderLibrarySelect(); }).catch((error) => { console.warn(error); renderLibrarySelect(); });
     reload().catch((error) => {
       console.error(error);
       $('studentLoading').hidden = true;

@@ -104,3 +104,18 @@ test('hedef sınav seçenekleri gerçek sınav verisinden: Goethe B1, telc B2, D
   for (const l of ['Goethe B1', 'telc B2', 'DTZ']) assert.ok(labels.includes(l), `${l} yok: ${labels.join(', ')}`);
   assert.ok(!labels.some((l) => /ÖSD/.test(l)));
 });
+
+test('kütüphane: dosya adından seviye ve konu önerisi', async () => {
+  const { suggestTags, libraryFor } = await import('../js/account/homework-assistant.js');
+  const s = (n) => suggestTags(n, index);
+  assert.deepEqual(s('B1_Relativsatz_Übung-3.pdf').topics.map((t) => `${t.level}/${t.topic}`)[0], 'B1/relativsaetze');
+  assert.equal(s('B1_Relativsatz_Übung-3.pdf').level, 'B1');
+  assert.equal(s('lassen-arbeitsblatt.pdf').topics[0]?.topic, 'lassen-infinitiv');
+  assert.equal(s('lassen-arbeitsblatt.pdf').level, 'B1');
+  assert.equal(s('a1 perfekt tekrar.pdf').topics[0]?.topic, 'perfekt');
+  assert.equal(s('PerfektUebung.pdf').topics[0]?.topic, 'perfekt');
+  assert.deepEqual(s('Scan_2026-11-03.pdf'), { level: '', topics: [] });
+  assert.equal(s('Kapitel 12 b2.pdf').level, 'B2');
+  const lib = [{ id: 'x', topics: [{ level: 'A1', topic: 'perfekt' }] }, { id: 'y', topics: [] }];
+  assert.deepEqual(libraryFor(lib, 'A1', 'perfekt').map((x) => x.id), ['x']);
+});

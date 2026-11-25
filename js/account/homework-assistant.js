@@ -208,3 +208,33 @@ export function examTargets(data, { sets = [], tasks = [] } = {}){
   }
   return out;
 }
+
+// Kaynak kütüphanesi: dosya adından seviye ve konu önerisi --------------------------------------------------------
+// "B1_Relativsatz_Übung-3.pdf" → { level: 'B1', topics: [{ level: 'B1', topic: 'relativsaetze' }] }. Öğretmen değiştirebilir.
+const FILE_STOP = new Set(['pdf', 'uebung', 'uebungen', 'ubung', 'arbeitsblatt', 'arbeitsblaetter', 'aufgabe', 'aufgaben', 'loesung', 'loesungen',
+  'test', 'teil', 'seite', 'kopie', 'copy', 'final', 'neu', 'scan', 'worksheet', 'exercise', 'exercises', 'alistirma', 'alistirmalar', 'calisma',
+  'kagidi', 'tekrar', 'ders', 'deutsch', 'almanca', 'grammatik', 'gramer', 'grammar', 'mit', 'und', 'der', 'die', 'das', 'ile', 've', 'zum', 'zur']);
+const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1'];
+
+export function suggestTags(fileName, index){
+  const base = String(fileName || '').replace(/\.pdf$/i, '');
+  // Seviye: "B1", "b1-", "_A2_" (harf ve rakam bitişik, çevresinde harf/rakam yok).
+  const levelMatch = /(?:^|[^a-z0-9])([abc][12])(?=[^a-z0-9]|$)/i.exec(base.replace(/_/g, ' '));
+  const level = levelMatch && LEVELS.includes(levelMatch[1].toUpperCase()) ? levelMatch[1].toUpperCase() : '';
+  // CamelCase ayrılır: "RelativsatzUebung" → "Relativsatz Uebung".
+  const tokens = words(base.replace(/([a-zäöüß])([A-ZÄÖÜ])/g, '$1 $2')).filter((w) => w.length >= 4 && !FILE_STOP.has(w) && !/^\d+$/.test(w) && !/^[abc][12]$/.test(w));
+  const scored = new Map();
+  for(const w of tokens){
+    for(const t of searchTopics(index, w, { limit: 4, level })){
+      if(t.score < 10) continue; // yalnızca konu adı ya da kimliği (paket adları gürültülü)
+      const key = `${t.level}/${t.topic}`;
+      const score = t.score + (level && t.level === level ? 5 : 0);
+      if(!scored.has(key) || scored.get(key).score < score) scored.set(key, { level: t.level, topic: t.topic, title: t.title, score });
+    }
+  }
+  const topics = [...scored.values()].sort((a, b) => b.score - a.score).slice(0, 2).map(({ level: l, topic, title }) => ({ level: l, topic, title }));
+  return { level: level || topics[0]?.level || '', topics };
+}
+
+// Kütüphanedeki PDF'lerden bir konuya etiketlenmiş olanlar.
+export const libraryFor = (library, level, topic) => library.filter((item) => (item.topics || []).some((t) => t.level === level && t.topic === topic));

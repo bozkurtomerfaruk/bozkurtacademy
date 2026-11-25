@@ -173,7 +173,7 @@ await waitFor(async () => (await teacher.textContent('#resourcesList')).includes
 const pdfItem = teacher.locator('#resourcesList li', { hasText: 'Artikel-Tabelle' });
 ok(await pdfItem.locator('.acc-res-icon-pdf').count() === 1 && (await pdfItem.textContent()).includes('3 öğrenciye verildi') && await pdfItem.locator('a').getAttribute('target') === '_blank' && await pdfItem.locator('a').getAttribute('rel') === 'noopener noreferrer', 'öğretmen listesinde PDF simgesi, "3 öğrenciye verildi", yeni sekme');
 // Ödev PDF'leri hâlâ "Ödevler" klasörüne (drive.js varsayılanı).
-const folderDefault = await teacher.evaluate(async () => { const d = await import('/js/account/drive.js?v=2'); return [d.FOLDER_NAME, d.RESOURCE_FOLDER]; });
+const folderDefault = await teacher.evaluate(async () => { const d = await import('/js/account/drive.js?v=3'); return [d.FOLDER_NAME, d.RESOURCE_FOLDER]; });
 ok(folderDefault[0] === 'Bozkurt Academy Ödevler' && folderDefault[1] === 'Bozkurt Academy Kaynaklar', 'ödevlerin varsayılan klasörü değişmedi');
 
 // ---- 4. Silme: yalnızca bu öğrencinin kopyası, PDF Drive'da kalır ----

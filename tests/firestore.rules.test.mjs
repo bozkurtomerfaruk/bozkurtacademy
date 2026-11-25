@@ -1529,3 +1529,27 @@ describe('Hedef sınav', () => {
     await assertFails(setDoc(doc(can, 'users/can'), { name: 'Can', email: 'can@example.com', birthYear: YEAR - 20, minor: false, provider: 'password', status: 'pending', createdAt: serverTimestamp(), targetExam: { exam: 'goethe', level: 'b1' } }));
   });
 });
+
+// Kaynak kütüphanesi (library): yalnızca öğretmen; öğrenci okuyamaz, yazamaz.
+describe('Kaynak kütüphanesi', () => {
+  const item = () => ({ fileId: 'f1', fileName: 'B1_Relativsatz.pdf', title: 'B1 Relativsatz', level: 'B1', topics: [{ level: 'B1', topic: 'relativsaetze' }], bytes: 1000, shared: false, createdAt: serverTimestamp(), updatedAt: serverTimestamp() });
+
+  test('öğretmen ekler, okur, etiketi değiştirir, paylaşıldı yazar, siler', async () => {
+    await assertSucceeds(setDoc(doc(teacherDb(), 'library/k1'), item()));
+    await assertSucceeds(getDocs(collection(teacherDb(), 'library')));
+    await assertSucceeds(updateDoc(doc(teacherDb(), 'library/k1'), { topics: [], shared: true, sharedAt: serverTimestamp() }));
+    await assertSucceeds(deleteDoc(doc(teacherDb(), 'library/k1')));
+  });
+
+  test('onaylı öğrenci ve ziyaretçi kütüphaneyi okuyamaz ve yazamaz', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await seed('library/k1', item());
+    for (const db of [ayse(), guestDb()]) {
+      await assertFails(getDoc(doc(db, 'library/k1')));
+      await assertFails(getDocs(collection(db, 'library')));
+      await assertFails(setDoc(doc(db, 'library/k2'), item()));
+      await assertFails(updateDoc(doc(db, 'library/k1'), { shared: true }));
+      await assertFails(deleteDoc(doc(db, 'library/k1')));
+    }
+  });
+});

@@ -111,6 +111,7 @@
                     <legend>Tür</legend>
                     <label class="acc-check"><input type="radio" name="rKind" value="link" id="rKindLink" checked><span>Bağlantı</span></label>
                     <label class="acc-check"><input type="radio" name="rKind" value="pdf" id="rKindPdf"><span>PDF yükle</span></label>
+                    <label class="acc-check"><input type="radio" name="rKind" value="lib" id="rKindLib"><span>Kütüphaneden</span></label>
                   </fieldset>
                   <div class="field">
                     <label for="rTitle">Başlık</label>
@@ -131,6 +132,11 @@
                     <progress class="acc-res-progress" id="rPdfProgress" max="1" value="0" hidden aria-label="PDF yükleniyor"></progress>
                     <p class="acc-status" id="rPdfStatus" role="status" hidden></p>
                     <small class="acc-hint" id="rPdfHint">PDF senin Google Drive'ında "Bozkurt Academy Kaynaklar" klasörüne bir kez yüklenir ve "bağlantıya sahip olan görüntüleyebilir" olarak paylaşılır. En çok 20 MB. Kaynak silinse de dosya Drive'da kalır.</small>
+                  </div>
+                  <div class="field" id="rLibBox" hidden>
+                    <label for="rLibSelect">Kütüphanedeki PDF</label>
+                    <select id="rLibSelect" aria-describedby="rLibHint"></select>
+                    <small class="acc-hint" id="rLibHint">Drive'da gizli olan PDF, "Kaynağı ekle"ye basınca "bağlantıya sahip olan görüntüleyebilir" olarak paylaşılır. <a class="ba-link" href="ogretmen-kutuphane.html">Kütüphaneyi aç</a></small>
                   </div>
                   <div class="field">
                     <label for="rNote">Kısa not (isteğe bağlı)</label>
@@ -195,6 +201,6 @@
   </div>
   <script src="js/app.js?v=57"></script>
   <script src="js/theme.js?v=10"></script>
-  <script type="module" src="js/account/teacher-student.js?v=10"></script>
+  <script type="module" src="js/account/teacher-student.js?v=11"></script>
 </body>
 </html>

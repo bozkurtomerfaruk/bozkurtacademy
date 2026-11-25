@@ -11,13 +11,14 @@ import {
 } from './common.js';
 import { fs } from './firebase.js';
 import { defaultTitle, KIND_LABELS, linkKind, linkLabel, MAX_LINKS, topicTitles, validLinkUrl, wholeTopicAllowed } from './assignments.js?v=1';
-import * as drive from './drive.js?v=2';
+import * as drive from './drive.js?v=3';
 import { mailConfigured, notifyHomework, rememberResult } from './homework-mail.js?v=1';
 import { createAssignments, fmtDate, isEnabled, listStudents, loadAssignmentGroups, requireTeacher, updateAssignmentGroup } from './teacher-common.js';
 import {
-  buildTopicIndex, examHistory, examItemState, examTargets, examTrack, exerciseState, nextExamItem, nextExercises, searchTopics, studentHistory, topicProgress
-} from './homework-assistant.js?v=2';
+  buildTopicIndex, examHistory, libraryFor, examItemState, examTargets, examTrack, exerciseState, nextExamItem, nextExercises, searchTopics, studentHistory, topicProgress
+} from './homework-assistant.js?v=3';
 import { approveDraft, getDraft, saveDraft } from './homework-drafts.js?v=1';
+import { libraryUrl, loadLibrary, shareItems, unsharedIn } from './library.js?v=1';
 
 const chosen = []; // [{ level, topic, exercise, label }]
 const topics = []; // [{ level, topic, label }] konunun tamamı
@@ -34,6 +35,7 @@ const historyLoads = new Map(); // uid → Promise
 let examSetList = []; // examSets (Lesen, Hören, Sprachbausteine, form)
 let writingList = []; // writingTasks (Schreiben)
 let examLabels = new Map(); // "goethe|b1" → "Goethe B1"
+let library = []; // kaynak kütüphanesi (library, js/account/library.js): yalnızca öğretmen görür
 
 const key = (e) => `${e.level}/${e.topic}/${e.exercise}`;
 const topicKey = (t) => `${t.level}/${t.topic}`;
@@ -87,6 +89,7 @@ async function renderExercises(){
       return h('label', { class: 'acc-check' }, input, h('span', {}, localize(ex.title, 'tr'), stateBadge(level, topic, ex.id)));
     })
     : [h('p', { class: 'acc-hint' }, 'Bu konuda alıştırma yok.')]));
+  renderTopicLibrary();
 }
 
 function toggleWholeTopic(){
@@ -354,8 +357,45 @@ function renderSuggest(){
         ? h('div', {}, h('p', { class: 'odev-suggest-label' }, uids.length ? label : `${label} (öğrenci seçince çözdükleri atlanır)`),
           h('ul', { class: 'odev-suggest-list' }, rows))
         : h('p', { class: 'acc-hint' }, empty),
-      actionRow);
+      actionRow,
+      libraryRows(t.level, t.topic));
   }));
+}
+
+// Kaynak kütüphanesi: konuya etiketli PDF'ler. "Ekle" bağlantıyı ödeve ekler; Drive'da gizli olan PDF ancak
+// "Onayla ve gönder"de paylaşılır (taslakta paylaşılmaz).
+const linkedUrls = () => new Set(links.map((l) => l.url));
+
+function addLibraryLink(item){
+  const url = libraryUrl(item);
+  if(linkedUrls().has(url)) return;
+  if(links.length >= MAX_LINKS){
+    setStatus($('aStatus'), 'error', `Bir ödeve en çok ${MAX_LINKS} bağlantı eklenebilir.`);
+    return;
+  }
+  links.push({ url, title: item.title.slice(0, 120), kind: 'pdf', copy: false });
+  renderLinks();
+}
+
+function libraryRows(level, topic){
+  const items = libraryFor(library, level, topic);
+  if(!items.length) return null;
+  const urls = linkedUrls();
+  return h('div', { class: 'odev-lib' },
+    h('p', { class: 'odev-suggest-label' }, 'Kütüphaneden PDF'),
+    h('ul', { class: 'odev-suggest-list' }, items.map((item) => {
+      const added = urls.has(libraryUrl(item));
+      const add = h('button', { class: 'btn ghost odev-suggest-add', type: 'button', disabled: added, 'aria-label': `${item.title} PDF'ini ekle` }, added ? 'Eklendi' : 'Ekle');
+      add.addEventListener('click', () => addLibraryLink(item));
+      return h('li', {}, h('span', {}, h('span', { class: 'odev-tag odev-tag-pdf' }, 'PDF'), ' ', item.title,
+        item.shared ? null : h('span', { class: 'acc-sub' }, 'Drive\'da gizli; onaylayınca paylaşılır')), add);
+    })));
+}
+
+function renderTopicLibrary(){
+  const box = $('aLibrary');
+  const rows = $('aTopic').value ? libraryRows($('aLevel').value, $('aTopic').value) : null;
+  box.replaceChildren(...(rows ? [rows] : []));
 }
 
 // Bağlantılar ---------------------------------------------------------------------------------------------------------
@@ -370,6 +410,8 @@ function renderLinks(){
       remove);
   }));
   $('aLinkAdd').disabled = links.length >= MAX_LINKS;
+  // Kütüphane satırlarındaki "Ekle"/"Eklendi" durumu bağlantılara göre.
+  if(topicIndex.length){ renderTopicLibrary(); renderSuggest(); }
 }
 
 function updateLinkPreview(){
@@ -554,6 +596,20 @@ async function submit(event){
   const form = readForm();
   if(!form) return;
   setBusy(true);
+  // Kütüphaneden eklenen gizli PDF'ler önce paylaşılır (Google izni tıklamaya bağlı olduğu için ilk iş); paylaşılamazsa
+  // ödev kaydedilmez: öğrenci açamayacağı bir bağlantı almasın.
+  const toShare = unsharedIn(form.data.links, library);
+  if(toShare.length){
+    setStatus($('aStatus'), '', 'Kütüphane PDF\'leri paylaşılıyor…');
+    try{
+      await shareItems(toShare);
+    }catch(error){
+      console.error(error);
+      setStatus($('aStatus'), 'error', `PDF paylaşılamadı, ödev verilmedi: ${error.message} Tekrar dene.`);
+      setBusy(false);
+      return;
+    }
+  }
   setStatus($('aStatus'), '', 'Kaydediliyor…');
   try{
     let fresh = [];
@@ -669,6 +725,8 @@ if(user){
       draftId ? getDraft(draftId) : Promise.resolve(null),
       fetch('data/search-index.json').then((r) => r.json()).catch(() => null)
     ]);
+    // Kütüphane (tek sorgu); yüklenemezse asistan kütüphanesiz çalışır.
+    loadLibrary().then((list) => { library = list; renderTopicLibrary(); renderSuggest(); }).catch((error) => console.warn(error));
     if(editId){
       editing = groups.find((g) => g.groupId === editId) || null;
       if(!editing) throw new Error('Ödev bulunamadı.');

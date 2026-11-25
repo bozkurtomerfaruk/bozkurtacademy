@@ -22,7 +22,8 @@
     "test:odev-eposta": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/odev-eposta-account.mjs\"",
     "test:ders-defteri": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node --test tests/ders-defteri.test.mjs && node tests/ders-defteri-account.mjs\"",
     "test:kaynak": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/kaynak-account.mjs\"",
-    "test:odev-asistani": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node --test tests/odev-asistani.test.mjs && node tests/odev-asistani-account.mjs\""
+    "test:odev-asistani": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node --test tests/odev-asistani.test.mjs && node tests/odev-asistani-account.mjs\"",
+    "test:kutuphane": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/kutuphane-account.mjs\""
   },
   "devDependencies": {
     "@firebase/rules-unit-testing": "5.0.2",

@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="css/style.css?v=13" />
   <link rel="stylesheet" href="css/base.css?v=15" />
   <link rel="stylesheet" href="css/account.css?v=11" />
-  <link rel="stylesheet" href="css/odevler.css?v=6" />
+  <link rel="stylesheet" href="css/odevler.css?v=7" />
 </head>
 <body class="academy-theme account-page teacher-page">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
@@ -112,7 +112,7 @@
                 <input type="file" id="aPdfFile" accept="application/pdf,.pdf" hidden>
                 <progress class="odev-progress" id="aPdfProgress" max="1" value="0" hidden aria-label="PDF yükleniyor"></progress>
                 <p class="acc-status" id="aPdfStatus" role="status" hidden></p>
-                <small class="acc-hint" id="aPdfHint">PDF senin Google Drive'ında "Bozkurt Academy Ödevler" klasörüne yüklenir ve "bağlantıya sahip olan görüntüleyebilir" olarak paylaşılır. En çok 20 MB. İlk seferde Google sadece bu uygulamanın kendi yüklediği dosyalara erişim izni ister. Ödev silinse de dosya Drive'da kalır.</small>
+                <small class="acc-hint" id="aPdfHint">PDF senin Google Drive'ında "Bozkurt Academy Ödevler" klasörüne yüklenir ve "bağlantıya sahip olan görüntüleyebilir" olarak paylaşılır. En çok 20 MB. İlk seferde Google sadece bu uygulamanın kendi yüklediği dosyalara erişim izni ister. Ödev silinse de dosya Drive'da kalır. Ek alıştırma PDF'lerini bir kez <a class="ba-link" href="ogretmen-kutuphane.html">kaynak kütüphanesine</a> yüklersen asistan konuya göre önerir.</small>
               </div>
             </section>
             <section class="ba-card acc-card" aria-labelledby="partExercises">
@@ -150,6 +150,7 @@
                 <fieldset class="acc-checklist" id="aExerciseList">
                   <legend class="visually-hidden">Bu konunun alıştırmaları</legend>
                 </fieldset>
+                <div id="aLibrary" aria-live="polite"></div>
                 <div>
                   <h3 class="acc-small-head">Seçilenler <span class="acc-count" id="aChosenCount">0</span></h3>
                   <ol class="acc-chosen" id="aChosen"></ol>
@@ -206,6 +207,6 @@
   </div>
   <script src="js/app.js?v=57"></script>
   <script src="js/theme.js?v=10"></script>
-  <script type="module" src="js/account/teacher-assign.js?v=12"></script>
+  <script type="module" src="js/account/teacher-assign.js?v=13"></script>
 </body>
 </html>

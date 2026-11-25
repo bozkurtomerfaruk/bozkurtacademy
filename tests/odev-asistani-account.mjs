@@ -127,6 +127,57 @@ await t.fill('#aSearch', 'Perfekt'); await t.waitForTimeout(400);
 ok(await noOverflow(t), '1440: form taşmıyor');
 await shot(t, 'form-1440');
 
+// 1b. Öneri sayısı (3/5/10, tarayıcıda hatırlanır), "Çözülmemiş paketlerin hepsini ekle", "Konunun tamamını ekle".
+{
+  const { ctx, page } = await newPage(1440);
+  await signIn(page, 'ogretmen@example.com', 'ogretmen123', 'teacher');
+  const open = async () => {
+    await page.goto(`${BASE}/ogretmen-odev.html?ogrenci=ogrenci1`); await page.waitForSelector('#assignForm:not([hidden])', { timeout: 15000 });
+    await page.fill('#aSearch', 'Perfekt');
+    await page.waitForFunction(() => document.querySelector('#aSuggest .odev-suggest-item')?.textContent.includes('çözdü'), null, { timeout: 15000 });
+  };
+  const card = () => page.locator('#aSuggest .odev-suggest-item').first();
+  await open();
+  ok((await page.inputValue('#aSuggestCount')) === '3' && await card().locator('.odev-suggest-list li').count() === 3, 'öneri sayısı varsayılan 3');
+  await page.selectOption('#aSuggestCount', '5');
+  ok(await card().locator('.odev-suggest-list li').count() === 5 && (await card().textContent()).includes('Önerilen 5 paketi ekle'), 'öneri sayısı 5 seçilince 5 paket');
+  await open();
+  ok((await page.inputValue('#aSuggestCount')) === '5' && await card().locator('.odev-suggest-list li').count() === 5, 'öneri sayısı sayfa yenilenince hatırlanıyor (5)');
+  await page.selectOption('#aSuggestCount', '10');
+  ok(await card().locator('.odev-suggest-list li').count() === 10, 'öneri sayısı 10');
+  const unsolvedBtn = card().locator('[data-action="unsolved"]');
+  ok((await unsolvedBtn.textContent()) === `Çözülmemiş paketlerin hepsini ekle (${perfekt.length - 2})`, `"Çözülmemiş paketlerin hepsini ekle (${perfekt.length - 2})": çözülen ve verilen sayılmıyor`);
+  ok((await card().locator('[data-action="whole"]').textContent()) === `Konunun tamamını ekle (${perfekt.length} paket)`, `"Konunun tamamını ekle (${perfekt.length} paket)"`);
+  await unsolvedBtn.click();
+  ok((await page.textContent('#aChosenCount')) === String(perfekt.length - 2), 'çözülmemiş paketlerin hepsi seçilenlere eklendi');
+  ok(!(await page.textContent('#aChosen')).includes(perfekt[0].title) && !(await page.textContent('#aChosen')).includes(perfekt[1].title), 'çözülen ve verilen paket eklenmedi');
+  ok(await card().locator('[data-action="unsolved"]').count() === 0, 'hepsi eklenince "Çözülmemiş …" düğmesi kalkıyor');
+  await card().locator('[data-action="whole"]').click();
+  ok((await page.textContent('#aChosenCount')) === '1' && (await page.textContent('#aChosen')).includes('konunun tamamı'), '"Konunun tamamını ekle": konu tek öğe, tek tek paketler içine alındı');
+  ok((await card().textContent()).includes('Konunun tamamı ödevde.') && await card().locator('[data-action="whole"]').count() === 0, 'konu kartı: "Konunun tamamı ödevde."');
+  await card().getByRole('button', { name: 'Konuyu aç' }).click();
+  const wholeChecked = await page.waitForFunction(() => document.querySelector('#aTopic')?.value === 'perfekt' && document.querySelector('#aWhole')?.checked, null, { timeout: 10000 }).then(() => true).catch(() => false);
+  ok(wholeChecked, 'formdaki "Bu konunun tamamını ekle" işaretli (aynı kayıt)');
+  await page.uncheck('#aNotify');
+  await page.click('#aSubmit'); await page.waitForURL(/durum=verildi/, { timeout: 15000 });
+  const whole = (await listDocs('users/ogrenci1/assignments')).map(plain).find((a) => a.topics?.values?.length);
+  ok(whole && whole.topics.values[0].mapValue.fields.topic.stringValue === 'perfekt' && !(whole.exercises?.values || []).length, 'ödevde konunun tamamı (topics), tek paket yok');
+  // Sonraki adımların sayıları değişmesin: bu ödev silinir.
+  await fetch(`${docsUrl}/users/ogrenci1/assignments/${(await listDocs('users/ogrenci1/assignments')).find((d) => plain(d).topics?.values?.length).name.split('/').pop()}`, { method: 'DELETE', headers: owner });
+  ok(await noOverflow(page), '1440: yeni düğmelerle form taşmıyor');
+  await ctx.close();
+}
+{
+  const { ctx, page } = await newPage(390);
+  await signIn(page, 'ogretmen@example.com', 'ogretmen123', 'teacher');
+  await page.goto(`${BASE}/ogretmen-odev.html?ogrenci=ogrenci1`); await page.waitForSelector('#assignForm:not([hidden])', { timeout: 15000 });
+  await page.fill('#aSearch', 'Perfekt');
+  await page.waitForFunction(() => document.querySelector('#aSuggest [data-action="unsolved"]'), null, { timeout: 15000 });
+  ok(await noOverflow(page), '390: yeni düğmelerle form taşmıyor');
+  await shot(page, 'konu-dugmeleri-390');
+  await ctx.close();
+}
+
 // 2. Taslak kaydet: öğrenciye ödev yazılmaz.
 await t.fill('#aTitle', 'Perfekt tekrar');
 await t.click('#aDraft'); await t.waitForURL(/ogretmen-taslaklar\.html\?durum=kaydedildi/, { timeout: 15000 });

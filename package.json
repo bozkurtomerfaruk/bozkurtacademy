@@ -13,6 +13,7 @@
     "test:csp": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/csp.mjs\"",
     "test:schreiben": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/schreiben-account.mjs\"",
     "test:worker": "node --test tests/worker.test.mjs tests/odev-eposta-worker.test.mjs",
+    "test:deploy": "node --test tests/deploy.test.mjs && node scripts/worker-deploy-guard.mjs --check-config",
     "test:alfabe": "node --test tests/alfabe-logic.test.mjs tests/alfabe-ses.test.mjs",
     "alfabe-ses": "node scripts/generate-alfabe-audio.mjs",
     "test:alfabe-account": "firebase emulators:exec --only auth,firestore --project demo-bozkurtacademy \"node tests/alfabe-account.mjs\"",

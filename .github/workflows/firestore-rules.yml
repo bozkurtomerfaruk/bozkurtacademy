@@ -4,9 +4,9 @@ permissions:
 
 on:
   push:
-    paths: ['firestore.rules', 'tests/**', 'worker/**', 'scripts/placement-cleanup.mjs', 'apps-script/**', 'js/html.js', 'scripts/check-html-escape.mjs', 'package.json', 'package-lock.json', 'firebase.json', '.github/workflows/firestore-rules.yml']
+    paths: ['firestore.rules', 'tests/**', 'worker/**', 'scripts/placement-cleanup.mjs', 'apps-script/**', 'js/html.js', 'scripts/check-html-escape.mjs', 'package.json', 'package-lock.json', 'firebase.json', 'scripts/worker-deploy-guard.mjs', 'scripts/deploy-rules.mjs', '.github/workflows/deploy.yml', '.github/workflows/firestore-rules.yml']
   pull_request:
-    paths: ['firestore.rules', 'tests/**', 'worker/**', 'scripts/placement-cleanup.mjs', 'apps-script/**', 'js/html.js', 'scripts/check-html-escape.mjs', 'package.json', 'package-lock.json', 'firebase.json', '.github/workflows/firestore-rules.yml']
+    paths: ['firestore.rules', 'tests/**', 'worker/**', 'scripts/placement-cleanup.mjs', 'apps-script/**', 'js/html.js', 'scripts/check-html-escape.mjs', 'package.json', 'package-lock.json', 'firebase.json', 'scripts/worker-deploy-guard.mjs', 'scripts/deploy-rules.mjs', '.github/workflows/deploy.yml', '.github/workflows/firestore-rules.yml']
 jobs:
   rules:
     runs-on: ubuntu-latest
@@ -25,3 +25,8 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run test:cleanup
+      # Otomatik yayın (docs/otomatik-yayin.md): koruma testleri ve wrangler yapılandırması; secret kullanılmaz, yayın yapılmaz.
+      - run: npm run test:deploy
+      - run: npx --yes wrangler@4.158.0 deploy --dry-run --config worker/wrangler.jsonc
+        env:
+          WRANGLER_SEND_METRICS: 'false'

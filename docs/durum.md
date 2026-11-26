@@ -2,6 +2,14 @@
 
 Öğrenci sistemi çalışmasının güncel durumu. Plan: `docs/plan-ogrenci-sistemi.md`.
 
+## 2026-11-26 · Otomatik yayın: Worker ve Firestore kuralları (dal `claude/nice-einstein-pyps9c`, PR açık, birleştirilmedi)
+
+- **Ne:** `.github/workflows/deploy.yml`. main'e birleşince, testler yeşilse `worker/` değiştiyse Worker (wrangler 4.158.0, `worker/wrangler.jsonc`), `firestore.rules` değiştiyse kurallar (Firebase Rules API, `scripts/deploy-rules.mjs`) yayınlanır. Değişmeyen kısım yayınlanmaz. Elle tetikleme: `hedef` (ikisi/worker/kurallar), `mod` (kontrol/yayinla).
+- **Korumalar:** `keep_vars: true`, dosyada vars/secret yok (wrangler secret'ları her zaman korur; kaynak kodunda doğrulandı), `ai.binding "AI"`, observability açıkça yazılı. `scripts/worker-deploy-guard.mjs`: yayın öncesi ayar fotoğrafı (uyumluluk tarihi, bayraklar, log ayarı, workers.dev/önizleme, bağlantılar; uyuşmazsa yayın yok, paneldeki değerler yapıştırılacak hâliyle Summary'de), yayın sonrası "hiçbir ad kaybolmadı", canlı kontrol (OPTIONS 204 + belirteçsiz POST 401; mevcut canlı Worker'da PASS). Kurallar: ruleset derlenir, sürüm çevrilir, canlı metin doğrulanır.
+- **Güvenlik:** sadece bu depo + main; PR'larda çalışmaz; secret'lar GitHub ortamı `production`'da (sadece main). Cloudflare token'ı yalnızca Workers Scripts: Edit. Google: Workload Identity Federation (anahtar dosyası yok), koşul repository_id + owner_id + main + production, servis hesabı yalnızca Firebase Rules Admin, belirteç 5 dk. Push ile yayın `OTOMATIK_YAYIN = acik` olana kadar kapalı.
+- **Testler:** yeni `tests/deploy.test.mjs` (`npm run test:deploy`, sahte Cloudflare/Firebase yanıtları), mevcut CI'a `test:deploy` ve `wrangler deploy --dry-run` eklendi.
+- **Senin yapacakların:** `docs/otomatik-yayin.md` Adım 1–6. `worker/wrangler.jsonc`'taki uyumluluk tarihi ve log örnekleme oranı tahminî; ilk elle `kontrol` çalıştırması paneldeki değerleri yazıp yayın yapmadan durur, değerleri ben koyarım. İlk gerçek yayın (elle, `yayinla`) canlıya henüz yapıştırılmamış telc C1 Worker güncellemesini de getirir.
+
 ## 2026-11-24 · telc C1 Hochschule Schreiben: Seminararbeit, en az 350 kelime (dal `claude/friendly-dijkstra-1t57w2`, PR açık, birleştirilmedi)
 
 Eksik Schreiben sınavları sırası: telc A2 ✓ → telc B2 ✓ → Goethe C1 ✓ → **telc C1** → TestDaF (dijital, kâğıt).

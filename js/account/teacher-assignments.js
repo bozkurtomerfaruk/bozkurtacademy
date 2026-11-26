@@ -1,7 +1,8 @@
 // ogretmen-odevler.html: Google Classroom'daki "Sınıf çalışmaları" gibi ödev listesi. Üstte öğrenci seçimi
 // ("Tüm öğrenciler" ya da tek öğrenci), altta ödevler verildiği günün tarih başlıkları altında, en yenisi üstte.
 // "+ Oluştur" ve "Düzenle" ogretmen-odev.html'yi açar. Veri biçimi: js/account/assignments.js.
-import { $, exerciseUrl, h, loadResults, scoreText } from './common.js';
+import { $, exerciseUrl, h, loadCatalogLevels, loadResults, localize, scoreText } from './common.js';
+import { assignmentSummary, studentNamesText } from './assignment-summary.js?v=1';
 import { assignmentBody, expandExercises, groupByDay, solvedCount, withResults } from './assignments.js?v=1';
 import { describeResult, mailConfigured, notifyHomework, takeResult } from './homework-mail.js?v=1';
 import { loadDrafts } from './homework-drafts.js?v=2';
@@ -17,6 +18,13 @@ const fmtDateTime = (d) => d ? `${fmtDate(d)} ${new Intl.DateTimeFormat('tr-TR',
 let students = [];
 let studentsById = new Map();
 let groups = [];
+let levels = []; // katalog: özetteki konu adları
+const topicTitle = (level, topic) => localize(levels.find((l) => l.id === level)?.topics?.find((t) => t.id === topic)?.title, 'tr');
+// Kartta öğrenci adları: en çok 3 ad, fazlası "ve n kişi daha" (tamamı "Ayrıntılar"da). first: önce yazılacak öğrenci.
+function namesOf(g, first = ''){
+  const names = g.copies.filter((c) => c.uid !== first).map((c) => studentName(c.uid)).sort((a, b) => a.localeCompare(b, 'tr'));
+  return studentNamesText(first ? [studentName(first), ...names] : names);
+}
 const resultsCache = new Map();
 let renderToken = 0;
 
@@ -112,7 +120,7 @@ async function studentCard(g, copy, results){
   }
   return card({
     a, done: copy.done,
-    meta: [dueText(a.due), others > 0 ? `${studentName(copy.uid)} ve ${others} öğrenci daha` : null],
+    meta: [dueText(a.due), others > 0 ? namesOf(g, copy.uid) : null],
     mail: mailConfigured ? mailText(copy) : null,
     mailAction,
     badges: [
@@ -144,7 +152,8 @@ async function groupCard(g){
   unsentButton.addEventListener('click', () => sendMail(unsent, unsentButton));
   return card({
     a, done: done === g.copies.length,
-    meta: [dueText(a.due), `${g.copies.length} öğrenci`],
+    who: namesOf(g),
+    meta: [dueText(a.due)],
     badges: [
       h('span', { class: `acc-badge ${done === g.copies.length ? 'success' : ''}` }, `${done}/${g.copies.length} tamamladı`),
       overdue ? h('span', { class: 'acc-badge warning' }, 'Süresi geçti') : null
@@ -166,13 +175,16 @@ async function groupCard(g){
   });
 }
 
-function card({ a, done, meta, badges, body, actions, mail, mailAction }){
+function card({ a, done, meta, badges, body, actions, mail, mailAction, who = '' }){
+  const summary = assignmentSummary(a, topicTitle);
   return h('article', { class: 'odev-item', id: `odev-${a.groupId || a.id}` },
     h('span', { class: `odev-icon${done ? ' done' : ''}`, 'aria-hidden': 'true' }, done ? '✓' : '✎'),
     h('div', { class: 'odev-main' },
       h('div', { class: 'odev-head' },
         h('h3', {}, a.title),
         h('span', { class: 'acc-badges' }, badges)),
+      summary ? h('p', { class: 'odev-summary' }, summary) : null,
+      who ? h('p', { class: 'odev-who' }, who) : null,
       h('p', { class: 'odev-meta' }, meta.filter(Boolean).join(' · ')),
       mail ? h('p', { class: 'odev-mail' }, mail, mailAction ? ' · ' : null, mailAction) : null,
       h('details', { class: 'odev-details' },
@@ -216,7 +228,7 @@ const user = await requireTeacher({ loadingId: 'listLoading', errorId: 'listErro
 if(user){
   try{
     const params = new URLSearchParams(location.search);
-    [students, groups] = await Promise.all([listStudents(), loadAssignmentGroups()]);
+    [students, groups, levels] = await Promise.all([listStudents(), loadAssignmentGroups(), loadCatalogLevels().catch(() => [])]);
     studentsById = new Map(students.map((s) => [s.id, s]));
     fillStudents(params.get('ogrenci'));
     const status = params.get('durum');

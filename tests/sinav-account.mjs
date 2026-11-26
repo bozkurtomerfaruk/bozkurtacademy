@@ -155,7 +155,7 @@ const c1Topics = await teacher.locator('#aTopic option').evaluateAll((els) => el
 ok(c1Topics.some(([v, t]) => v === 'schreiben' && t === 'Schreiben (sınav hazırlığı)') && c1Topics.some(([v]) => v === 'sinav') && c1Topics.length === 2, `C1 konuları: Schreiben (sınav hazırlığı) ve Sınav setleri (${JSON.stringify(c1Topics)})`);
 await teacher.selectOption('#aTopic', 'schreiben'); await teacher.waitForTimeout(800);
 const c1Writing = await teacher.locator('#aExerciseList label').allTextContents();
-ok(c1Writing.length === 10 && c1Writing.some((x) => x.includes('Goethe C1 · Teil 1 · Tempolimit auf Autobahnen?')) && c1Writing.some((x) => x.includes('Goethe C1 · Teil 2 · Urlaubssperre im Sommer')), `C1 Schreiben: 10 görev listede (${c1Writing.length})`);
+ok(c1Writing.length === 15 && c1Writing.some((x) => x.includes('Goethe C1 · Teil 1 · Tempolimit auf Autobahnen?')) && c1Writing.some((x) => x.includes('Goethe C1 · Teil 2 · Urlaubssperre im Sommer')) && c1Writing.some((x) => x.includes('telc Deutsch C1 · Teil 1 · Bedingungsloses Grundeinkommen')), `C1 Schreiben: 15 görev listede, Goethe 10 + telc 5 (${c1Writing.length})`);
 await teacher.locator('#aExerciseList label', { hasText: 'Goethe C1 · Teil 1 · Tempolimit auf Autobahnen?' }).locator('input').check();
 await teacher.selectOption('#aTopic', 'sinav'); await teacher.waitForTimeout(800);
 ok((await teacher.locator('#aExerciseList').textContent()).includes('Lesen · Teil 1 · Schlaf und Gedächtnis'), 'C1 sınav setlerinde Goethe C1 Lesen var');

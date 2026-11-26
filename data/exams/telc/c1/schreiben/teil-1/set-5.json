@@ -1,0 +1,155 @@
+{
+  "format": 1,
+  "exam": "telc",
+  "level": "c1",
+  "section": "schreiben",
+  "teil": 1,
+  "set": "set-5",
+  "title": "Bedingungsloses Grundeinkommen",
+  "minutes": 70,
+  "kind": "writing",
+  "register": "neutral",
+  "textType": "essay",
+  "examChoice": "thema",
+  "situation": "In einer Seminararbeit sollen Sie das Thema „Bedingungsloses Grundeinkommen“ aus unterschiedlichen Perspektiven beleuchten. Sie können die unten stehenden Zitate zur Orientierung verwenden, aber auch andere Aspekte des Themas darlegen.",
+  "task": "Argumentieren Sie überzeugend, führen Sie Beispiele an und gliedern Sie Ihren Text in Einleitung, Hauptteil und Schluss.",
+  "quotes": [
+    "„Ein Grundeinkommen gibt den Menschen Freiheit und Sicherheit.“",
+    "„Mit einem Grundeinkommen würde bald niemand mehr arbeiten wollen.“"
+  ],
+  "points": [],
+  "instructions": "Schreiben Sie einen Text, in dem Sie Ihren eigenen Standpunkt dazu erarbeiten und argumentativ darlegen. Ihr Text soll mindestens 350 Wörter umfassen.",
+  "words": {
+    "target": 400,
+    "min": 350,
+    "max": 450,
+    "atLeast": true
+  },
+  "checklist": [
+    {
+      "criterion": "aufgabe",
+      "tr": "Aufgabengerechtheit: Konuyu farklı açılardan ele aldım (güvence ve özgürlük, bürokrasi, dijitalleşme, çalışma isteği, finansman, adalet); her argümanı bir örnekle (Finlandiya deneyi, bakım ve gönüllü işler) destekledim."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Karşı görüşü de ciddiye al ve çürüt: Temel gelir yanlılarının argümanlarını küçümsemeden aktardım ve haklı yanlarını açıkça kabul ettim (\"niemand würde mehr arbeiten\" korkusunu ben de abartılı buldum); kendi itirazımı (finansman, adalet) gerekçeyle yazdım ve yanlıların amaçlarını karşılayan başka reformlar önerdim."
+    },
+    {
+      "criterion": "aufgabe",
+      "tr": "Sonuçta kendi görüşümü açıkça yazdım. En az 350 kelime yazdım (350–450 arası iyi; daha uzun yazmak ek puan getirmez). Seçtiğim temadan başka bir konuya kayarsam „Thema verfehlt“ olur: dört ölçüt de D, yani 0 puan."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kommunikative Gestaltung: Einleitung (kavramın tanımı ve soru), Hauptteil (yanlıların argümanları, abartılı bir korku, itirazlarım, öneri) ve Schluss (Insgesamt teile ich …) var; Dennoch ile görüş değişimi açıkça gösteriliyor."
+    },
+    {
+      "criterion": "aufbau",
+      "tr": "Kohärenz: Sadece bağlaç değil, bütün bağlantı araçlarını kullandım: zamir ve gösterme sözcükleri (dies, dieser Einwand, diese Bedenken), eş anlamlı sözcükler, açık atıf (wie oben ausgeführt, der zweite Punkt) ve bağlaçlar (zumal, insofern, wohingegen, nichtsdestotrotz)."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Korrektheit: Mastarlı yapıları kontrol ettim: ohne dafür eine Gegenleistung erbringen … zu müssen, Um diese Summe aufzubringen, müssten …; yan cümleden sonra ana cümlenin fiili hemen geliyor."
+    },
+    {
+      "criterion": "sprache",
+      "tr": "Repertoire: Funktionsverbgefüge (eine Gegenleistung erbringen, Anerkennung finden), Nominalstil (die Prüfung von Sozialleistungen, die Finanzierbarkeit des Sozialstaats) ve Konjunktiv II (würde, müssten, bräuchten, ließen sich) kullandım."
+    }
+  ],
+  "redemittel": [
+    {
+      "group": "Einleitung: Begriff und Fragestellung",
+      "items": [
+        {
+          "de": "Gemeint ist …, den/die … erhält, ohne … zu müssen.",
+          "tr": "Kastedilen, …'in … zorunda kalmadan aldığı …"
+        },
+        {
+          "de": "Ob …, soll im Folgenden erörtert werden.",
+          "tr": "… olup olmadığı aşağıda tartışılacak"
+        }
+      ]
+    },
+    {
+      "group": "Die Gegenseite würdigen",
+      "items": [
+        {
+          "de": "Die Befürworter verbinden mit … große Hoffnungen, und viele ihrer Argumente sind ernst zu nehmen.",
+          "tr": "Yanlılar …'e büyük umut bağlıyor ve argümanlarının çoğu ciddiye alınmalı"
+        },
+        {
+          "de": "Auch die häufig geäußerte Befürchtung, …, halte ich für überzogen.",
+          "tr": "Sık dile getirilen … korkusunu da abartılı buluyorum"
+        }
+      ]
+    },
+    {
+      "group": "Gegenargumente ernst nehmen und entkräften",
+      "items": [
+        {
+          "de": "Kritiker geben zu bedenken, dass … (Konjunktiv I: sei, habe, könne)",
+          "tr": "Eleştirenler … diye hatırlatıyor (aktarmada Konjunktiv I)"
+        },
+        {
+          "de": "Diese Bedenken sind keineswegs aus der Luft gegriffen.",
+          "tr": "Bu kaygılar hiç de boş değil"
+        },
+        {
+          "de": "Dieser Einwand ist zwar berechtigt, greift aber zu kurz, weil …",
+          "tr": "Bu itiraz haklı, ama yetersiz kalıyor, çünkü …"
+        },
+        {
+          "de": "Bei näherer Betrachtung zeigt sich jedoch, dass …",
+          "tr": "Daha yakından bakınca ise … olduğu görülür"
+        }
+      ]
+    },
+    {
+      "group": "Schluss und eigene Position",
+      "items": [
+        {
+          "de": "Dennoch überwiegen für mich die Bedenken.",
+          "tr": "Yine de benim için kaygılar ağır basıyor"
+        },
+        {
+          "de": "Insgesamt teile ich die Ziele, halte … jedoch nicht für den richtigen Weg.",
+          "tr": "Genel olarak amaçları paylaşıyorum, ama …'i doğru yol bulmuyorum"
+        }
+      ]
+    },
+    {
+      "group": "Kohärenz: Text gliedern und verknüpfen",
+      "items": [
+        {
+          "de": "Im Folgenden möchte ich … abwägen und anschließend meinen eigenen Standpunkt darlegen.",
+          "tr": "Aşağıda …'i tartacağım ve ardından kendi görüşümü açıklayacağım"
+        },
+        {
+          "de": "Hinzu kommt, dass … / Nicht zuletzt …",
+          "tr": "Buna … da eklenir / Son olarak ama önemli olan …"
+        },
+        {
+          "de": "Wie oben ausgeführt, … / Dieser Einwand …",
+          "tr": "Yukarıda açıklandığı gibi … / Bu itiraz …"
+        },
+        {
+          "de": "…, zumal … / Insofern …",
+          "tr": "…, üstelik … (fiil sonda) / Bu bakımdan …"
+        },
+        {
+          "de": "Nichtsdestotrotz … / Daraus folgt, dass …",
+          "tr": "Buna rağmen … / Bundan şu çıkar: …"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "text": "Die Idee eines bedingungslosen Grundeinkommens fasziniert seit Jahrzehnten Menschen aus ganz unterschiedlichen politischen Lagern. Gemeint ist ein fester monatlicher Betrag, den jede Bürgerin und jeder Bürger vom Staat erhält, ohne dafür eine Gegenleistung erbringen oder Bedürftigkeit nachweisen zu müssen. Ob ein solches Modell eine gerechtere Gesellschaft schaffen würde, soll im Folgenden erörtert werden.\nDie Befürworter verbinden mit dem Grundeinkommen große Hoffnungen, und viele ihrer Argumente sind ernst zu nehmen. Ein gesichertes Existenzminimum würde Menschen die Angst vor dem sozialen Abstieg nehmen und ihnen ermöglichen, sich weiterzubilden, Angehörige zu pflegen oder ein Ehrenamt auszuüben – Tätigkeiten, die für die Gesellschaft wertvoll sind, aber kaum bezahlt werden. Zudem könnte der Staat auf einen Teil der komplizierten Bürokratie verzichten, die heute mit der Prüfung von Sozialleistungen verbunden ist. Angesichts der Digitalisierung, die zahlreiche Arbeitsplätze verändern wird, erscheint ein solches Sicherheitsnetz vielen als zeitgemäße Antwort. Auch Selbstständige und Kunstschaffende, deren Einkommen stark schwankt, könnten von einer solchen Absicherung profitieren.\nAuch die häufig geäußerte Befürchtung, mit einem Grundeinkommen würde niemand mehr arbeiten, halte ich für überzogen. Ein Modellversuch in Finnland deutet darauf hin, dass die Empfängerinnen und Empfänger nicht weniger arbeiteten als die Vergleichsgruppe; viele gaben zudem an, sich weniger gestresst zu fühlen. Für die meisten Menschen bedeutet Arbeit eben nicht nur Einkommen, sondern auch Anerkennung, soziale Kontakte und Sinn.\nDennoch überwiegen für mich die Bedenken. Das gewichtigste Problem ist die Finanzierung. Ein Grundeinkommen, das tatsächlich zum Leben reicht, würde jährlich Hunderte Milliarden Euro kosten. Um diese Summe aufzubringen, müssten Steuern und Abgaben deutlich steigen, was gerade Menschen mit kleinen und mittleren Einkommen belasten könnte. Hinzu kommt ein Gerechtigkeitsproblem: Wenn alle denselben Betrag erhalten, profitieren auch Wohlhabende, während Menschen mit besonderem Bedarf, etwa wegen einer Behinderung oder einer chronischen Krankheit, weiterhin zusätzliche Unterstützung bräuchten. Unklar ist schließlich, wie sich ein Grundeinkommen auf die Preise, etwa auf die Mieten, auswirken würde; stiegen diese, wäre ein Teil der gewonnenen Sicherheit rasch wieder verloren.\nStatt eines bedingungslosen Grundeinkommens halte ich gezielte Reformen für sinnvoller: einfachere Antragsverfahren, eine verlässliche Grundsicherung und eine bessere Anerkennung von Pflege und Ehrenamt, zum Beispiel in der Rente. Damit ließen sich zentrale Anliegen der Befürworter aufgreifen, ohne die Finanzierbarkeit des Sozialstaats zu gefährden.\nInsgesamt teile ich also viele Ziele, die mit dem Grundeinkommen verfolgt werden, halte das Modell in seiner bedingungslosen Form jedoch nicht für den richtigen Weg.",
+    "stance": "dagegen",
+    "notes": [
+      "Sonuç: aleyhte (dagegen), ama dengeli: yanlıların argümanları ayrıntılı ve saygıyla aktarılıyor, \"kimse çalışmaz\" korkusu bile abartılı bulunuyor; itiraz sadece finansman ve adalete dayanıyor.",
+      "Görüş değişimi açık: Dennoch überwiegen für mich die Bedenken. Sonuç cümlesi ortak amaçları kabul ediyor (Insgesamt teile ich also viele Ziele …).",
+      "Örnek ve kanıt: Finlandiya'daki deney (nicht weniger arbeiteten als die Vergleichsgruppe), Pflege, Ehrenamt, Behinderung.",
+      "Kohärenz: Tätigkeiten, die … (öncekini özetleyen isim), Zudem …, Auch …, Dennoch …, Hinzu kommt …, Damit …, Insgesamt …"
+    ]
+  }
+}

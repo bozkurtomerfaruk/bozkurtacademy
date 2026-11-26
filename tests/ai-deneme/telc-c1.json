@@ -1,0 +1,159 @@
+{
+  "about": "Yapay zekâ denemesi (telc Deutsch C1 Hochschule: bir Seminararbeit için kendi görüşünü savunan, en az 350 kelimelik metin; tek görev). errors: bulunması gereken hatalı yer (wrong) ve düzeltmede geçmesi gereken parça (fix; liste ise biri yeter); clean: doğru olan, işaretlenmemesi gereken yerler. Metinler denemede kotayı korumak için kısaltıldı (gerçek sınavda en az 350 kelime). Bilerek doğru ileri yapılar var (Konjunktiv I ve onun yerine Konjunktiv II, nesneyle başlayan cümle, Partizipialattribut, Funktionsverbgefüge): yanlış alarm sınavı. telcc1-4 bilerek çok kısa: yapay zekâ uzunluğu değil sadece dil hatalarını işaretlemeli. telcc1-5 hatasız; hiçbir şey işaretlenmemeli. Çalıştırma: scripts/ai-deneme.mjs.",
+  "exam": "telc",
+  "level": "c1",
+  "teil": 1,
+  "texts": [
+    {
+      "id": "telcc1-1",
+      "set": "set-1",
+      "note": "je … desto'dan sonra fiil sırası, Funktionsverbgefüge (eine Rolle spielen), weil'li yan cümlede fiil sonda, Genitiv -s (des Interesses); doğru Konjunktiv I ve nesneyle başlayan cümle",
+      "text": "Ob Sechzehnjährige wählen dürfen sollten, ist eine Frage, die in Deutschland seit Jahren diskutiert wird. In einigen Bundesländern ist das Wahlrecht ab 16 bei Kommunalwahlen bereits Realität.\n\nFür eine Absenkung des Wahlalters spricht vor allem, dass politische Entscheidungen von heute die Zukunft der jungen Menschen prägen. Beim Klimaschutz und bei der Rente betreffen die Folgen vor allem diejenigen, die bisher nicht mitbestimmen dürfen. Je früher junge Menschen wählen dürfen, desto mehr sie interessieren sich für Politik. Auch in der Schule kann politische Bildung so eine größere Rolle machen.\n\nKritiker behaupten, Jugendliche seien leichter zu beeinflussen, weil sie haben noch wenig Erfahrung. Trotz des wachsenden Interesse vieler Jugendlicher an Themen wie Klima und Digitalisierung sei ihre Meinung oft noch nicht gefestigt. Einen Teil dieser Bedenken teile ich durchaus. Allerdings werden auch Erwachsene durch soziale Medien beeinflusst, und ihre Reife wird vor einer Wahl nicht überprüft.\n\nAlles in allem bin ich der Meinung, dass die Vorteile überwiegen, sofern die Schulen die politische Bildung ernst nehmen.",
+      "errors": [
+        {
+          "wrong": "desto mehr sie interessieren sich",
+          "fix": [
+            "desto mehr interessieren sie sich",
+            "interessieren sie sich"
+          ]
+        },
+        {
+          "wrong": "eine größere Rolle machen",
+          "fix": [
+            "Rolle spielen",
+            "spielen"
+          ]
+        },
+        {
+          "wrong": "weil sie haben noch wenig Erfahrung",
+          "fix": [
+            "noch wenig Erfahrung haben",
+            "Erfahrung haben"
+          ]
+        },
+        {
+          "wrong": "Trotz des wachsenden Interesse",
+          "fix": [
+            "Interesses"
+          ]
+        }
+      ],
+      "clean": [
+        "Kritiker behaupten, Jugendliche seien leichter zu beeinflussen",
+        "Einen Teil dieser Bedenken teile ich durchaus",
+        "sei ihre Meinung oft noch nicht gefestigt"
+      ]
+    },
+    {
+      "id": "telcc1-2",
+      "set": "set-2",
+      "note": "Genitiv Plural (aller Schüler), abhängen von + Dativ, das Argument (Neutrum, Dativ); doğru nesneyle başlayan cümle, Partizipialattribut ve aktarmada Konjunktiv I",
+      "text": "Schuluniformen gibt es in vielen Ländern, in Deutschland sind sie jedoch die Ausnahme. Immer wieder wird gefordert, sie auch hier einzuführen.\n\nDie Befürworter argumentieren mit der Gleichheit allen Schüler. Wenn alle das Gleiche tragen, spielen teure Marken keine Rolle mehr, und niemand wird wegen seiner Kleidung ausgelacht. Ob ein Kind dazugehört, hänge dann nicht mehr von das Einkommen der Eltern ab.\n\nIch bin trotzdem nicht einverstanden mit dieser Argument. Den Wettbewerb um Statussymbole verhindert eine Uniform nicht, denn er verlagert sich einfach auf Smartphones oder Schuhe. Außerdem müssen die Familien die von den Schulen vorgeschriebene Kleidung zusätzlich kaufen, was für viele eine Belastung wäre. Am wichtigsten ist für mich aber, dass Jugendliche mit ihrer Kleidung zeigen, wer sie sind.\n\nDeshalb halte ich Programme gegen Mobbing für sinnvoller als eine Pflicht zur Uniform.",
+      "errors": [
+        {
+          "wrong": "der Gleichheit allen Schüler",
+          "fix": [
+            "aller Schüler",
+            "aller Schülerinnen und Schüler"
+          ]
+        },
+        {
+          "wrong": "von das Einkommen",
+          "fix": [
+            "vom Einkommen",
+            "von dem Einkommen"
+          ]
+        },
+        {
+          "wrong": "mit dieser Argument",
+          "fix": [
+            "diesem Argument"
+          ]
+        }
+      ],
+      "clean": [
+        "Den Wettbewerb um Statussymbole verhindert eine Uniform nicht",
+        "die von den Schulen vorgeschriebene Kleidung",
+        "hänge dann nicht mehr"
+      ]
+    },
+    {
+      "id": "telcc1-3",
+      "set": "set-3",
+      "note": "özne-fiil uyumu (die Rettungskräfte berichten), dass/das, verzichten auf + Akkusativ, wenn'li yan cümleden sonra fiil sırası; doğru Konjunktiv I (so die Gegner) ve Konjunktiv II",
+      "text": "Jedes Jahr zu Silvester wird darüber gestritten, ob privates Feuerwerk verboten werden sollte.\n\nFür ein Verbot sprechen viele Gründe. In der Silvesternacht ist die Luft in den Städten stark mit Feinstaub belastet, und die Notaufnahmen sind voll. Seit Jahren berichtet die Rettungskräfte außerdem von Angriffen mit Raketen. Das Problem ist, das viele Tiere unter dem Lärm leiden.\n\nEin Verbot, so die Gegner, treffe vor allem die Vernünftigen. Viele Familien wollen nicht auf dem Feuerwerk verzichten, weil es für sie zur Tradition gehört. Wenn man ein allgemeines Verbot einführen würde, es wäre außerdem schwer zu kontrollieren.\n\nIch plädiere deshalb für einen Mittelweg: Verbotszonen in den Innenstädten und in der Nähe von Krankenhäusern. Professionell organisierte Feuerwerke wären dort eine gute Alternative.",
+      "errors": [
+        {
+          "wrong": "berichtet die Rettungskräfte",
+          "fix": [
+            "berichten"
+          ]
+        },
+        {
+          "wrong": "Das Problem ist, das viele",
+          "fix": [
+            "dass viele",
+            "dass"
+          ]
+        },
+        {
+          "wrong": "auf dem Feuerwerk verzichten",
+          "fix": [
+            "auf das Feuerwerk"
+          ]
+        },
+        {
+          "wrong": "es wäre außerdem schwer",
+          "fix": [
+            "wäre es außerdem schwer",
+            "wäre es"
+          ]
+        }
+      ],
+      "clean": [
+        "Ein Verbot, so die Gegner, treffe vor allem die Vernünftigen",
+        "Professionell organisierte Feuerwerke wären dort eine gute Alternative"
+      ]
+    },
+    {
+      "id": "telcc1-4",
+      "set": "set-4",
+      "note": "bilerek kısa (~70 kelime): ilgi zamiri (die Tiere, die), Konjunktiv II'de çoğul (wären); uzunluk işaretlenmemeli",
+      "text": "Zoos sind umstritten. Kritiker sagen, die Tiere, der in kleinen Gehegen leben, würden oft krank. Das stimmt leider in manchen Fällen.\n\nTrotzdem haben Zoos einen wichtigen Beitrag zum Artenschutz geleistet. Ohne Zuchtprogramme wäre manche Tierarten heute ausgestorben, zum Beispiel das Przewalski-Pferd. Außerdem lernen Kinder im Zoo, warum der Schutz der Natur wichtig ist.\n\nDeshalb bin ich für Zoos, aber nur mit strengen Regeln.",
+      "errors": [
+        {
+          "wrong": "die Tiere, der in kleinen",
+          "fix": [
+            "die in kleinen",
+            "Tiere, die"
+          ]
+        },
+        {
+          "wrong": "wäre manche Tierarten",
+          "fix": [
+            "wären manche Tierarten",
+            "wären"
+          ]
+        }
+      ],
+      "clean": [
+        "haben Zoos einen wichtigen Beitrag zum Artenschutz geleistet",
+        "würden oft krank"
+      ]
+    },
+    {
+      "id": "telcc1-5",
+      "set": "set-5",
+      "note": "hatasız: Konjunktiv I ve onun yerine Konjunktiv II (erhielten, bräuchten), nesneyle başlayan cümle, Partizipialattribut, Funktionsverbgefüge (Rechnung tragen, in Anspruch nehmen); hiçbir şey işaretlenmemeli",
+      "text": "Ein bedingungsloses Grundeinkommen würde jedem Menschen monatlich einen festen Betrag sichern, ohne dass er dafür eine Gegenleistung erbringen müsste. Die Idee klingt verlockend, wirft aber grundlegende Fragen auf.\n\nBefürworter betonen, ein Grundeinkommen nehme den Menschen die Angst vor dem sozialen Abstieg und schaffe Freiräume für Weiterbildung, Pflege und Ehrenamt. Zudem könne der Staat auf einen Teil der Bürokratie verzichten. Diesen Argumenten sollte man nicht vorschnell widersprechen, zumal ein Modellversuch in Finnland gezeigt hat, dass die Teilnehmenden nicht weniger arbeiteten.\n\nDennoch überwiegen für mich die Bedenken. Ein existenzsicherndes Grundeinkommen würde jährlich Hunderte Milliarden Euro kosten. Um diese Summe aufzubringen, müssten die Steuern erheblich steigen. Hinzu kommt, dass auch Wohlhabende das Geld erhielten, während Menschen mit besonderem Bedarf weiterhin zusätzliche Hilfe bräuchten. Die seit Jahren steigenden Mieten könnten einen Teil des Betrags zudem rasch aufzehren.\n\nStatt eines bedingungslosen Grundeinkommens halte ich gezielte Reformen für sinnvoller, die den Bedürfnissen der Betroffenen besser Rechnung tragen. Wer Unterstützung in Anspruch nehmen muss, sollte dies ohne komplizierte Anträge tun können.",
+      "errors": [],
+      "clean": [
+        "ein Grundeinkommen nehme den Menschen die Angst",
+        "Diesen Argumenten sollte man nicht vorschnell widersprechen",
+        "dass auch Wohlhabende das Geld erhielten",
+        "Die seit Jahren steigenden Mieten",
+        "den Bedürfnissen der Betroffenen besser Rechnung tragen"
+      ]
+    }
+  ]
+}

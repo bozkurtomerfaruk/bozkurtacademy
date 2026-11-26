@@ -15,7 +15,7 @@
   const fill = (key, values) => t(key).replace(/\{(\w+)\}/g, (_, name) => values[name] ?? '');
   const lang = () => window.BA?.lang || 'tr';
   const esc = value => window.baHtml.escapeHtml(value);
-  // html-safe-names: status navActions() points pick groups notes head postHtml(set.post) mailHtml(set.mail) adHtml(set.ad) context
+  // html-safe-names: status navActions() points pick groups notes head postHtml(set.post) mailHtml(set.mail) adHtml(set.ad) quotesHtml(set.quotes) context
   const MAX_CHARS = 4000; // firestore.rules ile aynı sınır
 
   // Harf ve rakam dizileri; "-" ya da "'" ile birleşenler tek kelime (B1-Prüfung). scripts/check-exams.mjs aynı kuralı kullanır.
@@ -92,6 +92,12 @@
     </figure>`;
   }
 
+  // Alıntılar (telc C1 Hochschule): görüşe yön veren iki Zitat; kullanmak zorunlu değil, başka yönler de yazılabilir.
+  function quotesHtml(quotes) {
+    if (!quotes?.length) return '';
+    return `<figure class="wt-post wt-quotes">${quotes.map(quote => `<blockquote><p>${esc(quote)}</p></blockquote>`).join('')}</figure>`;
+  }
+
   function taskHtml(set) {
     // choosePoints (telc A2 Teil 2): maddeler anahtar kelime kutularıdır, öğrenci bunlardan birkaçını seçer.
     // ownAspect (telc B2): maddeler cümledir; "3 madde ya da 2 madde + kendi konun" notu çıkar.
@@ -102,16 +108,16 @@
       <p>${esc(set.situation)}</p>
       ${postHtml(set.post)}${mailHtml(set.mail)}${adHtml(set.ad)}
       ${context}<p><strong>${esc(set.task)}</strong></p>
-      ${points}
+      ${points}${quotesHtml(set.quotes)}
       ${set.instructions ? `<p class="wt-instructions">${esc(set.instructions)}</p>` : ''}
-    </div>${pick}${set.examChoice ? `<p class="wt-muted wt-choice" data-wt-choice>${esc(t('wtExamChoice'))}</p>` : ''}${set.sharedMinutes ? `<p class="wt-muted wt-choice" data-wt-shared>${esc(fill(set.sharedWith === 'lesen' ? 'wtSharedLesen' : 'wtSharedMinutes', { n: set.sharedMinutes }))}${set.anyOrder ? ` ${esc(t('wtAnyOrder'))}` : ''}</p>` : ''}`;
+    </div>${pick}${set.examChoice ? `<p class="wt-muted wt-choice" data-wt-choice>${esc(t(set.examChoice === 'thema' ? 'wtExamChoiceThema' : 'wtExamChoice'))}</p>` : ''}${set.sharedMinutes ? `<p class="wt-muted wt-choice" data-wt-shared>${esc(fill(set.sharedWith === 'lesen' ? 'wtSharedLesen' : 'wtSharedMinutes', { n: set.sharedMinutes }))}${set.anyOrder ? ` ${esc(t('wtAnyOrder'))}` : ''}</p>` : ''}`;
   }
 
   // Metin alanındaki ipucu, metin türüne göre (data: textType).
   const PLACEHOLDERS = {
     'email-informal': 'Liebe …, / Lieber …,', sms: 'Hallo …,',
     'email-semiformal': 'Liebe Frau …, / Sehr geehrter Herr …,', 'email-formal': 'Sehr geehrte Damen und Herren,',
-    forum: 'Ich finde, …'
+    forum: 'Ich finde, …', essay: 'Einleitung … / Hauptteil … / Schluss …'
   };
 
   function checklistHtml(set, state) {

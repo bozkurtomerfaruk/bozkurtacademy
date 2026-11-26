@@ -942,7 +942,16 @@ window.BA_EXAMS = {
               }, // Teil 1
             ] },
             { id: 'schreiben', teile: [
-              { title: null, exercises: [] }, // Teil 1
+              {
+                title: { tr: 'Seminer yazısı · kendi görüşünü savunma · en az 350 kelime', de: 'Seminararbeit · Standpunkt argumentativ darlegen · mindestens 350 Wörter', en: 'Seminar paper · arguing your own position · at least 350 words' },
+                exercises: [
+                  { set: 'set-1', title: 'Wahlrecht ab 16' },
+                  { set: 'set-2', title: 'Schuluniformen' },
+                  { set: 'set-3', title: 'Privates Silvesterfeuerwerk' },
+                  { set: 'set-4', title: 'Zoos und Artenschutz' },
+                  { set: 'set-5', title: 'Bedingungsloses Grundeinkommen' },
+                ]
+              }, // Teil 1
             ] },
             { id: 'sprechen', teile: [
               { title: null, exercises: [] }, // Teil 1

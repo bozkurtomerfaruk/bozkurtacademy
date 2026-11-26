@@ -392,3 +392,9 @@ a.acc-res-link:hover .acc-res-title{text-decoration-thickness:2px}
 .acc-res-pdf .acc-status{margin:0}
 .acc-resource-list .acc-res-main{flex:1}
 .acc-target-exam{margin:18px 0 0;padding-top:16px;border-top:2px solid var(--ba-paper-2)}
+.acc-assign-summary,.acc-assign-who{margin:4px 0 0;font-size:var(--ba-small);overflow-wrap:anywhere}
+.acc-assign-summary{color:var(--ba-ink)}
+.acc-assign-who{color:var(--ba-muted)}
+.acc-assign-all{margin-top:4px;font-size:var(--ba-small)}
+.acc-assign-all>summary{cursor:pointer;font-weight:600;min-height:32px;padding:6px 0}
+.acc-assign-all ul{margin:0;padding-left:20px;overflow-wrap:anywhere}

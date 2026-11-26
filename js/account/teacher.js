@@ -1,5 +1,6 @@
 // ogretmen.html: öğrenci listesi, onay bekleyenler, veli onayı bekleyenler, silinmesi gereken kayıtlar.
-import { $, formatDateTime, BERLIN, h, writingTasks } from './common.js';
+import { $, formatDateTime, BERLIN, h, loadCatalogLevels, localize, writingTasks } from './common.js';
+import { assignmentSummary, studentNamesText } from './assignment-summary.js?v=1';
 import {
   approve, categorize, emailVerified, fmtDate, lastLessonByStudent, listStudents,
   AI_MODES, EXAM_AI_MODES, examAiKey, getAiSettings, loadAiDrafts, loadAssignmentGroups, openDeleteDialog, pendingWritingsByStudent, setAiMode, setExamAiMode, requireTeacher, statusBadges, UNVERIFIED_WARNING
@@ -10,6 +11,7 @@ import { AI_WORKER_URL } from './config.js';
 const TABS = ['ogrenciler', 'onay', 'veli', 'odevler', 'silinecek', 'yorumlar'];
 let lists = null;
 let groups = [];
+let studentsById = new Map(); // ödev kartlarındaki adlar
 let pendingWritings = new Map(); // uid → { total, flagged }: bakılması gereken Schreiben metni (yapay zekâ kontrol etmedi ya da öğrenci madde işaretledi)
 let aiDrafts = new Map(); // uid → yapay zekâ taslağı hazır metin sayısı (öğrenci görmez)
 const fmtDateTime = (value) => formatDateTime(value, { lang: 'tr', timeZone: BERLIN });
@@ -159,26 +161,35 @@ function renderStale(){
     : [empty('Silinmesi gereken kayıt yok.')]));
 }
 
-// Ödevler ayrı sayfada (ogretmen-odevler.html). Burada son 5 ödev kısaca.
+// Ödevler ayrı sayfada (ogretmen-odevler.html). Burada son 5 ödev kısaca: başlık, öğrenci adları (en çok 3; fazlası
+// "ve n kişi daha", tamamı "Ayrıntılar"da) ve kısa içerik özeti (js/account/assignment-summary.js).
 async function renderAssignments(){
   const box = $('list-odevler');
   if(!groups.length){
     box.replaceChildren(empty('Henüz ödev verilmedi.'));
     return;
   }
+  const levels = await loadCatalogLevels().catch(() => []);
+  const topicTitle = (level, topic) => localize(levels.find((l) => l.id === level)?.topics?.find((t) => t.id === topic)?.title, 'tr');
   box.replaceChildren(...groups.slice(0, 5).map((g) => {
     const done = g.copies.filter((c) => c.done).length;
     const overdue = g.dueAt && g.dueAt < new Date() && done < g.copies.length;
+    const names = g.copies.map((c) => studentsById.get(c.uid)?.name || 'Silinmiş öğrenci').sort((a, b) => a.localeCompare(b, 'tr'));
+    const summary = assignmentSummary(g.data, topicTitle);
     return h('article', { class: 'acc-row acc-assign-row' },
       h('div', { class: 'acc-row-main' },
         h('a', { class: 'acc-row-name ba-link', href: `ogretmen-odevler.html#odev-${encodeURIComponent(g.groupId)}` }, g.title),
+        summary ? h('p', { class: 'acc-assign-summary' }, summary) : null,
+        h('p', { class: 'acc-assign-who' }, studentNamesText(names)),
+        names.length > 3 ? h('details', { class: 'acc-assign-all' }, h('summary', {}, 'Ayrıntılar'),
+          h('ul', { 'aria-label': 'Ödevin verildiği öğrenciler' }, names.map((n) => h('li', {}, n)))) : null,
         h('span', { class: 'acc-badges' },
           h('span', { class: `acc-badge ${done === g.copies.length ? 'success' : ''}` }, `${done}/${g.copies.length} tamamladı`),
           overdue ? h('span', { class: 'acc-badge warning' }, 'Süresi geçti') : null)),
       h('dl', { class: 'acc-row-meta' },
         h('div', {}, h('dt', {}, 'Verildi'), h('dd', {}, fmtDate(g.createdAt))),
         h('div', {}, h('dt', {}, 'Teslim'), h('dd', {}, g.dueAt ? fmtDateTime(g.dueAt) : 'Yok'))));
-  }), groups.length > 5 ? h('p', { class: 'acc-hint' }, h('a', { class: 'ba-link', href: 'ogretmen-odevler.html' }, `Bütün ödevler (${groups.length})`)) : null);
+  }), ...(groups.length > 5 ? [h('p', { class: 'acc-hint' }, h('a', { class: 'ba-link', href: 'ogretmen-odevler.html' }, `Bütün ödevler (${groups.length})`))] : []));
 }
 
 function renderCounts(){
@@ -231,6 +242,7 @@ async function load(){
     for(const d of drafts) aiDrafts.set(d.uid, (aiDrafts.get(d.uid) || 0) + 1);
     lists = categorize(students, lastLessons);
     groups = assignmentGroups;
+    studentsById = new Map(students.map((s) => [s.id, s]));
     renderCounts();
     renderWritingNotice();
     renderAiMode();

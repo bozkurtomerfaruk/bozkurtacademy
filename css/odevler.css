@@ -132,3 +132,6 @@ a.odev-chip:hover{border-color:var(--ba-line-strong)}
 .lib-chip-remove:hover{background:var(--ba-line)}
 .lib-actions{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center}
 .odev-suggest-from{display:grid;gap:2px;padding:2px 2px 0}
+.odev-summary,.odev-who{margin:4px 0 0;font-size:var(--ba-small);overflow-wrap:anywhere}
+.odev-summary{color:var(--ba-ink)}
+.odev-who{color:var(--ba-muted);font-weight:600}

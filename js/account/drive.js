@@ -18,6 +18,9 @@ export const SCOPE = 'https://www.googleapis.com/auth/drive.file';
 export const FOLDER_NAME = 'Bozkurt Academy Ödevler';
 // Yardımcı kaynakların PDF'leri ayrı klasörde (js/account/teacher-student.js).
 export const RESOURCE_FOLDER = 'Bozkurt Academy Kaynaklar';
+// Kaynak kütüphanesi (ogretmen-kutuphane.html): PDF'ler gizli yüklenir (share: false); bağlantıyla paylaşma ancak
+// ödeve ya da yardımcı kaynaklara eklenince verilir (sharePdf). Ödevden çıkarılınca izin geri alınmaz.
+export const LIBRARY_FOLDER = 'Bozkurt Academy Kütüphane';
 export const MAX_BYTES = 20 * 1024 * 1024;
 const API = 'https://www.googleapis.com/drive/v3/files';
 const UPLOAD = 'https://www.googleapis.com/upload/drive/v3/files';
@@ -174,12 +177,12 @@ function putWithProgress(url, file, onProgress){
   });
 }
 
-// PDF'i yükler ve paylaşır. Döner: { id, name, url }. folderName: hedef klasör (varsayılan ödevler).
-export async function uploadPdf(file, { onProgress, folderName = FOLDER_NAME } = {}){
+// PDF'i yükler ve (share false değilse) paylaşır. Döner: { id, name, url }. folderName: hedef klasör (varsayılan ödevler).
+export async function uploadPdf(file, { onProgress, folderName = FOLDER_NAME, share = true } = {}){
   const problem = await checkPdf(file);
   if(problem) throw new DriveError(problem);
   if(!isConnected()) throw new DriveError('Google Drive bağlı değil.');
-  if(usingMock) return (await mockModule()).uploadPdf(file, { onProgress, folderName });
+  if(usingMock) return (await mockModule()).uploadPdf(file, { onProgress, folderName, share });
   const parent = await folderId(folderName);
   const start = await api('POST', `${UPLOAD}?uploadType=resumable&fields=id,name`, {
     body: { name: file.name, mimeType: 'application/pdf', parents: [parent] },
@@ -188,7 +191,15 @@ export async function uploadPdf(file, { onProgress, folderName = FOLDER_NAME } =
   const session = start.headers.get('Location');
   if(!session || !session.startsWith(UPLOAD)) throw new DriveError('Google Drive yükleme oturumu açılamadı.');
   const uploaded = await putWithProgress(session, file, onProgress);
-  // "Bağlantıya sahip olan herkes görüntüleyebilir" (öğrencilerin Google hesabı gerekmez).
-  await api('POST', `${API}/${encodeURIComponent(uploaded.id)}/permissions?fields=id`, { body: { role: 'reader', type: 'anyone' } });
-  return { id: uploaded.id, name: uploaded.name || file.name, url: `https://drive.google.com/file/d/${encodeURIComponent(uploaded.id)}/view` };
+  if(share) await sharePdf(uploaded.id);
+  return { id: uploaded.id, name: uploaded.name || file.name, url: fileUrl(uploaded.id) };
+}
+
+export const fileUrl = (id) => `https://drive.google.com/file/d/${encodeURIComponent(id)}/view`;
+
+// "Bağlantıya sahip olan herkes görüntüleyebilir" (öğrencilerin Google hesabı gerekmez). Tekrar çağrılabilir.
+export async function sharePdf(id){
+  if(!isConnected()) throw new DriveError('Google Drive bağlı değil.');
+  if(usingMock) return (await mockModule()).sharePdf(id);
+  await api('POST', `${API}/${encodeURIComponent(id)}/permissions?fields=id`, { body: { role: 'reader', type: 'anyone' } });
 }

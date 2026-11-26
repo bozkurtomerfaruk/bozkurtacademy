@@ -20,8 +20,8 @@
   <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13" />
   <link rel="stylesheet" href="css/base.css?v=15" />
-  <link rel="stylesheet" href="css/account.css?v=10" />
-  <link rel="stylesheet" href="css/ders-defteri.css?v=2" />
+  <link rel="stylesheet" href="css/account.css?v=11" />
+  <link rel="stylesheet" href="css/ders-defteri.css?v=3" />
 </head>
 <body class="academy-theme account-page teacher-page">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
@@ -111,6 +111,7 @@
                     <legend>Tür</legend>
                     <label class="acc-check"><input type="radio" name="rKind" value="link" id="rKindLink" checked><span>Bağlantı</span></label>
                     <label class="acc-check"><input type="radio" name="rKind" value="pdf" id="rKindPdf"><span>PDF yükle</span></label>
+                    <label class="acc-check"><input type="radio" name="rKind" value="lib" id="rKindLib"><span>Kütüphaneden</span></label>
                   </fieldset>
                   <div class="field">
                     <label for="rTitle">Başlık</label>
@@ -131,6 +132,11 @@
                     <progress class="acc-res-progress" id="rPdfProgress" max="1" value="0" hidden aria-label="PDF yükleniyor"></progress>
                     <p class="acc-status" id="rPdfStatus" role="status" hidden></p>
                     <small class="acc-hint" id="rPdfHint">PDF senin Google Drive'ında "Bozkurt Academy Kaynaklar" klasörüne bir kez yüklenir ve "bağlantıya sahip olan görüntüleyebilir" olarak paylaşılır. En çok 20 MB. Kaynak silinse de dosya Drive'da kalır.</small>
+                  </div>
+                  <div class="field" id="rLibBox" hidden>
+                    <label for="rLibSelect">Kütüphanedeki PDF</label>
+                    <select id="rLibSelect" aria-describedby="rLibHint"></select>
+                    <small class="acc-hint" id="rLibHint">Drive'da gizli olan PDF, "Kaynağı ekle"ye basınca "bağlantıya sahip olan görüntüleyebilir" olarak paylaşılır. <a class="ba-link" href="ogretmen-kutuphane.html">Kütüphaneyi aç</a></small>
                   </div>
                   <div class="field">
                     <label for="rNote">Kısa not (isteğe bağlı)</label>
@@ -160,6 +166,12 @@
               <div class="ba-card-body">
                 <h2 id="profileTitle">Bilgiler</h2>
                 <dl class="acc-dl" id="profileList"></dl>
+                <div class="field acc-target-exam" id="targetExamBox">
+                  <label for="targetExam">Hedef sınav</label>
+                  <select id="targetExam" aria-describedby="targetExamHint"><option value="">Seçilmedi</option></select>
+                  <small class="acc-hint" id="targetExamHint">Ödev asistanı bu sınavın sıradaki Lesen setini ve Schreiben görevini önerir. Öğrenci bunu görmez.</small>
+                  <p class="acc-status" id="targetExamStatus" role="status" hidden></p>
+                </div>
                 <div class="acc-actions acc-actions-stack" id="statusActions"></div>
               </div>
             </section>
@@ -189,6 +201,6 @@
   </div>
   <script src="js/app.js?v=58"></script>
   <script src="js/theme.js?v=10"></script>
-  <script type="module" src="js/account/teacher-student.js?v=9"></script>
+  <script type="module" src="js/account/teacher-student.js?v=11"></script>
 </body>
 </html>

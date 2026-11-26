@@ -388,7 +388,8 @@ export function exerciseUrl({ level, topic, exercise }){
     if(s) return `index.html#exams/${[s.exam, s.level, s.section, String(s.teil), s.set].map(encodeURIComponent).join('/')}`;
   }
   if(topic === WRITING){
-    const m = /^([a-z0-9]+)-([a-z0-9]+)-(\d+)-(set-\d+)$/.exec(exercise || '');
+    // Seviye kimliğinde tire olabilir (DTZ: dtz-a2-b1-1-set-1).
+    const m = /^([a-z0-9]+)-([a-z0-9]+(?:-[a-z0-9]+)?)-(\d+)-(set-\d+)$/.exec(exercise || '');
     if(m) return writingUrl({ exam: m[1], level: m[2], teil: m[3], set: m[4] });
   }
   return `index.html#exercises/${[level, topic, exercise].map(encodeURIComponent).join('/')}`;

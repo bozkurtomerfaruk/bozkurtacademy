@@ -1486,3 +1486,70 @@ describe('Almanca Alfabe ilerlemesi', () => {
     for (const p of bad) await assertFails(setDoc(ref(ayse()), p));
   });
 });
+
+// Ödev asistanı taslakları (homeworkDrafts): yalnızca öğretmen; öğrenci (onaylı olsa da) okuyamaz, yazamaz.
+describe('Ödev taslakları', () => {
+  const draft = () => ({ uids: ['ayse'], title: 'Taslak', description: '', dueAt: null, links: [], topics: [],
+    exercises: [{ level: 'A1', topic: 'perfekt', exercise: 'haben-sein-1' }], source: 'form', createdAt: serverTimestamp(), updatedAt: serverTimestamp() });
+
+  test('öğretmen taslak yazar, okur, günceller, siler; onayda ödev kopyası ve taslağın silinmesi tek yazmada', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await assertSucceeds(setDoc(doc(teacherDb(), 'homeworkDrafts/t1'), draft()));
+    await assertSucceeds(getDocs(collection(teacherDb(), 'homeworkDrafts')));
+    await assertSucceeds(updateDoc(doc(teacherDb(), 'homeworkDrafts/t1'), { exercises: [] }));
+    const tdb = teacherDb();
+    const batch = writeBatch(tdb);
+    batch.set(doc(tdb, 'users/ayse/assignments/a1'), { title: 'Taslak', schemaVersion: 2, groupId: 'g1', createdAt: serverTimestamp(), done: false, doneAt: null, studentDocUrl: '', links: [], topics: [], exercises: [] });
+    batch.delete(doc(tdb, 'homeworkDrafts/t1'));
+    await assertSucceeds(batch.commit());
+  });
+
+  test('öğrenci kendi adına olan taslağı bile okuyamaz, listeleyemez, yazamaz, silemez', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await seed('homeworkDrafts/t1', draft());
+    await assertFails(getDoc(doc(ayse(), 'homeworkDrafts/t1')));
+    await assertFails(getDocs(collection(ayse(), 'homeworkDrafts')));
+    await assertFails(getDocs(query(collection(ayse(), 'homeworkDrafts'), where('uids', 'array-contains', 'ayse'))));
+    await assertFails(setDoc(doc(ayse(), 'homeworkDrafts/t2'), draft()));
+    await assertFails(updateDoc(doc(ayse(), 'homeworkDrafts/t1'), { title: 'x' }));
+    await assertFails(deleteDoc(doc(ayse(), 'homeworkDrafts/t1')));
+    await assertFails(getDoc(doc(guestDb(), 'homeworkDrafts/t1')));
+  });
+});
+
+// Hedef sınav (users/{uid}.targetExam): yalnızca öğretmen yazar.
+describe('Hedef sınav', () => {
+  test('öğretmen yazar ve kaldırır; öğrenci kendi profilinde yazamaz, kayıtta ekleyemez', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await assertSucceeds(updateDoc(doc(teacherDb(), 'users/ayse'), { targetExam: { exam: 'goethe', level: 'b1' } }));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse'), { targetExam: { exam: 'telc', level: 'b2' } }));
+    await assertFails(updateDoc(doc(ayse(), 'users/ayse'), { targetExam: deleteField() }));
+    await assertSucceeds(updateDoc(doc(teacherDb(), 'users/ayse'), { targetExam: deleteField() }));
+    const can = as('can', passwordToken('can@example.com'));
+    await assertFails(setDoc(doc(can, 'users/can'), { name: 'Can', email: 'can@example.com', birthYear: YEAR - 20, minor: false, provider: 'password', status: 'pending', createdAt: serverTimestamp(), targetExam: { exam: 'goethe', level: 'b1' } }));
+  });
+});
+
+// Kaynak kütüphanesi (library): yalnızca öğretmen; öğrenci okuyamaz, yazamaz.
+describe('Kaynak kütüphanesi', () => {
+  const item = () => ({ fileId: 'f1', fileName: 'B1_Relativsatz.pdf', title: 'B1 Relativsatz', level: 'B1', topics: [{ level: 'B1', topic: 'relativsaetze' }], bytes: 1000, shared: false, createdAt: serverTimestamp(), updatedAt: serverTimestamp() });
+
+  test('öğretmen ekler, okur, etiketi değiştirir, paylaşıldı yazar, siler', async () => {
+    await assertSucceeds(setDoc(doc(teacherDb(), 'library/k1'), item()));
+    await assertSucceeds(getDocs(collection(teacherDb(), 'library')));
+    await assertSucceeds(updateDoc(doc(teacherDb(), 'library/k1'), { topics: [], shared: true, sharedAt: serverTimestamp() }));
+    await assertSucceeds(deleteDoc(doc(teacherDb(), 'library/k1')));
+  });
+
+  test('onaylı öğrenci ve ziyaretçi kütüphaneyi okuyamaz ve yazamaz', async () => {
+    await seed('users/ayse', seededAdult('active'));
+    await seed('library/k1', item());
+    for (const db of [ayse(), guestDb()]) {
+      await assertFails(getDoc(doc(db, 'library/k1')));
+      await assertFails(getDocs(collection(db, 'library')));
+      await assertFails(setDoc(doc(db, 'library/k2'), item()));
+      await assertFails(updateDoc(doc(db, 'library/k1'), { shared: true }));
+      await assertFails(deleteDoc(doc(db, 'library/k1')));
+    }
+  });
+});

@@ -84,6 +84,20 @@ Guests who never sign in load nothing from Google, unless they send a placement-
   YouTube, Drive), chosen site exercises or whole topics, and the student's own fields (done, done time,
   an optional Google Docs/Drive link), plus `mailNewAt`/`mailUpdateAt` when a homework email was sent. Students can change only their own fields. Links open the external
   site in a new tab; nothing is embedded. Shown on `ogretmen-odevler.html` (teacher) and `odevlerim.html` (student).
+- Target exam (`users/{uid}.targetExam = { exam, level }`, e.g. goethe/b1, dtz/a2-b1): set only by the teacher on
+  `ogretmen-ogrenci.html`, not shown to the student; the homework assistant uses it with the student's results,
+  writings and earlier homework to suggest the next Lesen set and Schreiben task. Deleted with the profile.
+- Resource library (`library/{id}`, `ogretmen-kutuphane.html`): teacher only (no student rule). Per PDF: Drive `fileId`,
+  `fileName`, title, level and topic tags, size, `shared`/`sharedAt` and timestamps; no student data. PDFs are uploaded
+  unshared to the Drive folder "Bozkurt Academy Kütüphane"; "anyone with the link can view" is granted only when the
+  teacher adds the PDF to homework (on approval, never for a draft) or to helpful resources, and is not revoked when it
+  is removed again (another student may use it). Removing a record leaves the file in Drive. Format: `js/account/library.js`.
+- Homework drafts (`homeworkDrafts/{id}`, homework assistant): the same content fields plus `uids` (the students it is
+  for), `source` ('form' or 'ders-defteri'), for drafts started from the lesson notebook the `noteId` of that lesson
+  note (the note itself is not copied; its topics are found in the teacher's browser) and timestamps. Teacher only (no student rule); approving writes the per-student copies and deletes the
+  draft in one batch, and only then is the homework email sent. Deleting a student's data removes the student from every
+  draft (a draft left without students is deleted). The assistant's suggestions are computed in the teacher's browser
+  from the catalog, `data/search-index.json`, the student's results and earlier homework; nothing is sent elsewhere.
 - Helpful resources (`users/{uid}/resources`, "Yardımcı kaynaklar"): title, https link and short note added by the
   teacher; new records also have `kind` ('link' or 'pdf'), for PDFs the Drive `fileId` and `fileName` (folder "Bozkurt
   Academy Kaynaklar"), and a `groupId` shared by the per-student copies when one resource is given to several students.

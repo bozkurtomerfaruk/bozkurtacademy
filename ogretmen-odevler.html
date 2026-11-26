@@ -20,8 +20,8 @@
   <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13" />
   <link rel="stylesheet" href="css/base.css?v=15" />
-  <link rel="stylesheet" href="css/account.css?v=10" />
-  <link rel="stylesheet" href="css/odevler.css?v=3" />
+  <link rel="stylesheet" href="css/account.css?v=11" />
+  <link rel="stylesheet" href="css/odevler.css?v=8" />
 </head>
 <body class="academy-theme account-page teacher-page">
   <a class="skip-link" href="#main" data-skip-link>Ana içeriğe geç</a>
@@ -65,7 +65,11 @@
               <label for="studentSelect">Öğrenci</label>
               <select id="studentSelect"></select>
             </div>
-            <a class="btn primary" id="createLink" href="ogretmen-odev.html">+ Oluştur</a>
+            <div class="odev-toolbar-actions">
+              <a class="btn ghost" id="draftsLink" href="ogretmen-taslaklar.html">Taslaklar</a>
+              <a class="btn ghost" href="ogretmen-kutuphane.html">Kütüphane</a>
+              <a class="btn primary" id="createLink" href="ogretmen-odev.html">+ Oluştur</a>
+            </div>
           </div>
           <p class="acc-status" id="listNotice" role="status" hidden></p>
           <p class="acc-hint" id="listSummary" aria-live="polite"></p>
@@ -87,6 +91,6 @@
   </div>
   <script src="js/app.js?v=58"></script>
   <script src="js/theme.js?v=10"></script>
-  <script type="module" src="js/account/teacher-assignments.js?v=2"></script>
+  <script type="module" src="js/account/teacher-assignments.js?v=3"></script>
 </body>
 </html>

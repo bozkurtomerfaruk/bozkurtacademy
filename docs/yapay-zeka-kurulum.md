@@ -78,6 +78,8 @@ Bu değişiklik ayrı, küçük bir PR olur. Birleştirmeden önce sana sorarım
 
 ## Adım 6: Firestore kurallarını yayınla
 
+Otomatik yayın kuruluysa (`docs/otomatik-yayin.md`) `firestore.rules` birleştirince kendiliğinden yayınlanır; aşağıdaki elle yol yedektir.
+
 UID'li kurallar birleştirildikten sonra: Firebase Console → **Firestore Database** → **Rules** → depodaki
 `firestore.rules` dosyasının tamamını yapıştır → **Publish**.
 
@@ -112,5 +114,5 @@ Worker bu token'ı kullanmaz; silmek hiçbir şeyi bozmaz.
 - **Güncelleme sırası (kurallar da değiştiyse):** önce Firestore kurallarını yayınla, sonra Worker'ı güncelle, en son öğretmen panelinde modu değiştir. Eski Worker yeni siteyle de çalışır; sadece geri bildirim görev sayfasında değil, öğrenci panelinde görünür.
 - **Kapatmak için:** öğretmen panelinde **Kapalı** seç (tek bir sınav için: **Sınava göre ayar** → o sınavda **Kapalı**). Worker'ı silmek de yeterli; site Worker olmadan da çalışır.
 - **App Check:** İleride Firebase App Check'i "zorunlu" yaparsan Worker'ın Firestore istekleri reddedilir. O zaman bana sor.
-- **Kod değişirse:** `worker/schreiben-kontrol.js` güncellendiğinde Adım 1'deki 5–7'yi tekrarla (Edit code → yapıştır → Deploy).
+- **Kod değişirse:** PR main'e birleşince Worker otomatik yayınlanır (GitHub Actions; kurulum ve geri alma: `docs/otomatik-yayin.md`). Panel değişkenleri, secret'lar, "AI" bağlantısı ve log ayarı korunur. Yedek yol: Adım 1'deki 5–7'yi tekrarla (Edit code → yapıştır → Deploy).
 - Testler: `npm run test:worker` (sahte Firebase ve sahte yapay zekâ ile), `npm run test:schreiben-ai` (emülatörle uçtan uca).

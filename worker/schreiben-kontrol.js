@@ -1,5 +1,6 @@
-// Schreiben yapay zekâ kontrolü (madde 7 Aşama B): Cloudflare Worker, Free plan. Tek dosya; Cloudflare panelinde
-// "Edit code" ekranına olduğu gibi yapıştırılır (kurulum: docs/yapay-zeka-kurulum.md).
+// Schreiben yapay zekâ kontrolü (madde 7 Aşama B): Cloudflare Worker, Free plan. Tek dosya (kurulum:
+// docs/yapay-zeka-kurulum.md). main'e birleşince GitHub Actions wrangler ile yayınlar (worker/wrangler.jsonc,
+// docs/otomatik-yayin.md); yedek yol: panelde "Edit code" ekranına olduğu gibi yapıştırmak.
 //
 // Akış: Öğrenci metnini gönderir (Aşama A, users/{uid}/writings). Tarayıcı ardından POST /check { writingId } ile buraya
 // gelir (Authorization: Bearer <Firebase oturum belirteci>). Worker:

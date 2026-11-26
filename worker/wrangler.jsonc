@@ -1,0 +1,29 @@
+// Worker "schreiben-kontrol" yayın ayarları (wrangler deploy, .github/workflows/deploy.yml; rehber: docs/otomatik-yayin.md).
+// Kurallar (node scripts/worker-deploy-guard.mjs --check-config bunları denetler, CI'da çalışır):
+//  - keep_vars: true KALMALI: paneldeki düz metin değişkenler (FIREBASE_API_KEY, FIREBASE_PROJECT_ID, SITE_URL,
+//    ALLOWED_ORIGINS, AI_EMAIL, TEACHER_UID, MAIL_DAILY_LIMIT) her yayında olduğu gibi kalır.
+//  - Buraya "vars" ya da secret YAZILMAZ. Secret'lar (AI_PASSWORD, BREVO_API_KEY) wrangler deploy ile silinmez;
+//    değiştirmek için panel ya da `wrangler secret put` kullanılır.
+//  - "ai" bağlantısının adı "AI" kalır. Panelde başka bir bağlantı eklenirse önce buraya da eklenmeli; yoksa yayın
+//    öncesi kontrol durur (wrangler buradaki listede olmayan bağlantıları siler).
+//  - compatibility_date, compatibility_flags, observability ve preview_urls paneldekiyle AYNI olmalı. Farklıysa yayın
+//    öncesi kontrol yayın yapmadan durur ve paneldeki değerleri (buraya yapıştırılacak hâliyle) yazar.
+{
+  "name": "schreiben-kontrol",
+  "main": "schreiben-kontrol.js",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": true,
+  "preview_urls": false,
+  "keep_vars": true,
+  "ai": { "binding": "AI" },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "invocation_logs": true,
+      "persist": true
+    }
+  }
+}

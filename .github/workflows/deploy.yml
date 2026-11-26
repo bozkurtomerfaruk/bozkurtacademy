@@ -1,0 +1,187 @@
+name: Otomatik yayın (Worker ve Firestore kuralları)
+# main'e birleştirince, testler yeşilse:
+#   worker/ değiştiyse  → Worker "schreiben-kontrol" Cloudflare'e (wrangler, worker/wrangler.jsonc)
+#   firestore.rules değiştiyse → Firebase Rules API ile Cloud Firestore'a
+# Değişmeyen kısım yayınlanmaz. Kurulum, geri alma ve elle yedek yol: docs/otomatik-yayin.md.
+#
+# Güvenlik:
+#  - Sadece bu depoda ve sadece main'de çalışır; PR'larda hiç çalışmaz (pull_request / pull_request_target yok).
+#  - Gizli değerler GitHub Environment "production" içinde; o ortama sadece main dalı erişebilir.
+#  - Cloudflare: sadece "Workers Scripts: Edit" izinli token. Google: Workload Identity Federation (anahtar dosyası
+#    yok), sadece "Firebase Rules Admin" rolü olan servis hesabı, kısa süreli (5 dk) belirteç.
+#  - Push ile yayın, depo değişkeni OTOMATIK_YAYIN = "acik" olana kadar kapalı (ilk yayın elle yapılır; acil
+#    durumda bu değişkeni silmek otomatik yayını durdurur).
+on:
+  push:
+    branches: [main]
+    paths: ['worker/**', 'firestore.rules', 'scripts/worker-deploy-guard.mjs', 'scripts/deploy-rules.mjs', 'tests/deploy.test.mjs', '.github/workflows/deploy.yml']
+  workflow_dispatch:
+    inputs:
+      hedef:
+        description: 'Ne yayınlansın?'
+        type: choice
+        options: [ikisi, worker, kurallar]
+        default: ikisi
+      mod:
+        description: 'kontrol = sadece ayar fotoğrafı ve canlı kontrol (hiçbir şey değişmez); yayinla = yayınla'
+        type: choice
+        options: [kontrol, yayinla]
+        default: kontrol
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+env:
+  MOD: ${{ github.event_name == 'workflow_dispatch' && inputs.mod || 'yayinla' }}
+  WORKER_URL: https://schreiben-kontrol.bozkurtt-omerfaruk.workers.dev
+  SITE_ORIGIN: https://bozkurtacademy.com
+  FIREBASE_PROJECT_ID: bozkurtacademy-8ab85
+  WRANGLER_VERSION: 4.158.0
+
+jobs:
+  test:
+    if: github.repository == 'bozkurtomerfaruk/bozkurtacademy' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      worker: ${{ steps.degisen.outputs.worker }}
+      rules: ${{ steps.degisen.outputs.rules }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Ne değişti?
+        id: degisen
+        env:
+          EVENT: ${{ github.event_name }}
+          HEDEF: ${{ inputs.hedef }}
+          BEFORE: ${{ github.event.before }}
+          OTOMATIK: ${{ vars.OTOMATIK_YAYIN }}
+        run: |
+          worker=false; rules=false
+          if [ "$EVENT" = workflow_dispatch ]; then
+            case "$HEDEF" in ikisi) worker=true; rules=true ;; worker) worker=true ;; kurallar) rules=true ;; esac
+          elif git cat-file -e "${BEFORE}^{commit}" 2>/dev/null; then
+            files=$(git diff --name-only "$BEFORE" "$GITHUB_SHA")
+            echo "$files"
+            grep -q '^worker/' <<<"$files" && worker=true
+            grep -qx 'firestore.rules' <<<"$files" && rules=true
+          else
+            echo "Önceki commit bulunamadı; ikisi de yayınlanacak (yayın öncesi kontrol yine çalışır)."
+            worker=true; rules=true
+          fi
+          if [ "$EVENT" = push ] && [ "$OTOMATIK" != acik ]; then
+            echo "::notice::Otomatik yayın kapalı (depo değişkeni OTOMATIK_YAYIN = acik değil). Sadece testler çalıştı; elle yayın: Actions → bu workflow → Run workflow."
+            worker=false; rules=false
+          fi
+          echo "worker=$worker" >> "$GITHUB_OUTPUT"
+          echo "rules=$rules" >> "$GITHUB_OUTPUT"
+          echo "Worker: $worker, kurallar: $rules, mod: $MOD" | tee -a "$GITHUB_STEP_SUMMARY"
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3 # v4.9.1
+        with:
+          distribution: temurin
+          java-version: 21
+      - run: npm ci
+      - run: npm test
+      - run: npm run test:worker
+      - run: npm run test:deploy
+      - run: node scripts/worker-deploy-guard.mjs --check-config
+      - run: npx --yes "wrangler@${WRANGLER_VERSION}" deploy --dry-run --config worker/wrangler.jsonc
+        env:
+          WRANGLER_SEND_METRICS: 'false'
+
+  worker:
+    needs: test
+    if: needs.test.outputs.worker == 'true' && github.repository == 'bozkurtomerfaruk/bozkurtacademy' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: production
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      WRANGLER_SEND_METRICS: 'false'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 22
+      - name: Ayar fotoğrafı (yayın öncesi; uyuşmazlıkta yayın yapılmaz)
+        run: node scripts/worker-deploy-guard.mjs --before "$RUNNER_TEMP/worker-once.json"
+      - name: Yayınla (wrangler deploy, keep_vars; secret'lar korunur)
+        id: yayin
+        if: env.MOD == 'yayinla'
+        run: npx --yes "wrangler@${WRANGLER_VERSION}" deploy --config worker/wrangler.jsonc --message "GitHub Actions ${GITHUB_SHA::7}"
+      - name: Ayar kontrolü (yayın sonrası; hiçbir ad kaybolmadı mı?)
+        if: env.MOD == 'yayinla'
+        run: node scripts/worker-deploy-guard.mjs --after "$RUNNER_TEMP/worker-once.json"
+      - name: Canlı kontrol
+        run: node scripts/worker-deploy-guard.mjs --health
+      - name: Geri alma talimatı
+        if: failure() && (steps.yayin.outcome == 'success' || steps.yayin.outcome == 'failure')
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          ### Worker yayını sonrası sorun: nasıl geri alınır?
+          1. Cloudflare → Workers & Pages → schreiben-kontrol → **Deployments** → bir önceki sürümün yanındaki **⋯ → Rollback**.
+          2. Settings → Variables and Secrets ve Bindings: değişkenler, AI_PASSWORD, BREVO_API_KEY ve "AI" bağlantısı yerinde mi bak; eksik varsa ekle (değerler docs/yapay-zeka-kurulum.md ve docs/odev-eposta-kurulum.md'de anlatıldığı yerden).
+          3. Settings → Observability: Logs açık, "Include invocation logs" ve "Persist logs" işaretli olmalı.
+          4. Depo değişkeni OTOMATIK_YAYIN'ı sil (otomatik yayın durur) ve elle yedek yolu kullan: docs/otomatik-yayin.md → "Elle yayın".
+          Ayrıntı: docs/otomatik-yayin.md → "Geri alma".
+          EOF
+
+  rules:
+    needs: test
+    if: needs.test.outputs.rules == 'true' && github.repository == 'bozkurtomerfaruk/bozkurtacademy' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: production
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 22
+      - name: Google'a anahtarsız giriş (Workload Identity Federation)
+        id: gcp
+        uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093 # v3.0.0
+        with:
+          workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
+          service_account: ${{ vars.GCP_SERVICE_ACCOUNT }}
+          token_format: access_token
+          access_token_lifetime: 300s
+          create_credentials_file: false
+          export_environment_variables: false
+      - name: Canlı kurallar (yayın öncesi)
+        run: node scripts/deploy-rules.mjs --check
+        env:
+          GOOGLE_ACCESS_TOKEN: ${{ steps.gcp.outputs.access_token }}
+      - name: Yayınla ve doğrula
+        id: yayin
+        if: env.MOD == 'yayinla'
+        run: node scripts/deploy-rules.mjs --deploy
+        env:
+          GOOGLE_ACCESS_TOKEN: ${{ steps.gcp.outputs.access_token }}
+      - name: Geri alma talimatı
+        if: failure() && steps.yayin.outcome == 'failure'
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          ### Firestore kuralları: nasıl geri alınır?
+          - Ruleset oluşturulamadıysa (derleme hatası) canlı kurallar DEĞİŞMEDİ; bir şey yapman gerekmez.
+          - Sürüm değiştiyse ama doğrulama başarısızsa: Firebase Console → Firestore Database → **Rules** → solda geçmiş listesinden bir önceki sürüm → **Publish**.
+          - Kalıcı düzeltme: hatalı PR'ı geri al (GitHub → PR → Revert) ve birleştir; kurallar yeniden yayınlanır.
+          Ayrıntı: docs/otomatik-yayin.md → "Geri alma".
+          EOF

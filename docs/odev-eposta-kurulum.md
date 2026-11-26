@@ -46,6 +46,8 @@ Kod: `worker/schreiben-kontrol.js` ("Ödev e-postası" bölümü), `js/account/h
 
 ### 4. Firestore kurallarını yayınla
 
+Otomatik yayın kuruluysa (`docs/otomatik-yayin.md`) kurallar ve Worker kodu birleştirince kendiliğinden yayınlanır; Worker kodunu yapıştırma ve kuralları elle yayınlama adımları yedek yol olarak kalır. Secret ve değişkenleri (3. adım) panelde bir kez girmek yine gerekir; otomatik yayın onları korur.
+
 Kurallar değişti: öğrenci kendi profiline sadece arayüz dilini (`lang`: tr/de/en) yazabiliyor; kayıtta da dil kaydediliyor.
 
 1. https://console.firebase.google.com → proje `bozkurtacademy-8ab85` → **Firestore Database** → **Rules**.
